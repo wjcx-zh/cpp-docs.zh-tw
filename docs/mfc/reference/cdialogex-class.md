@@ -13,16 +13,15 @@ helpviewer_keywords:
 - CDialogEx [MFC], SetBackgroundImage
 ms.assetid: a6ed3b1f-aef8-4b66-ac78-2160faf63c13
 ms.openlocfilehash: f92058d1aa0dabccf6623d20a248fed8eb99ab26
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168046"
 ---
 # <a name="cdialogex-class"></a>CDialogEx 類別
 
-
-  `CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。
+`CDialogEx` 類別會指定對話方塊的背景影像和背景色彩。
 
 ## <a name="syntax"></a>語法
 
@@ -50,8 +49,7 @@ class CDialogEx : public CDialog
 
 若要使用 `CDialogEx` 類別，請將您的對話方塊類別從 `CDialogEx` 類別進行衍生，而不是從 `CDialog` 類別。
 
-對話方塊影像會儲存在資源檔中。 架構會自動刪除從資源檔載入的任何影像。 若要以程式設計方式刪除目前的背景影像，請呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法或實作`OnDestroy`事件處理常式。 當您呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法，請傳入`HBITMAP`參數做為影像控點。 
-  `CDialogEx` 物件會取得影像的擁有權，而若 `m_bAutoDestroyBmp` 旗標是 `TRUE` 的話，則會將它刪除。
+對話方塊影像會儲存在資源檔中。 架構會自動刪除從資源檔載入的任何影像。 若要以程式設計方式刪除目前的背景影像，請呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法或實作`OnDestroy`事件處理常式。 當您呼叫[CDialogEx::SetBackgroundImage](#setbackgroundimage)方法，請傳入`HBITMAP`參數做為影像控點。 `CDialogEx` 物件會取得影像的擁有權，而若 `m_bAutoDestroyBmp` 旗標是 `TRUE` 的話，則會將它刪除。
 
 A`CDialogEx`物件可以是父代[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件。 [CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件會呼叫`CDialogEx::SetActiveMenu`方法時[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件開啟。 之後，`CDialogEx`物件會處理任何功能表事件，直到[CMFCPopupMenu 類別](../../mfc/reference/cmfcpopupmenu-class.md)物件已關閉。
 

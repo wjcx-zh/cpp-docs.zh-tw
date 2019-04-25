@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
 ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157522"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint、_ismbbkprint_l
 
@@ -61,7 +61,7 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbbkprint**傳回非零值，如果整數*c*是非 ASCII 文字或非 ASCII 標點符號 0，如果不是。 例如，僅在字碼頁 932，**_ismbbkprint** 會測試片假名英數字元或片假名標點符號 (範圍：0xA1 - 0xDF)。 **_ismbbkprint**使用目前的地區設定進行地區設定相關設定。 **_ismbbkprint_l**完全相同，不同之處在於它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbbkprint**傳回非零值，如果整數*c*是非 ASCII 文字或非 ASCII 標點符號 0，如果不是。 例如，在僅限字碼頁 932， **_ismbbkprint**測試片假名英數字元或片假名標點符號 (範圍：0xA1-0xDF)。 **_ismbbkprint**使用目前的地區設定進行地區設定相關設定。 **_ismbbkprint_l**完全相同，不同之處在於它會使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

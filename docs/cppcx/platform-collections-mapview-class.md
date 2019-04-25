@@ -13,11 +13,11 @@ helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
 ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161704"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView 類別
 
@@ -46,7 +46,7 @@ ref class MapView sealed;
 
 ### <a name="remarks"></a>備註
 
-MapView 是具象 c + + 實作[Windows::Foundation::Collections::IMapView \<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)傳遞應用程式二進位介面 (ABI) 之間的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
+MapView 是具體C++的實作[Windows::Foundation::Collections::IMapView \<K，V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_)應用程式二進位介面 (ABI) 之間傳遞的介面。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
 ### <a name="members"></a>成員
 

@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277249"
 ---
 # <a name="curl-class"></a>CUrl 類別
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 URL。
 
 *dwFlags*<br/>
-指定要轉換中的所有逸出字元的 ATL_URL_DECODE 或 ATL_URL_ESCAPE *lpszUrl*剖析之後其實際值。 （在 Visual c + + 2005年之前 ATL_URL_DECODE 轉換所有逸出字元剖析之前）。
+指定要轉換中的所有逸出字元的 ATL_URL_DECODE 或 ATL_URL_ESCAPE *lpszUrl*剖析之後其實際值。 (在 視覺效果之前C++2005 年 ATL_URL_DECODE 轉換所有逸出字元剖析之前。)
 
 ### <a name="return-value"></a>傳回值
 

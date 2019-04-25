@@ -3,11 +3,11 @@ title: ARM 組合程式指示詞
 ms.date: 08/30/2018
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
 ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167669"
 ---
 # <a name="arm-assembler-directives"></a>ARM 組合程式指示詞
 
@@ -27,7 +27,7 @@ ms.locfileid: "50592448"
 
    不支援。
 
-- 代碼 16
+- CODE16
 
    不支援，因為這表示前 UAL Thumb 語法中，不允許 Microsoft ARM 組譯工具。  使用`THUMB`相反地，以及 UAL 語法指示詞。
 
@@ -39,7 +39,7 @@ ms.locfileid: "50592448"
 
    不支援。
 
-- `DN`, `QN`, `SN`
+- `DN`、`QN`、`SN`
 
    不支援的型別或通道上的暫存器別名規格。
 
@@ -63,7 +63,7 @@ ms.locfileid: "50592448"
 
    不支援。
 
-- 畫面格
+- FRAME
 
    不支援。
 
@@ -99,7 +99,7 @@ ms.locfileid: "50592448"
 
    不支援。
 
-- `OPT`, `TTL`, `SUBT`
+- `OPT`、`TTL`、`SUBT`
 
    不支援，因為 Microsoft ARM 組譯工具不會產生清單。
 

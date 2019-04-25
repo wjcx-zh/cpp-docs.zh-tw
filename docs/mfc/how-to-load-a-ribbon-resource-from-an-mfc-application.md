@@ -5,11 +5,11 @@ helpviewer_keywords:
 - ribbon resource [MFC], loading
 ms.assetid: 1c76bb8f-6345-414a-9f3f-128815ceadc5
 ms.openlocfilehash: b7691d4168101209b0e2d2500012a2b4a8e47788
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160324"
 ---
 # <a name="how-to-load-a-ribbon-resource-from-an-mfc-application"></a>HOW TO：從 MFC 應用程式載入功能區資源
 

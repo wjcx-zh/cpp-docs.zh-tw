@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
 ms.openlocfilehash: f8fe301e25d9ecb5cc67397f9537e0bbd86c0627
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165849"
 ---
 # <a name="fatal-error-c1067"></a>嚴重錯誤 C1067
 
-編譯器限制： 已超過類型記錄的大小的 64k 限制
+編譯器限制：已超過類型記錄的大小的 64k 限制
 
 如果符號己超過 247 個字元的裝飾的名稱，就可能發生這個錯誤。  若要解決，請縮短符號名稱。
 

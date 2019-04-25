@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
 ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160974"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>編譯器警告 (層級 1) C4503
 
@@ -23,7 +23,7 @@ ms.locfileid: "50459783"
 
 裝飾的名稱長度超過編譯器限制 (4096)，而且已被截斷。 若要避免這個警告，而且截斷，減少的引數或使用的識別項的名稱長度。 裝飾名稱是超過編譯器限制已套用的雜湊，且不處於產生名稱衝突的風險。
 
-當您的程式碼包含範本時使用較舊版本的 Visual Studio，可以發出這個警告的特製化範本重複。 例如，對應 （從 c + + 標準程式庫） 的對應。 在此情況下，您可以建立您 typedef 類型 (**結構**，例如)，其中包含地圖。
+當您的程式碼包含範本時使用較舊版本的 Visual Studio，可以發出這個警告的特製化範本重複。 例如，對應的對應 (從C++標準程式庫)。 在此情況下，您可以建立您 typedef 類型 (**結構**，例如)，其中包含地圖。
 
 不過，您可能會決定不重建您的程式碼。  可提供產生 C4503 的應用程式，但如果您的已截斷的符號連結時間時發生錯誤，很難判斷錯誤的符號類型。 偵錯可能也會比較困難;偵錯工具可能無法對應至型別名稱的符號名稱。 正確性的程式，不過，不會受到截斷的名稱。
 

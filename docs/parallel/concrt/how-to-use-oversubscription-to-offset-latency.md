@@ -6,11 +6,11 @@ helpviewer_keywords:
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
 ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159934"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>HOW TO：若要位移延遲使用過度訂閱
 

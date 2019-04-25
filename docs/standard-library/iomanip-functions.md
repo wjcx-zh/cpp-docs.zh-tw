@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158556"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -150,10 +150,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Std:: string、 char\*，字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
 
-*分隔符號*<br/>
+*delimiter*<br/>
 使用者指定的字元或寬字元，用作字串開頭和結尾的分隔符號。
 
-*逸出*<br/>
+*escape*<br/>
 使用者指定的字元或寬字元，用作字串內逸出序列的逸出字元。
 
 ### <a name="remarks"></a>備註
@@ -332,7 +332,7 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>參數
 
-*（_b)*<br/>
+*_Base*<br/>
 數字基底。
 
 ### <a name="return-value"></a>傳回值
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*Ch*<br/>
 將用來填滿靠右對齊顯示中空格的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -404,7 +404,7 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>參數
 
-*prec*<br/>
+*Prec*<br/>
 浮點數值的有效位數。
 
 ### <a name="return-value"></a>傳回值
@@ -425,7 +425,7 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>參數
 
-*寬*<br/>
+*Wide*<br/>
 顯示欄位的寬度。
 
 ### <a name="return-value"></a>傳回值

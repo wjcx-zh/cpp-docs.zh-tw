@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CCustomInterpolator [MFC], m_initialVelocity
 ms.assetid: 28d85595-989a-40a3-b003-e0e38437a94d
 ms.openlocfilehash: 8d3f2ed95cfb9e7e885713252171c98834ae5c0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164133"
 ---
 # <a name="ccustominterpolator-class"></a>CCustomInterpolator 類別
 

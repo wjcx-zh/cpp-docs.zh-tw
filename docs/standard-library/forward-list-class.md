@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159778"
 ---
 # <a name="forwardlist-class"></a>forward_list 類別
 
@@ -104,7 +104,7 @@ class forward_list
 |參數|描述|
 |---------------|-----------------|
 |*Type*|要儲存在 forward_list 中的項目資料類型。|
-|*配置器*|預存配置器物件，可封裝有關 forward_list 之記憶體配置和解除配置的詳細資料。 這是選擇性參數。 預設值為 allocator< `Type`>。|
+|*Allocator*|預存配置器物件，可封裝有關 forward_list 之記憶體配置和解除配置的詳細資料。 這是選擇性參數。 預設值為 allocator< `Type`>。|
 
 ## <a name="remarks"></a>備註
 
@@ -215,7 +215,7 @@ void assign(InputIterator First, InputIterator Last);
 |參數|描述|
 |---------------|-----------------|
 |*first*|取代範圍的開頭。|
-|*最後一個*|取代範圍的結尾。|
+|*last*|取代範圍的結尾。|
 |*count*|要指派的元素數目。|
 |*val*|要指派給每個元素的值。|
 |*Type*|值的類型。|
@@ -468,7 +468,7 @@ iterator erase_after(const_iterator first, const_iterator last);
 |---------------|-----------------|
 |*Where*|目標轉送清單中元素的清除位置。|
 |*first*|要清除的範圍開頭。|
-|*最後一個*|要清除的範圍結尾。|
+|*last*|要清除的範圍結尾。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -511,7 +511,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |---------------|-----------------|
 |*Al*|搭配這個物件使用的配置器類別。|
 |*計數*|建構的清單中元素的數目。|
-|*val*|已建構清單中的元素值。|
+|*Val*|已建構清單中的元素值。|
 |*右邊*|list，其中有要複製的建構的 list。|
 |*第一個*|要複製的元素範圍中第一個元素的位置。|
 |*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
@@ -579,7 +579,7 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |*計數*|要插入的元素數目。|
 |*第一個*|插入範圍的開頭。|
 |*最後一個*|插入範圍的結尾。|
-|*val*|新增至轉送清單的元素。|
+|*Val*|新增至轉送清單的元素。|
 |*IList*|要插入的 initializer_list。|
 
 ### <a name="return-value"></a>傳回值
@@ -768,7 +768,7 @@ void remove_if(Predicate pred);
 
 |參數|描述|
 |---------------|-----------------|
-|*預測*|一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。|
+|*pred*|一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。|
 
 ### <a name="remarks"></a>備註
 
@@ -832,7 +832,7 @@ void sort(Predicate pred);
 
 |參數|描述|
 |---------------|-----------------|
-|*預測*|排序的述詞。|
+|*pred*|排序的述詞。|
 
 ### <a name="remarks"></a>備註
 

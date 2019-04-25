@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
 ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160428"
 ---
 # <a name="linker-tools-error-lnk1313"></a>連結器工具錯誤 LNK1313
 
@@ -19,7 +19,7 @@ ms.locfileid: "50604226"
 
 ## <a name="remarks"></a>備註
 
-目前版本的 Visual c + + 不支援連結原生或混合 managed/原生.obj 檔案，以編譯的.obj 檔與 **/clr: pure**。
+目前的版本，視覺效果的C++不支援連結原生或混合 managed/原生.obj 檔案，以編譯的.obj 檔案 **/clr: pure**。
 
 **/Clr: pure**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 

@@ -16,16 +16,15 @@ helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160031"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
 
-
-  `concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。
+`concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。
 
 ## <a name="syntax"></a>語法
 
@@ -151,8 +150,7 @@ concurrent_priority_queue(
 搭配這個物件使用的配置器類別。
 
 *_Init_capacity*<br/>
-
-  `concurrent_priority_queue` 物件的初始容量。
+`concurrent_priority_queue` 物件的初始容量。
 
 *_Begin*<br/>
 要複製的元素範圍中第一個元素的位置。

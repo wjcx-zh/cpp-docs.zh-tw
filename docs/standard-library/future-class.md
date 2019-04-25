@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::future [C++], wait_for
 - std::future [C++], wait_until
 ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159323"
 ---
 # <a name="future-class"></a>future 類別
 
@@ -57,7 +57,7 @@ class future;
 |[get](#get)|擷取以相關的非同步狀態儲存的結果。|
 |[share](#share)|將物件轉換為 `shared_future`。|
 |[valid](#valid)|指定物件是否不是空的。|
-|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
+|[wait](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
 |[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|
 |[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|
 

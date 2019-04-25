@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
 ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159388"
 ---
 # <a name="freelist-class"></a>freelist 類別
 
@@ -32,7 +32,7 @@ class freelist : public Max
 
 |參數|描述|
 |---------------|-----------------|
-|*sz*|所配置陣列中的元素數。|
+|*Sz*|所配置陣列中的元素數。|
 |*最大值*|max 類別，表示可在可用清單中儲存的元素數量上限。 max 類別可以是 [max_none](../standard-library/max-none-class.md)、[max_unbounded](../standard-library/max-unbounded-class.md)、[max_fixed_size](../standard-library/max-fixed-size-class.md) 或 [max_variable_size](../standard-library/max-variable-size-class.md)。|
 
 ## <a name="remarks"></a>備註

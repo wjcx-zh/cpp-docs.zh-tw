@@ -20,11 +20,11 @@ f1_keywords:
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
 ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157535"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 
@@ -58,7 +58,7 @@ _invoke_watson(
 
 ## <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 表示原始程式碼參數運算式不是有效的字串。
 
 *function_name*<br/>
@@ -70,7 +70,7 @@ _invoke_watson(
 *line_number*<br/>
 呼叫處理常式的原始程式碼行號。
 
-*保留*<br/>
+*reserved*<br/>
 未使用。
 
 ## <a name="return-value"></a>傳回值
@@ -91,7 +91,7 @@ _invoke_watson(
 
 |功能|必要的標頭|
 |--------------|------------------|
-|**_invalid_parameter**， **_invalid_parameter_noinfo**， **_invalid_parameter_noinfo_noreturn**， **_invoke_watson**|\<corecrt.h>|
+|**_invalid_parameter**, **_invalid_parameter_noinfo**, **_invalid_parameter_noinfo_noreturn**, **_invoke_watson**|\<corecrt.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

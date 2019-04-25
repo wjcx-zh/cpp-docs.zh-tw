@@ -11,11 +11,11 @@ helpviewer_keywords:
 - VARIANT object [C++], COM encapsulation
 ms.assetid: 6a3cbd4e-0ae8-425e-b4cf-ca0df894c93f
 ms.openlocfilehash: 69976cab9caed653a8278f80821569b613f690eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165942"
 ---
 # <a name="variantt-class"></a>_variant_t 類別
 
@@ -43,8 +43,8 @@ A **_variant_t**物件會封裝`VARIANT`資料型別。 此類別管理資源配
 
 |||
 |-|-|
-|[運算子 =](../cpp/variant-t-operator-equal.md)|將新的值指派給現有 **_variant_t**物件。|
-|[運算子 = =、 ！ =](../cpp/variant-t-relational-operators.md)|比較兩個 **_variant_t**物件是否相等或不等比較。|
+|[Operator =](../cpp/variant-t-operator-equal.md)|將新的值指派給現有 **_variant_t**物件。|
+|[operator ==, !=](../cpp/variant-t-relational-operators.md)|比較兩個 **_variant_t**物件是否相等或不等比較。|
 |[擷取器](../cpp/variant-t-extractors.md)|資料擷取封裝`VARIANT`物件。|
 
 **結束 Microsoft 專屬**

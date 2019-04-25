@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160066"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 
@@ -39,7 +39,7 @@ namespace concurrency;
 
 ## <a name="members"></a>成員
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |名稱|描述|
 |----------|-----------------|
@@ -88,77 +88,54 @@ namespace concurrency;
 |[invalid_scheduler_policy_thread_specification 類別](invalid-scheduler-policy-thread-specification-class.md)|這個類別描述嘗試設定 `SchedulerPolicy` 物件的並行存取限制，以致 `MinConcurrency` 機碼的值小於 `MaxConcurrency` 機碼的值時擲回的例外狀況。|
 |[invalid_scheduler_policy_value 類別](invalid-scheduler-policy-value-class.md)|這個類別描述在將 `SchedulerPolicy` 物件的原則機碼設為不正確的機碼值時擲回的例外狀況。|
 |[ISource 類別](isource-class.md)|`ISource` 類別是所有來源區塊的介面。 來源區塊會將訊息傳播至 `ITarget` 區塊。|
-|[ITarget 類別](itarget-class.md)|
-  `ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。|
-|[join 類別](join-class.md)|
-  `join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。|
+|[ITarget 類別](itarget-class.md)|`ITarget` 類別是所有目標區塊的介面。 目標區塊會使用 `ISource` 區塊提供給它們的訊息。|
+|[join 類別](join-class.md)|`join` 傳訊區塊是單一目標、多來源的排序 `propagator_block`，會與來自其每個來源的 `T` 類型訊息合併。|
 |[location 類別](location-class.md)|硬體實體位置的抽象概念。|
 |[message 類別](message-class.md)|基本訊息封套，其中包含在傳訊區塊之間傳遞的資料承載。|
 |[message_not_found 類別](message-not-found-class.md)|這個類別描述在傳訊區塊找不到所要求之訊息時擲回的例外狀況。|
-|[message_processor 類別](message-processor-class.md)|
-  `message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。|
+|[message_processor 類別](message-processor-class.md)|`message_processor` 類別是處理 `message` 物件的抽象基底類別。 訊息順序方面沒有一定的保證。|
 |[missing_wait 類別](missing-wait-class.md)|這個類別描述 `task_group` 或 `structured_task_group` 物件的建構函式執行時卻仍有工作排程至該物件所擲回的例外狀況。 如果例外狀況導致堆疊回溯而達成解構函式，則永遠不會擲回此例外狀況。|
-|[multi_link_registry 類別](multi-link-registry-class.md)|
-  `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。|
-|[multitype_join 類別](multitype-join-class.md)|
-  `multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。|
+|[multi_link_registry 類別](multi-link-registry-class.md)|`multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。|
+|[multitype_join 類別](multitype-join-class.md)|`multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。|
 |[nested_scheduler_missing_detach 類別](nested-scheduler-missing-detach-class.md)|這個類別描述當並行執行階段偵測到您忘了使用 `Scheduler` 物件的 `Attach` 方法在附加到第二個排程器上呼叫 `CurrentScheduler::Detach` 方法時擲出的例外狀況。|
-|[network_link_registry 類別](network-link-registry-class.md)|
-  `network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。|
+|[network_link_registry 類別](network-link-registry-class.md)|`network_link_registry` 抽象基底類別會管理來源和目標區塊之間的連結。|
 |[operation_timed_out 類別](operation-timed-out-class.md)|這個類別描述作業逾時擲回的例外狀況。|
-|[ordered_message_processor 類別](ordered-message-processor-class.md)|
-  `ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。|
-|[overwrite_buffer 類別](overwrite-buffer-class.md)|
-  `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。|
+|[ordered_message_processor 類別](ordered-message-processor-class.md)|`ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。|
+|[overwrite_buffer 類別](overwrite-buffer-class.md)|`overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。|
 |[progress_reporter 類別](progress-reporter-class.md)|進度報告程式類別可供報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。|
-|[propagator_block 類別](propagator-block-class.md)|
-  `propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。|
+|[propagator_block 類別](propagator-block-class.md)|`propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。|
 |[reader_writer_lock 類別](reader-writer-lock-class.md)|以寫入器偏好設定佇列為基礎且只能本機微調的讀取器-寫入器鎖定。 鎖定會授與寫入器先進先出 (FIFO) 存取權，並在連續載入寫入器的情況下影響讀取器。|
 |[ScheduleGroup 類別](schedulegroup-class.md)|代表排程群組的抽象概念。 排程群組會將一組相關的工作組織在一起，以讓這些工作獲得暫時緊密排程在一起的優勢，其方法如下：透過在同一個群組中執行另一個工作再移至另一個群組；透過再同一個 NUMA 節點或實體通訊端的同一個群組內執行多個項目。|
 |[Scheduler 類別](scheduler-class.md)|代表並行執行階段排程器的抽象概念。|
 |[scheduler_not_attached 類別](scheduler-not-attached-class.md)|這個類別描述作業需要將排程器附加至目前內容，而卻沒有這麼做時所擲回的例外狀況。|
 |[scheduler_resource_allocation_error 類別](scheduler-resource-allocation-error-class.md)|這個類別描述因無法在並行執行階段中取得關鍵來源而擲回的例外狀況。|
 |[scheduler_worker_creation_error 類別](scheduler-worker-creation-error-class.md)|這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。|
-|[SchedulerPolicy 類別](schedulerpolicy-class.md)|
-  `SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。|
-|[simple_partitioner 類別](simple-partitioner-class.md)|
-  `simple_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將這個範圍分割成區塊，每個區塊都有由區塊大小指定之反覆項目的最少次數。|
-|[single_assignment 類別](single-assignment-class.md)|
-  `single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。|
-|[single_link_registry 類別](single-link-registry-class.md)|
-  `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。|
-|[source_block 類別](source-block-class.md)|
-  `source_block` 類別是僅限來源區塊的抽象基底類別。 類別會提供基本連結管理功能與常見的錯誤檢查功能。|
-|[source_link_manager 類別](source-link-manager-class.md)|
-  `source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。|
-|[static_partitioner 類別](static-partitioner-class.md)|
-  `static_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將範圍分成許多區塊，其數量與基礎排程器可用的背景工作數量相等。|
-|[structured_task_group 類別](structured-task-group-class.md)|
-  `structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。|
-|[target_block 類別](target-block-class.md)|
-  `target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。|
+|[SchedulerPolicy 類別](schedulerpolicy-class.md)|`SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。|
+|[simple_partitioner 類別](simple-partitioner-class.md)|`simple_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將這個範圍分割成區塊，每個區塊都有由區塊大小指定之反覆項目的最少次數。|
+|[single_assignment 類別](single-assignment-class.md)|`single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。|
+|[single_link_registry 類別](single-link-registry-class.md)|`single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。|
+|[source_block 類別](source-block-class.md)|`source_block` 類別是僅限來源區塊的抽象基底類別。 類別會提供基本連結管理功能與常見的錯誤檢查功能。|
+|[source_link_manager 類別](source-link-manager-class.md)|`source_link_manager` 物件會管理 `ISource` 區塊與傳訊區塊網路的連結。|
+|[static_partitioner 類別](static-partitioner-class.md)|`static_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將範圍分成許多區塊，其數量與基礎排程器可用的背景工作數量相等。|
+|[structured_task_group 類別](structured-task-group-class.md)|`structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。|
+|[target_block 類別](target-block-class.md)|`target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。|
 |[task 類別 (並行執行階段)](task-class.md)|平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 您也可以使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 等模式，將工作與其他工作組合在一起。|
 |[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](task-class.md)，已取消的工作。|
 |[task_completion_event 類別](task-completion-event-class.md)|`task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。|
 |[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 最好只從 UWP 應用程式使用此類別。 對於非 Windows 執行階段應用程式，工作接續的執行內容是由執行階段，而且不進行設定。|
 |[task_group 類別](task-group-class.md)|`task_group` 類別表示可以等候或取消的平行工作集合。|
-|[task_handle 類別](task-handle-class.md)|
-  `task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。|
+|[task_handle 類別](task-handle-class.md)|`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。|
 |[task_options 類別 (並行執行階段)](task-options-class-concurrency-runtime.md)|代表可用來建立工作的選項。|
-|[timer 類別](timer-class.md)|
-  `timer` 傳訊區塊是單一目標 `source_block`，能夠在經過指定的時間長度或在特定時間間隔，將訊息傳送至它的目標。|
-|[transformer 類別](transformer-class.md)|
-  `transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。|
-|[unbounded_buffer 類別](unbounded-buffer-class.md)|
-  `unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。|
+|[timer 類別](timer-class.md)|`timer` 傳訊區塊是單一目標 `source_block`，能夠在經過指定的時間長度或在特定時間間隔，將訊息傳送至它的目標。|
+|[transformer 類別](transformer-class.md)|`transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。|
+|[unbounded_buffer 類別](unbounded-buffer-class.md)|`unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。|
 |[unsupported_os 類別](unsupported-os-class.md)|這個類別會描述使用不支援的作業系統時擲回的例外狀況。|
 
 ### <a name="structures"></a>結構
 
 |名稱|描述|
 |----------|-----------------|
-|[DispatchState 結構](dispatchstate-structure.md)|
-  `DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。|
+|[DispatchState 結構](dispatchstate-structure.md)|`DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。|
 |[IExecutionContext 結構](iexecutioncontext-structure.md)|執行內容的介面，可於指定的虛擬處理器上執行，也可以合作方式切換內容。|
 |[IExecutionResource 結構](iexecutionresource-structure.md)|硬體執行緒的抽象概念。|
 |[IResourceManager 結構](iresourcemanager-structure.md)|並行執行階段資源管理員的介面。 這是排程器用來與資源管理員通訊的介面。|
@@ -239,7 +216,7 @@ namespace concurrency;
 |[try_receive 函式](concurrency-namespace-functions.md#try_receive)|多載。 一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料還沒準備好，方法會傳回 false。|
 |[wait 函式](concurrency-namespace-functions.md#wait)|暫停目前的內容達指定的時間長度。|
 |[when_all 函式](concurrency-namespace-functions.md#when_all)|建立工作，這個工作將會在當做引數提供的所有工作都已順利完成時成功完成。|
-|[when_any 函式](concurrency-namespace-functions.md#when_any)|多載。 建立工作，當成引數來提供的任何工作順利完成時，此工作就會順利成功。|
+|[when_any 函式](concurrency-namespace-functions.md#when_any)|多載。 建立工作，這個工作會在當做引數提供的所有工作都順利完成時，順利完成。|
 
 ### <a name="operators"></a>運算子
 

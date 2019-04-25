@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160013"
 ---
 # <a name="filestatus-class"></a>file_status 類別
 
@@ -54,7 +54,7 @@ class file_status;
 
 **命名空間：** std::experimental::filesystem、 std::experimental::filesystem
 
-## <a name="file_status"></a> file_status:: file_status
+## <a name="file_status"></a> file_status::file_status
 
 建構的包裝函式[file_type](../standard-library/filesystem-enumerations.md#file_type)和檔案[perms](../standard-library/filesystem-enumerations.md#perms)。
 
@@ -75,13 +75,13 @@ file_status(file_status&&) noexcept = default;
 *ftype*<br/>
 指定`file_type`，預設為`file_type::none`。
 
-*遮罩*<br/>
+*mask*<br/>
 指定的檔案`perms`，預設為`perms::unknown`。
 
 *file_status*<br/>
 預存的物件。
 
-## <a name="op_as"></a> file_status::operator =
+## <a name="op_as"></a> file_status::operator=
 
 預設成員指派運算子會如預期般運作。
 
@@ -95,7 +95,7 @@ file_status& operator=(file_status&&) nexcept = default;
 *file_status*<br/>
 [File_status](../standard-library/file-status-class.md)複製到`file_status`。
 
-## <a name="type"></a> 型別
+## <a name="type"></a> type
 
 取得或設定 `file_type`。
 
@@ -122,7 +122,7 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>參數
 
-*遮罩*<br/>
+*mask*<br/>
 已指定 `perms`。
 
 ## <a name="see-also"></a>另請參閱

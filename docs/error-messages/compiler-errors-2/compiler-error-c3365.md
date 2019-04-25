@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3365
 ms.assetid: 875ec3a4-522c-4e3d-9b67-48808b857f6d
 ms.openlocfilehash: fa11ac57205574da29c55344fedb0e996ab30557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300566"
 ---
 # <a name="compiler-error-c3365"></a>編譯器錯誤 C3365
 
 運算子 'operator' : 類型 'type1' 和 'type2' 的不同運算元
 
-已嘗試撰寫不同類型的委派。  請參閱[如何： 定義和使用委派 (C + + /cli CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)如需委派的詳細資訊。
+已嘗試撰寫不同類型的委派。  請參閱[如何：定義和使用委派 (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md)如需委派的詳細資訊。
 
 ## <a name="example"></a>範例
 

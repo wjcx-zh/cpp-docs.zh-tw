@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158587"
 ---
 # <a name="iosbase-class"></a>ios_base 類別
 
@@ -265,7 +265,7 @@ typedef void (__cdecl *event_callback)(
 *_E*<br/>
 [事件](#event)。
 
-*（_b)*<br/>
+*_Base*<br/>
 在其中呼叫事件的資料流。
 
 *_I*<br/>
@@ -902,7 +902,7 @@ fmtflags setf(
 
 ### <a name="parameters"></a>參數
 
-*遮罩 （_m)*<br/>
+*_Mask*<br/>
 要開啟的旗標。
 
 *_Unset*<br/>
@@ -961,7 +961,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>備註
 
-靜態成員函式存放區`stdio`同步處理的旗標，也就是最初 **，則為 true**。 當**真**，這個旗標可確保在相同的檔案上的作業會正確同步處理之間[iostreams](../standard-library/iostreams-conventions.md)函式和 c + + 標準程式庫中定義的。 否則，同步處理可能會或可能不保證，但可能會改善效能。 此函式會 *_Sync*在`stdio`同步旗標，並傳回其先前儲存的值。 您可以呼叫它可靠地只之前的標準資料流上執行任何作業。
+靜態成員函式存放區`stdio`同步處理的旗標，也就是最初 **，則為 true**。 當 **，則為 true**，這個旗標可確保在相同的檔案上的作業會正確同步處理之間[iostreams](../standard-library/iostreams-conventions.md)函式和中定義的C++標準程式庫。 否則，同步處理可能會或可能不保證，但可能會改善效能。 此函式會 *_Sync*在`stdio`同步旗標，並傳回其先前儲存的值。 您可以呼叫它可靠地只之前的標準資料流上執行任何作業。
 
 ## <a name="unsetf"></a> ios_base::unsetf
 
@@ -975,7 +975,7 @@ void unsetf(
 
 ### <a name="parameters"></a>參數
 
-*遮罩 （_m)*<br/>
+*_Mask*<br/>
 您想要關閉的旗標。
 
 ### <a name="remarks"></a>備註

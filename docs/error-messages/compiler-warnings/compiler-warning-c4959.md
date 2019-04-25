@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
 ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388655"
 ---
 # <a name="compiler-warning-c4959"></a>編譯器警告 C4959
 
@@ -21,7 +21,7 @@ ms.locfileid: "50473654"
 
 存取 Unmanaged 類型的成員將會產生無法驗證的 (peverify.exe) 映像。
 
-如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。</c0>
 
 **/Clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，不支援的 Visual Studio 2017 中。
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
 ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159310"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 
@@ -69,7 +69,7 @@ public:
 *IntType*<br/>
 整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*一般而言，URNG*<br/>
+*URNG*<br/>
 統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註

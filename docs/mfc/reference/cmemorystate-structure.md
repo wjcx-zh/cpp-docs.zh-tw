@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163750"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 結構
 
@@ -52,9 +52,9 @@ struct CMemoryState
 
 - 使用 Windows API 記憶體管理函式`LocalAlloc` /  `LocalFree`並`GlobalAlloc` /  `GlobalFree`。
 
-- 使用 c + +**新**並**刪除**運算子。
+- 使用C++**新**並**刪除**運算子。
 
-`CMemoryState`診斷不僅能夠協助偵測記憶體流失時使用的記憶體配置，產生**新**運算子未解除配置使用**刪除**。 其他兩個群組的記憶體管理函式適用於非 c + + 程式，以及混用它們**新**並**刪除**相同程式中不在建議。 其他巨集，DEBUG_NEW，可用來取代**新**運算子時，您需要的檔案和行號的記憶體配置的追蹤。 每當您通常會使用，會使用 DEBUG_NEW**新**運算子。
+`CMemoryState`診斷不僅能夠協助偵測記憶體流失時使用的記憶體配置，產生**新**運算子未解除配置使用**刪除**。 記憶體管理函式的其他兩個群組會針對非C++程式，以及混用它們**新**並**刪除**在相同的程式不在建議。 其他巨集，DEBUG_NEW，可用來取代**新**運算子時，您需要的檔案和行號的記憶體配置的追蹤。 每當您通常會使用，會使用 DEBUG_NEW**新**運算子。
 
 如同其他診斷，`CMemoryState`診斷僅適用於您的程式偵錯版本。 偵錯版本必須定義 _DEBUG 常數。
 

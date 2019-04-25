@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159843"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,11 +29,11 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 版本\<filesystem > 標頭還不是 c + + 標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。
+> Visual Studio 2017 中，發行\<filesystem > 標頭不是尚未C++標準。 Visual C++ 2017 實作的是 [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf) 中的草稿最終版標準。
 
-這個標頭支援兩個廣泛的主機作業系統類別之一的檔案系統：Microsoft Windows 和 Posix。
+此標頭支援的兩個廣泛的類別，主機作業系統的其中一個檔案系統：Microsoft Windows 和 Posix。
 
-雖然大部分功能對這兩個作業系統而言是共通的，不過本文還是指出其中的差異。 例如: 
+雖然大部分功能對這兩個作業系統而言是共通的，不過本文還是指出其中的差異。 例如：
 
 - Windows 支援多個根名稱，例如 c: 或 \\\network_name。 檔案系統是由樹狀樹系所組成，每個樹狀目錄有自己的根目錄 (例如 c:\ 或 \\\network_name\\) 與目前的目錄，以完成相對路徑名稱 (而非絕對路徑名稱)。
 
@@ -122,7 +122,7 @@ using namespace std::experimental::filesystem::v1;
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
-|[權限](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|
+|[perms](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
 ms.openlocfilehash: 86f6cd866f7708277ebba436ba7c076086dc9c8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160701"
 ---
 # <a name="compiler-warning-level-1-c4540"></a>編譯器警告 (層級 1) C4540
 

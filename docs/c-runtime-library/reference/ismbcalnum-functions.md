@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157278"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -112,9 +112,9 @@ int _ismbcdigit_l
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|英數字元|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組:，請參閱範例 **_ismbcdigit**並 **_ismbcalpha**。|
-|**_ismbcalpha**， **_ismbcalpha_l**|字母順序|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組： 將 0x41 向 < =*c*< lt;=0x5a 或 0x61&lt < =*c*< = 0x7A; 或是片假名字母：0xa6< < =*c*< lt;=0xdf。|
-|**_ismbcdigit**， **_ismbcdigit**|數字|傳回非零值，才*c*是 ASCII 數字的單一位元組表示法： 0x30 < =*c*< lt;=0x39。|
+|**_ismbcalnum**， **_ismbcalnum_l**|英數字元|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組：請參閱範例 **_ismbcdigit**並 **_ismbcalpha**。|
+|**_ismbcalpha**， **_ismbcalpha_l**|字母順序|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組：將 0x41 向 < =*c*< lt;=0x5a 或 0x61&lt < =*c*< = 0x7A; 或是片假名字母：0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**， **_ismbcdigit**|數字|傳回非零值，才*c*是 ASCII 數字的單一位元組表示法：0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>需求
 

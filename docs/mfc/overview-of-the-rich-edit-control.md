@@ -5,11 +5,11 @@ helpviewer_keywords:
 - rich edit controls [MFC]
 ms.assetid: ad589b9f-a3fd-4820-bf1f-6b1965997e68
 ms.openlocfilehash: c45cb638ec860bb803c7de32065606dc3cc176b2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160168"
 ---
 # <a name="overview-of-the-rich-edit-control"></a>Rich Edit 控制項的概觀
 

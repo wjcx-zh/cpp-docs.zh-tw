@@ -3,11 +3,11 @@ title: ARM 組合程式參考
 ms.date: 08/28/2017
 ms.assetid: f8a076cc-9627-4328-a34a-9c44f7a3aab1
 ms.openlocfilehash: 698bbae8e3ed48ff89c851baba380d7d9de7432a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167539"
 ---
 # <a name="arm-assembler-reference"></a>ARM 組合程式參考
 

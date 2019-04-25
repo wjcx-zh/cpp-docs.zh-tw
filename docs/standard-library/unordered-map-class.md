@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159141"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 類別
 
@@ -168,7 +168,7 @@ class unordered_map;
 |*Ty*|對應的類型。|
 |*雜湊*|雜湊函式物件類型。|
 |*預測*|相等比較函式物件類型。|
-|*配置*|配置器類別。|
+|*Alloc*|配置器類別。|
 
 ## <a name="members"></a>成員
 
@@ -1024,7 +1024,7 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+|*args*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1053,7 +1053,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非該 unordered_map 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
+|*args*|轉送以建構插入 unordered_map 之元素的引數，除非該 unordered_map 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
 |*where*|有關要從何處開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
@@ -1472,7 +1472,7 @@ IList);
 
 |參數|描述|
 |-|-|
-|*val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|
+|*Val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|
 |*Where*|要開始搜尋正確的插入點的地方。|
 |*ValTy*|範本參數，指定 unordered_map 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|
@@ -1490,13 +1490,13 @@ IList);
 
 此函式不會使任何迭代器、指標或參考無效。
 
-在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個項目期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
+在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
 若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取**bool**元件，請使用`pr.second`。 例如，請參閱本文中稍後的範例程式碼。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-範圍成員函式 (5) 會將項目值的序列插入對應至每個項目的 unordered_map，而這些項目是由範圍 `[First, Last)` 中的迭代器指定；因此不會插入 `Last`。 容器成員函式 `end()` 會參考容器中最後一個項目之後的位置。例如陳述式 `m.insert(v.begin(), v.end());` 嘗試將 `v` 的所有項目插入 `m`。 只會插入具有範圍中唯一值的元素；若重複則會忽略。 若要觀察哪些元素會遭到拒絕，請使用單一元素版本的 `insert`。
+範圍成員函式 (5) 會將項目值的序列插入對應至每個項目的 unordered_map，而這些項目是由範圍 `[First, Last)` 中的迭代器指定；因此不會插入 `Last`。 容器成員函式 `end()` 是指容器中最後一個項元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 嘗試將 `v` 的所有元素插入 `m` 中。 只會插入具有範圍中唯一值的元素；若重複則會忽略。 若要觀察哪些元素會遭到拒絕，請使用單一元素版本的 `insert`。
 
 初始設定式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_map。
 
@@ -2099,7 +2099,7 @@ Ty& operator[](Key&& keyval);
 
 |參數|描述|
 |-|-|
-|*keyval*|要尋找或插入的索引鍵值。|
+|*Keyval*|要尋找或插入的索引鍵值。|
 
 ### <a name="return-value"></a>傳回值
 

@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164902"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 
@@ -1161,7 +1161,7 @@ virtual int Receive(
 長度*lpBuf*以位元組為單位。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - 在 內送資料，查看 MSG_PEEK。 將資料複製到緩衝區，但不是會從輸入佇列移除。
 
@@ -1252,7 +1252,7 @@ int ReceiveFrom(
 中的來源位址的長度指標*lpSockAddr*以位元組為單位。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - 在 內送資料，查看 MSG_PEEK。 將資料複製到緩衝區，但不是會從輸入佇列移除。
 
@@ -1330,7 +1330,7 @@ int ReceiveFromEx(
 儲存的連接埠 UINT 參考。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - 在 內送資料，查看 MSG_PEEK。 將資料複製到緩衝區，但不是會從輸入佇列移除。
 
@@ -1400,7 +1400,7 @@ virtual int Send(
 中的資料長度*lpBuf*以位元組為單位。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - MSG_DONTROUTE 指定的資料應該不會受限於路由。 Windows 通訊端的供應商可以選擇忽略這個旗標。
 
@@ -1489,7 +1489,7 @@ int SendTo(
 這個物件所連接的通訊端的網路位址： 電腦名稱，例如 「"ftp.microsoft.com 或小數點的數字，例如"128.56.22.8 」。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - MSG_DONTROUTE 指定的資料應該不會受限於路由。 Windows 通訊端的供應商可以選擇忽略這個旗標。
 
@@ -1585,7 +1585,7 @@ int SendToEx(
 這個物件所連接的通訊端的網路位址： 電腦名稱，例如 「"ftp.microsoft.com 或小數點的數字，例如"128.56.22.8 」。
 
 *nFlags*<br/>
-指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 後者的建構方式是使用 c + + 結合下列值之一**或**運算子：
+指定用來進行呼叫的方法。 此函式的語意取決於通訊端選項和*nFlags*參數。 第二個建構藉由結合任何下列的值與C++**或是**運算子：
 
 - MSG_DONTROUTE 指定的資料應該不會受限於路由。 Windows 通訊端的供應商可以選擇忽略這個旗標。
 

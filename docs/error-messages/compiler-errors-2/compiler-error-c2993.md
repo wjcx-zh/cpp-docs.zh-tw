@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2993
 ms.assetid: 4ffd2b78-654b-46aa-95a6-b62101cf91c8
 ms.openlocfilehash: 5be4836332f67f2064f60a3b058db159a18ca1e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160883"
 ---
 # <a name="compiler-error-c2993"></a>編譯器錯誤 C2993
 
@@ -36,9 +36,9 @@ template <class T, struct MyStruct S>   // C2993
 class CMyClass {};
 ```
 
-在 Visual Studio.NET 2003年中已完成的編譯器一致性工作，也產生這個錯誤： 浮動點非類型樣板參數不能再使用。 C + + 標準不允許浮動點非類型範本參數。
+在 Visual Studio.NET 2003年中已完成的編譯器一致性工作，也產生這個錯誤： 浮動點非類型樣板參數不能再使用。 C++標準不允許浮動點非類型樣板參數。
 
-如果是函式樣板，使用的函式引數傳入的浮動點非類型樣板參數 （此程式碼是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中的 Visual c + +）。 如果它是類別樣板，則沒有簡單的因應措施。
+如果是函式樣板，使用的函式引數傳入的浮動點非類型樣板參數 (此程式碼就會是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中視覺效果的C++)。 如果它是類別樣板，則沒有簡單的因應措施。
 
 ```
 // C2993b.cpp

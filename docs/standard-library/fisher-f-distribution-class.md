@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
 ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159804"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 
@@ -72,7 +72,7 @@ public:
 *RealType*<br/>
 浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*一般而言，URNG*<br/>
+*URNG*<br/>
 統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
@@ -157,7 +157,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 第一次執行：
 

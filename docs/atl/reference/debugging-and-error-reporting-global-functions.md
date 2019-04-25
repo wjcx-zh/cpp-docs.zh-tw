@@ -9,11 +9,11 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276655"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
 
@@ -156,7 +156,7 @@ HRESULT WINAPI AtlReportError(
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  請勿使用`AtlReportError`c + + catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，這會依次使用`_alloca`內部函式。 使用`AtlReportError`在 c + + catch 處理常式可能會造成 c + + catch 處理常式中的例外狀況。
+>  請勿使用`AtlReportError`在C++catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，這會依次使用`_alloca`內部函式。 使用`AtlReportError`在C++catch 處理常式可能會造成例外狀況中的C++catch 處理常式。
 
 ### <a name="requirements"></a>需求
 

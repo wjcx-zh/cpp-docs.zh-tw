@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159856"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "50555735"
 
 每個範本類別`promise`， `future`，並`shared_future`具有類型的特製化**void**和部分特製化來儲存和擷取值的參考。 這些特製化與主要範本只有在儲存和擷取傳回值的函式簽章及語意上有差異。
 
-範本類別 `future` 和 `shared_future` 除了為回溯相容性保留的情況之外，一律不會在其解構函式中進行封鎖：與所有其他 future 不同，針對連結至開頭為 `std::async` 之工作的 `future` (或最後一個 `shared_future`)，如果該工作尚未完成，解構函式就會進行封鎖；也就是說，如果此執行緒尚未呼叫 `.get()` 或 `.wait()` 且該工作仍在執行，解構函式就會進行封鎖。 下列可用性附註已經在草稿標準中新增到 `std::async` 的描述：「[附註：如果將從 std::async 取得的 future 移到區域範圍外，其他使用該 future 的程式碼必須知悉該 future 的解構函式可能進行封鎖來讓共用狀態變成就緒。—結束附註]」在所有其他情況下，都必須要有 `future` 和 `shared_future` 解構函式，並且保證它們一律不進行封鎖。
+範本類別`future`和`shared_future`永遠不會封鎖在其解構函式，除了在保留回溯相容性的其中一個案例：與所有其他 future，不同的`future`— 或最後一個`shared_future`— 連結至工作`std::async`解構函式區塊，如果尚未完成的工作; 也就是說，它會封鎖如果此執行緒尚未呼叫`.get()`或`.wait()`工作仍在執行中。 已新增下列可用性附註的描述`std::async`草稿標準中: 「 [附註：使用未來的其他程式碼取自 std::async future 移出的區域範圍，如果必須知道未來的解構函式可能會封鎖共用狀態變成就緒。 — 結束附註] 」 在所有其他情況下，`future`和`shared_future`解構函式所需，而且保證絕對不會封鎖。
 
 ## <a name="members"></a>成員
 
@@ -77,7 +77,7 @@ ms.locfileid: "50555735"
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|為 `future_error` 類別所回報的錯誤提供符號名稱。|
 |[future_status](../standard-library/future-enums.md#future_status)|為計時的 wait 函式可傳回的原因提供符號名稱。|
-|[啟動](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|
+|[launch](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|
 
 ## <a name="see-also"></a>另請參閱
 

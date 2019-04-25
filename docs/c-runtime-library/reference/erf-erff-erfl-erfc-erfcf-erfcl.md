@@ -37,11 +37,11 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62289193"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -99,7 +99,7 @@ long double erfcl(
 
 補充高斯錯誤函式定義為 1-erf （x)。 **Erf**函式傳回值，範圍-1.0 為 1.0。 不會傳回錯誤。 **Erfc**函式會傳回範圍 0 到 2 中的值。 如果*x*太大**erfc**，則**errno**變數設定為**ERANGE**。
 
-因為 c + + 允許多載，您可以呼叫多載**erf**並**erfc**採用並傳回**float**並**長** **雙**型別。 在 C 程式中， **erf**並**erfc**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**erf**並**erfc**採用並傳回**float**並**長** **double**型別。 在 C 程式中， **erf**並**erfc**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
 ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163996"
 ---
 # <a name="cexception-class"></a>CException 類別
 
@@ -115,7 +115,7 @@ void Delete();
 
 您可以指定的物件建構時是否應該刪除的物件。 如需詳細資訊，請參閱 < [CException::CException](#cexception)。
 
-您只需要呼叫`Delete`如果您使用 c + +**試**- **攔截**機制。 如果您使用 MFC 巨集**嘗試**並**攔截**，則這些巨集將會自動呼叫此函式。
+您只需要呼叫`Delete`如果您使用C++**試**- **攔截**機制。 如果您使用 MFC 巨集**嘗試**並**攔截**，則這些巨集將會自動呼叫此函式。
 
 ### <a name="example"></a>範例
 

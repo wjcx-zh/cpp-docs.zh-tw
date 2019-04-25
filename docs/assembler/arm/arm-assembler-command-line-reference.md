@@ -3,11 +3,11 @@ title: ARM 組合程式命令列參考
 ms.date: 08/30/2018
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
 ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162131"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM 組合程式命令列參考
 
@@ -15,21 +15,21 @@ ms.locfileid: "50579226"
 
 ## <a name="syntax"></a>語法
 
-> **armasm** [*選項*] *sourcefile* *objectfile*
-> **armasm** [*選項*] **-o** *objectfile* *sourcefile*
+> **armasm** [*options*] *sourcefile* *objectfile*
+> **armasm** [*options*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>參數
 
 *options*<br/>
 零個或多個項目組合：
 
-- **-錯誤***檔名*<br/>
+- **-errors** *filename*<br/>
    將錯誤和警告訊息，以重新導向*filename*。
 
 - **-i** *dir*[**;**<em>dir</em>]<br/>
    加入包含搜尋路徑中指定的目錄。
 
-- **-預先定義***指示詞*<br/>
+- **-predefine** *directive*<br/>
    指定預先定義符號的 SETA、 SETL 或設定指示詞。<br/>
    範例： **armasm.exe-預先定義"COUNT SETA 150"source.asm**<br/>
    如需詳細資訊，請參閱 < [ARM 編譯器 armasm 參考指南](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)。
@@ -37,13 +37,13 @@ ms.locfileid: "50579226"
 - **-nowarn**<br/>
    停用所有警告訊息。
 
-- **-忽略***警告*<br/>
+- **-ignore** *warning*<br/>
    停用指定的警告。 如需可能的值，請參閱有關警告的章節。
 
 - **-help**<br/>
    列印命令列說明訊息。
 
-- **-machine** *機器*<br/>
+- **-machine** *machine*<br/>
    指定設定的 PE 標頭中的機器類型。  可能值為*機器*是：<br/>
    **ARM**— IMAGE_FILE_MACHINE_ARMNT 設定機器類型。 這是預設值。<br/>
    **THUMB**— IMAGE_FILE_MACHINE_THUMB 設定機器類型。
@@ -51,7 +51,7 @@ ms.locfileid: "50579226"
 - **-oldit**<br/>
    產生 ARMv7 樣式 IT 區塊。  根據預設，ARMv8 相容 IT 區塊所產生。
 
-- **-透過***檔名*<br/>
+- **-via** *filename*<br/>
    讀取其他的命令列引數，從*filename*。
 
 - **-16**<br/>
@@ -80,7 +80,7 @@ ms.locfileid: "50579226"
 
 下列範例示範如何使用 armasm 在典型的案例。 首先，使用 armasm 來建置組件語言來源 (.asm) 檔 (.obj) 檔案。 然後，使用 CL 命令列 C 編譯器來編譯來源 (.cpp) 檔案，並也指定連結器選項連結 ARM 物件檔案。
 
-**armasm myasmcode.asm-o myasmcode.obj**
+**armasm myasmcode.asm -o myasmcode.obj**
 
 **cl myccode.c /link myasmcode.obj**
 

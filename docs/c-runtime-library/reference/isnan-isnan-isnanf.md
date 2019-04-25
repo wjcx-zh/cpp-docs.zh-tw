@@ -33,11 +33,11 @@ helpviewer_keywords:
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157341"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -73,13 +73,13 @@ bool isnan(
 
 在 C 中， **isnan**巨集並 **_isnan**並 **_isnanf**函式會傳回非零值，如果引數*x*為 nan，否則為它們傳回 0。
 
-C + + **isnan**函式會傳回 **，則為 true**如果引數*x*為 NaN; 否則會傳回**false**。
+在C++，則**isnan**範本函式會傳回 **，則為 true**如果引數*x*為 NaN; 否則會傳回**false**。
 
 ## <a name="remarks"></a>備註
 
 因為 NaN 值不會比較為等於其他的 NaN 值，您必須使用其中一種函數或巨集，以偵測站台。 無法在指定之類型的 IEEE-754 浮點數格式表示浮點運算的結果時，會產生 NaN。 如需如何為 NaN 輸出中表示的資訊，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
-當編譯為 c + + **isnan**巨集未定義，以及**isnan**改為定義的範本函式。 它的行為方式與巨集，但傳回值的型別**bool**而不是整數。
+當編譯為C++，則**isnan**未定義巨集，以及**isnan**改為定義的範本函式。 它的行為方式與巨集，但傳回值的型別**bool**而不是整數。
 
 **_Isnan**並 **_isnanf**是 Microsoft 特有的函式。 **_Isnanf**函式只適用於 x64 編譯時。
 
@@ -97,6 +97,6 @@ C + + **isnan**函式會傳回 **，則為 true**如果引數*x*為 NaN; 否則�
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite _finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnormal](isnormal.md)<br/>

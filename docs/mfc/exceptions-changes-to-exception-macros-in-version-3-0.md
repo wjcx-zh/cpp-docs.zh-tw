@@ -8,17 +8,17 @@ helpviewer_keywords:
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
 ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173262"
 ---
 # <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外狀況: 3.0 版例外狀況巨集的變更
 
 這是進階的主題。
 
-在 MFC 3.0 版和更新版本中，已變更的例外狀況處理巨集使用 c + + 例外狀況。 本文會說明這些變更如何影響使用巨集的現有程式碼的行為。
+在 MFC 3.0 版和更新版本中，例外狀況處理巨集已變更為使用C++例外狀況。 本文會說明這些變更如何影響使用巨集的現有程式碼的行為。
 
 本文章涵蓋下列主題：
 
@@ -28,7 +28,7 @@ ms.locfileid: "57291219"
 
 ##  <a name="_core_exception_types_and_the_catch_macro"></a> 例外狀況類型和 CATCH 巨集
 
-在舊版的 MFC**攔截**巨集使用 MFC 執行階段類型資訊來判斷例外狀況的類型，例外狀況的類型決定，也就是說，時，接收站台。 使用 c + + 例外狀況，不過，例外狀況的類型是一律取決於擲回站台就會擲回的例外狀況物件的類型。 在少數情況下擲回的物件指標的類型與擲回的物件類型不同，這會導致不相容。
+在舊版的 MFC**攔截**巨集使用 MFC 執行階段類型資訊來判斷例外狀況的類型，例外狀況的類型決定，也就是說，時，接收站台。 使用C++例外狀況，不過，例外狀況的型別永遠取決於在擲回站台就會擲回的例外狀況物件的類型。 在少數情況下擲回的物件指標的類型與擲回的物件類型不同，這會導致不相容。
 
 下列範例說明這 MFC 3.0 版和更早版本之間的差異的結果：
 
@@ -42,7 +42,7 @@ ms.locfileid: "57291219"
 
 [!code-cpp[NVC_MFCExceptions#20](../mfc/codesnippet/cpp/exceptions-changes-to-exception-macros-in-version-3-0_3.cpp)]
 
-為 true，第一個 catch 區塊攔截例外狀況。 在 3.0 版，您可以使用 c + + 例外狀況來實作許多例外狀況處理巨集，第二個 catch 區塊符合擲回`CException`。
+為 true，第一個 catch 區塊攔截例外狀況。 3.0 版，它會使用C++來實作許多例外狀況處理巨集，而第二個 catch 區塊的例外狀況符合擲回`CException`。
 
 就像這樣的程式碼並不常見。 它通常會出現 例外狀況物件傳遞至另一個函式可接受泛型`CException*`執行 「 前擲回 」 處理，且最後會擲回例外狀況。
 

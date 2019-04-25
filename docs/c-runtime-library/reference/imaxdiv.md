@@ -22,11 +22,11 @@ helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
 ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157327"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -43,7 +43,7 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>參數
 
-*號碼*<br/>
+*numer*<br/>
 分子。
 
 *denom*<br/>

@@ -10,15 +10,15 @@ helpviewer_keywords:
 - execution [MFC], returns from within catch block
 ms.assetid: 7c233ff0-89de-4de0-a68a-9e9cdb164311
 ms.openlocfilehash: 511850c3c17a4eb70529202f4b0c2b36132fc8ff
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173271"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>例外狀況: 攔截及刪除例外狀況
 
-下列指示和範例示範如何攔截和刪除例外狀況。 如需詳細資訊**嘗試**，**攔截**，並**擲回**關鍵字，請參閱[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。
+下列指示和範例示範如何攔截和刪除例外狀況。 如需詳細資訊**嘗試**，**攔截**，並**擲回**關鍵字，請參閱[C++例外狀況處理](../cpp/cpp-exception-handling.md)。
 
 您的例外狀況處理常式必須刪除其所處理的例外狀況物件，因為每當程式碼攔截例外狀況時，若無法刪除例外狀況就會導致記憶體流失。
 

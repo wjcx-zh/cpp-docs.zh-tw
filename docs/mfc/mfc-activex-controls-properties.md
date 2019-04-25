@@ -7,15 +7,15 @@ helpviewer_keywords:
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324320"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX 控制項：屬性
 
-ActiveX 控制項就會引發其控制項容器與通訊的事件。 容器，用以方法和屬性的控制項進行通訊。 方法和屬性類似，在使用中且用途，分別是，成員函式和 c + + 類別的成員變數。 屬性會公開任何容器的資料成員的 ActiveX 控制項。 屬性包含 ActiveX 控制項，例如自動化用戶端和 ActiveX 控制項容器應用程式提供的介面。
+ActiveX 控制項就會引發其控制項容器與通訊的事件。 容器，用以方法和屬性的控制項進行通訊。 方法與屬性類似，在使用中且用途，分別是，成員函式和成員變數的C++類別。 屬性會公開任何容器的資料成員的 ActiveX 控制項。 屬性包含 ActiveX 控制項，例如自動化用戶端和 ActiveX 控制項容器應用程式提供的介面。
 
 屬性也稱為屬性。
 

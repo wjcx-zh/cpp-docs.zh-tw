@@ -1,6 +1,6 @@
 ---
-title: 設定 c + + 編譯器和建置在 Visual Studio 中的屬性
-description: 若要變更 c + + 編譯器和連結器選項和其他組建設定中使用 Visual Studio IDE。
+title: 設定C++在 Visual Studio 中的編譯器及建置屬性
+description: 使用 Visual Studio IDE 來變更C++編譯器和連結器選項和其他組建設定。
 ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
 ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314061"
 ---
 # <a name="set-compiler-and-build-properties"></a>設定編譯器和組建屬性
 
@@ -48,14 +48,14 @@ ms.locfileid: "58564905"
 
 - [C++ 偵錯設定的專案設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)
 - [偵錯設定和準備](/visualstudio/debugger/debugger-settings-and-preparation)
-- [偵錯準備：Visual c + + 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+- [偵錯準備：視覺化C++專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
 - [在 Visual Studio 偵錯工具中指定符號 (.pdb) 和原始程式檔](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)
 
-## <a name="c-compiler-and-linker-options"></a>C + + 編譯器和連結器選項
+## <a name="c-compiler-and-linker-options"></a>C++編譯器和連結器選項
 
-C + + 編譯器和連結器選項位於**C/c + +** 並**連結器**下的左窗格中的節點**組態屬性**。 這些會直接轉譯為會傳遞至編譯器的命令列選項。 若要閱讀有關特定選項的文件，選擇中間窗格，然後按下**F1**。 或者，您可以瀏覽文件上的所有選項[MSVC 編譯器選項](reference/compiler-options.md)並[MSVC 連結器選項](reference/linker-options.md)。 
+C++編譯器和連結器選項位於**C /C++** 並**連結器**下的左窗格中的節點**組態屬性**。 這些會直接轉譯為會傳遞至編譯器的命令列選項。 若要閱讀有關特定選項的文件，選擇中間窗格，然後按下**F1**。 或者，您可以瀏覽文件上的所有選項[MSVC 編譯器選項](reference/compiler-options.md)並[MSVC 連結器選項](reference/linker-options.md)。 
 
-**屬性頁**對話方塊顯示只與目前專案相關的屬性頁。 例如，如果專案沒有 .idl 檔案，就不會顯示 MIDL 屬性頁。 如需每個屬性頁設定的相關詳細資訊，請參閱 <<c0> [ 屬性頁面 （c + +）](reference/property-pages-visual-cpp.md)。 
+**屬性頁**對話方塊顯示只與目前專案相關的屬性頁。 例如，如果專案沒有 .idl 檔案，就不會顯示 MIDL 屬性頁。 如需每個屬性頁設定的相關詳細資訊，請參閱 <<c0> [ 屬性頁 (C++)](reference/property-pages-visual-cpp.md)。</c0> 
 
 ## <a name="directory-and-path-values"></a>目錄和路徑值
 

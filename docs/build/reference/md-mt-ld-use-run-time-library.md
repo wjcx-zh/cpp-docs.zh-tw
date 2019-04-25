@@ -36,11 +36,11 @@ helpviewer_keywords:
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
 ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321289"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (使用執行階段程式庫)
 
@@ -71,13 +71,13 @@ ms.locfileid: "57822484"
 
 如需如何使用執行階段程式庫的偵錯版本的詳細資訊，請參閱[C 執行階段程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)。
 
-如需詳細資訊的 Dll，請參閱 < [Visual c + + Dll](../dlls-in-visual-cpp.md)。
+如需詳細資訊的 Dll，請參閱 <<c0> [ 視覺效果中的 Dll C++ ](../dlls-in-visual-cpp.md)。</c0>
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 依序展開**C/c + +** 資料夾。
+1. 依序展開**C /C++** 資料夾。
 
 1. 選取 **程式碼產生**屬性頁。
 
@@ -90,4 +90,4 @@ ms.locfileid: "57822484"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

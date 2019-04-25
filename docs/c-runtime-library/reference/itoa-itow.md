@@ -100,11 +100,11 @@ helpviewer_keywords:
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
 ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157366"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa _itoa、 ltoa、 _ltoa、 ultoa、 _ultoa、 _i64toa、 _ui64toa、 _itow、 _ltow、 _ultow、 _i64tow、 _ui64tow
 
@@ -175,7 +175,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 要用於轉換的基底*值*，它必須介於 2 到 36 的範圍。
 
 *size*<br/>
-單位為字元類型的緩衝區的長度。 此參數會從推斷*緩衝區*c + + 中的引數。
+單位為字元類型的緩衝區的長度。 此參數會從推斷*緩衝區*中的引數C++。
 
 ## <a name="return-value"></a>傳回值
 
@@ -197,9 +197,9 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 #include <stdlib.h>
 ```
 
-在 c + +，這些函式具有樣板多載所叫用其更安全的對應項目。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在C++，這些函式具有樣板多載所叫用其更安全的對應項目。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
-Posix 名稱**itoa**， **ltoa**，並**ultoa**別名是存在於 **_itoa**， **_ltoa**，及 **_ultoa**函式。 Posix 名稱已取代，因為它們不會遵循 ISO C 的實作特定函式名稱慣例根據預設，這些函式會導致取代警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與 c + + 標準的名稱：** *new_name*。 我們建議您變更您要使用更安全的版本，這些函式的原始程式碼 **_itoa_s**， **_ltoa_s**，或 **_ultoa_s**。 如需詳細資訊，請參閱 < [_itow_s 函式，_itoa_s](itoa-s-itow-s.md)。
+Posix 名稱**itoa**， **ltoa**，並**ultoa**別名是存在於 **_itoa**， **_ltoa**，及 **_ultoa**函式。 Posix 名稱已取代，因為它們不會遵循 ISO C 的實作特定函式名稱慣例根據預設，這些函式會導致取代警告[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與C++標準的名稱：** *new_name*。 我們建議您變更您要使用更安全的版本，這些函式的原始程式碼 **_itoa_s**， **_ltoa_s**，或 **_ultoa_s**。 如需詳細資訊，請參閱 < [_itow_s 函式，_itoa_s](itoa-s-itow-s.md)。
 
 對於來源的程式碼可攜性，您可能想要保留在程式碼中的 Posix 名稱。 若要使用這些函式，而不顯示取代警告，同時定義 **_CRT_NONSTDC_NO_WARNINGS**並 **_CRT_SECURE_NO_WARNINGS**之前包括任何 CRT 標頭的前置處理器巨集。 您可以在開發人員命令提示字元中的命令列上加上 **/D_CRT_SECURE_NO_WARNINGS**並 **/D_CRT_NONSTDC_NO_WARNINGS**編譯器選項，以**cl**命令。 否則，原始程式檔中定義的巨集。 如果您使用先行編譯標頭，定義頂端的 先行編譯標頭的巨集包括通常 stdafx.h 的檔案。 若要在原始程式碼中定義的巨集，請使用 **#define**指示詞後再納入任何 CRT 標頭，如此範例所示：
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
 ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166889"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>內嵌組譯碼中的類型和變數大小
 
@@ -31,9 +31,9 @@ ms.locfileid: "50539096"
 
 - **長度**運算子可以傳回陣列中的項目數目。 它會針對非陣列變數傳回數值 1。
 
-- **大小**運算子可以傳回 C 或 c + + 變數的大小。 變數的大小是乘積及其**長度**並**型別**。
+- **大小**運算子可以傳回 C 的大小或C++變數。 變數的大小是乘積及其**長度**並**型別**。
 
-- **型別**運算子可以傳回 C 或 c + + 類型或變數的大小。 如果變數是陣列，**型別**傳回的單一元素陣列的大小。
+- **型別**運算子可以傳回 C 的大小或C++類型或變數。 如果變數是陣列，**型別**傳回的單一元素陣列的大小。
 
 例如，如果您的程式具有 8 個元素**int**陣列，
 

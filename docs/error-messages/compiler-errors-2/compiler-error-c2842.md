@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
 ms.openlocfilehash: 99b2c86d1e914c9425c2664d4e858bba6cb99486
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382940"
 ---
 # <a name="compiler-error-c2842"></a>編譯器錯誤 C2842
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325552"
 
 您也可以定義自己**new 運算子**或是**運算子 delete**管理原生堆積上的記憶體配置。 不過，參考類別不能定義這些運算子，因為它們只會配置於 Managed 堆積上。
 
-如需詳細資訊，請參閱 <<c0> [ 使用者定義的運算子 (C + + /cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。
+如需詳細資訊，請參閱 <<c0> [ 使用者定義的運算子 (C++/CLI)](../../dotnet/user-defined-operators-cpp-cli.md)。</c0>
 
 ## <a name="example"></a>範例
 

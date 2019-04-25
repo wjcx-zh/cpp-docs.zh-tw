@@ -9,11 +9,11 @@ helpviewer_keywords:
 - /MANIFESTFILE linker option
 ms.assetid: befa5ab2-a9cf-4c9b-969a-e7b4a930f08d
 ms.openlocfilehash: e75c6d8171aae22312ba6aaa2d4304d831ec6d0f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321614"
 ---
 # <a name="manifestfile-name-manifest-file"></a>/MANIFESTFILE (為資訊清單檔案命名)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57813834"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 展開 [組態屬性] 節點。
 

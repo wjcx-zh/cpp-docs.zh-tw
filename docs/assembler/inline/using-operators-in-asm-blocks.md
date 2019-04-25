@@ -10,17 +10,17 @@ helpviewer_keywords:
 - square brackets [ ]
 ms.assetid: a26ccfd4-40ae-4a61-952f-c417982aa8dd
 ms.openlocfilehash: a871c19942252bf6a1a4901f8854b7b759700cd9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166499"
 ---
 # <a name="using-operators-in-asm-blocks"></a>在 __asm 區塊中使用運算子
 
 **Microsoft 專屬**
 
-`__asm`區塊無法使用 C 或 c + + 專有的運算子，例如**<<** 運算子。 不過，共用的運算子 C 和 MASM，例如\*運算子，會解譯為組合語言運算子。 比方說外,`__asm`封鎖，方括號 (**[]**) 會解譯為封閉陣列註標，C 會自動調整大小的陣列中的項目。 在 `__asm` 區塊內，方括號會視為 MASM 索引運算子，其會產生從任何資料物件或標籤 (不只是陣列) 的未縮放位元組位移。 下列程式碼將說明這項差異：
+`__asm`區塊無法使用 C 或C++特定的運算子，例如**<<** 運算子。 不過，共用的運算子 C 和 MASM，例如\*運算子，會解譯為組合語言運算子。 比方說外,`__asm`封鎖，方括號 (**[]**) 會解譯為封閉陣列註標，C 會自動調整大小的陣列中的項目。 在 `__asm` 區塊內，方括號會視為 MASM 索引運算子，其會產生從任何資料物件或標籤 (不只是陣列) 的未縮放位元組位移。 下列程式碼將說明這項差異：
 
 ```cpp
 int array[10];

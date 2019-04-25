@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 56ae0da7e86e092cee46d24d1a2a27d9d54709e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159505"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt; 函式
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>參數
 
-*原則*<br/>
+*policy*<br/>
 [launch](../standard-library/future-enums.md#launch) 值。
 
 ### <a name="remarks"></a>備註
@@ -63,7 +63,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 除非 `decay<Fn>::type` 是 launch 以外的類型，否則第二個函式不會參與多載解析。
 
-C + + 標準指出，是否原則是 launch::async，函式會建立新的執行緒。 不過 Microsoft 實作目前不合格。 它會從 Windows 執行緒集區，這在某些情況下可能會回收的執行緒，而不是一個新提供取得其執行緒。 這表示`launch::async`原則實際上會實作為`launch::async|launch::deferred`。  執行緒集區式實作的另一項含意是，則無法保證執行緒完成時，會終結執行緒區域變數。 如果執行緒是回收，但提供的新呼叫`async`，仍會存在的舊的變數。 因此建議您不要使用執行緒區域變數使用`async`。
+C++標準狀態，是否原則是 launch::async，函式會建立新的執行緒。 不過 Microsoft 實作目前不合格。 它會從 Windows 執行緒集區，這在某些情況下可能會回收的執行緒，而不是一個新提供取得其執行緒。 這表示`launch::async`原則實際上會實作為`launch::async|launch::deferred`。  執行緒集區式實作的另一項含意是，則無法保證執行緒完成時，會終結執行緒區域變數。 如果執行緒是回收，但提供的新呼叫`async`，仍會存在的舊的變數。 因此建議您不要使用執行緒區域變數使用`async`。
 
 如果*原則*是`launch::deferred`，此函式會將標示為持有其相關聯非同步狀態*deferred 函式*，並傳回。 第一次呼叫任何等待相關非同步狀態變成就緒的非計時函式時，實際上會透過評估 `INVOKE(dfn, dargs..., Ty)` 來呼叫 deferred 函式。
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*errno*<br/>
+*Errno*<br/>
 [future_errc](../standard-library/future-enums.md#future_errc) 值，可識別所回報的錯誤。
 
 ### <a name="return-value"></a>傳回值
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*errno*<br/>
+*Errno*<br/>
 [future_errc](../standard-library/future-enums.md#future_errc) 值，可識別所回報的錯誤。
 
 ### <a name="return-value"></a>傳回值

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
 ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313580"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮點數會失去精確度的原因
 
@@ -25,7 +25,7 @@ ms.locfileid: "57826071"
 
 若要解決這個問題，請確定值大於或小於功能所需的大多數程式設計師，或它們取得，並使用會維持有效位數的二進碼十進位 (BCD) 程式庫中。
 
-有效位數和精確度的浮點數計算，會影響浮點值的二進位表示法。 使用 Microsoft Visual c + + [IEEE 浮點數格式](ieee-floating-point-representation.md)。
+有效位數和精確度的浮點數計算，會影響浮點值的二進位表示法。 Microsoft VisualC++會使用[IEEE 浮點數格式](ieee-floating-point-representation.md)。
 
 ## <a name="example"></a>範例
 

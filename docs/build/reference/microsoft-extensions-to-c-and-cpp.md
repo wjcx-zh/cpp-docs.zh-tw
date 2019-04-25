@@ -1,5 +1,5 @@
 ---
-title: 對 C 和 c + + 的 Microsoft 擴充功能
+title: C 的 Microsoft 擴充功能和C++
 ms.date: 06/14/2018
 helpviewer_keywords:
 - or_eq operator
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
 ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321185"
 ---
-# <a name="microsoft-extensions-to-c-and-c"></a>對 C 和 c + + 的 Microsoft 擴充功能
+# <a name="microsoft-extensions-to-c-and-c"></a>C 的 Microsoft 擴充功能和C++
 
 Visual C++ 擴充 ANSI C 和 ANSI C++ 標準如下。
 
 ## <a name="keywords"></a>關鍵字
 
-加入數個關鍵字。 在清單中[關鍵字](../../cpp/keywords-cpp.md)，有兩個前置底線的關鍵字是 Visual c + + 延伸模組。
+加入數個關鍵字。 在清單中[關鍵字](../../cpp/keywords-cpp.md)，有兩個前置底線關鍵字是視覺效果C++擴充功能。
 
 ## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>從類別定義的靜態 const 整數 （或列舉） 成員
 
@@ -59,7 +59,7 @@ const int CMyClass::max;   // out of class definition
 
 底下 **/Ze**，層級定義為靜態、 const 整數和 const enum 資料成員的選擇性。 只有靜態和常數的整數和列舉可以在類別之內有初始設定式；初始設定運算式必須是常數運算式。
 
-若要避免發生錯誤，提供在標頭檔和標頭檔包含多個原始程式檔中的層級定義時，使用[selectany](../../cpp/selectany.md)。 例如: 
+若要避免發生錯誤，提供在標頭檔和標頭檔包含多個原始程式檔中的層級定義時，使用[selectany](../../cpp/selectany.md)。 例如：
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -232,11 +232,11 @@ C 編譯器支援下列資料宣告和定義功能。
 
 ## <a name="intrinsic-floating-point-functions"></a>內建函式的浮點函式
 
-X86 c + + 編譯器和 C 編譯器支援內嵌產生`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，和`tan`函式時 **/Oi**指定。 對於 C 編譯器，使用這些內建函式時會失去 ANSI 一致性，因為它們不會設定 `errno` 變數。
+X86C++編譯器和 C 編譯器支援內嵌產生`atan`， `atan2`， `cos`， `exp`， `log`， `log10`， `sin`， `sqrt`，以及`tan`函式時 **/Oi**指定。 對於 C 編譯器，使用這些內建函式時會失去 ANSI 一致性，因為它們不會設定 `errno` 變數。
 
 ## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>將非 const 指標參數傳遞至函式必須要有 const 的指標參數的參考
 
-這是 c + + 的擴充功能。 此程式碼將會以編譯 **/Ze**:
+這是延伸C++。 此程式碼將會以編譯 **/Ze**:
 
 ```cpp
 typedef   int   T;
@@ -262,7 +262,7 @@ void func ()
 
 底下 **/Ze**，您必須包含 iso646.h>，如果您想要使用下列運算子的文字形式：
 
-- && (and)
+- & & (and)
 
 - &= (and_eq)
 
@@ -302,4 +302,4 @@ int main()
 
 - [/Za、/Ze (停用語言延伸模組)](za-ze-disable-language-extensions.md)
 - [MSVC 編譯器選項](compiler-options.md)
-- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+- [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

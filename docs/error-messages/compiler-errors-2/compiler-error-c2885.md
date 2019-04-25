@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
 ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388770"
 ---
 # <a name="compiler-error-c2885"></a>編譯器錯誤 C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "50652123"
 
 ## <a name="example"></a>範例
 
-針對 Visual c + + 2005年所進行的編譯器一致性工作可能會導致此錯誤： 已不再有效有`using`宣告，以巢狀類型; 您必須明確限定您對巢狀類型，將類型放在名稱中的每個參考空間，或建立 typedef。
+針對視覺效果所進行的編譯器一致性工作可能會導致此錯誤C++2005年： 已不再能夠有效`using`宣告，以巢狀類型; 您必須明確限定您對巢狀類型，將此類型的每個參考在 命名空間，或建立之 typedef。
 
 下列範例會產生 C2885。
 
@@ -54,7 +54,7 @@ int main () {
 
 ## <a name="example"></a>範例
 
-如果您使用`using`關鍵字與類別成員，c + + 需要您定義該成員存在於其他類別 （衍生的類別）。
+如果您使用`using`關鍵字與類別成員，C++會要求您定義該成員存在於其他類別 （衍生的類別）。
 
 下列範例會產生 C2885。
 

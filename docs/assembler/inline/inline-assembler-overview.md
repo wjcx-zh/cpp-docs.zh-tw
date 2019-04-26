@@ -8,11 +8,11 @@ helpviewer_keywords:
 - inline assembly, inline assembler
 ms.assetid: d990331a-0e33-4760-8d7a-b720b0288335
 ms.openlocfilehash: 21e0d9ca0e64922b83518eb79c19d2f2e67813bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167007"
 ---
 # <a name="inline-assembler-overview"></a>內嵌組譯工具概觀
 
@@ -22,7 +22,7 @@ ms.locfileid: "50543204"
 
 因為內嵌組合不需要個別的組譯及連結步驟，所以比個別進行組譯方便。 內嵌組譯程式碼可以使用範圍內的任何 C 或 C++ 變數或函式名稱，因此很容易就能與您程式的 C 和 C++ 程式碼整合。 而且，因為組譯程式碼可以與 C 和 C++ 陳述式混用，因此能夠執行單獨在 C 或 C++ 中相當麻煩或無法執行的工作。
 
-[__Asm](../../assembler/inline/asm.md)關鍵字會叫用內嵌組合語言，而且可以出現在 C 或 c + + 陳述式是合法的任一處。 它不可以單獨出現。 後面必須接著組譯碼指令、放在大括號中的指令群組，或至少是一對空的大括號。 這裡的「`__asm` 區塊」一詞是指任何指令或指令群組，不論是否放在大括號中。
+[__Asm](../../assembler/inline/asm.md)關鍵字會叫用內嵌組合語言，而且可以出現只要 C 或C++是合法的陳述式。 它不可以單獨出現。 後面必須接著組譯碼指令、放在大括號中的指令群組，或至少是一對空的大括號。 這裡的「`__asm` 區塊」一詞是指任何指令或指令群組，不論是否放在大括號中。
 
 下列程式碼是放在大括號中的簡單 `__asm` 區塊。 (程式碼是自訂函式初構序列)。
 

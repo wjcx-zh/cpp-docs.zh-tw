@@ -20,16 +20,15 @@ helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
 ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159908"
 ---
 # <a name="singleassignment-class"></a>single_assignment 類別
 
-
-  `single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。
+`single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。
 
 ## <a name="syntax"></a>語法
 
@@ -177,8 +176,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -255,8 +253,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

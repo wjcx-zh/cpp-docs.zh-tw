@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
 ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57813132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176212"
 ---
 # <a name="ln-create-msil-module"></a>/LN (建立 MSIL 模組)
 
@@ -36,7 +36,7 @@ ms.locfileid: "57813132"
 
 模組的預設副檔名為 .netmodule。
 
-在 Visual c + + 2005年之前的 Visual c + + 版本中，模組以建立 **/clr:noAssembly**。
+在視覺效果C++視覺效果之前的版本C++2005 中，模組以建立 **/clr:noAssembly**。
 
 MSVC 連結器接受.netmodule 檔做為輸入，因此，連結器產生的輸出檔的組件或.netmodule 任何連結器輸入.netmodule 沒有執行階段相依性。  如需詳細資訊，請參閱 [.netmodule 檔作為連結器輸入](netmodule-files-as-linker-input.md)。
 
@@ -51,4 +51,4 @@ MSVC 連結器接受.netmodule 檔做為輸入，因此，連結器產生的輸�
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

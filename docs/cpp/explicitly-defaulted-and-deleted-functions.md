@@ -3,11 +3,11 @@ title: 明確的預設和被刪除的函式
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
 ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184322"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明確的預設和被刪除的函式
 
@@ -15,7 +15,7 @@ ms.locfileid: "51327014"
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>明確預設和已刪除的函式的優點
 
-在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函式稱為*特殊成員函式*，以及它們可讓簡單使用者定義型別在 c + + 像在 c 中的結構相同的行為也就是說，您可以建立、 複製和終結它們，而不需要任何額外的編碼工作。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。
+在 C++ 中，如果類型未自動宣告，編譯器會自動產生預設建構函式、複製建構函式、複製指派運算子和解構函式。 這些函式稱為*特殊成員函式*，以及它們可讓使用者定義的簡單型別，在C++像在 c 中的結構相同的行為也就是說，您可以建立、 複製和終結它們，而不需要任何額外的編碼工作。 C++11 語言引進移動語意，在編譯器可以自動產生的特殊成員函式清單中，加入移動建構函式和移動指派運算子。
 
 這對簡單類型而言十分方便，但是複雜類型通常會自行定義一個或多個特殊成員函式，而且這可以防止自動產生其他特殊成員函式。 實際上：
 

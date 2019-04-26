@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184493"
 ---
 # <a name="arrays-c"></a>陣列 (C++)
 
 陣列是同類物件的集合。 最簡單的陣列案例就是向量，可以依照下列順序宣告：
 
-> *宣告規範**識別項* **\[** *常數運算式* **]**<br/>
-> *宣告規範**識別項*  **\[]**<br/>
-> *宣告規範**識別碼* **\[]\[** *常數運算式* **]** 。 。 。<br/>
-> *宣告規範**識別項* **\[** *常數運算式* **]**  **\[** *常數運算式* **]** 。 。 。
+> *decl-specifier* *identifier* **\[** *constant-expression* **]**<br/>
+> *decl-specifier* *identifier* **\[]**<br/>
+> *decl-specifier* *identifer* **\[]\[** *constant-expression* **]** . 。 。<br/>
+> *decl-specifier* *identifier* **\[** *constant-expression* **]** **\[** *constant-expression* **]** . 。 。
 
 1. 宣告規範：
 

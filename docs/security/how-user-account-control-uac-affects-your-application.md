@@ -8,11 +8,11 @@ helpviewer_keywords:
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
 ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179235"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>使用者帳戶控制 (UAC) 如何影響應用程式
 
@@ -26,7 +26,7 @@ ms.locfileid: "57751398"
 
 ## <a name="applications-that-require-administrative-privileges"></a>需要系統管理員權限的應用程式
 
-根據預設，Visual c + + 連結器將 UAC 片段內嵌到應用程式的執行層級的資訊清單`asInvoker`。 如果您的應用程式需要系統管理員權限才能正確執行 (例如，如果會修改登錄的 HKLM 節點，或是會寫入到磁碟上受保護的區域，如 Windows 目錄)，您就必須修改應用程式。
+根據預設，視覺效果C++連結器將 UAC 片段內嵌到應用程式的執行層級的資訊清單`asInvoker`。 如果您的應用程式需要系統管理員權限才能正確執行 (例如，如果會修改登錄的 HKLM 節點，或是會寫入到磁碟上受保護的區域，如 Windows 目錄)，您就必須修改應用程式。
 
 第一個選項是修改要變更的執行層級的資訊清單的 UAC 片段*requireAdministrator*。 然後，應用程式便會提示使用者，必須在執行前提供管理認證。 如需如何執行這項操作的資訊，請參閱[/MANIFESTUAC （將 UAC 資訊內嵌在資訊清單中）](../build/reference/manifestuac-embeds-uac-information-in-manifest.md)。
 

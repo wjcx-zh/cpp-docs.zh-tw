@@ -6,11 +6,11 @@ helpviewer_keywords:
 - rebar controls [MFC], image lists
 ms.assetid: 1a5836ac-019a-46aa-8741-b35c3376b839
 ms.openlocfilehash: fa5307c201850fc42439c79a1c638a0707379913
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180490"
 ---
 # <a name="using-an-image-list-with-a-rebar-control"></a>搭配使用影像清單與 Rebar 控制項
 

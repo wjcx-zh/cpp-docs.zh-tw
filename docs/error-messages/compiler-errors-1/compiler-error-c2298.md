@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2298
 ms.assetid: eb0120ad-c850-4bdd-911d-0361229cc859
 ms.openlocfilehash: 34957d226f10b4ac27f13be6746eac241101b516
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182650"
 ---
 # <a name="compiler-error-c2298"></a>編譯器錯誤 C2298
 

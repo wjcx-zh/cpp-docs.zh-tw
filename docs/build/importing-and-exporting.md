@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188843"
 ---
 # <a name="importing-and-exporting"></a>匯入和匯出
 
@@ -31,7 +31,7 @@ ms.locfileid: "57815823"
 
 ## <a name="using-declspec"></a>使用 __declspec
 
-Visual c + + 會使用 **__declspec （dllimport)** 並 **__declspec （dllexport)** 來取代 **__export**先前在 16 位元版本的 Visual c + + 中使用的關鍵字。
+視覺化C++會使用 **__declspec （dllimport)** 並 **__declspec （dllexport)** 來取代 **__export**先前在視覺效果C++.
 
 您不需要使用 **__declspec （dllimport)** 對於您的程式碼編譯是否正確，但這種方式可讓編譯器產生更好的程式碼。 編譯器可產生更好的程式碼，因為它可以判斷是否函式的 DLL 中存在，可讓編譯器產生程式碼，會略過通常會跨越 DLL 界限的函式呼叫中出現的間接取值層級。 不過，您必須使用 **__declspec （dllimport)** 匯入 DLL 中使用的變數。
 

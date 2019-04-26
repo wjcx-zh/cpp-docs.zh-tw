@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
 ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176573"
 ---
 # <a name="operator-"></a>運算子 %
 
@@ -21,7 +21,7 @@ ms.locfileid: "50622777"
 
 ## <a name="syntax"></a>語法
 
-> % *運算式*
+> % *expression*
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - arrays [C++], initializing
 ms.assetid: 41efe5f0-15b5-4f49-9196-c4902f8fc705
 ms.openlocfilehash: e055e7759865fc151176097c6f0afd9ee237f4c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183423"
 ---
 # <a name="initializing-arrays"></a>初始化陣列
 
@@ -43,7 +43,7 @@ int main()
 
 `aPoint` 的第一個元素是使用 `Point( int, int )` 建構函式建構，其餘兩個元素則是使用預設建構函式建構。
 
-靜態成員陣列 (是否**const**與否) 可以初始化它們的定義 （在類別宣告之外）。 例如: 
+靜態成員陣列 (是否**const**與否) 可以初始化它們的定義 （在類別宣告之外）。 例如：
 
 ```cpp
 // initializing_arrays2.cpp

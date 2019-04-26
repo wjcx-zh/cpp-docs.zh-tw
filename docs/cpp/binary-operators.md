@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
 ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176651"
 ---
 # <a name="binary-operators"></a>二元運算子
 
@@ -56,13 +56,13 @@ ms.locfileid: "50602396"
 
 若要將二元運算子函式宣告為非靜態成員，您必須以此格式進行宣告：
 
-> *ret 型別***運算子** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 何處*ret 類型*是傳回的型別， *op*是其中一個列在上表中，運算子和*arg*是任何類型的引數。
 
 若要將二元運算子函式宣告為全域函式，您必須以此格式進行宣告：
 
-> *ret 型別***運算子** *op* **(** _arg1_**，** _arg2_**)**
+> *ret-type* **operator** *op* **(** _arg1_**,** _arg2_ **)**
 
 其中*ret 類型*並*op*成員運算子函式中所述和*arg1*並*arg2*引數。 至少要有一個引數是類別類型。
 

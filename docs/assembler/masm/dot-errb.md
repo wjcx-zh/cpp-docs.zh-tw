@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .ERRB directive
 ms.assetid: d7834c95-c5b8-45d9-9224-692c2d7bff17
 ms.openlocfilehash: 95772c73b507abfa511e4fed68c247a26072b6e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185364"
 ---
 # <a name="errb"></a>.ERRB
 
@@ -19,7 +19,7 @@ ms.locfileid: "50668321"
 
 ## <a name="syntax"></a>語法
 
-> .ERRB *textitem* [[，*訊息*]]
+> .ERRB *textitem* [[, *message*]]
 
 ## <a name="see-also"></a>另請參閱
 

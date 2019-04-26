@@ -5,11 +5,11 @@ helpviewer_keywords:
 - partial ordering of function templates
 ms.assetid: 0c17347d-0e80-47ad-b5ac-046462d9dc73
 ms.openlocfilehash: 9a3dc687f197770f7a11440699163787b1dc48ef
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183362"
 ---
 # <a name="partial-ordering-of-function-templates-c"></a>函式樣板的部分排序 (C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693447"
 
 1. 請使用下列規則：
 
-   1. 特定類型的樣板特製化比採用泛型型別引數的樣板特製化程度更高。
+   1. 特定類型的樣板特製化比採用泛型類型引數的樣板特製化程度更高。
 
    1. 範本僅採取__T\*__ 更具特製化，比起一個採取只__T__，因為假設輸入__X\*__ 是有效引數__T__樣板引數，但__X__不是有效的引數，如__T\*__ 樣板引數。
 
@@ -74,7 +74,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Less specialized function called

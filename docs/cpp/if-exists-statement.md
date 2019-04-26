@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __if_exists keyword [C++]
 ms.assetid: d3eb34b6-f3a9-4063-a286-b62a28c0c7fa
 ms.openlocfilehash: 9d5a0b24bb08a9485b2d212058fa8f0bd82e5842
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183670"
 ---
 # <a name="ifexists-statement"></a>__if_exists 陳述式
 
@@ -32,7 +32,7 @@ statements
 |參數|描述|
 |---------------|-----------------|
 |*identifier*|要測試其是否存在的識別項。|
-|*陳述式*|若要執行的一或多個陳述式*識別碼*存在。|
+|*statements*|若要執行的一或多個陳述式*識別碼*存在。|
 
 ## <a name="remarks"></a>備註
 
@@ -110,7 +110,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 ```Output
 In X<T>::Dump()

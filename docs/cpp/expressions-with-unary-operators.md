@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], operators
 ms.assetid: 1217685b-b85d-4b48-9ff4-d90f56a26c1b
 ms.openlocfilehash: a13b86755a5e309a51a0e2e14faa1157b7e95ea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183866"
 ---
 # <a name="expressions-with-unary-operators"></a>具有一元運算子的運算式
 
@@ -43,7 +43,7 @@ ms.locfileid: "50559048"
 
 - [new 運算子](../cpp/new-operator-cpp.md)
 
-- [刪除操作員](../cpp/delete-operator-cpp.md)
+- [delete operator](../cpp/delete-operator-cpp.md)
 
 這些運算子具有由右到左的順序關聯性。 一元運算式的語法通常會置於後置或主要運算式的前方。
 
@@ -51,21 +51,21 @@ ms.locfileid: "50559048"
 
 - *postfix-expression*
 
-- `++` *一元運算式*
+- `++` *unary-expression*
 
-- `--` *一元運算式*
+- `--` *unary-expression*
 
-- *一元運算子* *cast 運算式*
+- *unary-operator* *cast-expression*
 
-- **sizeof** *一元運算式*
+- **sizeof** *unary-expression*
 
-- `sizeof(` *類型名稱* `)`
+- `sizeof(` *type-name* `)`
 
 - `decltype(` *運算式* `)`
 
-- *配置運算式*
+- *allocation-expression*
 
-- *解除配置運算式*
+- *deallocation-expression*
 
 任何*後置運算式*會被視為*一元運算式*，以及因為任何主要運算式皆視為*後置運算式*，是任何主要運算式被視為*一元運算式*也。 如需詳細資訊，請參閱 <<c0> [ 後置運算式](../cpp/postfix-expressions.md)並[主要運算式](../cpp/primary-expressions.md)。
 

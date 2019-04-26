@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
 ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159713"
 ---
 # <a name="function-class"></a>function 類別
 
@@ -203,7 +203,7 @@ template <class Fx, class Alloc>
 *_Func*<br/>
 要包裝的可呼叫物件。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類型。
 
 *Ax*<br/>
@@ -344,7 +344,7 @@ result_type operator()(
 *TN*<br/>
 第 N 個呼叫引數類型。
 
-*TN*<br/>
+*tN*<br/>
 第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註

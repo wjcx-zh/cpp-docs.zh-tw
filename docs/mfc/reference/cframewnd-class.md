@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182057"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd 類別
 
@@ -207,7 +207,7 @@ class CFrameWnd : public CWnd
 
 - 間接建構使用文件範本。
 
-您可以呼叫之前`Create`或是`LoadFrame`，您必須建構使用 c + + 堆積上的框架視窗物件**新**運算子。 然後再呼叫`Create`，您也可以註冊視窗類別[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式，可將框架的圖示和類別樣式。
+您可以呼叫之前`Create`或是`LoadFrame`，您必須建構堆積上的框架視窗物件C++**新**運算子。 然後再呼叫`Create`，您也可以註冊視窗類別[AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)全域函式，可將框架的圖示和類別樣式。
 
 使用`Create`傳遞畫面格的建立參數為立即的引數的成員函式。
 
@@ -239,7 +239,7 @@ A`CFrameWnd`包含一般的應用程式中執行 Windows 的主視窗的下列�
 
 - 如果主應用程式視窗的框架視窗，框架視窗會是執行 WinHelp 的內容。 關閉框架視窗會關閉 WINHELP。如果它已針對此應用程式的啟動，EXE。
 
-不使用 c + +**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`終結視窗時，將會刪除 c + + 物件。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。
+請勿使用C++**刪除**終結框架視窗的運算子。 請改用 `CWnd::DestroyWindow`。 `CFrameWnd`實作`PostNcDestroy`將會刪除C++物件時終結視窗。 當使用者關閉框架視窗時，預設值`OnClose`處理常式會呼叫`DestroyWindow`。
 
 如需詳細資訊`CFrameWnd`，請參閱 <<c2> [ 框架 Windows](../../mfc/frame-windows.md)。
 

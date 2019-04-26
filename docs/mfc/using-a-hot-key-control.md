@@ -6,11 +6,11 @@ helpviewer_keywords:
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
 ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180527"
 ---
 # <a name="using-a-hot-key-control"></a>使用熱鍵控制項
 

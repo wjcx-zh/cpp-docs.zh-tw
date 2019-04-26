@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187227"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>編譯器警告 (層級 1) C4789
 
@@ -33,7 +33,7 @@ ms.locfileid: "58476847"
 
 當您轉換為較大的資料類型的參數，然後再進行從 lvalue 參考複製指派時，也會出現警告。
 
-Visual c + + 可能會產生這個警告，永遠不會執行的程式碼路徑。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
+視覺化C++可能會產生這個警告，永遠不會執行的程式碼路徑。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
 
 ```cpp
 #pragma warning( push )
@@ -42,7 +42,7 @@ Visual c + + 可能會產生這個警告，永遠不會執行的程式碼路徑�
 #pragma warning( pop )
 ```
 
-這個慣用語可避免 Visual c + + 產生該特定程式碼區段的警告。 `#pragma warning(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma warning(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需 c + + 前置處理器指示詞`#pragma`，請參閱 <<c2> [ 警告](../../preprocessor/warning.md)並[Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+這個慣用語會保留 VisualC++產生該特定程式碼區段的警告。 `#pragma warning(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma warning(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需詳細資訊C++前置處理器指示詞`#pragma`，請參閱[警告](../../preprocessor/warning.md)並[Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ## <a name="example"></a>範例
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2286
 ms.assetid: 078e0201-35cc-42e2-8dbc-6f8cf557b098
 ms.openlocfilehash: 7d3b8297c5f5da29b99abe78999396e8c44df0fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182765"
 ---
 # <a name="compiler-error-c2286"></a>編譯器錯誤 C2286
 

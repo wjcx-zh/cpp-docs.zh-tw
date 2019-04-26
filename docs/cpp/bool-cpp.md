@@ -9,17 +9,17 @@ helpviewer_keywords:
 - __BOOL_DEFINED macro
 ms.assetid: 9abed3f2-d21c-4eb4-97c5-716342e613d8
 ms.openlocfilehash: e481cb9de7c80d147179efceab2fda9b160f3c21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184271"
 ---
 # <a name="bool-c"></a>bool (C++)
 
 這個關鍵字是內建類型。 此類型的變數可以有值[，則為 true](../cpp/true-cpp.md)並[false](../cpp/false-cpp.md)。 條件運算式具有類型**bool** ，因此有值的型別**bool**。 例如，`i!=0`現在有 為 TRUE 或 FALSE 的值而定`i`。
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置或前置詞遞增或遞減運算子可能不是類型**bool**。 換句話說，指定變數`b`型別的**bool**，不再允許這些運算式：
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):運算元的後置或前置詞遞增或遞減運算子可能不是類型**bool**。 換句話說，指定變數`b`型別的**bool**，不再允許這些運算式：
 
 ```cpp
     b++;

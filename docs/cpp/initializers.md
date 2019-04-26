@@ -9,11 +9,11 @@ helpviewer_keywords:
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183516"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -477,7 +477,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>參考初始化
 
-若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如: 
+若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如：
 
 ```cpp
 // initializing_references.cpp
@@ -514,7 +514,7 @@ int main()
     int& func( int& );
     ```
 
-- 宣告函式類型類別成員。 例如: 
+- 宣告函式類型類別成員。 例如：
 
     ```cpp
     class c {public:   int& i;};

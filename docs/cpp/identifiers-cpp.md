@@ -1,5 +1,5 @@
 ---
-title: 識別項 （c + +）
+title: 識別項 (C++)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - decorated names
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
 ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184597"
 ---
-# <a name="identifiers-c"></a>識別項 （c + +）
+# <a name="identifiers-c"></a>識別項 (C++)
 
 識別項是字元序列，用來表示下列其中一項：
 
@@ -87,15 +87,15 @@ int main() {
 }
 ```
 
-編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 使用 /clr 編譯之程式碼中的識別項應該遵循  [標準 ECMA-335：通用語言基礎結構 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。
+編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 在使用 /clr 所編譯的程式碼中的識別項應遵循[ECMA-335 標準：通用語言基礎結構 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專屬**
 
 識別項的第一個字元必須是字母 (大寫或小寫) 字元或底線 ( **_** )。 由於 C++ 識別項要區分大小寫， `fileName` 與 `FileName`不同。
 
 識別項的拼字、大小寫不能與關鍵字完全相同。 包含關鍵字的識別項是合法的。 例如，`Pint`是合法的識別項，即使它包含**int**，這是一個關鍵字。
 
-使用兩個連續底線字元 ( **__** ) 在識別項，或者單一前置底線後面接著一個大寫字母，是保留給在所有範圍中的 c + + 實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。
+使用兩個連續底線字元 ( **__** ) 中的識別碼，或者單一前置底線後面接著一個大寫字母，已保留供C++在所有範圍中的實作。 因為可能與目前或未來保留的識別項相衝突，您應該避免在具有檔案範圍的名稱中使用一個後面接著小寫字母的前置底線。
 
 ## <a name="see-also"></a>另請參閱
 

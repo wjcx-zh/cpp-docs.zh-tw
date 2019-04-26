@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
 ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187902"
 ---
 # <a name="compiler-error-c2348"></a>編譯器錯誤 C2348
 

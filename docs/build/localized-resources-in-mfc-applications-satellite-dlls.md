@@ -13,11 +13,11 @@ helpviewer_keywords:
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
 ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188735"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC 應用程式中的當地語系化的資源：附屬 Dll
 
@@ -54,4 +54,4 @@ MFC 會嘗試依序停止時找到下列語言版本的每個載入的資源 DLL
 ## <a name="see-also"></a>另請參閱
 
 [Visual C++ 中的 DLL](dlls-in-visual-cpp.md)<br/>
-[TN057:元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)
+[TN057：MFC 元件的當地語系化](../mfc/tn057-localization-of-mfc-components.md)

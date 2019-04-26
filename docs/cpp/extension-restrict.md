@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __restrict keyword [C++]
 ms.assetid: 2d151b4d-f930-49df-bd16-d8757ec7fa83
 ms.openlocfilehash: 76cdf9424e6eab33a3a92b3f98d9c2b0b04ff667
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183748"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -21,7 +21,7 @@ ms.locfileid: "50454544"
 
 - **__Restrict**關鍵字是只有在變數上有效和`__declspec ( restrict )`只適用於在函式宣告和定義。
 
-- **__restrict**大致**限制**於 C99 規格中，但 **__restrict**可以用於 c + + 或 C 程式中。
+- **__restrict**大致**限制**於 C99 規格中，但 **__restrict**可用在C++或 C 程式。
 
 - 當 **__restrict**是使用，編譯器將不會傳播變數的無別名屬性。 亦即，如果您指派 **__restrict**變數設為非 **__restrict**變數，編譯器還是會允許非 __restrict 變數具有別名。 這是不同的行為**限制**C99 規格中的關鍵字。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50454544"
 
 為了與舊版中，相容性 **_restrict**同義 **__restrict**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
 
-在 Visual Studio 2015 和更新版本， **__restrict**可以用於 c + + 參考。
+在 Visual Studio 2015 和更新版本， **__restrict**用於C++參考。
 
 > [!NOTE]
 >  也有一個變數上使用時[volatile](../cpp/volatile-cpp.md)關鍵字**volatile**會優先使用。

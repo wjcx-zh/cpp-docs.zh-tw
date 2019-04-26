@@ -10,19 +10,19 @@ helpviewer_keywords:
 - lock C# keyword [C++]
 ms.assetid: a5902cf8-a14d-4559-aefb-c178615d45bb
 ms.openlocfilehash: ffdf9a8b11912bde38e15408228670c8cff9a503
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188318"
 ---
 # <a name="interoperability-with-other-net-languages-ccli"></a>與其他 .NET 程式設計語言間的互通性 (C++/CLI)
 
-在本節中的主題示範如何建立 Visual c + + 會使用從或提供的功能，以 C# 或 Visual Basic 撰寫的組件的組件。
+在本節中的主題示範如何建立視覺效果中的組件C++，從取用或提供功能給撰寫的組件C#或 Visual Basic。
 
 ## <a name="consume_indexer"></a> 使用 C# 索引子
 
-Visual c + + 不包含索引子;它有索引的屬性。 若要使用 C# 索引子，存取索引子，如同它是索引的屬性。
+視覺化C++不包含索引子;它有索引的屬性。 若要使用 C# 索引子，存取索引子，如同它是索引的屬性。
 
 如需索引子的詳細資訊，請參閱：
 
@@ -70,7 +70,7 @@ public class MainClass {
 
 ### <a name="example"></a>範例
 
-這個 Visual c + + 程式會使用索引子。
+此視覺效果C++程式會使用索引子。
 
 ```cpp
 // consume_cs_indexers_2.cpp
@@ -102,7 +102,7 @@ Element #10 = 0
 
 ## <a name="implement_isas"></a> 實作 is 和 as C# 關鍵字
 
-本主題說明如何實作的功能`is`和`as`Visual c + + 中的 C# 關鍵字。
+本主題說明如何實作的功能`is`並`as`C#視覺效果中的關鍵字C++。
 
 ### <a name="example"></a>範例
 
@@ -143,9 +143,9 @@ o is a string
 
 ## <a name="implement_locak"></a> 實作鎖定 C# 關鍵字
 
-本主題說明如何實作 C# `lock` Visual c + + 中的關鍵字。
+本主題說明如何實作C#`lock`視覺效果中的關鍵字C++。
 
-您也可以使用`lock`c + + 支援程式庫中的類別。 請參閱[同步處理 (lock 類別)](../dotnet/synchronization-lock-class.md)如需詳細資訊。
+您也可以使用`lock`類別中C++支援程式庫。 請參閱[同步處理 (lock 類別)](../dotnet/synchronization-lock-class.md)如需詳細資訊。
 
 ### <a name="example"></a>範例
 

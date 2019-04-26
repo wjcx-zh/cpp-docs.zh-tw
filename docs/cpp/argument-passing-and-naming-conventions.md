@@ -14,11 +14,11 @@ helpviewer_keywords:
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
 ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184396"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引數傳遞和命名慣例
 
@@ -35,7 +35,7 @@ Visual C++ 編譯器允許您指定在函式和呼叫端之間傳遞引數和傳
 
 如需如何定義您自己的函式初構和終解程式碼的資訊，請參閱[Naked 函式呼叫](../cpp/naked-function-calls.md)。
 
-預設值的相關資訊，請在目標為 x64 平台，請參閱的程式碼中呼叫慣例[x64 呼叫慣例](../build/x64-calling-convention.md)。 在 ARM 平台為目標的程式碼中呼叫慣例問題的詳細資訊，請參閱[Visual c + + ARM 移轉常見問題](../build/common-visual-cpp-arm-migration-issues.md)。
+預設值的相關資訊，請在目標為 x64 平台，請參閱的程式碼中呼叫慣例[x64 呼叫慣例](../build/x64-calling-convention.md)。 在 ARM 平台為目標的程式碼中呼叫慣例問題的詳細資訊，請參閱[常見 Visual C++ ARM 移轉問題](../build/common-visual-cpp-arm-migration-issues.md)。
 
 Visual C/C++ 編譯器支援下列呼叫慣例。
 

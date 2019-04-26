@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
 ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161653"
 ---
 # <a name="platformagile-class"></a>Platform::Agile 類別
 
@@ -154,8 +154,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>傳回值
 
-
-  `T` 類型物件的控制代碼位址。
+`T` 類型物件的控制代碼位址。
 
 ### <a name="remarks"></a>備註
 
@@ -240,8 +239,7 @@ typename 樣板指定的類型。
 
 ### <a name="return-value"></a>傳回值
 
-
-  `T` 類型物件的控制代碼
+`T` 類型物件的控制代碼
 
 ### <a name="remarks"></a>備註
 

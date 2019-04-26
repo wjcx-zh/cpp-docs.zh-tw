@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
 ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164809"
 ---
 # <a name="compiler-error-c2668"></a>編譯器錯誤 C2668
 
@@ -19,7 +19,7 @@ ms.locfileid: "50642213"
 
 無法解析指定的多載函式呼叫。 若要明確轉換一或多個實際的參數。
 
-您也可以透過範本使用，取得此錯誤。 如果在相同類別中，您會有一般成員函式，並使用相同的簽章的樣板化的成員函式，必須先使用樣板化的其中一個。 這是目前的 Visual c + + 實作的限制。
+您也可以透過範本使用，取得此錯誤。 如果在相同類別中，您會有一般成員函式，並使用相同的簽章的樣板化的成員函式，必須先使用樣板化的其中一個。 這是目前的實作，視覺效果的限制C++。
 
 ## <a name="example"></a>範例
 
@@ -88,7 +88,7 @@ class MyTestCase : public AppTestCase {
 
 也可因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而產生這個錯誤： 在常數 0 轉換模稜兩可的轉換。
 
-在使用常數 0 轉換的轉換模稜兩可，因為長時間且以 void *，int 需要轉換兩個。 若要解決這個錯誤，轉型成確切的型別，正如，因此無法進行轉換需要進行 （此程式碼是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中的 Visual c + +） 的函式參數的 0。
+在使用常數 0 轉換的轉換模稜兩可，因為長時間且以 void *，int 需要轉換兩個。 若要解決這個錯誤，轉型成確切的型別，正如，因此不需要進行任何轉換函式參數的 0 (此程式碼就會是有效的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中視覺效果的C++)。
 
 ```cpp
 // C2668c.cpp

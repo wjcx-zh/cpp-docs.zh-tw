@@ -21,11 +21,11 @@ helpviewer_keywords:
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
 ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167839"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 組合程式診斷訊息
 
@@ -60,7 +60,7 @@ ARM 架構無法保證這個指令執行時，會發生什麼事。  如需有�
 label
 ```
 
-> 捲動方塊區域中不允許 A2202: Pre UAL 指示語法
+> A2202:不允許捲動方塊區域中的前 UAL 指示語法
 
 捲動方塊的程式碼必須使用統一的組合器語言 」 (UAL) 語法。  不會再接受舊語法
 
@@ -69,7 +69,7 @@ label
     ADDSEQ r0, r1         ; OK
 ```
 
-> A2513： 旋轉必須是偶數
+> A2513:旋轉必須是偶數
 
 在 ARM 模式中，沒有指定常數的替代語法。  反而比撰寫`#<const>`，您可以撰寫`#<byte>,#<rot>`，表示取得旋轉值的常數值`<byte>`向右`<rot>`。  當您使用此語法時，您必須進行的值`<rot>`甚至。
 
@@ -78,7 +78,7 @@ label
     MOV r0, #4, #1       ; A2513: Rotation must be even
 ```
 
-> A2557： 要傳回寫入的位元組數目不正確
+> A2557:若要將回寫的位元組數目不正確
 
 NEON 結構上，載入和儲存指示 (`VLDn`， `VSTn`)，沒有指定回寫到基底的暫存器的替代語法。  而不是位址後面放一個驚嘆號 （！），您可以指定 即時運算值，指出要加入至基底的暫存器的位移。  如果您使用此語法，您必須指定確切的已載入或儲存指令的位元組數目。
 
@@ -90,7 +90,7 @@ NEON 結構上，載入和儲存指示 (`VLDn`， `VSTn`)，沒有指定回寫�
 
 ## <a name="diagnostic-messages---warnings"></a>診斷訊息-警告
 
-> A4228： 對齊值超出區域的對齊方式;不保證的對齊方式
+> A4228:對齊值超出區域的對齊方式;不保證的對齊方式
 
 中指定的對齊`ALIGN`指示詞括住的對齊大於`AREA`。  如此一來，「 組合器 」 無法保證`ALIGN`指示詞會被接受。
 
@@ -104,7 +104,7 @@ AREA |.myarea2|,ALIGN=3
 ALIGN 8           ; OK
 ```
 
-> A4508： 這個旋轉的常數的使用已被取代
+> A4508:此旋轉的常數的使用已被取代
 
 在 ARM 模式中，沒有指定常數的替代語法。  反而比撰寫`#<const>`，您可以撰寫`#<byte>,#<rot>`，表示取得旋轉值的常數值`<byte>`向右`<rot>`。  在某些內容中，ARM 已取代這些旋轉的常數的使用。 在這些情況下，使用 basic`#<const>`語法改。
 
@@ -113,7 +113,7 @@ ALIGN 8           ; OK
     ANDS r0, r0, #4, #2            ; A4508: Use of this rotated constant is deprecated
 ```
 
-> A4509： 這種形式的條件式指示已被取代
+> A4509:這種形式的條件式指示已被取代
 
 這種形式的條件式指示已被取代的 ARM ARMv8 架構中。 我們建議您變更程式碼以使用條件式分支。 若要查看仍受到支援的條件式的指示，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?linkid=246464)。
 

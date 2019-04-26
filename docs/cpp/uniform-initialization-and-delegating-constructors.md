@@ -3,15 +3,15 @@ title: 統一初始設定和委派建構函式
 ms.date: 11/04/2016
 ms.assetid: aa4daa64-eaec-4a3c-ade4-d9325e31e9d4
 ms.openlocfilehash: 5c5cb6421d9c8ce20f0c5e24de986ee50d9b2238
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162105"
 ---
 # <a name="uniform-initialization-and-delegating-constructors"></a>統一初始設定和委派建構函式
 
-在現代 c + + 中，您可以使用*大括號初始化*任何型別，而不需要在等號。 此外，您可以使用委派的建構函式來簡化您的程式碼，當您具有執行類似工作的多個建構函式。
+在現代化C++，您可以使用*括號初始化*任何型別，而不需要在等號。 此外，您可以使用委派的建構函式來簡化您的程式碼，當您具有執行類似工作的多個建構函式。
 
 ## <a name="brace-initialization"></a>括號初始設定
 

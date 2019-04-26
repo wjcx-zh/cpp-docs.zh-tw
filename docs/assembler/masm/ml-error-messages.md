@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202207"
 ---
 # <a name="ml-error-messages"></a>ML 錯誤訊息
 
@@ -26,7 +26,7 @@ MASM 元件所產生的錯誤訊息會分成三個類別：
 
 所有的錯誤訊息的形式如下：
 
-> *公用程式*:*檔名*(*列*): {*Error_type*} (*程式碼*): *Message_text*
+> *公用程式*:*檔名*(*線條*): {*Error_type*} (*程式碼*):*Message_text*
 
 其中：
 

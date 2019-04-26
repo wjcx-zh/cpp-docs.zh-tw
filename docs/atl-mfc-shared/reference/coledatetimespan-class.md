@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
 ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198196"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan 類別
 
@@ -391,7 +391,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 狀態`COleDateTimeSpan`在下列情況中的物件無效：
 
@@ -588,7 +588,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 狀態`COleDateTimeSpan`在下列情況中的物件無效：
 
@@ -742,7 +742,7 @@ enum DateTimeSpanStatus{
 
 - `COleDateTimeSpan::invalid` 指出這個`COleDateTimeSpan`物件無效，也就是它的值可能不正確。
 
-- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleDateTimeSpan::null` 指出這個`COleDateTimeSpan`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
    > [!CAUTION]
    > 此函式是進階程式設計的情況。 此函式不會更改此物件中的資料。 它將最常使用的狀態設為**null**或是**無效**。 請注意，指派運算子 ([運算子 =](#operator_eq)) 和[SetDateTimeSpan](#setdatetimespan)沒有設定的基礎來源值的物件狀態。

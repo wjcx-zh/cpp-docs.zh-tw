@@ -1,14 +1,14 @@
 ---
-title: 共用或重複使用 Visual Studio 專案設定 c + +
+title: 共用或重複使用 Visual Studio 專案設定-C++
 ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
 ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196871"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>共用或重複使用 Visual Studio 專案設定
 

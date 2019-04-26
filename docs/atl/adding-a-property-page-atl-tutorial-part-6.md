@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
 ms.openlocfilehash: 9287b7a15e3653212ed6a5428cdfe5a530ececc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198506"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>加入屬性頁 (ATL 教學課程，第 6 部分)
 
@@ -44,7 +44,7 @@ ms.locfileid: "57264753"
 
 |檔案|描述|
 |----------|-----------------|
-|PolyProp.h|包含 c + + 類別`CPolyProp`，它會實作的屬性頁。|
+|PolyProp.h|包含C++類別`CPolyProp`，以實作屬性頁。|
 |PolyProp.cpp|包括 PolyProp.h 檔案。|
 |PolyProp.rgs|註冊屬性頁物件登錄指令碼。|
 

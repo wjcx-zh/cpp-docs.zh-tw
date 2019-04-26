@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
 ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197350"
 ---
 # <a name="options-atl-control-wizard"></a>選項, ATL 控制項精靈
 
@@ -31,7 +31,7 @@ ms.locfileid: "57282977"
 
   - 自訂資源中，登錄，這樣會自動註冊時叫用的複合控制項。
 
-  - C + + 類別實作複合控制項。
+  - C++實作複合控制項的類別。
 
   - 複合控制項所公開 COM 介面。
 

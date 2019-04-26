@@ -9,11 +9,11 @@ helpviewer_keywords:
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
 ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196725"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 擴充 Dll:總覽
 
@@ -23,7 +23,7 @@ MFC 擴充 DLL 是 DLL，通常會實作衍生自現有 Mfc 程式庫類別的�
 
 如需範例 MFC 擴充 DLL 的基本需求，可滿足的 dll，請參閱 MFC 範例[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。 特別是，看看 Testdll1.cpp 和 Testdll2.cpp 檔案。
 
-請注意，詞彙 AFXDLL 不再使用 Visual c + + 文件中。 MFC 擴充 DLL 有之前的 AFXDLL 相同的特性。
+請注意，在視覺效果不會再使用詞彙 AFXDLLC++文件。 MFC 擴充 DLL 有之前的 AFXDLL 相同的特性。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 

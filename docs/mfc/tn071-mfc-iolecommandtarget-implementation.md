@@ -1,5 +1,5 @@
 ---
-title: TN071：MFC IOleCommandTarget 實作
+title: TN071:IOleCommandTarget 實作
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167994"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071：MFC IOleCommandTarget 實作
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071:IOleCommandTarget 實作
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -23,7 +23,7 @@ ms.locfileid: "50522222"
 
 `IOleCommandTarget` 是自動化類似的介面，因為它正由用戶端來叫用伺服器上的方法。 不過，使用`IOleCommandTarget`儲存透過 Automation 介面進行呼叫，因為程式設計師不必使用通常很昂貴的額外負荷`Invoke`方法`IDispatch`。
 
-在 MFC 中，`IOleCommandTarget`介面由作用中的文件伺服程式來允許將命令分派給伺服器的作用中的文件容器。 主動式文件的伺服器類別， `CDocObjectServerItem`，會使用 MFC 介面對應 (請參閱 < [TN038: MFC/OLE IUnknown 實作](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 來實作`IOleCommandTarget`介面。
+在 MFC 中，`IOleCommandTarget`介面由作用中的文件伺服程式來允許將命令分派給伺服器的作用中的文件容器。 主動式文件的伺服器類別， `CDocObjectServerItem`，會使用 MFC 介面對應 (請參閱[TN038:MFC/OLE IUnknown 實作](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 來實作`IOleCommandTarget`介面。
 
 `IOleCommandTarget` 也實作於`COleFrameHook`類別。 `COleFrameHook` 是未記載的 MFC 類別，實作就地編輯容器的框架視窗功能。 `COleFrameHook` 也使用 MFC 介面對應實作`IOleCommandTarget`介面。 `COleFrameHook`實作`IOleCommandTarget`轉送 OLE 命令`COleDocObjectItem`-衍生主動式文件容器。 這可讓任何 MFC 作用中的文件容器，以接收來自包含作用中的文件伺服程式的訊息。
 

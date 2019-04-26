@@ -7,11 +7,11 @@ helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
 ms.openlocfilehash: 7c314ee362132da75a6024b76b011963fe6ce3db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166746"
 ---
 # <a name="catstr"></a>@CatStr
 
@@ -19,7 +19,7 @@ ms.locfileid: "50499641"
 
 ## <a name="syntax"></a>語法
 
-> @CatStrstring1 [[(string2...]]）
+> @CatStr( string1 [[, string2...]] )
 
 ## <a name="see-also"></a>另請參閱
 

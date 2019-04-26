@@ -9,11 +9,11 @@ helpviewer_keywords:
 - inline assembly [C++]
 ms.assetid: 7e13f18f-3628-4306-8b81-4a6d09c043fe
 ms.openlocfilehash: f2be42cd5ab4d335d076a1eb4627c41f5b340350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166941"
 ---
 # <a name="inline-assembler"></a>內嵌組合語言
 
@@ -22,7 +22,7 @@ ms.locfileid: "50529281"
 組合語言用於許多用途，例如改善程式速度、減少記憶體需求，以及控制硬體。 您可以使用內嵌組合語言，直接在 C 和 C++ 原始程式中內嵌組譯語言指令，而不需要額外的組譯和連結步驟。 內嵌組合語言已內建於編譯器，因此您不需要個別的組譯工具，例如 Microsoft Macro Assembler (MASM)。
 
 > [!NOTE]
->  包含內嵌組譯程式碼的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。
+>  包含內嵌組譯工具的程式無法完全移植到其他硬體平台。 如果您為可攜性設計，請避免使用內嵌組譯工具。
 
 內嵌組譯碼不支援 ARM 和 x64 處理器。  下列主題說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言：
 

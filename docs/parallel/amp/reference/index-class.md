@@ -1,6 +1,6 @@
 ---
 title: index 類別
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180230"
 ---
 # <a name="index-class"></a>index 類別
 
@@ -37,14 +37,14 @@ class index;
 
 |名稱|描述|
 |----------|-----------------|
-|[索引建構函式](#ctor)|初始化 `index` 類別的新執行個體。|
+|[索引建構函式](#index_ctor)|初始化 `index` 類別的新執行個體。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
 |[operator--](#operator--)|遞減的每個項目`index`物件。|
-|[operator(mod)=](#operator_mod_eq)|計算模數 （餘數） 中的每個項目的`index`物件時，項目除以某個數字。|
+|[operator%=](#operator_mod_eq)|計算模數 （餘數） 中的每個項目的`index`物件時，項目除以某個數字。|
 |[operator*=](#operator_star_eq)|每個元素乘`index`數字的物件。|
 |[operator/=](#operator_div_eq)|每個項目除以`index`數字的物件。|
 |[index::operator\[\]](#operator_at)|傳回位於指定索引處的項目。|
@@ -139,7 +139,7 @@ index operator--(
 
 為前置運算子，index 物件 (* 這)。 為後置運算子，新的索引物件。
 
-## <a name="operator_mod_eq"></a>  operator(mod)=
+## <a name="operator_mod_eq"></a>  operator%=
 
 項目除以指定數字時，會計算的每個項目中的索引物件的模數 （餘數）。
 

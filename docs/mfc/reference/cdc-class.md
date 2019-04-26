@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173535"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -2047,7 +2047,7 @@ int EnumObjects(
 
 對於指定型別的每個物件，您傳遞的回呼函式會呼叫該物件的資訊。 系統會呼叫回呼函式，直到沒有更多的物件或回呼函式會傳回 0。
 
-請注意，Microsoft Visual c + + 的新功能可讓您使用一般函式，函式傳遞至`EnumObjects`。 位址傳遞給`EnumObjects`是與匯出的函式的指標**匯出**與 Pascal 呼叫慣例。 在 保護模式的應用程式，您不必與 Windows MakeProcInstance 函式建立此函式或 FreeProcInstance Windows 函式搭配使用後釋放函式。
+請注意，新功能，Microsoft 視覺效果的C++可讓您使用一般函式，函式傳遞至`EnumObjects`。 位址傳遞給`EnumObjects`是與匯出的函式的指標**匯出**與 Pascal 呼叫慣例。 在 保護模式的應用程式，您不必與 Windows MakeProcInstance 函式建立此函式或 FreeProcInstance Windows 函式搭配使用後釋放函式。
 
 您也不必匯出中的函式名稱**匯出**應用程式的模組定義檔中的陳述式。 您可以改用**匯出**函式中的修飾詞，
 
@@ -5738,7 +5738,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 
 如果應用程式以允許列印多工緩衝處理期間取消作業，它就必須設定中止函式，列印工作開始之前[StartDoc](#startdoc)成員函式。 列印管理員允許應用程式來取消列印工作或處理外的磁碟空間條件的多工緩衝處理期間，呼叫的中止函式。 如果沒有中止函式設定，列印工作將會失敗，如果沒有足夠的磁碟空間的多工緩衝處理。
 
-請注意 Microsoft Visual c + + 的功能，簡化傳遞至回呼函式建立`SetAbortProc`。 位址傳遞給`EnumObjects`成員函式是使用匯出的函式的指標`__declspec(dllexport)`與`__stdcall`呼叫慣例。
+請注意，Microsoft 視覺效果的功能C++簡化傳遞至回呼函式建立`SetAbortProc`。 位址傳遞給`EnumObjects`成員函式是使用匯出的函式的指標`__declspec(dllexport)`與`__stdcall`呼叫慣例。
 
 您也不必匯出中的函式名稱**匯出**應用程式的模組定義檔中的陳述式。 您可以改用**匯出**函式中的修飾詞，
 
@@ -6816,8 +6816,7 @@ BOOL StretchBlt(
 
 `StretchBlt`函式會建立點陣圖的鏡像映像，如果的跡象*nSrcWidth*並*nWidth*或是*nSrcHeight*和*nHeight*參數不同。 如果*nSrcWidth*並*nWidth*的符號不同，此函數便會沿著 x 軸點陣圖的鏡像映像。 如果*nSrcHeight*並*nHeight*的符號不同，此函數便會沿著 y 軸點陣圖的鏡像映像。
 
-
-  `StretchBlt` 函式會延伸或壓縮記憶體中的來源點陣圖，然後將結果複製到目的地。 如果要合併模式和結果，除非將延伸的來源點陣圖複製到目的地，否則不會進行合併。 如果使用筆刷，會使用在目的地裝置內容中選取的筆刷。 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。
+`StretchBlt` 函式會延伸或壓縮記憶體中的來源點陣圖，然後將結果複製到目的地。 如果要合併模式和結果，除非將延伸的來源點陣圖複製到目的地，否則不會進行合併。 如果使用筆刷，會使用在目的地裝置內容中選取的筆刷。 目的地座標會根據目的地裝置內容而轉換；來源座標會根據來源裝置內容而轉換。
 
 如果目的地、來源和模式點陣圖的色彩格式不同，`StretchBlt` 會轉換來源和模式點陣圖以符合目的地點陣圖。 轉換中會使用目的地裝置内容的前景和背景色彩。
 
@@ -6950,8 +6949,7 @@ BOOL TextOut(
 指定字串中的字元數。
 
 *str*<br/>
-
-  `CString` 物件，其中包含要繪製的字元。
+`CString` 物件，其中包含要繪製的字元。
 
 ### <a name="return-value"></a>傳回值
 

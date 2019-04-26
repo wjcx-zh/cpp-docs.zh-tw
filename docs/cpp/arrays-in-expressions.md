@@ -6,15 +6,15 @@ helpviewer_keywords:
 - arrays [C++], in expressions
 ms.assetid: 6e5a795b-d6bd-4e39-b313-6a20d47c4d4b
 ms.openlocfilehash: 0f2ef43c2a5bc4f8a44378c21d6d53b14f07ea07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184372"
 ---
 # <a name="arrays-in-expressions"></a>運算式中的陣列
 
-當陣列型別的識別項出現在運算式中以外`sizeof`，傳址 (**&**)，或初始化的參考，則會轉換成第一個陣列元素的指標。 例如: 
+當陣列型別的識別項出現在運算式中以外`sizeof`，傳址 (**&**)，或初始化的參考，則會轉換成第一個陣列元素的指標。 例如：
 
 ```cpp
 char szError1[] = "Error: Disk drive not ready.";

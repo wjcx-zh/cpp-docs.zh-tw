@@ -8,15 +8,15 @@ helpviewer_keywords:
 - user-supplied messages [C++], compile time
 ms.assetid: ebf7d885-61c8-4233-b0ae-1c9a38e0f385
 ms.openlocfilehash: 913aa199b4acd2ceb6daf7a24d8c50c28234b74a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184357"
 ---
 # <a name="assertion-and-user-supplied-messages-c"></a>判斷提示和使用者提供的訊息 (C++)
 
-C + + 語言支援三種錯誤處理機制，可協助您偵錯您的應用程式： [#error 指示詞](../preprocessor/hash-error-directive-c-cpp.md)，則[static_assert](../cpp/static-assert.md)關鍵字，而[assert 巨集、 _assert、 _wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)巨集。 這三種機制都會發出錯誤訊息，其中兩種還會測試軟體判斷提示。 軟體判斷提示會指定您希望在程式中的某個特定點為 true 的條件。 如果編譯時期判斷提示失敗，編譯器會發出診斷訊息和編譯錯誤。 如果執行階段判斷提示失敗，作業系統會發出診斷訊息並關閉應用程式。
+C++語言支援三個錯誤處理機制，可協助您偵錯您的應用程式： [#error 指示詞](../preprocessor/hash-error-directive-c-cpp.md)，則[static_assert](../cpp/static-assert.md)關鍵字，而[assert 巨集，_判斷提示，_wassert](../c-runtime-library/reference/assert-macro-assert-wassert.md)巨集。 這三種機制都會發出錯誤訊息，其中兩種還會測試軟體判斷提示。 軟體判斷提示會指定您希望在程式中的某個特定點為 true 的條件。 如果編譯時期判斷提示失敗，編譯器會發出診斷訊息和編譯錯誤。 如果執行階段判斷提示失敗，作業系統會發出診斷訊息並關閉應用程式。
 
 ## <a name="remarks"></a>備註
 

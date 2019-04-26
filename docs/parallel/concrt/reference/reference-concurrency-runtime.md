@@ -454,24 +454,24 @@ helpviewer_keywords:
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
 ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180143"
 ---
 # <a name="reference-concurrency-runtime"></a>參考 (並行執行階段)
 
 本節包含並行執行階段的參考資訊。
 
 > [!Note]
-> C + + 語言標準保留使用開頭為底線 (_) 字元，程式庫等實作的識別項。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，並行執行階段文件中省略這類程式碼項目。
+> C++語言標準保留使用開頭為底線 (_) 字元，程式庫等實作的識別項。 請勿在您的程式碼中使用這些名稱。 我們不保證名稱遵循這個慣例之程式碼項目的行為，而且未來的發行版本可能會變更。 基於這些理由，並行執行階段文件中省略這類程式碼項目。
 
 ## <a name="in-this-section"></a>本節內容
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
-Concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而 c + + 的並行程式設計架構。 如需詳細資訊，請參閱 [Concurrency Runtime](../concurrency-runtime.md)。
+Concurrency 命名空間提供類別和函式可讓您存取並行執行階段，而並行的程式設計架構，如C++。 如需詳細資訊，請參閱 [Concurrency Runtime](../concurrency-runtime.md)。
 
 [std 命名空間](std-namespace.md)
 
-[stdx 命名空間](stdx-namespace.md)
+[stdx namespace](stdx-namespace.md)

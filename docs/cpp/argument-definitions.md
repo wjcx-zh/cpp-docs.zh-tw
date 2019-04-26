@@ -9,11 +9,11 @@ helpviewer_keywords:
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
 ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184436"
 ---
 # <a name="argument-definitions"></a>引數定義
 
@@ -40,7 +40,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 ## <a name="microsoft-specific"></a>Microsoft 特定的
 
 *envp*<br/>
-*Envp*陣列，這是常見的擴充功能，許多 UNIX 系統中，會在 Microsoft c + +。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列由 NULL 項目終止。 它可以宣告為陣列的指標**char** (`char *envp[]`) 或為指標的指標**char** (`char **envp`)。 如果您的程式使用`wmain`而非`main`，使用**wchar_t**資料類型，而非**char**。 環境區塊傳遞給`main`和`wmain`是目前環境的 「 凍結 」 複本。 如果您接著變更環境中的，透過呼叫`putenv`或`_wputenv`，目前的環境 (所傳回的`getenv`或`_wgetenv`並`_environ`或`_wenviron`變數) 將會變更，不過所指向的區塊envp 不會變更。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏環境處理的資訊。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。
+*Envp*陣列，這是常見的擴充功能，許多 UNIX 系統中，會在 Microsoft C++。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列由 NULL 項目終止。 它可以宣告為陣列的指標**char** (`char *envp[]`) 或為指標的指標**char** (`char **envp`)。 如果您的程式使用`wmain`而非`main`，使用**wchar_t**資料類型，而非**char**。 環境區塊傳遞給`main`和`wmain`是目前環境的 「 凍結 」 複本。 如果您接著變更環境中的，透過呼叫`putenv`或`_wputenv`，目前的環境 (所傳回的`getenv`或`_wgetenv`並`_environ`或`_wenviron`變數) 將會變更，不過所指向的區塊envp 不會變更。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏環境處理的資訊。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。
 
 **結束 Microsoft 專屬**
 
@@ -74,4 +74,4 @@ int main( int argc, char *argv[], char *envp[] ) {
 
 ## <a name="see-also"></a>另請參閱
 
-[main：程式啟動](../cpp/main-program-startup.md)
+[主要：程式啟動](../cpp/main-program-startup.md)

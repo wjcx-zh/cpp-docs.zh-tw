@@ -8,11 +8,11 @@ helpviewer_keywords:
 - decrement operators [C++], types of
 ms.assetid: 5423c6ce-3999-4a77-92f6-ad540add1b1d
 ms.openlocfilehash: 4413c2bba600d1118870faca9a15b20398ec4dd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183564"
 ---
 # <a name="increment-and-decrement-operator-overloading-c"></a>遞增和遞減運算子多載 (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50557260"
 
 - 前置遞減和後置遞減
 
-當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩個，遵守下列規則： 運算子的前置格式宣告為任何其他一元 （unary） 運算子; 完全相同的方式後置格式可接受類型的其他引數**int**。
+當您撰寫多載運算子函式時，分別針對這些運算子實作前置和後置的不同版本可能會很有用。 若要區別這兩個，觀察到下列規則：運算子的前置格式宣告為任何其他一元 （unary） 運算子; 完全相同的方式後置格式可接受類型的其他引數**int**。
 
 > [!NOTE]
 >  當指定遞增或遞減運算子的後置格式的多載的運算子，額外的引數必須是類型**int**; 指定任何其他型別會產生錯誤。

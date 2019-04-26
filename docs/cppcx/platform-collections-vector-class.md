@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
 ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161623"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -61,7 +61,7 @@ Vector 物件中包含的元素型別。
 
 1. 公用列舉類別
 
-**向量**類別是 c + + 具象實作[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面。
+**向量**類別是C++具象實作[ivector&lt](/uwp/api/Windows.Foundation.Collections.IVector_T_)介面。
 
 如果您嘗試使用**向量**類型在公用傳回值或參數，編譯器會引發的錯誤 C3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 

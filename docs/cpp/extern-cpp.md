@@ -1,5 +1,5 @@
 ---
-title: extern （c + +）
+title: extern (C++)
 ms.date: 04/12/2018
 f1_keywords:
 - extern
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 1e2f0ae3-ae98-4410-85b5-222d6abc865a
 ms.openlocfilehash: 4a3a4e158794e06f28c638e87e014ddc3fb99837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183735"
 ---
-# <a name="extern-c"></a>extern （c + +）
+# <a name="extern-c"></a>extern (C++)
 
 **Extern**關鍵字是否套用至指定的名稱具有全域變數、 函式或樣板宣告*外部連結*。 如需連結和為什麼使用全域變數，否則不建議的背景資訊，請參閱[程式和連結](program-and-linkage-cpp.md)。
 
@@ -72,11 +72,11 @@ extern constexpr int x = 10; //error LNK2005: "int const x" already defined
 extern constexpr __declspec(selectany) int x = 10;
 ```
 
-## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern"C + +"函式宣告
+## <a name="extern-c-and-extern-c-function-declarations"></a>extern"C"和 extern 」C++"函式宣告
 
-C + + 中為字串，搭配使用時**extern**指定另一種語言的連接慣例用於宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
+在C++，當與字串，搭配**extern**指定另一種語言的連接慣例用於宣告子使用。 只有在先前宣告為具有 C 連結時，才可以存取 C 函式和資料。 不過，您必須在另行編譯的轉譯單位中定義它們。
 
-Microsoft c + + 支援字串 **"C"** 並 **「 c + +"** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許使用 c + + 程式中的執行階段程式庫函式。
+MicrosoftC++支援的字串 **"C"** 並 **」C++」** 中*字串常值*欄位。 所有標準，包括檔案使用**extern** "C"語法，以允許執行階段程式庫函式，以用於C++程式。
 
 ## <a name="example"></a>範例
 

@@ -5,21 +5,21 @@ helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
 ms.openlocfilehash: b6e514a6b13aced4fcd765df091810504f948588
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176248"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>延遲載入 DLL 的連結器支援
 
 MSVC 連結器現在支援 Dll 的延遲的載入。 這減輕您需要使用 Windows SDK 函式**LoadLibrary**並**GetProcAddress**實作延遲載入的 DLL。
 
-在 Visual c + + 6.0 中之前, 在執行階段載入 DLL 的唯一方式是使用**LoadLibrary**並**GetProcAddress**; 作業系統會載入 DLL 時可執行檔或 DLL 使用載入它。
+視覺效果之前C++6.0 中，在執行階段載入 DLL 的唯一方式是使用**LoadLibrary**並**GetProcAddress**; 作業系統會載入 DLL 時可執行檔或 DLL 使用載入它。
 
-隱含連結至 dll 時，Visual c + + 6.0 中，從開始，連結器會提供選項，以延遲載入 DLL，直到程式該 DLL 中呼叫的函式。
+從視覺效果C++6.0 中，以隱含方式連結至 dll 時，連結器會提供選項來延遲載入 DLL 程式該 DLL 中呼叫函式之前。
 
-應用程式可能會延遲載入 DLL，使用[/DELAYLOAD （延遲載入匯入）](delayload-delay-load-import.md)使用協助程式函式 （Visual c + + 所提供的預設實作） 的連結器選項。 Helper 函式會藉由呼叫在執行階段中載入的 DLL **LoadLibrary**並**GetProcAddress**您。
+應用程式可能會延遲載入 DLL，使用[/DELAYLOAD （延遲載入匯入）](delayload-delay-load-import.md)包含 helper 函式的連結器選項 (預設視覺效果所提供的實作C++)。 Helper 函式會藉由呼叫在執行階段中載入的 DLL **LoadLibrary**並**GetProcAddress**您。
 
 您應該考慮延遲載入 DLL，如果：
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
 ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179980"
 ---
 # <a name="runtimechecks"></a>runtime_checks
 停用或還原 [/RTC](../build/reference/rtc-run-time-error-checks.md) 設定。

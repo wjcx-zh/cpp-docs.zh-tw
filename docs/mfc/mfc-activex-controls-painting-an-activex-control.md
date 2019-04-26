@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
 ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186875"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX 控制項：繪製 ActiveX 控制項
 
@@ -39,8 +39,7 @@ ms.locfileid: "57281926"
 
 如前段中所討論，ActiveX 控制項的更新方式取決於控制項的狀態。 不過，由於架構在兩種情況下都會呼叫 `OnDraw` 成員函式，因此您會將大部分的繪製程式碼加入這個成員函式中。
 
-
-  `OnDraw` 成員函式會處理控制項繪製。 當控制項處於非現用狀態時，控制項容器就會呼叫 `OnDraw`，以傳遞控制項容器的裝置內容和控制項佔據的矩形區域座標。
+`OnDraw` 成員函式會處理控制項繪製。 當控制項處於非現用狀態時，控制項容器就會呼叫 `OnDraw`，以傳遞控制項容器的裝置內容和控制項佔據的矩形區域座標。
 
 架構傳遞至 `OnDraw` 成員函式的矩形包含控制項佔據的區域。 如果控制項處於現用狀態，則左上角為 (0, 0)，而且傳遞的裝置內容會是包含控制項的子視窗。 如果控制項處於非現用狀態，則左上角座標不一定是 (0, 0)，而且傳遞的裝置內容會是包含控制項的控制項容器。
 

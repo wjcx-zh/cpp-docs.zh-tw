@@ -3,11 +3,11 @@ title: 動態版面配置
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175286"
 ---
 # <a name="dynamic-layout"></a>動態版面配置
 
@@ -61,7 +61,7 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. 您要將動態行為加入為第一個控制項，使用靜態方法上的動態配置類別來建立[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)控制項應調整的方式編碼的結構。 您可以第一個選擇適當的靜態方法： [cmfcdynamiclayout:: Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)， [cmfcdynamiclayout:: Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)， [cmfcdynamiclayout:: Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)，或[cmfcdynamiclayout:: Movehorizontalandvertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 傳入移動之水平和/或垂直層面的百分比。 這些靜態方法全都會傳回新建立的 MoveSettings 物件，可讓您指定控制項的移動行為。
+1. 您要將動態行為加入為第一個控制項，使用靜態方法上的動態配置類別來建立[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)控制項應調整的方式編碼的結構。 您這麼做，第一個選擇適當的靜態方法：[Cmfcdynamiclayout:: Movehorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)， [cmfcdynamiclayout:: Movevertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)， [cmfcdynamiclayout:: Movenone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)，或[CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 傳入移動之水平和/或垂直層面的百分比。 這些靜態方法全都會傳回新建立的 MoveSettings 物件，可讓您指定控制項的移動行為。
 
    請記住，100 表示移動的量與對話方塊變更大小的量剛好相等，這會使控制項的邊緣與新框線保持固定距離。
 
@@ -147,4 +147,4 @@ Mfc 在 Visual Studio 2015 中，您可以建立對話方塊，使用者可以�
 [控制項類別](../mfc/control-classes.md)<br/>
 [對話方塊類別](../mfc/dialog-box-classes.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)<br/>
-[Mfc 在 Visual c + + 2015年中的動態對話方塊版面配置](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)
+[Mfc 在視覺效果的動態對話方塊版面配置C++2015年](https://mariusbancila.ro/blog/2015/07/27/dynamic-dialog-layout-for-mfc-in-visual-c-2015/)

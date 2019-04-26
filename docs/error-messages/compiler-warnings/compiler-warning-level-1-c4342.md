@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4342
 ms.assetid: 47d4d5ab-069f-4cdc-98c3-10d649577a37
 ms.openlocfilehash: 439c4976f25688fd9220c3f58ceb933266b5f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187505"
 ---
 # <a name="compiler-warning-level-1-c4342"></a>編譯器警告 (層級 1) C4342
 
 行為變更: '*函式*' 呼叫，但在舊版中呼叫成員運算子
 
-在 Visual Studio 2002 之前的 Visual c + + 版本中，呼叫成員時，此行為已變更但編譯器現在會找出最符合項目命名空間範圍中。
+在 視覺效果的版本C++Visual Studio 2002 之前, 已呼叫的成員，但在變更此行為與編譯器現在會找出最符合項目命名空間範圍中。
 
 如果找不到成員運算子，編譯器之前不會考慮任何命名空間範圍運算子。 如果沒有更好的相符項目，在命名空間範圍，目前的編譯器正確呼叫它，而舊版編譯器不會考慮。
 

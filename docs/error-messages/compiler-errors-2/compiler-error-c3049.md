@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3049
 ms.assetid: 6ddf54f6-2c30-4d04-b637-98c6c922c533
 ms.openlocfilehash: ca8481eb06a7ec679b27a446bf738f2ad018f79d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187452"
 ---
 # <a name="compiler-error-c3049"></a>編譯器錯誤 C3049
 

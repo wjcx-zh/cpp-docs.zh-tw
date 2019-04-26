@@ -7,15 +7,15 @@ helpviewer_keywords:
 - exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
 ms.openlocfilehash: 82c9d00a49c8a080d893a51052739a0265ad0860
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154434"
 ---
 # <a name="exit-function"></a>exit 函式
 
-**結束**函式，在標準 include 檔中宣告\<stdlib.h >，會終止 c + + 程式。
+**結束**函式，在標準 include 檔中宣告\<stdlib.h >，結束C++程式。
 
 提供做為引數的值**結束**會傳回到作業系統與程式的傳回碼或結束程式碼。 依照慣例，傳回碼為零，表示程式順利完成。
 

@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：建立影像處理網路
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205822"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>逐步解說：建立影像處理網路
 
@@ -132,7 +132,7 @@ ms.locfileid: "57262803"
 
 如果您的應用程式需要訊息的多個封鎖處理序的訊息，而不是只是一則訊息區塊的第一次接受訊息，您可以使用其他訊息區塊類型，例如`overwrite_buffer`。 `overwrite_buffer`類別包含一則訊息一次，但它會傳播至其目標的每個訊息。
 
-下圖顯示映像處理網路：
+下圖顯示影像處理網路：
 
 ![映像處理網路](../../parallel/concrt/media/concrt_imageproc.png "影像處理網路")
 

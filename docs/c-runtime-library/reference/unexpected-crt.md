@@ -21,11 +21,11 @@ helpviewer_keywords:
 - unexpected function
 ms.assetid: 2f873763-15ad-4556-a924-dcf28f2b52b4
 ms.openlocfilehash: 78538c0a10e183e72c742b041b297275c0859a03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155481"
 ---
 # <a name="unexpected-crt"></a>unexpected (CRT)
 
@@ -39,7 +39,7 @@ void unexpected( void );
 
 ## <a name="remarks"></a>備註
 
-**意外**常式不能搭配目前的 c + + 例外狀況處理實作。 **未預期**呼叫**終止**預設。 您可以變更此預設行為，方法是撰寫自訂中止函式，並呼叫**set_unexpected**您作為其引數的函式的名稱。 **未預期**呼叫最後一個指定為引數的函式**set_unexpected**。
+**意外**常式不能搭配目前的實作C++例外狀況處理。 **未預期**呼叫**終止**預設。 您可以變更此預設行為，方法是撰寫自訂中止函式，並呼叫**set_unexpected**您作為其引數的函式的名稱。 **未預期**呼叫最後一個指定為引數的函式**set_unexpected**。
 
 ## <a name="requirements"></a>需求
 

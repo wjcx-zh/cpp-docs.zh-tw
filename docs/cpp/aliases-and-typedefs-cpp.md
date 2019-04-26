@@ -5,11 +5,11 @@ f1_keywords:
 - typedef_cpp
 ms.assetid: af1c24d2-4bfd-408a-acfc-482e264232f5
 ms.openlocfilehash: 155f1868123514dfec89ab448ef22f2da225c4d3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155286"
 ---
 # <a name="aliases-and-typedefs-c"></a>別名和 typedef (C++)
 
@@ -212,7 +212,7 @@ int;  // Illegal declaration
 
 ### <a name="examples"></a>範例
 
-其中一種用法**typedef**宣告是對宣告更為統一並精簡。 例如: 
+其中一種用法**typedef**宣告是對宣告更為統一並精簡。 例如：
 
 ```cpp
 typedef char CHAR;          // Character type.
@@ -335,7 +335,7 @@ POINT ptOrigin;
 struct point_t ptOrigin;
 ```
 
-C + + 之間的差異**typedef**名稱和真實的類型 (宣告**類別**，**結構**， **union**，以及**列舉**關鍵字) 比較明顯。 雖然宣告無名稱結構中的 C 作法**typedef**陳述式仍能運作，其方式就如同在 c 中，它會提供任何影響力的優點
+在C++，之間的差異**typedef**名稱和真實的類型 (使用宣告**類別**，**結構**，**聯集**，和**enum**關鍵字) 比較明顯。 雖然宣告無名稱結構中的 C 作法**typedef**陳述式仍能運作，其方式就如同在 c 中，它會提供任何影響力的優點
 
 ```cpp
 // typedef_with_class_types2.cpp

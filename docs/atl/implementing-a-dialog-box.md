@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
 ms.openlocfilehash: 1a3084d4655e173234d3bb6e8d411b28e8968377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198049"
 ---
 # <a name="implementing-a-dialog-box"></a>實作對話方塊
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151275"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -112,7 +112,7 @@ CWinThread* AfxBeginThread(
 
 `AfxBeginThread` 建立新`CWinThread`物件時，會呼叫其[CreateThread](../../mfc/reference/cwinthread-class.md#createthread)函式以開始執行執行緒，並傳回執行緒的指標。 整個程序進行檢查以確定所有物件都是已解除配置正確建立的任何部分萬一失敗。 若要結束執行緒，呼叫[AfxEndThread](#afxendthread)從內的執行緒或從背景工作執行緒的控制函式傳回。
 
-必須由應用程式啟用多執行緒否則，此函式會失敗。 如需有關如何啟用多執行緒的詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)下方*Visual c + + 編譯器選項*。
+必須由應用程式啟用多執行緒否則，此函式會失敗。 如需有關如何啟用多執行緒的詳細資訊，請參閱[/MD、 /MT、 /LD （使用執行階段程式庫）](../../build/reference/md-mt-ld-use-run-time-library.md)下方*視覺化C++編譯器選項*。
 
 如需詳細資訊`AfxBeginThread`，請參閱文章[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)和[多執行緒：建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)。
 
@@ -208,8 +208,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
-
-  `AfxFreeLibrary` 和 `AfxLoadLibrary` 會保留每個載入的程式庫模組的參考計數。
+`AfxFreeLibrary` 和 `AfxLoadLibrary` 會保留每個載入的程式庫模組的參考計數。
 
 ```
 BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
@@ -397,7 +396,7 @@ CWinThread* AfxGetThread();
 必須從所需的執行緒內呼叫。
 
 > [!NOTE]
->  如果您要移植 MFC 專案呼叫`AfxGetThread`Visual c + + 版本 4.2、 5.0 或 6.0 中，從`AfxGetThread`呼叫[AfxGetApp](#afxgetapp)如果不找到任何執行緒。 在較新版本的編譯器，`AfxGetThread`如果找不到任何執行緒，則傳回 NULL。 如果您要應用程式執行緒，則必須呼叫 `AfxGetApp`。
+>  如果您要移植 MFC 專案呼叫`AfxGetThread`視覺效果C++版本 4.2、 5.0 或 6.0`AfxGetThread`呼叫[AfxGetApp](#afxgetapp)如果不找到任何執行緒。 在較新版本的編譯器，`AfxGetThread`如果找不到任何執行緒，則傳回 NULL。 如果您要應用程式執行緒，則必須呼叫 `AfxGetApp`。
 
 ### <a name="example"></a>範例
 
@@ -421,7 +420,7 @@ BOOL AFXAPI AfxInitRichEdit();
 
 `AfxInitRichEdit` 載入 RICHED32。若要初始化 1.0 版的 rich edit 控制項的 DLL。 若要使用版本 2.0 和 3.0 版的 rich edit 控制項，RICHED20。需要載入 DLL。 這是藉由呼叫[AfxInitRichEdit2](#afxinitrichedit2)。
 
-若要更新現有的 Visual c + + 應用程式，以 2.0 版中的豐富編輯控制項，開啟。RC 的檔案，做為文字，變更 「 RichEdit20a"從"RICHEDIT 」 每個 rich edit 控制項的類別名稱。 然後呼叫取代`AfxInitRichEdit`與`AfxInitRichEdit2`。
+若要更新的豐富編輯現有的視覺效果中的控制項C++2.0 版中，應用程式開啟。RC 的檔案，做為文字，變更 「 RichEdit20a"從"RICHEDIT 」 每個 rich edit 控制項的類別名稱。 然後呼叫取代`AfxInitRichEdit`與`AfxInitRichEdit2`。
 
 此函式也會初始化通用控制項程式庫中，如果文件庫尚未初始化處理程序。 如果您直接從 MFC 應用程式使用 rich edit 控制項，您應該呼叫此函式可確保 MFC 已正確初始化豐富編輯控制項執行階段。 如果您呼叫的 Create 方法[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)， [CRichEditView](../../mfc/reference/cricheditview-class.md)，或[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)，您通常不需要呼叫此函式，但在某些情況下可能必要。
 
@@ -683,7 +682,7 @@ MFC 程式庫會自動為您註冊多個標準視窗類別。 如果您要註冊
 
 由 `AfxRegisterWndClass` 為類別註冊的名稱取決於參數的內容。 如果您以相同參數多次呼叫 `AfxRegisterWndClass`，它只會註冊第一次呼叫的類別。 以相同參數對 `AfxRegisterWndClass` 進行的後續呼叫會傳回已註冊的類別名稱。
 
-如果以相同參數對多個 CWnd 衍生類別呼叫 `AfxRegisterWndClass`，除了取得每個類別的獨立視窗類別之外，每個類別還會共用相同的視窗類別。 如果使用 CS_CLASSDC 類別樣式，這可能會造成問題。 而不是多個 CS_CLASSDC 視窗類別，您得到一個 CS_CLASSDC 視窗類別，並使用該類別共用相同的 DC 的所有 c + + 視窗。 若要避免這個問題，請呼叫[AfxRegisterClass](#afxregisterclass)註冊類別。
+如果以相同參數對多個 CWnd 衍生類別呼叫 `AfxRegisterWndClass`，除了取得每個類別的獨立視窗類別之外，每個類別還會共用相同的視窗類別。 如果使用 CS_CLASSDC 類別樣式，這可能會造成問題。 而不是多個 CS_CLASSDC 視窗類別，您會得到一個 CS_CLASSDC 視窗類別，以及所有C++使用該類別的 windows 共用相同的 DC。 若要避免這個問題，請呼叫[AfxRegisterClass](#afxregisterclass)註冊類別。
 
 請參閱技術提示[TN001:視窗類別註冊](../../mfc/tn001-window-class-registration.md)如需有關視窗類別註冊和`AfxRegisterWndClass`函式。
 

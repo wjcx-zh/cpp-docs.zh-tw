@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154124"
 ---
 # <a name="functions-c"></a>函式 (C++)
 
@@ -64,7 +64,7 @@ int sum(int a, int b)
 
 函式宣告的必要組件如下：
 
-1. 傳回的型別，指定函式會傳回值的型別，或是**void**如果未不傳回任何值。 在 C + + 11 中，**自動**是有效的傳回型別，它會指示編譯器推斷 return 陳述式的類型。 在 C++14 中，也允許 decltype(auto)。 如需詳細資訊，請參閱下面的＜傳回類型中的類型推斷＞。
+1. 傳回的型別，指定函式會傳回值的型別，或是**void**如果未不傳回任何值。 在 C + + 11 中，**自動**是有效的傳回型別，它會指示編譯器推斷 return 陳述式的類型。 在 C++14 中，也允許 decltype(auto)。 如需詳細資訊，請參閱下面的＜傳回型別中的類型推斷＞。
 
 1. 函式名稱，開頭必須為字母或底線，而且不能包含空格。 一般而言，標準程式庫函式名稱中的前置底線表示私用成員函式或不是要供您的程式碼使用的非成員函式。
 
@@ -165,7 +165,7 @@ A*函式定義*宣告和函式主體中，括在大括號，其中包含區域�
 
 ## <a name="function-templates"></a>函式樣板
 
-函式樣板與類別樣板類似；它會根據樣板引數產生具象函式。 在許多情況下，樣板可以推斷型別引數，因此不需要明確指定它們。
+函式樣板與類別樣板類似；它會根據樣板引數產生具象函式。 在許多情況下，樣板可以推斷類型引數，因此不需要明確指定它們。
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -190,13 +190,13 @@ auto b = Add2(string{ "Hello" }, string{ " World" }); // b is a std::string
 void DoSomething(std::string& input){...}
 ```
 
-函式修改透過傳址方式所傳遞的引數時，會修改原始物件，而不是本機複本。 若要防止函式修改這類引數，請將參數限定為 const&：
+函式修改透過傳址方式所傳遞的引數時，會修改原始物件，而不是本機複本。 若要防止修改這類引數的函式，將參數限定為 const （& s):
 
 ```cpp
 void DoSomething(const std::string& input){...}
 ```
 
-**C + + 11:** 若要明確處理透過右值參考或左值參考傳遞引數，使用雙連字號的參數上表示通用參考：
+**C++11:** 若要明確處理透過右值參考或左值參考傳遞引數，在參數上使用雙連字號表示通用參考：
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -243,7 +243,7 @@ int DoMore(int num = 5, // Not a trailing parameter!
 
 ### <a name="trailing-return-types"></a>尾端傳回類型
 
-"ordinary" 傳回型別位於函式簽章左邊。 A*尾端傳回型別*位於最右邊的簽章，並在前面加上-> 運算子。 傳回值的類型取決於樣板參數時，尾端傳回型別特別適用於函式樣板。
+"ordinary" 傳回型別位於函式簽章左邊。 A*尾端傳回型別*位於最右邊的簽章，並在前面加上-> 運算子。 傳回值的類型取決於樣板參數時，尾端傳回類型特別適用於函式樣板。
 
 ```cpp
 template<typename Lhs, typename Rhs>
@@ -363,7 +363,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 使用結構化繫結。 結構化繫結的優點是，儲存傳回值的變數會初始化宣告它們，同時在某些情況下可能會更具效率。 在這個陳述式-`auto[x, y, z] = f();`-在方括號引進並初始化會在整個函式區塊的範圍的名稱。
+1. **Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):使用結構化繫結。 結構化繫結的優點是，儲存傳回值的變數會初始化宣告它們，同時在某些情況下可能會更具效率。 在這個陳述式-`auto[x, y, z] = f();`-在方括號引進並初始化會在整個函式區塊的範圍的名稱。
 
     ```cpp
     #include <tuple>

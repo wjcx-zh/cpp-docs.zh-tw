@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314868"
 ---
 # <a name="create-a-c-console-app-project"></a>建立 C++ 主控台應用程式專案
 
@@ -29,7 +29,7 @@ Visual Studio 會使用「專案」來組織應用程式的程式碼，並使用
 
 1. 在 Visual Studio 中開啟**檔案**功能表，然後選擇**新增** > **專案**以開啟**建立新的專案**對話方塊。 選取 [**主控台應用程式**範本，然後選擇**下一步]**。
 
-   ![建立新的專案](media/vs2019-choose-console-app.png "開啟 [建立新的 [專案] 對話方塊")
+   ![建立新的專案](media/vs2019-choose-console-app.png "開啟 建立新的 [專案] 對話方塊")
 
 1. 在 [**設定新專案**] 對話方塊中，輸入*HelloWorld*中**專案名稱**編輯方塊。 選擇**建立**建立專案。
 

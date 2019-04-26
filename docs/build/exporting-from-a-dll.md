@@ -11,11 +11,11 @@ helpviewer_keywords:
 - exports table [C++]
 ms.assetid: a08f86c4-5996-460b-ae54-da2b764045f0
 ms.openlocfilehash: 6bdf5b86724ae07aa073a9feb1cc4d5723bc6e6b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196738"
 ---
 # <a name="exporting-from-a-dll"></a>從 DLL 匯出
 
@@ -37,9 +37,9 @@ DLL 檔案具有.exe 檔，但有一個重要的差異非常類似的版面配�
 
 - [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或C++-語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [依序數，而不是依名稱從 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)
 

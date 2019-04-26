@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IF directive
 ms.assetid: 82e43712-4f0c-4bf6-90ce-0663e81af707
 ms.openlocfilehash: 2b91698640e028bf91d822c12b85ded651a04d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62203060"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
@@ -19,7 +19,7 @@ ms.locfileid: "50555759"
 
 ## <a name="syntax"></a>語法
 
-> 如果*expression1*<br/>
+> IF *expression1*<br/>
 > *ifstatements*<br/>
 > [[ELSEIF *expression2*<br/>
 > *elseifstatements*]]<br/>
@@ -29,7 +29,7 @@ ms.locfileid: "50555759"
 
 ## <a name="remarks"></a>備註
 
-下列指示詞可能用來替代[ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**， **ELSEIFDEF**， **ELSEIFDIF**， **ELSEIFDIFI**， **ELSEIFE**， **ELSEIFIDN**， **ELSEIFIDNI**， **ELSEIFNB**，以及**ELSEIFNDEF**. （選擇性） 會組譯*elsestatements*如果上一個運算式為 false。 請注意，在組件時，會評估運算式。
+下列指示詞可能用來替代[ELSEIF](../../assembler/masm/elseif-masm.md):**ELSEIFB**， **ELSEIFDEF**， **ELSEIFDIF**， **ELSEIFDIFI**， **ELSEIFE**， **ELSEIFIDN**， **ELSEIFIDNI**， **ELSEIFNB**，和**ELSEIFNDEF**。 （選擇性） 會組譯*elsestatements*如果上一個運算式為 false。 請注意，在組件時，會評估運算式。
 
 ## <a name="see-also"></a>另請參閱
 

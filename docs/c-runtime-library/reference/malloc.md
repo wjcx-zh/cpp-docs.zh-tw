@@ -23,11 +23,11 @@ helpviewer_keywords:
 - memory allocation
 ms.assetid: 144fcee2-be34-4a03-bb7e-ed6d4b99eea0
 ms.openlocfilehash: e6a007fb6f089ebf1c9f5fc9ce59cbcbf0b13888
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157174"
 ---
 # <a name="malloc"></a>malloc
 
@@ -48,7 +48,7 @@ void *malloc(
 
 ## <a name="return-value"></a>傳回值
 
-**malloc**傳回 void 指標至配置的空間，或**NULL**如果沒有可用的記憶體不足。 若要將指標傳回型別以外**void**，使用類型轉換的傳回值。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 (在 Visual c + + 中，基本對齊是所需的對齊**double**，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。使用[_aligned_malloc](aligned-malloc.md)為具有較大的對齊需求的物件配置儲存體 — 例如，SSE 類型[__m128](../../cpp/m128.md)並 **__m256**，及類型宣告可透過`__declspec(align( n ))`何處**n**大於 8。 如果*大小*為 0， **malloc**配置堆積中的零長度項目，並傳回該項目的有效指標。 務必檢查傳回**malloc**，即使要求的記憶體數量很小。
+**malloc**傳回 void 指標至配置的空間，或**NULL**如果沒有可用的記憶體不足。 若要將指標傳回型別以外**void**，使用類型轉換的傳回值。 此傳回值所指向的儲存空間保證會經過適當調整，因此可儲存對齊需求小於或等於基本對齊需求的任何物件類型 (在視覺效果C++，基本對齊是所需的對齊**雙**，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。使用[_aligned_malloc](aligned-malloc.md)為具有較大的對齊需求的物件配置儲存體 — 例如，SSE 類型[__m128](../../cpp/m128.md)並 **__m256**，及類型宣告可透過`__declspec(align( n ))`何處**n**大於 8。 如果*大小*為 0， **malloc**配置堆積中的零長度項目，並傳回該項目的有效指標。 務必檢查傳回**malloc**，即使要求的記憶體數量很小。
 
 ## <a name="remarks"></a>備註
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - __declspec keyword [C++], appdomain
 ms.assetid: 29d843cb-cb6b-4d1b-a48d-d928a877234d
 ms.openlocfilehash: 3f83841565eb6a097f306129fe8f6d121f837c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184487"
 ---
 # <a name="appdomain"></a>appdomain
 
-指定 Managed 應用程式的每個應用程式定義域都應該有自己的特定全域變數或靜態成員變數複本。 請參閱[應用程式定義域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。
+指定 Managed 應用程式的每個應用程式定義域都應該有自己的特定全域變數或靜態成員變數複本。 請參閱[應用程式定義域和視覺效果C++](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。
 
 每個應用程式定義域都有自己的 per-appdomain 變數複本。 組件載入應用程式定義域時，appdomain 變數的建構函式就會執行，而應用程式定義域卸載時，解構函式就會執行。
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183644"
 ---
 # <a name="if-else-statement-c"></a>if-else 陳述式 (C++)
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> 如果 constexpr 陳述式
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 在函式樣板，您可以使用**如果 constexpr**編譯時間分支的決策，而不需要的陳述式不必訴諸於多個函式多載。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）：
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):在函式樣板，您可以使用**如果 constexpr**陳述式，而不必訴諸於多個函式多載進行編譯時間分支的決策。 例如，您可以撰寫單一函式的控制代碼參數，解壓縮 （沒有任何零參數多載，就需要）：
 
 ```cpp
 template <class T, class... Rest>

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - dialog box controls [MFC], accessing
 ms.assetid: 325b4927-d49b-42b4-8e0b-fc84f31fb059
 ms.openlocfilehash: 5b4b604bf42a327edf3ac7a83dcfc42a5e0d8c54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180807"
 ---
 # <a name="type-safe-access-to-controls-without-code-wizards"></a>不使用程式碼精靈的控制項類型安全存取
 

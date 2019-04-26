@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151211"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef 類別
 
@@ -876,7 +876,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |HTML 匯入|「 HTML 匯入 」;|「 `drive`:\\\ *路徑*\ *filename*"|
 |HTML 匯出|[匯出 HTML];|「 `drive`:\\\ *路徑*"|
 |文字|"Text";|「 磁碟機：\\\path"|
-|ODBC|"ODBC;DATABASE = `database`;UID =*使用者*;PWD =*密碼*;資料來源名稱 = *datasourcename;* LOGINTIMEOUT =*秒;*"（這可能不是所有伺服器的完整連接字串，而只是範例。 它是非常重要有參數之間的空格。）|無|
+|ODBC|"ODBC;DATABASE = `database`;UID =*使用者*;PWD =*密碼*;資料來源名稱 = *datasourcename;* LOGINTIMEOUT =*秒;*"（這可能不是所有伺服器的完整連接字串，而只是範例。 它是非常重要有參數之間的空格。）|None|
 |Exchange|「 交換;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE={ 0 &#124; 1 };]<br /><br /> [PROFILE= *profile*;]<br /><br /> [PWD= *password*;]<br /><br /> [DATABASE= `database`;]"|*「 磁碟機*:\\\ *路徑*\\\ *filename*。MDB"|
 
 > [!NOTE]

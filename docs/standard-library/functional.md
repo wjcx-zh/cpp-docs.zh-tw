@@ -10,15 +10,15 @@ helpviewer_keywords:
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159414"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
-定義可協助建構 c + + 標準程式庫函式*函式物件*也稱為*functor*，及其繫結器。 函式物件是定義 `operator()` 的類型物件。 函式物件可以是函式指標，不過該物件更常用來儲存可在函式呼叫期間存取的其他資訊。
+定義C++標準程式庫函式的說明建構*函式物件*，也稱為*functor*，及其繫結器。 函式物件是定義 `operator()` 的類型物件。 函式物件可以是函式指標，不過該物件更常用來儲存可在函式呼叫期間存取的其他資訊。
 
 ## <a name="syntax"></a>語法
 
@@ -99,7 +99,7 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 
 ## <a name="functions"></a>函式
 
-|函數|描述|
+|功能|描述|
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|將引數繫結至可呼叫物件。|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |

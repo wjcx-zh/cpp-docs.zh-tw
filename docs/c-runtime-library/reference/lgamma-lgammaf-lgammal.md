@@ -31,11 +31,11 @@ helpviewer_keywords:
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
 ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157277"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -67,7 +67,7 @@ long double lgamma( long double x ); //C++ only
 |-----------|------------|
 |*x* = NaN|NaN|
 |*x* = ±0|+INFINITY|
-|*x*= 非負值整數|+INFINITY|
+|*x*= negative integer|+INFINITY|
 |±INFINITY|+INFINITY|
 |極錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
 |溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
@@ -76,7 +76,7 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**lgamma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **lgamma**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**lgamma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **lgamma**一律採用並傳回**double**。
 
 如果 x 為有理數，此函數會傳回的 (x-1) 階乘的對數。
 

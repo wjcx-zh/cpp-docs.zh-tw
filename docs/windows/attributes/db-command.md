@@ -1,5 +1,5 @@
 ---
-title: db_command （c + + COM 屬性）
+title: db_command (C++ COM 屬性)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148194"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -39,7 +39,7 @@ ms.locfileid: "50559467"
 
 *「繫結參數區塊」* (binding parameter block) 定義如下︰
 
-> **(\[**  *bindtype* **]** *szVar1* \[， *szVar2* \[， *nVar3* \[，...]]]**)**
+> **(\[** *bindtype* **]** *szVar1* \[, *szVar2* \[, *nVar3* \[, ...]]] **)**
 
 其中：
 
@@ -92,12 +92,12 @@ TCHAR m_state[3] = 'CA';
 *hresult*<br/>
 （選擇性）識別將會收到此資料庫命令的 HRESULT 的變數。 如果變數不存在，則屬性會自動予以插入。
 
-*繫結*<br/>
+*bindings*<br/>
 （選擇性）可讓您區隔繫結參數，從 OLE DB 命令。
 
 如果您指定的值*繫結*， **db_command**會剖析相關聯的值，而不會剖析\[ *bindtype*] 參數。 這種用法可讓您使用 OLE DB 提供者語法。 若要停用剖析，而不使用繫結參數，指定`Bindings=""`。
 
-如果您未指定的值*繫結*， **db_command**會剖析繫結參數區塊，尋找 '**(**'，後面接著 **\[** _bindtype_**]** 在方括號，後面接著一或多個先前宣告 c + + 成員變數，後面接著 '**)**'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。
+如果您未指定的值*繫結*， **db_command**會剖析繫結參數區塊，尋找 '**(**'，後面接著 **\[** _bindtype_**]** 在方括號，後面接著一個或多先前宣告的C++成員變數，後面接著 '**)**'。 產生的命令中會移除括弧之間的所有文字，並且會使用這些參數來建構此命令的資料行和參數繫結。
 
 *bulk_fetch*<br/>
 （選擇性）整數值，指定要擷取的資料列數目。
@@ -122,7 +122,7 @@ TCHAR m_state[3] = 'CA';
 
 此範例所定義的命令會從狀態資料行符合 'CA' 的表格中選取第一個和最後一個名稱。 **db_command** 會建立和讀取可呼叫精靈所產生的函式 (例如 [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)) 以及 `CRowset` 成員函式 (例如 [MoveNext](../../data/oledb/crowset-movenext.md)) 的資料列集。
 
-請注意，此程式碼需要您提供連接至 pubs 資料庫的連接字串。 如需如何在開發環境中執行這項操作的資訊，請參閱[如何： 連接到資料庫並瀏覽現有的物件](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)並[加入新連接](/visualstudio/data-tools/add-new-connections)。
+請注意，此程式碼需要您提供連接至 pubs 資料庫的連接字串。 如需如何在開發環境中執行這項操作的資訊，請參閱[How to:連接到資料庫並瀏覽現有的物件](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)並[加入新連接](/visualstudio/data-tools/add-new-connections)。
 
 ```cpp
 // db_command.h
@@ -239,8 +239,8 @@ int main() {
 |-|-|
 |**適用於**|**類別**， **struct**、 member、 method、 local|
 |**可重複**|否|
-|**必要屬性**|無|
-|**無效屬性**|無|
+|**必要屬性**|None|
+|**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

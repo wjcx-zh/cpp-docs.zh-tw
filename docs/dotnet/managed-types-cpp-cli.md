@@ -18,15 +18,15 @@ helpviewer_keywords:
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
 ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152762"
 ---
 # <a name="managed-types-ccli"></a>Managed 類型 (C++/CLI)
 
-Visual c + + 可讓您透過 managed 型別，其提供通用語言執行平台功能的支援，但有可能的優點和限制的執行階段的.NET 功能的存取權。
+視覺化C++可讓您透過 managed 型別，其提供通用語言執行平台功能的支援，但有可能的優點和限制的執行階段的.NET 功能存取。
 
 ## <a name="main_functions"></a> Managed 的類型和 main 函式
 
@@ -40,11 +40,11 @@ Visual c + + 可讓您透過 managed 型別，其提供通用語言執行平台�
 int main(int, char*[], char*[]) {}
 ```
 
-## <a name="dotnet"></a> C + + 原生類型的.NET framework 對應項
+## <a name="dotnet"></a> .NET framework 對應項C++原生類型
 
-下表顯示內建的 Visual c + + 類型，也就是預先定義的型別的別名的關鍵字中**系統**命名空間。
+下表顯示內建的視覺效果的關鍵字C++類型，也就是預先定義的型別的別名中**系統**命名空間。
 
-|Visual c + + 類型|.NET Framework 類型|
+|視覺化C++型別|.NET Framework 類型|
 |-----------------------|-------------------------|
 |**void**|<xref:System.Void?displayProperty=nameWithType>|
 |**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
@@ -114,7 +114,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 S.i = 5
@@ -129,7 +129,7 @@ S.i = 11
 
 ## <a name="test_equality"></a>如何：測試相等
 
-在下列範例中，使用 Managed Extensions for c + + 的相等測試為基礎的控制代碼的參考。
+在下列範例中，測試是否相等，會使用 Managed Extensions forC++為基礎的控制代碼的參考。
 
 ### <a name="example"></a>範例
 

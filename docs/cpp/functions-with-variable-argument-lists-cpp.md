@@ -1,5 +1,5 @@
 ---
-title: 具有變數引數的函式清單 （c + +）
+title: 具有變數引數清單的函式 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - arguments [C++], variable number of
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - function calls, variable number of arguments
 ms.assetid: 27c2f83a-21dd-44c6-913c-2834cb944703
 ms.openlocfilehash: 1f366af6f4058ffb8356017d59a7c176a978b860
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153849"
 ---
-# <a name="functions-with-variable-argument-lists--c"></a>具有變數引數的函式清單 （c + +）
+# <a name="functions-with-variable-argument-lists--c"></a>具有變數引數清單的函式 (C++)
 
 最後一個成員是省略符號 (...) 的函式宣告可以接受可變數目的引數。 在這些情況下，C++ 只會針對明確宣告的引數提供類型檢查。 需要撰寫連引數數目和類型都可以不同的一般函式時，您可以使用變數引數清單。 系列的函式是使用變數引數清單的函式的範例。`printf`*引數宣告清單*
 

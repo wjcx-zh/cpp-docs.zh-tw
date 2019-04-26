@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2700 到 C2799
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2700 至 C2799
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153201"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>編譯器錯誤 C2700 到 C2799
+# <a name="compiler-errors-c2700-through-c2799"></a>編譯器錯誤 C2700 至 C2799
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -62,7 +62,7 @@ ms.locfileid: "50677847"
 |[編譯器錯誤 C2702](compiler-error-c2702.md)| __except 不可以出現在終止區塊中|
 |[編譯器錯誤 C2703](compiler-error-c2703.md)|不合法的 __leave 陳述式|
 |[編譯器錯誤 C2704](compiler-error-c2704.md)|'*函式*': __va_start 內建只允許在 varargs 中|
-|[編譯器錯誤 C2705](compiler-error-c2705.md)|'*標籤*': 不合法的跳躍進入'*exception_block*' 範圍|
+|[編譯器錯誤 C2705](compiler-error-c2705.md)|'*label*': illegal jump into '*exception_block*' scope|
 |[編譯器錯誤 C2706](compiler-error-c2706.md)|不合法的 __except 沒有相符的 __try (遺漏 '}' 在 __try 區塊中嗎？)|
 |[編譯器錯誤 C2707](compiler-error-c2707.md)|'*識別碼*': 內建函式不正確的內容|
 |[編譯器錯誤 C2708](compiler-error-c2708.md)|'*識別碼*': 實質參數長度 （位元組） 不同於前一個呼叫或參考|
@@ -130,7 +130,7 @@ ms.locfileid: "50677847"
 |[編譯器錯誤 C2770](compiler-error-c2770.md)|無效的明確範本/泛型引數的 '*範本*'|
 |[編譯器錯誤 C2771](compiler-error-c2771.md)|#import 只允許在全域或命名空間範圍中|
 |編譯器錯誤 C2772|已過時。|
-|[編譯器錯誤 C2773](compiler-error-c2773.md)|#import 和 #using 只適用於 c + + 編譯器|
+|[編譯器錯誤 C2773](compiler-error-c2773.md)|#import 和 #using 只適用於C++編譯器|
 |[編譯器錯誤 C2774](compiler-error-c2774.md)|'*識別碼*': 沒有 'put' 方法是與這個屬性相關聯|
 |[編譯器錯誤 C2775](compiler-error-c2775.md)|'*識別碼*': 沒有 'get' 方法是與這個屬性相關聯|
 |[編譯器錯誤 C2776](compiler-error-c2776.md)|每個屬性，可以指定只有一個 'get' 方法|
@@ -157,3 +157,8 @@ ms.locfileid: "50677847"
 |[編譯器錯誤 C2797](compiler-error-c2797.md)|（已過時）'*識別碼*': 未實作成員初始設定式清單或非靜態資料成員初始設定式內的清單初始化|
 |[編譯器錯誤 C2798](compiler-error-c2798.md)|'super::*識別碼*' 模稜兩可|
 |編譯器錯誤 C2799|'*識別碼*': 必須初始化常數限定類別類型，而不需要使用者提供的預設建構函式的物件|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

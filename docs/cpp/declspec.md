@@ -8,11 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++]
 ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154499"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -82,7 +82,7 @@ class __declspec(dllimport) X {};
 
 *decl-specifier-seq* *init-declarator-list*;
 
-*Decl-modifier-規範-seq*應該包含在其他方面，基底型別 (例如**int**， **float**，則**typedef**，或類別名稱)，儲存類別 (例如**靜態**， **extern**)，或有 **__declspec**延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如: 
+*Decl-modifier-規範-seq*應該包含在其他方面，基底型別 (例如**int**， **float**，則**typedef**，或類別名稱)，儲存類別 (例如**靜態**， **extern**)，或有 **__declspec**延伸模組。 *Init 宣告子清單*應該包含在其他方面，宣告的指標部分。 例如：
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier

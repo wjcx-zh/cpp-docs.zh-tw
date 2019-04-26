@@ -31,11 +31,11 @@ helpviewer_keywords:
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
 ms.openlocfilehash: 827286c840c6564c8c3f8b351197b0201509d241
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156196"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -77,7 +77,7 @@ long double nearbyint( long double x ); //C++ only
 
 因為最大浮點值是精確的整數，所以此函式自身永遠不會溢位；相反地，根據您使用的函式版本，輸出可能會造成傳回值溢位。
 
-C + + 允許多載，因此您可以呼叫多載**nearbyint**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
+C++允許多載，因此您可以呼叫多載**nearbyint**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **nearbyint**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
 
 ## <a name="requirements"></a>需求
 

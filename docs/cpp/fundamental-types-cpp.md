@@ -44,11 +44,11 @@ helpviewer_keywords:
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
 ms.openlocfilehash: f4af392ed559349b0e49fd26f3ecb4406a70b74b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153797"
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 
@@ -68,16 +68,16 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
 
 |分類|類型|內容|
 |--------------|----------|--------------|
-|整數|**char**|型別**char**是整數類資料類型通常包含基本執行字元集的成員 — 根據預設，這是 Microsoft c + + 中的 ASCII。<br /><br /> C + + 編譯器會將類型的變數**char**， **char&lt;3**，並**unsigned char**為具有不同的型別。 類型的變數**char**升級到**int**彷彿它們是型別**char&lt;3**根據預設，除非使用 /J 編譯選項。 在此情況下則會視為型別**unsigned char**並且升級到**int**不帶正負。|
+|整數|**char**|型別**char**是整數類資料類型通常包含基本執行字元集的成員 — 根據預設，這是在 Microsoft 的 ASCII C++。<br /><br /> C++編譯器會將類型的變數**char**， **char&lt;3**，和**unsigned char**為具有不同的型別。 類型的變數**char**升級到**int**彷彿它們是型別**char&lt;3**根據預設，除非使用 /J 編譯選項。 在此情況下則會視為型別**unsigned char**並且升級到**int**不帶正負。|
 ||**bool**|型別**bool**是整數類資料類型可以有兩個值的其中一個 **，則為 true**或是**false**。 它的大小並未指定。|
 ||**short**|型別**short int** (簡稱**簡短**) 是大於或等於類型大小的整數類資料型別**char**，但短於或等於類型大小的**int**。<br /><br /> 類型的物件**簡短**可以宣告為**帶正負號短**或是**unsigned short**。 **帶正負號短**同義**簡短**。|
 ||**int**|型別**int**大於或等於類型大小的整數類資料類型**short int**，但短於或等於類型大小**長**。<br /><br /> 類型的物件**int**可以宣告為**帶正負號 int**或是**不帶正負號的 int**。**帶正負號 int**同義**int**。|
-||**__int8**， **__int16**， **__int32**， **__int64**|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 **__int8**， **__int16**， **__int32**並 **__int64**是 Microsoft 專有的關鍵字。 並非所有類型都都適用於所有架構。 (**__int128**不支援。)|
+||**__int8**, **__int16**, **__int32**, **__int64**|可調整大小的整數 `__int n`，其中 `n` 是整數變數的大小 (以位元為單位)。 **__int8**， **__int16**， **__int32**並 **__int64**是 Microsoft 專有的關鍵字。 並非所有類型都都適用於所有架構。 (**__int128**不支援。)|
 ||**long**|型別**長**(或**long int**) 是大於或等於類型大小的整數類資料型別**int**。<br /><br /> 類型的物件**長**可以宣告為**帶正負號長**或是**不帶正負號長**。 **帶正負號長**同義**長**。|
 ||**long long**|大於不帶正負號**長**。<br /><br /> 類型的物件**長長**可以宣告為**簽署 long long**或**unsigned long long**。 **帶正負號長長**同義**long long**。|
 ||**wchar_t**， **__wchar_t**|類型的變數**wchar_t**指定寬字元或多位元組字元類型。 根據預設， **wchar_t**原生類型，但您可以使用[/zc: wchar_t-](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)進行**wchar_t** typedef **unsigned short**。 **__Wchar_t**類型是原生 Microsoft 特有同義字**wchar_t**型別。<br /><br /> 在字元或字串常數之前使用 L 前置詞，指定寬字元類型。|
 |浮點|**float**|型別**浮點數**是最小的浮點類型。|
-||**double**|型別**雙**浮點數類型是大於或等於**float**，但短於或等於類型大小**長雙精度**。<br /><br /> Microsoft 專有： 的表示法**長雙精度**並**double**完全相同。 不過，**長雙精度**並**double**是不同的類型。|
+||**double**|型別**雙**浮點數類型是大於或等於**float**，但短於或等於類型大小**長雙精度**。<br /><br /> Microsoft 專有的：表示法**長雙精度**並**double**完全相同。 不過，**長雙精度**並**double**是不同的類型。|
 ||**long double**|型別**長雙精度**是浮動點類型是大於或等於**double**。|
 
 **Microsoft 專屬**

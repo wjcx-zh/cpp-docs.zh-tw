@@ -22,11 +22,11 @@ helpviewer_keywords:
 - wide characters
 ms.assetid: 14aded12-4087-4123-bc48-db4e10999223
 ms.openlocfilehash: 81caf8e1ab04635d205d7b01af2d4c2896eec01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155312"
 ---
 # <a name="wctype"></a>wctype
 
@@ -55,17 +55,17 @@ wctype_t wctype(
 
 |功能|同於|
 |--------------|-------------|
-|iswalnum(c)|iswctype (c，wctype (「 alnum"))|
-|iswalpha(c)|iswctype (c，wctype ("alpha"))|
-|iswcntrl(c)|iswctype (c，wctype （「 控制項 」）)|
-|iswdigit(c)|iswctype (c，wctype （「 數字 」）)|
-|iswgraph(c)|iswctype (c，wctype （「 圖形 」）)|
-|iswlower(c)|iswctype (c，wctype （「 下方 」）)|
-|iswprint(c)|iswctype (c，wctype ("print"))|
-|iswpunct(c)|iswctype (c，wctype (「 punct"))|
-|iswspace(c)|iswctype (c，wctype （「 空間 」）)|
-|iswupper(c)|iswctype (c，wctype （「 上方 」）)|
-|iswxdigit(c)|iswctype (c，wctype (「 xdigit"))|
+|iswalnum(c)|iswctype(c, wctype( "alnum" ) )|
+|iswalpha(c)|iswctype(c, wctype( "alpha" ) )|
+|iswcntrl(c)|iswctype(c, wctype( "cntrl" ) )|
+|iswdigit(c)|iswctype(c, wctype( "digit" ) )|
+|iswgraph(c)|iswctype(c, wctype( "graph" ) )|
+|iswlower(c)|iswctype(c, wctype( "lower" ) )|
+|iswprint(c)|iswctype(c, wctype( "print" ) )|
+|iswpunct(c)|iswctype(c, wctype( "punct" ) )|
+|iswspace(c)|iswctype(c, wctype( "space" ) )|
+|iswupper(c)|iswctype(c, wctype( "upper" ) )|
+|iswxdigit(c)|iswctype(c, wctype( "xdigit" ) )|
 
 ## <a name="requirements"></a>需求
 

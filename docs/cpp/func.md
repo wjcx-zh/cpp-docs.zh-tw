@@ -5,15 +5,15 @@ f1_keywords:
 - __func__
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
 ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154291"
 ---
 # <a name="func"></a>__func__
 
-**(C + + 11)** 預先定義的識別碼&#95; &#95;f&#95; &#95;已隱含定義為包含封入函式的非限定和未裝飾名稱的字串。 &#95;&#95;func&#95; &#95; c + + 標準所託管，而且不是 Microsoft 擴充功能。
+**(C + + 11)** 預先定義的識別碼&#95; &#95;f&#95; &#95;已隱含定義為包含封入函式的非限定和未裝飾名稱的字串。 &#95;&#95;func&#95; &#95;託管的C++標準並不是 Microsoft 擴充功能。
 
 ## <a name="syntax"></a>語法
 

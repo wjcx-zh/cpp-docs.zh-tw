@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
 ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152055"
 ---
 # <a name="deriving-a-class-from-cobject"></a>從 CObject 衍生類別
 
@@ -53,7 +53,7 @@ ms.locfileid: "58328437"
 
 #### <a name="to-use-basic-cobject-functionality"></a>使用 CObject 的基本功能
 
-1. 使用一般的 c + + 語法來衍生您的類別，從`CObject`(或從衍生自類別`CObject`)。
+1. 使用 「 正常 」C++衍生類別中的語法`CObject`(或從衍生自`CObject`)。
 
    下列範例顯示簡單的情況下，類別的衍生`CObject`:
 

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
 ms.openlocfilehash: a6b1823fe93c45abd8dabbd22116924e0a64f19a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154213"
 ---
 # <a name="for-statement-c"></a>for 陳述式 (C++)
 
-重複執行陳述式，直到條件變成 false。 如需有關範圍架構 for 陳述式，請參閱[範圍架構 for 陳述式 （c + +）](../cpp/range-based-for-statement-cpp.md)。
+重複執行陳述式，直到條件變成 false。 如需有關範圍架構 for 陳述式，請參閱[範圍架構 for 陳述式 (C++)](../cpp/range-based-for-statement-cpp.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -119,7 +119,7 @@ int main()
 
 ## <a name="for-loops-and-the-c-standard"></a>for 迴圈和 C++ 標準
 
-C + + 標準所規定中所宣告的變數**for**迴圈應該消失後**如**迴圈結束。 例如: 
+C++標準所規定中所宣告的變數**for**迴圈應該會超出範圍**for**迴圈結束。 例如：
 
 ```cpp
 for (int i = 0 ; i < 5 ; i++) {

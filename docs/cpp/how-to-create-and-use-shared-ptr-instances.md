@@ -5,11 +5,11 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
 ms.openlocfilehash: 8363139efddb2fa64057fdb995ab7bd5dfbcfd9b
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153734"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>HOW TO：建立和使用 shared_ptr 執行個體
 
@@ -33,7 +33,7 @@ ms.locfileid: "54220591"
 
 ## <a name="example-3"></a>範例 3
 
-`shared_ptr` 也是 c + + 標準程式庫容器很有幫助您使用複製項目的演算法時。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `replace_copy_if` 執行個體上運用 `shared_ptr` 演算法。
+`shared_ptr` 也很有幫助C++當您使用複製項目的演算法的標準程式庫容器。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `replace_copy_if` 執行個體上運用 `shared_ptr` 演算法。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 

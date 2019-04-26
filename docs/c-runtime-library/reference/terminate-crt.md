@@ -23,11 +23,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
 ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155624"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
@@ -41,7 +41,7 @@ void terminate( void );
 
 ## <a name="remarks"></a>備註
 
-**終止**函式搭配 c + + 例外狀況處理，並呼叫在下列情況：
+**終止**函式搭配C++例外狀況處理和呼叫在下列情況：
 
 - 擲回的 C++ 例外狀況找不到相符的 catch 處理常式。
 

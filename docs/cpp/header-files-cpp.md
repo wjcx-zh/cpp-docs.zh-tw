@@ -1,16 +1,16 @@
 ---
-title: 標頭檔 （c + +）
+title: 標頭檔 (C++)
 ms.date: 04/20/2018
 helpviewer_keywords:
 - header files [C++]
 ms.openlocfilehash: ea163f4d47022d886e40a09c47c252ffa186aee0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153604"
 ---
-# <a name="header-files-c"></a>標頭檔 （c + +）
+# <a name="header-files-c"></a>標頭檔 (C++)
 
 必須宣告程式項目，例如變數、 函式、 類別和等等的名稱，才能使用。 例如，您就無法寫入`x = 42`未宣告 'x'。
 
@@ -21,7 +21,7 @@ x = 42; // use x
 
 宣告會告知編譯器是否是**int**、 **double**，則**函式**、**類別**或一些其他的事。  此外，每個名稱必須宣告 （直接或間接） 中使用每個.cpp 檔案中。 當您編譯程式時，每個.cpp 檔案會單獨編譯至編譯單位。 編譯器並不知道哪些名稱宣告在其他的編譯單位中。 這表示，如果您定義類別或函式或全域變數，您必須提供的話，那會使用它的每個額外的.cpp 檔案的宣告。 該動作的每個宣告中的所有檔案必須完全相同。 稍微不一致的問題會導致錯誤或非預期的行為，當連結器嘗試合併到單一程式中的所有編譯單位。
 
-錯誤的可能性降到最低，c + + 已採用的慣例*標頭檔*包含宣告。 您在 標頭檔中進行宣告，然後使用 #include 指示詞中的每個.cpp 檔案，或其他標頭檔所需的宣告。 #Include 指示詞插入標頭檔的複本直接在編譯之前的.cpp 檔案。
+錯誤的可能性降至最低C++已採用的慣例*標頭檔*包含宣告。 您在 標頭檔中進行宣告，然後使用 #include 指示詞中的每個.cpp 檔案，或其他標頭檔所需的宣告。 #Include 指示詞插入標頭檔的複本直接在編譯之前的.cpp 檔案。
 
 ## <a name="example"></a>範例
 

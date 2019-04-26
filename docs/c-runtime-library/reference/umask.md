@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155416"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ int _umask( int pmode );
 |-|-|
 | **_S_IWRITE** | 允許寫入 |
 | **_S_IREAD** | 允許讀取。 |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允許讀取和寫入。 |
+| **_S_IREAD** &#124; **_S_IWRITE** | 允許讀取和寫入。 |
 
 它們兩個常數指定時，會使用位元 OR 運算子結合 ( **&#124;** )。 如果*pmode*引數是 **_S_IREAD**，則不允許讀取 （此檔案是唯寫）。 如果*pmode*引數是 **_S_IWRITE**，則不允許寫入 （此檔案是唯讀）。 比方說，如果遮罩中設定了寫入位元，任何新的檔案將會是唯讀。 請注意，在 MS-DOS 和 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此，設定讀取位元 **_umask**對檔案的模式沒有任何作用。
 

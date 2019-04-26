@@ -3,11 +3,11 @@ title: 一般規則和限制
 ms.date: 11/04/2016
 ms.assetid: 6c48902d-4259-4761-95d4-e421d69aa050
 ms.openlocfilehash: 931ae04ef47262f15d037a2b5eeb35bd01a8419d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153771"
 ---
 # <a name="general-rules-and-limitations"></a>一般規則和限制
 
@@ -25,7 +25,7 @@ ms.locfileid: "50439220"
                                      // dllexport takes precedence.
     ```
 
-- C + + 中，您可以初始化全域宣告或靜態的本機資料指標或以宣告的資料物件位址**dllimport**屬性，在 c 中會產生錯誤此外，您可以初始化靜態區域函式指標宣告的函式的位址**dllimport**屬性。 在 C 中，此類指派會將指標設定為 DLL 匯入 Thunk (將控制權傳送至函式的程式碼 Stub) 的位址，而不是設定為函式的位址。 在 C++ 中，它會將指標設定為函式的位址。 例如: 
+- 在C++，您可以初始化全域宣告或靜態的本機資料指標或以宣告的資料物件位址**dllimport**屬性，在 c 中會產生錯誤此外，您可以初始化靜態區域函式指標宣告的函式的位址**dllimport**屬性。 在 C 中，此類指派會將指標設定為 DLL 匯入 Thunk (將控制權傳送至函式的程式碼 Stub) 的位址，而不是設定為函式的位址。 在 C++ 中，它會將指標設定為函式的位址。 例如：
 
     ```cpp
     __declspec( dllimport ) void func1( void );

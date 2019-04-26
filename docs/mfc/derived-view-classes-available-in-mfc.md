@@ -8,11 +8,11 @@ helpviewer_keywords:
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
 ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152900"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC 中的可用衍生檢視類別
 
@@ -27,7 +27,7 @@ ms.locfileid: "57269288"
 |[CEditView](../mfc/reference/ceditview-class.md)|Windows 為基礎的簡單檢視編輯方塊控制項。 允許輸入和編輯文字，並可以用於做為基礎的簡單文字編輯器應用程式。 請參閱 `CRichEditView`。|
 |[CRichEditView](../mfc/reference/cricheditview-class.md)|檢視包含[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)物件。 這個類別是類似`CEditView`，但不同於`CEditView`，`CRichEditView`控點格式化的文字。|
 |[CListView](../mfc/reference/clistview-class.md)|檢視包含[CListCtrl](../mfc/reference/clistctrl-class.md)物件。|
-|[CTreeView](../mfc/reference/ctreeview-class.md)|檢視包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)物件，類似於在 Visual c + + 中的 [方案總管] 視窗的檢視。|
+|[CTreeView](../mfc/reference/ctreeview-class.md)|檢視包含[CTreeCtrl](../mfc/reference/ctreectrl-class.md)物件，類似於視覺效果中的 [方案總管] 視窗的檢視C++。|
 |[CScrollView](../mfc/reference/cscrollview-class.md)|基底類別`CFormView`， `CRecordView`，和`CDaoRecordView`。 實作捲動檢視的內容。|
 |[CFormView](../mfc/reference/cformview-class.md)|表單檢視中，包含控制項的檢視。 表單架構應用程式提供一或多個這類表單介面。|
 |[CHtmlView](../mfc/reference/chtmlview-class.md)|與應用程式的使用者可以瀏覽網站上全球資訊網上，以及資料夾中的本機檔案系統與網路上的網頁瀏覽器檢視。 Web 瀏覽器檢視也可為使用中的文件容器。|

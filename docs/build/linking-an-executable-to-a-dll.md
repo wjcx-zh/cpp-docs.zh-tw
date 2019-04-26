@@ -12,11 +12,11 @@ helpviewer_keywords:
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
 ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57818358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188751"
 ---
 # <a name="link-an-executable-to-a-dll"></a>連結至 DLL 的可執行檔
 
@@ -74,13 +74,13 @@ ms.locfileid: "57818358"
 
 若要使用的隱含連結的 DLL，用戶端可執行檔必須從該 DLL 的提供者取得這些檔案：
 
-- 一或多個標頭檔 （.h 檔案） 包含匯出的資料、 函數和/或 DLL 中的 c + + 類別的宣告。 類別、 函式，以及由 DLL 匯出的資料必須全部標示為`__declspec(dllimport)`標頭檔。 如需詳細資訊，請參閱 < [dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+- 一或多個標頭檔 （.h 檔案） 包含匯出的資料，而函式宣告和/或C++DLL 中的類別。 類別、 函式，以及由 DLL 匯出的資料必須全部標示為`__declspec(dllimport)`標頭檔。 如需詳細資訊，請參閱 < [dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
 
 - 若要連結到可執行檔匯入程式庫。 建置 DLL 時，連結器會建立匯入程式庫。 如需詳細資訊，請參閱[。LIB 檔案](reference/dot-lib-files-as-linker-input.md)。
 
 - 實際的 DLL 檔案。
 
-若要使用的隱含連結的 DLL，可執行檔必須包含宣告的資料、 函數或匯出的 DLL 中包含匯出的資料、 函數和類別的呼叫每個原始程式檔的 c + + 類別的標頭檔。 從程式碼撰寫的觀點來看，匯出的函式呼叫會如同其他任何函式呼叫。
+若要使用的隱含連結的 DLL，可執行檔必須包含資料，也就是函式宣告的標頭檔或C++中包含匯出的資料、 函數和類別的呼叫每個原始程式檔的 dll 匯出的類別。 從程式碼撰寫的觀點來看，匯出的函式呼叫會如同其他任何函式呼叫。
 
 若要建置呼叫的可執行檔，您必須連結到匯入程式庫。 如果您使用外部 makefile，或建置系統，請指定您用來列出其他物件 (.obj) 檔案匯入程式庫或程式庫，您將連結的檔案名稱。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
 ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154475"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -51,7 +51,7 @@ friend class F;
 friend F;
 ```
 
-如果最內層的命名空間中找不到任何現有的類別，該名稱，則第一種形式導入了新的類別 F。 **C + + 11**： 第二個表單不會引進新的類別，可以使用已宣告的類別，並使用必須在宣告樣板類型參數或為 friend 的 typedef 時使用。
+如果最內層的命名空間中找不到任何現有的類別，該名稱，則第一種形式導入了新的類別 F。 **C + + 11**:第二個表單不會引進新的類別;它可以使用已宣告的類別，並使用必須在宣告樣板類型參數或為 friend 的 typedef 時使用。
 
 使用`class friend F`時參考的型別具有尚未宣告：
 

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
 ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156865"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,7 +51,7 @@ void *_malloca(
 
 **_Malloca**常式會傳回**void**指標至配置的空間保證會適當地對齊任何物件類型的儲存體。 如果*大小*為 0， **_malloca**配置零長度項目，並傳回該項目的有效指標。
 
-如果*大小*大於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**嘗試配置到堆積上，並傳回 null 指標，如果無法配置空間。 如果*大小*小於或等於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**空間無法嘗試配置的堆疊和堆疊溢位例外狀況時產生配置。 堆疊溢位例外狀況不是 c + + 例外狀況;它是結構化例外狀況。 而不是使用 c + + 例外狀況處理，您必須使用[Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) 會攔截此例外狀況。
+如果*大小*大於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**嘗試配置到堆積上，並傳回 null 指標，如果無法配置空間。 如果*大小*小於或等於 **_ALLOCA_S_THRESHOLD**，然後 **_malloca**空間無法嘗試配置的堆疊和堆疊溢位例外狀況時產生配置。 堆疊溢位例外狀況不是C++例外狀況;它是結構化例外狀況。 而不是使用C++例外狀況處理，您必須使用[Structured Exception Handling](../../cpp/structured-exception-handling-c-cpp.md) (SEH) 會攔截此例外狀況。
 
 ## <a name="remarks"></a>備註
 

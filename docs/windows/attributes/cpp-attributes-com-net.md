@@ -1,5 +1,5 @@
 ---
-title: 適用於 COM 和.NET 的 c + + 屬性
+title: C++適用於 COM 和.NET 屬性
 ms.custom: index-page
 ms.date: 11/19/2018
 ms.topic: conceptual
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148313"
 ---
-# <a name="c-attributes-for-com-and-net"></a>適用於 COM 和.NET 的 c + + 屬性
+# <a name="c-attributes-for-com-and-net"></a>C++適用於 COM 和.NET 屬性
 
-Microsoft 會定義一組簡化 COM 程式設計和.NET Framework 通用語言執行階段開發的 c + + 屬性。 當您將屬性納入原始程式檔時，編譯器會搭配提供者來插入程式碼，或修改產生的物件檔案的程式碼的 Dll。 這些屬性可協助建立.idl 檔案、 介面、 型別程式庫，以及其他 COM 元件。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。
+Microsoft 定義一組C++屬性可簡化 COM 程式設計與.NET Framework 通用語言執行階段開發。 當您將屬性納入原始程式檔時，編譯器會搭配提供者來插入程式碼，或修改產生的物件檔案的程式碼的 Dll。 這些屬性可協助建立.idl 檔案、 介面、 型別程式庫，以及其他 COM 元件。 在整合式的開發環境 (IDE) 中，由精靈和 [屬性] 視窗所支援屬性。
 
 雖然屬性排除某些撰寫 COM 物件所需的詳細編碼，您需要在背景[COM fundamentals](/windows/desktop/com/the-component-object-model)最適合使用它們。
 
 > [!NOTE]
-> 如果您要尋找 c + + 標準的屬性，請參閱[屬性](../../cpp/attributes.md)。
+> 如果您要尋找的C++標準屬性，請參閱[屬性](../../cpp/attributes.md)。
 
 ## <a name="purpose-of-attributes"></a>屬性用途
 
-屬性指示目前無法在延伸 c + +，而不會中斷語言的傳統結構。 屬性可讓提供者 (另一個 Dll) 來動態擴充的語言功能。 屬性的主要目標是簡化 COM 元件，以及增加元件開發人員的產能層級的撰寫。 屬性可以套用至幾乎任何 c + + 建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：
+擴充屬性C++目前無法而不會中斷語言的傳統結構的方向。 屬性可讓提供者 (另一個 Dll) 來動態擴充的語言功能。 屬性的主要目標是簡化 COM 元件，以及增加元件開發人員的產能層級的撰寫。 屬性可以套用到幾乎任何C++建構，例如類別、 資料成員或成員函式。 以下是提供這項新技術的優勢的反白顯示：
 
 - 會公開熟悉且簡單的呼叫慣例。
 
@@ -34,7 +34,7 @@ Microsoft 會定義一組簡化 COM 程式設計和.NET Framework 通用語言�
 
 - 取代了大量的所需的幾個簡要的屬性與 COM 元件的 IDL 程式碼。
 
-例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯 Visual c + + compiler 物件檔案中插入適當的程式碼。
+例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯視覺效果C++編譯器，並將適當的程式碼插入物件檔案。
 
 ```cpp
 [event_receiver(com)]
@@ -49,9 +49,9 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>屬性的基本機制
 
-有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[Creating and Managing Visual c + + Projects](../../build/creating-and-managing-visual-cpp-projects.md)。
+有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[建立及管理 VisualC++專案](../../build/creating-and-managing-visual-cpp-projects.md)。
 
-為之前，先建置專案時，編譯器會剖析每個 c + + 原始程式檔，產生的物件檔案。 不過，當編譯器發現屬性，它會剖析並語法驗證。 然後編譯器動態地呼叫插入程式碼，或在編譯時期進行其他修改的屬性提供者。 提供者的實作是根據屬性的類型而有所不同。 比方說，ATL 相關屬性的實作方式 Atlprov.dll。
+如往常一般，當建置專案時，編譯器會剖析每個C++原始程式檔，產生的物件檔案。 不過，當編譯器發現屬性，它會剖析並語法驗證。 然後編譯器動態地呼叫插入程式碼，或在編譯時期進行其他修改的屬性提供者。 提供者的實作是根據屬性的類型而有所不同。 比方說，ATL 相關屬性的實作方式 Atlprov.dll。
 
 下圖示範編譯器和屬性提供者之間的關聯性。
 
@@ -60,11 +60,11 @@ class CMyReceiver
 > [!NOTE]
 > 屬性使用方式不會更改原始程式檔的內容。 產生的屬性程式碼會顯示的唯一時間是在偵錯工作階段期間。 此外，在專案中每個原始程式檔，您可以產生文字檔案，以顯示屬性的替代結果。 如需有關此程序的詳細資訊，請參閱 < [/Fx （合併插入程式碼）](../../build/reference/fx-merge-injected-code.md)並[偵錯插入程式碼](/visualstudio/debugger/how-to-debug-injected-code)。
 
-大部分的 c + + 建構，例如屬性會有一組特性，定義其適當的使用方式。 這指做為屬性的內容，並在屬性內容表的每一個屬性參考主題中已解決。 例如， [coclass](coclass.md)屬性可以只套用至現有的類別或結構，而不是[cpp_quote](cpp-quote.md)屬性，可以插入 c + + 原始程式檔內的任何位置。
+例如大部分C++建構，屬性具有一組特性，定義其適當的使用方式。 這指做為屬性的內容，並在屬性內容表的每一個屬性參考主題中已解決。 例如， [coclass](coclass.md)屬性可以只套用至現有的類別或結構，而不是[cpp_quote](cpp-quote.md)屬性，可在任何位置插入C++原始程式檔。
 
 ## <a name="building-an-attributed-program"></a>建置屬性化程式
 
-Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編譯器為您產生類型程式庫和.idl 檔案。 下列連結器選項建置.tlb 和.idl 檔案的說明：
+將視覺效果之後C++屬性到您的原始程式碼，您可能會想視覺效果C++編譯器來為您產生類型程式庫和.idl 檔案。 下列連結器選項建置.tlb 和.idl 檔案的說明：
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 
@@ -74,17 +74,17 @@ Visual c + + 屬性放入您的程式碼之後，您可能想 Visual c + + 編�
 
 - [/TLBOUT](../../build/reference/tlbout-name-dot-tlb-file.md)
 
-有些專案包含多個獨立的.idl 檔案。 這些用來產生兩個以上的.tlb 檔案，並選擇性地將其繫結至資源區塊。 此案例中目前不支援 Visual c + +。
+有些專案包含多個獨立的.idl 檔案。 這些用來產生兩個以上的.tlb 檔案，並選擇性地將其繫結至資源區塊。 此案例中目前不支援在視覺效果C++。
 
-此外，Visual c + + 連結器將會輸出單一 MIDL 檔的所有相關的 IDL 屬性資訊。 會沒有辦法從單一專案中產生兩個型別程式庫。
+此外，視覺效果C++連結器將會輸出單一 MIDL 檔的所有相關的 IDL 屬性資訊。 會沒有辦法從單一專案中產生兩個型別程式庫。
 
 ## <a name="contexts"></a> 屬性內容
 
-C + + 屬性可以使用四個基本的欄位描述： 它們可以套用到目標 (**適用於**)，如果它們是可重複，或是不 (**Repeatable**)、 所需的其他屬性 (存在**所需的屬性**)，和不相容性與其他屬性 (**無效的屬性**)。 隨附的資料表中每個屬性的參考主題會列出這些欄位。 以下說明每個欄位。
+C++屬性可以使用四個基本的欄位描述： 它們可以套用到目標 (**適用對象**)，如果它們是可重複，或是不 (**Repeatable**)、 所需的其他屬性的目前狀態 (**所需屬性**)，並與其他屬性的不相容 (**無效的屬性**)。 隨附的資料表中每個屬性的參考主題會列出這些欄位。 以下說明每個欄位。
 
 ### <a name="applies-to"></a>適用於
 
-此欄位會描述所指定之屬性的合法目標的不同 c + + 語言項目。 比方說，如果屬性會指定 「 類別 」 中**套用至** 欄位中，這會指出屬性只能套用至合法的 c + + 類別。 如果屬性套用至類別的成員函式，會產生語法錯誤。
+此欄位描述不同C++是指定之屬性的合法目標的語言項目。 比方說，如果屬性會指定 「 類別 」 中**適用對象**欄位，這會指示屬性只套用至為合法C++類別。 如果屬性套用至類別的成員函式，會產生語法錯誤。
 
 如需詳細資訊，請參閱 <<c0> [ 屬性的用法](attributes-by-usage.md)。
 

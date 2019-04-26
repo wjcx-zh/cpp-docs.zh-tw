@@ -15,18 +15,17 @@ helpviewer_keywords:
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152614"
 ---
 # <a name="containers-compound-files"></a>容器：複合檔案
 
 本文說明複合檔案的元件和實作，以及於 OLE 應用程式使用複合檔案的優點和缺點。
 
-複合檔案是 OLE 的整數部分。 它們是用來加速資料傳輸和 OLE 文件儲存。 複合檔案是主動式結構化儲存體模型的實作。 一致的介面支援序列化為儲存區、資料流或檔案物件。 
-  `COleStreamFile` 類別和 `COleDocument` 在 MFC 程式庫中支援複合檔案。
+複合檔案是 OLE 的整數部分。 它們是用來加速資料傳輸和 OLE 文件儲存。 複合檔案是主動式結構化儲存體模型的實作。 一致的介面支援序列化為儲存區、資料流或檔案物件。 `COleStreamFile` 類別和 `COleDocument` 在 MFC 程式庫中支援複合檔案。
 
 > [!NOTE]
 >  使用複合檔案不表示資訊來自 OLE 文件或複合文件。 複合檔案只是儲存複合文件、OLE 文件和其他資料的其中一個方式。

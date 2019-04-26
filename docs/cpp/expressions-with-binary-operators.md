@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
 ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154304"
 ---
 # <a name="expressions-with-binary-operators"></a>具有二元運算子的運算式
 
@@ -33,9 +33,9 @@ ms.locfileid: "50505117"
 
 - [移位運算子](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - 右移位 (>>)
+   - 向右移位 (>>)
 
-   - 左移位 (<<)
+   - 左的移 (<<)
 
 - [關係與相等運算子](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ ms.locfileid: "50505117"
 
    - 小於或等於 (\<=)
 
-   - 大於或等於 (>=)
+   - 大於或等於 (> =)
 
    - 等於 (==)
 
@@ -81,9 +81,9 @@ ms.locfileid: "50505117"
 
    - 左移位指派 (<\<=)
 
-   - 右移位指派 (>>=)
+   - 向右移位指派 (>> =)
 
-   - 位元 AND 指派 (&=)
+   - 位元 AND 指派 (& =)
 
    - 位元互斥 OR 指派 (^=)
 

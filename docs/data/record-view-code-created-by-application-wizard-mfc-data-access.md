@@ -7,11 +7,11 @@ helpviewer_keywords:
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
 ms.openlocfilehash: e25ca9cad1390dd11ab7328ffefed31badf6fc0b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59036071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152679"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>應用程式精靈所建立的記錄檢視程式碼 (MFC 資料存取)
 

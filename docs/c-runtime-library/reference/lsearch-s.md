@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156950"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -60,7 +60,7 @@ void *_lsearch_s(
 *base*<br/>
 要搜尋之陣列的基底指標。
 
-*數字*<br/>
+*number*<br/>
 項目數。
 
 *size*<br/>
@@ -80,7 +80,7 @@ void *_lsearch_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*key*|*base*|*compare*|*數字*|*size*|**errno**|
+|*key*|*base*|*compare*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|any|any|any|any|**EINVAL**|
 |any|**NULL**|any|!= 0|any|**EINVAL**|

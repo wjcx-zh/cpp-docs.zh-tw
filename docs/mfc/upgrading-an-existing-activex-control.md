@@ -13,11 +13,11 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180755"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
@@ -61,7 +61,7 @@ CODEBASE="http://example.microsoft.com/mycontrol.ocx#version=4,
     1086"
 ```
 
-下載只控制項的.ocx 檔案，此解決方案，並需要用戶端電腦上已安裝任何支援的 Dll。 這適用於 Internet Explorer 和 MFC ActiveX 控制項建置 Visual c + +，因為 Internet Explorer 隨附的 Visual c + + 控制項支援的 Dll。 如果是 ActiveX 控制項支援的其他網際網路瀏覽器來檢視這個控制項，此解決方案將無法運作。
+下載只控制項的.ocx 檔案，此解決方案，並需要用戶端電腦上已安裝任何支援的 Dll。 這適用於 Internet Explorer 和 MFC ActiveX 控制項建置具有視覺效果C++，因為 Internet Explorer 隨附視覺效果支援的 DllC++控制項。 如果是 ActiveX 控制項支援的其他網際網路瀏覽器來檢視這個控制項，此解決方案將無法運作。
 
 ### <a name="using-the-codebase-tag-with-an-inf-file"></a>使用 INF 檔案的程式碼基底標記
 
@@ -171,7 +171,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 如果您想要使用授權的控制項在網頁上，您必須確認授權合約可讓網際網路上的用法，並為其建立的授權封裝檔案 (LPK)。
 
-授權的 ActiveX 控制項將無法正確載入 HTML 網頁中如果執行 Internet Explorer 的電腦未獲授權使用的控制項。 比方說，如果已授權的控制項使用 Visual c + + 所建置，使用控制項的 HTML 網頁會正確載入位置所建立的控制項，但是除非已包含授權資訊時，它將不在不同的電腦上載入的電腦上。
+授權的 ActiveX 控制項將無法正確載入 HTML 網頁中如果執行 Internet Explorer 的電腦未獲授權使用的控制項。 例如，如果已授權的控制項是使用 Visual C++，在其中建立此控制項，但除非已包含授權資訊時，它將不在不同的電腦上載入的電腦上使用控制項的 HTML 頁面會正確載入。
 
 若要在 Internet Explorer 中使用授權的 ActiveX 控制項，您必須檢查供應商授權合約，以確認控制項授權允許：
 

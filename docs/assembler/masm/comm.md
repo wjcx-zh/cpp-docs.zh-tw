@@ -7,11 +7,11 @@ helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
 ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179103"
 ---
 # <a name="comm"></a>COMM
 
@@ -27,7 +27,7 @@ ms.locfileid: "50434797"
 
 每個*定義*具有下列格式：
 
-[*langtype*] [**NEAR** &#124; **FAR**]_標籤_**:**_類型_[**:**_計數_]
+[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
 
 選擇性*langtype*設定後面的名稱的命名慣例。 它會覆寫所指定的任何語言 **。模型**指示詞。 選擇性**NEAR**或是**FAR**覆寫目前的記憶體模型。 *標籤*是變數的名稱。 *型別*可以是任何類型規範 ([位元組](../../assembler/masm/byte-masm.md)， [WORD](../../assembler/masm/word.md)等等) 或指定的位元組數目的整數。 選擇性*計數*宣告的資料物件中指定的元素數目的預設值是 1。
 

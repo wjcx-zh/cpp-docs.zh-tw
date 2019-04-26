@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
 ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187214"
 ---
 # <a name="compiler-warning-level-1-c4346"></a>編譯器警告 (層級 1) C4346
 
 'name': 相依名稱不是類型
 
-[Typename](../../cpp/typename.md)相依名稱視為類型時，則需要關鍵字。 對於所有版本的 Visual c + + 中的運作方式相同的程式碼，加入`typename`加入宣告。
+[Typename](../../cpp/typename.md)相依名稱視為類型時，則需要關鍵字。 在 視覺效果的所有版本的運作方式相同的程式碼的C++，新增`typename`宣告。
 
 下列範例會產生 C4346:
 

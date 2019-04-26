@@ -9,11 +9,11 @@ helpviewer_keywords:
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
 ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180039"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>工作平行處理原則 (並行執行階段)
 
@@ -26,7 +26,7 @@ ms.locfileid: "51331213"
 
 ## <a name="key-points"></a>重點
 
-- 當您以傳址方式將變數傳遞給 Lambda 運算式時，必須保證該變數的存留期會保存直到工作完成為止。
+- 當您以傳址方式將變數傳遞給 lambda 運算式時，必須保證該變數的存留期會一直持續到工作完成。
 
 - 使用 [工作] ( [concurrency:: task](../../parallel/concrt/reference/task-class.md)類別) 當您撰寫非同步程式碼。 Task 類別使用 Windows 執行緒集區做為其排程器，而不使用並行執行階段。
 
@@ -108,10 +108,10 @@ ms.locfileid: "51331213"
 
 如果在工作執行期間擲回例外狀況，執行階段會在後續呼叫 `task::get` 或 `task::wait`，或以工作為基礎的接續時，封送處理該例外狀況。 如需有關工作例外狀況處理機制的詳細資訊，請參閱 <<c0> [ 例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
-如需使用的範例`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消作業，請參閱[逐步解說： 使用工作和 XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 (本文件稍後會說明 `task_completion_event` 類別。)
+如需使用的範例`task`， [concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)，取消作業，請參閱[逐步解說：使用工作和 XML HTTP 要求連線](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。 (本文件稍後會說明 `task_completion_event` 類別。)
 
 > [!TIP]
->  若要了解 UWP 應用程式中的工作特有的詳細資訊，請參閱[c + + 中的非同步程式設計](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)並[建立非同步作業以 c + + UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
+>  若要了解 UWP 應用程式中的工作特有的詳細資訊，請參閱[非同步程式設計C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)並[建立非同步作業C++用於 UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。
 
 ##  <a name="continuations"></a> 接續工作
 
@@ -123,7 +123,7 @@ ms.locfileid: "51331213"
 
 - 在接續開始之前或在執行時以合作的方式取消接續。
 
-- 提供有關該如何排定接續的提示。 （這適用於僅限通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立非同步作業以 c + + UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)
+- 提供有關該如何排定接續的提示。 （這適用於僅限通用 Windows 平台 (UWP) 應用程式。 如需詳細資訊，請參閱 <<c0> [ 建立非同步作業C++用於 UWP 應用程式](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)。)</c0>
 
 - 從相同前項叫用多個接續。
 
@@ -183,7 +183,7 @@ ms.locfileid: "51331213"
 
 [!code-cpp[concrt-eh-when_all#1](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_10.cpp)]
 
-請考慮使用 c + + 和 XAML，並將一組檔案寫入至磁碟的 UWP 應用程式。 下列範例顯示如何使用 `when_all` 和 `observe_all_exceptions` 以確保程式會觀察到所有例外狀況。
+請考慮使用的 UWP 應用程式C++和 XAML，並寫入磁碟中的一組檔案。 下列範例顯示如何使用 `when_all` 和 `observe_all_exceptions` 以確保程式會觀察到所有例外狀況。
 
 [!code-cpp[concrt-eh-when_all#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_11.cpp)]
 
@@ -242,9 +242,9 @@ ms.locfileid: "51331213"
 
 有兩種方法可以完成這項作業：使用接續，或啟動工作並等待工作之工作函式內的事件。 然而，在某些情況中無法使用這些方法。 例如，若要建立接續，您必須要有前項工作。 不過，如果您沒有前項工作，您可以建立*工作完成事件*和更新版本可供使用時，鏈結前項工作完成事件。 此外，因為等待中的工作也會阻擋執行緒，您可以使用工作完成事件在非同步作業完成時執行工作，並藉此釋放執行緒。
 
-[Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)類別有助於簡化這類工作的組合。 就像 `task` 類別，型別參數 `T` 是工作所產生之結果的類型。 如果工作不會傳回值，此類型可以是 `void`。 `T` 無法使用 `const` 修飾詞。 一般而言，會提供 `task_completion_event` 物件給執行緒或工作，在物件的值可用時對其發出通知。 同時，一或多個工作會設定為該事件的接聽程式。 設定事件之後，接聽程式工作便會完成，而其接續工作會排定繼續執行。
+[Concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)類別有助於簡化這類工作的組合。 就像 `task` 類別，類型參數 `T` 是工作所產生之結果的類型。 如果工作不會傳回值，此類型可以是 `void`。 `T` 無法使用 `const` 修飾詞。 一般而言，會提供 `task_completion_event` 物件給執行緒或工作，在物件的值可用時對其發出通知。 同時，一或多個工作會設定為該事件的接聽程式。 設定事件之後，接聽程式工作便會完成，而其接續工作會排定繼續執行。
 
-如需使用的範例`task_completion_event`若要實作會在延遲之後完成的工作，請參閱[如何： 建立工作的完成後延遲](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。
+如需使用的範例`task_completion_event`若要實作會在延遲之後完成的工作，請參閱[How to:建立在延遲之後完成的工作](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)。
 
 ##  <a name="task-groups"></a> 工作群組
 
@@ -299,20 +299,20 @@ Message from task: 42
 
 因為 `parallel_invoke` 演算法同時執行工作，所以輸出訊息的順序可能有所不同。
 
-如需完整範例，示範如何使用`parallel_invoke`演算法，請參閱 <<c2> [ 如何： 使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to： 使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md). 如需使用的完整範例`task_group`類別來實作非同步未來，請參閱 <<c2> [ 逐步解說： 實作未來](../../parallel/concrt/walkthrough-implementing-futures.md)。
+如需完整範例，示範如何使用`parallel_invoke`演算法，請參閱[How to:使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to:使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。 如需使用的完整範例`task_group`類別來實作非同步未來，請參閱[逐步解說：實作 Future](../../parallel/concrt/walkthrough-implementing-futures.md)。
 
 ##  <a name="robust"></a> 穩固程式設計
 
-請確定當您使用工作、工作群組和平行演算法時，了解取消和例外狀況處理的角色。 例如，在平行工作的樹狀中，已取消的工作會導致子工作無法執行。 如果其中一項子工作所執行的作業對應用程式很重要 (例如釋放資源)，這可能會造成問題。 此外，如果子工作擲回例外狀況，該例外狀況可能會透過物件解構函式散佈，並在應用程式中導致未定義的行為。 如需說明這些重點的範例，請參閱 <<c0> [ 了解如何取消和例外狀況處理會影響的物件解構](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)平行模式程式庫文件中的最佳作法一節。 如需有關取消和 PPL 中的例外狀況處理模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)並[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
+請確定當您使用工作、工作群組和平行演算法時，了解取消和例外狀況處理的角色。 例如，在平行工作的樹狀中，已取消的工作會導致子工作無法執行。 如果其中一項子工作執行的作業，對您的應用程式很重要，例如釋放資源，這可能會造成問題。 此外，如果子工作擲回例外狀況，該例外狀況可能會透過物件解構函式散佈，並在應用程式中導致未定義的行為。 如需說明這些重點的範例，請參閱 <<c0> [ 了解如何取消和例外狀況處理會影響的物件解構](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)平行模式程式庫文件中的最佳作法一節。 如需有關取消和 PPL 中的例外狀況處理模型的詳細資訊，請參閱[取消](../../parallel/concrt/cancellation-in-the-ppl.md)並[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|顯示如何使用 `parallel_invoke` 演算法，以改善 bitonic 排序演算法的效能。|
 |[如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|顯示如何使用 `parallel_invoke` 演算法，以改善在共用資料來源上執行多個作業的程式效能。|
-|[如何：建立在延遲之後才會完成的工作](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|示範如何使用`task`， `cancellation_token_source`， `cancellation_token`，和`task_completion_event`類別來建立在延遲之後完成的工作。|
-|[逐步解說：實作未來](../../parallel/concrt/walkthrough-implementing-futures.md)|顯示如何將並行執行階段中現有功能結合，成為可完成更多事項的功能。|
+|[如何：建立延遲後才會完成的工作](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|示範如何使用`task`， `cancellation_token_source`， `cancellation_token`，和`task_completion_event`類別來建立在延遲之後完成的工作。|
+|[逐步解說：實作 Future](../../parallel/concrt/walkthrough-implementing-futures.md)|顯示如何將並行執行階段中現有功能結合，成為可完成更多事項的功能。|
 |[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|描述 PPL，其提供開發並行處理應用程式的命令式程式設計模型。|
 
 ## <a name="reference"></a>參考資料

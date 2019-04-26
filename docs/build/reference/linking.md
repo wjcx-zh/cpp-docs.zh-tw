@@ -3,15 +3,15 @@ title: MSVC 連結器參考
 ms.date: 12/10/2018
 ms.assetid: bb736587-d13b-4f3c-8982-3cc2c015c59c
 ms.openlocfilehash: 3a9eebef0a264b0131311b5ca96011a4d56264a1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62176625"
 ---
 # <a name="linking"></a>連結
 
-在 c + + 專案中，*連結*編譯器已編譯的原始程式碼到物件檔案 (*.obj) 之後，會執行步驟。 連結器 (link.exe) 會將物件檔案結合成單一的可執行檔。 
+在C++專案中，*連結*編譯器已編譯的原始程式碼到物件檔案 (*.obj) 之後，會執行步驟。 連結器 (link.exe) 會將物件檔案結合成單一的可執行檔。 
 
 內部或外部 Visual Studio，可以設定連結器選項。 在 Visual Studio 中，您必須存取連結器選項中的專案節點上按一下滑鼠右鍵**方案總管**，然後選擇**屬性**來顯示屬性頁。 選擇**連結器**展開節點，並查看所有選項的左窗格中。 
 
@@ -83,7 +83,7 @@ LINK 工具使用下列環境變數：
 
 ## <a name="see-also"></a>另請參閱
 
-[C/c + + 建置參考](c-cpp-building-reference.md)
+[C /C++建置參考](c-cpp-building-reference.md)
 [MSVC 連結器選項](linker-options.md)
 [模組定義 (.def) 檔](module-definition-dot-def-files.md)
-[的連結器支援延遲載入 Dll](linker-support-for-delay-loaded-dlls.md)
+[連結器支援適用於延遲載入 Dll](linker-support-for-delay-loaded-dlls.md)

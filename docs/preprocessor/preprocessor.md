@@ -5,11 +5,11 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179850"
 ---
 # <a name="preprocessor"></a>前置處理器
 前置處理器是文字處理器，會在轉譯的第一個階段操作原始程式檔的文字。 前置處理器不會剖析原始程式文字，但會將原始程式文字分解為用於尋找巨集呼叫的語彙基元。 雖然編譯器通常在第一次傳遞時叫用前置處理器，但也可以分別叫用前置處理器，在不進行編譯的情況下處理文字。

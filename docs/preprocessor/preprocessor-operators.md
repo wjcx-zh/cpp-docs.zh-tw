@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [C++], preprocessor
 ms.assetid: 884126d1-0ce2-48b6-9e06-8a2d7c4a9656
 ms.openlocfilehash: 0b105cc2039e2aa50c11b796e5474a97d8c5c702
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62179889"
 ---
 # <a name="preprocessor-operators"></a>前置處理器運算子
 `#define` 指示詞的內容中使用四個前置處理器特定運算子 (請參閱下列清單以取得每一個運算子的摘要)。 字串化、字元化和語彙基元帶入運算子在下面三節中討論。 如需`defined`運算子，請參閱[#if、 #elif、 #else 和 #endif 指示詞](../preprocessor/hash-if-hash-elif-hash-else-and-hash-endif-directives-c-cpp.md)。

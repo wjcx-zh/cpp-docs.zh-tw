@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [如何：將多個 PGO 設定檔合併至單一設定檔](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [效能和診斷中樞中的 Visual Studio 2013 PGO 增益集](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [從命令列使用 MSVC 工具組](building-on-the-command-line.md)
 ## [逐步解說：在命令列編譯原生 C++ 程式](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [逐步解說：在命令列編譯 C 程式](walkthrough-compile-a-c-program-on-the-command-line.md)

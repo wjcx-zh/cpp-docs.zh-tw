@@ -157,11 +157,11 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58778555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164081"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx 類別
 
@@ -199,7 +199,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|啟用或停用的銜接狀態的載入。|
 |[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|啟用或停用 MDI 索引標籤式群組功能。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|啟用或停用 MDI 索引標籤功能。 啟用時，框架視窗會顯示每個 MDI 子視窗的索引標籤。|
-|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤時，是否啟用 最後一個使用中索引標籤。|
+|[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|指定當使用者關閉目前的索引標籤時，是否啟用 [最後一個使用中索引標籤。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|啟用或停用自動建立及管理的快顯窗格功能表顯示的應用程式窗格清單。  。|
 |[CMDIFrameWndEx::EnableWindowsDialog](#enablewindowsdialog)|插入的命令識別碼呼叫的功能表項目[CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) 對話方塊。|
 |[CMDIFrameWndEx::GetActivePopup](#getactivepopup)|將指標傳回到目前顯示的快顯功能表。|
@@ -234,7 +234,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnEraseMDIClientBackground](#onerasemdiclientbackground)|MDI 框架視窗處理 WM_ERASEBKGND 訊息時由架構呼叫。|
 |[CMDIFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|由架構呼叫時[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件處理 WM_NCHITTEST 訊息。|
 |[CMDIFrameWndEx::OnMoveMiniFrame](#onmoveminiframe)|由架構呼叫以移動迷你框架視窗。|
-|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|設定應用程式的主框架視窗的 預覽列印模式。 (覆寫 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。)|
+|[CMDIFrameWndEx::OnSetPreviewMode](#onsetpreviewmode)|設定應用程式的主框架視窗的預覽列印模式。 (覆寫 [CFrameWnd::OnSetPreviewMode](../../mfc/reference/cframewnd-class.md#onsetpreviewmode)。)|
 |[CMDIFrameWndEx::OnShowCustomizePane](#onshowcustomizepane)|快速自訂的窗格啟動時由架構呼叫。|
 |[CMDIFrameWndEx::OnShowMDITabContextMenu](#onshowmditabcontextmenu)|應該在其中一個索引標籤上顯示內容功能表時，由架構呼叫。 （有效的 MDI 索引標籤式群組只。）|
 |[CMDIFrameWndEx::OnShowPanes](#onshowpanes)|由架構呼叫以顯示或隱藏窗格。|
@@ -245,9 +245,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|傳回包含指定的點的停駐窗格。|
 |`CMDIFrameWndEx::PreTranslateMessage`|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。  (覆寫 `CMDIFrameWnd::PreTranslateMessage`。)|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|由架構呼叫以重新計算框架視窗的配置。 (覆寫[CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout)。)|
-|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊 窗格，並移除停駐的管理員。|
+|[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|取消註冊] 窗格，並移除停駐的管理員。|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|儲存 MDI 索引標籤式群組的目前的配置和先前開啟的文件清單。|
-|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|設定 預覽列印框架視窗。|
+|[CMDIFrameWndEx::SetPrintPreviewFrame](#setprintpreviewframe)|設定 [預覽列印框架視窗。|
 |[CMDIFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|藉由搜尋虛設項目並替換成指定的使用者定義項目，修改工具列物件。|
 |[CMDIFrameWndEx::ShowFullScreen](#showfullscreen)|切換至全螢幕模式從一般模式主框架。|
 |[CMDIFrameWndEx::ShowPane](#showpane)|顯示或隱藏指定的窗格。|
@@ -564,7 +564,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="return-value"></a>傳回值
 
-呼叫此函式可啟用窗格的 自動隱藏模式，它們會在指定的側邊的主框架視窗停駐時。
+呼叫此函式可啟用窗格的 [自動隱藏模式，它們會在指定的側邊的主框架視窗停駐時。
 
 ### <a name="example"></a>範例
 
@@ -931,7 +931,7 @@ DWORD GetMDITabsContextMenuAllowedItems();
 
 - BCGP_MDI_CAN_MOVE_PREV-可以將索引標籤移至上一個索引標籤群組。
 
-- BCGP_MDI_CAN_MOVE_NEXT-可以將索引標籤移至下一步 索引標籤群組。
+- BCGP_MDI_CAN_MOVE_NEXT-可以將索引標籤移至下一步] 索引標籤群組。
 
 ### <a name="remarks"></a>備註
 
@@ -1052,7 +1052,7 @@ BOOL InsertPane(
 
 ### <a name="return-value"></a>傳回值
 
-如果方法已成功註冊 窗格中，FALSE 如果窗格已向停駐的管理員，則為 TRUE。
+如果方法已成功註冊] 窗格中，FALSE 如果窗格已向停駐的管理員，則為 TRUE。
 
 ### <a name="remarks"></a>備註
 
@@ -1604,12 +1604,12 @@ virtual BOOL OnShowMDITabContextMenu(
 
 - BCGP_MDI_CAN_MOVE_PREV-可以將索引標籤移至上一個索引標籤群組。
 
-- BCGP_MDI_CAN_MOVE_NEXT-可以將索引標籤移至下一步 索引標籤群組。
+- BCGP_MDI_CAN_MOVE_NEXT-可以將索引標籤移至下一步] 索引標籤群組。
 
-- BCGP_MDI_CAN_BE_DOCKED-切換至 停駐狀態 （如索引標籤式文件相關） 的索引標籤式文件。
+- BCGP_MDI_CAN_BE_DOCKED-切換至 [停駐狀態 （如索引標籤式文件相關） 的索引標籤式文件。
 
 *bTabDrop*<br/>
-[in]顯示結果] 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中 索引標籤上的快顯功能表中顯示功能表。
+[in]顯示結果] 索引標籤拖曳到另一個索引標籤式群組功能表則為 TRUE。 如果為 false，則為目前作用中] 索引標籤上的快顯功能表中顯示功能表。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1787,7 +1787,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ##  <a name="removepanefromdockmanager"></a>  CMDIFrameWndEx::RemovePaneFromDockManager
 
-取消註冊窗格，並移除停駐的管理員。
+取消註冊] 窗格，並移除停駐的管理員。
 
 ```
 void RemovePaneFromDockManager(
@@ -1862,7 +1862,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ##  <a name="setprintpreviewframe"></a>  CMDIFrameWndEx::SetPrintPreviewFrame
 
-設定 預覽列印框架視窗。
+設定 [預覽列印框架視窗。
 
 ```
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
@@ -1931,7 +1931,7 @@ void ShowPane(
 [in]如果為 true，則延遲的停駐的配置重新計算。 若要立即重新計算停駐的配置，則為 FALSE。
 
 *bActivate*<br/>
-[in]True 表示要顯示的窗格應為作用中。 如果為 false，則顯示為非作用中 窗格。
+[in]True 表示要顯示的窗格應為作用中。 如果為 false，則顯示為非作用中] 窗格。
 
 ### <a name="remarks"></a>備註
 

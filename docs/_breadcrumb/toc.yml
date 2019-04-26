@@ -103,15 +103,9 @@
                   tocHref: /cpp/build/reference/
                   topicHref: /cpp/build/reference/c-cpp-building-reference
                   items:
-                    - name: 編譯器錯誤
-                      tocHref: /cpp/error-messages/compiler-errors-1/
-                      topicHref: /cpp/compiler-errors-1/c-cpp-build-errors
-                    - name: 編譯器警告
-                      tocHref: /cpp/compiler-warnings/
-                      topicHref: /cpp/compiler-warnings/compiler-warnings-c4000-through-C4199
-                    - name: 其他工具
-                      tocHref: /cpp/error-messages/tool-errors/
-                      topicHref: /cpp/error-messages/tool-errors/vectorizer-and-parallelizer-messages
+                    - name: 編譯器與工具的錯誤和警告
+                      tocHref: /cpp/error-messages/
+                      topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
             - name: 移植和升級
               tocHref: /cpp/porting/
               topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide

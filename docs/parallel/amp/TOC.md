@@ -3,7 +3,7 @@
 # [使用磚](using-tiles.md)
 # [在 UWP 應用程式中使用 C++ AMP](using-cpp-amp-in-windows-store-apps.md)
 # [逐步解說：矩陣乘法](walkthrough-matrix-multiplication.md)
-# [逐步解說：偵錯 C++ AMP 應用程式](walkthrough-debugging-a-cpp-amp-application.md)
+# [逐步解說：針對 C++ AMP 應用程式進行偵錯](walkthrough-debugging-a-cpp-amp-application.md)
 # [使用 Lambda、函式物件和限制函式](using-lambdas-function-objects-and-restricted-functions.md)
 # [圖形 (C++ AMP)](graphics-cpp-amp.md)
 # [使用 accelerator 和 accelerator_view 物件](using-accelerator-and-accelerator-view-objects.md)

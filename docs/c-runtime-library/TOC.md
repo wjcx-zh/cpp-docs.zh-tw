@@ -112,7 +112,7 @@
 ## [控制旗標](control-flags.md)
 ### [_CRTDBG_MAP_ALLOC](crtdbg-map-alloc.md)
 ### [_DEBUG](debug.md)
-### [_crtDbgFlag](crtdbgflag.md)
+### [_CRTDBG_CHECK_CRT_DF](crtdbgflag.md)
 ## [標準類型](standard-types.md)
 # [全域常數](global-constants.md)
 ## [32 位元 Windows 時間/日期格式](32-bit-windows-time-date-formats.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - const keyword [C++]
 ms.assetid: b21c0271-1ad0-40a0-b21c-5e812bba0318
 ms.openlocfilehash: 759ee503acb12f6c1a30fbbfaf87a8f66433e571
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154746"
 ---
 # <a name="const-c"></a>const (C++)
 
@@ -37,7 +37,7 @@ int main() {
 }
 ```
 
-在 c + +，您可以使用**const**而不是關鍵字[#define](../preprocessor/hash-define-directive-c-cpp.md)來定義常數值的前置處理器指示詞。 以定義的值**const**必須接受類型檢查，並可用來取代常數運算式。 在 c + + 中，您可以指定不含陣列的大小**const**變數，如下所示：
+在C++，您可以使用**const**而不是關鍵字[#define](../preprocessor/hash-define-directive-c-cpp.md)來定義常數值的前置處理器指示詞。 以定義的值**const**必須接受類型檢查，並可用來取代常數運算式。 在C++，您可以指定不含陣列的大小**const**變數，如下所示：
 
 ```cpp
 // constant_values2.cpp
@@ -124,7 +124,7 @@ int main()
 }
 ```
 
-## <a name="c-and-c-const-differences"></a>C 和 c + + 常數的差異
+## <a name="c-and-c-const-differences"></a>C 和C++常數的差異
 
 當您宣告一個變數**const** C 原始程式碼檔案，在您這麼做：
 
@@ -138,13 +138,13 @@ const int i = 2;
 extern const int i;
 ```
 
-若要取得相同的行為，在 c + + 中，您必須宣告，但您**const**變數設定為：
+若要取得相同的行為中，但是C++，您必須宣告您**const**變數設定為：
 
 ```cpp
 extern const int i = 2;
 ```
 
-如果您想要宣告**extern**變數以用於 C 原始程式碼檔案，使用程式碼 c + + 原始程式檔中：
+如果您想要宣告**extern**中使用者定義變數C++原始程式碼檔用於 C 原始程式碼檔案中，使用：
 
 ```cpp
 extern "C" const int x=10;

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
 ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154834"
 ---
 # <a name="compiler-com-support"></a>編譯器 COM 支援
 
@@ -18,7 +18,7 @@ ms.locfileid: "50646039"
 
 Visual C++ 編譯器可直接讀取元件物件模型 (COM) 類型程式庫，以及內容轉譯成可在編譯時包含的 C++ 原始程式碼。 語言擴充功能可協助您進行用戶端的 COM 程式設計。
 
-藉由使用[#import 前置處理器指示詞](../preprocessor/hash-import-directive-cpp.md)，編譯器可以讀取類型程式庫，並轉換到 c + + 標頭檔，描述 COM 介面必須標記為類別。 一組 `#import` 屬性可供使用者控制產生類別程式庫標頭檔的內容。
+藉由使用[#import 前置處理器指示詞](../preprocessor/hash-import-directive-cpp.md)，編譯器可以讀取類型程式庫，並將它轉換成C++標頭檔案，其中描述 COM 介面與類別。 一組 `#import` 屬性可供使用者控制產生類別程式庫標頭檔的內容。
 
 您可以使用[__declspec](../cpp/declspec.md)擴充的屬性[uuid](../cpp/uuid-cpp.md)指派全域唯一識別碼 (GUID) 至 COM 物件。 關鍵字[__uuidof](../cpp/uuidof-operator.md)可以用來擷取與 COM 物件相關聯的 GUID。 另一個 **__declspec**屬性，[屬性](../cpp/property-cpp.md)，可以用來指定`get`和`set`COM 物件的資料成員的方法。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
 ms.openlocfilehash: 965778fd5d17aa416b198c101edc3a445a39580b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152939"
 ---
 # <a name="creating-an-active-document-container-application"></a>建立主動式文件容器應用程式
 
@@ -23,7 +23,7 @@ ms.locfileid: "57257286"
 
 1. 從**檔案**功能表上，按一下**專案**從**新增**子功能表。
 
-1. 從左窗格中，按一下**Visual c + +** 專案類型。
+1. 從左窗格中，按一下**Visual C++** 專案類型。
 
 1. 選取  **MFC 應用程式**從右窗格中。
 

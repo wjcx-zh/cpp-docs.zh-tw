@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __fastcall keyword [C++]
 ms.assetid: bb5b9c8a-dfad-450c-9119-0ac2bc59544f
 ms.openlocfilehash: 3e7cd4b1202ee717abf9a9767785ed8abe96bd69
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154317"
 ---
 # <a name="fastcall"></a>__fastcall
 
@@ -21,7 +21,7 @@ ms.locfileid: "53627360"
 
 **__Fastcall**呼叫慣例會指定函數的引數會傳入暫存器，盡可能中。 這個呼叫慣例僅適用於 x86 架構。 下列清單會顯示這個呼叫慣例的實作。
 
-|元素|實作|
+|項目|實作|
 |-------------|--------------------|
 |引數傳遞順序|引數清單中的前兩個 DWORD 引數或較小引數會由左至右傳入 ECX 和 EDX 暫存器，所有其他引數則由右至左傳遞至堆疊上。|
 |堆疊維護責任|所呼叫的函式會從堆疊取出引數。|

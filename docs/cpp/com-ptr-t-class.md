@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
 ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154899"
 ---
 # <a name="comptrt-class"></a>_com_ptr_t 類別
 
@@ -53,7 +53,7 @@ _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 |||
 |-|-|
 |[operator =](../cpp/com-ptr-t-operator-equal.md)|將新的值指派給現有 **_com_ptr_t**物件。|
-|[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標，或為 NULL。|
+|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|比較智慧型指標物件與另一個智慧型指標、 一般介面指標，或為 NULL。|
 |[擷取器](../cpp/com-ptr-t-extractors.md)|擷取封裝的 COM 介面指標。|
 
 **結束 Microsoft 專屬**

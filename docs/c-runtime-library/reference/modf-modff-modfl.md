@@ -32,11 +32,11 @@ helpviewer_keywords:
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
 ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156326"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -73,7 +73,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 **modf**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C + + 允許多載，因此您可以呼叫多載**modf**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
+C++允許多載，因此您可以呼叫多載**modf**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
 
 ## <a name="requirements"></a>需求
 

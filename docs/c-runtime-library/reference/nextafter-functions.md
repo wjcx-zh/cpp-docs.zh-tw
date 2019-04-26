@@ -49,11 +49,11 @@ helpviewer_keywords:
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
 ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156183"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter、nextafterf、nextafterl、_nextafter、_nextafterf、nexttoward、nexttowardf、nexttowardl
 
@@ -98,7 +98,7 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 **Nextafter**並**nexttoward**函式系列是相等的除了的參數型別*y*。 如果*x*並*y*相等，傳回的值是*y*轉換成傳回型別。
 
-因為 c + + 允許多載，如果您包含\<cmath> > 您可以呼叫多載**nextafter**並**nexttoward**傳回**float**和**長** **double**型別。 在 C 程式中， **nextafter**並**nexttoward**一律會傳回**double**。
+因為C++允許多載，如果您包含\<cmath> > 您可以呼叫多載**nextafter**並**nexttoward**傳回**float**和**長** **double**型別。 在 C 程式中， **nextafter**並**nexttoward**一律會傳回**double**。
 
 **_Nextafter**並 **_nextafterf**函式是 Microsoft 專有的。 **_Nextafterf**函式只適用於 x64 編譯時。
 

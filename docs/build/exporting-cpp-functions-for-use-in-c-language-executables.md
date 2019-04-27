@@ -8,17 +8,17 @@ helpviewer_keywords:
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
 ms.openlocfilehash: a694b77e3730ab82ec1698076cc66729ff115cdc
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195230"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>匯出 C++ 函式以用於 C 語言可執行檔
 
-如果您想要存取從 C 語言的模組，您應該宣告具有 C 連結，而不是 c + + 連結的這些函式，以 c + + 撰寫的 DLL 中有函式。 C + + 命名 （也稱為名稱裝飾） 的型別安全和 c + + 呼叫慣例，很難從 C.呼叫，除非另有指定，會使用 c + + 編譯器
+如果您在撰寫的 DLL 函式C++，您想要存取從 C 語言的模組，您應該宣告具有 C 連結，而不是這些函式C++連結。 除非另有指定，C++編譯器會使用C++型別安全命名 （也稱為名稱裝飾） 和C++呼叫慣例，很難從 C.呼叫
 
-若要指定 C 連結，請指定`extern "C"`函式宣告。 例如: 
+若要指定 C 連結，請指定`extern "C"`函式宣告。 例如：
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
@@ -32,11 +32,11 @@ extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 
 - [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或C++-語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
 - [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 

@@ -13,18 +13,17 @@ helpviewer_keywords:
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
 ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200073"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ 64 位元移轉時常見的問題
 
 當您使用 Visual c++ 建立在 64 位元 Windows 作業系統上執行的應用程式時，您應注意下列問題：
 
-- 
-  `int` 和 `long` 是 64 位元 Windows 作業系統上的 32 位元值。 對於您要為 64 位元平台進行編譯的程式，您應小心不要將指標指派給 32 位元變數。 指標在 64 位元平台上是 64 位元的，如果您將指標指派給 32 位元變數，將會截斷指標值。
+- `int` 和 `long` 是 64 位元 Windows 作業系統上的 32 位元值。 對於您要為 64 位元平台進行編譯的程式，您應小心不要將指標指派給 32 位元變數。 指標在 64 位元平台上是 64 位元的，如果您將指標指派給 32 位元變數，將會截斷指標值。
 
 - `size_t``time_t`，和`ptrdiff_t`是在 64 位元 Windows 作業系統上的 64 位元值。
 
@@ -48,5 +47,5 @@ ms.locfileid: "57816109"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定適用於 64 位元、 x64 的 c + + 專案的目標](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[設定C++適用於 64 位元，x64 專案目標](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
 ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188895"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>HOW TO：新增自訂建置工具至 MSBuild 專案
 
@@ -19,7 +19,7 @@ ms.locfileid: "57815264"
 
 針對特定的檔案中，指定專案檔 (.vcxproj) 命令列執行，任何額外的輸入或輸出檔案和要顯示的訊息。 如果**MSBuild**判斷您的輸出檔案已過期的關於您的輸入檔案，它會顯示訊息，並執行命令列工具。
 
-若要指定自訂建置工具在執行時，使用其中一個或多個`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`專案檔中的 XML 項目。 例如，您可以指定自訂建置工具執行之後 MIDL 編譯器和 C/c + + 編譯器之前。 指定`CustomBuildBeforeTargets`要執行此工具，才可以執行特定的目標; 項目`CustomBuildAfterTargets`後要執行此工具特定的目標; 的項目或執行此工具執行兩個目標之間的兩個項目。 如果指定兩項目，則您的自訂建置工具會執行在其預設位置，也就是之前**MIDL**目標。
+若要指定自訂建置工具在執行時，使用其中一個或多個`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`專案檔中的 XML 項目。 例如，您可以指定自訂建置工具執行之後 MIDL 編譯器和 C 之前 /C++編譯器。 指定`CustomBuildBeforeTargets`要執行此工具，才可以執行特定的目標; 項目`CustomBuildAfterTargets`後要執行此工具特定的目標; 的項目或執行此工具執行兩個目標之間的兩個項目。 如果指定兩項目，則您的自訂建置工具會執行在其預設位置，也就是之前**MIDL**目標。
 
 自訂建置步驟和自訂建置工具共用指定的資訊`CustomBuildBeforeTargets`和`CustomBuildAfterTargets`XML 項目。 在您的專案檔中指定這些目標一次。
 

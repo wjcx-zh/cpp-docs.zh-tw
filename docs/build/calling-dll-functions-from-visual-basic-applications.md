@@ -11,15 +11,15 @@ helpviewer_keywords:
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
 ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195338"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 
-Visual Basic 應用程式 （或應用程式以其他語言，例如 Pascal 或 Fortran） C/c + + DLL 中呼叫函式，匯出函式必須是沒有任何名稱裝飾，由編譯器使用正確的呼叫慣例
+Visual Basic 應用程式 （或應用程式，以其他語言，例如 Pascal 或 Fortran） 呼叫中的 C 函式 /C++ DLL，必須使用正確的呼叫慣例，而不需要任何名稱裝飾，由編譯器匯出的函式
 
 `__stdcall` 建立函式的正確呼叫慣例 （呼叫的函式會清除堆疊和由右至左傳遞參數），但以不同的方式來修飾函式名稱。 因此，當 **__declspec （dllexport)** 用在 DLL 中的匯出函式，會匯出裝飾的名稱。
 
@@ -64,7 +64,7 @@ EXPORTS
 
 - [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 

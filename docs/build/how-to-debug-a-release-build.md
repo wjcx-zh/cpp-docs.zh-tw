@@ -6,11 +6,11 @@ helpviewer_keywords:
 - release builds, debugging
 ms.assetid: d333e4d1-4e6c-4384-84a9-cb549702da25
 ms.openlocfilehash: 6d93fac4e980085c322acb55e6f8758e6cea0a00
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188960"
 ---
 # <a name="how-to-debug-a-release-build"></a>HOW TO：偵錯發行組建
 
@@ -18,9 +18,9 @@ ms.locfileid: "57826172"
 
 ### <a name="to-debug-a-release-build"></a>若要偵錯發行組建
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](working-with-project-properties.md)。</c0>
 
-1. 按一下  **C/c + +** 節點。 設定**偵錯資訊格式**要[C7 相容 (/ Z7)](reference/z7-zi-zi-debug-information-format.md)或是**程式資料庫 (/Zi)**。
+1. 按一下  **C /C++** 節點。 設定**偵錯資訊格式**要[C7 相容 (/ Z7)](reference/z7-zi-zi-debug-information-format.md)或是**程式資料庫 (/Zi)**。
 
 1. 依序展開**連結器**然後按一下**一般**節點。 設定**啟用累加連結**要[否 (/ /INCREMENTAL: NO)](reference/incremental-link-incrementally.md)。
 

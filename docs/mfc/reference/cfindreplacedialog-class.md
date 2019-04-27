@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
 ms.openlocfilehash: de48d8f495802bdf1c5f69e7a4edc41153c9599f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206009"
 ---
 # <a name="cfindreplacedialog-class"></a>CFindReplaceDialog 類別
 

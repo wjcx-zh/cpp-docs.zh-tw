@@ -3,15 +3,15 @@ title: DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
 ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183272"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
-您可以使用 Visual Studio 來建立標準的 Win32 DLL 或 Windows 執行階段元件可供通用 Windows 平台 (UWP) 應用程式的 DLL。 使用 Visual Studio 或 Visual c + + 編譯器早於 Visual Studio 2012 的 UWP 應用程式中未正確載入，並可能無法通過 Microsoft Store 中的應用程式驗證測試的版本所建立的標準 DLL。
+您可以使用 Visual Studio 來建立標準的 Win32 DLL 或 Windows 執行階段元件可供通用 Windows 平台 (UWP) 應用程式的 DLL。 使用 Visual Studio 或視覺效果的版本所建立的標準 DLLC++早於 Visual Studio 2012 的 UWP 應用程式中未正確載入，並可能無法通過 Microsoft Store 中的應用程式驗證測試的編譯器。
 
 ## <a name="windows-runtime-component-dlls"></a>Windows 執行階段元件 Dll
 
@@ -27,7 +27,7 @@ ms.locfileid: "50445704"
 
 ## <a name="standard-dlls"></a>標準 DLL
 
-您可以建立不取用或產生公用 Windows 執行階段型別和從 UWP 應用程式取用它的 c + + 程式碼的標準 DLL。 當您只想要移轉現有的 DLL，若要在此版本的 Visual Studio 中編譯，但無法轉換成 Windows 執行階段元件專案的 程式碼時，請使用動態連結程式庫 (DLL) 專案類型。 當您進行下列步驟時，這個 DLL 將會隨 .appx 封裝中的應用程式可執行檔一起部署。
+您可以建立的標準 DLLC++不取用或產生公用 Windows 執行階段型別和從 UWP 應用程式取用它的程式碼。 當您只想要移轉現有的 DLL，若要在此版本的 Visual Studio 中編譯，但無法轉換成 Windows 執行階段元件專案的 程式碼時，請使用動態連結程式庫 (DLL) 專案類型。 當您進行下列步驟時，這個 DLL 將會隨 .appx 封裝中的應用程式可執行檔一起部署。
 
 ### <a name="to-create-a-standard-dll-in-visual-studio"></a>在 Visual Studio 中建立標準 DLL
 

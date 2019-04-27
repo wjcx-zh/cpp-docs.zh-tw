@@ -15,11 +15,11 @@ helpviewer_keywords:
 - OLE IUnknown
 ms.assetid: 2b67016a-d78e-4d60-925f-c28ec8fb6180
 ms.openlocfilehash: f793c7d7303a49057e46c32eb658ea7eea8e9ccc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186725"
 ---
 # <a name="ole-background-mfc-implementation"></a>OLE 背景：MFC 實作
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206039"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 
@@ -107,8 +107,7 @@ CEvent(
 如果為 TRUE，會指定事件的物件為手動事件，否則為事件物件是自動的事件。
 
 *lpszName*<br/>
-
-  `CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。
+`CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。
 
 *lpsaAttribute*<br/>
 事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。

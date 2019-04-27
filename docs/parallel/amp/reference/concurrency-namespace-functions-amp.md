@@ -14,23 +14,23 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180384"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 命名空間函式 (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange 函式 (c + + AMP)](#atomic_exchange)|[atomic_fetch_add 函式 (c + + AMP)](#atomic_fetch_add)|[atomic_fetch_and 函式 (c + + AMP)](#atomic_fetch_and)|
+|[atomic_exchange 函式 (C++ P)](#atomic_exchange)|[atomic_fetch_add 函式 (C++ P)](#atomic_fetch_add)|[atomic_fetch_and 函式 (C++ P)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函式 (c + + AMP)](#atomic_fetch_or)|[atomic_fetch_sub 函式 (c + + AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor 函式 (c + + AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函式 (C++ P)](#atomic_fetch_or)|[atomic_fetch_sub 函式 (C++ P)](#atomic_fetch_sub)|
+|[atomic_fetch_xor 函式 (C++ P)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函式 (c + + AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函式 (C++ P)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ##  <a name="all_memory_fence"></a>  all_memory_fence
 
@@ -47,7 +47,7 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 
 ##  <a name="amp_uninitialize"></a>  amp_uninitialize
 
-取消初始化 c + + AMP 執行階段。 它是合法的應用程式存留期間多次呼叫此函式。 呼叫任何呼叫此函式的 c + + AMP API 之後，將會重新初始化 c + + AMP 執行階段。 請注意，是在呼叫此函式中使用 c + + AMP 物件不合法的這樣做會導致未定義的行為。 此外，同時呼叫此函式和任何其他 AMP Api 就是不合法的而且會導致未定義的行為。
+取消初始化C++AMP 執行階段。 它是合法的應用程式存留期間多次呼叫此函式。 呼叫任何C++AMP API 之後呼叫此函式將會重新初始化C++AMP 執行階段。 請注意，您不能使用C++AMP 物件在呼叫此函式和這麼做會導致未定義的行為。 此外，同時呼叫此函式和任何其他 AMP Api 就是不合法的而且會導致未定義的行為。
 
 ```
 void __cdecl amp_uninitialize();
@@ -86,7 +86,7 @@ inline bool atomic_compare_exchange(
 
 **真**如果作業成功，否則**false**。
 
-##  <a name="atomic_exchange"></a>  atomic_exchange 函式 (c + + AMP)
+##  <a name="atomic_exchange"></a>  atomic_exchange 函式 (C++ P)
 
 設定目的地位置的值做為不可部分完成的作業。
 
@@ -119,7 +119,7 @@ inline float atomic_exchange(
 
 目的地位置的原始值。
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函式 (c + + AMP)
+##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函式 (C++ P)
 
 以不可分割方式加入值的記憶體位置的值。
 
@@ -147,7 +147,7 @@ inline unsigned int atomic_fetch_add(
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函式 (c + + AMP)
+##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函式 (C++ P)
 
 以不可分割方式執行位元 AND 運算的值以及記憶體位置的值。
 
@@ -270,7 +270,7 @@ inline unsigned int atomic_fetch_min(
 
 儲存在指定之的位置的原始值。
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函式 (c + + AMP)
+##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函式 (C++ P)
 
 以不可分割方式執行位元的 OR 運算的值以及記憶體位置的值。
 
@@ -298,7 +298,7 @@ inline unsigned int atomic_fetch_or(
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函式 (c + + AMP)
+##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函式 (C++ P)
 
 以不可分割方式減去的記憶體位置的值。
 
@@ -326,7 +326,7 @@ inline unsigned int atomic_fetch_sub(
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函式 (c + + AMP)
+##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函式 (C++ P)
 
 以不可分割方式 peforms 值與的記憶體位置的位元 XOR 運算。
 
@@ -356,7 +356,7 @@ inline unsigned int atomic_fetch_xor(
 
 ##  <a name="copy"></a>  copy
 
-複製 c + + AMP 物件。 已符合所有的同步資料傳輸需求。 在加速器上執行的程式碼時，您無法複製資料。 此函式的一般形式是`copy(src, dest)`。
+複製C++AMP 物件。 已符合所有的同步資料傳輸需求。 在加速器上執行的程式碼時，您無法複製資料。 此函式的一般形式是`copy(src, dest)`。
 
 ```
 template <typename value_type, int _Rank>
@@ -453,7 +453,7 @@ void copy(
 
 ##  <a name="copy_async"></a>  copy_async
 
-複製 c + + AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的物件。 在加速器上執行的程式碼時，您無法複製資料。  此函式的一般形式是`copy(src, dest)`。
+複製C++AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的物件。 在加速器上執行的程式碼時，您無法複製資料。  此函式的一般形式是`copy(src, dest)`。
 
 ```
 template <typename value_type, int _Rank>
@@ -585,9 +585,9 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Tile_barrier 物件
 
-##  <a name="parallel_for_each"></a>  parallel_for_each 函式 (c + + AMP)
+##  <a name="parallel_for_each"></a>  parallel_for_each 函式 (C++ P)
 
-整個計算網域中執行的函式。 如需詳細資訊，請參閱 < [c + + AMP 概觀](../../../parallel/amp/cpp-amp-overview.md)。
+整個計算網域中執行的函式。 如需詳細資訊，請參閱 < [ C++ AMP 概觀](../../../parallel/amp/cpp-amp-overview.md)。
 
 ```
 template <int _Rank, typename _Kernel_type>

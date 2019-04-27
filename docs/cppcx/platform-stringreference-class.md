@@ -10,11 +10,11 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
 ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182986"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference 類別
 
@@ -148,7 +148,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="remarks"></a>備註
 
-因為`StringReference`是標準的 c + + 類別，且不是 ref 類別，它不會出現在**物件瀏覽器**。
+因為`StringReference`是一種標準C++類別，而且不是 ref 類別，它不會顯示在**物件瀏覽器**。
 
 ## <a name="operator-call"></a>  Stringreference 運算子
 
@@ -163,8 +163,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>傳回值
 
-
-  `Platform::String` 類型之物件的控制代碼。
+`Platform::String` 類型之物件的控制代碼。
 
 ## <a name="ctor"></a>  StringReference::StringReference 建構函式
 
@@ -188,8 +187,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 用來初始化新執行個體之 char16 值陣列的指標。
 
 *__lenArg*<br/>
-
-  `__strArg` 中的元素數目。
+`__strArg` 中的元素數目。
 
 ### <a name="remarks"></a>備註
 

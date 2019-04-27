@@ -1,5 +1,5 @@
 ---
-title: 在 Visual Studio 中建立 C/c + + Dll
+title: 建立 C /C++在 Visual Studio 中的 Dll
 ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
 ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195458"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>在 Visual Studio 中建立 C/c + + Dll
+# <a name="create-cc-dlls-in-visual-studio"></a>建立 C /C++在 Visual Studio 中的 Dll
 
 在 Windows，動態連結程式庫 (DLL) 會是一種可做為函式和資源的共用程式庫的可執行檔。 動態連結是一項作業系統功能，可讓可執行檔呼叫函式，或使用儲存在個別的檔案中的資源。 這些函式和資源可以與使用它們的可執行檔分開編譯和部署。 DLL 不是獨立的可執行檔;它會呼叫它的應用程式內容中執行。 作業系統可以將 DLL 載入應用程式的記憶體空間在載入應用程式 (*隱含連結*)，或視需要在執行階段 (*明確連結*)。 DLL 也讓您輕鬆地在可執行檔之間共用函式和資源。 多個應用程式可以同時存取記憶體中單一 DLL 複本的內容。
 
@@ -59,7 +59,7 @@ ms.locfileid: "57815810"
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>如何建立和使用 Dll 的詳細資訊
 
-下列主題提供有關的詳細的資訊，Visual c + + dll 的程式設計。
+下列主題提供在視覺效果的程式 dll 的詳細的資訊C++。
 
 [逐步解說：建立和使用動態連結程式庫 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 描述如何使用 Visual Studio 來建立並使用 DLL。

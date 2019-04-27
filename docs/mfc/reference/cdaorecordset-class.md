@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206355"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset 類別
 
@@ -315,7 +315,7 @@ class CDaoRecordset : public CObject
 
 使用物件的成員函式和資料成員來捲動瀏覽記錄，並在其上操作。 可用的作業取決於是否物件是資料表類型的資料錄集、 動態類型的資料錄集或快照集類型的資料錄集，以及它是否可更新或唯讀狀態，這取決於資料庫或開放式資料庫連接 (ODBC) 的功能資料來源。 若要重新整理記錄可能會變更或新增，因為`Open`呼叫，呼叫物件的[Requery](#requery)成員函式。 呼叫物件的`Close`成員函式，並使用它完成時終結物件。
 
-`CDaoRecordset` 使用 DAO 資料錄欄位交換 (DFX)，以支援讀取及更新的記錄欄位的型別安全的 c + + 成員透過您`CDaoRecordset`或`CDaoRecordset`-衍生的類別。 您也可以實作在資料庫中的資料行的動態繫結，而不需使用 DFX 機制使用[GetFieldValue](#getfieldvalue)並[SetFieldValue](#setfieldvalue)。
+`CDaoRecordset` 使用來支援讀取及更新的記錄欄位的 DAO 資料錄欄位交換 (DFX)，透過型別安全C++的成員您`CDaoRecordset`或是`CDaoRecordset`-衍生的類別。 您也可以實作在資料庫中的資料行的動態繫結，而不需使用 DFX 機制使用[GetFieldValue](#getfieldvalue)並[SetFieldValue](#setfieldvalue)。
 
 如需相關資訊，請參閱 DAO [說明] 中的 「 資料錄集物件 」。
 
@@ -339,7 +339,7 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>備註
 
-記錄的欄位是一開始是 Null。 （在資料庫術語中，Null 」 有任何值 」 的方式，而且不是 NULL，c + + 中相同）。若要完成此作業，您必須呼叫[更新](#update)成員函式。 `Update` 將您的變更儲存至資料來源。
+記錄的欄位是一開始是 Null。 (在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)若要完成此作業，您必須呼叫[更新](#update)成員函式。 `Update` 將您的變更儲存至資料來源。
 
 > [!CAUTION]
 >  如果您編輯記錄，然後捲動至另一筆記錄，而不需呼叫`Update`，您的變更都會遺失，而不發出警告。
@@ -1633,7 +1633,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="remarks"></a>備註
 
-（在資料庫術語中，Null 」 有任何值 」 的方式，而且不是 NULL，c + + 中相同）。如果欄位資料成員被標示為 Null，則會將它解譯為任何值是目前資料錄的資料行。
+(在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)如果欄位資料成員被標示為 Null，則會將它解譯為任何值是目前資料錄的資料行。
 
 > [!NOTE]
 >  在某些情況下，使用`IsFieldNull`可會沒有效率，如下列程式碼範例所示：
@@ -1645,7 +1645,7 @@ BOOL IsFieldNull(void* pv);
 
 ##  <a name="isfieldnullable"></a>  CDaoRecordset::IsFieldNullable
 
-呼叫以判斷指定的欄位資料成員是 「 可為 null 」 （可以是設定為 Null 值; 此成員函式C + + NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」)。
+呼叫以判斷指定的欄位資料成員是 「 可為 null 」 （可以是設定為 Null 值; 此成員函式C++ NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」)。
 
 ```
 BOOL IsFieldNullable(void* pv);
@@ -2006,8 +2006,7 @@ virtual void Open(
 
 第一個版本的`Open`使用`lpszSQL`參數，記錄會根據選取下表所示的準則。
 
-|
-  `lpszSQL` 參數的值|取決於選取的記錄|範例|
+|`lpszSQL` 參數的值|取決於選取的記錄|範例|
 |--------------------------------------|----------------------------------------|-------------|
 |NULL|所傳回的字串`GetDefaultSQL`。||
 |一或多個 tabledefs 及/或 querydef 名稱的逗號分隔清單。|在中的所有資料行表示`DoFieldExchange`。|`"Customer"`|
@@ -2263,7 +2262,7 @@ void SetFieldDirty(
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C + + NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
 
 *bDirty*<br/>
 如果欄位資料成員會標示為 「 中途 」 （變更），則為 TRUE。 如果欄位資料成員會標示為 「 清除 」 （未變更），則否則為 FALSE。
@@ -2306,7 +2305,7 @@ void SetFieldNull(
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C + + NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
 
 *bNull*<br/>
 如果欄位資料成員標示為不具有任何值 (Null) 為非零。 否則為 0，表示欄位資料成員會標示為非 Null。
@@ -2395,7 +2394,7 @@ void SetFieldValueNull(LPCTSTR lpszName);
 
 ### <a name="remarks"></a>備註
 
-C + + NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
+C++NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
 
 如需相關資訊，請參閱 「 欄位物件 」 和 DAO [說明] 中的 < 值屬性 > 主題。
 
@@ -2474,7 +2473,7 @@ void SetParamValueNull(LPCTSTR lpszName);
 
 ### <a name="remarks"></a>備註
 
-C + + NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
+C++NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」。
 
 ##  <a name="setpercentposition"></a>  CDaoRecordset::SetPercentPosition
 

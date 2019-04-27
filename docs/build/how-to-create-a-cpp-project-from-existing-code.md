@@ -11,17 +11,17 @@ f1_keywords:
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
 ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62189010"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>HOW TO：從現有的程式碼建立 C++ 專案
 
 在 Visual Studio 中，您可以使用 [從現有程式碼檔建立新專案精靈] 將現有的程式碼檔移植到 C++ 專案。 此精靈會建立專案解決方案，其使用 MSBuild 系統管理來源檔案和組建組態。 最適合用於不具有複雜資料夾階層的較簡易專案。 在 Visual Studio 的舊版 Express 中無法使用此精靈。 
 
-將現有的程式碼檔移植到 C++ 專案，可讓您使用 IDE 內建的原生 MSBuild 專案管理功能。 如果您想要使用現有的建置系統，例如 nmake makefile、CMake 或其他選項，可以改用 [開啟] > [資料夾] 或 [CMake] 選項。 如需詳細資訊，請參閱 <<c0> [ 開啟資料夾 」 專案的 c + +](open-folder-projects-cpp.md)或是[Visual Studio 中的 CMake 專案](cmake-projects-in-visual-studio.md)。 這兩個選項都可讓您使用 IDE 功能，例如 [IntelliSense](/visualstudio/ide/using-intellisense) 和[專案屬性](working-with-project-properties.md)。
+將現有的程式碼檔移植到 C++ 專案，可讓您使用 IDE 內建的原生 MSBuild 專案管理功能。 如果您想要使用現有的建置系統，例如 nmake makefile、CMake 或其他選項，可以改用 [開啟] > [資料夾] 或 [CMake] 選項。 如需詳細資訊，請參閱 <<c0> [ 專案開啟資料夾C++](open-folder-projects-cpp.md)或是[Visual Studio 中的 CMake 專案](cmake-projects-in-visual-studio.md)。</c0> 這兩個選項都可讓您使用 IDE 功能，例如 [IntelliSense](/visualstudio/ide/using-intellisense) 和[專案屬性](working-with-project-properties.md)。
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>若要從現有程式碼建立 C++ 專案
 

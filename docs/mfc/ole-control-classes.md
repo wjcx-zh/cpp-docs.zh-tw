@@ -13,18 +13,17 @@ helpviewer_keywords:
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
 ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186084"
 ---
 # <a name="ole-control-classes"></a>OLE 控制項類別
 
 這些是您在撰寫 OLE 控制項時使用的主要類別。 `COleControlModule` OLE 控制項模組中的類別就像[CWinApp](../mfc/reference/cwinapp-class.md)應用程式中的類別。 每個模組會實作一個或多個 OLE 控制項；這些控制項是由 `COleControl` 物件表示。 這些控制項會使用 `CConnectionPoint` 物件與其容器通訊。
 
-
-  `CPictureHolder` 和 `CFontHolder` 類別會封裝圖片和字型的 COM 介面，而 `COlePropertyPage` 和 `CPropExchange` 類別可協助您為您的控制項實作屬性頁和屬性持續性。
+`CPictureHolder` 和 `CFontHolder` 類別會封裝圖片和字型的 COM 介面，而 `COlePropertyPage` 和 `CPropExchange` 類別可協助您為您的控制項實作屬性頁和屬性持續性。
 
 [COleControlModule](../mfc/reference/colecontrolmodule-class.md)<br/>
 取代您的 OLE 控制項模組的 `CWinApp` 類別。 衍生自 `COleControlModule` 類別以開發 OLE 控制項模組物件。 提供成員函式以供初始化您的 OLE 控制項模組。
@@ -33,8 +32,7 @@ ms.locfileid: "57304547"
 衍生自 `COleControl` 類別以開發 OLE 控制項。 衍生自 `CWnd`，此類別會繼承 Windows 視窗物件的所有功能以及其他 OLE 特定功能，例如事件引發以及支援方法和屬性。
 
 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)<br/>
-
-  `CConnectionPoint` 類別定義了一種用來與其他 OLE 物件通訊的特殊介面類型，稱為「連接點」。 連接點會實作可以對其他物件起始動作 (例如引發事件和變更通知) 的輸出介面。
+`CConnectionPoint` 類別定義了一種用來與其他 OLE 物件通訊的特殊介面類型，稱為「連接點」。 連接點會實作可以對其他物件起始動作 (例如引發事件和變更通知) 的輸出介面。
 
 [CPictureHolder](../mfc/reference/cpictureholder-class.md)<br/>
 封裝 Windows 圖片物件和 `IPicture` COM 介面的功能；用來實作 OLE 控制項的自訂圖片屬性。

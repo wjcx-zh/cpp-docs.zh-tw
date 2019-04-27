@@ -6,15 +6,15 @@ helpviewer_keywords:
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
 ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195201"
 ---
 # <a name="x64-exception-handling"></a>x64 例外狀況處理
 
-結構化例外狀況處理和 c + + 例外狀況處理程式碼撰寫慣例和行為在 x64 上的概觀。 一般例外狀況處理的詳細資訊，請參閱[的 Visual c + + 例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)。
+結構化例外狀況處理的概觀和C++例外狀況處理程式碼撰寫慣例和 x64 上的行為。 一般例外狀況處理的詳細資訊，請參閱[視覺效果中的例外狀況處理C++ ](../cpp/exception-handling-in-visual-cpp.md)。
 
 ## <a name="unwind-data-for-exception-handling-debugger-support"></a>回溯例外狀況處理，偵錯工具支援的資料
 

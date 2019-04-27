@@ -8,11 +8,11 @@ helpviewer_keywords:
 - == operator
 ms.assetid: 5412dfa7-8cec-4853-a641-5c9550098b19
 ms.openlocfilehash: 08a80369edb140777073a4cc9fce9ffe7095b299
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200670"
 ---
 # <a name="operator--masm-run-time"></a>運算子 == (MASM 執行階段)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50663212"
 
 ## <a name="syntax"></a>語法
 
-> expression1 = = expression2
+> expression1 == expression2
 
 ## <a name="see-also"></a>另請參閱
 

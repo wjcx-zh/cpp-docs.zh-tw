@@ -7,15 +7,15 @@ helpviewer_keywords:
 - .DOSSEG directive
 ms.assetid: 175ad470-0a2b-4e2b-b078-65e224fec040
 ms.openlocfilehash: 28b3e351030ee83693c0fec5568aacf9b4b77c27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62204357"
 ---
 # <a name="dosseg"></a>.DOSSEG
 
-排序依據的 MS-DOS 區段慣例的區段： 程式碼第一次，然後區段不在 DGROUP，和在 DGROUP 然後區段。
+排序依據的 MS-DOS 區段慣例的區段：程式碼第一次，然後區段不在 DGROUP，然後按一下 DGROUP 中的區段。
 
 ## <a name="syntax"></a>語法
 

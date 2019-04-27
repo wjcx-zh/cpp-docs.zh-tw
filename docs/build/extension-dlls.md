@@ -16,11 +16,11 @@ helpviewer_keywords:
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
 ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195656"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
 
@@ -52,7 +52,7 @@ MFC 擴充 DLL 會使用共用的版本的 MFC 應用程式會使用共用的 MF
 
 之前版本的 MFC 4.0，這種類型的 DLL 呼叫 AFXDLL。 AFXDLL 指`_AFXDLL`建置 DLL 時定義的前置處理器符號。
 
-MFC 的共用版本的匯入程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual c + + 提供預先建置的版本，MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些會記載於 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾。
+MFC 的共用版本的匯入程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 視覺化C++會提供預先建置的版本，MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些會記載於 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾。
 
 如果您要匯出使用.def 檔，將下列程式碼的開頭和結尾標頭檔：
 
@@ -68,7 +68,7 @@ MFC 的共用版本的匯入程式庫會根據所述的慣例命名[MFC Dll 命�
 
 如果您需要傳遞 MFC 或 MFC 衍生的物件指標，或從 MFC DLL，DLL 應該是 MFC 擴充 DLL。 傳遞的物件相關聯的成員函式會存在於物件建立所在的模組。 因為使用共用的 MFC 的 DLL 版本時，這些函式會正確匯出，您可以自由地傳遞 MFC 或 MFC 延伸模組載入的 Dll 和應用程式之間的 MFC 衍生的物件指標。
 
-由於 c + + 名稱的損害以及匯出的問題，[匯出] 清單，從 MFC 延伸模組 DLL 可能會不同相同 DLL 的偵錯和零售版本和 Dll 之間不同平台。 零售 MFCx0.dll 有大約 2000 匯出的進入點，偵錯 MFCx0D.dll 有大約 3,000 已匯出的進入點。
+因為C++名稱的損害以及匯出問題，從 MFC 擴充 DLL 的 [匯出] 清單可能會不同相同 DLL 的偵錯和零售版本和 Dll 之間的不同平台。 零售 MFCx0.dll 有大約 2000 匯出的進入點，偵錯 MFCx0D.dll 有大約 3,000 已匯出的進入點。
 
 ## <a name="memory-management"></a>記憶體管理
 
@@ -86,7 +86,7 @@ MFCx0.dll 和 Dll 載入到用戶端應用程式的位址空間的所有 MFC 延
 
 如果您不想要逐步清單，並只從特定位置載入資源，請使用函式`AfxGetResourceHandle`和`AfxSetResourceHandle`儲存舊的控制代碼，並設定新的控制代碼。 請務必還原舊的資源控制代碼，然後返回用戶端應用程式。 若要明確載入功能表使用這個方法的範例，請參閱 MFC 範例中的 Testdll2.cpp [DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)。
 
-動態建立 MFC 物件提供 MFC 名稱很類似。 MFC 物件還原序列化機制必須將所有`CRuntimeClass`物件註冊，讓它可以藉由以動態方式建立所需的型別，根據儲存的內容稍早的 c + + 物件建構。
+動態建立 MFC 物件提供 MFC 名稱很類似。 MFC 物件還原序列化機制必須將所有`CRuntimeClass`物件註冊，讓它可以重新建構所動態建立C++已儲存的內容稍早根據所需型別物件。
 
 在 MFC 範例的情況下[DLLHUSK](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/dllhusk)，清單看起來像：
 

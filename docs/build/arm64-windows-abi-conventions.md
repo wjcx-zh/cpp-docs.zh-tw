@@ -2,11 +2,11 @@
 title: ARM64 ABI 慣例概觀
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195499"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 慣例概觀
 
@@ -129,7 +129,7 @@ AArch32，例如 AArch64 規格會提供三個系統控制 「 執行緒 ID 」 
 
 每個引數清單中，會套用下列清單中第一個相符的規則。 如果沒有規則的相符項目引數會使用未經修改。
 
-1. 如果引數型別是一種複合類型，其大小無法以靜態方式判斷呼叫端和被呼叫端，引數會複製到記憶體，而引數會取代所複製的指標。 （在 C/c + + 中沒有這類的型別，但它們存在於其他語言或語言擴充功能中。）
+1. 如果引數型別是一種複合類型，其大小無法以靜態方式判斷呼叫端和被呼叫端，引數會複製到記憶體，而引數會取代所複製的指標。 (在 C 中沒有這類的型別 /C++ ，但它們存在於其他語言或語言擴充功能)。
 
 1. 如果引數型別是 HFA 或 HVA，則使用引數未修改。
 
@@ -231,7 +231,7 @@ ARM EABI 也會指定的例外狀況回溯模型會使用回溯程式碼。 不�
 
 ## <a name="cycle-counter"></a>週期計數器
 
-支援週期計數器所需的所有 ARMv8 Cpu 暫存器，Windows 會設定為可讀取任何層級的例外狀況，包括使用者模式的 64 位元暫存器。 它可以存取透過特殊 PMCCNTR_EL0 註冊，請在 組件的程式碼中使用 MSR opcode 或`_ReadStatusReg`C/c + + 程式碼中內建函式。
+支援週期計數器所需的所有 ARMv8 Cpu 暫存器，Windows 會設定為可讀取任何層級的例外狀況，包括使用者模式的 64 位元暫存器。 它可以存取透過特殊 PMCCNTR_EL0 註冊，請在 組件的程式碼中使用 MSR opcode 或`_ReadStatusReg`內建函式在 C /C++程式碼。
 
 週期計數器是真正的週期的計數器，而不是牆上的時鐘。 計數的頻率會隨著處理器頻率而定。 如果您認為您必須知道週期計數器的頻率，您不應使用循環計數器。 相反地，在您想要測量時鐘時間，您應該用於`QueryPerformanceCounter`。
 

@@ -6,11 +6,11 @@ f1_keywords:
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180449"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency 命名空間列舉 (AMP)
 
@@ -48,7 +48,7 @@ enum queuing_mode;
 
 |名稱|描述|
 |----------|-----------------|
-|`queuing_mode_immediate`|佇列模式會指定任何命令，例如[parallel_for_each 函式 (c + + AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)，只要它們傳回給呼叫者傳送至對應的加速器裝置。|
+|`queuing_mode_immediate`|佇列模式會指定任何命令，例如[parallel_for_each 函式 (C++ P)](concurrency-namespace-functions-amp.md#parallel_for_each)，因為它們會傳回給呼叫者傳送至對應的加速器裝置。|
 |`queuing_mode_automatic`|指定命令會排入對應至命令佇列的佇列模式[accelerator_view](accelerator-view-class.md)物件。 命令傳送至裝置時[accelerator_view:: flush](accelerator-view-class.md#flush)呼叫。|
 
 ## <a name="see-also"></a>另請參閱

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - OR operator, bitwise
 ms.assetid: fab36ba6-8ee0-4778-beb9-21dce6d99db7
 ms.openlocfilehash: ded25f2e8732348485deabae73f4620a4e26918a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198843"
 ---
 # <a name="operator-or"></a>運算子 OR
 

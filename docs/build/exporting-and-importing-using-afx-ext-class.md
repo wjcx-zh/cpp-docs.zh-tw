@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195325"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>使用 AFX_EXT_CLASS 匯出和匯入
 
@@ -81,7 +81,7 @@ public: \
 
 具有靜態開頭`AFX_DATA`宣告在您的類別內的靜態物件。 若要正確匯出這個類別，並從可執行的用戶端存取執行階段資訊，您必須匯出此靜態物件。 因為靜態物件會使用修飾詞宣告`AFX_DATA`，您只需要定義`AFX_DATA`要`__declspec(dllexport)`建置 DLL 時，它定義為`__declspec(dllimport)`建置您的用戶端可執行檔時。 因為`AFX_EXT_CLASS`已定義在如此一來，您只需要重新定義`AFX_DATA`是相同`AFX_EXT_CLASS`解決您的類別定義。
 
-例如: 
+例如：
 
 ```cpp
 #undef  AFX_DATA
@@ -108,13 +108,13 @@ class CExampleView : public CView
 
 - [使用 __declspec （dllexport） 從 DLL 匯出](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [匯出 C 函式，以用於 C 或 c + + 語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [匯出 C 函式，以用於 C 或C++-語言可執行檔](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
 - [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)
 

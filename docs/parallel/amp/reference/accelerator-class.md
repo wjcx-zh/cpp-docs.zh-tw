@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180431"
 ---
 # <a name="accelerator-class"></a>accelerator 類別
 
@@ -108,7 +108,7 @@ class accelerator;
 |[description](#description)|取得的簡短描述`accelerator`裝置。|
 |[device_path](#device_path)|取得裝置的路徑。|
 |[direct3d_ref](#direct3d_ref)|取得 Direct3D 參考的常數字串`accelerator`。|
-|[direct3d_warp](#direct3d_warp)|取得的字串常數`accelerator`物件，您可以用來使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上執行 c + + AMP 程式碼。|
+|[direct3d_warp](#direct3d_warp)|取得的字串常數`accelerator`物件，您可以用來執行C++使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上的 AMP 程式碼。|
 |[has_display](#has_display)|取得布林值，指出是否`accelerator`附加至顯示器。|
 |[is_debug](#is_debug)|指出是否`accelerator`有擴充錯誤報告啟用偵錯層級。|
 |[is_emulated](#is_emulated)|指出是否`accelerator`模擬。|
@@ -246,7 +246,7 @@ static const wchar_t direct3d_ref[];
 
 ##  <a name="direct3d_warp"></a> direct3d_warp
 
-取得的字串常數`accelerator`物件，您可以用來使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上執行您的 c + + AMP 程式碼。
+取得的字串常數`accelerator`物件，您可以用來執行您C++使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上的 AMP 程式碼。
 
 ```
 static const wchar_t direct3d_warp[];

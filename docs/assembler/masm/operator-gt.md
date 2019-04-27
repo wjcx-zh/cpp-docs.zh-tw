@@ -9,11 +9,11 @@ helpviewer_keywords:
 - GT operator
 ms.assetid: 48194297-7bf9-42f9-957a-e1a5b6d7be7c
 ms.openlocfilehash: 905db693b0ff4c8373cde9bd688b97c2f8f08dbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200519"
 ---
 # <a name="operator-gt"></a>運算子 GT
 

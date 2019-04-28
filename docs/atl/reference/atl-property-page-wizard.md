@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
 ms.openlocfilehash: 791901ab3181ad2c8ac862a970980250693d20f7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248222"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 
@@ -34,7 +34,7 @@ ms.locfileid: "57258277"
 
 ### <a name="c"></a>C++
 
-提供建立來實作物件的 c + + 類別的資訊。
+提供的資訊C++建立來實作物件的類別。
 
 |||
 |-|-|

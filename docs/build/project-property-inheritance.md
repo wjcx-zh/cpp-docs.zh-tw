@@ -1,14 +1,14 @@
 ---
-title: 在 Visual Studio 專案-c + + 屬性繼承
+title: 在 Visual Studio 專案-屬性繼承C++
 ms.date: 12/10/2018
 helpviewer_keywords:
 - Visual C++ projects, property inheritance
 ms.openlocfilehash: edd6d3bf82f7a13cf6687abeba3758dcceca5e84
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295433"
 ---
 # <a name="property-inheritance-in-visual-studio-projects"></a>在 Visual Studio 專案的屬性繼承
 
@@ -67,7 +67,7 @@ Visual Studio 專案系統根據 MSBuild，定義檔案格式和規則來建置�
 
 如果您移至 屬性頁中 一般 窗格並將字元集屬性設定為 「 未設定 」 而非 「 使用 Unicode 」，然後按一下**確定**，將會顯示 屬性管理員 中沒有**Unicode 支援**屬性工作表目前的組態，但它仍會有其他設定。
 
-如需有關屬性管理員 」 和 「 屬性工作表的詳細資訊，請參閱 <<c0> [ 共用或 resuse Visual Studio c + + 專案設定](create-reusable-property-configurations.md)。
+如需有關屬性管理員 」 和 「 屬性工作表的詳細資訊，請參閱 <<c0> [ 共用或 resuse Visual StudioC++專案設定](create-reusable-property-configurations.md)。</c0>
 
 > [!TIP]
 > .user 檔案是一項舊版功能，建議您將其刪除，以根據組態/平台將屬性正確分組。

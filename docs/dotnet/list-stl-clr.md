@@ -110,11 +110,11 @@ helpviewer_keywords:
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
 ms.openlocfilehash: 8350e8b7036731cf3e09b9ce26278b2a656d80be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364606"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -257,7 +257,7 @@ void assign(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -318,7 +318,7 @@ a b
 a b c
 ```
 
-## <a name="back"></a> list:: back (STL/CLR)
+## <a name="back"></a> list::back (STL/CLR)
 
 存取最後一個項目。
 
@@ -420,7 +420,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a> list:: begin (STL/CLR)
+## <a name="begin"></a> list::begin (STL/CLR)
 
 指定受控制序列的開頭。
 
@@ -532,7 +532,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> list:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> list::const_iterator (STL/CLR)
 
 用於受控制序列的常數迭代器類型。
 
@@ -573,7 +573,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> list:: const_reference (STL/CLR)
+## <a name="const_reference"></a> list::const_reference (STL/CLR)
 
 項目的常數參考類型。
 
@@ -617,7 +617,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> list:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
 
 受控制序列的常數反向迭代器的型別...
 
@@ -659,7 +659,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> list:: difference_type (STL/CLR)
+## <a name="difference_type"></a> list::difference_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -764,7 +764,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> list:: end (STL/CLR)
+## <a name="end"></a> list::end (STL/CLR)
 
 指定受控制序列的結尾。
 
@@ -820,7 +820,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a> list:: erase (STL/CLR)
+## <a name="erase"></a> list::erase (STL/CLR)
 
 移除位於指定位置的項目。
 
@@ -836,7 +836,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 若要清除的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要清除的範圍的結尾。
 
 *where*<br/>
@@ -899,7 +899,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a> list:: front (STL/CLR)
+## <a name="front"></a> list::front (STL/CLR)
 
 存取第一個項目。
 
@@ -1238,7 +1238,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a> list:: insert (STL/CLR)
+## <a name="insert"></a> list::insert (STL/CLR)
 
 將項目加入指定的位置。
 
@@ -1261,7 +1261,7 @@ void insert(iterator where,
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -1356,7 +1356,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a> list:: iterator (STL/CLR)
+## <a name="iterator"></a> list::iterator (STL/CLR)
 
 受控制序列之迭代器的類型。
 
@@ -1405,7 +1405,7 @@ a b c
 x b c
 ```
 
-## <a name="list"></a> list:: list (STL/CLR)
+## <a name="list"></a> list::list (STL/CLR)
 
 建構容器物件。
 
@@ -1430,7 +1430,7 @@ list(System::Collections::Generic::IEnumerable<Value>^ right);
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -1550,7 +1550,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="merge"></a> list:: merge (STL/CLR)
+## <a name="merge"></a> list::merge (STL/CLR)
 
 合併兩個已排序受控制的序列。
 
@@ -1564,7 +1564,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 項目組的比較子。
 
 *right*<br/>
@@ -1647,7 +1647,7 @@ f e e d c c b a a
 c1.size() = 0
 ```
 
-## <a name="op_as"></a> list::operator = (STL/CLR)
+## <a name="op_as"></a> list::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -1700,7 +1700,7 @@ a b c
 a b c
 ```
 
-## <a name="pop_back"></a> list:: pop_back (STL/CLR)
+## <a name="pop_back"></a> list::pop_back (STL/CLR)
 
 移除最後一個項目。
 
@@ -1747,7 +1747,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> list:: pop_front (STL/CLR)
+## <a name="pop_front"></a> list::pop_front (STL/CLR)
 
 移除第一個項目。
 
@@ -1794,7 +1794,7 @@ a b c
 b c
 ```
 
-## <a name="push_back"></a> list:: push_back (STL/CLR)
+## <a name="push_back"></a> list::push_back (STL/CLR)
 
 加入新的最後一個項目。
 
@@ -1834,7 +1834,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> list:: push_front (STL/CLR)
+## <a name="push_front"></a> list::push_front (STL/CLR)
 
 加入新的第一個項目。
 
@@ -1874,7 +1874,7 @@ int main()
 c b a
 ```
 
-## <a name="rbegin"></a> list:: rbegin (STL/CLR)
+## <a name="rbegin"></a> list::rbegin (STL/CLR)
 
 指定反向受控制序列的開頭。
 
@@ -1929,7 +1929,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a> list:: reference (STL/CLR)
+## <a name="reference"></a> list::reference (STL/CLR)
 
 項目的參考類型。
 
@@ -1984,7 +1984,7 @@ a b c
 A B C
 ```
 
-## <a name="remove"></a> list:: remove (STL/CLR)
+## <a name="remove"></a> list::remove (STL/CLR)
 
 移除具有指定值的項目。
 
@@ -2043,7 +2043,7 @@ a b c
 a c
 ```
 
-## <a name="remove_if"></a> list:: remove_if (STL/CLR)
+## <a name="remove_if"></a> list::remove_if (STL/CLR)
 
 移除通過指定的測試的項目。
 
@@ -2056,7 +2056,7 @@ template<typename Pred1>
 
 #### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 若要移除的項目進行測試。
 
 ### <a name="remarks"></a>備註
@@ -2107,7 +2107,7 @@ a b b b c
 b b b
 ```
 
-## <a name="rend"></a> list:: rend (STL/CLR)
+## <a name="rend"></a> list::rend (STL/CLR)
 
 指定反向受控制序列的結尾。
 
@@ -2163,7 +2163,7 @@ a b c
 y x c
 ```
 
-## <a name="resize"></a> list:: resize (STL/CLR)
+## <a name="resize"></a> list::resize (STL/CLR)
 
 變更的項目數。
 
@@ -2223,7 +2223,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse"></a> list:: reverse (STL/CLR)
+## <a name="reverse"></a> list::reverse (STL/CLR)
 
 反轉受控制的序列。
 
@@ -2270,7 +2270,7 @@ a b c
 c b a
 ```
 
-## <a name="reverse_iterator"></a> list:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
 
 受控制序列的反向迭代器類型。
 
@@ -2319,7 +2319,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a> list:: size (STL/CLR)
+## <a name="size"></a> list::size (STL/CLR)
 
 計算元素的數目。
 
@@ -2372,7 +2372,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> list:: size_type (STL/CLR)
+## <a name="size_type"></a> list::size_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -2420,7 +2420,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="sort"></a> list:: sort (STL/CLR)
+## <a name="sort"></a> list::sort (STL/CLR)
 
 排序受控制的序列。
 
@@ -2434,7 +2434,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 項目組的比較子。
 
 ### <a name="remarks"></a>備註
@@ -2485,7 +2485,7 @@ c b a
 a b c
 ```
 
-## <a name="splice"></a> list:: splice (STL/CLR)
+## <a name="splice"></a> list::splice (STL/CLR)
 
 Restitch 節點之間的連結。
 
@@ -2504,7 +2504,7 @@ void splice(iterator where, list<Value>% right,
 *first*<br/>
 若要連接之範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要連接之範圍的結尾。
 
 *right*<br/>
@@ -2578,7 +2578,7 @@ b c a
 c2.size() = 0
 ```
 
-## <a name="swap"></a> list:: swap (STL/CLR)
+## <a name="swap"></a> list::swap (STL/CLR)
 
 交換兩個容器的內容。
 
@@ -2691,7 +2691,7 @@ a b c d
 a b c
 ```
 
-## <a name="unique"></a> list:: unique (STL/CLR)
+## <a name="unique"></a> list::unique (STL/CLR)
 
 移除通過指定測試的相鄰項目。
 
@@ -2705,7 +2705,7 @@ template<typename Pred2>
 
 #### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 項目組的比較子。
 
 ### <a name="remarks"></a>備註
@@ -2757,7 +2757,7 @@ a b c
 a a
 ```
 
-## <a name="value_type"></a> list:: value_type (STL/CLR)
+## <a name="value_type"></a> list::value_type (STL/CLR)
 
 元素的類型。
 
@@ -2802,7 +2802,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> 運算子 ！ = （清單） (STL/CLR)
+## <a name="op_neq"></a> operator!= (list) (STL/CLR)
 
 列出不相等比較。
 
@@ -2940,7 +2940,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 運算子&lt;= （清單） (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (list) (STL/CLR)
 
 清單小於或等於比較。
 
@@ -3009,7 +3009,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 運算子 = = （清單） (STL/CLR)
+## <a name="op_eq"></a> operator== (list) (STL/CLR)
 
 列出相等比較。
 
@@ -3147,7 +3147,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 運算子&gt;= （清單） (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (list) (STL/CLR)
 
 清單大於或等於比較。
 

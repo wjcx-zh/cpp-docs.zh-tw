@@ -1,6 +1,6 @@
 ---
-title: C/c + + 建置參考-Visual Studio
-description: C/c + + 專案系統和組建工具在 Visual Studio 中的參考內容。
+title: C /C++建置參考-Visual Studio
+description: 參考的內容適用於 C /C++專案系統，並建置在 Visual Studio 中的工具。
 ms.date: 12/10/2018
 helpviewer_keywords:
 - compiling source code [C++], additional information
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294755"
 ---
 # <a name="cc-building-reference"></a>C/C++ 建置參考
 
-Visual c + + 提供兩種建置 C/c + + 程式。 最簡單 （且最常見） 的方式為： [Visual Studio IDE 中建置](../creating-and-managing-visual-cpp-projects.md)。 其他的方式為[命令提示字元使用命令列工具來建立](../building-on-the-command-line.md)。 在任一情況下，您可以建立和編輯使用 Visual Studio 或您選擇的協力廠商編輯器的原始程式檔。
+視覺化C++提供兩種方式建置 C /C++程式。 最簡單 （且最常見） 的方式為： [Visual Studio IDE 中建置](../creating-and-managing-visual-cpp-projects.md)。 其他的方式為[命令提示字元使用命令列工具來建立](../building-on-the-command-line.md)。 在任一情況下，您可以建立和編輯使用 Visual Studio 或您選擇的協力廠商編輯器的原始程式檔。
 
 ## <a name="in-this-section"></a>本節內容
 
-[C + + 專案的 MSBuild 參考](msbuild-visual-cpp-overview.md)
+[C ++ 專案的 MSBuild 參考](msbuild-visual-cpp-overview.md)
 
-[MSVC 編譯器的參考](compiling-a-c-cpp-program.md)<br/>
+[MSVC 編譯器參考](compiling-a-c-cpp-program.md)<br/>
 描述 MSVC 編譯器，這會建立包含機器碼，連結器指示詞、 區段、 外部參考，以及函式/資料名稱的物件檔案。
 
 [MSVC 連結器參考](linking.md)<br/>
@@ -32,7 +32,7 @@ Visual c + + 提供兩種建置 C/c + + 程式。 最簡單 （且最常見） �
 [編譯器和連結器中的 Unicode 支援](unicode-support-in-the-compiler-and-linker.md)
 
 [其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
-C + + 的其他命令列工具。
+其他的命令列工具C++。
 
 [C/C++ 建置錯誤](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)<br/>
 導入了組建錯誤區段的資料表中的內容。
@@ -45,10 +45,10 @@ C + + 的其他命令列工具。
 [了解自訂建置步驟和建置事件](../understanding-custom-build-steps-and-build-events.md)<br/>
 討論自訂建置流程。
 
-[建置 C/c + + 程式](../projects-and-build-systems-cpp.md)<br/>
+[建置 C /C++計劃](../projects-and-build-systems-cpp.md)<br/>
 提供描述如何從命令列或 Visual Studio 整合式開發環境建置程式等主題的連結。
 
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 描述在開發環境中或在命令列上，設定編譯器選項。
 
 [MSVC 編譯器選項](compiler-options.md)<br/>

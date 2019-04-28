@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
 ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335372"
 ---
 # <a name="controlfps"></a>_controlfp_s
 
@@ -55,7 +55,7 @@ errno_t _controlfp_s(
 *newControl*<br/>
 新的控制字組位元值。
 
-*遮罩*<br/>
+*mask*<br/>
 要設定之新控制字組位元的遮罩。
 
 ## <a name="return-value"></a>傳回值
@@ -68,7 +68,7 @@ errno_t _controlfp_s(
 
 如果值*遮罩*等於 0， **_controlfp_s**取得浮點控制字組，並將擷取的值，在*currentControl*。
 
-如果*遮罩*是設定組的非零值，控制字組的新值是： 針對任何已設定的位元 （也就是等於 1） 中*遮罩*中的對應位元*新*用來更新控制項word。 亦即*fpcntrl* = ((*fpcntrl* & ~*遮罩*) &#124; (*newControl* & *遮罩*)) 其中*fpcntrl*是浮點控制字組。 在此案例中， *currentControl*設後的值在變更完成，而非舊的控制字組位元值。
+如果*遮罩*是設定組的非零值，控制字組的新值是：設定的任何位元 （也就是等於 1） 中*遮罩*中的對應位元*新*用來更新控制字組。 亦即*fpcntrl* = ((*fpcntrl* & ~*遮罩*) &#124; (*newControl* & *遮罩*)) 其中*fpcntrl*是浮點控制字組。 在此案例中， *currentControl*設後的值在變更完成，而非舊的控制字組位元值。
 
 > [!NOTE]
 > 根據預設，執行階段程式庫會遮罩所有浮點例外狀況。

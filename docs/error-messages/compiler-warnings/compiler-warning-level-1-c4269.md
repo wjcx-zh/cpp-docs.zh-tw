@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4269
 ms.assetid: 96c97bbc-068a-4b65-8cd8-4ed5dca04c15
 ms.openlocfilehash: 9a7f42b2dd65644d3f2abec58236a0b93cc6f635
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207229"
 ---
 # <a name="compiler-warning-level-1-c4269"></a>編譯器警告 (層級 1) C4269
 

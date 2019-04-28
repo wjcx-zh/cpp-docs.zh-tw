@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3455
 ms.assetid: 218e5cfe-5391-4eeb-81c2-85c47e3a6cd2
 ms.openlocfilehash: 4451ddbd8d5a7125112ef8e1c58e8843095bffd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328572"
 ---
 # <a name="compiler-error-c3455"></a>編譯器錯誤 C3455
 

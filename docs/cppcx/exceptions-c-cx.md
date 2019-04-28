@@ -3,25 +3,25 @@ title: 例外狀況 (C++/CX)
 ms.date: 01/18/2018
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
 ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301522"
 ---
 # <a name="exceptions-ccx"></a>例外狀況 (C++/CX)
 
-錯誤處理在 C + + /CX 以例外狀況為基礎。 在最基本的層級，Windows 執行階段元件會報告錯誤當做 HRESULT 值。 在 C + + /CX 中，這些值會轉換成強型別包含 HRESULT 值和字串描述您可以透過程式設計方式存取的例外狀況。  例外狀況會實作為衍生自 `ref class` 的 `Platform::Exception`。  `Platform` 命名空間會爲最常見的 HRESULT 值定義不同的例外狀況類別，其他所有的值則透過 `Platform::COMException` 類別來報告。 所有的例外狀況類別都會有可供您擷取原始 HRESULT 的 [Exception::HResult](platform-exception-class.md#hresult) 欄位。 您也可以檢查使用者程式碼，協助找出原始來源的例外狀況，即使以 c + + 以外的語言撰寫的程式碼中偵錯工具中的呼叫堆疊資訊。
+中的錯誤處理C++/CX 以例外狀況為基礎。 在最基本的層級，Windows 執行階段元件會報告錯誤當做 HRESULT 值。 在C++/CX，這些值會轉換成強型別包含 HRESULT 值和字串描述您可以透過程式設計方式存取的例外狀況。  例外狀況會實作為衍生自 `ref class` 的 `Platform::Exception`。  `Platform` 命名空間會爲最常見的 HRESULT 值定義不同的例外狀況類別，其他所有的值則透過 `Platform::COMException` 類別來報告。 所有的例外狀況類別都會有可供您擷取原始 HRESULT 的 [Exception::HResult](platform-exception-class.md#hresult) 欄位。 您也可以檢查呼叫堆疊資訊，協助找出原始來源的例外狀況，即使原始程式碼是以撰寫語言以外的其他偵錯工具中的使用者程式碼C++。
 
 ## <a name="exceptions"></a>例外狀況
 
-在 c + + 程式中，您可以擲回並攔截來自 Windows 執行階段作業的例外狀況，例外狀況衍生自`std::exception`，或使用者定義型別。 您有只在會跨應用程式二進位介面 (ABI) 界限，例如，當會攔截例外狀況的程式碼以 JavaScript 撰寫時所擲回 Windows 執行階段例外狀況。 當非-Windows 執行階段 c + + 例外狀況到達 ABI 界限時，會轉譯成`Platform::FailureException`例外狀況，表示 E_FAIL HRESULT。 如需 ABI 的詳細資訊，請參閱 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
+在您C++程式，您可以擲回並攔截來自 Windows 執行階段作業的例外狀況，例外狀況衍生自`std::exception`，或使用者定義型別。 您有只在會跨應用程式二進位介面 (ABI) 界限，例如，當會攔截例外狀況的程式碼以 JavaScript 撰寫時所擲回 Windows 執行階段例外狀況。 當非 Windows 執行階段C++例外狀況到達 ABI 界限，例外狀況會轉譯成`Platform::FailureException`例外狀況，表示 E_FAIL HRESULT。 如需 ABI 的詳細資訊，請參閱 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)。
 
 您可以宣告[platform:: exception](platform-exception-class.md)使用其中兩個建構函式採用 HRESULT 參數或採用 HRESULT 參數和[platform:: string](platform-string-class.md)^ 可以之間傳遞的參數會處理它的任何 Windows 執行階段應用程式的 ABI。 或者，您可以透過採用 HRESULT 參數或採用 HRESULT 參數和 [參數的兩個](platform-exception-class.md#createexception) Exception::CreateException 方法 `Platform::String^` 多載之一，來宣告例外狀況。
 
 ## <a name="standard-exceptions"></a>標準例外狀況
 
-C + + /CX 支援標準代表一般 HRESULT 錯誤的例外狀況的集合。 每個標準例外狀況皆衍生自 [Platform::COMException](platform-comexception-class.md)，而後者又衍生自 `Platform::Exception`。 當您擲回跨 ABI 界限的例外狀況時，您必須擲回其中一個標準例外狀況。
+C++/CX 支援標準代表一般 HRESULT 錯誤的例外狀況的集合。 每個標準例外狀況皆衍生自 [Platform::COMException](platform-comexception-class.md)，而後者又衍生自 `Platform::Exception`。 當您擲回跨 ABI 界限的例外狀況時，您必須擲回其中一個標準例外狀況。
 
 您無法從 `Platform::Exception`衍生您自己的例外狀況型別。 若要擲回自訂例外狀況，請透過使用者定義的 HRESULT 來建構 `COMException` 物件。
 
@@ -99,9 +99,9 @@ void App::OnUnhandledException(Platform::Object^ sender, Windows::ApplicationMod
 
 ### <a name="remarks"></a>備註
 
-C + + /CX 不會使用`finally`子句。
+C++/CX 不會使用`finally`子句。
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual c + + 語言參考](visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](namespaces-reference-c-cx.md)

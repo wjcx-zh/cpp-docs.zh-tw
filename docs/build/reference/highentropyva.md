@@ -9,19 +9,19 @@ helpviewer_keywords:
 - /HIGHENTROPYVA editbin option
 ms.assetid: ef4b7c63-440d-40ca-b39d-edefb3217505
 ms.openlocfilehash: 90d3c868eaab85e3b1a2a416c9aa14b0e27ec8f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270220"
 ---
 # <a name="highentropyva"></a>/HIGHENTROPYVA
 
-指定可執行映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
+指定可執行檔映像是否支援高熵 64 位元位址空間配置隨機載入 (ASLR)。
 
 ## <a name="syntax"></a>語法
 
-> **/ HIGHENTROPYVA**[**: NO**]
+> **/HIGHENTROPYVA**[**:NO**]
 
 ## <a name="remarks"></a>備註
 

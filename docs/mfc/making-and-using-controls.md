@@ -7,15 +7,15 @@ helpviewer_keywords:
 - common controls [MFC], about common controls
 ms.assetid: a252acad-3cc0-440e-bbc6-43eaaf8cb7bb
 ms.openlocfilehash: 6a31c783e19603eadb90fd0e6be99ff55f4eaeb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352173"
 ---
 # <a name="making-and-using-controls"></a>建立及使用控制項
 
-您將大部分的控制項，對話方塊在 Visual c + +[對話方塊編輯器](../windows/dialog-editor.md)。 但是，您也可以在任何對話方塊或視窗中建立控制項。
+您可以進行大部分的對話方塊控制項在視覺效果C++[對話方塊編輯器](../windows/dialog-editor.md)。 但是，您也可以在任何對話方塊或視窗中建立控制項。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

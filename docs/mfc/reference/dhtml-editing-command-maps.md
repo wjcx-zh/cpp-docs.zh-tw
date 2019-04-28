@@ -3,11 +3,11 @@ title: DHTML 編輯命令對應
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
 ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323056"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編輯命令對應
 

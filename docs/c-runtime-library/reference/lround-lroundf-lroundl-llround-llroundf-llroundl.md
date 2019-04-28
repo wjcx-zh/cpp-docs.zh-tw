@@ -37,11 +37,11 @@ helpviewer_keywords:
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
 ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601444"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285841"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -93,11 +93,11 @@ long long llroundl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|無|**（_D)**|
+|常见**QNAN**， **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**lround**或是**llround**採用並傳回**float**並**長** **雙**值。 在 C 程式中， **lround**並**llround**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**lround**或**llround**採用並傳回**float**並**長****double**值。 在 C 程式中， **lround**並**llround**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

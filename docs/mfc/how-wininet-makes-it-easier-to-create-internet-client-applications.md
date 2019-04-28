@@ -7,17 +7,17 @@ helpviewer_keywords:
 - WinInet classes [MFC], Internet client applications
 ms.assetid: dc0f9f47-3184-4e7a-8074-2c63e0359885
 ms.openlocfilehash: 6da2ef1595e525bcfd407d67c806aa80cf90f1c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262706"
 ---
 # <a name="how-wininet-makes-it-easier-to-create-internet-client-applications"></a>WinInet 如何讓您更輕鬆地建立網際網路用戶端應用程式
 
 Win32 網際網路擴充功能或 WinInet，提供一般的網際網路通訊協定，包括 gopher、 FTP 和 HTTP 存取。 使用 WinInet，您可以撰寫網際網路用戶端應用程式在更高的層級的程式設計，而不必應付 WinSock、 TCP/IP 或特定的網際網路通訊協定的詳細資料。 WinInet 會提供所有的三種通訊協定，使用熟悉的 Win32 API 介面中的一組一致的函式。 這種一致性最小化程式碼變更，您需要進行變更 （例如，從 FTP 變更為 HTTP) 的基礎通訊協定。
 
-Visual c + + 提供兩種方法讓您使用 WinInet。 您可以直接呼叫 Win32 網際網路函式 （請參閱 OLE 文件，如需詳細資訊的 Windows SDK 中） 或您可以使用透過 WinInet [MFC WinInet 類別](../mfc/mfc-classes-for-creating-internet-client-applications.md)。
+視覺化C++提供兩種方法讓您使用 WinInet。 您可以直接呼叫 Win32 網際網路函式 （請參閱 OLE 文件，如需詳細資訊的 Windows SDK 中） 或您可以使用透過 WinInet [MFC WinInet 類別](../mfc/mfc-classes-for-creating-internet-client-applications.md)。
 
 **您可以使用 WinInet 來：**
 

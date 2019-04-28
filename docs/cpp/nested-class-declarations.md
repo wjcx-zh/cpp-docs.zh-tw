@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
 ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301548"
 ---
 # <a name="nested-class-declarations"></a>巢狀類別宣告
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` 和 `BufferedIO::BufferedOutput` 會在 `BufferedIO` 內宣告。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
+`BufferedIO::BufferedInput` 並`BufferedIO::BufferedOutput`內宣告`BufferedIO`。 這些類別名稱在類別 `BufferedIO` 的範圍外不會顯示。 不過，類型為 `BufferedIO` 的物件不包含任何類型為 `BufferedInput` 或 `BufferedOutput` 的物件。
 
 巢狀類別只能直接使用封入類別中的名稱、類型名稱、靜態成員的名稱及列舉程式。 若要使用其他類別成員的名稱，您必須使用指標、參考或物件名稱。
 

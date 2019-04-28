@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
 ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261373"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>新增 ATL OLE DB 消費者
 
@@ -24,7 +24,7 @@ ms.locfileid: "57277647"
 
 1. 在 **類別檢視**，以滑鼠右鍵按一下專案。 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
 
-1. 在 Visual c + + 資料夾中，按兩下**ATL OLE DB 消費者**圖示或加以選取，然後按一下**開啟**。
+1. 在視覺效果C++資料夾中，按兩下**ATL OLE DB 消費者**圖示或加以選取，然後按一下**開啟**。
 
    [ATL OLE DB 消費者精靈] 隨即開啟。
 

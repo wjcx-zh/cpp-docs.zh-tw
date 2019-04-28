@@ -13,11 +13,11 @@ helpviewer_keywords:
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
 ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320340"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (產生內建函式)
 
@@ -45,11 +45,11 @@ ms.locfileid: "57811884"
 
 **結束 x86 特定**
 
-您也使用[內建函式](../../preprocessor/intrinsic.md)若要建立內建函式，或是[函式 （C/c + +）](../../preprocessor/function-c-cpp.md)明確強制執行函式呼叫。
+您也使用[內建函式](../../preprocessor/intrinsic.md)若要建立內建函式，或是[函式 (C /C++)](../../preprocessor/function-c-cpp.md)明確強制執行函式呼叫。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -65,5 +65,5 @@ ms.locfileid: "57811884"
 
 [/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [編譯器內建](../../intrinsics/compiler-intrinsics.md)

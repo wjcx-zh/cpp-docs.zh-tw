@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C3300 到 C3399
-ms.date: 11/17/2017
+title: 編譯器錯誤 C3300 至 C3399
+ms.date: 04/21/2019
 f1_keywords:
 - C3300
 - C3301
@@ -100,14 +100,14 @@ helpviewer_keywords:
 - C3377
 - C3378
 ms.assetid: 190b7d29-ffe6-4261-921d-140da1935d00
-ms.openlocfilehash: 22964c9482d87c466665949ad4b340d43b3a5622
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: ca55e19534f722a7231a1d30c63e2dbb77d25ec7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281452"
 ---
-# <a name="compiler-errors-c3300-through-c3399"></a>編譯器錯誤 C3300 到 C3399
+# <a name="compiler-errors-c3300-through-c3399"></a>編譯器錯誤 C3300 至 C3399
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -152,10 +152,10 @@ ms.locfileid: "50652695"
 |編譯器錯誤 C3332|'*屬性*': 文法不一致，屬性'*屬性*' 是兩者所需，且具有預設值|
 |[編譯器錯誤 C3333](compiler-error-c3333.md)|'*程式庫*': 無法 #import 損毀的型別程式庫|
 |[編譯器錯誤 C3334](compiler-error-c3334.md)|#import 陳述式中的類型程式庫損毀，無法執行作業|
-|編譯器錯誤 C3335|'*識別碼*': 有最多可達 coclass' 的一個預設介面*類別*'|
+|編譯器錯誤 C3335|'*識別碼*':有最多可達 coclass ' 的一個預設介面*類別*'|
 |編譯器錯誤 C3336|必須在類別範圍中執行這項作業|
 |編譯器錯誤 C3337|'*識別碼*': defaultvtable 必須是 coclass' 的事件來源*類別*'|
-|編譯器錯誤 C3338|'*識別碼*': 有最多可達一個也是 coclass' 的事件來源的預設介面*類別*'|
+|編譯器錯誤 C3338|'*識別碼*':可以有最多一個預設介面，同時也是 coclass' 的事件來源*類別*'|
 |編譯器錯誤 C3339|樣板類樣板參數在參數清單後面需要 'class' 或 'typename'|
 |[編譯器錯誤 C3340](compiler-error-c3340.md)|'*識別碼*': 介面不能在 coclass' 是 'restricted' 和 'default'*類別*'|
 |編譯器錯誤 C3341|'*介面*': defaultvtable 介面必須是 'dual' 或 'custom'|
@@ -165,7 +165,7 @@ ms.locfileid: "50652695"
 |[編譯器錯誤 C3345](compiler-error-c3345.md)|'*名稱*': 模組名稱的無效識別項|
 |編譯器錯誤 C3346|匯出非命名空間範圍宣告|
 |[編譯器錯誤 C3347](compiler-error-c3347.md)|'*引數*': 所需屬性中未指定引數*asttribute*|
-|編譯器錯誤 C3348|匯出的範本不是最新的 c + + 標準的一部分|
+|編譯器錯誤 C3348|匯出的範本並不屬於目前C++標準|
 |編譯器錯誤 C3349|'*類別*::*成員*': 多點傳送的屬性已實作提供者所*提供者*|
 |[編譯器錯誤 C3350](compiler-error-c3350.md)|'*函式*': 委派建構函式預期*數目*個引數|
 |[編譯器錯誤 C3351](compiler-error-c3351.md)|'*函式*': 如果您將 NULL 物件執行個體傳遞給委派建構函式，還必須同時傳遞靜態成員函式的位址|
@@ -217,3 +217,8 @@ ms.locfileid: "50652695"
 |[編譯器錯誤 C3397](compiler-error-c3397.md)|預設引數中不允許彙總初始設定|
 |[編譯器錯誤 C3398](compiler-error-c3398.md)|'*運算子*': 無法從轉換'*型別*'to'*型別*'。 來源運算式必須是函式符號|
 |[編譯器錯誤 C3399](compiler-error-c3399.md)|'*型別*': 建立泛型參數的執行個體時，無法提供引數|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

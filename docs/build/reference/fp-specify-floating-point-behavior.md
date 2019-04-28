@@ -12,11 +12,11 @@ helpviewer_keywords:
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
 ms.openlocfilehash: 25b228c16f534ca227d50bfdf632fdacb5703cd9
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292350"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp （指定浮點數行為）
 
@@ -85,7 +85,7 @@ ms.locfileid: "58565434"
 
 ### <a name="floating-point-environment-access-and-modification"></a>浮點環境存取和修改
 
-Microsoft Visual c + + 執行階段會提供數個函數來存取和修改的浮點環境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)， [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)，並[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其變體。 若要確認正確的程式行為，當您的程式碼可以存取或修改的浮點環境`fenv_access`必須啟用，請依`/fp:strict`選項，或藉由使用`fenv_access`pragma，這些函式，才能發生效用。 當`fenv_access`是未啟用，存取或修改的浮點環境可能會導致非預期的程式行為： 程式碼可能不會接受要求的變更，到浮點環境，可能不會報告的浮點狀態暫存器預期或目前的結果;和非預期的浮點例外狀況可能會發生，或可能不會發生預期的浮點例外狀況。
+Microsoft VisualC++執行階段會提供數個函數來存取和修改的浮點環境。 其中包括[_controlfp](../../c-runtime-library/reference/control87-controlfp-control87-2.md)， [_clearfp](../../c-runtime-library/reference/clear87-clearfp.md)，並[_statusfp](../../c-runtime-library/reference/status87-statusfp-statusfp2.md)及其變體。 若要確認正確的程式行為，當您的程式碼可以存取或修改的浮點環境`fenv_access`必須啟用，請依`/fp:strict`選項，或藉由使用`fenv_access`pragma，這些函式，才能發生效用。 當`fenv_access`是未啟用，存取或修改的浮點環境可能會導致非預期的程式行為： 程式碼可能不會接受要求的變更，到浮點環境，可能不會報告的浮點狀態暫存器預期或目前的結果;和非預期的浮點例外狀況可能會發生，或可能不會發生預期的浮點例外狀況。
 
 當您的程式碼可以存取或修改的浮點環境時，您必須非常小心結合程式碼時，`fenv_access`使用程式碼，並沒有啟用`fenv_access`啟用。 在程式碼中其中`fenv_access`未啟用，則編譯器會假設平台預設值的浮點環境處於作用中，而且無法存取或修改浮點狀態。 我們建議您儲存，並在本機的浮點環境還原為其預設狀態，控制權會轉移到沒有函式之前`fenv_access`啟用。 此範例示範如何`float_control`pragma 可設定及還原：
 
@@ -256,9 +256,9 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **程式碼產生**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **產生程式碼**屬性頁。
 
 1. 修改**浮點模型**屬性。
 

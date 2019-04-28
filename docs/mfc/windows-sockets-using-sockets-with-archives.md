@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
 ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358279"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows Sockets:搭配使用通訊端與封存
 
@@ -68,16 +68,15 @@ ms.locfileid: "57261501"
 1. 終結封存、通訊端檔案和通訊端物件。
 
     > [!NOTE]
-    >  
-  `CArchive` 類別明確提供了 `IsBufferEmpty` 成員函式搭配 `CSocket` 類別使用。 例如，如果緩衝區包含多個資料訊息，您就需要執行迴圈，直到所有訊息都已讀且緩衝區已清除。 否則，告知您有資料要接收的下一個通知可能會無限期延遲。 使用 `IsBufferEmpty` 可確保擷取所有資料。
+    >  `CArchive` 類別明確提供了 `IsBufferEmpty` 成員函式搭配 `CSocket` 類別使用。 例如，如果緩衝區包含多個資料訊息，您就需要執行迴圈，直到所有訊息都已讀且緩衝區已清除。 否則，告知您有資料要接收的下一個通知可能會無限期延遲。 使用 `IsBufferEmpty` 可確保擷取所有資料。
 
 發行項[Windows Sockets:作業順序](../mfc/windows-sockets-sequence-of-operations.md)說明範例程式碼使用此程序的兩面。
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 

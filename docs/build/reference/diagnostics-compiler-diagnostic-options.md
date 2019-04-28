@@ -10,11 +10,11 @@ helpviewer_keywords:
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: 6b7d043e00204fa191530f03bbed069d71a25fc5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293819"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics （編譯器診斷選項）
 
@@ -46,11 +46,11 @@ ms.locfileid: "57822298"
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-1. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **一般**屬性頁。
+1. 底下**組態屬性**，展開**C /C++** 資料夾，然後選擇 [**一般**] 屬性頁。
 
 1. 使用中的下拉式清單控制項**診斷格式**欄位來選取診斷顯示選項。 選擇 **[確定]** 或是**套用**以儲存變更。
 
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

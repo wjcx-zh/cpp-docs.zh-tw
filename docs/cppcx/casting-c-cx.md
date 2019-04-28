@@ -3,15 +3,15 @@ title: 轉型 (C++/CX)
 ms.date: 06/19/2018
 ms.assetid: 5247f6c7-6a0a-4021-97c9-21c868bd9455
 ms.openlocfilehash: 65d489d14c91b462e5a2bbe8bd60fce2657904a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258209"
 ---
 # <a name="casting-ccx"></a>轉型 (C++/CX)
 
-四個不同的轉換運算子套用至 Windows 執行階段型別： [static_cast 運算子](../cpp/static-cast-operator.md)， [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)， **safe_cast 運算子**，和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 **safe_cast**並**static_cast**擲回例外狀況，無法執行轉換;[static_cast 運算子](../cpp/static-cast-operator.md)也可以執行編譯時期類型檢查。 **dynamic_cast**會傳回**nullptr**如果它無法將類型轉換。 雖然**reinterpret_cast**傳回非 null 值，但是可能無效。 基於這個理由，我們建議您不要使用**reinterpret_cast**除非您知道轉型將會成功。 此外，我們建議您不要使用 c-style 轉換中您 C + + /CX 程式碼，因為它們是相同**reinterpret_cast**。
+四個不同的轉換運算子套用至 Windows 執行階段型別： [static_cast 運算子](../cpp/static-cast-operator.md)， [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)， **safe_cast 運算子**，和[reinterpret_cast 運算子](../cpp/reinterpret-cast-operator.md)。 **safe_cast**並**static_cast**擲回例外狀況，無法執行轉換;[static_cast 運算子](../cpp/static-cast-operator.md)也可以執行編譯時期類型檢查。 **dynamic_cast**會傳回**nullptr**如果它無法將類型轉換。 雖然**reinterpret_cast**傳回非 null 值，但是可能無效。 基於這個理由，我們建議您不要使用**reinterpret_cast**除非您知道轉型將會成功。 此外，我們建議您不要使用中的 c-style 轉換您C++/CX 程式碼，因為它們是相同**reinterpret_cast**。
 
 編譯器和執行階段也會執行隱含轉型，例如，當實值類型或內建類型當做引數傳遞給參數類型為 `Object^`的方法時，所進行的 boxing 作業。 理論上，隱含轉型不應該在執行階段造成例外狀況。如果編譯器無法執行隱含轉換，則會在編譯時期引發錯誤。
 
@@ -92,7 +92,7 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 // ...
 ```
 
-如果您使用**reinterpret_cast**從 oneWindows 執行階段介面之間轉換，會使物件釋出，兩次。 因此，只使用這項轉換時您會將它轉換成非-Visual c + + 元件延伸模組介面。
+如果您使用**reinterpret_cast**從 oneWindows 執行階段介面之間轉換，會使物件釋出，兩次。 因此，這項轉換只使用，當您想要轉換的非視覺效果C++元件延伸模組介面。
 
 ## <a name="abi-types"></a>ABI 類型
 
@@ -122,5 +122,5 @@ ComPtr<IInspectable> inspectable = reinterpret_cast<IInspectable*>(winRtObject);
 ## <a name="see-also"></a>另請參閱
 
 - [類型系統](../cppcx/type-system-c-cx.md)
-- [Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)
+- [視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)
 - [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -1,5 +1,5 @@
 ---
-title: 數值、 布林值和指標常值 （c + +）
+title: 數值、 布林值和指標常值 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - literals, C++
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245098"
 ---
-# <a name="numeric-boolean-and-pointer-literals--c"></a>數值、 布林值和指標常值 （c + +）
+# <a name="numeric-boolean-and-pointer-literals--c"></a>數值、 布林值和指標常值 (C++)
 
-常值是直接代表值的程式項目。 本文涵蓋整數、浮點、布林值和指標類型的常值。 字串和字元常值的相關資訊，請參閱[字串和字元常值 （c + +）](../cpp/string-and-character-literals-cpp.md)。 您也可以定義專屬常值，根據任何兩個類別;如需詳細資訊，請參閱[使用者定義常值 （c + +）](../cpp/user-defined-literals-cpp.md)
+常值是直接代表值的程式項目。 本文涵蓋整數、浮點、布林值和指標類型的常值。 字串和字元常值的相關資訊，請參閱[字串和字元常值 (C++)](../cpp/string-and-character-literals-cpp.md)。 您也可以定義專屬常值，根據任何兩個類別;如需詳細資訊，請參閱[使用者定義常值 (C++)](../cpp/user-defined-literals-cpp.md)
 
 。 您可以在許多內容中使用常值，但最常見的是初始化具名變數，以及將引數傳遞給函式：
 
@@ -60,7 +60,7 @@ int i = 0x3fff;   // Hexadecimal literal
 int j = 0X3FFF;        // Equal to i
 ```
 
-若要指定不帶正負號的類型，請使用`u`或`U`後置詞。 若要指定長類型，請使用`l`或`L`後置詞。 若要指定 64 位元整數類型，請使用 LL 或 ll 後置詞。 i64 後置詞仍予以支援，但應該避免使用，因為它專屬於 Microsoft 且為非可攜式。 例如: 
+若要指定不帶正負號的類型，請使用`u`或`U`後置詞。 若要指定長類型，請使用`l`或`L`後置詞。 若要指定 64 位元整數類型，請使用 LL 或 ll 後置詞。 i64 後置詞仍予以支援，但應該避免使用，因為它專屬於 Microsoft 且為非可攜式。 例如：
 
 ```cpp
 unsigned val_1 = 328u;             // Unsigned value
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**數字分隔符號**： 您可以使用單引號字元 （縮寫符號） 來分隔中較大的數字，使其更容易閱讀的位置值。 分隔符號對於編譯沒有作用。
+**數字分隔符號**:您可以使用單引號字元 （縮寫符號） 來分隔中較大的數字，使其更容易閱讀的位置值。 分隔符號對於編譯沒有作用。
 
 ```cpp
 long long i = 24'847'458'121
@@ -81,7 +81,7 @@ long long i = 24'847'458'121
 
 浮點常值指定必須有小數部分的值。 這些值包含小數點 (**。**) 而且可包含指數。
 
-浮點常值包含「尾數」(指定數字的值)、「指數」(指定數字的大小範圍)，以及選擇性的後置詞 (指定常值類型)。 尾數的指定方式是數字序列加上句號，再加上選擇性的數字序列，代表該數字的小數部分。 例如：
+浮點常值包含「尾數」(指定數字的值)、「指數」(指定數字的大小範圍)，以及選擇性的後置詞 (指定常值類型)。 尾數的指定方式是數字序列加上句號，再加上選擇性的數字序列，代表該數字的小數部分。 例如: 
 
 ```cpp
 18.46
@@ -117,7 +117,7 @@ void func( long double );
 
 ## <a name="pointer-literal-c11"></a>指標常值 (C++11)
 
-C + + 引進[nullptr](../cpp/nullptr.md)常值來指定零初始化指標。 在可攜式的程式碼**nullptr**應該使用而不是整數類型零或巨集，例如 NULL。
+C++導入了[nullptr](../cpp/nullptr.md)常值來指定零初始化指標。 在可攜式的程式碼**nullptr**應該使用而不是整數類型零或巨集，例如 NULL。
 
 ## <a name="binary-literals-c14"></a>二進位常值 (C++14)
 
@@ -142,5 +142,5 @@ if (num < 100)
 ## <a name="see-also"></a>另請參閱
 
 [語彙慣例](../cpp/lexical-conventions.md)<br/>
-[C + + 字串常值](../cpp/string-and-character-literals-cpp.md)<br/>
-[C + + 使用者定義常值](../cpp/user-defined-literals-cpp.md)
+[C++字串常值](../cpp/string-and-character-literals-cpp.md)<br/>
+[C++使用者定義常值](../cpp/user-defined-literals-cpp.md)

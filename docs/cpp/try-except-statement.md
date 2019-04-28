@@ -27,39 +27,39 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266838"
 ---
 # <a name="try-except-statement"></a>try-except 陳述式
 
 **Microsoft 專屬**
 
-**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能，以及 c + + 語言的支援結構化例外狀況處理。
+**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能和C++支援的語言結構化例外狀況處理。
 
 ## <a name="syntax"></a>語法
 
-> **\_\_請嘗試**<br/>
+> **\_\_try**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;受防護的程式碼<br/>
 > }<br/>
-> **\_\_除了**(*運算式*)<br/>
+> **\_\_except** ( *expression* )<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;例外狀況處理常式程式碼<br/>
 > }<br/>
 
 ## <a name="remarks"></a>備註
 
-**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能，並讓目標應用程式，以取得 c + + 語言可讓您控制通常會終止程式執行的事件發生時。 這類事件稱為*例外狀況*，並處理例外狀況的機制稱為*結構化例外狀況處理*(SEH)。
+**嘗試-除了**陳述式是 C 的 Microsoft 擴充功能和C++語言，可讓目標應用程式來取得控制項通常會終止程式執行的事件發生時。 這類事件稱為*例外狀況*，並處理例外狀況的機制稱為*結構化例外狀況處理*(SEH)。
 
 如需相關資訊，請參閱[try-finally 陳述式](../cpp/try-finally-statement.md)。
 
 例外狀況可能以硬體或軟體為主。 即使應用程式無法從硬體或軟體例外狀況完全復原，結構化例外狀況處理仍可顯示錯誤資訊，並且對應用程式的內部狀態設陷，以協助診斷問題。 這在處理無法輕易重現的間歇性問題時特別有用。
 
 > [!NOTE]
-> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於 c + + 程式，建議您使用 c + + 例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
+> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 針對C++程式，建議您在使用C++例外狀況處理機制 ([try、 catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)陳述式)。
 
 後面的複合陳述式 **__try**子句是主體或保護的區段。 後面的複合陳述式 **__except**子句是例外狀況處理常式。 如果在執行保護區段的主體時引發例外狀況，則處理常式會指定要採取的一組動作。 執行程序如下所示：
 
@@ -168,7 +168,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 hello

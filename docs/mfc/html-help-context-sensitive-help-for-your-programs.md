@@ -6,11 +6,11 @@ helpviewer_keywords:
 - HTML Help [MFC], context-sensitive
 ms.assetid: f2eabbbb-0796-43f3-a483-5f7cf00f2e7c
 ms.openlocfilehash: 51174c3d18d134ce44b534605a0dbd4bed5d766e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219567"
 ---
 # <a name="html-help-context-sensitive-help-for-your-programs"></a>HTML 說明：程式的即時線上說明
 

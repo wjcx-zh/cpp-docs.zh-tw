@@ -7,11 +7,11 @@ helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
 ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310028"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -217,7 +217,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
-產生所需的 c + + 標頭程式碼`CObject`-衍生可序列化的類別。
+產生C++標頭所需的程式碼`CObject`-衍生可序列化的類別。
 
 ```
 DECLARE_SERIAL(class_name)
@@ -254,7 +254,7 @@ DECLARE_SERIAL 巨集包括 DECLARE_DYNAMIC 和 DECLARE_DYNCREATE 的所有功�
 
 ##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC
 
-產生的 c + + 程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱與階層內的位置。
+產生C++程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱與階層內的位置。
 
 ```
 IMPLEMENT_DYNAMIC(class_name, base_class_name)
@@ -399,7 +399,7 @@ IMPLEMENT_OLECTLTYPE，除了您就必須在您的控制項類別宣告中加入
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
-產生的 c + + 程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱與階層內的位置。
+產生C++程式碼所需的動態`CObject`-衍生類別的執行階段存取的類別名稱與階層內的位置。
 
 ```
 IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
@@ -436,7 +436,7 @@ UINT 」 版本號碼 」，將編碼識別並處理所建立的資料還原序�
 
 ##  <a name="runtime_class"></a>  RUNTIME_CLASS
 
-取得執行階段類別結構的 c + + 類別名稱。
+取得執行階段類別結構的名稱從C++類別。
 
 ```
 RUNTIME_CLASS(class_name)

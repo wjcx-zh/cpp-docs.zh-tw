@@ -5,11 +5,11 @@ helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
 ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319458"
 ---
 # <a name="property-page-xml-rule-files"></a>屬性頁 XML 規則檔
 
@@ -137,7 +137,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    i. **DisplayName**、**PageTemplate** 和 **Order** 是位於此 UI 獨立資料模型中的 UI 相關屬性。 這些屬性幾乎一定可供用來顯示屬性頁的 UI 使用。 **DisplayName** 和 **Description** 是 XML 檔案中幾乎所有項目上都有的兩個屬性。 而且只有這兩個屬性會當地語系化 (本文稍後將說明這些字串的當地語系化)。
 
-1. **類別：** 規則可以有多個類別。 XML 檔案中列出的分類順序是對 UI 的建議，以依照相同順序顯示分類。 例如，[C/C++] 節點下的分類順序在 UI 中顯示為：[一般]、[最佳化]、[前置處理器]...  – 與 cl.xml 中相同。 範例分類看起來如下：
+1. **分類：** 規則可以有多個類別。 XML 檔案中列出的分類順序是對 UI 的建議，以依照相同順序顯示分類。 例如，[C/C++] 節點下的分類順序在 UI 中顯示為：[一般]、[最佳化]、[前置處理器]...  – 與 cl.xml 中相同。 範例分類看起來如下：
 
     ```xml
     <Category Name="Optimization">
@@ -166,7 +166,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    a. **Subtype** 是僅適用於 **StringProperty** 和 **StringListProperty** 的屬性，其提供內容資訊。 例如，值 "file" 指出屬性代表檔案路徑。 這類內容資訊藉由提供 Windows 檔案總管作為屬性的編輯器，讓使用者以視覺化方式選擇檔案，因此可增強編輯體驗。
 
-   b. **類別：** 這會宣告這個屬性就會在其下的類別。 請嘗試在 UI 中的 [輸出檔案] 分類下找到此屬性。
+   b. **分類：** 這會宣告這個屬性就會在其下的類別。 請嘗試在 UI 中的 [輸出檔案] 分類下找到此屬性。
 
    c.  **參數：** 當規則表示工具 – 例如編譯器工具在此情況下 – 規則的大部分屬性會當做傳遞參數給工具可執行檔建置期間。 此屬性的值會指出要使用的參數常值。 上述屬性指定其參數應該是 **Fo**。 此屬性 (Property) 會與父 Rule 的 **SwitchPrefix** 屬性 (Attribute) 結合，然後傳遞至可執行檔作為 **/Fo"Debug\"** (顯示在屬性頁 UI 的 C/C++ 命令列中)。
 

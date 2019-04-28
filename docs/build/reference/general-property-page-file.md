@@ -6,11 +6,11 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
 ms.openlocfilehash: 66e26cabf5af85091000e6cda144898789c581df
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292221"
 ---
 # <a name="general-property-page-file"></a>一般屬性頁 (檔案)
 
@@ -28,10 +28,10 @@ ms.locfileid: "57824720"
 
    若要以程式設計方式存取此屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.Tool%2A>。
 
-如需如何存取**一般**下的 [屬性] 頁面**組態屬性**節點，請參閱[Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+如需有關如何存取資訊**一般**下方的 屬性頁**組態屬性**節點，請參閱[設定C++編譯器及建置屬性，在 Visual Studio](../working-with-project-properties.md).
 
-非 Windows 專案，請參閱[Linux c + + 屬性頁參考](../../linux/prop-pages-linux.md)。
+非 Windows 專案，請參閱[LinuxC++屬性頁參考](../../linux/prop-pages-linux.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)
+[C++專案屬性頁參考](property-pages-visual-cpp.md)

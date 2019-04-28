@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCLinkerTool.WINMDKeyFile
 ms.assetid: 65d88fdc-fff9-49ea-8cfc-b2f408741734
 ms.openlocfilehash: 4b0c847bc5be6c73b78af4aa15b0074c712cc840
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316453"
 ---
 # <a name="winmdkeyfile-specify-winmd-key-file"></a>/WINMDKEYFILE (指定 winmd 金鑰檔)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57820399"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **連結器**資料夾。
 

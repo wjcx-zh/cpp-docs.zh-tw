@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
 ms.openlocfilehash: b9efac6f729a78db945ff3bd9ab16ebe315b7a5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266955"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -23,19 +23,19 @@ ms.locfileid: "50560633"
 
 ## <a name="syntax"></a>語法
 
-> *傳回型別*  **\_ \_stdcall** *函式名稱*[**(** *引數清單* **)**]
+> *return-type* **\_\_stdcall** *function-name*[**(** *argument-list* **)**]
 
 ## <a name="remarks"></a>備註
 
 下列清單會顯示這個呼叫慣例的實作。
 
-|元素|實作|
+|項目|實作|
 |-------------|--------------------|
 |引數傳遞順序|由右至左。|
 |引數傳遞慣例|以傳值方式，除非傳遞指標或參考類型。|
 |堆疊維護責任|被呼叫函式會從堆疊快顯其本身的引數。|
 |名稱裝飾慣例|名稱前面會加底線 (_)。 名稱後面加上 @ 符號，再接著引數清單中的位元組數目 (十進位)。 因此，宣告為 `int func( int a, double b )` 的函式會裝飾為如下：`_func@12`|
-|大小寫轉譯慣例|無|
+|大小寫轉譯慣例|None|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)編譯器選項會指定 **__stdcall**所有未明確宣告為具有不同呼叫慣例的函式。
 

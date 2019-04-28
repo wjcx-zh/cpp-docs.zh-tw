@@ -1,32 +1,32 @@
 ---
-title: 值的類別： Lvalues 和 Rvalues （Visual c + +）
+title: 值的類別：Lvalues 和 Rvalues (Visual C++)
 ms.date: 04/06/2018
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
 ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245543"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues （Visual c + +）
+# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues (Visual C++)
 
-每個 c + + 運算式都有類型，而且屬於*值分類*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
+每個C++運算式都有類型，而且屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
 
 C + + 17 標準會定義運算式值的類別，如下所示：
 
 - A *glvalue*是的運算式的評估會決定物件、 位元欄位或函式的身分識別。
 - A *prvalue*是其評估初始化物件或位元欄位，或計算運算子的運算元的值，因為在它出現內容所指定的運算式。
-- *Xvalue*是代表物件或位元欄位 （通常是因為它是接近其存留期結束時），可以重複使用其資源的 glvalue。 範例： 特定種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如其傳回型別是右值參考的函式呼叫或轉型為右值參考類型。
+- *Xvalue*是代表物件或位元欄位 （通常是因為它是接近其存留期結束時），可以重複使用其資源的 glvalue。 範例：某些種類的運算式涉及右值參考 (8.3.2) 產生 xvalues，例如其傳回型別是右值參考的函式呼叫或轉型為右值參考類型。
 - *左值*是不是 xvalue glvalue。
 - *Rvalue* prvalue 或 xvalue。
 
 下圖說明兩個類別之間的關聯性：
 
-![C + + 運算式值類別](media/value_categories.png "c + + 運算式值類別")
+![C++運算式值類別](media/value_categories.png " C++運算式值類別")
 
 左值會有您的程式可以存取的位址。 左值運算式的範例包括變數名稱，包括**const**變數，陣列項目，函式會傳回左值參考、 位元欄位、 等位和類別成員的呼叫。
 

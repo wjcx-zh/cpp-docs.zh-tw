@@ -13,11 +13,11 @@ helpviewer_keywords:
 - custom build step (general)
 ms.assetid: bd319741-0491-46c4-a428-7c61b4b46a02
 ms.openlocfilehash: 329923140cf5a8f05e5c032ddb9e25c0ea45ec2a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825975"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273075"
 ---
 # <a name="custom-build-step-property-page-general"></a>自訂建置步驟屬性頁：一般
 
@@ -53,7 +53,7 @@ ms.locfileid: "57825975"
 
 ### <a name="to-specify-a-custom-build-step"></a>指定自訂建置步驟
 
-1. 在功能表列上，依序選擇 [專案] 和 [屬性]。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 在功能表列上，依序選擇 [專案] 和 [屬性]。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 在 [屬性頁] 對話方塊中，巡覽至 [組態屬性]、[自訂建置步驟]、[一般] 頁面。
 
@@ -61,4 +61,4 @@ ms.locfileid: "57825975"
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)
+[C++專案屬性頁參考](property-pages-visual-cpp.md)

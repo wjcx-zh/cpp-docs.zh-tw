@@ -11,11 +11,11 @@ helpviewer_keywords:
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
 ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267085"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 在上述範例中，如果 `capa` 是大寫 `c`，則遞增 `A`。 **中斷**之後的陳述式`capa++`結束執行**切換**陳述式主體並將控制權傳遞至**雖然**迴圈。 不含**中斷**陳述式中，執行會 「 繼續 」 下一個標記的陳述式，以便`lettera`和`nota`也會遞增。 類似的目的由**中斷**陳述式`case 'a'`。 如果`c`是小寫`a`，`lettera`就會遞增並**中斷**陳述式會終止**切換**陳述式主體。 如果`c`不是`a`或是`A`，則**預設**陳述式。
 
-**Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性會指定在 C + + 17 標準。 它可以用於**切換**陳述式做為提示給編譯器 （或任何人讀取程式碼） 是該行為。 Visual c + + 編譯器目前不會在警告上 fallthrough 行為，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至空的陳述式內加上標籤的陳述式;換句話說，分號是必要的。
+**Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性會指定在 C + + 17 標準。 它可以用於**切換**陳述式做為提示給編譯器 （或任何人讀取程式碼） 是該行為。 視覺效果C++編譯器目前不會在警告上 fallthrough 行為，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至空的陳述式內加上標籤的陳述式;換句話說，分號是必要的。
 
 ```cpp
 int main()
@@ -106,7 +106,7 @@ int main()
 }
 ```
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): switch 陳述式可能會引進並初始化的變數，其範圍僅限於在 switch 陳述式區塊：
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):Switch 陳述式可能會導入，並初始化的變數，其範圍僅限於在 switch 陳述式區塊：
 
 ```cpp
     switch (Gadget gadget(args); auto s = gadget.get_status())

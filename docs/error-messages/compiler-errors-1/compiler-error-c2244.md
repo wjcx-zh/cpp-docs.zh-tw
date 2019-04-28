@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2244
 ms.assetid: d9911c12-ceb5-4f93-ac47-b44a485215c2
 ms.openlocfilehash: 7cfa0cd7ff4290ca5f07fb712bbcac7dabf55f29
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301392"
 ---
 # <a name="compiler-error-c2244"></a>編譯器錯誤 C2244
 
@@ -19,7 +19,7 @@ ms.locfileid: "50615194"
 
 沒有括號的函式呼叫之前使用一元 （unary） + 運算子的異常使用。
 
-在 c + + 專案中只會發生此錯誤。
+此錯誤只會發生在C++專案。
 
 下列範例會產生 C2244:
 

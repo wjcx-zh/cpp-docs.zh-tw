@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348207"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
 
@@ -124,7 +124,7 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 *count*<br/>
 要配置足夠儲存空間的元素數。
 
-*提示*<br/>
+*hint*<br/>
 指標，可藉由找出要求之前所配置的物件位址，來協助配置器物件。
 
 ### <a name="return-value"></a>傳回值
@@ -163,7 +163,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 *ptr*<br/>
 要建構物件之記憶體位置的指標。
 
-*引數*<br/>
+*args*<br/>
 引數清單。
 
 *first*<br/>
@@ -297,7 +297,7 @@ scoped_allocator_adaptor(Outer2&& al,
 *right*<br/>
 現有的 `scoped_allocator_adaptor`。
 
-*Al*<br/>
+*al*<br/>
 用來做為外部配置器的現有配置器。
 
 *rest*<br/>

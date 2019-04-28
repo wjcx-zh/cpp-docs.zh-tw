@@ -6,11 +6,11 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
 ms.openlocfilehash: e6a8a1545b97976cbe82d1c81b0e70c3dac3a266
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270799"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (啟用控制流程防護)
 
@@ -26,7 +26,7 @@ ms.locfileid: "57807399"
 
 **/guard:cf** 選項讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。 根據預設， **/guard:cf** 關閉且必須明確啟用。 若要明確停用此選項，請使用 **/guard:cf-**。
 
-**Visual Studio 2017 和更新版本**:此選項會增加的成立條件**切換**產生的陳述式跳資料表。
+**Visual Studio 2017 及更新版本**：此選項會增加的成立條件**切換**產生的陳述式跳資料表。
 
 當已指定 **/guard:cf** 控制流程防護 (CFG) 選項時，編譯器和連結器會插入額外的執行階段安全性檢查，以偵測入侵您程式碼的嘗試。 在編譯和連結期間，程式碼中的所有間接呼叫都會經過分析，以尋找程式碼正確執行時所能到達的每個位置。 這項資訊會儲存在二進位編碼檔案標頭中的額外結構。 編譯器也會在程式碼的每個間接呼叫之前注入檢查，以確保目標是其中一個已驗證的位置。 如果在 CFG 感知作業系統上執行階段的檢查失敗，作業系統會關閉該程式。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57807399"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 [組態屬性] 、[C/C++] 、[程式碼產生] 。
 
@@ -51,4 +51,4 @@ ms.locfileid: "57807399"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
 ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301730"
 ---
 # <a name="compiler-error-c2229"></a>編譯器錯誤 C2229
 

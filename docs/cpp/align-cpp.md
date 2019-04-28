@@ -8,11 +8,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
 ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258145"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53627328"
 
 您可以使用`__declspec(align(#))`當您定義**struct**， **union**，或**類別**，或當您宣告變數。
 
-編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)，c + + [new 運算子](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或陣列結構。 若要確保正確對齊 [複製] 或資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
+編譯器不會在複製或資料轉換作業期間，保證或嘗試保留資料的對齊屬性。 例如， [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md)可以複製與宣告結構`__declspec(align(#))`到的任何位置。 請注意，一般配置器 — 例如， [malloc](../c-runtime-library/reference/malloc.md)， C++ [運算子 new](new-operator-cpp.md)，和 Win32 配置器 — 通常未充分對齊的記憶體傳回`__declspec(align(#))`結構或結構的陣列。 若要確保正確對齊 [複製] 或資料轉換作業的目的地，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)，或撰寫您自己的配置器。
 
 您無法為函式參數指定對齊。 有對齊屬性的資料，以值傳遞到堆疊上時，其對齊會由呼叫慣例控制。 如果資料對齊在呼叫的函式中很重要，請將參數複製到正確對齊的記憶體中，才使用該參數。
 
@@ -226,7 +226,7 @@ struct S {
 
 |變數|/Zp1|/Zp2|/Zp4|/Zp8|
 |--------------|-----------|-----------|-----------|-----------|
-|a|0|0|0|0|
+|一個|0|0|0|0|
 |b|1|2|2|2|
 |c|3|4|4|8|
 |d|32|32|32|32|

@@ -1,23 +1,23 @@
 ---
-title: 逐步解說：編譯 C + + /cli 程式命令列上
+title: 逐步解說：編譯C++命令列上的 /CLI 程式
 ms.date: 09/24/2018
 ms.assetid: cef41c88-faf9-439d-8423-25aa3f5674dd
 ms.openlocfilehash: c90d2c915db7264dc1b4e4807803e063c2a24fc7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314165"
 ---
-# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：編譯 C + + /cli 程式命令列上
+# <a name="walkthrough-compiling-a-ccli-program-on-the-command-line"></a>逐步解說：編譯C++命令列上的 /CLI 程式
 
-您可以建立以通用語言執行階段 (CLR) 為目標且使用 .NET Framework 的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 C++/CLI 程式設計語言，其具有其他類型及運算子，以將 .NET 程式設計模型設定為目標。 取得的一般資訊的 C + + 語言，請參閱[.NET 程式設計使用 C + + /cli （Visual c + +）](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
+您可以建立以通用語言執行階段 (CLR) 為目標且使用 .NET Framework 的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 C++/CLI 程式設計語言，其具有其他類型及運算子，以將 .NET 程式設計模型設定為目標。 如需一般資訊C++/CLI 語言，請參閱[使用.NET 進行程式設計C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)。
 
 在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CLI 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CLI 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CLI 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
 
 ## <a name="prerequisites"></a>必要條件
 
-您了解 c + + 語言的基本概念。
+了解基本概念C++語言。
 
 ## <a name="compiling-a-ccli-program"></a>編譯 C++/CLI 程式
 
@@ -46,7 +46,7 @@ ms.locfileid: "57811923"
 
 1. 在功能表列上選擇 **檔案** > **儲存**。
 
-   您已建立 Visual c + + 原始程式檔，使用.NET Framework 類別 (<xref:System.Console>) 中<xref:System>命名空間。
+   您已建立視覺效果C++使用.NET Framework 類別的原始程式檔 (<xref:System.Console>) 中<xref:System>命名空間。
 
 1. 在命令提示字元處，輸入 `cl /clr basicclr.cpp`。 cl.exe 編譯器會將原始程式碼編譯為包含 MSIL 的 .obj 檔案，然後執行連結器，以產生名為 basicclr.exe 的可執行程式 
 
@@ -61,5 +61,5 @@ ms.locfileid: "57811923"
 ## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[專案和組建系統](projects-and-build-systems-cpp.md)<br/>
+[專案和建置系統](projects-and-build-systems-cpp.md)<br/>
 [MSVC 編譯器選項](reference/compiler-options.md)

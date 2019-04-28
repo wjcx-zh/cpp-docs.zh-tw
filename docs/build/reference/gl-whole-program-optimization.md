@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GL compiler option [C++]
 ms.assetid: 09d51e2d-9728-4bd0-b5dc-3b8284aca1d1
 ms.openlocfilehash: 6251209dac74a504bb0635f0c544c39935090a42
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292129"
 ---
 # <a name="gl-whole-program-optimization"></a>/GL (整個程式最佳化)
 
@@ -49,7 +49,7 @@ ms.locfileid: "57812378"
 
 [/ZI](z7-zi-zi-debug-information-format.md)不能搭配 **/GL**
 
-使用產生的檔案格式 **/GL**在目前的版本中可能無法讀取由 Visual c + + 的後續版本。 您應該不寄送所產生的.obj 檔案所組成的.lib 檔案 **/GL**除非您願意寄送所有版本的 Visual c + + 的.lib 檔案的複本，否則您預期使用者現在和未來使用。
+使用產生的檔案格式 **/GL**目前版本中可能無法讀取由後續的版本，視覺效果的C++。 您應該不寄送所產生的.obj 檔案所組成的.lib 檔案 **/GL**除非您願意寄送的視覺效果的所有版本的.lib 檔案的複本C++您預期使用者現在和未來使用。
 
 .obj 檔中產生 **/GL**建置的.lib 檔案，除非.lib 檔將會連結產生的同一部電腦上，應不到先行編譯標頭檔 **/GL** .obj 檔案。 在連結時，將會需要從.obj 檔案的先行編譯標頭檔的資訊。
 
@@ -66,4 +66,4 @@ ms.locfileid: "57812378"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

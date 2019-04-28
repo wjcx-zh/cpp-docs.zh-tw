@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
 ms.openlocfilehash: 3d8b3be76fea454ed3b3dd3fd2a44174f34c065c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291880"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -156,7 +156,7 @@ void Function() NOEXCEPT
 |`@>`|提示檔案特定的 *replacement-string*，表示一組對應項目的結尾。|
 |`#undef` *hint-name*|刪除現有提示的前置處理器指示詞。 提示的名稱是由 *hint-name* 識別項提供。|
 |`//` *comment*|單行註解。|
-|`/*` *註解* `*/`|多行註解。|
+|`/*` *comment* `*/`|多行註解。|
 
 ## <a name="example"></a>範例
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288819"
 ---
 # <a name="endthread-endthreadex"></a>_endthread、_endthreadex
 
@@ -67,7 +67,7 @@ void _endthreadex(
 像是 Win32 **ExitThread** API **_endthreadex**不會關閉執行緒控制代碼。 因此，當您使用 **_beginthreadex**並 **_endthreadex**，您必須關閉執行緒控制代碼藉由呼叫 Win32 **CloseHandle** API。
 
 > [!NOTE]
-> **_endthread**並 **_endthreadex**暫止的 c + + 解構函式會導致不是要呼叫的執行緒。
+> **_endthread**並 **_endthreadex**導致C++暫止的解構函式，不是要呼叫的執行緒中。
 
 ## <a name="requirements"></a>需求
 

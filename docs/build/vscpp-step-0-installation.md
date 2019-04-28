@@ -7,11 +7,11 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58870776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315115"
 ---
 # <a name="install-c-support-in-visual-studio"></a>在 Visual Studio 中安裝 C++ 支援
 
@@ -21,7 +21,7 @@ ms.locfileid: "58870776"
 
 ## <a name="visual-studio-2019-installation"></a>Visual Studio 2019 安裝
 
-歡迎使用 Visual Studio 2019 ！ 在此版本中，很容易選擇並安裝您所需的功能。 其降低的最小使用量，因為它會安裝快速和與系統影響更小。
+歡迎使用 Visual Studio 2019！ 在此版本中，您可以輕鬆選擇並安裝需要的功能。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
 
 > [!NOTE]
 > 本主題適用於在 Windows 上的 Visual Studio 的安裝。 [Visual Studio Code](https://code.visualstudio.com/)是一種輕量型、 跨平台的開發環境，在 Windows、 Mac 和 Linux 系統上執行。 Microsoft [C /C++適用於 Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)延伸模組支援 IntelliSense、 偵錯程式碼格式設定，自動完成。 Visual Studio for Mac 不支援 Microsoft C++，但可支援.NET 語言和跨平台開發。 如需安裝指示，請參閱[安裝 Visual Studio for Mac](/visualstudio/mac/installation/)。
@@ -34,7 +34,7 @@ ms.locfileid: "58870776"
 
 在您開始安裝 Visual Studio 之前：
 
-1. 檢查[系統需求](/visualstudio/releases/2019/system-requirements)。 這些需求可協助您了解您的電腦是否支援 Visual Studio 2019。
+1. 檢查[系統需求](/visualstudio/releases/2019/system-requirements)。 這些需求可以幫助您了解電腦是否支援 Visual Studio 2019。
 
 1. 套用最新的 Windows 更新。 這些更新可以確保您的電腦已具備最新的安全性更新，以及 Visual Studio 所需的系統元件。
 
@@ -42,18 +42,18 @@ ms.locfileid: "58870776"
 
 1. 釋出空間。 透過執行 [磁碟清理] 應用程式之類的方式，將不必要的檔案及應用程式從 %SystemDrive% 移除。
 
-如需使用 Visual Studio 2019 執行舊版的 Visual Studio 並存問題，請參閱[Visual Studio 2019 平台目標及相容性](/visualstudio/releases/2019/compatibility/)頁面。
+如有並存執行舊版 Visual Studio 及 Visual Studio 2019 的相關問題，請參閱 [Visual Studio 2019 平台目標及相容性](/visualstudio/releases/2019/compatibility/)頁面。
 
 ### <a name="step-2---download-visual-studio"></a>步驟 2：下載 Visual Studio
 
-接下來，請下載 Visual Studio 啟動載入器檔案。 若要這樣做，請選擇下面的按鈕，選擇您想要選擇 Visual Studio 的版本**儲存**，然後選擇**開啟資料夾**。
+接下來，請下載 Visual Studio 啟動載入器檔案。 若要這麼做，請依序選擇下列按鈕、您想要的 Visual Studio 版本、[儲存] 和 [開啟資料夾]。
 
  > [!div class="button"]
  > [下載 Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>步驟 3：安裝 Visual Studio 安裝程式
 
-執行啟動載入器檔案以安裝 Visual Studio 安裝程式。 這個新的輕量型安裝程式包含您要安裝和自訂 Visual Studio 的所有項目。
+執行啟動載入器檔案以安裝 Visual Studio 安裝程式。 這個新輕量型安裝程式包含安裝及自訂 Visual Studio 所需的全部內容。
 
 1. 從您的 [下載] 資料夾中，按兩下符合或類似於下列其中一項檔案的啟動載入器：
 
@@ -61,11 +61,11 @@ ms.locfileid: "58870776"
    * **vs_professional.exe** (適用於 Visual Studio Professional)
    * **vs_enterprise.exe** (適用於 Visual Studio Enterprise)
 
-   如果您收到 [使用者帳戶控制] 通知，請選擇**是**。
+   如果您收到使用者帳戶控制通知，請選擇 [是]。
 
-1. 我們將會要求您認可 Microsoft [授權條款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隱私權聲明](https://privacy.microsoft.com/privacystatement)。 選擇**繼續**。
+1. 我們將會要求您認可 Microsoft [授權條款](https://visualstudio.microsoft.com/license-terms/)和 Microsoft [隱私權聲明](https://privacy.microsoft.com/privacystatement)。 選擇 [繼續]。
 
-### <a name="step-4---choose-workloads"></a>步驟 4-選擇工作負載
+### <a name="step-4---choose-workloads"></a>步驟 4 - 選擇工作負載
 
 安裝完畢之後，您可用它來選取自訂安裝*工作負載*，或功能集，您想要的。 方式如下：
 
@@ -84,19 +84,19 @@ ms.locfileid: "58870776"
     接著會出現狀態畫面，顯示 Visual Studio 的安裝進度。
 
 > [!TIP]
-> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果您已開啟 Visual Studio，請移至 [工具] > [Get Tools and Features] (取得工具和功能)，以開啟 Visual Studio 安裝程式。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]。 從該處，您可以選擇的工作負載或您想要安裝的元件。 然後，選擇**修改**。
+> 您可以在安裝後，隨時安裝一開始未安裝的工作負載或元件。 如果您已開啟 Visual Studio，請移至 [工具] > [Get Tools and Features] (取得工具和功能)，以開啟 Visual Studio 安裝程式。 或者，從 [開始] 功能表開啟 [Microsoft Visual Studio 安裝程式]。 您可以在此選擇想要安裝的工作負載或元件。 然後，選擇 [修改]。
 
-## <a name="step-5---choose-individual-components-optional"></a>步驟 5-選擇 個別元件 （選擇性）
+## <a name="step-5---choose-individual-components-optional"></a>步驟 5：選取個別元件 (選擇性)
 
-如果您不想要使用工作負載 功能來自訂您的 Visual Studio 安裝，或您想要新增更多比工作負載會安裝的元件，則可以安裝或新增個別的元件，從**的個別元件**  索引標籤。選擇項目，並依照提示。
+如果您不想要使用工作負載功能來自訂您的 Visual Studio 安裝，或您想要新增比工作負載所安裝元件的更多元件，您可以從 [個別元件] 索引標籤安裝或新增個別的元件來完成此作業。選擇您想要的項目，然後遵循提示作業。
 
-  ![Visual Studio 2019-安裝個別元件](../get-started/media/vs-installer-individual-components.png "安裝 Visual Studio 的個別元件")
+  ![Visual Studio 2019 - 安裝個別元件](../get-started/media/vs-installer-individual-components.png "安裝 Visual Studio 的個別元件")
 
 ## <a name="step-6---install-language-packs-optional"></a>步驟 6：安裝語言套件 (選擇性)
 
-根據預設，安裝程式會在第一次執行時，嘗試比對作業系統的語言。 若要安裝 Visual Studio 在您選擇的語言中，選擇**語言套件**從 Visual Studio 安裝程式中，索引標籤，然後遵循提示。
+根據預設，安裝程式會在第一次執行時，嘗試比對作業系統的語言。 若要以您選擇的語言安裝 Visual Studio，請選擇 Visual Studio 安裝程式的 [語言套件] 索引標籤，然後遵循提示作業。
 
-  ![Visual Studio 2019-安裝語言套件](../get-started/media/vs-installer-language-packs.png "安裝 Visual Studio 語言套件")
+  ![Visual Studio 2019 - 安裝語言套件](../get-started/media/vs-installer-language-packs.png "安裝 Visual Studio 語言套件")
 
 ### <a name="change-the-installer-language-from-the-command-line"></a>從命令列變更安裝程式語言
 
@@ -104,24 +104,24 @@ ms.locfileid: "58870776"
 
 ### <a name="step-7---change-the-installation-location-optional"></a>步驟 7 - 變更安裝位置 (選擇性)
 
-您可以在您的系統磁碟機上減少 Visual Studio 的安裝佔用的空間。 您可以選擇將快取、共用元件、SDK 和工具下載至不同的磁碟機，並將 Visual Studio 保留在以最快速度執行它的磁碟機上。
+您可以減少系統磁碟機上的 Visual Studio 安裝磁碟使用量。 您可以選擇將快取、共用元件、SDK 和工具下載至不同的磁碟機，並將 Visual Studio 保留在以最快速度執行它的磁碟機上。
 
-  ![Visual Studio 2019-變更安裝位置](../get-started/media/vs-installer-installation-locations.png "變更安裝位置")
+  ![Visual Studio 2019 - 變更安裝位置](../get-started/media/vs-installer-installation-locations.png "變更安裝位置")
 
 > [!IMPORTANT]
-> 只有當您第一次安裝 Visual Studio 時，您可以選取不同的磁碟機。 如果您已經安裝它，並想要變更磁碟機，您必須解除安裝 Visual Studio，然後再重新安裝。
+> 您只有在第一次安裝 Visual Studio 時才可以選取不同的磁碟機。 如已安裝 Visual Studio 並想要變更磁碟機，您必須解除安裝它，再重新安裝。
 
 ## <a name="step-8---start-developing"></a>步驟 8 - 開始開發
 
-1. Visual Studio 安裝完成之後，請選擇**啟動**按鈕即可開始使用 Visual Studio 進行開發。
+1. 在完成 Visual Studio 安裝後，請選擇 [啟動] 按鈕以開始使用 Visual Studio 來進行開發。
 
 1. 在開始視窗中，選擇 [建立新專案]。
 
-1. 在 [搜尋] 方塊中，輸入您想要查看可用的範本清單中建立的應用程式的類型。 範本清單取決於您選擇在安裝期間的工作負載。 若要查看不同的範本，請選擇不同的工作負載。
+1. 在搜尋方塊中，輸入您想要建立的應用程式類型，以查看可用的範本清單。 範本清單取決於您在安裝期間所選擇的工作負載。 若要查看不同的範本，請選擇不同的工作負載。
 
-   您也可以使用篩選搜尋特定的程式設計語言**語言**下拉式清單。 您可以使用篩選**平台**清單並**專案類型**太清單。
+   您也可以使用 [語言] 下拉式清單來篩選搜尋特定的程式設計語言。 您也可以使用 [平台] 清單和 [專案類型] 清單篩選。
 
-1. Visual Studio 會開啟新的專案，且您已經準備好的程式碼 ！
+1. Visual Studio 會開啟您的新專案，而您已準備好撰寫程式碼！
 
 ::: moniker-end
 
@@ -129,7 +129,7 @@ ms.locfileid: "58870776"
 
 ## <a name="visual-studio-2017-installation"></a>Visual Studio 2017 安裝
 
-在 Visual Studio 2017 中，很容易選擇並安裝您所需的功能。 其降低的最小使用量，因為它會安裝快速和與系統影響更小。
+在 Visual Studio 2017 中，很容易選擇並安裝您所需的功能。 因為降低了磁碟使用量下限，所以安裝快速，且對系統影響更小。
 
 ### <a name="prerequisites"></a>必要條件
 

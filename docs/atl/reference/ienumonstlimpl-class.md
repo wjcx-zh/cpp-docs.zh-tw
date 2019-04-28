@@ -16,15 +16,15 @@ helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
 ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275265"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl 類別
 
-這個類別會定義根據 c + + 標準程式庫集合的列舉值介面。
+這個類別會定義為基礎的列舉值介面C++標準程式庫集合。
 
 ## <a name="syntax"></a>語法
 
@@ -49,7 +49,7 @@ COM 列舉值。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ie
 A[複製原則類別](../../atl/atl-copy-policy-classes.md)。
 
 *CollType*<br/>
-C + + 標準程式庫容器類別。
+C++標準程式庫容器類別。
 
 ## <a name="members"></a>成員
 
@@ -68,17 +68,17 @@ C + + 標準程式庫容器類別。
 |名稱|描述|
 |----------|-----------------|
 |[IEnumOnSTLImpl::m_iter](#m_iter)|迭代器，表示集合中的列舉值的目前位置。|
-|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|C + + 標準程式庫容器保存要列舉項目的指標。|
+|[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|指標C++保留的項目要列舉的標準程式庫容器。|
 |[IEnumOnSTLImpl::m_spUnk](#m_spunk)|`IUnknown`提供集合之物件的指標。|
 
 ## <a name="remarks"></a>備註
 
-`IEnumOnSTLImpl` 提供 c + + 標準程式庫相容的容器中儲存所列舉之項目的 COM 列舉程式介面的實作。 這個類別是類似[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)陣列為基礎的類別，可提供列舉值介面的實作。
+`IEnumOnSTLImpl` 提供要列舉的項目會儲存在 COM 列舉程式介面的實作C++標準程式庫相容的容器。 這個類別是類似[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)陣列為基礎的類別，可提供列舉值介面的實作。
 
 > [!NOTE]
 >  請參閱[CComEnumImpl::Init](../../atl/reference/ccomenumimpl-class.md#init)如需有關進一步之間的差異`CComEnumImpl`和`IEnumOnSTLImpl`。
 
-一般而言，您將會*不*需要建立自己的列舉值類別，藉由衍生自這個介面實作。 如果您想要使用 c + + 標準程式庫容器為基礎的 ATL 提供列舉值，是要建立的執行個體更常見[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或建立集合類別，傳回的列舉值，藉由衍生自[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。
+一般而言，您將會*不*需要建立自己的列舉值類別，藉由衍生自這個介面實作。 如果您想要使用 ATL 提供列舉值根據C++標準程式庫容器更常見的是要建立的執行個體[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)，或建立藉由衍生自傳回列舉值的集合類別[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)。
 
 不過，如果您需要提供自訂的列舉值 （例如，一個公開除了列舉程式介面的介面），您可以衍生自這個類別。 在此情況下很有可能，您必須覆寫[複製品](#clone)方法，以提供您自己的實作。
 
@@ -108,7 +108,7 @@ HRESULT Init(
 [in]`IUnknown`必須保持運作的存留期間列舉值物件的指標。 如果物件不存在，請傳遞 NULL。
 
 *collection*<br/>
-包含要列舉的項目 c + + 標準程式庫容器的參考。
+若要參考C++標準程式庫容器可保存要列舉的項目。
 
 ### <a name="return-value"></a>傳回值
 

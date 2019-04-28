@@ -1,5 +1,5 @@
 ---
-title: '&lt;param > （c + + 文件註解）'
+title: '&lt;param > (C++文件註解)'
 ms.date: 11/04/2016
 f1_keywords:
 - param
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <param> C++ XML tag
 ms.assetid: 66c1a1c3-4f98-4bcf-8c7d-9a40308982fb
 ms.openlocfilehash: d8ea4feddbe1ec2d5898f8ef698cc2d69d255933
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320002"
 ---
 # <a name="ltparamgt"></a>&lt;param&gt;
 

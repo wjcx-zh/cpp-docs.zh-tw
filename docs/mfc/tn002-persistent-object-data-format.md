@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
 ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306190"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002:持續性物件資料格式
 
-此提示描述 MFC 常式，它支援持續性的 c + + 物件和物件資料的格式，儲存在檔案中時。 這只適用於具有類別[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)並[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。
+本提示描述 MFC 常式支援持續性C++物件和物件時的資料會儲存在檔案的格式。 這只適用於具有類別[DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial)並[IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)巨集。
 
 ## <a name="the-problem"></a>問題
 

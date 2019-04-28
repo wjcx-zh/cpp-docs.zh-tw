@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
 ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267269"
 ---
 # <a name="standard-conversions"></a>標準轉換
 
@@ -63,7 +63,7 @@ long_num2 = int_num * long_num2;
 
 - **int**位元欄位
 
-- 列舉值
+- 列舉程式
 
 C++ 提升為「保留值」。 也就是說，保證提升後的值會和提升之前的值一樣。 在保留值的提升，較短的整數類資料類型的物件 (例如位元欄位或類型的物件**char**) 升至類型**int**如果**int**可以代表完整原始類型的範圍。 如果**int**無法代表值的完整範圍，則物件會提升為類型**不帶正負號的 int**。雖然這種策略與 ANSI C 所使用的策略相同，但是保留值的轉換不會保留物件的正負號狀態。
 
@@ -77,7 +77,7 @@ C++ 提升為「保留值」。 也就是說，保證提升後的值會和提升
 
    執行移位作業時，這些運算子會將帶正負號和不帶正負號的數量視為不同。 對於帶正負號的數量，將數量右移會造成正負號位元傳播至空出的位元位置。 對於不帶正負號的數量，空出的位元位置會以零填滿。
 
-- 多載函式的引數，或是依據運算元類型的正負號狀態進行引數比對的多載運算子之運算元。 (請參閱[多載運算子](../cpp/operator-overloading.md)如需定義多載運算子。)
+- 多載函式的引數，或是依據運算元類型的正負號狀態進行引數比對的多載運算子之運算元  (請參閱[多載運算子](../cpp/operator-overloading.md)如需定義多載運算子。)
 
 ## <a name="integral-conversions"></a>整數轉換
 
@@ -255,7 +255,7 @@ int main()
 
 ### <a name="const-and-volatile-pointers"></a>const 和 volatile 指標
 
-C + + 不提供從標準轉換**const**或**volatile**不是類型的型別**const**或**volatile**。 不過，使用明確類型轉型 (包括不安全的轉換) 即可指定任何類型的轉換。
+C++未提供從標準轉換**const**或**volatile**不是類型的型別**const**或**volatile**。 不過，使用明確類型轉型 (包括不安全的轉換) 即可指定任何類型的轉換。
 
 > [!NOTE]
 >  C++ 成員指標 (靜態成員指標除外) 不同於一般指標，而且沒有相同的標準轉換。 靜態成員的指標是一般指標，具有與一般指標相同的轉換。

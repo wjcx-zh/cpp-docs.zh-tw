@@ -10,11 +10,11 @@ helpviewer_keywords:
 - preprocessing translation phase
 ms.assetid: 5036c7b7-ccff-4e2c-b052-a9ea6c71af87
 ms.openlocfilehash: cb8a8fea2411e4eb7de78545f70021f3617b0f52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325139"
 ---
 # <a name="overview-of-file-translation"></a>檔案轉譯概觀
 
@@ -43,9 +43,9 @@ C++ 前置處理器是 ANSI C 語言前置處理器的嚴格超集，不過，C+
 
 - 支援單行註解。 請參閱[註解](../cpp/comments-cpp.md)如需詳細資訊。
 
-- 一個預先定義的巨集， `__cplusplus`，定義只會針對 c + +。 請參閱[Predefined Macros](../preprocessor/predefined-macros.md)中*前置處理器參考 》* 如需詳細資訊。
+- 一個預先定義的巨集`__cplusplus`，定義僅適用於C++。 請參閱[Predefined Macros](../preprocessor/predefined-macros.md)中*前置處理器參考 》* 如需詳細資訊。
 
-- C 前置處理器無法辨識 c + + 運算子： **。**<strong>\*</strong>， **->** <strong>\*</strong>，以及 **::**。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)並[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。
+- C 前置處理器無法辨識C++運算子： **。**<strong>\*</strong>， **->** <strong>\*</strong>，以及 **::**。 請參閱[運算子](../cpp/cpp-built-in-operators-precedence-and-associativity.md)並[運算式](../cpp/expressions-cpp.md)，如需運算子的詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

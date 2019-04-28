@@ -11,16 +11,15 @@ helpviewer_keywords:
 - template classes [MFC]
 ms.assetid: a8331c4b-068a-48f8-a629-b8449601e121
 ms.openlocfilehash: be5639802f6f4a11a29326efd71d9634797c9f5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306323"
 ---
 # <a name="template-classes-for-arrays-lists-and-maps"></a>陣列、清單和對應的樣板類別
 
-這些集合類別是參數會判斷存放在彙總中物件類型的範本。 
-  `CArray`、`CMap` 和 `CList` 類別會使用通常必須自訂的全域 helper 函式。 如需有關這些 helper 函式的詳細資訊，請參閱 <<c0> [ 集合類別 Helper](../mfc/reference/collection-class-helpers.md)。 具有類型的指標類別是類別庫中其他類別的包裝函式。 使用這些包裝函式，您可以讓編譯器進行類型檢查，以協助您避免錯誤。 如需有關如何使用這些類別的詳細資訊，請參閱 <<c0> [ 集合](../mfc/collections.md)。
+這些集合類別是參數會判斷存放在彙總中物件類型的範本。 `CArray`、`CMap` 和 `CList` 類別會使用通常必須自訂的全域 helper 函式。 如需有關這些 helper 函式的詳細資訊，請參閱 <<c0> [ 集合類別 Helper](../mfc/reference/collection-class-helpers.md)。 具有類型的指標類別是類別庫中其他類別的包裝函式。 使用這些包裝函式，您可以讓編譯器進行類型檢查，以協助您避免錯誤。 如需有關如何使用這些類別的詳細資訊，請參閱 <<c0> [ 集合](../mfc/collections.md)。
 
 這些類別提供可用來使用所需任何類型建立陣列、清單和對應的範本。
 

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
 ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285982"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -93,7 +93,7 @@ long double log1pl(
 
 **Log1p**函式可能比使用更準確`log(x + 1)`當*x*趨近於 0。
 
-因為 c + + 允許多載，您可以呼叫多載**log1p**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **log1p**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**log1p**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **log1p**一律採用並傳回**double**。
 
 如果*x*為自然數，此函數會傳回階乘的對數 (*x* -1)。
 

@@ -9,15 +9,15 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AssemblerOutputFile
 ms.assetid: c5ba1e72-30de-43eb-a15a-5b0ae58e55c2
 ms.openlocfilehash: 6ee8042fccf2e0b635535a77d9c9a6bc68bd9999
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291544"
 ---
 # <a name="hlsl-property-pages-output-files"></a>HLSL 屬性頁：輸出檔
 
-若要設定 HLSL 編譯器 (fxc.exe) 的下列屬性，請使用其 [輸出檔案] 屬性。 如需有關如何存取資訊**輸出檔案**HLSL 資料夾中的屬性頁面上看到[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+若要設定 HLSL 編譯器 (fxc.exe) 的下列屬性，請使用其 [輸出檔案] 屬性。 如需有關如何存取資訊**輸出檔案**HLSL 資料夾中的屬性頁面上看到[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
 ## <a name="uielement-list"></a>UIElement 清單
 

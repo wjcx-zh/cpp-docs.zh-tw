@@ -12,16 +12,15 @@ helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
 ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295912"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 結構
 
-
-  `DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。
+`DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。
 
 ## <a name="syntax"></a>語法
 

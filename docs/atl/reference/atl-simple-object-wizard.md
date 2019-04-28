@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
 ms.openlocfilehash: e18c1848c55208b02026aba7684db928e0d6fc0a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260892"
 ---
 # <a name="atl-simple-object-wizard"></a>ATL 簡單物件精靈
 
-此精靈可將最基本的 COM 物件插入至專案。 使用精靈的這個頁面來指定識別的 c + + 類別和您的物件和它的 COM 功能檔案的名稱。
+此精靈可將最基本的 COM 物件插入至專案。 使用精靈的此頁面來指定名稱，可識別C++類別和檔案，以您的物件及它的 COM 功能。
 
 使用[選項](../../atl/reference/options-atl-simple-object-wizard.md)頁面來指定物件的執行緒模型，其彙總此精靈的支援，以及它是否支援雙重介面和自動化。 您也可以指定錯誤的資訊介面、 連接點、 Internet Explorer 支援和無限制執行緒封送處理支援。
 
@@ -33,7 +33,7 @@ ms.locfileid: "57258511"
 
 ## <a name="c"></a>C++
 
-提供 c + + 類別建立物件的資訊。
+提供的資訊C++類別建立物件。
 
 - **簡短名稱**
 

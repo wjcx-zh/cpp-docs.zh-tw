@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Runtime, walkthroughs
 ms.assetid: 7374c5e9-54eb-44bf-9ed9-5e190cfd290b
 ms.openlocfilehash: d176049bb3b03ae0f55170e45e20e7c2c0e322ff
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296486"
 ---
 # <a name="concurrency-runtime-walkthroughs"></a>並行執行階段逐步解說
 
@@ -51,4 +51,4 @@ ms.locfileid: "57296406"
 ## <a name="related-sections"></a>相關章節
 
 [並行執行階段](../../parallel/concrt/concurrency-runtime.md)<br/>
-介紹 Visual c + + 的並行程式設計架構。
+介紹並行程式設計架構，視覺效果C++。

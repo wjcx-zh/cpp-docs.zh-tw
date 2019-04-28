@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2005
 ms.assetid: d9587adc-68be-425c-8a30-15dbc86717a4
 ms.openlocfilehash: 8b4f75b90254c702ecb2afb65108278a59df69ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62299201"
 ---
 # <a name="linker-tools-error-lnk2005"></a>連結器工具錯誤 LNK2005
 
@@ -103,7 +103,7 @@ ms.locfileid: "50667281"
 
 - 如果會發生此錯誤`extern const`變數定義了兩次，並在每個定義中有不同的值。 若要修正此問題，請定義常數的唯一一次，或使用命名空間或`enum class`來區別常數的定義。
 
-- 如果您將 uuid.lib 與其他定義 Guid （例如 oledb.lib 和 adsiid.lib） 的.lib 檔案，就會發生此錯誤。 例如: 
+- 如果您將 uuid.lib 與其他定義 Guid （例如 oledb.lib 和 adsiid.lib） 的.lib 檔案，就會發生此錯誤。 例如：
 
     ```Output
     oledb.lib(oledb_i.obj) : error LNK2005: _IID_ITransactionObject

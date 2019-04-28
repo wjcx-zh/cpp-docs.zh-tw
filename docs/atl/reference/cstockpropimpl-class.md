@@ -65,11 +65,11 @@ helpviewer_keywords:
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
 ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277483"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl 類別
 
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 `CStockPropImpl` 提供**放**並**取得**每個內建屬性的方法。 這些方法會提供所需程式碼來設定或取得每個屬性相關聯的資料成員和通知，並同步處理與容器的任何屬性變更時。
 
-Visual c + + 提供內建的屬性，透過其精靈支援。 如需有關如何加入至控制項的內建屬性的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。
+視覺化C++支援透過其精靈的內建屬性。 如需有關如何加入至控制項的內建屬性的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。
 
 回溯相容性，`CStockPropImpl`也會公開`get_Window`並`put_Window`方法，只要呼叫`get_HWND`和`put_HWND`分別。 預設實作`put_HWND`因為 HWND 應該是唯讀屬性，傳回 E_FAIL。
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WinMain method [MFC]
 ms.assetid: 24ab7597-2354-495b-9a20-2c8ccc7385b3
 ms.openlocfilehash: 8271a10ad7439d2795dcc45d667b23b0932a0486
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308546"
 ---
 # <a name="run-member-function"></a>Run 成員函式
 
@@ -21,4 +21,4 @@ Framework 應用程式花費最多時間在[執行](../mfc/reference/cwinapp-cla
 
 ## <a name="see-also"></a>另請參閱
 
-[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)

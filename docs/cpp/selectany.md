@@ -8,11 +8,11 @@ helpviewer_keywords:
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
 ms.openlocfilehash: a6bf4076dfecbd29035716285f52c0a9faf81067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267293"
 ---
 # <a name="selectany"></a>selectany
 
@@ -34,7 +34,7 @@ __declspec( selectany ) declarator
 
 對於動態初始化的全域物件， **selectany**將會捨棄未參考的物件的初始化程式碼，以及。
 
-全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 **selectany**可用在初始化時相同的標頭會顯示一個以上的原始程式檔中，標頭所定義的全域資料。 **selectany**是在 C 和 c + + 編譯器中使用。
+全域資料項目通常只能在 EXE 或 DLL 專案中初始化一次。 **selectany**可用在初始化時相同的標頭會顯示一個以上的原始程式檔中，標頭所定義的全域資料。 **selectany**有兩個 C 和C++編譯器。
 
 > [!NOTE]
 >  **selectany**只能套用至外部可見的全域資料項目的實際初始化。

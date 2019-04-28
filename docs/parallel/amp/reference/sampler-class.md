@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352589"
 ---
 # <a name="sampler-class"></a>sampler 類別
 
@@ -112,7 +112,7 @@ sampler(                    // [6] move constructor
 要用於所有維度取樣的定址模式。
 
 *_Border_color*<br/>
-如果位址模式是 address_border，則會使用框線色彩。 預設值是 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`。
+如果位址模式是 address_border，則會使用框線色彩。 預設值為 `float_4(0.0f, 0.0f, 0.0f, 0.0f)`。
 
 *_Other*<br/>
 [5] 複製建構函式`sampler`要複製到新物件`sampler`執行個體。

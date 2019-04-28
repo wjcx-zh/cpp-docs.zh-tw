@@ -17,11 +17,11 @@ helpviewer_keywords:
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
 ms.openlocfilehash: b78704ea12365d9e10222d75c6807517f7cdb893
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292831"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (清單檔)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57812508"
 
 ## <a name="remarks"></a>備註
 
-**/FA**編譯器選項產生的組譯工具清單檔案中每個轉譯單位是編譯，通常會對應至 C 或 c + + 原始程式檔。 根據預設，只有組譯工具包含在清單檔案中，會編碼為 ANSI。 選擇性**c**， **s**，並**u**引數 **/FA**控制項是否機器的程式碼或原始程式碼以及組譯工具輸出列出方式，以及是否清單會編碼為 utf-8。
+**/FA**編譯器選項產生的組譯工具清單檔案中每個轉譯單位是編譯，通常會對應至 C 或C++原始程式檔。 根據預設，只有組譯工具包含在清單檔案中，會編碼為 ANSI。 選擇性**c**， **s**，並**u**引數 **/FA**控制項是否機器的程式碼或原始程式碼以及組譯工具輸出列出方式，以及是否清單會編碼為 utf-8。
 
 根據預設，每個清單檔案取得相同的基底名稱為原始程式檔中，且.asm 延伸模組。 當機器的程式碼使用包含**c**選項時，清單檔的副檔名為.cod。 您可以變更的名稱和副檔名的清單檔並建立使用所在之目錄 **/Fa**選項。
 
@@ -75,9 +75,9 @@ none<br/>
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **輸出檔**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **輸出檔**屬性頁。
 
 1. 修改**組合語言輸出**屬性來設定 **/FAc**並 **/FAs**組譯工具、 機器和原始碼的選項。 修改**使用 Unicode 的組譯工具清單**屬性來設定 **/FAu** ANSI 或 utf-8 輸出的選項。 修改**ASM 清單位置**來設定 **/Fa**以列出檔案名稱和位置的選項。
 
@@ -99,5 +99,5 @@ CL /FAcs HELLO.CPP
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

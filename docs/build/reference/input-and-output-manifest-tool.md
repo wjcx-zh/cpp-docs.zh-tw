@@ -1,5 +1,5 @@
 ---
-title: 資訊清單工具、 c + + 輸入與輸出屬性
+title: 資訊清單工具、C++輸入與輸出屬性
 ms.date: 08/27/2018
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
@@ -11,11 +11,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
 ms.openlocfilehash: 1731665ffa6117896490115028b4744e195beae2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291051"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>輸入和輸出、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -65,4 +65,4 @@ ms.locfileid: "57825969"
 
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [資訊清單工具屬性頁](manifest-tool-property-pages.md)<br/>
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)<br/>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)<br/>

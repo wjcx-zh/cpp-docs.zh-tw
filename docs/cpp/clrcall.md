@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __clrcall keyword [C++]
 ms.assetid: 92096695-683a-40ed-bf65-0c8443572152
 ms.openlocfilehash: bc44feb97223de47f45734f75777ee040d0ebdd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364567"
 ---
 # <a name="clrcall"></a>__clrcall
 
@@ -29,9 +29,9 @@ ms.locfileid: "50534572"
 
 [/clr （common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)表示所有函式和函式指標都 **__clrcall**編譯器不會允許要標示以外的任何編譯模組內的函式和 **__clrcall**。 當 **/clr: pure**使用，則 **__clrcall**只能在函式指標和外部宣告上指定。
 
-您也可以直接呼叫 **__clrcall**從現有的 c + + 程式碼編譯所使用的函式 **/clr** ，只要該函式具有 MSIL 實作。 **__clrcall**函式不能直接從呼叫函式具有內嵌 asm 且呼叫 CPU 特定內，比方說，即使這些函式會編譯使用`/clr`。
+您也可以直接呼叫 **__clrcall**函式，從現有的C++使用已編譯的程式碼 **/clr** ，只要該函式具有 MSIL 實作。 **__clrcall**函式不能直接從呼叫函式具有內嵌 asm 且呼叫 CPU 特定內，比方說，即使這些函式會編譯使用`/clr`。
 
-**__clrcall**函式指標僅適用於所建立的應用程式定義域。  而不是傳遞 **__clrcall**函式指標跨應用程式定義域，請使用<xref:System.CrossAppDomainDelegate>。 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)。
+**__clrcall**函式指標僅適用於所建立的應用程式定義域。  而不是傳遞 **__clrcall**函式指標跨應用程式定義域，請使用<xref:System.CrossAppDomainDelegate>。 如需詳細資訊，請參閱 <<c0> [ 應用程式定義域和視覺效果C++ ](../dotnet/application-domains-and-visual-cpp.md)。</c0>
 
 ## <a name="example"></a>範例
 

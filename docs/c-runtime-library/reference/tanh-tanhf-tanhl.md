@@ -31,11 +31,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258313"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、 tanhf、 tanhl
 
@@ -65,11 +65,11 @@ long double tanh( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|**Matherr**例外狀況|
 |-----------|-------------------|-------------------------|
-|± QNAN、IND|無|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**tanh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **tanh**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**tanh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **tanh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

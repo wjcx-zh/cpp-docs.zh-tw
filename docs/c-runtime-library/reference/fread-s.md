@@ -21,11 +21,11 @@ f1_keywords:
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
 ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287807"
 ---
 # <a name="freads"></a>fread_s
 
@@ -48,7 +48,7 @@ size_t fread_s(
 *buffer*<br/>
 資料的儲存位置。
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 以位元組為單位的目的緩衝區大小。
 
 *elementSize*<br/>
@@ -57,7 +57,7 @@ size_t fread_s(
 *count*<br/>
 要讀取項目的最大數量。
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值

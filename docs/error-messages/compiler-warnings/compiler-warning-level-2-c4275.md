@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4275
 ms.assetid: 18de967a-0a44-4dbc-a2e8-fc4c067ba909
 ms.openlocfilehash: 6e0e80d465d77bd4fe99fbcaa98e289b8a4c8b63
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55987023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349681"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>編譯器警告 (層級 2) C4275
 
@@ -33,7 +33,7 @@ ms.locfileid: "55987023"
 
 您可以避免匯出類別所定義的 DLL，定義具有虛擬函式，類別和函式您可以呼叫來具現化和刪除的物件類型。  然後，您就可以再呼叫虛擬函式類型。
 
-如果您從 c + + 標準程式庫中，編譯的偵錯版本的型別衍生，可以在 Visual c + + 中忽略 C4275 (**/MTd**)，其中編譯器錯誤訊息是指`_Container_base`。
+視覺效果中，您可以忽略 C4275C++如果您衍生自中的型別C++標準程式庫、 編譯偵錯版本 (**/MTd**) 和編譯器錯誤訊息會指`_Container_base`。
 
 ```cpp
 // C4275.cpp

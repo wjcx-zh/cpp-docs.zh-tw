@@ -1,5 +1,5 @@
 ---
-title: 設定適用於 64 位元、 x64 的 c + + 專案的目標
+title: 設定C++適用於 64 位元，x64 專案目標
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
 ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274677"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>設定適用於 64 位元、 x64 的 c + + 專案的目標
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>設定C++適用於 64 位元，x64 專案目標
 
-此章節包含有關鎖定為目標的 64 位元 x64 硬體使用 Visual c + + 建置工具。
+此章節包含有關鎖定為目標的 64 位元 x64 硬體與視覺效果C++建置工具。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -47,4 +47,4 @@ ms.locfileid: "57818111"
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和組建系統](projects-and-build-systems-cpp.md)
+[專案和建置系統](projects-and-build-systems-cpp.md)

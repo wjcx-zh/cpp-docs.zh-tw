@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239331"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX 控制項：使用內建屬性頁
 
@@ -33,7 +33,7 @@ ms.locfileid: "57304700"
 
 - [MFC ActiveX 控制項：屬性頁](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`， `CLSID_CFontPropPage`，和`CLSID_CPicturePropPage`。 這些頁面會分別顯示內建的色彩、 字型和圖片屬性的使用者介面。
 
@@ -46,7 +46,7 @@ MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`
 在進行這些修改之後，重建您的專案。 您的控制項現在會有字型、 圖片 及 色彩屬性的屬性頁。
 
 > [!NOTE]
->  如果無法存取控制項內建屬性頁，可能是因為 MFC DLL (MFCxx.DLL) 尚未正確註冊與目前的作業系統。 這通常會導致從不同於目前正在執行的作業系統下安裝 Visual c + +。
+>  如果無法存取控制項內建屬性頁，可能是因為 MFC DLL (MFCxx.DLL) 尚未正確註冊與目前的作業系統。 這通常安裝視覺效果的結果C++在不同於目前正在執行的作業系統。
 
 > [!TIP]
 >  如果看不到您的內建屬性頁 （請參閱先前的附註），來執行 dll RegSvr32.exe 命令列使用的完整路徑名稱註冊的 DLL。
@@ -54,4 +54,4 @@ MFC ActiveX 控制項用於提供三個內建屬性頁： `CLSID_CColorPropPage`
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX 控制項：加入內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[MFC ActiveX 控制項：新增關於內建屬性](../mfc/mfc-activex-controls-adding-stock-properties.md)

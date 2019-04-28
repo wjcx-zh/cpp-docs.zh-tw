@@ -7,15 +7,15 @@ helpviewer_keywords:
 - TN036
 ms.assetid: dd54053f-ae80-4d23-9180-c7d07ddf2290
 ms.openlocfilehash: 698070340e2f44b908a564bdda2c69ecda227386
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305524"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>TN036： 搭配搭配使用 CFormView 與 AppWizard 及 ClassWizard
 
-本技術提示說明如何修改 AppWizard 產生應用程式，以便使用`CFormView`而非預設`CView`作為主要檢視類別。 支援此功能，直接使用此版本的 Visual c + +。
+本技術提示說明如何修改 AppWizard 產生應用程式，以便使用`CFormView`而非預設`CView`作為主要檢視類別。 這支援直接使用這個版本的 Visual C++。
 
 ## <a name="see-also"></a>另請參閱
 

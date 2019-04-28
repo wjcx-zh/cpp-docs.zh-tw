@@ -7,11 +7,11 @@ helpviewer_keywords:
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
 ms.openlocfilehash: dcff3610255c40f4e06201e52a53eb5dd965a4be
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317935"
 ---
 # <a name="specifying-the-pathname"></a>指定路徑名稱
 
@@ -40,4 +40,4 @@ CL /FmPRN HELLO.CPP
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309181"
 ---
 # <a name="ribbon-designer-mfc"></a>功能區設計工具 (MFC)
 
@@ -85,7 +85,7 @@ ms.locfileid: "58769481"
 
 下列主題描述如何在功能區設計工具中使用這些功能。
 
-- [如何：自訂的應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
+- [如何：自訂應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
 
 - [如何：自訂快速存取工具列](../mfc/how-to-customize-the-quick-access-toolbar.md)
 

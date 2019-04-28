@@ -3,15 +3,15 @@ title: Array 和 WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209412"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array 和 WriteOnlyArray (C++/CX)
 
-您可以自由地使用一般的 C 樣式陣列或[std:: array](../standard-library/array-class-stl.md)在 C + + /CX 程式 (雖然[std:: vector](../standard-library/vector-class.md)通常是較好的選擇)，但在發行中繼資料中任何 API 中，您必須將 C 樣式陣列轉換或以向量[platform:: array](../cppcx/platform-array-class.md)或是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)取決於正在使用方式的型別。 [Platform::Array](../cppcx/platform-array-class.md) 類型的效率及功能都不如 [std::vector](../standard-library/vector-class.md)，因此一般來說，您應該避免在對陣列元素執行許多作業的內部程式碼中使用此類型。
+您可以自由地使用標準 c-style 陣列或[std:: array](../standard-library/array-class-stl.md)在C++/CX 程式 (雖然[std:: vector](../standard-library/vector-class.md)通常是較好的選擇)，但在發行中繼資料中任何 API 中，您必須將轉換C-style 陣列或向量[platform:: array](../cppcx/platform-array-class.md)或是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)取決於正在使用方式的型別。 [Platform::Array](../cppcx/platform-array-class.md) 類型的效率及功能都不如 [std::vector](../standard-library/vector-class.md)，因此一般來說，您應該避免在對陣列元素執行許多作業的內部程式碼中使用此類型。
 
 下列陣列類型可以透過 ABI 傳遞：
 
@@ -25,9 +25,9 @@ ms.locfileid: "57739409"
 
 您可以使用這些陣列類型來實作陣列模式由 Windows 執行階段所定義的三種。
 
-呼叫端將陣列傳遞至方法時，就會使用 PassArray。 C + + 輸入的參數類型`const` [platform:: array](../cppcx/platform-array-class.md)\<T >。
+呼叫端將陣列傳遞至方法時，就會使用 PassArray。 C++輸入的參數類型是`const` [platform:: array](../cppcx/platform-array-class.md)\<T >。
 
-呼叫端傳遞陣列供方法填入時，就會使用 FillArray。 C + + 輸入的參數類型[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。
+呼叫端傳遞陣列供方法填入時，就會使用 FillArray。 C++輸入的參數類型是[platform:: writeonlyarray](../cppcx/platform-writeonlyarray-class.md)\<T >。
 
 呼叫端收到方法所配置的陣列時，就會使用 ReceiveArray。 在 C++/CX 中，您可以傳回值 Array^ 傳回陣列，也可以傳回做為 Array^* 類型的 out 參數。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57739409"
 
 ## <a name="receivearray-pattern"></a>ReceiveArray 模式
 
-在 ReceiveArray 模式中，用戶端程式碼會宣告陣列，並將它傳遞至為它配置記憶體並初始化的方法。 C + + 輸入的參數類型是為 hat 指標： `Array<T>^*`。 下列範例顯示如何在 JavaScript 中宣告陣列物件，並將它傳遞至 C++ 函式，此函式會配置記憶體、初始化元素，然後將它傳回至 JavaScript。 JavaScript 將配置的陣列視為傳回值，但 C++ 函式將它視為 out 參數。
+在 ReceiveArray 模式中，用戶端程式碼會宣告陣列，並將它傳遞至為它配置記憶體並初始化的方法。 C++輸入的參數類型是為 hat 指標： `Array<T>^*`。 下列範例顯示如何在 JavaScript 中宣告陣列物件，並將它傳遞至 C++ 函式，此函式會配置記憶體、初始化元素，然後將它傳回至 JavaScript。 JavaScript 將配置的陣列視為傳回值，但 C++ 函式將它視為 out 參數。
 
 [!code-javascript[cx_arrays#102](../cppcx/codesnippet/JavaScript/array-and-writeonlyarray-c-_3.js)]
 
@@ -90,5 +90,5 @@ Windows 執行階段類型系統不支援不規則陣列的概念，因此您也
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

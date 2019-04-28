@@ -23,11 +23,11 @@ helpviewer_keywords:
 - simple list collection classes [MFC]
 ms.assetid: c69fc95b-c8f6-4a99-abed-517c9898ef0c
 ms.openlocfilehash: 40633c8b2b09d27e97443364ed3ce711ee217e18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306374"
 ---
 # <a name="template-based-classes"></a>樣板架構類別
 
@@ -37,15 +37,15 @@ MFC 預先定義範本為基礎的集合的兩個的類別：
 
 - [簡單陣列、 清單和對應類別](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-   `CArray`, `CList`, `CMap`
+   `CArray`、`CList`、`CMap`
 
 - [陣列、 清單和對應的具類型的指標](#_core_using_typed.2d.pointer_collection_templates)
 
-   `CTypedPtrArray`, `CTypedPtrList`, `CTypedPtrMap`
+   `CTypedPtrArray`、`CTypedPtrList`、`CTypedPtrMap`
 
 簡單集合類別衍生自類別`CObject`，因此它們在繼承序列化、 動態建立，以及其他屬性的`CObject`。 具類型的指標集合類別會要求您指定衍生自的類別，它必須是其中一個預先定義的 mfc，例如非範本指標集合`CPtrList`或`CPtrArray`。 新的集合類別繼承自指定的基底類別，以及新的類別成員函式會使用基底類別成員的封裝的呼叫來強制執行型別安全。
 
-如需有關 c + + 範本的詳細資訊，請參閱[範本](../cpp/templates-cpp.md)中*c + + 語言參考*。
+如需詳細資訊C++範本，請參閱[範本](../cpp/templates-cpp.md)中*C++語言參考*。
 
 ##  <a name="_core_using_simple_array.2c_.list.2c_.and_map_templates"></a> 使用簡單的陣列、 清單和對應範本
 
@@ -55,13 +55,13 @@ MFC 預先定義範本為基礎的集合的兩個的類別：
 
 簡單陣列和清單類別[CArray](../mfc/reference/carray-class.md)並[CList](../mfc/reference/clist-class.md)，採用兩個參數：*型別*和`ARG_TYPE`。 這些類別可以儲存任何資料類型，您在中指定*型別*參數：
 
-- 基本的 c + + 資料類型，例如**int**， **char**，和**float**
+- 基本C++資料類型，例如**int**， **char**，和**浮點數**
 
-- C + + 結構和類別
+- C++結構和類別
 
 - 您所定義的其他型別
 
-為了方便和效率，您可以使用*arg_type 這個*參數來指定函式引數的型別。 一般而言，您指定*arg_type 這個*做為參考您在名為的型別*型別*參數。 例如: 
+為了方便和效率，您可以使用*arg_type 這個*參數來指定函式引數的型別。 一般而言，您指定*arg_type 這個*做為參考您在名為的型別*型別*參數。 例如：
 
 [!code-cpp[NVC_MFCCollections#1](../mfc/codesnippet/cpp/template-based-classes_1.cpp)]
 
@@ -89,7 +89,7 @@ MFC 預先定義範本為基礎的集合的兩個的類別：
 
 型別指標陣列和清單類別[CTypedPtrArray](../mfc/reference/ctypedptrarray-class.md)並[CTypedPtrList](../mfc/reference/ctypedptrlist-class.md)，採用兩個參數：*BASE_CLASS*並*型別*。 這些類別可以儲存任何資料類型，您在中指定*型別*參數。 它們被衍生自其中一個會將指標; 儲存的非樣板集合類別指定在此基底類別*BASE_CLASS*。 陣列，請使用任何一種`CObArray`或`CPtrArray`。 如需清單，請使用任何一種`CObList`或`CPtrList`。
 
-實際上，當您宣告為基礎的集合，說出`CObList`，新的類別不只會繼承其基底類別成員，但它也會宣告一些其他的型別安全成員函式和運算子，幫助提供類型安全，藉由將封裝呼叫基底類別成員。 這些封裝會管理所有所需的型別轉換。 例如: 
+實際上，當您宣告為基礎的集合，說出`CObList`，新的類別不只會繼承其基底類別成員，但它也會宣告一些其他的型別安全成員函式和運算子，幫助提供類型安全，藉由將封裝呼叫基底類別成員。 這些封裝會管理所有所需的型別轉換。 例如：
 
 [!code-cpp[NVC_MFCCollections#5](../mfc/codesnippet/cpp/template-based-classes_5.cpp)]
 
@@ -99,7 +99,7 @@ MFC 預先定義範本為基礎的集合的兩個的類別：
 
 ###  <a name="_core_typed.2d.pointer_map_usage"></a> 型別指標對應使用方式
 
-型別指標對應類別[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，採用三個參數：*BASE_CLASS*，*金鑰*，以及*值*。 *BASE_CLASS*參數指定要從中衍生新類別的類別： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依此類推。 *索引鍵*相當於*金鑰*在`CMap`:它會指定用於查閱的索引鍵的類型。 *值*相當於*值*在`CMap`:它會指定儲存在 map 中的物件型別。 例如: 
+型別指標對應類別[CTypedPtrMap](../mfc/reference/ctypedptrmap-class.md)，採用三個參數：*BASE_CLASS*，*金鑰*，以及*值*。 *BASE_CLASS*參數指定要從中衍生新類別的類別： `CMapPtrToWord`， `CMapPtrToPtr`， `CMapStringToPtr`， `CMapWordToPtr`， `CMapStringToOb`，依此類推。 *索引鍵*相當於*金鑰*在`CMap`:它會指定用於查閱的索引鍵的類型。 *值*相當於*值*在`CMap`:它會指定儲存在 map 中的物件型別。 例如：
 
 [!code-cpp[NVC_MFCCollections#6](../mfc/codesnippet/cpp/template-based-classes_6.cpp)]
 

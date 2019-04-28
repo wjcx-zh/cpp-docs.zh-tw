@@ -33,11 +33,11 @@ helpviewer_keywords:
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
 ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258620"
 ---
 # <a name="tan-tanf-tanl"></a>tan、 tanf、 tanl
 
@@ -67,12 +67,12 @@ long double tan( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|**Matherr**例外狀況|
 |-----------|-------------------|-------------------------|
-|± QNAN、IND|無|_DOMAIN|
-|常见 INF|**無效**|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|± INF|**INVALID**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**tan**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **tan**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**tan**採用並傳回**float**或**長** **double**值。 在 C 程式中， **tan**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

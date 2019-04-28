@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外狀況 > （c + + 文件註解）'
+title: '&lt;例外狀況 > (C++文件註解)'
 ms.date: 11/04/2016
 f1_keywords:
 - exception
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
 ms.openlocfilehash: 327c1bc27f4ae71aa214e09f375f963dad5b33d7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292961"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 

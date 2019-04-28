@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
 ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287569"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -44,7 +44,7 @@ int fsetpos(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 *pos*<br/>
@@ -52,7 +52,7 @@ int fsetpos(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **fsetpos**會傳回 0。 在失敗時，此函式會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 ERRNO。H): **EBADF**，這表示檔案不是可存取或物件的*串流*指向不是有效的檔案結構; 或**EINVAL**，這表示的值無效*資料流*或是*pos*傳遞。 如果傳入無效參數，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。
+如果成功， **fsetpos**會傳回 0。 在失敗時，此函式會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 ERRNO。H):**EBADF**，這表示檔案不是可存取或物件的*資料流*指向不是有效的檔案結構; 或**EINVAL**，這表示的值為 「 無效 」*資料流*或是*pos*傳遞。 如果傳入無效參數，則這些函式會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

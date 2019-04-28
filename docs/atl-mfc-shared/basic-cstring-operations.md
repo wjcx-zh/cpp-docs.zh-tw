@@ -10,11 +10,11 @@ helpviewer_keywords:
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
 ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216853"
 ---
 # <a name="basic-cstring-operations"></a>基本 CString 運算
 
@@ -36,7 +36,7 @@ ms.locfileid: "57746210"
 
 `CString``CStringA`，並`CStringW`各取得一組方法和所定義的運算子`CStringT`與它們所支援的字串資料搭配使用。 某些方法重複，在某些情況下，大於字串的服務的 C 執行階段程式庫。
 
-注意：`CString`是原生類別。 字串類別，以用於使用 C + + /cli CLI 管理專案中，使用`System.String`。
+注意：`CString`是原生類別。 字串類別是用於C++/CLI 受控專案中，使用`System.String`。
 
 ##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> 從標準 C 常值字串建立 CString 物件
 
@@ -97,7 +97,7 @@ CString cs("meow");
 wcout << (const wchar_t*) cs << endl;
 ```
 
-沒有轉型，`cs`會被視為`void*`和`wcout`列印物件的位址。 此行為起因於樣板引數推算和多載解析中自行正確且符合間的微妙互動，而 c + + 標準。
+沒有轉型，`cs`會被視為`void*`和`wcout`列印物件的位址。 此行為起因於樣板引數推算和多載解析中正確本身與符合之間的微妙互動C++標準。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
 ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295015"
 ---
 # <a name="batch-mode-rules"></a>批次模式規則
 
@@ -22,14 +22,14 @@ ms.locfileid: "57824716"
 
 當 N 命令進行此推斷規則時，批次模式推斷規則會提供推斷規則只有一個引動過程。 沒有批次模式推斷規則，它將需要 N 要叫用的命令。 N 是推斷規則觸發程序的相依項目數目。
 
-包含批次模式推斷規則的 Makefile 必須使用 NMAKE 1.62 或更高版本。 若要檢查的 NMAKE 版本，1.62 或更新版本，NMAKE 版本搭配執行可用 _NMAKE_VER 巨集。 這個巨集會傳回字串，表示 Visual c + + 的產品版本。
+包含批次模式推斷規則的 Makefile 必須使用 NMAKE 1.62 或更高版本。 若要檢查的 NMAKE 版本，1.62 或更新版本，NMAKE 版本搭配執行可用 _NMAKE_VER 巨集。 這個巨集會傳回字串，表示視覺效果C++產品版本。
 
 之間唯一的語法差異的標準的推斷規則是以雙冒號 （:），終止批次模式推斷規則。
 
 > [!NOTE]
 >  叫用的工具必須能夠處理多個檔案。 必須使用批次模式推斷規則`$<`為巨集來存取相依檔案。
 
-批次模式推斷規則可以加速建置程序。 這是更快提供給編譯器的批次中的檔案因為一次叫用編譯器的驅動程式。 例如，C 和 c + + 編譯器執行得更好處理一組檔案，因為它可以維持記憶體駐留在程序期間。
+批次模式推斷規則可以加速建置程序。 這是更快提供給編譯器的批次中的檔案因為一次叫用編譯器的驅動程式。 例如，C 和C++編譯器執行得更好處理一組檔案，因為它可以維持記憶體駐留在程序期間。
 
 下列範例示範如何使用批次模式推斷規則：
 

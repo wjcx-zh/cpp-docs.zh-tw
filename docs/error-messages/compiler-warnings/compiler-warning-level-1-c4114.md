@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4114
 ms.assetid: 3983e1c6-e8bb-46dc-8894-e1827db48797
 ms.openlocfilehash: 41e951e7c4a8b23ddbec14c5421f66702e70c937
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300254"
 ---
 # <a name="compiler-warning-level-1-c4114"></a>編譯器警告 （層級 1） C4114
 

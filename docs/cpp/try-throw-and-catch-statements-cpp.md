@@ -20,15 +20,15 @@ helpviewer_keywords:
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
 ms.openlocfilehash: a55c1f2d5c2e73028b337d17b74fe1280f670707
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266776"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>try、throw 和 catch 陳述式 (C++)
 
-若要實作的 c + + 例外狀況處理，您使用**嘗試**，**擲回**，並**攔截**運算式。
+若要實作的例外狀況處理C++，您使用**嘗試**，**擲回**，和**攔截**運算式。
 
 首先，使用**嘗試**區塊包含可能會擲回例外狀況的一或多個陳述式。
 

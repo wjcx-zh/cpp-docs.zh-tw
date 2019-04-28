@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
 ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330514"
 ---
 # <a name="thread"></a>thread
 
@@ -24,7 +24,7 @@ ms.locfileid: "50440075"
 
 ## <a name="syntax"></a>語法
 
-> **__declspec (thread)** *宣告子*
+> **__declspec( thread )** *declarator*
 
 ## <a name="remarks"></a>備註
 
@@ -40,9 +40,9 @@ __declspec( thread ) int tls_i = 1;
 
 1. 如果變數初始化函式呼叫 （包括建構函式），將只能之執行緒的此二進位檔/dll 載入程序，以及已載入的二進位檔/DLL 之後，啟動這些執行緒中呼叫此函式。 初始化函式不會載入 DLL 時已執行的任何其他執行緒呼叫。 動態初始化，就會發生 DLL_THREAD_ATTACH，DllMain 呼叫但 DLL 永遠不會取得該訊息，如果 DLL 不是程序中，在執行緒啟動時。
 
-1. 常數的值會以靜態方式初始化的執行緒本機變數通常會在所有執行緒上正確初始化。 不過，自 2017 年 12 月起沒有已知的一致性問題讓接收 constexpr 變數的 Microsoft Visual c + + 編譯器中動態而不是靜態初始設定。
+1. 常數的值會以靜態方式初始化的執行緒本機變數通常會在所有執行緒上正確初始化。 不過，自 2017 年 12 月起沒有已知的一致性問題在 Microsoft VisualC++讓接收動態而不是靜態初始設定 constexpr 變數的編譯器。
 
-   注意： 這兩種問題有修正在未來的編譯器的更新。
+   注意:這兩種問題有修正在未來的編譯器的更新。
 
 此外，您必須在宣告執行緒區域物件和變數時，遵守這些指導方針：
 
@@ -81,7 +81,7 @@ __declspec( thread ) int tls_i = 1;
    Thread int tls_i = sizeof( tls_i );   // Okay in C and C++
    ```
 
-   請注意， **sizeof**運算式，其中包含要初始化的物件不會構成本身的參考，並允許在 C 和 c + + 中。
+   請注意， **sizeof**運算式，其中包含要初始化的物件不會構成本身的參考，且能在 C 和C++。
 
 **結束 Microsoft 專屬**
 

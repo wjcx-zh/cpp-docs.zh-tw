@@ -12,11 +12,11 @@ helpviewer_keywords:
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
 ms.openlocfilehash: c0dcb045450d6e6eca31b8c76a92726e62400656
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316141"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (使用先行編譯標頭檔)
 
@@ -63,7 +63,7 @@ Include 檔案的名稱必須是相同 **/Yc**選項建立先行編譯標頭和�
 
 1. 指定[/Yc （建立先行編譯標頭檔）](yc-create-precompiled-header-file.md)專案中的.cpp 檔上。
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -99,4 +99,4 @@ CL /YuMYAPP.H /FpMYPCH.pch PROG.CPP
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

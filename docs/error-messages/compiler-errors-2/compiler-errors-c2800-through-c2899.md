@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2800 到 C2899
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2800 至 C2899
+ms.date: 04/21/2019
 f1_keywords:
 - C2816
 - C2820
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
-ms.translationtype: MT
+ms.openlocfilehash: a0367d1d465d4460202f4d6d29468e59f6a74657
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281764"
 ---
-# <a name="compiler-errors-c2800-through-c2899"></a>編譯器錯誤 C2800 到 C2899
+# <a name="compiler-errors-c2800-through-c2899"></a>編譯器錯誤 C2800 至 C2899
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -110,7 +110,7 @@ ms.locfileid: "51332071"
 |編譯器錯誤 C2848|'*類別*': 受控/WinRT 類型不能是等位的成員|
 |[編譯器錯誤 C2849](compiler-error-c2849.md)|'*介面*': 介面不可以有解構函式|
 |[編譯器錯誤 C2850](compiler-error-c2850.md)|'*建構*': 只允許在檔案範圍，可能無法用於巢狀結構|
-|編譯器錯誤 C2851|'*enum*': 公用 WinRT 列舉只能使用 'int' unsigned 的 int' 做為基底類型|
+|編譯器錯誤 C2851|'*enum*':公用 WinRT 列舉只能使用 'int' unsigned 的 int' 做為基底類型|
 |編譯器錯誤 C2852|'*識別碼*': 只有資料成員可以在類別內初始化|
 |編譯器錯誤 C2853|'*識別碼*': 非靜態資料成員不能包含 'auto' 的類型|
 |[編譯器錯誤 C2854](compiler-error-c2854.md)|#pragma hdrstop 中發生語法錯誤|
@@ -159,3 +159,8 @@ ms.locfileid: "51332071"
 |[編譯器錯誤 C2897](compiler-error-c2897.md)|解構函式/完成項不可為函式樣板|
 |[編譯器錯誤 C2898](compiler-error-c2898.md)|'*宣告*': 成員函式樣板不可為虛擬|
 |編譯器錯誤 C2899|已過時。|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

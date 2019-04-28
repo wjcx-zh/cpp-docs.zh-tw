@@ -11,11 +11,11 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305537"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:MFC 的 DLL 版本
 
@@ -150,7 +150,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 
 有時候您可能要匯出只是必要的個別成員您的類別。 例如，如果您要匯出`CDialog`-衍生的類別，您可能只需要將匯出的建構函式和`DoModal`呼叫。 您可以匯出使用 DLL 的這些成員。DEF 檔案，但您也可以使用`AFX_EXT_CLASS`中相同的方式在您要匯出的個別成員。
 
-例如: 
+例如：
 
 ```cpp
 class CExampleDialog : public CDialog
@@ -249,7 +249,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 
 同樣地，您必須採取特別注意，當您不想要匯出整個類別。 您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 這可以藉由重新定義`AFX_DATA`特定類別的巨集。 這應該不會匯出整個類別的任何時間。
 
-例如：
+例如: 
 
 ```cpp
 // A.H

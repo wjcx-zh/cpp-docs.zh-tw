@@ -28,11 +28,11 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
 ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332971"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、 frexpf、 frexpl
 
@@ -79,7 +79,7 @@ long double frexp(
 
 **Frexp**函式會細分的浮點數值 (*x*) 分解為尾數 (*m*) 和指數 (*n*)，使得絕對值*m*大於或等於 0.5 並小於 1.0，以及*x* = *m* * 2<sup>*n*</sup>. 整數指數*n*所指向的位置會儲存*expptr*。
 
-C + + 允許多載，因此您可以呼叫多載**frexp**。 在 C 程式中， **frexp**一律採用**double**並**int**指標並傳回**double**。
+C++允許多載，因此您可以呼叫多載**frexp**。 在 C 程式中， **frexp**一律採用**double**並**int**指標並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

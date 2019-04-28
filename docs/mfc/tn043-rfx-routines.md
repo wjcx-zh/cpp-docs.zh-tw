@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RFX (record field exchange)
 ms.assetid: f552d0c1-2c83-4389-b472-42c9940aa713
 ms.openlocfilehash: 18820c7d17ddea355490ee32679d5d690ec3533e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305394"
 ---
 # <a name="tn043-rfx-routines"></a>TN043:常式
 
@@ -24,7 +24,7 @@ ms.locfileid: "57294482"
 
 ## <a name="overview-of-record-field-exchange"></a>資料錄欄位交換的概觀
 
-所有的資料錄集欄位函式已完成 c + + 程式碼。 沒有任何特殊的資源或 magic 巨集。 機制的核心是必須在每個衍生的資料錄集類別中覆寫虛擬函式。 在這種形式一律找到它：
+完成所有的資料錄集欄位函式C++程式碼。 沒有任何特殊的資源或 magic 巨集。 機制的核心是必須在每個衍生的資料錄集類別中覆寫虛擬函式。 在這種形式一律找到它：
 
 ```cpp
 void CMySet::DoFieldExchange(CFieldExchange* pFX)
@@ -62,7 +62,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 資料錄集欄位函數的設計僅適用於`CRecordset`類別。 它們不是一般情況下使用的任何其他的 MFC 類別。
 
-標準 c + + 建構函式中，通常在區塊中以設定初始值的資料`//{{AFX_FIELD_INIT(CMylSet)`和`//}}AFX_FIELD_INIT`註解。
+標準中設定初始資料值的C++建構函式，通常在區塊中以`//{{AFX_FIELD_INIT(CMylSet)`並`//}}AFX_FIELD_INIT`註解。
 
 每個**RFX_** 函式必須支援各種作業，範圍從封存的欄位，以準備進行編輯的欄位將傳回的欄位已變更的狀態。
 
@@ -112,7 +112,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 有數種方式來擴充預設 RFX 機制。 您可以
 
-- 加入新的資料類型。 例如: 
+- 加入新的資料類型。 例如：
 
     ```cpp
     CBookmark
@@ -126,7 +126,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
         BIGINT& value);
     ```
 
-- 有`DoFieldExchange`成員函式有條件地包含其他 RFX 呼叫或任何其他有效的 c + + 陳述式。
+- 已`DoFieldExchange`成員函式有條件地包含其他 RFX 呼叫或任何其他有效的C++陳述式。
 
     ```cpp
     while (posExtraFields != NULL)
@@ -150,7 +150,7 @@ RFX_Custom(pFX, "Col2", m_Col2);
 
 `RFX_Text` 和`RFX_Binary`:這兩個函數預先配置的靜態緩衝區，以便容納字串/二進位檔的詳細資訊，並必須向這些緩衝區 ODBC SQLBindCol 而不是註冊 （& v）。 因為這個緣故，這些兩個函式會有許多特殊情況撰寫程式碼。
 
-`RFX_Date`：ODBC 會傳回自己 TIMESTAMP_STRUCT 資料結構中的日期和時間資訊。 此函式會動態配置 TIMESTAMP_STRUCT 作為 「 proxy 」 來傳送和接收日期時間資料。 各種作業之間必須傳輸的日期和時間資訊的 c + +`CTime`物件和 TIMESTAMP_STRUCT proxy。 這變得非常複雜此函式相當大，但它是如何使用 proxy 來傳輸資料的理想範例。
+`RFX_Date`：ODBC 會傳回自己 TIMESTAMP_STRUCT 資料結構中的日期和時間資訊。 此函式會動態配置 TIMESTAMP_STRUCT 作為 「 proxy 」 來傳送和接收日期時間資料。 不同的作業時必須傳輸之間的日期和時間資訊C++`CTime`物件和 TIMESTAMP_STRUCT proxy。 這變得非常複雜此函式相當大，但它是如何使用 proxy 來傳輸資料的理想範例。
 
 `RFX_LongBinary`：這是唯一的類別庫不會使用資料行繫結接收和傳送資料的 RFX 函式。 此函式會忽略 BindFieldToColumn 作業和相反地，修復作業期間，會配置儲存空間來保存內送 SQL_LONGVARCHAR 或 SQL_LONGVARBINARY 資料，則會執行到配置的儲存體擷取值的 SQLGetData 呼叫。 準備要將資料值送回資料來源 （例如名稱/值和值的作業），則此函數會使用 ODBC 的 DATA_AT_EXEC 功能。 請參閱[技術的附註 45](../mfc/tn045-mfc-database-support-for-long-varchar-varbinary.md)如需有關使用 SQL_LONGVARBINARY 和 SQL_LONGVARCHARs。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK1211
 ms.assetid: 607400eb-4180-4892-817f-eedfa628af61
 ms.openlocfilehash: 7c918cacb87460c2aad30285b750d9b170425534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242665"
 ---
 # <a name="linker-tools-error-lnk1211"></a>連結器工具錯誤 LNK1211
 
@@ -19,7 +19,7 @@ ms.locfileid: "50456143"
 
 *檔名*使用編譯的目的檔[/Yc](../../build/reference/yc-create-precompiled-header-file.md)、 連結 命令中未指定，或已被覆寫。
 
-如果您要建立偵錯程式庫使用先行編譯標頭，並指定 **/Yc**並[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)，Visual c + + 產生的先行編譯的物件檔案包含偵錯資訊。 只有當您先行編譯的物件檔案存放在程式庫時，發生錯誤、 使用程式庫來建置可執行檔映像，和所參考的物件檔案具有不到任何函式的先行編譯的物件檔案會定義可轉移的參考。
+如果您要建立偵錯程式庫使用先行編譯標頭，並指定 **/Yc**並[/z7](../../build/reference/z7-zi-zi-debug-information-format.md)視覺C++產生先行編譯的物件檔案包含偵錯資訊。 只有當您先行編譯的物件檔案存放在程式庫時，發生錯誤、 使用程式庫來建置可執行檔映像，和所參考的物件檔案具有不到任何函式的先行編譯的物件檔案會定義可轉移的參考。
 
 有兩種方法可以解決此問題：
 

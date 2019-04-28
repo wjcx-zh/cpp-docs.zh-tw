@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
 ms.openlocfilehash: f42d99b5f1fab06c5de0b8e794009a4ac4291e0c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270164"
 ---
 # <a name="hlsl-property-pages"></a>HLSL 屬性頁
 
@@ -31,6 +31,6 @@ ms.locfileid: "57826166"
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)<br>
+[C++專案屬性頁參考](property-pages-visual-cpp.md)<br>
 [命令列屬性頁](command-line-property-pages.md)<br>
 [編譯著色器](http://go.microsoft.com/fwlink/p/?LinkID=258284&clcid=0x409)

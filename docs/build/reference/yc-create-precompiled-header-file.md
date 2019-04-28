@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Yc compiler option [C++]
 ms.assetid: 47c2e555-b4f5-46e6-906e-ab5cf21f0678
 ms.openlocfilehash: 0d902b9ebb35bc7f267cb67861b7be0763f378a6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316700"
 ---
 # <a name="yc-create-precompiled-header-file"></a>/Yc (建立先行編譯標頭檔)
 
@@ -56,9 +56,9 @@ ms.locfileid: "57821426"
 
 1. 選取的.cpp 檔案。 .Cpp 檔必須 #include 包含先行編譯標頭資訊的.h 檔案。 專案的 **/Yc**檔案層級可以覆寫設定。
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 開啟**組態屬性**， **C/c + +**，**先行編譯標頭**屬性頁。
+1. 開啟**組態屬性**， **C /C++**，**先行編譯標頭** 屬性頁。
 
 1. 修改**先行編譯標頭**屬性。
 
@@ -86,5 +86,5 @@ ms.locfileid: "57821426"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [先行編譯標頭檔](../creating-precompiled-header-files.md)

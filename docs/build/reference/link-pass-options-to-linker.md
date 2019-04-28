@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
 ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62290675"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (傳遞選項給連結器)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58476834"
 
 此外，IDE 通常會傳送個別的命令來編譯及連結您的程式碼。 在專案屬性頁面中，您可以設定連結器選項。
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **組態屬性** > **連結器**資料夾。
 

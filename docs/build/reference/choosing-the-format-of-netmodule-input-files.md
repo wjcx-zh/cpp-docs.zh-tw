@@ -3,11 +3,11 @@ title: 選擇 .netmodule 輸入檔的格式
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294573"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>選擇 .netmodule 輸入檔的格式
 
@@ -32,7 +32,7 @@ MSIL.obj 檔案 (以編譯[/clr](clr-common-language-runtime-compilation.md)) �
 
 - 如果您的模組會用來建置 Managed 程式庫，而且如果連結器的所有模組輸入都能夠進行驗證 (以 /clr:safe 產生)，請使用 .obj 檔案做為連結器的模組輸入，然後產生 .dll (組件) 或 .netmodule (模組) 程式庫檔。
 
-- 如果您的模組會用來建置 managed 程式庫，且會以 /clr 產生連結器的一或多個模組輸入，.obj 檔作為連結器的模組輸入，然後產生.dll （組件）。  如果您想要公開 （expose） 從程式庫的 managed 型別，而且如果也想使用原生的型別程式庫中的 c + + 應用程式，您的程式庫所組成 （您也要提供每個模組的.h 檔案的程式庫元件模組的.obj 檔案以便它們可以參考使用 #include： 從原始碼)。
+- 如果您的模組會用來建置 managed 程式庫，且會以 /clr 產生連結器的一或多個模組輸入，.obj 檔作為連結器的模組輸入，然後產生.dll （組件）。  如果您想要公開 managed 的類型，從程式庫，而您也想C++（您也要提供每個外掛模組的.h 檔案的程式庫元件模組的.obj 檔案將會包含應用程式使用的文件庫中，而您的程式庫中的原生類型ule，以便它們可以參考使用 #include： 從原始碼)。
 
 ## <a name="see-also"></a>另請參閱
 

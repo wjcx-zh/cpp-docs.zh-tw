@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
 ms.openlocfilehash: 6ca67d4cac3786ce8bb059464d47acf17e3ecdc7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309476"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>MFC 應用程式精靈、使用者介面功能
 

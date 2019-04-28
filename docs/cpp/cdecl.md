@@ -10,19 +10,19 @@ helpviewer_keywords:
 - __cdecl keyword [C++]
 ms.assetid: 1ff1d03e-fb4e-4562-8be1-74f1ad6427f1
 ms.openlocfilehash: 298485d310ee4039b13781a8b5cd88a489af3b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232398"
 ---
 # <a name="cdecl"></a>__cdecl
 
 **Microsoft 專屬**
 
-**__cdecl**是呼叫慣例，C 和 c + + 程式的預設值。 因為呼叫端會清除堆疊，它可以執行`vararg`函式。 **__Cdecl**呼叫慣例會建立較大的可執行檔，比[__stdcall](../cpp/stdcall.md)，因為它需要每個函式呼叫都包含堆疊清除程式碼。 下列清單會顯示這個呼叫慣例的實作。
+**__cdecl**是適用於 C 呼叫慣例的預設值和C++程式。 因為呼叫端會清除堆疊，它可以執行`vararg`函式。 **__Cdecl**呼叫慣例會建立較大的可執行檔，比[__stdcall](../cpp/stdcall.md)，因為它需要每個函式呼叫都包含堆疊清除程式碼。 下列清單會顯示這個呼叫慣例的實作。
 
-|元素|實作|
+|項目|實作|
 |-------------|--------------------|
 |引數傳遞順序|由右至左。|
 |堆疊維護責任|呼叫函式會從堆疊取出引數。|

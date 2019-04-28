@@ -7,15 +7,15 @@ helpviewer_keywords:
 - ATL
 ms.assetid: 77f565e8-c4ec-4a80-af4b-7278fcfe5c98
 ms.openlocfilehash: 8c2dcab962cd9863acf0f8e7070727f3b18117d5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261913"
 ---
 # <a name="introduction-to-atl"></a>ATL 簡介
 
-ATL Active Template Library，一份範本為基礎的 c + + 類別與您可以輕鬆建立小型、 快速元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括特殊支援： 內建的實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)， [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)， [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)，和`IDispatch`雙重;介面，標準的 COM 列舉程式介面;連接點;tear-off 介面;和 ActiveX 控制項。
+ATL 的 Active Template Library 的範本為基礎的一組C++類別，您可以使用它輕鬆建立小型、 快速元件物件模型 (COM) 物件。 它有索引鍵的 COM 功能，包括特殊支援： 內建的實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)， [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)， [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)，和`IDispatch`雙重;介面，標準的 COM 列舉程式介面;連接點;tear-off 介面;和 ActiveX 控制項。
 
 ATL 程式碼可用來建立單一執行緒物件、 apartment 模型物件、 無限制執行緒模型物件或無限制執行緒和 apartment model 物件。
 

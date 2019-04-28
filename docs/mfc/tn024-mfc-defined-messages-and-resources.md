@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306021"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:定義的訊息和資源
 
@@ -33,7 +33,7 @@ MFC 私人資源類型是在範圍內 0xF0]-> [0xFF。
 
 **MFC 私人 Windows 訊息**
 
-這些 Windows 訊息是以 c + + 虛擬函式取代相當鬆散結合需要的情況使用視窗物件之間，其中 c + + 虛擬函式不會被適當。
+這些 Windows 訊息用來取代C++視窗物件之間需要較鬆散的結合性所在的虛擬函式和位置C++無法適當虛擬函式。
 
 在 MFC private 標頭中宣告這些私人 Windows 訊息和相關聯的參數結構 ' AFXPRIV。H'。 會收到警告，任何包含此標頭的程式碼可能會依賴未記載的行為，就會斷開在未來版本的 MFC。
 
@@ -170,9 +170,9 @@ AppWizard 所提供的預設工具列根據 RT_TOOLBAR 」 自訂資源，MFC 4.
 
 ## <a name="rtdlginit-resource-format"></a>RT_DLGINIT 資源格式
 
-一種 MFC 私用資源的格式用來儲存額外的對話方塊初始化資訊。 這包括初始下拉式方塊中所儲存的字串。 此資源的格式不是以手動方式編輯，但是由 Visual c + +。
+一種 MFC 私用資源的格式用來儲存額外的對話方塊初始化資訊。 這包括初始下拉式方塊中所儲存的字串。 此資源的格式不是以手動方式編輯，但視覺效果由C++。
 
-Visual c + + 和此 RT_DLGINIT 資源不需要使用 MFC 的相關的功能，因為沒有 API 替代項目使用中資源的資訊。 使用 Visual c + + 讓您更容易撰寫、 維護和轉換您的應用程式中，長期。
+視覺化C++和這個 RT_DLGINIT 資源不需要使用 MFC 的相關的功能，因為沒有 API 替代項目使用中資源的資訊。 使用視覺效果C++可讓您更容易撰寫、 維護和轉換您的應用程式中，長期。
 
 RT_DLGINIT 資源的基本結構如下所示：
 
@@ -197,7 +197,7 @@ RT_DLGINIT 資源的基本結構如下所示：
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-這是非常一般的格式，並允許任何 Windows 訊息和資料內容。 MFC 與 Visual c + + 資源編輯器僅支援 Windows 訊息的有限的子集：如需初始 （資料是文字字串） 的下拉式方塊清單-選擇 CB_ADDSTRING。
+這是非常一般的格式，並允許任何 Windows 訊息和資料內容。 視覺效果C++資源編輯器和 MFC 只支援 Windows 訊息的有限的子集：如需初始 （資料是文字字串） 的下拉式方塊清單-選擇 CB_ADDSTRING。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -3,11 +3,11 @@ title: 樣板和名稱解析
 ms.date: 11/04/2016
 ms.assetid: 519ba7b5-cd25-4549-865a-9a7b9dffdc28
 ms.openlocfilehash: e4a53df0a192c1d7b7f376e4401eb99fcbf7d481
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266747"
 ---
 # <a name="templates-and-name-resolution"></a>樣板和名稱解析
 
@@ -69,7 +69,7 @@ ms.locfileid: "50611922"
 
 ## <a name="type-dependence-and-value-dependence"></a>類型相依和值相依
 
-相依於樣板參數的名稱和運算式會分類為類型相依或值相依，取決於樣板參數是型別參數或值參數。 此外，在具有類型相依的樣板中宣告的所有識別項在樣板引數上視為值相依，如使用值相依運算式初始化的整數或列舉類型。
+相依於樣板參數的名稱和運算式會分類為類型相依或值相依，取決於樣板參數是類型參數或值參數。 此外，在具有類型相依的樣板中宣告的所有識別項在樣板引數上視為值相依，如使用值相依運算式初始化的整數或列舉類型。
 
 類型相依和值相依運算式是一種包含類型相依或值相依變數的運算式。 根據範本所使用的參數，這些運算式可能會有不同的語意。
 

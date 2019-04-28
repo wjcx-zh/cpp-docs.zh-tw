@@ -1,5 +1,5 @@
 ---
-title: TN030：自訂列印和預覽列印
+title: TN030:自訂列印和預覽列印
 ms.date: 06/28/2018
 f1_keywords:
 - vc.print
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - print preview [MFC], customizing
 ms.assetid: 32744697-c91c-41b6-9a12-b8ec01e0d438
 ms.openlocfilehash: 09938c5cec2812998d5e76e15154754ad3ac3e0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305680"
 ---
-# <a name="tn030-customizing-printing-and-print-preview"></a>TN030：自訂列印和預覽列印
+# <a name="tn030-customizing-printing-and-print-preview"></a>TN030:自訂列印和預覽列印
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -40,13 +40,13 @@ MFC 提供完整的解決方案，大部分的列印和預覽列印需要。 在
 
 第二，您必須經常呼叫`QueryAbort`繪製群組列時。 否則不會呼叫中止程序，而且使用者將無法取消列印工作。
 
-## <a name="print-preview-electronic-paper-with-user-interface"></a>列印預覽： 具有使用者介面的電子文件
+## <a name="print-preview-electronic-paper-with-user-interface"></a>預覽列印：使用者介面的電子文件
 
 列印預覽中，在本質上，嘗試開啟顯示到模擬的印表機。 根據預設，用戶端主視窗的區域用來顯示完整視窗內的一或兩個頁面。 使用者就能夠放大網頁來查看更多詳細資料中的區域。 提供額外的支援，使用者甚至可以編輯 [預覽] 模式中的文件。
 
 ## <a name="customizing-print-preview"></a>自訂列印預覽
 
-修改預覽列印的其中一個層面只處理這個附註： 新增的 UI，以預覽模式。 其他修改都有可能，但這類變更不在本文的討論範圍內。
+這個提示只會處理修改預覽列印的其中一個層面：新增 UI，以預覽模式。 其他修改都有可能，但這類變更不在本文的討論範圍內。
 
 ## <a name="to-add-ui-to-the-preview-mode"></a>若要將 UI 加入至預覽模式
 

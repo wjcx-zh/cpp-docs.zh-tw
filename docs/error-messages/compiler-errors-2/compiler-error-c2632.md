@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
 ms.openlocfilehash: b92d44bcfd04d4de7b39c5bdab5ee146d9b6693b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257630"
 ---
 # <a name="compiler-error-c2632"></a>編譯器錯誤 C2632
 
@@ -36,4 +36,4 @@ int float i;   // C2632
 void f(int bool);   // C2632
 ```
 
-若要解決這個錯誤，以便的程式碼是有效的 Visual c + + 的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中，重新命名識別項。
+若要解決這個錯誤，以便的程式碼是在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效C++，重新命名識別項。

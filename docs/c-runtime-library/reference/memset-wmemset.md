@@ -27,11 +27,11 @@ helpviewer_keywords:
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
 ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285141"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -107,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the memset function
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Before: This is a test of the wmemset function

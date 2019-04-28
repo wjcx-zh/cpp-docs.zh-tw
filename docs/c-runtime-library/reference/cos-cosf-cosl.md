@@ -32,11 +32,11 @@ helpviewer_keywords:
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
 ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335356"
 ---
 # <a name="cos-cosf-cosl"></a>cos、 cosf、 cosl
 
@@ -66,12 +66,12 @@ long double cos( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见 QNAN IND|無|**（_D)**|
-|常见 INF|**無效**|**（_D)**|
+|常见 QNAN IND|none|**_DOMAIN**|
+|± INF|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cos**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **cos**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**cos**採用並傳回**float**或**長** **double**值。 在 C 程式中， **cos**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

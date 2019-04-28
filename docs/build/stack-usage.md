@@ -3,11 +3,11 @@ title: x64 堆疊使用方式
 ms.date: 12/17/2018
 ms.assetid: 383f0072-0438-489f-8829-cca89582408c
 ms.openlocfilehash: 902e4304ac124be46c6edf0860118dc522b34890
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314804"
 ---
 # <a name="x64-stack-usage"></a>x64 堆疊使用方式
 
@@ -47,9 +47,9 @@ ms.locfileid: "57425597"
 
 ## <a name="malloc-alignment"></a>malloc 對齊
 
-[malloc](../c-runtime-library/reference/malloc.md)保證會傳回已適當對齊的儲存具有基本對齊，以及任何物件配置的記憶體無法容納的記憶體。 A*基本對齊*是小於或等於沒有對齊規格的實作所支援的最大對齊的對齊方式。 (在 Visual c + + 中，這是所需的對齊方式`double`，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。比方說，四個位元組的配置會在支援任何四個位元組或較小物件的界限上對齊。
+[malloc](../c-runtime-library/reference/malloc.md)保證會傳回已適當對齊的儲存具有基本對齊，以及任何物件配置的記憶體無法容納的記憶體。 A*基本對齊*是小於或等於沒有對齊規格的實作所支援的最大對齊的對齊方式。 (在視覺效果C++，這是所需的對齊`double`，或 8 個位元組。 在以 64 位元平台為目標的程式碼中，則為 16 個位元組)。比方說，四個位元組的配置會在支援任何四個位元組或較小物件的界限上對齊。
 
-Visual c + + 允許具有型別*延伸對齊*，也稱為*過度對齊*型別。 例如，SSE 類型[__m128](../cpp/m128.md)並`__m256`，和使用宣告的型別`__declspec(align( n ))`其中`n`大於 8，擁有延伸對齊。 不保證記憶體對齊在適合需要擴充的對齊之物件的界限上`malloc`。 若要為過度對齊類型配置記憶體，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)和相關函式。
+視覺化C++允許具有型別*延伸對齊*，也稱為*過度對齊*類型。 例如，SSE 類型[__m128](../cpp/m128.md)並`__m256`，和使用宣告的型別`__declspec(align( n ))`其中`n`大於 8，擁有延伸對齊。 不保證記憶體對齊在適合需要擴充的對齊之物件的界限上`malloc`。 若要為過度對齊類型配置記憶體，請使用[_aligned_malloc](../c-runtime-library/reference/aligned-malloc.md)和相關函式。
 
 ## <a name="alloca"></a>alloca
 

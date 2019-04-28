@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
 ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258568"
 ---
 # <a name="tell-telli64"></a>_tell、_telli64
 
@@ -54,7 +54,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>參數
 
-*控制代碼*<br/>
+*handle*<br/>
 參考已開啟檔案的檔案描述項。
 
 ## <a name="return-value"></a>傳回值
@@ -117,7 +117,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Current file position is: 20

@@ -18,15 +18,15 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
 ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351530"
 ---
 # <a name="texture-class"></a>texture 類別
 
-材質是將資料彙總上`accelerator_view`在範圍內。 它是變數，每個項目，對應範圍網域中的集合。 每個變數會保留對應到 c + + 基本類型的值 ( `unsigned int`， `int`， `float`， `double`)、 純量類型 ( `norm`，或`unorm`)，或短向量類型。
+材質是將資料彙總上`accelerator_view`在範圍內。 它是變數，每個項目，對應範圍網域中的集合。 每個變數會保留值對應至C++基本類型 ( `unsigned int`， `int`， `float`， `double`)，純量類型 ( `norm`，或`unorm`)，或短向量類型。
 
 ## <a name="syntax"></a>語法
 

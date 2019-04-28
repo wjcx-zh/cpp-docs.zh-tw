@@ -7,11 +7,11 @@ helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
 ms.openlocfilehash: 097c105e005a3c734ba86139ed3b4b6ecdcf49d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316388"
 ---
 # <a name="xdcmake-reference"></a>XDCMake 參考
 
@@ -19,7 +19,7 @@ xdcmake.exe 是一種程式，可將.xdc 檔案編譯成.xml 檔案。 MSVC 編�
 
 ### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中使用 xdcmake.exe
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 開啟 [組態屬性] 資料夾。
 

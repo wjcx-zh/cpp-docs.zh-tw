@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C3200 到 C3299
-ms.date: 11/17/2017
+title: 編譯器錯誤 C3200 至 C3299
+ms.date: 04/21/2019
 f1_keywords:
 - C3220
 - C3221
@@ -34,14 +34,14 @@ helpviewer_keywords:
 - C3281
 - C3294
 ms.assetid: 6b3104f6-63bc-4823-b6f3-b8a16be4b87f
-ms.openlocfilehash: e8a9c1db4cba837a5780e51f84035492cd0e9e76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 6965fcde5f7cc93464593e83f787d0a5838398dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281491"
 ---
-# <a name="compiler-errors-c3200-through-c3299"></a>編譯器錯誤 C3200 到 C3299
+# <a name="compiler-errors-c3200-through-c3299"></a>編譯器錯誤 C3200 至 C3299
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -124,7 +124,7 @@ ms.locfileid: "50490586"
 |[編譯器錯誤 C3270](compiler-error-c3270.md)|'*欄位*': FieldOffset 屬性只可以用於 StructLayout(LayoutKind::Explicit) 的內容|
 |[編譯器錯誤 C3271](compiler-error-c3271.md)|'*欄位*': 無效的值'*數目*' 對 FieldOffset 屬性|
 |[編譯器錯誤 C3272](compiler-error-c3272.md)|'*符號*': 符號必須有 FieldOffset，因為它是 struct/類別的成員*type_name* StructLayout(LayoutKind::Explicit) 定義|
-|[編譯器錯誤 C3273](compiler-error-c3273.md)|'*關鍵字*': 不允許在 c + + try 區塊|
+|[編譯器錯誤 C3273](compiler-error-c3273.md)|'*關鍵字*': 不允許C++try 區塊|
 |[編譯器錯誤 C3274](compiler-error-c3274.md)|最後 /&#95;&#95;finally 缺少對應的 try|
 |[編譯器錯誤 C3275](compiler-error-c3275.md)|'*識別碼*': 無法使用這個不含限定詞的符號|
 |[編譯器錯誤 C3276](compiler-error-c3276.md)|'*關鍵字*': 跳出 finally /&#95;&#95;最後區塊有未定義的行為在終止處理期間|
@@ -151,3 +151,8 @@ ms.locfileid: "50490586"
 |[編譯器錯誤 C3297](compiler-error-c3297.md)|' *constraint2*': 不能使用' *constraint1*'做為條件約束因為' *constraint1*' 具有值條件約束|
 |[編譯器錯誤 C3298](compiler-error-c3298.md)|' *constraint1*': 不能使用' *constraint2*'做為條件約束因為' *constraint2*'具有 ref 條件約束和' *constraint1*'具有值條件約束|
 |[編譯器錯誤 C3299](compiler-error-c3299.md)|'*函式*': 無法指定條件約束，它們繼承自基底方法|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

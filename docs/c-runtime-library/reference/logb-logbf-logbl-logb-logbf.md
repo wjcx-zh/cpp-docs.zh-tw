@@ -39,11 +39,11 @@ helpviewer_keywords:
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
 ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285708"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb、logbf、logbl、_logb、_logbf
 
@@ -88,11 +88,11 @@ float _logbf(
 
 **Logb**函式會擷取浮點引數的指數值*x*，就像*x*以無限範圍表示一樣。 如果引數*x*是反正規化，它會被視為已正規化。
 
-因為 c + + 允許多載，您可以呼叫多載**logb**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **logb**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**logb**採用並傳回**float**或**長** **double**值。 在 C 程式中， **logb**一律採用並傳回**double**。
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|無|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 
 ## <a name="requirements"></a>需求
@@ -100,7 +100,7 @@ float _logbf(
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
 |**_logb**|\<float.h>|
-|**logb**， **logbf**， **logbl**， **_logbf**|\<math.h>|
+|**logb**, **logbf**, **logbl**, **_logbf**|\<math.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

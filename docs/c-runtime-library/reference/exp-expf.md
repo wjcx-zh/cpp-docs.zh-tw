@@ -31,11 +31,11 @@ helpviewer_keywords:
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288184"
 ---
 # <a name="exp-expf-expl"></a>exp、 expf、 expl
 
@@ -72,7 +72,7 @@ long double expl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见無訊息 NaN、 不確定|無|_DOMAIN|
+|常见無訊息 NaN、 不確定|None|_DOMAIN|
 |常见無限大|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
@@ -81,7 +81,7 @@ long double expl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫多載**exp**採用**float**或是**長雙精度**引數。 在 C 程式中， **exp**一律採用並傳回**double**。
+C++允許多載，因此您可以呼叫多載**exp**採用**float**或是**長雙精度**引數。 在 C 程式中， **exp**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

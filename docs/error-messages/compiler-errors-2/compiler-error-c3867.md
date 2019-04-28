@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
 ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242873"
 ---
 # <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 
-'func': 函式呼叫遺漏引數清單，請用 '&func' 建立成員的指標
+'func': 函式呼叫遺漏引數清單;使用 '& l o c k' 建立成員的指標
 
 您嘗試取得成員函式的位址，而未使用其類別名稱和傳址運算子來限定成員函式。
 

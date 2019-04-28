@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
 ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352514"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>連結器工具警告 LNK4253
 
@@ -23,7 +23,7 @@ A **/合併**遇到選項或指示詞和`from`一節已合併到一個不同的�
 
 若要解決 LNK4253，移除其中的合併要求。
 
-當以 x86 為目標機器和 Visual c + +，（ARM、 MIPS、 arm、mips、*sh4 和捲動方塊） 的 Windows CE 目標。CRT 區段現在是唯讀屬性。 如果您的程式碼相依於先前的行為 (。CRT 區段是讀取/寫入），您可以看到非預期的行為。
+當以 x86 為目標機器和 Windows CE 目標 （ARM MIPS、 arm、mips、*sh4 和捲動方塊），具有視覺效果C++，則。CRT 區段現在是唯讀屬性。 如果您的程式碼相依於先前的行為 (。CRT 區段是讀取/寫入），您可以看到非預期的行為。
 
 如需詳細資訊，請參閱：
 

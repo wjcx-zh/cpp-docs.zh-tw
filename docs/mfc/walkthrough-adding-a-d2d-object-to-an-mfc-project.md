@@ -6,15 +6,15 @@ helpviewer_keywords:
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
 ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358613"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件加入至 MFC 專案
 
-本逐步解說將說明如何新增基本 Direct2D (D2D) Visual c + +，Microsoft Foundation Class 程式庫 (MFC) 專案物件，並再將專案建置的應用程式，會列印"Hello，world"的漸層背景。
+本逐步解說將說明如何新增基本 Direct2D (D2D) 物件的視覺效果C++，Microsoft Foundation Class 程式庫 (MFC) 專案，並再建置專案到應用程式會列印"Hello，world"漸層背景。
 
 本逐步解說示範如何完成這些工作：
 
@@ -32,13 +32,13 @@ ms.locfileid: "50567254"
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成此逐步解說中，您必須擁有 Visual Studio 已安裝**使用 c + + 的桌面開發**工作負載和選擇性**適用於 x86 和 x64 的 Visual c + + MFC**元件。
+若要完成此逐步解說中，您必須擁有 Visual Studio 已安裝**使用的桌面開發C++** 工作負載和選擇性**視覺化C++適用於 x86 和 x64 的 MFC**元件。
 
 ## <a name="to-create-an-mfc-application"></a>若要建立 MFC 應用程式
 
 1. 在 **檔案**功能表上，指向**新增**，然後選擇**專案**。
 
-1. 在 **新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual c + +** ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
+1. 在**新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual C++**  ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
 
 1. 在  **MFC 應用程式精靈**，選擇**完成**而不需要變更任何設定。
 

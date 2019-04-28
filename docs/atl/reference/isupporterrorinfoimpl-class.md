@@ -11,11 +11,11 @@ helpviewer_keywords:
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
 ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274759"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl 類別
 
@@ -49,7 +49,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 [ISupportErrorInfo 介面](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)可確保資訊時發生錯誤，可以傳回給用戶端。 物件，使用`IErrorInfo`必須實作`ISupportErrorInfo`。
 
-類別`ISupportErrorInfoImpl`提供的預設實作`ISupportErrorInfo`方法，可以用於只有單一介面產生物件錯誤時。 例如: 
+類別`ISupportErrorInfoImpl`提供的預設實作`ISupportErrorInfo`方法，可以用於只有單一介面產生物件錯誤時。 例如：
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
 ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297075"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>可覆寫的 CWinApp 成員函式
 
@@ -31,4 +31,4 @@ ms.locfileid: "57261241"
 
 ## <a name="see-also"></a>另請參閱
 
-[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)

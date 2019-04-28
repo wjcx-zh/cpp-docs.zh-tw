@@ -47,11 +47,11 @@ helpviewer_keywords:
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
 ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309053"
 ---
 # <a name="reflected-window-message-ids"></a>反映視窗訊息 ID
 
@@ -87,4 +87,4 @@ ms.locfileid: "57302087"
 ## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項：子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062:Windows 控制項的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)
+[TN062：Windows 控制項的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)

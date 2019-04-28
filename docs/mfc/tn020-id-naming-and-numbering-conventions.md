@@ -9,11 +9,11 @@ helpviewer_keywords:
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
 ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306060"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:識別碼命名和編號慣例
 
@@ -21,13 +21,13 @@ ms.locfileid: "57267390"
 
 MFC 識別碼命名和編號慣例旨在符合下列需求：
 
-- 提供 MFC 程式庫和 MFC 應用程式所支援的 Visual c + + 資源編輯器使用一致的識別碼命名標準。 這可以方便程式設計師可以解譯的類型和原始的資源，以從其識別碼。
+- 提供 MFC 程式庫和 MFC 應用程式所支援的視覺效果之間使用一致的識別碼命名標準C++資源編輯器。 這可以方便程式設計師可以解譯的類型和原始的資源，以從其識別碼。
 
 - 強調強式識別碼的某些型別之間的 1 對 1 關聯性。
 
 - 符合已廣泛使用的標準來命名 Windows 中的識別碼。
 
-- 資料分割的識別碼編號的空間。 識別碼可以指派由程式設計師、 MFC、 Windows 和 Visual c + + 編輯的資源。 適當的資料分割，將有助於避免重複的識別碼。
+- 資料分割的識別碼編號的空間。 識別碼可以指派程式設計師、 MFC、 Windows、 和視覺效果C++-編輯過的資源。 適當的資料分割，將有助於避免重複的識別碼。
 
 ## <a name="the-id-prefix-naming-convention"></a>識別碼前置詞命名慣例
 

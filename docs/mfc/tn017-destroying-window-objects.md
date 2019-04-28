@@ -9,21 +9,21 @@ helpviewer_keywords:
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
 ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306144"
 ---
 # <a name="tn017-destroying-window-objects"></a>TN017:終結視窗物件
 
-此附註將描述使用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 如果您想要執行的自訂的配置，請使用這個方法`CWnd`-衍生物件。 此提示也會說明為什麼您應該使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)終結的 c + + Windows 物件而非**刪除**運算子。
+此附註將描述使用[CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy)方法。 如果您想要執行的自訂的配置，請使用這個方法`CWnd`-衍生物件。 此提示也會說明為什麼您應該使用[cwnd:: Destroywindow](../mfc/reference/cwnd-class.md#destroywindow)終結C++Windows 物件而非**刪除**運算子。
 
-如果您遵循本主題中的指導方針，您會有較少的清除問題。 這些問題可能是因為問題，例如，忘記刪除/釋出 c + + 的記憶體，忘記釋放系統資源，例如`HWND`s，或釋放的物件太多次。
+如果您遵循本主題中的指導方針，您會有較少的清除問題。 這些問題可能是因為問題，例如忘記刪除/釋放C++記憶體，忘記釋放系統資源，例如`HWND`，或釋放的物件太多次。
 
 ## <a name="the-problem"></a>問題
 
-Windows 中的每個物件 (類別的物件衍生自`CWnd`) 表示這兩個 c + + 物件和`HWND`。 C + + 物件會在應用程式的堆積中配置和`HWND`的視窗管理員所配置的系統資源。 因為有數種方式可終結視窗物件，所以我們必須提供一組規則，導致系統資源或記憶體流失。 這些規則也必須防止物件和 Windows 控制代碼被終結一次以上。
+Windows 中的每個物件 (類別的物件衍生自`CWnd`) 代表同時C++物件和`HWND`。 C++在 應用程式的堆積配置物件和`HWND`的視窗管理員所配置的系統資源。 因為有數種方式可終結視窗物件，所以我們必須提供一組規則，導致系統資源或記憶體流失。 這些規則也必須防止物件和 Windows 控制代碼被終結一次以上。
 
 ## <a name="destroying-windows"></a>終結 Windows
 
@@ -39,18 +39,18 @@ Windows 中的每個物件 (類別的物件衍生自`CWnd`) 表示這兩個 c + 
 
 ## <a name="auto-cleanup-with-cwndpostncdestroy"></a>使用 CWnd::PostNcDestroy 自動清除
 
-系統會終結 Windows 視窗，傳送至視窗的最後一個 Windows 訊息時，控制。 預設值`CWnd`該訊息的處理常式[cwnd::](../mfc/reference/cwnd-class.md#onncdestroy)。 `OnNcDestroy` 將卸離`HWND`c + + 的物件，並呼叫虛擬函式`PostNcDestroy`。 某些類別會覆寫這個函式來刪除 c + + 物件。
+系統會終結 Windows 視窗，傳送至視窗的最後一個 Windows 訊息時，控制。 預設值`CWnd`該訊息的處理常式[cwnd::](../mfc/reference/cwnd-class.md#onncdestroy)。 `OnNcDestroy` 將卸離`HWND`從C++物件，並呼叫虛擬函式`PostNcDestroy`。 某些類別覆寫這個函式來刪除C++物件。
 
-預設實作`CWnd::PostNcDestroy`不執行任何動作，這是適合在堆疊框架上配置或內嵌在其他物件的視窗物件。 這不適用於專為可在不含任何其他物件在堆積上配置的視窗物件。 換句話說，它不適用於不會內嵌在其他 c + + 物件的視窗物件。
+預設實作`CWnd::PostNcDestroy`不執行任何動作，這是適合在堆疊框架上配置或內嵌在其他物件的視窗物件。 這不適用於專為可在不含任何其他物件在堆積上配置的視窗物件。 換句話說，它並不適用於不會內嵌在其他的視窗物件C++物件。
 
-這些專為單獨在堆積上配置的類別覆寫`PostNcDestroy`方法，以執行**刪除此**。 此陳述式會釋放任何與 c + + 物件相關聯的記憶體。 即使預設`CWnd`解構函式呼叫`DestroyWindow`如果*m_hWnd*是不是 NULL，這不會導致無限遞迴因為控制代碼將清除階段期間會卸離和 NULL。
+這些專為單獨在堆積上配置的類別覆寫`PostNcDestroy`方法，以執行**刪除此**。 此陳述式會釋放任何與相關聯的記憶體C++物件。 即使預設`CWnd`解構函式呼叫`DestroyWindow`如果*m_hWnd*是不是 NULL，這不會導致無限遞迴因為控制代碼將清除階段期間會卸離和 NULL。
 
 > [!NOTE]
->  系統通常會呼叫`CWnd::PostNcDestroy`它會處理 Windows 控制訊息之後，`HWND`和 c + + 視窗物件已不再連線。 系統也會呼叫`CWnd::PostNcDestroy`中的大部分實作[cwnd:: Create](../mfc/reference/cwnd-class.md#create)呼叫發生錯誤。 自動清除規則會在本主題稍後所述。
+>  系統通常會呼叫`CWnd::PostNcDestroy`它會處理 Windows 控制訊息之後，`HWND`和C++視窗物件已不再連線。 系統也會呼叫`CWnd::PostNcDestroy`中的大部分實作[cwnd:: Create](../mfc/reference/cwnd-class.md#create)呼叫發生錯誤。 自動清除規則會在本主題稍後所述。
 
 ## <a name="auto-cleanup-classes"></a>自動清除類別
 
-下列類別並未設計成自動清除。 它們通常被內嵌在其他 c + + 物件，或在堆疊上：
+下列類別並未設計成自動清除。 它們通常內嵌在其他C++物件或堆疊上：
 
 - 所有標準 Windows 控制項 (`CStatic`， `CEdit`，`CListBox`等等)。
 
@@ -78,20 +78,20 @@ Windows 中的每個物件 (類別的物件衍生自`CWnd`) 表示這兩個 c + 
 
 ## <a name="when-to-call-delete"></a>要呼叫刪除時
 
-我們建議您呼叫`DestroyWindow`終結 Windows 物件，在 c + + 方法或全域`DestroyWindow`API。
+我們建議您呼叫`DestroyWindow`終結 Windows 物件是C++方法或全域`DestroyWindow`API。
 
 不會呼叫全域`DestroyWindow`終結的 MDI 子視窗的 API。 您應該使用虛擬方法`CWnd::DestroyWindow`改。
 
-C + + 視窗物件，不會執行自動清除，使用**刪除**運算子可能會造成記憶體流失，當您嘗試呼叫`DestroyWindow`在`CWnd::~CWnd`如果 VTBL 不是指向正確的衍生類別的解構函式。 這是因為系統找不到適當的損毀時要呼叫方法。 使用`DestroyWindow`而非**刪除**可避免這些問題。 因為這可能是難以察覺的錯誤，在偵錯模式中編譯會產生下列警告您是否有風險。
+針對C++不會執行自動清除的視窗物件使用**刪除**運算子可能會造成記憶體流失，當您嘗試呼叫`DestroyWindow`中`CWnd::~CWnd`如果 VTBL 未指向正確衍生解構函式類別。 這是因為系統找不到適當的損毀時要呼叫方法。 使用`DestroyWindow`而非**刪除**可避免這些問題。 因為這可能是難以察覺的錯誤，在偵錯模式中編譯會產生下列警告您是否有風險。
 
 ```
 Warning: calling DestroyWindow in CWnd::~CWnd
     OnDestroy or PostNcDestroy in derived class will not be called
 ```
 
-在 c + + Windows 執行自動清除的物件，您必須呼叫`DestroyWindow`。 如果您使用**刪除**運算子直接，MFC 診斷記憶體配置器會通知您，您會釋放記憶體兩倍。 兩個項目是您第一次的明確呼叫，並間接呼叫來**刪除此**中的自動清除實作`PostNcDestroy`。
+如果是C++Windows 不要執行自動清除的物件，您必須呼叫`DestroyWindow`。 如果您使用**刪除**運算子直接，MFC 診斷記憶體配置器會通知您，您會釋放記憶體兩倍。 兩個項目是您第一次的明確呼叫，並間接呼叫來**刪除此**中的自動清除實作`PostNcDestroy`。
 
-之後呼叫`DestroyWindow`非自動清除物件上的 c + + 物件仍然會但*m_hWnd*會是 NULL。 之後呼叫`DestroyWindow`自動清除物件上的 c + + 物件就會消失，由 c + + delete 運算子，自動清除實作中釋放`PostNcDestroy`。
+之後呼叫`DestroyWindow`非自動清除物件上C++物件仍然會但*m_hWnd*會是 NULL。 之後呼叫`DestroyWindow`自動清除物件上C++物件就會消失，由釋放C++刪除自動清除實作中的運算子`PostNcDestroy`。
 
 ## <a name="see-also"></a>另請參閱
 

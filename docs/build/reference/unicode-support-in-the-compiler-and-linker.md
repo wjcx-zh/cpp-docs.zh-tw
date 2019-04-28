@@ -9,15 +9,15 @@ f1_keywords:
 helpviewer_keywords:
 - Unicode, Visual C++
 ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317324"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>編譯器和連結器中的 Unicode 支援
 
-大部分的 Visual c + + 建置工具支援 Unicode 輸入和輸出。
+最 VisualC++建置工具支援 Unicode 輸入和輸出。
 
 ## <a name="filenames"></a>檔案名稱
 
@@ -35,7 +35,7 @@ Unicode 可以輸入下列編碼方式中的原始程式碼檔案：
 
 - Bom 的 utf-8
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 在編譯期間，編譯器會輸出到主控台以 utf-16 的診斷。  可以在您的主控台中顯示的字元取決於主控台視窗的內容。  編譯器輸出重新導向至檔案是目前的 ANSI 主控台字碼頁。
 
@@ -49,4 +49,4 @@ Unicode 可以輸入下列編碼方式中的原始程式碼檔案：
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 MSVC 工具組，從命令列](../building-on-the-command-line.md)
+[從命令列使用 MSVC 工具組](../building-on-the-command-line.md)

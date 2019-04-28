@@ -9,11 +9,11 @@ helpviewer_keywords:
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
 ms.openlocfilehash: 62784933cbecd4f312c52ae98cab7d232b893f35
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318637"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (影像擁有安全例外狀況處理常式)
 
@@ -29,13 +29,13 @@ ms.locfileid: "57822336"
 
 如果 **/SAFESEH:NO**指定，連結器不會產生安全的例外狀況處理常式的表格的映像，即使所有模組都都與安全的例外狀況處理功能相容。
 
-連結器不會產生映像的最常見原因是因為一或多個輸入檔案 （模組） 連結器無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的常見原因是因為它使用舊版 Visual c + + 編譯器建立。
+連結器不會產生映像的最常見原因是因為一或多個輸入檔案 （模組） 連結器無法與安全例外狀況處理常式的功能相容。 模組不相容於安全例外狀況處理常式的常見原因是因為它使用從舊版視覺效果的編譯器建立C++。
 
 您也可以註冊為結構化例外狀況處理常式函式，使用[。SAFESEH](../../assembler/masm/dot-safeseh.md)。
 
 不可能將標示的現有二進位為有安全例外狀況處理常式 （或任何例外狀況處理常式）;必須在建置階段新增安全的例外狀況處理的詳細資訊。
 
-建置安全的例外狀況處理常式的表格連結器的能力取決於使用 C 執行階段程式庫的應用程式。 如果連結[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)和您想要的安全例外狀況處理常式的資料表，您必須提供載入的組態結構 （例如可以 loadcfg.c CRT 原始程式檔中找到），其中包含 Visual c + + 定義的所有項目。 例如: 
+建置安全的例外狀況處理常式的表格連結器的能力取決於使用 C 執行階段程式庫的應用程式。 如果連結[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)和您想要的安全例外狀況處理常式的資料表，您必須提供載入的組態結構 （例如可以 loadcfg.c CRT 原始程式檔中找到），其中包含定義視覺效果的所有項目C++。 例如: 
 
 ```
 #include <windows.h>
@@ -98,7 +98,7 @@ const IMAGE_LOAD_CONFIG_DIRECTORY32_2 _load_config_used = {
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **連結器**資料夾。
 

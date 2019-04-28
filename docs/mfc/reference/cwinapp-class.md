@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323355"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -333,7 +333,7 @@ class CWinApp : public CWinThread
 
 應用程式物件會提供成員函式，來初始化您的應用程式 （和它的每個執行個體），以及在執行應用程式。
 
-使用 Microsoft Foundation classes 的每個應用程式只能包含一個物件衍生自`CWinApp`。 此物件建構其他 c + + 的全域物件時所建構，並已可使用，當呼叫 Windows`WinMain`函式，這由 Microsoft Foundation Class Library 所提供。 宣告您的衍生`CWinApp`全域層級的物件。
+使用 Microsoft Foundation classes 的每個應用程式只能包含一個物件衍生自`CWinApp`。 此物件建構時其他C++全域物件的建構和已可使用，當呼叫 Windows`WinMain`函式，這由 Microsoft Foundation Class Library 所提供。 宣告您的衍生`CWinApp`全域層級的物件。
 
 當您衍生的應用程式類別，從`CWinApp`，覆寫[InitInstance](#initinstance)成員函式來建立您的應用程式主視窗物件。
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 根據預設，架構會初始化`m_pszHelpFilePath`的應用程式名稱 」。HLP"附加。 若要變更說明檔的名稱，請設定`m_pszHelpFilePath`指向包含所需的說明檔的完整名稱的字串。 若要這樣做的方便位置是在應用程式的[InitInstance](#initinstance)函式。 `m_pszHelpFilePath` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果您將值指派給`m_pszHelpFilePath`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
+> 如果您將值指派給`m_pszHelpFilePath`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如：
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果您將值指派給`m_pszProfileName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
+> 如果您將值指派給`m_pszProfileName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如：
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 

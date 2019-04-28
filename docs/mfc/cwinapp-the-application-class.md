@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinApp class [MFC], WinMain
 ms.assetid: 935822bb-d463-481b-a5f6-9719d68ed1d5
 ms.openlocfilehash: d9f0d4f5ba6b6b070b23ce98ecda8c7accf44934
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241558"
 ---
 # <a name="cwinapp-the-application-class"></a>CWinApp:Application 類別
 
@@ -35,7 +35,7 @@ ms.locfileid: "57258706"
 為了初始化應用程式，`WinMain` 會呼叫應用程式物件的 `InitApplication` 和 `InitInstance` 成員函式。 若要執行的應用程式訊息迴圈中，`WinMain`呼叫**執行**成員函式。 在終止時，`WinMain` 會呼叫應用程式物件的 `ExitInstance` 成員函式。
 
 > [!NOTE]
->  名稱中所示**粗體**這份文件中指出的 Mfc 程式庫和 Visual c + + 所提供的項目。 以 `monospaced` 類型顯示的名稱，表示您建立或覆寫的項目。
+>  名稱中所示**粗體**本文件中指出提供的 Microsoft Foundation 類別庫和視覺項目C++。 以 `monospaced` 類型顯示的名稱，表示您建立或覆寫的項目。
 
 ## <a name="see-also"></a>另請參閱
 

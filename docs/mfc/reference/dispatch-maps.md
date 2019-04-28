@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322510"
 ---
 # <a name="dispatch-maps"></a>分派對應
 
@@ -130,7 +130,7 @@ DISP_FUNCTION(
 
 *VtRetVal*引數是 VARTYPE 類型。 下列可能的值，這個引數取自`VARENUM`列舉型別：
 
-|符號|傳回型別|
+|符號|傳回類型|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
@@ -169,9 +169,9 @@ DISP_FUNCTION(
 |VTS_VARIANT|`const VARIANT*` 或 `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
 |VTS_PI2|__short\*__|
-|VTS_PI4|__長\*__|
-|VTS_PR4|__浮點數\*__|
-|VTS_PR8|__雙精度浮點數\*__|
+|VTS_PI4|__long\*__|
+|VTS_PR4|__float\*__|
+|VTS_PR8|__double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -206,7 +206,7 @@ DISP_PROPERTY(
 *pszName*<br/>
 屬性外部名稱。
 
-*成員名稱*<br/>
+*memberName*<br/>
 儲存屬性的成員變數的名稱。
 
 *vtPropType*<br/>
@@ -261,7 +261,7 @@ DISP_PROPERTY_EX(
 *memberGet*<br/>
 用來取得屬性的成員函式的名稱。
 
-*成員集合*<br/>
+*memberSet*<br/>
 用來設定屬性的成員函式的名稱。
 
 *vtPropType*<br/>
@@ -298,7 +298,7 @@ DISP_PROPERTY_NOTIFY(
 *szExternalName*<br/>
 屬性外部名稱。
 
-*成員名稱*<br/>
+*memberName*<br/>
 儲存屬性的成員變數的名稱。
 
 *pfnAfterSet*<br/>

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
 ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57821933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274114"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL 常見問題集
 
@@ -41,11 +41,11 @@ MFC DLL 會在啟動期間建立新的 MFC 執行緒將會停止回應的應用�
 
 ## <a name="mfc_multithreaded_2"></a> 多執行緒應用程式可以存取不同的執行緒中的 MFC DLL 嗎？
 
-多執行緒應用程式可以從不同的執行緒存取的動態連結至 MFC 的標準 MFC Dll 和 MFC 擴充 Dll。 和 Visual c + + 4.2 版，從應用程式可以存取從應用程式中建立的多個執行緒以靜態方式連結至 MFC 的標準 MFC Dll。
+多執行緒應用程式可以從不同的執行緒存取的動態連結至 MFC 的標準 MFC Dll 和 MFC 擴充 Dll。 並從 視覺效果C++4.2 版中，應用程式可以存取從應用程式中建立的多個執行緒以靜態方式連結至 MFC 的標準 MFC Dll。
 
 4.2 之前的版本，只有一個外部執行緒，可以將附加到靜態連結至 MFC 之標準 MFC DLL。
 
-請注意，詞彙 USRDLL 不再使用 Visual c + + 文件中。 靜態連結至 MFC 之標準 MFC DLL 有相同的特性，與之前的 usrdll。
+請注意，在視覺效果不會再使用詞彙 USRDLLC++文件。 靜態連結至 MFC 之標準 MFC DLL 有相同的特性，與之前的 usrdll。
 
 ## <a name="mfc_prohibited_classes"></a> 是否有任何 MFC 類別或函式，不能用於 MFC DLL？
 

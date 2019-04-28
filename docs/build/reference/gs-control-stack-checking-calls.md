@@ -13,11 +13,11 @@ helpviewer_keywords:
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
 ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270844"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (控制堆疊檢查呼叫)
 
@@ -55,9 +55,9 @@ A*堆疊探查*是一連串的函式呼叫的開始處的編譯器插入的程�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 請輸入 **/Gs**編譯器選項，以及選擇性大小**其他選項**。 選擇 **[確定]** 或是**套用**以儲存變更。
 
@@ -68,4 +68,4 @@ A*堆疊探查*是一連串的函式呼叫的開始處的編譯器插入的程�
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

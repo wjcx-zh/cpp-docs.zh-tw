@@ -49,11 +49,11 @@ helpviewer_keywords:
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
 ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286626"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0、_ismbcl0_l、_ismbcl1、_ismbcl1_l、_ismbcl2、_ismbcl2_l
 
@@ -108,12 +108,12 @@ int _ismbcl2_l(
 
 |常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS 非日文漢字： 0x8140< < =*c*< lt;=0x889e。|
-|**_ismbcl0_l**|JIS 非日文漢字： 0x8140< < =*c*< lt;=0x889e。|
-|**_ismbcl1**|JIS 層級 1: 0x889f< < =*c*< lt;=0x9872。|
-|**_ismbcl1_l**|JIS 層級 1: 0x889f< < =*c*< lt;=0x9872。|
-|**_ismbcl2**|JIS 層級 2: 0x989f< < =*c*< lt;=0xeaa4。|
-|**_ismbcl2_l**|JIS 層級 2: 0x989f< < =*c*< lt;=0xeaa4。|
+|**_ismbcl0**|JIS 非日文漢字：0x8140<=*c*<=0x889E.|
+|**_ismbcl0_l**|JIS 非日文漢字：0x8140<=*c*<=0x889E.|
+|**_ismbcl1**|JIS 層級 1：0x889F<=*c*<=0x9872.|
+|**_ismbcl1_l**|JIS 層級 1：0x889F<=*c*<=0x9872.|
+|**_ismbcl2**|JIS 層級 2：0x989F<=*c*<=0xEAA4.|
+|**_ismbcl2_l**|JIS 層級 2：0x989F<=*c*<=0xEAA4.|
 
 函式會檢查指定的值*c*符合測試條件，上述步驟，但不是會檢查*c*是否為有效的多位元組字元。 如果較低的位元組介於 0x00 - 0x3F、0x7F 或 0xFD - 0xFF 的範圍內，這些函式會傳回非零值，指出字元符合測試條件。 使用 [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) 來測試是否已定義多位元組字元。
 

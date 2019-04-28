@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
 ms.openlocfilehash: 4aeac558c28d0ac89707423433e51f348bc35d29
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276714"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo 類別
 
@@ -67,7 +67,7 @@ class CWndClassInfo
 
 根據預設， [CWindowImpl](../../atl/reference/cwindowimpl-class.md)包含`DECLARE_WND_CLASS`巨集來建立視窗會根據新的視窗類別。 {2&gt;declare_wnd_class&lt;2 提供控制項的預設樣式和背景色彩。 如果您想要指定樣式和您自己的背景色彩，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_CLASS_EX 巨集。
 
-如果您想要建立視窗，根據現有的視窗類別，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_SUPERCLASS 巨集。 例如: 
+如果您想要建立視窗，根據現有的視窗類別，衍生您的類別，從`CWindowImpl`並將您的類別定義中納入 DECLARE_WND_SUPERCLASS 巨集。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwndclassinfo-class_1.h)]
 

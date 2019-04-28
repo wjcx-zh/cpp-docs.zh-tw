@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
 ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260158"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr 類別
 
@@ -77,7 +77,7 @@ class CAutoPtr
 
 `CAutoPtr` 也可以簡化建立集合的指標。 而不是衍生的集合類別，並覆寫解構函式，是讓集合的工作變得更容易`CAutoPtr`物件。 刪除集合時，`CAutoPtr`物件會超出範圍而自動刪除其本身。
 
-[CHeapPtr](../../atl/reference/cheapptr-class.md)變體運作方式與`CAutoPtr`，差異在於它們配置和釋放記憶體，而不 c + + 中使用不同堆積函式**新**並**刪除**運算子。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)大致`CAutoPtr`、 唯一的差別在於它會使用**vector new []** 並**向量 delete []** 來配置和釋放記憶體。
+[CHeapPtr](../../atl/reference/cheapptr-class.md)變體運作方式與`CAutoPtr`，差異在於它們配置和釋放記憶體使用不同的堆積函式，而不是C++**新**並**刪除**運算子。 [CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)大致`CAutoPtr`、 唯一的差別在於它會使用**vector new []** 並**向量 delete []** 來配置和釋放記憶體。
 
 另請參閱[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)並[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)陣列或清單的智慧型指標需要時。
 

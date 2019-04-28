@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
 ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315712"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc: __cplusplus （啟用更新的 __cplusplus 巨集）
 
-**/Zc: __cplusplus**編譯器選項會啟用 **\_ \_cplusplus**回報最新的 c + + 語言標準支援的更新的值的前置處理器巨集。 根據預設，Visual Studio 一律會傳回值"199711 L"  **\_ \_cplusplus**前置處理器巨集。
+**/Zc: __cplusplus**編譯器選項會啟用 **\_ \_cplusplus**來回報更新的值的前置處理器巨集最近C++語言標準支援。 根據預設，Visual Studio 一律會傳回值"199711 L"  **\_ \_cplusplus**前置處理器巨集。
 
 ## <a name="syntax"></a>語法
 
@@ -41,9 +41,9 @@ Zc:__cplusplus-（停用）|任何值|199711L
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 新增 **/zc: __cplusplus**或是 **/Zc:__cplusplus-** 來**其他選項：** 窗格。
 

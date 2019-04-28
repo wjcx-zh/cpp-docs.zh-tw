@@ -8,15 +8,15 @@ helpviewer_keywords:
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
 ms.openlocfilehash: e41a6dcb8de4a8608d065cce5bce2595cd96a84f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272841"
 ---
 # <a name="additional-msvc-build-tools"></a>其他 MSVC 建置工具
 
-Visual c + + 提供下列的命令列公用程式來檢視或操作組建輸出：
+視覺化C++提供下列的命令列公用程式來檢視或操作組建輸出：
 
 
 - [LIB。EXE](lib-reference.md)用來建立及管理通用物件檔案格式 (COFF) 物件檔的程式庫。 它也可以用來建立匯出檔案和程式庫匯入參考匯出的定義。

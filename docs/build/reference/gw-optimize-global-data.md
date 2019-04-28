@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Gw compiler option [C++]
 ms.assetid: 6f90f4e9-5eb8-4c47-886e-631278a5a4a9
 ms.openlocfilehash: 5796f353414a021908147bdd2f296ef8e02f69ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270707"
 ---
 # <a name="gw-optimize-global-data"></a>/Gw (最佳化全域資料)
 
@@ -32,13 +32,13 @@ ms.locfileid: "57816902"
 
 您也可以使用[/opt: icf](opt-optimizations.md)並[/LTCG](ltcg-link-time-code-generation.md)在一起，以合併多個目的檔任何相同唯讀全域資料編譯可執行檔中的連結器選項 **/Gw**選項。
 
-如需詳細資訊，請參閱 <<c0> [ 簡介 /Gw 編譯器參數](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)Visual c + + 小組部落格上。
+如需詳細資訊，請參閱 <<c0> [ 簡介 /Gw 編譯器參數](http://blogs.msdn.com/b/vcblog/archive/2013/09/11/introducing-gw-compiler-switch.aspx)視覺效果上C++團隊部落格。</c0>
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取  **C/c + +** 資料夾。
+1. 選取  **C /C++** 資料夾。
 
 1. 選取 **命令列**屬性頁。
 
@@ -51,4 +51,4 @@ ms.locfileid: "57816902"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

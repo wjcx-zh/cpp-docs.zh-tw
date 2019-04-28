@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295483"
 ---
 # <a name="set-class"></a>set 類別
 
@@ -116,7 +116,7 @@ class set
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關集合之記憶體配置和解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
@@ -488,7 +488,7 @@ size_type count(const Key& key) const;
 
 成員函式會傳回下列範圍中的項目數：
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))。
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>範例
 
@@ -703,7 +703,7 @@ emplace(
 
 |參數|描述|
 |-|-|
-|*引數*|除非 set 已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
+|*args*|除非 set 已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -784,7 +784,7 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|*引數*|除非 set 已經包含該項目，或者，更常見的說法是，除非它已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
+|*args*|除非 set 已經包含該項目，或者，更常見的說法是，除非它已經包含值是以同等方式排序的項目，否則會轉送引數來建構要插入 set 的項目。|
 |*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
@@ -1305,7 +1305,7 @@ IList);
 
 |參數|描述|
 |-|-|
-|*val*|除非其中包含了值已經過對等地排序的元素，否則為要插入 set 中的元素值。|
+|*Val*|除非其中包含了值已經過對等地排序的元素，否則為要插入 set 中的元素值。|
 |*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 |*ValTy*|指定 set 可用於建構的元素的引數類型的範本參數[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|
@@ -1991,7 +1991,7 @@ set(
 |-|-|
 |*Al*|儲存體配置器類別，要用於此 set 物件，其預設為`Allocator`。|
 |*Comp*|`const Traits` 類型的比較函式，可用來排序 set 中的項目，預設為 `Compare`。|
-|*右方*|要從中複製所建構之 set 的 set。|
+|*Rght*|要從中複製所建構之 set 的 set。|
 |*第一個*|要複製的元素範圍中第一個元素的位置。|
 |*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
 |*IList*|從中複製項目的 initializer_list。|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322237"
 ---
 # <a name="event-maps"></a>事件對應
 
@@ -21,7 +21,7 @@ MFC 程式庫會針對引發事件提供最佳化的程式設計模型。 在這
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`巨集表示控制項就會引發內建 Click 事件，每次偵測到滑鼠按一下。 如需其他內建事件更詳細的清單，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。 巨集也可用於表示自訂事件。
+`EVENT_STOCK_CLICK`巨集表示控制項就會引發內建 Click 事件，每次偵測到滑鼠按一下。 如需其他內建事件更詳細的清單，請參閱文章[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)。 巨集也可用於表示自訂事件。
 
 雖然事件對應巨集很重要，但您通常不會直接將它們插入。 這是因為當您使用它來關聯事件引發函式與事件時，[屬性] 視窗會自動在您的原始程式檔中建立事件對應項目。 每當您要編輯或加入事件對應項目時，都可以使用 [屬性] 視窗。
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 在類別宣告結尾使用 DECLARE_EVENT_MAP 巨集。 接著，在定義類別的成員函式的.cpp 檔案，使用 BEGIN_EVENT_MAP 巨集、 巨集項目為每個控制項的事件和 END_EVENT_MAP 巨集來宣告事件清單的結尾。
 
-如需有關事件對應的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
+如需有關事件對應的詳細資訊，請參閱文章[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -89,7 +89,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 在定義您的類別成員函式的實作 (.cpp) 檔案，啟動事件對應 BEGIN_EVENT_MAP 巨集，然後新增巨集項目，每個事件，並完成事件對應 END_EVENT_MAP 巨集。
 
-如需有關事件對應和 BEGIN_EVENT_MAP 巨集的詳細資訊，請參閱文章[ActiveX 控制項： 事件](../../mfc/mfc-activex-controls-events.md)。
+如需有關事件對應和 BEGIN_EVENT_MAP 巨集的詳細資訊，請參閱文章[ActiveX 控制項：事件](../../mfc/mfc-activex-controls-events.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -201,7 +201,7 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*引數是以空格分隔的清單中的值`VTS_`常數。 一或多個以空格分隔，不是逗號，這些值會指定函式的參數清單。 例如: 
+*VtsParams*引數是以空格分隔的清單中的值`VTS_`常數。 一或多個以空格分隔，不是逗號，這些值會指定函式的參數清單。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
 ms.openlocfilehash: d6f02b2106693226f6380e935a54e04e10d5b4f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351822"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064:Apartment Model 執行緒在 ActiveX 控制項
 
 > [!NOTE]
 >  下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-這個技術提示說明如何啟用 ActiveX 控制項中的 apartment model 執行緒。 請注意，apartment model 執行緒僅適用於在 4.2 或更新版本的 Visual c + + 版本中。
+這個技術提示說明如何啟用 ActiveX 控制項中的 apartment model 執行緒。 請注意，apartment model 執行緒只支援在視覺效果C++4.2 或更新版本的版本。
 
 ## <a name="what-is-apartment-model-threading"></a>什麼是 Apartment Model 執行緒
 
@@ -101,7 +101,7 @@ else
 }
 ```
 
-如果您的控制項專案由 Visual c + + 版本 4.1 或更新版本的 ControlWizard 產生，此旗標將會出現在程式碼中。 不不需要註冊的執行緒模型的任何變更。
+如果您的控制項專案由 ControlWizard 視覺效果中產生C++4.1 或更新版本的版本，這個旗標將會出現在程式碼中。 不不需要註冊的執行緒模型的任何變更。
 
 如果您的專案由舊版 ControlWizard 產生，您現有的程式碼會有布林值，做為第六個參數。 如果現有的參數為 TRUE，將它變更為*afxRegInsertable | afxRegApartmentThreading*。 如果現有的參數為 FALSE，將它變更為*afxRegApartmentThreading*。
 

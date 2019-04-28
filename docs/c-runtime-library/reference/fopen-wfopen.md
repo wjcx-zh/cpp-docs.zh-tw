@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
 ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333335"
 ---
 # <a name="fopen-wfopen"></a>fopen、_wfopen
 
@@ -115,7 +115,7 @@ FILE *_wfopen(
 
 字元字串*模式*指定，如下所示要求檔案的存取種類。
 
-|*mode*|存取|
+|*mode*|Access|
 |-|-|
 | **"r"** | 開啟以讀取。 如果檔案不存在或無法找到**fopen**呼叫就會失敗。 |
 | **"w"** | 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。 |
@@ -170,8 +170,8 @@ FILE *_wfopen(
 |**w+**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**b**|**\_O\_BINARY**|
 |**t**|**\_O\_TEXT**|
-|**C**|無|
-|**n**|無|
+|**C**|None|
+|**n**|None|
 |**S**|**\_O\_循序**|
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|

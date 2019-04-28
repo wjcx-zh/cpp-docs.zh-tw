@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C3400 到 C3499
-ms.date: 11/17/2017
+title: 編譯器錯誤 C3400 至 C3499
+ms.date: 04/21/2019
 f1_keywords:
 - C3401
 - C3402
@@ -98,14 +98,14 @@ helpviewer_keywords:
 - C3494
 - C3497
 ms.assetid: a5651dfb-c402-4e01-b3ae-28f371e51d6a
-ms.openlocfilehash: 24915a52bffb6826599e4d64d60a3ece6bee7675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 587b28cedb0ab8b11c244be4278c7dc17d1f4247
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576718"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281383"
 ---
-# <a name="compiler-errors-c3400-through-c3499"></a>編譯器錯誤 C3400 到 C3499
+# <a name="compiler-errors-c3400-through-c3499"></a>編譯器錯誤 C3400 至 C3499
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -154,7 +154,7 @@ ms.locfileid: "50576718"
 |編譯器錯誤 C3436|指定 /source-charset、 /execution-charset 或 /utf-8 時，將不支援 #pragma setlocale|
 |編譯器錯誤 C3437|指定 /source-charset、 /execution-charset 或 /utf-8 時，將不支援 #pragma execution_character_set|
 |編譯器錯誤 C3438|'*內容*':'*值*' 無法套用至受管理/WinRT 類別|
-|編譯器錯誤 C3439|layout_version (*數字*): 無效的版本號碼|
+|編譯器錯誤 C3439|layout_version(*number*): invalid version number|
 |編譯器錯誤 C3440|'*宣告*': layout_version (*數目*) 與預先宣告不相容|
 |編譯器錯誤 C3441|'*宣告*':'*關鍵字*' 無法在定義類別之後套用。|
 |編譯器錯誤 C3442|初始化等位的多個成員: '*member1*'和'*member2*'|
@@ -216,3 +216,7 @@ ms.locfileid: "50576718"
 |[編譯器錯誤 C3498](compiler-error-c3498.md)|'*識別碼*': 您無法擷取管理/WinRT 類型的變數|
 |[編譯器錯誤 C3499](compiler-error-c3499.md)|已被指定為具有 void 傳回類型的 Lambda 無法傳回值|
 
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

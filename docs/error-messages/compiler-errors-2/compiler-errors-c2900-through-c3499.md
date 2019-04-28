@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2900 到 C2999
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2900 至 C2999
+ms.date: 04/21/2019
 f1_keywords:
 - C2900
 - C2901
@@ -72,14 +72,14 @@ helpviewer_keywords:
 - C2997
 - C2999
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
-ms.openlocfilehash: 4d430d1d446147c662f7f6405185aee75d95bc0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 5d443153582921775a72e5af647d65b102b80b0b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281673"
 ---
-# <a name="compiler-errors-c2900-through-c2999"></a>編譯器錯誤 C2900 到 C2999
+# <a name="compiler-errors-c2900-through-c2999"></a>編譯器錯誤 C2900 至 C2999
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -90,7 +90,7 @@ ms.locfileid: "50466890"
 |錯誤|訊息|
 |-----------|-------------|
 |編譯器錯誤 C2900|'*宣告子*': WinRT 類別中的成員函式樣板必須是 'private'、 'internal' protected private'|
-|編譯器錯誤 C2901|'*識別碼*': 泛型介面或委派不能是公用|
+|編譯器錯誤 C2901|'*識別碼*':泛型介面或委派不能是公用|
 |[編譯器錯誤 C2902](compiler-error-c2902.md)|'*語彙基元*': 未預期語彙基元下列' 範本/泛型 '，必須是識別項|
 |[編譯器錯誤 C2903](compiler-error-c2903.md)|'*識別碼*': 符號不是類別範本/泛型或函式範本/泛型|
 |[編譯器錯誤 C2904](compiler-error-c2904.md)|'*識別碼*': 已經使用目前的範圍中的範本名稱|
@@ -107,11 +107,11 @@ ms.locfileid: "50466890"
 |編譯器錯誤 C2915|'*識別碼*':'*型別*' 不能直接用在 WinRT 類型的已發行介面上。 使用 ' platform:: object ^' 改為傳遞這種類型|
 |編譯器錯誤 C2916|'*識別碼*': [FlagsAttribute] 必須 （僅限） 指定的公用列舉上使用 'unsigned int' 基礎類型|
 |[編譯器錯誤 C2917](compiler-error-c2917.md)|'*識別碼*': 無效的樣板-參數|
-|[編譯器錯誤 C2918](compiler-error-c2918.md)|'*識別碼*': 索引的屬性不能用在 WinRT 類型的已發行介面上|
-|[編譯器錯誤 C2919](compiler-error-c2919.md)|'*型別*': 運算子不能用在 WinRT 類型的已發行介面上|
+|[編譯器錯誤 C2918](compiler-error-c2918.md)|'*識別碼*':索引的屬性不能用在 WinRT 類型的已發行介面上|
+|[編譯器錯誤 C2919](compiler-error-c2919.md)|'*型別*':運算子不能用在 WinRT 類型的已發行介面上|
 |[編譯器錯誤 C2920](compiler-error-c2920.md)|重複定義: '*型別*': 類別範本/泛型已宣告為*宣告*'|
 |[編譯器錯誤 C2921](compiler-error-c2921.md)|重複定義: '*型別*': 類別範本/泛型正重新宣告為*宣告*'|
-|編譯器錯誤 C2922|'*介面*': WinRT 介面不能包含靜態成員|
+|編譯器錯誤 C2922|'*介面*':WinRT 介面不能包含靜態成員|
 |[編譯器錯誤 C2923](compiler-error-c2923.md)|'*型別*':'*識別項*'不是有效的範本/泛型型別引數為參數'*參數*'|
 |編譯器錯誤 C2924|不在 R2 中的 __declspec （interrupt） 常式引數|
 |編譯器錯誤 C2925|__declspec （interrupt） 常式不可使用浮點|
@@ -127,7 +127,7 @@ ms.locfileid: "50466890"
 |[編譯器錯誤 C2935](compiler-error-c2935.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為全域函式|
 |[編譯器錯誤 C2936](compiler-error-c2936.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為全域資料變數|
 |[編譯器錯誤 C2937](compiler-error-c2937.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為全域 typedef|
-|編譯器錯誤 C2938|'*識別碼*': 無法特製化別名範本|
+|編譯器錯誤 C2938|'*識別碼*':特製化別名範本失敗|
 |[編譯器錯誤 C2939](compiler-error-c2939.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為區域資料變數|
 |[編譯器錯誤 C2940](compiler-error-c2940.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為區域 typedef|
 |[編譯器錯誤 C2941](compiler-error-c2941.md)|'*型別*': 範本識別碼/泛用識別碼重新定義為本機'*項目*'|
@@ -154,7 +154,7 @@ ms.locfileid: "50466890"
 |[編譯器錯誤 C2962](compiler-error-c2962.md)|語法錯誤: '*語彙基元*': 必須是樣板類別成員函式定義的結尾 '}'|
 |編譯器錯誤 C2963|已過時。|
 |編譯器錯誤 C2964|已過時。|
-|編譯器錯誤 C2965|__declspec (*規範*) 不支援 /kernel|
+|編譯器錯誤 C2965|__declspec(*specifier*) is not supported with /kernel|
 |編譯器錯誤 C2966|'*identifier1*': 必須為其基底類別的相同 __declspec(code_seg(...))*identifier2*'|
 |編譯器錯誤 C2967|'*識別碼*': 覆寫虛擬函式必須具有相同的 __declspec(code_seg(...)) 為覆寫虛擬函式|
 |編譯器錯誤 C2968|'*識別碼*': 遞迴的別名宣告|
@@ -169,7 +169,7 @@ ms.locfileid: "50466890"
 |[編譯器錯誤 C2977](compiler-error-c2977.md)|'*型別*': 太多範本/泛型引數|
 |[編譯器錯誤 C2978](compiler-error-c2978.md)|語法錯誤： 必須是 '*keyword1*'*keyword2*'; 找到類型'*型別*' 非類型; 泛型中不支援參數|
 |[編譯器錯誤 C2979](compiler-error-c2979.md)|不支援在泛型中進行明確特製化|
-|編譯器錯誤 C2980|C + + 例外狀況處理不支援 /kernel|
+|編譯器錯誤 C2980|C++例外狀況處理不支援 /kernel|
 |編譯器錯誤 C2981|動態表單 '*關鍵字*' 不支援 /kernel|
 |編譯器錯誤 C2982|'*宣告*': 不同 code_seg： 已'*identifier1*[立即]*identifier2*'|
 |編譯器錯誤 C2983|'*宣告*': 所有宣告必須都具有相同的 __declspec(code_seg(...))|
@@ -188,4 +188,9 @@ ms.locfileid: "50466890"
 |[編譯器錯誤 C2996](compiler-error-c2996.md)|'*函式*': 遞迴函式樣板定義|
 |編譯器錯誤 C2997|'*函式*': 無法從預設成員初始設定式推算陣列界限|
 |[編譯器錯誤 C2998](compiler-error-c2998.md)|'*宣告子*': 不可為範本定義|
-|編譯器錯誤 C2999|未知錯誤，請選擇 Visual c + + [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔，如需詳細資訊|
+|編譯器錯誤 C2999|不明錯誤請選擇 視覺效果上的 技術支援 命令C++說明 功能表，或開啟技術支援說明檔，如需詳細資訊|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

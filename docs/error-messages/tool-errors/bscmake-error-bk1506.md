@@ -7,15 +7,15 @@ helpviewer_keywords:
 - BK1506
 ms.assetid: f51f8cea-f8fc-4323-bcf2-b7bd119792ee
 ms.openlocfilehash: d1f74a90657985a87accc13bc2b576c1d7fd5a4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279810"
 ---
 # <a name="bscmake-error-bk1506"></a>BSCMAKE 錯誤 BK1506
 
-無法開啟檔案 'filename' [: 原因]
+cannot open file 'filename' [: reason]
 
 BSCMAKE 無法開啟檔案。
 

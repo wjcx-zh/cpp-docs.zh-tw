@@ -3,11 +3,11 @@ title: ARM ABI 慣例概觀
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295227"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 慣例概觀
 
@@ -25,7 +25,7 @@ ARM 上的 Windows 會假設其始終在 ARMv7 架構上執行。 硬體中必�
 
 Windows on ARM 在由小到大的格式模式下執行。 MSVC 編譯器和 Windows 執行階段預期由小到大資料在所有的時間。 雖然 ARM 指令集架構 (ISA) 中的 SETEND 指令甚至容許以使用者模式程式碼，來變更目前的位元組序，但不建議這樣做，因為這對應用程式而言太過危險。 如果在由大到小格式的模式下產生例外狀況，則行為不可預期，且可能會在使用者模式中導致應用程式錯誤，或在核心模式中導致檢查錯誤。
 
-## <a name="alignment"></a>對齊方式
+## <a name="alignment"></a>對齊
 
 雖然 Windows 可讓 ARM 硬體無障礙地控制未對齊的整數存取，但在某些情況下，仍可能產生對齊錯誤。 請遵循下列規則，來進行對齊：
 
@@ -53,7 +53,7 @@ ARM 上 Windows 的指令集嚴格限制為 Thumb-2。 在此平台上執行的�
 
 - 目標指令必須是下列其中一種：
 
-   |16 位元 Opcode|類別|限制|
+   |16 位元作業碼|類別|限制|
    |---------------------|-----------|------------------|
    |MOV、MVN|Move|Rm != PC、Rd != PC|
    |LDR、LDR[S]B、LDR[S]H|從記憶體載入|但不是 LDR 常值格式|
@@ -116,7 +116,7 @@ Windows 僅支援具有 VFPv3-D32 副處理器支援的 ARM 變異。 這表示�
 
 下一個表格說明浮點狀態和控制暫存器 (FPSCR) 位元欄位：
 
-|位元|意義|動態？|角色|
+|Bits|意義|動態？|角色|
 |----------|-------------|---------------|----------|
 |31-28|NZCV|動態|狀態旗標|
 |27|QC|動態|累加飽和度|
@@ -197,7 +197,7 @@ VFP 暫存器不用於 variadic 函式，這時會忽略階段 C 規則 1 和 2�
 
 Windows 中預設核心模式堆疊是三個頁面 (12 KB)。 請注意，在核心模式中，不要建立具有大型堆疊緩衝區的函式。 中斷可能帶來非常小的堆疊空餘空間，會導致堆疊緊急檢查錯誤。
 
-## <a name="cc-specifics"></a>C/c + + 特性
+## <a name="cc-specifics"></a>C /C++詳細資料
 
 列舉型別是 32 位元整數類型，除非列舉型別中至少有一個值需要 64 位元雙字組儲存區。 在該情況下，列舉型別會提升至 64 位元整數類型。
 

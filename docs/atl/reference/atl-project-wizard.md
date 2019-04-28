@@ -8,15 +8,15 @@ helpviewer_keywords:
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
 ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261429"
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 
-Active Template Library (ATL) 是一份樣板架構 c + + 類別，可簡化撰寫小型且快速的 COM 物件。 [ATL 專案精靈] 建立專案結構，以包含 COM 物件。
+Active Template Library (ATL) 是一份範本為基礎C++類別，可簡化撰寫小型且快速的 COM 物件。 [ATL 專案精靈] 建立專案結構，以包含 COM 物件。
 
 ## <a name="overview"></a>總覽
 
@@ -30,7 +30,7 @@ Active Template Library (ATL) 是一份樣板架構 c + + 類別，可簡化撰�
 
 如需預設專案設定，包括選擇的字元集，以及連結的預設值，請參閱[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)。
 
-建立 ATL 專案之後，您可以將物件或控制項加入您的專案使用 Visual c + +[程式碼精靈](../../ide/adding-functionality-with-code-wizards-cpp.md)。 您可以進行下列類型的基本的 ATL 專案，使用程式碼精靈的增強功能：
+建立 ATL 專案之後，您可以將物件或控制項加入您的專案使用 Visual C++ [程式碼精靈](../../ide/adding-functionality-with-code-wizards-cpp.md)。 您可以進行下列類型的基本的 ATL 專案，使用程式碼精靈的增強功能：
 
 - [將物件和控制項新增至 ATL 專案](../../atl/reference/adding-objects-and-controls-to-an-atl-project.md)
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271342"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-因為 MSVC 編譯器的 c + + 函式使用名稱裝飾，所以您必須使用裝飾的名稱*internal_name*或使用定義匯出的函式`extern "C"`原始程式碼中。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
+因為 MSVC 編譯器會使用名稱裝飾，如C++函式中，您必須使用裝飾的名稱*internal_name*或者使用定義匯出的函式`extern "C"`原始程式碼中。 編譯器也會裝飾使用的 C 函式[__stdcall](../../cpp/stdcall.md)呼叫慣例以底線 (\_) 前置詞和後置詞組成 at 符號 (\@) 後面中的位元組數 （十進位）引數清單。
 
 若要尋找由編譯器所產生的裝飾的名稱，請使用[DUMPBIN](dumpbin-reference.md)工具或連結器[/typedefs/ 對應](map-generate-mapfile.md)選項。 裝飾名稱是編譯器專屬的。 如果您匯出 .DEF 檔案中的裝飾名稱，則連結至 DLl 的可執行檔必須也使用相同版本的編譯器進行建置。 這可確保呼叫端的裝飾名稱符合 .DEF 檔案中的已匯出名稱。
 

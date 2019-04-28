@@ -5,17 +5,17 @@ helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
 ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180822"
 ---
 # <a name="user-defined-tools"></a>使用者定義類型
 
 MFC 支援使用者定義的工具。 使用者定義的工具是執行外部的使用者指定的程式的特殊命令。 您可以使用自訂程序來管理使用者定義的工具。 不過，您無法使用此程序如果您的應用程式的物件不衍生自[CWinAppEx 類別](../mfc/reference/cwinappex-class.md)。 如需有關自訂的詳細資訊，請參閱 < [MFC 自訂](../mfc/customization-for-mfc.md)。
 
-如果您啟用使用者定義的工具支援，自訂 對話方塊會自動包含**工具** 索引標籤。如下圖所示**工具**頁面。
+如果您啟用使用者定義的工具支援，[自訂] 對話方塊會自動包含**工具** 索引標籤。如下圖所示**工具**頁面。
 
 ![工具索引標籤的 [自訂] 對話方塊](../mfc/media/custdialogboxtoolstab.png "工具 索引標籤，在 [自訂] 對話方塊") <br/>
 自訂對話方塊的 工具索引標籤

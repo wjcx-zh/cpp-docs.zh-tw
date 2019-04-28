@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
 ms.openlocfilehash: f2a3f2e64a6a859add8182de4fc883c735563e92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352919"
 ---
 # <a name="compiler-warning-level-1-c4544"></a>編譯器警告 (層級 1) C4544
 
-declaration'：在這個樣板宣告上已忽略的預設樣板引數
+' declaration':忽略這個樣板宣告上的預設範本引數
 
 在不正確的位置中指定預設樣板引數，並且已將其忽略。 類別樣板的預設樣板引數只能在宣告或類別樣板定義中指定，而不會在類別樣板的成員上指定。
 

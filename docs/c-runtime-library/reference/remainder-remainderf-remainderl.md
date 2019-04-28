@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
 ms.openlocfilehash: 9a9abe82e69122ca87f44e293e1da725c97045d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357638"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder、remainderf、remainderl
 
@@ -67,7 +67,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 **餘數**函式會計算浮點餘數*r*的*x* / *y*使得*x*  =  *n* \* *y* + *r*，其中*n*是值最接近的整數*x* / *y*並*n*甚至是每當&#124; *n*  - *x* / *y* &#124; = 1/2。 當*r* = 0， *r*具有相同的簽章為*x*。
 
-因為 c + + 允許多載，您可以呼叫多載**餘數**採用並傳回**float**或**長** **double**值。 在 C 程式中，**餘數**一律會採用兩個**double**引數並傳回**double**。
+因為C++允許多載，您可以呼叫多載**餘數**採用並傳回**float**或**長** **double**值。 在 C 程式中，**餘數**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

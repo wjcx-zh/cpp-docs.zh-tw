@@ -9,11 +9,11 @@ helpviewer_keywords:
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
 ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368652"
 ---
 # <a name="logical-and-operator-ampamp"></a>邏輯 AND 運算子： &amp;&amp;
 
@@ -41,7 +41,7 @@ char *pch = 0;
 
 如果 `pch` 是 null (0)，則永遠不會評估運算式的右邊。 因此，您無法透過 null 指標來進行指派。
 
-## <a name="operator-keyword-for-"></a>&& 的運算子關鍵字
+## <a name="operator-keyword-for-"></a>運算子關鍵字 （& s) （& s)
 
 **並**運算子是相等的文字**&&**。 有兩種方式來存取**並**在程式中的運算子： 包含標頭檔`iso646.h`，或使用編譯[/Za](../build/reference/za-ze-disable-language-extensions.md) （停用語言擴充功能） 編譯器選項。
 
@@ -69,6 +69,6 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 邏輯運算子](../c-language/c-logical-operators.md)

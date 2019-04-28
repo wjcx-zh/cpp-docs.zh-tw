@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2582
 ms.assetid: ee1b9378-8bcd-4792-b87e-6d7a466d29ed
 ms.openlocfilehash: 2becaf3cf955a9ed8dbbc22cbf11728bcc5bec34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366728"
 ---
 # <a name="compiler-error-c2582"></a>編譯器錯誤 C2582
 

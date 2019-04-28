@@ -1,19 +1,19 @@
 ---
 title: 依編譯器版本的編譯器警告
-ms.date: 10/24/2018
+ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: 79cf78de865f480530df89c778e9fe432b0bbf33
-ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
-ms.translationtype: MT
+ms.openlocfilehash: a84c3f14b8e6a6c877a13c3c9b1b851b0fc5ad05
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58142529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62359900"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>依編譯器版本的編譯器警告
 
-編譯器可以隱藏已使用所指定的版本之後引入的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 此選項可用於管理您的建置流程，當您引進新的工具組版本，並想要暫時隱藏新的警告。 此選項不會抑制新的錯誤訊息。 我們不建議您隱藏所有的新警告永久 ！ 我們建議您一律在最高標準的警告層級編譯 __/w4__，並移除 __/Wv__盡在您的組建選項。
+編譯器可以隱藏已使用所指定的版本之後引入的警告[/Wv](../../build/reference/compiler-option-warning-level.md)編譯器選項。 此選項可用於管理您的建置流程，當您引進新的工具組版本，並想要暫時隱藏新的警告。 此選項只會抑制警告，而不是新的錯誤訊息。 不會隱藏所有的新警告永久 ！ 我們建議您一律在最高標準的警告層級編譯`/W4`，並移除`/Wv`儘速在您的組建選項。
 
 這些版本的編譯器導入了新的警告：
 
@@ -27,652 +27,654 @@ ms.locfileid: "58142529"
 | Visual C++ 2012 | 17.00.51106.1 |
 | Visual C++ 2013 | 18.00.21005.1 |
 | Visual C++ 2015 RTM | 19.00.23026.0 |
-| Visual c + + 2015 Update 1 | 19.00.23506.0 |
-| Visual c + + 2015 Update 2 | 19.00.23918.0 |
+| 視覺化C++2015 Update 1 | 19.00.23506.0 |
+| 視覺化C++2015 Update 2 | 19.00.23918.0 |
 | Visual C++ 2015 Update 3 | 19.00.24215.1 |
 | Visual C++ 2017 RTM | 19.10.25017.0 |
-| Visual c + + 2017 版本 15.3 | 19.11.25506.0 |
-| Visual c + + 2017 15.5 版 | 19.12.25830.0 |
-| Visual c + + 2017 15.6 版 | 19.13.26128.0 |
-| Visual c + + 2017 15.7 版 | 19.14.26428.0 |
-| Visual c + + 2017 版 15.8 | 19.15.26726.0 |
-| Visual c + + 2017 版 15.9 | 19.16.26926.0 |
+| 視覺化C++2017年版本 15.3 | 19.11.25506.0 |
+| 視覺化C++2017年 15.5 版 | 19.12.25830.0 |
+| 視覺化C++2017年 15.6 版 | 19.13.26128.0 |
+| 視覺化C++2017年 15.7 版 | 19.14.26428.0 |
+| 視覺化C++2017年版 15.8 | 19.15.26726.0 |
+| 視覺化C++2017年版 15.9 | 19.16.26926.0 |
 | Visual C++ 2019 RTM | 19.20.27004.0 |
 
-您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要和組建編號 __/Wv__選項。 編譯器會報告所有符合指定的數目，以開始的版本的警告，且會抑制版本大於指定的數字的所有警告。 例如， __/Wv:17__會報告所有警告導入在或之前的任何版本的 Visual Studio 2012 中，且會抑制任何從 Visual Studio 2013 （第 18 版） 或更新版本的編譯器所引入的所有警告。 若要隱藏在 Visual Studio 2015 中引進的警告更新 2 和更新版本中，您可以使用 __/Wv:19.00.23506__。 使用 __/Wv:19.11__報告所有警告在任何版本的 Visual Studio 2017 15.5 版中之前, 的 Visual Studio 中引進，但會隱藏在 Visual Studio 2017 15.5 版和更新版本中引進的警告。
+您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要和組建編號`/Wv`選項。 編譯器會報告所有符合指定的數目，以開始的版本的警告，且會抑制版本大於指定的數字的所有警告。 比方說，`/Wv:17`報告引進在或之前的 Visual Studio 2012 的任何版本的警告，且會抑制任何從 Visual Studio 2013 （第 18 版） 或更新版本的編譯器所引入的警告。 若要隱藏在 Visual Studio 2015 中引進的警告更新 2 和更新版本中，您可以使用`/Wv:19.00.23506`。 使用`/Wv:19.11`回報任何 Visual Studio 2017 15.5 版中之前, 的 Visual Studio 版本中引進的警告，但隱藏在 Visual Studio 2017 15.5 版和更新版本中引進的警告。
 
-下列各節將列出每個您可以使用隱藏的 Visual c + + 版本所引進的警告 __/Wv__編譯器選項。 __/Wv__選項無法隱藏警告不會列出，比指定的版本的編譯器。
+下列各節列出視覺效果的每個版本所引入的警告C++，您可以使用隱藏`/Wv`編譯器選項。 `/Wv`選項無法隱藏警告未列出，比指定的版本的編譯器。
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-c-2019-rc-compiler-version-1920270040"></a>Visual c + + 2019 RC （編譯器版本 19.20.27004.0） 中導入的警告
+## <a name="warnings-introduced-in-visual-c-2019-rtw-compiler-version-1920270040"></a>視覺效果中所引進的警告C++2019 RTW （編譯器版本 19.20.27004.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.15__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.15`。
 
 |||
 |-|-|
-C4848 | 支援的標準屬性 ' 沒有\_唯一\_位址的 C + + 17 中及更早版本是廠商延伸模組
+| C4848 | `support for standard attribute 'no_unique_address' in C++17 and earlier is a vendor extension` |
 
 ::: moniker-end
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>在 Visual c + + 2017 版本 15.8 （編譯器版本 19.15.26726.0） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>視覺效果中所引進的警告C++2017年版 15.8 （編譯器版本 19.15.26726.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.14__。
-
-|||
-|-|-|
-C4643 | 向前宣告 '*識別碼*' c + + 標準不允許 std 命名空間中。
-C4644 | 在常數運算式中的巨集為基礎的 offsetof 模式的用法是標準;使用改為定義 c + + 標準程式庫中的 offsetof
-C4845 | \_\_declspec (無\_init\_全部)' 如果會忽略 ' / d1initall\[0\|1\|2\|3]' 未在命令列上指定
-C4846 | '*值*' 不是有效的引數的 ' / d1initall': 已忽略的命令列旗標
-C4847 | '\_\_declspec (否\_init\_全部)' 只能套用至函式、 類別類型或區域變數： 忽略
-C4866 | 編譯器不會強制執行呼叫的左到右評估順序 '*函式*'
-C5046 | '*函式*':包含型別具有內部連結未定義的符號
-C5047 | 使用非標準\_\_如果\_有模組不支援
-C5048 | 使用巨集 '*macroname*' 可能會導致不具決定性輸出
-C5049 | '*字串*':內嵌的完整路徑可能會導致電腦相關的輸出
-C5050 | 在匯入模組時可能不相容的環境 '*module_name*':*問題*
-C5100 | \_\_VA\_ARGS\_ \_是保留供 variadic 巨集
-C5101 | 函式類似巨集引數清單中的前置處理器指示詞的用法是未定義的行為
-C5102 | 忽略無效的命令列巨集定義 '*值*'
-C5103 | 貼上 '*token1*'和'*token2*' 不會產生有效的前置處理語彙基元
-C5104 | 找到 '*string1*#*string2*'在巨集取代清單中，這表示您'*string1*""#*string2*' 嗎？
-C5105 | 產生 'defined' 的巨集展開中有未定義的行為
-C5106 | 使用不同的參數名稱重新定義的巨集
-C5107 | 遺漏終止 '*char*' 字元
-
-## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual c + + 2017 版 15.7 （編譯器版本 19.14.26428.0） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.13__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.14`。
 
 |||
 |-|-|
-C4642|'*問題*': 無法匯入的條件約束對泛型參數'*參數*'
-C5045|編譯器會在記憶體負載，如果 /Qspectre 參數指定插入 Spectre 風險降低
+| C4643 | `Forward declaring 'identifier' in namespace std is not permitted by the C++ Standard.` |
+| C4644 | `usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead` |
+| C4845 | `'__declspec(no_init_all)' is ignored if '/d1initall[0|1|2|3]' was not specified on the command line` |
+| C4846 | `'value' is not a valid argument for '/d1initall': command-line flag ignored` |
+| C4847 | `'__declspec(no_init_all)' can only be applied to a function, a class type, or a local variable: ignored` |
+| C4866 | `compiler may not enforce left-to-right evaluation order for call to 'function'` |
+| C5046 | `'function': Symbol involving type with internal linkage not defined` |
+| C5047 | `use of nonstandard __if_exists with modules is not supported` |
+| C5048 | `Use of macro 'macroname' may result in non-deterministic output` |
+| C5049 | `'string': Embedding a full path may result in machine-dependent output` |
+| C5050 | `Possible incompatible environment while importing module 'module_name': issue` |
+| C5100 | `__VA_ARGS__ is reserved for use in variadic macros` |
+| C5101 | `use of preprocessor directive in function-like macro argument list is undefined behavior` |
+| C5102 | `ignoring invalid command-line macro definition 'value'` |
+| C5103 | `pasting 'token1' and 'token2' does not result in a valid preprocessing token` |
+| C5104 | `found 'string1#string2' in macro replacement list, did you mean 'string1""#string2'?` |
+| C5105 | `macro expansion producing 'defined' has undefined behavior` |
+| C5106 | `macro redefined with different parameter names` |
+| C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>在 Visual c + + 2017 版本 15.6 （編譯器版本 19.13.26128.0） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>視覺效果中所引進的警告C++2017年版 15.7 （編譯器版本 19.14.26428.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.12__。
-
-|||
-|-|-|
-C5044|命令列選項的引數* 選項*指向的路徑 '*路徑*' 不存在
-
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>在 Visual c + + 2017 版本 15.5 （編譯器版本 19.12.25830.0） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.11__。
-
-|||
-|-|-|
-C4843|'*type1*':陣列或函式類型參考的例外狀況處理常式無法連線，請使用 '*type2*' 改為
-C4844|' 匯出模組*module_name*;' 已宣告模組介面的慣用語的法
-C5039|'*函式*': 指標或參考可能會擲回傳遞給-EHc 下 extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。
-C5040|動態例外狀況規格是有效的只在 C + + 14 和更早版本;將視為 noexcept （false）
-C5041|'*定義*': 不需要 constexpr 靜態資料成員的程式碼外部定義，並在 c++17 中已被取代
-C5042|'*宣告*': 在區塊範圍內的函式宣告不能指定 'inline' standard c + + 中，因此請移除 'inline' 指定名稱
-C5043|'*規格*': 例外狀況規格與上一個宣告不符
-
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>在 Visual c + + 2017 版本 15.3 （編譯器版本 19.11.25506.0） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.10__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.13`。
 
 |||
 |-|-|
-C4597|未定義的行為：*描述*
-C4604|'*型別*': 跨越原生與 managed 界限以值傳遞引數需要有效的複製建構函式。 否則執行階段行為未定義
-C4749|有條件地支援：*描述*
-C4768|會忽略連結規格前的 __declspec 屬性
-C4834|捨棄具有 'nodiscard' 屬性的函式的傳回值
-C4841|非標準擴充：*延伸模組*
-C4842|'offsetof' 套用至使用多重繼承類型的結果不保證編譯器版本之間保持一致
-C4869|'nodiscard' 只能套用至類別、 列舉和函式具有非 void 傳回類型
-C5033|'*儲存類別*' 不再支援的存放裝置類別
-C5034|使用內建函式 '*內建函式*' 會導致函式*函式*編譯為客體程式碼
-C5035|使用功能 '*功能*' 會導致函式*函式*編譯為客體程式碼
-C5036|varargs 函式指標轉換時使用/hybrid:x86arm64 編譯 '*type1*'到'*type2*'
-C5037|'*成員函式*': 類別範本成員的程式碼外部定義不能有預設引數
-C5038|資料成員 '*member1*'將初始化之後資料成員'*member2*'
+| C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
+| C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>在 Visual c + + 2017 RTM （編譯器版本 19.10.25017.0） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>視覺效果中所引進的警告C++2017年版本 15.6 （編譯器版本 19.13.26128.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.00__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.12`。
 
 |||
 |-|-|
-C4468|'fallthrough': 屬性後必須接續 case 標籤或預設標籤
-C4698|'*功能*' 評估之用，且會有所變更，或在未來移除更新。
-C4839|類別的非標準用法*類別*' 做為引數的 variadic 函式
-C4840|非可移植的類別的用法*類別*' 做為引數的 variadic 函式
+| C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
+
+## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>視覺效果中所引進的警告C++2017年版本 15.5 （編譯器版本 19.12.25830.0）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.11`。
+
+|||
+|-|-|
+| C4843 | `'type1': An exception handler of reference to array or function type is unreachable, use 'type2' instead` |
+| C4844 | `'export module module_name;' is now the preferred syntax for declaring a module interface` |
+| C5039 | `'function': pointer or reference to potentially throwing function passed to extern C function under -EHc. Undefined behavior may occur if this function throws an exception.` |
+| C5040 | `dynamic exception specifications are valid only in C++14 and earlier; treating as noexcept(false)` |
+| C5041 | `'definition': out-of-line definition for constexpr static data member is not needed and is deprecated in C++17` |
+| C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
+| C5043 | `'specification': exception specification does not match previous declaration` |
+
+## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>視覺效果中所引進的警告C++2017年版本 15.3 （編譯器版本 19.11.25506.0）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.10`。
+
+|||
+|-|-|
+| C4597 | `undefined behavior: description` |
+| C4604 | `'type': passing argument by value across native and managed boundary requires valid copy constructor. Otherwise the runtime behavior is undefined` |
+| C4749 | `conditionally supported: description` |
+| C4768 | `__declspec attributes before linkage specification are ignored` |
+| C4834 | `discarding return value of function with 'nodiscard' attribute` |
+| C4841 | `non-standard extension used: extension` |
+| C4842 | `the result of 'offsetof' applied to a type using multiple inheritance is not guaranteed to be consistent between compiler releases` |
+| C4869 | `'nodiscard' may only be applied to classes, enumerations, and functions with non-void return type` |
+| C5033 | `'*storage-class*' is no longer a supported storage class` |
+| C5034 | `use of intrinsic 'intrinsic' causes function function to be compiled as guest code` |
+| C5035 | `use of feature 'feature' causes function function to be compiled as guest code` |
+| C5036 | `varargs function pointer conversion when compiling with /hybrid:x86arm64 'type1' to 'type2'` |
+| C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
+| C5038 | `data member 'member1' will be initialized after data member 'member2'` |
+
+## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>視覺效果中所引進的警告C++2017 RTM （編譯器版本 19.10.25017.0）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00`。
+
+|||
+|-|-|
+| C4468 | `'fallthrough': attribute must be followed by a case label or a default label` |
+| C4698 | `'feature' is for evaluation purposes only and is subject to change or removal in future updates.` |
+| C4839 | `non-standard use of class 'class' as an argument to a variadic function` |
+| C4840 | `non-portable use of class 'class' as an argument to a variadic function` |
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>Visual c + + 2015 Update 3 （編譯器版本 19.00.24215.1） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>視覺效果中所引進的警告C++2015 Update 3 （編譯器版本 19.00.24215.1）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.00.23918__。
-
-|||
-|-|-|
-C4467|ATL 屬性用法已被取代
-C4596|'*名稱*': 成員宣告中不合法的限定的名稱
-C4598|' #include \<*標頭*\>': 標頭數目*號碼*中*來源*不符*來源*看位置
-C4599|'*引數*':*來源*引數數目*號碼*不符*來源*
-
-## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>在 Visual c + + 2015 Update 2 （編譯器版本 19.00.23918.0） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.00.23506__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23918`。
 
 |||
 |-|-|
-C4466|無法執行協同程式堆積省略
-C4595|'*類別*': 非成員運算子 new 或 delete 函式不可以宣告內嵌
-C4828|此檔案包含從位移 0 開始的字元 x*值*這是在目前的來源字元集中不合法 (字碼頁*數目*)。
-C4868|編譯器不會強制執行括號初始設定式清單中的左到右評估順序
+| C4467 | `usage of ATL attributes is deprecated` |
+| C4596 | `'name': illegal qualified name in member declaration` |
+| C4598 | `'#include <header>': header number number in the source does not match source at that position` |
+| C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>在 Visual c + + 2015 Update 1 （編譯器版本 19.00.23506.0） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>視覺效果中所引進的警告C++2015 Update 2 （編譯器版本 19.00.23918.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:19.00.23026__。
-
-|||
-|-|-|
-C4426|變更包含標頭之後最佳化旗標可能會因為 #pragma optimize （）
-C4654|放在之前的程式碼包含先行編譯標頭行都會被忽略。 您可以將程式碼加入先行編譯標頭。
-C5031|#pragma warning （pop): 可能不相符，彈出的警告狀態推入不同的檔案
-C5032|偵測到 #pragma warning (push) 沒有對應的 #pragma warning
-
-## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>在 Visual c + + 2015 RTM （編譯器版本 19.00.23026.0） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/wv:18__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23506`。
 
 |||
 |-|-|
-C4427|'*錯誤*': 常數相除，未定義的行為溢位
-C4438|'*型別*': 無法安全地呼叫 /await: clrcompat 模式。 如果 '*型別*' 呼叫 CLR 可能會導致 CLR 標頭損毀
-C4455|' 運算子*名稱*': 開頭不是以底線的常值後置字元識別項保留
-C4456|宣告的 '*名稱*' 會隱藏先前的區域宣告
-C4457|宣告的 '*名稱*' 會隱藏函式參數
-C4458|宣告的 '*名稱*' 會隱藏類別成員
-C4459|宣告的 '*名稱*' 會隱藏全域宣告
-C4462|'*型別*': 無法判斷類型的 GUID。 程式可能在執行階段失敗。
-C4463|溢位;指派*值*只能保留值的位元欄位*值*到*值*
-C4473|'*函式*': 沒有足夠的引數傳遞給格式字串
-C4474|'*函式*': 太多引數傳遞給格式字串
-C4475|'*函式*': 長度修飾詞'*修飾詞*'不可與類型欄位字元'*字元*' 格式規範中
-C4476|'*函式*': 未知的類型欄位字元'*字元*' 格式規範中
-C4477|'*函式*': 格式字串'*字串*'需要類型的引數'*型別*'，但 variadic 引數*數目*具有類型 '*型別*'
-C4478|'*函式*': 無法在相同的格式字串中混合位置和非位置的預留位置
-C4494|'*型別*':忽略 __declspec （allocator），因為函式傳回類型不是指標或參考
-C4495|使用非標準擴充 ' __super ': 取代為明確的基底類別名稱
-C4496|使用非標準擴充 'for each': 取代為 ranged-for 陳述式
-C4497|使用非標準擴充 ' sealed ': 取代為 'final'
-C4498|使用非標準擴充: '*延伸模組*'
-C4499|'*特製化*': 明確特製化不能有儲存類別 （忽略）
-C4576|後面接著的初始設定式清單的括號括住型別是標準的明確類型轉換語法
-C4577|搭配任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc
-C4578|'abs': 從轉換 '*型別*'到'*型別*'，可能導致資料遺失 (這表示您要呼叫'*名稱*' 或 #include \<cmath> >？)
-C4582|'*型別*': 未隱含呼叫建構函式
-C4583|'*型別*': 未隱含呼叫解構函式
-C4587|'*型別*': 行為變更： 不再隱含呼叫建構函式
-C4588|'*型別*': 行為變更： 不再隱含呼叫解構函式
-C4589|抽象類別的建構函式*型別*'會忽略虛擬基底類別初始設定式'*型別*'
-C4591|'constexpr' 呼叫深度限制*數字*超過 (/ constexpr:depth\<數字 >)
-C4592|'*型別*': 符號將會動態初始化 （實作限制）
-C4593|'*型別*': 'constexpr' 呼叫評估步驟限制*值*超過; 請使用 /constexpr:\<數字 > 提高限制
-C4647|行為變更： __is_pod (*型別*) 之前的版本會有不同的值
-C4648|已忽略標準屬性 'carries_dependency'
-C4649|在此內容中會忽略屬性
-C4753|找不到指標的界限;已忽略 MPX 內建函式
-C4771|必須使用簡單指標建立界限已忽略 MPX 內建函式
-C4774|'*描述*': 格式字串引數中必須要有*數目*不是字串常值
-C4775|在格式字串中使用非標準擴充 '*字串*'的函式'*函式*'
-C4776|' %*字元*'中不允許函式的格式字串'*函式*'
-C4777|'*描述*': 格式字串'*字串*'需要類型的引數'*型別*'，但 variadic 引數*數目*具有類型 '*型別*'
-C4778|'*描述*': 未結束的格式字串'*字串*'
-C4838|從 '*型別*'到'*型別*' 必須是縮小轉換
-C5022|'*型別*': 多個移動建構函式指定
-C5023|'*型別*': 多個指定的移動指派運算子
-C5024|'*宣告*': move 建構函式已隱含定義為已刪除
-C5025|'*宣告*': move 指派運算子已隱含定義為已刪除
-C5026|'*型別*': move 建構函式已隱含定義為已刪除
-C5027|'*型別*': move 指派運算子已隱含定義為已刪除
-C5028|'*名稱*':先前的宣告中指定的對齊方式 (*數字*) 定義中未指定
-C5029|使用非標準擴充： c + + 中的對齊屬性套用至變數、 資料成員及標記類型
-C5030|屬性 '*屬性*' 無法辨識
+| C4466 | `Could not perform coroutine heap elision` |
+| C4595 | `'class': non-member operator new or delete functions may not be declared inline` |
+| C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
+| C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>在 Visual c + + 2013 （編譯器版本 18.00.21005.1） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>視覺效果中所引進的警告C++2015 Update 1 （編譯器版本 19.00.23506.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:17__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23026`。
 
 |||
 |-|-|
-C4301|'*型別*': 覆寫虛擬函式只能與'*宣告*' const/volatile 限定詞
-C4316|'*型別*': 在堆積上配置的物件可能未對齊*數目*
-C4380|'*型別*':預設建構函式不能被取代
-C4388|'*語彙基元*': signed/unsigned 不相符
-C4423|'std:: bad_alloc': 類別攔截到 ('*型別*') 該行*數目*
-C4424|攔截 '*型別*'前面加上'*型別*' 該行*數目*; 無法預期行為可能會造成擲回 'std:: bad_alloc' 時
-C4425|SAL 註釋不能套用至 '...'
-C4464|相對 include 路徑包含 '..'
-C4575|'__vectorcall' 不以 '/ /clr' 選項： 將轉換為 '__stdcall'
-C4609|'*型別*'衍生自預設介面'*型別*'type' 上*型別*'。 使用不同的預設介面 '*型別*'，或中斷基底/衍生關聯性。
-C4754|在比較中的算術運算的轉換規則*描述*(*數目*) 表示的一個分支無法執行。 Cast '*型別*'到'*型別*' (或類似類型的*數目*位元組)。
-C4755|在比較中的算術運算的轉換規則*描述*(*數目*) 表示的一個分支無法執行中的內嵌函式。 Cast '*型別*'到'*型別*' (或類似類型的*數目*位元組)。
-C4767|區段名稱 '*名稱*' 超過 8 個字元，將由連結器截斷
-C4770|部分驗證的列舉 '*名稱*' 做為索引
-C4827|具有 0 個參數的公用 'ToString' 方法應該標記為虛擬和覆寫
-C4882|將具有非常數呼叫運算子的函式傳遞給 concurrency:: parallel_for_each 已被取代
-C4973|'*型別*': 標示為已被取代
-C4974|'*型別*': 標示為已被取代
-C4981|Warbird： 函式 '*宣告*' 標記為 __forceinline 無法內嵌，因為它包含例外狀況語意
-C4990|Warbird:*訊息*
-C4991|Warbird： 函式 '*宣告*' 標記為 __forceinline 無法內嵌，因為被內嵌者的保護層級大於父代
-C4992|Warbird： 函式 '*宣告*' 標記為 __forceinline 無法內嵌，因為它包含內嵌組譯碼無法保護
+| C4426 | `optimization flags changed after including header, may be due to #pragma optimize()` |
+| C4654 | `Code placed before include of precompiled header line will be ignored. Add code to precompiled header.` |
+| C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
+| C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>在 Visual c + + 2012 （編譯器版本 17.00.51106.1） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>視覺效果中所引進的警告C++2015 RTM （編譯器版本 19.00.23026.0）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:16__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:18`。
 
 |||
 |-|-|
-C4330|屬性 '*屬性*'for ' 區段*一節*' 略過
-C4415|duplicate __declspec(code_seg('*name*'))
-C4416|__declspec(code_seg(...)) 包含空字串： 已忽略
-C4417|明確樣板具現化不能有 __declspec(code_seg(...))： 已忽略
-C4418|在列舉上忽略的 __declspec(code_seg(...))
-C4419|'*名稱*'具有不會影響當套用至私用 ref 類別'*型別*'。
-C4435|'*型別*':/ Vd2 底下的物件配置將因虛擬基底 '*型別*'
-C4436|從虛擬基底 dynamic_cast '*型別*'到'*型別*' 建構函式或解構函式中無法使用部分建構的物件
-C4437|從虛擬基底 dynamic_cast '*型別*'到'*型別*' 無法在某些內容中
-C4443|pragma 參數必須是 '0'、 '1' 或 '2'
-C4446|'*型別*': 無法將對應的成員'*名稱*' 成此型別，因為型別名稱衝突。 此方法已重新命名為 '*名稱*'
-C4447|發現沒有執行緒模型的 'main' 簽章。 請考慮使用 ' int main (platform:: array\<platform:: string ^ > ^ args)'。
-C4448|'*型別*' 並沒有中繼資料中指定的預設介面。 挑選: '*型別*'，這可能會在執行階段失敗。
-C4449|'*型別*': 非密封的類型應標記為 '[WebHostHidden]'
-C4450|'*型別*'應該標示為 '[WebHostHidden]' 因為其衍生自'*型別*'
-C4451|'*型別*':使用 ref 類別*型別*' 在此內容可能會導致不正確的封送處理物件跨內容
-C4452|'*型別*': 公用類型不能在全域範圍。 它必須是輸出.winmd 檔案名稱的子系的命名空間中。
-C4453|'*型別*':'[WebHostHidden]' 類型不應該不是公用類型的已發行介面上使用 '[WebHostHidden]'
-C4454|'*型別*' 由多個輸入參數數目 [defaultoverload] 指定多載。 挑選 '*宣告*' 為預設多載
-C4471|'*名稱*': 不限範圍列舉之向前宣告必須含有基礎類型 (假設是 int)
-C4472|'*名稱*' 是原生列舉： 新增存取規範 (private/public) 來宣告 managed/WinRT 列舉
-C4492|'*型別*': 符合基底 ref 類別方法'*型別*'，但未標示為 'override'
-C4493|刪除運算式沒有任何作用的解構函式為 '*型別*' 沒有 'public' 可及性
-C4585|'*型別*':WinRT 'public ref class' 必須密封的或衍生自現有的未密封類別
-C4586|'*型別*':無法在稱為 'Windows' 的最上層命名空間宣告的公用型別
-C4695|#pragma execution_character_set: '*引數*' 不是支援的引數： 目前只支援 'utf-8' 支援
-C4703|可能未初始化的本機指標變數 '*名稱*' 使用
-C4728|/Yl-選項忽略，因為 PCH 參考是必要項
-C4745|暫時性存取的 '*名稱*' 不能接受，因為它的大小
-C4746|暫時性存取的 '*名稱*' 受限於 /volatile:\<iso\|ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式
-C4872|零編譯呼叫圖表 parallel_for_each 時偵測到浮點除數: '*描述*'
-C4880|轉型從 '*型別*'到'*型別*': 轉型常數性的指標或參考可能會導致未定義的行為，在 amp 限制函式
-C4881|建構函式及/或解構函式將不會叫用 tile_static 變數 '*型別*'
-C4966|'*描述*' 有 __code_seg 註釋不支援的區段名稱，註釋已忽略
-C4988|'*型別*': 變數宣告範圍外的類別/函式
-C4989|'*描述*': 類型含有衝突的定義。
+| C4427 | `'error': overflow in constant division, undefined behavior` |
+| C4438 | `'type': cannot be called safely in /await:clrcompat mode. If 'type' calls into the CLR it may result in CLR head corruption` |
+| C4455 | `'operator name': literal suffix identifiers that do not start with an underscore are reserved` |
+| C4456 | `declaration of 'name' hides previous local declaration` |
+| C4457 | `declaration of 'name' hides function parameter` |
+| C4458 | `declaration of 'name' hides class member` |
+| C4459 | `declaration of 'name' hides global declaration` |
+| C4462 | `'type' : cannot determine the GUID of the type. Program may fail at runtime.` |
+| C4463 | `overflow; assigning value to bit-field that can only hold values from value to value` |
+| C4473 | `'function' : not enough arguments passed for format string` |
+| C4474 | `'function' : too many arguments passed for format string` |
+| C4475 | `'function' : length modifier 'modifier' cannot be used with type field character 'character' in format specifier` |
+| C4476 | `'function' : unknown type field character 'character' in format specifier` |
+| C4477 | `'function' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'` |
+| C4478 | `'function' : positional and non-positional placeholders cannot be mixed in the same format string` |
+| C4494 | `'type' : Ignoring __declspec(allocator) because the function return type is not a pointer or reference` |
+| C4495 | `nonstandard extension '__super' used: replace with explicit base class name` |
+| C4496 | `nonstandard extension 'for each' used: replace with ranged-for statement` |
+| C4497 | `nonstandard extension 'sealed' used: replace with 'final'` |
+| C4498 | `nonstandard extension used: 'extension'` |
+| C4499 | `'specialization': an explicit specialization cannot have a storage class (ignored)` |
+| C4576 | `a parenthesized type followed by an initializer list is a non-standard explicit type conversion syntax` |
+| C4577 | `'noexcept' used with no exception handling mode specified; termination on exception is not guaranteed. Specify /EHsc` |
+| C4578 | `'abs': conversion from 'type' to 'type', possible loss of data (Did you mean to call 'name' or to #include <cmath>?)` |
+| C4582 | `'type': constructor is not implicitly called` |
+| C4583 | `'type': destructor is not implicitly called` |
+| C4587 | `'type': behavior change: constructor is no longer implicitly called` |
+| C4588 | `'type': behavior change: destructor is no longer implicitly called` |
+| C4589 | `Constructor of abstract class 'type' ignores initializer for virtual base class 'type'` |
+| C4591 | `'constexpr' call-depth limit of number exceeded (/constexpr:depth<NUMBER>)` |
+| C4592 | `'type': symbol will be dynamically initialized (implementation limitation)` |
+| C4593 | `'type': 'constexpr' call evaluation step limit of value exceeded; use /constexpr:steps<NUMBER> to increase the limit` |
+| C4647 | `behavior change: __is_pod(type) has different value in previous versions` |
+| C4648 | `standard attribute 'carries_dependency' is ignored` |
+| C4649 | `attributes are ignored in this context` |
+| C4753 | `Cannot find bounds for pointer; MPX intrinsic function ignored` |
+| C4771 | `Bounds must be created using a simple pointer; MPX intrinsic function ignored` |
+| C4774 | `'description' : format string expected in argument number is not a string literal` |
+| C4775 | `nonstandard extension used in format string 'string' of function 'function'` |
+| C4776 | `'%character' is not allowed in the format string of function 'function'` |
+| C4777 | `'description' : format string 'string' requires an argument of type 'type', but variadic argument number has type 'type'` |
+| C4778 | `'description' : unterminated format string 'string'` |
+| C4838 | `conversion from 'type' to 'type' requires a narrowing conversion` |
+| C5022 | `'type': multiple move constructors specified` |
+| C5023 | `'type': multiple move assignment operators specified` |
+| C5024 | `'declaration': move constructor was implicitly defined as deleted` |
+| C5025 | `'declaration': move assignment operator was implicitly defined as deleted` |
+| C5026 | `'type': move constructor was implicitly defined as deleted` |
+| C5027 | `'type': move assignment operator was implicitly defined as deleted` |
+| C5028 | `'name': Alignment specified in prior declaration (number) not specified in definition` |
+| C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
+| C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>Visual c + + 2010 （編譯器版本 16.00.40219.01） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>視覺效果中所引進的警告C++2013 （編譯器版本 18.00.21005.1）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:15__。
-
-|||
-|-|-|
-C4352|'*名稱*': 已經定義的內建函式
-C4573|使用 '*型別*' 需要編譯器擷取 'this'，但目前的預設擷取模式不允許使用它
-C4574|'*名稱*'已定義為' 0': 您是否想要使用 ' #if*名稱*'？
-C4689|'*字元*': #pragma detect_mismatch 中不支援的字元; #pragma 忽略
-C4751|/arch AVX 旗標不適用於 intel （) Streaming SIMD Extensions 內嵌 ASM 中，
-C4752|找到 intel （) Advanced Vector Extensions;請考慮使用適當的 /arch AVX 旗標
-C4837|偵測到的三併詞: '??*字元*'取代'*字元*'
-C4986|'*宣告*': 例外狀況規格與上一個宣告不符
-C4987|使用非標準的擴充：'throw (...)'
-
-## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>Visual c + + 2008 （編譯器版本 15.00.21022.08） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:14__。
-
-|||
-|-|-|
-C4396|'*型別*': friend 宣告參考函式樣板的特製化時，就無法使用內嵌規範
-C4413|'*宣告*': 參考成員已初始化成建構函式結束後就不存在的暫存區
-C4491|'*描述*': 不合法的 IDL 版本格式
-C4603|'*名稱*': 未定義巨集，或使用先行編譯標頭之後，定義是不同
-C4627|'*描述*': 尋找先行編譯標頭檔使用時，略過
-C4750|'*描述*': 函式有 _alloca （） 內嵌成迴圈
-C4910|'*型別*': '__declspec （dllexport）' 和 'extern' 在明確具現化不相容
-C4985|'*宣告*': 屬性不存在先前的宣告。
-
-## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>在 Visual c + + 2005 （編譯器版本 14.00.50727.762） 中引進的警告
-
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:13__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:17`。
 
 |||
 |-|-|
-C4000|未知警告，請選擇 Visual c + + [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔，如需詳細資訊
-C4272|'*型別*': __declspec （dllimport） 標示為; 匯入函式時，必須指定原生呼叫慣例。
-C4333|'*運算式*': 向右位移量太大，資料遺失
-C4334|'*運算式*': 32 位元移位的結果會隱含地轉換為 64 位元 （是 64 位元位移？）
-C4335|偵測到 Mac 檔案格式： 請將原始程式檔轉換為 DOS 或 UNIX 格式
-C4342|行為變更: '*型別*' 呼叫，但在舊版中呼叫成員運算子
-C4350|行為變更: '*宣告*'呼叫而不是'*宣告*'
-C4357|委派的型式引數清單中找到的 param 陣列引數 '*宣告*'產生時，忽略'*型別*'
-C4358|'*運算式*': 組合委派的傳回類型不是 'void'，傳回的值未定義
-C4359|'*型別*':對齊規範小於實際對齊 (*數字*)，且會被忽略。
-C4362|'*型別*': CLR 不支援大於 8 個位元組的對齊方式
-C4364|#using 組件 '*名稱*' 先前看過在*描述*(*數目*) 沒有 as_friend 屬性，as_friend 未套用
-C4365|'*運算式*': 從轉換'*型別*'to'*型別*'，signed/unsigned 不相符
-C4366|一元的結果 '*運算子*' 運算子可能未對齊
-C4367|從 '*型別*'到'*型別*' 可能造成資料類型對齊錯誤例外狀況
-C4368|無法定義 '*名稱*'為受管理的成員'*型別*': 不支援混合的類型
-C4369|'*型別*': 列舉值'*數目*'無法表示為'*型別*'，值為'*數目*'
-C4374|'*宣告*': 非虛擬方法不會實作介面方法'*宣告*'
-C4375|非公用方法 '*宣告*'不覆寫'*宣告*'
-C4376|存取規範 '*規範*:' 已不受支援： 請使用'*規範*:' 改為
-C4377|原生型別是私用的預設值;-d1PrivateNativeTypes 已被取代
-C4378|必須取得函式指標才能執行初始設定式;請考慮 System::ModuleHandle::ResolveMethodHandle
-C4379|版本*版本*common language runtime 不支援此編譯器。 使用此版本可能會導致非預期的結果
-C4381|'*宣告*': 非公用方法將不會實作介面方法'*宣告*'
-C4382|擲回 '*型別*': 具有 __clrcall 解構函式或複製建構函式的型別可能只會攔截在 /clr: pure 模組
-C4383|'*型別*': 控制代碼取值的意義可以變更，當使用者定義'*運算子*' 運算子存在; 撰寫的運算子，運算元的明確的靜態函式
-C4384|#pragma '*指示詞*' 只能在全域範圍
-C4393|'*型別*': const 並不會影響*描述*資料成員; 已忽略
-C4394|'*型別*': per-appdomain 符號不應該標示 __declspec (*值*)
-C4395|'*型別*': initonly 資料成員的複本將會叫用成員函式'*型別*'
-C4397|已忽略 DefaultCharSetAttribute
-C4398|'*型別*': 處理序專屬全域物件可能無法使用多個 appdomain 正確運作，請考慮使用 __declspec(appdomain)
-C4399|'*型別*': 處理序專屬符號不應該標示 __declspec (*值*) 時使用 /clr 所編譯： pure
-C4400|'*型別*': 不支援此類型的 const/volatile 限定詞
-C4412|'*宣告*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生。
-C4429|可能不完整或格式不正確通用字元名稱
-C4430|遺漏類型規範 - 假設為 int。 注意:C + + 不支援預設 int
-C4431|遺漏類型規範 - 假設為 int。 注意:C 不再支援 default-int
-C4434|靜態建構函式必須有私用存取範圍;變更為私用存取
-C4439|'*型別*': 函式簽章中有受控類型的定義必須有 __clrcall 呼叫慣例
-C4441|呼叫慣例的 '*慣例*' 忽略;'*慣例*' 改為使用
-C4445|'*宣告*': WinRT managed 類型中的虛擬方法不可為私用
-C4460|CLR/WinRT 運算子 '*型別*'，具有參考所傳遞參數。 CLR/WinRT 運算子 '*運算子*'具有不同的語意，從 c + + 運算子'*運算子*'，您是否想要傳值方式傳遞？
-C4461|'*型別*': 這個類別有完成項' ！*型別*'，但沒有解構函式 ' ~*型別*'
-C4470|浮點控制 pragma 在 /clr 下會忽略
-C4480|使用非標準擴充： 指定列舉的基礎類型 '*型別*'
-C4481|使用非標準擴充： 覆寫規範 '*規範*'
-C4482|使用非標準擴充： 列舉 '*型別*' 限定名稱中使用
-C4483|語法錯誤： 必須是 c + + 關鍵字
-C4484|'*型別*': 符合基底 ref 類別方法'*型別*'，但是未標記為 'virtual'、 'new' override';'new' （和非 'virtual'） 會假設
-C4485|'*型別*': 符合基底 ref 類別方法'*型別*'，但未標示為 'new' override';'new' （和 'virtual'） 會假設
-C4486|'*型別*': ref 類別或實值類別的私用虛擬方法標記為 'sealed'
-C4487|'*型別*': 符合繼承非虛擬方法'*型別*' 但未在 'new' 明確地標記
-C4488|'*型別*': 需要'*關鍵字*'關鍵字來實作介面方法'*型別*'
-C4489|'*關鍵字*': 介面方法上不允許'*名稱*'; 覆寫規範只允許在 ref 類別和實值類別方法
-C4490|'*關鍵字*': 覆寫規範; 的用法不正確'*型別*' 不符合基底 ref 類別方法
-C4538|'*型別*': 不支援此類型的 const/volatile 限定詞
-C4559|'*型別*': 重複定義; 函式取得 __declspec (*值*)
-C4565|'*型別*': 重複定義; 符號先前已宣告為 __declspec (*值*)
-C4566|通用字元名稱所表示的字元 '*字元*' 無法在目前的字碼頁 (*數目*)
-C4568|'*型別*': 沒有任何成員符合明確覆寫的簽章
-C4569|'*型別*': 沒有任何成員符合明確覆寫的簽章
-C4570|'*型別*': 未明確宣告為抽象，但是擁有抽象函式
-C4571|Visual c + + 7.1; 以來變更的告知性： catch 語意不再攔截結構化例外狀況 (SEH)
-C4572|[ParamArray] 屬性之下已被取代 /clr，使用 '...'改為
-C4580|[attribute] 已被取代;請改為指定*指定*做為基底類別的屬性
-C4581|被取代的行為: '」*名稱*"' 取代'*名稱*' 處理序屬性
-C4606|#pragma 警告: '*數字*' 忽略;程式碼分析警告未與警告層級相關聯
-C4631|MSXML 或 XPath 無法使用，將不會處理 XML 文件註解。 *description*
-C4632|XML 文件註解：*描述*-存取被拒：*描述*
-C4633|XML 文件註解*描述*： 錯誤：*描述*
-C4634|XML 文件註解*描述*： 無法套用：*描述*
-C4635|XML 文件註解*描述*: XML 格式錯誤：*描述*
-C4636|XML 文件註解*描述*： 標記必須是非空白 '*描述*' 屬性。
-C4637|XML 文件註解*描述*:\<包含 > 捨棄的標籤。 *description*
-C4638|XML 文件註解*描述*： 未知的符號參考 '*描述*'。
-C4639|MSXML 錯誤，將不會處理註解的 XML 文件。 *description*
-C4641|XML 文件註解有模稜兩可的交互參考：
-C4678|基底類別*宣告*'是比存取'*名稱*'
-C4679|'*描述*': 無法匯入成員
-C4687|'*型別*': 密封抽象類別無法實作介面'*型別*'
-C4688|'*名稱*': 條件約束清單含有組件私用類型'*宣告*'
-C4690|\[ emitidl (pop)]: pop 數目比 push
-C4691|'*型別*': 參考的類型應該是在未參考*模組*'*描述*'，改用目前的轉譯單位中定義的類型
-C4692|'*名稱*': 非私用成員簽章含有組件的私用原生類型'*宣告*'
-C4693|'*型別*': 密封抽象類別不能有任何執行個體成員*名稱*'
-C4694|'*型別*': 密封抽象類別不能有基底類別'*型別*'
-C4720|內嵌組合語言報告: '*描述*'
-C4721|'*描述*': 無法當做內建函式
-C4722|'*描述*': 解構函式從未返回，可能有記憶體遺漏
-C4726|ARM 僅 arch4/4T 支援 '\<cpsr_f > 或\<spsr_f >' 具有即時運算值
-C4727|名為的 PCH*名稱*中找到的相同時間戳記*名稱*並*名稱*。  使用第一個 PCH。
-C4729|依據 flow graph 產生的警告，發現函式太大
-C4730|'*描述*': 混合 _m64 和浮點運算式可能會導致不正確的程式碼
-C4731|'*描述*': 框架指標暫存器'*註冊*' 修改內嵌組譯碼
-C4732|內建 '*內建*' 不支援此架構
-C4733|內嵌 asm 指定給 'FS:0': 未註冊為安全的處理常式的處理常式
-C4734|超過 64k 中行號 COFF 偵錯資訊 區段中;停止產生 COFF 偵錯行號模組 '*模組*'
-C4738|在記憶體中儲存 32 位元浮點結果，可能會損失效能
-C4739|參考變數 '*變數*' 超過了它的儲存體空間
-C4740|流量流入或流出內嵌組譯程式碼會隱藏全域最佳化
-C4742|'*變數*'有不同的對齊'*位置*'和'*位置*':*數目*和*數目*
-C4743|'*名稱*'有不同的大小'*位置*'和'*位置*':*數目*並*數目*位元組
-C4744|'*名稱*'有不同的類型'*位置*'和'*位置*':'*類型*'和'*類型*'
-C4747|呼叫受控 '*型別*':Managed 程式碼可能不會執行載入器鎖定，包括 DLL 進入點和從 DLL 進入點到達的呼叫下
-C4761|引數; 中的整數大小不符提供轉換
-C4764|無法對齊超過 16 位元組的攔截物件
-C4788|'*識別碼*': 識別項被截斷成'*數目*' 字元
-C4789|緩衝區 '*名稱*' 的大小*數目*位元組會溢位;*數字*將位移處開始寫入位元組*數目*
-C4801|傳址方式傳回值無法驗證：*描述*
-C4819|檔案包含無法在目前的字碼頁中表示的字元 (*數字*)。 若要防止資料遺失的 Unicode 格式儲存檔案
-C4826|從 '*型別*'到'*型別*' 是 sign-extended。 這可能會導致意外發生執行階段行為。
-C4829|函式 main 的參數可能不正確。 請考慮 ' int main (platform:: array\<platform:: string ^ > ^ argv)'
-C4835|'*型別*': 匯出資料的初始設定式將不會執行，直到主機組件中第一次執行 managed 程式碼
-C4867|'*型別*': 非標準語法; 請使用 '&' 建立成員的指標
-C4936|以 /clr 或 /clr:pure 編譯時才支援這個 __declspec
-C4937|'*名稱*'和'*名稱*'會與做為引數'*選項*'
-C4938|'*型別*':浮點削減變數可能會導致不一致的結果，在 /fp: strict 或 #pragma fenv_access 之下
-C4939|#pragma vtordisp 已被取代，在未來的 Visual C++ 發行版本中將會移除
-C4947|'*型別*': 標記為過時
-C4949|pragmas 'managed' 和 'unmanaged' 是只在編譯時，才有意義 ' / /clr [: 選項]'
-C4950|'*型別*': 標記為過時
-C4955|'*描述*': 匯入已忽略; 已經匯入從'*來源*'
-C4956|'*型別*': 此類型不是可驗證
-C4957|'*運算式*': 明確的轉換，從'*型別*'to'*型別*' 不是可驗證
-C4958|'*運算式*': 指標算術不是可驗證
-C4959|無法定義非受控*類別*'*型別*' /clr: safe 中因為存取它的成員會產生無法驗證的程式碼
-C4960|'*描述*' 太大而無法分析
-C4961|沒有任何分析資料合併到 '*位置*'，特性指引最佳化已停用
-C4962|'*描述*':停用，因為最佳化導致分析資料變成不一致的設定檔指引最佳化
-C4963|'*描述*': 找不到分析資料，檢測建置中使用不同的編譯器選項
-C4964|指定沒有最佳化選項;將不會收集設定檔資訊
-C4965|整數 0; 的隱含 box請使用 nullptr 或明確轉換
-C4970|委派建構函式： 目標物件被忽略，因為 '*宣告*' 為靜態
-C4971|引數的順序：\<目標物件 >，\<目標函式 > 委派建構函式已被取代，請使用\<目標函式 >，\<目標物件 >
-C4972|直接修改或將 Unbox 作業的結果視為左值，將無法驗證
+| C4301 | `'type': overriding virtual function only differs from 'declaration' by const/volatile qualifier` |
+| C4316 | `'type': object allocated on the heap may not be aligned number` |
+| C4380 | `'type': A default constructor cannot be deprecated` |
+| C4388 | `'token': signed/unsigned mismatch` |
+| C4423 | `'std::bad_alloc': will be caught by class ('type') on line number` |
+| C4424 | `catch for 'type' preceded by 'type' on line number; unpredictable behavior may result if 'std::bad_alloc' is thrown` |
+| C4425 | `A SAL annotation cannot be applied to '...'` |
+| C4464 | `relative include path contains '..'` |
+| C4575 | `'__vectorcall' incompatible with the '/clr' option: converting to '__stdcall'` |
+| C4609 | `'type' derives from default interface 'type' on type 'type'. Use a different default interface for 'type', or break the base/derived relationship.` |
+| C4754 | `Conversion rules for arithmetic operations in the comparison at description(number) mean that one branch cannot be executed. Cast 'type' to 'type' (or similar type of number bytes).` |
+| C4755 | `Conversion rules for arithmetic operations in the comparison at description(number) mean that one branch cannot be executed in an inlined function. Cast 'type' to 'type' (or similar type of number bytes).` |
+| C4767 | `section name 'name' is longer than 8 characters and will be truncated by the linker` |
+| C4770 | `partially validated enum 'name' used as index` |
+| C4827 | `A public 'ToString' method with 0 parameters should be marked as virtual and override` |
+| C4882 | `passing functors with non-const call operators to concurrency::parallel_for_each is deprecated` |
+| C4973 | `'type': marked as deprecated` |
+| C4974 | `'type': marked as deprecated` |
+| C4981 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains exception semantics` |
+| C4990 | `Warbird: message` |
+| C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
+| C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>在 Visual c + + 2003 （編譯器版本 13.10.3077） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>視覺效果中所引進的警告C++2012 （編譯器版本 17.00.51106.1）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:13.00.9466__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:16`。
 
 |||
 |-|-|
-C4343|#pragma 最佳化 (*描述*、 設為 off) 覆寫了 /Og 選項
-C4344|行為變更： 使用明確樣板引數會導致呼叫 '*宣告*'
-C4346|'*型別*': 相依名稱不是類型
-C4348|'*宣告*': 重複定義的預設參數： 參數*數目*
-C4356|'*型別*': 無法透過衍生類別初始化靜態資料成員
-C4408|匿名*結構*沒有宣告任何資料成員
-C4544|'*宣告*': 預設會忽略這個樣板宣告上的樣板引數
-C4545|逗號之前的運算式判斷值為遺漏引數清單的函式
-C4546|逗號之前的函式呼叫遺漏引數清單
-C4547|'*運算式*': 運算子逗號之前無效; 必須是具有副作用的運算子
-C4548|逗號之前的運算式無效; 必須是具有副作用的運算式
-C4549|'*運算式*': 逗號之前的運算子無效; 您是否想'*運算式*' 嗎？
-C4628|不支援使用 -Ze 的雙拼詞。 字元順序 '*順序*'沒有解譯為替代語彙基元'*語彙基元*'
-C4629|使用了雙拼詞，字元順序 '*順序*'解譯為語彙基元'*語彙基元*' （如果這是不是您想要插入的兩個字元之間的空格）
-C4671|'*描述*': 複製建構函式是無法存取
-C4676|'*描述*': 解構函式是無法存取
-C4677|'*名稱*': 非私用成員簽章含有組件私用類型'*宣告*'
-C4686|'*型別*': 行為可能變更，在 UDT 傳回呼叫慣例
-C4812|過時的宣告樣式： 請使用 '*型別*::*名稱*' 改為
-C4813|'*型別*': 區域類別的 friend 函式必須已經宣告過
-C4821|無法判斷 Unicode 編碼類型，請將檔案儲存使用簽章 (BOM)
-C4822|'*型別*': 區域類別成員函式沒有主體
-C4823|'*型別*': 使用 pin 指標但回溯語意不會啟用。 請考慮使用 /EHa
-C4913|使用者定義的二進位運算子 ',' 存在，但沒有多載可以轉換所有的運算元，使用預設的內建二進位運算子 ','
-C4948|傳回的類型 '*宣告*' 不符合對應之 setter 的最後一個參數類型
-C4951|'*描述*' 已經編輯，因為已收集的分析資料，未使用的函式設定檔資料
-C4952|'*描述*': 在程式資料庫中找到的任何設定檔資料'*描述*'
-C4953|內嵌項 '*描述*' 已經編輯，因為已收集的分析資料，未使用的設定檔資料
-C4954|'*描述*': 未剖析 （包含 __int64 switch 運算式）
+| C4330 | `attribute 'attribute' for section 'section' ignored` |
+| C4415 | `duplicate __declspec(code_seg('name'))` |
+| C4416 | `__declspec(code_seg(...)) contains empty string: ignored` |
+| C4417 | `an explicit template instantiation cannot have __declspec(code_seg(...)): ignored` |
+| C4418 | `__declspec(code_seg(...)) ignored on an enum` |
+| C4419 | `'name' has no effect when applied to private ref class 'type'.` |
+| C4435 | `'type': Object layout under /vd2 will change due to virtual base 'type'` |
+| C4436 | `dynamic_cast from virtual base 'type' to 'type' in constructor or destructor could fail with partially-constructed object` |
+| C4437 | `dynamic_cast from virtual base 'type' to 'type' could fail in some contexts` |
+| C4443 | `expected pragma parameter to be '0', '1', or '2'` |
+| C4446 | `'type': cannot map member 'name' into this type, due to conflict with the type name. The method was renamed to 'name'` |
+| C4447 | `'main' signature found without threading model. Consider using 'int main(Platform::Array<Platform::String^>^ args)'.` |
+| C4448 | `'type' does not have a default interface specified in metadata. Picking: 'type', which may fail at runtime.` |
+| C4449 | `'type' an unsealed type should be marked as '[WebHostHidden]'` |
+| C4450 | `'type' should be marked as '[WebHostHidden]' because it derives from 'type'` |
+| C4451 | `'type': Usage of ref class 'type' inside this context can lead to invalid marshaling of object across contexts` |
+| C4452 | `'type': public type cannot be at global scope. It must be in a namespace that is a child of the name of the output .winmd file.` |
+| C4453 | `'type': A '[WebHostHidden]' type should not be used on the published surface of a public type that is not '[WebHostHidden]'` |
+| C4454 | `'type' is overloaded by more than the number of input parameters without having [DefaultOverload] specified. Picking 'declaration' as the default overload` |
+| C4471 | `'name': a forward declaration of an unscoped enumeration must have an underlying type (int assumed)` |
+| C4472 | `'name' is a native enum: add an access specifier (private/public) to declare a managed/WinRT enum` |
+| C4492 | `'type': matches base ref class method 'type', but is not marked 'override'` |
+| C4493 | `delete expression has no effect as the destructor of 'type' does not have 'public' accessibility` |
+| C4585 | `'type': A WinRT 'public ref class' must either be sealed or derive from an existing unsealed class` |
+| C4586 | `'type': A public type cannot be declared in a top-level namespace called 'Windows'` |
+| C4695 | `#pragma execution_character_set: 'argument' is not a supported argument: currently only 'UTF-8' is supported` |
+| C4703 | `potentially uninitialized local pointer variable 'name' used` |
+| C4728 | `/Yl- option ignored because PCH reference is required` |
+| C4745 | `volatile access of 'name' cannot be honored due to its size` |
+| C4746|'name' 的暫時性存取受限於 /volatile: < iso | ms > 設定;請考慮使用 __iso_volatile_load/store 內建函式 |
+| C4872 | `floating point division by zero detected when compiling the call graph for the concurrency::parallel_for_each at: 'description'` |
+| C4880 | `casting from 'type' to 'type': casting away constness from a pointer or reference may result in undefined behavior in an amp restricted function` |
+| C4881 | `the constructor and/or the destructor will not be invoked for tile_static variable 'type'` |
+| C4966 | `'description' has __code_seg annotation with unsupported segment name, annotation ignored` |
+| C4988 | `'type': variable declared outside class/function scope` |
+| C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>在 Visual c + + 2002 （編譯器版本 13.00.9466） 中引進的警告
+## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>視覺效果中所引進的警告C++2010 （編譯器版本 16.00.40219.01）
 
-使用編譯器選項會隱藏這些警告和更新版本中的所有警告 __/Wv:12__。
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:15`。
 
 |||
 |-|-|
-C4096|'*型別*': 介面不是 COM 介面，將不會發出到 IDL
-C4097|pragma 參數必須為 'restore' 或 'off'
-C4165|'HRESULT' 轉換為 'bool';確定這是您想要？
-C4183|'*名稱*': 遺漏傳回類型; 假設為傳回 'int' 的成員函式
-C4199|*description*
-C4255|'*名稱*': 未提供的函式原型： 轉換為 '(void)' 的' （）'
-C4256|'*宣告*': 具有虛擬基底類別建構函式有 '...'; 呼叫可能不相容於舊版的 Visual c + +
-C4258|'*名稱*': 定義與 for 迴圈會被忽略; 使用封閉範圍的定義
-C4263|'*宣告*': 成員函式不覆寫任何基底類別虛擬成員函式
-C4264|'*宣告*': 沒有可用的基底虛擬成員函式的覆寫'*類別*'; 函式已隱藏
-C4265|'*型別*': 類別有虛擬函式，但不是虛擬解構函式的這個類別的執行個體可能無法正確解構
-C4266|'*宣告*': 沒有可用的基底虛擬成員函式的覆寫'*類別*'; 函式已隱藏
-C4267|'*運算式*': 轉換 'size_t' 到'*型別*'，資料可能遺失
-C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')
-C4277|匯入的項目 '*型別*::*名稱*' 存在做為資料成員和函式成員; 已忽略資料成員
-C4278|'*名稱*': 類型程式庫中的識別項'*描述*' 已經是巨集; 使用 'rename' 限定詞
-C4279|'*名稱*': 類型程式庫中的識別項'*描述*' 是關鍵字; 使用 'rename' 限定詞
-C4287|'*運算式*': unsigned 和負常數不相符
-C4288|使用非標準擴充: '*名稱*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數; 與外部範圍中宣告衝突
-C4289|使用非標準擴充: '*名稱*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數
-C4293|'*運算式*': 移位計數為負數或太大，未定義的行為
-C4295|'*型別*': 陣列太小而無法包含結束的 null 字元
-C4296|'*運算式*': 運算式永遠是*值*
-C4297|'*型別*': 函式預設並不會擲回例外狀況，但不會
-C4298|'*名稱*': 類型程式庫中的識別項'*描述*'已經是巨集; 重新命名為' __*名稱*'
-C4299|'*名稱*': 類型程式庫中的識別項'*描述*'為關鍵字; 重新命名為' __*名稱*'
-C4302|'*運算式*': 從'*型別*'to'*型別*'
-C4303|*轉換*從 '*型別*'到'*類型*' 是已被取代，使用 static_cast、 __try_cast 或 dynamic_cast
-C4314|pragma 參數必須是 '32' 或 '64'
-C4315|'*型別*': 'this' 指標成員'*型別*' 無法用於對齊*數目*如預期般建構函式
-C4318|將常數零當做長度傳遞至 memset
-C4319|'*運算式*': 零擴充'*型別*'to'*型別*' 更大的
-C4321|自動產生介面的 IID '*型別*'
-C4322|自動產生類別的 CLSID*型別*'
-C4323|重複使用已登錄類別的 CLSID*型別*'
-C4324|'*型別*': 因為對齊規範而獲得填補的結構
-C4325|忽略標準區段 '*描述*' 略過
-C4326|傳回的類型 '*名稱*'應該是'*型別*' 而不是 '*型別*'
-C4327|'*運算式*': LHS 的間接取值對齊 (*數目*) 大於 RHS (*數目*)
-C4328|'*描述*': 型式參數的間接取值對齊*數目*(*號碼*) 大於實際的引數的對齊 (*數目*)
-C4329|列舉時會忽略對齊規範
-C4336|匯入交互參考的類型程式庫 '*程式庫*' 匯入之前'*描述*'
-C4337|交互參考的型別程式庫 '*程式庫*'in'*描述*' 正在自動匯入
-C4338|#pragma*描述*： 標準區段 '*一節*' 使用
-C4339|'*型別*': 未定義的類型使用中偵測到 CLR/WinRT 中繼資料-使用這個型別可能會導致執行階段例外狀況
-C4353|使用非標準擴充： 常數 0 當做函式運算式。  改為使用內建函式的 '__noop' 函式
-C4370|'*宣告*': 類別配置已從舊版的編譯器，因為較佳的封裝
-C4371|'*宣告*': 從舊版的編譯器，因為較佳的成員的封裝，類別配置可能已變更'*成員*'
-C4373|'*型別*': 虛擬函式覆寫*宣告*'，舊版編譯器不會覆寫當參數差異只不同時 const/volatile 限定詞
-C4387|'*描述*': 已被視為
-C4389|'*運算式*': signed/unsigned 不相符
-C4391|'*宣告*': 不正確的傳回型別為內建函式，必須是'*型別*'
-C4392|'*宣告*': 內建函式，預期的引數數目不正確'*數目*' 引數
-C4407|不同成員指標表示法之間進行轉換，編譯器可能會產生不正確的程式碼
-C4420|'*名稱*': 無法使用運算子，使用'*名稱*' 改用執行階段檢查可能無法執行
-C4440|呼叫慣例的重複定義，從 '*描述*'到'*描述*' 略過
-C4442|__annotation 引數中內嵌的 null 結束字元。  系統會截斷值。
-C4444|'*名稱*': 此內容中不會實作最上層 '__unaligned'
-C4526|'*型別*': 靜態成員函式無法覆寫虛擬函式'*宣告*' 覆寫被忽略，則會隱藏虛擬函式
-C4531|C + + 例外狀況處理在 Windows CE 上無法使用。 使用結構化例外狀況處理
-C4532|'*描述*': 跳出*最後*區塊未定義在終止處理期間的行為
-C4533|初始化 '*宣告*' 會被略過 ' goto*宣告*'
-C4534|'*宣告*' 將不會針對預設建構函式*類別*'*型別*' 因為預設引數
-C4535|呼叫 _set_se_translator （） 需要 /EHa
-C4536|'*描述*': 類型名稱超出中繼資料的限制'*數目*' 字元
-C4537|'*宣告*': '。' 套用至非 UDT 類型
-C4542|略過合併插入的文字檔案，產生無法寫入*型別*檔案: '*filename*':*錯誤*
-C4543|插入屬性所隱藏的文字 ' 沒有\_injected_text'
-C4555|運算式無效; 必須是具有副作用的運算式
-C4557|'__assume '包含'*效果*'
-C4558|運算元的值 '*數字*'je mimo rozsah'*數目* - *數目*'
-C4561|'__fastcall' 不以 '/ /clr' 選項： 將轉換為 '__stdcall'
-C4562|完全原型函式是必要項目 '/ /clr' 選項： 轉換為 '(void)' 的 ' （）'
-C4564|方法 '*名稱*' 的*類別*'*型別*'定義不支援的預設參數'*參數*'
-C4584|'*型別*': 基底類別'*宣告*'已經是基底類別的'*宣告*'
-C4608|初始化等位的多個成員: '*型別*'和'*型別*'
-C4619|#pragma 警告： 沒有警告編號 '*數字*'
-C4623|'*型別*': 預設建構函式已隱含定義為刪除
-C4624|'*型別*': 解構函式已隱含定義為刪除
-C4625|'*型別*': 複製建構函式已隱含定義為刪除
-C4626|'*型別*': 指派運算子已隱含定義為刪除
-C4645|使用 'noreturn' 宣告的函式具有 return 陳述式
-C4646|使用 'noreturn' 宣告的函式具有非 void 傳回型別
-C4659|#pragma '*描述*': 使用保留的區段'*名稱*' 有未定義的行為，使用 #pragma 註解 (linker，...)
-C4667|'*宣告*': 沒有函式樣板定義符合強制具現化
-C4668|'*名稱*'未定義成前置處理器巨集，以 '0' 取代'*值*'
-C4669|'*運算式*': 不安全的轉換:'*型別*' 是受控/WinRT 類型的物件
-C4674|'*名稱*' 必須宣告為 'static'，而且只能有一個參數
-C4680|'*型別*': coclass 不指定的預設介面。
-C4681|'*型別*': coclass 不指定為事件來源的預設介面
-C4682|'*型別*': 沒有方向參數屬性指定，預設為 [in]
-C4683|'*宣告*': 事件來源有 'out'-參數; 當攔截多個事件處理常式時警告
-C4684|'*描述*':警告!! 屬性可能造成無效的程式碼產生： 請小心使用
-C4685|剖析樣板參數時需要 '> >'，但卻找到 '>>'
-C4700|未初始化的區域變數 '*名稱*' 使用
-C4701|可能未初始化的區域變數 '*名稱*' 使用
-C4702|無法連線到的程式碼
-C4711|函式 '*名稱*' 選取自動內嵌展開
-C4714|函式 '*宣告*' 標記為 __forceinline 無法內嵌
-C4715|'*函式*': 不是所有控制路徑都傳回值
-C4716|'*函式*': 必須傳回值
-C4717|'*函式*': 在所有控制路徑上的遞迴，函式會導致執行階段堆疊溢位
-C4718|'*函式*': 遞迴呼叫沒有任何副作用，刪除
-C4719|找到指定 Qfast 時-使用 'f' 做為尾碼表示單精確度的雙精度浮點常數
-C4723|可能除以 0
-C4724|MOD 的模數可能為 0
-C4725|指令在一些 Pentium 上可能不正確
-C4757|註標是大型 unsigned 的值，您要使用負的常數？
-C4772|#import 參考型別從遺漏的類型程式庫;'*描述*' 做為預留位置
-C4792|函式 '*函式*' 宣告使用 sysimport 宣告並參考原生程式碼; 匯入程式庫需要連結
-C4794|執行緒區域儲存區變數的區段 '*名稱*'已從變更'*區段*'to'*區段*'
-C4798|原生程式碼產生 p-code 函式的 '*名稱*' 與例外狀況處理常式或回溯語意
-C4799|函式 '*名稱*' 沒有 EMMS 指令
-C4803|'*宣告*': 產生的方法具有不同的儲存類別的事件，'*宣告*'
-C4810|pragma pack （show） 的值 = =*數目*
-C4811|pragma conform 的值 (forScope，show) = =*值*
-C4820|'*型別*':'*數目*'位元組填補已加之後*型別*'*類型*'
-C4905|寬字串常值轉換成 '*型別*'
-C4906|字串常值轉換成 '*型別*'
-C4912|'*屬性*': 屬性有未定義巢狀 UDT 上的行為
-C4916|為了有 dispid，'*型別*': 必須由介面引入
-C4917|'*型別*': GUID 僅能與類別、 介面或命名空間相關聯
-C4918|'*字元*': 在 pragma 最佳化清單中的無效字元
-C4920|列舉*名稱*成員*名稱*=*數目*已經看過在列舉*名稱*為*名稱*=*數目*
-C4921|'*名稱*': 屬性值'*值*' 不應多次指定
-C4925|'*宣告*': 無法從指令碼呼叫 dispinterface 方法
-C4926|'*宣告*': 已定義符號： 忽略屬性
-C4927|不合法的轉換;已經隱含套用一個以上的使用者定義轉換
-C4928|不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換
-C4929|'*描述*': 類型程式庫包含一個等位; 忽略 'embedded_idl' 限定詞
-C4930|'*宣告*': 未呼叫原型函式 （是變數定義？）
-C4931|我們會假設型別程式庫已針對建置*數字*-位元指標
-C4932|__identifier (*描述*) 和 __identifier (*描述*) 會難以區分
-C4934|'__delegate （multicast）' 已被取代，請使用 '__delegate' 代替
-C4935|從組件存取規範修改 '*描述*'
-C4944|'*名稱*': 無法從匯入符號'*來源*': 為*宣告*' 已存在於目前的範圍
-C4945|'*名稱*': 無法從匯入符號'*來源*': 為*宣告*'已經匯入從另一個組件'*來源*'
-C4946|相關的類別之間使用的 reinterpret_cast: '*宣告*'和'*宣告*'
-C4995|'*名稱*': 名稱被標示為已被取代的 #pragma
-C4996|'*問題*':*描述*
-C4997|'*型別*': coclass 未實作 COM 介面或虛擬介面
-C4998|預期失敗：*描述*(*數目*)
+| C4352 | `'name': intrinsic function already defined` |
+| C4573 | `the usage of 'type' requires the compiler to capture 'this' but the current default capture mode does not allow it` |
+| C4574 | `'name' is defined to be '0': did you mean to use '#if name'?` |
+| C4689 | `'character': unsupported character in #pragma detect_mismatch; #pragma ignored` |
+| C4751 | `/arch AVX flag does not apply to Intel(R) Streaming SIMD Extensions that are within inline ASM` |
+| C4752 | `found Intel(R) Advanced Vector Extensions; consider using the appropriate /arch AVX flag` |
+| C4837 | `trigraph detected: '??character' replaced by 'character'` |
+| C4986 | `'declaration': exception specification does not match previous declaration` |
+| C4987 | `nonstandard extension used: 'throw (...)'` |
+
+## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>視覺效果中所引進的警告C++2008 （編譯器版本 15.00.21022.08）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:14`。
+
+|||
+|-|-|
+| C4396 | `'type': the inline specifier cannot be used when a friend declaration refers to a specialization of a function template` |
+| C4413 | `'declaration': reference member is initialized to a temporary that doesn't persist after the constructor exits` |
+| C4491 | `'description': has an illegal IDL version format` |
+| C4603 | `'name': macro is not defined or definition is different after precompiled header use` |
+| C4627 | `'description': skipped when looking for precompiled header use` |
+| C4750 | `'description': function with _alloca() inlined into a loop` |
+| C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
+| C4985 | `'declaration': attributes not present on previous declaration.` |
+
+## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>視覺效果中所引進的警告C++2005 （編譯器版本 14.00.50727.762）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:13`。
+
+|||
+|-|-|
+| C4000 | `UNKNOWN WARNING    Please choose the Technical Support command on the Visual C++     Help menu, or open the Technical Support help file for more information` |
+| C4272 | `'type': is marked __declspec(dllimport); must specify native calling convention when importing a function.` |
+| C4333 | `'expression': right shift by too large amount, data loss` |
+| C4334 | `'expression': result of 32-bit shift implicitly converted to 64 bits (was 64-bit shift intended?)` |
+| C4335 | `Mac file format detected: please convert the source file to either DOS or UNIX format` |
+| C4342 | `behavior change: 'type' called, but a member operator was called in previous versions` |
+| C4350 | `behavior change: 'declaration' called instead of 'declaration'` |
+| C4357 | `param array argument found in formal argument list for delegate 'declaration' ignored when generating 'type'` |
+| C4358 | `'expression': return type of combined delegates is not 'void'; returned value is undefined` |
+| C4359 | `'type': Alignment specifier is less than actual alignment (number), and will be ignored.` |
+| C4362 | `'type': alignment greater than 8 bytes is not supported by CLR` |
+| C4364 | `#using for assembly 'name' previously seen at description(number) without as_friend attribute; as_friend not applied` |
+| C4365 | `'expression': conversion from 'type' to 'type', signed/unsigned mismatch` |
+| C4366 | `The result of the unary 'operator' operator may be unaligned` |
+| C4367 | `Conversion from 'type' to 'type' may cause datatype misalignment exception` |
+| C4368 | `cannot define 'name' as a member of managed 'type': mixed types are not supported` |
+| C4369 | `'type':  enumerator value 'number' cannot be represented as 'type', value is 'number'` |
+| C4374 | `'declaration': interface method will not be implemented by non-virtual method 'declaration'` |
+| C4375 | `non-public method 'declaration' does not override 'declaration'` |
+| C4376 | `access specifier 'specifier:' is no longer supported: please use 'specifier:' instead` |
+| C4377 | `native types are private by default; -d1PrivateNativeTypes is deprecated` |
+| C4378 | `Must obtain function pointers to run initializers; consider System::ModuleHandle::ResolveMethodHandle` |
+| C4379 | `Version version of the common language runtime is not supported by this compiler. Using this version may cause unexpected results` |
+| C4381 | `'declaration': interface method will not be implemented by non-public method 'declaration'` |
+| C4382 | `throwing 'type': a type with __clrcall destructor or copy constructor can only be caught in /clr:pure module` |
+| C4383 | `'type': the meaning of dereferencing a handle can change, when a user-defined 'operator' operator exists; write the operator as a static function to be explicit about the operand` |
+| C4384 | `#pragma 'directive' should only be used at global scope` |
+| C4393 | `'type': const has no effect on description data member; ignored` |
+| C4394 | `'type': per-appdomain symbol should not be marked with __declspec(value)` |
+| C4395 | `'type': member function will be invoked on a copy of the initonly data member 'type'` |
+| C4397 | `DefaultCharSetAttribute is ignored` |
+| C4398 | `'type': per-process global object might not work correctly with multiple appdomains; consider using __declspec(appdomain)` |
+| C4399 | `'type': per-process symbol should not be marked with __declspec(value) when compiled with /clr:pure` |
+| C4400 | `'type': const/volatile qualifiers on this type are not supported` |
+| C4412 | `'declaration': function signature contains type 'type'; C++ objects are unsafe to pass between pure code and mixed or native.` |
+| C4429 | `possible incomplete or improperly formed universal-character-name` |
+| C4430 | `missing type specifier - int assumed. Note: C++ does not support default-int` |
+| C4431 | `missing type specifier - int assumed. Note: C no longer supports default-int` |
+| C4434 | `a static constructor must have private accessibility; changing to private access` |
+| C4439 | `'type': function definition with a managed type in the signature must have a __clrcall calling convention` |
+| C4441 | `calling convention of 'convention' ignored; 'convention' used instead` |
+| C4445 | `'declaration': in a managed/WinRT type a virtual method cannot be private` |
+| C4460 | `CLR/WinRT operator 'type', has parameter passed by reference. CLR/WinRT operator 'operator' has different semantics from C++ operator 'operator', did you intend to pass by value?` |
+| C4461 | `'type': this class has a finalizer '!type' but no destructor '~type'` |
+| C4470 | `floating-point control pragmas ignored under /clr` |
+| C4480 | `nonstandard extension used: specifying underlying type for enum 'type'` |
+| C4481 | `nonstandard extension used: override specifier 'specifier'` |
+| C4482 | `nonstandard extension used: enum 'type' used in qualified name` |
+| C4483 | `syntax error: expected C++ keyword` |
+| C4484 | `'type': matches base ref class method 'type', but is not marked 'virtual', 'new' or 'override'; 'new' (and not 'virtual') is assumed` |
+| C4485 | `'type': matches base ref class method 'type', but is not marked 'new' or 'override'; 'new' (and 'virtual') is assumed` |
+| C4486 | `'type': a private virtual method of a ref class or value class should be marked 'sealed'` |
+| C4487 | `'type': matches inherited non-virtual method 'type' but is not explicitly marked 'new'` |
+| C4488 | `'type': requires 'keyword' keyword to implement the interface method 'type'` |
+| C4489 | `'keyword': not allowed on interface method 'name'; override specifiers are only allowed on ref class and value class methods` |
+| C4490 | `'keyword': incorrect use of override specifier; 'type' does not match a base ref class method` |
+| C4538 | `'type': const/volatile qualifiers on this type are not supported` |
+| C4559 | `'type': redefinition; the function gains __declspec(value)` |
+| C4565 | `'type': redefinition; the symbol was previously declared with __declspec(value)` |
+| C4566 | `character represented by universal-character-name 'character' cannot be represented in the current code page (number)` |
+| C4568 | `'type': no members match the signature of the explicit override` |
+| C4569 | `'type': no members match the signature of the explicit override` |
+| C4570 | `'type': is not explicitly declared as abstract but has abstract functions` |
+| C4571 | `Informational: catch(...) semantics changed since Visual C++ 7.1; structured exceptions (SEH) are no longer caught` |
+| C4572 | `[ParamArray] attribute is deprecated under /clr, use '...' instead` |
+| C4580 | `[attribute] is deprecated; instead specify specifiedAttribute as a base class` |
+| C4581 | `deprecated behavior: '"name"' replaced with 'name' to process attribute` |
+| C4606 | `#pragma warning: 'number' ignored; Code Analysis warnings are not associated with warning levels` |
+| C4631 | `MSXML or XPath unavailable, XML document comments will not be processed. description` |
+| C4632 | `XML document comment: description - access denied: description` |
+| C4633 | `XML document comment description: error: description` |
+| C4634 | `XML document comment description: cannot be applied: description` |
+| C4635 | `XML document comment description: badly-formed XML: description` |
+| C4636 | `XML document comment description: tag requires non-empty 'description' attribute.` |
+| C4637 | `XML document comment description: <include> tag discarded. description` |
+| C4638 | `XML document comment description: reference to unknown symbol 'description'.` |
+| C4639 | `MSXML error, XML document comments will not be processed. description` |
+| C4641 | `XML document comment has an ambiguous cross reference:` |
+| C4678 | `base class 'declaration' is less accessible than 'name'` |
+| C4679 | `'description': could not import member` |
+| C4687 | `'type': a sealed abstract class cannot implement an interface 'type'` |
+| C4688 | `'name': constraint list contains assembly private type 'declaration'` |
+| C4690 | `[ emitidl( pop ) ]: more pops than pushes` |
+| C4691 | `'type': type referenced was expected in unreferenced module 'description', type defined in current translation unit used instead` |
+| C4692 | `'name': signature of non-private member contains assembly private native type 'declaration'` |
+| C4693 | `'type': a sealed abstract class cannot have any instance members 'name'` |
+| C4694 | `'type': a sealed abstract class cannot have a base-class 'type'` |
+| C4720 | `in-line assembler reports: 'description'` |
+| C4721 | `'description': not available as an intrinsic` |
+| C4722 | `'description': destructor never returns, potential memory leak` |
+| C4726 | `ARM arch4/4T supports only '<cpsr_f> or <spsr_f>' with immediate value` |
+| C4727 | `PCH named name with same timestamp found in name and name.  Using first PCH.` |
+| C4729 | `function too big for flow graph based warnings` |
+| C4730 | `'description': mixing _m64 and floating point expressions may result in incorrect code` |
+| C4731 | `'description': frame pointer register 'register' modified by inline assembly code` |
+| C4732 | `intrinsic 'intrinsic' is not supported in this architecture` |
+| C4733 | `Inline asm assigning to 'FS:0': handler not registered as safe handler` |
+| C4734 | `More than 64k line numbers in a COFF debug info section; stop emitting COFF debug line numbers for module 'module'` |
+| C4738 | `storing 32-bit float result in memory, possible loss of performance` |
+| C4739 | `reference to variable 'variable' exceeds its storage space` |
+| C4740 | `flow in or out of inline asm code suppresses global optimization` |
+| C4742 | `'variable' has different alignment in 'location' and 'location': number and number` |
+| C4743 | `'name' has different size in 'location' and 'location': number and number bytes` |
+| C4744 | `'name' has different type in 'location' and 'location': 'type' and 'type'` |
+| C4747 | `Calling managed 'type': Managed code may not be run under loader lock, including the DLL entrypoint and calls reached from the DLL entrypoint` |
+| C4761 | `integral size mismatch in argument; conversion supplied` |
+| C4764 | `Cannot align catch objects to greater than 16 bytes` |
+| C4788 | `'identifier': identifier was truncated to 'number' characters` |
+| C4789 | `buffer 'name' of size number bytes will be overrun; number bytes will be written starting at offset number` |
+| C4801 | `Return by reference is not verifiable: description` |
+| C4819 | `The file contains a character that cannot be represented in the current code page (number). Save the file in Unicode format to prevent data loss` |
+| C4826 | `Conversion from 'type' to 'type' is sign-extended. This may cause unexpected runtime behavior.` |
+| C4829 | `Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'` |
+| C4835 | `'type': the initializer for exported data will not be run until managed code is first executed in the host assembly` |
+| C4867 | `'type': non-standard syntax; use '&' to create a pointer to member` |
+| C4936 | `this __declspec is supported only when compiled with /clr or /clr:pure` |
+| C4937 | `'name' and 'name' are indistinguishable as arguments to 'option'` |
+| C4938 | `'type': Floating point reduction variable may cause inconsistent results under /fp:strict or #pragma fenv_access` |
+| C4939 | `#pragma vtordisp is deprecated and will be removed in a future release of Visual C++` |
+| C4947 | `'type': marked as obsolete` |
+| C4949 | `pragmas 'managed' and 'unmanaged' are meaningful only when compiled with '/clr[:option]'` |
+| C4950 | `'type': marked as obsolete` |
+| C4955 | `'description': import ignored; already imported from 'source'` |
+| C4956 | `'type': this type is not verifiable` |
+| C4957 | `'expression': explicit cast from 'type' to 'type' is not verifiable` |
+| C4958 | `'expression': pointer arithmetic is not verifiable` |
+| C4959 | `cannot define unmanaged class 'type' in /clr:safe because accessing its members yields unverifiable code` |
+| C4960 | `'description' is too big to be profiled` |
+| C4961 | `No profile data was merged into 'location', profile-guided optimizations disabled` |
+| C4962 | `'description': Profile-guided optimizations disabled because optimizations caused profile data to become inconsistent` |
+| C4963 | `'description': no profile data found; different compiler options were used in instrumented build` |
+| C4964 | `No optimization options were specified; profile info will not be collected` |
+| C4965 | `implicit box of integer 0; use nullptr or explicit cast` |
+| C4970 | `delegate constructor: target object ignored since 'declaration' is static` |
+| C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
+| C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
+
+## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>視覺效果中所引進的警告C++2003 （編譯器版本 13.10.3077）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:13.00.9466`。
+
+|||
+|-|-|
+| C4343 | `#pragma optimize(description,off) overrides /Og option` |
+| C4344 | `behavior change: use of explicit template arguments results in call to 'declaration'` |
+| C4346 | `'type': dependent name is not a type` |
+| C4348 | `'declaration': redefinition of default parameter: parameter number` |
+| C4356 | `'type': static data member cannot be initialized via derived class` |
+| C4408 | `anonymous struct did not declare any data members` |
+| C4544 | `'declaration': default template argument ignored on this template declaration` |
+| C4545 | `expression before comma evaluates to a function which is missing an argument list` |
+| C4546 | `function call before comma missing argument list` |
+| C4547 | `'expression': operator before comma has no effect; expected operator with side-effect` |
+| C4548 | `expression before comma has no effect; expected expression with side-effect` |
+| C4549 | `'expression': operator before comma has no effect; did you intend 'expression'?` |
+| C4628 | `digraphs not supported with -Ze. Character sequence 'sequence' not interpreted as alternate token for 'token'` |
+| C4629 | `digraph used, character sequence 'sequence' interpreted as token 'token' (insert a space between the two characters if this is not what you intended)` |
+| C4671 | `'description': the copy constructor is inaccessible` |
+| C4676 | `'description': the destructor is inaccessible` |
+| C4677 | `'name': signature of non-private member contains assembly private type 'declaration'` |
+| C4686 | `'type': possible change in behavior, change in UDT return calling convention` |
+| C4812 | `obsolete declaration style: please use 'type::name' instead` |
+| C4813 | `'type': a friend function of a local class must have been previously declared` |
+| C4821 | `Unable to determine Unicode encoding type, please save the file with signature (BOM)` |
+| C4822 | `'type': local class member function does not have a body` |
+| C4823 | `'type': uses pinning pointers but unwind semantics are not enabled. Consider using /EHa` |
+| C4913 | `user defined binary operator ',' exists but no overload could convert all operands, default built-in binary operator ',' used` |
+| C4948 | `return type of 'declaration' does not match the last parameter type of the corresponding setter` |
+| C4951 | `'description' has been edited since profile data was collected, function profile data not used` |
+| C4952 | `'description': no profile data found in program database 'description'` |
+| C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
+| C4954 | `'description': not profiled (contains __int64 switch expression)` |
+
+## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>視覺效果中所引進的警告C++2002 （編譯器版本 13.00.9466）
+
+使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:12`。
+
+|||
+|-|-|
+| C4096 | `'type': interface is not a COM interface; will not be emitted to IDL` |
+| C4097 | `expected pragma parameter to be 'restore' or 'off'` |
+| C4165 | `'HRESULT' is being converted to 'bool'; are you sure this is what you want?` |
+| C4183 | `'name': missing return type; assumed to be a member function returning 'int'` |
+| C4199 | `description` |
+| C4255 | `'name': no function prototype given: converting '()' to '(void)'` |
+| C4256 | `'declaration': constructor for class with virtual bases has '...'; calls may not be compatible with older versions of Visual C++` |
+| C4258 | `'name': definition from the for loop is ignored; the definition from the enclosing scope is used` |
+| C4263 | `'declaration': member function does not override any base class virtual member function` |
+| C4264 | `'declaration': no override available for virtual member function from base 'class'; function is hidden` |
+| C4265 | `'type': class has virtual functions, but destructor is not virtual instances of this class may not be destructed correctly` |
+| C4266 | `'declaration': no override available for virtual member function from base 'class'; function is hidden` |
+| C4267 | `'expression': conversion from 'size_t' to 'type', possible loss of data` |
+| C4274 | `#ident ignored; see documentation for #pragma comment(exestr, 'string')` |
+| C4277 | `imported item 'type::name' exists as both data member and function member; data member ignored` |
+| C4278 | `'name': identifier in type library 'description' is already a macro; use the 'rename' qualifier` |
+| C4279 | `'name': identifier in type library 'description' is a keyword; use the 'rename' qualifier` |
+| C4287 | `'expression': unsigned/negative constant mismatch` |
+| C4288 | `nonstandard extension used: 'name': loop control variable declared in the for-loop is used outside the for-loop scope; it conflicts with the declaration in the outer scope` |
+| C4289 | `nonstandard extension used: 'name': loop control variable declared in the for-loop is used outside the for-loop scope` |
+| C4293 | `'expression': shift count negative or too big, undefined behavior` |
+| C4295 | `'type': array is too small to include a terminating null character` |
+| C4296 | `'expression': expression is always value` |
+| C4297 | `'type': function assumed not to throw an exception but does` |
+| C4298 | `'name': identifier in type library 'description' is already a macro; renaming to '__name'` |
+| C4299 | `'name': identifier in type library 'description' is a keyword; renaming to '__name'` |
+| C4302 | `'expression': truncation from 'type' to 'type'` |
+| C4303 | `conversion from 'type' to 'type' is deprecated, use static_cast, __try_cast or dynamic_cast` |
+| C4314 | `expected pragma parameter to be '32' or '64'` |
+| C4315 | `'type': 'this' pointer for member 'type' may not be aligned number as expected by the constructor` |
+| C4318 | `passing constant zero as the length to memset` |
+| C4319 | `'expression': zero extending 'type' to 'type' of greater size` |
+| C4321 | `automatically generating an IID for interface 'type'` |
+| C4322 | `automatically generating a CLSID for class 'type'` |
+| C4323 | `re-using registered CLSID for class 'type'` |
+| C4324 | `'type': structure was padded due to alignment specifier` |
+| C4325 | `attributes for standard section 'description' ignored` |
+| C4326 | `return type of 'name' should be 'type' instead of 'type'` |
+| C4327 | `'expression': indirection alignment of LHS (number) is greater than RHS (number)` |
+| C4328 | `'description': indirection alignment of formal parameter number (number) is greater than the actual argument alignment (number)` |
+| C4329 | `alignment specifier is ignored on enum` |
+| C4336 | `import cross-referenced type library 'library' before importing 'description'` |
+| C4337 | `cross-referenced type library 'library' in 'description' is being automatically imported` |
+| C4338 | `#pragma description: standard section 'section' is used` |
+| C4339 | `'type': use of undefined type detected in CLR/WinRT meta-data - use of this type may lead to a runtime exception` |
+| C4353 | `nonstandard extension used: constant 0 as function expression.  Use '__noop' function intrinsic instead` |
+| C4370 | `'declaration': layout of class has changed from a previous version of the compiler due to better packing` |
+| C4371 | `'declaration': layout of class may have changed from a previous version of the compiler due to better packing of member 'member'` |
+| C4373 | `'type': virtual function overrides 'declaration', previous versions of the compiler did not override when parameters only differed by const/volatile qualifiers` |
+| C4387 | `'description': was considered` |
+| C4389 | `'expression': signed/unsigned mismatch` |
+| C4391 | `'declaration': incorrect return type for intrinsic function, expected 'type'` |
+| C4392 | `'declaration': incorrect number of arguments for intrinsic function, expected 'number' arguments` |
+| C4407 | `cast between different pointer to member representations, compiler may generate incorrect code` |
+| C4420 | `'name': operator not available, using 'name' instead; run-time checking may be compromised` |
+| C4440 | `calling convention redefinition from 'description' to 'description' ignored` |
+| C4442 | `embedded null terminator in __annotation argument.  Value will be truncated.` |
+| C4444 | `'name': top level '__unaligned' is not implemented in this context` |
+| C4526 | `'type': static member function cannot override virtual function 'declaration' override ignored, virtual function will be hidden` |
+| C4531 | `C++ exception handling not available on Windows CE. Use Structured Exception Handling` |
+| C4532 | `'description': jump out of finally block has undefined behavior during termination handling` |
+| C4533 | `initialization of 'declaration' is skipped by 'goto declaration'` |
+| C4534 | `'declaration' will not be a default constructor for class 'type' due to the default argument` |
+| C4535 | `calling _set_se_translator() requires /EHa` |
+| C4536 | `'description': type-name exceeds meta-data limit of 'number' characters` |
+| C4537 | `'declaration': '.' applied to non-UDT type` |
+| C4542 | `Skipping generation of merged injected text file, cannot write type file: 'filename': error` |
+| C4543 | `Injected text suppressed by attribute 'no_injected_text'` |
+| C4555 | `expression has no effect; expected expression with side-effect` |
+| C4557 | `'__assume' contains effect 'effect'` |
+| C4558 | `value of operand 'number' is out of range 'number - number'` |
+| C4561 | `'__fastcall' incompatible with the '/clr' option: converting to '__stdcall'` |
+| C4562 | `fully prototyped functions are required with the '/clr' option: converting '()' to '(void)'` |
+| C4564 | `method 'name' of class 'type' defines unsupported default parameter 'parameter'` |
+| C4584 | `'type': base-class 'declaration' is already a base-class of 'declaration'` |
+| C4608 | `Initializing multiple members of union: 'type' and 'type'` |
+| C4619 | `#pragma warning: there is no warning number 'number'` |
+| C4623 | `'type': default constructor was implicitly defined as deleted` |
+| C4624 | `'type': destructor was implicitly defined as deleted` |
+| C4625 | `'type': copy constructor was implicitly defined as deleted` |
+| C4626 | `'type': assignment operator was implicitly defined as deleted` |
+| C4645 | `function declared with 'noreturn' has a return statement` |
+| C4646 | `function declared with 'noreturn' has non-void return type` |
+| C4659 | `#pragma 'description': use of reserved segment 'name' has undefined behavior, use #pragma comment(linker, ...)` |
+| C4667 | `'declaration': no function template defined that matches forced instantiation` |
+| C4668 | `'name' is not defined as a preprocessor macro, replacing with '0' for 'value'` |
+| C4669 | `'expression': unsafe conversion: 'type' is a managed/WinRT type object` |
+| C4674 | `'name' should be declared 'static' and have exactly one parameter` |
+| C4680 | `'type': coclass does not specify a default interface` |
+| C4681 | `'type': coclass does not specify a default interface that is an event source` |
+| C4682 | `'type': no directional parameter attribute specified, defaulting to [in]` |
+| C4683 | `'declaration': event source has an 'out'-parameter; exercise caution when hooking multiple event handlers` |
+| C4684 | `'description': WARNING!! attribute may cause invalid code generation: use with caution` |
+| C4685 | `expecting '> >' found '>>' when parsing template parameters` |
+| C4700 | `uninitialized local variable 'name' used` |
+| C4701 | `potentially uninitialized local variable 'name' used` |
+| C4702 | `unreachable code` |
+| C4711 | `function 'name' selected for automatic inline expansion` |
+| C4714 | `function 'declaration' marked as __forceinline not inlined` |
+| C4715 | `'function': not all control paths return a value` |
+| C4716 | `'function': must return a value` |
+| C4717 | `'function': recursive on all control paths, function will cause runtime stack overflow` |
+| C4718 | `'function': recursive call has no side effects, deleting` |
+| C4719 | `Double constant found when Qfast specified - use 'f' as a suffix to indicate single precision` |
+| C4723 | `potential divide by 0` |
+| C4724 | `potential mod by 0` |
+| C4725 | `instruction may be inaccurate on some Pentiums` |
+| C4757 | `subscript is a large unsigned value, did you intend a negative constant?` |
+| C4772 | `#import referenced a type from a missing type library; 'description' used as a placeholder` |
+| C4792 | `function 'function' declared using sysimport and referenced from native code; import library required to link` |
+| C4794 | `segment of thread local storage variable 'name' changed from 'segment' to 'segment'` |
+| C4798 | `native code generated for p-code function 'name' with exception handler or unwind semantics` |
+| C4799 | `function 'name' has no EMMS instruction` |
+| C4803 | `'declaration': the raise method has a different storage class from that of the event, 'declaration'` |
+| C4810 | `value of pragma pack(show) == number` |
+| C4811 | `value of pragma conform(forScope, show) == value` |
+| C4820 | `'type': 'number' bytes padding added after type 'type'` |
+| C4905 | `wide string literal cast to 'type'` |
+| C4906 | `string literal cast to 'type'` |
+| C4912 | `'attribute': attribute has undefined behavior on a nested UDT` |
+| C4916 | `in order to have a dispid, 'type': must be introduced by an interface` |
+| C4917 | `'type': a GUID can only be associated with a class, interface or namespace` |
+| C4918 | `'character': invalid character in pragma optimization list` |
+| C4920 | `enum name member name=number already seen in enum name as name=number` |
+| C4921 | `'name': attribute value 'value' should not be multiply specified` |
+| C4925 | `'declaration': dispinterface method cannot be called from script` |
+| C4926 | `'declaration': symbol is already defined: attributes ignored` |
+| C4927 | `illegal conversion; more than one user-defined conversion has been implicitly applied` |
+| C4928 | `illegal copy-initialization; more than one user-defined conversion has been implicitly applied` |
+| C4929 | `'description': typelibrary contains a union; ignoring the 'embedded_idl' qualifier` |
+| C4930 | `'declaration': prototyped function not called (was a variable definition intended?)` |
+| C4931 | `we are assuming the type library was built for number-bit pointers` |
+| C4932 | `__identifier(description) and __identifier(description) are indistinguishable` |
+| C4934 | `'__delegate(multicast)' is deprecated, use '__delegate' instead` |
+| C4935 | `assembly access specifier modified from 'description'` |
+| C4944 | `'name': cannot import symbol from 'source': as 'declaration' already exists in the current scope` |
+| C4945 | `'name': cannot import symbol from 'source': as 'declaration' has already been imported from another assembly 'source'` |
+| C4946 | `reinterpret_cast used between related classes: 'declaration' and 'declaration'` |
+| C4995 | `'name': name was marked as #pragma deprecated` |
+| C4996 | `'issue': description` |
+| C4997 | `'type': coclass does not implement a COM interface or pseudo-interface` |
+| C4998 | `EXPECTATION FAILED: description(number)` |
 
 ## <a name="see-also"></a>另請參閱
 
-- [/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md)
-- [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
-- [warning](../../preprocessor/warning.md)
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器警告 C4000-C5999](compiler-warnings-c4000-c5999.md) \
+[/Wv 編譯器選項](../../build/reference/compiler-option-warning-level.md) \
+[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) \
+[warning](../../preprocessor/warning.md)

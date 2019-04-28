@@ -25,11 +25,11 @@ helpviewer_keywords:
 - file pointers [C++]
 ms.assetid: 1a460ce1-28d8-4b5e-83a6-633dca29c28a
 ms.openlocfilehash: d2e50c34d48b5a9570691a8a702cd05c1a48242d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357560"
 ---
 # <a name="rewind"></a>rewind
 
@@ -45,14 +45,14 @@ void rewind(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="remarks"></a>備註
 
 **倒轉**函式相關聯的檔案指標重新置放*串流*檔案的開頭。 **rewind** 呼叫類似
 
-**(void) fseek (** _資料流_**，0 L、 SEEK_SET);**
+**(void) fseek(** _stream_**, 0L, SEEK_SET );**
 
 不過，不同於[fseek](fseek-fseeki64.md)，**倒轉**清除資料流的錯誤指標以及檔案結尾指標。 此外，不同於[fseek](fseek-fseeki64.md)，**倒轉**不會傳回值，指出是否已順利移動指標。
 
@@ -107,7 +107,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 The values written are: 1 and -37

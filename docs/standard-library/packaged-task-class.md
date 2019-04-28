@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
 ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370667"
 ---
 # <a name="packagedtask-class"></a>packaged_task 類別
 
@@ -172,7 +172,7 @@ template <class Fn, class Alloc>
 *右邊*<br/>
 `packaged_task` 物件。
 
-*配置*<br/>
+*alloc*<br/>
 記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
 
 *fn*<br/>

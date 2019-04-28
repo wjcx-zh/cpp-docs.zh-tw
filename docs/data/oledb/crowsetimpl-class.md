@@ -35,11 +35,11 @@ helpviewer_keywords:
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
 ms.openlocfilehash: 1fac3a74ca259fe3b680355fadc7f9bbd6e3cc13
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368704"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl 類別
 
@@ -117,7 +117,7 @@ class CRowsetImpl :
 
 若要實作的任何`CRowsetImpl`-衍生`Execute`方法，您必須填入您的內部資料緩衝區 ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md))。
 
-## <a name="namefromdbid"></a> Crowsetimpl:: Namefromdbid
+## <a name="namefromdbid"></a> CRowsetImpl::NameFromDBID
 
 會從字串中擷取`DBID`並將它複製到*bstr*傳入。
 
@@ -148,7 +148,7 @@ HRESULT CRowsetBaseImpl::NameFromDBID(DBID* pDBID,
 
 這個方法會呼叫`CRowsetImpl`的實作[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)並[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)。
 
-## <a name="setcommandtext"></a> Crowsetimpl:: Setcommandtext
+## <a name="setcommandtext"></a> CRowsetImpl::SetCommandText
 
 驗證並儲存`DBID`中的兩個字串 ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)並[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md))。
 
@@ -177,7 +177,7 @@ HRESULT CRowsetBaseImpl::SetCommandText(DBID* pTableID,
 
 這個方法會委派其工作，藉由呼叫[ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md)並[GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md)透過向上轉型的指標。
 
-## <a name="getcolumninfo"></a> Crowsetimpl:: Getcolumninfo
+## <a name="getcolumninfo"></a> CRowsetImpl::GetColumnInfo
 
 擷取特定的用戶端要求的資料行資訊。
 
@@ -210,7 +210,7 @@ static ATLCOLUMNINFO* CRowsetBaseImpl::GetColumnInfo(T* pv,
 
 [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]
 
-## <a name="getcommandfromid"></a> Crowsetimpl:: Getcommandfromid
+## <a name="getcommandfromid"></a> CRowsetImpl::GetCommandFromID
 
 檢查以查看或這兩個參數包含字串值時，如果是的話，會將字串值複製到的資料成員[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)並[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)。
 
@@ -237,7 +237,7 @@ HRESULT CRowsetBaseImpl::GetCommandFromID(DBID* pTableID,
 
 透過靜態的向上轉型，藉由呼叫這個方法`CRowsetImpl`來填入資料成員[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)並[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)。 根據預設，這個方法會檢查以查看其中一個或兩個參數是否包含字串值。 如果它們包含字串值，這個方法會複製至資料成員的字串值。 將具有此簽章中的方法您`CRowsetImpl`-衍生的類別，會呼叫您的方法，而不是基底實作。
 
-## <a name="validatecommandid"></a> Crowsetimpl:: Validatecommandid
+## <a name="validatecommandid"></a> CRowsetImpl::ValidateCommandID
 
 檢查是否有任一或兩者`DBID`s 包含字串值，而且如果是的話，將它們複製到其資料成員[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)並[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)。
 
@@ -264,7 +264,7 @@ HRESULT CRowsetBaseImpl::ValidateCommandID(DBID* pTableID,
 
 透過靜態的向上轉型，藉由呼叫這個方法`CRowsetImpl`填入其資料成員[m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md)並[m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)。 根據預設，這個方法會檢查是否有任一或兩者`DBID`s 包含字串值，而且如果是的話，將它們複製到其資料成員。 將具有此簽章中的方法您`CRowsetImpl`-衍生的類別，會呼叫您的方法，而不是基底實作。
 
-## <a name="rgrowdata"></a> Crowsetimpl:: M_rgrowdata
+## <a name="rgrowdata"></a> CRowsetImpl::m_rgRowData
 
 根據預設，`CAtlArray`上的使用者記錄的範本引數，templatizes `CRowsetImpl`。
 
@@ -278,7 +278,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 
 *ArrayType*為範本參數`CRowsetImpl`。
 
-## <a name="strcommandtext"></a> Crowsetimpl:: M_strcommandtext
+## <a name="strcommandtext"></a> CRowsetImpl::m_strCommandText
 
 包含資料列集的初始命令。
 
@@ -288,7 +288,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 CComBSTR CRowsetBaseImpl::m_strCommandText;
 ```
 
-## <a name="strindextext"></a> Crowsetimpl:: M_strindextext
+## <a name="strindextext"></a> CRowsetImpl::m_strIndexText
 
 包含資料列集的起始索引。
 

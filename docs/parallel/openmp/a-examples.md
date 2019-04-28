@@ -3,11 +3,11 @@ title: 答： 範例
 ms.date: 01/18/2019
 ms.assetid: c0f6192f-a205-449b-b84c-cb30dbcc8b8f
 ms.openlocfilehash: 061490d34829175bfbdcd84d6208aa396bb19671
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362968"
 ---
 # <a name="a-examples"></a>答： 範例
 
@@ -202,7 +202,7 @@ omp_set_num_threads(16);
 
 使用的優點`atomic`指示詞在此範例中是它可讓兩個不同的項目平行 x 的更新。 如果[重大](2-directives.md#262-critical-construct)指示詞改為使用，則所有更新的項目*x*執行循序 （但不在任何保證順序）。
 
-`atomic`指示詞只適用於 C 或 c + + 陳述式緊接著下。  如此一來，項目*y*不在此範例中會以不可分割方式更新。
+`atomic`指示詞只適用於 C 或C++陳述式之後立即。  如此一來，項目*y*不在此範例中會以不可分割方式更新。
 
 ## <a name="a13-a-flush-directive-with-a-list"></a>A.13 並 A 清單的 flush 指示詞
 
@@ -841,7 +841,7 @@ int sub()
 下列範例會示範如何使用 C99 可變長度陣列 (Vla) 中[firstprivate](2-directives.md#2722-firstprivate)指示詞。
 
 > [!NOTE]
-> Visual c + + 目前不支援可變長度陣列。
+> 可變長度陣列目前不支援在視覺效果C++。
 
 ```cpp
 void f(int m, int C[m][m])
@@ -917,7 +917,7 @@ int i, a;
 
 ## <a name="a31-thread-safe-lock-functions"></a>A.31 安全執行緒鎖定函式
 
-下列 c + + 範例示範如何使用來初始化陣列的平行區域中的鎖定[omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)。
+下列C++範例示範如何使用來初始化陣列的平行區域中的鎖定[omp_init_lock](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions)。
 
 ```cpp
 // A_13_omp_init_lock.cpp

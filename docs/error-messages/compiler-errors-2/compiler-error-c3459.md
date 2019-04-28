@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
 ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363735"
 ---
 # <a name="compiler-error-c3459"></a>編譯器錯誤 C3459
 
@@ -19,7 +19,7 @@ ms.locfileid: "50438001"
 
 設計成套用至類別索引子屬性 (property) 的屬性 (attribute) 的使用方式錯誤。
 
-如需詳細資訊，請參閱 <<c0> [ 如何： 使用屬性，在 C + + /cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
+如需詳細資訊，請參閱[如何：使用中的屬性C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 

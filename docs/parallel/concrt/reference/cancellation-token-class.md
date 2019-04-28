@@ -14,16 +14,15 @@ helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
 ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337514"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token 類別
 
-
-  `cancellation_token` 類別表示可判斷某個作業是否已要求取消的能力。 特定語彙基元可以與 `task_group`、`structured_task_group` 或 `task` 產生關聯，來提供隱含取消作業。 如果與相關聯的 `cancellation_token_source` 已取消，也可以向它輪詢取消，或為它註冊回呼。
+`cancellation_token` 類別表示可判斷某個作業是否已要求取消的能力。 特定語彙基元可以與 `task_group`、`structured_task_group` 或 `task` 產生關聯，來提供隱含取消作業。 如果與相關聯的 `cancellation_token_source` 已取消，也可以向它輪詢取消，或為它註冊回呼。
 
 ## <a name="syntax"></a>語法
 
@@ -98,8 +97,7 @@ void deregister_callback(const cancellation_token_registration& _Registration) c
 ### <a name="parameters"></a>參數
 
 *_Registration*<br/>
-
-  `cancellation_token_registration` 物件，對應於要取消註冊的回呼。 這個語彙基元必須已經由 `register` 方法呼叫所傳回。
+`cancellation_token_registration` 物件，對應於要取消註冊的回呼。 這個語彙基元必須已經由 `register` 方法呼叫所傳回。
 
 ##  <a name="is_cancelable"></a> is_cancelable
 
@@ -197,8 +195,7 @@ template<typename _Function>
 
 ### <a name="return-value"></a>傳回值
 
-
-  `cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 方法會擲回[invalid_operation](invalid-operation-class.md)如果已呼叫方法的例外狀況`cancellation_token`使用所建立的物件[invalid_operation](#none)方法。
+`cancellation_token_registration` 物件，可在 `deregister` 方法中用來取消註冊先前註冊的回呼，並防止進行此回呼。 方法會擲回[invalid_operation](invalid-operation-class.md)如果已呼叫方法的例外狀況`cancellation_token`使用所建立的物件[invalid_operation](#none)方法。
 
 ## <a name="see-also"></a>另請參閱
 

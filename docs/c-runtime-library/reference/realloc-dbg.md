@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _realloc_dbg function
 ms.assetid: 7c3cb780-51ed-4d9c-9929-cdde606d846a
 ms.openlocfilehash: 9b30dfd6fbae9a4831ff53e7896aeb995657da03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357742"
 ---
 # <a name="reallocdbg"></a>_realloc_dbg
 
@@ -50,7 +50,7 @@ void *_realloc_dbg(
 
 ### <a name="parameters"></a>參數
 
-*保留使用者資料*<br/>
+*userData*<br/>
 之前配置的記憶體區塊的指標。
 
 *newSize*<br/>

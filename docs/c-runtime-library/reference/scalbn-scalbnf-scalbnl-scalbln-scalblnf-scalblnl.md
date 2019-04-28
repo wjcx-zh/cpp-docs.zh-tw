@@ -37,11 +37,11 @@ helpviewer_keywords:
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
 ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357157"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -110,7 +110,7 @@ long double scalblnl(
 
 **FLT_RADIX**定義於\<float.h > 作為原生浮點基數; 在二進位系統中，其值為 2，並**scalbn**相當於[ldexp](ldexp.md)。
 
-C + + 允許多載，因為您可以呼叫多載**scalbn**並**scalbln**採用並傳回**float**或是**長** **雙**型別。 在 C 程式中， **scalbn**一律採用**double**並**int** ，並傳回**double**，和**scalbln**一律採用**雙**並**長**，並傳回**double**。
+因為C++允許多載，您可以呼叫多載**scalbn**並**scalbln**採用並傳回**float**或**長****double**型別。 在 C 程式中， **scalbn**一律採用**double**並**int** ，並傳回**double**，和**scalbln**一律採用**雙**並**長**，並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
@@ -138,7 +138,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 6.4 times FLT_RADIX to the power of 3 is 51.2

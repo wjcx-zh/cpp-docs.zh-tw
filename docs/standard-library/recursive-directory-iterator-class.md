@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370125"
 ---
 # <a name="recursivedirectoryiterator-class"></a>recursive_directory_iterator 類別
 
@@ -58,9 +58,9 @@ for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
 
 |成員函式|描述|
 |-|-|
-|[深度](#depth)|傳回`mystack.size() - 1`，因此`pval`的深度為零。|
+|[depth](#depth)|傳回`mystack.size() - 1`，因此`pval`的深度為零。|
 |[disable_recursion_pending](#disable_recursion_pending)|存放區**真**在`no_push`。|
-|[遞增值](#increment)|前移到序列中下一步 的檔案名稱。|
+|[increment](#increment)|前移到序列中下一步 的檔案名稱。|
 |[options](#options)|傳回 `myoptions`。|
 |[pop](#pop)|傳回下一個物件。|
 |[recursion_pending](#recursion_pending)|傳回 `!no_push`。|
@@ -163,7 +163,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator:: operator->
+## <a name="op_cast"></a> recursive_directory_iterator::operator->
 
 傳回 `&**this`。
 
@@ -246,7 +246,7 @@ recursive_directory_iterator(recursive_directory_iterator&&) noexcept = default;
 *error_code*<br/>
 指定的錯誤碼。
 
-*選擇*<br/>
+*opts*<br/>
 指定的目錄的選項。
 
 *recursive_directory_iterator*<br/>

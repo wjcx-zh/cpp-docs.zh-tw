@@ -44,11 +44,11 @@ helpviewer_keywords:
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
 ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353855"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror、_strerror、_wcserror、__wcserror
 
@@ -85,7 +85,7 @@ wchar_t * __wcserror(
 
 ## <a name="remarks"></a>備註
 
-**Strerror**函式對應*errnum*至錯誤訊息字串並傳回字串的指標。 既不**strerror**也不 **_strerror**實際上會列印訊息： 您必須為此，呼叫的輸出函式，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror**函式對應*errnum*至錯誤訊息字串並傳回字串的指標。 既不**strerror**也不 **_strerror**實際上會列印訊息：為此，您必須呼叫的輸出函式，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )

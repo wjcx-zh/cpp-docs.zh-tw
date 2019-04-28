@@ -28,11 +28,11 @@ helpviewer_keywords:
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
 ms.openlocfilehash: 4c7e93806600ff674baf186a66662aafdeceeaca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357547"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo、remquof、remquol
 
@@ -53,13 +53,13 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>參數
 
-*號碼*<br/>
+*numer*<br/>
 分子。
 
 *denom*<br/>
 分母。
 
-*/quo*<br/>
+*quo*<br/>
 用來儲存具有正負號和商數近似大小的整數的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -70,7 +70,7 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 **Remquo**函式會計算浮點餘數*f*的*x* / *y*使得*x*  = *我* \* *y* + *f*，其中*我*是整數*f*有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
 
-C + + 允許多載，因此您可以呼叫多載**remquo**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **remquo**一律會採用兩個**double**引數並傳回**double**。
+C++允許多載，因此您可以呼叫多載**remquo**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **remquo**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

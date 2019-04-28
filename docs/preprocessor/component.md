@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
 ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366910"
 ---
 # <a name="component"></a>元件
 
@@ -31,7 +31,7 @@ ms.locfileid: "59424062"
 
 您可以開啟或關閉收集功能，而且可以指定要在收集的資訊中忽略的特定名稱。
 
-使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如：
+使用開啟或關閉來控制收集 pragma 前方的瀏覽資訊。 例如: 
 
 ```cpp
 #pragma component(browser, off)

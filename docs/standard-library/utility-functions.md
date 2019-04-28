@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::move [C++]
 - std::swap [C++]
 ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362363"
 ---
 # <a name="ltutilitygt-functions"></a>&lt;utility&gt; 函式
 
@@ -170,7 +170,7 @@ constexpr T2&& get(pair<T1, T2>&& Pr) noexcept;
 *T2*<br/>
 第二個配對項目的類型。
 
-*提取要求*<br/>
+*pr*<br/>
 要從中選取的配對。
 
 ### <a name="remarks"></a>備註
@@ -232,7 +232,7 @@ pair<T, U> make_pair(T&& Val1, U&& Val2);
 
 ### <a name="parameters"></a>參數
 
-*val1*<br/>
+*Val1*<br/>
 值，初始化 `pair` 的第一個項目。
 
 *Val2*<br/>

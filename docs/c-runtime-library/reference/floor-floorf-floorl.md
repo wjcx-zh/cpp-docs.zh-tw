@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333582"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -71,13 +71,13 @@ long double floorl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|無|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 **floor**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫多載**floor**採用並傳回**float**並**長** **double**值。 在 C 程式中， **floor**一律採用並傳回**double**。
+C++允許多載，因此您可以呼叫多載**floor**採用並傳回**float**並**長** **double**值。 在 C 程式中， **floor**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

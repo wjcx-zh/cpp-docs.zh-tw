@@ -7,11 +7,11 @@ helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
 ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369802"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -212,11 +212,11 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 通常會根據這些屬性描述 URNG：
 
-1. **期間長度**：它使用多少個反覆項目來重複一串產生的數字序列。 愈長愈好。
+1. **期間長度**:重複產生的數字順序所需數目的反覆項目。 愈長愈好。
 
-2. **效能**：產生數字的速度，以及使用多少記憶體。 愈小愈好。
+2. **效能**:可以產生數字的速度，以及多少記憶體需要。 愈小愈好。
 
-3. **品質**：產生的序列有多接近真正亂數。 這通常稱為「隨機性」。
+3. **品質**:多接近真正亂數產生的序列有。 這通常稱為「隨機性」。
 
 下列各節列出統一亂數產生器 (Urng) 中提供\<隨機 > 標頭。
 
@@ -496,7 +496,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |URNG|快速|具有加密保護|可植入|具決定性|
 |----------|-----------|---------------------|---------------|--------------------|
 |`mt19937`|是|否|是|是<sup>*</sup>|
-|`random_device`|否|是|否|否|
+|`random_device`|否|[是]|否|否|
 
 <sup>* 提供已知種子時。</sup>
 

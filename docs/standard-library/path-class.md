@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::path
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
 ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370446"
 ---
 # <a name="path-class"></a>path 類別
 
@@ -50,9 +50,9 @@ class path;
 |[concat](#compare)|將指定的順序，以附加`mypath`、 轉換 （但不是插入分隔符號） 所需。|
 |[empty](#empty)|傳回 `mypath.empty()`。|
 |[end](#end)|傳回結束序列迭代器的型別`iterator`。|
-|[延伸模組](#extension)|傳回的尾碼`filename()`。|
+|[extension](#extension)|傳回的尾碼`filename()`。|
 |[filename](#filename)|傳回 myname 的根目錄元件，即 `empty() path() : *--end()`。 元件可能是空的。|
-|[path::string、wstring、u8string、u16string、generic_string](#generic_string)|傳回 `this->string<Elem, Traits, Alloc>(al)` 並 (在 Windows 下) 將任何反斜線轉換成正斜線。|
+|[generic_string](#generic_string)|傳回 `this->string<Elem, Traits, Alloc>(al)` 並 (在 Windows 下) 將任何反斜線轉換成正斜線。|
 |[generic_u16string](#generic_u16string)|傳回 `u16string()` 並 (在 Windows 下) 將任何反斜線轉換成正斜線。|
 |[generic_u32string](#generic_u32string)|傳回 `u32string()` 並 (在 Windows 下) 將任何反斜線轉換成正斜線。|
 |[generic_u8string](#generic_u8string)|傳回 `u8string()` 並 (在 Windows 下) 將任何反斜線轉換成正斜線。|
@@ -76,7 +76,7 @@ class path;
 |[replace_extension](#replace_extension)|取代的延伸`myname`。 |
 |[replace_filename](#replace_filename)|RReplaces 檔案名稱。|
 |[root_directory](#root_directory)|傳回的根目錄元件`myname`。 |
-|[root_name&lt](#root_name)|傳回的根名稱元件`myname`。 |
+|[root_name](#root_name)|傳回的根名稱元件`myname`。 |
 |[root_path](#root_path)|傳回的根路徑元件`myname`。|
 |[stem](#stem)|傳回`stem`元件`myname`。|
 |[string](#string)|儲存中的序列轉換`mypath`。|
@@ -94,7 +94,7 @@ class path;
 |[operator=](#op_as)|路徑的項目取代為另一個路徑的複本。|
 |[operator+=](#op_add)|各種`concat`運算式。|
 |[operator/=](#op_divide)|各種`append`運算式。|
-|[string_type 運算子](#op_string)|傳回 `myname`。|
+|[operator string_type](#op_string)|傳回 `myname`。|
 
 ## <a name="requirements"></a>需求
 
@@ -122,7 +122,7 @@ path& append(InIt first, InIt last);
 *first*<br/>
 指定序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 指定序列的結尾。
 
 ## <a name="assign"></a> path:: assign
@@ -145,7 +145,7 @@ path& assign(InIt first, InIt last);
 *first*<br/>
 指定序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 指定序列的結尾。
 
 ## <a name="begin"></a> path:: begin
@@ -213,7 +213,7 @@ path& concat(InIt first, InIt last);
 *first*<br/>
 指定序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 指定序列的結尾。
 
 ## <a name="const_iterator"></a> path::const_iterator
@@ -358,7 +358,7 @@ bool has_root_directory() const;
 bool has_root_name() const;
 ```
 
-## <a name="has_root_path"></a> path:: has_root_path
+## <a name="has_root_path"></a> path::has_root_path
 
 傳回 `!root_path().empty()`。
 
@@ -374,7 +374,7 @@ bool has_root_path() const;
 bool has_stem() const;
 ```
 
-## <a name="is_absolute"></a> path:: is_absolute
+## <a name="is_absolute"></a> path::is_absolute
 
 針對 Windows，則函數會傳回`has_root_name() && has_root_directory()`。 至於 Posix，函式會傳回`has_root_directory()`。
 
@@ -431,7 +431,7 @@ class iterator
 
 1. 改變`myname`失效的指定項目中的所有迭代器`myname`。
 
-## <a name="make_preferred"></a> path:: make_preferred
+## <a name="make_preferred"></a> path::make_preferred
 
 將轉換至每個分隔符號`preferred_separator`視。
 
@@ -499,7 +499,7 @@ path& operator+=(Elem elem);
 *ptr*<br/>
 已新增的指標。
 
-*Elem*<br/>
+*elem*<br/>
 已加入`value_type`或`Elem`。
 
 *source*<br/>
@@ -556,7 +556,7 @@ path& operator/=(const Source& source);
 operator string_type() const;
 ```
 
-## <a name="parent_path"></a> path:: parent_path
+## <a name="parent_path"></a> path::parent_path
 
 傳回父路徑元件`myname`。
 
@@ -599,13 +599,13 @@ path(InIt first, InIt last, const locale& loc);
 *source*<br/>
 要從中複製建構的路徑的來源。
 
-*當地語系化*<br/>
+*loc*<br/>
 指定的地區設定。
 
 *first*<br/>
 要複製之第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 要複製的最後一個元素的位置。
 
 ### <a name="remarks"></a>備註
@@ -642,7 +642,7 @@ static constexpr value_type preferred_separator == '/';
 
 請注意，Windows 大部分的內容同樣允許在這個位置使用 L'/'。
 
-## <a name="relative_path"></a> path:: relative_path
+## <a name="relative_path"></a> path::relative_path
 
 傳回的相對路徑元件`myname`。
 
@@ -654,7 +654,7 @@ path relative_path() const;
 
 傳回的相對路徑元件`myname`，特別是尾碼`myname`移除之後`root_path().native()`和任何緊鄰的備援目錄分隔符號。 元件可能是空的。
 
-## <a name="remove_filename"></a> path:: remove_filename
+## <a name="remove_filename"></a> path::remove_filename
 
 移除檔案名稱。
 
@@ -679,7 +679,7 @@ path& replace_extension(const path& newext = path());
 
 首先會移除後置詞`extension().native()`從`myname`。 然後，如果`!newext.empty() && newext[0] != dot`(其中`dot`是`*path(".").c_str()`)，然後`dot`附加至`myname`。 然後*newext*附加至`myname`。
 
-## <a name="replace_filename"></a> path:: replace_filename
+## <a name="replace_filename"></a> path::replace_filename
 
 取代檔案名稱。
 
@@ -703,7 +703,7 @@ remove_filename();
 return (*this);
 ```
 
-## <a name="root_directory"></a> path:: root_directory
+## <a name="root_directory"></a> path::root_directory
 
 傳回的根目錄元件`myname`。
 
@@ -715,7 +715,7 @@ path root_directory() const;
 
 元件可能是空的。
 
-## <a name="root_name"></a> path:: root_name
+## <a name="root_name"></a> path::root_name
 
 傳回的根名稱元件`myname`。
 
@@ -727,7 +727,7 @@ path root_name() const;
 
 元件可能是空的。
 
-## <a name="root_path"></a> path:: root_path
+## <a name="root_path"></a> path::root_path
 
 傳回的根路徑元件`myname`。
 

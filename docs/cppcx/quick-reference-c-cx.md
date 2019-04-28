@@ -3,15 +3,15 @@ title: 快速參考 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: ba457195-26e5-43aa-b99d-24a871e550f4
 ms.openlocfilehash: 0526c9083d177688146926598b79e66ca2f9723c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362331"
 ---
 # <a name="quick-reference-ccx"></a>快速參考 (C++/CX)
 
-Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，透過 Microsoft Store 散發的通用 Windows 平台 (UWP) 應用程式。 C + + /CX 簡化 Windows 執行階段撰寫的應用程式。 這篇文章是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)。
+Windows 執行階段支援只能在值得信任的作業系統環境中執行，使用授權的函式、 資料類型及裝置，透過 Microsoft Store 散發的通用 Windows 平台 (UWP) 應用程式。 C++/CX 簡化 Windows 執行階段撰寫的應用程式。 這篇文章是快速參考;如需更完整的文件，請參閱[型別系統](../cppcx/type-system-c-cx.md)。
 
 當您建置命令列上時，使用 **/ZW**編譯器選項建置的 UWP 應用程式或 Windows 執行階段元件。 若要存取 Windows 執行階段宣告 Windows 執行階段中繼資料 (.winmd) 檔案中定義，指定`#using`指示詞或 **/FU**編譯器選項。 當您建立 UWP 應用程式的專案時，Visual Studio 預設會設定這些選項，並將所有的 Windows 執行階段程式庫的參考。
 
@@ -19,7 +19,7 @@ Windows 執行階段支援只能在值得信任的作業系統環境中執行，
 
 |概念|標準 C++|C++/CX|備註|
 |-------------|--------------------|------------------------------------------------------------------|-------------|
-|基本類型|C++ 基本型別。|C + + /CX 中實作 Windows 執行階段中所定義的基本類型的基本類型。|`default`命名空間包含 C + + /CX 內建的基本類型。 編譯器會隱含地將對應 C + + /CX 標準 c + + 類型的基本類型。<br /><br /> `Platform`系列的命名空間包含實作基本的 Windows 執行階段類型的型別。|
+|基本類型|C++ 基本型別。|C++/CX 基本型別可實作基本 Windows 執行階段中所定義的類型。|`default`命名空間包含C++/CX 內建的基本類型。 編譯器會隱含地對應C++/CX 標準的基本類型C++類型。<br /><br /> `Platform`系列的命名空間包含實作基本的 Windows 執行階段類型的型別。|
 ||`bool`|`bool`|8 位元布林值。|
 ||`__wchar_t`|`char16`|表示 Unicode (UTF-16) 字碼指標的 16 位元非數值。|
 ||`short`<br /><br /> `unsigned short`|`int16`<br /><br /> `uint16`|16 位元帶正負號的整數。<br /><br /> 16 位元不帶正負號的整數。|
@@ -30,7 +30,7 @@ Windows 執行階段支援只能在值得信任的作業系統環境中執行，
 ||(不適用)|`Platform::Guid`|`Platform` 命名空間中的 128 位元非數值 (GUID)。|
 ||`std::time_get`|`Windows::Foundation::DateTime`|日期時間結構。|
 ||(不適用)|`Windows::Foundation::TimeSpan`|時間範圍結構。|
-||(不適用)|`Platform::Object^`|參考計數基底物件的 Windows 執行階段類型系統的 c + + 檢視中。|
+||(不適用)|`Platform::Object^`|在中，參考計數的基底物件C++Windows 執行階段類型系統檢視。|
 ||`std::wstring`<br /><br /> `L"..."`|`Platform::String^`|`Platform::String^` 是 Unicode 字元之參考計數且不可變的序列，可代表文字。|
 |Pointer|物件指標 (`*`)：<br /><br /> `std::shared_ptr`|物件的控制代碼 (`^`，唸成 "hat")：<br /><br /> *T^ identifier*|使用物件的控制代碼修飾詞來宣告所有的 Windows 執行階段類別。 物件的成員使用箭頭 (`->`) 類別成員存取運算子來存取。<br /><br /> Hat 修飾詞表示 Windows 執行階段物件會自動參考指標 counted 」。 更明確地說，物件的控制代碼宣告編譯器應該插入程式碼，以自動管理物件的參考計數，而如果參考計數變成零，則刪除物件。|
 |參考資料|物件的參考 (`&`)：<br /><br /> *T* `&` *識別項*|追蹤參考 (`%`)：<br /><br /> *T* `%` *識別項*|唯一的 Windows 執行階段類型可以宣告使用追蹤參考修飾詞。 物件的成員使用點 (`.`) 類別成員存取運算子來存取。<br /><br /> 追蹤參考表示 「 Windows 執行階段物件會自動計算參考的參考 」。 更明確地說，追蹤參考宣告編譯器應該插入程式碼，以自動管理物件的參考計數，而如果參考計數變成零，則刪除物件。|
@@ -48,4 +48,4 @@ Windows 執行階段支援只能在值得信任的作業系統環境中執行，
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)

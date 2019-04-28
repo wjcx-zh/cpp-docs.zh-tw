@@ -38,11 +38,11 @@ helpviewer_keywords:
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
 ms.openlocfilehash: cc0a903f6bc4895f7d2ea6e80990dea94f28c6c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353562"
 ---
 # <a name="vaarg-vacopy-vaend-vastart"></a>va_arg、va_copy、va_end、va_start
 
@@ -94,7 +94,7 @@ void va_start(
 
 ## <a name="remarks"></a>備註
 
-**Va_arg**， **va_copy**， **va_end**，以及**va_start**巨集提供可攜式方法來存取函式引數時函數會採用可變數目的引數。 巨集有兩個版本︰定義於 STDARG.H 的巨集符合 ISO C99 標準；定義於 VARARGS.H 的巨集已遭取代但仍保留與 ANSI C89 標準之前所撰寫程式碼的回溯相容性。
+**Va_arg**， **va_copy**， **va_end**，以及**va_start**巨集提供可攜式方法來存取函式引數時函數會採用可變數目的引數。 有兩個版本的巨集：STDARG 中定義的巨集。H 符合 ISO C99 標準;在 VARARGS 中定義的巨集。H 已被取代，但仍保留與 ANSI C89 標準之前所撰寫的程式碼的回溯相容性。
 
 這些巨集假設函式接受固定數目的必要引數，後面接著變動數目的選擇性引數。 必要引數會宣告為函式的一般參數，而且可以透過參數名稱進行存取。 選擇性引數是透過 STDARG.H (或 VARARGS.H，適用於在 ANSI C89 標準之前撰寫的程式碼) 中的巨集進行存取，而這個檔案設定引數清單中第一個選擇性引數的指標、從清單中擷取引數，以及在完成引數處理時重設指標。
 

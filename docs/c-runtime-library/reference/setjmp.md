@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setjmp function
 ms.assetid: 684a8b27-e8eb-455b-b4a8-733ca1cbd7d2
 ms.openlocfilehash: 9f1a2b71a7b8fc7603c36938879348dca16288e2
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210506"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356416"
 ---
 # <a name="setjmp"></a>setjmp
 
@@ -61,12 +61,12 @@ int setjmp(
 
 **Microsoft 專屬**
 
-Windows，Microsoft c + + 程式碼中**longjmp**例外狀況處理程式碼會使用相同的堆疊回溯語意。 它會安全地使用 c + + 例外狀況可能會引發的相同位置中。 不過，這種用法可攜性，並不需要注意的一些重要的事項。 如需詳細資訊，請參閱 < [longjmp](longjmp.md)。
+在 MicrosoftC++在 Windows 中，程式碼**longjmp**例外狀況處理程式碼會使用相同的堆疊回溯語意。 安全地在相同的使用位置C++可能會引發例外狀況。 不過，這種用法可攜性，並不需要注意的一些重要的事項。 如需詳細資訊，請參閱 < [longjmp](longjmp.md)。
 
 **結束 Microsoft 專屬**
 
 > [!NOTE]
-> 在可攜式 c + + 程式碼，您不能假設`setjmp`和`longjmp`支援 c + + 物件語意。 具體而言， `setjmp` / `longjmp`組有未定義行為，如果取代的呼叫`setjmp`並`longjmp`由**攔截**和**擲回**會叫用任何自動物件的任何非 trivial 解構函式。 在 c + + 程式中，我們建議您在使用 c + + 例外狀況處理機制。
+> 在可攜式C++程式碼，您不能假設`setjmp`並`longjmp`支援C++物件的語意。 具體而言， `setjmp` / `longjmp`組有未定義行為，如果取代的呼叫`setjmp`並`longjmp`由**攔截**和**擲回**會叫用任何自動物件的任何非 trivial 解構函式。 在C++程式，我們建議您使用C++例外狀況處理機制。
 
 如需詳細資訊，請參閱[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
 

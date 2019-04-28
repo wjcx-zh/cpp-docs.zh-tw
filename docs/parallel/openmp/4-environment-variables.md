@@ -3,15 +3,15 @@ title: 4. 環境變數
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
 ms.openlocfilehash: b41829fd9cf2f90312f669ef991f56dda02947f7
-ms.sourcegitcommit: 966e4466f10c93fc12faf33d28e03b39489423fc
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "55987052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363189"
 ---
 # <a name="4-environment-variables"></a>4.環境變數
 
-此章節會描述 OpenMP C 和 c + + API 的環境變數 （或類似平台特定的機制），以控制平行處理程式碼的執行。  環境變數名稱必須是大寫。 指派給它們的值不區分大小寫，且可能有前置和尾端空白字元。  修改程式啟動之後的值都會被忽略。
+此章節會描述 OpenMP C 和C++API 的環境變數 （或類似平台特定的機制），以控制平行處理程式碼的執行。  環境變數名稱必須是大寫。 指派給它們的值不區分大小寫，且可能有前置和尾端空白字元。  修改程式啟動之後的值都會被忽略。
 
 環境變數如下所示：
 

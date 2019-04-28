@@ -11,11 +11,11 @@ f1_keywords:
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
 ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369549"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 
@@ -72,7 +72,7 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>
@@ -187,7 +187,7 @@ bool operator<(const sub_match<BidIt>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>
@@ -272,13 +272,13 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *BidIt*<br/>
 迭代器類型。
 
-*作業系統*<br/>
+*os*<br/>
 輸出資料流。
 
 *right*<br/>
@@ -357,7 +357,7 @@ bool operator<=(const sub_match<BidIt>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>
@@ -471,7 +471,7 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>
@@ -594,7 +594,7 @@ bool operator>(const sub_match<BidIt>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>
@@ -704,7 +704,7 @@ bool operator>=(const sub_match<BidIt>& left,
 *IOtraits*<br/>
 字串特性類別。
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *left*<br/>

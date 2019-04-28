@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1083
 ms.assetid: 97e52df3-e79c-4f85-8f1e-bbd1057d55e7
 ms.openlocfilehash: 522bc4a36be59d4e2c9425e50b1238eb9f4aba61
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368054"
 ---
 # <a name="fatal-error-c1083"></a>嚴重錯誤 C1083
 
@@ -25,7 +25,7 @@ ms.locfileid: "57822193"
 
 `#include <algorithm.h>`
 
-可能沒有找到您要的檔案。 大部分的 c + + 標準程式庫標頭檔並沒有.h 副檔名。 \<演算法 > 標頭會找不到由此`#include`指示詞。 若要修正此問題，確認正確的檔案名稱輸入，如此範例所示：
+可能沒有找到您要的檔案。 大部分C++標準程式庫標頭檔並沒有.h 副檔名。 \<演算法 > 標頭會找不到由此`#include`指示詞。 若要修正此問題，確認正確的檔案名稱輸入，如此範例所示：
 
 `#include <algorithm>`
 
@@ -45,7 +45,7 @@ ms.locfileid: "57822193"
 
 `#include <stdio.h>`
 
-編譯器會依循由建置環境中，定義搜尋路徑 **/I**編譯器選項 **/X**編譯器選項，而**INCLUDE**環境變數。 如需詳細資訊，包括用來尋找檔案的搜尋順序有關的特定詳細資料請參閱 < [#include 指示詞 （C/c + +）](../../preprocessor/hash-include-directive-c-cpp.md)並[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)。
+編譯器會依循由建置環境中，定義搜尋路徑 **/I**編譯器選項 **/X**編譯器選項，而**INCLUDE**環境變數。 如需詳細資訊，包括用來尋找檔案的搜尋順序有關的特定詳細資料請參閱 < [#include 指示詞 (C /C++)](../../preprocessor/hash-include-directive-c-cpp.md)並[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)。
 
 如果您的 include 檔案是相對於您的來源目錄，另一個目錄中，而且您使用中的相對路徑您 include 指示詞，您必須使用雙引號括住，而非角括弧。 比方說，如果您的標頭檔 myheader.h 專案來源名為標頭的子目錄中，然後此範例中將找不到檔案並造成 C1083:
 
@@ -63,7 +63,7 @@ ms.locfileid: "57822193"
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>協力廠商程式庫問題和 Vcpkg
 
-如果您嘗試將協力廠商程式庫設定為組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，Visual c + + 套件管理員安裝及建置程式庫。 Vcpkg 支援大量且不斷成長[協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[Visual c + + 部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)張貼。
+如果您嘗試將協力廠商程式庫設定為組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，視覺效果C++封裝管理員 中，安裝及建置程式庫。 Vcpkg 支援大量且不斷成長[協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[VisualC++部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
 
 ## <a name="the-file-is-in-your-project-but-not-the-include-search-path"></a>此檔案會在您的專案，但不是包含搜尋路徑
 
@@ -75,7 +75,7 @@ ms.locfileid: "57822193"
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>命令列包含或 LIB 環境未設定
 
-在命令列叫用編譯器時，通常會使用環境變數指定搜尋路徑。 如果所描述的搜尋路徑**INCLUDE**或是**LIB**未正確設定環境變數，可以產生 C1083 錯誤。 我們強烈建議使用開發人員命令提示字元捷徑設定基本的環境，供命令列組建。 如需詳細資訊，請參閱 <<c0> [ 建置 C/c + + 命令列上](../../build/building-on-the-command-line.md)。 如需如何使用環境變數的詳細資訊，請參閱[How to:在組建中使用環境變數](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
+在命令列叫用編譯器時，通常會使用環境變數指定搜尋路徑。 如果所描述的搜尋路徑**INCLUDE**或是**LIB**未正確設定環境變數，可以產生 C1083 錯誤。 我們強烈建議使用開發人員命令提示字元捷徑設定基本的環境，供命令列組建。 如需詳細資訊，請參閱 <<c0> [ 建置 C /C++命令列上](../../build/building-on-the-command-line.md)。</c0> 如需如何使用環境變數的詳細資訊，請參閱[How to:在組建中使用環境變數](/visualstudio/msbuild/how-to-use-environment-variables-in-a-build)。
 
 ## <a name="the-file-may-be-locked-or-in-use"></a>檔案可能已鎖定或在使用中
 
@@ -116,7 +116,7 @@ C1083 錯誤也可能表示包含了錯誤版本的檔案。 包含錯誤檔案�
 #include "stdio.h"  // OK
 ```
 
-如需如何建置 C/c + + 專案，在 IDE 中或命令列上的相關資訊和設定環境變數的詳細資訊，請參閱[的專案和組建系統](../../build/projects-and-build-systems-cpp.md)。
+如需如何建置 C /C++專案在 IDE 中或命令列和資訊設定環境變數，請參閱[的專案和組建系統](../../build/projects-and-build-systems-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

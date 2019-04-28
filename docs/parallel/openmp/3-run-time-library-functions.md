@@ -3,15 +3,15 @@ title: 3. 執行階段程式庫函式
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
 ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62363228"
 ---
 # <a name="3-run-time-library-functions"></a>3.執行階段程式庫函式
 
-本章節描述 OpenMP C 和 c + + 執行階段程式庫函式。 標頭 **\<omp.h >** 會宣告兩種類型，可用來控制和查詢平行執行環境，並鎖定函式，可用來同步處理資料的存取權的數個函式。
+本章節描述 OpenMP C 和C++執行階段程式庫函式。 標頭 **\<omp.h >** 會宣告兩種類型，可用來控制和查詢平行執行環境，並鎖定函式，可用來同步處理資料的存取權的數個函式。
 
 型別`omp_lock_t`是物件類型可代表鎖定可供使用，或執行緒擁有鎖定。 這些鎖定指*簡單鎖定*。
 

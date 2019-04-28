@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
 ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349891"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
-C + + Accelerated Massive Parallelism (c + + AMP) 會利用在獨立圖形顯示卡上的圖形處理單元 (GPU) 等資料平行硬體來加速 c + + 程式碼的執行。 藉由使用 c + + AMP，您可以撰寫多維資料演算法，以便利用異質硬體上的平行處理加速執行。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用 c + + AMP 語言擴充功能來控制資料如何從 CPU 移至 GPU 和上一步，以便您可以改善效能。
+C++Accelerated Massive Parallelism (C++ AMP) 加速執行C++藉由利用圖形處理單元 (GPU) 等資料平行硬體獨立圖形顯示卡上的程式碼。 使用C++AMP，您可以撰寫多維資料演算法，以便利用異質硬體上的平行處理加速執行。 C++ AMP 程式設計模型包含多維陣列、索引、記憶體傳輸、並排顯示和數學函式庫。 您可以使用C++AMP 語言擴充功能，來控制資料如何從 CPU 移至 GPU 和上一步，以便您可以改善效能。
 
 ## <a name="system-requirements"></a>系統需求
 
@@ -33,7 +33,7 @@ C + + Accelerated Massive Parallelism (c + + AMP) 會利用在獨立圖形顯示
 
 ## <a name="introduction"></a>簡介
 
-下列兩個範例說明 c + + AMP 的主要元件。 假設您想要新增的兩個一維陣列的對應項目。 例如，您可能想要新增`{1, 2, 3, 4, 5}`並`{6, 7, 8, 9, 10}`若要取得`{7, 9, 11, 13, 15}`。 不使用 c + + AMP，您可以撰寫下列程式碼，將數字相加並顯示結果。
+下列兩個範例說明的主要元件C++P。 假設您想要新增的兩個一維陣列的對應項目。 例如，您可能想要新增`{1, 2, 3, 4, 5}`並`{6, 7, 8, 9, 10}`若要取得`{7, 9, 11, 13, 15}`。 不使用C++AMP，您可以撰寫下列程式碼，將數字相加並顯示結果。
 
 ```cpp
 #include <iostream>
@@ -64,7 +64,7 @@ void StandardMethod() {
 
 - 索引：`idx`變數存取陣列的個別項目。
 
-使用 c + + AMP，您還是可以改為撰寫下列程式碼。
+使用C++AMP，您可以撰寫下列程式碼改為。
 
 ```cpp
 #include <amp.h>
@@ -100,11 +100,11 @@ void CppAmpMethod() {
 }
 ```
 
-相同的基本項目存在，但是會使用 c + + AMP 建構：
+相同的基本項目都存在，但C++會使用 AMP 建構：
 
-- 資料：您可以使用 c + + 陣列建構三個 c + + AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 提供四個值來建構`array_view`物件： 資料值、 陣序規範、 項目類型和長度`array_view`每個維度中的物件。 陣序和型別會當做型別參數傳遞。 做為建構函式參數傳遞的資料和長度。 在此範例中，會傳遞至建構函式的 c + + 陣列是一維的。 順位和長度用來建構中的資料的矩形`array_view`物件和值來填滿此陣列的資料。 執行階段程式庫也包含[array 類別](../../parallel/amp/reference/array-class.md)，其具有類似的介面`array_view`類別，並將在本文稍後討論。
+- 資料：您使用C++陣列建構三個C++AMP [array_view](../../parallel/amp/reference/array-view-class.md)物件。 提供四個值來建構`array_view`物件： 資料值、 陣序規範、 項目類型和長度`array_view`每個維度中的物件。 陣序和型別會當做型別參數傳遞。 做為建構函式參數傳遞的資料和長度。 在此範例中，C++是一維陣列傳遞至建構函式的陣列。 順位和長度用來建構中的資料的矩形`array_view`物件和值來填滿此陣列的資料。 執行階段程式庫也包含[array 類別](../../parallel/amp/reference/array-class.md)，其具有類似的介面`array_view`類別，並將在本文稍後討論。
 
-- 反覆項目:[Parallel_for_each 函式 (c + + AMP)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供一個機制，以逐一查看的資料項目，或*計算網域*。 在此範例中，指定 compute domain `sum.extent`。 您想要執行的程式碼包含在 lambda 運算式中，或是*核心功能*。 `restrict(amp)`指示中使用 c + + AMP 可以加速 c + + 語言的子集。
+- 反覆項目:[Parallel_for_each 函式 (C++ P)](reference/concurrency-namespace-functions-amp.md#parallel_for_each)提供一個機制，以逐一查看的資料項目，或*計算網域*。 在此範例中，指定 compute domain `sum.extent`。 您想要執行的程式碼包含在 lambda 運算式中，或是*核心功能*。 `restrict(amp)`表示只子集C++語言的C++AMP 可以加速會使用。
 
 - 索引：[編製索引類別](../../parallel/amp/reference/index-class.md)變數`idx`，來比對的陣序的其中一個的陣序規範宣告`array_view`物件。 使用索引，您可以存取的個別項目`array_view`物件。
 
@@ -318,7 +318,7 @@ void AddArrays() {
 
 *計算網域*是`extent`物件或`tiled_extent`定義一組的執行緒就能建立平行執行的物件。 計算網域中的每個項目會產生一個執行緒。 在此情況下，`extent`物件是一維陣列，且具有五個項目。 因此，五個執行緒會啟動。
 
-*Lambda 運算式*定義每個執行緒上執行的程式碼。 擷取子句`[=]`，指定 lambda 運算式主體不存取所有擷取的變數值，在此情況下所`a`， `b`，和`sum`。 在此範例中，參數清單會建立一維`index`名為變數`idx`。 值`idx[0]`0 中的第一個執行緒，並增加每個後續的執行緒的一個。 `restrict(amp)`指示中使用 c + + AMP 可以加速 c + + 語言的子集。  具有限制修飾詞的函式的限制詳述於[限制 (c + + AMP)](../../cpp/restrict-cpp-amp.md)。 如需詳細資訊，請參閱， [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)。
+*Lambda 運算式*定義每個執行緒上執行的程式碼。 擷取子句`[=]`，指定 lambda 運算式主體不存取所有擷取的變數值，在此情況下所`a`， `b`，和`sum`。 在此範例中，參數清單會建立一維`index`名為變數`idx`。 值`idx[0]`0 中的第一個執行緒，並增加每個後續的執行緒的一個。 `restrict(amp)`表示只子集C++語言的C++AMP 可以加速會使用。  具有限制修飾詞的函式的限制詳述於[限制 (C++ P)](../../cpp/restrict-cpp-amp.md)。 如需詳細資訊，請參閱， [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)。
 
 Lambda 運算式可以包含執行的程式碼，或它可以呼叫個別核心功能。 核心函式必須包含`restrict(amp)`修飾詞。 下列範例相當於上述範例中，但它會呼叫個別核心功能。
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>數學程式庫
 
-C + + AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)支援雙精確度函式。 它也提供支援單精確度函式中，雖然仍需要的硬體上的雙精確度支援。 其符合[C99 規格 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整雙精確度。 您可以判斷它是否會藉由檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 Fast math 程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組數學函式。 這些函式僅支援`float`運算元，更快速地執行，但精確度不如雙精確度數學程式庫中。 函式內\<amp_math.h > 標頭檔與所有使用宣告`restrict(amp)`。 中的函式\<cmath> > 標頭檔匯入至兩者`fast_math`和`precise_math`命名空間。 **限制**關鍵字用來區別\<cmath> > 版本和 c + + AMP 版本。 下列程式碼會計算使用快速方法，是計算網域中每個值的基底 10 對數。
+C++AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)支援雙精確度函式。 它也提供支援單精確度函式中，雖然仍需要的硬體上的雙精確度支援。 其符合[C99 規格 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整雙精確度。 您可以判斷它是否會藉由檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 Fast math 程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組數學函式。 這些函式僅支援`float`運算元，更快速地執行，但精確度不如雙精確度數學程式庫中。 函式內\<amp_math.h > 標頭檔與所有使用宣告`restrict(amp)`。 中的函式\<cmath> > 標頭檔匯入至兩者`fast_math`和`precise_math`命名空間。 **限制**關鍵字用來區別\<cmath> > 版本和C++AMP 版本。 下列程式碼會計算使用快速方法，是計算網域中每個值的基底 10 對數。
 
 ```cpp
 #include <amp.h>
@@ -459,9 +459,9 @@ void MathExample() {
 
 ## <a name="graphics-library"></a>圖形文件庫
 
-C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此文件庫只適用於支援原生繪圖功能的裝置。 方法會在[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)且包含在\<amp_graphics.h > 標頭檔。 圖形程式庫的主要元件如下：
+C++AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此文件庫只適用於支援原生繪圖功能的裝置。 方法會在[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)且包含在\<amp_graphics.h > 標頭檔。 圖形程式庫的主要元件如下：
 
-- [texture 類別](../../parallel/amp/reference/texture-class.md):您可以使用紋理類別從記憶體中或從檔案建立紋理。 紋理類似陣列，因為它們包含資料，而且這些介面類似於指派和複製建構 c + + 標準程式庫中的容器。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 樣板參數`texture`類別是項目型別和陣序規範。 順位可以是 1、 2 或 3。 項目類型可以是一種短向量類型在本文稍後所述。
+- [texture 類別](../../parallel/amp/reference/texture-class.md):您可以使用紋理類別從記憶體中或從檔案建立紋理。 紋理類似陣列，因為它們包含資料，而且這些介面類似於容器中的C++指派和複製建構方面的標準程式庫。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../../standard-library/stl-containers.md)。 樣板參數`texture`類別是項目型別和陣序規範。 順位可以是 1、 2 或 3。 項目類型可以是一種短向量類型在本文稍後所述。
 
 - [writeonly_texture_view 類別](../../parallel/amp/reference/writeonly-texture-view-class.md):提供所有材質的唯寫存取。
 
@@ -469,23 +469,23 @@ C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此
 
 ## <a name="universal-windows-platform-uwp-apps"></a>通用 Windows 平台 (UWP) 應用程式
 
-像其他 c + + 程式庫中，您可以使用 c + + AMP 的 UWP app 中。 這些文章說明如何在應用程式中包含 c + + AMP 程式碼，使用 c + +、 C#、 Visual Basic 或 JavaScript 所建立：
+就像其他C++程式庫，您可以使用C++的 UWP app 中的 P。 這些文章將說明如何加入C++AMP 程式碼應用程式中的建立使用C++， C#，Visual Basic 或 JavaScript:
 
 - [在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [逐步解說：C + + 建立基本 Windows 執行階段元件，然後從 JavaScript 呼叫該](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [逐步解說：建立基本 Windows 執行階段元件中的C++然後從 JavaScript 呼叫該元件](http://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Bing Maps Trip Optimizer、 JavaScript 和 c + + 中的 Windows 市集應用程式](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Bing 地圖服務路線最佳化程式，在 JavaScript 中的 Windows 市集應用程式和C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [如何使用 C# 中使用 Windows 執行階段從 c + + AMP](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [如何使用C++從 pC#使用 Windows 執行階段](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [如何使用 c + + AMP，從 C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [如何使用C++從 pC#](http://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [從 Managed 程式碼呼叫原生函式](../../dotnet/calling-native-functions-from-managed-code.md)
 
-## <a name="c-amp-and-concurrency-visualizer"></a>C + + AMP 和並行視覺化檢視
+## <a name="c-amp-and-concurrency-visualizer"></a>C++AMP 和並行視覺化檢視
 
-並行視覺化檢視支援分析 c + + AMP 程式碼的效能。 這些文章將說明這些功能：
+並行視覺化檢視支援分析的效能C++AMP 程式碼。 這些文章將說明這些功能：
 
 - [GPU 活動圖](/visualstudio/profiling/gpu-activity-graph)
 
@@ -497,7 +497,7 @@ C + + AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此
 
 - [通道 (執行緒檢視)](/visualstudio/profiling/channels-threads-view)
 
-- [使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+- [分析C++AMP 程式碼，使用並行視覺化檢視](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
 
 ## <a name="performance-recommendations"></a>效能建議
 

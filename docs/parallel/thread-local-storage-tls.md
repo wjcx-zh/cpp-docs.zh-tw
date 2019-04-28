@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
 ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362721"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 
@@ -22,9 +22,9 @@ ms.locfileid: "57293455"
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的編譯器實作
 
-**C + + 11:**`thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱 <<c0> [ 儲存類別 （c + +）](../cpp/storage-classes-cpp.md)。
+**C + + 11:**`thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱 <<c0> [ 儲存類別 (C++)](../cpp/storage-classes-cpp.md)。</c0>
 
-Visual c + + 也提供 Microsoft 特定屬性，[執行緒](../cpp/thread.md)，以擴充的儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
+視覺化C++也提供 Microsoft 特定屬性[執行緒](../cpp/thread.md)，以擴充的儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
 
 ```
 __declspec( thread ) int tls_i = 1;
@@ -40,7 +40,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **執行緒**可能只能在使用的資料項目上指定修飾詞**靜態**範圍。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和 c + + 類別的靜態資料成員。 自動資料物件不能以宣告**執行緒**屬性。 下列程式碼會產生編譯器錯誤：
+- **執行緒**可能只能在使用的資料項目上指定修飾詞**靜態**範圍。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和靜態資料成員的C++類別。 自動資料物件不能以宣告**執行緒**屬性。 下列程式碼會產生編譯器錯誤：
 
     ```
     void func1()
@@ -68,7 +68,7 @@ __declspec( thread ) int tls_i = 1;
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 因為 c + + 宣告物件，使用**執行緒**允許屬性，下列兩個範例在語意上與：
+- 由於宣告的C++物件使用**執行緒**屬性，下列兩個範例在語意上與：
 
     ```
     __declspec( thread ) class B

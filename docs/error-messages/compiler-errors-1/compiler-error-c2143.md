@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
 ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353478"
 ---
 # <a name="compiler-error-c2143"></a>編譯器錯誤 C2143
 
@@ -19,7 +19,7 @@ ms.locfileid: "51520110"
 
 編譯器會預期特定的權杖 （也就是空白字元以外的語言元素），卻找到另一個權杖。
 
-請檢查[c + + 語言參考](../../cpp/cpp-language-reference.md)來判斷程式碼語法不正確的位置。 因為遇到造成問題的那一行之後，編譯器可能會報告此錯誤，請檢查幾行程式碼錯誤之前。
+請檢查[C++語言參考](../../cpp/cpp-language-reference.md)若要判斷程式碼語法不正確的位置。 因為遇到造成問題的那一行之後，編譯器可能會報告此錯誤，請檢查幾行程式碼錯誤之前。
 
 在不同的情況下，C2143 就會發生。
 
@@ -122,7 +122,7 @@ void func1() {
 }
 ```
 
-不合格的呼叫對 c + + 標準程式庫中的型別時，可能會發生錯誤：
+不合格的呼叫中的型別時，就會發生錯誤C++標準程式庫：
 
 ```cpp
 // C2143g.cpp

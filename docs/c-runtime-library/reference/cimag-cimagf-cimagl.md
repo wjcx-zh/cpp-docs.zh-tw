@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
 ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347596"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag、cimagf、cimagl
 
@@ -65,7 +65,7 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cimag**採用 **_Fcomplex**或是 **_Lcomplex**的值，並傳回**float**或是**長** **double**值。 在 C 程式中， **cimag**一律採用 **_Dcomplex**值，然後傳回**double**值。
+因為C++允許多載，您可以呼叫多載**cimag**採用 **_Fcomplex**或是 **_Lcomplex**值，並傳回**float**或是**長** **double**值。 在 C 程式中， **cimag**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 

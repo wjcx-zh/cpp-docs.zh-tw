@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350828"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -191,7 +191,7 @@ ms.locfileid: "50528722"
 |[lexicographical_compare (STL/CLR)](#lexicographical_compare)|比較兩個序列，由項目，識別序列的兩個較小者。|
 |[lower_bound (STL/CLR)](#lower_bound)|在已排序的值，其值大於或等於指定的值中尋找第一個元素的位置。|
 |[make_heap (STL/CLR)](#make_heap)|從指定的範圍將項目轉換在堆積上的第一個項目所在的最大的堆積。|
-|[最大值 (STL/CLR)](#max))|比較兩個物件，並傳回的兩個較大者。|
+|[max (STL/CLR)](#max))|比較兩個物件，並傳回的兩個較大者。|
 |[max_element (STL/CLR)](#max_element)|尋找最大的項目中指定的順序的值。|
 |[merge (STL/CLR)](#merge))|將兩個排序的來源範圍的所有項目結合成單一排序目的範圍中。|
 |[min (STL/CLR)](#min)|比較兩個物件，並傳回兩個較小者。|
@@ -252,7 +252,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`adjacent_find`。 如需詳細資訊，請參閱 < [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)。
+此函式的行為與相同C++標準程式庫函式`adjacent_find`。 如需詳細資訊，請參閱 < [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)。
 
 ## <a name="binary_search"></a> binary_search (STL/CLR)
 
@@ -270,9 +270,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`binary_search`。 如需詳細資訊，請參閱 < [binary_search](../standard-library/algorithm-functions.md#binary_search)。
+此函式的行為與相同C++標準程式庫函式`binary_search`。 如需詳細資訊，請參閱 < [binary_search](../standard-library/algorithm-functions.md#binary_search)。
 
-## <a name="copy"></a> 複製 (STL/CLR)
+## <a name="copy"></a> copy (STL/CLR)
 
 從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以正向方向指派它們新位置。
 
@@ -285,7 +285,7 @@ template<class _InIt, class _OutIt> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`copy`。 如需詳細資訊，請參閱 <<c0> [ 複製](../standard-library/algorithm-functions.md#copy)。
+此函式的行為與相同C++標準程式庫函式`copy`。 如需詳細資訊，請參閱 <<c0> [ 複製](../standard-library/algorithm-functions.md#copy)。
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 
@@ -301,7 +301,7 @@ template<class _BidIt1, class _BidIt2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`copy_backward`。 如需詳細資訊，請參閱 < [copy_backward](../standard-library/algorithm-functions.md#copy_backward)。
+此函式的行為與相同C++標準程式庫函式`copy_backward`。 如需詳細資訊，請參閱 < [copy_backward](../standard-library/algorithm-functions.md#copy_backward)。
 
 ## <a name="count"></a> count (STL/CLR)
 
@@ -317,7 +317,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`count`。 如需詳細資訊，請參閱 <<c0> [ 計數](../standard-library/algorithm-functions.md#count)。
+此函式的行為與相同C++標準程式庫函式`count`。 如需詳細資訊，請參閱 <<c0> [ 計數](../standard-library/algorithm-functions.md#count)。
 
 ## <a name="count_if"></a> count_if (STL/CLR)
 
@@ -333,7 +333,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`count_if`。 如需詳細資訊，請參閱 < [count_if](../standard-library/algorithm-functions.md#count_if)。
+此函式的行為與相同C++標準程式庫函式`count_if`。 如需詳細資訊，請參閱 < [count_if](../standard-library/algorithm-functions.md#count_if)。
 
 ## <a name="equal"></a> 等於 (STL/CLR)
 
@@ -351,7 +351,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`equal`。 如需詳細資訊，請參閱 <<c0> [ 等於](../standard-library/algorithm-functions.md#equal)。
+此函式的行為與相同C++標準程式庫函式`equal`。 如需詳細資訊，請參閱 <<c0> [ 等於](../standard-library/algorithm-functions.md#equal)。
 
 ## <a name="equal_range"></a> equal_range (STL/CLR)
 
@@ -370,9 +370,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`equal_range`。 如需詳細資訊，請參閱 < [equal_range](../standard-library/algorithm-functions.md#equal_range)。
+此函式的行為與相同C++標準程式庫函式`equal_range`。 如需詳細資訊，請參閱 < [equal_range](../standard-library/algorithm-functions.md#equal_range)。
 
-## <a name="fill"></a> 填滿 (STL/CLR)
+## <a name="fill"></a> fill (STL/CLR)
 
 將相同的新值指派到指定範圍內的每個項目。
 
@@ -385,7 +385,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`fill`。 如需詳細資訊，請參閱 <<c0> [ 填滿](../standard-library/algorithm-functions.md#fill)。
+此函式的行為與相同C++標準程式庫函式`fill`。 如需詳細資訊，請參閱 <<c0> [ 填滿](../standard-library/algorithm-functions.md#fill)。
 
 ## <a name="fill_n"></a> fill_n (STL/CLR)
 
@@ -400,7 +400,7 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`fill_n`。 如需詳細資訊，請參閱 < [fill_n](../standard-library/algorithm-functions.md#fill_n)。
+此函式的行為與相同C++標準程式庫函式`fill_n`。 如需詳細資訊，請參閱 < [fill_n](../standard-library/algorithm-functions.md#fill_n)。
 
 ## <a name="find"></a> find (STL/CLR)
 
@@ -415,7 +415,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`find`。 如需詳細資訊，請參閱 <<c0> [ 尋找](../standard-library/algorithm-functions.md#find)。
+此函式的行為與相同C++標準程式庫函式`find`。 如需詳細資訊，請參閱 <<c0> [ 尋找](../standard-library/algorithm-functions.md#find)。
 
 ## <a name="find_end"></a> find_end (STL/CLR)
 
@@ -434,7 +434,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`find_end`。 如需詳細資訊，請參閱 < [find_end](../standard-library/algorithm-functions.md#find_end)。
+此函式的行為與相同C++標準程式庫函式`find_end`。 如需詳細資訊，請參閱 < [find_end](../standard-library/algorithm-functions.md#find_end)。
 
 ## <a name="find_first_of"></a> find_first_of (STL/CLR)
 
@@ -453,7 +453,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`find_first_of`。 如需詳細資訊，請參閱 < [find_first_of](../standard-library/algorithm-functions.md#find_first_of)。
+此函式的行為與相同C++標準程式庫函式`find_first_of`。 如需詳細資訊，請參閱 < [find_first_of](../standard-library/algorithm-functions.md#find_first_of)。
 
 ## <a name="find_if"></a> find_if (STL/CLR)
 
@@ -468,7 +468,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`find_if`。 如需詳細資訊，請參閱 < [find_if](../standard-library/algorithm-functions.md#find_if)。
+此函式的行為與相同C++標準程式庫函式`find_if`。 如需詳細資訊，請參閱 < [find_if](../standard-library/algorithm-functions.md#find_if)。
 
 ## <a name="for_each"></a> for_each (STL/CLR)
 
@@ -483,7 +483,7 @@ template<class _InIt, class _Fn1> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`for_each`。 如需詳細資訊，請參閱 < [for_each](../standard-library/algorithm-functions.md#for_each)。
+此函式的行為與相同C++標準程式庫函式`for_each`。 如需詳細資訊，請參閱 < [for_each](../standard-library/algorithm-functions.md#for_each)。
 
 ## <a name="generate"></a> 產生 (STL/CLR)
 
@@ -498,7 +498,7 @@ template<class _FwdIt, class _Fn0> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`generate`。 如需詳細資訊，請參閱 <<c0> [ 產生](../standard-library/algorithm-functions.md#generate)。
+此函式的行為與相同C++標準程式庫函式`generate`。 如需詳細資訊，請參閱 <<c0> [ 產生](../standard-library/algorithm-functions.md#generate)。
 
 ## <a name="generate_n"></a> generate_n (STL/CLR)
 
@@ -513,7 +513,7 @@ template<class _OutIt, class _Diff, class _Fn0> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`generate_n`。 如需詳細資訊，請參閱 < [generate_n](../standard-library/algorithm-functions.md#generate_n)。
+此函式的行為與相同C++標準程式庫函式`generate_n`。 如需詳細資訊，請參閱 < [generate_n](../standard-library/algorithm-functions.md#generate_n)。
 
 ## <a name="includes"></a> 包含 (STL/CLR)
 
@@ -532,7 +532,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`includes`。 如需詳細資訊，請參閱 <<c0> [ 包含](../standard-library/algorithm-functions.md#includes)。
+此函式的行為與相同C++標準程式庫函式`includes`。 如需詳細資訊，請參閱 <<c0> [ 包含](../standard-library/algorithm-functions.md#includes)。
 
 ## <a name="inplace_merge"></a> inplace_merge (STL/CLR)
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`inplace_merge`如需詳細資訊，請參閱 < [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。
+此函式的行為與相同C++標準程式庫函式`inplace_merge`如需詳細資訊，請參閱[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)。
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
@@ -565,7 +565,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`iter_swap`。 如需詳細資訊，請參閱 < [iter_swap](../standard-library/algorithm-functions.md#iter_swap)。
+此函式的行為與相同C++標準程式庫函式`iter_swap`。 如需詳細資訊，請參閱 < [iter_swap](../standard-library/algorithm-functions.md#iter_swap)。
 
 ## <a name="lexicographical_compare"></a> lexicographical_compare (STL/CLR)
 
@@ -584,7 +584,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`lexicographical_compare`。 如需詳細資訊，請參閱 < [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)。
+此函式的行為與相同C++標準程式庫函式`lexicographical_compare`。 如需詳細資訊，請參閱 < [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)。
 
 ## <a name="lower_bound"></a> lower_bound (STL/CLR)
 
@@ -602,7 +602,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`lower_bound`。 如需詳細資訊，請參閱 < [lower_bound](../standard-library/algorithm-functions.md#lower_bound)。
+此函式的行為與相同C++標準程式庫函式`lower_bound`。 如需詳細資訊，請參閱 < [lower_bound](../standard-library/algorithm-functions.md#lower_bound)。
 
 ## <a name="make_heap"></a> make_heap (STL/CLR)
 
@@ -619,9 +619,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`make_heap`。 如需詳細資訊，請參閱 < [make_heap](../standard-library/algorithm-functions.md#make_heap)。
+此函式的行為與相同C++標準程式庫函式`make_heap`。 如需詳細資訊，請參閱 < [make_heap](../standard-library/algorithm-functions.md#make_heap)。
 
-## <a name="max"></a> 最大值 (STL/CLR)
+## <a name="max"></a> max (STL/CLR)
 
 比較兩個物件並傳回兩者較大者，其中順序準則可由二元述詞指定。
 
@@ -636,7 +636,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`max`。 如需詳細資訊，請參閱 < [max](../standard-library/algorithm-functions.md#max)。
+此函式的行為與相同C++標準程式庫函式`max`。 如需詳細資訊，請參閱 < [max](../standard-library/algorithm-functions.md#max)。
 
 ## <a name="max_element"></a> max_element (STL/CLR)
 
@@ -653,7 +653,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`max_element`。 如需詳細資訊，請參閱 < [max_element](../standard-library/algorithm-functions.md#max_element)。
+此函式的行為與相同C++標準程式庫函式`max_element`。 如需詳細資訊，請參閱 < [max_element](../standard-library/algorithm-functions.md#max_element)。
 
 ## <a name="merge"></a> merge (STL/CLR)
 
@@ -672,9 +672,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`merge`。 如需詳細資訊，請參閱 <<c0> [ 合併](../standard-library/algorithm-functions.md#merge)。
+此函式的行為與相同C++標準程式庫函式`merge`。 如需詳細資訊，請參閱 <<c0> [ 合併](../standard-library/algorithm-functions.md#merge)。
 
-## <a name="min"></a> 最小值 (STL/CLR)
+## <a name="min"></a> min (STL/CLR)
 
 比較兩個物件並傳回兩者較小者，其中順序準則可由二元述詞指定。
 
@@ -689,7 +689,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`min`。 如需詳細資訊，請參閱 < [min](../standard-library/algorithm-functions.md#min)。
+此函式的行為與相同C++標準程式庫函式`min`。 如需詳細資訊，請參閱 < [min](../standard-library/algorithm-functions.md#min)。
 
 ## <a name="min_element"></a> min_element (STL/CLR)
 
@@ -706,9 +706,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`min_element`。 如需詳細資訊，請參閱 < [min_element](../standard-library/algorithm-functions.md#min_element)。
+此函式的行為與相同C++標準程式庫函式`min_element`。 如需詳細資訊，請參閱 < [min_element](../standard-library/algorithm-functions.md#min_element)。
 
-## <a name="mismatch"></a> 不相符 (STL/CLR)
+## <a name="mismatch"></a> mismatch (STL/CLR)
 
 逐一比較兩個範圍的每個項目是否相等 (或在二元述詞指定的意義上，是否對等)，而且找出差異發生的第一個位置。
 
@@ -726,7 +726,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`mismatch`。 如需詳細資訊，請參閱 <<c0> [ 不符](../standard-library/algorithm-functions.md#mismatch)。
+此函式的行為與相同C++標準程式庫函式`mismatch`。 如需詳細資訊，請參閱 <<c0> [ 不符](../standard-library/algorithm-functions.md#mismatch)。
 
 ## <a name="next_permutation"></a> next_permutation (STL/CLR)
 
@@ -743,7 +743,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`next_permutation`。 如需詳細資訊，請參閱 < [next_permutation](../standard-library/algorithm-functions.md#next_permutation)。
+此函式的行為與相同C++標準程式庫函式`next_permutation`。 如需詳細資訊，請參閱 < [next_permutation](../standard-library/algorithm-functions.md#next_permutation)。
 
 ## <a name="nth_element"></a> nth_element (STL/CLR)
 
@@ -761,7 +761,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`nth_element`。 如需詳細資訊，請參閱 < [nth_element](../standard-library/algorithm-functions.md#nth_element)。
+此函式的行為與相同C++標準程式庫函式`nth_element`。 如需詳細資訊，請參閱 < [nth_element](../standard-library/algorithm-functions.md#nth_element)。
 
 ## <a name="partial_sort"></a> partial_sort (STL/CLR)
 
@@ -779,7 +779,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`partial_sort`。 如需詳細資訊，請參閱 < [partial_sort](../standard-library/algorithm-functions.md#partial_sort)。
+此函式的行為與相同C++標準程式庫函式`partial_sort`。 如需詳細資訊，請參閱 < [partial_sort](../standard-library/algorithm-functions.md#partial_sort)。
 
 ## <a name="partial_sort_copy"></a> partial_sort_copy (STL/CLR)
 
@@ -798,7 +798,7 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`partial_sort_copy`。 如需詳細資訊，請參閱 < [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)。
+此函式的行為與相同C++標準程式庫函式`partial_sort_copy`。 如需詳細資訊，請參閱 < [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)。
 
 ## <a name="partition"></a> partition (STL/CLR)
 
@@ -813,7 +813,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`partition`。 如需詳細資訊，請參閱 <<c0> [ 分割區](../standard-library/algorithm-functions.md#partition)。
+此函式的行為與相同C++標準程式庫函式`partition`。 如需詳細資訊，請參閱 <<c0> [ 分割區](../standard-library/algorithm-functions.md#partition)。
 
 ## <a name="pop_heap"></a> pop_heap (STL/CLR)
 
@@ -830,7 +830,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`pop_heap`。 如需詳細資訊，請參閱 < [pop_heap](../standard-library/algorithm-functions.md#pop_heap)。
+此函式的行為與相同C++標準程式庫函式`pop_heap`。 如需詳細資訊，請參閱 < [pop_heap](../standard-library/algorithm-functions.md#pop_heap)。
 
 ## <a name="prev_permutation"></a> prev_permutation (STL/CLR)
 
@@ -847,7 +847,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`prev_permutation`。 如需詳細資訊，請參閱 < [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)。
+此函式的行為與相同C++標準程式庫函式`prev_permutation`。 如需詳細資訊，請參閱 < [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)。
 
 ## <a name="push_heap"></a> push_heap (STL/CLR)
 
@@ -864,7 +864,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`push_heap`。 如需詳細資訊，請參閱 < [push_heap](../standard-library/algorithm-functions.md#push_heap)。
+此函式的行為與相同C++標準程式庫函式`push_heap`。 如需詳細資訊，請參閱 < [push_heap](../standard-library/algorithm-functions.md#push_heap)。
 
 ## <a name="random_shuffle"></a> random_shuffle (STL/CLR)
 
@@ -881,9 +881,9 @@ template<class _RanIt, class _Fn1> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`random_shuffle`。 如需詳細資訊，請參閱 < [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)。
+此函式的行為與相同C++標準程式庫函式`random_shuffle`。 如需詳細資訊，請參閱 < [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)。
 
-## <a name="remove"></a> 移除 (STL/CLR)
+## <a name="remove"></a> remove (STL/CLR)
 
 從指定範圍中排除指定的值，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。
 
@@ -896,7 +896,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`remove`。 如需詳細資訊，請參閱 <<c0> [ 移除](../standard-library/algorithm-functions.md#remove)。
+此函式的行為與相同C++標準程式庫函式`remove`。 如需詳細資訊，請參閱 <<c0> [ 移除](../standard-library/algorithm-functions.md#remove)。
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 
@@ -912,7 +912,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`remove_copy`。 如需詳細資訊，請參閱 < [remove_copy](../standard-library/algorithm-functions.md#remove_copy)。
+此函式的行為與相同C++標準程式庫函式`remove_copy`。 如需詳細資訊，請參閱 < [remove_copy](../standard-library/algorithm-functions.md#remove_copy)。
 
 ## <a name="remove_copy_if"></a> remove_copy_if (STL/CLR)
 
@@ -928,7 +928,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`remove_copy_if`。 如需詳細資訊，請參閱 < [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)。
+此函式的行為與相同C++標準程式庫函式`remove_copy_if`。 如需詳細資訊，請參閱 < [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)。
 
 ## <a name="remove_if"></a> remove_if (STL/CLR)
 
@@ -943,7 +943,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`remove_if`。 如需詳細資訊，請參閱 < [remove_if](../standard-library/algorithm-functions.md#remove_if)。
+此函式的行為與相同C++標準程式庫函式`remove_if`。 如需詳細資訊，請參閱 < [remove_if](../standard-library/algorithm-functions.md#remove_if)。
 
 ## <a name="replace"></a> replace (STL/CLR)
 
@@ -959,7 +959,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`replace`。 如需詳細資訊，請參閱 <<c0> [ 取代](../standard-library/algorithm-functions.md#replace)。
+此函式的行為與相同C++標準程式庫函式`replace`。 如需詳細資訊，請參閱 <<c0> [ 取代](../standard-library/algorithm-functions.md#replace)。
 
 ## <a name="replace_copy"></a> replace_copy (STL/CLR)
 
@@ -975,7 +975,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`replace_copy`。 如需詳細資訊，請參閱 < [replace_copy](../standard-library/algorithm-functions.md#replace_copy)。
+此函式的行為與相同C++標準程式庫函式`replace_copy`。 如需詳細資訊，請參閱 < [replace_copy](../standard-library/algorithm-functions.md#replace_copy)。
 
 ## <a name="replace_copy_if"></a> replace_copy_if (STL/CLR)
 
@@ -991,7 +991,7 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`replace_copy_if`。 如需詳細資訊，請參閱 < [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)。
+此函式的行為與相同C++標準程式庫函式`replace_copy_if`。 如需詳細資訊，請參閱 < [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)。
 
 ## <a name="replace_if"></a> replace_if (STL/CLR)
 
@@ -1007,7 +1007,7 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`replace_if`。 如需詳細資訊，請參閱 < [replace_if](../standard-library/algorithm-functions.md#replace_if)。
+此函式的行為與相同C++標準程式庫函式`replace_if`。 如需詳細資訊，請參閱 < [replace_if](../standard-library/algorithm-functions.md#replace_if)。
 
 ## <a name="reverse"></a> reverse (STL/CLR)
 
@@ -1022,7 +1022,7 @@ template<class _BidIt> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`reverse`。 如需詳細資訊，請參閱 <<c0> [ 反向](../standard-library/algorithm-functions.md#reverse)。
+此函式的行為與相同C++標準程式庫函式`reverse`。 如需詳細資訊，請參閱 <<c0> [ 反向](../standard-library/algorithm-functions.md#reverse)。
 
 ## <a name="reverse_copy"></a> reverse_copy (STL/CLR)
 
@@ -1037,9 +1037,9 @@ template<class _BidIt, class _OutIt> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`reverse_copy`。 如需詳細資訊，請參閱 < [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)。
+此函式的行為與相同C++標準程式庫函式`reverse_copy`。 如需詳細資訊，請參閱 < [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)。
 
-## <a name="rotate"></a> 旋轉 (STL/CLR)
+## <a name="rotate"></a> rotate (STL/CLR)
 
 交換兩個相鄰範圍的項目。
 
@@ -1052,7 +1052,7 @@ template<class _FwdIt> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`rotate`。 如需詳細資訊，請參閱 <<c0> [ 旋轉](../standard-library/algorithm-functions.md#rotate)。
+此函式的行為與相同C++標準程式庫函式`rotate`。 如需詳細資訊，請參閱 <<c0> [ 旋轉](../standard-library/algorithm-functions.md#rotate)。
 
 ## <a name="rotate_copy"></a> rotate_copy (STL/CLR)
 
@@ -1068,7 +1068,7 @@ template<class _FwdIt, class _OutIt> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`rotate_copy`。 如需詳細資訊，請參閱 < [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)。
+此函式的行為與相同C++標準程式庫函式`rotate_copy`。 如需詳細資訊，請參閱 < [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)。
 
 ## <a name="search_"></a> 搜尋 (STL/CLR)
 
@@ -1087,7 +1087,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`search`。 如需詳細資訊，請參閱 <<c0> [ 搜尋](../standard-library/algorithm-functions.md#search)。
+此函式的行為與相同C++標準程式庫函式`search`。 如需詳細資訊，請參閱 <<c0> [ 搜尋](../standard-library/algorithm-functions.md#search)。
 
 ## <a name="search_n"></a> search_n (STL/CLR)
 
@@ -1106,7 +1106,7 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`search_n`。 如需詳細資訊，請參閱 < [search_n](../standard-library/algorithm-functions.md#search_n)。
+此函式的行為與相同C++標準程式庫函式`search_n`。 如需詳細資訊，請參閱 < [search_n](../standard-library/algorithm-functions.md#search_n)。
 
 ## <a name="set_difference"></a> set_difference (STL/CLR)
 
@@ -1125,7 +1125,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`set_difference`。 如需詳細資訊，請參閱 < [set_difference](../standard-library/algorithm-functions.md#set_difference)。
+此函式的行為與相同C++標準程式庫函式`set_difference`。 如需詳細資訊，請參閱 < [set_difference](../standard-library/algorithm-functions.md#set_difference)。
 
 ## <a name="set_intersection"></a> set_intersection (STL/CLR)
 
@@ -1144,7 +1144,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`set_intersection`。 如需詳細資訊，請參閱 < [set_intersection](../standard-library/algorithm-functions.md#set_intersection)。
+此函式的行為與相同C++標準程式庫函式`set_intersection`。 如需詳細資訊，請參閱 < [set_intersection](../standard-library/algorithm-functions.md#set_intersection)。
 
 ## <a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
 
@@ -1163,7 +1163,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`set_symmetric_difference`。 如需詳細資訊，請參閱 < [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。
+此函式的行為與相同C++標準程式庫函式`set_symmetric_difference`。 如需詳細資訊，請參閱 < [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)。
 
 ## <a name="set_union"></a> set_union (STL/CLR)
 
@@ -1182,9 +1182,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`set_union`。 如需詳細資訊，請參閱 < [set_union](../standard-library/algorithm-functions.md#set_union)。
+此函式的行為與相同C++標準程式庫函式`set_union`。 如需詳細資訊，請參閱 < [set_union](../standard-library/algorithm-functions.md#set_union)。
 
-## <a name="sort"></a> 排序 (STL/CLR)
+## <a name="sort"></a> sort (STL/CLR)
 
 將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則。
 
@@ -1199,7 +1199,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`sort`。 如需詳細資訊，請參閱 <<c0> [ 排序](../mfc/reference/cmfclistctrl-class.md#sort)。
+此函式的行為與相同C++標準程式庫函式`sort`。 如需詳細資訊，請參閱 <<c0> [ 排序](../mfc/reference/cmfclistctrl-class.md#sort)。
 
 ## <a name="sort_heap"></a> sort_heap (STL/CLR)
 
@@ -1216,7 +1216,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`sort_heap`。 如需詳細資訊，請參閱 < [sort_heap](../standard-library/algorithm-functions.md#sort_heap)。
+此函式的行為與相同C++標準程式庫函式`sort_heap`。 如需詳細資訊，請參閱 < [sort_heap](../standard-library/algorithm-functions.md#sort_heap)。
 
 ## <a name="stable_partition"></a> stable_partition (STL/CLR)
 
@@ -1231,7 +1231,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`stable_partition`。 如需詳細資訊，請參閱 < [stable_partition](../standard-library/algorithm-functions.md#stable_partition)。
+此函式的行為與相同C++標準程式庫函式`stable_partition`。 如需詳細資訊，請參閱 < [stable_partition](../standard-library/algorithm-functions.md#stable_partition)。
 
 ## <a name="stable_sort"></a> stable_sort (STL/CLR)
 
@@ -1248,7 +1248,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`stable_sort`。 如需詳細資訊，請參閱 < [stable_sort](../standard-library/algorithm-functions.md#stable_sort)。
+此函式的行為與相同C++標準程式庫函式`stable_sort`。 如需詳細資訊，請參閱 < [stable_sort](../standard-library/algorithm-functions.md#stable_sort)。
 
 ## <a name="swap"></a> swap (STL/CLR)
 
@@ -1263,7 +1263,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`swap`。 如需詳細資訊，請參閱 <<c0> [ 交換](../standard-library/algorithm-functions.md#swap)。
+此函式的行為與相同C++標準程式庫函式`swap`。 如需詳細資訊，請參閱 <<c0> [ 交換](../standard-library/algorithm-functions.md#swap)。
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 
@@ -1279,7 +1279,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`swap_ranges`。 如需詳細資訊，請參閱 < [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)。
+此函式的行為與相同C++標準程式庫函式`swap_ranges`。 如需詳細資訊，請參閱 < [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)。
 
 ## <a name="transform"></a> 轉換 (STL/CLR)
 
@@ -1298,7 +1298,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`transform`。 如需詳細資訊，請參閱 <<c0> [ 轉換](../standard-library/algorithm-functions.md#transform)。
+此函式的行為與相同C++標準程式庫函式`transform`。 如需詳細資訊，請參閱 <<c0> [ 轉換](../standard-library/algorithm-functions.md#transform)。
 
 ## <a name="unique"></a> 唯一 (STL/CLR)
 
@@ -1315,7 +1315,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`unique`。 如需詳細資訊，請參閱 <<c0> [ 唯一](../standard-library/algorithm-functions.md#unique)。
+此函式的行為與相同C++標準程式庫函式`unique`。 如需詳細資訊，請參閱 <<c0> [ 唯一](../standard-library/algorithm-functions.md#unique)。
 
 ## <a name="unique_copy"></a> unique_copy (STL/CLR)
 
@@ -1333,7 +1333,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`unique_copy`。 如需詳細資訊，請參閱 < [unique_copy](../standard-library/algorithm-functions.md#unique_copy)。
+此函式的行為與相同C++標準程式庫函式`unique_copy`。 如需詳細資訊，請參閱 < [unique_copy](../standard-library/algorithm-functions.md#unique_copy)。
 
 ## <a name="upper_bound"></a> upper_bound (STL/CLR)
 
@@ -1351,4 +1351,4 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫函式相同`upper_bound`。 如需詳細資訊，請參閱 < [upper_bound](../standard-library/algorithm-functions.md#upper_bound)。
+此函式的行為與相同C++標準程式庫函式`upper_bound`。 如需詳細資訊，請參閱 < [upper_bound](../standard-library/algorithm-functions.md#upper_bound)。

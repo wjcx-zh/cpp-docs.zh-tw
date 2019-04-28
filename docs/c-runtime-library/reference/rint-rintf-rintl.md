@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357586"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -62,12 +62,12 @@ long double rint( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|無|無|
-|非正規數|EXCEPTION_FLT_UNDERFLOW|無|
+|常见 ∞，QNAN IND|none|none|
+|非正規數|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**rint**採用並傳回**float**並**長** **double**值。 在 C 程式中， **rint**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**rint**採用並傳回**float**並**長** **double**值。 在 C 程式中， **rint**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

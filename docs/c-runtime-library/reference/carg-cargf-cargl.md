@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
 ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340712"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -72,13 +72,13 @@ long double cargl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**carg**採用 **_Fcomplex**或是 **_Lcomplex**的值，並傳回**float**或**長** **double**值。 在 C 程式中， **carg**一律採用 **_Dcomplex**值，然後傳回**double**值。
+因為C++允許多載，您可以呼叫多載**carg**採用 **_Fcomplex**或是 **_Lcomplex**值，並傳回**float**或是**長** **double**值。 在 C 程式中， **carg**一律採用 **_Dcomplex**值，然後傳回**double**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**carg**， **cargf**， **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
 ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347804"
 ---
 # <a name="atol-atoll-wtol-wtoll"></a>atol、_atol_l、_wtol、_wtol_l
 
@@ -95,7 +95,7 @@ long _wtol_l(
 
 *Str*引數**atol**具有下列格式：
 
-> [*空白字元*] [*號*] [*位數*]]
+> [*whitespace*] [*sign*] [*digits*]]
 
 A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+） 或減號 （–）; 並*數字*是一個以上的數字。
 

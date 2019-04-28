@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2555
 ms.assetid: 5e49ebb8-7c90-457a-aa12-7ca7ab6574b2
 ms.openlocfilehash: cc6c3a3a29665ccf65b77a3d9866986cb0a46b9e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353193"
 ---
 # <a name="compiler-error-c2555"></a>編譯器錯誤 C2555
 
@@ -21,7 +21,7 @@ ms.locfileid: "50528852"
 
 若要解決這個錯誤，請呼叫虛擬函式之後轉換傳回的值。
 
-如果您使用 /clr 編譯時，可能也會看到此錯誤。   例如，Visual c + + 相當於下列 C# 宣告：
+如果您使用 /clr 編譯時，可能也會看到此錯誤。   例如，視覺效果C++相當於下列C#宣告：
 
 ```
 Guid[] CheckSources(Guid sourceID, Guid[] carouselIDs);

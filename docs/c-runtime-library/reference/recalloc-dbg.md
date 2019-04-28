@@ -23,11 +23,11 @@ helpviewer_keywords:
 - recalloc_dbg function
 ms.assetid: 43c3e9b2-be6d-4508-9b0f-3220c8a47ca3
 ms.openlocfilehash: e2782492d3338b5b548db0153b6123fb82ff5e72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357679"
 ---
 # <a name="recallocdbg"></a>_recalloc_dbg
 
@@ -48,10 +48,10 @@ void *_recalloc_dbg(
 
 ### <a name="parameters"></a>參數
 
-*保留使用者資料*<br/>
+*userData*<br/>
 之前配置的記憶體區塊的指標。
 
-*數字*<br/>
+*number*<br/>
 要求的記憶體區塊數。
 
 *size*<br/>

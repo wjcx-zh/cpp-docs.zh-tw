@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369939"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -45,7 +45,7 @@ class queue
 *Type*<br/>
 要存放在佇列中的項目資料類型
 
-*容器*<br/>
+*Container*<br/>
 用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註

@@ -13,11 +13,11 @@ f1_keywords:
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
 ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337605"
 ---
 # <a name="concurrency-namespace-enums"></a>concurrency 命名空間列舉
 
@@ -31,8 +31,7 @@ ms.locfileid: "57271186"
 
 ##  <a name="agent_status"></a>  agent_status 列舉
 
-
-  `agent` 的有效狀態。
+`agent` 的有效狀態。
 
 ```
 enum agent_status;
@@ -153,8 +152,7 @@ enum CriticalRegionType;
 
 ##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType Enumeration
 
-
-  `DynamicProgressFeedback` 原則用來描述要根據從排程器收集到的統計資訊重新平衡排程器的資源，或者只要根據透過 `IVirtualProcessorRoot` 介面上的 `Activate` 和 `Deactivate` 方法呼叫進出閒置狀態的虛擬處理器。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
+`DynamicProgressFeedback` 原則用來描述要根據從排程器收集到的統計資訊重新平衡排程器的資源，或者只要根據透過 `IVirtualProcessorRoot` 介面上的 `Activate` 和 `Deactivate` 方法呼叫進出閒置狀態的虛擬處理器。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
 
 ```
 enum DynamicProgressFeedbackType;
@@ -169,8 +167,7 @@ enum DynamicProgressFeedbackType;
 
 ##  <a name="join_type"></a>  join_type 列舉
 
-
-  `join` 傳訊區塊的類型。
+`join` 傳訊區塊的類型。
 
 ```
 enum join_type;
@@ -189,8 +186,7 @@ enum join_type;
 
 ##  <a name="message_status"></a>  message_status 列舉
 
-
-  `message` 物件對區塊供應項目的有效回應。
+`message` 物件對區塊供應項目的有效回應。
 
 ```
 enum message_status;
@@ -239,8 +235,7 @@ enum PolicyElementKey;
 
 ##  <a name="schedulertype"></a>  SchedulerType 列舉
 
-
-  `SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
+`SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
 
 ```
 enum SchedulerType;
@@ -259,8 +254,7 @@ enum SchedulerType;
 
 ##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType 列舉
 
-
-  `SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
+`SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md)。
 
 ```
 enum SchedulingProtocolType;
@@ -311,8 +305,7 @@ enum task_group_status;
 
 |名稱|描述|
 |----------|-----------------|
-|`canceled`|
-  `task_group` 或 `structured_task_group` 物件已取消。 可能有一個或多個工作尚未執行。|
+|`canceled`|`task_group` 或 `structured_task_group` 物件已取消。 可能有一個或多個工作尚未執行。|
 |`completed`|在 `task_group` 或 `structured_task_group` 物件列隊的工作已順利完成。|
 |`not_complete`|在 `task_group` 物件列隊的工作尚未完成。 請注意，目前不會由並行執行階段傳回這個值。|
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368730"
 ---
 # <a name="platformexception-class"></a>Platform::Exception 類別
 
@@ -149,8 +149,8 @@ public:property String^ Message;
 
 ### <a name="remarks"></a>備註
 
-在 Windows 8 中，這個屬性是唯讀因為該版本的 Windows 執行階段中的例外狀況會跨只能以 HRESULT ABI 傳輸。 在 Windows 8.1 (含) 以後版本，跨 ABI 傳輸更豐富的例外狀況資訊，而且您可以提供其他元件可透過程式設計方式存取的自訂訊息。 如需詳細資訊，請參閱 <<c0> [ 例外狀況 (C + + /CX)](../cppcx/exceptions-c-cx.md)。
+在 Windows 8 中，這個屬性是唯讀因為該版本的 Windows 執行階段中的例外狀況會跨只能以 HRESULT ABI 傳輸。 在 Windows 8.1 (含) 以後版本，跨 ABI 傳輸更豐富的例外狀況資訊，而且您可以提供其他元件可透過程式設計方式存取的自訂訊息。 如需詳細資訊，請參閱 <<c0> [ 例外狀況 (C++/CX)](../cppcx/exceptions-c-cx.md)。</c0>
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)
+[平台命名空間](../cppcx/platform-namespace-c-cx.md)

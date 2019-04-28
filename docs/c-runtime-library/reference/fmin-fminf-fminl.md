@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
 ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333374"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -92,7 +92,7 @@ long double fminl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**fmin**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fmin**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**fmin**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fmin**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

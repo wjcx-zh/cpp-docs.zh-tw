@@ -37,11 +37,11 @@ helpviewer_keywords:
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
 ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356819"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
 
@@ -87,7 +87,7 @@ errno_t _wsearchenv_s(
 *varname*<br/>
 要搜尋的環境。
 
-*路徑名稱*<br/>
+*pathname*<br/>
 要儲存此完整路徑的緩衝區。
 
 *numberOfElements*<br/>
@@ -101,7 +101,7 @@ errno_t _wsearchenv_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*filename*|*varname*|*路徑名稱*|*numberOfElements*|傳回值|內容*路徑名稱*|
+|*filename*|*varname*|*pathname*|*numberOfElements*|傳回值|內容*路徑名稱*|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |any|any|**NULL**|any|**EINVAL**|N/A|
 |**NULL**|any|any|any|**EINVAL**|未變更|

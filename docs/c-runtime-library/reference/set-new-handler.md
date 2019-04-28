@@ -26,11 +26,11 @@ helpviewer_keywords:
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
 ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356494"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -53,7 +53,7 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="remarks"></a>備註
 
-C + + **_set_new_handler**函式會指定如果取得控制權的例外狀況處理函式**新**運算子無法配置記憶體。 如果**新**失敗，執行階段系統會自動呼叫傳遞做為引數的例外狀況處理函式 **_set_new_handler**。 **_PNH**New.h 中所定義，不會傳回類型的函式指標**int**並接受類型引數**size_t**。 使用**size_t**來指定要配置的空間量。
+C++ **_Set_new_handler**函式會指定如果取得控制權的例外狀況處理函式**新**運算子無法配置記憶體。 如果**新**失敗，執行階段系統會自動呼叫傳遞做為引數的例外狀況處理函式 **_set_new_handler**。 **_PNH**New.h 中所定義，不會傳回類型的函式指標**int**並接受類型引數**size_t**。 使用**size_t**來指定要配置的空間量。
 
 沒有預設處理常式。
 

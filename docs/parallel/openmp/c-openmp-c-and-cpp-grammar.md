@@ -1,15 +1,15 @@
 ---
-title: C. OpenMP C 和 c + + 文法
+title: C. OpenMP C 和C++文法
 ms.date: 01/16/2019
 ms.assetid: 97a878ce-1533-47f7-a134-66fcbff48524
 ms.openlocfilehash: 85e18161079b49e83cc9fedb3184ee220c889e75
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362942"
 ---
-# <a name="c-openmp-c-and-c-grammar"></a>C. OpenMP C 和 c + + 文法
+# <a name="c-openmp-c-and-c-grammar"></a>C. OpenMP C 和C++文法
 
 [C.1 標記法](#c1-notation)<br/>
 [C.2 規則](#c2-rules)
@@ -29,9 +29,9 @@ ms.locfileid: "54397351"
 
 ## <a name="c2-rules"></a>C.2 規則
 
-標記法是由 C 標準的 6.1 一節所述。 此文法附錄說明 OpenMP C 和 c + + 的指示詞的基底語言文法的延伸模組。
+標記法是由 C 標準的 6.1 一節所述。 此文法附錄顯示基底語言文法擴充 OpenMP c 和C++指示詞。
 
-**/\* 在 c + + (ISO/IEC 14882:1998) \*/**
+**/\* 在C++(ISO/IEC 14882:1998) \*/**
 
 *statement-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*陳述式*<br/>
@@ -229,7 +229,7 @@ ms.locfileid: "54397351"
 &nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*variable-list*   `,` *identifier*
 
-**/\* 在 c + + \*/**
+**/\* 在C++ \*/**
 
 *變數清單*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*id-expression*<br/>

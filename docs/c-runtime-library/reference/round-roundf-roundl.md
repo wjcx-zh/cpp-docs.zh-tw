@@ -28,11 +28,11 @@ helpviewer_keywords:
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
 ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357443"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -69,11 +69,11 @@ long double roundl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|無|**（_D)**|
+|常见**QNAN**， **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**四捨五入**採用並傳回**float**並**長** **double**值。 在 C 程式中，**四捨五入**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**捨入**採用並傳回**float**並**長** **double**值。 在 C 程式中，**四捨五入**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

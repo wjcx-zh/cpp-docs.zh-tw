@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
 ms.openlocfilehash: f96592e245e443bae2f3334da51cae5572753708
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333491"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -105,7 +105,7 @@ long double fmal(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**fma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fma**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**fma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fma**一律採用並傳回**double**。
 
 此函式會計算值，就像它採用無限精確度，然後將最終結果進行四捨五入。
 

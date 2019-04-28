@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
 ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369586"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 類別
 
@@ -180,7 +180,7 @@ auto operator()(Types&&... args);
 *型別*<br/>
 引數清單類型。
 
-*引數*<br/>
+*args*<br/>
 引數清單。
 
 ### <a name="remarks"></a>備註

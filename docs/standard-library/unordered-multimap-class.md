@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362929"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap 類別
 
@@ -167,7 +167,7 @@ class unordered_multimap;
 |*Ty*|對應的類型。|
 |*雜湊*|雜湊函式物件類型。|
 |*預測*|相等比較函式物件類型。|
-|*配置*|配置器類別。|
+|*Alloc*|配置器類別。|
 
 ## <a name="members"></a>成員
 
@@ -975,7 +975,7 @@ iterator emplace(Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered_multimap 之元素的引數。|
+|*args*|轉送以建構插入 unordered_multimap 之元素的引數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1006,7 +1006,7 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered 之元素的引數。|
+|*args*|轉送以建構插入 unordered 之元素的引數。|
 |*where*|有關要從何處開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
@@ -1487,7 +1487,7 @@ IList);
 
 |參數|描述|
 |-|-|
-|*val*|要插入至 unordered_multimap 的元素值。|
+|*Val*|要插入至 unordered_multimap 的元素值。|
 |*Where*|要開始搜尋正確的插入點的地方。|
 |*ValTy*|範本參數，以指定 unordered_multimap 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|

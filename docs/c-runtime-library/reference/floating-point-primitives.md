@@ -123,11 +123,11 @@ helpviewer_keywords:
 - _ldsin
 - _fdsin
 ms.openlocfilehash: 230d0def145bcb443437b59303b2b36e348da2bb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333608"
 ---
 # <a name="floating-point-primitives"></a>浮點數基本類型
 
@@ -225,7 +225,7 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="remarks"></a>備註
 
-下列浮點數基本類型實作 c + + 版本的 CRT 函式[fpclassify](fpclassify.md)浮點類型。 引數*x*會評估並傳回做為其中一個這些常數，定義於 math.h 中分類：
+下列浮點數基本類型實作C++版本的 CRT 函式[fpclassify](fpclassify.md)浮點類型。 引數*x*會評估並傳回做為其中一個這些常數，定義於 math.h 中分類：
 
 |值|描述|
 |-----------|-----------------|
@@ -426,7 +426,7 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 [浮點支援](../floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite _finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [isnormal](isnormal.md)<br/>

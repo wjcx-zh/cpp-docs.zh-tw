@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362734"
 ---
 # <a name="unorderedset-class"></a>unordered_set 類別
 
@@ -163,7 +163,7 @@ class unordered_set;
 |*Key*|索引鍵類型。|
 |*雜湊*|雜湊函式物件類型。|
 |*預測*|相等比較函式物件類型。|
-|*配置*|配置器類別。|
+|*Alloc*|配置器類別。|
 
 ## <a name="members"></a>成員
 
@@ -970,7 +970,7 @@ Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered_set 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+|*args*|轉送以建構插入 unordered_set 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1001,7 +1001,7 @@ Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構插入 unordered_set 之元素的引數，除非該 unordered_set 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
+|*args*|轉送以建構插入 unordered_set 之元素的引數，除非該 unordered_set 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
 |*where*|有關要從何處開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
@@ -1459,7 +1459,7 @@ void insert(initializer_list<value_type> IList);
 
 |參數|描述|
 |-|-|
-|*val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_set 中的項目值。|
+|*Val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_set 中的項目值。|
 |*Where*|要開始搜尋正確的插入點的地方。|
 |*ValTy*|範本參數，指定 unordered_set 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|

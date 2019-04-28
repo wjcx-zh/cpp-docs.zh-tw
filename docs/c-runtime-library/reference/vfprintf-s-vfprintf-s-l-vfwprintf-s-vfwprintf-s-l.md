@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
 ms.openlocfilehash: fc04dbc9c23e86694686953bf3184e370714841c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364827"
 ---
 # <a name="vfprintfs-vfprintfsl-vfwprintfs-vfwprintfsl"></a>vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
 
@@ -74,7 +74,7 @@ int _vfwprintf_s_l(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 *格式*<br/>
@@ -118,7 +118,7 @@ int _vfwprintf_s_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**vfprintf_s**， **_vfprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vfprintf_s**, **_vfprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vfwprintf_s**， **_vfwprintf_s_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。

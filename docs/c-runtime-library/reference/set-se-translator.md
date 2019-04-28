@@ -24,15 +24,15 @@ helpviewer_keywords:
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
 ms.openlocfilehash: 18ee500d7b884d1934c29dc91d9bcb03d507680d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356546"
 ---
 # <a name="setsetranslator"></a>_set_se_translator
 
-設定要轉譯成 c + + 的 Win32 例外狀況 （C 結構化例外狀況） 的每個執行緒回呼函式類型的例外狀況。
+設定每個執行緒的回呼函數轉譯 Win32 例外狀況 （C 結構化例外狀況） 至C++類型的例外狀況。
 
 ## <a name="syntax"></a>語法
 
@@ -53,7 +53,7 @@ _se_translator_function _set_se_translator(
 
 ## <a name="remarks"></a>備註
 
-**_Set_se_translator**函式可用來處理 Win32 例外狀況 （C 結構化例外狀況），為 c + + 類型化例外。 若要允許每個 C 例外狀況，由 c + +**攔截**處理常式，首先會定義 C 例外狀況包裝函式類別，可以使用，或衍生自來的特定類別類型的屬性設為 C 例外狀況。 若要使用這個類別，請安裝內部例外狀況處理機制在每次引發 C 例外狀況時呼叫的自訂 C 例外狀況轉譯器函式。 在您的轉譯器函式，您可以擲回的相符的 c + + 就可以攔截任何類型化例外狀況**攔截**處理常式。
+**_Set_se_translator**函式可用來處理 Win32 例外狀況 （C 結構化例外狀況），做為C++類型的例外狀況。 若要允許來處理每個 C 例外狀況C++**攔截**處理常式，首先會定義 C 例外狀況包裝函式類別，可以使用，或衍生自來的特定類別類型的屬性設為 C 例外狀況。 若要使用這個類別，請安裝內部例外狀況處理機制在每次引發 C 例外狀況時呼叫的自訂 C 例外狀況轉譯器函式。 在您的轉譯器函式，您可以擲回的相符就可以攔截任何類型化例外狀況C++**攔截**處理常式。
 
 您必須使用[/EHa](../../build/reference/eh-exception-handling-model.md)使用時 **_set_se_translator**。
 

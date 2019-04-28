@@ -3,11 +3,11 @@ title: OpenMP C 和 C++ 應用程式開發介面
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362695"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C 和 C++ 應用程式開發介面
 
@@ -35,13 +35,13 @@ ms.locfileid: "60124833"
 
 B. [執行階段程式庫函式的虛設常式](b-stubs-for-run-time-library-functions.md)
 
-C. [OpenMP C 和C++文法](c-openmp-c-and-cpp-grammar.md)
+C. [OpenMP C 和 C++ 文法](c-openmp-c-and-cpp-grammar.md)
 
 D. [排程子句](d-using-the-schedule-clause.md)
 
-E. [OpenMP C 中的實作定義行為 /C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+E. [OpenMP C/C++ 中的實作定義行為](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-F. [新功能和 2.0 版中的說明](f-new-features-and-clarifications-in-version-2-0.md)
+F. [2.0 版中的新功能及詳細說明](f-new-features-and-clarifications-in-version-2-0.md)
 
 ## <a name="see-also"></a>另請參閱
 

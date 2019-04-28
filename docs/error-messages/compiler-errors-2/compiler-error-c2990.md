@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2990
 ms.assetid: 674e9f6a-6743-4af0-a7ed-cbe11103a2f8
 ms.openlocfilehash: f7327b7d2b0cc9fa4b617a9a6033116c43db6258
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62366325"
 ---
 # <a name="compiler-error-c2990"></a>編譯器錯誤 C2990
 
@@ -40,7 +40,7 @@ ref struct GC;
 ref struct GC {};   // C2990
 ```
 
-C2990 也可能是因為 Visual c + + 編譯器的重大變更適用於 Visual c + + 2005;編譯器現在會需要多個相同類型的宣告是相同範本規格。
+C2990 也可能是因為在視覺效果中的重大變更C++視覺效果的編譯器C++2005;編譯器現在會需要多個相同類型的宣告是相同範本規格。
 
 下列範例會產生 C2990:
 

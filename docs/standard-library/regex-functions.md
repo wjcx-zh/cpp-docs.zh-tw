@@ -14,11 +14,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::swap [C++]
 ms.openlocfilehash: 47b3ae9d59db7c39d7b9667038d216f24530d5dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369601"
 ---
 # <a name="ltregexgt-functions"></a>&lt;regex&gt; 函式
 
@@ -87,7 +87,7 @@ bool regex_match(
 *BidIt*<br/>
 子相符項目的迭代器類型。 一般情況下，這`string::const_iterator`， `wstring::const_iterator`，`const char*`或`const wchar_t*`。
 
-*配置*<br/>
+*Alloc*<br/>
 符合結果配置器類別。
 
 *Elem*<br/>
@@ -111,7 +111,7 @@ bool regex_match(
 *first*<br/>
 要比對的序列開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要比對的序列結尾。
 
 *match*<br/>
@@ -229,7 +229,7 @@ basic_string<Elem> regex_replace(
 *RXtraits*<br/>
 項目的 Traits 類別。
 
-*配置*<br/>
+*Alloc*<br/>
 規則運算式配置器類別。
 
 *Elem*<br/>
@@ -244,7 +244,7 @@ basic_string<Elem> regex_replace(
 *fmt*<br/>
 取代項目的格式。
 
-*最後一個*<br/>
+*last*<br/>
 要比對的序列結尾。
 
 *out*<br/>
@@ -356,7 +356,7 @@ bool regex_search(
 *BidIt*<br/>
 子相符項目的迭代器類型。
 
-*配置*<br/>
+*Alloc*<br/>
 符合結果配置器類別。
 
 *Elem*<br/>
@@ -380,7 +380,7 @@ bool regex_search(
 *first*<br/>
 要比對的序列開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要比對的序列結尾。
 
 *match*<br/>

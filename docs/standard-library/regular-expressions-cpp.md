@@ -7,38 +7,38 @@ helpviewer_keywords:
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
 ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369029"
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 
-C + + 標準程式庫支援多個規則運算式文法。 使用規則運算式時，本主題將討論可用的文法變化。
+C++標準程式庫支援多個規則運算式文法。 使用規則運算式時，本主題將討論可用的文法變化。
 
 ## <a name="regexgrammar"></a> 規則運算式文法
 
 使用規則運算式文法所指定的其中一個使用`std::regex_constants::syntax_option_type`列舉值。 這些規則運算式文法中 std::regex_constants 定義：
 
-- `ECMAScript`： 這是最接近使用 JavaScript 和.NET 語言的文法項目。
-- `basic`: POSIX 基本的規則運算式或 BRE。
-- `extended`: POSIX 延伸規則運算式或 ERE。
-- `awk`： 這是`extended`，但是有額外的非列印字元的逸出。
-- `grep`： 這是`basic`，但它也可讓新行字元 ('\n') 字元來分隔替代。
-- `egrep`： 這是`extended`，但它也可讓新行字元來分隔替代。
+- `ECMAScript`：這是最接近使用 JavaScript 和.NET 語言的文法項目。
+- `basic`：POSIX 基本規則運算式或 BRE。
+- `extended`：POSIX 延伸規則運算式或 ERE。
+- `awk`：這是`extended`，但是有額外的非列印字元的逸出。
+- `grep`：這是`basic`，但它也可讓新行字元 ('\n') 字元來分隔替代。
+- `egrep`：這是`extended`，但它也可讓新行字元來分隔替代。
 
 根據預設，如果指定沒有文法，`ECMAScript`假設。 您可以指定只有一個的文法。
 
 除了文法中，您可以套用幾個旗標：
-- `icase`： 比對時忽略大小寫。
-- `nosubs`： 忽略標示的相符項目 （也就是，運算式在括號中）;沒有替代項目會儲存。
-- `optimize`： 請比對速度更快，能忍受的更高的建構期間。
-- `collate`： 使用區分地區設定定序順序 （例如，"[a-z]"格式的範圍）。
+- `icase`：比對時，請忽略大小寫。
+- `nosubs`：忽略標示的相符項目 （也就是，運算式在括號中）;沒有替代項目會儲存。
+- `optimize`：請比對速度更快，能忍受的更高的建構期間。
+- `collate`：使用區分地區設定定序順序 （例如，"[a-z]"格式的範圍）。
 
 零或多個旗標可能會與指定的規則運算式引擎行為文法結合。 如果只指定旗標，`ECMAScript`會假定為文法。
 
-### <a name="element"></a>元素
+### <a name="element"></a>項目
 
 項目可以是下列其中一項：
 
@@ -174,7 +174,7 @@ C + + 標準程式庫支援多個規則運算式文法。 使用規則運算式�
 
 下表摘要說明各種規則運算式文法的功能：
 
-|元素|基本|延伸|ECMAScript|grep|egrep|awk|
+|項目|基本|延伸|ECMAScript|grep|egrep|awk|
 |-------------|---------|---------|----------|----------|-----------|---------|
 |使用 '&#124;' 的替代||+|+||+|+|
 |使用 '\n' 的替代||||+|+||
@@ -303,8 +303,8 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 |"\D"|"[^[:d:]]"|"[^[:digit:]]"|
 |"\s"|"[[:s:]]"|"[[:space:]]"|
 |"\S"|"[^[:s:]]"|"[^[:space:]]"|
-|"\w"|"[[:w:]]"|"[a-A-za-a-za-z0-9_] 」\*|
-|"\W"|"[^[:w:]]"|"[^ a-A-za-a-za-z0-9_] 」\*|
+|"\w"|"[[:w:]]"|"[a-zA-Z0-9_]"\*|
+|"\W"|"[^[:w:]]"|"[^a-zA-Z0-9_]"\*|
 
 \*ASCII 字元集
 
@@ -393,7 +393,7 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 
 在 `ECMAScript` 中，下列字元有特殊意義：
 
-- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }&#124;
+- ^  $  \  .  \*  +  ?  (  )  \[  ]  {  }  &#124;
 
 在 `basic` 和 `grep` 中，下列字元有特殊意義：
 
@@ -480,7 +480,7 @@ Unicode 逸出序列是反斜線，後面接著字元 'u'，後面接著四個�
 |"$&"|"&"|符合整個規則運算式的字元序列 (`[match[0].first, match[0].second)`)|
 |"$$"||"$"|
 ||"\\&"|"&"|
-|"$\`"（貨幣符號後面接著反引號）||在符合規則運算式的子序列之前的字元序列 (`[match.prefix().first, match.prefix().second)`)|
+|"$\`"（貨幣符號後面接著反引號） | |符合規則運算式的子序列之前的字元序列 (`[match.prefix().first, match.prefix().second)`)|
 |"$'" (貨幣符號，後面接著正引號)||在符合規則運算式的子序列之後的字元序列 (`[match.suffix().first, match.suffix().second)`)|
 |"$n"|"\n"|符合位置之擷取群組的字元序列`n`，其中`n`是介於 0 到 9 的數字 (`[match[n].first, match[n].second)`)|
 ||"\\\n"|"\n"|

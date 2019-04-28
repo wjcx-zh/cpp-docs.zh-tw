@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
 ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357534"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -88,7 +88,7 @@ int _resetstkoflw( void );
 
 在這些點，堆疊尚無法充分回溯。
 
-因此產生為結構化例外狀況，不 c + + 例外狀況，堆疊溢位例外狀況 **_resetstkoflw**並不適用於一般**攔截**封鎖，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
+堆疊溢位例外狀況會不產生為結構化例外狀況，C++例外狀況，因此 **_resetstkoflw**並不適用於一般**攔截**封鎖，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
 
 在從結構化例外狀況翻譯器函式所擲回例外狀況達到的 C++ catch 區塊中呼叫 **_resetstkoflw** 並不安全。 在此情況下，不會釋放堆疊空間，而且一直達到 catch 區塊之外以前都不會重設堆疊指標，即使已經在 catch 區塊之前呼叫任何可破壞物件的解構函式。 在堆疊空間釋放且堆疊指標重設之前，不應該呼叫此函式。 因此，它只應該在結束 catch 區塊之後呼叫。 在 catch 區塊中應該盡可能減少使用堆疊空間，因為如果堆疊溢位發生在 catch 區塊中，而 catch 區塊本身正在嘗試從先前堆疊溢位復原時，這樣的堆疊溢位是無法復原的，並且可能造成程式停止回應，因為 catch 區塊中的溢位會觸發例外狀況，該例外狀況又是由相同的 catch 區塊處理。
 
@@ -104,7 +104,7 @@ int _resetstkoflw( void );
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫︰** 所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫：** 所有版本的[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>範例
 
@@ -212,7 +212,7 @@ resetting stack overflow
 
 ### <a name="description"></a>描述
 
-下列範例顯示的建議的用法 **_resetstkoflw**在程式中，結構化例外狀況會轉換成 c + + 例外狀況。
+下列範例顯示的建議的用法 **_resetstkoflw**在程式中，將結構化例外狀況轉換成C++例外狀況。
 
 ### <a name="code"></a>程式碼
 

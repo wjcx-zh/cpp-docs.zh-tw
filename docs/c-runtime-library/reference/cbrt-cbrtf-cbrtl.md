@@ -28,11 +28,11 @@ helpviewer_keywords:
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
 ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341090"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -69,11 +69,11 @@ long double cbrtl(
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|無|無|
+|常见 ∞，QNAN IND|none|none|
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**cbrt**採用**float**或是**長** **double**類型。 在 C 程式中， **cbrt**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**cbrt**採用**float**或**長** **double**類型。 在 C 程式中， **cbrt**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

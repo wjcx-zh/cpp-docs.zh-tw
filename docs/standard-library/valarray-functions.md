@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::tan [C++]
 - std::tanh [C++]
 ms.openlocfilehash: c4e5873e9a511311d2c49b34791df82038fe9f9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62365180"
 ---
 # <a name="ltvalarraygt-functions"></a>&lt;valarray&gt; 函式
 
@@ -974,7 +974,7 @@ Valarray，其中的項目和輸入之 valarray 項目的雙曲正弦值相等�
 
 恆等於根據指數函式定義的雙曲正弦值：
 
-sinh ( *z* ) = (exp ( *z* )-exp (- *z* )) / 2
+sinh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / 2
 
 ### <a name="example"></a>範例
 
@@ -1210,7 +1210,7 @@ Valarray，其中的項目和輸入之 valarray 項目的雙曲餘弦值相等�
 
 恆等於根據指數函式定義的雙曲正切值：
 
-tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = (exp ( *z* )-exp (- *z* )) / (exp ( *z* )+ exp (- *z* ))
+tanh ( *z* ) = sinh ( *z* ) / cosh ( *z* ) = ( exp ( *z* ) - exp ( - *z* ) ) / ( exp ( *z* ) + exp ( - *z* ) )
 
 ### <a name="example"></a>範例
 

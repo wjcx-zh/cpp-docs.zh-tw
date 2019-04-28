@@ -10,17 +10,17 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368678"
 ---
 # <a name="logical-or-operator-"></a>邏輯 OR 運算子: | |
 
 ## <a name="syntax"></a>語法
 
-> *邏輯-or 運算式* **||** *邏輯式和運算式*
+> *logical-or-expression* **||** *logical-and-expression*
 
 ## <a name="remarks"></a>備註
 
@@ -64,6 +64,6 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++內建運算子優先順序和關聯性](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [C 邏輯運算子](../c-language/c-logical-operators.md)

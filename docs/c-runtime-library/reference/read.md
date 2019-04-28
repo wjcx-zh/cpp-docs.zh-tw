@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
 ms.openlocfilehash: 40f52ea37ae5419fe986aa505aad4fddfe8403ff
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357651"
 ---
 # <a name="read"></a>_read
 
@@ -133,7 +133,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Read 19 bytes from file

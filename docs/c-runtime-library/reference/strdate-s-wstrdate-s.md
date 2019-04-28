@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
 ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353985"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 
@@ -84,7 +84,7 @@ errno_t _wstrdate_s(
 |**NULL**|(任何)|**EINVAL**|未修改|
 |不**NULL** （指向有效的緩衝區）|0|**EINVAL**|未修改|
 |不**NULL** （指向有效的緩衝區）|0 < *numberOfElements* < 9|**EINVAL**|空字串|
-|不**NULL** （指向有效的緩衝區）|*numberOfElements* > = 9|0|目前的日期格式一如＜備註＞所指定|
+|不**NULL** （指向有效的緩衝區）|*numberOfElements* >= 9|0|目前的日期格式一如＜備註＞所指定|
 
 ## <a name="security-issues"></a>安全性問題
 

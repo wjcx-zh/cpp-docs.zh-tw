@@ -24,11 +24,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
 ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356442"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
@@ -51,7 +51,7 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="remarks"></a>備註
 
-**Set_terminate**函式會安裝*termFunction*所呼叫的函式**終止**。 **set_terminate**搭配 c + + 例外狀況處理和擲回例外狀況之前可能在您的程式中的任何時間點呼叫。 **終止**呼叫[中止](abort.md)預設。 您可以變更此預設值，方法是撰寫您自己的終止函式，並呼叫**set_terminate**您作為其引數的函式的名稱。 **終止**呼叫最後一個指定為引數的函式**set_terminate**。 執行任何所需的清除工作之後*termFunction*應該會結束程式。 如果它不會結束 （如果它傳回至呼叫端），[中止](abort.md)呼叫。
+**Set_terminate**函式會安裝*termFunction*所呼叫的函式**終止**。 **set_terminate**搭配C++例外狀況處理和擲回例外狀況之前可能在您的程式中的任何時間點呼叫。 **終止**呼叫[中止](abort.md)預設。 您可以變更此預設值，方法是撰寫您自己的終止函式，並呼叫**set_terminate**您作為其引數的函式的名稱。 **終止**呼叫最後一個指定為引數的函式**set_terminate**。 執行任何所需的清除工作之後*termFunction*應該會結束程式。 如果它不會結束 （如果它傳回至呼叫端），[中止](abort.md)呼叫。
 
 在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。
 

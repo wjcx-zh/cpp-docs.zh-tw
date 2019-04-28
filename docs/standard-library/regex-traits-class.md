@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369120"
 ---
 # <a name="regextraits-class"></a>regex_traits 類別
 
@@ -95,9 +95,9 @@ class regex_traits
 |[lookup_collatename](#lookup_collatename)|將序列對應至定序項目。|
 |[transform](#transform)|轉換成相等的已排序序列。|
 |[transform_primary](#transform_primary)|轉換成相等且不區分大小寫的已排序序列。|
-|[轉譯](#translate)|轉換成相等的相符元素。|
+|[translate](#translate)|轉換成相等的相符元素。|
 |[translate_nocase](#translate_nocase)|轉換成相等且不區分大小寫的相符項目。|
-|[值](#value)|將項目轉換成數值。|
+|[value](#value)|將項目轉換成數值。|
 
 ## <a name="requirements"></a>需求
 
@@ -221,7 +221,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*當地語系化*<br/>
+*loc*<br/>
 要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
@@ -241,7 +241,7 @@ bool isctype(char_type ch, char_class_type cls) const;
 *ch*<br/>
 待測試的項目。
 
-*符合 cls*<br/>
+*cls*<br/>
 做為測試對象的類別。
 
 ### <a name="remarks"></a>備註
@@ -292,7 +292,7 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 *first*<br/>
 要查閱之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -317,7 +317,7 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 *first*<br/>
 要查閱之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -376,7 +376,7 @@ string_type transform(FwdIt first, FwdIt last) const;
 *first*<br/>
 要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -397,7 +397,7 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 *first*<br/>
 要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註

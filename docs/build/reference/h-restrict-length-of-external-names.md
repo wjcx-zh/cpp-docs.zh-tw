@@ -11,11 +11,11 @@ helpviewer_keywords:
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
 ms.openlocfilehash: bdd3da8d3a5165262c00bc3475122e31f5770726
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270387"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (限制外部名稱的長度)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57811260"
 
 ## <a name="remarks"></a>備註
 
-根據預設，外部 （公用） 名稱的長度為 2047 個字元。 這是 C 和 c + + 程式，則為 true。 使用 **/H**只能減少識別項的允許長度上限，不能增加它。 之間的空格 **/H**並*數目*是選擇性的。
+根據預設，外部 （公用） 名稱的長度為 2047 個字元。 這適用於 C 和C++程式。 使用 **/H**只能減少識別項的允許長度上限，不能增加它。 之間的空格 **/H**並*數目*是選擇性的。
 
 如果程式包含的外部名稱的長度超過*數字*，額外的字元會被忽略。 如果您編譯的程式，而不需要 **/H** ，而且如果識別項包含超過 2047 個字元，編譯器會產生[嚴重錯誤 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57811260"
 
 - 編譯器會新增前置底線 (**\_**) 來修改名稱`__cdecl`（預設值） 和`__stdcall`呼叫慣例和前置字元 @ 記號 (**\@**) 來修改名稱`__fastcall`呼叫慣例。
 
-- 編譯器會將引數大小資訊附加至名稱修改`__fastcall`和`__stdcall`呼叫慣例，並將類型資訊加入至 c + + 名稱。
+- 編譯器會將引數大小資訊附加至名稱修改`__fastcall`並`__stdcall`呼叫慣例，並將型別資訊C++名稱。
 
 您可能會發現 **/H**很有用：
 
@@ -74,9 +74,9 @@ void func2(void) {}
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 輸入中的編譯器選項**其他選項** 方塊中。
 
@@ -87,4 +87,4 @@ void func2(void) {}
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

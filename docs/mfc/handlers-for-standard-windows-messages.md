@@ -11,11 +11,11 @@ helpviewer_keywords:
 - messages [MFC], Windows
 ms.assetid: 19412a8b-2c38-4502-81da-13c823c7e36c
 ms.openlocfilehash: d60ae52225ddd993c1768d0b5ce1989ab0192e45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358228"
 ---
 # <a name="handlers-for-standard-windows-messages"></a>標準 Windows 訊息的處理常式
 
@@ -23,7 +23,7 @@ ms.locfileid: "57275385"
 
 `afx_msg void OnPaint();`
 
-**Afx_msg**關鍵字建議影響的 c + +**虛擬**藉由區分處理常式與其他關鍵字`CWnd`成員函式。 不過，請注意，這些函式不是真實運作，它們是透過訊息對應實作。 訊息對應完全取決於標準前置處理器巨集，而不是 C++ 語言的任何擴充功能。 **Afx_msg**前置處理後關鍵字會解析為泛空白字元。
+**Afx_msg**關鍵字建議的效果C++**虛擬**藉由區分處理常式與其他關鍵字`CWnd`成員函式。 不過，請注意，這些函式不是真實運作，它們是透過訊息對應實作。 訊息對應完全取決於標準前置處理器巨集，而不是 C++ 語言的任何擴充功能。 **Afx_msg**前置處理後關鍵字會解析為泛空白字元。
 
 若要覆寫基底類別中定義的處理常式，只需用您的衍生類別中的相同原型定義函式，並製作處理常式的訊息對應項目即可。 您的處理常式會「覆寫」您類別的基底類別中名稱相同的任何處理常式。
 

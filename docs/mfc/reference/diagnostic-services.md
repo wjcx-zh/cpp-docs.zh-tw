@@ -21,11 +21,11 @@ helpviewer_keywords:
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
 ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322718"
 ---
 # <a name="diagnostic-services"></a>診斷服務
 
@@ -416,7 +416,7 @@ CDumpContext  afxDump;
 
 `afxDump` 是預先定義[CDumpContext](../../mfc/reference/cdumpcontext-class.md)物件，可讓您傳送`CDumpContext`偵錯工具的 [輸出] 視窗或偵錯終端機的資訊。 一般而言，您提供`afxDump`做為參數`CObject::Dump`。
 
-在 Windows NT 和所有版本的 Windows，`afxDump`輸出會傳送至輸出偵錯視窗的 Visual c + +，當您偵錯您的應用程式。
+在 Windows NT 與所有版本的 Windows 下,`afxDump`輸出會傳送至輸出偵錯視窗中，視覺效果的C++當您偵錯您的應用程式。
 
 只在 MFC 的偵錯版本中定義此變數。 如需詳細資訊`afxDump`，請參閱 <<c2> [ 偵錯 MFC 應用程式](/visualstudio/debugger/mfc-debugging-techniques)。
 
@@ -623,7 +623,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 比方說下, 表說明上述的輸出結果的第一行：
 
-|輸出|描述|
+|Output|描述|
 |------------|-----------------|
 |`00427D55:`|最後一個函式呼叫的傳回位址。|
 |`DUMP2\DEBUG\DUMP2.EXE!`|包含函式呼叫的模組完整路徑名稱。|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - distributing files with ATL components
 ms.assetid: 061d5f98-f669-440e-9380-42f017a0f9e8
 ms.openlocfilehash: d44434a36c8d757fb8f79d36a672c4c77de64ade
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278107"
 ---
 # <a name="creating-an-atl-project"></a>建立 ATL 專案
 
@@ -33,7 +33,7 @@ ms.locfileid: "57820321"
 
 1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 如需有關新 ATL 專案中，以及如何變更這些設定的詳細資訊，請參閱[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)。
+您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[視覺效果建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。 如需有關新 ATL 專案中，以及如何變更這些設定的詳細資訊，請參閱[預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)。
 
 ## <a name="see-also"></a>另請參閱
 

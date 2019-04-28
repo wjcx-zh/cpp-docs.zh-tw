@@ -6,11 +6,11 @@ f1_keywords:
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
 ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291336"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (建立核心模式二進位檔)
 
@@ -25,18 +25,18 @@ ms.locfileid: "57816447"
 ## <a name="arguments"></a>引數
 
 **/kernel**<br/>
-目前的專案中的程式碼編譯及連結使用一組專屬於會在核心模式中執行的程式碼的 c + + 語言規則。
+目前的專案中的程式碼編譯及連結使用的一組C++專屬於會在核心模式中執行的程式碼的語言規則。
 
 **/kernel-**<br/>
-目前的專案中的程式碼編譯及連結而不需使用專屬於會在核心模式中執行的程式碼的 c + + 語言規則。
+目前的專案中的程式碼編譯及連結而不需使用C++專屬於會在核心模式中執行的程式碼的語言規則。
 
 ## <a name="remarks"></a>備註
 
 沒有任何`#pragma`等於控制這個選項。
 
-指定 **/kernel**選項會告訴編譯器和連結器仲裁哪一個語言功能是允許在核心模式中，請確定您有足夠的表達能力，不必是唯一的執行階段不穩定核心模式 c + +。 這是藉由禁止使用是干擾性核心模式中的 c + + 語言功能，以及提供 c + + 語言功能可能干擾性，但不能停用的警告。
+指定 **/kernel**選項會告訴編譯器和連結器仲裁哪一個語言功能是允許在核心模式中，請確定您有足夠的表達能力，不必是唯一的執行階段不穩定核心模式C++。 這可以藉由禁止使用C++是以核心模式並提供警告干擾性的語言功能C++是可能干擾性，但無法加以停用的語言功能。
 
-**/Kernel**選項套用至組建的編譯器和連結器階段，並設定專案層級。 傳遞 **/kernel**參數，指出編譯器，產生的二進位檔，連結之後，應該載入 Windows 核心。 編譯器會縮小 c + + 語言功能與核心相容的子集合的範圍。
+**/Kernel**選項套用至組建的編譯器和連結器階段，並設定專案層級。 傳遞 **/kernel**參數，指出編譯器，產生的二進位檔，連結之後，應該載入 Windows 核心。 編譯器會縮小範圍的C++語言功能，適用於核心的子集。
 
 下表列出的編譯器行為的變更時 **/kernel**指定。
 
@@ -88,9 +88,9 @@ class NONPAGESECTION MyNonPagedClass
 
 ### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /kernel 編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取  **C/c + +** 資料夾。
+1. 選取  **C /C++** 資料夾。
 
 1. 選取 **命令列**屬性頁。
 
@@ -99,4 +99,4 @@ class NONPAGESECTION MyNonPagedClass
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

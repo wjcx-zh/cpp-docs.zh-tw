@@ -31,11 +31,11 @@ helpviewer_keywords:
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
 ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355233"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp, _wspawnlp
 

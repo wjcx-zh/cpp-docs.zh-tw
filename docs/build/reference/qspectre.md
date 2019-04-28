@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - /Qspectre
 ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319183"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ ms.locfileid: "57812456"
 
 在其初始版本中， **/Qspectre**選項只適用於在最佳化程式碼。 在 Visual Studio 2017 15.7 版及更新版本 **/Qspectre**選項支援所有的最佳化層級。
 
-Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供 Visual c + + 執行階段的子集：VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署Visual c + + 2017年執行階段程式庫可轉散發套件的內容有不修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
+Microsoft VisualC++程式庫中也會有與 Spectre 風險降低的版本。 Visual Studio 安裝程式中，您可以下載 Visual Studio 2017 的 Spectre 降低程式庫。 中找到**個別元件**索引標籤下**編譯器、 建置工具和執行階段**，並在名稱中有 「 程式庫的 Spectre"。 DLL 和靜態執行階段程式庫，啟用的風險降低與可供視覺效果的子集C++執行階段：VC + + 啟動程式碼、 vcruntime140、 msvcp140、 concrt140 和 vcamp140。 Dll 支援; 應用程式本機部署視覺效果的內容C++2017年執行階段程式庫可轉散發套件尚未經過修改。 您也可以安裝 Spectre 降低程式庫的 MFC 和 ATL，位於**個別元件**索引標籤下**Sdk、 程式庫和架構**。
 
 ### <a name="applicability"></a>適用性
 
@@ -55,20 +55,20 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 **/Qspectre**編譯器選項會產生隱含連結版本提供 Spectre 風險降低已建置的執行階段程式庫的程式碼。 這些程式庫都必須使用 Visual Studio 安裝程式安裝的選用元件：
 
 - VC + + 2017年版本*version_numbers*程式庫用於 Spectre \[（x86 和 x64） |(ARM) |(ARM64)]
-- 適用於 visual c + + ATL \[(x86 x64) |ARM |ARM64] 與 Spectre 風險降低
-- 適用於 visual c + + MFC \[x86 x64 |ARM |ARM64] 與 Spectre 風險降低
+- 視覺化C++適用於 ATL \[(x86 x64) |ARM |ARM64] 與 Spectre 風險降低
+- 視覺化C++適用於 MFC \[x86 x64 |ARM |ARM64] 與 Spectre 風險降低
 
 如果您使用建置您的程式碼 **/Qspectre**並不是這些程式庫安裝，建置系統報告**警告 MSB8038:已啟用 spectre 風險降低，但找不到 spectre 風險降低程式庫**。 MFC 或 ATL 程式碼無法建置，而這類連結器回報的錯誤**嚴重錯誤 LNK1104： 無法開啟檔案 'oldnames.lib'**，這些遺漏的程式庫的可能原因。
 
 ### <a name="additional-information"></a>其他資訊
 
-如需詳細資訊，請參閱官方[Microsoft 安全性諮詢 ADV180002、 指導方針，以減少推測性執行旁路攻擊漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指引也會提供從 Intel[推測性執行端通道緩和措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[快取推測側邊通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 Spectre 與 Meltdown 風險降低的特定 Windows 的概觀，請參閱 <<c0> [ 了解 Spectre 與 Meltdown 緩和措施，在 Windows 系統上的效能影響](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全部落格上。 如需由 MSVC 風險降低 Spectre 弱點的概觀，請參閱 < [Spectre 風險降低，在 MSVC 中的](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)Visual c + + 小組部落格上。
+如需詳細資訊，請參閱官方[Microsoft 安全性諮詢 ADV180002、 指導方針，以減少推測性執行旁路攻擊漏洞](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/ADV180002)。 指引也會提供從 Intel[推測性執行端通道緩和措施](https://software.intel.com/sites/default/files/managed/c5/63/336996-Speculative-Execution-Side-Channel-Mitigations.pdf)，和 ARM，[快取推測側邊通道](https://developer.arm.com/-/media/Files/pdf/Cache_Speculation_Side-channels.pdf)。 Spectre 與 Meltdown 風險降低的特定 Windows 的概觀，請參閱 <<c0> [ 了解 Spectre 與 Meltdown 緩和措施，在 Windows 系統上的效能影響](https://cloudblogs.microsoft.com/microsoftsecure/2018/01/09/understanding-the-performance-impact-of-spectre-and-meltdown-mitigations-on-windows-systems/)Microsoft 安全部落格上。 MSVC 緩和措施所定址的 Spectre 弱點的概觀，請參閱[Spectre 風險降低，在 MSVC](https://blogs.msdn.microsoft.com/vcblog/2018/01/15/spectre-mitigations-in-msvc./)視覺效果上C++團隊部落格。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 請輸入 **/Qspectre**中的編譯器選項**其他選項** 方塊中。 選擇**確定**以套用變更。
 
@@ -80,4 +80,4 @@ Microsoft Visual c + + 程式庫也可用於與 Spectre 風險降低的版本。
 
 [/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

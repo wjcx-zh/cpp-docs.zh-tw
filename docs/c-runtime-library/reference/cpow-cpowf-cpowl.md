@@ -31,11 +31,11 @@ helpviewer_keywords:
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
 ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339841"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -75,13 +75,13 @@ _Lcomplex cpowl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cpow**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cpow**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**cpow**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **cpow**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**cpow**， **cpowf**， **cpowl**|\<complex.h>|\<ccomplex>|
+|**cpow**,               **cpowf**, **cpowl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

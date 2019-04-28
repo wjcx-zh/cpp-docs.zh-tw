@@ -7,11 +7,11 @@ helpviewer_keywords:
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
 ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62282916"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>在提供者內參考屬性
 
@@ -19,7 +19,7 @@ ms.locfileid: "59028451"
 
 下列範例假設您嘗試從資料列集取得的屬性。 使用工作階段或命令的程式碼很類似，但使用不同的介面。
 
-建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為建構函式的參數使用的屬性群組。 例如：
+建立[CDBPropSet](../../data/oledb/cdbpropset-class.md)物件做為建構函式的參數使用的屬性群組。 例如: 
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);

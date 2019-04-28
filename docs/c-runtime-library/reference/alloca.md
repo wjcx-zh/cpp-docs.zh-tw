@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
 ms.openlocfilehash: 7c083e791301d3224709a5fc6c711ceaa6397d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341596"
 ---
 # <a name="alloca"></a>_alloca
 
@@ -57,7 +57,7 @@ void *_alloca(
 
 **_alloca**配置*大小*位元組從程式堆疊。 （不只是超出範圍的配置） 時，呼叫的函式結束時，會自動釋放配置的空間。 因此，不會傳遞所傳回的指標值 **_alloca**做為引數[免費](free.md)。
 
-若要明確呼叫的限制 **_alloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_alloca**任何下列案例中的結果傳回給呼叫的 EH 常式期間的程式發生失敗：
+若要明確呼叫的限制 **_alloca**例外狀況處理常式 (EH) 中。 在 x86 等級處理器執行的 EH 常式操作自己的記憶體框架中：它們不根據封入函式之堆疊指標的目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，明確呼叫 **_alloca**任何下列案例中的結果傳回給呼叫的 EH 常式期間的程式發生失敗：
 
 - Windows NT SEH 例外狀況篩選條件運算式： `__except ( _alloca() )`
 

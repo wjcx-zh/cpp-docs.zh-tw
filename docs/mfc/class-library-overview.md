@@ -11,11 +11,11 @@ helpviewer_keywords:
 - class libraries
 ms.assetid: 9b0e3152-ac39-4f52-91b4-f20aa3a674aa
 ms.openlocfilehash: aec295ea93868ff1fe6e0d3d1d2370a344e47c73
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62327310"
 ---
 # <a name="class-library-overview"></a>類別庫概觀
 

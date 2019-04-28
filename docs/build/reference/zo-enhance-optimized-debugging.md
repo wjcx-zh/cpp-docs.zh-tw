@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -Zo compiler option [C++]
 ms.assetid: eea8d89a-7fe0-4fe1-86b2-7689bbebbd7f
 ms.openlocfilehash: 2fb64b0cc39d5b7ff0c96d3eae47197c455526f5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315348"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (增強最佳化的偵錯)
 
@@ -34,9 +34,9 @@ ms.locfileid: "57809934"
 
 ### <a name="to-set-the-zo-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /Zo 編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性**， **C/c + +** 資料夾。
+1. 選取 **組態屬性**， **C /C++** 資料夾。
 
 1. 選取 **命令列**屬性頁。
 

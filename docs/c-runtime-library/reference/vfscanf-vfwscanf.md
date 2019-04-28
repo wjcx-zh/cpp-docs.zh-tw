@@ -22,11 +22,11 @@ f1_keywords:
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
 ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364775"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -49,7 +49,7 @@ int vfwscanf(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 *格式*<br/>

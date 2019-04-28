@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
 ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288936"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -72,12 +72,12 @@ _Lcomplex ctanhl(
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± ∞、QNAN、IND|none|_DOMAIN|
+|常见 ∞，QNAN IND|none|_DOMAIN|
 |常见 ∞ （tan、 tanf）|無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**ctanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**ctanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 

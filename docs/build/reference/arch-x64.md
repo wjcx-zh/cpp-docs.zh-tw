@@ -3,11 +3,11 @@ title: /arch (x64)
 ms.date: 11/04/2016
 ms.assetid: ecda22bf-5bed-43f4-99fb-88aedd83d9d8
 ms.openlocfilehash: c515307ee3a49ef746eea939e90d7aecbd661b95
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295278"
 ---
 # <a name="arch-x64"></a>/arch (x64)
 
@@ -35,9 +35,9 @@ ms.locfileid: "57809310"
 
 ### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>在 Visual Studio 中設定 /arch:AVX 或 /arch:AVX2 編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性**， **C/c + +** 資料夾。
+1. 選取 **組態屬性**， **C /C++** 資料夾。
 
 1. 選取 **程式碼產生**屬性頁。
 
@@ -51,4 +51,4 @@ ms.locfileid: "57809310"
 
 [/arch (最小 CPU 架構)](arch-minimum-cpu-architecture.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

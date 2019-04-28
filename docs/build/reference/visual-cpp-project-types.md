@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
 ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316752"
 ---
-# <a name="c-project-templates"></a>C + + 專案範本
+# <a name="c-project-templates"></a>C++專案範本
 
 Visual Studio 專案範本產生原始程式碼檔、 編譯器選項、 功能表、 工具列、 圖示、 參考和`#include`適用於您想要建立的專案類型之陳述式。 Visual Studio 包括各種類型的 Visual C++ 專案範本，並為它們中的許多提供精靈，以便您可以在建立專案時，自訂專案。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
 

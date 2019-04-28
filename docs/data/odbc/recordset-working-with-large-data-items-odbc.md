@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
 ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230978"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>資料錄集：使用大型的資料項目 (ODBC)
 
@@ -62,5 +62,5 @@ A [CLongBinary](../../mfc/reference/clongbinary-class.md)物件是簡單的殼�
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
 ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62354895"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -69,7 +69,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**sqrt**採用**float**或是**長** **double**類型。 在 C 程式中， **sqrt**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**sqrt**採用**float**或**長** **double**類型。 在 C 程式中， **sqrt**一律採用並傳回**double**。
 
 ## <a name="return-value"></a>傳回值
 
@@ -77,9 +77,9 @@ C + + 允許多載，因為您可以呼叫多載**sqrt**採用**float**或是**�
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND|無|_DOMAIN|
-|- ∞|無|_DOMAIN|
-|x<0|無|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
+|x<0|none|_DOMAIN|
 
 ## <a name="requirements"></a>需求
 

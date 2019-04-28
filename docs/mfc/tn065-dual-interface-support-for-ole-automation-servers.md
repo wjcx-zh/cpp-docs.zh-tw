@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58776670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351796"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:Automation 伺服程式的雙重介面支援
 
@@ -55,7 +55,7 @@ interface IDualAClick : IDispatch
     };
 ```
 
-當您已備妥介面陳述式時，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，讓您的方法和雙重介面中的屬性存取子函式會傳回**HRESULT** ，並將其傳回值傳遞做為參數的屬性`[retval,out]`. 請記住，對於屬性，您必須將這兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同識別碼。例如：
+當您已備妥介面陳述式時，開始加入的方法和屬性的項目。 雙重介面，您需要重新排列參數清單，讓您的方法和雙重介面中的屬性存取子函式會傳回**HRESULT** ，並將其傳回值傳遞做為參數的屬性`[retval,out]`. 請記住，對於屬性，您必須將這兩個讀取 (`propget`) 和寫入 (`propput`) 存取函式具有相同識別碼。例如: 
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-物件的方法和屬性存取子函式，您需要在實作填入。 您的方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼，以取得/放置值到變數。 例如：
+物件的方法和屬性存取子函式，您需要在實作填入。 您的方法和屬性函式通常可以回到使用 ClassWizard 所產生的方法委派。 不過，如果您直接存取變數設定屬性，您需要撰寫程式碼，以取得/放置值到變數。 例如: 
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)

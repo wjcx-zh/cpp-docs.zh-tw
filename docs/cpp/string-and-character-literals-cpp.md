@@ -1,5 +1,5 @@
 ---
-title: 字串和字元常值 （c + +）
+title: 字串和字元常值 (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - R
@@ -17,13 +17,13 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
 ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330839"
 ---
-# <a name="string-and-character-literals--c"></a>字串和字元常值 （c + +）
+# <a name="string-and-character-literals--c"></a>字串和字元常值 (C++)
 
 C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 std::string 常值，不必執行額外的建構或轉換步驟。
 
@@ -112,13 +112,13 @@ int main()
 | 反斜線 | \\\\ |
 | 水平定位字元 | \\t |
 | 問號 | ? 或 \\? |
-| 垂直定位字元 | \\V |
+| 垂直定位字元 | \\v |
 | 單引號 | \\' |
-| 退格鍵 | \\B |
+| 退格鍵 | \\b |
 | 雙引號 | \\" |
-| 歸位字元 | \\R |
+| 歸位字元 | \\r |
 | null 字元 | \\0 |
-| 換頁字元 | \\F |
+| 換頁字元 | \\f |
 | 八進位 | \\ooo |
 | 警示 (鈴聲) | \\a |
 | 十六進位 | \\xhhh |
@@ -254,7 +254,7 @@ auto s4 = U"hello"; // const char32_t*
 
 ### <a name="raw-string-literals-c11"></a>原始字串常值 (C++11)
 
-原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 C++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。
+原始字串常值是 null 結束陣列 — 的任何字元類型，其中包含任何圖形字元，包括雙引號 （"）、 反斜線 (\\)，或新行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章：[Bjarne Stroustrup 的 c++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -328,7 +328,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 
 **Microsoft 專屬**
 
-在 Visual c + + 您可以使用字串常值來初始化非 const 的指標**char**或是**wchar_t**。 C99 程式碼允許這項功能，不過在 C++98 中已被取代，在 C++11 中已移除。 嘗試修改字串造成存取違規，如此範例所示：
+在視覺效果C++您可以使用字串常值來初始化非 const 的指標**char**或是**wchar_t**。 C99 程式碼允許這項功能，不過在 C++98 中已被取代，在 C++11 中已移除。 嘗試修改字串造成存取違規，如此範例所示：
 
 ```cpp
 wchar_t* str = L"hello";

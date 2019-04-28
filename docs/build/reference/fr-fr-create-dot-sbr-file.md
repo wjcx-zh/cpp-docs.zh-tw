@@ -14,11 +14,11 @@ helpviewer_keywords:
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
 ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292792"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (建立 .Sbr 檔案)
 
@@ -51,7 +51,7 @@ ms.locfileid: "58508698"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 在瀏覽窗格中，依序選擇 [C/C++] 及 [瀏覽資訊]  屬性頁面。
 

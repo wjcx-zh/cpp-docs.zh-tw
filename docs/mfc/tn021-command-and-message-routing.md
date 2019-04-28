@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
 ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306177"
 ---
 # <a name="tn021-command-and-message-routing"></a>TN021:命令和訊息路由
 
@@ -22,7 +22,7 @@ ms.locfileid: "57294391"
 
 此提示說明命令路由，並分派架構，以及一般視窗訊息路由中的進階的主題。
 
-請參閱 Visual c + + 如所述，在架構上的一般詳細資料特別區分 Windows 訊息、 控制通知和命令。 這個附註會假設您已非常熟悉進行列印的文件中所述的問題，並只處理非常進階的主題。
+視覺效果，請參閱C++一般的詳細資料所述，在架構上特別區分 Windows 訊息、 控制通知和命令。 這個附註會假設您已非常熟悉進行列印的文件中所述的問題，並只處理非常進階的主題。
 
 ## <a name="command-routing-and-dispatch-mfc-10-functionality-evolves-to-mfc-20-architecture"></a>命令路由，並分派 MFC 1.0 功能進化到 MFC 2.0 架構
 
@@ -38,7 +38,7 @@ MFC 1.0 使用的有限的意義上實作的多個文件介面 (MDI) 的命令�
 
 ## <a name="command-ids"></a>命令 ID
 
-如需命令路由，並繫結程序的說明，請參閱 Visual c + +。 [技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含識別碼命名的相關資訊。
+請參閱 VisualC++如需說明路由與繫結程序的命令。 [技術提示 20](../mfc/tn020-id-naming-and-numbering-conventions.md)包含識別碼命名的相關資訊。
 
 我們可以使用一般的前置詞"ID_"命令識別碼。 命令 Id 是 > = 0x8000。 訊息列或狀態列會顯示命令描述字串是否有 STRINGTABLE 資源具有相同識別碼的命令識別碼。
 
@@ -80,7 +80,7 @@ MFC 1.0 使用的有限的意義上實作的多個文件介面 (MDI) 的命令�
 
 `CFrameWnd` 也會處理 WM_ENTERIDLE 訊息來描述在目前的功能表，選取狀態列的 （也稱為訊息列） 的項目。
 
-Visual c + + 中，編輯的應用程式的功能表結構用來代表潛在 WM_INITMENUPOPUP 次可用的命令。 ON_UPDATE_COMMAND_UI 處理常式可以修改的狀態或文字的功能表，或如 （例如檔案 MRU 清單或 OLE 動詞命令的快顯功能表） 的進階用法，實際修改功能表結構 功能表繪製前。
+編輯視覺效果的應用程式的功能表結構C++，用來代表潛在 WM_INITMENUPOPUP 次可用的命令。 ON_UPDATE_COMMAND_UI 處理常式可以修改的狀態或文字的功能表，或如 （例如檔案 MRU 清單或 OLE 動詞命令的快顯功能表） 的進階用法，實際修改功能表結構 功能表繪製前。
 
 ON_UPDATE_COMMAND_UI 處理同一種為了工具列 （和其他控制項列） 應用程式時進入其閒置迴圈。 請參閱*類別庫參考*並[技術提示 31](../mfc/tn031-control-bars.md)如需有關控制列。
 
@@ -153,7 +153,7 @@ void CMyApp::OnUpdateNewChart(CCmdUI* pCmdUI)
 
 ## <a name="cwnd-issues"></a>CWnd 問題
 
-實作成員函式**On_xxx_reflect**提供一種功能強大且可擴充的架構，用於連結或否則通知的訊息、 命令和控制項的子視窗 （也稱為控制項）請移至其父代 （或 「 擁有者 」） 的通知。 如果子視窗 （/ 控制） 是 c + + **CWnd**物件本身，虛擬函式**OnChildNotify**稱為第一次使用的參數從原始訊息 (也就是**MSG**結構)。 子視窗可以單獨將訊息、 吃下它，或修改父 （罕見） 的訊息。
+實作成員函式**On_xxx_reflect**提供一種功能強大且可擴充的架構，用於連結或否則通知的訊息、 命令和控制項的子視窗 （也稱為控制項）請移至其父代 （或 「 擁有者 」） 的通知。 如果子視窗 （/ 控制） 是C++ **CWnd**物件本身，虛擬函式**OnChildNotify**稱為第一次使用的參數從原始訊息 (也就是**訊息**結構)。 子視窗可以單獨將訊息、 吃下它，或修改父 （罕見） 的訊息。
 
 預設值**CWnd**實作會處理下列訊息，並使用**OnChildNotify**攔截程序，讓子視窗 （控制項） 在訊息的第一次存取：
 

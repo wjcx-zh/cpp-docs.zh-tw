@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], MFC
 ms.assetid: 1f3c476a-9c68-49fe-9a25-d22971a334d0
 ms.openlocfilehash: 9992d2054c04eea1b3b63d591601acf0091acb5e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348558"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC 中的 Windows Sockets
 
@@ -32,7 +32,7 @@ MFC 提供兩種撰寫與 Windows 通訊端，在兩個 MFC 類別的網路通�
 
 - `CAsyncSocket`
 
-   此類別會封裝 Windows Sockets API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)適合程式設計人員知道網路程式設計和想要直接對通訊端 API 進行程式設計的彈性但也想要的回呼函式的方便性，不論網路事件的通知。 以外封裝物件導向的表單，以用於 c + + 中的通訊端，只能將額外的抽象概念，這個類別會提供將某些通訊端相關的 Windows 訊息轉換回撥。 如需詳細資訊，請參閱[Windows Sockets:通訊端通知](../mfc/windows-sockets-socket-notifications.md)。
+   此類別會封裝 Windows Sockets API。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)適合程式設計人員知道網路程式設計和想要直接對通訊端 API 進行程式設計的彈性但也想要的回呼函式的方便性，不論網路事件的通知。 封裝通訊端物件導向的格式，以用於非C++，只能將額外的抽象概念，這個類別會提供將某些通訊端相關的 Windows 訊息轉換回撥。 如需詳細資訊，請參閱[Windows Sockets:通訊端通知](../mfc/windows-sockets-socket-notifications.md)。
 
 - `CSocket`
 
@@ -42,35 +42,35 @@ MFC 提供兩種撰寫與 Windows 通訊端，在兩個 MFC 類別的網路通�
 
 ##  <a name="_core_mfc_socket_samples_and_windows_sockets_dlls"></a> Windows 通訊端 Dll
 
-Microsoft Windows 作業系統提供的 Windows 通訊端動態連結程式庫 (DLL)。 Visual c + + 提供適當的標頭檔和程式庫和 Windows Sockets 規格。
+Microsoft Windows 作業系統提供的 Windows 通訊端動態連結程式庫 (DLL)。 視覺化C++提供適當的標頭檔和程式庫和 Windows Sockets 規格。
 
 如需有關 Windows 通訊端的詳細資訊，請參閱：
 
-- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
-- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Socket：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets:作業順序](../mfc/windows-sockets-sequence-of-operations.md)
+- [Windows Socket：作業序列](../mfc/windows-sockets-sequence-of-operations.md)
 
-- [Windows Sockets:使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Socket：使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Socket：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets:衍生自通訊端類別](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Socket：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets:通訊端告知](../mfc/windows-sockets-socket-notifications.md)
+- [Windows Socket：通訊端通知](../mfc/windows-sockets-socket-notifications.md)
 
-- [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)
+- [Windows Socket：封鎖](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Socket：位元組順序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)
+- [Windows Socket：轉換字串](../mfc/windows-sockets-converting-strings.md)
 
-- [Windows Sockets:連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)
+- [Windows Socket：連接埠和通訊端位址](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
 ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288780"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -55,7 +55,7 @@ intptr_t _cwait(
 等候處理程序的控制代碼 (也就是說，必須先終止程序 **_cwait**可以傳回)。
 
 *action*<br/>
-NULL： 忽略 Windows 作業系統應用程式;對於其他應用程式： 在上執行的動作程式碼*procHandle*。
+NULL：忽略 Windows 作業系統應用程式;對於其他應用程式： 在上執行的動作程式碼*procHandle*。
 
 ## <a name="return-value"></a>傳回值
 

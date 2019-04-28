@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291609"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (指定金鑰容器以簽署組件)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57807841"
 
 如果您使用編譯[/LN](ln-create-msil-module.md)，金鑰檔的名稱會保留在模組中並併入編譯透過包含的模組，明確參考的組件時所建立的組件[#using](../../preprocessor/hash-using-directive-cpp.md)，或當連結[/ASSEMBLYMODULE](assemblymodule-add-a-msil-module-to-the-assembly.md)。
 
-您可以也將加密資訊傳遞給編譯器以[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)要部分簽署組件。 請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)如需有關簽署組件。
+您可以也將加密資訊傳遞給編譯器以[/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md)。 使用[/DELAYSIGN](delaysign-partially-sign-an-assembly.md)要部分簽署組件。 請參閱[強式名稱組件 （組件簽署） (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)如需有關簽署組件。
 
 其他會影響產生組件連結器選項如下：
 
@@ -49,7 +49,7 @@ ms.locfileid: "57807841"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 **連結器**資料夾。
 

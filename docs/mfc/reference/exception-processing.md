@@ -14,17 +14,17 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322211"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 
 當程式執行時，可能會發生異常狀況和稱為 「 例外狀況 」 的錯誤數目。 這些可能包括用盡記憶體、 資源配置錯誤，以及找不到檔案。
 
-Microsoft Foundation 類別庫會使用仿造自密切所提議由 ANSI 標準委員會的 c + + 例外狀況處理配置。 例外狀況處理常式必須設定之前，呼叫函式可能會發生異常狀況。 如果函式發生異常狀況，就會擲回例外狀況，控制權會傳遞給例外狀況處理常式。
+Microsoft Foundation 類別程式庫使用仿造自密切的 ANSI 標準委員會所提議的一個例外狀況處理配置C++。 例外狀況處理常式必須設定之前，呼叫函式可能會發生異常狀況。 如果函式發生異常狀況，就會擲回例外狀況，控制權會傳遞給例外狀況處理常式。
 
 包含 Microsoft Foundation Class Library 的數個巨集將會設定例外狀況處理常式。 如有必要，擲回特定例外狀況和終止程式，幫助其他全域函式的數目。 這些巨集和全域函式可分成下列類別：
 
@@ -135,7 +135,7 @@ CATCH(exception_class, exception_object_pointer_name)
 例外狀況物件指標會由巨集。 您不需要自行進行宣告。
 
 > [!NOTE]
->  **攔截**區塊會定義為 c + + 範圍括號括住分隔。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。 這也適用於*exception_object_pointer_name*。
+>  **攔截**區塊會定義為C++大括號分隔的範圍。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。 這也適用於*exception_object_pointer_name*。
 
 如需有關例外狀況和 CATCH 巨集的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。
 
@@ -161,7 +161,7 @@ CATCH_ALL(exception_object_pointer_name)
 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 叫用 `THROW_LAST` 巨集將處理移位到下個外部例外狀況框架。 如果您使用**CATCH_ALL**，結束**嘗試**END_CATCH_ALL 巨集的區塊。
 
 > [!NOTE]
->  **CATCH_ALL**區塊會定義為 c + + 範圍括號括住分隔。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。
+>  **CATCH_ALL**區塊會定義為C++大括號分隔的範圍。 如果您在這個範圍中宣告變數，變數就只能在該範圍內存取。
 
 如需有關例外狀況的詳細資訊，請參閱文章[例外狀況](../../mfc/exception-handling-in-mfc.md)。
 
@@ -196,7 +196,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫內 THROW_LAST 巨集**AND_CATCH**封鎖轉移至下一個外部例外狀況框架處理。 **AND_CATCH**先前的結束標記**攔截**或是**AND_CATCH**區塊。
 
 > [!NOTE]
->  **AND_CATCH**區塊會定義為 c + + 範圍 （大括號括住分隔）。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。 這也適用於*exception_object_pointer_name*變數。
+>  **AND_CATCH**區塊會定義為C++（大括號括住分隔） 的範圍。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。 這也適用於*exception_object_pointer_name*變數。
 
 ### <a name="example"></a>範例
 
@@ -225,7 +225,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 處理例外狀況的程式碼可以查閱例外狀況物件，如果可行，取得關於例外狀況特定原因的詳細資訊。 呼叫內 THROW_LAST 巨集**AND_CATCH_ALL**封鎖轉移至下一個外部例外狀況框架處理。 **AND_CATCH_ALL**先前的結束標記**攔截**或是**AND_CATCH_ALL**區塊。
 
 > [!NOTE]
->  **AND_CATCH_ALL**區塊會定義為 c + + 範圍 （大括號分隔）。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。
+>  **AND_CATCH_ALL**區塊會定義為C++（大括號分隔） 的範圍。 如果您宣告這個範圍中的變數，請記得它們是只能在該範圍內存取。
 
 ### <a name="requirements"></a>需求
 

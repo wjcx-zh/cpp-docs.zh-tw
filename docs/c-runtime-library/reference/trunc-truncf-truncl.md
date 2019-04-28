@@ -31,11 +31,11 @@ helpviewer_keywords:
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
 ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62268932"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc、truncf、truncl
 
@@ -68,14 +68,14 @@ float trunc( float x ); //C++ only
 |問題|Return|
 |-----------|------------|
 |*x* = ±INFINITY|x|
-|*x* = ±0|x|
+|*x* =  ±0|x|
 |*x* = NaN|NaN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**trunc**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **trunc**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**trunc**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **trunc**一律採用並傳回**double**。
 
 因為浮點數的最大值是確切的整數，這個函式本身不會溢位。 不過，您可能會因為將值傳回到整數類型而造成函式溢位。
 

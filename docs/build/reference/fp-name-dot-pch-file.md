@@ -16,11 +16,11 @@ helpviewer_keywords:
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
 ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270988"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (命名 .Pch 檔案)
 
@@ -34,13 +34,13 @@ ms.locfileid: "57820386"
 
 使用這個選項搭配[/Yc （建立先行編譯標頭檔）](yc-create-precompiled-header-file.md)或是[/Yu （使用先行編譯標頭檔）](yu-use-precompiled-header-file.md)提供先行編譯的標頭，而不是使用預設的路徑名稱的路徑名稱。 您也可以使用 **/Fp**具有 **/Yc**若要指定不同的先行編譯標頭檔使用 **/Yc**<em>filename</em>引數和從原始程式檔的基底名稱。
 
-如果您未指定延伸模組的路徑名稱的一部分，則會假設副檔名為.pch。 如果您指定不含檔案名稱的目錄，預設檔名為 VC*x*0.pch，其中*x*是使用 Visual c + + 的主要版本。
+如果您未指定延伸模組的路徑名稱的一部分，則會假設副檔名為.pch。 如果您指定不含檔案名稱的目錄，預設檔名為 VC*x*0.pch，其中*x*是視覺效果的主要版本C++中使用。
 
 您也可以使用 **/Fp**選項搭配 **/Yu**。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -72,5 +72,5 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

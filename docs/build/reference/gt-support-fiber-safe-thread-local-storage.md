@@ -13,11 +13,11 @@ helpviewer_keywords:
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
 ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291804"
 ---
 # <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (支援 Fiber-Safe 執行緒區域儲存區)
 
@@ -37,7 +37,7 @@ Fiber 是輕量型的物件，包含堆疊和暫存器內容，並可在各種�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -52,4 +52,4 @@ Fiber 是輕量型的物件，包含堆疊和暫存器內容，並可在各種�
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

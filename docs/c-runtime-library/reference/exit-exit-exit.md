@@ -31,11 +31,11 @@ helpviewer_keywords:
 - function calls, terminating
 - process termination, calling
 ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339347"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -67,7 +67,7 @@ void _exit(
 
 **結束**， **_Exit**並 **_exit**函式會終止呼叫處理序。 **結束**函式會呼叫解構函式的執行緒區域物件，然後呼叫 — 後進先出 (LIFO) 順序，會註冊的函式**atexit**和 **_onexit**，並終止處理程序前，然後排清所有檔案緩衝區。 **_Exit**並 **_exit**函式會終止處理程序，而不會終結執行緒區域物件或處理**atexit**或 **_onexit**函式，並不會排清資料流緩衝區。
 
-雖然**結束**， **_Exit**並 **_exit**呼叫不會傳回一個值，在值*狀態*開放給主機環境或者，如果有的話，程序結束之後等待呼叫處理序。 一般而言，呼叫端組*狀態*值 0，表示正常結束，或一些其他值，以表示發生錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**和兩個常數之一代表： **EXIT_SUCCESS**，代表值為 0，或**EXIT_FAILURE**，用來表示的值為 1。
+雖然**結束**， **_Exit**並 **_exit**呼叫不會傳回一個值，在值*狀態*開放給主機環境或者，如果有的話，程序結束之後等待呼叫處理序。 一般而言，呼叫端組*狀態*值 0，表示正常結束，或一些其他值，以表示發生錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**和兩個常數之一代表：**EXIT_SUCCESS**，表示值為 0，或**EXIT_FAILURE**，用來表示的值為 1。
 
 **結束**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，以及 **_c_exit**函式的行為，如下所示。
 

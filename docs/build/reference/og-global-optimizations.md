@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
 ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320288"
 ---
 # <a name="og-global-optimizations"></a>/Og (全域最佳化)
 
@@ -80,7 +80,7 @@ ms.locfileid: "57818527"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -94,4 +94,4 @@ ms.locfileid: "57818527"
 
 ## <a name="see-also"></a>另請參閱
 
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

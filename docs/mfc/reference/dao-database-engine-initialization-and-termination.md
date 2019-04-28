@@ -8,16 +8,15 @@ helpviewer_keywords:
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
 ms.openlocfilehash: 8ad0c1df2f5b6a7b1b48d2db119b04e4b3234f10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323212"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO 資料庫引擎初始化及終止
 
-使用 MFC DAO 物件時，必須在應用程式或 DLL 退出前先初始化然後終止 DAO 資料庫引擎。 
-  `AfxDaoInit` 和 `AfxDaoTerm` 這兩個函式會執行這些工作。
+使用 MFC DAO 物件時，必須在應用程式或 DLL 退出前先初始化然後終止 DAO 資料庫引擎。 `AfxDaoInit` 和 `AfxDaoTerm` 這兩個函式會執行這些工作。
 
 ### <a name="dao-database-engine-initialization-and-termination"></a>DAO 資料庫引擎初始化及終止
 

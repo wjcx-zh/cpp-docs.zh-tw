@@ -11,11 +11,11 @@ helpviewer_keywords:
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
 ms.openlocfilehash: eebb1bc0c553dba1934aea75e2e63edc0f222fff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292401"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (命名對應檔)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57815393"
 
 ## <a name="remarks"></a>備註
 
-根據預設，對應檔會指定與對應的 C 或 c + + 原始程式檔的基底名稱。副檔名對應。
+根據預設，對應檔名稱會指定基底的相對應的 C 或C++具有原始程式檔。副檔名對應。
 
 指定 **/Fm**有相同的效果，您必須指定[/MAP （產生對應檔）](map-generate-mapfile.md)連結器選項。
 
@@ -39,7 +39,7 @@ ms.locfileid: "57815393"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -55,5 +55,5 @@ ms.locfileid: "57815393"
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

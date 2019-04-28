@@ -7,15 +7,15 @@ helpviewer_keywords:
 - activation [MFC], flicker-free
 ms.assetid: bcb24b77-31d8-44a0-8c58-2ea6213b4c43
 ms.openlocfilehash: fad24d6201260e87ff32436752a9fbf035e822ae
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297043"
 ---
 # <a name="providing-flicker-free-activation"></a>提供避免重繪閃動
 
-如果您的控制項繪製本身相同的非作用中和作用中狀態 （並不會使用無視窗啟用），您可以避免繪製作業和之間非作用中的轉換時通常都會發生的視覺重繪與作用中狀態。 若要這樣做，請包含**noFlickerActivate**旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如: 
+如果您的控制項繪製本身相同的非作用中和作用中狀態 （並不會使用無視窗啟用），您可以避免繪製作業和之間非作用中的轉換時通常都會發生的視覺重繪與作用中狀態。 若要這樣做，請包含**noFlickerActivate**旗標所傳回的集合中的旗標[Clippaintdc](../mfc/reference/colecontrol-class.md#getcontrolflags)。 例如：
 
 [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/providing-flicker-free-activation_1.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#13](../mfc/codesnippet/cpp/providing-flicker-free-activation_2.cpp)]

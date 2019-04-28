@@ -18,11 +18,11 @@ helpviewer_keywords:
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
 ms.openlocfilehash: fb59b861bc46c93a3f5fa1b6c6b8d1b73ddefc66
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320242"
 ---
 # <a name="opt-optimizations"></a>/OPT (最佳化)
 
@@ -81,7 +81,7 @@ ms.locfileid: "57818293"
 
 ### <a name="to-set-the-opticf-or-optref-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 OPT:ICF 或 OPT:REF 連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **組態屬性** > **連結器** > **最佳化**屬性頁。
 
@@ -93,7 +93,7 @@ ms.locfileid: "57818293"
 
 ### <a name="to-set-the-optlbr-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 OPT:LBR 連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 

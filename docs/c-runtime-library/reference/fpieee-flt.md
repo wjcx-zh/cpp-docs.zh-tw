@@ -26,11 +26,11 @@ helpviewer_keywords:
 - fpieee_flt function
 ms.assetid: 2bc4801e-0eed-4e73-b518-215da8cc9740
 ms.openlocfilehash: 9a49ec403b1cb95407b0a366accf1d9374d9cb22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333244"
 ---
 # <a name="fpieeeflt"></a>_fpieee_flt
 
@@ -54,7 +54,7 @@ int _fpieee_flt(
 *excInfo*<br/>
 Windows NT 例外狀況資訊結構的指標。
 
-*處理常式*<br/>
+*handler*<br/>
 使用者之 IEEE 設陷處理常式的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -70,7 +70,7 @@ Windows NT 例外狀況資訊結構的指標。
 |_FPIEEE_RECORD 欄位|描述|
 |----------------------------|-----------------|
 |**RoundingMode**<br/>**整數位數**|這些**不帶正負號** **int**欄位包含的相關資訊的浮點環境時，發生例外狀況。|
-|**作業**|這**不帶正負號** **int**欄位表示已導致陷阱的作業類型。 如果類型是比較 (**_FpCodeCompare**)，您可以提供其中一個特殊 **_FPIEEE_COMPARE_RESULT**中的值 （如 Fpieee.h 中所定義） **Result.Value**欄位。 轉換類型 (**_FpCodeConvert**) 表示設陷發生在浮點轉換作業期間。 您可以看看**Operand1**並**結果**類型，以判斷正在嘗試之轉換的類型。|
+|**Operation**|這**不帶正負號** **int**欄位表示已導致陷阱的作業類型。 如果類型是比較 (**_FpCodeCompare**)，您可以提供其中一個特殊 **_FPIEEE_COMPARE_RESULT**中的值 （如 Fpieee.h 中所定義） **Result.Value**欄位。 轉換類型 (**_FpCodeConvert**) 表示設陷發生在浮點轉換作業期間。 您可以看看**Operand1**並**結果**類型，以判斷正在嘗試之轉換的類型。|
 |**Operand1**<br/>**Operand2**<br/>**結果**|這些 **_FPIEEE_VALUE**結構表示的型別和建議的結果和運算元的值。 每個結構會包含下列欄位：<br /><br /> **OperandValid** -旗標，指出回應的值是否有效。<br />**格式**-之對應值的資料類型。 即使對應的值無效，還是可能會傳回格式類型。<br />**值**-結果或運算元資料值。|
 |**原因**<br/>**Enable**<br/>**Status**|**_FPIEEE_EXCEPTION_FLAGS**包含一個位元欄位，每個類型的浮點例外狀況。 這些欄位與用來遮罩提供給 [_controlfp](control87-controlfp-control87-2.md) 之例外狀況的引數之間具有對應關係。 每個位元的確切意義取決於內容︰<br /><br /> **原因**-每個設定的位元都表示所引發的特定例外狀況。<br />**啟用**-每個設定的位元都表示特定的例外狀況目前取消遮罩。<br />**狀態**-每個設定的位元都表示特定的例外狀況目前暫止。 這包括已因為進行遮罩所未引發的例外狀況 **_controlfp**。|
 

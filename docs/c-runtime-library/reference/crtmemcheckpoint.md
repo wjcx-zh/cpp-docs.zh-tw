@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
 ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339867"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -65,7 +65,7 @@ void _CrtMemCheckpoint(
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：** 僅限 UCRT 的偵錯版本。
+**程式庫：** 偵錯的僅限 UCRT 的版本。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: TN038:-OLE IUnknown 實作
+title: TN038:MFC OLE IUnknown 實作
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -19,18 +19,18 @@ helpviewer_keywords:
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
 ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305472"
 ---
-# <a name="tn038-mfcole-iunknown-implementation"></a>TN038：MFC/OLE IUnknown 實作
+# <a name="tn038-mfcole-iunknown-implementation"></a>TN038:MFC/OLE IUnknown 實作
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-OLE 2 的核心是「OLE 元件物件模型」或 COM。 COM 會定義合作物件如何彼此通訊的標準。 這包括「物件」外觀的詳細資料，包括如何在物件上分派方法。 COM 也會定義所有 COM 相容類別從其中衍生的基底類別。 此基底類別[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 雖然[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面指 c + + 類別、 COM 並非專屬於任何一種語言，它可以在 C、 PASCAL 或任何其他可支援的 COM 物件的二進位檔配置的語言實作。
+OLE 2 的核心是「OLE 元件物件模型」或 COM。 COM 會定義合作物件如何彼此通訊的標準。 這包括「物件」外觀的詳細資料，包括如何在物件上分派方法。 COM 也會定義所有 COM 相容類別從其中衍生的基底類別。 此基底類別[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。 雖然[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面稱為C++類別，COM 並非專屬於任何一種語言，它可以在 C、 PASCAL 或任何其他可支援的 COM 物件的二進位檔配置的語言實作。
 
 OLE 會將所有衍生自類別[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)為 「 介面 」。 這是重要的區別，因為 「 介面 」 這類[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)不夾帶任何實作。 它只會定義物件通訊所用的通訊協定，而不定義實作所執行的具體內容。 這對允許最大彈性的系統而言是合理的。 MFC 的工作是實作 MFC/C++ 程式的預設行為。
 
@@ -49,7 +49,7 @@ public:
 > [!NOTE]
 > 某些必要的呼叫慣例詳細資料，例如此圖中省略了 `__stdcall`。
 
-[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成員函式會控制物件的記憶體管理。 COM 使用參考計數配置來追蹤物件。 您永遠不會如同在 C++ 中一般地參考物件。 相反地，一定會透過指標來參考 COM 物件。 若要釋放物件擁有者完成時使用它，該物件的[釋放](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成員稱為 （而不是使用運算子 delete，如同傳統的 c + + 物件）。 參考計數機制可讓單一物件的多個參考接受管理。 實作[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[版本](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)維護參考計數物件上的，直到其參考計數到達零時，不會刪除物件。
+[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)成員函式會控制物件的記憶體管理。 COM 使用參考計數配置來追蹤物件。 您永遠不會如同在 C++ 中一般地參考物件。 相反地，一定會透過指標來參考 COM 物件。 若要釋放物件擁有者完成時使用它，該物件的[放開](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)稱為成員 (而不是使用運算子 delete，如同傳統的C++物件)。 參考計數機制可讓單一物件的多個參考接受管理。 實作[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[版本](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)維護參考計數物件上的，直到其參考計數到達零時，不會刪除物件。
 
 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)並[發行](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)從實作觀點來看相當直接明瞭。 以下是一般實作：
 
@@ -367,7 +367,7 @@ CEditPrintObj::CPrintObj 的實作會類似上述 CEditPrintObj::CEditObj 的定
 
 除了支援獨立的 COM 物件，MFC 也支援彙總。 彙總本身是太複雜的主題討論;請參閱[彙總](/windows/desktop/com/aggregation)如需有關彙總的主題。 這個註解只描述對內建於架構和介面對應中的彙總支援。
 
-有兩種方式來使用彙總：(1) 使用支援彙總的 COM 物件，以及 (2) 實作可由另一個物件彙總的物件。 這些功能可以稱為「使用彙總物件」和「使物件彙總」。 MFC 兩者皆可支援。
+有兩種方式可使用彙總：（1） 使用的 COM 物件，支援彙總，以及 （2） 實作可彙總，另一個物件。 這些功能可以稱為「使用彙總物件」和「使物件彙總」。 MFC 兩者皆可支援。
 
 ### <a name="using-an-aggregate-object"></a>使用彙總物件
 
@@ -381,7 +381,7 @@ CEditPrintObj::CPrintObj 的實作會類似上述 CEditPrintObj::CEditObj 的定
 
 3. 在某個時間點 (通常是在 `CCmdTarget::OnCreateAggregates` 期間)，將成員變數初始化為 NULL 以外的成員變數。
 
-例如: 
+例如：
 
 ```cpp
 class CAggrExample : public CCmdTarget

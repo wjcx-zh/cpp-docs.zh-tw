@@ -8,17 +8,17 @@ helpviewer_keywords:
 - window objects [MFC], MFC Framework
 ms.assetid: dd92bf34-842e-40fe-8aea-3028b55314d5
 ms.openlocfilehash: ee5e6fef58b9ddfa2172b9024d414bdb03e93283
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337995"
 ---
 # <a name="windows"></a>Windows
 
 此系列文章說明在 MFC 架構中的視窗物件。 所有的 MFC 視窗是衍生自類別[CWnd](../mfc/reference/cwnd-class.md)，包括框架視窗、 檢視、 對話方塊和控制項。
 
-第一群說明[window 物件](../mfc/window-objects.md)一般。 此群組，如需 c + + 視窗物件，一般資訊，請參閱如何封裝`HWND`，以及您如何使用它們建立您自己的視窗，例如子視窗時。
+第一群說明[window 物件](../mfc/window-objects.md)一般。 有關這個群組的一般資訊請參閱C++視窗物件如何封裝`HWND`，以及您如何使用它們建立您自己的視窗，例如子視窗時。
 
 第二個群說明[框架視窗](../mfc/frame-windows.md)— 放置內容周圍框架的 windows — 尤其。 請參閱此群組，如需有關 MFC 架構如何管理框架視窗與它們框架時，包括控制列和檢視表的內容資訊。
 
@@ -28,7 +28,7 @@ ms.locfileid: "57326656"
 
 - [視窗物件](../mfc/window-objects.md)
 
-- [C + + 之間的關聯性視窗物件和 HWND 處理](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [之間的關聯性C++視窗物件和 HWND 處理](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
 - [在衍生的視窗類別](../mfc/derived-window-classes.md)
 

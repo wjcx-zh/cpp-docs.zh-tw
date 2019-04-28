@@ -9,15 +9,15 @@ helpviewer_keywords:
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
 ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294261"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
-cl.exe 是控制的 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器和連結器工具。 cl.exe 可以只在支援 Microsoft Visual Studio 的 Windows 作業系統上執行。
+cl.exe 是控制 Microsoft 視覺效果的工具C++(MSVC) C 和C++編譯器和連結器。 cl.exe 可以只在支援 Microsoft Visual Studio 的 Windows 作業系統上執行。
 
 > [!NOTE]
 > 您可以啟動此工具只能從 Visual Studio 開發人員命令提示字元。 您無法從系統命令提示字元，或從 [檔案總管] 啟動它。 如需詳細資訊，請參閱 <<c0> [ 使用 MSVC 工具組，從命令列](../building-on-the-command-line.md)。
@@ -40,7 +40,7 @@ cl.exe 是控制的 Microsoft Visual c + + (MSVC) C 和 c + + 編譯器和連結
 
 每個編譯器選項的主題討論如何在開發環境中設定。 開發環境外部指定選項的資訊，請參閱：
 
-- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+- [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)
 
 - [CL 命令檔](cl-command-files.md)
 

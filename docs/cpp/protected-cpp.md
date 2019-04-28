@@ -8,11 +8,11 @@ helpviewer_keywords:
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
 ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244524"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -46,7 +46,7 @@ protected base-class
 
 ## <a name="clr-specific"></a>/clr 專屬資訊
 
-在 CLR 類型中，c + + 存取指定名稱關鍵字 (**公用**，**私人**，和**保護**) 可能會影響型別和方法在組件方面的可見性。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制](member-access-control-cpp.md)。
+在 CLR 類型中，C++存取指定名稱關鍵字 (**公用**，**私用**，和**保護**) 可能會影響型別和方法在組件方面的可見性。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制](member-access-control-cpp.md)。
 
 > [!NOTE]
 >  使用檔案編譯[/LN](../build/reference/ln-create-msil-module.md)不會受到這個行為。 在這種情況下，所有 Managed 類別 (public 或 private) 都會是可見。

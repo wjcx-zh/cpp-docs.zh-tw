@@ -37,11 +37,11 @@ helpviewer_keywords:
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
 ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341986"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -75,9 +75,9 @@ float abs( float n );   // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**abs**採用並傳回**長**，**長****長**， **浮點數**， **double**，和**long** **double**值。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
+因為C++允許多載，您可以呼叫多載**abs**採用並傳回**長**，**長****長**， **浮點數**， **double**，和**長** **double**值。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
 
-**Microsoft 專有**： 因為可以使用任何整數類資料類型表示的負整數範圍大於可使用該類型表示的正整數範圍，就可以提供這些引數無法轉換的函式。 如果引數的絕對值無法傳回的型別，表示**abs**函式會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函式無法用來保證正值。
+**Microsoft 專有**:因為可使用任何整數型別表示的負整數範圍，大於可使用該型別表示的正整數範圍，所以無法提供引數給這些無法轉換的函式。 如果引數的絕對值無法傳回的型別，表示**abs**函式會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函式無法用來保證正值。
 
 ## <a name="requirements"></a>需求
 
@@ -86,7 +86,7 @@ float abs( float n );   // C++ only
 |**abs**，**實驗室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的多載的版**abs**在 c + +，您必須包含\<cmath> > 標頭。
+若要使用的多載的版**abs**在C++，您必須包含\<cmath> > 標頭。
 
 ## <a name="example"></a>範例
 

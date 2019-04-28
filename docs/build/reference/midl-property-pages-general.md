@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
 ms.openlocfilehash: 2ce9e9a713a3d62bf64e5eb4e596c38148eef81e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321146"
 ---
 # <a name="midl-property-pages-general"></a>MIDL 屬性頁：一般
 
@@ -46,7 +46,7 @@ ms.locfileid: "57824696"
 
 - 產生 Stubless Proxy ([/Oicf](https://msdn.microsoft.com/library/windows/desktop/aa367352))
 
-如需如何存取**一般**中的屬性頁**MIDL**資料夾，請參閱[Visual Studio 中的設定 c + + 編譯器及建置屬性](../working-with-project-properties.md)。
+如需有關如何存取資訊**一般**中的屬性頁**MIDL**資料夾，請參閱[設定C++Visual Studio 中的編譯器及建置屬性](../working-with-project-properties.md)。
 
 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool> 物件。
 

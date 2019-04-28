@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2000 到 C2099
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2000 至 C2099
+ms.date: 04/21/2019
 f1_keywords:
 - C2000
 - C2016
@@ -36,14 +36,14 @@ helpviewer_keywords:
 - C2096
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
-ms.openlocfilehash: aff0faff5d8e58b46aa6280eb8f259dbd64acee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360485"
 ---
-# <a name="compiler-errors-c2000-through-c2099"></a>編譯器錯誤 C2000 到 C2099
+# <a name="compiler-errors-c2000-through-c2099"></a>編譯器錯誤 C2000 至 C2099
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -53,7 +53,7 @@ ms.locfileid: "50548144"
 
 |錯誤|訊息|
 |-----------|-------------|
-|編譯器錯誤 C2000|未知錯誤，請選擇 Visual c + + [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔，如需詳細資訊|
+|編譯器錯誤 C2000|不明錯誤請選擇 視覺效果上的 技術支援 命令C++說明 功能表，或開啟技術支援說明檔，如需詳細資訊|
 |[編譯器錯誤 C2001](compiler-error-c2001.md)|常數中的新行|
 |[編譯器錯誤 C2002](compiler-error-c2002.md)|無效的寬字元常數|
 |[編譯器錯誤 C2003](compiler-error-c2003.md)|預期的 ' 定義的 id'|
@@ -65,7 +65,7 @@ ms.locfileid: "50548144"
 |[編譯器錯誤 C2009](compiler-error-c2009.md)|重複使用的型式的巨集 '*識別碼*'|
 |[編譯器錯誤 C2010](compiler-error-c2010.md)|'*字元*': 未預期在巨集型式參數清單|
 |[編譯器錯誤 C2011](compiler-error-c2011.md)|'*識別碼*':'*型別*' 類型重複定義|
-|[編譯器錯誤 C2012](compiler-error-c2012.md)|'<' 之後遺漏名稱|
+|[編譯器錯誤 C2012](compiler-error-c2012.md)|之後遺漏名稱 ' <'|
 |[編譯器錯誤 C2013](compiler-error-c2013.md)|遺漏 '>'|
 |[編譯器錯誤 C2014](compiler-error-c2014.md)|前置處理器命令必須以第一個有非空白的啟動|
 |[編譯器錯誤 C2015](compiler-error-c2015.md)|常數中有太多字元|
@@ -76,7 +76,7 @@ ms.locfileid: "50548144"
 |[編譯器錯誤 C2020](compiler-error-c2020.md)|'*成員*':'*類別*' 成員重複定義|
 |[編譯器錯誤 C2021](compiler-error-c2021.md)|必須是指數值，而沒有 '*字元*'|
 |[編譯器錯誤 C2022](compiler-error-c2022.md)|'*數字*': 對於字元而言太大|
-|編譯器錯誤 C2023|'*識別碼*': 對齊方式 (*number1*) 不同於先前的宣告 (*number2*)|
+|編譯器錯誤 C2023|'*識別碼*':對齊方式 (*number1*) 不同於先前的宣告 (*number2*)|
 |編譯器錯誤 C2024|'alignas' 屬性會套用至變數、 資料成員及標記類型|
 |編譯器錯誤 C2025|無效或損毀二進位模組介面檔案: '*filename*'|
 |[編譯器錯誤 C2026](compiler-error-c2026.md)|字串太大，尾端字元已經截斷|
@@ -149,7 +149,12 @@ ms.locfileid: "50548144"
 |[編譯器錯誤 C2093](compiler-error-c2093.md)|'*identifier1*': 不可以使用 自動變數的位址初始化'*identifier2*'|
 |[編譯器錯誤 C2094](compiler-error-c2094.md)|標籤 '*識別碼*' 未定義|
 |[編譯器錯誤 C2095](compiler-error-c2095.md)|'*函式*': 實質參數具有類型 'void': 參數*數目*|
-|編譯器錯誤 C2096|'*識別碼*': 無法使用括號括住的初始設定式初始化資料成員|
+|編譯器錯誤 C2096|'*識別碼*':無法使用括號括住的初始設定式初始化資料成員|
 |[編譯器錯誤 C2097](compiler-error-c2097.md)|不合法的初始化|
 |編譯器錯誤 C2098|預期的語彙基元之後的資料成員 '*識別碼*'|
 |[編譯器錯誤 C2099](compiler-error-c2099.md)|初始設定式不是常數|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

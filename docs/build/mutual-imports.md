@@ -15,11 +15,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
 ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295665"
 ---
 # <a name="mutual-imports"></a>交互匯入
 
@@ -83,7 +83,7 @@ class CLASS_DECL_B CExampleB : public CExampleA
 
 當您不匯出整個類別時，您必須確定建立的 MFC 巨集的必要資料項目都正確匯出。 這可以藉由重新定義`AFX_DATA`特定類別的巨集。 這應該不會匯出整個類別的任何時間。
 
-例如: 
+例如：
 
 ```
 /* A.H */
@@ -117,11 +117,11 @@ class CExampleA : public CObject
 
 - [匯出和匯入使用 AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [匯出 c + + 函式，以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [匯出C++函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
 - [判斷要使用哪一個匯出方法](determining-which-exporting-method-to-use.md)
 
-- [將應用程式使用 __declspec （dllimport） 匯入](importing-into-an-application-using-declspec-dllimport.md)
+- [使用 __declspec(dllimport) 匯入至應用程式](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 

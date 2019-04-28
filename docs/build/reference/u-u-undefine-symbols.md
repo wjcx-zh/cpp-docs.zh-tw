@@ -14,11 +14,11 @@ helpviewer_keywords:
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
 ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316999"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (取消定義符號)
 
@@ -57,7 +57,7 @@ ms.locfileid: "57822480"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -72,7 +72,7 @@ ms.locfileid: "57822480"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [/J (預設 char 類型為 unsigned)](j-default-char-type-is-unsigned.md)<br/>
 [/GR (啟用執行階段類型資訊)](gr-enable-run-time-type-information.md)<br/>
 [/EH (例外狀況處理模型)](eh-exception-handling-model.md)<br/>

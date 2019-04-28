@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 ms.assetid: 3a73ace0-4d36-420a-b699-0ca6fc0dd134
 ms.openlocfilehash: dc381058c6a2ef84542be1d3cdd00c410aa51c2f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315478"
 ---
 # <a name="zcsizeddealloc-enable-global-sized-deallocation-functions"></a>/Zc: sizeddealloc （啟用全域調整大小解除配置函式）
 
@@ -32,7 +32,7 @@ C + + 11 標準，您可以定義靜態成員函式`operator delete`並`operator
 
 C + + 14 標準變更編譯器的行為。 當您定義全域`operator delete`並`operator delete[]`會採用第二個類型參數的`size_t`，編譯器不會叫用成員範圍版本和物件的大小是可用時，呼叫這些函式會優先。 編譯器會隱含地傳遞大小引數。 當編譯器無法判斷已解除配置物件的大小，會呼叫單一引數版本。 否則，請選擇解除配置函式，來叫用的版本一般的規則仍適用。 全域函式的呼叫可能會明確地指定前面加上範圍解析運算子 (`::`) 的解除配置函式呼叫。
 
-根據預設，開始在 Visual Studio 2015 的 Visual c + + 會實作此 C + + 14 標準行為。 您可以藉由設定，明確指定這 **/zc: sizeddealloc**編譯器選項。 這表示可能最新變更。 使用  **/zc: sizeddealloc-** 選項，可保留的舊行為，例如，當您的程式碼會定義使用類型的第二個參數的位置 delete 運算子`size_t`。 具有類型的第二個參數的全域解除配置函式的預設 Visual Studio 程式庫實作`size_t`叫用的單一參數的版本。 如果您的程式碼提供只有單一參數全域 delete 運算子和 delete 運算子 []，全域大小的解除配置函式的預設程式庫實作叫用您的全域函式。
+根據預設，視覺效果C++開始在 Visual Studio 2015 中實作此 C + + 14 標準行為。 您可以藉由設定，明確指定這 **/zc: sizeddealloc**編譯器選項。 這表示可能最新變更。 使用  **/zc: sizeddealloc-** 選項，可保留的舊行為，例如，當您的程式碼會定義使用類型的第二個參數的位置 delete 運算子`size_t`。 具有類型的第二個參數的全域解除配置函式的預設 Visual Studio 程式庫實作`size_t`叫用的單一參數的版本。 如果您的程式碼提供只有單一參數全域 delete 運算子和 delete 運算子 []，全域大小的解除配置函式的預設程式庫實作叫用您的全域函式。
 
 **/Zc: sizeddealloc**編譯器選項預設為開啟。 [/Permissive--](permissive-standards-conformance.md)選項並不會影響 **/zc: sizeddealloc**。
 
@@ -40,16 +40,16 @@ C + + 14 標準變更編譯器的行為。 當您定義全域`operator delete`�
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 從**組態**下拉式功能表中，選擇**所有組態**。
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 修改**其他選項**屬性，以包括 **/zc: sizeddealloc**或是 **/zc: sizeddealloc-** ，然後選擇 **確定**。
 
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [/Zc (一致性)](zc-conformance.md)<br/>

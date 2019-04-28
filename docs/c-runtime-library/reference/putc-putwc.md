@@ -30,11 +30,11 @@ helpviewer_keywords:
 - puttc function
 ms.assetid: a37b2e82-9d88-4565-8190-ff8d04c0ddb9
 ms.openlocfilehash: de87ca4996540737dad319fc920f4c76415250b9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62284863"
 ---
 # <a name="putc-putwc"></a>putc、putwc
 
@@ -58,7 +58,7 @@ wint_t putwc(
 *C*<br/>
 待寫入字元。
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -117,7 +117,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 This is the line of output

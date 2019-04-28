@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -DELAYSIGN linker option
 ms.assetid: 15244d30-3ecb-492f-a408-ffe81f38de20
 ms.openlocfilehash: 65585b856627ad9fda5a8f8bfad6ad81fef0f81c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293832"
 ---
 # <a name="delaysign-partially-sign-an-assembly"></a>/DELAYSIGN (部分簽署組件)
 
@@ -37,7 +37,7 @@ ms.locfileid: "57807646"
 
 例如，使用 **/DELAYSIGN**可讓測試人員將組件放在全域快取中。 測試之後，您可以將私密金鑰放在組件中，完整簽署組件。
 
-請參閱[強式名稱組件 （組件簽署） (C + + /cli CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)並[Delay Signing an Assembly](/dotnet/framework/app-domains/delay-sign-assembly)如需有關簽署組件。
+請參閱[強式名稱組件 （組件簽署） (C++/CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)並[Delay Signing an Assembly](/dotnet/framework/app-domains/delay-sign-assembly)如需有關簽署組件。
 
 其他會影響產生組件連結器選項如下：
 
@@ -53,7 +53,7 @@ ms.locfileid: "57807646"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 **連結器**資料夾。
 

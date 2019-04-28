@@ -8,11 +8,11 @@ helpviewer_keywords:
 - NMAKE program
 ms.assetid: 24fab6e3-7e43-4da4-957a-88afbbcf8661
 ms.openlocfilehash: 47836973680fba311fe70cb1a24bb1483ba99a4b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320483"
 ---
 # <a name="nmake-reference"></a>NMAKE 參考
 
@@ -40,8 +40,8 @@ Microsoft Program Maintenance Utility (NMAKE。EXE) 是隨附於 Visual Studio �
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 MSVC 工具組，從命令列](../building-on-the-command-line.md)<br/>
+[從命令列使用 MSVC 工具組](../building-on-the-command-line.md)<br/>
 [其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio 專案 - C++](../creating-and-managing-visual-cpp-projects.md)<br/>
 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 [C/C++ 建置參考](c-cpp-building-reference.md)

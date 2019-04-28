@@ -5,11 +5,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294157"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -159,7 +159,7 @@ ms.locfileid: "57816330"
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
-|[/JMC](jmc.md)|支援原生 c + + Just My Code 偵錯。|
+|[/JMC](jmc.md)|支援原生C++Just My Code 偵錯。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。|
 |[/MP](mp-build-with-multiple-processes.md)|同時建置多重原始程式檔。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|隱藏登入程式的啟始資訊。|
@@ -168,7 +168,7 @@ ms.locfileid: "57816330"
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 原始程式檔。|
 |[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是 c。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 原始程式檔。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔的 c + +。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是C++。|
 |[/V](v-version-number.md)|已取代。 設定版本字串。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定輸出警告層級。|
@@ -193,7 +193,7 @@ ms.locfileid: "57816330"
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|驗證只有相容字元的 utf-8 檔案。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制診斷訊息的格式。|
 |[/permissive-](permissive-standards-conformance.md)|設定標準一致性模式。|
-|[/std](std-specify-language-standard-version.md)|C + + 標準的版本相容性的選取器。|
+|[/std](std-specify-language-standard-version.md)|C++標準版本相容性的選取器。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>已取代及移除的編譯器選項
 
@@ -219,4 +219,4 @@ ms.locfileid: "57816330"
 
 [C/C++ 建置參考](c-cpp-building-reference.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>

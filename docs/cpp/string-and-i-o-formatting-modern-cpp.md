@@ -1,18 +1,18 @@
 ---
-title: 字串和 I-o 格式化 （現代 c + +）
+title: 字串和 I-o 格式化 (現代C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
 ms.openlocfilehash: c051a7d70042456d30bee0ebb2b362c5d05b8e37
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266916"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 
-C + + [iostreams](../standard-library/iostream.md)會進行格式化的字串 I/O。 例如，下列程式碼示範如何設定 cout 將整數輸出以十六進位方式，先儲存目前狀態和重新設定，之後，因為一旦狀態格式傳遞至 cout，它會保持這種方式，直到變更為止，不只是針對同一行格式化程式碼。
+C++[iostreams](../standard-library/iostream.md)會進行格式化的字串 I/O。 例如，下列程式碼示範如何設定 cout 將整數輸出以十六進位方式，先儲存目前狀態和重新設定，之後，因為一旦狀態格式傳遞至 cout，它會保持這種方式，直到變更為止，不只是針對同一行格式化程式碼。
 
 ```cpp
 #include <iostream>
@@ -38,7 +38,7 @@ int main()
 }
 ```
 
-這可以完全是很麻煩，因為在許多情況下。 或者，您可以從 Boost c + + 程式庫中，使用 Boost.Format，即使它是非標準。 您可以下載任何 Boost 程式庫，從[Boost](http://www.boost.org/)網站。
+這可以完全是很麻煩，因為在許多情況下。 或者，您可以使用 Boost.Format，參閱 Boost 提供的C++程式庫，即使它是非標準。 您可以下載任何 Boost 程式庫，從[Boost](http://www.boost.org/)網站。
 
 Boost.Format 的一些優點包括：
 
@@ -48,7 +48,7 @@ Boost.Format 的一些優點包括：
 
 - 方便：標準 Posix 和類似的格式字串。
 
-雖然 Boost.Format 建置在 c + + [iostreams](../standard-library/iostream-programming.md)，它們是安全且可延伸，並非效能最佳化。 當您需要效能最佳化時，請考慮使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)並[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是快速且容易使用。 不過，不是可延伸或安全性弱點。 （安全版本存在，但它們會造成些微的效能損失。 如需詳細資訊，請參閱 < [printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)並[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
+雖然 Boost.Format 建置在C++ [iostreams](../standard-library/iostream-programming.md)，它們是安全且可延伸，並非效能最佳化。 當您需要效能最佳化時，請考慮使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)並[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是快速且容易使用。 不過，不是可延伸或安全性弱點。 （安全版本存在，但它們會造成些微的效能損失。 如需詳細資訊，請參閱 < [printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)並[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
 
 下列程式碼會示範部分提升格式化功能。
 

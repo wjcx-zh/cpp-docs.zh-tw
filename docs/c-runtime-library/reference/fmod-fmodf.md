@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
 ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333348"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf、 fmodl
 
@@ -78,7 +78,7 @@ long double fmodl(
 
 **Fmod**函式會計算浮點餘數*f*的*x* / *y*使得*x* = *我* \* *y* + *f*，其中*我*是一個整數， *f*有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
 
-C + + 允許多載，因此您可以呼叫多載**fmod**採用並傳回**float**並**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
+C++允許多載，因此您可以呼叫多載**fmod**採用並傳回**float**並**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

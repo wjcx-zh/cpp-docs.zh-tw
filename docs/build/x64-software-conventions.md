@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313828"
 ---
 # <a name="x64-software-conventions"></a>x64 軟體慣例
 
-本節說明 c + + 呼叫慣例方法適用於 x64、 x86 64 位元延伸模組架構。
+本章節描述C++呼叫慣例方法適用於 x64、 x86 64 位元延伸模組架構。
 
 ## <a name="overview-of-x64-calling-conventions"></a>X64 呼叫慣例的概觀
 
@@ -193,7 +193,7 @@ X64 架構提供 16 一般用途的暫存器 （以下稱為整數暫存器）�
 
 ||||
 |-|-|-|
-|登錄|狀態|用法|
+|登錄|狀態|使用|
 |RAX|動態|傳回值暫存器|
 |RCX|動態|第一個整數引數|
 |RDX|動態|第二個整數引數|
@@ -206,12 +206,12 @@ X64 架構提供 16 一般用途的暫存器 （以下稱為整數暫存器）�
 |RBX|靜態|必須由被呼叫者保留|
 |RBP|靜態|必須用作框架指標；必須由被呼叫者保留|
 |RSP|靜態|堆疊指標|
-|XMM0, YMM0|動態|第一個 FP 引數；使用 `__vectorcall` 時的第一個向量類型引數|
+|XMM0, YMM0|動態|第一個 FP 引數；使用 `__vectorcall` 時的第一個向量型別引數|
 |XMM1, YMM1|動態|第二個 FP 引數；使用 `__vectorcall` 時的第二個向量類型引數|
 |XMM2, YMM2|動態|第三個 FP 引數；使用 `__vectorcall` 時的第三個向量類型引數|
 |XMM3, YMM3|動態|第四個 FP 引數；使用 `__vectorcall` 時的第四個向量類型引數|
-|XMM4, YMM4|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第五個向量類型引數|
-|XMM5, YMM5|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第六個向量類型引數|
+|XMM4, YMM4|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第五個向量型別引數|
+|XMM5, YMM5|動態|必須由呼叫者視需要保留；使用 `__vectorcall` 時的第六個向量型別引數|
 |XMM6:XMM15, YMM6:YMM15|靜態 (XMM)、動態 (YMM 的上半部分)|必須由被呼叫端保留。 YMM 暫存器必須由被呼叫者視需要保留。|
 
 函式結束和 C 執行階段程式庫呼叫和 Windows 系統呼叫的函式項目，方向旗標在 CPU 上旗標暫存器必須清除。
@@ -226,11 +226,11 @@ X64 架構提供 16 一般用途的暫存器 （以下稱為整數暫存器）�
 
 ## <a name="x64-exception-handling"></a>x64 例外狀況處理
 
-如需慣例和資料結構，用來實作結構化例外狀況處理和 c + + 例外狀況處理在 x64 上的行為，請參閱[x64 例外狀況處理](exception-handling-x64.md)。
+如需用來實作結構化例外狀況處理的慣例及資料結構和C++例外狀況處理行為，在 x64 上，請參閱[x64 例外狀況處理](exception-handling-x64.md)。
 
 ## <a name="intrinsics-and-inline-assembly"></a>內建函式和內嵌組件
 
-其中一個條件約束，適用於 x64 編譯器會為沒有內嵌組譯工具支援。 函式，這表示無法寫入 C 或 c + + 中是必須可寫入為副程式或編譯器所支援的內建函式。 某些函式是效能敏感，而有些則不。 重視效能的函式應該實作為內建函式。
+其中一個條件約束，適用於 x64 編譯器會為沒有內嵌組譯工具支援。 函式，這表示不能以 C 撰寫或C++將必須寫入為副程式或編譯器所支援的內建函式。 某些函式是效能敏感，而有些則不。 重視效能的函式應該實作為內建函式。
 
 編譯器所支援的內建函式中所述[編譯器內建](../intrinsics/compiler-intrinsics.md)。
 

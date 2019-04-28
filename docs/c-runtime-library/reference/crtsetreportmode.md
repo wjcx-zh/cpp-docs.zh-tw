@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335291"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ int _CrtSetReportMode(
 |**_CRTDBG_MODE_DEBUG**|將訊息寫入至偵錯工具的輸出視窗。|
 |**_CRTDBG_MODE_FILE**|將訊息寫入至使用者提供的檔案控制代碼。 應呼叫 [_CrtSetReportFile](crtsetreportfile.md)，以定義特定檔案或資料流作為目的地使用。|
 |**_CRTDBG_MODE_WNDW**|建立訊息方塊，顯示的訊息，連同[中止](abort.md)，**重試一次**，並**忽略**按鈕。|
-|**_CRTDBG_REPORT_MODE**|傳回*reportMode*指定*reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|傳回*reportMode*指定*reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 每個報表類型可使用一個、兩個或三個模式進行報告，或完全不使用任何模式。 因此，您可以為單一報表類型定義多個目的地。 例如，下列程式碼片段會導致要傳送至這兩個偵錯訊息視窗和判斷提示失敗**stderr**:
 
@@ -102,7 +102,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：** 僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫：** 偵錯版本[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)只。
 
 ## <a name="see-also"></a>另請參閱
 

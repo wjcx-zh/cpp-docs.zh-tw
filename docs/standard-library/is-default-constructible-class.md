@@ -7,11 +7,11 @@ helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
 ms.openlocfilehash: 7fc1c70a1244688888174b834fe653d5d6d2497b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336662"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible 類別
 

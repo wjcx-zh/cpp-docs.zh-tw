@@ -7,11 +7,11 @@ helpviewer_keywords:
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
 ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293897"
 ---
 # <a name="decorated-names"></a>裝飾名稱
 
@@ -27,7 +27,7 @@ C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示�
 
 在連結至以其他程式設計語言撰寫的程式碼或使用其他編譯器時，名稱裝飾也很重要。 不同編譯器會使用不同的名稱裝飾慣例。 當您的執行檔連結至以另一種語言撰寫的程式碼時，必須特別注意符合匯出和匯入的名稱和呼叫慣例。 組件語言程式碼必須使用 Visual C++ 裝飾名稱和呼叫慣例，才能連結至使用 Visual C++ 撰寫的原始程式碼。
 
-##  <a name="Format"></a> 裝飾名稱的 c + + 格式。
+##  <a name="Format"></a> 格式化的C++裝飾名稱
 
 C++ 函式的裝飾名稱包含下列資訊：
 

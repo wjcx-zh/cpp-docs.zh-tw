@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW4004
 ms.assetid: 596b6a89-9ce7-4ba7-bdcb-e8054c7efafa
 ms.openlocfilehash: bafd1084a665fc656fe184064a48e5fffc61c957
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346076"
 ---
 # <a name="resource-compiler-warning-rw4004"></a>資源編譯器警告 RW4004
 

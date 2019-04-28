@@ -28,11 +28,11 @@ helpviewer_keywords:
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
 ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341284"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -62,12 +62,12 @@ long double atanh( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|**Matherr**例外狀況|
 |-----------|-------------------|-------------------------|
-|± QNAN、IND|無|無|
-|*X* ≥ 1;*x* ≤-1|無|無|
+|± QNAN,IND|none|none|
+|*X* ≥ 1; *x* ≤ -1|none|none|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**atanh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **atanh**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**atanh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **atanh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

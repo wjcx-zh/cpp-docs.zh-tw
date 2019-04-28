@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Fe compiler option [C++]
 ms.assetid: 49f594fd-5e94-45fe-a1bf-7c9f2abb6437
 ms.openlocfilehash: 5901ef1997cfea84c97b6d91b30335ff7dbc1d9f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292611"
 ---
 # <a name="fe-name-exe-file"></a>/Fe (命名 EXE 檔案)
 
@@ -40,7 +40,7 @@ ms.locfileid: "57818046"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 開啟**組態屬性** > **連結器** > **一般**屬性頁。
 
@@ -70,5 +70,5 @@ CL /FeC:\BIN\ *.C
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)<br/>

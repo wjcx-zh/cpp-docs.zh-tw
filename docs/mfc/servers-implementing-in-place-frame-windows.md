@@ -9,15 +9,15 @@ helpviewer_keywords:
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
 ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307948"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架 Windows
 
-本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文中所述的程序，您可以使用現有的就地框架視窗類別，從應用程式精靈產生應用程式或 Visual c + + 提供的範例。
+本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文中所述的程序，您可以使用現有的就地框架視窗類別，從應用程式精靈產生應用程式或提供具有視覺效果的範例C++。
 
 #### <a name="to-declare-an-in-place-frame-window-class"></a>宣告就地框架視窗類別
 
@@ -33,7 +33,7 @@ ms.locfileid: "57278986"
 
 1. 如果您有工具列，請在框架視窗類別中宣告 `CToolBar` 成員。
 
-   當伺服器作用中時，請覆寫 `OnCreateControlBars` 成員函式來建立工具列。 例如: 
+   當伺服器作用中時，請覆寫 `OnCreateControlBars` 成員函式來建立工具列。 例如：
 
    [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 

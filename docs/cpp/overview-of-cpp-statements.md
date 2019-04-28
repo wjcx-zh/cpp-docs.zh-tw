@@ -5,11 +5,11 @@ helpviewer_keywords:
 - statements [C++]
 ms.assetid: e56996b2-b846-4b99-ac94-ac72fffc5ec7
 ms.openlocfilehash: 9493860087331ee2d8ff05a5c0bd59c7a46ad51a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325555"
 ---
 # <a name="overview-of-c-statements"></a>C++ 陳述式概觀
 
@@ -28,7 +28,7 @@ declaration-statement
 try-throw-catch
 ```
 
-在大部分情況下，c + + 陳述式的語法完全相同的 ANSI C這兩個主要差異在於 C 中，允許宣告只能在區塊的開頭，;C + + 新增*宣告陳述式*，以有效地移除這項限制。 這可讓您在程式中可以計算預先計算過的初始化數值時引入變數。
+在大部分情況下，C++陳述式的語法完全相同的 ANSI c。這兩個主要差異在於 C 中，允許宣告只能在區塊的開頭，;C++新增*宣告陳述式*，以有效地移除這項限制。 這可讓您在程式中可以計算預先計算過的初始化數值時引入變數。
 
 在區塊內部宣告變數也可讓您精確地控制這些變數的範圍和存留期。
 

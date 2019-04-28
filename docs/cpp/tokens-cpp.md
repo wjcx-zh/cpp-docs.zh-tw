@@ -1,5 +1,5 @@
 ---
-title: 語彙基元 （c + +）
+title: 語彙基元 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
 ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330436"
 ---
-# <a name="tokens-c"></a>語彙基元 （c + +）
+# <a name="tokens-c"></a>語彙基元 (C++)
 
 語彙基元是 C++ 程式中對編譯器有意義的最小項目。 C++ 剖析器可辨識下列語彙基元類型：識別項、關鍵字、常值、運算子、標點符號和任何其他分隔符號。 這些語彙基元資料流組成轉譯單位。
 

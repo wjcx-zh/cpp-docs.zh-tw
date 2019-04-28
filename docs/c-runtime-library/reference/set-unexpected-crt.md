@@ -23,11 +23,11 @@ helpviewer_keywords:
 - exception handling, termination
 ms.assetid: ebcef032-4771-48e5-88aa-2a1ab8750aa6
 ms.openlocfilehash: 6c38421e447ca7b3f263148f51f0ade5c59e2804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356383"
 ---
 # <a name="setunexpected-crt"></a>set_unexpected (CRT)
 
@@ -50,7 +50,7 @@ unexpected_function set_unexpected( unexpected_function unexpFunction );
 
 ## <a name="remarks"></a>備註
 
-**Set_unexpected**函式會安裝*unexpFunction*所呼叫的函式**意外**。 **未預期**不會在目前的 c + + 例外狀況處理實作。 **Unexpected_function** EH 中定義型別。為使用者定義的未預期函式，指標 H *unexpFunction*會傳回**void**。 您的自訂*unexpFunction*函式不應該傳回至其呼叫端。
+**Set_unexpected**函式會安裝*unexpFunction*所呼叫的函式**意外**。 **未預期**中目前未使用C++例外狀況處理實作。 **Unexpected_function** EH 中定義型別。為使用者定義的未預期函式，指標 H *unexpFunction*會傳回**void**。 您的自訂*unexpFunction*函式不應該傳回至其呼叫端。
 
 ```cpp
 typedef void ( *unexpected_function )( );
@@ -62,7 +62,7 @@ typedef void ( *unexpected_function )( );
 
 在多執行緒環境中，會分別維護每個執行緒的未預期函式。 每個新執行緒都需要安裝它自己的未預期函式。 因此，每個執行緒都會負責它自己的未預期處理。
 
-在目前的 Microsoft 實作的 c + + 例外狀況處理，**意外**呼叫**終止**依預設，絕不會呼叫例外狀況處理執行階段程式庫。 沒有任何特定的優勢，於呼叫**意外**而非**終止**。
+在目前的 Microsoft 實作的C++例外狀況處理**意外**呼叫**終止**預設和絕不會呼叫例外狀況處理執行階段程式庫。 沒有任何特定的優勢，於呼叫**意外**而非**終止**。
 
 沒有單一**set_unexpected**處理常式的所有動態連結的 Dll 或 Exe; 即使您呼叫**set_unexpected**可能由另一個取代您的處理常式，或您要取代所設定的處理常式另一個 DLL 或 EXE。
 

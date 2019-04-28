@@ -5,15 +5,15 @@ helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
 ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317116"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
-[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中的預設專案系統；當您在 Visual C++ 中選擇 [檔案] > [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 可能的話您應該使用 Visual Studio 屬性頁來修改專案設定 (請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
+[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中的預設專案系統；當您在 Visual C++ 中選擇 [檔案] > [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 可能的話您應該使用 Visual Studio 屬性頁來修改專案設定 (請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
 
 **重要：**
 
@@ -47,7 +47,7 @@ ms.locfileid: "57826100"
 
 您可以使用任何文字或 XML 編輯器來檢查 .vcxproj 檔案的內容。 若要在 Visual Studio 中檢視，請以滑鼠右鍵按一下 [方案總管] 中的專案，然後依序選擇 [卸載專案] 和 [編輯 Foo.vcxproj]。
 
-首先需要注意的是，最上層項目會依特定順序顯示。 例如: 
+首先需要注意的是，最上層項目會依特定順序顯示。 例如：
 
 - 大多數屬性群組和和項目定義群組會在匯入 Microsoft.Cpp.Default.props 之後出現。
 
@@ -292,5 +292,5 @@ Visual Studio IDE 的專案檔必須如上所述排序。 例如，當您定義�
 
 ## <a name="see-also"></a>另請參閱
 
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)<br/>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)<br/>
 [屬性頁面 XML 檔案](property-page-xml-files.md)

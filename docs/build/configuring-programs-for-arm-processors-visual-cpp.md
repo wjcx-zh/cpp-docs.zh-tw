@@ -1,15 +1,15 @@
 ---
-title: 將 c + + 專案，適用於 ARM 處理器設定
+title: 設定C++適用於 ARM 處理器的專案
 ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 ms.openlocfilehash: 7e6e0c97245c0941abc49096d1693a8d152c1709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273824"
 ---
-# <a name="configure-c-projects-for-arm-processors"></a>將 c + + 專案，適用於 ARM 處理器設定
+# <a name="configure-c-projects-for-arm-processors"></a>設定C++適用於 ARM 處理器的專案
 
 文件的本節包含有關如何針對 ARM 硬體使用 MSVC 建置工具的資訊。
 
@@ -21,7 +21,7 @@ ms.locfileid: "57812469"
 [ARM64 ABI 慣例概觀](arm64-windows-abi-conventions.md)<br/>
 描述 Windows 上 ARM64 用於暫存器使用方式，呼叫慣例和例外狀況處理的應用程式二進位介面。
 
-[常見的 MSVC ARM 移轉問題](common-visual-cpp-arm-migration-issues.md)<br/>
+[常見 MSVC ARM 移轉問題](common-visual-cpp-arm-migration-issues.md)<br/>
 描述通常假定可跨架構移植的 C++ 程式碼項目，但其會針對 ARM 與 x86 和 x64 產生不同的結果。
 
 [ARM 例外狀況處理](arm-exception-handling.md)<br/>

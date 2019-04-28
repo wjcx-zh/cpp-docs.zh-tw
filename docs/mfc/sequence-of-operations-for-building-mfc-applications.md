@@ -5,11 +5,11 @@ helpviewer_keywords:
 - applications [MFC], developing
 ms.assetid: 6973c714-fe20-48c6-926b-de88356b3a3d
 ms.openlocfilehash: e3c165a0bf495da4e6cda05c7e109b338b0a364f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308442"
 ---
 # <a name="sequence-of-operations-for-building-mfc-applications"></a>建置 MFC 應用程式的作業順序
 
@@ -21,7 +21,7 @@ ms.locfileid: "57278674"
 |----------|------------|------------------------|
 |建立基本架構應用程式。|執行[MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)。 在選項頁面中指定所需選項。 這些選項包括將應用程式建立為 COM 元件、容器 (或兩者)，加入 Automation，以及使應用程式支援資料庫。|[MFC 應用程式精靈] 會建立基本架構應用程式的檔案，包括應用程式的原始程式檔、文件、檢視和框架視窗、資源檔、專案檔，以及其他所有符合您規格的項目。|
 |查看架構和 MFC 應用程式精靈提供的項目，而不需在您的程式碼中新增任何程式碼。|在 Visual C++ 中建置並執行基本架構應用程式。|執行基本架構的應用程式衍生許多標準**檔案**，**編輯**，**檢視**，以及**協助**從 framework 的功能表命令。 對於 MDI 應用程式，您也會取得完整的 Windows 功能表，而架構會管理 MDI 子視窗的建立、排列和解構等動作。|
-|建構應用程式的使用者介面。|使用 Visual c + +[資源編輯器](../windows/resource-editors.md)以視覺化方式編輯應用程式的使用者介面：<br /><br /> -建立功能表。<br />-定義快速鍵。<br />-建立對話方塊。<br />-建立及編輯點陣圖、 圖示和游標。<br />-編輯為您建立 MFC 應用程式精靈 的工具列。<br />-建立和編輯其他資源。<br /><br /> 您也可以在對話方塊編輯器中測試對話方塊。|MFC 應用程式精靈建立的預設資源檔提供您所需的許多資源。 Visual C++ 可讓您透過輕鬆且視覺化的方式編輯現有的資源並加入新的資源。|
+|建構應用程式的使用者介面。|使用視覺效果C++[資源編輯器](../windows/resource-editors.md)以視覺化方式編輯應用程式的使用者介面：<br /><br /> -建立功能表。<br />-定義快速鍵。<br />-建立對話方塊。<br />-建立及編輯點陣圖、 圖示和游標。<br />-編輯為您建立 MFC 應用程式精靈 的工具列。<br />-建立和編輯其他資源。<br /><br /> 您也可以在對話方塊編輯器中測試對話方塊。|MFC 應用程式精靈建立的預設資源檔提供您所需的許多資源。 Visual C++ 可讓您透過輕鬆且視覺化的方式編輯現有的資源並加入新的資源。|
 |對應功能表與處理函式。|使用**事件**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window)來連接到您的程式碼中的處理常式函式的功能表和快速鍵。|[屬性] 視窗會插入訊息對應項目和空函示範本到您指定的原始程式檔中，並管理許多手動編碼的工作。|
 |撰寫處理常式程式碼。|使用 [類別檢視] 直接跳至原始程式碼編輯器中的程式碼。 填入處理函式的程式碼。 如需使用類別檢視，以及精靈加入至專案的程式碼的相關詳細資訊，請參閱[使用程式碼精靈加入功能](../ide/adding-functionality-with-code-wizards-cpp.md)。|[類別檢視] 會開啟編輯器、捲動至空函式範本和並為您放置游標的位置。|
 |對應工具列按鈕與命令。|藉由為按鈕指派適當的命令 ID，將工具列上的每個按鈕對應至功能表或快速鍵命令。|架構會控制繪製、啟用、停用、檢查和工具列按鈕的其他視覺外觀。|

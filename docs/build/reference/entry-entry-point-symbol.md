@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
 ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293208"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (進入點符號)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57807854"
 
 /ENTRY 選項會指定進入點函式做為.exe 檔或 DLL 的開始位址。
 
-此函式必須定義為使用`__stdcall`呼叫慣例。 參數和傳回值取決於如果程式是主控台應用程式、 windows 應用程式或 DLL。 建議您讓設定進入點，使 C 執行階段程式庫正確地初始化，而且針對靜態物件的 c + + 建構函式會執行連結器。
+此函式必須定義為使用`__stdcall`呼叫慣例。 參數和傳回值取決於如果程式是主控台應用程式、 windows 應用程式或 DLL。 建議您讓連結器設定的進入點，以便正確地初始化 C 執行階段程式庫和C++針對靜態物件的建構函式會執行。
 
 根據預設，開始的位址會是 C 執行階段程式庫函式的名稱。 連結器會選取它的屬性的程式，根據下表所示。
 
@@ -48,11 +48,11 @@ ms.locfileid: "57807854"
 
 /ENTRY 到指定的函式時建立的受控映像，必須具有的簽章 (LPVOID *var1*，DWORD *var2*，LPVOID *var3*)。
 
-如需如何定義您自己`DllMain`進入點，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../run-time-library-behavior.md)。
+如需如何定義您自己`DllMain`進入點，請參閱 < [Dll 和視覺效果C++執行階段程式庫行為](../run-time-library-behavior.md)。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 **連結器**資料夾。
 

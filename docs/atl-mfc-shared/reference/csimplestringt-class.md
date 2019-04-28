@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252630"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -121,7 +121,7 @@ class CSimpleStringT
 
 ### <a name="remarks"></a>備註
 
-`CSimpleStringT` 是 Visual c + + 所支援的各種字串類別的基底類別。 它會提供記憶體管理的字串物件，以及基本的緩衝區操作的最小的支援。 對於更進階的字串物件，請參閱[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)。
+`CSimpleStringT` 支援的視覺效果的各種字串類別的基底類別C++。 它會提供記憶體管理的字串物件，以及基本的緩衝區操作的最小的支援。 對於更進階的字串物件，請參閱[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="requirements"></a>需求
 

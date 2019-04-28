@@ -20,11 +20,11 @@ helpviewer_keywords:
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
 ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306140"
 ---
 # <a name="tn006-message-maps"></a>TN006:訊息對應
 
@@ -38,7 +38,7 @@ Microsoft Windows 會使用訊息內的設施的視窗類別中實作虛擬函�
 
 ## <a name="overview"></a>總覽
 
-MFC 提供傳統 Windows 程式中使用來處理訊息傳送至視窗的 switch 陳述式的替代方案。 可以定義將訊息對應至方法，以便當視窗收到一則訊息時，會自動呼叫適當的方法。 此訊息對應功能設計類似於虛擬函式，但還有其他好處，具有 c + + 虛擬函式不可能。
+MFC 提供傳統 Windows 程式中使用來處理訊息傳送至視窗的 switch 陳述式的替代方案。 可以定義將訊息對應至方法，以便當視窗收到一則訊息時，會自動呼叫適當的方法。 此訊息對應功能設計類似於虛擬函式，但還有其他好處無法以C++虛擬函式。
 
 ## <a name="defining-a-message-map"></a>定義訊息對應
 
@@ -117,7 +117,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 使用此方法的使用者定義訊息的範圍必須是到 0x7fff WM_USER 範圍內。
 
 > [!NOTE]
-> ClassWizard 不支援從 ClassWizard 使用者介面的輸入 ON_MESSAGE 處理常式。 您必須手動輸入它們從 Visual c + + 編輯器。 ClassWizard 會剖析這些項目，並可讓您瀏覽它們就像任何其他訊息對應項目。
+> ClassWizard 不支援從 ClassWizard 使用者介面的輸入 ON_MESSAGE 處理常式。 您必須從視覺效果，以手動方式輸入它們C++編輯器。 ClassWizard 會剖析這些項目，並可讓您瀏覽它們就像任何其他訊息對應項目。
 
 ## <a name="registered-windows-messages"></a>已註冊的 Windows 訊息
 
@@ -170,7 +170,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
 
 這些表單的範例：
 
-- 深入探討 Resource.h （通常是由 Visual c + + 所產生）
+- Resource.h 內 (通常是產生視覺效果C++)
 
     ```cpp
     #define    ID_MYCMD      100

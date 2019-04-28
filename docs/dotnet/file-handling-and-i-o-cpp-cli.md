@@ -1,5 +1,5 @@
 ---
-title: 檔案處理和 I-o (C + + /cli CLI)
+title: 檔案處理和 I-o (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324996"
 ---
 # <a name="file-handling-and-io-ccli"></a>檔案處理和 I/O (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 下列程式碼範例示範如何從檔案讀取二進位資料，藉由使用中的兩個類別<xref:System.IO?displayProperty=fullName>命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryReader>。 <xref:System.IO.FileStream> 代表實際的檔案。 <xref:System.IO.BinaryReader> 提供可進行二進位存取的資料流介面。
 
-在程式碼範例會讀取名為 data.bin 且包含二進位格式整數的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入二進位檔案 (C + + /cli CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
+在程式碼範例會讀取名為 data.bin 且包含二進位格式整數的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入二進位檔案 (C++/CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md)。
 
 ### <a name="example"></a>範例
 
@@ -177,7 +177,7 @@ int main()
 
 下列程式碼範例示範如何開啟並讀取一次的文字檔案的一行，使用<xref:System.IO.StreamReader>中所定義的類別<xref:System.IO?displayProperty=fullName>命名空間。 此類別的執行個體用來開啟文字檔案，然後<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName>方法用來擷取每一行。
 
-此程式碼範例會讀取名為 textfile.txt 且包含文字的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入文字檔 (C + + /cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
+此程式碼範例會讀取名為 textfile.txt 且包含文字的檔案。 如需這類檔案的詳細資訊，請參閱[How to:寫入文字檔 (C++/CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)。
 
 ### <a name="example"></a>範例
 
@@ -261,7 +261,7 @@ int main()
 
 下列程式碼範例示範如何將二進位資料寫入檔案。 兩個類別<xref:System.IO>會使用命名空間：<xref:System.IO.FileStream>和<xref:System.IO.BinaryWriter>。 <xref:System.IO.FileStream> 表示實際的檔案，而<xref:System.IO.BinaryWriter>提供介面來進行二進位存取的資料流。
 
-下列程式碼範例會寫入檔案，包含以二進位格式的整數。 可以讀取此檔案中的程式碼[How to:讀取二進位檔案 (C + + /cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
+下列程式碼範例會寫入檔案，包含以二進位格式的整數。 可以讀取此檔案中的程式碼[How to:讀取二進位檔案 (C++/CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)。
 
 ### <a name="example"></a>範例
 

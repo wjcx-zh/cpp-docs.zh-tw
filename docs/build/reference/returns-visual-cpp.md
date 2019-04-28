@@ -1,5 +1,5 @@
 ---
-title: '&lt;傳回 > （c + + 文件註解）'
+title: '&lt;傳回 > (C++文件註解)'
 ms.date: 11/04/2016
 f1_keywords:
 - returns
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <returns> C++ XML tag
 ms.assetid: 5e3b0ed9-838d-4953-a93e-76d2d0a19fb9
 ms.openlocfilehash: 72a6ad05f3a78919b652f518d11814c3f95c5fd0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318676"
 ---
 # <a name="ltreturnsgt"></a>&lt;returns&gt;
 

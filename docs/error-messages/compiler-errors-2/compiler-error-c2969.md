@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2969
 ms.assetid: e4ea3d66-b937-4b2c-b42a-96e03fb11579
 ms.openlocfilehash: 1330babe92266a6bc410084b4a46ef75f83f0b7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62256798"
 ---
 # <a name="compiler-error-c2969"></a>編譯器錯誤 C2969
 

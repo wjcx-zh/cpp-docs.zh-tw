@@ -39,11 +39,11 @@ helpviewer_keywords:
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
 ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341713"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
@@ -82,7 +82,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|無|**（_D)**|
+|常见**QNAN**， **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
@@ -90,7 +90,7 @@ long double atan2( long double y, long double x );  // C++ only
 
 **atan**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為 c + + 允許多載，您可以呼叫多載**atan**並**atan2**採用**float**或**長** **double**引數。 在 C 程式中， **atan**並**atan2**蝯篔**double**引數和傳回**double**。
+因為C++允許多載，您可以呼叫多載**atan**並**atan2**採用**float**或**長** **double**引數。 在 C 程式中， **atan**並**atan2**蝯篔**double**引數和傳回**double**。
 
 ## <a name="requirements"></a>需求
 

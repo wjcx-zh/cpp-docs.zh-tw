@@ -10,19 +10,19 @@ helpviewer_keywords:
 - mappings [MFC], Windows handles to objects
 ms.assetid: fbea9f38-992c-4091-8dbc-f29e288617d6
 ms.openlocfilehash: e7844398ebaf5a8fdf8c56ab18b33d8c7717d1ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306365"
 ---
 # <a name="tn003-mapping-of-windows-handles-to-objects"></a>TN003:將 Windows 控制代碼對應到物件
 
-本提示描述 MFC 支援對應 Windows 的常式物件的 c + + 物件的控制代碼。
+本提示描述 MFC 常式，它支援對應 Windows 物件控制代碼C++物件。
 
 ## <a name="the-problem"></a>問題
 
-Windows 物件都通常由各種[處理](/windows/desktop/WinProg/windows-data-types)物件的 MFC 類別包裝 Windows 與 c + + 物件的物件控制代碼。 包裝函式的 MFC 類別程式庫的控制代碼可讓您尋找具有特定的控制代碼的 Windows 物件包裝的 c + + 物件。 不過，有時候物件沒有 c + + 包裝函式物件，並在這些時間，系統會建立暫存的物件，以做為 c + + 包裝函式。
+Windows 物件都通常由各種[處理](/windows/desktop/WinProg/windows-data-types)物件的 MFC 類別包裝 Windows 物件控制代碼並且C++物件。 包裝函式的 MFC 類別程式庫的控制代碼可讓您找出C++包裝 Windows 物件具有特定的控制代碼的物件。 不過，有時候物件沒有C++包裝函式物件，並在這些時間，系統會建立暫存的物件，以做為C++包裝函式。
 
 Windows 物件的處理常式對應如下所示：
 
@@ -54,7 +54,7 @@ Windows 物件的處理常式對應如下所示：
 CWnd::FromHandle(hWnd)
 ```
 
-如果*hWnd*沒有特定的包裝函式物件，暫時`CWnd`用來包裝*hWnd*。 這讓您能夠從任何控制代碼取得有效的 c + + 物件。
+如果*hWnd*沒有特定的包裝函式物件，暫時`CWnd`用來包裝*hWnd*。 這讓您能夠取得有效C++從任何控制代碼的物件。
 
 包裝函式物件之後，您可以從包裝函式類別的公用成員變數來擷取其控制代碼。 若是`CWnd`， *m_hWnd*包含該物件的 HWND。
 
@@ -79,9 +79,9 @@ myWnd.Detach();
 
 ## <a name="wrapper-objects-and-multiple-threads"></a>包裝函式物件和多個執行緒
 
-暫時性和永久性的物件會維護每個執行緒為基礎。 也就是說，一個執行緒無法存取另一個執行緒的 c + + 包裝函式物件，無論是暫時性或永久性。
+暫時性和永久性的物件會維護每個執行緒為基礎。 也就是說，一個執行緒無法存取另一個執行緒的C++包裝函式物件，無論是暫時性或永久性。
 
-若要從一個執行緒的這些物件傳遞到另一個中，永遠將它們傳送為其原生`HANDLE`型別。 從一個執行緒的 c + + 包裝函式物件傳遞到另一個通常會導致非預期的結果。
+若要從一個執行緒的這些物件傳遞到另一個中，永遠將它們傳送為其原生`HANDLE`型別。 傳遞C++從一個執行緒的包裝函式物件與另一個通常會導致非預期的結果。
 
 ## <a name="see-also"></a>另請參閱
 

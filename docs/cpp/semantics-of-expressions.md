@@ -8,15 +8,15 @@ helpviewer_keywords:
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
 ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331200"
 ---
 # <a name="semantics-of-expressions"></a>運算式的語意
 
-運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示關聯性的 c + + 運算子加諸於運算式。)
+運算式會根據其運算子的優先順序和群組進行評估。 ([Operator Precedence and Associativity](../cpp/cpp-built-in-operators-precedence-and-associativity.md)中[語彙慣例](../cpp/lexical-conventions.md)，顯示的關係C++運算子加諸於運算式。)
 
 ## <a name="order-of-evaluation"></a>評估的順序
 
@@ -52,7 +52,7 @@ int main()
 
 1. 下一個最高優先順序的項目是加法 (+)，因此會將 `a` 與 `b` 和 `c` 的乘積相加。
 
-1. 左移 (<<) 在運算式中的優先順序最低，但它出現在兩個地方。 由於左移運算子是由左至右來分組，因此會先評估左方的子運算式，再評估右邊的子運算式。
+1. 左的移 (<<) 在運算式中，具有最低的優先順序，但有兩個項目。 由於左移運算子是由左至右來分組，因此會先評估左方的子運算式，再評估右邊的子運算式。
 
 在子運算式的群組中使用括號時，會改變優先順序以及運算式的評估順序，如下圖所示。
 
@@ -69,10 +69,10 @@ int main()
 
 |預期的類型|允許的類型|
 |-------------------|-------------------|
-|*type*|`const` *型別*<br /> `volatile` *型別*<br /> *type*&<br /> `const` *型別*&<br /> `volatile` *型別*&<br /> `volatile const` *型別*<br /> `volatile const` *型別*&|
-|*型別* \*|*型別* \*<br /> `const` *型別* \*<br /> `volatile` *型別* \*<br /> `volatile const` *型別* \*|
-|`const` *型別*|*type*<br /> `const` *型別*<br />`const` *型別*&|
-|`volatile` *型別*|*type*<br /> `volatile` *型別*<br /> `volatile` *型別*&|
+|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
+|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
+|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
+|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 
 由於上述規則一律可以搭配使用，因此可以在預期出現指標的位置提供 volatile 物件的 const 指標。
 
@@ -94,7 +94,7 @@ C++ 語言不保證函式呼叫引數的評估順序。 因此，在前述範例
 
 C++ 語言定義目前未指定序列點。 針對包含 C 運算子及未包含多載運算子的任何運算式，Microsoft C++ 使用與 ANSI C 相同的序列點。 當運算子經過多載時，其語意會從運算子序列變更為函式呼叫序列。 Microsoft C++ 使用下列序列點：
 
-- 邏輯 AND 運算子 (&&) 的左運算元。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 AND 運算子的右運算元。
+- 左運算元的邏輯 AND 運算子 (& &)。 繼續之前會完整評估邏輯 AND 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 AND 運算子的右運算元。
 
 - 左運算元的邏輯 OR 運算子 (&#124;&#124;)。 繼續之前會完整評估邏輯 OR 運算子的左運算元，並且完成所有副作用。 不保證會評估邏輯 OR 運算子的右運算元。
 

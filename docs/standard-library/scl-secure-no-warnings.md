@@ -9,15 +9,15 @@ helpviewer_keywords:
 - _SCL_SECURE_NO_WARNINGS
 ms.assetid: ef0ddea9-7c62-4b53-8b64-5f4fd369776f
 ms.openlocfilehash: 77c60aed511fc3dbbea2d74e83e36dae735dcb0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348304"
 ---
 # <a name="sclsecurenowarnings"></a>_SCL_SECURE_NO_WARNINGS
 
-C + + 標準程式庫中呼叫任何可能不安全的方法會導致[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要停用這個警告，請定義巨集 _SCL_SECURE_NO_WARNINGS 程式碼中：
+呼叫任何可能不安全的方法，在C++標準程式庫會導致[編譯器警告 （層級 3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 若要停用這個警告，請定義巨集 _SCL_SECURE_NO_WARNINGS 程式碼中：
 
 ```cpp
 #define _SCL_SECURE_NO_WARNINGS
@@ -35,7 +35,7 @@ C + + 標準程式庫中呼叫任何可能不安全的方法會導致[編譯器�
 
 - 使用 [/w](../build/reference/compiler-option-warning-level.md) 編譯器選項：
 
-   > cl /wd4996 [其他編譯器選項] myfile.cpp
+   > cl /wd4996 [other compiler options] myfile.cpp
 
 - 使用 [#pragma warning](../preprocessor/warning.md) 指示詞：
 
@@ -45,7 +45,7 @@ C + + 標準程式庫中呼叫任何可能不安全的方法會導致[編譯器�
 
 此外，您可以使用 **/w\<l>\<n>** 編譯器選項，手動變更 C4996 警告的層級。 例如，若要將 C4996 警告設為層級 4：
 
-> cl /w44996 [其他編譯器選項] myfile.cpp
+> cl /w44996 [other compiler options] myfile.cpp
 
 如需詳細資訊，請參閱 [/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、/we、/wo、/Wv、/WX (警告層級)](../build/reference/compiler-option-warning-level.md)。
 

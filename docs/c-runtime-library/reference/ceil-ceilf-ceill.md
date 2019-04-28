@@ -30,11 +30,11 @@ helpviewer_keywords:
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
 ms.openlocfilehash: b128f20593d41fff3c4c50f6d68f8643798c5b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335434"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil、ceilf、ceill
 
@@ -71,13 +71,13 @@ long double ceill(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|無|**（_D)**|
+|常见**QNAN**， **IND**|none|**_DOMAIN**|
 
 **ceil**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**ceil**採用**float**或是**長** **double**類型。 在 C 程式中， **ceil**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**ceil**採用**float**或**長** **double**類型。 在 C 程式中， **ceil**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

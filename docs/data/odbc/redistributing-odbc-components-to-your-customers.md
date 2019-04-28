@@ -10,11 +10,11 @@ helpviewer_keywords:
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
 ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330072"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>轉散發 ODBC 元件給您的客戶
 
@@ -26,11 +26,11 @@ ms.locfileid: "59040081"
 
 下列主題提供使用 ODBC 資料庫類別的詳細資訊：
 
-- [ODBC:ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)
+- [ODBC：ODBC 資料指標程式庫](../../data/odbc/odbc-the-odbc-cursor-library.md)
 
-- [ODBC:設定 ODBC 資料來源](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
+- [ODBC：設定 ODBC 資料來源](../../data/odbc/odbc-configuring-an-odbc-data-source.md)
 
-- [ODBC:直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
+- [ODBC：直接呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -4,11 +4,11 @@ description: 預設的 x64 ABI 的呼叫慣例的詳細資料。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313609"
 ---
 # <a name="x64-calling-convention"></a>x64 呼叫慣例
 
@@ -18,7 +18,7 @@ ms.locfileid: "57415778"
 
 X64 應用程式二進位介面 (ABI) 會使用四個註冊快速呼叫的呼叫慣例的預設值。 呼叫堆疊上配置空間，作為被呼叫者來儲存這些暫存器的陰影存放區。 函式呼叫的引數和用於這些引數的暫存器之間沒有嚴格的一對一對應。 任何引數的不符合 8 個位元組，或不是 1、 2、 4 或 8 個位元組，必須傳址方式傳遞。 單一引數則會永遠不會分散到多個暫存器。 X87 暫存器堆疊是未使用，並可由被呼叫端，但必須考慮 volatile 跨函式呼叫。 所有的浮點數作業會完成使用 16 XMM 暫存器。 整數引數會傳入暫存器 RCX、 RDX、 R8 和 R9。 浮點引數會傳入 XMM0L、 XMM1L、 XMM2L 和 XMM3L。 16 位元組引數是傳址方式傳遞。 在將詳細說明參數傳遞[參數傳遞](#parameter-passing)。 這些暫存器中，除了 RAX、 R10，R11，XMM4 和 XMM5 會視為 volatile。 所有其他暫存器是靜態。 暫存器使用方式中有詳細記載[註冊使用量](../build/x64-software-conventions.md#register-usage)並[呼叫端/被呼叫端儲存註冊](#callercallee-saved-registers)。
 
-原型的函式中，所有引數會轉換成預期的被呼叫端類型，然後才會傳遞。 呼叫端會負責配置的空間被呼叫端，參數，而且即使被呼叫端不需要那麼多的參數，則一律必須配置足夠的空間來儲存四個的暫存器參數。 這個慣例會簡化支援沒有原型 C 語言函式和 vararg C/c + + 函式。 Vararg 或 unprototyped 函式中，任何浮點值必須在對應一般用途的暫存器中重複。 任何超過前四個參數必須儲存在堆疊上之後在呼叫之前儲存的陰影。 Vararg 函式詳細資料可在[Varargs](#varargs)。 沒有原型的函式資訊詳述[沒有原型的函式](#unprototyped-functions)。
+原型的函式中，所有引數會轉換成預期的被呼叫端類型，然後才會傳遞。 呼叫端會負責配置的空間被呼叫端，參數，而且即使被呼叫端不需要那麼多的參數，則一律必須配置足夠的空間來儲存四個的暫存器參數。 這個慣例會簡化支援沒有原型 C 語言函式和 vararg C /C++函式。 Vararg 或 unprototyped 函式中，任何浮點值必須在對應一般用途的暫存器中重複。 任何超過前四個參數必須儲存在堆疊上之後在呼叫之前儲存的陰影。 Vararg 函式詳細資料可在[Varargs](#varargs)。 沒有原型的函式資訊詳述[沒有原型的函式](#unprototyped-functions)。
 
 ## <a name="alignment"></a>對齊
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - Zc:ternary
 - -Zc:ternary
 ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315426"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc: ternary （強制執行條件運算子規則）
 
-啟用強制執行 c + + 標準類型的規則和條件運算子運算式中的第二個和第三個運算元的 const 或 volatile (cv) 限定性條件。
+啟用強制執行C++的型別和第二個和第三個運算元的條件運算子運算式中的 const 或 volatile (cv) 限定性條件的標準規則。
 
 ## <a name="syntax"></a>語法
 
@@ -24,7 +24,7 @@ ms.locfileid: "57816486"
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 15.3 版可讓編譯器支援 c + + 標準的條件式 （或三元） 運算子 (**？:**) 行為。 C + + 標準需要任一個運算元必須是相同的型別和 cv 限定只有一個運算元必須明確地轉換成相同的類型和 cv 限定為另一個，或是一個或兩個運算元都是 throw 運算式。 在 Visual Studio 15.5 版之前的版本中，編譯器會允許被視為由標準模稜兩可的轉換。 當 **/zc: ternary**指定選項時，編譯器符合標準，並拒絕不符合的規則相符的型別和 cv 限定的第二個和第三個運算元的程式碼。
+Visual Studio 15.3 版可讓編譯器支援C++標準的條件式 （或三元） 運算子 (**？:**) 的行為。 C++ Standard 要求在任一個運算元必須是相同的型別和 cv 限定只有一個運算元必須明確地轉換成相同的類型和 cv 限定為另一個，或是一個或兩個運算元都是 throw 運算式。 在 Visual Studio 15.5 版之前的版本中，編譯器會允許被視為由標準模稜兩可的轉換。 當 **/zc: ternary**指定選項時，編譯器符合標準，並拒絕不符合的規則相符的型別和 cv 限定的第二個和第三個運算元的程式碼。
 
 **/Zc: ternary**選項預設為關閉。 使用 **/zc: ternary**若要啟用合格的行為，或是 **/Zc:ternary-** 來明確指定先前的不合格編譯器行為。 [/Permissive--](permissive-standards-conformance.md)選項會以隱含方式啟用此選項，但可以使用覆寫 **/Zc:ternary-**。
 
@@ -151,9 +151,9 @@ int main(int argc, char**) {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 修改**其他選項**屬性，以包括 **/zc: ternary**或是 **/Zc:ternary-** ，然後選擇 **確定**。
 

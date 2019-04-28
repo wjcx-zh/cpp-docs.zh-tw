@@ -20,16 +20,15 @@ helpviewer_keywords:
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
 ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348781"
 ---
 # <a name="dialog-data-exchange"></a>對話方塊資料交換
 
-如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至的控制項在對話方塊中，出現的位置時對話方塊本身顯示以回應`DoModal`或`Create`。 
-  `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。
+如果您使用 DDX 機制，通常您會在 `OnInitDialog` 處理常式或對話方塊建構函式中，設定對話方塊物件成員變數的初始值設定。 立即對話方塊顯示之前，框架的 DDX 機制會將成員變數的值傳送至的控制項在對話方塊中，出現的位置時對話方塊本身顯示以回應`DoModal`或`Create`。 `OnInitDialog` 的 `CDialog` 預設實作會呼叫類別 `UpdateData` 的 `CWnd` 成員函式，以初始化對話方塊中的控制項。
 
 相同的機制傳送值從控制項至成員變數當使用者按一下 [確定] 按鈕 (或只要您呼叫`UpdateData`成員函式使用引數 **，則為 TRUE**)。 對話方塊資料驗證機制會驗證您所指定驗證規則的所有資料項目。
 
@@ -46,8 +45,7 @@ MFC 提供許多 DDX 函式，以進行不同種類的交換。 下列範例顯�
 
 [!code-cpp[NVC_MFCControlLadenDialog#49](../mfc/codesnippet/cpp/dialog-data-exchange_1.cpp)]
 
-
-  `DDX_` 和 `DDV_` 程式碼行為資料對應。 所顯示的範例 DDX 和 DDV 函式分別屬於核取方塊控制項和編輯方塊控制項。
+`DDX_` 和 `DDV_` 程式碼行為資料對應。 所顯示的範例 DDX 和 DDV 函式分別屬於核取方塊控制項和編輯方塊控制項。
 
 如果使用者取消強制回應對話方塊的 `OnCancel`成員函式會結束此對話方塊和`DoModal`傳回的值**IDCANCEL**。 在這種情況下，對話方塊和對話方塊物件之間不會進行資料交換。
 

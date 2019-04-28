@@ -6,15 +6,15 @@ helpviewer_keywords:
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
 ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319820"
 ---
 # <a name="project-files"></a>專案檔
 
-Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並包含建置 Visual C++ 專案所需的資訊。 請記住，專案檔案會匯入各類具有 *.props* 或 *.targets* 副檔名的專案檔案。 這些檔案包含額外的建置資訊，並且其自身可能會參考其他 *.props* 或 *.targets* 檔案。 檔案路徑中的巨集 (例如 `$(VCTargetsPath)`) 相依於您的 Visual Studio 安裝。 如需這些巨集和 *.props*並 *.targets*檔案，請參閱[VC + + Directories Property Page](vcpp-directories-property-page.md)，[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)並[的一般巨集建置命令和屬性](common-macros-for-build-commands-and-properties.md)。
+Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並包含建置 Visual C++ 專案所需的資訊。 請記住，專案檔案會匯入各類具有 *.props* 或 *.targets* 副檔名的專案檔案。 這些檔案包含額外的建置資訊，並且其自身可能會參考其他 *.props* 或 *.targets* 檔案。 檔案路徑中的巨集 (例如 `$(VCTargetsPath)`) 相依於您的 Visual Studio 安裝。 如需這些巨集和 *.props*並 *.targets*檔案，請參閱[VC + + Directories Property Page](vcpp-directories-property-page.md)，[設定C++編譯器及建置在 Visual Studio 中的屬性](../working-with-project-properties.md)並[的一般巨集建置命令和屬性](common-macros-for-build-commands-and-properties.md)。
 
 ## <a name="example"></a>範例
 
@@ -120,5 +120,5 @@ Visual C++ 專案檔是以 XML 為基礎的檔案，副檔名為 .vcxproj，並�
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio Projects - C++](../creating-and-managing-visual-cpp-projects.md)<br>
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)
+[Visual Studio 專案 - C++](../creating-and-managing-visual-cpp-projects.md)<br>
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)

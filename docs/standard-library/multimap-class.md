@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348363"
 ---
 # <a name="multimap-class"></a>multimap 類別
 
@@ -120,7 +120,7 @@ class multimap;
 
 在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關對應之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<pair <const Key, Type> >`。
 
 ## <a name="remarks"></a>備註
@@ -515,7 +515,7 @@ size_type count(const Key& key) const;
 
 成員函式會傳回範圍中的項目數
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 具有索引鍵值*金鑰*。
 
@@ -737,7 +737,7 @@ iterator emplace(Args&&... args);
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構要插入到 multimap 中之元素的引數。|
+|*args*|轉送以建構要插入到 multimap 中之元素的引數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -807,7 +807,7 @@ iterator emplace_hint(
 
 |參數|描述|
 |-|-|
-|*引數*|轉送以建構要插入到 multimap 中之元素的引數。|
+|*args*|轉送以建構要插入到 multimap 中之元素的引數。|
 |*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
@@ -1213,7 +1213,7 @@ IList);
 
 |參數|描述|
 |-|-|
-|*val*|要插入至 multimap 的元素值。|
+|*Val*|要插入至 multimap 的元素值。|
 |*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 |*ValTy*|指定地圖可用來建構的元素的引數類型的範本參數[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|

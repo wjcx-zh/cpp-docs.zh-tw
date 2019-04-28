@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f775fe34-103b-4f07-9999-400e987ee030
 ms.openlocfilehash: b5f9f9c8fde44dd67a9a05aeae0f91fb7b5f2f4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252602"
 ---
 # <a name="adding-a-property-to-the-control-atl-tutorial-part-3"></a>將屬性加入至控制項 (ATL 教學課程，第 3 部分)
 

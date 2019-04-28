@@ -96,11 +96,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: d110e356-ba3e-4e52-9e2d-d997bf975c96
 ms.openlocfilehash: 3cfd4e97af8b5abf163ce88eb81b438ef4737ed5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222893"
 ---
 # <a name="hashset-stlclr"></a>hash_set (STL/CLR)
 
@@ -236,7 +236,7 @@ Hash_set 的迭代器會儲存其相關聯的 hash_set 節點，接著會儲存�
 
 ## <a name="members"></a>成員
 
-## <a name="begin"></a> hash_set:: begin (STL/CLR)
+## <a name="begin"></a> hash_set::begin (STL/CLR)
 
 指定受控制序列的開頭。
 
@@ -410,7 +410,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> hash_set:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> hash_set::const_iterator (STL/CLR)
 
 用於受控制序列的常數迭代器類型。
 
@@ -452,7 +452,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> hash_set:: const_reference (STL/CLR)
+## <a name="const_reference"></a> hash_set::const_reference (STL/CLR)
 
 項目的常數參考類型。
 
@@ -497,7 +497,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> hash_set:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> hash_set::const_reverse_iterator (STL/CLR)
 
 受控制序列的常數反向迭代器的型別...
 
@@ -539,7 +539,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> hash_set:: count (STL/CLR)
+## <a name="count"></a> hash_set::count (STL/CLR)
 
 尋找符合指定索引鍵的項目數目。
 
@@ -592,7 +592,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> hash_set:: difference_type (STL/CLR)
+## <a name="difference_type"></a> hash_set::difference_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -699,7 +699,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> hash_set:: end (STL/CLR)
+## <a name="end"></a> hash_set::end (STL/CLR)
 
 指定受控制序列的結尾。
 
@@ -748,7 +748,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> hash_set:: equal_range (STL/CLR)
+## <a name="equal_range"></a> hash_set::equal_range (STL/CLR)
 
 尋找符合指定之索引鍵的範圍。
 
@@ -808,7 +808,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> hash_set:: erase (STL/CLR)
+## <a name="erase"></a> hash_set::erase (STL/CLR)
 
 移除位於指定位置的項目。
 
@@ -828,7 +828,7 @@ bool erase(key_type key)
 *key*<br/>
 若要清除的機碼值。
 
-*最後一個*<br/>
+*last*<br/>
 若要清除的範圍的結尾。
 
 *where*<br/>
@@ -892,7 +892,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> hash_set:: find (STL/CLR)
+## <a name="find"></a> hash_set::find (STL/CLR)
 
 尋找符合指定之索引鍵的元素。
 
@@ -1216,7 +1216,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="hash_set"></a> hash_set:: hash_set (STL/CLR)
+## <a name="hash_set"></a> hash_set::hash_set (STL/CLR)
 
 建構容器物件。
 
@@ -1251,10 +1251,10 @@ hash_set(System::Collections::Generic::IEnumerable<GValue>^ right,
 *hashfn*<br/>
 雜湊貯體對應金鑰的函式。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
-*預測*<br/>
+*pred*<br/>
 排序受控制序列的述詞。
 
 *right*<br/>
@@ -1495,7 +1495,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_set:: insert (STL/CLR)
+## <a name="insert"></a> hash_set::insert (STL/CLR)
 
 加入項目。
 
@@ -1514,7 +1514,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -1611,7 +1611,7 @@ a b c x
 a b c x y
 ```
 
-## <a name="iterator"></a> hash_set:: iterator (STL/CLR)
+## <a name="iterator"></a> hash_set::iterator (STL/CLR)
 
 受控制序列之迭代器的類型。
 
@@ -1653,7 +1653,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 複製兩個索引鍵的排序委派。
 
@@ -1712,7 +1712,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_comp"></a> hash_set:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_set::key_comp (STL/CLR)
 
 複製兩個索引鍵的排序委派。
 
@@ -1771,7 +1771,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_set:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_set::key_compare (STL/CLR)
 
 兩個索引鍵排序委派。
 
@@ -1831,7 +1831,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> hash_set:: key_type (STL/CLR)
+## <a name="key_type"></a> hash_set::key_type (STL/CLR)
 
 排序索引鍵的類型。
 
@@ -2120,7 +2120,7 @@ int main()
     }
 ```
 
-## <a name="op"></a> hash_set::operator = (STL/CLR)
+## <a name="op"></a> hash_set::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -2175,7 +2175,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> hash_set:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_set::rbegin (STL/CLR)
 
 指定反向受控制序列的開頭。
 
@@ -2223,7 +2223,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> hash_set:: reference (STL/CLR)
+## <a name="reference"></a> hash_set::reference (STL/CLR)
 
 項目的參考類型。
 
@@ -2342,7 +2342,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="rend"></a> hash_set:: rend (STL/CLR)
+## <a name="rend"></a> hash_set::rend (STL/CLR)
 
 指定反向受控制序列的結尾。
 
@@ -2391,7 +2391,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> hash_set:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_set::reverse_iterator (STL/CLR)
 
 受控制序列的反向迭代器類型。
 
@@ -2433,7 +2433,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> hash_set:: size (STL/CLR)
+## <a name="size"></a> hash_set::size (STL/CLR)
 
 計算元素的數目。
 
@@ -2487,7 +2487,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> hash_set:: size_type (STL/CLR)
+## <a name="size_type"></a> hash_set::size_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -2535,7 +2535,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_set:: swap (STL/CLR)
+## <a name="swap"></a> hash_set::swap (STL/CLR)
 
 交換兩個容器的內容。
 
@@ -2710,7 +2710,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> hash_set:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_set::value_comp (STL/CLR)
 
 複製兩個項目值的順序委派。
 
@@ -2754,7 +2754,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> hash_set:: value_compare (STL/CLR)
+## <a name="value_compare"></a> hash_set::value_compare (STL/CLR)
 
 兩個元素值排序委派。
 
@@ -2799,7 +2799,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> hash_set:: value_type (STL/CLR)
+## <a name="value_type"></a> hash_set::value_type (STL/CLR)
 
 元素的類型。
 

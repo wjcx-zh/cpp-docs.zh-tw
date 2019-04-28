@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
 ms.openlocfilehash: 2aeb45054a06446c1fae092d4c07f297580684ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351231"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 類別
 
@@ -73,7 +73,7 @@ public:
 *RealType*<br/>
 浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*一般而言，URNG*<br/>
+*URNG*<br/>
 統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註

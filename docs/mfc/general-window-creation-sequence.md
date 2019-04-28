@@ -8,19 +8,19 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219560"
 ---
 # <a name="general-window-creation-sequence"></a>一般視窗建立順序
 
 當您建立您自己的資源，例如子視窗的視窗時，架構會使用許多相同的程序中所述[文件/檢視建立](../mfc/document-view-creation.md)。
 
-MFC 採用所提供的所有視窗類別[兩階段建構](../mfc/one-stage-and-two-stage-construction-of-objects.md)。 也就是在 c + + 的引動過程期間**新**運算子，建構函式會配置並初始化 c + + 物件，但不會建立對應的 Windows 視窗。 這藉由呼叫之後完成[建立](../mfc/reference/cwnd-class.md#create)視窗物件的成員函式。
+MFC 採用所提供的所有視窗類別[兩階段建構](../mfc/one-stage-and-two-stage-construction-of-objects.md)。 也就是在引動過程的C++**新**運算子，建構函式會配置並初始化C++物件，但不會建立對應的 Windows 視窗。 這藉由呼叫之後完成[建立](../mfc/reference/cwnd-class.md#create)視窗物件的成員函式。
 
-`Create`成員函式會建立 Windows 視窗，並將其`HWND`在 c + + 物件的公用資料成員[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)。 `Create` 透過建立參數中提供完整的彈性。 然後再呼叫`Create`，您可能想要的視窗類別註冊全域函式[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)若要設定框架的圖示和類別樣式。
+`Create`成員函式會建立 Windows 視窗，並將其`HWND`在C++物件的公用資料成員[m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd)。 `Create` 透過建立參數中提供完整的彈性。 然後再呼叫`Create`，您可能想要的視窗類別註冊全域函式[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)若要設定框架的圖示和類別樣式。
 
 您可以使用框架視窗[LoadFrame](../mfc/reference/cframewnd-class.md#loadframe)成員函式，而不是`Create`。 `LoadFrame` 可讓 Windows 視窗中，使用較少的參數。 從資源，包括畫面格的標題、 圖示、 快速鍵對應表和功能表，它就會取得許多預設值。
 

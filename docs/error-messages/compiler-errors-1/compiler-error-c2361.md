@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
 ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364359"
 ---
 # <a name="compiler-error-c2361"></a>編譯器錯誤 C2361
 

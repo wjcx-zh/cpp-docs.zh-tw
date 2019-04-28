@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238498"
 ---
 # <a name="mfc-library-versions"></a>MFC 程式庫版本
 
@@ -85,7 +85,7 @@ MFC 專案使用的前置處理器符號\_表示 utf-16 寬字元 Unicode 支援
 
 Mfc 靜態程式庫會使用下列命名慣例。 程式庫名稱的格式如下
 
-> <em>u</em>AFX<em>cd</em>。LIB
+> <em>u</em>AFX<em>cd</em>.LIB
 
 其中顯示為斜體小寫的字母是指定名稱的預留位置，其意義如下表所示：
 
@@ -93,7 +93,7 @@ Mfc 靜態程式庫會使用下列命名慣例。 程式庫名稱的格式如下
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) 或 Unicode (U);省略版本，而 MFC 對話方塊中的控制項|
 |*C*|使用 MFC 控制項對話方塊 (CW) 中，或不 (NMCD) 的版本|
-|*d*|偵錯或發行：D=偵錯 (Debug)；省略指定名稱=發行 (Release)|
+|*d*|偵錯或發行：D = 偵錯;省略版本規範|
 
 下表所列的所有程式庫都包含預先建置支援的建置架構的 \atlmfc\lib 目錄中。
 
@@ -101,7 +101,7 @@ Mfc 靜態程式庫會使用下列命名慣例。 程式庫名稱的格式如下
 |-------------|-----------------|
 |NAFXCW.LIB|MFC 靜態連結程式庫，發行版本|
 |NAFXCWD.LIB|MFC 靜態連結程式庫，偵錯版本|
-|UAFXCW。LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
+|UAFXCW.LIB|MFC 靜態連結程式庫 (支援 Unicode)，發行版本|
 |UAFXCWD.LIB|MFC 靜態連結程式庫 (支援 Unicode)，偵錯版本|
 |AFXNMCD.LIB|不含 MFC 對話方塊控制項，發行版本的 MFC 靜態連結程式庫|
 |AFXNMCDD.LIB|不含 MFC 對話方塊控制項，偵錯版本的 MFC 靜態連結程式庫|
@@ -117,11 +117,11 @@ MFC Dll 已*版本*數字，指出二進位碼相容性。 使用具有相同的
 |DLL|描述|
 |---------|-----------------|
 |MFC*version*.DLL|MFC DLL、 ANSI 或 MBCS 版本的版本|
-|MFC*版本*U.DLL|MFC DLL，Unicode 發行版本|
+|MFC*version*U.DLL|MFC DLL，Unicode 發行版本|
 |MFC*version*D.DLL|MFC DLL，ANSI 或 MBCS 偵錯版本|
 |MFC*version*UD.DLL|MFC DLL，Unicode 偵錯版本|
 |MFCM*version*.DLL|使用 Windows Form 控制項，MFC DLL ANSI 或 MBCS 發行版本|
-|MFCM*版本*U.DLL|使用 Windows Form 控制項，Unicode 版本的 MFC DLL|
+|MFCM*version*U.DLL|使用 Windows Form 控制項，Unicode 版本的 MFC DLL|
 |MFCM*version*D.DLL|使用 Windows Form 控制項，MFC DLL ANSI 或 MBCS 偵錯版本|
 |MFCM*version*UD.DLL|使用 Windows Form 控制項，Unicode 偵錯版本的 MFC DLL|
 
@@ -129,7 +129,7 @@ MFC Dll 已*版本*數字，指出二進位碼相容性。 使用具有相同的
 
 如果您以動態方式連結至 MFC 的共用 DLL 版本是否從應用程式，或從 MFC 擴充 DLL，您必須包含相符的 MFC*版本*。DLL 或 MFC*版本*U.DLL 時部署您的產品。
 
-如需可以與您的應用程式發佈的 Visual c + + Dll 的清單，請參閱 < [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包含公用程式與 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=823098)。
+如需清單視覺效果的C++Dll，可以與您的應用程式發佈，請參閱[Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK （包含公用程式與 BuildServer 檔案） 的可散發程式碼](http://go.microsoft.com/fwlink/p/?LinkId=823098)。
 
 如需有關在 MFC 的 MBCS 和 Unicode 支援的詳細資訊，請參閱 < [Unicode 和多位元組字元集 (MBCS) 支援](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)。
 

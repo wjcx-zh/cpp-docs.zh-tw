@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
 ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62220986"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>編譯器警告 (層級 4) C4512
 

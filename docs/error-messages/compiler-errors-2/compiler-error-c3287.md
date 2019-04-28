@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222673"
 ---
 # <a name="compiler-error-c3287"></a>編譯器錯誤 C3287
 
@@ -19,7 +19,7 @@ ms.locfileid: "50538670"
 
 使用者定義的集合類別必須包含 `MoveNext` 和 `Current`的定義。
 
-如需詳細資訊，請參閱 [How to: Iterate Over a User-Defined Collection with for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 。
+請參閱[如何：反覆運算 Over a User-Defined 集合與每個](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)如需詳細資訊。
 
 ## <a name="example"></a>範例
 

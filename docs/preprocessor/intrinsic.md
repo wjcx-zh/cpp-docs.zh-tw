@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, intrinsic
 ms.assetid: 25c86ac7-ef40-47b7-a2c0-fada9c5dc3c5
 ms.openlocfilehash: 393a73fcf31c7c00b2057862792ff0536cc98ad8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212369"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -44,7 +44,7 @@ ms.locfileid: "50677457"
 
 使用內建函式的程式速度較快，因為它們不需額外負擔函式呼叫，但是也因為會產生額外的程式碼，所以體積比較大。
 
-**x86 特定**
+**x86 Specific**
 
 `_disable`和`_enable`內建函式會產生核心模式指示停用/啟用中斷，而且可能會用於核心模式驅動程式。
 

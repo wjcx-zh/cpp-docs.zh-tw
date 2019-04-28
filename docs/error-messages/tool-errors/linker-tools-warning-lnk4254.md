@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4254
 ms.assetid: 6f41dfb3-ca21-40d3-bac7-b637e578efa4
 ms.openlocfilehash: 2c68e49d58b0fd6b28607eb0ba78c092441f6f4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352485"
 ---
 # <a name="linker-tools-warning-lnk4254"></a>連結器工具警告 LNK4254
 
@@ -21,7 +21,7 @@ ms.locfileid: "50467011"
 
 若要解決 LNK4254，修改或移除的合併要求。
 
-當以 x86 為目標機器和 Visual c + +，（ARM、 MIPS、 arm、mips、*sh4 和捲動方塊） 的 Windows CE 目標。CRT 區段是唯讀的。 如果您的程式碼相依於先前的行為 (。CRT 區段是讀取/寫入），您可以看到非預期的行為。
+當以 x86 為目標機器和 Windows CE 目標 （ARM MIPS、 arm、mips、*sh4 和捲動方塊），具有視覺效果C++，則。CRT 區段是唯讀的。 如果您的程式碼相依於先前的行為 (。CRT 區段是讀取/寫入），您可以看到非預期的行為。
 
 如需詳細資訊，請參閱：
 

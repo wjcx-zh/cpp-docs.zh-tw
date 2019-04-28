@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
 ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260379"
 ---
 # <a name="cautovectorptr-class"></a>CAutoVectorPtr 類別
 
@@ -72,7 +72,7 @@ class CAutoVectorPtr
 
 ## <a name="remarks"></a>備註
 
-這個類別提供方法來建立和管理智慧型指標，這有助於防止記憶體流失，自動在它超出範圍時釋出資源。 `CAutoVectorPtr` 類似於`CAutoPtr`、 唯一的差別在於，`CAutoVectorPtr`會使用[向量的新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)並[向量刪除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)來配置和釋放記憶體而不是 c + +**新**並**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果集合類別的`CAutoVectorPtr`所需。
+這個類別提供方法來建立和管理智慧型指標，這有助於防止記憶體流失，自動在它超出範圍時釋出資源。 `CAutoVectorPtr` 類似於`CAutoPtr`、 唯一的差別在於，`CAutoVectorPtr`會使用[向量的新&#91;&#93; ](../../standard-library/new-operators.md#op_new_arr)並[向量刪除&#91;&#93; ](../../standard-library/new-operators.md#op_delete_arr)來配置和釋放記憶體而不是C++**新**並**刪除**運算子。 請參閱[CAutoVectorPtrElementTraits](../../atl/reference/cautovectorptrelementtraits-class.md)如果集合類別的`CAutoVectorPtr`所需。
 
 請參閱[CAutoPtr](../../atl/reference/cautoptr-class.md)使用智慧型指標類別的範例。
 

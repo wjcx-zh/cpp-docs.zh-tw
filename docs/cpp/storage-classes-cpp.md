@@ -10,21 +10,21 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266929"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)
 
-A*儲存類別*內容中的 c + + 變數宣告為類型規範，可控管物件的存留期、 連結和記憶體位置。 指定的物件只能有一個儲存類別。 區塊內定義的變數會具有自動儲存區，除非另有指定使用**extern**，**靜態**，或`thread_local`規範。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。
+A*儲存類別*的內容中C++變數宣告為類型規範，可控管物件的存留期、 連結和記憶體位置。 指定的物件只能有一個儲存類別。 區塊內定義的變數會具有自動儲存區，除非另有指定使用**extern**，**靜態**，或`thread_local`規範。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。
 
 **備註**
 
 1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
-1. **Visual c + + 2010年及更新版本：****自動**關鍵字不再是 c + + 儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字從 c + + 語言中移除。
+1. **視覺化C++2010年及更新版本：****自動**關鍵字不再是C++儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字會從移除C++語言。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

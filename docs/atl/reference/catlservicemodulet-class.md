@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
 ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260190"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 
@@ -186,7 +186,7 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="remarks"></a>備註
 
-在 Visual Studio.NET 2003，不是基底類別中實作這個方法。 Visual Studio 專案精靈 產生的程式碼，包含這個方法，但如果使用 ATL 7.1 編譯較早版本的 Visual c + + 中建立的專案時，會發生編譯錯誤。 任何類別都衍生自`CAtlServiceModuleT`必須在衍生類別中實作這個方法。
+在 Visual Studio.NET 2003，不是基底類別中實作這個方法。 Visual Studio 專案精靈 產生的程式碼，包含這個方法，但如果視覺效果的舊版本中建立的專案，會發生編譯錯誤C++會編譯使用 ATL 7.1。 任何類別都衍生自`CAtlServiceModuleT`必須在衍生類別中實作這個方法。
 
 呼叫中使用 PKT 層級驗證、 RPC_C_IMP_LEVEL_IDENTIFY 的模擬層級和適當的非 null 安全性描述元`CoInitializeSecurity`。
 

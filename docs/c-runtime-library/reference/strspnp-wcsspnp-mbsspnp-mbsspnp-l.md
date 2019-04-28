@@ -43,11 +43,11 @@ helpviewer_keywords:
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
 ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223127"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
@@ -83,7 +83,7 @@ unsigned char *_mbsspnp_l(
 *str*<br/>
 以 Null 終止的待搜尋字串。
 
-*字元集*<br/>
+*charset*<br/>
 以 Null 結束的字元集。
 
 *locale*<br/>
@@ -135,7 +135,7 @@ int main( void ) {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 abbage

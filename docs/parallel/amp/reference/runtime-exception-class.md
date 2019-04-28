@@ -10,15 +10,15 @@ helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
 ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352724"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception 類別
 
-C + + Accelerated Massive Parallelism (AMP) 文件庫中的例外狀況的基底型別。
+中的例外狀況的基底類型C++Accelerated Massive Parallelism (AMP) 程式庫。
 
 ### <a name="syntax"></a>語法
 

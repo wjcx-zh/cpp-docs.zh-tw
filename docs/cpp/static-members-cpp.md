@@ -14,11 +14,11 @@ helpviewer_keywords:
 - class instances [C++], static members
 ms.assetid: 9cc8cf0f-d74c-46f2-8e83-42d4e42c8370
 ms.openlocfilehash: 708f78c09db263584d478d16863999d4428e4891
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266942"
 ---
 # <a name="static-members-c"></a>靜態成員 (C++)
 
@@ -63,7 +63,7 @@ int main()
 long nBytes = BufferedOutput::bytecount;
 ```
 
-若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 並**->**) 運算子。 例如: 
+若要靜態成員存在，不需要有類別類型的物件存在。 靜態成員也可以存取使用成員選取 (**。** 並**->**) 運算子。 例如：
 
 ```cpp
 BufferedOutput Console;

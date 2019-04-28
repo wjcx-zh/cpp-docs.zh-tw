@@ -13,16 +13,15 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212853"
 ---
 # <a name="taskcontinuationcontext-class"></a>task_continuation_context 類別
 
-
-  `task_continuation_context` 類別可讓您指定您想要執行接續的位置。 最好只使用這個類別，從 Windows 執行階段應用程式。 對於非 Windows 執行階段應用程式，工作接續的執行內容是由執行階段，而且不進行設定。
+`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 最好只使用這個類別，從 Windows 執行階段應用程式。 對於非 Windows 執行階段應用程式，工作接續的執行內容是由執行階段，而且不進行設定。
 
 ## <a name="syntax"></a>語法
 
@@ -74,7 +73,7 @@ static task_continuation_context get_current_winrt_context();
 
 所傳回的值`get_current_winrt_context`可以用來向執行階段，應該執行接續 apartment 模型中的擷取的內容 （STA 或 MTA），無論前項工作是 apartment 感知。 Apartment 感知工作是解除包裝 Windows 執行階段的工作`IAsyncInfo`介面或從這類工作繼承而來的工作。
 
-這個方法很類似`use_current`方法，但它也會提供原生 c + + 程式碼，而不需要 C + + /CX 延伸模組支援。 它適用於使用進階的使用者撰寫 C + + /CX 無關原生和 Windows 執行階段呼叫端的程式庫程式碼。 除非您需要這項功能，我們建議`use_current`方法，它只會提供給 C + + /CX 的用戶端。
+這個方法很類似`use_current`方法，但它也會提供為原生C++而不需要程式碼C++/CX 延伸模組支援。 它適用於使用進階的使用者撰寫的C++/CX-agnostic 原生和 Windows 執行階段呼叫端的程式庫程式碼。 除非您需要這項功能，我們建議`use_current`方法，它只會提供給C++/CX 用戶端。
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
 ms.openlocfilehash: c0984c15e2bf1682fc902264f47f340d0bd3c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223744"
 ---
 # <a name="numget-class"></a>num_get 類別
 
@@ -170,13 +170,13 @@ virtual iter_type do_get(
 *first*<br/>
 要從中讀取數字的字元範圍開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要從中讀取數字的字元範圍結尾。
 
 *_Iosbase*<br/>
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*（_s)*<br/>
+*_State*<br/>
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
 *val*<br/>
@@ -417,13 +417,13 @@ iter_type get(
 *first*<br/>
 要從中讀取數字的字元範圍開頭。
 
-*最後一個*<br/>
+*last*<br/>
 要從中讀取數字的字元範圍結尾。
 
 *_Iosbase*<br/>
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*（_s)*<br/>
+*_State*<br/>
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
 *val*<br/>
@@ -580,11 +580,11 @@ explicit num_get(size_t _Refs = 0);
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 

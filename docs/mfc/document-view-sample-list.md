@@ -3,11 +3,11 @@ title: 文件-檢視範例清單
 ms.date: 11/04/2016
 ms.assetid: 6f087ce8-2f46-433c-b674-4c110743b289
 ms.openlocfilehash: ae7104478fb643701c1f659136a33dd3cd69f6e1
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58770703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240643"
 ---
 # <a name="documentview-sample-list"></a>文件/檢視範例清單
 

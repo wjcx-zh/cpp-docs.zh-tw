@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255496"
 ---
 # <a name="function-inlining-problems"></a>函式內嵌問題
 
@@ -24,7 +24,7 @@ ms.locfileid: "59031520"
 
 - 具有內嵌開啟標頭檔。
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 然後，
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ int main() {
 
 同樣地，使用內嵌函式的專案尚未定義函式的.cpp 檔案中而不是在標頭檔也會取得 LNK2019。 標頭檔會包含所有位置被視為適當，但函式只會內嵌時的.cpp 檔通過編譯器;因此，連結器會將函式視為其他模組中使用時，無法解析外部符號。
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 然後，
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 然後，
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

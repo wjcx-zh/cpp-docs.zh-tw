@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1052
 ms.assetid: f2c09a2f-d3c1-4420-9501-ffcb65caf87b
 ms.openlocfilehash: b381cc3cfe27d4c4a9d744a6b854a0e43727fe71
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243661"
 ---
 # <a name="fatal-error-c1052"></a>嚴重錯誤 C1052
 
@@ -21,6 +21,6 @@ ms.locfileid: "50479764"
 
 若要修正此問題，您可以明確地刪除 PDB 檔案之前您編譯一次，或者您可以建立不同的名稱，連結器產生的和編譯器產生的 PDB 檔案。
 
-若要在命令列上指定的編譯器產生的 PDB 檔案名稱，請使用[/Fd](../../build/reference/fd-program-database-file-name.md)編譯器選項。 若要指定編譯器所產生 PDB 檔案名稱，在 IDE 中，開啟**屬性頁**對話方塊，您的專案，然後在**組態屬性**， **C/c + +**， **輸出檔案**頁面上，將**程式資料庫檔名**屬性。 根據預設，這個屬性是`$(IntDir)vc$(PlatformToolsetVersion).pdb`。
+若要在命令列上指定的編譯器產生的 PDB 檔案名稱，請使用[/Fd](../../build/reference/fd-program-database-file-name.md)編譯器選項。 若要指定編譯器所產生 PDB 檔案名稱，在 IDE 中，開啟**屬性頁**對話方塊，您的專案，然後在**組態屬性**， **C /C++**，**輸出檔案**頁面上，將**程式資料庫檔名**屬性。 根據預設，這個屬性是`$(IntDir)vc$(PlatformToolsetVersion).pdb`。
 
 或者，您可以設定連結器產生的 PDB 檔案名稱。 若要在命令列上指定連結器產生的 PDB 檔案名稱，請使用[/PDB](../../build/reference/pdb-use-program-database.md)連結器選項。 若要指定連結器產生的 PDB 檔案名稱，在 IDE 中，開啟**屬性頁**對話方塊，您的專案，然後在**組態屬性**，**連結器**， **偵錯**頁面上，將**產生程式資料庫檔**屬性。 根據預設，這個屬性設定為 `$(OutDir)$(TargetName).pdb`。

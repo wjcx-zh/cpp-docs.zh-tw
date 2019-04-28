@@ -25,11 +25,11 @@ helpviewer_keywords:
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
 ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358069"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -49,7 +49,7 @@ int _query_new_mode(
 
 ## <a name="remarks"></a>備註
 
-C + + **_query_new_mode**函式會傳回一個整數，表示新的處理常式模式所設定的 c + + [_set_new_mode](set-new-mode.md)函式[malloc](malloc.md)。 新的處理常式模式表示失敗時要配置記憶體時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會在失敗時呼叫新的處理常式。 您可以使用 **_set_new_mode**因此覆寫這個行為在失敗**malloc**呼叫新的處理常式在相同方式來**新**運算子因時失敗配置的記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
+C++ **_Query_new_mode**函式會傳回一個整數，表示新的處理常式模式所設定的C++ [_set_new_mode](set-new-mode.md)函式[malloc](malloc.md)。 新的處理常式模式表示失敗時要配置記憶體時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會在失敗時呼叫新的處理常式。 您可以使用 **_set_new_mode**因此覆寫這個行為在失敗**malloc**呼叫新的處理常式在相同方式來**新**運算子因時失敗配置的記憶體。 如需詳細資訊，請參閱 C++ 語言參考中的 [new 和 delete 運算子](../../cpp/new-and-delete-operators.md)的討論。
 
 ## <a name="requirements"></a>需求
 

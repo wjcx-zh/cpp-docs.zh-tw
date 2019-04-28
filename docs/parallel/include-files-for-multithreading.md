@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multithreading [C++], include files
 ms.assetid: 98d764f9-71f4-4da5-8f3a-8d2d26e96799
 ms.openlocfilehash: 79b5c56eecfaf28743eec4ba6b4cee56156d6e2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212892"
 ---
 # <a name="include-files-for-multithreading"></a>多執行緒的 Include 檔
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - naked functions [C++]
 ms.assetid: ff203858-2dd3-4a76-8a57-d0d06817adef
 ms.openlocfilehash: c813b97b85469165aae892b0a4cce888112e3dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267368"
 ---
 # <a name="rules-and-limitations-for-naked-functions"></a>Naked 函式的規則和限制
 
@@ -33,7 +33,7 @@ ms.locfileid: "50605149"
 
 - **Naked**進行編譯時，會忽略關鍵字[/clr](../build/reference/clr-common-language-runtime-compilation.md)。
 
-- 針對[__fastcall](../cpp/fastcall.md) naked 函式，當其中一個暫存器引數的 C/c + + 程式碼中有參考時，初構程式碼應該儲存該登錄至堆疊的位置，該變數的值。 例如: 
+- 針對[__fastcall](../cpp/fastcall.md) naked 函式，在 C 中的參考時 /C++程式碼的其中一個暫存器引數，初構程式碼應該儲存該登錄至堆疊的位置，該變數的值。 例如: 
 
 ```cpp
 // nkdfastcl.cpp

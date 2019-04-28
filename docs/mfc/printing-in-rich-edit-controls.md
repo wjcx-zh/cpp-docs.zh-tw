@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CRichEditCtrl class [MFC], printing
 ms.assetid: dbda0e40-018f-424e-b5d8-7b489aaf27af
 ms.openlocfilehash: 2ddc52e43da2e409117ccc5169442002ac27a315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263493"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238391"
 ---
 # <a name="printing-in-rich-edit-controls"></a>Rich Edit 控制項中的列印
 

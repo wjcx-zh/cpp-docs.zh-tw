@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
 ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58768064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245383"
 ---
 # <a name="new-operator-c"></a>new 運算子 (C++)
 
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您使用的放置新的表單**新**運算子，除了大小的引數的形式的配置，編譯器不支援的位置形式**刪除**運算子如果建構函式會擲回例外狀況。 例如：
+如果您使用的放置新的表單**新**運算子，除了大小的引數的形式的配置，編譯器不支援的位置形式**刪除**運算子如果建構函式會擲回例外狀況。 例如: 
 
 ```cpp
 // expre_new_Operator2.cpp

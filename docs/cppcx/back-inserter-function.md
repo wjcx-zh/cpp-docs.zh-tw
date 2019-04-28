@@ -7,11 +7,11 @@ helpviewer_keywords:
 - back_inserter Function
 ms.assetid: 91476338-5548-44b7-bc7e-2150f4fbe31a
 ms.openlocfilehash: 82df6b06389fa9f1c3ab83fa7b1da3bab092c68d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209438"
 ---
 # <a name="backinserter-function"></a>back_inserter 函式
 
@@ -50,4 +50,4 @@ Platform::BackInsertIterator<T>
 
 ## <a name="see-also"></a>另請參閱
 
-[Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

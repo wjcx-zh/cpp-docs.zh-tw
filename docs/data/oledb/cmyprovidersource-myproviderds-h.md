@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CCustomSource class in CustomDS.H
 ms.assetid: c143d48e-59c8-4f67-9141-3aab51859b92
 ms.openlocfilehash: 296e7848b1d756fe0aba6156be2501db45bb092b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59028596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62230551"
 ---
 # <a name="ccustomsource-customdsh"></a>CCustomSource (CustomDS.h)
 
@@ -178,7 +178,7 @@ struct UPROPINFO
 
 視覺化C++支援使用者定義的屬性集。 您不需要覆寫`GetProperties`或`GetPropertyInfo`。 相反地，範本會偵測到任何使用者定義的屬性集，並將它新增至適當的物件。
 
-如果您有必須可在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前`IDBInitialize::Initialize`)，您可以指定此使用 UPROPSET_USERINIT 旗標以及 BEGIN_PROPERTY_SET_EX 巨集。 此工作 （如 OLE DB 規格需要） 的資料來源物件必須是屬性集。 例如: 
+如果您有必須可在初始化階段的使用者定義的屬性集 (亦即，取用者呼叫之前`IDBInitialize::Initialize`)，您可以指定此使用 UPROPSET_USERINIT 旗標以及 BEGIN_PROPERTY_SET_EX 巨集。 此工作 （如 OLE DB 規格需要） 的資料來源物件必須是屬性集。 例如：
 
 ```cpp
 BEGIN_PROPERTY_SET_EX(DBPROPSET_MYPROPSET, UPROPSET_USERINIT)

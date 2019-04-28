@@ -6,11 +6,11 @@ helpviewer_keywords:
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
 ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58781220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358303"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 
@@ -85,7 +85,7 @@ ms.locfileid: "58781220"
 
 [如何：自訂快速存取工具列](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-[如何：自訂的應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
+[如何：自訂應用程式按鈕](../mfc/how-to-customize-the-application-button.md)
 
 如需端對端範例，請參閱[範例 （MFC 功能套件）](../overview/visual-cpp-samples.md)。
 

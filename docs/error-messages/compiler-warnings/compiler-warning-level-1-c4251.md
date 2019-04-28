@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4251
 ms.assetid: a9992038-f0c2-4fc4-a9be-4509442cbc1e
 ms.openlocfilehash: d2fff1d2f30c4ac80af6d5b9ca452fa5f30f5a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207346"
 ---
 # <a name="compiler-warning-level-1-c4251"></a>編譯器警告 (層級 1) C4251
 
@@ -29,7 +29,7 @@ ms.locfileid: "50649653"
 
 您可以避免匯出類別所定義的 DLL，定義具有虛擬函式，類別和函式您可以呼叫來具現化和刪除的物件類型。  然後，您就可以再呼叫虛擬函式類型。
 
-如果您從 c + + 標準程式庫中，編譯的偵錯版本的型別衍生，就可以忽略 C4251 (**/MTd**) 和其中的編譯器錯誤訊息指的是 _Container_base。
+如果您衍生自中的型別，就可以忽略 C4251C++編譯的偵錯版本的標準程式庫 (**/MTd**) 和其中的編譯器錯誤訊息指的是 _Container_base。
 
 ```cpp
 // C4251.cpp

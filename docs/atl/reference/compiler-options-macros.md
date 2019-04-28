@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278419"
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 
@@ -32,7 +32,7 @@ ms.locfileid: "57258472"
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|從舊版的 ATL 轉換的符號可在專案中的錯誤|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|定義一或多個物件使用 apartment 執行緒。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|確保`CString`明確，防止任何非預期的轉換建構函式。|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|若要使用 c + + 標準相容語法時，會產生 C4867 編譯器錯誤時的非標準的語法用來初始化成員函式的指標，定義此巨集。|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定義此巨集，才能使用C++標準相容的語法，非標準的語法用來初始化成員函式的指標就會產生 C4867 編譯器錯誤。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|如果一或多個物件使用免費或中性執行緒，定義。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|表示專案的符號必須標示為兩者，免費 」 或 「 中性的物件。 巨集會[_ATL_FREE_THREADED](#_atl_free_threaded)應改為使用。|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|這是為了避免預設使用的命名空間作為 ATL 符號|
@@ -51,7 +51,7 @@ ms.locfileid: "57258472"
 
 ### <a name="remarks"></a>備註
 
-Visual c + +.NET 2002，ATL 停用警告大量前後離開停用，讓它們永遠不會顯示使用者程式碼中。 尤其是：
+在 視覺效果之前C++.NET 2002年，ATL 停用警告很多，離開停用，讓它們永遠不會顯示使用者程式碼中。 尤其是：
 
 - C4127 條件運算式是常數
 
@@ -105,7 +105,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING
 
-定義此巨集，以便強制將 ANSI c + + 標準相容的語法用於成員函式的指標。 使用這個巨集，將導致 C4867 編譯器錯誤，會產生非標準的語法用來初始化的成員函式指標時。
+若要強制使用 ANSI 定義此巨集C++成員函式指標的標準相容的語法。 使用這個巨集，將導致 C4867 編譯器錯誤，會產生非標準的語法用來初始化的成員函式指標時。
 
 ```
 #define _ATL_ENABLE_PTM_WARNING
@@ -113,11 +113,11 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>備註
 
-ATL 和 MFC 程式庫已變更為符合 Visual c + + 編譯器的改進標準 c + + 相容性。 類別成員函式指標的語法應該是根據 ANSI c + + 標準， `&CMyClass::MyFunc`。
+ATL 和 MFC 程式庫已變更為符合視覺效果C++編譯器的改進的標準C++合規性。 根據 ANSIC++的類別成員函式的指標語法應該是標準`&CMyClass::MyFunc`。
 
-當[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定義 （預設情況），ATL/MFC 會停用 C4867 中的錯誤訊息 （值得注意的是訊息對應） 的巨集對應，讓較早版本中所建立的程式碼可以繼續建置和以前一樣。 如果您定義 **_ATL_ENABLE_PTM_WARNING**，您的程式碼應該是符合規範的 c + + 標準。
+當[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定義 （預設情況），ATL/MFC 會停用 C4867 中的錯誤訊息 （值得注意的是訊息對應） 的巨集對應，讓較早版本中所建立的程式碼可以繼續建置和以前一樣。 如果您定義 **_ATL_ENABLE_PTM_WARNING**，您的程式碼應該是C++標準相容。
 
-不過，非標準格式已被取代，因此您需要將現有的程式碼移至 c + + 標準相容的語法。 例如，下列步驟：
+不過，非標準格式已被取代，所以您要移動現有的程式碼C++標準相容的語法。 例如，下列步驟：
 
 [!code-cpp[NVC_MFCListView#14](../../atl/reference/codesnippet/cpp/compiler-options-macros_2.cpp)]
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
 ms.openlocfilehash: 73243841b2ad02bcc165b2910ac54283028e6cf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62243928"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -50,7 +50,7 @@ Visual Studio 會解譯**volatile**以不同的方式根據目標架構的關鍵
 
 ## <a name="iso-compliant"></a>符合 ISO 標準
 
-如果您是熟悉 C# volatile 關鍵字，或熟悉的行為**volatile**在舊版的 Visual c + + 中，請注意，c++11 ISO Standard **volatile**關鍵字是不同，Visual Studio 支援時[/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定編譯器選項。 (對於 ARM 系統來說，預設為指定)。 **Volatile**關鍵字在 C + + 11 ISO 標準的程式碼是只用於硬體存取; 請勿使用它對於執行緒間通訊。 對於執行緒間通訊使用機制如[std:: atomic\<T >](../standard-library/atomic.md)從[c + + 標準程式庫](../standard-library/cpp-standard-library-reference.md)。
+如果您已熟悉C#volatile 關鍵字或熟悉的行為**volatile**在舊版的 Visual C++，請注意，c++11 ISO 標準**變動性**關鍵字不同，且支援在 Visual Studio 時[/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)指定編譯器選項。 (對於 ARM 系統來說，預設為指定)。 **Volatile**關鍵字在 C + + 11 ISO 標準的程式碼是只用於硬體存取; 請勿使用它對於執行緒間通訊。 對於執行緒間通訊使用機制如[std:: atomic\<T >](../standard-library/atomic.md)從[C++標準程式庫](../standard-library/cpp-standard-library-reference.md)。
 
 ## <a name="end-of-iso-compliant"></a>符合 ISO 標準結尾
 

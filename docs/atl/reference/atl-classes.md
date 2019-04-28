@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
 ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62248936"
 ---
 # <a name="atl-classes-and-structs"></a>ATL 類別和結構
 
@@ -84,7 +84,7 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[CComDynamicUnkArray](../../atl/reference/ccomdynamicunkarray-class.md)|此類別會儲存在陣列`IUnknown`指標。|atlcom.h|
 |[CComEnum](../../atl/reference/ccomenum-class.md)|這個類別會定義 COM 列舉值物件的陣列為基礎。|atlcom.h|
 |[CComEnumImpl](../../atl/reference/ccomenumimpl-class.md)|這個類別會提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。|atlcom.h|
-|[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|這個類別會定義 c + + 標準程式庫集合為基礎的 COM 列舉值物件。|atlcom.h|
+|[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)|這個類別會定義為基礎的 COM 列舉值物件C++標準程式庫集合。|atlcom.h|
 |[CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md)|這個類別會提供相同的方法， [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)但並不會提供重要的區段。|atlcore.h|
 |[CComGITPtr](../../atl/reference/ccomgitptr-class.md)|這個類別提供方法來處理介面指標和全域介面表 (GIT)。|atlbase.h|
 |[CComHeap](../../atl/reference/ccomheap-class.md)|這個類別會實作[IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md)使用 COM 記憶體配置函式。|ATLComMem.h|
@@ -190,7 +190,7 @@ Active Template Library (ATL) 包含下列類別和結構。 若要依分類尋�
 |[IDispEventImpl](../../atl/reference/idispeventimpl-class.md)|這個類別提供的實作`IDispatch`方法。|atlcom.h|
 |[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)|這個類別提供的實作`IDispatch`方法，而不需要從類型程式庫中取得類型資訊。|atlcom.h|
 |[IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md)|介面的 Microsoft HTML 剖析和轉譯引擎。|atlbase ATLIFace.h|
-|[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|這個類別會定義根據 c + + 標準程式庫集合的列舉值介面。|atlcom.h|
+|[IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)|這個類別會定義為基礎的列舉值介面C++標準程式庫集合。|atlcom.h|
 |[IObjectSafetyImpl](../../atl/reference/iobjectsafetyimpl-class.md)|這個類別提供的預設實作`IObjectSafety`介面，以允許用戶端會擷取和設定物件的安全性層級。|atlctl.h|
 |[IObjectWithSiteImpl](../../atl/reference/iobjectwithsiteimpl-class.md)|這個類別提供方法讓其站台與通訊的物件。|atlcom.h|
 |[IOleControlImpl](../../atl/reference/iolecontrolimpl-class.md)|這個類別提供的預設實作`IOleControl`介面和實作`IUnknown`。|atlctl.h|

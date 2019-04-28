@@ -35,11 +35,11 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
 ms.openlocfilehash: 7fbf89f8d78e8a2ce1018a790350ec986dcab87e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286289"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp、 ldexpf、 ldexpl
 
@@ -86,7 +86,7 @@ long double ldexpl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**ldexp**採用**float**或是**長** **double**類型。 在 C 程式中， **ldexp**一律採用**double**並**int** ，並傳回**double**。
+因為C++允許多載，您可以呼叫多載**ldexp**採用**float**或**長** **double**類型。 在 C 程式中， **ldexp**一律採用**double**並**int** ，並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
@@ -114,7 +114,7 @@ int main( void )
 }
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 ```Output
 4.0 times two to the power of 3 is 32.0

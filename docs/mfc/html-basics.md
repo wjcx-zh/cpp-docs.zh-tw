@@ -5,15 +5,15 @@ helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
 ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262992"
 ---
 # <a name="html-basics"></a>HTML 的基本概念
 
-大部分的瀏覽器有檢查您所瀏覽網頁的 HTML 原始檔的功能。 當您檢視原始碼時，您會看到一些 HTML (超文字標記語言) 標記，周圍以角括弧 (<>) 包圍，其中為文字。
+大部分的瀏覽器有檢查您所瀏覽網頁的 HTML 原始檔的功能。 當您檢視您會看到一些 HTML （超文字標記語言） 標記的來源時，以角括弧 （<>），其中為文字括住。
 
 下方的步驟使用 HTML 標記建立簡單的 Web 網頁。 在下列步驟中，您將在 [記事本] 本中輸入純文字到檔案中，進行一些變更，儲存檔案，並重新將網頁載入至瀏覽器中，以查看您的變更。
 
@@ -39,7 +39,7 @@ ms.locfileid: "58278381"
 
    請注意標記是成對的，而且會包含在角括弧中。 標記不區分大小寫，不過，大小寫通常用來讓標記引人注意。
 
-   標記\<HTML > 啟動文件，與標記\</HTML > 結束它。 結束標記 (不一定需要) 與開始標記相似，不過，標記前方會有一個正斜線 (/)。 您不應該在角括弧 (<) 和標記之間保留空白。
+   標記\<HTML > 啟動文件，與標記\</HTML > 結束它。 結束標記 (不一定需要) 與開始標記相似，不過，標記前方會有一個正斜線 (/)。 應該在角括弧 (<) 與您的標記開頭之間沒有空格。
 
 1. 切換回 [記事本]，並在之後 \< /前端 > 行中，輸入：
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
 ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216507"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 
@@ -17,7 +17,7 @@ ms.locfileid: "58476856"
 
 ## <a name="function-objects-vs-lambdas"></a>函式物件與Lambda
 
-當您撰寫程式碼時，您可能使用函式指標和函式物件解決問題，並執行計算，特別是當您使用[c + + 標準程式庫演算法](../cpp/algorithms-modern-cpp.md)。 函式指標和函式物件各有優缺點。例如，函式指標的語法額外負荷最小，但是無法在範圍內保留狀態，而函式物件則可以維護狀態但無法避免需要定義類別的語法額外負荷。
+當您撰寫程式碼時，您可能使用函式指標和函式物件解決問題，並執行計算，特別是當您使用[C++標準程式庫演算法](../cpp/algorithms-modern-cpp.md)。 函式指標和函式物件各有優缺點。例如，函式指標的語法額外負荷最小，但是無法在範圍內保留狀態，而函式物件則可以維護狀態但無法避免需要定義類別的語法額外負荷。
 
 Lambda 結合了函式指標和函式物件的優點並避免其缺點。 Lambda 像函式物件一樣具有彈性並可以維護狀態，但不同於函式物件，由於語法精簡，因此不需要明確類別定義。 使用 Lambda 時，您可以撰寫相對函式物件而言較不麻煩且較不容易發生錯誤的程式碼。
 

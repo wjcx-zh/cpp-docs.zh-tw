@@ -8,11 +8,11 @@ helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
 ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224086"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "51520747"
 
 具有更大的需求和更強大的項目存取權的迭代器，可取代較少需求的迭代器。 舉例來說，如果正向迭代器被呼叫，可改用隨機存取迭代器。
 
-Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支援已檢查和未檢查迭代器的各種偵錯模式情況。 如需詳細資訊，請參閱[安全程式庫：C++ 標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)。
+Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支援已檢查和未檢查迭代器的各種偵錯模式情況。 如需詳細資訊，請參閱[安全程式庫：C++標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="functions"></a>函式
 
@@ -80,7 +80,7 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示雙向迭代器函式。|
-|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：** 這個類別是 C++ 標準程式庫的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 |[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表正向迭代器的函式。|
 |[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
 |[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表輸入迭代器的函式。|
@@ -95,7 +95,7 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示輸出迭代器函式。|
 |[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示隨機存取迭代器函式。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此樣板類別描述行為類似隨機存取迭代器，只不過是反向方向的物件。|
-|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：** 這個類別是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
+|[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：** 這個類別是 C++ 標準程式庫的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 
 ## <a name="see-also"></a>另請參閱
 

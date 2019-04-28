@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CComEnum class
 ms.assetid: bff7dd7b-eb6e-4d6e-96ed-2706e66c8b3b
 ms.openlocfilehash: 4d83b06f37c132c0d2325304e2cc155ccb490690
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246391"
 ---
 # <a name="ccomenum-class"></a>CComEnum 類別
 
@@ -48,7 +48,7 @@ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="remarks"></a>備註
 
-`CComEnum` 定義陣列為基礎的 COM 列舉值物件。 這個類別是類似[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)實作 c + + 標準程式庫容器為基礎的列舉值。 使用這個類別的一般步驟說明如下。 如需詳細資訊，請參閱 < [ATL 集合和列舉程式](../../atl/atl-collections-and-enumerators.md)。
+`CComEnum` 定義陣列為基礎的 COM 列舉值物件。 這個類別是類似[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)它會實作為基礎的列舉值C++標準程式庫容器。 使用這個類別的一般步驟說明如下。 如需詳細資訊，請參閱 < [ATL 集合和列舉程式](../../atl/atl-collections-and-enumerators.md)。
 
 ## <a name="to-use-this-class"></a>若要使用此類別：
 

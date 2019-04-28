@@ -6,15 +6,15 @@ helpviewer_keywords:
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
 ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358600"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>逐步解說：將動畫加入至 MFC 專案
 
-本逐步解說將說明如何將基本的動畫的物件新增至 Visual c + +、 Microsoft Foundation Class 程式庫 (MFC) 專案。
+本逐步解說將說明如何將基本的動畫的物件新增至視覺效果C++，Microsoft Foundation Class 程式庫 (MFC) 專案。
 
 本逐步解說示範如何完成這些工作：
 
@@ -40,7 +40,7 @@ ms.locfileid: "50522235"
 
 1. 在 [ **檔案** ] 功能表上，指向 [ **新增** ]，然後按一下 [ **專案**]。
 
-1. 在 **新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual c + +** ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCAnimationWalkthrough*。 按一下 [確定 **Deploying Office Solutions**]。
+1. 在**新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual C++**  ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCAnimationWalkthrough*。 按一下 [確定] 。
 
 1. 在  **MFC 應用程式精靈**對話方塊方塊中，確認**應用程式類型**會**多份文件**，**專案樣式**是**Visual Studio**，而**文件/檢視架構支援**選項。 按一下 [ **完成**]。
 

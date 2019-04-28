@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
 ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210530"
 ---
 # <a name="proc"></a>PROC
 
@@ -21,7 +21,7 @@ ms.locfileid: "50439620"
 
 > *標籤*程序 [[*距離*]] [[*langtype*]] [[*可視性*]] [[\<*prologuearg*>]] [[會使用*reglist*]] [[，*參數*[[:*標記*]]]...<br/>
 > [[畫面格 [[:*ehandler 位址*]]]]<br/>
-> *陳述式*<br/>
+> *statements*<br/>
 > *標籤*ENDP
 
 ## <a name="remarks"></a>備註

@@ -24,11 +24,11 @@ helpviewer_keywords:
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
 ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356312"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -47,7 +47,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 *buffer*<br/>
@@ -57,7 +57,7 @@ int setvbuf(
 緩衝處理的模式。
 
 *size*<br/>
-緩衝區大小 (以位元組為單位)。 允許的範圍︰ 2 < =*大小*< = INT_MAX (2147483647)。 就內部而言，為提供的值*大小*無條件捨去到最接近的 2 倍數。
+緩衝區大小 (以位元組為單位)。 允許的範圍：2 < =*大小*< = INT_MAX (2147483647)。 就內部而言，為提供的值*大小*無條件捨去到最接近的 2 倍數。
 
 ## <a name="return-value"></a>傳回值
 

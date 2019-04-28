@@ -11,15 +11,15 @@ helpviewer_keywords:
 - COM_INTERFACE_ENTRY_IID macro
 ms.assetid: 7fea86e6-247f-4063-be6e-85588a9e3719
 ms.openlocfilehash: 2ed0e9e8c74e02917e852b8f95ebff1b048afaef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261575"
 ---
 # <a name="multiple-dual-interfaces"></a>多個雙重介面
 
-您可能想要合併的雙重介面 （也就是彈性的 vtable 和晚期繫結，因此讓類別可以使用指令碼語言，以及 c + +） 的優點與技術在多重繼承。
+您可能想要合併的雙重介面的優點 (也就是彈性 vtable 和晚期繫結，因此讓類別可供指令碼語言也做為C++) 與技術在多重繼承。
 
 雖然可以公開 （expose） 單一的 COM 物件上的多個雙重介面，但不建議。 如果有多個雙重介面，必須有只有一個`IDispatch`公開的介面。 可用以確保這種情況的技巧會執行例如失去函式或更高的程式碼複雜度的負面影響。 優點和缺點，應該仔細衡量考慮這種方法，開發人員。
 

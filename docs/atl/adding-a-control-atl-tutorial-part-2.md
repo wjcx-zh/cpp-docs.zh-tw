@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
 ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223541"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>加入控制項 (ATL 教學課程，第 2 部分)
 
@@ -35,9 +35,9 @@ ms.locfileid: "57283224"
 |欄位|內容|
 |-----------|--------------|
 |**簡短名稱**|您輸入控制項的名稱。|
-|**類別**|建立來實作控制項的 c + + 類別名稱。|
-|**.h 檔案**|建立用來包含 c + + 類別定義的檔案。|
-|**.cpp 檔**|建立來包含 c + + 類別的實作檔案。|
+|**類別**|C++建立來實作控制項的類別名稱。|
+|**.h 檔案**|建立來包含定義的檔案C++類別。|
+|**.cpp 檔**|若要包含的實作所建立的檔案C++類別。|
 |**CoClass**|這個控制項元件類別的名稱。|
 |**Interface**|它的自訂方法和屬性，控制將實作的介面名稱。|
 |**Type**|控制項的描述。|
@@ -83,7 +83,7 @@ ms.locfileid: "57283224"
 
 |檔案|描述|
 |----------|-----------------|
-|PolyCtl.h|包含大部分的 c + + 類別的實作`CPolyCtl`。|
+|PolyCtl.h|包含大部分的實作的C++類別`CPolyCtl`。|
 |PolyCtl.cpp|包含的其餘部分`CPolyCtl`。|
 |PolyCtl.rgs|包含用來登錄此控制項登錄指令碼的文字檔。|
 |PolyCtl.htm|Web 網頁，其中包含新建立之控制項的參考。|

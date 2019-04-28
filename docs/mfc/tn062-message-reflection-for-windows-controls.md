@@ -1,5 +1,5 @@
 ---
-title: TN062：Windows 控制項的訊息反映
+title: TN062:Windows 控制項的訊息反映
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,20 +28,20 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351837"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062：Windows 控制項的訊息反映
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062:Windows 控制項的訊息反映
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
 這個技術提示說明訊息反映，MFC 4.0 的新功能。 它也包含用來建立簡單的可重複使用控制項，會使用訊息反映的指示進行。
 
-這個技術提示不討論訊息反映，因為這適用於 ActiveX 控制項 （先前稱為 OLE 控制項）。 請參閱文章[ActiveX 控制項： 子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+這個技術提示不討論訊息反映，因為這適用於 ActiveX 控制項 （先前稱為 OLE 控制項）。 請參閱文章[ActiveX 控制項：子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
 
 **何謂訊息反映**
 
@@ -63,7 +63,7 @@ WM_NOTIFY 訊息傳送時，控制項就會提供第一次的機會處理它。 
 
 反映訊息的訊息對應巨集已與通知規則稍有不同： 它有 *_REFLECT*附加至其一般名稱。 比方說，以處理 WM_NOTIFY 訊息父項中的，您會使用在父項的訊息對應中的 ON_NOTIFY 巨集。 若要處理反映的訊息中的子控制項，請在 子控制項的訊息對應中使用 ON_NOTIFY_REFLECT 巨集。 在某些情況下，參數也有不同。 請注意 ClassWizard 可以通常為您新增的訊息對應項目，並提供基本架構的函式實作，使用正確的參數。
 
-請參閱[TN061： 和 WM_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)針對新的 WM_NOTIFY 訊息的詳細資訊。
+請參閱[TN061:ON_NOTIFY 和 WM_NOTIFY 訊息](../mfc/tn061-on-notify-and-wm-notify-messages.md)針對新的 WM_NOTIFY 訊息的詳細資訊。
 
 **訊息對應項目和反映訊息的處理常式函式原型**
 
@@ -87,28 +87,28 @@ ClassWizard 通常可以為您新增這些訊息對應項目，並提供基本�
 
 |對應項目|函式原型|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **，** `memberFxn` **)**|**afx_msg void** `memberFxn` **（);**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **，** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **，LRESULT** <strong>\*</strong>*結果* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT （)**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **，UINT** `nCtlColor` **);**|
-|**ON_WM_DRAWITEM_REFLECT （)**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT （)**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT （)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT （)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
-|**ON_WM_CHARTOITEM_REFLECT （)**|**afx_msg int CharToItem (UINT** `nKey` **，UINT** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT （)**|**afx_msg int VKeyToItem (UINT** `nKey` **，UINT** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT （)**|**afx_msg void HScroll (UINT** `nSBCode` **，UINT** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT （)**|**afx_msg void VScroll (UINT** `nSBCode` **，UINT** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT （)**|**afx_msg void ParentNotify (UINT** `message` **，LPARAM** `lParam` **);**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
+|**ON_WM_DRAWITEM_REFLECT( )**|**afx_msg void DrawItem ( LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem ( LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem ( LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem ( LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_CHARTOITEM_REFLECT( )**|**afx_msg int CharToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem ( UINT** `nKey` **, UINT** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll ( UINT** `nSBCode` **, UINT** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|
 
 ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 巨集必須以處理特定的訊息允許多個物件 （例如控制項和其父系） 的變化。
 
 |對應項目|函式原型|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **，** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **，LRESULT** <strong>\*</strong>*結果* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **，** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **（);**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>可重複使用的控制項的範例處理反映訊息：
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>處理反映訊息：可重複使用的控制項範例
 
 這個簡單的範例會建立可重複使用的控制項稱為`CYellowEdit`。 控制項運作方式與一般的編輯控制項相同，不同之處在於它會顯示黃色背景的黑色文字。 它可以輕鬆地加入允許的成員函式`CYellowEdit`控制項來顯示不同的色彩。
 
@@ -118,7 +118,7 @@ ON_NOTIFY_REFLECT 和 ON_CONTROL_REFLECT 巨集必須以處理特定的訊息允
 
    您必須擁有用來開發可重複使用的控制項中的應用程式。 如果您沒有要使用現有的應用程式，建立使用 AppWizard 的對話方塊架構應用程式。
 
-2. 載入 Visual c + + 專案，使用建立新的類別，稱為 ClassWizard`CYellowEdit`根據`CEdit`。
+2. 與您的專案載入到視覺效果C++，用以建立新的類別，稱為 ClassWizard`CYellowEdit`根據`CEdit`。
 
 3. 將三個成員變數加入您`CYellowEdit`類別。 前兩個都*COLORREF*變數來保存的文字色彩和背景色彩。 第三個會`CBrush`物件會包含對於繪製背景的筆刷。 `CBrush`物件可讓您建立一次，只是在那之後，參考它的筆刷，以及當自動終結筆刷`CYellowEdit`控制項被終結。
 

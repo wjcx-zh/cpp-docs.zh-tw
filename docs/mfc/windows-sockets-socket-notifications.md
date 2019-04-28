@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
 ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58774330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358186"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows Sockets:通訊端告知
 
@@ -47,17 +47,17 @@ MFC 呼叫通知函式，讓您自訂您的通訊端行為時，會收到通知�
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets:衍生自通訊端類別](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows Socket：從通訊端類別衍生](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows Sockets:通訊端與封存的運作方式](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Socket：如何搭配使用通訊端與封存](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)
+- [Windows Socket：封鎖](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Socket：位元組順序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)
+- [Windows Socket：轉換字串](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>另請參閱
 

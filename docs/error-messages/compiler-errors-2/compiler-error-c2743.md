@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
 ms.openlocfilehash: 03cd7c13e093be5073b3df7e7cf29dda870bc47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62228926"
 ---
 # <a name="compiler-error-c2743"></a>編譯器錯誤 C2743
 

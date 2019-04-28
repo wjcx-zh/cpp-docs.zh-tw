@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246227"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 
@@ -69,8 +69,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|轉換運算子。|
 |[CComPtrBase::operator ！](#operator_not)|NOT 運算子。|
 |[CComPtrBase::operator （& s)](#operator_amp)|& 運算子。|
-|[CComPtrBase::operator *](#operator_star)|
-  \* 運算子。|
+|[CComPtrBase::operator *](#operator_star)|\* 運算子。|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小於-than 運算子。|
 |[CComPtrBase::operator = =](#operator_eq_eq)|等號比較運算子。|
 |[CComPtrBase::operator->](#operator_ptr)|指標至成員運算子中。|
@@ -270,8 +269,7 @@ T** operator&() throw();
 
 ##  <a name="operator_star"></a>  CComPtrBase::operator \*
 
-
-  \* 運算子。
+\* 運算子。
 
 ```
 T& operator*() const throw();

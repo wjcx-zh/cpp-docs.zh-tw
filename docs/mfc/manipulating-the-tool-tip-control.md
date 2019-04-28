@@ -6,16 +6,15 @@ helpviewer_keywords:
 - tool tips [MFC], attributes
 ms.assetid: 3600afe5-712a-4b56-8456-96e85fe879af
 ms.openlocfilehash: d8c994748239871f17b878dd8ea7505a2a8a0b65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226153"
 ---
 # <a name="manipulating-the-tool-tip-control"></a>管理工具提示控制項
 
-
-  `CToolTipCtrl` 類別提供一組成員函式，其可以控制 `CToolTipCtrl` 物件和工具提示視窗的各種屬性。
+`CToolTipCtrl` 類別提供一組成員函式，其可以控制 `CToolTipCtrl` 物件和工具提示視窗的各種屬性。
 
 初始、 快顯和重新顯示期間，可以設定工具提示視窗，並擷取透過呼叫[GetDelayTime](../mfc/reference/ctooltipctrl-class.md#getdelaytime)並[SetDelayTime](../mfc/reference/ctooltipctrl-class.md#setdelaytime)。
 

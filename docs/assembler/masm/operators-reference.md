@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210810"
 ---
 # <a name="masm-operators-reference"></a>MASM 運算子參考
 
@@ -18,8 +18,8 @@ ms.locfileid: "50430455"
 
 ||||
 |-|-|-|
-|[* （乘）](operator-multiply.md)|[+ （加號）](operator-add.md)|[-（減法或否定）](operator-subtract-2.md)|
-|[.（欄位）](operator-dot.md)|[/ （除法）](operator-subtract-1.md)|[&#91;&#93;（索引）](operator-brackets.md)|
+|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[-（減法或否定）](operator-subtract-2.md)|
+|[.（欄位）](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93;（索引）](operator-brackets.md)|
 |[MOD （餘數）](operator-mod.md)|||
 
 ## <a name="control-flow"></a>控制流程

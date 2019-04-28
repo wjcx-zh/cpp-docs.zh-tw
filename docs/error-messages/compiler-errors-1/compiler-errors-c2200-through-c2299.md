@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2200 到 C2299
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2200 至 C2299
+ms.date: 04/21/2019
 f1_keywords:
 - C2202
 - C2209
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2291
 - C2294
 ms.assetid: 9b36d11b-9510-4390-96f1-0c9235124d14
-ms.openlocfilehash: b41887e941796e7f8f2f919ed76fbaaa624227ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 5af97ab46a97d3019abcc937cc0a74c5f865a9ff
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360511"
 ---
-# <a name="compiler-errors-c2200-through-c2299"></a>編譯器錯誤 C2200 到 C2299
+# <a name="compiler-errors-c2200-through-c2299"></a>編譯器錯誤 C2200 至 C2299
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -131,7 +131,7 @@ ms.locfileid: "50432522"
 |[編譯器錯誤 C2259](compiler-error-c2259.md)|'*類別*': 無法具現化抽象類別|
 |編譯器錯誤 C2260|'*規範*': 無效的 InternalsVisibleToAttribute friend 組件規範|
 |[編譯器錯誤 C2261](compiler-error-c2261.md)|'*字串*': 組件參考無效，無法解析|
-|[編譯器錯誤 C2262](compiler-error-c2262.md)|'*規範*': InternalsVisibleTo 宣告不能指定版本、 文化特性或處理器架構|
+|[編譯器錯誤 C2262](compiler-error-c2262.md)|'*規範*':InternalsVisibleTo 宣告不能指定版本、 文化特性或處理器架構|
 |編譯器錯誤 C2263|已過時。|
 |[編譯器錯誤 C2264](compiler-error-c2264.md)|'*函式*': 函式定義或宣告中的錯誤; 未呼叫函式|
 |編譯器錯誤 C2265|已過時。|
@@ -159,7 +159,7 @@ ms.locfileid: "50432522"
 |[編譯器錯誤 C2287](compiler-error-c2287.md)|'*識別碼*': 繼承表示:'*inheritiance*'是不可用的必要'*繼承*'|
 |編譯器錯誤 C2288|已過時。|
 |[編譯器錯誤 C2289](compiler-error-c2289.md)|相同類型的限定詞已經使用多次|
-|[編譯器錯誤 C2290](compiler-error-c2290.md)|忽略 c + + 'asm' 語法。 請使用 __asm。|
+|[編譯器錯誤 C2290](compiler-error-c2290.md)|C++忽略 'asm' 語法。 請使用 __asm。|
 |編譯器錯誤 C2291|無法匯出匿名命名空間。|
 |[編譯器錯誤 C2292](compiler-error-c2292.md)|'*識別碼*': 最佳情況下繼承表示： *inheritance1*' 宣告，但 '*和繼承 2*' 必要|
 |[編譯器錯誤 C2293](compiler-error-c2293.md)|'*識別碼*': 不合法的 __based 規範成員變數|
@@ -169,3 +169,8 @@ ms.locfileid: "50432522"
 |[編譯器錯誤 C2297](compiler-error-c2297.md)|'*運算子*': 不合法，右運算元具有類型'*型別*'|
 |[編譯器錯誤 C2298](compiler-error-c2298.md)|遺漏的呼叫來繫結至成員函式的指標|
 |[編譯器錯誤 C2299](compiler-error-c2299.md)|'*函式*': 行為變更： 明確特製化不能複製建構函式或複製指派運算子|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

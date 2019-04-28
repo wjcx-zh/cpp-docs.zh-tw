@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
 ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368418"
 ---
 # <a name="compiler-error-c2561"></a>編譯器錯誤 C2561
 
@@ -25,7 +25,7 @@ ms.locfileid: "50517607"
 
 1. 請檢查所有可能的分支，函式的傳回類型在原型中宣告的值。
 
-1. 包含存放區中的傳回值的內嵌組件常式的 c + + 函式`AX`註冊可能需要的 return 陳述式。 中的值複製`AX`給暫存變數，並從函式會傳回該變數。
+1. C++包含存放區中的傳回值的內嵌組件常式的函式`AX`註冊可能需要的 return 陳述式。 中的值複製`AX`給暫存變數，並從函式會傳回該變數。
 
 下列範例會產生 C2561:
 

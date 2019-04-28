@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤s C2300 Through C2399
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2300 至 C2399
+ms.date: 04/21/2019
 f1_keywords:
 - C2303
 - C2304
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - C2398
 - C2399
 ms.assetid: 07ca45b5-b2f0-4049-837b-40a7a3caed88
-ms.openlocfilehash: 6f95ec90a08b842259a383d7bfc6af2cba119e14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 28ab73857b46fed29e2ba8d7bc051ffb81b54bb3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360446"
 ---
-# <a name="compiler-errors-c2300-through-c2399"></a>編譯器錯誤s C2300 Through C2399
+# <a name="compiler-errors-c2300-through-c2399"></a>編譯器錯誤 C2300 至 C2399
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -73,7 +73,7 @@ ms.locfileid: "50580631"
 
 |錯誤|訊息|
 |-----------|-------------|
-|[編譯器錯誤 C2300](compiler-error-c2300.md)|'*類別*': 類別沒有解構函式呼叫' ~*類別*'|
+|[編譯器錯誤 s C2300](compiler-error-c2300.md)|'*類別*': 類別沒有解構函式呼叫' ~*類別*'|
 |[編譯器錯誤 C2301](compiler-error-c2301.md)|左側的 '-> ~*識別碼*' 必須指向類別/結構/等位|
 |[編譯器錯誤 C2302](compiler-error-c2302.md)|左邊 '。 ~*識別碼*' 必須有類別/結構/等位型別|
 |編譯器錯誤 C2303|協同程式中，無法使用結構化例外狀況處理|
@@ -103,7 +103,7 @@ ms.locfileid: "50580631"
 |[編譯器錯誤 C2327](compiler-error-c2327.md)|'*識別碼*': 不是型別名稱、 靜態或列舉值|
 |編譯器錯誤 C2328|'*關鍵字*': 不支援關鍵字|
 |編譯器錯誤 C2329|'*識別碼*': 函式指標無法使用 __ptr64|
-|編譯器錯誤 C2330|'implementation_key （）' 只適用於受限於 #pragma start_map_region/stop_map_region 界限的區域中|
+|編譯器錯誤 C2330|'implementation_key( )' is only valid in a region bounded by #pragma start_map_region/stop_map_region|
 |編譯器錯誤 C2331|若要存取 '*識別碼*'現在已經定義為'*accessibility1*'，之前它定義為'*accessibility2*'|
 |[編譯器錯誤 C2332](compiler-error-c2332.md)|'*typedef*': 遺漏標記名稱|
 |[編譯器錯誤 C2333](compiler-error-c2333.md)|'*函式*': 函式宣告中的錯誤; 略過函式主體|
@@ -117,14 +117,14 @@ ms.locfileid: "50580631"
 |[編譯器錯誤 C2341](compiler-error-c2341.md)|'*一節*': 您必須使用 #pragma data_seg、 code_seg 或先前的區段，將定義區段|
 |編譯器錯誤 C2342|語法錯誤： 衝突的類型限定詞|
 |編譯器錯誤 C2343|'*一節*': 衝突的區段屬性|
-|[編譯器錯誤 C2344](compiler-error-c2344.md)|對齊 (*數字*): 對齊必須是 2 的乘冪|
-|[編譯器錯誤 C2345](compiler-error-c2345.md)|對齊 (*數字*): 不合法的 align 值|
+|[編譯器錯誤 C2344](compiler-error-c2344.md)|align(*number*): alignment must be power of two|
+|[編譯器錯誤 C2345](compiler-error-c2345.md)|align(*number*): illegal alignment value|
 |[編譯器錯誤 C2346](compiler-error-c2346.md)|'*函式*' 無法編譯成原生: '*說明*'|
 |編譯器錯誤 C2347|已過時。|
 |[編譯器錯誤 C2348](compiler-error-c2348.md)|'*型別*': 不是 c-style 彙總，無法在內嵌 IDL 中匯出|
 |[編譯器錯誤 C2349](compiler-error-c2349.md)|'*函式*' 無法編譯為受控: '*說明*'; 使用非受控的 #pragma|
 |[編譯器錯誤 C2350](compiler-error-c2350.md)|'*識別碼*' 不是靜態成員|
-|[編譯器錯誤 C2351](compiler-error-c2351.md)|過時的 c + + 建構函式初始化語法|
+|[編譯器錯誤 C2351](compiler-error-c2351.md)|已淘汰C++建構函式初始化語法|
 |[編譯器錯誤 C2352](compiler-error-c2352.md)|'*識別碼*': 不合法的呼叫非靜態成員函式|
 |[編譯器錯誤 C2353](compiler-error-c2353.md)|不允許例外狀況規格|
 |編譯器錯誤 C2354|已過時。|
@@ -154,7 +154,7 @@ ms.locfileid: "50580631"
 |[編譯器錯誤 C2378](compiler-error-c2378.md)|'*識別碼*': 重複定義; 符號無法以 typedef 多載|
 |[編譯器錯誤 C2379](compiler-error-c2379.md)|型式參數*數字*有不同的類型，當升級|
 |[編譯器錯誤 C2380](compiler-error-c2380.md)|型別前置 '*識別碼*' （具有建構函式傳回的型別或目前的類別名稱的重新定義不合法？）|
-|[編譯器錯誤 C2381](compiler-error-c2381.md)|'*識別碼*': 重複定義;'__declspec （noreturn）' [[noreturn]]' 不同|
+|[編譯器錯誤 C2381](compiler-error-c2381.md)|'*identifier*': redefinition; '__declspec(noreturn)' or '[[noreturn]]' differs|
 |[編譯器錯誤 C2382](compiler-error-c2382.md)|'*識別碼*': 重複定義; 不同的例外狀況規格|
 |[編譯器錯誤 C2383](compiler-error-c2383.md)|'*識別碼*': 預設引數不允許在這個符號|
 |[編譯器錯誤 C2384](compiler-error-c2384.md)|'*成員*': 無法以受管理/WinRT 類別的成員套用 thread_local 或 __declspec （thread）|
@@ -167,9 +167,14 @@ ms.locfileid: "50580631"
 |[編譯器錯誤 C2391](compiler-error-c2391.md)|'*識別碼*': 'friend' 不能在類型定義|
 |[編譯器錯誤 C2392](compiler-error-c2392.md)|'*member1*': covariant 傳回類型不支援在受管理/WinRT 類型中，否則為'*member2*' 會覆寫|
 |[編譯器錯誤 C2393](compiler-error-c2393.md)|'*符號*': per-appdomain 符號不可配置在區段'*區段*'|
-|[編譯器錯誤 C2394](compiler-error-c2394.md)|'*型別*:: 運算子*運算子*': CLR/WinRT 運算子無效。 至少一個參數必須屬於下列類型: 'T ^'，' T ^ %'，' T ^ &'，其中 T ='*型別*'|
-|[編譯器錯誤 C2395](compiler-error-c2395.md)|'*型別*:: 運算子*運算子*': CLR/WinRT 運算子無效。 至少一個參數必須是下列類型的： 無法 '，無法 %'，無法 &'，' T ^'，' T ^ %'，' T ^ &'，其中 T = '*型別*'|
-|[編譯器錯誤 C2396](compiler-error-c2396.md)|'*type1*:: 運算子*type2*': 不是有效的 CLR/WinRT 使用者定義轉換函式。 必須轉換自或轉換成: 'T ^'、' T ^ %'，' T ^ &'，其中 T = '*type1*'|
+|[編譯器錯誤 C2394](compiler-error-c2394.md)|'*型別*:: 運算子*運算子*':CLR/WinRT 運算子無效。 至少一個參數必須是下列類型：'T ^'、' T ^ %'，' T ^ &'，其中 T = '*型別*'|
+|[編譯器錯誤 C2395](compiler-error-c2395.md)|'*型別*:: 運算子*運算子*':CLR/WinRT 運算子無效。 至少一個參數必須是下列類型：無法 '，' T %'，無法 &'，' T ^'，' T ^ %'，' T ^ &'，其中 T = '*類型*'|
+|[編譯器錯誤 C2396](compiler-error-c2396.md)|'*type1*:: 運算子*type2*':CLR/WinRT 使用者定義轉換函式無效。 必須轉換自或轉換成：'T ^'、' T ^ %'，' T ^ &'，其中 T = '*type1*'|
 |[編譯器錯誤 C2397](compiler-error-c2397.md)|從 '*type1*'到'*type2*' 必須是縮小轉換|
 |編譯器錯誤 C2398|元素 '*數字*': 從轉換'*type1*'to'*type2*' 必須是縮小轉換|
 |編譯器錯誤 C2399|已過時。|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

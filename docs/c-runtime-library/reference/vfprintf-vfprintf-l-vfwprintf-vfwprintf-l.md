@@ -36,11 +36,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
 ms.openlocfilehash: 889fedde263b9815597702f1e9d5b252f3998bdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364892"
 ---
 # <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 
@@ -75,7 +75,7 @@ int _vfwprintf_l(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 *格式*<br/>
@@ -117,7 +117,7 @@ int _vfwprintf_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**vfprintf**， **_vfprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vfprintf**, **_vfprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
 |**vfwprintf**， **_vfwprintf_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。

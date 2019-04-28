@@ -12,11 +12,11 @@ helpviewer_keywords:
 - strings [C++], releasing
 ms.assetid: 98041e29-3442-4a02-b425-7a4a13e9cc84
 ms.openlocfilehash: adc3e1efd032bb3e3e45381da24c5a5b59852375
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216965"
 ---
 # <a name="allocating-and-releasing-memory-for-a-bstr"></a>針對 BSTR 配置及釋放記憶體
 
@@ -24,7 +24,7 @@ ms.locfileid: "57747134"
 
 配置及釋放記憶體的規則一般來說，配置給`BSTR`s 如下所示：
 
-- 當您呼叫的函式必須要有`BSTR`引數，您必須配置的記憶體`BSTR`呼叫之前和之後釋放它。 例如: 
+- 當您呼叫的函式必須要有`BSTR`引數，您必須配置的記憶體`BSTR`呼叫之前和之後釋放它。 例如：
 
    [!code-cpp[NVC_ATLMFC_Utilities#192](../atl-mfc-shared/codesnippet/cpp/allocating-and-releasing-memory-for-a-bstr_1.cpp)]
 

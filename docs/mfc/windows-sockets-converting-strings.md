@@ -7,11 +7,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 ms.openlocfilehash: eaf278fc2689f0afa9ab6ff30f1294c36de5d7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217387"
 ---
 # <a name="windows-sockets-converting-strings"></a>Windows Sockets:將字串轉換
 
@@ -25,15 +25,15 @@ ms.locfileid: "57298356"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Socket：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets:背景](../mfc/windows-sockets-background.md)
+- [Windows Socket：背景](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 

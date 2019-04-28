@@ -32,11 +32,11 @@ helpviewer_keywords:
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
 ms.openlocfilehash: 1d5f35615aee058b51c0b14ff9ccd38894427b20
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355625"
 ---
 # <a name="sopens-wsopens"></a>_sopen_s、_wsopen_s
 
@@ -113,16 +113,16 @@ errno_t _wsopen_s(
 | **_O_APPEND** | 在每次寫入作業之前，將檔案指標移到檔案的結尾。 |
 | **_O_BINARY** | 以二進位 (未轉譯) 模式開啟檔案 (如需二進位模式的描述，請參閱 [fopen](fopen-wfopen.md))。 |
 | **_O_CREAT** | 建立檔案並開啟以供寫入。 如果指定的檔案有任何作用*filename*存在。 *Pmode*引數時，必須 **_O_CREAT**指定。 |
-| **_O_CREAT** &AMP;#124; **_O_SHORT_LIVED** | 將檔案建立為暫存檔，若有可能的話，請勿清除至磁碟。 *Pmode*引數時，必須 **_O_CREAT**指定。 |
-| **_O_CREAT** &AMP;#124; **_O_TEMPORARY** | 將檔案建立為暫存檔；當最後一個檔案描述項關閉時會刪除檔案。 *Pmode*引數時，必須 **_O_CREAT**指定。 |
-| **_O_CREAT**&AMP;#124; ` _O_EXCL` | 如果指定的檔案會傳回錯誤值*filename*存在。 只有在搭配使用時，才適用 **_O_CREAT**。 |
+| **_O_CREAT** &#124; **_O_SHORT_LIVED** | 將檔案建立為暫存檔，若有可能的話，請勿清除至磁碟。 *Pmode*引數時，必須 **_O_CREAT**指定。 |
+| **_O_CREAT** &#124; **_O_TEMPORARY** | 將檔案建立為暫存檔；當最後一個檔案描述項關閉時會刪除檔案。 *Pmode*引數時，必須 **_O_CREAT**指定。 |
+| **_O_CREAT** &#124; ` _O_EXCL` | 如果指定的檔案會傳回錯誤值*filename*存在。 只有在搭配使用時，才適用 **_O_CREAT**。 |
 | **_O_NOINHERIT** | 防止建立共用檔案描述項。 |
 | **_O_RANDOM** | 指定針對但不限於磁碟的隨機存取進行快取最佳化。 |
 | **_O_RDONLY** | 開啟檔案為僅供讀取。 不能與指定 **_O_RDWR**或是 **_O_WRONLY**。 |
 | **_O_RDWR** | 開啟檔案以進行讀取和寫入。 不能與指定 **_O_RDONLY**或是 **_O_WRONLY**。 |
 | **_O_SEQUENTIAL** | 指定針對但不限於磁碟的循序存取進行快取最佳化。 |
 | **_O_TEXT** | 以文字 (已轉譯) 模式開啟檔案 (如需詳細資訊，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 和 [fopen](fopen-wfopen.md))。 |
-| **_O_TRUNC** | 開啟檔案，並將檔案截斷為零長度；檔案必須具有寫入權限。 不能與指定 **_O_RDONLY**。 **_O_TRUNC**搭配 **_O_CREAT**開啟現有的檔案，或建立檔案。 **注意︰** **_O_TRUNC**旗標會終結指定檔案的內容。 |
+| **_O_TRUNC** | 開啟檔案，並將檔案截斷為零長度；檔案必須具有寫入權限。 不能與指定 **_O_RDONLY**。 **_O_TRUNC**搭配 **_O_CREAT**開啟現有的檔案，或建立檔案。 **注意：** **_O_TRUNC**旗標會終結指定檔案的內容。 |
 | **_O_WRONLY** | 將檔案開啟為僅供寫入。 不能與指定 **_O_RDONLY**或是 **_O_RDWR**。 |
 | **_O_U16TEXT** | 以 Unicode UTF-16 模式開啟檔案。 |
 | **_O_U8TEXT** | 以 Unicode UTF-8 模式開啟檔案。 |
@@ -149,7 +149,7 @@ errno_t _wsopen_s(
 |-|-|
 | **_S_IREAD** | 只允許讀取。 |
 | **_S_IWRITE** | 允許寫入 (實際上允許讀取和寫入)。 |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 允許讀取和寫入。 |
+| **_S_IREAD** &#124; **_S_IWRITE** | 允許讀取和寫入。 |
 
 若沒有指定寫入權限，則檔案為唯讀。 在 Windows 作業系統中，所有檔案皆為可讀取，不可能授與僅限寫入的權限。 因此，模式 **_S_IWRITE**並 **_S_IREAD** | **_S_IWRITE**相等。
 

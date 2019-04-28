@@ -13,11 +13,11 @@ helpviewer_keywords:
 - cl.exe compiler, command-line syntax
 ms.assetid: 192533e7-86f2-48e0-a08f-b5e4e3a4e784
 ms.openlocfilehash: 6cd015211a7a8039c5a1a2db696bf2160e282cd1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270428"
 ---
 # <a name="help-compiler-command-line-help"></a>/HELP (編譯器命令列說明)
 
@@ -44,4 +44,4 @@ ms.locfileid: "57813990"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

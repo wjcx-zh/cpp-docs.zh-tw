@@ -1,5 +1,5 @@
 ---
-title: 指標 （c + +）
+title: 指標 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarators, pointers
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223062"
 ---
-# <a name="pointers-c"></a>指標 （c + +）
+# <a name="pointers-c"></a>指標 (C++)
 
 指標是使用下列序列宣告。
 
-> \[*儲存類別規範*] \[ *cv 限定詞*]*型別規範* \[ *ms 修飾詞*] *宣告子* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 其中任何有效的指標宣告子可能會用於*宣告子*。 簡單指標宣告子的語法如下：
 
-> __\*__ \[*cv 限定詞*]*識別項* \[ **=** *運算式*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. 宣告指定名稱：
 
@@ -50,7 +50,7 @@ ms.locfileid: "50667866"
 
 對於指標陣列，其語法如下所示：
 
-> __\*__ *識別項* **\[** \[*常數運算式*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 多個宣告子及其初始設定式可以一起出現在逗號分隔清單的單一宣告中，其後為宣告指定名稱。
 

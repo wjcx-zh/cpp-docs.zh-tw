@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤s C2100 through C2199
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2100 至 C2199
+ms.date: 04/21/2019
 f1_keywords:
 - C2119
 - C2123
@@ -23,14 +23,14 @@ helpviewer_keywords:
 - C2187
 - C2189
 ms.assetid: 1ccab076-0954-4386-b959-d3112a6793ae
-ms.openlocfilehash: 31974bb830364b2ef41a7da17cb0ad95d931f771
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
-ms.translationtype: MT
+ms.openlocfilehash: 3a5a5368700eb1c4c585826021fefc21c25ecedf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62360537"
 ---
-# <a name="compiler-errors-c2100-through-c2199"></a>編譯器錯誤s C2100 through C2199
+# <a name="compiler-errors-c2100-through-c2199"></a>編譯器錯誤 C2100 至 C2199
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57423530"
 |[編譯器錯誤 C2101](compiler-error-c2101.md)|不可在常數上使用 '&'|
 |[編譯器錯誤 C2102](compiler-error-c2102.md)|'&' 需要左值 (l-value)|
 |[編譯器錯誤 C2103](compiler-error-c2103.md)|不可在暫存器變數上使用 '&'|
-|[編譯器錯誤 C2104](compiler-error-c2104.md)|在位元欄位上使用 '&' 將被忽略|
+|[編譯器錯誤 C2104](compiler-error-c2104.md)|' &' 上忽略的位元欄位|
 |[編譯器錯誤 C2105](compiler-error-c2105.md)|'*operator*' needs l-value|
 |[編譯器錯誤 C2106](compiler-error-c2106.md)|'*運算子*': 左的運算元必須是左值|
 |[編譯器錯誤 C2107](compiler-error-c2107.md)|不合法的索引，不允許間接取值|
@@ -140,3 +140,8 @@ ms.locfileid: "57423530"
 |[編譯器錯誤 C2197](compiler-error-c2197.md)|'*函式*': 呼叫的引數太多|
 |[編譯器錯誤 C2198](compiler-error-c2198.md)|'*函式*': 呼叫的引數太少|
 |[編譯器錯誤 C2199](compiler-error-c2199.md)|語法錯誤： 找到 '*識別碼*(' 在全域範圍 （預定是宣告嗎？）|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

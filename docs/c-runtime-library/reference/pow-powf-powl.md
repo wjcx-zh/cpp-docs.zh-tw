@@ -34,11 +34,11 @@ helpviewer_keywords:
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
 ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232230"
 ---
 # <a name="pow-powf-powl"></a>pow、powf、powl
 
@@ -84,7 +84,7 @@ long double pow( long double x, int y );  // C++ only
 
 **pow**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-因為 c + + 允許多載，所以您可以呼叫任何的各種多載**pow**。 在 C 程式中， **pow**一律會採用兩個**double**值並傳回**double**值。
+因為C++允許多載，您可以呼叫任何的各種多載**pow**。 在 C 程式中， **pow**一律會採用兩個**double**值並傳回**double**值。
 
 `pow(int, int)` 已無法使用。 如果您使用這個多載，編譯器可能會發出[C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md)。 若要避免這個問題，將轉換的第一個參數**雙**， **float**，或**長** **double**。
 

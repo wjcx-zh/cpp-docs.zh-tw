@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CComClassFactorySingleton class
 ms.assetid: debb983c-382b-487b-8d42-7ea26dc158b8
 ms.openlocfilehash: 480b4c2a6e052e8e0823b97b548fc5d07b55230f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260171"
 ---
 # <a name="ccomclassfactorysingleton-class"></a>CComClassFactorySingleton 類別
 
@@ -53,7 +53,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ## <a name="remarks"></a>備註
 
-ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)物件的類別定義中的巨集。 例如: 
+ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告`CComClassFactory`做為預設 class factory。 若要使用`CComClassFactorySingleton`，指定[DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)物件的類別定義中的巨集。 例如：
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/ccomclassfactorysingleton-class_1.h)]
 
@@ -108,7 +108,7 @@ CComPtr<IUnknown> m_spObj;
 
 每次呼叫[CreateInstance](#createinstance)方法只會查詢此物件的介面指標。
 
-請注意，目前的表單`m_spObj`提供一項重大變更的方式，`CComClassFactorySingleton`之前在舊版的 ATL 在舊版`CComClassFactorySingleton`與 class factory，同時在伺服器初始化期間建立物件。 Visual c + +.NET 2003年，被建立物件時，延遲的第一個要求。 這項變更可能導致錯誤，在早期初始化所依賴的程式。
+請注意，目前的表單`m_spObj`提供一項重大變更的方式，`CComClassFactorySingleton`之前在舊版的 ATL 在舊版`CComClassFactorySingleton`與 class factory，同時在伺服器初始化期間建立物件。 在視覺效果C++.NET 2003 中，建立物件時，延遲的第一個要求。 這項變更可能導致錯誤，在早期初始化所依賴的程式。
 
 ## <a name="see-also"></a>另請參閱
 

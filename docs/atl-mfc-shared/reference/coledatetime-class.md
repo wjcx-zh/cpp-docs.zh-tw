@@ -35,11 +35,11 @@ helpviewer_keywords:
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
 ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252697"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -128,7 +128,7 @@ class COleDateTime
 
 如果您建立`COleDateTime`藉由使用日期的物件少於 100 個，日期是已接受，但後續呼叫`GetYear`， `GetMonth`， `GetDay`， `GetHour`， `GetMinute`，和`GetSecond`失敗，並傳回-1。 先前，您可以使用兩位數日期，但是日期必須是 100 或更大，在 MFC 4.2 和更新版本。
 
-若要避免發生問題，指定四位數的日期。 例如: 
+若要避免發生問題，指定四位數的日期。 例如：
 
 [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]
 
@@ -708,7 +708,7 @@ enum DateTimeStatus
 
 - `COleDateTime::invalid` 指出這個`COleDateTime`物件無效，也就是它的值可能不正確。
 
-- `COleDateTime::null` 指出這個`COleDateTime`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleDateTime::null` 指出這個`COleDateTime`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 狀態`COleDateTime`在下列情況中的物件無效：
 
@@ -838,7 +838,7 @@ COleDateTime& operator=(const UDATE& uDate) throw();
 
 - **運算子 = (** `uDate` **)** `UDATE`值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;如果不成功，它會設定為無效。 A`UDATE`結構代表 「 解壓縮 」 日期。 如需詳細資訊，請參閱函式[VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)。
 
-- **運算子 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是與 Visual c + + 6.0 和 Visual c + +.NET 2003 SP2 相同。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](/windows/desktop/SysInfo/file-times)Windows SDK 中。
+- **運算子 = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)值會轉換並複製到這個`COleDateTime`物件。 如果轉換成功，這個物件的狀態設定為有效的;否則，會設定為無效。 `FILETIME` 使用全球定位時間 (UTC)，因此為 UTC 時間結構中，您的結果會從 UTC 時間轉換為當地時間，而且將會儲存為 variant 的時間。 此行為是相同視覺效果C++6.0 和 Visual C++.NET 2003 SP2。 如需詳細資訊，請參閱 <<c0> [ 檔案的時間](/windows/desktop/SysInfo/file-times)Windows SDK 中。
 
 如需詳細資訊，請參閱 < [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) Windows SDK 中的項目。
 

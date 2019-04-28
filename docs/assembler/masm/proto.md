@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
 ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210517"
 ---
 # <a name="proto"></a>PROTO
 
@@ -19,11 +19,11 @@ ms.locfileid: "50536704"
 
 ## <a name="syntax"></a>語法
 
-> *標籤* **PROTO** \[*距離*] \[ *langtype*] \[ __，__ \[*參數*]__:__*標記*]...
+> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
 
 ### <a name="parameters"></a>參數
 
-*標籤*<br/>
+*label*<br/>
 原型的函式的名稱。
 
 *distance*<br/>
@@ -32,14 +32,14 @@ ms.locfileid: "50536704"
 *langtype*<br/>
 （選擇性）設定程序和公用符號的呼叫和命名慣例。 支援的慣例如下：
 
-- 32 位元**平面**模型： **C**， **STDCALL**
+- 32 位元**一般**模型：**C**， **STDCALL**
 
-- 16 位元模型： **C**， **BASIC**， **FORTRAN**， **pascal 命名法**， **SYSCALL**， **STDCALL**
+- 16 位元的模型：**C**， **BASIC**， **FORTRAN**， **PASCAL 命名法**， **SYSCALL**， **STDCALL**
 
 *parameter*<br/>
 函式參數的選擇性名稱。
 
-*標記*<br/>
+*tag*<br/>
 函式參數的型別。
 
 *參數*並*標記*參數可能會出現許多次，一次的每個傳遞的引數。

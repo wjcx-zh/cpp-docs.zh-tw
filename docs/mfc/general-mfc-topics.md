@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769715"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219726"
 ---
 # <a name="general-mfc-topics"></a>一般 MFC 主題
 
@@ -33,7 +33,7 @@ MFC 架構可讓您使用 Windows 專業程式設計人員所提供的功能建�
 
 [在架構上建置](../mfc/building-on-the-framework.md)
 
-[CWinApp:應用程式類別](../mfc/cwinapp-the-application-class.md)
+[CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
 
 [文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)
 

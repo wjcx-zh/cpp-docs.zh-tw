@@ -12,11 +12,11 @@ helpviewer_keywords:
 - + operator
 ms.assetid: 2c58c4f4-0d92-4ae3-9d0c-1a6157875cc1
 ms.openlocfilehash: c1d5fc926b396f1ec44b9e44e79721e2ca4a0908
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244158"
 ---
 # <a name="unary-plus-and-negation-operators--and--"></a>一元正和負運算子：+ 和 -
 

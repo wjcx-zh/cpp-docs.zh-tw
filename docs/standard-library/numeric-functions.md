@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236544"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
@@ -49,7 +49,7 @@ Type accumulate(
 *first*<br/>
 輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的第一個元素。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的最後一個元素，這是在反覆累積中實際包含的最終元素的後面一個位置。
 
 *val*<br/>
@@ -189,10 +189,10 @@ OutputIterator adjacent_difference(
 *first*<br/>
 輸入迭代器，為輸入範圍中的第一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，為輸入範圍中的最後一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，定址在目的範圍中的第一個項目，該範圍中要存放一系列差異或指定作業的結果。
 
 *binary_op*<br/>
@@ -437,10 +437,10 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *first*<br/>
 輸入迭代器，定址對象是要填入的範圍中的第一個元素。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要填入的範圍中的最後一個元素。
 
-*值*<br/>
+*value*<br/>
 要儲存在第一個元素中並針對後續元素進行後續增量的開始值。
 
 ### <a name="remarks"></a>備註
@@ -511,10 +511,10 @@ OutputIterator partial_sum(
 *first*<br/>
 輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的第一個項目。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的最後一個項目，這是在反覆累積中實際包含的最終項目之外的一個位置。
 
-*結果*<br/>
+*result*<br/>
 輸出迭代器，定址在目的範圍中的第一個項目，該範圍中要存放一系列部分總和或指定作業的結果。
 
 *binary_op*<br/>

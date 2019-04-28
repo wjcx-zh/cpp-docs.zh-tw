@@ -1,319 +1,80 @@
 ---
-title: C/C++ 建置錯誤
+title: C /C++建置工具錯誤和警告
 ms.date: 11/17/2017
-f1_keywords:
-- CRT1002
-- CRT1003
-- CRT1004
-- CRT1005
-- CRT1006
-- CVT1101
-- CVT1102
-- CVT1104
-- CVT1106
-- CVT1107
-- CVT1108
-- CVT1109
-- CVT1110
-- LNK1100
-- LNK1101
-- LNK1102
-- LNK1105
-- LNK1108
-- LNK1109
-- LNK1111
-- LNK1114
-- LNK1115
-- LNK1117
-- LNK1118
-- LNK1119
-- LNK1121
-- LNK1129
-- LNK1130
-- LNK1131
-- LNK1132
-- LNK1137
-- LNK1144
-- LNK1145
-- LNK1146
-- LNK1147
-- LNK1148
-- LNK1149
-- LNK1154
-- LNK1155
-- LNK1156
-- LNK1159
-- LNK1160
-- LNK1161
-- LNK1162
-- LNK1163
-- LNK1165
-- LNK1167
-- LNK1170
-- LNK1171
-- LNK1172
-- LNK1173
-- LNK1174
-- LNK1175
-- LNK1178
-- LNK1180
-- LNK1182
-- LNK1183
-- LNK1184
-- LNK1185
-- LNK1186
-- LNK1187
-- LNK1190
-- LNK1194
-- LNK1195
-- LNK1197
-- LNK1198
-- LNK1199
-- LNK1207
-- LNK1209
-- LNK1210
-- LNK1212
-- LNK1213
-- LNK1214
-- LNK1216
-- LNK1219
-- LNK1220
-- LNK1227
-- LNK1229
-- LNK1230
-- LNK1232
-- LNK1233
-- LNK1234
-- LNK1235
-- LNK1236
-- LNK1242
-- LNK1243
-- LNK1244
-- LNK1246
-- LNK1247
-- LNK1249
-- LNK1250
-- LNK1252
-- LNK1253
-- LNK1255
-- LNK1257
-- LNK1258
-- LNK1260
-- LNK1261
-- LNK1262
-- LNK1263
-- LNK1265
-- LNK1266
-- LNK1267
-- LNK1268
-- LNK1269
-- LNK1270
-- LNK1272
-- LNK1274
-- LNK1276
-- LNK1279
-- LNK1280
-- LNK1281
-- LNK1283
-- LNK1285
-- LNK1286
-- LNK1289
-- LNK1290
-- LNK1291
-- LNK1292
-- LNK1293
-- LNK1294
-- LNK1295
-- LNK1297
-- LNK1298
-- LNK1299
-- LNK1300
-- LNK1301
-- LNK1303
-- LNK1304
-- LNK1305
-- LNK1307
-- LNK1308
-- LNK1310
-- LNK1311
-- LNK1315
-- LNK1316
-- LNK1317
-- LNK1318
-- LNK1319
-- LNK1320
-- LNK1321
-- LNK1322
-- LNK1323
-- LNK1324
-- LNK1325
-- LNK1327
-- LNK1328
-- LNK1329
-- LNK1330
-- LNK1331
-- LNK1332
-- LNK2002
-- LNK2003
-- LNK2009
-- LNK2014
-- LNK2015
-- LNK2016
-- LNK2018
-- LNK2021
-- LNK2024
-- LNK2029
-- LNK2030
-- LNK2032
-- LNK2034
-- LNK2035
-- LNK2036
-- LNK2037
-- LNK2039
-- LNK4003
-- LNK4012
-- LNK4013
-- LNK4017
-- LNK4018
-- LNK4019
-- LNK4020
-- LNK4030
-- LNK4031
-- LNK4038
-- LNK4040
-- LNK4041
-- LNK4042
-- LNK4043
-- LNK4046
-- LNK4047
-- LNK4048
-- LNK4051
-- LNK4052
-- LNK4056
-- LNK4060
-- LNK4061
-- LNK4062
-- LNK4066
-- LNK4067
-- LNK4068
-- LNK4069
-- LNK4072
-- LNK4077
-- LNK4079
-- LNK4081
-- LNK4085
-- LNK4087
-- LNK4088
-- LNK4093
-- LNK4094
-- LNK4097
-- LNK4103
-- LNK4108
-- LNK4195
-- LNK4196
-- LNK4198
-- LNK4202
-- LNK4203
-- LNK4207
-- LNK4208
-- LNK4209
-- LNK4223
-- LNK4225
-- LNK4226
-- LNK4228
-- LNK4232
-- LNK4233
-- LNK4236
-- LNK4238
-- LNK4239
-- LNK4240
-- LNK4241
-- LNK4242
-- LNK4243
-- LNK4244
-- LNK4245
-- LNK4246
-- LNK4249
-- LNK4250
-- LNK4251
-- LNK4252
-- LNK4255
-- LNK4256
-- LNK4257
-- LNK4258
-- LNK4259
-- LNK4260
-- LNK4261
-- LNK4262
-- LNK4263
-- LNK4264
-- PG0001
-- PG0002
-- PG0003
-- PG0061
-- PG0062
-- PG0063
-- PG0065
-- PG0066
-- PG0067
-- PG0068
-- PG0069
-- PG0070
-- PG0071
-- PG0081
-- PG0087
-- PG0090
-- PG0091
-- PG0092
-- PG0094
-- PG0096
-- PG0168
-- PG0169
-- PG0181
-- PG0188
-- PG1000
-- PG1001
-- PG1032
-- PG1033
-- PG1035
-- PG1036
-- PG1038
-- PG1051
-- PG1052
-- PG1053
-- PG1056
-- PG1058
-- PG1060
-- PG1061
-- PG1065
-- PG1066
-- PG1067
-- R6000
-- R6003
-- R6010
-- R6022
-- R6023
-- R6034
 helpviewer_keywords:
 - builds [C++], errors
 - errors [C++]
 - error messages [C++], build errors
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
-ms.openlocfilehash: 183edfe6aac45fa5a16fe67e31cf8da629fdf5cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: d16b691592a7b35a08bc02a0214f5415bd4ad2dd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209064"
 ---
-# <a name="cc-build-errors"></a>C/C++ 建置錯誤
+# <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>C/C++ 編譯器與建置工具錯誤與警告
 
-文件的本節文章說明診斷錯誤和建置工具所產生的警告訊息。
+文件的本節文章說明診斷錯誤和警告訊息所產生的 Microsoft C /C++編譯器及建置工具。
 
-[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
+[!INCLUDE[error-boilerplate](../includes/error-boilerplate.md)]
+
+## <a name="in-this-section"></a>本節內容
+
+[BSCMAKE 錯誤和警告 (BKxxxx)](../tool-errors/bscmake-errors-bk1500-through-bk4505.md) \
+錯誤和警告產生 Microsoft Browse Information Maintenance Utility (BSCMAKE。EXE)。
+
+[命令列的錯誤和警告](../tool-errors/command-line-errors-d8000-through-d9999.md) \
+錯誤和警告產生命令列選項的建置工具的問題。
+
+[編譯器嚴重錯誤 C999-C1999](../compiler-errors-1/compiler-fatal-errors-c999-through-c1999.md) \
+中止的錯誤C++編譯器 (CL。EXE)。
+
+[編譯器錯誤 C2001-C3999](../compiler-errors-1/compiler-errors-c2001-through-c2099.md) \
+錯誤偵測到的C++編譯器 (CL。EXE)。
+
+[編譯器警告 C4000-C5999](../compiler-warnings/compiler-warnings-c4000-through-c4199.md) \
+偵測到問題的警告C++編譯器 (CL。EXE)。
+
+[依編譯器版本的編譯器警告](../compiler-warnings/compiler-warnings-by-compiler-version.md) \
+每個編譯器版本所引入的警告清單。
+
+[C 執行階段錯誤 (Rxxxx)](../tool-errors/c-runtime-errors-r6002-through-r6035.md) \
+在執行階段產生的 C 執行階段程式庫 (CRT) 的錯誤。
+
+[CVTRES 錯誤和警告 (CVTxxxx)](../tool-errors/cvtres-errors-cvt1100-through-cvt4001.md) \
+錯誤和警告產生的 Microsoft 資源檔案至 COFF 物件轉換公用程式 (CVTRES。EXE)。
+
+[運算式評估工具錯誤 (CXXxxxx)](../tool-errors/expression-evaluator-errors-cxx0000-through-cxx0072.md) \
+偵錯工具和診斷工具所產生的錯誤。
+
+[連結器工具錯誤和警告 (LNKxxxx)](../tool-errors/linker-tools-errors-and-warnings.md) \
+錯誤和警告產生連結器和相關工具 （連結。EXE 和 LIB。EXE 和 DUMPBIN。EXE 和 EDITBIN。EXE)。
+
+[算術錯誤 (Mxxxx)](../tool-errors/math-errors-m6101-through-m6205.md) \
+執行階段浮點數學程式庫所產生的錯誤。
+
+[NMAKE 錯誤和警告 (Uxxxx)](../tool-errors/nmake-errors-u1000-through-u4011.md) \
+產生由 Microsoft makefile 工具 (NMAKE 錯誤和警告。EXE)。
+
+[特性指引最佳化錯誤和警告 (PGxxxx)](../tool-errors/profile-guided-optimization-errors-and-warnings.md) \
+錯誤和特性指引最佳化 (PGO) 工具所產生的警告。
+
+[專案建置錯誤和警告 (PRJxxxx)](../tool-errors/project-build-errors-and-warnings-prjxxxx.md) \
+產生的原生錯誤和警告C++專案會建置在 Visual Studio 中的系統。
+
+[資源編譯器錯誤和警告 （RCxxxx，RWxxxx）](../tool-errors/resource-compiler-errors-rc1000-through-rc4413.md) \
+錯誤和警告產生由資源編譯器 (RC。EXE)。
+
+[向量化工具和平行化工具訊息](../tool-errors/vectorizer-and-parallelizer-messages.md) \
+向量化工具和平行化工具最佳化編譯器選項所產生的診斷訊息。
+
+## <a name="related-sections"></a>相關章節
+
+[預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md)<br/>
+[C/C++ 建置參考](../../build/reference/c-cpp-building-reference.md) \
 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)

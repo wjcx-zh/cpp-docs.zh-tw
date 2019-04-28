@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2002
 ms.assetid: 91982314-203a-4de1-b884-94e39a623f61
 ms.openlocfilehash: 30f472aa7a9475a19eea0e92fe5c2ea0d54e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209032"
 ---
 # <a name="compiler-error-c2002"></a>編譯器錯誤 C2002
 
@@ -33,4 +33,4 @@ ms.locfileid: "50442844"
     L'mbconst'
     ```
 
-1. Microsoft c + + 前置處理器指示詞的文字引數必須是 ASCII。 比方說，指示詞， `#pragma message(L"string")`，不正確。
+1. Microsoft C++，前置處理器指示詞的文字引數必須是 ASCII。 比方說，指示詞， `#pragma message(L"string")`，不正確。

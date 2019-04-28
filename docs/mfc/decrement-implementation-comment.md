@@ -8,16 +8,15 @@ helpviewer_keywords:
 - comments, Implementation comments
 ms.assetid: 4d799c07-8e71-4a6b-90ab-8282d6ff48ce
 ms.openlocfilehash: 377997b66c5b9c005d1e1bee24890b756621b672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240733"
 ---
 # <a name="-implementation-comment"></a>// 實作註解
 
-
-  `// Implementation` 區段是所有 MFC 類別宣告最重要的部分。
+`// Implementation` 區段是所有 MFC 類別宣告最重要的部分。
 
 此區段包含所有實作詳細資料。 成員變數和成員函式二者可能都會出現在此區段中。 這一行以下的所有內容在 MFC 的未來版本中會有所變更。 除非您無法避開它，否則不應該依賴 `// Implementation` 這一行下方的詳細資料。 此外，雖然有些實作技術提示中曾討論過，但在實作行下宣告的成員並未記載。 因為事實上是函式會覆寫被視為實作詳細資料的基底類別實作，所以無論基底類別函式是在哪個區段定義的，覆寫基底類別中的虛擬函式都會包含在此區段中。 一般來說，這些成員是受到保護的，不過並不是始終受保護。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DHTML controls, creating
 ms.assetid: 1d8f0ede-7d8b-4959-976e-b4d0e2a87f5a
 ms.openlocfilehash: bd83909144526080ff10de0c75cc975089e88f91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262290"
 ---
 # <a name="creating-an-atl-dhtml-control"></a>建立 ATL DHTML 控制項
 

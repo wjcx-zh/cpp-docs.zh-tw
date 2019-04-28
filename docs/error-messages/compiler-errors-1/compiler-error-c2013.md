@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2013
 ms.assetid: 6b5c955c-53da-48ee-8533-64ef5b905173
 ms.openlocfilehash: b279202b8b32197a99d230040207aa50bc100495
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351127"
 ---
 # <a name="compiler-error-c2013"></a>編譯器錯誤 C2013
 

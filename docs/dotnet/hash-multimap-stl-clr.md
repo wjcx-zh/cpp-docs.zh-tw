@@ -99,11 +99,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
 ms.openlocfilehash: 2e3cd31ada54d1569cb7e5344ab471108b625558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222958"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -252,7 +252,7 @@ Hash_multimap 的迭代器會儲存其相關聯的 hash_multimap 節點，接著
 
 ## <a name="members"></a>成員
 
-## <a name="begin"></a> hash_multimap:: begin (STL/CLR)
+## <a name="begin"></a> hash_multimap::begin (STL/CLR)
 
 指定受控制序列的開頭。
 
@@ -858,7 +858,7 @@ bool erase(key_type key)
 *key*<br/>
 若要清除的機碼值。
 
-*最後一個*<br/>
+*last*<br/>
 若要清除的範圍的結尾。
 
 *where*<br/>
@@ -1294,10 +1294,10 @@ hash_multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *hashfn*<br/>
 雜湊貯體對應金鑰的函式。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
-*預測*<br/>
+*pred*<br/>
 排序受控制序列的述詞。
 
 *right*<br/>
@@ -1560,7 +1560,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -1701,7 +1701,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> hash_multimap:: key_comp (STL/CLR)
+## <a name="key_comp"></a> hash_multimap::key_comp (STL/CLR)
 
 複製兩個索引鍵的排序委派。
 
@@ -1760,7 +1760,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> hash_multimap:: key_compare (STL/CLR)
+## <a name="key_compare"></a> hash_multimap::key_compare (STL/CLR)
 
 兩個索引鍵排序委派。
 
@@ -2013,7 +2013,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 若要使用的金鑰值。
 
-*對應*<br/>
+*mapped*<br/>
 要搜尋的對應的值。
 
 ### <a name="remarks"></a>備註
@@ -2047,7 +2047,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> hash_multimap:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> hash_multimap::mapped_type (STL/CLR)
 
 與每個索引鍵關聯的對應值類型。
 
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multimap::operator = (STL/CLR)
+## <a name="op"></a> hash_multimap::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -2229,7 +2229,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> hash_multimap:: rbegin (STL/CLR)
+## <a name="rbegin"></a> hash_multimap::rbegin (STL/CLR)
 
 指定反向受控制序列的開頭。
 
@@ -2452,7 +2452,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> hash_multimap:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> hash_multimap::reverse_iterator (STL/CLR)
 
 受控制序列的反向迭代器類型。
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multimap:: swap (STL/CLR)
+## <a name="swap"></a> hash_multimap::swap (STL/CLR)
 
 交換兩個容器的內容。
 
@@ -2771,7 +2771,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> hash_multimap:: value_comp (STL/CLR)
+## <a name="value_comp"></a> hash_multimap::value_comp (STL/CLR)
 
 複製兩個項目值的順序委派。
 

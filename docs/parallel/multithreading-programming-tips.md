@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
 ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212423"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>多執行緒：MFC 程式設計提示
 
@@ -47,9 +47,9 @@ MFC 物件不是安全執行緒本身。 兩個個別的執行緒不能操作相
 
 ##  <a name="_core_windows_handle_maps"></a> Windows 控制代碼對應
 
-一般而言，執行緒可以存取它所建立的 MFC 物件。 這是因為暫時性和永久性的 Windows 控制代碼對應保存在協助維護從多個執行緒同時存取的執行緒區域儲存區。 例如，背景工作執行緒無法執行計算，並接著呼叫文件的`UpdateAllViews`成員函式來包含新的資料修改檢視上的 windows。 這有任何作用，因為從地圖`CWnd`Hwnd 的物件是在本機的主要執行緒。 這表示一個執行緒可能已從 Windows 控制代碼的對應至 c + + 物件，但另一個執行緒可能會將該相同的控制代碼對應到不同的 c + + 物件。 一個執行緒中所做的變更不會反映在其他。
+一般而言，執行緒可以存取它所建立的 MFC 物件。 這是因為暫時性和永久性的 Windows 控制代碼對應保存在協助維護從多個執行緒同時存取的執行緒區域儲存區。 例如，背景工作執行緒無法執行計算，並接著呼叫文件的`UpdateAllViews`成員函式來包含新的資料修改檢視上的 windows。 這有任何作用，因為從地圖`CWnd`Hwnd 的物件是在本機的主要執行緒。 這表示一個執行緒可能必須從 Windows 控制代碼的對應C++物件，但另一個執行緒可能會將相同的處理常式對應至不同的C++物件。 一個執行緒中所做的變更不會反映在其他。
 
-有幾種方式解決這個問題。 第一個是將個別的處理常式 （例如 HWND) 而不是在背景工作執行緒的 c + + 物件。 背景工作執行緒然後將這些物件加入其暫存對應藉由呼叫適當`FromHandle`成員函式。 您也可以加入至執行緒的永久對應物件，藉由呼叫`Attach`，但這應該只有在您保證物件會存在時間超過執行緒完成。
+有幾種方式解決這個問題。 第一種是將個別的處理常式 （例如 HWND) 而非C++物件的背景工作執行緒。 背景工作執行緒然後將這些物件加入其暫存對應藉由呼叫適當`FromHandle`成員函式。 您也可以加入至執行緒的永久對應物件，藉由呼叫`Attach`，但這應該只有在您保證物件會存在時間超過執行緒完成。
 
 若要建立新使用者定義訊息對應至不同的工作會執行您的背景工作執行緒，並將這些訊息張貼至應用程式的主視窗的另一個方法是使用`::PostMessage`。 此通訊方式類似於轉換，除了這兩個執行緒正在執行相同的位址空間中的兩個不同應用程式。
 

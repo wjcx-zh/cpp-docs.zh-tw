@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
 ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235897"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>自訂字串管理員實作 （基本方法）
 

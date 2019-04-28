@@ -7,11 +7,11 @@ helpviewer_keywords:
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
 ms.openlocfilehash: 2c3157bd29879ae5206a27e238d05a4b5c9a61e0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236035"
 ---
 # <a name="formatting-time-automation-classes"></a>格式化時間：Automation 類別
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
 ms.openlocfilehash: d865577ed7052937b9fa2c2c1023b3a4befcb776
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223752"
 ---
 # <a name="negate-struct"></a>negate 結構
 
@@ -39,7 +39,7 @@ struct negate<void>
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*Type*<br/>
 任何支援 `operator-` (接受指定或推斷類型的運算元) 的類型。
 
 *左邊*<br/>

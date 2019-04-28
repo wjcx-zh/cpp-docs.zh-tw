@@ -1,27 +1,27 @@
 ---
-title: 從 DHTML 呼叫 c + + 程式碼
+title: 呼叫C++DHTML 程式碼
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DHTML, calling C++ code from
 ms.assetid: 37329acd-4c22-40ca-a85a-b7480748f75f
 ms.openlocfilehash: fb63f8671770f57972a4c789d983bdf9658d5ecb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62251722"
 ---
-# <a name="calling-c-code-from-dhtml"></a>從 DHTML 呼叫 c + + 程式碼
+# <a name="calling-c-code-from-dhtml"></a>呼叫C++DHTML 程式碼
 
 DHTML 控制項可以裝載在容器中，例如測試容器或 Internet Explorer。 請參閱[以測試容器測試屬性和事件](../mfc/testing-properties-and-events-with-test-container.md)如需有關如何測試容器存取資訊。
 
-裝載控制項的容器會使用一般控制項介面的控制項與通訊。 DHTML 使用分派介面的結尾是"UI"，與您的 c + + 程式碼和 HTML 資源進行通訊。 在 [修改 ATL DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)，您將能練習加入由這些不同的介面呼叫方法。
+裝載控制項的容器會使用一般控制項介面的控制項與通訊。 DHTML 使用分派介面的結尾是"UI 」 與您C++程式碼和 HTML 資源。 在 [修改 ATL DHTML 控制項](../atl/modifying-the-atl-dhtml-control.md)，您將能練習加入由這些不同的介面呼叫方法。
 
-從 DHTML 呼叫 c + + 程式碼的範例，請參閱[建立 DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)使用 ATL 控制項精靈，並檢查標頭檔，並在 HTML 檔案中的程式碼。
+若要呼叫的範例，請參閱C++程式碼從 DHTML[建立 DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)使用 ATL 控制項精靈，並檢查標頭檔，並在 HTML 檔案中的程式碼。
 
 ## <a name="declaring-webbrowser-methods-in-the-header-file"></a>宣告的標頭檔中的 WebBrowser 方法
 
-要叫用 c + + 方法，從 DHTML UI，您必須將方法加入至控制項的 UI 介面。 例如，ATL 控制項精靈所建立的標頭檔包含 c + + 方法`OnClick`，這是 UI 控制項的介面精靈產生的成員。
+若要叫用C++方法從 DHTML UI 中，您必須將方法加入至控制項的 UI 介面。 例如，ATL 控制項精靈所建立的標頭檔包含C++方法`OnClick`，這是 UI 控制項的介面精靈產生的成員。
 
 檢查`OnClick`控制的.h 檔案中：
 
@@ -29,7 +29,7 @@ DHTML 控制項可以裝載在容器中，例如測試容器或 Internet Explore
 
 第一個參數， *pdispBody*，是主體物件的分派介面的指標。 第二個參數， *varColor*，識別要套用至控制項的色彩。
 
-## <a name="calling-c-code-in-the-html-file"></a>HTML 檔案中呼叫 c + + 程式碼
+## <a name="calling-c-code-in-the-html-file"></a>呼叫C++HTML 檔案中的程式碼
 
 一旦您宣告的標頭檔中的 WebBrowser 方法時，您可以叫用的方法，從 HTML 檔案。 請注意，在 HTML 檔案，ATL 控制項精靈就會插入三個 Windows 分派方法： 三個`OnClick`，分派訊息以變更控制項的背景色彩的方法。
 

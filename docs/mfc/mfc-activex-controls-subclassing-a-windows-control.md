@@ -17,11 +17,11 @@ helpviewer_keywords:
 - IsSubclassed method [MFC]
 ms.assetid: 3236d4de-401f-49b7-918d-c84559ecc426
 ms.openlocfilehash: 7042df6e7b7dc2c9a608470ba7cfc5a9e9f6127a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239495"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX 控制項：子類別化 Windows 控制項
 
@@ -87,7 +87,7 @@ ActiveX 控制項容器可能會設計為自行執行訊息反映，如此便不
    [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
-- 在控制項類別。CPP 檔案中，新增至訊息對應 ON_MESSAGE 項目。 這個項目的參數應該是訊息識別項和處理常式函式的名稱。 例如：
+- 在控制項類別。CPP 檔案中，新增至訊息對應 ON_MESSAGE 項目。 這個項目的參數應該是訊息識別項和處理常式函式的名稱。 例如: 
 
    [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
 ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216483"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -45,7 +45,7 @@ void abssort(float* x, unsigned n) {
 
 ![Lambda 運算式的結構化項目](../cpp/media/lambdaexpsyntax.png "lambda 運算式的結構化項目")
 
-1. *擷取子句*(也稱為*lambda introducer* c + + 規格中。)
+1. *擷取子句*(也稱為*lambda introducer*在C++規格。)
 
 1. *參數清單*選擇性。 (也稱為*lambda declarator*)
 
@@ -59,7 +59,7 @@ void abssort(float* x, unsigned n) {
 
 ### <a name="capture-clause"></a>擷取子句
 
-Lambda 可以引進新的變數，其主體中 (在**c++14**)，而且它也可以存取，或*擷取*，從周圍範圍的變數。 Lambda 的開頭擷取子句 (*lambda introducer* Standard 語法中)，以指定哪些變數會被擷取，以及是以傳值或傳址。 含有 `&` 前置詞的變數會以傳址方式來存取，而不含 & 前置詞的變數會以傳值方式來存取。
+Lambda 可以引進新的變數，其主體中 (在**c++14**)，而且它也可以存取，或*擷取*，從周圍範圍的變數。 Lambda 的開頭擷取子句 (*lambda introducer* Standard 語法中)，以指定哪些變數會被擷取，以及是以傳值或傳址。 含有 `&` 前置詞的變數會以傳址方式來存取，而不含 &amp; 前置詞的變數會以傳值方式來存取。
 
 空白的擷取子句 `[ ]` 表示 Lambda 運算式主體不存取封閉範圍中的任何變數。
 
@@ -138,7 +138,7 @@ auto y = [] (int first, int second)
 };
 ```
 
-在  **c + + 14**，如果參數類型是泛型，您可以使用 auto 關鍵字做為類型指定名稱。 這會告訴編譯器建立函式呼叫運算子做為樣板。 參數清單中的每個 auto 執行個體都相當於不同的類型參數。
+在   **C++ 14**，如果參數類型是泛型，您可以使用 auto 關鍵字做為類型指定名稱。 這會告訴編譯器建立函式呼叫運算子做為樣板。 參數清單中的每個 auto 執行個體都相當於不同的類型參數。
 
 ```cpp
 auto y = [] (auto first, auto second)
@@ -157,7 +157,7 @@ Lambda 運算式可接受另一個 Lambda 運算式當做其引數。 如需詳�
 
 ### <a name="exception-specification"></a>例外狀況規格
 
-您可以使用 `noexcept` 例外狀況規格，表示 Lambda 運算式不會擲回任何例外狀況。 一般函式，Visual c + + 編譯器會產生警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 運算式宣告`noexcept`例外狀況規格，而且 lambda 主體擲回例外狀況，如下所示：
+您可以使用 `noexcept` 例外狀況規格，表示 Lambda 運算式不會擲回任何例外狀況。 如同一般函式，視覺效果C++編譯器會產生警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 運算式宣告`noexcept`例外狀況規格，而且 lambda 主體擲回例外狀況，如下所示：
 
 ```cpp
 // throw_lambda_expression.cpp
@@ -240,7 +240,7 @@ void fillVector(vector<int>& v)
 
 如需詳細資訊，請參閱 <<c0> [ 產生](../standard-library/algorithm-functions.md#generate)。
 
-下列程式碼範例會使用上述範例中，從函式，並將 c + + 標準程式庫演算法會使用 lambda 運算式的範例`generate_n`。 此 Lambda 運算式會將 `vector` 物件的元素指派給前兩個元素的總和。 **可變**關鍵字使用，因此 lambda 運算式的主體可以修改其外部變數的複本`x`和`y`，它將 lambda 運算式會擷取的值。 由於 Lambda 運算式會以傳值方式擷取原始變數 `x` 和 `y`，在 Lambda 執行後，它們的值仍然保持 `1`。
+下列程式碼範例會使用上述範例中，從函式，並將會使用 lambda 運算式的範例C++標準程式庫演算法`generate_n`。 此 Lambda 運算式會將 `vector` 物件的元素指派給前兩個元素的總和。 **可變**關鍵字使用，因此 lambda 運算式的主體可以修改其外部變數的複本`x`和`y`，它將 lambda 運算式會擷取的值。 由於 Lambda 運算式會以傳值方式擷取原始變數 `x` 和 `y`，在 Lambda 執行後，它們的值仍然保持 `1`。
 
 ```cpp
 // compile with: /W4 /EHsc

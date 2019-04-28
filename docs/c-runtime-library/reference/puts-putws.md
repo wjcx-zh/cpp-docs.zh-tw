@@ -31,11 +31,11 @@ helpviewer_keywords:
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
 ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358082"
 ---
 # <a name="puts-putws"></a>puts、_putws
 
@@ -104,7 +104,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Hello world from puts!

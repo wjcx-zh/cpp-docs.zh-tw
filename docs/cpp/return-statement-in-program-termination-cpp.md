@@ -7,11 +7,11 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 ms.assetid: 66d002ab-5625-4b68-8446-71e1b8fcdbd8
 ms.openlocfilehash: 9c7b6130ee1a0b49ab75a70d84764d3a1f8c5ef0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267608"
 ---
 # <a name="return-statement-in-program-termination-c"></a>程式終止中的 return 陳述式 (C++)
 
@@ -27,7 +27,7 @@ int main()
 }
 ```
 
-`exit`並**傳回**在上述範例中的陳述式會在功能上完全相同。 不過，c + + 需要具有函式傳回型別以外**void**傳回值。 **會傳回**陳述式可讓您傳回值，以從`main`。
+`exit`並**傳回**在上述範例中的陳述式會在功能上完全相同。 不過，C++需要具有函式傳回型別以外**void**傳回值。 **會傳回**陳述式可讓您傳回值，以從`main`。
 
 ## <a name="see-also"></a>另請參閱
 

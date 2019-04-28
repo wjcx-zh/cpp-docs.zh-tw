@@ -27,15 +27,15 @@ helpviewer_keywords:
 - pseudorandom numbers
 - numbers, generating pseudorandom
 ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357768"
 ---
 # <a name="rand"></a>rand
 
-使用已知且完全可重現的演算法，以產生亂數。 此函式程式設計更安全版本可用;請參閱[rand_s](rand-s.md)。 所產生的數字**rand**是不安全的密碼編譯。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。
+使用已知且完全可重現的演算法，以產生亂數。 此函式程式設計更安全版本可用;請參閱[rand_s](rand-s.md)。 所產生的數字**rand**是不安全的密碼編譯。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)中所宣告的函式或C++中的標準程式庫[\<隨機 >](../../standard-library/random.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -51,7 +51,7 @@ int rand( void );
 
 **Rand**函式會傳回虛擬隨機整數的範圍介於 0 到**RAND_MAX** (32767)。 使用[srand](srand.md)函式，來植入亂數產生器，然後再呼叫**rand**。
 
-**Rand**函式會產生熟知的順序，並不適合做為密碼編譯的函式。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)函式中的 c + + 標準程式庫中所宣告或[\<隨機 >](../../standard-library/random.md)。 如需何不妥**rand**以及如何\<隨機 > 解決這些缺點，請參閱這段影片中標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
+**Rand**函式會產生熟知的順序，並不適合做為密碼編譯的函式。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)中所宣告的函式或C++中的標準程式庫[\<隨機 >](../../standard-library/random.md)。 如需何不妥**rand**以及如何\<隨機 > 解決這些缺點，請參閱這段影片中標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
 
 ## <a name="requirements"></a>需求
 

@@ -34,16 +34,15 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224203"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector 類別
 
-
-  `concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+`concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
 
 ## <a name="syntax"></a>語法
 
@@ -245,7 +244,7 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>備註
 
-不同於 c + + 標準程式庫`vector`、`concurrent_vector`物件不會移動現有的項目，如果它會配置更多的記憶體。
+不同於C++標準程式庫`vector`，則`concurrent_vector`物件不會移動現有的項目，如果它會配置更多的記憶體。
 
 ##  <a name="cbegin"></a> cbegin
 
@@ -332,8 +331,7 @@ concurrent_vector(_InputIterator _Begin,
 要從中複製或移動項目的來源 `concurrent_vector` 物件。
 
 *_N*<br/>
-
-  `concurrent_vector` 物件的初始容量。
+`concurrent_vector` 物件的初始容量。
 
 *_Item*<br/>
 建構的物件中的項目值。

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Linker property pages
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
 ms.openlocfilehash: 1412531ae0ca9c0f5270df6df7b79ddc9be425ad
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216641"
 ---
 # <a name="linker-property-pages"></a>連結器屬性頁
 
@@ -51,9 +51,9 @@ Visual Studio 中的註冊傳統上都在 HKEY_CLASSES_ROOT (HKCR) 進行。 使
 
 在大型專案中，當相依專案產生 .lib 檔時，會停用累加連結。 如果有許多相依專案產生 .lib 檔，建置應用程式可能會花很長的時間。 當這個屬性設定為 [是]，專案系統會針對相依專案所產生的 .lib 連結 .obj 檔，進而啟用累加連結。
 
-如需有關如何存取資訊**一般**連結器屬性頁上，請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+如需有關如何存取資訊**一般**連結器屬性頁上，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [選項對話方塊、專案和方案、VC++ 專案設定](/visualstudio/ide/reference/vcpp-project-settings-projects-and-solutions-options-dialog-box)<br>
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)
+[C++專案屬性頁參考](property-pages-visual-cpp.md)

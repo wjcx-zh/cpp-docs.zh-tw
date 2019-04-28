@@ -26,11 +26,11 @@ helpviewer_keywords:
 - output files, setting directory
 - Unicode, creating C++ build configuration
 ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270896"
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
@@ -40,7 +40,7 @@ ms.locfileid: "57825788"
 
 - 專案預設值
 
-非 Windows 專案，請參閱[Linux c + + 屬性頁參考](../../linux/prop-pages-linux.md)。
+非 Windows 專案，請參閱[LinuxC++屬性頁參考](../../linux/prop-pages-linux.md)。
 
 ## <a name="general"></a>一般
 
@@ -172,4 +172,4 @@ ms.locfileid: "57825788"
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)
+[C++專案屬性頁參考](property-pages-visual-cpp.md)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bss_seg pragma
 ms.assetid: 755f0154-de51-4778-97d3-c9b24e445079
 ms.openlocfilehash: 489ced11bb6024fdf9818872c07ab7feebfeabf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212408"
 ---
 # <a name="bssseg"></a>bss_seg
 
@@ -36,11 +36,11 @@ ms.locfileid: "50566305"
 *identifier*<br/>
 （選擇性）當搭配**推播**，將名稱指派給內部編譯器堆疊上的記錄。 *識別項*可讓一推出多筆資料錄**pop**命令。 當搭配**pop**，指示詞會將記錄推出內部堆疊，直到*識別項*已移除; 如果*識別碼*找不到在內部堆疊上，沒有快顯。
 
-*「 區段名稱 」*<br/>
+*"segment-name"*<br/>
 （選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中區段名稱。
 
-*「 區段類別 」*<br/>
-（選擇性）包含與 c + + 2.0 以前版本的相容性。 會忽略此項。
+*"segment-class"*<br/>
+（選擇性）包含與相容性C++早於 2.0 版。 會忽略此項。
 
 ## <a name="remarks"></a>備註
 

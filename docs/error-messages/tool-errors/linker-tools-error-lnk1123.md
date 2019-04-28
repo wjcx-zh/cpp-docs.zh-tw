@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1123
 ms.openlocfilehash: b67a2a4ddad13988967b7cc7d827862a2a6fe933
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255225"
 ---
 # <a name="linker-tools-error-lnk1123"></a>連結器工具錯誤 LNK1123
 

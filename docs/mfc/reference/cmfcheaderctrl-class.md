@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218381"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -123,7 +123,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 |`m_bAscending`|true|
 |`m_nHighlightedItem`|-1|
 |`m_bTracked`|false|
-|`m_bIsDlgControl`|FALSE|
+|`m_bIsDlgControl`|false|
 |`m_hFont`|NULL|
 
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212375"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 類別
 
@@ -52,7 +52,7 @@ class condition_variable;
 |[native_handle](#native_handle)|傳回代表 condition_variable 控制代碼的實作特定類型。|
 |[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable` 物件的執行緒。|
 |[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable` 物件的執行緒。|
-|[等候](#wait)|封鎖執行緒。|
+|[wait](#wait)|封鎖執行緒。|
 |[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|
 |[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|
 

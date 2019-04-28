@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立部分信任的應用程式 (C + + /cli CLI)
+title: HOW TO：建立部分信任的應用程式 (C++/CLI)
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
 ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209118"
 ---
 # <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>HOW TO：建立部分信任的應用程式移除 CRT 程式庫 DLL 相依性
 
-本主題討論如何建立使用 Visual c + + 移除相依性 msvcm90.dll 部分信任的通用語言執行平台應用程式。
+本主題討論如何建立部分信任的通用語言執行平台應用程式，使用視覺效果C++移除相依性 msvcm90.dll。
 
-透過建置 Visual c + + 應用程式 **/clr**會將相依性對 msvcm90.dll，也就是 C 執行階段程式庫的一部分。 當您想在部分信任環境中使用您的應用程式時，CLR 會強制執行您的 DLL 上特定程式碼存取安全性規則。 因此，它必須移除此相依性，因為 msvcm90.dll 包含原生程式碼和程式碼存取安全性原則無法強制執行它。
+視覺效果C++使用所建置的應用程式 **/clr**會將相依性對 msvcm90.dll，也就是 C 執行階段程式庫的一部分。 當您想在部分信任環境中使用您的應用程式時，CLR 會強制執行您的 DLL 上特定程式碼存取安全性規則。 因此，它必須移除此相依性，因為 msvcm90.dll 包含原生程式碼和程式碼存取安全性原則無法強制執行它。
 
 如果您的應用程式不會使用 C 執行階段程式庫的任何功能，而且您想要從您的程式碼中移除此文件庫的相依性，您必須使用 **/NODEFAULTLIB:msvcmrt.lib**連結器選項和連結ptrustm.lib 或 ptrustmd.lib 中。 這些程式庫包含初始設定和應用程式的未初始化的物件檔案，例外狀況類別初始化程式碼中，使用 managed 例外狀況處理程式碼。 在這些程式庫的其中一個連結，將會移除任何相依性 msvcm90.dll。
 

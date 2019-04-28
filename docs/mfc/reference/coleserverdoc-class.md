@@ -83,11 +83,11 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58777255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224216"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc 類別
 
@@ -335,7 +335,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 
 DocObject 伺服器啟動時，傳回非 NULL 指標會顯示用戶端可支援 DocObjects。 預設實作會傳回 NULL。
 
-支援 DocObjects 文件的一般實作只會配置新`CDocObjectServer`物件，並將它傳回給呼叫者。 例如: 
+支援 DocObjects 文件的一般實作只會配置新`CDocObjectServer`物件，並將它傳回給呼叫者。 例如：
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 

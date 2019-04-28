@@ -55,11 +55,11 @@ helpviewer_keywords:
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
 ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235116"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -856,7 +856,7 @@ _T("All Image Files"));
 
 file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
-位置 '&#124;' 所指定的分隔符號字元*chSeparator*。 例如：
+位置 '&#124;' 所指定的分隔符號字元*chSeparator*。 例如: 
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

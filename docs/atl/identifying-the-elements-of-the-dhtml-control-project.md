@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
 ms.openlocfilehash: 32b1c00e3ad3ed15fa56f7718789fe1a2e3ecbab
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261949"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>識別 DHTML 控制項專案的項目
 
@@ -18,7 +18,7 @@ ms.locfileid: "57424375"
 
 DHTML 控制項是類似於任何 ATL 的控制項，除了：
 
-- 除了一般的介面的控制項實作，它會實作使用 c + + 程式碼和 HTML 使用者介面 (UI) 之間進行通訊的其他介面。 HTML UI 呼叫 c + + 程式碼使用此介面。
+- 除了一般的介面的控制項實作，它會實作其他介面之間的通訊是使用C++程式碼和 HTML 使用者介面 (UI)。 HTML UI 會呼叫C++程式碼使用此介面。
 
 - 它會建立 UI 控制項的 HTML 資源。
 
@@ -39,7 +39,7 @@ DHTML 控制項是類似於任何 ATL 的控制項，除了：
 
    - `IDHCTL1` 僅供容器使用的控制項所公開的介面。
 
-   - `IDHCTLUI1` C + + 程式碼和 HTML 使用者介面之間的通訊分派介面。 網頁瀏覽器會使用控制項的分派介面，來顯示控制項。 您可以從控制項的使用者介面呼叫此分派介面的各種方法，藉由叫用`window.external`，後面接著在您想要叫用這個分派介面上的方法名稱。 您可存取`window.external`從指令碼標記的 HTML，組成此控制項的 UI 中。 如需有關如何叫用的資源檔中的外部方法的詳細資訊，請參閱[從 DHTML 呼叫 c + + 程式碼](../atl/calling-cpp-code-from-dhtml.md)。
+   - `IDHCTLUI1` 分派介面之間進行通訊C++程式碼和 HTML 使用者介面。 網頁瀏覽器會使用控制項的分派介面，來顯示控制項。 您可以從控制項的使用者介面呼叫此分派介面的各種方法，藉由叫用`window.external`，後面接著在您想要叫用這個分派介面上的方法名稱。 您可存取`window.external`從指令碼標記的 HTML，組成此控制項的 UI 中。 如需有關如何叫用的資源檔中的外部方法的詳細資訊，請參閱[呼叫C++程式碼從 DHTML](../atl/calling-cpp-code-from-dhtml.md)。
 
 - **IDR_CTL1** HTML 資源的資源識別碼。 其檔案名稱，在此情況下，是 DHCTL1UI.htm。 DHTML 控制項使用的是包含標準的 HTML 標記和外部視窗分派命令，您可以使用文字編輯器來編輯的 HTML 資源。
 

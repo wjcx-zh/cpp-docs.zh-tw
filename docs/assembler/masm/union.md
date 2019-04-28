@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UNION directive
 ms.assetid: 52504abf-7dc1-47c5-944c-b886803a0c6a
 ms.openlocfilehash: 37d486c6a9b8ba66a892e3cf9b3f68532509782d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216880"
 ---
 # <a name="union"></a>UNION
 
@@ -20,8 +20,8 @@ ms.locfileid: "50454596"
 ## <a name="syntax"></a>語法
 
 > *名稱*聯集 [[*對齊*]] [[，非唯一]]<br/>
-> *欄位宣告*<br/>
-> [[*名稱*]] 結束
+> *field-declarations*<br/>
+> [[*name*]] ENDS
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,20 +8,20 @@ helpviewer_keywords:
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
 ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209239"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 
-根據預設，所有的 Visual c + + CLR 專案連結至 C 執行階段程式庫的。 因此，這些專案分類為混合式應用程式，因為它們結合以 common language runtime （managed 程式碼） 為目標的程式碼的原生程式碼。 在編譯時它們會編譯成中繼語言 (IL)，也稱為 Microsoft intermediate language (MSIL)。
+所有 Visual C++ CLR 專案連結到 C 執行階段程式庫預設值。 因此，這些專案分類為混合式應用程式，因為它們結合以 common language runtime （managed 程式碼） 為目標的程式碼的原生程式碼。 在編譯時它們會編譯成中繼語言 (IL)，也稱為 Microsoft intermediate language (MSIL)。
 
 > [!IMPORTANT]
 > 已被取代的 visual Studio 2015 和 Visual Studio 2017 不再支援建立 **/clr: pure**或是 **/clr: safe** CLR 應用程式程式碼。 如果您需要純或安全的組件時，我們建議您將轉譯成 C# 應用程式。
 
-如果您使用較早版本的 Visual c + + 編譯器工具組支援 **/clr: pure**或是 **/clr: safe**，您可以使用此程序，將您的程式碼轉換成純的 MSIL:
+如果您使用較早版本的視覺效果C++支援的編譯器工具組 **/clr: pure**或 **/clr: safe**，您可以使用此程序，將您的程式碼轉換成純的 MSIL:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>若要將您的混合式應用程式轉換成純中繼語言
 
@@ -56,7 +56,7 @@ ms.locfileid: "58328580"
       // #include <tchar.h>
       ```
 
-   6. 針對 Windows Forms 應用程式，在 Form1.cpp，標記為註解`#include`參考 windows.h 陳述式。 例如: 
+   6. 針對 Windows Forms 應用程式，在 Form1.cpp，標記為註解`#include`參考 windows.h 陳述式。 例如：
 
       ```cpp
       // #include <windows.h>

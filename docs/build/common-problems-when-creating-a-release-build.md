@@ -19,11 +19,11 @@ helpviewer_keywords:
 - memory [C++], overwrites
 ms.assetid: 73cbc1f9-3e33-472d-9880-39a8e9977b95
 ms.openlocfilehash: 7420fd5bbdeec30e9839206803952c02b8b56421
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273919"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>建立發行組建時的常見問題
 

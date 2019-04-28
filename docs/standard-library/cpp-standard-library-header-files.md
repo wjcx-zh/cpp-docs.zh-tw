@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
 ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210732"
 ---
 # <a name="c-standard-library-header-files"></a>C++ 標準程式庫標頭檔
 
@@ -22,7 +22,7 @@ ms.locfileid: "50496351"
 
 ## <a name="headers-by-category"></a>依類別的標頭
 
-|分類|標頭|
+|分類|頁首|
 |-|-|
 |[演算法](../cpp/algorithms-modern-cpp.md)|[\<algorithm>](../standard-library/algorithm.md)|
 |C 程式庫包裝函式|[\<cassert>](../standard-library/cassert.md)、[\<cctype>](../standard-library/cctype.md)、[\<cerrno>](../standard-library/cerrno.md)、[\<cfenv>](../standard-library/cfenv.md)、[\<cfloat>](../standard-library/cfloat.md)、[\<cinttypes>](../standard-library/cinttypes.md)、[\<ciso646>](../standard-library/ciso646.md)、[\<climits>](../standard-library/climits.md)、[\<clocale>](../standard-library/clocale.md)、[\<cmath>](../standard-library/cmath.md)、[\<csetjmp>](../standard-library/csetjmp.md)、[\<csignal>](../standard-library/csignal.md)、[\<cstdarg>](../standard-library/cstdarg.md)、[\<cstdbool>](../standard-library/cstdbool.md)、[\<cstddef>](../standard-library/cstddef.md)、[\<cstdint>](../standard-library/cstdint.md)、[\<cstdio>](../standard-library/cstdio.md)、[\<cstdlib>](../standard-library/cstdlib.md)、[\<cstring>](../standard-library/cstring.md)、[\<ctgmath>](../standard-library/ctgmath.md)、[\<ctime>](../standard-library/ctime.md)、[\<cwchar>](../standard-library/cwchar.md)、[\<cwctype>](../standard-library/cwctype.md)|

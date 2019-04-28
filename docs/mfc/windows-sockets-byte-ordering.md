@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217567"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Windows Sockets:位元組順序
 
-本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文章涵蓋位元組順序。 其他問題涵蓋在文章中：[Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)和[Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)。
+本文和兩個方針手冊說明了 Windows Sockets 程式設計的幾個問題。 本文章涵蓋位元組順序。 其他問題涵蓋在文章中：[Windows Socket：封鎖](../mfc/windows-sockets-blocking.md)和[Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)。
 
 如果您使用或衍生自類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)，您必須自行管理這些問題。 如果您使用或衍生自類別[CSocket](../mfc/reference/csocket-class.md)，MFC 會為您管理它們。
 
@@ -57,7 +57,7 @@ ms.locfileid: "57278089"
 使用 MFC 通訊端的理想案例是當您撰寫的通訊兩端： 在兩端使用 MFC。 如果您正在撰寫的應用程式，將通訊與非 MFC 應用程式，例如 FTP 伺服器，您可能需要管理位元組-交換自行之前，您將資料傳遞至封存物件，使用 Windows 通訊端轉換常式**ntohs**， **ntohl**， **htons**，和**htonl**。 非 MFC 應用程式與通訊中使用這些函式的範例則顯示在本文稍後。
 
 > [!NOTE]
->  如果另一端的通訊不是 MFC 應用程式，您也必須避免 c + + 物件衍生自資料流處理`CObject`封存到因為接收者無法處理它們。 請參閱中的附註[Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)。
+>  如果另一端的通訊不是 MFC 應用程式，您也必須避免串流C++物件衍生自`CObject`封存到因為接收者無法處理它們。 請參閱中的附註[Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)。
 
 如需有關位元組順序的詳細資訊，請參閱 Windows 通訊端規格，可在 Windows SDK。
 
@@ -75,7 +75,7 @@ MFC 而言，這就表示，如下所示：
 
 [!code-cpp[NVC_MFCSimpleSocket#6](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_2.cpp)]
 
-C + +**結構**是類別基本上相同的動作。 `Message`結構可以具有成員函式，例如`Serialize`成員函式宣告上方。 `Serialize`成員函式可能會看起來像這樣：
+在C++，則**struct**是類別基本上相同的動作。 `Message`結構可以具有成員函式，例如`Serialize`成員函式宣告上方。 `Serialize`成員函式可能會看起來像這樣：
 
 [!code-cpp[NVC_MFCSimpleSocket#7](../mfc/codesnippet/cpp/windows-sockets-byte-ordering_3.cpp)]
 
@@ -94,17 +94,17 @@ C + +**結構**是類別基本上相同的動作。 `Message`結構可以具有�
 
 `ar << pMsg;`
 
-何處`pMsg`是衍生自類別的 c + + 物件的指標`CObject`。 這會傳送物件和伺服器相關聯的額外 MFC 資訊不會了解它，就好像 MFC 應用程式一樣。
+何處`pMsg`是一個指向C++物件衍生自類別`CObject`。 這會傳送物件和伺服器相關聯的額外 MFC 資訊不會了解它，就好像 MFC 應用程式一樣。
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets:背景](../mfc/windows-sockets-background.md)
+- [Windows Socket：背景](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 

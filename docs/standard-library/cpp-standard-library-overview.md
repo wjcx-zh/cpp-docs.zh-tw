@@ -8,15 +8,15 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210797"
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準程式庫概觀
 
-所有 C++ 程式庫實體都會在一或多個標準標頭中宣告或定義。 此實作包含兩個額外的標頭\<hash_map > 和\<hash_set >，不需要由 c + + 標準。 如需此實作支援的完整標頭清單，請參閱[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)。
+所有 C++ 程式庫實體都會在一或多個標準標頭中宣告或定義。 此實作包含兩個額外的標頭\<hash_map > 並\<hash_set >，不需要由C++標準。 如需此實作支援的完整標頭清單，請參閱[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)。
 
 C++ 程式庫的獨立式實作僅提供這些標頭的子集：
 
@@ -44,7 +44,7 @@ C++ 程式庫標頭有兩個更廣泛的細分：
 
 - [安全程式庫：C++ 標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)
 
-- [已檢查的迭代器](../standard-library/checked-iterators.md)
+- [Checked Iterators](../standard-library/checked-iterators.md)
 
 - [Debug Iterator Support](../standard-library/debug-iterator-support.md)
 

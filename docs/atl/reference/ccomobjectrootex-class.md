@@ -21,11 +21,11 @@ helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
 ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246309"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx 類別
 
@@ -135,7 +135,7 @@ HRESULT FinalConstruct();
 
 ### <a name="example"></a>範例
 
-一般而言，覆寫這個方法在類別中衍生自`CComObjectRootEx`建立任何彙總物件。 例如: 
+一般而言，覆寫這個方法在類別中衍生自`CComObjectRootEx`建立任何彙總物件。 例如：
 
 [!code-cpp[NVC_ATL_COM#40](../../atl/codesnippet/cpp/ccomobjectrootex-class_1.h)]
 
@@ -305,7 +305,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 值*bStarting*參數會指出是否將模組正在初始化或終止。 預設實作`ObjectMain`不執行任何動作，但您可以在初始化或清除您想要的類別配置的資源類別中覆寫這個函式。 請注意，`ObjectMain`類別的任何執行個體要求之前呼叫。
 
-`ObjectMain` 被呼叫從 DLL 的進入點，所以的進入點函式可以執行的作業類型會限制。 如需有關這些限制的詳細資訊，請參閱 < [Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)並[DllMain](/windows/desktop/Dlls/dllmain)。
+`ObjectMain` 被呼叫從 DLL 的進入點，所以的進入點函式可以執行的作業類型會限制。 如需有關這些限制的詳細資訊，請參閱 < [Dll 和視覺效果C++執行階段程式庫行為](../../build/run-time-library-behavior.md)並[DllMain](/windows/desktop/Dlls/dllmain)。
 
 ### <a name="example"></a>範例
 

@@ -23,15 +23,15 @@ helpviewer_keywords:
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
 ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209088"
 ---
 # <a name="data-access-using-adonet-ccli"></a>使用 ADO.NET 進行資料存取 (C++/CLI)
 
-ADO.NET 是.NET Framework API 進行資料存取，並提供能力和易用性使用先前的資料存取解決方案不相符。 本章節描述一些問題牽涉到 ADO.NET 所特有 Visual c + + 的使用者，例如封送處理原生類型。
+ADO.NET 是.NET Framework API 進行資料存取，並提供能力和易用性使用先前的資料存取解決方案不相符。 本章節描述一些問題牽涉到 ADO.NET 所特有 VisualC++的使用者，例如封送處理原生類型。
 
 ADO.NET 會執行在 Common Language Runtime (CLR)。 因此，任何與 ADO.NET 互動的應用程式也必須目標 CLR。 不過，這不表示原生應用程式無法使用 ADO.NET。 這些範例將示範如何從原生程式碼 ADO.NET 資料庫互動。
 
@@ -41,11 +41,11 @@ ADO.NET 會執行在 Common Language Runtime (CLR)。 因此，任何與 ADO.NET
 
 ### <a name="example"></a>範例
 
-在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生C++ `class` (相較之下`ref class`或是`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生 c + + 字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>用來封送處理`char *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>用以封送處理<xref:System.String>至`char *`。
+在此範例中的程式碼的其餘部分是原生C++程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生C++字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A>用來封送處理`char *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>用以封送處理<xref:System.String>至`char *`。
 
 > [!NOTE]
 >  所配置的記憶體<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A>必須先將它解除配置，藉由呼叫<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>或`GlobalFree`。
@@ -167,11 +167,11 @@ StringCol: This is string 2.
 
 ### <a name="example"></a>範例
 
-在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生C++ `class` (相較之下`ref class`或是`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，COM 字串會傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>用來封送處理`BSTR`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>用以封送處理<xref:System.String>至`BSTR`。
+在此範例中的程式碼的其餘部分是原生C++程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，COM 字串會傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>用來封送處理`BSTR`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>用以封送處理<xref:System.String>至`BSTR`。
 
 > [!NOTE]
 >  所配置的記憶體<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>必須先將它解除配置，藉由呼叫<xref:System.Runtime.InteropServices.Marshal.FreeBSTR%2A>或`SysFreeString`。
@@ -301,11 +301,11 @@ StringCol: This is string 2.
 
 ### <a name="example"></a>範例
 
-在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生C++ `class` (相較之下`ref class`或是`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，Unicode c + + 字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>用來封送處理`wchar_t *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>用以封送處理<xref:System.String>至`wchar_t *`。
+在此範例中的程式碼的其餘部分是原生C++程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，UnicodeC++字串傳遞做為資料庫資料行將 StringCol 的值。 內 DatabaseClass，這些字串會封送處理為使用中的封送處理功能的 managed 字串<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>用來封送處理`wchar_t *`要<xref:System.String>，和方法<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>用以封送處理<xref:System.String>至`wchar_t *`。
 
 > [!NOTE]
 >  所配置的記憶體<xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A>必須先將它解除配置，藉由呼叫<xref:System.Runtime.InteropServices.Marshal.FreeHGlobal%2A>或`GlobalFree`。
@@ -427,11 +427,11 @@ StringCol: This is string 2.
 
 ### <a name="example"></a>範例
 
-在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生C++ `class` (相較之下`ref class`或是`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`VARIANT`類型傳遞做為資料庫資料行將 ObjectCol 的值。 內 DatabaseClass，這些`VARIANT`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用來封送處理`VARIANT`要<xref:System.Object>，和方法<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>用以封送處理<xref:System.Object>至`VARIANT`。
+在此範例中的程式碼的其餘部分是原生C++程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`VARIANT`類型傳遞做為資料庫資料行將 ObjectCol 的值。 內 DatabaseClass，這些`VARIANT`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A>用來封送處理`VARIANT`要<xref:System.Object>，和方法<xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A>用以封送處理<xref:System.Object>至`VARIANT`。
 
 ```cpp
 // adonet_marshal_variant.cpp
@@ -568,11 +568,11 @@ ObjectCol: 42
 
 ### <a name="example"></a>範例
 
-在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生 c + + `class` (相較`ref class`或`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
+在此範例中，類別 DatabaseClass 建立互動使用 ADO.NET<xref:System.Data.DataTable>物件。 請注意，這個類別是原生C++ `class` (相較之下`ref class`或是`value class`)。 這是必要的因為我們想要使用原生程式碼，這個類別，而且您無法在原生程式碼中使用 managed 的類型。 這個類別將會編譯為 CLR 為目標的會以`#pragma managed`類別宣告之前的指示詞。 如需有關這個指示詞的詳細資訊，請參閱 < [managed、 unmanaged](../preprocessor/managed-unmanaged.md)。
 
 請注意 DatabaseClass 類別的私用成員： `gcroot<DataTable ^> table`。 由於原生類型不能包含 managed 型別，`gcroot`是必要的關鍵字。 如需詳細資訊`gcroot`，請參閱[How to:以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)。
 
-在此範例中的程式碼的其餘部分會是原生 c + + 程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`SAFEARRAY`類型傳遞做為資料庫資料行將 ArrayIntsCol 的值。 內 DatabaseClass，這些`SAFEARRAY`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理`SAFEARRAY`整數和方法的 managed 陣列<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理 managed 的陣列的整數以`SAFEARRAY`。
+在此範例中的程式碼的其餘部分是原生C++程式碼，會以`#pragma unmanaged`指示詞前面`main`。 在此範例中，我們會建立 DatabaseClass 的新執行個體，並呼叫其方法來建立資料表，並填入資料表中的某些資料列。 請注意，原生`SAFEARRAY`類型傳遞做為資料庫資料行將 ArrayIntsCol 的值。 內 DatabaseClass，這些`SAFEARRAY`類型會封送處理至使用中的封送處理功能的 managed 物件<xref:System.Runtime.InteropServices?displayProperty=fullName>命名空間。 具體來說，此方法<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理`SAFEARRAY`整數和方法的 managed 陣列<xref:System.Runtime.InteropServices.Marshal.Copy%2A>用來封送處理 managed 的陣列的整數以`SAFEARRAY`。
 
 ```cpp
 // adonet_marshal_safearray.cpp

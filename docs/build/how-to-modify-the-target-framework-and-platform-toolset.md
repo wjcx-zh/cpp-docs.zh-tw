@@ -8,15 +8,15 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273491"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>HOW TO：修改目標 Framework 和平台工具組
 
-您可以變更 Visual c + + 專案設定以不同版本的.NET framework 為目標，以及使用不同的平台工具組。 根據預設，專案系統會使用對應於建立專案所用 Visual Studio 版本的 .NET Framework 版本及工具組版本。 您可以修改專案屬性來變更目標平台工具組。 您可以修改專案 (.vcxproj) 檔案來變更目標 Framework。 您不必針對每個編譯目標維護一個不同的程式碼基底。
+您可以變更視覺效果C++專案設定以不同版本的.NET framework 為目標，以及使用不同的平台工具組。 根據預設，專案系統會使用對應於建立專案所用 Visual Studio 版本的 .NET Framework 版本及工具組版本。 您可以修改專案屬性來變更目標平台工具組。 您可以修改專案 (.vcxproj) 檔案來變更目標 Framework。 您不必針對每個編譯目標維護一個不同的程式碼基底。
 
 > [!IMPORTANT]
 >  部分版本可能不支援修改的目標 Framework 或平台工具組。 相容性資訊，請參閱[移植、 移轉及升級 Visual Studio 專案](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)。
@@ -61,4 +61,4 @@ ms.locfileid: "57820074"
 
 ## <a name="see-also"></a>另請參閱
 
-[MSBuild 命令列-c + +](msbuild-visual-cpp.md)
+[MSBuild 命令列-C++](msbuild-visual-cpp.md)

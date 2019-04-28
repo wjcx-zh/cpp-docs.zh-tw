@@ -3,11 +3,11 @@ title: 以範圍為基礎的 for 陳述式 (C++)
 ms.date: 11/04/2016
 ms.assetid: 5750ba1d-ba48-4236-a923-e32de8345c2d
 ms.openlocfilehash: 1cbdb4e1636f471c26f6742b9e8686a332ed845f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62244131"
 ---
 # <a name="range-based-for-statement-c"></a>以範圍為基礎的 for 陳述式 (C++)
 
@@ -22,9 +22,9 @@ for ( for-range-declaration : expression )
 
 ## <a name="remarks"></a>備註
 
-使用範圍架構**for**陳述式來建構必須透過 「 範圍 」，這定義為任何項目，您可以逐一執行的迴圈 — 比方說， `std::vector`，或任何其他 c + + 標準程式庫序列的範圍由此`begin()`和`end()`。 名稱中所宣告`for-range-declaration`部分是在本機**如**陳述式，且無法重新宣告中`expression`或`statement`。 請注意，[自動](../cpp/auto-cpp.md)關鍵字會偏好`for-range-declaration`陳述式部分。
+使用範圍架構**for**陳述式來建構必須透過 「 範圍 」，這定義為任何項目，您可以逐一執行的迴圈 — 比方說， `std::vector`，或任何其他C++標準程式庫 」 序列其範圍由定義`begin()`和`end()`。 名稱中所宣告`for-range-declaration`部分是在本機**如**陳述式，且無法重新宣告中`expression`或`statement`。 請注意，[自動](../cpp/auto-cpp.md)關鍵字會偏好`for-range-declaration`陳述式部分。
 
-**Visual Studio 2017 的新功能：** 範圍式 for 迴圈不再需要 begin （） 和 end （） 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
+**Visual Studio 2017： 的新功能**範圍式 for 迴圈不再需要 begin() 和 end() 傳回相同類型的物件。 這可讓 end() 傳回 sentinel 物件，例如 Ranges-V3 提案中所定義範圍使用的物件。 如需詳細資訊，請參閱 [Generalizing the Range-Based For Loop](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0184r0.html) (一般化範圍架構的 For 迴圈) 和 [range-v3 library on GitHub](https://github.com/ericniebler/range-v3) (GitHub 上的 range-v3 程式庫)。
 
 此程式碼示範如何使用範圍型**針對**迴圈來逐一查看陣列和向量：
 

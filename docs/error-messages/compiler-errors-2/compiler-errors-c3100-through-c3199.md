@@ -1,6 +1,6 @@
 ---
 title: 編譯器錯誤 C3100 到 C3199
-ms.date: 11/17/2017
+ms.date: 04/21/2019
 f1_keywords:
 - C3102
 - C3105
@@ -66,12 +66,12 @@ helpviewer_keywords:
 - C3191
 - C3193
 ms.assetid: 7bc40c2f-6a8d-488a-b665-f39375afee77
-ms.openlocfilehash: 72228be503cee9b080ae667f36b042af88161894
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: efa3207a9fdfb81a52bf319a1cbc2da84084b6cd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281649"
 ---
 # <a name="compiler-errors-c3100-through-c3199"></a>編譯器錯誤 C3100 到 C3199
 
@@ -116,7 +116,7 @@ ms.locfileid: "50481870"
 |[編譯器錯誤 C3130](compiler-error-c3130.md)|編譯器內部錯誤： 無法寫入插入程式碼區塊至 PDB|
 |[編譯器錯誤 C3131](compiler-error-c3131.md)|專案必須要有 'name' 屬性 'module' 屬性|
 |[編譯器錯誤 C3132](compiler-error-c3132.md)|'*參數*': 參數陣列只可以套用至類型 '維 managed/WinRT array' 的型式引數|
-|[編譯器錯誤 C3133](compiler-error-c3133.md)|無法將屬性套用至 c + + varargs|
+|[編譯器錯誤 C3133](compiler-error-c3133.md)|無法將屬性套用至C++varargs|
 |[編譯器錯誤 C3134](compiler-error-c3134.md)|'*值*': 屬性引數的值'*引數*'沒有有效的型別'*型別*'|
 |[編譯器錯誤 C3135](compiler-error-c3135.md)|'*識別碼*': 屬性不能有 'const' 或 'volatile' 類型|
 |[編譯器錯誤 C3136](compiler-error-c3136.md)|'*介面*': COM 介面只可以繼承自其他 COM 介面，'*介面*' 不是 COM 介面|
@@ -183,3 +183,8 @@ ms.locfileid: "50481870"
 |[編譯器錯誤 C3197](compiler-error-c3197.md)|'*關鍵字*': 只能用於定義|
 |[編譯器錯誤 C3198](compiler-error-c3198.md)|無效的浮點 pragma 使用方式： fenv_access pragma 只能在精確模式的運作|
 |[編譯器錯誤 C3199](compiler-error-c3199.md)|無效的浮點 pragma 使用方式： 非精確模式不支援例外狀況|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

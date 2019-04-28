@@ -13,11 +13,11 @@ helpviewer_keywords:
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
 ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292116"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (啟用執行階段類型資訊)
 
@@ -35,11 +35,11 @@ ms.locfileid: "57820600"
 
 使用 **/GR**如果編譯器無法以靜態方式解析您的程式碼中的物件類型。 您通常需要 **/GR**選項時您的程式碼會使用[dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)或是[typeid](../../cpp/typeid-operator.md)。 不過， **/GR**會增加您的映像的.rdata 區段的大小。 如果您的程式碼不會使用**dynamic_cast**或是**typeid**， **/GR-** 可能會產生較小的影像。
 
-如需有關執行階段類型檢查的詳細資訊，請參閱 <<c0> [ 執行階段類型資訊](../../cpp/run-time-type-information.md)中*c + + 語言參考*。
+如需有關執行階段類型檢查的詳細資訊，請參閱 <<c0> [ 執行階段類型資訊](../../cpp/run-time-type-information.md)中*C++語言參考*。</c0>
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -54,4 +54,4 @@ ms.locfileid: "57820600"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

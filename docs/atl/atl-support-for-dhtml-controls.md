@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DHTML controls
 ms.assetid: 4ba98098-da5d-4362-96ad-8372f816c307
 ms.openlocfilehash: dd8ac616d127c3307c1c432c0b3c9bc2ef1d6181
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223286"
 ---
 # <a name="atl-support-for-dhtml-controls"></a>DHTML 控制項的 ATL 支援
 
@@ -23,7 +23,7 @@ ms.locfileid: "57265258"
 
 - 透過其介面中，存取 WebBrowser 物件和其方法[IWebBrowser2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752127\(v=vs.85\))。
 
-- 管理 c + + 程式碼與 HTML 之間的通訊。
+- 管理之間的通訊C++程式碼和 HTML。
 
 DHTML 控制項是類似於其他 ATL 控制項，除了 DHTML 控制項包含額外的分派介面。 請參閱中的圖表[識別 DHTML 控制項專案的項目](../atl/identifying-the-elements-of-the-dhtml-control-project.md)如需預設 DHTML 專案中所提供的介面。
 
@@ -35,7 +35,7 @@ DHTML 控制項是類似於其他 ATL 控制項，除了 DHTML 控制項包含�
 描述 DHTML 控制項專案的項目。
 
 [從 DHTML 呼叫 C++ 程式碼](../atl/calling-cpp-code-from-dhtml.md)<br/>
-提供呼叫 DHTML 控制項的 c + + 程式碼範例。
+提供呼叫的範例C++從 DHTML 控制項的程式碼。
 
 [建立 ATL DHTML 控制項](../atl/creating-an-atl-dhtml-control.md)<br/>
 列出用來建立 DHTML 控制項的步驟。

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL, C Run-Time library (CRT)
 ms.assetid: 20f03b66-1eb7-4add-84a2-6047db0911eb
 ms.openlocfilehash: 0e44f2d944d64eb4eefc7bbd543eaaaa04c8a9de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62249661"
 ---
 # <a name="programming-with-atl-and-c-run-time-code"></a>使用 ATL 和 C 執行階段程式碼進行程式設計
 

@@ -11,17 +11,17 @@ f1_keywords:
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
 ms.openlocfilehash: 1fcf87d84b2c99b89217b7f2e0fc7fecd55fff02
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279095"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 包含標準標頭 \<chrono> 來定義類別和函式，以表示和管理持續期間和瞬間時刻。
 
-開始在 Visual Studio 2015，實作`steady_clock`已變更為符合 c + + 標準需求，進而獲得穩定性和單一性。 `steady_clock` 目前是以 QueryPerformanceCounter() 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中 `steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef； 不過，其他實作的情況不一定如此。
+開始在 Visual Studio 2015，實作`steady_clock`已變更為符合C++標準的需求，進而獲得穩定性和單一性。 `steady_clock` 目前是以 QueryPerformanceCounter() 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual C++ 中 `steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef； 不過，其他實作的情況不一定如此。
 
 ## <a name="syntax"></a>語法
 
@@ -89,7 +89,7 @@ ms.locfileid: "51331473"
 |Literal|描述|
 |-------------|-----------------|
 |chrono::hours 運算子 "" h(不帶正負號的 long long Val)|將小時指定為整數值。|
-|chrono:: duration\<雙倍，比例\<3600 >> 運算子""h (long double Val)|將小時指定為浮點值。|
+|chrono::duration\<double, ratio\<3600> > operator "" h(long double Val)|將小時指定為浮點值。|
 |chrono::minutes (運算子 "" min)(不帶正負號的 long long Val)|將分鐘指定為整數值。|
 |chrono:: duration\<雙倍，比例\<60 >> (運算子""min) (long double Val)|將分鐘指定為浮點值。|
 |chrono::seconds 運算子 "" s(不帶正負號的 long long Val)|將分鐘指定為整數值。|

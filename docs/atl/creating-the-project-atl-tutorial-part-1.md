@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
 ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262082"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57273921"
 
 1. 在 Visual Studio 開發環境中，按一下**的新**上**檔案**功能表，然後再按一下**專案**。
 
-1. 開啟**Visual c + +** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
+1. 開啟**Visual C++** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
 
 1. 型別*多邊形*做為專案名稱。
 

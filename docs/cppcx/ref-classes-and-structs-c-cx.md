@@ -3,21 +3,21 @@ title: Ref 類別與結構 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3d736b82-0bf0-48cf-bac1-cc9d110b70d1
 ms.openlocfilehash: e9ac14762dba580967fbecd245a81a4ff4356b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368587"
 ---
 # <a name="ref-classes-and-structs-ccx"></a>Ref 類別與結構 (C++/CX)
 
-C + + /CX 支援使用者定義*ref 類別*並*ref struct*，和使用者定義*值類別*並*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會發出至中繼資料，根據某些特定的規則，這可讓它們在 Windows 執行階段元件和以 c + + 或其他語言所撰寫的通用 Windows 平台應用程式之間傳遞。
+C++/CX 支援使用者定義*ref 類別*並*ref struct*，和使用者定義*值類別*並*值結構*。 這些資料結構是主要的容器的 C + /CX 支援 Windows 執行階段類型系統。 其內容會發出至中繼資料，根據某些特定的規則，如此才能在 Windows 執行階段元件和所撰寫的通用 Windows 平台應用程式之間傳遞C++或其他語言。
 
 ref 類別或 ref 結構具有這些必要功能：
 
 - 您必須在命名空間中 (在命名空間範圍) 宣告此類別，且此類別在該命名空間中可以具有公用或私用存取範圍。 只有公用型別會發出至中繼資料。 不允許巢狀公用類別定義，包括巢狀公用 [列舉](../cppcx/enums-c-cx.md) 類別。 如需詳細資訊，請參閱 <<c0> [ 命名空間和類型可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
-- 它可能會包含為成員 C + + /CX 包括 ref 類別、 實值類別、 ref 結構、 實值結構或 null 的實值結構。 它也可以包含純量類型 (例如 float64 和 bool 等等)。 它也可以包含標準 C++ 類型 (例如 `std::vector` ) 或自訂類別，只要這些不是公用項目即可。 C + + /CX 建構可能`public`， `protected`， `internal`， `private`，或`protected private`協助工具。 所有 `public` 或 `protected` 成員都會發出至中繼資料。 標準 C++ 類型必須包含 `private`、 `internal`或 `protected private` 存取範圍，以避免發出至中繼資料。
+- 它可能會包含為成員C++/CX 包括 ref 類別、 實值類別、 ref 結構、 實值結構或 null 的實值結構。 它也可以包含純量類型 (例如 float64 和 bool 等等)。 它也可以包含標準 C++ 類型 (例如 `std::vector` ) 或自訂類別，只要這些不是公用項目即可。 C++/CX 建構可能`public`， `protected`， `internal`， `private`，或`protected private`協助工具。 所有 `public` 或 `protected` 成員都會發出至中繼資料。 標準 C++ 類型必須包含 `private`、 `internal`或 `protected private` 存取範圍，以避免發出至中繼資料。
 
 - 可以實作一個或多個「 *介面類別* 」(Interface Class) 或「 *介面結構*」(Interface Struct)。
 
@@ -29,7 +29,7 @@ ref 類別或 ref 結構具有這些必要功能：
 
 ## <a name="declaration"></a>宣告
 
-下列程式碼片段會宣告 `Person` ref 類別。 請注意，standard c + +`std::map`類型用於私用成員和 Windows 執行階段`IMapView`介面則用於公用介面中。 同時也請注意，參考類型的宣告附加了 "^"。
+下列程式碼片段會宣告 `Person` ref 類別。 請注意，標準的C++`std::map`類型用於私用成員和 Windows 執行階段`IMapView`介面則用於公用介面中。 同時也請注意，參考類型的宣告附加了 "^"。
 
 [!code-cpp[cx_classes#03](../cppcx/codesnippet/CPP/classesstructs/class1.h#03)]
 
@@ -81,7 +81,7 @@ ref 類別可以在任何 `const` 、 `private`或 `internal`成員中使用標�
 
 ## <a name="destructors"></a>解構函式
 
-在 C + + /CX 中，呼叫`delete`公用解構函式會叫用解構函式，不論物件的參考計數。 這個行為可讓您定義解構函式，該解構函式會以非常確定的方式執行非 RAII 資源的自訂清除。 不過，即使在這個情況下，物件本身還是不會從記憶體中刪除。 只有當參考計數到達零時，才會釋放此物件的記憶體。
+在C++/CX，呼叫`delete`公用解構函式會叫用解構函式，不論物件的參考計數。 這個行為可讓您定義解構函式，該解構函式會以非常確定的方式執行非 RAII 資源的自訂清除。 不過，即使在這個情況下，物件本身還是不會從記憶體中刪除。 只有當參考計數到達零時，才會釋放此物件的記憶體。
 
 如果類別的解構函式非公用，則只有當參考計數到達零時才會叫用它。 如果您呼叫`delete`具有私用解構函式的物件，則編譯器會引發警告 C4493，指出 「 刪除運算式沒有任何作用的解構函式為\<類型名稱 > 沒有 'public' 可及性。 」
 
@@ -97,11 +97,11 @@ Ref 類別解構函式只能宣告如下：
 
 如果您嘗試存取的類別成員已執行其解構函式，則表示此行為是未定義的；這很有可能會導致程式當機。 針對沒有公用解構函式的類型呼叫 `delete t` 沒有作用。 針對在類型或基底類別的類型階層中，已知有 `delete this` 或 `private` 解構函式的類型或基底類別呼叫 `protected private` 也沒有作用。
 
-當您宣告公用解構函式時，編譯器會產生程式碼，讓 ref 類別實作 `Platform::IDisposable` ，且解構函式實作 `Dispose` 方法。 `Platform::IDisposable` 是 C + + /CX 投影`Windows::Foundation::IClosable`。 絕對不要明確實作這些介面。
+當您宣告公用解構函式時，編譯器會產生程式碼，讓 ref 類別實作 `Platform::IDisposable` ，且解構函式實作 `Dispose` 方法。 `Platform::IDisposable` 是C++/CX 投影`Windows::Foundation::IClosable`。 絕對不要明確實作這些介面。
 
 ## <a name="inheritance"></a>繼承
 
-Platform::Object 是所有 ref 類別的通用基底類別。 所有 ref 類別都會隱含轉換為 Platform::Object，而且也都能覆寫 [Object::ToString](../cppcx/platform-object-class.md#tostring)。 不過，Windows 執行階段的繼承模型不能用於一般繼承模型;在 C + + /CX，這表示使用者定義的公用 ref 類別不能做為基底類別。
+Platform::Object 是所有 ref 類別的通用基底類別。 所有 ref 類別都會隱含轉換為 Platform::Object，而且也都能覆寫 [Object::ToString](../cppcx/platform-object-class.md#tostring)。 不過，Windows 執行階段的繼承模型不能用於一般繼承模型;在C++/CX 這表示使用者定義的公用 ref 類別不能做為基底類別。
 
 如果您要建立 XAML 使用者控制項，而且物件參與相依性屬性系統，則您可以使用 `Windows::UI::Xaml::DependencyObject` 做為基底類別。
 
@@ -109,9 +109,9 @@ Platform::Object 是所有 ref 類別的通用基底類別。 所有 ref 類別�
 
 您不需要從現有的未密封類別衍生私用基底 ref 類別。 如果您需要物件階層建立您自己的程式結構模型，或允許重複使用程式碼，則使用私用或內部 ref 類別，或最好使用 Standard C++ 類別。 您可以透過公用密封 ref 類別包裝函式，公開私用物件階層的功能。
 
-Ref 類別具有公用或受保護的建構函式在 C + + /CX 必須宣告為密封。 此限制表示，沒有任何方法，以 C# 或 Visual Basic 繼承自您在撰寫 C + Windows 執行階段元件中宣告的型別等其他語言撰寫的類別 + /CX。
+Ref 類別中具有公用或受保護的建構函式C++/CX 必須宣告為密封。 此限制表示，沒有任何方法，以 C# 或 Visual Basic 繼承自您在撰寫 C + Windows 執行階段元件中宣告的型別等其他語言撰寫的類別 + /CX。
 
-以下是基本的規則的繼承，在 C + + /CX:
+以下是中的繼承的基本規則C++/CX:
 
 - ref 類別最多可直接繼承自一個基底 ref 類別，但可以實作任意數目的介面。
 
@@ -131,5 +131,5 @@ Ref 類別具有公用或受保護的建構函式在 C + + /CX 必須宣告為�
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
 [實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

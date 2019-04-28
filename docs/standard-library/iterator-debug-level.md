@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224190"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ _ITERATOR_DEBUG_LEVEL 巨集可控制是否[檢查的迭代器](../standard-libr
 
 ### <a name="example"></a>範例
 
-若要指定 _ITERATOR_DEBUG_LEVEL 巨集的值，請使用[/D](../build/reference/d-preprocessor-definitions.md)編譯器選項，來定義命令列上，或使用`#define`之前 c + + 標準程式庫標頭會包含在原始程式檔。 比方說，在命令列上，若要編譯*sample.cpp*偵錯模式中，並使用偵錯迭代器支援，您可以指定 _ITERATOR_DEBUG_LEVEL 巨集定義：
+若要指定 _ITERATOR_DEBUG_LEVEL 巨集的值，請使用[/D](../build/reference/d-preprocessor-definitions.md)編譯器選項，來定義命令列上，或使用`#define`前C++標準程式庫標頭會包含在原始程式檔。 比方說，在命令列上，若要編譯*sample.cpp*偵錯模式中，並使用偵錯迭代器支援，您可以指定 _ITERATOR_DEBUG_LEVEL 巨集定義：
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 

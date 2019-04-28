@@ -10,11 +10,11 @@ helpviewer_keywords:
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
 ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294248"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr （控制 constexpr 評估）
 
@@ -36,7 +36,7 @@ ms.locfileid: "57810181"
 
 ## <a name="remarks"></a>備註
 
-**/Constexpr**編譯器選項可控制的編譯時期評估**constexpr**運算式。 評估步驟、 遞迴層級和 backtrace 深度控制上花費太多時間時，防止編譯器**constexpr**評估。 如需詳細資訊**constexpr**語言項目，請參閱[constexpr （c + +）](../../cpp/constexpr-cpp.md)。
+**/Constexpr**編譯器選項可控制的編譯時期評估**constexpr**運算式。 評估步驟、 遞迴層級和 backtrace 深度控制上花費太多時間時，防止編譯器**constexpr**評估。 如需詳細資訊**constexpr**語言項目，請參閱[constexpr (C++)](../../cpp/constexpr-cpp.md)。
 
 **/Constexpr**選項會在 Visual Studio 2015 開始提供。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57810181"
 
 1. 開啟您的專案**屬性頁** 對話方塊。
 
-2. 底下**組態屬性**，展開**C/c + +** 資料夾，然後選擇 **命令列**屬性頁。
+2. 底下**組態屬性**，展開**C /C++** 資料夾，然後選擇 [**命令列**] 屬性頁。
 
 3. 輸入任何 **/constexpr**編譯器選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以儲存變更。
 
@@ -55,4 +55,4 @@ ms.locfileid: "57810181"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

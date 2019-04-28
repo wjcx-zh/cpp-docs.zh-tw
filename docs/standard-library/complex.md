@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212088"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
@@ -40,11 +40,11 @@ ms.locfileid: "50525862"
 
 - 複數加法反元素 (， *b*) 是 (-、-*b*)，以及所有這類複數的乘法反元素除了 （0，0） 是
 
-   (/ (<sup>2</sup> + *b*<sup>2</sup>)、-*b*/ (<sup>2</sup> + *b*<sup>2</sup>))
+   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-藉由代表複數*z* = (， *b*) 形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，規則可以套用的實際數字集合的代數，一組複數集合和其分量。 例如: 
+藉由代表複數*z* = (， *b*) 形式*z* =   + *bi*，其中*我*<sup>2</sup> =-1，規則可以套用的實際數字集合的代數，一組複數集合和其分量。 例如：
 
-   (1 + 2*我*) \* (2 + 3*我*) = 1 \* (2 + 3*我*) + 2*我* \* (2 + 3*i*)= (2 + 3*我*) + (4*我*+ 6*我*<sup>2</sup>) = (2-6) + （3 + 4）*我*=-4 + 7*我*
+   (1 + 2*i*) \* (2 + 3*i*) = 1 \* (2 + 3*i*) + 2*i* \* (2 + 3*i*) = (2 + 3*i*) + (4*i* + 6*i*<sup>2</sup>) = (2 - 6) + (3 + 4)*i* = -4 + 7*i*
 
 複數系統為體，但不為有序體。 任何排序複數的因為沒有欄位的實際數字和其子集，所以不等式不適用於複數至實際數字。
 

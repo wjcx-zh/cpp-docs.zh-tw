@@ -7,21 +7,21 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245370"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
 
 以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
 
-編譯器限制不同於 c + + 標準中所定義的清單已列入[編譯器限制](../cpp/compiler-limits.md)。
+編譯器限制中所定義的不同的清單C++中將提供標準[編譯器限制](../cpp/compiler-limits.md)。
 
-## <a name="covariant-return-types"></a>Covariant 傳回型別
+## <a name="covariant-return-types"></a>Covariant 傳回類型
 
-當虛擬函式具有可變數目的引數時，不支援虛擬基底類別做為 Covariant 傳回類型。 不符合 C++ ISO 規格第 7 段的第 10.3 節。 下列範例無法編譯，讓編譯器錯誤[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
+當虛擬函式具有可變數目的引數時，不支援虛擬基底類別做為 Covariant 傳回型別。 不符合 C++ ISO 規格第 7 段的第 10.3 節。 下列範例無法編譯，讓編譯器錯誤[C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
 ```cpp
 // CovariantReturn.cpp
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C + + 標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，而不是用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
+C++標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 視覺效果C++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
 
 ```cpp
 #include <iostream>

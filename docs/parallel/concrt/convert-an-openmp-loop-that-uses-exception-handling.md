@@ -6,11 +6,11 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
 ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296380"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>HOW TO：轉換的 OpenMP 迴圈來使用並行執行階段使用例外狀況處理
 

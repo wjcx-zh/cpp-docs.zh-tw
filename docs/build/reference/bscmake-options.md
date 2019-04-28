@@ -30,11 +30,11 @@ helpviewer_keywords:
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
 ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272867"
 ---
 # <a name="bscmake-options"></a>BSCMAKE 選項
 
@@ -43,7 +43,7 @@ ms.locfileid: "58508776"
 
 本節說明可用來控制 BSCMAKE 選項。 數個選項可控制瀏覽資訊檔的內容所排除或包含特定資訊。 排除選項可讓執行速度更快的 BSCMAKE，可能會導致較小的.bsc 檔案。 選項名稱會區分大小寫 (除了 **/help**並 **/NOLOGO**)。
 
-只有 **/NOLOGO**並 **/o**都是從 Visual Studio 開發環境中。  請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)如需存取 專案屬性頁。
+只有 **/NOLOGO**並 **/o**都是從 Visual Studio 開發環境中。  請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)如需存取 專案屬性頁。
 
 **/Ei (** *filename*...**)**<br/>
 瀏覽資訊檔中排除指定的 include 檔案的內容。 若要指定多個檔案，以空格分隔的名稱，並以括弧括住的清單。 括號不需要，如果您只指定一個*filename*。 使用 **/Ei**連同 **/Es**選項來排除檔案未排除 **/Es**。

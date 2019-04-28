@@ -9,15 +9,15 @@ helpviewer_keywords:
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
 ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222807"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>HOW TO：從使用 PInvoke 的 Managed 程式碼呼叫原生 Dll
 
-從 managed 程式碼使用平台叫用 (P/Invoke) 的功能，可以呼叫 unmanaged Dll 中實作的函式。 如果無法使用 DLL 的原始程式碼，P/Invoke 是交互操作的唯一選項。 不過，不同於其他.NET 語言，Visual c + + 提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+從 managed 程式碼使用平台叫用 (P/Invoke) 的功能，可以呼叫 unmanaged Dll 中實作的函式。 如果無法使用 DLL 的原始程式碼，P/Invoke 是交互操作的唯一選項。 不過，不同於其他.NET 語言，視覺效果C++提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
 
 ## <a name="example"></a>範例
 

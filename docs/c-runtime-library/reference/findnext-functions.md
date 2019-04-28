@@ -93,11 +93,11 @@ helpviewer_keywords:
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333725"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext、_findnext32、_findnext32i64、_findnext64、_findnext64i32、_findnexti64、_wfindnext、_wfindnext32、_wfindnext32i64、_wfindnext64、_wfindnext64i32、_wfindnexti64
 
@@ -158,7 +158,7 @@ int _wfindnext64i32(
 
 ### <a name="parameters"></a>參數
 
-*控制代碼*<br/>
+*handle*<br/>
 先前呼叫所傳回的搜尋控制代碼 **_findfirst**。
 
 *fileinfo*<br/>

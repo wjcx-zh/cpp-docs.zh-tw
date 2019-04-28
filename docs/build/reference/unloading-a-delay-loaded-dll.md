@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delayed loading of DLLs, unloading
 ms.assetid: 6463bc71-020e-4aff-a4ca-90360411c54e
 ms.openlocfilehash: 284a9cb9268c8c794379c6a5468b0f2b9092b7d0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317454"
 ---
 # <a name="unloading-a-delay-loaded-dll"></a>卸載延遲載入的 DLL
 
@@ -43,7 +43,7 @@ ExternC
 PUnloadInfo __puiHead;
 ```
 
-使用 c + + 類別會實作 UnloadInfo 結構**LocalAlloc**並**LocalFree**做為其運算子的實作**新**and 運算子**刪除**分別。 這些選項會保留在使用 __puihead 做為清單的標頭的標準連結清單。
+UnloadInfo 結構使用實作C++類別，以使用**LocalAlloc**和**LocalFree**做為其運算子的實作**新**運算子和**刪除**分別。 這些選項會保留在使用 __puihead 做為清單的標頭的標準連結清單。
 
 呼叫 __FUnloadDelayLoadedDLL 會嘗試尋找名稱中載入的 dll （確切的相符項目是必要的） 提供。 如果找不到，pUnloadIAT 中 IAT 的副本複製要還原的 thunk 指標執行的 IAT 之上，程式庫會釋出與**FreeLibrary**，比對**UnloadInfo**記錄已從取消連結清單和刪除，而且為 true，則會傳回。
 

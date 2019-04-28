@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
 ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317142"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 加入新項目樣板
 
@@ -35,7 +35,7 @@ ms.locfileid: "57824707"
 |標頭檔 (.h)|建立 C++ 標頭檔。|
 |HTML 網頁 (.htm)|建立空白 HTML 檔案。|
 |圖示檔 (.ico)|建立 Win32 圖示檔。|
-|安裝程式類別|新增類別，繼承自<xref:System.Configuration.Install.Installer>使用 CLR 功能。|
+|安裝程式類別|使用 CLR 功能新增繼承自 <xref:System.Configuration.Install.Installer> 的類別。|
 |MIDL 檔 (.idl)|建立介面定義語言檔。|
 |模組定義檔 (.def)|建立 DLL 匯出定義檔。|
 |屬性工作表 (.props)|建立 Visual C++ 專案屬性工作表檔。|

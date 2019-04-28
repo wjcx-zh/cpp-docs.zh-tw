@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DAO [MFC], classes
 ms.assetid: b15d0cd6-328b-4288-9c19-d037a795db57
 ms.openlocfilehash: 238aab0a1948f16a85b8ea16719b75b49f5e69c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241597"
 ---
 # <a name="dao-classes"></a>DAO 類別
 
@@ -21,7 +21,7 @@ ms.locfileid: "57287488"
 供 DAO 資料庫程式也必須在至少`CDaoDatabase`物件和`CDaoRecordset`物件。
 
 > [!NOTE]
->  Visual c + + 環境和精靈不再支援 DAO，（雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您針對新的 MFC 專案，使用 ODBC。 您只應該使用 DAO，在維護現有的應用程式。
+>  視覺效果C++環境和精靈不再支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您針對新的 MFC 專案，使用 ODBC。 您只應該使用 DAO，在維護現有的應用程式。
 
 [CDaoWorkspace](../mfc/reference/cdaoworkspace-class.md)<br/>
 管理登入的具名、 受密碼保護的資料庫工作階段，以登出。 大部分程式會使用預設工作區。

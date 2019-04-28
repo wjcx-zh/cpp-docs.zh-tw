@@ -10,17 +10,17 @@ helpviewer_keywords:
 - NMake property page
 ms.assetid: bd20cb52-9f1d-4240-b4fc-4f43205ac94b
 ms.openlocfilehash: c0dbe537635fe6698f814f3d8456f0caa9c8c796
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320600"
 ---
 # <a name="nmake-property-page"></a>NMake 屬性頁
 
 **NMake** 屬性頁可讓您指定 NMake 專案的建置設定。 (NMAKE 是 Microsoft 實作[讓](https://wikipedia.org/wiki/Make_(software))。)
 
-如需 NMake 專案的詳細資訊，請參閱[建立 Makefile 專案](creating-a-makefile-project.md)。 非 Windows MakeFile 專案，請參閱[MakeFile 專案屬性 （Linux c + +）](../../linux/prop-pages/makefile-linux.md)，[一般專案屬性 (Android c + + Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page)或[NMake 屬性 （Android c + +）](/visualstudio/cross-platform/nmake-android-prop-page).
+如需 NMake 專案的詳細資訊，請參閱[建立 Makefile 專案](creating-a-makefile-project.md)。 非 Windows MakeFile 專案，請參閱[MakeFile 專案屬性 (Linux C++)](../../linux/prop-pages/makefile-linux.md)，[一般專案屬性 (Android C++ Makefile)](/visualstudio/cross-platform/general-makefile-android-prop-page)或是[NMake 屬性 (AndroidC++)](/visualstudio/cross-platform/nmake-android-prop-page).
 
 [NMake] 屬性頁包含下列屬性。
 
@@ -66,10 +66,10 @@ ms.locfileid: "57824812"
 
    指定 IntelliSense 剖析 C++ 檔案時要使用的任何其他編譯器參數。
 
-如需有關如何存取資訊**NMake**  屬性頁，請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+如需有關如何存取資訊**NMake**  屬性頁，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
 如需如何以程式設計方式存取此物件成員的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCNMakeTool>。
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)<br>
+[C++專案屬性頁參考](property-pages-visual-cpp.md)<br>

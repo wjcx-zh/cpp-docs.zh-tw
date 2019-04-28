@@ -57,11 +57,11 @@ helpviewer_keywords:
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
 ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296627"
 ---
 # <a name="cfilefind-class"></a>CFileFind 類別
 
@@ -130,7 +130,7 @@ class CFileFind : public CObject
 
 [!code-cpp[NVC_MFCFiles#31](../../atl-mfc-shared/reference/codesnippet/cpp/cfilefind-class_1.cpp)]
 
-為了簡化此範例，此程式碼會使用 c + + 標準程式庫`cout`類別。 `cout`線條可取代呼叫`CListBox::AddString`，例如，在程式中使用圖形化使用者介面。
+為了簡化此範例，此程式碼會使用C++標準程式庫`cout`類別。 `cout`線條可取代呼叫`CListBox::AddString`，例如，在程式中使用圖形化使用者介面。
 
 如需有關如何使用`CFileFind`和其他 WinInet 類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
 

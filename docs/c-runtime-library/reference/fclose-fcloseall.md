@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334875"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -62,7 +62,7 @@ int _fcloseall( void );
 
 **_Fcloseall**函式會關閉所有開啟的資料流，但**stdin**， **stdout**， **stderr** (ms-dos 要加， **_stdaux**並 **_stdprn**)。 它也會關閉，並刪除任何建立的暫存檔**tmpfile**。 在這兩個函式中，所有與資料流相關聯的緩衝區都會先排清再關閉。 關閉資料流時，會釋放系統配置的緩衝區。 使用使用者指派的緩衝區**setbuf**並**setvbuf**不會自動釋放。
 
-**注意︰** 使用這些函式關閉資料流時，基礎檔案描述項和作業系統檔案控制代碼 (或通訊端) 以及資料流都會關閉。 因此，如果檔案原開啟為檔案處理或檔案描述項，並會關閉**fclose**，請勿也呼叫 **_close**若要關閉檔案描述項; 請勿呼叫 Win32 函式**CloseHandle**關閉檔案控制代碼。
+**注意：** 這些函式使用時關閉資料流，基礎檔案描述項和作業系統檔案控制代碼 （或通訊端） 會關閉，以及資料流。 因此，如果檔案原開啟為檔案處理或檔案描述項，並會關閉**fclose**，請勿也呼叫 **_close**若要關閉檔案描述項; 請勿呼叫 Win32 函式**CloseHandle**關閉檔案控制代碼。
 
 **fclose**並 **_fcloseall**包含程式碼，以防止其他執行緒的干擾。 如需非鎖定版本的**fclose**，請參閱 **_fclose_nolock**。
 

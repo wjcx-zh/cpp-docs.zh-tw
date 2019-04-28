@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML Data Generator Tool property page
 ms.assetid: b2ef1c12-3419-429d-bb9d-bd7d9ffe1ffb
 ms.openlocfilehash: 51042e3eab0c789d2e923f40de2d0ee82d06a5ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316440"
 ---
 # <a name="xml-data-generator-tool-property-page"></a>XML 資料產生器工具屬性頁
 
@@ -33,10 +33,10 @@ ms.locfileid: "57825770"
 
    指定是否要發出受控碼。
 
-如需如何存取**XML 資料產生器工具**屬性頁上，請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+如需如何存取**XML 資料產生器工具**屬性頁上，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
 如需如何以程式設計方式存取此物件成員的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCXMLDataGeneratorTool>
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)
+[C++專案屬性頁參考](property-pages-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;請參閱 > （c + + 文件註解）'
+title: '&lt;請參閱 > (C++文件註解)'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
 ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318897"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 

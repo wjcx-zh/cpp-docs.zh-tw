@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
 ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58773121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259712"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback 類別
 
@@ -169,7 +169,7 @@ static HRESULT Download(
 [in]接收資料讀取函式的指標。 函式是物件的類別型別的成員`T`。 請參閱[StartAsyncDownload](#startasyncdownload)如語法和範例。
 
 *bstrURL*<br/>
-[in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如: 
+[in]若要取得資料的 URL。 可以是任何有效的 URL 或檔案名稱。 不可以是 NULL。 例如：
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 

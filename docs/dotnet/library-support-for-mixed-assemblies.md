@@ -8,15 +8,15 @@ helpviewer_keywords:
 - libraries [C++], mixed assemblies
 ms.assetid: 1229595c-9e9d-414d-b018-b4e4c727576d
 ms.openlocfilehash: 42116c09d5b31cf669eb6d5d1e75eae60b2610a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312004"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混合組件的程式庫支援
 
-Visual c + + 支援 c + + 標準程式庫、 C 執行階段程式庫 (CRT)，使用 ATL 和 MFC 編譯的應用程式[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 這可讓使用.NET Framework 功能，以及使用這些程式庫的現有應用程式。
+視覺化C++支援使用C++標準程式庫、 C 執行階段程式庫 (CRT)、 ATL 和 MFC 編譯的應用程式[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 這可讓使用.NET Framework 功能，以及使用這些程式庫的現有應用程式。
 
 > [!IMPORTANT]
 > **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
@@ -27,11 +27,11 @@ Visual c + + 支援 c + + 標準程式庫、 C 執行階段程式庫 (CRT)，使
 
 這項支援可提供數個相關的優點：
 
-- CRT 與 c + + 標準程式庫有混合的程式碼。 提供 c + + 標準程式庫與 CRT 是無法驗證;最後，您呼叫仍然會路由傳送到相同的 CRT 與 c + + 標準程式庫，您會使用原生程式碼。
+- CRT 與C++標準程式庫可供混合程式碼。 CRT 與C++標準程式庫會提供不是可驗證;最後，您呼叫仍會路由至相同的 CRT 與C++為您的標準程式庫從原生程式碼中使用。
 
 - 修正在混合的映像中的統一的例外狀況處理。
 
-- 混合的映像中的 c + + 變數的靜態初始設定。
+- 靜態初始設定的C++在混合的映像中的變數。
 
 - Managed 程式碼中的每個 AppDomain 和處理序專屬變數的支援。
 

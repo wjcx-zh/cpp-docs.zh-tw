@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -Zc:noexceptTypes
 ms.assetid: 1cbf7e3c-0f82-4f91-84dd-612bcf26d2c6
 ms.openlocfilehash: 28e06f54049d36262134b6be7eadb0e6e5349a45
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315933"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexcepttypes （c++17 noexcept 規則）
 
@@ -27,7 +27,7 @@ C + + 17 標準可讓`throw()`做為別名`noexcept`，移除`throw(<type list>)
 
 當 **/zc: noexcepttypes**指定選項時，編譯器符合 C + + 17 標準，並將[throw （)](../../cpp/exception-specifications-throw-cpp.md)做為別名[noexcept](../../cpp/noexcept-cpp.md)，移除`throw(<type list>)`並`throw(...)`，並允許特定類型以包含`noexcept`。 **/Zc: noexcepttypes**選項時才可以使用[/std: c + + 17](std-specify-language-standard-version.md)或是[/std:latest](std-specify-language-standard-version.md)已啟用。 **/Zc: noexcepttypes**預設會啟用它以符合 ISO C + + 17 標準。 [/Permissive--](permissive-standards-conformance.md)選項並不會影響 **/zc: noexcepttypes**。 藉由指定將此選項關閉 **/Zc:noexceptTypes-** 還原為 C + + 14 的行為`noexcept`時 **/std::C + + 17**或 **/std::latest**指定。
 
-從 Visual Studio 2017 15.5 版開始，c + + 編譯器就會診斷 c++17 模式中的宣告中的多個不相符的例外狀況規格與何時[/permissive--](permissive-standards-conformance.md)指定選項。
+從 Visual Studio 2017 15.5 版中，C++編譯器就會診斷 c++17 模式中的宣告中的多個不相符的例外狀況規格或當[/permissive--](permissive-standards-conformance.md)指定選項。
 
 這個範例會示範如何使用例外狀況規範宣告時，行為模式 **/zc: noexcepttypes**選項是設定或停用。 若要顯示的行為設定時，使用編譯`cl /EHsc /W4 noexceptTypes.cpp`。 若要顯示停用時的行為，使用編譯`cl /EHsc /W4 /Zc:noexceptTypes- noexceptTypes.cpp`。
 
@@ -73,9 +73,9 @@ struct B : A
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 修改**其他選項**屬性，以包括 **/zc: noexcepttypes**或是 **/Zc:noexceptTypes-** ，然後選擇 **確定**。
 

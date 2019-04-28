@@ -23,11 +23,11 @@ helpviewer_keywords:
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
 ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348012"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -53,7 +53,7 @@ void * _aligned_realloc_dbg(
 *size*<br/>
 要求的記憶體配置的大小。
 
-*對齊方式*<br/>
+*alignment*<br/>
 對齊值，必須是 2 的整數冪。
 
 *filename*<br/>

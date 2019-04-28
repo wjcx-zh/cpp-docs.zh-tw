@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
 ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209187"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 
@@ -29,11 +29,11 @@ Common language runtime 提供平台叫用服務或 PInvoke，可讓 managed 程
 此章節中的範例僅說明如何`PInvoke`可用。 `PInvoke` 可以簡化自訂的資料封送處理，因為您提供封送處理資訊而非撰寫程序的封送處理程式碼的屬性中以宣告方式。
 
 > [!NOTE]
->  封送處理的程式庫會提供資料以最佳化方式的原生和 managed 環境之間封送處理的替代方式。 請參閱[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)的封送處理程式庫的詳細資訊。 封送處理程式庫是使用僅限資料，而非用於函式。
+>  封送處理的程式庫會提供資料以最佳化方式的原生和 managed 環境之間封送處理的替代方式。 請參閱[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)如需有關封送處理程式庫。 封送處理程式庫是使用僅限資料，而非用於函式。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke 和 DllImport 屬性
 
-下列範例示範使用`PInvoke`Visual c + + 程式中。 原生函式 puts 定義於 msvcrt.dll。 DllImport 屬性用於宣告 puts。
+下列範例示範使用`PInvoke`視覺效果中C++程式。 原生函式 puts 定義於 msvcrt.dll。 DllImport 屬性用於宣告 puts。
 
 ```
 // platform_invocation_services.cpp
@@ -87,7 +87,7 @@ int main() {
 
 - 由於明確封送處理 Api 會傳回`IntPtr`32 位元到 64 位元可攜性的類型，您必須使用額外`ToPointer`呼叫。
 
-C + + 所公開的特定方法是更有效率且明確的方法，但代價是額外的複雜度。
+所公開的特定方法C++是更有效率且明確的方法，但代價是額外的複雜度。
 
 如果應用程式會使用主要 unmanaged 的資料類型，或如果它呼叫 unmanaged 的 Api 多於.NET Framework Api 時，我們建議您將使用 IJW 功能。 若要在多半為 managed 應用程式中呼叫偶爾 unmanaged 的 API，選擇是更為合適。
 
@@ -95,7 +95,7 @@ C + + 所公開的特定方法是更有效率且明確的方法，但代價是�
 
 PInvoke 是方便您在 Windows 中呼叫函式。
 
-在此範例中，Visual c + + 程式可互通的 MessageBox 函式，是 Win32 API 的一部分。
+在此範例中，視覺效果C++程式交互操作的 MessageBox 函式，是 Win32 API 的一部分。
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -123,7 +123,7 @@ PInvoke 也會使用封送處理的資訊來查詢 DLL 中的函式。 在 user3
 
 `char * MakeSpecial(char * pszString);`
 
-如果我們在 Visual c + + 應用程式中使用 PInvoke，我們可能會撰寫類似下列內容：
+如果我們使用視覺效果中的 PInvokeC++應用程式中，我們可能會撰寫類似下列內容：
 
 ```cpp
 [DllImport("mylib")]
@@ -168,11 +168,11 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>封送處理引數
 
-使用`PInvoke`，沒有封送處理需要之間 managed 和 c + + 原生基本型別使用相同的格式。 例如，沒有封送處理是必要 Int32 與 int 之間，或 Double 與 double 之間。
+具有`PInvoke`，沒有封送處理之間需要管理和C++具有相同格式的原生基本類型。 例如，沒有封送處理是必要 Int32 與 int 之間，或 Double 與 double 之間。
 
 不過，您必須封送處理類型，並沒有相同的格式。 這包括 char、 string 和 struct 類型。 下表顯示各種類型封送處理器所使用的對應：
 
-|wtypes.h|Visual C++|Visual c + + /clr|Common Language Runtime|
+|wtypes.h|Visual C++|視覺化C++以 /clr|Common Language Runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
 |HANDLE|Void \*|Void \*|IntPtr、 UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 屬性位於 System::Runtime::InteropServices 命名空間。 屬性可以搭配其他資料類型，例如陣列。
 
-如本主題稍早所述，封送處理程式庫會提供全新最佳化方法的封送處理原生和 managed 環境之間的資料。 如需詳細資訊，請參閱 < [Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。
+如本主題稍早所述，封送處理程式庫會提供全新最佳化方法的封送處理原生和 managed 環境之間的資料。 如需詳細資訊，請參閱 < [Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 ## <a name="performance-considerations"></a>效能考量
 

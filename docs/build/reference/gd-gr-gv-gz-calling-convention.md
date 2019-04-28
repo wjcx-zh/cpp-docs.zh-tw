@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270948"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
 
@@ -41,24 +41,24 @@ ms.locfileid: "57817459"
 
 ## <a name="remarks"></a>備註
 
-**/Gd**，預設值，指定[__cdecl](../../cpp/cdecl.md)呼叫慣例，所有函式，但是 c + + 成員函式和函式，會標示[__stdcall](../../cpp/stdcall.md)， [__fastcall](../../cpp/fastcall.md)，或[__vectorcall](../../cpp/vectorcall.md)。
+**/Gd**，預設值，指定[__cdecl](../../cpp/cdecl.md)呼叫慣例，所有函式，但是C++成員函式和標記的函式[__stdcall](../../cpp/stdcall.md)， [__fastcall](../../cpp/fastcall.md)，或[__vectorcall](../../cpp/vectorcall.md)。
 
-**/Gr**指定`__fastcall`呼叫慣例的 c + + 成員函式除外的所有函式，函式命名`main`，和函式，會標示`__cdecl`， `__stdcall`，或`__vectorcall`。 所有`__fastcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，並以其他架構為目標的編譯器會忽略。
+**/Gr**指定`__fastcall`以外的所有函式的呼叫慣例C++成員函式、 函式`main`，和標記的函式`__cdecl`， `__stdcall`，或`__vectorcall`。 所有`__fastcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，並以其他架構為目標的編譯器會忽略。
 
-**/Gz**指定`__stdcall`呼叫慣例的 c + + 成員函式除外的所有函式，函式命名`main`，和函式，會標示`__cdecl`， `__fastcall`，或`__vectorcall`。 所有`__stdcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，並以其他架構為目標的編譯器會忽略。
+**/Gz**指定`__stdcall`以外的所有函式的呼叫慣例C++成員函式、 函式`main`，和標記的函式`__cdecl`， `__fastcall`，或`__vectorcall`。 所有`__stdcall`函式都必須有原型。 這個呼叫慣例僅供以 x86 為目標的編譯器，並以其他架構為目標的編譯器會忽略。
 
-**/Gv**指定`__vectorcall`呼叫慣例的 c + + 成員函式除外的所有函式，名為的 main 的函式具有`vararg`變數引數清單或會標有衝突的函式`__cdecl`，`__stdcall`，或`__fastcall`屬性。 這個呼叫慣例只可用在支援/arch:sse2 的 x86 和 x64 架構上和更新版本，且 ARM 架構為目標的編譯器會忽略。
+**/Gv**指定`__vectorcall`以外的所有函式的呼叫慣例C++成員函式、 名為 main，具有函式的函式`vararg`變數引數清單中或函式會標記為衝突`__cdecl`， `__stdcall`，或`__fastcall`屬性。 這個呼叫慣例只可用在支援/arch:sse2 的 x86 和 x64 架構上和更新版本，且 ARM 架構為目標的編譯器會忽略。
 
 接受可變數目的引數的函式必須標記為`__cdecl`。
 
 **/Gd**， **/Gr**， **/Gv**並 **/Gz**與不相容[/clr: safe](clr-common-language-runtime-compilation.md)或 **/clr: pure**. **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 > [!NOTE]
-> 根據預設，適用於 x86 處理器，c + + 成員函式會使用[__thiscall](../../cpp/thiscall.md)。
+> 根據預設，適用於 x86 處理器，C++成員函式會使用[__thiscall](../../cpp/thiscall.md)。
 
 適用於所有的處理器，明確地標示為成員函式`__cdecl`， `__fastcall`， `__vectorcall`，或`__stdcall`會使用指定的呼叫慣例，如果它不會忽略在該架構上。 成員函式接受可變數目的引數一律會使用`__cdecl`呼叫慣例。
 
-這些編譯器選項會有任何作用，在 c + + 方法和函式的裝飾名稱。 除非宣告為`extern "C"`，c + + 方法和函式使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
+這些編譯器選項不影響裝飾名稱的C++方法和函式。 除非宣告為`extern "C"`，C++方法和函式使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
 
 如需有關呼叫慣例的詳細資訊，請參閱 <<c0> [ 呼叫慣例](../../cpp/calling-conventions.md)。
 
@@ -66,7 +66,7 @@ ms.locfileid: "57817459"
 
 在 x86 處理器而言，所有函數引數會都傳遞到堆疊上由右至左。 在 ARM 和 x64 架構，部分引數會傳遞由暫存器，其餘部分會由右至左傳遞到堆疊上。 呼叫的常式會取出來自堆疊的引數。
 
-對於 C，`__cdecl`命名慣例是使用函式名稱加上底線 ( `_` ); 會執行任何大小寫轉譯。 除非宣告為`extern "C"`，c + + 函式會使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
+對於 C，`__cdecl`命名慣例是使用函式名稱加上底線 ( `_` ); 會執行任何大小寫轉譯。 除非宣告為`extern "C"`，C++函式會使用不同的名稱裝飾配置。 如需詳細資訊，請參閱 <<c0> [ 裝飾名稱](decorated-names.md)。
 
 ## <a name="fastcall-specifics"></a>__fastcall 專屬資訊
 
@@ -99,9 +99,9 @@ A`__vectorcall`函式的整數引數傳遞的值，並使用最多兩個 （在 
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取  **C/c + +** > **進階**屬性頁。
+1. 選取 [ **C /C++** > **進階**] 屬性頁。
 
 1. 修改**呼叫慣例**屬性。
 
@@ -112,4 +112,4 @@ A`__vectorcall`函式的整數引數傳遞的值，並使用最多兩個 （在 
 ## <a name="see-also"></a>另請參閱
 
 - [MSVC 編譯器選項](compiler-options.md)
-- [MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+- [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

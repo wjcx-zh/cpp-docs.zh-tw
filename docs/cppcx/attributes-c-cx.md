@@ -3,15 +3,15 @@ title: 屬性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 4438e03c-4de3-433d-abcc-31aa863bc0e0
 ms.openlocfilehash: 5f74914ab65fdf2c1803b47665e16378991efa3c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209451"
 ---
 # <a name="attributes-ccx"></a>屬性 (C++/CX)
 
-屬性是一種特殊的 ref 類別，可附加至 Windows 執行階段型別和方法，以指定建立中繼資料時的特定行為的方括號中。 數個預先定義的屬性 — 例如， [1&gt;{2&gt;windows::foundation::metadata::webhosthidden&lt;2](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)— 常用在 C + + /CX 程式碼。 此範例顯示如何將屬性套用至類別：
+屬性是一種特殊的 ref 類別，可附加至 Windows 執行階段型別和方法，以指定建立中繼資料時的特定行為的方括號中。 數個預先定義的屬性，例如[1&gt;{2&gt;windows::foundation::metadata::webhosthidden&lt;2](/uwp/api/Windows.Foundation.Metadata.WebHostHiddenAttribute)— 通常用於C++/CX 程式碼。 此範例顯示如何將屬性套用至類別：
 
 [!code-cpp[cx_attributes#01](../cppcx/codesnippet/CPP/cx_attributes/class1.h#01)]
 
@@ -46,5 +46,5 @@ ms.locfileid: "57743827"
 ## <a name="see-also"></a>另請參閱
 
 [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
 ms.openlocfilehash: b247e97f5aa6b5e85a6a6b6f57a64224a9e0f435
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252658"
 ---
 # <a name="string-data-management"></a>字串資料管理
 
-Visual c + + 提供數種方式可管理字串資料：
+視覺化C++提供數種方式來管理字串資料：
 
 - [字串操作](../c-runtime-library/string-manipulation-crt.md)處理 C 樣式 null 終止字串
 
@@ -33,7 +33,7 @@ Visual c + + 提供數種方式可管理字串資料：
 
 - [CString 參考計數](#_core_cstring_reference_counting)
 
-[CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)類別支援操作字串。 它被要取代和擴充通常由 C 執行階段程式庫字串封裝所提供的功能。 `CString`類別提供成員函式和運算子來簡化的字串處理，類似於 Basic 中找到。 類別也會提供建構函式和運算子建構、 指派和比較`CString`s 和標準 c + + 字串資料類型。 因為`CString`不衍生自`CObject`，您可以使用`CString`獨立大部分 Microsoft Foundation Class 程式庫 (MFC) 的物件。
+[CStringT 類別](../atl-mfc-shared/reference/cstringt-class.md)類別支援操作字串。 它被要取代和擴充通常由 C 執行階段程式庫字串封裝所提供的功能。 `CString`類別提供成員函式和運算子來簡化的字串處理，類似於 Basic 中找到。 類別也會提供建構函式和運算子建構、 指派和比較`CString`s 和標準C++字串資料類型。 因為`CString`不衍生自`CObject`，您可以使用`CString`獨立大部分 Microsoft Foundation Class 程式庫 (MFC) 的物件。
 
 `CString` 物件可讓您遵循"的值語意。" A`CString`物件都代表唯一的值。 把`CString`做為實際的字串，而非字串的指標。
 

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
 ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259855"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl 類別
 
@@ -82,7 +82,7 @@ COM 列舉值介面。 請參閱[IEnumString](/windows/desktop/api/objidl/nn-obj
 
 ## <a name="remarks"></a>備註
 
-請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法實作的範例。 `CComEnumImpl` 提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。 這個類別是類似於`IEnumOnSTLImpl`類別，可提供列舉值介面的實作，根據 c + + 標準程式庫容器。
+請參閱[IEnumString](/windows/desktop/api/objidl/nn-objidl-ienumstring)方法實作的範例。 `CComEnumImpl` 提供要列舉的項目儲存在陣列中的 COM 列舉程式介面的實作。 這個類別是類似`IEnumOnSTLImpl`類別，可提供列舉值介面的實作，根據C++標準程式庫容器。
 
 > [!NOTE]
 >  如需有關進一步之間的差異`CComEnumImpl`並`IEnumOnSTLImpl`，請參閱[CComEnumImpl::Init](#init)。

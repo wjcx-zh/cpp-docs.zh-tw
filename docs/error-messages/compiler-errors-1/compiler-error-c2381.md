@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
 ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347895"
 ---
 # <a name="compiler-error-c2381"></a>編譯器錯誤 C2381
 
-'function': 重複定義;__declspec （noreturn） 不同
+'function' : redefinition; __declspec(noreturn) differs
 
 函式已宣告，並接著定義但所使用的定義[noreturn](../../cpp/noreturn.md) `__declspec`修飾詞。 善用`noreturn`構成函式的重複定義; 的宣告和定義要使用同意`noreturn`。
 

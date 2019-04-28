@@ -10,25 +10,25 @@ helpviewer_keywords:
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
 ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314776"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>靜態連結至 MFC 的標準 MFC Dll
 
 MFC DLL 以靜態方式連結至 MFC 一般是在內部使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以呼叫由 MFC 或非 MFC 可執行檔。 如名稱所述，這類型的 DLL 是使用 MFC 靜態連結程式庫版本。 通常與一般使用 C 介面的標準 MFC DLL 匯出函式。 如需如何撰寫、 建置及使用 MFC 的標準 DLL 的範例，請參閱範例[DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)。
 
-請注意，詞彙 USRDLL 不再使用 Visual c + + 文件中。 靜態連結至 MFC 之標準 MFC DLL 有相同的特性，與之前的 usrdll。
+請注意，在視覺效果不會再使用詞彙 USRDLLC++文件。 靜態連結至 MFC 之標準 MFC DLL 有相同的特性，與之前的 usrdll。
 
 MFC DLL，以靜態方式連結至 MFC，具有下列功能：
 
-- 可執行的用戶端可以使用任何支援 Dll （C、 c + +、 Pascal、 Visual Basic 中，依此類推）; 使用的語言撰寫它並沒有是一個 MFC 應用程式。
+- 可執行的用戶端可以使用任何支援 Dll 使用的語言撰寫 (C， C++，依照 pascal 命名法、 Visual Basic 等等);它並沒有是一個 MFC 應用程式。
 
 - DLL 可以連結至應用程式所使用的相同 MFC 靜態連結程式庫。 不再是靜態連結程式庫，適用於 Dll 的另一個版本。
 
-- 之前版本的 MFC 4.0，Usrdll 會提供相同的型別與靜態連結至 MFC 的標準 MFC Dll 的功能。 截至 Visual c + + 4.0 版，詞彙 USRDLL 已經過時。
+- 之前版本的 MFC 4.0，Usrdll 會提供相同的型別與靜態連結至 MFC 的標準 MFC Dll 的功能。 截至 Visual C++ 4.0 版，詞彙 USRDLL 已經過時。
 
 靜態連結至 MFC 之標準 MFC DLL 必須符合下列需求：
 

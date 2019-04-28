@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334862"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ errno_t _fcvt_s(
 *sizeInBytes*<br/>
 以位元組為單位的緩衝區大小。
 
-*值*<br/>
+*value*<br/>
 要轉換的數字。
 
 *count*<br/>
@@ -118,7 +118,7 @@ errno_t _fcvt_s(
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫︰** 所有版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫：** 所有版本的[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 ## <a name="example"></a>範例
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
 ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326985"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>剪貼簿：使用 Windows 剪貼簿
 
@@ -32,7 +32,7 @@ ms.locfileid: "57264790"
 
 Microsoft Foundation 類別庫提供文字編輯使用剪貼簿支援`CEdit`和`CEditView`類別。 OLE 類別也會簡化實作的剪貼簿作業涉及 OLE 項目。 如需有關 OLE 類別的詳細資訊，請參閱[剪貼簿：使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)。
 
-實作其他編輯功能表命令，例如復原 (**ID_EDIT_UNDO**) 和取消復原 (**ID_EDIT_REDO**)，也會保留給您。 如果您的應用程式不支援這些命令，輕鬆地將它們從您使用 Visual c + + 資源編輯器的資源檔中刪除。
+實作其他編輯功能表命令，例如復原 (**ID_EDIT_UNDO**) 和取消復原 (**ID_EDIT_REDO**)，也會保留給您。 如果您的應用程式不支援這些命令，您可以輕鬆地刪除它們從您使用視覺效果的資源檔C++資源編輯器。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

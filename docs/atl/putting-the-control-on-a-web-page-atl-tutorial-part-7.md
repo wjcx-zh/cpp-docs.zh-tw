@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
 ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261536"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>將控制項放在網頁上 (ATL 教學課程，第 7 部分)
 
@@ -74,7 +74,7 @@ ms.locfileid: "57297446"
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>表示控制項可安全用於指令碼
 
-您可以檢視與控制項的網頁在 Internet Explorer 中，或者，更方便，使用 Visual c + + 內建網頁瀏覽器檢視。 若要查看您在 Web 瀏覽器檢視中的控制項，以滑鼠右鍵按一下 PolyCtl.htm，然後按一下**瀏覽器中的檢視**。
+您可以檢視與控制項的網頁在 Internet Explorer 中，或為了方便起見，使用內建於 Visual Web 瀏覽器檢視C++。 若要查看您在 Web 瀏覽器檢視中的控制項，以滑鼠右鍵按一下 PolyCtl.htm，然後按一下**瀏覽器中的檢視**。
 
 > [!NOTE]
 > 如果看不到控制項，知道某些瀏覽器需要執行 ActiveX 控制項的設定調整。 請參閱有關如何啟用 ActiveX 控制項的瀏覽器的文件。

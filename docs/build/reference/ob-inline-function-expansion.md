@@ -25,11 +25,11 @@ helpviewer_keywords:
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
 ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320223"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (內嵌函式展開)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57807491"
 停用內嵌展開。 根據預設，展開，就會發生在由編譯器決定，所有的函式，通常稱為*自動內嵌*。
 
 **1**<br/>
-可展開的函式標示為僅[內嵌](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在類別宣告中所定義的 c + + 成員函式。
+可展開的函式標示為僅[內嵌](../../cpp/inline-functions-cpp.md)， `__inline`，或`__forceinline`，或在C++類別宣告中所定義的成員函式。
 
 **2**<br/>
 預設值。 可展開標記為 `inline`、`__inline` 或 `__forceinline` 的函式，以及編譯器所選擇的其他任何函式。
@@ -65,9 +65,9 @@ ms.locfileid: "57807491"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 依序展開**組態屬性**， **C/c + +**，然後選取**最佳化**。
+1. 依序展開**組態屬性**， **C /C++**，然後選取**最佳化**。
 
 1. 修改**內嵌函式展開**屬性。
 
@@ -79,4 +79,4 @@ ms.locfileid: "57807491"
 
 [/O 選項 (最佳化程式碼)](o-options-optimize-code.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

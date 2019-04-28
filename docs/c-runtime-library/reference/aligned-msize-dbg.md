@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451294"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342027"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -46,7 +46,7 @@ size_t _aligned_msize_dbg(
 *memblock*<br/>
 記憶體區塊的指標。
 
-*對齊方式*<br/>
+*alignment*<br/>
 對齊值，必須是 2 的整數冪。
 
 *offset*<br/>
@@ -60,7 +60,7 @@ size_t _aligned_msize_dbg(
 
 *對齊*並*位移*值必須是傳遞至配置區塊函式的值相同。
 
-**_aligned_msize_dbg**是偵錯版本[_aligned_msize](aligned-msize.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_msize_dbg**的呼叫會降低 **_aligned_msize**。 兩者 **_aligned_msize**並 **_aligned_msize_dbg**計算的基底堆積中的記憶體區塊大小，但 **_aligned_msize_dbg**將偵錯功能： 它包含記憶體的使用者部分的任一端使用緩衝區中傳回大小的區塊。
+**_aligned_msize_dbg**是偵錯版本[_aligned_msize](aligned-msize.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_msize_dbg**的呼叫會降低 **_aligned_msize**。 兩者 **_aligned_msize**並 **_aligned_msize_dbg**計算的基底堆積中的記憶體區塊大小，但 **_aligned_msize_dbg**將偵錯功能：它包含在傳回大小的記憶體區塊使用者部分任一端使用緩衝區。
 
 這個函式會驗證其參數。 如果*memblock*為 null 指標或*對齊*不是 2 的乘冪 **_msize**叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果已處理的錯誤，則函式會設定**errno**要**EINVAL**並傳回-1。
 

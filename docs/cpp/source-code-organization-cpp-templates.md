@@ -1,15 +1,15 @@
 ---
-title: 原始程式碼組織 （c + + 樣板）
+title: 來源的程式碼組織 (C++範本)
 ms.date: 11/04/2016
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
 ms.openlocfilehash: 94e386b6301519b98b101adfca699b7f3128e3c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330996"
 ---
-# <a name="source-code-organization-c-templates"></a>原始程式碼組織 （c + + 樣板）
+# <a name="source-code-organization-c-templates"></a>來源的程式碼組織 (C++範本)
 
 在定義類別樣板，您必須組織的方式需要它們時，會顯示給編譯器的成員定義中的原始程式碼。   您可以選擇使用*包含模型*或*明確具現化*模型。 在包含模型中，您可以包含在使用範本的每個檔案中的成員定義。 這種方法是最簡單的並提供最大的彈性，以具象類型可以搭配您的範本。 其缺點是，它可能會增加編譯時間。 影響可能很大，如果專案和/或包含的檔案本身很大。 使用明確具現化方法時，範本本身執行個體化具象類別或特定類型的類別成員。  這種方法可以加快編譯時間，但它會限制要事先啟用範本實作這些類別的使用方式。 一般情況下，我們建議您除非編譯時間會變成問題時，才使用包含模型。
 

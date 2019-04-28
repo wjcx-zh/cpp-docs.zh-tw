@@ -28,11 +28,11 @@ helpviewer_keywords:
 - expm1 function
 ms.assetid: 2a4dd2d9-370c-42b0-9067-0625efa272e0
 ms.openlocfilehash: 5971f879ecef7d4fa1027849cc44d598e877b5f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334979"
 ---
 # <a name="expm1-expm1f-expm1l"></a>expm1、expm1f、expm1l
 
@@ -69,7 +69,7 @@ long double expm1l(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**expm1**採用並傳回**float**並**長** **double**值。 在 C 程式中， **expm1**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**expm1**採用並傳回**float**並**長** **double**值。 在 C 程式中， **expm1**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Command Line property pages
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
 ms.openlocfilehash: 67f305f344030528bd99d624b1f7172fbae1d100
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272402"
 ---
 # <a name="command-line-property-pages"></a>命令列屬性頁
 
@@ -19,9 +19,9 @@ ms.locfileid: "57824782"
 
 您在編輯方塊中輸入的任何命令將會傳遞至資料夾的工具。 不會對輸入進行任何驗證或檢查，也不會有任何相依性檢查。
 
-如需如何存取**命令列**屬性頁中，請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+如需如何存取**命令列**屬性頁中，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[C + + 專案屬性頁參考](property-pages-visual-cpp.md)<br>
+[C++專案屬性頁參考](property-pages-visual-cpp.md)<br>
 [.Lib 檔作為連結器輸入](dot-lib-files-as-linker-input.md)

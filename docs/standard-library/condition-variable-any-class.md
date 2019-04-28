@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
 ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279045"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any 類別
 
@@ -49,7 +49,7 @@ class condition_variable_any;
 |----------|-----------------|
 |[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable_any` 物件的執行緒。|
 |[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable_any` 物件的執行緒。|
-|[等候](#wait)|封鎖執行緒。|
+|[wait](#wait)|封鎖執行緒。|
 |[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|
 |[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|
 

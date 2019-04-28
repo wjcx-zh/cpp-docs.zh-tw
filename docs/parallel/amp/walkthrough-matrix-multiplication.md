@@ -3,21 +3,21 @@ title: 逐步解說：矩陣乘法
 ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
 ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237200"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>逐步解說：矩陣乘法
 
-此逐步解說示範如何使用 c + + AMP 來加速執行矩陣乘法。 會顯示兩種演算法，另一個則沒有並排顯示，一個用於並排顯示。
+此逐步解說示範如何使用C++p 來加速執行矩陣乘法。 會顯示兩種演算法，另一個則沒有並排顯示，一個用於並排顯示。
 
 ## <a name="prerequisites"></a>必要條件
 
 在開始之前：
 
-- 讀取[c + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。
+- 讀取[ C++ AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。
 
 - 讀取[使用磚](../../parallel/amp/using-tiles.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57300969"
 
 1. 在 Visual Studio 中的功能表列上選擇 **檔案** > **新增** > **專案**。
 
-1. 底下**已安裝**在 [範本] 窗格中，選取**Visual c + +**。
+1. 底下**已安裝**在 [範本] 窗格中，選取**視覺化C++** 。
 
 1. 選取**空專案**，輸入*MatrixMultiply*中**名稱**方塊，然後再選擇**確定** 按鈕。
 
@@ -35,7 +35,7 @@ ms.locfileid: "57300969"
 
 1. 中**方案總管**，開啟捷徑功能表**原始程式檔**，然後選擇**新增** > **新項目**。
 
-1. 在 **加入新項目**對話方塊中，選取**c + + 檔 (.cpp)**，輸入*MatrixMultiply.cpp*中**名稱**方塊，然後再選擇  **新增** 按鈕。
+1. 在 [**加入新項目**對話方塊中，選取**C++檔 (.cpp)**，輸入*MatrixMultiply.cpp*中**名稱**方塊，然後再選擇**新增**] 按鈕。
 
 ## <a name="multiplication-without-tiling"></a>乘法，而不需要並排顯示
 
@@ -49,7 +49,7 @@ A 是 3-2 矩陣，而 B 是 2-3 的矩陣。 由 B 相乘的乘積是下列 3-3
 
 ![3&#45;的&#45;3 產品矩陣](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;的&#45;3 產品矩陣")
 
-### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不使用 c + + AMP
+### <a name="to-multiply-without-using-c-amp"></a>要相乘，而不需使用C++p
 
 1. 開啟 MatrixMultiply.cpp，並使用下列的程式碼取代現有的程式碼。
 
@@ -87,7 +87,7 @@ void main() {
 
 1. 選擇**Enter**結束應用程式。
 
-### <a name="to-multiply-by-using-c-amp"></a>若要將乘以使用 c + + AMP
+### <a name="to-multiply-by-using-c-amp"></a>要相乘藉由使用C++p
 
 1. 在 MatrixMultiply.cpp，新增下列程式碼，再`main`方法。
 
@@ -296,4 +296,4 @@ void main() {
 ## <a name="see-also"></a>另請參閱
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
-[逐步解說：偵錯 c + + AMP 應用程式](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)
+[逐步解說：針對 C++ AMP 應用程式進行偵錯](../../parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)

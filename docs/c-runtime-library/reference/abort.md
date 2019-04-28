@@ -23,11 +23,11 @@ helpviewer_keywords:
 - abort function
 - processes, aborting
 ms.openlocfilehash: d8cb190e36a64e8bd8cfcb75bc9a19c2a394fc48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342194"
 ---
 # <a name="abort"></a>abort
 
@@ -50,7 +50,7 @@ void abort( void );
 
 **Microsoft 專屬**
 
-根據預設，當應用程式以偵錯執行階段程式庫，來建置**中止**常式會先顯示錯誤訊息，再`SIGABRT`，就會引發。 若是在主控台模式中執行的主控台應用程式，訊息會傳送至 `STDERR`。 在視窗模式中執行的 Windows 傳統型應用程式和主控台應用程式會在訊息方塊中顯示訊息。 若要隱藏訊息，請使用 [_set_abort_behavior](set-abort-behavior.md) 清除 `_WRITE_ABORT_MSG` 旗標。 顯示的訊息取決於所使用的執行階段環境版本。 對於使用最新版的 Visual c + + 建置的應用程式，訊息看起來像這樣：
+根據預設，當應用程式以偵錯執行階段程式庫，來建置**中止**常式會先顯示錯誤訊息，再`SIGABRT`，就會引發。 若是在主控台模式中執行的主控台應用程式，訊息會傳送至 `STDERR`。 在視窗模式中執行的 Windows 傳統型應用程式和主控台應用程式會在訊息方塊中顯示訊息。 若要隱藏訊息，請使用 [_set_abort_behavior](set-abort-behavior.md) 清除 `_WRITE_ABORT_MSG` 旗標。 顯示的訊息取決於所使用的執行階段環境版本。 使用視覺效果的最新版本建置的應用程式C++，訊息看起來像這樣：
 
 > R6010-已呼叫 abort （）
 

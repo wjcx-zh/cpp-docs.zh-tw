@@ -8,19 +8,19 @@ helpviewer_keywords:
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
 ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320665"
 ---
 # <a name="netmodule-files-as-linker-input"></a>.netmodule 檔做為連結器輸入
 
 link.exe 現在接受 MSIL .obj 或 .netmodule 做為輸入。 連結器產生的輸出檔案是組件或.netmodule 任一.obj 或連結器輸入.netmodule 沒有執行階段相依性。
 
-MSVC 編譯器所建立.netmodule [/LN （建立 MSIL 模組）](ln-create-msil-module.md)或使用連結器[/NOASSEMBLY （建立 MSIL 模組）](noassembly-create-a-msil-module.md)。 .obj 一律會建立 Visual c + + 編譯中。 其他 Visual Studio 編譯器中，使用 **/target: module**編譯器選項。
+MSVC 編譯器所建立.netmodule [/LN （建立 MSIL 模組）](ln-create-msil-module.md)或使用連結器[/NOASSEMBLY （建立 MSIL 模組）](noassembly-create-a-msil-module.md)。 .obj 一律會建立視覺效果C++編譯。 其他 Visual Studio 編譯器中，使用 **/target: module**編譯器選項。
 
-您必須傳遞給連結器.obj 檔案從建立.netmodule 的 Visual c + + 編譯。 因為不再支援傳遞.netmodule **/clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+您必須傳遞給連結器.obj 檔案從視覺效果C++建立.netmodule 的編譯。 因為不再支援傳遞.netmodule **/clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
 如需如何叫用連結器，從命令列資訊，請參閱[連結器命令列語法](linking.md)，[使用 MSVC 工具組，從命令列](../building-on-the-command-line.md)，和[設定的路徑和環境變數命令列建置](../setting-the-path-and-environment-variables-for-command-line-builds.md)。
 
@@ -42,7 +42,7 @@ MSIL .obj 或 .netmodule 檔案也可以傳遞給 cl.exe。
 
 ## <a name="example"></a>範例
 
-在 c + + 程式碼**攔截**相對應的區塊**嘗試**時都會叫用非系統例外狀況。 不過，根據預設，CLR 會包裝與非系統例外狀況<xref:System.Runtime.CompilerServices.RuntimeWrappedException>。 當從 Visual c + + 和非-Visual c + + 模組建立組件，而您想**攔截**中要叫用從其對應的 c + + 程式碼區塊**嘗試**子句時**試**區塊擲回的非系統例外狀況，您必須新增`[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]`屬性設定為非 c + + 模組的原始程式碼。
+在C++程式碼**攔截**區塊的對應**試**都會叫用非系統例外狀況。 不過，根據預設，CLR 會包裝與非系統例外狀況<xref:System.Runtime.CompilerServices.RuntimeWrappedException>。 從 Visual 建立組件時C++和非視覺化C++模組，而您想**攔截**區塊C++從其對應的叫用的程式碼**再試**子句時**試**區塊擲回的非系統例外狀況，您必須新增`[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]`屬性設定為非原始碼C++模組。
 
 ```cpp
 // MSIL_linking.cpp
@@ -69,7 +69,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-藉由變更的布林值`WrapNonExceptionThrows`屬性，修改 Visual c + + 程式碼能夠攔截非系統例外狀況。
+藉由變更的布林值`WrapNonExceptionThrows`屬性，您修改視覺效果的功能C++來攔截非系統例外狀況的程式碼。
 
 ```cpp
 // MSIL_linking_2.cs

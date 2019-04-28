@@ -33,11 +33,11 @@ helpviewer_keywords:
 - std::next [C++]
 - std::prev [C++]
 ms.openlocfilehash: f6ea1ac49dabbfc34af9c8ddd020543f606d37a4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224138"
 ---
 # <a name="ltiteratorgt-functions"></a>&lt;iterator&gt; 函式
 
@@ -376,7 +376,7 @@ typename iterator_traits<InputIterator>::difference_type distance(InputIterator 
 *first*<br/>
 要判斷與第二個迭代器之距離的第一個迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 要判斷與第一個迭代器之距離的第二個迭代器。
 
 ### <a name="return-value"></a>傳回值
@@ -630,7 +630,7 @@ Iter Ptr,
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*Ptr*<br/>
 目的陣列的指標。
 
 *Size*<br/>
@@ -740,7 +740,7 @@ unchecked_array_iterator<Iter>
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*Ptr*<br/>
 目的陣列的指標。
 
 ### <a name="return-value"></a>傳回值

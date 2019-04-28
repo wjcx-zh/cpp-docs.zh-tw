@@ -3,15 +3,15 @@ title: 將類型和成員設為已被取代 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
 ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62301496"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
 
-在 C + + /CX 中，Windows 執行階段型別和成員的生產者和取用者使用[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
+在C++/CX，生產者與取用者使用的 Windows 執行階段型別和成員取代[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
 
 > [!CAUTION]
 > [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)是只能與 Windows 執行階段類型的屬性。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
@@ -57,5 +57,5 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

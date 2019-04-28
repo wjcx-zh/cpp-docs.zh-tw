@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330202"
 ---
 # <a name="platformstring-class"></a>Platform::String 類別
 
@@ -85,11 +85,11 @@ public ref class String sealed : Object,
 
 |成員|描述|
 |------------|-----------------|
-|[String:: operator = = 運算子](#operator-equality)|指出兩個指定的 String 物件是否具有相同的值。|
+|[String:: operator = = 運算子](#operator-equality)|指出兩個指定的字串物件是否具有相同的值。|
 |[operator+ 運算子](#operator-plus)|將兩個 String 物件串連成新的 String 物件。|
 |[String:: operator > 運算子](#operator-greater-than)|指出其中一個 String 物件的值是否大於另一個 String 物件的值。|
 |[String:: operator > = 運算子](#operator-greater-than-or-equals)|指出其中一個 String 物件的值是否大於或等於另一個 String 物件的值。|
-|[String:: operator ！ = 運算子](#operator-inequality)|指出兩個指定的 String 物件是否具有不同的值。|
+|[String:: operator ！ = 運算子](#operator-inequality)|指出兩個指定的字串物件是否具有不同的值。|
 |[String:: operator < 運算子](#operator-less-than)|指出其中一個 String 物件的值是否小於另一個 String 物件的值。|
 
 ### <a name="requirements"></a>需求
@@ -411,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ## <a name="operator-inequality"></a> String:: operator ！ =
 
-指出兩個指定`String`物件有不同的值。
+表示是否兩個指定`String`物件有不同的值。
 
 ### <a name="syntax"></a>語法
 
@@ -498,4 +498,4 @@ A`String`物件，其值為與目前字串相同。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)
+[平台命名空間](../cppcx/platform-namespace-c-cx.md)

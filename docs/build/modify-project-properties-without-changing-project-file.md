@@ -1,16 +1,16 @@
 ---
-title: HOW TO：修改的 c + + 專案屬性和目標，而不需要變更專案檔
+title: HOW TO：修改C++專案屬性和目標，而不需要變更專案檔
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
 ms.openlocfilehash: ad527d8ee69a1786be7d325571f9c9ac4f9a8574
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273335"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>HOW TO：修改的 c + + 專案屬性和目標，而不需要變更專案檔
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>HOW TO：修改C++專案屬性和目標，而不需要變更專案檔
 
 您可以從 MSBuild 命令提示字元覆寫專案屬性和目標，而不需變更專案檔。 當您想要暫時或偶爾套用某些屬性時，這非常有用。 它會假設需要一些 MSBuild 知識。 如需詳細資訊，請參閱 [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)。
 

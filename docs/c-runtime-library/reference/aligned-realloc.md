@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
 ms.openlocfilehash: 456d57eeebfd47a2133b8a5813b11aaf77a300a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335694"
 ---
 # <a name="alignedrealloc"></a>_aligned_realloc
 
@@ -52,7 +52,7 @@ void * _aligned_realloc(
 *size*<br/>
 要求的記憶體配置的大小。
 
-*對齊方式*<br/>
+*alignment*<br/>
 對齊值，必須是 2 的整數冪。
 
 ## <a name="return-value"></a>傳回值

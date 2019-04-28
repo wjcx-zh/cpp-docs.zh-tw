@@ -8,11 +8,11 @@ helpviewer_keywords:
 - -Q compiler option [C++]
 - /Q compiler option [C++]
 ms.openlocfilehash: 5bbb63b4f437f8aefd5c84c1c1c4bd20bdb965cb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319391"
 ---
 # <a name="q-options-low-level-operations"></a>/Q 選項 (低階運算)
 
@@ -37,4 +37,4 @@ ms.locfileid: "57819905"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

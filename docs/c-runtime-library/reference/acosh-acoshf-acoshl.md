@@ -31,11 +31,11 @@ helpviewer_keywords:
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
 ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341687"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -65,18 +65,18 @@ long double acosh( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|`_matherr` 例外狀況|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|無|無|
-|*x* < 1|無|無|
+|± QNAN、IND、INF|none|none|
+|*x* < 1|none|none|
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，您可以呼叫多載**acosh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **acosh**一律採用並傳回**double**。
+當您使用C++，您可以呼叫多載**acosh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **acosh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
 |功能|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**acosh**， **acoshf**， **acoshl**|\<math.h>|\<cmath>|
+|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

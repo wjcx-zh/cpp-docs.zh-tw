@@ -8,15 +8,15 @@ helpviewer_keywords:
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
 ms.openlocfilehash: f1532b5aa4ea712feab08b49b7c035187ca0d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330488"
 ---
 # <a name="templates-c"></a>樣板 (C++)
 
-範本是一般 c + + 程式設計的基礎。 作為強型別語言，c + + 會需要具有明確宣告的程式設計人員，或由編譯器推斷特定類型的所有變數。 不過，許多資料結構和演算法看起來相同無論何種類型操作。 應處理範本，您定義類別或函式的作業，並讓使用者指定何種實體類型的作業。
+範本是中的泛用程式設計的基礎C++。 作為強型別語言，C++必須要有特定的型別，明確宣告的程式設計人員或編譯器推算出的所有變數。 不過，許多資料結構和演算法看起來相同無論何種類型操作。 應處理範本，您定義類別或函式的作業，並讓使用者指定何種實體類型的作業。
 
 ## <a name="defining-and-using-templates"></a>定義和使用範本
 
@@ -119,7 +119,7 @@ vector<MyClass*> vec;
 
 ## <a name="non-type-parameters"></a>非類型參數
 
-不同於 C# 和 Java 等其他語言中的泛型類型，c + + 範本都支援非類型參數，也稱為 「 值參數。 例如，您可以提供常數的整數值，以指定陣列的長度，如同此範例中是類似於標準程式庫中的 std:: array 類別：
+不同於泛型類型以其他語言如C#和 Java 中，C++範本支援非類型參數，也稱為 「 值參數。 例如，您可以提供常數的整數值，以指定陣列的長度，如同此範例中是類似於標準程式庫中的 std:: array 類別：
 
 ```cpp
 template<typename T, size_t L>

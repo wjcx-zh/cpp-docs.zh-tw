@@ -33,11 +33,11 @@ helpviewer_keywords:
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
 ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334940"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -74,11 +74,11 @@ long double fabsl(
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|無|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因此您可以呼叫多載**fabs**如果您包含\<cmath> > 標頭。 在 C 程式中， **fabs**一律採用並傳回**double**。
+C++允許多載，因此您可以呼叫多載**fabs**如果您包含\<cmath> > 標頭。 在 C 程式中， **fabs**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

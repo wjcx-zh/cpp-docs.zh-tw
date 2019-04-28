@@ -94,11 +94,11 @@ helpviewer_keywords:
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
 ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294432"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 命令和屬性的一般巨集
 
@@ -106,7 +106,7 @@ ms.locfileid: "58327674"
 
 ## <a name="view-the-current-properties-and-macros"></a>檢視目前的屬性和巨集
 
-若要顯示所有目前可用的巨集，**屬性頁**] 對話方塊底下**VC + + 目錄**，選擇 [屬性資料列結尾的下拉箭號。 按一下 [**編輯**，然後在 [編輯] 對話方塊中，選擇**巨集**] 按鈕。 會列出 Visual Studio 目前可見料集的屬性和巨集，以及其每一個的目前值。 如需詳細資訊，請參閱 < **Specifying User-Defined 值**一節[c + + 專案屬性頁參考](property-pages-visual-cpp.md)。
+若要顯示所有目前可用的巨集，**屬性頁**] 對話方塊底下**VC + + 目錄**，選擇 [屬性資料列結尾的下拉箭號。 按一下 [**編輯**，然後在 [編輯] 對話方塊中，選擇**巨集**] 按鈕。 會列出 Visual Studio 目前可見料集的屬性和巨集，以及其每一個的目前值。 如需詳細資訊，請參閱 < **Specifying User-Defined 值**一節[C++專案屬性頁參考](property-pages-visual-cpp.md)。
 
 ![VC + + 巨集 按鈕](../media/vcppdir_libdir_macros.png "巨集功能表")
 

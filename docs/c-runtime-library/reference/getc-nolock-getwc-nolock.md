@@ -36,11 +36,11 @@ helpviewer_keywords:
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
 ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287491"
 ---
 # <a name="getcnolock-getwcnolock"></a>_getc_nolock、_getwc_nolock
 
@@ -59,7 +59,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 輸入資料流。
 
 ## <a name="return-value"></a>傳回值
@@ -128,7 +128,7 @@ Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line the first.

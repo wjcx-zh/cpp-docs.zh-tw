@@ -6,21 +6,21 @@ helpviewer_keywords:
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
 ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274166"
 ---
 # <a name="optimization-best-practices"></a>最佳化的最佳做法
 
-本文件說明 Visual c + + 最佳化的一些最佳作法。
+本文件說明在視覺效果最佳化的一些最佳作法C++。
 
 ## <a name="compiler-and-linker-options"></a>編譯器和連結器選項
 
 ### <a name="profile-guided-optimization"></a>特性指引最佳化
 
-Visual c + + 支援*特性指引最佳化*(PGO)。 此最佳化會使用從定型執行已檢測版的應用程式的設定檔資料來驅動應用程式的更新版本的最佳化。 使用 PGO 可能很耗費時間，因此它不可能是每位開發人員使用，但我們建議使用 PGO 產品的最終版本組建。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](profile-guided-optimizations.md)。
+視覺化C++支援*特性指引最佳化*(PGO)。 此最佳化會使用從定型執行已檢測版的應用程式的設定檔資料來驅動應用程式的更新版本的最佳化。 使用 PGO 可能很耗費時間，因此它不可能是每位開發人員使用，但我們建議使用 PGO 產品的最終版本組建。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](profile-guided-optimizations.md)。
 
 颾魤 ㄛ*整個程式最佳化*（也稱為連結時間產生程式碼） 和 **/o1**並 **/o2**最佳化已經有所改進。 一般情況下，使用其中一個選項所編譯的應用程式會較快，使用舊版的編譯器編譯相同的應用程式。
 
@@ -93,13 +93,13 @@ int myFunc() {...}
 
 ## <a name="restrict-and-assume"></a>__restrict 和\__assume
 
-有幾個有助於效能的 Visual c + + 中的關鍵字： [__restrict](../cpp/extension-restrict.md)並[__assume](../intrinsics/assume.md)。
+有幾個視覺效果中的關鍵字C++，可協助效能： [: __restrict](../cpp/extension-restrict.md)並[__assume](../intrinsics/assume.md)。
 
 首先，您應該注意可`__restrict`和`__declspec(restrict)`是兩個不同的項目。 雖然它們有些許相關，其語意不相同。 `__restrict` 是類型限定詞，如`const`或`volatile`，但是專為指標類型。
 
 指標修飾`__restrict`指 *__restrict 指標*。 __Restrict 指標是只能透過存取指標\__restrict 指標。 換句話說，另一個指標無法用來存取資料所指的\__restrict 指標。
 
-`__restrict` 可以是功能強大的工具，Visual c + + 最佳化工具，但使用十二萬分地謹慎。 如果不當使用，最佳化工具可能會執行，就會破壞您的應用程式的最佳化。
+`__restrict` 可以是功能強大的工具，視覺效果的C++最佳化工具，但使用十二萬分地謹慎。 如果不當使用，最佳化工具可能會執行，就會破壞您的應用程式的最佳化。
 
 `__restrict`關鍵字取代 **/Oa**從舊版切換。
 
@@ -107,7 +107,7 @@ int myFunc() {...}
 
 比方說`__assume(a < 5);`在該行程式碼的變數，告知最佳化`a`小於 5。 同樣地，這是編譯器的承諾。 如果`a`實際上為 6 此時程式中，則之後編譯器最佳化程式的行為可能不會預期。 `__assume` 是 switch 陳述式及/或條件運算式之前最有用。
 
-有一些限制`__assume`。 首先，例如`__restrict`它只是建議，因此編譯器是免費忽略它。 此外，`__assume`目前僅適用於針對常數變數的差異。 它無法散佈符號式不等比較，例如 assume(a < b)。
+有一些限制`__assume`。 首先，例如`__restrict`它只是建議，因此編譯器是免費忽略它。 此外，`__assume`目前僅適用於針對常數變數的差異。 比方說，它不會散佈符號式，assume(a < b)。
 
 ## <a name="intrinsic-support"></a>內建支援
 
@@ -117,7 +117,7 @@ int myFunc() {...}
 
 - 您的程式碼是可攜性。 數個內建函式可在多重 CPU 架構。
 
-- 您的程式碼較容易閱讀，因為程式碼仍會撰寫 C/c + +。
+- 您的程式碼會比較容易閱讀，因為程式碼仍然以 C 撰寫 /C++。
 
 - 您的程式碼取得編譯器最佳化的好處。 因為編譯器變得更好的可改善的內建函式的程式碼產生。
 

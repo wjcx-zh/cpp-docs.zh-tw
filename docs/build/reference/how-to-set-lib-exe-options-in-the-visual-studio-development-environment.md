@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lib.exe options, setting in the Visual Studio Development Environment
 ms.assetid: b00da2bb-19e2-4078-a912-0d2e9294d7a7
 ms.openlocfilehash: 24f4d0c783f90f93466633d7d02ec46746d939f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291479"
 ---
 # <a name="how-to-set-libexe-options-in-the-visual-studio-development-environment"></a>HOW TO：設定程式庫。Visual Studio 開發環境中的 EXE 選項
 

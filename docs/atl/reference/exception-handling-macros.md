@@ -10,11 +10,11 @@ helpviewer_keywords:
 - C++ exception handling, macros
 ms.assetid: a8385d34-3fb0-4006-a42a-de045cacf0f4
 ms.openlocfilehash: 8afb2019e38f7548467e85d9a2c1c12c538cf744
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276242"
 ---
 # <a name="exception-handling-macros"></a>例外狀況處理巨集
 
@@ -45,7 +45,7 @@ _ATLCATCH(e)
 
 ### <a name="remarks"></a>備註
 
-用於搭配`_ATLTRY`。 會解析成 c + +[攔截 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)處理針對給定的 c + + 例外狀況類型。
+用於搭配`_ATLTRY`。 會解析為C++[攔截 (CAtlException e)](../../cpp/try-throw-and-catch-statements-cpp.md)來處理指定的型別C++例外狀況。
 
 ##  <a name="_atlcatchall"></a>  _ATLCATCHALL
 
@@ -57,7 +57,7 @@ _ATLCATCHALL
 
 ### <a name="remarks"></a>備註
 
-用於搭配`_ATLTRY`。 會解析成 c + + [catch](../../cpp/try-throw-and-catch-statements-cpp.md)來處理所有類型的 c + + 例外狀況。
+用於搭配`_ATLTRY`。 會解析為C++ [catch](../../cpp/try-throw-and-catch-statements-cpp.md)來處理所有類型的C++例外狀況。
 
 ##  <a name="_atltry"></a>  _ATLTRY
 
@@ -69,7 +69,7 @@ _ATLTRY
 
 ### <a name="remarks"></a>備註
 
-用於搭配[_ATLCATCH](#_atlcatch)或是[_ATLCATCHALL](#_atlcatchall)。 C + + 符號會解析[嘗試](../../cpp/try-throw-and-catch-statements-cpp.md)。
+用於搭配[_ATLCATCH](#_atlcatch)或是[_ATLCATCHALL](#_atlcatchall)。 會解析為C++符號[嘗試](../../cpp/try-throw-and-catch-statements-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

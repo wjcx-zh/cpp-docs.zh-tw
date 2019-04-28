@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：偵錯 c + + AMP 應用程式
+title: 逐步解說：偵錯C++AMP 應用程式
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
 ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237952"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯 c + + AMP 應用程式
+# <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯C++AMP 應用程式
 
-本主題示範如何使用 c + + Accelerated Massive Parallelism (c + + AMP)，以善用圖形處理單元 (GPU) 的應用程式進行偵錯。 它會使用加總大型整數陣列的平行方式來降低程式。 這個逐步解說將說明下列工作：
+本主題示範如何偵錯的應用程式使用C++Accelerated Massive Parallelism (C++ AMP) 利用圖形處理單元 (GPU)。 它會使用加總大型整數陣列的平行方式來降低程式。 這個逐步解說將說明下列工作：
 
 - 正在啟動 GPU 偵錯工具。
 
@@ -34,7 +34,7 @@ ms.locfileid: "57286908"
 
 在開始本逐步解說之前：
 
-- 讀取[c + + AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。
+- 讀取[ C++ AMP 概觀](../../parallel/amp/cpp-amp-overview.md)。
 
 - 請確定這一行文字編輯器中顯示數字。 如需詳細資訊，請參閱[如何：在編輯器中顯示行號](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "57286908"
 
 2. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
-3. 底下**已安裝**在 [範本] 窗格中，選擇**Visual c + +**。
+3. 底下**已安裝**在 [範本] 窗格中，選擇**視覺化C++** 。
 
 4. 選擇**Win32 主控台應用程式**，型別`AMPMapReduce`中**名稱** 方塊中，然後選擇**確定** 按鈕。
 
@@ -181,7 +181,7 @@ ms.locfileid: "57286908"
 
 10. 在 **方案總管 中**，開啟捷徑功能表**AMPMapReduce**，然後選擇 **屬性**。
 
-11. 在 **屬性頁**對話方塊的 **組態屬性**，選擇  **C/c + +** > **先行編譯標頭**。
+11. 在 **屬性頁**對話方塊的 **組態屬性**，選擇  **C /C++** > **先行編譯標頭**.
 
 12. 針對**先行編譯標頭**屬性中，選取**未使用先行編譯標頭**，然後選擇**確定**  按鈕。
 
@@ -389,4 +389,4 @@ ms.locfileid: "57286908"
 [偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)<br/>
 [如何：使用 GPU 執行緒視窗](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
 [如何：使用平行監看式視窗](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
-[使用並行視覺化檢視分析 c + + AMP 程式碼](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)
+[分析C++AMP 程式碼，使用並行視覺化檢視](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

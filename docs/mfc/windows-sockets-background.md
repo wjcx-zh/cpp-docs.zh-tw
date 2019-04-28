@@ -19,11 +19,11 @@ helpviewer_keywords:
 - stream sockets [MFC]
 ms.assetid: f60d4ed2-bf23-4a0e-98d2-fee77e8473dd
 ms.openlocfilehash: 6ab866609d0b75aaf9d06a01c204433d80e7e3d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217874"
 ---
 # <a name="windows-sockets-background"></a>Windows Sockets:背景
 
@@ -93,11 +93,11 @@ Windows Sockets 規格後，Windows Sockets:網路運算下 Microsoft Windows，
 
 如需詳細資訊，請參閱 Windows Sockets 規格： **ntohs**， **ntohl**， **htons**， **htonl**。 此外，請參閱下列主題：
 
-- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Socket：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets:使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
+- [Windows Socket：使用封存的通訊端範例](../mfc/windows-sockets-example-of-sockets-using-archives.md)
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 ## <a name="see-also"></a>另請參閱
 

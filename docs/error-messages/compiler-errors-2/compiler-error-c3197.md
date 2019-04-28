@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3197
 ms.assetid: 4e385c3b-222e-425c-9612-46e83ed41650
 ms.openlocfilehash: be9b7dadb4f67a6392cd7a2c46caf61d983e79eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329032"
 ---
 # <a name="compiler-error-c3197"></a>編譯器錯誤 C3197
 

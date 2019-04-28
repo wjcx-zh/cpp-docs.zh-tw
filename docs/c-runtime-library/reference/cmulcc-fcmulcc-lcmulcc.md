@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _FCmulcc function
 - _LCmulcc function
 ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335373"
 ---
 # <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc、 _FCmulcc、 _LCmulcc
 
@@ -68,7 +68,7 @@ A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**結構，表示複雜的複�
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**_Cmulcc**， **_FCmulcc**， **_LCmulcc**|\<complex.h>|\<complex.h>|
+|**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
 這些函式是 Microsoft 特定的。 型別 **_Dcomplex**， **_Fcomplex**，並 **_Lcomplex**是 Microsoft 特定對等項目未實作 C99 原生類型**double _Complex**， **float _Complex**，以及**long double _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

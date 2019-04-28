@@ -1,27 +1,27 @@
 ---
-title: 建置並執行 c + + 主控台應用程式專案
-description: 建置並執行 Hello World 主控台應用程式中 Visual c + +
+title: 建置並執行 C++ 主控台應用程式專案
+description: 建置並執行 Hello World 主控台應用程式在視覺效果C++
 ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314244"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>建置並執行 c + + 主控台應用程式專案
+# <a name="build-and-run-a-c-console-app-project"></a>建置並執行 C++ 主控台應用程式專案
 
-當您已建立的 c + + 主控台應用程式專案，並輸入您的程式碼時，您可以建置和執行在 Visual Studio 中，然後依照做為獨立的應用程式從命令列執行它。
+當您建立C++主控台應用程式專案，然後輸入您的程式碼中，您可以建置和執行在 Visual Studio 中，然後依照做為獨立的應用程式從命令列執行它。
 
 ## <a name="prerequisites"></a>必要條件
 
-- 具有 c + + 工作負載中，使用您的電腦上安裝和執行 Visual Studio 中使用的桌面開發。 如果它尚未安裝，請依照下列中的步驟[Visual Studio 中的安裝 c + + 支援](vscpp-step-0-installation.md)。
+- 安裝 Visual Studio 和使用 C++ 進行桌面開發工作負載，並在您的電腦上執行。 如果它尚未安裝，請依照下列中的步驟[安裝C++Visual Studio 中支援](vscpp-step-0-installation.md)。
 
-- 建立"Hello，World ！" 專案，然後輸入其原始程式碼。 如果您還沒有這麼做，請依照下列中的步驟[建立 c + + 主控台應用程式專案](vscpp-step-1-create.md)。
+- 建立"Hello，World ！" 專案，然後輸入其原始程式碼。 如果您還沒有這麼做，請依照下列中的步驟[建立C++主控台應用程式專案](vscpp-step-1-create.md)。
 
 如果 Visual Studio 看起來像這樣，您就可以建置並執行您的應用程式項目：
 
@@ -29,19 +29,19 @@ ms.locfileid: "57813541"
 
 ## <a name="build-and-run-your-code-in-visual-studio"></a>建置並執行 Visual Studio 中的程式碼
 
-1. 若要建置專案時，選擇**建置方案**從**建置**功能表。 **輸出**視窗會顯示在建置程序的結果。
+1. 若要建置您的專案，請從 [建置] 功能表中選擇 [建置方案]。 [輸出] 視窗會顯示建置過程的結果。
 
    ![建置專案](media/vscpp-build-solution.gif "建置專案")
 
-1. 若要執行的程式碼，在功能表列上，選擇**偵錯**，**啟動但不偵錯**。
+1. 若要執行程式碼，請在功能表列上，選擇 [偵錯]、[啟動但不偵錯]。
 
    ![啟動專案](media/vscpp-start-without-debugging.gif "啟動專案")
 
-   主控台視窗隨即開啟，然後再執行您的應用程式。 當您在 Visual Studio 啟動主控台應用程式時，它會執行您的程式碼，則會列印 「 按任意鍵繼續。 。 ." 若要讓您以查看輸出的機率。
+   主控台視窗會隨即開啟並執行您的應用程式。 當您在 Visual Studio 中啟動主控台應用程式時，它會執行您的程式碼，然後印出「請按任意鍵繼續 。 。」。 讓您可以有機會查看輸出。
 
-恭喜您！ 您已建立您的第一個"Hello，world ！" 在 Visual Studio 中的主控台應用程式 ！ 按任一鍵關閉主控台視窗並返回 Visual Studio。
+恭喜您！ 您已在 Visual Studio 中建立了您的第一個 "Hello, world!" 主控台應用程式！ 請按任意鍵關閉主控台視窗並返回 Visual Studio。
 
-[我遇到問題。](#build-and-run-your-code-in-visual-studio-issues)
+[發生問題。](#build-and-run-your-code-in-visual-studio-issues)
 
 ## <a name="run-your-code-in-a-command-window"></a>在命令視窗中執行您的程式碼
 
@@ -59,15 +59,15 @@ ms.locfileid: "57813541"
 
 恭喜，您已經建立，並在 Visual Studio 中執行主控台應用程式 ！
 
-[我遇到問題。](#run-your-code-in-a-command-window-issues)
+[發生問題。](#run-your-code-in-a-command-window-issues)
 
 ## <a name="next-steps"></a>後續步驟
 
-一旦您已經建立並執行這個簡單的應用程式，您準備好進行更複雜的專案項目。 請參閱[使用 Visual Studio IDE 進行 c + + 桌面程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)如需詳細的逐步解說，探索 Visual Studio 中的 Visual c + + 的功能。
+一旦您已經建立並執行這個簡單的應用程式，您準備好進行更複雜的專案項目。 請參閱[使用 Visual Studio IDE 的C++的桌面開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)如需詳細的逐步解說，探索視覺效果的功能C++在 Visual Studio 中。
 
 ## <a name="troubleshooting-guide"></a>疑難排解指南
 
-來這裡解決方案常見問題的解決當您建立第一個 c + + 專案。
+來這裡解決方案常見問題的解決當您建立您的第一個C++專案。
 
 ### <a name="build-and-run-your-code-in-visual-studio-issues"></a>建置並執行您的程式碼在 Visual Studio 問題
 

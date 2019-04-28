@@ -5,11 +5,11 @@ helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
 ms.openlocfilehash: 51be77dc8f4fe072ea6cc46dd51e38862649feda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314594"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>使用不帶 () 的函式名稱不會產生程式碼
 
@@ -21,7 +21,7 @@ int a;
 a;      // no code generated here either
 ```
 
-Visual c + +，甚至使用警告層級 4 不會產生診斷輸出。 不會發出警告。會不產生任何程式碼。
+在視覺效果C++，即使使用警告層級 4 不會產生診斷輸出。 不會發出警告。會不產生任何程式碼。
 
 下列範例程式碼編譯 （警告），並連結正確無誤，但會產生任何程式碼參考`funcn( )`。 此選項可正常運作，加入函式呼叫運算子 」 （）"。
 

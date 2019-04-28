@@ -45,11 +45,11 @@ helpviewer_keywords:
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
 ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223075"
 ---
 # <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
@@ -136,7 +136,7 @@ const unsigned char *_mbsstr_l(
 > [!IMPORTANT]
 > 這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 採用指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**傳回的指標，非**const**。 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩個 c + + 多載，行為定義符號 _CONST_RETURN。
+在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 採用指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**傳回的指標，非**const**。 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩者的行為C++多載，定義符號 _CONST_RETURN。
 
 輸出值會受到 LC_CTYPE; 的地區設定分類設定如需詳細資訊，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)。 不需要這些函式的版本 **_l**後置字元在針對此與地區設定相關行為使用目前的地區設定; 具有 **_l**尾碼都相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

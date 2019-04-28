@@ -11,11 +11,11 @@ helpviewer_keywords:
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
 ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62267308"
 ---
 # <a name="scope-c"></a>範圍 (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "52176753"
 
 有六種範圍：
 
-- **全域範圍**通用的名稱是其中之外任何類別、 函式或命名空間宣告。 不過，c + + 中甚至這些名稱有隱含的全域命名空間。 全域名稱的範圍延伸從宣告點至宣告它們的檔案結尾。 如需全域名稱，可見性也受到的規則[連結](program-and-linkage-cpp.md)決定名稱是否顯示在程式中的其他檔案中。
+- **全域範圍**通用的名稱是其中之外任何類別、 函式或命名空間宣告。 不過，在C++即使這些名稱有隱含的全域命名空間。 全域名稱的範圍延伸從宣告點至宣告它們的檔案結尾。 如需全域名稱，可見性也受到的規則[連結](program-and-linkage-cpp.md)決定名稱是否顯示在程式中的其他檔案中。
 
 - **命名空間範圍**內宣告的名稱[命名空間](namespaces-cpp.md)、 任何類別或列舉的定義或函式區塊外部是可見從宣告點至命名空間的結尾。 命名空間可能定義在多個區塊，跨不同的檔案。
 

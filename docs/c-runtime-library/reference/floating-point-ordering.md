@@ -22,11 +22,11 @@ helpviewer_keywords:
 - islessgreater function
 - isunordered function
 ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333699"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater、 isgreaterequal、 isless、 islessequal、 islessgreater、 isunordered
 
@@ -121,7 +121,7 @@ inline bool isunordered(
 
 ## <a name="remarks"></a>備註
 
-這些比較作業會實作為巨集時編譯為 C，以及內嵌樣板函式編譯為 c + + 時。
+這些比較作業會實作為巨集時編譯為 C，以及內嵌樣板函式時編譯為C++。
 
 ## <a name="requirements"></a>需求
 
@@ -134,7 +134,7 @@ inline bool isunordered(
 ## <a name="see-also"></a>另請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
-[isfinite _finite、 _finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>

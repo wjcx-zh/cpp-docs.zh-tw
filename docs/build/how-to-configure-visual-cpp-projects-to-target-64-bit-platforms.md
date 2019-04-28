@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Visual c + + 專案，以 64 位元、 x64 平台
+title: HOW TO：設定視覺效果C++專案鎖定 64 位元、 x64 平台
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
 ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274469"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>HOW TO：設定 Visual c + + 專案，以 64 位元、 x64 平台
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>HOW TO：設定視覺效果C++專案鎖定 64 位元、 x64 平台
 
-您可以使用 Visual Studio IDE 中的專案組態設定 c + + 應用程式鎖定 64 位元、 x64 平台。 您也可以將 Win32 專案設定移轉至 64 位元專案組態。
+您也可以在 Visual Studio IDE 中使用專案組態，設定C++應用程式鎖定 64 位元、 x64 平台。 您也可以將 Win32 專案設定移轉至 64 位元專案組態。
 
 ### <a name="to-set-up-c-applications-to-target-64-bit-platforms"></a>設定 C++ 應用程式鎖定 64 位元平台
 
 1. 請開啟您想要設定的 C++ 專案。
 
-1. 開啟該專案的屬性頁面。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](working-with-project-properties.md)。
+1. 開啟該專案的屬性頁面。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](working-with-project-properties.md)。</c0>
 
    > [!NOTE]
    > .NET 專案中，請確定 **組態屬性** 中選取節點，或它的子節點，其中 **\<專案名稱 > 屬性頁**  對話方塊中，否則**Configuration Manager**按鈕將仍然無法使用。
@@ -58,5 +58,5 @@ ms.locfileid: "57813951"
 
 ## <a name="see-also"></a>另請參閱
 
-[設定適用於 64 位元、 x64 的 c + + 專案的目標](configuring-programs-for-64-bit-visual-cpp.md)<br/>
+[設定C++適用於 64 位元，x64 專案目標](configuring-programs-for-64-bit-visual-cpp.md)<br/>
 [偵錯 64 位元應用程式](/visualstudio/debugger/debug-64-bit-applications)

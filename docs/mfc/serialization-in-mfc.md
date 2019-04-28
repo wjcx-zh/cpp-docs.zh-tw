@@ -9,17 +9,17 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308208"
 ---
 # <a name="serialization-in-mfc"></a>MFC 中的序列化
 
 這篇文章說明程式執行的序列化機制，提供在 Microsoft Foundation Class 程式庫 (MFC) 允許物件之間保存。
 
-序列化是讀取或寫入的物件，或從永續性儲存體媒體，例如磁碟檔案的程序。 序列化是理想的情況下，想要維護期間或之後執行程式的結構化資料 （例如 c + + 類別或結構） 的狀態。 使用 MFC 所提供的序列化物件，可讓此選項可在標準且一致的方式，減輕使用者需以手動方式執行檔案作業中發生。
+序列化是讀取或寫入的物件，或從永續性儲存體媒體，例如磁碟檔案的程序。 序列化是理想的情況下，它想要的地方來維護狀態的結構化資料 (例如C++類別或結構) 期間或之後執行程式。 使用 MFC 所提供的序列化物件，可讓此選項可在標準且一致的方式，減輕使用者需以手動方式執行檔案作業中發生。
 
 MFC 提供序列化的類別中的內建支援`CObject`。 因此，所有類別都衍生自`CObject`可以充分善用`CObject`的序列化通訊協定。
 

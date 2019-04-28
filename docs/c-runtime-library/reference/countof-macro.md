@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
 ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335343"
 ---
 # <a name="countof-macro"></a>_countof 巨集
 
@@ -48,9 +48,9 @@ ms.locfileid: "50536132"
 
 ## <a name="remarks"></a>備註
 
-**_countof**會實作為函式類似前置處理器巨集。 C + + 版本中有額外的範本的機制，如果將指標傳遞而不是以靜態方式宣告陣列，在編譯時期偵測。
+**_countof**會實作為函式類似前置處理器巨集。 C++版本都有額外的範本的機制，如果將指標傳遞而不是以靜態方式宣告陣列，在編譯時期偵測。
 
-請確認*陣列*其實是一個陣列，不是指標。 在 C 中， **_countof**會產生錯誤的結果，如果*陣列*是指標。 C + + **_countof**無法編譯，如果*陣列*是指標。  陣列做為參數傳遞至函式*指標的 decays*，這表示在函式，您無法使用 **_countof**來判斷陣列的範圍。
+請確認*陣列*其實是一個陣列，不是指標。 在 C 中， **_countof**會產生錯誤的結果，如果*陣列*是指標。 在C++， **_countof**無法編譯，如果*陣列*的指標。  陣列做為參數傳遞至函式*指標的 decays*，這表示在函式，您無法使用 **_countof**來判斷陣列的範圍。
 
 ## <a name="requirements"></a>需求
 

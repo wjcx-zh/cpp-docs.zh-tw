@@ -6,11 +6,11 @@ helpviewer_keywords:
 - progress controls [MFC], settings
 ms.assetid: f4616e91-74fa-4000-ba0d-d3ddc0ee075b
 ms.openlocfilehash: 1960b15c2f76d7cbfc9f249a77481b795e6a27ea
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307675"
 ---
 # <a name="settings-for-the-progress-control"></a>進度控制項的設定
 

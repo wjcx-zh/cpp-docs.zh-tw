@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _dup function
 ms.assetid: 4d07e92c-0d76-4832-a770-dfec0e7a0cfa
 ms.openlocfilehash: a00b9506102e6b274a9aa87c33c144d75cfc2508
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288962"
 ---
 # <a name="dup-dup2"></a>_dup、_dup2
 

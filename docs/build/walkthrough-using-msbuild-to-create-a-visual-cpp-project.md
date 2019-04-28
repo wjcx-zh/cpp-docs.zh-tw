@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用 MSBuild 來建立 Visual c + + 專案
+title: 逐步解說：使用 MSBuild 來建立視覺效果C++專案
 ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
 ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57813912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313593"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立 Visual c + + 專案
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立視覺效果C++專案
 
-本逐步解說示範如何使用 MSBuild 來建置 Visual c + + 專案，在命令提示字元。 您將了解如何建立 c + + 原始程式檔和 Visual c + + 主控台應用程式的 XML 專案檔。 建置專案之後, 您將了解如何自訂建置流程。
+本逐步解說示範如何使用 MSBuild 來建置視覺效果C++專案中的，於命令提示字元。 您將了解如何建立C++視覺效果的原始程式檔和 XML 為基礎的專案檔C++主控台應用程式。 建置專案之後, 您將了解如何自訂建置流程。
 
 這個逐步解說將說明下列工作：
 
-- 建立您的專案的 c + + 原始程式檔。
+- 建立C++原始程式檔，為您的專案。
 
 - 建立 XML MSBuild 專案檔。
 
@@ -31,7 +31,7 @@ ms.locfileid: "57813912"
 
 您需要下列項目才能完成本逐步解說：
 
-- Visual Studio 中使用一份**使用 c + + 的桌面開發**安裝工作負載。
+- Visual Studio 中使用一份**使用的桌面開發C++** 安裝工作負載。
 
 - MSBuild 系統大致的了解。
 
@@ -41,11 +41,11 @@ ms.locfileid: "57813912"
 > [!NOTE]
 > 中包含大部分的低層級的組建指示 **.targets**並 **.props** VCTargets 目錄，儲存在屬性中所定義的檔案`$(VCTargetsPath)`。 Visual Studio 2017 Enterprise Edition 中的這些檔案的預設路徑為 c:\\Program Files (x86)\\Microsoft Visual Studio\\2017年\\Enterprise\\Common7\\IDE\\VC\\VCTargets\\。
 
-## <a name="creating-the-c-source-files"></a>建立 c + + 原始程式檔
+## <a name="creating-the-c-source-files"></a>建立C++原始程式檔
 
-在本逐步解說中，您將建立具有原始程式檔和標頭檔的專案。 原始程式檔 main.cpp 包含主控台應用程式的 main 函式。 標頭檔 main.h 包含要包含 iostream 標頭檔的程式碼。 您可以使用 Visual Studio 或文字建立這些 c + + 檔案，如 Visual Studio Code 的編輯器。
+在本逐步解說中，您將建立具有原始程式檔和標頭檔的專案。 原始程式檔 main.cpp 包含主控台應用程式的 main 函式。 標頭檔 main.h 包含要包含 iostream 標頭檔的程式碼。 您可以建立這些C++使用 Visual Studio 或 Visual Studio Code 之類的文字編輯器的檔案。
 
-### <a name="to-create-the-c-source-files-for-your-project"></a>若要建立您的專案的 c + + 原始程式檔
+### <a name="to-create-the-c-source-files-for-your-project"></a>若要建立C++原始程式檔，為您的專案
 
 1. 建立您的專案目錄。
 
@@ -75,7 +75,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
 
 - 三個項目群組標記 (`<ItemGroup>`)，以指定專案組態與平台、 原始程式檔名稱及標頭檔名稱。
 
-- 三個匯入標記 (`<Import>`)，指定 Microsoft Visual c + + 設定的位置。
+- 三個匯入標記 (`<Import>`)，指定 Microsoft 視覺效果的位置C++設定。
 
 - 屬性群組標記 (`<PropertyGroup>`)，指定專案設定。
 
@@ -103,7 +103,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
     </ItemGroup>
     ```
 
-1. 新增下列`<Import>`項目，指定這個專案的預設 c + + 設定的路徑：
+1. 新增下列`<Import>`項目，指定預設的路徑C++此專案的設定：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
@@ -118,13 +118,13 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
     </PropertyGroup>
     ```
 
-1. 新增下列`<Import>`項目，指定目前 c + + 設定此專案的路徑：
+1. 新增下列`<Import>`項目，指定目前的路徑C++此專案的設定：
 
     ```xml
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
     ```
 
-1. 新增下列`<ClCompile>`中的子項目`<ItemGroup>`項目。 子元素會指定要編譯的 C/c + + 來源檔案的名稱：
+1. 新增下列`<ClCompile>`中的子項目`<ItemGroup>`項目。 子項目指定名稱的 C /C++來編譯原始程式檔：
 
     ```xml
     <ItemGroup>
@@ -135,7 +135,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
    > [!NOTE]
    > `<ClCompile>` 已*建置目標*且定義在**VCTargets**目錄。
 
-1. 新增下列`<ClInclude>`中的子項目`<ItemGroup>`項目。 子元素會指定 C/c + + 原始程式檔的標頭檔的名稱：
+1. 新增下列`<ClInclude>`中的子項目`<ItemGroup>`項目。 子項目指定的標頭檔名稱適用於 C /C++原始程式檔：
 
     ```xml
     <ItemGroup>
@@ -235,7 +235,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>使用 MSBuild 與 64 位元編譯器和工具
 
-如果您已安裝在 64 位元 Windows 上的 Visual c + +，根據預設，會安裝 64 位元 x64 native 和 cross tools。 您可以設定 MSBuild 來建置您的應用程式設定中使用的 64 位元編譯器和工具`PreferredToolArchitecture`屬性。 這個屬性不會影響專案組態或平台屬性。 根據預設，會使用 32 位元版本的工具。 若要指定 64 位元版本的編譯器和工具，將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.default.props`\<匯入 / > 項目：
+如果您已安裝 Visual C++ 64 位元 Windows，根據預設，64 位元 x64 native 和 cross tools 安裝。 您可以設定 MSBuild 來建置您的應用程式設定中使用的 64 位元編譯器和工具`PreferredToolArchitecture`屬性。 這個屬性不會影響專案組態或平台屬性。 根據預設，會使用 32 位元版本的工具。 若要指定 64 位元版本的編譯器和工具，將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.default.props`\<匯入 / > 項目：
 
 ```xml
 <PropertyGroup>
@@ -249,7 +249,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 ### <a name="using-msbuild-with-a-different-toolset"></a>使用 MSBuild 與不同 toolset
 
-如果您有針對其他版本的安裝的 Visual c + + 程式庫與工具組，MSBuild 就可以建置應用程式的目前 Visual c + + 版本或其他已安裝的版本。 比方說，如果您已安裝 Visual Studio 2012，指定 Visual c + + 11.0 工具組適用於 Windows XP，再將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.props`\<匯入 / > 項目：
+如果您有針對其他版本的視覺效果的程式庫與工具組C++安裝，MSBuild 可以建置應用程式或目前的視覺效果C++版本或其他已安裝的版本。 例如，如果您已安裝 Visual Studio 2012 中，指定視覺效果C++適用於 Windows XP 11.0 工具組會將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後, `Microsoft.Cpp.props` \<匯入 / > 項目：
 
 ```xml
 <PropertyGroup>
@@ -257,7 +257,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 </PropertyGroup>
 ```
 
-若要重建您的專案與 Visual c + + 11.0 的 Windows XP 工具組，請輸入下列命令：
+若要重建您的專案與視覺效果C++11.0 的 Windows XP 工具組，輸入下列命令：
 
 `msbuild myproject.vcxproj /p:PlatformToolset=v110_xp /t:rebuild`
 

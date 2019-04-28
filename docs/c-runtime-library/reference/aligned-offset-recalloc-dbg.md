@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
 ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
-ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52977793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348025"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -52,13 +52,13 @@ void * _aligned_offset_recalloc_dbg(
 *memblock*<br/>
 目前記憶體區塊指標。
 
-*數字*<br/>
+*number*<br/>
 項目數。
 
 *size*<br/>
 每個項目的長度 (位元組)。
 
-*對齊方式*<br/>
+*alignment*<br/>
 對齊值，必須是 2 的整數冪。
 
 *offset*<br/>

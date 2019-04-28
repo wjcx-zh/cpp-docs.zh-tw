@@ -24,11 +24,11 @@ helpviewer_keywords:
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
 ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339711"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -69,7 +69,7 @@ void _CrtDoForAllClientObjects(
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：** 僅限偵錯版的 C 執行階段程式庫。
+**程式庫：** 偵錯版本的通用 C 執行階段程式庫只。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333322"
 ---
 # <a name="fopens-wfopens"></a>fopen_s、_wfopen_s
 
@@ -98,7 +98,7 @@ errno_t _wfopen_s(
 
 **fopen_s**支援 Unicode 檔案資料流。 若要開啟新的或現有的 Unicode 檔案，請傳遞*ccs*旗標，指定想要的編碼來**fopen_s**:
 
-**fopen_s (& fp、 「 newfile.txt"，"rw，ccs =**_編碼_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 允許的值為*編碼*會**UNICODE**， **utf-8**，以及 **-16LE**。 如果那里任何指定的值*編碼*， **fopen_s**使用 ANSI 編碼方式。
 
@@ -111,11 +111,11 @@ errno_t _wfopen_s(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>根據 ccs 旗標和 BOM 使用的編碼方式
 
-|ccs 旗標|沒有 BOM (或新檔案)|BOM：UTF-8|BOM：UTF-16|
+|ccs 旗標|沒有 BOM (或新檔案)|BOM:UTF-8|BOM:UTF-16|
 |----------------|----------------------------|-----------------|------------------|
-|**UNICODE**|**-16LE**|**UTF-8**|**-16LE**|
-|**UTF-8**|**UTF-8**|**UTF-8**|**-16LE**|
-|**-16LE**|**-16LE**|**UTF-8**|**-16LE**|
+|**UNICODE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
+|**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
+|**UTF-16LE**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 
 開啟以供在 Unicode 模式下寫入的檔案會有 BOM 自動寫入其中。
 
@@ -129,7 +129,7 @@ errno_t _wfopen_s(
 
 字元字串*模式*指定，如下所示要求檔案的存取種類。
 
-|*mode*|存取|
+|*mode*|Access|
 |-|-|
 | **"r"** | 開啟以讀取。 如果檔案不存在或無法找到**fopen_s**呼叫就會失敗。 |
 | **"w"** | 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。 |
@@ -168,29 +168,29 @@ errno_t _wfopen_s(
 | **R** | 指定針對但不限於磁碟的隨機存取進行快取最佳化。 |
 | **T** | 指定檔案做為暫存檔。 可能的話，不將其清除至磁碟。 |
 | **D** | 指定檔案做為暫存檔。 當最後一個檔案指標關閉時，將其刪除。 |
-| **ccs =**_編碼_ | 指定要使用的編碼的字元集 (其中**utf-8**， **-16LE**，或**UNICODE**) 此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。 |
+| **ccs=**_encoding_ | 指定要使用的編碼的字元集 (其中**utf-8**， **-16LE**，或**UNICODE**) 此檔案。 如果您想要使用 ANSI 編碼方式，請保持為未指定。 |
 
 有效字元*模式*中所使用的字串**fopen_s**並[_fdopen](fdopen-wfdopen.md)對應至*oflag*引數中使用[_開啟](open-wopen.md)並[_sopen](sopen-wsopen.md)、，如下所示。
 
 |中的字元*模式*字串|對等*oflag* _open/_sopen 值|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (通常 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_APPEND * *)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (通常 **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**a+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (通常 **_O_WRONLY** &#124; **_O_CREAT** &#124;* * _O_TRUNC * *)|
-|**w +**|**_O_RDWR** (通常 **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w+**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
-|**C**|無|
-|**n**|無|
+|**C**|None|
+|**n**|None|
 |**S**|**_O_SEQUENTIAL**|
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**ccs = UNICODE**|**_O_WTEXT**|
-|**ccs = utf-8**|**_O_TEXTW、_O_UTF8**|
-|**ccs =-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 如果您使用**rb**模式中，不需要移植程式碼，並且打算讀取大量的檔案和/或不在意網路效能、 記憶體對應 Win32 檔案也可能是一個選項。
 

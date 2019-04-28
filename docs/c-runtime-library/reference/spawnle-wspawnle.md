@@ -32,11 +32,11 @@ helpviewer_keywords:
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
 ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355285"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 

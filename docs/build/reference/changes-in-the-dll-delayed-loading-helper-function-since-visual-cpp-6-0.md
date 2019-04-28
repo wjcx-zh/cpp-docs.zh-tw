@@ -8,15 +8,15 @@ helpviewer_keywords:
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
 ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294625"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 之後 DLL 延遲載入 Helper 函式的變更
 
-如果您電腦上有多個版本的 Visual c + +，或如果您定義自己的協助程式函式時，您可能會受到 dll 所做的變更會延遲載入 helper 函式。 例如: 
+如果您有多個版本，視覺效果的C++在您的電腦上或如果您定義自己的協助程式函式時，您可能會受到延遲載入 helper 函式的 dll 所做的變更。 例如: 
 
 - **__delayLoadHelper**現在是 **__delayLoadHelper2**
 
@@ -29,13 +29,13 @@ ms.locfileid: "57807997"
 > [!NOTE]
 >  如果您使用預設的 helper 函式，這些變更不會影響您。 沒有任何變更，叫用連結器的方式。
 
-## <a name="multiple-versions-of-visual-c"></a>多個版本的 Visual c + +
+## <a name="multiple-versions-of-visual-c"></a>視覺效果的多個版本C++
 
-如果您在電腦上有多個版本的 Visual c + +，請確定連結器符合 delayimp.lib。 如果不相符，就會報告其中一個連結器錯誤`___delayLoadHelper2@8`或`___delayLoadHelper@8`為無法解析的外部符號。 前者表示舊的 delayimp.lib 之新連結器，後者表示新的 delayimp.lib 舊連結器。
+如果您有多個版本，視覺效果的C++在您的電腦，請確定連結器符合 delayimp.lib。 如果不相符，就會報告其中一個連結器錯誤`___delayLoadHelper2@8`或`___delayLoadHelper@8`為無法解析的外部符號。 前者表示舊的 delayimp.lib 之新連結器，後者表示新的 delayimp.lib 舊連結器。
 
 如果您收到無法解析的連結器錯誤，執行[dumpbin /linkermember](linkermember.md)： 在您要包含 helper 函式，以查看哪一個協助程式函式改為定義 delayimp.lib 1。 在物件的檔案中; 也可定義 helper 函式執行[dumpbin /symbols](symbols.md)並尋找`delayLoadHelper(2)`。
 
-如果您知道您有 Visual c + + 6.0 連結器，然後：
+如果您知道有視覺效果C++6.0 連結器，然後：
 
 - 延遲載入 helper 的.lib 或.obj 檔案，以判斷它是否定義執行 dumpbin **__delayLoadHelper2**。 如果沒有，則連結將會失敗。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57807997"
 
 ## <a name="user-defined-helper-function"></a>使用者定義的 Helper 函式
 
-如果您定義自己的協助程式函式，並使用目前版本的 Visual c + +，執行下列作業：
+如果您定義自己的協助程式函式，並且使用目前的版本，視覺效果的C++，執行下列動作：
 
 - 重新命名的協助程式函式 **__delayLoadHelper2**。
 

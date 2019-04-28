@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
 ms.openlocfilehash: 3fe092e412cf11f7bf8600e8d0d7d43abb0e11c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239943"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX 控制項：屬性頁
 
@@ -45,7 +45,7 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 如需有關如何使用 ActiveX 控制項中的 屬性頁的詳細資訊，請參閱下列文章：
 
-- [MFC ActiveX 控制項：加入另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX 控制項：新增另一個自訂屬性頁](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 - [MFC ActiveX 控制項：使用內建屬性頁](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Internet client applications [MFC], gopher table
 ms.assetid: 3e4e1869-5da0-453d-8ba9-b648c894bb90
 ms.openlocfilehash: ca1a09a4a570fd705e726ac5a1124a4cf4ccb329
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306999"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>一般 Gopher 用戶端應用程式中的步驟
 

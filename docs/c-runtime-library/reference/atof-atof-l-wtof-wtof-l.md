@@ -47,11 +47,11 @@ helpviewer_keywords:
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
 ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341349"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
 

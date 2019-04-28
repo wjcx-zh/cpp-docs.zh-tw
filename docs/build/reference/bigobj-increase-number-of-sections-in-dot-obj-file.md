@@ -9,11 +9,11 @@ helpviewer_keywords:
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
 ms.openlocfilehash: 46399dc0c1ff552b4fc963b686ac6aa6df8b6f71
-ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58508711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272971"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (增加 .Obj 檔中的區段數目)
 
@@ -33,9 +33,9 @@ ms.locfileid: "58508711"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **命令列**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
 
 1. 請輸入 **/bigobj**中的編譯器選項**其他選項** 方塊中。
 

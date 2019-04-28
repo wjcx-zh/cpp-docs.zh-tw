@@ -31,11 +31,11 @@ helpviewer_keywords:
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
 ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335512"
 ---
 # <a name="catan-catanf-catanl"></a>catan、catanf、catanl
 
@@ -65,7 +65,7 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**catan**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **catan**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**catan**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **catan**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 

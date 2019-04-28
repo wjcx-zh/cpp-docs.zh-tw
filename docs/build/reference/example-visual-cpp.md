@@ -1,5 +1,5 @@
 ---
-title: '&lt;範例 > （c + + 文件註解）'
+title: '&lt;範例 > (C++文件註解)'
 ms.date: 11/04/2016
 f1_keywords:
 - <example>
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - example C++ XML tag
 ms.assetid: c821aaa7-7ea7-4bee-9922-6705ad57f877
 ms.openlocfilehash: 69e4ad8315948c9c77e99f6ebece4debbe3831b5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272529"
 ---
 # <a name="ltexamplegt"></a>&lt;example&gt;
 

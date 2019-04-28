@@ -3,11 +3,11 @@ title: /GUARD (啟用防護檢查)
 ms.date: 11/04/2016
 ms.assetid: 72758e23-70ac-4616-94d7-d767477406d1
 ms.openlocfilehash: e48921e57977cc7a1ca6a580fed78a6a2a960a02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292246"
 ---
 # <a name="guard-enable-guard-checks"></a>/GUARD (啟用防護檢查)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57818410"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 依序展開**組態屬性**，**連結器**，**命令列**。
 

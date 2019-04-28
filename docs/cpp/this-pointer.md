@@ -9,11 +9,11 @@ helpviewer_keywords:
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
 ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330475"
 ---
 # <a name="this-pointer"></a>this 指標
 
@@ -65,7 +65,7 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  因為**這**指標是不可修改，指派給**這**不允許。 舊版 c + + 實作允許指派給**這**。
+>  因為**這**指標是不可修改，指派給**這**不允許。 較早實作的C++允許指派給**這**。
 
 偶爾**這**指標會直接使用 — 比方說，來操作自我參考的資料結構，需要目前物件的位址的情況。
 

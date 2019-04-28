@@ -10,11 +10,11 @@ helpviewer_keywords:
 - disable two-phase name lookup
 - /Zc:twoPhase
 ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315794"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（停用兩階段名稱查閱）
 
@@ -124,7 +124,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>更新您的程式碼的兩階段交易一致性
 
-舊版編譯器不需要關鍵字`template`並`typename`everywhereC++標準需要它們。 這些關鍵字在某些位置才能釐清如何編譯器時，應該查閱的第一個階段期間剖析相依名稱。 例如：
+舊版編譯器不需要關鍵字`template`並`typename`everywhereC++標準需要它們。 這些關鍵字在某些位置才能釐清如何編譯器時，應該查閱的第一個階段期間剖析相依名稱。 例如: 
 
 `T::Foo<a || b>(c);`
 

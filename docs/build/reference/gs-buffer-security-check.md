@@ -15,11 +15,11 @@ helpviewer_keywords:
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
 ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292168"
 ---
 # <a name="gs-buffer-security-check"></a>/GS (緩衝區安全性檢查)
 
@@ -88,7 +88,7 @@ struct { int a; int b; };
 
 在 x86 上如果函式使用的例外狀況處理常式中，編譯器會插入安全性 cookie 來保護例外狀況處理常式的位址。 在框架回溯會檢查 cookie。
 
-**/GS**保護*易受攻擊參數*，會傳遞至函式。 有弱點的參數是指標，c + + 參考，C-包含的結構 （c + + POD 類型） 的指標或 GS 的緩衝區。
+**/GS**保護*易受攻擊參數*，會傳遞至函式。 有弱點的參數是指標，C++參考，C 結構 (C++的 POD 類型)，其中包含的指標或 GS 的緩衝區。
 
 之前的 cookie 和區域變數配置有弱點的參數。 緩衝區溢位可能會覆寫這些參數。 會使用這些參數的函式中的程式碼可能會導致攻擊，此函數會傳回並執行安全性檢查。 若要降低此風險，編譯器會建立一份有弱點的參數，在函式初構期間，並將它們放在下列任何緩衝區的儲存體區域。
 
@@ -116,9 +116,9 @@ struct { int a; int b; };
 
 1. 在 **方案總管**，以滑鼠右鍵按一下專案，然後按一下**屬性**。
 
-   如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+   如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 在 [**屬性頁**] 對話方塊中，按一下**C/c + +** 資料夾。
+1. 在 [**屬性頁**] 對話方塊中，按一下**C /C++** 資料夾。
 
 1. 按一下 **程式碼產生**屬性頁。
 
@@ -158,4 +158,4 @@ int main() {
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

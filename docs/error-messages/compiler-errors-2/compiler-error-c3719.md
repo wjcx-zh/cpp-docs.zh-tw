@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3719
 ms.assetid: d0d59d4e-babb-4480-9ef7-70cf1a28165c
 ms.openlocfilehash: 3ead2f18cdc8b76a0bb3da30e7086bdc80b49d43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62328285"
 ---
 # <a name="compiler-error-c3719"></a>編譯器錯誤 C3719
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-若要修正這個錯誤，套用[物件](../../windows/object-cpp.md)， [coclass](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，以及[event_receiver](../../windows/event-receiver.md)進行適當的屬性您使用的介面 COM 類別的類別。 例如: 
+若要修正這個錯誤，套用[物件](../../windows/object-cpp.md)， [coclass](../../windows/coclass.md)， [event_source](../../windows/event-source.md)，以及[event_receiver](../../windows/event-receiver.md)進行適當的屬性您使用的介面 COM 類別的類別。 例如：
 
 ```
 // C3719b.cpp

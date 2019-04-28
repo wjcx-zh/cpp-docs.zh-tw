@@ -9,11 +9,11 @@ helpviewer_keywords:
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
 ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219804"
 ---
 # <a name="document-template-creation"></a>文件樣板建立
 
@@ -23,7 +23,7 @@ ms.locfileid: "57271674"
 
 [!code-cpp[NVC_MFCDocView#7](../mfc/codesnippet/cpp/document-template-creation_1.cpp)]
 
-新指標`CMultiDocTemplate`物件做為引數[Initinstance](../mfc/reference/cwinapp-class.md#adddoctemplate)。 引數`CMultiDocTemplate`建構函式包含文件類型的功能表和快速鍵，相關聯的資源識別碼和三個用途[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)巨集。 `RUNTIME_CLASS` 會傳回[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)命名為其引數的 c + + 類別的物件。 三個`CRuntimeClass`物件傳遞至文件範本建構函式提供文件的建立程序期間建立的指定類別的新物件所需的資訊。 此範例示範建立文件範本，建立`CScribDoc`具有物件`CScribView`附加的物件。 檢視是由標準的 MDI 子框架視窗框住。
+新指標`CMultiDocTemplate`物件做為引數[Initinstance](../mfc/reference/cwinapp-class.md#adddoctemplate)。 引數`CMultiDocTemplate`建構函式包含文件類型的功能表和快速鍵，相關聯的資源識別碼和三個用途[RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class)巨集。 `RUNTIME_CLASS` 會傳回[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)物件的C++類別命名為其引數。 三個`CRuntimeClass`物件傳遞至文件範本建構函式提供文件的建立程序期間建立的指定類別的新物件所需的資訊。 此範例示範建立文件範本，建立`CScribDoc`具有物件`CScribView`附加的物件。 檢視是由標準的 MDI 子框架視窗框住。
 
 ## <a name="see-also"></a>另請參閱
 

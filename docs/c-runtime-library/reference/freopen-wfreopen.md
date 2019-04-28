@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
 ms.openlocfilehash: 4c570837bddea1f5e986ae5f767279ab2637ea21
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332984"
 ---
 # <a name="freopen-wfreopen"></a>freopen、_wfreopen
 
@@ -63,7 +63,7 @@ FILE *_wfreopen(
 *mode*<br/>
 允許的存取類型。
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -86,7 +86,7 @@ FILE *_wfreopen(
 
 **freopen**通常用來重新導向預先開啟的檔案**stdin**， **stdout**，和**stderr**使用者所指定的檔案。 新的檔案與相關聯*資料流*以開啟*模式*，這是字元字串，指定要求檔案，如下所示的存取類型：
 
-|*mode*|存取|
+|*mode*|Access|
 |-|-|
 | **"r"** | 開啟以讀取。 如果檔案不存在或無法找到**freopen**呼叫就會失敗。 |
 | **"w"** | 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。 |

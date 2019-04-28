@@ -13,11 +13,11 @@ helpviewer_keywords:
 - document data [MFC]
 ms.assetid: b42a0c68-4bc4-4012-9938-5433a26d2c24
 ms.openlocfilehash: af3cde9445ae4b128e7e54a5f154db01b2eecd3b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308062"
 ---
 # <a name="serializing-data-to-and-from-files"></a>將資料序列化至檔案以及從檔案序列化資料
 
@@ -25,7 +25,7 @@ ms.locfileid: "57279259"
 
 「 架構 」 提供的預設實作，將文件儲存至磁碟檔案，以回應儲存和另存新檔命令在 [檔案] 功能表上以及從 [開啟] 命令的回應中的磁碟檔案載入文件。 很少的功夫，您可以實作寫入和讀取其資料與檔案的文件的能力。 您必須執行的重點是覆寫[Serialize](../mfc/reference/cobject-class.md#serialize)文件類別中的成員函式。
 
-MFC 應用程式精靈會的骨架的覆寫`CDocument`成員函式`Serialize`它會為您建立的文件類別中。 在實作您的應用程式成員變數之後，您可以填寫您`Serialize`覆寫以將資料傳送至 「 封存物件 」 連接到檔案的程式碼。 A [CArchive](../mfc/reference/carchive-class.md)物件是類似**cin**並**cout**輸入/輸出來自 c + + iostream 程式庫的物件。 不過，`CArchive`寫入和讀取二進位格式，而不是格式化文字。
+MFC 應用程式精靈會的骨架的覆寫`CDocument`成員函式`Serialize`它會為您建立的文件類別中。 在實作您的應用程式成員變數之後，您可以填寫您`Serialize`覆寫以將資料傳送至 「 封存物件 」 連接到檔案的程式碼。 A [CArchive](../mfc/reference/carchive-class.md)物件是類似**cin**並**cout**輸入/輸出物件，從C++iostream 程式庫。 不過，`CArchive`寫入和讀取二進位格式，而不是格式化文字。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - post-build events
 ms.assetid: 788a6c18-2dbe-4a49-8cd6-86c1ad7a95cc
 ms.openlocfilehash: c8097e013f934c45b8e3860b8377bdb2bdb9d9a0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315231"
 ---
 # <a name="specifying-build-events"></a>指定建置事件
 
@@ -36,7 +36,7 @@ ms.locfileid: "57824995"
 
 1. 在 [方案總管] 中，選取您想要指定建置事件的專案。
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](working-with-project-properties.md)。</c0>
 
 1. 在 [建置事件] 資料夾中，選取建置事件屬性頁。
 

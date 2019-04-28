@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
 ms.openlocfilehash: aeacaf581b7f33ee893754c192ae547376ce73ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62287638"
 ---
 # <a name="fullpath-wfullpath"></a>_fullpath、_wfullpath
 
@@ -64,7 +64,7 @@ wchar_t *_wfullpath(
 *relPath*<br/>
 相對路徑名稱。
 
-*MaxLength*<br/>
+*maxLength*<br/>
 絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位 **_fullpath**但是寬字元 (**wchar_t**) 的 **_wfullpath**。
 
 ## <a name="return-value"></a>傳回值

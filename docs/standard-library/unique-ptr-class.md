@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
 ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295457"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr 類別
 
@@ -99,10 +99,10 @@ public:
 *Nptr*<br/>
 類型為 `rvalue` 的 `std::nullptr_t`。
 
-*ptr*<br/>
+*Ptr*<br/>
 `pointer`。
 
-*刪除者*<br/>
+*Deleter*<br/>
 繫結至 `deleter` 的 `unique_ptr` 函式。
 
 ## <a name="exceptions"></a>例外狀況
@@ -117,7 +117,7 @@ public:
 
 `unique_ptr` 唯一管理資源。 每個 `unique_ptr` 物件儲存自有物件的指標或存放 null 指標。 資源只能由不超過一個 `unique_ptr` 物件擁有；當擁有特定資源的 `unique_ptr` 物件終結時，會釋放資源。 `unique_ptr` 物件可以移動，但不能複製；如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-資源是透過呼叫 `deleter` 類型之預存 `Del` 物件釋放 (這個物件知道如何針對特定 `unique_ptr` 配置資源)。 預設值`deleter``default_delete<T>`假設，指向資源`ptr`配置具有`new`，並可以藉由呼叫釋放`delete _Ptr`。 (部分特製化 `unique_ptr<T[]>` 管理 `new[]` 配置的陣列物件，而且有預設 `deleter` `default_delete<T[]>`，特製化以呼叫 delete[] `ptr`)。
+資源是透過呼叫 `deleter` 類型之預存 `Del` 物件釋放 (這個物件知道如何針對特定 `unique_ptr` 配置資源)。 預設值`deleter``default_delete<T>`假設，指向資源`ptr`配置具有`new`，並可以藉由呼叫釋放`delete _Ptr`。 (部分特製化`unique_ptr<T[]>`管理配置的陣列物件`new[]`，而且有預設`deleter``default_delete<T[]>`特製化以呼叫 delete []、 `ptr`。)
 
 自有資源的儲存指標 `stored_ptr` 具有類型 `pointer`。 如果已定義，則為 `Del::pointer`，否則為 `T *`。 如果 `deleter` 是無狀態，預存 `stored_deleter` 物件 `deleter` 不會佔用物件的空間。 請注意，`Del` 可以是參考類型。
 

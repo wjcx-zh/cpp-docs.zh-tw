@@ -23,11 +23,11 @@ helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
 ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333991"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -47,7 +47,7 @@ int fesetexceptflag(
 *pstatus*<br/>
 指標**fexcept_t**物件，其中包含將例外狀況狀態旗標設定為值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
 
-*removed*<br/>
+*excepts*<br/>
 要設定的浮點例外狀況狀態旗標。
 
 ## <a name="return-value"></a>傳回值

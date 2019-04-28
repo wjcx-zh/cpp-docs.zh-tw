@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ccoshl function
 ms.assetid: 79667449-4edf-4948-bf6b-720adf2b3f3b
 ms.openlocfilehash: c25441d4f25f9e77a0cb71d942e132f34c4c1f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335551"
 ---
 # <a name="ccosh-ccoshf-ccoshl"></a>ccosh、ccoshf、ccoshl
 
@@ -72,13 +72,13 @@ _Lcomplex ccoshl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**ccosh**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **ccosh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**ccosh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **ccosh**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ccosh**， **ccoshf**， **ccoshl**|\<complex.h>|\<ccomplex>|
+|**ccosh**,               **ccoshf**, **ccoshl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -51,11 +51,11 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
 ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348181"
 ---
 # <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
 
@@ -86,11 +86,11 @@ int _CrtSetDbgFlag(
 
 |位元欄位|預設|描述|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON： 啟用偵錯堆積配置，並使用的記憶體區塊類型識別項，如 **_CLIENT_BLOCK**。 OFF：新增配置至堆積的連結清單，但將區塊類型設定為 **_IGNORE_BLOCK**。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON：在每次配置及解除配置要求時，呼叫 [_CrtCheckMemory](crtcheckmemory.md)。 OFF: **_CrtCheckMemory**必須明確呼叫。<br /><br /> 堆積頻率檢查巨集會在設定此旗標時沒有效果。|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON： 包含 **_CRT_BLOCK**類型在流失偵測和記憶體狀態差異作業。 OFF：這些作業會忽略由執行階段程式庫內部所使用的記憶體。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON：將釋放的記憶體區塊保留在堆積的連結清單中，指派 **_FREE_BLOCK** 類型給這些記憶體區塊，並將它們填入位元組值 0xDD。 OFF：不要將釋放的記憶體區塊保留在堆積的連結清單中。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON：在程式結束時，透過呼叫 [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) 執行自動流失檢查，並在應用程式失敗時產生錯誤報表，以釋放其配置的所有記憶體。 OFF：不要在應用程式結束時自動執行遺漏檢查。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|ON:啟用偵錯堆積配置，並使用的記憶體區塊類型識別項，例如 **_CLIENT_BLOCK**。 OFF:新增配置至堆積的連結清單，但將區塊類型 **_IGNORE_BLOCK**。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON:呼叫[_CrtCheckMemory](crtcheckmemory.md)在每次配置和解除配置要求。 OFF: **_CrtCheckMemory**必須明確呼叫。<br /><br /> 堆積頻率檢查巨集會在設定此旗標時沒有效果。|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|ON:包含 **_CRT_BLOCK**類型在流失偵測和記憶體狀態差異作業。 OFF:執行階段程式庫內部使用的記憶體會忽略這些作業。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON:將釋放的記憶體區塊保留在堆積的連結清單，為它們指派 **_FREE_BLOCK**類型，而且它們填入位元組值 0xDD。 OFF:不要將釋放的區塊保留在堆積的連結清單。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON:執行自動流失檢查在程式結束時，透過呼叫[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)並產生錯誤報表，如果應用程式無法釋放其配置的所有記憶體。 OFF:不要自動執行遺漏檢查在程式結束。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
 
 **堆積檢查頻率巨集**
 

@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306401"
 ---
 # <a name="technical-notes-by-number"></a>依編號顯示的技術提示
 
@@ -50,7 +50,7 @@ ms.locfileid: "50634872"
 |38|[MFC/OLE IUnknown 實作](../mfc/tn038-mfc-ole-iunknown-implementation.md)|
 |37|[多執行緒的 MFC 2.1 應用程式](../mfc/tn037-multithreaded-mfc-2-1-applications.md)|
 |36|[搭配使用 CFormView 與 AppWizard 及 ClassWizard](../mfc/tn036-using-cformview-with-appwizard-and-classwizard.md)|
-|35|[使用 Visual c + + 中的多個資源檔和標頭檔](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|
+|35|[使用視覺效果中的多個資源檔和標頭檔C++](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)|
 |33|[MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)|
 |32|[MFC 例外狀況機制](../mfc/tn032-mfc-exception-mechanism.md)|
 |31|[控制列](../mfc/tn031-control-bars.md)|
@@ -65,7 +65,7 @@ ms.locfileid: "50634872"
 |21|[命令和訊息路由](../mfc/tn021-command-and-message-routing.md)|
 |20|[識別碼命名和編號慣例](../mfc/tn020-id-naming-and-numbering-conventions.md)|
 |17|[終結視窗物件](../mfc/tn017-destroying-window-objects.md)|
-|16|[使用 c + + 多重繼承與 MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|
+|16|[使用C++多重繼承與 MFC](../mfc/tn016-using-cpp-multiple-inheritance-with-mfc.md)|
 |14|[自訂控制項](../mfc/tn014-custom-controls.md)|
 |11|[將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)|
 |6|[訊息對應](../mfc/tn006-message-maps.md)|

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
 ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334004"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -54,7 +54,7 @@ wint_t fgetwc(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -132,7 +132,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Line one.

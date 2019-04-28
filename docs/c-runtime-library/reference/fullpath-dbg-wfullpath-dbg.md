@@ -30,11 +30,11 @@ helpviewer_keywords:
 - wfullpath_dbg function
 ms.assetid: 81f72f85-07da-4f5c-866a-598e0fb03f6b
 ms.openlocfilehash: b84c5b77d0a9bfb298d4c597e372cd39a92441f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332945"
 ---
 # <a name="fullpathdbg-wfullpathdbg"></a>_fullpath_dbg、_wfullpath_dbg
 
@@ -69,7 +69,7 @@ wchar_t *_wfullpath_dbg(
 *relPath*<br/>
 相對路徑名稱。
 
-*MaxLength*<br/>
+*maxLength*<br/>
 絕對路徑名稱緩衝區的最大長度 (*absPath*)。 這個長度是以位元組為單位 **_fullpath**但是寬字元 (**wchar_t**) 的 **_wfullpath**。
 
 *blockType*<br/>

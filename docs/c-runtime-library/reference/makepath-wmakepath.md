@@ -34,11 +34,11 @@ helpviewer_keywords:
 - tmakepath function
 ms.assetid: 5930b197-a7b8-46eb-8519-2841a58cd026
 ms.openlocfilehash: 073f8aba6936aa33dafcef7ed47f5286802a4948
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285695"
 ---
 # <a name="makepath-wmakepath"></a>_makepath、_wmakepath
 
@@ -68,7 +68,7 @@ void _wmakepath(
 *path*<br/>
 完整路徑緩衝區。
 
-*磁碟機*<br/>
+*drive*<br/>
 包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
 
 *dir*<br/>

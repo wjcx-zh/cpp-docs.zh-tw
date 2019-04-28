@@ -24,11 +24,11 @@ helpviewer_keywords:
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
 ms.openlocfilehash: ce505c5a389d4ff6aa12a88bfc47fb0a6f026eea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335603"
 ---
 # <a name="alignedrecalloc"></a>_aligned_recalloc
 
@@ -50,13 +50,13 @@ void * _aligned_recalloc(
 *memblock*<br/>
 目前記憶體區塊指標。
 
-*數字*<br/>
+*number*<br/>
 元素數。
 
 *size*<br/>
 每個項目的大小 (位元組)。
 
-*對齊方式*<br/>
+*alignment*<br/>
 對齊值，必須是 2 的整數冪。
 
 ## <a name="return-value"></a>傳回值

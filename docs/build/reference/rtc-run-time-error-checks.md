@@ -26,11 +26,11 @@ helpviewer_keywords:
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
 ms.openlocfilehash: a830ff5b8ba4b7fcd95eb462f899f2eadce6de11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318546"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (執行階段錯誤檢查)
 
@@ -53,7 +53,7 @@ ms.locfileid: "57815888"
 **C**<br/>
 報告的值時指派給較小的資料類型，而導致資料遺失。 例如，如果型別的值`short 0x101`指派給類型的變數`char`。
 
-此選項會報告在您想要截斷，比方說，如果您想要的第一個八位元的情況下`int`傳回為`char`。 因為 **/RTC** `c`會造成執行階段錯誤因指派而遺失任何資訊時，您可以關閉遮罩，您必須避免執行階段錯誤的資訊 **/RTC** `c`. 例如: 
+此選項會報告在您想要截斷，比方說，如果您想要的第一個八位元的情況下`int`傳回為`char`。 因為 **/RTC** `c`會造成執行階段錯誤因指派而遺失任何資訊時，您可以關閉遮罩，您必須避免執行階段錯誤的資訊 **/RTC** `c`. 例如：
 
 ```
 #include <crtdbg.h>
@@ -91,7 +91,7 @@ b = &a;
 c = a;  // No run-time error with /RTCu
 ```
 
-如果變數可能已經過初始化，它將不會報告在執行階段 **/RTC**`u`。 例如，變數是透過指標的別名之後，編譯器不會追蹤變數和報告未初始化的使用。 作用中，您可以取得其位址來初始化變數。 & 運算子在這種情況下的作用就像是指派運算子。
+如果變數可能已經過初始化，它將不會報告在執行階段 **/RTC**`u`。 例如，變數是透過指標的別名之後，編譯器不會追蹤變數和報告未初始化的使用。 作用中，您可以取得其位址來初始化變數。 & 運算子運作方式類似在此情況下指派運算子。
 
 ## <a name="remarks"></a>備註
 
@@ -105,7 +105,7 @@ c = a;  // No run-time error with /RTCu
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -120,5 +120,5 @@ c = a;  // No run-time error with /RTCu
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)

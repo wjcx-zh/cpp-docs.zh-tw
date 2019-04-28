@@ -3,11 +3,11 @@ title: 為 Windows XP 設定程式
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273798"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
@@ -15,21 +15,21 @@ ms.locfileid: "57814289"
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
 
-若要在 Visual Studio 2017 中取得的平台工具組和目標 Windows XP 和 Windows Server 2003 的元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或您選擇**修改**若要修改現有的安裝，請確定**使用 c + + 的桌面開發**選取工作負載。 在此工作負載的選用元件的清單中，選擇**c + + 的 Windows XP 支援**，然後選擇**安裝**或**修改**。
+若要在 Visual Studio 2017 中取得的平台工具組和目標 Windows XP 和 Windows Server 2003 的元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或您選擇**修改**若要修改現有的安裝，請確定**使用的桌面開發C++** 選取工作負載。 在此工作負載的選用元件的清單中，選擇**的 Windows XP 支援C++** ，然後選擇**安裝**或**修改**。
 
 ## <a name="windows-xp-targeting-experience"></a>以 Windows XP 為目標的體驗
 
-Windows XP 平台工具組隨附於 Visual Studio 中的 Windows 7 SDK 版本，但它會使用目前的 c + + 編譯器。 它也會設定專案屬性，以適當的預設值，例如，針對舊版的相容連結器規格。 只有 Windows 桌面應用程式，使用 Windows XP 和 Windows Server 2003 上執行 Windows XP 平台工具組所建立的但這些應用程式也可以在較新的 Windows 作業系統上執行。
+Windows XP 平台工具組隨附於 Visual Studio 中的 Windows 7 SDK 版本，但它會使用目前C++編譯器。 它也會設定專案屬性，以適當的預設值，例如，針對舊版的相容連結器規格。 只有 Windows 桌面應用程式，使用 Windows XP 和 Windows Server 2003 上執行 Windows XP 平台工具組所建立的但這些應用程式也可以在較新的 Windows 作業系統上執行。
 
 #### <a name="to-target-windows-xp"></a>以 Windows XP 為目標
 
 1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。
 
-1. 在 **屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 建立適用於 Windows XP 和 Windows Server 2003 的程式碼，使用 Microsoft Visual c + + 2017年編譯器。
+1. 在 **屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 以建立適用於 Windows XP 和 Windows Server 2003 的程式碼，使用 Microsoft Visual C++ 2017年編譯器。
 
 ### <a name="c-runtime-support"></a>C++ 執行階段支援
 
-Windows XP 平台工具組，C 執行階段程式庫 (CRT)、 c + + 標準程式庫、 Active Template Library (ATL)、 Concurrency Runtime Library (ConCRT)、 平行模式程式庫 (PPL)、 Microsoft Foundation Class 程式庫 (MFC)，及 c + + AMP （c + +加速大規模程式設計） 程式庫包含適用於 Windows XP 和 Windows Server 2003 的執行階段支援。 針對這些作業系統，支援的最低版本是 Windows XP Service Pack 3 (SP3) 適用於 x86 Windows XP Service Pack 2 (SP2) x64 和 Windows Server 2003 Service Pack 2 (SP2) 適用於 x86 和 x64。
+Windows XP 平台工具組，C 執行階段程式庫 (CRT)，以及C++標準程式庫、 Active Template Library (ATL)、 Concurrency Runtime Library (ConCRT)、 平行模式程式庫 (PPL)、 Microsoft Foundation Class 程式庫 (MFC)，和C++P (C++ Accelerated Massive Programming) 程式庫包含適用於 Windows XP 和 Windows Server 2003 的執行階段支援。 針對這些作業系統，支援的最低版本是 Windows XP Service Pack 3 (SP3) 適用於 x86 Windows XP Service Pack 2 (SP2) x64 和 Windows Server 2003 Service Pack 2 (SP2) 適用於 x86 和 x64。
 
 安裝 Visual Studio 中，根據目標平台工具組支援這些程式庫：
 
@@ -43,15 +43,15 @@ Windows XP 平台工具組，C 執行階段程式庫 (CRT)、 c + + 標準程式
 |C++ AMP|X|X||
 
 > [!NOTE]
-> 應用程式所撰寫的 C + + /cli Windows XP 和 Windows Server 2003 上執行的 CLI 和.NET Framework 4 為目標。
+> 應用程式所撰寫的C++/Windows XP 和 Windows Server 2003 上執行的 CLI 和.NET Framework 4 為目標。
 
 ### <a name="differences-between-the-toolsets"></a>這些工具組的差異
 
 由於平台和程式庫支援差異，所以使用 Windows XP 平台工具組的應用程式的開發體驗不會使用預設 Visual Studio 平台工具組的應用程式與為完成。
 
-- **C + + 語言功能**
+- **C++語言功能**
 
-   只有 c + + 語言功能在 Visual Studio 2012 中實作支援應用程式中，使用 v110\_xp 平台工具組。 只有 c + + 語言功能實作 Visual Studio 2013 中支援應用程式中，使用 v120\_xp 平台工具組。 只有 c + + 語言功能在 Visual Studio 2015 中實作支援應用程式中，使用 v140\_xp 平台工具組。 建置使用舊版的平台工具組時，visual Studio 會使用對應的編譯器。 使用最新的 Windows XP 平台工具組，才能利用其他的 c + + 語言功能，在該版本的編譯器中實作。
+   只有C++使用 v110 應用程式中支援的語言功能在 Visual Studio 2012 中實作\_xp 平台工具組。 只有C++支援使用 v120 應用程式中實作 Visual Studio 2013 中的語言功能\_xp 平台工具組。 只有C++中使用 [v140] 的應用程式支援在 Visual Studio 2015 中實作的語言功能\_xp 平台工具組。 建置使用舊版的平台工具組時，visual Studio 會使用對應的編譯器。 若要利用其他使用最新的 Windows XP 平台工具組C++在該版本的編譯器中實作的語言功能。
 
 - **遠端偵錯**
 

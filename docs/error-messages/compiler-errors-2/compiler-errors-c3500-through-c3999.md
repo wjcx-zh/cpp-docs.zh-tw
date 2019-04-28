@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C3500 到 C3999
-ms.date: 11/17/2017
+title: 編譯器錯誤 C3500 至 C3999
+ms.date: 04/21/2019
 f1_keywords:
 - C3502
 - C3503
@@ -246,14 +246,14 @@ f1_keywords:
 - C3998
 - C3999
 ms.assetid: bd6f23ad-b300-4e07-8e35-9661cab1585f
-ms.openlocfilehash: 02686b8c12643480dc18ad665eb7f17e2b8d1170
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: c5cb482804dac90a278036d594dc92e7be33e2bf
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281331"
 ---
-# <a name="compiler-errors-c3500-through-c3999"></a>編譯器錯誤 C3500 到 C3999
+# <a name="compiler-errors-c3500-through-c3999"></a>編譯器錯誤 C3500 至 C3999
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -315,7 +315,7 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3549|'*值*': 函式參數封裝不能有預設引數|
 |[編譯器錯誤 C3550](compiler-error-c3550.md)|此內容中不得有純 'decltype(auto)'|
 |[編譯器錯誤 C3551](compiler-error-c3551.md)|如果使用尾端傳回型別，則前導傳回類型應該是單一類型規範 'auto' (沒有 '*型別*')|
-|[編譯器錯誤 C3552](compiler-error-c3552.md)|必須是 ' decltype （auto) '|
+|[編譯器錯誤 C3552](compiler-error-c3552.md)|expected 'decltype(auto)'|
 |[編譯器錯誤 C3553](compiler-error-c3553.md)|decltype 必須是運算式而不是類型|
 |[編譯器錯誤 C3554](compiler-error-c3554.md)|'*型別*' 無法與任何其他類型規範結合|
 |[編譯器錯誤 C3555](compiler-error-c3555.md)|'decltype' 的引數不正確|
@@ -323,7 +323,7 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3557|已過時。|
 |編譯器錯誤 C3558|已過時。|
 |編譯器錯誤 C3559|遞迴呼叫 '*函式*': 編譯呼叫圖表 parallel_for_each 時偵測到遞迴:'*函式*'|
-|編譯器錯誤 C3560|'*函式*': 編譯 parallel_for_each 呼叫圖表時，不可以使用 IL:'*函式*'|
+|編譯器錯誤 C3560|'*函式*':編譯 parallel_for_each 呼叫圖表時，不可以使用 IL: '*函式*'|
 |編譯器錯誤 C3561|當編譯呼叫圖表 parallel_for_each 不統一並排的控制流程中找到並排屏障作業: '*函式*'|
 |編譯器錯誤 C3562|內建函式 '*函式*' 限制為沒有多個*數目*參數|
 |編譯器錯誤 C3563|編譯呼叫圖表 parallel_for_each 時偵測到無限迴圈: '*函式*'|
@@ -338,7 +338,7 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3572|'*型別*': 不合法的計算網域引數; 遺漏 public 成員: 'static const int rank' 或順位值是非正數|
 |編譯器錯誤 C3573|傳遞給 concurrency:: parallel_for_each 的 graphics:: sampler 執行個體數目不能超過*數目*|
 |編譯器錯誤 C3574|'*型別*': 並排範圍不合法： 必須為正數且 (1) Z < =*數目*;（2) Z*Y*X < =*數目*|
-|編譯器錯誤 C3575|'*型別*': 不合法的計算網域引數; 遺漏 public 成員:' concurrency:: index< <*數目*> _map_index (const concurrency:: index< <*號碼*>（& s)) restrict （amp) '|
+|編譯器錯誤 C3575|'*type*': illegal compute domain argument; missing public member: 'concurrency::index<*number*> _map_index(const concurrency::index<*number*>&) restrict(amp)'|
 |編譯器錯誤 C3576|'*型別*': _parallel_for_each 引數 #*數目*有不支援的類型|
 |編譯器錯誤 C3577|concurrency:: parallel_for_each 核心引數不合法： 無法解析成員呼叫 ' void operator （) (*型別*) restrict （amp) '|
 |編譯器錯誤 C3578|傳遞給 concurrency:: parallel_for_each 的函式物件的大小不得超過*數字*位元組|
@@ -537,7 +537,7 @@ ms.locfileid: "50575002"
 |[編譯器錯誤 C3771](compiler-error-c3771.md)|'*識別碼*': 在最接近的命名空間範圍中找不到 friend 宣告|
 |[編譯器錯誤 C3772](compiler-error-c3772.md)|'*識別碼*': 無效的 friend 樣板宣告|
 |編譯器錯誤 C3773|請使用 /await 編譯器參數啟用協同程式|
-|編譯器錯誤 C3774|找不到 '*領域*::*識別項*': 請附上*標頭*標頭|
+|編譯器錯誤 C3774|找不到 '*領域*::*識別項*':請附上*標頭*標頭|
 |編譯器錯誤 C3775|傳回的類型 '*函式*'不應該'*型別*'|
 |編譯器錯誤 C3776|無法傳回 void 具有非 void 最終傳回類型的協同程式中的型別透過|
 |編譯器錯誤 C3777|'*函式*': 協同程式無法取得變數引數清單|
@@ -624,7 +624,7 @@ ms.locfileid: "50575002"
 |[編譯器錯誤 C3858](compiler-error-c3858.md)|'*識別碼*': 無法在目前的範圍內重新宣告|
 |[編譯器錯誤 C3859](compiler-error-c3859.md)|超出; PCH 的虛擬記憶體範圍請重新編譯的命令列選項 '-Zm*數字*' 或更新版本|
 |[編譯器錯誤 C3860](compiler-error-c3860.md)|下列類別範本/泛型名稱的範本/泛型引數清單必須列出範本/泛型參數清單中的使用順序中的參數|
-|[編譯器錯誤 C3861](compiler-error-c3861.md)|'*識別碼*': 找不到識別項|
+|[編譯器錯誤 c3861:](compiler-error-c3861.md)|'*識別碼*': 找不到識別項|
 |[編譯器錯誤 C3862](compiler-error-c3862.md)|'*函式*': 無法編譯 unmanaged 函式使用 /clr: pure 或 /clr: safe|
 |編譯器錯誤 C3863|陣列類型 '*型別*' 不是可指派|
 |編譯器錯誤 C3864|已過時。|
@@ -647,8 +647,8 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3881|只能從直接基底繼承建構函式|
 |編譯器錯誤 C3882|'*類別*': 建構函式具有繼承自'*類別*'|
 |編譯器錯誤 C3883|'*成員*': initonly 靜態資料成員必須初始化|
-|編譯器錯誤 C3884|'*型別*': 大小未知的陣列無法以值初始化|
-|編譯器錯誤 C3885|'*型別*': 未知大小的陣列無法以空的初始設定式清單初始化|
+|編譯器錯誤 C3884|'*型別*':大小未知的陣列無法以值初始化|
+|編譯器錯誤 C3885|'*型別*':未知大小的陣列無法以空的初始設定式清單初始化|
 |[編譯器錯誤 C3886](compiler-error-c3886.md)|'*成員*': 必須初始化常值資料成員|
 |[編譯器錯誤 C3887](compiler-error-c3887.md)|'*成員*': 常值資料成員初始設定式必須是常數運算式|
 |[編譯器錯誤 C3888](compiler-error-c3888.md)|'*成員*': 這個常值資料成員相關聯的常數運算式不支援 C + /cli CLI|
@@ -715,11 +715,11 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3949|封裝展開，'...'，不能出現在括號括住的抽象宣告子|
 |編譯器錯誤 C3950|已過時。|
 |編譯器錯誤 C3951|無法在預計的 WinRT 類型中使用成員指標 '*型別*'。 改為使用委派。|
-|編譯器錯誤 C3952|'*型別*': WinRT 不支援' in/out' 陣列。 使用 'const 陣列<T>^' 的 'in' 和' WriteOnlyArray<T>'或' 陣列<T>^ *' 代表 'out' 上的公用 Api|
+|編譯器錯誤 C3952|'*型別*':WinRT 不支援 '在/out' 陣列。 使用 'const 陣列<T>^' 的 'in' 和' WriteOnlyArray<T>'或' 陣列<T>^ *' 代表 'out' 上的公用 Api|
 |編譯器錯誤 C3953|無法使用受控的類別*型別*' WinRT 模組中。|
-|編譯器錯誤 C3954|'*型別*': WinRT 類型上，從已發行方法傳回的陣列必須使用表單' 陣列<T>^'|
-|編譯器錯誤 C3955|'*型別*': 公用建構函式不能包含 'out' 參數或' WriteOnlyArray<T>'|
-|編譯器錯誤 C3956|'*型別*': 類型標記為獨佔到'*型別*'也不能做為基底的'*derived_type*'|
+|編譯器錯誤 C3954|'*型別*':從已發行的方法所傳回的 WinRT 類型的陣列必須使用表單 ' 陣列<T>^'|
+|編譯器錯誤 C3955|'*型別*':公用建構函式不能包含 'out' 參數或 ' WriteOnlyArray<T>'|
+|編譯器錯誤 C3956|'*型別*':類型會標示為獨佔到 '*型別*'也不能做為基底的'*derived_type*'|
 |編譯器錯誤 C3957|'*型別*': 不能使用 'new' 在 WinRT 類型; 請改用 'ref new'|
 |編譯器錯誤 C3958|'*型別*': 無法用 'gcnew' 在 WinRT 類型; 請改用 'ref new'|
 |編譯器錯誤 C3959|'ref new' 可能只用來建立具有 WinRT 類型的物件|
@@ -760,5 +760,10 @@ ms.locfileid: "50575002"
 |編譯器錯誤 C3994|'*型別*': 實值型別無法實作介面或具有虛擬函式|
 |編譯器錯誤 C3995|'*型別*': 實值型別不能有任何事件成員*識別項*'|
 |編譯器錯誤 C3996|已過時。|
-|編譯器錯誤 C3998|'c + +*版本*': 不支援 c + + 版本; 預設為' c + +*版本*'|
-|編譯器錯誤 C3999|未知錯誤，請選擇 Visual c + + [說明] 功能表上的 [技術支援] 命令或開啟技術支援說明檔，如需詳細資訊|
+|編譯器錯誤 C3998|'c + +*版本*': 不支援C++版本; 預設為' c + +*版本*'|
+|編譯器錯誤 C3999|不明錯誤請選擇 視覺效果上的 技術支援 命令C++說明 功能表，或開啟技術支援說明檔，如需詳細資訊|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

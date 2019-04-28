@@ -1,5 +1,5 @@
 ---
-title: Dll 和 Visual c + + 執行階段程式庫行為
+title: Dll 和視覺效果C++執行階段程式庫行為
 ms.date: 11/04/2016
 f1_keywords:
 - _DllMainCRTStartup
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
 ms.openlocfilehash: ea970f010e86d655963485339c48b8f7d36d6270
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314789"
 ---
-# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual c + + 執行階段程式庫行為
+# <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和視覺效果C++執行階段程式庫行為
 
-當您建置動態連結程式庫 (DLL)，使用 Visual c + + 中，依預設時，連結器就會包含 Visual c + + 執行階段程式庫 (VCRuntime)。 VCRuntime 包含初始化及終止 C/c + + 可執行檔所需的程式碼。 當連結的 dll，VCRuntime 程式碼會提供內部 DLL 進入點函式呼叫`_DllMainCRTStartup`可處理 Windows OS 訊息所要附加或中斷連結處理序或執行緒的 dll。 `_DllMainCRTStartup`函式會執行基本工作，例如堆疊緩衝區安全性設定，C 執行階段程式庫 (CRT) 初始化及終止，而且會呼叫建構函式和解構函式靜態和全域物件。 `_DllMainCRTStartup` 也呼叫攔截函式的其他程式庫，例如 WinRT、 MFC 和 ATL 來執行他們自己的初始化及終止。 而不需要這項初始化、 CRT 和其他程式庫，以及靜態變數，就會處於未初始化的狀態。 相同的 VCRuntime 內部初始化和終止常式會呼叫是否以靜態方式連結的 CRT 或動態連結的 CRT DLL，會使用您的 DLL。
+當您建置動態連結程式庫 (DLL) 藉由使用視覺效果C++，根據預設，連結器包含視覺效果C++執行階段程式庫 (VCRuntime)。 VCRuntime 包含初始化及終止 C 所需的程式碼 /C++可執行檔。 當連結的 dll，VCRuntime 程式碼會提供內部 DLL 進入點函式呼叫`_DllMainCRTStartup`可處理 Windows OS 訊息所要附加或中斷連結處理序或執行緒的 dll。 `_DllMainCRTStartup`函式會執行基本工作，例如堆疊緩衝區安全性設定，C 執行階段程式庫 (CRT) 初始化及終止，而且會呼叫建構函式和解構函式靜態和全域物件。 `_DllMainCRTStartup` 也呼叫攔截函式的其他程式庫，例如 WinRT、 MFC 和 ATL 來執行他們自己的初始化及終止。 而不需要這項初始化、 CRT 和其他程式庫，以及靜態變數，就會處於未初始化的狀態。 相同的 VCRuntime 內部初始化和終止常式會呼叫是否以靜態方式連結的 CRT 或動態連結的 CRT DLL，會使用您的 DLL。
 
 ## <a name="default-dll-entry-point-dllmaincrtstartup"></a>預設 DLL 進入點 _DllMainCRTStartup
 
@@ -32,7 +32,7 @@ ms.locfileid: "57811435"
 
 VCRuntime 程式庫提供進入點函式，呼叫`_DllMainCRTStartup`處理預設初始化及終止作業。 處理序附加，`_DllMainCRTStartup`函式設定緩衝區安全性檢查，初始化 CRT 和其他程式庫、 初始化執行階段類型資訊、 初始化並呼叫建構函式靜態及非區域的資料，初始化執行緒區域儲存區會遞增每個附加，內部靜態計數器，然後呼叫 使用者或程式庫-提供`DllMain`。 處理序中斷連結，函式會執行反向的這些步驟。 它會呼叫`DllMain`遞減內部的計數器，會呼叫解構函式，呼叫 CRT 終止函式，並註冊`atexit`函式，並通知終止的任何其他程式庫。 附件計數器歸零時，此函數會傳回`FALSE`來向 Windows 可以卸載 DLL。 `_DllMainCRTStartup`期間的執行緒也會呼叫函式連結和中斷連結執行緒。 在這些情況下，VCRuntime 程式碼沒有任何額外的初始化或終止，並只會呼叫`DllMain`傳遞的訊息。 如果`DllMain`會傳回`FALSE`從處理序附加時，發出訊號失敗時，`_DllMainCRTStartup`呼叫`DllMain`一次，並傳遞`DLL_PROCESS_DETACH`作為*原因*引數，然後會經歷的其餘部分終止程序。
 
-建置 Visual c + + 中的預設進入點的 Dll 時`_DllMainCRTStartup`所提供的 VCRuntime 就會自動連結中。 您不需要使用的進入點函式指定您的 DLL [/ENTRY （進入點符號）](reference/entry-entry-point-symbol.md)連結器選項。
+建置視覺效果中的 Dll 時C++，預設進入點`_DllMainCRTStartup`所提供的 VCRuntime 就會自動連結中。 您不需要使用的進入點函式指定您的 DLL [/ENTRY （進入點符號）](reference/entry-entry-point-symbol.md)連結器選項。
 
 > [!NOTE]
 > 雖然您可以使用來指定另一個進入點函式的 dll /ENTRY： 連結器選項，我們不建議您這麼做，因為您的進入點函式都必須重複的所有項目，`_DllMainCRTStartup`的話，會以相同的順序。 VCRuntime 提供可讓您重複其行為的函式。 例如，您可以呼叫[__security_init_cookie](../c-runtime-library/reference/security-init-cookie.md)立即處理序附加到支援[/GS （緩衝區安全性檢查）](reference/gs-buffer-security-check.md)核取選項的緩衝區。 您可以呼叫`_CRT_INIT`函式，將相同的參數傳遞做為進入點函式，來執行 DLL 初始化或終止函式的其餘部分。
@@ -41,7 +41,7 @@ VCRuntime 程式庫提供進入點函式，呼叫`_DllMainCRTStartup`處理預�
 
 ## <a name="initialize-a-dll"></a>初始化 DLL
 
-您的 DLL 可能會有您的 DLL 載入時必須執行的初始化程式碼。 為了讓您執行您自己的 DLL 初始化及終止函式，`_DllMainCRTStartup`呼叫的函式呼叫`DllMain`，您可以提供。 您`DllMain`必須擁有所需的 DLL 進入點簽章。 預設進入點函式`_DllMainCRTStartup`呼叫`DllMain`Windows 所使用的相同參數傳遞。 根據預設，如果您未提供`DllMain`函式，Visual c + + 為您提供並將其連結中以便`_DllMainCRTStartup`一律會有要呼叫的項目。 這表示，如果您不需要初始化您的 DLL，就沒有什麼特別您只需要建置 DLL 時。
+您的 DLL 可能會有您的 DLL 載入時必須執行的初始化程式碼。 為了讓您執行您自己的 DLL 初始化及終止函式，`_DllMainCRTStartup`呼叫的函式呼叫`DllMain`，您可以提供。 您`DllMain`必須擁有所需的 DLL 進入點簽章。 預設進入點函式`_DllMainCRTStartup`呼叫`DllMain`Windows 所使用的相同參數傳遞。 根據預設，如果您未提供`DllMain`函式，視覺效果C++為您提供並將其在連結以便`_DllMainCRTStartup`永遠都能呼叫。 這表示，如果您不需要初始化您的 DLL，就沒有什麼特別您只需要建置 DLL 時。
 
 這是用於簽章`DllMain`:
 
@@ -98,7 +98,7 @@ extern "C" BOOL WINAPI DllMain (
 ```
 
 > [!NOTE]
-> 較舊的 Windows SDK 文件指出，必須在連結器 /ENTRY 選項與命令列上指定 DLL 進入點函式的實際名稱。 使用 Visual c + + 中，您不需要使用 /ENTRY 選項，如果您的進入點函式的名稱是`DllMain`。 事實上，如果您使用名稱與 /ENTRY 選項您進入點函式項目以外`DllMain`，CRT 不會無法適當地初始化您的進入點函式進行相同的初始化呼叫，除非`_DllMainCRTStartup`讓。
+> 較舊的 Windows SDK 文件指出，必須在連結器 /ENTRY 選項與命令列上指定 DLL 進入點函式的實際名稱。 視覺效果C++，您不需要使用 /ENTRY 選項，如果您的進入點函式的名稱是`DllMain`。 事實上，如果您使用名稱與 /ENTRY 選項您進入點函式項目以外`DllMain`，CRT 不會無法適當地初始化您的進入點函式進行相同的初始化呼叫，除非`_DllMainCRTStartup`讓。
 
 <a name="initializing-regular-dlls"></a>
 

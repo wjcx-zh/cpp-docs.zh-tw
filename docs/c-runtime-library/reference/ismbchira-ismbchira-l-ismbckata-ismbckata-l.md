@@ -41,11 +41,11 @@ helpviewer_keywords:
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
 ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286729"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
@@ -93,10 +93,10 @@ int _ismbckata_l(
 
 |常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|雙位元組平假名： 0x829f< < =*c*< lt;=0x82f1。|
-|**_ismbchira_l**|雙位元組平假名： 0x829f< < =*c*< lt;=0x82f1。|
-|**_ismbckata**|雙位元組片假名： 0x8340< < =*c*< lt;=0x8396。|
-|**_ismbckata_l**|雙位元組片假名： 0x8340< < =*c*< lt;=0x8396。|
+|**_ismbchira**|雙位元組平假名：0x829F<=*c*<=0x82F1.|
+|**_ismbchira_l**|雙位元組平假名：0x829F<=*c*<=0x82F1.|
+|**_ismbckata**|雙位元組片假名：0x8340<=*c*<=0x8396.|
+|**_ismbckata_l**|雙位元組片假名：0x8340<=*c*<=0x8396.|
 
 **結束特定字碼頁 932**
 

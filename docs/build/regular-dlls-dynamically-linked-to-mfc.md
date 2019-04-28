@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314997"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>動態連結至 MFC 的標準 MFC Dll
 
@@ -27,9 +27,9 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 動態連結至 MFC 的標準 MFC DLL，具有下列功能：
 
-- 這是一種全新的 Visual c + + 4.0 所引進的 DLL。
+- 這是新的視覺效果所引進的 DLL 類型C++4.0。
 
-- 可執行的用戶端可以使用任何支援 Dll （C、 c + +、 Pascal、 Visual Basic 中，依此類推）; 使用的語言撰寫它並沒有是一個 MFC 應用程式。
+- 可執行的用戶端可以使用任何支援 Dll 使用的語言撰寫 (C， C++，依照 pascal 命名法、 Visual Basic 等等);它並沒有是一個 MFC 應用程式。
 
 - 不同於以靜態方式連結的標準 MFC DLL，這種類型的 DLL 動態連結至 MFC DLL (也稱為共用 MFC DLL)。
 

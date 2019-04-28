@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
 ms.openlocfilehash: fee8ba89605e6425b511407dab62be1f32e94a9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323787"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString 格式和訊息方塊顯示
 
@@ -90,8 +90,7 @@ void  AfxFormatString1(
 ### <a name="parameters"></a>參數
 
 *rString*<br/>
-
-  `CString` 物件的參考，在執行替代之後將會包含結果字串。
+`CString` 物件的參考，在執行替代之後將會包含結果字串。
 
 *nIDS*<br/>
 要執行替代作業之範本字串的資源 ID。

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
 ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335454"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 
@@ -65,7 +65,7 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cexp**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cexp**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**cexp**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **cexp**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 

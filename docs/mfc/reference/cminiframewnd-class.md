@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337813"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd 類別
 
@@ -202,7 +202,7 @@ virtual BOOL CreateEx(
 
 *Cheaderctrl:: Create*參數可以是任何組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。
 
-不再支援舊的樣式調色盤 [工具箱] 視窗。 在舊版 Windows，執行 MFC 應用程式時支援舊的樣式中，沒有"X"按鈕，但已不再支援 Visual c + +.NET 中。 現在支援新 WS_EX_TOOLWINDOW 樣式;如需此樣式的描述，請參閱 <<c0> [ 延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
+不再支援舊的樣式調色盤 [工具箱] 視窗。 在舊版 Windows，執行 MFC 應用程式時支援舊的樣式中，沒有"X"按鈕，但在視覺效果中已不再支援C++.NET。 現在支援新 WS_EX_TOOLWINDOW 樣式;如需此樣式的描述，請參閱 <<c0> [ 延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)。
 
 ## <a name="see-also"></a>另請參閱
 

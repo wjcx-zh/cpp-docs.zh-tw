@@ -31,11 +31,11 @@ helpviewer_keywords:
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
 ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331671"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -85,7 +85,7 @@ int ilogbl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**ilogb**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **ilogb**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**ilogb**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **ilogb**一律採用並傳回**double**。
 
 呼叫此函式是類似於呼叫的對等項目**logb**函式，然後傳回值轉換成**int**。
 

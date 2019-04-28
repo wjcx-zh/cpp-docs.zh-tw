@@ -26,11 +26,11 @@ helpviewer_keywords:
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
 ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339256"
 ---
 # <a name="div-ldiv-lldiv"></a>div、 ldiv、 lldiv
 
@@ -66,7 +66,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>參數
 
-*號碼*<br/>
+*numer*<br/>
 分子。
 
 *denom*<br/>
@@ -80,7 +80,7 @@ lldiv_t div(
 
 **Div**函式除以*號碼*由*denom* ，並藉此計算商數和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含商數**q u o t**，和餘數**rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
 
-多載**div**可接受類型引數**長**或是**長****長**而僅適用於 c + + 程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)並[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**並**rem**，其中具有相同意義隸屬**div_t**。
+多載**div**可接受類型引數**長**或**長****長**而僅適用於C++的程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)並[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**並**rem**，其中具有相同意義隸屬**div_t**。
 
 ## <a name="requirements"></a>需求
 

@@ -21,11 +21,11 @@ f1_keywords:
 - stdio/_fread_nolock_s
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
 ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333101"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -48,7 +48,7 @@ size_t _fread_nolock_s(
 *buffer*<br/>
 資料的儲存位置。
 
-*BufferSize*<br/>
+*bufferSize*<br/>
 以位元組為單位的目的緩衝區大小。
 
 *elementSize*<br/>
@@ -57,7 +57,7 @@ size_t _fread_nolock_s(
 *elementCount*<br/>
 要讀取項目的最大數量。
 
-*資料流*<br/>
+*stream*<br/>
 **FILE** 結構的指標。
 
 ## <a name="return-value"></a>傳回值

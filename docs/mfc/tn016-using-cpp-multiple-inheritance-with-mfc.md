@@ -1,5 +1,5 @@
 ---
-title: TN016：搭配使用 C++多重繼承與 MFC
+title: TN016： 搭配使用C++多重繼承與 MFC
 ms.date: 06/28/2018
 f1_keywords:
 - vc.inheritance
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - multiple inheritance, MFC support for
 ms.assetid: 4ee27ae1-1410-43a5-b111-b6af9b84535d
 ms.openlocfilehash: 76dc2e856ca7db783ee542aa2dbb498fd4c1a769
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306125"
 ---
-# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016：搭配使用 C++多重繼承與 MFC
+# <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>TN016： 搭配使用C++多重繼承與 MFC
 
 此提示說明如何對於 Microsoft Foundation Classes 搭配使用多重繼承 (MI)。 使用 MI 不需要 MFC。 MI 未使用於任何 MFC 類別，並且不需要撰寫類別庫。
 
@@ -29,7 +29,7 @@ ms.locfileid: "50668867"
 
 目前的 `CRuntimeClass` 實作不支援 MI 執行階段類型資訊。 這並不表示您在 MFC 應用程式中無法使用 MI。 不過，您在使用具有一個以上的基底類別的物件時，您會有一些責任。
 
-[Cobject:: Iskindof](../mfc/reference/cobject-class.md#iskindof)方法不會正確判斷物件的型別有多個基底類別。 因此，您無法使用[CObject](../mfc/reference/cobject-class.md)做為虛擬基底類別和所有呼叫`CObject`成員函式，如[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)必須有範圍限定詞，因此 c + + 可以釐清適當的函式呼叫。 當程式在 MFC 中使用 MI 時，包含 `CObject` 基底類別的類別必須是在基底類別清單中最左邊的類別。
+[Cobject:: Iskindof](../mfc/reference/cobject-class.md#iskindof)方法不會正確判斷物件的型別有多個基底類別。 因此，您無法使用[CObject](../mfc/reference/cobject-class.md)做為虛擬基底類別和所有呼叫`CObject`成員函式，如[cobject:: Serialize](../mfc/reference/cobject-class.md#serialize)和[CObject::operator 新](../mfc/reference/cobject-class.md#operator_new)有範圍限定詞，必須使C++可以釐清適當的函式呼叫。 當程式在 MFC 中使用 MI 時，包含 `CObject` 基底類別的類別必須是在基底類別清單中最左邊的類別。
 
 替代方案是使用 `dynamic_cast` 運算子。 使用 MI 將物件轉換為其基底類別之一，會強制編譯器使用所提供的基底類別中的函式。 如需詳細資訊，請參閱 < [dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)。
 

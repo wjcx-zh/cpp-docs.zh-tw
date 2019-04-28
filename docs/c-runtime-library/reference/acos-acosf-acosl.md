@@ -32,11 +32,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335668"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -69,12 +69,12 @@ long double acos( long double x );   // C++ only
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN、IND|無|_DOMAIN|
+|± QNAN,IND|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**acos**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **acos**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**acos**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **acos**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

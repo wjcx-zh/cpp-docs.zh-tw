@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329881"
 ---
 # <a name="sql"></a>SQL
 
@@ -77,11 +77,11 @@ SQL database 會使用類似 C 中所使用的資料型別和C++。 如需這些
 
 下列主題提供有關資料庫類別如何使用 SQL 的詳細資訊：
 
-- [SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL:SQL 和C++資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL：SQL 和 C++ 資料類型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL:製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL：製作直接的 SQL 呼叫 (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218608"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>選擇集合類別的建議
 
@@ -95,5 +95,5 @@ ms.locfileid: "57288034"
 
 [集合](../mfc/collections.md)<br/>
 [樣板架構類別](../mfc/template-based-classes.md)<br/>
-[如何：建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[如何：建立型別安全集合](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [存取集合的所有成員](../mfc/accessing-all-members-of-a-collection.md)

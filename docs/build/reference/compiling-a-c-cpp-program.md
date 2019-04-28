@@ -1,5 +1,5 @@
 ---
-title: MSVC C/c + + 編譯器參考-Visual Studio
+title: MSVC C /C++編譯器參考-Visual Studio
 description: MSVC 編譯器工具組選項。
 ms.date: 12/10/2018
 helpviewer_keywords:
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: f3eef5ab-d0be-4fb2-90f9-927e6ed58736
 ms.openlocfilehash: 2269ba69cea2702ff190c791eb6753acb3619f7d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294144"
 ---
-# <a name="compiling-a-cc-project"></a>編譯 C/c + + 專案
+# <a name="compiling-a-cc-project"></a>編譯 C + + /C++專案
 
-在 Visual Studio IDE 或命令列上，可以設定 C 和 c + + 編譯器選項。 
+C 和C++可以在 Visual Studio IDE 中或在命令列上，設定編譯器選項。 
 
 ## <a name="in-visual-studio"></a>在 Visual Studio 中
 
-您可以在其 Visual Studio 中設定每個專案的編譯器選項**屬性頁** 對話方塊。 在左窗格中，選取**組態屬性**， **C/c + +** ，然後選擇 編譯器選項分類。 每個編譯器選項的主題都會描述設定方式，以及各選項位於開發環境中的位置。 請參閱[MSVC 編譯器選項](compiler-options.md)如需完整清單。
+您可以在其 Visual Studio 中設定每個專案的編譯器選項**屬性頁** 對話方塊。 在左窗格中，選取**組態屬性**， **C /C++**  ，然後選擇 編譯器選項分類。 每個編譯器選項的主題都會描述設定方式，以及各選項位於開發環境中的位置。 請參閱[MSVC 編譯器選項](compiler-options.md)如需完整清單。
 
 ## <a name="from-the-command-line"></a>從命令列
 
@@ -43,7 +43,7 @@ ms.locfileid: "57810298"
 
 - [CL 叫用連結器](cl-invokes-the-linker.md)
 
-如需選擇編譯器主機和目標架構的資訊，請參閱[64 位元、 x64 目標設定的 c + + 專案](../configuring-programs-for-64-bit-visual-cpp.md)。
+如需選擇編譯器主機和目標架構的資訊，請參閱[設定C++適用於 64 位元，x64 專案目標](../configuring-programs-for-64-bit-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: C + + 專案屬性頁參考 Visual Studio
+title: C++專案屬性頁參考 Visual Studio
 ms.date: 12/12/2018
 f1_keywords:
 - VC.Project.NotAProp.Edit
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
 ms.openlocfilehash: 8a5d696c385c9c7a1c953bd28ea4da3c67369a2c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319339"
 ---
-# <a name="c-project-property-page-reference"></a>C + + 專案屬性頁參考
+# <a name="c-project-property-page-reference"></a>C++專案屬性頁參考
 
-藉由使用屬性頁，您可以指定 Visual Studio 專案的設定。 若要開啟 Visual Studio 專案的 [屬性頁] 對話方塊，請在 [專案] 功能表上，選擇 [屬性]。 如需有關專案屬性的詳細資訊，請參閱[在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+藉由使用屬性頁，您可以指定 Visual Studio 專案的設定。 若要開啟 Visual Studio 專案的 [屬性頁] 對話方塊，請在 [專案] 功能表上，選擇 [屬性]。 如需有關專案屬性的詳細資訊，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
 
-在非 Windows 專案中的屬性頁面，請參閱[Linux c + + 屬性頁參考](../../linux/prop-pages-linux.md)。
+在非 Windows 專案中的屬性頁面，請參閱[LinuxC++屬性頁參考](../../linux/prop-pages-linux.md)。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -83,5 +83,5 @@ ms.locfileid: "57826010"
 
 ## <a name="see-also"></a>另請參閱
 
-[如何：建立和移除專案相依性](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[如何：建立及移除專案相依性](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
 [如何：建立及編輯組態](/visualstudio/ide/how-to-create-and-edit-configurations)

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - _lfind function
 ms.assetid: a40ece70-1674-4b75-94bd-9f57cfff18f2
 ms.openlocfilehash: 1508d54d6b2f2566e4aee3afef02af45b28e4f48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286488"
 ---
 # <a name="lfind"></a>_lfind
 
@@ -58,7 +58,7 @@ void *_lfind(
 *base*<br/>
 搜尋資料基底的指標。
 
-*數字*<br/>
+*number*<br/>
 陣列元素數目。
 
 *width*<br/>

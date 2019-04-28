@@ -29,11 +29,11 @@ helpviewer_keywords:
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
 ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341362"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert 巨集、_assert、_wassert
 
@@ -59,7 +59,7 @@ void _wassert(
 
 ### <a name="parameters"></a>參數
 
-*運算式*<br/>
+*expression*<br/>
 （包括指標運算式） 的評估為非零的純量運算式 (**真**) 或 0 (**false**)。
 
 *message*<br/>
@@ -68,7 +68,7 @@ void _wassert(
 *filename*<br/>
 判斷提示失敗之原始程式檔的名稱。
 
-*線條*<br/>
+*line*<br/>
 判斷提示失敗之原始程式檔中的行號。
 
 ## <a name="remarks"></a>備註
@@ -81,7 +81,7 @@ void _wassert(
 
 診斷訊息的目的地取決於呼叫常式的應用程式類型。 主控台應用程式一律會收到訊息**stderr**。 在以 Windows 為基礎的應用程式，**判斷提示**呼叫 Windows [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)函式來建立訊息方塊，以顯示訊息，連同**確定** 按鈕。 當使用者按一下 [確定] 時，程式會立即中止。
 
-當執行階段程式庫的偵錯版本連結應用程式時**判斷提示**會建立訊息方塊含有三個按鈕：**中止**，**重試一次**，和**忽略**。 如果使用者按一下 [中止] ，程式會立即中止。 如果使用者按一下 [重試] ，會呼叫偵錯工具，而使用者可以偵錯程式是否已啟用 Just-In-Time (JIT) 偵錯。 如果使用者按一下**略過**， **assert**會繼續正常執行： 建立的訊息方塊具有**確定** 按鈕。 請注意，如果在發生錯誤情況時按一下 [忽略]  ，可能會導致未定義的行為。
+當執行階段程式庫的偵錯版本連結應用程式時**判斷提示**建立訊息方塊含有三個按鈕：**中止**，**重試**，以及**忽略**。 如果使用者按一下 [中止] ，程式會立即中止。 如果使用者按一下 [重試] ，會呼叫偵錯工具，而使用者可以偵錯程式是否已啟用 Just-In-Time (JIT) 偵錯。 如果使用者按一下**略過**， **assert**會繼續正常執行： 建立的訊息方塊具有**確定** 按鈕。 請注意，如果在發生錯誤情況時按一下 [忽略]  ，可能會導致未定義的行為。
 
 如需 CRT 偵錯的詳細資訊，請參閱 [CRT 偵錯技術](/visualstudio/debugger/crt-debugging-techniques)。
 

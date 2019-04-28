@@ -15,11 +15,11 @@ helpviewer_keywords:
 - -Zm compiler option [C++]
 ms.assetid: 94c77d5e-6672-46a7-92e0-3f69e277727d
 ms.openlocfilehash: 09df8e1ee9a97289e29e1191e8c1585580435b79
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315270"
 ---
 # <a name="zm-specify-precompiled-header-memory-allocation-limit"></a>/Zm (指定先行編譯標頭檔的記憶體配置上限)
 
@@ -40,7 +40,7 @@ ms.locfileid: "57807893"
 
 ## <a name="remarks"></a>備註
 
-在 Visual Studio 2015 之前的版本中，c + + 編譯器會使用數個離散堆積，然後每個有有限度的限制。 目前，編譯器能夠動態成長至總堆積大小的限制，必要時，堆積，並允許先行編譯標頭組成多個位址範圍。 因此， **/Zm**編譯器選項會很少會需要。
+在 Visual Studio 2015 之前, 的版本C++編譯器會使用數個離散堆積，而且每個有有限度的限制。 目前，編譯器能夠動態成長至總堆積大小的限制，必要時，堆積，並允許先行編譯標頭組成多個位址範圍。 因此， **/Zm**編譯器選項會很少會需要。
 
 如果編譯器堆積空間不足，並發出[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)當您使用錯誤訊息 **/Zm**編譯器選項時，您可能保留過多記憶體。 請考慮移除 **/Zm**選項。
 
@@ -60,9 +60,9 @@ ms.locfileid: "57807893"
 
 ### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定 /Zm 編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 在 [導覽] 窗格中，選取**組態屬性** > **C/c + +** > **命令列**。
+1. 在 [導覽] 窗格中，選取**組態屬性** > **C /C++** > **命令列**。
 
 1. 請輸入 **/Zm**中的編譯器選項**其他選項** 方塊中。
 
@@ -73,4 +73,4 @@ ms.locfileid: "57807893"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Control Wizard
 ms.assetid: f10b1927-9fc6-40a7-ac29-efdac70584fe
 ms.openlocfilehash: 89cadf3c966eebb1b96cbd378bb422cbcff48727
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62250310"
 ---
 # <a name="inserting-a-composite-control"></a>插入複合控制項
 

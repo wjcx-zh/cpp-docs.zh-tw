@@ -12,16 +12,15 @@ helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
 ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337321"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
 
-
-  `SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。
+`SchedulerPolicy` 類別包含一組索引鍵/值組，每個原則項目一個，可控制排程器執行個體的行為。
 
 ## <a name="syntax"></a>語法
 

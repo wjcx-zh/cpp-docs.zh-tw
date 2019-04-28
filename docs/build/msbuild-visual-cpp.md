@@ -1,5 +1,5 @@
 ---
-title: MSBuild 命令列-c + +
+title: MSBuild 命令列-C++
 ms.date: 12/12/2018
 f1_keywords:
 - MSBuild
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
 ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273309"
 ---
-# <a name="msbuild-on-the-command-line---c"></a>MSBuild 命令列-c + +
+# <a name="msbuild-on-the-command-line---c"></a>MSBuild 命令列-C++
 
 一般情況下，我們建議您使用 Visual Studio，來設定專案屬性，並叫用 MSBuild 系統。 不過，您可以使用**MSBuild**直接從命令提示字元工具。 建置程序是由在專案檔 (.vcxproj)，您可以建立和編輯資訊控制。 專案檔指定為基礎的建置選項建置階段、 條件和事件。 此外，您可以指定零或多個命令列*選項*引數。
 
@@ -47,13 +47,13 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 
 - [命令列參考](/visualstudio/msbuild/msbuild-command-line-reference)說明的命令列引數和選項可供您使用 msbuild.exe。
 
-- [工作參考](/visualstudio/msbuild/msbuild-task-reference)描述 MSBuild 工作。 特別注意這些工作，也就是特定 Visual c + +:[BscMake 工作](/visualstudio/msbuild/bscmake-task)， [CL 工作](/visualstudio/msbuild/cl-task)， [CPPClean 工作](/visualstudio/msbuild/cppclean-task)， [LIB 工作](/visualstudio/msbuild/lib-task)，[連結工作](/visualstudio/msbuild/link-task)， [MIDL 工作](/visualstudio/msbuild/midl-task)， [MT 工作](/visualstudio/msbuild/mt-task)， [RC 工作](/visualstudio/msbuild/rc-task)， [SetEnv 工作](/visualstudio/msbuild/setenv-task)， [VCMessage 工作](/visualstudio/msbuild/vcmessage-task)
+- [工作參考](/visualstudio/msbuild/msbuild-task-reference)描述 MSBuild 工作。 特別注意這些工作，也就是特定視覺效果C++:[BscMake 工作](/visualstudio/msbuild/bscmake-task)， [CL 工作](/visualstudio/msbuild/cl-task)， [CPPClean 工作](/visualstudio/msbuild/cppclean-task)， [LIB 工作](/visualstudio/msbuild/lib-task)，[連結工作](/visualstudio/msbuild/link-task)， [MIDL 工作](/visualstudio/msbuild/midl-task)， [MT 工作](/visualstudio/msbuild/mt-task)， [RC 工作](/visualstudio/msbuild/rc-task)， [SetEnv 工作](/visualstudio/msbuild/setenv-task)， [VCMessage 工作](/visualstudio/msbuild/vcmessage-task)
 
 ## <a name="in-this-section"></a>本節內容
 
 |詞彙|定義|
 |----------|----------------|
-|[逐步解說：使用 MSBuild 建立 Visual C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立 Visual c + + 專案，使用**MSBuild**。|
+|[逐步解說：使用 MSBuild 建立 Visual C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立視覺效果C++使用的專案**MSBuild**。|
 |[如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)|示範如何指定在組建中 particuler 階段，就會發生的動作： 在建置開始之前;連結步驟開始; 之前或在建置結束後。|
 |[如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)|示範如何將使用者定義的階段新增至組建順序。|
 |[如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)|示範如何建置工具相關聯的特定檔案。|
@@ -62,4 +62,4 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 
 ## <a name="see-also"></a>另請參閱
 
-[使用 MSVC 工具組，從命令列](building-on-the-command-line.md)
+[從命令列使用 MSVC 工具組](building-on-the-command-line.md)

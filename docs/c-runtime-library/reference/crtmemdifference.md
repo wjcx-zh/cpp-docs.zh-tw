@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
 ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339464"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -78,7 +78,7 @@ int _CrtMemDifference(
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：** 僅限偵錯版本的 [CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+**程式庫：** 偵錯版本[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)只。
 
 ## <a name="see-also"></a>另請參閱
 

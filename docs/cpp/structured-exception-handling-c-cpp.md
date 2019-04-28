@@ -10,33 +10,33 @@ helpviewer_keywords:
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
 ms.openlocfilehash: b77a218340399578e3c9428100476787e2e60b25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330566"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
-結構化例外狀況處理 (SEH) 是依正常程序處理特定例外狀況程式碼的情況下，例如硬體故障，C 的 Microsoft 擴充功能。 雖然 Windows 和 Visual c + + 支援 SEH，我們建議您使用 ISO 標準 c + + 例外狀況處理，因為它可讓您的程式碼，更可攜性和彈性。 不過，若要維護現有的程式碼或針對特定類型的程式，您仍然必須使用 SEH。
+結構化例外狀況處理 (SEH) 是依正常程序處理特定例外狀況程式碼的情況下，例如硬體故障，C 的 Microsoft 擴充功能。 雖然 Windows 和 VisualC++支援 SEH，我們建議您使用 ISO 標準C++例外狀況處理，因為它可讓您的程式碼，更可攜性和彈性。 不過，若要維護現有的程式碼或針對特定類型的程式，您仍然必須使用 SEH。
 
 **Microsoft 專有的：**
 
 ## <a name="grammar"></a>文法
 
-*try 陳述式除了*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *複合陳述式* **__except** **(** *運算式* **)** *複合陳述式*
+*try-except-statement* :<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__except** **(** *expression* **)** *compound-statement*
 
 *try finally-陳述式*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try** *複合陳述式* **__finally** *複合陳述式*
+&nbsp;&nbsp;&nbsp;&nbsp;**__try** *compound-statement* **__finally** *compound-statement*
 
 ## <a name="remarks"></a>備註
 
 使用 SEH，您可以確保，例如記憶體區塊和檔案的資源會釋出正確執行意外終止。 您也可以處理特定問題 — 比方說，沒有足夠的記憶體 — 使用簡潔的結構化程式碼，不會依賴**goto**陳述式，或傳回碼的複雜測試。
 
-本文中參照的 try-except 和 try-finally 陳述式是 C 語言的 Microsoft 擴充功能。 它們支援 SEH，讓應用程式在終止執行的事件之後取得程式的控制權。 雖然 SEH 與 C++ 原始程式檔搭配運作，但它不是專為 C++ 所設計。 如果您使用編譯的 c + + 程式中使用 SEH [/EHa 或 /EHsc](../build/reference/eh-exception-handling-model.md)選項，則解構函式的呼叫本機物件，但其他執行行為可能不是您的預期。 如需圖例，請參閱本文稍後的範例。 在大部分情況下，而不是 SEH 我們建議您使用 ISO 標準[c + + 例外狀況處理](../cpp/try-throw-and-catch-statements-cpp.md)，Visual c + + 也支援。 使用 C++ 例外狀況處理，確保您的程式碼更具可攜性，而且您可以處理任何類型的例外狀況。
+本文中參照的 try-except 和 try-finally 陳述式是 C 語言的 Microsoft 擴充功能。 它們支援 SEH，讓應用程式在終止執行的事件之後取得程式的控制權。 雖然 SEH 與 C++ 原始程式檔搭配運作，但它不是專為 C++ 所設計。 如果您使用在 SEHC++您使用編譯的計劃[/EHa 或 /EHsc](../build/reference/eh-exception-handling-model.md)選項，則解構函式的呼叫本機物件，但其他執行行為可能不是您的預期。 如需圖例，請參閱本文稍後的範例。 在大部分情況下，而不是 SEH 我們建議您使用 ISO 標準[C++例外狀況處理](../cpp/try-throw-and-catch-statements-cpp.md)，哪些視覺效果C++也支援。 使用 C++ 例外狀況處理，確保您的程式碼更具可攜性，而且您可以處理任何類型的例外狀況。
 
-如果您有使用 SEH 的 C 程式碼時，您可以使用 c + + 例外狀況處理的 c + + 程式碼來進行混合。 如需資訊，請參閱[處理 c + + 中的結構化例外狀況](../cpp/exception-handling-differences.md)。
+如果您有使用 SEH 的 C 程式碼時，您可以混合使用C++使用的程式碼C++例外狀況處理。 如需資訊，請參閱[處理中的結構化例外狀況C++ ](../cpp/exception-handling-differences.md)。
 
 有兩種 SEH 機制：
 
@@ -66,7 +66,7 @@ ms.locfileid: "50534559"
 
 ## <a name="example"></a>範例
 
-如前所述，解構函式會呼叫區域物件，如果您在 c + + 程式中使用 SEH，並使用編譯針對 **/EHa**或是 **/EHsc**選項。 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 此範例示範這些行為的差異。
+如前所述，解構函式會呼叫區域物件，如果您使用中的 SEH 的C++程式，並使用編譯 **/EHa**或是 **/EHsc**選項。 不過，如果您同時使用 C++ 例外狀況，則在執行期間的行為可能會不如預期。 此範例示範這些行為的差異。
 
 ```cpp
 #include <stdio.h>
@@ -122,7 +122,7 @@ Triggering SEH exception
 Executing SEH __except block
 ```
 
-如果您使用 **/EHsc**編譯程式碼並`CPPEX`使用定義`/DCPPEX`（以便讓 c + + 例外狀況會擲回），則`TestClass`解構函式執行，並輸出看起來像這樣：
+如果您使用 **/EHsc**編譯程式碼和`CPPEX`使用定義`/DCPPEX`(以便C++會擲回例外狀況)，則`TestClass`解構函式執行，並輸出看起來像這樣：
 
 ```Output
 Throwing C++ exception

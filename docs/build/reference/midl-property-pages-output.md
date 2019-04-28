@@ -1,5 +1,5 @@
 ---
-title: MIDL 屬性頁：輸出
+title: MIDL 屬性頁：Output
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.ProxyFileName
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: b850b21b-ed38-46dd-a712-807e8eabd9aa
 ms.openlocfilehash: 44397eb0c5d14e63a5d971d86356225d63faa431
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321172"
 ---
-# <a name="midl-property-pages-output"></a>MIDL 屬性頁：輸出
+# <a name="midl-property-pages-output"></a>MIDL 屬性頁：Output
 
 **MIDL** 資料夾中的 [輸出] 屬性頁指定下列 MIDL 編譯器選項：
 
@@ -37,7 +37,7 @@ ms.locfileid: "57824691"
 
 - 型別程式庫 ([/tlb](https://msdn.microsoft.com/library/windows/desktop/aa367372))
 
-如需如何存取**輸出**中的屬性頁**MIDL**資料夾，請參閱[Visual Studio 中的設定 c + + 編譯器及建置屬性](../working-with-project-properties.md)。
+如需有關如何存取資訊**輸出**中的屬性頁**MIDL**資料夾，請參閱[設定C++Visual Studio 中的編譯器及建置屬性](../working-with-project-properties.md)。
 
 如需如何以程式設計方式存取 C++ 專案的 MIDL 選項的資訊，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>。
 

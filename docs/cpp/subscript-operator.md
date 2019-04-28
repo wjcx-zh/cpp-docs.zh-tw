@@ -10,11 +10,11 @@ helpviewer_keywords:
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
 ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266890"
 ---
 # <a name="subscript-operator-"></a>註標運算子]
 
@@ -42,7 +42,7 @@ cout << 2[nArray] << endl;            // prints "2"
 
 `*((e2) + (e1))`
 
-運算式所產生的位址不是*e2*位元組從位址*e1*。 相反地，位址會產生陣列中的下一個物件進行縮放*e2*。 例如: 
+運算式所產生的位址不是*e2*位元組從位址*e1*。 相反地，位址會產生陣列中的下一個物件進行縮放*e2*。 例如：
 
 ```cpp
 double aDbl[2];

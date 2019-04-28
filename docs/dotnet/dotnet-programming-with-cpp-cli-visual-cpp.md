@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Visual C++, .NET programming
 ms.assetid: 2c7f3b0f-a266-4f0e-b318-d6f1371e04a9
 ms.openlocfilehash: 21a45dbff2b02ccce5444706c158e5bdcc6e6cc2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62303792"
 ---
 # <a name="net-programming-with-ccli-visual-c"></a>以 C++/CLI 進行 .NET 程式設計 (Visual C++)
 
-**Visual Studio 2015**:根據預設，使用 Visual Studio 2015 所建立的 CLR 專案會以 .NET Framework 4.5.2 為目標。 若要在建立新專案時以 .NET Framework 4.6 為目標，請在 [新增專案]  對話方塊中，變更對話方塊頂端中間之下拉式清單中的目標 Framework。 若要變更現有專案的目標 Framework，請關閉專案，編輯專案檔 (.vcxproj)，然後將目標 Framework 版本的值變更為 4.6。 下一次開啟專案時，這些設定將會生效。
+**Visual Studio 2015**：根據預設，使用 Visual Studio 2015 所建立的 CLR 專案會以 .NET Framework 4.5.2 為目標。 若要在建立新專案時以 .NET Framework 4.6 為目標，請在 [新增專案]  對話方塊中，變更對話方塊頂端中間之下拉式清單中的目標 Framework。 若要變更現有專案的目標 Framework，請關閉專案，編輯專案檔 (.vcxproj)，然後將目標 Framework 版本的值變更為 4.6。 下一次開啟專案時，這些設定將會生效。
 
-**Visual Studio 2017**:在 Visual Studio 2017 中，預設的架構是 4.6.1 和 Framework 版本選擇器會在底部**新增專案 對話方塊**。 C + + /cli 預設不安裝 CLI。 若要安裝的元件，請在開啟 Visual Studio 安裝程式，然後選擇 C + + 在 Visual c + + 的 CLI 元件。
+**Visual Studio 2017**：在 Visual Studio 2017 中，預設的架構是 4.6.1 和 Framework 版本選擇器會在底部**新增專案 對話方塊**。 C++/ 依預設未安裝 CLI 本身。 若要安裝的元件，請在開啟 Visual Studio 安裝程式，然後選擇  C++/CLI 元件在視覺效果C++。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -32,7 +32,7 @@ ms.locfileid: "57749811"
 
 [規則運算式 (C++/CLI)](../dotnet/regular-expressions-cpp-cli.md)
 
-[檔案處理和 I/O (C + + /cli CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
+[檔案處理和 I/O (C++/CLI)](../dotnet/file-handling-and-i-o-cpp-cli.md)
 
 [圖形作業 (C++/CLI)](../dotnet/graphics-operations-cpp-cli.md)
 

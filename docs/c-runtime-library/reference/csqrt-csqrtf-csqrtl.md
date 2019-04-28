@@ -31,11 +31,11 @@ helpviewer_keywords:
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
 ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288832"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -72,18 +72,18 @@ _Lcomplex csqrtl(
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|常见 QNAN IND|無|_DOMAIN|
-|- ∞|無|_DOMAIN|
+|常见 QNAN IND|none|_DOMAIN|
+|- ∞|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**csqrt**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **csqrt**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，您可以呼叫多載**csqrt**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **csqrt**一律採用並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**csqrt**， **csqrtf**， **csqrtl**|\<complex.h>|\<ccomplex>|
+|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253709"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 
@@ -239,7 +239,7 @@ CDaoWorkspace();
 
 ### <a name="remarks"></a>備註
 
-之後建構 c + + 物件，您會有兩個選項：
+之後建構C++物件，您有兩個選項：
 
 - 呼叫物件的[開啟](#open)開啟預設工作區，或開啟現有的物件，在工作區集合中的成員函式。
 
@@ -310,7 +310,7 @@ static void PASCAL CompactDatabase(
 ### <a name="parameters"></a>參數
 
 *lpszSrcName*<br/>
-將現有的名稱會關閉資料庫。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 如果檔案名稱的副檔名，您必須指定它。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為路徑字串中需要兩個反斜線"\\」 是 c + + 逸出字元。)
+將現有的名稱會關閉資料庫。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 如果檔案名稱的副檔名，您必須指定它。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為路徑字串中需要兩個反斜線"\\」 是C++逸出字元。)
 
 *lpszDestName*<br/>
 您要建立已壓縮的資料庫的完整路徑。 您也可以指定網路路徑做為與*lpszSrcName*。 您無法使用*lpszDestName*引數來指定相同的資料庫檔案*lpszSrcName*。
@@ -718,7 +718,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 `Open` 工作區會將物件放到開啟狀態，也初始化 database engine，如果它不已經初始化應用程式。
 
-雖然許多`CDaoWorkspace`後的 c + + 物件，但呼叫前建構成員函式只能呼叫，開啟工作區之後，下列成員函式，資料庫引擎上操作，就可以`Open`:
+雖然許多`CDaoWorkspace`開啟工作區之後，可以只呼叫函式的成員，下列成員函式，資料庫引擎上操作，可在建構之後C++物件之前呼叫`Open`:
 
 ||||
 |-|-|-|
@@ -737,7 +737,7 @@ static void PASCAL RepairDatabase(LPCTSTR lpszName);
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
-路徑和檔案名稱指定為現有的 Microsoft Jet 引擎資料庫檔案。 如果您省略路徑，則會搜尋目前的目錄。 如果您的系統支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為，將所需的路徑字串中的兩個反斜線"\\」 是 c + + 逸出字元。)
+路徑和檔案名稱指定為現有的 Microsoft Jet 引擎資料庫檔案。 如果您省略路徑，則會搜尋目前的目錄。 如果您的系統支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如:"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (因為，將所需的路徑字串中的兩個反斜線"\\」 是C++逸出字元。)
 
 ### <a name="remarks"></a>備註
 

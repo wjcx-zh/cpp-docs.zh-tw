@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Internet applications [MFC], FTP client applications
 ms.assetid: 70bed7b5-6040-40d1-bc77-702e63a698f2
 ms.openlocfilehash: d08edf704e748767f3b566252ad328baf40b55ea
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307012"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>一般 FTP 用戶端應用程式中的步驟
 

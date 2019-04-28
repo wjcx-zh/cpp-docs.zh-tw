@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285768"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -112,11 +112,11 @@ long long int llrintl(
 
 ## <a name="remarks"></a>備註
 
-C + + 允許多載，因為您可以呼叫多載**lrint**並**llrint**採用**float**並**長** **double**型別。 在 C 程式中， **lrint**並**llrint**蝯篔**double**。
+因為C++允許多載，您可以呼叫多載**lrint**並**llrint**採用**float**和**長** **雙**型別。 在 C 程式中， **lrint**並**llrint**蝯篔**double**。
 
 如果*x*不代表整數值，這些函式會引發的浮點對應項**FE_INEXACT**。
 
-**Microsoft 特定的**︰當結果超出傳回型別的範圍，或是參數為 NAN 或無限大時，傳回值是已定義的實作。 Microsoft 編譯器會傳回零 (0) 值。
+**Microsoft 專有**:當結果超出傳回型別，範圍或參數為 NaN 或無限大，則傳回的值會是實作所定義。 Microsoft 編譯器會傳回零 (0) 值。
 
 ## <a name="requirements"></a>需求
 

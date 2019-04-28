@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2001
 ms.assetid: 963bdc7d-6ebe-4378-8bbc-47dfcf5d330c
 ms.openlocfilehash: 4d298cdd9d96c55f283ce7f0e2ba04dd664941f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62226501"
 ---
 # <a name="resource-compiler-error-rw2001"></a>資源編譯器錯誤 RW2001
 
@@ -19,7 +19,7 @@ ms.locfileid: "50584609"
 
 RC 檔包含 **#pragma**指示詞。
 
-使用 **#ifndef**使用的前置處理器指示詞**RC_INVOKED**常數資源編譯器定義當它處理的 include 檔案。 地方 **#pragma**指示詞的不是程式碼區塊中處理的時機**RC_INVOKED**常數定義。 只能由 C/c + + 編譯器，而不是由資源編譯器處理區塊中的程式碼。 下列程式碼範例會示範這項技術：
+使用 **#ifndef**使用的前置處理器指示詞**RC_INVOKED**常數資源編譯器定義當它處理的 include 檔案。 地方 **#pragma**指示詞的不是程式碼區塊中處理的時機**RC_INVOKED**常數定義。 程式碼區塊中的處理只能由 C /C++編譯器而不是由資源編譯器。 下列程式碼範例會示範這項技術：
 
 ```
 #ifndef RC_INVOKED

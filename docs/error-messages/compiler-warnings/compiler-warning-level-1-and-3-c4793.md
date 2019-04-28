@@ -16,11 +16,11 @@ helpviewer_keywords:
 - C4793
 ms.assetid: 819ada53-1d9c-49b8-a629-baf8c12314e6
 ms.openlocfilehash: e7ca3b10e09b0d6818fbc7f5607ebc9c95c7f15c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62280538"
 ---
 # <a name="compiler-warning-level-1-and-3-c4793"></a>編譯器警告 (層級 1 和 3) C4793
 
@@ -38,7 +38,7 @@ ms.locfileid: "50623245"
 |--------------------|-------------|
 |在 managed 程式碼中不支援對齊的資料類型|CLR 必須要能夠配置資料，如有需要這可能不可行，如果這類的資料對齊與宣告[__m128](../../cpp/m128.md)或是[對齊](../../cpp/align-cpp.md)。|
 |Managed 程式碼中不支援使用 '含有 __ImageBase' 函式|`__ImageBase` 是一種特殊的連結器符號通常用來載入 DLL 只能由低層級的原生程式碼。|
-|不支援 varargs ' / clr' 編譯器選項|原生函式不能呼叫 managed 函式具有[變數引數清單](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因為函式具有不同的堆疊配置需求。 不過，如果您指定 **/clr: pure**編譯器選項，因為組件可以包含 managed 函式僅支援清單的變數引數。 如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C + + /cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。|
+|不支援 varargs ' / clr' 編譯器選項|原生函式不能呼叫 managed 函式具有[變數引數清單](../../cpp/functions-with-variable-argument-lists-cpp.md)(varargs) 因為函式具有不同的堆疊配置需求。 不過，如果您指定 **/clr: pure**編譯器選項，因為組件可以包含 managed 函式僅支援清單的變數引數。 如需詳細資訊，請參閱 <<c0> [ 純粹的和可驗證程式碼 (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)。</c0>|
 |在 64 位元 CLR 不支援 __ptr32 修飾詞宣告的資料|指標必須是目前的平台的原生指標相同的大小。 如需詳細資訊，請參閱 < [__ptr32， \__ptr64](../../cpp/ptr32-ptr64.md)。|
 |32 位元 CLR 不支援使用 __ptr64 修飾詞宣告的資料|指標必須是目前的平台的原生指標相同的大小。 如需詳細資訊，請參閱 < [__ptr32， \__ptr64](../../cpp/ptr32-ptr64.md)。|
 |一或多個內建函式不支援在 managed 程式碼|就會發出訊息時，不可以使用內建函式的名稱。 不過，內建，通常會導致此訊息表示低階的機器指令。|

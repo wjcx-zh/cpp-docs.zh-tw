@@ -3,11 +3,11 @@ title: /Qvec-report (自動向量化工具報告層級)
 ms.date: 11/04/2016
 ms.assetid: 4778c9a3-0692-4085-9b05-1bfeadf4c74a
 ms.openlocfilehash: 655be3581eee4b23a8d0f2bcfaea7d07c8b1b07c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319248"
 ---
 # <a name="qvec-report-auto-vectorizer-reporting-level"></a>/Qvec-report (自動向量化工具報告層級)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57815940"
 
 1. 在 [ **方案總管**] 中，開啟專案的捷徑功能表，然後選擇 [ **屬性**]。
 
-1. 在 **屬性頁**對話方塊的  **C/c + +**，選取**命令列**。
+1. 在 **屬性頁**對話方塊的  **C /C++**，選取**命令列**。
 
 1. 在 **其他選項**方塊中，輸入`/Qvec-report:1`或`/Qvec-report:2`。
 
@@ -45,5 +45,5 @@ ms.locfileid: "57815940"
 
 [/Q 選項 (低階運算)](q-options-low-level-operations.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [以原生程式碼進行平行程式設計](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

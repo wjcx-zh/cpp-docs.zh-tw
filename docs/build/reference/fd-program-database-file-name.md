@@ -15,11 +15,11 @@ helpviewer_keywords:
 - FD compiler option [C++]
 ms.assetid: 3977a9ed-f0ac-45df-bf06-01cedd2ba85a
 ms.openlocfilehash: c686de7dc9c9c20c404240db558d2ff66078ceb7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292727"
 ---
 # <a name="fd-program-database-file-name"></a>/Fd (程式資料庫檔名)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57808985"
 
 ## <a name="remarks"></a>備註
 
-不含 **/Fd**，PDB 檔案名稱會預設為 VC*x*0.pdb，其中*x*是使用 Visual c + + 的主要版本。
+不含 **/Fd**，PDB 檔案名稱會預設為 VC*x*0.pdb，其中*x*是視覺效果的主要版本C++使用中。
 
 如果您指定的路徑名稱不包含檔案名稱 （路徑以反斜線結尾），編譯器會建立.pdb 檔案，名為 VC*x*0.pdb，在指定的目錄。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57808985"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -67,5 +67,5 @@ CL /DDEBUG /Zi /FdPROG.PDB PROG.CPP
 
 [輸出檔 (/F) 選項](output-file-f-options.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [指定路徑名稱](specifying-the-pathname.md)

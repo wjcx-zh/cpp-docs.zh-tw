@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C3000 到 C3099
-ms.date: 11/17/2017
+title: 編譯器錯誤 C3000 至 C3099
+ms.date: 04/21/2019
 f1_keywords:
 - C3051
 - C3061
@@ -38,14 +38,14 @@ helpviewer_keywords:
 - C3093
 - C3098
 ms.assetid: 01b7b9cb-b351-4b5a-8cb0-1fcddb08d2ab
-ms.openlocfilehash: b7a01c35086fe503e39af2af60655c03301dc7c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 08c7b691d6390e6c1070fc71dff116604731ebab
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62281662"
 ---
-# <a name="compiler-errors-c3000-through-c3099"></a>編譯器錯誤 C3000 到 C3099
+# <a name="compiler-errors-c3000-through-c3099"></a>編譯器錯誤 C3000 至 C3099
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -58,7 +58,7 @@ ms.locfileid: "50475487"
 |編譯器錯誤 C3000|已過時。|
 |[編譯器錯誤 C3001](compiler-error-c3001.md)|'*訊息*': 需要 OpenMP 指示詞名稱|
 |[編譯器錯誤 C3002](compiler-error-c3002.md)|'*name1* *name2*': 多重 OpenMP 指示詞名稱|
-|[編譯器錯誤 C3003](compiler-error-c3003.md)|'*指示詞*': OpenMP 指示詞名稱不能在指示詞子句|
+|[編譯器錯誤 C3003](compiler-error-c3003.md)|'*指示詞*':OpenMP 指示詞名稱不能在指示詞子句|
 |[編譯器錯誤 C3004](compiler-error-c3004.md)|'*子句*': 子句在 OpenMP 無效'*指示詞*' 指示詞|
 |[編譯器錯誤 C3005](compiler-error-c3005.md)|'*訊息*': 非預期的語彙基元在 OpenMP'*指示詞*' 指示詞|
 |[編譯器錯誤 C3006](compiler-error-c3006.md)|'*子句*': 子句在 OpenMP'*指示詞*' 指示詞缺少必要的引數|
@@ -73,7 +73,7 @@ ms.locfileid: "50475487"
 |[編譯器錯誤 C3015](compiler-error-c3015.md)|OpenMP 'for' 陳述式中的初始設定格式不當|
 |[編譯器錯誤 C3016](compiler-error-c3016.md)|'*識別碼*': 在 OpenMP 'for' 陳述式的索引變數必須具有帶正負號整數類資料類型|
 |[編譯器錯誤 C3017](compiler-error-c3017.md)|OpenMP 'for' 陳述式中的終止測試格式不當|
-|[編譯器錯誤 C3018](compiler-error-c3018.md)|'*識別碼*': OpenMP 'for' 測試或增量必須使用索引變數'*變數*'|
+|[編譯器錯誤 C3018](compiler-error-c3018.md)|'*識別碼*':OpenMP 'for' 測試或增量必須使用索引變數 '*變數*'|
 |[編譯器錯誤 C3019](compiler-error-c3019.md)|在 OpenMP 'for' 陳述式的遞增值具有格式不當|
 |[編譯器錯誤 C3020](compiler-error-c3020.md)|'*變數*': OpenMP 'for' 迴圈的索引變數不能修改在迴圈主體中|
 |[編譯器錯誤 C3021](compiler-error-c3021.md)|'*引數*': 引數是空的 OpenMP'*指示詞*' 指示詞|
@@ -123,7 +123,7 @@ ms.locfileid: "50475487"
 |[編譯器錯誤 C3065](compiler-error-c3065.md)|在非類別範圍不允許屬性宣告|
 |[編譯器錯誤 C3066](compiler-error-c3066.md)|有多種方式，可以呼叫此型別的物件的這些引數|
 |編譯器錯誤 C3067|初始設定式清單不能搭配內建運算子]|
-|[編譯器錯誤 C3068](compiler-error-c3068.md)|'*識別碼*': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況|
+|[編譯器錯誤 C3068](compiler-error-c3068.md)|'*識別碼*': 'naked' 函式不能包含會需要物件回溯如果C++發生例外狀況|
 |[編譯器錯誤 C3069](compiler-error-c3069.md)|運算子 '*運算子*': 不可使用於列舉類型|
 |[編譯器錯誤 C3070](compiler-error-c3070.md)|'*識別碼*': 屬性沒有 'set' 方法|
 |[編譯器錯誤 C3071](compiler-error-c3071.md)|運算子 '*運算子*' 只能套用至 ref 類別或實值類型的執行個體|
@@ -155,3 +155,8 @@ ms.locfileid: "50475487"
 |[編譯器錯誤 C3097](compiler-error-c3097.md)|'*屬性*': 屬性的範圍必須與' 組件:' 或 ' 模組:'|
 |編譯器錯誤 C3098|'*識別碼*': 屬性有任何使用者定義的建構函式|
 |[編譯器錯誤 C3099](compiler-error-c3099.md)|'*關鍵字*': 使用 [system:: attributeusageattribute] / [Windows::Foundation::Metadata::AttributeUsageAttribute] 管理/WinRT 屬性|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

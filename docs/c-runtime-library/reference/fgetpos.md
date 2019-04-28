@@ -23,11 +23,11 @@ helpviewer_keywords:
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
 ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333926"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -44,7 +44,7 @@ int fgetpos(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 目標資料流。
 
 *pos*<br/>
@@ -52,7 +52,7 @@ int fgetpos(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **fgetpos**會傳回 0。 在失敗時，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H): **EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*串流*的值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或是*pos*會**NULL**指標，函式會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**會傳回 0。 在失敗時，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H):**EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*串流*值或值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或是*pos*會**NULL**指標，函式會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="remarks"></a>備註
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347960"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -66,13 +66,13 @@ long double asin( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± ∞|**無效**|**（_D)**|
-|常见**QNAN**， **IND**|無|**（_D)**|
-|&#124;x&#124;>1|**無效**|**（_D)**|
+|± ∞|**INVALID**|**_DOMAIN**|
+|常见**QNAN**， **IND**|none|**_DOMAIN**|
+|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**asin**與**float**並**長** **double**值。 在 C 程式中， **asin**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**asin**與**float**並**長** **double**值。 在 C 程式中， **asin**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

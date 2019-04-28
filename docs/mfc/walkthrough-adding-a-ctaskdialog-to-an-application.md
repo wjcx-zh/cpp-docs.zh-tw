@@ -1,18 +1,18 @@
 ---
-title: 逐步解說：將 CTaskDialog 加入至應用程式
+title: 逐步解說：新增 CTaskDialog 至應用程式
 ms.date: 09/19/2018
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
 ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358239"
 ---
-# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：將 CTaskDialog 加入至應用程式
+# <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：新增 CTaskDialog 至應用程式
 
 本逐步解說介紹 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) ，並示範如何將其加入應用程式。
 

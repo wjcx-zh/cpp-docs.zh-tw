@@ -6,11 +6,11 @@ helpviewer_keywords:
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
 ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308013"
 ---
 # <a name="servers-implementing-a-server"></a>伺服器：實作伺服器
 

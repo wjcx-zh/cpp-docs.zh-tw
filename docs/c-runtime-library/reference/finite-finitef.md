@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
 ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333712"
 ---
 # <a name="isfinite-finite-finitef"></a>isfinite _finite、 _finitef
 
@@ -71,11 +71,11 @@ int _finitef(
 
 ## <a name="return-value"></a>傳回值
 
-`isfinite`巨集和`_finite`並`_finitef`函式會傳回非零值，如果*x*是正常或 subnormal 有限值。 它們會傳回 0，如果引數為無限或 NaN。 C + + 內嵌樣板函式`isfinite`相同的行為，但會傳回 **，則為 true**或是**false**。
+`isfinite`巨集和`_finite`並`_finitef`函式會傳回非零值，如果*x*是正常或 subnormal 有限值。 它們會傳回 0，如果引數為無限或 NaN。 C++內嵌樣板函式`isfinite`相同的行為，但會傳回 **，則為 true**或是**false**。
 
 ## <a name="remarks"></a>備註
 
-`isfinite` 是當編譯為 C 和內嵌範本函式編譯為 c + + 時，巨集。 `_finite`和`_finitef`是 Microsoft 特有的函式。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
+`isfinite` 當編譯為 C 和內嵌範本函式做為編譯時是巨集C++。 `_finite`和`_finitef`是 Microsoft 特有的函式。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
 
 ## <a name="requirements"></a>需求
 

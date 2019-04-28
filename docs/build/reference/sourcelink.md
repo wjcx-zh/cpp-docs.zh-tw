@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
 ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317948"
 ---
 # <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK （包含來源連結 PDB 檔案）
 
@@ -28,11 +28,11 @@ ms.locfileid: "57816603"
 
 ## <a name="remarks"></a>備註
 
-來源連結是語言和原始檔控制無從驗證的系統，可提供來源偵錯二進位檔。 來源連結支援從 Visual Studio 2017 版本 15.8 的原生 c + + 二進位檔。 如需來源連結的概觀，請參閱 <<c0> [ 來源連結](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)。 如需如何在專案中使用來源連結，以及如何為您專案的一部分產生 SourceLink 檔案資訊，請參閱[使用來源連結](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)。
+來源連結是語言和原始檔控制無從驗證的系統，可提供來源偵錯二進位檔。 來源連結支援原生C++開始在 Visual Studio 2017 版本 15.8 的二進位檔。 如需來源連結的概觀，請參閱 <<c0> [ 來源連結](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md)。 如需如何在專案中使用來源連結，以及如何為您專案的一部分產生 SourceLink 檔案資訊，請參閱[使用來源連結](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects)。
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>若要在 Visual Studio 中設定 /SOURCELINK 連結器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 選取 **組態屬性** > **連結器** > **命令列**屬性頁。
 

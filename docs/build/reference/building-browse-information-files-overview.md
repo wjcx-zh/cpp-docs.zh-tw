@@ -8,17 +8,17 @@ helpviewer_keywords:
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
 ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272880"
 ---
 # <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：總覽
 
 若要建立的符號瀏覽資訊，編譯器會建立每個原始程式檔的.sbr 檔案，在您的專案，然後 BSCMAKE。EXE 會串連成一個.bsc 檔案的.sbr 檔案。
 
-讓 Visual c + + 會關閉這些函式，根據預設，產生.sbr 和.bsc 檔案需要時間。 如果您想要瀏覽目前的資訊，您必須開啟的瀏覽選項，並再次建置您的專案。
+時間，因此 Visual 產生.sbr 和.bsc 檔案會採用C++根據預設關閉這些函式。 如果您想要瀏覽目前的資訊，您必須開啟的瀏覽選項，並再次建置您的專案。
 
 使用[/FR](fr-fr-create-dot-sbr-file.md)或是[/Fr](fr-fr-create-dot-sbr-file.md)告訴編譯器建立.sbr 檔案。 若要建立.bsc 檔案，您可以呼叫[BSCMAKE](bscmake-command-line.md)從命令列。 從命令列使用 BSCMAKE，讓您更精確地控制瀏覽資訊檔的操作。 請參閱[BSCMAKE 參考](bscmake-reference.md)如需詳細資訊。
 

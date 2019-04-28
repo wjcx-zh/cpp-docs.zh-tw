@@ -1,5 +1,5 @@
 ---
-title: 'TN039: MFC OLE Automation 實作'
+title: TN039:MFC OLE Automation 實作
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.ole
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
 ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62305485"
 ---
-# <a name="tn039-mfcole-automation-implementation"></a>TN039：MFC/OLE Automation 實作
+# <a name="tn039-mfcole-automation-implementation"></a>TN039:MFC/OLE Automation 實作
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -97,11 +97,11 @@ Z 屬性指定**DISPID**零**HIWORD**因為它公開的屬性，CDisp3DPoint 類
 
 ## <a name="advanced-mfc-dispatch-map-features"></a>進階 MFC 分派對應功能
 
-有這一版的 Visual c + + 類別精靈不支援的其他功能的數字。 支援 ClassWizard `DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`以定義方法，成員變數的屬性，以及 get/set 成員函式屬性，分別。 這些功能通常只需要建立大部分的 automation 伺服器。
+有這一版的 Visual ClassWizard 不支援的其他功能的數字C++。 支援 ClassWizard `DISP_FUNCTION`， `DISP_PROPERTY`，和`DISP_PROPERTY_EX`以定義方法，成員變數的屬性，以及 get/set 成員函式屬性，分別。 這些功能通常只需要建立大部分的 automation 伺服器。
 
 支援的 ClassWizard 巨集不足夠時，就可以使用下列其他巨集： `DISP_PROPERTY_NOTIFY`，和`DISP_PROPERTY_PARAM`。
 
-## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY — 巨集描述
+## <a name="disppropertynotify--macro-description"></a>DISP_PROPERTY_NOTIFY — Macro Description
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -120,7 +120,7 @@ DISP_PROPERTY_NOTIFY(
 *pszName*<br/>
 屬性外部名稱。
 
-*成員名稱*<br/>
+*memberName*<br/>
 儲存屬性的成員變數的名稱。
 
 *pfnAfterSet*<br/>
@@ -133,7 +133,7 @@ DISP_PROPERTY_NOTIFY(
 
 這個巨集很像 DISP_PROPERTY，不同之處在於它可接受的其他引數。 其他引數*pfnAfterSet，* 應傳回任何值，並不接受任何參數，'void OnPropertyNotify()' 的成員函式。 它會稱為 「**之後**已修改成員變數。
 
-## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — 巨集描述
+## <a name="disppropertyparam--macro-description"></a>DISP_PROPERTY_PARAM — Macro Description
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -156,7 +156,7 @@ DISP_PROPERTY_PARAM(
 *memberGet*<br/>
 用來取得屬性的成員函式的名稱。
 
-*成員集合*<br/>
+*memberSet*<br/>
 用來設定屬性的成員函式的名稱。
 
 *vtPropType*<br/>
@@ -237,7 +237,7 @@ DISP_PROPERTY_PARAM_ID(
 *pfnSet*<br/>
 用來設定屬性的成員函式的名稱。
 
-*成員名稱*<br/>
+*memberName*<br/>
 若要將對應至屬性的成員變數的名稱
 
 *vtPropType*<br/>

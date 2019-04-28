@@ -7,11 +7,11 @@ helpviewer_keywords:
 - greedy join [Concurrency Runtime]
 ms.assetid: 79c456c0-1692-480c-bb67-98f2434c1252
 ms.openlocfilehash: de6a433ab733207d5c56b46e693837056a0cd8b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237073"
 ---
 # <a name="asynchronous-message-blocks"></a>非同步訊息區
 
@@ -112,12 +112,12 @@ ms.locfileid: "57274159"
 |`unbounded_buffer`|兩者|排序|未繫結|未繫結|
 |`overwrite_buffer`|兩者|排序|未繫結|未繫結|
 |`single_assignment`|兩者|排序|未繫結|未繫結|
-|`call`|目標|排序|未繫結|不適用|
+|`call`|Target|排序|未繫結|不適用|
 |`transformer`|兩者|排序|未繫結|1|
 |`choice`|兩者|排序|10|1|
 |`join`|兩者|排序|未繫結|1|
 |`multitype_join`|兩者|排序|10|1|
-|`timer`|原始程式檔|不適用|不適用|1|
+|`timer`|Source|不適用|不適用|1|
 
 下列各節描述更詳細的訊息區塊類型。
 

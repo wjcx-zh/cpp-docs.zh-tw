@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335304"
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 
@@ -94,7 +94,7 @@ int _wcreat(
 |-----------|----------------|
 |**_S_IWRITE**|允許寫入|
 |**_S_IREAD**|允許讀取。|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|允許讀取和寫入。|
+|**_S_IREAD** &#124; **_S_IWRITE**|允許讀取和寫入。|
 
 若沒有指定寫入權限，則檔案為唯讀。 所有檔案皆為可讀取；不可能授與僅限寫入權限。 模式 **_S_IWRITE**並 **_S_IREAD** | **_S_IWRITE**相同。 使用開啟的檔案 **_creat**永遠都相容性模式中開啟 (請參閱[_sopen](sopen-wsopen.md)) 與 **_SH_DENYNO**。
 

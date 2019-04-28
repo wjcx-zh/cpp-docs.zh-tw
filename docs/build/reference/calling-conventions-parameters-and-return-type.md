@@ -7,11 +7,11 @@ helpviewer_keywords:
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
 ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294703"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼叫慣例、參數和傳回類型
 
@@ -44,8 +44,7 @@ A`const`指標`ImgDelayDescr`，其中包含各種匯入相關的資料及一組
 
 - 指定 DLL 上的 `LoadLibrary` 失敗
 
-- 
-  `GetProcAddress` 失敗。
+- `GetProcAddress` 失敗。
 
 您必須負責處理這些例外狀況。
 

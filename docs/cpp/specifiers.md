@@ -7,11 +7,11 @@ helpviewer_keywords:
 - specifiers, in declarations
 ms.assetid: 8b14e844-9880-4571-8779-28c8efe44633
 ms.openlocfilehash: aef967b26321f289cb8c7bd0402d7fe8f12b77b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330969"
 ---
 # <a name="specifiers"></a>規範
 
@@ -19,17 +19,17 @@ ms.locfileid: "50611402"
 
 下列預留位置和語言關鍵字為宣告指定名稱：
 
-*儲存類別規範*
+*storage-class-specifier*
 
-*類型規範*
+*type-specifier*
 
-*函式規範*
+*function-specifier*
 
 [friend](friend-cpp.md)
 
-[typedef](aliases-and-typedefs-cpp.md) `(` *擴充-decl-modifier-修飾詞-seq* `)`
+[typedef](aliases-and-typedefs-cpp.md) `(` *extended-decl-modifier-seq* `)`
 
-[__declspec](declspec.md) `(` *擴充-decl-modifier-修飾詞-seq* `)`
+[__declspec](declspec.md) `(` *extended-decl-modifier-seq* `)`
 
 ## <a name="remarks"></a>備註
 
@@ -37,7 +37,7 @@ ms.locfileid: "50611402"
 
 下表列出四個宣告，並接著列出每個宣告*decl-modifier 規範*並*宣告子*元件分開。
 
-|宣告|*宣告規範*|`declarator`|
+|宣告|*decl-specifiers*|`declarator`|
 |-----------------|------------------------|------------------|
 |`char *lpszAppName;`|**char**|`*lpszAppName`|
 |`typedef char * LPSTR;`|**char**|`*LPSTR`|

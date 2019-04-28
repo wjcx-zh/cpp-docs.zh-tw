@@ -197,11 +197,11 @@ helpviewer_keywords:
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
 ms.openlocfilehash: eb5123c347fdb847cade54f15764f175ee0ab799
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309820"
 ---
 # <a name="styles-used-by-mfc"></a>MFC 使用的樣式
 
@@ -336,8 +336,7 @@ MFC 中提供下列下拉式方塊樣式。 如需有關在 Windows 中的下拉
 |LBS_DISABLENOSCROLL|清單方塊會顯示已停用的垂直捲軸當清單方塊中未包含足夠的項目捲動。 若沒有這個樣式，在清單方塊中未包含足夠的項目時，捲軸會隱藏。|
 |LBS_EXTENDEDSEL|使用者可以選取多個項目，使用 SHIFT 鍵和滑鼠或特殊按鍵組合。|
 |LBS_HASSTRINGS|指定主控描繪清單方塊包含由字串組成的項目。 清單方塊會維護記憶體和字串的指標，讓應用程式可以使用 `GetText` 成員函式來擷取特定項目的文字。|
-|LBS_MULTICOLUMN|指定多重資料行的清單方塊水平捲動。 
-  `SetColumnWidth` 成員函式可設定資料行的寬度。|
+|LBS_MULTICOLUMN|指定多重資料行的清單方塊水平捲動。 `SetColumnWidth` 成員函式可設定資料行的寬度。|
 |LBS_MULTIPLESEL|每次使用者按一下或按兩下字串切換字串選取範圍。 您可以選取任何數目的字串。|
 |LBS_NODATA|指定無資料清單方塊。 當清單方塊的項目計數會超過一千時，請指定此樣式。 無資料清單方塊也必須擁有 LBS_OWNERDRAWFIXED 樣式，但不是能有 LBS_SORT 或 LBS_HASSTRINGS 樣式。<br/><br/> 無資料清單方塊類似於主控描繪清單方塊，但它的項目不包含字串或點陣圖資料。 加入、插入或刪除項目的命令永遠會忽略任何指定的項目資料；在清單方塊尋找字串的要求永遠會失敗。 必須繪製項目時，系統會傳送 WM_DRAWITEM 訊息給主控視窗。 ItemID 成員`DRAWITEMSTRUCT`WM_DRAWITEM 訊息傳遞的結構指定的項目要繪製的行號。 無資料清單方塊不會傳送 WM_DELETEITEM 訊息。|
 |LBS_NOINTEGRALHEIGHT|清單方塊的大小是建立清單方塊時，應用程式所指定的大小相同。 通常，Windows 會調整清單方塊的大小，使清單方塊不會只顯示一部分的項目。|

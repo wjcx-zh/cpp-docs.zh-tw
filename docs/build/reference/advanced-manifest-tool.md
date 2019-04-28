@@ -9,11 +9,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.KeyContainer
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
 ms.openlocfilehash: a20e474deb69099c53ad656dda5406e7161a1695
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57824972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295133"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>進階、資訊清單工具、組態屬性、&lt;Projectname&gt; 屬性頁對話方塊
 
@@ -36,4 +36,4 @@ ms.locfileid: "57824972"
 [\<file> 元素](/visualstudio/deployment/file-element-clickonce-application)<br>
 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest)<br>
 [資訊清單工具屬性頁](manifest-tool-property-pages.md)<br>
-[設定 c + + 編譯器和建置在 Visual Studio 中的屬性](../working-with-project-properties.md)
+[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)

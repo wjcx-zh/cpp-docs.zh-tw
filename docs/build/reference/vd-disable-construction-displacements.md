@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Disable Construction Displacements compiler option
 ms.assetid: 93258964-14d7-4b1c-9cbc-d6f4d74eab69
 ms.openlocfilehash: db198dbdc7bd43ffd4de9bde39ee81a8b95a25ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316882"
 ---
 # <a name="vd-disable-construction-displacements"></a>/vd (停用建構替代)
 
@@ -46,9 +46,9 @@ ms.locfileid: "57809001"
 
 ## <a name="remarks"></a>備註
 
-這些選項只適用於使用虛擬基底的 c + + 程式碼。
+這些選項只適用於C++使用虛擬基底的程式碼。
 
-Visual c + + 實作 c + + 建構替代支援在已使用虛擬繼承的情況。 建構替代解決造成虛擬函式，宣告虛擬基底和衍生類別中覆寫時的問題，進一步衍生類別的建構期間會呼叫建構函式。
+視覺化C++會實作C++建構位移支援在已使用虛擬繼承的情況。 建構替代解決造成虛擬函式，宣告虛擬基底和衍生類別中覆寫時的問題，進一步衍生類別的建構期間會呼叫建構函式。
 
 虛擬函式可能會收到不正確的問題是`this`指標結果的不一致的移動為虛擬基底類別和其衍生類別的替代。 此解決方案會提供稱為 [vtordisp] 欄位中，針對每個虛擬的基底類別的單一建構替代調整。
 
@@ -58,7 +58,7 @@ Visual c + + 實作 c + + 建構替代支援在已使用虛擬繼承的情況。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
 1. 按一下 [C/C++]  資料夾。
 
@@ -73,4 +73,4 @@ Visual c + + 實作 c + + 建構替代支援在已使用虛擬繼承的情況。
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

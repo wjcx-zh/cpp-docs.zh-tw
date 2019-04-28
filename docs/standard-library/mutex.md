@@ -5,18 +5,18 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224073"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
 包含標準標頭 \<mutex> 以定義類別 `mutex`、`recursive_mutex`、`timed_mutex` 和 `recursive_timed_mutex`；範本 `lock_guard` 和 `unique_lock`；以及用來定義互斥程式碼區域的支援類型與函式。
 
 > [!WARNING]
-> 從 Visual Studio 2015 開始，c + + 標準程式庫同步處理類型根據 Windows 同步處理原始物件，並不再使用 ConcRT （除非目標平台是 Windows XP）。 \<Mutex> 中定義的類別不應與任何 ConcRT 類型或函式搭配使用。
+> 開始在 Visual Studio 2015 中，C++標準程式庫同步處理類型根據 Windows 同步處理原始物件，且不再使用 ConcRT （除非目標平台是 Windows XP）。 \<Mutex> 中定義的類別不應與任何 ConcRT 類型或函式搭配使用。
 
 ## <a name="syntax"></a>語法
 

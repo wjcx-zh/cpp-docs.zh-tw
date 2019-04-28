@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334355"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -42,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>參數
 
-*removed*<br/>
+*excepts*<br/>
 要引發的浮點例外狀況。
 
 ## <a name="return-value"></a>傳回值
@@ -66,7 +66,7 @@ int feraiseexcept(
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
-**Microsoft 專有：** 中指定的例外狀況*removed*所引發的順序依照 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*removed*。 **結束 Microsoft 專有**
+**Microsoft 特定的：** 在指定的例外狀況*removed*所引發的順序依照 FE_INVALID、 FE_DIVBYZERO、 FE_OVERFLOW、 FE_UNDERFLOW、 FE_INEXACT。 不過，FE_INEXACT 可以引發 FE_OVERFLOW 或 FE_UNDERFLOW 引發時，即使在未指定*removed*。 **結束 Microsoft 專有**
 
 ## <a name="requirements"></a>需求
 

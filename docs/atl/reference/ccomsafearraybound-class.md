@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
 ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246136"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 類別
 
@@ -76,7 +76,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="remarks"></a>備註
 
-如果陣列是從 Visual c + + 程式存取，建議下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
+如果陣列是從 視覺效果存取C++程式，建議您使用下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 
@@ -183,7 +183,7 @@ LONG SetLowerBound(LONG lLowerBound) throw();
 
 ### <a name="remarks"></a>備註
 
-如果陣列是從 Visual c + + 程式存取，建議下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
+如果陣列是從 視覺效果存取C++程式，建議您使用下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
 
 上限取決於項目和下限值的數目。 例如，如果下限為 0，而項目數目為 10，上限會自動將到 9。
 

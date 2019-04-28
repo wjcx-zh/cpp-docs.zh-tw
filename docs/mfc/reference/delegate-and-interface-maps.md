@@ -7,11 +7,11 @@ helpviewer_keywords:
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
 ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322978"
 ---
 # <a name="delegate-and-interface-map-macros"></a>委派和介面對應巨集
 
@@ -98,7 +98,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 這會向命令來源委派註冊回呼方法。 當您將委派加入命令來源物件時，回呼方法會成為來自指定之來源的命令的處理常式。
 
-如需詳細資訊，請參閱[＜How to：將命令路由傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需詳細資訊，請參閱[如何：將命令路由傳送至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 如需有關如何使用 Windows Form 的詳細資訊，請參閱 <<c0> [ 在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 
@@ -197,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範如何建立委派對應中的項目使用 EVENT_DELEGATE_ENTRY`OnClick`事件處理常式; 也請參閱 MAKE_DELEGATE 的程式碼範例。 如需詳細資訊，請參閱[＜How to：從原生 c + + 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下列程式碼範例示範如何建立委派對應中的項目使用 EVENT_DELEGATE_ENTRY`OnClick`事件處理常式; 也請參閱 MAKE_DELEGATE 的程式碼範例。 如需詳細資訊，請參閱[如何：從原生接收 Windows Forms 事件C++類別](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -262,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範如何呼叫`MAKE_DELEGATE`附加`OnClick`MFC 控制項的事件處理常式`MyControl`。 如需此巨集的 MFC 應用程式中的運作方式的更廣泛說明，請參閱[How to:從原生 c + + 類別接收 Windows Forms 事件](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
+下列程式碼範例示範如何呼叫`MAKE_DELEGATE`附加`OnClick`MFC 控制項的事件處理常式`MyControl`。 如需此巨集的 MFC 應用程式中的運作方式的更廣泛說明，請參閱[How to:從原生接收 Windows Forms 事件C++類別](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)。
 
 ```cpp
 // CMyView derives from CWinFormsView.

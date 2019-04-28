@@ -11,15 +11,15 @@ helpviewer_keywords:
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
 ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339035"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混合組件的初始化
 
-Windows 開發人員必須一律小心的載入器鎖定時執行程式碼期間`DllMain`。 不過，有一些其他考量，派上用場時處理 C + + /cli clr 混合模式組件。
+Windows 開發人員必須一律小心的載入器鎖定時執行程式碼期間`DllMain`。 不過，有一些其他考量派上用場處理時， C++/clr 混合模式組件。
 
 [DllMain](/windows/desktop/Dlls/dllmain) 內的程式碼不得存取 CLR。 這表示 `DllMain` 不應該直接或間接呼叫 Managed 函式；Managed 程式碼不應該在 `DllMain`中宣告或實作；而且 `DllMain`內不應該發生記憶體回收或自動程式庫載入。
 
@@ -86,7 +86,7 @@ CObject* op = new CObject(arg1, arg2);
 
 ### <a name="user-supplied-functions-affecting-startup"></a>影響啟動的使用者提供函式
 
-程式庫在啟動期間的初始化，會依賴數個使用者提供的函式。 例如，當全域多載運算子在 c + + 這類`new`和`delete`操作員，使用者提供的版本會使用於各處，包括在 c + + 標準程式庫初始化和解構。 如此一來，c + + 標準程式庫和使用者提供的靜態初始設定式會叫用這些運算子的任何使用者提供的版本。
+程式庫在啟動期間的初始化，會依賴數個使用者提供的函式。 例如，當全域多載運算子在C++這類`new`和`delete`運算子，使用者提供的版本會使用於各處，包括中的C++Standard 程式庫初始化和解構。 如此一來，C++標準程式庫和使用者提供的靜態初始設定式會叫用這些運算子的任何使用者提供的版本。
 
 如果使用者提供的版本會編譯為 MSIL，則這些初始設定式會在持有載入器鎖定時嘗試執行 MSIL 指令。 使用者提供`malloc`有相同的結果。 若要解決此問題，任何多載或使用者提供的定義，都必須使用 #pragma `unmanaged` 指示詞實作為機器碼。
 
@@ -114,7 +114,7 @@ CObject* op = new CObject(arg1, arg2);
 
 在 Visual Studio 2005 之前，連結器只會選擇這些語意相等的定義，以配合向前宣告和案例，不同的最佳化選項用於不同原始程式檔時的最大值。 這會產生混合的原生/.NET DLL 的問題。
 
-相同的標頭可能是因為包含 c + + 檔案都 **/clr**啟用和停用，或 #include 可能包裝在 #pragma`unmanaged`區塊中，就能夠有 MSIL 和原生版本提供的函式的標頭中的實作。 MSIL 和原生實作針對在載入器鎖定下進行初始化有不同的語意，這實際上違反了「一個定義規則」。 因此，當連結器選擇最大的實作時，它可能會選擇 MSIL 版本的函式，即使在其他地方使用了 #pragma Unmanaged 指示詞明確編譯為機器碼亦然。 為了確保在載入器鎖定下絕不會呼叫 MSIL 版本的範本或內嵌函式，您必須使用 #pragma `unmanaged` 指示詞，來修改在載入器鎖定下呼叫之這類函式的所有定義。 如果標頭檔來自協力廠商，要達到這個目的，最簡單的方法就是在違規標頭檔的 #include 指示詞附近，推入和彈出 #pragma Unmanaged 指示詞 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md)的範例。)不過，這項策略不適用於含有必須直接呼叫 .NET API 之其他程式碼的標頭。
+相同的標頭可能是因為包含這兩者C++檔案與 **/clr**啟用和停用，或 #include 可能包裝在 #pragma`unmanaged`區塊中，就能夠有 MSIL 和原生版本的函式，提供標頭中的實作。 MSIL 和原生實作針對在載入器鎖定下進行初始化有不同的語意，這實際上違反了「一個定義規則」。 因此，當連結器選擇最大的實作時，它可能會選擇 MSIL 版本的函式，即使在其他地方使用了 #pragma Unmanaged 指示詞明確編譯為機器碼亦然。 為了確保在載入器鎖定下絕不會呼叫 MSIL 版本的範本或內嵌函式，您必須使用 #pragma `unmanaged` 指示詞，來修改在載入器鎖定下呼叫之這類函式的所有定義。 如果標頭檔來自協力廠商，要達到這個目的，最簡單的方法就是在違規標頭檔的 #include 指示詞附近，推入和彈出 #pragma Unmanaged 指示詞 (請參閱[managed、 unmanaged](../preprocessor/managed-unmanaged.md)的範例。)不過，這項策略不適用於含有必須直接呼叫 .NET API 之其他程式碼的標頭。
 
 為方便使用者處理載入器鎖定，若原生實作和 Managed 實作同時存在，連結器會優先選擇原生實作。 這可避免上述問題。 不過在這個版本中，因為編譯器有兩個尚未解決的問題，所以這項規則有兩個例外：
 

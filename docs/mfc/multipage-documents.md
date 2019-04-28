@@ -26,11 +26,11 @@ helpviewer_keywords:
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
 ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238462"
 ---
 # <a name="multipage-documents"></a>多頁文件
 
@@ -73,8 +73,7 @@ ms.locfileid: "57295002"
 
 ##  <a name="_core_pagination"></a> 分頁
 
-架構會儲存中的列印工作的相關資訊的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構。 
-  `CPrintInfo` 中有多個值與分頁有關，這些值的存取方式如下表所示。
+架構會儲存中的列印工作的相關資訊的大部分[CPrintInfo](../mfc/reference/cprintinfo-structure.md)結構。 `CPrintInfo` 中有多個值與分頁有關，這些值的存取方式如下表所示。
 
 ### <a name="page-number-information-stored-in-cprintinfo"></a>在 CPrintInfo 中儲存頁碼資訊。
 

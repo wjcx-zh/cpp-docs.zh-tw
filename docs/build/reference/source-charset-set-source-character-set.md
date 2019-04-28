@@ -8,11 +8,11 @@ helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
 ms.openlocfilehash: 54f8d4d0edaa310384d19a9c9a188f96ec895eac
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318208"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset （設定來源字元集）
 
@@ -36,7 +36,7 @@ IANA 定義字元集名稱。
 
 您可以使用 **/source-charset**選項來指定擴充的來源字元設為原始程式檔包含基本來源字元集中的未表示的字元時使用。 來源字元集是程式的用來解譯成做為輸入之前編譯的前置處理階段的內部表示法的來源文字編碼方式。 內部表示法會轉換為執行字元集，將字串和字元值儲存在可執行檔。 您可以使用任一 IANA 或 ISO 字元集的名稱，或句點 （.） 後面接著指定要使用的字元集 3 到 5 位數十進位的字碼頁識別項。 一份支援的字碼頁識別項與設定名稱的字元，請參閱[字碼頁識別項](/windows/desktop/Intl/code-page-identifiers)。
 
-根據預設，Visual Studio 會偵測以判斷原始程式檔是否編碼的 Unicode 格式，例如 utf-16 或 utf-8 位元組順序標記。 如果找到沒有位元組順序標記，它就會假設來源檔案編碼使用目前使用者的字碼頁，除非您指定的字元使用設定名稱或字碼頁 **/source-charset**選項。 Visual Studio 可讓您使用數種字元編碼的任何儲存您的 c + + 程式碼。 如需有關來源和執行字元集的詳細資訊，請參閱[字元集](../../cpp/character-sets.md)語言文件中。
+根據預設，Visual Studio 會偵測以判斷原始程式檔是否編碼的 Unicode 格式，例如 utf-16 或 utf-8 位元組順序標記。 如果找到沒有位元組順序標記，它就會假設來源檔案編碼使用目前使用者的字碼頁，除非您指定的字元使用設定名稱或字碼頁 **/source-charset**選項。 Visual Studio 可讓您儲存您C++使用數種字元編碼的任何來源的程式碼。 如需有關來源和執行字元集的詳細資訊，請參閱[字元集](../../cpp/character-sets.md)語言文件中。
 
 您提供的來源字元集必須將 7 位元 ASCII 字元對應到相同的字碼指標，在您的字元集，或可能採用許多的編譯錯誤。 您的來源字元集也必須是可延伸設定 encodable utf-8 的 Unicode 字元對應。 Encodable utf-8 的字元是由實作特定替代表示。 Microsoft 編譯器會使用問號，這些字元。
 
@@ -44,9 +44,9 @@ IANA 定義字元集名稱。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 依序展開**組態屬性**， **C/c + +**，**命令列**資料夾。
+1. 依序展開**組態屬性**， **C /C++**，**命令列**資料夾。
 
 1. 在 **其他選項**，新增 **/source-charset**選項，並指定您慣用的編碼方式。
 
@@ -55,7 +55,7 @@ IANA 定義字元集名稱。
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)<br/>
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
 [/execution-charset （設定執行字元集）](execution-charset-set-execution-character-set.md)<br/>
 [/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)<br/>
 [/validate-charset (驗證字元是否相容)](validate-charset-validate-for-compatible-characters.md)

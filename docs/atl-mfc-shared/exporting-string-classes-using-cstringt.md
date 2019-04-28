@@ -5,21 +5,21 @@ helpviewer_keywords:
 - CStringT class, exporting strings
 ms.assetid: bdfc441e-8d2a-461c-9885-46178066c09f
 ms.openlocfilehash: a4ee73d2ae5cfb7bf9834fb23eed8470b7d29445
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252736"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>使用 CStringT 匯出字串類別
 
-在過去，MFC 開發人員有衍生自`CString`特製化他們自己的字串類別。 在 Microsoft Visual c + +.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)類別已取代的範本類別，稱為[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 這提供數個優點：
+在過去，MFC 開發人員有衍生自`CString`特製化他們自己的字串類別。 在 Microsoft 的視覺效果C++.NET (MFC 8.0) [CString](../atl-mfc-shared/using-cstring.md)類別已取代的範本類別，稱為[CStringT](../atl-mfc-shared/reference/cstringt-class.md)。 這提供數個優點：
 
 - 它允許 MFC`CString`類別用於 ATL 專案而不連結在較大的 MFC 靜態程式庫或 DLL 中。
 
-- 與新`CStringT`樣板類別，您可以自訂`CString`使用指定的字元特性，類似於 c + + 標準程式庫中範本的範本參數的行為。
+- 與新`CStringT`樣板類別，您可以自訂`CString`行為，使用指定的字元特性，類似於在範本的範本參數C++標準程式庫。
 
-- 當您將自己的字串類別匯出從 DLL，使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 由於`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器知道，`CString`從 DLL 匯入。 如果您有移轉專案從 Visual c + + 6.0 到 Visual c + +.NET，您可能會看到如多重定義的連結器的符號錯誤`CString`因為衝突而`CString`匯入從 DLL，並在本機上具現化的版本。 若要這樣做的正確方式如下所述。
+- 當您將自己的字串類別匯出從 DLL，使用`CStringT`，編譯器也會自動匯出`CString`基底類別。 由於`CString`本身是樣板類別，它可能會具現化編譯器使用時，除非編譯器知道，`CString`從 DLL 匯入。 如果您已移轉專案，從 視覺效果C++6.0 到 Visual C++.NET 中，您可能會看到如多重定義的連結器的符號錯誤`CString`因為衝突`CString`匯入從 DLL，並在本機上具現化的版本. 若要這樣做的正確方式如下所述。
 
 下列案例會導致連結器產生的符號錯誤多次定義的類別。 假設您要匯出`CString`-衍生的類別 (`CMyString`) 從 MFC 擴充 DLL:
 

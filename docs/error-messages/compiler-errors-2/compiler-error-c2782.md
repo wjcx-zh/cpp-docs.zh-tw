@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2782
 ms.assetid: 8b685422-294d-4f64-9f3d-c14eaf03a93d
 ms.openlocfilehash: 58fb298ef188c37ebebea6b5c87fe84daeea8aa6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257266"
 ---
 # <a name="compiler-error-c2782"></a>編譯器錯誤 C2782
 

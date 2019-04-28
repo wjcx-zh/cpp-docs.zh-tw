@@ -8,23 +8,23 @@ helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
 ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266775"
 ---
 # <a name="thiscall"></a>__thiscall
 
 **Microsoft 專屬**
 
-**__Thiscall**呼叫慣例用於成員函式，而且是 c + + 成員函式不使用變數引數所使用的預設呼叫慣例。 底下 **__thiscall**，被呼叫端會清除堆疊，也就是不可能的`vararg`函式。 引數會推送到堆疊上由右至左，與**這**指標傳遞透過暫存器 ECX，而不是在堆疊上的 x86 架構。
+**__Thiscall**呼叫慣例用於成員函式，而且是呼叫慣例所使用的預設值C++成員函式不使用變數引數。 底下 **__thiscall**，被呼叫端會清除堆疊，也就是不可能的`vararg`函式。 引數會推送到堆疊上由右至左，與**這**指標傳遞透過暫存器 ECX，而不是在堆疊上的 x86 架構。
 
 若要使用的其中一個原因 **__thiscall**是其成員函式會使用的類別中`__clrcall`預設。 在此情況下，您可以使用 **__thiscall**讓個別成員函式可從原生程式碼呼叫。
 
 進行編譯時[/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)，所有函式和函式指標`__clrcall`除非另有指定。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
-在 Visual c + + 2005年之前的版本 **__thiscall**呼叫慣例無法明確地指定在程式中，因為 **__thiscall**不是關鍵字。
+在 視覺效果之前的版本C++2005年 **__thiscall**呼叫慣例無法明確地指定在程式中，因為 **__thiscall**不是關鍵字。
 
 `vararg` 成員函式會使用 **__cdecl**呼叫慣例。 所有函數引數會都推送到堆疊中，使用**這**指標放置在堆疊上一次
 

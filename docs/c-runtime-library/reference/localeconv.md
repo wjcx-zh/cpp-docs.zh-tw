@@ -24,11 +24,11 @@ helpviewer_keywords:
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
 ms.openlocfilehash: bf26e4f7b7fb4f0334b57604fe5c4996312bd62a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62286302"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -50,16 +50,16 @@ struct lconv *localeconv( void );
 
 |欄位|意義|
 |-|-|
-decimal_point，<br/>_W_decimal_point|小數點的非貨幣數量的字元指標。
+decimal_point,<br/>_W_decimal_point|小數點的非貨幣數量的字元指標。
 thousands_sep，<br/>_W_thousands_sep|指標的字元會分隔非貨幣數量的小數點左邊數字群組。
 群組|指標**char**-調整大小的整數，包含每個群組中非貨幣數量的數字的大小。
-int_curr_symbol，<br/>_W_int_curr_symbol|目前的地區設定的國際貨幣符號的指標。 前三個字元依照「ISO 4217 貨幣和資金代碼」標準的定義，指定字母國際貨幣符號。 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
+int_curr_symbol,<br/>_W_int_curr_symbol|目前的地區設定的國際貨幣符號的指標。 前三個字元依照「ISO 4217 貨幣和資金代碼」標準的定義，指定字母國際貨幣符號。 第四個字元 (緊接在 Null 字元之前) 會分隔國際貨幣符號與貨幣的數量。
 currency_symbol，<br/>_W_currency_symbol|目前的地區設定的本地貨幣符號的指標。
-mon_decimal_point，<br/>_W_mon_decimal_point|小數點的貨幣數量的字元指標。
-mon_thousands_sep，<br/>_W_mon_thousands_sep|貨幣數量中小數點左邊數字群組分隔符號的指標。
+mon_decimal_point,<br/>_W_mon_decimal_point|小數點的貨幣數量的字元指標。
+mon_thousands_sep,<br/>_W_mon_thousands_sep|貨幣數量中小數點左邊數字群組分隔符號的指標。
 mon_grouping|指標**char**-調整大小的整數，包含每個群組的貨幣數量中的數字的大小。
 positive_sign，<br/>_W_positive_sign|表示非負值貨幣數量之正負號的字串。
-negative_sign，<br/>_W_negative_sign|表示負值貨幣數量之正負號的字串。
+negative_sign,<br/>_W_negative_sign|表示負值貨幣數量之正負號的字串。
 int_frac_digits|國際格式化貨幣數量之小數點右邊的數字數目。
 frac_digits|格式化貨幣數量之小數點右邊的數字數目。
 p_cs_precedes|如果貨幣符號在非負值格式化貨幣數量的值之前，請設定為 1。 如果符號在值之後，請設定為 0。

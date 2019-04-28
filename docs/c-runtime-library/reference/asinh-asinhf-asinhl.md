@@ -28,11 +28,11 @@ helpviewer_keywords:
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
 ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341778"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -62,11 +62,11 @@ long double asinh( long double x );  // C++ only
 
 |輸入|SEH 例外狀況|**_matherr**例外狀況|
 |-----------|-------------------|--------------------------|
-|± QNAN、IND、INF|無|無|
+|± QNAN、IND、INF|none|none|
 
 ## <a name="remarks"></a>備註
 
-當您使用 c + + 時，您可以呼叫多載**asinh**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **asinh**一律採用並傳回**double**。
+當您使用C++，您可以呼叫多載**asinh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **asinh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

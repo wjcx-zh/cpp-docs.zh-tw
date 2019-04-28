@@ -7,15 +7,15 @@ helpviewer_keywords:
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
 ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62261653"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 
-ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，因此您可以看到專案檔中寫入方法的方式，以及如何 DHTML 呼叫控制項的 c + + 程式碼，使用分派方法。 您可以新增任何分派方法的介面。 然後，您可以呼叫方法中的 HTML 資源。
+ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，因此您可以看到專案檔中寫入方法的方式，以及如何 DHTML 呼叫控制項的C++程式碼使用分派方法。 您可以新增任何分派方法的介面。 然後，您可以呼叫方法中的 HTML 資源。
 
 ## <a name="to-modify-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 
@@ -49,7 +49,7 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 
    檢查在 HTML 中，特別是呼叫外部 Windows 分派方法。 HTML 呼叫的專案`OnClick`方法與參數指出此控制項的主體 (`theBody`) 和指派色彩 (「`red`")。 方法呼叫之後的文字會出現在按鈕的標籤。
 
-1. 新增另一個`OnClick`方法，只會變更色彩。 例如: 
+1. 新增另一個`OnClick`方法，只會變更色彩。 例如：
 
     ```html
     <br>

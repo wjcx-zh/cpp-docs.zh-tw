@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323277"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 而不是呼叫`AfxBeginThread`，您可以建構`CWinThread`-衍生物件，然後再呼叫`CreateThread`。 如果您想要重複使用這個兩階段建構方法相當實用`CWinThread`後續建立與終止的執行緒執行之間的物件。
 
-如需詳細資訊`CWinThread`，請參閱文章[多執行緒 c + + 和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多執行緒：建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)，[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)，和[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需詳細資訊`CWinThread`，請參閱文章[多執行緒與C++和 MFC](../../parallel/multithreading-with-cpp-and-mfc.md)，[多執行緒：建立使用者介面執行緒](../../parallel/multithreading-creating-user-interface-threads.md)，[多執行緒：建立背景工作執行緒](../../parallel/multithreading-creating-worker-threads.md)，和[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -311,8 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`資料成員是型別 BOOL 的公用變數。
 
-
-  `m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
+`m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 

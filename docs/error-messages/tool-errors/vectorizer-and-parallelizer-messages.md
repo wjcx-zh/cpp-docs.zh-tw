@@ -1,6 +1,6 @@
 ---
-title: 向量化工具和平行化工具訊息
-ms.date: 11/04/2016
+title: 向量化工具與平行化工具訊息
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346866"
 ---
-# <a name="vectorizer-and-parallelizer-messages"></a>向量化工具和平行化工具訊息
+# <a name="vectorizer-and-parallelizer-messages"></a>向量化工具與平行化工具訊息
 
-您可以使用視覺效果C++編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)並[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)來輸出原因代碼與活動相關的告知性訊息。 本文說明原因代碼和訊息。
+您可以使用 MicrosoftC++編譯器選項[/Qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)並[/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)設[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)輸出的原因代碼和活動相關的告知性訊息。 本文說明原因代碼和訊息。
 
-- [告知性訊息](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> 告知性訊息
+## <a name="BKMK_InformationalMessages"></a> 告知性訊息
 
 視您指定的報告等級而定，每個迴圈皆會出現下列其中一則告知性訊息。
 
@@ -43,27 +27,25 @@ ms.locfileid: "59023902"
 
 |告知性訊息。|描述|
 |---------------------------|-----------------|
-|5001|迴圈向量化。|
-|5002|'description' 使迴圈沒有向量化。|
-|5011|迴圈平行化。|
-|5012|'description' 使迴圈沒有平行化。|
-|5021|無法與 Pragma 迴圈建立關聯。|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>原因代碼
+下列各節會列出可能的原因代碼的平行化工具和向量化工具。
 
-以下各節會列出 auto-parallelizer 和 auto-vectorizer 的可能原因代碼。
+## <a name="BKMK_ReasonCode50x"></a> 5xx 原因代碼
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-5*xx*原因代碼適用於 auto-parallelizer 和 auto-vectorizer。
+5*xx*原因代碼適用於平行化工具和向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|500|這是包含許多例子的泛型訊息，例如：迴圈包含多個出口，或者是迴圈的標題結尾不是遞增的歸納變數。|
-|501|歸納變數不屬於本機，或者上限並非迴圈不變量。|
-|502|歸納變數用其他的方式逐步執行，並非簡單的 +1。|
-|503|迴圈包含了例外狀況處理或參數陳述式。|
-|504|迴圈主體可能會擲回需要 C ++ 物件的解構函式的例外狀況。|
+|500|包含許多例子的泛型訊息 — 比方說，迴圈包含多個出口，或者是迴圈的標題結尾不是依遞增的歸納變數。|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> 10xx 原因代碼
 
-10*xx*原因代碼適用於 auto-parallelizer。
+10*xx*原因代碼適用於平行化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1000|編譯器在迴圈主體中偵測到資料的相依性。|
-|1001|編譯器在迴圈主體中偵測到純量變數的存放區，且該純量有在迴圈外的用法。|
-|1002|編譯器嘗試平行處理已具有內部平行化迴圈的迴圈。|
-|1003|迴圈主體包含有可用來讀取或寫入記憶體的內部呼叫。|
-|1004|迴圈主體中有純量減少。 如果迴圈已向量化，則可能發生純量減少。|
-|1005|**No_parallel** pragma 所指定。|
-|1006|此函式包含**openmp**。 解決此問題，移除任何**openmp**中此函式。|
-|1007|迴圈歸納變數或迴圈繫結不是 32 位元帶正負號的數字 (`int` 或 `long`)。 變更歸納變數的類型可解決此問題。|
-|1008|編譯器偵測到此迴圈沒有執行足夠的工作來確保 auto-parallelization。|
-|1009|編譯器偵測到嘗試平行化 "do-while" 迴圈。  auto-parallelizer 只以 `for` 迴圈為目標。|
-|1010|編譯器偵測到迴圈使用「不等於」(! =) 作為條件。|
+|1000|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> 11xx 原因代碼
 
-11*xx*原因代碼適用於 auto-vectorizer。
+11*xx*原因代碼適用於向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1100|迴圈包含控制流程，例如："if" 或 "?"。|
-|1101|包含資料類型轉換的迴圈 (可能為隱含) 無法向量化。|
-|1102|迴圈包含非算術或其他無法向量化的運算。|
-|1103|迴圈主體包括可能會在迴圈內變更大小的移位作業。|
-|1104|迴圈主體包含純量變數。|
-|1105|迴圈包含無法辨認的削減作業。|
-|1106|外部迴圈未被向量化。|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> 12xx 原因代碼
 
-12*xx*原因代碼適用於 auto-vectorizer。
+12*xx*原因代碼適用於向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1200|迴圈含有迴圈攜帶資料相依性導致無法向量化。 迴圈中不同的反覆項目互相干擾，使向量化迴圈產生錯誤的回應，而 auto-vectorizer 無法為本身證明沒有這類資料的相依性。|
-|1201|陣列基底隨著迴圈持續變更。|
-|1202|結構的欄位不是 32 或 64 位元寬。|
-|1203|迴圈主體含有對陣列的非連續存取。|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> 13xx 原因代碼
 
-13*xx*原因代碼適用於 auto-vectorizer。
+13*xx*原因代碼適用於向量化工具。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1300|迴圈主體不含計算，或只含非常少的計算。|
-|1301|迴圈分散不是 +1。|
-|1302|迴圈是 「 do-時 」。|
-|1303|迴圈的反覆項目太少使像量化無法提供值。|
-|1304|迴圈包含不同大小的指派工作。|
-|1305|沒有足夠的類型資訊。|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> 14xx 原因代碼
 
-14*xx*原因代碼發生時指定一些選項，與自動向量化不相容。
+14*xx*原因代碼發生時指定一些選項，與向量化不相容。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1400|**#pragma loop （no_vector)** 指定。|
-|1401|**/kernel** x86 或 ARM 為目標時指定參數。|
-|1402|**/ arch:sse2**或更高的參數未指定以 x86 為目標時。|
-|1403|**/arch:ATOM**指定參數，而迴圈包含雙精度浮點數的作業。|
-|1404|**/ O1**或是 **/Os**指定參數。|
-|1405|停用向量化可協助動態初始設定式對靜態初始設定式的最佳化。|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> 15xx 原因代碼
 
-15 個區塊*xx*原因代碼適用於別名。 記憶體的位置可以由兩個不同的名稱呼叫時，會發生存取別名的情形。
+15*xx*原因代碼適用於別名。 記憶體的位置可以由兩個不同的名稱呼叫時，會發生存取別名的情形。
 
 |原因碼|說明|
 |-----------------|-----------------|
-|1500|在多維陣列的可能別名。|
-|1501|陣列中結構的可能別名。|
-|1502|n + K 以外的可能別名和陣列索引。|
-|1503|可能的別名和陣列索引有多個位移。|
-|1504|可能的別名，可能會要求過多的執行階段檢查。|
-|1505|可能的別名，不過執行階段檢查過於複雜。|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>另請參閱
 
-[自動平行處理和自訂向量化](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[以原生程式碼進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[/Q 選項 (低階運算)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar-report (自動平行化工具報告層級)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[自動平行處理和自動向量化](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[自動向量化工具在 Visual Studio 2012 – 概觀](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[/Q 選項 （低階運算）](../../build/reference/q-options-low-level-operations.md) \
+[/Qpar-report （自動平行化工具報告層級）](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (自動向量化工具報告層級)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

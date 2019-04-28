@@ -7,11 +7,11 @@ helpviewer_keywords:
 - NMAKE macros, special
 ms.assetid: d772e8ea-1e9f-4ad8-beec-663af76f2dd9
 ms.openlocfilehash: a21c58d5ec6e3bee4ef89c09ecd19697fdb3dc86
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57825806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317974"
 ---
 # <a name="special-nmake-macros"></a>特殊的 NMAKE 巨集
 

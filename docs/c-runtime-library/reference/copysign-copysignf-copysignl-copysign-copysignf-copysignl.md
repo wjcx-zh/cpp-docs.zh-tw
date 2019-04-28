@@ -37,11 +37,11 @@ helpviewer_keywords:
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
 ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349052"
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
@@ -96,7 +96,7 @@ long double _copysignl(
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**copysign**採用並傳回**float**或是**長** **double**值。 在 C 程式中， **copysign**一律採用並傳回**double**。
+因為C++允許多載，您可以呼叫多載**copysign**採用並傳回**float**或**長** **double**值. 在 C 程式中， **copysign**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 

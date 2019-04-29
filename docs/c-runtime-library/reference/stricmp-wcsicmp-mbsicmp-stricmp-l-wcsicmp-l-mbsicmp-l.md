@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353831"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 
@@ -141,7 +141,7 @@ int _mbsicmp_l(
 
 **_wcsicmp**並**wcscmp**運作方式完全相同，不同之處在於**wcscmp**不會轉換成小寫進行比較之前其引數。 **_mbsicmp**並 **_mbscmp**運作方式完全相同，不同之處在於 **_mbscmp**不會轉換成小寫進行比較之前其引數。
 
-您必須呼叫[setlocale](setlocale-wsetlocale.md) for **_wcsicmp**以使用 「 拉丁文 1 字元。 依預設 C 地區設定會生效，因此，舉例來說，ä 不會等於 Ä。 呼叫**setlocale**再呼叫 C 地區設定以外的任何地區設定 **_wcsicmp**。 下列範例會示範如何 **_wcsicmp**很容易使用的地區設定：
+您必須呼叫[setlocale](setlocale-wsetlocale.md) for **_wcsicmp**以使用 「 拉丁文 1 字元。 C 地區設定是作用中的預設值，因此，比方說，ä 會比較等於 Ä。 呼叫**setlocale**再呼叫 C 地區設定以外的任何地區設定 **_wcsicmp**。 下列範例會示範如何 **_wcsicmp**很容易使用的地區設定：
 
 ```C
 // crt_stricmp_locale.c

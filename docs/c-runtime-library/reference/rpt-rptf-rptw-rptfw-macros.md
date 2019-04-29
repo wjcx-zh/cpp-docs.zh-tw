@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357488"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>_RPT、_RPTF、_RPTW、_RPTFW 巨集
 
@@ -132,7 +132,7 @@ _RPTFWn(
 *格式*<br/>
 用於建立使用者訊息的格式控制字串。
 
-*引數*<br/>
+*args*<br/>
 所使用的替換引數*格式*。
 
 ## <a name="remarks"></a>備註
@@ -163,10 +163,10 @@ _RPTFWn(
 
 |巨集|必要的標頭|
 |-----------|---------------------|
-|**_RPT**巨集|\<crtdbg.h>|
-|**_RPTF**巨集|\<crtdbg.h>|
-|**_RPTW**巨集|\<crtdbg.h>|
-|**_RPTFW**巨集|\<crtdbg.h>|
+|**_RPT** macros|\<crtdbg.h>|
+|**_RPTF** macros|\<crtdbg.h>|
+|**_RPTW** macros|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

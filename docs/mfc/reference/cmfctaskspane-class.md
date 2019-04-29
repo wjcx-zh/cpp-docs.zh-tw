@@ -195,18 +195,17 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
 ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218657"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 
-
-  `CMFCTasksPane` 類別會實作可點選式項目 (工作) 清單。
+`CMFCTasksPane` 類別會實作可點選式項目 (工作) 清單。
 
 ## <a name="syntax"></a>語法
 
@@ -327,8 +326,7 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>備註
 
-
-  `CMFCTasksPane` 類別會實作下列功能：
+`CMFCTasksPane` 類別會實作下列功能：
 
 - 項目可以組成群組，而且每個項目群組可以有相關聯的標題。
 

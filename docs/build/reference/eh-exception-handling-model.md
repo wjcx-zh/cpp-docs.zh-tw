@@ -43,7 +43,7 @@ ms.locfileid: "62271797"
 
 ## <a name="remarks"></a>備註
 
- **/EHa** 編譯器選項可搭配原生 C++ `catch(...)` 子句，用來支援非同步結構化例外狀況處理 (SEH)。 若要實作 SEH 而不指定 **/EHa**，您可以使用 **__try**， **__except**，以及 **__finally**語法。 雖然 Windows 和 Visual C++ 支援 SEH，但強烈建議您使用 ISO 標準 C++ 例外狀況處理 (**/EHs** 或 **/EHsc**)，因為它可提升程式碼的可攜性和彈性。 不過，在現有的程式碼中，或針對特定類型的程式 — 例如，在編譯為支援 common language runtime 的程式碼 ([/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md))，您仍然必須使用 SEH。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
+**/EHa** 編譯器選項可搭配原生 C++ `catch(...)` 子句，用來支援非同步結構化例外狀況處理 (SEH)。 若要實作 SEH 而不指定 **/EHa**，您可以使用 **__try**， **__except**，以及 **__finally**語法。 雖然 Windows 和 Visual C++ 支援 SEH，但強烈建議您使用 ISO 標準 C++ 例外狀況處理 (**/EHs** 或 **/EHsc**)，因為它可提升程式碼的可攜性和彈性。 不過，在現有的程式碼中，或針對特定類型的程式 — 例如，在編譯為支援 common language runtime 的程式碼 ([/clr （Common Language Runtime 編譯）](clr-common-language-runtime-compilation.md))，您仍然必須使用 SEH。 如需詳細資訊，請參閱 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)。
 
 使用 **/EHa** 指定 `catch(...)` 並嘗試處理所有例外狀況可能並不安全。 在大部分情況下，非同步例外狀況無法復原，因此應視為嚴重。 攔截這些例外狀況並繼續執行可能造成處理序損毀，因而導致難以找出並修正的 Bug。
 

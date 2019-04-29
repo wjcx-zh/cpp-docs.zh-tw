@@ -4,12 +4,12 @@ ms.date: 05/11/2018
 helpviewer_keywords:
 - deploying the CRT [C++]
 - application CRT deployment [C++]
-ms.openlocfilehash: 90f859eb0e9134c997e7eecad118cfb8ec00b782
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7952d2ec6e8f502b0edf776811a492c67f495cce
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786205"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344179"
 ---
 # <a name="universal-crt-deployment"></a>通用 CRT 部署
 
@@ -23,7 +23,9 @@ ms.locfileid: "58786205"
 
 並非所有的 Microsoft Windows 電腦都會使用 Windows Update 定期安裝更新，而且某些電腦可能不會安裝所有建議的更新。 為了支援使用透過 Visual Studio 2015 和更新版本的 C++ 工具組在這些機器上所建置的應用程式，有適用於離線散發的通用 CRT 可轉散發套件。 這些可轉散發套件可以從上述其中一個 KB 連結下載。 請注意，通用 CRT 可轉散發套件需要電腦已更新為最新的 Service Pack。 因此，比方說，Windows 7 的可轉散發套件只能安裝到 Windows 7 SP1，而不是 Windows 7 RTM。
 
-由於通用 CRT 是 C++ 程式庫的基本相依性，因此 Visual C++ 可轉散發套件 (VCRedist) 會在未安裝某個版本的電腦上安裝通用 CRT 的基底版本，這足以滿足 C++ 程式庫版相依性。 如果應用程式相依於較新版本的通用 CRT，您必須明確地安裝該較新版本。 最好在安裝 VCRedist 之前先安裝此版本，以避免發生可能的多次必要重新開機。
+因為通用 CRT 基本相依性的C++程式庫，視覺效果C++可轉散發套件 (VCRedist) 不是已安裝的版本的電腦上安裝初始的通用 CRT （版本 10.0.10240） 版本。 此版本就足以滿足C++程式庫相依性。 如果您的應用程式相依於通用 CRT 的較新版本，您必須使用 Windows Update 自備電腦完全是最新的狀態，或明確安裝該版本。 最好的方式是有通用 C 執行階段已透過 Windows Update 或透過 MSU 安裝之前，安裝 VCRedist，以避免可能的多個必要的重新開機。
+
+並非所有的作業系統都適合使用最新通用 C 執行階段透過 Windows Update。 在 Windows 10 上的集中部署的版本比對的作業系統版本。 此外，若要更新通用 C 執行階段您必須更新作業系統。 適用於透過 Windows 8.1 的 Windows Vista，目前根據包含在 Windows 10 年度更新版，與其他修正程式 （10.0.14393 版） 版本的最新可用通用 C 執行階段。
 
 ## <a name="local-deployment"></a>本機部署
 

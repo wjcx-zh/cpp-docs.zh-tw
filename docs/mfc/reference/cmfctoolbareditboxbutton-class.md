@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
 ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218254"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton 類別
 
@@ -692,4 +692,4 @@ virtual void SetStyle(UINT nStyle);
 [CMFCToolBarButton 類別](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit 類別](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[逐步解說：將放在工具列上的控制項](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[逐步解說：將控制項放在工具列上](../../mfc/walkthrough-putting-controls-on-toolbars.md)

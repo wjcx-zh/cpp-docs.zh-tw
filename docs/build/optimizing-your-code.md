@@ -1,6 +1,6 @@
 ---
 title: 最佳化程式碼
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826184"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341108"
 ---
 # <a name="optimizing-your-code"></a>最佳化您的程式碼
 
-藉由最佳化可執行檔，您可以達到快速的執行速度和小型的程式碼大小之間取得平衡。 本主題會討論一些可協助您最佳化程式碼的 Visual c + + 提供的機制。
+藉由最佳化可執行檔，您可以達到快速的執行速度和小型的程式碼大小之間取得平衡。 本主題討論某些機制該視覺效果C++可協助您最佳化程式碼。
 
 ## <a name="language-features"></a>語言功能
 
-下列主題會描述一些在 C/c + + 語言中的最佳化功能。
+下列主題將描述一些最佳化功能，c /C++語言。
 
-[最佳化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md)<br/>
+[最佳化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
 關鍵字和 pragma 可用於您的程式碼以提升效能的清單。
 
-[依分類排列的編譯器選項](reference/compiler-options-listed-by-category.md)<br/>
+[依分類排列的編譯器選項](reference/compiler-options-listed-by-category.md) \
 一份 **/O**編譯器選項會明確影響執行速度或程式碼大小。
 
-[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[右值參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 右值參考支援實作*移動語意*。 如果移動語意用來實作樣板程式庫，使用這些範本的應用程式的效能可大幅提升。
 
 ### <a name="the-optimize-pragma"></a>最佳化 pragma
@@ -52,10 +52,10 @@ ms.locfileid: "57826184"
 
 下列主題討論的良好程式設計作法。
 
-[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md)<br/>
+[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md) \
 更好程式碼撰寫技術，可以產生較佳的效能。 本主題建議程式碼撰寫技術，可協助您確保您的程式碼的時間關鍵部分令人滿意。
 
-[最佳化最佳做法](optimization-best-practices.md)<br/>
+[最佳化的最佳做法](optimization-best-practices.md) \
 提供有關如何最佳化您的應用程式的一般指導方針。
 
 ## <a name="debugging-optimized-code"></a>偵錯最佳化程式碼
@@ -86,20 +86,19 @@ ms.locfileid: "57826184"
 
 ## <a name="in-this-section"></a>本節內容
 
-[最佳化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md)<br/>
-[改善編譯器輸送量](improving-compiler-throughput.md)<br/>
-[浮點數會失去精確度的原因](why-floating-point-numbers-may-lose-precision.md)<br/>
-[IEEE 浮點表示](ieee-floating-point-representation.md)<br/>
-[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md)<br/>
-[使用不帶 () 的函式名稱不會產生程式碼](using-function-name-without-parens-produces-no-code.md)<br/>
-[最佳化最佳做法](optimization-best-practices.md)<br/>
-[特性指引最佳化](profile-guided-optimizations.md)<br/>
-[特性指引最佳化的環境變數](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[如何：將多個 PGO 設定檔合併至單一設定檔](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[效能和診斷中樞中的 Visual Studio 2013 PGO 增益集](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[最佳化 Pragma 和關鍵字](optimization-pragmas-and-keywords.md) \
+[改善編譯器輸送量](improving-compiler-throughput.md) \
+[浮點數會失去精確度的原因](why-floating-point-numbers-may-lose-precision.md) \
+[IEEE 浮點表示](ieee-floating-point-representation.md) \
+[改善時間關鍵程式碼的秘訣](tips-for-improving-time-critical-code.md) \
+[使用函式名稱 （） 不會產生任何程式碼](using-function-name-without-parens-produces-no-code.md) \
+[最佳化的最佳做法](optimization-best-practices.md) \
+[特性指引最佳化](profile-guided-optimizations.md) \
+[特性指引最佳化的環境變數](environment-variables-for-profile-guided-optimizations.md) \
+[PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[如何：將多個 PGO 設定檔合併至單一設定檔](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>另請參閱
 

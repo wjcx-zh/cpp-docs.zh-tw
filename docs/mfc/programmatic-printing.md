@@ -9,18 +9,17 @@ helpviewer_keywords:
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
 ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263997"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342086"
 ---
 # <a name="programmatic-printing"></a>以程式設計方式列印
 
 OLE 提供方法來唯一識別持續的文件 (`GetClassFile`) 並載入到其相關聯的程式碼 (`CoCreateInstance`， `QueryInterface(IID_IPersistFile)`， `QueryInterface(IID_IPersistStorage)`， `IPersistFile::Load`，和`IPersistStorage::Load`)。 為了要進一步啟用列印文件，使用中文件內含項目 (使用現有的 OLE 設計，一開始並未隨附於 OLE 2.0) 會引入基底標準列印介面 `IPrint`，通常可透過可以載入文件類型的持續性狀態的物件取得。 主動式文件的每個檢視可以選擇性地支援`IPrint`介面，以提供這些功能。
 
-
-  `IPrint` 介面定義如下：
+`IPrint` 介面定義如下：
 
 ```
 interface IPrint : IUnknown

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 c + + Interop 封送處理 ANSI 字串
+title: HOW TO：封送處理 ANSI 字串使用C++Interop
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
 ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748030"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345744"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>HOW TO：使用 c + + Interop 封送處理 ANSI 字串
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>HOW TO：封送處理 ANSI 字串使用C++Interop
 
-本主題示範的 ANSI 字串可以是如何使用 c + + 互通性之外，但.NET Framework 傳遞<xref:System.String>代表以 Unicode 格式的字串，因此轉換成 ANSI 是額外的步驟。 與其他字串類型的交互操作，請參閱下列主題：
+本主題示範如何達成的 ANSI 字串會使用傳遞C++互通性之外，但.NET Framework<xref:System.String>代表以 Unicode 格式的字串，因此轉換成 ANSI 是額外的步驟。 與其他字串類型的交互操作，請參閱下列主題：
 
 - [如何：使用 C++ Interop 封送處理 Unicode 字串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 

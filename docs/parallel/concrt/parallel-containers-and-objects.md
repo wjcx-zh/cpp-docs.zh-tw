@@ -7,17 +7,17 @@ helpviewer_keywords:
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
 ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565944"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346321"
 ---
 # <a name="parallel-containers-and-objects"></a>平行容器和物件
 
 平行模式程式庫 (PPL) 包含數個容器和物件，提供安全執行緒存取其項目。
 
-A*並行容器*提供並行安全的存取權最重要的作業。 這些容器的功能類似於 c + + 標準程式庫所提供的。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)類別類似於[std:: vector](../../standard-library/vector-class.md)類別，不同之處在於`concurrent_vector`類別可讓您附加以平行方式的項目。 您需要讀取和寫入至相同的容器的權限的平行程式碼時，請使用並行的容器。
+A*並行容器*提供並行安全的存取權最重要的作業。 這些容器的功能類似於所提供的C++標準程式庫。 例如， [concurrency:: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)類別類似於[std:: vector](../../standard-library/vector-class.md)類別，不同之處在於`concurrent_vector`類別可讓您附加以平行方式的項目。 您需要讀取和寫入至相同的容器的權限的平行程式碼時，請使用並行的容器。
 
 A*並行物件*會同時共用元件。 計算的平行的並行物件狀態的程序會產生相同的結果，以循序計算的相同狀態的另一個處理程序。 [Concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別是一個範例是並行的物件類型。 `combinable`類別可讓您以平行方式執行計算，然後再結合成最終結果的計算。 否則會使用同步處理機制，比方說，mutex，來同步存取共用的變數或資源時，請使用並行的物件。
 
@@ -101,7 +101,7 @@ A*並行物件*會同時共用元件。 計算的平行的並行物件狀態的�
 |[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
 |[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
-作業的執行階段提供相容性的 c + + 標準程式庫，例如`reserve`，不是並行安全。 下表顯示常用的方法和不是並行安全的運算子。
+執行階段提供的相容性的作業C++標準程式庫，例如`reserve`，不是並行安全。 下表顯示常用的方法和不是並行安全的運算子。
 
 |||
 |-|-|

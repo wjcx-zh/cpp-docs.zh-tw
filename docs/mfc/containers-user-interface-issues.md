@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
 ms.openlocfilehash: 68a56983bccbdb2ed7f6701577ea5abaa7ea04c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779660"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346077"
 ---
 # <a name="containers-user-interface-issues"></a>容器：使用者介面問題
 
@@ -27,5 +27,5 @@ ms.locfileid: "58779660"
 ## <a name="see-also"></a>另請參閱
 
 [容器](../mfc/containers.md)<br/>
-[容器：進階的功能](../mfc/containers-advanced-features.md)<br/>
+[容器：進階功能](../mfc/containers-advanced-features.md)<br/>
 [功能表和資源 (OLE)](../mfc/menus-and-resources-ole.md)

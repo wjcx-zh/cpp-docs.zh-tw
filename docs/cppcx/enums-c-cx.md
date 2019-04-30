@@ -3,15 +3,15 @@ title: 列舉 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: 99fbbe28-c1cd-43af-9ead-60f90eba6e68
 ms.openlocfilehash: f16a288a0b928b74ef42de5781fd1b54930927d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752138"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345809"
 ---
 # <a name="enums-ccx"></a>列舉 (C++/CX)
 
-C + + /CX 支援`public enum class`關鍵字，類似於標準 c + + `scoped  enum`。 當您使用以 `public enum class` 關鍵字所宣告的列舉程式時，您必須使用列舉識別項來限定每一個列舉值的範圍。
+C++支援 /CX`public enum class`關鍵字，類似於標準C++ `scoped  enum`。 當您使用以 `public enum class` 關鍵字所宣告的列舉程式時，您必須使用列舉識別項來限定每一個列舉值的範圍。
 
 ### <a name="remarks"></a>備註
 
@@ -40,5 +40,5 @@ A`public enum class`或`public enum struct`宣告可以具有任何整數類資�
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

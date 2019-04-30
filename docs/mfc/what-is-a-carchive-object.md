@@ -11,19 +11,17 @@ helpviewer_keywords:
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
 ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270393"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346371"
 ---
 # <a name="what-is-a-carchive-object"></a>什麼是 CArchive 物件
 
+`CArchive` 物件針對將可序列化物件寫入 `CFile` 物件或從該物件讀取可序列化物件，提供一項類型安全緩衝機制。 通常 `CFile` 物件代表磁碟檔案，不過其可以是記憶體檔案 (`CSharedFile` 物件)，或許代表剪貼簿。
 
-  `CArchive` 物件針對將可序列化物件寫入 `CFile` 物件或從該物件讀取可序列化物件，提供一項類型安全緩衝機制。 通常 `CFile` 物件代表磁碟檔案，不過其可以是記憶體檔案 (`CSharedFile` 物件)，或許代表剪貼簿。
-
-指定的 `CArchive` 物件不是要儲存 (寫入、序列化) 資料，就是要載入 (讀取、取消序列化) 資料，不過不會是兩者同時進行。 
-  `CArchive` 物件的存留期只限於透過一次寫入物件至檔案，或從檔案讀取物件。 因此，需要兩個連續建立的 `CArchive` 物件，將資料序列化至檔案，然後從檔案將它取消序列化。
+指定的 `CArchive` 物件不是要儲存 (寫入、序列化) 資料，就是要載入 (讀取、取消序列化) 資料，不過不會是兩者同時進行。 `CArchive` 物件的存留期只限於透過一次寫入物件至檔案，或從檔案讀取物件。 因此，需要兩個連續建立的 `CArchive` 物件，將資料序列化至檔案，然後從檔案將它取消序列化。
 
 當封存檔將物件儲存至檔案時，封存檔會將 `CRuntimeClass` 名稱附加到物件。 然後，當另一個封存檔從檔案載入物件至記憶體時，`CObject` 衍生的物件會根據物件的 `CRuntimeClass` 以動態方式重建。 當指定的物件被寫入至檔案時，它可能會被參考一次以上。 載入封存檔，不過只會重建物件一次。 封存的將附加的詳細`CRuntimeClass`物件並重建物件，多個參考，並考慮可能的資訊所述[技術提示 2](../mfc/tn002-persistent-object-data-format.md)。
 

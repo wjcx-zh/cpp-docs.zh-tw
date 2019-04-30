@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual C++, namespaces
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: 532fdcb5de179bd2fdeb25091ace7210d55a2658
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508845"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345907"
 ---
 # <a name="namespaces-c"></a>命名空間 (C++)
 
@@ -128,7 +128,7 @@ namespace V {
 
 ## <a name="the-std-namespace"></a>std 命名空間
 
-所有 c + + 標準程式庫類型和函式中宣告`std`命名空間或命名空間巢狀方式置於`std`。
+所有C++中宣告標準程式庫類型和函式`std`命名空間或命名空間巢狀`std`。
 
 ## <a name="nested-namespaces"></a>巢狀命名空間
 

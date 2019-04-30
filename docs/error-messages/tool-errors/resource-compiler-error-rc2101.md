@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
 ms.openlocfilehash: 595e87b73d79a01993e0e9b3aaa814332b21413f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448018"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345280"
 ---
 # <a name="resource-compiler-error-rc2101"></a>資源編譯器錯誤 RC2101
 
@@ -19,7 +19,7 @@ ms.locfileid: "50448018"
 
 資源編譯器檔案包含 **#pragma**指示詞。
 
-使用 **#ifndef**與資源編譯器定義當它處理的 include 檔案的 RC_INVOKED 常數的前置處理器指示詞。 地方 **#pragma**指示詞的定義 RC_INVOKED 常數時，不會處理的程式碼區塊中。 只能由 C/c + + 編譯器，而不是由資源編譯器處理區塊中的程式碼。 下列程式碼範例會示範這項技術：
+使用 **#ifndef**與資源編譯器定義當它處理的 include 檔案的 RC_INVOKED 常數的前置處理器指示詞。 地方 **#pragma**指示詞的定義 RC_INVOKED 常數時，不會處理的程式碼區塊中。 程式碼區塊中的處理只能由 C /C++編譯器而不是由資源編譯器。 下列程式碼範例會示範這項技術：
 
 ```
 #ifndef RC_INVOKED

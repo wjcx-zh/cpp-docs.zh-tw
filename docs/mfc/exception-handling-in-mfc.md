@@ -34,25 +34,25 @@ helpviewer_keywords:
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
 ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818631"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346055"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 
 這篇文章說明在 MFC 中的例外狀況處理機制。 可使用兩種機制：
 
-- C + + 例外狀況，可以使用 MFC 3.0 版和更新版本
+- C++例外狀況，可以使用 MFC 3.0 版和更新版本
 
 - MFC 例外狀況巨集，可在 MFC 1.0 版及更新版本
 
-如果您要撰寫使用 MFC 的新應用程式，您應該使用 c + + 機制。 如果您現有的應用程式已廣泛使用此機制，您可以使用巨集為基礎的機制。
+如果您要撰寫使用 MFC 的新應用程式，您應該使用C++機制。 如果您現有的應用程式已廣泛使用此機制，您可以使用巨集為基礎的機制。
 
-您可以輕易地轉換現有的程式碼，而非 MFC 例外狀況巨集使用 c + + 例外狀況。 轉換您的程式碼和指導方針，這項操作的優點文章中說明[例外狀況：從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
+您可以輕易地轉換現有的程式碼，以使用C++例外狀況，而非 MFC 例外狀況巨集。 轉換您的程式碼和指導方針，這項操作的優點文章中說明[例外狀況：從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。
 
-如果您已開發的應用程式使用 MFC 例外狀況巨集，您可以繼續在新的程式碼中使用 c + + 例外狀況時，您現有的程式碼中使用這些巨集。 發行項[例外狀況：變更為 3.0 版中的例外狀況巨集](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這樣會提供指導方針。
+如果您已開發的應用程式使用 MFC 例外狀況巨集，您可以繼續在您現有的程式碼中使用這些巨集，同時使用C++中新的程式碼的例外狀況。 發行項[例外狀況：變更為 3.0 版中的例外狀況巨集](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)這樣會提供指導方針。
 
 > [!NOTE]
 >  若要啟用 c + + 例外狀況處理程式碼中，選取 C/c + + 專案的資料夾中的 [程式碼產生] 頁面上的 啟用 c + + 例外狀況[屬性頁](../build/reference/property-pages-visual-cpp.md)對話方塊中或使用[/EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項。
@@ -75,7 +75,7 @@ ms.locfileid: "57818631"
 
 - 錯誤的執行
 
-   呼叫端會傳遞至函式的引數的一些錯誤或不適當的內容中呼叫函式。 這種情況會導致錯誤，並應判斷提示程式開發期間所偵測到。 (如需有關判斷提示的詳細資訊，請參閱 < [C/c + + 判斷提示](/visualstudio/debugger/c-cpp-assertions)。)
+   呼叫端會傳遞至函式的引數的一些錯誤或不適當的內容中呼叫函式。 這種情況會導致錯誤，並應判斷提示程式開發期間所偵測到。 (如需有關判斷提示的詳細資訊，請參閱 < [C /C++判斷提示](/visualstudio/debugger/c-cpp-assertions)。)
 
 - 異常的執行
 
@@ -85,7 +85,7 @@ ms.locfileid: "57818631"
 
 ##  <a name="_core_mfc_exception_support"></a> MFC 例外狀況支援
 
-不論您直接使用 c + + 例外狀況，或是使用 MFC 例外狀況巨集，您將使用[CException 類別](../mfc/reference/cexception-class.md)或`CException`-衍生的 framework，或您的應用程式可能會擲回的物件。
+您是否使用C++例外狀況直接或使用 MFC 例外狀況巨集，您會使用[CException 類別](../mfc/reference/cexception-class.md)或`CException`-衍生的 framework，或您的應用程式可能會擲回的物件。
 
 下表顯示由 MFC 提供的預先定義的例外狀況。
 
@@ -103,7 +103,7 @@ ms.locfileid: "57818631"
 |[CUserException 類別](../mfc/reference/cuserexception-class.md)|警示訊息方塊中，使用使用者的例外狀況則會擲回泛型[CException 類別](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC 支援 c + + 例外狀況和 MFC 例外狀況巨集。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式 (SEH)，如所述[Structured Exception Handling](/windows/desktop/debug/structured-exception-handling)。
+>  MFC 兩者皆支援C++例外狀況和 MFC 例外狀況巨集。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式 (SEH)，如所述[Structured Exception Handling](/windows/desktop/debug/structured-exception-handling)。
 
 ##  <a name="_core_further_reading_about_exceptions"></a> 深入了解例外狀況
 
@@ -119,15 +119,15 @@ ms.locfileid: "57818631"
 
 - [例外狀況：資料庫例外狀況](../mfc/exceptions-database-exceptions.md)
 
-- [例外狀況：OLE Exceptions](../mfc/exceptions-ole-exceptions.md)
+- [例外狀況：OLE 例外狀況](../mfc/exceptions-ole-exceptions.md)
 
-下列文件比較 MFC 例外狀況巨集，以 c + + 例外狀況關鍵字，並說明如何能夠調整您的程式碼：
+下列文件比較 MFC 例外狀況巨集，使用C++例外狀況關鍵字，並說明如何能夠調整您的程式碼：
 
 - [例外狀況：3.0 版例外狀況巨集的變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
 - [例外狀況：從 MFC 例外狀況巨集轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)
 
-- [例外狀況：使用 MFC 巨集和 c + + 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
+- [例外狀況：使用 MFC 巨集和 C++ 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
 ## <a name="see-also"></a>另請參閱
 

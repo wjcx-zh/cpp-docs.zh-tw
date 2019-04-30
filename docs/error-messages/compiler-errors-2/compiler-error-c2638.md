@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2638
 ms.assetid: 9d4275e8-406d-455e-afee-3a37799230e0
 ms.openlocfilehash: 0c4c1e73c97f51bb0e52a618829ffb0bed417a45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395426"
 ---
 # <a name="compiler-error-c2638"></a>編譯器錯誤 C2638
 

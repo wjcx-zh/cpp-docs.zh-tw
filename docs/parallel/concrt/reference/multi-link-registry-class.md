@@ -15,16 +15,15 @@ helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
 ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394451"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry 類別
 
-
-  `multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。
+`multi_link_registry` 物件是管理多個來源區塊或多個目標區塊的 `network_link_registry`。
 
 ## <a name="syntax"></a>語法
 

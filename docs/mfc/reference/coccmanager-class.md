@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: a83f58b8de2411577d9fc025f7a8f8dc535ea8b3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388263"
 ---
 # <a name="coccmanager-class"></a>COccManager 類別
 

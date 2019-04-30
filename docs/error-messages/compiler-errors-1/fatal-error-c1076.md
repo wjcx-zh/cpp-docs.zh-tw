@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C1076
 ms.assetid: 84ac1180-3e8a-48e8-9f77-7f18a778b964
 ms.openlocfilehash: 91753a49498548b4e523cd8564ee7a7ca7a3b373
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406947"
 ---
 # <a name="fatal-error-c1076"></a>嚴重錯誤 C1076
 
@@ -25,7 +25,7 @@ ms.locfileid: "57751670"
 
 1. 請考慮減少使用指定的平行處理序數目 **/maxcpucount** MSBUILD 的選項。搭配 EXE **/MP** CL 選項。EXE。 如需詳細資訊，請參閱 <<c0> [ 先行編譯標頭 (PCH) 問題和建議](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/)。
 
-1. 如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。 如需詳細資訊，請參閱[如何：啟用在命令列上 64 位元 Visual c + + 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
+1. 如果您是在 64 位元作業系統上使用 32 位元裝載的編譯器，請改用 64 位元裝載的編譯器。 如需詳細資訊，請參閱[如何：啟用 64 位元視覺效果C++命令列上的工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)。
 
 1. 排除不必要的包含檔案。
 

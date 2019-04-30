@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412029"
 ---
 # <a name="timeget-class"></a>time_get 類別
 
@@ -220,7 +220,7 @@ iter_type first,
 *first*<br/>
 輸入迭代器，表示要轉換的序列開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示序列的結尾。
 
 *iosbase*<br/>
@@ -313,7 +313,7 @@ virtual iter_type do_get_date(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -364,7 +364,7 @@ virtual iter_type do_get_monthname(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -407,7 +407,7 @@ virtual iter_type do_get_time(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -458,7 +458,7 @@ virtual iter_type do_get_weekday(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -501,7 +501,7 @@ virtual iter_type do_get_year(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -556,7 +556,7 @@ iter_type get(
 *first*<br/>
 輸入迭代器，表示要轉換的序列是否開始。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，表示要轉換之序列的結束。
 
 *iosbase*<br/>
@@ -590,7 +590,7 @@ iter_type get(
 
 第二個成員函式呼叫 `do_get`，且由 `[fmt_first, fmt_last)` 分隔的格式控制。 它會將格式視為欄位序列，其中每個欄位決定 `[first, last)` 分隔的零或多個輸入項目轉換。 它會傳回迭代器，指定第一個未轉換的項目。 有三種欄位：
 
-百分比 （%） 格式，後面接著選擇性的修飾詞*mod*集中 [EOQ #]，後面接著轉換規範*fmt*，來取代*第一個*所傳回的值`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 轉換失敗的設定`ios_base::failbit`中*狀態*，並傳回。
+百分比 （%）格式，後面接著選擇性的修飾詞*mod*集中 [EOQ #]，後面接著轉換規範*fmt*，來取代*第一個*所傳回的值與`do_get(first, last, iosbase, state, ptm, fmt, mod)`. 轉換失敗的設定`ios_base::failbit`中*狀態*，並傳回。
 
 此格式中空白項目會略過零個或多個空白項目。
 
@@ -613,7 +613,7 @@ iter_type get_date(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -707,7 +707,7 @@ iter_type get_monthname(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -799,7 +799,7 @@ iter_type get_time(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -880,7 +880,7 @@ iter_type get_weekday(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -957,7 +957,7 @@ iter_type get_year(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *iosbase*<br/>
@@ -1047,11 +1047,11 @@ explicit time_get(size_t refs = 0);
 
 可能值*refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 

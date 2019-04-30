@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
 ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395218"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>編譯器警告 (層級 4) C4706
 

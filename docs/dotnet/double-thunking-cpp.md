@@ -9,15 +9,15 @@ helpviewer_keywords:
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
 ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404477"
 ---
 # <a name="double-thunking-c"></a>Double Thunking (C++)
 
-Double thunking 指的是效能的您可能會遇到 Visual c + + managed 函式，其中程式執行受管理的內容呼叫的函式呼叫才能夠呼叫 managed 函式呼叫函式的原生進入點時損失。 本主題討論 double thunking 的發生位置，並避免可改善效能。
+您可能會遇到函式呼叫的受管理的內容中呼叫的視覺效果時的效能損失 double thunking 參考C++受管理的函式和程式執行，才能夠呼叫 managed 函式呼叫函式的原生進入點。 本主題討論 double thunking 的發生位置，並避免可改善效能。
 
 ## <a name="remarks"></a>備註
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
 ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412978"
 ---
 # <a name="maskarray-class"></a>mask_array 類別
 
@@ -61,7 +61,7 @@ int main( )
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 The initial operand valarray is:  (0 -1 2 -1 4 -1 6 -1 8 -1).

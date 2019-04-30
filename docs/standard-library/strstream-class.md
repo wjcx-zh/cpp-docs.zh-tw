@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
 ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412289"
 ---
 # <a name="strstream-class"></a>strstream 類別
 
@@ -155,7 +155,7 @@ strstream(char* ptr,
 *count*<br/>
 緩衝區的大小。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 *ptr*<br/>

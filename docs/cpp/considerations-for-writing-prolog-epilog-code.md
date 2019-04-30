@@ -9,11 +9,11 @@ helpviewer_keywords:
 - stack, stack frame layout
 ms.assetid: c7814de2-bb5c-4f5f-96d0-bcfd2ad3b182
 ms.openlocfilehash: a70c444af9e1622b3f46837fcfa2d5e8856abf30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399131"
 ---
 # <a name="considerations-for-writing-prologepilog-code"></a>撰寫初構/終解程式碼的考量
 
@@ -47,7 +47,7 @@ ret                       ; Return from function
 
 編譯器會提供一種符號， `__LOCAL_SIZE`，函式初構程式碼的內嵌組合語言區塊中使用。 這個符號是用來在自訂初構程式碼中堆疊框架上為區域變數配置空間。
 
-編譯器會判斷值`__LOCAL_SIZE`。 其值是所有使用者定義之區域變數和編譯器所產生之暫存變數的位元組總數。 `__LOCAL_SIZE` 可用來只當做為即時運算元，它不能用在運算式中。 您不得變更或重新定義這個符號的值。 例如: 
+編譯器會判斷值`__LOCAL_SIZE`。 其值是所有使用者定義之區域變數和編譯器所產生之暫存變數的位元組總數。 `__LOCAL_SIZE` 可用來只當做為即時運算元，它不能用在運算式中。 您不得變更或重新定義這個符號的值。 例如：
 
 ```
 mov        eax, __LOCAL_SIZE           ;Immediate operand--Okay

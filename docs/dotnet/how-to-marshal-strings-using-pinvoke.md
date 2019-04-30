@@ -9,15 +9,15 @@ helpviewer_keywords:
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
 ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404399"
 ---
 # <a name="how-to-marshal-strings-using-pinvoke"></a>HOW TO：封送處理字串使用 PInvoke
 
-本主題說明如何在原生函式會接受 C 樣式字串可使用的 CLR 字串呼叫輸入使用.NET Framework 平台叫用支援的 system:: string。 Visual c + + 程式設計人員會建議改為使用 c + + Interop 功能 （如果可能），因為 P/Invoke 提供極少的編譯時期錯誤，報告，不是類型安全，而且可能會非常繁瑣的實作。 如果未受管理的 API 會封裝為 DLL，而且沒有可用的原始程式碼，P/Invoke 是唯一的選項，但否則看到[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
+本主題說明如何在原生函式會接受 C 樣式字串可使用的 CLR 字串呼叫輸入使用.NET Framework 平台叫用支援的 system:: string。 視覺化C++程式設計人員是鼓勵使用C++Interop 功能，而是 （如果可能） 因為 P/Invoke 提供報告，不是類型安全，並可能會非常繁瑣實作小小的編譯時期錯誤。 如果未受管理的 API 會封裝為 DLL，而且沒有可用的原始程式碼，P/Invoke 是唯一的選項，但否則看到[使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 Managed 和 unmanaged 字串會以不同的方式在記憶體中配置，因此傳遞字串從 managed 到 unmanaged 函式需要<xref:System.Runtime.InteropServices.MarshalAsAttribute>屬性指示編譯器插入封送處理字串資料的必要的轉換機制正確且安全地。
 

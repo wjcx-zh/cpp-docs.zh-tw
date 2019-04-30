@@ -7,11 +7,11 @@ helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
 ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410849"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
@@ -77,7 +77,7 @@ void swap (
 *Type*<br/>
 儲存在向量中之資料類型的樣板參數。
 
-*配置器*<br/>
+*Allocator*<br/>
 儲存之配置器物件的樣板參數，負責記憶體配置和解除配置。
 
 *left*<br/>

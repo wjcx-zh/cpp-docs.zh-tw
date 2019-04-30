@@ -14,11 +14,11 @@ helpviewer_keywords:
 - user interface threads [C++]
 ms.assetid: 979605f8-3988-44b5-ac9c-b8cce7fcce14
 ms.openlocfilehash: bcffc2964d8e15fd47f437366863748175e12622
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407662"
 ---
 # <a name="multithreading-with-c-and-mfc"></a>使用 C++ 和 MFC 進行多執行緒處理
 
@@ -34,7 +34,7 @@ MFC 會分辨兩種類型的執行緒： 使用者介面執行緒和背景工作
 
 其中多個執行緒可能會需要存取相同物件的情況下，應該會提供特別注意。 [多執行緒：程式設計提示](multithreading-programming-tips.md)說明技巧，您可以使用來解決在這些情況下可能發生的問題。 [多執行緒：如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)描述如何使用可用來同步處理從多個執行緒存取單一物件的類別。
 
-撰寫和偵錯多執行緒的程式設計是原本就複雜並難以處理的工作，因為您必須確定一次不由多個執行緒存取的物件。 多執行緒主題不會教導多執行緒程式設計，如何在多執行緒程式中使用 MFC 基本的概念。 包含 Visual c + + 中的多執行緒的 MFC 範例說明幾個多執行緒的新增功能和 Win32 Api 的 MFC; 不包含不過，它們只主要做為起點。
+撰寫和偵錯多執行緒的程式設計是原本就複雜並難以處理的工作，因為您必須確定一次不由多個執行緒存取的物件。 多執行緒主題不會教導多執行緒程式設計，如何在多執行緒程式中使用 MFC 基本的概念。 多執行緒的 MFC 範例中包含的視覺效果C++說明幾個多執行緒的新增功能和 Win32 Api 的 MFC; 不包含不過，它們只主要做為起點。
 
 如需作業系統處理程序和執行緒的方式的詳細資訊，請參閱[處理序和執行緒](/windows/desktop/ProcThread/processes-and-threads)Windows SDK 中。
 

@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2400 到 C2499
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2400 至 C2499
+ms.date: 04/21/2019
 f1_keywords:
 - C2416
 - C2442
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - C2481
 - C2497
 ms.assetid: f1f05572-af0b-497b-bde4-4c81ec01af3b
-ms.openlocfilehash: 2ba9a55610c6f2e5e38733125414c6076e2c2f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 569780a0716d26406c1703fa91fe5216d92ce653
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404347"
 ---
-# <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 到 C2499
+# <a name="compiler-errors-c2400-through-c2499"></a>編譯器錯誤 C2400 至 C2499
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -139,3 +139,8 @@ ms.locfileid: "50476189"
 |編譯器錯誤 C2497|'*識別碼*': 'implementation_key' 只能套用至函式宣告|
 |[編譯器錯誤 C2498](compiler-error-c2498.md)|'*函式*': 'novtable' 只能套用至類別宣告或定義|
 |[編譯器錯誤 C2499](compiler-error-c2499.md)|'*類別*': 類別不能自己的基底類別|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410965"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 類別
 
@@ -106,13 +106,13 @@ static pointer allocate(Alloc& al, size_type count,
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 *count*<br/>
 要配置的元素數。
 
-*提示*<br/>
+*hint*<br/>
 `const_pointer`，可找出要求之前所配置物件的位址，來協助配置器物件符合儲存要求。 Null 指標視為沒有提示。
 
 ### <a name="return-value"></a>傳回值
@@ -134,13 +134,13 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 *ptr*<br/>
 要建構物件之位置的指標。
 
-*引數*<br/>
+*args*<br/>
 傳遞給物件建構函式的引數清單。
 
 ### <a name="remarks"></a>備註
@@ -159,7 +159,7 @@ static void deallocate(Alloc al,
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 *ptr*<br/>
@@ -174,7 +174,7 @@ static void deallocate(Alloc al,
 
 這個方法不會擲回任何項目。
 
-## <a name="destroy"></a>  allocator_traits:: destroy
+## <a name="destroy"></a>  allocator_traits::destroy
 
 靜態方法，使用指定的配置器在物件上呼叫解構函式，而不解除配置其記憶體。
 
@@ -185,7 +185,7 @@ static void destroy(Alloc& al, Uty* ptr);
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 *ptr*<br/>
@@ -205,7 +205,7 @@ static size_type max_size(const Alloc& al);
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 ### <a name="remarks"></a>備註
@@ -222,7 +222,7 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*al*<br/>
 配置器物件。
 
 ### <a name="return-value"></a>傳回值

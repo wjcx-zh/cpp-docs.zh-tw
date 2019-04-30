@@ -12,11 +12,11 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
 ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407649"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>多執行緒：何時使用 MFC 的同步處理類別
 
@@ -52,7 +52,7 @@ MFC 提供的多執行緒的類別分為兩類： 同步處理物件 ([CSyncObje
 
 選擇要使用哪一個同步存取類別則更加簡單。 如果存取單一受控制的資源，只有關您的應用程式，使用`CSingleLock`。 如果它需要存取多個受控制的任何的資源一個時，使用`CMultiLock`。 在範例 1，`CSingleLock`但已使用，因為每個案例中只有一個資源需要在任何特定時間。
 
-如需如何使用同步類別的資訊，請參閱[多執行緒：如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 多執行緒 MFC 支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](multithreading-with-cpp-and-mfc.md)。
+如需如何使用同步類別的資訊，請參閱[多執行緒：如何使用同步類別](multithreading-how-to-use-the-synchronization-classes.md)。 同步處理的相關資訊，請參閱[同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 多執行緒 MFC 支援的詳細資訊，請參閱[進行多執行緒處理，與C++和 MFC](multithreading-with-cpp-and-mfc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

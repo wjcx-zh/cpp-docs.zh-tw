@@ -9,15 +9,15 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
 ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400561"
 ---
 # <a name="how-to-marshal-function-pointers-using-pinvoke"></a>HOW TO：封送處理函式指標使用 PInvoke
 
-本主題說明如何在受管理的委派時與相互操作 unmanaged 函式使用.NET Framework P/Invoke 功能可用來取代函式指標。 不過，Visual c + + 程式設計師都建議改為使用 c + + Interop 功能 （如果可能），因為 P/Invoke 提供極少的編譯時期錯誤，報告，不是類型安全，而且可能會非常繁瑣，來實作。 如果未受管理的 API 會封裝成 DLL，而且沒有可用的原始程式碼，P/Invoke 就會是唯一的選項。 否則，請參閱下列主題：
+本主題說明如何在受管理的委派時與相互操作 unmanaged 函式使用.NET Framework P/Invoke 功能可用來取代函式指標。 不過，VisualC++程式設計人員是鼓勵使用C++Interop 功能，而是 （如果可能） 因為 P/Invoke 提供報告，不是類型安全，並可能會非常繁瑣實作小小的編譯時期錯誤。 如果未受管理的 API 會封裝成 DLL，而且沒有可用的原始程式碼，P/Invoke 就會是唯一的選項。 否則，請參閱下列主題：
 
 - [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
 ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392774"
 ---
 # <a name="mfc-activex-controls-adding-custom-properties"></a>MFC ActiveX 控制項：加入自訂屬性
 

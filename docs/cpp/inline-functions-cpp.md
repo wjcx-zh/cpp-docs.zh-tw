@@ -13,11 +13,11 @@ helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
 ms.openlocfilehash: 55cf598877c2447e0f80e783b53b290699042b8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607814"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400587"
 ---
 # <a name="inline-functions-c"></a>內嵌函式 (C++)
 
@@ -78,7 +78,7 @@ int main()
 
 編譯器會將內嵌展開選項和關鍵字視為建議， 並不保證函式一定會內嵌。 您無法強制編譯器內嵌特定函式，即使 **__forceinline**關鍵字。 進行編譯時 **/clr**，編譯器不會內嵌函式如果沒有套用至函式的安全性屬性。
 
-**內嵌**關鍵字是僅適用於 c + +。 **__Inline**並 **__forceinline**關鍵字是 C 和 c + + 中可用。 為了與舊版中，相容性 **_inline**並 **_forceinline**同義 **__inline**，並 **__forceinline**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
+**內嵌**關鍵字是僅適用於C++。 **__Inline**並 **__forceinline**關鍵字可用於這兩個 C 和C++。 為了與舊版中，相容性 **_inline**並 **_forceinline**同義 **__inline**，並 **__forceinline**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
 
 **內嵌**關鍵字會指示編譯器內嵌展開為慣用。 不過，編譯器可能會建立函式的個別執行個體 (具現化) 和建立標準呼叫連結，而不是將程式碼內嵌插入。 在兩種情況下，可能發生這種情況：
 

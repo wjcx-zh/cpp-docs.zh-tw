@@ -12,16 +12,15 @@ helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
 ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391019"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source 類別
 
-
-  `cancellation_token_source` 類別代表取消某個可取消作業的能力。
+`cancellation_token_source` 類別代表取消某個可取消作業的能力。
 
 ## <a name="syntax"></a>語法
 
@@ -116,15 +115,14 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 語彙基元，其取消作業將會導致取消傳回的語彙基元來源。 請注意，傳回的語彙基元來源也可以獨立取消，不受此參數包含的來源影響。
 
 *_Begin*<br/>
-C + + 標準程式庫迭代器，對應的語彙基元範圍的開頭到接聽的取消。
+C++標準程式庫迭代器，對應的語彙基元範圍的開頭到接聽的取消。
 
 *_End*<br/>
-C + + 標準程式庫迭代器，對應至權杖的範圍結尾接聽的取消。
+C++標準程式庫迭代器，對應至權杖的範圍結尾接聽的取消。
 
 ### <a name="return-value"></a>傳回值
 
-
-  `cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。
+`cancellation_token_source`，其會在 `_Src` 參數提供的語彙基元已取消時取消。
 
 ##  <a name="get_token"></a> get_token
 

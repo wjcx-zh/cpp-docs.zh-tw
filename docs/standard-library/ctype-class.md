@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394139"
 ---
 # <a name="ctype-class"></a>ctype 類別
 
@@ -147,11 +147,11 @@ explicit ctype(size_t _Refs = 0);
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
@@ -183,7 +183,7 @@ virtual const CharType *do_is(
 *first*<br/>
 要分類其屬性的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要分類其屬性的範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>
@@ -230,7 +230,7 @@ virtual const CharType* do_narrow(
 *first*<br/>
 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>
@@ -269,7 +269,7 @@ virtual const CharType *do_scan_is(
 *first*<br/>
 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -303,7 +303,7 @@ virtual const CharType *do_scan_not(
 *first*<br/>
 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -338,7 +338,7 @@ virtual const CharType *do_tolower(
 *first*<br/>
 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -373,7 +373,7 @@ virtual const CharType *do_toupper(
 *first*<br/>
 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -409,7 +409,7 @@ virtual const char *do_widen(
 *first*<br/>
 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>
@@ -453,7 +453,7 @@ const CharType *is(
 *first*<br/>
 要分類其屬性的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要分類其屬性的範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>
@@ -533,7 +533,7 @@ const CharType* narrow(
 *first*<br/>
 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>
@@ -594,7 +594,7 @@ const CharType *scan_is(
 *first*<br/>
 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -650,7 +650,7 @@ const CharType *scan_not(
 *first*<br/>
 要掃描的範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要掃描的範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -705,7 +705,7 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 *first*<br/>
 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -760,7 +760,7 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 *first*<br/>
 要轉換大小寫的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換大小寫的字元範圍中，緊接著最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -815,7 +815,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *first*<br/>
 要轉換的字元範圍中，第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*<br/>

@@ -21,16 +21,15 @@ helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
 ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394360"
 ---
 # <a name="propagatorblock-class"></a>propagator_block 類別
 
-
-  `propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。
+`propagator_block` 類別是同時為來源和目標之訊息區塊的抽象基底類別。 它結合 `source_block` 和 `target_block` 類別的功能。
 
 ## <a name="syntax"></a>語法
 
@@ -178,8 +177,7 @@ virtual message_status propagate(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -207,8 +205,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -267,8 +264,7 @@ virtual message_status send(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

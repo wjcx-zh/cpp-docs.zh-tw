@@ -9,15 +9,15 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404633"
 ---
 # <a name="threading-and-marshaling-ccx"></a>執行緒和封送處理 (C++/CX)
 
-在大部分情況下，可以從任何執行緒存取的 Windows 執行階段類別，如同標準的 c + + 物件，執行個體。 這類類別都稱為 "Agile"。 不過，少數隨附於 Windows 的 Windows 執行階段類別是非 agile，而且必須供更類似於標準 c + + 物件的 COM 物件。 您不必非常了解 COM 才能使用非 agile 的類別，但是必須將類別的執行緒模型及其封送處理行為納入考量。 針對這些必須使用非 Agile 類別之執行個體的少見情況，本文將提供背景知識和指引供您參考。
+在大部分情況下，Windows 執行階段類別的執行個體像標準C++物件，可以從任何執行緒存取。 這類類別都稱為 "Agile"。 不過，少數隨附於 Windows 的 Windows 執行階段類別的非 agile，而且僅必須比標準的 COM 物件一樣多取用C++物件。 您不必非常了解 COM 才能使用非 agile 的類別，但是必須將類別的執行緒模型及其封送處理行為納入考量。 針對這些必須使用非 Agile 類別之執行個體的少見情況，本文將提供背景知識和指引供您參考。
 
 ## <a name="threading-model-and-marshaling-behavior"></a>執行緒模型和封送處理行為
 
@@ -93,11 +93,11 @@ ref class MyOptions
 
 需留意到 `Agile` 無法做為 ref 類別中的傳回值或參數。 `Agile<T>::Get()` 方法會傳回您可以在公用方法或屬性中跨應用程式二進位介面 (ABI) 傳遞的物件的控制代碼 (^)。
 
-Visual c + + 中，當您建立具有 「 無 」，封送處理行為的跨處理序 Windows 執行階段類別的參考，編譯器會發出警告 C4451，但不建議您考慮使用`Platform::Agile<T>`。  除了此警告外，編譯器無法提供進一歩的協助，因此您必須正確使用類別，並確保您的程式碼只會從使用者介面執行緒呼叫 STA 元件，從背景執行緒呼叫 MTA 元件。
+在視覺效果C++，當您建立具有封送處理行為"None"，則編譯器將發出警告 C4451，但不建議您考慮使用跨處理序 Windows 執行階段類別的參考`Platform::Agile<T>`。  除了此警告外，編譯器無法提供進一歩的協助，因此您必須正確使用類別，並確保您的程式碼只會從使用者介面執行緒呼叫 STA 元件，從背景執行緒呼叫 MTA 元件。
 
 ## <a name="authoring-agile-windows-runtime-components"></a>撰寫 agile 的 Windows 執行階段元件
 
-當您定義的 ref 類別在 C + + /CX 中，它會是 agile 預設 — 也就是它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 執行階段 c + + 樣板程式庫，您可以將您的類別敏捷式軟體開發藉由衍生自`FtmBase`，它會使用`FreeThreadedMarshaller`。  如果您撰寫具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的類別，請確定該類別具備執行緒安全。
+當您定義中的 ref 類別C++/CX，它是預設敏捷式軟體開發 — 也就是它具有`ThreadingModel`= Both 和`MarshallingType`= Agile。  如果您使用 Windows 執行階段C++樣板程式庫，您可以將您的類別敏捷式軟體開發藉由衍生自`FtmBase`，它會使用`FreeThreadedMarshaller`。  如果您撰寫具有 `ThreadingModel`=Both 或 `ThreadingModel`=MTA 的類別，請確定該類別具備執行緒安全。
 
 您可以修改 ref 類別的執行緒模型和封送處理行為。 但是，如果您進行變更而使其成為非 Agile 類別，您必須了解這些變更的相關影響。
 

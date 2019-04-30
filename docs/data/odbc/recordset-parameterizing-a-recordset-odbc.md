@@ -8,11 +8,11 @@ helpviewer_keywords:
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
 ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397753"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>資料錄集：參數化資料錄集 (ODBC)
 
@@ -176,5 +176,5 @@ if( !rsStudents.Requery( ) )
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

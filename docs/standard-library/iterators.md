@@ -6,11 +6,11 @@ helpviewer_keywords:
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
 ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396134"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -86,7 +86,7 @@ for (auto num : vec)
 > [!NOTE]
 > 您可以透過使用 range-for 迴圈來避免使用迭代器。 如需詳細資訊，請參閱 <<c0> [ 範圍架構 for 陳述式](../cpp/range-based-for-statement-cpp.md)。
 
-Visual c + + 現在提供已檢查的迭代器和偵錯迭代器，以確保您不覆寫容器的界限。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)和[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。
+視覺化C++現在提供已檢查的迭代器和偵錯迭代器，以確保您不覆寫容器的界限。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)和[偵錯迭代器支援](../standard-library/debug-iterator-support.md)。
 
 ## <a name="see-also"></a>另請參閱
 

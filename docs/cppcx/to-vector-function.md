@@ -7,11 +7,11 @@ helpviewer_keywords:
 - to_vector Function
 ms.assetid: 9cdd5123-7243-4def-a1d3-162e0bf6219e
 ms.openlocfilehash: 4fa4e9c620519cc6bb2f96d346ded88b6cc826ae
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404620"
 ---
 # <a name="tovector-function"></a>to_vector 函式
 
@@ -45,4 +45,4 @@ IVector 或 IVectorView 介面，提供對基礎 Vector 或 VectorView 物件的
 
 ## <a name="see-also"></a>另請參閱
 
-[Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)
+[Windows::Foundation::Collections 命名空間](../cppcx/windows-foundation-collections-namespace-c-cx.md)

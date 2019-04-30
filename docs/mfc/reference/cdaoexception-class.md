@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399796"
 ---
 # <a name="cdaoexception-class"></a>CDaoException 類別
 
@@ -153,7 +153,7 @@ void GetErrorInfo(int nIndex);
 
 - 錯誤碼
 
-- 原始程式檔
+- Source
 
 - 描述
 
@@ -194,7 +194,7 @@ void GetErrorInfo(int nIndex);
 |CDaoErrorInfo 成員|資訊|意義|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|錯誤碼|DAO 錯誤程式碼|
-|`m_strSource`|原始程式檔|物件或最初產生錯誤的應用程式的名稱|
+|`m_strSource`|Source|物件或最初產生錯誤的應用程式的名稱|
 |`m_strDescription`|描述|與錯誤相關聯的描述性字串|
 |`m_strHelpFile`|說明檔|Windows 說明的檔案，使用者可以在其中取得問題的相關資訊的路徑|
 |`m_lHelpContext`|說明內容|DAO [說明] 檔案中的主題內容識別碼|

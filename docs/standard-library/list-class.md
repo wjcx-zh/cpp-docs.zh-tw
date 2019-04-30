@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413212"
 ---
 # <a name="list-class"></a>list 類別
 
@@ -121,7 +121,7 @@ class list
 *Type*<br/>
 要存放在清單中的元素資料類型。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator**\<*類型*>。
 
 ## <a name="remarks"></a>備註
@@ -251,7 +251,7 @@ void assign(
 *計數*<br/>
 插入清單中項目的複本數目。
 
-*val*<br/>
+*Val*<br/>
 插入清單中之項目的值。
 
 *IList*<br/>
@@ -986,7 +986,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 從清單中移除的第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 從清單中移除的最後一個元素之後的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1151,7 +1151,7 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 |參數|描述|
 |-|-|
 |*Where*|目標 list 中第一個元素插入的位置。|
-|*val*|插入清單中之項目的值。|
+|*Val*|插入清單中之項目的值。|
 |*計數*|插入清單中的元素數目。|
 |*第一個*|要複製之引數清單的元素範圍中，第一個元素的位置。|
 |*最後一個*|要複製之引數清單的元素範圍中，最後一個元素之後的位置。|
@@ -1274,7 +1274,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |-|-|
 |*Al*|搭配這個物件使用的配置器類別。|
 |*計數*|建構的清單中元素的數目。|
-|*val*|list 中元素的值。|
+|*Val*|list 中元素的值。|
 |*右邊*|list，其中有要複製的建構的 list。|
 |*第一個*|要複製的元素範圍中第一個元素的位置。|
 |*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
@@ -1952,7 +1952,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。
 
 ### <a name="example"></a>範例
@@ -2538,7 +2538,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>參數
 
-*預測*<br/>
+*pred*<br/>
 供二元述詞用來比較連續元素。
 
 ### <a name="remarks"></a>備註

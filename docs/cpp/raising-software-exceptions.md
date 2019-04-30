@@ -14,11 +14,11 @@ helpviewer_keywords:
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
 ms.openlocfilehash: 49ee800bafff017c29b73c5f6fd64318009a140a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403460"
 ---
 # <a name="raising-software-exceptions"></a>引發軟體例外狀況
 
@@ -38,7 +38,7 @@ ms.locfileid: "50562041"
 
 |Bits|建議的二進位設定|描述|
 |----------|--------------------------------|-----------------|
-|31-30|11|這兩個位元負責描述程式碼的基本狀態：11 = 錯誤、00 = 成功、01 = 告知性、10 = 警告。|
+|31-30|11|這些兩個位元負責描述程式碼的基本狀態：11 = 錯誤、 00 = 成功、 01 = 告知性、 10 = 警告。|
 |29|1|用戶端位元。 設為 1，表示使用者定義的程式碼。|
 |28|0|保留位元  (保持設為 0)。|
 
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 如果您只想要引發例外狀況，可以將最後三個參數設為 0。 在傳遞額外資訊以及設定旗標防止處理常式繼續執行時，最後三個參數會很有用。 請參閱[RaiseException](https://msdn.microsoft.com/library/windows/desktop/ms680552)函式，如需詳細資訊的 Windows SDK 中。
 
-然後就可以在您的例外狀況處理篩選條件中，測試您所定義的代碼。 例如: 
+然後就可以在您的例外狀況處理篩選條件中，測試您所定義的代碼。 例如：
 
 ```cpp
 __try {

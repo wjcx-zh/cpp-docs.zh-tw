@@ -7,11 +7,11 @@ helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
 ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412965"
 ---
 # <a name="matchresults-class"></a>match_results 類別
 
@@ -29,7 +29,7 @@ class match_results
 *BidIt*<br/>
 子相符項目的迭代器類型。
 
-*配置*<br/>
+*Alloc*<br/>
 管理儲存體的配置器類型。
 
 ## <a name="remarks"></a>備註
@@ -68,11 +68,11 @@ class match_results
 |[get_allocator](#get_allocator)|傳回已儲存的配置器。|
 |[length](#length)|傳回子相符項目的長度。|
 |[max_size](#max_size)|取得最大子相符項目數。|
-|[位置](#position)|取得子群組的起始位移。|
+|[position](#position)|取得子群組的起始位移。|
 |[prefix](#prefix)|取得第一個子相符項目之前的序列。|
 |[size](#size)|計算子相符項目數。|
 |[str](#str)|傳回子相符項目。|
-|[後置詞](#suffix)|取得最後一個子相符項目之後的序列。|
+|[suffix](#suffix)|取得最後一個子相符項目之後的序列。|
 |[swap](#swap)|交換兩個 match_results 物件。|
 
 ### <a name="operators"></a>運算子
@@ -369,7 +369,7 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-*配置*<br/>
+*alloc*<br/>
 要儲存的配置器物件。
 
 *right*<br/>

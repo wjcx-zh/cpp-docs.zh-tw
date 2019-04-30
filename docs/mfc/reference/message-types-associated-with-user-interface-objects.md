@@ -7,11 +7,11 @@ helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
 ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412759"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>與使用者介面物件關聯的訊息類型
 

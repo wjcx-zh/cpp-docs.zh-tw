@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
 ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405140"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
 
@@ -74,7 +74,7 @@ public:
 *RealType*<br/>
 浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*一般而言，URNG*<br/>
+*URNG*<br/>
 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註

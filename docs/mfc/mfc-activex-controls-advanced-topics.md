@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
 ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392709"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控制項：進階主題
 
@@ -43,7 +43,7 @@ ms.locfileid: "57277322"
 MFC 資料庫類別的一般概觀，請參閱 < [MFC 資料庫類別 （DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文將介紹 MFC ODBC 類別和 MFC DAO 類別，並將您導向上的更多詳細資料。
 
 > [!NOTE]
->  Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-programming.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+>  視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-programming.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a> 實作參數化的屬性
 

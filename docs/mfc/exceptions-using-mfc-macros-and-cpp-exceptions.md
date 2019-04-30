@@ -1,5 +1,5 @@
 ---
-title: '例外狀況: 使用 MFC 巨集和 c + + 例外狀況'
+title: '例外狀況: 使用 MFC 巨集和C++例外狀況'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
 ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406011"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外狀況: 使用 MFC 巨集和 c + + 例外狀況
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外狀況: 使用 MFC 巨集和C++例外狀況
 
-這篇文章討論撰寫使用 MFC 例外狀況處理巨集和 c + + 例外狀況處理關鍵字的程式碼的考量。
+本文將告訴您撰寫使用這兩個 MFC 例外狀況處理巨集的程式碼的考量，C++例外狀況處理關鍵字。
 
 本文章涵蓋下列主題：
 
@@ -35,9 +35,9 @@ ms.locfileid: "57297706"
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> 混用例外狀況關鍵字和巨集
 
-您可以混合 MFC 例外狀況巨集和相同程式中的 c + + 例外狀況關鍵字。 但您不能混合 MFC 巨集與在相同的區塊中的 c + + 例外狀況關鍵字，因為巨集例外狀況物件會自動刪除時在超出範圍，而不使用例外狀況處理關鍵字的程式碼。 如需詳細資訊，請參閱文章[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
+您可以混合使用 MFC 例外狀況巨集和C++的相同程式中的例外狀況關鍵字。 但您不能混用 MFC 巨集與C++相同的區塊中的例外狀況關鍵字因為巨集會刪除例外狀況物件，在超出範圍，而時，自動程式碼使用例外狀況處理關鍵字則否。 如需詳細資訊，請參閱文章[例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)。
 
-巨集和關鍵字的主要差異是當例外狀況超出範圍時，巨集 「 自動 」 刪除已攔截的例外狀況。 使用這些關鍵字的程式碼則否;在 catch 區塊中攔截的例外狀況必須明確刪除。 混合巨集和 c + + 例外狀況關鍵字，可以不刪除例外狀況物件時，會導致記憶體流失，或兩次刪除例外狀況時，堆積損毀。
+巨集和關鍵字的主要差異是當例外狀況超出範圍時，巨集 「 自動 」 刪除已攔截的例外狀況。 使用這些關鍵字的程式碼則否;在 catch 區塊中攔截的例外狀況必須明確刪除。 混用巨集和C++例外狀況關鍵字可以不刪除例外狀況物件時，會導致記憶體流失，或兩次刪除例外狀況時，堆積損毀。
 
 下列程式碼，比方說，會導致無效的例外狀況指標：
 

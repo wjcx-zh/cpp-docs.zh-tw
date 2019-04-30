@@ -35,15 +35,15 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411041"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
-此範本類別描述物件管理之物件型別陣列的儲存體配置和釋放`Type`。 類別的物件`allocator`是 c + + 標準程式庫中的數個容器範本類別的建構函式中指定的預設配置器物件。
+此範本類別描述物件管理之物件型別陣列的儲存體配置和釋放`Type`。 類別的物件`allocator`是在數個容器範本類別的建構函式中指定的預設配置器物件C++標準程式庫。
 
 ## <a name="syntax"></a>語法
 
@@ -59,7 +59,7 @@ class allocator
 
 ## <a name="remarks"></a>備註
 
-所有 c + + 標準程式庫容器都具有樣板參數，預設值為`allocator`。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
+所有C++標準程式庫容器都具有範本參數，預設值為`allocator`。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
 
 例如，配置器物件可在私密堆積或共用記憶體中配置儲存體，或是可針對小型或大型物件最佳化。 它也能指定透過其提供的類型定義，透過管理共用記憶體的特殊存取子物件來存取項目，或是執行自動化記憶體回收。 因此，使用配置器物件來配置儲存區的類別，應該使用這些類型來宣告指標和參考物件，如 C++ 標準程式庫中的容器所做的一般。
 
@@ -77,7 +77,7 @@ class allocator
 
 這些`Type`指定指標和參考必須採取的配置元素的格式。 ( [allocator:: pointer](#pointer)不一定相同`Type*`所有配置器物件，即使它有類別明顯定義此`allocator`。)
 
-**C++ 11 和更新版本：** 若要在您的配置器中啟用移動運算，請使用最小的配置器介面與實作複製建構函式、== 和 != 運算子、配置及解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
+**C + + 11 和更新版本：** 若要啟用您的配置器中的移動作業，使用最小配置器介面與實作複製建構函式、 = = 和 ！ = 運算子、 配置及取消配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
 
 ## <a name="members"></a>成員
 

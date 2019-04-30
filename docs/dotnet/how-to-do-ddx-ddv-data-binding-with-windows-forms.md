@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: b2957370-cf1f-4779-94ac-228cd393686c
 ms.openlocfilehash: 558c763fd18cd1569ff23435bf6156b3117f117d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387314"
 ---
 # <a name="how-to-do-ddxddv-data-binding-with-windows-forms"></a>HOW TO：執行 DDX/DDV 資料繫結搭配 Windows Form
 
@@ -19,7 +19,7 @@ ms.locfileid: "57740945"
 
 呼叫`DDX_ManagedControl`中[CWnd::DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange)建立控制項從 資源識別碼。 資料交換，您不需要使用 Windows Form 控制項使用 DDX/DDV 函式。 相反地，您可以在其中放置程式碼，以存取受管理之控制項的屬性`DoDataExchange`對話方塊 （或檢視表） 類別，如下列範例所示的方法。
 
-下列範例示範如何將原生的 c + + 字串繫結至.NET 使用者控制項。
+下列範例示範如何繫結原生C++.NET 使用者控制項的字串。
 
 ## <a name="example"></a>範例
 

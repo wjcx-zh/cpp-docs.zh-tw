@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409755"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 類別
 
@@ -51,7 +51,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*配置*<br/>
+*Alloc*<br/>
 配置器類別。
 
 *Elem*<br/>
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>參數
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *str*<br/>
@@ -241,7 +241,7 @@ virtual pos_type seekoff(
 *_Way*<br/>
 位移作業的起點。 如需可能的值，請參閱 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="return-value"></a>傳回值
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 要搜尋的位置。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -379,7 +379,7 @@ virtual int_type underflow();
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會嘗試擷取目前的項目`byte`輸入緩衝區中，從目前資料流位置前移，並傳回此元素作為**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**位元組**)。 它可以使用下列其中一個方法： 如果有讀取的位置可用，它會採用`byte`作為項目儲存在讀取位置，並前進到輸入緩衝區的下一個指標。
+受保護虛擬成員函式會嘗試擷取目前的項目`byte`輸入緩衝區中，從目前資料流位置前移，並傳回此元素作為**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**位元組**)。 它可以在其中一個方法來這樣做：如果有讀取的位置可用，它會採用`byte`作為項目儲存在讀取位置，並前進到輸入緩衝區的下一個指標。
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - runtime [C++], language portability
 ms.assetid: 677baec6-71b4-4579-94df-64f18bc117c4
 ms.openlocfilehash: e884dcfaa22bf720e9579bf2d5d866d595501887
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410521"
 ---
 # <a name="unicode-and-mbcs"></a>Unicode 和 MBCS
 
-Microsoft Foundation Classes (MFC) 程式庫、 C 執行階段程式庫，Visual c + +，Visual c + + 開發環境會啟用和協助程式的國際化程式設計。 它們提供：
+Microsoft Foundation Classes (MFC) 程式庫、 C 執行階段程式庫，視覺效果C++，和視覺效果C++開發環境可協助您國際化程式設計。 它們提供：
 
 - 在 Windows 上的 Unicode 標準的支援。 Unicode 是目前的標準，應該盡可能使用此標準。
 
@@ -32,10 +32,10 @@ Microsoft Foundation Classes (MFC) 程式庫、 C 執行階段程式庫，Visual
 
 - 工具，可簡化針對國際市場所撰寫的應用程式的 MBCS 程式設計的支援。
 
-   MBCS 啟用 Windows 作業系統版本，Visual c + + 開發系統上執行時，包括整合式原始檔程式碼編輯器、 偵錯工具和命令列工具 — 完全 MBCS 功能。 如需詳細資訊，請參閱 < [Visual c + + 中的 MBCS 支援](../text/mbcs-support-in-visual-cpp.md)。
+   MBCS 啟用 Windows 作業系統版本，視覺效果上執行時C++的開發系統，包括整合式原始檔程式碼編輯器、 偵錯工具和命令列工具 — 完全 MBCS 功能。 如需詳細資訊，請參閱 <<c0> [ 視覺效果中的 MBCS 支援C++ ](../text/mbcs-support-in-visual-cpp.md)。</c0>
 
 > [!NOTE]
->  在本文件中，MBCS 用來描述之多位元組字元的所有非 Unicode 支援。 Visual c + + 中，MBCS 一律表示 DBCS。 字元集數目比不支援 2 個位元組寬。
+>  在本文件中，MBCS 用來描述之多位元組字元的所有非 Unicode 支援。 在視覺效果C++，MBCS 一律表示 DBCS。 字元集數目比不支援 2 個位元組寬。
 
 根據定義，將 ASCII 字元集是所有多位元組字元集的子集。 在許多多位元組字元集中，0x00 - 0x7F 範圍中的每個字元都會與 ASCII 字元集中具有相同值的字元相同。 比方說，在 ASCII 和 MBCS 字元字串，1 個位元組的 NULL 字元 ('\0') 有值 0x00，並指出終止的 null 字元。
 

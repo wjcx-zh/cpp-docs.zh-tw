@@ -6,11 +6,11 @@ helpviewer_keywords:
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
 ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407794"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>逐步解說：從使用者介面執行緒中移除工作
 
@@ -52,11 +52,11 @@ ms.locfileid: "57304713"
 
 本節說明如何建立基本的 MFC 應用程式。
 
-### <a name="to-create-a-visual-c-mfc-application"></a>建立 Visual c + + MFC 應用程式
+### <a name="to-create-a-visual-c-mfc-application"></a>若要建立視覺效果C++的 MFC 應用程式
 
 1. 按一下 [ **檔案** ] 功能表上的 [ **新增**]，然後按一下 [ **專案**]。
 
-1. 在**新的專案**對話方塊中，於**已安裝的範本**窗格中，選取**Visual c + +**，然後在**範本**窗格中，選取**MFC 應用程式**。 輸入專案名稱，例如`Mandelbrot`，然後按一下 **[確定]** 以顯示**MFC 應用程式精靈**。
+1. 在**新的專案**對話方塊中，於**已安裝的範本**窗格中，選取**Visual C++** ，然後在**範本**窗格中，選取  **MFC 應用程式**。 輸入專案名稱，例如`Mandelbrot`，然後按一下 **[確定]** 以顯示**MFC 應用程式精靈**。
 
 1. 在 **應用程式類型**窗格中，選取**單一文件**。 請確認**文件/檢視架構支援**核取方塊。
 

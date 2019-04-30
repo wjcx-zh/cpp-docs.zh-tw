@@ -10,11 +10,11 @@ helpviewer_keywords:
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
 ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398977"
 ---
 # <a name="destructors-c"></a>解構函式 (C++)
 

@@ -11,19 +11,19 @@ helpviewer_keywords:
 - threading [C]
 ms.assetid: 67cdc99e-1ad9-452b-a042-ed246b70040e
 ms.openlocfilehash: b961671850acfc74cb72bc1c08aef74fdc7a64f8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407766"
 ---
 # <a name="multithreading-with-c-and-win32"></a>使用 C 和 Win32 進行多執行緒處理
 
-Microsoft Visual c + + 來建立多執行緒應用程式提供支援。 您應該考慮使用多個執行緒，如果您的應用程式需要執行耗費資源的作業，會導致使用者介面變得沒有回應。
+Microsoft VisualC++來建立多執行緒應用程式提供支援。 您應該考慮使用多個執行緒，如果您的應用程式需要執行耗費資源的作業，會導致使用者介面變得沒有回應。
 
-Visual c + + 中，有多個執行緒在程式的兩種方式： 使用 Microsoft Foundation Class (MFC) 程式庫或 C 執行階段程式庫和 Win32 API。 使用 MFC 建立多執行緒應用程式的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](multithreading-with-cpp-and-mfc.md)閱讀下列有關在 c 中的多執行緒主題之後
+視覺效果C++，有多個執行緒在程式的兩種方式： 使用 Microsoft Foundation Class (MFC) 程式庫或 C 執行階段程式庫和 Win32 API。 使用 MFC 建立多執行緒應用程式的詳細資訊，請參閱[進行多執行緒處理，與C++和 MFC](multithreading-with-cpp-and-mfc.md)閱讀下列有關在 c 中的多執行緒主題之後
 
-這些主題會說明 Visual c + + 中支援多執行緒程式建立的功能。
+這些主題說明在視覺效果的功能C++，支援多執行緒程式的建立。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 

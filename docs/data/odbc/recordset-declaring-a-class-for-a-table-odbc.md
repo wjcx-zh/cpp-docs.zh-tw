@@ -6,11 +6,11 @@ helpviewer_keywords:
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
 ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397870"
 ---
 # <a name="recordset-declaring-a-class-for-a-table-odbc"></a>資料錄集：宣告的類別 (ODBC) 的資料表
 
@@ -28,5 +28,5 @@ ms.locfileid: "59038238"
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[資料錄集：宣告的類別，預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[資料錄集：宣告預先定義查詢的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

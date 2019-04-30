@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
-ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53411958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410898"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -109,7 +109,7 @@ class vector
 *Type*<br/>
 要儲存在向量中的項目資料類型
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
 
 ## <a name="remarks"></a>備註
@@ -233,7 +233,7 @@ void assign(InputIterator First, InputIterator Last);
 *計數*<br/>
 插入向量的項目複本數目。
 
-*val*<br/>
+*Val*<br/>
 插入向量之項目的值。
 
 *IList*<br/>
@@ -1082,7 +1082,7 @@ iterator erase(
 |-|-|
 |*_Where*|要從向量中移除之項目的位置。|
 |*first*|從向量中移除之第一個項目的位置。|
-|*最後一個*|從向量中移除的最後一個項目之後的位置。|
+|*last*|從向量中移除的最後一個項目之後的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1251,7 +1251,7 @@ void insert(
 |*val*|插入向量之項目的值。|
 |*count*|插入向量的項目數。|
 |*first*|要複製的元素範圍中第一個元素的位置。|
-|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*last*|超出要複製之元素範圍的第一個元素的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1546,7 +1546,7 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*Val*<br/>
 要指派給加入到向量結尾之元素的值。
 
 ### <a name="example"></a>範例
@@ -1756,7 +1756,7 @@ void resize(size_type Newsize, Type Val);
 *Newsize*<br/>
 向量的新大小。
 
-*val*<br/>
+*Val*<br/>
 如果新的大小大於原始大小，則已將新元素的初始化值加入至向量。 如果省略此值，則新的物件會使用其預設建構函式。
 
 ### <a name="remarks"></a>備註
@@ -2100,7 +2100,7 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 |-|-|
 |*Al*|搭配這個物件使用的配置器類別。 [get_allocator](#get_allocator) 會傳回物件的配置器類別。|
 |*計數*|已建構向量中的項目數。|
-|*val*|已建構向量中的項目值。|
+|*Val*|已建構向量中的項目值。|
 |*右邊*|已建構向量為其複本的向量。|
 |*第一個*|項目範圍中要複製的第一個項目位置。|
 |*最後一個*|項目範圍之外要複製的第一個項目位置。|

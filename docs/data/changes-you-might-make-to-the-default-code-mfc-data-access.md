@@ -5,11 +5,11 @@ helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 ms.openlocfilehash: fc448ae1e13025a83b33386c2845bdf7bb4d5eec
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398008"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>您可能對預設程式碼所做的變更 (MFC 資料存取)
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
 ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399430"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 類別
 
@@ -35,7 +35,7 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>參數
 
-*引擎*<br/>
+*Engine*<br/>
 基底引擎類型。
 
 *K*<br/>

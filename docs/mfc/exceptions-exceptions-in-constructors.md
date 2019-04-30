@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exceptions [MFC], in constructors
 ms.assetid: a78eae5a-5821-4b27-9478-1436320ed1e1
 ms.openlocfilehash: 0b11f5be18879d5ad4b9e204bb02e18b4617c6b7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405868"
 ---
 # <a name="exceptions-exceptions-in-constructors"></a>例外狀況: 建構函式中的例外狀況
 

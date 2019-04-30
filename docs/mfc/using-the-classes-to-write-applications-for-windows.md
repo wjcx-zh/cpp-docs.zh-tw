@@ -10,15 +10,15 @@ helpviewer_keywords:
 - database applications [MFC], creating
 ms.assetid: 73f63470-857d-43dd-9a54-b38b7be0f1b7
 ms.openlocfilehash: c8b3d7061c0ef06063d9c6993f24d23fc2e1f92e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411470"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>使用類別來編寫 Windows 應用程式
 
-綜合以上所述，Microsoft Foundation Class (MFC) 程式庫中的類別會構成的 「 應用程式架構，「 建置之 Windows 作業系統的應用程式。 在一般的層級中，架構會定義應用程式的基本架構，並提供標準的使用者介面的實作，可以置於基本架構。 您身為程式設計人員的工作是填滿其餘部分的基本架構中，這是專屬於您的應用程式的這些項目。 您可以使用 MFC 應用程式精靈建立非常徹底的入門應用程式的檔案，以取得 head start。 您可以使用 Microsoft Visual c + + 資源編輯器來設計您的使用者介面項目以視覺化的方式，來連接這些項目和類別庫的類別檢視 命令來實作您的應用程式特定邏輯。
+綜合以上所述，Microsoft Foundation Class (MFC) 程式庫中的類別會構成的 「 應用程式架構，「 建置之 Windows 作業系統的應用程式。 在一般的層級中，架構會定義應用程式的基本架構，並提供標準的使用者介面的實作，可以置於基本架構。 您身為程式設計人員的工作是填滿其餘部分的基本架構中，這是專屬於您的應用程式的這些項目。 您可以使用 MFC 應用程式精靈建立非常徹底的入門應用程式的檔案，以取得 head start。 使用 Microsoft VisualC++資源編輯器來設計您的使用者介面項目以視覺化的方式，來連接這些項目的程式碼，並實作您的應用程式特定邏輯的類別程式庫的類別檢視 命令。
 
 3.0 版和更新版本的 MFC 架構支援 Win32 平台，包括 Microsoft Windows 95 和更新版本的程式設計和 Windows NT 3.51 和更新版本的版本。 MFC Win32 的支援包括多執行緒處理。 使用版本 1.5*x*如果您只需要 16 位元程式設計。
 

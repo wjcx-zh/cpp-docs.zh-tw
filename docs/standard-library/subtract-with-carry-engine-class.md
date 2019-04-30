@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
 ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412185"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 類別
 
@@ -48,7 +48,7 @@ class subtract_with_carry_engine;
 *R*<br/>
 **長延隔**。 決定所產生數列中的週期。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ||||
 |-|-|-|
@@ -68,10 +68,10 @@ class subtract_with_carry_engine;
 
 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef：
 
-`ranlux24_base`：用來做為 `ranlux24` 的基底。
+`ranlux24_base`：用做 `ranlux24` 的基底。
 `typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;`
 
-`ranlux48_base`：用來做為 `ranlux48` 的基底。
+`ranlux48_base`：用做 `ranlux48` 的基底。
 `typedef subtract_with_carry_engine<unsigned long long, 48, 5, 12> ranlux48_base;`
 
 如需帶進位減法引擎演算法的詳細資訊，請參閱維基百科文章：[延隔 Fibonacci 產生器 (英文)](https://en.wikipedia.org/wiki/Lagged_Fibonacci_generator)。

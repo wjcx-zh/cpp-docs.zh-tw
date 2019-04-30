@@ -11,17 +11,17 @@ helpviewer_keywords:
 - __declspec keyword [C++], dllimport
 ms.assetid: ff95b645-ef55-4e72-b848-df44657b3208
 ms.openlocfilehash: 2ae284172828ed63b6499475df108c28aecb32ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398923"
 ---
 # <a name="dllexport-dllimport"></a>dllexport、dllimport
 
 **Microsoft 專屬**
 
-**Dllexport**並**dllimport**儲存類別屬性是 C 和 c + + 語言的 Microsoft 專有擴充功能。 您可以使用它們在 DLL 中匯出和匯入函式、資料和物件。
+**Dllexport**並**dllimport**儲存類別屬性是 c 的 Microsoft 專有擴充功能和C++語言。 您可以使用它們在 DLL 中匯出和匯入函式、資料和物件。
 
 ## <a name="syntax"></a>語法
 
@@ -36,7 +36,7 @@ ms.locfileid: "50525953"
 
 如果類別已標記為 declspec(dllexport)，在類別階層中類別樣板的特製化會隱含標記為 declspec(dllexport)。 這表示類別樣板是明確具現化，必須定義類別的成員。
 
-**dllexport**函式會公開以其裝飾名稱的函式。 對於 C++ 函式，這包括名稱修飾 (Name Mangling)。 對於 C 函式或宣告為 `extern "C"` 的函式，其中包括根據呼叫慣例的平台專屬裝飾。 C/c + + 程式碼中名稱裝飾的資訊，請參閱[裝飾名稱](../build/reference/decorated-names.md)。 使用 `__cdecl` 呼叫慣例，不會將名稱裝飾套用至已匯出的 C 函式或 C++ `extern "C"` 函式。
+**dllexport**函式會公開以其裝飾名稱的函式。 對於 C++ 函式，這包括名稱修飾 (Name Mangling)。 對於 C 函式或宣告為 `extern "C"` 的函式，其中包括根據呼叫慣例的平台專屬裝飾。 如需以 C 名稱裝飾 /C++程式碼，請參閱[裝飾名稱](../build/reference/decorated-names.md)。 使用 `__cdecl` 呼叫慣例，不會將名稱裝飾套用至已匯出的 C 函式或 C++ `extern "C"` 函式。
 
 若要匯出未裝飾的名稱，則連結方式是使用在 EXPORTS 區段中定義未裝飾名稱的模組定義 (.def) 檔。 如需詳細資訊，請參閱 <<c0> [ 匯出](../build/reference/exports.md)。 若要匯出未裝飾的名稱的另一種方式是使用`#pragma comment(linker, "/export:alias=decorated_name")`指示詞中的原始程式碼。
 

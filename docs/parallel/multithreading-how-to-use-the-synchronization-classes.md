@@ -14,11 +14,11 @@ helpviewer_keywords:
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
 ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407688"
 ---
 # <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>多執行緒：如何使用 MFC 的同步處理類別
 
@@ -54,7 +54,7 @@ singleLock.Unlock();
 
 這種方法的缺點是，類別會稍微慢一點比相同的類別而不需要加入同步處理物件。 此外，如果有多個執行緒可能會刪除物件的機會，合併的方法可能無法永遠運作。 在此情況下，最好是維護個別的同步處理物件。
 
-如需判斷要在不同的情況下使用的同步處理類別的詳細資訊，請參閱[多執行緒：何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。 如需有關同步處理的詳細資訊，請參閱 <<c0> [ 同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 如需在 MFC 中的多執行緒支援的詳細資訊，請參閱[c + + 和 MFC 的多執行緒](multithreading-with-cpp-and-mfc.md)。
+如需判斷要在不同的情況下使用的同步處理類別的詳細資訊，請參閱[多執行緒：何時使用同步類別](multithreading-when-to-use-the-synchronization-classes.md)。 如需有關同步處理的詳細資訊，請參閱 <<c0> [ 同步處理](/windows/desktop/Sync/synchronization)Windows SDK 中。 如需在 MFC 中的多執行緒支援的詳細資訊，請參閱[進行多執行緒處理，與C++和 MFC](multithreading-with-cpp-and-mfc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

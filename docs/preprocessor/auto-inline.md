@@ -9,11 +9,11 @@ helpviewer_keywords:
 - auto_inline pragma
 ms.assetid: f7624cd1-be76-429a-881c-65c9040acf43
 ms.openlocfilehash: c59dcc8ec7749a91565d5af043b1bd9e9eaa16ea
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403560"
 ---
 # <a name="autoinline"></a>auto_inline
 排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
 ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389435"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Windows Sockets:通訊端與封存的運作方式
 

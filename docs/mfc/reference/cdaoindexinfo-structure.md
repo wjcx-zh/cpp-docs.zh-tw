@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoIndexInfo structure [MFC]
 ms.assetid: 251d8285-78ce-4716-a0b3-ccc3395fc437
 ms.openlocfilehash: 55f64fcebc308bd0e63643cfb5447608c4e2e37c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399768"
 ---
 # <a name="cdaoindexinfo-structure"></a>CDaoIndexInfo 結構
 
@@ -61,7 +61,7 @@ struct CDaoIndexInfo {
 *m_bUnique*<br/>
 表示索引物件是否表示資料表的唯一索引。 如果這個屬性為 TRUE，則索引物件表示是唯一的索引。 唯一的索引是由一或多個以邏輯方式排列的資料表中唯一的而預先定義的順序中的所有記錄的欄位所組成。 如果索引是由一個欄位所組成，該欄位中的值必須是唯一的整個資料表。 如果索引是由多個欄位所組成，每個欄位可以包含重複的值，但每個組合的所有索引的欄位值必須是唯一。
 
-索引物件的唯一和主要屬性會設為 TRUE，如果索引是唯一的且主要： 它會唯一識別預先定義的邏輯順序中的資料表中的所有記錄。 如果主要的屬性設定為 FALSE，則索引是次要索引。 次要索引 （索引鍵和非索引鍵） 以邏輯方式排列中預先定義的順序記錄，而不做為資料表中記錄的識別碼。
+索引物件的唯一和主要屬性會設為 TRUE，如果索引是唯一和主要：它會唯一識別預先定義的邏輯順序中的資料表中的所有記錄。 如果主要的屬性設定為 FALSE，則索引是次要索引。 次要索引 （索引鍵和非索引鍵） 以邏輯方式排列中預先定義的順序記錄，而不做為資料表中記錄的識別碼。
 
 如需詳細資訊，請參閱 「 主要屬性 」 和 DAO [說明] 中的 < 唯一屬性 > 主題。
 
@@ -74,7 +74,7 @@ struct CDaoIndexInfo {
 *m_bIgnoreNulls*<br/>
 指出是否有 Null 值，其索引欄位中的資料錄的索引項目。 如果這個屬性為 TRUE，表示具有 Null 值的欄位中沒有索引項目。 若要讓搜尋更快的使用欄位的記錄，您可以定義欄位的索引。 如果您允許 Null 索引的欄位中的項目，並預期有許多為 Null 的項目，您可以設定的索引物件的忽略 Null 屬性為 TRUE，以減少索引所使用的儲存體空間數量。 忽略 Null 屬性設定和必要的屬性設定一起決定了 Null 的索引值記錄是否具有索引項目，如下表所示。
 
-|忽略 Null|必要|索引欄位都是 null|
+|IgnoreNulls|必要|索引欄位都是 null|
 |-----------------|--------------|-------------------------|
 |True|False|允許的 null 值新增沒有索引項目。|
 |False|False|允許的 null 值已加入的索引項目。|

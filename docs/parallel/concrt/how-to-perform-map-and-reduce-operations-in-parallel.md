@@ -7,17 +7,17 @@ helpviewer_keywords:
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
 ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412705"
 ---
 # <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>HOW TO：執行對應和縮減作業以平行方式
 
 此範例示範如何使用[concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)並[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法和[concurrency:: concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)類別，以計算文字在檔案中的出現次數。
 
-A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用 c + + 標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，若要針對許多問題改善效能，您可以使用 `parallel_transform` 演算法以平行方式執行對應作業，以及使用 `parallel_reduce` 演算法以平行方式執行縮減作業。 在某些情況下，您可以使用 `concurrent_unordered_map` 在一個作業中執行對應和縮減。
+A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用C++標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，若要針對許多問題改善效能，您可以使用 `parallel_transform` 演算法以平行方式執行對應作業，以及使用 `parallel_reduce` 演算法以平行方式執行縮減作業。 在某些情況下，您可以使用 `concurrent_unordered_map` 在一個作業中執行對應和縮減。
 
 ## <a name="example"></a>範例
 

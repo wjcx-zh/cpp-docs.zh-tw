@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [MFC], properties
 ms.assetid: 14ce5152-742b-4e0d-a9ab-c7b456e32918
 ms.openlocfilehash: 0a03acfd880bcf63017eec9796315b98e5d5f4d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394880"
 ---
 # <a name="activex-control-containers-viewing-and-modifying-control-properties"></a>ActiveX 控制項容器：檢視和修改控制項屬性
 

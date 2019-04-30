@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283640"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399742"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef 類別
 
@@ -97,7 +97,7 @@ class CDaoQueryDef : public CObject
 |----------|-----------------|
 |[CDaoQueryDef::Append](#append)|將 querydef 附加至資料庫的 QueryDefs 集合做為已儲存的查詢。|
 |[CDaoQueryDef::CanUpdate](#canupdate)|傳回非零值，如果查詢可以更新資料庫。|
-|[CDaoQueryDef::Close](#close)|關閉 recordset 物件。 當您完成使用它，請摧毀的 c + + 物件。|
+|[CDaoQueryDef::Close](#close)|關閉 recordset 物件。 終結C++物件，當您完成使用它。|
 |[CDaoQueryDef::Create](#create)|建立基本的 DAO recordset 物件。 做為暫時查詢或呼叫使用 querydef`Append`將它儲存在資料庫中。|
 |[CDaoQueryDef::Execute](#execute)|執行 recordset 物件所定義的查詢。|
 |[CDaoQueryDef::GetConnect](#getconnect)|傳回與 querydef 相關聯的連接字串。 連接字串會識別資料來源。 （如 SQL 通過查詢，否則為空字串。）|
@@ -252,7 +252,7 @@ CDaoQueryDef(CDaoDatabase* pDatabase);
 
 若要設定的 querydef 屬性，您可以使用[SetName](#setname)， [SetSQL](#setsql)， [SetConnect](#setconnect)， [SetODBCTimeout](#setodbctimeout)，以及[SetReturnsRecords](#setreturnsrecords)成員函式。
 
-當您完成使用 recordset 物件時，呼叫其[關閉](#close)成員函式。 如果您有 querydef 的指標，使用**刪除**終結的 c + + 物件的運算子。
+當您完成使用 recordset 物件時，呼叫其[關閉](#close)成員函式。 如果您有 querydef 的指標，使用**刪除**終結運算子C++物件。
 
 ##  <a name="close"></a>  CDaoQueryDef::Close
 
@@ -264,7 +264,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-關閉 querydef 釋出基礎的 DAO 物件但不會終結儲存的 DAO recordset 物件或 c + +`CDaoQueryDef`物件。 這不是相同[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)，此 cmdlet 會刪除 querydef 從 DAO （如果沒有暫存 querydef） 中的資料庫的 QueryDefs 集合。
+關閉 querydef 釋出基礎的 DAO 物件但不會終結儲存的 DAO recordset 物件或C++`CDaoQueryDef`物件。 這不是相同[CDaoDatabase::DeleteQueryDef](../../mfc/reference/cdaodatabase-class.md#deletequerydef)，此 cmdlet 會刪除 querydef 從 DAO （如果沒有暫存 querydef） 中的資料庫的 QueryDefs 集合。
 
 ##  <a name="create"></a>  CDaoQueryDef::Create
 

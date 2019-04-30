@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397740"
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
 
@@ -79,7 +79,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
 - [資料錄集：建立和關閉資料錄集 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
@@ -95,7 +95,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>修改資料錄集機制的相關主題
 
-- [資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
 - [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
@@ -105,21 +105,21 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [資料錄集：宣告的類別，預先定義的查詢 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [資料錄集：宣告預先定義查詢的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 - [資料錄集：使用大型的資料項目 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>資料錄集的運作方式的相關主題
 
-- [資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>另請參閱
 

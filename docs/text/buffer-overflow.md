@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MBCS [C++], buffer overflow
 ms.assetid: f2b7e40a-f02b-46d8-a449-51d26fc0c663
 ms.openlocfilehash: 7f9864e6b49446ea68d82e76e877ce9c677b893d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410755"
 ---
 # <a name="buffer-overflow"></a>緩衝區溢位
 
@@ -47,7 +47,7 @@ while( (cb + _mbclen( sz )) <= sizeof( rgch ) )
 }
 ```
 
-此程式碼測試可能會發生緩衝區溢位，迴圈中測試，請使用`_mbclen`若要測試的目前所指向的字元大小`sz`。 藉由呼叫`_mbsnbcpy`函式，您可以取代中的程式碼**雖然**迴圈使用一行程式碼。 例如: 
+此程式碼測試可能會發生緩衝區溢位，迴圈中測試，請使用`_mbclen`若要測試的目前所指向的字元大小`sz`。 藉由呼叫`_mbsnbcpy`函式，您可以取代中的程式碼**雖然**迴圈使用一行程式碼。 例如：
 
 ```cpp
 _mbsnbcpy( rgch, sz, sizeof( rgch ) );

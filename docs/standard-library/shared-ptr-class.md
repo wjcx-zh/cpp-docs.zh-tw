@@ -32,11 +32,11 @@ helpviewer_keywords:
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
 ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412549"
 ---
 # <a name="sharedptr-class"></a>shared_ptr 類別
 
@@ -134,7 +134,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 |[shared_ptr](#shared_ptr)|建構 `shared_ptr`。|
 |[shared_ptr::~shared_ptr](#dtorshared_ptr)|終結 `shared_ptr`。|
 
-### <a name="types"></a>類型
+### <a name="types"></a>型別
 
 |類型名稱|描述|
 |-|-|
@@ -155,7 +155,7 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 |運算子|描述|
 |-|-|
-|[shared_ptr:: operator bool](#op_bool)|測試擁有的資源是否存在。|
+|[shared_ptr::operator bool](#op_bool)|測試擁有的資源是否存在。|
 |[shared_ptr::operator*](#op_star)|取得指定的值。|
 |[shared_ptr::operator=](#op_eq)|取代所擁有的資源。|
 |[shared_ptr::operator-&gt;](#op_arrow)|取得指定值的指標。|
@@ -239,7 +239,7 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr:: operator bool
+## <a name="op_bool"></a>  shared_ptr::operator bool
 
 測試擁有的資源是否存在。
 
@@ -337,10 +337,10 @@ shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 
 ### <a name="parameters"></a>參數
 
-*預存程序*<br/>
+*sp*<br/>
 要複製的共用指標。
 
-*亞太地區*<br/>
+*ap*<br/>
 要複製的自動指標。
 
 ### <a name="remarks"></a>備註
@@ -468,7 +468,7 @@ void reset(Other *ptr, D dtor, A alloc);
 *A*<br/>
 配置器的類型。
 
-*配置*<br/>
+*alloc*<br/>
 要複製的配置器。
 
 ### <a name="remarks"></a>備註
@@ -588,16 +588,16 @@ shared_ptr(const unique_ptr<Other, D>& up) = delete;
 *dtor*<br/>
 刪除者。
 
-*in*<br/>
+*ator*<br/>
 配置器。
 
-*預存程序*<br/>
+*sp*<br/>
 要複製的智慧型指標。
 
 *wp*<br/>
 弱式指標。
 
-*亞太地區*<br/>
+*ap*<br/>
 要複製的自動指標。
 
 ### <a name="remarks"></a>備註
@@ -721,7 +721,7 @@ void swap(shared_ptr& sp);
 
 ### <a name="parameters"></a>參數
 
-*預存程序*<br/>
+*sp*<br/>
 要交換的共用指標。
 
 ### <a name="remarks"></a>備註

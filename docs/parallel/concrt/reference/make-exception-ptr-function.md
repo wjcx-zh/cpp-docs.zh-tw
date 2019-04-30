@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/std::make_exception_ptr
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
 ms.openlocfilehash: 3889973ccd9a91e9512ddee73c77b289a9591467
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409976"
 ---
 # <a name="makeexceptionptr-function"></a>make_exception_ptr 函式
 

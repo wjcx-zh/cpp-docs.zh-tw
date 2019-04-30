@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4792
 ms.assetid: c047ce69-a622-44e1-9425-d41aa9261c61
 ms.openlocfilehash: adf233673c4b654927aa9488565adf6ceef5d3e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401562"
 ---
 # <a name="compiler-warning-level-3-c4792"></a>編譯器警告 (層級 3) C4792
 

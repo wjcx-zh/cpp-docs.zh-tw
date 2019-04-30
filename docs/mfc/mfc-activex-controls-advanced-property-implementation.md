@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392800"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX 控制項：進階的屬性實作
 
@@ -54,7 +54,7 @@ ms.locfileid: "57266961"
 
 如果您想要變更現有的屬性是唯讀或唯寫時，您可以手動編輯分派對應，並從控制項類別中移除不必要的 Set 或 Get 函式。
 
-如果您想要有條件地唯讀或唯寫 （例如，只在您的控制項在特定模式下操作時，才） 的屬性，您可以提供 Set 或 Get 函式，為正常，並呼叫`SetNotSupported`或`GetNotSupported`函式在適當的地方。 例如: 
+如果您想要有條件地唯讀或唯寫 （例如，只在您的控制項在特定模式下操作時，才） 的屬性，您可以提供 Set 或 Get 函式，為正常，並呼叫`SetNotSupported`或`GetNotSupported`函式在適當的地方。 例如：
 
 [!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 

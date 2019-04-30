@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
 ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410794"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
 
@@ -139,9 +139,9 @@ wide_string from_bytes(const char* first, const char* last);
 |---------------|-----------------|
 |*Byte*|要轉換的單一元素位元組序列。|
 |*ptr*|要轉換的 C-style、以 Null 結束的字元序列。|
-|*bstr*|要轉換的 [byte_string](#byte_string)。|
+|*Bstr*|要轉換的 [byte_string](#byte_string)。|
 |*first*|在字元範圍中要轉換的第一個字元。|
-|*最後一個*|在字元範圍中要轉換的最後一個字元。|
+|*last*|在字元範圍中要轉換的最後一個字元。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -210,7 +210,7 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|要轉換的 C-style、以 Null 結束的序列 (開始於 `wptr`)。|
 |*Wstr*|要轉換的 [wide_string](#wide_string)。|
 |*first*|項目範圍中要轉換的第一個項目。|
-|*最後一個*|項目範圍中要轉換的最後一個項目。|
+|*last*|項目範圍中要轉換的最後一個項目。|
 
 ### <a name="remarks"></a>備註
 
@@ -245,7 +245,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 |參數|描述|
 |---------------|-----------------|
 |*\*Pcvt*|`Codecvt` 類型的物件，用以執行轉換。|
-|*（_s)*|[state_type](#state_type) 類型的物件，代表轉換狀態。|
+|*_State*|[state_type](#state_type) 類型的物件，代表轉換狀態。|
 |*_Berr*|發生錯誤時顯示的 [byte_string](#byte_string)。|
 |*Werr*|發生錯誤時顯示的 [wide_string](#wide_string)。|
 

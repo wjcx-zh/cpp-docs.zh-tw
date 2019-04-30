@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
 ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403343"
 ---
 # <a name="using-declaration"></a>using 宣告
 
@@ -219,7 +219,7 @@ void g() {
 
 ## <a name="example"></a>範例
 
-區域函式宣告不能有和由 using 宣告引入的函式名稱和類型相同。 例如: 
+區域函式宣告不能有和由 using 宣告引入的函式名稱和類型相同。 例如：
 
 ```cpp
 // functions_in_namespaces2.cpp

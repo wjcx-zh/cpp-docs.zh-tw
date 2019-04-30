@@ -1,5 +1,5 @@
 ---
-title: 註解 （c + +）
+title: 註解 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - code comments, C++
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - white space, C++ comments
 ms.assetid: 6fcb906c-c264-4083-84bc-373800b2e514
 ms.openlocfilehash: a90d9d37e69cb2e8be4ab18f77026fdce1221307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399170"
 ---
-# <a name="comments-c"></a>註解 （c + +）
+# <a name="comments-c"></a>註解 (C++)
 
 註解是會被編譯器忽略，但對程式設計人員而言很有用的文字。 註解通常用來標註程式碼供未來參考。 編譯器會將它們視為空白字元。 您可以使用在測試中的註解來停用特定行程式碼;不過， `#if` / `#endif`效果更好，前置處理器指示詞，這因為您可以圍繞包含註解的程式碼，但您無法巢狀註解。
 

@@ -8,15 +8,15 @@ helpviewer_keywords:
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
 ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398949"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及與 Microsoft 專有 declspec 或 pragma，該屬性的使用時機的指引請參閱[c + + 標準屬性](attributes.md)。
+本主題是關於 Microsoft 專有 declspec 宣告已被取代。 如需 C + + 14`[[deprecated]]`屬性，以及與 Microsoft 專有 declspec 或 pragma，該屬性的使用時機的指引請參閱[C++標準屬性](attributes.md)。
 
 例外狀況，如下所示**過時**宣告可提供相同的功能[已被取代](../preprocessor/deprecated-c-cpp.md)pragma:
 

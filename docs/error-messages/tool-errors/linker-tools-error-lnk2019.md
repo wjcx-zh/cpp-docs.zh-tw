@@ -8,11 +8,11 @@ helpviewer_keywords:
 - LNK2019
 - _check_commonlanguageruntime_version
 ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386339"
 ---
 # <a name="linker-tools-error-lnk2019"></a>連結器工具錯誤 LNK2019
 
@@ -48,7 +48,7 @@ ms.locfileid: "50555593"
 
 呼叫慣例 ([__cdecl](../../cpp/cdecl.md)、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)或 [__vectorcall](../../cpp/vectorcall.md)) 會編碼為裝飾名稱的一部分。 確認呼叫慣例相同。
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>符號已定義在 C 檔案中，但未在 c + + 檔案中使用 extern"C"宣告
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>符號已定義在 C 檔案中，但未在中使用 extern"C"宣告C++檔案
 
 編譯為 C 的檔案中所定義的符號之裝飾名稱，不同於 C++ 檔案中所宣告的符號，除非您使用 [extern"C"](../../cpp/using-extern-to-specify-linkage.md) 修飾詞。 請確認宣告與每個符號的編譯連結相符。 同樣地，如果您在 C++ 檔案中定義將由 C 程式使用的符號，請在定義中使用 `extern "C"` 。
 
@@ -90,7 +90,7 @@ ms.locfileid: "50555593"
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>協力廠商程式庫問題和 Vcpkg
 
-如果您嘗試將協力廠商程式庫設定為組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，Visual c + + 套件管理員安裝及建置程式庫。 Vcpkg 支援大量且不斷成長[協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[Visual c + + 部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)張貼。
+如果您嘗試將協力廠商程式庫設定為組建的一部分時，您會看到此錯誤，請考慮使用[Vcpkg](../../vcpkg.md)，視覺效果C++封裝管理員 中，安裝及建置程式庫。 Vcpkg 支援大量且不斷成長[協力廠商程式庫清單](https://github.com/Microsoft/vcpkg/tree/master/ports)，並設定所有組態屬性和相依性所需的建置成功，為您專案的一部分。 如需詳細資訊，請參閱相關[VisualC++部落格](https://blogs.msdn.microsoft.com/vcblog/2016/09/19/vcpkg-a-tool-to-acquire-and-build-c-open-source-libraries-on-windows/)文章。
 
 ## <a name="diagnosis-tools"></a>診斷工具
 

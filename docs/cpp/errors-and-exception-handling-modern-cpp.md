@@ -4,19 +4,19 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398910"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 
-在現代 c + +，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含數個函式呼叫之間偵測到錯誤的函式和函式具有要知道如何處理它的內容時，這是特別有用。 例外狀況會提供正式、 明確定義方法的程式碼來偵測錯誤的呼叫堆疊資訊傳遞出去。
+在現代化C++，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含數個函式呼叫之間偵測到錯誤的函式和函式具有要知道如何處理它的內容時，這是特別有用。 例外狀況會提供正式、 明確定義方法的程式碼來偵測錯誤的呼叫堆疊資訊傳遞出去。
 
 程式錯誤通常分為兩類： 邏輯錯誤所造成程式設計錯誤，例如，「 索引超出範圍 」 錯誤，而執行階段錯誤，例如所控制的程式設計師而言，「 網路服務無法使用 」發生錯誤。 傳回值，表示錯誤碼或狀態碼為特定的函式，或設定全域變數，以查看每個函式呼叫後選擇性擷取呼叫端在 c-style 程式設計和 COM 中，管理錯誤報告是否發生錯誤。 例如，COM 程式設計使用來傳達給呼叫者，錯誤的 HRESULT 傳回值，而 Win32 API 有 GetLastError 函式來擷取最後一個呼叫堆疊報告的錯誤。 在這兩種情況下，它是可辨識的程式碼，並適當地回應，讓呼叫端。 如果呼叫端未明確處理的錯誤程式碼，程式可能會損毀，而不發出警告，或繼續執行正確的資料和產生不正確的結果。
 
-例外狀況是現代 c + + 中慣用的原因如下：
+例外狀況會優先使用現代化的C++，原因如下：
 
 - 例外狀況會強制呼叫程式碼辨識錯誤狀況，並處理。 未處理例外狀況停止程式執行。
 
@@ -26,7 +26,7 @@ ms.locfileid: "54220565"
 
 - 例外狀況可讓您偵測到錯誤的程式碼和處理錯誤的程式碼之間清楚的分隔。
 
-下列簡化的範例顯示擲回和攔截 c + + 中的例外狀況所需的語法。
+下列簡化的範例顯示擲回和攔截的例外狀況所需的語法C++。
 
 ```cpp
 
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在 c + +，任何型別可能會擲回;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C + + 不提供，而且不需要，**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱[＜How to：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需 c + + 堆疊回溯機制的資訊，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
+中的例外狀況C++這類語言中的類似C#和 Java。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在C++，可能會擲回任何類型;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C++不提供，而且不需要**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱[如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需C++堆疊回溯機制，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
 
 ## <a name="basic-guidelines"></a>基本的指導方針
 
@@ -70,7 +70,7 @@ C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外�
 
 - 當處理錯誤的程式碼可能會從偵測到錯誤的程式碼分隔一或多個中間函式呼叫時，請使用例外狀況。 請考慮是否要改用錯誤碼重要效能迴圈中時處理錯誤的程式碼會偵測到它的程式碼緊密結合。
 
-- 針對每個函式可能擲回或傳播例外狀況，提供三個例外狀況保證之一： 強式保證、 基本保證或 nothrow (noexcept) 保證。 如需詳細資訊，請參閱[＜How to：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
+- 針對每個函式可能擲回或傳播例外狀況，提供三個例外狀況保證之一： 強式保證、 基本保證或 nothrow (noexcept) 保證。 如需詳細資訊，請參閱[如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
 
 - 值，所擲回例外狀況，攔截它們的參考。 不會攔截您無法處理。
 
@@ -88,19 +88,19 @@ C + + 中的例外狀況類似 C# 和 Java 等語言中。 中**嘗試**例外�
 
 例外狀況和判斷提示會在程式中偵測到執行階段錯誤的兩個不同機制。 使用判斷提示，不應為 true，如果您的程式碼是正確的開發期間，測試條件。 沒有任何點在處理這類錯誤就使用例外狀況，因為此錯誤表示在程式碼中的項目，必須加以修正，並不代表程式必須在執行階段從復原的條件。 判斷提示會停止執行的陳述式，因此您可以檢查偵錯工具; 中的程式狀態例外狀況會繼續執行，從第一個適當的 catch 處理常式。 使用例外狀況檢查可能發生在執行階段中，即使您的程式碼是正確的比方說，「 找不到檔案 」 或 「 記憶體不足。 」 的錯誤狀況 您可能想要復原這些情況中，即使復原只是將訊息輸出至記錄檔，並結束程式。 使用例外狀況，一律檢查公用函式的引數。 即使您的函式是無錯誤，您可能沒有使用者可能會傳遞給它的引數的完整控制權。
 
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>與 Windows SEH 例外狀況的 c + + 例外狀況
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++與 Windows SEH 例外狀況的例外狀況
 
-C 和 c + + 程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中。 SEH 的概念類似 c + + 例外狀況，不同之處在於會使用 SEH **__try**， **__except**，並 **__finally**而不是建構**嘗試**並**攔截**。 Visual c + +，c + + 例外狀況是針對 SEH 實作。 不過，當您撰寫 c + + 程式碼時，使用 c + + 例外狀況語法。
+這兩個 C 和C++程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中的。 SEH 的概念類似C++例外狀況，但會使用該 SEH **__try**， **__except**，和 **__finally**而不是建構**試一次**並**攔截**。 在視覺效果C++，C++例外狀況針對 SEH 來實作。 不過，當您撰寫C++程式碼，請使用C++例外狀況語法。
 
-如需 SEH 的詳細資訊，請參閱[Structured Exception Handling （C/c + +）](../cpp/structured-exception-handling-c-cpp.md)。
+如需 SEH 的詳細資訊，請參閱[Structured Exception Handling (C /C++)](../cpp/structured-exception-handling-c-cpp.md)。
 
 ## <a name="exception-specifications-and-noexcept"></a>例外狀況規格和 noexcept
 
-例外狀況規格在 c + + 中導入做為指定的函式可能擲回的例外狀況的方式。 不過，例外狀況規格經證實實務上，有問題，而在 c++11 草稿標準中已被取代。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何例外狀況逸出。 如果您必須使用類型的例外狀況規格`throw(`*型別*`)`，注意 Visual c + + 偏離標準所規定的方式。 如需詳細資訊，請參閱 <<c0> [ 例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範 C + + 11 中導入做為慣用的替代方案`throw()`。
+例外狀況規格中導入C++來指定函式可能擲回的例外狀況。 不過，例外狀況規格經證實實務上，有問題，而在 c++11 草稿標準中已被取代。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何例外狀況逸出。 如果您必須使用類型的例外狀況規格`throw(`*型別*`)`，注意該視覺效果C++偏離標準所規定的方式。 如需詳細資訊，請參閱 <<c0> [ 例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範 C + + 11 中導入做為慣用的替代方案`throw()`。
 
 ## <a name="see-also"></a>另請參閱
 
-[如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
+[如何：例外狀況和非例外狀況程式碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

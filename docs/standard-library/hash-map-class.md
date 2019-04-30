@@ -89,16 +89,16 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405062"
 ---
 # <a name="hashmap-class"></a>hash_map 類別
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 從集合中快速儲存和擷取資料，其中每個項目為具有已排序索引鍵 (其值唯一) 和相關聯資料值的配對。
 
@@ -121,9 +121,9 @@ class hash_map
 要存放在 hash_map 中的項目資料類型。
 
 *特性*<br/>
-包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的，而且 hash_compare<`Key`, less<`Key`> > 是預設值。
+包含兩個函式物件的類型：一個 compare 類別可以將兩個項目值做為排序索引鍵加以比較，以決定其相對順序；一個雜湊函式，為項目的一元述詞對應索引鍵值，對應到 `size_t` 類型之不帶正負號的整數。 這個引數是選擇性的而且 hash_compare< <`Key`、 較少 <`Key`>> 做為預設值。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關 hash_map 之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 allocator<pair <const `Key`, `Type`>>。
 
 ## <a name="remarks"></a>備註
@@ -229,7 +229,7 @@ hash_map 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 ## <a name="allocator_type"></a>  hash_map::allocator_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，代表 hash_map 物件的配置器類別。
 
@@ -244,7 +244,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ## <a name="at"></a>  hash_map::at
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 在 hash_map 中尋找具有指定索引鍵值的項目。
 
@@ -298,7 +298,7 @@ int main( )
 ## <a name="begin"></a>  hash_map::begin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回定址 hash_map 中第一個元素的迭代器。
 
@@ -359,7 +359,7 @@ The first element of hm1 is now 1.
 ## <a name="cbegin"></a>  hash_map::cbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回常數迭代器，定址對象是 hash_map 中的第一個元素。
 
@@ -403,7 +403,7 @@ The first element of hm1 is 2.
 ## <a name="cend"></a>  hash_map::cend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回常數迭代器，定址對象是 hash_map 中最後一個元素後面的位置。
 
@@ -454,7 +454,7 @@ The value of last element of hm1 is 30.
 ## <a name="clear"></a>  hash_map::clear
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 清除 hash_map 的所有項目。
 
@@ -504,7 +504,7 @@ The size of the hash_map after clearing is 0.
 ## <a name="const_iterator"></a>  hash_map::const_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供可讀取 hash_map 中 **const** 元素的雙向迭代器。
 
@@ -529,7 +529,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="const_pointer"></a>  hash_map::const_pointer
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供 hash_map 中 **const** 元素的指標。
 
@@ -546,7 +546,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ## <a name="const_reference"></a>  hash_map::const_reference
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供對儲存在 hash_map 中以供讀取和執行 **const** 運算之 **const** 元素的參考。
 
@@ -602,7 +602,7 @@ The data value of the first element in the hash_map is 10.
 ## <a name="const_reverse_iterator"></a>  hash_map::const_reverse_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供可讀取 hash_map 中任何 **const** 元素的雙向迭代器。
 
@@ -627,7 +627,7 @@ hash_map 所定義的 `const_reverse_iterator` 會指向作為 [value_type](#val
 ## <a name="count"></a>  hash_map::count
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回 hash_map 中索引鍵符合參數指定之索引鍵的元素數目。
 
@@ -648,7 +648,7 @@ size_type count(const Key& key) const;
 
 成員函式會傳回下列範圍中的元素數目 *x*
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 這在 hash_map (這是唯一的關聯容器) 的案例中是 0 或 1。
 
@@ -699,7 +699,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ## <a name="crbegin"></a>  hash_map::crbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_map 中的第一個元素。
 
@@ -751,7 +751,7 @@ The first element of the reversed hash_map hm1 is 3.
 ## <a name="crend"></a>  hash_map::crend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_map 中最後一個元素後面的位置。
 
@@ -806,7 +806,7 @@ The last element of the reversed hash_map hm1 is 3.
 ## <a name="difference_type"></a>  hash_map::difference_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種帶正負號的整數類型，可用來代表範圍 (介於迭代器所指的元素之間) 中 hash_map 的元素數目。
 
@@ -876,7 +876,7 @@ The values of the mapped elements are: 10 20 20.
 ## <a name="emplace"></a>  hash_map::emplace
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 將就地建構的元素插入到 hash_map 中。
 
@@ -935,7 +935,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 將就地建構的元素 (含位置提示) 插入到 hash_map 中。
 
@@ -995,7 +995,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="empty"></a>  hash_map::empty
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 測試 hash_map 是否是空的。
 
@@ -1046,7 +1046,7 @@ The hash_map hm2 is empty.
 ## <a name="end"></a>  hash_map::end
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，定址對象是 hash_map 中最後一個元素後面的位置。
 
@@ -1117,7 +1117,7 @@ The value of last element of hm1 is now 20.
 ## <a name="equal_range"></a>  hash_map::equal_range
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回一組迭代器，分別指向 hash_map 中索引鍵大於指定索引鍵的第一個元素，以及指向 hash_map 中索引鍵等於或大於該索引鍵的第一個元素。
 
@@ -1204,7 +1204,7 @@ The hash_map hm1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>  hash_map::erase
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 在 hash_map 中從指定位置移除一個項目或一連串項目，或移除符合指定之索引鍵的項目。
 
@@ -1224,7 +1224,7 @@ size_type erase(const key_type& key);
 *first*<br/>
 從 hash_map 中移除之第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 從 hash_map 中移除的最後一個項目之後的位置。
 
 *key*<br/>
@@ -1328,7 +1328,7 @@ of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ## <a name="find"></a>  hash_map::find
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，定址對象是 hash_map 中索引鍵等於指定索引鍵的元素位置。
 
@@ -1407,7 +1407,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>  hash_map::get_allocator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回一份用來建構 hash_map 的配置器物件複本。
 
@@ -1483,7 +1483,7 @@ int main( )
 ## <a name="hash_map"></a>  hash_map::hash_map
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 建構一個空的 hash_map，或是某個其他 hash_map 之全部或部分複本的 hash_map。
 
@@ -1561,7 +1561,7 @@ hash_map(
 ## <a name="insert"></a>  hash_map::insert
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 將某個元素或某個範圍的元素插入到 hash_map。
 
@@ -1596,7 +1596,7 @@ iterator insert(
 |*val*|要插入到 hash_map 中之元素的值，除非 hash_map 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|
 |*_Where*|有關要從何處開始搜尋正確插入點的提示。|
 |*first*|要從 hash_map 複製之第一個元素的位置。|
-|*最後一個*|緊接在要從 hash_map 複製之最後一個元素後面的位置。|
+|*last*|緊接在要從 hash_map 複製之最後一個元素後面的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1727,7 +1727,7 @@ After the move insertion, hm4 contains:
 ## <a name="iterator"></a>  hash_map::iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供可讀取或修改 hash_map 中任何元素的雙向迭代器。
 
@@ -1752,7 +1752,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ## <a name="key_comp"></a>  hash_map::key_comp
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 擷取一份用來排序 hash_map 中索引鍵的比較物件複本。
 
@@ -1828,7 +1828,7 @@ int main( )
 ## <a name="key_compare"></a>  hash_map::key_compare
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種提供函式物件的類型，該函式物件可比較兩個排序鍵來判斷對應中兩個元素的相對順序。
 
@@ -1849,7 +1849,7 @@ typedef Traits key_compare;
 ## <a name="key_type"></a>  hash_map::key_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，描述構成 hash_map 每個元素的排序鍵物件。
 
@@ -1870,7 +1870,7 @@ typedef Key key_type;
 ## <a name="lower_bound"></a>  hash_map::lower_bound
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，指向 hash_map 中索引鍵值等於或大於指定索引鍵值的第一個元素。
 
@@ -1947,7 +1947,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="mapped_type"></a>  hash_map::mapped_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，代表儲存在 hash_map 中的資料類型。
 
@@ -1968,7 +1968,7 @@ typedef Type mapped_type;
 ## <a name="max_size"></a>  hash_map::max_size
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回 hash_map 的最大長度。
 
@@ -2007,7 +2007,7 @@ int main( )
 ## <a name="op_at"></a>  hash_map::operator[]
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 將具有特定索引鍵值的項目插入 `hash_map` 中。
 
@@ -2104,7 +2104,7 @@ int main( )
 ## <a name="op_eq"></a>  hash_map::operator=
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 將 hash_map 的元素以另一個 hash_map 的複本取代。
 
@@ -2165,7 +2165,7 @@ int main( )
 ## <a name="pointer"></a>  hash_map::pointer
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供 hash_map 中元素的指標。
 
@@ -2182,7 +2182,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ## <a name="rbegin"></a>  hash_map::rbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_map 中的第一個元素。
 
@@ -2266,7 +2266,7 @@ After the erasure, the first element in the reversed hash_map is 2.
 ## <a name="reference"></a>  hash_map::reference
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供對儲存在 hash_map 中元素的參考。
 
@@ -2329,7 +2329,7 @@ The modified data value of first element is 15.
 ## <a name="rend"></a>  hash_map::rend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_map 中最後一個元素後面的位置。
 
@@ -2419,7 +2419,7 @@ After the erasure, the last element in the reversed hash_map is 2.
 ## <a name="reverse_iterator"></a>  hash_map::reverse_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，提供可讀取或修改反轉 hash_map 中元素的雙向迭代器。
 
@@ -2444,7 +2444,7 @@ hash_map 所定義的 `reverse_iterator` 會指向作為 [value_type](#value_typ
 ## <a name="size"></a>  hash_map::size
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回 hash_map 中的元素數。
 
@@ -2494,7 +2494,7 @@ The hash_map length is now 2.
 ## <a name="size_type"></a>  hash_map::size_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種不帶正負號的整數類型，可代表 hash_map 中的元素數目。
 
@@ -2511,7 +2511,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ## <a name="swap"></a>  hash_map::swap
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 交換兩個 hash_map 的元素。
 
@@ -2585,7 +2585,7 @@ After swapping with hm3, hash_map hm1 is: 300.
 ## <a name="upper_bound"></a>  hash_map::upper_bound
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回迭代器，指向 hash_map 中索引鍵值大於指定索引鍵值的第一個元素。
 
@@ -2663,7 +2663,7 @@ of the initial element of hm1 is: 20.
 ## <a name="value_comp"></a>  hash_map::value_comp
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 傳回函式物件，此物件可藉由比較 hash_map 中元素的索引鍵值來判斷這些元素的順序。
 
@@ -2731,7 +2731,7 @@ int main( )
 ## <a name="value_type"></a>  hash_map::value_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](../standard-library/unordered-map-class.md)。
 
 一種類型，代表儲存在 hash_map 中的物件類型。
 

@@ -40,11 +40,11 @@ helpviewer_keywords:
 - operator< member [STL/CLR]
 ms.assetid: fb48cb75-d5ef-47ce-b526-bf60dc86c552
 ms.openlocfilehash: 1a884a75fbc3ba979402c94c67d2915863a847e9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384461"
 ---
 # <a name="utility-stlclr"></a>utility (STL/CLR)
 
@@ -73,7 +73,7 @@ ms.locfileid: "51331460"
 |[operator== (pair) (STL/CLR)](#op_eq)|對等於比較。|
 |[operator!= (pair) (STL/CLR)](#op_neq)|配對不相等比較。|
 |[operator< (pair) (STL/CLR)](#op_lt)|組小於比較。|
-|[運算子\<= （配對） (STL/CLR)](#op_lteq)|配對小於或等於比較。|
+|[operator\<= (pair) (STL/CLR)](#op_lteq)|配對小於或等於比較。|
 |[operator> (pair) (STL/CLR)](#op_gt)|大於比較的配對。|
 |[operator>= (pair) (STL/CLR)](#op_gteq)|對大於或等於的比較。|
 
@@ -83,7 +83,7 @@ ms.locfileid: "51331460"
 
 ## <a name="members"></a>成員
 
-## <a name="pair"></a> 配對 (STL/CLR)
+## <a name="pair"></a> pair (STL/CLR)
 此範本類別描述包裝一組值的物件。
 
 ### <a name="syntax"></a>語法
@@ -201,7 +201,7 @@ int main()
 [x, 3]
 ```
 
-## <a name="op_as"></a> pair::operator = (STL/CLR)
+## <a name="op_as"></a> pair::operator= (STL/CLR)
 
 取代預存的值的配對。
 
@@ -266,7 +266,7 @@ pair(Value1 val1, Value2 val2);
 *val1*<br/>
 要儲存的第一個值。
 
-*Val2*<br/>
+*val2*<br/>
 要儲存的第二個值。
 
 ### <a name="remarks"></a>備註
@@ -526,7 +526,7 @@ int main()
 [y, 4]
 ```
 
-## <a name="op_neq"></a> 運算子 ！ = （配對） (STL/CLR)
+## <a name="op_neq"></a> operator!= (pair) (STL/CLR)
 
 配對不相等比較。
 
@@ -580,7 +580,7 @@ int main()
 [x 3] != [x 4] is True
 ```
 
-## <a name="op_lt"></a> 運算子&lt;（配對） (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (pair) (STL/CLR)
 
 組小於比較。
 
@@ -634,7 +634,7 @@ int main()
 [x 3] < [x 4] is True
 ```
 
-## <a name="op_lteq"></a> 運算子&lt;= （配對） (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (pair) (STL/CLR)
 
 配對小於或等於比較。
 
@@ -688,7 +688,7 @@ int main()
 [x 4] <= [x 3] is False
 ```
 
-## <a name="op_eq"></a> 運算子 = = （配對） (STL/CLR)
+## <a name="op_eq"></a> operator== (pair) (STL/CLR)
 
 對等於比較。
 
@@ -742,7 +742,7 @@ int main()
 [x 3] == [x 4] is False
 ```
 
-## <a name="op_gt"></a> 運算子&gt;（配對） (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (pair) (STL/CLR)
 
 大於比較的配對。
 
@@ -796,7 +796,7 @@ int main()
 [x 4] > [x 3] is True
 ```
 
-## <a name="op_gteq"></a> 運算子&gt;= （配對） (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (pair) (STL/CLR)
 
 對大於或等於的比較。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
 ms.openlocfilehash: 5e4f5685ea1bb8cd7c405373ba774fe36af08672
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398962"
 ---
 # <a name="delete-operator-c"></a>delete 運算子 (C++)
 
@@ -48,7 +48,7 @@ delete [] set;
 
 使用**刪除**運算子，在物件解除配置其記憶體。 在刪除物件之後將指標取值的程式可能會有無法預期的結果或損毀。
 
-當**刪除**是用來取消配置 c + + 類別物件，物件的解構函式呼叫之前 （如果物件具有解構函式），會解除配置物件的記憶體。
+當**刪除**用來解除配置的記憶體C++類別的物件，物件的解構函式呼叫之前 （如果物件具有解構函式），會解除配置物件的記憶體。
 
 如果運算元**刪除**操作員是可修改左值之後刪除物件,，其值為未定義。
 

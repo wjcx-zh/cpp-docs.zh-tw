@@ -5,11 +5,11 @@ helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
 ms.openlocfilehash: dbfa076756b9e4829898d38e0277ad90106ba579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410989"
 ---
 # <a name="sample-container-class"></a>範例容器類別
 
@@ -32,9 +32,9 @@ C++ 標準程式庫所定義的容器類別會符合數個額外的需求，如�
 
 容器樣板類別 [list](../standard-library/list-class.md) 提供決定性且實用的行為，即使出現上述例外狀況也很有用。 例如，如果在插入一或多個項目時擲回例外狀況，容器就會保持不變，並重新擲回例外狀況。
 
-針對*所有*容器所定義的類別 c + + 標準程式庫，如果下列成員函式呼叫期間擲回例外狀況`insert`， `push_back`，或`push_front`，容器會保持不變，重新擲回例外狀況。
+針對*所有*所定義的容器類別C++標準程式庫，如果下列成員函式呼叫期間擲回例外狀況`insert`， `push_back`，或`push_front`，容器會保持不變並重新擲回例外狀況。
 
-針對*所有*c + + 標準程式庫所定義的容器類別，不會擲回例外狀況呼叫下列成員函式： `pop_back`， `pop_front`。
+針對*所有*所定義的容器類別C++標準程式庫，不會擲回例外狀況呼叫下列成員函式： `pop_back`， `pop_front`。
 
 只有在複製作業 (指派或複製建構) 擲回例外狀況時，成員函式 [erase](../standard-library/container-class-erase.md) 才會擲回例外狀況。
 
@@ -48,7 +48,7 @@ C++ 標準程式庫所定義的容器類別會符合數個額外的需求，如�
 
 C++ 標準程式庫所定義的容器類別物件會透過 `Alloc` 類型的預存物件，配置並釋放它所控制之序列的儲存體，此物件通常是樣板參數。 這類配置器物件必須具有相同的外部介面的類別物件`allocator<Ty>`。 特別是，`Alloc`必須是相同的型別 `Alloc::rebind<value_type>::other`
 
-針對*所有*c + + 標準程式庫，此成員函式所定義的容器類別`Alloc get_allocator const;`傳回的預存配置器物件複本。 請注意，如果已指派容器物件，就不會複製預存的配置器物件。 所有建構函式初始化中儲存的值`allocator`至`Alloc`如果建構函式中不包含任何的配置器參數。
+針對*所有*所定義的容器類別C++標準程式庫，此成員函式`Alloc get_allocator const;`傳回的預存配置器物件複本。 請注意，如果已指派容器物件，就不會複製預存的配置器物件。 所有建構函式初始化中儲存的值`allocator`至`Alloc`如果建構函式中不包含任何的配置器參數。
 
 根據 C++ 標準，C++ 標準程式庫所定義的容器類別可能會假設：
 

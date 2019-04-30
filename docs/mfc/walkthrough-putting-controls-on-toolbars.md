@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：將放在工具列上的控制項
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392449"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>逐步解說：將放在工具列上的控制項
 
@@ -62,10 +62,9 @@ ms.locfileid: "57291384"
 
 1. 在 `CFindComboBox`類別中，覆寫 `PreTranslateMessage` 虛擬方法。 這個方法會啟用下拉式方塊處理[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息。 如果使用者點閱 Esc 鍵 (`VK_ESCAPE`)，便會將焦點移回主框架視窗。 如果使用者點閱 ENTER 鍵 (`VK_ENTER`)，便會將包含 `WM_COMMAND` 命令 ID 的 `ID_EDIT_FIND_COMBO` 訊息張貼到主框架視窗內。
 
-1. 建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，它會命名為`CFindComboButton`。
+1. 建立的類別**尋找**下拉式方塊按鈕，衍生自[CMFCToolBarComboBoxButton 類別](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)。 在此範例中，其名稱是 `CFindComboButton`。
 
-1. 
-  `CMFCToolbarComboBoxButton` 的建構函式接受三個參數：按鈕的命令 ID、按鈕影像索引和下拉式方塊樣式。 設定這些參數，如下所示：
+1. `CMFCToolbarComboBoxButton` 的建構函式接受三個參數：按鈕的命令 ID、按鈕影像索引和下拉式方塊樣式。 設定這些參數，如下所示：
 
    1. 傳遞 `ID_EDIT_FIND_COMBO` 做為命令 ID。
 

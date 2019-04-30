@@ -3,19 +3,19 @@ title: 使用 accelerator 和 accelerator_view 物件
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405387"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>使用 accelerator 和 accelerator_view 物件
 
-您可以使用[加速器](../../parallel/amp/reference/accelerator-class.md)並[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)類別來指定裝置或模擬器上執行您的 c + + AMP 程式碼。 系統可能包含數個裝置或模擬器不同的記憶體數量、 共用的記憶體支援、 偵錯支援或雙精確度支援。 C + + Accelerated Massive Parallelism (c + + AMP) 提供的 Api，可用來檢查可用的加速器，設定為預設值，指定多個對 parallel_for_each 而言，多個呼叫的 accelerator_views 和執行特殊的偵錯工作。
+您可以使用[加速器](../../parallel/amp/reference/accelerator-class.md)並[accelerator_view](../../parallel/amp/reference/accelerator-view-class.md)類別，以指定的裝置或模擬器來執行您C++上的 AMP 程式碼。 系統可能包含數個裝置或模擬器不同的記憶體數量、 共用的記憶體支援、 偵錯支援或雙精確度支援。 C++Accelerated Massive Parallelism (C++ AMP) 提供 Api，可用來檢查可用的加速器，設定為預設值，指定多個對 parallel_for_each 而言，多個呼叫的 accelerator_views 和執行特殊的偵錯工作。
 
 ## <a name="using-the-default-accelerator"></a>使用預設加速器
 
-C + + AMP 執行階段會挑選預設的加速器，除非您撰寫程式碼來選擇特定加速器。 執行階段會選擇預設加速器，如下所示：
+C++ AMP 執行階段會挑選預設的加速器，除非您撰寫程式碼來選擇特定加速器。 執行階段會選擇預設加速器，如下所示：
 
 1. 應用程式正在執行以偵錯模式中，如果加速器支援偵錯。
 
@@ -96,7 +96,7 @@ void pick_with_most_memory()
 
 共用的記憶體是可由 CPU 和加速器存取的記憶體。 使用共用記憶體排除或大幅降低的 CPU 和加速器之間複製資料的額外負荷。 雖然共用記憶體，其 CPU 和加速器，無法並行存取，而且會產生未定義的行為。 快速鍵屬性[supports_cpu_shared_memory](reference/accelerator-class.md#supports_cpu_shared_memory)會傳回 **，則為 true**如果加速器支援共用的記憶體，而[default_cpu_access_type 未](reference/accelerator-class.md#default_cpu_access_type)屬性會取得預設值[access_type](reference/concurrency-namespace-enums-amp.md#access_type)配置之記憶體`accelerator`— 比方說，**陣列**相關聯的 s `accelerator`，或`array_view`上存取的物件`accelerator`.
 
-C + + AMP 執行階段會自動選擇最佳的預設值`access_type`針對每個`accelerator`，但讀取時，共用記憶體的效能特性 （頻寬和延遲） 可能會比專用 （非共用） 加速器記憶體的差從 CPU 寫入從 CPU，或兩者。 如果共用的記憶體執行以及從 CPU 讀取和寫入的專屬記憶體，執行階段預設值為`access_type_read_write`; 否則執行階段會選擇較保守的預設`access_type`，並允許覆寫它，如果記憶體存取應用程式其計算核心模式受益於不同`access_type`。
+C++ AMP 執行階段會自動選擇最佳的預設值`access_type`針對每個`accelerator`，但共用記憶體的效能特性 （頻寬和延遲） 可能會比專用 （非共用） 加速器記憶體的差時讀取 CPU，撰寫從 CPU，或兩者。 如果共用的記憶體執行以及從 CPU 讀取和寫入的專屬記憶體，執行階段預設值為`access_type_read_write`; 否則執行階段會選擇較保守的預設`access_type`，並允許覆寫它，如果記憶體存取應用程式其計算核心模式受益於不同`access_type`。
 
 下列程式碼範例示範如何判斷是否預設加速器支援共用的記憶體，然後覆寫其預設存取類型，並建立`accelerator_view`從它。
 
@@ -170,13 +170,13 @@ bool pick_accelerator()
 
 - [accelerator::direct3d_ref 資料成員](reference/accelerator-class.md#direct3d_ref):此單一執行緒加速器會使用模擬一般圖形卡在 CPU 上的軟體。 它預設會使用偵錯，但它並不適用於生產環境因為比硬體加速器慢。 此外，它是僅適用於 DirectX SDK 和 Windows SDK，並不太可能安裝在您客戶的電腦上。 如需詳細資訊，請參閱 <<c0> [ 偵錯 GPU 程式碼](/visualstudio/debugger/debugging-gpu-code)。
 
-- [accelerator::direct3d_warp 資料成員](reference/accelerator-class.md#direct3d_warp):此加速器提供後援解決方案，來使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 上執行 c + + AMP 程式碼。
+- [accelerator::direct3d_warp 資料成員](reference/accelerator-class.md#direct3d_warp):此加速器提供後援解決方案，執行C++上使用 Streaming SIMD Extensions (SSE) 的多核心 Cpu 的 AMP 程式碼。
 
-- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator):您可以使用這個加速器來設定預備環境陣列。 它無法執行 c + + AMP 程式碼。 如需詳細資訊，請參閱 < [c + + AMP 中的預備環境陣列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)上平行程式設計的原生程式碼的部落格文章。
+- [accelerator:: cpu_accelerator 資料成員](reference/accelerator-class.md#cpu_accelerator):您可以使用這個加速器來設定預備環境陣列。 它無法執行C++AMP 程式碼。 如需詳細資訊，請參閱 <<c0> [ 中的預備環境陣列C++p](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)上的平行程式設計原生程式碼的部落格文章。</c0>
 
 ## <a name="interoperability"></a>互通性
 
-C + + AMP 執行階段支援之間的互通性`accelerator_view`類別與 Direct3D [ID3D11Device 介面](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法會採用`IUnknown`介面，並傳回`accelerator_view`物件。 [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device)方法會採用`accelerator_view`物件，然後傳回`IUnknown`介面。
+C++ AMP 執行階段支援之間的互通性`accelerator_view`類別與 Direct3D [ID3D11Device 介面](/windows/desktop/api/d3d11/nn-d3d11-id3d11device)。 [Create_accelerator_view](reference/concurrency-direct3d-namespace-functions-amp.md#create_accelerator_view)方法會採用`IUnknown`介面，並傳回`accelerator_view`物件。 [Get_device](reference/concurrency-direct3d-namespace-functions-amp.md#get_device)方法會採用`accelerator_view`物件，然後傳回`IUnknown`介面。
 
 ## <a name="see-also"></a>另請參閱
 

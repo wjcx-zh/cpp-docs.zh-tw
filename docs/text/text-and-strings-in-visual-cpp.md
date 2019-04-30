@@ -25,11 +25,11 @@ helpviewer_keywords:
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
 ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411795"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Visual C++ 中的文字和字串
 
@@ -38,7 +38,7 @@ ms.locfileid: "53626717"
 ## <a name="in-this-section"></a>本節內容
 
 [Unicode 和 MBCS](../text/unicode-and-mbcs.md)<br/>
-討論對於 Unicode 和 MBCS 程式設計的 Visual c + + 支援。
+討論 Visual C++ Unicode 和 MBCS 程式設計的支援。
 
 [Unicode 的支援](../text/support-for-unicode.md)<br/>
 描述使用 Unicode，支援所有字元集，包括無法表示的字元集中的單一位元組的規格。
@@ -46,11 +46,11 @@ ms.locfileid: "53626717"
 [針對多位元組字元集 (MBCS) 支援](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 討論 MBCS 至 Unicode 支援字元集，例如日文和中文，不能以單一位元組表示的替代方案。
 
-[在 tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[tchar.h 中的泛型文字對應](../text/generic-text-mappings-in-tchar-h.md)<br/>
 提供許多資料類型、 常式和其他物件的 Microsoft 特定的泛型文字對應。
 
-[如何：各種字串類型之間轉換](../text/how-to-convert-between-various-string-types.md)<br/>
-示範如何將各種 Visual c + + 字串類型轉換成其他字串。
+[如何：在各種字串類型之間轉換](../text/how-to-convert-between-various-string-types.md)<br/>
+示範如何將轉換各種視覺效果C++成其他字串的字串類型。
 
 ## <a name="related-sections"></a>相關章節
 
@@ -58,7 +58,7 @@ ms.locfileid: "53626717"
 討論 C 執行階段程式庫中的多語系支援。
 
 [國際化範例](https://github.com/Microsoft/VCSamples)<br/>
-提供示範 Visual c + + 中的國際化範例的連結。
+提供範例示範在視覺效果中的國際化連結C++。
 
 [語言和國家/地區字串](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 提供 C 執行階段程式庫中的語言和國家/地區的字串。

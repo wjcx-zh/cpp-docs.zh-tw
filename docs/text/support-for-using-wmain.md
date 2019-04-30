@@ -9,15 +9,15 @@ helpviewer_keywords:
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
 ms.openlocfilehash: f4705e65551b57e3e52c0c8f060032a93280f67d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410534"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 
-Visual c + + 支援定義**wmain**函式，並將寬字元引數傳遞至您的 Unicode 應用程式。 宣告型式參數**wmain**，使用格式類似於`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如: 
+視覺化C++支援定義**wmain**函式，並將寬字元引數傳遞至您的 Unicode 應用程式。 宣告型式參數**wmain**，使用格式類似於`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如：
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )

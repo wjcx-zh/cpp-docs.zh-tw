@@ -3,15 +3,15 @@ title: 字串 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403239"
 ---
 # <a name="strings-ccx"></a>字串 (C++/CX)
 
-Windows 執行階段中的文字顯示 C + + /cli 的 CX [platform:: string 類別](../cppcx/platform-string-class.md)。 使用`Platform::String Class`當您將字串傳遞來回 Windows 執行階段類別中的方法，或您跨應用程式二進位介面 (ABI) 界限與其他 Windows 執行階段元件互動時。 `Platform::String Class` 提供適用於幾個常見字串作業的方法，但它並不是針對完整功能的字串類別而設計的。 您可以在 C++ 模組中使用 Standard C++ 字串型别 (如 [wstring](../standard-library/basic-string-class.md) ) 進行任何重要的文字處理，然後將最終的結果轉換成 [Platform::String^](../cppcx/platform-string-class.md) ，再將其傳入或傳出公用介面。 `wstring` 或 `wchar_t*` 與 `Platform::String`之間可進行簡單而有效的轉換。
+Windows 執行階段中的文字會顯示C++由 /CX [platform:: string 類別](../cppcx/platform-string-class.md)。 使用`Platform::String Class`當您將字串傳遞來回 Windows 執行階段類別中的方法，或您跨應用程式二進位介面 (ABI) 界限與其他 Windows 執行階段元件互動時。 `Platform::String Class` 提供適用於幾個常見字串作業的方法，但它並不是針對完整功能的字串類別而設計的。 您可以在 C++ 模組中使用 Standard C++ 字串型别 (如 [wstring](../standard-library/basic-string-class.md) ) 進行任何重要的文字處理，然後將最終的結果轉換成 [Platform::String^](../cppcx/platform-string-class.md) ，再將其傳入或傳出公用介面。 `wstring` 或 `wchar_t*` 與 `Platform::String`之間可進行簡單而有效的轉換。
 
 **快速傳遞**
 

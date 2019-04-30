@@ -18,11 +18,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397831"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>資料錄集：AddNew，如何編輯和刪除工作 (ODBC)
 
@@ -160,5 +160,5 @@ ms.locfileid: "59033200"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：深入了解更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[資料錄集：更多有關更新的詳細資訊 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

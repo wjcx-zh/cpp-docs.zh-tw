@@ -59,11 +59,11 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
 ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399834"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase 類別
 
@@ -254,7 +254,7 @@ virtual void Create(
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
-字串運算式，這是您所建立的資料庫檔案的名稱。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 您必須提供名稱。 如果您未提供檔案的副檔名。MDB 會附加。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 只有 Microsoft Jet (。MDB) 資料庫檔案，可以使用此成員函式來建立。 (字串常值中會需要兩個反斜線，因為 「\\」 是 c + + 逸出字元。)
+字串運算式，這是您所建立的資料庫檔案的名稱。 它可以是完整路徑和檔案名稱，例如"c:\\\MYDB。MDB"。 您必須提供名稱。 如果您未提供檔案的副檔名。MDB 會附加。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB"。 只有 Microsoft Jet (。MDB) 資料庫檔案，可以使用此成員函式來建立。 (字串常值中會需要兩個反斜線，因為 「\\」 是C++逸出字元。)
 
 *lpszLocale*<br/>
 字串運算式，用來指定用於建立資料庫的定序順序。 預設值為 `dbLangGeneral`。 可能的值為：
@@ -309,7 +309,7 @@ virtual void Create(
 
 ### <a name="remarks"></a>備註
 
-`Create` 建立資料庫檔案，以及基本的 DAO 資料庫物件並初始化 c + + 物件。 物件會附加至相關聯的工作區資料庫集合。 資料庫物件是處於開啟狀態;請勿呼叫`Open*`之後`Create`。
+`Create` 建立資料庫檔案，以及基本的 DAO 資料庫物件並初始化C++物件。 物件會附加至相關聯的工作區資料庫集合。 資料庫物件是處於開啟狀態;請勿呼叫`Open*`之後`Create`。
 
 > [!NOTE]
 >  使用`Create`，您可以建立只有 Microsoft Jet (。MDB) 資料庫。 您無法建立 ISAM 資料庫或 ODBC 資料庫。
@@ -523,7 +523,7 @@ CString GetName();
 
 ### <a name="remarks"></a>備註
 
-如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如，「\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (字串常值中會需要兩個反斜線，因為 「\\」 是 c + + 逸出字元。)
+如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如，「\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (字串常值中會需要兩個反斜線，因為 「\\」 是C++逸出字元。)
 
 建議，例如，您在標題中顯示此名稱。 如果正在擷取名稱時，就會發生錯誤，MFC 會擲回例外狀況型別的[CDaoException](../../mfc/reference/cdaoexception-class.md)。
 
@@ -825,7 +825,7 @@ virtual void Open(
 ### <a name="parameters"></a>參數
 
 *lpszName*<br/>
-是現有的 Microsoft Jet 名稱的字串運算式 (。MDB) 資料庫檔案。 如果檔案名稱的副檔名，它是必要項目。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (字串常值中會需要兩個反斜線，因為 「\\」 是 c + + 逸出字元。)
+是現有的 Microsoft Jet 名稱的字串運算式 (。MDB) 資料庫檔案。 如果檔案名稱的副檔名，它是必要項目。 如果您的網路支援的統一命名慣例 (UNC)，您也可以指定網路路徑，例如"\\\\\\\MYSERVER\\\MYSHARE\\\MYDIR\\\MYDB。MDB"。 (字串常值中會需要兩個反斜線，因為 「\\」 是C++逸出字元。)
 
 使用時，適用一些考量事項*lpszName*。 如果它：
 

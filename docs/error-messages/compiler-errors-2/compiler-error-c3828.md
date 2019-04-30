@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
 ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390590"
 ---
 # <a name="compiler-error-c3828"></a>編譯器錯誤 C3828
 

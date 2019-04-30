@@ -6,11 +6,11 @@ f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
 ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404646"
 ---
 # <a name="platformbox-class"></a>Platform::Box 類別
 
@@ -168,5 +168,5 @@ virtual property T Value{
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)<br/>
+[平台命名空間](../cppcx/platform-namespace-c-cx.md)<br/>
 [Boxing](../cppcx/boxing-c-cx.md)

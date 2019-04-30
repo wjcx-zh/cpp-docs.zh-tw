@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
 ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402433"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>編譯器警告 (層級 2) C4412
 
-> '*函式*': 函式簽章含有類型'*型別*';C + + 物件是純程式碼之間傳遞的不安全和混合或原生。
+> '*函式*': 函式簽章含有類型'*型別*';C++物件都是 unsafe 純程式碼之間傳遞並混合或原生。
 
 ## <a name="remarks"></a>備註
 

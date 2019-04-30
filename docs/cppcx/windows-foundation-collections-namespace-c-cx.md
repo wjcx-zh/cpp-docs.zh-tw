@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
 ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404607"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections 命名空間 (C++/CX)
 
-C + + /CX 補充 collections 命名空間，以簡化使用 Vector、 VectorView、 對應和 MapView 集合類別的函式。
+C++/CX 補充 collections 命名空間，以簡化使用 Vector、 VectorView、 對應和 MapView 集合類別的函式。
 
 ## <a name="syntax"></a>語法
 

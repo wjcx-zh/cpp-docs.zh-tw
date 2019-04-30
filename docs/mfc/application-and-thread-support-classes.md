@@ -12,11 +12,11 @@ helpviewer_keywords:
 - application support classes [MFC]
 ms.assetid: 3c1d14fd-c35c-48f1-86ce-1e0f9a32c36d
 ms.openlocfilehash: 667725a60fb0c907a9c2d017674f9d097d1f4946
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394672"
 ---
 # <a name="application-and-thread-support-classes"></a>應用程式和執行緒支援類別
 
@@ -24,7 +24,7 @@ ms.locfileid: "57262034"
 
 Microsoft Foundation Class (MFC) 程式庫支援多執行緒的應用程式內執行。 必須至少一個執行緒; 所有的應用程式。所使用的執行緒您`CWinApp`物件是這個主要執行緒。
 
-`CWinThread` 封裝的作業系統執行緒功能的一部分。 若要讓多個執行緒更方便使用，MFC 也提供同步處理提供 c + + 物件的介面，Win32 同步處理的物件類別。
+`CWinThread` 封裝的作業系統執行緒功能的一部分。 若要讓多個執行緒更方便使用，MFC 也提供同步處理物件的類別，以提供C++Win32 同步處理物件的介面。
 
 ## <a name="application-and-thread-classes"></a>應用程式和執行緒類別
 

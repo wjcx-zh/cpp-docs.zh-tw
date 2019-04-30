@@ -1,56 +1,46 @@
 ---
-title: C 執行階段錯誤 R6002 到 R6035
-ms.date: 11/17/2017
+title: C 執行階段錯誤
+ms.date: 04/16/2019
 f1_keywords:
 - c.errors
+- R6000
+- R6003
+- R6010
+- R6022
+- R6023
+- R6034
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 8fc1c5365d4c09908235336575c80b9df6892f90
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400028"
 ---
-# <a name="c-runtime-errors-r6002-through-r6035"></a>C 執行階段錯誤 R6002 到 R6035
+# <a name="c-runtime-errors-rxxxx"></a>C 執行階段錯誤 (Rxxxx)
 
-此章節是錯誤的參考，該錯誤是於您的應用程式載入或執行時產生自 C 執行階段程式庫 (CRT)。 即使訊息是指 Microsoft 視覺效果C++執行階段，這些錯誤會指出您的應用程式的程式碼中的 bug，或是無法處理的執行階段程式庫，例如記憶體不足的情況。 如果不需要您的應用程式，以避免造成，條件的程式碼或撰寫程式碼來擷取這些錯誤，並呈現給使用者的好記的訊息，您的應用程式的終端使用者可能會看到這些錯誤。
+C 執行階段程式庫 (CRT) 可能會在載入或執行您的應用程式時，報告執行階段錯誤。 即使每個訊息指的是 Microsoft VisualC++執行階段程式庫，它並不表示有一個錯誤是在程式庫。 這些錯誤會指出您的應用程式的程式碼中的 bug，或是無法處理的執行階段程式庫，例如記憶體不足的情況。 除非您寫入您的應用程式，來防止它們，或是擷取錯誤，並顯示易懂的錯誤訊息給您的使用者改為您的應用程式的終端使用者可能會看到這些錯誤。
 
-您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com)站台。 [VisualC++一般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)論壇是針對視覺效果的相關問題C++，將不會討論其他論壇中。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
-
-如需其他說明和社群資源的連結，請參閱[VisualC++說明和社群](../../overview/visual-cpp-help-and-community.md)。
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
 ## <a name="c-runtime-errors"></a>C 執行階段錯誤
 
-[C 執行階段錯誤 R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md)
-
-[C 執行階段錯誤 R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md)
-
-[C 執行階段錯誤 R6009](../../error-messages/tool-errors/c-runtime-error-r6009.md)
-
-[C 執行階段錯誤 R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md)
-
-[C 執行階段錯誤 R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md)
-
-[C 執行階段錯誤 R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md)
-
-[C 執行階段錯誤 R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md)
-
-[C 執行階段錯誤 R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md)
-
-[C 執行階段錯誤 R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md)
-
-[C 執行階段錯誤 R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md)
-
-[C 執行階段錯誤 R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md)
-
-[C 執行階段錯誤 R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md)
-
-[C 執行階段錯誤 R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md)
-
-[C 執行階段錯誤 R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md)
-
+[C 執行階段錯誤 R6002](../../error-messages/tool-errors/c-runtime-error-r6002.md) \
+[C 執行階段錯誤 R6008](../../error-messages/tool-errors/c-runtime-error-r6008.md) \
+[C 執行階段錯誤 R6009](../../error-messages/tool-errors/c-runtime-error-r6009.md) \
+[C 執行階段錯誤 R6016](../../error-messages/tool-errors/c-runtime-error-r6016.md) \
+[C 執行階段錯誤 R6017](../../error-messages/tool-errors/c-runtime-error-r6017.md) \
+[C 執行階段錯誤 R6018](../../error-messages/tool-errors/c-runtime-error-r6018.md) \
+[C 執行階段錯誤 R6019](../../error-messages/tool-errors/c-runtime-error-r6019.md) \
+[C 執行階段錯誤 R6024](../../error-messages/tool-errors/c-runtime-error-r6024.md) \
+[C 執行階段錯誤 R6025](../../error-messages/tool-errors/c-runtime-error-r6025.md) \
+[C 執行階段錯誤 R6028](../../error-messages/tool-errors/c-runtime-error-r6028.md) \
+[C 執行階段錯誤 R6030](../../error-messages/tool-errors/c-runtime-error-r6030.md) \
+[C 執行階段錯誤 R6031](../../error-messages/tool-errors/c-runtime-error-r6031.md) \
+[C 執行階段錯誤 R6032](../../error-messages/tool-errors/c-runtime-error-r6032.md) \
+[C 執行階段錯誤 R6033](../../error-messages/tool-errors/c-runtime-error-r6033.md) \
 [C 執行階段錯誤 R6035](../../error-messages/tool-errors/c-runtime-error-r6035.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置錯誤](../../error-messages/compiler-errors-1/c-cpp-build-errors.md)
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)

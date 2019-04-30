@@ -11,11 +11,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59040764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397766"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>資料錄集：深入了解更新 (ODBC)
 
@@ -105,7 +105,7 @@ ms.locfileid: "59040764"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
 [例外狀況：資料庫例外狀況](../../mfc/exceptions-database-exceptions.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
 ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400678"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 類別
 
@@ -77,7 +77,7 @@ int main(int argc, char **argv)
 This is the contents of basic_ifstream_class.txt.
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -136,7 +136,7 @@ basic_ifstream(basic_ifstream&& right);
 *_Filename*<br/>
 要開啟之檔案的名稱。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*<br/>
@@ -240,7 +240,7 @@ void open(
 *_Filename*<br/>
 要開啟之檔案的名稱。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*<br/>

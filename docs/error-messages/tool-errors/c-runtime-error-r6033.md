@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6033
 ms.assetid: f9cffdc9-81bd-4a64-a698-02762cbd82c9
 ms.openlocfilehash: 39d8a20dacb0cdeb2a767529e9716bd476f406dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400002"
 ---
 # <a name="c-runtime-error-r6033"></a>C 執行階段錯誤 R6033
 
@@ -29,4 +29,4 @@ ms.locfileid: "50467180"
 
 **適用於程式設計人員的資訊**
 
-這項診斷表示 MSIL 指示在執行期間載入器鎖定。 如果您使用 /clr 旗標編譯原生 c + +，也可能會發生。 只包含 managed 程式碼的模組上使用 /clr 旗標。 如需詳細資訊，請參閱 <<c0> [ 初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。
+這項診斷表示 MSIL 指示在執行期間載入器鎖定。 這可能會發生，如果您編譯原生C++使用 /clr 旗標。 只包含 managed 程式碼的模組上使用 /clr 旗標。 如需詳細資訊，請參閱 <<c0> [ 初始化混合組件](../../dotnet/initialization-of-mixed-assemblies.md)。

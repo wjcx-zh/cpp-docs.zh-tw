@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413842"
 ---
 # <a name="directoryiterator-class"></a>directory_iterator 類別
 
@@ -62,7 +62,7 @@ class directory_iterator;
 
 |成員函式|描述|
 |-|-|
-|[遞增值](#increment)|會嘗試前進到下一步 的檔案名稱，在目錄中。|
+|[increment](#increment)|會嘗試前進到下一步 的檔案名稱，在目錄中。|
 
 ### <a name="operators"></a>運算子
 
@@ -81,7 +81,7 @@ class directory_iterator;
 
 **命名空間：** std::experimental::filesystem
 
-## <a name="directory_iterator"></a> directory_iterator:: directory_iterator
+## <a name="directory_iterator"></a> directory_iterator::directory_iterator
 
 第一個建構函式會產生序列結尾迭代器。 第二個和第三個建構函式存放區*pval*中`mydir`，然後嘗試開啟並讀取`mydir`做為目錄。 如果成功，其儲存的第一個檔名的目錄中`myentry`; 否則會產生結束序列迭代器。
 
@@ -115,7 +115,7 @@ directory_iterator(directory_iterator&&) noexcept = default;
 directory_iterator& increment(error_code& ec) noexcept;
 ```
 
-## <a name="op_neq"></a> directory_iterator:: operator ！ =
+## <a name="op_neq"></a> directory_iterator::operator!=
 
 此成員運算子會傳回 `!(*this == right)`。
 
@@ -128,7 +128,7 @@ bool operator!=(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)比較`directory_iterator`。
 
-## <a name="op_as"></a> directory_iterator:: operator =
+## <a name="op_as"></a> directory_iterator::operator=
 
 預設成員指派運算子會如預期般運作。
 
@@ -142,7 +142,7 @@ directory_iterator& operator=(directory_iterator&&) noexcept = default;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)複製到`directory_iterator`。
 
-## <a name="op_eq"></a> directory_iterator:: operator = =
+## <a name="op_eq"></a> directory_iterator::operator==
 
 成員運算子會傳回 **，則為 true**只有兩個`*this`及*右*結束序列迭代器，或兩者都不結束-的--迭代器。
 
@@ -155,7 +155,7 @@ bool operator==(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md)比較`directory_iterator`。
 
-## <a name="op_star"></a> directory_iterator:: operator *
+## <a name="op_star"></a> directory_iterator::operator*
 
 此成員運算子會傳回 `myentry`。
 
@@ -163,7 +163,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator:: operator->
+## <a name="op_cast"></a> directory_iterator::operator->
 
 成員函式會傳回 `&**this`。
 
@@ -171,7 +171,7 @@ const directory_entry& operator*() const;
 const directory_entry * operator->() const;
 ```
 
-## <a name="op_increment"></a> directory_iterator:: operator + +
+## <a name="op_increment"></a> directory_iterator::operator++
 
 第一個成員函式會呼叫`increment()`，然後傳回`*this`。 第二個成員函式會建立一份物件，呼叫`increment()`，然後傳回複本。
 

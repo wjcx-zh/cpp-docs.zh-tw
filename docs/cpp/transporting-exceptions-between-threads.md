@@ -15,15 +15,15 @@ helpviewer_keywords:
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
 ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404737"
 ---
 # <a name="transporting-exceptions-between-threads"></a>執行緒之間傳輸例外狀況
 
-Visual c + + 支援*傳輸例外狀況*從到另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，提供 Visual c + + [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別並[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。
+視覺化C++支援*傳輸例外狀況*從到另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，VisualC++提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，及[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ namespace std
 
 |參數|描述|
 |---------------|-----------------|
-|*未指定*|用於實作 `exception_ptr` 類型的未指定內部類別。|
+|*unspecified*|用於實作 `exception_ptr` 類型的未指定內部類別。|
 |*p*|參考例外狀況的 `exception_ptr` 物件。|
 |*E*|代表例外狀況的類別。|
 |*e*|參數 `E` 類別的執行個體。|
@@ -81,14 +81,14 @@ namespace std
 
 只有以下的編譯器選項和程式設計陳述式組合可以傳輸例外狀況， 其他組合無法攔截例外狀況或可以攔截但無法傳輸例外狀況。
 
-- **/EHa**編譯器選項和**攔截**陳述式可以傳輸 SEH 和 c + + 例外狀況。
+- **/EHa**編譯器選項和**攔截**陳述式可以傳輸 SEH 和C++例外狀況。
 
-- **/EHa**， **/EHs**，並 **/EHsc**編譯器選項和**攔截**陳述式可以傳輸 c + + 例外狀況。
+- **/EHa**， **/EHs**，並 **/EHsc**編譯器選項和**攔截**陳述式可以傳輸C++例外狀況。
 
-- **/CLR**編譯器選項和**攔截**陳述式可以傳輸 c + + 例外狀況。 **/CLR**編譯器選項表示的規格 **/EHa**選項。 請注意，編譯器不支援傳輸 Managed 例外狀況， 這是因為 managed 例外狀況，衍生自[System.Exception 類別](../standard-library/exception-class.md)，已經是您可以使用通用語言執行平台的功能在執行緒之間移動的物件。
+- **/CLR**編譯器選項和**攔截**陳述式可以傳輸C++例外狀況。 **/CLR**編譯器選項表示的規格 **/EHa**選項。 請注意，編譯器不支援傳輸 Managed 例外狀況， 這是因為 managed 例外狀況，衍生自[System.Exception 類別](../standard-library/exception-class.md)，已經是您可以使用通用語言執行平台的功能在執行緒之間移動的物件。
 
    > [!IMPORTANT]
-   > 我們建議您指定 **/EHsc**編譯器選項，並只攔截 c + + 例外狀況。 您會面臨安全性威脅如果您使用 **/EHa**或是 **/CLR**編譯器選項和**攔截**陳述式，以省略符號*例外狀況宣告*(`catch(...)`)。 您可能想要使用**攔截**陳述式來擷取特定的例外狀況。 不過，`catch(...)` 陳述式會擷取所有 C++ 和 SEH 例外狀況，其中包括嚴重的非預期例外狀況。 如果您忽略非預期的例外狀況或處理不當，惡意程式碼可能會利用此機會破壞程式的安全性。
+   > 我們建議您指定 **/EHsc**編譯器選項，並只攔截C++例外狀況。 您會面臨安全性威脅如果您使用 **/EHa**或是 **/CLR**編譯器選項和**攔截**陳述式，以省略符號*例外狀況宣告*(`catch(...)`)。 您可能想要使用**攔截**陳述式來擷取特定的例外狀況。 不過，`catch(...)` 陳述式會擷取所有 C++ 和 SEH 例外狀況，其中包括嚴重的非預期例外狀況。 如果您忽略非預期的例外狀況或處理不當，惡意程式碼可能會利用此機會破壞程式的安全性。
 
 ## <a name="usage"></a>使用量
 
@@ -122,7 +122,7 @@ namespace std
 
 ### <a name="seh-exceptions"></a>SEH 例外狀況
 
-如果您使用 **/EHa**編譯器選項時，您可以在 c + + 攔截 SEH 例外狀況**攔截**區塊。 `current_exception` 函式會傳回參考 SEH 例外狀況的 `exception_ptr` 物件。 而`rethrow_exception`函式擲回 SEH 例外狀況，如果您呼叫具有 thetransported`exception_ptr`作為其引數的物件。
+如果您使用 **/EHa**編譯器選項時，您可以攔截 SEH 例外狀況在C++**攔截**區塊。 `current_exception` 函式會傳回參考 SEH 例外狀況的 `exception_ptr` 物件。 而`rethrow_exception`函式擲回 SEH 例外狀況，如果您呼叫具有 thetransported`exception_ptr`作為其引數的物件。
 
 `current_exception`函式會傳回 null`exception_ptr`如果您呼叫在 SEH **__finally**終止處理常式， **__except**例外狀況處理常式，或 **__except**篩選條件運算式。
 
@@ -142,7 +142,7 @@ namespace std
 
 `make_exception_ptr` 函式會以類別的執行個體做為其引數，並傳回參考該執行個體的 `exception_ptr`。 雖然任何類別物件都可以是 `make_exception_ptr` 函式的引數，但一般會指定 [exception 類別](../standard-library/exception-class.md)物件作為其引數。
 
-呼叫`make_exception_ptr`函式相當於擲回 c + + 例外狀況，攔截它**攔截**區塊，並呼叫`current_exception`函式傳回`exception_ptr`參考例外狀況的物件。 Microsoft 實作`make_exception_ptr` 函式比在擲回例外狀況之後攔截來得更有效率。
+呼叫`make_exception_ptr`函式相當於擲回C++例外狀況，攔截它**攔截**區塊中，並呼叫`current_exception`函數來傳回`exception_ptr`參考例外狀況的物件。 Microsoft 實作`make_exception_ptr` 函式比在擲回例外狀況之後攔截來得更有效率。
 
 一般來說，應用程式通常不需要使用 `make_exception_ptr` 函式，所以我們不建議使用此功能。
 

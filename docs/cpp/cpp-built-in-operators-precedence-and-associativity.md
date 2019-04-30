@@ -1,5 +1,5 @@
 ---
-title: C + + 內建運算子、 優先順序和關聯性
+title: C++內建運算子、 優先順序和關聯性
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators (C++), hierarchy
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - hierarchy, operator
 ms.assetid: 95c1f0ba-dad8-4034-b039-f79a904f112f
 ms.openlocfilehash: 0b560913deb57393a8547f0831e0d987eed41ab7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392345"
 ---
-# <a name="c-built-in-operators-precedence-and-associativity"></a>C + + 內建運算子、 優先順序和關聯性
+# <a name="c-built-in-operators-precedence-and-associativity"></a>C++內建運算子、 優先順序和關聯性
 
 C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運算子指定要對一個或多個運算元執行的評估：
 
@@ -50,11 +50,11 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |[邏輯 not](../cpp/logical-negation-operator-exclpt.md)|[\!](../cpp/logical-negation-operator-exclpt.md)|
 |[一元否定運算](../cpp/unary-plus-and-negation-operators-plus-and.md)|[-](../cpp/unary-plus-and-negation-operators-plus-and.md)|
 |[一元加號](../cpp/unary-plus-and-negation-operators-plus-and.md)|[+](../cpp/unary-plus-and-negation-operators-plus-and.md)|
-|[傳址](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
+|[Address-of](../cpp/address-of-operator-amp.md)|[&amp;](../cpp/address-of-operator-amp.md)|
 |[間接取值](../cpp/indirection-operator-star.md)|[&#42;](../cpp/indirection-operator-star.md)|
 |[建立物件](../cpp/new-operator-cpp.md)|[new](../cpp/new-operator-cpp.md)|
 |[終結物件](../cpp/delete-operator-cpp.md)|[delete](../cpp/delete-operator-cpp.md)|
-|[轉型](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
+|[Cast](../cpp/cast-operator-parens.md)|[()](../cpp/cast-operator-parens.md)|
 |**群組 4 優先順序，由左到右的順序關聯性**|
 |[指標成員 （物件或指標）](../cpp/pointer-to-member-operators-dot-star-and-star.md)|[.&#42;或->&#42;](../cpp/pointer-to-member-operators-dot-star-and-star.md)|
 |**群組 5 優先順序，由左到右的順序關聯性**|
@@ -86,7 +86,7 @@ C++ 語言包含所有 C 運算子，並且新增了數個新的運算子。 運
 |**群組 14 優先順序，由左到右的順序關聯性**|
 |[邏輯 OR](../cpp/logical-or-operator-pipe-pipe.md)|[&#124;&#124;](../cpp/logical-or-operator-pipe-pipe.md)|
 |**群組 15 的優先順序，從右至左順序關聯性**|
-|[條件式](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
+|[Conditional](../cpp/conditional-operator-q.md)|[? :](../cpp/conditional-operator-q.md)|
 |**群組 16 優先順序，從右至左順序關聯性**|
 |[指派](../cpp/assignment-operators.md)|[=](../cpp/assignment-operators.md)|
 |[乘法指派](../cpp/assignment-operators.md)|[&#42;=](../cpp/assignment-operators.md)|

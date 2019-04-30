@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
 ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406882"
 ---
 # <a name="compiler-error-c3068"></a>編譯器錯誤 C3068
 
-'function': 'naked' 函式不能包含需要的物件會回溯發生 c + + 例外狀況
+'function': 'naked' 函式不能包含會需要物件回溯如果C++發生例外狀況
 
-編譯器無法執行上的堆疊回溯[naked](../../cpp/naked-cpp.md)擲回例外狀況，因為暫存物件建立在函式和 c + + 例外狀況處理函式 ([/EHsc](../../build/reference/eh-exception-handling-model.md)) 指定。
+編譯器無法執行上的堆疊回溯[naked](../../cpp/naked-cpp.md)擲回例外狀況，因為暫存物件建立函式中的函式和C++例外狀況處理 ([/EHsc](../../build/reference/eh-exception-handling-model.md)) 是指定此項目。
 
 若要解決這個錯誤，執行至少下列其中一：
 
@@ -27,7 +27,7 @@ ms.locfileid: "50575470"
 
 - 請勿在函式建立暫存物件。
 
-如果函式在堆疊上，建立暫存物件，如果函式會擲回的例外狀況，而且如果啟用 c + + 例外狀況處理，編譯器將會清除堆疊在擲回例外狀況。
+如果函式會建立暫存物件在堆疊上，如果函式會擲回的例外狀況，而且C++例外狀況處理功能啟用後，編譯器將會清除堆疊在擲回例外狀況。
 
 當發生例外狀況時，編譯器產生的程式碼，呼叫的初構和終解但不會出現在 naked 函式時，會執行函式。
 

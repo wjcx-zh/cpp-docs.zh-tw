@@ -7,11 +7,11 @@ helpviewer_keywords:
 - active document servers [MFC]
 ms.assetid: 131fec1e-02a0-4305-a7ab-903b911232a7
 ms.openlocfilehash: 7050b810bb5e1f0c240222cd9b8c4922ced4238a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394964"
 ---
 # <a name="active-document-servers"></a>主動式文件伺服程式
 
@@ -27,8 +27,7 @@ MFC 支援與主動式文件[CDocObjectServer](../mfc/reference/cdocobjectserver
 
 一般 MFC 伺服器會連結自己的 `COleServerItem` 衍生類別。 MFC 應用程式精靈會產生這個類別，如果您選取**迷你伺服**或是**全伺服器**核取方塊，來提供您的應用程式伺服器複合文件的支援。 如果您同時選取**主動式文件伺服**核取方塊，MFC 應用程式精靈會產生一個衍生自類別`CDocObjectServerItem`改。
 
-
-  `COleDocObjectItem` 類別允許讓 OLE 容器變成主動式文件容器。 您可以使用 MFC 應用程式精靈建立主動式文件容器可以選取**主動式文件容器**MFC 應用程式精靈 的 複合文件支援 頁面中核取方塊。 如需詳細資訊，請參閱 <<c0> [ 建立作用中的文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。
+`COleDocObjectItem` 類別允許讓 OLE 容器變成主動式文件容器。 您可以使用 MFC 應用程式精靈建立主動式文件容器可以選取**主動式文件容器**MFC 應用程式精靈 的 複合文件支援 頁面中核取方塊。 如需詳細資訊，請參閱 <<c0> [ 建立作用中的文件容器應用程式](../mfc/creating-an-active-document-container-application.md)。
 
 ## <a name="see-also"></a>另請參閱
 

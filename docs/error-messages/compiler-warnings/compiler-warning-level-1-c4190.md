@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4190
 ms.assetid: a4d0ad93-a19a-4063-addd-36d605831567
 ms.openlocfilehash: 05984594a57878aad8037861a15ac9284ff65192
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386495"
 ---
 # <a name="compiler-warning-level-1-c4190"></a>編譯器警告 （層級 1） C4190
 
@@ -19,9 +19,9 @@ ms.locfileid: "50521225"
 
 函式或函式指標具有 UDT （使用者定義型別，也就是類別、 結構、 列舉或等位） 的傳回型別和`extern`"C"連結。 這是合法的如果：
 
-- 此函式所有呼叫都都由 c + +。
+- 此函式所有呼叫都都由C++。
 
-- 函式的定義是以 c + +。
+- 函式的定義位於C++。
 
 ## <a name="example"></a>範例
 

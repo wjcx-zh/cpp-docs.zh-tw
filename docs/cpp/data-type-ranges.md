@@ -36,11 +36,11 @@ helpviewer_keywords:
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392228"
 ---
 # <a name="data-type-ranges"></a>資料類型範圍
 
@@ -78,20 +78,20 @@ Visual C++ 32 位元和 64 位元編譯器會辨識本文稍後所提供表格�
 |**不帶正負號的 __int32**|4|**不帶正負號**，**不帶正負號的 int**|0 到 4,294,967,295|
 |**__int64**|8|**long long**，**帶正負號長長的時間**|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
 |**unsigned __int64**|8|**unsigned long long**|0 到 18,446,744,073,709,551,615|
-|**bool**|1|無|**false**或 **，則為 true**|
-|**char**|1|無|-128 到 127 預設<br /><br /> 使用 [/J](../build/reference/j-default-char-type-is-unsigned.md)編譯時為 0 至 255|
-|**帶正負號的 char**|1|無|-128 到 127|
-|**unsigned char**|1|無|0 到 255|
+|**bool**|1|none|**false**或 **，則為 true**|
+|**char**|1|none|-128 到 127 預設<br /><br /> 使用 [/J](../build/reference/j-default-char-type-is-unsigned.md)編譯時為 0 至 255|
+|**帶正負號的 char**|1|none|-128 到 127|
+|**unsigned char**|1|none|0 到 255|
 |**short**|2|**short int**，**帶正負號的 short int**|-32,768 到 32,767|
 |**unsigned short**|2|**unsigned short int**|0 到 65,535|
 |**long**|4|**long int**，**帶正負號的 long int**|-2,147,483,648 至 2,147,483,647|
 |**unsigned long**|4|**unsigned long int**|0 到 4,294,967,295|
 |**long long**|8|無 (但是相當於 **__int64**)|-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807|
 |**unsigned long long**|8|無 (但是相當於**unsigned 的 __int64**)|0 到 18,446,744,073,709,551,615|
-|**enum**|視情況而定|無| |
-|**float**|4|無|3.4E +/- 38 (7 位數)|
-|**double**|8|無|1.7E +/- 308 (15 位數)|
-|**long double**|與相同**double**|無|與相同**double**|
+|**enum**|視情況而定|none| |
+|**float**|4|none|3.4E +/- 38 (7 位數)|
+|**double**|8|none|1.7E +/- 308 (15 位數)|
+|**long double**|與相同**double**|none|與相同**double**|
 |**wchar_t**|2|**__wchar_t**|0 到 65,535|
 
 變數，其使用方式而異 **__wchar_t**指定寬字元類型或多位元組字元類型。 在字元或字串常數之前使用 `L` 前置詞可指定寬字元類型常數。

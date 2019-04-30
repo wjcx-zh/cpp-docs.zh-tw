@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405582"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 命名空間函式 (AMP)
 
@@ -152,11 +152,11 @@ Direct3D 裝置介面指標。
 
 `accelerator_view`您使用此函式建立的物件為安全執行緒。 您必須同步處理同時使用`accelerator_view`物件。 非同步並行使用方式的`accelerator_view`物件和原始 ID3D11Device 介面會導致未定義的行為。
 
-C + + AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用 D3D 偵錯層，如果您使用`D3D11_CREATE_DEVICE_DEBUG`旗標。
+C++ AMP 執行階段會提供詳細的錯誤資訊，偵錯模式中使用 D3D 偵錯層，如果您使用`D3D11_CREATE_DEVICE_DEBUG`旗標。
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-取得對 accelerator_view 來安全地執行與 accelerator_view 共用的資源執行 D3D 作業鎖定。 Accelerator_view 和內部與這個 accelerator_view 相關聯的所有 c + + AMP 資源取得這個鎖定執行作業時，會封鎖，而另一個執行緒持有 D3D 存取鎖定。 這個鎖定是非遞迴：它是未定義的行為，從已經保留鎖定的執行緒呼叫此函式。 它是未定義的行為，來執行對 accelerator_view 或任何與 accelerator_view，要從保持 D3D 存取鎖定的執行緒相關聯的資料容器的作業。 另請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 式類別。
+取得對 accelerator_view 來安全地執行與 accelerator_view 共用的資源執行 D3D 作業鎖定。 Accelerator_view 和所有C++在內部與這個 accelerator_view 相關聯的 AMP 資源會取得這個鎖定，執行作業時，會封鎖，而另一個執行緒持有 D3D 存取鎖定。 這個鎖定是非遞迴：它是未定義的行為，從已經保留鎖定的執行緒呼叫此函式。 它是未定義的行為，來執行對 accelerator_view 或任何與 accelerator_view，要從保持 D3D 存取鎖定的執行緒相關聯的資料容器的作業。 另請參閱 scoped_d3d_access_lock，範圍為基礎的 D3D 存取鎖定的 RAII 式類別。
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

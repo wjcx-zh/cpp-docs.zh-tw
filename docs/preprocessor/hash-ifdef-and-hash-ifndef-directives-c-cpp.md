@@ -12,11 +12,11 @@ helpviewer_keywords:
 - '#ifndef directive'
 ms.assetid: 2b0be69d-9e72-45d8-8e24-e4130fb2455b
 ms.openlocfilehash: d7a6a1604df03f0607f33e42880270cbdcd62e8b
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59027226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409872"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef 和 #ifndef 指示詞 (C/C++)
 **#Ifdef**並 **#ifndef**指示詞會執行相同的工作`#if`指示詞搭配使用時**定義**(*識別碼* ).
@@ -44,7 +44,7 @@ ms.locfileid: "59027226"
 
 *識別碼*可以從命令列使用傳遞`/D`選項。 您可以使用指定最多 30 個巨集`/D`。
 
-這個選項在檢查定義是否存在時很實用，因為可以從命令列傳遞定義。 例如：
+這個選項在檢查定義是否存在時很實用，因為可以從命令列傳遞定義。 例如: 
 
 ```cpp
 // ifdef_ifndef.CPP

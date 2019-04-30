@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
 ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387067"
 ---
 # <a name="compiler-error-c2259"></a>編譯器錯誤 C2259
 
@@ -50,7 +50,7 @@ B b;  // OK, B defines func()
 
 - 使用衍生類別中實作的介面方法的範圍解析運算子，來實作的方法使用限定名稱的介面名稱。
 
-C2259 也會導致一致性工作，在 Visual c + + 2005 中，已完成 **/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析由以進行編譯 **/zc: wchar_t-**，以取得此行為，從先前的版本，或最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+C2259 也會導致一致性所進行工作，在視覺效果C++2005年 **/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析由以進行編譯 **/zc: wchar_t-**，以取得此行為，從先前的版本，或最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 下列範例會產生 C2259:
 

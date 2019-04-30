@@ -8,11 +8,11 @@ helpviewer_keywords:
 - activation [MFC], windowless
 ms.assetid: 094903b5-c344-42fa-96ff-ce01e16891c5
 ms.openlocfilehash: 9d60c309d5644c106e6c85a0c7b3988916be7193
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386768"
 ---
 # <a name="providing-windowless-activation"></a>提供無視窗啟用
 
@@ -50,7 +50,7 @@ ms.locfileid: "57284706"
 
 在無視窗控制項中，您應一律使用 `COleControl` 成員函式，而不要使用對應的 `CWnd` 成員函式，或其相關的 Win32 API 函式。
 
-您可能想將無視窗控制項做為 OLE 拖放作業的目標。 通常這會需要將控制項的視窗登錄為置放目標。 由於控制項沒有自己的視窗，因此容器會使用其視窗做為置放目標。 控制項會提供 `IDropTarget` 介面的實作，讓容器能夠在適當時委派呼叫。 若要公開此容器的介面，覆寫[colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)。 例如: 
+您可能想將無視窗控制項做為 OLE 拖放作業的目標。 通常這會需要將控制項的視窗登錄為置放目標。 由於控制項沒有自己的視窗，因此容器會使用其視窗做為置放目標。 控制項會提供 `IDropTarget` 介面的實作，讓容器能夠在適當時委派呼叫。 若要公開此容器的介面，覆寫[colecontrol:: Getwindowlessdroptarget](../mfc/reference/colecontrol-class.md#getwindowlessdroptarget)。 例如：
 
 [!code-cpp[NVC_MFC_AxOpt#8](../mfc/codesnippet/cpp/providing-windowless-activation_4.cpp)]
 

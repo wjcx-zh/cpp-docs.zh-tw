@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
 ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399820"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 結構
 
@@ -94,7 +94,7 @@ struct CDaoFieldInfo
 |`dbGUID`|16|全域唯一識別項/識別碼 Universally Unique Identifier 搭配遠端程序呼叫。|
 
 *m_lAttributes*<br/>
-指定 tabledef、 資料錄集、 querydef 或索引物件所包含的欄位物件的特性。 傳回的值可以是加總這些常數，建立使用 c + + 位元 OR (**&#124;**) 運算子：
+指定 tabledef、 資料錄集、 querydef 或索引物件所包含的欄位物件的特性。 傳回的值可以是加總這些常數，以建立C++位元 OR (**&#124;**) 運算子：
 
 - `dbFixedField` 欄位大小被固定的 （數值欄位的預設值）。
 
@@ -106,7 +106,7 @@ struct CDaoFieldInfo
 
 - `dbDescending` 欄位以遞減排序 (Z-A 或 100-0) （僅適用於欄位物件的索引物件的欄位集合中; 在 MFC 中，物件本身包含在 tabledef 物件的索引） 的順序。 如果您省略這個常數時，欄位以遞增排序 (A-Z 或 0-100) 順序 （預設值）。
 
-當檢查這個屬性的設定，您可以使用 c + + 位元-和運算子 (**&**) 來測試特定的屬性。 在設定多個屬性，您就可以將它們結合使用位元 OR 結合適當的常數 (**&#124;**) 運算子。 如需詳細資訊，請參閱 DAO [說明] 中的 「 屬性屬性 」。
+當檢查這個屬性的設定，您可以使用C++位元-和運算子 (**&**) 來測試特定的屬性。 在設定多個屬性，您就可以將它們結合使用位元 OR 結合適當的常數 (**&#124;**) 運算子。 如需詳細資訊，請參閱 DAO [說明] 中的 「 屬性屬性 」。
 
 *m_nOrdinalPosition*<br/>
 值，指定您想要設定物件所表示 DAO 欄位要顯示相對於其他欄位的欄位數字順序。 您可以設定此屬性與[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)。 如需詳細資訊，請參閱 DAO [說明] 中的 < OrdinalPosition 屬性 >。

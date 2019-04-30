@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4471
 ms.assetid: ccfd8bd5-bc1b-4be7-a6ea-0e3a7add6607
 ms.openlocfilehash: 0345b730b8fc37329f632bb5d8486c67efd8e3b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400782"
 ---
 # <a name="compiler-warning-level-4-c4471"></a>編譯器警告 （層級 4） C4471
 
 '*列舉型別*': 不限範圍列舉之向前宣告必須含有基礎類型 (假設是 int)
 
-不限範圍列舉之向前宣告找不到沒有規範的基礎類型。 根據預設，Visual c + + 假設`int`是列舉的基礎類型。 如果不同的型別用於列舉型別定義中，例如，如果指定不同的明確類型，或不同的型別會隱含地設定初始設定式，這可能會造成問題。 您可能也必須可攜性問題;其他編譯器不要假設`int`是列舉的基礎類型。
+不限範圍列舉之向前宣告找不到沒有規範的基礎類型。 根據預設，視覺效果C++會假設`int`是列舉的基礎類型。 如果不同的型別用於列舉型別定義中，例如，如果指定不同的明確類型，或不同的型別會隱含地設定初始設定式，這可能會造成問題。 您可能也必須可攜性問題;其他編譯器不要假設`int`是列舉的基礎類型。
 
 這個警告預設為關閉;您可以使用 /Wall 或 /w*N*來啟用命令列上，或使用 #pragma 4471[警告](../../preprocessor/warning.md)原始程式檔。
 

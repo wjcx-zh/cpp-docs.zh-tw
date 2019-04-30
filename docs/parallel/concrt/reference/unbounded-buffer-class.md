@@ -20,16 +20,15 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
 ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407831"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer 類別
 
-
-  `unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。
+`unbounded_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠存放無限個訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -199,8 +198,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -296,8 +294,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

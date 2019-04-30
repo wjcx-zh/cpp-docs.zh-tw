@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
 ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398051"
 ---
 # <a name="data-access-programming-mfcatl"></a>Data Access Programming (MFC/ATL)
 

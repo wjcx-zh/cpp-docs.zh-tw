@@ -10,15 +10,15 @@ helpviewer_keywords:
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
 ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394698"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>配置和解除配置視窗記憶體
 
-不使用 c + +**刪除**終結框架視窗或檢視表的運算子。 請改為呼叫`CWnd`成員函式`DestroyWindow`。 框架視窗，因此，應該會在堆積上配置與運算子**新**。 配置框架視窗的堆疊框架或全域時要小心。 其他視窗應該盡可能的堆疊框架上配置。
+請勿使用C++**刪除**終結框架視窗或檢視表的運算子。 請改為呼叫`CWnd`成員函式`DestroyWindow`。 框架視窗，因此，應該會在堆積上配置與運算子**新**。 配置框架視窗的堆疊框架或全域時要小心。 其他視窗應該盡可能的堆疊框架上配置。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

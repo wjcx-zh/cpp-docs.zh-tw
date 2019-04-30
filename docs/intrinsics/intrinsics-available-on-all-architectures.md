@@ -5,21 +5,21 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
 ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396661"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>可用的所有架構內建
 
-Microsoft C/c + + 編譯器和通用的 C 執行階段程式庫 (UCRT) 提供一些內建函式在所有架構上。
+Microsoft C /C++編譯器和通用的 C 執行階段程式庫 (UCRT) 提供一些內建函式在所有架構上。
 
 ## <a name="compiler-intrinsics"></a>編譯器內建函式
 
 x86、AMD64 和 ARM 架構可以使用下列內建函式：
 
-|內建|頁首|
+|內建|標頭|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -91,7 +91,7 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 
 下列的 UCRT 函式會在所有架構上具有內建形式：
 
-|內建|頁首|
+|內建|標頭|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|

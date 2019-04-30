@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396772"
 ---
 # <a name="resource-compiler-error-rw2002"></a>資源編譯器錯誤 RW2002
 
@@ -69,7 +69,7 @@ ms.locfileid: "51523489"
 
 1. **預期的控制項類別名稱**
 
-   `class`欄位**控制**中的陳述式**對話方塊**陳述式必須是下列類型的其中一個： 按鈕、 下拉式方塊、 編輯、 LISTBOX、 捲軸、 靜態，或使用者定義。 請確定類別的拼法正確。
+   `class`欄位**控制**中的陳述式**對話方塊**陳述式必須是下列類型之一：按鈕、 下拉式方塊、 編輯、 LISTBOX、 捲軸、 靜態，或使用者定義。 請確定類別的拼法正確。
 
 1. **預期的字體名稱**
 
@@ -141,7 +141,7 @@ ms.locfileid: "51523489"
 
 1. **無效的控制項類型**
 
-   在每個控制項陳述式 **對話方塊** 陳述式必須是下列其中之一： 核取方塊、 下拉式方塊、 控制項、 SYSCOMMENTS、 DEFPUSHBUTTON，EDITTEXT、 GROUPBOX、 圖示、 清單方塊、 LTEXT、 按鈕、 RADIOBUTTON、 RTEXT、 捲軸。 請確定這些控制陳述式的拼字正確。
+   在每個控制項陳述式** 對話方塊**陳述式必須是下列其中之一：核取方塊、 下拉式方塊、 控制項、 SYSCOMMENTS、 DEFPUSHBUTTON，EDITTEXT、 GROUPBOX、 圖示、 清單方塊、 LTEXT、 按鈕、 RADIOBUTTON、 RTEXT、 捲軸。 請確定這些控制陳述式的拼字正確。
 
 1. **無效的類型**
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4159
 ms.assetid: e2cf964e-f4b8-4b2c-9569-1abb94307232
 ms.openlocfilehash: e898af8f109ed23bd1784df7b39c174bbed675f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402277"
 ---
 # <a name="compiler-warning-level-3-c4159"></a>編譯器警告 （層級 3） C4159
 
@@ -23,7 +23,7 @@ ms.locfileid: "50552278"
 
 ## <a name="example"></a>範例
 
-若要避免這個警告，請中提供一個識別項**pop**指令。 例如: 
+若要避免這個警告，請中提供一個識別項**pop**指令。 例如：
 
 ```cpp
 // C4159.cpp

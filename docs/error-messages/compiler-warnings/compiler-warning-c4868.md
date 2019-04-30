@@ -5,11 +5,11 @@ f1_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
 ms.openlocfilehash: d0bc8716e53e71c52f6a31036a95d0b4cefedd79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388705"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>編譯器警告 （層級 4） C4868
 
@@ -17,7 +17,7 @@ ms.locfileid: "50481313"
 
 括號初始設定式清單的項目是依照左到右的順序進行評估。 有兩種情況中，編譯器就無法保證此順序： 第一個是當某些項目是以傳值; 的物件第二個會進行編譯時`/clr`和某些項目欄位的物件或陣列元素。 當編譯器無法保證左到右評估它就會發出警告 C4868。
 
-針對 Visual c + + 2015 Update 2 中所進行的編譯器一致性工作，就可以產生這個警告。 Visual c + + 2015 Update 2 之前編譯的程式碼現在可以產生 C4868。
+針對視覺效果所進行的編譯器一致性工作可能會導致此警告C++2015 Update 2。 在 視覺效果之前編譯的程式碼C++2015 Update 2 現在可以產生 C4868。
 
 此警告預設為關閉。 使用`/Wall`啟用這項警告。
 

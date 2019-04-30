@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
 ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387431"
 ---
 # <a name="how-to-create-the-user-control-and-host-mdi-view"></a>HOW TO：建立使用者控制項並裝載 MDI 檢視
 
@@ -28,7 +28,7 @@ ms.locfileid: "57738768"
 
 1. 建立 MFC 應用程式專案。
 
-   在上**檔案**功能表上，選取**新增**，然後按一下**專案**。 在  **Visual c + +** 資料夾中，選取**MFC 應用程式**。
+   在上**檔案**功能表上，選取**新增**，然後按一下**專案**。 在  **Visual C++** 資料夾中，選取**MFC 應用程式**。
 
    在**名稱**方塊中，輸入`MFC02`並將變更**解決方案**設為**新增至方案**。 按一下 [確定] 。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57738768"
 
    底下**組態屬性**，選取**一般**。 底下**專案預設值**區段中，將**Common Language Runtime 支援**來**Common Language Runtime 支援 (/ clr)**。
 
-   底下**組態屬性**，展開**C/c + +** 然後按一下**一般**節點。 設定**偵錯資訊格式**要**程式資料庫 (/Zi)**。
+   底下**組態屬性**，展開**C /C++** 再利用**一般**節點。 設定**偵錯資訊格式**要**程式資料庫 (/Zi)**。
 
    按一下 **程式碼產生**節點。 設定**啟用最少重建**要**否 (/ /gm-)**。 Ssprop_param_table_default**基本執行階段會檢查**要**預設**。
 

@@ -117,11 +117,11 @@ helpviewer_keywords:
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
 ms.openlocfilehash: ab93f8b225e27c0cf4d294d176c566bd6f2b5d02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409781"
 ---
 # <a name="basicstring-class"></a>basic_string 類別
 
@@ -137,12 +137,12 @@ class basic_string;
 ### <a name="parameters"></a>參數
 
 *CharType*<br/>
-若要儲存在字串中之單一字元的資料類型。 C + + 標準程式庫提供的類型定義這個樣板類別特製化[字串](../standard-library/string-typedefs.md#string)類型的項目**char**， [wstring](../standard-library/string-typedefs.md#wstring)，如**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`，和[u32string](../standard-library/string-typedefs.md#u32string)如`char32_t`。
+若要儲存在字串中之單一字元的資料類型。 C++標準程式庫提供的類型定義這個樣板類別特製化[字串](../standard-library/string-typedefs.md#string)類型的項目**char**， [wstring](../standard-library/string-typedefs.md#wstring)，的**wchar_t**， [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`，和[u32string](../standard-library/string-typedefs.md#u32string)如`char32_t`。
 
 *特性*<br/>
 各種重要屬性`CharType`basic_string 特製化中的項目會描述類別`Traits`。 預設值是 `char_traits`< `CharType`>。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關字串之記憶體配置和解除配置的詳細資訊。 預設值是 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>建構函式
@@ -325,7 +325,7 @@ basic_string<CharType, Traits, Allocator>& append(
 *first*<br/>
 輸入迭代器，為範圍中要附加的第一個元素定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為範圍中要附加的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -483,10 +483,10 @@ basic_string<CharType, Traits, Allocator>& assign(
 *first*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的第一個字元定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源字串範圍中要指派給目標範圍的最後一個字元以外的字元定址。
 
-*關閉*<br/>
+*off*<br/>
 即將開始指派新字元的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -768,7 +768,7 @@ basic_string(
 *first*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -1913,7 +1913,7 @@ basic_string<CharType, Traits, Allocator>& erase(
 *first*<br/>
 迭代器，為範圍中要清除之第一個元素的位置定址。
 
-*最後一個*<br/>
+*last*<br/>
 迭代器，為範圍中要清除之最後一個元素之後的位置定址。
 
 *_It*<br/>
@@ -3049,7 +3049,7 @@ void insert(
 *first*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的第一個元素定址。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器 const_pointer 或 const_iterator，為來源範圍中要插入的最後一個元素以外的元素定址。
 
 ### <a name="return-value"></a>傳回值
@@ -3951,7 +3951,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 *first*<br/>
 迭代器 const_pointer 或 const_iterator，為參數字串中要複製的第一個字元定址。
 
-*最後一個*<br/>
+*last*<br/>
 迭代器 const_pointer 或 const_iterator，為參數字串中要複製的最後一個字元定址。
 
 *count*<br/>

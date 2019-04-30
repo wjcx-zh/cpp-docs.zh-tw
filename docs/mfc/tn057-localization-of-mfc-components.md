@@ -1,5 +1,5 @@
 ---
-title: TN057：MFC 元件的當地語系化
+title: TN057:元件的當地語系化
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.components
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399625"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057：MFC 元件的當地語系化
+# <a name="tn057-localization-of-mfc-components"></a>TN057:元件的當地語系化
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -35,7 +35,7 @@ ms.locfileid: "50428635"
 
 ## <a name="localizing-your-components-resources"></a>當地語系化元件的資源
 
-當地語系化您的應用程式或 DLL 應該只包含使用符合目標語言的資源取代資源。 對於您自己的資源，這是相當簡單的一件事：在資源編輯器中編輯資源並建置應用程式即可。 如果您的程式碼撰寫正確，會有任何的字串或文字，您想要當地語系化硬式編碼至您的 c + + 程式碼-所有當地語系化都即可只會修改資源。 實際上，您可以實作自己的元件，這類元件可提供當地語系化版本，其中甚至不包含原始程式碼的組建。 這種方式較為更複雜，不過卻很值得，同時這種方法也是 MFC 所選擇使用的機制。 藉由直接載入 EXE 或 DLL 檔案至資源編輯器並編輯資源，也可以當地語系化應用程式。 其中也有可能需要在每次建置應用程式的新版本時，對這些變更重新建置應用程式。
+當地語系化您的應用程式或 DLL 應該只包含使用符合目標語言的資源取代資源。 對於您自己的資源，這是相當簡單的一件事：在資源編輯器中編輯資源並建置應用程式即可。 如果您的程式碼撰寫正確，會有任何字串或您想要當地語系化的文字硬式編碼至您C++原始程式碼-所有當地語系化都可藉由直接修改資源。 實際上，您可以實作自己的元件，這類元件可提供當地語系化版本，其中甚至不包含原始程式碼的組建。 這種方式較為更複雜，不過卻很值得，同時這種方法也是 MFC 所選擇使用的機制。 藉由直接載入 EXE 或 DLL 檔案至資源編輯器並編輯資源，也可以當地語系化應用程式。 其中也有可能需要在每次建置應用程式的新版本時，對這些變更重新建置應用程式。
 
 其中一種避免此種情形的方式是在個別的 DLL (有時稱為附屬 DLL) 中放置所有資源。 這個 DLL 會在執行階段動態地載入，而資源會從該 DLL 載入，而不是從內含所有程式碼的主要模組載入。 MFC 直接支援這個方法。 請考量當應用程式呼叫 MYAPP.EXE 時，它的資源可能是從名為 MYRES.DLL 的 DLL 所載入。 在應用程式的 `InitInstance` 中，它將會執行下列程式碼以載入該 DLL，並使 MFC 從該位置載入資源：
 

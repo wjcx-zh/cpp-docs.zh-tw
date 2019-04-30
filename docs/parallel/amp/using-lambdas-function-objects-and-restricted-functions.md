@@ -3,15 +3,15 @@ title: 使用 Lambda、函式物件和限制函式
 ms.date: 11/04/2016
 ms.assetid: 25346cc9-869d-4ada-aad3-e2228cad3d6c
 ms.openlocfilehash: 0c72ae6f600fe73405481e34ab05b60f163e44d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288112"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405322"
 ---
 # <a name="using-lambdas-function-objects-and-restricted-functions"></a>使用 Lambda、函式物件和限制函式
 
-做為引數的呼叫中指定您想要在加速器上執行的 c + + AMP 程式碼[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 您可以提供 lambda 運算式或函式物件 (functor) 做為該引數。 此外，lambda 運算式或函式物件可以呼叫 c + + AMP 限定函式。 本主題使用陣列加法演算法示範 lambda、 函式物件和限制函式。 下列範例示範不需要 c + + AMP 程式碼的演算法。 會建立兩個 1 維度的陣列長度相同。 對應的整數項目會加入，並儲存在第三個 1 維陣列。 不使用 c + + AMP。
+C++做為引數的呼叫中指定您想要在加速器上執行的 AMP 程式碼[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 您可以提供 lambda 運算式或函式物件 (functor) 做為該引數。 此外，lambda 運算式或函式物件可以呼叫C++AMP 限定函式。 本主題使用陣列加法演算法示範 lambda、 函式物件和限制函式。 下列範例示範的演算法，而不需要C++AMP 程式碼。 會建立兩個 1 維度的陣列長度相同。 對應的整數項目會加入，並儲存在第三個 1 維陣列。 C++不使用 P。
 
 ```cpp
 void CpuMethod() {
@@ -34,7 +34,7 @@ void CpuMethod() {
 
 ## <a name="lambda-expression"></a>Lambda 運算式
 
-使用 lambda 運算式是使用 c + + AMP 來重寫程式碼最直接的方式。
+使用 lambda 運算式是最直接的方式，使用C++AMP 來重寫程式碼。
 
 ```cpp
 void AddArraysWithLambda() {
@@ -114,9 +114,9 @@ void AddArraysWithFunctionObject() {
 }
 ```
 
-函式物件必須包含一個建構函式，而且必須包含的函式呼叫運算子多載。 函式呼叫運算子必須包含一個索引參數。 函式物件的執行個體傳遞做為第二個引數[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 在此範例中，三個[array_view](../../parallel/amp/reference/array-view-class.md)物件會傳遞至函式物件的建構函式。 [Array_view](../../parallel/amp/reference/array-view-class.md)物件`sum`的次序為 1。 因此，函式呼叫運算子的參數是[index](../../parallel/amp/reference/index-class.md)排序為 1 的物件。 在執行階段，此函式會執行一次中每個元素[array_view](../../parallel/amp/reference/array-view-class.md)物件。 如需詳細資訊，請參閱 <<c0> [ 函式呼叫](../../cpp/function-call-cpp.md)並[c + + 標準程式庫中的函式物件](../../standard-library/function-objects-in-the-stl.md)。
+函式物件必須包含一個建構函式，而且必須包含的函式呼叫運算子多載。 函式呼叫運算子必須包含一個索引參數。 函式物件的執行個體傳遞做為第二個引數[parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)方法。 在此範例中，三個[array_view](../../parallel/amp/reference/array-view-class.md)物件會傳遞至函式物件的建構函式。 [Array_view](../../parallel/amp/reference/array-view-class.md)物件`sum`的次序為 1。 因此，函式呼叫運算子的參數是[index](../../parallel/amp/reference/index-class.md)排序為 1 的物件。 在執行階段，此函式會執行一次中每個元素[array_view](../../parallel/amp/reference/array-view-class.md)物件。 如需詳細資訊，請參閱 <<c0> [ 函式呼叫](../../cpp/function-call-cpp.md)並[函式物件，在C++Standard 程式庫](../../standard-library/function-objects-in-the-stl.md)。</c0>
 
-## <a name="c-amp-restricted-function"></a>C + + AMP 限定函式
+## <a name="c-amp-restricted-function"></a>C++AMP 限定函式
 
 您可以藉由建立受限制的函式，並呼叫從 lambda 運算式或函式物件，進一步把加速器對應程式碼。 下列程式碼範例示範如何從 lambda 運算式呼叫受限的功能。
 
@@ -153,7 +153,7 @@ void AddArraysWithFunction() {
 }
 ```
 
-受限制的函式必須包含`restrict(amp)`而且符合所述的限制[限制 (c + + AMP)](../../cpp/restrict-cpp-amp.md)。
+受限制的函式必須包含`restrict(amp)`而且符合所述的限制[限制 (C++ P)](../../cpp/restrict-cpp-amp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

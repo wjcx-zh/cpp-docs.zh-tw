@@ -3,15 +3,15 @@ title: 容器 (現代 C++)
 ms.date: 1/18/2018
 ms.topic: conceptual
 ms.openlocfilehash: 2da57bfca8b04f50a223dddfb886835c69f746a4
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392332"
 ---
 # <a name="containers-modern-c"></a>容器 (現代 C++)
 
-根據預設，使用[向量](../standard-library/vector-class.md)做為慣用的循序容器，在 c + +。 這相當於`List<T>`以.NET 語言。
+根據預設，使用[向量](../standard-library/vector-class.md)做為慣用的循序容器，在C++。 這相當於`List<T>`以.NET 語言。
 
 ```cpp
 vector<string> apples;
@@ -36,7 +36,7 @@ apple_color["Granny Smith"] = "Green";
 
 請勿使用 c-style 陣列。 對於較舊的 Api 需要直接存取資料，使用存取子方法例如`f(vec.data(), vec.size());`改。
 
-如需有關容器的詳細資訊，請參閱 < [c + + 標準程式庫容器](../standard-library/stl-containers.md)。
+如需有關容器的詳細資訊，請參閱 < [ C++標準程式庫容器](../standard-library/stl-containers.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,18 +1,18 @@
 ---
-title: 編譯時間封裝的 Pimpl (現代 C++)
+title: 編譯時期封裝的 Pimpl (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: c3e8a90a-b328-4990-82bb-e1b147f76e07
 ms.openlocfilehash: 6e114e2802dd4b2e5d1497867e2224be90c4752d
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396102"
 ---
-# <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>編譯時間封裝的 Pimpl (現代 C++)
+# <a name="pimpl-for-compile-time-encapsulation-modern-c"></a>編譯時期封裝的 Pimpl (現代 C++)
 
-*Pimpl 慣用語*是現代化的 c + + 技術來隱藏實作，為了減少結合，並將介面。 Pimpl 會簡稱為 「 指標來實作。 」 您可能已經熟悉這個概念，但知道以其他名稱，例如 Cheshire Cat 或編譯器防火牆的慣用語。
+*Pimpl 慣用語*是現代C++來隱藏實作，為了減少結合，並將介面的技術。 Pimpl 會簡稱為 「 指標來實作。 」 您可能已經熟悉這個概念，但知道以其他名稱，例如 Cheshire Cat 或編譯器防火牆的慣用語。
 
 ## <a name="why-use-pimpl"></a>為何要使用 pimpl？
 

@@ -1,18 +1,34 @@
 ---
-title: 運算錯誤 M6101 至 M6205
-ms.date: 11/17/2017
+title: 數學錯誤
+ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: 323864dcae5b60b96e193487afd53fe004d38c7e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393216"
 ---
-# <a name="math-errors-m6101-through-m6205"></a>運算錯誤 M6101 至 M6205
+# <a name="math-errors-mxxxx"></a>數學錯誤 (Mxxxx)
 
-本節是執行階段浮點數學程式庫所產生的錯誤的參考。
+本節是執行階段浮點數學程式庫所產生的錯誤的參考。 數學執行階段錯誤和警告有表單 M*xxxx*，其中*xxxx*是四位數的數字。
 
-您會發現錯誤和警告的其他協助，Microsoft 的公用論壇中。 您可以搜尋錯誤或警告編號[開發人員社群](https://developercommunity.visualstudio.com)站台。 [VisualC++一般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)論壇是針對視覺效果的相關問題C++，將不會討論其他論壇中。 您可以搜尋錯誤和警告，並提問[Stack Overflow](http://stackoverflow.com/)尋找解決方案。
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-如需其他說明和社群資源的連結，請參閱[VisualC++說明和社群](../../overview/visual-cpp-help-and-community.md)。
+## <a name="math-errors"></a>數學錯誤
+
+[運算錯誤 M6101](math-error-m6101.md) \
+[運算錯誤 M6102](math-error-m6102.md) \
+[運算錯誤 M6107](math-error-m6107.md) \
+[運算錯誤 M6108](math-error-m6108.md) \
+[運算錯誤 M6110](math-error-m6110.md) \
+[運算錯誤 M6111](math-error-m6111.md) \
+[運算錯誤 M6201](math-error-m6201.md) \
+[運算錯誤 M6202](math-error-m6202.md) \
+[運算錯誤 M6203](math-error-m6203.md) \
+[運算錯誤 M6205](math-error-m6205.md)
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[數學與浮點支援](../../c-runtime-library/floating-point-support.md)

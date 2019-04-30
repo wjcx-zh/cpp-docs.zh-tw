@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405232"
 ---
 # <a name="codecvt-class"></a>codecvt 類別
 
@@ -209,11 +209,11 @@ explicit codecvt(size_t _Refs = 0);
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- 2： 未定義這些值。
+- 2:未定義這些值。
 
 建構函式會初始化其`locale::facet`與基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -274,7 +274,7 @@ virtual result do_in(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -329,7 +329,7 @@ virtual int do_length(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -394,7 +394,7 @@ virtual result do_out(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -449,7 +449,7 @@ virtual result do_unshift(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first2*<br/>
@@ -563,7 +563,7 @@ result in(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -665,7 +665,7 @@ int length(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -770,7 +770,7 @@ result out(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first1*<br/>
@@ -862,7 +862,7 @@ result unshift(
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 成員函式呼叫之間所保留的轉換狀態。
 
 *first2*<br/>

@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394009"
 ---
 # <a name="deque-class"></a>deque 類別
 
@@ -111,7 +111,7 @@ class deque
 *Type*<br/>
 要存放在 deque 中的項目資料類型。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝 deque 之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator\<類型 >**。
 
 ## <a name="remarks"></a>備註
@@ -244,7 +244,7 @@ void assign(initializer_list<Type> IList);
 *計數*<br/>
 插入 deque 的元素複本數目。
 
-*val*<br/>
+*Val*<br/>
 插入 deque 的元素值。
 
 *IList*<br/>
@@ -773,7 +773,7 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |-|-|
 |*Al*|搭配這個物件使用的配置器類別。|
 |*計數*|已建構 deque 中的元素數。|
-|*val*|已建構 deque 中的元素值。|
+|*Val*|已建構 deque 中的元素值。|
 |*右邊*|將已建構 deque 作為複本的 deque。|
 |*第一個*|項目範圍中要複製的第一個項目位置。|
 |*最後一個*|項目範圍之外要複製的第一個項目位置。|
@@ -1340,7 +1340,7 @@ iterator erase(iterator first, iterator last);
 *first*<br/>
 從 deque 中移除之第一個元素的位置。
 
-*最後一個*<br/>
+*last*<br/>
 從 deque 中移除之最後一個元素以外的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1518,7 +1518,7 @@ IList);
 |參數|描述|
 |-|-|
 |*Where*|第一個元素插入 deque 的位置。|
-|*val*|插入 deque 的元素值。|
+|*Val*|插入 deque 的元素值。|
 |*計數*|插入 deque 的元素數目。|
 |*第一個*|要複製之引數 deque 的元素範圍中，第一個元素的位置。|
 |*最後一個*|要複製之引數 deque 的元素範圍中，超出範圍的第一個元素位置。|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
 ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400847"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>編譯器警告 (層級 4) C4336
 

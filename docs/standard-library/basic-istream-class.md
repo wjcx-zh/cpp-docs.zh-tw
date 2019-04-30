@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 5e7f6ae0728a7d28af1992cf4186d533f1a97330
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414161"
 ---
 # <a name="basicistream-class"></a>basic_istream 類別
 
@@ -275,7 +275,7 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 *str*<br/>
 要在其中寫入的字串。
 
-*ch*<br/>
+*Ch*<br/>
 要取得的字元。
 
 *strbuf*<br/>
@@ -471,7 +471,7 @@ basic_istream& operator>>(long double& val);
 
 ### <a name="parameters"></a>參數
 
-*pfn*<br/>
+*Pfn*<br/>
 函式指標。
 
 *strbuf*<br/>
@@ -651,7 +651,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*Ch*<br/>
 要放回資料流的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -821,10 +821,10 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 *pos*<br/>
 要在其中移動讀取指標的絕對位置。
 
-*關閉*<br/>
+*off*<br/>
 若要移動讀取的指標相對於位移*方式*。
 
-*方法*<br/>
+*way*<br/>
 其中一個 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列舉。
 
 ### <a name="return-value"></a>傳回值
@@ -867,7 +867,7 @@ int main ( )
 
 此巢狀類別描述一個物件，該物件的宣告會建構格式化和未格式化的輸入函式。
 
-類別 sentry {公用： 明確 sentry (basic_istream\<Elem，Tr> > & _Istr，bool _Noskip = false)，運算子 bool （) const;};
+class sentry { public: explicit sentry( basic_istream\<Elem, Tr>& _Istr, bool _Noskip = false); operator bool() const; };
 
 ### <a name="remarks"></a>備註
 

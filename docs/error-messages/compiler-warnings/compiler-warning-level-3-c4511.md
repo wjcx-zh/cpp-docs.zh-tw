@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4511
 ms.assetid: a01286b2-3dd9-4a97-a5ee-dd0e7b63ef8b
 ms.openlocfilehash: 1c67a50679730f7421737446a14624ec60213c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401926"
 ---
 # <a name="compiler-warning-level-3-c4511"></a>編譯器警告 (層級 3) C4511
 

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399560"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows Sockets:使用類別 CAsyncSocket
 
 這篇文章說明如何使用類別[CAsyncSocket](../mfc/reference/casyncsocket-class.md)。 請注意，這個類別會封裝 Windows Sockets API，在極低的層級。 `CAsyncSocket` 是以供程式設計人員知道詳細的網路通訊，但是想要的網路事件的通知回呼的便利性。 根據這項假設，本文提供基本的指令。 您可能應該考慮使用`CAsyncSocket`如果您想要處理的 MFC 應用程式中的多個網路通訊協定的 Windows 通訊端的簡易，但不是想要犧牲彈性。 您也可能會認為您可以直接自行比您無法使用類別的較通用的替代模型的程式設計更多通訊來取得較好的效率`CSocket`。
 
-`CAsyncSocket` 記載於*MFC 參考 》*。 Visual c + + 也提供 Windows Sockets 規格，位於 Windows SDK。 詳細資料會保留給您。 Visual c + + 不提供的範例應用程式`CAsyncSocket`。
+`CAsyncSocket` 記載於*MFC 參考 》*。 視覺化C++也提供 Windows Sockets 規格，位於 Windows SDK。 詳細資料會保留給您。 視覺化C++未提供的範例應用程式`CAsyncSocket`。
 
 如果您不是高了解網路通訊，而且想要一個簡單的解決方案，使用類別[CSocket](../mfc/reference/csocket-class.md)使用`CArchive`物件。 請參閱[Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)如需詳細資訊。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57263101"
 
    建立通訊端會遵循兩階段建構的 MFC 模式。
 
-   例如: 
+   例如：
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
@@ -103,11 +103,11 @@ ms.locfileid: "57263101"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:背景](../mfc/windows-sockets-background.md)
+- [Windows Socket：背景](../mfc/windows-sockets-background.md)
 
-- [Windows Sockets:Stream 通訊端](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Socket：資料流通訊端](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets:資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Socket：資料包通訊端](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>另請參閱
 

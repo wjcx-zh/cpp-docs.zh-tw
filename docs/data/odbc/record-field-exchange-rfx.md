@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395712"
 ---
 # <a name="record-field-exchange-rfx"></a>資料錄欄位交換 (RFX)
 

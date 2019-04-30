@@ -3,11 +3,11 @@ title: 命名空間和類型可視性 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
 ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392124"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>命名空間和類型可視性 (C++/CX)
 
@@ -17,7 +17,7 @@ ms.locfileid: "57739304"
 
 ## <a name="type-visibility"></a>型別可視性
 
-命名空間，而 Windows 執行階段類型中，不同於標準 c + + 類型，具有私人或公用存取範圍。 存取範圍預設為私用。 只有一個公用類型在中繼資料中是可見的，因此您可以從可能使用 C++ 以外之語言撰寫的應用程式和元件使用此類型。 一般而言，可見類型的規則比不可見類型的規則更嚴格，因為可見類型無法公開 .NET 語言或 JavaScript 不支援的 C++ 特定概念。
+命名空間，而 Windows 執行階段類型中，不同於標準C++類型，具有私人或公用存取範圍。 存取範圍預設為私用。 只有一個公用類型在中繼資料中是可見的，因此您可以從可能使用 C++ 以外之語言撰寫的應用程式和元件使用此類型。 一般而言，可見類型的規則比不可見類型的規則更嚴格，因為可見類型無法公開 .NET 語言或 JavaScript 不支援的 C++ 特定概念。
 
 > [!NOTE]
 > .NET 語言和 JavaScript 只有在執行階段才會使用中繼資料。 當 C++ 應用程式或元件與其他 C++ 應用程式或元件 (包括 Windows 元件) 通訊時，由於都是以 C++ 撰寫，因此不需要在執行階段使用中繼資料。
@@ -44,7 +44,7 @@ Windows API 包含在 Windows 中宣告的類型::\*命名空間。 這些命名
 
 ## <a name="ccx-namespaces"></a>C++/CX 命名空間
 
-C + + /CX 這些命名空間中定義特定類型為 Windows 執行階段型別系統的投影。
+C++/CX 這些命名空間中定義特定類型為 Windows 執行階段型別系統的投影。
 
 |||
 |-|-|

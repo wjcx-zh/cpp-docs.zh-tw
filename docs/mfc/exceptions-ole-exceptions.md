@@ -9,15 +9,15 @@ helpviewer_keywords:
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
 ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405960"
 ---
 # <a name="exceptions-ole-exceptions"></a>例外狀況: OLE 例外狀況
 
-在 OLE 中處理例外狀況所用的技術和設備，與處理其他例外狀況的技術和設備相同。 如需其他有關例外狀況處理的詳細資訊，請參閱文章[c + + 例外狀況處理](../cpp/cpp-exception-handling.md)。
+在 OLE 中處理例外狀況所用的技術和設備，與處理其他例外狀況的技術和設備相同。 如需其他有關例外狀況處理的詳細資訊，請參閱文章[C++例外狀況處理](../cpp/cpp-exception-handling.md)。
 
 所有例外狀況物件皆衍生自抽象基底類別 `CException`。 MFC 提供處理 OLE 例外狀況的兩種類別：
 

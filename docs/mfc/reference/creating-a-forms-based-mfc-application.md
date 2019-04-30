@@ -8,11 +8,11 @@ helpviewer_keywords:
 - forms-based applications [MFC]
 ms.assetid: 048d2f7d-b60d-4386-ad8e-71d49af9c05e
 ms.openlocfilehash: 6810a6c7fce91865a92d048129da29305e22abc1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372321"
 ---
 # <a name="creating-a-forms-based-mfc-application"></a>建立表單架構的 MFC 應用程式
 
@@ -32,7 +32,7 @@ SDI、 MDI 和多個最上層文件的應用程式是所有的表單架構，並
 
 即使您使用的基底類別，例如[CView](../../mfc/reference/cview-class.md)，您可以稍後再進行您的應用程式的表單型[加入 MFC 類別](../../mfc/reference/adding-an-mfc-class.md)衍生自`CFormView`並檢查**產生 DocTemplate資源**中的核取方塊[MFC 類別精靈](../../mfc/reference/document-template-strings-mfc-add-class-wizard.md)。
 
-一旦您完成精靈時，會開啟您的專案，以及您選取`CFormView`(或類別繼承自`CFormView`) 為您的基底類別，或如果您建立對話方塊架構應用程式時，Visual c + + 會開啟對話方塊編輯器。 此時，您已準備好設計您第一種形式。
+一旦您完成精靈時，會開啟您的專案，以及您選取`CFormView`(或類別繼承自`CFormView`) 做為基底類別或如果您建立對話方塊架構應用程式，VisualC++會開啟對話方塊編輯器。 此時，您已準備好設計您第一種形式。
 
 ### <a name="to-begin-creating-a-forms-based-mfc-executable"></a>若要開始建立表單型 MFC 可執行檔
 

@@ -1,15 +1,15 @@
 ---
-title: 使用者定義常值 （c + +）
+title: 使用者定義常值 (C++)
 ms.date: 11/04/2016
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
 ms.openlocfilehash: 1de94b43423bb5b420be29d3cace146e265a1459
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392111"
 ---
-# <a name="user-defined-literals--c"></a>使用者定義常值 （c + +）
+# <a name="user-defined-literals--c"></a>使用者定義常值 (C++)
 
 常值有六種主要分類：整數、字元、浮點、字串、布林值和指標。  從 C++ 11 開始，您可以根據這些分類來定義專屬常值，以提供常見慣用語的語法捷徑，並提升類型安全。 例如，假設您有一個 Distance 類別。 您可以針對公里定義一個常值，以及針對英哩定義另一個常值，並鼓勵使用者只要撰寫下列項目來明確指定度量單位：auto d = 42.0_km 或 auto d = 42.0_mi。 使用者定義常值沒有任何效能優勢或缺點；它們主要是為了方便起見，或針對編譯時間類型推斷。 標準程式庫中的時間和持續時間作業中有使用者定義常值的 std: string、 std:: string，和單位\<chrono > 標頭：
 
@@ -107,9 +107,9 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-您可以使用原始常值，來提供與編譯器所執行輸入序列不同之輸入序列的自訂解譯。 例如，您可以定義將序列 `4.75987` 轉換為自訂 Decimal 類型的常值，而不是 IEEE 754 浮點類型。 原始常值 (例如處理後的常值) 也可以用來執行輸入序列的編譯時間驗證。
+您可以使用原始常值，來提供與編譯器所執行輸入序列不同之輸入序列的自訂解譯。 例如，您可以定義將序列 `4.75987` 轉換為自訂 Decimal 類型的常值，而不是 IEEE 754 浮點類型。 原始常值 (例如處理後的常值) 也可以用來執行輸入序列的編譯時期驗證。
 
-### <a name="example-limitations-of-raw-literals"></a>原始常值範例： 限制
+### <a name="example-limitations-of-raw-literals"></a>範例：原始常值限制
 
 原始常值運算子和常值運算子樣板只適用於整數和浮點使用者定義常值 (如下列範例所示)：
 

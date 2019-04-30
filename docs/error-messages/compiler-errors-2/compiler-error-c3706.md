@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3706
 ms.assetid: d20a33eb-d625-46c5-ac87-32075a590d07
 ms.openlocfilehash: 2d474db5a4d50aed7b59e6f48fb5a3e8165f10c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400288"
 ---
 # <a name="compiler-error-c3706"></a>編譯器錯誤 C3706
 
 'function': 必須是 COM 介面來引發 COM 事件
 
-您用來引發 COM 事件的事件介面必須是 COM 介面。 在此情況下，介面應該使用 Visual c + + 屬性會定義或使用 匯入[#import](../../preprocessor/hash-import-directive-cpp.md)從 #import 的 embedded_idl 屬性的型別程式庫。
+您用來引發 COM 事件的事件介面必須是 COM 介面。 在此情況下，介面應該是使用來定義視覺效果C++屬性，或匯入使用[#import](../../preprocessor/hash-import-directive-cpp.md)從 #import 的 embedded_idl 屬性的型別程式庫。
 
 請注意，`#include`行的下列範例所示的 ATL 標頭檔，才能使用 COM 事件。 若要修正這個錯誤，請`IEvents`（事件介面） 的 COM 介面，藉由套用下列其中一個屬性至介面定義：[物件](../../windows/object-cpp.md)，[雙重](../../windows/dual.md)，或[dispinterface](../../windows/dispinterface.md)。
 

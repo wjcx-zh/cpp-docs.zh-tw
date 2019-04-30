@@ -14,11 +14,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
 ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392098"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>前置遞增和遞減運算子：++ 和 --
 
@@ -35,7 +35,7 @@ ms.locfileid: "50606020"
 
 前置遞減運算子 (**--**) 相當於前置遞增運算子，不同之處在於，運算元會減一且結果為這個減量值。
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 不可能是遞增或遞減運算子的運算元類型**bool**。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):遞增或遞減運算子的運算元不可以是型別**bool**。
 
 前置和後置遞增和遞減運算子都會影響其運算元。 它們之間的主要差異在於遞增或遞減在運算式評估中發生的順序 。 (如需詳細資訊，請參閱 <<c0> [ 後置遞增和遞減運算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)。)在前置形式中，遞增或遞減會在運算式評估中使用值之前發生，因此運算式的值會與運算元的值不同。 在後置形式中，遞增或遞減會在運算式評估中使用值之後發生，因此運算式的值會與運算元的值相同。 例如，下列程式會列印 "`++i = 6`"：
 

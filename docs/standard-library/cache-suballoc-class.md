@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
 ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380113"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 類別
 
@@ -32,7 +32,7 @@ class cache_suballoc
 
 |參數|描述|
 |---------------|-----------------|
-|*sz*|所配置陣列中的元素數。|
+|*Sz*|所配置陣列中的元素數。|
 
 ## <a name="remarks"></a>備註
 

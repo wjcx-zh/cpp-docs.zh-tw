@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
 ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392072"
 ---
 # <a name="platformiboxarray-interface"></a>Platform::IBoxArray 介面
 
@@ -33,7 +33,7 @@ interface class IBoxArray
 
 ### <a name="remarks"></a>備註
 
-`IBoxArray` 是 C + + /CX 名稱`Windows::Foundation::IReferenceArray`。
+`IBoxArray` 是C++/CX 名稱`Windows::Foundation::IReferenceArray`。
 
 ### <a name="members"></a>成員
 
@@ -68,4 +68,4 @@ boxed 值的類型。
 
 ## <a name="see-also"></a>另請參閱
 
-[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)
+[Array 與 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
 ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57816421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62401497"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
 
@@ -19,11 +19,11 @@ ms.locfileid: "57816421"
 
 這些是一些常見的 C4996 訊息，產生的 C 執行階段程式庫和標準程式庫，但不是詳盡的清單。 遵循下列連結，或閱讀的方式來修正此問題，或關閉的警告。
 
-- [此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與 c + + 標準的名稱： *new_name*。如需詳細資料，請參閱線上說明。](#posix-function-names)
+- [此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與C++標準的名稱： *new_name*。如需詳細資料，請參閱線上說明。](#posix-function-names)
 
 - [此函式或變數可能不安全。請考慮使用*safe_version*改。若要停用已被取代，請使用\_CRT\_SECURE\_NO\_警告。如需詳細資料，請參閱線上說明。](#unsafe-crt-library-functions)
 
-- [' std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name*使用參數的可能不安全-此呼叫須呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件](#unsafe-standard-library-functions)
+- [' std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name*使用參數的可能不安全-此呼叫須呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。如何使用視覺效果，請參閱文件C++' Checked Iterators'](#unsafe-standard-library-functions)
 
 - [此函式或變數已被較新的文件庫或作業系統功能取代。請考慮使用*new_item*改。如需詳細資料，請參閱線上說明。](#obsolete-crt-functions-and-variables)
 
@@ -46,7 +46,7 @@ ms.locfileid: "57816421"
 若要關閉 Visual Studio IDE 中的整個專案的警告：
 
 - 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
-- 選取 **組態屬性**， **C/c + +**，**進階**頁面。
+- 選取 **組態屬性**， **C /C++**，**進階**頁面。
 - 編輯**停用特定警告**屬性，即可加入`4996`。 選擇**確定**以套用變更。
 
 您也可以使用前置處理器巨集關閉某些特定的類別之程式庫中使用的取代警告。 以下將說明這些巨集。
@@ -54,7 +54,7 @@ ms.locfileid: "57816421"
 若要在 Visual Studio 中定義前置處理器巨集：
 
 - 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
-- 依序展開**組態屬性 > C/c + + > 前置處理器**。
+- 依序展開**組態屬性 > C /C++ > 前置處理器**。
 - 在 **前置處理器定義**屬性新增巨集名稱。 選擇 [確定]  加以儲存，然後重建您的專案。
 
 若要定義巨集只能在特定的原始程式檔中，加入一行例如`#define EXAMPLE_MACRO_NAME`之前任一行，其中包含的標頭檔。
@@ -65,7 +65,7 @@ ms.locfileid: "57816421"
 
 ### <a name="posix-function-names"></a>POSIX 函式名稱
 
-**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與 c + + 標準的名稱：** *new_name*。 **請參閱線上說明，如需詳細資訊。**
+**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與C++標準的名稱：** *new_name*。 **請參閱線上說明，如需詳細資訊。**
 
 Microsoft 已重新命名以依照 C99 與 c++03 規則實作所定義的全域函式名稱的 CRT 中的某些 POSIX 函式。 只有原始 POSIX 名稱已被取代，函式本身。 在大多數情況下，POSIX 函式名稱前會加上底線來表示符合標準的名稱。 編譯器會發出取代警告，原始的函式名稱，並建議慣用的名稱。
 
@@ -77,17 +77,17 @@ Microsoft 已重新命名以依照 C99 與 c++03 規則實作所定義的全域�
 
 **此函式或變數可能不安全。請考慮使用** *safe_version* **改。若要停用已被取代，請使用\_CRT\_SECURE\_NO\_警告。如需詳細資料，請參閱線上說明。**
 
-Microsoft 已取代一些 CRT 與 c + + 標準程式庫函式和全域變數，以更安全的版本。 在大部分情況下，取消核取的讀取或寫入存取權可能會導致嚴重的安全性問題的緩衝區，可讓已被取代的函式。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。
+Microsoft 已取代某些 CRT 與C++標準程式庫函式和全域變數，以更安全的版本。 在大部分情況下，取消核取的讀取或寫入存取權可能會導致嚴重的安全性問題的緩衝區，可讓已被取代的函式。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。
 
 若要修正此問題，我們建議您使用函式或變數*safe_version*改。 如果您已經確認它並不適用緩衝區覆寫，或 overread 出現在您的程式碼，而且您無法變更的程式碼可攜性的理由，您可以關閉此警告。
 
-若要關閉 CRT 中這些函式已被取代警告，請定義 **\_CRT\_SECURE\_無\_警告**。 若要關閉已被取代的全域變數的相關警告，請定義 **\_CRT\_SECURE\_無\_警告\_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱 < [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫：C + + 標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。
+若要關閉 CRT 中這些函式已被取代警告，請定義 **\_CRT\_SECURE\_無\_警告**。 若要關閉已被取代的全域變數的相關警告，請定義 **\_CRT\_SECURE\_無\_警告\_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱 < [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫：C++標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式
 
-__' std::__*function_name*__::\_未核取\_迭代器::\_Deprecate' 呼叫 std::__*function_name***使用參數的可能不安全-此呼叫須由呼叫端檢查通過的值是否正確。若要停用這個警告，請使用 -D\_SCL\_SECURE\_NO\_警告。請參閱有關如何使用 Visual c + + ' Checked Iterators' 的文件**
+__' std::__*function_name*__::\_未核取\_迭代器::\_Deprecate' 呼叫 std::__*function_name***使用參數的可能不安全-此呼叫須由呼叫端檢查通過的值是否正確。若要停用這個警告，請使用 -D\_SCL\_SECURE\_NO\_警告。如何使用視覺效果，請參閱文件C++' Checked Iterators'**
 
-因為某些 c + + 標準程式庫範本函式不會檢查正確的參數，在偵錯組建會出現這個警告。 在大部分情況下，這是因為沒有足夠的資訊可供函式，以檢查容器範圍中，或可能不正確地使用迭代器，與函式。 這項警告有助於您識別這些函式會使用，因為它們可能是嚴重的安全性漏洞，在程式中的來源。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md)。
+這個警告會出現在偵錯組建因為某些C++標準程式庫範本函式不會檢查參數的正確性。 在大部分情況下，這是因為沒有足夠的資訊可供函式，以檢查容器範圍中，或可能不正確地使用迭代器，與函式。 這項警告有助於您識別這些函式會使用，因為它們可能是嚴重的安全性漏洞，在程式中的來源。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md)。
 
 比方說，這個警告會出現在偵錯模式如果您傳遞的項目指標`std::copy`而不是純文字的陣列。 若要修正此問題，請使用適當宣告的陣列，讓程式庫可以檢查陣列範圍，並執行界限檢查。
 

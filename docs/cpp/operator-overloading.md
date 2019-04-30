@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 56ad4c4f-dd0c-45e0-adaa-08fe98cb1f8e
 ms.openlocfilehash: d6a294af3ea7ef6085eae0f7069ea2d1fdbb30e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377357"
 ---
 # <a name="operator-overloading"></a>運算子多載
 
@@ -24,7 +24,7 @@ ms.locfileid: "50621737"
 
 ## <a name="syntax"></a>語法
 
-> *型別***運算子***運算子符號* **(** *參數清單* **)**
+> *type* **operator** *operator-symbol* **(** *parameter-list* **)**
 
 ## <a name="remarks"></a>備註
 
@@ -60,7 +60,7 @@ ms.locfileid: "50621737"
 |**-=**|減法指派|二元|
 |**->**|成員選取|二元|
 |**->&#42;**|成員指標選取|二元|
-|**/**|除法|二元|
+|**/**|除號|二元|
 |**/=**|除法指派|二元|
 |**\<**|小於|二元|
 |**<<**|左移|二元|

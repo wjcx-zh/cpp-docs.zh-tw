@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394583"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL 中的取消
 
@@ -75,8 +75,7 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 
 ###  <a name="tokens"></a> 使用取消語彙基元來取消平行工作
 
-
-  `task`、`task_group` 和 `structured_task_group` 類別可透過使用取消語彙基元來支援取消。 PPL 會定義[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)並[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)針對此用途的類別。 當您使用取消語彙基元取消工作時，執行階段就不會啟動訂閱這個語彙基元的新工作。 已在使用中的工作可以使用[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成員函式，來監視的取消語彙基元，並可以時停止。
+`task`、`task_group` 和 `structured_task_group` 類別可透過使用取消語彙基元來支援取消。 PPL 會定義[concurrency:: cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)並[concurrency:: cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)針對此用途的類別。 當您使用取消語彙基元取消工作時，執行階段就不會啟動訂閱這個語彙基元的新工作。 已在使用中的工作可以使用[is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)成員函式，來監視的取消語彙基元，並可以時停止。
 
 若要初始化取消，請呼叫[concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)方法。 您回應取消的方式如下：
 
@@ -88,8 +87,7 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 
 [!code-cpp[concrt-task-basic-cancellation#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_2.cpp)]
 
-
-  `cancel_current_task` 函式會擲回；因此，您不需要明確地從目前的迴圈或函式傳回。
+`cancel_current_task` 函式會擲回；因此，您不需要明確地從目前的迴圈或函式傳回。
 
 > [!TIP]
 > 或者，您可以呼叫[concurrency:: interruption_point](reference/concurrency-namespace-functions.md#interruption_point)函式，而不是`cancel_current_task`。
@@ -158,8 +156,7 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 
 如果您無法存取父工作群組物件，呼叫[concurrency:: is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)函式來判斷是否要取消父工作群組。
 
-
-  `cancel` 方法只會影響子工作。 例如，如果您在平行工作樹狀結構的圖形取消工作群組 `tg1`，則樹狀結構中的所有工作 (`t1`、`t2`、`t3`、`t4` 和 `t5`) 都會受到影響。 如果您取消巢狀的工作群組 `tg2`，只有工作 `t4` 和 `t5` 會受到影響。
+`cancel` 方法只會影響子工作。 例如，如果您在平行工作樹狀結構的圖形取消工作群組 `tg1`，則樹狀結構中的所有工作 (`t1`、`t2`、`t3`、`t4` 和 `t5`) 都會受到影響。 如果您取消巢狀的工作群組 `tg2`，只有工作 `t4` 和 `t5` 會受到影響。
 
 當您呼叫 `cancel` 方法時，所有的子工作群組也會被取消。 不過，取消不會影響工作群組在平行工作樹狀中的任何父項。 下列範例藉由在平行工作樹狀結構圖上建置來顯示這點。
 
@@ -171,8 +168,7 @@ PPL 使用工作和工作群組來管理細部的工作和計算。 您可以巢
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
-
-  `structured_task_group` 類別不是安全執行緒。 因此，呼叫其父系 `structured_task_group` 物件的子工作會產生未指定的行為。 此規則的例外狀況是`structured_task_group::cancel`並[concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子工作可以呼叫這些方法來取消父工作群組，並檢查取消。
+`structured_task_group` 類別不是安全執行緒。 因此，呼叫其父系 `structured_task_group` 物件的子工作會產生未指定的行為。 此規則的例外狀況是`structured_task_group::cancel`並[concurrency::structured_task_group::is_canceling](reference/structured-task-group-class.md#is_canceling)方法。 子工作可以呼叫這些方法來取消父工作群組，並檢查取消。
 
 > [!CAUTION]
 >  雖然您可以使用取消語彙基元來取消工作群組所執行的工作，且此工作群組是執行作為 `task` 物件的子系，但您不能使用 `task_group::cancel` 或 `structured_task_group::cancel` 方法來取消在工作群組中執行的 `task` 物件。
@@ -206,14 +202,11 @@ PPL 中的平行演算法 (例如 `parallel_for`) 是建置在工作群組上。
 
 下列範例說明幾種取消平行演算法的方法。
 
-下列範例使用 `run_with_cancellation_token` 函式來呼叫 `parallel_for` 演算法。 
-  `run_with_cancellation_token` 函式採用取消語彙基元作為引數，並以同步方式呼叫所提供的工作函式。 由於平行演算法是建置在工作上，所以其會繼承父工作的取消語彙基元。 因此，`parallel_for` 可以回應取消。
+下列範例使用 `run_with_cancellation_token` 函式來呼叫 `parallel_for` 演算法。 `run_with_cancellation_token` 函式採用取消語彙基元作為引數，並以同步方式呼叫所提供的工作函式。 由於平行演算法是建置在工作上，所以其會繼承父工作的取消語彙基元。 因此，`parallel_for` 可以回應取消。
 
 [!code-cpp[concrt-cancel-parallel-for#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_11.cpp)]
 
-下列範例會使用[run_and_wait](reference/structured-task-group-class.md#run_and_wait)方法來呼叫`parallel_for`演算法。 
-  `structured_task_group::run_and_wait` 方法會等候所提供的工作完成。 
-  `structured_task_group` 物件可讓工作函式取消工作。
+下列範例會使用[run_and_wait](reference/structured-task-group-class.md#run_and_wait)方法來呼叫`parallel_for`演算法。 `structured_task_group::run_and_wait` 方法會等候所提供的工作完成。 `structured_task_group` 物件可讓工作函式取消工作。
 
 [!code-cpp[concrt-task-tree#7](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_12.cpp)]
 
@@ -249,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[如何：使用取消中斷平行迴圈](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|顯示如何使用取消來實作平行搜尋演算法。|
 |[如何：使用例外狀況處理中斷平行迴圈](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|顯示如何使用 `task_group` 類別來撰寫基本樹狀的搜尋演算法。|

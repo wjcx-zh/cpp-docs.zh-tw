@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bands, in rebar controls
 ms.assetid: b647e7a5-9ea7-48b1-8e5f-096d104748f0
 ms.openlocfilehash: 4bb7b4aeab1478138aa2b52649f41ca943b5daa4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378156"
 ---
 # <a name="rebar-controls-and-bands"></a>Rebar 控制項和群組列
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375739"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 
@@ -204,7 +204,7 @@ enum CurrencyStatus {
 
   - `COleCurrency::invalid` 指出這個`COleCurrency`物件無效，也就是它的值可能不正確。
 
-  - `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+  - `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 狀態`COleCurrency`在下列情況中的物件無效：
 
@@ -265,7 +265,7 @@ enum CurrencyStatus{
 
 - `COleCurrency::invalid` 指出這個`COleCurrency`物件無效，也就是它的值可能不正確。
 
-- `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 狀態`COleCurrency`在下列情況中的物件無效：
 
@@ -569,7 +569,7 @@ enum CurrencyStatus {
 
 - `COleCurrency::invalid` 指出這個`COleCurrency`物件無效，也就是它的值可能不正確。
 
-- `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 （這是"null"中資料庫的 「 沒有值，"而不是 c + + NULL）。
+- `COleCurrency::null` 指出這個`COleCurrency`物件為 null，也就是這個物件尚未提供任何值。 (這是"null"中資料庫的 「 沒有值，"而不是C++為 NULL。)
 
 > [!CAUTION]
 >  此函式是進階程式設計的情況。 此函式不會更改此物件中的資料。 它通常會用來將狀態設為 null 或無效。 請注意，指派運算子 ([運算子 =](#operator_eq)) 和[SetCurrency](#setcurrency)設定狀態的基礎來源值的物件。

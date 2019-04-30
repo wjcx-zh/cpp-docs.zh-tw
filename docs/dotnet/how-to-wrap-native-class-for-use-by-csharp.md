@@ -7,15 +7,15 @@ helpviewer_keywords:
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
 ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387119"
 ---
 # <a name="how-to-wrap-native-class-for-use-by-c"></a>HOW TO：包裝原生類別以便讓使用C#
 
-此範例示範如何包裝原生 c + + 類別，因此它可供 C# 中，或其他.NET 語言撰寫的程式碼。
+這個範例示範如何包裝原生C++類別，因此它可供撰寫的程式碼C#，或其他.NET 語言。
 
 ## <a name="example"></a>範例
 

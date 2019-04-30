@@ -9,11 +9,11 @@ helpviewer_keywords:
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
 ms.openlocfilehash: 187fa94f7c2a5457df655081b87a7f49d38adfa2
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384020"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -58,7 +58,7 @@ ms.locfileid: "59024097"
 
 > /YcAppleSystemHeaderStop.h
 
-您可以使用**include_alias** pragma，來將任何標頭檔名稱對應至另一個。 例如: 
+您可以使用**include_alias** pragma，來將任何標頭檔名稱對應至另一個。 例如：
 
 ```cpp
 #pragma include_alias( "api.h", "c:\version1.0\api.h" )

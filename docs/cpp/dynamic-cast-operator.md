@@ -7,11 +7,11 @@ helpviewer_keywords:
 - dynamic_cast keyword [C++]
 ms.assetid: f380ada8-6a18-4547-93c9-63407f19856b
 ms.openlocfilehash: 3b359885eb72f9272fb1efe14afe9a6cbe6ddb30
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399025"
 ---
 # <a name="dynamiccast-operator"></a>dynamic_cast 運算子
 
@@ -54,7 +54,7 @@ void f(D* pd) {
 
 這種類型的轉換稱為 「 向上轉型 」，因為指標類別階層架構中向上移動從它衍生自的類別衍生的類別。 向上轉型是隱含的轉換。
 
-如果`type-id`是 void * 中，執行階段檢查對判斷的實際型別`expression`。 結果是指向完整物件的指標`expression`。 例如: 
+如果`type-id`是 void * 中，執行階段檢查對判斷的實際型別`expression`。 結果是指向完整物件的指標`expression`。 例如：
 
 ```cpp
 // dynamic_cast_2.cpp
@@ -124,7 +124,7 @@ int main() {
 ![類別階層顯示多重繼承](../cpp/media/vc39011.gif "類別顯示多重繼承的階層") <br/>
 顯示多重繼承的類別階層
 
-型別的物件的指標`D`可以安全地轉換成`B`或`C`。 不過，如果`D`轉型為指向`A`物件，哪一個執行個體`A`而造成？ 這會導致模稜兩可的轉換錯誤。 若要解決此問題，您可以執行兩個模稜兩可的轉換 （cast）。 例如: 
+型別的物件的指標`D`可以安全地轉換成`B`或`C`。 不過，如果`D`轉型為指向`A`物件，哪一個執行個體`A`而造成？ 這會導致模稜兩可的轉換錯誤。 若要解決此問題，您可以執行兩個模稜兩可的轉換 （cast）。 例如：
 
 ```cpp
 // dynamic_cast_4.cpp
@@ -172,7 +172,7 @@ void f(D* pd) {
 
 **Dynamic_cast**運算子也可用來執行 「 跨轉換 」。 使用相同的類別階層架構，便可從範例中，轉換為指標，`B`子物件至`D`子物件，為完整的物件型別的`E`。
 
-考慮跨轉換 （cast），您可實際執行的指標轉換`D`最左邊指標`A`只有兩個步驟中的子物件。 您可以執行轉換從跨`D`要`B`，然後從的隱含轉換`B`至`A`。 例如: 
+考慮跨轉換 （cast），您可實際執行的指標轉換`D`最左邊指標`A`只有兩個步驟中的子物件。 您可以執行轉換從跨`D`要`B`，然後從的隱含轉換`B`至`A`。 例如：
 
 ```cpp
 // dynamic_cast_6.cpp

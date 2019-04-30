@@ -6,11 +6,11 @@ helpviewer_keywords:
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
 ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384981"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref 類別與結構 (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

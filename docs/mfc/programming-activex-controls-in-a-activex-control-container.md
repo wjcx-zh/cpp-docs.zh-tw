@@ -13,11 +13,11 @@ helpviewer_keywords:
 - ActiveX controls [MFC], wrapper classes
 ms.assetid: ef9b2480-92d6-4191-b16e-8055c4fd7b73
 ms.openlocfilehash: eaeb5275ce825272e1c605e7ceeefa24db7a32ab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378111"
 ---
 # <a name="activex-control-containers-programming-activex-controls-in-an-activex-control-container"></a>ActiveX 控制項容器：在 ActiveX 控制項容器中程式設計 ActiveX 控制項
 
@@ -58,7 +58,7 @@ ms.locfileid: "57278349"
 
 ## <a name="modifications-to-the-project"></a>修改專案
 
-若要啟用存取 Circ 控制項容器應用程式，Visual c + + 會自動加入包裝函式類別 (`CCirc`) 實作檔 (。CPP) 容器專案到包裝函式類別標頭 (。H） 對話方塊的方塊標頭檔的檔案：
+若要啟用容器應用程式存取 Circ 控制項，而 VisualC++會自動加入 [包裝函式類別 (`CCirc`) 的實作檔 (。CPP) 容器專案到包裝函式類別標頭 (。H）] 對話方塊的方塊標頭檔的檔案：
 
 [!code-cpp[NVC_MFC_AxCont#1](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_1.h)]
 
@@ -69,11 +69,11 @@ ms.locfileid: "57278349"
 [!code-cpp[NVC_MFC_AxCont#2](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_2.h)]
 [!code-cpp[NVC_MFC_AxCont#3](../mfc/codesnippet/cpp/programming-activex-controls-in-a-activex-control-container_3.h)]
 
-然後可以從其他使用一般的 c + + 語法的應用程式的程序呼叫這些函式。 如需有關如何使用此設定為存取控制的方法和屬性的成員函式的詳細資訊，請參閱下節[程式設計 ActiveX 控制項](#_core_programming_the_activex_control)。
+這些函式便可以呼叫其他應用程式的程序使用標準C++語法。 如需有關如何使用此設定為存取控制的方法和屬性的成員函式的詳細資訊，請參閱下節[程式設計 ActiveX 控制項](#_core_programming_the_activex_control)。
 
 ##  <a name="_core_member_variable_modifications_to_the_project"></a> 成員變數修改專案
 
-一旦已經加入至專案並內嵌在對話方塊容器中的 ActiveX 控制項，即可存取專案的其他部分。 存取控制的最簡單方式是[建立成員變數](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)的對話方塊類別中， `CContainerDlg` （步驟 2），也就是加入至專案，Visual c + + 包裝函式類別類型相同。 成員變數，然後可用來存取內嵌的控制項，在任何時間。
+一旦已經加入至專案並內嵌在對話方塊容器中的 ActiveX 控制項，即可存取專案的其他部分。 存取控制的最簡單方式是[建立成員變數](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md) 對話方塊類別的`CContainerDlg`（步驟 2），也就是相同類型的視覺效果加入至專案的包裝函式類別的C++。 成員變數，然後可用來存取內嵌的控制項，在任何時間。
 
 當**加入成員變數** 對話方塊中加入*m_circctl*成員變數加入專案，也會增加下列幾行的標頭檔 (。H） 的`CContainerDlg`類別：
 
@@ -86,7 +86,7 @@ ms.locfileid: "57278349"
 
 ##  <a name="_core_programming_the_activex_control"></a> 程式設計 ActiveX 控制項
 
-此時，您有對話方塊範本中插入 ActiveX 控制項，並為它建立成員變數。 您現在可以使用一般的 c + + 語法來存取的屬性和內嵌控制項的方法。
+此時，您有對話方塊範本中插入 ActiveX 控制項，並為它建立成員變數。 您現在可以使用一般C++語法來存取的屬性和內嵌控制項的方法。
 
 如所述 (在[的包裝函式類別標頭 (。H） 檔案](#_core_the_wrapper_class_header_28h29_file))，標頭檔 (。H） 針對`CCirc`包裝函式類別，在此案例的變動圓形H、 包含您可用來取得和設定任何公開的屬性值的成員函式的清單。 成員函式公開的方法也會提供。
 

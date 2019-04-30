@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
 ms.openlocfilehash: 39ae785b602b3928f0c32f9fc599527dab5558f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371891"
 ---
 # <a name="asynchronous-agents-library"></a>非同步代理程式程式庫
 
-非同步代理程式程式庫 (或簡稱*代理程式程式庫*) 提供程式設計模型，可讓您增加啟用並行的應用程式開發的穩定性。 代理程式庫是 c + + 樣板程式庫，可提升行動為基礎的程式設計模型和同處理序訊息傳遞進行粗略的資料流程和管線工作。 代理程式的程式庫建置並行執行階段的排程及資源管理元件。
+非同步代理程式程式庫 (或簡稱*代理程式程式庫*) 提供程式設計模型，可讓您增加啟用並行的應用程式開發的穩定性。 代理程式庫是C++升級的動作項目為基礎的程式設計模型和同處理序訊息傳遞進行粗略的資料流程和管線工作的範本程式庫。 代理程式的程式庫建置並行執行階段的排程及資源管理元件。
 
 ## <a name="programming-model"></a>程式設計模型
 

@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: efb833a8d4cc0b801f75951bc648d6b83df5bae8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372194"
 ---
 # <a name="crecordset-class"></a>CRecordset 類別
 
@@ -271,7 +271,7 @@ virtual void AddNew();
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫[Requery](#requery)成員函式，以查看新加入的記錄。 記錄的欄位是一開始是 Null。 （在資料庫術語中，Null 」 有任何值 」 的方式，而且不是 NULL，c + + 中相同）。若要完成此作業，您必須呼叫[更新](#update)成員函式。 `Update` 將您的變更儲存至資料來源。
+您必須呼叫[Requery](#requery)成員函式，以查看新加入的記錄。 記錄的欄位是一開始是 Null。 (在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)若要完成此作業，您必須呼叫[更新](#update)成員函式。 `Update` 將您的變更儲存至資料來源。
 
 > [!NOTE]
 >  如果您已實作大量資料列擷取，您不能呼叫`AddNew`。 這會導致失敗的判斷提示。 雖然類別`CRecordset`不會提供一個機制來更新資料的大量資料列，您可以撰寫自己的函式使用 ODBC API 函式`SQLSetPos`。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -456,7 +456,7 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-ODBC HSTMT 及所有的記憶體配置資料錄集的架構會解除配置。 通常在呼叫後`Close`，您會刪除 c + + 資料錄集物件，如果配置與**新**。
+ODBC HSTMT 及所有的記憶體配置資料錄集的架構會解除配置。 通常在呼叫後`Close`，刪除C++資料錄集物件，如果使用配置**新**。
 
 您可以呼叫`Open`呼叫之後，再次`Close`。 這可讓您重複使用的資料錄集物件。 替代方法是呼叫`Requery`。
 
@@ -1118,7 +1118,7 @@ BOOL IsFieldNull(void* pv);
 
 ### <a name="remarks"></a>備註
 
-呼叫此成員函式，以判斷資料錄集的指定的欄位資料成員是否已標示為 Null。 （在資料庫術語中，Null 」 有任何值 」 的方式，而且不是 NULL，c + + 中相同）。如果欄位資料成員被標示為 Null，則會將它解譯為任何值是目前資料錄的資料行。
+呼叫此成員函式，以判斷資料錄集的指定的欄位資料成員是否已標示為 Null。 (在資料庫術語中，Null 」 有任何值 」 的方式並不是 NULL，在相同C++。)如果欄位資料成員被標示為 Null，則會將它解譯為任何值是目前資料錄的資料行。
 
 > [!NOTE]
 >  此成員函式不適用於使用大量資料列擷取的資料錄集。 如果您已實作大量資料列擷取，然後`IsFieldNull`一律會傳回 FALSE，而導致失敗的判斷提示。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -1140,7 +1140,7 @@ BOOL IsFieldNullable(void* pv);
 
 ### <a name="remarks"></a>備註
 
-呼叫以判斷指定的欄位資料成員是 「 可為 null 」 （可以是設定為 Null 值; 此成員函式C + + NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」)。
+呼叫以判斷指定的欄位資料成員是 「 可為 null 」 （可以是設定為 Null 值; 此成員函式C++ NULL 不是 Null，表示，在資料庫術語中，相同 」 有任何值 」)。
 
 > [!NOTE]
 >  如果您已實作大量資料列擷取，您不能呼叫`IsFieldNullable`。 請改為呼叫[GetODBCFieldInfo](#getodbcfieldinfo)成員函式，來判斷欄位是否可以設定為 Null 值。 請注意，您隨時都可呼叫`GetODBCFieldInfo`，而不論您是否有實作大量資料列擷取。 如需有關大量資料列擷取的詳細資訊，請參閱[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
@@ -1524,7 +1524,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` 唯讀資料錄集只會順向捲動。
 
-   針對`CRecordset`，預設值是`CRecordset::snapshot`。 預設值的機制可讓這兩個 ODBC 與互動的 Visual c + + 精靈`CRecordset`和 DAO `CDaoRecordset`，其具有不同的預設值。
+   針對`CRecordset`，預設值是`CRecordset::snapshot`。 預設值的機制可讓視覺效果C++精靈，可使用這兩個 ODBC 互動`CRecordset`和 DAO `CDaoRecordset`，其具有不同的預設值。
 
 如需有關這些資料錄集類型的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。 如需相關資訊，請參閱文件 」 使用區塊和可捲動資料指標 」 Windows SDK 中。
 
@@ -1745,7 +1745,7 @@ void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C + + NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
 
 *bDirty*<br/>
 如果欄位資料成員會標示為 「 中途 」 （變更），則為 TRUE。 如果欄位資料成員會標示為 「 清除 」 （未變更），則否則為 FALSE。
@@ -1785,7 +1785,7 @@ void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C + + NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
+包含在資料錄集則為 NULL 的欄位資料成員的位址。 如果是 NULL，則會標示資料錄集中的所有欄位資料成員。 (C++ NULL 不是 Null 相同資料庫術語中，「 有任何值 」。 這表示)
 
 *bNull*<br/>
 如果欄位資料成員標示為不具有任何值 (Null) 為非零。 否則為 0，表示欄位資料成員會標示為非 Null。

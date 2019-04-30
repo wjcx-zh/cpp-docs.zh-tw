@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [MFC]
 ms.assetid: 6a181495-47a9-4356-83fc-b89152d6cb4c
 ms.openlocfilehash: 202a8c791f3ecaa6180eb91134b28a86572f6e19
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396375"
 ---
 # <a name="menus-mfc"></a>功能表 (MFC)
 
@@ -22,7 +22,7 @@ MFC 提供兩個可協助您使用功能表的項目：
 
 - 更新的功能表和工具列按鈕的機制：即時啟用或停用它們以符合目前程式的狀況。
 
-Visual c + + 也提供[功能表編輯器](../windows/menu-editor.md)建立和編輯您的程式功能表資源。
+視覺化C++也會提供[ 功能表編輯器](../windows/menu-editor.md)建立和編輯您的程式功能表資源。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
 ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378059"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式為基礎的應用程式
 
@@ -40,13 +40,13 @@ ms.locfileid: "57290062"
 
 ##  <a name="createapplication"></a> 建立主控台應用程式
 
-本節說明如何建立參考程式將使用的標頭檔的 Visual c + + 主控台應用程式。
+本節說明如何建立視覺效果C++主控台應用程式所參考的程式將使用的標頭檔。
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要使用 Win32 主控台應用程式精靈建立的 Visual c + + 應用程式
+#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要建立視覺效果C++應用程式使用 Win32 主控台應用程式精靈
 
 1. 上**檔案**功能表上，按一下**新增**，然後按一下 [**專案**以顯示**新專案**] 對話方塊。
 
-1. 在 **新的專案**對話方塊中，選取**Visual c + +** 節點中的**專案類型**窗格，然後選取**Win32 主控台應用程式**在 **範本**窗格。 輸入專案名稱，例如`BasicAgent`，然後按一下 **[確定]** 以顯示**Win32 主控台應用程式精靈**。
+1. 在 **新的專案**對話方塊中，選取**Visual C++** 中的節點**專案類型**窗格，然後選取**Win32 主控台應用程式**中**範本**窗格。 輸入專案名稱，例如`BasicAgent`，然後按一下 **[確定]** 以顯示**Win32 主控台應用程式精靈**。
 
 1. 在 [ **Win32 主控台應用程式精靈**] 對話方塊中，按一下**完成**。
 
@@ -66,7 +66,7 @@ ms.locfileid: "57290062"
 
 #### <a name="to-create-the-filereader-class"></a>若要建立 file_reader 類別
 
-1. 將新的 c + + 標頭檔新增至您的專案。 若要這樣做，請以滑鼠右鍵按一下**標頭檔**中的節點**方案總管**，按一下**新增**，然後按一下**新項目**。 在 **範本**窗格中，選取**標頭檔 (.h)**。 在 [**加入新項目**] 對話方塊中，輸入`file_reader.h`中**名稱**方塊，然後按一下**新增**。
+1. 新增C++標頭檔案加入專案。 若要這樣做，請以滑鼠右鍵按一下**標頭檔**中的節點**方案總管**，按一下**新增**，然後按一下**新項目**。 在 **範本**窗格中，選取**標頭檔 (.h)**。 在 [**加入新項目**] 對話方塊中，輸入`file_reader.h`中**名稱**方塊，然後按一下**新增**。
 
 1. 在 file_reader.h，加入下列程式碼。
 

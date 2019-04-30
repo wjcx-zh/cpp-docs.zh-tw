@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
 ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397792"
 ---
 # <a name="recordset-locking-records-odbc"></a>資料錄集：鎖定資料錄 (ODBC)
 
@@ -67,4 +67,4 @@ ms.locfileid: "59037285"
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)<br/>
-[資料錄集：新增、 更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[資料錄集：新增、更新和刪除資料錄 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

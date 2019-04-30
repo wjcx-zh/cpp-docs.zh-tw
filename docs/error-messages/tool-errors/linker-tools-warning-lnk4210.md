@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK4210
 ms.assetid: db48cff8-a2be-4a77-8d03-552b42c228fa
 ms.openlocfilehash: 75376129ce0033c717a4da3074cee9de132d357d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395062"
 ---
 # <a name="linker-tools-warning-lnk4210"></a>連結器工具警告 LNK4210
 
@@ -37,7 +37,7 @@ ms.locfileid: "57816265"
 
 [/GS](../../build/reference/gs-buffer-security-check.md)編譯器選項需要使用`__security_init_cookie`函式。 在執行中的 VCRuntime 程式庫啟動程式碼中的預設會提供這項初始化`_DllMainCRTStartup`。
 
-- 如果您的專案使用 /ENTRY 所建置，而且 /ENTRY 以外傳遞函式`_DllMainCRTStartup`，此函式必須呼叫`_CRT_INIT`初始化 CRT。 如果您的 DLL 會使用 /GS、 需要靜態初始設定式，或在 MFC 或 ATL 程式碼的內容中呼叫，單獨這個呼叫不足夠。 請參閱[Dll 和 Visual c + + 執行階段程式庫行為](../../build/run-time-library-behavior.md)如需詳細資訊。
+- 如果您的專案使用 /ENTRY 所建置，而且 /ENTRY 以外傳遞函式`_DllMainCRTStartup`，此函式必須呼叫`_CRT_INIT`初始化 CRT。 如果您的 DLL 會使用 /GS、 需要靜態初始設定式，或在 MFC 或 ATL 程式碼的內容中呼叫，單獨這個呼叫不足夠。 請參閱[Dll 和視覺效果C++執行階段程式庫行為](../../build/run-time-library-behavior.md)如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

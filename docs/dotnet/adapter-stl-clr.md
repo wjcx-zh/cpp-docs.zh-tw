@@ -50,11 +50,11 @@ helpviewer_keywords:
 - range_adapter member [STL/CLR]
 ms.assetid: 71ce7e51-42b6-4f70-9595-303791a97677
 ms.openlocfilehash: d5c554439d9bb418b9b62484ee10cd6917cf1777
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397675"
 ---
 # <a name="adapter-stlclr"></a>adapter (STL/CLR)
 
@@ -136,9 +136,9 @@ template<typename Key,
 |IList|會維護項目已排序的群組。|
 |IDictionary|維護一組 {索引鍵，值} 組。|
 |IEnumerable\<值 >|透過具類型的項目序列。|
-|ICollection\<值 >|會維護一組具類型的項目。|
+|ICollection\<Value>|會維護一組具類型的項目。|
 |IList\<值 >|會維護排序的群組的具類型的項目。|
-|IDictionary\<值 >|會維護一組具型別 {索引鍵，值} 組。|
+|IDictionary\<Value>|會維護一組具型別 {索引鍵，值} 組。|
 
 ### <a name="members"></a>成員
 
@@ -600,7 +600,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_eq"></a> collection_adapter::operator = (STL/CLR)
+## <a name="op_eq"></a> collection_adapter::operator= (STL/CLR)
 
 取代預存的 BCL 控制代碼。
 
@@ -930,7 +930,7 @@ template<typename Iter>
 *first*<br/>
 要包裝的第一個迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 要包裝的第二個迭代器。
 
 ### <a name="remarks"></a>備註
@@ -1034,7 +1034,7 @@ template<typename Iter>
 
 Range_adapter 會儲存一組迭代器，依序分隔的項目序列。 物件會實作可讓您逐一查看項目，而在順序中的四個 BCL 介面。 您可以使用此範本類別來操作非常類似 BCL 容器的 STL/CLR 範圍。
 
-## <a name="range_adapter_op_eq"></a> range_adapter::operator = (STL/CLR)
+## <a name="range_adapter_op_eq"></a> range_adapter::operator= (STL/CLR)
 
 取代預存迭代器配對。
 
@@ -1109,7 +1109,7 @@ range_adapter(Iter first, Iter last);
 *first*<br/>
 要包裝的第一個迭代器。
 
-*最後一個*<br/>
+*last*<br/>
 要包裝的第二個迭代器。
 
 *right*<br/>

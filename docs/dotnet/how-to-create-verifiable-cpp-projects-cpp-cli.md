@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立可驗證的 c + + 專案 (C + + /cli CLI)
+title: HOW TO：建立可驗證C++專案 (C++/CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
 ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387450"
 ---
-# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 建立可驗證的 c + + 專案 (C + + /cli CLI)
+# <a name="how-to-create-verifiable-c-projects-ccli"></a>如何： 建立可驗證C++專案 (C++/CLI)
 
-Visual c + + 應用程式精靈不會建立可驗證的專案。
+視覺化C++應用程式精靈不會建立可驗證的專案。
 
 > [!IMPORTANT]
 > 已被取代的 visual Studio 2015 和 Visual Studio 2017 不支援 **/clr: pure**並 **/clr: safe**建立可驗證的專案。 如果您需要可驗證程式碼，我們建議您將轉譯成 C# 程式碼。
 
-不過，如果您使用較舊版本的 Visual c + + 編譯器工具組支援 **/clr: pure**並 **/clr: safe**，專案可以將其轉換為可驗證。 本主題描述如何設定專案屬性並修改專案來轉換您的 Visual c + + 專案，以產生可驗證的應用程式的原始程式檔。
+不過，如果您使用較舊版本的視覺效果C++支援的編譯器工具組 **/clr: pure**和 **/clr: safe**，專案可以轉換為可供驗證。 本主題描述如何設定專案屬性並修改專案來源檔，來轉換您的視覺效果C++專案來產生可驗證的應用程式。
 
 ## <a name="compiler-and-linker-settings"></a>編譯器和連結器設定
 

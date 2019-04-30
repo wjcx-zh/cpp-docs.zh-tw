@@ -6,11 +6,11 @@ helpviewer_keywords:
 - window objects [MFC], working with
 ms.assetid: f73aa254-90e3-46a9-8e9b-d78b7054a331
 ms.openlocfilehash: c696d880ffa69b0a0399c5282621546c5783ebe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399482"
 ---
 # <a name="working-with-window-objects"></a>使用視窗物件
 
@@ -20,7 +20,7 @@ ms.locfileid: "57265635"
 
 - 在視窗的繪圖
 
-若要處理 Windows 訊息在任何視窗中，包括您自己的子視窗，請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)將訊息對應至您的 c + + 視窗類別。 然後撰寫訊息處理常式成員函式在您的類別。
+若要處理 Windows 訊息在任何視窗中，包括您自己的子視窗，請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)對應的訊息，以您C++視窗類別。 然後撰寫訊息處理常式成員函式在您的類別。
 
 在架構應用程式中的大部分繪圖發生在檢視中，其[OnDraw](../mfc/reference/cview-class.md#ondraw)每當必須繪製視窗的內容時，呼叫成員函式。 如果您的視窗是檢視的子系，您可能會委派部分檢視的繪圖給子視窗有`OnDraw`呼叫其中一個視窗的成員函式。
 

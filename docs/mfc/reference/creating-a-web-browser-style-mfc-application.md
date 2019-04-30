@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
 ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57809869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372227"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 
@@ -39,7 +39,7 @@ WebBrowser 控制項支援透過超連結和統一資源定位器 (URL) 瀏覽�
 
 因為`CHtmlView`只會實作 Microsoft Web 瀏覽器控制項，其支援，列印不像其他[CView](../../mfc/reference/cview-class.md)-衍生的類別。 相反地，WebBrowser 控制項所實作的印表機使用者介面和列印。 如此一來，`CHtmlView`並不支援列印預覽狀態，以及架構不提供其他列印支援函式： 例如， [CView::OnPreparePrinting](../../mfc/reference/cview-class.md#onprepareprinting)， [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)，並[CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)，所提供的其他 MFC 應用程式。
 
-`CHtmlView` 做為 Web 瀏覽器控制項，可讓您的應用程式到 Web 或 HTML 網頁檢視的包裝函式。 此精靈會建立覆寫[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)檢視類別，提供 Microsoft Visual c + + 網站的導覽連結中的函式：
+`CHtmlView` 做為 Web 瀏覽器控制項，可讓您的應用程式到 Web 或 HTML 網頁檢視的包裝函式。 精靈會建立覆寫[OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate)函式在檢視類別中，提供導覽連結至 Microsoft 的視覺效果C++網站上：
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -71,7 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [MFC 範例 MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)<br/>
-[設定編譯器和組建屬性](../../build/working-with-project-properties.md)<br/>
+[Set compiler and build properties](../../build/working-with-project-properties.md) (設定編譯器及組建屬性)<br/>
 [屬性頁](../../build/reference/property-pages-visual-cpp.md)<br/>
-[設定編譯器和組建屬性](../../build/working-with-project-properties.md)
+[Set compiler and build properties](../../build/working-with-project-properties.md) (設定編譯器及組建屬性)
 

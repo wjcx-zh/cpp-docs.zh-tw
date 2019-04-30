@@ -10,11 +10,11 @@ helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
 ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394373"
 ---
 # <a name="progressreporter-class"></a>progress_reporter 類別
 
@@ -32,7 +32,7 @@ class progress_reporter;
 *_ProgressType*<br/>
 透過進度報告程式報告之每個進度通知的承載類型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 

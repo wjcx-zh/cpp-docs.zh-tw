@@ -9,11 +9,11 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397885"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>資料錄集：動態繫結資料行 (ODBC)
 

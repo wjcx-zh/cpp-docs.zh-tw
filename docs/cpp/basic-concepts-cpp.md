@@ -1,24 +1,24 @@
 ---
-title: 基本概念 （c + +）
+title: 基本概念 (C++)
 ms.custom: index-page
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++, basic language concepts
 ms.assetid: 961801e6-2ffd-4bf1-bb71-7f55e48d9c79
 ms.openlocfilehash: cd868a2b534c8367e4633d81a521dc1bf1de91dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393918"
 ---
-# <a name="basic-concepts--c"></a>基本概念 （c + +）
+# <a name="basic-concepts--c"></a>基本概念 (C++)
 
-本節說明務必了解 c + + 的概念。 C 程式設計人員都熟悉許多這些概念，但有些微的差異，可能會導致非預期的計劃結果。 其中包含下列主題：
+本章節說明概念，請務必了解C++。 C 程式設計人員都熟悉許多這些概念，但有些微的差異，可能會導致非預期的計劃結果。 其中包含下列主題：
 
 - [宣告和定義](../cpp/declarations-and-definitions-cpp.md)
 
-- [C + + 物件或函式的範圍](../cpp/scope-visual-cpp.md)
+- [範圍C++物件或函式](../cpp/scope-visual-cpp.md)
 
 - [程式定義和連結規則](../cpp/program-and-linkage-cpp.md)
 

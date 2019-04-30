@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
 ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59026523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395595"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>資料錄集：宣告的類別，預先定義的查詢 (ODBC)
 
@@ -53,7 +53,7 @@ ms.locfileid: "59026523"
 
 1. 手動加入新的欄位資料成員的初始化資料錄集類別的建構函式中。
 
-   此外，您也必須遞增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員。 精靈會將初始設定，但它只會涵蓋它會為您新增的欄位資料成員。 例如：
+   此外，您也必須遞增的初始化值[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)資料成員。 精靈會將初始設定，但它只會涵蓋它會為您新增的欄位資料成員。 例如: 
 
     ```cpp
     m_nFields += 6;
@@ -154,5 +154,5 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

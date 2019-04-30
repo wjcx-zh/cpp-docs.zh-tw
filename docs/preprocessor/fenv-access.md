@@ -9,18 +9,18 @@ helpviewer_keywords:
 - fenv_access pragma
 ms.assetid: 2ccea292-0ae4-42ce-9c67-cc189299857b
 ms.openlocfilehash: 507e78dd9f9571cc9ce44d7fd91e78b1c955ba73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389251"
 ---
 # <a name="fenvaccess"></a>fenv_access
 停用 (**上**) 或啟用 (**關閉**) 無法變更的浮點環境最佳化旗標測試和模式變更。
 
 ## <a name="syntax"></a>語法
 
-> **#pragma fenv_access (** {**上** | **關閉**} **)**
+> **#pragma fenv_access (** { **on** | **off** } **)**
 
 ## <a name="remarks"></a>備註
 

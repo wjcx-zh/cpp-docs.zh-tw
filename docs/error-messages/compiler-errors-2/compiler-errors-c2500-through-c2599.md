@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2500 到 C2599
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2500 至 C2599
+ms.date: 04/21/2019
 f1_keywords:
 - C2501
 - C2508
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2595
 - C2596
 ms.assetid: a869aaed-e9f6-49e3-b273-00ea7f45bed7
-ms.openlocfilehash: 836bab2fe3f38c7caf5249af2e7373a307db58e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 87728c2d7055715b7e7d986d5ab8792ceba5c450
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386586"
 ---
-# <a name="compiler-errors-c2500-through-c2599"></a>編譯器錯誤 C2500 到 C2599
+# <a name="compiler-errors-c2500-through-c2599"></a>編譯器錯誤 C2500 至 C2599
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -88,15 +88,15 @@ ms.locfileid: "50600976"
 |[編譯器錯誤 C2516](compiler-error-C2516.md)|'*類別*': 不合法的基底類別|
 |[編譯器錯誤 C2517](compiler-error-C2517.md)|'*識別碼*': 權限的 '::' 未定義|
 |[編譯器錯誤 C2518](compiler-error-C2518.md)|關鍵字 '*關鍵字*' 在基底類別清單中不合法; 已忽略|
-|編譯器錯誤 C2519|'*識別碼*': WinRT 屬性只能包含公用欄位|
+|編譯器錯誤 C2519|'*識別碼*':WinRT 屬性只能包含公用欄位|
 |編譯器錯誤 C2520|'*類別*': 隱含轉換，您可以使用任何非明確建構函式|
 |[編譯器錯誤 C2521](compiler-error-C2521.md)|解構函式/完成項不採用任何引數|
-|編譯器錯誤 C2522|'*識別碼*': 多載識別項不能在'*identifier1*'as 已同時指定'*identifier2*'|
+|編譯器錯誤 C2522|'*識別碼*':多載識別項不能在 '*identifier1*'，已同時指定'*identifier2*'|
 |[編譯器錯誤 C2523](compiler-error-C2523.md)|'*類別*:: ~*識別項*': 解構函式/完成項標記不相符|
 |[編譯器錯誤 C2524](compiler-error-C2524.md)|'*識別碼*': 解構函式/完成項必須擁有 'void' 參數清單|
-|編譯器錯誤 C2525|'*識別碼*': 參數'*identifier1*'名為'*identifier2*' 基底上函式，並已發行實作中必須相符|
-|[編譯器錯誤 C2526](compiler-error-C2526.md)|'*identifier1*': C 連結函式無法傳回 c + + 類別*identifier2*'|
-|編譯器錯誤 C2527|'*識別碼*': 無法同時上指定 DefaultOverload'*function1*'和'*function2*'。 移除一個規格，或在實作期間重新命名函式|
+|編譯器錯誤 C2525|'*識別碼*':參數 '*identifier1*'名為'*identifier2*' 基底上函式，並已發行實作中必須相符|
+|[編譯器錯誤 C2526](compiler-error-C2526.md)|'*identifier1*':C 連結函式無法傳回C++類別的*identifier2*'|
+|編譯器錯誤 C2527|'*識別碼*':無法同時上指定 defaultOverload '*function1*'和'*function2*'。 移除一個規格，或在實作期間重新命名函式|
 |[編譯器錯誤 C2528](compiler-error-C2528.md)|'*識別碼*': 參考的指標不合法|
 |[編譯器錯誤 C2529](compiler-error-C2529.md)|'*識別碼*': 參照參考的參考不合法|
 |[編譯器錯誤 C2530](compiler-error-C2530.md)|'*識別碼*': 必須初始化參考|
@@ -116,7 +116,7 @@ ms.locfileid: "50600976"
 |[編譯器錯誤 C2544](compiler-error-C2544.md)|必須是 ')' 的運算子 '（）'|
 |[編譯器錯誤 C2545](compiler-error-C2545.md)|'*運算子*': 無法到多載運算子|
 |編譯器錯誤 C2546|'*識別碼*': 當 PIA 和非 PIA 必須先參考 PIA 中定義的類型|
-|編譯器錯誤 C2547|'*識別碼*': 已發行方法的所有參數必須明確地命名都為與宣告|
+|編譯器錯誤 C2547|'*識別碼*':已發行方法的所有參數必須明確地命名都為與宣告|
 |[編譯器錯誤 C2548](compiler-error-C2548.md)|'*函式*': 遺漏參數的預設參數*參數*|
 |[編譯器錯誤 C2549](compiler-error-C2549.md)|使用者定義的轉換不能指定傳回型別|
 |[編譯器錯誤 C2550](compiler-error-C2550.md)|'*識別碼*': 建構函式初始設定式清單只允許在建構函式定義|
@@ -168,3 +168,8 @@ ms.locfileid: "50600976"
 |[編譯器錯誤 C2597](compiler-error-C2597.md)|非靜態成員的參考不合法的 '*識別碼*'|
 |[編譯器錯誤 C2598](compiler-error-C2598.md)|連結規格必須在全域範圍|
 |[編譯器錯誤 C2599](compiler-error-C2599.md)|'*識別碼*': 不允許受管理/WinRT 列舉的向前宣告|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - is_bind_expression class
 ms.assetid: 0715f9e9-2239-4778-a1cf-2c21f49dfd47
 ms.openlocfilehash: f547b6f74a86612174cb0f510870171158678f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383655"
 ---
 # <a name="isbindexpression-class"></a>is_bind_expression 類別
 
@@ -19,7 +19,7 @@ ms.locfileid: "50519414"
 
 ## <a name="syntax"></a>語法
 
-範本<class Ty>結構 is_bind_expression {靜態 const bool 值;};
+template<class Ty> struct is_bind_expression { static const bool value; };
 
 ## <a name="remarks"></a>備註
 

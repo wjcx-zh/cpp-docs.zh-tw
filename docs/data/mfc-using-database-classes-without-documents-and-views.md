@@ -18,11 +18,11 @@ helpviewer_keywords:
 - user interface [C++], drawing information
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396011"
 ---
 # <a name="mfc-using-database-classes-without-documents-and-views"></a>MFC:使用不具文件和檢視的資料庫類別
 

@@ -15,17 +15,15 @@ helpviewer_keywords:
 - HWND, window objects [MFC]
 ms.assetid: 28b33ce2-af05-4617-9d03-1cb9a02be687
 ms.openlocfilehash: b62f43aa0d37c5e614636b3d7543bc927d41039b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378072"
 ---
 # <a name="window-objects"></a>視窗物件
 
-MFC 提供類別[CWnd](../mfc/reference/cwnd-class.md)封裝`HWND`的視窗控制代碼。 
-  `CWnd` 物件是 C++ 視窗物件，與表示 Windows 視窗但包含它的 `HWND` 有所區別。 使用 `CWnd` 衍生您自己的子視窗類別，或使用衍生自 `CWnd` 的其中一個 MFC 類別。 
-  `CWnd` 類別是所有視窗的基底類別，包括框架視窗、對話方塊、子視窗、控制項及控制列，例如工具列。 深入了解[c + + 視窗物件和 HWND 之間的關聯性](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)對於有效使用 MFC 進行程式設計十分重要。
+MFC 提供類別[CWnd](../mfc/reference/cwnd-class.md)封裝`HWND`的視窗控制代碼。 `CWnd` 物件是 C++ 視窗物件，與表示 Windows 視窗但包含它的 `HWND` 有所區別。 使用 `CWnd` 衍生您自己的子視窗類別，或使用衍生自 `CWnd` 的其中一個 MFC 類別。 `CWnd` 類別是所有視窗的基底類別，包括框架視窗、對話方塊、子視窗、控制項及控制列，例如工具列。 深入了解[之間的關聯性C++ 視窗物件和 HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)對於有效使用 MFC 進行程式設計十分重要。
 
 MFC 提供了一些預設的視窗功能和管理，不過，您可以從 `CWnd` 衍生自己的類別，並且使用其成員函式自訂提供的功能。 您可以建立子視窗的建構`CWnd`物件並呼叫其[建立](../mfc/reference/cwnd-class.md#create)成員函式，則自訂子視窗使用`CWnd`成員函式。 您可以將內嵌物件衍生自[CView](../mfc/reference/cview-class.md)，例如表單檢閱或樹狀檢視，框架視窗中的。 您可以支援您透過分割窗格，類別所提供的文件的多個檢視和[CSplitterWnd](../mfc/reference/csplitterwnd-class.md)。
 
@@ -43,7 +41,7 @@ MFC 提供了一些預設的視窗功能和管理，不過，您可以從 `CWnd`
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
 
-- [C + + 視窗物件和 HWND 之間的關聯性](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
+- [之間的關聯性C++視窗物件和 HWND](../mfc/relationship-between-a-cpp-window-object-and-an-hwnd.md)
 
 - [衍生的視窗類別](../mfc/derived-window-classes.md)
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
 ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397025"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>運算式評估工具錯誤 CXX0036
 
@@ -24,7 +24,7 @@ ms.locfileid: "50576791"
 
    內容運算子的語法是：
 
-     {*函式*，*模組*，*dll*}*運算式*
+     {*function*,*module*,*dll*}*expression*
 
    這會指定的內容*運算式*。 內容運算子有相同的優先順序和使用方式，為型別轉換。
 

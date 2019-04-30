@@ -15,11 +15,11 @@ helpviewer_keywords:
 - views [MFC], accessing document data from
 ms.assetid: 4e7f65dc-b166-45d8-bcd5-9bb0d399b946
 ms.openlocfilehash: 51f963acf5aacdfe4050a076d3bb0e651a92d021
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392969"
 ---
 # <a name="a-portrait-of-the-documentview-architecture"></a>文件/檢視架構的簡介
 
@@ -27,7 +27,7 @@ ms.locfileid: "57298863"
 
 ## <a name="gaining-access-to-document-data-from-the-view"></a>從檢視獲得文件資料的存取權
 
-檢視存取其文件的資料不論是透過[GetDocument](../mfc/reference/cview-class.md#getdocument)函式，它會傳回指標至文件，或藉由檢視類別 c + +`friend`文件類別。 當檢視準備繪製或進行操作時，會利用其資料存取權來取得資料。
+檢視存取其文件的資料不論是透過[GetDocument](../mfc/reference/cview-class.md#getdocument)函式，傳回的指標，文件，或藉由檢視類別C++`friend`文件類別。 當檢視準備繪製或進行操作時，會利用其資料存取權來取得資料。
 
 例如，從檢視[OnDraw](../mfc/reference/cview-class.md#ondraw)成員函式，檢視使用`GetDocument`來取得文件指標。 然後，它會使用該指標來存取文件中的 `CString` 資料成員。 檢視會傳遞字串至 `TextOut` 函式。 若要查看此範例的程式碼，請參閱[檢視中繪製](../mfc/drawing-in-a-view.md)。
 

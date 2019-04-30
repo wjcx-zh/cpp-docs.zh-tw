@@ -9,17 +9,17 @@ helpviewer_keywords:
 - startup code, parsing command-line arguments
 ms.assetid: e634e733-ac2f-4298-abe2-7e9288c94951
 ms.openlocfilehash: 53873fa9340253ab5e8459eb442385641246f930
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396115"
 ---
 # <a name="parsing-c-command-line-arguments"></a>剖析 C++ 命令列引數
 
 **Microsoft 專屬**
 
-在解譯作業系統命令列上指定的引數時，Microsoft C/c + + 啟動程式碼會使用下列規則：
+Microsoft C /C++啟動程式碼在解譯作業系統命令列上指定的引數時，請使用下列規則：
 
 - 引數會以空白或定位鍵的泛空白字元 (White Space) 進行分隔。
 
@@ -74,4 +74,4 @@ int main( int argc,      // Number of strings in array argv
 
 ## <a name="see-also"></a>另請參閱
 
-[main：程式啟動](../cpp/main-program-startup.md)
+[主要：程式啟動](../cpp/main-program-startup.md)

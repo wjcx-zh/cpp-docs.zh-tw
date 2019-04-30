@@ -14,16 +14,16 @@ helpviewer_keywords:
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
 ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399677"
 ---
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO 資料庫類別的自訂 DFX 常式
 
 > [!NOTE]
->  Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+>  視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
 
 這個技術提示說明 DAO 資料錄欄位交換 (DFX) 機制。 若要協助您了解 DFX 常式中的情況`DFX_Text`函式將會說明在做為範例的詳細資料。 為這個技術提示資訊的其他來源，您可以檢查程式碼為其他個別的 DFX 函式。 您可能不需要自訂 DFX 常式視您可能需要自訂 RFX 常式 （使用 ODBC 資料庫類別使用）。
 

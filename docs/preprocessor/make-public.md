@@ -9,11 +9,11 @@ helpviewer_keywords:
 - make_public pragma
 ms.assetid: c3665f4d-268a-4932-9661-c37c8ae6a341
 ms.openlocfilehash: d569758f90b9e55f65ad13517f86dea41d151ca8
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371759"
 ---
 # <a name="makepublic"></a>make_public
 表示原生類型應該具有公用組件存取範圍。

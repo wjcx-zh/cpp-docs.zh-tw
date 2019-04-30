@@ -13,11 +13,11 @@ helpviewer_keywords:
 - '- operator [C++], additive operators in C++'
 ms.assetid: d4afafe7-e201-4c69-a649-37f17756e784
 ms.openlocfilehash: be9e1830ea44223aa46ad9a7f5c6cee6734fa9e6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385046"
 ---
 # <a name="additive-operators--and--"></a>加法類運算子：+ 和 -
 
@@ -46,19 +46,19 @@ expression - expression
 
 |類型|意義|
 |----------|-------------|
-|*算術運算*|整數和浮點類型統稱為「算術」類型。|
+|*arithmetic*|整數和浮點類型統稱為「算術」類型。|
 |*integral*|各種大小 (long、short) 的 char 和 int 及列舉是「整數」類型。|
 |*scalar*|純量運算元是算術或指標類型的運算元。|
 
 這些運算子的有效組合包括：
 
-*算術* + *算術*
+*arithmetic* + *arithmetic*
 
 *scalar* + *integral*
 
 *integral* + *scalar*
 
-*算術* - *算術*
+*arithmetic* - *arithmetic*
 
 *scalar* - *scalar*
 

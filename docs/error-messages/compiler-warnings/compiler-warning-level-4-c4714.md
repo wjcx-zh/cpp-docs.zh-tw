@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
 ms.openlocfilehash: ed94e5b716a697ec96d7fecac75433823c9a67e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395179"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>編譯器警告 (層級 4) C4714
 
@@ -23,7 +23,7 @@ ms.locfileid: "50553851"
 
 在某些情況下，編譯器不會內嵌特定函式機械的原因。 例如，編譯器不會內嵌：
 
-- 如果這會導致混用 SEH 與 c + + EH 函式。
+- 如果這會導致混合這兩種 SEH 的函式和C++EH。
 
 - 複製具有某些函式會建構-GX/EHs//eha 時，傳值方式傳遞的物件。
 
@@ -33,7 +33,7 @@ ms.locfileid: "50553851"
 
 - 具有變數引數清單的函式。
 
-- 具有的函式**嘗試**（c + + 例外狀況處理） 陳述式。
+- 具有的函式**嘗試**(C++例外狀況處理) 陳述式。
 
 下列範例會產生 C4714:
 

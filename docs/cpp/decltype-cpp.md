@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
 ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50527942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399079"
 ---
 # <a name="decltype--c"></a>decltype （C++）
 
@@ -30,7 +30,7 @@ decltype( expression )
 
 |參數|描述|
 |---------------|-----------------|
-|*運算式*|一個運算式。 如需詳細資訊，請參閱 <<c0> [ 運算式](../cpp/expressions-cpp.md)。|
+|*expression*|一個運算式。 如需詳細資訊，請參閱 <<c0> [ 運算式](../cpp/expressions-cpp.md)。|
 
 ## <a name="return-value"></a>傳回值
 
@@ -38,7 +38,7 @@ decltype( expression )
 
 ## <a name="remarks"></a>備註
 
-**Decltype**類型規範支援 Visual c + + 2010年或更新版本中，而且可以搭配原生或 managed 程式碼。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。
+**Decltype**視覺效果中支援的型別規範C++2010年或更新版本的版本中，而且可以搭配原生或 managed 程式碼。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。
 
 編譯器會使用下列規則來判斷型別*運算式*參數。
 
@@ -77,13 +77,13 @@ template<typename T, typename U>
 UNKNOWN func(T&& t, U&& u){ return t + u; };
 ```
 
-引進**decltype**類型規範可讓開發人員取得樣板函式會傳回運算式的類型。 使用*替代函式宣告語法*稍後所示**自動**關鍵字，而**decltype**類型規範來宣告*晚期指定*傳回型別。 晚期指定的傳回型別是在編譯宣告時決定，而不是在撰寫程式時決定。
+引進**decltype**類型規範可讓開發人員取得樣板函式會傳回運算式的類型。 使用*替代函式宣告語法*稍後所示**自動**關鍵字，而**decltype**類型規範來宣告*晚期指定*傳回型別。 晚期指定的傳回類型是在編譯宣告時決定，而不是在撰寫程式時決定。
 
 下列原型說明替代函式宣告的語法。 請注意， **const**並**volatile**限定詞，而**擲回**[例外狀況規格](../cpp/exception-specifications-throw-cpp.md)是選擇性的。 *Function_body*預留位置代表指定該函式的複合陳述式。 基於作法撰寫程式碼的最佳*運算式*中的預留位置**decltype**陳述式應該符合所指定的運算式**傳回**陳述式，如果有的話，在*function_body*。
 
 **自動** *function_name* **(** *參數*<sub>選擇</sub> **)** **const**<sub>opt</sub> **volatile**<sub>選擇</sub> **->** **decltype (***運算式* **)** **擲回**<sub>選擇</sub> **{** *function_body***};**
 
-下列程式碼範例中，`myFunc` 樣板函式的晚期指定傳回型別由 `t` 和 `u` 樣板引數的類型決定。 基於撰寫程式碼的最佳，程式碼範例也使用右值參考，`forward`函式樣板，支援*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+下列程式碼範例中，`myFunc` 樣板函式的晚期指定傳回類型由 `t` 和 `u` 樣板引數的類型決定。 基於撰寫程式碼的最佳，程式碼範例也使用右值參考，`forward`函式樣板，支援*完美地轉送*。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ```cpp
 //C++11
@@ -99,13 +99,13 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 ## <a name="decltype-and-forwarding-functions-c11"></a>decltype 和轉送函式 (C++11)
 
-轉送函式會包裝對其他函式的呼叫。 試想一個轉送其引數，或者包含這些引數的運算式結果到其他函式的函式樣板。 此外，轉送函式會傳回呼叫其他函式的結果。 在這個案例中，轉送函式的傳回型別應該會與包裝函式的傳回型別相同。
+轉送函式會包裝對其他函式的呼叫。 試想一個轉送其引數，或者包含這些引數的運算式結果到其他函式的函式樣板。 此外，轉送函式會傳回呼叫其他函式的結果。 在這個案例中，轉送函式的傳回類型應該會與包裝函式的傳回類型相同。
 
 在此案例中，您無法寫入適當的類型運算式**decltype**類型規範。 **Decltype**類型規範可進行泛型轉送函式，因為它不會遺失函式是否傳回參考類型的必要的資訊。 如需轉送函式的程式碼範例，請參閱先前的 `myFunc` 樣板函式範例。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會宣告樣板函式 `Plus()` 的晚期指定傳回型別。 `Plus`函式會處理具有兩個運算元**operator +** 多載。 因此，加號運算子 (+) 的解譯和 `Plus` 函式的傳回型別取決於函式引數的類型。
+下列程式碼範例會宣告樣板函式 `Plus()` 的晚期指定傳回型別。 `Plus`函式會處理具有兩個運算元**operator +** 多載。 因此，加號運算子 (+) 的解譯和 `Plus` 函式的傳回類型取決於函式引數的類型。
 
 ```cpp
 // decltype_1.cpp

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
 ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395244"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>編譯器警告 (層級 4) C4702
 
@@ -19,7 +19,7 @@ ms.locfileid: "50607229"
 
 這項警告是針對 Visual Studio.NET 2003年所進行的編譯器一致性工作的結果： 無法連線到的程式碼。 當編譯器 （後端） 偵測到無法連線到的程式碼時，它會產生 C4702，層級 4 警告。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中是有效的程式碼，移除不可能執行到的程式碼，或確保所有的原始程式碼可到達的某些工作流程的執行。
+在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效的程式碼的C++，移除不可能執行到的程式碼，或確保所有的原始程式碼可到達的某些工作流程的執行。
 
 ## <a name="example"></a>範例
 

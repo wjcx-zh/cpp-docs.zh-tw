@@ -11,11 +11,11 @@ helpviewer_keywords:
 - virtual keyword [C++]
 ms.assetid: c2eb987d-6cf3-43b6-aa0c-29a6f561b1ae
 ms.openlocfilehash: f68bd2e500ebe16c43ef6c3d7a5aede26421b27d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393905"
 ---
 # <a name="virtual-c"></a>virtual (C++)
 
@@ -30,16 +30,16 @@ virtual [access-specifier] base-class-name
 
 #### <a name="parameters"></a>參數
 
-*類型規範*<br/>
+*type-specifiers*<br/>
 指定虛擬成員函式的傳回型別。
 
-*成員函式宣告子*<br/>
+*member-function-declarator*<br/>
 宣告成員函式。
 
-*存取規範*<br/>
+*access-specifier*<br/>
 基底類別，定義存取層級**公用**，**保護**或是**私人**。 可以出現在前後**虛擬**關鍵字。
 
-*基底類別名稱*<br/>
+*base-class-name*<br/>
 識別先前宣告的類別類型。
 
 ## <a name="remarks"></a>備註

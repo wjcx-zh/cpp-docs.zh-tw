@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
 ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372279"
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 
@@ -25,7 +25,7 @@ MFC DLL 是二進位檔案，做為共用程式庫的多個應用程式可以同
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要建立 MFC DLL 專案使用 MFC DLL 精靈
 
-1. 請依照下列說明主題中的指示[建立 c + + 主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
+1. 請依照下列說明主題中的指示[建立C++主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
 
 **附註**中**新增專案**對話方塊中，選取`MFC DLL`圖示以開啟 MFC DLL 精靈的 範本 窗格中。
 
@@ -36,7 +36,7 @@ MFC DLL 是二進位檔案，做為共用程式庫的多個應用程式可以同
 
 1. 按一下 [**完成**以關閉精靈，並開啟新的專案中**方案總管] 中**。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[Visual c + + 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[視覺效果建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 

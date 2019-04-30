@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2477
 ms.assetid: 60bc324b-6605-4833-8099-a291efc712e7
 ms.openlocfilehash: 27db194cb308d711a259127b628c60b4d10b94ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383226"
 ---
 # <a name="compiler-error-c2477"></a>編譯器錯誤 C2477
 
 'member': 無法透過衍生類別初始化靜態資料成員
 
-樣板類別的靜態資料成員初始化不正確。 這是為了符合 ISO c + + 標準的一項重大變更與 Visual Studio.NET 2003年之前的 Visual c + + 編譯器的版本。
+樣板類別的靜態資料成員初始化不正確。 這是一項重大變更，與新版視覺效果C++在 Visual Studio.NET 2003 中，以符合 ISO 之前的編譯器C++標準。
 
 下列範例會產生 C2477:
 

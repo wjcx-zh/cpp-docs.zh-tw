@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3825
 ms.assetid: 18e204a1-f26e-42c6-8d74-2b49cc95f940
 ms.openlocfilehash: ddb665dab303b3133d4018910c2142a20a889bb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390577"
 ---
 # <a name="compiler-error-c3825"></a>編譯器錯誤 C3825
 
 'class': managed 或 WinRTclass 可以只支援 managed 或 WinRTevents
 
-managed 類別中只支援 .NET 事件。 Windows 執行階段類別中只支援 Windows 執行階段事件。 若要在 managed 程式碼中修正此錯誤，請將 `event_source` 和 `event_receiver` 的類型參數從 `native` 變更為 `managed`。 或者，移除屬性。
+managed 類別中只支援 .NET 事件。 Windows 執行階段類別中只支援 Windows 執行階段事件。 若要在 managed 程式碼中修正此錯誤，請將 `event_source` 和 `event_receiver` 的型別參數從 `native` 變更為 `managed`。 或者，移除屬性。
 
 ## <a name="example"></a>範例
 

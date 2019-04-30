@@ -3,11 +3,11 @@ title: 介面 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
 ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375778"
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 
@@ -63,7 +63,7 @@ ms.locfileid: "57740751"
 
 ## <a name="generic-interfaces"></a>泛型介面
 
-在 C + + /CX 中，`generic`關鍵字用以代表參數化的 Windows 執行階段類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段定義一些泛型介面 — 例如， [ivector&lt\<T >](Windows::Foundation::Collections::IVector)— 但它並不支援建立公用使用者定義的泛型介面，在 C + + /CX。 不過，您可以建立私用泛型介面。
+在C++/CX，`generic`關鍵字用以代表參數化的 Windows 執行階段類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段定義一些泛型介面 — 例如， [ivector&lt\<T >](Windows::Foundation::Collections::IVector)— 但它並不支援建立公用使用者定義的泛型介面中的C++/CX。 不過，您可以建立私用泛型介面。
 
 以下是如何使用 Windows 執行階段類型，來撰寫泛型介面：
 
@@ -98,5 +98,5 @@ ms.locfileid: "57740751"
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

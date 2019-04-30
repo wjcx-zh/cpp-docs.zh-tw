@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
 ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388237"
 ---
 # <a name="coblist-class"></a>CObList 類別
 
@@ -479,7 +479,7 @@ const CObject* GetNext(POSITION& rPosition) const;
 您可在反覆運算期間移除項目。 範例，請參閱[RemoveAt](#removeat)。
 
 > [!NOTE]
->  從 MFC 8.0 const 的版本，這個方法已變更為傳回`const CObject*`而不是`const CObject*&`。  這項變更的目的是為了讓編譯器符合 c + + 標準。
+>  從 MFC 8.0 const 的版本，這個方法已變更為傳回`const CObject*`而不是`const CObject*&`。  進行這項變更，使編譯器符合C++標準。
 
 下表顯示其他成員函式，類似於`CObList::GetNext`。
 
@@ -528,7 +528,7 @@ const CObject* GetPrev(POSITION& rPosition) const;
 如果擷取的項目是在清單中，第一則新值*rPosition*設為 NULL。
 
 > [!NOTE]
->  從 MFC 8.0 const 的版本，這個方法已變更為傳回`const CObject*`而不是`const CObject*&`。  這項變更的目的是為了讓編譯器符合 c + + 標準。
+>  從 MFC 8.0 const 的版本，這個方法已變更為傳回`const CObject*`而不是`const CObject*&`。  進行這項變更，使編譯器符合C++標準。
 
 下表顯示其他成員函式，類似於`CObList::GetPrev`。
 

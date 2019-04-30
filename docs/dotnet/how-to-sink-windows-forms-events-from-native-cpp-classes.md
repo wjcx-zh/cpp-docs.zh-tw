@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從原生 c + + 類別接收 Windows Forms 事件
+title: HOW TO：從原生接收 Windows Forms 事件C++類別
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,15 +9,15 @@ helpviewer_keywords:
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
 ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387262"
 ---
-# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>HOW TO：從原生 c + + 類別接收 Windows Forms 事件
+# <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>HOW TO：從原生接收 Windows Forms 事件C++類別
 
-您可以啟用原生 c + + 類別，以從受管理的 Windows Form 控制項或其他使用 MFC 巨集對應格式的形式引發的事件接收回撥。 檢視和對話方塊中的接收事件是類似於在控制項相同的工作。
+您可以啟用原生C++類別，以接收回撥，從受管理的 Windows Form 控制項或其他使用 MFC 巨集對應格式的形式從引發的事件。 檢視和對話方塊中的接收事件是類似於在控制項相同的工作。
 
 若要這樣做，您需要：
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388315"
 ---
 # <a name="cobject-class"></a>CObject 類別
 
@@ -83,7 +83,7 @@ class AFX_NOVTABLE CObject
 
 第二個層級巨集[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)並[IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)、 包含的第一個層級巨集的所有功能，而且可以讓物件被 「 序列化 」 與 「 封存 」。
 
-如需一般 Microsoft Foundation classes 和 c + + 類別衍生，並使用`CObject`，請參閱 <<c2> [ 使用 CObject](../../mfc/using-cobject.md)並[序列化](../../mfc/serialization-in-mfc.md)。
+如需衍生 Microsoft Foundation classes 和C++一般類別，並使用`CObject`，請參閱[使用 CObject](../../mfc/using-cobject.md)並[序列化](../../mfc/serialization-in-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -139,7 +139,7 @@ CObject(const CObject& objectSrc);
 
 如果您的類別是可序列化 （它會合併 IMPLEMENT_SERIAL 巨集），則您必須將類別宣告中的預設建構函式 （不含引數的建構函式）。 如果您不需要預設建構函式，宣告私用或受保護的 「 空白 」 的建構函式。 如需詳細資訊，請參閱 <<c0> [ 使用 CObject](../../mfc/using-cobject.md)。
 
-標準 c + + 預設類別複製建構函式會依成員複本。 私用的存在`CObject`複製建構函式可確保編譯器錯誤訊息，如果您的類別中的複製建構函式所需但無法使用。 因此，如果您的類別需要這項功能，您必須提供複製建構函式。
+標準C++預設類別複製建構函式會依成員複本。 私用的存在`CObject`複製建構函式可確保編譯器錯誤訊息，如果您的類別中的複製建構函式所需但無法使用。 因此，如果您的類別需要這項功能，您必須提供複製建構函式。
 
 ### <a name="example"></a>範例
 
@@ -238,7 +238,7 @@ BOOL IsKindOf(const CRuntimeClass* pClass) const;
 
 此函式會測試*pClass*檢查 （1） 它是指定類別的物件或 （2） 它是衍生自指定的類別之類別的物件。 此函式僅適用於以宣告的類別[DECLARE_DYNAMIC](run-time-object-model-services.md#declare_dynamic)， [DECLARE_DYNCREATE](run-time-object-model-services.md#declare_dyncreate)，或[DECLARE_SERIAL](run-time-object-model-services.md#declare_serial)巨集。
 
-因為它會失去 c + + 多型功能請勿廣泛使用此函式。 改為使用虛擬函式。
+請勿使用此函式廣泛因為它會失去C++多型功能。 改為使用虛擬函式。
 
 ### <a name="example"></a>範例
 

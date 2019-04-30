@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BSTR object [C++], COM encapsulation
 ms.assetid: 58841fef-fe21-4a84-aab9-780262b5201f
 ms.openlocfilehash: f394a48c0326058be705d14fb0413e23e8052ae2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386157"
 ---
 # <a name="bstrt-class"></a>_bstr_t 類別
 
@@ -44,11 +44,11 @@ A`_bstr_t`物件會封裝[BSTR 資料型別](/previous-versions/windows/desktop/
 |||
 |-|-|
 |[operator =](../cpp/bstr-t-operator-equal.md)|將新值指派給現有的 `_bstr_t` 物件。|
-|[operator + =](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|將字元附加至 `_bstr_t` 物件的結尾。|
 |[運算子 +](../cpp/bstr-t-operator-add-equal-plus.md)|串連兩個字串。|
 |[運算子 !](../cpp/bstr-t-operator-logical-not.md)|檢查封裝`BSTR`是 NULL 字串。|
-|[運算子 = =、 ！ =、 \<，>， \<=、 > =](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|
-|[運算子 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|
+|[operator ==, !=, \<, >, \<=, >=](../cpp/bstr-t-relational-operators.md)|比較兩個 `_bstr_t` 物件。|
+|[operator wchar_t* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|將指標擷取至封裝的 Unicode 或多位元組的 `BSTR` 物件。|
 
 **結束 Microsoft 專屬**
 

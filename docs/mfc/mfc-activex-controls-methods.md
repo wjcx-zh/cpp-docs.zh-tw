@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386365"
 ---
 # <a name="mfc-activex-controls-methods"></a>MFC ActiveX 控制項：方法
 
@@ -17,7 +17,7 @@ ActiveX 控制項就會引發事件本身和其控制項容器之間進行通訊
 
 方法和屬性提供用於匯出的介面，由其他應用程式，例如自動化用戶端和 ActiveX 控制項容器。 如需有關 ActiveX 控制項屬性的詳細資訊，請參閱文章[MFC ActiveX 控制項：屬性](../mfc/mfc-activex-controls-properties.md)。
 
-方法是在使用中且用途的 c + + 類別的成員函式類似。 有兩種方法可以實作您的控制項類型： 內建和自訂。 類似於內建事件、 內建方法，是那些方法[COleControl](../mfc/reference/colecontrol-class.md)提供實作。 如需有關內建方法的詳細資訊，請參閱文章[MFC ActiveX 控制項：加入內建方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。 開發人員所定義的自訂方法可讓控制項的其他自訂。 如需詳細資訊，請參閱文章[MFC ActiveX 控制項：新增自訂方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。
+方法是在使用中且用途的成員函式類似C++類別。 有兩種方法可以實作您的控制項類型： 內建和自訂。 類似於內建事件、 內建方法，是那些方法[COleControl](../mfc/reference/colecontrol-class.md)提供實作。 如需有關內建方法的詳細資訊，請參閱文章[MFC ActiveX 控制項：加入內建方法](../mfc/mfc-activex-controls-adding-stock-methods.md)。 開發人員所定義的自訂方法可讓控制項的其他自訂。 如需詳細資訊，請參閱文章[MFC ActiveX 控制項：新增自訂方法](../mfc/mfc-activex-controls-adding-custom-methods.md)。
 
 Microsoft Foundation Class 程式庫 (MFC) 會實作一種機制，可讓您的控制項支援內建及自訂的方法。 第一個部分是類別`COleControl`。 衍生自`CWnd`，`COleControl`成員函式支援通用於所有的 ActiveX 控制項的內建方法。 這項機制的第二個部分是分派對應。 分派對應是類似的訊息對應;不過，而不是將函式對應至 Windows 訊息識別碼，分派對應會對應至 IDispatch 識別碼的虛擬成員函式。
 
@@ -34,7 +34,7 @@ Microsoft Foundation Class 程式庫 (MFC) 會實作一種機制，可讓您的�
 
 下列文章將討論詳細的方法：
 
-- [MFC ActiveX 控制項：加入內建方法](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [MFC ActiveX 控制項：新增內建方法](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
 - [MFC ActiveX 控制項：新增自訂方法](../mfc/mfc-activex-controls-adding-custom-methods.md)
 

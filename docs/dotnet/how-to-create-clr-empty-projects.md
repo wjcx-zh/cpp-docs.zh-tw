@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CLR empty projects, creating
 ms.assetid: edb4574f-fea7-426d-9b5c-fa4ecad2befb
 ms.openlocfilehash: 068b1328925c2e5040316d197b80076549aea321
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387446"
 ---
 # <a name="how-to-create-clr-empty-projects"></a>HOW TO：建立 CLR 空專案
 
@@ -25,7 +25,7 @@ ms.locfileid: "57818215"
 
    [ **新增專案** ] 對話方塊隨即出現。
 
-1. 底下**已安裝的範本**，按一下**Visual c + +** 節點，然後按一下**CLR**節點。 選擇**CLR 空專案**圖示。
+1. 底下**已安裝的範本**，按一下**Visual C++** 節點，然後按一下**CLR**節點。 選擇**CLR 空專案**圖示。
 
 1. 在 [名稱]  方塊中輸入應用程式的唯一名稱。
 
@@ -37,4 +37,4 @@ ms.locfileid: "57818215"
 ## <a name="see-also"></a>另請參閱
 
 [Visual C++ 專案類型](../build/reference/visual-cpp-project-types.md)<br/>
-[偵錯 c + + 專案](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)
+[偵錯C++專案](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)

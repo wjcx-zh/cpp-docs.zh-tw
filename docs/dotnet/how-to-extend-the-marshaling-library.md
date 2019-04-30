@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387301"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>HOW TO：擴充封送處理程式庫
 
 本主題說明如何擴充封送處理程式庫，以提供更多資料型別之間的轉換。 使用者可以擴充程式庫目前不支援任何資料轉換的封送處理程式庫。
 
-您可以擴充封送處理程式庫中有兩種-包含或不含[marshal_context 類別](../dotnet/marshal-context-class.md)。 檢閱[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)主題，以判斷新的轉換是否需要內容。
+您可以擴充封送處理程式庫中有兩種-包含或不含[marshal_context 類別](../dotnet/marshal-context-class.md)。 檢閱[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)主題，以判斷新的轉換是否需要內容。
 
 在這兩種情況下，您可以先建立新的封送處理轉換的檔案。 這麼一來保留標準的封送處理程式庫檔案的完整性。 如果您想要移植至另一部電腦或另一個程式的專案，您必須複製新的封送處理檔案和其餘的專案。 如此一來，在收到專案的使用者保證收到新的轉換，並不會修改任何程式庫檔案。
 
@@ -30,7 +30,7 @@ ms.locfileid: "57750359"
 
    - marshal_windows.h windows 資料類型。
 
-   - marshal_cppstd.h c + + 標準程式庫的資料類型。
+   - marshal_cppstd.h，如C++標準程式庫的資料類型。
 
    - marshal_atl.h ATL 資料類型。
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - marshal_windows.h windows 資料類型。
 
-   - marshal_cppstd.h c + + 標準程式庫的資料類型。
+   - marshal_cppstd.h，如C++標準程式庫的資料類型。
 
    - marshal_atl.h ATL 資料類型。
 

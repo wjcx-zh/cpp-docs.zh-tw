@@ -11,11 +11,11 @@ helpviewer_keywords:
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
 ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373462"
 ---
 # <a name="collection-class-helpers"></a>集合類別 Helper
 
@@ -69,7 +69,7 @@ CompareElements(
 
 預設實作會傳回比較的結果 *\*pElement1*並 *\*pElement2*。 覆寫這個函式，使它比較適合您的應用程式的方式中的項目。
 
-C + + 語言定義比較運算子 ( `==`) 的簡單型別 (**char**， **int**， **float**等等)，但沒有定義比較運算子類別和結構。 如果您想要使用`CompareElements`若要具現化其中一個使用它的集合類別，您必須定義比較運算子，或者多載或`CompareElements`版本會傳回適當的值。
+C++語言定義比較運算子 ( `==`) 的簡單型別 (**char**， **int**， **float**等等)，但沒有定義的比較類別和結構的運算子。 如果您想要使用`CompareElements`若要具現化其中一個使用它的集合類別，您必須定義比較運算子，或者多載或`CompareElements`版本會傳回適當的值。
 
 ### <a name="requirements"></a>需求
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2712
 ms.assetid: f7d4ffcc-7ed2-459b-8067-a728ce647071
 ms.openlocfilehash: 19b9c5a54bf405114bd4d596c2a2cc4708aadcc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386783"
 ---
 # <a name="compiler-error-c2712"></a>編譯器錯誤 C2712
 
@@ -31,7 +31,7 @@ ms.locfileid: "50507905"
 
 如果您呼叫方法，使用宣告，也會發生錯誤 C2712 [__event](../../cpp/event.md)關鍵字。 由於事件可能用於多執行緒環境中，編譯器會產生程式碼可防止基礎事件物件的操作，然後將產生的程式碼封入 SEH [try-finally 陳述式](../../cpp/try-finally-statement.md)。 因此，如果您呼叫事件方法，並以類型具有解構函式的引數傳值，就會發生錯誤 C2712。 此情況下的解決方案之一，是傳遞引數做為常數參考。
 
-如果您使用編譯，也會發生 C2712 **/clr: pure** ，並宣告指標-對函式中的靜態陣列`__try`區塊。 靜態成員需要有編譯器才能使用動態初始設定下的 **/clr: pure**，這表示 c + + 例外狀況處理。 然而，在 `__try` 區塊中不允許執行 C++ 例外狀況處理。
+如果您使用編譯，也會發生 C2712 **/clr: pure** ，並宣告指標-對函式中的靜態陣列`__try`區塊。 靜態成員需要有編譯器才能使用動態初始設定下的 **/clr: pure**，這表示C++例外狀況處理。 然而，在 `__try` 區塊中不允許執行 C++ 例外狀況處理。
 
 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 

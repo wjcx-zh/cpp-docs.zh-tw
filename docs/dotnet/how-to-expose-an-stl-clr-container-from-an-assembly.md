@@ -6,23 +6,23 @@ helpviewer_keywords:
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387327"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>HOW TO：公開 STL/CLR 容器從組件
 
-STL/CLR 容器，例如`list`和`map`會實作為樣板 ref 類別。 C + + 範本會在編譯時期具現化，因為有完全相同的簽章，但位於不同的組件的兩個範本類別其實是不同類型。 這表示範本類別，不可跨組件界限使用。
+STL/CLR 容器，例如`list`和`map`會實作為樣板 ref 類別。 因為C++範本會在編譯時期具現化，有完全相同的簽章，但位於不同的組件的兩個範本類別其實是不同類型。 這表示範本類別，不可跨組件界限使用。
 
-若要進行跨組件共用，STL/CLR 容器會實作泛型介面<xref:System.Collections.Generic.ICollection%601>。 利用這個泛型介面，支援泛型，包括 c + +、 C# 和 Visual Basic 中的所有語言都可以都存取 STL/CLR 容器。
+若要進行跨組件共用，STL/CLR 容器會實作泛型介面<xref:System.Collections.Generic.ICollection%601>。 利用這個泛型介面，所有語言的都支援泛型，包括C++， C#，和 Visual Basic 中，可以存取 STL/CLR 容器。
 
-本主題說明如何顯示數個寫入名為 c + + 組件中的 STL/CLR 容器項目`StlClrClassLibrary`。 我們顯示兩個組件存取`StlClrClassLibrary`。 第一個組件是以 c + + 和 C# 中的第二個。
+本主題說明如何顯示數個以撰寫的 STL/CLR 容器項目C++名為組件`StlClrClassLibrary`。 我們顯示兩個組件存取`StlClrClassLibrary`。 第一個組件以C++，並在第二個C#。
 
-如果兩個組件以 c + + 撰寫，您可以使用來存取容器的泛型介面及其`generic_container`typedef。 例如，如果您有容器的型別`cliext::vector<int>`，則其泛型介面是： `cliext::vector<int>::generic_container`。 同樣地，使用泛型介面取得迭代器`generic_iterator`typedef，如下所示： `cliext::vector<int>::generic_iterator`。
+如果兩個組件以C++，您可以使用來存取容器的泛型介面及其`generic_container`typedef。 例如，如果您有容器的型別`cliext::vector<int>`，則其泛型介面是： `cliext::vector<int>::generic_container`。 同樣地，使用泛型介面取得迭代器`generic_iterator`typedef，如下所示： `cliext::vector<int>::generic_iterator`。
 
-由於這些 typedef 宣告 c + + 標頭檔中，以其他語言撰寫的組件不能使用它們。 因此，若要存取的泛型介面`cliext::vector<int>`在 C# 或任何其他.NET 語言中，使用`System.Collections.Generic.ICollection<int>`。 若要逐一查看這個集合，使用`foreach`迴圈。
+因為這些 typedef 宣告中C++標頭檔，以其他語言撰寫的組件無法使用它們。 因此，若要存取的泛型介面`cliext::vector<int>`在 C# 或任何其他.NET 語言中，使用`System.Collections.Generic.ICollection<int>`。 若要逐一查看這個集合，使用`foreach`迴圈。
 
 下表列出每一個 STL/CLR 容器會實作泛型介面：
 
@@ -47,7 +47,7 @@ STL/CLR 容器，例如`list`和`map`會實作為樣板 ref 類別。 C + + 範�
 
 ### <a name="description"></a>描述
 
-在此範例中，我們宣告 c + + 類別，其中包含私用的 STL/CLR 成員資料。 然後，我們會宣告授與存取權的私用集合類別的公用方法。 我們在兩個不同的方式，一個用於 c + + 用戶端，一個用於其他.NET 用戶端。
+在此範例中，我們宣告C++類別，其中包含私用的 STL/CLR 成員資料。 然後，我們會宣告授與存取權的私用集合類別的公用方法。 我們是採用兩種不同的方式，一個用於C++用戶端，另一個用於其他.NET 用戶端。
 
 ### <a name="code"></a>程式碼
 
@@ -107,7 +107,7 @@ namespace StlClrClassLibrary {
 
 在此範例中，我們會實作範例 1 中所宣告的類別。 為了讓用戶端使用此類別庫，我們會使用資訊清單工具**mt.exe**在 DLL 中內嵌資訊清單檔案。 如需詳細資訊，請參閱程式碼註解。
 
-如需有關的資訊清單工具和並排顯示組件的詳細資訊，請參閱 <<c0> [ 建置 C/c + + 隔離應用程式和並排顯示組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。
+如需有關的資訊清單工具和並排顯示組件的詳細資訊，請參閱 <<c0> [ 建置 C /C++隔離的應用程式和並排顯示組件](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)。</c0>
 
 ### <a name="code"></a>程式碼
 
@@ -199,7 +199,7 @@ namespace StlClrClassLibrary
 
 ### <a name="description"></a>描述
 
-在此範例中，我們會建立使用範例 1 和 2 中建立的類別程式庫的 c + + 用戶端。 此用戶端會使用`generic_container`逐一查看的容器，並顯示其內容的 STL/CLR 容器的 typedef。
+在此範例中，我們會建立C++會使用範例 1 和 2 中建立的類別程式庫的用戶端。 此用戶端會使用`generic_container`逐一查看的容器，並顯示其內容的 STL/CLR 容器的 typedef。
 
 ### <a name="code"></a>程式碼
 
@@ -265,7 +265,7 @@ int main(array<System::String ^> ^args)
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 cliext::deque contents:
@@ -360,7 +360,7 @@ namespace CsConsoleApp
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 cliext::deque contents:

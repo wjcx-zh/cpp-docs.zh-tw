@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sockets [MFC], deriving from socket classes
 ms.assetid: 3a26e67a-e323-433b-9b05-eca018799801
 ms.openlocfilehash: 12ab66cfd9212cd79752e2f6359b857194c6428c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385254"
 ---
 # <a name="windows-sockets-deriving-from-socket-classes"></a>Windows Sockets:衍生自通訊端類別
 
@@ -27,15 +27,15 @@ ms.locfileid: "57270295"
 
 如需詳細資訊，請參閱:
 
-- [Windows Sockets:搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Socket：搭配使用通訊端與封存](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets:使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Socket：使用類別 CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets:封鎖](../mfc/windows-sockets-blocking.md)
+- [Windows Socket：封鎖](../mfc/windows-sockets-blocking.md)
 
-- [Windows Sockets:位元組順序](../mfc/windows-sockets-byte-ordering.md)
+- [Windows Socket：位元組順序](../mfc/windows-sockets-byte-ordering.md)
 
-- [Windows Sockets:將字串轉換](../mfc/windows-sockets-converting-strings.md)
+- [Windows Socket：轉換字串](../mfc/windows-sockets-converting-strings.md)
 
 ## <a name="see-also"></a>另請參閱
 

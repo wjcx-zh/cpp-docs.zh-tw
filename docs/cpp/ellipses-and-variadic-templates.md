@@ -3,17 +3,17 @@ title: 省略符號和 Variadic 範本
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
 ms.openlocfilehash: 387cf4478192cb9470804c219eee8046f8e47abe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392215"
 ---
 # <a name="ellipses-and-variadic-templates"></a>省略符號和 Variadic 範本
 
-這篇文章示範如何使用省略符號 (`...`) 與 c + + variadic 範本。 省略符號已在 C 和 c + + 中的許多用途。 這些包括函式的變數引數清單。 `printf()` C 執行階段程式庫函式是眾所皆知的範例之一。
+這篇文章示範如何使用省略符號 (`...`) 與C++variadic 範本。 省略符號已在 C 中有許多用途和C++。 這些包括函式的變數引數清單。 `printf()` C 執行階段程式庫函式是眾所皆知的範例之一。
 
-A *variadic 樣板*是支援任意數目的引數的類別或函式範本。 這項機制是 c + + 程式庫開發人員特別有幫助，因為您可以將它套用至類別樣板和函式樣板，並藉此提供各種不同的型別安全和重要的功能和彈性。
+A *variadic 樣板*是支援任意數目的引數的類別或函式範本。 這項機制會特別有幫助C++程式庫開發人員因為您可以將它套用至類別樣板和函式樣板，並藉此提供各種不同的型別安全和重要的功能和彈性。
 
 ## <a name="syntax"></a>語法
 
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>輸出
+## <a name="output"></a>Output
 
 ```Output
 1

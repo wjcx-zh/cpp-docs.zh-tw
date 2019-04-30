@@ -12,11 +12,11 @@ helpviewer_keywords:
 - BEGIN_EVENTSINK_MAP macro
 ms.assetid: f9c106db-052f-4e32-82ad-750646aa760b
 ms.openlocfilehash: 8087d84d2203e4f910200acdd1b00e58d14f920e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394893"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX 控制項容器：從 ActiveX 控制項中處理事件
 
@@ -28,7 +28,7 @@ ms.locfileid: "57293559"
 > [!NOTE]
 >  本文使用對話架構的 ActiveX 控制項容器專案 (名為 Container) 和內嵌控制項 (名為 Circ) 做為程序和程式碼的範例。
 
-使用 [事件] 按鈕，在 [屬性] 視窗中，您可以在對應可能會發生的事件的 ActiveX 控制項容器應用程式。 此地圖中，稱為 「 事件接收對應 '，建立並維護 Visual c + + 中，當您將事件處理常式新增至控制項容器類別。 每個事件處理常式，事件的對應項目，以實作容器事件處理常式成員函式對應特定的事件。 ActiveX 控制項物件所指定的事件引發時，會呼叫此事件處理常式函式。
+使用 [事件] 按鈕，在 [屬性] 視窗中，您可以在對應可能會發生的事件的 ActiveX 控制項容器應用程式。 此地圖中，稱為 「 事件接收對應，' 是由建立及維護 VisualC++將事件處理常式加入至控制項容器類別。 每個事件處理常式，事件的對應項目，以實作容器事件處理常式成員函式對應特定的事件。 ActiveX 控制項物件所指定的事件引發時，會呼叫此事件處理常式函式。
 
 如需有關事件接收對應的詳細資訊，請參閱 <<c0> [ 事件接收對應](../mfc/reference/event-sink-maps.md)中*類別庫參考*。
 

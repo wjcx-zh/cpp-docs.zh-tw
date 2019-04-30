@@ -15,11 +15,11 @@ helpviewer_keywords:
 - decrement operators [C++]
 ms.assetid: 0204d5c8-51b0-4108-b8a1-074c5754d89c
 ms.openlocfilehash: e1a87fe4815a75b97616d7b11a4b9aa4ae65eb9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392137"
 ---
 # <a name="postfix-increment-and-decrement-operators--and---"></a>後置遞增和遞減運算子：++ 和 --
 
@@ -48,7 +48,7 @@ i++;
 
 後置遞增和後置遞減運算子的運算元必須是可修改 (不**const**) 左值的算術或指標類型。 結果的型別是相同*後置運算式*，但已不再是左值。
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 運算元的後置遞增或遞減運算子可能不是類型**bool**。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):運算元的後置遞增或遞減運算子可能不是類型**bool**。
 
 下列程式碼示範後置遞增運算子：
 

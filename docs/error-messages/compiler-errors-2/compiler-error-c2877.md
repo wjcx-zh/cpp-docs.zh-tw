@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2877
 ms.assetid: 0b54837e-fcae-4d90-9658-623250435e24
 ms.openlocfilehash: 093efbf0c329967983c1808ee46011425745515f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62390629"
 ---
 # <a name="compiler-error-c2877"></a>編譯器錯誤 C2877
 

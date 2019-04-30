@@ -11,11 +11,11 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
 ms.openlocfilehash: 94ae4dfc8f5f9073c0a39f315adfbed3e5c14daf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380166"
 ---
 # <a name="cachechunklist-class"></a>cache_chunklist 類別
 
@@ -32,7 +32,7 @@ class cache_chunklist
 
 |參數|描述|
 |---------------|-----------------|
-|*sz*|所配置陣列中的元素數。|
+|*Sz*|所配置陣列中的元素數。|
 
 ## <a name="remarks"></a>備註
 

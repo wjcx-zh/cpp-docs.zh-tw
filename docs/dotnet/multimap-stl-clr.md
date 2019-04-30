@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 3dfe329d-a078-462a-b050-7999ce6110ad
 ms.openlocfilehash: 9cc7dd32f222e68abb45fe8c518d9f378453b372
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384827"
 ---
 # <a name="multimap-stlclr"></a>multimap (STL/CLR)
 
@@ -245,7 +245,7 @@ Multimap 的迭代器會儲存其相關聯的 multimap 節點，它接著會儲�
 
 ## <a name="members"></a>成員
 
-## <a name="begin"></a> multimap:: begin (STL/CLR)
+## <a name="begin"></a> multimap::begin (STL/CLR)
 
 指定受控制序列的開頭。
 
@@ -354,7 +354,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multimap:: const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multimap::const_iterator (STL/CLR)
 
 用於受控制序列的常數迭代器類型。
 
@@ -396,7 +396,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reference"></a> multimap:: const_reference (STL/CLR)
+## <a name="const_reference"></a> multimap::const_reference (STL/CLR)
 
 項目的常數參考類型。
 
@@ -441,7 +441,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> multimap:: const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multimap::const_reverse_iterator (STL/CLR)
 
 用於受控制序列的常數反向迭代器類型。
 
@@ -483,7 +483,7 @@ int main()
 [c 3] [b 2] [a 1]
 ```
 
-## <a name="count"></a> multimap:: count (STL/CLR)
+## <a name="count"></a> multimap::count (STL/CLR)
 
 尋找符合指定索引鍵的項目數目。
 
@@ -643,7 +643,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multimap:: end (STL/CLR)
+## <a name="end"></a> multimap::end (STL/CLR)
 
 指定受控制序列的結尾。
 
@@ -696,7 +696,7 @@ int main()
 *--end() = [c 3]
 ```
 
-## <a name="equal_range"></a> multimap:: equal_range (STL/CLR)
+## <a name="equal_range"></a> multimap::equal_range (STL/CLR)
 
 尋找符合指定之索引鍵的範圍。
 
@@ -777,7 +777,7 @@ bool erase(key_type key)
 *key*<br/>
 若要清除的機碼值。
 
-*最後一個*<br/>
+*last*<br/>
 若要清除的範圍的結尾。
 
 *where*<br/>
@@ -850,7 +850,7 @@ erase(L'x') = 0
 erase(L'e') = 1
 ```
 
-## <a name="find"></a> multimap:: find (STL/CLR)
+## <a name="find"></a> multimap::find (STL/CLR)
 
 尋找符合指定之索引鍵的元素。
 
@@ -1140,7 +1140,7 @@ int main()
 [a 1]
 ```
 
-## <a name="insert"></a> multimap:: insert (STL/CLR)
+## <a name="insert"></a> multimap::insert (STL/CLR)
 
 加入項目。
 
@@ -1159,7 +1159,7 @@ void insert(System::Collections::Generic::IEnumerable<value_type>^ right);
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
 *right*<br/>
@@ -1300,7 +1300,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> multimap:: key_comp (STL/CLR)
+## <a name="key_comp"></a> multimap::key_comp (STL/CLR)
 
 複製兩個索引鍵的排序委派。
 
@@ -1359,7 +1359,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multimap:: key_compare (STL/CLR)
+## <a name="key_compare"></a> multimap::key_compare (STL/CLR)
 
 兩個索引鍵排序委派。
 
@@ -1419,7 +1419,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multimap:: key_type (STL/CLR)
+## <a name="key_type"></a> multimap::key_type (STL/CLR)
 
 排序索引鍵的類型。
 
@@ -1538,7 +1538,7 @@ static value_type make_value(key_type key, mapped_type mapped);
 *key*<br/>
 若要使用的金鑰值。
 
-*對應*<br/>
+*mapped*<br/>
 要搜尋的對應的值。
 
 ### <a name="remarks"></a>備註
@@ -1572,7 +1572,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> multimap:: mapped_type (STL/CLR)
+## <a name="mapped_type"></a> multimap::mapped_type (STL/CLR)
 
 與每個索引鍵關聯的對應值類型。
 
@@ -1617,7 +1617,7 @@ int main()
 1 2 3
 ```
 
-## <a name="multimap"></a> multimap:: multimap (STL/CLR)
+## <a name="multimap"></a> multimap::multimap (STL/CLR)
 
 建構容器物件。
 
@@ -1643,10 +1643,10 @@ multimap(System::Collections::Generic::IEnumerable<GValue>^ right,
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
-*預測*<br/>
+*pred*<br/>
 排序受控制序列的述詞。
 
 *right*<br/>
@@ -1790,7 +1790,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_as"></a> multimap::operator = (STL/CLR)
+## <a name="op_as"></a> multimap::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -1845,7 +1845,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="rbegin"></a> multimap:: rbegin (STL/CLR)
+## <a name="rbegin"></a> multimap::rbegin (STL/CLR)
 
 指定反向受控制序列的開頭。
 
@@ -1896,7 +1896,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> multimap:: reference (STL/CLR)
+## <a name="reference"></a> multimap::reference (STL/CLR)
 
 項目的參考類型。
 
@@ -1994,7 +1994,7 @@ int main()
 *--rend() = [a 1]
 ```
 
-## <a name="reverse_iterator"></a> multimap:: reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> multimap::reverse_iterator (STL/CLR)
 
 受控制序列的反向迭代器類型。
 
@@ -2088,7 +2088,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multimap:: size_type (STL/CLR)
+## <a name="size_type"></a> multimap::size_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -2136,7 +2136,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multimap:: swap (STL/CLR)
+## <a name="swap"></a> multimap::swap (STL/CLR)
 
 交換兩個容器的內容。
 
@@ -2254,7 +2254,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="upper_bound"></a> multimap:: upper_bound (STL/CLR)
+## <a name="upper_bound"></a> multimap::upper_bound (STL/CLR)
 
 尋找符合指定的索引鍵的範圍結尾。
 
@@ -2313,7 +2313,7 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = [c 3]
 ```
 
-## <a name="value_comp"></a> multimap:: value_comp (STL/CLR)
+## <a name="value_comp"></a> multimap::value_comp (STL/CLR)
 
 複製兩個項目值的順序委派。
 
@@ -2408,7 +2408,7 @@ compare([L'a', 1], [L'b', 2]) = True
 compare([L'b', 2], [L'a', 1]) = False
 ```
 
-## <a name="value_type"></a> multimap:: value_type (STL/CLR)
+## <a name="value_type"></a> multimap::value_type (STL/CLR)
 
 元素的類型。
 
@@ -2452,7 +2452,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="op_neq"></a> 運算子 ！ = (multimap) (STL/CLR)
+## <a name="op_neq"></a> operator!= (multimap) (STL/CLR)
 
 列出不相等比較。
 
@@ -2523,7 +2523,7 @@ int main()
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> 運算子&lt;(multimap) (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (multimap) (STL/CLR)
 
 清單小於比較。
 
@@ -2594,7 +2594,7 @@ int main()
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 運算子&lt;= (multimap) (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (multimap) (STL/CLR)
 
 清單小於或等於比較。
 
@@ -2665,7 +2665,7 @@ int main()
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 運算子 = = (multimap) (STL/CLR)
+## <a name="op_eq"></a> operator== (multimap) (STL/CLR)
 
 列出相等比較。
 
@@ -2736,7 +2736,7 @@ int main()
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 運算子&gt;(multimap) (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (multimap) (STL/CLR)
 
 大於比較的清單。
 
@@ -2807,7 +2807,7 @@ int main()
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 運算子&gt;= (multimap) (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (multimap) (STL/CLR)
 
 清單大於或等於比較。
 

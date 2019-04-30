@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
 ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59025318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397779"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 Sum 和其他彙總的結果 (ODBC)
 
@@ -36,7 +36,7 @@ ms.locfileid: "59025318"
 若要取得有關資料來源中之記錄的統計資訊而不是從資料來源擷取記錄，您可以使用這些 SQL 函式。 資料錄集，通常會建立包含單一記錄 （如果所有資料行彙總），會包含值。 (可能有多筆記錄如果您使用**GROUP BY**子句。)這個值會計算或執行 SQL 函式所擷取的結果。
 
 > [!TIP]
->  若要將 SQL **GROUP BY**子句 (而且可能**HAVING**子句) 到您的 SQL 陳述式，將它附加至結尾`m_strFilter`。 例如: 
+>  若要將 SQL **GROUP BY**子句 (而且可能**HAVING**子句) 到您的 SQL 陳述式，將它附加至結尾`m_strFilter`。 例如：
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -91,4 +91,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
 ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394827"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 
@@ -85,7 +85,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 按一下 **的新**上**檔案**功能表。
 
-1. 選取  **MFC ActiveX 控制項精靈**從 Visual c + + 專案，並命名您的專案。
+1. 選取  **MFC ActiveX 控制項精靈**從 視覺效果C++專案，並命名您的專案。
 
 1. 在 **控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。
 

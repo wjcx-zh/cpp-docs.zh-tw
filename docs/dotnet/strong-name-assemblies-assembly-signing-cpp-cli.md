@@ -10,11 +10,11 @@ helpviewer_keywords:
 - strong-named assemblies [C++]
 ms.assetid: c337cd3f-e5dd-4c6f-a1ad-437e85dba1cc
 ms.openlocfilehash: ac46d069ece3c75af93f93497169d054b45267d0
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384578"
 ---
 # <a name="strong-name-assemblies-assembly-signing-ccli"></a>強式名稱組件 (組件簽署) (C++/CLI)
 
@@ -22,7 +22,7 @@ ms.locfileid: "57813925"
 
 ## <a name="remarks"></a>備註
 
-Visual c + + 時，請登入您的組件，以避免發生與 CLR 屬性，以簽署組件相關的問題使用連結器選項：
+當使用視覺效果C++，使用連結器選項來登入您的組件，以避免發生與 CLR 屬性，以簽署組件相關的問題：
 
 - <xref:System.Reflection.AssemblyDelaySignAttribute>
 
@@ -30,7 +30,7 @@ Visual c + + 時，請登入您的組件，以避免發生與 CLR 屬性，以�
 
 - <xref:System.Reflection.AssemblyKeyNameAttribute>
 
-不使用屬性的原因包括索引鍵的名稱會顯示在組件中繼資料，可能會有安全性風險，如果檔案名稱中包含機密資訊的事實。 此外，Visual c + + 開發環境所使用的建置程序將會失效，如果您使用 CLR 屬性來指定組件的強式的名稱，並接著執行組件上的 後置處理 mt.exe 等工具，已簽署組件的索引鍵。
+不使用屬性的原因包括索引鍵的名稱會顯示在組件中繼資料，可能會有安全性風險，如果檔案名稱中包含機密資訊的事實。 此外，視覺效果使用建置流程C++開發環境將會失效，如果您使用 CLR 屬性來指定組件的強式的名稱，並接著執行組件上的 後置處理 mt.exe 等工具，已簽署組件的索引鍵。
 
 如果您在命令列建置，使用連結器選項來簽署組件，然後再執行 後置處理工具 （mt.exe)，您必須重新簽署組件使用 sn.exe。 或者，您可以建置和延遲簽署組件並執行後置處理的工具之後, 再完成簽署。
 

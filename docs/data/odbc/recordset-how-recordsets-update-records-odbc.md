@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397805"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>資料錄集：資料錄集更新資料錄 (ODBC) 的方式
 
@@ -73,4 +73,4 @@ ms.locfileid: "59034478"
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：AddNew，如何編輯和刪除工作 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[資料錄集：AddNew、Edit 和 Delete 的運作方式 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

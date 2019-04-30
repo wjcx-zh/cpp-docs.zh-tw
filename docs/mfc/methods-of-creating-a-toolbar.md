@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], creating toolbars
 ms.assetid: f19d8d65-d49f-445c-abe8-d47d3e4101c8
 ms.openlocfilehash: f269ad990042f51554ec598b0bddbe5a6d7776b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383911"
 ---
 # <a name="methods-of-creating-a-toolbar"></a>建立工具列的方法
 
@@ -22,7 +22,7 @@ MFC 提供兩個類別來建立工具列：[CToolBar](../mfc/reference/ctoolbar-
 
 `CToolBarCtrl` 通常會導致較小的可執行檔，並且可能會想要使用`CToolBarCtrl`如果您不想要整合到 MFC 架構的工具列。 如果您打算使用`CToolBarCtrl`並整合到 MFC 架構的工具列，您必須另花心思將傳達至 MFC 的工具列控制項操作。 這項通訊並不困難;不過，就是不必要的當您使用的其他工作`CToolBar`。
 
-Visual c + + 提供兩種方式可利用工具列通用控制項。
+視覺化C++提供兩種方式可利用工具列通用控制項。
 
 - 建立工具列 using `CToolBar`，然後呼叫[CToolBar::GetToolBarCtrl](../mfc/reference/ctoolbar-class.md#gettoolbarctrl)以取得存取權`CToolBarCtrl`成員函式。
 

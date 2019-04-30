@@ -9,15 +9,15 @@ helpviewer_keywords:
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
 ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387236"
 ---
 # <a name="how-to-marshal-structures-using-pinvoke"></a>HOW TO：封送處理結構使用 PInvoke
 
-本文件說明如何在原生函式會接受 C 樣式結構可以從呼叫 managed 函式，藉由使用 P/Invoke。 雖然我們建議您使用 c + + Interop 功能，而不是 P/Invoke P/Invoke 提供極少的編譯時期錯誤，報告，因為不是類型安全，並可能會非常繁瑣，若要實作，如果未受管理的 API 會封裝成 DLL，而且沒有原始程式碼可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：
+本文件說明如何在原生函式會接受 C 樣式結構可以從呼叫 managed 函式，藉由使用 P/Invoke。 雖然我們建議您改用C++Interop 功能而不是 P/Invoke，因為 P/Invoke 提供極少的編譯時間錯誤報告，不類型安全，並可能會非常繁瑣，若要實作，如果未受管理的 API 會封裝成 DLL，而且沒有原始程式碼可用，P/Invoke 是唯一的選項。 否則，請參閱下列文件：
 
 - [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
@@ -25,11 +25,11 @@ ms.locfileid: "57747991"
 
 根據預設，原生和 managed 結構是配置以不同的方式在記憶體中，因此已成功跨 managed/unmanaged 界限傳遞結構需要額外的步驟，以保持資料完整性。
 
-本文件說明定義原生結構，和如何產生的結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 不會包含字串或指標，會使用。 非 blittable 互通性的相關資訊，請參閱[使用 c + + Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型做為傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同表示法。 如需詳細資訊，請參閱 < [Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types)。
+本文件說明定義原生結構，和如何產生的結構可以傳遞至 unmanaged 函式的 managed 對等項目所需的步驟。 本文件假設簡單結構 — 不會包含字串或指標，會使用。 非 blittable 互通性的相關資訊，請參閱[使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。 P/Invoke 不能有非 blittable 類型做為傳回值。 Blittable 類型在 managed 和 unmanaged 程式碼中有相同表示法。 如需詳細資訊，請參閱 < [Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types)。
 
 簡單封送處理，跨 managed/unmanaged 界限的 blittable 結構第一次需要受管理的版本，每個原生結構的定義。 這些結構可以具有任何合法的名稱;兩個的結構，其配置的資料以外的原生和 managed 版本之間沒有任何關聯性。 因此，它是不可或缺的受管理的版本包含相同的大小和順序與原生的版本相同的欄位。 （沒有任何機制可確保結構的 managed 和原生版本同等權限，因此不相容問題會變得明顯到執行階段。 它是程式設計人員必須負責確保兩個結構有相同的資料版面配置）。
 
-因為基於效能目的有時重新排列的受管理的結構成員，就必須使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性來指出此結構依序配置。 它也是個不錯的主意，明確地設定 封裝設定所使用的原生結構相同的結構。 （根據預設，雖然 Visual c + + 使用這兩個受管理的程式碼封裝的 8 位元組結構）。
+因為基於效能目的有時重新排列的受管理的結構成員，就必須使用<xref:System.Runtime.InteropServices.StructLayoutAttribute>屬性來指出此結構依序配置。 它也是個不錯的主意，明確地設定 封裝設定所使用的原生結構相同的結構。 (雖然根據預設，視覺效果，則C++會使用這兩個受管理的程式碼封裝的 8 位元組結構。)
 
 1. 接下來，使用<xref:System.Runtime.InteropServices.DllImportAttribute>宣告對應至任何接受結構的 unmanaged 函式的進入點，但使用中的函式簽章中，這是就無傷大雅了點，如果您使用相同的名稱，這兩個版本的結構的 managed 的版本結構。
 

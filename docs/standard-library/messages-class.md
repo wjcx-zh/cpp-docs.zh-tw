@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383577"
 ---
 # <a name="messages-class"></a>messages 類別
 
@@ -152,10 +152,10 @@ virtual string_type do_get(
 *_Catval*<br/>
 識別值，指定所要搜尋的訊息目錄。
 
-*（_s)*<br/>
+*_Set*<br/>
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
 *_Dfault*<br/>
@@ -222,10 +222,10 @@ string_type get(
 *_Catval*<br/>
 識別值，指定所要搜尋的訊息目錄。
 
-*（_s)*<br/>
+*_Set*<br/>
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*訊息 （_m)*<br/>
+*_Message*<br/>
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
 *_Dfault*<br/>
@@ -264,11 +264,11 @@ protected: messages(
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 

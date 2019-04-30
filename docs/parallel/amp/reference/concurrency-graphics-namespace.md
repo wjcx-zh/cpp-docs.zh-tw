@@ -5,11 +5,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
 ms.openlocfilehash: ef61c93e062b375377a0afe62aa7f622f6c0d4ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375596"
 ---
 # <a name="concurrencygraphics-namespace"></a>Concurrency::graphics 命名空間
 
@@ -46,7 +46,7 @@ namespace graphics;
 
 |名稱|描述|
 |----------|-----------------|
-|[texture 類別](texture-class.md)|材質是在範圍內 accelerator_view 上彙總資料。 它是變數，每個項目，對應範圍網域中的集合。 每個變數會保存為對應到 c + + 基本類型 (不帶正負號的 int、 int、 float、 double)，或純量類型範數或 unorm （定義於 concurrency:: graphics） 或合適短向量類型定義於 concurrency:: graphics。|
+|[texture 類別](texture-class.md)|材質是在範圍內 accelerator_view 上彙總資料。 它是變數，每個項目，對應範圍網域中的集合。 每個變數會保留值對應至C++基本類型 (不帶正負號的 int、 int、 float、 double) 或純量類型範數或 unorm （定義於 concurrency:: graphics） 或定義於 concurrency:: graphics 的合適短向量類型。|
 |[writeonly_texture_view 類別](writeonly-texture-view-class.md)|Writeonly_texture_view 提供 writeonly 存取材質。|
 |[double_2 類別](double-2-class.md)|代表 2 的短向量`double`值。|
 |[double_3 類別](double-3-class.md)|表示短向量的 3`double`值。|

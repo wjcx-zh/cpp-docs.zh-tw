@@ -10,11 +10,11 @@ helpviewer_keywords:
 - marshal_as template [C++]
 ms.assetid: 2ed717da-2b11-41e5-981d-47d251771989
 ms.openlocfilehash: 2294d8fe94a32f281332c963b21a542366ae3207
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386079"
 ---
 # <a name="marshalas"></a>marshal_as
 
@@ -39,7 +39,7 @@ To_Type marshal_as<To_Type>(
 
 ## <a name="remarks"></a>備註
 
-這個方法是簡化的方式，將原生和 managed 型別之間的資料轉換。 若要判斷支援哪些資料類型，請參閱[Overview of Marshaling c + + 中](../dotnet/overview-of-marshaling-in-cpp.md)。 某些資料轉換需要內容。 您可以使用，以轉換這些資料型別[marshal_context 類別](../dotnet/marshal-context-class.md)。
+這個方法是簡化的方式，將原生和 managed 型別之間的資料轉換。 若要判斷支援哪些資料類型，請參閱[Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。 某些資料轉換需要內容。 您可以使用，以轉換這些資料型別[marshal_context 類別](../dotnet/marshal-context-class.md)。
 
 如果您嘗試封送處理不支援的資料類型的一組`marshal_as`會產生錯誤[C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)在編譯時期。 閱讀隨附此錯誤，如需詳細資訊的訊息。 `C4996`錯誤可能產生多個只是已被取代的函式。 其中一個範例就嘗試封送處理一組不支援的資料類型。
 

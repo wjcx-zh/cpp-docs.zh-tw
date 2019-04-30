@@ -6,11 +6,11 @@ f1_keywords:
 helpviewer_keywords:
 - C2131
 ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397584"
 ---
 # <a name="compiler-error-c2131"></a>編譯器錯誤 C2131
 

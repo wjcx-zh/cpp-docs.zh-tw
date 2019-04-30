@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Debug class
 ms.assetid: 076bd528-1b6f-4e8a-a372-eb5849cf969a
 ms.openlocfilehash: 3a262a0d2ef429cb94f4648eb7c7180e7b130279
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393775"
 ---
 # <a name="debug-class-ccli"></a>Debug 類別 (C++/CLI)
 
-當使用<xref:System.Diagnostics.Debug>Visual c + + 應用程式中，行為之間都沒有變更偵錯和發行組建。
+使用時<xref:System.Diagnostics.Debug>視覺效果中C++應用程式的行為不會變更偵錯和發行組建之間。
 
 ## <a name="remarks"></a>備註
 
@@ -49,7 +49,7 @@ int main() {
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
     Entering Main

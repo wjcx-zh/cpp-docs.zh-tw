@@ -21,16 +21,15 @@ helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
 ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394347"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer 類別
 
-
-  `overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。
+`overwrite_buffer` 傳訊區塊是多目標、多來源的排序 `propagator_block`，一次能夠存放一個訊息。 新訊息會覆寫先前保留的訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -229,8 +228,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -269,8 +267,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

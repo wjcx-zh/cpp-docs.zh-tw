@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393749"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -141,14 +141,14 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>參數
 
-*arg1*<br/>
+*Arg1*<br/>
 第一個引數型別。
 
 *Arg2*<br/>
 第二個引數的類型。
 
 *結果*<br/>
-傳回型別。
+傳回類型。
 
 ### <a name="remarks"></a>備註
 
@@ -216,7 +216,7 @@ generic<typename Arg1,
 
 #### <a name="parameters"></a>參數
 
-*arg1*<br/>
+*Arg1*<br/>
 第一個引數型別。
 
 *Arg2*<br/>
@@ -302,7 +302,7 @@ public:
 
 #### <a name="parameters"></a>參數
 
-*樂趣*<br/>
+*Fun*<br/>
 預存的仿函式的型別。
 
 ## <a name="member-functions"></a>成員函式
@@ -322,7 +322,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|運算子 delegate_type^()|將轉換成委派仿函式。|
+|operator delegate_type^()|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 
@@ -404,12 +404,12 @@ template<typename Fun,
 *引數*<br/>
 引數型別。
 
-*樂趣*<br/>
+*Fun*<br/>
 仿函式的型別。
 
 #### <a name="function-parameters"></a>函式參數
 
-*仿函式*<br/>
+*functor*<br/>
 包裝函式。
 
 *left*<br/>
@@ -485,12 +485,12 @@ template<typename Fun,
 *引數*<br/>
 引數型別。
 
-*樂趣*<br/>
+*Fun*<br/>
 仿函式的型別。
 
 #### <a name="function-parameters"></a>函式參數
 
-*仿函式*<br/>
+*functor*<br/>
 包裝函式。
 
 *right*<br/>
@@ -577,7 +577,7 @@ public:
 
 #### <a name="parameters"></a>參數
 
-*樂趣*<br/>
+*Fun*<br/>
 預存的仿函式的型別。
 
 ### <a name="member-functions"></a>成員函式
@@ -597,7 +597,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|運算子 delegate_type^()|將轉換成委派仿函式。|
+|operator delegate_type^()|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 
@@ -682,7 +682,7 @@ public:
 
 #### <a name="parameters"></a>參數
 
-*樂趣*<br/>
+*Fun*<br/>
 預存的仿函式的型別。
 
 ## <a name="member-functions"></a>成員函式
@@ -702,7 +702,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|運算子 delegate_type^()|將轉換成委派仿函式。|
+|operator delegate_type^()|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 
@@ -758,7 +758,7 @@ int main()
 0 -1
 ```
 
-## <a name="divides"></a> 除以 (STL/CLR)
+## <a name="divides"></a> divides (STL/CLR)
 
 此範本類別描述仿函式，呼叫時，傳回第一個引數除以第二個。 您在使用指定的函式物件，其引數類型方面。
 
@@ -806,7 +806,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|運算子 delegate_type^()|將轉換成委派仿函式。|
+|operator delegate_type^()|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 
@@ -907,7 +907,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|運算子 delegate_type^()|將轉換成委派仿函式。|
+|operator delegate_type^()|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 
@@ -1757,7 +1757,7 @@ int main()
 2 2
 ```
 
-## <a name="modulus"></a> 模數 (STL/CLR)
+## <a name="modulus"></a> modulus (STL/CLR)
 
 此範本類別描述仿函式，呼叫時，會傳回第一個引數，第二個模數。 您在使用指定的函式物件，其引數類型方面。
 
@@ -2163,12 +2163,12 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>範本參數
 
-*樂趣*<br/>
+*Fun*<br/>
 仿函式的型別。
 
 #### <a name="function-parameters"></a>函式參數
 
-*仿函式*<br/>
+*functor*<br/>
 包裝函式。
 
 ### <a name="remarks"></a>備註
@@ -2235,12 +2235,12 @@ template<typename Fun>
 
 #### <a name="template-parameters"></a>範本參數
 
-*樂趣*<br/>
+*Fun*<br/>
 仿函式的型別。
 
 #### <a name="function-parameters"></a>函式參數
 
-*仿函式*<br/>
+*functor*<br/>
 包裝函式。
 
 ### <a name="remarks"></a>備註
@@ -2303,7 +2303,7 @@ int main()
 1 0
 ```
 
-## <a name="plus"></a> 再加上 (STL/CLR)
+## <a name="plus"></a> plus (STL/CLR)
 
 此範本類別描述仿函式，呼叫時，會傳回第一個引數再加上第二個。 您在使用指定的函式物件，其引數類型方面。
 
@@ -2422,7 +2422,7 @@ generic<typename Arg,
 引數型別。
 
 *結果*<br/>
-傳回型別。
+傳回類型。
 
 ### <a name="remarks"></a>備註
 
@@ -2561,7 +2561,7 @@ public:
 
 #### <a name="parameters"></a>參數
 
-*樂趣*<br/>
+*Fun*<br/>
 預存的仿函式的型別。
 
 ### <a name="member-functions"></a>成員函式
@@ -2579,7 +2579,7 @@ public:
 |運算子|描述|
 |--------------|-----------------|
 |operator()|計算所需的函式。|
-|delegate_type ^|將轉換成委派仿函式。|
+|delegate_type^|將轉換成委派仿函式。|
 
 ### <a name="remarks"></a>備註
 

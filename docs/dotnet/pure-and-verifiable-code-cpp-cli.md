@@ -18,19 +18,19 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384710"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>純粹的和可驗證的程式碼 (C + + /cli CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>純粹的和可驗證的程式碼 (C++/CLI)
 
-如需.NET 程式設計，Visual Studio 2017 中 Visual c + + 支援混合的組件的建立使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項。 **/Clr: pure**並 **: safe**選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 如果您的程式碼必須是安全或驗證的則我們建議您移植到C#。
+如需.NET 程式設計，視覺效果C++在 Visual Studio 2017 支援使用混合的組件的建立[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項。 **/Clr: pure**並 **: safe**選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 如果您的程式碼必須是安全或驗證的則我們建議您移植到C#。
 
 ## <a name="mixed-clr"></a>混合 (/ clr)
 
-混合組件 (以編譯 **/clr**)、 包含非受控和受控組件，讓他們能夠使用.NET 功能，但仍然包含原生程式碼。 這可讓應用程式和元件更新，而不需要重寫整個專案中使用.NET 功能。 使用 Visual c + + 混合 managed 和原生程式碼，以這種方式被呼叫 c + + Interop。 如需詳細資訊，請參閱 <<c0> [ 混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)。
+混合組件 (以編譯 **/clr**)、 包含非受控和受控組件，讓他們能夠使用.NET 功能，但仍然包含原生程式碼。 這可讓應用程式和元件更新，而不需要重寫整個專案中使用.NET 功能。 使用視覺效果C++混合 managed 和原生程式碼，以這種方式呼叫C++Interop。 如需詳細資訊，請參閱 <<c0> [ 混合 （原生和 Managed） 組件](../dotnet/mixed-native-and-managed-assemblies.md)並[原生和.NET 互通性](../dotnet/native-and-dotnet-interoperability.md)。
 
 從 managed 組件對原生 Dll 透過 P/Invoke 的呼叫會進行編譯，但在執行階段根據安全性設定可能會失敗。
 

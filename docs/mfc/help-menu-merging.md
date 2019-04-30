@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Help [MFC], for active document containers
 ms.assetid: 9d615999-79ba-471a-9288-718f0c903d49
 ms.openlocfilehash: e1e8f9af696b6ea4cd485f4215e1c8425098e987
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396401"
 ---
 # <a name="help-menu-merging"></a>說明功能表合併
 

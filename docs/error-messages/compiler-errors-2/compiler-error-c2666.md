@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
 ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386872"
 ---
 # <a name="compiler-error-c2666"></a>編譯器錯誤 C2666
 
@@ -43,7 +43,7 @@ int main() {
 
 以二元運算子\<，>， \<= 和 > =、 傳遞參數現在會隱含地轉換成運算元的類型如果參數的型別定義使用者定義轉換運算子，將轉換成運算元的類型。 目前沒有模稜兩可的可能性。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本的 Visual c + + 中有效的程式碼，呼叫類別運算子明確地使用函式語法。
+在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效的程式碼的C++，呼叫類別運算子，明確地使用函式語法。
 
 ## <a name="example"></a>範例
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
 ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376025"
 ---
 # <a name="compiler-error-c3899"></a>編譯器錯誤 C3899
 
 'var': initonly 資料成員的左值使用不允許直接放在類別 'class' 中的平行區域內
 
-[Initonly (C + + /cli CLI)](../../dotnet/initonly-cpp-cli.md)不能在建構函式中的該部分內初始化資料成員[平行](../../parallel/openmp/reference/parallel.md)區域。  這是因為編譯器會內部的重新配置，該程式碼，使它不再有效的建構函式的一部分。
+[Initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)不能在建構函式中的該部分內初始化資料成員[平行](../../parallel/openmp/reference/parallel.md)區域。  這是因為編譯器會內部的重新配置，該程式碼，使它不再有效的建構函式的一部分。
 
 若要解決，請初始化建構函式，但在平行區域以外的 initonly 資料成員。
 

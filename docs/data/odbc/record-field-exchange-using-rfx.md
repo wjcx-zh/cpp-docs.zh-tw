@@ -5,11 +5,11 @@ helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
 ms.openlocfilehash: 2a029f653753363e08b3c4f8b9fceab6295924af
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395647"
 ---
 # <a name="record-field-exchange-using-rfx"></a>資料錄欄位交換：使用 RFX
 
@@ -42,7 +42,7 @@ ms.locfileid: "59034111"
 
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [資料錄欄位交換：RFX 的運作方式](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
-[資料錄集：取得 Sum 和其他彙總的結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
+[資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
 [CRecordset 類別](../../mfc/reference/crecordset-class.md)<br/>
 [CFieldExchange 類別](../../mfc/reference/cfieldexchange-class.md)<br/>
 [巨集、 全域函式和全域變數](../../mfc/reference/mfc-macros-and-globals.md)

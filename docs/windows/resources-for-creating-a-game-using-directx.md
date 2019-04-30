@@ -1,5 +1,5 @@
 ---
-title: 用於建立使用 DirectX 的 c + + 遊戲的資源
+title: 用於建立的資源C++遊戲使用 DirectX
 ms.date: 06/08/2018
 helpviewer_keywords:
 - games [C++]
@@ -7,19 +7,19 @@ helpviewer_keywords:
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
 ms.openlocfilehash: f17b2ddcc6db68f2045d9887a799555fa6ed0643
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388224"
 ---
-# <a name="resources-for-creating-a-c-game-using-directx"></a>用於建立使用 DirectX 的 c + + 遊戲的資源
+# <a name="resources-for-creating-a-c-game-using-directx"></a>用於建立的資源C++遊戲使用 DirectX
 
 為了能建立最好的桌面遊戲，請一併使用 Visual C++ 與 DirectX。
 
 ## <a name="resources"></a>資源
 
-Visual c + + 包含在所有版本的 Visual Studio 中，但預設不會安裝它。 如需有關如何安裝 Visual Studio 和 c + + 開發工具的資訊，請參閱 < [Visual Studio 中的安裝 c + + 支援](../build/vscpp-step-0-installation.md)。
+視覺化C++包含在所有版本的 Visual Studio 中，但預設並未安裝。 如需如何安裝 Visual Studio 和C++開發工具，請參閱[安裝C++Visual Studio 中支援](../build/vscpp-step-0-installation.md)。
 
 Windows 8.1 和更新版本，DirectX SDK 包含 Windows SDK 中。 您不需要另外下載任何項目。 如需詳細資訊，請參閱 < [DirectX SDK 位於何處？](https://msdn.microsoft.com/library/windows/desktop/ee663275.aspx)。
 

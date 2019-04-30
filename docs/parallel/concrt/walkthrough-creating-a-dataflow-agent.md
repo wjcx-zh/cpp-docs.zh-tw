@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：建立資料流程代理程式
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
 ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378269"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>逐步解說：建立資料流程代理程式
 

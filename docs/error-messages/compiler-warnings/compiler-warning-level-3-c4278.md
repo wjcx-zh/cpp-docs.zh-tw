@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4278
 ms.assetid: 4b6053fb-df62-4c04-b6c8-c011759557b8
 ms.openlocfilehash: 8c5c15105581602566116d3ed82b89a6337435c9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62402160"
 ---
 # <a name="compiler-warning-level-3-c4278"></a>編譯器警告 (層級 3) C4278
 

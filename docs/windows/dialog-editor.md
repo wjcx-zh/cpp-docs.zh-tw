@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
 ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59029482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414258"
 ---
 # <a name="dialog-editor-c"></a>對話方塊編輯器 (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "59029482"
 
 - 若要開啟編輯器，請按兩下對話方塊的.rc 檔中**資源檢視**視窗中或移至功能表**檢視** > **資源檢視**。
 
-其中一個進行新的對話方塊或對話方塊範本，第一個步驟加入控制項。 在 [**對話方塊編輯器**，您可以安排控制項配合特定大小、 圖形或對齊方式，或您可以移動它們大約在對話方塊內順利運作。 刪除控制項也很容易。
+其中一個進行新的對話方塊或對話方塊範本，第一個步驟加入控制項。 在 **對話方塊編輯器**，您可以安排控制項配合特定大小、 圖形或對齊方式，或您可以移動它們大約在對話方塊內順利運作。 刪除控制項也很容易。
 
 您可以將對話方塊儲存成範本，以便重複使用。 您也可以輕鬆地在設計對話方塊和編輯其實作程式碼之間來回切換。
 
@@ -57,13 +57,13 @@ ms.locfileid: "59029482"
 
 |圖示|意義|圖示|意義|
 |----------|-------------|----------|-------------|
-|![測試對話方塊] 按鈕](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|文字方塊|![水平均等陳列] 按鈕](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|橫向|
-|![將按鈕靠左對齊](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|對齊主控項的左緣|![垂直均等陳列] 按鈕](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|下移|
-|![將權限按鈕對齊](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|對齊主控項的右緣|![讓相同寬度] 按鈕](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|設定成相同寬度|
-|![將頂端的按鈕對齊](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|對齊主控項的上緣|![讓相同高度] 按鈕](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|設定成相同高度|
-|![靠下對齊按鈕](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|靠下對齊|![讓相同的大小] 按鈕](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|設定成相同大小|
-|![垂直置中] 按鈕](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切換格線] 按鈕](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切換格線|
-|![水平置中] 按鈕](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切換輔助線] 按鈕](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切換輔助線|
+|![測試對話方塊 按鈕](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|文字方塊|![水平均等陳列 按鈕](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|橫向|
+|![將按鈕靠左對齊](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|對齊主控項的左緣|![垂直均等陳列 按鈕](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|下移|
+|![將權限按鈕對齊](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|對齊主控項的右緣|![讓相同寬度 按鈕](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|設定成相同寬度|
+|![將頂端的按鈕對齊](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|對齊主控項的上緣|![讓相同高度 按鈕](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|設定成相同高度|
+|![靠下對齊按鈕](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|靠下對齊|![讓相同的大小 按鈕](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|設定成相同大小|
+|![垂直置中 按鈕](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|垂直|![切換格線 按鈕](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|切換格線|
+|![水平置中 按鈕](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|水平|![切換輔助線 按鈕](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|切換輔助線|
 
 - 若要顯示或隱藏**對話方塊編輯器**工具列上，移至功能表**檢視** > **工具列** > **對話方塊編輯器**。
 
@@ -73,9 +73,9 @@ ms.locfileid: "59029482"
 
 在 MFC 應用程式，您可以按兩下對話方塊控制項跳至其處理常式程式碼，或快速地建立處理常式函式 stub。
 
-選取控制項，然後選取 [**控制項事件**] 按鈕或**訊息**按鈕[屬性] 視窗](/visualstudio/ide/reference/properties-window)若要檢視 Windows 訊息和事件的完整清單適用於選取的項目。 若要建立或編輯處理常式函式清單中選擇。
+選取控制項，然後選取 [**控制項事件**] 按鈕或**訊息**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window)若要檢視 Windows 訊息和事件的完整清單適用於選取的項目。 若要建立或編輯處理常式函式清單中選擇。
 
-- 若要跳到程式碼，從**對話方塊編輯器**，跳至其最近已實作的訊息處理函式的宣告] 對話方塊中的控制項上按兩下。
+- 若要跳到程式碼，從**對話方塊編輯器**，跳至其最近已實作的訊息處理函式的宣告 對話方塊中的控制項上按兩下。
 
    對於 ATL 為基礎的對話方塊類別中，您一律跳到建構函式定義。
 

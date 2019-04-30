@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373150"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -1367,7 +1367,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 ### <a name="parameters"></a>參數
 
 *bActive*<br/>
-[in]BOOL，指定是否標示為作用中 窗格。
+[in]BOOL，指定是否標示為作用中窗格。
 
 ### <a name="remarks"></a>備註
 

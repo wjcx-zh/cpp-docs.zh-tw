@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403878"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -583,7 +583,7 @@ virtual BOOL DetachTab(
 [in]所提供的列舉的資料型別[CBasePane 類別](../../mfc/reference/cbasepane-class.md)。 此資料型別會指定用來中斷連結索引標籤的方法。
 
 *nTabNum*<br/>
-[in]要卸離 索引標籤的以零為起始的索引。
+[in]要卸離索引標籤的以零為起始的索引。
 
 *bHide*<br/>
 [in]布林值參數，指出架構是否應該隱藏 [中斷連結] 索引標籤。
@@ -1357,7 +1357,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 ### <a name="parameters"></a>參數
 
 *bHide*<br/>
-[in]布林值，指定是否要啟用 隱藏單一索引標籤。
+[in]布林值，指定是否要啟用隱藏單一索引標籤。
 
 ### <a name="remarks"></a>備註
 
@@ -1971,7 +1971,7 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]以零起始的索引 索引標籤的`SetActiveTab`將與這個索引標籤設為作用中。
+[in]以零起始的索引索引標籤的`SetActiveTab`將與這個索引標籤設為作用中。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2199,7 +2199,7 @@ virtual BOOL SetTabIcon(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]更新 索引標籤的以零為起始的索引。
+[in]更新索引標籤的以零為起始的索引。
 
 *uiIcon*<br/>
 [in][新增] 圖示的圖示識別碼。 此識別碼會參考內部[CImageList](../../mfc/reference/cimagelist-class.md)物件。
@@ -2251,7 +2251,7 @@ virtual BOOL SetTabLabel(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]更新 索引標籤的以零為起始的索引。
+[in]更新索引標籤的以零為起始的索引。
 
 *strLabel*<br/>
 [in]包含新索引標籤的標籤文字字串的參考。

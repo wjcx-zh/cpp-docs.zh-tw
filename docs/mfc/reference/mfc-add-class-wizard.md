@@ -8,11 +8,11 @@ helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
 ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412724"
 ---
 # <a name="mfc-add-class-wizard"></a>MFC 加入類別精靈
 
@@ -24,7 +24,7 @@ ms.locfileid: "57304089"
 
 - **類別名稱**
 
-  指定新的類別名稱，並提供預設值為基礎的識別碼和在此頁面上的檔案名稱。 C + + 類別通常會開始"C"，比方說，「 CMyClass 」 變成 「 MyClass.h"，依此類推。
+  指定新的類別名稱，並提供預設值為基礎的識別碼和在此頁面上的檔案名稱。 C++類別通常會開始"C"，比方說，「 CMyClass 」 變成 「 MyClass.h"，依此類推。
 
 - **基底類別**
 

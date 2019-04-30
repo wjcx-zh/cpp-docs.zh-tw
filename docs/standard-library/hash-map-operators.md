@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405049"
 ---
 # <a name="lthashmapgt-operators"></a>&lt;hash_map&gt; 運算子
 
@@ -22,7 +22,7 @@ ms.locfileid: "50559701"
 ## <a name="op_neq"></a> operator!=
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
 
 測試運算子左邊的 hash_map 物件是否不等於右邊的 hash_map 物件。
 
@@ -91,7 +91,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_eq_eq"></a> operator==
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_map 類別](unordered-map-class.md)。
 
 測試運算子左邊的 hash_map 物件是否等於右邊的 hash_map 物件。
 
@@ -158,7 +158,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_neq_mm"></a>  運算子 ！ = (hash_multimap)
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
 
 測試運算子左邊的 hash_multimap 物件是否不等於右邊的 hash_multimap 物件。
 
@@ -222,10 +222,10 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  運算子 = = (hash_multimap)
+## <a name="op_eq_eq_mm"></a>  operator==  (hash_multimap)
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_multimap 類別](unordered-multimap-class.md)。
 
 測試運算子左邊的 hash_multimap 物件是否等於右邊的 hash_multimap 物件。
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
 ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392189"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 運算式的範例
 
@@ -46,7 +46,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 5
@@ -91,7 +91,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 47
@@ -101,7 +101,7 @@ int main()
 
 ##  <a name="callingLambdaExpressions"></a> 呼叫 Lambda 運算式
 
-如下程式碼片段所示，您可以立即呼叫 Lambda 運算式。 第二個程式碼片段示範如何將 lambda 當做引數傳遞至 c + + 標準程式庫演算法，例如`find_if`。
+如下程式碼片段所示，您可以立即呼叫 Lambda 運算式。 第二個程式碼片段示範如何將 lambda 傳遞做為引數C++這類的標準程式庫演算法`find_if`。
 
 ### <a name="example-1"></a>範例 1
 
@@ -122,7 +122,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 9
@@ -167,7 +167,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 The first even number in the list is 42.
@@ -175,7 +175,7 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊`find_if`函式，請參閱 < [find_if](../standard-library/algorithm-functions.md#find_if)。 如需執行公用演算法之 c + + 標準程式庫函式的詳細資訊，請參閱[\<演算法 >](../standard-library/algorithm.md)。
+如需詳細資訊`find_if`函式，請參閱 < [find_if](../standard-library/algorithm-functions.md#find_if)。 如需詳細資訊C++標準程式庫函式可執行常見的演算法，請參閱[\<演算法 >](../standard-library/algorithm.md)。
 
 [[本文內容](#top)]
 
@@ -205,7 +205,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 13
@@ -221,7 +221,7 @@ int main()
 
 ### <a name="example"></a>範例
 
-許多程式設計語言支援的概念*較高順序函式。* 高階函式是以另一個 Lambda 運算式為其引數或傳回 Lambda 運算式的 Lambda 運算式。 您可以使用[函式](../standard-library/function-class.md)類別，讓 c + + lambda 運算式的行為像是較高順序函式。 下列範例說明傳回 `function` 物件的 Lambd 運算式，以及使用 `function` 物件做為其引數的 Lambda 運算式。
+許多程式設計語言支援的概念*較高順序函式。* 高階函式是以另一個 Lambda 運算式為其引數或傳回 Lambda 運算式的 Lambda 運算式。 您可以使用[函式](../standard-library/function-class.md)類別，讓C++等較高順序函式行為的 lambda 運算式。 下列範例說明傳回 `function` 物件的 Lambd 運算式，以及使用 `function` 物件做為其引數的 Lambda 運算式。
 
 ### <a name="code"></a>程式碼
 
@@ -258,7 +258,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 30
@@ -271,7 +271,7 @@ int main()
 ### <a name="example"></a>範例
 
 您可以在函式的主體中使用 Lambda 運算式。 Lambda 運算式可以存取封入函式能夠存取的任何函式或資料成員。 您可以明確或隱含擷取**這**指標，以便提供封入類別的函式和資料成員的存取。
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)): 擷取**這**的值 (`[*this]`) 時將非同步或平行作業中使用 lambda在程式碼可能會執行之後的原始物件會超出範圍。
+**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):擷取**這**的值 (`[*this]`) 時 lambda 將使用中的非同步或平行作業的原始物件超出範圍的程式碼可能會執行的位置。
 
 您可以使用**這**指標明確地在函數中，如下所示：
 
@@ -344,7 +344,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 3
@@ -405,7 +405,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 34
@@ -419,7 +419,7 @@ After negate_all():
 
 ### <a name="remarks"></a>備註
 
-如需有關 c + + 範本的詳細資訊，請參閱[範本](../cpp/templates-cpp.md)。
+如需詳細資訊C++範本，請參閱[範本](../cpp/templates-cpp.md)。
 
 [[本文內容](#top)]
 
@@ -467,7 +467,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Caught 'invalid vector<T> subscript'.
@@ -479,7 +479,7 @@ Caught 'invalid vector<T> subscript'.
 
 [[本文內容](#top)]
 
-##  <a name="managedLambdaExpressions"></a> 使用 Lambda 運算式與 Managed 類型 (C + + /cli CLI)
+##  <a name="managedLambdaExpressions"></a> 使用 Lambda 運算式與 Managed 類型 (C++/CLI)
 
 ### <a name="example"></a>範例
 
@@ -504,7 +504,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Hello!

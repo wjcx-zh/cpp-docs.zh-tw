@@ -87,11 +87,11 @@ helpviewer_keywords:
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
 ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391162"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -777,7 +777,7 @@ virtual BOOL ShowPane(
 [in]TRUE 表示指定的窗格是顯示;如果為 false，則指定要隱藏窗格。
 
 *bDelay*<br/>
-[in]若要指定，版面配置 窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。
+[in]若要指定，版面配置窗格應該會延遲到之後會顯示該窗格;，則為 TRUE否則為 FALSE。
 
 *bActivate*<br/>
 [in]未使用此參數。

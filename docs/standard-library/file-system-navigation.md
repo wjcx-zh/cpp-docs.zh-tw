@@ -3,15 +3,15 @@ title: 檔案系統巡覽
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
 ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405192"
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 
-\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 比方說，這表示`is_fifo(const path&)`一律會傳回**false**在 Windows 上。
+\<Filesystem > 標頭會實作C++檔案系統技術規格 ISO/IEC TS 18822:2015 (草稿最終版：[ISO/IEC JTC 1/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) 且具有類型和函數可讓您撰寫平台獨立程式碼瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 比方說，這表示`is_fifo(const path&)`一律會傳回**false**在 Windows 上。
 
 ## <a name="overview"></a>總覽
 

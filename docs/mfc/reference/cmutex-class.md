@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
 ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373631"
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 
@@ -74,8 +74,7 @@ CMutex(
 指定如果執行緒建立`CMutex`物件一開始會有由 mutex 控制資源的存取權。
 
 *lpszName*<br/>
-
-  `CMutex` 物件的名稱。 另一個具有相同名稱的 mutex 已存在，如果*lpszName*必須提供，如果該物件會使用跨處理序界限。 如果**NULL**，mutex 會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件，都不是 mutex，建構將會失敗。
+`CMutex` 物件的名稱。 另一個具有相同名稱的 mutex 已存在，如果*lpszName*必須提供，如果該物件會使用跨處理序界限。 如果**NULL**，mutex 會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件，都不是 mutex，建構將會失敗。
 
 *lpsaAttribute*<br/>
 Mutex 物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。

@@ -71,11 +71,11 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371512"
 ---
 # <a name="numericlimits-class"></a>numeric_limits 類別
 
@@ -156,7 +156,7 @@ static constexpr Type denorm_min() throw();
 
 ### <a name="remarks"></a>備註
 
-**長雙精度**等同**double** c + + 編譯器。
+**長雙精度**等同**double**的C++編譯器。
 
 函式會傳回型別，也就是相同的最小值為[最小](#min)如果[has_denorm](#has_denorm)是否不等於`denorm_present`。
 

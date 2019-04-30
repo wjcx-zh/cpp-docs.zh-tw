@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370836"
 ---
 # <a name="output-file-stream-member-functions"></a>輸出檔資料流成員函式
 
@@ -109,7 +109,7 @@ int main( )
 |[good](basic-ios-class.md#good)|如果沒有任何錯誤狀況 (無論是否可復原) 且未設定檔案結尾旗標，則會傳回 **true**。|
 |[eof](basic-ios-class.md#eof)|針對檔案結尾條件傳回 **true**。|
 |[clear](basic-ios-class.md#clear)|設定內部錯誤狀態。 如果使用預設引數呼叫，它會清除所有錯誤位元。|
-|[rdstate](basic-ios-class.md #rdstate|傳回目前的錯誤狀態。|
+|[rdstate](basic-ios-class.md#rdstate|傳回目前的錯誤狀態。|
 
 **!** 運算子會多載以執行相同的功能`fail`函式。 因此運算式︰
 

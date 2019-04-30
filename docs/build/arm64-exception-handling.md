@@ -2,11 +2,11 @@
 title: ARM64 例外狀況處理
 ms.date: 11/19/2018
 ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59534119"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342303"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -357,7 +357,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 屬於類別 1、 2 （不含連出的 [參數] 區域）、 3 和 4 在上一節中的標準初構可以封裝的回溯格式來表示。  終如標準函式，請遵循類似的表單，除非**H**沒有任何作用，`set_fp`省略指令，而且在終解相反的順序的步驟，以及在每個步驟的指示。 封裝的 xdata 的演算法會遵循下列步驟下, 表所述：
 
-步驟 0:執行預先計算的每個區域的大小。
+步驟 0：執行預先計算的每個區域的大小。
 
 步驟 1：儲存 Int 被呼叫端儲存的暫存器。
 

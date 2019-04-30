@@ -41,16 +41,15 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294560"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344214"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet 類別
 
-
-  `CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。
+`CMFCPropertySheet` 類別支援屬性工作表，其中每個屬性頁是由頁面索引標籤、工具列按鈕、樹狀目錄控制項節點或清單項目所表示。
 
 ## <a name="syntax"></a>語法
 
@@ -93,9 +92,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 ## <a name="remarks"></a>備註
 
-
-  `CMFCPropertySheet` 類別表示屬性工作表，也稱為索引標籤對話方塊。 
-  `CMFCPropertySheet` 類別能以各種方式顯示屬性頁。
+`CMFCPropertySheet` 類別表示屬性工作表，也稱為索引標籤對話方塊。 `CMFCPropertySheet` 類別能以各種方式顯示屬性頁。
 
 請執行下列步驟，在應用程式中使用 `CMFCPropertySheet` 類別。
 

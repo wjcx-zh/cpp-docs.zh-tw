@@ -8,11 +8,11 @@ helpviewer_keywords:
 - process __declspec keyword
 ms.assetid: 60eecc2f-4eef-4567-b9db-aaed34733023
 ms.openlocfilehash: 049360dddff2b9ca2ea460b96e027e86899f1ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591733"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344987"
 ---
 # <a name="process"></a>處理序
 
@@ -24,7 +24,7 @@ ms.locfileid: "50591733"
 
 如果您想要擁有自己的全域變數的每個應用程式定義域時，使用[appdomain](../cpp/appdomain.md)。
 
-請參閱[應用程式定義域和 Visual c + +](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。
+請參閱[應用程式定義域和視覺效果C++](../dotnet/application-domains-and-visual-cpp.md)如需詳細資訊。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
 ms.openlocfilehash: f4aa8b1be7cd9ad32b10f12c5d1dfd3ae86adc1d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820282"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341784"
 ---
 # <a name="kinds-of-dlls"></a>DLL 的類型
 
@@ -19,9 +19,9 @@ ms.locfileid: "57820282"
 
 ##  <a name="_core_the_different_kinds_of_dlls_available_with_visual_c.2b2b"></a> 不同類型的 Dll 可用
 
-您可以使用 Visual c + +，建置以 C 或 c + + 的 Win32 Dll 不是使用 Microsoft Foundation Class (MFC) 程式庫。 您可以使用 Win32 應用程式精靈 建立非 MFC DLL 專案。
+使用視覺效果C++，您可以建置在 C 中的 Win32 Dll 或C++不使用 Microsoft Foundation Class (MFC) 程式庫。 您可以使用 Win32 應用程式精靈 建立非 MFC DLL 專案。
 
-其中一個靜態連結程式庫中或在 Dll、 MFC DLL 精靈具有許多可用，MFC 程式庫本身。 如果您的 DLL 使用 MFC，Visual c + + 支援三種不同的 DLL 開發案例：
+其中一個靜態連結程式庫中或在 Dll、 MFC DLL 精靈具有許多可用，MFC 程式庫本身。 如果您的 DLL 使用 MFC，視覺效果C++支援三種不同的 DLL 開發案例：
 
 - 建置一般 MFC DLL 會以靜態方式連結至 MFC
 
@@ -43,7 +43,7 @@ ms.locfileid: "57820282"
 
 ##  <a name="_core_which_kind_of_dll_to_use"></a> 決定要使用的 DLL 的種類
 
-如果您的 DLL 不使用 MFC，使用 Visual c + + 建置非 MFC Win32 DLL。 將您的 DLL 連結至 MFC （靜態或動態） 會佔用大量的磁碟空間和記憶體。 除非您的 DLL 實際上是使用 MFC，您不應該連結至 MFC。
+如果您的 DLL 不使用 MFC，使用 視覺效果C++來建置非 MFC Win32 DLL。 將您的 DLL 連結至 MFC （靜態或動態） 會佔用大量的磁碟空間和記憶體。 除非您的 DLL 實際上是使用 MFC，您不應該連結至 MFC。
 
 如果您的 DLL 會使用 MFC，而且會由 MFC 或非 MFC 應用程式，您必須建置動態連結至 MFC 之標準 MFC DLL 或靜態連結至 MFC 之標準 MFC DLL。 在大部分情況下，您可能想要使用動態連結至 MFC，因為 DLL 的檔案大小會小很多，而且在使用 MFC 的共用的版本的記憶體中的節省金額可能會顯著的標準 MFC DLL。 如果您以靜態方式連結至 MFC，您的 DLL 的檔案大小會大很多，並可能佔用額外的記憶體，因為它會載入自己的 MFC 程式庫程式碼的私用複本。
 
@@ -55,7 +55,7 @@ ms.locfileid: "57820282"
 
 如果您的 DLL 動態連結至 MFC，可能會與您的 DLL 轉散發 MFC Dll。 此架構是特別適用於共用類別庫，以節省磁碟空間和記憶體使用量降到最低的多個可執行檔之間。
 
-之前的版本 4.0，Visual c + + 只支援兩種使用 MFC 的 Dll:Usrdll 和 Afxdll。 靜態連結至 MFC 的標準 MFC Dll 有相同的特性，與之前的 usrdll。 MFC 擴充 Dll 有相同的特性，與之前的 Afxdll。
+版本 4.0 視覺效果之前的C++僅支援兩種使用 MFC 的 Dll:Usrdll 和 Afxdll。 靜態連結至 MFC 的標準 MFC Dll 有相同的特性，與之前的 usrdll。 MFC 擴充 Dll 有相同的特性，與之前的 Afxdll。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 

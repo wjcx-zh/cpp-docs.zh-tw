@@ -1,19 +1,19 @@
 ---
-title: 如何： 定義移動建構函式和移動指派運算子 （c + +）
+title: HOW TO：定義移動建構函式和移動指派運算子 (C++)
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
 ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504516"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345020"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動建構函式和移動指派運算子 (C++)
 
-本主題說明如何撰寫*移動建構函式*和 c + + 類別的移動指派運算子。 移動建構函式可讓要移至左值，而不複製右值物件所擁有的資源。 如需有關移動語意的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
+本主題說明如何撰寫*移動建構函式*和移動指派運算子C++類別。 移動建構函式可讓要移至左值，而不複製右值物件所擁有的資源。 如需有關移動語意的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 這個主題是以下列管理記憶體緩衝區的 C++ 類別 `MemoryBlock` 為基礎。
 
@@ -312,4 +312,4 @@ MemoryBlock(MemoryBlock&& other)
 ## <a name="see-also"></a>另請參閱
 
 [右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std:: move](../standard-library/utility-functions.md#move)
+[std::move](../standard-library/utility-functions.md#move)

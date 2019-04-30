@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3673
 ms.assetid: bb6d2079-05af-4e2c-be0e-75c892e6c590
 ms.openlocfilehash: 9fd6920956d6a48ec7e1f15bf54ea8d75bad4aa5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585480"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345428"
 ---
 # <a name="compiler-error-c3673"></a>編譯器錯誤 C3673
 
 'type': 類別沒有複製建構函式
 
-使用者定義的建構函式需要複製 CLR 參考類型的物件。 如需詳細資訊，請參閱 <<c0> [ 參考類型的 c + + 堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+使用者定義的建構函式需要複製 CLR 參考類型的物件。 如需詳細資訊，請參閱 < [ C++的參考型別堆疊語意](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>範例
 

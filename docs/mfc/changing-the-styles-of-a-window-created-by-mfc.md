@@ -22,11 +22,11 @@ helpviewer_keywords:
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
 ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767232"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344197"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>變更 MFC 所建立之視窗的樣式
 
@@ -56,7 +56,7 @@ ms.locfileid: "58767232"
 
 ##  <a name="_core_the_sdi_case"></a> SDI 案例
 
-在單一文件介面 (SDI) 應用程式中，framework 中的預設視窗樣式會組成**WS_OVERLAPPEDWINDOW**並**FWS_ADDTOTITLE**樣式。 **FWS_ADDTOTITLE**是指示架構以新增該視窗的標題的文件標題的 MFC 特定樣式。 若要變更在 SDI 應用程式視窗的屬性，覆寫`PreCreateWindow`函式，在您的類別衍生自`CFrameWnd`(其中的應用程式精靈名稱`CMainFrame`)。 例如：
+在單一文件介面 (SDI) 應用程式中，framework 中的預設視窗樣式會組成**WS_OVERLAPPEDWINDOW**並**FWS_ADDTOTITLE**樣式。 **FWS_ADDTOTITLE**是指示架構以新增該視窗的標題的文件標題的 MFC 特定樣式。 若要變更在 SDI 應用程式視窗的屬性，覆寫`PreCreateWindow`函式，在您的類別衍生自`CFrameWnd`(其中的應用程式精靈名稱`CMainFrame`)。 例如: 
 
 [!code-cpp[NVC_MFCDocViewSDI#11](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_2.cpp)]
 

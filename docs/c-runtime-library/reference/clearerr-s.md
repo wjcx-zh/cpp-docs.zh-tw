@@ -24,11 +24,11 @@ helpviewer_keywords:
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
 ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329876"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342936"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -44,7 +44,7 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>參數
 
-*資料流*<br/>
+*stream*<br/>
 指標**檔案**結構
 
 ## <a name="return-value"></a>傳回值
@@ -113,7 +113,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Write error: Bad file descriptor

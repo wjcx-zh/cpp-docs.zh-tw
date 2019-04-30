@@ -12,11 +12,11 @@ helpviewer_keywords:
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
 ms.openlocfilehash: 90f63a972245114424b64d4131420dcb4e1e925a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809791"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342916"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (處理文件註解) (C/C++)
 
@@ -41,9 +41,9 @@ ms.locfileid: "57809791"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性** > **C/c + +** > **輸出檔**屬性頁。
+1. 選取 **組態屬性** > **C /C++** > **輸出檔**屬性頁。
 
 1. 修改**產生的 XML 文件檔**屬性。
 
@@ -54,4 +54,4 @@ ms.locfileid: "57809791"
 ## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

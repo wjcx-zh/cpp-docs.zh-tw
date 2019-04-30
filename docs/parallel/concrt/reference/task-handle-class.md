@@ -9,11 +9,11 @@ helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
 ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565096"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346161"
 ---
 # <a name="taskhandle-class"></a>task_handle 類別
 
@@ -54,7 +54,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 請注意，建立者`task_handle`物件會負責維護所建立的存留期`task_handle`物件，直到它不再需要之並行執行階段。 通常，這表示`task_handle`物件必須未解構直到`wait`或`run_and_wait`方法`task_group`或`structured_task_group`呼叫的佇列。
 
-`task_handle` 物件通常用於搭配使用 c + + lambda。 因為您不知道的 lambda，則為 true 的型別[make_task](concurrency-namespace-functions.md#make_task)函式通常用來建立`task_handle`物件。
+`task_handle` 物件通常用於搭配C++lambda。 因為您不知道的 lambda，則為 true 的型別[make_task](concurrency-namespace-functions.md#make_task)函式通常用來建立`task_handle`物件。
 
 執行階段會建立一份工作函式傳遞至`task_handle`物件。 因此，函式中發生的任何狀態變更的物件，您將傳遞給`task_handle`物件不會出現在您的函式物件的複本。
 

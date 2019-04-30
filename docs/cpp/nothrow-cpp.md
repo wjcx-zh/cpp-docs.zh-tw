@@ -8,11 +8,11 @@ helpviewer_keywords:
 - nothrow __declspec keyword
 ms.assetid: 0a475139-459c-4ec6-99e8-7ecd0d7f44a3
 ms.openlocfilehash: 88041b374cc48ac31c8990aa7f867ba25b33e1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548131"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345874"
 ---
 # <a name="nothrow-c"></a>nothrow (C++)
 
@@ -22,7 +22,7 @@ A **__declspec**可用的函式宣告中的擴充的屬性。
 
 ## <a name="syntax"></a>語法
 
-> *傳回型別*__declspec （nothrow) [*呼叫慣例*]*函式名稱*([*引數清單*])
+> *return-type* __declspec(nothrow) [*call-convention*] *function-name* ([*argument-list*])
 
 ## <a name="remarks"></a>備註
 
@@ -42,7 +42,7 @@ void __stdcall f3() throw();
 
 在 **/std: c + + 17**模式中，`throw()`不等同於使用其他`__declspec(nothrow)`因為這會導致`std::terminate`從函式擲回的例外狀況時要叫用。
 
-`void __stdcall f3() throw();`宣告會使用 c + + 標準所定義的語法。 在 C + + 17`throw()`關鍵字已被取代。
+`void __stdcall f3() throw();`宣告會使用所定義的語法C++標準。 在 C + + 17`throw()`關鍵字已被取代。
 
 **結束 Microsoft 專屬**
 

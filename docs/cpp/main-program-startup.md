@@ -13,15 +13,15 @@ helpviewer_keywords:
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
 ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894298"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345043"
 ---
 # <a name="main-program-startup"></a>主要：程式啟動
 
-名為的特殊函式**主要**是執行所有的 C 和 c + + 程式的起點。 如果您是撰寫的程式碼遵守 Unicode 程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。
+名為的特殊函式**主要**是執行所有 C 的起點和C++程式。 如果您是撰寫的程式碼遵守 Unicode 程式設計模型，您可以使用`wmain`，這是寬字元版本**主要**。
 
 **主要**函式不會預先定義的編譯器。 必須在程式文字中提供這個函式。
 

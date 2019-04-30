@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CListCtrl class [MFC], callback item and callback mask
 ms.assetid: 67c1f76f-6144-453e-9376-6712f89430ae
 ms.openlocfilehash: 35967f128c6cc59bc9cea90da559b32c51fb38d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261072"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344286"
 ---
 # <a name="callback-items-and-the-callback-mask"></a>回呼項目和回呼遮罩
 

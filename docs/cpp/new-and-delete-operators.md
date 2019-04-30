@@ -10,19 +10,19 @@ helpviewer_keywords:
 - delete keyword [C++], syntax
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
 ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441297"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345887"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
-C + + 支援動態配置和解除配置的物件使用[新](../cpp/new-operator-cpp.md)並[刪除](../cpp/delete-operator-cpp.md)運算子。 這些運算子會從稱為可用儲存區的集區配置物件的記憶體。 **新**運算子會呼叫特殊函式[new 運算子](../cpp/new-operator-cpp.md)，而**刪除**運算子會呼叫特殊函式[運算子 delete](../cpp/delete-operator-cpp.md).
+C++支援動態配置和解除配置的物件使用[新](../cpp/new-operator-cpp.md)並[刪除](../cpp/delete-operator-cpp.md)運算子。 這些運算子會從稱為可用儲存區的集區配置物件的記憶體。 **新**運算子會呼叫特殊函式[new 運算子](../cpp/new-operator-cpp.md)，而**刪除**運算子會呼叫特殊函式[運算子 delete](../cpp/delete-operator-cpp.md).
 
-**新**c + + 標準程式庫中的函式支援 c + + 標準，也就是如果記憶體配置失敗，會擲回 std:: bad_alloc 例外狀況中所指定的行為。 如果您仍然希望非擲回版本**新**，連結您的程式與 nothrownew.obj 連結。不過，當您連結 nothrownew.obj 時，預設值**new 運算子**c + + 標準程式庫中無法再運作。
+**新**函式在C++標準程式庫支援在指定的行為C++標準，它會擲回 std:: bad_alloc 例外狀況，如果記憶體配置失敗。 如果您仍然希望非擲回版本**新**，連結您的程式與 nothrownew.obj 連結。不過，當您連結 nothrownew.obj 時，預設值**new 運算子**在C++標準程式庫無法再運作。
 
-如需包含 C 執行階段程式庫和 c + + 標準程式庫的程式庫檔案的清單，請參閱 < [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
+如需組成 C 執行階段程式庫的程式庫檔案的清單和C++標準程式庫，請參閱[CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
 
 ##  <a id="new_operator"> </a> New 運算子
 
@@ -85,9 +85,9 @@ int main()
 Blanks *SomeBlanks = new Blanks;
 ```
 
-在 Visual c + + 5.0 和以前版本中，非類別類型和所有陣列 (無論是否**類別**類型) 使用配置**新**運算子一律使用全域**new 運算子**函式。
+在視覺效果C++5.0 和以前版本中，非類別類型和所有陣列 (無論是否**類別**類型) 使用配置**新**運算子一律使用全域**new 運算子**函式。
 
-從 Visual c + + 5.0 開始，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
+從視覺效果C++5.0 版，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如：
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +203,7 @@ int main( int argc, char *argv[] ) {
 
 上述程式碼可用來偵測「記憶體流失」，即是在可用存放區中配置但從未釋放的記憶體。 若要執行此偵測中，全域**新**並**刪除**計數配置和解除配置的記憶體來重新定義運算子。
 
-從 Visual c + + 5.0 開始，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
+從視覺效果C++5.0 版，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

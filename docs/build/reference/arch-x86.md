@@ -3,11 +3,11 @@ title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
 ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812248"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341052"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
@@ -66,9 +66,9 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>在 Visual Studio 中設定 AVX、AVX2、IA32、SSE 或 SSE2 的這個編譯器選項
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Studio 中的設定 c + + 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
 
-1. 選取 **組態屬性**， **C/c + +** 資料夾。
+1. 選取 **組態屬性**， **C /C++** 資料夾。
 
 1. 選取 **程式碼產生**屬性頁。
 
@@ -82,4 +82,4 @@ r = t + d;     // This should produce the same overall result
 
 [/arch (最小 CPU 架構)](arch-minimum-cpu-architecture.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器的命令列語法](compiler-command-line-syntax.md)
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

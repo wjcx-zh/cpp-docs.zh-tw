@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533818"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342979"
 ---
 # <a name="directoryentry-class"></a>directory_entry 類別
 
@@ -107,10 +107,10 @@ void assign(const std::experimental::filesystem::path& pval,
 *pval*<br/>
 儲存的檔案名稱路徑。
 
-*取代 mystat*<br/>
+*stat_arg*<br/>
 預存的檔案名稱的狀態。
 
-*取代 mysymstat*<br/>
+*symstat_arg*<br/>
 儲存的檔案名稱符號連結狀態。
 
 ## <a name="directory_entry"></a> directory_entry
@@ -131,10 +131,10 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 *pval*<br/>
 儲存的檔案名稱路徑。
 
-*取代 mystat*<br/>
+*stat_arg*<br/>
 預存的檔案名稱的狀態。
 
-*取代 mysymstat*<br/>
+*symstat_arg*<br/>
 儲存的檔案名稱符號連結狀態。
 
 ## <a name="op_neq"></a> 運算子 ！ =
@@ -237,7 +237,7 @@ bool operator&gt;=(const directory_entry& right) const noexcept;
 operator const std::experimental::filesystem::path&() const;
 ```
 
-## <a name="path"></a> 路徑
+## <a name="path"></a> path
 
 成員函式會傳回 `mypath`。
 
@@ -261,10 +261,10 @@ void replace_filename(
 *pval*<br/>
 儲存的檔案名稱路徑。
 
-*取代 mystat*<br/>
+*stat_arg*<br/>
 預存的檔案名稱的狀態。
 
-*取代 mysymstat*<br/>
+*symstat_arg*<br/>
 儲存的檔案名稱符號連結狀態。
 
 ## <a name="status"></a> 狀態
@@ -287,7 +287,7 @@ file_status status(error_code& ec) const noexcept;
 
 ## <a name="symlink_status"></a> symlink_status
 
-這兩個成員函式會傳回`mysymstat`第一個可能修改，如下所示： 如果`status_known(mysymstat)`不執行任何動作。 否則為 `mysymstat = symlink_status(mypval)`。
+這兩個成員函式會傳回`mysymstat`第一個可能修改，如下所示：如果`status_known(mysymstat)`不執行任何動作。 否則為 `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;

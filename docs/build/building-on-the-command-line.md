@@ -1,6 +1,6 @@
 ---
 title: 使用 MSVC 工具組，從命令列-Visual Studio
-description: 使用 Microsoft c + + 編譯器工具鏈 (MSVC) 從 Visual Studio IDE 外部命令列。
+description: 使用 MicrosoftC++從 Visual Studio IDE 外部命令列編譯器工具鏈 (MSVC)。
 ms.custom: conceptual
 ms.date: 12/10/2018
 helpviewer_keywords:
@@ -11,21 +11,21 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812118"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342160"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>使用 MSVC 工具組，從命令列
 
-您可以使用隨附於 Visual Studio 的工具來建置 C 和 c + + 命令列上的應用程式。 您也可以下載編譯器工具組，作為從獨立封裝[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+您可以建置 C 和C++使用 Visual Studio 中包含的工具在命令列上的應用程式。 您也可以下載編譯器工具組，作為從獨立封裝[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令列工具
 
-當您選擇的 c + + 工作負載的其中一個 Visual Studio 安裝程式時，它會安裝 Visual Studio*平台工具組*。 平台工具組都有特定的 Visual Studio 版本，包括 C/c + + 編譯器、 連結器、 組譯工具和其他建置工具，以及相符的程式庫的所有 C 和 c + + 工具。 您可以在命令列中，使用所有這些工具，它們也可供在內部 Visual Studio IDE。 有個別 x86 架構和 x64 架構的編譯器和工具來建置程式碼，針對 x86、 x64、 ARM 及 ARM64 目標。 適用於特定的主機和目標組建架構工具的每一組會儲存在它自己的目錄。
+當您選擇的其中一個C++工作負載在 Visual Studio 安裝程式，它會安裝 Visual Studio*平台工具組*。 平台工具組具有所有 C 和C++適用於特定的 Visual Studio 版本，包括 C 工具 /C++編譯器、 連結器、 組譯工具和其他建置工具，以及相符的程式庫。 您可以在命令列中，使用所有這些工具，它們也可供在內部 Visual Studio IDE。 有個別 x86 架構和 x64 架構的編譯器和工具來建置程式碼，針對 x86、 x64、 ARM 及 ARM64 目標。 適用於特定的主機和目標組建架構工具的每一組會儲存在它自己的目錄。
 
-已安裝的編譯器工具組，取決於您電腦的處理器以及在安裝期間選取的選項。 最小值，會安裝 32 位元 x86 架構工具，建置 32 位元 x86 原生程式碼和跨建置 64 位元 x64 原生程式碼的工具。 如果您有 64 位元 Windows，也會安裝 64 位元裝載 x64 的工具，建置 64 位元原生程式碼，並跨建置 32 位元原生程式碼的工具。 如果您選擇安裝選用性的 c + + 通用 Windows 平台工具，然後也會安裝 32 位元和 64 位元原生工具建置的 ARM 程式碼。 其他工作負載可能會安裝其他工具。
+已安裝的編譯器工具組，取決於您電腦的處理器以及在安裝期間選取的選項。 最小值，會安裝 32 位元 x86 架構工具，建置 32 位元 x86 原生程式碼和跨建置 64 位元 x64 原生程式碼的工具。 如果您有 64 位元 Windows，也會安裝 64 位元裝載 x64 的工具，建置 64 位元原生程式碼，並跨建置 32 位元原生程式碼的工具。 如果您選擇安裝選擇性的C++也會安裝通用 Windows 平台工具，然後的 32 位元和 64 位元原生工具建置的 ARM 程式碼。 其他工作負載可能會安裝其他工具。
 
 ## <a name="environment-variables-and-developer-command-prompts"></a>環境變數和開發人員命令提示字元
 
@@ -132,7 +132,7 @@ ms.locfileid: "57812118"
 
 ## <a name="command-line-tools"></a>命令列工具
 
-若要在命令列上建置 C/c + + 專案，Visual Studio 會提供這些命令列工具：
+若要建置 C /C++命令列 Visual Studio 的專案會提供這些命令列工具：
 
 [CL](reference/compiling-a-c-cpp-program.md)<br/>
 使用編譯器 (cl.exe)，來編譯原始程式碼檔，並將其連結至應用程式、程式庫及 DLL。
@@ -147,7 +147,7 @@ ms.locfileid: "57812118"
 使用 DEVENV (devenv.exe) 結合命令列切換 — 比方說， **/組建**或 **/清除**— 若要執行特定建置而不會顯示在 Visual Studio IDE 命令。 通常這是慣用使用 MSBuild，直接因為您可以讓 Visual Studio 會處理 MSBuild 的複雜性。
 
 [NMAKE](reference/nmake-reference.md)<br/>
-在 Windows 上使用 NMAKE (nmake.exe)，來建置傳統 makefile 為基礎的 c + + 專案。
+在 Windows 上使用 NMAKE (nmake.exe)，來建置C++傳統 makefile 為基礎的專案。
 
 當您建置命令列上時，F1 命令不適用於立即協助。 相反地，您可以使用搜尋引擎，若要取得警告、 錯誤和訊息的相關資訊，或者您可以使用離線說明檔案。 若要使用搜尋 中的[docs.microsoft.com](https://docs.microsoft.com/cpp/)，在頁面頂端的 [搜尋] 方塊中輸入搜尋字串。
 
@@ -158,7 +158,7 @@ ms.locfileid: "57812118"
 [逐步解說：在命令列編譯原生 C++ 程式](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 提供範例，顯示如何在命令列上建立及編譯簡單的 C++ 程式。
 
-[逐步解說：編譯 C 程式中，在命令列上](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[逐步解說：在命令列編譯 C 程式](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 描述如何編譯以 C 程式設計語言撰寫的程式。
 
 [逐步解說：在命令列編譯 C++/CLI 程式](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
@@ -173,7 +173,7 @@ ms.locfileid: "57812118"
 [NMAKE 參考](reference/nmake-reference.md)<br/>
 提供指向描述 Microsoft Program Maintenance Utility (NMAKE.EXE) 之文章的連結。
 
-[MSBuild 命令列-c + +](msbuild-visual-cpp.md)<br/>
+[MSBuild 命令列-C++](msbuild-visual-cpp.md)<br/>
 提供討論如何使用 msbuild.exe 從命令列的文章連結。
 
 ## <a name="related-sections"></a>相關章節
@@ -181,15 +181,15 @@ ms.locfileid: "57812118"
 [/MD、/MT、/LD (使用執行階段程式庫)](reference/md-mt-ld-use-run-time-library.md)<br/>
 描述如何使用這些編譯器選項，來使用偵錯或發行執行階段程式庫。
 
-[C/c + + 編譯器選項](reference/compiler-options.md)<br/>
+[C /C++編譯器選項](reference/compiler-options.md)<br/>
 提供指向討論 C 及 C++ 編譯器選項及 CL.exe 之文章的連結。
 
 [MSVC 連結器選項](reference/linker-options.md)<br/>
 提供指向討論連結器選項及 LINK.exe 之文章的連結。
 
 [其他 MSVC 建置工具](reference/c-cpp-build-tools.md)<br/>
-提供連結至 C/c + + 建置工具隨附於 Visual Studio。
+提供連結到 C /C++建置工具隨附於 Visual Studio。
 
 ## <a name="see-also"></a>另請參閱
 
-[專案和組建系統](projects-and-build-systems-cpp.md)
+[專案和建置系統](projects-and-build-systems-cpp.md)

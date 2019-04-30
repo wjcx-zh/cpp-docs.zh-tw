@@ -3,11 +3,11 @@ title: 相依類型的名稱解析
 ms.date: 11/04/2016
 ms.assetid: 34066bb4-0c79-4fd8-bda7-539a60a277ab
 ms.openlocfilehash: 04db4b0efc5e58dbd3de6fc9979c3a3cdd44d84e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563146"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345929"
 ---
 # <a name="name-resolution-for-dependent-types"></a>相依類型的名稱解析
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>輸出
+### <a name="output"></a>Output
 
 ```Output
 Int MyNamespace::myFunction
@@ -90,7 +90,7 @@ Int MyNamespace::myFunction
 
 ### <a name="template-disambiguation"></a>樣板去除混淆
 
-Visual Studio 2012 會強制執行 C + + 98/03/11 標準規則，以便使用 「 範本 」 關鍵字的去除混淆。 在下列範例中，Visual c + + 2010年會接受不合格的行和相符的程式碼行。  Visual Studio 2012 接受只有相符的程式碼行。
+Visual Studio 2012 會強制執行 C + + 98/03/11 標準規則，以便使用 「 範本 」 關鍵字的去除混淆。 在下列範例中，視覺效果C++2010年會接受不合格的行和相符的程式碼行。  Visual Studio 2012 接受只有相符的程式碼行。
 
 ```cpp
 #include <iostream>

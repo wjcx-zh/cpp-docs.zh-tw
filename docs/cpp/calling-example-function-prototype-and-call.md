@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
 ms.openlocfilehash: f89f4f1917810baa585dd1661428e0809b93cca0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508172"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345115"
 ---
 # <a name="calling-example-function-prototype-and-call"></a>呼叫範例：函式原型和呼叫
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
 ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414005"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 
@@ -20,7 +20,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 如需參考文件，請參閱[參考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
->  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要進一步了解，請閱讀[歡迎回到 c + +](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+>  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要進一步了解，請閱讀[歡迎使用上一步 C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>選擇並行執行階段功能
 
@@ -98,7 +98,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 
 |||
 |-|-|
-|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，使用 c + + 和 XAML 的 Windows 執行階段應用程式。|
+|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，Windows 執行階段應用程式，使用C++和 XAML。|
 |[機器碼平行程式設計部落格](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
 |[C++ 和機器碼平行程式設計論壇](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|

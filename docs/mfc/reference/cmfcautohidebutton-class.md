@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
 ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403879"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton 類別
 
@@ -100,8 +100,7 @@ class CMFCAutoHideButton : public CObject
 
 ## <a name="remarks"></a>備註
 
-在建立後，`CMFCAutoHideButton`物件附加至[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。 
-  `CDockablePane` 物件會隨著使用者與 `CMFCAutoHideButton` 物件的互動隱藏或顯示。
+在建立後，`CMFCAutoHideButton`物件附加至[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。 `CDockablePane` 物件會隨著使用者與 `CMFCAutoHideButton` 物件的互動隱藏或顯示。
 
 根據預設，當使用者開啟自動隱藏時，架構會自動建立 `CMFCAutoHideButton`。 架構可以建立自訂 UI 類別而不是 `CMFCAutoHideButton` 類別的項目。 若要指定架構應該使用的自訂 UI 類別，請將靜態成員變數 `CMFCAutoHideBar::m_pAutoHideButtonRTS` 設定為等於自訂 UI 類別。 根據預設，此變數會設為 `CMFCAutoHideButton`。
 

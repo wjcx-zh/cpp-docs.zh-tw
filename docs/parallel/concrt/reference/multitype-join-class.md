@@ -18,16 +18,15 @@ helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
 ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409939"
 ---
 # <a name="multitypejoin-class"></a>multitype_join 類別
 
-
-  `multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。
+`multitype_join` 傳訊區塊是多來源的單一目標傳訊區塊，會與來自其來源的不同類型訊息合併，並且為其目標提供 Tuple 合併的訊息。
 
 ## <a name="syntax"></a>語法
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - restrict __declspec keyword
 ms.assetid: f39cf632-68d8-4362-a497-2d4c15693689
 ms.openlocfilehash: 40c1c05ca72f639829f2d3658497b0e9f3199640
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403369"
 ---
 # <a name="restrict"></a>restrict
 
@@ -34,7 +34,7 @@ ms.locfileid: "50431742"
 
 另一個註釋套用至出現在函式的別名，請參閱[__declspec(noalias)](../cpp/noalias.md)。
 
-如需**限制**關鍵字是 c + + AMP 的一部分，請參閱[限制 (c + + AMP)](../cpp/restrict-cpp-amp.md)。
+如需**限制**屬於的關鍵字C++p，請參閱[限制 (C++ P)](../cpp/restrict-cpp-amp.md)。
 
 ## <a name="example"></a>範例
 

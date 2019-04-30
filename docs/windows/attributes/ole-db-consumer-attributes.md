@@ -10,11 +10,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], OLE DB consumer
 ms.assetid: 017b591f-8f9a-42b4-84d5-cc42a21ab0cc
 ms.openlocfilehash: 9f89af963c9c49a8a94b2a4f0c8930ab714926e7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407558"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB 消費者屬性
 OLE DB 消費者屬性插入程式碼，根據[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-reference.md)，以建立使用 OLE DB 取用者會執行工作，例如開啟資料表，執行命令，以及存取資料。

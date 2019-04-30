@@ -5,11 +5,11 @@ helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
 ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408000"
 ---
 # <a name="scheduler-policies"></a>排程器原則
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
 ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412681"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 
@@ -28,7 +28,7 @@ ms.locfileid: "57305233"
 
 - [架構](#architecture)
 
-- [C + + Lambda 運算式](#lambda)
+- [C++Lambda 運算式](#lambda)
 
 - [需求](#requirements)
 
@@ -103,7 +103,7 @@ ms.locfileid: "57305233"
 
 [[靠上](#top)]
 
-##  <a name="lambda"></a> C + + Lambda 運算式
+##  <a name="lambda"></a> C++Lambda 運算式
 
 並行執行階段所定義的許多類型和演算法會實作為 C++ 範本。 其中有些類型和演算法需要執行工作的常式做為參數。 這個參數可以是 Lambda 函式、函式物件或函式指標。 這些實體也稱為*工作函式*或是*處理常式*。
 
@@ -123,7 +123,7 @@ Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算�
 390625
 ```
 
-如需 c + + 中的 lambda 函式的詳細資訊，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
+如需中的 lambda 函式的詳細資訊C++，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
 
 [[靠上](#top)]
 

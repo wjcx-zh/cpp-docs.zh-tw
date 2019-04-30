@@ -14,11 +14,11 @@ helpviewer_keywords:
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
 ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59039646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395634"
 ---
 # <a name="recordset-architecture-odbc"></a>資料錄集：架構 (ODBC)
 
@@ -94,5 +94,5 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 ## <a name="see-also"></a>另請參閱
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[資料錄集：宣告的類別 (ODBC) 的資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[資料錄集：宣告資料表的類別 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)

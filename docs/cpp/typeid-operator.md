@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
 ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58780882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404659"
 ---
 # <a name="typeid-operator"></a>typeid 運算子
 
@@ -36,7 +36,7 @@ typeid(expression)
 
 - 註標的指標 (也就是 [ ])。 (請注意，使用具有多型類型指標的註標通常並不安全)。
 
-如果*運算式*指向基底類別類型，但物件實際上是衍生自該基底類別，型別的`type_info`參考衍生的類別是結果。 *運算式*必須指向多型類型 （具有虛擬函式的類別）。 否則，結果就是`type_info`靜態類別中所指*運算式*。 此外，指標必須已取值，才會使用其指向的物件。 不取值的指標，結果會是`type_info`指標，不是它會指向。 例如: 
+如果*運算式*指向基底類別類型，但物件實際上是衍生自該基底類別，型別的`type_info`參考衍生的類別是結果。 *運算式*必須指向多型類型 （具有虛擬函式的類別）。 否則，結果就是`type_info`靜態類別中所指*運算式*。 此外，指標必須已取值，才會使用其指向的物件。 不取值的指標，結果會是`type_info`指標，不是它會指向。 例如：
 
 ```cpp
 // expre_typeid_Operator.cpp

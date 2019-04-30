@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413758"
 ---
 # <a name="enableif-class"></a>enable_if 類別
 
@@ -50,7 +50,7 @@ using enable_if_t = typename enable_if<B,T>::type;
 
 以下是四個範例情節：
 
-- 情節 1：包裝函式的傳回類型：
+- 案例 1:包裝函式的傳回型別：
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- 情節 2：加入具有預設引數的函式參數：
+- 案例 2:加入具有預設引數的函式參數：
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- 情節 3：加入具有預設引數的範本參數：
+- 案例 3:加入具有預設引數的範本參數：
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- 情節 4：如果您的函式具有非範本引數，則可以包裝其類型：
+- 案例 4:如果您的函式具有非範本引數，您可以包裝其類型：
 
 ```cpp
     template <typename T>

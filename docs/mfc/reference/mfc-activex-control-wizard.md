@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE controls [MFC]
 ms.assetid: f19d698c-bdc3-4c74-af97-3d6ccb441b75
 ms.openlocfilehash: cec4c3aa6aedfa7a1f8234c6cc2355970d453f56
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412761"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈
 
@@ -32,7 +32,7 @@ ActiveX 控制項可以有複雜的使用者介面。 有些控制項可能就�
 
 如果您要建立 ActiveX 物件的容器，請參閱[建立 ActiveX 控制項容器](../../mfc/reference/creating-an-mfc-activex-control-container.md)。
 
-MFC 入門版計畫包含 c + + 原始檔 (.cpp) 檔案、 資源 (.rc) 檔，以及專案 (.vcxproj) 檔案。 這些入門檔案中產生的程式碼是以 MFC 為基礎。
+MFC 入門版計畫包含C++原始檔 (.cpp) 檔案、 資源 (.rc) 檔，以及專案 (.vcxproj) 檔案。 這些入門檔案中產生的程式碼是以 MFC 為基礎。
 
 下面範例會顯示工作和 ActiveX 控制項的增強功能的類型：
 

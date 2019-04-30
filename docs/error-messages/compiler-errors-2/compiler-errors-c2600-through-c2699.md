@@ -1,6 +1,6 @@
 ---
-title: 編譯器錯誤 C2600 到 C2699
-ms.date: 11/17/2017
+title: 編譯器錯誤 C2600 至 C2699
+ms.date: 04/21/2019
 f1_keywords:
 - C2604
 - C2606
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - C2686
 - C2697
 ms.assetid: 73c6319f-cbea-4a2f-913b-90dc1af61f64
-ms.openlocfilehash: af173a04f9ae1e8a3ec4c9b3c869a4e51867cf1b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: 9ac5f5724490574aecf0e5b542f6fdd42b0ae5bb
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406505"
 ---
-# <a name="compiler-errors-c2600-through-c2699"></a>編譯器錯誤 C2600 到 C2699
+# <a name="compiler-errors-c2600-through-c2699"></a>編譯器錯誤 C2600 至 C2699
 
 文件的本節文章會說明編譯器所產生的錯誤訊息的子集。
 
@@ -72,8 +72,8 @@ ms.locfileid: "50518647"
 |[編譯器錯誤 C2600](compiler-error-c2600.md)|'*函式*': 無法定義編譯器產生的特殊成員函式 （必須先宣告類別中）|
 |[編譯器錯誤 C2601](compiler-error-c2601.md)|'*函式*': 區域函式定義不合法|
 |[編譯器錯誤 C2602](compiler-error-c2602.md)|'*類別*::*識別項*'不是基底類別的成員'*類別*'|
-|[編譯器錯誤 C2603](compiler-error-c2603.md)|'*函式*': 太多區塊範圍靜態物件以建構函式/解構函式在函式|
-|編譯器錯誤 C2604|'*識別碼*': 不能實作多個介面方法|
+|[編譯器錯誤 C2603](compiler-error-c2603.md)|'*函式*':太多區塊範圍靜態物件以建構函式/解構函式在函式|
+|編譯器錯誤 C2604|'*識別碼*':不能實作多個介面方法|
 |[編譯器錯誤 C2605](compiler-error-c2605.md)|'*識別碼*': 此方法已保留在受管理/WinRT 類別|
 |編譯器錯誤 C2606|'*class1*': 不能重新實作'*成員*'，因為它繼承自基底的執行階段'*class2*'|
 |編譯器錯誤 C2607|靜態判斷提示失敗|
@@ -168,3 +168,8 @@ ms.locfileid: "50518647"
 |[編譯器錯誤 C2696](compiler-error-c2696.md)|無法建立暫存物件的管理/WinRT 類型 '*型別*'|
 |編譯器錯誤 C2697|已過時。|
 |[編譯器錯誤 C2698](compiler-error-c2698.md)|using 宣告為 '*declaration1*' 不能同時存在與 using 宣告為'*declaration2*'|
+
+## <a name="see-also"></a>另請參閱
+
+[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[編譯器錯誤 C2000-C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

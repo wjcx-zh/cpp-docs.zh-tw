@@ -8,15 +8,15 @@ helpviewer_keywords:
 - COldToolBar class [MFC]
 ms.assetid: 3543257c-8547-43f0-a66a-ee641dc1cf89
 ms.openlocfilehash: bcfa11b2d7d7cd7426d0c75df71a4b0eb2d96ed6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411379"
 ---
 # <a name="using-your-old-toolbars"></a>使用舊的工具列
 
-如果您有使用舊版的 Visual c + + 來建立自訂的工具列，類別的新實作[CToolBar](../mfc/reference/ctoolbar-class.md)可能會導致您的問題。 因此您不必放棄舊的工具列而使用新功能，舊的實作仍然支援。
+如果您已經使用舊版視覺效果的C++來建立自訂的工具列，類別的新實作[CToolBar](../mfc/reference/ctoolbar-class.md)可能會導致您的問題。 因此您不必放棄舊的工具列而使用新功能，舊的實作仍然支援。
 
 DOCKTOOL 範例不使用舊樣式的工具列，只使用新樣式的工具列。
 

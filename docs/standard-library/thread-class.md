@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519492"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412068"
 ---
 # <a name="thread-class"></a>thread 類別
 
@@ -68,7 +68,7 @@ class thread;
 |[get_id](#get_id)|傳回相關聯執行緒的唯一識別碼。|
 |[hardware_concurrency](#hardware_concurrency)|靜態。 傳回硬體執行緒內容的估計數目。|
 |[join](#join)|封鎖，直到相關聯的執行緒完成為止。|
-|[可聯結](#joinable)|指定是否可加入相關聯的執行緒。|
+|[joinable](#joinable)|指定是否可加入相關聯的執行緒。|
 |[native_handle](#native_handle)|傳回代表執行緒控制代碼的實作特定類型。|
 |[swap](#swap)|交換物件狀態與指定**執行緒**物件。|
 
@@ -84,7 +84,7 @@ class thread;
 
 **命名空間：** std
 
-## <a name="detach"></a>  thread:: detach
+## <a name="detach"></a>  thread::detach
 
 中斷連結相關聯的執行緒。 作業系統會變成負責在終止時釋放執行緒資源。
 
@@ -152,7 +152,7 @@ void join();
 
 如果呼叫成功，針對呼叫物件後續呼叫 [get_id](#get_id) 就會傳回預設的 [thread:: id](#id_class)，而其不會比較是否等於任何現有執行緒的 `thread::id`；如果呼叫失敗，則 `get_id` 所傳回的值就會保持不變。
 
-## <a name="joinable"></a>  thread:: joinable
+## <a name="joinable"></a>  thread::joinable
 
 指定是否「可加入」相關聯的執行緒。
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 如果 `get_id() != id()`，執行緒物件就是「可加入」。
 
-## <a name="native_handle"></a>  thread:: native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 傳回代表執行緒控制代碼的實作特定類型。 您可以利用實作特定的方式來使用執行緒控制代碼。
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CTreeCtrl class [MFC], item information
 ms.assetid: 8dcab855-27de-49e9-95d8-f78ba963ea71
 ms.openlocfilehash: e0eb8af4fbbb6f59c0dda75ec3705183ce916350
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407857"
 ---
 # <a name="tree-control-item-information"></a>樹狀目錄控制項目資訊
 

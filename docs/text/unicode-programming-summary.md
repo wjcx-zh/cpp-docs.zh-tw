@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Unicode [C++], MFC and C run-time functions
 ms.assetid: a4c9770f-6c9c-447c-996b-980920288bed
 ms.openlocfilehash: 130c9027a882de2aae7fb339e4761b0cc81b3a6a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410508"
 ---
 # <a name="unicode-programming-summary"></a>Unicode 程式設計摘要
 
@@ -32,7 +32,7 @@ ms.locfileid: "57747952"
 
 - 正確地處理常值字串。
 
-   Visual c + + 編譯器會解譯為自動程式化的常值字串：
+   視覺效果C++編譯器會解譯為自動程式化的常值字串：
 
     ```cpp
     L"this is a literal string"

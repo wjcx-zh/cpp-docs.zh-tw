@@ -1,5 +1,5 @@
 ---
-title: TN058：MFC 模組狀態實作
+title: TN058:MFC 模組狀態實作
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.implementation
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - process state [MFC]
 ms.assetid: 72f5b36f-b3da-4009-a144-24258dcd2b2f
 ms.openlocfilehash: db34f528e70a7dcc437836684656b3ce8a4078fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399591"
 ---
-# <a name="tn058-mfc-module-state-implementation"></a>TN058：MFC 模組狀態實作
+# <a name="tn058-mfc-module-state-implementation"></a>TN058:MFC 模組狀態實作
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
@@ -30,7 +30,7 @@ ms.locfileid: "50626040"
 
 ## <a name="overview"></a>總覽
 
-有三種類型的 MFC 狀態資訊： 模組狀態、 處理序狀態和執行緒的狀態。 有時可以結合這些狀態類型。 例如，MFC 的處理常式對應是本機的模組和執行緒區域。 這可讓兩個不同的模組可以有不同的對應中的每個其執行緒。
+有三種類型的 MFC 狀態資訊：模組狀態、 處理序狀態和執行緒的狀態。 有時可以結合這些狀態類型。 例如，MFC 的處理常式對應是本機的模組和執行緒區域。 這可讓兩個不同的模組可以有不同的對應中的每個其執行緒。
 
 處理序狀態和執行緒狀態很類似。 這些資料項目會向來全域變數，但有專屬於特定的處理序或執行緒支援適當的 win32 或適當的多執行緒支援需要的項目。 指定的資料項目可放入哪個類別取決於這個項目和其所需的語意，關於處理序和執行緒界限。
 

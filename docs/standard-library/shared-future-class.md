@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412601"
 ---
 # <a name="sharedfuture-class"></a>shared_future 類別
 
@@ -56,7 +56,7 @@ class shared_future;
 |----------|-----------------|
 |[get](#get)|擷取以「相關聯的非同步狀態」儲存的結果。|
 |[valid](#valid)|指定物件是否不是空的。|
-|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
+|[wait](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
 |[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|
 |[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|
 
@@ -154,7 +154,7 @@ bool valid() noexcept;
 
 **true**如果物件有相關聯的非同步狀態; 否則**false**。
 
-## <a name="wait"></a>  shared_future:: wait
+## <a name="wait"></a>  shared_future::wait
 
 封鎖目前的執行緒，直到「相關聯的非同步狀態」就緒為止。
 
@@ -166,7 +166,7 @@ void wait() const;
 
 只有在非同步提供者儲存傳回值或儲存例外狀況後，相關聯的非同步狀態才會就緒。
 
-## <a name="wait_for"></a>  shared_future:: wait_for
+## <a name="wait_for"></a>  shared_future::wait_for
 
 封鎖目前的執行緒，直到相關聯的非同步狀態「就緒」為止，或直到指定的時間已過為止。
 

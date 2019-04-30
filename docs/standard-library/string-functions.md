@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::to_string [C++]
 - std::to_wstring [C++]
 ms.openlocfilehash: d10af9bc32acd730db1fe9da3775ac2aa84e5fff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412341"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt; 函式
 
@@ -82,7 +82,7 @@ basic_istream<Allocator, Traits>& getline(
 *str*<br/>
 要從輸入資料流讀取字元的字串。
 
-*Delim*<br/>
+*delim*<br/>
 行的分隔符號。
 
 ### <a name="return-value"></a>傳回值
@@ -484,7 +484,7 @@ string to_string(long double Val);
 
 |參數|描述|
 |---------------|-----------------|
-|*val*|要轉換的值。|
+|*Val*|要轉換的值。|
 
 ### <a name="return-value"></a>傳回值
 

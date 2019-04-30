@@ -6,17 +6,17 @@ helpviewer_keywords:
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
 ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412666"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>從 OpenMP 移轉至並行執行階段
 
 並行執行階段支援多種不同的程式設計模型。 這些模型有可能相互重疊，但或許也可彌補其他程式庫之模型的不足之處。 在此文件一節比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)為並行執行階段，並提供有關如何移轉現有的 OpenMP 程式碼，以使用並行執行階段的範例。
 
-OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 Fortran 和 C/C++ 程式設計語言繫結。 OpenMP 版本 2.0 和 2.5 支援的 Visual c + + 編譯器，非常適合平行演算法反覆;也就是它們會透過資料的陣列執行平行的反覆項目。 OpenMP 3.0 支援非反覆執行的工作，除了反覆執行的工作。
+OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 Fortran 和 C/C++ 程式設計語言繫結。 OpenMP 版本 2.0 和 2.5 支援的視覺效果C++編譯器，您可以非常適用於平行演算法反覆;也就是它們會透過資料的陣列執行平行的反覆項目。 OpenMP 3.0 支援非反覆執行的工作，除了反覆執行的工作。
 
 當平行處理原則程度已預先決定且符合系統可用資源時，OpenMP 最有效率。 OpenMP 模型特別適的符合高效能運算，非常龐大的計算問題會分散到一部電腦的處理資源的位置。 在此案例中，硬體環境通常固定的開發人員可以合理預期能夠取得所有的運算資源的獨佔存取權，當執行演算法。
 
@@ -44,7 +44,7 @@ OpenMP 程式設計模型是以開放標準定義的，具有定義完善的 For
 |-----------|-----------------|
 |您的應用程式已經符合您的需求。|如果您滿意應用程式的效能和目前的偵錯支援，可能不適合移轉。|
 |平行迴圈主體執行一些工作。|並行執行階段工作排程器的額外負荷可能會無法克服以平行方式執行迴圈主體，尤其是當迴圈主體是相對較小的優點。|
-|您的應用程式是以 c 撰寫|並行執行階段會使用許多 c + + 功能，因為它可能不適合時您無法撰寫程式碼，讓 C 應用程式以充分利用它。|
+|您的應用程式是以 c 撰寫|因為並行執行階段會使用許多C++功能，它可能不適合時您無法撰寫程式碼，讓 C 應用程式以充分利用它。|
 
 ## <a name="related-topics"></a>相關主題
 

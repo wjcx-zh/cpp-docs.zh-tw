@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405166"
 ---
 # <a name="collate-class"></a>collate 類別
 
@@ -118,11 +118,11 @@ const char* _Locname,
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
 
@@ -248,7 +248,7 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 要決定其序列值之第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -276,7 +276,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 *first*<br/>
 要轉換之序列中第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -304,7 +304,7 @@ long hash(const CharType* first, const CharType* last) const;
 *first*<br/>
 要決定其序列值之第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -374,7 +374,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 *first*<br/>
 要轉換之序列中第一個字元的指標。
 
-*最後一個*<br/>
+*last*<br/>
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - localization [C++], character sets
 - Unicode [C++], installing support
 ms.openlocfilehash: fea49bff2a4563b8617e19636e27afbae1c55811
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410547"
 ---
 # <a name="support-for-unicode"></a>Unicode 的支援
 

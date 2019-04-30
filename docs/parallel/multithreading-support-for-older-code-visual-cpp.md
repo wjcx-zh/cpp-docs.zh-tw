@@ -11,15 +11,15 @@ helpviewer_keywords:
 - multithreading [C++]
 ms.assetid: 24425b1f-5031-4c6b-aac7-017115a40e7c
 ms.openlocfilehash: 649e26c3f0704dfd6740b1a250613545e29316a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407740"
 ---
 # <a name="multithreading-support-for-older-code-visual-c"></a>舊版程式碼的多執行緒支援 (Visual C++)
 
-Visual c + + 可讓您有同時執行的多個並行執行緒。 使用多執行緒處理，您可以分割背景工作、 管理同時的輸入資料流、 管理使用者介面，以及其他等等。
+視覺化C++可讓您有同時執行的多個並行執行緒。 使用多執行緒處理，您可以分割背景工作、 管理同時的輸入資料流、 管理使用者介面，以及其他等等。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -30,7 +30,7 @@ Visual c + + 可讓您有同時執行的多個並行執行緒。 使用多執行
 描述什麼是處理序和執行緒，以及 MFC 的方法進行多執行緒處理時。
 
 [多執行緒和地區設定](multithreading-and-locales.md)<br/>
-討論使用 C 執行階段程式庫和 c + + 標準程式庫中的多執行緒應用程式的地區設定功能時所發生的問題。
+討論使用這兩個 C 執行階段程式庫的地區設定功能時所發生的問題，C++在多執行緒應用程式中的標準程式庫。
 
 ## <a name="related-sections"></a>相關章節
 

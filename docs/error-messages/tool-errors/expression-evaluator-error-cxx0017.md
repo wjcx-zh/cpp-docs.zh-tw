@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CXX0017
 ms.assetid: af74db02-a64d-49ca-8363-3e044a107580
 ms.openlocfilehash: bbf16ae9a503a8525edb42d6bf1fc4336c3f5267
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397129"
 ---
 # <a name="expression-evaluator-error-cxx0017"></a>運算式評估工具錯誤 CXX0017
 
@@ -20,7 +20,7 @@ ms.locfileid: "50602524"
 
 找不到運算式中指定的符號。
 
-此錯誤的其中一個可能的原因是符號名稱的大小寫不符。 因為 C 和 c + + 是區分大小寫的語言，就必須指定符號名稱中它定義在來源中的大小寫完全相符。
+此錯誤的其中一個可能的原因是符號名稱的大小寫不符。 因為 C 和C++都是區分大小寫的語言，必須提供它定義在來源中的大小寫完全相符的符號名稱。
 
 嘗試轉換變數類型在偵錯期間監看變數時，會發生此錯誤。 `typedef`宣告的新名稱的類型，但它不會定義新的類型。 試圖偵錯工具需要有已定義的類型名稱。
 

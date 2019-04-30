@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
 ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406466"
 ---
 # <a name="compiler-warning-level-1-c4090"></a>編譯器警告 （層級 1） C4090
 
@@ -21,7 +21,7 @@ ms.locfileid: "50462370"
 
 指標時，可能造成這項警告**const**或是`volatile`項目指派給未宣告為指向指標**const**或`volatile`。
 
-C 程式會發出這個警告。 在 c + + 程式中，編譯器會發出錯誤： [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
+C 程式會發出這個警告。 在C++程式，則編譯器會發出錯誤：[C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
 
 下列範例會產生 C4090:
 

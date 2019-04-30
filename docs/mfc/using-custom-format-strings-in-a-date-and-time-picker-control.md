@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: 7d577f03-6ca0-4597-9093-50b78f304719
 ms.openlocfilehash: 8da5ecaf473d6d3c35ddc1b95ac856ce8c12f163
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411616"
 ---
 # <a name="using-custom-format-strings-in-a-date-and-time-picker-control"></a>在日期時間選擇器控制項中使用自訂格式字串
 

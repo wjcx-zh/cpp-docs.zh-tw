@@ -49,11 +49,11 @@ helpviewer_keywords:
 - operator IUnknown
 ms.assetid: 33c1782f-045a-4673-9619-1d750efc83a9
 ms.openlocfilehash: ab97238cf13accf3db593b5c4a81550297a53d6d
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403330"
 ---
 # <a name="variantt-extractors"></a>_variant_t 擷取器
 
@@ -97,7 +97,7 @@ operator unsigned __int64() const;
 
 - **運算子 double （)** 擷取**double**整數值。
 
-- **運算子 CY （）** 擷取`CY`物件。
+- **operator CY( )** Extracts a `CY` object.
 
 - **運算子 bool （)** 擷取**bool**值。
 

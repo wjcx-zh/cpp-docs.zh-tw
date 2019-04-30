@@ -3,15 +3,15 @@ title: 使用磚
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405363"
 ---
 # <a name="using-tiles"></a>使用磚
 
-若要最大化您的應用程式加速，您可以使用並排顯示。 並排顯示會將執行緒分成相等的矩形子集或*圖格*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以從您的 c + + AMP 程式碼來取得更多的加速效果。 並排顯示的基本元件如下：
+若要最大化您的應用程式加速，您可以使用並排顯示。 並排顯示會將執行緒分成相等的矩形子集或*圖格*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以取得更多的加速功能，從您C++AMP 程式碼。 並排顯示的基本元件如下：
 
 - `tile_static` 變數。 並排顯示的主要優點是獲得的效能`tile_static`存取。 中的資料的存取權`tile_static`記憶體可以大幅快於存取全域空間中的資料 (`array`或`array_view`物件)。 執行個體`tile_static`變數是每個 tile 建立，且 tile 中的所有執行緒存取的變數。 在典型的並排顯示演算法中，資料會複製到`tile_static`一次從全域記憶體的記憶體，然後從存取多次`tile_static`記憶體。
 
@@ -289,15 +289,15 @@ t_idx.barrier.wait();
 
 - `tile_static`
 
-A*記憶體柵欄*可確保存取可供其他執行緒 tile 中執行緒，該記憶體和記憶體存取根據依照程式順序執行。 若要確保這種情況，編譯器和處理器不得重新排列讀取和寫入之間的範圍。 在 c + + AMP 中記憶體柵欄被建立的其中一種方法的呼叫：
+A*記憶體柵欄*可確保存取可供其他執行緒 tile 中執行緒，該記憶體和記憶體存取根據依照程式順序執行。 若要確保這種情況，編譯器和處理器不得重新排列讀取和寫入之間的範圍。 在C++AMP 記憶體柵欄由呼叫其中一個方法：
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)： 建立周圍的圍欄的全域和`tile_static`記憶體。
+- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait):建立周圍的圍欄的全域和`tile_static`記憶體。
 
-- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence)： 建立周圍的圍欄的全域和`tile_static`記憶體。
+- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence):建立周圍的圍欄的全域和`tile_static`記憶體。
 
-- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence)： 建立只在全域記憶體周圍的圍欄。
+- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence):建立只在全域記憶體周圍的圍欄。
 
-- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence)： 建立唯一周圍的圍欄`tile_static`記憶體。
+- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence):建立唯一周圍的圍欄`tile_static`記憶體。
 
 呼叫特定範圍，您需要可以改善您的應用程式的效能。 屏障類型會影響如何在編譯器和硬體重新排列陳述式。 例如，如果您使用的全域記憶體圍欄，它適用於全域記憶體存取，因此，編譯器和硬體可能重新排列讀取並寫入`tile_static`圍欄兩側的變數。
 

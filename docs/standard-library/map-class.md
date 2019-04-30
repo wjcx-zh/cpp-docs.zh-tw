@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: 52a24bb2372cc7f22797ae7122b6659724c47b55
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413004"
 ---
 # <a name="map-class"></a>map 類別
 
@@ -124,7 +124,7 @@ class map;
 
 在 C++14 中，指定沒有型別參數的 std::less<> 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，封裝有關對應之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 `allocator<pair<const Key, Type> >`。
 
 ## <a name="remarks"></a>備註
@@ -577,7 +577,7 @@ size_type count(const Key& key) const;
 
 成員函式會傳回下列範圍中的元素數目 *x*
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))
+\[ lower_bound(*key*), upper_bound(*key*) )
 
 ，其為對應案例中的 0 或 1，且是唯一相關聯的容器。
 
@@ -799,7 +799,7 @@ emplace(
 |參數|描述|
 |-|-|
 |參數|描述|
-|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+|*args*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -887,7 +887,7 @@ iterator emplace_hint(
 |參數|描述|
 |-|-|
 |參數|描述|
-|*引數*|所轉接以建構要插入到對應中之元素的引數，除非該對應中已經包含該元素，或更廣泛地說，即除非它已經包含索引鍵以同等方式排序的元素。|
+|*args*|所轉接以建構要插入到對應中之元素的引數，除非該對應中已經包含該元素，或更廣泛地說，即除非它已經包含索引鍵以同等方式排序的元素。|
 |*where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 
 ### <a name="return-value"></a>傳回值
@@ -1410,7 +1410,7 @@ IList);
 |參數|描述|
 |-|-|
 |參數|描述|
-|*val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入對應中的項目值。|
+|*Val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入對應中的項目值。|
 |*Where*|要開始搜尋正確的插入點的地方。 (如果該點前面*其中*，可能會在分攤的常數時間，而不是對數時間插入。)|
 |*ValTy*|指定地圖可用來建構的元素的引數類型的範本參數[value_type](#value_type)，和完美轉送*Val*做為引數。|
 |*第一個*|要複製之第一個元素的位置。|

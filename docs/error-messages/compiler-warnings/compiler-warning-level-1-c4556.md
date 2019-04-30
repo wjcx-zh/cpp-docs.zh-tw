@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4556
 ms.assetid: e4c0e296-b747-4db1-9608-30b8b74feac2
 ms.openlocfilehash: c31602766261a8d6d0c4f0bb0a880ee34ee1ed45
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397311"
 ---
 # <a name="compiler-warning-level-1-c4556"></a>編譯器警告 (層級 1) C4556
 

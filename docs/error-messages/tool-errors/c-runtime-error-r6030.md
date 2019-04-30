@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
 ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400015"
 ---
 # <a name="c-runtime-error-r6030"></a>C 執行階段錯誤 R6030
 
@@ -31,4 +31,4 @@ ms.locfileid: "50461616"
 
 如果您使用 C 執行階段 (CRT)，但未執行 CRT 啟始程式碼，就會發生此錯誤。 它是可能發生這個錯誤，如果連結器切換[/ENTRY](../../build/reference/entry-entry-point-symbol.md)用來覆寫預設的起始位址，通常**mainCRTStartup**， **wmainCRTStartup**的主控台 EXE **WinMainCRTStartup**或是**wWinMainCRTStartup** Windows exe，或 **_DllMainCRTStartup** dll。 除非在啟動時要呼叫的其中一個上述函數，將不會初始化 C 執行階段。 啟動呼叫這些函數通常根據預設，當您連結到 C 執行階段程式庫，並使用一般**主要**， **wmain**， **WinMain**，或**DllMain**進入點。
 
-它也是可能發生這個錯誤，當其他程式使用程式碼資料隱碼攻擊技巧來攔截特定的 DLL 程式庫呼叫。 某些具侵入性的安全性程式會使用這項技術。 在 Visual Studio 2015 之前的 Visual c + + 版本中，就可以使用以靜態方式連結的 CRT 程式庫來解決問題，但這不建議用於安全性和應用程式更新的原因。 修正此問題，可能需要使用者動作。
+它也是可能發生這個錯誤，當其他程式使用程式碼資料隱碼攻擊技巧來攔截特定的 DLL 程式庫呼叫。 某些具侵入性的安全性程式會使用這項技術。 在 視覺效果的版本C++Visual Studio 2015 之前, 是使用以靜態方式連結的 CRT 程式庫來解決問題，但不是建議使用的安全性和應用程式更新的原因。 修正此問題，可能需要使用者動作。

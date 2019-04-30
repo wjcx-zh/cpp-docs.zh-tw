@@ -39,16 +39,15 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
 ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403908"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar 類別
 
-
-  `CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。
+`CMFCAutoHideBar` 類別是實作自動隱藏功能的特殊工具列類別。
 
 如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
 

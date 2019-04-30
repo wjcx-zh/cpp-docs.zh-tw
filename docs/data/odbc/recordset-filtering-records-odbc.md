@@ -9,11 +9,11 @@ helpviewer_keywords:
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
 ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397857"
 ---
 # <a name="recordset-filtering-records-odbc"></a>資料錄集：篩選資料錄 (ODBC)
 
@@ -91,6 +91,6 @@ m_strFilter = "StudentID = 100";   // incorrect for some drivers
 
 [資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [資料錄集：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[資料錄集：資料錄集選取資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[資料錄集：資料錄集更新資料錄 (ODBC) 的方式](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[資料錄集：資料錄集更新資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [資料錄集：鎖定資料錄 (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

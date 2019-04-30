@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
 ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411925"
 ---
 # <a name="timeput-class"></a>time_put 類別
 
@@ -182,7 +182,7 @@ iter_type put(iter_type next,
 *first*<br/>
 輸出的格化式字串開頭。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*最後一個*<br/>
+*last*<br/>
 輸出的格化式字串結尾。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>傳回值
@@ -254,11 +254,11 @@ explicit time_put(size_t _Refs = 0);
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 建構函式會初始化其基底物件[locale:: facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
 

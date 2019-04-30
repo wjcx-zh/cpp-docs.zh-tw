@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
 ms.openlocfilehash: 22f2dba49e894e93cb6791d76a65730f3269199e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410612"
 ---
 # <a name="international-enabling"></a>啟用國際化
 
-大部分傳統的 C 和 c + + 程式碼做出假設字元和字串操作的國際應用程式無法運作。 MFC 和執行階段程式庫支援 Unicode 或 MBCS，但仍要執行的工作。 若要引導您，本節會說明 Visual c + + 中的 「 國際啟用 」 的意義：
+大部分傳統的 C 和C++程式碼會建立假設字元和字串操作的國際應用程式無法運作。 MFC 和執行階段程式庫支援 Unicode 或 MBCS，但仍要執行的工作。 若要引導您，本章節將說明 「 國際啟用 」 的意義在視覺效果C++:
 
 - Unicode 和 MBCS 可透過 MFC 的函式參數清單中的可移植資料型別和傳回型別。 這些類型有條件地定義適當的方式，取決於您的組建是否定義符號`_UNICODE`或符號`_MBCS`（這表示 DBCS）。 您的應用程式中，然後再根據這兩個符號的組建定義自動連結的 MFC 程式庫的不同變化。
 

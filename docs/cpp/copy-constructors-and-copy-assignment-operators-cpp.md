@@ -11,20 +11,20 @@ helpviewer_keywords:
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
 ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392293"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>複製建構函式和複製指派運算子 (C++)
 
 > [!NOTE]
-> 從 C + + 11 開始，支援兩種指派會在語言中：*複製指派*並*移動指派*。 在本文中，除非明確指定，否則「指派」表示複製指派。 如需移動指派的詳細資訊，請參閱 <<c0> [ 移動建構函式和移動指派運算子 （c + +）](move-constructors-and-move-assignment-operators-cpp.md)。
+> 從 C + + 11 開始，支援兩種指派會在語言中：*複製指派*並*移動指派*。 在本文中，除非明確指定，否則「指派」表示複製指派。 如需移動指派的詳細資訊，請參閱 <<c0> [ 移動建構函式和移動指派運算子 (C++)](move-constructors-and-move-assignment-operators-cpp.md)。</c0>
 >
 > 指派作業和初始化作業都會導致複製物件。
 
-- **指派**： 一個物件的值指派給另一個物件，第一個物件會複製到第二個物件。 因此，
+- **指派**:當一個物件的值指派到另一個物件時，會將第一個物件複製到第二個物件。 因此，
 
     ```cpp
     Point a, b;
@@ -34,7 +34,7 @@ ms.locfileid: "50535040"
 
    會導致 `b` 的值複製到 `a`。
 
-- **初始化**： 在宣告新的物件，引數函式以傳值方式傳遞，或從函式傳值方式傳回值，初始化時發生。
+- **初始化**:在宣告新的物件，引數會傳遞至函式的值或傳值方式從函式傳回值時，會進行初始化。
 
 您可以定義類別類型物件的「複製」語意。 例如，請參考這個程式碼：
 
@@ -76,13 +76,13 @@ int main()
 
 編譯器產生的複製建構函式，例如使用者定義的複製建構函式具有類型的單一引數 」 參考*類別名稱*。 」 所有的基底類別和成員類別將複製建構函式宣告為接受單一引數的型別時，發生例外狀況**const** <em>類別名稱</em><strong>&</strong>。 在此情況下，編譯器產生的複製建構函式的引數是也**const**。
 
-當複製建構函式的引數類型不是時**const**，藉由複製初始化**const**物件會產生錯誤。 反向執行則不成立： 如果引數**const**，您可以藉由複製不是物件來初始化**const**。
+當複製建構函式的引數類型不是時**const**，藉由複製初始化**const**物件會產生錯誤。 反向執行則不成立：如果引數**const**，您可以藉由複製不是物件來初始化**const**。
 
 編譯器產生的指派運算子遵循相同的模式與**const。** 它們接受單一引數型別的<em>類別名稱</em><strong>&</strong>除非所有基底和成員類別中的指派運算子不接受引數的型別**const** <em>類別名稱</em><strong>&</strong>。 在此情況下，類別產生的指派運算子會接受**const**引數。
 
 > [!NOTE]
 > 虛擬基底類別是由複製建構函式進行初始化、由編譯器所產生或使用者所定義時，只會在建構時初始化一次。
 
-這些影響類似複製建構函式的影響。 當引數類型不是時**const**，從指派**const**物件會產生錯誤。 反向執行則不成立： 如果**const**的值指派給值不是**const**，指派會成功。
+這些影響類似複製建構函式的影響。 當引數類型不是時**const**，從指派**const**物件會產生錯誤。 反向執行則不成立：如果**const**的值指派給值不是**const**，指派會成功。
 
 如需有關多載的指派運算子的詳細資訊，請參閱 <<c0> [ 指派](../cpp/assignment.md)。

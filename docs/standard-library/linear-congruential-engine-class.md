@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413251"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 *A*<br/>
-**乘數**。 **前置條件**：請參閱＜備註＞一節。
+**乘數**。 **前置條件**:請參閱 < 備註 > 一節。
 
 *C*<br/>
-**遞增**。 **前置條件**：請參閱＜備註＞一節。
+**遞增**。 **前置條件**:請參閱 < 備註 > 一節。
 
 *M*<br/>
-**模數**。 **前置條件**：請參閱備註。
+**模數**。 **前置條件**:請參閱 < 備註 >。
 
 ## <a name="members"></a>成員
 
@@ -86,7 +86,7 @@ class linear_congruential_engine{
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`：更新的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。
+`minstd_rand`：升級的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;

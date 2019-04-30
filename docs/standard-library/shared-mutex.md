@@ -46,11 +46,11 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
 ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412562"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -104,7 +104,7 @@ void swap(shared_lock<Mutex>& x, shared_lock<Mutex>& y) noexcept;
 `shared_lock` 樣板類別會延伸對計時鎖定的支援，並將擁有權轉移到共用的 mutex。 擁有權可在建構期間或完成之後取得，並可轉移到另一個 `shared_lock` 物件。 `shared_lock` 類型的物件可以移動，但無法複製。
 
 > [!WARNING]
-> 從 Visual Studio 2015 開始，c + + 標準程式庫同步處理類型根據 Windows 同步處理原始物件，並不再使用 ConcRT （除非目標平台是 Windows XP）。 中定義的類型&lt;shared_mutex > 不應與任何 ConcRT 類型或函式。
+> 開始在 Visual Studio 2015 中，C++標準程式庫同步處理類型根據 Windows 同步處理原始物件，且不再使用 ConcRT （除非目標平台是 Windows XP）。 中定義的類型&lt;shared_mutex > 不應與任何 ConcRT 類型或函式。
 
 ## <a name="classes"></a>類別
 

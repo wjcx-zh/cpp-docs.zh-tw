@@ -56,11 +56,11 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400652"
 ---
 # <a name="basicios-class"></a>basic_ios 類別
 
@@ -223,7 +223,7 @@ void clear(io_state state);
 *state*<br/>
 （選擇性）您想要清除所有旗標之後設定旗標。 預設值為 `goodbit`。
 
-*重新引發*<br/>
+*reraise*<br/>
 （選擇性）指定是否應該重新引發例外狀況。 預設值為**false** （不會重新引發例外狀況）。
 
 ### <a name="remarks"></a>備註
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*當地語系化*<br/>
+*Loc*<br/>
 地區設定字串。
 
 ### <a name="return-value"></a>傳回值
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>參數
 
-*（_s)*<br/>
+*_State*<br/>
 要設定的其他旗標。
 
 ### <a name="remarks"></a>備註

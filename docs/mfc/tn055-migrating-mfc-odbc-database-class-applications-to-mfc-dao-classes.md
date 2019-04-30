@@ -1,5 +1,5 @@
 ---
-title: TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
+title: TN055:MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 ms.date: 06/20/2018
 f1_keywords:
 - vc.mfc.odbc
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 ms.openlocfilehash: f8e0d8e50f05e86c35e0f8b7f324533bffea6f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399664"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055:MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 
 > [!NOTE]
-> Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+> 視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
 
 ## <a name="overview"></a>總覽
 

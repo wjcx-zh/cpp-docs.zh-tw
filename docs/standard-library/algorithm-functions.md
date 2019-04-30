@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411170"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -4261,7 +4261,7 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回`pair<const Type&, const Type&>( right , left )`如果*右*是小於*左*。 否則它會傳回 `pair<const Type&, const Type&>( left , right )`。
+第一個範本函式會傳回`pair<const Type&, const Type&>( right , left )`如果*右*是小於*左*。 否則，它會傳回 `pair<const Type&, const Type&>( left , right )`。
 
 第二個成員函式會傳回一組，其中的第一個元素較小，而第二個較大的述詞相較之下*comp*。
 

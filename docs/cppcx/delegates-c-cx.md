@@ -3,15 +3,15 @@ title: 委派 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
 ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62406921"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 
-`delegate`關鍵字用來宣告 Windows 執行階段相當於在 standard c + + 中的函式物件的參考型別。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：
+`delegate`關鍵字用來宣告 Windows 執行階段對等項目中標準函式物件的參考型別C++。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
@@ -133,5 +133,5 @@ C++/CX 的泛型委派有類似於泛型類別宣告的限制。 它們不能宣
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[Visual c + + 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

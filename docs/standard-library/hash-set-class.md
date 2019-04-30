@@ -87,16 +87,16 @@ helpviewer_keywords:
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
 ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405036"
 ---
 # <a name="hashset-class"></a>hash_set 類別
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 容器類別 hash_set 是「C++ 標準程式庫」的擴充功能，可用來在集合中儲存及快速擷取資料，其中集合中所含的元素值是唯一的且會作為索引鍵值。
 
@@ -117,7 +117,7 @@ class hash_set
 *特性*<br/>
 包含兩個函式物件的型別，其中一個類別也就是比較能夠比較兩個項目值做為排序鍵來判斷其相對順序一元述詞的對應項目的索引鍵值不帶正負號的雜湊函式的二元述詞整數型別的`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key> >`。
 
-*配置器*<br/>
+*Allocator*<br/>
 代表預存配置器物件的類型，其會封裝有關 hash_set 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
@@ -219,7 +219,7 @@ hash_set 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 ## <a name="allocator_type"></a>  hash_set::allocator_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，代表 hash_set 物件的配置器類別。
 
@@ -240,7 +240,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ## <a name="begin"></a>  hash_set::begin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，定址對象是 hash_set 中的第一個元素。
 
@@ -301,7 +301,7 @@ The first element of hs1 is now 2
 ## <a name="cbegin"></a>  hash_set::cbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回常數迭代器，定址對象是 hash_set 中的第一個元素。
 
@@ -348,7 +348,7 @@ The first element of hs1 is 1
 ## <a name="cend"></a>  hash_set::cend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回常數迭代器，定址對象是 hash_set 中最後一個元素後面的位置。
 
@@ -396,7 +396,7 @@ The last element of hs1 is 3
 ## <a name="clear"></a>  hash_set::clear
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 清除 hash_set 的所有元素。
 
@@ -440,7 +440,7 @@ The size of the hash_set after clearing is 0.
 ## <a name="const_iterator"></a>  hash_set::const_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供可讀取 hash_set 中 **const** 元素的雙向迭代器。
 
@@ -459,7 +459,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="const_pointer"></a>  hash_set::const_pointer
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供 hash_set 中 **const** 元素的指標。
 
@@ -476,7 +476,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="const_reference"></a>  hash_set::const_reference
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供對儲存在 hash_set 中以供讀取和執行 **const** 運算之 **const** 元素的參考。
 
@@ -523,7 +523,7 @@ The first element in the hash_set is 10.
 ## <a name="const_reverse_iterator"></a>  hash_set::const_reverse_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供可讀取 hash_set 中任何 **const** 元素的雙向迭代器。
 
@@ -542,7 +542,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="count"></a>  hash_set::count
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回 hash_set 中索引鍵符合參數指定之索引鍵的項目數目。
 
@@ -565,7 +565,7 @@ size_type count(const Key& key) const;
 
 成員函式會傳回下列範圍中的項目數：
 
-\[ lower_bound (*金鑰*)，upper_bound (*金鑰*))。
+\[ lower_bound(*key*), upper_bound(*key*) ).
 
 ### <a name="example"></a>範例
 
@@ -606,7 +606,7 @@ The number of elements in hs1 with a sort key of 2 is: 0.
 ## <a name="crbegin"></a>  hash_set::crbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_set 中的第一個元素。
 
@@ -658,7 +658,7 @@ The first element in the reversed hash_set is 30.
 ## <a name="crend"></a>  hash_set::crend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回常數迭代器，定址對象是反轉 hash_set 中最後一個元素後面的位置。
 
@@ -711,7 +711,7 @@ The last element in the reversed hash_set is 10.
 ## <a name="difference_type"></a>  hash_set::difference_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種帶正負號的整數類型，可用來代表範圍 (介於迭代器所指的元素之間) 中 hash_set 的元素數目。
 
@@ -788,7 +788,7 @@ The number of elements in the hash_set hs1 is: 2.
 ## <a name="emplace"></a>  hash_set::emplace
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 將就地建構的元素插入到 hash_set 中。
 
@@ -840,7 +840,7 @@ After the emplace insertion, hs3 contains a.
 ## <a name="emplace_hint"></a>  hash_set::emplace_hint
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 將就地建構的元素插入到 hash_set 中。
 
@@ -895,7 +895,7 @@ After the emplace insertion, hs3 contains a.
 ## <a name="empty"></a>  hash_set::empty
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 測試 hash_set 是否是空的。
 
@@ -944,7 +944,7 @@ The hash_set hs2 is empty.
 ## <a name="end"></a>  hash_set::end
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，定址對象是 hash_set 中最後一個元素後面的位置。
 
@@ -1007,7 +1007,7 @@ The last element of hs1 is now 2
 ## <a name="equal_range"></a>  hash_set::equal_range
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回一組迭代器，分別指向雜湊集合中索引鍵等於指定索引鍵的第一個元素，以及指向雜湊集合中索引鍵大於該索引鍵的第一個元素。
 
@@ -1092,7 +1092,7 @@ The hash_set hs1 doesn't have an element with a key greater than or equal to 40.
 ## <a name="erase"></a>  hash_set::erase
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 在 hash_set 中從指定位置移除一個項目或一連串項目，或移除符合指定之索引鍵的項目。
 
@@ -1112,7 +1112,7 @@ size_type erase(const key_type& key);
 *first*<br/>
 從 hash_set 中移除之第一個項目的位置。
 
-*最後一個*<br/>
+*last*<br/>
 從 hash_set 中移除的最後一個項目之後的位置。
 
 *key*<br/>
@@ -1212,7 +1212,7 @@ equal to that of the 2nd element is deleted, the hash_set hs3 is: 0 3.
 ## <a name="find"></a>  hash_set::find
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，定址對象是 hash_set 中索引鍵等於指定索引鍵的元素位置。
 
@@ -1290,7 +1290,7 @@ The element of hs1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>  hash_set::get_allocator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回一份用來建構 hash_set 的配置器物件複本。
 
@@ -1366,7 +1366,7 @@ int main( )
 ## <a name="hash_set"></a>  hash_set::hash_set
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 建構一個空的 `hash_set`，或是其他 `hash_set` 的全部或部分複本。
 
@@ -1450,7 +1450,7 @@ hash_set(
 ## <a name="insert"></a>  hash_set::insert
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 將項目或項目範圍插入至 `hash_set`。
 
@@ -1474,7 +1474,7 @@ void insert(
 
 |參數|描述|
 |-|-|
-|*val*|要插入到 `hash_set` 中之元素的值，除非 `hash_set` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
+|*Val*|要插入到 `hash_set` 中之元素的值，除非 `hash_set` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
 |*Where*|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|
 |*第一個*|要從 `hash_set` 複製之第一個元素的位置。|
 |*最後一個*|緊接在要從 `hash_set` 複製之最後一個元素後面的位置。|
@@ -1497,7 +1497,7 @@ void insert(
 ## <a name="iterator"></a>  hash_set::iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供可讀取或修改 hash_set 中任何元素的雙向迭代器。
 
@@ -1516,7 +1516,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ## <a name="key_comp"></a>  hash_set::key_comp
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 擷取一份用來雜湊處理及排序 hash_set 中元素索引鍵值的雜湊特性物件複本。
 
@@ -1592,7 +1592,7 @@ int main( )
 ## <a name="key_compare"></a>  hash_set::key_compare
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種提供函式物件的類型，該函式物件可比較兩個排序鍵來判斷 hash_set 中兩個元素的相對順序。
 
@@ -1615,7 +1615,7 @@ typedef Traits key_compare;
 ## <a name="key_type"></a>  hash_set::key_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，描述以 hash_set 的元素形式儲存且功能為排序鍵的物件。
 
@@ -1638,7 +1638,7 @@ typedef Key key_type;
 ## <a name="lower_bound"></a>  hash_set::lower_bound
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，指向 hash_set 中索引鍵等於或大於指定索引鍵的第一個元素。
 
@@ -1712,7 +1712,7 @@ The element of hs1 with a key matching that of the last element is: 30.
 ## <a name="max_size"></a>  hash_set::max_size
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回 hash_set 的最大長度。
 
@@ -1750,7 +1750,7 @@ int main( )
 ## <a name="op_eq"></a>  hash_set::operator=
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 將 hash_set 的元素以另一個 hash_set 的複本取代。
 
@@ -1811,7 +1811,7 @@ int main( )
 ## <a name="pointer"></a>  hash_set::pointer
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供 hash_set 中元素的指標。
 
@@ -1828,7 +1828,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::poin
 ## <a name="rbegin"></a>  hash_set::rbegin
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_set 中的第一個元素。
 
@@ -1911,7 +1911,7 @@ After the erasure, the first element in the reversed hash_set is 20.
 ## <a name="reference"></a>  hash_set::reference
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供對儲存在 hash_set 中元素的參考。
 
@@ -1961,7 +1961,7 @@ The first element in the hash_set is now 15.
 ## <a name="rend"></a>  hash_set::rend
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，定址對象是反轉 hash_set 中最後一個元素後面的位置。
 
@@ -2047,7 +2047,7 @@ After the erasure, the last element in the reversed hash_set is 20.
 ## <a name="reverse_iterator"></a>  hash_set::reverse_iterator
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，提供可讀取或修改反轉 hash_set 中元素的雙向迭代器。
 
@@ -2066,7 +2066,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ## <a name="size"></a>  hash_set::size
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回 hash_set 中的元素數目。
 
@@ -2113,7 +2113,7 @@ The hash_set length is now 2.
 ## <a name="size_type"></a>  hash_set::size_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種不帶正負號的整數類型，可代表 hash_set 中的元素數目。
 
@@ -2130,7 +2130,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::size
 ## <a name="swap"></a>  hash_set::swap
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 交換兩個 hash_set 的元素。
 
@@ -2204,7 +2204,7 @@ After swapping with hs3, list hs1 is: 300.
 ## <a name="upper_bound"></a>  hash_set::upper_bound
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 傳回迭代器，指向 hash_set 中索引鍵大於指定索引鍵的第一個元素。
 
@@ -2278,7 +2278,7 @@ that of the initial element of hs1 is: 20.
 ## <a name="value_comp"></a>  hash_set::value_comp
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 擷取一份用來排序 hash_set 中元素值的比較物件複本。
 
@@ -2354,7 +2354,7 @@ int main( )
 ## <a name="value_compare"></a>  hash_set::value_compare
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種提供兩個函式物件的類型：一個是可比較 hash_set 的兩個元素值以判斷其相對順序的 compare 類別二元述詞，一個是將元素雜湊處理的一元述詞。
 
@@ -2377,7 +2377,7 @@ typedef key_compare value_compare;
 ## <a name="value_type"></a>  hash_set::value_type
 
 > [!NOTE]
-> 這個 API 已過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
+> 這個 API 已經過時。 替代方案是 [unordered_set 類別](../standard-library/unordered-set-class.md)。
 
 一種類型，描述以 hash_set 的元素形式儲存且功能為值的物件。
 

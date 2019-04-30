@@ -8,11 +8,11 @@ helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
 ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413238"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "51524881"
 
 ## <a name="remarks"></a>備註
 
-明確特製化`numeric_limits`類別描述的基本類型，包括字元、 整數和浮點類型的許多屬性和**bool**所定義，而不是由固定的實作c + + 語言的規則。 \<limits> 中所描述的屬性包括精確度、最小和最大表示法、捨入和訊號類型錯誤。
+明確特製化`numeric_limits`類別描述的基本類型，包括字元、 整數和浮點類型的許多屬性和**bool**所定義，而不是由固定的實作規則的C++語言。 \<limits> 中所描述的屬性包括精確度、最小和最大表示法、捨入和訊號類型錯誤。
 
 ### <a name="enumerations"></a>列舉
 

@@ -3,11 +3,11 @@ title: 編譯器警告 (層級 1) C4436
 ms.date: 11/04/2016
 ms.assetid: 2b54a1fc-c9c6-4cc9-90be-faa44fc715d5
 ms.openlocfilehash: 487fb8c804ac34ba52661774c2552199c764f6b0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408182"
 ---
 # <a name="compiler-warning-level-1-c4436"></a>編譯器警告 (層級 1) C4436
 

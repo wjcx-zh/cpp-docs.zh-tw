@@ -19,16 +19,15 @@ helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
 ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408065"
 ---
 # <a name="transformer-class"></a>transformer 類別
 
-
-  `transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。
+`transformer` 傳訊區塊是多來源的單一目標排序 `propagator_block`，可以存放無限個不同類型訊息。
 
 ## <a name="syntax"></a>語法
 
@@ -151,8 +150,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。
@@ -224,8 +222,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-
-  `message` 物件的指標。
+`message` 物件的指標。
 
 *_PSource*<br/>
 提供訊息來源區塊的指標。

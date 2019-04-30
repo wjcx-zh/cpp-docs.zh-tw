@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
 ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414122"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
 
@@ -66,7 +66,7 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*一般而言，URNG*<br/>
+*URNG*<br/>
 統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
@@ -187,7 +187,7 @@ explicit bernoulli_distribution(const param_type& parm);
 
 包含分佈的參數。
 
-結構 param_type {typedef bernoulli_distribution distribution_type; param_type (按兩下 p = 0.5); 按兩下 p() const;
+struct param_type { typedef bernoulli_distribution distribution_type; param_type(double p = 0.5); double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 

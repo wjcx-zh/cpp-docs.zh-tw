@@ -1,5 +1,5 @@
 ---
-title: TN054：在使用 MFC DAO 類別時直接呼叫 DAO
+title: TN054:在使用 MFC DAO 類別時直接呼叫 DAO
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.dao
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
 ms.openlocfilehash: 938381f55b598911b69bb25bf7af576dfdfb2e4f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399651"
 ---
-# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：在使用 MFC DAO 類別時直接呼叫 DAO
+# <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054:在使用 MFC DAO 類別時直接呼叫 DAO
 
 > [!NOTE]
-> Visual c + + 環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+> 視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
 
 使用 MFC DAO 資料庫類別時，可能會有一些情況需要直接使用 DAO。 通常，這不是如此，但 MFC 提供了一些協助程式機制，以協助進行直接 DAO 呼叫簡單，當合併使用 「 MFC 類別與 DAO 的直接呼叫。 進行直接的 DAO MFC managed 的 DAO 物件之方法的呼叫應該要求只需幾行程式碼。 如果您需要建立和使用的 DAO 物件*未*MFC 所管理，您必須做多一點的工作實際呼叫`Release`物件上。 這個技術提示說明當您可能想要直接呼叫 DAO、 MFC 協助程式功能可協助您，以及如何使用 DAO OLE 介面。 最後，這個附註會提供示範如何針對 DAO 安全性功能的直接呼叫 DAO 某些範例函式。
 

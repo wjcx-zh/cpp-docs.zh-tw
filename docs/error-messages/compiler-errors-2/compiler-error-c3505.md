@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
 ms.openlocfilehash: 5730102371d00ebaf3ae05fdefb70184b58d7c18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62400327"
 ---
 # <a name="compiler-error-c3505"></a>編譯器錯誤 C3505
 
@@ -25,4 +25,4 @@ ms.locfileid: "50481766"
 
 - [如何：在命令列啟用 64 位元 Visual C++ 工具組](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [如何：將 Visual C++ 專案設定成以 64 位元 x64 平台為目標](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [如何：將 Visual C++ 專案設定為以 64 位元 x64 平台為目標](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

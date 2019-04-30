@@ -10,15 +10,15 @@ helpviewer_keywords:
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
 ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387405"
 ---
 # <a name="how-to-declare-handles-in-native-types"></a>HOW TO：以原生類型宣告控制代碼
 
-您無法宣告原生類型中的控制代碼型別。 vcclr.h 提供型別安全包裝函式範本`gcroot`來參考 c + + 堆積的 CLR 物件。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌的型別，而不需要任何轉換。 不過，透過[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。
+您無法宣告原生類型中的控制代碼型別。 vcclr.h 提供型別安全包裝函式樣板`gcroot`參考的 CLR 物件，從C++堆積。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌的型別，而不需要任何轉換。 不過，透過[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。
 
 `gcroot`範本實作到記憶體回收堆積中使用的實值類別 System::Runtime::InteropServices::GCHandle，提供 「 handles 」 功能。 請注意，本身的控點無法回收，並釋放時不再使用中的解構函式中`gcroot`類別 （此解構函式無法呼叫手動）。 如果您具現化`gcroot`物件上原生堆積中，您必須呼叫刪除該資源上。
 

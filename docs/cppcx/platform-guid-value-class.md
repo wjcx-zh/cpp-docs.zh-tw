@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
 ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383317"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 
@@ -190,7 +190,7 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 則為 true *guid1*排序之前*guid2*。 排序是之後將每個字典編撰`Platform::Guid`好像是四個 32 位元不帶正負號值的陣列。 這不是 SQL Server 或.NET Framework 中，所使用的順序，也不是由字串表示詞彙編纂順序相同。
 
-這個運算子會提供讓`Guid`物件可以更輕鬆地使用 c + + 標準程式庫。
+這個運算子會提供以便`Guid`物件可以由更輕鬆地取用C++標準程式庫。
 
 ## <a name="operator-call"></a> Guid::operator() 運算子
 
@@ -208,4 +208,4 @@ A [GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
 
 ## <a name="see-also"></a>另請參閱
 
-[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)
+[平台命名空間](../cppcx/platform-namespace-c-cx.md)

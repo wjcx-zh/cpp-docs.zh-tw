@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3279
 ms.assetid: 639afc20-984c-4a95-be35-8bf9409f02d5
 ms.openlocfilehash: 5f39510ee9ec0e717d675aa8b396405bc33b4ea1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62381945"
 ---
 # <a name="compiler-error-c3279"></a>編譯器錯誤 C3279
 

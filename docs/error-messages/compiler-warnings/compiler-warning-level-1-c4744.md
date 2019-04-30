@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
 ms.openlocfilehash: 2118a32af8b99d35c1e1a6691561391ec5d2b8cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385416"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>編譯器警告 (層級 1) C4744
 
@@ -22,7 +22,7 @@ ms.locfileid: "50606007"
 檔案以 /gl 編譯時，才會發出 C4744  如需詳細資訊，請參閱 [/GL (整個程式最佳化)](../../build/reference/gl-whole-program-optimization.md)。
 
 > [!NOTE]
->  因為 c + + 中的變數名稱裝飾型別資訊，則 C4744 通常會發生 C （非 c + +） 檔案中。  這個範例後 （如下所示） 會編譯為 c + +，您會收到連結器錯誤 LNK2019。
+>  C4744 通常會發生在 C 中 (沒有C++) 檔案，因為在C++變數的名稱裝飾型別資訊。  範例 （如下所示） 時做為編譯C++，您會收到連結器錯誤 LNK2019。
 
 ## <a name="example"></a>範例
 

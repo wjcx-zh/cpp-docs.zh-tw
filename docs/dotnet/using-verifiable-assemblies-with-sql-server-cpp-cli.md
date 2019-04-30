@@ -5,15 +5,15 @@ helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
 ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384409"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>使用可驗證的組件搭配 SQL Server (C++/CLI)
 
-擴充預存程序，封裝成動態連結程式庫 (Dll)，可用來擴充 SQL Server 功能，透過使用 Visual c + + 開發的函式。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)和彙總函式 （例如，SUM 或 AVG）。
+擴充預存程序，封裝成動態連結程式庫 (Dll)，可用來擴充 SQL Server 功能，透過開發視覺效果的函式C++。 擴充預存程序會實作為 Dll 內的函式。 除了函數以外，擴充預存程序也可以定義[使用者定義型別](../cpp/classes-and-structs-cpp.md)和彙總函式 （例如，SUM 或 AVG）。
 
 當用戶端執行擴充預存程序時，SQL Server dll 的搜尋與擴充預存程序相關聯，並載入 DLL。 SQL Server 會呼叫要求的擴充預存程序，並在指定的安全性內容下執行它。 擴充預存程序，然後將結果集，並傳回至伺服器的參數。
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4835
 ms.assetid: d2e44c62-7b0e-4a45-943d-97903e27ed9d
 ms.openlocfilehash: 0427a97a9e368a19a40a8d1a552f7713e36f831e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380847"
 ---
 # <a name="compiler-warning-level-1-c4835"></a>編譯器警告 (層級 1) C4835
 
 'variable': 匯出資料的初始設定式將不會執行，直到主機組件中第一次執行 managed 程式碼
 
-當存取受管理的元件之間的資料，建議您不使用原生 c + + 匯入和匯出機制。 相反地，宣告您的資料成員內的 managed 類型，並參考中繼資料與`#using`在用戶端。 如需詳細資訊，請參閱 [#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)。
+當存取受管理的元件之間的資料，建議您不要使用原生C++匯入和匯出機制。 相反地，宣告您的資料成員內的 managed 類型，並參考中繼資料與`#using`在用戶端。 如需詳細資訊，請參閱 [#using 指示詞](../../preprocessor/hash-using-directive-cpp.md)。
 
 ## <a name="example"></a>範例
 

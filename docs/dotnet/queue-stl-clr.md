@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384721"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -93,7 +93,7 @@ template<typename Value,
 *值*<br/>
 受控制序列中項目的類型。
 
-*容器*<br/>
+*Container*<br/>
 基礎容器的類型。
 
 ## <a name="requirements"></a>需求
@@ -210,7 +210,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a> queue:: back (STL/CLR)
+## <a name="back"></a> queue::back (STL/CLR)
 
 存取最後一個項目。
 
@@ -358,7 +358,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> queue:: container_type (STL/CLR)
+## <a name="container_type"></a> queue::container_type (STL/CLR)
 
 基礎容器的類型。
 
@@ -512,7 +512,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a> queue:: front (STL/CLR)
+## <a name="front"></a> queue::front (STL/CLR)
 
 存取第一個項目。
 
@@ -778,7 +778,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a> queue::operator = (STL/CLR)
+## <a name="op_as"></a> queue::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -832,7 +832,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a> queue:: pop (STL/CLR)
+## <a name="pop"></a> queue::pop (STL/CLR)
 
 移除最後一個項目。
 
@@ -880,7 +880,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a> queue:: push (STL/CLR)
+## <a name="push"></a> queue::push (STL/CLR)
 
 加入新的最後一個項目。
 
@@ -921,7 +921,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a> queue:: queue (STL/CLR)
+## <a name="queue"></a> queue::queue (STL/CLR)
 
 建構容器配接器物件。
 
@@ -939,7 +939,7 @@ explicit queue(container_type% wrapped);
 *right*<br/>
 要複製的物件。
 
-*換行*<br/>
+*wrapped*<br/>
 若要使用的已包裝的容器。
 
 ### <a name="remarks"></a>備註
@@ -1117,7 +1117,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> queue:: size_type (STL/CLR)
+## <a name="size_type"></a> queue::size_type (STL/CLR)
 
 兩個項目之間帶正負號距離的類型。
 
@@ -1216,7 +1216,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a> queue:: value_type (STL/CLR)
+## <a name="value_type"></a> queue::value_type (STL/CLR)
 
 元素的類型。
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> 運算子 ！ = （佇列） (STL/CLR)
+## <a name="op_neq"></a> operator!= (queue) (STL/CLR)
 
 佇列不等於比較。
 
@@ -1332,7 +1332,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> 運算子&lt;（佇列） (STL/CLR)
+## <a name="op_lt"></a> operator&lt; (queue) (STL/CLR)
 
 佇列小於比較。
 
@@ -1403,7 +1403,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> 運算子&lt;= （佇列） (STL/CLR)
+## <a name="op_lteq"></a> operator&lt;= (queue) (STL/CLR)
 
 佇列小於或等於比較。
 
@@ -1474,7 +1474,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> 運算子 = = （佇列） (STL/CLR)
+## <a name="op_eq"></a> operator== (queue) (STL/CLR)
 
 佇列相等比較。
 
@@ -1545,7 +1545,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> 運算子&gt;（佇列） (STL/CLR)
+## <a name="op_gt"></a> operator&gt; (queue) (STL/CLR)
 
 大於比較的佇列。
 
@@ -1616,7 +1616,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> 運算子&gt;= （佇列） (STL/CLR)
+## <a name="op_gteq"></a> operator&gt;= (queue) (STL/CLR)
 
 排入佇列 大於或等於比較。
 

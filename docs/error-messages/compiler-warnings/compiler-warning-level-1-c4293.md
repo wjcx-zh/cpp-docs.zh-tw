@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4293
 ms.assetid: babecd96-eb51-41a5-9835-462c7a46dbad
 ms.openlocfilehash: 03520e2018efd611985c0eeca8bb2cac259ff3cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384214"
 ---
 # <a name="compiler-warning-level-1-c4293"></a>編譯器警告 (層級 1) C4293
 

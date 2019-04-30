@@ -10,11 +10,11 @@ helpviewer_keywords:
 - status bars [MFC], creating
 ms.assetid: 9aeaf290-7099-4762-a5ba-9c26705333c9
 ms.openlocfilehash: a2301301d0012bd93ffedd0452dec140174402e0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383859"
 ---
 # <a name="methods-of-creating-a-status-bar"></a>建立狀態列的方法
 
@@ -22,7 +22,7 @@ MFC 提供建立狀態列的兩個類別：[CStatusBar](../mfc/reference/cstatus
 
 `CStatusBarCtrl` 通常會導致較小的可執行檔，並且可能會想要使用`CStatusBarCtrl`如果您不想要整合的 MFC 架構中的 [狀態] 列。 如果您打算使用`CStatusBarCtrl`並整合到 MFC 架構的 [狀態] 列，您必須另花心思將傳達至 MFC 的控制項操作的狀態列。 這項通訊並不困難;不過，就是不必要的當您使用的其他工作`CStatusBar`。
 
-Visual c + + 提供兩種方式可利用通用狀態列。
+視覺化C++提供兩種方式可利用通用控制項狀態列。
 
 - 建立使用狀態列`CStatusBar`，然後呼叫[CStatusBar::GetStatusBarCtrl](../mfc/reference/cstatusbar-class.md#getstatusbarctrl)以取得存取權`CStatusBarCtrl`成員函式。
 

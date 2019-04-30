@@ -33,11 +33,11 @@ helpviewer_keywords:
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
 ms.openlocfilehash: 47d5835356863383b32baffc4475e01a652e9856
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59037181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387925"
 ---
 # <a name="string-editor-c"></a>字串編輯器 (C++)
 

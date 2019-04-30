@@ -3,15 +3,15 @@ title: 編譯器和連結器選項 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383356"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>編譯器和連結器選項 (C++/CX)
 
-環境變數，C + + /CX 編譯器選項，以及連結器選項支援的應用程式建置為 Windows 執行階段。
+環境變數， C++/CX 編譯器選項，以及支援的應用程式建置為 Windows 執行階段的連結器選項。
 
 ## <a name="library-path"></a>程式庫路徑
 

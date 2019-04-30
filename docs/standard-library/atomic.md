@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376597"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ ms.locfileid: "50600482"
 
 在部分平台上，如果不使用 `mutex` 鎖定，則可能無法有效率地實作某些類型的不可部分完成作業。 如果該類型上沒有不可部分完成作業使用鎖定，則不可部分完成類型是「無鎖定」。
 
-**C++11**：如果 `obj.is_lock_free()` 或 `atomic_is_lock_free(x)` 為 true，則在訊號處理常式中，您可以在 `obj` 物件上執行不可部分完成作業。
+**C + + 11**:在訊號處理常式中，您可以執行的物件上的不可部分完成作業`obj`如果`obj.is_lock_free()`或`atomic_is_lock_free(x)`成立。
 
 此類別[atomic_flag](../standard-library/atomic-flag-structure.md)提供的最小的不可部分完成類型可保存**bool**旗標。 它的作業永遠是無鎖定。
 

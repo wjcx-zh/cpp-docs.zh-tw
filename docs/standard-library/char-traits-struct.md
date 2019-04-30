@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379437"
 ---
 # <a name="chartraits-struct"></a>char_traits 結構
 
@@ -255,7 +255,7 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*（_t)*<br/>
+*_To*<br/>
 要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
 *_From*<br/>
@@ -384,7 +384,7 @@ EOF 字元。
 
 值，表示檔案結尾 （例如 EOF 或 WEOF）。
 
-C++ 標準指出此值不得對應至有效的 `char_type` 值。 Visual c + + 編譯器會強制執行這項條件約束類型**char**，而不是用於型別**wchar_t**。 以下範例即為示範。
+C++ 標準指出此值不得對應至有效的 `char_type` 值。 視覺效果C++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 以下範例即為示範。
 
 ### <a name="example"></a>範例
 
@@ -763,7 +763,7 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*（_t)*<br/>
+*_To*<br/>
 要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
 *_From*<br/>

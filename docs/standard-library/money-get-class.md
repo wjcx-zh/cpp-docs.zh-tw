@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383525"
 ---
 # <a name="moneyget-class"></a>money_get 類別
 
@@ -108,13 +108,13 @@ virtual iter_type do_get(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *Intl*<br/>
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*iosbase*<br/>
+*Iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
 *狀態*<br/>
@@ -190,13 +190,13 @@ iter_type get(iter_type first,
 *first*<br/>
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
 *Intl*<br/>
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*iosbase*<br/>
+*Iosbase*<br/>
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
 *狀態*<br/>
@@ -291,11 +291,11 @@ explicit money_get(size_t _Refs = 0);
 
 可能值 *_Refs*參數和其意義如下：
 
-- 0：物件的存留期由包含該物件的地區設定來管理。
+- 0:物件的存留期是由包含它的地區設定管理。
 
-- 1：物件的存留期必須以手動方式管理。
+- 1:物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \> 1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 

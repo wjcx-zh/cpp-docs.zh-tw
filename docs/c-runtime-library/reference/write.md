@@ -24,11 +24,11 @@ helpviewer_keywords:
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
 ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383408"
 ---
 # <a name="write"></a>_write
 
@@ -57,7 +57,7 @@ int _write(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_write**傳回實際寫入的位元組數目。 如果磁碟上剩餘的實際空間小於函式嘗試寫入至磁碟，緩衝區的大小 **_write**失敗，而且不會清除任何緩衝區的內容到磁碟。 傳回值為-1 表示錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 及**errno**設為三個值之一： **EBADF**，這表示檔案描述項無效，或檔案未開啟供寫入;**ENOSPC**，的表示沒有足夠的空間保留作業; 在裝置上或**EINVAL**，這表示*緩衝區*是 null 指標或奇數*計數*的位元組已傳遞給寫入 Unicode 模式中的檔案。
+如果成功， **_write**傳回實際寫入的位元組數目。 如果磁碟上剩餘的實際空間小於函式嘗試寫入至磁碟，緩衝區的大小 **_write**失敗，而且不會清除任何緩衝區的內容到磁碟。 傳回值為-1 表示錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 及**errno**設為三個值之一：**EBADF**，這表示檔案描述項無效，或檔案未開啟供寫入;**ENOSPC**，的表示沒有足夠的空間保留作業; 在裝置上或**EINVAL**，這表示*緩衝區*是 null 指標或奇數*計數*的位元組已傳遞給寫入 Unicode 模式中的檔案。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

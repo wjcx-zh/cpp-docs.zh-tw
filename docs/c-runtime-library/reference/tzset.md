@@ -24,11 +24,11 @@ helpviewer_keywords:
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
 ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385189"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -47,7 +47,7 @@ void _tzset( void );
 
 **_Tzset**函式會使用目前的環境變數設定**TZ**將值指派給三個全域變數： **_daylight**， **_timezone**，並 **_tzname**。 藉由使用這些變數[_ftime](ftime-ftime32-ftime64.md)並[localtime](localtime-localtime32-localtime64.md)函式來進行國際標準時間 (UTC) 的修正，本地時間、 to 和 by[時間](time-time32-time64.md)函式UTC 的系統時間計算。 使用下列語法來設定**TZ**環境變數：
 
-> **設定 TZ =**_tzn_ \[ **+** &#124; **-**]*hh* \[ **:**_mm_\[**:**_ss_]] [*dzn*]
+> **set TZ=**_tzn_ \[**+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ][*dzn*]
 
 |參數|描述|
 |-|-|
@@ -62,7 +62,7 @@ void _tzset( void );
 
 例如，若要設定**TZ**環境變數，以對應至目前的時區，在德國，在命令列上輸入下列：
 
-> **設定 TZ = GST 1GDT**
+> **set TZ=GST-1GDT**
 
 此命令會使用 GST 表示德國標準時間，並假設 UTC 比德國晚一小時 (也就是說，德國比 UTC 快一個小時) 以及德國會遵守日光節約時間。
 

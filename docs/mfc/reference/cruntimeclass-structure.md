@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372045"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 結構
 
@@ -53,7 +53,7 @@ struct CRuntimeClass
 
 當需要額外的類型檢查函式引數時，或者當您必須撰寫特殊用途的物件類別為基礎的程式碼時，則能夠在執行階段判斷物件的類別會很有用。 C++ 語言並不直接支援執行階段類別資訊。
 
-`CRuntimeClass` 相關的 c + + 物件，例如變數的指標，提供有關`CRuntimeClass`基底類別和相關類別的 ASCII 類別名稱。 此結構也會實作可用來動態建立物件，指定物件的型別，藉由使用熟悉的名稱，並判斷是否相關聯的類別會衍生自特定類別的各種功能。
+`CRuntimeClass` 提供相關資訊C++物件，例如指標`CRuntimeClass`基底類別和相關類別的 ASCII 類別名稱。 此結構也會實作可用來動態建立物件，指定物件的型別，藉由使用熟悉的名稱，並判斷是否相關聯的類別會衍生自特定類別的各種功能。
 
 如需有關使用`CRuntimeClass`，請參閱文章[存取執行階段類別資訊](../../mfc/accessing-run-time-class-information.md)。
 

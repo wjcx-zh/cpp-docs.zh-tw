@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, message
 ms.assetid: 67414f25-ed47-4079-a5dc-21d9d1a39754
 ms.openlocfilehash: e9383238fd308ec59a9767f56af1c07fc3cfcf07
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59030202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371733"
 ---
 # <a name="message"></a>訊息
 傳送字串常值至標準輸出，而不終止編譯。

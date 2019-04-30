@@ -8,11 +8,11 @@ helpviewer_keywords:
 - class members
 ms.assetid: 8802cfa9-705d-4f37-acde-245d6838010c
 ms.openlocfilehash: 8edfadefdacf94685952d31f2eaf83e8593eaef8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386105"
 ---
 # <a name="class-member-overview"></a>類別成員概觀
 
@@ -92,7 +92,7 @@ int TestRun::_instances{ 0 };
 
 ## <a name="member-accessibility"></a>成員存取範圍
 
-成員清單中所宣告類別的成員。 類別的成員清單可以分成任意數目的**私人**，**保護**並**公用**區段使用稱為存取規範的關鍵字。  冒號 **:** 必須遵循的存取規範。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制 （c + +）](../cpp/member-access-control-cpp.md)。
+成員清單中所宣告類別的成員。 類別的成員清單可以分成任意數目的**私人**，**保護**並**公用**區段使用稱為存取規範的關鍵字。  冒號 **:** 必須遵循的存取規範。  這些區段不需要是連續的，也就是說，這些關鍵字中任何一個都可以在成員清單中出現多次。  關鍵字會指定到下一個存取指定名稱，或右大括號之前所有成員的存取權限。 如需詳細資訊，請參閱 <<c0> [ 成員存取控制 (C++)](../cpp/member-access-control-cpp.md)。</c0>
 
 ## <a name="static-members"></a>靜態成員
 

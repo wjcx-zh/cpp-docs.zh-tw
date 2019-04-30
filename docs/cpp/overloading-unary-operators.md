@@ -12,11 +12,11 @@ helpviewer_keywords:
 - plus operator
 ms.assetid: 7683ef08-42a4-4283-928f-d3dd4f3ab4c0
 ms.openlocfilehash: 802380bad59534e8402020142e394b3948032476
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377220"
 ---
 # <a name="overloading-unary-operators"></a>多載一元運算子
 
@@ -24,7 +24,7 @@ ms.locfileid: "50497211"
 
 1. `!` ([邏輯 NOT](../cpp/logical-negation-operator-exclpt.md))
 
-1. `&` ([傳址](../cpp/address-of-operator-amp.md))
+1. `&` ([address-of](../cpp/address-of-operator-amp.md))
 
 1. `~` ([一進位補數](../cpp/one-s-complement-operator-tilde.md))
 
@@ -46,13 +46,13 @@ ms.locfileid: "50497211"
 
 下列規則對於其他所有一元運算子皆成立。 若要將一元運算子函式宣告為非靜態成員，您必須以此格式進行宣告：
 
-> *ret 型別***運算子** *op* **（)**
+> *ret-type* **operator** *op* **()**
 
 何處*ret 類型*是傳回的型別並*op*其中一個運算子會列在上表中。
 
 若要將一元運算子函式宣告為全域函式，您必須以此格式進行宣告：
 
-> *ret 型別***運算子** *op* **(** *arg* **)**
+> *ret-type* **operator** *op* **(** *arg* **)**
 
 其中*ret 類型*並*op*成員運算子函式中所述， *arg*是所要執行的類別類型的引數。
 

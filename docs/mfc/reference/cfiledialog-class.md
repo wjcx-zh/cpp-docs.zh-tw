@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385361"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -572,7 +572,7 @@ explicit CFileDialog(
 
 指定使用預設延伸模組*lpszDefExt*可能不會產生的行為，您預期，因為它是很少可預測哪些延伸模組會對使用者的電腦中的檔案關聯。 如果您需要更充分掌控附加的預設延伸模組，您可以衍生自己的類別，從`CFileDialog`，並覆寫`CFileDialog::OnFileNameOK`方法，以執行您自己的延伸模組處理。
 
-若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如: 
+若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如：
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 

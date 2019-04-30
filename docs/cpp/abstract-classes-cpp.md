@@ -8,11 +8,11 @@ helpviewer_keywords:
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
 ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385085"
 ---
 # <a name="abstract-classes-c"></a>抽象類別 (C++)
 
@@ -53,7 +53,7 @@ private:
 
 您可以為抽象類別定義純虛擬函式，但是只能使用下列語法直接呼叫：
 
-*抽象類別名稱*::*函式名稱*（)
+*abstract-class-name*::*function-name*()
 
 這在設計基底類別包含純虛擬解構函式的類別階層架構時很有幫助，因為基底類別解構函式會一律在終結物件的處理序中呼叫。 參考下列範例：
 

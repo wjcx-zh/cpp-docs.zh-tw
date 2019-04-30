@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4999
 ms.assetid: 79db8bcb-6404-4451-a374-8cd184d7c4b5
 ms.openlocfilehash: dc7e61cd77df102ac816664c937e74e2d1c25721
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384007"
 ---
 # <a name="compiler-warning-level-1-c4999"></a>編譯器警告 (層級 1) C4999
 

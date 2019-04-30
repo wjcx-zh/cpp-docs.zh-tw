@@ -9,11 +9,11 @@ helpviewer_keywords:
 - pragmas, data_seg
 ms.assetid: 65c66466-4c98-494f-93af-106beb4caf78
 ms.openlocfilehash: 414fc542aa3f84f985e326960d8cf73b67fd1580
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389303"
 ---
 # <a name="dataseg"></a>data_seg
 
@@ -38,11 +38,11 @@ ms.locfileid: "50456377"
 
 *識別項*可讓一推出多筆資料錄**pop**命令。
 
-*「 區段名稱 」*<br/>
+*"segment-name"*<br/>
 （選擇性）區段名稱。 當搭配**pop**，時會推出堆疊並*區段名稱*會變成作用中區段名稱。
 
-*「 區段類別 」*<br/>
-（選擇性）包含與 c + + 2.0 以前版本的相容性。 會忽略此項。
+*"segment-class"*<br/>
+（選擇性）包含與相容性C++早於 2.0 版。 會忽略此項。
 
 ## <a name="remarks"></a>備註
 

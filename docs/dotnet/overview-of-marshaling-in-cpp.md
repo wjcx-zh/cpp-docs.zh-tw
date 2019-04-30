@@ -11,11 +11,11 @@ helpviewer_keywords:
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
 ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384734"
 ---
 # <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
 
@@ -25,7 +25,7 @@ ms.locfileid: "57746821"
 |---------------|-----------------|
 |marshal.h|`marshal_context` 類別和內容免費封送處理函式|
 |marshal_atl.h| ATL 類型封送處理函式|
-|marshal_cppstd.h|標準 c + + 類型封送處理函式|
+|marshal_cppstd.h|封送處理標準函式C++類型|
 |marshal_windows.h|Windows 類型封送處理函式|
 
 預設路徑**msclr**資料夾是類似下面的版本視您擁有和組建編號：

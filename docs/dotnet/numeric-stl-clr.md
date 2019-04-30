@@ -18,11 +18,11 @@ helpviewer_keywords:
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
 ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384799"
 ---
 # <a name="numeric-stlclr"></a>numeric (STL/CLR)
 
@@ -66,7 +66,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫的數值函式相同`accumulate`。 如需詳細資訊，請參閱 <<c0> [ 累積](../standard-library/numeric-functions.md#accumulate)。
+此函式的行為與相同C++標準程式庫數值函式`accumulate`。 如需詳細資訊，請參閱 <<c0> [ 累積](../standard-library/numeric-functions.md#accumulate)。
 
 ## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 
@@ -85,7 +85,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫的數值函式相同`adjacent_difference`。 如需詳細資訊，請參閱 < [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)。
+此函式的行為與相同C++標準程式庫數值函式`adjacent_difference`。 如需詳細資訊，請參閱 < [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)。
 
 ## <a name="inner_product"></a> inner_product (STL/CLR)
 
@@ -105,7 +105,7 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫的數值函式相同`inner_product`。 如需詳細資訊，請參閱 < [inner_product](../standard-library/numeric-functions.md#inner_product)。
+此函式的行為與相同C++標準程式庫數值函式`inner_product`。 如需詳細資訊，請參閱 < [inner_product](../standard-library/numeric-functions.md#inner_product)。
 
 ## <a name="partial_sum"></a> partial_sum (STL/CLR)
 
@@ -123,4 +123,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>備註
 
-此函式的行為與 c + + 標準程式庫的數值函式相同`partial_sum`。 如需詳細資訊，請參閱 < [partial_sum](../standard-library/numeric-functions.md#partial_sum)。
+此函式的行為與相同C++標準程式庫數值函式`partial_sum`。 如需詳細資訊，請參閱 < [partial_sum](../standard-library/numeric-functions.md#partial_sum)。

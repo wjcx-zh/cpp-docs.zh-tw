@@ -18,11 +18,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
 ms.openlocfilehash: f3dea68deaae73313fe389be49e8bbed7da3c93a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58767177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383831"
 ---
 # <a name="collections"></a>集合
 
@@ -98,7 +98,7 @@ MFC 程式庫提供集合類別管理物件群組。 這些類別有兩種類型
 
 - [選擇集合類別的建議](../mfc/recommendations-for-choosing-a-collection-class.md)
 
-- [如何：建立類型安全集合](../mfc/how-to-make-a-type-safe-collection.md)
+- [如何：建立型別安全集合](../mfc/how-to-make-a-type-safe-collection.md)
 
 - [建立堆疊和佇列集合](../mfc/creating-stack-and-queue-collections.md)
 

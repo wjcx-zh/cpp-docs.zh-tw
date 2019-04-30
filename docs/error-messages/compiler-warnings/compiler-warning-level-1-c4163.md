@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4163
 ms.assetid: b08413fd-03fc-4f41-9167-a98976ac12f2
 ms.openlocfilehash: 737cf7ad00bfefd429792eed3f730844789e0c02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391760"
 ---
 # <a name="compiler-warning-level-1-c4163"></a>編譯器警告 (層級 1) C4163
 

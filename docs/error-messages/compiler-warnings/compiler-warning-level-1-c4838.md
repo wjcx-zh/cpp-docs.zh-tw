@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
 ms.openlocfilehash: dcb7062c751320a9f9c612b42caf6d018047d8d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380834"
 ---
 # <a name="compiler-warning-level-1-c4838"></a>編譯器警告 （層級 1） C4838
 
@@ -19,7 +19,7 @@ ms.locfileid: "50532960"
 
 使用彙總或清單初始化時，找不到隱含的縮小轉換。
 
-C 語言允許隱含的縮小轉換在指派和初始化，以及 c + + 會遵循花色，即使未預期的縮小是許多程式碼錯誤的原因。 若要讓程式碼更安全，c + + 標準需要診斷訊息時縮小轉換，就會發生在初始設定清單中。 Visual c + + 中是診斷[編譯器錯誤 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md)使用統一初始化語法支援從 Visual Studio 2015 開始時。 編譯器會產生警告 C4838 時使用 清單 或 Visual Studio 2013 所支援的彙總初始化語法。
+C 語言允許隱含的縮小轉換在指派和初始化，並C++符合如下所示，即使未預期的縮小是許多程式碼錯誤的原因。 若要讓程式碼更安全，C++標準要求的診斷訊息，初始化清單中的縮小轉換發生時。 在視覺效果C++，是診斷[編譯器錯誤 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md)使用統一初始化語法支援從 Visual Studio 2015 開始時。 編譯器會產生警告 C4838 時使用 清單 或 Visual Studio 2013 所支援的彙總初始化語法。
 
 當您知道已轉換值的可能範圍可放入目標時，縮小轉換可以是沒問題。 在此情況下，您知道多個與編譯器。 若要刻意縮小轉換，讓您自己的意願明確使用靜態轉型。 否則，這則警告訊息幾乎都表示您的程式碼發生錯誤。 您可以藉由確定您初始化的物件具有夠大，無法處理輸入的類型來修正此問題。
 

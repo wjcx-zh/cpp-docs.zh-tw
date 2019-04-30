@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384760"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -80,7 +80,7 @@ template<typename Value,
 *值*<br/>
 受控制序列中項目的類型。
 
-*容器*<br/>
+*Container*<br/>
 基礎容器的類型。
 
 ## <a name="requirements"></a>需求
@@ -575,7 +575,7 @@ int main()
 c a b
 ```
 
-## <a name="op_as"></a> priority_queue::operator = (STL/CLR)
+## <a name="op_as"></a> priority_queue::operator= (STL/CLR)
 
 取代受控制的序列。
 
@@ -707,10 +707,10 @@ template<typename InIt>
 *first*<br/>
 若要插入的範圍的開頭。
 
-*最後一個*<br/>
+*last*<br/>
 若要插入的範圍的結尾。
 
-*預測*<br/>
+*pred*<br/>
 排序受控制序列的述詞。
 
 *right*<br/>

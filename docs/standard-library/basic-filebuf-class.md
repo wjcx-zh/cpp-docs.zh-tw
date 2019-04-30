@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377143"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 類別
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 要開啟之檔案的名稱。
 
-*模式 （_m)*<br/>
+*_Mode*<br/>
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ basic_filebuf<Elem, Tr> *open(
 
 如果**mode & ios_base:: binary**為非零值，此函式會將附加`b`到`strmode`開啟二進位資料流，而不是文字資料流。 接著會儲存所傳回的值`fopen`在檔案指標`fp`。 如果 **mode & ios_base::ate** 為非零，而且檔案指標不是 Null 指標，則此函式會呼叫 `fseek`( **fp**, 0, `SEEK_END`) 以在檔案結尾放置資料流。 如果該定位作業失敗，函式會呼叫[關閉 ](#close)( `fp`)，並將 null 指標儲存在檔案指標。
 
-如果檔案指標不是 Null 指標，則此函式會判斷檔案轉換 Facet：`use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供 [underflow](#underflow) 和 [overflow](#overflow) 使用。
+如果檔案指標不是 null 指標，函式會判斷檔案轉換 facet:`use_facet`< `codecvt`< **Elem**， `char`， **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供[反向溢位](#underflow)和[溢位](#overflow)。
 
 如果檔案指標為 Null 指標，則函式會傳回 Null 指標。 否則，它會傳回 **this**。
 

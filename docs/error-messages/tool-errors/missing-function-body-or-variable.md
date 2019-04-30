@@ -5,12 +5,12 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: c287d804df3222475d7cf32c6eb025f642dfb913
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378436"
 ---
 # <a name="missing-function-body-or-variable"></a>遺漏函式主體或變數
 
@@ -20,7 +20,7 @@ ms.locfileid: "59031851"
 
 在 main 函式呼叫會造成 LNK2019，因為原型，可讓編譯器將函式存在。  連結器會尋找它不會。
 
-```
+```cpp
 // LNK2019_MFBV.cpp
 // LNK2019 expected
 void DoSomething(void);
@@ -33,7 +33,7 @@ int main() {
 
 在C++，請確定您在類別定義中包含的類別，並不只是原型的特定函式的實作。 如果您正在定義的類別標頭檔之外，務必要包含的函式之前的類別名稱 (`Classname::memberfunction`)。
 
-```
+```cpp
 // LNK2019_MFBV_2.cpp
 // LNK2019 expected
 struct A {

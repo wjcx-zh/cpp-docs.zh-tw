@@ -7,11 +7,11 @@ helpviewer_keywords:
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
 ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740279"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345034"
 ---
 # <a name="member-access-control-c"></a>成員存取控制 (C++)
 
@@ -195,7 +195,7 @@ int Derived2::ShowCount()
 
 ## <a name="access-to-virtual-functions"></a>存取虛擬函式
 
-存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式取決於用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如: 
+存取控制套用至[虛擬](../cpp/virtual-cpp.md)函式取決於用來進行呼叫的函式的類型。 覆寫函式的宣告不會影響特定類型的存取控制。 例如：
 
 ```cpp
 // access_to_virtual_functions.cpp

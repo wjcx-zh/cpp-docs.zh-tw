@@ -8,11 +8,11 @@ helpviewer_keywords:
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
 ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176351"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345940"
 ---
 # <a name="multiple-base-classes"></a>多個基底類別
 

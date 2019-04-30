@@ -5,11 +5,11 @@ helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
 ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177078"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345837"
 ---
 # <a name="overview-of-declarators"></a>宣告子概觀
 
@@ -157,16 +157,16 @@ int a, *b, c[5], **d, &e=a;
 - `declarator` 會定義為下列其中一項：
 
   - 識別項
-  - 限定名稱
-  - 宣告子 （引數清單） [cv-qualfiers] [例外狀況規格]
-  - 宣告子 [[常數運算式]]
-  - 指標運算子的宣告子
+  - qualified-name
+  - declarator ( argument-list ) [cv-qualfiers] [exception-spec]
+  - declarator [ [ constant-expression ] ]
+  - pointer-operator declarator
   - （宣告）
 
 - 並*指標運算子*是其中一個：
 
-  - \* [cv 限定詞]
-  - & [cv 限定詞]:: 巢狀名稱規範\*[cv 限定詞]
+  - \* [cv-qualifiers]
+  - & [cv-qualifiers] ::nested-name-specifier \* [cv-qualifiers]
 
 由於宣告子可能包含其他宣告子，因此可以使用上述規則建構較複雜的衍生類型 (例如指標的陣列、傳回函式指標陣列的函式)。  若要進行建構的每個步驟，可從表示基底資料類型的識別項，以及使用先前的運算式做為 `declarator`，套用上述語法規則開始。  套用語法規則的順序應該與以英文所述運算式的方式相反。  如果套用*指標運算子*語法規則的陣列或函式的運算式，會使用括號，如果您想要的指標陣列或函式，如在下表中的最後一個資料列所示。
 
@@ -179,4 +179,4 @@ int a, *b, c[5], **d, &e=a;
 |10 的陣列|`(*i)[10]`|4|
 |指向|`*((*i)[10])`|6，然後 5|
 
-如果使用多個指標、參考、陣列或函式修飾詞，宣告子可能會變得相當複雜。  本主題[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)描述如何讀取更複雜的宣告子語法。  主題是適用於 C 和 c + +，雖然 c + +，隨處\*用來表示的指標，限定的名稱，例如 MyClass::\*可用來指定類別成員的指標。
+如果使用多個指標、參考、陣列或函式修飾詞，宣告子可能會變得相當複雜。  本主題[解譯更複雜的宣告子](../c-language/interpreting-more-complex-declarators.md)描述如何讀取更複雜的宣告子語法。  主題不適用於這兩個 C 和C++，不過在C++、 任何位置\*用來表示的指標，限定的名稱，例如 MyClass::\*可用來指定類別的成員指標。

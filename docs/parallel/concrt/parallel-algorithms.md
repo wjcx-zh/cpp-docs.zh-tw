@@ -5,15 +5,15 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262866"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346344"
 ---
 # <a name="parallel-algorithms"></a>平行演算法
 
-平行模式程式庫 (PPL) 提供同時資料集合執行工作的演算法。 這些演算法類似 c + + 標準程式庫所提供。
+平行模式程式庫 (PPL) 提供同時資料集合執行工作的演算法。 這些演算法類似於所提供的C++標準程式庫。
 
 平行演算法所組成的並行執行階段中的現有功能。 例如， [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法會使用[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件，以執行平行迴圈反覆項目。 `parallel_for`提供可用的運算資源的數目以最佳方式運作的演算法的資料分割。
 
@@ -84,9 +84,9 @@ ms.locfileid: "57262866"
 
 ##  <a name="parallel_for_each"></a> Parallel_for_each 演算法
 
-[Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法反覆執行的容器，例如 c + + 標準程式庫提供，以平行方式執行的工作。 它會使用相同的資料分割邏輯的`parallel_for`演算法使用。
+[Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法執行的工作反覆執行的容器，例如所提供的C++標準程式庫，以平行方式。 它會使用相同的資料分割邏輯的`parallel_for`演算法使用。
 
-`parallel_for_each`演算法類似於 c + + 標準程式庫[std:: for_each](../../standard-library/algorithm-functions.md#for_each)演算法，不同之處在於`parallel_for_each`演算法同時執行的工作。 像其他平行演算法，`parallel_for_each`不會以特定順序執行的工作。
+`parallel_for_each`演算法類似於C++標準程式庫[std:: for_each](../../standard-library/algorithm-functions.md#for_each)演算法，不同之處在於`parallel_for_each`演算法同時執行的工作。 像其他平行演算法，`parallel_for_each`不會以特定順序執行的工作。
 
 雖然`parallel_for_each`演算法適用於正向迭代器和隨機存取迭代器，它執行得更好的隨機存取迭代器。
 
@@ -134,7 +134,7 @@ ms.locfileid: "57262866"
 
 ##  <a name="parallel_transform_reduce"></a> Parallel_transform 和 parallel_reduce 演算法
 
-[Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)並[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法是 c + + 標準程式庫演算法的平行版本[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分別。 並行執行階段版本會表現的 c + + 標準程式庫版本，不同之處在於的作業順序不會決定，因為它們，以平行方式執行。 當您使用夠大，無法取得效能和延展性好處，從平行處理一組時，請使用這些演算法。
+[Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)並[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法會平行版本的C++標準程式庫演算法[std::transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分別。 並行執行階段版本行為類似C++標準程式庫版本不同之處在於的作業順序不會決定，因為它們，以平行方式執行。 當您使用夠大，無法取得效能和延展性好處，從平行處理一組時，請使用這些演算法。
 
 > [!IMPORTANT]
 >  `parallel_transform`和`parallel_reduce`演算法支援的只有隨機存取，雙向，和正向迭代器，因為這些迭代器會產生穩定的記憶體位址。 此外，這些迭代器都必須產生非`const`左值。
@@ -183,7 +183,7 @@ ms.locfileid: "57262866"
 
 ###  <a name="map_reduce_example"></a> 範例：執行撰寫對應和歸納以平行方式
 
-A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用 c + + 標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，對於許多的問題，您可以使用`parallel_transform`演算法以平行方式執行 「 對應 」 作業和`parallel_reduce`演算法以平行方式執行縮減作業。
+A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用C++標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，對於許多的問題，您可以使用`parallel_transform`演算法以平行方式執行 「 對應 」 作業和`parallel_reduce`演算法以平行方式執行縮減作業。
 
 下列範例會比較循序和平行計算質數的數字的總和所花費的時間。 對應階段轉換非質數值 0，並減少階段總和的值。
 
@@ -241,7 +241,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 
 |演算法|描述|排序的機制|排序穩定性|記憶體需求|時間複雜性|迭代器存取|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|一般用途比較為基礎的排序。|比較為基礎 （遞增）|不穩定|無|O((N/P)log(N/P) + 2N((P-1)/P))|隨機|
+|`parallel_sort`|一般用途比較為基礎的排序。|比較為基礎 （遞增）|不穩定|None|O((N/P)log(N/P) + 2N((P-1)/P))|隨機|
 |`parallel_buffered_sort`|更快一般用途比較為基礎的 sort 需要 o （n） 空間。|比較為基礎 （遞增）|不穩定|需要額外的 o （n） 空間|O((N/P)log(N))|隨機|
 |`parallel_radixsort`|整數索引鍵為基礎的 sort 需要 o （n） 空間。|雜湊式|穩定|需要額外的 o （n） 空間|O(N/P)|隨機|
 
@@ -252,7 +252,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 這些平行排序演算法遵循的規則的取消和例外狀況處理。 如需有關取消和例外狀況處理並行執行階段的詳細資訊，請參閱[取消平行演算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)並[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
 > [!TIP]
->  這些平行排序演算法支援移動語意。 您可以定義的移動指派運算子，以便更有效率地進行交換作業。 如需有關移動語意和移動指派運算子的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，並[移動建構函式和移動指派運算子 （c + +）](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您未提供的移動指派運算子或交換函式，排序演算法會使用複製建構函式。
+>  這些平行排序演算法支援移動語意。 您可以定義的移動指派運算子，以便更有效率地進行交換作業。 如需有關移動語意和移動指派運算子的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，並[移動建構函式和移動指派運算子 (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您未提供的移動指派運算子或交換函式，排序演算法會使用複製建構函式。
 
 下列基本範例示範如何使用`parallel_sort`來排序`vector`的`int`值。 根據預設，`parallel_sort`會使用[std:: less<>](../../standard-library/less-struct.md)來比較值。
 
@@ -311,7 +311,7 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[如何：撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|示範如何使用`parallel_for`演算法來執行矩陣乘法。|
 |[如何：撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|示範如何使用`parallel_for_each`演算法來計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)以平行方式的物件。|

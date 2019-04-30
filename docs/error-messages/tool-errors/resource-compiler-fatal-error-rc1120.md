@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RC1120
 ms.assetid: 4e462931-e42e-42e3-8bfc-847677194286
 ms.openlocfilehash: eff46ddee118c3355e548c73220b407db0561e36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374246"
 ---
 # <a name="resource-compiler-fatal-error-rc1120"></a>資源編譯器嚴重錯誤 RC1120
 

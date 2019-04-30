@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376665"
 ---
 # <a name="atomic-structure"></a>atomic 結構
 
@@ -30,14 +30,14 @@ struct atomic;
 |[atomic](#atomic)|建構不可部分完成物件。|
 |**運算子**||
 |[atomic:: operator Ty](#op_ty)|讀取並傳回預存值。 ([atomic::load](#load))|
-|[atomic:: operator =](#op_eq)|使用指定的值來取代預存值。 ([atomic::store](#store))|
-|[atomic:: operator + +](#op_inc)|遞增預存值。 僅供整數和指標特製化使用。|
-|[atomic:: operator + =](#op_add_eq)|將指定的值加入預存值。 僅供整數和指標特製化使用。|
-|[atomic:: operator-](#op_dec)|遞減預存值。 僅供整數和指標特製化使用。|
-|[atomic:: operator =](#op_sub_eq)|將預存值減去指定的值。 僅供整數和指標特製化使用。|
-|[atomic:: operator （& s) =](#op_and_eq)|執行位元和指定的值和預存的值上。 僅供整數特製化使用。|
-|[atomic:: operator&#124;=](#op_or_eq)|執行位元或指定的值和預存的值上。 僅供整數特製化使用。|
-|[atomic:: operator ^ =](#op_xor_eq)|執行位元互斥或指定的值和預存的值上。 僅供整數特製化使用。|
+|[atomic::operator=](#op_eq)|使用指定的值來取代預存值。 ([atomic::store](#store))|
+|[atomic::operator++](#op_inc)|遞增預存值。 僅供整數和指標特製化使用。|
+|[atomic::operator+=](#op_add_eq)|將指定的值加入預存值。 僅供整數和指標特製化使用。|
+|[atomic::operator--](#op_dec)|遞減預存值。 僅供整數和指標特製化使用。|
+|[atomic::operator-=](#op_sub_eq)|將預存值減去指定的值。 僅供整數和指標特製化使用。|
+|[atomic::operator&=](#op_and_eq)|執行位元和指定的值和預存的值上。 僅供整數特製化使用。|
+|[atomic::operator&#124;=](#op_or_eq)|執行位元或指定的值和預存的值上。 僅供整數特製化使用。|
+|[atomic::operator^=](#op_xor_eq)|執行位元互斥或指定的值和預存的值上。 僅供整數特製化使用。|
 |**函式**||
 |[compare_exchange_strong](#compare_exchange_strong)|會執行*atomic_compare_and_exchange*上的作業**這**，並傳回結果。|
 |[compare_exchange_weak](#compare_exchange_weak)|會執行*weak_atomic_compare_and_exchange*上的作業**這**，並傳回結果。|
@@ -47,7 +47,7 @@ struct atomic;
 |[fetch_sub](#fetch_sub)|將預存值減去指定的值。|
 |[fetch_xor](#fetch_xor)|執行位元互斥或指定的值和預存的值上。|
 |[is_lock_free](#is_lock_free)|指定是否在不可部分完成的作業**這**會*無鎖定*。 如果該類型上沒有不可部分完成作業使用鎖定，則不可部分完成類型是「無鎖定」。|
-|[負載](#load)|讀取並傳回預存值。|
+|[load](#load)|讀取並傳回預存值。|
 |[store](#store)|使用指定的值來取代預存值。|
 
 ## <a name="remarks"></a>備註
@@ -60,11 +60,11 @@ struct atomic;
 
 ||||
 |-|-|-|
-|**不可部分完成\<char >**|**不可部分完成\<char&lt;3 >**|**不可部分完成\<unsigned char >**|
-|**不可部分完成\<char16_t >**|**不可部分完成\<char32_t >**|**不可部分完成\<wchar_t >**|
-|**不可部分完成\<簡短 >**|**不可部分完成\<unsigned short >**|**不可部分完成\<int >**|
-|**不可部分完成\<不帶正負號的 int >**|**不可部分完成\<長 >**|**不可部分完成\<不帶正負號長時間 >**|
-|**不可部分完成\<long long >**|**不可部分完成\<unsigned long long >**|
+|**atomic\<char>**|**不可部分完成\<char&lt;3 >**|**不可部分完成\<unsigned char >**|
+|**atomic\<char16_t>**|**atomic\<char32_t>**|**atomic\<wchar_t>**|
+|**atomic\<short>**|**不可部分完成\<unsigned short >**|**atomic\<int>**|
+|**不可部分完成\<不帶正負號的 int >**|**atomic\<long>**|**不可部分完成\<不帶正負號長時間 >**|
+|**atomic\<long long>**|**不可部分完成\<unsigned long long >**|
 
 整數特製化衍生自對應的 `atomic_integral` 類型。 例如， **atomic\<不帶正負號的 int >** 衍生自`atomic_uint`。
 
@@ -113,7 +113,7 @@ atomic<Ty>::operator Ty() const noexcept;
 
 此運算子會套用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_eq"></a> atomic:: operator =
+## <a name="op_eq"></a> atomic::operator=
 
 儲存指定的值。
 
@@ -135,7 +135,7 @@ A *Ty*物件。
 
 傳回*值*。
 
-## <a name="op_inc"></a> atomic:: operator + +
+## <a name="op_inc"></a> atomic::operator++
 
 遞增預存值。 僅供整數和指標特製化使用。
 
@@ -150,7 +150,7 @@ Ty atomic<Ty>::operator++() noexcept;
 
 前兩個運算子會傳回遞增後的值;最後兩個運算子會傳回遞增之前的值。 使用運算子`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_add_eq"></a> atomic:: operator + =
+## <a name="op_add_eq"></a> atomic::operator+=
 
 將指定的值加入預存值。 僅供整數和指標特製化使用。
 
@@ -176,7 +176,7 @@ A *Ty*物件，其中包含相加的結果。
 
 這個運算子會使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_dec"></a> atomic:: operator-
+## <a name="op_dec"></a> atomic::operator--
 
 遞減預存值。 僅供整數和指標特製化使用。
 
@@ -191,7 +191,7 @@ Ty atomic<Ty>::operator--() noexcept;
 
 前兩個運算子會傳回遞減的值;最後兩個運算子會傳回遞減之前的值。 使用運算子`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_sub_eq"></a> atomic:: operator =
+## <a name="op_sub_eq"></a> atomic::operator-=
 
 將預存值減去指定的值。 僅供整數和指標特製化使用。
 
@@ -217,7 +217,7 @@ A *Ty*物件，包含減法運算的結果。
 
 這個運算子會使用`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_and_eq"></a> atomic:: operator （& s) =
+## <a name="op_and_eq"></a> atomic::operator&=
 
 執行位元和指定的值和預存的值上的**\*這**。 僅供整數特製化使用。
 
@@ -243,7 +243,7 @@ atomic<Ty>::operator&= (
 
 此運算子會執行的讀取-修改-寫入作業的預存的值取代**\*這**的位元以及*值*和目前的值儲存在 **\*這**，條件約束內`memory_order_seq_cst` [memory_order](atomic-enums.md)。
 
-## <a name="op_or_eq"></a> atomic:: operator&#124;=
+## <a name="op_or_eq"></a> atomic::operator&#124;=
 
 執行位元或在指定的值和預存的值**\*這**。 僅供整數特製化使用。
 
@@ -295,7 +295,7 @@ atomic<Ty>::operator^= (
 
 此運算子會執行的讀取-修改-寫入作業的預存的值取代**\*這**或與位元互斥*值*和目前的值儲存在**\*這**，條件約束內`memory_order_seq_cst` [memory_order](atomic-enums.md)條件約束。
 
-## <a name="compare_exchange_strong"></a> atomic:: compare_exchange_strong
+## <a name="compare_exchange_strong"></a> atomic::compare_exchange_strong
 
 執行不可部分完成比較和交換作業**\*這**。
 
@@ -332,7 +332,7 @@ bool compare_exchange_strong(
 *值*<br/>
 型別的值*Ty*。
 
-*Diffgr:id="order1*<br/>
+*Order1*<br/>
 第一個`memory_order`引數。
 
 *Order2*<br/>
@@ -387,7 +387,7 @@ bool compare_exchange_weak(
 *值*<br/>
 型別的值*Ty*。
 
-*Diffgr:id="order1*<br/>
+*Order1*<br/>
 第一個`memory_order`引數。
 
 *Order2*<br/>
@@ -407,7 +407,7 @@ A **bool** ，表示要做數值比較的結果。
 
 採用兩個的多載`memory_order`參數、 值*Order2*不能`memory_order_release`或`memory_order_acq_rel`，而且不能高於值*diffgr:id="order1*。
 
-## <a name="exchange"></a> atomic:: exchange
+## <a name="exchange"></a> atomic::exchange
 
 使用指定的值來取代預存的值**\*這**。
 
@@ -427,7 +427,7 @@ Ty atomic<Ty>::exchange(
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -438,7 +438,7 @@ Ty atomic<Ty>::exchange(
 
 這項作業執行的讀取-修改-寫入作業，使用*值*若要將值儲存在**\*這**，所指定的記憶體條件約束內*順序*。
 
-## <a name="fetch_add"></a> atomic:: fetch_add
+## <a name="fetch_add"></a> atomic::fetch_add
 
 擷取中儲存的值**\*這**，然後將指定的值加入至預存值。
 
@@ -458,7 +458,7 @@ Ty atomic<Ty>::fetch_add (
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -469,7 +469,7 @@ A *Ty*物件，其中包含的值儲存在**\*這**新增之前。
 
 `fetch_add`方法會執行自動新增的讀取-修改-寫入作業*值*中的預存值**\*這**，並套用所指定的記憶體條件約束*順序*。
 
-## <a name="fetch_and"></a> atomic:: fetch_and
+## <a name="fetch_and"></a> atomic::fetch_and
 
 執行位元和對某個值和現有的值會儲存在**\*這**。
 
@@ -489,7 +489,7 @@ Ty atomic<Ty>::fetch_and (
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -520,7 +520,7 @@ Ty atomic<Ty>::fetch_or (
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -531,7 +531,7 @@ A *Ty*包含結果的位元的物件或。
 
 `fetch_or`方法會執行的讀取-修改-寫入作業的預存的值取代**\*這**的位元或是*值*和目前的值儲存在**\*這**，在所指定的記憶體條件約束內*順序*。
 
-## <a name="fetch_sub"></a> atomic:: fetch_sub
+## <a name="fetch_sub"></a> atomic::fetch_sub
 
 將預存值減去指定的值。
 
@@ -551,7 +551,7 @@ Ty atomic<Ty>::fetch_sub (
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -582,7 +582,7 @@ Ty atomic<Ty>::fetch_xor (
 *值*<br/>
 型別的值*Ty*。
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。
 
 ### <a name="return-value"></a>傳回值
@@ -624,7 +624,7 @@ Ty atomic::load(
 
 ### <a name="parameters"></a>參數
 
-*順序*<br/>
+*Order*<br/>
 `memory_order`。 *順序*不得`memory_order_release`或`memory_order_acq_rel`。
 
 ### <a name="return-value"></a>傳回值
@@ -651,7 +651,7 @@ void atomic<Ty>::store(
 *值*<br/>
 A *Ty*物件。
 
-*順序*<br/>
+*Order*<br/>
 A`memory_order`條件約束。
 
 ### <a name="remarks"></a>備註

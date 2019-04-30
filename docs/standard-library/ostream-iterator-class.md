@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
 ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370982"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
@@ -291,7 +291,7 @@ ostream_iterator(
 *_Ostr*<br/>
 要逐一查看之類型 [ostream_iterator::ostream_type](#ostream_type) 的輸出資料流。
 
-*（_d)*<br/>
+*_Delimiter*<br/>
 要插入至輸出資料流值之間的分隔符號。
 
 ### <a name="remarks"></a>備註

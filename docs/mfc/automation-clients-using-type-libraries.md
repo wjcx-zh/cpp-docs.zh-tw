@@ -15,11 +15,11 @@ helpviewer_keywords:
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
 ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62374190"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Automation 用戶端：使用類型程式庫
 
@@ -29,15 +29,15 @@ Automation 用戶端必須具有伺服器物件的屬性和方法的相關資訊
 
 如需[MkTypLib](/windows/desktop/Midl/differences-between-midl-and-mktyplib)，請參閱 Windows SDK。
 
-Visual c + + 可以讀取類型程式庫檔案，並建立分派類別衍生自[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)。 該類別的物件具有屬性和複製的伺服器物件的作業。 這個物件的屬性和作業，會呼叫您的應用程式和功能會繼承自`COleDispatchDriver`這些將來電路由到 OLE 系統接著會路由傳送到伺服器物件。
+視覺化C++可以讀取類型程式庫檔案，並建立分派類別衍生自[COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md)。 該類別的物件具有屬性和複製的伺服器物件的作業。 這個物件的屬性和作業，會呼叫您的應用程式和功能會繼承自`COleDispatchDriver`這些將來電路由到 OLE 系統接著會路由傳送到伺服器物件。
 
-如果您選擇要建立專案時，包含自動化 visual c + + 會自動為您維護此型別程式庫檔案。 隨著每個組建的詳細資訊，將會建置 MkTypLib.tlb 檔案。
+視覺化C++會自動維護，此型別程式庫檔案，如果您選擇要建立專案時，包含自動化。 隨著每個組建的詳細資訊，將會建置 MkTypLib.tlb 檔案。
 
 ### <a name="to-create-a-dispatch-class-from-a-type-library-tlb-file"></a>若要從型別程式庫 (.tlb) 檔案建立分派類別
 
 1. 在 類別檢視或方案總管 中，以滑鼠右鍵按一下專案，然後按一下 **新增**，然後按一下**加入類別**快顯功能表。
 
-1. 在 **加入類別**對話方塊中，選取**Visual c + + MFC**的左窗格中的資料夾。 選取 **從 TypeLib 的 MFC 類別**圖示從右窗格，然後按一下**開啟**。
+1. 在 **加入類別**對話方塊中，選取**Visual C++/MFC**左窗格中的資料夾。 選取 **從 TypeLib 的 MFC 類別**圖示從右窗格，然後按一下**開啟**。
 
 1. 在 **加入類別從 Typelib 精靈**對話方塊方塊中，選取從類型程式庫**可用的型別程式庫**下拉式清單。 **介面**方塊會顯示所選的型別程式庫的介面。
 

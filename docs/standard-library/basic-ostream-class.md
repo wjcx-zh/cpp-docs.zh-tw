@@ -254,7 +254,7 @@ basic_ostream 物件的參考。
 
 \<Ostream > 標頭也會定義數個全域插入運算子。 如需詳細資訊，請參閱 <<c0> [ 運算子 <<](../standard-library/ostream-operators.md#op_lt_lt)。
 
-第一個成員函式可確保表單的運算式`ostr << endl`呼叫[endl](../standard-library/ostream-functions.md#endl)**(ostr)**，然後傳回**\*這**。 第二個和第三個函式可確保其他操作工具 (例如 [hex](../standard-library/ios-functions.md#hex)) 具有類似的行為。 其餘函式都是格式化的輸出函式。
+第一個成員函式可確保表單的運算式`ostr << endl`呼叫[endl](../standard-library/ostream-functions.md#endl) **(ostr)** ，然後傳回 **\*這** 。 第二個和第三個函式可確保其他操作工具 (例如 [hex](../standard-library/ios-functions.md#hex)) 具有類似的行為。 其餘函式都是格式化的輸出函式。
 
 函式
 

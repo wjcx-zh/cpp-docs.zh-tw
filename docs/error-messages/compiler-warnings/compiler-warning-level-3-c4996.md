@@ -23,7 +23,7 @@ ms.locfileid: "62401497"
 
 - [此函式或變數可能不安全。請考慮使用*safe_version*改。若要停用已被取代，請使用\_CRT\_SECURE\_NO\_警告。如需詳細資料，請參閱線上說明。](#unsafe-crt-library-functions)
 
-- [' std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name*使用參數的可能不安全-此呼叫須呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。如何使用視覺效果，請參閱文件C++' Checked Iterators'](#unsafe-standard-library-functions)
+- ['std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name* 使用參數的可能不安全-此呼叫須呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。如何使用視覺效果，請參閱文件C++' Checked Iterators'](#unsafe-standard-library-functions)
 
 - [此函式或變數已被較新的文件庫或作業系統功能取代。請考慮使用*new_item*改。如需詳細資料，請參閱線上說明。](#obsolete-crt-functions-and-variables)
 
@@ -85,7 +85,7 @@ Microsoft 已取代某些 CRT 與C++標準程式庫函式和全域變數，以�
 
 ### <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式
 
-__' std::__*function_name*__::\_未核取\_迭代器::\_Deprecate' 呼叫 std::__*function_name***使用參數的可能不安全-此呼叫須由呼叫端檢查通過的值是否正確。若要停用這個警告，請使用 -D\_SCL\_SECURE\_NO\_警告。如何使用視覺效果，請參閱文件C++' Checked Iterators'**
+__' std::__*function_name*__::\_未核取\_迭代器::\_Deprecate' 呼叫 std::__*function_name* **使用參數的可能不安全-此呼叫須由呼叫端檢查通過的值是否正確。若要停用這個警告，請使用 -D\_SCL\_SECURE\_NO\_警告。如何使用視覺效果，請參閱文件C++' Checked Iterators'**
 
 這個警告會出現在偵錯組建因為某些C++標準程式庫範本函式不會檢查參數的正確性。 在大部分情況下，這是因為沒有足夠的資訊可供函式，以檢查容器範圍中，或可能不正確地使用迭代器，與函式。 這項警告有助於您識別這些函式會使用，因為它們可能是嚴重的安全性漏洞，在程式中的來源。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md)。
 

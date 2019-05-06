@@ -15,7 +15,7 @@ ms.locfileid: "62213792"
 ---
 # <a name="command-line-warning-d9036"></a>命令列警告 D9036
 
-> '* 選項\_2*' 而不是 '*選項\_1*'
+> '*選項\_2*' 而不是 ' *選項\_1* '
 
 ## <a name="remarks"></a>備註
 

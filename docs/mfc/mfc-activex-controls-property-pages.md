@@ -73,7 +73,7 @@ ActiveX 控制項屬性頁會顯示在兩種方式：
 
 1. 您開啟的控制專案，開啟 [資源檢視]。
 
-1. 按兩下** 對話方塊**directory 圖示。
+1. 按兩下 **對話方塊** directory 圖示。
 
 1. 開啟 [IDD_PROPPAGE_SAMPLE] 對話方塊。
 

@@ -296,7 +296,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式傳回地區設定物件，在取代或新增**\*這**facet`Facet`中所列*Loc*。
+此成員函式傳回地區設定物件，在取代或新增 **\*這** facet`Facet`中所列 *Loc* 。
 
 ### <a name="example"></a>範例
 

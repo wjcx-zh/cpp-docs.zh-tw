@@ -1,14 +1,14 @@
 ---
 title: 依字母順序排列的編譯器選項
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272330"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221771"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -34,7 +34,7 @@ ms.locfileid: "62272330"
 |[/E](e-preprocess-to-stdout.md)|複製前置處理器輸出至標準輸出。|
 |[/EH](eh-exception-handling-model.md)|指定例外狀況處理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|複製前置處理器輸出至標準輸出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Visual C++ 團隊。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接向 Microsoft 提供內部編譯器錯誤 (ICE) 資訊C++小組。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|產生程式碼，適用於特定的 x64 架構或為 AMD64 和延伸記憶體 64 技術 (EM64T) 架構中微-架構。|
@@ -153,7 +153,7 @@ ms.locfileid: "62272330"
 |[/Zc](zc-conformance.md)|指定下的標準行為[/Ze](za-ze-disable-language-extensions.md)。[/Za、 /Ze （停用語言擴充功能）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
 |[/Zf](zf.md)|在平行建置中產生時間改善 PDB。|
-|[/Zg](zg-generate-function-prototypes.md)|已從 Visual C++ 2015 移除。 產生函式原型。|
+|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 產生函式原型。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱 (僅適用於 x86)。|

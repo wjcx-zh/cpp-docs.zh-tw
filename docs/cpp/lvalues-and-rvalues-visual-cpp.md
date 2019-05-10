@@ -1,18 +1,18 @@
 ---
-title: 值的類別：Lvalues 和 Rvalues (Visual C++)
-ms.date: 04/06/2018
+title: 值的類別：Lvalues 和 Rvalues (C++)
+ms.date: 05/07/2019
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4e3cfa87a8f1ae9b17f7c08afd8faeabea7102b3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245543"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222014"
 ---
-# <a name="lvalues-and-rvalues-visual-c"></a>Lvalues 和 Rvalues (Visual C++)
+# <a name="lvalues-and-rvalues-c"></a>Lvalues 和 Rvalues (C++)
 
 每個C++運算式都有類型，而且屬於*值類別*。 值類別是當建立、 複製和移動在運算式評估期間的暫存物件時，編譯器必須遵循的規則的基礎。
 

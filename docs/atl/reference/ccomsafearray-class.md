@@ -1,6 +1,6 @@
 ---
 title: CComSafeArray 類別
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArray
 - ATLSAFE/ATL::CComSafeArray
@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: dec6bbad0aa4a8409b9f3d24476dcc94b8eaefe3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259439"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221153"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray 類別
 
@@ -318,7 +318,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 
 ### <a name="remarks"></a>備註
 
-A`CComSafeArray`物件可由從現有`SAFEARRAYBOUND`結構和數字的維度，或藉由指定的項目數的陣列和下限。 如果陣列是從 視覺效果存取C++，而下限應該是 0。 其他語言可讓其他值作為下限 （例如，項目，例如-10 到 10 的範圍的 Visual Basic 支援陣列）。
+A`CComSafeArray`物件可由從現有`SAFEARRAYBOUND`結構和數字的維度，或藉由指定的項目數的陣列和下限。 如果陣列是從存取C++，而下限應該是 0。 其他語言可讓其他值作為下限 （例如，項目，例如-10 到 10 的範圍的 Visual Basic 支援陣列）。
 
 ##  <a name="destroy"></a>  CComSafeArray::Destroy
 

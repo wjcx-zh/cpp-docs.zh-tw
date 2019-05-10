@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173535"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222569"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 指向要測量的字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)此參數的物件。
 
 *nCount*<br/>
-指定字串中的字元數。 如果*nCount*為-1，長度會計算。
+指定[字串的長度](/windows/desktop/gdi/specifying-length-of-text-output-string)所指向*lpszString*。
 
 *nTabPositions*<br/>
 指定所指陣列中的定位停駐點位置數目*lpnTabStopPositions*。
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 指向字串的字元。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)此參數的物件。
 
 *nCount*<br/>
-指定字串中的字元數。 如果*nCount*為-1，長度會計算。
+指定[字串的長度](/windows/desktop/gdi/specifying-length-of-text-output-string)所指向*lpszString*。
 
 *str*<br/>
 A`CString`物件，其中包含要測量指定的字元。
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 指向字元字串。 您也可以傳遞[CString](../../atl-mfc-shared/reference/cstringt-class.md)此參數的物件。
 
 *nCount*<br/>
-指定字串中的字元數。 如果*nCount*為-1，長度會計算。
+指定[字串的長度](/windows/desktop/gdi/specifying-length-of-text-output-string)所指向*lpszString*。
 
 *nTabPositions*<br/>
 指定所指陣列中的定位停駐點位置數目*lpnTabStopPositions*。
@@ -4087,7 +4087,7 @@ virtual BOOL GrayString(
 指定要傳遞至輸出函式的資料的遠端指標。 如果*lpfnOutput*為 NULL，就*lpData*必須要輸出字串的長指標。
 
 *nCount*<br/>
-指定要輸出的字元數。 如果這個參數是 0，`GrayString`計算字串的長度 (假設*lpData*是字串的指標)。 如果*nCount*為-1 和所指向之函式*lpfnOutput*傳回 0 時，映像時顯示，但是未呈現灰色。
+指定要輸出的字元數。 如果這個參數是 0，`GrayString`計算字串的長度 (假設*lpData*是字串的指標)。 如果*nCount*是 1 和所指向之函式*lpfnOutput*傳回 0 時，映像時顯示，但是未呈現灰色。
 
 *x*<br/>
 指定矩形包圍字串的開始位置的邏輯 x 座標。
@@ -5610,7 +5610,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 
 ### <a name="return-value"></a>傳回值
 
-正要取代之物件指標。 這是其中一個衍生自的類別的物件指標`CGdiObject`，例如`CPen`，取決於所使用的函式的版本。 如果發生錯誤，則傳回的值是 NULL。 此函式可能是暫存物件中傳回的指標。 此暫存物件只是一個 Windows 訊息處理期間有效。 如需詳細資訊，請參閱`CGdiObject::FromHandle`。
+正要取代之物件指標。 這是其中一個衍生自的類別的物件指標`CGdiObject`，例如`CPen`，取決於所使用的函式的版本。 如果發生錯誤，則傳回的值是 NULL。 此函式可能是暫存物件中傳回的指標。 此暫存物件只是一個 Windows 訊息處理期間有效。 如需詳細資訊，請參閱 `CGdiObject::FromHandle`。
 
 採用區域參數的成員函式版本的執行方式與相同的工作`SelectClipRgn`成員函式。 它的傳回值可以是下列其中一項：
 
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 指向要繪製的字元字串。 您可以將指標傳遞至字元陣列或[CString](../../atl-mfc-shared/reference/cstringt-class.md)此參數的物件。
 
 *nCount*<br/>
-指定字串中的字元數。 如果*nCount*為-1，長度會計算。
+指定[字串的長度](/windows/desktop/gdi/specifying-length-of-text-output-string)所指向*lpszString*。
 
 *nTabPositions*<br/>
 指定陣列中的定位停駐點位置的值數目。

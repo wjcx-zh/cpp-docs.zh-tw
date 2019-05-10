@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: 65b7e1d8f03b5e59bd21091531bc9d21472e4ae4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402732"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447806"
 ---
 # <a name="compiler-error-c3203"></a>編譯器錯誤 C3203
 
@@ -19,7 +19,7 @@ ms.locfileid: "62402732"
 
 傳遞至類別樣板或泛型的引數無效。 類別樣板或泛型預期將類型做為參數。
 
-針對 Visual C++ 2005 所完成之編譯器一致性工作可能會產生此錯誤：無法將非特製化的類別樣板做為基底類別清單中的樣板引數。 若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。
+針對 Visual Studio 2005 所進行的編譯器一致性工作可能會導致此錯誤： 非特製化的類別樣板不能做為基底類別清單中的樣板引數。 若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。
 
 ```
 // C3203.cpp

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5fe7d6876b094c84fe3d4cdbba417106edcca528
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387476"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447287"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>HOW TO：定義和使用類別和結構 (C++/CLI)
 
@@ -127,7 +127,7 @@ int main() {
 
 `public` 表示的型別可以包含任何原始程式檔看到`#using`包含類型的組件指示詞。  `private` 指出類型不會看見包含的原始程式檔`#using`包含類型的組件指示詞。 不過，私用型別是在相同的組件內為可見的。 根據預設，類別的可見性會`private`。
 
-在 視覺效果之前的預設C++2005 中，原生類型必須在組件外部的公用存取範圍。 啟用[編譯器警告 （層級 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)來協助您了解私用的原生型別會不正確地使用。 使用[make_public](../preprocessor/make-public.md) pragma 提供公用存取範圍，您無法修改原始程式碼檔案中的原生型別。
+根據預設，Visual Studio 2005 之前，原生類型會有外部組件的公用存取範圍。 啟用[編譯器警告 （層級 1） C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)來協助您了解私用的原生型別會不正確地使用。 使用[make_public](../preprocessor/make-public.md) pragma 提供公用存取範圍，您無法修改原始程式碼檔案中的原生型別。
 
 如需詳細資訊，請參閱 [#using 指示詞](../preprocessor/hash-using-directive-cpp.md)。
 
@@ -588,7 +588,7 @@ int main() {
 Base::Test
 ```
 
-下一個範例顯示視覺效果C++編譯器呼叫的函式最多衍生類別中，即使轉換，才能符合一或多個參數 — 而且更符合函式呼叫的基底類別中呼叫函式。
+下一個範例顯示 MicrosoftC++編譯器呼叫的函式最多衍生類別中，即使轉換，才能符合一或多個參數 — 而且更符合函式呼叫的基底類別中呼叫函式。
 
 ```cpp
 // compile with: /clr
@@ -736,7 +736,7 @@ CLR 記憶體回收行程刪除未使用的受管理的物件，並已不再需�
 
 視覺效果C++完成項不是相同<xref:System.Object.Finalize%2A>方法。 (CLR 文件會使用完成項和<xref:System.Object.Finalize%2A>方法來表示相同意義)。 <xref:System.Object.Finalize%2A>方法由記憶體回收行程，這會叫用類別的繼承鏈結中每個完成項呼叫。 不同於視覺效果C++解構函式，衍生類別完成項呼叫並不會導致編譯器叫用所有的基底類別中的完成項。
 
-因為視覺效果C++編譯器支援決定性的資源釋放，請勿嘗試實作<xref:System.IDisposable.Dispose%2A>或是<xref:System.Object.Finalize%2A>方法。 不過，如果您熟悉這些方法，以下是方式視覺效果C++完成項和解構函式呼叫完成項對應到<xref:System.IDisposable.Dispose%2A>模式：
+因為 MicrosoftC++編譯器支援決定性的資源釋放，請勿嘗試實作<xref:System.IDisposable.Dispose%2A>或是<xref:System.Object.Finalize%2A>方法。 不過，如果您熟悉這些方法，以下是方式視覺效果C++完成項和解構函式呼叫完成項對應到<xref:System.IDisposable.Dispose%2A>模式：
 
 ```cpp
 // Visual C++ code
@@ -757,7 +757,7 @@ void Dispose(bool disposing) {
 
 Managed 型別也可以使用您想要確定的方式，放開按鈕並不會讓記憶體回收行程在某個時間點之後的物件已不再需要被非確定性地釋放 managed 的資源。 決定性的釋放的資源，可大幅提升效能。
 
-視覺效果C++編譯器還可讓以決定性地清除物件的解構函式的定義。 使用解構函式來釋出您想要以決定性的釋放的所有資源。  如果完成項存在，則會呼叫解構函式，以避免程式碼重複。
+MicrosoftC++編譯器還可讓以決定性地清除物件的解構函式的定義。 使用解構函式來釋出您想要以決定性的釋放的所有資源。  如果完成項存在，則會呼叫解構函式，以避免程式碼重複。
 
 ```cpp
 // compile with: /clr /c

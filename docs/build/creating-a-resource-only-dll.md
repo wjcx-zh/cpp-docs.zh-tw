@@ -5,12 +5,12 @@ helpviewer_keywords:
 - resource-only DLLs [C++], creating
 - DLLs [C++], creating
 ms.assetid: e6b1d4da-7275-467f-a58c-a0a8a5835199
-ms.openlocfilehash: 7f0bad94cf3f126d27cc29567bd4f6c4a846bf1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0d729be60ebec7a37d07fed1d14c4fd5330c7242
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274244"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220831"
 ---
 # <a name="creating-a-resource-only-dll"></a>建立僅含資源的 DLL
 
@@ -49,4 +49,4 @@ ms.locfileid: "62274244"
 ## <a name="see-also"></a>另請參閱
 
 [使用資源檔](../windows/working-with-resource-files.md)<br/>
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

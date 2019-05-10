@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317116"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446498"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
@@ -21,13 +21,13 @@ ms.locfileid: "62317116"
 
 1. 檔案的結構必須遵循指定格式，如本文所述。
 
-1. Visual C++ 專案系統目前不支援專案項目中有萬用字元。 例如，不支援：
+1. Visual StudioC++專案系統目前不支援萬用字元專案項目中。 例如，不支援：
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual C++ 專案系統目前不支援專案項目路徑中有巨集。 例如，不支援：
+1. Visual StudioC++專案系統目前不支援巨集的專案項目路徑中。 例如，不支援：
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ ms.locfileid: "62317116"
 
 您可以使用任何文字或 XML 編輯器來檢查 .vcxproj 檔案的內容。 若要在 Visual Studio 中檢視，請以滑鼠右鍵按一下 [方案總管] 中的專案，然後依序選擇 [卸載專案] 和 [編輯 Foo.vcxproj]。
 
-首先需要注意的是，最上層項目會依特定順序顯示。 例如：
+首先需要注意的是，最上層項目會依特定順序顯示。 例如: 
 
 - 大多數屬性群組和和項目定義群組會在匯入 Microsoft.Cpp.Default.props 之後出現。
 
@@ -224,7 +224,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 </ItemGroup>
 ```
 
-Visual C++ 專案系統目前不支援專案項目中有萬用字元。
+Visual StudioC++專案系統目前不支援萬用字元專案項目中。
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual C++ 專案系統目前不支援專案項目中有萬用字元。
 </ItemGroup>
 ```
 
-Visual C++ 專案系統目前不支援專案項目中有巨集。
+Visual StudioC++專案系統目前不支援巨集專案項目中。
 
 ```xml
 <ItemGroup>

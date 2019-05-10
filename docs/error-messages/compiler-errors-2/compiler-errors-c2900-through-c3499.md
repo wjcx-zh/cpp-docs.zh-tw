@@ -73,11 +73,11 @@ helpviewer_keywords:
 - C2999
 ms.assetid: e3440738-e11b-4878-9ae3-6bc6c53ba461
 ms.openlocfilehash: 5d443153582921775a72e5af647d65b102b80b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281673"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857226"
 ---
 # <a name="compiler-errors-c2900-through-c2999"></a>編譯器錯誤 C2900 至 C2999
 

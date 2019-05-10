@@ -1,21 +1,21 @@
 ---
 title: 非標準行為
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compatibility and compliance, nonstandard behavior
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 82c5faae68f9da747017119d76578cc88163d8bb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245370"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222023"
 ---
 # <a name="nonstandard-behavior"></a>非標準行為
 
-以下各節列出 C++ 的 Visual C++ 實作與 C++ 標準不一致的地方。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
+下列各節列出的地方，Microsoft 實作的C++不符合C++標準。 下列章節編號是指 C++ 11 標準 (ISO/IEC 14882:2011(E)) 中的章節編號。
 
 編譯器限制中所定義的不同的清單C++中將提供標準[編譯器限制](../cpp/compiler-limits.md)。
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>樣板中的繫結非相依名稱
 
-Visual C++ 編譯器目前不支援在開始剖析樣板時繫結非相依的名稱。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。
+MicrosoftC++編譯器目前不支援繫結非相依名稱時開始剖析樣板。 不符合 C++ ISO 規格的第 14.6.3 節。 可能會在樣板出現後 (但在樣板具現化之前) 造成宣告多載。
 
 ```cpp
 #include <iostream>
@@ -64,7 +64,7 @@ int main() {
 
 ## <a name="function-exception-specifiers"></a>函式例外狀況規範
 
-會剖析但不使用 `throw()` 以外的函式例外狀況規範。 不符合 ISO C++ 規格的第 15.4 節。 例如: 
+會剖析但不使用 `throw()` 以外的函式例外狀況規範。 不符合 ISO C++ 規格的第 15.4 節。 例如：
 
 ```cpp
 void f() throw(int); // parsed but not used
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 視覺效果C++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
+C++標準指出[char_traits:: eof](../standard-library/char-traits-struct.md#eof)不可對應有效`char_type`值。 MicrosoftC++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 這不符合 C++ ISO 規格第 12.1.1 節表 62 的要求。 以下範例即為示範。
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>物件的儲存位置
 
-C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過，使用 Visual C++ 時，有些情況是沒有資料成員的類型會與其他類型共用物件存留期的儲存位置。
+C++ 標準 (第 6 段第 1.8 節) 要求完整的 C++ 物件必須具有唯一的儲存位置。 不過與 Microsoft C++，其中不包含資料成員的型別會共用儲存體位置與其他類型之物件的存留期的情況下。

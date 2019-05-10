@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387719"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448572"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 傳統式精靈
 
@@ -83,8 +83,8 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 > [!NOTE]
 > 您不能加入 ATL 類別，而 MFC 類別只能加入支援 MFC 的那些 Windows 桌面應用程式類型 (請見上表)。
 
-您可以在 **方案總管**中檢視精靈為專案建立的檔案。 更多精靈為您的專案所建立之檔案的相關資訊，請參閱專案所產生的檔案， `ReadMe.txt`。 如需檔案類型的詳細資訊，請參閱 [為 Visual C++ 專案建立的檔案類型](../build/reference/file-types-created-for-visual-cpp-projects.md)。
+您可以在 **方案總管**中檢視精靈為專案建立的檔案。 更多精靈為您的專案所建立之檔案的相關資訊，請參閱專案所產生的檔案， `ReadMe.txt`。 如需有關檔案類型[視覺效果建立的檔案類型C++專案](../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 專案類型](../build/reference/visual-cpp-project-types.md)
+[C++在 Visual Studio 中的專案類型](../build/reference/visual-cpp-project-types.md)

@@ -4,12 +4,12 @@ ms.date: 04/22/2019
 helpviewer_keywords:
 - warnings, by compiler version
 - cl.exe compiler, setting warning options
-ms.openlocfilehash: a84c3f14b8e6a6c877a13c3c9b1b851b0fc5ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: e417de57292e4b21d81e8d6643ba77d8b169af07
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359900"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448183"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>依編譯器版本的編譯器警告
 
@@ -19,25 +19,25 @@ ms.locfileid: "62359900"
 
 | 產品 | 編譯器版本號碼 |
 |-|-|
-| Visual C++ 2002 | 13.00.9466 |
-| Visual C++ 2003 | 13.10.3077 |
-| Visual C++ 2005 | 14.00.50727.762 |
-| Visual C++ 2008 | 15.00.21022.08 |
-| Visual C++ 2010 | 16.00.40219.01 |
-| Visual C++ 2012 | 17.00.51106.1 |
-| Visual C++ 2013 | 18.00.21005.1 |
-| Visual C++ 2015 RTM | 19.00.23026.0 |
-| 視覺化C++2015 Update 1 | 19.00.23506.0 |
-| 視覺化C++2015 Update 2 | 19.00.23918.0 |
-| Visual C++ 2015 Update 3 | 19.00.24215.1 |
-| Visual C++ 2017 RTM | 19.10.25017.0 |
-| 視覺化C++2017年版本 15.3 | 19.11.25506.0 |
-| 視覺化C++2017年 15.5 版 | 19.12.25830.0 |
-| 視覺化C++2017年 15.6 版 | 19.13.26128.0 |
-| 視覺化C++2017年 15.7 版 | 19.14.26428.0 |
-| 視覺化C++2017年版 15.8 | 19.15.26726.0 |
-| 視覺化C++2017年版 15.9 | 19.16.26926.0 |
-| Visual C++ 2019 RTM | 19.20.27004.0 |
+| Visual Studio 2002 | 13.00.9466 |
+| Visual Studio 2003 | 13.10.3077 |
+| Visual Studio 2005 | 14.00.50727.762 |
+| Visual Studio 2008 | 15.00.21022.08 |
+| Visual Studio 2010 | 16.00.40219.01 |
+| Visual Studio 2012 | 17.00.51106.1 |
+| Visual Studio 2013 | 18.00.21005.1 |
+| Visual Studio 2015 RTM | 19.00.23026.0 |
+| Visual Studio 2015 Update 1 | 19.00.23506.0 |
+| Visual Studio 2015 Update 2 | 19.00.23918.0 |
+| Visual Studio 2015 Update 3 | 19.00.24215.1 |
+| Visual Studio 2017 RTM | 19.10.25017.0 |
+| Visual Studio 2017 15.3 版 | 19.11.25506.0 |
+| Visual Studio 2017 15.5 版 | 19.12.25830.0 |
+| Visual Studio 2017 15.6 版 | 19.13.26128.0 |
+| Visual Studio 2017 15.7 版 | 19.14.26428.0 |
+| Visual Studio 2017 15.8 版 | 19.15.26726.0 |
+| Visual Studio 2017 版本 15.9 | 19.16.26926.0 |
+| Visual Studio 2019 RTM | 19.20.27004.0 |
 
 您可以指定只有主要版本號碼、 主要和次要的數字或主要、 次要和組建編號`/Wv`選項。 編譯器會報告所有符合指定的數目，以開始的版本的警告，且會抑制版本大於指定的數字的所有警告。 比方說，`/Wv:17`報告引進在或之前的 Visual Studio 2012 的任何版本的警告，且會抑制任何從 Visual Studio 2013 （第 18 版） 或更新版本的編譯器所引入的警告。 若要隱藏在 Visual Studio 2015 中引進的警告更新 2 和更新版本中，您可以使用`/Wv:19.00.23506`。 使用`/Wv:19.11`回報任何 Visual Studio 2017 15.5 版中之前, 的 Visual Studio 版本中引進的警告，但隱藏在 Visual Studio 2017 15.5 版和更新版本中引進的警告。
 
@@ -45,7 +45,7 @@ ms.locfileid: "62359900"
 
 ::: moniker range=">= vs-2019"
 
-## <a name="warnings-introduced-in-visual-c-2019-rtw-compiler-version-1920270040"></a>視覺效果中所引進的警告C++2019 RTW （編譯器版本 19.20.27004.0）
+## <a name="warnings-introduced-in-visual-studio-2019-rtw-compiler-version-1920270040"></a>在 Visual Studio 2019 RTW （編譯器版本 19.20.27004.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.15`。
 
@@ -57,7 +57,7 @@ ms.locfileid: "62359900"
 ::: moniker range=">= vs-2017"
 
 
-## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>視覺效果中所引進的警告C++2017年版 15.8 （編譯器版本 19.15.26726.0）
+## <a name="warnings-introduced-in-visual-studio-2017-version-158-compiler-version-1915267260"></a>Visual Studio 2017 版本 15.8 （編譯器版本 19.15.26726.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.14`。
 
@@ -83,7 +83,7 @@ ms.locfileid: "62359900"
 | C5106 | `macro redefined with different parameter names` |
 | C5107 | `missing terminating 'char' character` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>視覺效果中所引進的警告C++2017年版 15.7 （編譯器版本 19.14.26428.0）
+## <a name="warnings-introduced-in-visual-studio-2017-version-157-compiler-version-1914264280"></a>Visual Studio 2017 版本 15.7 （編譯器版本 19.14.26428.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.13`。
 
@@ -92,7 +92,7 @@ ms.locfileid: "62359900"
 | C4642 | `'issue': could not import the constraints for generic parameter 'parameter'` |
 | C5045 | `Compiler will insert Spectre mitigation for memory load if /Qspectre switch specified` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-156-compiler-version-1913261280"></a>視覺效果中所引進的警告C++2017年版本 15.6 （編譯器版本 19.13.26128.0）
+## <a name="warnings-introduced-in-visual-studio-2017-version-156-compiler-version-1913261280"></a>Visual Studio 2017 版本 15.6 （編譯器版本 19.13.26128.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.12`。
 
@@ -100,7 +100,7 @@ ms.locfileid: "62359900"
 |-|-|
 | C5044 | `An argument to command-line option option points to a path 'path' that does not exist` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-155-compiler-version-1912258300"></a>視覺效果中所引進的警告C++2017年版本 15.5 （編譯器版本 19.12.25830.0）
+## <a name="warnings-introduced-in-visual-studio-2017-version-155-compiler-version-1912258300"></a>Visual Studio 2017 版本 15.5 （編譯器版本 19.12.25830.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.11`。
 
@@ -114,7 +114,7 @@ ms.locfileid: "62359900"
 | C5042 | `'declaration': function declarations at block scope cannot be specified 'inline' in standard C++; remove 'inline' specifier` |
 | C5043 | `'specification': exception specification does not match previous declaration` |
 
-## <a name="warnings-introduced-in-visual-c-2017-version-153-compiler-version-1911255060"></a>視覺效果中所引進的警告C++2017年版本 15.3 （編譯器版本 19.11.25506.0）
+## <a name="warnings-introduced-in-visual-studio-2017-version-153-compiler-version-1911255060"></a>Visual Studio 2017 版本 15.3 （編譯器版本 19.11.25506.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.10`。
 
@@ -135,7 +135,7 @@ ms.locfileid: "62359900"
 | C5037 | `'*member-function*': an out-of-line definition of a member of a class template cannot have default arguments` |
 | C5038 | `data member 'member1' will be initialized after data member 'member2'` |
 
-## <a name="warnings-introduced-in-visual-c-2017-rtm-compiler-version-1910250170"></a>視覺效果中所引進的警告C++2017 RTM （編譯器版本 19.10.25017.0）
+## <a name="warnings-introduced-in-visual-studio-2017-rtm-compiler-version-1910250170"></a>在 Visual Studio 2017 RTM （編譯器版本 19.10.25017.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00`。
 
@@ -148,7 +148,7 @@ ms.locfileid: "62359900"
 
 ::: moniker-end
 
-## <a name="warnings-introduced-in-visual-c-2015-update-3-compiler-version-1900242151"></a>視覺效果中所引進的警告C++2015 Update 3 （編譯器版本 19.00.24215.1）
+## <a name="warnings-introduced-in-visual-studio-2015-update-3-compiler-version-1900242151"></a>在 Visual Studio 2015 Update 3 （編譯器版本 19.00.24215.1） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23918`。
 
@@ -159,7 +159,7 @@ ms.locfileid: "62359900"
 | C4598 | `'#include <header>': header number number in the source does not match source at that position` |
 | C4599 | `'argument': source argument number number does not match source` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-2-compiler-version-1900239180"></a>視覺效果中所引進的警告C++2015 Update 2 （編譯器版本 19.00.23918.0）
+## <a name="warnings-introduced-in-visual-studio-2015-update-2-compiler-version-1900239180"></a>在 Visual Studio 2015 Update 2 （編譯器版本 19.00.23918.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23506`。
 
@@ -170,7 +170,7 @@ ms.locfileid: "62359900"
 | C4828 | `The file contains a character starting at offset 0xvalue that is illegal in the current source character set (codepage number).` |
 | C4868 | `compiler may not enforce left-to-right evaluation order in braced initializer list` |
 
-## <a name="warnings-introduced-in-visual-c-2015-update-1-compiler-version-1900235060"></a>視覺效果中所引進的警告C++2015 Update 1 （編譯器版本 19.00.23506.0）
+## <a name="warnings-introduced-in-visual-studio-2015-update-1-compiler-version-1900235060"></a>在 Visual Studio 2015 Update 1 （編譯器版本 19.00.23506.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:19.00.23026`。
 
@@ -181,7 +181,7 @@ ms.locfileid: "62359900"
 | C5031 | `#pragma warning(pop): likely mismatch, popping warning state pushed in different file` |
 | C5032 | `detected #pragma warning(push) with no corresponding #pragma warning(pop)` |
 
-## <a name="warnings-introduced-in-visual-c-2015-rtm-compiler-version-1900230260"></a>視覺效果中所引進的警告C++2015 RTM （編譯器版本 19.00.23026.0）
+## <a name="warnings-introduced-in-visual-studio-2015-rtm-compiler-version-1900230260"></a>在 Visual Studio 2015 RTM （編譯器版本 19.00.23026.0） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:18`。
 
@@ -240,7 +240,7 @@ ms.locfileid: "62359900"
 | C5029 | `nonstandard extension used: alignment attributes in C++ apply to variables, data members and tag types only` |
 | C5030 | `attribute 'attribute' is not recognized` |
 
-## <a name="warnings-introduced-in-visual-c-2013-compiler-version-1800210051"></a>視覺效果中所引進的警告C++2013 （編譯器版本 18.00.21005.1）
+## <a name="warnings-introduced-in-visual-studio-2013-compiler-version-1800210051"></a>Visual Studio 2013 （編譯器版本 18.00.21005.1） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:17`。
 
@@ -269,7 +269,7 @@ ms.locfileid: "62359900"
 | C4991 | `Warbird: function 'declaration' marked as __forceinline not inlined because protection level of inlinee is greater than the parent` |
 | C4992 | `Warbird: function 'declaration' marked as __forceinline not inlined because it contains inline assembly which cannot be protected` |
 
-## <a name="warnings-introduced-in-visual-c-2012-compiler-version-1700511061"></a>視覺效果中所引進的警告C++2012 （編譯器版本 17.00.51106.1）
+## <a name="warnings-introduced-in-visual-studio-2012-compiler-version-1700511061"></a>Visual Studio 2012 （編譯器版本 17.00.51106.1） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:16`。
 
@@ -312,7 +312,7 @@ ms.locfileid: "62359900"
 | C4988 | `'type': variable declared outside class/function scope` |
 | C4989 | `'description': type has conflicting definitions.` |
 
-## <a name="warnings-introduced-in-visual-c-2010-compiler-version-16004021901"></a>視覺效果中所引進的警告C++2010 （編譯器版本 16.00.40219.01）
+## <a name="warnings-introduced-in-visual-studio-2010-compiler-version-16004021901"></a>在 Visual Studio 2010 （編譯器版本 16.00.40219.01） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:15`。
 
@@ -328,7 +328,7 @@ ms.locfileid: "62359900"
 | C4986 | `'declaration': exception specification does not match previous declaration` |
 | C4987 | `nonstandard extension used: 'throw (...)'` |
 
-## <a name="warnings-introduced-in-visual-c-2008-compiler-version-15002102208"></a>視覺效果中所引進的警告C++2008 （編譯器版本 15.00.21022.08）
+## <a name="warnings-introduced-in-visual-studio-2008-compiler-version-15002102208"></a>Visual Studio 2008 （編譯器版本 15.00.21022.08） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:14`。
 
@@ -343,7 +343,7 @@ ms.locfileid: "62359900"
 | C4910 | `'type': '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation` |
 | C4985 | `'declaration': attributes not present on previous declaration.` |
 
-## <a name="warnings-introduced-in-visual-c-2005-compiler-version-140050727762"></a>視覺效果中所引進的警告C++2005 （編譯器版本 14.00.50727.762）
+## <a name="warnings-introduced-in-visual-studio-2005-compiler-version-140050727762"></a>在 Visual Studio 2005 （編譯器版本 14.00.50727.762） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:13`。
 
@@ -486,7 +486,7 @@ ms.locfileid: "62359900"
 | C4971 | `Argument order: <target object>, <target function> for delegate constructor is deprecated, use <target function>, <target object>` |
 | C4972 | `Directly modifying or treating the result of an unbox operation as an lvalue is unverifiable` |
 
-## <a name="warnings-introduced-in-visual-c-2003-compiler-version-13103077"></a>視覺效果中所引進的警告C++2003 （編譯器版本 13.10.3077）
+## <a name="warnings-introduced-in-visual-studio-2003-compiler-version-13103077"></a>在 Visual Studio 2003 （編譯器版本 13.10.3077） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:13.00.9466`。
 
@@ -522,7 +522,7 @@ ms.locfileid: "62359900"
 | C4953 | `Inlinee 'description' has been edited since profile data was collected, profile data not used` |
 | C4954 | `'description': not profiled (contains __int64 switch expression)` |
 
-## <a name="warnings-introduced-in-visual-c-2002-compiler-version-13009466"></a>視覺效果中所引進的警告C++2002 （編譯器版本 13.00.9466）
+## <a name="warnings-introduced-in-visual-studio-2002-compiler-version-13009466"></a>在 Visual Studio 2002 （編譯器版本 13.00.9466） 中引進的警告
 
 使用編譯器選項會隱藏這些警告和更新版本中的所有警告`/Wv:12`。
 

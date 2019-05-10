@@ -1,22 +1,22 @@
 ---
 title: 編譯器 COM 支援
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler, COM support
 - COM, compiler support
 ms.assetid: 76a78442-f2a4-4985-9967-67e20773f847
-ms.openlocfilehash: f0b1d6280dc27641287de8fe539cd3a148048245
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e13874bad44610821bed9c588af6bd9124162116
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154834"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222205"
 ---
 # <a name="compiler-com-support"></a>編譯器 COM 支援
 
 ## <a name="microsoft-specific"></a>Microsoft 特定的
 
-Visual C++ 編譯器可直接讀取元件物件模型 (COM) 類型程式庫，以及內容轉譯成可在編譯時包含的 C++ 原始程式碼。 語言擴充功能可協助您進行用戶端的 COM 程式設計。
+MicrosoftC++編譯器可以直接讀取元件物件模型 (COM) 類型程式庫和轉譯內容C++來源可以包含在編譯的程式碼。 語言擴充功能可協助您進行用戶端的 COM 程式設計。
 
 藉由使用[#import 前置處理器指示詞](../preprocessor/hash-import-directive-cpp.md)，編譯器可以讀取類型程式庫，並將它轉換成C++標頭檔案，其中描述 COM 介面與類別。 一組 `#import` 屬性可供使用者控制產生類別程式庫標頭檔的內容。
 

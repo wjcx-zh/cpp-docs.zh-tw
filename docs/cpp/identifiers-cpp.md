@@ -1,6 +1,6 @@
 ---
 title: 識別項 (C++)
-ms.date: 09/12/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - decorated names
 - decorated names, about decorated names
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 6f87486d0bb2614a3b2542cf050172a47f152c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184597"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222427"
 ---
 # <a name="identifiers-c"></a>識別項 (C++)
 
@@ -70,7 +70,7 @@ Microsoft C++ 識別項只有前 2048 個字元是有意義的。 使用者定�
 
 - 函式的引數數目。
 
-貨幣符號 `$` 是 Visual C++ 中的有效識別項字元。 Visual C++ 也可讓您在識別項中，使用允許範圍之通用字元名稱所代表的實際字元。 若要使用這些字元，您必須使用包含這些字元的檔案編碼字碼頁來儲存檔案。  下列範例示範如何在程式碼中交換使用擴充字元和通用字元名稱。
+貨幣符號`$`是有效的識別項字元的 microsoftC++編譯器 (MSVC)。 MSVC 也可讓您使用允許範圍之識別項中的通用字元名稱所代表的實際字元。 若要使用這些字元，您必須使用包含這些字元的檔案編碼字碼頁來儲存檔案。  下列範例示範如何在程式碼中交換使用擴充字元和通用字元名稱。
 
 ```cpp
 // extended_identifier.cpp

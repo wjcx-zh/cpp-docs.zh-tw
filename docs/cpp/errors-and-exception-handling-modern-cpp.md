@@ -1,14 +1,14 @@
 ---
 title: 錯誤和例外狀況處理 (現代 C++)
-ms.date: 09/17/2018
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398910"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222140"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
 
@@ -90,13 +90,13 @@ int main()
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++與 Windows SEH 例外狀況的例外狀況
 
-這兩個 C 和C++程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中的。 SEH 的概念類似C++例外狀況，但會使用該 SEH **__try**， **__except**，和 **__finally**而不是建構**試一次**並**攔截**。 在視覺效果C++，C++例外狀況針對 SEH 來實作。 不過，當您撰寫C++程式碼，請使用C++例外狀況語法。
+這兩個 C 和C++程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中的。 SEH 的概念類似C++例外狀況，但會使用該 SEH **__try**， **__except**，和 **__finally**而不是建構**試一次**並**攔截**。 在 MicrosoftC++編譯器 (MSVC)，C++例外狀況針對 SEH 來實作。 不過，當您撰寫C++程式碼，請使用C++例外狀況語法。
 
 如需 SEH 的詳細資訊，請參閱[Structured Exception Handling (C /C++)](../cpp/structured-exception-handling-c-cpp.md)。
 
 ## <a name="exception-specifications-and-noexcept"></a>例外狀況規格和 noexcept
 
-例外狀況規格中導入C++來指定函式可能擲回的例外狀況。 不過，例外狀況規格經證實實務上，有問題，而在 c++11 草稿標準中已被取代。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何例外狀況逸出。 如果您必須使用類型的例外狀況規格`throw(`*型別*`)`，注意該視覺效果C++偏離標準所規定的方式。 如需詳細資訊，請參閱 <<c0> [ 例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範 C + + 11 中導入做為慣用的替代方案`throw()`。
+例外狀況規格中導入C++來指定函式可能擲回的例外狀況。 不過，例外狀況規格經證實實務上，有問題，而在 c++11 草稿標準中已被取代。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何例外狀況逸出。 如果您必須使用類型的例外狀況規格`throw(`*型別*`)`，注意 MSVC 偏離標準所規定的方式。 如需詳細資訊，請參閱 <<c0> [ 例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範 C + + 11 中導入做為慣用的替代方案`throw()`。
 
 ## <a name="see-also"></a>另請參閱
 

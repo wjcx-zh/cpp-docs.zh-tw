@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315634"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446168"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
@@ -31,7 +31,7 @@ ms.locfileid: "62315634"
 
 如果 **/zc: wchar_t**所在`wchar_t`是編譯為程式碼中的內建整數類資料類型的關鍵字C++。 如果 **/zc: wchar_t-** （以負號開頭） 指定，或在程式碼編譯為 C，`wchar_t`不是內建的型別。 相反地，`wchar_t`指`typedef`如`unsigned short`標準標頭檔 stddef.h 中。 （Microsoft 實作定義其在 stddef.h 中包含的另一個標頭和其他標準標頭中）。
 
-我們不建議 **/zc: wchar_t-** 因為C++標準要求`wchar_t`是內建的類型。 使用 `typedef` 版本可能會造成可攜性問題。 如果您從視覺效果的舊版升級C++而遇到編譯器錯誤[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因為程式碼嘗試以隱含方式轉換`wchar_t`要`unsigned short`，我們建議您變更程式碼以修正錯誤，而不是設定 **/zc: wchar_t-**。
+我們不建議 **/zc: wchar_t-** 因為C++標準要求`wchar_t`是內建的類型。 使用 `typedef` 版本可能會造成可攜性問題。 如果您從舊版的 Visual Studio 升級，而遇到編譯器錯誤[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)因為程式碼嘗試以隱含方式轉換`wchar_t`到`unsigned short`，我們建議您變更程式碼以修正錯誤，而不是設定 **/zc: wchar_t-**。
 
 **/Zc: wchar_t**選項是否開啟，預設會在C++編譯，而且會忽略在 C 編譯中。 [/Permissive--](permissive-standards-conformance.md)選項並不會影響 **/zc: wchar_t**。
 

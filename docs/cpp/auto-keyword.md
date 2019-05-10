@@ -1,17 +1,17 @@
 ---
 title: auto 關鍵字
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.assetid: 744a41c0-2510-4140-a1be-96257e722908
-ms.openlocfilehash: 3477bd5033fac5b69733db5d6095c1317aac42ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a695c33ab55601bb8d81b00f963646f6a48f09d5
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284719"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222255"
 ---
 # <a name="auto-keyword"></a>auto 關鍵字
 
-**自動**關鍵字是宣告指定名稱。 不過，C++ 標準為此關鍵字定義了原始和修訂的意義。 視覺效果之前C++2010年**自動**關鍵字會宣告中的變數*自動*儲存類別，也就是具有區域存留期的變數。 從視覺效果C++2010年**自動**關鍵字宣告的類型推算自其宣告中的初始化運算式的變數。 [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項可控制的意義**自動**關鍵字。
+**自動**關鍵字是宣告指定名稱。 不過，C++ 標準為此關鍵字定義了原始和修訂的意義。 Visual Studio 2010 之前,**自動**關鍵字會宣告中的變數*自動*儲存類別，也就是具有區域存留期的變數。 從 Visual Studio 2010**自動**關鍵字會宣告從其宣告中的初始化運算式推算類型的變數。 [/Zc: auto&#91;-&#93; ](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項可控制的意義**自動**關鍵字。
 
 ## <a name="syntax"></a>語法
 

@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：將 D2D 物件加入至 MFC 專案
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 0793511f09be9dcb37732c4c16bfd2b3038a6cf4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358613"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558182"
 ---
 # <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件加入至 MFC 專案
 
@@ -36,9 +36,9 @@ ms.locfileid: "62358613"
 
 ## <a name="to-create-an-mfc-application"></a>若要建立 MFC 應用程式
 
-1. 在 **檔案**功能表上，指向**新增**，然後選擇**專案**。
+1. 使用**MFC 應用程式精靈**建立 MFC 應用程式。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md)如需有關如何開啟您的 Visual Studio 版本的精靈。
 
-1. 在**新的專案**對話方塊中，在左窗格中的**已安裝的範本**，展開**Visual C++**  ，然後選取**MFC**。 在中間窗格中，選取**MFC 應用程式**。 在 **名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
+1. 在 **名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
 
 1. 在  **MFC 應用程式精靈**，選擇**完成**而不需要變更任何設定。
 

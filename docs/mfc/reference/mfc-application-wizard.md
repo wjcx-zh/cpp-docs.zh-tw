@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412744"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448487"
 ---
 # <a name="mfc-application-wizard"></a>MFC 應用程式精靈
 
@@ -35,7 +35,7 @@ MFC 應用程式精靈產生應用程式，編譯時，會實作 Windows 可執�
 
    - 這個專案使用 Visual Studio 專案樣式建立，並且啟用視覺化樣式切換。
 
-   - 專案會使用 MFC 的共用 dll。 如需詳細資訊，請參閱 [Visual C++ 中的 DLL](../../build/dlls-in-visual-cpp.md)。
+   - 專案會使用 MFC 的共用 dll。 如需詳細資訊，請參閱 <<c0> [ 建立 C /C++ Visual Studio 中的 Dll](../../build/dlls-in-visual-cpp.md)。</c0>
 
 - [MFC 應用程式精靈、複合文件支援](../../mfc/reference/compound-document-support-mfc-application-wizard.md)
 

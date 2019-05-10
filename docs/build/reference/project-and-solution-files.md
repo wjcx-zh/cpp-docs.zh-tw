@@ -1,8 +1,6 @@
 ---
 title: 專案和方案檔
-ms.date: 11/04/2016
-f1_keywords:
-- vc.files.projectandsolution
+ms.date: 05/06/2019
 helpviewer_keywords:
 - project files [C++]
 - file types [C++], makefiles
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - browsing database file, .sdf
 - file types [C++], project files
 ms.assetid: 5823b954-36cf-42d3-8fd5-25bab3ef63d9
-ms.openlocfilehash: b4b82aa3837558b2c325fb6cba6819422c0db7ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 153480331d3300555c78a3489ca603d854893f5b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319573"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446597"
 ---
 # <a name="project-and-solution-files"></a>專案和方案檔
 
@@ -26,7 +24,7 @@ ms.locfileid: "62319573"
 |--------------|------------------------|--------------------------------|-----------------|
 |*Solname*.sln|*Projname*|不會顯示在方案總管中|*「方案」* 檔。 它會將專案的所有項目或多個專案組織成一個方案。|
 |*Projname*.suo|*Projname*|不會顯示在方案總管中|「方案選項」檔。 它會儲存您的方案自訂，如此每當您在方案中開啟專案或檔案時，它會呈現您所要的外觀和行為。|
-|*Projname*.vcxproj|*Projname*|不會顯示在方案總管中|「專案」檔。 它會儲存每個專案的特定資訊。 (在舊版中，這個檔案名為 *Projname*.vcproj 或 *Projname*.dsp。)如需 Visual C++ 專案檔的範例，請參閱[專案檔](project-files.md)。|
+|*Projname*.vcxproj|*Projname*|不會顯示在方案總管中|「專案」檔。 它會儲存每個專案的特定資訊。 (在舊版中，這個檔案名為 *Projname*.vcproj 或 *Projname*.dsp。)如需範例的C++專案檔 (.vcxproj)，請參閱[專案檔](project-files.md)。|
 |*Projname*.vcxitems|*Projname*|不會顯示在方案總管中|「共用的項目專案」檔。 不會建置此專案。  相反地，此專案可由另一個 C++ 專案參考，而其檔案會變成參考專案建置程序的一部分。 此專案可用來與跨平台 C++ 專案共用通用程式碼。|
 |*Projname*.sdf|*Projname*|不會顯示在方案總管中|「瀏覽資料庫」檔案。 它支援瀏覽和導覽功能，例如 [移至定義]、[尋找所有參考] 和 [類別檢視]。 會藉由剖析標頭檔來產生它。|
 |*Projname*.vcxproj.filters|*Projname*|不會顯示在方案總管中|「篩選」檔。 它指定要在方案的哪個位置加入檔案。 例如，.h 檔案放置於 [標頭檔] 節點中。|
@@ -36,4 +34,4 @@ ms.locfileid: "62319573"
 
 ## <a name="see-also"></a>另請參閱
 
-[為 Visual C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)
+[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)

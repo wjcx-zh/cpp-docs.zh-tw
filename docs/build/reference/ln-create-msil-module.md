@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176212"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446269"
 ---
 # <a name="ln-create-msil-module"></a>/LN (建立 MSIL 模組)
 
@@ -36,7 +36,7 @@ ms.locfileid: "62176212"
 
 模組的預設副檔名為 .netmodule。
 
-在視覺效果C++視覺效果之前的版本C++2005 中，模組以建立 **/clr:noAssembly**。
+在 Visual Studio 2005 之前版本中，模組以建立 **/clr:noAssembly**。
 
 MSVC 連結器接受.netmodule 檔做為輸入，因此，連結器產生的輸出檔的組件或.netmodule 任何連結器輸入.netmodule 沒有執行階段相依性。  如需詳細資訊，請參閱 [.netmodule 檔作為連結器輸入](netmodule-files-as-linker-input.md)。
 

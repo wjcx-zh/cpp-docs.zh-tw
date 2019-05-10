@@ -1,15 +1,15 @@
 ---
 title: 屬性頁 XML 規則檔
-ms.date: 04/27/2017
+ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 17b89f00b2e51c960ed7d3219427b56d92851b81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 610dc7341a35845b35d8ed80f52b421d1c2fb5d1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319458"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217728"
 ---
 # <a name="property-page-xml-rule-files"></a>屬性頁 XML 規則檔
 
@@ -19,7 +19,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
 首先，讓我們開啟專案的屬性頁 (以滑鼠右鍵按一下 [方案總管] 中的專案節點，然後選擇 [屬性])：
 
-![Visual C++ 專案屬性](../media/cpp-property-page-2017.png)
+![Visual StudioC++專案屬性](../media/cpp-property-page-2017.png)
 
 [組態屬性] 下的每個節點稱為「規則」。 規則有時代表單一工具 (例如編譯器)，但一般而言，該字詞是指具有屬性、會執行且可能產生一些輸出的某種項目。 每項規則都是從 VCTargets 資料夾中的 XML 檔案填入。 例如，上述 C/C++ 規則是由 `cl.xml' 填入。
 

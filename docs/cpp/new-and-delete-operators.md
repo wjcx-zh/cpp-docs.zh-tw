@@ -1,20 +1,19 @@
 ---
 title: new 和 delete 運算子
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - delete_cpp
 - new
 helpviewer_keywords:
-- new keyword [C++], dynamic allocation of objects
-- nothrownew.obj
-- delete keyword [C++], syntax
+- new keyword [C++]
+- delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: 1ac6282ecbf45f22e7dd66b94f8bccdbc4e505ce
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 8dd5e6a555872c443e32e9ea464ea49d4ae18f99
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345887"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222373"
 ---
 # <a name="new-and-delete-operators"></a>new 和 delete 運算子
 
@@ -85,9 +84,7 @@ int main()
 Blanks *SomeBlanks = new Blanks;
 ```
 
-在視覺效果C++5.0 和以前版本中，非類別類型和所有陣列 (無論是否**類別**類型) 使用配置**新**運算子一律使用全域**new 運算子**函式。
-
-從視覺效果C++5.0 版，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如：
+編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
 
 ```cpp
 // spec1_the_operator_new_function2.cpp
@@ -203,7 +200,7 @@ int main( int argc, char *argv[] ) {
 
 上述程式碼可用來偵測「記憶體流失」，即是在可用存放區中配置但從未釋放的記憶體。 若要執行此偵測中，全域**新**並**刪除**計數配置和解除配置的記憶體來重新定義運算子。
 
-從視覺效果C++5.0 版，編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
+編譯器支援成員陣列**新**並**刪除**類別宣告中的運算子。 例如: 
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

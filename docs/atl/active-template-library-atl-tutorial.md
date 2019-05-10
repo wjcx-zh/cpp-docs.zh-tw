@@ -1,7 +1,8 @@
 ---
 title: Active Template Library (ATL) 教學課程
+description: 建立使用 Microsoft ActiveX 控制項C++和 Active Template Library。
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 05/03/2019
 helpviewer_keywords:
 - ATL projects, tutorials
 - controls [ATL], tutorials
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ae336c0192214261d61792715353fc54b8b37fba
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62198462"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221319"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Active Template Library (ATL) 教學課程
 

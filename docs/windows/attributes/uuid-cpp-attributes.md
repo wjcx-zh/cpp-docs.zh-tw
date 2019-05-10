@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - uuid attribute
 ms.assetid: 90562a94-5e28-451b-a4b0-cadda7f66efe
-ms.openlocfilehash: 8d9d55fc2a340165480cab4036ad1e5323e6b625
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eae79f9a4d0af6375834c0792c4004f52a16e07e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407194"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448936"
 ---
 # <a name="uuid-c-attributes"></a>uuid (C++ 屬性)
 
@@ -32,7 +32,7 @@ ms.locfileid: "62407194"
 
 ## <a name="remarks"></a>備註
 
-如果未指定的介面或類別定義**uuid** C++屬性，然後視覺效果C++編譯器便會提供一個。 當您指定**uuid**，您必須包含引號。
+如果未指定的介面或類別定義**uuid** C++屬性，則 MicrosoftC++編譯器便會提供一個。 當您指定**uuid**，您必須包含引號。
 
 如果您未指定**uuid**，則編譯器會產生不同的屬性在電腦上的專案中的介面或類別具有相同名稱的相同 GUID。
 

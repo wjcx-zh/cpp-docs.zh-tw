@@ -1,6 +1,6 @@
 ---
 title: CAtlServiceModuleT 類別
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260190"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221181"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 
@@ -186,7 +186,7 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="remarks"></a>備註
 
-在 Visual Studio.NET 2003，不是基底類別中實作這個方法。 Visual Studio 專案精靈 產生的程式碼，包含這個方法，但如果視覺效果的舊版本中建立的專案，會發生編譯錯誤C++會編譯使用 ATL 7.1。 任何類別都衍生自`CAtlServiceModuleT`必須在衍生類別中實作這個方法。
+任何類別都衍生自`CAtlServiceModuleT`必須在衍生類別中實作這個方法。
 
 呼叫中使用 PKT 層級驗證、 RPC_C_IMP_LEVEL_IDENTIFY 的模擬層級和適當的非 null 安全性描述元`CoInitializeSecurity`。
 

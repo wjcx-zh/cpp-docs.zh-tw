@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388172"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448924"
 ---
 # <a name="resource-editors-c"></a>資源編輯器 (C++)
 
@@ -39,15 +39,15 @@ ms.locfileid: "62388172"
 
 |使用...|編輯...|
 |----------------|----------------|
-|[快速鍵編輯器](../windows/accelerator-editor.md)|Visual C++ 專案中的快速鍵對應表。|
+|[快速鍵編輯器](../windows/accelerator-editor.md)|在 Visual Studio 中的快速鍵對應表C++專案。|
 |[Binary Editor](binary-editor.md)|Visual C++、Visual Basic 或 Visual C# 專案的二進位資料資訊和自訂資源。|
-|[對話方塊編輯器](../windows/dialog-editor.md)|Visual C++ 專案中的對話方塊。|
+|[對話方塊編輯器](../windows/dialog-editor.md)|在 Visual Studio 中的對話方塊C++專案。|
 |[Image Editor](../windows/image-editor-for-icons.md)|Visual C++、Visual Basic 或 Visual C# 專案的點陣圖、圖示、游標和其他影像檔。|
-|[功能表編輯器](../windows/menu-editor.md)|Visual C++ 專案中的功能表資源。|
+|[功能表編輯器](../windows/menu-editor.md)|Visual Studio 中的功能表資源C++專案。|
 |[功能區編輯器](../mfc/ribbon-designer-mfc.md)|MFC 專案中的功能區資源。|
-|[字串編輯器](../windows/string-editor.md)|Visual C++ 專案中的字串資料表。|
-|[工具列編輯器](../windows/toolbar-editor.md)|Visual C++ 專案中的工具列資源。 **工具列編輯器**屬於**影像編輯器**。|
-|[版本資訊編輯器](../windows/version-information-editor.md)|Visual C++ 專案中的版本資訊。|
+|[字串編輯器](../windows/string-editor.md)|Visual Studio 中的字串資料表C++專案。|
+|[工具列編輯器](../windows/toolbar-editor.md)|Visual Studio 中的工具列資源C++專案。 **工具列編輯器**屬於**影像編輯器**。|
+|[版本資訊編輯器](../windows/version-information-editor.md)|在 Visual Studio 中的版本資訊C++專案。|
 
 > [!NOTE]
 > 如果您的專案尚未包含.rc 檔，請參閱[How to:建立資源](../windows/how-to-create-a-resource-script-file.md)。

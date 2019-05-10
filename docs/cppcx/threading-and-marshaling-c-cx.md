@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4206dd9c675325d3141a56b0e57f6cf67dc5693d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404633"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448156"
 ---
 # <a name="threading-and-marshaling-ccx"></a>執行緒和封送處理 (C++/CX)
 
@@ -35,7 +35,7 @@ Windows 執行階段類別可以各種方式支援並行執行緒存取，會套
 
 ### <a name="compiler-warning-c4451-when-consuming-non-agile-classes"></a>編譯器警告 C4451，使用非 agile 類別時
 
-基於多種原因，有些類別不可以是 Agile。 如果您要同時從使用者介面執行緒與背景執行緒存取非 Agile 類別的執行個體，請格外謹慎以確保在執行階段能有正確的行為。 當您在全域範圍中使用您的應用程式具現化非 Agile 執行階段類別時，或將非 Agile 型别宣告為本身標示為 Agile 之 ref 類別中的類別成員時，Visual C++ 編譯器將會發出警告。
+基於多種原因，有些類別不可以是 Agile。 如果您要同時從使用者介面執行緒與背景執行緒存取非 Agile 類別的執行個體，請格外謹慎以確保在執行階段能有正確的行為。 MicrosoftC++類別具現化非 agile 執行階段在您的應用程式，在全域範圍中，或標示為 agile 類別成員本身為 ref 類別中的宣告非 agile 型別時，編譯器會發出警告。
 
 在非 Agile 類別中，最容易處理的是具有 `ThreadingModel`=Both 與 `MarshallingType`=Standard 的類別。  您只要使用 `Agile<T>` 協助程式類別，即可將這些類別設定成 Agile 類別。   下列範例說明類型 `Windows::Security::Credentials::UI::CredentialPickerOptions^`的非 Agile 物件宣告，以及因此而發出的編譯器警告。
 

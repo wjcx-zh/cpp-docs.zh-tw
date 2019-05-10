@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315894"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446206"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (產生函式原型)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62315894"
 
 ## <a name="remarks"></a>備註
 
-此編譯器選項已無法使用。 已從 Visual C++ 2015 將其移除。 此頁面保留給舊版 Visual C ++ 的使用者。
+此編譯器選項已無法使用。 Visual Studio 2015 中移除。 此頁面保留給較舊版本的 Visual Studio 的使用者。
 
 函式原型包括函式的傳回型別和引數型別清單。 引數型別清單是建立自函式的型式參數型別。 任何已經存在於原始程式檔中的函式原型都會被忽略。
 

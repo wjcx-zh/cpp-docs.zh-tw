@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: fec10171270a76ed90e2a7459103a148af0ba735
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a5a0534ba74cc9b125e94d4ece133c2449700a67
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272161"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446538"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ 文件標記的分隔符號
 
@@ -19,7 +19,7 @@ ms.locfileid: "62272161"
 
 | | |
 |-|-|
-| `///` | 這是顯示在文件範例中並供 Visual C++ 專案範本使用的格式。  |
+| `///` | 這會是文件範例所示，使用 Visual Studio 的表單C++專案範本。  |
 | `/** */`  | 這些是多行分隔符號。  |
 
 使用 `/** */` 分隔符號時，有一些格式化規則：

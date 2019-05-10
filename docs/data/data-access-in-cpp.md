@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398065"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222541"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ 中的資料存取
 
@@ -40,11 +40,11 @@ Microsoft Foundation Classes (MFC) 程式庫提供可以使用開放式資料庫
 [適用於 Microsoft Azure 儲存體用戶端程式庫C++](https://github.com/Azure/azure-storage-cpp)<br/>
 [Azure 儲存體](/azure/storage/storage-introduction)是新式應用程式的雲端儲存解決方案，這些應用程式依賴持久性、可用性和延展性來符合客戶的需求。 使用 C++ 的 Azure 儲存體用戶端程式庫，從 C++ 連線到 Azure 儲存體。
 
-[ODBC Driver 13.1 for SQL Server-Windows 發行](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-此最新的 ODBC 驅動程式為 C/C++ 架構應用程式，提供對 Microsoft SQL Server 2016 和 Microsoft Azure SQL Database 的強固資料存取。 提供支援的功能包括 always encrypted、 Azure Active Directory 和 AlwaysOn 可用性群組。 也適用於 MacOS 及 Linux。
+[ODBC Driver for SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+最新的 ODBC 驅動程式到 Microsoft SQL Server 和 Microsoft Azure SQL Database 穩固的資料存取提供適用於 C /C++應用程式。 提供支援的功能包括 always encrypted、 Azure Active Directory 和 AlwaysOn 可用性群組。 也適用於 MacOS 及 Linux。
 
-[SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-SQL Server Native Client 是支援 SQL Server 2005 到 SQL Server 2014 的獨立資料存取應用程式開發介面 (API)，可用於 OLE DB 和 ODBC。 新的應用程式應該使用 ODBC Driver 13.1 for SQL Server。
+[OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+最新的 OLE DB 驅動程式是獨立資料存取應用程式開發介面 (API) 支援 Microsoft SQL Server 和 Microsoft Azure SQL Database。
 
 [Microsoft Azure C 和C++開發人員中心](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure 可讓您使用最愛的工具，以更具有彈性、延展性及可靠的方式，輕鬆建置 C++ 應用程式。

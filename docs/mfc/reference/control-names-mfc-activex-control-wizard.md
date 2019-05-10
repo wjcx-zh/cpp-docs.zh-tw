@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control names
 ms.assetid: 9b8b81d2-36df-48ed-b58a-a771a0e269ee
-ms.openlocfilehash: a1b310de8cd8fcab1d880738faa7bd8b5b7cef32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7eb1686f191e3bfc60632447978e16ff48b2ab8
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373319"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448598"
 ---
 # <a name="control-names-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項名稱
 
@@ -86,5 +86,5 @@ ms.locfileid: "62373319"
 [MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [MFC ActiveX 控制項精靈、應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [MFC ActiveX 控制項精靈、控制項設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)<br/>
-[為 Visual C++ 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)
+[檔案類型建立視覺效果C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)
 

@@ -1,8 +1,6 @@
 ---
 title: 擴充 DLL
-ms.date: 11/04/2016
-f1_keywords:
-- afxdll
+ms.date: 05/06/2019
 helpviewer_keywords:
 - memory [C++], DLLs
 - MFC extension DLLs [C++]
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 55b1e55a9c7bdf6daaff98a7fe3f1a2a55f68334
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195656"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220771"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 擴充 Dll
 
@@ -52,7 +50,7 @@ MFC 擴充 DLL 會使用共用的版本的 MFC 應用程式會使用共用的 MF
 
 之前版本的 MFC 4.0，這種類型的 DLL 呼叫 AFXDLL。 AFXDLL 指`_AFXDLL`建置 DLL 時定義的前置處理器符號。
 
-MFC 的共用版本的匯入程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 視覺化C++會提供預先建置的版本，MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些會記載於 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾。
+MFC 的共用版本的匯入程式庫會根據所述的慣例命名[MFC Dll 命名慣例](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)。 Visual Studio 會提供預先建置的版本，MFC Dll，再加上數字的非 MFC Dll，您可以使用並與您的應用程式一起散發。 這些會記載於 Redist.txt，其會安裝到 Program Files\Microsoft Visual Studio 資料夾。
 
 如果您要匯出使用.def 檔，將下列程式碼的開頭和結尾標頭檔：
 
@@ -132,4 +130,4 @@ MFCxx.dll 是根據資源和類別清單，通常是最後一個項目。 MFCxx.
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

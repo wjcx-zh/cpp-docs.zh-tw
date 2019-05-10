@@ -6,18 +6,21 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e3950f79c4c88d031e04d0d145e0a03c9ebc0a37
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62293897"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221801"
 ---
 # <a name="decorated-names"></a>裝飾名稱
 
 C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示。 A*裝飾名稱*是編譯器所編譯的物件、 資料或函式定義期間建立為編碼的字串。 它會記錄呼叫慣例、類型、函式參數和其他資訊，並連同名稱一起記錄。 此名稱裝飾，也稱為*名稱改編*、 協助連結器尋找正確的函式和物件連結可執行檔時。
 
-裝飾命名慣例在各種版本的 Visual C++ 中已變更，而且在不同的目標架構上也可能不同。 若要正確連結使用 Visual C++ 所建立的原始程式檔，應該使用相同的編譯器工具組、旗標和目標架構來編譯 C 和 C++ Dll 和程式庫。
+裝飾命名慣例在各種版本的 Visual Studio 中，已變更，而且也可以是不同在不同的目標架構上。 若要正確連結建立利用 Visual Studio 中，C 原始程式檔和C++使用相同的編譯器工具組、 旗標和目標架構，則應該編譯 Dll 和程式庫。 
+
+> [!NOTE]
+> 使用 Visual Studio 2015 建置的程式庫可供使用 Visual Studio 2017 或 Visual Studio 2019 建置應用程式。
 
 ##  <a name="Using"></a> 使用裝飾名稱
 
@@ -25,7 +28,7 @@ C 和 C++ 程式中的函式、資料和物件在內部以其裝飾名稱表示�
 
 如果您變更函式名稱、類別、呼叫慣例、傳回型別或任何參數，裝飾名稱也會變更。 在此情況下，您必須取得新的裝飾名稱，並在指定裝飾名稱的每個地方使用。
 
-在連結至以其他程式設計語言撰寫的程式碼或使用其他編譯器時，名稱裝飾也很重要。 不同編譯器會使用不同的名稱裝飾慣例。 當您的執行檔連結至以另一種語言撰寫的程式碼時，必須特別注意符合匯出和匯入的名稱和呼叫慣例。 組件語言程式碼必須使用 Visual C++ 裝飾名稱和呼叫慣例，才能連結至使用 Visual C++ 撰寫的原始程式碼。
+在連結至以其他程式設計語言撰寫的程式碼或使用其他編譯器時，名稱裝飾也很重要。 不同編譯器會使用不同的名稱裝飾慣例。 當您的執行檔連結至以另一種語言撰寫的程式碼時，必須特別注意符合匯出和匯入的名稱和呼叫慣例。 組件語言程式碼必須使用 MSVC 裝飾名稱和呼叫慣例，來連結至使用 MSVC 撰寫的原始程式碼。
 
 ##  <a name="Format"></a> 格式化的C++裝飾名稱
 

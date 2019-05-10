@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 384847738f5410d750d53d3125c18f6a5256cccf
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261429"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221252"
 ---
 # <a name="atl-project-wizard"></a>ATL 專案精靈
 
@@ -48,8 +48,8 @@ Active Template Library (ATL) 是一份範本為基礎C++類別，可簡化撰�
 
 ## <a name="see-also"></a>另請參閱
 
-[建立和管理 Visual C++ 專案](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
-[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
+[Visual Studio 專案 - C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++在 Visual Studio 中的專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [教學課程](../../atl/active-template-library-atl-tutorial.md)

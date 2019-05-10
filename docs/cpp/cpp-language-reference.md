@@ -1,23 +1,20 @@
 ---
 title: C++ 語言參考
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154655"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222487"
 ---
 # <a name="c-language-reference"></a>C++ 語言參考
 
-本参考将介绍在 Microsoft Visual C++ 中实现的 C++ 编程语言。 組織會根據[*註解C++參考手冊*](http://www.stroustrup.com/arm.html) ，作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISOC++國際標準 (ISO/IEC FDIS 14882) 編成。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
+本參考會說明C++在 Microsoft 中實作時，程式設計語言C++編譯器。 組織會根據[*註解C++參考手冊*](http://www.stroustrup.com/arm.html) ，作者 Margaret Ellis 和 Bjarne Stroustrup 與 ANSI/ISOC++國際標準 (ISO/IEC FDIS 14882) 編成。 本文涵盖了 C++ 语言功能的 Microsoft 专用实现。 
 
 有关现代 C++ 编程做法的概述，请参阅[欢迎回到 C++](welcome-back-to-cpp-modern-cpp.md)。
 
@@ -90,7 +87,7 @@ Microsoft 專有類別和全域函式的參考，可用來支援 COM 類型。
 Microsoft C++ 擴充功能。
 
 [非標準行為](../cpp/nonstandard-behavior.md)<br/>
-有關 Visual C++ 編譯器非標準行為的資訊。
+Microsoft 的非標準行為的相關資訊C++編譯器。
 
 [歡迎回到 C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 現代化的概觀C++程式設計做法撰寫安全、 正確且有效率的程式。
@@ -98,7 +95,7 @@ Microsoft C++ 擴充功能。
 ## <a name="related-sections"></a>相關章節
 
 [執行階段平台的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-參考資料上使用視覺效果C++來以.NET 為目標。
+參考資料上使用 MicrosoftC++以.NET 為目標的編譯器。
 
 [C/C++ 建置參考](../build/reference/c-cpp-building-reference.md)<br/>
 編譯器選項、連結器選項和其他建置工具。
@@ -107,7 +104,7 @@ Microsoft C++ 擴充功能。
 有關 pragma、前置處理器指示詞、預先定義巨集和前置處理器的參考資料。
 
 [Visual C++ 程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
-各種 Visual C++ 程式庫之參考起始頁的連結清單。
+參考連結清單的各種 Microsoft 起始頁C++程式庫。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,17 +1,15 @@
 ---
 title: HOW TO：在 MSBuild 專案中使用建置事件
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273478"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221468"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>HOW TO：在 MSBuild 專案中使用建置事件
 
@@ -39,7 +37,7 @@ ms.locfileid: "62273478"
 
 ## <a name="example"></a>範例
 
-下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說：使用 MSBuild 來建立視覺效果C++專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。
+下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說：使用 MSBuild 來建立C++專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ ms.locfileid: "62273478"
 ## <a name="see-also"></a>另請參閱
 
 [MSBuild 命令列-C++](msbuild-visual-cpp.md)<br/>
-[逐步解說：使用 MSBuild 建立 Visual C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[逐步解說：使用 MSBuild 建立 C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

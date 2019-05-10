@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f17561941d785e5eb7b5fd8c52ab452aa6369e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323277"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220432"
 ---
 # <a name="cwinthread-class"></a>CWinThread 類別
 
@@ -311,7 +311,7 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`資料成員是型別 BOOL 的公用變數。
 
-`m_bAutoDelete` 的值不會影響基礎執行緒控制代碼如何關閉。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
+值`m_bAutoDelete`並不會影響基礎執行緒控制代碼已關閉的方式，但它會影響關閉控制代碼的時機。 在 `CWinThread` 物件終結時，執行緒控制代碼永遠關閉。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -323,7 +323,9 @@ HANDLE m_hThread;
 
 ### <a name="remarks"></a>備註
 
-`m_hThread`資料成員是型別控制代碼的公用變數。 如果基礎執行緒目前存在，才有效。
+`m_hThread`資料成員是型別控制代碼的公用變數。 如果基礎核心執行緒物件目前存在，而且尚未尚未關閉控制代碼，才有效。
+
+CWinThread 解構函式上呼叫 CloseHandle `m_hThread`。 如果[create_suspended](#m_bautodelete)是 TRUE 時的執行緒終止、 CWinThread 物件損毀，這會使任何 CWinThread 物件和其成員變數的指標失效。 您可能需要`m_hThread`來檢查執行緒的結束值，或等待訊號的成員。 要保留 CWinThread 物件並將其`m_hThread`執行緒執行期間和之後終止，成員設定`m_bAutoDelete`為 FALSE，然後才允許執行緒繼續執行。 否則，執行緒可能終止、 終結 CWinThread 物件，和關閉控制代碼，然後再嘗試使用它。 如果您使用這項技術，您會負責刪除 CWinThread 物件。
 
 ##  <a name="m_nthreadid"></a>  CWinThread::m_nThreadID
 
@@ -335,7 +337,8 @@ DWORD m_nThreadID;
 
 ### <a name="remarks"></a>備註
 
-`m_nThreadID`資料成員是 DWORD 類型的公用變數。 如果基礎執行緒目前存在，才有效。
+`m_nThreadID`資料成員是 DWORD 類型的公用變數。 如果目前存在的基礎核心執行緒物件，才有效。
+也請參閱的註解[m_hThread](#m_hthread)存留期。
 
 ### <a name="example"></a>範例
 

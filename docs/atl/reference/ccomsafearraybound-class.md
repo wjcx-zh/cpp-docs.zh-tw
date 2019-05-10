@@ -1,6 +1,6 @@
 ---
 title: CComSafeArrayBound 類別
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246136"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221146"
 ---
 # <a name="ccomsafearraybound-class"></a>CComSafeArrayBound 類別
 
@@ -76,7 +76,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="remarks"></a>備註
 
-如果陣列是從 視覺效果存取C++程式，建議您使用下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
+如果陣列是從存取C++程式，建議您使用下限定義為 0。 它可能會偏好使用不同的下限值，如果陣列是以適用於其他語言，例如 Visual Basic 項目。
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 0404bff54a08988a72fcb0a0c075a4446bf90f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1a92d2a22e8aa9df29c18fa36ff4508eb8eec57f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178237"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65445860"
 ---
 # <a name="masm-for-x64-ml64exe"></a>適用於 x64 的 MASM (ml64.exe)
 
-Visual Studio 包含 32 位元和 64 位元裝載的版本的 Microsoft Assembler (MASM) x64 的程式碼。 名為 ml64.exe，這是可接受 x64 組譯工具組譯工具的語言。 當您選擇安裝 MASM 命令列工具，則C++Visual Studio 安裝期間的工作負載。 MASM 工具不提供個別下載。 如需如何下載和安裝 Visual Studio 的指示，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 如果您執行不想要安裝完整的 Visual Studio IDE，但只想要的命令列工具，下載[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+Visual Studio 包含 32 位元和 64 位元裝載的版本的 Microsoft Assembler (MASM) x64 的程式碼。 名為 ml64.exe，這是可接受 x64 組譯工具組譯工具的語言。 當您選擇安裝 MASM 命令列工具，則C++Visual Studio 安裝期間的工作負載。 MASM 工具不提供個別下載。 如需如何下載和安裝 Visual Studio 的指示，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 如果您執行不想要安裝完整的 Visual Studio IDE，但只想要的命令列工具，下載[Build Tools for Visual Studio](https://visualstudio.microsoft.com/downloads/)。
 
 若要使用 MASM 來建置適用於 x64 的程式碼目標為命令列上，您必須使用適用於 x64 的開發人員命令提示字元設定必要的路徑和其他環境變數的目標。 如需如何開始開發人員命令提示字元，請參閱[建置 C /C++命令列上的程式碼](../../build/building-on-the-command-line.md)。
 
 如需 ml64.exe 命令列選項的資訊，請參閱[ML 和 ML64 命令列參考](../../assembler/masm/ml-and-ml64-command-line-reference.md)。
 
-X64 或 ARM 目標不支援內嵌組譯工具或 ASM 關鍵字的使用。 移植您的 x86 程式碼，會使用內嵌組譯工具 x64 或 ARM，您可以將您的程式碼來轉換C++、 使用編譯器內建函式，或建立組合器語言原始程式檔。 視覺效果C++編譯器支援內建函式可讓您使用特殊函式的指示，如範例中，特殊權限，位元掃描/測試，連鎖，等等，在為接近盡可能以跨平台的方式。 如需可用的內建函式的資訊，請參閱[編譯器內建](../../intrinsics/compiler-intrinsics.md)。
+X64 或 ARM 目標不支援內嵌組譯工具或 ASM 關鍵字的使用。 移植您的 x86 程式碼，會使用內嵌組譯工具 x64 或 ARM，您可以將您的程式碼來轉換C++、 使用編譯器內建函式，或建立組合器語言原始程式檔。 MicrosoftC++編譯器支援內建函式可讓您使用特殊函式的指示，如範例中，特殊權限，位元掃描/測試，連鎖，等等，在為接近盡可能以跨平台的方式。 如需可用的內建函式的資訊，請參閱[編譯器內建](../../intrinsics/compiler-intrinsics.md)。
 
-## <a name="add-an-assembler-language-file-to-a-visual-c-project"></a>新增視覺效果的組合器語言檔案C++專案
+## <a name="add-an-assembler-language-file-to-a-visual-studio-c-project"></a>將組譯工具語言檔案加入 Visual StudioC++專案
 
 Visual Studio 專案系統支援使用中的 MASM 所建置的組譯工具語言檔案您C++專案。 您可以建立的 x64 組合器語言來源檔，並使用可完全支援 x64 的 MASM 將它們建置到物件的檔案。 然後，您就可以連結這些目的檔，以便您C++程式碼建置適用於 x64 目標。 這是一種方式克服 x64 缺乏內嵌組譯工具。
 
-### <a name="to-add-an-assembler-language-file-to-an-existing-visual-c-project"></a>若要將組譯工具語言檔案新增至現有的視覺效果C++專案
+### <a name="to-add-an-assembler-language-file-to-an-existing-visual-studio-c-project"></a>若要將組譯工具語言檔案新增至現有的 Visual StudioC++專案
 
 1. 在 [方案總管] 中選取專案。 在功能表列上選擇 **專案**，**組建自訂**。
 

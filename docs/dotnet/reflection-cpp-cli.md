@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5f18a7faa4e77571a87cc0d76a43240aaf1fd52c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384682"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447233"
 ---
 # <a name="reflection-ccli"></a>反映 (C++/CLI)
 
@@ -34,7 +34,7 @@ ms.locfileid: "62384682"
 若要存取反映功能的最常見方式是透過<xref:System.Object.GetType%2A>方法。 這個方法藉由提供<xref:System.Object?displayProperty=nameWithType>，從衍生所有記憶體回收的類別。
 
 > [!NOTE]
-> .Exe 建置視覺效果上的反映C++編譯器才允許使用.exe 已內建 **/clr: pure**或 **/clr: safe**編譯器選項。 **/Clr: pure**並 **/clr: safe**編譯器選項為已被取代，在 Visual Studio 2015 和 Visual Studio 2017 中無法使用。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。
+> 反映在使用 Microsoft 建置的.exeC++編譯器才允許使用.exe 已內建 **/clr: pure**或 **/clr: safe**編譯器選項。 **/Clr: pure**並 **/clr: safe**編譯器選項為已被取代，在 Visual Studio 2015 和 Visual Studio 2017 中無法使用。 請參閱[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)如需詳細資訊。
 
 如需詳細資訊，請參閱<xref:System.Reflection>。
 
@@ -181,7 +181,7 @@ public:
 
 一旦反映系統成功載入的組件的陣列**型別**物件擷取<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>函式。 雖然只有一個類別定義在此情況下，每個陣列元素會包含不同類型的相關資訊。 使用迴圈，每個**型別**此陣列中查詢使用的型別成員相關**Type::GetMembers**函式。 此函式傳回的陣列**MethodInfo**物件、 每個物件，包含成員函式、 資料成員或類型中的屬性的相關資訊。
 
-中的附註的方法清單包括函式明確地定義**TestClass**及函式會隱含地繼承自**system:: object**類別。 在.NET 中，而不是視覺效果中所描述的一部分C++語法中，屬性會顯示為基礎的資料成員存取的 get/set 函式。 Get/set 函式出現在此清單做為一般方法。 透過 common language runtime 中，不是視覺效果支援反映C++編譯器。
+中的附註的方法清單包括函式明確地定義**TestClass**及函式會隱含地繼承自**system:: object**類別。 在.NET 中，而不是視覺效果中所描述的一部分C++語法中，屬性會顯示為基礎的資料成員存取的 get/set 函式。 Get/set 函式出現在此清單做為一般方法。 不是由 Microsoft 透過 common language runtime 支援反映C++編譯器。
 
 雖然您可以使用此程式碼來檢查您所定義的組件，您也可以使用此程式碼來檢查.NET 組件。 例如，如果您變更 TestAssembly mscorlib 時，您會看到每個型別和 mscorlib.dll 中定義的方法清單。
 

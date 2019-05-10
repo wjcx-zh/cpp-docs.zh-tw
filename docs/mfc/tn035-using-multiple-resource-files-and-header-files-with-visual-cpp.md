@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305511"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448544"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:使用視覺效果中的多個資源檔和標頭檔C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-您可以使用編譯時間指示詞，將 Visual C++ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 #include 包含其他 .RC 檔外，就什麼事也不做。 如果您要使用 Visual C++ 專案 .MAK 檔案，則必須在專案中包含「主要」.RC 檔，這樣才能讓所有 #include 的資源與您的應用程式一起編譯。
+您可以使用編譯時間指示詞，將 Visual C++ 可編輯與不可編輯的資源組織在多個 .RC 檔案，其中「主要」MYAPP.RC 除了藉由 #include 包含其他 .RC 檔外，就什麼事也不做。 如果您使用 Visual StudioC++專案。MAK 檔案，則您應該會包含 「 主要 」。RC 檔在專案中讓所有 # include 的資源會編譯您的應用程式。
 
 **強制設定不可編輯視覺效果的C++檔案**
 

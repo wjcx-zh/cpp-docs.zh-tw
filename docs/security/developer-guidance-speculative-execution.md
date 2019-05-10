@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3895cdb060d45d3f75c75f75c930e868b3654b2
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179315"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448604"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>C++理論式執行端通道的開發人員指引
 
@@ -21,7 +21,7 @@ ms.locfileid: "62179315"
 
 這篇文章所提供的指引與相關弱點所代表的類別：
 
-1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 視覺效果C++Visual Studio 2017 （從 15.5.5 版開始） 中的編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 `/Qspectre`參數也會適用於 Visual Studio 2015 Update 3，透過[KB 4338871](https://support.microsoft.com/help/4338871)。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。
+1. CVE-2017-5753，也稱為 Spectre 變異 1。 因為發生條件式分支 misprediction 的推測性執行而可能發生的側邊通道有關這個硬體的弱點可能會類別。 Microsoft C++ Visual Studio 2017 （從 15.5.5 版開始） 中的編譯器支援`/Qspectre`CVE 2017-5753 的相關參數，可提供一組有限的可能有弱點的程式碼撰寫模式的編譯時期緩和措施。 `/Qspectre`參數也會適用於 Visual Studio 2015 Update 3，透過[KB 4338871](https://support.microsoft.com/help/4338871)。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。
 
 2. CVE-2018年-3639，也稱為[推測性存放區略過 (SSB)](https://aka.ms/sescsrdssb)。 可能發生因為相依的存放區，因為記憶體存取 misprediction 預先載入的推測性執行的側邊通道被與這個硬體的弱點可能會類別。
 
@@ -174,7 +174,7 @@ unsigned char WriteSlot(unsigned int untrusted_index, void *ptr) {
 }
 ```
 
-請注意這兩個範例涉及推測性修改的堆疊配置間接分支指標。 可以推測性修改全域變數、 堆積配置的記憶體，和甚至是唯讀記憶體一些 Cpu 上也可能會發生。 堆疊配置的記憶體，視覺效果的C++編譯器已經採取步驟以讓它更難推測修改堆疊配置間接分支目標，例如透過重新排列本機變數，使得緩衝區會放在相鄰的安全性cookie 的一部分[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)編譯器的安全性功能。
+請注意這兩個範例涉及推測性修改的堆疊配置間接分支指標。 可以推測性修改全域變數、 堆積配置的記憶體，和甚至是唯讀記憶體一些 Cpu 上也可能會發生。 堆疊配置的記憶體，MicrosoftC++編譯器已經採取步驟以讓它更難推測修改堆疊配置間接分支目標，例如透過重新排列本機變數，使得緩衝區會放在相鄰的安全性cookie 的一部分[/GS](https://docs.microsoft.com/cpp/build/reference/gs-buffer-security-check)編譯器的安全性功能。
 
 ## <a name="speculative-type-confusion"></a>理論式的型別混淆
 
@@ -331,7 +331,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>透過編譯器階段檢測投機屏障
 
-視覺效果C++Visual Studio 2017 （從 15.5.5 版開始） 中的編譯器支援`/Qspectre`參數，可自動插入投機屏障的一組有限的可能有弱點的程式碼撰寫模式與CVE-2017-5753。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 請務必請注意，這個旗標未涵蓋所有可能有弱點的程式碼撰寫模式，因此開發人員不應依賴它完整緩和這種弱點類別。
+Microsoft C++ Visual Studio 2017 （從 15.5.5 版開始） 中的編譯器支援`/Qspectre`參數，可自動插入投機屏障的一組有限的可能有弱點的程式碼撰寫模式與CVE-2017-5753。 文件[/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)旗標提供有關其效果與使用方式的詳細資訊。 請務必請注意，這個旗標未涵蓋所有可能有弱點的程式碼撰寫模式，因此開發人員不應依賴它完整緩和這種弱點類別。
 
 ### <a name="masking-array-indices"></a>遮罩陣列索引
 

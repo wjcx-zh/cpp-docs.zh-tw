@@ -1,13 +1,13 @@
 ---
 title: 使用 C++ 設計 Windows 應用程式概觀
-ms.date: 03/28/2019
+ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362344"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221332"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -21,7 +21,7 @@ C++主控台應用程式從命令列主控台視窗中執行，而且可以顯�
 
 詞彙*原生桌面用戶端應用程式*指的是 C 或C++視窗型的應用程式，會使用原始的原生[Windows C Api 及/或 COM Api](/windows/desktop/apiindex/windows-api-list)來存取作業系統。 這些 Api 大部分是以 c 撰寫本身就是在建立這類應用程式時，您可以選擇直接對 C 樣式的訊息迴圈處理作業系統事件進行程式設計，或使用*Microsoft Foundation Classes* (MFC)C++包裝的程式庫Win32 是有點物件導向的方式。 這兩種方法會被視為 「 現代化 」 相較於通用 Windows 平台 （請參閱下文），但同時仍可完全支援，以及數以百萬計的世界中目前執行的程式碼行。 在視窗中執行的 Win32 應用程式會要求開發人員明確地使用 Windows 程序函式內的 Windows 訊息。 名稱，即使 Win32 應用程式可以編譯為 32 位元 (x86) 或 64 位元 (x64) 二進位。 在 Visual Studio IDE 中，Win32 與條款 x86 的意義相同。
 
-若要開始使用傳統的 WindowsC++進行程式設計，請參閱[開始使用 Win32 和C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 取得 Win32 有一些了解之後，它能夠更輕鬆地了解[MFC Desktop Applications](/mfc/mfc-desktop-applications)。 如需傳統的範例C++桌面應用程式，會使用複雜的圖形，請參閱[Hilo:開發C++適用於 Windows 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
+若要開始使用傳統的 WindowsC++進行程式設計，請參閱[開始使用 Win32 和C++ ](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 取得 Win32 有一些了解之後，它能夠更輕鬆地了解[MFC Desktop Applications](../mfc/mfc-desktop-applications.md)。 如需傳統的範例C++桌面應用程式，會使用複雜的圖形，請參閱[Hilo:開發C++適用於 Windows 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)。
 
 ### <a name="c-or-net"></a>C++或.NET 嗎？ 
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [C++], about deploying applications
 - libraries [C++], application deployment issues
 ms.assetid: ebd7f246-ab54-40e8-87fa-dac02c0047b3
-ms.openlocfilehash: ec472e506e78a57b65186bf6a5b801419fb141fb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ac3565b4ec465ec60672d2238fbe81b71613a6c1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346409"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449035"
 ---
 # <a name="deployment-concepts"></a>部署概念
 
@@ -21,7 +21,7 @@ ms.locfileid: "64346409"
 
 ## <a name="windows-installer-deployment-in-c"></a>C + + 中的 Windows Installer 部署
 
-Visual C++ 專案通常會使用傳統的 Windows Installer 安裝程式進行部署。 若要準備 Windows Installer 部署，您必須將應用程式封裝到 setup.exe 檔案，並連同安裝程式套件 (.msi) 散發該檔案。 然後，使用者會執行 setup.exe 來安裝應用程式。
+Visual StudioC++專案通常使用傳統的 Windows 安裝程式安裝程式進行部署。 若要準備 Windows Installer 部署，您必須將應用程式封裝到 setup.exe 檔案，並連同安裝程式套件 (.msi) 散發該檔案。 然後，使用者會執行 setup.exe 來安裝應用程式。
 
 您可以藉由將安裝專案新增至解決方案來封裝應用程式；建置時，它會建立散發給使用者的安裝程式和安裝程式套件檔案。 如需詳細資訊，請參閱[選擇部署方法](choosing-a-deployment-method.md)。
 

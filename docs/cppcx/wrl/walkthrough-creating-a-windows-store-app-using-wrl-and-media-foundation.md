@@ -1,18 +1,21 @@
 ---
 title: 逐步解說：建立 UWP 應用程式使用 WRL 和媒體基礎
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409198"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558265"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說：建立 UWP 應用程式使用 WRL 和媒體基礎
 
-了解如何使用 Windows 執行階段C++範本庫 (WRL) 來建立使用的通用 Windows 平台 (UWP) 應用程式[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
+> [!NOTE]
+> 新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，新標準 C + + 17 語言推演，適用於 Windows 執行階段 Api。 C++/ 在 Windows 10 SDK 版本 1803年之後推出 WinRT。 C++/ WinRT 完全在標頭檔中實作，而且是為您提供第一級存取新式 Windows api。
+
+在本教學課程中，您將了解如何使用 Windows 執行階段C++範本庫 (WRL) 來建立使用的通用 Windows 平台 (UWP) 應用程式[Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)。
 
 這個範例會建立自訂的媒體基礎轉換，可將灰階效果套用到從網路攝影機擷取的映像。 應用程式會使用 C++ 定義自訂的轉換，並使用 C# 以使用元件來轉換擷取的映像。
 
@@ -25,6 +28,8 @@ ms.locfileid: "62409198"
 > 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是來自[媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 哪些使用媒體延伸將效果套用到視訊、 解碼視訊，以及建立產生媒體資料流的配置處理常式。
 
 ## <a name="prerequisites"></a>必要條件
+
+- 在 Visual Studio 2017 和更新版本，UWP 支援是選擇性元件。 若要安裝它，從 Windows [開始] 功能表開啟 Visual Studio 安裝程式，並尋找您的 Visual Studio 的版本。 選擇**修改**，以確保**通用 Windows 平台開發** 圖格會檢查。 底下**選用元件**檢查**C++適用於 UWP (v141) 工具**Visual Studio 2017，或**C++工具適用於 UWP (v142)** for Visual Studio 2019。 然後檢查您想要使用的 Windows sdk 版本。 
 
 - 體驗[Windows 執行階段](https://msdn.microsoft.com/library/windows/apps/br211377.aspx)。
 

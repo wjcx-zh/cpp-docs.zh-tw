@@ -1,6 +1,6 @@
 ---
 title: 建立 C /C++在 Visual Studio 中的 Dll
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7f1c2b71a58c59bf0662aa4ffec53344ce657df0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195458"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220753"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>建立 C /C++在 Visual Studio 中的 Dll
 
@@ -59,7 +59,7 @@ ms.locfileid: "62195458"
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>如何建立和使用 Dll 的詳細資訊
 
-下列主題提供在視覺效果的程式 dll 的詳細的資訊C++。
+下列主題提供有關如何建立 C 的詳細的資訊 /C++在 Visual Studio 中的 Dll。
 
 [逐步解說：建立和使用動態連結程式庫 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 描述如何使用 Visual Studio 來建立並使用 DLL。

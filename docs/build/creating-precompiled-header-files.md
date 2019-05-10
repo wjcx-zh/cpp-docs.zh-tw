@@ -1,20 +1,18 @@
 ---
 title: 先行編譯標頭檔
-ms.date: 12/10/2018
-f1_keywords:
-- pch
+ms.date: 05/06/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 5afda50c43f93baa2d73e6afb68f436560c3243e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: 1dc6ff9de94f98a4eef3d3827bec177f22672674
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341754"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220815"
 ---
 # <a name="precompiled-header-files"></a>先行編譯標頭檔
 
@@ -43,7 +41,7 @@ ms.locfileid: "64341754"
 
 ## <a name="two-choices-for-precompiling-code"></a>先行編譯程式碼的兩個選擇
 
-視覺效果C++，您可以先行編譯任何 C 或C++程式碼;您不一定要先行編譯僅標頭檔。
+您可以先行編譯任何 C 或C++程式碼;您不一定要先行編譯僅標頭檔。
 
 先行編譯需要規劃，但如果先行編譯原始程式碼，簡單的標頭檔以外，它會提供更快的編譯。
 
@@ -133,7 +131,7 @@ PCH 檔案並不會包含已在作用中建立時的 include 路徑的相關資�
 
 前幾節會提供的先行編譯標頭： /Yc 和 /Yu，/Fp 選項中，而[hdrstop](../preprocessor/hdrstop.md) pragma。 本章節描述的專案中; 中使用手動先行編譯標頭選項的方法範例 makefile 與它所管理的程式碼結束。
 
-在專案中使用手動先行編譯標頭選項的另一種方法，如研究 MFC\SRC 目錄是預設在安裝期間建立的視覺效果中的 makefile C++。 這些 makefile 採取類似的方式來顯示這一節，但更善用 Microsoft 計劃維護公用程式 (NMAKE) 巨集，並提供更好的控制，建置程序。
+在專案中使用手動先行編譯標頭選項的另一種方法，如研究 MFC\SRC 目錄是預設在安裝期間建立的 Visual Studio 中的 makefile 的其中一個。 這些 makefile 採取類似的方式來顯示這一節，但更善用 Microsoft 計劃維護公用程式 (NMAKE) 巨集，並提供更好的控制，建置程序。
 
 ## <a name="pch-files-in-the-build-process"></a>建置程序中的 PCH 檔
 

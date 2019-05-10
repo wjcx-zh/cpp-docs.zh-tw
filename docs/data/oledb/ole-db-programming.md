@@ -1,21 +1,19 @@
 ---
 title: OLE DB 程式設計
-ms.date: 10/22/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - OLE DB [C++]
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a3125050dc4874890a29a4c5e54bed6b96ad44c7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361239"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222554"
 ---
 # <a name="ole-db-programming"></a>OLE DB 程式設計
-
-Microsoft OLE DB 是舊版技術;對於新的應用程式是連結的 SQL 伺服器的所需的資料存取 API。 所有其他新的應用程式應該使用 ODBC。 目前的 OLE DB provider for SQL Server 是 SQLNCLI11。DLL。 SQL Server 2016 仍會出貨的提供者。 這份文件適用於開發人員會維護已使用 OLE DB 的現有應用程式。
 
 OLE DB 範本是 C++ 範本，可透過提供實作許多常用 OLE DB 介面的類別，讓您更輕鬆地使用高效能的 OLE DB 資料庫技術。 此範本庫分為消費者範本和提供者範本。
 

@@ -1,16 +1,16 @@
 ---
 title: 隔離應用程式和並存組件的概念
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 448d2088a9e91de8fc34b4f23721ffec77f6c697
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f569381b9efe9a8ca7704dc87bcb8e8102e0cde2
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196699"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220916"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>隔離應用程式和並存組件的概念
 
@@ -32,7 +32,7 @@ ms.locfileid: "62196699"
 
 ## <a name="visual-c-libraries"></a>Visual C++ 程式庫
 
-在 Visual Studio 2005 和 Visual Studio 2008 中，ATL、MFC、CRT、Standard C++、OpenMP 和 MSDIA 等可轉散發程式庫都是以共用並存組件的形式部署至原生組件快取。 在目前的版本，可轉散發程式庫使用的是集中部署。 根據預設，使用 Visual C++ 建置的所有應用程式都是以最終二進位檔中內嵌的資訊清單建置而成，而資訊清單會描述這個二進位檔對於 Visual C++ 程式庫的相依性。 若要了解 Visual C++ 應用程式資訊清單的產生方式，請參閱 [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md)。 靜態連結至其使用之程式庫或是使用本機部署的應用程式，並不需要資訊清單。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
+在 Visual Studio 2005 和 Visual Studio 2008 中，ATL、MFC、CRT、Standard C++、OpenMP 和 MSDIA 等可轉散發程式庫都是以共用並存組件的形式部署至原生組件快取。 在目前的版本，可轉散發程式庫使用的是集中部署。 根據預設，會使用 Visual Studio 建立的所有應用程式建置與資訊清單內嵌於最終二進位檔和資訊清單描述二進位檔的相依性視覺效果上C++程式庫。 若要了解的資訊清單產生C++應用程式，請參閱[Understanding Manifest Generation for C /C++程式](understanding-manifest-generation-for-c-cpp-programs.md)。 靜態連結至其使用之程式庫或是使用本機部署的應用程式，並不需要資訊清單。 如需部署的詳細資訊，請參閱 [Deployment in Visual C++](../windows/deployment-in-visual-cpp.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,13 +1,13 @@
 ---
 title: 中的屬性C++
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284743"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222300"
 ---
 # <a name="attributes-in-c"></a>中的屬性C++
 
@@ -41,7 +41,7 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 和更新版本：** 指定函式不適用於使用，而且可能會存在在未來的版本的程式庫介面。 編譯器可以使用這個來產生參考用訊息，當用戶端程式碼嘗試呼叫函式。 可以套用至類別、 typedef 名稱、 變數、 非靜態資料成員、 函式、 命名空間、 列舉型別、 列舉值或樣板特製化的宣告。
 
-- `[[fallthrough]]` **Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)以做為編譯器 （或任何人讀取提示的陳述式程式碼） 的 fallthrough 行為。 視覺效果C++編譯器目前不會在警告上 fallthrough 行為，所以這個屬性沒有任何效果編譯器行為。
+- `[[fallthrough]]` **Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性可用的內容中[切換](switch-statement-cpp.md)以做為編譯器 （或任何人讀取提示的陳述式程式碼） 的 fallthrough 行為。 MicrosoftC++編譯器目前不會在警告上 fallthrough 行為，所以這個屬性沒有任何效果編譯器行為。
 
 - `[[nodiscard]]` **Visual Studio 2017 版本 15.3 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)) 指定函式的傳回值並不適合被捨棄。 引發警告 C4834，在此範例中所示：
 

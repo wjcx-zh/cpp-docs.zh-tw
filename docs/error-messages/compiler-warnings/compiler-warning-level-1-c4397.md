@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4397
 ms.assetid: 6346fdc2-dbbf-4fba-803a-32b0d0a707be
-ms.openlocfilehash: 4ad690d78c1544adbe365a35ba3b5921c883631e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f0a3c31f460a66523ed1c327cee097dc890bbeb
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365386"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447668"
 ---
 # <a name="compiler-warning-level-1-c4397"></a>編譯器警告 (層級 1) C4397
 
 已忽略 DefaultCharSetAttribute
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> 視覺效果會忽略C++編譯器。 若要指定為 DLL 的字元，使用 DllImport 的 CharSet 選項。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Microsoft 會忽略C++編譯器。 若要指定為 DLL 的字元，使用 DllImport 的 CharSet 選項。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
 
 ## <a name="example"></a>範例
 

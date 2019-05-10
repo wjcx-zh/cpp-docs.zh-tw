@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363969"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448027"
 ---
 # <a name="fatal-error-c1010"></a>嚴重錯誤 C1010
 
 尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘記新增 '#include 名稱' 到您的來源？
 
-使用指定的 include 檔案[/Yu](../../build/reference/yu-use-precompiled-header-file.md)未列在原始程式檔。  在大部分的視覺效果預設會啟用此選項C++專案類型和"stdafx.h"是預設值包括這個選項所指定的檔案。
+使用指定的 include 檔案[/Yu](../../build/reference/yu-use-precompiled-header-file.md)未列在原始程式檔。  會啟用此選項大部分的 Visual Studio 中的預設C++專案類型和"stdafx.h"是預設值包括這個選項所指定的檔案。
 
 在 Visual Studio 環境中，使用下列方法之一來解決這個錯誤：
 

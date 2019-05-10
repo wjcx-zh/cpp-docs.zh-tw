@@ -1,6 +1,6 @@
 ---
 title: 編譯器選項巨集
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278419"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221123"
 ---
 # <a name="compiler-options-macros"></a>編譯器選項巨集
 
@@ -29,21 +29,21 @@ ms.locfileid: "62278419"
 
 |||
 |-|-|
-|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|從舊版的 ATL 轉換的符號可在專案中的錯誤|
+|[_ATL_ALL_WARNINGS](#_atl_all_warnings)|符號，可讓從舊版的 ATL 轉換的專案中的錯誤|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|定義一或多個物件使用 apartment 執行緒。|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|確保`CString`明確，防止任何非預期的轉換建構函式。|
 |[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|定義此巨集，才能使用C++標準相容的語法，非標準的語法用來初始化成員函式的指標就會產生 C4867 編譯器錯誤。|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|如果一或多個物件使用免費或中性執行緒，定義。|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|表示專案的符號必須標示為兩者，免費 」 或 「 中性的物件。 巨集會[_ATL_FREE_THREADED](#_atl_free_threaded)應改為使用。|
-|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|這是為了避免預設使用的命名空間作為 ATL 符號|
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|這樣可防止 COM 相關的程式碼正在您的專案編譯的符號。|
+|[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|會防止預設使用的命名空間為 ATL 符號|
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|要編譯您的專案時，防止 COM 相關的程式碼的符號。|
 |[ATL_NO_VTABLE](#atl_no_vtable)|在類別的建構函式和解構函式中初始化時，防止 vtable 指標的符號。|
 |[ATL_NOINLINE](#atl_noinline)|一個符號，指出函式不能內嵌。|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|如果所有物件都使用單一執行緒模型，定義。|
 
 ##  <a name="_atl_all_warnings"></a>  _ATL_ALL_WARNINGS
 
-從舊版的 ATL 轉換的符號可在專案中的錯誤
+符號，可讓從舊版的 ATL 轉換的專案中的錯誤
 
 ```
 #define _ATL_ALL_WARNINGS
@@ -113,7 +113,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>備註
 
-ATL 和 MFC 程式庫已變更為符合視覺效果C++編譯器的改進的標準C++合規性。 根據 ANSIC++的類別成員函式的指標語法應該是標準`&CMyClass::MyFunc`。
+ATL 和 MFC 程式庫已變更為符合 MicrosoftC++編譯器的改進的標準C++合規性。 根據 ANSIC++的類別成員函式的指標語法應該是標準`&CMyClass::MyFunc`。
 
 當[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)未定義 （預設情況），ATL/MFC 會停用 C4867 中的錯誤訊息 （值得注意的是訊息對應） 的巨集對應，讓較早版本中所建立的程式碼可以繼續建置和以前一樣。 如果您定義 **_ATL_ENABLE_PTM_WARNING**，您的程式碼應該是C++標準相容。
 
@@ -153,7 +153,7 @@ _ATL_MULTI_THREADED
 
 ##  <a name="_atl_no_automatic_namespace"></a>  _ATL_NO_AUTOMATIC_NAMESPACE
 
-這是為了避免預設使用的命名空間作為 ATL 符號
+會防止預設使用的命名空間為 ATL 符號
 
 ```
 _ATL_NO_AUTOMATIC_NAMESPACE
@@ -165,7 +165,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 ##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT
 
-這樣可防止 COM 相關的程式碼正在您的專案編譯的符號。
+要編譯您的專案時，防止 COM 相關的程式碼的符號。
 
 ```
 _ATL_NO_COM_SUPPORT

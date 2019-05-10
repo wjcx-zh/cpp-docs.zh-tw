@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179235"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448483"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>使用者帳戶控制 (UAC) 如何影響應用程式
 
@@ -22,7 +22,7 @@ ms.locfileid: "62179235"
 
 ## <a name="building-projects-after-enabling-uac"></a>在啟用 UAC 後建置專案
 
-如果您在停用 UAC 的情況下，在 Windows Vista 上建置 Visual C++ 專案，而且在稍後啟用了 UAC，就必須清除及重新建置專案，才能夠使其正確運作。
+如果您要建置 Visual StudioC++停用 uac 的 Windows Vista 上的專案，您之後啟用 UAC，您必須清除並重建專案，才能正確運作。
 
 ## <a name="applications-that-require-administrative-privileges"></a>需要系統管理員權限的應用程式
 

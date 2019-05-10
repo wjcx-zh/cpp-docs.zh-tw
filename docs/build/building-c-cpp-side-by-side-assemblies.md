@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d5d7652b6424177191275f8f80d7b1f6cf02b261
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195140"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221138"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>建置 C/C++ 並存組件
 
 A[並排顯示組件](/windows/desktop/SbsCs/about-side-by-side-assemblies-)是資源的集合-一組 Dll、 windows 類別、 COM 伺服器、 類型程式庫或介面 — 適用於應用程式在執行階段使用。 Dll 重新封裝組件中的主要優點是，同時應用程式可以使用多個版本的組件，並可服務目前已安裝的組件的更新版本。
 
-視覺效果C++應用程式可能使用應用程式的不同部分中的一或多個 Dll。 在執行階段 Dll 會載入到主要的處理程序，並執行必要的程式碼。 應用程式依賴作業系統來尋找要求的 Dll、 了解什麼其他相依的 Dll 必須載入，然後將它們載入要求的 DLL 一起。 在 Windows 作業系統版本早於 Windows XP、 Windows Server 2003 和 Windows Vista 作業系統載入器會搜尋相依的 Dll，應用程式的本機資料夾或指定系統路徑上的另一個資料夾中。 在 Windows XP、 Windows Server 2003 和 Windows Vista，作業系統載入器也可以搜尋使用的相依 Dll[資訊清單](/windows/desktop/sbscs/manifests)檔案，並包含這些 Dll 的並排顯示組件的搜尋。
+C++應用程式可能使用應用程式的不同部分中的一或多個 Dll。 在執行階段 Dll 會載入到主要的處理程序，並執行必要的程式碼。 應用程式依賴作業系統來尋找要求的 Dll、 了解什麼其他相依的 Dll 必須載入，然後將它們載入要求的 DLL 一起。 在 Windows 作業系統版本早於 Windows XP、 Windows Server 2003 和 Windows Vista 作業系統載入器會搜尋相依的 Dll，應用程式的本機資料夾或指定系統路徑上的另一個資料夾中。 在 Windows XP、 Windows Server 2003 和 Windows Vista，作業系統載入器也可以搜尋使用的相依 Dll[資訊清單](/windows/desktop/sbscs/manifests)檔案，並包含這些 Dll 的並排顯示組件的搜尋。
 
 根據預設，當 DLL 以 Visual Studio 中，它會有[應用程式資訊清單](/windows/desktop/SbsCs/application-manifests)內嵌做為 RT_MANIFEST 資源 id 等於 2。 如同可執行檔，此資訊清單會描述此 dll 的相依性，對其他組件。 這是假設 DLL 不是並排顯示組件的一部分，並不會相依於此 DLL 的應用程式使用應用程式資訊清單載入它，而是依賴作業系統載入器的系統路徑上找到此 DLL。
 

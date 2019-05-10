@@ -1,6 +1,6 @@
 ---
 title: HOW TO：從現有的程式碼建立 C++ 專案
-ms.date: 01/15/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, creating projects from existing code
 - Create New Project From Existing Code Files Wizard, project settings
@@ -10,12 +10,12 @@ f1_keywords:
 - vc.appwiz.importwiz.debugsettings
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
-ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a899fe7f1b038ac1497465171098183f63f40564
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62189010"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221463"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>HOW TO：從現有的程式碼建立 C++ 專案
 
@@ -26,8 +26,6 @@ ms.locfileid: "62189010"
 ### <a name="to-create-a-c-project-from-existing-code"></a>若要從現有程式碼建立 C++ 專案
 
 1. 在 [檔案] 功能表上，選取 [新增] > [來自現有程式碼的專案]。
-
-1. 在 [從現有的程式碼檔建立新專案精靈] 的第一頁，於 [您要建立的專案類型為何] 清單中選取 [Visual C++]。 選擇 [下一步]  繼續進行。
 
 1. 指定專案的位置、來源檔案的目錄，以及精靈要匯入新專案的檔案種類。 選擇 [下一步]  繼續進行。
 
@@ -44,7 +42,7 @@ ms.locfileid: "62189010"
 
     | 設定 | 描述 |
     | --- | --- |
-    | **使用 Visual Studio** | 指定使用 Visual Studio 隨附的建置工具來建置新的專案。 預設會選取這個選項。<br/><br/>選取 [專案類型] 以指定精靈產生的專案類型。 選擇 [Windows 應用程式專案]、[主控台應用程式專案]、[動態連結程式庫 (DLL) 專案] 或 [靜態程式庫 (LIB) 專案]。<br/><br/>選取 [新增 ATL 的支援] 以將 ATL 支援新增至新專案。<br/><br/>選取 [新增 MFC 的支援] 以將 MFC 支援新增至新專案。<br/><br/>選取 [新增通用語言執行平台的支援] 以將 CLR 程式設計的支援新增至專案。 為合規性類型選擇 [通用語言執行平台支援]，例如選擇 [通用語言執行平台 (舊語法)]代表符合 Managed Extensions for C++ 語法 (Visual C++ 2005 之前的 CLR 程式設計語法) 的規範。 |
+    | **使用 Visual Studio** | 指定使用 Visual Studio 隨附的建置工具來建置新的專案。 預設會選取這個選項。<br/><br/>選取 [專案類型] 以指定精靈產生的專案類型。 選擇 [Windows 應用程式專案]、[主控台應用程式專案]、[動態連結程式庫 (DLL) 專案] 或 [靜態程式庫 (LIB) 專案]。<br/><br/>選取 [新增 ATL 的支援] 以將 ATL 支援新增至新專案。<br/><br/>選取 [新增 MFC 的支援] 以將 MFC 支援新增至新專案。<br/><br/>選取 [新增通用語言執行平台的支援] 以將 CLR 程式設計的支援新增至專案。 選擇**Common Language Runtime 支援**合規性的類型，例如**Common Language Runtime （舊語法）** 合規性，使用 Managed Extensions forC++語法、 CLR 程式設計語法Visual Studio 2005。 |
     | **使用外部建置系統** | 指定使用未隨附於 Visual Studio 的建置工具來建置新專案。 選取此選項時，您可以在 [指定偵錯組態設定] 和 [指定發行組態設定] 頁面上指定建置命令行。 |
 
     ![專案設定](media/settings.png)

@@ -5,12 +5,12 @@ f1_keywords:
 - LNK2038
 helpviewer_keywords:
 - LNK2038
-ms.openlocfilehash: a22b31f1ac3226271ed7ff03b5be7dad7fff6b93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2839494232e7b57325b6f7abb960a258ba13078
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298863"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446961"
 ---
 # <a name="linker-tools-error-lnk2038"></a>連結器工具錯誤 LNK2038
 
@@ -24,9 +24,9 @@ ms.locfileid: "62298863"
 
 Visual Studio 會定義下列符號以防止連結不相容的程式碼，此程式碼可能會造成執行階段錯誤或其他未預期的行為。
 
-- `_MSC_VER` 表示主要和次要版本號碼的視覺效果C++用來建置應用程式庫的編譯器。 使用其中一個版本的 Visual C++編譯器編譯的程式碼與使用主要和次要版本號碼不同的編譯器編譯的程式碼不相容。 如需詳細資訊，請參閱 <<c0> `_MSC_VER` 中[預先定義的巨集](../../preprocessor/predefined-macros.md)。
+- `_MSC_VER` 表示主要和次要版本號碼的 MicrosoftC++用來建置應用程式庫的編譯器 (MSVC)。 藉由使用一種 MSVC 版本編譯的程式碼是使用具有不同的主要和次要版本號碼的版本編譯的程式碼與不相容。 如需詳細資訊，請參閱 <<c0> `_MSC_VER` 中[預先定義的巨集](../../preprocessor/predefined-macros.md)。
 
-   如果您要連結至與視覺效果的版本不相容的程式庫C++您使用，而且您無法取得，或建置程式庫的相容版本的編譯器，您可以使用較早版本的編譯器來建置您的專案： 變更**平台工具組**舊版工具組專案屬性。 如需詳細資訊，請參閱[如何：修改目標 Framework 和平台工具組](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
+   如果您要連結到與您使用，且您無法取得，或建置相容的程式庫版本 MSVC 的版本不相容的程式庫，您可以使用較早版本的編譯器來建置您的專案： 變更**平台工具組**舊版工具組專案屬性。 如需詳細資訊，請參閱[如何：修改目標 Framework 和平台工具組](../../build/how-to-modify-the-target-framework-and-platform-toolset.md)。
 
 - `_ITERATOR_DEBUG_LEVEL` 表示層級的安全性和偵錯中啟用的功能C++標準程式庫。 這些功能可以變更某些 C++ 標準程式庫物件的表示，因而使它們與使用其他安全性和偵錯功能的項目不相容。 如需詳細資訊，請參閱 [_ITERATOR_DEBUG_LEVEL](../../standard-library/iterator-debug-level.md)。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409547"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448414"
 ---
 # <a name="idl-attributes"></a>IDL 屬性
 
@@ -27,7 +27,7 @@ ms.locfileid: "62409547"
 
 不搭配使用時[COM 屬性](com-attributes.md)，IDL 屬性可讓您定義介面。 當編譯的原始程式碼時，屬性用來定義所產生的.idl 檔案。 ATL 專案中的 COM 屬性搭配使用時，某些 IDL 屬性，例如`coclass`，導致插入至專案的程式碼。
 
-請注意， [idl_quote](idl-quote.md)可讓您使用不支援在目前版本中的視覺效果的 MIDL 建構C++。 這和其他屬性，例如[importlib](importlib.md)並[includelib](includelib-cpp.md)幫助您使用現有的.idl 檔案，在您目前的視覺效果中C++專案。
+請注意， [idl_quote](idl-quote.md)可讓您使用不支援在目前版本中的視覺效果的 MIDL 建構C++。 這和其他屬性，例如[importlib](importlib.md)並[includelib](includelib-cpp.md)幫助您使用現有的.idl 檔案中您目前的 Visual StudioC++專案。
 
 |屬性|描述|
 |---------------|-----------------|

@@ -1,14 +1,14 @@
 ---
 title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262082"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221400"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
@@ -36,9 +36,9 @@ ms.locfileid: "62262082"
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要建立初始的 ATL 專案使用 ATL 專案精靈
 
-1. 在 Visual Studio 開發環境中，按一下**的新**上**檔案**功能表，然後再按一下**專案**。
+1. 在 Visual Studio 2017 及更早版本：**檔案** > **新** > **專案**。 開放**Visual C++** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
 
-1. 開啟**Visual C++** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
+   在 Visual Studio 2019:選擇**檔案** > **新增** > **專案**，在 搜尋 方塊中，輸入 「 atl"，然後選擇  **ATL 專案**。
 
 1. 型別*多邊形*做為專案名稱。
 

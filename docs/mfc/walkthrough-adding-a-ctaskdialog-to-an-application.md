@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：新增 CTaskDialog 至應用程式
-ms.date: 09/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - CTaskDialog, adding
 - walkthroughs [MFC], dialogs
 ms.assetid: 3a62abb8-2d86-4bec-bdb8-5784d5f9a9f8
-ms.openlocfilehash: f0992d476326e5175db799ea0f9e5667eab3704b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8cf2223b2859a2dfa6ecc7582ec2f171a056152c
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358239"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558204"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>逐步解說：新增 CTaskDialog 至應用程式
 
@@ -37,7 +37,9 @@ ms.locfileid: "62358239"
 
 ### <a name="to-replace-a-windows-message-box-with-a-ctaskdialog"></a>以 CTaskDialog 取代 Windows 訊息方塊
 
-1. 以預設值建立新的 MFC 應用程式專案。 稱之為*MyProject*。
+1. 使用**MFC 應用程式精靈**建立 MFC 應用程式使用所有預設設定。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md)如需有關如何開啟您的 Visual Studio 版本的精靈。
+
+1. 稱之為*MyProject*。 
 
 1. 使用 **方案總管** 開啟 MyProject.cpp 檔案。
 

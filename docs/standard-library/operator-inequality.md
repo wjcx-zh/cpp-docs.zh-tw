@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: a3a750565f16a0a01770cea16bf91918887095f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371421"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220509"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> 本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
+> 本主題位於 MicrosoftC++中所用容器的無作用範例文件C++標準程式庫。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
 
 多載 `operator!=` 來比較樣板類別 [Container](../standard-library/sample-container-class.md) 的兩個物件。
 

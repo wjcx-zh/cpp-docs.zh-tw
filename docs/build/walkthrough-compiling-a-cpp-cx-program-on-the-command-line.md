@@ -1,17 +1,20 @@
 ---
 title: 逐步解說：編譯C++命令列上的 /CX 程式
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 099bef402d22abc12a31f105f63e5405c65a1d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: cbf5a48de3c029e36fc6daabe2b3f0db55dc173c
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314022"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877170"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>逐步解說：編譯C++命令列上的 /CX 程式
 
-您可以建立以 Windows 執行階段為目標的 Visual C++ 程式，並在命令列上建置它們。 Visual C++ 支援 Visual C++ 元件擴充功能 (C++/CX)，其具有以 WinRT 執行階段程式設計模型為目標的其他類型及運算子。 您可以使用C++/CX 來建置適用於通用 Windows 平台 (UWP)、 Windows Phone 8.1 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 的教學課程C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。</c0>
+> [!NOTE] 
+> 新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，standard C + + 17 語言推演，適用於 Windows 執行階段 Api。 C++/ 在 Windows 10 SDK 版本 1803年之後推出 WinRT。 C++/ WinRT 完全在標頭檔中實作，而且是為您提供第一級存取新式 Windows api。
+
+MicrosoftC++編譯器 (MSVC) 支援C++元件擴充功能 (C++/CX)，其具有其他類型及運算子，以 Windows 執行階段程式設計模型為目標。 您可以使用C++/CX 來建置通用 Windows 平台 (UWP) 和 Windows 桌面應用程式。 如需詳細資訊，請參閱 <<c0> [ 的教學課程C++/CX](https://msdn.microsoft.com/magazine/dn166929.aspx)並[執行階段平台的元件擴充功能](../extensions/component-extensions-for-runtime-platforms.md)。</c0>
 
 在此逐步解說中，您可以使用文字編輯器來建立基本的 C++/CX 程式，然後在命令列上進行編譯。 (您可以使用自己的 C++/CX 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 C++/CX 程式碼範例。 這項技術可用於建置和測試沒有任何 UI 元素的小模組。）
 
@@ -49,7 +52,7 @@ ms.locfileid: "62314022"
 
 1. 在功能表列上選擇 **檔案** > **儲存**。
 
-   您已建立視覺效果C++使用 Windows 執行階段的原始程式檔[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
+   您已建立C++使用 Windows 執行階段的原始程式檔[Platform 命名空間](../cppcx/platform-namespace-c-cx.md)命名空間。
 
 1. 在命令提示字元中，輸入**cl /EHsc /ZW basiccx.cpp /link /subsystem: console**。 cl.exe 編譯器會將原始程式碼編譯為 .obj 檔案，然後執行連結器，以產生名為 basiccx.exe 的可執行程式  ( [/EHsc](reference/eh-exception-handling-model.md)編譯器選項會指定C++例外狀況處理模型，而[/link>](reference/link-pass-options-to-linker.md)旗標會指定主控台應用程式。)
 

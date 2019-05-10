@@ -1,17 +1,17 @@
 ---
 title: 使用 .DEF 檔從 DLL 匯出
-ms.date: 01/09/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - def files [C++], exporting from DLLs
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92a140c6491e9e3f0d356509862dee39ebe3fae6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195473"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220778"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>使用 .DEF 檔從 DLL 匯出
 
@@ -36,7 +36,10 @@ EXPORTS
 
 如果您使用[MFC DLL 精靈](../mfc/reference/mfc-dll-wizard.md)若要建立 MFC DLL，精靈會為您建立基本架構的.DEF 檔案並自動將它新增至您的專案。 新增到這個檔案匯出的函式的名稱。 針對非 MFC Dll，自行建立.DEF 檔，並將它新增至您的專案。 然後移至**專案** > **屬性** > **連結器** > **輸入** > **模組定義檔**輸入 DEF 檔案的名稱。 針對每個組態與平台，重複此步驟，或選取全部一次執行**組態 = 所有組態**，並**平台都 = 所有平台**。
 
-如果您要匯出函式中的C++檔案中，您必須在.DEF 檔中放置裝飾的名稱，或使用 extern"C"來定義您匯出的函式，C + +。 如果您需要在.DEF 檔中放置裝飾的名稱，您可以取得其使用[DUMPBIN](../build/reference/dumpbin-reference.md)工具或使用連結器[/typedefs/ 對應](../build/reference/map-generate-mapfile.md)選項。 編譯器所產生的裝飾的名稱是編譯器特定的附註。 如果您將視覺效果所產生的裝飾的名稱C++到 DEF 檔案的編譯器，連結至您的 DLL 的應用程式必須也使用來建置相同版本的視覺效果C++，使呼叫的應用程式中的裝飾的名稱符合中匯出的名稱DLL 的.DEF 檔。
+如果您要匯出函式中的C++檔案中，您必須在.DEF 檔中放置裝飾的名稱，或使用 extern"C"來定義您匯出的函式，C + +。 如果您需要在.DEF 檔中放置裝飾的名稱，您可以取得其使用[DUMPBIN](../build/reference/dumpbin-reference.md)工具或使用連結器[/typedefs/ 對應](../build/reference/map-generate-mapfile.md)選項。 編譯器所產生的裝飾的名稱是編譯器特定的附註。 如果您將 Microsoft 所產生的裝飾的名稱C++DEF 檔案至編譯器 (MSVC) 連結至您的 DLL 的應用程式必須也使用來建置相同版本的 MSVC，使呼叫的應用程式中的裝飾的名稱符合中匯出的名稱DLL 的.DEF 檔。 
+
+> [!NOTE]
+> 使用 Visual Studio 2015 建置的 DLL 可供使用 Visual Studio 2017 或 Visual Studio 2019 建置應用程式。
 
 如果您要建置[延伸模組 DLL](../build/extension-dlls-overview.md)，並匯出使用.DEF 檔案，將下列程式碼的開頭和結尾標頭檔包含匯出的類別：
 

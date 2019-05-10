@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: 3b2737bd67798fd467649be175d581ca551e1331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404165"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447842"
 ---
 # <a name="compiler-error-c3104"></a>編譯器錯誤 C3104
 
@@ -21,7 +21,7 @@ ms.locfileid: "62404165"
 
 請參閱[屬性參數類型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。
 
-此錯誤可能會導致針對視覺效果所進行的編譯器一致性工作C++2005年： 當受管理的陣列傳遞至自訂屬性，陣列的類型不會再推算自彙總初始設定清單。 編譯器現在會要求您指定的陣列，以及初始設定式清單的型別。
+針對 Visual Studio 2005 所進行的編譯器一致性工作可能會導致此錯誤： 當受管理的陣列傳遞至自訂屬性，陣列的類型不會再推算自彙總初始設定清單。 編譯器現在會要求您指定的陣列，以及初始設定式清單的型別。
 
 ## <a name="example"></a>範例
 

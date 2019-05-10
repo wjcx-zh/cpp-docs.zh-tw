@@ -1,31 +1,26 @@
 ---
 title: 逐步解說：建立標準C++程式 (C++)
 ms.custom: get-started-article
-ms.date: 09/18/2018
-f1_keywords:
-- vcfirstapp
-- vccreatefirst
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line applications [C++], standard
 - standard applications [C++]
 ms.assetid: 48217e35-d892-46b7-93e3-f6f0b7e2da35
-ms.openlocfilehash: d58d23e757a97402985ef60badf551523c0a275e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ed9c19dad029f8fc9495d38ab6e5c0ba8ad6d529
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387795"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877409"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>逐步解說：建立標準C++程式 (C++)
 
-您可以使用視覺效果C++Visual Studio 整合式的開發環境 (IDE) 建立標準C++程式。 依照本逐步解說中的步驟，建立專案、 將新檔案新增至專案、 修改檔案以新增C++程式碼，然後編譯及執行使用 Visual Studio 的程式。
+您可以使用 Visual Studio 來建立標準C++程式。 依照本逐步解說中的步驟，建立專案、 將新檔案新增至專案、 修改檔案以新增C++程式碼，然後編譯及執行使用 Visual Studio 的程式。
 
 您也可以輸入自己C++程式，或使用其中一個範例程式。 在本逐步解說的範例程式是主控台應用程式。 此應用程式會使用`set`容器中的C++標準程式庫。
 
-視覺化C++會遵循 2003年C++標準，而且下列主要例外狀況： 兩階段名稱查閱、 例外狀況規格和匯出。 此外，VisualC++支援數種 c++0x 功能，例如 lambda、 auto、 static_assert、 右值參考和 extern 範本。
-
 > [!NOTE]
-> 如果需要合規性標準，使用`/Za`編譯器選項來停用標準的 Microsoft 擴充功能。 如需詳細資訊，請參閱 < [/Za，/Ze （停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)。
+> 如果符合特定版本的C++語言標準 （也就是 C + + 14 或 C + + 17） 時，使用`/std:C++14`或是`/std:c++17`編譯器選項。 (Visual Studio 2017 和更新版本。)
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -33,21 +28,59 @@ ms.locfileid: "62387795"
 
 ### <a name="to-create-a-project-and-add-a-source-file"></a>若要建立專案並加入原始程式檔
 
+下列步驟，視您所使用的 Visual Studio 版本而有所不同。 請確定版本中的選取器的右上方的此頁面已正確設定。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-project-in-visual-studio-2019"></a>若要建立C++在 Visual Studio 2019 的專案
+
+1. 從主功能表中，選擇**檔案** > **新增** > **專案**開啟**建立新的專案**對話方塊方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**主控台**。 
+
+1. 從 [專案類型的篩選清單，選擇**主控台應用程式**然後選擇**下一步]**。 在下一步 頁面中，輸入專案名稱，然後指定專案位置，如有需要。
+
+1. 選擇**建立**按鈕，以建立專案。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-project-in-visual-studio-2017"></a>若要建立C++Visual Studio 2017 中的專案
+
 1. 建立專案，指向**的新**上**檔案**功能表，然後按一下**專案**。
 
 1. 在  **Visual C++** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。
 
-   > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+1. 輸入專案的名稱。 根據預設，包含專案的方案具有相同的名稱，為專案，但您可以輸入不同的名稱。 您也可以輸入專案的不同位置。
 
-   輸入專案的名稱。
+1. 按一下 [確定] 建立專案。
 
-   根據預設，包含專案的方案具有相同的名稱，為專案，但您可以輸入不同的名稱。 您也可以輸入專案的不同位置。
+::: moniker-end
 
-   按一下 [確定] 建立專案。
+::: moniker range="vs-2015"
 
-   > [!NOTE]
-   > 如需 Visual Studio 2017 以前的版本，完成**Win32 應用程式精靈**。 按一下 [**下一步**，然後確定**主控台應用程式**已選取，並取消核取**先行編譯標頭**] 方塊中。 按一下 [ **完成**]。
+### <a name="to-create-a-c-project-in-visual-studio-2015"></a>若要建立C++Visual Studio 2015 中的專案
+
+1. 建立專案，指向**的新**上**檔案**功能表，然後按一下**專案**。
+
+1. 在  **Visual C++** 專案類型 窗格中，按一下  **Windows 桌面**，然後按一下**Windows 主控台應用程式**。
+
+1. 在 **新的專案**對話方塊方塊中，展開**已安裝** > **範本** > **Visual C++** ，和然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+
+1. 輸入專案的名稱。 根據預設，包含專案的方案具有相同的名稱，為專案，但您可以輸入不同的名稱。 您也可以輸入專案的不同位置。
+
+1. 按一下 [確定] 建立專案。
+
+1. 完成**Win32 應用程式精靈**。 
+
+1. 按一下 [**下一步**，然後確定**主控台應用程式**已選取，並取消核取**先行編譯標頭**] 方塊中。 
+
+1. 按一下 [ **完成**]。
+
+::: moniker-end
+
+## <a name="add-a-new-source-file"></a>加入新的原始程式檔
 
 1. 如果**方案總管**未顯示，請在**檢視**功能表上，按一下 [**方案總管] 中**。
 

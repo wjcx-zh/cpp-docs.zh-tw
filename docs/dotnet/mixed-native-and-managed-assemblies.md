@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384851"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447269"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>混合 （原生和 managed） 組件
 
@@ -27,7 +27,7 @@ ms.locfileid: "62384851"
 
 視覺化C++僅支援混合的 managed 組件產生使用 **/clr**編譯器選項。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 如果您需要純或可驗證的 managed 組件時，我們建議使用 C# 建立它們。
 
-舊版的視覺效果C++編譯器工具組支援的 managed 組件的三種不同類型的產生： 混合的、 純粹的和可驗證。 後面兩個會討論[純粹的和可驗證程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。
+舊版的 MicrosoftC++編譯器工具組支援的 managed 組件的三種不同類型的產生： 混合的、 純粹的和可驗證。 後面兩個會討論[純粹的和可驗證程式碼 (C++/CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)。
 
 ## <a name="in-this-section"></a>本節內容
 

@@ -1,18 +1,19 @@
 ---
 title: 逐步解說：建立和使用靜態程式庫 (C++)
+description: 使用C++在 Visual Studio 中建立靜態程式庫 (.lib)。
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - libraries [C++], static
 - static libraries [C++]
 ms.assetid: 3cc36411-7d66-4240-851e-dacb9a8fd6ac
 ms.author: corob
-ms.openlocfilehash: 0d527681abb077a01b3d902c092a21de7a052867
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: afb12cc38dbaf0af88e93a9b329a59f3b54c8557
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313608"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217572"
 ---
 # <a name="walkthrough-creating-and-using-a-static-library-c"></a>逐步解說：建立和使用靜態程式庫 (C++)
 
@@ -36,30 +37,55 @@ ms.locfileid: "62313608"
 
 ##  <a name="CreateLibProject"></a> 建立靜態程式庫專案
 
-### <a name="to-create-a-static-library-project"></a>建立靜態程式庫專案
+如何建立專案的指示，端視您是否使用 Visual Studio 2019 或更早的版本而有所不同。 請確定您擁有在左上方的此頁面中設定的正確版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 建立靜態程式庫專案
+
+1. 在功能表列上選擇 [**檔案** > **新增** > **專案**開啟**建立新的專案**] 對話方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**程式庫**。 
+
+1. 從 [專案類型的篩選清單，選擇**靜態程式庫**然後選擇**下一步]**。 在下一步 頁面中，輸入*MathFuncsLib*中**名稱**方塊來指定專案名稱，並指定專案位置，如有需要。
+
+1. 選擇**建立** 按鈕來建立用戶端專案。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2017"></a>若要在 Visual Studio 2017 中建立靜態程式庫專案
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
 1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual C++** ，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
 
-   > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+1. 在 [名稱] 方塊中指定專案的名稱，例如 **MathFuncsLib** 。 在 [方案名稱] 方塊中指定方案的名稱，例如 **StaticLibrary** 。 選擇 [確定]  按鈕。
+
+1. 底下**應用程式類型**，選取**靜態程式庫 (.lib)**。
+
+1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
+
+1. 選擇**確定**建立專案。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-static-library-project-in-visual-studio-2015"></a>若要在 Visual Studio 2015 中建立靜態程式庫專案
+
+1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
+
+1. 在 **新的專案**對話方塊方塊中，展開**已安裝** > **範本** > **Visual C++** ，和然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
 1. 在 [名稱] 方塊中指定專案的名稱，例如 **MathFuncsLib** 。 在 [方案名稱] 方塊中指定方案的名稱，例如 **StaticLibrary** 。 選擇 [確定]  按鈕。
 
-    - Visual Studio 2017，
+1. 按 [ **下一步**]。
 
-        1. 底下**應用程式類型**，選取**靜態程式庫 (.lib)**。
+1. 底下**應用程式類型**，選取**靜態程式庫**。 然後取消核取**先行編譯標頭**方塊，然後選擇**完成**。
 
-        1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
-
-        1. 選擇**確定**建立專案。
-
-    - Visual Studio 2017，以前的版本
-
-        1. 按 [ **下一步**]。
-
-        1. 底下**應用程式類型**，選取**靜態程式庫**。 然後取消核取**先行編譯標頭**方塊，然後選擇**完成**。
+::: moniker-end
 
 ##  <a name="AddClassToLib"></a> 將類別加入靜態程式庫
 
@@ -84,30 +110,53 @@ ms.locfileid: "62313608"
 
 ##  <a name="CreateAppToRefTheLib"></a> 建立參考靜態程式庫的 C++ 主控台應用程式
 
-### <a name="to-create-a-c-console-app-that-references-the-static-library"></a>建立參考靜態程式庫的 C++ 主控台應用程式
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2019"></a>若要建立C++參考靜態程式庫，在 Visual Studio 2019 的主控台應用程式
+
+1. 在**方案總管 中**，以滑鼠右鍵按一下解決方案的最上層節點，然後選擇**新增** > **新專案**以開啟**加入新的專案**  對話方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**主控台**。 
+
+1. 從 [專案類型的篩選清單，選擇**主控台應用程式**然後選擇**下一步]**。 在下一步 頁面中，輸入*MyExecRefsLib*中**名稱**方塊來指定專案名稱，並指定專案位置，如有需要。
+
+1. 選擇**建立** 按鈕來建立用戶端專案。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2017"></a>若要建立C++參考靜態程式庫，Visual Studio 2017 中的主控台應用程式
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
 
 1. 在左窗格中**新的專案**對話方塊方塊中，展開**已安裝** > **Visual C++** ，然後選取  **Windows Desktop**. 在中央窗格中，選取**Windows Desktop 精靈**。
 
-   > [!NOTE]
-   > Visual Studio 2017，以前的版本中**新的專案**對話方塊方塊中，展開**已安裝** > **範本** >  **視覺化C++** ，然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
+1. 在 [名稱] 方塊中指定專案的名稱，例如 **MyExecRefsLib** 。 在 [方案] 旁邊的下拉式清單中，選取 [加入至方案] 。 此命令會將新的專案加入至包含靜態程式庫的方案。 選擇 [確定]  按鈕。
+
+1. 底下**應用程式類型**，選取**主控台應用程式 (.exe)**。
+
+1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
+
+1. 選擇**確定**建立專案。
+
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-c-console-app-that-references-the-static-library-in-visual-studio-2015"></a>若要建立C++參考靜態程式庫，Visual Studio 2015 中的主控台應用程式
+
+1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
+
+1. 在 **新的專案**對話方塊方塊中，展開**已安裝** > **範本** > **Visual C++** ，和然後選取**Win32**。 在中央窗格中，選取 [Win32 主控台應用程式] 。
 
 1. 在 [名稱] 方塊中指定專案的名稱，例如 **MyExecRefsLib** 。 在 [方案] 旁邊的下拉式清單中，選取 [加入至方案] 。 此命令會將新的專案加入至包含靜態程式庫的方案。 選擇 [確定]  按鈕。
 
-    - Visual Studio 2017，
+1. 按 [ **下一步**]。
 
-        1. 底下**應用程式類型**，選取**主控台應用程式 (.exe)**。
+1. 請確定**主控台應用程式**已選取。 然後檢查**空專案**方塊，然後選擇**完成**。
 
-        1. 底下**其他選項**，取消核取**先行編譯標頭**核取方塊。
-
-        1. 選擇**確定**建立專案。
-
-    - Visual Studio 2017，以前的版本
-
-        1. 按 [ **下一步**]。
-
-        1. 請確定**主控台應用程式**已選取。 然後檢查**空專案**方塊，然後選擇**完成**。
+::: moniker-end
 
 ##  <a name="UseLibInApp"></a> 在應用程式中使用靜態程式庫的功能
 

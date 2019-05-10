@@ -1,15 +1,15 @@
 ---
 title: Lambda 運算式的範例
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], examples
 ms.assetid: 52506b15-0771-4190-a966-2f302049ca86
-ms.openlocfilehash: 6854c5710d8a27093078c0f2013d691ac22c5870
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f9f2c3e014e44c9f6a9ce10dd8388a1578ba3987
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392189"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222100"
 ---
 # <a name="examples-of-lambda-expressions"></a>Lambda 運算式的範例
 
@@ -61,7 +61,7 @@ int main()
 
 ### <a name="example-2"></a>範例 2
 
-Visual C++ 編譯器會在宣告 Lambda 運算式時將該運算式與其所擷取的變數繫結在一起，而不是在呼叫該運算式時執行。 下列範例示範 Lambda 運算式以傳值方式擷取區域變數 `i`，以及以傳址方式擷取區域變數 `j`： 因為 Lambda 運算式是以傳值方式擷取 `i` 的值，因此之後在程式中重新指派 `i` 的值並不會影響運算式的結果。 不過，因為 Lambda 運算式是以傳址方式擷取 `j` 的值，因此之後重新指派 `j` 的值會影響運算式的結果。
+MicrosoftC++編譯器繫結的 lambda 運算式來擷取的變數而不是宣告運算式，所呼叫的運算式時。 下列範例示範 Lambda 運算式以傳值方式擷取區域變數 `i`，以及以傳址方式擷取區域變數 `j`： 因為 Lambda 運算式是以傳值方式擷取 `i` 的值，因此之後在程式中重新指派 `i` 的值並不會影響運算式的結果。 不過，因為 Lambda 運算式是以傳址方式擷取 `j` 的值，因此之後重新指派 `j` 的值會影響運算式的結果。
 
 ### <a name="code"></a>程式碼
 

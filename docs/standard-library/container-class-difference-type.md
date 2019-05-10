@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - difference_type typedef
 ms.assetid: fae52485-d424-484e-9856-13505cfe528c
-ms.openlocfilehash: aa742c0df9a8647bb08dcc0c7f5391afcdc94b96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cef7bc44c2339e4ef2771cac346443dd67f94aa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211265"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221669"
 ---
 # <a name="container-classdifferencetype"></a>容器類別::difference_type
 
 > [!NOTE]
-> 本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
+> 本主題位於 MicrosoftC++中所用容器的無作用範例文件C++標準程式庫。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
 
 描述的物件可代表受控制序列中任兩個元素位址之間的差距。
 

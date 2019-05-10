@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399079"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222452"
 ---
 # <a name="decltype--c"></a>decltype （C++）
 
@@ -38,7 +38,7 @@ decltype( expression )
 
 ## <a name="remarks"></a>備註
 
-**Decltype**視覺效果中支援的型別規範C++2010年或更新版本的版本中，而且可以搭配原生或 managed 程式碼。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。
+**Decltype**類型規範支援 Visual Studio 2010 或更新版本中，而且可以搭配原生或 managed 程式碼。 Visual Studio 2015 和更新版本支援 `decltype(auto)` (C++14)。
 
 編譯器會使用下列規則來判斷型別*運算式*參數。
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>需求
 
-Visual C++ 2010 (含) 以後版本。
+Visual Studio 2010 或更新版本。
 
 `decltype(auto)` 需要 Visual Studio 2015 或更新版本。

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2603
 ms.assetid: 9ca520d0-f082-4b65-933d-17c3bcf8b02c
-ms.openlocfilehash: 5391aed09b7fd448a9d72ea7cc17cd5c26fc5f04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4540180058c890a1dec9c4060f796f1f044c934
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215397"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447990"
 ---
 # <a name="compiler-error-c2603"></a>編譯器錯誤 C2603
 
 > '*函式*':太多區塊範圍靜態物件以建構函式/解構函式在函式
 
-在視覺效果的版本C++編譯器之前 Visual Studio 2015 中，或當[/zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)編譯器選項指定，則為 31，您可以在外部可見的內嵌的靜態物件的數目限制函式。
+在版本的 MicrosoftC++編譯器之前 Visual Studio 2015 中，或當[/zc: threadsafeinit](../../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)編譯器選項指定，則為 31，您可以在外部可見的靜態物件的數目限制內嵌函式。
 
-若要解決此問題，我們建議您採用較新版的視覺效果C++編譯器工具組，或可能的話，請移除 /zc: threadsafeinit 編譯器選項。 如果這不可行，請考慮結合您靜態物件。 如果物件相同類型，請考慮使用單一的靜態陣列，該型別，並參考所需的個別成員。
+若要解決此問題，我們建議您採用較新版本的 MicrosoftC++編譯器工具組，或可能的話，請移除 /zc: threadsafeinit 編譯器選項。 如果這不可行，請考慮結合您靜態物件。 如果物件相同類型，請考慮使用單一的靜態陣列，該型別，並參考所需的個別成員。
 
 ## <a name="example"></a>範例
 

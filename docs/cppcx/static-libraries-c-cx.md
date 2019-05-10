@@ -2,12 +2,12 @@
 title: 靜態程式庫 (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: 242ba10b29a8efe0c3e9580f1d0d0c3be529a7d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 188ba06518bf6cdd154b7d6bd61216ed1e4ffad3
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398858"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877248"
 ---
 # <a name="static-libraries-ccx"></a>靜態程式庫 (C++/CX)
 
@@ -15,11 +15,32 @@ ms.locfileid: "62398858"
 
 ## <a name="creating-static-libraries"></a>建立靜態程式庫
 
-#### <a name="to-create-a-static-library-for-use-in-a-uwp-app"></a>若要建立靜態程式庫用於 UWP 應用程式中
+
+建立新專案的指示，端視您已安裝的 Visual Studio 版本而有所不同。 請確定您有版本選擇器右上方設為正確的版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>若要在 Visual Studio 2019 建立 UWP 靜態程式庫
+
+1. 在功能表列上選擇 [**檔案** > **新增** > **專案**開啟**建立新的專案**] 對話方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**UWP**。 
+
+1. 從 [專案類型的篩選清單，選擇**靜態程式庫 (通用 Windows- C++/CX)** 然後選擇**下一步]**。 在下一步 頁面中，指定專案的名稱，並指定專案位置視。
+
+1. 選擇**建立**按鈕，以建立專案。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-uwp-static-library-in-visual-studio-2017-or-visual-studio-2015"></a>若要在 Visual Studio 2017 或 Visual Studio 2015 中建立的 UWP 的靜態程式庫
 
 1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。 底下**Visual C++**   >  **Windows Universal**選擇**靜態程式庫 (通用 Windows)**。
 
 1. 在 [ **方案總管**] 中，開啟專案的捷徑功能表，然後選擇 [ **屬性**]。 在 **屬性**對話方塊的 **組態屬性** > **C /C++** 頁面上，設定**取用的 Windows 執行階段延伸模組**要**是 (/ZW)**。
+
+::: moniker-end
 
 當您編譯新的靜態程式庫中，如果您排除於 UWP 應用程式的 Win32 api 呼叫時，編譯器將會引發錯誤 c3861: 「 找不到識別項 」。 若要尋找支援的 Windows 執行階段的替代方法，請參閱[UWP 應用程式中的 Windows Api 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)。
 

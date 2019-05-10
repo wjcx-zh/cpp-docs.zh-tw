@@ -1,17 +1,15 @@
 ---
 title: MSBuild 命令列-C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273309"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220571"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild 命令列-C++
 
@@ -53,7 +51,7 @@ MSBuild 系統可以有條件地目標之前或之後執行另一個目標。 �
 
 |詞彙|定義|
 |----------|----------------|
-|[逐步解說：使用 MSBuild 建立 Visual C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立視覺效果C++使用的專案**MSBuild**。|
+|[逐步解說：使用 MSBuild 建立 C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|示範如何建立 Visual StudioC++使用的專案**MSBuild**。|
 |[如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)|示範如何指定在組建中 particuler 階段，就會發生的動作： 在建置開始之前;連結步驟開始; 之前或在建置結束後。|
 |[如何：將自訂建置步驟新增至 MSBuild 專案](how-to-add-a-custom-build-step-to-msbuild-projects.md)|示範如何將使用者定義的階段新增至組建順序。|
 |[如何：將自訂建置工具新增至 MSBuild 專案](how-to-add-custom-build-tools-to-msbuild-projects.md)|示範如何建置工具相關聯的特定檔案。|

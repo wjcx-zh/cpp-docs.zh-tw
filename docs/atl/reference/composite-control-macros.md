@@ -1,6 +1,6 @@
 ---
 title: 複合控制項巨集
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - atlcom/ATL::BEGIN_SINK_MAP
 - atlcom/ATL::END_SINK_MAP
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278315"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221111"
 ---
 # <a name="composite-control-macros"></a>複合控制項巨集
 

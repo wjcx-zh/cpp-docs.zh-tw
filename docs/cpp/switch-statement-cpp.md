@@ -1,6 +1,6 @@
 ---
 title: switch 陳述式 (C++)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - default_cpp
 - switch_cpp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - case keyword [C++], in switch statements
 - default keyword [C++]
 ms.assetid: 6c3f3ed3-5593-463c-8f4b-b33742b455c6
-ms.openlocfilehash: 67918b7df747d3bee923da500729e60b4fe04336
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8136b03d9e54b4d49bcb1417238066bd86bc6b89
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267085"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221932"
 ---
 # <a name="switch-statement-c"></a>switch 陳述式 (C++)
 
@@ -78,7 +78,7 @@ int main() {
 
 在上述範例中，如果 `capa` 是大寫 `c`，則遞增 `A`。 **中斷**之後的陳述式`capa++`結束執行**切換**陳述式主體並將控制權傳遞至**雖然**迴圈。 不含**中斷**陳述式中，執行會 「 繼續 」 下一個標記的陳述式，以便`lettera`和`nota`也會遞增。 類似的目的由**中斷**陳述式`case 'a'`。 如果`c`是小寫`a`，`lettera`就會遞增並**中斷**陳述式會終止**切換**陳述式主體。 如果`c`不是`a`或是`A`，則**預設**陳述式。
 
-**Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性會指定在 C + + 17 標準。 它可以用於**切換**陳述式做為提示給編譯器 （或任何人讀取程式碼） 是該行為。 視覺效果C++編譯器目前不會在警告上 fallthrough 行為，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至空的陳述式內加上標籤的陳述式;換句話說，分號是必要的。
+**Visual Studio 2017 和更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md))`[[fallthrough]]`屬性會指定在 C + + 17 標準。 它可以用於**切換**陳述式做為提示給編譯器 （或任何人讀取程式碼） 是該行為。 MicrosoftC++編譯器目前不會在警告上 fallthrough 行為，因此這個屬性不會影響編譯器行為。 請注意，屬性會套用至空的陳述式內加上標籤的陳述式;換句話說，分號是必要的。
 
 ```cpp
 int main()
@@ -119,7 +119,7 @@ int main()
     };
 ```
 
-內部區塊**切換**陳述式可以包含有初始化的定義，只要它們是連線到 — 也就是不可能執行的所有路徑程式略過。 使用這些宣告引入的名稱有區域範圍。 例如: 
+內部區塊**切換**陳述式可以包含有初始化的定義，只要它們是連線到 — 也就是不可能執行的所有路徑程式略過。 使用這些宣告引入的名稱有區域範圍。 例如：
 
 ```cpp
 // switch_statement2.cpp

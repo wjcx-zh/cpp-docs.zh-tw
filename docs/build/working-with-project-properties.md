@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a8c15de43a3843b8ff12cb4ad3d951d76b90c039
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314061"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446191"
 ---
 # <a name="set-compiler-and-build-properties"></a>設定編譯器和組建屬性
 
@@ -23,7 +23,7 @@ ms.locfileid: "62314061"
 
 當您建立專案時，系統會指派各種屬性值。 預設值會依據專案類型以及您在應用程式精靈中選擇的選項而稍有不同。 例如，ATL 專案具有與 MIDL 檔案相關的屬性，但這些屬性不存在於基本的主控台應用程式中。 預設屬性會顯示在 [屬性頁] 的 [一般] 窗格中：
 
-![Visual C&#43;&#43; 專案預設值](media/visual-c---project-defaults.png "Visual C++ 專案預設值")
+![Visual C&#43; &#43;專案預設值](media/visual-c---project-defaults.png "視覺化C++專案預設值")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>套用屬性，以建置組態和目標平台
 
@@ -61,7 +61,7 @@ C++編譯器和連結器選項位於**C /C++** 並**連結器**下的左窗格�
 
 MSBuild 支援稱為 「 巨集 」，針對特定的字串值包含目錄和路徑的編譯時期常數的使用。 這些會公開在屬性頁中，您可以在此參考，並使用就可以將它修改它們[屬性編輯器](#property_editor)。 
 
-下圖顯示 Visual C++ 專案的屬性頁。 左窗格中已選取 [VC++ 目錄*規則*]，則右窗格中會列出與該規則建立關聯的屬性。 `$(...)`值也稱為*巨集*。 「巨集」是一個編譯時間常數，可以參考由 Visual Studio 或 MSBuild 系統所定義的值或使用者定義的值。 藉由使用巨集，而不硬式編碼的值，例如目錄路徑，您可以更輕鬆地共用屬性設定版本的 Visual Studio 中，以及機器之間，以及您更能確保您的專案設定正確參與[屬性繼承](project-property-inheritance.md)。 
+下圖顯示的屬性頁，適用於 Visual StudioC++專案。 左窗格中已選取 [VC++ 目錄*規則*]，則右窗格中會列出與該規則建立關聯的屬性。 `$(...)`值也稱為*巨集*。 「巨集」是一個編譯時間常數，可以參考由 Visual Studio 或 MSBuild 系統所定義的值或使用者定義的值。 藉由使用巨集，而不硬式編碼的值，例如目錄路徑，您可以更輕鬆地共用屬性設定版本的 Visual Studio 中，以及機器之間，以及您更能確保您的專案設定正確參與[屬性繼承](project-property-inheritance.md)。 
 
 ![專案屬性頁](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 

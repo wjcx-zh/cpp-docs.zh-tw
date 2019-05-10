@@ -1,17 +1,17 @@
 ---
 title: 逐步解說：使用工作和 XML HTTP 要求
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: f78adda7625d3a3def60de968c5e7be97f282a7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 449f99f37f0d328b7c874730b814335f8b69e807
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411394"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856287"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求
 
@@ -31,6 +31,8 @@ ms.locfileid: "62411394"
 
 ## <a name="prerequisites"></a>必要條件
 
+UWP 支援是選擇性在 Visual Studio 2017 和更新版本。 若要安裝，請從 Windows [開始] 功能表開啟 Visual Studio 安裝程式並選擇您所使用的 Visual Studio 版本。 按一下 [**修改**按鈕，並確定**UWP 開發**] 圖格會檢查。 底下**選用的元件**確定 **C++ UWP 工具**核取。 使用 Visual Studio 2017 或 Visual Studio 2019 的 v142 v141。
+
 ## <a name="defining-the-httprequest-httprequestbufferscallback-and-httprequeststringcallback-classes"></a>定義 HttpRequest、HttpRequestBuffersCallback 和 HttpRequestStringCallback 類別
 
 當您使用 `IXMLHTTPRequest2` 介面建立透過 HTTP 的 Web 要求時，您會實作 `IXMLHTTPRequest2Callback` 介面來接收伺服器回應及回應其他事件。 這個範例會定義 `HttpRequest` 類別用於建立 Web 要求，以及定義 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 類別用於處理回應。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 類別支援 `HttpRequest` 類別，不過您只會在應用程式程式碼中處理 `HttpRequest` 類別。
@@ -43,7 +45,9 @@ ms.locfileid: "62411394"
 
 #### <a name="to-define-the-httprequest-class"></a>若要定義 HttpRequest 類別
 
-1. 使用視覺效果C++**空白應用程式 (XAML)** 範本，以建立空白 XAML 應用程式專案。 這個範例會將專案命名為 `UsingIXMLHTTPRequest2`。
+1. 從主功能表中，選擇**檔案** > **新增** > **專案**。 
+
+1. 使用C++**空白應用程式 (通用 Windows)** 範本，以建立空白 XAML 應用程式專案。 這個範例會將專案命名為 `UsingIXMLHTTPRequest2`。
 
 1. 在專案中加入名為 HttpRequest.h 的標頭檔和名為 HttpRequest.cpp 的原始程式檔。
 

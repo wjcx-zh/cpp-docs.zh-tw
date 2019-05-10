@@ -1,18 +1,18 @@
 ---
 title: 逐步解說：偵錯C++AMP 應用程式
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237952"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877539"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>逐步解說：偵錯C++AMP 應用程式
 
@@ -38,11 +38,33 @@ ms.locfileid: "62237952"
 
 - 請確定這一行文字編輯器中顯示數字。 如需詳細資訊，請參閱[如何：在編輯器中顯示行號](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)。
 
-- 請確定您執行 Windows 8 或 Windows Server 2012，以支援在軟體模擬器上偵錯。
+- 請確定您至少執行 Windows 8 或 Windows Server 2012，以支援在軟體模擬器上偵錯。 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>建立範例專案
+
+建立專案的指示，端視您所使用的 Visual Studio 版本而有所不同。 請確定您已在左上方的此頁面中選取正確的版本。
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>若要建立範例專案在 Visual Studio 2019
+
+1. 在功能表列上選擇 [**檔案** > **新增** > **專案**開啟**建立新的專案**] 對話方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**主控台**。 
+
+1. 從 [專案類型的篩選清單，選擇**主控台應用程式**然後選擇**下一步]**。 在下一步 頁面中，輸入`AMPMapReduce`中**名稱**方塊來指定專案名稱，並指定專案位置，如有需要。
+
+   ![將專案命名為](../../build/media/mathclient-project-name-2019.png "將專案命名為")
+
+1. 選擇**建立** 按鈕來建立用戶端專案。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>若要在 Visual Studio 2017 或 Visual Studio 2015 中建立範例專案
 
 1. 啟動 Visual Studio。
 
@@ -57,6 +79,9 @@ ms.locfileid: "62237952"
 6. 清除**先行編譯標頭**核取方塊，然後再選擇**完成** 按鈕。
 
 7. 在 [**方案總管] 中**，從專案刪除 stdafx.h、 targetver.h 和 stdafx.cpp。
+
+::: moniker-end
+
 
 8. 開啟 AMPMapReduce.cpp，並以下列程式碼取代其內容。
 

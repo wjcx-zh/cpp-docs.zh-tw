@@ -1,17 +1,17 @@
 ---
 title: Visual C++ ARM 移轉時常見的問題
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195258"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220890"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ ARM 移轉時常見的問題
 
-使用 Microsoft Visual 時C++(MSVC)，相同C++原始程式碼可能會產生不同的結果，在 ARM 架構上，不一定需要 x86 或 x64 架構上。
+當使用 MicrosoftC++編譯器 (MSVC)，相同C++原始程式碼可能會產生不同的結果，在 ARM 架構上，不一定需要 x86 或 x64 架構上。
 
 ## <a name="sources-of-migration-issues"></a>移轉問題的來源
 

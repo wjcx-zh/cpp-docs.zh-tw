@@ -1,14 +1,14 @@
 ---
 title: 類型轉換和類型安全 (現代 C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 ms.topic: conceptual
 ms.assetid: 629b361a-2ce1-4700-8b5d-ab4f57b245d5
-ms.openlocfilehash: 79285e4870b73ff01ed3b230a0162f87c0400aa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e06ea3f9c3ea427f205764c35988ea3316c3794a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404685"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221858"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>類型轉換和類型安全 (現代 C++)
 
@@ -84,7 +84,7 @@ cout << u3 << endl; // prints 4294967295
 
 ### <a name="pointer-conversions"></a>指標轉換
 
-在許多運算式，C 樣式陣列會隱含地轉換陣列中的第一個元素的指標，常數轉換可能會以無訊息方式發生。 雖然這十分方便，也很容易出錯。 比方說，下列的設計不良的程式碼範例似乎無意義，並且尚未編譯在視覺效果C++，並產生 'p' 的結果。 首先，將 [說明] 字串常數常值轉換成`char*`指向陣列的第一個項目，該指標會增加三個項目，讓它現在所指向的最後一個項目 'p'。
+在許多運算式，C 樣式陣列會隱含地轉換陣列中的第一個元素的指標，常數轉換可能會以無訊息方式發生。 雖然這十分方便，也很容易出錯。 例如，下列設計不良的程式碼範例似乎無意義，並且還會進行編譯，並產生 'p' 的結果。 首先，將 [說明] 字串常數常值轉換成`char*`指向陣列的第一個項目，該指標會增加三個項目，讓它現在所指向的最後一個項目 'p'。
 
 ```cpp
 char* s = "Help" + 3;

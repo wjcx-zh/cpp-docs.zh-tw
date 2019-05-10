@@ -37,11 +37,11 @@ helpviewer_keywords:
 - C2098
 ms.assetid: d99a19eb-eeeb-4181-9b33-9cbe4459767b
 ms.openlocfilehash: cf1d2f647c13b589463624749e29dc277f6f1d3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360485"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857146"
 ---
 # <a name="compiler-errors-c2000-through-c2099"></a>編譯器錯誤 C2000 至 C2099
 

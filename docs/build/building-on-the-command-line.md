@@ -2,7 +2,7 @@
 title: 使用 MSVC 工具組，從命令列-Visual Studio
 description: 使用 MicrosoftC++從 Visual Studio IDE 外部命令列編譯器工具鏈 (MSVC)。
 ms.custom: conceptual
-ms.date: 12/10/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5f9ac1e4753fdba412af26bcc45022dee354cacf
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342160"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877141"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>使用 MSVC 工具組，從命令列
 
-您可以建置 C 和C++使用 Visual Studio 中包含的工具在命令列上的應用程式。 您也可以下載編譯器工具組，作為從獨立封裝[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+您可以建置 C 和C++使用 Visual Studio 中包含的工具在命令列上的應用程式。 您也可以下載編譯器工具組，作為從獨立封裝[Visual Studio 下載](https://visualstudio.microsoft.com/downloads/)頁面。 是的一部分**Build Tools for Visual Studio** ; 封裝，您可以選擇下載只將所需的工具C++開發。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令列工具
 
@@ -43,13 +43,11 @@ ms.locfileid: "64342160"
 - **x86_x64 Cross Tools 命令提示字元**-設定環境以使用 32 位元、 x86 native tools 建置 64 位元、 x64 原生程式碼。
 - **x64_x86 Cross Tools 命令提示字元**-設定環境以使用 64 位元、 x64 native tools 建置 32 位元、 x86 原生程式碼。
 
-如果您設定其中一個的則根據您已安裝，Visual Studio 的版本和安裝暱稱中實際的開始功能表 資料夾和捷徑名稱而有所不同。 例如，如果您有 Visual Studio 2017 安裝，而且您之後就安裝暱稱的*Preview*，在名為開發人員命令提示字元捷徑**開發人員命令提示字元，適用於 VS 2017 （預覽）**，在名為的資料夾**Visual Studio 2017**。
-
-如果您已安裝[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) （也包括 Visual Studio 2015 Update 3 的編譯器工具組），只有特定架構的原生或跨工具開發人員命令提示字元安裝選項並不是一般**開發人員命令提示字元**捷徑。
+如果您設定其中一個的則根據您已安裝，Visual Studio 的版本和安裝暱稱中實際的開始功能表 資料夾和捷徑名稱而有所不同。 例如，如果您有 Visual Studio 2017 安裝，而且您之後就安裝暱稱的*預覽*，在名為開發人員命令提示字元捷徑**VS 2019 的開發人員命令提示字元**中名為資料夾**Visual Studio 2019**。
 
 ## <a name="developer_command_prompt"></a> 若要開啟 [開發人員命令提示字元] 視窗
 
-1. 在桌面上，開啟 Windows**開始**功能表，然後尋找並開啟您版本的 Visual Studio 中，資料夾，例如，然後捲動**Visual Studio 2017**。 呼叫的子資料夾中，在某些較舊版本的 Visual Studio 中，是捷徑**Visual Studio Tools**。
+1. 在桌面上，開啟 Windows**開始**功能表，然後尋找並開啟您版本的 Visual Studio 中，資料夾，例如，然後捲動**Visual Studio 2019**。 呼叫的子資料夾中，在某些較舊版本的 Visual Studio 中，是捷徑**Visual Studio Tools**。
 
 1. 在資料夾中，選擇**開發人員命令提示字元**針對您的 Visual Studio 版本。 此快速鍵啟動會使用預設組建架構的 32 位元、 x86 原生工具來建置 32 位元、 x86 原生程式碼的開發人員命令提示字元視窗。 如果您偏好的非預設建置架構時，選擇其中一個原生或跨工具命令提示字元，以指定的主機和目標架構。
 
@@ -57,11 +55,11 @@ ms.locfileid: "64342160"
 
 ## <a name="developer_command_file_locations"></a> 開發人員命令檔案位置
 
-如果您想要在現有的 [命令提示字元] 視窗中設定建置架構環境，您可以使用其中一個命令檔案 （批次檔） 安裝程式所建立，若要設定所需的環境。 我們只建議您在新的命令提示字元視窗中，執行這項操作，並不建議您在相同的命令視窗中的更新版本切換環境。 這些檔案的位置取決於您已安裝，Visual Studio 的版本和位置，並命名您在安裝期間所做的選擇。 對於 Visual Studio 2017，在 64 位元電腦上的一般安裝位置位於 \Program 檔案 (x86) \Microsoft Visual Studio\2017\\*edition*，其中*edition*可能是社群Professional、 Enterprise、 BuildTools 或您提供的另一個名稱。 Visual Studio 2015，一般安裝位置是 \Program 檔案 (x86) \Microsoft Visual Studio 14.0。
+如果您想要在現有的 [命令提示字元] 視窗中設定建置架構環境，您可以使用其中一個命令檔案 （批次檔） 安裝程式所建立，若要設定所需的環境。 我們只建議您在新的命令提示字元視窗中，執行這項操作，並不建議您在相同的命令視窗中的更新版本切換環境。 這些檔案的位置取決於您已安裝，Visual Studio 的版本和位置，並命名您在安裝期間所做的選擇。 Visual Studio 2019，對於在 64 位元電腦上的一般安裝位置位於 \Program 檔案 (x86) \Microsoft Visual Studio\2019\\*edition*，其中*edition*可能是社群Professional、 Enterprise、 BuildTools 或您提供的另一個名稱。 Visual Studio 2017 位置很類似。 Visual Studio 2015，一般安裝位置是 \Program 檔案 (x86) \Microsoft Visual Studio 14.0。
 
 主要的開發人員命令提示字元命令檔，VsDevCmd.bat，位於安裝目錄 Common7\Tools 子目錄。 當未指定任何參數，這會設定環境，而主機和目標建置所要使用 32 位元 x86 原生工具來建置 32 位元 x86 架構程式碼。
 
-額外的命令檔可用於設定特定組建的架構，視您的處理器架構和 Visual Studio 工作負載和您已安裝的選項而定。 在 Visual Studio 2017 中，這些全都位於 Visual Studio 安裝目錄的 VC\Auxiliary\Build 子目錄。 在 Visual Studio 2015，這些全都位於 VC、 VC\bin 或 VC\bin\\*架構*子目錄的安裝目錄，其中*架構*是其中一個原生或跨編譯器選項。 這些命令檔設定預設參數，而且呼叫來設定指定的組建架構環境的 VsDevCmd.bat。 一般安裝可能會包含這些指令檔：
+額外的命令檔可用於設定特定組建的架構，視您的處理器架構和 Visual Studio 工作負載和您已安裝的選項而定。 在 Visual Studio 2017 和 Visual Studio 2019，這些全都位於 Visual Studio 安裝目錄的 VC\Auxiliary\Build 子目錄。 在 Visual Studio 2015，這些全都位於 VC、 VC\bin 或 VC\bin\\*架構*子目錄的安裝目錄，其中*架構*是其中一個原生或跨編譯器選項。 這些命令檔設定預設參數，而且呼叫來設定指定的組建架構環境的 VsDevCmd.bat。 一般安裝可能會包含這些指令檔：
 
 |命令檔|主機和目標架構|
 |---|---|
@@ -107,28 +105,28 @@ ms.locfileid: "64342160"
 選擇性地指定要使用的 Windows SDK 的版本。 根據預設，會使用最新已安裝的 Windows SDK。 若要指定的 Windows SDK 版本，您可以使用完整的 Windows 10 SDK 號碼這類**10.0.10240.0**，或指定**8.1**若要使用 Windows 8.1 SDK。
 
 *vcversion*<br/>
-（選擇性） 指定要使用 Visual Studio 編譯器工具組。 根據預設，環境是設定為使用目前的 Visual Studio 2017 編譯器工具組。 使用 **-vcvars_ver=14.0 = 14.0**指定 Visual Studio 2015 的編譯器工具組。
+（選擇性） 指定要使用 Visual Studio 編譯器工具組。 根據預設，環境是設定為使用目前的 Visual Studio 編譯器工具組。 使用 **-vcvars_ver=14.0 = 14.0**指定 Visual Studio 2015 的編譯器工具組或 **-vcvars_ver=14.0 = 15.0**指定 Visual Studio 2017 編譯器工具組。
 
 <a name="vcvarsall"></a>
 #### <a name="to-set-up-the-build-environment-in-an-existing-command-prompt-window"></a>若要設定建置環境中現有的 [命令提示字元] 視窗
 
-1. 在命令提示字元中，使用 CD 命令來切換至 Visual Studio 安裝目錄。 然後，變更至子目錄，其中包含的特定組態指令檔再次使用 CD。 Visual Studio 2017 中，這是 VC\Auxiliary\Build 子目錄。 Visual Studio 2015 中，使用 VC 子目錄。
+1. 在命令提示字元中，使用 CD 命令來切換至 Visual Studio 安裝目錄。 然後，變更至子目錄，其中包含的特定組態指令檔再次使用 CD。 如需 Visual Studio 2017 和 2019年，這是 VC\Auxiliary\Build 子目錄。 Visual Studio 2015 中，使用 VC 子目錄。
 
-1. 輸入命令，為您慣用的開發人員的環境。 例如，若要建立 ARM 程式碼適用於 UWP 的 64 位元平台上使用最新的 Windows SDK 和 Visual Studio 2017 RTM 編譯器工具組，使用這個命令列：
+1. 輸入命令，為您慣用的開發人員的環境。 例如，若要建立 ARM 程式碼適用於 UWP 的 64 位元平台上使用最新的 Windows SDK 和 Visual Studio 2019 編譯器工具組，使用這個命令列：
 
-   `vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10`
+   `vcvarsall.bat amd64_arm uwp`
 
 ## <a name="create-your-own-command-prompt-shortcut"></a>建立您自己的命令提示字元捷徑
 
-如果您開啟 [屬性] 對話方塊，其中一個現有的開發人員命令提示字元捷徑，您可以看到使用的命令目標。 例如，針對目標**x64 Native Tools 命令提示字元，適用於 VS 2017**捷徑會類似：
+如果您開啟 [屬性] 對話方塊，其中一個現有的開發人員命令提示字元捷徑，您可以看到使用的命令目標。 例如，針對目標**x64 Native Tools 命令提示字元，如 VS 2019**捷徑會類似：
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvars64.bat"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars64.bat"`
 
-架構特定批次檔組*架構*參數並呼叫 vcvarsall.bat。 您會將它傳遞給 vcvarsall.bat，或您只可以直接呼叫 vcvarsall.bat，您可以將相同的其他選項傳遞給這些批次檔中。 若要指定您自己的命令捷徑的參數，將它們加入雙引號括住命令的結尾。 比方說，若要設定使用最新的 Windows SDK 和 Visual Studio 2017 RTM 編譯器工具組，適用於 UWP 建置 ARM 程式碼的 64 位元平台上的捷徑使用類似此命令目標，在您的捷徑：
+架構特定批次檔組*架構*參數並呼叫 vcvarsall.bat。 您會將它傳遞給 vcvarsall.bat，或您只可以直接呼叫 vcvarsall.bat，您可以將相同的其他選項傳遞給這些批次檔中。 若要指定您自己的命令捷徑的參數，將它們加入雙引號括住命令的結尾。 比方說，若要設定為使用最新的 Windows SDK 與早於最新版本的編譯器工具組適用於 UWP 建置 ARM 程式碼的 64 位元平台上的捷徑，您需要指定版本號碼。 您可以使用類似此命令目標，在您的捷徑：
 
-`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=14.10"`
+`%comspec% /k "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvarsall.bat amd64_arm uwp -vcvars_ver=15.0"`
 
-您必須先調整路徑，以反映您的 Visual Studio 安裝目錄。
+您必須先調整路徑，以反映您的 Visual Studio 安裝目錄。 Vcvarsall.bat 檔案有特定的版本號碼的其他資訊。
 
 ## <a name="command-line-tools"></a>命令列工具
 

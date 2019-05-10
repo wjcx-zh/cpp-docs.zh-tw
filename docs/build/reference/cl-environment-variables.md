@@ -1,6 +1,6 @@
 ---
 title: CL 環境變數
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294469"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217629"
 ---
 # <a name="cl-environment-variables"></a>CL 環境變數
 
@@ -22,7 +22,7 @@ CL 工具使用下列環境變數：
 
 - CL 和\_CL\_，如果已定義。 CL 工具前面加上選項和引數的命令列引數，CL 環境變數中定義，並將附加選項和引數中定義\_CL\_，處理之前。
 
-- INCLUDE，必須指向 Visual C++ 安裝的 \include 子目錄。
+- 包含必須指向 Visual Studio 安裝的 \include 子目錄。
 
 - LIBPATH，指定要搜尋參考的中繼資料檔案的目錄[#using](../../preprocessor/hash-using-directive-cpp.md)。 如需 LIBPATH 的詳細資訊，請參閱 `#using`。
 

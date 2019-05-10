@@ -1,6 +1,6 @@
 ---
 title: thread
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - thread_cpp
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: 089f339e5d203fe44789a7df1607f73ab13b8a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 59a1af8a7eb73207f84ddf2194d5fe9e77d7d46a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330514"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221970"
 ---
 # <a name="thread"></a>thread
 
@@ -40,7 +40,7 @@ __declspec( thread ) int tls_i = 1;
 
 1. 如果變數初始化函式呼叫 （包括建構函式），將只能之執行緒的此二進位檔/dll 載入程序，以及已載入的二進位檔/DLL 之後，啟動這些執行緒中呼叫此函式。 初始化函式不會載入 DLL 時已執行的任何其他執行緒呼叫。 動態初始化，就會發生 DLL_THREAD_ATTACH，DllMain 呼叫但 DLL 永遠不會取得該訊息，如果 DLL 不是程序中，在執行緒啟動時。
 
-1. 常數的值會以靜態方式初始化的執行緒本機變數通常會在所有執行緒上正確初始化。 不過，自 2017 年 12 月起沒有已知的一致性問題在 Microsoft VisualC++讓接收動態而不是靜態初始設定 constexpr 變數的編譯器。
+1. 常數的值會以靜態方式初始化的執行緒本機變數通常會在所有執行緒上正確初始化。 不過，自 2017 年 12 月起沒有已知的一致性問題的 microsoftC++讓接收動態而不是靜態初始設定 constexpr 變數的編譯器。
 
    注意:這兩種問題有修正在未來的編譯器的更新。
 
@@ -71,7 +71,7 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B2 BObject2;   // BObject2 declared thread local.
     ```
 
-- 標準的 C 允許使用需要自我參考的運算式來初始化物件或變數，但只限於非靜態範圍的物件。 雖然 C++ 通常允許使用需要自我參考的運算式來對物件進行動態初始化，但這種類型的初始化不適用於執行緒區域物件。 例如: 
+- 標準的 C 允許使用需要自我參考的運算式來初始化物件或變數，但只限於非靜態範圍的物件。 雖然 C++ 通常允許使用需要自我參考的運算式來對物件進行動態初始化，但這種類型的初始化不適用於執行緒區域物件。 例如：
 
    ```cpp
    // declspec_thread_3.cpp

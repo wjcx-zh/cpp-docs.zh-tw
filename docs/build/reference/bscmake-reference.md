@@ -1,6 +1,6 @@
 ---
 title: BSCMAKE 參考
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294885"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220553"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE 參考
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294885"
 
 Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) 會自編譯期間建立的 .sbr 檔案建置瀏覽資訊檔 (.bsc)。 某些協力廠商工具使用的程式碼分析的.bsc 檔案。
 
-建置您的程式時，可以為您的程式自動建立瀏覽資訊檔，使用 BSCMAKE 來建置檔案。 如果您在 Visual C++ 開發環境中建立您的瀏覽資訊檔，則不需要知道如何執行 BSCMAKE。 不過，您可能想要閱讀本主題，了解可用的選項。
+建置您的程式時，可以為您的程式自動建立瀏覽資訊檔，使用 BSCMAKE 來建置檔案。 您不需要知道如何執行 BSCMAKE，如果您在 Visual Studio 開發環境中建立您的瀏覽資訊檔。 不過，您可能想要閱讀本主題，了解可用的選項。
 
 如果您在開發環境之外建置程式，您仍然可以在環境中建立您可以檢查的自訂 .bsc。 對編譯期間建立的 .sbr 檔案執行 BSCMAKE。
 

@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：建立代理程式為基礎的應用程式
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c249bc8138a3617cce3eae836751575b2626f4aa
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378059"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857318"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>逐步解說：建立代理程式為基礎的應用程式
 
@@ -40,9 +40,27 @@ ms.locfileid: "62378059"
 
 ##  <a name="createapplication"></a> 建立主控台應用程式
 
-本節說明如何建立視覺效果C++主控台應用程式所參考的程式將使用的標頭檔。
+本節說明如何建立C++主控台應用程式所參考的程式將使用的標頭檔。 初始步驟需視您所使用的 Visual Studio 版本而有所不同。 請確定版本選擇器已正確設定，此頁面的左上角。
 
-#### <a name="to-create-a-visual-c-application-by-using-the-win32-console-application-wizard"></a>若要建立視覺效果C++應用程式使用 Win32 主控台應用程式精靈
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2019"></a>若要建立C++主控台應用程式在 Visual Studio 2019
+
+1. 從主功能表中，選擇**檔案** > **新增** > **專案**開啟**建立新的專案**對話方塊方塊。
+
+1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**主控台**。 
+
+1. 從 [專案類型的篩選清單，選擇**主控台應用程式**然後選擇**下一步]**。 在下一步 頁面中，輸入`BasicAgent`做為專案的名稱，並指定專案位置，如有需要。
+
+1. 選擇**建立**按鈕，以建立專案。
+
+1. 中的專案節點上按一下滑鼠右鍵**方案總管**，然後選擇**屬性**。 底下**組態屬性** > **C /C++** > **先行編譯標頭** > **先行編譯標頭**選擇 **建立**。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-a-c-console-application-in-visual-studio-2017-and-earlier"></a>若要建立C++主控台應用程式在 Visual Studio 2017 及更早版本
 
 1. 上**檔案**功能表上，按一下**新增**，然後按一下 [**專案**以顯示**新專案**] 對話方塊。
 
@@ -50,7 +68,9 @@ ms.locfileid: "62378059"
 
 1. 在 [ **Win32 主控台應用程式精靈**] 對話方塊中，按一下**完成**。
 
-1. 在 stdafx.h 中新增下列程式碼。
+::: moniker-end
+
+1. 在 stdafx.h （或 Visual studio 版本而定的 pch.h），加入下列程式碼。
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 

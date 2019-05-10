@@ -1,17 +1,17 @@
 ---
 title: C++ 中的 Lambda 運算式
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216483"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222378"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ 中的 Lambda 運算式
 
@@ -157,7 +157,7 @@ Lambda 運算式可接受另一個 Lambda 運算式當做其引數。 如需詳�
 
 ### <a name="exception-specification"></a>例外狀況規格
 
-您可以使用 `noexcept` 例外狀況規格，表示 Lambda 運算式不會擲回任何例外狀況。 如同一般函式，視覺效果C++編譯器會產生警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 運算式宣告`noexcept`例外狀況規格，而且 lambda 主體擲回例外狀況，如下所示：
+您可以使用 `noexcept` 例外狀況規格，表示 Lambda 運算式不會擲回任何例外狀況。 如同一般函式，MicrosoftC++編譯器會產生警告[C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md)如果 lambda 運算式宣告`noexcept`例外狀況規格，而且 lambda 主體擲回例外狀況，如下所示：
 
 ```cpp
 // throw_lambda_expression.cpp

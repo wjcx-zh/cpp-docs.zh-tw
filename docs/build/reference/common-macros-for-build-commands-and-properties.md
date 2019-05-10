@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294432"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221777"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild 命令和屬性的一般巨集
 
@@ -121,7 +121,7 @@ ms.locfileid: "62294432"
 |**$(FrameworkDir)**|.NET Framework 安裝所在目錄。|
 |**$(FrameworkSDKDir)**|.NET Framework 安裝所在目錄。 .NET Framework 可能已安裝為 Visual Studio 的一部分或另行安裝。|
 |**$(FrameworkVersion)**|Visual Studio 使用的 .NET framework 版本。 結合了 **$(FrameworkDir)**，Visual Studio 使用的 .NET Framework 版本完整路徑。|
-|**$(FxCopDir)**|fxcop.cmd 檔案的路徑。 不是所有 Visual C++ 版本都安裝 fxcop.cmd 檔案。|
+|**$(FxCopDir)**|fxcop.cmd 檔案的路徑。 與所有 Visual Studio 版本未安裝 fxcop.cmd 檔案。|
 |**$(IntDir)**|為中繼檔案指定的目錄路徑。 如果這是相對路徑，前往這個路徑的中繼檔案會附加在專案目錄的後面。 這個路徑應該有尾端斜線。 這可以解析 **Intermediate Directory** 屬性的值。 請勿使用 **$(OutDir)** 定義這個屬性。|
 |**$(OutDir)**|輸出檔案目錄的路徑。 如果這是相對路徑，前往這個路徑的輸出檔案會附加在專案目錄的後面。 這個路徑應該有尾端斜線。 這可以解析 **Output Directory** 屬性的值。 請勿使用 **$(IntDir)** 定義這個屬性。|
 |**$(Platform)**|目前的專案平台名稱，例如 "Win32"。|
@@ -143,7 +143,7 @@ ms.locfileid: "62294432"
 |**$(TargetFileName)**|建置的主要輸出檔檔案名稱 (定義為主檔名 + 副檔名)。|
 |**$(TargetName)**|建置的主要輸出檔主檔名。|
 |**$(TargetPath)**|建置的主要輸出檔絕對路徑名稱 (定義為磁碟機 + 路徑 + 主檔名 + 副檔名)。|
-|**$(VCInstallDir)**|包含您 Visual Studio 安裝之 C++ 內容的目錄。 這個屬性包含的目標 Visual C++ 工具集版本，可能和主機 Visual Studio 不一樣。 例如，使用 `$(PlatformToolset) = v140` 建置時，**$(VCInstallDir)** 會包含 Visual C++ 2015 安裝的路徑。|
+|**$(VCInstallDir)**|包含您 Visual Studio 安裝之 C++ 內容的目錄。 此屬性包含的版本為目標的 Microsoft C++ (MSVC) 工具組，這可能會不同，主機 Visual Studio。 例如，當使用建置`$(PlatformToolset) = v140`， **$ （vcinstalldir)** 包含 Visual Studio 2015 安裝路徑。|
 |**$(VSInstallDir)**|Visual Studio 安裝所在目錄。 這個屬性包含的目標 Visual Studio 工具集版本，可能和主機 Visual Studio 不一樣。 例如，使用 `$(PlatformToolset) = v110`建置時， **$(VSInstallDir)** 會包含 Visual Studio 2012 安裝的路徑。|
 |**$(WebDeployPath)**|從 Web 部署根目錄到專案輸出所屬根目錄的相對路徑。 傳回 <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>的相同值。|
 |**$(WebDeployRoot)**|**\<localhost>** 位置的絕對路徑。 例如，c:\inetpub\wwwroot。|

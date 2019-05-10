@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 6b9499fbd806c04774d12750c70816d0312a4e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28678b560387fa6b111d60a7487ed44f9244a821
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345262"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449055"
 ---
 # <a name="how-to-manage-resources-c"></a>HOW TO：管理資源 (C++)
 
@@ -100,7 +100,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ## <a name="import-and-export-resources"></a>匯入和匯出資源
 
-您可以匯入圖形資源 (點陣圖、圖示、游標和工具列)、HTML 檔案，及在 Visual C++ 中使用的自訂資源。 您可以從 Visual C++ 專案匯出相同類型的檔案，分隔可以在開發環境外部使用的檔案。
+您可以匯入圖形資源 (點陣圖、圖示、游標和工具列)、HTML 檔案，及在 Visual C++ 中使用的自訂資源。 您可以從 Visual Studio 來匯出相同類型的檔案C++專案，以不同的可用在開發環境外部的檔案。
 
 > [!NOTE]
 > 無法匯入或匯出，因為它們並非獨立的檔案類型的資源類型，例如加速器、 對話方塊和字串資料表。

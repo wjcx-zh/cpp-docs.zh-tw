@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ordinal exports [C++]
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
-ms.openlocfilehash: 5ee985da29e38bfb262c72315a57c0b588b2e82e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7b480314d195f50e4867f646208f2d9c70ce9b14
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188973"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220802"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
 明確連結至 DLL 呼叫的程序[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)取得 DLL 中匯出的函式的位址。 您可以使用傳回的函式指標來呼叫 DLL 函式。 **GetProcAddress**接受做為參數的 DLL 模組控制代碼 (由其中一個**LoadLibrary**， `AfxLoadLibrary`，或**GetModuleHandle**)，並採用您想要的函式名稱若要呼叫或函式的匯出序數。
 
-因為您呼叫 DLL 函式透過指標，而且沒有編譯時期類型檢查，請確定函式的參數正確無誤，讓您不逾越堆疊上配置的記憶體而造成存取違規。 幫助提供類型安全的方法之一，就是查看匯出的函式的函式原型，並建立相符的函式指標的 typedef。 例如: 
+因為您呼叫 DLL 函式透過指標，而且沒有編譯時期類型檢查，請確定函式的參數正確無誤，讓您不逾越堆疊上配置的記憶體而造成存取違規。 幫助提供類型安全的方法之一，就是查看匯出的函式的函式原型，並建立相符的函式指標的 typedef。 例如：
 
 ```
 typedef UINT (CALLBACK* LPFNDLLFUNC1)(DWORD,UINT);
@@ -69,4 +69,4 @@ if (hDLL != NULL)
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

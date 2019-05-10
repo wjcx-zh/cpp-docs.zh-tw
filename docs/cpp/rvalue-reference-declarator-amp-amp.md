@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-ms.openlocfilehash: 185c2de5dc21dd305a2792d4ee8e6baf69c35b28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 663b639dbfecf9253547e1dd3b4e40480c27b470
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331086"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222039"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右值參考宣告子： &amp;&amp;
 
@@ -35,7 +35,7 @@ type-id && cast-expression
 
 若要實作移動語意，您通常會提供*移動建構函式，* 並選擇性地移動指派運算子 (**運算子 =**)，您的類別。 然後，來源為右值的複製和指派作業會自動利用移動語意。 不同於預設複製建構函式，編譯器不提供預設移動建構函式。 如需有關如何撰寫移動建構函式以及如何在您的應用程式中使用它的詳細資訊，請參閱 <<c0> [ 移動建構函式和移動指派運算子 (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)。</c0>
 
-您也可以多載一般函式和運算子，以使用移動語意。 視覺化C++2010年引進移動語意，到C++標準程式庫。 例如，`string` 類別會實作執行移動語意的作業。 請考慮下列串連數個字串並列印結果的範例：
+您也可以多載一般函式和運算子，以使用移動語意。 Visual Studio 2010 引進移動語意，到C++標準程式庫。 例如，`string` 類別會實作執行移動語意的作業。 請考慮下列串連數個字串並列印結果的範例：
 
 ```cpp
 // string_concatenation.cpp
@@ -51,15 +51,15 @@ int main()
 }
 ```
 
-在 視覺效果之前C++2010 中，每次呼叫**operator +** 配置，並傳回新的暫存`string`物件 （右值）。 **operator +** 無法與其他附加一個字串，因為它不知道原始字串是左值或右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考**operator +** 可以修改，以採用右值，不能在程式中其他位置參考。 因此， **operator +** 現在可以附加到另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需詳細資訊`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。
+在 Visual Studio 2010 之前，每個呼叫來**operator +** 配置，並傳回新的暫存`string`物件 （右值）。 **operator +** 無法與其他附加一個字串，因為它不知道原始字串是左值或右值。 如果原始字串都是左值，程式中其他位置可能會參考它們，因此不得加以修改。 使用右值參考**operator +** 可以修改，以採用右值，不能在程式中其他位置參考。 因此， **operator +** 現在可以附加到另一個字串。 這可以大幅減少 `string` 類別必須執行的動態記憶體配置數目。 如需詳細資訊`string`類別，請參閱[basic_string 類別](../standard-library/basic-string-class.md)。
 
-當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[具名傳回值最佳化視覺效果中C++2005年](https://msdn.microsoft.com/library/ms364057.aspx)。
+當編譯器無法使用傳回值最佳化 (RVO) 或具名傳回值最佳化 (NRVO) 時，移動語意也能有所幫助。 在這些情況下，如果類型定義了移動建構函式，則編譯器會加以呼叫。 如需具名傳回值最佳化的詳細資訊，請參閱[中的具名傳回值最佳化 Visual Studio 2005](https://msdn.microsoft.com/library/ms364057.aspx)。
 
 若要進一步了解移動語意，請參考將項目插入至 `vector` 物件的範例。 如果超出 `vector` 物件的容量，`vector` 物件必須重新配置其項目的記憶體，然後將每個項目複製到另一個記憶體位置，以便為插入的項目騰出空間。 當插入作業複製項目時，會建立新的項目，呼叫複製建構函式複製上一個項目的資料到新項目，然後終結上一個項目。 移動語意可讓您直接移動物件，而不必執行耗費大量資源的記憶體配置和複製作業。
 
 若要利用 `vector` 範例中的移動語意，您可以寫入移動建構函式，將資料從某個物件移動至另一個。
 
-如需有關移動語意，到了C++視覺效果中的標準程式庫C++2010，請參閱[C++標準程式庫](../standard-library/cpp-standard-library-reference.md)。
+如需有關移動語意，到了C++標準程式庫，在 Visual Studio 2010 中，請參閱[C++標準程式庫](../standard-library/cpp-standard-library-reference.md)。
 
 ## <a name="perfect-forwarding"></a>完美轉送
 

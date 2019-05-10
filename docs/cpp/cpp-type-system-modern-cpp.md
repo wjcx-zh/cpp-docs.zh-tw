@@ -3,12 +3,12 @@ title: C++ 類型系統 (現代 C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 3fa13d2f0b274361c2ad34b0eb64421d2d1d037e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392269"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222139"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 類型系統 (現代 C++)
 
@@ -53,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="fundamental-built-in-types"></a>基本 (內建) 類型
 
-有別於某些程式語言，C++ 並沒有可衍生出所有其他類型的通用基底類型。 視覺效果C++語言實作包含許多*基本類型*，也稱為*內建型別*。 這包含數字類型，例如**int**， **double**，**長**， **bool**，再加上**char**與**wchar_t**類型分別為 ASCII 和 UNICODE 字元。 大部分基本類型 (除了**bool**， **double**， **wchar_t**及相關類型) 所有具有不帶正負號的版本中，以修改該變數可儲存的值範圍。 例如， **int**，它會儲存 32 位元帶正負號的整數，可代表值從-2,147,483,648 到 2,147,483,647。 **不帶正負號的 int**，也會儲存為 32 位元，可儲存從 0 到 4,294,967,295 的值。 每個案例中的可能值總數都相同；只有範圍不同。
+有別於某些程式語言，C++ 並沒有可衍生出所有其他類型的通用基底類型。 語言包含許多*基本類型*也稱為*內建類型*。 這包含數字類型，例如**int**， **double**，**長**， **bool**，再加上**char**與**wchar_t**類型分別為 ASCII 和 UNICODE 字元。 大部分基本類型 (除了**bool**， **double**， **wchar_t**及相關類型) 所有具有不帶正負號的版本中，以修改該變數可儲存的值範圍。 例如， **int**，它會儲存 32 位元帶正負號的整數，可代表值從-2,147,483,648 到 2,147,483,647。 **不帶正負號的 int**，也會儲存為 32 位元，可儲存從 0 到 4,294,967,295 的值。 每個案例中的可能值總數都相同；只有範圍不同。
 
 基本類型是由編譯器辨識，其內建規則會控制可對這些類型執行哪些作業，以及如何轉換成其他基本類型。 如需內建類型和其大小和數值限制的完整清單，請參閱 <<c0> [ 基本類型](../cpp/fundamental-types-cpp.md)。
 

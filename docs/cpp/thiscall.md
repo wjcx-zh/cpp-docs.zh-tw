@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266775"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221906"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ ms.locfileid: "62266775"
 
 進行編譯時[/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)，所有函式和函式指標`__clrcall`除非另有指定。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
 
-在 視覺效果之前的版本C++2005年 **__thiscall**呼叫慣例無法明確地指定在程式中，因為 **__thiscall**不是關鍵字。
+在 Visual Studio 2005 之前的版本 **__thiscall**呼叫慣例無法明確地指定在程式中，因為 **__thiscall**不是關鍵字。
 
 `vararg` 成員函式會使用 **__cdecl**呼叫慣例。 所有函數引數會都推送到堆疊中，使用**這**指標放置在堆疊上一次
 

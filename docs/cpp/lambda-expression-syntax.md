@@ -1,15 +1,15 @@
 ---
 title: Lambda 運算式語法
-ms.date: 03/25/2019
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 2df2c203024e1b50cffdcb15af834fe09effaae2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216507"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222395"
 ---
 # <a name="lambda-expression-syntax"></a>Lambda 運算式語法
 
@@ -83,7 +83,7 @@ There are 4 even numbers in the vector.
 
 ## <a name="example-2-using-a-function-object"></a>範例 2：使用函式物件
 
-有時候，Lambda 的靈巧度較差，因此擴充程度無法超越上一個範例。 下一個範例中使用而不是 lambda、 函式物件搭配**for_each**函式，以產生與範例 1 相同的結果。 這兩個範例都會將偶數計數儲存在 `vector` 物件中。 為了維護作業的狀態，`FunctorClass` 類別會以傳址方式儲存 `m_evenCount` 變數做為成員變數。 若要執行的作業，`FunctorClass`實作的函式呼叫運算子**operator （)**。 Visual C++ 編譯器會產生與範例 1. 中 Lambda 程式碼大小和效能相當的程式碼。 就本文所述此類基礎問題而言，較簡單的 Lambda 設計應該比函式物件的設計好。 不過，如果您認為未來可能會需要大幅擴充，那麼使用函式物件設計會讓程式碼較容易維護。
+有時候，Lambda 的靈巧度較差，因此擴充程度無法超越上一個範例。 下一個範例中使用而不是 lambda、 函式物件搭配**for_each**函式，以產生與範例 1 相同的結果。 這兩個範例都會將偶數計數儲存在 `vector` 物件中。 為了維護作業的狀態，`FunctorClass` 類別會以傳址方式儲存 `m_evenCount` 變數做為成員變數。 若要執行的作業，`FunctorClass`實作的函式呼叫運算子**operator （)**。 MicrosoftC++編譯器會產生程式碼相當的大小和 lambda 中的程式碼範例 1 的效能。 就本文所述此類基礎問題而言，較簡單的 Lambda 設計應該比函式物件的設計好。 不過，如果您認為未來可能會需要大幅擴充，那麼使用函式物件設計會讓程式碼較容易維護。
 
 如需詳細資訊**operator （)**，請參閱[函式呼叫](../cpp/function-call-cpp.md)。 如需詳細資訊**for_each**函式中，請參閱[for_each](../standard-library/algorithm-functions.md#for_each)。
 

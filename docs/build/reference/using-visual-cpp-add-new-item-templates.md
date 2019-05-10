@@ -1,24 +1,24 @@
 ---
 title: 使用 Visual C++ 加入新項目樣板
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-ms.openlocfilehash: afa6f7e3a1e3a6ac293a23fc18ecd0834d70555f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6ef78d1a43bc649a31b715afd4ce1d44f25a8c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317142"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217757"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>使用 Visual C++ 加入新項目樣板
 
-您可以使用 [新增項目] 命令，輕鬆地新增 Visual C++ 專案通用的項目。 當您使用 [新增項目] 命令時，`Add New Item` 對話方塊隨即顯示並列出項目範本，讓您將適當的檔案新增至專案。
+您可以輕鬆加入的項目，使用 Visual Studio 專案通用**加入新項目**命令。 當您使用 [新增項目] 命令時，`Add New Item` 對話方塊隨即顯示並列出項目範本，讓您將適當的檔案新增至專案。
 
-下表是按字母排列的 Visual C++ 新增項目範本清單。
+下表是字母順序排列的 Visual Studio 加入新項目範本。
 
 |範本|描述|
 |--------------|-----------------|
@@ -38,7 +38,7 @@ ms.locfileid: "62317142"
 |安裝程式類別|使用 CLR 功能新增繼承自 <xref:System.Configuration.Install.Installer> 的類別。|
 |MIDL 檔 (.idl)|建立介面定義語言檔。|
 |模組定義檔 (.def)|建立 DLL 匯出定義檔。|
-|屬性工作表 (.props)|建立 Visual C++ 專案屬性工作表檔。|
+|屬性工作表 (.props)|建立屬性工作表檔。|
 |註冊指令碼 (.rgs)|建立 ATL 註冊指令檔。|
 |報表 (.rdlc)|建立報表檔案。|
 |資源檔 (.rc)|建立 Win32 資源檔。|

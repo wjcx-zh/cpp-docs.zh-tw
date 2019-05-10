@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - rend method
 ms.assetid: 80f3dd04-dd2c-4b52-b0ed-d567ec5d186c
-ms.openlocfilehash: ecd784a5db7949301b23895d65ec70804fb75951
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ef068c8a6698c4860814749e923740079b4e7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210974"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221558"
 ---
 # <a name="container-classrend"></a>容器類別::rend
 
 > [!NOTE]
-> 本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
+> 本主題位於 MicrosoftC++中所用容器的無作用範例文件C++標準程式庫。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
 
 成員函式傳回的反向迭代器，是指向序列的第一個項目 (或空序列結尾以外的位置)，並指定反向序列的結尾。
 

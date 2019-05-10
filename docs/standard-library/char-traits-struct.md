@@ -1,6 +1,6 @@
 ---
 title: char_traits 結構
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379437"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220517"
 ---
 # <a name="chartraits-struct"></a>char_traits 結構
 
@@ -384,7 +384,7 @@ EOF 字元。
 
 值，表示檔案結尾 （例如 EOF 或 WEOF）。
 
-C++ 標準指出此值不得對應至有效的 `char_type` 值。 視覺效果C++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 以下範例即為示範。
+C++ 標準指出此值不得對應至有效的 `char_type` 值。 MicrosoftC++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 以下範例即為示範。
 
 ### <a name="example"></a>範例
 

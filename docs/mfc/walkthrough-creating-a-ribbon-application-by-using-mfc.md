@@ -1,16 +1,16 @@
 ---
 title: 逐步解說：使用 MFC 建立功能區應用程式
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358303"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558223"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 
@@ -22,9 +22,7 @@ ms.locfileid: "62358303"
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>若要建立具有功能區的 MFC 應用程式
 
-1. 使用**MFC 應用程式精靈**建立具有功能區的 MFC 應用程式。 若要在執行精靈時，**檔案**功能表上，指向**新增**，然後按一下**專案**。
-
-1. 在**新的專案**對話方塊方塊中，展開**Visual C++** 節點下的**已安裝的範本**，選取**MFC**，然後選取**MFC 應用程式**。 輸入專案名稱，例如*MFCRibbonApp*，然後按一下**確定**。
+1. 使用**MFC 應用程式精靈**建立具有功能區的 MFC 應用程式。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md)如需有關如何開啟您的 Visual Studio 版本的精靈。
 
 1. 在 設定下列選項**MFC 應用程式精靈**:
 
@@ -34,7 +32,7 @@ ms.locfileid: "62358303"
 
     1. 在 **文件範本屬性**區段中**副檔名**方塊中，輸入此應用程式所建立文件，例如，副檔名*mfcrbnapp*.
 
-    1. 在 **資料庫支援**區段中，請確定**無**已選取。
+    1. 在 **資料庫支援**一節 (Visual Studio 2015 僅)，請確定**無**已選取。
 
     1. 在 **使用者介面功能**區段中，請確定**使用功能區**已選取。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404425"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447300"
 ---
 # <a name="friend-assemblies-c"></a>Friend 組件 (C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "62404425"
 
 必須明確授與組件中所有類型的存取權。  例如，如果組件 C 參考組件 B，而組件 B 具有組件 A 中所有類型的存取權，則組件 C 沒有組件 A 中所有類型的存取權。
 
-如需有關如何簽署資訊 — 也就是如何授與的強式名稱，藉由使用視覺效果建置的組件C++編譯器，請參閱[強式名稱組件 （組件簽署） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+如需有關如何簽署資訊 — 也就是如何授與的強式名稱 — 使用 Microsoft 建置的組件C++編譯器，請參閱[強式名稱組件 （組件簽署） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
 
 對於使用 friend 組件功能的替代方案，您可以使用 <xref:System.Security.Permissions.StrongNameIdentityPermission> 限制對個別類型的存取。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 3a0fd9c49a71f6f53d1a109378e3a6894bb68723
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175418"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447278"
 ---
 # <a name="compiler-error-c2146"></a>編譯器錯誤 C2146
 
@@ -73,7 +73,7 @@ typename X<T>::Y func() { }
 
 您也會看到此錯誤，因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而： 明確特製化不會再找出從主要範本的範本參數。
 
-使用`T`從主要範本中不允許明確的特製化。 在 視覺效果的 Visual Studio.NET 2003年和 Visual Studio.NET 版本中是有效的程式碼C++，在特製化的範本參數的所有執行個體取代的明確特製化的型別。
+使用`T`從主要範本中不允許明確的特製化。 在 Visual Studio.NET 2003年和 Visual Studio.NET 中是有效的程式碼，取代明確特製化的型別在特製化的範本參數的所有執行個體。
 
 下列範例是在 Visual Studio.NET 中編譯，但在 Visual Studio.NET 2003年中將會失敗：
 

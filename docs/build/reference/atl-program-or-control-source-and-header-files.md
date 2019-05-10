@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: e315586de57ca65c60c435c436734bcdededed54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 15d49cf984e45feeaad454de13c4ab37622000a4
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273016"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446576"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL 程式或控制項原始程式檔和標頭檔
 
@@ -27,6 +27,6 @@ ms.locfileid: "62273016"
 
 ## <a name="see-also"></a>另請參閱
 
-[為 Visual C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)<br>
+[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)<br>
 [MFC 程式或控制項原始程式檔和標頭檔](mfc-program-or-control-source-and-header-files.md)<br>
 [CLR 專案](files-created-for-clr-projects.md)

@@ -1,21 +1,19 @@
 ---
 title: 逐步解說：使用 MSBuild 來建立視覺效果C++專案
-ms.date: 09/24/2018
-f1_keywords:
-- msbuild.cpp.walkthrough.createproject
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313593"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446220"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>逐步解說：使用 MSBuild 來建立視覺效果C++專案
 
-本逐步解說示範如何使用 MSBuild 來建置視覺效果C++專案中的，於命令提示字元。 您將了解如何建立C++視覺效果的原始程式檔和 XML 為基礎的專案檔C++主控台應用程式。 建置專案之後, 您將了解如何自訂建置流程。
+本逐步解說示範如何使用 MSBuild 來建置 Visual StudioC++專案中的，於命令提示字元。 您將了解如何建立C++視覺效果的原始程式檔和 XML 為基礎的專案檔C++主控台應用程式。 建置專案之後, 您將了解如何自訂建置流程。
 
 這個逐步解說將說明下列工作：
 
@@ -39,7 +37,7 @@ ms.locfileid: "62313593"
 > 如果您想要使用 Visual Studio IDE 在稍後編輯專案檔，請勿使用此方法。 如果您以手動方式建立.vcxproj 檔案，Visual Studio IDE 可能無法編輯或載入它，特別是當專案在專案項目中使用萬用字元。
 
 > [!NOTE]
-> 中包含大部分的低層級的組建指示 **.targets**並 **.props** VCTargets 目錄，儲存在屬性中所定義的檔案`$(VCTargetsPath)`。 Visual Studio 2017 Enterprise Edition 中的這些檔案的預設路徑為 c:\\Program Files (x86)\\Microsoft Visual Studio\\2017年\\Enterprise\\Common7\\IDE\\VC\\VCTargets\\。
+> 中包含大部分的低層級的組建指示 **.targets**並 **.props** VCTargets 目錄，儲存在屬性中所定義的檔案`$(VCTargetsPath)`。 Visual Studio 2019 Enterprise Edition 中的這些檔案的預設路徑是 C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props。
 
 ## <a name="creating-the-c-source-files"></a>建立C++原始程式檔
 
@@ -81,10 +79,10 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
 
 ### <a name="to-create-the-msbuild-project-file"></a>若要建立 MSBuild 專案檔
 
-1. 使用文字編輯器來建立專案檔案，稱為`myproject.vcxproj`，然後加入下列根`<Project>`項目。 在下列程序步驟中的根之間插入元素`<Project>`標記：
+1. 使用文字編輯器來建立專案檔案，稱為`myproject.vcxproj`，然後加入下列根`<Project>`項目。 在下列程序步驟中的根之間插入元素`<Project>`標記。 (使用 ToolsVersion ="15.0"，如果您使用 Visual Studio 2017。)
 
     ```xml
-    <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
@@ -109,12 +107,12 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. 新增下列屬性群組項目 (`<PropertyGroup>`)，指定兩個專案屬性：
+1. 新增下列屬性群組項目 (`<PropertyGroup>`)，指定兩個專案屬性。 （使用 v141 如果您使用 Visual Studio 2017 時）。
 
     ```xml
     <PropertyGroup>
       <ConfigurationType>Application</ConfigurationType>
-      <PlatformToolset>v141</PlatformToolset>
+      <PlatformToolset>v142</PlatformToolset>
     </PropertyGroup>
     ```
 
@@ -151,10 +149,10 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
 
 ### <a name="complete-project-file"></a>完成的專案檔
 
-下列程式碼會顯示您在上一個程序中建立完整的專案檔。
+下列程式碼會顯示您在上一個程序中建立完整的專案檔。 (使用 ToolsVersion ="15.0"Visual Studio 2017。)
 
 ```xml
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -168,7 +166,7 @@ MSBuild 專案檔是 XML 檔案，其中包含專案根項目 (`<Project>`)。 �
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ItemGroup>
@@ -235,7 +233,7 @@ A*建置目標*是一組具名的預先定義或使用者定義可以在建置�
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>使用 MSBuild 與 64 位元編譯器和工具
 
-如果您已安裝 Visual C++ 64 位元 Windows，根據預設，64 位元 x64 native 和 cross tools 安裝。 您可以設定 MSBuild 來建置您的應用程式設定中使用的 64 位元編譯器和工具`PreferredToolArchitecture`屬性。 這個屬性不會影響專案組態或平台屬性。 根據預設，會使用 32 位元版本的工具。 若要指定 64 位元版本的編譯器和工具，將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.default.props`\<匯入 / > 項目：
+如果您已安裝在 64 位元 Windows 上的 Visual Studio，根據預設，會安裝 64 位元 x64 native 和 cross tools。 您可以設定 MSBuild 來建置您的應用程式設定中使用的 64 位元編譯器和工具`PreferredToolArchitecture`屬性。 這個屬性不會影響專案組態或平台屬性。 根據預設，會使用 32 位元版本的工具。 若要指定 64 位元版本的編譯器和工具，將下列屬性群組項目加入至 Myproject.vcxproj 專案檔之後`Microsoft.Cpp.default.props`\<匯入 / > 項目：
 
 ```xml
 <PropertyGroup>

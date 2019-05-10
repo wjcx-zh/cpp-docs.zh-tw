@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Internet applications [MFC], ActiveX controls
 - networks [MFC], downloading with ActiveX controls
 ms.assetid: 7ab943c8-2022-41df-9065-d629b616eeec
-ms.openlocfilehash: c019c922a5690d4ead861c40bed3c0c1c76cea28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d268da8bef4facfb9259e6ce43648c8713464ec9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394827"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448184"
 ---
 # <a name="activex-controls-on-the-internet"></a>網際網路上的 ActiveX 控制項
 
@@ -85,7 +85,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
 1. 按一下 **的新**上**檔案**功能表。
 
-1. 選取  **MFC ActiveX 控制項精靈**從 視覺效果C++專案，並命名您的專案。
+1. 選取  **MFC ActiveX 控制項精靈**從 Visual StudioC++專案，並命名您的專案。
 
 1. 在 **控制設定**頁面上，選取**非同步載入屬性**。 選取此選項會為您設定就緒狀態屬性和就緒狀態變更的事件。
 
@@ -107,7 +107,7 @@ ActiveX 控制項不限於網際網路。 只要控制項支援容器所需的�
 
    請注意，您必須包含 AFXCMN.H 才能使用 `CListCtrl` 類別。
 
-1. 當控制項的整體狀態變更 (例如，從載入到初始化或使用者互動) 時，呼叫 `COleControl::InternalSetReadyState`。 如果您的控制項都只有一個資料路徑屬性，您可以加入程式碼上**BSCF_LASTDATANOTIFICATION**以通知容器您的下載已完成。 例如: 
+1. 當控制項的整體狀態變更 (例如，從載入到初始化或使用者互動) 時，呼叫 `COleControl::InternalSetReadyState`。 如果您的控制項都只有一個資料路徑屬性，您可以加入程式碼上**BSCF_LASTDATANOTIFICATION**以通知容器您的下載已完成。 例如：
 
    [!code-cpp[NVC_MFCActiveXControl#2](../mfc/codesnippet/cpp/activex-controls-on-the-internet_2.cpp)]
 

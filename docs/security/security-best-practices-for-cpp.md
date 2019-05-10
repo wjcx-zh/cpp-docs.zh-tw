@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411262"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448496"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳作法
 
@@ -21,7 +21,7 @@ ms.locfileid: "62411262"
 
 ## <a name="visual-c-security-features"></a>Visual C++ 安全性功能
 
-這些安全性功能內建於 Visual C++ 編譯器和連結器：
+這些安全性功能內建於 MicrosoftC++編譯器和連結器：
 
 [/guard (啟用控制流程防護)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 可讓編譯器在編譯階段分析間接呼叫目標的控制流程，然後插入程式碼以在執行階段確認目標。

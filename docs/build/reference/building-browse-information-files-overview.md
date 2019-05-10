@@ -1,24 +1,28 @@
 ---
 title: 建置瀏覽資訊檔：總覽
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272880"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220541"
 ---
 # <a name="building-browse-information-files-overview"></a>建置瀏覽資訊檔：總覽
 
+
+> [!WARNING]
+> 雖然 BSCMAKE 仍隨著 Visual Studio 安裝，IDE 已不再使用它。 從 Visual Studio 2008 起，瀏覽和符號資訊會自動儲存在方案資料夾的 SQL Server .sdf 檔案中。
+
 若要建立的符號瀏覽資訊，編譯器會建立每個原始程式檔的.sbr 檔案，在您的專案，然後 BSCMAKE。EXE 會串連成一個.bsc 檔案的.sbr 檔案。
 
-時間，因此 Visual 產生.sbr 和.bsc 檔案會採用C++根據預設關閉這些函式。 如果您想要瀏覽目前的資訊，您必須開啟的瀏覽選項，並再次建置您的專案。
+讓 Visual Studio 會關閉這些函式，根據預設，產生.sbr 和.bsc 檔案需要時間。 如果您想要瀏覽目前的資訊，您必須開啟的瀏覽選項，並再次建置您的專案。
 
 使用[/FR](fr-fr-create-dot-sbr-file.md)或是[/Fr](fr-fr-create-dot-sbr-file.md)告訴編譯器建立.sbr 檔案。 若要建立.bsc 檔案，您可以呼叫[BSCMAKE](bscmake-command-line.md)從命令列。 從命令列使用 BSCMAKE，讓您更精確地控制瀏覽資訊檔的操作。 請參閱[BSCMAKE 參考](bscmake-reference.md)如需詳細資訊。
 

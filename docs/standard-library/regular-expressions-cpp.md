@@ -2,16 +2,14 @@
 title: 規則運算式 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
-- Visual C++, regular expressions
-- regular expressions, Visual C++
-- regular expressions
+- regular expressions [C++]
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 291b25959f790db328080aa74a6320775a33e981
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369029"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220307"
 ---
 # <a name="regular-expressions-c"></a>規則運算式 (C++)
 
@@ -322,7 +320,7 @@ DSW 逸出字元是字元類別的簡短名稱，如下表所示。
 
 ### <a name="identity-escape"></a>識別逸出
 
-識別逸出為反斜線，後面接著單一字元。 它符合該字元。 當字元有特殊意義時，需要識別逸出；透過使用識別逸出，移除特殊意義。 例如: 
+識別逸出為反斜線，後面接著單一字元。 它符合該字元。 當字元有特殊意義時，需要識別逸出；透過使用識別逸出，移除特殊意義。 例如：
 
 - 「\*"符合目標序列"aaa"，但不符合目標序列"\*」。
 

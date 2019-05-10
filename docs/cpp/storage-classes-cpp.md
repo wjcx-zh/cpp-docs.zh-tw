@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266929"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221993"
 ---
 # <a name="storage-classes-c"></a>儲存類別 (C++)
 
@@ -24,7 +24,7 @@ A*儲存類別*的內容中C++變數宣告為類型規範，可控管物件的�
 
 1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
-1. **視覺化C++2010年及更新版本：**  **自動**關鍵字不再是C++儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字會從移除C++語言。
+1. **Visual Studio 2010 及更新版本：** **自動**關鍵字不再是C++儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字會從移除C++語言。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

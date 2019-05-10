@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: af8edc41f6c2036d231eb7e922a631628294645a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209063"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857747"
 ---
 > [!IMPORTANT]
 > Visual Studio 編譯器和建置工具可以報告許多類型的錯誤和警告。 發現錯誤或警告之後，建置工具可能會對程式碼意圖做假設，並嘗試繼續，以便更多的問題可以報告在相同的時間。 如果工具做的假設有誤，那麼後來的錯誤或警告可能不適用於您的專案。 當您更正專案中的問題時，務必從所報告的第一個錯誤或警告開始進行。 一個修正可能使許多後續的錯誤，就會消失。

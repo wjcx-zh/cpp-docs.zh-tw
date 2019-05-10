@@ -8,11 +8,11 @@ helpviewer_keywords:
 - errors [C++], builds
 ms.assetid: 2470b496-28fa-47e7-a238-a086d99b06ca
 ms.openlocfilehash: d16b691592a7b35a08bc02a0214f5415bd4ad2dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209064"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64856896"
 ---
 # <a name="cc-compiler-and-build-tools-errors-and-warnings"></a>C/C++ 編譯器與建置工具錯誤與警告
 

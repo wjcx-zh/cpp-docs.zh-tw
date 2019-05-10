@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270896"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446559"
 ---
 # <a name="general-property-page-project"></a>一般屬性頁 (專案)
 
@@ -98,7 +98,7 @@ ms.locfileid: "62270896"
 
 - **平台工具組**
 
-   可讓專案以不同版本的 Visual C++ 程式庫和編譯器為目標。 Visual C++ 專案目標可以是 Visual Studio 所安裝的預設工具組，或是數個舊版 Visual Studio 所安裝的其中一個工具組，包括建立可在 Windows XP 上執行之可執行檔的工具組。 如需變更平台工具組的詳細資訊，請參閱[How to:修改目標 Framework 和平台工具組](../how-to-modify-the-target-framework-and-platform-toolset.md)。
+   可讓專案以不同版本的 Visual C++ 程式庫和編譯器為目標。 Visual StudioC++專案可以以安裝 Visual Studio 或 Visual Studio 中，包括建立可以在 3&gt;v100&lt;3 XP 執行的可執行檔的工具組的數個舊版所安裝的工具組的其中一個預設工具組為目標。 如需變更平台工具組的詳細資訊，請參閱[How to:修改目標 Framework 和平台工具組](../how-to-modify-the-target-framework-and-platform-toolset.md)。
 
 - **啟用受控累加建置**
 

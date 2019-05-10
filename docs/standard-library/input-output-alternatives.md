@@ -1,19 +1,19 @@
 ---
 title: 輸入 / 輸出替代項目
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: bc595b64c991ada8e958e71e13f8cb9d134adb8a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404958"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221398"
 ---
 # <a name="inputoutput-alternatives"></a>輸入/輸出替代項目
 
-Visual C++ 提供數個 I/O 程式設計替代方案：
+MicrosoftC++編譯器會提供 I/O 程式設計中的多個替代方案：
 
 - C 執行階段程式庫直接、無緩衝 I/O。
 

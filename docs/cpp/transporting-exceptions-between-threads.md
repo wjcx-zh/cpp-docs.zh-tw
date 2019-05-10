@@ -1,6 +1,6 @@
 ---
 title: 執行緒之間傳輸例外狀況
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
 - std::current_exception
 - transporting exceptions between threads
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - rethrow_exception
 - move exceptions between threads
 ms.assetid: 5c95d57b-acf5-491f-8122-57c5df0edd98
-ms.openlocfilehash: f403b1448855b60f323ed582794a00c3e6ae1b3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e59883c75fde9938a213fb4e888e6b05a79cf4f7
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404737"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221931"
 ---
 # <a name="transporting-exceptions-between-threads"></a>執行緒之間傳輸例外狀況
 
-視覺化C++支援*傳輸例外狀況*從到另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，VisualC++提供[exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別和[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，及[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。
+MicrosoftC++編譯器 (MSVC) 支援*傳輸例外狀況*從到另一個執行緒。 傳輸例外狀況可以讓您在某個執行緒攔截例外狀況，再使該例外狀況看似在另一個執行緒中擲回。 舉例來說，您可以使用此功能撰寫多執行緒應用程式，其中由主執行緒處理其次要執行緒所擲回的所有例外狀況。 傳輸例外狀況對於建立平行程式設計程式庫或系統的開發人員最有用。 若要實作傳輸例外狀況，提供 MSVC [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)型別並[current_exception](../standard-library/exception-functions.md#current_exception)， [rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)，和[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)函式。
 
 ## <a name="syntax"></a>語法
 

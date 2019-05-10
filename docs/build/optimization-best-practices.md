@@ -1,26 +1,26 @@
 ---
 title: 最佳化的最佳做法
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- Visual C++, optimization
+- C++, optimization
 - optimization, best practices
 ms.assetid: f3433148-7255-4ca6-8a4f-7c31aac88508
-ms.openlocfilehash: edb036292b87593a3f8bb9b3f5ec5f7beb84c3a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 42178f8326def78f37bfcc905b96f37c7fc3affc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274166"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220277"
 ---
 # <a name="optimization-best-practices"></a>最佳化的最佳做法
 
-本文件說明在視覺效果最佳化的一些最佳作法C++。
+本文件說明最佳化的一些最佳作法C++在 Visual Studio 中的程式。
 
 ## <a name="compiler-and-linker-options"></a>編譯器和連結器選項
 
 ### <a name="profile-guided-optimization"></a>特性指引最佳化
 
-視覺化C++支援*特性指引最佳化*(PGO)。 此最佳化會使用從定型執行已檢測版的應用程式的設定檔資料來驅動應用程式的更新版本的最佳化。 使用 PGO 可能很耗費時間，因此它不可能是每位開發人員使用，但我們建議使用 PGO 產品的最終版本組建。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](profile-guided-optimizations.md)。
+Visual Studio 支援*特性指引最佳化*(PGO)。 此最佳化會使用從定型執行已檢測版的應用程式的設定檔資料來驅動應用程式的更新版本的最佳化。 使用 PGO 可能很耗費時間，因此它不可能是每位開發人員使用，但我們建議使用 PGO 產品的最終版本組建。 如需詳細資訊，請參閱 <<c0> [ 特性指引最佳化](profile-guided-optimizations.md)。
 
 颾魤 ㄛ*整個程式最佳化*（也稱為連結時間產生程式碼） 和 **/o1**並 **/o2**最佳化已經有所改進。 一般情況下，使用其中一個選項所編譯的應用程式會較快，使用舊版的編譯器編譯相同的應用程式。
 
@@ -93,13 +93,13 @@ int myFunc() {...}
 
 ## <a name="restrict-and-assume"></a>__restrict 和\__assume
 
-有幾個視覺效果中的關鍵字C++，可協助效能： [: __restrict](../cpp/extension-restrict.md)並[__assume](../intrinsics/assume.md)。
+有幾個有助於效能的 Visual Studio 中的關鍵字： [__restrict](../cpp/extension-restrict.md)並[__assume](../intrinsics/assume.md)。
 
 首先，您應該注意可`__restrict`和`__declspec(restrict)`是兩個不同的項目。 雖然它們有些許相關，其語意不相同。 `__restrict` 是類型限定詞，如`const`或`volatile`，但是專為指標類型。
 
 指標修飾`__restrict`指 *__restrict 指標*。 __Restrict 指標是只能透過存取指標\__restrict 指標。 換句話說，另一個指標無法用來存取資料所指的\__restrict 指標。
 
-`__restrict` 可以是功能強大的工具，視覺效果的C++最佳化工具，但使用十二萬分地謹慎。 如果不當使用，最佳化工具可能會執行，就會破壞您的應用程式的最佳化。
+`__restrict` 可以是功能強大的工具，microsoftC++最佳化工具，但使用十二萬分地謹慎。 如果不當使用，最佳化工具可能會執行，就會破壞您的應用程式的最佳化。
 
 `__restrict`關鍵字取代 **/Oa**從舊版切換。
 

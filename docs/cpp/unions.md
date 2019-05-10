@@ -1,18 +1,18 @@
 ---
 title: 等位
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312165"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222338"
 ---
 # <a name="unions"></a>等位
 
@@ -64,7 +64,6 @@ int main()
 在先前的範例中，任何存取等位的程式碼都需要知道哪個成員保有資料。 這個問題的最常見解決方法是將等位含括在結構中，以及具有其他列舉成員指出目前正儲存在等位中的資料類型。 這就叫做*差別聯集*與下列範例示範基本模式。
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

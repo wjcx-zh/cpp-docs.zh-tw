@@ -1,23 +1,23 @@
 ---
 title: C /C++建置參考-Visual Studio
 description: 參考的內容適用於 C /C++專案系統，並建置在 Visual Studio 中的工具。
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294755"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221449"
 ---
 # <a name="cc-building-reference"></a>C/C++ 建置參考
 
-視覺化C++提供兩種方式建置 C /C++程式。 最簡單 （且最常見） 的方式為： [Visual Studio IDE 中建置](../creating-and-managing-visual-cpp-projects.md)。 其他的方式為[命令提示字元使用命令列工具來建立](../building-on-the-command-line.md)。 在任一情況下，您可以建立和編輯使用 Visual Studio 或您選擇的協力廠商編輯器的原始程式檔。
+Visual Studio 提供兩種方式建置 C /C++程式。 最簡單 （且最常見） 的方式為： [Visual Studio IDE 中建置](../creating-and-managing-visual-cpp-projects.md)。 其他的方式為[命令提示字元使用命令列工具來建立](../building-on-the-command-line.md)。 在任一情況下，您可以建立和編輯使用 Visual Studio 或您選擇的協力廠商編輯器的原始程式檔。
 
 ## <a name="in-this-section"></a>本節內容
 

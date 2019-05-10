@@ -1,26 +1,26 @@
 ---
 title: 字元集
-ms.date: 04/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - Character sets
 - basic source character set (C++)
 - universal character names
 - basic execution character set (C++)
 ms.assetid: 379a2af6-6422-425f-8352-ef0bca6c0d74
-ms.openlocfilehash: 5282d5b227e71c0ba6f822a9534a8a31cbd86db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 92d60e3383abd7e3b3fa2d689958cf02a9b91e75
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331229"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222528"
 ---
 # <a name="character-sets"></a>字元集
 
-C++ 程式的文字會儲存在使用特定字元編碼方式的原始程式檔中。 C++ 標準指定原始程式檔的基本來源字元集，以及編譯檔的基本執行字元集。 Visual C++ 允許在原始程式檔和編譯檔中使用一組額外的地區設定特定字元。
+C++ 程式的文字會儲存在使用特定字元編碼方式的原始程式檔中。 C++ 標準指定原始程式檔的基本來源字元集，以及編譯檔的基本執行字元集。 MicrosoftC++編譯器 (MSVC) 可讓一組額外的原始程式檔中使用的地區設定特定字元，並編譯檔案。
 
 ## <a name="character-sets"></a>字元集
 
-C++ 標準指定可用於原始程式檔的 *「基本來源字元集」* (Basic Source Character Set)。 為了表示不在這個集合中的字元，還可使用 *「通用字元名稱」*(Universal Character Name) 來指定額外的字元。 編譯時， *「基本執行字元集」* (Basic Execution Character Set) 和 *「基本執行寬字元集」* (Basic Execution Wide-Character Set) 會代表可出現在程式中的字元和字串。 Visual C++ 實作允許在原始程式碼和編譯程式碼中使用額外的字元。
+C++ 標準指定可用於原始程式檔的 *「基本來源字元集」* (Basic Source Character Set)。 為了表示不在這個集合中的字元，還可使用 *「通用字元名稱」*(Universal Character Name) 來指定額外的字元。 編譯時， *「基本執行字元集」* (Basic Execution Character Set) 和 *「基本執行寬字元集」* (Basic Execution Wide-Character Set) 會代表可出現在程式中的字元和字串。 MSVC 實作可讓您在原始程式碼和編譯的程式碼中的其他字元。
 
 ### <a name="basic-source-character-set"></a>基本來源字元集
 
@@ -36,7 +36,7 @@ C++ 標準指定可用於原始程式檔的 *「基本來源字元集」* (Basic
 
 **Microsoft 專屬**
 
-Visual C++ 包含 `$` 字元做為基本來源字元集的成員。 根據檔案編碼方式，Visual C++ 也允許在原始程式檔中使用一組額外的字元。 根據預設，Visual Studio 會使用預設字碼頁來儲存原始程式檔。 當使用地區設定特定字碼頁或 Unicode 字碼頁來儲存原始程式檔時，Visual C++ 可讓您在原始程式碼中使用該字碼頁的任何字元，但不包括基本來源字元集中未明確允許的控制碼。 例如，如果您使用日文字碼頁來儲存檔案，則可以將日文字元放在註解、識別項或字串常值中。 Visual C++ 不允許無法轉譯為有效的多位元組字元或 Unicode 字碼指標的字元序列。 根據編譯器選項，並非所有允許的字元都可出現在識別項中。 如需詳細資訊，請參閱 [Identifiers](../cpp/identifiers-cpp.md)。
+MSVC 包含`$`字元做為基本來源字元集的成員。 MSVC 也可讓一組額外的字元，用於原始程式檔，根據檔案編碼方式。 根據預設，Visual Studio 會使用預設字碼頁來儲存原始程式檔。 當使用地區設定特定字碼頁或 Unicode 字碼頁儲存原始程式檔時，MSVC 可讓您使用該字碼頁字元的任何程式碼中，除了基本來源字元集中未明確允許的控制碼設定。 例如，如果您使用日文字碼頁來儲存檔案，則可以將日文字元放在註解、識別項或字串常值中。 MSVC 不允許無法轉譯為有效的多位元組字元或 Unicode 字碼指標的字元序列。 根據編譯器選項，並非所有允許的字元都可出現在識別項中。 如需詳細資訊，請參閱 [Identifiers](../cpp/identifiers-cpp.md)。
 
 **結束 Microsoft 專屬**
 
@@ -48,7 +48,7 @@ Visual C++ 包含 `$` 字元做為基本來源字元集的成員。 根據檔案
 
 **Microsoft 專屬**
 
-Visual C++ 編譯器會將通用字元名稱格式的字元，視為可以與常值格式的字元交換使用。 例如，您可以使用通用字元名稱格式宣告一個識別項，然後以常值格式來使用該識別項：
+MicrosoftC++編譯器會將通用字元名稱格式與常值格式中的字元交換使用。 例如，您可以使用通用字元名稱格式宣告一個識別項，然後以常值格式來使用該識別項：
 
 ```cpp
 auto \u30AD = 42; // \u30AD is 'キ'

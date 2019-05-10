@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mixed assemblies [C++], performance considerations
 - interoperability [C++], performance considerations
 ms.assetid: bb9a282e-c3f8-40eb-a2fa-45d80d578932
-ms.openlocfilehash: c6b4456d9c75061c9a8c93f37f98b58f92adc899
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29dbfa6465f6bcbcf4d0618b1820e59a8edbd3a3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384747"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447258"
 ---
 # <a name="performance-considerations-for-interop-c"></a>Interop 的效能考量 (C++)
 
@@ -21,7 +21,7 @@ ms.locfileid: "62384747"
 
 視覺化C++支援相同的互通性機制，與其他.NET 語言，例如 Visual Basic 和C#(P/Invoke)，但它也提供特定視覺效果的 interop 支援C++(C++ interop)。 針對效能關鍵的應用程式，請務必了解每個 interop 技術的效能含意。
 
-不論所使用的 interop 技巧，特殊的轉換序列，稱為 thunk，都需要每次 managed 函式呼叫 unmanaged 的函式，反之亦然。 視覺效果會自動插入這些 thunkC++編譯器，但它是要牢記在心，累積，這些轉換可能耗用大量效能很重要。
+不論所使用的 interop 技巧，特殊的轉換序列，稱為 thunk，都需要每次 managed 函式呼叫 unmanaged 的函式，反之亦然。 Microsoft 會自動插入這些 thunkC++編譯器，但它是要牢記在心，累積，這些轉換可能耗用大量效能很重要。
 
 ## <a name="reducing-transitions"></a>減少轉換
 

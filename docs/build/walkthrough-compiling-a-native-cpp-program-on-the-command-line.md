@@ -1,23 +1,24 @@
 ---
 title: 逐步解說：編譯原生C++命令列上的程式
+description: 使用 MicrosoftC++編譯器從命令提示字元。
 ms.custom: conceptual
-ms.date: 09/24/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - native code [C++]
 - Visual C++, native code
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: d7b5bc88966f7edbb7179c36398b1dd95afb971f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 64300c8683dd5d1c40638ba7d50acfca6abc40c0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313879"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217708"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：編譯原生C++命令列上的程式
 
-視覺化C++包含命令列C++編譯器，您可以用來建立所有項目從基本的主控台應用程式，到通用 Windows 平台應用程式、 傳統型應用程式、 裝置驅動程式和.NET 元件。
+Visual Studio 包含命令列C++編譯器，您可以用來建立所有項目從基本的主控台應用程式，到通用 Windows 平台應用程式、 傳統型應用程式、 裝置驅動程式和.NET 元件。
 
 在此逐步解說中，您會建立基本"Hello，World"-樣式C++使用文字編輯器中，程式，然後在命令列上進行編譯。 如果您想要試用 Visual Studio IDE，而不是使用命令列，請參閱[逐步解說：使用專案和方案 (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或是[使用 Visual Studio IDE 的C++的桌面開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
@@ -29,7 +30,7 @@ ms.locfileid: "62313879"
 
 Visual Studio 是用於許多語言與平台支援的功能完整的編輯器時，資源管理員、 偵錯工具和編譯器功能強大的整合式的開發環境 (IDE)。 如需有關如何下載並安裝 Visual Studio 中，包括免費的 Visual Studio Community edition，以及包含適用於 C 的支援資訊 /C++程式開發，請參閱[安裝C++Visual Studio 中支援](vscpp-step-0-installation.md)。
 
-適用於 Visual Studio Build Tools 安裝僅命令列編譯器、 工具和程式庫，您必須先建置 C 和C++程式。 它非常適合建置實驗室或課堂練習和相對快速安裝。 若要安裝命令列工具，下載[Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)。
+適用於 Visual Studio Build Tools 安裝僅命令列編譯器、 工具和程式庫，您必須先建置 C 和C++程式。 它非常適合建置實驗室或課堂練習和相對快速安裝。 若要安裝命令列工具，尋找 Build Tools for Visual Studio [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/)頁面。
 
 您可以建立 C 之前或C++程式命令列上，您必須確認確認已安裝的工具，而且您可以從命令列存取它們。 視覺化C++來尋找工具、 標頭和程式庫，它會使用命令列環境的複雜需求。 **您無法使用視覺效果C++中的純文字的命令提示字元視窗**而不進行一些準備工作。 幸好 VisualC++會安裝為您啟動已設定的命令列組建環境的開發人員命令提示字元捷徑。 不幸的是，開發人員命令提示字元捷徑和它們所在的名稱是視覺效果的幾乎每個版本中C++在不同版本的 Windows。 您的第一個逐步解說工作尋找要使用正確的一個。
 
@@ -38,11 +39,11 @@ Visual Studio 是用於許多語言與平台支援的功能完整的編輯器時
 
 ### <a name="open-a-developer-command-prompt"></a>開啟開發人員命令提示字元
 
-1. 如果您已安裝 Visual Studio 2017 在 Windows 10 上，開啟 [開始] 功能表並選擇**所有應用程式**。 向下捲動並開啟**Visual Studio 2017**資料夾 （而不的 Visual Studio 2017 應用程式）。 選擇**適用於 VS 2017 開發人員命令提示字元**以開啟 [命令提示字元] 視窗。
+1. 如果您已安裝 Visual Studio 2017 或更新版本上的 Windows 10，開啟 [開始] 功能表並選擇**所有應用程式**。 向下捲動並開啟**Visual Studio**資料夾 （而不是 Visual Studio 應用程式）。 選擇**VS 開發人員命令提示字元**以開啟 [命令提示字元] 視窗。
 
    如果您已安裝 Microsoft Visual C++ Build Tools 2015 在 Windows 10 中，開啟**啟動**功能表，然後選擇 **所有應用程式**。 向下捲動並開啟**Visual C++ Build Tools**資料夾。 選擇**Visual C++ 2015 x86 Native Tools 命令提示字元**以開啟 [命令提示字元] 視窗。
 
-   如果您使用不同版本的 Visual Studio，或執行不同版本的 Windows，在 開始 功能表中尋找，或啟動 Visual Studio 工具 資料夾，其中包含開發人員命令提示字元捷徑的頁面。 您也可以使用 Windows 搜尋函式來搜尋 「 開發人員命令提示字元 並選擇符合您已安裝的 Visual Studio 版本的其中一個。 使用捷徑來開啟 [命令提示字元] 視窗。
+   您也可以使用 Windows 搜尋函式來搜尋 「 開發人員命令提示字元 並選擇符合您已安裝的 Visual Studio 版本的其中一個。 使用捷徑來開啟 [命令提示字元] 視窗。
 
 1. 接下來，確認視覺效果C++開發人員命令提示字元已正確設定。 在 [命令提示字元] 視窗中，輸入`cl`並確認，輸出看起來像這樣：
 
@@ -87,7 +88,7 @@ Visual Studio 是用於許多語言與平台支援的功能完整的編輯器時
 
 1. 儲存您的工作！ 在 [記事本] 的 [檔案]  功能表中，選擇 [儲存] 。
 
-   恭喜，您已建立視覺效果C++原始程式檔、 hello.cpp，準備好要編譯的。
+   恭喜，您已建立C++原始程式檔、 hello.cpp，準備好要編譯的。
 
 1. 切換回 [開發人員命令提示字元] 視窗。 輸入`dir`在命令提示字元，若要列出 c:\hello 目錄的內容。 您應該會看到在目錄清單中，看起來像是來源檔案 hello.cpp:
 
@@ -151,7 +152,8 @@ Visual Studio 是用於許多語言與平台支援的功能完整的編輯器時
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-`/EHsc` 命令列選項會指示編譯器啟用 C++ 例外狀況處理。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](reference/eh-exception-handling-model.md)。
+
+  `/EHsc` 命令列選項會指示編譯器啟用 C++ 例外狀況處理。 如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](reference/eh-exception-handling-model.md)。
 
 當您提供其他原始程式檔時，編譯器會使用第一個輸入的檔來建立程式名稱。 在此情況下，它會輸出稱為 file1.exe 程式。 若要將名稱變更為 program1.exe，新增[/out](reference/out-output-file-name.md)連結器選項：
 

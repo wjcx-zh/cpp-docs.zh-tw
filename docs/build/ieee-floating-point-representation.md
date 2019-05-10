@@ -1,6 +1,6 @@
 ---
 title: IEEE 浮點表示
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - float keyword
 - real*8 value
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - long double
 - real*4 value
 ms.assetid: 537833e8-fe05-49fc-8169-55fd0314b195
-ms.openlocfilehash: 69686e7e1c8994b799607eebf7e50387ed688272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 130a79ae6846df27ffabfd6cb6649e0a0de03e4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188830"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220629"
 ---
 # <a name="ieee-floating-point-representation"></a>IEEE 浮點表示
 
-Microsoft VisualC++是與 IEEE 數值標準一致。 IEEE-754 標準描述浮點格式，來代表在硬體中的實際數字的方式。 至少五個內部是由 MSVC 編譯器為目標的硬體中可顯示的浮點數格式，但編譯器只會使用兩個。 *單精確度*（4 個位元組） 和*雙精確度*視覺效果中使用 （8 個位元組） 格式C++。 使用關鍵字來宣告單精確度**浮點數**。 使用關鍵字來宣告雙精度**double**。 IEEE 標準也會指定*半精確度*（2 個位元組） 和*4-tuple 有效位數*（16 個位元組） 格式，以及*雙擴充精確度*（10 個位元組）格式，某些 C 和C++編譯器會實作為**長雙精度**資料類型。 在 MSVC 編譯器**長雙精度**資料類型會被視為不同的類型，但儲存體類型會對應至**double**。 沒有，不過，內建和組件語言支援的計算使用其他格式，包括雙擴充精確度 （10 個位元組） 格式，其中支援的硬體。
+Microsoft C++ (MSVC) 是與 IEEE 數值標準一致。 IEEE-754 標準描述浮點格式，來代表在硬體中的實際數字的方式。 至少五個內部是由 MSVC 編譯器為目標的硬體中可顯示的浮點數格式，但編譯器只會使用兩個。 *單精確度*（4 個位元組） 和*雙精確度*在 MSVC 中使用 （8 個位元組） 格式。 使用關鍵字來宣告單精確度**浮點數**。 使用關鍵字來宣告雙精度**double**。 IEEE 標準也會指定*半精確度*（2 個位元組） 和*4-tuple 有效位數*（16 個位元組） 格式，以及*雙擴充精確度*（10 個位元組）格式，某些 C 和C++編譯器會實作為**長雙精度**資料類型。 在 MSVC 編譯器**長雙精度**資料類型會被視為不同的類型，但儲存體類型會對應至**double**。 沒有，不過，內建和組件語言支援的計算使用其他格式，包括雙擴充精確度 （10 個位元組） 格式，其中支援的硬體。
 
 值會儲存，如下所示：
 

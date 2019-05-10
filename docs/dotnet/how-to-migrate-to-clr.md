@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9abc85227d6091005d7e097d3305150f4ca347a1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387249"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448080"
 ---
 # <a name="how-to-migrate-to-clr"></a>HOW TO：移轉至 /clr
 
@@ -41,13 +41,13 @@ ms.locfileid: "62387249"
 
 下列步驟中，依照順序排列，提供最簡易途徑 **/clr**編譯。 請務必編譯並執行您的專案之後每個步驟。
 
-### <a name="versions-prior-to-visual-c-2003"></a>在 視覺效果之前的版本C++2003年
+### <a name="versions-prior-to-visual-studio-2003"></a>Visual Studio 2003 之前的版本
 
-如果您要從 視覺效果之前的版本升級到 Visual Studio 2010 C++ 2003，您可能會看到相關的增強型編譯器錯誤C++視覺效果中的標準一致性C++2003年
+如果您要從 Visual Studio 2003 之前的版本升級到 Visual Studio 2010，您可能會看到相關的增強型編譯器錯誤C++Visual Studio 2003 中的標準一致性
 
-### <a name="upgrading-from-visual-c-2003"></a>從 視覺效果升級C++2003年
+### <a name="upgrading-from-visual-studio-2003"></a>從 Visual Studio 2003 升級
 
-視覺效果所建置的專案上一個C++2003年應該也會先編譯而不需要 **/clr**因為 Visual Studio 現在增加了 ANSI/ISO 相容性和一些重大變更。 這是可能需要最多注意的變更[CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 程式碼是很有可能產生取代警告。 這些警告可能會隱藏，但移轉至新[安全性增強 CRT 函式的版本](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是慣用的因為它們提供更佳的安全性，並且可能會顯示您的程式碼中的安全性問題。
+搭配 Visual Studio 2003 所建置的專案之前應該也會先編譯而不需要 **/clr**如 Visual Studio 現在增加了 ANSI/ISO 相容性和一些重大變更。 這是可能需要最多注意的變更[CRT 中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。 使用 CRT 程式碼是很有可能產生取代警告。 這些警告可能會隱藏，但移轉至新[安全性增強 CRT 函式的版本](../c-runtime-library/security-enhanced-versions-of-crt-functions.md)是慣用的因為它們提供更佳的安全性，並且可能會顯示您的程式碼中的安全性問題。
 
 ### <a name="upgrading-from-managed-extensions-for-c"></a>從 Managed Extensions for 升級C++
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**可以選取在開發環境中的指示[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。 如先前所述，此步驟會自動停用衝突的專案設定。
 
 > [!NOTE]
->  從 [視覺效果升級受管理的文件庫或 web 服務專案時C++2003 年 **/Zl**編譯器選項將會新增至**命令列**] 屬性頁。 這會造成 LNK2001。 移除 **/Zl**從**命令列**屬性頁面，即可解決。 請參閱[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)並[設定編譯器和組建屬性](../build/working-with-project-properties.md)如需詳細資訊。 或者，您也可以將 msvcrt.lib 和 msvcmrt.lib 新增至連結器**其他相依性**屬性。
+>  從 Visual Studio 2003 中，升級的 managed 程式庫或 web 服務專案時 **/Zl**編譯器選項將會加入至**命令列**屬性頁。 這會造成 LNK2001。 移除 **/Zl**從**命令列**屬性頁面，即可解決。 請參閱[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)並[設定編譯器和組建屬性](../build/working-with-project-properties.md)如需詳細資訊。 或者，您也可以將 msvcrt.lib 和 msvcmrt.lib 新增至連結器**其他相依性**屬性。
 
 對於使用 makefile 建置專案，不相容的編譯器選項必須停用手動方式一次 **/clr**加入。 請參閱 /[/clr 限制](../build/reference/clr-restrictions.md)如需與不相容的編譯器選項的詳細資訊 **/clr**。
 

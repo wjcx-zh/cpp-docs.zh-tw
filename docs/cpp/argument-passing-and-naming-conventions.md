@@ -13,18 +13,18 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1928f8e479b0533c5a8b2e60de7af9eff93f7eed
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184396"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222261"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>引數傳遞和命名慣例
 
 **Microsoft 專屬**
 
-Visual C++ 編譯器允許您指定在函式和呼叫端之間傳遞引數和傳回值的慣例。 並非所有慣例都適用於所有支援的平台，部分慣例會使用平台特定實作。 在大部分情況下，會忽略在特定平台上指定不支援慣例的關鍵字或編譯器參數，並且使用平台預設慣例。
+MicrosoftC++編譯器允許您指定的傳遞引數的慣例和傳回函式和呼叫端之間的值。 並非所有慣例都適用於所有支援的平台，部分慣例會使用平台特定實作。 在大部分情況下，會忽略在特定平台上指定不支援慣例的關鍵字或編譯器參數，並且使用平台預設慣例。
 
 在 x86 平台上傳遞引數時，會將所有引數擴大為 32 位元。 傳回值也會被擴大為 32 位元並在 EAX 暫存器中傳回，但 8 位元組結構例外，它是在 EDX:EAX 暫存器組中傳回。 較大的結構會在 EAX 暫存器中以隱藏傳回結構的指標傳回。 參數會從右至左推送至堆疊。 非 POD 的結構不會在暫存器中傳回。
 

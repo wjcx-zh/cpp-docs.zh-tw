@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2440
 ms.assetid: 36e6676c-f04f-4715-8ba1-f096c4bf3b44
-ms.openlocfilehash: c85a8284c91037e981f0d1ea82507b49be8121a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de433361901b5d247616c154afc48d637373d43
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338931"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448038"
 ---
 # <a name="compiler-error-c2440"></a>編譯器錯誤 C2440
 
@@ -194,7 +194,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-視覺效果C++編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼 **/clr**程式設計會編譯。
+MicrosoftC++編譯器不再允許[const_cast 運算子](../../cpp/const-cast-operator.md)向下轉型時來源使用的程式碼 **/clr**程式設計會編譯。
 
 若要解決這個 C2440，請使用正確的轉型運算子。 如需詳細資訊，請參閱 <<c0> [ 轉型運算子](../../cpp/casting-operators.md)。
 

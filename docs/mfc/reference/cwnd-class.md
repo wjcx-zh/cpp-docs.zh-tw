@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323473"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220348"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -8262,7 +8262,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>傳回值
 
-其中一個滑鼠點擊測試列舉下面所列的值。
+滑鼠點擊測試的其中一個列舉值。 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)如值的清單。
 
 ### <a name="remarks"></a>備註
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
+指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)如值的清單。
 
 *point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
+指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)如值的清單。
 
 *point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。
+指定[點擊測試的程式碼](#onnchittest)。 點擊的測試是測試，決定游標的位置。 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)如值的清單。
 
 *point*<br/>
 指定`CPoint`物件，包含 x 和 y 螢幕座標的游標位置。 這些座標永遠是相對於螢幕左上角。

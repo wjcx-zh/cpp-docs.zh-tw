@@ -1,15 +1,15 @@
 ---
-title: 資源編譯器錯誤和警告
+title: 資源編譯器錯誤與警告
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
 ms.openlocfilehash: c760e59e183b78122b7498ca8faf2c70ac454fd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297836"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857266"
 ---
-# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>資源編譯器錯誤和警告 （RCxxxx，RWxxxx）
+# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>資源編譯器錯誤與警告 (RCxxxx, RWxxxx)
 
 本節是由資源編譯器產生的錯誤的參考。 資源編譯器錯誤和警告有表單 RC*xxxx*或 RW*xxxx*，其中*xxxx*是四位數的數字。
 

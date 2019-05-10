@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 23b5692e28b9ea5b70c492e2564b8bf5385b1815
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195338"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221191"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>從 Visual Basic 應用程式中呼叫 DLL 函式
 
@@ -72,4 +72,4 @@ EXPORTS
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++ 中的 DLL](dlls-in-visual-cpp.md)
+[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)

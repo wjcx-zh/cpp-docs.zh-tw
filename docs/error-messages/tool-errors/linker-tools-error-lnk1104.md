@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1104
 ms.assetid: 9ca6f929-0efc-4055-8354-3cf5b4e636dc
-ms.openlocfilehash: eadeeb7ac19e3975a37a1364502b33400018cb05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc6305ab2e96496aa212004e186150d4a51cf3fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255509"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446963"
 ---
 # <a name="linker-tools-error-lnk1104"></a>連結器工具錯誤 LNK1104
 
@@ -59,7 +59,7 @@ Windows SDK 的路徑已過期時，也會發生此錯誤。 如果您已安裝�
 
 ### <a name="cannot-open-a-file-built-by-your-project"></a>無法開啟專案建置的檔案
 
-您會看到此錯誤，如果檔案*filename*是您的方案所建置，但尚不存在時，連結器會嘗試存取它。 這種情形時一個專案相依於另一個專案，但並不是專案建置正確的順序。 若要修正此問題，請確定您的專案參考會設定專案中所使用的檔案，因此除非必要，內建遺失的檔案。 如需詳細資訊，請參閱 <<c0> [ 將參考加入至視覺效果C++專案](../../build/adding-references-in-visual-cpp-projects.md)並[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。</c0>
+您會看到此錯誤，如果檔案*filename*是您的方案所建置，但尚不存在時，連結器會嘗試存取它。 這種情形時一個專案相依於另一個專案，但並不是專案建置正確的順序。 若要修正此問題，請確定您的專案參考會設定專案中所使用的檔案，因此除非必要，內建遺失的檔案。 如需詳細資訊，請參閱 <<c0> [ 將參考加入至 Visual StudioC++專案](../../build/adding-references-in-visual-cpp-projects.md)並[管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)。</c0>
 
 ### <a name="cannot-open-file-cprogramobj"></a>無法開啟檔案 ' c:\\Program.obj'
 

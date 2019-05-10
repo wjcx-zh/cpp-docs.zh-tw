@@ -1,6 +1,6 @@
 ---
 title: 使用 __declspec(dllexport) 從 DLL 匯出
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,24 +10,22 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195312"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220799"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>使用 __declspec(dllexport) 從 DLL 匯出
 
-導入的 Microsoft **__export**視覺效果的 16 位元編譯器版本C++以允許編譯器自動產生匯出名稱，並將它們放在.lib 檔。 然後就像靜態.lib 來連結至 DLL 使用這個.lib 檔。
-
-在新版本的編譯器，您可以匯出資料、 函數、 類別或類別成員函式從 DLL，使用 **__declspec （dllexport)** 關鍵字。 **__declspec （dllexport)** 將匯出指示詞加入至物件檔案，因此您不需要用到.def 檔。
+您可以從 DLL 使用匯出資料、 函數、 類別或類別成員函式 **__declspec （dllexport)** 關鍵字。 **__declspec （dllexport)** 將匯出指示詞加入至物件檔案，因此您不需要用到.def 檔。
 
 這種便利性在嘗試匯出修飾時最為明顯C++函式名稱。 因為名稱裝飾無標準規格，匯出的函式的名稱可能會變更編譯器版本之間。 如果您使用 **__declspec （dllexport)**，重新編譯的 DLL 和相依的.exe 檔案是只需要在任何命名慣例的變更。
 
 許多匯出指示詞，例如可只在.def 檔案中，序數、 NONAME 和 PRIVATE，且沒有辦法指定不使用.def 檔案而這些屬性。 不過，使用 **__declspec （dllexport)** 除了使用.def 檔不會造成建置錯誤。
 
-若要匯出函式 **__declspec （dllexport)** 關鍵字必須呼叫慣例關鍵字左邊出現，如果指定的關鍵字。 例如: 
+若要匯出函式 **__declspec （dllexport)** 關鍵字必須呼叫慣例關鍵字左邊出現，如果指定的關鍵字。 例如：
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -50,11 +48,6 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 **__declspec （dllexport)** 存放區函式的 DLL 匯出表中的名稱。 如果您想要最佳化的資料表大小，請參閱[從根據序數而非依名稱的 DLL 匯出函式](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)。
-
-> [!NOTE]
->  當將 DLL 原始程式碼從 win16 移植到 Win32，取代每個執行個體 **__export**具有 **__declspec （dllexport)**。
-
-做為參考，搜尋整個 Win32 Winbase.h 標頭檔。 它包含的範例 **__declspec （dllimport)** 使用量。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 

@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - iterator method
 ms.assetid: f9c49d1c-17cb-4b17-8e54-09e3ea41ca26
-ms.openlocfilehash: 3e425e3f8e2987019966aa73bbf9a34d47f2dbfd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6300fbcc0040cf1e260271093c9ac3aa5169d336
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211000"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221619"
 ---
 # <a name="container-classiterator"></a>容器類別::iterator
 
 > [!NOTE]
-> 本主題位於 Visual C++ 文件內，可做為 C++ 標準程式庫中所用容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
+> 本主題位於 MicrosoftC++中所用容器的無作用範例文件C++標準程式庫。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
 
 描述的物件可作為受控制序列的迭代器。
 

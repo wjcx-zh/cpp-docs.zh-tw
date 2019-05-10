@@ -2,12 +2,12 @@
 title: 為 Windows XP 設定程式
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273798"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446369"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
@@ -25,7 +25,7 @@ Windows XP 平台工具組隨附於 Visual Studio 中的 Windows 7 SDK 版本，
 
 1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。
 
-1. 在 **屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 以建立適用於 Windows XP 和 Windows Server 2003 的程式碼，使用 Microsoft Visual C++ 2017年編譯器。
+1. 在 **屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 以建立適用於 Windows XP 和 Windows Server 2003 的程式碼，使用 Microsoft 的C++Visual Studio 2017 中的編譯器。
 
 ### <a name="c-runtime-support"></a>C++ 執行階段支援
 

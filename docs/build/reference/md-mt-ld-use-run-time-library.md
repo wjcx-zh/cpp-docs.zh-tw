@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 59b0483d76a2a98c1f278a323a827b243d21adea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4ae63f2d45d5a1170f94de0480711bc719e4a2e0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321289"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217624"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (使用執行階段程式庫)
 
@@ -71,7 +71,7 @@ ms.locfileid: "62321289"
 
 如需如何使用執行階段程式庫的偵錯版本的詳細資訊，請參閱[C 執行階段程式庫參考](../../c-runtime-library/c-run-time-library-reference.md)。
 
-如需詳細資訊的 Dll，請參閱 <<c0> [ 視覺效果中的 Dll C++ ](../dlls-in-visual-cpp.md)。</c0>
+如需詳細資訊的 Dll，請參閱 <<c0> [ 建立 C /C++ Visual Studio 中的 Dll](../dlls-in-visual-cpp.md)。</c0>
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 

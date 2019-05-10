@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388770"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447693"
 ---
 # <a name="compiler-error-c2885"></a>編譯器錯誤 C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388770"
 
 ## <a name="example"></a>範例
 
-針對視覺效果所進行的編譯器一致性工作可能會導致此錯誤C++2005年： 已不再能夠有效`using`宣告，以巢狀類型; 您必須明確限定您對巢狀類型，將此類型的每個參考在 命名空間，或建立之 typedef。
+針對 Visual Studio 2005 所進行的編譯器一致性工作可能會導致此錯誤： 已不再有效有`using`宣告，以巢狀類型; 您必須明確限定您對巢狀類型，將類型放在 n 中的每個參考amespace，或建立之 typedef。
 
 下列範例會產生 C2885。
 

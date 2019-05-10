@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4459
 ms.assetid: ee9f6287-9c70-4b10-82a0-add82a13997f
-ms.openlocfilehash: 0cbab7c7cca1fc88bb99210262be45c56b6be7a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 441d01eca7c8266b6d7948508eeb561341e64c57
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391422"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447764"
 ---
 # <a name="compiler-warning-level-4-c4459"></a>編譯器警告 （層級 4） C4459
 
@@ -19,7 +19,7 @@ ms.locfileid: "62391422"
 
 Deklarace*識別碼*本機範圍內隱藏相同名稱的宣告*識別項*在全域範圍中。 這項警告可讓您知道的參考*識別碼*在這個範圍中解析的區域宣告的版本，而非全域版本，這可能會或可能不到您的意圖。 一般而言，我們建議您盡量減少工程最好使用全域變數。 全域命名空間的干擾降到最低，我們建議使用的具名命名空間的全域變數。
 
-這個警告的新功能 Visual Studio 2015 中，在視覺效果C++編譯器版本 18.00。 若要隱藏警告的編譯器或更新版本移轉您的程式碼時，該版本中，使用[/wv:18](../../build/reference/compiler-option-warning-level.md)編譯器選項。
+這個警告的新功能 Visual Studio 2015 中，在 MicrosoftC++編譯器版本 18.00。 若要隱藏警告的編譯器或更新版本移轉您的程式碼時，該版本中，使用[/wv:18](../../build/reference/compiler-option-warning-level.md)編譯器選項。
 
 ## <a name="example"></a>範例
 

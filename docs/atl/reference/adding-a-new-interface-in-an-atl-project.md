@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [ATL], interfaces
 - ATL projects, adding interfaces
 ms.assetid: 7d34b023-2c6b-4155-aca3-d47a40968063
-ms.openlocfilehash: 99f262d420cd503c6ca385ed29bcaa2647c5f556
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 15283439bdcf76fea64d677ad84bee333833dc71
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62249189"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221217"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL 專案中加入新的介面
 
@@ -43,7 +43,7 @@ ms.locfileid: "62249189"
 ## <a name="see-also"></a>另請參閱
 
 [ATL 專案精靈](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ 專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
+[C++在 Visual Studio 中的專案類型](../../build/reference/visual-cpp-project-types.md)<br/>
 [使用 ATL 和 C 執行階段程式碼進行程式設計](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [預設 ATL 專案組態](../../atl/reference/default-atl-project-configurations.md)

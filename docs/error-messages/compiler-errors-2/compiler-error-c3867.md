@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242873"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447195"
 ---
 # <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242873"
 
 您嘗試取得成員函式的位址，而未使用其類別名稱和傳址運算子來限定成員函式。
 
-針對 Visual C++ 2005 所進行的編譯器一致性工作，也可能會導致這個錯誤：增強的指標對成員一致性。 在 Visual C++ 2005 之前編譯的程式碼現在會產生 C3867。
+這項錯誤也可能因為針對 Visual Studio 2005 所進行的編譯器一致性處理而產生： 增強的指標對成員一致性。 Visual Studio 2005 之前編譯的程式碼現在會產生 C3867。
 
 ## <a name="example"></a>範例
 

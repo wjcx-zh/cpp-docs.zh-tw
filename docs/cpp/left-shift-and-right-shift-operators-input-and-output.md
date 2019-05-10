@@ -13,12 +13,12 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2f118c11aab9fb2bbdd6cfa4f23425077b382b23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216417"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222057"
 ---
 # <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>左的移和右移運算子 (&gt; &gt;並&lt; &lt;)
 
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-如果將帶正負號的數字左移，以影響正負號位元，結果會是未定義。 下列範例示範在 Visual C++ 中將一個 1 位元左移到帶正負號位元位置時的情況。
+如果將帶正負號的數字左移，以影響正負號位元，結果會是未定義。 下列範例示範當 1 的位元的正負號位元位置向左移位時，會發生什麼事。
 
 ```cpp
 #include <iostream>
@@ -89,7 +89,7 @@ int main() {
 向右移位運算子會導致中的位元模式*shift 運算式*所指定的位置數目，向右移位*加法運算式*。 若是不帶正負號的數字，移位作業空出的位元位置以零填補。 若是帶正負號的數字，會使用正負號位元填補空出的位元位置。 換句話說，如果是正數就會使用 0，負數則使用 1。
 
 > [!IMPORTANT]
-> 將帶正負號負數向右移的結果與實作相關。 雖然 Visual C++ 使用正負號位元填補空出來的位元位置，但不保證其他實作也會如此。
+> 將帶正負號負數向右移的結果與實作相關。 雖然 MicrosoftC++編譯器用來填滿空出的位元位置的正負號位元，則無法保證，其他實作也會如此。
 
 此範例示範使用不帶正負號數字的右移位作業：
 

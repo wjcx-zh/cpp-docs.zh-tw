@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b985799849a268010dff63f9f7bc25e474b365e
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148313"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448509"
 ---
 # <a name="c-attributes-for-com-and-net"></a>C++適用於 COM 和.NET 屬性
 
@@ -34,7 +34,7 @@ Microsoft 定義一組C++屬性可簡化 COM 程式設計與.NET Framework 通�
 
 - 取代了大量的所需的幾個簡要的屬性與 COM 元件的 IDL 程式碼。
 
-例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯視覺效果C++編譯器，並將適當的程式碼插入物件檔案。
+例如，若要實作一般的 ATL 類別的簡單事件接收器，您可以套用[event_receiver](event-receiver.md)屬性，是特定的類別例如`CMyReceiver`。 `event_receiver`屬性就會編譯由 MicrosoftC++編譯器，並將適當的程式碼插入物件檔案。
 
 ```cpp
 [event_receiver(com)]
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>屬性的基本機制
 
-有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[建立及管理 VisualC++專案](../../build/creating-and-managing-visual-cpp-projects.md)。
+有三種方式，將屬性插入您的專案。 首先，您可以將它們插入以手動方式插入原始程式碼中。 第二，您可以將它們插入在專案中使用物件的屬性方格。 最後，您可以將它們插入使用各種不同的精靈。 如需有關使用**屬性** 視窗和各種精靈，請參閱[Visual Studio 專案- C++ ](../../build/creating-and-managing-visual-cpp-projects.md)。
 
 如往常一般，當建置專案時，編譯器會剖析每個C++原始程式檔，產生的物件檔案。 不過，當編譯器發現屬性，它會剖析並語法驗證。 然後編譯器動態地呼叫插入程式碼，或在編譯時期進行其他修改的屬性提供者。 提供者的實作是根據屬性的類型而有所不同。 比方說，ATL 相關屬性的實作方式 Atlprov.dll。
 
@@ -64,7 +64,7 @@ class CMyReceiver
 
 ## <a name="building-an-attributed-program"></a>建置屬性化程式
 
-將視覺效果之後C++屬性到您的原始程式碼，您可能會想視覺效果C++編譯器來為您產生類型程式庫和.idl 檔案。 下列連結器選項建置.tlb 和.idl 檔案的說明：
+您將視覺效果之後C++屬性到您的原始程式碼，您可能想 MicrosoftC++編譯器為您產生類型程式庫和.idl 檔案。 下列連結器選項建置.tlb 和.idl 檔案的說明：
 
 - [/IDLOUT](../../build/reference/idlout-name-midl-output-files.md)
 

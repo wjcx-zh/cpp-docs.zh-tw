@@ -1,21 +1,21 @@
 ---
 title: HOW TO：中嵌入資訊清單的 C /C++應用程式
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274378"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220697"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>HOW TO：中嵌入資訊清單的 C /C++應用程式
 
-建議的 C /C++應用程式 （或程式庫） 將其內嵌於最終二進位檔，因為這可確保正確的執行階段行為，在大部分情況下的資訊清單。 根據預設，Visual Studio 會嘗試建立從原始程式檔; 專案時嵌入資訊清單請參閱[Visual Studio 中的資訊清單產生](manifest-generation-in-visual-studio.md)如需詳細資訊。 不過如果使用 nmake 來建置應用程式時，不需要現有 makefile 的某些變更。 本節示範如何變更現有的 makefiles 自動內嵌於最終二進位檔的資訊清單。
+我們建議您嵌入您的應用程式或程式庫最終二進位檔的資訊清單，因為這可確保正確的執行階段行為，在大部分情況下。 根據預設，Visual Studio 會嘗試建置專案時嵌入資訊清單。 如需詳細資訊，請參閱 < [Visual Studio 中的資訊清單產生](manifest-generation-in-visual-studio.md)。 不過，如果您使用 nmake 來建置您的應用程式，您必須進行一些變更 makefile。 本節說明如何變更，讓它自動內嵌於最終二進位檔的資訊清單的 makefile。
 
 ## <a name="two-approaches"></a>兩種方法
 
@@ -23,15 +23,19 @@ ms.locfileid: "62274378"
 
 - 如果您不想要執行累加建置您可以將直接內嵌資訊清單做為建置後步驟中使用命令列如下所示：
 
-   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    或
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 exe，dll 2)。
+   使用 1 表示 EXE 和 2 中，dll。
 
-- 如果您要執行累加建置，如下所示，直接編輯資源會停用累加建置並會造成完整重建，因此您應該採取不同的方法：
+- 如果您要執行累加建置，請使用下列步驟：
 
    - 連結要產生 MyApp.exe.manifest 檔案的二進位檔。
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-如果在執行此指令碼未變更視覺效果C++，它已成功建立 MyApp.exe。 它也會建立由作業系統載入相依組件，在執行階段使用的外部資訊清單檔 MyApp.exe.manifest。
+此指令碼執行時使用 Visual Studio 不變的如果已成功建立 MyApp.exe。 它也會建立由作業系統載入相依組件，在執行階段使用的外部資訊清單檔 MyApp.exe.manifest。
 
 MyLibrary.dll 的 nmake 指令碼看起來非常類似：
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-現在建立 makefile.targ.inc，並將下列內容複製到其中：
+現在，建立**makefile.targ.inc**並將下列內容複製到其中：
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

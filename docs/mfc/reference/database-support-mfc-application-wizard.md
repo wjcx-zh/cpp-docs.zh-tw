@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, database support
 ms.assetid: 9ddf4558-fd41-4ac7-8d9b-c93d9c68ab59
-ms.openlocfilehash: a1e0519e1351a48bbd969168d62f163c9dde7e7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94ed75ffd59294d5beb076ef4d66e57ef763f10e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323109"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525461"
 ---
 # <a name="database-support-mfc-application-wizard"></a>MFC 應用程式精靈、資料庫支援
 
@@ -46,15 +46,15 @@ ms.locfileid: "62323109"
 
 - **資料來源**
 
+   > [!NOTE]
+   > ATL OLE DB 消費者精靈 和 MFC ODBC 消費者精靈 不是可在 Visual Studio 2019 及更新版本。 您仍然可以手動新增的功能。 如需詳細資訊，請參閱 <<c0> [ 建立取用者不使用精靈](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)。
+
    按一下 [**資料來源**設為使用指定的驅動程式或提供者和資料庫的資料來源] 按鈕。 如果您選取中的 OLE DB**用戶端型別**選項時，此按鈕會顯示**資料連結屬性** 對話方塊。 如果您選取中的 ODBC**用戶端型別**選項，此按鈕可**選取資料來源** 對話方塊。 只有當您選擇要包含在您的應用程式中的資料庫檢視時，才使用此選項。
 
    |選項|描述|
    |------------|-----------------|
    |**資料連結屬性**(OLE DB)|建立使用指定的 OLE DB 提供者的指定的資料來源。 您必須指定 OLE DB 提供者、 資料、 資料來源、 登入識別碼和 （選擇性） 密碼的位置。 如需此對話方塊的詳細資訊，請參閱**資料來源**中[ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)。|
    |**選取資料來源**(ODBC)|建立指定的資料來源，使用指定的 ODBC 驅動程式。 您必須選取來選擇資料來源資料表的資料來源名稱。 精靈將資料表的所有資料行繫結至的成員變數`CRecordset`-衍生的類別。 如需此對話方塊的詳細資訊，請參閱**資料來源**中[MFC ODBC 消費者精靈](../../mfc/reference/mfc-odbc-consumer-wizard.md)。|
-
-   > [!NOTE]
-   > 在舊版中，Shift 鍵按一下**資料來源**按鈕開啟 開啟舊檔的對話方塊，讓您選取的資料連結 (.udl) 檔案。 不再支援這項功能。
 
 - **產生使用屬性的資料庫類別**
 

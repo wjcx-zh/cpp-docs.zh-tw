@@ -1,25 +1,27 @@
 ---
 title: 從 Typelib 加入類別精靈
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.typelib
+ms.date: 05/09/2019
 helpviewer_keywords:
-- Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794df6c207c2f2e93cdcc63a6b83cd3434764e87
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297004"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525467"
 ---
 # <a name="add-class-from-typelib-wizard"></a>從 Typelib 加入類別精靈
 
-您可以使用此精靈，從可用的型別程式庫加入 MFC 類別。 精靈會建立從所選的型別程式庫加入每個介面的類別。
+::: moniker range="vs-2019"
 
-> [!WARNING]
-> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
+此精靈不是可在 Visual Studio 2019 及更新版本。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+您可以使用此精靈，從可用的型別程式庫加入 MFC 類別。 精靈會建立從所選的型別程式庫加入每個介面的類別。
 
 - **加入類別來源**
 
@@ -66,6 +68,8 @@ ms.locfileid: "62297004"
    設定新類別的標頭檔名稱。 根據預設，此名稱是以您在 [產生的類別] 中提供的名稱為基礎。 按一下省略符號按鈕，將檔案名稱儲存至您選擇的位置，或將類別宣告附加至現有的檔案。 如果您選擇現有的檔案，在您按一下精靈中的 [完成] 之前，精靈不會將它儲存至選取的位置。
 
    精靈不會覆寫檔案。 如果您選取現有檔案的名稱，當您按一下 [完成] 時，精靈會提示您指出是否應該將類別宣告附加至檔案的內容。 按一下 [是] 可附加檔案，按一下 [否] 可返回精靈並指定另一個檔案名稱。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405634"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524833"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view 類別
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 `accelerator_view`来複製的物件。
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 傳回追蹤的所有目前提交至此的命令完成的未來`accelerator_view`物件。
 
@@ -149,7 +149,7 @@ void flush();
 
 傳回 `void`。
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 傳回 accelerator_view 物件的快速鍵對應物件。
 ### <a name="syntax"></a>語法
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Accelerator_view 物件加速器物件。
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 傳回布林值，指出是否執行階段會自動選取適當的加速器時在 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **真**如果執行階段會自動選取適當的加速器;，否則為**false**。
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 傳回布林值，指出 accelerator_view 物件是否有在擴充錯誤報告啟用偵錯層級。
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 布林值，指出是否`accelerator_view`物件具有擴充錯誤報告啟用偵錯層級。
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 傳回 accelerator_view 物件的佇列模式。
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 佇列模式`accelerator_view`物件。
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 傳回 accelerator_view 的版本。
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 新版`accelerator_view`。
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 取得布林值，指出是否執行階段會自動選取適當的加速器時在 accelerator_view 傳遞至[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。
 
@@ -228,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 取得布林值，指出 accelerator_view 物件是否有在擴充錯誤報告啟用偵錯層級。
 
@@ -295,7 +295,7 @@ bool operator== ( const accelerator_view & other ) const;
 
 **true**兩個物件是否相同，否則**false**。
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 取得 accelerator_view 物件的佇列模式。
 

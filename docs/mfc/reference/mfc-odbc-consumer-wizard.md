@@ -1,23 +1,25 @@
 ---
 title: MFC ODBC 消費者精靈
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20357646bbb7aa4fe00db43d8e77f9bf0b95c9b5
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310307"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525358"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC 消費者精靈
 
-> [!WARNING]
-> 在 Visual Studio 2017 15.9 版中，此程式碼精靈已淘汰，並且將從 Visual Studio 的未來版本中移除。 使用者很少用到這個精靈。 移除此精靈不會影響 ATL 和 MFC 的一般支援。 如果您想要分享關於此項淘汰的意見反應，請填寫[此問卷](https://www.surveymonkey.com/r/QDWKKCN)。 我們非常重視您的意見反應。
+::: moniker range="vs-2019"
+
+此精靈不是可在 Visual Studio 2019 及更新版本。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 此精靈設定 ODBC 資料錄集類別和資料繫結存取指定的資料來源所需。
 
@@ -73,6 +75,8 @@ ms.locfileid: "62310307"
 - **所有的資料行繫結**
 
    指定選取的資料表中的所有資料行是否會繫結。 如果您選取此方塊 （預設值） 時，會繫結所有資料行;如果您未選取此方塊，沒有資料行繫結，以及您必須將其繫結以手動方式在資料錄集類別中。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

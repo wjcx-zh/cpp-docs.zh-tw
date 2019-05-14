@@ -6,12 +6,12 @@ ms.author: mblome
 ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314609"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217661"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：A C++ package manager for Windows, Linux and MacOS (適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員)
 
@@ -124,7 +124,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>與 Visual Studio Code 整合 (Linux/MacOS)
 
-執行 **vcpkg 整合安裝**，以使用 vcpkg 登錄的位置在 Linux/MacOS 上設定 Visual Studio Code，並啟用原始程式檔的 IntelliSense。
+執行 **vcpkg 整合安裝**，使用 vcpkg 登錄的位置在 Linux/MacOS 上設定 Visual Studio Code，並對原始程式檔啟用 IntelliSense。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>透過 WSL 從 Windows 將 Linux 設為目標
 

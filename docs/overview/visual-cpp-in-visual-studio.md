@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124742"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222609"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -103,7 +103,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [Linux 程式設計](../linux/index.md)<br/>
 使用 Visual Studio IDE 撰寫程式碼並部署到遠端 Linux 電腦，以利用 GCC 進行編譯。
 
-[Visual C++ 中的 DLL](../build/dlls-in-visual-cpp.md)<br/>
+[在 Visual Studio 中建立 C++ DLL](../build/dlls-in-visual-cpp.md)<br/>
 了解如何使用 Win32、ATL 和 MFC 建立 Windows 桌面 DLL，並且提供如何編譯和註冊 DLL 的資訊。
 
 [平行程式設計](../parallel/parallel-programming-in-visual-cpp.md)<br/>

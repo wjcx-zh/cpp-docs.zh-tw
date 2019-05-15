@@ -1,17 +1,15 @@
 ---
 title: 事件接收對應
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-ms.openlocfilehash: 8e33636253b269692f87f99980b9da0cd60867ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aeec0acad4531e1ef0933388bbee728193853611
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322354"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612224"
 ---
 # <a name="event-sink-maps"></a>事件接收對應
 
@@ -204,7 +202,7 @@ ON_EVENT_REFLECT(theClass,  dispid, pfnHandler,  vtsParams)
 
 *VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。
 
-一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如：
+一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如: 
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 
@@ -243,7 +241,7 @@ OLE 控制項的控制項識別碼。
 
 ### <a name="remarks"></a>備註
 
-*VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如：
+*VtsParams*引數是以空格分隔的清單中的值**VTS_** 常數。 一或多個以空格 （非逗號） 分隔這些值會指定函式的參數清單。 例如: 
 
 [!code-cpp[NVC_MFCAutomation#11](../../mfc/codesnippet/cpp/event-sink-maps_1.cpp)]
 

@@ -1,8 +1,6 @@
 ---
 title: TN038:MFC OLE IUnknown 實作
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - aggregation macros [MFC]
 - COM interfaces, base interface
@@ -18,12 +16,12 @@ helpviewer_keywords:
 - END_INTERFACE_PART macro [MFC]
 - INTERFACE_PART macro
 ms.assetid: 19d946ba-beaf-4881-85c6-0b598d7f6f11
-ms.openlocfilehash: 0722ce294e6a088446b8ba681810cf3f7885f122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a366d200c272570b4806a8642f287a7ef69b430e
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305472"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611308"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>TN038:MFC/OLE IUnknown 實作
 
@@ -92,7 +90,7 @@ if (pUnk->QueryInterface(IID_IPrintInterface, (void**)&pPrint) == NOERROR)
 }
 ```
 
-這好像相當簡單，但您要如何實作支援 IPrintInterface 的物件和[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面在此情況下它很簡單，因為 IPrintInterface 直接衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -藉由實作 iprintinterface，即可[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)則會自動支援。 例如: 
+這好像相當簡單，但您要如何實作支援 IPrintInterface 的物件和[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面在此情況下它很簡單，因為 IPrintInterface 直接衍生自[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) -藉由實作 iprintinterface，即可[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)則會自動支援。 例如：
 
 ```cpp
 class CPrintObj : public CPrintInterface
@@ -381,7 +379,7 @@ CEditPrintObj::CPrintObj 的實作會類似上述 CEditPrintObj::CEditObj 的定
 
 3. 在某個時間點 (通常是在 `CCmdTarget::OnCreateAggregates` 期間)，將成員變數初始化為 NULL 以外的成員變數。
 
-例如：
+例如: 
 
 ```cpp
 class CAggrExample : public CCmdTarget
@@ -523,7 +521,7 @@ END_INTERFACE_PART(localClass)
 
 *LocalClass*引數是將會定義區域類別的名稱。 ' X' 將會自動加在名稱前面。 此命名慣例用來避免和相同名稱之全域類別的衝突。 此外，內嵌成員相同的名稱*localClass*命名除了 'm_x' 前置詞。
 
-例如: 
+例如：
 
 ```cpp
 BEGIN_INTERFACE_PART(MyAdviseSink, IAdviseSink)

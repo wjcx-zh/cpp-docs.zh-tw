@@ -1,17 +1,15 @@
 ---
 title: 標準命令和視窗 ID
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - standard command and Window IDs
 ms.assetid: 0424805c-fff8-4531-8f0c-15cfb13aa612
-ms.openlocfilehash: e5f6955407f565d5cc06ef57e9bd273f6c0f7712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97123d681efbebc59891459a43cfbc16b5333a7a
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310044"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611687"
 ---
 # <a name="standard-command-and-window-ids"></a>標準命令和視窗 ID
 

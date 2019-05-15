@@ -1,17 +1,15 @@
 ---
 title: 連接對應
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros.maps
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-ms.openlocfilehash: cbd993e7172ca9a25f25db18d5d0fa042db847b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a36c112de8c760f91afd5cf544b355f7cb8e1bed
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373293"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65612281"
 ---
 # <a name="connection-maps"></a>連接對應
 
@@ -98,7 +96,7 @@ CONNECTION_IID(iid)
 
 ### <a name="remarks"></a>備註
 
-*Iid*引數是用來識別連接點會在其連接的接收器呼叫的介面識別碼的介面。 例如：
+*Iid*引數是用來識別連接點會在其連接的接收器呼叫的介面識別碼的介面。 例如: 
 
 [!code-cpp[NVC_MFCConnectionPoints#10](../../mfc/codesnippet/cpp/connection-maps_1.h)]
 
@@ -181,7 +179,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 ### <a name="remarks"></a>備註
 
-例如: 
+例如：
 
 [!code-cpp[NVC_MFCConnectionPoints#2](../../mfc/codesnippet/cpp/connection-maps_2.cpp)]
 

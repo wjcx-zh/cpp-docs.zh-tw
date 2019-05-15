@@ -1,13 +1,13 @@
 ---
 title: 3. 執行階段程式庫函式
-ms.date: 01/17/2019
+ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 7ecb2a79ad61169cdeabc9bd4893147a5de6a210
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525037"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611180"
 ---
 # <a name="3-run-time-library-functions"></a>3.執行階段程式庫函式
 
@@ -55,6 +55,8 @@ Hodnota parametru *num_threads*必須是正整數。 其效果取決於是否已
 
 這個呼叫的優先順序高於`OMP_NUM_THREADS`環境變數。 可能會藉由呼叫建立的執行緒數目的預設值`omp_set_num_threads`或藉由設定`OMP_NUM_THREADS`環境變數，您可以明確覆寫單一`parallel`藉由指定指示詞`num_threads`子句。
 
+如需詳細資訊，請參閱 < [omp_set_dynamic](#317-omp_set_dynamic-function)。
+
 #### <a name="cross-references"></a>交互參照
 
 - [omp_set_dynamic](#317-omp_set_dynamic-function) function
@@ -74,6 +76,8 @@ int omp_get_num_threads(void);
 `num_threads`子句`omp_set_num_threads`函式，而`OMP_NUM_THREADS`環境變數來控制小組中的執行緒數目。
 
 如果使用者尚未明確設定的執行緒數目，預設值是由實作定義。 此函式繫結至最接近的封閉式`parallel`指示詞。 如果呼叫從序列一部分的程式，或在已序列化的巢狀平行區域，則此函數會傳回 1。
+
+如需詳細資訊，請參閱 < [omp_set_dynamic](#317-omp_set_dynamic-function)。
 
 #### <a name="cross-references"></a>交互參照
 
@@ -165,6 +169,12 @@ void omp_set_dynamic(int dynamic_threads);
 
 執行緒的動態調整的預設值是由實作定義。 如此一來，使用者程式碼相依於特定數目的執行緒有正確的執行應該明確地停用動態的執行緒。 實作不需要提供的功能，以動態調整執行緒數目，但需要他們以提供介面，以支援跨所有平台的可攜性。
 
+#### <a name="microsoft-specific"></a>Microsoft 專有的
+
+目前支援`omp_get_dynamic`和`omp_set_dynamic`如下所示： 
+
+若要輸入的參數`omp_set_dynamic`並不會影響執行緒的原則，並不會變更的執行緒數目。 `omp_get_num_threads` 一律會傳回使用者定義的數字，如果設定或預設的執行緒數目。 在目前的 Microsoft 實作中，`omp_set_dynamic(0)`關閉動態的執行緒，讓現有的執行緒集可以重複用於下列平行區域。 `omp_set_dynamic(1)` 開啟動態的執行緒，並捨棄現有的執行緒集，並建立一組新即將推出的平行區域。 新集合中的執行緒數目與舊集合相同，並為基礎的傳回值`omp_get_num_threads`。 因此，為了達到最佳效能，使用`omp_set_dynamic(0)`重複使用現有的執行緒。
+
 #### <a name="cross-references"></a>交互參照
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
@@ -180,7 +190,7 @@ void omp_set_dynamic(int dynamic_threads);
 int omp_get_dynamic(void);
 ```
 
-如果實作無法實作動態調整執行緒數目，此函式一律會傳回 0。
+如果實作無法實作動態調整執行緒數目，此函式一律會傳回 0。 如需詳細資訊，請參閱 < [omp_set_dynamic](#317-omp_set_dynamic-function)。
 
 #### <a name="cross-references"></a>交互參照
 

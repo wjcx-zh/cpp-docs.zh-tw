@@ -1,8 +1,6 @@
 ---
 title: TN033:MFC 的 DLL 版本
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.dll
 helpviewer_keywords:
 - MFC DLLs [MFC], writing MFC extension DLLS
 - AFXDLL library
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fda256043027dbff249cedf490b150b6ad30a5fb
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305537"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611099"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:MFC 的 DLL 版本
 
@@ -150,7 +148,7 @@ class AFX_EXT_CLASS CExampleExport : public CObject
 
 有時候您可能要匯出只是必要的個別成員您的類別。 例如，如果您要匯出`CDialog`-衍生的類別，您可能只需要將匯出的建構函式和`DoModal`呼叫。 您可以匯出使用 DLL 的這些成員。DEF 檔案，但您也可以使用`AFX_EXT_CLASS`中相同的方式在您要匯出的個別成員。
 
-例如：
+例如: 
 
 ```cpp
 class CExampleDialog : public CDialog

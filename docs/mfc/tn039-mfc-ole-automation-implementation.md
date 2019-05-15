@@ -1,8 +1,6 @@
 ---
 title: TN039:MFC OLE Automation 實作
 ms.date: 06/28/2018
-f1_keywords:
-- vc.mfc.ole
 helpviewer_keywords:
 - MFC, COM support
 - IDispatch interface
@@ -10,12 +8,12 @@ helpviewer_keywords:
 - TN039
 - Automation, MFC COM interface entry points
 ms.assetid: 765fa3e9-dd54-4f08-9ad2-26e0546ff8b6
-ms.openlocfilehash: cd6f8d681ef7e6517f2172ca6b22b13723a962fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e71b3795396aa73135e8dac022182d4371bb19ac
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305485"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611251"
 ---
 # <a name="tn039-mfcole-automation-implementation"></a>TN039:MFC/OLE Automation 實作
 
@@ -40,7 +38,7 @@ MFC 會決定**DISPID**每個方法的屬性會根據兩件事：
 
 - 之間距離的分派對應從 (0，而相對) 的最具衍生性類別
 
-**DISPID**分為兩個部分。 **取代 LOWORD**的**DISPID**包含第一個元件，也就是從分派對應頂端的距離。 **HIWORD**包含從最具衍生性的類別之間的距離。 例如: 
+**DISPID**分為兩個部分。 **取代 LOWORD**的**DISPID**包含第一個元件，也就是從分派對應頂端的距離。 **HIWORD**包含從最具衍生性的類別之間的距離。 例如：
 
 ```cpp
 class CDispPoint : public CCmdTarget
@@ -167,7 +165,7 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="remarks"></a>備註
 
-更像 DISP_PROPERTY_EX 巨集，這個巨集會定義使用個別的 Get 和 Set 成員函式存取的屬性。 不過，這個巨集，可讓您指定之屬性的參數清單。 這是適合用來實作以其他方式的屬性編製索引或參數化。 參數永遠都會放在第一次，後面接著新屬性的值。 例如: 
+更像 DISP_PROPERTY_EX 巨集，這個巨集會定義使用個別的 Get 和 Set 成員函式存取的屬性。 不過，這個巨集，可讓您指定之屬性的參數清單。 這是適合用來實作以其他方式的屬性編製索引或參數化。 參數永遠都會放在第一次，後面接著新屬性的值。 例如：
 
 ```cpp
 DISP_PROPERTY_PARAM(CMyObject, "item", GetItem, SetItem, VT_DISPATCH, VTS_I2 VTS_I2)

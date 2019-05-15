@@ -1,8 +1,6 @@
 ---
 title: TN059:使用 MFC Mbcs-unicode 轉換巨集
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.mbcs
 helpviewer_keywords:
 - MFCANS32.DLL
 - Unicode [MFC], conversion macros
@@ -13,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 130b459dc87f36325d0f253181a196bea868856f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c182ff584404fb91de8ff5e8020ec2e6ef9f950
+ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399612"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65611853"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059:使用 MFC MBCS/Unicode 轉換巨集
 
@@ -140,7 +138,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 }
 ```
 
-如果字串不是常數，則請在函式中封裝呼叫的方法。 這將允許每一次都釋放轉換緩衝區。 例如: 
+如果字串不是常數，則請在函式中封裝呼叫的方法。 這將允許每一次都釋放轉換緩衝區。 例如：
 
 ```
 void CallSomeMethod(int ii, LPCTSTR lpsz)

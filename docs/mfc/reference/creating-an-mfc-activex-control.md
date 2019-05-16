@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446758"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708244"
 ---
 # <a name="creating-an-mfc-activex-control"></a>建立 MFC ActiveX 控制項
 
@@ -36,7 +36,7 @@ ActiveX 控制項程式是功能的設計用來讓父應用程式的特定類型
 
 1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
 
-在建立專案之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[視覺效果建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+在建立專案之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[適用於 Visual Studio 建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 在建立專案之後，您可以使用程式碼精靈以新增[函式](../../ide/add-member-function-wizard.md)，[變數](../../ide/add-member-variable-wizard.md)，[事件](../../ide/add-event-wizard.md)，[屬性](../../ide/names-add-property-wizard.md)，及[方法](../../ide/add-method-wizard.md)。 如需有關自訂您的 ActiveX 控制項的詳細資訊，請參閱 < [MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)。
 

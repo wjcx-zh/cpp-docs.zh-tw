@@ -2,12 +2,12 @@
 title: 以 Visual C++ 進行平行程式設計
 ms.date: 11/04/2016
 ms.assetid: f5c28ab6-a1d9-492f-b207-05e8aee73e96
-ms.openlocfilehash: 80f3708b7c5f5a2c5167e0c27324898195e9d340
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a14768f9ff19fddd811166e4c8fffe90fc46cb8
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708070"
 ---
 # <a name="parallel-programming-in-visual-c"></a>以 Visual C++ 進行平行程式設計
 
@@ -22,4 +22,4 @@ ms.locfileid: "62362565"
 |[C++ AMP (C++ Accelerated Massive Parallelism)](amp/cpp-amp-cpp-accelerated-massive-parallelism.md)|類別，可讓現代化圖形處理器用於一般用途的程式設計。|
 |[舊版程式碼的多執行緒支援 (Visual C++)](multithreading-support-for-older-code-visual-cpp.md)|適用於舊版應用程式的舊技術。 針對新的應用程式，使用 並行執行階段或C++P。|
 |[OpenMP](openmp/openmp-in-visual-cpp.md)|Microsoft 實作的 OpenMP API。|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|文件的本節包含的視覺效果的大部分功能的相關資訊C++。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|文件的本節包含的視覺效果的大部分功能的相關資訊C++。|

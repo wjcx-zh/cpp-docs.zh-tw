@@ -2,12 +2,12 @@
 title: 編譯器內建和組件語言
 ms.date: 11/04/2016
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 016303262db40917099dfd6d13b4b11ad6ec2797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6e2617290b368eff3fded4053db124f5d88d62ec
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345209"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708315"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>編譯器內建和組件語言
 
@@ -21,4 +21,4 @@ ms.locfileid: "64345209"
 |[內嵌組合語言](../assembler/inline/inline-assembler.md)|說明如何搭配 x86 處理器使用 Visual C/C++ 內嵌組合語言。|
 |[ARM 組譯工具參考](../assembler/arm/arm-assembler-reference.md)|提供用於 Microsoft ARM 組件 (armasm) 和相關工具的參考資料。|
 |[Microsoft 巨集組譯工具參考](../assembler/masm/microsoft-macro-assembler-reference.md)|提供用於 Microsoft Macro 組件 (masm) 的參考資料。|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual C++ 文件的頂層文章。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|Visual C++ 文件的頂層文章。|

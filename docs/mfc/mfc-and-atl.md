@@ -2,12 +2,12 @@
 title: MFC 和 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 54498ddf8999379d93c899c05aa41fe224616ea3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 2d986c3237a6fa58cfcebef29939dbf6b1c316ae
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525424"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706628"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 
@@ -27,4 +27,4 @@ Microsoft Foundation Classes (MFC) 透過 Win32 提供 C++ 物件導向包裝函
 |[ATL COM 桌面元件](../atl/atl-com-desktop-components.md)|ATL 提供類別樣板及其他用途建構，以簡化 C++ 中的 COM 物件建立作業。|
 |[ATL/MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)|由 MFC 和 ATL 共用之 [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) 和其他類別的參考。|
 |[使用資源檔](../windows/working-with-resource-files.md)|資源編輯器可讓您編輯 UI 資源，例如字串、影像及對話方塊。|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|MSDN Library 中所有 C++ 內容的父主題。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|MSDN Library 中所有 C++ 內容的父主題。|

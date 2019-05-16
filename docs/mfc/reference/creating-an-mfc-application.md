@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: c70c82d14227687f34309f8d125e3aeab53034a5
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448442"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708239"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 
@@ -47,7 +47,7 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[視覺效果建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[適用於 Visual Studio 建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 40028794a6df30db619965181f2e31d7c9a2745c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: f2cdb0d0225b47391ee18c398b7789ab42ca8f40
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221332"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708213"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -116,7 +116,7 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 
 |標題|描述|
 |-----------|-----------------|
-|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|視覺效果的父主題C++開發人員內容。|
+|[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|視覺效果的父主題C++開發人員內容。|
 [使用 C++/CLI 進行 .NET 開發](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|建立原生包裝函式C++程式庫，讓它與.NET 應用程式和元件之間的通訊。|
 |[適用於.NET 和 UWP 的元件延伸模組](../extensions/component-extensions-for-runtime-platforms.md)|共用的語法元素的參考C++/CX 和C++/CLI。|
 |[通用 Windows 應用程式 (C++)](universal-windows-apps-cpp.md)|撰寫 UWP 應用程式使用C++/CX 或 Windows 執行階段範本庫 (WRL)。|

@@ -95,7 +95,7 @@
 ## [ATL 集合類別](atl-collection-classes.md)
 ## [ATL 登錄元件 (登錄器)](atl-registry-component-registrar.md)
 ### [建立登錄器指令碼](creating-registrar-scripts.md)
-#### [了解 Backus Nauer Form (BNF) 語法](understanding-backus-nauer-form-bnf-syntax.md)
+#### [了解巴格斯格式 (BNF) 語法](understanding-backus-naur-form-bnf-syntax.md)
 #### [了解剖析樹狀目錄](understanding-parse-trees.md)
 #### [登錄指令碼範例](registry-scripting-examples.md)
 #### [使用可置換的參數 (登錄器的前置處理器)](using-replaceable-parameters-the-registrar-s-preprocessor.md)

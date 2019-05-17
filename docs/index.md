@@ -4,12 +4,12 @@ title: Visual C++ 文件
 description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264435"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789020"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -423,7 +423,7 @@ ms.locfileid: "62264435"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264435"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>網路程式庫</h3>
-                                                    <p>進行 Web 程式設計的 C++ REST SDK (名稱代碼 Casablanca) 開放原始碼程式庫。</p>
+                                                    <h3>雲端及網路程式庫</h3>
+                                                    <p>Microsoft Azure C/C++ SDK 可以應用到 IoT、儲存體等方面，C++ REST SDK 開放原始碼程式庫則可應用在網路程式設計。</p>
                                                 </div>
                                             </div>
                                         </div>

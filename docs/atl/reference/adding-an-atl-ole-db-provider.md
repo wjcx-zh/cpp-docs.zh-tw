@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 - ATL OLE DB providers
 ms.assetid: 26fba1e3-880f-4bc6-90e5-2096a48a3a6c
-ms.openlocfilehash: 78f26f43d11471c83bf9efcfc3aa55a23f0fbf3e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 36c07da6249a106836433e127f95258d4ed5b509
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524605"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706936"
 ---
 # <a name="adding-an-atl-ole-db-provider"></a>新增 ATL OLE DB 提供者
 
@@ -21,7 +21,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 使用此精靈，將 ATL OLE DB 提供者新增至專案。 ATL OLE DB 提供者會由資料來源、工作階段、命令及資料列集類別所組成。 專案必須已建立為 ATL COM 應用程式。
 

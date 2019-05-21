@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525059"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707552"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 
@@ -20,7 +20,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 當您使用 **ATL OLE DB 消費者精靈**來建立消費者時，精靈會針對您在資料行對應中指定的每個欄位，於使用者記錄類別中產生資料成員。 每個資料成員的型別均為 `DWORD`，並包含對應至其個別欄位的狀態值。
 

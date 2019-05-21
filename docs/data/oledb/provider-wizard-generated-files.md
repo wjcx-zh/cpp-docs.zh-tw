@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: de5c9056402cb1db25240772eb3c592523daafae
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525327"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707479"
 ---
 # <a name="provider-wizard-generated-files"></a>提供者精靈產生的檔案
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **ATL OLE DB 提供者精靈**會產生下列檔案。 下列主題所使用的簡短名稱為 *Custom*，但確切的檔案名稱取決於您在建立提供者時所做的選擇。
 

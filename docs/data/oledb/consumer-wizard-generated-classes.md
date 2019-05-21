@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - user record classes in OLE DB consumer
 ms.assetid: dba0538f-2afe-4354-8cbb-f202ea8ade5a
-ms.openlocfilehash: f172da3aefb3f2440ddb4bba41dc549b0bf4a926
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 3442ff484876aec9b2cd3fa93e95c4d503649ee9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525132"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707757"
 ---
 # <a name="consumer-wizard-generated-classes"></a>消費者精靈產生的類別
 
@@ -20,7 +20,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 當您使用 [ATL OLE DB 消費者精靈] 產生消費者時，您可以選擇使用 OLE DB 範本或 OLE DB 屬性。 在這兩種情況下，精靈都會產生一個命令類別和一個使用者記錄類別。 命令類別包含程式碼，可以開啟資料來源和您在精靈中指定的資料列集。 使用者記錄類別包含您所選取之資料庫資料表的資料行對應。 不過，所產生的程式碼在每個案例中會有所不同：
 
@@ -151,7 +151,7 @@ class CProducts : public CCommand<CAccessor<CProductsAccessor>>
 
 ## <a name="attribute-injected-user-record-classes"></a>插入屬性的使用者記錄類別
 
-如果您使用資料庫屬性 ([db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)) 來建立 OLE DB 消費者，屬性會插入使用者記錄類別，且其名稱將為 "_*ClassName*Accessor" 的形式。 例如，如果您將命令類別命名為 `COrders`，則使用者記錄類別將為 `_COrdersAccessor`。 雖然使用者記錄類別會出現在 [類別檢視] 中，但按兩下它即可導覽至標頭檔中的命令或資料表類別。 在這些情況下，您只能透過檢視插入屬性的程式碼，來檢視使用者記錄類別的實際宣告。
+如果您使用資料庫屬性 ([db_command](../../windows/db-command.md) 或 [db_table](../../windows/db-table.md)) 來建立 OLE DB 消費者，屬性會插入使用者記錄類別，且其名稱將為 "_*ClassName*Accessor" 的形式。 例如，如果您將命令類別命名為 `COrders`，則使用者記錄類別將為 `_COrdersAccessor`。 雖然使用者記錄類別會出現在 [類別檢視] 中，但按兩下它即可導覽至標頭檔中的命令或資料表類別。 在這些情況下，您只能藉由檢視插入屬性的程式碼，來檢視使用者記錄類別的實際宣告。
 
 如果您加入或覆寫屬性化消費者的方法，可能會有潛在的錯亂。 例如，您可以將 `_COrdersAccessor` 建構函式加入 `COrders` 宣告，但請注意，事實上這會將建構函式加入插入的 `COrdersAccessor` 類別。 這種建構函式可以初始化資料行/參數，但您無法這樣建立複製建構函式，因為它無法直接具現化 `COrdersAccessor` 物件。 如果您需要直接在 `COrders` 類別上的建構函式 (或其他方法)，建議您定義衍生自 `COrders` 的新類別，並在那裡加入必要的方法。
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524630"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706911"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>加入 ATL OLE DB 消費者
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 使用此精靈，將 ATL OLE DB 消費者加入至專案。 ATL OLE DB 消費者包含一個 OLE DB 存取子類別以及存取資料來源所需的資料繫結。 專案必須已建立為 ATL COM 應用程式，或已建立為包含 ATL 支援的 MFC 或 Win32 應用程式 (這會自動加入 ATL OLE DB 消費者精靈)。
 

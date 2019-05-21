@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 409d339acb37bd09ae10eabba16e19d5df0aae63
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525023"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707719"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **ATL OLE DB 消費者精靈**和 **MFC 應用程式精靈**會產生一些您應該會注意到的函式。 部分方法在屬性化專案中是以不同的方式實作的，因此會有一些需要注意的事項；以下涵蓋每個案例。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。
 

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525073"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707538"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 下列主題示範如何編輯 **MFC 應用程式精靈**和 **ATL OLE DB 消費者精靈**所建立的檔案，來建立簡單消費者。 這個範例包含下列部分：
 

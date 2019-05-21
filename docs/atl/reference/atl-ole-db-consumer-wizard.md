@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 46a13f1ac46215fc28e71c15feb9f209967b67a2
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524643"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706979"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB 消費者精靈
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此精靈會設定 OLE DB 消費者類別，其中含有透過指定的 OLE DB 提供者存取指定資料來源所需的資料繫結。
 

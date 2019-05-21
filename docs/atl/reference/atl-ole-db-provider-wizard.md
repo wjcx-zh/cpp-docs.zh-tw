@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB providers
 ms.assetid: cf91ba78-01d1-4d12-b673-e95d96bfbebe
-ms.openlocfilehash: 1b30b9aa3956d0dbfa7ddf2fe7281484ebd2444e
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 91384d6c61368ee56ed303622e5c1bdfad09bd8a
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524664"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706970"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB 提供者精靈
 
@@ -19,7 +19,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 ## <a name="remarks"></a>備註
 

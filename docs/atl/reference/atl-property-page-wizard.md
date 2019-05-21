@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524537"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706983"
 ---
 # <a name="atl-property-page-wizard"></a>ATL 屬性頁精靈
 
@@ -22,7 +22,7 @@ Visual Studio 2019 及更新版本中未提供此精靈。
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 此精靈會[將屬性頁加入至 ATL 專案](../../atl/reference/adding-an-atl-property-page.md)或含 ATL 支援的 MFC 專案。 ATL 屬性頁提供使用者介面，可用來設定一或多個 COM 物件的屬性 (或呼叫方法)。
 

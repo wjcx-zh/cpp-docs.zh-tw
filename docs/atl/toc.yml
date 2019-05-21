@@ -1,0 +1,966 @@
+- name: Active Template Library (ATL)
+  href: atl-com-desktop-components.md
+- name: Active Template Library (ATL) 概念
+  expanded: false
+  items:
+    - name: Active Template Library (ATL) 概念
+      href: active-template-library-atl-concepts.md
+    - name: COM 和 ATL 簡介
+      expanded: false
+      items:
+        - name: COM 和 ATL 簡介
+          href: introduction-to-com-and-atl.md
+        - name: COM 簡介
+          expanded: false
+          items:
+            - name: COM 簡介
+              href: introduction-to-com.md
+            - name: 介面 (ATL)
+              href: interfaces-atl.md
+            - name: IUnknown
+              href: iunknown.md
+            - name: 參考計數
+              href: reference-counting.md
+            - name: QueryInterface
+              href: queryinterface.md
+            - name: 封送處理
+              href: marshaling.md
+            - name: 彙總
+              href: aggregation.md
+        - name: ATL 簡介
+          expanded: false
+          items:
+            - name: ATL 簡介
+              href: introduction-to-atl.md
+            - name: 使用範本庫
+              href: using-a-template-library.md
+            - name: ATL 的範圍
+              href: scope-of-atl.md
+            - name: ATL 和 MFC 之間的選擇建議
+              href: recommendations-for-choosing-between-atl-and-mfc.md
+    - name: ATL COM 物件的基本概念
+      expanded: false
+      items:
+        - name: ATL COM 物件的基本概念
+          href: fundamentals-of-atl-com-objects.md
+        - name: 實作 CComObjectRootEx
+          href: implementing-ccomobjectrootex.md
+        - name: 實作 CComObject、CComAggObject 和 CComPolyObject
+          href: implementing-ccomobject-ccomaggobject-and-ccompolyobject.md
+        - name: 支援 IDispatch 和 IErrorInfo
+          href: supporting-idispatch-and-ierrorinfo.md
+        - name: 支援 IDispEventImpl
+          href: supporting-idispeventimpl.md
+        - name: 變更預設 Class Factory 和彙總模型
+          href: changing-the-default-class-factory-and-aggregation-model.md
+        - name: 建立彙總物件
+          href: creating-an-aggregated-object.md
+    - name: 雙重介面和 ATL
+      expanded: false
+      items:
+        - name: 雙重介面和 ATL
+          href: dual-interfaces-and-atl.md
+        - name: 實作雙重介面
+          href: implementing-a-dual-interface.md
+        - name: 多個雙重介面
+          href: multiple-dual-interfaces.md
+        - name: nonextensible 屬性
+          href: nonextensible-attribute.md
+        - name: 雙重介面和事件
+          href: dual-interfaces-and-events.md
+    - name: ATL 集合和列舉程式
+      expanded: false
+      items:
+        - name: ATL 集合和列舉程式
+          href: atl-collections-and-enumerators.md
+        - name: ATL 集合和列舉程式類別
+          href: atl-collection-and-enumerator-classes.md
+        - name: 集合和列舉程式介面的設計原則
+          href: design-principles-for-collection-and-enumerator-interfaces.md
+        - name: 實作 C++ 標準程式庫架構集合
+          expanded: false
+          items:
+            - name: 實作 C++ 標準程式庫架構集合
+              href: implementing-an-stl-based-collection.md
+            - name: ATL 複製原則類別
+              href: atl-copy-policy-classes.md
+    - name: ATL 複合控制項基本概念
+      expanded: false
+      items:
+        - name: ATL 複合控制項基本概念
+          href: atl-composite-control-fundamentals.md
+        - name: 插入複合控制項
+          href: inserting-a-composite-control.md
+        - name: 修改 ATL 專案
+          href: modifying-the-atl-project.md
+        - name: 將功能新增至複合控制項
+          href: adding-functionality-to-the-composite-control.md
+        - name: 建置和測試 ATL 專案
+          href: building-and-testing-the-atl-project.md
+    - name: ATL 控制項內含項目常見問題集
+      href: atl-control-containment-faq.md
+    - name: ATL COM 屬性頁
+      expanded: false
+      items:
+        - name: ATL COM 屬性頁
+          href: atl-com-property-pages.md
+        - name: 指定屬性頁
+          href: specifying-property-pages.md
+        - name: 實作屬性頁
+          expanded: false
+          items:
+            - name: 實作屬性頁
+              href: implementing-property-pages.md
+            - name: 範例：實作屬性頁
+              href: example-implementing-a-property-page.md
+    - name: DHTML 控制項的 ATL 支援
+      expanded: false
+      items:
+        - name: DHTML 控制項的 ATL 支援
+          href: atl-support-for-dhtml-controls.md
+        - name: 識別 DHTML 控制項專案的項目
+          href: identifying-the-elements-of-the-dhtml-control-project.md
+        - name: 從 DHTML 呼叫 C++ 程式碼
+          href: calling-cpp-code-from-dhtml.md
+        - name: 建立 ATL DHTML 控制項
+          href: creating-an-atl-dhtml-control.md
+        - name: 測試 ATL DHTML 控制項
+          href: testing-the-atl-dhtml-control.md
+        - name: 修改 ATL DHTML 控制項
+          href: modifying-the-atl-dhtml-control.md
+        - name: 測試已修改的 ATL DHTML 控制項
+          href: testing-the-modified-atl-dhtml-control.md
+    - name: ATL 連接點
+      expanded: false
+      items:
+        - name: ATL 連接點
+          href: atl-connection-points.md
+        - name: ATL 連接點類別
+          href: atl-connection-point-classes.md
+        - name: 將連接點加入物件
+          href: adding-connection-points-to-an-object.md
+        - name: ATL 連接點範例
+          href: atl-connection-point-example.md
+    - name: 事件處理和 ATL
+      expanded: false
+      items:
+        - name: 事件處理和 ATL
+          href: event-handling-and-atl.md
+        - name: 事件處理原則
+          href: event-handling-principles.md
+        - name: 實作事件處理介面
+          href: implementing-the-event-handling-interface.md
+        - name: 使用 IDispEventImpl
+          href: using-idispeventimpl.md
+        - name: 使用 IDispEventSimpleImpl
+          href: using-idispeventsimpleimpl.md
+        - name: ATL 事件處理摘要
+          href: atl-event-handling-summary.md
+    - name: ATL 和無限制執行緒封送處理器
+      href: atl-and-the-free-threaded-marshaler.md
+    - name: 指定專案的執行緒模型 (ATL)
+      href: specifying-the-threading-model-for-a-project-atl.md
+    - name: ATL 模組類別
+      href: atl-module-classes.md
+    - name: ATL 服務
+      expanded: false
+      items:
+        - name: ATL 服務
+          href: atl-services.md
+        - name: 'CAtlServiceModuleT::Start 函式'
+          href: catlservicemodulet-start-function.md
+        - name: 'CAtlServiceModuleT::ServiceMain 函式'
+          href: catlservicemodulet-servicemain-function.md
+        - name: 'CAtlServiceModuleT::Run 函式'
+          href: catlservicemodulet-run-function.md
+        - name: 'CAtlServiceModuleT::Handler 函式'
+          href: catlservicemodulet-handler-function.md
+        - name: 登錄項目
+          href: registry-entries.md
+        - name: DCOMCNFG
+          href: dcomcnfg.md
+        - name: 偵錯提示
+          expanded: false
+          items:
+            - name: 偵錯提示
+              href: debugging-tips.md
+            - name: 使用工作管理員
+              href: using-task-manager.md
+            - name: 顯示判斷提示
+              href: displaying-assertions.md
+            - name: 將程式當做本機伺服器執行
+              href: running-the-program-as-a-local-server.md
+    - name: ATL 視窗類別
+      expanded: false
+      items:
+        - name: ATL 視窗類別
+          href: atl-window-classes.md
+        - name: ATL 視窗類別簡介
+          href: introduction-to-atl-window-classes.md
+        - name: 使用視窗
+          href: using-a-window.md
+        - name: 實作視窗
+          expanded: false
+          items:
+            - name: 實作視窗
+              href: implementing-a-window.md
+            - name: 新增 ATL 訊息處理常式
+              href: adding-an-atl-message-handler.md
+            - name: 訊息對應 (ATL)
+              href: message-maps-atl.md
+            - name: 訊息處理函式
+              expanded: false
+              items:
+                - name: 訊息處理函式
+                  href: message-handler-functions.md
+                - name: CommandHandler
+                  href: commandhandler.md
+                - name: MessageHandler
+                  href: messagehandler.md
+                - name: NotifyHandler
+                  href: notifyhandler.md
+            - name: 使用 CWindowImpl 實作視窗
+              href: implementing-a-window-with-cwindowimpl.md
+        - name: 實作對話方塊
+          href: implementing-a-dialog-box.md
+        - name: 使用自主視窗
+          href: using-contained-windows.md
+        - name: 了解視窗特性
+          href: understanding-window-traits.md
+    - name: ATL 集合類別
+      href: atl-collection-classes.md
+    - name: ATL 登錄元件 (登錄器)
+      expanded: false
+      items:
+        - name: ATL 登錄元件 (登錄器)
+          href: atl-registry-component-registrar.md
+        - name: 建立登錄器指令碼
+          expanded: false
+          items:
+            - name: 建立登錄器指令碼
+              href: creating-registrar-scripts.md
+            - name: 了解巴格斯格式 (BNF) 語法
+              href: understanding-backus-nauer-form-bnf-syntax.md
+            - name: 了解剖析樹狀目錄
+              href: understanding-parse-trees.md
+            - name: 登錄指令碼範例
+              href: registry-scripting-examples.md
+            - name: 使用可置換的參數 (登錄器的前置處理器)
+              href: using-replaceable-parameters-the-registrar-s-preprocessor.md
+            - name: 叫用指令碼
+              href: invoking-scripts.md
+        - name: 設定登錄器程式碼的靜態連結 (僅限 C++)
+          href: setting-up-a-static-link-to-the-registrar-code-cpp-only.md
+    - name: 使用 ATL 和 C 執行階段程式碼進行程式設計
+      expanded: false
+      items:
+        - name: 使用 ATL 和 C 執行階段程式碼進行程式設計
+          href: programming-with-atl-and-c-run-time-code.md
+        - name: 連結到 CRT 的方法優缺點
+          href: benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md
+        - name: 連結到 ATL 專案中的 CRT
+          href: linking-to-the-crt-in-your-atl-project.md
+    - name: 使用 CComBSTR 進行程式設計 (ATL)
+      href: programming-with-ccombstr-atl.md
+    - name: ATL 編碼方式參考
+      href: atl-encoding-reference.md
+    - name: ATL 公用程式參考
+      href: atl-utilities-reference.md
+- name: Active Template Library (ATL) 教學課程
+  expanded: false
+  items:
+    - name: Active Template Library (ATL) 教學課程
+      href: active-template-library-atl-tutorial.md
+    - name: 建立專案 (ATL 教學課程，第 1 部分)
+      href: creating-the-project-atl-tutorial-part-1.md
+    - name: 加入控制項 (ATL 教學課程，第 2 部分)
+      href: adding-a-control-atl-tutorial-part-2.md
+    - name: 將屬性加入至控制項 (ATL 教學課程，第 3 部分)
+      href: adding-a-property-to-the-control-atl-tutorial-part-3.md
+    - name: 變更繪圖程式碼 (ATL 教學課程，第 4 部分)
+      href: changing-the-drawing-code-atl-tutorial-part-4.md
+    - name: 加入事件 (ATL 教學課程，第 5 部分)
+      href: adding-an-event-atl-tutorial-part-5.md
+    - name: 加入屬性頁 (ATL 教學課程，第 6 部分)
+      href: adding-a-property-page-atl-tutorial-part-6.md
+    - name: 將控制項放在網頁上 (ATL 教學課程，第 7 部分)
+      href: putting-the-control-on-a-web-page-atl-tutorial-part-7.md
+- name: ATL 類別概觀
+  expanded: false
+  items:
+    - name: ATL 類別概觀
+      href: atl-class-overview.md
+    - name: Class Factory 類別
+      href: class-factories-classes.md
+    - name: 類別資訊類別
+      href: class-information-classes.md
+    - name: 集合類別
+      href: collection-classes.md
+    - name: COM 模組類別
+      href: com-modules-classes.md
+    - name: 複合控制項類別
+      href: composite-controls-classes.md
+    - name: 連接點類別
+      href: connection-points-classes.md
+    - name: 控制項內含項目類別
+      href: control-containment-classes.md
+    - name: 控制項：一般支援類別
+      href: controls-general-support-classes.md
+    - name: 資料轉送類別
+      href: data-transfer-classes.md
+    - name: 使用者類型類別
+      href: data-types-classes.md
+    - name: 偵錯和例外狀況類別
+      href: debugging-and-exceptions-classes.md
+    - name: 雙重介面類別
+      href: dual-interfaces-classes.md
+    - name: 列舉程式和集合類別
+      href: enumerators-and-collections-classes.md
+    - name: 錯誤資訊類別
+      href: error-information-classes.md
+    - name: 檔案處理類別
+      href: file-handling-classes.md
+    - name: 介面指標類別
+      href: interface-pointers-classes.md
+    - name: IUnknown 實作類別
+      href: iunknown-implementation-classes.md
+    - name: 記憶體管理類別
+      href: memory-management-classes.md
+    - name: MMC 嵌入式管理單元類別
+      href: mmc-snap-in-classes.md
+    - name: 物件安全性類別
+      href: object-safety-classes.md
+    - name: 持續性類別
+      href: persistence-classes.md
+    - name: 屬性和屬性頁類別
+      href: properties-and-property-pages-classes.md
+    - name: 登錄支援類別
+      href: registry-support-classes.md
+    - name: 執行中的物件類別
+      href: running-objects-classes.md
+    - name: 安全性類別
+      href: security-classes.md
+    - name: 服務提供者支援類別
+      href: service-provider-support-classes.md
+    - name: 網站資訊類別
+      href: site-information-classes.md
+    - name: 字串和文字類別
+      href: string-and-text-classes.md
+    - name: Tear-Off 介面類別
+      href: tear-off-interfaces-classes.md
+    - name: 執行緒共用類別
+      href: thread-pooling-classes.md
+    - name: 執行緒模型和關鍵區段類別
+      href: threading-models-and-critical-sections-classes.md
+    - name: UI 支援類別
+      href: ui-support-classes.md
+    - name: 公用程式類別
+      href: utility-classes.md
+    - name: Windows 支援類別
+      href: windows-support-classes.md
+- name: ATL 程式庫參考
+  expanded: false
+  items:
+    - name: ATL 類別與結構參考
+      expanded: false
+      items:
+        - name: ATL 類別與結構
+          href: reference/atl-classes.md
+        - name: _ATL_BASE_MODULE70 結構
+          href: reference/atl-base-module70-structure.md
+        - name: _ATL_COM_MODULE70 結構
+          href: reference/atl-com-module70-structure.md
+        - name: _ATL_FUNC_INFO 結構
+          href: reference/atl-func-info-structure.md
+        - name: _ATL_MODULE70 結構
+          href: reference/atl-module70-structure.md
+        - name: _ATL_WIN_MODULE70 結構
+          href: reference/atl-win-module70-structure.md
+        - name: _AtlCreateWndData 結構
+          href: reference/atlcreatewnddata-structure.md
+        - name: ATL_DRAWINFO 結構
+          href: reference/atl-drawinfo-structure.md
+        - name: _U_MENUorID 類別
+          href: reference/u-menuorid-class.md
+        - name: _U_RECT 類別
+          href: reference/u-rect-class.md
+        - name: _U_STRINGorID 類別
+          href: reference/u-stringorid-class.md
+        - name: CA2AEX 類別
+          href: reference/ca2aex-class.md
+        - name: CA2CAEX 類別
+          href: reference/ca2caex-class.md
+        - name: CA2WEX 類別
+          href: reference/ca2wex-class.md
+        - name: CAccessToken 類別
+          href: reference/caccesstoken-class.md
+        - name: CAcl 類別
+          href: reference/cacl-class.md
+        - name: CAdapt 類別
+          href: reference/cadapt-class.md
+        - name: CAtlArray 類別
+          href: reference/catlarray-class.md
+        - name: CAtlAutoThreadModule 類別
+          href: reference/catlautothreadmodule-class.md
+        - name: CAtlAutoThreadModuleT 類別
+          href: reference/catlautothreadmodulet-class.md
+        - name: CAtlBaseModule 類別
+          href: reference/catlbasemodule-class.md
+        - name: CAtlComModule 類別
+          href: reference/catlcommodule-class.md
+        - name: CAtlDebugInterfacesModule 類別
+          href: reference/catldebuginterfacesmodule-class.md
+        - name: CAtlDllModuleT 類別
+          href: reference/catldllmodulet-class.md
+        - name: CAtlException 類別
+          href: reference/catlexception-class.md
+        - name: CAtlDllModuleT 類別
+          href: reference/catlexemodulet-class.md
+        - name: CAtlFile 類別
+          href: reference/catlfile-class.md
+        - name: CAtlFileMapping 類別
+          href: reference/catlfilemapping-class.md
+        - name: CAtlFileMappingBase 類別
+          href: reference/catlfilemappingbase-class.md
+        - name: CAtlList 類別
+          href: reference/catllist-class.md
+        - name: CAtlMap 類別
+          href: reference/catlmap-class.md
+        - name: CAtlModule 類別
+          href: reference/catlmodule-class.md
+        - name: CAtlModuleT 類別
+          href: reference/catlmodulet-class.md
+        - name: CAtlPreviewCtrlImpl 類別
+          href: reference/catlpreviewctrlimpl-class.md
+        - name: CAtlServiceModuleT 類別
+          href: reference/catlservicemodulet-class.md
+        - name: CAtlTemporaryFile 類別
+          href: reference/catltemporaryfile-class.md
+        - name: CAtlTransactionManager 類別
+          href: reference/catltransactionmanager-class.md
+        - name: CAtlWinModule 類別
+          href: reference/catlwinmodule-class.md
+        - name: CAutoPtr 類別
+          href: reference/cautoptr-class.md
+        - name: CAutoPtrArray 類別
+          href: reference/cautoptrarray-class.md
+        - name: CAutoPtrElementTraits 類別
+          href: reference/cautoptrelementtraits-class.md
+        - name: CAutoPtrList 類別
+          href: reference/cautoptrlist-class.md
+        - name: CAutoRevertImpersonation 類別
+          href: reference/cautorevertimpersonation-class.md
+        - name: CAutoVectorPtr 類別
+          href: reference/cautovectorptr-class.md
+        - name: CAutoVectorPtrElementTraits 類別
+          href: reference/cautovectorptrelementtraits-class.md
+        - name: CAxDialogImpl 類別
+          href: reference/caxdialogimpl-class.md
+        - name: CAxWindow 類別
+          href: reference/caxwindow-class.md
+        - name: CAxWindow2T 類別
+          href: reference/caxwindow2t-class.md
+        - name: CBindStatusCallback 類別
+          href: reference/cbindstatuscallback-class.md
+        - name: ComAggObject 類別
+          href: reference/ccomaggobject-class.md
+        - name: CComAllocator 類別
+          href: reference/ccomallocator-class.md
+        - name: CComApartment 類別
+          href: reference/ccomapartment-class.md
+        - name: CComAutoCriticalSection 類別
+          href: reference/ccomautocriticalsection-class.md
+        - name: CComAutoDeleteCriticalSection 類別
+          href: reference/ccomautodeletecriticalsection-class.md
+        - name: CComAutoThreadModule 類別
+          href: reference/ccomautothreadmodule-class.md
+        - name: CComBSTR 類別
+          href: reference/ccombstr-class.md
+        - name: CComCachedTearOffObject 類別
+          href: reference/ccomcachedtearoffobject-class.md
+        - name: CComClassFactory 類別
+          href: reference/ccomclassfactory-class.md
+        - name: CComClassFactory2 類別
+          href: reference/ccomclassfactory2-class.md
+        - name: CComClassFactoryAutoThread 類別
+          href: reference/ccomclassfactoryautothread-class.md
+        - name: CComClassFactorySingleton 類別
+          href: reference/ccomclassfactorysingleton-class.md
+        - name: CComCoClass 類別
+          href: reference/ccomcoclass-class.md
+        - name: CComCompositeControl 類別
+          href: reference/ccomcompositecontrol-class.md
+        - name: CComContainedObject 類別
+          href: reference/ccomcontainedobject-class.md
+        - name: CComControl 類別
+          href: reference/ccomcontrol-class.md
+        - name: CComControlBase 類別
+          href: reference/ccomcontrolbase-class.md
+        - name: CComCriticalSection 類別
+          href: reference/ccomcriticalsection-class.md
+        - name: CComCritSecLock 類別
+          href: reference/ccomcritseclock-class.md
+        - name: CComCurrency 類別
+          href: reference/ccomcurrency-class.md
+        - name: CComDynamicUnkArray 類別
+          href: reference/ccomdynamicunkarray-class.md
+        - name: CComEnum 類別
+          href: reference/ccomenum-class.md
+        - name: CComEnumImpl 類別
+          href: reference/ccomenumimpl-class.md
+        - name: CComEnumOnSTL 類別
+          href: reference/ccomenumonstl-class.md
+        - name: CComFakeCriticalSection 類別
+          href: reference/ccomfakecriticalsection-class.md
+        - name: CComGITPtr 類別
+          href: reference/ccomgitptr-class.md
+        - name: CComHeap 類別
+          href: reference/ccomheap-class.md
+        - name: CComHeapPtr 類別
+          href: reference/ccomheapptr-class.md
+        - name: CComModule 類別
+          href: reference/ccommodule-class.md
+        - name: CComMultiThreadModel 類別
+          href: reference/ccommultithreadmodel-class.md
+        - name: CComMultiThreadModelNoCS 類別
+          href: reference/ccommultithreadmodelnocs-class.md
+        - name: CComObject 類別
+          href: reference/ccomobject-class.md
+        - name: CComObjectGlobal 類別
+          href: reference/ccomobjectglobal-class.md
+        - name: CComObjectNoLock 類別
+          href: reference/ccomobjectnolock-class.md
+        - name: CComObjectRoot 類別
+          href: reference/ccomobjectroot-class.md
+        - name: CComObjectRootEx 類別
+          href: reference/ccomobjectrootex-class.md
+        - name: CComObjectStack 類別
+          href: reference/ccomobjectstack-class.md
+        - name: CComPolyObject 類別
+          href: reference/ccompolyobject-class.md
+        - name: CComPtr 類別
+          href: reference/ccomptr-class.md
+        - name: CComPtrBase 類別
+          href: reference/ccomptrbase-class.md
+        - name: CComQIPtr 類別
+          href: reference/ccomqiptr-class.md
+        - name: CComQIPtrElementTraits 類別
+          href: reference/ccomqiptrelementtraits-class.md
+        - name: CComSafeArray 類別
+          href: reference/ccomsafearray-class.md
+        - name: CComSafeArrayBound 類別
+          href: reference/ccomsafearraybound-class.md
+        - name: CComSafeDeleteCriticalSection 類別
+          href: reference/ccomsafedeletecriticalsection-class.md
+        - name: CComSimpleThreadAllocator 類別
+          href: reference/ccomsimplethreadallocator-class.md
+        - name: CComSingleThreadModel 類別
+          href: reference/ccomsinglethreadmodel-class.md
+        - name: CComTearOffObject 類別
+          href: reference/ccomtearoffobject-class.md
+        - name: CComUnkArray 類別
+          href: reference/ccomunkarray-class.md
+        - name: CComVariant 類別
+          href: reference/ccomvariant-class.md
+        - name: CContainedWindowT 類別
+          href: reference/ccontainedwindowt-class.md
+        - name: CCRTAllocator 類別
+          href: reference/ccrtallocator-class.md
+        - name: CCRTHeap 類別
+          href: reference/ccrtheap-class.md
+        - name: CDacl 類別
+          href: reference/cdacl-class.md
+        - name: CDebugReportHook 類別
+          href: reference/cdebugreporthook-class.md
+        - name: CDefaultCharTraits 類別
+          href: reference/cdefaultchartraits-class.md
+        - name: CDefaultCompareTraits 類別
+          href: reference/cdefaultcomparetraits-class.md
+        - name: CDefaultElementTraits 類別
+          href: reference/cdefaultelementtraits-class.md
+        - name: CDefaultHashTraits 類別
+          href: reference/cdefaulthashtraits-class.md
+        - name: CDialogImpl 類別
+          href: reference/cdialogimpl-class.md
+        - name: CDynamicChain 類別
+          href: reference/cdynamicchain-class.md
+        - name: CElementTraits 類別
+          href: reference/celementtraits-class.md
+        - name: CElementTraitsBase 類別
+          href: reference/celementtraitsbase-class.md
+        - name: CFirePropNotifyEvent 類別
+          href: reference/cfirepropnotifyevent-class.md
+        - name: CGlobalHeap 類別
+          href: reference/cglobalheap-class.md
+        - name: CHandle 類別
+          href: reference/chandle-class.md
+        - name: CHeapPtr 類別
+          href: reference/cheapptr-class.md
+        - name: CHeapPtrBase 類別
+          href: reference/cheapptrbase-class.md
+        - name: CHeapPtrElementTraits 類別
+          href: reference/cheapptrelementtraits-class.md
+        - name: CHeapPtrList 類別
+          href: reference/cheapptrlist-class.md
+        - name: CInterfaceArray 類別
+          href: reference/cinterfacearray-class.md
+        - name: CInterfaceList 類別
+          href: reference/cinterfacelist-class.md
+        - name: CLocalHeap 類別
+          href: reference/clocalheap-class.md
+        - name: CMessageMap 類別
+          href: reference/cmessagemap-class.md
+        - name: CNonStatelessWorker 類別
+          href: reference/cnonstatelessworker-class.md
+        - name: CNoWorkerThread 類別
+          href: reference/cnoworkerthread-class.md
+        - name: CPathT 類別
+          href: reference/cpatht-class.md
+        - name: CPrimitiveElementTraits 類別
+          href: reference/cprimitiveelementtraits-class.md
+        - name: CPrivateObjectSecurityDesc 類別
+          href: reference/cprivateobjectsecuritydesc-class.md
+        - name: CRBMap 類別
+          href: reference/crbmap-class.md
+        - name: CRBMultiMap 類別
+          href: reference/crbmultimap-class.md
+        - name: CRBTree 類別
+          href: reference/crbtree-class.md
+        - name: CRegKey 類別
+          href: reference/cregkey-class.md
+        - name: CRTThreadTraits 類別
+          href: reference/crtthreadtraits-class.md
+        - name: CSacl 類別
+          href: reference/csacl-class.md
+        - name: CSecurityAttributes 類別
+          href: reference/csecurityattributes-class.md
+        - name: CSecurityDesc 類別
+          href: reference/csecuritydesc-class.md
+        - name: CSid 類別
+          href: reference/csid-class.md
+        - name: CSimpleArray 類別
+          href: reference/csimplearray-class.md
+        - name: CSimpleArrayEqualHelper 類別
+          href: reference/csimplearrayequalhelper-class.md
+        - name: CSimpleArrayEqualHelperFalse 類別
+          href: reference/csimplearrayequalhelperfalse-class.md
+        - name: CSimpleDialog 類別
+          href: reference/csimpledialog-class.md
+        - name: CSimpleMap 類別
+          href: reference/csimplemap-class.md
+        - name: CSimpleMapEqualHelper 類別
+          href: reference/csimplemapequalhelper-class.md
+        - name: CSimpleMapEqualHelperFalse 類別
+          href: reference/csimplemapequalhelperfalse-class.md
+        - name: CSnapInItemImpl 類別
+          href: reference/csnapinitemimpl-class.md
+        - name: CSnapInPropertyPageImpl 類別
+          href: reference/csnapinpropertypageimpl-class.md
+        - name: CSocketAddr 類別
+          href: reference/csocketaddr-class.md
+        - name: CStockPropImpl 類別
+          href: reference/cstockpropimpl-class.md
+        - name: CStringElementTraits 類別
+          href: reference/cstringelementtraits-class.md
+        - name: CStringElementTraitsI 類別
+          href: reference/cstringelementtraitsi-class.md
+        - name: CStringRefElementTraits 類別
+          href: reference/cstringrefelementtraits-class.md
+        - name: CThreadPool 類別
+          href: reference/cthreadpool-class.md
+        - name: CTokenGroups 類別
+          href: reference/ctokengroups-class.md
+        - name: CTokenPrivileges 類別
+          href: reference/ctokenprivileges-class.md
+        - name: CUrl 類別
+          href: reference/curl-class.md
+        - name: CW2AEX 類別
+          href: reference/cw2aex-class.md
+        - name: CW2CWEX 類別
+          href: reference/cw2cwex-class.md
+        - name: CW2WEX 類別
+          href: reference/cw2wex-class.md
+        - name: CWin32Heap 類別
+          href: reference/cwin32heap-class.md
+        - name: CWindow 類別
+          href: reference/cwindow-class.md
+        - name: CWindowImpl 類別
+          href: reference/cwindowimpl-class.md
+        - name: CWinTraits 類別
+          href: reference/cwintraits-class.md
+        - name: CWinTraitsOR 類別
+          href: reference/cwintraitsor-class.md
+        - name: CWndClassInfo 類別
+          href: reference/cwndclassinfo-class.md
+        - name: CWorkerThread 類別
+          href: reference/cworkerthread-class.md
+        - name: IAtlAutoThreadModule 類別
+          href: reference/iatlautothreadmodule-class.md
+        - name: IAtlMemMgr 類別
+          href: reference/iatlmemmgr-class.md
+        - name: IAxWinAmbientDispatch 介面
+          href: reference/iaxwinambientdispatch-interface.md
+        - name: IAxWinAmbientDispatchEx 介面
+          href: reference/iaxwinambientdispatchex-interface.md
+        - name: IAxWinHostWindow 介面
+          href: reference/iaxwinhostwindow-interface.md
+        - name: IAxWinHostWindowLic 介面
+          href: reference/iaxwinhostwindowlic-interface.md
+        - name: ICollectionOnSTLImpl 類別
+          href: reference/icollectiononstlimpl-class.md
+        - name: IConnectionPointContainerImpl 類別
+          href: reference/iconnectionpointcontainerimpl-class.md
+        - name: IConnectionPointImpl 類別
+          href: reference/iconnectionpointimpl-class.md
+        - name: IDataObjectImpl 類別
+          href: reference/idataobjectimpl-class.md
+        - name: IDispatchImpl 類別
+          href: reference/idispatchimpl-class.md
+        - name: IDispEventImpl 類別
+          href: reference/idispeventimpl-class.md
+        - name: IDispEventSimpleImpl 類別
+          href: reference/idispeventsimpleimpl-class.md
+        - name: IDocHostUIHandlerDispatch 介面
+          href: reference/idochostuihandlerdispatch-interface.md
+        - name: IEnumOnSTLImpl 類別
+          href: reference/ienumonstlimpl-class.md
+        - name: IObjectSafetyImpl 類別
+          href: reference/iobjectsafetyimpl-class.md
+        - name: IObjectWithSiteImpl 類別
+          href: reference/iobjectwithsiteimpl-class.md
+        - name: IOleControlImpl 類別
+          href: reference/iolecontrolimpl-class.md
+        - name: IOleInPlaceActiveObjectImpl 類別
+          href: reference/ioleinplaceactiveobjectimpl-class.md
+        - name: IOleInPlaceObjectWindowlessImpl 類別
+          href: reference/ioleinplaceobjectwindowlessimpl-class.md
+        - name: IOleObjectImpl 類別
+          href: reference/ioleobjectimpl-class.md
+        - name: IPerPropertyBrowsingImpl 類別
+          href: reference/iperpropertybrowsingimpl-class.md
+        - name: IPersistPropertyBagImpl 類別
+          href: reference/ipersistpropertybagimpl-class.md
+        - name: IPersistStorageImpl 類別
+          href: reference/ipersiststorageimpl-class.md
+        - name: IPersistStreamInitImpl 類別
+          href: reference/ipersiststreaminitimpl-class.md
+        - name: IPointerInactiveImpl 類別
+          href: reference/ipointerinactiveimpl-class.md
+        - name: IPropertyNotifySinkCP 類別
+          href: reference/ipropertynotifysinkcp-class.md
+        - name: IPropertyPage2Impl 類別
+          href: reference/ipropertypage2impl-class.md
+        - name: IPropertyPageImpl 類別
+          href: reference/ipropertypageimpl-class.md
+        - name: IProvideClassInfo2Impl 類別
+          href: reference/iprovideclassinfo2impl-class.md
+        - name: IQuickActivateImpl 類別
+          href: reference/iquickactivateimpl-class.md
+        - name: IRegistrar 介面
+          href: reference/iregistrar-class.md
+        - name: IRunnableObjectImpl 類別
+          href: reference/irunnableobjectimpl-class.md
+        - name: IServiceProviderImpl 類別
+          href: reference/iserviceproviderimpl-class.md
+        - name: ISpecifyPropertyPagesImpl 類別
+          href: reference/ispecifypropertypagesimpl-class.md
+        - name: ISupportErrorInfoImpl 類別
+          href: reference/isupporterrorinfoimpl-class.md
+        - name: IThreadPoolConfig 介面
+          href: reference/ithreadpoolconfig-interface.md
+        - name: IViewObjectExImpl 類別
+          href: reference/iviewobjecteximpl-class.md
+        - name: IWorkerThreadClient 介面
+          href: reference/iworkerthreadclient-interface.md
+        - name: Win32ThreadTraits 類別
+          href: reference/win32threadtraits-class.md
+        - name: 背景工作原型
+          href: reference/worker-archetype.md
+    - name: ATL_URL_SCHEME 列舉
+      href: reference/atl-url-scheme-enum.md
+    - name: ATL 函式參考
+      expanded: false
+      items:
+        - name: ATL 函式
+          href: reference/atl-functions.md
+        - name: ATL HTTP 公用程式函式
+          href: reference/atl-http-utility-functions.md
+        - name: ATL 文字編碼函式
+          href: reference/atl-text-encoding-functions.md
+        - name: ATL 路徑函式
+          href: reference/atl-path-functions.md
+        - name: COM 對應全域函式
+          href: reference/com-map-global-functions.md
+        - name: 複合控制項全域函式
+          href: reference/composite-control-global-functions.md
+        - name: 連接點全域函式
+          href: reference/connection-point-global-functions.md
+        - name: 偵錯和錯誤報告全域函式
+          href: reference/debugging-and-error-reporting-global-functions.md
+        - name: 裝置內容全域函式
+          href: reference/device-context-global-functions.md
+        - name: 事件處理全域函式
+          href: reference/event-handling-global-functions.md
+        - name: 封送處理全域函式
+          href: reference/marshaling-global-functions.md
+        - name: 像素-HIMETRIC 轉換全域函式
+          href: reference/pixel-himetric-conversion-global-functions.md
+        - name: 登錄和 TypeLib 全域函式
+          href: reference/registry-and-typelib-global-functions.md
+        - name: 安全性全域函式
+          href: reference/security-global-functions.md
+        - name: 安全性識別碼全域函式
+          href: reference/security-identifier-global-functions.md
+        - name: 伺服器註冊全域函式
+          href: reference/server-registration-global-functions.md
+        - name: WinModule 全域函式
+          href: reference/winmodule-global-functions.md
+    - name: ATL 巨集參考
+      expanded: false
+      items:
+        - name: ATL 巨集
+          href: reference/atl-macros.md
+        - name: 彙總和 Class Factory 巨集
+          href: reference/aggregation-and-class-factory-macros.md
+        - name: 分類巨集
+          href: reference/category-macros.md
+        - name: COM 對應巨集
+          href: reference/com-map-macros.md
+        - name: COM 介面項目巨集
+          href: reference/com-interface-entry-macros.md
+        - name: 編譯器選項巨集
+          href: reference/compiler-options-macros.md
+        - name: 複合控制項巨集
+          href: reference/composite-control-macros.md
+        - name: 連接點巨集
+          href: reference/connection-point-macros.md
+        - name: 偵錯和錯誤報告巨集
+          href: reference/debugging-and-error-reporting-macros.md
+        - name: 例外狀況處理巨集
+          href: reference/exception-handling-macros.md
+        - name: 訊息對應巨集 (ATL)
+          href: reference/message-map-macros-atl.md
+        - name: 物件對應巨集
+          href: reference/object-map-macros.md
+        - name: 物件狀態巨集
+          href: reference/object-status-macros.md
+        - name: 屬性對應巨集
+          href: reference/property-map-macros.md
+        - name: 登錄資料交換巨集
+          href: reference/registry-data-exchange-macros.md
+        - name: 登錄巨集
+          href: reference/registry-macros.md
+        - name: 服務對應巨集
+          href: reference/service-map-macros.md
+        - name: 嵌入式管理單元物件巨集
+          href: reference/snap-in-object-macros.md
+        - name: 字串轉換巨集
+          href: reference/string-conversion-macros.md
+        - name: 視窗類別巨集
+          href: reference/window-class-macros.md
+        - name: Windows 訊息巨集
+          href: reference/windows-messages-macros.md
+    - name: ATL 運算子參考
+      href: reference/atl-operators.md
+    - name: ATL 全域變數參考
+      href: reference/atl-global-variables.md
+    - name: ATL typedef 參考
+      href: reference/atl-typedefs.md
+- name: Visual Studio 中的 ATL 專案
+  expanded: false
+  items:
+    - name: ATL 精靈和對話方塊方塊參考
+      expanded: false
+      items:
+        - name: ATL 精靈和對話方塊
+          href: reference/atl-wizards-and-dialog-boxes.md
+        - name: ATL Active Server Page 元件精靈參考
+          expanded: false
+          items:
+            - name: ATL Active Server Page 元件精靈
+              href: reference/atl-active-server-page-component-wizard.md
+            - name: ATL Active Server Page 元件精靈、ASP
+              href: reference/asp-atl-active-server-page-component-wizard.md
+            - name: ATL Active Server Page 元件精靈、選項
+              href: reference/options-atl-active-server-page-component-wizard.md
+        - name: ATL COM+ 1.0 元件精靈參考
+          expanded: false
+          items:
+            - name: ATL COM+ 1.0 元件精靈
+              href: reference/atl-com-plus-1-0-component-wizard.md
+            - name: 'COM+ 1.0, ATL COM+ 1.0 元件精靈'
+              href: reference/com-plus-1-0-atl-com-plus-1-0-component-wizard.md
+        - name: ATL 控制項精靈參考
+          expanded: false
+          items:
+            - name: ATL 控制項精靈
+              href: reference/atl-control-wizard.md
+            - name: ATL 控制項精靈、外觀
+              href: reference/appearance-atl-control-wizard.md
+            - name: ATL 控制項精靈、介面
+              href: reference/interfaces-atl-control-wizard.md
+            - name: ATL 控制項精靈、選項
+              href: reference/options-atl-control-wizard.md
+            - name: ATL 控制項精靈、內建屬性
+              href: reference/stock-properties-atl-control-wizard.md
+        - name: ATL 對話方塊精靈參考
+          href: reference/atl-dialog-wizard.md
+        - name: ATL OLE DB 消費者精靈參考
+          href: reference/atl-ole-db-consumer-wizard.md
+        - name: ATL OLE DB 提供者精靈參考
+          href: reference/atl-ole-db-provider-wizard.md
+        - name: ATL 專案精靈參考
+          expanded: false
+          items:
+            - name: ATL 專案精靈
+              href: reference/atl-project-wizard.md
+            - name: '應用程式設定, ATL 專案精靈'
+              href: reference/application-settings-atl-project-wizard.md
+        - name: ATL 屬性頁精靈參考
+          expanded: false
+          items:
+            - name: ATL 屬性頁精靈
+              href: reference/atl-property-page-wizard.md
+            - name: ATL 屬性頁精靈、選項
+              href: reference/options-atl-property-page-wizard.md
+            - name: ATL 屬性頁精靈、字串
+              href: reference/strings-atl-property-page-wizard.md
+        - name: ATL 簡單物件精靈參考
+          expanded: false
+          items:
+            - name: ATL 簡單物件精靈
+              href: reference/atl-simple-object-wizard.md
+            - name: ATL 簡單物件精靈、選項
+              href: reference/options-atl-simple-object-wizard.md
+    - name: 在 ATL 專案中新增介面
+      href: reference/adding-a-new-interface-in-an-atl-project.md
+    - name: 新增 ATL Active Server Page 元件
+      href: reference/adding-an-atl-active-server-page-component.md
+    - name: 新增 ATL COM+ 1.0 元件
+      href: reference/adding-an-atl-com-plus-1-0-component.md
+    - name: 新增 ATL 控制項
+      href: reference/adding-an-atl-control.md
+    - name: 新增 ATL 對話方塊
+      href: reference/adding-an-atl-dialog-box.md
+    - name: 新增 ATL OLE DB 消費者
+      href: reference/adding-an-atl-ole-db-consumer.md
+    - name: 新增 ATL OLE DB 提供者
+      href: reference/adding-an-atl-ole-db-provider.md
+    - name: 新增 ATL 屬性頁
+      href: reference/adding-an-atl-property-page.md
+    - name: 新增 ATL 簡單物件
+      href: reference/adding-an-atl-simple-object.md
+    - name: 將物件和控制項新增至 ATL 專案
+      href: reference/adding-objects-and-controls-to-an-atl-project.md
+    - name: 建立 ATL 專案
+      href: reference/creating-an-atl-project.md
+    - name: ATL 專案中的 COM+ 1.0 支援
+      href: reference/com-plus-1-0-support-in-atl-projects.md
+    - name: 預設 ATL 專案組態
+      href: reference/default-atl-project-configurations.md
+    - name: 讓 ATL 物件變成無法建立
+      href: reference/making-an-atl-object-noncreatable.md
+    - name: ATL 專案中的 MFC 支援
+      href: reference/mfc-support-in-atl-projects.md
+    - name: 指定 ATL 專案的編譯器最佳化
+      href: reference/specifying-compiler-optimization-for-an-atl-project.md

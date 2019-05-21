@@ -1,37 +1,47 @@
 ---
 title: 建立提供者
-ms.date: 10/15/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: 2506ba8f-010d-4231-aac1-387432f7b6b9
-ms.openlocfilehash: 6258b5247e4d9d027e0f03bc133dff1a059665bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2b3b3f56ad4bbd1940beb4159d1a78f08b47d26a
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361853"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525099"
 ---
 # <a name="creating-the-provider"></a>建立提供者
 
-## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>若要使用 ATL OLE DB 提供者精靈建立 OLE DB 提供者
+::: moniker range="vs-2019"
+
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+## <a name="to-create-an-ole-db-provider-with-the-atl-ole-db-provider-wizard"></a>使用 ATL OLE DB 提供者精靈建立 OLE DB 提供者
 
 1. 以滑鼠右鍵按一下專案。
 
-1. 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
+1. 在捷徑功能表上，按一下 [加入]，然後按一下 [加入類別]。
 
-1. 在 **加入類別**對話方塊的 **已安裝** > **Visual C++**   >  **ATL**選取**ATL OLEDB 提供者**圖示，，然後按一下**開啟**。
+1. 在 [加入類別] 對話方塊的 [已安裝]>[Visual C++ ]>[ATL] 下方，選取 [ATL OLEDB 提供者] 圖示，然後按一下 [開啟]。
 
-1. 在 [ **ATL OLE DB 提供者精靈**，輸入您的提供者中的簡短名稱**簡短名稱**] 方塊中。 下列主題會使用的簡稱*自訂*，但是您可以使用另一個名稱。 其他名稱方塊中填入根據您所輸入的名稱。
+1. 在 [ATL OLE DB 提供者精靈] 的 [簡短名稱] 方塊中，輸入您提供者的簡短名稱。 下列主題所使用的簡短名稱為 *Custom*，但您可以使用其他名稱。 其他名稱方塊會根據您輸入的名稱來填入。
 
-1. 如有需要請編輯其他名稱方塊。 除了物件和檔案名稱，您可以編輯下列項目：
+1. 視需要編輯其他名稱方塊。 除了物件和檔案名稱，您還能編輯下列項目：
 
-   - **Coclass**:COM 用來建立提供者名稱。
+   - **Coclass**：COM 用來建立提供者的名稱。
 
-   - **ProgID**:以程式設計方式識別項，也就是文字字串，可用來取代 GUID。
+   - **ProgID**：程式設計識別碼，這是可用來取代 GUID 的文字字串。
 
-   - **版本**:使用 ProgID 和 Coclass 用以產生 版本相依程式設計識別碼。
+   - **版本**：與 ProgID 和 Coclass 搭配使用來產生版本相依的程式設計識別碼。
 
 1. 按一下 [ **完成**]。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

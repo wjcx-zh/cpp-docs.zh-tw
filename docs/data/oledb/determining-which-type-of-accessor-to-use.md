@@ -1,35 +1,35 @@
 ---
 title: 決定使用哪一種存取子
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: 98234852d0577e581135980d6b8e525aeead5dc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f32b3375a517c8716324a2d5b35ec16826605f8e
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175364"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525097"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>決定使用哪一種存取子
 
-在編譯時期或執行階段，您可以判斷資料列集的資料類型。
+您可以在編譯時期或執行階段決定資料列集上的資料類型。
 
-如果您需要在編譯時期判斷資料類型，請使用靜態存取子 (例如`CAccessor`)。 您可以判斷資料類型，以手動方式或使用**ATL OLE DB 消費者精靈**。
+如果您需要在編譯時期決定資料類型，請使用靜態存取子 (例如 `CAccessor`)。 
 
-如果您要在執行階段決定的資料類型，請使用 動態 (`CDynamicAccessor`或 子系) 或手動存取子 (`CManualAccessor`)。 在這些情況下，您可以呼叫`GetColumnInfo`上傳回的資料行繫結資訊，從中您可以判斷類型的資料列集。
+如果您要在執行階段決定資料類型，則使用動態 (`CDynamicAccessor` 或其子系) 或手動存取子 (`CManualAccessor`)。 在這些情況下，您可以呼叫資料列集上的 `GetColumnInfo` 以傳回您可以從中決定類型的資料行繫結資訊。
 
-下表列出提供的消費者範本的存取子的類型。 每個存取子都有其優缺點。 根據您的情況中，一個存取子的型別應能滿足您的需求。
+下表列出消費者範本中提供之存取子的類型。 每個存取子都有優缺點。 根據您的情況，有一種存取子類別應該能符合您的需求。
 
 |存取子類別|繫結|參數|註解|
 |--------------------|-------------|---------------|-------------|
-|`CAccessor`|COLUMN_ENTRY 巨集建立的使用者記錄。 巨集在該記錄中繫結的資料成員，至存取子。 建立資料列集時，則無法解除繫結資料行。|是，使用 PARAM_MAP 巨集項目。 一旦完成繫結參數不得為未繫結的。|因為少量的程式碼最快的存取子。|
-|`CDynamicAccessor`|自動的。|否。|如果您不知道的資料列集中的資料型別很有用。|
-|`CDynamicParameterAccessor`|自動的但可以是[覆寫](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，如果提供者支援`ICommandWithParameters`。 會自動繫結的參數。|低於`CDynamicAccessor`但適用於呼叫一般的預存程序。|
-|`CDynamicStringAccessor[A,W]`|自動的。|否。|擷取從資料存放區，做為字串資料存取的資料。|
-|`CManualAccessor`|手動使用`AddBindEntry`。|使用手動`AddParameterEntry`。|快速;參數和資料行繫結一次。 您決定要使用資料的類型。 (請參閱[DBVIEWER](https://github.com/Microsoft/VCSamples)範例的範例。)需要更多的程式碼比`CDynamicAccessor`或`CAccessor`。 它會比較像直接呼叫 OLE DB。|
-|`CXMLAccessor`|自動的。|否。|擷取從資料存放區，做為字串資料存取的資料，並將其格式化為 XML 標記的資料。|
+|`CAccessor`|使用 COLUMN_ENTRY 巨集建立使用者記錄。 這些巨集會將該記錄中的資料成員繫結至存取子。 建立資料列集時，無法取消繫結資料行。|是，使用 PARAM_MAP 巨集項目。 一旦繫結之後，就無法取消繫結參數。|因為程式碼少而使存取子最快。|
+|`CDynamicAccessor`|自動。|否。|如果您不知道資料列集中的資料類型，則很有用。|
+|`CDynamicParameterAccessor`|自動，但可以[覆寫](../../data/oledb/overriding-a-dynamic-accessor.md)。|是，如果提供者支援 `ICommandWithParameters`。 參數會自動繫結。|比 `CDynamicAccessor` 慢，但適用於呼叫一般預存程序。|
+|`CDynamicStringAccessor[A,W]`|自動。|否。|擷取從資料存放區中存取的資料，作為字串資料。|
+|`CManualAccessor`|使用 `AddBindEntry` 手動。|使用 `AddParameterEntry` 手動。|快速；參數和資料行僅繫結一次。 您可以決定要使用之資料的類型  (如需範例，請參閱 [DBVIEWER](https://github.com/Microsoft/VCSamples) 範例)。相較於 `CDynamicAccessor` 或 `CAccessor`，需要更多程式碼。 它比較像直接呼叫 OLE DB。|
+|`CXMLAccessor`|自動。|否。|擷取從資料存放區中存取的資料，作為字串資料，然後將其格式化為 XML 標記的資料。|
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,36 +1,43 @@
 ---
 title: 實作簡單消費者
-ms.date: 10/12/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
-- clients, creating
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 9067e8645fac9a06bd85ca5ef18fbaff45d16aae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 592a51dd77f7a2e115ee67a481e56dc558209253
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390798"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525073"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
-下列主題說明如何編輯所建立的檔案**MFC 應用程式精靈**並**ATL OLE DB 消費者精靈**建立簡單消費者。 這個範例包含下列部分：
+::: moniker range="vs-2019"
 
-- [使用取用者擷取資料](#retrieve)示範如何實作消費者讀取所有資料列，從資料庫資料表中的程式碼。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
-- [加入書籤支援取用者](#bookmark)示範如何將書籤支援新增至取用者。
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+下列主題示範如何編輯 **MFC 應用程式精靈**和 **ATL OLE DB 消費者精靈**所建立的檔案，來建立簡單消費者。 這個範例包含下列部分：
+
+- [使用消費者擷取資料](#retrieve)示範如何實作消費者中的程式碼，以從資料庫資料表中循列讀取所有資料。
+
+- [為消費者加入書籤支援](#bookmark)示範如何為消費者加入書籤支援。
 
 > [!NOTE]
-> 您可以使用這一節所述的取用者應用程式來測試`MyProv`和`Provider`範例提供者。
+> 您可以使用本節所述的消費者應用程式來測試 `MyProv` 和 `Provider` 範例提供者。
 
 > [!NOTE]
-> 若要建立取用者應用程式來測試`MyProv`(相同的提供者中所述[增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md))，如中所述，您必須包含書籤支援[加入書籤支援取用者](#bookmark)。
+> 若要建置消費者應用程式來測試 `MyProv` ([增強簡單唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)中所述的同一個提供者)，您必須包含書籤支援，如[為消費者加入書籤支援](#bookmark)中所述。
 
-## <a name="retrieve" ></a> 使用取用者擷取資料
+## <a name="retrieve" ></a> 使用消費者擷取資料
 
-### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>若要修改的主控台應用程式，以使用 OLE DB 取用者
+### <a name="to-modify-the-console-application-to-use-the-ole-db-consumer"></a>修改主控台應用程式以使用 OLE DB 消費者
 
-1. 在  `MyCons.cpp`，來變更主要的程式碼插入粗體文字，如下所示：
+1. 在 `MyCons.cpp` 中，插入如下的粗體文字來變更主要程式碼：
 
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
@@ -57,32 +64,32 @@ ms.locfileid: "62390798"
     }
     ```
 
-## <a name="bookmark" ></a> 將書籤支援新增至取用者
+## <a name="bookmark" ></a> 為消費者加入書籤支援
 
-書籤是唯一識別資料表中的資料列的資料行。 通常它是索引鍵資料行，但不是一定;它是特定提供者。 本節將說明如何加入書籤的支援。 若要這樣做，您需要執行下列步驟，在使用者記錄類別：
+書籤是可在資料表中唯一識別資料列的資料行。 它通常是索引鍵資料行，但並非總是如此；它是提供者專用的。 本節示範如何加入書籤支援。 若要這樣做，您需要在使用者記錄類別中執行下列步驟：
 
-- 具現化這些書籤。 這些是類型的物件[CBookmark](../../data/oledb/cbookmark-class.md)。
+- 將書籤具現化。 這些是型別為 [CBookmark](../../data/oledb/cbookmark-class.md) 的物件。
 
-- 藉由設定，要求從提供者的書籤資料行`DBPROP_IRowsetLocate`屬性。
+- 透過設定 `DBPROP_IRowsetLocate` 屬性來向提供者要求書籤資料行。
 
-- 使用將書籤項目加入至資料行對應[BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md)巨集。
+- 使用 [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md) 巨集，即可將書籤項目加入至資料行對應。
 
-先前的步驟會提供書籤支援和書籤物件來進行工作。 此程式碼範例會示範一個書籤，如下所示：
+先前的步驟會為您提供書籤支援，以及要一同運作的書籤物件。 此程式碼範例示範一個書籤，如下所示：
 
-- 開啟檔案進行寫入。
+- 開啟檔案以供寫入。
 
-- 輸出檔的資料列集資料列。
+- 循列將資料列集資料輸出到檔案。
 
-- 藉由呼叫時，將資料列集資料指標移至書籤[MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)。
+- 透過呼叫 [MoveToBookmark](../../data/oledb/crowset-movetobookmark.md)來將資料列集資料指標移至書籤。
 
-- 輸出已標記書籤的資料列，並將它附加到檔案結尾。
+- 輸出已標記為書籤的資料列，並將它附加到檔案結尾。
 
 > [!NOTE]
-> 如果您使用此取用者應用程式來測試`Provider`範例提供者應用程式，請將保留這一節所述的書籤支援。
+> 如果您使用此消費者應用程式來測試 `Provider` 範例提供者應用程式，請保留本節所述的書籤支援。
 
-### <a name="to-instantiate-the-bookmark"></a>若要具現化的書籤
+### <a name="to-instantiate-the-bookmark"></a>將書籤具現化
 
-1. 存取子必須保存物件的型別[CBookmark](../../data/oledb/cbookmark-class.md)。 *NSize*參數會指定書籤緩衝區的大小，以位元組為單位 (通常適用於 32 位元平台的 4) 和 64 位元平台為 8。 將下列宣告新增至使用者記錄類別中的資料行的資料成員中：
+1. 存取子必須保存型別為 [CBookmark](../../data/oledb/cbookmark-class.md) 的物件。 *nSize* 參數會以位元組為單位來指定書籤緩衝區的大小 (通常會針對 32 位元平台指定 4，以及針對 64 位元平台指定 8)。 將下列宣告加入至使用者記錄類別中的資料行資料成員：
 
     ```cpp
     //////////////////////////////////////////////////////////////////////
@@ -95,9 +102,9 @@ ms.locfileid: "62390798"
        ...
     ```
 
-### <a name="to-request-a-bookmark-column-from-the-provider"></a>若要從提供者要求的書籤資料行
+### <a name="to-request-a-bookmark-column-from-the-provider"></a>向提供者要求書籤資料行
 
-1. 新增下列程式碼中的`GetRowsetProperties`在使用者記錄類別的方法：
+1. 在使用者記錄類別的 `GetRowsetProperties` 方法中加入下列程式碼：
 
     ```cpp
     // Set the DBPROP_IRowsetLocate property.
@@ -109,9 +116,9 @@ ms.locfileid: "62390798"
     }
     ```
 
-### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>將書籤項目新增至資料行對應
+### <a name="to-add-a-bookmark-entry-to-the-column-map"></a>將書籤項目加入至資料行對應
 
-1. 將下列項目新增至 資料行中對應的使用者記錄類別：
+1. 將下列項目加入至使用者記錄類別中的資料行對應：
 
     ```cpp
     // Set a bookmark entry in the column map.
@@ -123,9 +130,9 @@ ms.locfileid: "62390798"
     END_COLUMN_MAP()
     ```
 
-### <a name="to-use-a-bookmark-in-your-main-code"></a>若要在您主要的程式碼中使用書籤
+### <a name="to-use-a-bookmark-in-your-main-code"></a>在主要程式碼中使用書籤
 
-1. 在 `MyCons.cpp`您先前建立的變更主要的程式碼，來讀取，如下所示的主控台應用程式的檔案。 若要使用書籤，主要的程式碼需要它自己的書籤物件具現化 (`myBookmark`); 這是不同的書籤，則存取子 (`m_bookmark`)。
+1. 在來自您先前建立之主控台應用程式的 `MyCons.cpp` 檔案中，變更要讀取的主要程式碼，如下所示。 為了使用書籤，主要程式碼需要將自己的書籤物件具現化 (`myBookmark`)；這個書籤與存取子中的書籤 (`m_bookmark`) 不同。
 
     ```cpp
     ///////////////////////////////////////////////////////////////////////
@@ -194,7 +201,9 @@ ms.locfileid: "62390798"
     }
     ```
 
-如需有關書籤的詳細資訊，請參閱[使用書籤](../../data/oledb/using-bookmarks.md)。 書籤的範例也會顯示[更新資料列集](../../data/oledb/updating-rowsets.md)。
+如需書籤的詳細資訊，請參閱[使用書籤](../../data/oledb/using-bookmarks.md)。 [更新資料列集](../../data/oledb/updating-rowsets.md)中也會顯示書籤範例。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,19 +1,23 @@
 ---
 title: 將字串儲存於 OLE DB 提供者內
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344977"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525346"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>將字串儲存於 OLE DB 提供者內
 
-在 *自訂*RS.h， **ATL OLE DB 提供者精靈**會建立預設使用者記錄，稱為`CWindowsFile`。 若要處理的兩個字串，請修改`CWindowsFile`如下列程式碼所示：
+> [!NOTE] 
+> Visual Studio 2019 及更新版本中未提供 ATL OLE DB 提供者精靈。
+
+
+在 *Custom*RS.h 中，[ATL OLE DB 提供者精靈] 會建立一個預設的使用者記錄，稱為 `CWindowsFile`。 若要處理兩個字串，請修改 `CWindowsFile`，如下列程式碼所示：
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-資料成員`szCommand`並`szText`代表兩個字串中，使用`szCommand2`和`szText2`和其他資料行如有需要。 資料成員`dwBookmark`不需要針對這個簡單唯讀提供者，但稍後用來新增`IRowsetLocate`介面，請參閱[增強簡單唯讀只提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==`運算子會比較執行個體 （實作這個運算子是選擇性的）。
+資料成員 `szCommand` 和 `szText` 代表兩個字串，其中 `szCommand2` 和 `szText2` 包含額外的資料行 (如有需要)。 這個簡單的唯讀提供者不需要資料成員 `dwBookmark`，但稍後可用來新增 `IRowsetLocate` 介面；請參閱[增強簡單的唯讀提供者](../../data/oledb/enhancing-the-simple-read-only-provider.md)。 `==` 運算子會比較執行個體 (實作此運算子是選擇性的)。
 
-當這麼做時，您可以新增的功能[將字串讀入 OLE DB 提供者](../../data/oledb/reading-strings-into-the-ole-db-provider.md)。
+當這麼做時，您可以新增[將字串讀入 OLE DB 提供者內](../../data/oledb/reading-strings-into-the-ole-db-provider.md)的功能。
 
 ## <a name="see-also"></a>另請參閱
 

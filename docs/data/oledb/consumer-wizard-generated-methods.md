@@ -1,43 +1,41 @@
 ---
 title: 消費者精靈產生的方法
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
-- OpenAll method
-- attribute-injected classes and methods
-- wizard-generated classes and methods
 - OLE DB consumers, wizard-generated classes and methods
-- methods [C++], OLE DB Consumer Wizard-generated
-- CloseDataSource method
-- consumer wizard-generated classes and methods
-- OpenDataSource method
-- CloseAll method
-- OpenRowset method
-- GetRowsetProperties method
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 60ca0af25a0556c4a3d42d91ba3b0c52daa5f530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 409d339acb37bd09ae10eabba16e19d5df0aae63
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409131"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525023"
 ---
 # <a name="consumer-wizard-generated-methods"></a>消費者精靈產生的方法
 
-**ATL OLE DB 消費者精靈**並**MFC 應用程式精靈**產生您應該要注意的特定函式。 某些方法的實作方式不同在屬性化專案中，因此會有一些需要注意的事項;底下有涵蓋每個案例。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。
+::: moniker range="vs-2019"
 
-- `OpenAll` 會開啟資料來源，資料列集，並開啟書籤，如果它們可用。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍能手動新增功能。
 
-- `CloseAll` 關閉所有開啟的資料列集並釋放所有的命令執行。
+::: moniker-end
 
-- `OpenRowset` 會呼叫`OpenAll`開啟取用者的資料列集或資料列集。
+::: moniker range="vs-2017"
 
-- `GetRowsetProperties` 擷取資料列集的屬性集的屬性可以設定的指標。
+**ATL OLE DB 消費者精靈**和 **MFC 應用程式精靈**會產生一些您應該會注意到的函式。 部分方法在屬性化專案中是以不同的方式實作的，因此會有一些需要注意的事項；以下涵蓋每個案例。 如需檢視插入程式碼的相關資訊，請參閱 [插入程式碼偵錯](/visualstudio/debugger/how-to-debug-injected-code)。
 
-- `OpenDataSource` 開啟使用初始化字串中指定的資料來源**資料連結屬性** 對話方塊。
+- `OpenAll` 會開啟資料來源、資料列集以及書籤 (如果可用的話)。
 
-- `CloseDataSource` 關閉資料來源，以適當方式。
+- `CloseAll` 會關閉所有開啟的資料列集，並釋出所有的命令執行。
 
-## <a name="openall-and-closeall"></a>OpenAll and CloseAll
+- `OpenAll` 會呼叫 `OpenRowset` 來開啟消費者的一或多個資料列集。
+
+- `GetRowsetProperties` 會擷取設定屬性可以使用之資料列集屬性集的指標。
+
+- `OpenDataSource` 會使用您在 [資料連結屬性] 對話方塊中指定的初始化字串，開啟資料來源。
+
+- `CloseDataSource` 會以適當的方式關閉資料來源。
+
+## <a name="openall-and-closeall"></a>OpenAll 和 CloseAll
 
 ```cpp
 HRESULT OpenAll();
@@ -45,7 +43,7 @@ HRESULT OpenAll();
 void CloseAll();
 ```
 
-下列範例示範如何呼叫`OpenAll`和`CloseAll`當您重複執行相同的命令。 比較中的程式碼範例[ccommand:: Close](../../data/oledb/ccommand-close.md)，這會顯示呼叫變化`Close`並`ReleaseCommand`而不是`CloseAll`。
+下列範例示範如何在您重複執行相同的命令時，呼叫 `OpenAll` 和 `CloseAll`。 比較 [CCommand::Close](../../data/oledb/ccommand-close.md) 中的程式碼範例，這會顯示呼叫 `Close` 和 `ReleaseCommand` 而不是 `CloseAll` 的變化。
 
 ```cpp
 int main(int argc, char* argv[])
@@ -80,7 +78,7 @@ int main(int argc, char* argv[])
 
 ### <a name="remarks"></a>備註
 
-如果您定義`HasBookmark`方法中，`OpenAll`程式碼設定`DBPROP_IRowsetLocate`屬性; 請確定您只有這樣如果您的提供者支援該屬性。
+如果您定義 `HasBookmark` 方法，`OpenAll` 程式碼會設定 `DBPROP_IRowsetLocate` 屬性；請確定您只有在提供者支援該屬性時，才執行此操作。
 
 ## <a name="openrowset"></a>OpenRowset
 
@@ -91,7 +89,7 @@ HRESULT OpenRowset(DBPROPSET* pPropSet = NULL)
 HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
 ```
 
-`OpenAll` 呼叫這個方法，以開啟 取用者中的 資料列集或資料列集。 一般而言，您不需要呼叫`OpenRowset`除非您想要使用多個資料來源/工作階段/資料列集。 `OpenRowset` 命令或資料表類別標頭檔中宣告：
+`OpenAll` 會呼叫這個方法來以開啟消費者中的一或多個資料列集。 一般而言，除非您想要使用多個資料來源/工作階段/資料列集，否則您不需要呼叫 `OpenRowset`。 `OpenRowset` 是在命令或資料表類別標頭檔中宣告的：
 
 ```cpp
 // OLE DB Template version:
@@ -106,7 +104,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }
 ```
 
-屬性會以不同的方式實作這個方法。 這個版本會將工作階段物件和預設 db_command，在指定的命令字串，雖然您可以傳遞一個不同的命令字串。 如果您定義`HasBookmark`方法中，`OpenRowset`程式碼設定`DBPROP_IRowsetLocate`屬性; 請確定您只有這樣如果您的提供者支援該屬性。
+屬性會以不同的方式實作這個方法。 此版本會採用預設為在 db_command 中指定之命令字串的工作階段物件和命令字串，但是您可以傳遞另一個不同的命令字串。 如果您定義 `HasBookmark` 方法，`OpenRowset` 程式碼會設定 `DBPROP_IRowsetLocate` 屬性；請確定您只有在提供者支援該屬性時，才執行此操作。
 
 ```cpp
 // Attribute-injected version:
@@ -131,7 +129,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);
 ```
 
-這個方法會擷取資料列集的屬性集; 的指標您可以使用這個指標來設定屬性，例如`DBPROP_IRowsetChange`。 `GetRowsetProperties` 可在使用者記錄類別，如下所示。 您可以修改此程式碼來設定額外的資料列集屬性：
+此方法會擷取資料列集屬性集的指標；您可以使用這個指標來設定屬性，例如 `DBPROP_IRowsetChange`。 `GetRowsetProperties` 用於使用者記錄類別，如下所示。 您可以修改此程式碼來設定其他資料列集屬性：
 
 ```cpp
 void GetRowsetProperties(CDBPropSet* pPropSet)
@@ -145,7 +143,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 
 ### <a name="remarks"></a>備註
 
-您不應定義全域`GetRowsetProperties`方法因為它可能會與其中一個衝突所定義的精靈。 這是精靈產生的方法取得建立樣板並屬性化專案的專案。屬性不會插入此程式碼。
+您不應該定義全域 `GetRowsetProperties` 方法，因為它可能會與精靈所定義的一個方法衝突。 這是精靈產生的方法，您可以使用範本和屬性化專案取得該方法；這些屬性不會插入此程式碼。
 
 ## <a name="opendatasource-and-closedatasource"></a>OpenDataSource 和 CloseDataSource
 
@@ -157,7 +155,9 @@ void CloseDataSource();
 
 ### <a name="remarks"></a>備註
 
-精靈定義的方法`OpenDataSource`和`CloseDataSource`;`OpenDataSource`呼叫[cdatasource:: Openfrominitializationstring](../../data/oledb/cdatasource-openfrominitializationstring.md)。
+此精靈會定義方法 `OpenDataSource` 和 `CloseDataSource`；`OpenDataSource` 會呼叫 [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md)。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

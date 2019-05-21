@@ -1,36 +1,44 @@
 ---
-title: 新增 ATL OLE DB 消費者
-ms.date: 11/04/2016
+title: 加入 ATL OLE DB 消費者
+ms.date: 05/09/2019
 helpviewer_keywords:
-- ATL projects, adding ATL OLE DB consumers
-- OLE DB, adding ATL OLE DB consumer to projects
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: d93bf715f8fd8a03c75b1d1bf2e44f12c1d1b9c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261373"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524630"
 ---
-# <a name="adding-an-atl-ole-db-consumer"></a>新增 ATL OLE DB 消費者
+# <a name="adding-an-atl-ole-db-consumer"></a>加入 ATL OLE DB 消費者
 
-使用此精靈將 ATL OLE DB 取用者加入至專案。 ATL OLE DB 取用者包含 OLE DB 存取子類別和資料繫結需要存取資料來源。 專案在 ATL COM 應用程式，或包含 ATL 支援 （這會自動新增 ATL OLE DB 消費者精靈） 的 MFC 或 Win32 應用程式必須已建立。
+::: moniker range="vs-2019"
+
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)。
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+使用此精靈，將 ATL OLE DB 消費者加入至專案。 ATL OLE DB 消費者包含一個 OLE DB 存取子類別以及存取資料來源所需的資料繫結。 專案必須已建立為 ATL COM 應用程式，或已建立為包含 ATL 支援的 MFC 或 Win32 應用程式 (這會自動加入 ATL OLE DB 消費者精靈)。
 
 > [!NOTE]
-> 您可以加入 MFC 專案中的 OLE DB 取用者。 如果您這樣做，ATL OLE DB 消費者精靈會將必要的 COM 支援加入至您的專案。 這是假設您建立 MFC 專案，當您選取**ActiveX 控制項** 核取方塊 (在**進階功能**MFC 專案的應用程式精靈的頁面)，這預設會核取。 選取此選項可確保應用程式呼叫`CoInitialize`和`CoUninitialize`。 如果您未選取**ActiveX 控制項**當您建立 MFC 專案，您必須呼叫`CoInitialize`和`CoUninitialize`您主要的程式碼中。
+> 您可以將 OLE DB 消費者加入至 MFC 專案。 如果您這樣做，ATL OLE DB 消費者精靈就會將必要的 COM 支援加入至您的專案。 這假設您在建立 MFC 專案時選取了 [ActiveX 控制項] 核取方塊 (位於 MFC 專案應用程式精靈的 [進階功能] 頁面)，預設會核取此核取方塊。 選取此選項可確保應用程式會呼叫 `CoInitialize` 和 `CoUninitialize`。 如果您未在建立 MFC 專案時選取 [ActiveX 控制項]，就必須在主要程式碼中呼叫 `CoInitialize` 和 `CoUninitialize`。
 
-## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>將 ATL OLE DB 取用者新增至您的專案
+## <a name="to-add-an-atl-ole-db-consumer-to-your-project"></a>將 ATL OLE DB 消費者加入至專案
 
-1. 在 **類別檢視**，以滑鼠右鍵按一下專案。 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
+1. 在 [類別檢視] 中，以滑鼠右鍵按一下專案。 在捷徑功能表上，按一下 [加入]，然後按一下 [加入類別]。
 
-1. 在視覺效果C++資料夾中，按兩下**ATL OLE DB 消費者**圖示或加以選取，然後按一下**開啟**。
+1. 在 [Visual C++] 資料夾中，按兩下 [ATL OLE DB 消費者] 圖示，或者選取它並按一下 [開啟]。
 
-   [ATL OLE DB 消費者精靈] 隨即開啟。
+   ATL OLE DB 消費者精靈隨即開啟。
 
-1. 定義設定中所述[ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)。
+1. 定義設定，如 [ATL OLE DB 消費者精靈](../../atl/reference/atl-ole-db-consumer-wizard.md)中所述。
 
-1. 按一下 **完成**即可關閉精靈。 新建立的 OLE DB 取用者程式碼會插入在您的專案。
+1. 按一下 [完成] 以關閉精靈。 新建立的 OLE DB 消費者程式碼將會插入至您的專案。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,24 +1,32 @@
 ---
 title: 在精靈產生的存取子中的欄位狀態資料成員
-ms.date: 10/24/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: dd650b7cafef78e23c23ddfef791c88b6b93727f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c92a450a00e6218d2ccc679d56aeff0f379762a3
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409001"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525059"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 
-當您使用**ATL OLE DB 消費者精靈**建立消費者，精靈會產生資料成員在您指定資料行對應中的每個欄位的使用者記錄類別。 每個資料成員的類型是`DWORD`並包含對應至其個別欄位的狀態值。
+::: moniker range="vs-2019"
 
-例如，對於資料成員*m_OwnerID*，精靈會產生額外的資料成員的欄位狀態 (*dwOwnerIDStatus*)，另一個則欄位長度 (*dwOwnerIDLength*). 它也會產生資料行對應與 COLUMN_ENTRY_LENGTH_STATUS 項。
+Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您仍然可以手動加入功能。 如需詳細資訊，請參閱[未使用精靈建立消費者](creating-a-consumer-without-using-a-wizard.md)。
 
-這是由下列程式碼所示：
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+當您使用 **ATL OLE DB 消費者精靈**來建立消費者時，精靈會針對您在資料行對應中指定的每個欄位，於使用者記錄類別中產生資料成員。 每個資料成員的型別均為 `DWORD`，並包含對應至其個別欄位的狀態值。
+
+例如，針對資料成員 *m_OwnerID*，精靈會為欄位狀態產生一個額外的資料成員 (*dwOwnerIDStatus*)，並為欄位長度產生另一個成員 (*dwOwnerIDLength*)。 它也會產生含 COLUMN_ENTRY_LENGTH_STATUS 項目的資料行對應。
+
+這會以下列程式碼顯示：
 
 ```cpp
 class CAuthorsAccessor
@@ -54,21 +62,21 @@ public:
 > [!NOTE]
 > 如果您修改使用者記錄類別或撰寫自己的消費者，資料變數必須出現在狀態和長度變數之前。
 
-您可以使用 [狀態] 值，以進行偵錯。 如果產生的程式碼**ATL OLE DB 消費者精靈**產生編譯錯誤，例如 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED，您應該先查看欄位狀態資料成員的目前值。 具有非零的值會對應至衝突的資料行。
+您可以基於偵錯目的來使用狀態值。 如果 **ATL OLE DB 消費者精靈**所產生的程式碼會產生編譯錯誤 (例如 DB_S_ERRORSOCCURRED 或 DB_E_ERRORSOCCURRED)，您應該先查看欄位狀態資料成員的目前值。 那些具有非零值的成員會對應至衝突的資料行。
 
-您也可以使用 [狀態] 值來設定特定欄位的 NULL 值。 這樣可協助您的情況下您想用來區別欄位值為 NULL，而不是零。 它是您必須決定 NULL 是否為有效的值或特殊值，並決定您的應用程式應該如何處理它。 OLE DB 定義為 DBSTATUS_S_ISNULL 指定泛用的 NULL 值的正確方法。 如果取用者讀取資料，此值為 null，會將 [狀態] 欄位設為 DBSTATUS_S_ISNULL。 如果取用者想要設定為 NULL 值，取用者狀態值設定為 DBSTATUS_S_ISNULL 之前呼叫提供者。
+您也可以使用狀態值來設定特定欄位的 NULL 值。 如果您想要將欄位值區分為 NULL 而非零，這樣做可為您提供協助。 您必須自行決定 NULL 是否為有效值或特殊值，並決定應用程式應該如何處理它。 OLE DB 會定義 DBSTATUS_S_ISNULL 作為指定泛型 NULL 值的正確方法。 如果消費者讀取資料且值為 Null，就會將狀態欄位設定為 DBSTATUS_S_ISNULL。 如果消費者想要設定 NULL 值，則消費者會先將狀態值設定為 DBSTATUS_S_ISNULL，然後再呼叫提供者。
 
-接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 然後，您可以比對的非零值的狀態，針對 DBSTATUSENUM 列舉值的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 <<c0>  **狀態**中的主題**繫結資料值**一節[OLE DB 程式設計人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 本主題包含的狀態時使用的值取得或設定資料的資料表。 長度值的詳細資訊，請參閱**長度**相同區段中的主題。
+接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 您接著可以針對 DBSTATUSENUM 列舉值來比對非零狀態的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 [OLE DB 程式設計人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)中**繫結資料值**一節的**狀態**主題。 本主題包含在取得或設定資料時所使用的狀態值表格。 如需長度值的相關資訊，請參閱同一節中的**長度**主題。
 
-## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取的長度或資料行的狀態
+## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取資料行的長度或狀態
 
-您可以擷取可變長度資料行的長度或資料行 （例如檢查 DBSTATUS_S_ISNULL，） 的狀態：
+您可以擷取可變長度資料行的長度或資料行的狀態 (例如，檢查 DBSTATUS_S_ISNULL)：
 
-- 若要取得長度，請使用 COLUMN_ENTRY_LENGTH 巨集。
+- 若要取得長度，使用 COLUMN_ENTRY_LENGTH 巨集。
 
-- 若要取得狀態，請使用 COLUMN_ENTRY_STATUS 巨集。
+- 若要取得狀態，使用 COLUMN_ENTRY_STATUS 巨集。
 
-- 若要取得這兩個，請使用 COLUMN_ENTRY_LENGTH_STATUS，，如所示：
+- 若要取得這兩者，使用 COLUMN_ENTRY_LENGTH_STATUS，如同所示：
 
     ```cpp
     class CProducts
@@ -86,7 +94,7 @@ public:
     };
     ```
 
-- 然後，在示存取的長度和/或狀態：
+- 然後，存取長度和/或狀態，如同所示：
 
     ```cpp
     CTable<CAccessor<CProducts >> product;
@@ -102,7 +110,9 @@ public:
     }
     ```
 
-當您使用`CDynamicAccessor`，長度和狀態會為您會自動繫結。 若要擷取的長度和狀態的值，請使用`GetLength`和`GetStatus`成員函式。
+當您使用 `CDynamicAccessor` 時，即會自動繫結長度和狀態。 若要擷取長度和狀態值，使用 `GetLength` 和 `GetStatus` 成員函式。
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 

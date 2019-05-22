@@ -6,43 +6,43 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c3917fea0f13e54d5f8f73599a2d28482bb6d259
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204093"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934096"
 ---
 # <a name="model"></a>.MODEL
 
-初始化程式記憶體內部模型。
+將程式記憶體模型初始化。
 
 ## <a name="syntax"></a>語法
 
-> .模型 memorymodel [[，langtype]] [[，stackoption]]
+> .MODEL memorymodel [[, langtype]] [[, stackoption]]
 
 ### <a name="parameters"></a>參數
 
 *memorymodel*<br/>
-判斷程式碼和資料指標的大小的必要的參數。
+決定程式碼大小與資料點的必要參數。
 
 *langtype*<br/>
-設定程序和公用符號的呼叫和命名慣例的選擇性參數。
+為程序及公用符號設定呼叫及命名慣例的選擇性參數。
 
 *stackoption*<br/>
 選擇性參數。
 
-*stackoption*如果不使用*memorymodel*是`FLAT`。
+若 *memorymodel* 為 `FLAT`，就不會使用 *stackoption*。
 
-指定`NEARSTACK`堆疊區段組成單一的實體區段 (`DGROUP`) 以及資料。 堆疊區段暫存器 (`SS`) 會假設為保留資料區段註冊相同的位址 (`DS`)。 `FARSTACK` 不會分組堆疊`DGROUP`，因此`SS`不等於`DS`。
+指定 `NEARSTACK` 會將堆疊區段與資料一併分成單一實體區段 (`DGROUP`)。 系統會假設堆疊區段暫存器 (`SS`) 擁有與資料區段暫存器 (`DS`) 相同的位址。 `FARSTACK` 不會以 `DGROUP` 為堆疊分組；因此 `SS` 不等於 `DS`。
 
 ## <a name="remarks"></a>備註
 
-.`MODEL` 不會用於[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+.`MODEL` 不會用於 [x64 的 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
-16 位元和 32 位元的平台為目標時下, 表將列出每個參數的可能值：
+下表列出了以 16 位元和 32 位元平台為目標時，各個參數可能的值：
 
-|參數|32 位元值|16 位元值 （較早的 16 位元開發支援）|
+|參數|32 位元值|16 位元值 (支援較早的 16 位元開發)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
 |*langtype*|`C`、 `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
@@ -50,9 +50,9 @@ ms.locfileid: "62204093"
 
 ## <a name="code"></a>程式碼
 
-如需 MASM 相關的範例中，編譯器範例下載[VisualC++範例和相關的文件適用於 Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=178749)。
+如需 MASM 相關範例，請從 [Visual C++ Samples and Related Documentation for Visual Studio 2010](https://go.microsoft.com/fwlink/p/?linkid=178749) (適用於 Visual Studio 2010 的 Visual C++ 範例及相關文件) 下載編譯器範例。
 
-下列範例示範如何使用`.MODEL`指示詞。
+下列範例示範 `.MODEL` 指示詞的用法。
 
 ## <a name="example"></a>範例
 

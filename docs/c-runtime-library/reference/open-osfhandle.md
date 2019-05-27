@@ -1,6 +1,6 @@
 ---
 title: _open_osfhandle
-ms.date: 05/29/2018
+ms.date: 05/21/2019
 apiname:
 - _open_osfhandle
 apilocation:
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8527dade37f20b7341d5a26f5752ece668ab7fc9
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156096"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174797"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -54,22 +54,22 @@ int _open_osfhandle (
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_open_osfhandle**傳回 C 執行階段檔案描述項。 否則，它會傳回-1。
+若成功，**_open_osfhandle** 會傳回 C 執行階段檔案描述項。 否則，它會傳回 -1。
 
 ## <a name="remarks"></a>備註
 
-**_Open_osfhandle**函式會配置 C 執行階段檔案描述項，並將它與所指定的作業系統檔案控制代碼相關聯*osfhandle*。 若要避免編譯器警告，轉型*osfhandle*引數，從**處理**來**intptr_t**。 *旗標*引數是整數運算式，由一個或多個資訊清單常數定義於\<fcntl.h> >。 當兩個或多個資訊清單常數用於表單*旗標*引數，會使用位元 OR 運算子結合常數 ( **&#124;** )。
+**_open_osfhandle** 函式會配置 C 執行階段檔案描述項，並將它與 *osfhandle* 指定的作業系統檔案控制代碼建立關聯。 若要避免編譯器警告，請將 *osfhandle* 引數從 **HANDLE** 轉換成 **intptr_t**。 *flag* 引數是整數運算式，由一或多個定義於 \<fcntl.h> 中的資訊清單常數所組成。 當使用兩個以上的資訊清單常數構成 *flags* 引數時，會使用位元 OR 運算子 (**&#124;**) 結合常數。
 
-這些資訊清單常數定義於\<fcntl.h> >:
+\<fcntl.h> 中定義了這些資訊清單常數：
 
 |||
 |-|-|
-| **\_O\_附加** | 在每次寫入作業之前，將檔案指標置放到檔案的結尾。 |
+| **\_O\_APPEND** | 在每次寫入作業之前，將檔案指標置放到檔案的結尾。 |
 | **\_O\_RDONLY** | 開啟檔案為僅供讀取。 |
 | **\_O\_TEXT** | 以文字 (已轉譯) 模式開啟檔案。 |
 | **\_O\_WTEXT** | 以 Unicode (已轉譯 UTF-16) 模式開啟檔案。 |
 
-**_Open_osfhandle**呼叫會將 Win32 檔案控制代碼的擁有權轉移到的檔案描述項。 若要關閉檔案，以開啟 **_open_osfhandle**，呼叫[\_關閉](close.md)。 呼叫也會關閉基礎 OS 檔案控制代碼 **_close**，因此不需要呼叫 Win32 函式**CloseHandle**原始的控制代碼。 如果檔案描述元擁有者**檔案&#42;** 資料流，然後呼叫[fclose](fclose-fcloseall.md)該**檔案&#42;** 資料流也會關閉這兩個檔案描述元，基礎控制代碼。 在此情況下，請勿呼叫 **_close**上的檔案描述項。
+**_open_osfhandle** 呼叫會將 Win32 檔案控制代碼的擁有權轉送給檔案描述項。 或要使用 **_open_osfhandle** 關閉開啟的檔案，請呼叫 [\_close](close.md)。 呼叫 **_close** 也會關閉基礎 OS 檔案控制代碼。 請不要在原始控點上呼叫 **CloseHandle** Win32 函式。 若檔案描述項是由 **FILE &#42;** 資料流所擁有，則在該 **FILE &#42;** 資料流上呼叫 [fclose](fclose-fcloseall.md) 會同時關閉檔案描述項和基礎空點。 在此情況下，請不要在檔案描述項上呼叫 **_close**，或是在原始控點上呼叫 **CloseHandle**。
 
 ## <a name="requirements"></a>需求
 

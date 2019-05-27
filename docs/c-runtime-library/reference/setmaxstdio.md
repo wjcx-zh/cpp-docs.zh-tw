@@ -1,6 +1,6 @@
 ---
 title: _setmaxstdio
-ms.date: 11/04/2016
+ms.date: 05/21/2019
 apiname:
 - _setmaxstdio
 apilocation:
@@ -25,48 +25,48 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 58cffedf673e23a69c2d8040071b2e3353ff4502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356338"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174818"
 ---
 # <a name="setmaxstdio"></a>_setmaxstdio
 
-設定在同時開啟的檔案數目上限**stdio**層級。
+設定在資料流 I/O 層級同時開啟的檔案數目上限。
 
 ## <a name="syntax"></a>語法
 
 ```C
 int _setmaxstdio(
-   int newmax
+   int new_max
 );
 ```
 
 ### <a name="parameters"></a>參數
 
-*newmax*<br/>
-新的最大值，在同時開啟的檔案數目**stdio**層級。
+*new_max*<br/>
+在資料流 I/O 層級同時開啟的檔案數目新上限。
 
 ## <a name="return-value"></a>傳回值
 
-傳回*newmax*如果成功，否則為-1。
+若成功，傳回 *new_max*；否則傳回 -1。
 
-如果*newmax*是小於 **_IOB_ENTRIES**或更高的作業系統，無效參數處理常式中提供的控制代碼數目上限會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，此函數會傳回-1 和集合允許執行**errno**要**EINVAL**。
+若 *new_max* 小於 **_IOB_ENTRIES**，或是大於作業系統中可用的控點數量上限，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Setmaxstdio**函式會變更可能會在同時開啟的檔案數目的最大值**stdio**層級。
+**_setmaxstdio** 函式會變更在資料流層級可同時開啟的檔案數量上限值。
 
-C 執行階段 I/O 支援在 Win32 平台上的開啟檔案數目，現在會多於舊版本。 2048 的檔案最多可以同時在開啟[lowio 層級](../../c-runtime-library/low-level-i-o.md)(也就是開啟和存取透過 **_open**， **_read**， **_write**等系列 I/O 函式)。 最多 512 個檔案可以同時在開放[stdio 層級](../../c-runtime-library/stream-i-o.md)(也就是開啟和存取透過**fopen**， **fgetc**， **fputc**等系列的函式)。 限制為 512 個開啟的檔案，在**stdio**層級，可以增加為最大值 2,048 **_setmaxstdio**函式。
+C 執行階段 I/O 現在支援在[低 I/O 層級](../../c-runtime-library/low-level-i-o.md)最多同時開啟 8,192 個檔案。 此層級包含使用 **_open**、**_read** 及 **_write** I/O 函式系列開啟及存取的檔案。 根據預設，最多可在[資料流 I/O 層級](../../c-runtime-library/stream-i-o.md)同時開啟 512 個檔案。 此層級包含使用 **fopen**、 及 **fputc** 函式系列開啟及存取的檔案。 在資料流 I/O 層級開啟 512 個檔案的限制，可透過使用 **_setmaxstdio** 函式將上限增加到最多 8,192。
 
-因為**stdio**-level 函式，例如**fopen**，之上的**lowio**函式，最大值 2,048 是固定的數目上限同時開啟存取透過 C 執行階段程式庫的檔案。
+因為串流 I/O 層級函式 (例如 **fopen**) 是建置在低 I/O 層級函式上，8,192 的上限是透過 C 執行階段程式庫同時開啟檔案的固定數量上限。
 
 > [!NOTE]
-> 這個上限可能超過特定 Win32 平台和組態所支援的值。
+> 此上限可能會超過特定 Win32 平台和組態支援的值。
 
 ## <a name="requirements"></a>需求
 
@@ -78,7 +78,7 @@ C 執行階段 I/O 支援在 Win32 平台上的開啟檔案數目，現在會多
 
 ## <a name="example"></a>範例
 
-請參閱[_getmaxstdio](getmaxstdio.md)如需使用的範例 **_setmaxstdio**。
+如需 **_setmaxstdio** 的使用範例，請參閱 [_getmaxstdio](getmaxstdio.md)。
 
 ## <a name="see-also"></a>另請參閱
 

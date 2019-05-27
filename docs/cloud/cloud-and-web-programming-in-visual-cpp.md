@@ -1,25 +1,21 @@
 ---
 title: 以 Visual C++ 進行雲端和 Web 程式設計
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 3d71e36b6209c693940f2ebe6b5e9c73bc0c9d9d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708034"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65790365"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
 在 C++ 中，您有數個選項可以連接到 Web 和雲端。
 
-## <a name="cloud-programming-options"></a>雲端程式設計選項
+## <a name="microsoft-azure-sdks-and-rest-services"></a>Microsoft Azure SDK 與 REST 服務
 
-- [Windows Azure 行動服務](http://www.windowsazure.com/develop/mobile/)
-
-  提供原生 API，可供您在「通用 Windows 平台」(UWP) 應用程式或 Windows 傳統型應用程式中使用，以連線至「Windows Azure 行動服務」。 雖然網站上的大部分範例是採用 C#，您也可以使用 C++。 如需詳細資訊，請參閱[快速入門：使用 C++ 來新增行動服務](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx) \(英文\)。
-
-- [適用於 C++ 的 Microsoft Azure 儲存體用戶端程式庫](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/) \(英文\)
+- [適用於 C++ 的 Microsoft Azure 儲存體用戶端程式庫](https://azure.github.io/azure-storage-cpp/) \(英文\)
 
   「適用於 C++ 的 Azure 儲存體用戶端程式庫」提供一個可搭配 Azure 儲存體運作的全方位的 API，其中包括但不限於下列功能：
 
@@ -29,11 +25,15 @@ ms.locfileid: "65708034"
   - 將訊息在 Azure 佇列中加入佇列和清除佇列。
   - 延遲列出容器、Blob、資料表和佇列，以及延遲查詢實體
 
-- [OneDrive API](https://dev.onedrive.com/README.htm)
+- 適用於物聯網的 ANSI C99 [Azure IoT 中樞 SDK](/azure/iot-hub/iot-hub-devguide-sdks) 可讓 IoT 應用程式在裝置或後端上執行。
+
+- [Microsoft Graph 中的 OneDrive 與 SharePoint](https://dev.onedrive.com/README.htm)
 
   OneDrive API 提供一組 HTTP 服務，可將您的應用程式連線至 Office 365 及 SharePoint Server 2016 中的檔案和資料夾。
 
-- [C++ REST SDK (名稱代碼 "Casablanca")](https://github.com/Microsoft/cpprestsdk)
+## <a name="windows-and-cross-platform-networking-apis"></a>Windows 與跨平台網路 API
+
+- [C++ REST SDK (代號 "Casablanca")](https://github.com/Microsoft/cpprestsdk)
 
   提供一個新式、跨平台的非同步 API 來與 REST 服務進行互動。
 
@@ -59,4 +59,5 @@ ms.locfileid: "65708034"
 ## <a name="see-also"></a>另請參閱
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md) <br/>
-[網路和 Web 服務](/windows/uwp/networking/)
+[Microsoft Azure C 和 C++ 開發人員中心](https://azure.microsoft.com/develop/cpp/) <br/>
+[網路和 Web 服務 (UWP)](/windows/uwp/networking/)

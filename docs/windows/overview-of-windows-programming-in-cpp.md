@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 036da87c24eef38f3c88bb5f73808a434b9da6a1
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837551"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197744"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -100,7 +100,7 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 |[逐步解說：建立 Windows 傳統型應用程式 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|建立原生 Windows 傳統型應用程式。|
 |[Windows 傳統型精靈](windows-desktop-wizard.md)|使用精靈來建立新的 Windows 專案。|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|使用 ATL 程式庫來建立 COM 元件，在C++。|
-|[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|使用 MFC 來建立使用對話方塊和控制項的大型或小型的 Windows 應用程式|
+|[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|使用 MFC 來建立使用對話方塊和控制項的大型或小型的 Windows 應用程式|
 |[ATL 和 MFC 共用類別](../atl-mfc-shared/TOC.md)|使用 CString 例如 ATL 和 MFC 中所共用的類別。|
 |[資料存取](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文字和字串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各種字串類型。|

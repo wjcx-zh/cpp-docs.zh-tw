@@ -1,39 +1,41 @@
 ---
 title: 為 Windows XP 設定程式
-ms.date: 02/02/2018
+ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446369"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837130"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
-由於 Visual Studio 支援多個平台工具組，您可以針對作業系統和預設工具組不支援的執行階段程式庫。 例如，藉由切換平台工具組，您可以使用 C + + 11、 C + + 14 和支援的 Visual Studio 中的 MSVC 編譯器的 C + + 17 語言增強功能來建立以 Windows XP 和 Windows Server 2003 為目標的應用程式。 您可以也會使用舊版平台工具組來維護的二進位檔相容的舊版程式碼，同時仍然利用 Visual Studio IDE 的最新的功能。
+由於 Visual Studio 支援多個平台工具組，因此您可以將預設工具組不支援的作業系統和執行階段程式庫設為目標。 例如，藉由切換平台工具組，您可以使用 Visual Studio 中的 MSVC 編譯器所支援的 C++11、C++14 和 C++17 語言增強功能，建立以 Windows XP 和 Windows Server 2003 為目標的應用程式。 您也可以使用舊版平台工具組來保留與二進位檔相容的舊版程式碼，同時仍可使用 Visual Studio IDE 的最新功能。
+
+Visual Studio 2019 和更新版本不包含使用 v142 工具組建立 Windows XP 程式碼的支援。 使用隨附於 Visual Studio 2017 的 v141 工具組進行 Windows XP 開發的支援可作為 Visual Studio 安裝程式中的選擇性元件使用。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
 
-若要在 Visual Studio 2017 中取得的平台工具組和目標 Windows XP 和 Windows Server 2003 的元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或您選擇**修改**若要修改現有的安裝，請確定**使用的桌面開發C++** 選取工作負載。 在此工作負載的選用元件的清單中，選擇**的 Windows XP 支援C++** ，然後選擇**安裝**或**修改**。
+若要在 Visual Studio 2017 中取得以 Windows XP 和 Windows Server 2003 為目標的平台工具組和元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或選擇 [修改] 以修改現有的安裝時，請確實選取 [使用 C++ 的桌面開發] 工作負載。 在此工作負載的選擇性元件清單中，選擇 [C++ 的 Windows XP 支援]，然後選擇 [安裝] 或 [修改]。
 
 ## <a name="windows-xp-targeting-experience"></a>以 Windows XP 為目標的體驗
 
-Windows XP 平台工具組隨附於 Visual Studio 中的 Windows 7 SDK 版本，但它會使用目前C++編譯器。 它也會設定專案屬性，以適當的預設值，例如，針對舊版的相容連結器規格。 只有 Windows 桌面應用程式，使用 Windows XP 和 Windows Server 2003 上執行 Windows XP 平台工具組所建立的但這些應用程式也可以在較新的 Windows 作業系統上執行。
+隨附於 Visual Studio 的 Windows XP 平台工具組是 Windows 7 SDK 的版本，但使用目前的 C++ 編譯器。 它也會將專案屬性設定為適當的預設值，例如設定下層目標的相容連結器規格。 只有使用 Windows XP 平台工具組建立的 Windows 桌面應用程式可在 Windows XP 和 Windows Server 2003 上執行，但這些應用程式也可在較新的 Windows 作業系統上執行。
 
 #### <a name="to-target-windows-xp"></a>以 Windows XP 為目標
 
 1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。
 
-1. 在 **屬性頁**對話方塊中的專案，在**組態屬性** > **一般**，將**平台工具組**所需的 Windows XP 工具組的屬性。 例如，選擇**Visual Studio 2017-Windows XP (v141_xp)** 以建立適用於 Windows XP 和 Windows Server 2003 的程式碼，使用 Microsoft 的C++Visual Studio 2017 中的編譯器。
+1. 在專案的 [屬性頁] 對話方塊中，於 [組態屬性] > [一般] 下方將 [平台工具組] 屬性設為所需的 Windows XP 工具組。 例如，選擇 **Visual Studio 2017 - Windows XP (v141_xp)**，以使用 Visual Studio 2017 中的 Microsoft C++ 編譯器建立適用於 Windows XP 和 Windows Server 2003 的程式碼。
 
 ### <a name="c-runtime-support"></a>C++ 執行階段支援
 
-Windows XP 平台工具組，C 執行階段程式庫 (CRT)，以及C++標準程式庫、 Active Template Library (ATL)、 Concurrency Runtime Library (ConCRT)、 平行模式程式庫 (PPL)、 Microsoft Foundation Class 程式庫 (MFC)，和C++P (C++ Accelerated Massive Programming) 程式庫包含適用於 Windows XP 和 Windows Server 2003 的執行階段支援。 針對這些作業系統，支援的最低版本是 Windows XP Service Pack 3 (SP3) 適用於 x86 Windows XP Service Pack 2 (SP2) x64 和 Windows Server 2003 Service Pack 2 (SP2) 適用於 x86 和 x64。
+除了 Windows XP 平台工具組之外，C Runtime Library (CRT)、C++ 標準範本程式庫、Active Template Library (ATL)、Concurrency Runtime Library (ConCRT)、Parallel Patterns Library (PPL)、Microsoft Foundation Class (MFC) 程式庫和 C++ AMP (C++ Accelerated Massive Programming) 程式庫還包含對 Windows XP 和 Windows Server 2003 的執行階段支援。 這些作業系統的最低支援版本包括適用於 x86 的 Windows XP Service Pack 3 (SP3)、適用於 x64 的 Windows XP Service Pack 2 (SP2)，以及適用於 x86 和 x64 的 Windows Server 2003 Service Pack 2 (SP2)。
 
-安裝 Visual Studio 中，根據目標平台工具組支援這些程式庫：
+Visual Studio 所安裝的平台工具組支援下列程式庫 (視目標而定)：
 
-|程式庫|以 Windows 桌面應用程式為目標的預設平台工具組|預設的平台工具組目標存放區應用程式|以 Windows XP、 Windows Server 2003 為目標的 Windows XP 平台工具組|
+|程式庫|以 Windows 桌面應用程式為目標的預設平台工具組|以市集應用程式為目標的預設平台工具組|以 Windows XP、Windows Server 2003 為目標的 Windows XP 平台工具組|
 |---|---|---|---|
 |CRT|X|X|X|
 |C++ 標準程式庫|X|X|X|
@@ -43,28 +45,28 @@ Windows XP 平台工具組，C 執行階段程式庫 (CRT)，以及C++標準程�
 |C++ AMP|X|X||
 
 > [!NOTE]
-> 應用程式所撰寫的C++/Windows XP 和 Windows Server 2003 上執行的 CLI 和.NET Framework 4 為目標。
+> 以 C++/CLI 撰寫、並以 .NET Framework 4 為目標的應用程式可在 Windows XP 和 Windows Server 2003 上執行。
 
 ### <a name="differences-between-the-toolsets"></a>這些工具組的差異
 
-由於平台和程式庫支援差異，所以使用 Windows XP 平台工具組的應用程式的開發體驗不會使用預設 Visual Studio 平台工具組的應用程式與為完成。
+由於平台和程式庫支援的差異，使用 Windows XP 平台工具組的應用程式在開發體驗方面並不像使用預設 Visual Studio 平台工具組的應用程式那麼完整。
 
-- **C++語言功能**
+- **C++ 語言功能**
 
-   只有C++使用 v110 應用程式中支援的語言功能在 Visual Studio 2012 中實作\_xp 平台工具組。 只有C++支援使用 v120 應用程式中實作 Visual Studio 2013 中的語言功能\_xp 平台工具組。 只有C++中使用 [v140] 的應用程式支援在 Visual Studio 2015 中實作的語言功能\_xp 平台工具組。 建置使用舊版的平台工具組時，visual Studio 會使用對應的編譯器。 若要利用其他使用最新的 Windows XP 平台工具組C++在該版本的編譯器中實作的語言功能。
+   使用 v110\_xp 平台工具組的應用程式僅支援在 Visual Studio 2012 中實作的 C++ 語言功能。 使用 v120\_xp 平台工具組的應用程式僅支援在 Visual Studio 2013 中實作的 C++ 語言功能。 使用 v140\_xp 平台工具組的應用程式僅支援在 Visual Studio 2015 中實作的 C++ 語言功能。 Visual Studio 在使用舊版平台工具組建置時，會使用對應的編譯器。 請使用最新版的 Windows XP 平台工具組，以利用該編譯器版本中實作的其他 C++ 語言功能。
 
 - **遠端偵錯**
 
-   Visual Studio 遠端工具不支援在 Windows XP 或 Windows Server 2003 上的遠端偵錯。 若要在 Windows XP 或 Windows Server 2003 上執行時，偵錯應用程式，您可以使用從較舊版本的 Visual Studio 偵錯工具在本機或遠端偵錯。 這類似於在 Windows Vista 上偵錯應用程式的體驗，會是平台工具組的執行階段目標，而不是遠端偵錯目標。
+   Visual Studio 遠端工具不支援 Windows XP 或 Windows Server 2003 上的遠端偵錯。 若要偵錯在 Windows XP 或 Windows Server 2003 上執行的應用程式，您可以使用舊版 Visual Studio 的偵錯工具在本機或從遠端進行偵錯。 這類似於在 Windows Vista 上偵錯應用程式的體驗，會是平台工具組的執行階段目標，而不是遠端偵錯目標。
 
 - **靜態分析**
 
-   Windows XP 平台工具組不支援靜態分析，因為 Windows 7 SDK 和執行階段程式庫的 SAL 註釋不相容。 當您想要的應用程式支援 Windows XP 或 Windows Server 2003 上執行靜態分析時，您可以為目標的預設平台工具組，以執行分析，將解決方案暫時切換，並再切換回 Windows XP 平台工具組，建置應用程式。
+   Windows XP 平台工具組不支援靜態分析，因為 Windows 7 SDK 和執行階段程式庫的 SAL 註釋不相容。 當您想要在支援 Windows XP 或 Windows Server 2003 的應用程式上執行靜態分析時，您可以將解決方案暫時切換為以預設平台工具組為目標，以執行分析，然後再切換回 Windows XP 平台工具組，以建置應用程式。
 
 - **偵錯 DirectX 圖形**
 
-   圖形偵錯工具不支援 Direct3D 9 API，因為它無法用於偵錯在 Windows XP 或 Windows Server 2003 使用 Direct3D 的應用程式。 不過，如果應用程式實作使用 Direct3D 10 或 Direct3D 11 API 的替代轉譯器，則會使用圖形偵錯工具來診斷這些 API 的使用問題。
+   由於圖形偵錯工具不支援 Direct3D 9 API，因此無法使用這項工具偵錯在 Windows XP 或 Windows Server 2003 上使用 Direct3D 的應用程式。 不過，如果應用程式實作使用 Direct3D 10 或 Direct3D 11 API 的替代轉譯器，則會使用圖形偵錯工具來診斷這些 API 的使用問題。
 
 - **建置 HLSL**
 
-   根據預設，Windows XP 工具組不會編譯 HLSL 原始程式碼檔。 若要編譯 HLSL 檔，請下載及安裝 2010 年 6 月的 DirectX SDK，然後再設定專案的 VC 目錄以包含這個檔案。 如需詳細資訊，請參閱 「 DirectX SDK 不會註冊 Visual Studio 2010 的 Include/程式庫路徑 」 一節[2010 年 6 月 DirectX SDK 下載頁面](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)。
+   根據預設，Windows XP 工具組不會編譯 HLSL 原始程式碼檔。 若要編譯 HLSL 檔，請下載及安裝 2010 年 6 月的 DirectX SDK，然後再設定專案的 VC 目錄以包含這個檔案。 如需詳細資訊，請參閱 [2010 年 6 月的 DirectX SDK 下載頁面](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)中的「DirectX SDK 不會註冊 Visual Studio 2010 的 Include/程式庫路徑」一節。

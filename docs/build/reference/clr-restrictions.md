@@ -4,42 +4,42 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0318ce2e23f92600d5a78d6472646ec91492152
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294456"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837380"
 ---
 # <a name="clr-restrictions"></a>/clr 限制
 
-請注意下列限制的用法 **/clr**:
+請注意下列有關 **/clr** 的使用限制：
 
-- 在結構化例外狀況處理常式中，有使用限制`_alloca`進行編譯時 **/clr**。 如需詳細資訊，請參閱 < [_alloca](../../c-runtime-library/reference/alloca.md)。
+- 在結構化例外狀況處理常式中，使用 **/clr** 進行編譯時，`_alloca` 的使用上會有些限制。 如需詳細資訊，請參閱 [_alloca](../../c-runtime-library/reference/alloca.md)。
 
-- 使用執行階段錯誤檢查不能搭配 **/clr**。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
+- 執行階段錯誤檢查不能與 **/clr** 搭配使用。 如需詳細資訊，請參閱[如何：使用原生執行階段檢查](/visualstudio/debugger/how-to-use-native-run-time-checks)。
 
-- 當 **/clr**用來編譯程式，只會使用標準C++語法中，下列指導方針適用於使用內嵌組譯碼：
+- 使用 **/clr** 來編譯只使用標準 C++ 語法的程式時，應套用下列指導方針來使用內嵌組件：
 
-  - 假設您已經在原生堆疊配置的知識的內嵌組譯碼，呼叫目前函式或其他低階電腦的相關資訊之外的慣例可能會失敗如果知識套用至 managed 函式之堆疊框架。 在如同屍體會放置在個別的模組，而不需要編譯成 unmanaged 函式，產生包含內嵌組譯碼的函式 **/clr**。
+  - 對於假設具有原生堆疊配置、目前函式外呼叫慣例或其他電腦相關低階資訊認知的內嵌組件程式碼，如果該認知套用到受控函式的堆疊框架，則內嵌組件程式碼可能會失敗。 包含內嵌組件程式碼的函式會產生為非受控函式，就如同將這些函式放在不是 **/clr** 編譯的個別模組中一樣。
 
-  - 不支援在複製建構函式參數傳遞的函式的內嵌組譯碼。
+  - 若內嵌組件程式碼位在傳遞複製建構函式參數的函式中，則不予以支援。
 
-- [Vprintf 函式](../../c-runtime-library/vprintf-functions.md)不能從編譯的程式呼叫 **/clr**。
+- 您無法從使用 **/clr** 編譯的程式中呼叫 [vprintf 函式](../../c-runtime-library/vprintf-functions.md)。
 
-- [Naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md)修飾詞會忽略在 /clr 下。
+- 在 /clr 底下，[naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) 修飾詞會遭到忽略。
 
-- 設定轉譯器函式[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)會影響 unmanaged 程式碼中的攔截。 請參閱[例外狀況處理](../../extensions/exception-handling-cpp-component-extensions.md)如需詳細資訊。
+- 由 [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) 設定的翻譯工具函式，將只影響非受控程式碼中的攔截。 如需詳細資訊，請參閱[例外狀況處理](../../extensions/exception-handling-cpp-component-extensions.md)。
 
-- 下，不允許函式指標的比較 **/clr**。
+- **/clr** 底下不允許函式指標的比較。
 
-- 下，不允許使用不完全原型的函式 **/clr**。
+- **/clr** 底下不允許使用原型不完整的函式。
 
-- 不支援下列編譯器選項 **/clr**:
+- 下列編譯器選項不支援使用 **/clr**：
 
-  - **/ /Ehsc**並 **/EHs** (**/clr**意指 **/EHa** (請參閱[/EH （例外狀況處理模型）](eh-exception-handling-model.md))
+  - **/EHsc** 和 **/EHs** (**/clr** 意指 **/EHa** (請參閱 [/EH (例外狀況處理模型)](eh-exception-handling-model.md))
 
-  - **/fp: strict**並 **/fp： 除了**(請參閱[/fp （指定浮點行為）](fp-specify-floating-point-behavior.md))
+  - **/fp:strict** 和 **/fp:except** (請參閱 [/fp (指定浮點行為)](fp-specify-floating-point-behavior.md))
 
   - [/Zd](z7-zi-zi-debug-information-format.md)
 
@@ -51,40 +51,40 @@ ms.locfileid: "62294456"
 
   - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 組合`_STATIC_CPPLIB`前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr**編譯器選項不支援。 這是因為定義會導致您的應用程式與多執行緒的靜態連結C++不支援的標準程式庫。 如需詳細資訊，請參閱 < [/MD、 /MT、 /LD （使用執行階段程式庫）](md-mt-ld-use-run-time-library.md)主題。
+- 不支援 `_STATIC_CPPLIB` 前置處理器定義 (`/D_STATIC_CPPLIB`) 和 **/clr** 編譯器選項的組合。 這是因為該定義會導致您的應用程式與靜態多執行緒 C++ 標準程式庫連結，而這是不受支援的。 如需詳細資訊，請參閱 [/MD、/MT、/LD (使用執行階段程式庫)](md-mt-ld-use-run-time-library.md) 主題。
 
-- 使用時 **/Zi**具有 **/clr**，對效能的影響。 如需詳細資訊，請參閱 < [/Zi](z7-zi-zi-debug-information-format.md)。
+- 搭配使用 **/Zi**和 **/clr** 會對效能產生影響。 如需詳細資訊，請參閱 [/Zi](z7-zi-zi-debug-information-format.md)。
 
-- 將寬字元傳遞至.NET Framework 但沒有同時指定輸出常式[/zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md)或不含轉換的字元`__wchar_t`會顯示為輸出`unsigned short int`。 例如: 
+- 將寬字元傳遞至 .NET Framework 輸出常式，但沒有同時指定 [/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md)，或是未將字元轉換為 `__wchar_t`，將會造成輸出顯示為 `unsigned short int`。 例如：
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](gs-buffer-security-check.md)進行編譯時，會忽略 **/clr**，除非您的函式則位於`#pragma` [unmanaged](../../preprocessor/managed-unmanaged.md)或必須以原生編譯函式，在此情況下，編譯器會產生警告 C4793，預設為關閉。
+- 使用 **/clr** 進行編譯時，[/GS](gs-buffer-security-check.md) 會遭到忽略，除非您的函式在[非受控的](../../preprocessor/managed-unmanaged.md) `#pragma` 之下，或函式必須編譯為原生狀態，在此情況下，編譯器會產生警告 C4793 (預設為關閉)。
 
-- 請參閱[/ENTRY](entry-entry-point-symbol.md)的受管理的應用程式的函式簽章需求。
+- 請參閱 [/ENTRY](entry-entry-point-symbol.md)，以了解受控應用程式的函式簽章需求。
 
-- 應用程式編譯 **/openmp**並 **/clr**只能在單一 appdomain 程序中執行。  請參閱[/openmp （啟用 OpenMP 2.0 支援）](openmp-enable-openmp-2-0-support.md)如需詳細資訊。
+- 使用 **/openmp** 和 **/clr** 編譯的應用程式只能在單一 AppDomain 程序中執行。  如需詳細資訊，請參閱 [/openmp (啟用 OpenMP 2.0 支援)](openmp-enable-openmp-2-0-support.md)。
 
-- 接受可變數目的引數 (varargs) 數的函式就會產生做為原生函式。 變數引數位置中的任何 managed 的資料類型會封送處理成原生類型。 請注意，<xref:System.String?displayProperty=fullName>類型實際上的寬字元字串，但是它們會封送處理至單一位元組字元字串。 因此如果 printf 規範 %S （wchar_t *），它會封送處理為 %s 字串改為。
+- 若函式接受可變數目的引數 (varargs)，該函式會產生為原生函式。 變數引數位置中的任何受控資料類型都會封送處理為原生類型。 請注意，<xref:System.String?displayProperty=fullName> 類型實際上是寬字元字串，但會將其封送處理為單一位元組的字元字串。 因此，如果 printf 指定名稱為 %S (wchar_t*)，則會封送處理為 %s 字串。
 
-- 當使用 va_arg 巨集，您可能會收到非預期的結果進行編譯時 **/clr: pure**。 如需詳細資訊，請參閱 < [va_arg、 va_copy、 va_end、 va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。 必須是 「 純 」 或 「 安全 」 的程式碼才能移植到C#。
+- 使用 va_arg 巨集時，您可能會在使用 **/clr:pure** 進行編譯時，收到非預期的結果。 如需詳細資訊，請參閱 [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代，而且無法在 Visual Studio 2017 及更新版本中使用。 必須是「純」或「安全」程式碼才能移植到 C#。
 
-- 您不應該呼叫，從 managed 程式碼，以便取得參數資訊 （函式引數），堆疊查核行程的任何函式P/Invoke 層會導致要在 stack 該資訊。  比方說，不會編譯使用的 proxy/stub **/clr**。
+- 您不能從受控程式碼呼叫藉由巡歷堆疊以取得參數資訊 (函式引數) 的任何函式，P/Invoke 層會導致資訊落在堆疊的更下方。  比方說，請勿使用 **/clr** 來編譯 proxy/stub。
 
-- 函式會編譯為 managed 程式碼，可能的話，但並非所有C++建構可以轉譯成 managed 程式碼。  做出此判斷函式的函式為基礎。 如果函式的任何部分無法轉換成 managed 程式碼中，整個函式將會轉換至原生程式碼。 下列情況下可防止編譯器產生的 managed 程式碼。
+- 函式會盡可能編譯為受控程式碼，但並非所有 C++ 建構都可以轉譯成受控程式碼。  這會以每個函式為基礎來做出決定。 如果函式的任何部分無法轉換成受控程式碼，則整個函式將會轉換成機器碼。 下列情況會阻止編譯器產生受控程式碼。
 
-  - 編譯器產生的 thunk 或 helper 函式。 透過函式指標，包括虛擬函式呼叫的任何函式呼叫會產生原生的 thunk。
+  - 編譯器產生的 Thunk 或協助程式函式。 透過函式指標進行的任何函式呼叫 (包括虛擬函式呼叫) 都會產生原生 Thunk。
 
-  - 函式會呼叫該`setjmp`或`longjmp`。
+  - 呼叫 `setjmp` 或 `longjmp` 的函式。
 
-  - 使用特定內建常式來直接操作 機器資源的函式。 例如，使用`__enable`並`__disable`，`_ReturnAddress`和`_AddressOfReturnAddress`，或多媒體的內建函式會在原生程式碼中的所有結果。
+  - 使用特定內建常式來直接操作機器資源的函式。 例如，使用 `__enable` 和 `__disable`、`_ReturnAddress` 和 `_AddressOfReturnAddress` 或多媒體內建項目，都會導致機器碼。
 
-  - 函式的`#pragma unmanaged`指示詞。 (請注意，反向， `#pragma managed`，也支援。)
+  - 遵循 `#pragma unmanaged` 指示詞的函式。 (請注意，反之則使用 `#pragma managed`。)
 
-  - 包含參考的函式對齊類型，也就是使用宣告型別`__declspec(align(...))`。
+  - 包含對齊類型參考的函式，這些類型是指使用 `__declspec(align(...))` 宣告的類型。
 
 ## <a name="see-also"></a>另請參閱
 

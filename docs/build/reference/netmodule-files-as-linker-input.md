@@ -1,48 +1,48 @@
 ---
 title: .netmodule 檔做為連結器輸入
-ms.date: 11/04/2016
+ms.date: 05/16/2019
 helpviewer_keywords:
 - MSIL linking
 - linking [C++], modules
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50a0f0a1ff5f65a7512e8372de2fe5296c866dca
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320665"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837431"
 ---
 # <a name="netmodule-files-as-linker-input"></a>.netmodule 檔做為連結器輸入
 
-link.exe 現在接受 MSIL .obj 或 .netmodule 做為輸入。 連結器產生的輸出檔案是組件或.netmodule 任一.obj 或連結器輸入.netmodule 沒有執行階段相依性。
+link.exe 現在接受 MSIL .obj 或 .netmodule 做為輸入。 連結器產生的輸出檔將是組件或 .netmodule，對連結器的任何輸入 .obj 或 .netmodules 沒有執行階段相依性。
 
-MSVC 編譯器所建立.netmodule [/LN （建立 MSIL 模組）](ln-create-msil-module.md)或使用連結器[/NOASSEMBLY （建立 MSIL 模組）](noassembly-create-a-msil-module.md)。 .obj 一律會建立視覺效果C++編譯。 其他 Visual Studio 編譯器中，使用 **/target: module**編譯器選項。
+.netmodules 是由 MSVC 編譯器搭配 [/LN (建立 MSIL 模組)](ln-create-msil-module.md) 或由連結器搭配 [/NOASSEMBLY (建立 MSIL 模組)](noassembly-create-a-msil-module.md) 所建立。 .objs 一律會在 Visual C++ 編譯中建立。 如需其他 Visual Studio 編譯器，請使用 **/target:module** 編譯器選項。
 
-您必須傳遞給連結器.obj 檔案從視覺效果C++建立.netmodule 的編譯。 因為不再支援傳遞.netmodule **/clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+您需要從建立 .netmodule 的 Visual C++ 編譯中傳遞 .obj 檔給連結器。 我們已不再支援傳遞 .netmodule，因為 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代，而且無法在 Visual Studio 2017 及更新版本中使用。
 
-如需如何叫用連結器，從命令列資訊，請參閱[連結器命令列語法](linking.md)，[使用 MSVC 工具組，從命令列](../building-on-the-command-line.md)，和[設定的路徑和環境變數命令列建置](../setting-the-path-and-environment-variables-for-command-line-builds.md)。
+如需如何從命令列叫用連結器的資訊，請參閱[連結器命令列語法](linking.md)、[從命令列中使用 MSVC 工具組](../building-on-the-command-line.md)及[設定命令列組建的路徑和環境變數](../setting-the-path-and-environment-variables-for-command-line-builds.md)。
 
-傳遞.netmodule 或.dll 檔給連結器 MSVC 編譯器所編譯 **/clr**可能會導致連結器錯誤。 如需詳細資訊，請參閱 <<c0> [ 選擇.netmodule 輸入檔的格式](choosing-the-format-of-netmodule-input-files.md)。
+傳遞 .netmodule 或 .dll 檔給由 MSVC 編譯器搭配 **/clr** 編譯的連結器可能會產生連結器錯誤。 如需詳細資訊，請參閱[選擇 .netmodule 輸入檔的格式](choosing-the-format-of-netmodule-input-files.md)。
 
-連結器接受原生.obj 檔案，以及使用編譯的 MSIL.obj 檔 **/clr**。 當在相同的組建中傳遞混合的.obj，產生的輸出檔案的可驗證性，根據預設，會等於輸入模組的可驗證性的最低層級。
+連結器會接受原生 .obj 檔案，以及使用 **/clr** 編譯的 MSIL .obj 檔案。 在相同組建中傳遞混合的 .objs 時，所產生輸出檔案的可驗證性將預設為同等於輸入模組最低層級的可驗證性。
 
 如果您目前擁有由兩個或多個組件組成的應用程式，而您要讓應用程式包含在一個組件中，您必須重新編譯組件，然後連結 .obj 或 .netmodule，以產生單一組件。
 
-您必須指定進入點使用[/ENTRY （進入點符號）](entry-entry-point-symbol.md)建立可執行映像時。
+建立可執行映像時，您必須使用 [/ENTRY (進入點符號)](entry-entry-point-symbol.md) 來指定進入點。
 
-當與 MSIL.obj 或.netmodule 檔案連結，使用[/LTCG （連結時間程式碼產生）](ltcg-link-time-code-generation.md)，否則當連結器遭遇 MSIL.obj 或.netmodule，它會重新啟動與 /LTCG 的連結。
+與 MSIL .obj 或 .netmodule 檔案連結，請使用 [/LTCG (連結時產生程式碼)](ltcg-link-time-code-generation.md)，否則當連結器遭遇 MSIL .obj 或 .netmodule 時，將會重新啟動與 /LTCG 的連結。
 
 MSIL .obj 或 .netmodule 檔案也可以傳遞給 cl.exe。
 
-輸入 MSIL .obj 或 .netmodule 檔案無法具有內嵌資源。 資源內嵌在輸出檔案 （模組或組件） 中使用[與 /ASSEMBLYRESOURCE （內嵌 Managed 資源）](assemblyresource-embed-a-managed-resource.md)連結器選項或使用 **/resource**其他 Visual Studio 編譯器中的編譯器選項。
+輸入 MSIL .obj 或 .netmodule 檔案無法具有內嵌資源。 資源會使用 [/ASSEMBLYRESOURCE (內嵌受控資源)](assemblyresource-embed-a-managed-resource.md) 連結器選項或其他 Visual Studio 中的 **/resource** 編譯器選項來內嵌到輸出檔案 (模組或組件)。
 
-當執行 MSIL 連結，而且也未指定[/LTCG （連結時間程式碼產生）](ltcg-link-time-code-generation.md)，您會看到告知性訊息報告連結正在重新啟動。 此訊息可以被忽略，但以連結器效能改善 MSIL 連結，明確指定 **/LTCG**。
+當您執行 MSIL 連結，而且未指定 [/LTCG (連結時產生程式碼)](ltcg-link-time-code-generation.md) 時，您會看到回報連結正在重新啟動的告知性訊息。 您可以忽略此訊息，但為了改善執行 MSIL 連結時的連結器效能，應明確指定 **/LTCG**。
 
 ## <a name="example"></a>範例
 
-在C++程式碼**攔截**區塊的對應**試**都會叫用非系統例外狀況。 不過，根據預設，CLR 會包裝與非系統例外狀況<xref:System.Runtime.CompilerServices.RuntimeWrappedException>。 從 Visual 建立組件時C++和非視覺化C++模組，而您想**攔截**區塊C++從其對應的叫用的程式碼**再試**子句時**試**區塊擲回的非系統例外狀況，您必須新增`[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]`屬性設定為非原始碼C++模組。
+在 C++ 程式碼中，非系統例外狀況會促使叫用對應**嘗試**的**攔截**區塊。 不過，根據預設，CLR 會以 <xref:System.Runtime.CompilerServices.RuntimeWrappedException> 包裝非系統例外狀況。 如果您從 Visual C++ 和非 Visual C++ 模組中建立組件，並且要 C++ 程式碼中的**攔截**區塊在**嘗試**區段擲出非系統例外狀況時，從其對應的**嘗試**子句中加以叫用，則您必須將 `[assembly:System::Runtime::CompilerServices::RuntimeCompatibility(WrapNonExceptionThrows=false)]` 屬性新增至非 C++ 模組的原始碼。
 
 ```cpp
 // MSIL_linking.cpp
@@ -69,7 +69,7 @@ int main() {
 
 ## <a name="example"></a>範例
 
-藉由變更的布林值`WrapNonExceptionThrows`屬性，您修改視覺效果的功能C++來攔截非系統例外狀況的程式碼。
+藉由變更 `WrapNonExceptionThrows` 屬性的布林值，您可以修改 Visual C++ 程式碼擷取非系統例外狀況的能力。
 
 ```cpp
 // MSIL_linking_2.cs

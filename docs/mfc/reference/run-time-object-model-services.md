@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 2dccb1c2081996ce7336652b207f3a68b20a3f9e
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 3e9c3dcc02cb4307787f3e0baf5e99ac31b3d183
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174846"
 ---
 # <a name="run-time-object-model-services"></a>執行階段物件模型服務
 
@@ -60,7 +60,7 @@ MFC 程式庫提供 OLE 兩個特定巨集。
 
 ### <a name="syntax"></a>語法
 
-  ```
+```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
@@ -165,7 +165,7 @@ DECLARE_DYNCREATE(class_name)
 
 **標頭：** afx.h
 
-## <a name="declare_olectltype"></a> declare_olectltype
+## <a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 宣告`GetUserTypeNameID`和`GetMiscStatus`控制類別成員函式。
 
@@ -188,7 +188,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 **標頭：** afxctl.h
 
-## <a name="a-namedeclareproppageids-declareproppageids"></a><a name="declare_proppageids"> declare_proppageids
+## <a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 宣告 OLE 控制項提供一份屬性頁以顯示其屬性。
 
@@ -361,7 +361,7 @@ OLE 類別 ID 是唯一的 128 位元識別項的物件。 它包含一個**長*
 
 **標頭：** afxdisp.h
 
-## <a name="a-nameimplementolectltype-implementolectltype"></a><a name="implement_olectltype"> implement_olectltype
+## <a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Implements`GetUserTypeNameID`和`GetMiscStatus`控制類別成員函式。
 

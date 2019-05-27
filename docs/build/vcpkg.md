@@ -3,19 +3,19 @@ title: vcpkg-- 適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員
 description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
 author: mikeblome
 ms.author: mblome
-ms.date: 03/18/2019
+ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 5dba6877c4489337625eed016c77b853f84af990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217661"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837012"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：A C++ package manager for Windows, Linux and MacOS (適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員)
 
-vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015 和 Visual Studio 2017 的相容性測試。 截至 2018 年 5 月為止，Windows 目錄中有超過 900 個程式庫，而 Linux/MacOS 目錄中有超過 350 個程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
+vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 的相容性測試。 截至 2018 年 5 月為止，Windows 目錄中有超過 900 個程式庫，而 Linux/MacOS 目錄中有超過 350 個程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
 
 ## <a name="simple-yet-flexible"></a>簡單卻有彈性
 
@@ -23,7 +23,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 ## <a name="sources-not-binaries"></a>不是二進位檔的來源
 
-針對 Windows 目錄中的程式庫，vcpkg 會下載來源，而不會下載二進位檔 [1]。 vcpkg 會使用 Visual Studio 2017 編譯這些來源，如未安裝 2017 則使用 Visual Studio 2015。 在 C++ 中，使用相同的編譯器及編譯器版本來編譯所用的任何程式庫十分重要，因為應用程式程式碼會與其建立連結。 使用 vcpkg 可排除或至少大幅降低二進位不符的可能性，及其引發的問題。 在以特定編譯器版本為標準的小組中，某個小組成員可以使用 vcpkg 來下載來源並編譯一組二進位檔，然後使用匯出命令壓縮二進位檔和標頭，供其他小組成員使用。 如需詳細資訊，請參閱下面的[匯出編譯的二進位檔和標頭](#export_binaries_per_project)。
+針對 Windows 目錄中的程式庫，vcpkg 會下載來源，而不會下載二進位檔 [1]。 它會使用所能找到的最新版 Visual Studio 來編譯這些來源。 在 C++ 中，使用相同的編譯器及編譯器版本來編譯所用的任何程式庫十分重要，因為應用程式程式碼會與其建立連結。 使用 vcpkg 可排除或至少大幅降低二進位不符的可能性，及其引發的問題。 在以特定編譯器版本為標準的小組中，某個小組成員可以使用 vcpkg 來下載來源並編譯一組二進位檔，然後使用匯出命令壓縮二進位檔和標頭，供其他小組成員使用。 如需詳細資訊，請參閱下面的[匯出編譯的二進位檔和標頭](#export_binaries_per_project)。
 
 如果您使用連接埠集合中的私人程式庫建立 vcpkg 複製品，您可以新增連接埠下載預先建置的二進位檔和標頭，並撰寫 portfile.cmake 檔案，只將這些檔案複製到想要的位置。
 

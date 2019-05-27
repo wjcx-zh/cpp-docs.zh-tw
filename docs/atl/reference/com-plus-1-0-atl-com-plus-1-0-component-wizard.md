@@ -1,57 +1,67 @@
 ---
 title: COM+ 1.0, ATL COM+ 1.0 元件精靈
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bff7f87fbdebbff9a1823ae8718c64be4f47a2ea
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278588"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707436"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, ATL COM+ 1.0 元件精靈
 
-使用 ATL COM + 1.0 元件精靈的這個頁面來指定支援的介面型別和其他介面。
+::: moniker range="vs-2019"
 
-如需有關 ATL 專案和 ATL COM 類別的詳細資訊，請參閱[ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)。
+Visual Studio 2019 及更新版本中未提供此精靈。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+使用「ATL COM+ 1.0 元件精靈」的這個頁面來指定介面類型，以及要支援的額外介面。
+
+如需有關 ATL 專案和 ATL COM 類別的詳細資訊，請參閱 [ATL COM 桌面元件](../../atl/atl-com-desktop-components.md)。
 
 - **Interface**
 
-   表示物件支援的介面的型別。 根據預設，物件會支援雙重介面。
+   指出物件所支援的介面類型。 物件預設會支援雙重介面。
 
-   |選項|描述|
+   |選項|說明|
    |------------|-----------------|
-   |**Dual**|指定物件是否支援雙重介面 (其 vtable 具有自訂介面函式和晚期繫結`IDispatch`方法)。 可讓 COM 用戶端和 Automation 控制器存取的物件。|
-   |**自訂**|指定物件支援自訂介面 （其 vtable 有自訂介面函式）。 自訂介面可以是較快，雙重介面，尤其是跨處理序界限。<br /><br /> - **Automation 相容**自動化支援加入自訂的介面。 針對屬性化專案，設定**oleautomation**中 coclass 的屬性。|
+   |**雙重**|指定物件支援雙重介面 (其 vtable 具有自訂介面函式和晚期繫結 `IDispatch` 方法)。 同時允許 COM 用戶端和自動化控制器存取物件。|
+   |**自訂**|指定物件支援自訂介面 (其 vtable 具有自訂介面函式)。 自訂介面執行速度比雙重介面快，特別是跨處理序界限時。<br /><br /> - **自動化相容** 為自訂介面新增自動化支援。 針對屬性專案，會在 coclass 中設定 **oleautomation** 屬性。|
 
-- **Queueable**
+- **可排入佇列**
 
-   表示用戶端可以呼叫此元件以非同步方式使用訊息佇列。 .H 檔 （屬性化專案） 或.idl 檔案 （非屬性化專案），請加入元件屬性巨集自訂 (TLBATTR_QUEUEABLE，0)。
+   指出用戶端可以使用訊息佇列，以非同步方式呼叫此元件。 將元件屬性化巨集 custom(TLBATTR_QUEUEABLE, 0) 新增至 .h 檔案 (屬性化專案) 或 .idl 檔案 (非屬性化專案)。
 
 - **支援**
 
-   表示錯誤處理和物件控制的其他支援。
+   指出有適用於錯誤處理和物件控制的額外支援。
 
-   |選項|描述|
+   |選項|說明|
    |------------|-----------------|
-   |**ISupportErrorInfo**|建立支援[ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)介面讓物件可以將錯誤資訊傳回給用戶端。|
-   |**IObjectControl**|提供三個您物件的存取[IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)方法：[啟用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)， [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)，以及[停用](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
-   |**IObjectConstruct**|建立支援[IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)介面，以管理傳遞中的其他方法或物件中的參數。|
+   |**ISupportErrorInfo**|建立適用於 [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) 介面的支援，以便讓物件將錯誤資訊傳回給用戶端。|
+   |**IObjectControl**|將您的物件類別提供給三個 [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) 方法：[Activate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、[CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled) 及 [Deactivate](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)。|
+   |**IObjectConstruct**|建立適用於 [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct) 介面的支援，以管理從其他方法或物件傳入參數。|
 
-- **異動**
+- **交易**
 
-   指出物件支援交易。 包含檔案 mtxattr.h.idl 檔案 （非屬性化專案） 中。
+   指出物件支援交易。 在 .idl 檔案 (非屬性化專案) 中包含 mtxattr.h 檔案。
 
-   |選項|描述|
+   |選項|說明|
    |------------|-----------------|
-   |**支援**|指定物件永遠不會交易資料流的根目錄加入元件的屬性巨集 custom(TLBATTR_TRANS_SUPPORTED,0).h 檔 （屬性化專案） 或.idl 檔案 （非屬性化專案）。|
-   |**必要**|指定的物件可能，也可能不是藉由新增元件的屬性巨集 custom(TLBATTR_TRANS_REQUIRED,0).h 檔 （屬性化專案） 或.idl 檔案 （非屬性化專案） 的交易資料流的根目錄。|
-   |**不支援**|指定物件排除的交易。 .H 檔 （屬性化專案） 或.idl 檔案 （非屬性化專案），請加入 元件屬性巨集 custom(TLBATTR_TRANS_NOTSUPP,0)。|
-   |**必須是新交易**|指定物件一律交易資料流的根目錄加入元件的屬性巨集 custom(TLBATTR_TRANS_REQNEW,0).h 檔 （屬性化專案） 或.idl 檔案 （非屬性化專案）。|
+   |**支援**|藉由將元件屬性巨集 custom(TLBATTR_TRANS_SUPPORTED,0) 新增至 .h 檔案 (屬性化專案) 或 .idl 檔案 (非屬性化專案)，指定物件一律不是交易資料流的根。|
+   |**必要**|藉由將元件屬性巨集 custom(TLBATTR_TRANS_REQUIRED,0) 新增至 .h 檔案 (屬性化專案) 或 .idl 檔案 (非屬性化專案)，指定物件可以是或不可以是交易資料流的根。|
+   |**不支援**|指定物件排除交易。 將元件屬性巨集 custom(TLBATTR_TRANS_NOTSUPP,0) 新增至 .h 檔案 (屬性化專案) 或 .idl 檔案 (非屬性化專案)。|
+   |**需要新增**|藉由將元件屬性巨集 custom(TLBATTR_TRANS_REQNEW,0) 新增至 .h 檔案 (屬性化專案) 或 .idl 檔案 (非屬性化專案)，指定物件一律是交易資料流的根。|
+
+::: moniker-end
 
 ## <a name="see-also"></a>另請參閱
 
 [ATL COM+ 1.0 元件精靈](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
-[ATL COM + 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+[ATL COM+ 1.0 元件](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

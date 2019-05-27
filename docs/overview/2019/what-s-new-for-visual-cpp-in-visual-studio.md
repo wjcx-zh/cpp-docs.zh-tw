@@ -1,34 +1,30 @@
 ---
 title: Visual Studio 2019 中 C++ 的新功能
-ms.date: 04/02/2019
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 493b96a8ce3359cc18287adbae8cbd6c374671ec
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 19eaa9d4ed1cf12e721825f998fa674363eda488
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779483"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934135"
 ---
-<!--NOTE all https:// links to docs.microsoft.com need to be converted to site-relative links prior to publishing-->
-
 # <a name="whats-new-for-c-in-visual-studio-2019"></a>Visual Studio 2019 中 C++ 的新功能
 
-Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已修正編譯器和工具中的許多 Bug 及回報問題，其中多是客戶透過 [傳送意見反應] 底下的[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://developercommunity.visualstudio.com/spaces/62/index.html)選項提交而來。 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)。
+Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已修正編譯器和工具中的許多錯誤 (Bug) 與問題，其中多是客戶透過 [傳送意見反應] 底下的[回報問題](/visualstudio/how-to-report-a-problem-with-visual-studio-2017)和[提供建議](https://developercommunity.visualstudio.com/spaces/62/index.html)選項提交而來。 感謝您回報 Bug！ 如需所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)。
 
 ## <a name="c-compiler"></a>C++ 編譯器
 
-- `/std:c++latest` 選項現在會包含不一定完整的 C++20 功能，包括對使用 C++20 運算子 <=> (「太空船」) 的初步支援，以進行三向比較。
+- 增強支援 C++17 功能與正確性修正，加上 C++20 功能 (例如模組和協同程式) 的實驗性支援。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 C++ 一致性改善](../cpp-conformance-improvements.md)。
 
-- [P0941R2 - 功能測試巨集](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0941r2.html)已完成，並支援 `__has_cpp_attribute`。 所有的標準模式都支援功能測試巨集。
-
-- [C++20 P1008R1 - 禁止含使用者宣告建構函式的彙總](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p1008r1.pdf)也已完成。
-
-- 增強支援 C++17 功能及實驗性支援 C++20 功能 (例如模組和協同程式)。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 C++ 一致性改善](../cpp-conformance-improvements.md)。
+- `/std:c++latest` 選項現在會包含不一定完整的 C++20 功能，包括對使用 C++20 運算子 \<=> (「太空船」) 的初步支援，以進行三向比較。
 
 - C++ 編譯器參數 `/Gm` 現已被取代。 若已明確定義 `/Gm` 參數，請考慮將它從您的組建指令碼中停用。 或者，您也可以安全地忽略 `/Gm` 的過時警告，因為當使用 [將警告視為錯誤] (`/WX`) 時不會將它視為錯誤。
+
+- 隨著 MSVC 開始實作來自 C++20 標準版草稿的功能 (在 `/std:c++latest` 旗標下)，`/std:c++latest` 現在與 `/clr` (所有版本)、`/ZW` 與 `/Gm` 不相容。 在 Visual Studio 2019 中，當使用 `/clr`、`/ZW` 或 `/Gm` 編譯時，請使用 `/std:c++17` 或 `/std:c++14` 模式 (但請參閱先前的項目符號內容)。
 
 - 根據預設，C++ 主控台和傳統型應用程式不再產生先行編譯標頭檔。
 
@@ -38,25 +34,17 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 ## <a name="c-standard-library-improvements"></a>C++ 標準程式庫改善
 
-- [C++20 P0550R2 \(remove_cvref)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf) 已完成。
+- 額外 C++17 與 C++20 程式庫功能與正確性修咒的實作。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 C++ 一致性改善](../cpp-conformance-improvements.md)。
 
-- C++17\<charconv> 浮點數 to_chars() 已改善：最短 chars_format::fixed 已加快 60-80%，而最短/精確度 chars_format::hex 已完成。
+- 我們已將 Clang 格式套用至 C++ 標準程式庫標頭，以改善可讀性。
 
-- 更多演算法已平行處理實作：is_sorted()、is_sorted_until()、is_partitioned()、set_difference()、set_intersection()、is_heap()、is_heap_until()。
+- 因為 Visual Studio 現在針對 C++ 支援 Just My Code，標準程式庫再也不需要為 `std::function` 與 `std::visit` 提供自訂機器以達成相同的效果。 大幅移除該機器對使用者沒有可見的影響，但編譯器將不再產生指出 \<type_traits> 或 \<variant> 第 15732480 或 16707566 行發生問題的診斷。
 
-- 改善 `std::variant`，讓它更適用於更最佳化工具，以產生更好的程式碼。 現在，內嵌程式碼搭配 `std::visit` 的效果更好。
-
-- 我們已將 clang 格式套用至 C++ 標準程式庫標頭，以改善可讀性。
-
-- 改善使用 `if constexpr` 編譯數個標準程式庫功能時的輸送量。
-
-- 已將標準程式庫的實體設計最佳化，以避免編譯非 #include 標準程式庫的組件，同時針對只含 \<vector> 的空檔案可省下一半的建置時間。
-
-## <a name="performancethroughput-fixes"></a>效能/輸送量修正
+## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>編譯器與標準程式庫中的效能/輸送量改進
 
 - 改善建置輸送量，包括連結器對檔案 I/O 的處理方式，以及合併與建立 PDB 類型的連結時間。
 
-- 新增了 OpenMP SIMD 向量化的基本支援。 您可以使用新的 CL 參數 `-openmp:experimental` 加以啟用。 此選項讓標註了 `#pragma omp simd` 的迴圈有機會向量化。 向量化並不保證會發生，而已標註但未向量化的迴圈會收到回報的警告。 不支援任何 SIMD 子句；系統會回報警告並加以忽略。
+- 新增了 OpenMP SIMD 向量化的基本支援。 您可以使用新的編譯器參數 `-openmp:experimental` 來啟用它。 此選項讓標註了 `#pragma omp simd` 的迴圈有機會向量化。 向量化並不保證會發生，而已標註但未向量化的迴圈會收到回報的警告。 不支援任何 SIMD 子句；系統會回報警告並加以忽略。
 
 - 新增了內嵌命令列參數 `-Ob3`，這是比 `-Ob2` 更為積極的版本。 `-O2` (將二進位檔最佳化以提高速度) 仍預設表示 `-Ob2`。 若您發現編譯器的內嵌不夠積極，請考慮傳遞 `-O2 -Ob3`。
 
@@ -74,6 +62,32 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
   - 改進了使用 `memmove` 的程式碼最佳化，例如 `std::copy` 或 `std::vector` 及 `std::string` 建構。
 
+- 已將標準程式庫的實體設計最佳化，以避免編譯非 #include 標準程式庫的組件，同時針對只含 \<vector> 的空檔案可省下一半的建置時間。 由於此變更，您可能必須為先前間接包含的標頭新增 #include 指示詞。 例如，使用 `std::out_of_range` 的程式碼可能必須包括 #include \<stdexcept>。 使用串流插入作業的程式碼現在可能必須　#include \<ostream>。 優點是只有實際使用 \<stdexcept> 或 \<ostream> 元件的轉譯單位才必須支付編譯的輸送量成本。
+
+- `if constexpr` 已套用到標準程式庫中的更多位置，以在進行複製作業時獲得改進的輸送量與降低的程式碼大小 - 在反向與旋轉的排列組合，以及在平行演算法程式庫中。 
+
+- 標準程式庫現在會在內部使用 `if constexpr` 來減少編譯時間 (即使是在 C++14 模式中)。
+
+- 平行演算法程式庫的執行階段動態連結偵測已不再使用整個頁面來存放函式指標陣列。 將此記憶體標示為唯讀已被視為與安全性目的不相關。
+
+- `std::thread` 的建構函式已不會再等候該執行緒啟動，而且已不會再於底層 C 程式庫 `_beginthreadex` 與提供的可呼叫物件之間插入這麼多層函式呼叫。 先前 `std::thread` 在 `_beginthreadex` 與提供的可呼叫物件之間放置了 6 個函式，這現在已經減少為 3 個 (其中 2 個只是 `std::invoke`)。 這也可解決 `std::thread` 的建構函式會在系統時鐘於 `std::thread` 建立時變更而當機的問題。
+
+- 已修正 `std::hash` 中的效能迴歸，這是我們在實作 `std::hash<std::filesystem::path>` 時所引進的功能。
+
+- 在數個地方，標準程式庫現在會使用解構函式來達成正確性，而非使用 Catch 區塊。 這讓我們獲得更好的偵錯工具互動；您在受影響位置透過標準程式庫擲回的例外狀況現在將顯示為從其原始擲回網站擲回，而非我們的重新擲回。 並非所有標準程式庫 Catch 區塊都已消除；我們預期 Catch 區塊數目在後續發行 MSVC 時將會減少。
+
+- `std::bitset` 中由 noexcept 函式內的條件式擲回導致的次佳 codegen 已透過鑽研出擲回路徑而修正。
+
+- `std::list` 與 `std::unordered_*` 系列在內部的許多位置使用非偵錯列舉程式。
+
+- 數個 `std::list` 成員已變更為儘可能重複使用清單節點，而非解除配置並重新配置它們。 例如，假設已經有大小為 3 的 `list<int>`，對 `assign(4, 1729)` 的呼叫現在會在前 3 個清單節點中覆寫 ints，並配置一個值為 1729 的新清單節點，而非解除配置全部 3 個清單節點並配置 4 具值為 1729 的新清單節點。
+
+- 對 `erase(begin(), end())` 的所有標準程式庫呼叫都已變更為 `clear()`。
+
+- `std::vector` n現在會在特定案例中以更有效率的方式初始化及擦除元素。
+
+- 改善 `std::variant`，讓它更適用於更最佳化工具，以產生更好的程式碼。 現在，內嵌程式碼搭配 `std::visit` 的效果更好。
+
 ## <a name="c-ide"></a>C++ IDE
 
 ### <a name="live-share-c-support"></a>支援 Live Share C++
@@ -82,7 +96,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 ### <a name="intellicode-for-c"></a>適用於 C++ 的 IntelliCode
 
-IntelliCode 是一款選擇性延伸模組，其可使用本身密集的訓練與您的程式碼上下文，將您最可能使用的項目放在完成清單頂端。 它通常不需要向下捲動清單。 針對 C++，當您使用標準程式庫之類的熱門程式庫時，IntelliCode 的幫助最大。 如需詳細資訊，請參閱 [AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/) (透過 IntelliCode 可實現 C++ 的 AI 輔助程式碼完成建議)。
+IntelliCode 是一個選擇性延伸模組 (新增為 16.1 中的工作負載元件)，它可以使用本身密集的訓練與您的程式碼上下文，將您最可能使用的項目放在完成清單頂端。 它通常不需要向下捲動清單。 針對 C++，當您使用標準程式庫之類的熱門程式庫時，IntelliCode 的幫助最大。 如需詳細資訊，請參閱 [AI-Assisted Code Completion Suggestions Come to C++ via IntelliCode](https://devblogs.microsoft.com/cppblog/cppintellicode/) (透過 IntelliCode 可實現 C++ 的 AI 輔助程式碼完成建議)。
 
 ### <a name="template-intellisense"></a>範本 IntelliSense
 
@@ -112,7 +126,19 @@ Visual Studio 2019 包含的下列功能可協助您更輕鬆且更直覺地撰�
 
 如需詳細資訊，請參閱 [C++ Productivity Improvements in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/c-productivity-improvements-in-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 中的 C++ 生產力改善功能)。
 
+ Visual Studio 2019 16.1 版
+
+### <a name="quickinfo-improvements"></a>QuickInfo 增強功能
+
+快速諮詢工具提示現在會遵守您編輯器的語意色彩標示。 它也有新的**線上搜尋**連結，此連結可用來搜尋線上文件以深入了解動態顯示程式碼建構。 針對具有紅色波浪線的程式碼，由 Quick Info 提供的連結連結將會在線上搜尋錯誤。 這樣您就不需要在您的瀏覽器中重新輸入訊息。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 Quick Info 改善：色彩標示與線上搜尋](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)。
+
+### <a name="intellicode-available-in-c-workload"></a>IntelliCode 可在 C++ 工作負載中找到
+
+IntelliCode 現在是以「使用 C++ 的桌面開發」 工作負載中的選擇性元件形式提供。 如需詳細資訊，請參閱[改良了C++ IntelliCode 現在隨附於 Visual Studio 2019](https://devblogs.microsoft.com/cppblog/)。
+
 ## <a name="cmake-support"></a>CMake 支援
+
+- CMake 3.14 的支援
 
 - Visual Studio 現在可以開啟外部工具所產生的現有 CMake 快取，例如 CMakeGUI、自訂的中繼組建系統，或可自動叫用 cmake.exe 的組建指令碼。
 
@@ -136,9 +162,27 @@ Visual Studio 2019 包含的下列功能可協助您更輕鬆且更直覺地撰�
 
 - 新增 [全部建置] 功能表捷徑 **Ctrl+Shift+B**。
 
+ Visual Studio 2019 16.1 版
+
+- 對使用 Clang/LLVM 編輯、建置及針對 CMake 專案進行偵錯的整合式支援。 如需詳細資訊，請參閱 [Visual Studio 中的 Clang/LLVM 支援](https://devblogs.microsoft.com/cppblog/clang-llvm-support-in-visual-studio/) \(英文\)。
+
+## <a name="linux-and-wsl"></a>Linux 與 WSL
+
+ Visual Studio 2019 16.1 版
+
+- 對 Linux 中之 [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) 與 CMake 跨平台專案的支援。 如需詳細資訊，請參閱 [Visual Studio 2019 中Linux 工作負載的 AddressSanitizer (ASan)](https://devblogs.microsoft.com/cppblog/addresssanitizer-asan-for-the-linux-workload-in-visual-studio-2019/) \(英文\)。
+
+- 使用適用於 Linux 的 Windows 子系統 (WSL) 時對使用 C++ 的整合式 Visual Studio 支援。 如需詳細資訊，請參閱[使用 Visual Studio 2019 與適用於 Linux 的 Windows 子系統 (WSL) 的 C++](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/) \(英文\)。
+
+## <a name="incredibuild-integration"></a>IncrediBuild 整合
+
+IncrediBuild 現在是以「使用 C++ 的桌面開發」 工作負載中的選擇性元件形式提供。 IncrediBuild 建置監視器已完全整合在 Visual Studio IDE 中。 如需詳細資訊，請參閱[使用 IncrediBuild 的建置監視器與 Visual Studio 2019 來視覺化您的建置](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/) \(英文 \)。
+ 
 ## <a name="debugging"></a>偵錯
 
 - 針對在 Windows 上執行的 C++ 應用程式，PDB 檔案現在會在個別的 64 位元處理序上載入。 此變更已解決由於偵錯工具在針對包含大量模組與 PDB 檔案的應用程式進行偵錯時耗盡記憶體而導致的各種當機問題。
+
+- 搜尋已在 [監看式]、[自動變數] 與 [區域變數] 視窗中啟用。
 
 ## <a name="windows-desktop-development-with-c"></a>使用 C++ 進行 Windows 桌面開發
 
@@ -178,6 +222,10 @@ C++ Android 體驗現在預設為 Android SDK 25 與 Android NDK 16b。
 - [存留期設定檔檢查程式](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/)已更新的部分實作，可偵測懸置的指標和參考。 如需詳細資訊，請參閱 [Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 中的存留期設定檔更新)。
 
 - 更多協同程式相關的檢查，包括 C26138、C26810、C26811 和實驗性規則 C26800。 如需詳細資訊，請參閱 [New Code Analysis Checks in Visual Studio 2019: use-after-move and coroutine](https://devblogs.microsoft.com/cppblog/new-code-analysis-checks-in-visual-studio-2019-use-after-move-and-coroutine/) (Visual Studio 2019 中的新程式碼分析檢查：use-after-move 和協同程式)。
+
+ Visual Studio 2019 16.1 版
+
+針對已解除初始化之變數檢查的新快速修正程式。 如需詳細資訊，請參閱[適用於已解除初始化之記憶體 (C6001) 並使用 before init (C26494) 警告的新程式碼分析快速修正程式](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/) \(英文\)。
 
 ## <a name="unit-testing"></a>單元測試
 

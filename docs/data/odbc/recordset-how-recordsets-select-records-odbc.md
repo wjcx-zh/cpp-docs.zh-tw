@@ -1,6 +1,6 @@
 ---
-title: 資料錄集：資料錄集選取資料錄 (ODBC) 的方式
-ms.date: 11/04/2016
+title: 資料錄集：資料錄集選取資料錄的方式 (ODBC)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, selecting records
 - record selection, ODBC recordsets
@@ -9,92 +9,95 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 41542e3e11d304bd9ad8b81c0a1b9c6504e156a7
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397818"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707892"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄 (ODBC) 的方式
+# <a name="recordset-how-recordsets-select-records-odbc"></a>資料錄集：資料錄集選取資料錄的方式 (ODBC)
+
+> [!NOTE] 
+> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
 
-本主題說明：
+本主題將說明：
 
-- [您的角色和您的選項中選取資料錄](#_core_your_options_in_selecting_records)。
+- [您在選取資料錄上的角色和選項](#_core_your_options_in_selecting_records)。
 
-- [資料錄集建構其 SQL 陳述式的方式，並選取記錄](#_core_how_a_recordset_constructs_its_sql_statement)。
+- [資料錄集如何建構其 SQL 陳述式並選取資料錄](#_core_how_a_recordset_constructs_its_sql_statement)。
 
-- [您可以執行來自訂作業選取](#_core_customizing_the_selection)。
+- [您可以如何自訂選取項目](#_core_customizing_the_selection)。
 
-資料錄集傳送給驅動程式的 SQL 陳述式，從資料來源的 ODBC 驅動程式透過選取記錄。 傳送 SQL 取決於您如何設計及開啟資料錄集類別。
+資料錄集會將 SQL 陳述式傳送至 ODBC 驅動程式，來透過該驅動程式從資料來源選取資料錄。 所傳送的 SQL 會取決於您設計及開啟資料錄集類別的方式。
 
-##  <a name="_core_your_options_in_selecting_records"></a> 您的選項中選取資料錄
+##  <a name="_core_your_options_in_selecting_records"></a> 您在選取資料錄上的選項
 
-下表顯示您的選項中選取資料錄。
+下表會顯示您在選取資料錄上的選項。
 
-### <a name="how-and-when-you-can-affect-a-recordset"></a>如何及何時可能會影響資料錄集
+### <a name="how-and-when-you-can-affect-a-recordset"></a>您可以影響到資料錄集的方式和時機
 
 |當您|您可以|
 |--------------|-------------|
-|使用您的資料錄集類別的宣告**加入類別**精靈|指定要從選取的資料表。<br /><br /> 指定要包含哪些資料行。<br /><br /> 請參閱[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。|
-|完成您的資料錄集類別實作|覆寫成員函式時，例如`OnSetOptions`（進階） 來設定應用程式特有的選項，或變更預設值。 如果您想要參數化資料錄集，請指定參數的資料成員。|
-|建構資料錄集物件 (在呼叫之前`Open`)|指定搜尋條件 （可能是複合），以用於**其中**篩選資料錄的子句。 請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 指定用於排序次序**ORDER BY**子句來排序記錄。 請參閱[資料錄集：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 指定任何參數加入至類別的參數值。 請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
+|使用 [新增類別] 精靈來宣告您的資料錄集類別|指定要從中選取的資料表。<br /><br /> 指定要包含的資料行。<br /><br /> 請參閱[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。|
+|完成資料錄集類別實作|覆寫如 `OnSetOptions` (進階) 等的成員函式來設定應用程式特定選項，或是變更預設值。 如果您想要參數化的資料錄集，請指定參數資料成員。|
+|建構資料錄集物件 (在您呼叫 `Open` 之前)|在篩選資料錄的 **WHERE** 子句中，指定要使用的搜尋條件 (可能是複合)。 請參閱[資料錄集：篩選資料錄 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)。<br /><br /> 在排序資料錄的 **ORDER BY** 子句中指定要使用的排列順序。 請參閱[資料錄集：排序資料錄 (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)。<br /><br /> 針對您加入至類別中的任何參數指定參數值。 請參閱[資料錄集：參數化資料錄集 (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)。|
 
-|執行資料錄集的查詢，藉由呼叫`Open`|指定自訂的 SQL 字串，來取代由精靈所設定的預設 SQL 字串。 請參閱[crecordset:: Open](../../mfc/reference/crecordset-class.md#open)中*類別庫參考*和[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。 |
+|呼叫 `Open` 來執行資料錄集的查詢|指定自訂的 SQL 字串來取代由精靈設定的預設 SQL 字串。 請參閱《類別程式庫參考》中的 [CRecordset::Open](../../mfc/reference/crecordset-class.md#open) 及 [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。|
 
-|呼叫`Requery`重新查詢資料來源上的最新值的資料錄集 |指定新的參數、 篩選或排序。 請參閱[資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。 |
+|呼叫 `Requery` 來搭配資料來源上的最新值重新查詢資料錄集|指定新的參數、篩選或排序。 請參閱[資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)。|
 
-##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 資料錄集如何建構它的 SQL 陳述式
+##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> 資料錄集如何建構其 SQL 陳述式
 
-當您呼叫資料錄集物件的[開放](../../mfc/reference/crecordset-class.md#open)成員函式，`Open`建構 SQL 陳述式使用部分或所有下列因素：
+當您呼叫資料錄集物件的 [Open](../../mfc/reference/crecordset-class.md#open) 成員函式時，`Open` 會使用下列部分或全部材料來建構 SQL 陳述式：
 
-- *LpszSQL*參數傳遞至`Open`。 如果不是 NULL，則此參數會指定自訂的 SQL 字串的一部分。 架構會剖析字串。 如果字串為 SQL**選取 **陳述式或 ODBC**呼叫**陳述式，此架構會為資料錄集的 SQL 陳述式中使用的字串。 如果字串開頭不是"SELECT"或"{CALL"，架構會使用什麼提供給建構 SQL **FROM**子句。
+- *lpszSQL* 參數會被傳遞至 `Open`。 若非 NULL，此參數便會指定自訂的 SQL 字串或部分字串。 架構會剖析該字串。 如果該字串是 SQL **SELECT** 陳述式或 ODBC **CALL** 陳述式，架構便會將該字串作為資料錄集的 SQL 陳述式使用。 如果字串不是以 "SELECT" 或 "{CALL" 開始，架構便會使用提供來建造 SQL **FROM** 子句的項目。
 
-- 所傳回的字串[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)。 根據預設，這是您在精靈中，資料錄集指定之資料表的名稱，但您可以變更此函數會傳回。 這個架構會呼叫`GetDefaultSQL`— 如果字串開頭不是"SELECT"或"{CALL"，則會假設是資料表的名稱，且用來建構 SQL 字串。
+- 由 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)所傳回的字串。 根據預設，這是您在精靈中為資料錄集所指定的資料表名稱，但您可以變更函式會傳回的內容。 架構會呼叫 `GetDefaultSQL`。如果字串不是以 "SELECT" 或 "{CALL" 開始，系統會將它假設為資料表名稱，且其會被用來建構 SQL 字串。
 
 
-- 欄位資料成員的資料錄集，也就是繫結至特定的資料行的資料表。 架構會將記錄的資料行繫結至這些成員，使用它們作為緩衝區的位址。 架構決定資料表資料行的欄位資料成員的相互關聯[RFX](../../data/odbc/record-field-exchange-using-rfx.md) Bulk RFX 函式呼叫中的資料錄集或[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)成員函式。
+- 資料錄集的欄位資料成員，其會被繫結至資料表的特定資料行。 架構會將資料錄資料行繫結至這些成員的位址，並使用它們作為緩衝區。 架構會從資料錄集的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 或 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 成員函式中的 [RFX](../../data/odbc/record-field-exchange-using-rfx.md) 或大量 RFX 函式呼叫，來判斷欄位資料成員和資料表資料行之間的關聯性。
 
-- [篩選條件](../../data/odbc/recordset-filtering-records-odbc.md)資料錄集，如果有的話，包含在[m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter)資料成員。 架構會使用此字串來建構 SQL**其中**子句。
+- 資料錄集的[篩選](../../data/odbc/recordset-filtering-records-odbc.md) (若有的話)，包含在 [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) 資料成員中。 架構會使用此字串來建構 SQL **WHERE** 子句。
 
-- [排序](../../data/odbc/recordset-sorting-records-odbc.md)排序資料錄集，如果任何項目，包含在[m_strSort](../../mfc/reference/crecordset-class.md#m_strsort)資料成員。 架構會使用此字串來建構 SQL **ORDER BY**子句。
+- 資料錄集的[排序](../../data/odbc/recordset-sorting-records-odbc.md)順序 (若有的話)，包含在 [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) 資料成員中。 架構會使用此字串來建構 SQL **ORDER BY** 子句。
 
    > [!TIP]
-   > 若要使用 SQL **GROUP BY**子句 (而且可能**HAVING**子句)，將子句附加至您的篩選字串的結尾。
+   > 若要使用 SQL **GROUP BY** 子句 (以及可能的 **HAVING** 子句)，請將子句附加至您篩選字串的結尾。
 
-- 值的任何[參數的資料成員](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)您指定的類別。 只在您呼叫之前，設定參數值`Open`或`Requery`。 架構會繫結的參數值"？"中的 SQL 字串的預留位置。 在編譯時期，您可以指定字串預留位置。 在執行階段，架構會填滿，根據您傳遞的參數值的詳細資料。
+- 您針對類別指定之任何[參數資料成員](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)的值。 您會在呼叫 `Open` 或 `Requery` 之前設定參數值。 架構會將參數值繫結至 SQL 字串中的 "?" 預留位置。 在編譯時間時，您會搭配預留位置指定字串。 在執行階段時，架構會根據您所傳遞的參數值填入詳細資料。
 
-`Open` 建構 SQL**選取**陳述式，從這些要素。 請參閱[自訂選取](#_core_customizing_the_selection)如需架構如何使用這些因素的詳細資訊。
+`Open` 會根據這些材料建構 SQL **SELECT** 陳述式。 請參閱[自訂選取項目](#_core_customizing_the_selection)以取得架構使用材料之方式的詳細資料。
 
-在建構陳述式之後,`Open`傳送 SQL ODBC 驅動程式管理員 （及 ODBC 資料指標程式庫是否在記憶體中），然後傳送至 ODBC 驅動程式針對特定的 DBMS。 驅動程式與資料來源上的選取項目執行 DBMS 進行通訊，並擷取第一筆記錄。 此架構會將記錄載入資料錄集的欄位資料成員。
+在建構陳述式之後，`Open` 會將 SQL 傳送至 ODBC 驅動程式管理員 (以及 ODBC 資料指標程式庫，如果其位於記憶體中的話)，其會針對特定的 DBMS 將它傳送至 ODBC 驅動程式。 驅動程式會與 DBMS 通訊，以在資料來源上執行選取並擷取第一個資料錄。 架構會將資料錄載入資料錄集的欄位資料成員內。
 
-您可以使用這些技術的組合，以開啟[資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)並建構查詢是根據[聯結](../../data/odbc/recordset-performing-a-join-odbc.md)多個資料表。 您可以使用其他自訂，呼叫[預先定義的查詢](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)（預存程序），選取資料表在設計階段不知道的資料行並[繫結](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)資料錄集欄位，或是您可以執行大部分其他資料存取工作。 您無法完成的自訂資料錄集的工作仍可透過[呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)或直接執行 SQL 陳述式與[cdatabase:: Executesql](../../mfc/reference/cdatabase-class.md#executesql)。
+您可以結合使用這些技術來開啟[資料表](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)，以及根據[聯結](../../data/odbc/recordset-performing-a-join-odbc.md)多個資料表來建構查詢。 透過額外的自訂，您可以呼叫[預先定義的查詢](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md) (預存程序)，選取在設計期間未知的資料表資料行，然後將它們[繫結](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)至資料錄集欄位，或是您可以執行大部分其他資料存取工作。 您無法透過自訂資料錄集來達成的工作，仍然可以透過[呼叫 ODBC API 函式](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)或搭配 [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) 直接執行 SQL 陳述式來達成。
 
 ##  <a name="_core_customizing_the_selection"></a> 自訂選取項目
 
-除了提供篩選、 排序順序或參數，您可以採取下列動作以自訂資料錄集的選取項目：
+除了提供篩選、排列順序或參數之外，您可以採取下列動作來自定資料錄集的選取項目：
 
-- 將自訂的 SQL 字串中傳遞*lpszSQL*當您呼叫[開啟](../../mfc/reference/crecordset-class.md#open)資料錄集。 您所傳遞的任何項目*lpsqSQL*優先於什麼[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)成員函式傳回。
+- 當您呼叫資料錄集的 [Open](../../mfc/reference/crecordset-class.md#open) 時，在 *lpszSQL* 中傳遞自訂 SQL 字串。 您在 *lpsqSQL* 中所傳遞的項目，都會優先於 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) 成員函式所傳回的項目。
 
-   如需詳細資訊，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，其中描述類型的 SQL 陳述式 （或部分陳述式） 中，您可以傳遞給`Open`和架構會使用它們。
+   如需詳細資訊，請參閱 [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)，其會描述您可以傳遞至 `Open` 的 SQL 陳述式 (或部分陳述式) 類型，以及架構會如何使用它們。
 
     > [!NOTE]
-    >  如果您傳遞的自訂字串開頭不是"SELECT"或"{CALL"，MFC 會假設它包含資料表名稱。 這也適用於下一個項目符號項目。
+    >  如果您傳遞的自訂字串不是以 "SELECT" 或 "{CALL" 開始，MFC 會假設它包含資料表名稱。 這也會套用至下一個分項項目。
 
-- Alter 精靈會將您的資料錄集的字串`GetDefaultSQL`成員函式。 編輯變更它所傳回的函式的程式碼。 根據預設，精靈會將`GetDefaultSQL`函式會傳回單一的資料表名稱。
+- 修改精靈寫入至您資料錄集 `GetDefaultSQL` 成員函式的字串。 編輯函式的程式碼來變更其所傳回的內容。 根據預設，精靈會寫入 `GetDefaultSQL` 函式，其會傳回單一資料表名稱。
 
-   您可以擁有`GetDefaultSQL`會傳回任何項目，您可以傳入*lpszSQL*參數來`Open`。 如果您沒有傳遞自訂的 SQL 字串中*lpszSQL*，架構會使用字串的`GetDefaultSQL`傳回。 最少`GetDefaultSQL`必須傳回單一資料表名稱。 但您可以將它傳回多個資料表名稱，完整**選取 **陳述式，ODBC**呼叫**陳述式，依此類推。 如需您可以傳遞給*lpszSQL* — 或有`GetDefaultSQL`傳回，請參閱[SQL:自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
+   您可以讓 `GetDefaultSQL` 將您可以在 *lpszSQL* 參數中傳遞的任何項目傳回至 `Open`。 如果您沒有在 *lpszSQL* 中傳遞自訂 SQL 字串，架構便會使用 `GetDefaultSQL` 傳回的字串。 `GetDefaultSQL` 至少必須傳回單一資料表名稱。 但您可以讓它傳回多個資料表名稱、完整的 **SELECT** 陳述式、ODBC **CALL** 陳述式等。 如需您可以傳遞至 *lpszSQL* 或讓 `GetDefaultSQL` 傳回之項目的清單，請參閱 [SQL：自訂資料錄集的 SQL 陳述式 (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)。
 
-   如果您正在執行的兩個或多個資料表聯結，請重寫`GetDefaultSQL`來自訂在 SQL 中使用的資料表清單**FROM**子句。 如需詳細資訊，請參閱[資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
+   如果您正在執行兩個或多個資料表的聯結，請重新撰寫 `GetDefaultSQL` 以自訂用於 SQL **FROM** 子句中的資料表清單。 如需詳細資訊，請參閱[資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)。
 
 
-- 手動將額外的欄位資料成員，也許是根據您取得的相關資訊的結構描述資料來源在執行階段繫結。 資料錄集類別中加入欄位資料成員[RFX](../../data/odbc/record-field-exchange-using-rfx.md)或 Bulk RFX 函式會呼叫這些[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)或是[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)成員函式，和類別建構函式中的資料成員初始設定。 如需詳細資訊，請參閱[資料錄集：動態繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
+- 手動繫結額外的欄位資料成員，也許是根據您在執行階段期間取得之資料來源結構描述的相關資訊。 您會將欄位資料成員加入至資料錄集類別，[RFX](../../data/odbc/record-field-exchange-using-rfx.md) 或大量 RFX 函式呼叫它們至 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 或 [DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange) 成員函式，以及在類別建構函式中初始化資料成員。 如需詳細資訊，請參閱[資料錄集：動態地繫結資料行 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)。
 
-- 覆寫資料錄集成員函式，例如`OnSetOptions`、 設定應用程式特定選項或覆寫預設值。
+- 覆寫如 `OnSetOptions` 等的資料錄集成員函式，來設定應用程式特定選項或是覆寫預設值。
 
-如果您想要根據複雜的 SQL 陳述式中的資料錄集，您需要使用這些自訂技術的一些組合。 例如，也許您想要使用 SQL 子句時，關鍵字不直接支援的資料錄集，或可能是您要聯結多個資料表。
+如果您想要使資料錄集以複雜的 SQL 陳述式為基礎，便需要搭配使用這些自訂技術。 例如，假設您想要使用資料錄集不直接支援的 SQL 子句和關鍵字，或是正在聯結多個資料表。
 
 ## <a name="see-also"></a>另請參閱
 

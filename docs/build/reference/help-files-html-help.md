@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: 7fbac8bfa0427e8d6c60e88da92a525e62fb1a24
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 2b856defdac51c978aa07cd13ef8df153c9c3f5f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446274"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707013"
 ---
 # <a name="help-files-html-help"></a>說明檔 (HTML 說明)
 
 當您在 MFC 應用程式精靈的[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)頁面中，藉由選取 [即時線上說明] 核取方塊，然後選取 [HTML 說明格式]，將 HTML 說明類型的說明支援新增至應用程式時，會建立下列檔案。
 
-|檔案名稱|目錄位置|方案總管位置|描述|
+|檔案名稱|目錄位置|方案總管位置|說明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hhp|*Projname*\hlp|HTML 說明檔|說明專案檔。 它包含將說明檔編譯為 .hxs 檔或 .chm 檔所需的資料。|
 |*Projname*.hhk|*Projname*\hlp|HTML 說明檔|包含說明主題的索引。|
@@ -27,4 +27,4 @@ ms.locfileid: "65446274"
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)
+[為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)

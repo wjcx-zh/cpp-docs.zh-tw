@@ -5,16 +5,16 @@ ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6a0e296e4a5542c1aad848c55d35d3e40244478d
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: 726d9f6573b4a3457205001875dac80b3a2997d7
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899444"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934168"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Visual Studio 2017 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#improvements_159) 版中的 C++ 一致性改善
 
-Microsoft Visual C++ 編譯器支援一般化的 constexpr 和 NSDMI 彙總，現在完整呈現 C++14 標準中新增的功能。 請注意，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)，以取得顯示編譯器目前狀態的表格。
+Microsoft C++ 編譯器支援一般化的 constexpr 和 NSDMI 彙總，現在完整呈現 C++14 標準中新增的功能。 請注意，編譯器仍缺乏一些來自 C++11 和 C++98 標準的功能。 請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)，以取得顯示編譯器目前狀態的表格。
 
 ## <a name="c11"></a>C++11
 
@@ -70,7 +70,7 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 ### <a name="structured-bindings"></a>結構化繫結
 
-現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、std::tuple 或 std::pair，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)與[從函式傳回多重值](../../cpp/functions-cpp.md#multi_val)。
+現在可以在單一宣告中以值元件的個別名稱儲存值，前提是該值必須為陣列、`std::tuple` 或 `std::pair`，或具有公用非靜態資料成員。 如需詳細資訊，請參閱[結構化繫結](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0144r0.pdf)與[從函式傳回多重值](../../cpp/functions-cpp.md#multi_val)。
 
 ### <a name="construction-rules-for-enum-class-values"></a>enum class 值的建構規則
 
@@ -82,7 +82,7 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 這可用在平行
 
 ### <a name="removing-operator-for-bool"></a>移除 bool 的 operator++
 
-`operator++` 已不再支援 `bool` 類型。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+`bool` 類型已不再支援 `operator++`。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
 
 ### <a name="removing-deprecated-register-keyword"></a>移除已淘汰的 "register" 關鍵字
 
@@ -955,7 +955,7 @@ C;      // warning C4091 : '' : ignored on left of 'C' when no variable is decla
 
 ### <a name="stdisconvertible-for-array-types"></a>陣列類型的 std::is_convertible
 
-舊版編譯器對陣列類型的 [std::is_convertible](../../standard-library/is-convertible-class.md) 會給出不正確的結果。 這要求程式庫作者在使用 `std::is_convertible<...>` 類型特性時，以特殊案例處理 Microsoft Visual C++ 編譯器。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 15.3 版中失敗：
+舊版編譯器對陣列類型的 [std::is_convertible](../../standard-library/is-convertible-class.md) 會給出不正確的結果。 這要求程式庫作者在使用 `std::is_convertible<...>` 類型特性時，以特殊案例處理 Microsoft C++ 編譯器。 下例中，靜態判斷提示能夠通過舊版 Visual Studio，但在 Visual Studio 2017 15.3 版中失敗：
 
 ```cpp
 #include <type_traits>
@@ -968,7 +968,7 @@ static_assert(std::is_convertible<Array&, Array>::value, "");
 static_assert(std::is_convertible<Array, Array&>::value, "");
 ```
 
-`std::is_convertible<From, To>` 的計算方式是查看 imaginary 函式的定義是否正確：
+`std::is_convertible<From, To>` 的計算是查看 imaginary 函式的定義是否正確：
 
 ```cpp
    To test() { return std::declval<From>(); }
@@ -991,7 +991,7 @@ private:
 static_assert(std::is_constructible<PrivateDtor, int>::value);
 ```
 
-私人解構函式會讓類型成為不可建構的。 `std::is_constructible<T, Args...>` 的計算方式如下列宣告所示：
+私人解構函式會讓類型成為不可建構的。 `std::is_constructible<T, Args...>` 的計算如下列宣告所示：
 
 ```cpp
    T obj(std::declval<Args>()...)

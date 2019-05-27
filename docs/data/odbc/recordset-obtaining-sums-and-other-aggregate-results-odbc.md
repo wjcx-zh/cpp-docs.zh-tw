@@ -1,5 +1,5 @@
 ---
-title: 資料錄集：取得 Sum 和其他彙總的結果 (ODBC)
+title: 資料錄集：取得 SUM 和其他彙總結果 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,56 +10,59 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397779"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707850"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 Sum 和其他彙總的結果 (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>資料錄集：取得 SUM 和其他彙總結果 (ODBC)
+
+> [!NOTE] 
+> Visual Studio 2019 及更新版本中未提供 MFC ODBC 消費者精靈。 您仍然可以手動建立消費者。
 
 本主題適用於 MFC ODBC 類別。
 
-本主題說明如何取得彙總的結果，使用下列[SQL](../../data/odbc/sql.md)關鍵字：
+本主題說明如何使用下列 [SQL](../../data/odbc/sql.md) 關鍵字取得彙總結果：
 
-- **總和**具有數值資料類型會計算資料行中值的總計。
+- **SUM**：計算資料行中具有數值資料類型之值的總計。
 
-- **最小**具有數值資料類型中擷取資料行中的最小值。
+- **MIN**：擷取資料行中具有數值資料類型的最小值。
 
-- **最大**具有數值資料類型中擷取資料行中的最大值。
+- **MAX**：擷取資料行中具有數值資料類型的最大值。
 
-- **AVG**計算平均值的資料行中的所有值具有數值資料類型。
+- **AVG**：計算資料行中具有數值資料類型之所有值的平均值。
 
-- **計數**計算任何資料類型的資料行中的記錄數目。
+- **COUNT**：計算任何資料類型的資料行中的資料錄數目。
 
-若要取得有關資料來源中之記錄的統計資訊而不是從資料來源擷取記錄，您可以使用這些 SQL 函式。 資料錄集，通常會建立包含單一記錄 （如果所有資料行彙總），會包含值。 (可能有多筆記錄如果您使用**GROUP BY**子句。)這個值會計算或執行 SQL 函式所擷取的結果。
+您可以使用這些 SQL 函式，取得資料來源中資料錄的統計相關資訊，而不是從資料來源擷取資料錄。 建立的資料錄集通常由包含一個值的單一資料錄 (如果所有資料行都是彙總值) 所組成  (如果您使用 **GROUP BY** 子句，可能會有多個資料錄)。這個值是 SQL 函式所計算或擷取的結果。
 
 > [!TIP]
->  若要將 SQL **GROUP BY**子句 (而且可能**HAVING**子句) 到您的 SQL 陳述式，將它附加至結尾`m_strFilter`。 例如：
+>  若要將 SQL **GROUP BY** 子句 (而且可能是 **HAVING** 子句) 加入到您的 SQL 陳述式中，請將其附加至 `m_strFilter` 的結尾。 例如：
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
 ```
 
-您可以限制您使用的篩選和排序資料行取得彙總結果的記錄數目。
+您可以透過篩選和排序資料行，限制您用來取得彙總結果之資料錄的數目。
 
 > [!CAUTION]
->  某些彙總運算子會傳回不同的資料類型，從彙總的資料行。
+>  某些彙總運算子會從它們彙總的資料行，傳回不同的資料類型。
 
-- **總和**和**AVG**可能會傳回下一個較大的資料類型 (例如，呼叫`int`傳回**長**或**double**)。
+- **SUM** 和 **AVG** 可能會傳回次大的資料類型 (例如，使用 `int` 呼叫會傳回 **LONG** 或 **double**)。
 
-- **計數**通常會傳回**長**不論目標資料行類型。
+- 不論目標資料行是什麼類型，**COUNT** 通常會傳回 **LONG**。
 
-- **最大**並**MIN**傳回相同的資料類型，這些計算的資料行。
+- **MAX** 和 **MIN** 會傳回與所計算之資料行相同的資料類型。
 
-     例如，**加入類別**精靈會建立`long``m_lSales`適應 Sales 資料行，但您需要將此取代為`double m_dblSumSales`適應彙總結果的資料成員。 請參閱下列範例。
+     例如，[加入類別] 精靈會建立 `long` `m_lSales` 來容納 Sales 資料行，但您需要將此取代為 `double m_dblSumSales` 資料成員，才能容納彙總結果。 請參閱下列範例。
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>若要取得資料錄集的彙總結果
 
-1. 建立資料錄集，如中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)包含您要取得彙總結果的資料行。
+1. 建立包含您要取得彙總結果所在資料行的資料錄集，如[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述。
 
-1. 修改[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)函式資料錄集。 取代字串，表示資料行名稱 (第二個引數[RFX](../../data/odbc/record-field-exchange-using-rfx.md)函式呼叫) 表示的資料行的彙總函式的字串。 比方說，程式碼取代：
+1. 修改資料錄集的 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) 函式。 將表示資料行名稱 ([RFX](../../data/odbc/record-field-exchange-using-rfx.md) 函式呼叫的第二個引數) 字串取代為表示資料行上彙總函式的字串。 例如，取代：
 
     ```
     RFX_Long(pFX, "Sales", m_lSales);
@@ -71,12 +74,12 @@ m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
     ```
 
-1. 開啟資料錄集。 彙總作業的結果會留在`m_dblSumSales`。
+1. 開啟資料錄集。 彙總作業的結果會留在 `m_dblSumSales` 中。
 
 > [!NOTE]
->  精靈會實際指派沒有 Hungarian 前置詞的資料成員名稱。 比方說，精靈會產生`m_Sales`Sales 資料行，而非`m_lSales`稍早用於圖例的名稱。
+>  精靈實際上會指派沒有匈牙利文字首的資料成員名稱。 例如，精靈會為 Sales 資料行產生 `m_Sales`，而非稍早用於圖例的 `m_lSales` 名稱。
 
-如果您使用[CRecordView](../../mfc/reference/crecordview-class.md)檢視資料類別中，您必須變更 DDX 函式呼叫，以顯示新的資料成員值; 在此情況下，將它從變更：
+如果您要使用 [CRecordView](../../mfc/reference/crecordview-class.md) 類別檢視資料，必須變更 DDX 函式呼叫，才能顯示新的資料成員值；在此案例中，將其從下列內容變更為：
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);

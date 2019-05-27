@@ -1,21 +1,21 @@
 ---
-title: /std （指定語言標準版本）
-ms.date: 11/26/2018
+title: /std (指定語言標準版本)
+ms.date: 05/16/2019
 f1_keywords:
 - /std
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0f45727c61d55ff57befc7ff23a3d434e86673bc
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446221"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837535"
 ---
-# <a name="std-specify-language-standard-version"></a>/std （指定語言標準版本）
+# <a name="std-specify-language-standard-version"></a>/std (指定語言標準版本)
 
-啟用支援C++的指定版本的語言功能C++語言標準。
+從指定的 C++ 語言標準版本啟用支援的 C++ 語言功能。
 
 ## <a name="syntax"></a>語法
 
@@ -23,43 +23,43 @@ ms.locfileid: "65446221"
 
 ## <a name="remarks"></a>備註
 
-**/Std**選項是可在 Visual Studio 2017 及更新版本。 它用來控制特定版本的 ISOC++程式設計語言啟用您的程式碼在編譯期間的標準功能。 此選項可讓您停用之某些新語言和程式庫功能的支援可能會中斷現有的程式碼符合特定版本的語言標準。 根據預設， **/std: c + + 14**指定，則會停用的語言和標準程式庫功能的更新版本中找到C++語言標準。 使用 **/std: c + + 17**來啟用 C + + 17 標準特有的功能和行為。 若要明確啟用的目前實作的編譯器和標準程式庫功能，針對下一步 的草稿標準，使用 **/std: c + + 最新**。
+Visual Studio 2017 及更新版本有提供 **/std** 選項。 該選項會用來控制特定版本的 ISO C++ 程式設計語言標準功能，而這些功能會在編譯您的程式碼時啟用。 此選項可讓您停用某些新語言和程式庫功能的支援，因為這些功能可能會破壞符合特定語言標準版本的現有程式碼。 根據預設，系統會指定 **/std:c++14**，以停用較新版 C++ 語言標準中找到的語言和標準程式庫功能。 使用 **/std:c++17** 可啟用 C++ 17 標準特有的功能和行為。 若要明確啟用目前實作的編譯器和標準程式庫功能以用於下一個草稿標準，請使用 **/std:c++latest**。 所有 C++20 功能都需要 **/std:latest**；實作完成時，新的 **/std:c++20** 選項將會啟用。
 
-預設值 **/std: c + + 14**選項可讓 C + + 14 功能藉由將 MSVC 編譯器的集合。 編譯器和標準程式庫支援變更的功能或新的語言標準，除了一些 c++17 功能已經實作在舊版中的 MSVC 編譯器的較新版本，會停用此選項。 若要避免重大變更的 Visual Studio 2015 Update 2 起提供的功能已經拍攝的相依性的使用者，這些功能仍然可何時 **/std: c + + 14**指定選項：
+預設的 **/std:c++14** 選項能啟用 MSVC 編譯器實作的一組 C++14 功能。 針對最近語言標準版本中的已變更或新建功能，此選項能停用編譯器和標準程式庫支援，但一些已實作在舊版 MSVC 編譯器中的 C++17 功能除外。 若使用者已經依賴使用自 Visual Studio 2015 Update 2 起開始提供的功能，為避免對使用者造成中斷性變更，指定 **/std:c++14** 選項時，這些功能仍可使用：
 
-- [規則附有括號內的初始清單](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+- [自動化規則，附有以大括號括住的初始清單](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
 
-- [在範本 template 參數中的類型名稱](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
+- [範本參數中的類型名稱](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
 
 - [移除三併詞](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
 
-- [命名空間和列舉的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+- [命名空間和列舉程式的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
 
 - [u8 字元常值](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-如需詳細資訊的 C + + 14 和 C + + 17 功能啟用時 **/std: c + + 14**會指定，請參閱[VisualC++語言一致性](../../overview/visual-cpp-language-conformance.md)。
+若要深入了解指定 **/std:c++14** 時仍可使用的 C++14 和 C++17 功能，請參閱 [Visual C++ 語言一致性](../../overview/visual-cpp-language-conformance.md)中的附註。
 
-**/Std: c + + 17**選項會啟用整組 c++17 功能由 MSVC 編譯器實作。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。
+**/std:c++17** 選項能啟用 MSVC 編譯器實作的一整組 C++17 功能。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。
 
-**/Std: c + + 最新**選項可讓 post-c++17 語言和程式庫中的編譯器和程式庫目前實作的功能。 這些可能包括從 C + + 20 草稿及瑕疵更新的功能C++不包含在 C + + 17，以及實驗的提案草稿標準的標準。 如需支援的語言和程式庫功能的清單，請參閱 < [What's New for Visual C++ ](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md)。 **/Std: c + + 最新**選項不會啟用保護功能 **/ experimental**參數，但可能必須啟用它們。
+**/std:c++latest** 選項可啟用目前在編譯器和程式庫中實作的 post-C++17 語言和程式庫功能。 這些功能可能包括 C++20 工作草稿及 C++ 標準的瑕疵更新 (不包含在 C++17 中)，還有草稿標準的實驗性提案。 如需支援的語言和程式庫功能清單，請參閱 [Visual C++ 的新功能](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md)。 **/std:c++latest** 選項不會啟用由 **/experimental** 參數保護的功能，但您可能必須啟用這些功能。
 
 > [!IMPORTANT]
-> 啟用的編譯器和程式庫功能 **/std: c + + 最新**會作為-是並不支援。 會受限於重大變更或移除，恕不另行通知。 作為預覽可能會出現在標準，下一版的語言功能，但標準是進行中的工作。 使用  **/std: c + + 17**若要使用最新的 ISO 中的功能C++標準。
+> 由 **/std:c++latest** 啟用的編譯器和程式庫功能代表可能出現在未來 C++ 標準的功能，也是代表已核准的 C++20 功能。 未核准的功能會是中斷性變更或移除的項目 (恕不另行通知)，並且會以不變更原狀的基礎來提供。 
 
-**/Std**期間作用中選項C++可以偵測到使用編譯[ \_MSVC\_LANG](../../preprocessor/predefined-macros.md)前置處理器巨集。 如需詳細資訊，請參閱 <<c0> [ 前置處理器巨集](../../preprocessor/predefined-macros.md)。
+使用 [\_MSVC\_LANG](../../preprocessor/predefined-macros.md) 前置處理器巨集，可偵測到 C++ 編譯期間生效的 **/std** 選項。 如需詳細資訊，請參閱 [前置處理器巨集](../../preprocessor/predefined-macros.md)。
 
-**/Std: c + + 14**並 **/std: c + + 最新**選項會在 Visual Studio 2015 Update 3 開始提供。 **/Std: c + + 17**選項是在 Visual Studio 2017 15.3 版開始提供。 如先前所述，某些 C + + 17 標準會啟用行為 **/std: c + + 14**選項，但所有其他 c++17 功能會啟用 **/std: c + + 17**。
+**/std:c++14** 和 **/std:c++latest** 選項會在 Visual Studio 2015 Update 3 中開始提供。 **/std:c++17** 選項會在 Visual Studio 2017 15.3 版中開始提供。 如先前所述，某些 C++17 標準行為會由 **/std:c++14** 選項啟用，但所有其他 C++17 功能都會由 **/std:c++17**啟用。 C++20 功能會由 **/std:latest** 啟用，直到實作完成為止。
 
 > [!NOTE]
-> MSVC 編譯器的版本或更新層級，根據特定 C + + 14 或 C + + 17 功能可能未完全實作或完全符合標準時您所指定 **/std: c + + 14**或是 **/std: c + + 17**選項。 例如，Visual Studio 2017 RTM 編譯器不完全支援 C + + 14 符合標準`constexpr`，運算式 SFINAE 或 2 階段名稱查閱。 如需C++視覺效果中的語言一致性C++的發行版本中，請參閱[視覺化C++語言一致性](../../overview/visual-cpp-language-conformance.md)。
+> 視 MSVC 編譯器版本或更新層級而定，當您指定 **/std:c++17** 選項時，C++17 功能可能未完全實作或完全一致。 如需 Visual C++ 中各個發行版本的 C++ 語言一致性概觀，請參閱 [Visual C++ 語言一致性](../../overview/visual-cpp-language-conformance.md)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性**， **C /C++**，**語言**。
+1. 選取 [組態屬性] 、[C/C++] 、[語言]。
 
-1. 在   **C++語言標準**，選擇的語言標準，以支援從下拉式清單中的控制項，然後選擇**確定**或**套用**來儲存您的變更。
+1. 在 [C++語言標準] 中，從下拉式清單中選擇要支援的語言標準，然後選擇[確定] 或 [套用] 來儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

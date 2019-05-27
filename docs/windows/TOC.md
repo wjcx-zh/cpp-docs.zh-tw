@@ -3,7 +3,7 @@
 # [逐步解說：建立 Windows 傳統型應用程式](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Windows 傳統型精靈](win32-application-wizard.md)
 # [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [ATL 和 MFC 共用類別](../atl-mfc-shared/TOC.md)
 # [資料存取](../data/data-access-in-cpp.md)
 # [文字和字串](../text/text-and-strings-in-visual-cpp.md)

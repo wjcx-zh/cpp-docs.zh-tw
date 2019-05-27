@@ -1,25 +1,24 @@
 ---
 title: 資源檔 (C++)
-ms.date: 11/04/2016
+ms.date: 05/14/2019
 helpviewer_keywords:
 - resource files
 - resources [C++]
-- file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f1e32ba4776f3e975dc0fbc72334a85d6c793c93
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 20e57aa51cff8c4e3392c313645468387c2a4244
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446338"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707396"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
 
-資源是提供資訊給使用者的介面項目。 點陣圖、圖示、工具列和資料指標都是資源。 您可以操作某些資源來執行動作，例如從功能表選取，或在對話方塊中輸入資料。
+資源是提供資訊給使用者的介面項目。 點陣圖、圖示、工具列和資料指標都是資源。 部分資源可以執行動作，例如從功能表選取，或在對話方塊中輸入資料。
 
-如需詳細資訊，請參閱[使用資源](../../windows/working-with-resource-files.md)。
+ 如需詳細資訊，請參閱[使用資源](../../windows/working-with-resource-files.md)。
 
-|檔案名稱|目錄位置|方案總管位置|描述|
+|檔案名稱|目錄位置|方案總管位置|說明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.rc|*Projname*|原始程式檔|專案的資源指令檔。 根據專案類型，以及針對專案選取的支援 (例如工具列、對話方塊或 HTML)，資源指令檔會包含下列項目：<br /><br />- 預設功能表定義。<br />- 快速鍵和字串資料表。<br />- 預設的 [關於] 對話方塊。<br />- 其他對話方塊。<br />- 圖示檔 (res\\*Projname*.ico)。<br />- 版本資訊。<br />- 點陣圖。<br />- 工具列。<br />- HTML 檔案。<br /><br /> 資源檔包含標準 MFC 資源的 Afxres.rc 檔案。|
 |偵錯工具|*Projname*|標頭檔|資源標頭檔，其中包含專案所使用之資源的定義。|
@@ -32,4 +31,4 @@ ms.locfileid: "65446338"
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)
+[為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)

@@ -1,30 +1,33 @@
 ---
-title: IFDIF]
-ms.date: 08/30/2018
+title: IFDIF IFDIFI
+ms.date: 05/23/2019
 f1_keywords:
-- IFDIF[[I]]
+- IFDIF
+- IFDIFI
 helpviewer_keywords:
 - IFDIF[[I]] directive
+- IFDIF directive
+- IFDIFI directive
 ms.assetid: b85a553c-9098-4a57-a24f-596456eefa1c
-ms.openlocfilehash: 6e5c8f05ecc2a7abbd0facdfba8e3ab8bcfe66b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c799cdeb4046692c4b2254e9f54d4ca364ee8b7f
+ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202956"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66197696"
 ---
-# <a name="ifdif"></a>IFDIF]
+# <a name="ifdif-ifdifi"></a>IFDIF IFDIFI
 
 授與組件的文字項目是否不同。
 
 ## <a name="syntax"></a>語法
 
-> IFDIF [[I]] textitem1 textitem2
+> **IFDIF**\[**I**] *textitem1* __,__ *textitem2*
 
 ## <a name="remarks"></a>備註
 
-如果**我**是，比較不區分大小寫。 請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
+如果**IFDIFI**是，比較不區分大小寫。 請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
 
 ## <a name="see-also"></a>另請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

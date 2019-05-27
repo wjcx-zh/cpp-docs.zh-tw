@@ -1,37 +1,40 @@
 ---
 title: 選取和操作資料錄
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - records, selecting
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: fa8b63dab24c921804c474df73f6b6da192a4cd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329942"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707796"
 ---
 # <a name="selecting-and-manipulating-records"></a>選取和操作資料錄
 
-通常當您選取的記錄從資料來源，使用 SQL**選取**陳述式中，您取得結果集，也就是一組從資料表或查詢的記錄。 資料庫類別中，使用中，您可以使用資料錄集物件選取並存取該結果集。 這是您從類別衍生應用程式特定類別的物件[CRecordset](../../mfc/reference/crecordset-class.md)。 當您定義的資料錄集類別時，您可以指定其關聯的資料來源、 要使用時，資料表和資料表的資料行。 MFC 應用程式精靈或**加入類別**(如中所述[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 與特定資料來源的連接，建立一個類別。 精靈寫入[GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)類別成員函式`CRecordset`来傳回的資料表名稱。 如需使用精靈來建立資料錄集類別的詳細資訊，請參閱[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)並[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)。
+> [!NOTE] 
+> Visual Studio 2019 和更新版本中未提供「MFC ODBC 消費者」精靈。 您仍然可以手動建立消費者。
 
-使用[CRecordset](../../mfc/reference/crecordset-class.md)物件在執行階段，您可以：
+通常當您使用 SQL **SELECT** 陳述式從資料來源選取記錄時，會取得結果集，這是來自某個資料表或查詢的一組記錄。 使用資料庫類別時，您會使用資料錄集物件來選取和存取結果集。 這是您從 [CRecordset](../../mfc/reference/crecordset-class.md) 類別衍生之應用程式特定類別的物件。 當您定義資料錄集類別時，會指定要與其關聯的資料來源、要使用的資料表，以及該資料表的資料行。 「MFC 應用程式精靈」或 [新增類別] (如[新增 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)中所述) 會建立一個具有特定資料來源連線的類別。 精靈會撰寫 `CRecordset` 類別的 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) 成員函式來傳回資料表名稱。
 
-- 檢查目前的資料錄的資料欄位。
+藉由在執行階段使用 [CRecordset](../../mfc/reference/crecordset-class.md) 物件，您可以：
+
+- 檢查目前記錄的資料欄位。
 
 - 篩選或排序資料錄集。
 
-- 自訂預設 SQL**選取**陳述式。
+- 自訂預設的 SQL **SELECT** 陳述式。
 
-- 捲動以查看所選的記錄。
+- 捲動瀏覽選取的記錄。
 
-- 新增、 更新或刪除記錄 （如果在資料來源和資料錄集是可更新）。
+- 新增、更新或刪除記錄 (如果資料來源和資料錄集都可更新)。
 
-- 測試是否資料錄集可讓重新查詢並重新整理資料錄集的內容。
+- 測試資料錄集是否允許重新查詢和重新整理資料錄集的內容。
 
-當您完成使用資料錄集物件時，您會關閉，然後終結它。 如需有關資料錄集的詳細資訊，請參閱 <<c0> [ 資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。
+當您使用完資料錄集物件時，需關閉並終結它。 如需有關資料錄集的詳細資訊，請參閱[資料錄集 (ODBC)](../../data/odbc/recordset-odbc.md)。
 
 ## <a name="see-also"></a>另請參閱
 

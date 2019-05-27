@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: 89e02054b72946c4b1b773ce79b1c380da6ef01a
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6a6561e993016e70764186114e1f7cabd93cdc2d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446251"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707450"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC 程式或控制項原始程式檔和標頭檔
 
@@ -17,7 +17,7 @@ ms.locfileid: "65446251"
 
 這些檔案全都位於 *Projname* 目錄下，以及 [方案總管] 的標頭檔 (.h 檔案) 資料夾或原始程式檔 (.cpp 檔) 資料夾中。
 
-|檔案名稱|描述|
+|檔案名稱|說明|
 |---------------|-----------------|
 |*Projname*.h|程式或 DLL 的主要包含檔。 它包含所有全域符號和其他標頭檔的 `#include` 指示詞。 它會從 `CWinApp` 衍生 `CPrjnameApp` 類別，並宣告 `InitInstance` 成員函式。 若為控制項，`CPrjnameApp` 類別是衍生自 `COleControlModule`。|
 |*Projname*.cpp|主要原始程式檔。 它會針對衍生自 `CWinApp` 的 `CPrjnameApp` 類別建立一個物件，並覆寫 `InitInstance` 成員函式。<br /><br /> 若為可執行檔，`CPrjnameApp::InitInstance` 會執行數個作業。 它會註冊文件範本以作為文件與檢視之間的連線、建立主框架視窗，以及建立空白文件 (如果文件指定為應用程式的命令列引數，則會開啟文件)。<br /><br /> 若為 DLL 和 ActiveX (先前稱為 OLE) 控制項，`CProjNameApp::InitInstance` 會藉由呼叫 `COleObjectFactory::RegisterAll` 向 OLE 註冊控制項的物件 Factory，並呼叫 `AfxOLEInit`。 此外，成員函式 `CProjNameApp::ExitInstance` 可用來透過 **AfxOleTerm** 呼叫從記憶體卸載控制項。<br /><br /> 這個檔案也會藉由實作 `DllRegisterServer` 和 `DllUnregisterServer` 函式，在 Windows 系統註冊資料庫中註冊和取消註冊控制項。|
@@ -34,6 +34,6 @@ ms.locfileid: "65446251"
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)<br>
+[為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)<br>
 [ATL 程式或控制項原始程式檔和標頭檔](atl-program-or-control-source-and-header-files.md)<br>
 [CLR 專案](files-created-for-clr-projects.md)

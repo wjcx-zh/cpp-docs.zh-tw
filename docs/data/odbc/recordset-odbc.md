@@ -1,6 +1,6 @@
 ---
 title: 資料錄集 (ODBC)
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 helpviewer_keywords:
 - recordsets, snapshots
 - recordsets, creating
@@ -13,69 +13,66 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b043b08e13611b87bbffbe9dfb3255d5520e3359
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397740"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707828"
 ---
 # <a name="recordset-odbc"></a>資料錄集 (ODBC)
 
 本主題適用於 MFC ODBC 類別。
 
-A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從資料來源選取的記錄。 記錄可以是：
+[CRecordset](../../mfc/reference/crecordset-class.md) 物件表示選取自資料來源的一組資料錄。 資料錄可以來自：
 
-- 資料表中。
+- 資料表。
 
-- 這種查詢。
+- 查詢。
 
-- 預存程序存取的一或多個資料表。
+- 存取一或多個資料表的預存程序。
 
-以資料表為基礎的資料錄集的範例是"all customers，"存取客戶資料表。 查詢的範例是"Joe smith 的所有發票。 」 （有時稱為預先定義的查詢） 的預存程序為基礎的資料錄集的範例是 「 繳的帳戶，全部 」 叫用後端資料庫中的預存程序。 資料錄集可以聯結兩個或多個資料表相同的資料來源，但不是從不同的資料來源的資料表。
-
-> [!NOTE]
->  衍生的資料錄集類別，透過精靈的相關資訊，請參閱[加入 MFC ODBC 消費者](../../mfc/reference/adding-an-mfc-odbc-consumer.md)並[MFC 應用程式精靈、 資料庫支援](../../mfc/reference/database-support-mfc-application-wizard.md)。
+以資料表為基礎的資料錄集的範例是 "all customers"，可存取客戶資料表。 查詢的範例是 "all invoices for Joe Smith"。 以預存程序 (有時稱為預先定義的查詢) 為基礎的資料錄集範例是 "all of the delinquent accounts"，這會叫用後端資料庫中的預存程序。 資料錄集可以聯結來自相同資料來源的兩個或多個資料表，但無法聯結來自不同資料來源的資料表。
 
 > [!NOTE]
->  有些 ODBC 驅動程式支援的資料庫的檢視。 在此檢視是最初建立與 SQL 的查詢`CREATE VIEW`陳述式。 精靈目前不支援檢視，但您可自行編碼此支援。
+>  有些 ODBC 驅動程式支援資料庫的檢視。 這種意義上的檢視是最初使用 SQL `CREATE VIEW` 陳述式建立的查詢。
 
-##  <a name="_core_recordset_capabilities"></a> 資料錄集的功能
+##  <a name="_core_recordset_capabilities"></a> 資料錄集功能
 
-資料錄集的所有物件都共用下列功能：
+所有資料錄集物件都共用下列功能：
 
-- 如果資料來源不是唯讀的您可以指定您的資料錄集的被[可更新](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，[可附加](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，或唯讀狀態。 如果可以更新資料錄集，您可以選擇封閉式或開放式[鎖定](../../data/odbc/recordset-locking-records-odbc.md)方法，可讓您提供的驅動程式提供適當的鎖定支援。 如果唯讀資料來源，資料錄集就會處於唯讀模式。
+- 如果資料來源不是唯讀的，您可以指定您的資料錄集是[可更新](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)、[可附加](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)，或是唯讀的。 如果資料錄集是可更新的，您可以選擇封閉式或開放式的[鎖定](../../data/odbc/recordset-locking-records-odbc.md)方法，但前提是，驅動程式會提供適當的鎖定支援。 如果資料來源是唯讀的，資料錄集就會是唯讀的。
 
-- 您可以呼叫成員函式[捲](../../data/odbc/recordset-scrolling-odbc.md)透過將選取的記錄。
+- 您可以呼叫成員函式以[捲動](../../data/odbc/recordset-scrolling-odbc.md)選取的資料錄。
 
-- 您可以[篩選](../../data/odbc/recordset-filtering-records-odbc.md)限制哪些記錄會選取從可用的記錄。
+- 您可以[篩選](../../data/odbc/recordset-filtering-records-odbc.md)資料錄，以限制可以從可用的資料錄選取哪些資料錄。
 
-- 您可以[排序](../../data/odbc/recordset-sorting-records-odbc.md)的記錄，以遞增或遞減順序，根據一個或多個資料行。
+- 您可以根據一個或多個資料行，使用遞增或遞減順序[排序](../../data/odbc/recordset-sorting-records-odbc.md)資料錄。
 
-- 您可以[參數化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)限定在執行階段的資料錄集選取資料錄集。
+- 您可以將資料錄集[參數化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)，以限定在執行階段的資料錄集選取範圍。
 
 ##  <a name="_core_snapshots_and_dynasets"></a> 快照集和動態集
 
-有兩種主要資料錄集：[快照集](../../data/odbc/snapshot.md)並[動態集](../../data/odbc/dynaset.md)。 兩者都支援類別`CRecordset`。 每個共用的通用特性的所有資料錄集，但每個也會在它自己的特殊方法來擴充通用的功能。 快照集提供資料的靜態檢視，並且可用於報表和其他情況下，您想檢視的資料存在於特定的時間。 當您想要顯示在資料錄集而不必重新查詢，或重新整理資料錄集的其他使用者所做的更新時，動態集將會很有用。 快照集和動態集可以是可更新或唯讀狀態。 若要反映資料錄加入或刪除由其他使用者時，呼叫[CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。
+資料錄集有兩種主要類型：[快照集](../../data/odbc/snapshot.md)和[動態集](../../data/odbc/dynaset.md)。 兩者都受到 `CRecordset` 類別支援。 每種類型都會共用所有資料錄集的通用特性，但每種類型也都會透過自己的特殊方法來擴充通用功能。 快照集提供資料的靜態檢視，而且可用於報表，以及您希望資料檢視存在於特定時間的其他情況。 當您希望在資料錄集中看到其他使用者所做的更新，而不必重新查詢或重新整理資料錄集時，動態集將會很有用。 快照集和動態集可以是可更新的或唯讀的。 若要反映其他使用者新增或刪除的資料錄，請呼叫 [CRecordset::Requery](../../mfc/reference/crecordset-class.md#requery)。
 
-`CRecordset` 也可讓兩個其他類型的資料錄集： 動態資料錄集和順向的資料錄集。 動態資料錄集是類似於動態集;不過，動態資料錄集反映出任何記錄，新增或刪除而不需呼叫`CRecordset::Requery`。 基於這個理由，動態資料錄集通常會耗上 DBMS 的處理時間，而且許多 ODBC 驅動程式不支援它們。 相反地，順向資料錄集提供最有效率的方法，不需要更新，或向後捲動的資料錄集的資料存取。 比方說，您可能會使用順向資料錄集，將資料從一個資料來源之間，您只需要以正向方向資料中移動。 若要使用的順向資料錄集，您必須執行下列兩個動作：
+`CRecordset` 也允許其他兩種類型的資料錄集：動態資料錄集和順向資料錄集。 動態資料錄集類似於動態集；不過，動態資料錄集會反映新增或刪除的任何資料錄，而不需呼叫 `CRecordset::Requery`。 因此，動態資料錄集通常會在 DBMS 上耗費大量的處理時間，而且許多 ODBC 驅動程式並不提供支援。 相反地，順向資料錄集會針對不需要更新或向後捲動的資料錄集，提供最有效率的資料存取方法。 例如，您可以使用順向資料錄集，將資料從一個資料來源移轉到另一個資料來源，而且您只需要以順向移動資料即可。 若要使用順向資料錄集，您必須執行下列兩個動作：
 
-- 傳遞選項`CRecordset::forwardOnly`作為*nOpenType*參數[開啟](../../mfc/reference/crecordset-class.md#open)成員函式。
+- 傳遞選項 `CRecordset::forwardOnly` 作為 [Open](../../mfc/reference/crecordset-class.md#open) 成員函式的 *nOpenType* 參數。
 
-- 指定`CRecordset::readOnly`中*dwOptions*參數`Open`。
+- 在 `Open` 的 *dwOptions* 參數中指定 `CRecordset::readOnly`。
 
     > [!NOTE]
-    >  動態集支援的 ODBC 驅動程式需求的詳細資訊，請參閱[ODBC](../../data/odbc/odbc-basics.md)。 如需包含於視覺效果的此版本的 ODBC 驅動程式的清單C++並取得其他驅動程式的相關資訊，請參閱[ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
+    >  如需有關動態集支援之 ODBC 驅動程式需求的資訊，請參閱 [ODBC](../../data/odbc/odbc-basics.md)。 如需此版本 Visual C++ 隨附之 ODBC 驅動程式的清單，以及取得其他驅動程式的相關資訊，請參閱 [ODBC 驅動程式清單](../../data/odbc/odbc-driver-list.md)。
 
-##  <a name="_core_your_recordsets"></a> 資料錄集
+##  <a name="_core_your_recordsets"></a> 您的資料錄集
 
-針對每個不同的資料表、 檢視或您想要存取的預存程序，您通常定義類別，衍生自`CRecordset`。 （例外狀況是資料庫聯結，其中一個資料錄集代表資料行從兩個或多個資料表）。當您衍生的資料錄集類別時，會啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (Bulk RFX) 機制，類似於對話方塊資料交換 (DDX) 機制。 RFX 和 Bulk RFX 簡化從資料來源的資料傳輸到您的資料錄集;RFX 此外從資料錄集，資料傳輸的資料來源。 如需詳細資訊，請參閱 <<c0> [ 資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md)和[資料錄集：擷取大量 (ODBC) 資料錄](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
+針對每個您想要存取的不同資料表、檢視或預存程序，您通常要定義一個衍生自 `CRecordset` 的類別  (例外狀況是資料庫聯結，其中一個資料錄集代表來自兩個或多個資料表的資料行)。當您衍生資料錄集類別時，會啟用資料錄欄位交換 (RFX) 機制或大量資料錄欄位交換 (大量 RFX) 機制，這類似於對話方塊資料交換 (DDX) 機制。 RFX 和大量 RFX 會將從資料來源傳輸資料到資料錄集的程序簡化；此外，RFX 還會從資料錄集傳輸資料到資料來源。 如需詳細資訊，請參閱[資料錄欄位交換 (RFX)](../../data/odbc/record-field-exchange-rfx.md) 和[資料錄集：擷取大量資料錄 (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)。
 
-資料錄集物件可讓您存取所有選取的記錄。 您使用多個選取的記錄之間捲動`CRecordset`成員函式，例如`MoveNext`和`MovePrev`。 在此同時，資料錄集物件，表示只有其中一個選取的記錄，目前的記錄。 您可以藉由宣告類別成員變數對應到資料行的資料表或從資料庫查詢產生之記錄的資料錄集來檢查目前資料錄的欄位。 資料錄集的資料成員的相關資訊，請參閱[資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
+資料錄集物件可讓您存取所有選取的資料錄。 您可以使用 `CRecordset` 成員函式 (例如 `MoveNext` 和 `MovePrev`) 捲動多個選取的資料錄，。 同時，一個資料錄集物件只代表其中一個選取的資料錄，也就是目前的資料錄。 您可以宣告對應到資料表資料行，或資料庫查詢所產生之資料錄資料行的資料錄集類別成員變數，藉此檢查目前資料錄的欄位。 如需有關資料錄集資料成員的資訊，請參閱[資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)。
 
-下列主題說明使用資料錄集物件的詳細資料。 主題所述功能分類並允許循序讀取自然瀏覽順序而定。
+下列主題將說明使用資料錄集物件的詳細資料。 這些主題會以功能分類和自然瀏覽順序列出，以允許循序讀取。
 
-### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>機制的開啟、 讀取和關閉資料錄集的相關主題
+### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>開啟、讀取和關閉資料錄集機制的相關主題
 
 - [資料錄集：架構 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
@@ -101,7 +98,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：重新查詢資料錄集 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
-### <a name="topics-about-somewhat-more-advanced-techniques"></a>某種程度的相關主題更進階的技術
+### <a name="topics-about-somewhat-more-advanced-techniques"></a>某種程度上更進階技術的相關主題
 
 - [資料錄集：執行聯結 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
@@ -115,7 +112,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)物件都代表一組從�
 
 - [資料錄集：取得 SUM 和其他彙總結果 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
-### <a name="topics-about-how-recordsets-work"></a>資料錄集的運作方式的相關主題
+### <a name="topics-about-how-recordsets-work"></a>資料錄集運作方式的相關主題
 
 - [資料錄集：資料錄集選取資料錄的方式 (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 

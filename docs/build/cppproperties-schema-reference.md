@@ -1,14 +1,14 @@
 ---
 title: CppProperties.json 結構描述參考
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220848"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837045"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 結構描述參考
 
@@ -117,7 +117,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 |`undefines`|要使其成為未定義的巨集清單 (MSVC 會對應至 /U)|
 |`intelliSenseMode`|要使用的 IntelliSense 引擎。 您可以指定適用於 MSVC、gcc 或 Clang 的架構特定變化：<br/><br/>- windows-msvc-x86 (default)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-注意:值`msvc-x86`和`msvc-x64`因舊版因素而只支援。 請使用`windows-msvc*`變體。
+注意:`msvc-x86` 和 `msvc-x64` 值僅適用於舊版。 請使用 `windows-msvc*` 變體。
 
 ## <a name="custom-configurations"></a>自訂組態
 
@@ -143,7 +143,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 
  `CppProperties.json` 支援系統環境變數擴充，包含路徑及其他屬性值。 語法是 `${env.FOODIR}`，可擴充環境變數 `%FOODIR%`。 此外，也支援下列系統定義的變數：
 
-|變數名稱|描述|
+|變數名稱|說明|
 |-----------|-----------------|
 |vsdev|預設 Visual Studio 環境|
 |msvc_x86|使用 x86 工具對 x86 進行編譯|
@@ -156,7 +156,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 
 安裝 Linux 工作負載之後，即可使用下列環境從遠端鎖定 Linux 和 WSL：
 
-|變數名稱|描述|
+|變數名稱|說明|
 |-----------|-----------------|
 |linux_x86|從遠端鎖定 x86 Linux|
 |linux_x64|從遠端鎖定 x64 Linux|
@@ -264,7 +264,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
 |`${projectRoot}`| 指向放置 `CppProperties.json` 資料夾的完整路徑|
-|`${vsInstallDir}`| 執行中 VS 2017 執行個體安裝所在資料夾的完整路徑|
+|`${vsInstallDir}`| 執行中的 Visual Studio 執行個體安裝所在資料夾的完整路徑|
 
 例如，如果您的專案具有 Include 資料夾，也包含 windows.h 及 Windows SDK 中的其他常見標頭，您可能需要使用下列 Include 檔更新您的 `CppProperties.json` 組態檔：
 
@@ -289,7 +289,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 未設定為全域環境變數，因此請務必從定義這些變數的「VS 2017 開發人員命令提示字元」啟動 devenv.exe。
+> `%WindowsSdkDir%` 和 `%VCToolsInstallDir%` 未設定為全域環境變數，因此請務必從定義這些變數的「開發人員命令提示字元」啟動 devenv.exe。 (在 Windows 的 [開始] 功能表中輸入「開發人員」)。
 
 ## <a name="troubleshoot-intellisense-errors"></a>針對 IntelliSense 錯誤進行疑難排解
 

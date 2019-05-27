@@ -11,16 +11,16 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: 919cbedd0c0d7c610273d597328979d1fb449f8f
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446303"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707105"
 ---
 # <a name="hint-files"></a>提示檔案
 
-「提示檔案」包含巨集，可能會另外造成 C++ 瀏覽資料庫剖析器跳過程式碼區域。 當您開啟 Visual StudioC++專案中，剖析器分析專案中的每個原始程式檔中的程式碼，並建置每個識別項的相關資訊的資料庫。 IDE 會使用該資訊來支援程式碼瀏覽功能，例如 [類別檢視] 瀏覽器和 [導覽列] 等功能。
+「提示檔案」包含巨集，可能會另外造成 C++ 瀏覽資料庫剖析器跳過程式碼區域。 當您開啟 Visual Studio C++ 專案時，剖析器會分析專案內每個原始程式檔中的程式碼，並建置含有每個識別碼之相關資訊的資料庫。 IDE 會使用該資訊來支援程式碼瀏覽功能，例如 [類別檢視] 瀏覽器和 [導覽列] 等功能。
 
 C++ 瀏覽資料庫剖析器為模糊剖析器，可在短時間內剖析大量程式碼。 他速度快的其中一個原因是它會跳過區塊的內容。 比方說，它僅會記錄函式的位置及參數，並略過其內容。 某些巨集會導致用來判斷區塊起訖位置的啟發學習法發生問題。 而這些問題會造成不正確地記錄程式碼區域。
 
@@ -118,7 +118,7 @@ void Function() NOEXCEPT
 
 - 包含 Visual C++ 安裝套件的目錄 (**vcpackages**)。 此目錄包含描述常用系統檔案中符號的內建提示檔案，例如 **windows.h**。 因此，您的專案會自動繼承所需的大部分提示。
 
-- 從原始程式檔根目錄到包含原始程式檔本身之目錄的路徑。 在一般的 Visual Studio 中C++專案的根目錄包含方案或專案檔。
+- 從原始程式檔根目錄到包含原始程式檔本身之目錄的路徑。 在一般 Visual Studio C++ 專案中，根目錄會包含方案或專案檔。
 
    此規則的例外是，如果「停止檔案」位於原始程式檔的路徑中。 停止檔案是任何名為 **cpp.stop** 的檔案。 停止檔案可讓您進一步控制搜尋順序。 剖析系統會搜尋包含停止檔案的目錄到包含原始程式檔的目錄，而不需要從根目錄開始。 在一般專案中，您不需要停止檔案。
 
@@ -162,7 +162,7 @@ void Function() NOEXCEPT
 
 此範例說明如何從提示檔案累積提示。 此範例不會使用停止檔案。
 
-圖所顯示的是某些實體目錄中的 Visual StudioC++專案。 提示檔案位於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
+此圖說明 Visual Studio C++ 專案中的一些實體目錄。 提示檔案位於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
 
 ### <a name="hint-file-directories"></a>提示檔案目錄
 
@@ -244,7 +244,7 @@ void Function() NOEXCEPT
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)<br>
+[為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef 指示詞 (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [SAL 註釋](../../c-runtime-library/sal-annotations.md)<br>

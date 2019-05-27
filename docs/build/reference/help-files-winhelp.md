@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 835300d2fe39688f3b9c41dad801f1a79984c803
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6810b3f608b9fa7892b686d72056994fb98c92db
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446555"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707461"
 ---
 # <a name="help-files-winhelp"></a>說明檔 (WinHelp)
 
 當您在 MFC 應用程式精靈的[進階功能](../../mfc/reference/advanced-features-mfc-application-wizard.md)頁面中，藉由選取 [即時線上說明] 核取方塊，然後選取 [WinHelp 格式]，將 WinHelp 類型的說明支援新增至應用程式時，會建立下列檔案。
 
-|檔案名稱|目錄位置|方案總管位置|描述|
+|檔案名稱|目錄位置|方案總管位置|說明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hpj|*Projname*\hlp|原始程式檔|說明編譯器用來建立程式或控制項說明檔的說明專案檔。|
 |*Projname*.rtf|*Projname*\hlp|說明檔|包含您可以編輯的範本主題以及有關自訂 .hpj 檔的資訊。|
@@ -26,7 +26,7 @@ ms.locfileid: "65446555"
 
 您可以將 WinHelp 支援新增至 MFC ActiveX 控制項專案，方法是在 [MFC ActiveX 控制項精靈] 的[應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)索引標籤中選取 [產生說明檔]。 當您將說明支援新增至 MFC ActiveX 控制項時，下列檔案會新增至您的專案：
 
-|檔案名稱|目錄位置|方案總管位置|描述|
+|檔案名稱|目錄位置|方案總管位置|說明|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Projname*.hpj|*Projname*\hlp|原始程式檔|說明編譯器用來建立程式或控制項說明檔的專案檔。|
 |*Projname*.rtf|*Projname*\hlp|專案|包含您可以編輯的範本主題以及自訂 .hpj 檔的相關資訊。|
@@ -35,4 +35,4 @@ ms.locfileid: "65446555"
 
 ## <a name="see-also"></a>另請參閱
 
-[檔案類型建立視覺效果C++專案](file-types-created-for-visual-cpp-projects.md)
+[為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)

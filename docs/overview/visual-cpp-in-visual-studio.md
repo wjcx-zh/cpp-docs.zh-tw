@@ -1,28 +1,29 @@
 ---
 title: Visual Studio 中的 C++
 description: Visual C++ 是 Visual Studio IDE 中 Microsoft C++ 編譯器、程式碼編輯器和相關工具的名稱。 您可以使用 Visual C++ 來開發 Windows、Linux、Android 和 iOS 的程式。
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222609"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934143"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
-> 此開發人員文件適用於 Visual Studio 2015 與 Visual Studio 2017。
+> 此開發人員文件適用於 Visual Studio 2015 與更新版本。 使用頁面左上角的版本選取器來選擇您使用的 Visual Studio 版本。
 >
 > 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。
 
-
 Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合語言開發工具與程式庫的名稱，屬於 Windows 上的 Visual Studio 可用內容。 這些工具與程式庫可讓您建立通用 Windows 平台 (UWP) 應用程式、原生 Windows 傳統型與伺服器應用程式、跨平台程式庫與應用程式 (於 Windows、Linux、Android 及 iOS 上執行) 以及使用 .NET Framework 的受控應用程式與程式庫。 您可以使用 Visual C++ 撰寫任何項目，涵蓋範圍從簡單的主控台應用程式到最精密複雜的 Windows 傳統型應用程式；從裝置驅動程式與作業系統元件到行動裝置的跨平台遊戲；及從最小的 IoT 裝置到 Azure 雲端中的多伺服器高效能運算。
+
+Visual Studio 2015、2017 與 2019 可並存安裝。 您可以使用 Visual Studio 2019 (編譯器工具組 v142) 來編輯及建置程式 (使用 Visual Studio 2015 (v140) 與 Visual Studio 2017 (v141))。
 
 ## <a name="whats-new-and-conformance-history"></a>新功能與合規性歷程記錄
 

@@ -1,19 +1,19 @@
 ---
 title: .vcxproj 和.props 檔案結構
-ms.date: 09/18/2018
+ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446498"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837521"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
-[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中的預設專案系統；當您在 Visual C++ 中選擇 [檔案] > [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 可能的話您應該使用 Visual Studio 屬性頁來修改專案設定 (請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
+[MSBuild](../msbuild-visual-cpp.md) 是 Visual Studio 中的預設專案系統；當您在 Visual C++ 中選擇 [檔案] > [新增專案] 時，您會建立 MSBuild 專案，並將其設定儲存在副檔名為 `.vcxproj` 的 XML 專案檔中。 專案檔也可能會匯入可儲存設定的 .props 檔案和 .targets 檔案。 在大部分情況下，您永遠不需要手動編輯專案檔；事實上，除非您充分了解 MSBuild，否則不應該手動編輯它。 您應該盡可能使用 Visual Studio 屬性頁來修改專案設定 (請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md))。 不過，在某些情況下，您可能需要手動修改專案檔或屬性工作表。 為了進行這些情況，本文包含檔案結構的基本資訊。
 
 **重要：**
 
@@ -21,13 +21,13 @@ ms.locfileid: "65446498"
 
 1. 檔案的結構必須遵循指定格式，如本文所述。
 
-1. Visual StudioC++專案系統目前不支援萬用字元專案項目中。 例如，不支援：
+1. Visual Studio C++ 專案系統目前不支援專案項目中有萬用字元。 例如，不支援：
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Visual StudioC++專案系統目前不支援巨集的專案項目路徑中。 例如，不支援：
+1. Visual Studio C++ 專案系統目前不支援專案項目路徑中有巨集。 例如，不支援：
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -47,7 +47,7 @@ ms.locfileid: "65446498"
 
 您可以使用任何文字或 XML 編輯器來檢查 .vcxproj 檔案的內容。 若要在 Visual Studio 中檢視，請以滑鼠右鍵按一下 [方案總管] 中的專案，然後依序選擇 [卸載專案] 和 [編輯 Foo.vcxproj]。
 
-首先需要注意的是，最上層項目會依特定順序顯示。 例如: 
+首先需要注意的是，最上層項目會依特定順序顯示。 例如：
 
 - 大多數屬性群組和和項目定義群組會在匯入 Microsoft.Cpp.Default.props 之後出現。
 
@@ -104,7 +104,7 @@ ms.locfileid: "65446498"
 
 ### <a name="projectconfiguration-elements"></a>ProjectConfiguration 項目
 
-下列程式碼片段顯示專案組態。 在此範例中，'Debug|x64' 是組態名稱。 專案組態名稱的格式必須是 $(Configuration)|$(Platform)。 專案組態節點可以有兩個屬性：組態與平台。 當組態為使用中時，即會自動使用此處指定的值設定這些屬性。
+下列程式碼片段顯示專案組態。 在此範例中，'Debug|x64' 是組態名稱。 專案組態名稱的格式必須是 $(Configuration)|$(Platform)。 一個專案組態節點可以有兩個屬性：組態和平台。 當組態為使用中時，即會自動使用此處指定的值設定這些屬性。
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -213,7 +213,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 
 包含專案中的項目 (原始程式檔等)。 專案項目 (也就是規則定義視為專案項目的項目類型) 不支援條件。
 
-中繼資料應該包含每個組態的組態條件，即使完全相同也一樣。 例如: 
+中繼資料應該包含每個組態的組態條件，即使完全相同也一樣。 例如：
 
 ```xml
 <ItemGroup>
@@ -224,7 +224,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 </ItemGroup>
 ```
 
-Visual StudioC++專案系統目前不支援萬用字元專案項目中。
+Visual Studio C++ 專案系統目前不支援專案項目中有萬用字元。
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ Visual StudioC++專案系統目前不支援萬用字元專案項目中。
 </ItemGroup>
 ```
 
-Visual StudioC++專案系統目前不支援巨集專案項目中。
+Visual Studio C++ 專案系統目前不支援專案項目中有巨集。
 
 ```xml
 <ItemGroup>
@@ -272,7 +272,7 @@ Visual Studio IDE 的專案檔必須如上所述排序。 例如，當您定義�
 
 ## <a name="how-the-ide-uses-element-labels"></a>IDE 如何使用項目標籤
 
-在 IDE 中，當您在 [一般] 屬性頁中設定 **UseOfAtl** 屬性時，它會寫入專案檔中的組態屬性群組，而相同屬性頁中的 **TargetName** 屬性會寫入各個組態的無標籤屬性群組。 Visual Studio 會查看屬性頁的 XML 檔案，以了解每個屬性寫入位置的相關資訊。 針對 [一般] 屬性頁 (假設您有英文版的 Visual Studio Enterprise Edition)，該檔案為 `%ProgramFiles(x86)%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 屬性頁 XML 規則檔會定義 Rule 及其所有屬性的靜態資訊。 這類資訊之一是目的檔案 (寫入其值的檔案) 中 Rule 屬性的慣用位置。 專案檔項目上的 Label 屬性會指定慣用位置。
+在 IDE 中，當您在 [一般] 屬性頁中設定 **UseOfAtl** 屬性時，它會寫入專案檔中的組態屬性群組，而相同屬性頁中的 **TargetName** 屬性會寫入各個組態的無標籤屬性群組。 Visual Studio 會查看屬性頁的 XML 檔案，以了解每個屬性寫入位置的相關資訊。 針對 [一般] 屬性頁 (假設您有英文版的 Visual Studio 2019 Enterprise Edition)，該檔案為 `%ProgramFiles(x86)%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets\1033\general.xml`。 屬性頁 XML 規則檔會定義 Rule 及其所有屬性的靜態資訊。 這類資訊之一是目的檔案 (寫入其值的檔案) 中 Rule 屬性的慣用位置。 專案檔項目上的 Label 屬性會指定慣用位置。
 
 ## <a name="property-sheet-layout"></a>屬性工作表配置
 
@@ -288,7 +288,7 @@ Visual Studio IDE 的專案檔必須如上所述排序。 例如，當您定義�
 </Project>
 ```
 
-若要建立您自己的屬性工作表，請複製 VCTargets 資料夾中的其中一個 .props 檔案，並配合您的目的進行修改。 若是 Visual Studio 2017 Enterprise Edition，預設 VCTargets 路徑為 `%ProgramFiles%\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets`。
+若要建立您自己的屬性工作表，請複製 VCTargets 資料夾中的其中一個 .props 檔案，並配合您的目的進行修改。 若是 Visual Studio 2019 Enterprise Edition，預設 VCTargets 路徑為 `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`。
 
 ## <a name="see-also"></a>另請參閱
 

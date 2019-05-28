@@ -1,6 +1,6 @@
 ---
 title: 從 UNIX 移植到 Win32
-ms.date: 08/02/2018
+ms.date: 05/02/2019
 helpviewer_keywords:
 - APIs [C++], porting to Win32
 - Windows API [C++], migrating from UNIX
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 66ac5b478929a42b37d6d0b712063552cfae9104
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278472"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65449021"
 ---
 # <a name="porting-from-unix-to-win32"></a>從 UNIX 移植到 Win32
 
@@ -39,17 +39,9 @@ UNIX 程式設計人員通常會考慮的一個做法是使用協力廠商 UNIX 
 
 [Unix 移轉專案指南](https://technet.microsoft.com/library/bb656287.aspx) \(英文\) 透過提供有關將大量專案從 UNIX 移轉至 Win32 的高階說明，來補充說明《UNIX 自訂應用程式移轉指南》。 該指南針對專案移轉的每個階段所要考量的問題，提出了建議。
 
-### <a name="interopsystemscom"></a>InteropSystems.com
-
-[http://www.interopsystems.com/](http://www.interopsystems.com/)
-
-這個協力廠商的公司網站提供從 UNIX 移植到 Win32 的支援軟體。
-
 ### <a name="c-boost-web-site"></a>C++ Boost 網站
 
-[http://boost.sourceforge.net/regression-logs/](http://boost.sourceforge.net/regression-logs/)
-
-[http://boost.sourceforge.net/boost-build2/](http://boost.sourceforge.net/boost-build2/)
+[https://www.boost.org/](https://www.boost.org/)
 
 ## <a name="porting-unix-applications-directly-to-win32"></a>直接將 UNIX 應用程式移植到 Win32
 

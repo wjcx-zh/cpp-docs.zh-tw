@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197744"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355557"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -101,7 +101,7 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 |[Windows 傳統型精靈](windows-desktop-wizard.md)|使用精靈來建立新的 Windows 專案。|
 |[Active Template Library (ATL)](../atl/atl-com-desktop-components.md)|使用 ATL 程式庫來建立 COM 元件，在C++。|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|使用 MFC 來建立使用對話方塊和控制項的大型或小型的 Windows 應用程式|
-|[ATL 和 MFC 共用類別](../atl-mfc-shared/TOC.md)|使用 CString 例如 ATL 和 MFC 中所共用的類別。|
+|[ATL 和 MFC 共用類別](../atl-mfc-shared/atl-mfc-shared-classes.md)|使用 CString 例如 ATL 和 MFC 中所共用的類別。|
 |[資料存取](../data/data-access-in-cpp.md)| OLE DB 和 ODBC|
 |[文字和字串](../text/text-and-strings-in-visual-cpp.md)|在 Windows 上的各種字串類型。|
 |[用於使用 DirectX 建立遊戲的資源](resources-for-creating-a-game-using-directx.md)

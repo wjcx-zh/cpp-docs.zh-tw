@@ -93,7 +93,8 @@
                   tocHref: /cpp/ide/
                   topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
             - name: 建置 C/C++ 專案
-              tocHref: /cpp/build/building-c-cpp-programs
+              tocHref: /cpp/build/
+              topicHref: /cpp/build/building-c-cpp-programs
               items:
                 - name: 組建參考
                   tocHref: /cpp/build/reference/

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - A4508
 - A4509
 ms.assetid: 52b38267-6023-4bdc-a0ef-863362f48eec
-ms.openlocfilehash: 867ef50065c6ed63a4da6d37523bd5a1f3cbadba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72c1ea64501ef8104fee9bdf914a1464c07c3b76
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167839"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449221"
 ---
 # <a name="arm-assembler-diagnostic-messages"></a>ARM 組合程式診斷訊息
 
@@ -33,13 +33,13 @@ Microsoft ARM 組譯工具 (*armasm*) 遇到它們時發出診斷的警告和錯
 
 ## <a name="syntax"></a>語法
 
-> <em>檔名</em>**(**<em>行號</em>**):** \[**錯誤**|**警告**] **A**<em>數目</em>**:** *訊息*
+> <em>檔名</em> **(** <em>行號</em> **):** \[**錯誤**|**警告**] **A**<em>數目</em> **:** *訊息*
 
 ## <a name="diagnostic-messages---errors"></a>診斷訊息-錯誤
 
 > A2193： 此指令會產生無法預期的行為
 
-ARM 架構無法保證這個指令執行時，會發生什麼事。  如需有關此指令的定義完善的形式的詳細資訊，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?linkid=246464)。
+ARM 架構無法保證這個指令執行時，會發生什麼事。  如需有關此指令的定義完善的形式的詳細資訊，請參閱[ARM 架構參考手冊](https://go.microsoft.com/fwlink/p/?linkid=246464)。
 
 ```asm
     ADD r0, r8, pc         ; A2193: this instruction generates unpredictable behavior
@@ -115,7 +115,7 @@ ALIGN 8           ; OK
 
 > A4509:這種形式的條件式指示已被取代
 
-這種形式的條件式指示已被取代的 ARM ARMv8 架構中。 我們建議您變更程式碼以使用條件式分支。 若要查看仍受到支援的條件式的指示，請參閱[ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?linkid=246464)。
+這種形式的條件式指示已被取代的 ARM ARMv8 架構中。 我們建議您變更程式碼以使用條件式分支。 若要查看仍受到支援的條件式的指示，請參閱[ARM 架構參考手冊](https://go.microsoft.com/fwlink/p/?linkid=246464)。
 
 這個警告不是時，就發出 **-oldit**使用命令列參數。
 

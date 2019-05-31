@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270884"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449539"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (消除重複字串)
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  **/GF**編譯器選項會建立每個唯一字串的可定址區段。 而根據預設，物件檔案可以包含最多 65,536 個可定址的區段。 如果您的程式包含超過 65536 的字串，使用[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)編譯器選項，來建立更多區段。
 
-**/GF**是何時生效[/o1](o1-o2-minimize-size-maximize-speed.md)或是 **/o2**用。
+**/GF**是何時生效[/o1](o1-o2-minimize-size-maximize-speed.md)或是[/o2](o1-o2-minimize-size-maximize-speed.md)用。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 

@@ -1931,22 +1931,22 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f63112f04da317371c15e1fd6ba22fc7e2bd6e1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447716"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450782"
 ---
 # <a name="arm-intrinsics"></a>ARM 內建
 
-MicrosoftC++編譯器 (MSVC) 會提供下列內建函式的 ARM 架構。 如需有關 ARM 的詳細資訊，請參閱 < [ARM 架構參考手冊](http://go.microsoft.com/fwlink/p/?LinkId=522049)並[ARM 組譯工具指南](http://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。
+MicrosoftC++編譯器 (MSVC) 會提供下列內建函式的 ARM 架構。 如需有關 ARM 的詳細資訊，請參閱 < [ARM 架構參考手冊](https://go.microsoft.com/fwlink/p/?LinkId=522049)並[ARM 組譯工具指南](https://go.microsoft.com/fwlink/p/?LinkId=246102)ARM 資訊中心網站上。
 
 ##  <a name="top"></a> NEON
 
 ARM NEON 向量指令集擴充功能，提供類似通用於 x86 和 x64 架構處理器的 MMX 和 SSE 向量指令集中的單一指令多重資料 (SIMD) 功能。
 
-支援 NEON 內建函式，並提供於標頭檔 `arm_neon.h` 中。 NEON 內建函式的 MSVC 支援類似 ARM 編譯器，所說明的 < 附錄 G [ARM 編譯器工具鏈版本 4.1 編譯器參考](http://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 資訊中心網站上。
+支援 NEON 內建函式，並提供於標頭檔 `arm_neon.h` 中。 NEON 內建函式的 MSVC 支援類似 ARM 編譯器，所說明的 < 附錄 G [ARM 編譯器工具鏈版本 4.1 編譯器參考](https://go.microsoft.com/fwlink/p/?LinkId=251083)ARM 資訊中心網站上。
 
 MSVC 和 ARM 編譯器的主要差異是，會將新增 MSVC`_ex`的變化`vldX`和`vstX`向量載入和儲存的指示。 `_ex` 變異採取額外的參數，以指定指標引數的對齊，除此之外，與非 `_ex` 對應項目均相同。
 

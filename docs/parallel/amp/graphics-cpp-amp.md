@@ -2,12 +2,12 @@
 title: 圖形 (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e21c5af094ce90c8e4365ed4263198422ad1905
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405660"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449864"
 ---
 # <a name="graphics-c-amp"></a>圖形 (C++ AMP)
 
@@ -25,7 +25,7 @@ C++AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/reference
 
 ## <a name="short-vector-library"></a>短向量庫
 
-短向量庫提供的功能的一些[向量類型](http://go.microsoft.com/fwlink/p/?linkid=248500)HLSL 中所定義，通常用於定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型為**雙**， **float**， **int**， `norm`， `uint`，和`unorm`。 下表顯示類型名稱。 對於每個類型，還有一個對應**typedef** ，不含底線的名稱。 含底線的類型位於[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 不含底線的類型位於[Concurrency::graphics::direct3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)，讓他們清楚劃分開來，同樣名為基本類型這類 **__int8**並 **__int16**。
+短向量庫提供的功能的一些[向量類型](https://go.microsoft.com/fwlink/p/?linkid=248500)HLSL 中所定義，通常用於定義材質。 短向量是一種資料結構，可保存相同類型的一到四個值。 支援的類型為**雙**， **float**， **int**， `norm`， `uint`，和`unorm`。 下表顯示類型名稱。 對於每個類型，還有一個對應**typedef** ，不含底線的名稱。 含底線的類型位於[concurrency:: graphics 命名空間](../../parallel/amp/reference/concurrency-graphics-namespace.md)。 不含底線的類型位於[Concurrency::graphics::direct3d 命名空間](../../parallel/amp/reference/concurrency-graphics-direct3d-namespace.md)，讓他們清楚劃分開來，同樣名為基本類型這類 **__int8**並 **__int16**。
 
 ||Length 2|長度為 3|長度為 4|
 |-|--------------|--------------|--------------|
@@ -67,7 +67,7 @@ C++AMP 包含在多個 Api [concurrency:: graphics](../../parallel/amp/reference
 
 - 擁有兩個或四個元件的短向量。 唯一的例外狀況是 `double_4`，它不可使用。
 
-`texture` 物件的順位可以是 1、2 或 3。 `texture` 物件只能在呼叫 `parallel_for_each` 的 Lambda 中以傳址方式擷取。 紋理會做為 Direct3D 紋理物件儲存在 GPU 上。 如需 Direct3D 中紋理和材質的詳細資訊，請參閱[Direct3D 11 中紋理的簡介](http://go.microsoft.com/fwlink/p/?linkid=248502)。
+`texture` 物件的順位可以是 1、2 或 3。 `texture` 物件只能在呼叫 `parallel_for_each` 的 Lambda 中以傳址方式擷取。 紋理會做為 Direct3D 紋理物件儲存在 GPU 上。 如需 Direct3D 中紋理和材質的詳細資訊，請參閱[Direct3D 11 中紋理的簡介](https://go.microsoft.com/fwlink/p/?linkid=248502)。
 
 您使用的材質類型可能是圖形程式設計中所使用眾多紋理格式的其中一種。 例如，RGBA 格式可以使用 32 位元，其中 R、G、B 和 A 純量元素各使用 8 位元。 圖形卡的紋理硬體可以根據格式存取個別元素。 例如，如果您使用 RGBA 格式，紋理硬體可以將各 8 位元的元素擷取至 32 位元格式內。 在 C++ AMP 中，您可以設定材質中每個純量元素的位元，如此就能在程式碼中自動存取個別純量元素，而不需使用位元位移。
 
@@ -212,7 +212,7 @@ void UseBitsPerScalarElement() { // Create the image data. // Each unsigned int 
 
 使用[texture:: set](reference/texture-class.md#set)方法，將寫入`texture`物件。 紋理物件可以是唯讀或可讀寫的。 若要讓紋理物件成為可讀取和可寫入，下列條件必須成立：
 
-- T 只有一個純量元件  (不允許短向量)。
+- T 只有一個純量元件 (不允許短向量)。
 
 - T 不是**雙**， `norm`，或`unorm`。
 
@@ -307,7 +307,7 @@ void write2ComponentTexture() {
 
 如您所見，如果您只是寫入主要 Mipmap 層次，則這兩個程式碼範例幾乎一模一樣。 如果您在現有程式碼中使用了 `writeonly_texture_view`，但是您不打算強化該程式碼，則不需要變更它。 不過，如果您想要改善該程式碼，建議您將它重寫為使用 `texture_view`，因為其中的增強功能可支援新的硬體紋理功能。 如需這些新功能的詳細資訊，請繼續閱讀下面內容。
 
-如需有關取代`writeonly_texture_view`，請參閱 <<c2> [ 中的紋理檢視設計概觀C++p](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)機器碼部落格中平行程式設計。</c2>
+如需有關取代`writeonly_texture_view`，請參閱 <<c2> [ 中的紋理檢視設計概觀C++p](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/25/overview-of-the-texture-view-design-in-c-amp.aspx)機器碼部落格中平行程式設計。</c2>
 
 ### <a name="instantiating-texture-view-objects"></a>具現化紋理檢視物件
 
@@ -379,9 +379,9 @@ void write2ComponentTexture() {
 
 若紋理檢視的元素是以浮點類型為基礎 (例如 float、float_2 或 float_4)，則也可以使用紋理取樣讀取，藉此利用硬體對於各種不同篩選模式和定址模式的支援。 C++ AMP 支援計算情節中最常用的兩種篩選模式，也就是點篩選 (最鄰近點) 和線性篩選 (加權平均)，以及四種定址模式，也就是包裝、鏡像、壓制和框線。 如需定址模式的詳細資訊，請參閱[address_mode 列舉](reference/concurrency-graphics-namespace-enums.md#address_mode)。
 
-除了 C++ AMP 直接支援的模式之外，您還可以存取基礎平台的其他篩選模式和定址模式，方法是使用 Interop 應用程式開發介面採用直接使用平台應用程式開發介面建立的紋理取樣器。 例如，Direct3D 支援其他篩選模式 (例如，非等向性篩選)，而且可以對紋理的每個維度套用不同的定址模式。 您可以建立紋理取樣器並使用 Direct3D 應用程式開發介面垂直包裝、水平鏡像以及透過非等向性篩選取樣其座標，然後在 C++ AMP 程式碼中使用 `make_sampler` Interop 應用程式開發介面來運用取樣器。 如需詳細資訊，請參閱[中的紋理取樣C++p](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)機器碼部落格中平行程式設計。
+除了 C++ AMP 直接支援的模式之外，您還可以存取基礎平台的其他篩選模式和定址模式，方法是使用 Interop 應用程式開發介面採用直接使用平台應用程式開發介面建立的紋理取樣器。 例如，Direct3D 支援其他篩選模式 (例如，非等向性篩選)，而且可以對紋理的每個維度套用不同的定址模式。 您可以建立紋理取樣器並使用 Direct3D 應用程式開發介面垂直包裝、水平鏡像以及透過非等向性篩選取樣其座標，然後在 C++ AMP 程式碼中使用 `make_sampler` Interop 應用程式開發介面來運用取樣器。 如需詳細資訊，請參閱[中的紋理取樣C++p](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/07/18/texture-sampling-in-c-amp.aspx)機器碼部落格中平行程式設計。
 
-紋理檢視也支援讀取 Mipmap。 因為具現化時所決定的 MIP 層級範圍可以動態取樣，同時也因為支援具有 1、2 或 4 個元件的元素，所以唯讀紋理檢視 (具有 const 元素類型) 可提供最大的彈性。 讀寫紋理檢視包含擁有一個元件的元素，這類檢視也支援 Mipmap，但只支援具現化時所決定的 Mipmap 層次。 如需詳細資訊，請參閱 <<c0> [ 具有 Mipmap 的紋理](http://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)上平行程式設計機器碼部落格中。
+紋理檢視也支援讀取 Mipmap。 因為具現化時所決定的 MIP 層級範圍可以動態取樣，同時也因為支援具有 1、2 或 4 個元件的元素，所以唯讀紋理檢視 (具有 const 元素類型) 可提供最大的彈性。 讀寫紋理檢視包含擁有一個元件的元素，這類檢視也支援 Mipmap，但只支援具現化時所決定的 Mipmap 層次。 如需詳細資訊，請參閱 <<c0> [ 具有 Mipmap 的紋理](https://blogs.msdn.com/b/nativeconcurrency/archive/2013/08/22/texture-with-mipmaps.aspx)上平行程式設計機器碼部落格中。
 
 ### <a name="writing-to-texture-view-objects"></a>寫入紋理檢視物件
 
@@ -404,7 +404,7 @@ parallel_for_each(w_view.extent, [=](index<2> idx) restrict(amp)
 
 ## <a name="interoperability"></a>互通性
 
-C++ AMP 執行階段支援之間的互通性`texture<T,1>`並[ID3D11Texture1D 介面](http://go.microsoft.com/fwlink/p/?linkId=248503)之間`texture<T,2>`並[ID3D11Texture2D 介面](http://go.microsoft.com/fwlink/p/?linkId=255317)，之間，以及`texture<T,3>`而[ID3D11Texture3D 介面](http://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法會採用`texture`物件，然後傳回`IUnknown`介面。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法會採用`IUnknown`介面並`accelerator_view`物件，然後傳回`texture`物件。
+C++ AMP 執行階段支援之間的互通性`texture<T,1>`並[ID3D11Texture1D 介面](https://go.microsoft.com/fwlink/p/?linkId=248503)之間`texture<T,2>`並[ID3D11Texture2D 介面](https://go.microsoft.com/fwlink/p/?linkId=255317)，之間，以及`texture<T,3>`而[ID3D11Texture3D 介面](https://go.microsoft.com/fwlink/p/?linkId=255377)。 [Get_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#get_texture)方法會採用`texture`物件，然後傳回`IUnknown`介面。 [Make_texture](reference/concurrency-graphics-direct3d-namespace-functions.md#make_texture)方法會採用`IUnknown`介面並`accelerator_view`物件，然後傳回`texture`物件。
 
 ## <a name="see-also"></a>另請參閱
 

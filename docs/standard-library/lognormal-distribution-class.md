@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: bd57b45ec08d044719caa60635f731276794d407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413069"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449787"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 
@@ -92,7 +92,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需有關 LogNormal 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[LogNormal 分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=400917)。
+如需有關 LogNormal 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[LogNormal 分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=400917)。
 
 ## <a name="example"></a>範例
 
@@ -180,7 +180,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -206,7 +206,7 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < s`
+**前置條件：** `0.0 < s`
 
 第一個建構函式會建構預存 `m` 值具有 *m* 值而預存 `s` 值具有 *s* 值的物件。
 
@@ -241,7 +241,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < s`
+**前置條件：** `0.0 < s`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

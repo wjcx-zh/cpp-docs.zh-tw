@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: 30b66c78c6c3477c4da634901058d77d0e362101
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349078"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449992"
 ---
 # <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
 
@@ -63,9 +63,9 @@ void __cpuidex(
 
 `__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 `__cpuidex`內建函式設定至 ecx 暫存器的值*subfunction_id*它會產生之前`cpuid`指令。 這可讓您收集處理器的其他資訊。
 
-如需有關要使用和 Intel 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 IA-32 架構軟體開發人員手冊磁碟區 2:指令集參考](http://go.microsoft.com/fwlink/p/?LinkID=510021)並[Intel 架構指令集延伸程式設計參考](http://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件使用詞彙 「 分葉 」 和 「 對 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需有關要使用和 Intel 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 IA-32 架構軟體開發人員手冊磁碟區 2:指令集參考](https://go.microsoft.com/fwlink/p/?LinkID=510021)並[Intel 架構指令集延伸程式設計參考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件使用詞彙 「 分葉 」 和 「 對 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
 
-如需有關要使用和 AMD 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`AMD64 架構程式設計人員手動磁碟區 3 中的指示：一般用途和系統指令和特定處理器系列的修訂指南中。 如需這些文件和其他資訊的連結，請參閱 AMD[開發人員指南、 手冊與 ISA 文件](http://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 文件使用詞彙 「 函式號碼 」 和 「 子函式號碼 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需有關要使用和 AMD 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`AMD64 架構程式設計人員手動磁碟區 3 中的指示：一般用途和系統指令和特定處理器系列的修訂指南中。 如需這些文件和其他資訊的連結，請參閱 AMD[開發人員指南、 手冊與 ISA 文件](https://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 文件使用詞彙 「 函式號碼 」 和 「 子函式號碼 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
 
 當*function_id*引數為 0， *cpuInfo*[0] 會傳回最高可用非擴充*function_id*處理器支援的值。 處理器製造商編碼在*cpuInfo*[1]， *cpuInfo*[2]，並*cpuInfo*[3]。
 

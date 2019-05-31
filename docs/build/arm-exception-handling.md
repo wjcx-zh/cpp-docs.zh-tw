@@ -2,12 +2,12 @@
 title: ARM 例外狀況處理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: 8a2bae8e42ac6a624bebe7c185ac7e0ade8d5491
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e56284ce8db18ec76b0143253ee1e25f3fd82c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195351"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450489"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外狀況處理
 
@@ -21,7 +21,7 @@ ARM EABI (內嵌應用程式二進位介面) 會指定使用回溯程式碼的�
 
 ### <a name="assumptions"></a>假設
 
-Windows on ARM 的可執行映像檔使用可攜式執行檔 (PE) 格式。 如需詳細資訊，請參閱 < [Microsoft PE 和 COFF 規格](http://go.microsoft.com/fwlink/p/?linkid=84140)。 例外狀況處理資訊會儲存在映像檔的 .pdata 和 .xdata 區段。
+Windows on ARM 的可執行映像檔使用可攜式執行檔 (PE) 格式。 如需詳細資訊，請參閱 < [Microsoft PE 和 COFF 規格](https://go.microsoft.com/fwlink/p/?linkid=84140)。 例外狀況處理資訊會儲存在映像檔的 .pdata 和 .xdata 區段。
 
 例外狀況處理機制會對遵循適用於 Windows on ARM 的 ABI 之程式碼，進行下列假設：
 

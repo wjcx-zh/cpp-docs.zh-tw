@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 600459784b4db620b6b717b5ffdfaf24d1ceb757
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159310"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450666"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 
@@ -93,7 +93,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需有關卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[卡方分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=400529)。
+如需有關卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[卡方分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=400529)。
 
 ## <a name="example"></a>範例
 
@@ -205,7 +205,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -228,7 +228,7 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < p && p < 1.0`
+**前置條件：** `0.0 < p && p < 1.0`
 
 第一個建構函式建構的物件，其預存的 `p` 值具有 *p* 值。
 
@@ -259,7 +259,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < p && p < 1.0`
+**前置條件：** `0.0 < p && p < 1.0`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

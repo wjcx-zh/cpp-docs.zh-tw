@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a336804889a3ad10818ff0883c55f9141f9e210d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375817"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450268"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase 類別
 
@@ -1700,7 +1700,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-命令 ID。 命令識別碼都取自 CGID_MSHTML 命令群組。 這些命令定義於 Mshtmcid.h。 您也可以尋找在線上的清單[MSHTML 命令識別碼](http://go.microsoft.com/fwlink/p/?linkid=149220)。
+命令 ID。 命令識別碼都取自 CGID_MSHTML 命令群組。 這些命令定義於 Mshtmcid.h。 您也可以尋找在線上的清單[MSHTML 命令識別碼](https://go.microsoft.com/fwlink/p/?linkid=149220)。
 
 ### <a name="return-value"></a>傳回值
 

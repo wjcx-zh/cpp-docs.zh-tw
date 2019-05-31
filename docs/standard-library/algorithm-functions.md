@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411170"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450427"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a> random_shuffle
 
-Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱 < [\<隨機 >](../standard-library/random.md)和 Stack Overflow 文章[std:: random_shuffle 方法為何要取代 C + + 14？](http://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱 < [\<隨機 >](../standard-library/random.md)和 Stack Overflow 文章[std:: random_shuffle 方法為何要取代 C + + 14？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
 ## <a name="remove"></a>  remove
 

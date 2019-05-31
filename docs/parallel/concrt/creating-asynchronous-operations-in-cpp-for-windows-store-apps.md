@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413976"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450193"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>建立非同步作業，在C++用於 UWP 應用程式
 
@@ -126,7 +126,7 @@ Windows 執行階段是可用來建立只在特殊作業系統環境中執行的
 
 ![Windows 執行階段 Primes 應用程式](../../parallel/concrt/media/concrt_windows_primes.png "Windows 執行階段 Primes 應用程式")
 
-如需使用 `create_async` 建立可供其他語言使用之非同步工作的範例，請參閱 [在 Bing 地圖服務路線最佳化程式範例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [Windows 8 Asynchronous Operations in C++ with PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(使用 C++ 和 PPL 的 Windows 8 非同步作業)。
+如需使用 `create_async` 建立可供其他語言使用之非同步工作的範例，請參閱 [在 Bing 地圖服務路線最佳化程式範例中使用 C++](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 和 [Windows 8 Asynchronous Operations in C++ with PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)(使用 C++ 和 PPL 的 Windows 8 非同步作業)。
 
 ##  <a name="exethread"></a> 控制執行緒
 

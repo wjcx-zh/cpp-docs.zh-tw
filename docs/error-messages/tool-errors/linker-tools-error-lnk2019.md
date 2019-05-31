@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447703"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449608"
 ---
 # <a name="linker-tools-error-lnk2019"></a>連結器工具錯誤 LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-若要修正這個錯誤，變更`unsigned short`要`wchar_t`或`WCHAR`，或藉由編譯 LNK2019g.cpp **/zc: wchar_t-**。
+若要修正這個錯誤，變更`unsigned short`要`wchar_t`或`WCHAR`，或藉由編譯 LNK2019g.cpp **/zc: wchar_t-** 。
 
 ## <a name="additional-resources"></a>其他資源
 
-如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析的外部符號錯誤以及如何修正它？](http://stackoverflow.com/q/12573816/2002113)。
+如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析的外部符號錯誤以及如何修正它？](https://stackoverflow.com/q/12573816/2002113)。
 

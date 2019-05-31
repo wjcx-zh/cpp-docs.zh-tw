@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349891"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449957"
 ---
 # <a name="c-amp-overview"></a>C++ AMP 概觀
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>數學程式庫
 
-C++AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)支援雙精確度函式。 它也提供支援單精確度函式中，雖然仍需要的硬體上的雙精確度支援。 其符合[C99 規格 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整雙精確度。 您可以判斷它是否會藉由檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 Fast math 程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組數學函式。 這些函式僅支援`float`運算元，更快速地執行，但精確度不如雙精確度數學程式庫中。 函式內\<amp_math.h > 標頭檔與所有使用宣告`restrict(amp)`。 中的函式\<cmath> > 標頭檔匯入至兩者`fast_math`和`precise_math`命名空間。 **限制**關鍵字用來區別\<cmath> > 版本和C++AMP 版本。 下列程式碼會計算使用快速方法，是計算網域中每個值的基底 10 對數。
+C++AMP 包含兩個數學程式庫。 中的雙精確度程式庫[concurrency:: precise_math 命名空間](../../parallel/amp/reference/concurrency-precise-math-namespace.md)支援雙精確度函式。 它也提供支援單精確度函式中，雖然仍需要的硬體上的雙精確度支援。 其符合[C99 規格 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887)。 加速器必須支援完整雙精確度。 您可以判斷它是否會藉由檢查的值[accelerator:: supports_double_precision 資料成員](reference/accelerator-class.md#supports_double_precision)。 Fast math 程式庫，請在[concurrency:: fast_math 命名空間](../../parallel/amp/reference/concurrency-fast-math-namespace.md)，包含另一組數學函式。 這些函式僅支援`float`運算元，更快速地執行，但精確度不如雙精確度數學程式庫中。 函式內\<amp_math.h > 標頭檔與所有使用宣告`restrict(amp)`。 中的函式\<cmath> > 標頭檔匯入至兩者`fast_math`和`precise_math`命名空間。 **限制**關鍵字用來區別\<cmath> > 版本和C++AMP 版本。 下列程式碼會計算使用快速方法，是計算網域中每個值的基底 10 對數。
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ C++AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此文
 
 - [在 UWP 應用程式中使用 C++ AMP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [逐步解說：建立基本 Windows 執行階段元件中的C++然後從 JavaScript 呼叫該元件](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [逐步解說：建立基本 Windows 執行階段元件中的C++然後從 JavaScript 呼叫該元件](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Bing 地圖服務路線最佳化程式，在 JavaScript 中的 Windows 市集應用程式和C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Bing 地圖服務路線最佳化程式，在 JavaScript 中的 Windows 市集應用程式和C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [如何使用C++從 pC#使用 Windows 執行階段](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [如何使用C++從 pC#使用 Windows 執行階段](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [如何使用C++從 pC#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [如何使用C++從 pC#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [從 Managed 程式碼呼叫原生函式](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ C++AMP 包含針對加速圖形程式設計所設計的圖形程式庫。 此文
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Lambda 運算式語法](../../cpp/lambda-expression-syntax.md)<br/>
 [參考 (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[機器碼部落格中的平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[機器碼部落格中的平行程式設計](https://go.microsoft.com/fwlink/p/?linkid=238472)

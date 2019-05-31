@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916c37e3283f40ff5ded865a573ff45839de6e2a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161013"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449629"
 ---
 # <a name="linker-tools-error-lnk2001"></a>連結器工具錯誤 LNK2001
 
@@ -71,7 +71,7 @@ ms.locfileid: "62161013"
 
 目前沒有任何標準[C++命名](../../error-messages/tool-errors/name-decoration.md)編譯器廠商或不同的編譯器版本之間。 因此，連結以其他編譯器編譯的目的檔不可能會產生相同的命名配置，因而造成 LNK2001 錯誤。
 
-[混用內嵌和非內嵌編譯選項](../../error-messages/tool-errors/function-inlining-problems.md)上不同的模組可能會造成 LNK2001。 如果C++函式內嵌開啟與建立程式庫 (**/Ob1**或 **/ob2**)，但對應的標頭檔描述該函式已內嵌已關閉 (沒有`inline`關鍵字)，發生此錯誤。 若要修正此問題，定義的函式`inline`您在其他原始程式檔中包含的標頭檔。
+[混用內嵌和非內嵌編譯選項](../../error-messages/tool-errors/function-inlining-problems.md)上不同的模組可能會造成 LNK2001。 如果C++函式內嵌開啟與建立程式庫 ( **/Ob1**或 **/ob2**)，但對應的標頭檔描述該函式已內嵌已關閉 (沒有`inline`關鍵字)，發生此錯誤。 若要修正此問題，定義的函式`inline`您在其他原始程式檔中包含的標頭檔。
 
 如果您使用`#pragma inline_depth`編譯器指示詞，請確定您有[值為 2 或更新版本的組](../../error-messages/tool-errors/function-inlining-problems.md)，並確定您也使用[/Ob1](../../build/reference/ob-inline-function-expansion.md)或是[/ob2](../../build/reference/ob-inline-function-expansion.md)編譯器選項。
 
@@ -101,5 +101,5 @@ C++編譯器和連結器使用[名稱裝飾](../../error-messages/tool-errors/na
 
 ## <a name="additional-resources"></a>其他資源
 
-如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析的外部符號錯誤以及如何修正它？](http://stackoverflow.com/q/12573816/2002113)。
+如需 LNK2001 可能原因和解決方案的詳細資訊，請參閱 Stack Overflow 的問題[什麼是未定義參考/未解析的外部符號錯誤以及如何修正它？](https://stackoverflow.com/q/12573816/2002113)。
 

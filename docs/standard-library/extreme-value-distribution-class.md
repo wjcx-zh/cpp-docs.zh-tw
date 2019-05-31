@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405140"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451184"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
 
@@ -90,7 +90,7 @@ public:
 
 如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需極值分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Extreme Value Distribution](http://go.microsoft.com/fwlink/p/?linkid=401110) (極值分佈)。
+如需極值分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Extreme Value Distribution](https://go.microsoft.com/fwlink/p/?linkid=401110) (極值分佈)。
 
 ## <a name="example"></a>範例
 
@@ -177,7 +177,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -203,7 +203,7 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < b`
+**前置條件：** `0.0 < b`
 
 第一個建構函式建構的物件，其預存的 `a` 值具有 *a_value* 值，而該值的預存 `b` 值則具有 *b_value* 值。
 
@@ -238,7 +238,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < b`
+**前置條件：** `0.0 < b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

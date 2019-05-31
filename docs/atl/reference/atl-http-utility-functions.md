@@ -2,12 +2,12 @@
 title: ATL HTTP 公用程式函式
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: ed01253c579cb6bb529c65e65b7e5ce8686e0b27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f26a23190f9358ff8913e35f5ed7274c8b274ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260866"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449959"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP 公用程式函式
 
@@ -279,7 +279,7 @@ inline void SystemTimeToHttpDate(
 若要以 HTTP 的格式字串來取得系統時間。
 
 *strTime*<br/>
-接收 HTTP 日期時間，如 RFC 2616 中所定義的字串變數的參考 ([http://www.ietf.org/rfc/rfc2616.txt](http://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([http://www.ietf.org/rfc/rfc1123.txt](http://www.ietf.org/rfc/rfc1123.txt))。
+接收 HTTP 日期時間，如 RFC 2616 中所定義的字串變數的參考 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) 和 RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt))。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: a5dcd2ed80a2858ac08d2d8e9cb03095ddfec5b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06a7cbc8b054075f881474dbf49ad3bd42f0a9dc
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159674"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450678"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 類別
 
@@ -97,7 +97,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需有關 Gamma 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Gamma 分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=401111)。
+如需有關 Gamma 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Gamma 分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=401111)。
 
 ## <a name="example"></a>範例
 
@@ -184,7 +184,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -210,7 +210,7 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < alpha` 和 `0.0 < beta`
+**前置條件：** `0.0 < alpha` 和 `0.0 < beta`
 
 第一個建構函式會建構預存 `alpha` 值具有 *alpha* 值而預存 `beta` 值具有 *beta* 值的物件。
 
@@ -245,7 +245,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < alpha` 和 `0.0 < beta`
+**前置條件：** `0.0 < alpha` 和 `0.0 < beta`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

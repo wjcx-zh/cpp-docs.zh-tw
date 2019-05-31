@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 2aeb45054a06446c1fae092d4c07f297580684ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351231"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450233"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 類別
 
@@ -97,7 +97,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需柯西分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Cauchy Distribution](http://go.microsoft.com/fwlink/p/?linkid=400523) (柯西分佈)。
+如需柯西分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Cauchy Distribution](https://go.microsoft.com/fwlink/p/?linkid=400523) (柯西分佈)。
 
 ## <a name="example"></a>範例
 
@@ -236,7 +236,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -262,7 +262,7 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < b`
+**前置條件：** `0.0 < b`
 
 第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。
 
@@ -297,7 +297,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < b`
+**前置條件：** `0.0 < b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

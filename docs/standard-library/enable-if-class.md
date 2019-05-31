@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413758"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451260"
 ---
 # <a name="enableif-class"></a>enable_if 類別
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-在 C++ 中，範本參數的替代失敗本身並非錯誤；這稱為 *SFINAE* (替代失敗不是錯誤)。 `enable_if` 通常用來從多載解析移除候選 (亦即，它會選出多載集)，因此可能會拒絕某個定義，而使用另一個定義。 這符合 SFINAE 行為。 如需 SFINAE 的詳細資訊，請參閱 Wikipedia 上的 [Substitution failure is not an error](http://go.microsoft.com/fwlink/p/?linkid=394798) (替代失敗不是錯誤)。
+在 C++ 中，範本參數的替代失敗本身並非錯誤；這稱為 *SFINAE* (替代失敗不是錯誤)。 `enable_if` 通常用來從多載解析移除候選 (亦即，它會選出多載集)，因此可能會拒絕某個定義，而使用另一個定義。 這符合 SFINAE 行為。 如需 SFINAE 的詳細資訊，請參閱 Wikipedia 上的 [Substitution failure is not an error](https://go.microsoft.com/fwlink/p/?linkid=394798) (替代失敗不是錯誤)。
 
 以下是四個範例情節：
 
@@ -109,7 +109,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 
 `enable_if` 功能十分強大，但是誤用也十分危險。  因為它的目的是讓候選項在多載解析之前消失，所以誤用的效果可能會讓人十分混淆。  部分建議如下：
 
-- 請勿使用 `enable_if`，在編譯時期選取不同的實作。 請勿針對 `enable_if` 寫入一個 `CONDITION`，而針對 `!CONDITION` 寫入另一個。  請改用「標記分派」模式，例如，根據提供給實作的迭代器強度來選取實作的演算法。
+- 請勿使用 `enable_if`，在編譯時期選取不同的實作。 請勿針對 `enable_if` 寫入一個 `CONDITION`，而針對 `!CONDITION` 寫入另一個。  請改用「標記分派」  模式，例如，根據提供給實作的迭代器強度來選取實作的演算法。
 
 - 請勿使用 `enable_if` 來強制執行需求。  如果您想要驗證範本參數，但驗證失敗而導致錯誤，則請改用 [static_assert](../cpp/static-assert.md)，而不要選取另一個實作。
 
@@ -133,7 +133,7 @@ C++11 已解決這項模稜兩可，方法是使用 `enable_if` 來確定**僅�
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 

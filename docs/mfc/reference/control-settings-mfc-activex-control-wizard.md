@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d7653e61e6aada9205f599cf7a7ca6187dd139d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373275"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450552"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>MFC ActiveX 控制項精靈、控制項設定
 
@@ -57,7 +57,7 @@ ms.locfileid: "62373275"
    指定控制項有標準的 Windows**關於** 對話方塊中，以顯示版本號碼和著作權資訊。
 
    > [!NOTE]
-   > 使用者如何存取控制項的說明取決於您如何實作的說明，以及是否已與容器說明整合該控制項的說明。 如需有關如何在整合的說明，請[MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)網站上搜尋 「 新增即時線上說明以 MFC ActiveX 控制項 」。
+   > 使用者如何存取控制項的說明取決於您如何實作的說明，以及是否已與容器說明整合該控制項的說明。 如需有關如何在整合的說明，請[MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542)網站上搜尋 「 新增即時線上說明以 MFC ActiveX 控制項 」。
 
    當您選取此選項時，它會插入`AboutBox`控制方法，在專案控制項類別 (C*ProjName*Ctrl.cpp) 並將 aboutbox 加入至專案分派對應。 根據預設，這個選項是選取的。
 
@@ -87,7 +87,7 @@ ms.locfileid: "62373275"
 
 - **做為簡單框架控制項**
 
-   指定控制項是其他控制項的容器，藉由設定控制項的位元 OLEMISC_SIMPLEFRAME。 如需詳細資訊，在[MSDN Library](http://go.microsoft.com/fwlink/p/?linkid=150542)網站上搜尋 「 簡單框架網站內含項目 」。
+   指定控制項是其他控制項的容器，藉由設定控制項的位元 OLEMISC_SIMPLEFRAME。 如需詳細資訊，在[MSDN Library](https://go.microsoft.com/fwlink/p/?linkid=150542)網站上搜尋 「 簡單框架網站內含項目 」。
 
 - **以非同步方式載入屬性**
 

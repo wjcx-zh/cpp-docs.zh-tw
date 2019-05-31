@@ -21,12 +21,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: 4e3da750b174fa92e28c1d0d5a8cbc035738ee51
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 72d65ce7471ed047ab8347a45c58a6b8a9f39a7a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837283"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450855"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (呼叫慣例)
 
@@ -41,17 +41,17 @@ ms.locfileid: "65837283"
 
 ## <a name="remarks"></a>備註
 
-根據預設，**/Gd** 會指定所有函式的 [__cdecl](../../cpp/cdecl.md) 呼叫慣例，但 C++ 成員函式和標記為 [__stdcall](../../cpp/stdcall.md)、[__fastcall](../../cpp/fastcall.md) 或 [__vectorcall](../../cpp/vectorcall.md) 的函式除外。
+根據預設， **/Gd** 會指定所有函式的 [__cdecl](../../cpp/cdecl.md) 呼叫慣例，但 C++ 成員函式和標記為 [__stdcall](../../cpp/stdcall.md)、[__fastcall](../../cpp/fastcall.md) 或 [__vectorcall](../../cpp/vectorcall.md) 的函式除外。
 
 **/Gr** 會指定所有函式的 `__fastcall` 呼叫慣例，但 C++ 成員函式、名為 `main` 的函式和標記為 `__cdecl`、`__stdcall` 或 `__vectorcall` 的函式除外。 所有 `__fastcall` 函式都必須有原型。 此呼叫慣例僅供以 x86 為目標的編譯器使用，以其他架構為目標的編譯器會忽略此呼叫慣例。
 
 **/Gz** 會指定所有函式的 `__stdcall` 呼叫慣例，但 C++ 成員函式、名為 `main` 的函式和標記為 `__cdecl`、`__fastcall` 或 `__vectorcall` 的函式除外。 所有 `__stdcall` 函式都必須有原型。 此呼叫慣例僅供以 x86 為目標的編譯器使用，以其他架構為目標的編譯器會忽略此呼叫慣例。
 
-**/Gv** 會指定所有函式的 `__vectorcall` 呼叫慣例，但 C++ 成員函式、名為 main 的函式、具有 `vararg` 變數引數清單的函式或以衝突 `__cdecl`、`__stdcall` 或 `__fastcall` 屬性標示的函式除外。 此呼叫慣例只可用在支援 /arch:SSE2 及更新版本的 x86 和 x64 架構上，以 ARM 架構為目標的編譯器會忽略此呼叫慣例。
+**/Gv**指定`__vectorcall`以外的所有函式的呼叫慣例C++成員函式、 函式`main`，與函式`vararg`變數引數清單或會標有衝突的函式`__cdecl`， `__stdcall`，或`__fastcall`屬性。 此呼叫慣例只可用在支援 /arch:SSE2 及更新版本的 x86 和 x64 架構上，以 ARM 架構為目標的編譯器會忽略此呼叫慣例。
 
 函式若接受可變數目的引數，則必須標示為 `__cdecl`。
 
-**/Gd**、**/Gr**、**/Gv** 和 **/Gz** 都與 [/clr: safe](clr-common-language-runtime-compilation.md) 或 **/clr: pure** 不相容。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代，而且無法在 Visual Studio 2017 及更新版本中使用。
+**/Gd**、 **/Gr**、 **/Gv** 和 **/Gz** 都與 [/clr: safe](clr-common-language-runtime-compilation.md) 或 **/clr: pure** 不相容。 **/clr:pure** 和 **/clr:safe** 編譯器選項在 Visual Studio 2015 中已被取代，而且無法在 Visual Studio 2017 及更新版本中使用。
 
 > [!NOTE]
 > 根據預設，x86 處理器的 C++ 成員函式會使用 [__thiscall](../../cpp/thiscall.md)。
@@ -70,12 +70,12 @@ ms.locfileid: "65837283"
 
 ## <a name="fastcall-specifics"></a>__fastcall 特性
 
-`__fastcall` 函式的某些引數會傳入暫存器 (適用於 x86 處理器、ECX 和 EDX)，而其餘部分會由右至左地推入堆疊。 所呼叫的常式會在堆疊傳回之前，從堆疊中取出這些引數。 通常，**/Gr** 會縮短執行時間。
+`__fastcall` 函式的某些引數會傳入暫存器 (適用於 x86 處理器、ECX 和 EDX)，而其餘部分會由右至左地推入堆疊。 所呼叫的常式會在堆疊傳回之前，從堆疊中取出這些引數。 通常， **/Gr** 會縮短執行時間。
 
 > [!NOTE]
 > 當您對以內嵌組件語言所撰寫的任何函式使用 `__fastcall` 呼叫慣例時，應格外小心。 暫存器的使用可能會與編譯器的使用發生衝突。
 
-對於 C 語言，`__fastcall` 命名慣例會使用前面加上 at 符號 (**\@**) 的函式名稱，而後面會接著以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
+對於 C 語言，`__fastcall` 命名慣例會使用前面加上 at 符號 ( **\@** ) 的函式名稱，而後面會接著以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
 
 `@function_name@number`
 
@@ -85,7 +85,7 @@ ms.locfileid: "65837283"
 
 `__stdcall` 函式的引數會從右至左地推送到堆疊上，而所呼叫的常式會在堆疊傳回之前，從堆疊中取出這些引數。
 
-對於 C 語言，`__stdcall` 命名慣例會使用前面加上底線 (**\_**) 的函式名稱，而後面會接著 at 符號 (**\@**) 和以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
+對於 C 語言，`__stdcall` 命名慣例會使用前面加上底線 ( **\_** ) 的函式名稱，而後面會接著 at 符號 ( **\@** ) 和以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
 
 `_functionname@number`
 
@@ -93,7 +93,7 @@ ms.locfileid: "65837283"
 
 `__vectorcall` 函式的整數引數會以值來傳遞，並使用最多兩個 (在 x86 上) 或四個 (在 x64 上) 整數暫存器，以及針對浮點和向量值使用最多六個 XMM 暫存器，其餘部分則由右至左地傳遞到堆疊上。 所呼叫的函式會在堆疊傳回前，將其清除。 向量和浮點會傳回在 XMM0 中傳回的值。
 
-對於 C 語言，`__vectorcall` 命名慣例會使用後面加上兩個 at 符號 (**\@\@**) 的函式名稱，且後方還會加上以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
+對於 C 語言，`__vectorcall` 命名慣例會使用後面加上兩個 at 符號 ( **\@\@** ) 的函式名稱，且後方還會加上以位元組為單位的函式引數大小。 不會執行大小寫轉譯。 編譯器會使用此範本作為命名慣例：
 
 `functionname@@number`
 
@@ -101,7 +101,7 @@ ms.locfileid: "65837283"
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [C/C++] > [進階] 屬性頁。
+1. 選取 [C/C++]   > [進階]  屬性頁。
 
 1. 修改**呼叫慣例**屬性。
 

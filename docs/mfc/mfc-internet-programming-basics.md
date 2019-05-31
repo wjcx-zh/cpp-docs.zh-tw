@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239123"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449709"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC 網際網路程式設計基本概念
 
@@ -70,11 +70,11 @@ MFC 提供支援網際網路程式設計的類別。 您可以使用[COleControl
 
 ##  <a name="_core_web_sites_for_more_information"></a> 如需詳細資訊的網站
 
-如需 Microsoft 網際網路技術的詳細資訊，請參閱[Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322)網站。 （恕不另行通知可能會變更連結）。
+如需 Microsoft 網際網路技術的詳細資訊，請參閱[Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322)網站。 （恕不另行通知可能會變更連結）。
 
 適用於開發人員這個網站包含有關使用 Microsoft 開發工具和技術，以及最新和近期會議的頭條報導。 從這個頁面上，您可以跳到許多相關的開發人員網站，包括.NET 和 XML 開發人員中心。 您也可以下載 beta 版 Sdk 與範例。
 
-[World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125)發行 HTML、 HTTP、 CGI，和其他全球資訊網的技術規格。
+[World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125)發行 HTML、 HTTP、 CGI，和其他全球資訊網的技術規格。
 
 ##  <a name="_core_more_internet_help"></a> 更多的網際網路協助
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: cba28039cb7755149b35a47ddee82b6274fe4c72
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: a12c2bd2c1c1963630a1bd74b56f2c832573cc94
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558218"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450521"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>逐步解說：更新 MFC Scribble 應用程式 （第 1 部分）
 
@@ -24,7 +24,7 @@ ms.locfileid: "64558218"
 
 ## <a name="prerequisites"></a>必要條件
 
-[Scribble 1.0 MFC 範例](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 如需轉換至 Visual Studio 2017 或更新版本的說明，請參閱[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
+[Scribble 1.0 MFC 範例](https://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)。 如需轉換至 Visual Studio 2017 或更新版本的說明，請參閱[移植指南：MFC Scribble](../porting/porting-guide-mfc-scribble.md)。
 
 ##  <a name="top"></a> 章節
 
@@ -171,7 +171,7 @@ ms.locfileid: "64558218"
 
 1. 在 設計 檢視中，按一下**應用程式** 按鈕以顯示其屬性。 請變更屬性值，如下所示：**映像**來`IDB_RIBBON_MAIN`，**提示**來`File`，**金鑰**至`f`，**大型影像**來`IDB_RIBBON_FILELARGE`，及**Small Images**至`IDB_RIBBON_FILESMALL`。
 
-1. 下列修改建立當使用者按一下出現的功能表**應用程式** 按鈕。 按一下省略符號 (**...**) 旁**主要項目**以開啟**項目編輯器**。
+1. 下列修改建立當使用者按一下出現的功能表**應用程式** 按鈕。 按一下省略符號 ( **...** ) 旁**主要項目**以開啟**項目編輯器**。
 
    1. 具有**項目**型別 **] 按鈕**選取，按一下 [**新增**加入的按鈕。 變更**標題**要`&New`，**識別碼**來`ID_FILE_NEW`，**映像**到`0`，**大型影像**以`0`.
 
@@ -199,7 +199,7 @@ ms.locfileid: "64558218"
 
 1. 以下修改會出現 [結束] 按鈕建立底部**應用程式**按鈕功能表。
 
-   1. 在 **屬性** 視窗中，按一下省略符號 (**...**) 旁 **按鈕** 以開啟 **項目編輯器** 。
+   1. 在 **屬性** 視窗中，按一下省略符號 ( **...** ) 旁 **按鈕** 以開啟 **項目編輯器** 。
 
    1. 具有**項目**型別 **] 按鈕**選取，按一下 [**新增**加入的按鈕。 變更**標題**要`E&xit`，**識別碼**來`ID_APP_EXIT`，**映像**到`8`。
 

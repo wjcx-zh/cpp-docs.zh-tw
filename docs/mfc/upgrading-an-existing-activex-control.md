@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57d94a51d9dfb78dfaf3a690c43c74a2d6ab6db3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180755"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450609"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>升級現有的 ActiveX 控制項
 
@@ -181,7 +181,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 - 使用程式碼基底參數
 
-若要使用授權的控制項要在未經授權的電腦上的 HTML 頁面中，您必須產生的授權封裝檔案 (LPK)。 LPK 檔案包含 HTML 網頁中的授權控制項的執行階段授權。 透過 LPK_TOOL 會產生這個檔案。ActiveX SDK 隨附的 EXE。 如需詳細資訊，請參閱 MSDN 網站，網址[ http://msdn.microsoft.com ](http://msdn.microsoft.com)。
+若要使用授權的控制項要在未經授權的電腦上的 HTML 頁面中，您必須產生的授權封裝檔案 (LPK)。 LPK 檔案包含 HTML 網頁中的授權控制項的執行階段授權。 透過 LPK_TOOL 會產生這個檔案。ActiveX SDK 隨附的 EXE。 如需詳細資訊，請參閱 MSDN 網站，網址[ https://msdn.microsoft.com ](https://msdn.microsoft.com)。
 
 #### <a name="to-create-an-lpk-file"></a>若要建立的 LPK 檔案
 

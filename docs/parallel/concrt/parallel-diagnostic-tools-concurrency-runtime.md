@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346306"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449241"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>平行診斷工具 (並行執行階段)
 
@@ -27,7 +27,7 @@ Visual Studio 偵錯工具包含**平行堆疊** 視窗中，**平行工作**視
 
 並行執行階段會使用[的 Windows 事件追蹤](/windows/desktop/ETW/event-tracing-portal)(ETW) 的各種事件發生時通知檢測工具，分析工具，例如。 這些事件包括啟用或停用排程器時、 當內容開始、 結束、 封鎖、 解除封鎖，或產生，以及當平行演算法的開頭或結尾。
 
-之類的工具[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)利用這項功能; 因此，您通常不必直接使用這些事件。 不過，這些事件可讓開發自訂的分析工具時，或當您使用事件追蹤工具這類[Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628)。
+之類的工具[並行視覺化檢視](/visualstudio/profiling/concurrency-visualizer)利用這項功能; 因此，您通常不必直接使用這些事件。 不過，這些事件可讓開發自訂的分析工具時，或當您使用事件追蹤工具這類[Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628)。
 
 並行執行階段會引發這些事件，只有當啟用追蹤時。 呼叫[concurrency:: enabletracing](reference/concurrency-namespace-functions.md#enabletracing)函式來啟用事件追蹤並[disabletracing](reference/concurrency-namespace-functions.md#disabletracing)函式來停用追蹤。
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323631"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449570"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。
+使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_** 。
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 應用程式會使用影像清單函式，來顯示影像，當被拖曳的項目。
 
-`CImageList`物件是永久的而且您必須將它完成時刪除。 例如：
+`CImageList`物件是永久的而且您必須將它完成時刪除。 例如:
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
@@ -1505,7 +1505,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="remarks"></a>備註
 
-協助工具是應用程式，協助殘障人士使用的電腦。 存取範圍識別項會由`IAccessible`介面，以唯一地指定在視窗中的 項目。 如需有關協助工具的識別項的詳細資訊，請搜尋 「 有關 Active Accessibility 支援 「 會議中發表[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+協助工具是應用程式，協助殘障人士使用的電腦。 存取範圍識別項會由`IAccessible`介面，以唯一地指定在視窗中的 項目。 如需有關協助工具的識別項的詳細資訊，請搜尋 「 有關 Active Accessibility 支援 「 會議中發表[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 這個方法會傳送[TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem)訊息，Windows SDK 中所述。
 
@@ -1541,7 +1541,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>備註
 
-協助工具是應用程式，協助殘障人士使用的電腦。 存取範圍識別項會由`IAccessible`介面，以唯一地指定在視窗中的 項目。 如需有關協助工具的識別項的詳細資訊，請搜尋 「 有關 Active Accessibility 支援 「 會議中發表[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+協助工具是應用程式，協助殘障人士使用的電腦。 存取範圍識別項會由`IAccessible`介面，以唯一地指定在視窗中的 項目。 如需有關協助工具的識別項的詳細資訊，請搜尋 「 有關 Active Accessibility 支援 「 會議中發表[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 這個方法會傳送[TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid)訊息，Windows SDK 中所述。
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>備註
 
-如需有關工具提示與提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 中發表[Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322)。
+如需有關工具提示與提示之間的差異的詳細資訊，請搜尋 「 工具提示和資訊提示 」 中發表[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)。
 
 這個方法會傳送[TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip)訊息，Windows SDK 中所述。
 

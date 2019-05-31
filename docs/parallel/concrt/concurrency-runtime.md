@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414005"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449690"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 
@@ -63,7 +63,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |-|-|
 |[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重點来牢記在心，當您使用並行執行階段產生非同步作業的 UWP 應用程式中。|
 |[逐步解說：使用工作和 XML HTTP 要求進行連線](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|顯示如何結合使用 PPL 工作`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|
-|[Windows 執行階段應用程式範例](http://code.msdn.microsoft.com/windowsapps)|包含可下載的程式碼範例和示範應用程式，針對 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|
+|[Windows 執行階段應用程式範例](https://code.msdn.microsoft.com/windowsapps)|包含可下載的程式碼範例和示範應用程式，針對 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的資料流程程式撰寫
 
@@ -99,8 +99,8 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 |||
 |-|-|
 |[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，Windows 執行階段應用程式，使用C++和 XAML。|
-|[機器碼平行程式設計部落格](http://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
-|[C++ 和機器碼平行程式設計論壇](http://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
+|[機器碼平行程式設計部落格](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
+|[C++ 和機器碼平行程式設計論壇](https://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
 |[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|
 
 ## <a name="see-also"></a>另請參閱

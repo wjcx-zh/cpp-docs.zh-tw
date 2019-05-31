@@ -2,12 +2,12 @@
 title: 為 Windows XP 設定程式
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837130"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450697"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>為 Windows XP 設定程式
 
@@ -17,7 +17,7 @@ Visual Studio 2019 和更新版本不包含使用 v142 工具組建立 Windows X
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>安裝 Windows XP 平台工具組
 
-若要在 Visual Studio 2017 中取得以 Windows XP 和 Windows Server 2003 為目標的平台工具組和元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或選擇 [修改] 以修改現有的安裝時，請確實選取 [使用 C++ 的桌面開發] 工作負載。 在此工作負載的選擇性元件清單中，選擇 [C++ 的 Windows XP 支援]，然後選擇 [安裝] 或 [修改]。
+若要在 Visual Studio 2017 中取得以 Windows XP 和 Windows Server 2003 為目標的平台工具組和元件，請執行 Visual Studio 安裝程式。 當您初次安裝 Visual Studio 或選擇 [修改]  以修改現有的安裝時，請確實選取 [使用 C++ 的桌面開發]  工作負載。 在此工作負載的選擇性元件清單中，選擇 [C++ 的 Windows XP 支援]  ，然後選擇 [安裝]  或 [修改]  。
 
 ## <a name="windows-xp-targeting-experience"></a>以 Windows XP 為目標的體驗
 
@@ -25,9 +25,9 @@ Visual Studio 2019 和更新版本不包含使用 v142 工具組建立 Windows X
 
 #### <a name="to-target-windows-xp"></a>以 Windows XP 為目標
 
-1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。
+1. 在方案總管  中，開啟專案的捷徑功能表，然後選擇 [屬性]  。
 
-1. 在專案的 [屬性頁] 對話方塊中，於 [組態屬性] > [一般] 下方將 [平台工具組] 屬性設為所需的 Windows XP 工具組。 例如，選擇 **Visual Studio 2017 - Windows XP (v141_xp)**，以使用 Visual Studio 2017 中的 Microsoft C++ 編譯器建立適用於 Windows XP 和 Windows Server 2003 的程式碼。
+1. 在專案的 [屬性頁]  對話方塊中，於 [組態屬性]   > [一般]  下方將 [平台工具組]  屬性設為所需的 Windows XP 工具組。 例如，選擇 **Visual Studio 2017 - Windows XP (v141_xp)** ，以使用 Visual Studio 2017 中的 Microsoft C++ 編譯器建立適用於 Windows XP 和 Windows Server 2003 的程式碼。
 
 ### <a name="c-runtime-support"></a>C++ 執行階段支援
 
@@ -69,4 +69,4 @@ Visual Studio 所安裝的平台工具組支援下列程式庫 (視目標而定)
 
 - **建置 HLSL**
 
-   根據預設，Windows XP 工具組不會編譯 HLSL 原始程式碼檔。 若要編譯 HLSL 檔，請下載及安裝 2010 年 6 月的 DirectX SDK，然後再設定專案的 VC 目錄以包含這個檔案。 如需詳細資訊，請參閱 [2010 年 6 月的 DirectX SDK 下載頁面](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)中的「DirectX SDK 不會註冊 Visual Studio 2010 的 Include/程式庫路徑」一節。
+   根據預設，Windows XP 工具組不會編譯 HLSL 原始程式碼檔。 若要編譯 HLSL 檔，請下載及安裝 2010 年 6 月的 DirectX SDK，然後再設定專案的 VC 目錄以包含這個檔案。 如需詳細資訊，請參閱 [2010 年 6 月的 DirectX SDK 下載頁面](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)中的「DirectX SDK 不會註冊 Visual Studio 2010 的 Include/程式庫路徑」一節。

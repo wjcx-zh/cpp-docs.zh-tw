@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: cff7883c0b563e7d6a377bffcd0e48192dc01071
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159804"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449928"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 
@@ -96,7 +96,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](http://go.microsoft.com/fwlink/p/?linkid=400899) (F 分佈)。
+如需 F 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [F-Distribution](https://go.microsoft.com/fwlink/p/?linkid=400899) (F 分佈)。
 
 ## <a name="example"></a>範例
 
@@ -233,7 +233,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -259,7 +259,7 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < m` 和 `0.0 < n`
+**前置條件：** `0.0 < m` 和 `0.0 < n`
 
 第一個建構函式會建構物件，該物件的預存 `m` 值為 *m* 值，而該值的預存 `n` 值為 *n* 值。
 
@@ -294,7 +294,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < m` 和 `0.0 < n`
+**前置條件：** `0.0 < m` 和 `0.0 < n`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

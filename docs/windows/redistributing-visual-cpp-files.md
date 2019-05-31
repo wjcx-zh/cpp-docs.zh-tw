@@ -8,21 +8,21 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388159"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450614"
 ---
 # <a name="redistributing-visual-c-files"></a>轉散發 Visual C++ 檔案
 
 > [!NOTE]
-> 您來到這裡是因為想要下載其中一個 Visual C++ 執行階段檔案嗎？ 移至[Microsoft 網站](http://www.microsoft.com/)，然後輸入**視覺化C++可轉散發套件**在搜尋方塊中。 下載並安裝電腦架構的可轉散發套件 (例如，如果您執行 64 位元 Windows，則為 x64) 以及您所需的 Visual C++ 版本 (例如 2015)。
+> 您來到這裡是因為想要下載其中一個 Visual C++ 執行階段檔案嗎？ 移至[Microsoft 網站](https://www.microsoft.com/)，然後輸入**視覺化C++可轉散發套件**在搜尋方塊中。 下載並安裝電腦架構的可轉散發套件 (例如，如果您執行 64 位元 Windows，則為 x64) 以及您所需的 Visual C++ 版本 (例如 2015)。
 
 當您部署應用程式時，您也必須部署必要的支援檔案。 如果其中有任何檔案是由 Microsoft 提供，請檢查您否有權限轉散發。 若要檢閱 Visual Studio 授權條款，請在 IDE 中，查看 [關於 Microsoft Visual Studio] 對話方塊中的 [授權條款] 連結，或下載 [Microsoft 軟體授權條款](https://visualstudio.microsoft.com/license-terms/mlt687465/)檔案。 若要檢視 Visual Studio 特定版本《Microsoft 軟體授權條款》之＜可散發程式碼＞一節所指的「可轉散發清單」，請參閱 [Microsoft Visual Studio 2017 和 Microsoft Visual Studio 2017 SDK 的可散發程式碼 (含公用程式與 BuildServer 檔案)](/visualstudio/productinfo/2017-redistribution-vs)；若是 Visual Studio 2015，請參閱 [Microsoft Visual Studio 2015 和 Microsoft Visual Studio 2015 SDK 的可散發程式碼](/visualstudio/productinfo/2015-redistribution-vs)。 如需可轉散發檔案的詳細資訊，請參閱[決定要轉散發哪些 DLL](determining-which-dlls-to-redistribute.md) 和[部署範例](deployment-examples.md)。
 
-若要部署可轉散發 Visual C++ 檔案，您可以使用 Visual Studio 隨附的 Visual C++ 可轉散發套件 (VCRedist\_x86.exe、VCRedist\_x64.exe 或 VCRedist\_arm.exe)。 在 Visual Studio 2017 中，您可以在 Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ 資料夾中找到這些檔案，其中 _edition_ 是安裝的 Visual Studio 版本，而 _lib-version_ 是要轉散發的程式庫版本。 在 Visual Studio 2015 中，您可以在 Visual Studio 安裝目錄 (位於 Program Files [(x86)]\Microsoft Visual Studio *version*\VC\redist\\*locale*\\) 中找到這些檔案。 另一個選項是使用可轉散發合併模組 (.msm 檔案)。在 Visual Studio 2017 中，您可以在 Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ 資料夾中找到這些檔案。 在 Visual Studio 2015 中，您可以在 Program Files [(x86)]\Common Files\Merge Modules\\ 中找到這些檔案。 您也可以直接安裝「應用程式本機資料夾」中的可轉散發 Visual C++ DLL，此資料夾是包含您的可執行應用程式檔案的資料夾。 對於維護原因，建議您不要使用此安裝位置。
+若要部署可轉散發 Visual C++ 檔案，您可以使用 Visual Studio 隨附的 Visual C++ 可轉散發套件 (VCRedist\_x86.exe、VCRedist\_x64.exe 或 VCRedist\_arm.exe)。 在 Visual Studio 2017 中，您可以在 Program Files[ (x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_ 資料夾中找到這些檔案，其中 _edition_ 是安裝的 Visual Studio 版本，而 _lib-version_ 是要轉散發的程式庫版本。 在 Visual Studio 2015 中，您可以在 Visual Studio 安裝目錄 (位於 Program Files [(x86)]\Microsoft Visual Studio *version*\VC\redist\\*locale*\\) 中找到這些檔案。 另一個選項是使用可轉散發合併模組 (.msm 檔案)。在 Visual Studio 2017 中，您可以在 Program Files [(x86)]\\Microsoft Visual Studio\\2017\\_edition_\\VC\\Redist\\MSVC\\_lib-version_\\MergeModules\\ 資料夾中找到這些檔案。 在 Visual Studio 2015 中，您可以在 Program Files [(x86)]\Common Files\Merge Modules\\ 中找到這些檔案。 您也可以直接安裝「應用程式本機資料夾」  中的可轉散發 Visual C++ DLL，此資料夾是包含您的可執行應用程式檔案的資料夾。 對於維護原因，建議您不要使用此安裝位置。
 
 Visual C++ 可轉散發套件會安裝並註冊所有 Visual C++ 程式庫。 如果使用可轉散發套件，您必須在目標系統上執行該套件並設定為安裝應用程式的必要條件。 建議您使用這些套件進行部署，以便自動更新 Visual C++ 程式庫。 如需如何使用這些套件的範例，請參閱[逐步解說：使用 Visual C++ 可轉散發套件部署 Visual C++ 應用程式](deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)。
 

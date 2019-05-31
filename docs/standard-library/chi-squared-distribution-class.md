@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::chi_squared_distribution [C++], param_type
 - std::chi_squared_distribution [C++], param_type
 ms.assetid: 9b603fbe-cafd-4a92-b8c5-a434d60b8122
-ms.openlocfilehash: 9b37212d97644c42b9048a5c74cf15ee745564b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93271ebe48d2734a5d248b4a4b19689612427ded
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386287"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450195"
 ---
 # <a name="chisquareddistribution-class"></a>chi_squared_distribution 類別
 
@@ -93,7 +93,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Chi-Squared Distribution](http://go.microsoft.com/fwlink/p/?linkid=400528) (卡方分佈)。
+如需卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[Chi-Squared Distribution](https://go.microsoft.com/fwlink/p/?linkid=400528) (卡方分佈)。
 
 ## <a name="example"></a>範例
 
@@ -220,7 +220,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -243,7 +243,7 @@ explicit chi_squared_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < n`
+**前置條件：** `0.0 < n`
 
 第一個建構函式建構的物件，其預存的 `n` 值具有 *n* 值。
 
@@ -274,7 +274,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < n`
+**前置條件：** `0.0 < n`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

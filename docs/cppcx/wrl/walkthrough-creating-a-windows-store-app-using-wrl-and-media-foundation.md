@@ -3,12 +3,12 @@ title: 逐步解說：建立 UWP 應用程式使用 WRL 和媒體基礎
 ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
-ms.translationtype: HT
+ms.openlocfilehash: 1eee353bb13a3fa03fda42c3d0f7a4103dc5ad13
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558265"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450151"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>逐步解說：建立 UWP 應用程式使用 WRL 和媒體基礎
 
@@ -25,7 +25,7 @@ ms.locfileid: "64558265"
 在大部分情況下，您可以使用C++建立 Windows 執行階段 /CX。 不過，有時候您必須使用 WRL。 例如，當您建立 Microsoft 媒體基礎的媒體延伸模組，您必須建立實作 COM 和 Windows 執行階段介面的元件。 因為C++/CX 只能建立 Windows 執行階段物件，若要建立媒體延伸，您必須使用 WRL 因為它可讓 COM 和 Windows 執行階段介面的實作。
 
 > [!NOTE]
-> 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是來自[媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 哪些使用媒體延伸將效果套用到視訊、 解碼視訊，以及建立產生媒體資料流的配置處理常式。
+> 雖然這個程式碼範例很長，它會示範建立有用的媒體基礎轉換所需的最小值。 您可以將之做為您自訂轉換的起點。 這個範例是來自[媒體延伸範例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)、 哪些使用媒體延伸將效果套用到視訊、 解碼視訊，以及建立產生媒體資料流的配置處理常式。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -98,7 +98,7 @@ ms.locfileid: "64558265"
 
    1. 之下，而且**輸入**，新增`runtimeobject.lib`， `mfuuid.lib`，並`mfplat.lib`來**其他相依性**屬性。
 
-   1. 底下**Windows 中繼資料**，將**產生 Windows 中繼資料**來**是 (/ WINMD)**。
+   1. 底下**Windows 中繼資料**，將**產生 Windows 中繼資料**來**是 (/ WINMD)** 。
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>若要使用 WRL 自訂媒體基礎元件從 C# 應用程式
 
@@ -122,10 +122,10 @@ ms.locfileid: "64558265"
 
 ## <a name="next-steps"></a>後續步驟
 
-此範例示範如何一次從預設網路攝影機擷取相片。 [媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)執行其他作業。 它會示範如何列舉網路攝影機裝置，並使用本機配置處理常式，以及示範在個別相片和視訊資料流上運作的其他媒體效果。
+此範例示範如何一次從預設網路攝影機擷取相片。 [媒體延伸範例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)執行其他作業。 它會示範如何列舉網路攝影機裝置，並使用本機配置處理常式，以及示範在個別相片和視訊資料流上運作的其他媒體效果。
 
 ## <a name="see-also"></a>另請參閱
 
 [Windows 執行階段 C++ 範本庫 (WRL)](windows-runtime-cpp-template-library-wrl.md)<br/>
 [Microsoft 媒體基礎](/windows/desktop/medfound/microsoft-media-foundation-sdk)<br/>
-[媒體延伸範例](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)
+[媒體延伸範例](https://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)

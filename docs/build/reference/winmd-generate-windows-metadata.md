@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449718"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (產生 Windows 中繼資料)
 
 可讓產生的 Windows 執行階段中繼資料 (.winmd) 檔。
 
-> **/WINMD**\[**:**{**NO**\|**ONLY**}]
+> **/WINMD**\[ **:** {**NO**\|**ONLY**}]
 
 ## <a name="arguments"></a>引數
 
@@ -30,13 +30,13 @@ ms.locfileid: "62317155"
 
 ## <a name="remarks"></a>備註
 
-**/WINMD**連結器選項來控制 Windows 執行階段中繼資料 (.winmd) 檔案建立時，使用於 UWP 應用程式和 Windows 執行階段元件。 .Winmd 檔案是一種 DLL，其中包含 Windows 執行階段類型，並在執行階段元件，這些類型實作的情況下的中繼資料。 中繼資料會遵循[ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm)標準。
+**/WINMD**連結器選項來控制 Windows 執行階段中繼資料 (.winmd) 檔案建立時，使用於 UWP 應用程式和 Windows 執行階段元件。 .Winmd 檔案是一種 DLL，其中包含 Windows 執行階段類型，並在執行階段元件，這些類型實作的情況下的中繼資料。 中繼資料會遵循[ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm)標準。
 
 根據預設，輸出檔案名稱的表單*binaryname*.winmd。 若要指定不同的檔案名稱，請使用[/WINMDFILE](winmdfile-specify-winmd-file.md)選項。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 **組態屬性** > **連結器** > **Windows 中繼資料**屬性頁。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359692"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450764"
 ---
 # <a name="project-build-error-prj0003"></a>專案建置錯誤 PRJ0003
 
@@ -21,7 +21,7 @@ ms.locfileid: "62359692"
 
 此錯誤的可能原因包括：
 
-- 您的專案相依於 ATL Server。 從 Visual Studio 2008 中，ATL Server 已不再屬於 Visual Studio 中，但已發行為 CodePlex 的共用原始碼專案。 若要下載 ATL Server 原始程式碼和工具，請前往[ATL 伺服器程式庫和工具](http://go.microsoft.com/fwlink/p/?linkid=81979)。
+- 您的專案相依於 ATL Server。 從 Visual Studio 2008 中，ATL Server 已不再屬於 Visual Studio 中，但已發行為 CodePlex 的共用原始碼專案。 若要下載 ATL Server 原始程式碼和工具，請前往[ATL 伺服器程式庫和工具](https://go.microsoft.com/fwlink/p/?linkid=81979)。
 
 - 系統資源不足。 關閉一些應用程式，以解決此問題。
 

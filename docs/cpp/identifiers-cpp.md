@@ -8,12 +8,12 @@ helpviewer_keywords:
 - white space, in C++ identifiers
 - identifiers [C++]
 ms.assetid: 03a0dfb1-4530-4cdf-8295-5ea4dca4c1b8
-ms.openlocfilehash: 61ca021a8f41074dcef6bf9df2e5683ede98deee
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c905d6acc52f2f4f2a7bf3e92426f76adf25390e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222427"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450309"
 ---
 # <a name="identifiers-c"></a>識別項 (C++)
 
@@ -87,7 +87,7 @@ int main() {
 }
 ```
 
-編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 在使用 /clr 所編譯的程式碼中的識別項應遵循[ECMA-335 標準：通用語言基礎結構 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)。
+編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 在使用 /clr 所編譯的程式碼中的識別項應遵循[ECMA-335 標準：通用語言基礎結構 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。
 
 **結束 Microsoft 專屬**
 

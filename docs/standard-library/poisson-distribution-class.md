@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 4c8e35c097513176551db16471ed3a8c4ca1e824
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370173"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450168"
 ---
 # <a name="poissondistribution-class"></a>poisson_distribution 類別
 
@@ -91,7 +91,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需波氏分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[波氏分佈 (英文)](http://go.microsoft.com/fwlink/p/?linkid=401112)。
+如需波氏分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[波氏分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=401112)。
 
 ## <a name="example"></a>範例
 
@@ -192,7 +192,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -215,7 +215,7 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < mean`
+**前置條件：** `0.0 < mean`
 
 第一個建構函式會建構其中儲存的 `mean` 值具有值 *mean* 的物件。
 
@@ -242,7 +242,7 @@ struct param_type {
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < mean`
+**前置條件：** `0.0 < mean`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

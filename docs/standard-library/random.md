@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 5b246be02c860ede6691db1c4d21af7e6b4da26a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369802"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450800"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
@@ -25,7 +25,7 @@ ms.locfileid: "62369802"
 
 ## <a name="summary"></a>總結
 
-「亂數產生器」是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」(Uniform Random Number Generator，URNG)。 設計成當作 URNG 功能的樣板類別稱為「引擎」，如果該類別具有特定一般特性的話 (本文稍後會予以討論)。 一般而言，URNG 可以與「分佈」合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
+「亂數產生器」  是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」  (Uniform Random Number Generator，URNG)。 設計成當作 URNG 功能的樣板類別稱為「引擎」  ，如果該類別具有特定一般特性的話 (本文稍後會予以討論)。 一般而言，URNG 可以與「分佈」  合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
 
 這些連結會跳到本文的主要小節：
 
@@ -49,7 +49,7 @@ ms.locfileid: "62369802"
 
 - 大部分應用程式的最實用配對是 `mt19937` 引擎搭配 `uniform_int_distribution` (如本文稍後的[程式碼範例](#code)所示)。
 
-有許多選項可選擇從\<隨機 > 標頭，而且其中任何最好使用過時的 C 執行階段函式是`rand()`。 如需何不妥`rand()`以及如何\<隨機 > 解決這些缺點，請參閱[這段影片](http://go.microsoft.com/fwlink/p/?linkid=397615)。
+有許多選項可選擇從\<隨機 > 標頭，而且其中任何最好使用過時的 C 執行階段函式是`rand()`。 如需何不妥`rand()`以及如何\<隨機 > 解決這些缺點，請參閱[這段影片](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 範例
 
@@ -216,7 +216,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 2. **效能**:可以產生數字的速度，以及多少記憶體需要。 愈小愈好。
 
-3. **品質**:多接近真正亂數產生的序列有。 這通常稱為「隨機性」。
+3. **品質**:多接近真正亂數產生的序列有。 這通常稱為「隨機性」  。
 
 下列各節列出統一亂數產生器 (Urng) 中提供\<隨機 > 標頭。
 
@@ -417,7 +417,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 [引擎範本](#eng)和[引擎配接器範本](#engadapt)是其參數會自訂所建立之產生器的範本。
 
-「引擎」是一種類別或樣板類別，其執行個體 (產生器) 做為統一分佈在最小值與最大值之間的亂數來源。 「引擎配接器」會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
+「引擎」  是一種類別或樣板類別，其執行個體 (產生器) 做為統一分佈在最小值與最大值之間的亂數來源。 「引擎配接器」  會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
 
 每個引擎和引擎配接器都具有下列成員：
 
@@ -451,7 +451,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - 傳回用於建構產生器之基底引擎的 `const Engine& base()` 屬性函式。
 
-每個引擎都會維護一個「狀態」，而狀態會決定後續呼叫 `operator()` 所產生的值序列。 使用 `operator==` 和 `operator!=`，可以比較從相同類型的引擎具現化的兩個產生器的狀態。 如果兩種狀態比較為相等，則會產生相同的值序列。 使用產生器的 `operator<<`，可以將物件的狀態儲存至資料流，且形式為一連串 32 位元不帶正負號值。 狀態在儲存之後並不會變更。 使用 `operator>>`，可以將儲存的狀態讀取至從相同類型的引擎具現化的產生器。
+每個引擎都會維護一個「狀態」  ，而狀態會決定後續呼叫 `operator()` 所產生的值序列。 使用 `operator==` 和 `operator!=`，可以比較從相同類型的引擎具現化的兩個產生器的狀態。 如果兩種狀態比較為相等，則會產生相同的值序列。 使用產生器的 `operator<<`，可以將物件的狀態儲存至資料流，且形式為一連串 32 位元不帶正負號值。 狀態在儲存之後並不會變更。 使用 `operator>>`，可以將儲存的狀態讀取至從相同類型的引擎具現化的產生器。
 
 ### <a name="distributions"></a>分佈
 
@@ -459,7 +459,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - `typedef` `numeric-type` `result_type` 是分佈的 `operator()` 所傳回的類型。 在具現化時，會將 `numeric-type` 傳遞為範本參數。
 
-- `template <class URNG> result_type operator()(URNG& gen)` 會傳回根據分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及儲存之「分佈的參數」。
+- `template <class URNG> result_type operator()(URNG& gen)` 會傳回根據分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及儲存之「分佈的參數」  。
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)` 會傳回按照分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及參數結構 `p`。
 
@@ -500,7 +500,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 <sup>* 提供已知種子時。</sup>
 
-雖然 ISO C++ 標準不需要加密保護 `random_device`，但在 Visual Studio 中，會將它實作為進行加密保護。 「加密保護」這個詞彙並不表示提供保證，而是指給定隨機演算法所提供的最低熵層級 (因此是預測層級)。 如需詳細資訊，請參閱 Wikipedia 文章：[密碼學安全偽亂數生成器](http://go.microsoft.com/fwlink/p/?linkid=398017)。因為 ISO C++ 標準不需要這個，所以其他平台可能會將 `random_device` 實作為簡單虛擬亂數產生器 (未加密保護)，而且可能只適合做為另一個產生器的種子來源。 在跨平台程式碼中使用 `random_device` 時，請參閱哪些平台的文件。
+雖然 ISO C++ 標準不需要加密保護 `random_device`，但在 Visual Studio 中，會將它實作為進行加密保護。 「加密保護」這個詞彙並不表示提供保證，而是指給定隨機演算法所提供的最低熵層級 (因此是預測層級)。 如需詳細資訊，請參閱 Wikipedia 文章：[密碼學安全偽亂數生成器](https://go.microsoft.com/fwlink/p/?linkid=398017)。因為 ISO C++ 標準不需要這個，所以其他平台可能會將 `random_device` 實作為簡單虛擬亂數產生器 (未加密保護)，而且可能只適合做為另一個產生器的種子來源。 在跨平台程式碼中使用 `random_device` 時，請參閱哪些平台的文件。
 
 透過定義，`random_device` 結果是無法重新產生的，而且副作用是執行速度會明顯比其他 URNG 慢。 雖然您可能想要使用 `random_device` 呼叫來進行植入 (如[程式碼範例](#code)中所示)，但大部分不需要加密保護的應用程式都會使用 `mt19937` 或類似的引擎。
 

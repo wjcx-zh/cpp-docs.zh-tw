@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223671"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449275"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 類別
 
@@ -95,7 +95,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需負二項式分佈離散可能性函式的詳細資訊，請參閱 Wolfram MathWorld 文章[負二項式分佈](http://go.microsoft.com/fwlink/p/?linkid=400516)。
+如需負二項式分佈離散可能性函式的詳細資訊，請參閱 Wolfram MathWorld 文章[負二項式分佈](https://go.microsoft.com/fwlink/p/?linkid=400516)。
 
 ## <a name="example"></a>範例
 
@@ -217,7 +217,7 @@ Histogram for 100 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -243,7 +243,7 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`
+**前置條件：** `0.0 < k` 和 `0.0 < p ≤ 1.0`
 
 第一個建構函式會建構預存 `p` 值具有 *p* 值而預存 `k` 值具有 *k* 值的物件。
 
@@ -270,7 +270,7 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < k` 和 `0.0 < p ≤ 1.0`
+**前置條件：** `0.0 < k` 和 `0.0 < p ≤ 1.0`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 

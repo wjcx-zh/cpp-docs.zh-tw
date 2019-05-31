@@ -2,12 +2,12 @@
 title: 自動平行處理和自訂向量化
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236695"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450234"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>自動平行處理和自訂向量化
 
@@ -107,12 +107,12 @@ for (int i = 0; i < 1000; ++i)
 
 如需原因代碼和訊息的詳細資訊，請參閱[向量化工具和平行化工具訊息](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)。
 
-如需示範在實務上的向量化工具的運作方式的範例，請參閱[Project Austin 第 2 部分 6:Curling 頁面](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+如需示範在實務上的向量化工具的運作方式的範例，請參閱[Project Austin 第 2 部分 6:Curling 頁面](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>另請參閱
 
 [loop](../preprocessor/loop.md)<br/>
-[以原生程式碼進行平行程式設計](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[以原生程式碼進行平行程式設計](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (自動平行化工具)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar-report (自動平行化工具報告層級)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec-report (自動向量化工具報告層級)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

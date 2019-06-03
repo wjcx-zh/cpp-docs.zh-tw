@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348688"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450840"
 ---
 # <a name="cbutton-class"></a>CButton 類別
 
@@ -153,7 +153,7 @@ class CButton : public CWnd
 
 每個訊息對應項目都會使用下列格式：
 
-**ON\_**_通知_ **(** _識別碼_， _memberFxn_ **)**
+**ON\_** _通知_ **(** _識別碼_， _memberFxn_ **)**
 
 何處*識別碼*指定傳送通知之控制項的子視窗識別碼並*memberFxn*是您撰寫來處理通知的父成員函式的名稱。
 
@@ -808,7 +808,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="remarks"></a>備註
 
-如果按鈕或命令連結控制項需要提高權限的安全性權限來執行動作，將控制項設為`elevation required`狀態。 接下來，Windows 會在控制項上顯示使用者帳戶控制 (UAC) 保護盾圖示。 詳細資訊，請參閱 「 使用者帳戶控制 」，網址[MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507)。
+如果按鈕或命令連結控制項需要提高權限的安全性權限來執行動作，將控制項設為`elevation required`狀態。 接下來，Windows 會在控制項上顯示使用者帳戶控制 (UAC) 保護盾圖示。 詳細資訊，請參閱 「 使用者帳戶控制 」，網址[MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507)。
 
 這個方法會傳送[BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield)訊息，Windows SDK 中所述。
 

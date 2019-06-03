@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220348"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451227"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1652,7 +1652,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 會啟用快顯、最上層和 MDI 子視窗。 需使用 `BringWindowToTop` 成員函式，才能顯示出重疊視窗部分或完全遮住的視窗。
 
-此函式只會呼叫 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+此函式只會呼叫 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>範例
 
@@ -2455,7 +2455,7 @@ int DlgDirList(
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-在此範例中，*磁碟機*磁碟機代號，*目錄*是有效的目錄名稱，並*filename*是有效的檔名必須包含至少一個萬用字元。 萬用字元是問號 (**？**)，這表示比對任何字元，並以星號 (<strong>\*</strong>)，這表示比對任何數目的字元。
+在此範例中，*磁碟機*磁碟機代號，*目錄*是有效的目錄名稱，並*filename*是有效的檔名必須包含至少一個萬用字元。 萬用字元是問號 ( **？** )，這表示比對任何字元，並以星號 (<strong>\*</strong>)，這表示比對任何數目的字元。
 
 如果您指定的 0 長度字串*lpPathSpec*，或如果您指定目錄名稱，但不是包含任何檔案規格時，會將字串變更為 「\*。\*"。
 
@@ -2523,7 +2523,7 @@ int DlgDirListComboBox(
 
 `[drive:] [ [\u]directory[\idirectory]...\u] [filename]`
 
-在此範例中，*磁碟機*磁碟機代號，*目錄*是有效的目錄名稱，並*filename*是有效的檔名必須包含至少一個萬用字元。 萬用字元是問號 (**？**)，這表示比對任何字元，並以星號 (<strong>\*</strong>)，這表示比對任何數目的字元。
+在此範例中，*磁碟機*磁碟機代號，*目錄*是有效的目錄名稱，並*filename*是有效的檔名必須包含至少一個萬用字元。 萬用字元是問號 ( **？** )，這表示比對任何字元，並以星號 (<strong>\*</strong>)，這表示比對任何數目的字元。
 
 如果您指定的長度為零的字串*lpPathSpec*，將會使用目前的目錄並*lpPathSpec*將不會修改。 如果您指定目錄名稱，但不是包含任何檔案規格時，將字串變更為 「\*"。
 

@@ -41,7 +41,7 @@ ms.locfileid: "62411496"
 
 [!code-cpp[NVC_MFCSerialization#10](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_4.cpp)]
 
-程式庫會定義**< \<** 並**>>** 運算子`CArchive`做為第一個運算元的下列資料類型和類別做為第二個運算元的類型:
+程式庫會定義 **< \<** 並 **>>** 運算子`CArchive`做為第一個運算元的下列資料類型和類別做為第二個運算元的類型:
 
 ||||
 |-|-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "62411496"
 > [!NOTE]
 >  儲存及載入`CObject`s 透過封存需要額外的考量。 如需詳細資訊，請參閱 <<c0> [ 中儲存及載入 CObjects，透過封存](../mfc/storing-and-loading-cobjects-via-an-archive.md)。
 
-**CArchive <\<** 並**>>** 運算子一律會傳回參考`CArchive`物件，也就是第一個運算元。 這可讓您鏈結運算子，如下所示：
+**CArchive <\<** 並 **>>** 運算子一律會傳回參考`CArchive`物件，也就是第一個運算元。 這可讓您鏈結運算子，如下所示：
 
 [!code-cpp[NVC_MFCSerialization#11](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_5.cpp)]
 

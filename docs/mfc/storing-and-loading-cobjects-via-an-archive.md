@@ -19,9 +19,9 @@ ms.locfileid: "62306765"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>透過封存儲存及載入 CObjects
 
-儲存及載入`CObject`s 透過封存需要額外的考量。 在某些情況下，您應該呼叫`Serialize`函式的物件，其中`CArchive`物件是參數`Serialize`呼叫，而不是使用**< \<** 或**>>** 操作員`CArchive`。 要牢記在心的重要事實在於`CArchive` **>>** 運算子建構`CObject`為基礎的記憶體中`CRuntimeClass`先前寫入檔案中所儲存的保存的資訊。
+儲存及載入`CObject`s 透過封存需要額外的考量。 在某些情況下，您應該呼叫`Serialize`函式的物件，其中`CArchive`物件是參數`Serialize`呼叫，而不是使用 **< \<** 或 **>>** 操作員`CArchive`。 要牢記在心的重要事實在於`CArchive` **>>** 運算子建構`CObject`為基礎的記憶體中`CRuntimeClass`先前寫入檔案中所儲存的保存的資訊。
 
-因此，您是使用`CArchive` **< \<** 並**>>** 運算子，與呼叫`Serialize`，取決於是否您*需要*載入封存檔，若要以動態方式重建物件根據先前儲存`CRuntimeClass`資訊。 使用`Serialize`函式在下列情況：
+因此，您是使用`CArchive` **< \<** 並 **>>** 運算子，與呼叫`Serialize`，取決於是否您*需要*載入封存檔，若要以動態方式重建物件根據先前儲存`CRuntimeClass`資訊。 使用`Serialize`函式在下列情況：
 
 - 當還原序列化物件，會事先知道物件的確切的類別。
 

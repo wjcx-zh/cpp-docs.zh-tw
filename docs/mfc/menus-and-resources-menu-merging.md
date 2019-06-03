@@ -29,7 +29,7 @@ ms.locfileid: "62225535"
 
 ##  <a name="_core_menu_layouts"></a> 功能表配置
 
-第一個步驟是協調功能表配置。 如需詳細資訊，請參閱 < ** 功能表建立**一節[功能表程式設計考量](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。
+第一個步驟是協調功能表配置。 如需詳細資訊，請參閱 <  **功能表建立**一節[功能表程式設計考量](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。
 
 容器應用程式應該建立要內嵌的項目就地啟動時，才使用新的功能表。 在 最小值，這個功能表應該包含下列命令，列出的順序：
 

@@ -45,7 +45,7 @@ ms.locfileid: "62308095"
 
 ##  <a name="_core_overriding_the_serialize_member_function"></a> 覆寫序列化成員函式
 
-`Serialize` 成員函式 (在 `CObject` 類別中定義) 會負責實際序列化擷取物件目前狀態所需的資料。 `Serialize` 函式具有一個 `CArchive` 引數，用來讀取和寫入物件資料。 [CArchive](../mfc/reference/carchive-class.md)物件具有成員函式`IsStoring`，表示是否`Serialize`儲存 （寫入資料），或載入 （讀取資料）。 使用的結果`IsStoring`做為指南，您是插入您的物件中的資料`CArchive`物件使用插入運算子 (**<\<**) 或使用擷取運算子 (擷取資料**>>**).
+`Serialize` 成員函式 (在 `CObject` 類別中定義) 會負責實際序列化擷取物件目前狀態所需的資料。 `Serialize` 函式具有一個 `CArchive` 引數，用來讀取和寫入物件資料。 [CArchive](../mfc/reference/carchive-class.md)物件具有成員函式`IsStoring`，表示是否`Serialize`儲存 （寫入資料），或載入 （讀取資料）。 使用的結果`IsStoring`做為指南，您是插入您的物件中的資料`CArchive`物件使用插入運算子 ( **<\<** ) 或使用擷取運算子 (擷取資料 **>>** ).
 
 請考慮衍生自類別`CObject`且具有兩個新成員變數的型別`CString`並**WORD**。 下列類別宣告片段顯示新成員變數和覆寫 `Serialize` 成員函式的宣告：
 

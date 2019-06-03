@@ -73,7 +73,7 @@ static bool CompareElements(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作是等號 (**==**) 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
+此函式的預設實作是等號 ( **==** ) 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
 
 ##  <a name="compareelementsordered"></a>  CDefaultCompareTraits::CompareElementsOrdered
 
@@ -103,7 +103,7 @@ static int CompareElementsOrdered(const T& element1, const T& element2);
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會使用**==**， **\<**，以及**>** 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
+此函式的預設實作會使用 **==** ， **\<** ，以及 **>** 運算子。 針對簡單的資料類型以外的物件，此函式可能需要覆寫。
 
 ## <a name="see-also"></a>另請參閱
 

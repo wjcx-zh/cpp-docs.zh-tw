@@ -370,7 +370,7 @@ ms.locfileid: "62322010"
 |`CMFCTasksPaneFrameWnd Class`|管理自訂的標題按鈕的 [工作] 窗格。|
 |`CMFCTasksPanePropertyPage Class`|管理之間的關聯性`CMFCTasksPane`物件和它的名稱。|
 |`CMFCTasksPaneToolBar Class`|實作位於頂端瀏覽工具列`CMFCTasksPane`物件。|
-|`CMFCToolBarButtonsListButton Class`|顯示使用者可以選取期間中的自訂映像清單 ** 按鈕外觀**  對話方塊。|
+|`CMFCToolBarButtonsListButton Class`|顯示使用者可以選取期間中的自訂映像清單 **按鈕外觀**  對話方塊。|
 |`CMFCToolBarDateTimeCtrlImpl Class`|實作置放來源`CMFCToolBar`物件。|
 |`CMFCToolBarDropSource Class`|實作置放來源`CMFCToolBar`物件。|
 |`CMFCToolBarDropTarget Class`|實作的置放目標`CMFCToolBar`物件。|

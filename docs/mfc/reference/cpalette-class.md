@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373176"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504776"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 
@@ -111,7 +111,7 @@ void AnimatePalette(
 要建立動畫的調色盤中指定的項目數。
 
 *lpPaletteColors*<br/>
-指向陣列的第一個成員[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。
+指向陣列的第一個成員[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。
 
 ### <a name="remarks"></a>備註
 
@@ -245,7 +245,7 @@ UINT GetPaletteEntries(
 要擷取邏輯調色盤中指定的項目數。
 
 *lpPaletteColors*<br/>
-指向陣列[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
+指向陣列[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -312,7 +312,7 @@ UINT SetPaletteEntries(
 若要設定邏輯調色盤中指定的項目數。
 
 *lpPaletteColors*<br/>
-指向陣列[PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769)資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
+指向陣列[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
 
 ### <a name="return-value"></a>傳回值
 
@@ -322,7 +322,7 @@ UINT SetPaletteEntries(
 
 當應用程式呼叫時，如果要邏輯的調色盤選取放入裝置內容`SetPaletteEntries`，變更將不會生效，直到應用程式會呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。
 
-如需有關 Windows 結構`PALETTEENTRY`，請參閱 < [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) Windows SDK 中。
+如需詳細資訊，請參閱 < [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Windows SDK 中。
 
 ## <a name="see-also"></a>另請參閱
 

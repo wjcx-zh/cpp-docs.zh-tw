@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: a434a329febc38d6a46881dcabba6b05a402fbca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 2f9ac262cc564c39d30ddfae7f70ea92e92081a8
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708058"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503802"
 ---
 # <a name="windows-desktop-wizard"></a>Windows 傳統式精靈
 
@@ -51,7 +51,7 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 
 |選項|描述|
 |------------|-----------------|
-|**主控台應用程式**|建立主控台應用程式 (Console Application)。 以開發主控台程式[主控台函式](https://msdn.microsoft.com/library/ms813137.aspx)，提供在主控台視窗中的字元模式支援。 視覺效果C++[執行階段程式庫](../c-runtime-library/c-run-time-library-reference.md)也提供輸出，並從主控台視窗，使用標準 I/O 函式，這類輸入`printf_s()`並`scanf_s()`。 主控台應用程式有沒有圖形化使用者介面。 它會編譯為.exe 檔案，並可當做獨立的應用程式，從命令列來執行。<br /><br /> 您可以新增 MFC 與 ATL 支援新增至主控台應用程式。|
+|**主控台應用程式**|建立主控台應用程式 (Console Application)。 視覺效果C++[執行階段程式庫](../c-runtime-library/c-run-time-library-reference.md)也提供輸出，並從主控台視窗，使用標準 I/O 函式，這類輸入`printf_s()`並`scanf_s()`。 主控台應用程式有沒有圖形化使用者介面。 它會編譯為.exe 檔案，並可當做獨立的應用程式，從命令列來執行。<br /><br /> 您可以新增 MFC 與 ATL 支援新增至主控台應用程式。|
 |**Windows 應用程式**|建立 Win32 程式。 Win32 程式是以 C 撰寫的可執行檔應用程式 (EXE) 或C++，來建立圖形化使用者介面中使用 Win32 API 的呼叫。<br /><br /> 您無法新增 MFC 或 ATL 支援加入至 Windows 應用程式。|
 |**動態連結程式庫**|建立 Win32 動態連結程式庫 (DLL)。 Win32 DLL 是以 C 撰寫的二進位檔案，或C++，會使用呼叫 Win32 API，而不是 MFC 類別，做為共用程式庫的多個應用程式可以同時使用的函式。<br /><br /> 您無法使用此精靈，來建立 DLL 應用程式中加入 MFC 或 ATL 的支援，但您可以建立 MFC DLL 藉由選擇**新增 > 專案 > MFC DLL**。|
 |**靜態程式庫**|建立靜態程式庫。 靜態程式庫是包含物件和其功能與資料，用來建置可執行檔時，連結到您的程式檔案。 本主題說明如何建立初學者檔案和[專案屬性](../build/reference/property-pages-visual-cpp.md)靜態程式庫。 靜態程式庫檔案提供下列優點：<br /><br />-如果您正在使用的應用程式呼叫 Win32 API，而不是 MFC 類別非常有用 Win32 靜態程式庫。<br />-連結的程序是相同，無論您的 Windows 應用程式的其餘部分以 C 撰寫或在C++。<br />-您可以在以 MFC 為基礎的程式或非 MFC 程式連結的靜態程式庫。|
@@ -87,4 +87,4 @@ Windows Desktop 精靈 會取代 Win32 應用程式精靈 在 Visual Studio 2017
 
 ## <a name="see-also"></a>另請參閱
 
-[C++在 Visual Studio 中的專案類型](../build/reference/visual-cpp-project-types.md)
+[Visual Studio 中的 C++ 專案類型](../build/reference/visual-cpp-project-types.md)

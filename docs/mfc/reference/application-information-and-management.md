@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 84d11b5c2d456a55e09b8512a3c0af06409939e8
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612293"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504500"
 ---
 # <a name="application-information-and-management"></a>應用程式資訊和管理
 
@@ -98,7 +98,7 @@ CWinThread* AfxBeginThread(
 - **0**在建立後立即啟動執行緒。
 
 *lpSecurityAttrs*<br/>
-指向[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定執行緒的安全性屬性。 如果是 NULL，就會使用相同的安全性屬性建立的執行緒。 如需有關此結構的詳細資訊，請參閱 Windows SDK。
+指向[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構，指定執行緒的安全性屬性。 如果是 NULL，就會使用相同的安全性屬性建立的執行緒。 如需有關此結構的詳細資訊，請參閱 Windows SDK。
 
 ### <a name="return-value"></a>傳回值
 
@@ -648,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>參數
 
 *nClassStyle*<br/>
-指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;**) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：
+指定的 Windows 類別樣式或樣式，建立使用位元 OR 組合 ( **&#124;** ) 運算子，視窗類別。 如需類別樣式的清單，請參閱 < [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK 中的結構。 如果是 NULL，預設值將，如下所示：
 
 - 將滑鼠樣式設定為 CS_DBLCLKS，會將按兩下訊息至視窗程序當使用者按兩下滑鼠。
 

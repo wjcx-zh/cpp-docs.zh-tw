@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f64fd7b945fc8ea2e5c111d300266e07faade0e7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349260"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504519"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -83,7 +83,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 引數清單傳遞至新的執行緒，或是**NULL**。
 
 *安全性*<br/>
-[SECURITY ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*安全性*是**NULL**，無法繼承控制代碼。 必須是**NULL** Windows 95 應用程式。
+[SECURITY ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) 結構的指標，這個結構會判斷子處理序是否可以繼承傳回的控制代碼。 如果*安全性*是**NULL**，無法繼承控制代碼。 必須是**NULL** Windows 95 應用程式。
 
 *initflag*<br/>
 控制新執行緒之初始狀態的旗標。 設定*initflag*為 0，以立即執行，或是**CREATE_SUSPENDED**若要建立的執行緒處於暫停狀態; 使用[ResumeThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-resumethread)執行執行緒。 設定*initflag*要**STACK_SIZE_PARAM_IS_A_RESERVATION**若要使用的旗標*stack_size*初始保留大小，以位元組為單位的堆疊，這個旗標是否未指定， *stack_size*指定基本配置大小。

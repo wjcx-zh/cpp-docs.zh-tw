@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278146"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503308"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 
@@ -173,7 +173,7 @@ bool Create(
 指定新的物件是否可以包含其他物件。 如果為 true 值表示新的物件是容器。 False 值表示新的物件不是容器。
 
 *AutoInheritFlags*<br/>
-一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。
+一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或是[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)。
+這個方法會呼叫[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或是[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
 指定新的物件的物件類型的 GUID 或控制 Ace 繼承的方式，可允許第二個方法。
 
@@ -265,7 +265,7 @@ bool Set(
 若要參考[CAccessToken](../../atl/reference/caccesstoken-class.md)用戶端處理序，其代表建立物件的物件。
 
 *AutoInheritFlags*<br/>
-一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)如需詳細資訊。
+一組控制如何從繼承存取控制項目 (Ace) 的位元旗標*pParent*。 請參閱[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)如需詳細資訊。
 
 ### <a name="return-value"></a>傳回值
 

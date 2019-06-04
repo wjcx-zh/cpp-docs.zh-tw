@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, ASP
 ms.assetid: 4d8cafd6-5e12-4461-8911-29288896af3c
-ms.openlocfilehash: efc82edf00a9bb2f2facbd883ef88f1d093e0133
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b88dffe2874d29918315af65c6ea093c24695f97
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261321"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503403"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP, ATL Active Server Page 元件精靈
 
@@ -23,7 +23,7 @@ ms.locfileid: "62261321"
 
 - **OnStartPage/OnEndPage**
 
-   [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)稱為第一次指令碼會嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。
+   [OnStartPage](/previous-versions//ms691624\(v=vs.85\))稱為第一次指令碼會嘗試存取的物件。 **OnEndPage**物件完成時，會呼叫處理指令碼。
 
 - **內建物件**
 

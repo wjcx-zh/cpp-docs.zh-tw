@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edad2ca391639868e7af1db6e13aaec66733f383
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160311"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503856"
 ---
 # <a name="colecontrol-class"></a>COleControl 類別
 
@@ -1184,7 +1184,7 @@ void AFX_CDECL FireEvent(
 
 通常這個函式應該不直接呼叫。 相反地，您會在您的控制項類別宣告的事件對應區段呼叫的事件引發函式。
 
-*PbParams*引數是以空格分隔的清單**VTS_**。 其中的一或多個值 (以空格分隔，而非逗號) 會指定函式的參數清單。 可能的值如下：
+*PbParams*引數是以空格分隔的清單**VTS_** 。 其中的一或多個值 (以空格分隔，而非逗號) 會指定函式的參數清單。 可能的值如下：
 
 |符號|參數類型|
 |------------|--------------------|
@@ -1989,7 +1989,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="remarks"></a>備註
 
-通常這會需要將控制項的視窗登錄為置放目標。 但是，由於控制項沒有自己的視窗，容器會使用它自己的視窗做為置放目標。 控制項只需要提供的實作`IDropTarget`介面的容器可以在適當時委派呼叫。 例如: 
+通常這會需要將控制項的視窗登錄為置放目標。 但是，由於控制項沒有自己的視窗，容器會使用它自己的視窗做為置放目標。 控制項只需要提供的實作`IDropTarget`介面的容器可以在適當時委派呼叫。 例如：
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2448,7 +2448,7 @@ virtual BOOL OnEdit(
 
 這有相同的效果與叫用控制項的 OLEIVERB_UIACTIVATE 動詞命令。
 
-此函式通常用於和的處理常式函式 ON_OLEVERB 訊息對應項目。 這提供"Edit"動詞命令功能表中控制項的 「 物件 」。 例如: 
+此函式通常用於和的處理常式函式 ON_OLEVERB 訊息對應項目。 這提供"Edit"動詞命令功能表中控制項的 「 物件 」。 例如:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
@@ -2811,7 +2811,7 @@ virtual BOOL OnGetViewRect(DWORD dwAspect, LPRECTL pRect);
 - 涵蓋所有的時間緊迫或透明部分 DVASPECT_TRANSPARENT 矩形。
 
 *pRect*<br/>
-指向[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)結構，指定應該在其中繪製物件的矩形。 此參數控制的定位和延伸的物件。
+指向[RECTL](/previous-versions/dd162907\(v=vs.85\))結構，指定應該在其中繪製物件的矩形。 此參數控制的定位和延伸的物件。
 
 ### <a name="return-value"></a>傳回值
 

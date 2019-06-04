@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235116"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503178"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -158,7 +158,7 @@ class CImage
 > [!NOTE]
 > 使用全域`CImage`不建議在 DLL 中的物件。 如果您需要使用全域`CImage`物件在 DLL 中，呼叫[CImage::ReleaseGDIPlus](#releasegdiplus)明確釋放 GDI + 所使用的資源。
 
-`CImage` 無法選取至新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 建立自己的 HDC 映像。 HBITMAP HBITMAP 一次只能選取一個 HDC 到，因為相關聯`CImage`到另一個 HDC 無法選取。 如果您需要在 CDC 時，擷取從 HDC `CImage` ，並提供給 [CDC::FromHandle] (../../mfc/reference/cdc-class.md#cdc__fromhandle。
+`CImage` 無法選取至新[CDC](../../mfc/reference/cdc-class.md)。 `CImage` 建立自己的 HDC 映像。 HBITMAP HBITMAP 一次只能選取一個 HDC 到，因為相關聯`CImage`到另一個 HDC 無法選取。 如果您需要在 CDC 時，擷取從 HDC`CImage`並提供它[CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle)。
 
 ## <a name="example"></a>範例
 
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDS 格式未壓縮和 color 資料表包含三個的 DWORD 色彩遮罩，分別指定每個像素的紅色、 綠色和藍色元件。 這是在 16 及 32 bpp 點陣圖搭配使用時才有效。
 
 *pdwBitfields*<br/>
-只有在使用*eCompression*設定至 BI_BITFIELDS，否則它必須是 NULL。 三個 DWORD 位元遮罩，指定每個像素的位元會分別使用紅色、 綠色和藍色色彩元件的陣列指標。 如需位元欄位的限制資訊，請參閱[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中。
+只有在使用*eCompression*設定至 BI_BITFIELDS，否則它必須是 NULL。 三個 DWORD 位元遮罩，指定每個像素的位元會分別使用紅色、 綠色和藍色色彩元件的陣列指標。 如需位元欄位的限制資訊，請參閱[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) Windows SDK 中。
 
 *dwFlags*<br/>
 指定點陣圖物件是否具有 alpha 色頻。 可以是零或多個下列值的組合：
@@ -648,7 +648,7 @@ int GetBPP() const throw();
 
 這個值會決定定義每個像素的位元的數目和最大的點陣圖中的色彩數目。
 
-每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱`biBitCount`隸屬[BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK 中針對此值的詳細資訊。
+每個像素的位元通常是 1、 4、 8、 16、 24、 或 32。 請參閱`biBitCount`隸屬[BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) Windows SDK 中針對此值的詳細資訊。
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 
@@ -715,7 +715,7 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 如果這個參數不是 NULL，篩選條件字串就會有一個額外的篩選器清單的開頭。 此篩選器的目前值*pszAllFilesDescription*針對其描述，並接受檔案清單中的任何其他匯出工具所支援的任何延伸模組。
 
-例如: 
+例如：
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -810,7 +810,7 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 如果這個參數不是 NULL，篩選條件字串就會有一個額外的篩選器清單的開頭。 此篩選器的目前值*pszAllFilesDescription*針對其描述，並接受檔案清單中的任何其他匯出工具所支援的任何延伸模組。
 
-例如: 
+例如:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -856,7 +856,7 @@ _T("All Image Files"));
 
 file description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;...file description *n*&#124;\*.ext *n*&#124;&#124;
 
-位置 '&#124;' 所指定的分隔符號字元*chSeparator*。 例如: 
+位置 '&#124;' 所指定的分隔符號字元*chSeparator*。 例如：
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 

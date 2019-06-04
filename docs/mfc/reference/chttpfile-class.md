@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a637ef8feb28396b1427341c8174e9a7adaa69a9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345795"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503500"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 類別
 
@@ -126,7 +126,7 @@ BOOL AddRequestHeaders(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能會呼叫以判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
@@ -319,7 +319,7 @@ BOOL QueryInfo(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能會呼叫以判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
@@ -398,7 +398,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能會呼叫以判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 

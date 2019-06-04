@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 44b744ec18ef46df366547bf03e980b3e7032b09
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 09a85231f871ef1a21b2f2adb309d94bb4a29e1a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707338"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504511"
 ---
 # <a name="working-with-resource-files"></a>使用資源檔
 
@@ -58,4 +58,4 @@ ms.locfileid: "65707338"
 ## <a name="see-also"></a>另請參閱
 
 [Windows 桌面應用程式](../windows/windows-desktop-applications-cpp.md)<br/>
-[功能表與其他資源](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[功能表與其他資源](/windows/desktop/menurc/resources)

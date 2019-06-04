@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e594360cc6752a60bf2e07a1fb1d02041604d959
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261653"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66502997"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>修改 ATL DHTML 控制項
 
@@ -35,7 +35,7 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 
    [!code-cpp[NVC_ATL_COM#6](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_2.cpp)]
 
-1. 新增第三個方法， `GoToURL`，結尾不是 「 UI。 」 的介面 實作這個方法，藉由呼叫[IWebBrowser2::Navigate](https://msdn.microsoft.com/library/aa752133.aspx)、，如下所示：
+1. 新增第三個方法， `GoToURL`，結尾不是 「 UI。 」 的介面 實作這個方法，藉由呼叫[IWebBrowser2::Navigate](/previous-versions//aa752133\(v=vs.85\))、，如下所示：
 
    [!code-cpp[NVC_ATL_COM#7](../atl/codesnippet/cpp/modifying-the-atl-dhtml-control_3.cpp)]
 
@@ -49,7 +49,7 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 
    檢查在 HTML 中，特別是呼叫外部 Windows 分派方法。 HTML 呼叫的專案`OnClick`方法與參數指出此控制項的主體 (`theBody`) 和指派色彩 (「`red`")。 方法呼叫之後的文字會出現在按鈕的標籤。
 
-1. 新增另一個`OnClick`方法，只會變更色彩。 例如：
+1. 新增另一個`OnClick`方法，只會變更色彩。 例如:
 
     ```html
     <br>
@@ -59,7 +59,7 @@ ATL 控制項精靈提供起始程式碼，讓您能夠建置和執行控制，�
 
    這個方法會建立一個標示為的按鈕**重新整理**，使用者可以按一下以返回原始的白色背景的控制項。
 
-1. 將呼叫加入`HelloHTML`您所建立的方法。 例如: 
+1. 將呼叫加入`HelloHTML`您所建立的方法。 例如：
 
     ```html
     <br>

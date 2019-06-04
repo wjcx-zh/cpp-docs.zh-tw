@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63c2971f5d55cb5198925650bcf90b2f1a8b0958
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252697"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503220"
 ---
 # <a name="coledatetime-class"></a>COleDateTime 類別
 
@@ -128,7 +128,7 @@ class COleDateTime
 
 如果您建立`COleDateTime`藉由使用日期的物件少於 100 個，日期是已接受，但後續呼叫`GetYear`， `GetMonth`， `GetDay`， `GetHour`， `GetMinute`，和`GetSecond`失敗，並傳回-1。 先前，您可以使用兩位數日期，但是日期必須是 100 或更大，在 MFC 4.2 和更新版本。
 
-若要避免發生問題，指定四位數的日期。 例如：
+若要避免發生問題，指定四位數的日期。 例如:
 
 [!code-cpp[NVC_ATLMFC_Utilities#1](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_1.cpp)]
 
@@ -169,7 +169,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="example"></a>範例
 
-運算子 **>=**， **\<=**， **>**，與 **<**，如果會判斷提示`COleDateTime`物件設定為 null。
+運算子 **>=** ， **\<=** ， **>** ，與 **<** ，如果會判斷提示`COleDateTime`物件設定為 null。
 
 [!code-cpp[NVC_ATLMFC_Utilities#170](../../atl-mfc-shared/codesnippet/cpp/coledatetime-class_3.cpp)]
 
@@ -225,7 +225,7 @@ A`FILETIME`結構轉換成日期/時間值，並複製到新`COleDateTime`物件
 MS-DOS 日期和時間值轉換成日期/時間值，並複製到新`COleDateTime`物件。
 
 *timeStamp*<br/>
-參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構，包含目前的當地時間。
+參考[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)結構，包含目前的當地時間。
 
 ### <a name="remarks"></a>備註
 
@@ -347,7 +347,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ### <a name="parameters"></a>參數
 
 *timeStamp*<br/>
-參考[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)結構。
+參考[DBTimeStamp](/dotnet/api/system.data.oledb.oledbtype)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -868,7 +868,7 @@ COleDateTimeSpan operator-(const COleDateTime& date) const throw();
 
 如果任一運算元無效，而且其他不是 null，結果狀態`COleDateTime`值無效。
 
-**+** 並**-** 運算子會判斷提示，如果`COleDateTime`物件設定為 null。 請參閱[COleDateTime 關係運算子](#coledatetime_relational_operators)的範例。
+**+** 並 **-** 運算子會判斷提示，如果`COleDateTime`物件設定為 null。 請參閱[COleDateTime 關係運算子](#coledatetime_relational_operators)的範例。
 
 如需有關有效、 無效和 null 的狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。
 
@@ -897,7 +897,7 @@ COleDateTime& operator-=(COleDateTimeSpan dateSpan) throw();
 
 如需有關有效、 無效和 null 的狀態值的詳細資訊，請參閱[m_status](#m_status)成員變數。
 
-**+=** 並**-=** 運算子會判斷提示，如果`COleDateTime`物件設定為 null。 請參閱[COleDateTime 關係運算子](#coledatetime_relational_operators)的範例。
+**+=** 並 **-=** 運算子會判斷提示，如果`COleDateTime`物件設定為 null。 請參閱[COleDateTime 關係運算子](#coledatetime_relational_operators)的範例。
 
 如需有關的界限`COleDateTime`值，請參閱文章[日期和時間：自動化支援](../../atl-mfc-shared/date-and-time-automation-support.md)。
 

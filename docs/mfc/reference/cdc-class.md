@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222569"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504392"
 ---
 # <a name="cdc-class"></a>CDC 類別
 
@@ -3220,7 +3220,7 @@ int GetGraphicsMode() const;
 
 在失敗時傳回 0。
 
-若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，版面配置旗標目前的裝置內容。 否則，GDI_ERROR。 如需擴充的錯誤資訊，呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。 如需版面配置的旗標的清單，請參閱 < [CDC::SetLayout](#setlayout)。
+如果成功，版面配置旗標目前的裝置內容。 否則，GDI_ERROR。 如需擴充的錯誤資訊，呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如需版面配置的旗標的清單，請參閱 < [CDC::SetLayout](#setlayout)。
 
 ### <a name="remarks"></a>備註
 
@@ -4012,7 +4012,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 在失敗時傳回 0。
 
-若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -4459,7 +4459,7 @@ BOOL ModifyWorldTransform(
 
 在失敗時傳回 0。
 
-若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -6003,7 +6003,7 @@ int SetGraphicsMode(int iMode);
 
 成功時傳回舊的圖形模式。
 
-在失敗時傳回 0。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+在失敗時傳回 0。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 如果成功，裝置內容的前一個版面配置。
 
-如果不成功，GDI_ERROR。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果不成功，GDI_ERROR。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -6657,7 +6657,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 在失敗時傳回 0。
 
-若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 

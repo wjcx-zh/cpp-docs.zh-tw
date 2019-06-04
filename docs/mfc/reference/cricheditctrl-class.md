@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372097"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504727"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl 類別
 
@@ -503,7 +503,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非`Create`套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。
+使用`CreateEx`而非`Create`套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_** 。
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 
 ### <a name="remarks"></a>備註
 
-如果您使用第一個表單， **GetSelText (** `lpBuf` **)**，您必須確定緩衝區是否夠大，它將會收到的文字。 呼叫[GetSel](#getsel)來判斷目前的選取範圍中的字元數。
+如果您使用第一個表單， **GetSelText (** `lpBuf` **)** ，您必須確定緩衝區是否夠大，它將會收到的文字。 呼叫[GetSel](#getsel)來判斷目前的選取範圍中的字元數。
 
 如需詳細資訊，請參閱 < [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) Windows SDK 中。
 
@@ -1354,7 +1354,7 @@ int LineIndex(int nLine = -1) const;
 
 字元索引是 rich edit 控制項的開頭到指定的行的字元數目。
 
-如需詳細資訊，請參閱 < [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。
+如需詳細資訊，請參閱 < [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) Windows SDK 中。
 
 ### <a name="example"></a>範例
 

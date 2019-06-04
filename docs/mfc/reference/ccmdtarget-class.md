@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4db220ce28ecd762796f196e611a69ce157d2efa
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206437"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504453"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget 類別
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>參數
 
 *pIID*<br/>
-介面識別碼的指標 ( [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931))。
+介面識別碼的指標 ( [GUID](/previous-versions/aa373931\(v=vs.80\)))。
 
 ### <a name="return-value"></a>傳回值
 
@@ -350,7 +350,7 @@ HRESULT GetTypeInfoOfGuid(
 地區設定識別碼 ( `LCID`)。
 
 *guid*<br/>
-[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)的型別描述。
+[GUID](/previous-versions/aa373931\(v=vs.80\))的型別描述。
 
 *ppTypeInfo*<br/>
 指標的指標`ITypeInfo`介面。

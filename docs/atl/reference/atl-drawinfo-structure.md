@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 70329d3b2c18c8cd8e94854f40ff971c0b39a8f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261061"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503421"
 ---
 # <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 結構
 
@@ -60,7 +60,7 @@ struct ATL_DRAWINFO {
 在其上繪製的裝置內容。 無視窗的物件，如`hdcDraw`成員是在`MM_TEXT`對應模式比對包含視窗的用戶端座標其邏輯座標。 此外，裝置內容應該在相同的狀態是通常傳遞`WM_PAINT`訊息。
 
 `prcBounds`<br/>
-指標[RECTL](https://msdn.microsoft.com/library/windows/desktop/dd162907)結構，指定矩形上`hdcDraw`，在應該繪製的物件。 這個成員控制項的定位和延伸的物件。 這個成員應該是 NULL，來繪製無視窗的就地使用中的物件。 在每個其他情況下，NULL 不是合法的值，並應該會導致`E_INVALIDARG`錯誤碼。 如果容器會將非 NULL 值傳遞至無視窗的物件，該物件應該轉譯要求的長寬成指定的裝置內容和矩形。 容器可以要求從無視窗物件來呈現物件的第二個 」、 「 非作用中的檢視，或列印物件。
+指標[RECTL](/previous-versions//dd162907\(v=vs.85\))結構，指定矩形上`hdcDraw`，在應該繪製的物件。 這個成員控制項的定位和延伸的物件。 這個成員應該是 NULL，來繪製無視窗的就地使用中的物件。 在每個其他情況下，NULL 不是合法的值，並應該會導致`E_INVALIDARG`錯誤碼。 如果容器會將非 NULL 值傳遞至無視窗的物件，該物件應該轉譯要求的長寬成指定的裝置內容和矩形。 容器可以要求從無視窗物件來呈現物件的第二個 」、 「 非作用中的檢視，或列印物件。
 
 `prcWBounds`<br/>
 如果`hdcDraw`中繼檔裝置內容 (請參閱 < [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) Windows SDK 中)，這是一個指向`RECTL`結構基礎中繼檔中指定的週框。 矩形結構包含視窗範圍和視窗原點。 這些值可用於繪製中繼檔。 所表示的矩形`prcBounds`在此為巢狀`prcWBounds`矩形; 它們是相同的座標空間中。

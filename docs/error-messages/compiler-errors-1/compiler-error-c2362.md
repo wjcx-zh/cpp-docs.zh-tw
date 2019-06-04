@@ -1,29 +1,29 @@
 ---
 title: 編譯器錯誤 C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364320"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503217"
 ---
 # <a name="compiler-error-c2362"></a>編譯器錯誤 C2362
 
-'identifier' 的初始化會略過由 'goto label'
+> 初始化 '*識別碼*' 會被略過 ' goto*標籤*'
 
-進行編譯時[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳至標籤導致無法進行初始化的識別項。
+藉由編譯時[/Za](../../build/reference/za-ze-disable-language-extensions.md)，跳至標籤導致無法進行初始化的識別項。
 
-除非宣告括在不輸入，區塊中，您無法跳過具有初始設定式的宣告，或已初始化的變數。
+如果宣告括在區塊中不輸入，或如果已初始化的變數，您只可以跳過的初始設定式的宣告。
 
-下列範例會產生 C2326：
+下列範例會產生 C2362:
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 可能的解決方式：
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

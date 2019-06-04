@@ -1,24 +1,24 @@
 ---
 title: 配置 GDI 資源
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304999"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504622"
 ---
 # <a name="allocating-gdi-resources"></a>配置 GDI 資源
 
 本文說明如何配置和取消配置列印所需的 Windows 圖形裝置介面 (GDI) 物件。
 
 > [!NOTE]
->  如需詳細資訊，請參閱 GDI + SDK 文件，網址： [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp)。
+>  如需詳細資訊，請參閱 < [GDI + SDK 文件](/windows/desktop/gdiplus/-gdiplus-gdi-start)。
 
 假設您需要使用特定字型、畫筆或其他 GDI 物件進行列印，但不用於螢幕顯示。 在應用程式啟動時配置這些物件需要較多記憶體，因此不符合效益。 當應用程式未列印文件時，這些記憶體可能需要用於其他用途。 在列印開始時配置這些物件，然後在列印結束時加以刪除，是較理想的做法。
 

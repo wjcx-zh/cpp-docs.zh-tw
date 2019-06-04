@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168319"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504449"
 ---
 # <a name="cdialog-class"></a>CDialog 類別
 
@@ -215,7 +215,7 @@ virtual BOOL Create(
 
 `Create`成員函式會傳回，它會建立對話方塊之後，立即。
 
-如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`。 如需進一步對話方塊樣式和其應用程式，請參閱[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的結構和[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 參考 》*。
+如果父視窗建立時，應該會出現對話方塊，請使用對話方塊範本中的 WS_VISIBLE 樣式。 否則，您必須呼叫`ShowWindow`。 如需進一步對話方塊樣式和其應用程式，請參閱[DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK 中的結構和[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)中*MFC 參考 》* 。
 
 使用`CWnd::DestroyWindow`終結對話方塊中所建立的函式`Create`函式。
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-**Int**值，指定的值*n 結果*參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立 IDABORT 的對話方塊中，如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+**Int**值，指定的值*n 結果*參數傳遞給[CDialog::EndDialog](#enddialog)成員函式，用來關閉對話方塊。 傳回值為-1，如果函式無法建立 IDABORT 的對話方塊中，如果發生其他錯誤，在此情況下 [輸出] 視窗將包含錯誤資訊[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 

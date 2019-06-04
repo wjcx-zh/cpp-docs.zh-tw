@@ -10,12 +10,12 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f7af7007e72cb8e01022c81a244fc70ba52a5cc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225535"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504829"
 ---
 # <a name="menus-and-resources-menu-merging"></a>功能表和資源：合併的功能表
 
@@ -29,9 +29,7 @@ ms.locfileid: "62225535"
 
 ##  <a name="_core_menu_layouts"></a> 功能表配置
 
-第一個步驟是協調功能表配置。 如需詳細資訊，請參閱 <  **功能表建立**一節[功能表程式設計考量](https://msdn.microsoft.com/library/ms647557.aspx)Windows SDK 中。
-
-容器應用程式應該建立要內嵌的項目就地啟動時，才使用新的功能表。 在 最小值，這個功能表應該包含下列命令，列出的順序：
+第一個步驟是協調功能表配置。 容器應用程式應該建立要內嵌的項目就地啟動時，才使用新的功能表。 在 最小值，這個功能表應該包含下列命令，列出的順序：
 
 1. 與檔案開啟時所使用的密碼完全相同的檔案 功能表。 （通常是任何其他的功能表項目會不放在下一步 的項目之前）。
 

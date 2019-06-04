@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225242"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503447"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。
+使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_** 。
 
 `CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
 
@@ -709,7 +709,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>備註
 
-`CImageList`物件是永久的而且您必須將它完成時刪除。 例如: 
+`CImageList`物件是永久的而且您必須將它完成時刪除。 例如:
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -1367,7 +1367,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> Windows SDK 中所述的訊息。
+這個方法會傳送[LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) --> Windows SDK 中所述的訊息。
 
 ### <a name="example"></a>範例
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構。 這個參數不能是 NULL。|
+|*pItemIndex*|[in]指標[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)結構子項目的父項目。<br /><br /> 呼叫端會負責配置和設定的成員[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)結構。 這個參數不能是 NULL。|
 |*iColumn*|[in]控制項中的資料行的以零為起始索引。|
 |*rectType*|[in]要為其擷取周框的清單檢視子項目的部分。 指定下列其中一個值：<br /><br /> LVIR_BOUNDS-傳回整個子項目，包括圖示和標籤的週框矩形。<br /><br /> LVIR_ICON-傳回圖示或小圖示子項目的週框。<br /><br /> LVIR_LABEL-傳回子項目文字的週框矩形。|
 |*pRect*|[out]指標[RECT](/previous-versions/dd162897\(v=vs.85\))接收子項目的週框矩形的相關資訊的結構。<br /><br /> 呼叫端會負責配置[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 這個參數不能是 NULL。|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in、 out]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|
-|*nFlags*|[in]位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息。|
+|*pItemIndex*|[in、 out]指標[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)結構描述項目開始搜尋或-1 表示找到第一個符合項目，中的旗標*nFlags*參數。<br /><br /> 如果這個方法成功，`LVITEMINDEX`結構描述的搜尋作業找到的項目。|
+|*nFlags*|[in]位元組合 (OR) 旗標，指定如何執行搜尋。<br /><br /> 搜尋可能取決於索引、 狀態或外觀的目標項目，或以指定目標項目的實體位置，相對於項目*pItemIndex*參數。 如需詳細資訊，請參閱 <<c0>  *旗標*中的參數[LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)訊息。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -2104,7 +2104,7 @@ BOOL GetNextItemIndex(
 
 呼叫端會負責配置和設定的成員`LVITEMINDEX`結構所指*pItemIndex*參數。
 
-這個方法會傳送[LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059)訊息，Windows SDK 中所述。
+這個方法會傳送[LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex)訊息，Windows SDK 中所述。
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ UINT MapIDToIndex(UINT id) const;
 
 請注意，在多執行緒環境中的索引保證只有在裝載清單檢視控制項，不是在背景執行緒上的執行緒。
 
-這個方法會傳送[LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137)訊息，Windows SDK 中所述。
+這個方法會傳送[LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex)訊息，Windows SDK 中所述。
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |參數|描述|
 |---------------|-----------------|
-|*pItemIndex*|[in]指標[LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|
+|*pItemIndex*|[in]指標[LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex)該結構描述項目。 呼叫端負責配置這個結構，並設定其成員。|
 |*dwState*|[in]若要設定項目，狀態即的位元組合[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。 指定 0 時可重設，或其中一個狀態設定。|
 |*dwMask*|[in]所指定的狀態的有效位元遮罩*dwState*參數。 指定的位元組合 (OR)[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)。|
 

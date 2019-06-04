@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387888"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504198"
 ---
 # <a name="toolbar-editor-c"></a>工具列編輯器 (C++)
 
@@ -72,7 +72,7 @@ ms.locfileid: "62387888"
 
 **新增工具列資源** 對話方塊可讓您指定您要新增工具列資源中按鈕的高度與寬度C++專案。 預設值是 16 × 15 像素。
 
-用來建立工具列點陣圖的最大寬度為 2048，因此如果您將** 按鈕寬度**要*512*，只能有四個按鈕。 如果您將寬度設成*513*，只能有三個按鈕。
+用來建立工具列點陣圖的最大寬度為 2048，因此如果您將 **按鈕寬度**要*512*，只能有四個按鈕。 如果您將寬度設成*513*，只能有三個按鈕。
 
 **新增工具列資源**對話方塊具有下列屬性：
 
@@ -91,9 +91,9 @@ ms.locfileid: "62387888"
 |屬性|描述|
 |--------------|-----------------|
 |**ID**|定義按鈕的識別碼。 下拉式清單提供常見**識別碼**名稱。|
-|[寬度]|設定按鈕的寬度。 建議您使用 16 像素為單位。|
-|[高度]|設定按鈕的高度。 一個按鈕的高度變更工具列上的所有按鈕的高度。 建議使用 15 像素為單位。|
-|**提示**|定義在狀態列中顯示的訊息。 新增*\n* ，並將名稱加入**工具提示**加入工具列按鈕。 如需詳細資訊，請參閱 <<c0> [ 建立工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
+|[寬度] |設定按鈕的寬度。 建議您使用 16 像素為單位。|
+|[高度] |設定按鈕的高度。 一個按鈕的高度變更工具列上的所有按鈕的高度。 建議使用 15 像素為單位。|
+|**提示**|定義在狀態列中顯示的訊息。 新增 *\n* ，並將名稱加入**工具提示**加入工具列按鈕。 如需詳細資訊，請參閱 <<c0> [ 建立工具提示](../windows/creating-a-tool-tip-for-a-toolbar-button.md)。|
 
 **寬度**並**高度**適用於所有按鈕。 用來建立工具列點陣圖的最大寬度為 2048，因此如果您將按鈕寬度*512*只能有四個按鈕，如果您將寬度設成*513*，只能有三個按鈕。
 
@@ -107,7 +107,7 @@ ms.locfileid: "62387888"
 
 1. 在 **加入資源**對話方塊中，選取**工具列**中**資源類型**清單，然後選擇**新增**。
 
-   如果一個加號 (**+**) 旁邊會出現**工具列**資源類型，表示工具列範本可供使用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
+   如果一個加號 ( **+** ) 旁邊會出現**工具列**資源類型，表示工具列範本可供使用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>若要將點陣圖轉換成工具列資源
 
@@ -204,6 +204,5 @@ MFC 或 ATL
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->
+[功能表和其他資源](/windows/desktop/menurc/resources)<br/>
+[工具列按鈕屬性](../windows/toolbar-button-properties.md)<br/>

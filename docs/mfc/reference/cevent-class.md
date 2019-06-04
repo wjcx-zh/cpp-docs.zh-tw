@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206039"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503723"
 ---
 # <a name="cevent-class"></a>CEvent 類別
 
@@ -110,7 +110,7 @@ CEvent(
 `CEvent` 物件的名稱。 如果該物件會使用跨處理序界限，必須提供。 如果名稱符合現有的事件，建構函式會建置新`CEvent`物件會參考該名稱的事件。 如果名稱符合現有的同步處理物件，不是事件，建構將會失敗。 如果是 NULL，則會有名稱為 null。
 
 *lpsaAttribute*<br/>
-事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+事件物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
@@ -119,7 +119,7 @@ CEvent(
 若要變更的狀態`CEvent`物件已收到訊號 （執行緒就不必等候），呼叫[SetEvent](#setevent)或是[PulseEvent](#pulseevent)。 若要設定的狀態`CEvent`為未收到信號的物件 （執行緒就必須等候），呼叫[ResetEvent](#resetevent)。
 
 > [!IMPORTANT]
->  在建立後`CEvent`物件，請使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以確保 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
+>  在建立後`CEvent`物件，請使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確保 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

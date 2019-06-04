@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383317"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504524"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 實值類別
 
-代表 Windows 執行階段類型系統中的 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) 類型。
+代表 Windows 執行階段類型系統中的 [GUID](/previous-versions/aa373931\(v=vs.80\)) 類型。
 
 ## <a name="syntax"></a>語法
 
@@ -115,7 +115,7 @@ Guid(
 下一個位元組`GUID`。
 
 *m*<br/>
-A`GUID`形式[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+A`GUID`形式[GUID 結構](/previous-versions/aa373931\(v=vs.80\))。
 
 *n*<br/>
 剩餘的 8 個位元組`GUID`。
@@ -194,7 +194,7 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ## <a name="operator-call"></a> Guid::operator() 運算子
 
-將隱含轉換`Platform::Guid`要[GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+將隱含轉換`Platform::Guid`要[GUID 結構](/previous-versions/aa373931\(v=vs.80\))。
 
 ### <a name="syntax"></a>語法
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>傳回值
 
-A [GUID 結構](https://msdn.microsoft.com/library/windows/desktop/aa373931)。
+A [GUID 結構](/previous-versions/aa373931\(v=vs.80\))。
 
 ## <a name="see-also"></a>另請參閱
 

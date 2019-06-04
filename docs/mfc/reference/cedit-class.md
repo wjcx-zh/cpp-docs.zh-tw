@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164068"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503738"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ class CEdit : public CWnd
 
 每個訊息對應項目都會使用下列格式：
 
-  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
+  **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
 何處`id`指定傳送通知，編輯控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。
 
@@ -708,7 +708,7 @@ TCHAR GetPasswordChar() const;
 
 ### <a name="remarks"></a>備註
 
-如果您建立的 ES_PASSWORD 樣式的編輯控制項，則支援控制 DLL 會決定預設密碼字元。 資訊清單或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法會判斷 DLL 支援編輯控制項。 如果 user32.dll 支援編輯控制項的預設密碼字元是星號 ('* '，U + 002A)。 如果 comctl32.dll 版本 6 支援編輯控制項的預設字元是黑色圓形 （'●'，U + 25CF）。 如需有關哪些 DLL 和版本支援的通用控制項，請參閱[殼層和通用控制項版本](https://msdn.microsoft.com/library/windows/desktop/bb776779)。
+如果您建立的 ES_PASSWORD 樣式的編輯控制項，則支援控制 DLL 會決定預設密碼字元。 資訊清單或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法會判斷 DLL 支援編輯控制項。 如果 user32.dll 支援編輯控制項的預設密碼字元是星號 ('* '，U + 002A)。 如果 comctl32.dll 版本 6 支援編輯控制項的預設字元是黑色圓形 （'●'，U + 25CF）。 如需有關哪些 DLL 和版本支援的通用控制項，請參閱[殼層和通用控制項版本](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))。
 
 這個方法會傳送[EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar)訊息，Windows SDK 中所述。
 
@@ -867,7 +867,7 @@ int LineIndex(int nLine = -1) const;
 
 此成員函式只會處理多行編輯控制項。
 
-如需詳細資訊，請參閱 < [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) Windows SDK 中。
+如需詳細資訊，請參閱 < [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) Windows SDK 中。
 
 ### <a name="example"></a>範例
 

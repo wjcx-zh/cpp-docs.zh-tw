@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d249c7effc2c78e319207d82c9a963d7a61a67c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372227"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504771"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>建立 Web 瀏覽器樣式的 MFC 應用程式
 
@@ -48,13 +48,13 @@ void CWebView::OnInitialUpdate()
 
     // TODO: This code navigates to a popular spot on the web.
     // Change the code to go where you'd like.
-    Navigate2(_T("http://www.msdn.microsoft.com/vstudio/"),
+    Navigate2(_T("http://www.docs.microsoft.com/"),
         NULL,
         NULL);
 }
 ```
 
-您可以使用您自己，取代此站台，或者您可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成員函式來開啟 HTML 網頁位於專案的資源指令碼，做為預設內容檢視。 例如: 
+您可以使用您自己，取代此站台，或者您可以使用[LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)成員函式來開啟 HTML 網頁位於專案的資源指令碼，做為預設內容檢視。 例如：
 
 ```cpp
 void CWebView::OnInitialUpdate()

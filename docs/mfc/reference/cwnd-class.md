@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: fc92497c4d43238f9cf6aea7132afb8c8dc27fbd
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451227"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504245"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -5607,7 +5607,7 @@ BOOL LockWindowUpdate();
 
 無法移動已鎖定的視窗。 只有一個視窗可以鎖定一次。 若要解除鎖定與鎖定的視窗`LockWindowUpdate`，呼叫[UnlockWindowUpdate](#unlockwindowupdate)。
 
-如果鎖定的視窗 （或任何鎖定的子視窗） 的應用程式會呼叫[GetDC，](https://msdn.microsoft.com/library/windows/desktop/dd144871) [GetDCEx，](https://msdn.microsoft.com/library/windows/desktop/dd144873)或是[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 函式，呼叫的函式會傳回裝置其可見的區域是空的內容。 藉由呼叫應用程式解除鎖定的視窗之前，會發生此情況`UnlockWindowUpdate`成員函式。
+如果鎖定的視窗 （或任何鎖定的子視窗） 的應用程式會呼叫[GetDC，](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx，](/windows/desktop/api/winuser/nf-winuser-getdcex)或是[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) Windows 函式，呼叫的函式會傳回裝置其可見的區域是空的內容。 藉由呼叫應用程式解除鎖定的視窗之前，會發生此情況`UnlockWindowUpdate`成員函式。
 
 視窗將會更新鎖定後，系統會追蹤的任何繪製作業，以鎖定視窗相關聯的裝置內容的週框矩形。 時重新繪圖，這個週框矩形無效 [鎖定] 視窗和其子視窗強制最終[WM_PAINT](/windows/desktop/gdi/wm-paint)更新螢幕的訊息。 如果不發生任何繪圖視窗將會更新已鎖定時，不含區域將會失效。
 
@@ -10038,7 +10038,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_USERCHANGED](https://msdn.microsoft.com/library/windows/desktop/ms632651)通知訊息時，Windows SDK 中所述。 當使用者登入或登出時，作業系統會更新使用者專屬設定。 系統會傳送此訊息之後立即更新的設定。
+這個方法會接收[WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged)通知訊息時，Windows SDK 中所述。 當使用者登入或登出時，作業系統會更新使用者專屬設定。 系統會傳送此訊息之後立即更新的設定。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。

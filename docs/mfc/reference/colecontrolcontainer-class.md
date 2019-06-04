@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310431"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504558"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer 類別
 
@@ -473,7 +473,7 @@ virtual UINT GetDlgItemInt(
 接收函式成功/失敗值的布林值變數的指標 （TRUE 表示成功，FALSE 表示失敗）。
 
 *bSigned*<br/>
-指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果*bSigned*參數為 TRUE，則指定要擷取的值帶正負號的整數值，傳回值轉換成**int**型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+指定函式是否應該檢查負號開頭的文字，並傳回帶正負號的整數值，如果找到。 如果*bSigned*參數為 TRUE，則指定要擷取的值帶正負號的整數值，傳回值轉換成**int**型別。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -515,7 +515,7 @@ virtual int GetDlgItemText(
 
 如果此函數成功，傳回的值會指定複製到緩衝區，不包括結束的 null 字元的字元數。
 
-如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

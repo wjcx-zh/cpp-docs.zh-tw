@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260723"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503374"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -246,7 +246,7 @@ bool CreatePrimaryToken(
 指定新的權杖要求的存取權限。 預設值，MAXIMUM_ALLOWED，要求所有呼叫端的有效存取權限。 請參閱[存取權限和存取遮罩](/windows/desktop/SecAuthZ/access-rights-and-access-masks)的更多的存取權限。
 
 *pTokenAttributes*<br/>
-指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的權杖的安全性描述元，並判斷子處理序是否可以繼承的語彙基元。 如果*pTokenAttributes*是 NULL，此語彙基元取得預設安全性描述元，而且無法繼承控制代碼。
+指標[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構，指定新的權杖的安全性描述元，並判斷子處理序是否可以繼承的語彙基元。 如果*pTokenAttributes*是 NULL，此語彙基元取得預設安全性描述元，而且無法繼承控制代碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -295,10 +295,10 @@ bool CreateProcessAsUser(
 如果為 TRUE，會載入使用者設定檔[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)。
 
 *pProcessAttributes*<br/>
-指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的處理序的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pProcessAttributes*是 NULL，此程序取得的預設安全性描述元，而且無法繼承控制代碼。
+指標[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構，指定新的處理序的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pProcessAttributes*是 NULL，此程序取得的預設安全性描述元，而且無法繼承控制代碼。
 
 *pThreadAttributes*<br/>
-指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，指定新的執行緒的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pThreadAttributes*是 NULL，執行緒會取得預設安全性描述元，而且無法繼承控制代碼。
+指標[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構，指定新的執行緒的安全性描述元，並判斷子處理序是否可以繼承傳回的控制代碼。 如果*pThreadAttributes*是 NULL，執行緒會取得預設安全性描述元，而且無法繼承控制代碼。
 
 *bInherit*<br/>
 指出是否在新處理序會繼承控制代碼呼叫處理序。 如果為 TRUE，新的處理序會繼承呼叫處理序中每個可繼承的開啟控制代碼。 繼承的控制代碼具有相同的值與存取權限，原始的控制代碼的形式。

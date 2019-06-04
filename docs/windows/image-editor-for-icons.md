@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c411c4b95fcd3866c897f04b70da7cbb2b48ba28
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351608"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504313"
 ---
 # <a name="image-editor-for-icons-c"></a>圖示影像編輯器 (C++)
 
@@ -97,8 +97,8 @@ ms.locfileid: "62351608"
 |---|---|
 |**像素格線**|有選取時，會顯示方格，以解決每一個像素**影像編輯器**。<br/><br/>方格會出現只在 4 × 和較高的解析度。|
 |**磚狀格線**|選取時，會顯示一個方格，周圍區塊中的像素**影像編輯器**格線間距值所指定。|
-|[寬度]|指定每個圖格區塊的寬度。<br/><br/>繪製點陣圖包含定期排列的多個映像時，此屬性相當實用。|
-|[高度]|指定每個圖格區塊的高度。<br/><br/>繪製點陣圖包含定期排列的多個映像時，此屬性相當實用。|
+|[寬度] |指定每個圖格區塊的寬度。<br/><br/>繪製點陣圖包含定期排列的多個映像時，此屬性相當實用。|
+|[高度] |指定每個圖格區塊的高度。<br/><br/>繪製點陣圖包含定期排列的多個映像時，此屬性相當實用。|
 
 ## <a name="toolbar"></a>工具列
 
@@ -142,7 +142,7 @@ ms.locfileid: "62351608"
 |屬性|描述|
 |---|---|
 |**字型**|列出可用的字型。|
-|[字型樣式]|列出指定的字型的可用樣式。|
+|[字型樣式] |列出指定的字型的可用樣式。|
 |**Size**|列出指定的字型的可用點數大小。|
 |**範例**|顯示文字會如何出現具有指定的字型設定的範例。|
 |**指令碼**|列出可用的語言指令碼，針對指定的字型。<br/><br/>當您選取不同的語言指令碼時，字元集的語言可用來建立多國語言的文件。|
@@ -171,7 +171,7 @@ ms.locfileid: "62351608"
 
    - 選取  **10**從可用的點中所列的大小**大小**清單方塊。
 
-   - 選擇 [確定] 。 **文字工具字型**對話方塊會關閉，而新的字型設定將套用到您的文字。
+   - 選擇 [確定]  。 **文字工具字型**對話方塊會關閉，而新的字型設定將套用到您的文字。
 
 1. 選擇**關閉**上**文字工具** 對話方塊。 可調整您在文字周圍方塊會從消失**影像編輯器**。
 
@@ -220,5 +220,4 @@ None
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-
-<!--[Icons](https://msdn.microsoft.com/library/windows/desktop/ms646973.aspx)-->
+[圖示](/windows/desktop/menurc/icons)

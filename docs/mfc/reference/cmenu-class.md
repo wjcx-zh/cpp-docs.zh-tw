@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375791"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504851"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 
@@ -769,7 +769,7 @@ BOOL GetMenuItemInfo(
 
 ### <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。
+如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)、 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
 
@@ -1267,7 +1267,7 @@ BOOL SetDefaultItem(
 
 ### <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)、 Windows SDK 中所述。
+如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)、 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
 
@@ -1476,7 +1476,7 @@ BOOL TrackPopupMenuEx(
 
 如果您指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值是使用者選取項目的功能表項目識別碼。 如果使用者取消 [] 功能表中，而不需要進行選擇，或發生錯誤時，傳回的值為 0。
 
-如果您未指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值會是零，如果函式成功，0 失敗。 若要取得延伸錯誤資訊，請呼叫[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)。
+如果您未指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值會是零，如果函式成功，0 失敗。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 

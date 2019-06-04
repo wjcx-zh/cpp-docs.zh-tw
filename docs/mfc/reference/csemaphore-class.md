@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324203"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504705"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 類別
 
@@ -83,14 +83,14 @@ CSemaphore(
 號誌的名稱。 如果將會跨處理序界限來存取號誌，必須提供。 如果`NULL`，物件會是未命名。 如果名稱符合現有的旗號，建構函式會建置新`CSemaphore`參考該名稱的號誌的物件。 如果名稱符合現有的同步處理物件，不是號誌，建構將會失敗。
 
 *lpsaAttributes*<br/>
-號誌物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+號誌物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
 存取或釋放`CSemaphore`物件，建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件並呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)並[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。
 
 > [!IMPORTANT]
->  在建立後`CSemaphore`物件，請使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以確保該 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
+>  在建立後`CSemaphore`物件，請使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確保該 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
 
 ## <a name="see-also"></a>另請參閱
 

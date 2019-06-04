@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fb23bd502de87aefe01d91e2b0640ee3137b00
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212905"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504590"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>多執行緒：建立 MFC 使用者介面執行緒
 
@@ -45,7 +45,7 @@ MFC 提供兩種 `AfxBeginThread` 參數多載版本：只能建立背景工作�
 
 - （選擇性）如果您想要在暫停狀態中建立的執行緒，CREATE_SUSPENDED。 預設值為 0，或以正常方式啟動執行緒。
 
-- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 `AfxBeginThread` 為您做了大部分的工作。 它會建立您的類別的新物件，使用您提供的資訊，並呼叫它初始化[CWinThread::CreateThread](../mfc/reference/cwinthread-class.md#createthread)開始執行執行緒。 整個程序進行檢查以確定所有物件都是已解除配置正確建立的任何部分萬一失敗。
 

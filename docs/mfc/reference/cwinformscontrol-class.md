@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323293"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504669"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl 類別
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>參數
 
 *pType*<br/>
-要建立之控制項的資料型別。 必須是[型別](https://msdn.microsoft.com/library/system.type)資料型別。
+要建立之控制項的資料型別。 必須是[型別](/dotnet/api/system.type)資料型別。
 
 *dwStyle*<br/>
 要套用至控制項的視窗樣式。 指定的組合[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。 目前支援下列樣式：WS_TABSTOP、 WS_VISIBLE、 WS_DISABLED 和 WS_GROUP。
@@ -136,7 +136,7 @@ Windows Forms 控制項相關聯的執行個體[CWinFormsControl](../../mfc/refe
 
 這個方法具現化的 MFC 容器中.NET Framework Windows Form 控制項。
 
-此方法的第一個多載接受.NET Framework 資料型別*pType*以便 MFC 可以具現化這個型別的新物件。 *pType*必須是[型別](https://msdn.microsoft.com/library/system.type)資料型別。
+此方法的第一個多載接受.NET Framework 資料型別*pType*以便 MFC 可以具現化這個型別的新物件。 *pType*必須是[型別](/dotnet/api/system.type)資料型別。
 
 此方法的第二個多載會建立為基礎的 Windows Forms 控制項`TManagedControl`範本參數`CWinFormsControl`類別。 大小和位置的控制項根據`RECT`結構傳遞給方法。 只有*cheaderctrl:: Create*樣式很重要。
 

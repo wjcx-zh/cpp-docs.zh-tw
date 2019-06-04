@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345587"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503463"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession 類別
 
@@ -156,7 +156,7 @@ CInternetSession(
 
 - 在本機或在任何閘道伺服器，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。
 
-- 透過持續性的快取滿足 INTERNET_FLAG_OFFLINE 下載作業。 如果項目不存在於快取中，會傳回適當的錯誤碼。 這個旗標可能會結合使用位元**或是**( **&#124;**) 運算子。
+- 透過持續性的快取滿足 INTERNET_FLAG_OFFLINE 下載作業。 如果項目不存在於快取中，會傳回適當的錯誤碼。 這個旗標可能會結合使用位元**或是**( **&#124;** ) 運算子。
 
 ### <a name="remarks"></a>備註
 
@@ -258,7 +258,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>傳回值
 
-否則傳回如果成功，則為 TRUE 或 FALSE。 如果呼叫失敗，會呼叫 Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)來判斷錯誤的原因。 適用於下列的錯誤值：
+否則傳回如果成功，則為 TRUE 或 FALSE。 如果呼叫失敗，會呼叫 Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。 適用於下列的錯誤值：
 
 - ERROR_NO_MORE_ITEMS 是指定之 url 的任何 cookie 和所有其父代。
 
@@ -536,7 +536,7 @@ CStdioFile* OpenURL(
 
 ### <a name="remarks"></a>備註
 
-參數*dwFlags* INTERNET_FLAG_TRANSFER_ASCII 或 INTERNET_FLAG_TRANSFER_BINARY，但不是能兩者都必須包含。 剩餘的旗標可以與位元結合**或是**運算子 ( **&#124;**)。
+參數*dwFlags* INTERNET_FLAG_TRANSFER_ASCII 或 INTERNET_FLAG_TRANSFER_BINARY，但不是能兩者都必須包含。 剩餘的旗標可以與位元結合**或是**運算子 ( **&#124;** )。
 
 `OpenURL`其中包裝 Win32 函式`InternetOpenURL`，允許只下載、 擷取和讀取網際網路伺服器中的資料。 `OpenURL` 可讓遠端位置上的沒有檔案操作，因此需要無[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)物件。
 
@@ -616,11 +616,11 @@ DWORD，其中包含的選項設定。
 
 - 在本機或在任何閘道伺服器，請 INTERNET_FLAG_DONT_CACHE 不要快取的資料。
 
-- 透過持續性的快取滿足 INTERNET_FLAG_OFFLINE 下載作業。 如果項目不存在於快取中，會傳回適當的錯誤碼。 這個旗標可能會結合使用位元**或是**( **&#124;**) 運算子。
+- 透過持續性的快取滿足 INTERNET_FLAG_OFFLINE 下載作業。 如果項目不存在於快取中，會傳回適當的錯誤碼。 這個旗標可能會結合使用位元**或是**( **&#124;** ) 運算子。
 
 ### <a name="return-value"></a>傳回值
 
-如果作業成功，則會傳回 TRUE 值。 如果發生錯誤，則會傳回 FALSE 值。 如果呼叫失敗，Win32 函式[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)可能會呼叫以判斷錯誤的原因。
+如果作業成功，則會傳回 TRUE 值。 如果發生錯誤，則會傳回 FALSE 值。 如果呼叫失敗，Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能會呼叫以判斷錯誤的原因。
 
 ## <a name="see-also"></a>另請參閱
 

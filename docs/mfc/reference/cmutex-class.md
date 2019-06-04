@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373631"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504180"
 ---
 # <a name="cmutex-class"></a>CMutex 類別
 
@@ -77,14 +77,14 @@ CMutex(
 `CMutex` 物件的名稱。 另一個具有相同名稱的 mutex 已存在，如果*lpszName*必須提供，如果該物件會使用跨處理序界限。 如果**NULL**，mutex 會是未命名。 如果名稱符合現有的 mutex，建構函式會建置新`CMutex`參考該名稱的 mutex 物件。 如果名稱符合現有的同步處理物件，都不是 mutex，建構將會失敗。
 
 *lpsaAttribute*<br/>
-Mutex 物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK 中。
+Mutex 物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 
 存取或釋放`CMutex`物件，建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件並呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)並[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。 如果`CMutex`物件正在使用獨立的工作，請呼叫其`Unlock`釋放它的成員函式。
 
 > [!IMPORTANT]
->  在建立後`CMutex`物件，請使用[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)以確保該 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
+>  在建立後`CMutex`物件，請使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確保該 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245578"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503335"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY 巨集
 
@@ -39,7 +39,7 @@ ms.locfileid: "62245578"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|與相同[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)，除非*punk*是 NULL，它會自動建立所描述的彙總*clsid*。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|與相同[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)，差異在於查詢任何 IID 導致轉送查詢*punk*，而如果*punk*為 NULL，就會自動建立所描述的彙總*clsid*。|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|會導致您的程式來呼叫[DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)時便會查詢指定的介面。|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|儲存每個執行個體的指定介面的資料。|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|會公開您 tear-off 介面。|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|處理到達這個 COM 對應中的項目時，請處理 COM 對應的基底類別。|
@@ -243,7 +243,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-會導致您的程式來呼叫[DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297)時便會查詢指定的介面。
+會導致您的程式來呼叫[DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak)時便會查詢指定的介面。
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-請注意，在 COM 對應中的第一個項目必須是包含 COM 對應的物件上的介面。 因此，您無法讓您的 COM 對應項目開始 COM_INTERFACE_ENTRY_CHAIN，這會導致不同的物件，要搜尋之處的 COM 對應所在**COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** 物件的 COM 對應中會出現。 如果您想要先搜尋另一個物件的 COM 對應中，新增介面項目`IUnknown`到 COM 對應，然後鏈結的其他物件的 COM 對應。 例如: 
+請注意，在 COM 對應中的第一個項目必須是包含 COM 對應的物件上的介面。 因此，您無法讓您的 COM 對應項目開始 COM_INTERFACE_ENTRY_CHAIN，這會導致不同的物件，要搜尋之處的 COM 對應所在**COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** 物件的 COM 對應中會出現。 如果您想要先搜尋另一個物件的 COM 對應中，新增介面項目`IUnknown`到 COM 對應，然後鏈結的其他物件的 COM 對應。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

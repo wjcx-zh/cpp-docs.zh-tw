@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278081"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503243"
 ---
 # <a name="cregkey-class"></a>CRegKey 類別
 
@@ -195,7 +195,7 @@ LONG Create(
 金鑰安全性存取權。 預設值是 KEY_READ &#124; KEY_WRITE。 如需可能的值和描述的清單，請參閱`RegCreateKeyEx`。
 
 *lpSecAttr*<br/>
-指標[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，此參數為 NULL （亦即無法繼承控制代碼）。
+指標[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構，表示金鑰的控制代碼是否可以由子處理序繼承。 根據預設，此參數為 NULL （亦即無法繼承控制代碼）。
 
 *lpdwDisposition*<br/>
 [out]如果不是 NULL，擷取 REG_CREATED_NEW_KEY （如果金鑰不存在，且已建立） 或 REG_OPENED_EXISTING_KEY （如果金鑰存在，且已開啟）。

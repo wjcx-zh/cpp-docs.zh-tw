@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385361"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503761"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>備註
 
-Windows Vista 中，成員之前的 Windows 版本中[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)持續資料結構進行同步處理狀態為  `CFileDialog`。 任何變更[m_ofn](#m_ofn)成員變數立即反映在對話方塊中的狀態。 此外，任何對話方塊中的狀態變更立即更新`m_ofn`成員變數。
+Windows Vista 中，成員之前的 Windows 版本中[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))持續資料結構進行同步處理狀態為  `CFileDialog`。 任何變更[m_ofn](#m_ofn)成員變數立即反映在對話方塊中的狀態。 此外，任何對話方塊中的狀態變更立即更新`m_ofn`成員變數。
 
 在 Windows Vista 或更新版本中的值`m_ofn`成員變數和狀態`CFileDialog`不保證同步處理。 此函式會強制的狀態`CFileDialog`更新為符合`m_ofn`結構。 Windows 會呼叫此函式期間自動[CFileDialog::DoModal](#domodal)。
 
@@ -572,7 +572,7 @@ explicit CFileDialog(
 
 指定使用預設延伸模組*lpszDefExt*可能不會產生的行為，您預期，因為它是很少可預測哪些延伸模組會對使用者的電腦中的檔案關聯。 如果您需要更充分掌控附加的預設延伸模組，您可以衍生自己的類別，從`CFileDialog`，並覆寫`CFileDialog::OnFileNameOK`方法，以執行您自己的延伸模組處理。
 
-若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如：
+若要讓使用者選取多個檔案，設定才能呼叫的 OFN_ALLOWMULTISELECT 旗標[DoModal](#domodal)。 您必須提供您自己來儲存傳回的多個檔案名稱清單的檔案名稱緩衝區。 執行這項操作來取代`m_ofn.lpstrFile`與緩衝區的指標所配置的之後您建構, [CFileDialog](../../mfc/reference/cfiledialog-class.md)，然後再呼叫，但`DoModal`。 此外，您必須設定`m_ofn.nMaxFile`所指向的緩衝區中的字元數目`m_ofn.lpstrFile`。 如果您設定要選取的檔案數目上限*n*，所需的緩衝區大小是`n`*(_MAX_PATH + 1) + 1。 例如:
 
 [!code-cpp[NVC_MFCFiles#23](../../atl-mfc-shared/reference/codesnippet/cpp/cfiledialog-class_1.cpp)]
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>備註
 
-Windows Vista 中，成員之前的 Windows 版本中[OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx)持續資料結構進行同步處理狀態為  `CFileDialog`。 任何變更[m_ofn](#m_ofn)成員變數的直接影響對話方塊方塊的狀態。 此外，對話方塊狀態的任何變更會立即更新 m_ofn 成員變數。
+Windows Vista 中，成員之前的 Windows 版本中[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))持續資料結構進行同步處理狀態為  `CFileDialog`。 任何變更[m_ofn](#m_ofn)成員變數的直接影響對話方塊方塊的狀態。 此外，對話方塊狀態的任何變更會立即更新 m_ofn 成員變數。
 
 在 Windows Vista 或更新版本，`m_ofn`資料結構不會自動更新。 若要保證中的資料的正確性`m_ofn`成員變數，您應該呼叫`UpdateOFNFromShellDialog`函式，才能存取資料。 Windows 會呼叫此函式會自動處理期間[IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)。
 

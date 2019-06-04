@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: ec4d7aa6f2a1061e632b81a27a0233cf5fdd1c63
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23160c51466ce1a2857d3648dd5f4970dfe172f7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373802"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504243"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
 
@@ -74,7 +74,7 @@ class CNetAddressCtrl : public CEdit
 
 ## <a name="example"></a>範例
 
-下列程式碼範例從對話方塊標頭檔會定義[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)並[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)變數所需的[CNetAddressCtrl::GetAddress](#getaddress)方法。
+下列程式碼範例從對話方塊標頭檔會定義[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)並[NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)變數所需的[CNetAddressCtrl::GetAddress](#getaddress)方法。
 
 [!code-cpp[NVC_MFC_CNetAddressCtrl_s1#2](../../mfc/reference/codesnippet/cpp/cnetaddressctrl-class_2.h)]
 
@@ -191,7 +191,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 ### <a name="parameters"></a>參數
 
 *pAddress*<br/>
-[in、 out]指標[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)結構。  設定*pAddrInfo*屬於此結構的位址[NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)結構，然後再呼叫 GetAddress 方法。
+[in、 out]指標[NC_ADDRESS](/windows/desktop/api/shellapi/ns-shellapi-tagnc_address)結構。  設定*pAddrInfo*屬於此結構的位址[NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)結構，然後再呼叫 GetAddress 方法。
 
 ### <a name="return-value"></a>傳回值
 
@@ -199,7 +199,7 @@ HRESULT GetAddress(PNC_ADDRESS pAddress) const;
 
 ### <a name="remarks"></a>備註
 
-如果這個方法成功， [NET_ADDRESS_INFO](https://msdn.microsoft.com/library/windows/desktop/bb773346)結構包含的網路位址的其他資訊。
+如果這個方法成功， [NET_ADDRESS_INFO](/windows/desktop/shell/hkey-type)結構包含的網路位址的其他資訊。
 
 使用[CNetAddressCtrl::SetAllowType](#setallowtype)方法，以指定的位址可支援目前的網路位址控制項類型。 使用[CNetAddressCtrl::GetAddress](#getaddress)方法來驗證和剖析使用者輸入的網路位址。 使用[CNetAddressCtrl::DisplayErrorTip](#displayerrortip)方法時所顯示的錯誤訊息資訊提示[CNetAddressCtrl::GetAddress](#getaddress)方法不成功。
 
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>傳回值
 
-網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。
+網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](/windows/desktop/shell/net-string)。
 
 ### <a name="remarks"></a>備註
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |參數|描述|
 |---------------|-----------------|
-|*dwAddrMask*|[in]網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)。|
+|*dwAddrMask*|[in]網路位址控制項可以支援的位元組合 (OR) 旗標，以指定的位址類型。 如需詳細資訊，請參閱 < [NET_STRING](/windows/desktop/shell/net-string)。|
 
 ### <a name="return-value"></a>傳回值
 

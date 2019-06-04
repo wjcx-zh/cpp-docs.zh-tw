@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMonikerFile [MFC], Open
 - CMonikerFile [MFC], CreateBindContext
 ms.assetid: 87be5966-f4f7-4235-bce2-1fa39e9417de
-ms.openlocfilehash: ecffdb3a6f44f60004cf4f039bdab9c98e212ce1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fb0ad3eef781be1b5ca358e825c09a88c0109e3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338034"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503816"
 ---
 # <a name="cmonikerfile-class"></a>CMonikerFile 類別
 
@@ -117,7 +117,7 @@ IBindCtx* CreateBindContext(CFileException* pError);
 
 ### <a name="return-value"></a>傳回值
 
-繫結內容的指標[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要與繫結，如果成功，否則為 NULL。 如果執行個體以開啟`IBindHost`介面，從擷取的繫結內容`IBindHost`。 如果沒有任何`IBindHost`介面無法傳回繫結內容、 繫結內容建立。 如需描述[IBindHost](https://msdn.microsoft.com/library/ie/ms775076)介面中，請參閱 Windows SDK。
+繫結內容的指標[IBindCtx](/windows/desktop/api/objidl/nn-objidl-ibindctx)要與繫結，如果成功，否則為 NULL。 如果執行個體以開啟`IBindHost`介面，從擷取的繫結內容`IBindHost`。 如果沒有任何`IBindHost`介面無法傳回繫結內容、 繫結內容建立。 如需描述[IBindHost](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775076\(v=vs.85\))介面中，請參閱 Windows SDK。
 
 ### <a name="remarks"></a>備註
 
@@ -189,7 +189,7 @@ Moniker 介面的指標`IMoniker`來取得的資料流。
 
 *LpszURL*參數不能用在 Macintosh 上。 只有*pMoniker*形式的`Open`可用在 Macintosh 上。
 
-您可以使用 URL 或檔名*lpszURL*參數。 例如: 
+您可以使用 URL 或檔名*lpszURL*參數。 例如:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/cmonikerfile-class_1.cpp)]
 

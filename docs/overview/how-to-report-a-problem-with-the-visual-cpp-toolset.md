@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: da703d6649cb430b572d4d0db44adcfdef8ed8c4
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446767"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451158"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>如何回報 Visual C++ 工具組或文件的問題
 
@@ -17,7 +17,7 @@ ms.locfileid: "65446767"
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>如何回報 C++ 工具組問題
 
-讓我們知道問題的最佳方式是將一份內含下列資訊的報表傳送給我們：所遇到問題的描述、如何建置程式的詳細資料、「重現」，以及可用來在我們自己的電腦上重現問題的完整測試案例。 這項資訊可讓我們快速驗證問題存在於程式碼中而且不在環境本機、判斷是否影響其他版本的編譯器，以及診斷其原因。
+讓我們知道問題的最佳方式是將一份內含下列資訊的報表傳送給我們：所遇到問題的描述、如何建置程式的詳細資料、「重現」  ，以及可用來在我們自己的電腦上重現問題的完整測試案例。 這項資訊可讓我們快速驗證問題存在於程式碼中而且不在環境本機、判斷是否影響其他版本的編譯器，以及診斷其原因。
 
 在下節中，您將了解如何建立良好的報表、如何針對您所發現的問題類型產生報表，以及如何將報表傳送給產品小組。 您的報表對我們和您這類其他開發人員而言十分重要。 感謝您協助我們改善 Visual C++！
 
@@ -43,7 +43,7 @@ ms.locfileid: "65446767"
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>回報所使用編譯器的完整版本
 
-1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。 例如，如果您是針對 x64 目標使用 Visual Studio 2017 on x64 進行建置，則請選擇 [x64 Native Tools Command Prompt for VS 2017] (適用於 VS 2017 的 x64 Native Tools 命令提示字元)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
+1. 開啟**開發人員命令提示字元**，以符合用來建置專案的 Visual Studio 版本和組態架構。 例如，如果您是針對 x64 目標使用 Visual Studio 2017 on x64 進行建置，則請選擇 [x64 Native Tools Command Prompt for VS 2017] (適用於 VS 2017 的 x64 Native Tools 命令提示字元)  。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](../build/building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 
 1. 在開發人員命令提示字元主控台視窗中，輸入 **cl /Bv** 命令。
 
@@ -110,9 +110,9 @@ cl : Command line error D8003 : missing source filename
 
 - **針對最新編譯器版本。** 重現應該使用工具組最新版本的更新，或下一個更新或下一個主要版本的最新發行前版本 (只要可能的話)。 在新版本中，通常已修正舊版工具組中所遇到的問題。 只有在例外狀況下，修正程式才會往回移植到較舊的版本。
 
-- **針對其他編譯器檢查** (如果相關)。 涉及可攜式 C++ 程式碼的報表應該確認其他編譯器行為 (可能的話)。 Standard 最終會判斷程式正確性，並且沒有編譯器是完美的，但 Clang 和 GCC 接受沒有診斷的程式碼而 MSVC 不接受時，您可能會在我們的編譯器中看到 Bug  (其他可能性包含 Unix 和 Windows 行為的差異，或不同層級的 C++ Standard 實作等等)。相反地，如果所有編譯器都拒絕您的程式碼，則您的程式碼可能不正確。 查看不同的錯誤訊息可以協助您自行診斷問題。
+- **針對其他編譯器檢查** (如果相關)。 涉及可攜式 C++ 程式碼的報表應該確認其他編譯器行為 (可能的話)。 Standard 最終會判斷程式正確性，並且沒有編譯器是完美的，但 Clang 和 GCC 接受沒有診斷的程式碼而 MSVC 不接受時，您可能會在我們的編譯器中看到 Bug (其他可能性包含 Unix 和 Windows 行為的差異，或不同層級的 C++ Standard 實作等等)。相反地，如果所有編譯器都拒絕您的程式碼，則您的程式碼可能不正確。 查看不同的錯誤訊息可以協助您自行診斷問題。
 
-   您可以在 ISO C++ 網站的[線上 C++ 編譯器](https://isocpp.org/blog/2013/01/online-c-compilers)中，或 GitHub 上這個策劃的[線上 C++ 編譯器清單](https://arnemertz.github.io/online-compilers/)，尋找線上編譯器清單來測試您的程式碼。 某些特定範例包含 [Wandbox](https://wandbox.org/)、[編譯器總管](https://godbolt.org/)和 [Coliru](http://coliru.stacked-crooked.com/)。
+   您可以在 ISO C++ 網站的[線上 C++ 編譯器](https://isocpp.org/blog/2013/01/online-c-compilers)中，或 GitHub 上這個策劃的[線上 C++ 編譯器清單](https://arnemertz.github.io/online-compilers/)，尋找線上編譯器清單來測試您的程式碼。 某些特定範例包含 [Wandbox](https://wandbox.org/)、[編譯器總管](https://godbolt.org/)和 [Coliru](https://coliru.stacked-crooked.com/)。
 
    > [!NOTE]
    > 線上編譯器網站未與 Microsoft 建立關聯。 許多線上編譯器網站都會執行為個人專案；而且，在您閱讀這篇文章時，其中一些網站可能無法使用，但搜尋應該會發現其他您可使用的網站。
@@ -230,7 +230,7 @@ CONTEXT:
 
 ### <a name="preprocessed-repros"></a>前置處理過的重現
 
-「前置處理過的重現」是可示範問題的單一原始程式檔，而單一原始程式檔是使用原始重現原始程式檔上的 **/P** 編譯器選項以從 C 前置處理器輸出所產生。 這會內嵌包含的標頭來移除與其他來源和標頭檔的相依性，也會解析巨集、#ifdefs 以及其他取決於本機環境的前置處理器命令。
+「前置處理過的重現」  是可示範問題的單一原始程式檔，而單一原始程式檔是使用原始重現原始程式檔上的 **/P** 編譯器選項以從 C 前置處理器輸出所產生。 這會內嵌包含的標頭來移除與其他來源和標頭檔的相依性，也會解析巨集、#ifdefs 以及其他取決於本機環境的前置處理器命令。
 
 > [!NOTE]
 > 因為我們通常會想要替代最新進行中的實作，以查看我們是否已修正問題，所以對於可能是標準程式庫實作中 Bug 所造成的問題，前置處理過的重現不實用。 在此情況下，請不要前置處理重現，而且如果您無法將問題減少為單一原始程式檔，則請將程式碼封裝為 .zip 檔案或類似檔案，或考慮使用 IDE 專案重現。 如需詳細資訊，請參閱[其他重現](#other-repros)。
@@ -317,7 +317,7 @@ CONTEXT:
 
 ### <a name="link-repros"></a>連結重現
 
-「連結重現」是由連結器所產生且由 **link\_repro** 環境變數所指定之目錄的內容。 它包含的組建成品可以統一示範在連結時發生的問題，例如涉及連結時產生程式碼 (LTCG) 的後端損毀或是連結器損毀。 這些組建成品是連結器輸入所需的項目，因此可以重現問題。 使用這個環境變數啟用連結器的內建重現產生功能，即可輕鬆地建立連結重現。
+「連結重現」  是由連結器所產生且由 **link\_repro** 環境變數所指定之目錄的內容。 它包含的組建成品可以統一示範在連結時發生的問題，例如涉及連結時產生程式碼 (LTCG) 的後端損毀或是連結器損毀。 這些組建成品是連結器輸入所需的項目，因此可以重現問題。 使用這個環境變數啟用連結器的內建重現產生功能，即可輕鬆地建立連結重現。
 
 #### <a name="to-generate-a-link-repro"></a>產生連結重現
 
@@ -349,27 +349,27 @@ CONTEXT:
 
 ## <a name="ways-to-send-your-report"></a>報表的傳送方式
 
-有幾種不錯的方法可將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以選擇此頁面底部的 [產品意見反應] 按鈕，直接前往我們的開發人員社群頁面。 此選擇取決於您是否想要在開發人員社群頁面中使用 IDE 內建工具來擷取螢幕擷取畫面和組織要張貼的報表，或者您是否想要直接使用此網站。
+有幾種不錯的方法可將您的報表送給我們。 您可以使用 Visual Studio 的內建[回報問題工具](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)，或 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)頁面。 您也可以選擇此頁面底部的 [產品意見反應]  按鈕，直接前往我們的開發人員社群頁面。 此選擇取決於您是否想要在開發人員社群頁面中使用 IDE 內建工具來擷取螢幕擷取畫面和組織要張貼的報表，或者您是否想要直接使用此網站。
 
 > [!NOTE]
 > 不論您如何提交報表，Microsoft 都會尊重您的隱私權。 Microsoft 致力於遵循所有資料的隱私權法律和規定。 如需我們如何處理您所傳送之資料的相關資訊，請參閱 [Microsoft 隱私權聲明](https://privacy.microsoft.com/privacystatement)。
 
 ### <a name="use-the-report-a-problem-tool"></a>使用回報問題工具
 
-Visual Studio 中的 [回報問題] 工具是 Visual Studio 使用者用來回報各種問題的方式，只要按幾下就可回報問題。 它提供簡單的表單以用來指定您所遇到問題的詳細資訊，然後提交報表，而不需要離開 IDE。
+Visual Studio 中的 [回報問題]  工具是 Visual Studio 使用者用來回報各種問題的方式，只要按幾下就可回報問題。 它提供簡單的表單以用來指定您所遇到問題的詳細資訊，然後提交報表，而不需要離開 IDE。
 
-從 IDE 透過 [回報問題] 工具回報問題簡單又方便。 您可以選擇 [快速啟動] 搜尋方塊旁的**傳送意見反應**圖示從標題列存取這項工具，也可以在功能表列上的 [協助] > [傳送意見反應] > [回報問題] 中找到該工具。
+從 IDE 透過 [回報問題]  工具回報問題簡單又方便。 您可以選擇 [快速啟動]  搜尋方塊旁的**傳送意見反應**圖示從標題列存取這項工具，也可以在功能表列上的 [協助]   > [傳送意見反應]   > [回報問題]  中找到該工具。
 
-當您選擇回報問題時，請先在開發人員社群中搜尋是否有類似問題。 如果其他人之前回報過相關問題，請附議主題並新增留言，提出具體細節。 如果您找不到類似問題，請選擇 Visual Studio 意見反應對話方塊底部的 [回報新問題] 按鈕，然後遵循這些步驟回報問題。
+當您選擇回報問題時，請先在開發人員社群中搜尋是否有類似問題。 如果其他人之前回報過相關問題，請附議主題並新增留言，提出具體細節。 如果您找不到類似問題，請選擇 Visual Studio 意見反應對話方塊底部的 [回報新問題]  按鈕，然後遵循這些步驟回報問題。
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>使用 Visual Studio 開發人員社群頁面
 
 Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回報 Visual Studio 和 C++ 編譯器、工具和程式庫的問題和尋找其解決方案。 [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html)、[Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)、[.NET](https://developercommunity.visualstudio.com/spaces/61/index.html)、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html)、[Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html) 和 [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html) 有特定的開發人員社群頁面。 在這些標籤下方，靠近每個頁面頂端的橫幅為搜尋方塊，您可用來尋找回報類似您問題的文章或主題。 您也許可以找到與您問題相關的解決方案或其他有用資訊。 如果其他人已回報過相同的問題，請附議該主題並留言，而非建立新的問題回報。 若要留言、投票或回報新問題，系統可能會要求您登入 Visual Studio 帳戶，並同意將您設定檔的存取權授與開發人員社群應用程式。
 
-若要回報 C++ 編譯器、連結器，以及其他工具和程式庫的相關問題，則請使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 頁面。 如果其他人未回報過您搜尋的問題，請選擇頁面頂端搜尋方塊旁的 [回報問題] 按鈕。 您可以包含您重新產生的程式碼和命令列、螢幕擷取畫面、相關討論的連結，及其他您認為相關且有用的任何資訊。
+若要回報 C++ 編譯器、連結器，以及其他工具和程式庫的相關問題，則請使用 [C++](https://developercommunity.visualstudio.com/spaces/62/index.html) 頁面。 如果其他人未回報過您搜尋的問題，請選擇頁面頂端搜尋方塊旁的 [回報問題]  按鈕。 您可以包含您重新產生的程式碼和命令列、螢幕擷取畫面、相關討論的連結，及其他您認為相關且有用的任何資訊。
 
 > [!TIP]
-> 針對在 Visual Studio 中可能遇到與 C++工具組無關的其他類型問題 (例如 UI 問題、損壞的 IDE 功能或常見當機)，請使用 IDE 中的 [回報問題] 工具。 這是最佳選擇，因為該工具有螢幕擷取畫面功能，並且能夠記錄導致您遇到問題的 UI 動作。 您也可以在[開發人員社群](https://developercommunity.visualstudio.com/)網站上尋找這類錯誤。 如需詳細資訊，請參閱[如何回報 Visual Studio 的問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
+> 針對在 Visual Studio 中可能遇到與 C++工具組無關的其他類型問題 (例如 UI 問題、損壞的 IDE 功能或常見當機)，請使用 IDE 中的 [回報問題]  工具。 這是最佳選擇，因為該工具有螢幕擷取畫面功能，並且能夠記錄導致您遇到問題的 UI 動作。 您也可以在[開發人員社群](https://developercommunity.visualstudio.com/)網站上尋找這類錯誤。 如需詳細資訊，請參閱[如何回報 Visual Studio 的問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)。
 
 ### <a name="reports-and-privacy"></a>報表和隱私權
 
@@ -381,11 +381,11 @@ Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回
 
 #### <a name="to-create-a-problem-report-for-private-information"></a>建立私人資訊的問題報表
 
-1. 在建立的報表中，選擇 [新增留言] 來建立您對問題的私人描述。
+1. 在建立的報表中，選擇 [新增留言]  來建立您對問題的私人描述。
 
-1. 在回覆編輯器中，使用 [送出] 和 [取消] 按鈕下方的下拉式控制項來指定回覆的對象。 只有您指定的人員才能看到這些私人回覆以及其中包含的任何影像、連結或程式碼。 選擇 [可供仲裁者和原始貼文者檢視] 來限制 Microsoft 員工和您自己的可見性。
+1. 在回覆編輯器中，使用 [送出]  和 [取消]  按鈕下方的下拉式控制項來指定回覆的對象。 只有您指定的人員才能看到這些私人回覆以及其中包含的任何影像、連結或程式碼。 選擇 [可供仲裁者和原始貼文者檢視]  來限制 Microsoft 員工和您自己的可見性。
 
-1. 新增描述，以及重現所需的任何其他資訊、影像和檔案附件。 選擇 [送出] 按鈕以私下傳送這些資訊。
+1. 新增描述，以及重現所需的任何其他資訊、影像和檔案附件。 選擇 [送出]  按鈕以私下傳送這些資訊。
 
    請注意，附加的檔案有 2GB 的限制，最多 10 個檔案。 對於任何較大的上傳項目，請在您的私用留言中要求一個上傳 URL。
 
@@ -395,6 +395,6 @@ Visual Studio 開發人員社群頁面提供另一種方便的途徑，讓您回
 
 ## <a name="how-to-report-a-c-documentation-issue"></a>如何回報 C++ 文件問題
 
-我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
+我們使用 GitHub 問題來追蹤文件中所回報的問題。 您現在可以直接從內容頁建立 GitHub 問題，這可讓您以更豐富的方式與作者和產品小組互動。 如果您發現文件問題、錯誤的程式碼範例、造成混淆的說明、嚴重遺漏，或甚至只是錯字，，都可以輕鬆地通知我們。 請捲動至頁面底部，並選取 [登入以提供文件應見反應]  。 如果您還沒有 GitHub 帳戶，則必須建立一個 GitHub 帳戶，但是一旦完成，您就可以查看所有文件問題及其狀態，並在您所回報的問題有所變更時收到通知。 如需詳細資訊，請參閱[即將在 docs.microsoft.com 推出新的意見反應系統](/teamblog/a-new-feedback-system-is-coming-to-docs)。
 
 當您使用 [文件意見反應] 按鈕在 GitHub 上建立文件問題時，該問題會自動填入有關建立問題來源頁面的一些資訊，以便讓我們知道問題所在位置。 請不要編輯此資訊。 只需要附加有關錯誤的詳細資料，如有必要，還可以提供建議的修正程式。 [我們的文件是開放原始碼](https://github.com/MicrosoftDocs/cpp-docs/)，因此如果您想要實際進行修正並自行提出建議，就可以這樣做。 如需您可以如何參與文件的詳細資訊，請參閱我們在 GitHub 上的[參與指南](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md) (英文)。

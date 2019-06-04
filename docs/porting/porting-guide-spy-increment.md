@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751370"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451131"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -39,7 +39,7 @@ Spy++ 是 Windows 桌面廣泛使用的 GUI 診斷工具，提供有關 Windows 
 1>C:\Program Files (x86)\Windows Kits\8.1\Include\shared\common.ver(212): error RC2104: undefined keyword or key name: VER_FILEFLAGSMASK
 ```
 
-若要在可用的 include 檔案中尋找符號，最簡單方式是使用 [檔案中尋找] (**Ctrl**+**Shift**+**F**)，並指定 [Visual C++ Include 目錄]。 我們在 ntverp.h 中找到這個符號。 以 ntverp.h 取代 verstamp.h include，這個錯誤即會消失。
+若要在可用的 include 檔案中尋找符號，最簡單方式是使用 [檔案中尋找]  (**Ctrl**+**Shift**+**F**)，並指定 [Visual C++ Include 目錄]  。 我們在 ntverp.h 中找到這個符號。 以 ntverp.h 取代 verstamp.h include，這個錯誤即會消失。
 
 ##  <a name="linker_output_settings"></a> 步驟 3： 連結器 OutputFile 設定
 
@@ -51,9 +51,9 @@ MSBuild 指出其 **Link.OutputFile** 屬性不符合 **TargetPath** 和 **Targe
 warning MSB8012: TargetPath(...\spyxx\spyxxhk\.\..\Debug\SpyxxHk.dll) does not match the Linker's OutputFile property value (...\spyxx\Debug\SpyHk55.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).warning MSB8012: TargetName(SpyxxHk) does not match the Linker's OutputFile property value (SpyHk55). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 ```
 
-**Link.OutputFile** 是組建輸出 (例如 EXE、DLL)，通常是從 `$(TargetDir)$(TargetName)$(TargetExt)` 建構，並提供路徑、檔名和副檔名。 這是將專案從舊版 Visual C++ 建置工具 (vcbuild.exe) 移轉至新版建置工具 (MSBuild.exe) 時常見的錯誤。 由於在 Visual Studio 2010 中已變更建置工具，因此當您將 2010 版以前的專案移轉至 2010 (含) 以後版本時，可能會發生這個問題。 基本問題在於專案移轉精靈不會更新 **Link.OutputFile** 值，因為它不一定能夠根據其他專案設定來判斷該值。 因此，您通常必須手動設定。 如需詳細資料，請參閱 Visual C++ 部落格上的這篇[文章](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)。
+**Link.OutputFile** 是組建輸出 (例如 EXE、DLL)，通常是從 `$(TargetDir)$(TargetName)$(TargetExt)` 建構，並提供路徑、檔名和副檔名。 這是將專案從舊版 Visual C++ 建置工具 (vcbuild.exe) 移轉至新版建置工具 (MSBuild.exe) 時常見的錯誤。 由於在 Visual Studio 2010 中已變更建置工具，因此當您將 2010 版以前的專案移轉至 2010 (含) 以後版本時，可能會發生這個問題。 基本問題在於專案移轉精靈不會更新 **Link.OutputFile** 值，因為它不一定能夠根據其他專案設定來判斷該值。 因此，您通常必須手動設定。 如需詳細資料，請參閱 Visual C++ 部落格上的這篇[文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)。
 
-在此情況下，針對 Spy++ 專案，將所轉換專案中的 **Link.OutputFile** 屬性設為 .\Debug\Spyxx.exe 和 .\Release\Spyxx.exe (視組態而定)。 最好是在 [所有組態] 中，以 `$(TargetDir)$(TargetName)$(TargetExt)` 取代這些硬式編碼值。 如果這個方法沒有作用，您可以在此進行自訂，或在設定這些值的 [一般] 區段中變更屬性 (這些屬性包括 [輸出目錄]、[目標名稱] 和 [目標副檔名])。 請記住，如果您要檢視的屬性使用巨集，則可以在下拉式清單中選擇 [編輯] 來開啟對話方塊，以顯示替代巨集後的最終字串。 您可以選擇 [巨集] 按鈕，來檢視所有可用的巨集與其目前的值。
+在此情況下，針對 Spy++ 專案，將所轉換專案中的 **Link.OutputFile** 屬性設為 .\Debug\Spyxx.exe 和 .\Release\Spyxx.exe (視組態而定)。 最好是在 [所有組態]  中，以 `$(TargetDir)$(TargetName)$(TargetExt)` 取代這些硬式編碼值。 如果這個方法沒有作用，您可以在此進行自訂，或在設定這些值的 [一般]  區段中變更屬性 (這些屬性包括 [輸出目錄]  、[目標名稱]  和 [目標副檔名]  )。 請記住，如果您要檢視的屬性使用巨集，則可以在下拉式清單中選擇 [編輯]  來開啟對話方塊，以顯示替代巨集後的最終字串。 您可以選擇 [巨集]  按鈕，來檢視所有可用的巨集與其目前的值。
 
 ##  <a name="updating_winver"></a> 步驟 4： 更新目標 Windows 版本
 
@@ -65,7 +65,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 
 Microsoft 不再支援 Windows XP，因此即使可在 Visual Studio 中將其設為目標，您也應該逐步淘汰應用程式對該版的支援，並建議使用者採用新版 Windows。
 
-若要解決這個錯誤，請定義 WINVER，並將 [專案屬性] 設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/desktop/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。
+若要解決這個錯誤，請定義 WINVER，並將 [專案屬性]  設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/desktop/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。
 
 stdafx.h 檔案包含其中一些巨集定義。
 
@@ -136,7 +136,7 @@ mstream.h(40): fatal error C1083: Cannot open include file: 'iostream.h': No suc
 typedef std::basic_ostringstream<TCHAR> ostrstream;
 ```
 
-目前使用 MBCS (多位元組字元集) 來建置專案，因此 **char** 是適當的字元資料類型。 不過，為了更輕鬆地將程式碼更新為 UTF-16 Unicode，我們將此更新為 `TCHAR`，以根據專案設定中的 [字元集] 屬性設定為 MBCS 或 Unicode，解析成 **char** 或 **wchar_t**。
+目前使用 MBCS (多位元組字元集) 來建置專案，因此 **char** 是適當的字元資料類型。 不過，為了更輕鬆地將程式碼更新為 UTF-16 Unicode，我們將此更新為 `TCHAR`，以根據專案設定中的 [字元集]  屬性設定為 MBCS 或 Unicode，解析成 **char** 或 **wchar_t**。
 
 還需要更新其他一些程式碼片段。  我們以 `ios_base` 取代基底類別 `ios`，並以 basic_ostream\<T> 取代 ostream。 我們加入兩個額外的 typedef，並編譯這個區段。
 
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-由於此函式大概在從 CWnd 衍生的所有不同類別中出現十次，使用 [移至定義] (鍵盤：**F12**) 及 [移至宣告] (鍵盤：**Ctrl**+F12)，在游標位於編輯器中的函式上時尋找這些，並從 [尋找符號] 工具視窗巡覽至它們時會非常有用。 [移至定義] 通常是兩者中較有用的一個。 [移至宣告] 會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。
+由於此函式大概在從 CWnd 衍生的所有不同類別中出現十次，使用 [移至定義]  (鍵盤：**F12**) 及 [移至宣告]  (鍵盤：**Ctrl**+F12  )，在游標位於編輯器中的函式上時尋找這些，並從 [尋找符號]  工具視窗巡覽至它們時會非常有用。 [移至定義]  通常是兩者中較有用的一個。 [移至宣告]  會尋找定義類別宣告以外的宣告，例如 friend 類別宣告或向前參考。
 
 ##  <a name="mfc_changes"></a> 步驟 9： MFC 變更
 
@@ -318,7 +318,7 @@ afx_msg void OnActivateApp(BOOL bActive, DWORD dwThreadId);
 
 ##  <a name="compiler_warnings"></a> 步驟 10： 解決編譯器警告
 
-若要取得警告的完整清單，由於您只能從目前編譯取得警告報表，因此您應該對方案執行 [全部重建]，而不是一般建置，以確保重新編譯之前編譯的所有內容。 另一個問題在於要接受目前的警告層級，還是要使用較高的警告層級。  移植大量程式碼時 (特別是舊版程式碼)，可能適合使用較高的警告層級。  您也可能想要從預設警告層級開始，然後再增加警告層級以取得所有警告。 如果您使用 `/Wall`，您會取得系統標頭檔的一些警告，因此許多人使用 `/W4` 來取得程式碼的大部分警告，以避免取得系統標頭的警告。 如果您想要將警告顯示為錯誤，請新增 `/WX` 選項。 這些設定位於 [專案屬性] 對話方塊的 [C/C++] 區段中。
+若要取得警告的完整清單，由於您只能從目前編譯取得警告報表，因此您應該對方案執行 [全部重建]  ，而不是一般建置，以確保重新編譯之前編譯的所有內容。 另一個問題在於要接受目前的警告層級，還是要使用較高的警告層級。  移植大量程式碼時 (特別是舊版程式碼)，可能適合使用較高的警告層級。  您也可能想要從預設警告層級開始，然後再增加警告層級以取得所有警告。 如果您使用 `/Wall`，您會取得系統標頭檔的一些警告，因此許多人使用 `/W4` 來取得程式碼的大部分警告，以避免取得系統標頭的警告。 如果您想要將警告顯示為錯誤，請新增 `/WX` 選項。 這些設定位於 [專案屬性]  對話方塊的 [C/C++]  區段中。
 
 `CSpyApp` 類別之其中一個方法會產生已不再支援的函式警告。
 
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode
 
-請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器] 區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 stdafx.h 標頭檔或其他常見標頭檔的開頭。
+請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器]  區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 stdafx.h 標頭檔或其他常見標頭檔的開頭。
 
 現在出現一些連結器錯誤。
 
@@ -510,7 +510,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 fatal error LNK1181: cannot open input file 'mfc42d.lib'
 ```
 
-由於連結器輸入中包含 MFC 的過時靜態程式庫版本，因此會發生 LNK1181。 我們不再需要這個版本；因為可以動態方式連結 MFC，所以只需要從專案屬性 [連結器] 區段的 [輸入] 屬性，移除所有 MFC 靜態程式庫。 這個專案也使用 `/NODEFAULTLIB` 選項，但卻列出所有程式庫相依性。
+由於連結器輸入中包含 MFC 的過時靜態程式庫版本，因此會發生 LNK1181。 我們不再需要這個版本；因為可以動態方式連結 MFC，所以只需要從專案屬性 [連結器]  區段的 [輸入]  屬性，移除所有 MFC 靜態程式庫。 這個專案也使用 `/NODEFAULTLIB` 選項，但卻列出所有程式庫相依性。
 
 ```
 msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\SpyHk55.lib;%(AdditionalDependencies)
@@ -518,9 +518,9 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 現在讓我們實際將舊版多位元組字元集 (MBCS) 程式碼更新為 Unicode。 由於這是與 Windows 桌面平台緊密繫結的 Windows 應用程式，因此我們會將其移植到 Windows 所使用的 UTF-16 Unicode。 如果您想要撰寫跨平台程式碼，或將 Windows 應用程式移植到其他平台，您可能需要考慮移植到其他作業系統廣泛使用的 UTF-8。
 
-移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要具有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，其會根據在編譯期間定義的是 \_MBCS 或 \_UNICODE，來解析為 **char** 或 **wchar_t**。 若是切換為 TCHAR 和 TCHAR 版的各式 API，而不是 **wchar_t** 及其相關 API，表示您只要定義 \_MBCS 巨集 (而不是 \_UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 區段中，將 [字元集] 屬性從 [使用 MBCS 字元集] 變更為 [使用 Unicode 字元集]。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 \_UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 \_UNICODE，但是只要定義了其中一個，就也會定義另一個。
+移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要具有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，其會根據在編譯期間定義的是 \_MBCS 或 \_UNICODE，來解析為 **char** 或 **wchar_t**。 若是切換為 TCHAR 和 TCHAR 版的各式 API，而不是 **wchar_t** 及其相關 API，表示您只要定義 \_MBCS 巨集 (而不是 \_UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性]  的 [一般]  區段中，將 [字元集]  屬性從 [使用 MBCS 字元集]  變更為 [使用 Unicode 字元集]  。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 \_UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 \_UNICODE，但是只要定義了其中一個，就也會定義另一個。
 
-目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](https://msdn.microsoft.com/library/cc194801.aspx)。 我們將選擇這個方法。 首先，我們將 [字元集] 屬性變更為 [使用 Unicode 字元集] 並重建專案。
+目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](https://msdn.microsoft.com/library/cc194801.aspx)。 我們將選擇這個方法。 首先，我們將 [字元集]  屬性變更為 [使用 Unicode 字元集]  並重建專案。
 
 程式碼中有些位置已在使用 TCHAR，顯然是預期最終需要支援 Unicode。 有些位置則未使用。 我們搜尋 CHAR 的執行個體 (即 **char** 的 **typedef**)，並將大多數執行個體取代成 TCHAR。 我們也會尋找 `sizeof(CHAR)`。 每當從 CHAR 變更為 TCHAR 時，通常必須變更為 `sizeof(TCHAR)`，因為這個選項經常會用來判斷字串中的字元數。 在此使用錯誤的類型不會產生編譯器錯誤，因此請特別注意這種情況。
 
@@ -542,7 +542,7 @@ wsprintf(szTmp, "%d.%2.2d.%4.4d", rmj, rmm, rup);
 wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 ```
 
-\_T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要使用 Visual Studio 中的 \_T 來取代所有字串，請先開啟 [快速取代] (鍵盤：**Ctrl**+**F**) 方塊或 [在檔案中取代] (鍵盤：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式] 核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串前後已經有 \_T 巨集，這個程序會再新增巨集一次；您也可能發現不需要 \_T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]，而不是 [全部取代]。
+\_T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要使用 Visual Studio 中的 \_T 來取代所有字串，請先開啟 [快速取代]  (鍵盤：**Ctrl**+**F**) 方塊或 [在檔案中取代]  (鍵盤：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式]  核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串前後已經有 \_T 巨集，這個程序會再新增巨集一次；您也可能發現不需要 \_T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]  ，而不是 [全部取代]  。
 
 這個特定函式 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。
 
@@ -612,7 +612,7 @@ strFace.ReleaseBuffer();
 
 當然，我們應該使用更安全的版本 `wcscpy_s`，而不是 `wcscpy`。 下一節將解決這個問題。
 
-檢查工作時，我們應該將 [字元集] 重設為 [使用多位元組字元集]，並確保程式碼仍會使用 MBCS 和 Unicode 編譯。 不用說，在進行這些變更之後，重新編譯後的應用程式上所執行的完整測試應該成功。
+檢查工作時，我們應該將 [字元集]  重設為 [使用多位元組字元集]  ，並確保程式碼仍會使用 MBCS 和 Unicode 編譯。 不用說，在進行這些變更之後，重新編譯後的應用程式上所執行的完整測試應該成功。
 
 在使用這個 Spy++ 方案的工作中，每位 C++ 開發人員將程式碼轉換成 Unicode 平均需要約兩個工作天， 這不包括重新測試的時間。
 
@@ -636,7 +636,7 @@ Visual C++ 提供一個訣竅，讓您不需要加入許多大小參數就能保
 
 ##  <a name="deprecated_forscope"></a> 步驟 13： /Zc:forScope- 已被取代
 
-自 Visual C++ 6.0 開始，編譯器會遵守目前標準，也就是將在迴圈中宣告的變數範圍限制在迴圈範圍內。 編譯器選項 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (專案屬性中的 [強制在 For 迴圈範圍中一致]) 控制是否要回報這個錯誤。 我們應該更新程式碼使其符合標準，並只在迴圈外加入宣告。 若要避免變更程式碼，您可以將 C++ 專案屬性 [語言] 區段中的設定變更為 `No (/Zc:forScope-)`。 不過，請記住，未來的 Visual C++ 版本可能會移除 `/Zc:forScope-`，因此最後還是需要變更您的程式碼以符合標準。
+自 Visual C++ 6.0 開始，編譯器會遵守目前標準，也就是將在迴圈中宣告的變數範圍限制在迴圈範圍內。 編譯器選項 [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (專案屬性中的 [強制在 For 迴圈範圍中一致]  ) 控制是否要回報這個錯誤。 我們應該更新程式碼使其符合標準，並只在迴圈外加入宣告。 若要避免變更程式碼，您可以將 C++ 專案屬性 [語言]  區段中的設定變更為 `No (/Zc:forScope-)`。 不過，請記住，未來的 Visual C++ 版本可能會移除 `/Zc:forScope-`，因此最後還是需要變更您的程式碼以符合標準。
 
 這些問題相對容易修正，但根據您的程式碼，它可能會影響大量程式碼。 以下是典型問題。
 

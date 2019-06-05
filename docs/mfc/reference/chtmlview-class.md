@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337891"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503556"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -493,7 +493,7 @@ Variant，用來指定命令的輸出引數。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) Windows SDK 中。
+請參閱[IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) Windows SDK 中。
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>傳回值
 
-A [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx)值，在 Windows SDK 中所述。
+A [READYSTATE](/previous-versions//aa768362\(v=vs.85\))值，在 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
 
@@ -1307,7 +1307,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-此成員函式由架構呼叫時[全螢幕](https://msdn.microsoft.com/library/aa752119.aspx)屬性已變更。
+此成員函式由架構呼叫時[全螢幕](/previous-versions/aa752119\(v=vs.85\))屬性已變更。
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ virtual HRESULT OnHideUI();
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-此成員函式由架構呼叫時[MenuBar](https://msdn.microsoft.com/library/aa752131.aspx)屬性已變更。
+此成員函式由架構呼叫時[MenuBar](/previous-versions/aa752131\(v=vs.85\))屬性已變更。
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ virtual void OnNavigateError(
 要顯示，則為 NULL，如果沒有具名的畫面格的目標資源之資源的框架名稱。
 
 *dwError*<br/>
-錯誤狀態碼，如果有的話。 如需可能的 HRESULT 和 HTTP 狀態碼的清單，請參閱[NavigateError 事件狀態碼。](https://msdn.microsoft.com/library/aa768365.aspx)
+錯誤狀態碼，如果有的話。 如需可能的 HRESULT 和 HTTP 狀態碼的清單，請參閱 < [NavigateError 事件狀態碼](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\))。
 
 *pbCancel*<br/>
 指定是否要取消瀏覽到錯誤頁面或任何進一步的自動搜尋。 如果為 TRUE （預設值），請繼續瀏覽到錯誤頁面或自動搜尋;如果為 FALSE，則取消瀏覽到錯誤頁面或自動搜尋。
@@ -1490,7 +1490,7 @@ virtual void OnNavigateError(
 
 覆寫這個方法，以提供自訂的瀏覽的錯誤處理。
 
-如需詳細資訊，請參閱[DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+如需詳細資訊，請參閱[DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ virtual HRESULT OnShowUI(
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-此成員函式由架構呼叫時[StatusBar](https://msdn.microsoft.com/library/aa768270.aspx)屬性已變更。
+此成員函式由架構呼叫時[StatusBar](/previous-versions//aa768270\(v=vs.85\))屬性已變更。
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-此成員函式由架構呼叫時[TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx)屬性已變更。
+此成員函式由架構呼叫時[TheaterMode](/previous-versions/aa768273\(v=vs.85\))屬性已變更。
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ Html，可能會變更標題;雖然 HTML 仍在下載中，文件的 URL 會設�
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-此成員函式由架構呼叫時[工具列](https://msdn.microsoft.com/library/aa768274.aspx)屬性已變更。
+此成員函式由架構呼叫時[工具列](/previous-versions/aa768274\(v=vs.85\))屬性已變更。
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>參數
 
 *nLevel*<br/>
-指定的重新整理層級變數的位址。 可能的變數中定義[RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx)，Windows SDK 中。
+指定的重新整理層級變數的位址。 可能的變數中定義[RefreshConstants](/previous-versions/aa768363\(v=vs.85\))，Windows SDK 中。
 
 ### <a name="remarks"></a>備註
 

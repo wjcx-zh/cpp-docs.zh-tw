@@ -1,0 +1,41 @@
+- name: 使用 Visual Studio C++ 的 Linux 文件
+  href: index.md
+- name: 下載、安裝及設定 Linux 開發工作負載
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: 設定 Linux 專案
+  href: configure-a-linux-project.md
+- name: 設定 Linux CMake 專案
+  href: cmake-linux-project.md
+- name: 建立新的 Linux 專案
+  href: create-a-new-linux-project.md
+- name: 連線到遠端 Linux 電腦
+  href: connect-to-your-remote-linux-computer.md
+- name: 部署、執行和偵錯 Linux 專案
+  href: deploy-run-and-debug-your-linux-project.md
+- name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
+  href: ../build/get-started-linux-cmake.md
+- name: Linux 專案屬性頁參考
+  expanded: false
+  items:
+    - name: Linux 專案屬性頁參考
+      href: prop-pages-linux.md
+    - name: 一般屬性 (Linux)
+      href: prop-pages/general-linux.md
+    - name: 偵錯屬性 (Linux)
+      href: prop-pages/debugging-linux.md
+    - name: VC++ 目錄屬性 (Linux)
+      href: prop-pages/directories-linux.md
+    - name: 複製來源屬性 (Linux)
+      href: prop-pages/copy-sources-project.md
+    - name: C/C++ 屬性 (Linux)
+      href: prop-pages/c-cpp-linux.md
+    - name: 連結器屬性 (Linux)
+      href: prop-pages/linker-linux.md
+    - name: 建置事件屬性 (Linux)
+      href: prop-pages/build-events-linux.md
+    - name: 自訂建置步驟屬性 (Linux)
+      href: prop-pages/custom-build-step-linux.md
+    - name: Makefile 專案屬性 (Linux)
+      href: prop-pages/makefile-linux.md
+    - name: 遠端封存屬性 (Linux)
+      href: prop-pages/remote-ar-linux.md

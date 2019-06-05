@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: 依編譯器版本顯示的編譯器警告
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: 預設為關閉的編譯器警告
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: C 執行階段錯誤
   expanded: false
   items:

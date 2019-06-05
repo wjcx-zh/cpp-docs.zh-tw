@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5268a5ae336b0f96dfd6c0bd348a883e85ac32e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160194"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503547"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl 類別
 
@@ -269,7 +269,7 @@ virtual BOOL Create(
 
 - WS_DISABLED 會建立一開始會停用的視窗。
 
-- WS_GROUP 指定的控制項所在使用者可以前往從一個控制項下一步 箭號索引鍵群組的第一個控制項。 之後的第一個控制項屬於相同的群組，以 WS_GROUP 樣式定義的所有控制項。 WS_GROUP 樣式的下一個控制項結束 樣式 群組，並開始下一步 群組 （也就是一個群組結束下一步 開始的位置）。
+- WS_GROUP 指定的控制項所在使用者可以前往從一個控制項下一步] 箭號索引鍵群組的第一個控制項。 之後的第一個控制項屬於相同的群組，以 WS_GROUP 樣式定義的所有控制項。 WS_GROUP 樣式的下一個控制項結束 [樣式] 群組，並開始下一步] 群組 （也就是一個群組結束下一步] 開始的位置）。
 
 - WS_TABSTOP 指定任意數目的其中一個控制項，讓使用者可以使用 TAB 鍵移動。 TAB 鍵會將使用者移至下一個 WS_TABSTOP 樣式所指定的控制項。
 
@@ -338,7 +338,7 @@ CImageList* CreateDragImage(int nIndex);
 
 此成員函式實作的 Win32 訊息的行為[HDM_CREATEDRAGIMAGE](/windows/desktop/Controls/hdm-createdragimage)、 Windows SDK 中所述。 它可支援標頭項目拖曳和卸除。
 
-`CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。
+`CImageList`的傳回的指標指向是暫存物件，刪除在下一步] 的閒置時間處理的物件。
 
 ##  <a name="deleteitem"></a>  CHeaderCtrl::DeleteItem
 
@@ -462,7 +462,7 @@ int GetFocusedItem() const;
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範`SetFocusedItem`和`GetFocusedItem`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 資料行。 下列範例會設定，然後確認 最後一個資料行標頭，為焦點的項目。
+下列程式碼範例示範`SetFocusedItem`和`GetFocusedItem`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 [資料行。 下列範例會設定，然後確認 [最後一個資料行標頭，為焦點的項目。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
@@ -480,7 +480,7 @@ CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。
+此成員函式實作的 Win32 訊息的行為[HDM_GETIMAGELIST](/windows/desktop/Controls/hdm-getimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步] 的閒置時間處理的物件。
 
 ### <a name="example"></a>範例
 
@@ -641,7 +641,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="remarks"></a>備註
 
-標題控制項包含可同時顯示更多的項目，如果控制項可以顯示溢位按鈕捲動至不可見的項目。 標題控制項必須有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 樣式來顯示溢位按鈕。 週框矩形包圍的溢位按鈕，而且有顯示溢位 按鈕時，才。 如需詳細資訊，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)。
+標題控制項包含可同時顯示更多的項目，如果控制項可以顯示溢位按鈕捲動至不可見的項目。 標題控制項必須有 HDS_OVERFLOW 和 HDF_SPLITBUTTON 樣式來顯示溢位按鈕。 週框矩形包圍的溢位按鈕，而且有顯示溢位] 按鈕時，才。 如需詳細資訊，請參閱 <<c0> [ 標頭控制項樣式](/windows/desktop/Controls/header-control-styles)。
 
 這個方法會傳送[HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect)訊息，Windows SDK 中所述。
 
@@ -653,7 +653,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範`GetOverflowRect`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 資料行。 如果看不到某些資料行，此標題控制項繪製溢位按鈕。 下列程式碼範例會繪製 3D 矩形周圍溢位按鈕的位置。
+下列程式碼範例示範`GetOverflowRect`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 [資料行。 如果看不到某些資料行，此標題控制項繪製溢位按鈕。 下列程式碼範例會繪製 3D 矩形周圍溢位按鈕的位置。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#3](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_15.cpp)]
 
@@ -687,7 +687,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範`HitTest`方法。 在先前章節中的 這個程式碼範例，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 資料行。 這個範例會報告資料行的索引，如果是可見和-1，如果看不到 資料行。
+下列程式碼範例示範`HitTest`方法。 在先前章節中的 [這個程式碼範例，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 [資料行。 這個範例會報告資料行的索引，如果是可見和-1，如果看不到 [資料行。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
@@ -761,7 +761,7 @@ int OrderToIndex(int nOrder) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作 Win32 巨集的行為[HDM_ORDERTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb775355)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。
+此成員函式實作 Win32 巨集的行為[HDM_ORDERTOINDEX](/windows/desktop/controls/hdm-ordertoindex)、 Windows SDK 中所述。 它被提供來支援標頭項目順序。
 
 ##  <a name="setbitmapmargin"></a>  CHeaderCtrl::SetBitmapMargin
 
@@ -843,7 +843,7 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範`SetFocusedItem`和`GetFocusedItem`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 資料行。 下列範例會設定，然後確認 最後一個資料行標頭，為焦點的項目。
+下列程式碼範例示範`SetFocusedItem`和`GetFocusedItem`方法。 在先前章節中的程式碼，我們會建立標題控制項具有五個資料行。 不過，您可以拖曳資料行分隔符號，以便看不到 [資料行。 下列範例會設定，然後確認 [最後一個資料行標頭，為焦點的項目。
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#4](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_10.cpp)]
 
@@ -895,7 +895,7 @@ CImageList* SetImageList(CImageList* pImageList);
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步 的閒置時間處理的物件。
+此成員函式實作的 Win32 訊息的行為[HDM_SETIMAGELIST](/windows/desktop/Controls/hdm-setimagelist)、 Windows SDK 中所述。 `CImageList`的傳回的指標指向是暫存物件，刪除在下一步] 的閒置時間處理的物件。
 
 ### <a name="example"></a>範例
 

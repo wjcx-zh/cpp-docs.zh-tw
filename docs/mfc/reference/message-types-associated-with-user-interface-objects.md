@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message types and user interface objects [MFC]
 ms.assetid: 681ee1a7-f6e6-4ea0-9fc6-1fb53a35516e
-ms.openlocfilehash: 1676edf487d536d75ccd7901c5bdfa827cc143fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37638d12c65986d40e7df9f0fbfdef4b8207e418
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412759"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741580"
 ---
 # <a name="message-types-associated-with-user-interface-objects"></a>與使用者介面物件關聯的訊息類型
 
@@ -34,4 +34,4 @@ ms.locfileid: "62412759"
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+[巡覽類別結構](../../ide/navigate-code-cpp.md)

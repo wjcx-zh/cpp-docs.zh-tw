@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: c4b0a4507df7f352355fc95354e1e83aa7b6d0a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296692"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741738"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 
@@ -29,5 +29,5 @@ ms.locfileid: "62296692"
 [新增成員函式](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[巡覽類別結構](../../ide/navigate-code-cpp.md)<br/>
 [對話方塊編輯器](../../windows/dialog-editor.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323004"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741610"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>根據新控制項類別來宣告變數
 
@@ -41,7 +41,7 @@ ms.locfileid: "62323004"
 
 9. 在 **註解**方塊中，新增您想要出現在程式碼中的任何註解。
 
-10. 按一下 [確定] 。
+10. 按一下 [確定]  。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -52,4 +52,4 @@ ms.locfileid: "62323004"
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+[巡覽類別結構](../../ide/navigate-code-cpp.md)

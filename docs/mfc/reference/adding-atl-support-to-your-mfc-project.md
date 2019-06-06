@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296705"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741733"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 
@@ -28,7 +28,7 @@ ms.locfileid: "62296705"
 
 1. 在 [方案總管] 中，以滑鼠右鍵按一下您要將 ATL 支援加入的專案。
 
-1. 在捷徑功能表，按一下 **新增**，然後按一下**加入類別**。
+1. 在捷徑功能表上，按一下 [加入]  ，然後按一下 [加入類別]  。
 
 1. 選取 **新增 ATL 支援加入至 MFC 專案**圖示。
 
@@ -47,4 +47,4 @@ ms.locfileid: "62296705"
 [新增成員變數](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [覆寫虛擬函式](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC 訊息處理常式](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[巡覽類別結構](../../ide/navigating-the-class-structure-visual-cpp.md)
+[巡覽類別結構](../../ide/navigate-code-cpp.md)

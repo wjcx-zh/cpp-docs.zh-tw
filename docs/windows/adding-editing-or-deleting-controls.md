@@ -215,9 +215,9 @@ Visual Studio 可讓您在您的對話方塊中插入 ActiveX 控制項。 如�
 
 #### <a name="to-edit-properties-for-an-activex-control"></a>若要編輯 ActiveX 控制項的屬性
 
-獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 這些屬性會顯示在**屬性**視窗中，包括 ActiveX 控制項的寫入器所建立的頁面會顯示在任何屬性**屬性頁**對話方塊 （若要檢視**屬性頁**特定的 ActiveX 控制項中，選取** 屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
+獨立廠商所提供的 ActiveX 控制項可能都配有其自己的屬性和特性的。 這些屬性會顯示在**屬性**視窗中，包括 ActiveX 控制項的寫入器所建立的頁面會顯示在任何屬性**屬性頁**對話方塊 （若要檢視**屬性頁**特定的 ActiveX 控制項中，選取 **屬性頁**按鈕[屬性 視窗](/visualstudio/ide/reference/properties-window))。
 
-- 選取 [ **ActiveX**控制項，並移至功能表**檢視** > **] 屬性頁**來檢視屬性。 視需要在 [屬性] 頁面中，請進行變更。
+- 選取  **ActiveX**控制項，並移至功能表 **檢視**  >  **屬性頁** 來檢視屬性。 視需要在 [屬性] 頁面中，請進行變更。
 
    各種索引標籤會顯示在屬性頁面中的 ActiveX 控制項，視屬性工作表做為 ActiveX 控制項的一部分，而定。
 

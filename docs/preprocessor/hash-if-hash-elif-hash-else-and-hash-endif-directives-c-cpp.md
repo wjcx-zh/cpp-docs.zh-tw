@@ -41,25 +41,25 @@ ms.locfileid: "62409885"
 &nbsp;&nbsp;&nbsp;&nbsp;*如果行文字*
 
 *if 程式行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef**  *identifier*
 
 *elif 部分*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行文字*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 部分 elif 單行文字*
 
 *elif 列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif**  *constant-expression*
 
 *else 部分*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*else-line 文字*
 
 *其他列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
 *endif 列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
 每個 **#if**原始程式檔中的指示詞必須比對的結尾 **#endif**指示詞。 任意數目的 **#elif**指示詞之間可以出現 **#if**並 **#endif**指示詞，但最多一個 **#else**允許指示詞。 **#Else**指示詞，如果有的話，必須是之前的最後一個指示詞 **#endif**。
 
@@ -73,7 +73,7 @@ ms.locfileid: "62409885"
 
 前置處理器會處理所選*文字*並將它傳遞給編譯器。 如果*文字*包含前置處理器指示詞，前置處理器會執行，這些指示詞。 只會編譯前置處理器選取的文字區塊。
 
-前置處理器會選取單一*文字*藉由評估每個常數運算式的項目 **#if**或是 **#elif**指示詞，直到找到，則為 true （非零值） 常數運算式。 它會選取所有文字 (包括其他開頭的前置處理器指示詞**#**) 直到其相關聯 **#elif**， **#else**，或 **#endif**.
+前置處理器會選取單一*文字*藉由評估每個常數運算式的項目 **#if**或是 **#elif**指示詞，直到找到，則為 true （非零值） 常數運算式。 它會選取所有文字 (包括其他開頭的前置處理器指示詞 **#** ) 直到其相關聯 **#elif**， **#else**，或 **#endif**.
 
 如果所有發生次數*常數運算式*都是 false，或者如果沒有任何 **#elif**指示詞，前置處理器會選取文字區塊之後 **#else**子句。 如果 **#else**省略子句的所有執行個體*常數運算式*中 **#if**區塊為 false，就會選取任何文字區塊。
 

@@ -15,7 +15,7 @@ ms.locfileid: "62242886"
 
 '\<識別項 >': '__declspec （dllexport）' 和 'extern' 在明確具現化不相容
 
-名為明確樣板具現化*\<識別項 >* 所修改之`__declspec(dllexport)`和`extern`關鍵字。 不過，這些關鍵字是互斥的。 `__declspec(dllexport)` 關鍵字表示具現化樣板類別，而 `extern` 關鍵字表示不會自動具現化樣板類別。
+名為明確樣板具現化 *\<識別項 >* 所修改之`__declspec(dllexport)`和`extern`關鍵字。 不過，這些關鍵字是互斥的。 `__declspec(dllexport)` 關鍵字表示具現化樣板類別，而 `extern` 關鍵字表示不會自動具現化樣板類別。
 
 ## <a name="see-also"></a>另請參閱
 

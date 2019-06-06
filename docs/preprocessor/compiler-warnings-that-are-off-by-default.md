@@ -90,7 +90,7 @@ ms.locfileid: "62236552"
 |C4588 （層級 1）|'*anonymous_structure*': 行為變更： 不再隱含呼叫解構函式|
 |C4596 （層級 4）|'*識別碼*': 成員宣告中不合法的限定的名稱<sup>14.3</sup> <sup>為永久</sup>|
 |C4598 （層級 1 和層級 3）|' #include"*標頭*"': 標頭數目*數目*先行編譯標頭中不符合目前的編譯該位置<sup>14.3</sup>|
-|C4599 （層級 3）|'* 選項**路徑*': 命令列引數數目*號碼*不符合預先編譯的標頭<sup>14.3</sup>|
+|C4599 （層級 3）|'*選項* *路徑*': 命令列引數數目*號碼*不符合預先編譯的標頭<sup>14.3</sup>|
 |C4605 （層級 1）|'/D*巨集*' 在目前的命令列上指定，但未指定建置先行編譯標頭時|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) （層級 3）|'*union_member*'已經初始化的另一個等位的成員，在初始設定式清單中，'*union_member*'<sup>為永久</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) （層級 3）|#pragma 警告： 沒有警告編號 '*數字*'|

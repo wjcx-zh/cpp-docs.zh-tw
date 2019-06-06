@@ -43,10 +43,10 @@ if (condexpr1) statement1;
 
 如果`condexpr1`為 TRUE 時，`statement1`一定會執行，如果`condexpr1`為 FALSE，`statement1`永遠不會執行。
 
-當置或後置**++** 運算子會套用至型別的變數**bool**，變數會設為 TRUE。
+當置或後置 **++** 運算子會套用至型別的變數**bool**，變數會設為 TRUE。
 **Visual Studio 2017 版本 15.3 和更新版本**： 的 operator + + **bool**已移除的語言並不受支援。
 
-後置或前置詞**--** 無法將運算子套用至這個類型的變數。
+後置或前置詞 **--** 無法將運算子套用至這個類型的變數。
 
 **Bool**類型會參與整數提升。 類型的右值**bool**可以轉換成的型別**int**、 與 FALSE 成為零，變成一，則為 TRUE。 做為不同的類型， **bool**參與多載解析。
 

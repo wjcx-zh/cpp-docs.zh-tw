@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
 ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62395922"
@@ -78,7 +78,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 1. 執行 ODBC 管理員。
 
-1. 按一下 [加入] 。
+1. 按一下 [加入]  。
 
 這可讓您安裝的驅動程式及其描述的清單。 將這個說明當成*lpszDriver*參數。 請注意，您會使用整個說明，例如"Excel Files (*.xls)"，包括檔案名稱副檔名和括號，如果它們存在於描述。
 
@@ -94,9 +94,9 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - 32 位元，尋找 金鑰**HKEY_CURRENT_USER\Software\ODBC\ODBC。Zdroje dat INI\ODBC**的左窗格中。
 
-      右窗格會列出格式項目: 「 發行：REG_SZ:*<data source name>*"，其中*<data source name>* 是已設定您想要使用的驅動程式所需的設定與資料來源。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。
+      右窗格會列出格式項目: 「 發行：REG_SZ: *<data source name>* "，其中 *<data source name>* 是已設定您想要使用的驅動程式所需的設定與資料來源。 選取您想，資料來源，例如 SQL Server。 字串後的項目"pub:"都是，順序、 關鍵名稱和值將用於在您*lpszAttributes*參數。
 
-   - 16 位元，找到一節所標記的 Odbc.ini 檔案中 [*\<資料來源名稱 >*]。
+   - 16 位元，找到一節所標記的 Odbc.ini 檔案中 [ *\<資料來源名稱 >* ]。
 
       下列這一行的行屬於表單"keyname = value"。 這些都是完全的項目中要用於您*lpszAttributes*參數。
 
@@ -106,11 +106,11 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 1. 執行 ODBC 管理員。
 
-1. 按一下 [加入] 。
+1. 按一下 [加入]  。
 
 1. 選取的驅動程式名稱。
 
-1. 按一下 [確定] 。
+1. 按一下 [確定]  。
 
 當 ODBC 管理員顯示建立新的資料來源，該特定的驅動程式的資訊時，請按一下**協助**。 這會開啟該特定的驅動程式，通常包含了使用驅動程式的重要資訊的說明檔。
 

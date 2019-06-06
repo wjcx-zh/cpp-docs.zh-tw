@@ -73,7 +73,7 @@ ms.locfileid: "62387827"
 
 ### <a name="to-draw-a-line"></a>若要繪製一條線
 
-1. 使用[影像編輯器] 工具列](../windows/toolbar-image-editor-for-icons.md)，或移至功能表**映像**> **工具**，然後選擇 [**列**工具。
+1. 使用 [影像編輯器 工具列](../windows/toolbar-image-editor-for-icons.md)，或移至功能表 **映像**> **工具**，然後選擇 **列**工具。
 
 1. 如有必要，選取 色彩和筆刷：
 
@@ -128,7 +128,7 @@ ms.locfileid: "62387827"
 
 ### <a name="to-double-or-halve-the-custom-brush-size"></a>按兩下，或自訂的筆刷的大小則為一半
 
-按下**加號**(**+**) 索引鍵的兩倍筆刷的大小，或有**減號**(**-**) 減半的索引鍵.
+按下**加號**( **+** ) 索引鍵的兩倍筆刷的大小，或有**減號**( **-** ) 減半的索引鍵.
 
 ### <a name="to-cancel-the-custom-brush"></a>若要取消的自訂筆刷
 

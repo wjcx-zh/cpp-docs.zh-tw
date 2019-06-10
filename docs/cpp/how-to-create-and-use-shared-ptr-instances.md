@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: 4e7d63840f60c00f97b02825965cc247cddc38fd
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174809"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821690"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>作法：建立及使用 shared_ptr 執行個體
 
@@ -108,7 +108,7 @@ int main()
 
 - 若您必須讓 helper 函式存取基礎指標，並且您知道 helper 函式只會在呼叫函式傳回之前使用指標並傳回，則該函式便不需要共用基礎指標的擁有權。 它只需要存取呼叫端之 `shared_ptr` 的存留期內的指標。 在這種情況下，以傳址方式傳遞 `shared_ptr`，或傳遞基礎物件的原始指標或參考是安全的。 以這種方式傳遞有一小小的效能優點，並且也可以協助您表達程式設計的意圖。
 
-- 在某些情況下，例如在 `std:vector<shared_ptr<T>>` 中，您可能必須將每個 `shared_ptr` 傳遞到 Lambda 運算式主體或具名函式物件。 若 lambda 或函式並未儲存指標，請以傳址方式傳遞 `shared_ptr` 來避免叫用每個元素的複製建構函式。
+- 在某些情況下，例如在 `std::vector<shared_ptr<T>>` 中，您可能必須將每個 `shared_ptr` 傳遞到 Lambda 運算式主體或具名函式物件。 若 lambda 或函式並未儲存指標，請以傳址方式傳遞 `shared_ptr` 來避免叫用每個元素的複製建構函式。
 
 ## <a name="example-6"></a>範例 6
 

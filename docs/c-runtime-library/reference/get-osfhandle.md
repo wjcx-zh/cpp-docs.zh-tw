@@ -25,12 +25,12 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: beab4e4308bc7bcde287366b78671f61a89f8827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332204"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821666"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -51,11 +51,16 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>傳回值
 
-如果傳回的作業系統檔案控制代碼*fd*有效。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則此函數會傳回**INVALID_HANDLE_VALUE** (-1)，並設定**errno**來**EBADF**，表示無效的檔案控制代碼。 若要避免編譯器警告，預期的 Win32 檔案控制代碼的常式中使用結果時，將它轉換成**處理**型別。
+如果傳回的作業系統檔案控制代碼*fd*有效。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，它會傳回**INVALID_HANDLE_VALUE** (-1)。 它也會設定**errno**要**EBADF**，表示無效的檔案控制代碼。 若要避免警告，結果使用做為 Win32 檔案控制代碼時，將它轉換成**處理**型別。
+
+> [!NOTE]
+> 當**stdin**， **stdout**，並**stderr**不的檔案描述元值相關聯的資料流 （例如，在 Windows 應用程式沒有主控台視窗），從傳回這些資料流[_fileno](fileno.md)為特殊值-2。 同樣地，如果您使用 0、 1 或 2 做為檔案描述元參數，而不是呼叫的結果 **_fileno**， **_get_osfhandle**不相關聯的檔案描述元時，也會傳回特殊值-2使用資料流，並不會設定**errno**。 不過，這不是有效的檔案控制代碼值，而且嘗試使用它的後續呼叫可能會失敗。
+
+如需詳細資訊**EBADF**和其他錯誤碼，請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-若要關閉的檔案，來取得其作業系統 (OS) 的檔案控制代碼 **_get_osfhandle**，呼叫[_close](close.md)上的檔案描述元*fd*。 請勿呼叫**CloseHandle**對此函式的傳回值。 所擁有的基礎 OS 檔案控制代碼*fd*的檔案描述元，且已關閉時[_close](close.md)上呼叫*fd*。 如果檔案描述元擁有者`FILE *`資料流，然後呼叫[fclose](fclose-fcloseall.md)該`FILE *`資料流關閉檔案描述元和基礎 OS 檔案控制代碼。 在此情況下，請勿呼叫[_close](close.md)上的檔案描述項。
+若要關閉的檔案，來取得其作業系統 (OS) 的檔案控制代碼 **_get_osfhandle**，呼叫[_close](close.md)上的檔案描述元*fd*。 絕不會呼叫**CloseHandle**對此函式的傳回值。 所擁有的基礎 OS 檔案控制代碼*fd*的檔案描述元，且已關閉時[_close](close.md)上呼叫*fd*。 如果檔案描述元擁有者`FILE *`資料流，然後呼叫[fclose](fclose-fcloseall.md)該`FILE *`資料流關閉檔案描述元和基礎 OS 檔案控制代碼。 在此情況下，不要呼叫[_close](close.md)上的檔案描述項。
 
 ## <a name="requirements"></a>需求
 
@@ -72,3 +77,4 @@ intptr_t _get_osfhandle(
 [_creat、_wcreat](creat-wcreat.md)<br/>
 [dup、dup2](dup-dup2.md)<br/>
 [_open、_wopen](open-wopen.md)<br/>
+[\_open_osfhandle](open-osfhandle.md)

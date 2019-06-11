@@ -93,7 +93,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會將控制代碼傳回新建立的執行緒;不過，如果新建立的執行緒太快，結束 **_beginthread**可能不會傳回有效的控制代碼。 (請參閱＜備註＞一節中的討論)。發生錯誤時， **_beginthread**會傳回-1l 並**errno**設定為**EAGAIN**有太多的執行緒則為**EINVAL**如果引數無效或堆疊大小不正確，或**EACCES**如果有資源不足 （例如記憶體）。 發生錯誤時， **_beginthreadex**會傳回 0，並**errno**並 **_doserrno**設定。
+如果成功，所有這些函式都會將控制代碼傳回新建立的執行緒;不過，如果新建立的執行緒太快，結束 **_beginthread**可能不會傳回有效的控制代碼。 (請參閱＜備註＞一節中的討論)。發生錯誤時， **_beginthread**會傳回-1l 並**errno**設定為: **EAGAIN**有太多的執行緒；**EINVAL**如果引數無效或堆疊大小不正確；**EACCES**如果有資源不足 （例如記憶體）。 發生錯誤時， **_beginthreadex**會傳回 0，並**errno**並 **_doserrno**設定。
 
 如果*start_address*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
 

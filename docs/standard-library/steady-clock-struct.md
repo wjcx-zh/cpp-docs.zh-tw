@@ -25,7 +25,7 @@ struct steady_clock;
 
 在 Windows 中，`steady_clock`包裝`QueryPerformanceCounter`函式。
 
-如果第一次呼叫 `now` 傳回的值一律小於或等於後續呼叫 `now` 所傳回的值，則時鐘具「單一性」。 如果時鐘具*單一性*且時鐘刻度之間的時間固定，則時鐘具「穩定性」。
+如果第一次呼叫 `now` 傳回的值一律小於或等於後續呼叫 `now` 所傳回的值，則時鐘具「單一性」  。 如果時鐘具*單一性*且時鐘刻度之間的時間固定，則時鐘具「穩定性」  。
 
 `high_resolution_clock` 是的 typedef `steady_clock`。
 
@@ -35,7 +35,7 @@ struct steady_clock;
 |----------|-----------------|
 |`steady_clock::duration`|同義字`nanoseconds`，其定義於\<chrono >。|
 |`steady_clock::period`|同義字`nano`，其定義於\<比例 >。|
-|`steady_clock::rep`|同義字**長****長**，用來代表包含具現化的時鐘刻度數目的型別`duration`。|
+|`steady_clock::rep`|同義字**長** **長**，用來代表包含具現化的時鐘刻度數目的型別`duration`。|
 |`steady_clock::time_point`|`chrono::time_point<steady_clock>` 的同義字。|
 
 ## <a name="public-functions"></a>公用函式
@@ -48,7 +48,7 @@ struct steady_clock;
 
 |名稱|描述|
 |----------|-----------------|
-|`steady_clock::is_steady`|保存 **，則為 true**。 `steady_clock` 為 steady。|
+|`steady_clock::is_steady`|保存 **，則為 true**。 `steady_clock` 為 steady  。|
 
 ## <a name="requirements"></a>需求
 

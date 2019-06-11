@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739737"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446781"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -28,7 +28,7 @@ ms.locfileid: "57739737"
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|將時間從 **struct tm** 型別轉換為字元字串。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[時鐘](../c-runtime-library/reference/clock.md)|傳回處理序的耗用時鐘時間。|
-|[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|將時間從 **time_t**、**__time32_t** 或 **__time64_t** 型別轉換為字元字串。 這些具有 **_s** 尾碼的函式版本比較安全。|
+|[ctime、_ctime32、_ctime64、_wctime、_wctime32、_wctime64](../c-runtime-library/reference/ctime-ctime32-ctime64-wctime-wctime32-wctime64.md)、[_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](../c-runtime-library/reference/ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)|將時間從 **time_t**、 **__time32_t** 或 **__time64_t** 型別轉換為字元字串。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[difftime、_difftime32、_difftime64](../c-runtime-library/reference/difftime-difftime32-difftime64.md)|計算兩個時間之間的差異。|
 |[_ftime, _ftime32, _ftime64](../c-runtime-library/reference/ftime-ftime32-ftime64.md)、[_ftime_s, _ftime32_s, _ftime64_s](../c-runtime-library/reference/ftime-s-ftime32-s-ftime64-s.md)|將目前的系統時間儲存至 **struct _timeb** 型別或 **struct __timeb64** 型別。這些具有 **_s** 尾碼的函式版本比較安全。|
 |[_futime、_futime32、_futime64](../c-runtime-library/reference/futime-futime32-futime64.md)|在開啟的檔案上設定修改時間|
@@ -39,7 +39,7 @@ ms.locfileid: "57739737"
 |[_strdate, _wstrdate](../c-runtime-library/reference/strdate-wstrdate.md), [_strdate_s, _wstrdate_s](../c-runtime-library/reference/strdate-s-wstrdate-s.md)|以字串形式傳回目前的系統日期。 這些具有 **_s** 尾碼的函式版本比較安全。|
 |[strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)|將日期與時間字串格式化成國際通用的格式。|
 |[_strtime, _wstrtime](../c-runtime-library/reference/strtime-wstrtime.md), [_strtime_s、_wstrtime_s](../c-runtime-library/reference/strtime-s-wstrtime-s.md)|以字串形式傳回目前的系統時間。 這些具有 **_s** 尾碼的函式版本比較安全。|
-|[time、_time32、_time64](../c-runtime-library/reference/time-time32-time64.md)|取得 **time_t**、**__time32_t** 或 **__time64_t** 型別的目前系統時間。|
+|[time、_time32、_time64](../c-runtime-library/reference/time-time32-time64.md)|取得 **time_t**、 **__time32_t** 或 **__time64_t** 型別的目前系統時間。|
 |[_tzset](../c-runtime-library/reference/tzset.md)|從環境時間變數 **TZ** 設定外部時間變數。|
 |[_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|使用目前的時間或結構中儲存的時間值，為指定的檔案設定修改時間。|
 
@@ -47,7 +47,7 @@ ms.locfileid: "57739737"
 > 在所有的 Microsoft C/C++ 版本 (Microsoft C/C++ 7.0 版除外) 與所有的 Visual C++ 版本中，時間函式會傳回自 1970 年 1 月 1 日午夜起算所經過的秒數作為目前的時間。 在 Microsoft C/C++ 7.0 版中，**time** 將目前時間傳回為 1899 年 12 月 31 日午夜算起所經過的秒數。
 
 > [!NOTE]
-> 在 Visual C++ 2005 之前的 Visual C++ 與 Microsoft C/C++ 版本中，**time_t** 是 **long** **int** (32 位元)，因此自 2038 年 1 月 19 日 3:14:07 UTC 之後就無法使用。 **time_t** 現在預設等同於 **__time64_t**，但定義 **_USE_32BIT_TIME_T** 會將 **time_t** 變更為 **__time32_t**，並強制許多時間函式呼叫接受 32 位元 **time_t** 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。
+> 在 Visual Studio 2005 之前的 Visual C++ 與 Microsoft C/C++ 版本中，**time_t** 是 **long** **int** (32 位元)，因此自 2038 年 1 月 19 日 3:14:07 UTC 之後就無法使用。 **time_t** 現在預設等同於 **__time64_t**，但定義 **_USE_32BIT_TIME_T** 會將 **time_t** 變更為 **__time32_t**，並強制許多時間函式呼叫接受 32 位元 **time_t** 的版本。 如需詳細資訊，請參閱[標準類型](../c-runtime-library/standard-types.md)與個別時間函式文件中的註解。
 
 ## <a name="see-also"></a>另請參閱
 

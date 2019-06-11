@@ -2,16 +2,16 @@
 title: 移植指南：MFC Scribble
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0424b5e8c87c0103b4ebee65765244b40e8fa553
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741303"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448977"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
-本主題是介紹 Visual C++ 專案升級程序之幾個主題中的第一個主題，該程序會將在舊版 Visual Studio 中建立的專案升級至 Visual Studio 2017。 這些主題以範例來介紹升級程序，從一個很簡單的專案開始，再移到稍微更複雜的專案。 在本主題中，我們將討論特定專案 MFC Scribble 的升級程序。 它很適合做為 C++ 專案升級程序的基本入門。
+本主題是介紹 Visual Studio C++ 專案升級程序之幾個主題的第一個主題，該程序會將在舊版 Visual Studio 中建立的專案升級至 Visual Studio 2017。 這些主題以範例來介紹升級程序，從一個很簡單的專案開始，再移到稍微更複雜的專案。 在本主題中，我們將討論特定專案 MFC Scribble 的升級程序。 它很適合做為 C++ 專案升級程序的基本入門。
 
 Visual Studio 的每個版本都可能引入不相容的問題，而使得將程式碼從舊版 Visual Studio 移到新版 Visual Studio 的作業變得很複雜。 您有時需要在程式碼中進行變更，因此必須重新編譯和更新程式碼；有時則需要對專案檔進行變更。 當您開啟使用舊版 Visual Studio 建立的專案時，Visual Studio 會自動詢問您是否要將專案或方案更新為最新版本。 這些工具通常只會升級專案檔，而不會修改您的原始程式碼。
 
@@ -19,7 +19,7 @@ Visual Studio 的每個版本都可能引入不相容的問題，而使得將程
 
 MFC Scribble 是已知隨附於許多不同 Visual C++ 版本的範例。 它是簡單的繪圖應用程式，可繪製 MFC 的一些基本功能。 目前可用的版本有許多種，包括 Managed 程式碼和機器碼版本。 針對這個範例，我們找到使用 Visual Studio 2005 機器碼撰寫的舊版 Scribble，並在 Visual Studio 2017 中加以開啟。
 
-嘗試升級之前，請確定您已安裝 Windows 桌面版工作負載。 開啟 Visual Studio 安裝程式 (vs_installer.exe)。 開啟安裝程式的一種方法是選擇 [檔案] > [新增專案]，然後捲動至已安裝的範本清單底部，直到您看到 [開啟 Visual Studio 安裝程式]。 開啟安裝程式之後，將會看到所有可用的工作負載。 如果未選取 **Windows Desktop** 工作負載的方塊，請加以選取，然後按一下視窗底部的 [修改] 按鈕。
+嘗試升級之前，請確定您已安裝 Windows 桌面版工作負載。 開啟 Visual Studio 安裝程式 (vs_installer.exe)。 開啟安裝程式的一種方法是選擇 [檔案]   > [新增專案]  ，然後捲動至已安裝的範本清單底部，直到您看到 [開啟 Visual Studio 安裝程式]  。 開啟安裝程式之後，將會看到所有可用的工作負載。 如果未選取 **Windows Desktop** 工作負載的方塊，請加以選取，然後按一下視窗底部的 [修改]  按鈕。
 
 接下來，備份整個方案和其所有內容。
 
@@ -49,9 +49,9 @@ Visual Studio 接著會顯示移轉報告，列出舊專案檔的所有問題。
 
 ### <a name="step-2-getting-it-to-build"></a>步驟 2： 建置專案
 
-建置前，我們會先檢查平台工具組，以了解專案系統正在使用的編譯器版本。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 分類中，查看 [平台工具組] 屬性。 該屬性包含 Visual Studio 的版本和平台工具版本號碼，在本例中為 v141，代表 Visual Studio 2017 版本的工具。 當您轉換原本使用 Visual C++ 2010、2012、2013 或 2015 編譯的專案時，工具組不會自動更新為 Visual Studio 2017 工具組。
+建置前，我們會先檢查平台工具組，以了解專案系統正在使用的編譯器版本。 在專案屬性對話方塊中，於 [組態屬性]  的 [一般]  分類中，查看 [平台工具組]  屬性。 該屬性包含 Visual Studio 的版本和平台工具版本號碼，在本例中為 v141，代表 Visual Studio 2017 版本的工具。 當您轉換原本使用 Visual Studio 2010、2012、2013 或 2015 編譯的專案時，工具組不會自動更新為 Visual Studio 2017 工具組。
 
-若要切換為 Unicode，請開啟專案的屬性，並選擇 [組態屬性] 下的 [一般] 區段，然後尋找 [字元集] 屬性。 將這個屬性從 [使用多位元組字元集] 變更為 [使用 Unicode 字元集]。 這項變更的影響是目前已定義 _UNICODE 和 UNICODE 巨集，但未定義 _MBCS；您可以在屬性對話方塊之 [C/C++] 分類的 [命令列] 屬性中進行確認。
+若要切換為 Unicode，請開啟專案的屬性，並選擇 [組態屬性]  下的 [一般]  區段，然後尋找 [字元集]  屬性。 將這個屬性從 [使用多位元組字元集]  變更為 [使用 Unicode 字元集]  。 這項變更的影響是目前已定義 _UNICODE 和 UNICODE 巨集，但未定義 _MBCS；您可以在屬性對話方塊之 [C/C++]  分類的 [命令列]  屬性中進行確認。
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -65,7 +65,7 @@ Visual Studio 接著會顯示移轉報告，列出舊專案檔的所有問題。
 _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 ```
 
-這是警告，而不是錯誤，而且在升級 Visual C++ 專案時很常見。 這是定義將用來執行應用程式之最低 Windows 版本的巨集。 如果我們忽略這個警告，則表示接受預設值 _WIN32_WINNT_MAXVER (即目前的 Windows 版本)。 如需可能值的表格，請參閱 [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers)(使用 Windows 標頭)。 例如，我們可以將其設定為在 Vista 以後的任何版本上執行。
+這是警告，而不是錯誤，且在升級 Visual Studio C++ 專案時很常見。 這是定義將用來執行應用程式之最低 Windows 版本的巨集。 如果我們忽略這個警告，則表示接受預設值 _WIN32_WINNT_MAXVER (即目前的 Windows 版本)。 如需可能值的表格，請參閱 [Using the Windows Headers](/windows/desktop/WinProg/using-the-windows-headers)(使用 Windows 標頭)。 例如，我們可以將其設定為在 Vista 以後的任何版本上執行。
 
 ```cpp
 #define _WIN32_WINNT _WIN32_WINNT_VISTA

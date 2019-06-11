@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRT initialization [C++]
 ms.assetid: e7979813-1856-4848-9639-f29c86b74ad7
-ms.openlocfilehash: 980d94b29d31d8eea910fbdb171a0ae8df1dccca
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 03126b8fdf1c3824b114d822c269655c22e5ee9f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750032"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446679"
 ---
 # <a name="crt-initialization"></a>CRT 初始化
 
@@ -41,7 +41,7 @@ int main()
 
 當您瀏覽堆疊上的函式時，會發現 CRT 會在一連串的函式指標之間重複循環，並會在遭遇到每個函式指標時呼叫它們。 這些函式都類似於 `func()` 或針對類別執行個體的建構函式。
 
-CRT 會從 Visual C++ 編譯器取得函式指標清單。 當編譯器看見全域初始設定式的時候，它會在 `.CRT$XCU` 區段 (其中 `CRT` 為區段名稱，而 `XCU` 為群組名稱) 中產生動態初始設定式。 若要取得那些動態初始設定式的清單，請執行命令 **dumpbin /all main.obj**，然後搜尋 `.CRT$XCU` 區段 (當 main.cpp 已編譯為 C++，而非 C 檔案時)。 它將會類似下列內容：
+CRT 會從 Microsoft C++ 編譯器取得函式指標清單。 當編譯器看見全域初始設定式的時候，它會在 `.CRT$XCU` 區段 (其中 `CRT` 為區段名稱，而 `XCU` 為群組名稱) 中產生動態初始設定式。 若要取得那些動態初始設定式的清單，請執行命令 **dumpbin /all main.obj**，然後搜尋 `.CRT$XCU` 區段 (當 main.cpp 已編譯為 C++，而非 C 檔案時)。 它將會類似下列內容：
 
 ```
 SECTION HEADER #6
@@ -73,11 +73,11 @@ CRT 會定義兩個指標：
 
 - `__xc_a` (英文) 中的`.CRT$XCA` (英文)
 
-- `__xc_z` (英文) 中的`.CRT$XCZ` (英文)
+- `.CRT$XCZ` 中的 `__xc_z`
 
 除了 `__xc_a` 和 `__xc_z` 之外，這兩個群組不會有任何其他定義的符號。
 
-現在，當連結器讀取各個 `.CRT` 群組時，它會將它們結合成單一區段，並依字母順序加以排序。 這代表使用者定義的全域初始設定式 (Visual C++ 編譯器會將它置於 `.CRT$XCU` 中) 將會一律位於 `.CRT$XCA` 之後，以及 `.CRT$XCZ` 之前。
+現在，當連結器讀取各個 `.CRT` 群組時，它會將它們結合成單一區段，並依字母順序加以排序。 這代表使用者定義的全域初始設定式 (Microsoft C++ 編譯器會將它置於 `.CRT$XCU` 中) 將會一律位於 `.CRT$XCA` 之後，以及 `.CRT$XCZ` 之前。
 
 該區段將會類似下列內容：
 

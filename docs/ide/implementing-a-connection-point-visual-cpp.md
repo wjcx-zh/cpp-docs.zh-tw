@@ -1,22 +1,20 @@
 ---
 title: 實作連接點
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.impl.cp.overview
+ms.date: 05/14/2019
 helpviewer_keywords:
 - connection points [C++], implementing
 - implement connection point wizard [C++]
 ms.assetid: 5b37e4f9-73c9-4bef-b26d-365bc0662260
-ms.openlocfilehash: 7afa61246c5251936967e281f7237dc37e5be045
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8a75a5fbbabd20f4591e3a119c175d68cdfb1f90
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693278"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182598"
 ---
 # <a name="implement-a-connection-point"></a>實作連接點
 
-若要使用 [實作連接點精靈] 實作連接點，您必須已將專案建立作為 ATL COM 應用程式，或作為包含 ATL 支援的 MFC 應用程式。 您可以使用 [ATL 專案精靈](../atl/reference/atl-project-wizard.md)建立 ATL 應用程式，或[將 ALT 物件新增至 MFC 應用程式](../mfc/reference/adding-atl-support-to-your-mfc-project.md)，以實作 MFC 應用程式的 ATL 支援。
+若要使用 [實作連接點精靈] 實作連接點，您必須已將專案建立作為 ATL COM 應用程式，或作為包含 ATL 支援的 MFC 應用程式。 您可以使用 [[ATL 專案精靈]](../atl/reference/atl-project-wizard.md) 建立 ATL 應用程式，或使用 [[將 ALT 物件新增至 MFC 應用程式]](../mfc/reference/adding-atl-support-to-your-mfc-project.md)，來實作 MFC 應用程式的 ATL 支援。
 
 > [!NOTE]
 > 如需實作 MFC 專案連接點的資訊，請參閱[連接點](../mfc/connection-points.md)。
@@ -32,9 +30,9 @@ ms.locfileid: "51693278"
 
 1. 在 [類別檢視] 中，以滑鼠右鍵按一下 ATL 物件的類別名稱。
 
-1. 從捷徑功能表選擇 [新增]，然後選擇 [新增連接點] 以顯示[實作連接點精靈](#implement-connection-point-wizard)。
+1. 從捷徑功能表選擇 [新增]  ，然後選擇 [新增連接點]  以顯示[實作連接點精靈](#implement-connection-point-wizard)。
 
-1. 從適當的型別程式庫選取要實作的連接點介面，然後選取 [完成]。
+1. 從適當的型別程式庫選取要實作的連接點介面，然後選取 [完成]  。
 
 1. 在 [類別檢視] 中，檢查為每個連接點所建立的 Proxy 類別。 類別會顯示為 CProxy*InterfaceName*\<T>，且為衍生自 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)。
 
@@ -61,7 +59,7 @@ ms.locfileid: "51693278"
 
 ## <a name="implement-connection-point-wizard"></a>實作連接點精靈
 
-這個精靈會實作 COM 物件的連接點。 可連接物件 (也就是來源) 可以為本身的介面或任何輸出介面顯示連接點。 Visual C++ 和 Windows 都提供具有輸出介面的型別程式庫。 每個輸出介面都可以由物件上的用戶端 (也就是接收，sink) 所實作。
+這個精靈會實作 COM 物件的連接點。 可連接物件 (也就是來源) 可以為本身的介面或任何輸出介面顯示連接點。 MSVC 和 Windows 都提供具有輸出介面的型別程式庫。 每個輸出介面都可以由物件上的用戶端 (也就是接收，sink) 所實作。
 
 如需詳細資訊，請參閱 [ATL 連接點](../atl/atl-connection-points.md)。
 
@@ -71,19 +69,19 @@ ms.locfileid: "51693278"
 
 - **位置**
 
-  顯示 [可用的型別程式庫] 清單中目前選取之型別程式庫的位置。
+  顯示 [可用的型別程式庫]  清單中目前選取之型別程式庫的位置。
 
 - **介面**
 
-  顯示介面，其定義保存在 [可用的型別程式庫] 方塊中目前選取的型別程式庫內。
+  顯示介面，其定義保存在 [可用的型別程式庫]  方塊中目前選取的型別程式庫內。
 
-  |傳輸按鈕|描述|
+  |傳輸按鈕|說明|
   |---------------------|-----------------|
-  |**>**|將 [介面] 清單中目前選取的介面名稱新增至 [實作連接點] 清單。|
-  |**>>**|將 [介面] 清單中所有可用介面名稱新增至 [實作連接點] 清單。|
-  |**\<**|移除 [實作連接點] 清單中目前選取的介面名稱。|
-  |**\<\<**|移除 [實作連接點] 清單中目前列出的所有介面名稱。|
+  |**>**|將 [介面]  清單中目前選取的介面名稱新增至 [實作連接點]  清單。|
+  |**>>**|將 [介面]  清單中所有可用介面名稱新增至 [實作連接點]  清單。|
+  |**\<**|移除 [實作連接點]  清單中目前選取的介面名稱。|
+  |**\<\<**|移除 [實作連接點]  清單中目前列出的所有介面名稱。|
 
 - **實作連接點**
 
-  當您選取 [完成] 時，顯示您實作其連接點的介面名稱。
+  當您選取 [完成]  時，顯示您實作其連接點的介面名稱。

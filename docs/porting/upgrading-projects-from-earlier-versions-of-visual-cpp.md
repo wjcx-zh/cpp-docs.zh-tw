@@ -1,16 +1,17 @@
 ---
 title: 從舊版的 Visual C++ 升級專案
-ms.date: 11/04/2016
+description: 如何從舊版的 Visual Studio 升級 Microsoft C++ 專案。
+ms.date: 05/03/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034909"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220394"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 
@@ -25,7 +26,7 @@ ms.locfileid: "59034909"
 
 2. 在目前版本的 Visual Studio 中開啟並且升級專案或方案複本，然後予以儲存。
 
-3. 針對每個轉換的專案，開啟捷徑功能表，然後選擇 [屬性] 。 在 [組態屬性] 下，選取 [一般]  ，然後選取目前版本的 [平台工具組] 。 (例如，若是 Visual Studio 2017，請選取 **v141**。)
+3. 針對每個轉換的專案，開啟捷徑功能表，然後選擇 [屬性]  。 在 [組態屬性]  下，選取 [一般]  ，然後選取目前版本的 [平台工具組]  。 (例如，若是 Visual Studio 2017，請選取 **v141**。)
 
 4. 建置方案。 如果建置失敗，請修改設定並且重建。
 
@@ -45,6 +46,6 @@ ms.locfileid: "59034909"
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual Studio 2017 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual Studio 之 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非標準行為](../cpp/nonstandard-behavior.md)

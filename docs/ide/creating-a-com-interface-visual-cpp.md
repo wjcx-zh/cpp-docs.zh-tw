@@ -1,31 +1,28 @@
 ---
 title: 建立 COM 介面
-ms.date: 11/12/2018
-f1_keywords:
-- vc.codewiz.com.creating.interfaces
-- vc.codewiz.com.editing.interfaces
+ms.date: 05/14/2019
 helpviewer_keywords:
 - COM interfaces, creating
 - methods [C++], adding to COM interfaces
 - COM interfaces, editing
 - properties [C++], adding to COM interfaces
 ms.assetid: 1be84d3c-6886-4d1e-8493-56c4d38a96d4
-ms.openlocfilehash: dfc4b09f4fa42b179bdef91877e0a004caa69187
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 09ddc113450fadb208e4f8471bc9aacf596a53f1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693697"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182608"
 ---
 # <a name="create-a-com-interface"></a>建立 COM 介面
 
-Visual C++ 提供精靈與範本來為您的 COM 物件與自動化類別，建立使用 COM 定義介面和分配介面的專案。
+Visual Studio 提供精靈與範本來為您的 COM 物件與自動化類別，以建立使用 COM 定義介面和分配介面的專案。
 
 您可以使用這些精靈執行下列三項一般工作：
 
 - [將 ATL 支援新增至 MFC 專案](../mfc/reference/adding-atl-support-to-your-mfc-project.md)。
 
-  在您建立 MFC 專案之後，使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，然後執行 [將 ATL 支援新增至 MFC] 程式碼精靈，將 ATL 支援新增至 MFC 應用程式。 這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 這些 ATL 物件可以有多個介面。
+  在您建立 MFC 專案之後，使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)，然後執行 [將 ATL 支援新增至 MFC]  程式碼精靈，將 ATL 支援新增至 MFC 應用程式。 這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 這些 ATL 物件可以有多個介面。
 
 - [建立 MFC ActiveX 控制項](../mfc/reference/creating-an-mfc-activex-control.md)。
 
@@ -35,7 +32,7 @@ Visual C++ 提供精靈與範本來為您的 COM 物件與自動化類別，建�
 
   使用 [ATL 專案精靈](../atl/reference/atl-project-wizard.md)和 [ATL 控制項精靈](../atl/reference/atl-control-wizard.md)的組合，建立 ATL ActiveX 控制項。
 
-  您也可以將 ATL 控制項新增至您已新增 ATL 支援的 MFC 專案，如上所述。 此外，如果您在 [新增類別] 對話方塊中選取 [ATL 控制項]，而且您尚未將 ATL 支援新增至 MFC 專案，則 Visual Studio 會顯示對話方塊，確認將 ATL 支援新增至您的 MFC 專案。
+  您也可以將 ATL 控制項新增至您已新增 ATL 支援的 MFC 專案，如上所述。 此外，如果您在 [新增類別]  對話方塊中選取 [ATL 控制項]  ，而且您尚未將 ATL 支援新增至 MFC 專案，則 Visual Studio 會顯示對話方塊，確認將 ATL 支援新增至您的 MFC 專案。
 
   這個精靈會在專案類別中產生 IDL 來源和 COM 對應。
 
@@ -74,18 +71,18 @@ Visual C++ 提供數種方式來檢視和[編輯為您的專案定義的 COM 介
 
 ## <a name="edit-a-com-interface"></a>編輯 COM 介面
 
-您可以使用 [類別檢視] 捷徑功能表中的命令，為 Visual C++ 專案中的 COM 介面定義新的方法和屬性。 您也可以從 [工具箱] 為 ActiveX 控制項定義事件。
+您可以使用 [類別檢視] 捷徑功能表中的命令，為 Visual Studio C++ 專案中的 COM 介面定義新方法和屬性。 您也可以從 [工具箱] 為 ActiveX 控制項定義事件。
 
 針對 ATL 和 MFC 型 COM 物件類別，您可以在編輯介面同時編輯類別實作。
 
 > [!NOTE]
-> 針對您在 [新增類別] 對話方塊外部定義的介面，Visual C++ 會將方法或屬性新增至 .idl 檔案，並將虛設常式新增至實作方法的類別，即使手動新增這些介面時也一樣。
+> 針對您在 [新增類別]  對話方塊外部定義的介面，Visual C++ 會將方法或屬性新增至 .idl 檔案，並將虛設常式新增至實作方法的類別，即使手動新增這些介面時也一樣。
 
 下列三個精靈可協助您自訂現有的介面。 您可以從 [類別檢視] 存取這些介面：
 
 |精靈|專案類型|
 |------------|------------------|
 |[新增屬性精靈](../ide/names-add-property-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增屬性的介面。<br /><br />Visual C++ 會偵測專案類型，並視需要修改 [新增屬性精靈] 中的選項：<br /><br />- 針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立專案中的分配介面，叫用 [新增屬性精靈] 會提供 MFC 特定的選項。<br />- 針對 MFC ActiveX 控制項介面，[新增屬性精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />- 針對所有其他介面，[新增屬性精靈] 會提供大部分情況下都有用的選項。|
-|[新增方法精靈](../ide/add-method-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增方法的介面。<br /><br />Visual C++ 會偵測專案類型，並視需要修改 [新增方法精靈] 中的選項：<br /><br />- 針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立專案中的分配介面，使用 [新增方法精靈] 會提供 MFC 特定的選項。<br />- 針對 MFC ActiveX 控制項介面，[新增方法精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />- 針對所有其他介面，[新增方法精靈] 會提供大部分情況下都有用的選項。|
+|[新增方法精靈](../ide/add-method-wizard.md)|支援 ATL 的 ATL 或 MFC 專案。 以滑鼠右鍵按一下您要新增方法的介面。<br /><br />Visual C++ 會偵測專案類型，並視需要修改 [新增方法精靈] 中的選項：<br /><br />- 針對使用 [MFC 應用程式精靈](../mfc/reference/mfc-application-wizard.md)所建立專案中的分配介面，使用 [新增方法精靈] 會提供 MFC 特定的選項。<br />- 針對 MFC ActiveX 控制項介面，[新增方法精靈] 會提供內建方法和屬性清單，您可以直接使用或為您的控制項自訂。<br />- 針對所有其他介面，[新增方法精靈]  會提供大部分情況下都有用的選項。|
 
 此外，您也可以對 COM 控制項實作新的介面。 只要以滑鼠右鍵按一下 [類別檢視] 中的物件控制項類別，並選擇[實作介面](../ide/implement-interface-wizard.md)即可。

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 10fbb128698b6422779d09a15fe3c1d25e8de5b5
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749892"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446650"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤
 
@@ -23,7 +23,7 @@ HEAP[]：指定至 RtlValidateHeap(#,#) 的位址無效
 
 ## <a name="causes"></a>原因
 
-應用程式或 DLL 在執行緒區域儲存區中保留的每一份 CRT 程式庫複本都有個別且不同的狀態。 因此，CRT 物件 (例如檔案控制代碼、環境變數和地區設定) 只對於應用程式或 DLL 中配置或設定這些物件的 CRT 複本有效。 當 DLL 及其應用程式用戶端使用不同複本的 CRT 程式庫時，您無法跨 DLL 界限傳遞這些 CRT 物件，並預期能在另一端正確挑選出這些物件。 這在 Visual Studio 2015 及更新版本中的通用 CRT 之前的 CRT 版本更是如此。 使用 Visual C++ 2013 或更早版本建置的每個 Visual Studio 版本，都有一個版本特定的 CRT 程式庫。 CRT 的內部實作詳細資料 (例如其資料結構和命名慣例) 在每個版本中都不同。 我們從未支援將針對某個版本的 CRT 編譯的程式碼動態連結到不同版本的 CRT DLL，雖然這偶爾可以運作，但這是幸運而非刻意設計如此。
+應用程式或 DLL 在執行緒區域儲存區中保留的每一份 CRT 程式庫複本都有個別且不同的狀態。 因此，CRT 物件 (例如檔案控制代碼、環境變數和地區設定) 只對於應用程式或 DLL 中配置或設定這些物件的 CRT 複本有效。 當 DLL 及其應用程式用戶端使用不同複本的 CRT 程式庫時，您無法跨 DLL 界限傳遞這些 CRT 物件，並預期能在另一端正確挑選出這些物件。 這在 Visual Studio 2015 及更新版本中的通用 CRT 之前的 CRT 版本更是如此。 使用 Visual Studio 2013 或更早版本建置的每個 Visual Studio 版本都有一個版本特定 CRT 程式庫。 CRT 的內部實作詳細資料 (例如其資料結構和命名慣例) 在每個版本中都不同。 我們從未支援將針對某個版本的 CRT 編譯的程式碼動態連結到不同版本的 CRT DLL，雖然這偶爾可以運作，但這是幸運而非刻意設計如此。
 
 此外，因為每一份 CRT 程式庫複本有自己的堆積管理員，在一個 CRT 程式庫中配置記憶體，並且跨 DLL 界限傳遞要由不同 CRT 程式庫複本釋放的指標，可能是堆積損毀的潛在原因。 如果您設計 DLL 讓它跨界限傳遞 CRT 物件或配置記憶體並預期它會在 DLL 外釋放時，您要限制 DLL 的應用程式用戶端使用與 DLL 相同的 CRT 程式庫複本。 DLL 及其用戶端通常只有在兩者在載入時都連結至相同版本的 CRT DLL 時，才會使用相同複本的 CRT 程式庫。 因為在 Windows 10 上 Visual Studio 2015 及更新版本所使用通用 CRT 程式庫的 DLL 版本現在是一個集中部署的 Windows 元件 ucrtbase.dll，所以它也適用於使用 Visual Studio 2015 及更新版本建置的應用程式。 不過，即使 CRT 程式碼完全相同，您也無法將在一個堆積中配置的記憶體遞交給使用不同堆積的元件。
 

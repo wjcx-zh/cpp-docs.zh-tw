@@ -2,16 +2,16 @@
 title: 移植指南：COM Spy
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751683"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451180"
 ---
 # <a name="porting-guide-com-spy"></a>移植指南：COM Spy
 
-本主題是系列文章中的第二個主題，示範將舊版 Visual C++ 專案升級至最新版 Visual Studio 的程序。 本主題中的範例程式碼最後是使用 Visual Studio 2005 所編譯。
+本主題是系列文章中的第二個主題，示範將舊版 Visual Studio C++ 專案升級至最新版 Visual Studio 的程序。 本主題中的範例程式碼最後是使用 Visual Studio 2005 所編譯。
 
 ## <a name="comspy"></a>COMSpy
 
@@ -24,7 +24,7 @@ COMSpy 是用來監視和記錄電腦上之 Serviced 元件活動的程式。 Se
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-升級專案的其中一個常見問題是，專案屬性對話方塊中的**連結器 OutputFile** 設定可能需要檢閱。 對於 Visual Studio 2010 之前的專案而言，當 OutputFile 設定為非標準值時，就會造成自動轉換精靈的問題。 在這種情況下，輸出檔案的路徑會設定為非標準資料夾 XP32_DEBUG。 為了深入了解這個錯誤，我們查閱了與 Visual C++ 2010 專案升級相關的[部落格文章](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)，這個升級涉及一項重大的變更，那就是從 vcbuild 變更為 msbuild。 根據這項資訊，當您建立新專案時，**輸出檔案**設定的預設值為 `$(OutDir)$(TargetName)$(TargetExt)`，但由於轉換的專案無法確認一切正確，因此不會在轉換期間進行這項設定。 不過，讓我們試放在 OutputFile 中，看看是否可行。  結果可行，因此我們可以繼續進行。 如果沒有特別原因需要使用非標準輸出資料夾，建議使用標準位置。 在本例中，我們選擇在移植和升級過程中保留非標準輸出位置；`$(OutDir)` 在**偵錯**組態中會解析成 XP32_DEBUG 資料夾，在**發行**組態中會解析成 ReleaseU 資料夾。
+升級專案的其中一個常見問題是，專案屬性對話方塊中的**連結器 OutputFile** 設定可能需要檢閱。 對於 Visual Studio 2010 之前的專案而言，當 OutputFile 設定為非標準值時，就會造成自動轉換精靈的問題。 在這種情況下，輸出檔案的路徑會設定為非標準資料夾 XP32_DEBUG。 為了深入了解這個錯誤，我們查閱了與 Visual Studio 2010 專案升級相關的[部落格文章](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/)，這個升級涉及一項重大的變更，那就是從 vcbuild 變更為 msbuild。 根據這項資訊，當您建立新專案時，**輸出檔案**設定的預設值為 `$(OutDir)$(TargetName)$(TargetExt)`，但由於轉換的專案無法確認一切正確，因此不會在轉換期間進行這項設定。 不過，讓我們試放在 OutputFile 中，看看是否可行。  結果可行，因此我們可以繼續進行。 如果沒有特別原因需要使用非標準輸出資料夾，建議使用標準位置。 在本例中，我們選擇在移植和升級過程中保留非標準輸出位置；`$(OutDir)` 在**偵錯**組態中會解析成 XP32_DEBUG 資料夾，在**發行**組態中會解析成 ReleaseU 資料夾。
 
 ### <a name="step-2-getting-it-to-build"></a>步驟 2： 建置專案
 建置已移植的專案時，會發生一些錯誤和警告。
@@ -73,7 +73,7 @@ error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\Co
 warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
 ```
 
-`/SAFESEH` 編譯器選項不適用於偵錯模式，`/EDITANDCONTINUE` 才適用，因此修正方法是只對**偵錯**組態停用 `/SAFESEH`。 若要在屬性對話方塊中執行這項作業，請開啟產生這個錯誤的專案屬性對話方塊，先將**組態**設定為**偵錯** (實際上是**對 Unicode 偵錯**)，然後在 [連結器進階] 區段中，將 [映像有安全例外狀況處理常式] 重設為 [否] (`/SAFESEH:NO`)。
+`/SAFESEH` 編譯器選項不適用於偵錯模式，`/EDITANDCONTINUE` 才適用，因此修正方法是只對**偵錯**組態停用 `/SAFESEH`。 若要在屬性對話方塊中執行這項作業，請開啟產生這個錯誤的專案屬性對話方塊，先將**組態**設定為**偵錯** (實際上是**對 Unicode 偵錯**)，然後在 [連結器進階]  區段中，將 [映像有安全例外狀況處理常式]  重設為 [否]  (`/SAFESEH:NO`)。
 
 編譯器會警告我們，`PROP_ENTRY_EX` 即將淘汰。 這並不安全，建議改用 `PROP_ENTRY_TYPE_EX`。
 

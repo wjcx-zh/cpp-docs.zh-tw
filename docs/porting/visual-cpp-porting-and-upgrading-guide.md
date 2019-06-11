@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升級指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898787"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450373"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 
@@ -53,7 +53,7 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 8. 由於行為變更所造成的執行階段錯誤或未預期的結果
 
-9. 由於工具所引進的錯誤所造成的錯誤。 如果發生錯誤，請透過一般支援管道或使用 [Visual Studio 意見反應中心](http://connect.microsoft.com/VisualStudio/Feedback)，向 Visual C++ 小組回報。
+9. 由於工具所引進的錯誤所造成的錯誤。 如果發生錯誤，請透過一般支援管道或使用 [Visual Studio C++ Developer Community](https://developercommunity.visualstudio.com/spaces/62/index.html) (Visual Studio C++ 開發人員社群) 頁面，向 Visual C++ 小組回報。
 
 除了由於編譯器錯誤而無法避免的變更之外，升級程序中還有一些選擇性變更，例如：
 
@@ -75,7 +75,7 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 |標題|說明|
 |-----------|-----------------|
-|[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|討論如何使用在舊版 Visual C++ 中建立的專案。|
+|[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|討論如何使用在舊版 Visual Studio 中建立的專案。|
 |[Visual Studio 中 C++ 編譯器中的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|現行 Visual Studio 版本中 IDE 和工具的變更|
 |[Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)|從 Visual Studio 2015 到 Visual Studio 的標準一致性改進|
 |[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)|從 Visual Studio 2003 到 2015 之 Visual C++ 程式庫和建置工具的所有變更清單，可能需要在程式碼中進行變更。|
@@ -88,4 +88,4 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 ## <a name="see-also"></a>另請參閱
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)

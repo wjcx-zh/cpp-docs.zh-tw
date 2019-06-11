@@ -1,25 +1,25 @@
 ---
 title: Visual Studio 中的 C++
 description: Visual C++ 是 Visual Studio IDE 中 Microsoft C++ 編譯器、程式碼編輯器和相關工具的名稱。 您可以使用 Visual C++ 來開發 Windows、Linux、Android 和 iOS 的程式。
-ms.date: 05/13/2019
+ms.date: 05/14/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934143"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451199"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
 > [!NOTE]
 > 此開發人員文件適用於 Visual Studio 2015 與更新版本。 使用頁面左上角的版本選取器來選擇您使用的 Visual Studio 版本。
 >
-> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](http://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++**。
+> 若正在尋找 Visual C++ 可轉散發套件以執行程式，請前往 [Microsoft 下載中心](https://www.microsoft.com/download/)，並在搜尋方塊中輸入 **Visual C++** 。
 
 Microsoft Visual C++ 通常簡稱為 Visual C++ 或 MSVC，是 C++、C 及組合語言開發工具與程式庫的名稱，屬於 Windows 上的 Visual Studio 可用內容。 這些工具與程式庫可讓您建立通用 Windows 平台 (UWP) 應用程式、原生 Windows 傳統型與伺服器應用程式、跨平台程式庫與應用程式 (於 Windows、Linux、Android 及 iOS 上執行) 以及使用 .NET Framework 的受控應用程式與程式庫。 您可以使用 Visual C++ 撰寫任何項目，涵蓋範圍從簡單的主控台應用程式到最精密複雜的 Windows 傳統型應用程式；從裝置驅動程式與作業系統元件到行動裝置的跨平台遊戲；及從最小的 IoT 裝置到 Azure 雲端中的多伺服器高效能運算。
 
@@ -45,10 +45,10 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>安裝 Visual Studio，並從舊版升級
 
 [在 Visual Studio 中安裝 C++ 支援](../build/vscpp-step-0-installation.md)<br/>
-下載 Visual Studio 2015 或 Visual Studio 2017，並安裝 Visual C++ 工具組。
+下載 Visual Studio 2017 或 Visual Studio 2019，並安裝 Visual C++ 工具組。
 
 [Visual C++ 移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
-將程式碼移植及將專案升級到 Visual Studio 2015 或 Visual Studio 2017 的指引，包括將 C++ 程式碼移植到 Windows 10 及通用 Windows 平台。
+移植程式碼和將專案升級至 Visual Studio 2015 或更新版本專案的指導方針，可充分利用更高的 C++ 標準編譯器一致性，以及大幅改善的編譯時間和安全性功能，例如 Spectre 風險降低。
 
 [Visual Studio 版本中的 Visual C++ 工具和功能](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 了解不同的 Visual Studio 版本。
@@ -59,9 +59,9 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 ## <a name="learn-c"></a>學習 C++
 
 [歡迎回到 C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
-深入了解奠基於 C++11 及 C++14 的新式 C++ 程式設計技術，這項技術讓您能夠撰寫快速、安全的程式碼，並避免許多 C 語言程式設計的常見錯誤。
+深入了解奠基於 C++11 及更新版本的新式 C++ 程式設計技術，這項技術讓您能夠撰寫快速且安全的程式碼，並避免許多 C 語言程式設計的常見錯誤。
 
-[標準 C++](http://isocpp.org/)<br/>
+[標準 C++](https://isocpp.org/)<br/>
 深入了解 C++、取得 Modern C++ 的概觀，以及找到相關書籍、文件、討論和活動的連結
 
 [了解 Visual C++](../build/vscpp-step-1-create.md)<br/>
@@ -79,7 +79,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 如何使用 MSVC 編譯器和連結器選項，來建立及設定 Visual Studio C++ 專案、CMake 專案及其他種類的專案。
 
 [撰寫及重構 C++ 程式碼](../ide/writing-and-refactoring-code-cpp.md)<br/>
-如何使用 C++ 編輯器中的生產力功能，重構、巡覽及撰寫程式碼。
+如何使用 C++ 編輯器中的生產力功能，重構、巡覽、了解及撰寫程式碼。
 
 [偵錯機器碼](/visualstudio/debugger/debugging-native-code)<br/>
 了解如何針對 C++ 專案使用 Visual Studio 偵錯工具。
@@ -117,7 +117,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 在 C++ 中，您有數個選項可以連接到 Web 和雲端。
 
 [資料存取](../data/data-access-in-cpp.md)<br/>
-使用 ODBC 和其他資料庫存取技術連接到資料庫。
+使用 ODBC 和 OLE DB 連接到資料庫。
 
 [文字和字串](../text/text-and-strings-in-visual-cpp.md)<br/>
 了解如何使用不同的文字及字串格式化與編碼，進行本機和國際開發。

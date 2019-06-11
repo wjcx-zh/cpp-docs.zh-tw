@@ -2,12 +2,12 @@
 title: 將程式碼升級至通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898761"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448990"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -19,7 +19,7 @@ UCRT 現在是 Windows 元件，而且隨附於 Windows 10。 UCRT 根據 C 呼�
 
 ## <a name="where-to-find-the-universal-crt-files"></a>找到通用 CRT 檔案的位置
 
-作為 Windows 元件，UCRT 程式庫檔案和標頭現在是 Windows 軟體開發套件 (SDK) 的一部分。 當您安裝 Visual Studio 時，也會安裝使用 UCRT 所需的一部分 Windows SDK。 Visual Studio 安裝程式會將 UCRT 標頭、程式庫和 DLL 檔案的位置新增至 Visual Studio 專案建置系統所使用的預設路徑。 當您更新 Visual C++ 專案時，如果它們使用預設專案設定，則 IDE 會自動尋找標頭檔的新位置，而且連結器會自動使用新的預設 UCRT 和 vcruntime 程式庫。 同樣地，如果您使用開發人員命令提示字元執行命令列建置，則會更新包含標頭和程式庫路徑的環境變數，同時自動運作。
+作為 Windows 元件，UCRT 程式庫檔案和標頭現在是 Windows 軟體開發套件 (SDK) 的一部分。 當您安裝 Visual Studio 時，也會安裝使用 UCRT 所需的一部分 Windows SDK。 Visual Studio 安裝程式會將 UCRT 標頭、程式庫和 DLL 檔案的位置新增至 Visual Studio 專案建置系統所使用的預設路徑。 當您更新 Visual Studio C++ 專案時，如果它們使用預設專案設定，則 IDE 會自動尋找標頭檔的新位置，且連結器會自動使用新的預設 UCRT 和 vcruntime 程式庫。 同樣地，如果您使用開發人員命令提示字元執行命令列建置，則會更新包含標頭和程式庫路徑的環境變數，同時自動運作。
 
 標準 C 程式庫標頭檔現在位於 Windows SDK 之 include 資料夾的 SDK 版本特定目錄中。 標頭檔的一般位置是在 Windows Kits\\10\\Include\\_sdk 版本_\\ucrt 的 Program Files 或 Program Files (x86) 目錄中，其中 _sdk 版本_對應至 Windows 版本或更新，例如，10.0.14393.0 表示 Windows 10 年度更新版。
 
@@ -29,7 +29,7 @@ UCRT 靜態程式庫和動態連結虛設常式程式庫位於 Windows Kits\\10\
 
 C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援程式啟動所需的程式碼以及例外狀況處理和內建函式這類功能。 程式庫和其標頭檔仍然位於 Program Files 或 Program files (x86) 目錄的版本特定 Microsoft Visual Studio 資料夾中。 在 Visual Studio 2017 中，標頭位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_lib 版本_\\include 下，而且連結程式庫位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_li b版本_\\lib\\_architecture_ 下，其中_版本_是已安裝的 Visual Studio 版本、_lib 版本_是程式庫的版本，而 _architecture_ 是處理器架構。 OneCore 和 Store 的連結程式庫也可以位於 libraries 資料夾中。 靜態程式庫的零售和偵錯版本是 libvcruntime.lib 和 libvcruntimed.lib。 動態連結零售和偵錯虛設常式程式庫分別是 vcruntime.lib 和 vcruntimed.lib。
 
-當您更新 Visual C++ 專案時，如果您已將專案的 [連結器] 屬性 [忽略所有預設程式庫] 設定為 [是]，或在命令列上使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單，以包含已重構的新程式庫。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
+當您更新 Visual Studio C++ 專案時，如果您已將專案的 [連結器]  屬性 [忽略所有預設程式庫]  設定為 [是]  ，或在命令列上使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單，以包含已重構的新程式庫。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和轉散發
 

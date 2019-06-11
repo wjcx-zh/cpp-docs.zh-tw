@@ -1,27 +1,28 @@
 ---
 title: 撰寫及重構程式碼 (C++)
-ms.date: 04/30/2018
+description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化、巡覽、了解及重構程式碼。
+ms.date: 05/14/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: bc839a759d2ff3f403ca001ab32702d3fe27833e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04f738cd6fdd456c432c334df42f37339e7fa49e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570426"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182628"
 ---
 # <a name="writing-and-refactoring-code-c"></a>撰寫及重構程式碼 (C++)
 
-Visual C++ 程式碼編輯器和 IDE 提供許多程式碼撰寫的輔助工具。 有些是 C++ 獨有，有些則基本上對所有 Visual Studio 語言都相同。 如需編輯器的詳細資訊，請參閱[在程式碼和文字編輯器中撰寫程式碼](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。 啟用及設定 C++- 特定功能的選項位於 [工具] &#124; [選項] &#124; [文字編輯器] &#124; [C/C++] 下。 選擇您想要設定的選項之後，您可以在對話方塊成為焦點時按下 **F1** 來取得更多說明。 對於一般程式碼格式化選項，請將 `Editor C++` 鍵入至**快速啟動**。
+C++ 程式碼編輯器和 Visual Studio IDE 提供許多程式碼撰寫的輔助工具。 有些是 C++ 獨有，有些則基本上對所有 Visual Studio 語言都相同。 如需編輯器的詳細資訊，請參閱[在程式碼和文字編輯器中撰寫程式碼](/visualstudio/ide/writing-code-in-the-code-and-text-editor)。 啟用及設定 C++- 特定功能的選項位於 [工具] &#124; [選項] &#124; [文字編輯器] &#124; [C/C++]  下。 選擇您想要設定的選項之後，您可以在對話方塊成為焦點時按下 **F1** 來取得更多說明。 對於一般程式碼格式化選項，請將 `Editor C++` 鍵入至**快速啟動**。
 
-您可以在[文字編輯器 C++ 實驗](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)對話方塊中找到不一定包含在 Visual Studio 未來版本中的實驗性功能。 在 Visual Studio 2017 中，您可以啟用這個對話方塊中的 [預測性 IntelliSense]。
+您可以在[文字編輯器 C++ 實驗](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)對話方塊中找到不一定包含在 Visual Studio 未來版本中的實驗性功能。 在 Visual Studio 2017 中，您可以啟用這個對話方塊中的 [預測性 IntelliSense]  。
 
 ## <a name="adding-new-files"></a>新增檔案
 
-若要將檔案新增至專案，請以滑鼠右鍵按一下 [方案總管] 中的專案節點，並選擇 [新增] &#124; [新增]。
+若要將檔案新增至專案，請以滑鼠右鍵按一下 [方案總管] 中的專案節點，並選擇 [新增] &#124; [新增]  。
 
 ## <a name="formatting-options"></a>格式化選項
 
-若要設定格式化選項，例如縮排、以大括弧完成和顏色標示，請將 "C++ Formatting" 鍵入至 [快速啟動] 視窗。 Visual Studio 2017 15.7 版和更新版本支援 ClangFormat。 您可以在 [C/C++ 格式化屬性頁](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)的 [工具] &#124; [選項] &#124; [文字編輯器] &#124; [C/C++] &#124; [格式化] 下設定它。
+若要設定格式化選項，例如縮排、以大括弧完成和顏色標示，請將 "C++ Formatting" 鍵入至 [快速啟動]  視窗。 Visual Studio 2017 15.7 版和更新版本支援 ClangFormat。 您可以在 [C/C++ 格式化屬性頁](/visualstudio/ide/reference/options-text-editor-c-cpp-formatting)的 [工具] &#124; [選項] &#124; [文字編輯器] &#124; [C/C++] &#124; [格式化]  下設定它。
 
 ![C++ 格式化選項](media/cpp-formatting-options.png)
 
@@ -41,7 +42,7 @@ IntelliSense 是一組功能的名稱，提供有關成員、類型和函式多�
 
 ## <a name="add-class"></a>加入類別
 
-使用 [類別精靈] 從 [專案] 功能新增類別。
+使用 [類別精靈] 從 [專案]  功能新增類別。
 
 ![Visual C&#43;&#43; 中的 [新增類別]](../ide/media/vs2015_cpp_add_class.png "vs2015_cpp_add_class")
 
@@ -53,7 +54,7 @@ IntelliSense 是一組功能的名稱，提供有關成員、類型和函式多�
 
 ## <a name="refactoring"></a>重構
 
-重構可以從 [快速動作] 操作功能表下取得，或是按一下編輯器中的[燈泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)。  在 [編輯] > [重構] 功能表中也可以找到部分項目。  這些功能包括：
+重構可以從 [快速動作] 操作功能表下取得，或是按一下編輯器中的[燈泡](/visualstudio/ide/perform-quick-actions-with-light-bulbs)。  在 [編輯] > [重構]  功能表中也可以找到部分項目。  這些功能包括：
 
 * [重新命名](refactoring/rename.md)
 * [擷取函式](refactoring/extract-function.md)
@@ -81,39 +82,39 @@ Visual C++ 與其他語言共用許多程式碼巡覽功能。 如需詳細資�
 
 ## <a name="peek-definition"></a>查看定義
 
-將滑鼠暫留在變數或函式宣告上，按一下滑鼠右鍵，然後選擇 [查看定義]，以查看其定義的內嵌檢視。 如需詳細資訊，請參閱[查看定義 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
+將滑鼠暫留在變數或函式宣告上，按一下滑鼠右鍵，然後選擇 [查看定義]  ，以查看其定義的內嵌檢視。 如需詳細資訊，請參閱[查看定義 (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12)。
 
 ![Visual C&#43;&#43; 查看定義](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
 ## <a name="go-to-definition"></a>移至定義
 
-將滑鼠暫留在變數或函式宣告上，按一下滑鼠右鍵，然後選擇 [移至定義]，以開啟在其中定義物件的文件。
+將滑鼠暫留在變數或函式宣告上，按一下滑鼠右鍵，然後選擇 [移至定義]  ，以開啟在其中定義物件的文件。
 
 ## <a name="view-call-hierarchy"></a>檢視呼叫階層
 
-以滑鼠右鍵按一下任何函式呼叫，並檢視它呼叫的所有函式 (以及呼叫它的所有函式) 之遞迴清單。 清單中的每個函式都可以用相同方式展開。 如需詳細資訊，請參閱[呼叫階層](/visualstudio/ide/reference/call-hierarchy)。
+以滑鼠右鍵按一下任何函式呼叫，並檢視其所呼叫全部函式 (以及呼叫它的所有函式) 的遞迴清單。 清單中的每個函式都可以用相同方式展開。 如需詳細資訊，請參閱[呼叫階層](/visualstudio/ide/reference/call-hierarchy)。
 
 ![Visual C&#43;&#43; 呼叫階層](../ide/media/vs2015_cpp_call_hierarchy.png "vs2015_cpp_call_hierarchy")
 
 ## <a name="toggle-header--code-file"></a>切換標頭/程式碼檔
 
-按一下滑鼠右鍵，然後選擇 [切換標頭 / 程式碼檔案]，在標頭檔與其相關聯的程式碼檔案之間來回切換。
+按一下滑鼠右鍵，然後選擇 [切換標頭 / 程式碼檔案]  ，在標頭檔與其相關聯的程式碼檔案之間來回切換。
 
 ## <a name="outlining"></a>大綱
 
-在原始程式碼檔案中的任何位置按一下滑鼠右鍵，然後選擇 [大綱] 可摺疊或展開定義及/或自訂區域，讓您更方便僅瀏覽感興趣的部分。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。
+在原始程式碼檔案中的任何位置按一下滑鼠右鍵，然後選擇 [大綱]  可摺疊或展開定義及/或自訂區域，讓您更方便僅瀏覽感興趣的部分。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。
 
 ![Visual C&#43;&#43; 大綱](../ide/media/vs2015_cpp_outlining.png "vs2015_cpp_outlining")
 
 ## <a name="scrollbar-map-mode"></a>捲軸對應模式
 
-捲軸對應模式可讓您快速地捲動及瀏覽程式碼檔案，而不需要實際離開目前位置。 或按一下 Code Map 上的任何位置，直接移至該處。 如需詳細資訊，請參閱[如何：自訂捲軸以追蹤程式碼](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)。
+捲軸對應模式可讓您快速地捲動及瀏覽程式碼檔案，而不需要實際離開目前位置。 或按一下 Code Map 上的任何位置，直接移至該處。 如需詳細資訊，請參閱[如何：透過自訂捲軸的方式追蹤程式碼](/visualstudio/ide/how-to-track-your-code-by-customizing-the-scrollbar)。
 
 ![Visual C&#43;&#43; 中的 Code Map](../ide/media/vs2015_cpp_code_map.png "vs2015_cpp_code_map")
 
 ## <a name="generate-graph-of-include-files"></a>產生 Include 檔圖形
 
-以滑鼠右鍵按一下專案中的程式碼檔案，然後選擇 [產生 Include 檔圖形]，以查看其他檔案所包含之檔案的圖形。
+以滑鼠右鍵按一下專案中的程式碼檔案，然後選擇 [產生 Include 檔圖形]  ，以查看其他檔案所包含之檔案的圖形。
 
 ![Visual C&#43;&#43; include 檔圖形](../ide/media/vs2015_cpp_include_graph.png "vs2015_cpp_include_graph")
 

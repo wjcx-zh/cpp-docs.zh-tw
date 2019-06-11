@@ -1,6 +1,6 @@
 ---
 title: 逐步解說：部署程式 (C++)
-ms.date: 09/14/2018
+ms.date: 05/14/2019
 helpviewer_keywords:
 - deploying applications [C++], walkthroughs
 - setup projects [C++]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 4232edd10b71c70097002511ef4ee663e67d6598
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769260"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182658"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>逐步解說：部署程式 (C++)
 
@@ -30,49 +30,87 @@ ms.locfileid: "58769260"
 
 - 這個逐步解說無法在 Visual Studio Express Edition 中完成。
 
-- 如果您尚未這麼做，請按照後續步驟所述，下載 Microsoft Visual Studio 安裝程式專案延伸模組。 延伸模組是免費提供給 Visual Studio 開發人員使用，並可將安裝和部署專案範本的功能新增至 Visual Studio。
+## <a name="install-the-visual-studio-setup-and-deployment-project-template"></a>安裝 Visual Studio 安裝程式和部署專案範本
 
-### <a name="to-install-the-visual-studio-setup-and-deployment-project-template"></a>若要安裝 Visual Studio 安裝程式並部署專案範本
+本節中的步驟視您已安裝 Visual Studio 版本而有所不同。 請確認本頁面左上角的版本選取器已正確設定。
 
-1. 當您已連線到網際網路時，請在 Visual Studio 中選擇 [工具] > [延伸模組和更新]。
+::: moniker range="vs-2019"
 
-1. 選取 [延伸模組和更新] 下方的 [線上] 索引標籤，然後在搜尋方塊中鍵入「Microsoft Visual Studio 安裝程式專案」。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]，然後按一下 [下載]。
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2019"></a>安裝 Visual Studio 2019 安裝程式和部署專案範本
 
-1. 選擇安裝延伸模組，然後重新啟動 Visual Studio。
+1. 如果您尚未這麼做，請下載 Microsoft Visual Studio 安裝程式專案延伸模組。 延伸模組是免費提供給 Visual Studio 開發人員使用，並可將安裝和部署專案範本的功能新增至 Visual Studio。 當您連線到網際網路時，請在 Visual Studio 中選擇 [延伸模組]   > [管理延伸模組]  。 選取 [延伸模組和更新]  對話方塊下方的 [線上]  索引標籤，然後在搜尋方塊中鍵入「Microsoft Visual Studio 安裝程式專案」  。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]  ，然後按一下 [下載]  。 選擇執行並安裝延伸模組，然後重新啟動 Visual Studio。
 
-1. 在功能表列上，選擇 [檔案] > [最近使用的專案和方案]，然後選擇 [遊戲] 方案來重新開啟。
+1. 在 Visual Studio 功能表列上，選擇 [檔案]  > [最近使用的專案和方案]  ，然後選擇重新開啟專案。
 
-### <a name="to-create-a-setup-project-and-install-your-program"></a>若要建立安裝專案並安裝您的程式
+1. 在功能表列上，選擇 [檔案]   > [新增]   > [專案]  ，以開啟 [建立新專案]  對話方塊。 在搜尋方塊中，鍵入 [安裝]，然後從結果清單中選擇 [安裝專案]  。
 
-1. 將使用中的方案組態變更為 [發行]。 在功能表列上，選擇 [建置] > [組態管理員]。 在 [組態管理員] 對話方塊中，選取 [使用中的方案組態] 下拉式清單上的 [發行]。 選擇 [關閉] 按鈕以儲存組態。
+1. 在 [名稱]  方塊中，輸入安裝專案的名稱。 在 [方案]  下拉式清單中，選取 [新增至方案]  。 選擇 [確定]  按鈕以建立安裝專案。 編輯器視窗中隨即開啟 [File Assistant (ProjectName)] \(檔案小幫手 (ProjectName)\)  索引標籤。
 
-1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [新增專案] 對話方塊。
+1. 以滑鼠右鍵按一下 [應用程式資料夾]  節點，然後選取 [新增]  > [專案輸出]  以開啟 [新增專案輸出群組]  對話方塊。
 
-1. 在對話方塊的左窗格中，展開 [已安裝] > [其他專案類型] 節點，然後選取 [Visual Studio 安裝程式]。 在中間窗格中，選取 [安裝專案]。
+1. 在對話方塊中選取 [主要輸出]  ，然後按一下 [確定]  。 隨即顯示新項目，名稱為 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)  。
 
-1. 在 [名稱] 方塊中，輸入安裝專案的名稱。 在這個範例中，請輸入*遊戲安裝程式*。 在 [方案] 下拉式清單中，選取 [新增至方案]。 選擇 [確定] 按鈕以建立安裝專案。 [File Assistant (Game Installer)] \(檔案小幫手 (遊戲安裝程式)\) 索引標籤隨即在編輯器視窗中開啟。
+1. 選取 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)  項目，再按一下滑鼠右鍵，然後選擇 [Create Shortcut to Primary Output from Game (Active)] \(建立遊戲 (使用中) 的主要輸出捷徑\)  。 隨即顯示新項目，名稱為 [Shortcut to Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出捷徑\)  。
 
-1. 以滑鼠右鍵按一下 [應用程式資料夾] 節點，然後選取 [新增] > [專案輸出] 以開啟 [新增專案輸出群組] 對話方塊。
+1. 將捷徑項目重新命名為「遊戲」  ，然後將項目拖曳至視窗左側的 [使用者的程式功能表]  節點。
 
-1. 在對話方塊中選取 [主要輸出]，然後按一下 [確定]。 隨即顯示新項目，名稱為 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)。
-
-1. 選取 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\) 項目，再按一下滑鼠右鍵，然後選擇 [Create Shortcut to Primary Output from Game (Active)] \(建立遊戲 (使用中) 的主要輸出捷徑\)。 隨即顯示新項目，名稱為 [Shortcut to Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出捷徑\)。
-
-1. 將捷徑項目重新命名為「遊戲」，然後將項目拖曳至視窗左側的 [使用者的程式功能表] 節點。
-
-1. 在 [方案總管] 中，選取 [遊戲安裝程式] 專案，然後選擇 [檢視] > [屬性視窗] 或按 **F4**，以開啟 [屬性] 視窗。
+1. 在 [方案總管]  中，選取 [遊戲安裝程式]  專案，然後選擇 [檢視]  > [屬性視窗]  或按 **F4**，以開啟 [屬性]  視窗。
 
 1. 指定您想要在安裝程式中顯示的其他詳細資料。  例如，將 *Contoso* 作為**製造商**、*遊戲安裝程式*作為**產品名稱**，而 *http\://www.contoso.com* 作為 **SupportUrl**。
 
-1. 在功能表列上，選擇 [建置] > [組態管理員]。 在 [專案] 資料表的 [建置] 資料行下方，核取 [遊戲安裝程式] 的方塊。 按一下 [ **關閉**]。
+1. 在功能表列上，選擇 [建置]   > [組態管理員]  。 在 [專案]  資料表的 [建置]  資料行下方，核取 [遊戲安裝程式]  的方塊。 按一下 [ **關閉**]。
 
-1. 在功能表列上，選擇 [建置] > [建置方案] 以建置遊戲專案和遊戲安裝程式專案。
+1. 在功能表列上，選擇 [建置]  > [建置方案]  以建置「遊戲」專案和「遊戲安裝程式」專案。
 
 1. 在方案資料夾中，找出從 [遊戲安裝程式] 專案建置的 setup.exe 程式，然後加以執行，將遊戲應用程式安裝在您電腦上。 您可以複製這個檔案 (和 GameInstaller.msi 檔案)，在另一部電腦上安裝應用程式及其必要的程式庫檔案。
 
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-install-the-setup-and-deployment-project-template-for-visual-studio-2017-and-earlier"></a>安裝 Visual Studio 2017 及更早版本的安裝程式和部署專案範本
+
+1. 當您連線到網際網路時，請在 Visual Studio 中選擇 [工具]  > [延伸模組和更新]  。
+
+1. 選取 [延伸模組和更新]  下方的 [線上]  索引標籤，然後在搜尋方塊中鍵入「Microsoft Visual Studio 安裝程式專案」  。 按 **Enter**，選取 [Microsoft Visual Studio \<版本> 安裝程式專案]  ，然後按一下 [下載]  。
+
+1. 選擇安裝延伸模組，然後重新啟動 Visual Studio。
+
+1. 在功能表列上，選擇 [檔案]  > [最近使用的專案和方案]  ，然後選擇 [遊戲]  解決方案重新開啟。
+
+### <a name="to-create-a-setup-project-and-install-your-program"></a>若要建立安裝專案並安裝您的程式
+
+1. 將使用中的方案組態變更為 [發行]。 在功能表列上，選擇 [建置]   > [組態管理員]  。 在 [組態管理員]  對話方塊中，選取 [使用中的方案組態]  下拉式清單上的 [發行]  。 選擇 [關閉]  按鈕以儲存組態。
+
+1. 在功能表列上，選擇 [檔案]  > [新增]  > [專案]  ，以開啟 [新增專案]  對話方塊。
+
+1. 在對話方塊的左窗格中，展開 [已安裝]   > [其他專案類型]  節點，然後選取 [Visual Studio 安裝程式]  。 在中間窗格中，選取 [安裝專案]  。
+
+1. 在 [名稱]  方塊中，輸入安裝專案的名稱。 在這個範例中，請輸入*遊戲安裝程式*。 在 [方案]  下拉式清單中，選取 [新增至方案]  。 選擇 [確定]  按鈕以建立安裝專案。 [File Assistant (Game Installer)] \(檔案小幫手 (遊戲安裝程式)\)  索引標籤隨即在編輯器視窗中開啟。
+
+1. 以滑鼠右鍵按一下 [應用程式資料夾]  節點，然後選取 [新增]  > [專案輸出]  以開啟 [新增專案輸出群組]  對話方塊。
+
+1. 在對話方塊中選取 [主要輸出]  ，然後按一下 [確定]  。 隨即顯示新項目，名稱為 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)  。
+
+1. 選取 [Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出\)  項目，再按一下滑鼠右鍵，然後選擇 [Create Shortcut to Primary Output from Game (Active)] \(建立遊戲 (使用中) 的主要輸出捷徑\)  。 隨即顯示新項目，名稱為 [Shortcut to Primary Output from Game (Active)] \(遊戲 (使用中) 的主要輸出捷徑\)  。
+
+1. 將捷徑項目重新命名為「遊戲」  ，然後將項目拖曳至視窗左側的 [使用者的程式功能表]  節點。
+
+1. 在 [方案總管]  中，選取 [遊戲安裝程式]  專案，然後選擇 [檢視]  > [屬性視窗]  或按 **F4**，以開啟 [屬性]  視窗。
+
+1. 指定您想要在安裝程式中顯示的其他詳細資料。  例如，將 *Contoso* 作為**製造商**、*遊戲安裝程式*作為**產品名稱**，而 *http\://www.contoso.com* 作為 **SupportUrl**。
+
+1. 在功能表列上，選擇 [建置]   > [組態管理員]  。 在 [專案]  資料表的 [建置]  資料行下方，核取 [遊戲安裝程式]  的方塊。 按一下 [ **關閉**]。
+
+1. 在功能表列上，選擇 [建置]  > [建置方案]  以建置「遊戲」專案和「遊戲安裝程式」專案。
+
+1. 在方案資料夾中，找出從 [遊戲安裝程式] 專案建置的 setup.exe 程式，然後加以執行，將遊戲應用程式安裝在您電腦上。 您可以複製這個檔案 (和 GameInstaller.msi 檔案)，在另一部電腦上安裝應用程式及其必要的程式庫檔案。
+
+::: moniker-end
+
 ## <a name="next-steps"></a>後續步驟
 
-**上一步：**[逐步解說：偵錯專案 (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
+**上一步：** [逐步解說：偵錯專案 (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>另請參閱
 

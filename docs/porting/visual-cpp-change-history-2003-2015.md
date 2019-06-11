@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
-ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
+ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "58898878"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451282"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -20,7 +20,7 @@ ms.locfileid: "58898878"
 > [!NOTE]
 > Visual Studio 2015 與 Visual Studio 2017 之間沒有二進位檔重大變更。
 
-當您升級到新版 Visual Studio 時，先前正常編譯及執行的程式碼可能會發生編譯和 (或) 執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」*(Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。
+當您升級到新版 Visual Studio 時，先前正常編譯及執行的程式碼可能會發生編譯和 (或) 執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」* (Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。
 
 為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間，傳遞 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型。 如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
@@ -36,7 +36,7 @@ ms.locfileid: "58898878"
 
 - [並行執行階段的重大變更](#BK_ConcRT)
 
-## <a name="VC_2015"></a> Visual C++ 2015 的合規性變更
+## <a name="VC_2015"></a> Visual Studio 2015 一致性變更
 
 ###  <a name="BK_CRT"></a> C 執行階段程式庫 (CRT)
 
@@ -44,7 +44,7 @@ ms.locfileid: "58898878"
 
 - **重構的二進位檔**
 
-   CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)。 vcruntime 程式庫包含編譯器相關功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案 [連結器] 屬性的 [忽略所有預設程式庫] 設定為 [是]，或您在命令列使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單 (在 [其他相依性] 屬性中)，藉此包含重構的新程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。
+   CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)。 vcruntime 程式庫包含編譯器相關功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案 [連結器]  屬性的 [忽略所有預設程式庫]  設定為 [是]  ，或您在命令列使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單 (在 [其他相依性]  屬性中)，藉此包含重構的新程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -112,7 +112,7 @@ ms.locfileid: "58898878"
 
    所有 `printf` 與 `scanf` 函式的定義均已移至 \<stdio.h>、\<conio.h> 及其他 CRT 標頭內。 針對區域宣告這些函式但不包含適當 CRT 標頭的任何程式而言，這個中斷性變更會導致連結器錯誤 (LNK2019，無法解析的外部符號)。 如有可能，您應更新程式碼，將 CRT標頭 (亦即新增 `#include <stdio.h>`) 及內嵌函式包含在其中；若您不想修改程式碼來包含這些標頭檔案，也可以採用替代解決方法，在您的連結器輸入 legacy_stdio_definitions.lib 中新增額外的程式庫。
 
-   若要在 IDE 中將此程式庫新增至您的連結器輸入，請開啟專案節點的操作功能表，選擇 [屬性] ，然後在 [專案屬性]  對話方塊中選擇 [連結器] ，並編輯 [連結器輸入]，將 `legacy_stdio_definitions.lib` 新增至分號分隔的清單。
+   若要在 IDE 中將此程式庫新增至您的連結器輸入，請開啟專案節點的操作功能表，選擇 [屬性]  ，然後在 [專案屬性]  對話方塊中選擇 [連結器]  ，並編輯 [連結器輸入]  ，將 `legacy_stdio_definitions.lib` 新增至分號分隔的清單。
 
    如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 `_iob`、`_iob_func` 的內部定義，或某些以 _imp_\* 格式之 \<stdio.h> 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是其來源無法取得的協力廠商程式庫，則您應該向協力廠商要求更新的二進位檔，或將該程式庫使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
 
@@ -305,7 +305,7 @@ ms.locfileid: "58898878"
 
 ####  <a name="BK_STL"></a>C++ 標準程式庫
 
-為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤  (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual Studio 2008 及較舊版本的混合。
+為了啟用新的最佳化和偵錯檢查，Visual Studio 所實作的 C++ 標準程式庫是刻意中斷各個版本之間的二進位碼相容性 (Binary Compatibility)。 因此，使用 C++ 標準程式庫時，使用不同版本所編譯的目的檔和靜態程式庫不可以混合在一個二進位檔 (EXE 或 DLL) 中，也不可以在使用不同版本所編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 這類混合會發出有關 _MSC_VER 不符的連結器錯誤 (_MSC_VER 是包含此編譯器主要版本的巨集，例如對於 Visual Studio 2013 為 1800。)這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual Studio 2008 及較舊版本的混合。
 
 - **C++ 標準程式庫 Include 檔案**
 
@@ -389,7 +389,7 @@ ms.locfileid: "58898878"
 
 - **Microsoft Foundation Classes (MFC)**
 
-   因為其大小太大而不再隨附於 Visual Studio 的「一般」安裝。 若要安裝 MFC，請在 Visual Studio 2015 安裝程式中選擇 [自訂] 安裝選項。 如果已安裝 Visual Studio 2015，您可以再次執行 **Visual Studio** 安裝程式來安裝 MFC。 選擇 [自訂] 安裝選項，然後選擇 [Microsoft Foundation Classes]。 您可以從 [控制台] 控制項、[程式和功能]，或從安裝媒體執行 **Visual Studio** 安裝程式。
+   因為其大小太大而不再隨附於 Visual Studio 的「一般」安裝。 若要安裝 MFC，請在 Visual Studio 2015 安裝程式中選擇 [自訂]  安裝選項。 如果已安裝 Visual Studio 2015，您可以再次執行 **Visual Studio** 安裝程式來安裝 MFC。 選擇 [自訂]  安裝選項，然後選擇 [Microsoft Foundation Classes]  。 您可以從 [控制台]  控制項、[程式和功能]  ，或從安裝媒體執行 **Visual Studio** 安裝程式。
 
    Visual C++ 可轉散發套件仍然包含這個程式庫。
 
@@ -409,9 +409,9 @@ ms.locfileid: "58898878"
 
 在 Visual Studio 2015 中，隨著編譯器一致性不斷改進，有時候可能會改變編譯器解讀您現有原始程式碼的方式。 因此，可能會在您建置時發生新的或不同錯誤，甚至程式碼的行為與上版組建不同且看似正常運作。
 
-幸運的是，這些差異對大部分的程式碼只有一點影響，或沒有任何影響。 需要原始程式碼或其他變更才能解決這些差異時，修正會傾向小型且簡單易懂。 我們包含了許多先前接受，但後來可能需要變更的原始程式碼範例 (之前)，以及用以更正的修正 (之後)。
+幸運的是，這些差異對大部分的程式碼只有一點影響，或沒有任何影響。 需要原始程式碼或其他變更才能解決這些差異時，修正會傾向小型且簡單易懂。 我們包含了許多先前接受，但後來可能需要變更的原始程式碼範例 (之前)  ，以及用以更正的修正 (之後)  。
 
-雖然這些差異可能影響您的原始程式碼或其他組建成品，但並不影響每版 Visual Studio 更新之間的二進位相容性。 「中斷性變更」較為嚴重，會影響二進位相容性，但這類二進位相容性中斷只會發生在 Visual Studio 的主要版本之間；例如，在 Visual Studio 2013 與 Visual Studio 2015 之間。 如需 Visual Studio 2013 與 Visual Studio 2015 之間的中斷變更資訊，請參閱 [Visual Studio 2015 一致性變更](#VC_2015)。
+雖然這些差異可能影響您的原始程式碼或其他組建成品，但並不影響每版 Visual Studio 更新之間的二進位相容性。 「中斷性變更」  較為嚴重，會影響二進位相容性，但這類二進位相容性中斷只會發生在 Visual Studio 的主要版本之間；例如，在 Visual Studio 2013 與 Visual Studio 2015 之間。 如需 Visual Studio 2013 與 Visual Studio 2015 之間的中斷變更資訊，請參閱 [Visual Studio 2015 一致性變更](#VC_2015)。
 
 - [Visual Studio 2015 的一致性改善](#VS_RTM)
 
@@ -641,9 +641,9 @@ ms.locfileid: "58898878"
 
 - **placement new 與 delete**
 
-   為了讓 **delete** 運算子與 C++ 14 標準一致，已對它進行變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](http://isocpp.org/files/papers/n3778.html)。 變更當中新增了一種全域 **delete** 運算子，該運算子會採用大小參數。 中斷性變更是如果您先前使用具有相同簽章 (藉此對應至 **placement new** 運算子) 的運算子 **delete**，就會發生編譯器錯誤 (C2956，於使用 placement new 處發生，因為在程式碼的該位置上，編譯器會嘗試識別合適且相符的 **delete** 運算子)。
+   為了讓 **delete** 運算子與 C++ 14 標準一致，已對它進行變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 變更當中新增了一種全域 **delete** 運算子，該運算子會採用大小參數。 中斷性變更是如果您先前使用具有相同簽章 (藉此對應至 **placement new** 運算子) 的運算子 **delete**，就會發生編譯器錯誤 (C2956，於使用 placement new 處發生，因為在程式碼的該位置上，編譯器會嘗試識別合適且相符的 **delete** 運算子)。
 
-   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為「一般解除配置函式」 (全域 **delete** 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
+   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為「一般解除配置函式」  (全域 **delete** 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
 
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
@@ -1106,7 +1106,7 @@ ms.locfileid: "58898878"
 
 - **字串常值是常數陣列**
 
-   下列程式碼現在會產生 C2664：f(void *)': 無法將引數 1 從 'const char (*)[2]' 轉換為 'void *'
+   下列程式碼現在會產生 C2664：f(void *)': 無法將引數 1 從 'const char (* )[2]' 轉換為 'void *'
 
     ```cpp
     void f(void *);
@@ -2756,7 +2756,7 @@ ms.locfileid: "58898878"
         }
     ```
 
-- 此 C++ 標準不允許在類別中明確特製化。 雖然 Microsoft Visual C++ 編譯器在某些情況下允許這種做法，但是在像下列範例這樣的情況下，現在就會產生錯誤，因為編譯器不會將第二個函式視為第一個函式的特製化。
+- 此 C++ 標準不允許在類別中明確特製化。 雖然 Microsoft C++ 編譯器在某些情況下允許這種做法，但是在像下列範例這樣的情況下，現在就會產生錯誤，因為編譯器不會將第二個函式視為第一個函式的特製化。
 
     ```cpp
     template < int N>
@@ -2994,7 +2994,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - ATL/MFC 追蹤工具會隨 ATL DLL 移除，追蹤機制也有所簡化。 `CTraceCategory` 建構函式現在會接受一個參數 (分類名稱)，而 TRACE 巨集會呼叫 CRT 偵錯報告函式。
 
-## <a name="visual-c-2012-breaking-changes"></a>Visual C++ 2012 的重大變更
+## <a name="visual-studio-2012-breaking-changes"></a>Visual Studio 2012 的重大變更
 
 ### <a name="compiler"></a>編譯器
 
@@ -3042,15 +3042,15 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 下列為 C++98/03 與 C++11 標準之間的中斷性變更︰在 Visual Studio 2012 中的 Visual C++ 內使用明確範本引數來呼叫 `make_pair()` (即 `make_pair<int, int>(x, y)`) 通常無法編譯。 解決方案是只呼叫 `make_pair() `，而不要指定明確範本引數 (例如 `make_pair(x, y)`)。 提供明確的範本引數會導致函式失效。 若您需要精確控制產生的類型，請改為使用 `pair` 而非 `make_pair`，如同 `pair<short, short>(int1, int2)`。
 
-- C++98/03 和 C++11 標準之間的另一項中斷性變更為：當 A 可以隱含轉換成 B，且 B 可以隱含轉換成 C，但 A 卻無法隱含轉換成 C 時，C++98/03 和 Visual C++ 2010 允許將 `pair<A, X>` 轉換 (隱含或明確) 成 `pair<C, X>`。 (另一個類型 X 不是此處的重點，且不是配對中第一種類型的專用類型)。Visual Studio 2012 中的 C++ 編譯器偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除配對轉換。 這項變更對許多狀況而言有益。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `pair<const char *, const char *>` 呼叫 `func()` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
+- C++98/03 和 C++11 標準之間的另一項中斷性變更為：當 A 可以隱含轉換成 B，且 B 可以隱含轉換成 C，但 A 卻無法隱含轉換成 C 時，C++98/03 和 Visual Studio 2010 允許將 `pair<A, X>` 轉換 (隱含或明確) 成 `pair<C, X>`。 (另一個類型 X 不是此處的重點，且不是配對中第一種類型的專用類型)。Visual Studio 2012 中的 C++ 編譯器偵測到 A 並未隱含表示可轉換成 C，所以會從多載解析中移除配對轉換。 這項變更對許多狀況而言有益。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `pair<const char *, const char *>` 呼叫 `func()` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
 
-- Visual C++ 2010 可模擬 variadic 範本 (例如 `make_shared<T>(arg1, arg2, argN)`) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 在 Visual Studio 2012 中，此限制縮減為五個引數，以改善大多數使用者的編譯時間及編譯器記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。
+- Visual Studio 2010 可模擬 variadic 範本 (例如 `make_shared<T>(arg1, arg2, argN)`) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 在 Visual Studio 2012 中，此限制縮減為五個引數，以改善大多數使用者的編譯時間及編譯器記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。
 
 - 當包含 C++ 標準程式庫標頭時，C++11 17.6.4.3.1 [macro.names]/2 會禁止對關鍵字執行巨集取代。 當標頭偵測到巨集取代的關鍵字時，現在會發出編譯器錯誤。 (定義 _ALLOW_KEYWORD_MACROS 可允許編譯這類程式碼，但極力建議不要如此定義)。作為例外狀況，預設允許使用巨集形式的 `new`，因為標頭使用 `#pragma push_macro("new")`/`#undef new`/`#pragma pop_macro("new")` 進行全面自我防禦。 定義 _ENFORCE_BAN_OF_MACRO_NEW 不全然如其名稱所示。
 
-- 為實作各種最佳化及偵錯檢查，C++ 標準程式庫實作是刻意中斷了各版 Visual Studio (2005、2008、2010、2012) 之間的二進位相容性。 當使用 C++ 標準程式庫時，這會導致無法將物件檔案與使用不同版本編譯的靜態程式庫混合成一個二進位檔 (EXE 或 DLL)，且也無法在使用不同版本編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 混合物件檔案與靜態程式庫 (使用由 Visual Studio 2010 編譯的 C++ 標準程式庫與使用 Visual Studio 2012 之 C++ 編譯器編譯的 C++ 標準程式庫) 會發出有關 _MSC_VER 不符的連結器錯誤，其中 _MSC_VER 是包含編譯器主要版本 (Visual Studio 2012 的 Visual C++ 為 1700) 的巨集。 這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual C++ 2008 及較舊版本的混合。
+- 為實作各種最佳化及偵錯檢查，C++ 標準程式庫實作是刻意中斷了各版 Visual Studio (2005、2008、2010、2012) 之間的二進位相容性。 當使用 C++ 標準程式庫時，這會導致無法將物件檔案與使用不同版本編譯的靜態程式庫混合成一個二進位檔 (EXE 或 DLL)，且也無法在使用不同版本編譯的二進位檔之間傳遞 C++ 標準程式庫物件。 混合物件檔案與靜態程式庫 (使用由 Visual Studio 2010 編譯之 C++ 標準程式庫與使用 Visual Studio 2012 之 C++ 編譯器編譯的 C++ 標準程式庫) 會發出有關 _MSC_VER 不符的連結器錯誤，其中 _MSC_VER 是包含編譯器主要版本 (Visual Studio 2012 的 Visual C++ 為 1700) 的巨集。 這項檢查無法偵測 DLL 混合，且無法偵測包含 Visual Studio 2008 及較舊版本的混合。
 
-- 除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (實作於 Visual Studio C++ 2010) 之外，Visual Studio 2012 的 C++ 編譯器還會偵測執行階段程式庫不符的錯誤。 當編譯器選項 `/MT` (靜態發行)、`/MTd` (靜態偵錯)、`/MD` (動態發行) 和 `/MDd` (動態偵錯) 混合時，就會發生這些不相符的情況。
+- 除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (實作於 Visual Studio 2010) 之外，Visual Studio 2012 的 C++ 編譯器還會偵測執行階段程式庫不符的錯誤。 當編譯器選項 `/MT` (靜態發行)、`/MTd` (靜態偵錯)、`/MD` (動態發行) 和 `/MDd` (動態偵錯) 混合時，就會發生這些不相符的情況。
 
 - 針對 `std::unordered_map` 和 `stdext::hash_map` 容器系列，先前可以使用 `operator<()`、`operator>()`、`operator<=()` 和 `operator>=()`，雖然其實作並不是很有用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，`std::unordered_map` 系列的 `operator==()` 和 `operator!=()` 實作已延伸至涵蓋 `stdext::hash_map` 系列。 (建議您避免在新的程式碼中使用 `stdext::hash_map` 系列。)
 
@@ -3228,7 +3228,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 已將 `CPane::GetDockSiteRow(CDockingPanesRow *)` 重新命名為 `CPane::SetDockSiteRow`。
 
-## <a name="visual-c-2010-breaking-changes"></a>Visual C++ 2010 的重大變更
+## <a name="visual-studio-2010-breaking-changes"></a>Visual Studio 2010 的重大變更
 
 ### <a name="compiler"></a>編譯器
 
@@ -3244,29 +3244,29 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 若同時使用 `/GL` (整個程式最佳化) 與 `/clr` (通用語言執行平台編譯) 編譯器選項進行編譯，將會忽略 `/GL` 選項。 變更的原因是並用這兩個編譯器所能選項的好處並不多。 此變更讓建置的效能獲得提升。
 
-- Visual C++ 2010 預設會停用對三併詞的支援。 若要啟用三併詞的支援，可使用 `/Zc:trigraphs` 編譯器選項。 三併詞包含兩個連續的問號 ("？") 後接唯一的第三個字元。 編譯器會以對應的標點符號字元取代三併詞。 例如，編譯器會將 `??=` 三併詞取代為 '#' 字元。 若在 C 原始程式檔中使用的字元集不含某些標點符號字元的慣用圖形表示，您可改用三併詞。
+- Visual Studio 2010 預設會停用對三併詞的支援。 若要啟用三併詞的支援，可使用 `/Zc:trigraphs` 編譯器選項。 三併詞包含兩個連續的問號 ("？") 後接唯一的第三個字元。 編譯器會以對應的標點符號字元取代三併詞。 例如，編譯器會將 `??=` 三併詞取代為 '#' 字元。 若在 C 原始程式檔中使用的字元集不含某些標點符號字元的慣用圖形表示，您可改用三併詞。
 
 - 連結器已不再支援 Windows 98 的最佳化。 若指定 `/OPT:WIN98` 或 `/OPT:NOWIN98`，`/OPT` (最佳化) 選項會產生編譯時期錯誤。
 
 - 由 RuntimeLibrary 與 DebugInformationFormat 建置系統屬性指定的預設編譯器選項已有變更。 這些屬性預設會在 Visual C++ 第 7.0 版到 10.0 版所建立的專案中指定。 若您移轉了 Visual C++ 6.0 所建立的專案，請考慮是否要指定這些屬性的值。
 
-- 在 Visual C++ 2010 中，RuntimeLibrary = MultiThreaded (`/MD`) 且 DebugInformationFormat = ProgramDatabase (`/Zi`)。 在 Visual C++ 9.0 中，RuntimeLibrary = MultiThreaded (`/MT`) 且 DebugInformationFormat = Disabled。
+- 在 Visual Studio 2010 中，RuntimeLibrary = MultiThreaded (`/MD`) 且 DebugInformationFormat = ProgramDatabase (`/Zi`)。 在 Visual C++ 9.0 中，RuntimeLibrary = MultiThreaded (`/MT`) 且 DebugInformationFormat = Disabled。
 
 ### <a name="clr"></a>CLR
 
 - Microsoft C# 與 Visual Basic 編譯器現在都不會產生任何主要 interop 組件 (非 PIA)。 非 PIA 組件不需要部署相關的主要 interop 組件 (PIA)，就能使用 COM 類型。 取用 Visual C# 或 Visual Basic 所產生的非 PIA 組件時，必須在您參考編譯命中的 PIA 組件，才能參考使用該程式庫的任何非 PIA 組件。
 
-### <a name="visual-c-projects-and-msbuild"></a>Visual C++ Projects 與 MSBuild
+### <a name="visual-studio-c-projects-and-msbuild"></a>Visual C++ 專案與 MSBuild
 
-- Visual C++ 專案現在會使用 MSBuild 工具。 因此，專案檔會使用新的 XML 檔案格式與 .vcxproj 檔案後置字元。 Visual C++ 2010 會自動舊版 Visual Studio 的專案檔轉換成新的檔案格式。 現有的專案若是使用舊版的建置工具 VCBUILD.exe 或專案檔案後置字元.vcproj，便會受到影響。
+- Visual Studio C++ 專案現在使用 MSBuild 工具。 因此，專案檔會使用新的 XML 檔案格式與 .vcxproj 檔案後置字元。 Visual Studio 2010 會自動將舊版 Visual Studio 專案檔轉換成新的檔案格式。 現有的專案若是使用舊版的建置工具 VCBUILD.exe 或專案檔案後置字元.vcproj，便會受到影響。
 
-- 舊版的 Visual C++ 支援延遲評估屬性工作表。 例如，父屬性工作表雖無法匯入子屬性工作表，但可使用子系中定義的變數來定義其他變數。 延遲評估讓父系在子屬性工作表匯入之前就能使用子變數。 在 Visual C++ 2010 中，因為 MSBuild 只支援早期評估，所以無法在定義專案工作表變數之前先行使用。
+- 舊版的 Visual C++ 支援延遲評估屬性工作表。 例如，父屬性工作表雖無法匯入子屬性工作表，但可使用子系中定義的變數來定義其他變數。 延遲評估讓父系在子屬性工作表匯入之前就能使用子變數。 在 Visual Studio 2010 中，因為 MSBuild 只支援早期評估，所以無法在定義專案工作表變數之前先行使用。
 
 ### <a name="ide"></a>IDE
 
 - 此應用程式的終止對話方塊不會再結束應用程式。 在先前版本中，當 `abort()` 或 `terminate()` 函式關閉應用程式的零售版本時，C 執行階段程式庫會在主控台視窗或對話方塊中顯示應用程式終止訊息。 此訊息只顯示部分：「此應用程式要求執行階段以異常方式將其終止。 如需詳細資訊，請連絡應用程式支援小組。」 因為 Windows 會接著顯示目前的終止處理常式 (通常為 Windows 錯誤報告 (Dr.Watson) 對話方塊或 Visual Studio 偵錯工具)，讓此應用程式終止訊息顯得多餘。 自 Visual Studio 2010 起，C 執行階段程式庫不再顯示此訊息。 此外，此執行階段會造成應用程式無法在偵錯工具啟動前結束。 僅當您使用了此應用程式終止訊息的舊行為，這項中斷性變更對您才有影響。
 
-- 僅限 Visual Studio 2010：IntelliSense 不適用於 C++/CLI 程式碼或屬性；[尋找所有參考] 不適用於本機變數；程式碼模型不會從匯入的組件擷取類型名稱，也不會將類型解析成完整名稱。
+- 僅限 Visual Studio 2010：IntelliSense 不適用於 C++/CLI 程式碼或屬性；[尋找所有參考]  不適用於本機變數；程式碼模型不會從匯入的組件擷取類型名稱，也不會將類型解析成完整名稱。
 
 ### <a name="libraries"></a>程式庫
 
@@ -3274,7 +3274,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 程式庫部署模型不再使用訊清單來尋找特定版本的動態連結程式庫。 取而代之地是在每個動態連結程式庫名稱中加入其版本號碼，讓您可以使用該名稱尋找程式庫。
 
-- 在舊版的 Visual Studio 中，您可以重建執行階段程式庫。 在 Visual C++ 2010 中，您已無法再建置自己的 C 執行階段程式庫檔案。
+- 在舊版的 Visual Studio 中，您可以重建執行階段程式庫。 在 Visual Studio 2010 中，您已無法建置自己的 C 執行階段程式庫檔案。
 
 ### <a name="standard-library"></a>標準程式庫
 
@@ -3306,7 +3306,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - Microsoft 巨集組合程式參考編譯器移除了幾個指示詞。 移除的指示詞為 `.186`、`.286`、`.286P`、`.287`、`.8086`、`.8087` 及 `.NO87`。
 
-## <a name="visual-c-2008-breaking-changes"></a>Visual C++ 2008 的重大變更
+## <a name="visual-studio-2008-breaking-changes"></a>Visual Studio 2008 的重大變更
 
 ### <a name="compiler"></a>編譯器
 
@@ -3330,7 +3330,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
    - tag_name
 
-### <a name="visual-c-projects"></a>Visual C++ 專案
+### <a name="visual-studio-c-projects"></a>Visual Studio C++ 專案
 
 - 從舊版的 Visual Studio 升級專案時，可能須修改 WINVER 及 _WIN32_WINNT 巨集，使其大於或等於 0x0500。
 
@@ -3386,7 +3386,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="atl"></a>ATL
 
-- 若不相依於 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 #define ATL_MIN_CRT 讓 ATL 專案使用最少的 CRT。 在 Visual C++ 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。
+- 若不相依於 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 #define ATL_MIN_CRT 讓 ATL 專案使用最少的 CRT。 在 Visual Studio 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。
 
 - ATL Server 程式碼基底已發行到 CodePlex 成為共用原始碼專案，且不再隨 Visual Studio 一起安裝。 atlenc.h 中的資料編碼與解碼類別，以及 atlutil.h 與 atlpath.h 中的公用程式函式與類別皆予保留，現在是 ATL 程式庫的一部分。 有幾個與 ATL Server 相關聯的檔案已不再屬於 Visual Studio 的一部分。
 
@@ -3396,7 +3396,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="atlmfc-shared-classes"></a>ATL/MFC 共用類別
 
-- 若不相依於 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 `#define ATL_MIN_CRT` 讓 ATL 專案使用最少的 CRT。 在 Visual C++ 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。
+- 若不相依於 CRT，即無法建置 ATL。 在舊版 Visual Studio 中，您可以使用 `#define ATL_MIN_CRT` 讓 ATL 專案使用最少的 CRT。 在 Visual Studio 2008 中，無論是否定義 ATL_MIN_CRT，所有 ATL 專案都會使用最少的 CRT。
 
 - ATL Server 程式碼基底已發行到 CodePlex 成為共用原始碼專案，且不再隨 Visual Studio 一起安裝。 atlenc.h 中的資料編碼與解碼類別，以及 atlutil.h 與 atlpath.h 中的公用程式函式與類別皆予保留，現在是 ATL 程式庫的一部分。 有幾個與 ATL Server 相關聯的檔案已不再屬於 Visual Studio 的一部分。
 
@@ -3414,19 +3414,19 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - `CWnd` 類別和 `CFrameWnd` 類別：`CWnd::GetMenuBarInfo` 方法已移除。
 
-   `CFrameWnd::GetMenuBarInfo` 方法現在為非虛擬方法。 如需詳細資訊，請參閱 Windows SDK 中的＜GetMenuBarInfo 函式＞。
+   `CFrameWnd::GetMenuBarInfo` 方法現在為非虛擬方法。 如需詳細資訊，請參閱 Windows SDK 中的＜GetMenuBarInfo 函式＞  。
 
 - MFC ISAPI 支援：MFC 已不再支援透過網際網路伺服器應用程式開發介面 (ISAPI) 建置應用程式。 若要建置 ISAPI 應用程式，請直接呼叫 ISAPI 延伸模組。
 
-- 已淘汰的 ANSI API：有幾個 MFC 方法的 ANSI 版本已淘汰。 在您後續的應用程式中，須改用這些方法的 Unicode 版本。 如需詳細資訊，請參閱＜Windows Vista 通用控制項的建置需求＞。
+- 已淘汰的 ANSI API：有幾個 MFC 方法的 ANSI 版本已淘汰。 在您後續的應用程式中，須改用這些方法的 Unicode 版本。 如需詳細資訊，請參閱＜Windows Vista 通用控制項的建置需求＞  。
 
-## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 的重大變更
+## <a name="visual-studio-2005-breaking-changes"></a>Visual Studio 2005 的重大變更
 
 ### <a name="crt"></a>CRT
 
-- 許多函式已標示為即將淘汰。 請參閱＜已淘汱的 CRT 函式＞。
+- 許多函式已標示為即將淘汰。 請參閱＜已淘汱的 CRT 函式＞  。
 
-- 許多函式現在會驗證其參數，並在提供的參數無效時停止執行。 這項驗證可中斷程式碼傳遞無效的參數，並利用函式忽略這些參數或只是傳回錯誤碼。 請參閱＜參數驗證＞。
+- 許多函式現在會驗證其參數，並在提供的參數無效時停止執行。 這項驗證可中斷程式碼傳遞無效的參數，並利用函式忽略這些參數或只是傳回錯誤碼。 請參閱＜參數驗證＞  。
 
 - 現在會使用檔案描述元值 -2 指出輸出無法使用 `stdout` 及 `stderr`，例如在沒有主控台視窗的 Windows 應用程式中。 先前使用的值為 -1。 如需詳細資訊，請參閱 [_fileno](../c-runtime-library/reference/fileno.md)。
 

@@ -186,7 +186,7 @@ MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預�
 
 - **&#95;&#95;STDCPP&#95;執行緒&#95;&#95;** 定義為 1，如果且只有一個程式可以擁有多個執行的執行緒，且編譯為C++。 否則，未定義。
 
-- **&#95;&#95;時間&#95;&#95;** 翻譯的前置處理過的轉譯單位的時間。 時間是字元字串常值形式*hh: mm:*，傳回由 CRT 的時間與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 一律定義此巨集。
+- **&#95;&#95;時間&#95;&#95;** 翻譯的前置處理過的轉譯單位的時間。 時間是字元字串常值形式*hh: mm:* ，傳回由 CRT 的時間與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 一律定義此巨集。
 
 ## <a name="microsoft-specific-predefined-macros"></a>Microsoft 專有的預先定義巨集
 
@@ -382,7 +382,7 @@ MSVC 支援這些額外的預先定義巨集。
    |Visual Studio 2017 版本 15.9|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
 
-   若要測試為編譯器版本或更新指定版本的 Visual Studio 或之後，使用**>=** 運算子。 使用條件指示詞來比較 **&#95;MSC&#95;VER**針對該已知的版本。 如果您有數個互斥的版本，來比較，訂購的版本號碼的遞減順序比較。 比方說，這段程式碼會檢查發行在 Visual Studio 2017 和更新版本的編譯器。 接下來，它會檢查發行在或之後 Visual Studio 2015 的編譯器。 然後它會檢查適用於 Visual Studio 2015 之前發行的所有編譯器：
+   若要測試為編譯器版本或更新指定版本的 Visual Studio 或之後，使用 **>=** 運算子。 使用條件指示詞來比較 **&#95;MSC&#95;VER**針對該已知的版本。 如果您有數個互斥的版本，來比較，訂購的版本號碼的遞減順序比較。 比方說，這段程式碼會檢查發行在 Visual Studio 2017 和更新版本的編譯器。 接下來，它會檢查發行在或之後 Visual Studio 2015 的編譯器。 然後它會檢查適用於 Visual Studio 2015 之前發行的所有編譯器：
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -396,7 +396,7 @@ MSVC 支援這些額外的預先定義巨集。
 
    如需詳細資訊，請參閱 < [VisualC++編譯器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)microsoftC++小組部落格。
 
-- **&#95;MSVC&#95;LANG**定義為整數常值，指定C++設為目標的編譯器語言標準。 它只有在編譯為程式碼設定C++。 巨集是常值的整數值 201402 L，根據預設，或當[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項指定。 如果巨集設為 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定編譯器選項。 它設定為更高版本，未指定值時[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定選項。 否則，巨集未定義。  **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
+- **&#95;MSVC&#95;LANG**定義為整數常值，指定C++設為目標的編譯器語言標準。 它只有在編譯為程式碼設定C++。 巨集是常值的整數值 201402 L，根據預設，或當[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項指定。 如果巨集設為 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定編譯器選項。 它設定為更高版本，未指定值時[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定選項。 否則，巨集未定義。 **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
 
 - **&#95;&#95;MSVC&#95;執行階段&#95;會檢查**定義為 1 時的[/RTC](../build/reference/rtc-run-time-error-checks.md)編譯器選項設定。 否則，未定義。
 
@@ -421,7 +421,7 @@ MSVC 支援這些額外的預先定義巨集。
 
 - **&#95;VC&#95;/NODEFAULTLIB**定義為 1 時， [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)編譯器選項設定。 否則，未定義。
 
-- **&#95;WCHAR&#95;T&#95;定義**定義為 1 時，預設值[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項設定。  **&#95;WCHAR&#95;T&#95;定義**巨集已定義，但是沒有任何值，如果`/Zc:wchar_t-`編譯器選項設定，以及**wchar_t**中包含的系統標頭檔中定義您專案。 否則，未定義。
+- **&#95;WCHAR&#95;T&#95;定義**定義為 1 時，預設值[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項設定。 **&#95;WCHAR&#95;T&#95;定義**巨集已定義，但是沒有任何值，如果`/Zc:wchar_t-`編譯器選項設定，以及**wchar_t**中包含的系統標頭檔中定義您專案。 否則，未定義。
 
 - **&#95;WIN32**定義為 1 時的編譯目標為 32 位元 ARM，64 位元 ARM x86 或 x64。 否則，未定義。
 

@@ -2,16 +2,16 @@
 layout: LandingPage
 title: C++ 文件中的 Linux 開發
 description: 建立在 Linux 上執行的應用程式及對其執行偵錯。
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393138"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821648"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ 文件中的 Linux 開發
 
-使用 Visual Studio 2017 來建立在 Linux 執行的應用程式，並對其偵錯。
+使用 Visual Studio 2017 及更新版本，建立及偵錯於 Linux 遠端電腦或 Windows Subsystem for Linux 上執行的應用程式。
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ ms.locfileid: "62393138"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">適用於 Visual C++ 開發的 IDE 及工具</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual Studio 中的 C++</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">在 Visual Studio 中進行 C++ 開發的概觀</a></p>
                     </div>
                 </div>
             </div>

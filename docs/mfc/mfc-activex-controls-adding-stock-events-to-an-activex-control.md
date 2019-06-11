@@ -66,10 +66,10 @@ ms.locfileid: "62392722"
 |錯誤|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|當您的 ActiveX 控制項之外的方法呼叫或屬性存取範圍內發生錯誤時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_ERROREVENT( )**|
 |KeyDown|**void FireKeyDown( short**  `nChar` **, short**  `nShiftState`  **)**|引發的時機`WM_SYSKEYDOWN`或`WM_KEYDOWN`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYDOWN( )**|
 |KeyPress|**void FireKeyPress( short** <strong>\*</strong>  `pnChar`  **)**|時引發`WM_CHAR`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYPRESS( )**|
-|KeyUp|**void FireKeyUp (簡短**`nChar` **，short**`nShiftState`**)**|引發的時機`WM_SYSKEYUP`或`WM_KEYUP`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|引發如果有的話**BUTTONDOWN**收到 （左邊、 中間或右邊）。 將滑鼠擷取之前引發此事件。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseMove (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|當收到 WM_MOUSEMOVE 訊息時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**void FireMouseUp (簡短**`nButton` **，short** `nShiftState` **，float***x* **，float** *y***)**|引發如果有的話**BUTTONUP**收到 （左邊、 中間或右邊）。 此事件引發之前，會釋出滑鼠捕捉。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEUP( )**|
+|KeyUp|**void FireKeyUp (簡短**`nChar` **，short**`nShiftState` **)**|引發的時機`WM_SYSKEYUP`或`WM_KEYUP`接收訊息。<br /><br /> 事件對應項目：**EVENT_STOCK_KEYUP( )**|
+|MouseDown|**void FireMouseDown (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|引發如果有的話**BUTTONDOWN**收到 （左邊、 中間或右邊）。 將滑鼠擷取之前引發此事件。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseMove (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|當收到 WM_MOUSEMOVE 訊息時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseUp (簡短**`nButton` **，short** `nShiftState` **，float** *x* **，float** *y* **)**|引發如果有的話**BUTTONUP**收到 （左邊、 中間或右邊）。 此事件引發之前，會釋出滑鼠捕捉。<br /><br /> 事件對應項目：**EVENT_STOCK_MOUSEUP( )**|
 |ReadyStateChange|**void FireReadyStateChange( )**|當控制項轉換成下一個就緒狀態，因為收到的資料量時引發。<br /><br /> 事件對應項目：**EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> 新增使用內建事件加入事件精靈

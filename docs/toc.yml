@@ -1531,14 +1531,20 @@
               href: build/reference/dot-xml-file-processing.md
             - name: C++ 文件標記的分隔符號
               href: build/reference/delimiters-for-visual-cpp-documentation-tags.md
-- name: 撰寫和重構程式碼
+- name: 閱讀及撰寫程式碼
   expanded: false
   items:
-    - name: 撰寫和重構程式碼
+    - name: 閱讀及撰寫程式碼
       expanded: false
       items:
-        - name: 撰寫及重構程式碼
+        - name: 閱讀及了解 C++ 程式碼
+          href: ide/read-and-understand-code-cpp.md
+        - name: 編輯及重構 C++ 程式碼
           href: ide/writing-and-refactoring-code-cpp.md
+        - name: 瀏覽 C++ 程式碼
+          href: ide/navigate-code-cpp.md
+        - name: 使用適用於 C++ 的 Live Share 共同作業
+          href: ide/live-share-cpp.md
         - name: 變更簽章
           href: ide/refactoring/change-signature.md
         - name: 轉換為原始字串常值
@@ -1597,8 +1603,6 @@
           href: ide/implementing-a-connection-point-visual-cpp.md
         - name: 實作介面
           href: ide/implementing-an-interface-visual-cpp.md
-        - name: 巡覽類別結構
-          href: ide/navigating-the-class-structure-visual-cpp.md
         - name: 覆寫虛擬函式
           href: ide/overriding-a-virtual-function-visual-cpp.md
 - name: Windows 桌面開發
@@ -4126,7 +4130,7 @@
                   href: cpp/binary-operators.md
                 - name: 指派
                   href: cpp/assignment.md
-                - name: '函式呼叫 '
+                - name: 函式呼叫
                   href: cpp/function-call-cpp.md
                 - name: 下標
                   href: cpp/subscripting.md

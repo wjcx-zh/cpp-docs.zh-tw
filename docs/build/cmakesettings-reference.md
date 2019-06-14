@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837259"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042598"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
@@ -68,9 +68,9 @@ ms.locfileid: "65837259"
 
 由於 Ninja 是專為加快建置速度 (而不是彈性和功能) 所設計，因此預設會設定此產生器。 不過，有些 CMake 專案可能無法使用 Ninja 正確地建置。 如果發生這種情況，您可以指示 CMake 改為產生 Visual Studio 專案。
 
-若要在 Visual Studio 2017 中指定 Visual Studio 產生器，請選擇 [CMake | 變更 CMake 設定]，從主功能表開啟 `CMakeSettings.json`。 刪除 “Ninja” 並鍵入 “V”。 這會啟用 IntelliSense，讓您選擇想要的產生器。
+若要在 Visual Studio 2017 中指定 Visual Studio 產生器，請選擇 [CMake | 變更 CMake 設定]  ，從主功能表開啟 `CMakeSettings.json`。 刪除 “Ninja” 並鍵入 “V”。 這會啟用 IntelliSense，讓您選擇想要的產生器。
 
-若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下 [方案總管] 中的 CMakeLists.txt 檔案，然後選擇 [專案的 CMake 設定] > [顯示進階設定] > [CMake 產生器]。
+若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下 [方案總管]  中的 CMakeLists.txt 檔案，然後選擇 [專案的 CMake 設定]   > [顯示進階設定]   > [CMake 產生器]  。
 
 當使用中的組態指定 Visual Studio 產生器時，根據預設，會使用 `-m -v:minimal` 引數叫用 MSBuild.exe。 若要自訂組建，在 `CMakeSettings.json` 檔案內部，您可以指定將額外的 [MSBuild 命令列引數](../build/reference/msbuild-visual-cpp-overview.md)透過 `buildCommandArgs` 屬性傳遞至組建系統：
 
@@ -121,7 +121,7 @@ ms.locfileid: "65837259"
 
 - `remoteMachineName`：指定裝載 CMake、組建和偵錯工具之遠端 Linux 電腦的名稱。 使用連線管理員新增新的 Linux 電腦。 支援的巨集包括 `${defaultRemoteMachineName}`。
 - `remoteCopySourcesOutputVerbosity`：指定從來源到遠端電腦的複製作業詳細資訊層級。 可能為「正常」、「詳細資訊」或「診斷」其中之一。
-- `remoteCopySourcesConcurrentCopies`：指定將來源同步處理到遠端電腦期間，所用的並行複本數目。
+- `remoteCopySourcesConcurrentCopies`： 指定並行複製到遠端電腦 (僅 sftp) 來源的同步處理期間所使用的數目。
 - `remoteCopySourcesMethod`：指定將檔案複製到遠端電腦的方法。 可能為 "rsync" 或 "sftp"。
 - `remoteCMakeListsRoot`：指定遠端電腦上包含 CMake 專案的目錄。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteBuildRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的組建指令碼。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
@@ -256,7 +256,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|選項|說明|
+|選項|描述|
 |--------------|------------|
 | --version  | 列印 Ninja 版本 ("1.7.1")|
 |   -C DIR   | 變更為 DIR 再執行其他任何動作|

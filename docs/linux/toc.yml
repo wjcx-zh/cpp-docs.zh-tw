@@ -2,14 +2,14 @@
   href: index.md
 - name: 下載、安裝及設定 Linux 開發工作負載
   href: download-install-and-setup-the-linux-development-workload.md
-- name: 設定 Linux 專案
-  href: configure-a-linux-project.md
-- name: 設定 Linux CMake 專案
-  href: cmake-linux-project.md
-- name: 建立新的 Linux 專案
-  href: create-a-new-linux-project.md
 - name: 連線到遠端 Linux 電腦
   href: connect-to-your-remote-linux-computer.md
+- name: 建立新的 Linux 專案
+  href: create-a-new-linux-project.md
+- name: 設定 Linux 專案
+  href: configure-a-linux-project.md
+- name: 建立及設定 Linux CMake 專案
+  href: cmake-linux-project.md
 - name: 將 Linux 專案設定為使用 Address Sanitizer
   href: linux-asan-configuration.md
 - name: 部署、執行和偵錯 Linux 專案

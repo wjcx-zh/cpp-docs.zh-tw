@@ -1,19 +1,27 @@
 ---
 title: 連結器屬性 (Linux C++)
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 01e8a9e45272ff55db6bbf738b48c75f4e1f6c48
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678336"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821302"
 ---
 # <a name="linker-properties-linux-c"></a>連結器屬性 (Linux C++)
 
+::: moniker range="vs-2015"
+
+Visual Studio 2017 及更新版本支援 Linux。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
 ## <a name="general"></a>一般
 
-屬性 | 描述 | 選擇
+屬性 | 說明 | 選擇
 --- | ---| ---
 輸出檔案 | 此選項會覆寫連結器所建立之程式的預設名稱和位置。 (-o)
 顯示進度 | 列印連結器進度訊息。
@@ -32,7 +40,7 @@ ms.locfileid: "51678336"
 
 ## <a name="input"></a>輸入
 
-屬性 | 描述 | 選擇
+屬性 | 說明 | 選擇
 --- | ---| ---
 忽略特定的預設程式庫 | 指定要忽略的一或多個預設程式庫名稱。 (--exclude-libs lib,lib)
 忽略預設程式庫 | 忽略預設程式庫，而只搜尋明確指定的程式庫。
@@ -42,16 +50,18 @@ ms.locfileid: "51678336"
 
 ## <a name="debugging"></a>偵錯
 
-屬性 | 描述 | 選擇
+屬性 | 說明 | 選擇
 --- | ---| ---
 偵錯工具符號資訊 | 來自輸出檔中的偵錯工具符號資訊。 | **包含全部**<br>**僅省略偵錯工具符號資訊**<br>**省略所有符號資訊**<br>
 對應檔案名稱 | Map 選項會指示連結器以使用者指定的名稱來建立對應檔案。 (-Map=)
 
 ## <a name="advanced"></a>進階
 
-屬性 | 描述 | 選擇
+屬性 | 說明 | 選擇
 --- | ---| ---
 重新配置之後將變數標記為唯讀 | 此選項會在重新配置之後，將變數標記為唯讀。
 啟用立即函式繫結 | 此選項會將物件標記為要立即進行函式繫結。
 不需要可執行檔堆疊 | 此選項會將輸出標記為不需要可執行檔堆疊。
 Whole Archive | Whole Archive 會使用來自來源及其他相依性的所有程式碼。
+
+::: moniker-end

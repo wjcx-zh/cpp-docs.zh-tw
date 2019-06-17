@@ -1,25 +1,25 @@
 ---
 title: 指標的參考
-ms.date: 08/20/2018
+ms.date: 06/13/2019
 helpviewer_keywords:
 - references, to pointers
 ms.assetid: 4ce48b08-1511-4d2f-a31f-95f99eac0c70
-ms.openlocfilehash: 060bbaef74c934de4d8529b3ceafc61d1b70dc70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4719bc5ca0980da3a4f8ad3c2348fc870e916e90
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403447"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141689"
 ---
 # <a name="references-to-pointers"></a>指標的參考
 
-指標的參考可以透過與物件的參考類似的方式來宣告。 宣告指標的參考會產生一個可修改的值，其使用方式就像一般的指標。
+指標的參考可以透過與物件的參考類似的方式來宣告。 指標的參考是可修改的值，可像一般的指標。
 
 ## <a name="example"></a>範例
 
-下列程式碼說明使用指標的指標以及指標的參考之間的不同處。
+此程式碼範例顯示使用指標的指標以及指標的參考之間的差異。
 
-函式 `Add1` 和 `Add2` 的功能相同 (雖然不是以相同的方式呼叫)。 其差別在於 `Add1` 是使用兩次間接取值 (Indirection)，而 `Add2` 則是利用指標參考的便利性。
+函式`Add1`和`Add2`的功能相同，雖然它們不呼叫相同的方式。 其差異在於`Add1`使用 double 的間接取值，但`Add2`指標參考的便利性。
 
 ```cpp
 // references_to_pointers.cpp
@@ -52,11 +52,11 @@ void PrintTree( BTree* btRoot );
 int main( int argc, char *argv[] ) {
    // Usage message
    if( argc < 2 ) {
-      cerr << "Usage: Refptr [1 | 2]" << "\n";
+      cerr << "Usage: " << argv[0] << " [1 | 2]" << "\n";
       cerr << "\nwhere:\n";
       cerr << "1 uses double indirection\n";
       cerr << "2 uses a reference to a pointer.\n";
-      cerr << "\nInput is from stdin.\n";
+      cerr << "\nInput is from stdin. Use ^Z to terminate input.\n";
       return 1;
    }
 
@@ -99,15 +99,15 @@ int main( int argc, char *argv[] ) {
 // PrintTree: Display the binary tree in order.
 void PrintTree( BTree* MybtRoot ) {
    // Traverse the left branch of the tree recursively.
-   if ( btRoot->Left )
-      PrintTree( btRoot->Left );
+   if ( MybtRoot->Left )
+      PrintTree( MybtRoot->Left );
 
    // Print the current node.
-   cout << btRoot->szText << "\n";
+   cout << MybtRoot->szText << "\n";
 
    // Traverse the right branch of the tree recursively.
-   if ( btRoot->Right )
-      PrintTree( btRoot->Right );
+   if ( MybtRoot->Right )
+      PrintTree( MybtRoot->Right );
 }
 
 // Add1: Add a node to the binary tree.
@@ -150,13 +150,13 @@ int Add2( BTree*& Root, char *szToAdd ) {
 ```
 
 ```Output
-Usage: Refptr [1 | 2]
+Usage: references_to_pointers.exe [1 | 2]
 
 where:
 1 uses double indirection
 2 uses a reference to a pointer.
 
-Input is from stdin.
+Input is from stdin. Use ^Z to terminate input.
 ```
 
 ## <a name="see-also"></a>另請參閱

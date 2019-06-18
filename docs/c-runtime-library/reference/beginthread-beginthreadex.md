@@ -1,4 +1,4 @@
----
+﻿---
 title: _beginthread、_beginthreadex
 ms.date: 02/27/2018
 apiname:

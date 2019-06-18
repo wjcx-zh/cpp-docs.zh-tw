@@ -1,6 +1,6 @@
 ---
 title: CListCtrl 類別
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - CListCtrl
 - AFXCMN/CListCtrl
@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 63668de8134267880b48a3406c552d06376ea4f7
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503447"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141684"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -522,8 +522,7 @@ class CListCtrl : public CWnd
 
 ```
 CSize ApproximateViewRect(
-    CSize sz = CSize(-1,
--1),
+    CSize sz = CSize(-1, -1),
     int iCount = -1) const;
 ```
 
@@ -683,7 +682,7 @@ virtual BOOL CreateEx(
 
 使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_** 。
 
-`CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱本主題中所述的樣式[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
+`CreateEx` 建立具有所指定的擴充 Windows 樣式的控制項*dwExStyle*。 若要設定特定延伸的樣式至控制項，呼叫[SetExtendedStyle](#setextendedstyle)。 例如，使用`CreateEx`將這類樣式設定為 WS_EX_CONTEXTHELP，但使用`SetExtendedStyle`將這類樣式設定為 LVS_EX_FULLROWSELECT。 如需詳細資訊，請參閱本文所述的樣式[擴充清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中。
 
 ## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
@@ -971,7 +970,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::SetBkColor](#setbkcolor)。
+範例，請參閱[CListCtrl::SetBkColor](#setbkcolor)。
 
 ## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
@@ -1027,7 +1026,7 @@ UINT GetCallbackMask() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[clistctrl:: Setcallbackmask](#setcallbackmask)。
+範例，請參閱[clistctrl:: Setcallbackmask](#setcallbackmask)。
 
 ## <a name="getcheck"></a>  CListCtrl::GetCheck
 
@@ -1052,7 +1051,7 @@ BOOL GetCheck(int nItem) const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::SetCheck](#setcheck)。
+範例，請參閱[CListCtrl::SetCheck](#setcheck)。
 
 ## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
@@ -1134,7 +1133,7 @@ BOOL GetColumnOrderArray(
             int  nColumnCount = pHeaderCtrl->GetItemCount();
             LPINT pnOrder = (LPINT) malloc(nColumnCount*sizeof(int));
             ASSERT(pnOrder != NULL);
-m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
+            m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
             int i, j, nTemp;
             for (i = 0, j = nColumnCount-1; i < j; i++, j--)
@@ -1188,7 +1187,7 @@ int GetCountPerPage() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
+範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
@@ -1243,7 +1242,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>傳回值
 
-目前使用的清單中的延伸樣式的組合檢視控制項。 如需這些延伸樣式的描述性清單，請參閱[延伸的清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的主題。
+目前使用的清單中的延伸樣式的組合檢視控制項。 如需這些延伸樣式的描述性清單，請參閱[延伸的清單檢視樣式](/windows/desktop/Controls/extended-list-view-styles)Windows SDK 中的文章。
 
 ### <a name="remarks"></a>備註
 
@@ -1251,7 +1250,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::SetExtendedStyle](#setextendedstyle)。
+範例，請參閱[CListCtrl::SetExtendedStyle](#setextendedstyle)。
 
 ## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
@@ -1381,7 +1380,7 @@ public:
 
 ### <a name="example"></a>範例
 
-下列程式碼範例示範`GetGroupInfoByIndex`方法。 在先前章節中的這段程式碼範例中我們建立的清單檢視控制項，會顯示報表檢視中標題為"ClientID"和"Grade"的兩個資料行。 如果這類群組存在，下列程式碼範例會擷取其索引為 0，群組的相關資訊。
+下列程式碼範例示範`GetGroupInfoByIndex`方法。 在先前章節中的 這個程式碼範例，我們會建立顯示標題為"ClientID"及"Grade"報表檢視中的兩個資料行的清單檢視控制項。 如果這類群組存在，下列程式碼範例會擷取其索引為 0，群組的相關資訊。
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1528,7 +1527,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
+範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
 
 ## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
@@ -1634,7 +1633,7 @@ CImageList* GetImageList(int nImageList) const;
 
 ```cpp
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == NULL);
-m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
+        m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
@@ -1643,12 +1642,12 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 擷取目前的插入標記的位置。
 
 ```
-BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
+BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*lvim*<br/>
+*plvim*<br/>
 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，包含插入標記的資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -1735,7 +1734,7 @@ int GetItemCount() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::DeleteItem](#deleteitem)。
+範例，請參閱[CListCtrl::DeleteItem](#deleteitem)。
 
 ## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
@@ -1905,7 +1904,7 @@ BOOL GetItemRect(
 void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
     // Get the current mouse location and convert it to client
     // coordinates.
@@ -1995,7 +1994,7 @@ UINT GetItemState(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
+範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
@@ -2228,7 +2227,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 ## <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
 
-擷取在清單控制項中目前選取的資料行的索引。
+擷取在清單控制項中目前選取之資料行的索引。
 
 ```
 UINT GetSelectedColumn() const;
@@ -2388,7 +2387,7 @@ COLORREF GetTextBkColor() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::SetTextBkColor](#settextbkcolor)。
+範例，請參閱[CListCtrl::SetTextBkColor](#settextbkcolor)。
 
 ## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
@@ -2404,19 +2403,19 @@ COLORREF GetTextColor() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::SetTextColor](#settextcolor)。
+範例，請參閱[CListCtrl::SetTextColor](#settextcolor)。
 
 ## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 擷取清單檢視控制項中的圖格的相關資訊。
 
 ```
-BOOL GetTileInfo(PLVTILEINFO pti) const;
+BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*pti*<br/>
+*plvti*<br/>
 指標[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)接收 圖格資訊的結構。
 
 ### <a name="return-value"></a>傳回值
@@ -2548,15 +2547,15 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```
 void GetWorkAreas(
     int nWorkAreas,
-    LPRECT prc) const;
+    LPRECT pRect) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *nWorkAreas*<br/>
-數目`RECT`中所包含的結構*中華人民共和國*陣列。
+數目`RECT`中所包含的結構*pRect*陣列。
 
-*prc*<br/>
+*pRect*<br/>
 陣列的指標`RECT`結構 (或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件)，接收工作區域的清單檢視控制項。 在這些架構中的值為在工作區座標。
 
 ### <a name="remarks"></a>備註
@@ -2565,7 +2564,7 @@ void GetWorkAreas(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。
+範例，請參閱[CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas)。
 
 ## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
@@ -2781,10 +2780,10 @@ int InsertItem(
 *NMask*參數會指定哪一個項目做為參數傳遞的屬性都有效。 它可以是其中一或多個遮罩值中所述[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK 中。 有效的值可以與位元的 OR 運算子結合。
 
 *nState*<br/>
-表示項目的狀態、 狀態影像和覆疊影像。 請參閱 Windows SDK 主題[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)如需詳細資訊並[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)如需有效的旗標的清單。
+表示項目的狀態、 狀態影像和覆疊影像。 如需詳細資訊，請參閱 Windows SDK 主題[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)並[清單檢視項目狀態](/windows/desktop/Controls/list-view-item-states)如需有效的旗標的清單。
 
 *nStateMask*<br/>
-指示的狀態成員會擷取或修改。 請參閱[LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows sdk for 的詳細資訊。
+指示的狀態成員會擷取或修改。 如需詳細資訊，請參閱 < [LVITEM 結構](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK 中。
 
 *lParam*<br/>
 項目相關聯的 32 位元應用程式特定值。 如果指定此參數，您必須設定*nMask*屬性 LVIF_PARAM。
@@ -2795,7 +2794,7 @@ int InsertItem(
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法可能會導致 LVM_INSERTITEM 訊息傳送至您的控制項視窗。 設定項目文字 （例如使用例如 LVS_OWNERDRAW 的視窗樣式） 的特定情況下，控制項的相關聯的訊息處理常式可能會失敗。 如需有關這些條件的詳細資訊，請參閱[LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) Windows SDK 中。
+呼叫這個方法可能會導致 LVM_INSERTITEM 訊息傳送至您的控制項視窗。 設定項目文字 （例如使用例如 LVS_OWNERDRAW 的視窗樣式） 的特定情況下，控制項的相關聯的訊息處理常式可能會失敗。 如需有關這些條件的詳細資訊，請參閱 < [LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) Windows SDK 中。
 
 ### <a name="example"></a>範例
 
@@ -2828,7 +2827,7 @@ int InsertItem(
 ```
 int InsertMarkHitTest(
     LPPOINT pPoint,
-    LPLVINSERTMARK lvim) const;
+    LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>參數
@@ -2836,7 +2835,7 @@ int InsertMarkHitTest(
 *pPoint*<br/>
 指標[點](/previous-versions/dd162805\(v=vs.85\))結構，包含點擊的測試的座標，相對於清單控制項的用戶端區域。
 
-*lvim*<br/>
+*plvim*<br/>
 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，指定最接近座標點參數所定義的插入點。
 
 ### <a name="return-value"></a>傳回值
@@ -2879,7 +2878,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的項目可為可見; 否則為 FALSE，則為 TRUE。
+如果指定的項目為可見，則為 TRUE否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -3138,7 +3137,7 @@ BOOL SetBkColor(COLORREF cr);
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
 
 BOOL SetBkImage(
-    HBITMAP hbm,
+    HBITMAP hBitmap,
     BOOL fTile = TRUE,
     int xOffsetPercent = 0,
     int yOffsetPercent = 0);
@@ -3155,7 +3154,7 @@ BOOL SetBkImage(
 *plvbkImage*<br/>
 位址`LVBKIMAGE`結構，包含新的背景映像資訊。
 
-*hbm*<br/>
+*hBitmap*<br/>
 點陣圖的控制代碼。
 
 *pszUrl*<br/>
@@ -3181,7 +3180,7 @@ BOOL SetBkImage(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetBkImage](#getbkimage)。
+範例，請參閱[CListCtrl::GetBkImage](#getbkimage)。
 
 ## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
@@ -3273,7 +3272,7 @@ BOOL SetColumn(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetColumn](#getcolumn)。
+範例，請參閱[CListCtrl::GetColumn](#getcolumn)。
 
 ## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
@@ -3303,7 +3302,7 @@ BOOL SetColumnOrderArray(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
+範例，請參閱[CListCtrl::GetColumnOrderArray](#getcolumnorderarray)。
 
 ## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
@@ -3424,7 +3423,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetHotCursor](#gethotcursor)。
+範例，請參閱[CListCtrl::GetHotCursor](#gethotcursor)。
 
 ## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
@@ -3449,7 +3448,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetHotItem](#gethotitem)。
+範例，請參閱[CListCtrl::GetHotItem](#gethotitem)。
 
 ## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
@@ -3474,7 +3473,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetHoverTime](#gethovertime)。
+範例，請參閱[CListCtrl::GetHoverTime](#gethovertime)。
 
 ## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
@@ -3544,7 +3543,7 @@ CImageList* SetImageList(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetImageList](#getimagelist)。
+範例，請參閱[CListCtrl::GetImageList](#getimagelist)。
 
 ## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
@@ -3572,12 +3571,12 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 將插入點設定為定義的位置。
 
 ```
-BOOL SetInsertMark(LPLVINSERTMARK lvim);
+BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
 ### <a name="parameters"></a>參數
 
-*lvim*<br/>
+*plvim*<br/>
 指標[LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)結構，指定要設定插入點的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -3686,7 +3685,7 @@ BOOL SetItem(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::HitTest](#hittest)。
+範例，請參閱[CListCtrl::HitTest](#hittest)。
 
 ## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
@@ -3868,7 +3867,7 @@ A[點](/previous-versions/dd162805\(v=vs.85\))結構，指定檢視中的新位�
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetItemPosition](#getitemposition)。
+範例，請參閱[CListCtrl::GetItemPosition](#getitemposition)。
 
 ## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
@@ -3909,7 +3908,7 @@ BOOL SetItemState(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
+範例，請參閱[CListCtrl::GetTopIndex](#gettopindex)。
 
 ## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
@@ -3943,7 +3942,7 @@ BOOL SetItemText(
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::InsertItem](#insertitem)。
+範例，請參閱[CListCtrl::InsertItem](#insertitem)。
 
 ## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
@@ -4010,7 +4009,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetSelectionMark](#getselectionmark)。
+範例，請參閱[CListCtrl::GetSelectionMark](#getselectionmark)。
 
 ## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
@@ -4070,12 +4069,12 @@ COLORREF，指定新的文字色彩。 如需資訊，請參閱[COLORREF](/windo
 設定圖格的清單檢視控制項的資訊。
 
 ```
-BOOL SetTileInfo(PLVTILEINFO pti);
+BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
 ### <a name="parameters"></a>參數
 
-*pti*<br/>
+*pTileInfo*<br/>
 指標[LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo)結構，其中包含要設定的資訊。
 
 ### <a name="return-value"></a>傳回值
@@ -4257,7 +4256,7 @@ int CALLBACK CListCtrlDlg::MyCompareProc(LPARAM lParam1, LPARAM lParam2,
     LPARAM lParamSort)
 {
     UNREFERENCED_PARAMETER(lParamSort);
-return (int)(lParam1 - lParam2);
+    return (int)(lParam1 - lParam2);
 }
 ```
 
@@ -4381,7 +4380,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
     LVHITTESTINFO lvhti;
 
     // Clear the subitem text the user clicked on.
@@ -4418,7 +4417,7 @@ BOOL Update(int nItem);
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CListCtrl::GetSelectedCount](#getselectedcount)。
+範例，請參閱[CListCtrl::GetSelectedCount](#getselectedcount)。
 
 ## <a name="see-also"></a>另請參閱
 

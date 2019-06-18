@@ -1,21 +1,29 @@
 ---
 title: 一般屬性 (Linux C++ Makefile 專案)| Microsoft Docs
-ms.date: 9/26/2017
+ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
-ms.openlocfilehash: fb742d552d0b70ba5f5c406dd43bdf4cf8d1914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a64066ad3c8d7e6ca8bfa9d3d82670ff1da4b527
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524588"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821451"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Makefile 專案屬性 (Linux C++)
+
+::: moniker range="vs-2015"
+
+Visual Studio 2017 及更新版本支援 Linux。
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 此為 Linux Makefile 專案中可用屬性的部分清單。 許多 Makefile 專案屬性與 Linux C++ 主控台應用程式專案屬性相同。
 
 ## <a name="general"></a>一般
 
-屬性 | 描述 | 選擇
+屬性 | 說明 | 選擇
 --- | ---| ---
 輸出目錄 | 指定輸出檔案目錄的相對路徑；可包含環境變數。
 中繼目錄 | 指定中繼檔案目錄的相對路徑；可包含環境變數。
@@ -37,37 +45,37 @@ ms.locfileid: "50524588"
 
 ### <a name="pre-build-event"></a>建置前事件
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 命令列 | 指定要執行建置前事件工具的命令列。
-描述 | 指定要顯示的建置前事件工具描述。
+說明 | 指定要顯示的建置前事件工具描述。
 使用於組建中 | 指定是否要將此建置事件排除在目前組態的建置之外。
 要複製的其他檔案 | 指定要複製到遠端系統的其他檔案。 您也可以使用類似如下的語法，將清單提供為本機到遠端的對應配對：fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2，如此會將本機檔案複製到遠端系統上指定的遠端位置。
 
 ### <a name="post-build-event"></a>建置後事件
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 命令列 | 指定要執行建置後事件工具的命令列。
-描述 | 指定要顯示的建置後事件工具描述。
+說明 | 指定要顯示的建置後事件工具描述。
 使用於組建中 | 指定是否要將此建置事件排除在目前組態的建置之外。
 要複製的其他檔案 | 指定要複製到遠端系統的其他檔案。 您也可以使用類似如下的語法，將清單提供為本機到遠端的對應配對：fulllocalpath1:=fullremotepath1;fulllocalpath2:=fullremotepath2，如此會將本機檔案複製到遠端系統上指定的遠端位置。
 
 ### <a name="remote-pre-build-event"></a>遠端建置前事件
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 命令列 | 指定在遠端系統上執行建置前事件工具的命令列。
-描述 | 指定要顯示的建置前事件工具描述。
+說明 | 指定要顯示的建置前事件工具描述。
 使用於組建中 | 指定是否要將此建置事件排除在目前組態的建置之外。
 要複製的其他檔案 | 指定要從遠端系統複製的其他檔案。 您也可以使用下列類型的語法，將清單提供為遠端到本機的對應配對：fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2，如此會將遠端檔案複製到本機電腦上的指定位置。
 
 ### <a name="remote-post-build-event"></a>遠端建置後事件
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 命令列 | 指定在遠端系統上執行建置後事件工具的命令列。
-描述 | 指定要顯示的建置後事件工具描述。
+說明 | 指定要顯示的建置後事件工具描述。
 使用於組建中 | 指定是否要將此建置事件排除在目前組態的建置之外。
 要複製的其他檔案 | 指定要從遠端系統複製的其他檔案。 您也可以使用下列類型的語法，將清單提供為遠端到本機的對應配對：fullremotepath1:=fulllocalpath1;fullremotepath2:=fulllocalpath2，如此會將遠端檔案複製到本機電腦上的指定位置。
 
@@ -77,7 +85,7 @@ ms.locfileid: "50524588"
 
 可在專案或檔案層級設定 IntelliSense 屬性，來提供 IntelliSense 引擎的線索。 它們不會影響編譯。
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 Include 搜尋路徑 | 指定 Include 搜尋路徑以解析包含的檔案。
 強制內含 | 指定要強制內含的檔案。
@@ -87,7 +95,7 @@ Include 搜尋路徑 | 指定 Include 搜尋路徑以解析包含的檔案。
 
 ### <a name="build"></a>組建
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 Build 命令列 | 指定執行 'Build' 命令的命令列。
 Rebuild All 命令列 | 指定執行 'Rebuild All' 命令的命令列。
@@ -95,9 +103,11 @@ Clean 命令列 | 指定執行 'Clean' 命令的命令列。
 
 ### <a name="remote-build"></a>遠端組建
 
-屬性 | 描述
+屬性 | 說明
 --- | ---
 Build 命令列 | 指定執行 'Build' 命令的命令列。 其會於遠端系統上執行。
 Rebuild All 命令列 | 指定執行 'Rebuild All' 命令的命令列。 其會於遠端系統上執行。
 Clean 命令列 | 指定執行 'Clean' 命令的命令列。 其會於遠端系統上執行。
 輸出 | 指定遠端組建於遠端系統上所產生的輸出。
+
+::: moniker-end

@@ -3,20 +3,20 @@ title: 自訂 Visual Studio 中的 CMake 建置設定
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a00b18f163758be0238a05c4d2af3195014d79b0
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837113"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042546"
 ---
 # <a name="customize-cmake-build-settings"></a>自訂 CMake 建置設定
 
 ::: moniker range="vs-2019"
 
-在 Visual Studio 2019 和更新版本中，您可以新增組態並使用 **CMake 設定編輯器**自訂其設定。 編輯器可作為手動編輯 CMakeSettings.json 檔案的簡單替代工具，但如果您想要直接編輯檔案，您可以按一下編輯器右上方的 [編輯 JSON] 連結。 
+在 Visual Studio 2019 和更新版本中，您可以新增組態並使用 **CMake 設定編輯器**自訂其設定。 編輯器可作為手動編輯 CMakeSettings.json 檔案的簡單替代工具，但如果您想要直接編輯檔案，您可以按一下編輯器右上方的 [編輯 JSON]  連結。 
 
-若要開啟編輯器，請按一下主要工具列中的 [組態] 下拉式清單，然後選擇 [管理組態]。
+若要開啟編輯器，請按一下主要工具列中的 [組態]  下拉式清單，然後選擇 [管理組態]  。
 
 ![CMake 組態下拉式清單](media/vs2019-cmake-manage-configurations.png)
 
@@ -30,7 +30,7 @@ Visual Studio 依預設會提供兩個設定：`x64-Debug` 和 `x86-Debug`。 �
 
 ## <a name="cmake-general-settings"></a>CMake 一般設定
 
-以下是 [一般] 標題下提供的設定：
+以下是 [一般]  標題下提供的設定：
 
 ### <a name="configuration-name"></a>組態名稱
 
@@ -43,7 +43,7 @@ Visual Studio 依預設會提供兩個設定：`x64-Debug` 和 `x86-Debug`。 �
 
 ### <a name="toolset"></a>Toolset
 
-對應於 **inheritedEnvironments** 設定。 定義將用來建置所選組態的編譯器環境。 支援的值取決於組態的類型。 若要建立自訂環境，請按一下「設定」編輯器右上角中的 [編輯 JSON] 連結，並直接編輯 CMakeSettings.json 檔案。
+對應於 **inheritedEnvironments** 設定。 定義將用來建置所選組態的編譯器環境。 支援的值取決於組態的類型。 若要建立自訂環境，請按一下「設定」編輯器右上角中的 [編輯 JSON]  連結，並直接編輯 CMakeSettings.json 檔案。
 
 ### <a name="cmake-toolchain-file"></a>CMake 工具鏈檔案
 
@@ -55,7 +55,7 @@ CMake 工具鏈檔案的路徑。 將會傳至 CMake 作為 "-DCMAKE_TOOLCHAIN_F
 
 ## <a name="command-arguments"></a>命令引數
 
-以下是 [命令引數] 標題下提供的設定：
+以下是 [命令引數]  標題下提供的設定：
 
 ### <a name="cmake-command-arguments"></a>CMake 命令引數
 
@@ -80,7 +80,7 @@ CMake 工具鏈檔案的路徑。 將會傳至 CMake 作為 "-DCMAKE_TOOLCHAIN_F
 
 ## <a name="cmake-variables-and-cache"></a>CMake 變數和快取
 
-這些設定可讓您設定 CMake 變數，並將其儲存在 CMakeSettings.json 中。 這些變數會在建置期間傳至 CMake，並且將覆寫 CMakeLists.txt 檔案中可能包含的任何值。 您可以比照您使用 CMakeGUI 的相同方式來使用這個部分，以檢視所有可用於編輯的 CMake 變數清單。 按一下 [儲存並產生快取] 按鈕，以檢視所有可用於編輯的 CMake 變數清單，包括進階變數 (依據 CMakeGUI)。 您可以依變數名稱篩選清單。 
+這些設定可讓您設定 CMake 變數，並將其儲存在 CMakeSettings.json 中。 這些變數會在建置期間傳至 CMake，並且將覆寫 CMakeLists.txt 檔案中可能包含的任何值。 您可以比照您使用 CMakeGUI 的相同方式來使用這個部分，以檢視所有可用於編輯的 CMake 變數清單。 按一下 [儲存並產生快取]  按鈕，以檢視所有可用於編輯的 CMake 變數清單，包括進階變數 (依據 CMakeGUI)。 您可以依變數名稱篩選清單。 
 
 對應於 **variables**：包含成對的 CMake 變數名稱和值，會以 **-D** *_name_=_value_* 形式傳至 CMake。 如果您的 CMake 專案建置指示指定直接將任何變數新增至 CMake 快取檔案，建議您改為在此新增。
 
@@ -94,7 +94,7 @@ CMake 工具鏈檔案的路徑。 將會傳至 CMake 作為 "-DCMAKE_TOOLCHAIN_F
   - "Unix Makefiles"
   - "Visual Studio 16 2019"
   - "Visual Studio 16 2019 Win64"
-  - - "Visual Studio 16 2019 ARM"
+  - "Visual Studio 16 2019 ARM"
   - "Visual Studio 15 2017"
   - "Visual Studio 15 2017 Win64"
   - "Visual Studio 15 2017 ARM"
@@ -132,7 +132,7 @@ CMake 在遠端機器上安裝目標的目錄。
 
 ## <a name="directly-edit-cmakesettingsjson"></a>直接編輯 CMakeSettings.json
 
-您也可以直接編輯 `CMakeSettings.json` 以建立自訂組態。 **設定編輯器**的右上方有 [編輯 JSON] 按鈕可開啟檔案以進行編輯。 
+您也可以直接編輯 `CMakeSettings.json` 以建立自訂組態。 **設定編輯器**的右上方有 [編輯 JSON]  按鈕可開啟檔案以進行編輯。 
 
 下列範例顯示範例組態，可供您作為作業起點：
 
@@ -163,7 +163,7 @@ JSON 編輯器也會在您選擇了不相容的設定時通知您。
 
 ::: moniker range="<=vs-2017"
 
-Visual Studio 2017 提供數種 CMake 組態，定義如何叫用 CMake.exe 來建立指定專案的 CMake 快取。 若要新增新的組態，請按一下工具列中的 [組態] 下拉式清單，然後選擇 [管理組態]：
+Visual Studio 2017 提供數種 CMake 組態，定義如何叫用 CMake.exe 來建立指定專案的 CMake 快取。 若要新增新的組態，請按一下工具列中的 [組態] 下拉式清單，然後選擇 [管理組態]  ：
 
    ![CMake 管理組態](media/cmake-manage-configurations.png)
 
@@ -173,11 +173,11 @@ Visual Studio 2017 提供數種 CMake 組態，定義如何叫用 CMake.exe 來�
 
 當您第一次選取組態時，Visual Studio 會在您專案的根資料夾中建立一個 `CMakeSettings.json` 檔案。 此檔案會用來重新建立 CMake 快取檔案，例如在**清除**作業之後。 
 
-若要新增額外的組態，請以滑鼠右鍵按一下 `CMakeSettings.json`，然後選擇 [新增組態]。 
+若要新增額外的組態，請以滑鼠右鍵按一下 `CMakeSettings.json`，然後選擇 [新增組態]  。 
 
    ![CMake 新增組態](media/cmake-add-configuration.png "CMake 新增組態")
 
-您也可以使用 **CMake 設定編輯器**來編輯檔案。 請以滑鼠右鍵在 [方案總管] 中按一下 `CMakeSettings.json`，然後選擇 [編輯 CMake 設定]。 或者，從編輯器視窗頂端的 [組態] 下拉式清單，選取 [管理組態]。 
+您也可以使用 **CMake 設定編輯器**來編輯檔案。 請以滑鼠右鍵在 [方案總管]  中按一下 `CMakeSettings.json`，然後選擇 [編輯 CMake 設定]  。 或者，從編輯器視窗頂端的 [組態] 下拉式清單，選取 [管理組態]  。 
 
 您也可以直接編輯 `CMakeSettings.json` 以建立自訂組態。下列範例顯示範例組態，可供您作為作業起點：
 

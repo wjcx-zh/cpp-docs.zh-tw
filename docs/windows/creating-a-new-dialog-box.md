@@ -14,19 +14,19 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: c5f026683881ba8e608bd00089879e0e2a7b4af2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223567"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344213"
 ---
 # <a name="how-to-create-a-dialog-box-c"></a>HOW TO：建立對話方塊 (C++)
 
 大小與位置C++對話方塊中的位置和中，控制項的大小，會以對話方塊單位。 個別控制項和對話方塊中的值會出現在右下角的 Visual Studio 狀態列上選取它們。
 
 > [!NOTE]
-> 如果您的專案尚未包含 .rc 檔，請參閱 [建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
+> 如果您的專案尚未包含.rc 檔，請參閱[建立新的資源指令碼檔](../windows/how-to-create-a-resource-script-file.md)。
 
 ## <a name="how-to"></a>如何
 
@@ -38,7 +38,7 @@ ms.locfileid: "62223567"
 
 1. 在 **加入資源**對話方塊中，選取**對話方塊**中**資源類型**清單，然後選擇**新增**。
 
-   如果一個加號 (**+**) 旁邊會出現**對話方塊**資源類型，表示對話方塊範本都可用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
+   如果一個加號 ( **+** ) 旁邊會出現**對話方塊**資源類型，表示對話方塊範本都可用。 選取加號，展開 範本清單中的，選取範本，然後選擇**新增**。
 
    在中，開啟 [新增] 對話方塊**對話方塊編輯器**。
 
@@ -48,7 +48,7 @@ ms.locfileid: "62223567"
 
 您可以建立使用者無法結束的執行階段對話方塊。 這種對話方塊對登入以及鎖定應用程式或文件非常實用。
 
-1. 在對話方塊的 [屬性]  窗格中，將 [系統功能表]  屬性設為 [false] 。
+1. 在對話方塊的 [屬性]  窗格中，將 [系統功能表]  屬性設為 [false]  。
 
    此設定會停用對話方塊系統功能表並**關閉** 按鈕。
 

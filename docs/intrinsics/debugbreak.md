@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 8e5d53998b6ca37d2f60e9b86aed8df07c256ded
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 97932dfe0e187a13b72ae5fe70d761224721c3ff
+ms.sourcegitcommit: 1acb6755e11379026a96f63facac4d33f4dc47ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708179"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314248"
 ---
 # <a name="debugbreak"></a>__debugbreak
 
@@ -40,7 +40,7 @@ void __debugbreak();
 > [!NOTE]
 >  進行編譯時 **/clr**，函式，包含`__debugbreak`會編譯為 MSIL。 `asm int 3` 會導致函式編譯為原生。 如需詳細資訊，請參閱 < [__asm](../assembler/inline/asm.md)。
 
-例如: 
+例如:
 
 ```
 main() {
@@ -59,6 +59,8 @@ main() {
 ```
 
 (在 x86 電腦上)。
+
+ARM64，在`__debugbreak`內建函式編譯成指示`brk #0xF000`。
 
 此常式僅可作為內建常式使用。
 

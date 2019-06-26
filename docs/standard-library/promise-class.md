@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 991df549168456112afe27bed6f4991a7ccfb88e
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369952"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400864"
 ---
 # <a name="promise-class"></a>promise 類別
 
-描述「非同步提供者」。
+描述「非同步提供者」  。
 
 ## <a name="syntax"></a>語法
 
@@ -55,7 +55,7 @@ class promise;
 |[set_exception_at_thread_exit](#set_exception_at_thread_exit)|以不可部分完成的方式設定這項承諾的結果以指出例外狀況，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|
 |[set_value](#set_value)|以不可部分完成的方式設定這項承諾的結果以指出值。|
 |[set_value_at_thread_exit](#set_value_at_thread_exit)|以不可部分完成的方式設定這項承諾的結果以指出值，而且只有在目前執行緒中所有執行緒區域物件已終結後 (通常是在執行緒結束) 傳遞通知。|
-|[swap](#swap)|交換這個承諾與指定之承諾物件的「相關聯非同步狀態」。|
+|[swap](#swap)|交換這個承諾與指定之承諾物件的「相關聯非同步狀態」  。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -65,7 +65,7 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-*promise*<br/>
+*promise*
 
 ## <a name="requirements"></a>需求
 
@@ -75,7 +75,7 @@ class promise;
 
 ## <a name="get_future"></a>  promise::get_future
 
-傳回 [future](../standard-library/future-class.md) 物件，它具有和這個承諾相同的「相關聯非同步狀態」。
+傳回 [future](../standard-library/future-class.md) 物件，它具有和這個承諾相同的「相關聯非同步狀態」  。
 
 ```cpp
 future<Ty> get_future();
@@ -89,7 +89,7 @@ future<Ty> get_future();
 
 ## <a name="op_eq"></a>  promise::operator=
 
-從指定的 `promise` 物件轉移「相關聯非同步狀態」。
+從指定的 `promise` 物件轉移「相關聯非同步狀態」  。
 
 ```cpp
 promise& operator=(promise&& Other) noexcept;
@@ -137,7 +137,7 @@ promise(promise&& Other) noexcept;
 
 ## <a name="set_exception"></a>  promise::set_exception
 
-以不可部分完成的方式將例外狀況儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」設定為「就緒」。
+以不可部分完成的方式將例外狀況儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」  設定為「就緒」  。
 
 ```cpp
 void set_exception(exception_ptr Exc);
@@ -171,7 +171,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="remarks"></a>備註
 
-如果 promise 物件沒有「相關聯非同步狀態」，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 物件沒有「相關聯非同步狀態」  ，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。
 
 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#set_exception)、`set_exception_at_thread_exit`、[set_value](#set_value) 或 [set_value_at_thread_exit](#set_value_at_thread_exit)，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。
 
@@ -179,7 +179,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ## <a name="set_value"></a>  promise::set_value
 
-以不可部分完成的方式將值儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」設定為「就緒」。
+以不可部分完成的方式將值儲存為此 `promise` 物件的結果，並將「相關聯非同步狀態」  設定為「就緒」  。
 
 ```cpp
 void promise::set_value(const Ty& Val);
@@ -227,7 +227,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="remarks"></a>備註
 
-如果 promise 物件沒有「相關聯非同步狀態」，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。
+如果 promise 物件沒有「相關聯非同步狀態」  ，則這個方法會擲回含有 `no_state` 錯誤碼的 [future_error](../standard-library/future-error-class.md)。
 
 如果已經針對具有同一個相關聯非同步狀態的 `promise` 物件呼叫 [set_exception](#set_exception)、[set_exception_at_thread_exit](#set_exception_at_thread_exit)、[set_value](#set_value) 或 `set_value_at_thread_exit`，則這個方法會擲回含有 `promise_already_satisfied` 錯誤碼的 `future_error`。
 
@@ -243,7 +243,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ## <a name="swap"></a>  promise::swap
 
-交換這個承諾物件與指定之物件的「相關聯非同步狀態」。
+交換這個承諾物件與指定之物件的「相關聯非同步狀態」  。
 
 ```cpp
 void swap(promise& Other) noexcept;

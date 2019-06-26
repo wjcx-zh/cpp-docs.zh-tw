@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315062"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400473"
 ---
 # <a name="release-builds"></a>發行的組建
 
@@ -25,7 +25,7 @@ ms.locfileid: "62315062"
 [使用偵錯組建檢查記憶體覆寫](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
 [如何：偵錯發行組建](how-to-debug-a-release-build.md)<br/>
 [檢查記憶體覆寫](checking-for-memory-overwrites.md)<br/>
-[最佳化程式碼](optimizing-your-code.md)<br/>
+[最佳化程式碼](optimizing-your-code.md)
 
 ## <a name="see-also"></a>另請參閱
 

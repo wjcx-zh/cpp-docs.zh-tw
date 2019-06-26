@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: a8f13c32593d1cfef690d63d506faf14490de02d
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837261"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400623"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (連結時間產生程式碼)
 
@@ -26,11 +26,11 @@ ms.locfileid: "65837261"
 
 ## <a name="syntax"></a>語法
 
-> **/LTCG**[**:**{**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
 
 這些選項已自 Visual Studio 2015 起淘汰：
 
-> **/LTCG:**{**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
 
 ### <a name="arguments"></a>引數
 
@@ -140,11 +140,11 @@ ms.locfileid: "65837261"
 
 1. 開啟專案的 [ **屬性頁** ] 對話方塊。 請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [組態屬性] > [一般] 屬性頁。
+1. 選取 [組態屬性]   > [一般]  屬性頁。
 
 1. 修改 **整個程式最佳化** 屬性。
 
-您也可以將 **/LTCG** 套用至特定組建，方式是選擇功能表列上的 [組建] > [特性指引最佳化]，或是在專案的捷徑功能表上選擇其中一個特性指引最佳化選項。
+您也可以將 **/LTCG** 套用至特定組建，方式是選擇功能表列上的 [組建]   > [特性指引最佳化]  ，或是在專案的捷徑功能表上選擇其中一個特性指引最佳化選項。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 

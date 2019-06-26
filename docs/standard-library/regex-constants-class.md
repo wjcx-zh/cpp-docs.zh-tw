@@ -82,14 +82,14 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b657dbc5ae537e15f6638ffbd3594cd52b644f3b
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369562"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400784"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants namespace
+# <a name="regexconstants-namespace"></a>regex_constants 命名空間
 
 規則運算式旗標的命名空間。
 
@@ -115,7 +115,7 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
@@ -210,7 +210,7 @@ enum match_flag_type
 
 比對選項包括：
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol` -- 不會將目標序列中的第一個位置視為行首
 

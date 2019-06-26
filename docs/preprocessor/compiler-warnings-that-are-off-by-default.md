@@ -5,12 +5,12 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236552"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400930"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
@@ -159,7 +159,7 @@ ms.locfileid: "62236552"
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup>這項警告是可用以啟動 Visual Studio 2019 RTM。<br/>
 ::: moniker-end
-<sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。<br/>
+<sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376714"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400761"
 ---
 # <a name="menu-commands-c"></a>功能表命令 (C++)
 
@@ -55,7 +55,7 @@ ms.locfileid: "62376714"
 
    - 在功能表標題後面輸入定位鍵 (\t) 的逸出序列，讓所有的功能表快速鍵都靠左對齊。
 
-   - 輸入輔助按鍵的名稱 (**Ctrl**， **Alt**，或**Shift**) 後面接著加號 (**+**) 和名稱、 字母，或額外的索引鍵的符號。
+   - 輸入輔助按鍵的名稱 (**Ctrl**， **Alt**，或**Shift**) 後面接著加號 ( **+** ) 和名稱、 字母，或額外的索引鍵的符號。
 
    例如，若要指派**Ctrl**+**O**來**開啟**命令**檔案** 功能表中，您可以修改功能表命令**標題**使它看起來類似下列文字：
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>另請參閱
 
-[功能表編輯器](../windows/menu-editor.md)<br/>
+[功能表編輯器](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

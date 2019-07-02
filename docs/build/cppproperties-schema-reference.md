@@ -3,12 +3,12 @@ title: CppProperties.json 結構描述參考
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 8432b72deaef99ee20147505030cbc8a9a270869
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: cf5cd964068ad2e3aeeaf1e057c9bf407f4985f5
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344409"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516371"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>CppProperties.json 結構描述參考
 
@@ -264,7 +264,7 @@ Visual Studio 提供 x86 及 x64 偵錯及版本的預先定義組態。 根據�
 |-|-|
 |`${workspaceRoot}`| 工作區資料夾的完整路徑|
 |`${projectRoot}`| 指向放置 `CppProperties.json` 資料夾的完整路徑|
-|`${vsInstallDir}`| 執行中的 Visual Studio 執行個體安裝所在資料夾的完整路徑|
+|`${env.vsInstallDir}`| 執行中的 Visual Studio 執行個體安裝所在資料夾的完整路徑|
 
 例如，如果您的專案已加入資料夾，而且也包含 windows.h 和其他常見的標頭，從 Windows SDK，您可能想要更新您`CppProperties.json`以下列的組態檔包含：
 

@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 17d6a1b0685d6981c7df79e76ecc5142083e14c7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975170"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400895"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -345,7 +345,7 @@ __VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。<br/>
 __VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。<br/>
 __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 __VS 2019 16.0__ 表示 Visual Studio 2019 16.0 版 (RTW) 版所支援的功能。<br/>
-__VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。<br/>
+__VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 
 ### <a name="notes"></a>注意
 

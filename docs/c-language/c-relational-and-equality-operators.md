@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149644"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400522"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 關係和等號比較運算子
 
@@ -26,7 +26,7 @@ ms.locfileid: "56149644"
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
 
 *equality-expression*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "56149644"
 
 運算元的類型可能是整數類型、浮點類型或指標類型。 運算元的類型可以不同。 關係運算子會對整數和浮點類型運算元執行一般算術轉換。 此外，您可以使用下列運算元類型組合搭配關係運算子和相等運算子：
 
-- 任何關係運算子或相等運算子的運算元都可以是相同類型的指標。 針對相等運算子 (`==`) 和不等運算子 (`!=`)，比較結果會指出兩種指標是否定址相同的記憶體位置。 針對其他關係運算子 (**\<**、**>**、**\<**= 與 **>**=)，比較結果則會指出物件的兩個記憶體位址所指向的相對位置。 關係運算子只會比較位移。
+- 任何關係運算子或相等運算子的運算元都可以是相同類型的指標。 針對相等運算子 (`==`) 和不等運算子 (`!=`)，比較結果會指出兩種指標是否定址相同的記憶體位置。 針對其他關係運算子 ( **\<** 、 **>** 、 **\<** = 與 **>** =)，比較結果則會指出物件的兩個記憶體位址所指向的相對位置。 關係運算子只會比較位移。
 
    指標比較的定義僅適用於同一物件的部分。 如果指標參考陣列的成員，比較就相當於對應註標的比較。 第一個陣列元素的位址「小於」最後一個元素的位址。 以結構來說，之後宣告的結構成員指標「大於」之前在結構中宣告的成員指標。 相等位的成員指標是相等的。
 

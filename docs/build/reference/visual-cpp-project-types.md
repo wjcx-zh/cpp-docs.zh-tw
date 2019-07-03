@@ -1,6 +1,6 @@
 ---
 title: Visual C++ 專案類型
-ms.date: 11/29/2018
+ms.date: 07/02/2019
 helpviewer_keywords:
 - programs [C++], projects
 - project templates [Visual Studio], C++
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - applications [C++], projects
 - C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: dce96a221804e5538929d63fa3c125a27e7fc36d
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 98f8ea11cce61ca91fbdc8f8afb900a7ba5b42c9
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217769"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552219"
 ---
-# <a name="c-project-templates"></a>C++專案範本
+# <a name="c-project-templates"></a>C++ 專案範本
 
 Visual Studio 專案範本產生原始程式碼檔、 編譯器選項、 功能表、 工具列、 圖示、 參考和`#include`適用於您想要建立的專案類型之陳述式。 Visual Studio 包括各種類型的C++專案範本和精靈的許多提供它們，讓您可以自訂您的專案，當您建立它們。 在您建立專案之後，您就可以立即對其進行建置，並執行應用程式；在您開發應用程式時，間歇地進行建置是一個很好的做法。
 
 > [!NOTE]
-> 您可以使用 C++ 專案範本，來建立 C 語言專案。 在所產生的專案中，尋找副檔名為 .cpp 的檔案，並將其變更為 .c。 然後，在專案 (不適用於方案) 的 [專案屬性]  頁面上，展開 [組態屬性] 、[C/C++]  ，然後選取 [進階] 。 將 [編譯為]  設定變更為 [編譯為 C 程式碼 (/TC)] 。
+> 您可以使用 C++ 專案範本，來建立 C 語言專案。 在所產生的專案中，尋找副檔名為 .cpp 的檔案，並將其變更為 .c。 然後，在專案 (不適用於方案) 的 [專案屬性]  頁面上，展開 [組態屬性]  、[C/C++]  ，然後選取 [進階]  。 將 [編譯為]  設定變更為 [編譯為 C 程式碼 (/TC)]  。
 
 ## <a name="project-templates"></a>專案範本
 
@@ -72,7 +72,7 @@ Visual Studio 中包含的專案範本取決於您已安裝的產品版本和工
 
 如果您將 C++ Windows 通用平台工具元件新增至 Visual Studio 安裝環境，這些專案範本就會新增至 Visual Studio。
 
-如需 C++ 的 Windows 通用應用程式的概觀，請參閱[通用 Windows 應用程式 (C++)](../../windows/universal-windows-apps-cpp.md)。
+如需 C++ 的 Windows 通用應用程式的概觀，請參閱[通用 Windows 應用程式 (C++)](../../cppcx/universal-windows-apps-cpp.md)。
 
 |專案範本|描述|
 |----------------------|-----------------------------|

@@ -1,6 +1,6 @@
 ---
 title: CAccessToken 類別
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 f1_keywords:
 - CAccessToken
 - ATLSECURITY/ATL::CAccessToken
@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d66b126ce5fd6c3da80d2bb4e6322f8180f0b8cf
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503374"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552181"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -283,7 +283,7 @@ bool CreateProcessAsUser(
 以 null 終止的字串，指定要執行的命令列的指標。
 
 *pProcessInformation*<br/>
-指標[PROCESS_INFORMATION](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_process_information)接收新的處理序的識別資訊的結構。
+指標[PROCESS_INFORMATION 結構](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)接收新的處理序的識別資訊。
 
 *pStartupInfo*<br/>
 指標[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)結構，指定新的處理序的主視窗的顯示方式。

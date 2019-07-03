@@ -15,7 +15,7 @@ ms.locfileid: "50620281"
 ---
 # <a name="language-strings"></a>語言字串
 
-[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 與 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx) \(英文\)。 語言字串可以是支援語言清單的「語言」和「語言標記」欄中的任何值。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/desktop/intl/nls--name-based-apis-sample)。
+[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) 與 [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) 函式可以在不使用 Unicode 字碼頁的作業系統上，使用由 Windows NLS API 所支援的語言。 如需依作業系統版本分類的支援語言清單，請參閱＜[MS-LCID]：Windows 語言代碼識別碼 (LCID) 參考＞中的[附錄 A：產品行為](https://msdn.microsoft.com/library/cc233982.aspx) \(英文\)。 語言字串可以是支援語言清單的「語言」  和「語言標記」  欄中的任何值。 如需會列舉可用地區設定名稱與相關值之程式碼的範例，請參閱 [NLS：名稱型 API 範例](/windows/desktop/intl/nls--name-based-apis-sample)。
 
 ## <a name="additional-supported-language-strings"></a>其他支援的語言字串
 
@@ -23,9 +23,9 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 
 |語言字串|對等的地區設定名稱|
 |---------------------|----------------------------|
-|american|zh-TW|
-|american english|zh-TW|
-|american-english|zh-TW|
+|american|en-US|
+|american english|en-US|
+|american-english|en-US|
 |australian|en-AU|
 |belgian|nl-BE|
 |canadian|en-CA|
@@ -37,7 +37,7 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|zh-TW|
+|english-american|en-US|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -48,8 +48,8 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|zh-TW|
-|english-usa|zh-TW|
+|english-us|en-US|
+|english-usa|en-US|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -86,8 +86,8 @@ Microsoft C 執行階段程式庫實作也支援下列語言字串：
 |swedish-finland|sv-FI|
 |swiss|de-CH|
 |uk|en-GB|
-|us|zh-TW|
-|usa|zh-TW|
+|us|en-US|
+|usa|en-US|
 
 ## <a name="see-also"></a>另請參閱
 

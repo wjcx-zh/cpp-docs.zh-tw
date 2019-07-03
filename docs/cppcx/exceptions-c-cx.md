@@ -1,13 +1,13 @@
 ---
 title: 例外狀況 (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301522"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552173"
 ---
 # <a name="exceptions-ccx"></a>例外狀況 (C++/CX)
 
@@ -63,7 +63,7 @@ C++/CX 支援標準代表一般 HRESULT 錯誤的例外狀況的集合。 每個
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected 事件
 
-在 Windows 8.1 中，您可以訂閱以[unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)靜態事件，可讓您存取即將使處理序當機的未處理錯誤。 不論錯誤源自何處，它都會以透過事件引數傳入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 物件形式，到達這個處理常式。 當您針對物件呼叫 `Propagate` 時，它會建立及擲回對應至錯誤代碼類型的 `Platform::*Exception` 。 在 Catch 區塊，您可以視需要儲存使用者狀態，然後透過呼叫 `throw`允許處理序結束，或是執行某個動作，讓程式回到已知狀態。 下列範例示範基本模式：
+在 Windows 8.1 中，您可以訂閱以[unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected)靜態事件，可讓您存取即將使處理序當機的未處理錯誤。 不論錯誤源自何處，它都會以透過事件引數傳入的 [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) 物件形式，到達這個處理常式。 當您針對物件呼叫 `Propagate` 時，它會建立及擲回對應至錯誤代碼類型的 `Platform::*Exception` 。 在 Catch 區塊，您可以視需要儲存使用者狀態，然後透過呼叫 `throw`允許處理序結束，或是執行某個動作，讓程式回到已知狀態。 下列範例示範基本模式：
 
 在 app.xaml.h:
 

@@ -1,20 +1,20 @@
 ---
 title: PgoAutoSweep
-ms.date: 03/14/2018
+ms.date: 07/02/2019
 f1_keywords:
 - PgoAutoSweep
 - PogoAutoSweepA
 - PogoAutoSweepW
-ms.openlocfilehash: 2d9804e5ce90663d44ac389ab4f71d10290e6470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57bcd1b2e9f0a3312867c4373fd1e50bcf91576e
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295329"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552249"
 ---
 # <a name="pgoautosweep"></a>PgoAutoSweep
 
-`PgoAutoSweep` 將目前的設定檔計數器資訊儲存至檔案，並再重設計數器。 在訓練，以從執行中的程式中寫入.pgc 檔供稍後使用最佳化組建中的所有設定檔資料的特性指引最佳化期間使用函式。
+`PgoAutoSweep` 將目前的設定檔計數器資訊儲存至檔案，並再重設計數器。 在訓練，以從執行中的程式來撰寫設定檔的所有資料的特性指引最佳化期間使用函式`.pgc`供稍後使用最佳化組建中的檔案。
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 ### <a name="parameters"></a>參數
 
 *name*<br/>
-已儲存的.pgc 檔識別字串。
+已儲存的識別字串`.pgc`檔案。
 
 ## <a name="remarks"></a>備註
 
@@ -34,11 +34,11 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 已儲存的設定檔計數器資料放在名為*base_name*-*名稱*！*值*.pgc，其中*base_name*是可執行檔的主檔名*名稱*參數傳遞至`PgoAutoSweep`，並*值*是唯一的值，通常是單純遞增數字，以防止檔案名稱衝突。
 
-所建立的.pgc 檔案`PgoAutoSweep`必須合併的.pgd 檔，用來建立最佳化的可執行檔。 您可以使用[pgomgr](pgomgr.md)命令來進行合併。
+`.pgc`所建立的檔案`PgoAutoSweep`必須合併到`.pgd`用來建立最佳化的可執行檔的檔案。 您可以使用[pgomgr](pgomgr.md)命令來進行合併。
 
-您可以傳遞合併的.pgd 檔的名稱給連結器最佳化在建置期間使用**PGD =**_filename_引數[/USEPROFILE](reference/useprofile.md)連結器選項，或使用已被取代 **/PGD**連結器選項。 如果您合併的.pgc 檔案檔案名*base_name*.pgd，您不需要在命令列上指定檔名，因為依預設，連結器會挑選出這個檔案名稱。
+您可以傳遞的合併名稱`.pgd`檔案，以最佳化在建置期間，使用連結器**PGD =** _filename_引數[/USEPROFILE](reference/useprofile.md)連結器選項，或使用已被取代 **/PGD**連結器選項。 如果您合併`.pgc`到名為檔案的檔案*base_name*.pgd，您不需要在命令列上指定檔名，因為依預設，連結器會挑選出這個檔案名稱。
 
-`PgoAutoSweep`函式可讓您維護的執行緒安全的設定建立時指定的已檢測的組建。 如果您使用預設設定，或指定**NOEXACT**引數[/GENPROFILE 或 /FASTGENPROFILE]()連結器選項，呼叫`PgoAutoSweep`不具備執行緒安全。 **精確**引數會建立執行緒安全且更精確，但速度較慢、 已檢測的可執行檔。
+`PgoAutoSweep`函式可讓您維護的執行緒安全的設定建立時指定的已檢測的組建。 如果您使用預設設定，或指定**NOEXACT**引數[/GENPROFILE 或 /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)連結器選項，呼叫`PgoAutoSweep`不具備執行緒安全。 **精確**引數會建立執行緒安全且更精確，但速度較慢、 已檢測的可執行檔。
 
 ## <a name="requirements"></a>需求
 
@@ -50,7 +50,7 @@ void PgoAutoSweep(const wchar_t* name); // UNICODE
 
 ## <a name="example"></a>範例
 
-以下範例使用`PgoAutoSweep`建立兩個。在執行期間不同時間點的 PGC 檔案。 第一個包含描述執行階段行為，直到資料`count`等於 3，而第二個包含之前終止應用程式的這個時間點之後所收集的資料。
+以下範例使用`PgoAutoSweep`建立兩個`.pgc`檔案在執行期間不同時間點。 第一個包含描述執行階段行為，直到資料`count`等於 3，而第二個包含之前終止應用程式的這個時間點之後所收集的資料。
 
 ```cpp
 // pgoautosweep.cpp

@@ -3,12 +3,12 @@ title: 在 Visual Studio 中部署及執行您的 C++ Linux 專案以及針對�
 description: 描述如何在 Visual Studio 中，從 Linux C++ 專案中在遠端目標上進行程式碼編譯、執行和偵錯。
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821629"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042759"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>部署、執行和偵錯 Linux 專案
 
@@ -22,7 +22,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 16.1 版**：您能夠以不同 Linux 系統為目標來進行偵錯和建置。 請在 [一般]  屬性頁上指定組建電腦，並在 [偵錯]  屬性頁上指定偵錯電腦。
+**Visual Studio 2019 16.1 版**：您能夠以不同 Linux 系統為目標來進行偵錯和建置。 例如，以 IoT 案例為目標時，您可以在 x64 上交叉編譯並部署到 ARM 裝置。 如需詳細資訊，請參閱本文稍後的[針對建置與偵錯指定不同的電腦](#separate_build_debug)。
 
 ::: moniker-end
 
@@ -35,8 +35,6 @@ Visual Studio 2017 及更新版本支援 Linux。
 ## <a name="debug-your-linux-project"></a>對 Linux 專案進行偵錯
 
 1. 在 [偵錯]  屬性頁面中選取偵錯模式。
-
-   
    
    ::: moniker range="vs-2019"
 
@@ -94,15 +92,19 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ![Linux 主控台視窗](media/consolewindow.png)
 
-## <a name="configure-other-debugging-options"></a>設定其他偵錯選項
+## <a name="configure-other-debugging-options-msbuild-based-projects"></a>設定其他偵錯選項 (MSBuild 型專案)
 
 - 使用專案 [偵錯]  屬性頁中的 [程式引數]  項目，即可將命令列引數傳遞至可執行檔。
 
    ![程式引數](media/settings_programarguments.png)
 
-- 使用 [其他偵錯工具命令]  項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以使用 **handle** 命令來進行這項作業。  如上所示將下列項目新增至 [其他偵錯工具命令]  項目：
+- 使用 [其他偵錯工具命令]  項目，可以將特定偵錯工具選項傳遞至 GDB。  例如，您可能想要忽略 SIGILL (不合法指令) 訊號。  您可以將下列項目新增至 [其他偵錯工具命令]  項目 (如上所示)，以便使用 **handle** 命令達成此目的：
 
    `handle SIGILL nostop noprint`
+
+## <a name="configure-other-debugging-options-cmake-projects"></a>設定其他偵錯選項 (CMake 專案)
+
+您可以在 launch.vs.json 檔案中，為 CMake 專案指定其他命令列引數。 如需詳細資訊，請參閱[為 CMake 專案偵錯](cmake-linux-project.md#debug_cmake_project)
 
 ## <a name="debug-with-attach-to-process"></a>使用 [附加至處理序] 進行偵錯
 
@@ -124,6 +126,72 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 ```
 
 **AttachOptionsForConnection** 具有大部分您可能需要的屬性。 上述範例示範如何指定要用來搜尋其他 .so 程式庫的位置。 子元素 **ServerOptions** 可讓您改為附加至 gdbserver 的遠端程序。 若要這樣做，您需要使用符號指定本機 gdb 用戶端 (隨附於 Visual Studio 2017 的用戶端，如上所示) 和二進位檔的本機複本。 **SetupCommands** 元素可讓您直接傳遞至 gdb 命令。 您可以在 GitHub 上找到 [LaunchOptions.xsd 結構描述](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) 的所有可用選項。
+
+::: moniker range="vs-2019"
+
+## <a name="separate_build_debug"></a> 針對建置與偵錯指定不同的電腦
+
+在 Visual Studio 2019 16.1 版中，您可以將您的遠端組建電腦與遠端偵錯電腦分開，以便用於 MSBuild 型 Linux 專案和以遠端 Linux 電腦為目標的 CMake 專案。 例如，以 IoT 案例為目標時，您現在可以在 x64 上交叉編譯並部署到 ARM 裝置。
+
+### <a name="msbuild-based-projects"></a>MSBuild 型專案
+
+根據預設，遠端偵錯電腦與遠端組建電腦 ([組態屬性]   > [一般]   > [遠端組建電腦]  ) 相同。 若要指定新的遠端偵錯電腦，以滑鼠右鍵按一下 [方案總管]  中的專案，並移至 [組態屬性]   > [偵錯]   > [遠端偵錯電腦]  。  
+
+![Linux 遠端偵錯電腦](media/linux-remote-debug-machine.png)
+
+[遠端偵錯電腦]  的下拉式功能表會填入所有已建立的遠端連線。 若要新增遠端連線，請瀏覽至 [工具]   > [選項]   > [跨平台]   > [連線管理員]  ，或在 [快速啟動]  中搜尋「連線管理員」。 您也可以在專案的 [屬性頁] 中指定新的遠端部署目錄 ([組態屬性]   > [一般]   > [遠端部署目錄]  )。
+
+根據預設，只有處理序偵錯所需的檔案會部署到遠端偵錯電腦。 您可以使用 [方案總管]  設定部署到遠端偵錯電腦的原始程式檔。 當您按一下原始程式檔時，您會看到 [方案總管] 正下方的 [檔案內容] 預覽。
+
+![Linux 可部署的檔案](media/linux-deployable-content.png)
+
+[內容]  屬性會指定是否將檔案部署到遠端偵錯電腦。 若要完全停用部署，請瀏覽至 [屬性頁]   > [組態管理員]  ，然後針對所需的組態，取消核取 [部署]  。
+
+在某些情況下，您可能需要更充分掌控您的專案部署。 例如，您想要部署的某些檔案可能是您的解決方案之外，或您想要針對每個檔案或目錄自訂您的遠端部署目錄。 在這些情況下，將下列程式碼區塊附加至 .vcxproj 檔案，並以實際的檔案名稱取代 "example.cpp"：
+
+```xml
+
+<ItemGroup>
+   <RemoteDeploy Include="__example.cpp">
+<!-- This is the source Linux machine, can be empty if DeploymentType is LocalRemote -->
+      <SourceMachine>$(RemoteTarget)</SourceMachine>
+      <TargetMachine>$(RemoteDebuggingTarget)</TargetMachine>
+      <SourcePath>~/example.cpp</SourcePath>
+      <TargetPath>~/example.cpp</TargetPath>
+<!-- DeploymentType can be LocalRemote, in which case SourceMachine will be empty and SourcePath is a local file on Windows -->
+      <DeploymentType>RemoteRemote</DeploymentType>
+<!-- Indicates whether the deployment contains executables -->
+      <Executable>true</Executable>
+   </RemoteDeploy>
+</ItemGroup>
+```
+
+### <a name="cmake-projects"></a>CMake 專案
+
+針對以遠端 Linux 電腦為目標的 CMake 專案，您可以在 launch.vs.json 中指定新的遠端偵錯電腦。 根據預設，"remoteMachineName" 的值會與 CMakeSettings.json 中，對應至您遠端組建電腦的 "remoteMachineName" 屬性同步處理。 這些屬性不再需要比對，而且 launch.vs.json 中的 "remoteMachineName" 值將會指定用於部署和偵錯的遠端電腦。
+
+![CMake 遠端偵錯電腦](media/cmake-remote-debug-machine.png)
+
+IntelliSense 將會建議所有已建立之遠端連線的所有清單。 若要新增遠端連線，請瀏覽至 [工具]   > [選項]   > [跨平台]   > [連線管理員]  ，或在 [快速啟動]  中搜尋「連線管理員」。
+
+如果您想要完整控制部署，可以將下列程式碼區塊附加到 launch.vs.json 檔案。 請記得以實際的值取代預留位置值：
+
+```json
+
+"disableDeploy": false,
+"deployDirectory": "~\foo",
+"deploy" : [
+   {
+      "sourceMachine": "127.0.0.1 (username=example1, port=22, authentication=Password)",
+      "targetMachine": "192.0.0.1 (username=example2, port=22, authentication=Password)",
+      "sourcePath": "~/example.cpp",
+      "targetPath": "~/example.cpp",
+      "executable": "false"
+   }
+]
+
+```
+::: moniker-end
 
 ## <a name="next-steps"></a>後續步驟
 

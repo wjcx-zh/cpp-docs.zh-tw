@@ -93,6 +93,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
           href: build/get-started-linux-cmake.md
+        - name: CMake 專案中的 Clang/LLVM
+          href: build/clang-support-cmake.md
         - name: 設定 Linux CMake 專案
           href: build/../linux/cmake-linux-project.md
         - name: 自訂 CMake 建置設定

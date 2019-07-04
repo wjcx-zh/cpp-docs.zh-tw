@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane 類別
-ms.date: 11/19/2018
+ms.date: 07/02/2019
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeb24a0a02d1a084c83e280705344a9e5c505724
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218657"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552276"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane 類別
 
@@ -294,7 +294,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::RemovePage](#removepage)|從工作窗格移除指定的頁面。|
 |[CMFCTasksPane::RemoveTask](#removetask)|從工作群組中移除工作。|
 |[CMFCTasksPane::SaveState](#savestate)|(覆寫[cdockablepane:: Savestate](cdockablepane-class.md)。)|
-|[CMFCTasksPane::Serialize](#serialize)|(覆寫[cdockablepane:: Serialize]()。)|
+|[CMFCTasksPane::Serialize](#serialize)|(覆寫[cdockablepane:: Serialize](cdockablepane-class.md)。)|
 |[CMFCTasksPane::SetActivePage](#setactivepage)|啟動工作窗格中指定的頁面。|
 |[CMFCTasksPane::SetCaption](#setcaption)|設定工作窗格的標題名稱。|
 |[CMFCTasksPane::SetGroupCaptionHeight](#setgroupcaptionheight)|設定群組標題的高度。|
@@ -340,7 +340,7 @@ class CMFCTasksPane : public CDockablePane
 
 1. 內嵌 `CMFCTasksPane` 物件到主框架視窗類別。
 
-1. 處理 WM_CREATE 訊息時，呼叫`Create`方法。 您可以使用一般[CControlBar](../../mfc/reference/ccontrolbar-class.md)樣式。 如需詳細資訊，請參閱`CControlBar::Create`。
+1. 處理 WM_CREATE 訊息時，呼叫`Create`方法。 您可以使用一般[CControlBar](../../mfc/reference/ccontrolbar-class.md)樣式。 如需詳細資訊，請參閱 `CControlBar::Create`。
 
 1. 呼叫[cmfctaskspane:: Addgroup](#addgroup)方法來加入不同的群組。
 

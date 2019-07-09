@@ -1,13 +1,13 @@
 ---
 title: 從 2003 到 2015 的 Visual C++ 新功能
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449803"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552205"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>從 2003 到 2015 的 Visual C++ 新功能
 
@@ -1682,7 +1682,7 @@ MSVC 支援下列 ISO C++11 語言功能：
 ### <a name="windows-runtime-app-development-support"></a>Windows 執行階段應用程式開發支援
 
 - **原生 XAML UI 模型**。 對於 Windows 執行階段應用程式，您可以使用新的原生 XAML UI 模型。
-- **Visual C++ 元件延伸模組**。 這些延伸模組可精簡 Windows 執行階段物件的使用，而這些物件是 Windows 執行階段應用程式的必要部分。 如需詳細資訊，請參閱[使用 C++ 的 Windows 執行階段應用程式藍圖](../windows/universal-windows-apps-cpp.md)和 [Visual C++ 語言參考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Visual C++ 元件延伸模組**。 這些延伸模組可精簡 Windows 執行階段物件的使用，而這些物件是 Windows 執行階段應用程式的必要部分。 如需詳細資訊，請參閱[使用 C++ 的 Windows 執行階段應用程式藍圖](../cppcx/universal-windows-apps-cpp.md)和 [Visual C++ 語言參考 (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **DirectX 遊戲**。 您可以使用 Windows 執行階段應用程式的全新 DirectX 支援來開發引人入勝的遊戲。
 - **XAML/DirectX Interop**。 同時使用 XAML 和 DirectX 的 Windows 執行階段應用程式現在可以有效率地共同運作。
 - **Windows 執行階段元件 DLL 開發**。 元件 DLL 開發可讓您延伸 Windows 執行階段環境。

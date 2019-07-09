@@ -1,6 +1,6 @@
 ---
 title: localtime_s、_localtime32_s、_localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157267"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693419"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -84,9 +84,9 @@ errno_t _localtime64_s(
 
 ## <a name="remarks"></a>備註
 
-**_Localtime32_s**函式將儲存為時間轉換成[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在結構中的型別[tm](../../c-runtime-library/standard-types.md)。 **長**值*sourceTime*代表從午夜開始經過的秒數 (00: 00:00) 1970 年 1 月 1 日 UTC。 這個值通常取自[時間](time-time32-time64.md)函式。
+**Localtime_s**函式將儲存為時間轉換成[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在結構中的型別[tm](../../c-runtime-library/standard-types.md)。 **Time_t**值*sourceTime*代表從午夜開始經過的秒數 (00: 00:00) 1970 年 1 月 1 日 UTC。 這個值通常取自[時間](time-time32-time64.md)函式。
 
-**_localtime32_s**更正的當地時區，如果使用者第一次設定全域環境變數**TZ**。 當**TZ**設定，其他三個環境變數 (**_timezone**， **_daylight**，以及 **_tzname**) 也會自動設定。 如果**TZ**未設定變數，則**localtime32_s**嘗試使用 [控制台] 中的日期/時間應用程式中指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能並不屬於 ANSI 標準定義的**localtime**。
+**localtime_s**更正的當地時區，如果使用者第一次設定全域環境變數**TZ**。 當**TZ**設定，其他三個環境變數 ( **_timezone**， **_daylight**，以及 **_tzname**) 也會自動設定。 如果**TZ**未設定變數，則**localtime_s**嘗試使用 [控制台] 中的日期/時間應用程式中指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能並不屬於 ANSI 標準定義的**localtime**。
 
 > [!NOTE]
 > 目標環境應該嘗試判斷日光節約時間是否生效。

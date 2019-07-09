@@ -3,12 +3,12 @@ title: 依字母順序排列的編譯器選項
 ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7e69aa501dd0a7dbf2af51b6fa2c5bf4339eb416
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221771"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693434"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -158,6 +158,7 @@ ms.locfileid: "65221771"
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱 (僅適用於 x86)。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
+|[/Zo](zo-enhance-optimized-debugging.md)|產生最佳化的程式碼的增強型偵錯資訊。|
 |[/Zp](zp-struct-member-alignment.md)|封裝結構成員。|
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，在 Windows 執行階段上執行。|

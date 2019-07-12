@@ -3,12 +3,12 @@ title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
 ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 0df793b23aaec57835774252eeac21b092f8a9e9
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221400"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861013"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
@@ -44,15 +44,10 @@ ms.locfileid: "65221400"
 
     原始碼的位置通常會預設為 \Users\\\<使用者名稱 > 將會自動建立 \source\repos 和新的資料夾。
 
-1. 按一下 [ **[確定]** 並**ATL 專案**精靈] 隨即開啟。
+1. 在 Visual Studio 2019，接受預設值然後按**確定**。 
+   在 Visual Studio 2017 中，按一下 **[確定]** 來開啟**ATL 專案**精靈。 按一下 **應用程式設定**若要查看可用的選項。 由於這個專案會建立一個控制項，而且必須是同處理序伺服器，保留**應用程式類型**做為 DLL。 按一下 [確定 **Deploying Office Solutions**]。
 
-1. 按一下 **應用程式設定**若要查看可用的選項。
-
-1. 如您所建立控制項，控制項必須是同處理序伺服器，讓**應用程式類型**做為 DLL。
-
-1. 其他選項保留其預設值，然後按**確定**。
-
-**ATL 專案精靈**會產生數個檔案來建立專案。 您可以檢視中的這些檔案**方案總管**藉由展開`Polygon`物件。 以下列出的檔案。
+Visual Studio 會產生數個檔案建立專案。 您可以檢視中的這些檔案**方案總管**藉由展開`Polygon`物件。 以下列出的檔案。
 
 |檔案|描述|
 |----------|-----------------|
@@ -66,13 +61,13 @@ ms.locfileid: "65221400"
 |stdafx.cpp|將檔案`#include`ATL 實作檔案。|
 |stdafx.h|將檔案`#include`ATL 標頭檔。|
 
-1. 在 **方案總管**，以滑鼠右鍵按一下`Polygon`專案。
+1. 在 [方案總管]  中，以滑鼠右鍵按一下 `Polygon` 專案。
 
 1. 在捷徑功能表，按一下 **屬性**。
 
 1. 按一下 **連結器**。 變更**每個 UserRedirection**選項設定為**是**。
 
-1. 按一下 [確定] 。
+1. 按一下 [確定]  。
 
 在下一個步驟中，您會將控制項加入您的專案。
 

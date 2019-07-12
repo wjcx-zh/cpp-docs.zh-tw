@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 50558e6959789dddc8223804394a0b242f793de5
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: b846a065b02a73bfca8f548097101f73008b33d3
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504245"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861055"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1121,7 +1121,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnCtlColor](#onctlcolor)|即將繪製控制項時，如果`CWnd` 是控制項的父代則呼叫。|
 |[CWnd::OnDeadChar](#ondeadchar)|當按鍵轉譯為非系統無效字元 (例如強調符號) 時呼叫。|
 |[CWnd::OnDeleteItem](#ondeleteitem)|當主控描繪子清單方塊或下拉式方塊損毀，或從控制項移除項目時呼叫。|
-|[CWnd::OnDestroy](#ondestroy)|`CWnd` 正在損毀時呼叫。|
+|[CWnd::OnDestroy](#ondestroy)|          `CWnd` 正在損毀時呼叫。|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|當透過呼叫 Windows 清空剪貼簿時，呼叫[EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard)函式。|
 |[CWnd::OnDeviceChange](#ondevicechange)|將裝置或電腦的硬體組態變更通知應用程式或裝置驅動程式。|
 |[CWnd::OnDevModeChange](#ondevmodechange)|當使用者變更裝置模式設定時，針對所有最上層視窗呼叫。|
@@ -1273,11 +1273,11 @@ class CWnd : public CCmdTarget
 
 ## <a name="remarks"></a>備註
 
-`CWnd` 物件不同於 Windows 視窗，但兩者緊密連結。 `CWnd` 物件是由 `CWnd` 建構函式和解構函式所建立或終結。 [Windows] 視窗中，相反地，是 Windows 所建立的內部資料結構`Create`成員函式和終結`CWnd`虛擬解構函式。 [DestroyWindow](#destroywindow)函式會終結 Windows 視窗而不會終結物件。
+          `CWnd` 物件不同於 Windows 視窗，但兩者緊密連結。           `CWnd` 物件是由 `CWnd` 建構函式和解構函式所建立或終結。 [Windows] 視窗中，相反地，是 Windows 所建立的內部資料結構`Create`成員函式和終結`CWnd`虛擬解構函式。 [DestroyWindow](#destroywindow)函式會終結 Windows 視窗而不會終結物件。
 
 `CWnd`類別和訊息對應機制會隱藏`WndProc`函式。 透過適當的訊息對應會自動路由傳送連入的 Windows 通知訊息**上**<em>訊息</em>`CWnd`成員函式。 您覆寫**上**<em>訊息</em>成員函式，以處理成員的衍生類別中的特定訊息。
 
-`CWnd` 類別也可讓您建立應用程式的 Windows 子視窗。 自 `CWnd` 衍生類別，然後將成員變數加入至衍生類別以儲存應用程式的特定資料。 實作訊息處理常式成員函式，和衍生類別中對應的訊息，以指定訊息被導向至視窗時會發生什麼事。
+          `CWnd` 類別也可讓您建立應用程式的 Windows 子視窗。 自 `CWnd` 衍生類別，然後將成員變數加入至衍生類別以儲存應用程式的特定資料。 實作訊息處理常式成員函式，和衍生類別中對應的訊息，以指定訊息被導向至視窗時會發生什麼事。
 
 您在兩個步驟中建立子視窗。 首先，呼叫建構函式`CWnd`來建構`CWnd`物件，然後呼叫[建立](#create)成員函式，來建立子視窗，並將其附加至`CWnd`物件。
 
@@ -1606,9 +1606,7 @@ void BindDefaultProperty(
 
 `BindDefaultProperty` 可能用於下列內容：
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#2](../../mfc/reference/codesnippet/cpp/cwnd-class_7.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bindproperty"></a>  CWnd::BindProperty
 
@@ -1636,9 +1634,7 @@ void BindProperty(
 
 `BindProperty` 可能用於下列內容：
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#4](../../mfc/reference/codesnippet/cpp/cwnd-class_9.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
@@ -1652,7 +1648,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 會啟用快顯、最上層和 MDI 子視窗。 需使用 `BringWindowToTop` 成員函式，才能顯示出重疊視窗部分或完全遮住的視窗。
 
-此函式只會呼叫 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](https://devblogs.microsoft.com/oldnewthing/?p=33263)
+此函式只會呼叫 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式來變更視窗的疊置順序位置。           `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊，請參閱[between HWND_TOP 和 hwnd_topmost 有何不同的差異為何](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>範例
 
@@ -2610,7 +2606,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 ### <a name="parameters"></a>參數
 
 *pDX*<br/>
-`CDataExchange` 物件的指標。
+          `CDataExchange` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -3194,7 +3190,7 @@ Windows 視窗的 HWND。
 
 ### <a name="return-value"></a>傳回值
 
-`CWnd` 物件的指標。
+          `CWnd` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -4065,9 +4061,7 @@ IUnknown* GetDSCCursor();
 
 ### <a name="example"></a>範例
 
-[!code-cpp[NVC_MFC_AxDataBinding#1](../../mfc/reference/codesnippet/cpp/cwnd-class_6.cpp)]
 [!code-cpp[NVC_MFC_AxDataBinding#5](../../mfc/reference/codesnippet/cpp/cwnd-class_37.cpp)]
-[!code-cpp[NVC_MFC_AxDataBinding#3](../../mfc/reference/codesnippet/cpp/cwnd-class_8.cpp)]
 
 ##  <a name="getdynamiclayout"></a>  CWnd::GetDynamicLayout
 
@@ -4404,7 +4398,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>傳回值
 
-`CWnd` 物件的指標。
+          `CWnd` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -4454,7 +4448,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>傳回值
 
-`CWnd` 物件的指標。 如果 `CWnd` 物件沒有附加至控制代碼，會建立並附加暫存 `CWnd` 物件。 該指標可能是暫時性的，因此不應該儲存供日後使用。
+          `CWnd` 物件的指標。 如果 `CWnd` 物件沒有附加至控制代碼，會建立並附加暫存 `CWnd` 物件。 該指標可能是暫時性的，因此不應該儲存供日後使用。
 
 ### <a name="remarks"></a>備註
 
@@ -5969,7 +5963,7 @@ afx_msg void OnAppCommand(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pWnd*|[in]指標`CWnd`物件，表示的視窗中，使用者已按下命令按鈕或按 command 機碼的位置。 這個視窗可以是子視窗的視窗接收訊息。|
 |*nCmd*|[in]表示應用程式的命令。 如需可能值的清單，請參閱底下的命令*cmd*一節*lParam*參數[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)。|
@@ -6257,7 +6251,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*dwColorizationColor*|[in]指定新的顏色標示色彩。<br /><br /> 色彩格式是十六進位數字的表單 0xAARRGGBB 中，其中的四個元件的每個範圍都是從 0x00 到 0xFF。 AA 元件是 alpha 值 RR 是紅色的色彩、 GG 為綠色，，BB 是藍色。|
 |*bOpacity*|[in]如果新的色彩會與不透明度; 混合，則為 TRUE。如果不是，則為 FALSE。|
@@ -7813,7 +7807,7 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pMenu*|[in]指標[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)所在的結構，其中包含滑鼠游標拖放功能表的相關資訊。|
 
@@ -7843,7 +7837,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nPos*|[in]功能表項目時放開滑鼠右按鈕的索引位置。|
 |*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，包含功能表項目。|
@@ -7961,7 +7955,7 @@ afx_msg void OnMouseHover(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。|
 |*point*|[in]A [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件，指定*x*並*y*相對於用戶端區域左上角的游標座標。|
@@ -7998,7 +7992,7 @@ afx_msg void OnMouseHWheel(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nFlags*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 < 訊息參數 > 子標題[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。|
 |*zDelta*|[in]表示旋轉的滾輪時，以表示倍數或部門的 WHEEL_DELTA，這是 120 的距離。 正值表示滾輪旋轉至右側;負值表示滾輪已輪到左邊。|
@@ -8570,7 +8564,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*bIsRendering*|[in]如果已啟用的視窗中中, 非工作區的桌面視窗管理員 (DWM) 呈現，則為 TRUE。如果轉譯已停用，則為 FALSE。|
 
@@ -8594,7 +8588,7 @@ void OnNcXButtonDblClk(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
 |*nButton*|[in]值，如果第一個 Microsoft Intellimouse X 按鈕是按兩下 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按兩下時。|
@@ -8620,7 +8614,7 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nHitTest*|[in]所傳回的點擊測試值[CWnd::DefWindowProc](#defwindowproc)函式的結果處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息。|
 |*nButton*|[in]的值如果按下第一個 X 滑鼠鍵的 XBUTTON1 或 XBUTTON2 如果第二個 X 按鈕按下。|
@@ -8671,7 +8665,7 @@ afx_msg void OnNextMenu(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nKey*|[in]位元組合 (OR) 旗標，表示按下的輔助按鍵。 比方說，MK_CONTROL 旗標表示，按下 CTRL 鍵。<br /><br /> 如需旗標的清單，請參閱中的 < 訊息參數 > 子標題[有關滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。|
 |*lpMdiNextMenu*|[in]指標[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)結構，其中包含 [啟動] 功能表的相關資訊。|
@@ -8729,7 +8723,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pWnd*|[in]指標`CWnd`物件，表示視窗傳送[WM_NOTIFY](/windows/desktop/controls/wm-notify)訊息。<br /><br /> 這個參數是控制項的指標，如果*nCommand*參數則 NF_QUERY 或控制項的父視窗的指標*nCommand*是 NF_REQUERY。|
 |*nCommand*|[in]命令值特製化的 WM_NOTIFY 訊息。 可能值為：<br /><br /> -NF_QUERY-<br />     訊息是查詢來決定是否應該在 WM_NOTIFY 訊息中使用 ANSI 或 Unicode 結構。 此訊息會建立一個控制項，然後在 NF_REQUERY 表單，此訊息的回應期間，從控制項傳送至其父視窗。<br />-NF_REQUERY-<br />     訊息是 NF_QUERY 表單傳送此訊息至其父視窗控制項的要求。 此要求會從父視窗中，傳送，並要求重新查詢在 WM_NOTIFY 訊息中使用的結構類型的相關父控制項。 如果*nCommand*參數是 NF_REQUERY，傳回的值是重新查詢作業的結果。|
@@ -9006,7 +9000,7 @@ afx_msg void OnRawInput(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nInputCode*|[in]表示已在前景應用程式時，是否發生輸入的輸入程式碼。 在任一情況下，應用程式必須呼叫[CWnd::DefWindowProc](#defwindowproc)讓系統可以執行清除作業。<br /><br /> 這個參數可以是下列值之一：<br /><br /> 應用程式處於前景時，就會發生-RIM_INPUT-輸入。<br />應用程式不在前景時，就會發生-RIM_INPUTSINK-輸入。|
 |*hRawInput*|[in]控制代碼[RAWINPUT](/windows/desktop/api/winuser/ns-winuser-tagrawinput)結構，其中包含來自裝置的未經處理輸入。|
@@ -9957,7 +9951,7 @@ afx_msg void OnUniChar(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*nChar*|[in]指定的按鍵的字元碼。|
 |*nRepCnt*|[in]指定目前訊息的重複計數。 值是按鍵輸入是因為使用者按住鍵而 autorepeated 的次數。 如果按鍵輸入會保存夠久的時間，會傳送多則訊息。 不過，不是累計的重複計數。|
@@ -9982,7 +9976,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，代表功能表或子功能表。|
 |*nFlags*|[in]已被終結功能表。 目前，它只能是視窗] 功能表的 [MF_SYSMENU。|
@@ -11911,7 +11905,7 @@ Windows 會在他們的疊置順序，根據畫面上排序在頂端的疊置順
 
 在非最上層視窗可能擁有最上層的視窗中，但反之則不然。 在最上層視窗所擁有的任何視窗 （例如對話方塊） 是本身所做的最上層的視窗，以確保所有擁有 windows 保持其擁有者。
 
-3.1 和更新版本的 Windows 版本，windows 可以移到疊置順序的頂端和藉由設定及其 WS_EX_TOPMOST 樣式那里鎖定。 在這類最上層的視窗會維持停用時，即使其最上層的位置。 例如，選取 WinHelp 最上層命令就會最頂部的 [說明] 視窗和它，然後保持可見，當您返回您的應用程式。
+3\.1 和更新版本的 Windows 版本，windows 可以移到疊置順序的頂端和藉由設定及其 WS_EX_TOPMOST 樣式那里鎖定。 在這類最上層的視窗會維持停用時，即使其最上層的位置。 例如，選取 WinHelp 最上層命令就會最頂部的 [說明] 視窗和它，然後保持可見，當您返回您的應用程式。
 
 若要建立最上層視窗，呼叫`SetWindowPos`具有*pWndInsertAfter*參數等於 **& wndTopMost**，或設定 WS_EX_TOPMOST 樣式，當您建立的視窗。
 

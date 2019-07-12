@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252941"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860983"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -348,7 +348,7 @@ BOOL Create(
 
 下表列出您可以針對指定的值*位置*參數。
 
-|位置|描述|
+|位置|說明|
 |--------------|-----------------|
 |LOCATION_BOTTOM|索引標籤位於底部的索引標籤控制項。|
 |LOCATION_TOP|索引標籤位於控制項上方的索引標籤。|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode*參數可以是下列其中一種`ResizeMode`列舉值。
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |RESIZE_NO|無法調整 索引標籤控制項的大小。|
 |RESIZE_VERT|索引標籤控制項可以調整大小，以垂直方式，但不是水平。|
@@ -1139,6 +1139,5 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [類別](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
 [CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)<br/>
 [CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)

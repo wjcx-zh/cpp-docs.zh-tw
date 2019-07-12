@@ -3,12 +3,12 @@ title: x64 呼叫慣例
 description: 預設的 x64 ABI 的呼叫慣例的詳細資料。
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313609"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861154"
 ---
 # <a name="x64-calling-convention"></a>x64 呼叫慣例
 
@@ -142,12 +142,12 @@ Struct2 func4(int a, double b, int c, float d);
 
 ## <a name="callercallee-saved-registers"></a>呼叫端/被呼叫端儲存的暫存器
 
-暫存器 RAX、 RCX、 RDX、 R8，R9、 R10、 R11 會視為 volatile 和視為必須終結函式呼叫 (除非否則安全-可證明之分析整個程式最佳化 」 等)。
+會註冊 RAX、 RCX、 RDX、 R8，R9、 R10，R11，XMM0 5 和 YMM0 15 和 ZMM0 15 的上方部分會被視為暫時性，並視為必須終結函式呼叫 (除非否則安全-可證明之分析整個程式最佳化 」 等)。 在 AVX512VL，ZMM、 YMM 和 XMM 暫存器 16-31 是變動性。
 
-暫存器 RBX、 RBP、 RDI、 RSI、 RSP、 R12、 R13、 R14 和 R15 會被視為靜態的而且必須儲存和還原函式使用它們。
+暫存器 RBX、 RBP、 RDI、 RSI、 RSP、 R12、 R13、 R14、 R15 和 XMM6 15 會被視為靜態的而且必須儲存和還原函式使用它們。
 
 ## <a name="function-pointers"></a>函式指標
-
+ 
 函式指標是只需標籤的個別函式的指標。 不有任何資料表的函式指標的目錄 (TOC) 需求。
 
 ## <a name="floating-point-support-for-older-code"></a>舊版程式碼的浮點支援

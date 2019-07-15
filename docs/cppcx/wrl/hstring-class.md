@@ -1,6 +1,6 @@
 ---
 title: HString 類別
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894408"
 ---
 # <a name="hstring-class"></a>HString 類別
 
@@ -62,7 +63,7 @@ Windows 執行階段會提供透過字串存取[HSTRING](/windows/desktop/WinRT/
 
 ### <a name="public-constructors"></a>公用建構函式
 
-名稱                                | 描述
+名稱                                | 說明
 ----------------------------------- | -----------------------------------------------------
 [HString::HString](#hstring)        | 初始化 `HString` 類別的新執行個體。
 [HString:: ~ HString](#tilde-hstring) | 終結的目前執行個體`HString`類別。
@@ -76,6 +77,7 @@ Windows 執行階段會提供透過字串存取[HSTRING](/windows/desktop/WinRT/
 [HString::Detach](#detach)               | 解除指定`HString`與其基礎值的物件。
 [HString::Get](#get)                     | 擷取基礎 HSTRING 控制代碼的值。
 [HString::GetAddressOf](#getaddressof)   | 擷取基礎 HSTRING 控制代碼的指標。
+[HString::GetRawBuffer](#getrawbuffer)   | 擷取基礎字串資料的指標。
 [HString::IsValid](#isvalid)             | 指出是否目前`HString`物件是否有效。
 [HString::MakeReference](#makereference) | 建立`HStringReference`從指定的字串參數的物件。
 [HString::Release](#release)             | 會刪除基礎字串值，並初始化目前`HString`為空值的物件。
@@ -181,6 +183,22 @@ HSTRING* GetAddressOf() throw()
 ### <a name="remarks"></a>備註
 
 此作業之後，就會終結基礎 HSTRING 控制代碼的字串值。
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+擷取基礎字串資料的指標。
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>參數
+
+*長度*指標**int**變數會接收資料的長度。
+
+### <a name="return-value"></a>傳回值
+
+A **const**基礎字串資料的指標。
+
 
 ## <a name="hstring"></a>HString::HString
 

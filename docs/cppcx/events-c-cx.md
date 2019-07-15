@@ -1,13 +1,13 @@
 ---
 title: 事件 (C++/CX)
-ms.date: 01/22/2017
+ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 8e7e8616831e66a7f59ed849fc92ef2553aadb5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894459"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -15,7 +15,7 @@ Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用�
 
 ## <a name="consuming-events-in-windows-components"></a>在 Windows 元件中使用事件
 
-Windows 執行階段中的許多元件會公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行您要它唯一的需求是其簽章必須符合如需有關如何建立委派事件處理常式及訂閱事件，請參閱作為委派的簽章[委派](../cppcx/delegates-c-cx.md)。
+Windows 執行階段中的許多元件會公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行您要它唯一的需求是其簽章必須符合被叫用委派簽章。 如需如何建立委派事件處理常式及訂閱事件的詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。
 
 ## <a name="creating-custom-events"></a>建立自訂事件
 

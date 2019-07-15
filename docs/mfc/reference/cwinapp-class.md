@@ -1,6 +1,6 @@
 ---
 title: CWinApp 類別
-ms.date: 11/04/2016
+ms.date: 07/15/2019
 f1_keywords:
 - CWinApp
 - AFXWIN/CWinApp
@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ec6c976b6611563eb95cce1173d7c77c3b5ef0
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894490"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -287,7 +287,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|可讓使用者從 Windows 檔案管理員中開啟資料檔案。|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|載入標準。INI 檔案設定並啟用到最近的檔案清單功能。|
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|指出使用者是否為 （通常使用叫用 SHIFT + F1） 的說明內容模式。|
 |[CWinApp::m_eHelpType](#m_ehelptype)|指定應用程式所使用的說明的類型。|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|決定重新啟動管理員的運作方式的旗標。|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|以毫秒為單位時，自動儲存之間的時間長度。|
@@ -899,7 +899,7 @@ BOOL GetProfileBinary(
 此成員函式不區分大小寫，因此中的字串*lpszSection*並*lpszEntry*參數可能大小寫不同。
 
 > [!NOTE]
-> `GetProfileBinary` 會配置緩衝區，並傳回在其地址\* *ppData*。 呼叫端負責釋放緩衝區使用**delete []**。
+> `GetProfileBinary` 會配置緩衝區，並傳回在其地址\* *ppData*。 呼叫端負責釋放緩衝區使用**delete []** 。
 
 > [!IMPORTANT]
 > 這個函式傳回的資料不一定是以 NULL 終止，因此，呼叫端必須執行驗證。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
@@ -1033,10 +1033,10 @@ virtual void HtmlHelp(
 ### <a name="parameters"></a>參數
 
 *dwData*<br/>
-指定其他資料。 所使用的值而定的值*nCmd*參數。
+指定其他資料。 所使用的值而定的值*nCmd*參數。 預設值為`0x000F`也就是說[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
 
 *nCmd*<br/>
-指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱*uCommand*有關 HTMLHelp API 函式在 Windows SDK 中所述的參數。
+指定要求的說明類型。 如需可能的值，以及它們如何影響*dwData*參數，請參閱*uCommand*參數中所述[HtmlHelpW](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/desktop/api/htmlhelp/nf-htmlhelp-htmlhelpa)Windows SDK 中的 API 函式。  
 
 ### <a name="remarks"></a>備註
 
@@ -1437,7 +1437,7 @@ LPCTSTR m_pszAppName;
 全域函式所傳回[AfxGetAppName](application-information-and-management.md#afxgetappname)。 `m_pszAppName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果您將值指派給`m_pszAppName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
+> 如果您將值指派給`m_pszAppName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如：
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 不同於[m_pszAppName](#m_pszappname)，此名稱不能包含空格。 `m_pszExeName` 這類型的公用變數**const char**<strong>\*</strong>。
 
 > [!NOTE]
-> 如果您將值指派給`m_pszExeName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
+> 如果您將值指派給`m_pszExeName`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如：
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1510,7 +1510,7 @@ LPCTSTR m_pszRegistryKey;
 
 - 值會儲存至登錄機碼。 應用程式設定檔設定的名稱會附加至下列登錄機碼：HKEY_CURRENT_USER/軟體/LocalAppWizard 產生 /。
 
-如果您將值指派給`m_pszRegistryKey`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如: 
+如果您將值指派給`m_pszRegistryKey`，它必須以動態方式配置到堆積上。 `CWinApp`解構函式呼叫**免費**> （) 與這個指標。 您有許多想要使用`_tcsdup`（） 執行階段程式庫函式，進行配置。 此外，釋放記憶體指派新值之前，與目前的指標相關聯。 例如：
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 

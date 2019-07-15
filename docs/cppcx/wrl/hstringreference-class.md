@@ -1,11 +1,12 @@
 ---
 title: HStringReference 類別
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894378"
 ---
 # <a name="hstringreference-class"></a>HStringReference 類別
 
@@ -56,6 +57,7 @@ class HStringReference;
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | 複製目前`HStringReference`到 HSTRING 物件的物件。
 [HStringReference::Get](#get)       | 擷取基礎 HSTRING 控制代碼的值。
+[HStringReference::GetRawBuffer](#getrawbuffer) | 擷取基礎字串資料的指標。
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>傳回值
 
 基礎 HSTRING 控制代碼的值。
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+擷取基礎字串資料的指標。
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>參數
+
+*長度*指標**int**變數會接收資料的長度。
+
+### <a name="return-value"></a>傳回值
+
+A **const**基礎字串資料的指標。
 
 ## <a name="hstringreference"></a>Hstringreference:: Hstringreference
 

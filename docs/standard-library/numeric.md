@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371448"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246689"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
 定義可執行數值處理演算法的容器樣板函式。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <numeric>
-```
+**標頭**:\<數字 >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
@@ -29,15 +29,25 @@ ms.locfileid: "62371448"
 
 演算法可延伸每一個「C++ 標準程式庫」容器的作業和成員函式所支援的動作，而且能夠同時與不同類型的容器物件互動。
 
+## <a name="members"></a>成員
+
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|透過計算後續部分總和，計算在指定範圍中所有項目的總和 (包括特定初始值)，或計算後續部分結果 (取得方式是使用指定的二進位運算而非總和運算) 的結果。|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[gcd](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|計算兩個範圍的項目乘積的總和並將它加入至指定的初始值，或計算一般化程序的結果，其中由另一個指定的二進位運算取代總和與乘積運算。|
 |[iota](../standard-library/numeric-functions.md#iota)|儲存開始值，從第一個項目開始，並在間隔 `value++` 中每一個項目，以值的後續增量 (`[first, last)`) 填滿。|
+|[lcm](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|計算在輸入範圍中從第一個元素到第 *i* 個元素的一系列總和，然後將每個總和的結果儲存在目的範圍的第 *i* 個元素中，或計算一般化程序的結果，其中總和運算會由另一個指定的二進位運算取代。|
+|[減少](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>另請參閱
 

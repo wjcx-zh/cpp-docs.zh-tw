@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369939"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240406"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型別*\
 要存放在佇列中的項目資料類型
 
-*Container*<br/>
+*容器*\
 用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
@@ -64,23 +64,25 @@ class queue
 
 - [priority_queue 類別](../standard-library/priority-queue-class.md)會排序其項目，使最大的項目一律位在頂端位置。 它支援插入項目，以及檢查和移除頂端項目。 就好像依照年齡、身高或某些其他條件來排列一群人一樣，這是一種較為貼切好記的類比。
 
+## <a name="members"></a>成員
+
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[queue](#queue)|建構空的，或是基底容器物件複本的 `queue`。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[container_type](#container_type)|提供基底容器以讓 `queue` 配接的類型。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `queue` 中的項目數。|
 |[value_type](#value_type)|此類型代表儲存為 `queue` 項目的物件類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="functions"></a>函式
 
-|成員函式|描述|
+|||
 |-|-|
 |[back](#back)|傳回 `queue` 後端最後且最近新增的項目。|
 |[empty](#empty)|測試 `queue` 是否為空白。|
@@ -89,13 +91,7 @@ class queue
 |[push](#push)|將項目加入 `queue` 的後端。|
 |[size](#size)|傳回 `queue` 中項目的數目。|
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<queue>
-
-**命名空間：** std
-
-## <a name="back"></a>  queue::back
+## <a name="back"></a> 上一步
 
 傳回佇列後端最後且最近新增的項目。
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  queue::container_type
+## <a name="container_type"></a> container_type
 
 提供要配接之基底容器的類型。
 
@@ -159,7 +155,7 @@ typedef Container container_type;
 
 如需如何宣告及使用 `container_type` 的範例，請參閱 [queue](#queue) 的範例。
 
-## <a name="empty"></a>  queue::empty
+## <a name="empty"></a> 空白
 
 測試佇列是否為空白。
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  queue::front
+## <a name="front"></a> 前端
 
 傳回佇列前端第一個項目的參考。
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  queue::pop
+## <a name="pop"></a> pop
 
 從佇列前端移除項目。
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  queue::push
+## <a name="push"></a> 推播
 
 將項目加入佇列的後端。
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*val*\
 加入至佇列後端的項目。
 
 ### <a name="remarks"></a>備註
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  queue::queue
+## <a name="queue"></a> 佇列
 
 建構佇列，它可以是空的，或是基底容器物件的複本。
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*權限*\
 其中建構佇列為複本的 **const** 容器。
 
 ### <a name="remarks"></a>備註
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  queue::size
+## <a name="size"></a> 大小
 
 傳回佇列中的項目數目。
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a> size_type
 
 不帶正負號的整數類型，可以表示佇列中的項目數。
 
@@ -486,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 如需如何宣告及使用 `size_type` 的範例，請參閱 [queue::front](#front) 的範例。
 
-## <a name="value_type"></a>  queue::value_type
+## <a name="value_type"></a> value_type
 
 此類型代表儲存為佇列項目的物件類型。
 

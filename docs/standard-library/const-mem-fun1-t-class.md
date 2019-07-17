@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211971"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244520"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t 類別
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>參數
 
-*member_ptr*<br/>
+*member_ptr*\
 要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*left*<br/>
+*左邊*\
 **Const**物件*member_ptr*上呼叫成員函式。
 
-*right*<br/>
+*權限*\
 提供給引數*member_ptr*。
 
 ## <a name="return-value"></a>傳回值
@@ -50,14 +50,3 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 ## <a name="example"></a>範例
 
 `const_mem_fun1_t` 的建構函式很少會直接使用。 `mem_fn` 用來調整成員函式。 請參閱[mem_fn](../standard-library/functional-functions.md#mem_fn)如需如何使用成員函式配接器的範例。
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212062"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244582"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,11 +17,11 @@ ms.locfileid: "62212062"
 
 此標頭使用並行執行階段 (ConcRT)，因此您可以搭配使用其他 ConcRT 機制。 如需有關 ConcRT 的詳細資訊，請參閱[並行執行階段](../parallel/concrt/concurrency-runtime.md)。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <condition_variable>
-```
+**標頭：** \<condition_variable >
+
+**命名空間：** std
 
 > [!NOTE]
 > 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
@@ -34,7 +34,7 @@ ms.locfileid: "62212062"
 
 若要等候事件，請先鎖定 Mutex，然後呼叫條件變數上的其中一個 `wait` 方法。 `wait` 呼叫會受到封鎖，直到其他執行緒通知條件變數為止。
 
-未經適當通知就解除封鎖等候條件變數的執行緒時，會發生「假喚醒」的情況。 若要辨識這類假喚醒，等候條件為 True 的程式碼應在 wait 函式傳回程式碼時，明確檢查該項條件。 上述作業通常是透過使用迴圈來完成，因此您可以使用 `wait(unique_lock<mutex>& lock, Predicate pred)` 來執行這個迴圈。
+未經適當通知就解除封鎖等候條件變數的執行緒時，會發生「假喚醒」  的情況。 若要辨識這類假喚醒，等候條件為 True 的程式碼應在 wait 函式傳回程式碼時，明確檢查該項條件。 上述作業通常是透過使用迴圈來完成，因此您可以使用 `wait(unique_lock<mutex>& lock, Predicate pred)` 來執行這個迴圈。
 
 ```cpp
 while (condition is false)
@@ -56,6 +56,14 @@ while (condition is false)
 - `notify_one` 會喚醒正在等候條件變數的其中一個執行緒。
 
 - `notify_all` 會喚醒正在等候條件變數的所有執行緒。
+
+## <a name="functions-and-enums"></a>函式和列舉
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
 
 ## <a name="see-also"></a>另請參閱
 

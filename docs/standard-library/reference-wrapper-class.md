@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::reference_wrapper [C++], type
 - std::reference_wrapper [C++], get
 ms.assetid: 90b8ed62-e6f1-44ed-acc7-9619bd58865a
-ms.openlocfilehash: baf38dd637e31f6fabdf869a242f8f18e2812717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 83b68d1fdf89519df0a26acd478467fddec8b662
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369586"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240265"
 ---
 # <a name="referencewrapper-class"></a>reference_wrapper 類別
 
@@ -35,7 +35,6 @@ ms.locfileid: "62369586"
 template <class Ty>
 class reference_wrapper
 {
-public:
     typedef Ty type;
 
     reference_wrapper(Ty&) noexcept;
@@ -45,9 +44,6 @@ public:
     template <class... Types>
     auto operator()(Types&&... args) const ->
         decltype(std::invoke(get(), std::forward<Types>(args)...));
-
-private:
-    Ty *ptr; // exposition only
 };
 ```
 
@@ -59,39 +55,35 @@ private:
 
 Helper 函式 [std::ref](functional-functions.md#ref) 和 [std::cref](functional-functions.md#cref) 可用來建立 `reference_wrapper` 物件。
 
+## <a name="members"></a>成員
+
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[reference_wrapper](#reference_wrapper)|建構 `reference_wrapper`。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[result_type](#result_type)|包裝之參考的弱式結果類型。|
 |[type](#type)|包裝的參考類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="functions"></a>函式
 
-|成員函式|描述|
+|||
 |-|-|
 |[get](#get)|取得包裝的參考。|
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
-|[reference_wrapper::operator Ty&amp;](#op_ty_amp)|取得包裝的參考指標。|
-|[reference_wrapper::operator()](#op_call)|呼叫包裝的參考。|
+|[operator Ty&&amp;](#op_ty_amp)|取得包裝的參考指標。|
+|[operator()](#op_call)|呼叫包裝的參考。|
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="get"></a>  reference_wrapper::get
+## <a name="get"></a> 取得
 
 取得包裝的參考。
 
@@ -130,7 +122,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="op_ty_amp"></a>  reference_wrapper::operator Ty&amp;
+## <a name="op_ty_amp"></a> operator Ty&&amp;
 
 取得包裝的參考。
 
@@ -166,7 +158,7 @@ i = 1
 (int)rwi = 1
 ```
 
-## <a name="op_call"></a>  reference_wrapper::operator()
+## <a name="op_call"></a> operator()
 
 呼叫包裝的參考。
 
@@ -177,10 +169,10 @@ auto operator()(Types&&... args);
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*類型*\
 引數清單類型。
 
-*args*<br/>
+*引數*\
 引數清單。
 
 ### <a name="remarks"></a>備註
@@ -212,7 +204,7 @@ int main() {
 rwi(3) = -3
 ```
 
-## <a name="reference_wrapper"></a>  reference_wrapper::reference_wrapper
+## <a name="reference_wrapper"></a> reference_wrapper
 
 建構 `reference_wrapper`。
 
@@ -222,10 +214,10 @@ reference_wrapper(Ty& val) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要包裝的類型。
 
-*val*<br/>
+*val*\
 要包裝的值。
 
 ### <a name="remarks"></a>備註
@@ -263,7 +255,7 @@ rwi = 1
 i = -1
 ```
 
-## <a name="result_type"></a>  reference_wrapper::result_type
+## <a name="result_type"></a> result_type
 
 包裝之參考的弱式結果類型。
 
@@ -302,7 +294,7 @@ int main() {
 val = -3
 ```
 
-## <a name="type"></a>  reference_wrapper::type
+## <a name="type"></a> 型別
 
 包裝的參考類型。
 
@@ -343,8 +335,3 @@ int main() {
 i = 1
 rwi = 1
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[cref](../standard-library/functional-functions.md#cref)<br/>
-[ref](../standard-library/functional-functions.md#ref)<br/>

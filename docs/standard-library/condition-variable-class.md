@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212375"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244630"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 類別
 
@@ -39,30 +39,24 @@ class condition_variable;
 
 ## <a name="members"></a>成員
 
-### <a name="public-constructors"></a>公用建構函式
+### <a name="constructors"></a>建構函式
 
-|名稱|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|建構 `condition_variable` 物件。|
 
-### <a name="public-methods"></a>公用方法
+### <a name="functions"></a>函式
 
-|名稱|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|傳回代表 condition_variable 控制代碼的實作特定類型。|
 |[notify_all](#notify_all)|解除封鎖所有等候 `condition_variable` 物件的執行緒。|
 |[notify_one](#notify_one)|解除封鎖其中一個等候 `condition_variable` 物件的執行緒。|
-|[wait](#wait)|封鎖執行緒。|
+|[等候](#wait)|封鎖執行緒。|
 |[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|
 |[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|
 
-## <a name="requirements"></a>需求
-
-**標頭：** \<condition_variable >
-
-**命名空間：** std
-
-## <a name="condition_variable"></a>  condition_variable::condition_variable 建構函式
+## <a name="condition_variable"></a> condition_variable
 
 建構 `condition_variable` 物件。
 
@@ -74,7 +68,7 @@ condition_variable();
 
 如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。
 
-## <a name="native_handle"></a>  condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 傳回代表 condition_variable 控制代碼的實作特定類型。
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 系統會將 `native_handle_type` 定義為並行執行階段內部資料結構的指標。
 
-## <a name="notify_all"></a>  condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 解除封鎖所有等候 `condition_variable` 物件的執行緒。
 
@@ -94,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 解除封鎖其中一個等候 `condition_variable` 物件的執行緒。
 
@@ -102,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait
+## <a name="wait"></a> 等候
 
 封鎖執行緒。
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>參數
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。
 
-*預測*<br/>
+*預測*\
 傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="remarks"></a>備註
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>參數
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。
 
-*Rel_time*<br/>
+*Rel_time*\
 `chrono::duration` 物件，指定喚醒執行緒之前的時間。
 
-*預測*<br/>
+*預測*\
 傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>參數
 
-*Lck*<br/>
+*Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。
 
-*Abs_time*<br/>
+*Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 物件。
 
-*預測*<br/>
+*預測*\
 傳回的任何運算式 **，則為 true**或是**false**。
 
 ### <a name="return-value"></a>傳回值

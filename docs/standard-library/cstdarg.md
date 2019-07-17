@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: 25a7cbdccf1287043659772b760a14fefd52e4ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394301"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244490"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-包含標準 C 程式庫標頭 \<stdarg.h>，並將關聯名稱加入 `std` 命名空間。
+包含標準 C 程式庫標頭\<stdarg.h> >，並將關聯的名稱加入`std`命名空間。 包含此標頭中宣告的宣告 C 標準程式庫標頭中使用外部連結的名稱可確保`std`命名空間。
 
 ## <a name="syntax"></a>語法
 
@@ -23,9 +23,18 @@ ms.locfileid: "62394301"
 #include <cstdarg>
 ```
 
-## <a name="remarks"></a>備註
+## <a name="namespace-and-macros"></a>命名空間和巨集
 
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+```cpp
+namespace std {
+    using va_list = see below;
+}
+
+#define va_arg(V, P)
+#define va_copy(VDST, VSRC)
+#define va_end(V)
+#define va_start(V, P)
+```
 
 ## <a name="see-also"></a>另請參閱
 

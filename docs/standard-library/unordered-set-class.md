@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739e39dcb5dd79cfaae8875c5166eb7015134430
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362734"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243447"
 ---
 # <a name="unorderedset-class"></a>unordered_set 類別
 
@@ -158,16 +158,23 @@ class unordered_set;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*Key*|索引鍵類型。|
-|*雜湊*|雜湊函式物件類型。|
-|*預測*|相等比較函式物件類型。|
-|*Alloc*|配置器類別。|
+*索引鍵*\
+索引鍵類型。
+
+*雜湊*\
+雜湊函式物件類型。
+
+*預測*\
+相等比較函式物件類型。
+
+*配置*\
+配置器類別。
 
 ## <a name="members"></a>成員
 
-|類型定義|描述|
+### <a name="typedefs"></a>Typedefs
+
+|||
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|
@@ -185,7 +192,9 @@ class unordered_set;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|元素的類型。|
 
-|成員函式|描述|
+### <a name="functions"></a>函式
+
+|||
 |-|-|
 |[begin](#begin)|指定受控制序列的開頭。|
 |[bucket](#bucket)|取得索引鍵值的值區數目。|
@@ -194,7 +203,7 @@ class unordered_set;
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
 |[clear](#clear)|移除所有項目。|
-|[count](#count)|尋找符合指定索引鍵的項目數目。|
+|[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
@@ -215,7 +224,9 @@ class unordered_set;
 |[swap](#swap)|交換兩個容器的內容。|
 |[unordered_set](#unordered_set)|建構容器物件。|
 
-|運算子|描述|
+### <a name="operators"></a>運算子
+
+|||
 |-|-|
 |[unordered_set::operator=](#op_eq)|複製雜湊資料表。|
 
@@ -228,12 +239,6 @@ class unordered_set;
 受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。
 
 物件會透過 [unordered_set::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須具有和 `allocator` 樣板類別物件相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
-
-## <a name="requirements"></a>需求
-
-**標頭︰** \<unordered_set>
-
-**命名空間：** std
 
 ## <a name="allocator_type"></a>  unordered_set::allocator_type
 
@@ -273,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_set::begin
+## <a name="begin"></a> 開始
 
 指定受控制序列或值區的開頭。
 
@@ -289,9 +294,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*nbucket*|Bucket 編號。|
+*nbucket*\
+Bucket 編號。
 
 ### <a name="remarks"></a>備註
 
@@ -353,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_set::bucket
+## <a name="bucket"></a> 貯體
 
 取得索引鍵值的值區數目。
 
@@ -363,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -408,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_set::bucket_count
+## <a name="bucket_count"></a> bucket_count
 
 取得 Bucket 的數目。
 
@@ -493,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_set::bucket_size
+## <a name="bucket_size"></a> bucket_size
 
 取得 Bucket 大小
 
@@ -503,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*<br/>
+*nbucket*\
 Bucket 編號。
 
 ### <a name="remarks"></a>備註
@@ -548,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_set::cbegin
+## <a name="cbegin"></a> cbegin
 
 傳回**const**迭代器，定址範圍中的第一個元素。
 
@@ -574,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_set::cend
+## <a name="cend"></a> cend
 
 傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
 
@@ -602,7 +606,7 @@ auto i2 = Container.cend();
 
 `cend` 所傳回的值不應該取值。
 
-## <a name="clear"></a>  unordered_set::clear
+## <a name="clear"></a> 清除
 
 移除所有項目。
 
@@ -666,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_set::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 用於受控制序列的常數迭代器類型。
 
@@ -708,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_set::const_local_iterator
+## <a name="const_local_iterator"></a> const_local_iterator
 
 用於受控制序列的常數 Bucket 迭代器類型。
 
@@ -755,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_set::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 項目的常數指標類型。
 
@@ -800,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_set::const_reference
+## <a name="const_reference"></a> const_reference
 
 項目的常數參考類型。
 
@@ -845,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_set::count
+## <a name="count"></a> 計數
 
 尋找符合指定索引鍵的項目數目。
 
@@ -855,7 +859,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -899,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_set::difference_type
+## <a name="difference_type"></a> difference_type
 
 兩個項目之間帶正負號距離的類型。
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_set::emplace
+## <a name="emplace"></a> emplace
 
 插入就地建構 (未執行任何複製或移動作業) 的項目。
 
@@ -968,9 +972,8 @@ Args&&... args);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*args*|轉送以建構插入 unordered_set 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+*引數*\
+轉送以建構插入 unordered_set 之元素的引數，除非它已經包含一個值以同等方式排序的元素。
 
 ### <a name="return-value"></a>傳回值
 
@@ -986,7 +989,7 @@ A`pair`其**bool**元件會傳回，如果已進行插入則為 true 和 false`u
 
 如需程式碼範例，請參閱 [set::emplace](../standard-library/set-class.md#emplace)。
 
-## <a name="emplace_hint"></a>  unordered_set::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint
 
 將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。
 
@@ -999,10 +1002,11 @@ Args&&... args);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*args*|轉送以建構插入 unordered_set 之元素的引數，除非該 unordered_set 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
-|*where*|有關要從何處開始搜尋正確插入點的提示。|
+*引數*\
+轉送以建構插入 unordered_set 之元素的引數，除非該 unordered_set 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。
+
+*其中*\
+有關要從何處開始搜尋正確插入點的提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1018,7 +1022,7 @@ Args&&... args);
 
 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。
 
-## <a name="empty"></a>  unordered_set::empty
+## <a name="empty"></a> 空白
 
 測試項目是否不存在。
 
@@ -1082,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_set::end
+## <a name="end"></a> 結束
 
 指定受控制序列的結尾。
 
@@ -1098,9 +1102,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*nbucket*|Bucket 編號。|
+*nbucket*\
+Bucket 編號。
 
 ### <a name="remarks"></a>備註
 
@@ -1151,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_set::equal_range
+## <a name="equal_range"></a> equal_range
 
 尋找符合指定之索引鍵的範圍。
 
@@ -1165,7 +1168,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1219,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_set::erase
+## <a name="erase"></a> 清除
 
 從指定的位置移除 unordered_set 中的元素或元素範圍，或移除符合指定索引鍵的元素。
 
@@ -1233,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>參數
 
-*Where*<br/>
+*其中*\
 要移除之項目的位置。
 
-*第一個*<br/>
+*第一個*\
 要移除之第一個項目的位置。
 
-*最後一個*<br/>
+*最後一個*\
 緊接在要移除之最後一個項目後面的位置。
 
-*Key*<br/>
+*索引鍵*\
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -1255,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 如需程式碼範例，請參閱 [set::erase](../standard-library/set-class.md#erase)。
 
-## <a name="find"></a>  unordered_set::find
+## <a name="find"></a> 尋找
 
 尋找符合指定之索引鍵的元素。
 
@@ -1265,7 +1268,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1314,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_set::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 取得已儲存的配置器物件。
 
@@ -1352,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_set::hash_function
+## <a name="hash"></a> hash_function
 
 取得儲存的雜湊函式物件。
 
@@ -1390,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_set::hasher
+## <a name="hasher"></a> 雜湊程式
 
 雜湊函式的類型。
 
@@ -1428,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_set::insert
+## <a name="insert"></a> 插入
 
 將某個項目或項目範圍插入 unordered_set 中。
 
@@ -1457,15 +1460,26 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*Val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_set 中的項目值。|
-|*Where*|要開始搜尋正確的插入點的地方。|
-|*ValTy*|範本參數，指定 unordered_set 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
-|*第一個*|要複製之第一個元素的位置。|
-|*最後一個*|要複製之最一個元素後方的位置。|
-|*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的範本函式引數，會指向可用於建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型元素。|
-|*IList*|從中複製元素的 [initializer_list](../standard-library/initializer-list.md)。|
+*val*\
+除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_set 中的項目值。
+
+*其中*\
+要開始搜尋正確的插入點的地方。
+
+*ValTy*\
+範本參數，指定 unordered_set 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。
+
+*第一個*\
+要複製之第一個元素的位置。
+
+*最後一個*\
+要複製之最一個元素後方的位置。
+
+*InputIterator*\
+符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的範本函式引數，會指向可用於建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型元素。
+
+*IList*\
+從中複製元素的 [initializer_list](../standard-library/initializer-list.md)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1491,7 +1505,7 @@ void insert(initializer_list<value_type> IList);
 
 如需程式碼範例，請參閱 [set::insert](../standard-library/set-class.md#insert)。
 
-## <a name="iterator"></a>  unordered_set::iterator
+## <a name="iterator"></a> 迭代器
 
 這是一種類型，提供可讀取 unordered_set 中元素的常數[正向迭代器](../standard-library/forward-iterator-tag-struct.md)。
 
@@ -1503,7 +1517,7 @@ typedef implementation-defined iterator;
 
 如需如何宣告和使用**迭代器**的範例，請參閱 [begin](../standard-library/set-class.md#begin) 範例。
 
-## <a name="key_eq"></a>  unordered_set::key_eq
+## <a name="key_eq"></a> key_eq
 
 取得儲存的比較函式物件。
 
@@ -1543,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_set::key_equal
+## <a name="key_equal"></a> key_equal
 
 比較函式的類型。
 
@@ -1583,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_set::key_type
+## <a name="key_type"></a> key_type
 
 排序索引鍵的類型。
 
@@ -1635,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_set::load_factor
+## <a name="load_factor"></a> load_factor
 
 計算每個值區的平均項目數。
 
@@ -1720,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>  unordered_set::local_iterator
+## <a name="local_iterator"></a> local_iterator
 
 值區迭代器的類型。
 
@@ -1767,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_set::max_bucket_count
+## <a name="max_bucket_count"></a> max_bucket_count
 
 取得 Bucket 最大數目。
 
@@ -1852,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_set::max_load_factor
+## <a name="max_load_factor"></a> max_load_factor
 
 取得或設定每個 Bucket 最大項目數。
 
@@ -1864,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*factor*<br/>
+*因素*\
 新的最大載入因數。
 
 ### <a name="remarks"></a>備註
@@ -1944,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_set::max_size
+## <a name="max_size"></a> max_size
 
 取得受控制序列的大小上限。
 
@@ -1979,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_set::operator=
+## <a name="op_eq"></a> 運算子 =
 
 複製雜湊資料表。
 
@@ -1991,9 +2005,8 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*right*|[Unordered_set](../standard-library/unordered-set-class.md)複製到`unordered_set`。|
+*權限*\
+[Unordered_set](../standard-library/unordered-set-class.md)複製到`unordered_set`。
 
 ### <a name="remarks"></a>備註
 
@@ -2036,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_set::pointer
+## <a name="pointer"></a> 指標
 
 項目的指標類型。
 
@@ -2082,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_set::reference
+## <a name="reference"></a> 參考
 
 項目的參考類型。
 
@@ -2128,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_set::rehash
+## <a name="rehash"></a> rehash
 
 重建雜湊資料表。
 
@@ -2138,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*<br/>
+*nbuckets*\
 要求的值區數目。
 
 ### <a name="remarks"></a>備註
@@ -2205,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_set::size
+## <a name="size"></a> 大小
 
 計算元素的數目。
 
@@ -2270,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_set::size_type
+## <a name="size_type"></a> size_type
 
 兩個項目之間不帶正負號距離的類型。
 
@@ -2306,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_set::swap
+## <a name="swap"></a> 交換
 
 交換兩個容器的內容。
 
@@ -2316,7 +2329,7 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*權限*\
 要交換的容器。
 
 ### <a name="remarks"></a>備註
@@ -2375,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a>  unordered_set::unordered_set
+## <a name="unordered_set"></a> unordered_set
 
 建構容器物件。
 
@@ -2424,15 +2437,26 @@ unordered_set(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*InputIterator*|迭代器類型。|
-|*Al*|要儲存的配置器物件。|
-|*Comp*|要儲存的比較函式物件。|
-|*雜湊*|要儲存的雜湊函式物件。|
-|*bucket_count*|Bucket 最小數目。|
-|*右邊*|要複製的容器。|
-|*IList*|initializer_list，包含欲複製的項目。|
+*InputIterator*\
+迭代器類型。
+
+*Al*\
+要儲存的配置器物件。
+
+*Comp*\
+要儲存的比較函式物件。
+
+*雜湊*\
+要儲存的雜湊函式物件。
+
+*bucket_count*\
+Bucket 最小數目。
+
+*權限*\
+要複製的容器。
+
+*IList*\
+initializer_list，包含欲複製的項目。
 
 ### <a name="remarks"></a>備註
 
@@ -2448,7 +2472,7 @@ Bucket 最小數目為引數*bucket_count*，如果存在，則它是所述的�
 
 配置器物件是引數*Al*，如果存在，否則就`Alloc()`。
 
-## <a name="value_type"></a>  unordered_set::value_type
+## <a name="value_type"></a> value_type
 
 元素的類型。
 
@@ -2499,10 +2523,3 @@ int main()
 [c] [b] [a]
 [d] [c] [b] [a]
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[容器](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

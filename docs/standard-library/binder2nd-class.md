@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f59887e6c9d2965a6c8680f17a40c5bd93869c0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414044"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243359"
 ---
 # <a name="binder2nd-class"></a>binder2nd 類別
 
@@ -25,7 +25,6 @@ class binder2nd
     : public unaryFunction <typename Operation::first_argument_type,
     typename Operation::result_type>
 {
-public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
@@ -34,22 +33,18 @@ public:
 
     result_type operator()(const argument_type& left) const;
     result_type operator()(argument_type& left) const;
-
-protected:
-    Operation op;
-    typename Operation::second_argument_type value;
 };
 ```
 
 ### <a name="parameters"></a>參數
 
-*Func*<br/>
+*函式*\
 要轉換為一元函式物件的二元函式物件。
 
-*right*<br/>
+*權限*\
 二元函式物件的第二個引數所要繫結的值。
 
-*left*<br/>
+*左邊*\
 調整後的二元物件用來與第二個引數的固定值進行比較的引數值。
 
 ## <a name="return-value"></a>傳回值
@@ -58,9 +53,9 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一份二元函式物件 _ *Func*中`op`，和一份*右*在`value`。 它會在傳回下列項目時定義其成員函式 `operator()`：**op**( `left`, **value**)。
+此範本類別會儲存一份二元函式物件 _ *Func*中`op`，和一份*右*在`value`。 它會定義其成員函式`operator()`做為傳回**op**(`left`，**值**)。
 
-如果`Func`是型別的物件`Operation`和 c 是常數，則[bind2nd](../standard-library/functional-functions.md#bind2nd) ( `Func`， `c` ) 相當於`binder2nd`類別建構函式`binder2nd` \< **作業**> ( `Func`， `c` )、 更方便。
+如果`Func`是型別的物件`Operation`和 c 是常數，則[bind2nd](../standard-library/functional-functions.md#bind2nd) (`Func`， `c`) 相當於`binder2nd`類別建構函式`binder2nd` \< **作業**> (`Func`， `c`)、 更方便。
 
 ## <a name="example"></a>範例
 
@@ -105,20 +100,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

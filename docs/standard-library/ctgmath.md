@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394193"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246598"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-實際上，包括 C++ 標準程式庫標頭 \<ccomplex> 和 \<cmath>，提供相當於 \<tgmath.h> 的泛型算術巨集。
+實際上，包含C++標準程式庫標頭\<複雜 > 及\<cmath> >，其中提供泛型算術巨集相當於\<tgmath.h> >。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <ctgmath>
-```
+**標頭：** \<ctgmath >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
-標準 C 程式庫標頭 \<tgmath.h> 的功能是由 \<ccomplex> 和 \<cmath> 的多載提供。
+標準 C 程式庫標頭功能\<tgmath.h> > 提供中的多載所\<複雜 > 和\<cmath> >。
 
 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
 

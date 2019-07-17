@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159414"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243751"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 定義C++標準程式庫函式的說明建構*函式物件*，也稱為*functor*，及其繫結器。 函式物件是定義 `operator()` 的類型物件。 函式物件可以是函式指標，不過該物件更常用來儲存可在函式呼叫期間存取的其他資訊。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <functional>
-```
+**標頭：** \<functional>
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
@@ -34,17 +34,17 @@ ms.locfileid: "62159414"
 
 C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 
-- 「呼叫簽章」(Call Signature) 是傳回類型的名稱，後面會接著以括號括住、內含零個或多個引數類型的逗號分隔清單。
+- 「呼叫簽章」(Call Signature)  是傳回類型的名稱，後面會接著以括號括住、內含零個或多個引數類型的逗號分隔清單。
 
-- 「可呼叫類型」(Callable Type) 是函式指標、成員函式指標、成員資料指標，或其物件緊接在函式呼叫運算子左側的類別類型。
+- 「可呼叫類型」(Callable Type)  是函式指標、成員函式指標、成員資料指標，或其物件緊接在函式呼叫運算子左側的類別類型。
 
-- 「可呼叫物件」(Callable Object) 是屬於可呼叫類型的物件。
+- 「可呼叫物件」(Callable Object)  是屬於可呼叫類型的物件。
 
-- 「呼叫包裝函式類型」(Call Wrapper Type) 是包含可呼叫物件並支援轉送至該物件之呼叫作業的類型。
+- 「呼叫包裝函式類型」(Call Wrapper Type)  是包含可呼叫物件並支援轉送至該物件之呼叫作業的類型。
 
-- 「呼叫包裝函式」(Call Wrapper) 是屬於呼叫包裝函式類型的物件。
+- 「呼叫包裝函式」(Call Wrapper)  是屬於呼叫包裝函式類型的物件。
 
-- 「目標物件」(Target Object) 是呼叫包裝函式物件所持有的可呼叫物件。
+- 「目標物件」(Target Object)  是呼叫包裝函式物件所持有的可呼叫物件。
 
 虛擬函式 `INVOKE(f, t1, t2, ..., tN)` 表示下列其中一項：
 
@@ -60,7 +60,7 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 
 虛擬函式 `INVOKE(f, t1, t2, ..., tN, R)` 表示 `INVOKE(f, t1, t2, ..., tN)` 會隱含地轉換成 `R`。
 
-如果呼叫包裝函式具有「弱式結果類型」(Weak Result Type)，則其成員類型 `result_type` 的類型會根據包裝函式之目標物件的 `T` 類型，如下所示：
+如果呼叫包裝函式具有「弱式結果類型」(Weak Result Type)  ，則其成員類型 `result_type` 的類型會根據包裝函式之目標物件的 `T` 類型，如下所示：
 
 - 如果 `T` 是函式的指標，則 `result_type` 與 `T` 的傳回類型同義。
 
@@ -70,20 +70,25 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 
 - 否則沒有成員 `result_type`。
 
-每個呼叫包裝函式具有一個移動建構函式和一個複製建構函式。 「簡單呼叫包裝函式」(Simple Call Wrapper) 是具有指派運算子的呼叫包裝函式，其中它的複製建構函式、移動建構函式及指派運算子不會擲回例外狀況。 「轉送呼叫包裝函式」(Forwarding Call Wrapper) 是可藉由使用任意引數清單來呼叫的呼叫包裝函式，而且它可將引數當作參考傳遞給已包裝的可呼叫物件。 所有右值引數都會做為右值參考傳遞，而左值引數會做為左值參考傳遞。
+每個呼叫包裝函式具有一個移動建構函式和一個複製建構函式。 「簡單呼叫包裝函式」(Simple Call Wrapper)  是具有指派運算子的呼叫包裝函式，其中它的複製建構函式、移動建構函式及指派運算子不會擲回例外狀況。 「轉送呼叫包裝函式」(Forwarding Call Wrapper)  是可藉由使用任意引數清單來呼叫的呼叫包裝函式，而且它可將引數當作參考傳遞給已包裝的可呼叫物件。 所有右值引數都會做為右值參考傳遞，而左值引數會做為左值參考傳遞。
 
-## <a name="classes"></a>類別
+## <a name="members"></a>成員
 
-|類別|描述|
+### <a name="classes"></a>類別
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|描述所擲回之例外狀況的類別，這個例外狀況會指出對 [function](../standard-library/function-class.md) 物件上的 `operator()` 呼叫失敗，因為物件是空的。|
 |[binary_negate](../standard-library/binary-negate-class.md)|提供一個成員函式的樣板類別，這個成員函式可將指定二元函式的傳回值變成負值。<br/> （已在 c++17 中被取代。） |
 |[binder1st](../standard-library/binder1st-class.md)|提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[binder2nd](../standard-library/binder2nd-class.md)|提供一個建構函式的樣板類別，這個建構函式透過將二元函式的第二個引數繫結至指定值，將二元函式物件轉換成一元函式物件。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|配接器類別，這個類別允許不接受引數的常數成員函式在使用參考引數初始化時，可當做一元函式物件來呼叫。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|配接器類別，這個類別允許不接受引數的常數成員函式在使用指標引數初始化時，可當做一元函式物件來呼叫。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|配接器類別，這個類別允許不接受單一引數的常數成員函式在使用參考引數初始化時，可當做二元函式物件來呼叫。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|配接器類別，這個類別允許不接受單一引數的常數成員函式在使用指標引數初始化時，可當做二元函式物件來呼叫。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|包裝可呼叫物件的類別。|
 |[hash](../standard-library/hash-class.md)|此類別可以計算值的雜湊碼。|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|此類別測試呼叫 `bind` 時是否產生特定類型。|
@@ -97,9 +102,9 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|包裝參考的類別。|
 |[unary_negate](../standard-library/unary-negate-class.md)|提供一個成員函式的樣板類別，這個成員函式可將指定一元函式的傳回值變成負值。<br/> （已在 c++17 中被取代。）  |
 
-## <a name="functions"></a>函式
+### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|將引數繫結至可呼叫物件。|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|協助程式樣板函式，可建立配接器，透過將二元函式的第一個引數繫結至指定值，將二元函式物件轉換成一元函式物件。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
@@ -109,6 +114,7 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 |[bit_or](../standard-library/functional-functions.md#bit_or)|傳回兩個參數的位元邏輯 OR (運算子 &#124;)。|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|傳回兩個參數的位元邏輯 XOR (運算子 ^)。|
 |[cref](../standard-library/functional-functions.md#cref)|從引數建構常數`reference_wrapper`。|
+|[invoke](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|產生簡單呼叫包裝函式。|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|協助程式樣板函式，可用來建構使用指標引數初始化時之成員函式的物件配接器。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|協助程式樣板函式，可用來建構使用參考引數初始化時之成員函式的物件配接器。|
@@ -119,9 +125,9 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 |[ref](../standard-library/functional-functions.md#ref)|從引數建構 `reference_wrapper` 。|
 |[swap](../standard-library/functional-functions.md#swap)|交換兩個 `function` 物件。|
 
-## <a name="structs"></a>結構
+### <a name="structs"></a>結構
 
-|結構|描述|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|空的基底類別，定義可繼承衍生類別並提供二元函式物件的類型。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 |[divides](../standard-library/divides-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術除法運算。|
@@ -141,15 +147,15 @@ C + + 11、 C + + 14 和 C + + 17 中納入了下列功能：
 |[plus](../standard-library/plus-struct.md)|這個類別會提供預先定義的函式物件，該物件會在指定實值類型的項目上執行算術加法運算。|
 |[unary_function](../standard-library/unary-function-struct.md)|空的基底類別，這個類別定義可能繼承自衍生類別並提供一元函式物件的類型。<br/> （已過時在 C + + 11 中，在 c++17 中移除。） |
 
-## <a name="objects"></a>物件
+### <a name="objects"></a>物件
 
-|Object|描述|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|可取代引數的預留位置。|
 
-## <a name="operators"></a>運算子
+### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|不允許可呼叫物件的等號比較。|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|不允許可呼叫物件的不等比較。|

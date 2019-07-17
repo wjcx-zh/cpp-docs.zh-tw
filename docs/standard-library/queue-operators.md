@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (queue)
 - std::operator&lt;= (queue)
 - std::operator== (queue)
-ms.openlocfilehash: 496b728b67c4539a63d5bf3c783f8c9145c1de42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420d717b34b6c17587f8790701906e06ab008d96
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369900"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240282"
 ---
 # <a name="ltqueuegt-operators"></a>&lt;queue&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試運算子左邊的佇列物件是否不等於右邊的佇列物件。
 
@@ -40,10 +35,10 @@ bool operator!=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -97,7 +92,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的佇列物件是否小於右邊的佇列物件。
 
@@ -107,10 +102,10 @@ bool operator<(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -160,7 +155,7 @@ The queue q1 is less than the queue q2.
 The queue q1 is not less than the queue q3.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試運算子左邊的佇列物件是否小於或等於右邊的佇列物件。
 
@@ -170,10 +165,10 @@ bool operator<=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -225,7 +220,7 @@ The queue q1 is greater than the queue q2.
 The queue q1 is less than or equal to the queue q3.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試運算子左邊的佇列物件是否等於右邊的佇列物件。
 
@@ -235,10 +230,10 @@ bool operator==(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -291,7 +286,7 @@ The queues q1 and q2 are not equal.
 The queues q1 and q3 are equal.
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試運算子左邊的佇列物件是否大於右邊的佇列物件。
 
@@ -301,10 +296,10 @@ bool operator>(const queue <Type, Container>& left, const queue <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -357,7 +352,7 @@ The queue q1 is not greater than the queue q2.
 The queue q1 is greater than the queue q3.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試運算子左邊的佇列物件是否大於或等於右邊的佇列物件。
 
@@ -367,10 +362,10 @@ bool operator>=(const queue <Type, Container>& left, const queue <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `queue` 類型的物件。
 
-*right*<br/>
+*權限*\
 `queue` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -421,7 +416,3 @@ int main( )
 The queue q1 is less than the queue q2.
 The queue q1 is greater than or equal to the queue q3.
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<queue>](../standard-library/queue.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: 8683aca2656a4fd519be1dd7929448dfd221feac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295782"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246782"
 ---
 # <a name="minus-struct"></a>minus 結構
 
@@ -39,12 +39,13 @@ struct minus<void>
 
 ### <a name="parameters"></a>參數
 
-*型別*， *T*， *U*支援二進位的型別`operator-`會指定或推斷類型的運算元。
+*型別*， *T*， *U*\
+支援二元 `operator-` (接受指定或推斷類型的運算元) 的類型。
 
-*左邊*<br/>
+*左邊*\
 運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右邊*<br/>
+*權限*\
 運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
@@ -99,20 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*/
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

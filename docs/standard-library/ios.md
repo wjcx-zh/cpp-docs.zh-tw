@@ -7,28 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385215"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245242"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 定義 iostreams 作業的數個基本類型和函式。 此標頭通常會由其他 iostream 標頭為您納入；您很少會直接將其納入。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <ios>
-```
+**標頭**: \<ios >
+
+**命名空間：** std
+
+> [!NOTE]
+> \<Ios > 程式庫會使用`#include <iosfwd>`陳述式。
 
 ## <a name="remarks"></a>備註
 
 操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除的格式旗標`ios_base::skipws`物件中`str`，這可以是其中一種類型。
 
-基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如: 
+基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如：
 
 ```cpp
 istr>> noskipws;
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 會呼叫 [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**)。
 
+## <a name="members"></a>成員
+
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|支援來自舊 iostream 程式庫的 ios 類別。|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|支援內部作業。|
@@ -56,6 +61,7 @@ istr>> noskipws;
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|設定 `ios_base` 物件的旗標會使用浮點值的預設顯示格式。|
 |[fixed](../standard-library/ios-functions.md#fixed)|指定浮點數會以固定十進位標記法顯示。|
 |[hex](../standard-library/ios-functions.md#hex)|指定以基底 16 標記法顯示整數變數。|
+|[hexfloat](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|使數字的正負號靠左對齊，數字靠右對齊。|
 |[left](../standard-library/ios-functions.md#left)|使與輸出寬度不同寬的文字出現在具有左邊界的資料流排清中。|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|指定讓 [bool](../cpp/bool-cpp.md) 類型的變數在資料流中顯示為 0 或 1。|
@@ -75,9 +81,19 @@ istr>> noskipws;
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|使輸出在緩衝區不為空時進行處理。|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|指定以大寫顯示十六進位數字和科學標記法中的指數。|
 
+### <a name="error-reporting"></a>錯誤報表
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|此範本類別描述依存於範本參數的輸入資料流 (屬於範本類別 [basic_istream](../standard-library/basic-istream-class.md)) 和輸出資料流 (屬於範本類別 [basic_ostream](../standard-library/basic-ostream-class.md)) 通用的儲存體和成員函式。|
 |[fpos](../standard-library/fpos-class.md)|此範本類別說明可儲存對任何資料流內的任意檔案位置指標進行還原之所有必要資訊的物件。|

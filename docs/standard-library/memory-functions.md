@@ -74,38 +74,27 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6199c97e19c18075007d5c682c2199a2e5886b29
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412848"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243830"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
-||||
-|-|-|-|
-|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|
-|[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|
-|[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|
-|[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|
-|[static_pointer_cast](#static_pointer_cast)|[swap (C++ 標準程式庫)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|
-|[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|
-|[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|
-
-## <a name="addressof"></a>  addressof
+## <a name="addressof"></a> addressof
 
 取得物件真正的位址。
 
 ```cpp
 template <class T>
-T* addressof(T& Val);
+    T* addressof(T& Val);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Val*<br/>
+*val*\
 要取得真正位址的物件或函式。
 
 ### <a name="return-value"></a>傳回值
@@ -114,7 +103,7 @@ T* addressof(T& Val);
 
 ### <a name="remarks"></a>備註
 
-## <a name="align"></a>  align
+## <a name="align"></a> 對齊
 
 將指定大小的儲存體 (由特定對齊規格所對齊) 放入指定儲存體的第一個可能位址。
 
@@ -129,16 +118,16 @@ void* align(
 
 ### <a name="parameters"></a>參數
 
-*對齊*<br/>
+*對齊方式*\
 嘗試的對齊界限。
 
-*Size*<br/>
+*大小*\
 對齊儲存體的大小 (位元組)。
 
-*Ptr*<br/>
+*ptr*\
 要使用的可用連續儲存集區的開始位址。 這個參數也是一個 output 參數，並設定為包含新的起始位址，如果對齊成功。 如果 `align()` 不成功，則不會修改這個參數。
 
-*空格鍵*<br/>
+*空間*\
 `align()` 可用來建立對齊儲存體的總空間。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
 
 如果 `align()` 不成功，則不會修改這個參數。
@@ -174,47 +163,122 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.
 ```
 
-## <a name="allocate_shared"></a>  allocate_shared
+## <a name="allocate_shared"></a> allocate_shared
 
 建立 `shared_ptr`，指向透過使用指定的配置器為特定類型配置及建構的物件。 傳回 `shared_ptr`。
 
 ```cpp
 template <class Type, class Allocator, class... Types>
-shared_ptr<Type>
-allocate_shared(Allocator Alloc, Types&&... Args);
+    shared_ptr<Type> allocate_shared(Allocator Alloc, Types&&... Args);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Alloc*<br/>
+*配置*\
 用來建立物件的配置器。
 
-*Args*<br/>
+*引數*\
 成為物件的零個或多個引數。
 
 ### <a name="remarks"></a>備註
 
 函式會建立物件`shared_ptr<Type>`，指向`Type(Args...)`所配置和建構之*配置*。
 
-## <a name="const_pointer_cast"></a>  const_pointer_cast
+## <a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_exchange"></a> atomic_exchange
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
+
+## <a name="atomic_is_lock_free"></a> atomic_is_lock_free
+
+```cpp
+template<class T>
+    bool atomic_is_lock_free(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load"></a> atomic_load
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load_explicit"></a> atomic_load_explicit
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load_explicit(const shared_ptr<T>* p, memory_order mo);
+```
+
+## <a name="atomic_store"></a> atomic_store
+
+```cpp
+template<class T>
+    void atomic_store(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_store_explicit"></a> atomic_store_explicit
+
+```cpp
+template<class T>
+    void atomic_store_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
+
+## <a name="const_pointer_cast"></a> const_pointer_cast
 
 常數轉型成 shared_ptr。
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-const_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> const_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 傳回之共用指標所控制的類型。
 
-*其他*<br/>
+*其他*\
 引數共用指標所控制的類型。
 
-*其他*<br/>
+*其他*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -246,28 +310,27 @@ int main()
 sp1 == 3
 ```
 
-## <a name="declare_no_pointers"></a>  declare_no_pointers
+## <a name="declare_no_pointers"></a> declare_no_pointers
 
 通知記憶體回收行程，指出基底位址指標和區塊大小所定義之記憶體區塊中的字元未包含任何可追蹤的指標。
 
 ```cpp
-void declare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void declare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*ptr*|已不再包含可追蹤指標的第一個位元位址。|
-|*_Size*|開始區塊的大小*ptr* ，其中包含任何可追蹤指標。|
+*ptr*\
+已不再包含可追蹤指標的第一個位元位址。
+
+*大小) (_s*\
+開始區塊的大小*ptr* ，其中包含任何可追蹤指標。
 
 ### <a name="remarks"></a>備註
 
 函式會通知任何記憶體回收行程的位址範圍`[ ptr, ptr + _Size)`不再包含可追蹤的指標。 （任何指向已配置的儲存體必須不取值除非進行連線。）
 
-## <a name="declare_reachable"></a>  declare_reachable
+## <a name="declare_reachable"></a> declare_reachable
 
 告知記憶體回收，指示的位址是前往配置儲存體且可連接。
 
@@ -277,14 +340,14 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*ptr*\
 指向可存取、已配置之有效儲存區域的指標。
 
 ### <a name="remarks"></a>備註
 
 如果*ptr*不是 null，函式會通知任何記憶體回收行程所*ptr*以下是供存取 （指向有效的已配置儲存體）。
 
-## <a name="default_delete"></a>  default_delete
+## <a name="default_delete"></a> default_delete
 
 刪除配置的物件**new 運算子**。 適合搭配 `unique_ptr` 使用。
 
@@ -292,42 +355,68 @@ void declare_reachable(void* ptr);
 struct default_delete {
    constexpr default_delete() noexcept = default;
    template <class Other, class = typename enable_if<is_convertible<Other*, T*>::value, void>::type>>
-   default_delete(const default_delete<Other>&) noexcept;
+        default_delete(const default_delete<Other>&) noexcept;
    void operator()(T* Ptr) const noexcept;
 };
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ptr*<br/>
+*ptr*\
 要刪除的物件指標。
 
-*其他*<br/>
+*其他*\
 要刪除的陣列項目類型。
 
 ### <a name="remarks"></a>備註
 
 此範本類別描述`deleter`刪除配置的純量物件**new 運算子**適用於範本的類別、 `unique_ptr`。 它也具有明確的特製化 `default_delete<Type[]>`。
 
-## <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast
+## <a name="destroy_at"></a> destroy_at
+
+```cpp
+template <class T>
+    void destroy_at(T* location);
+```
+
+與 `location->~T()` 相同。
+
+## <a name="destroy"></a> 損毀
+
+```cpp
+template <class ForwardIterator>
+    void destroy(ForwardIterator first, ForwardIterator last);
+```
+
+與 `for (; first!=last; ++first) destroy_at(addressof(*first)); ` 相同。
+
+## <a name="destroy_n"></a> destroy_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator destroy_n(ForwardIterator first, Size n);
+```
+
+與 `for (; n > 0; (void)++first, --n) destroy_at(addressof(*first)); return first;` 相同。
+
+## <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
 動態轉換成 shared_ptr。
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-dynamic_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> dynamic_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 傳回之共用指標所控制的類型。
 
-*其他*<br/>
+*其他*\
 引數共用指標所控制的類型。
 
-*sp*<br/>
+*預存程序*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -370,24 +459,24 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter
+## <a name="get_deleter"></a> get_deleter
 
 從 shared_ptr 取得刪除者。
 
 ```cpp
 template <class D, class Ty>
-D* get_deleter(const shared_ptr<Ty>& sp);
+    D* get_deleter(const shared_ptr<Ty>& sp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*D*<br/>
+*D*\
 刪除者的類型。
 
-*Ty*<br/>
+*Ty*\
 共用指標所控制的類型。
 
-*sp*<br/>
+*預存程序*\
 共用指標。
 
 ### <a name="remarks"></a>備註
@@ -438,7 +527,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true
 ```
 
-## <a name="get_pointer_safety"></a>  get_pointer_safety
+## <a name="get_pointer_safety"></a> get_pointer_safety
 
 傳回任何記憶體回收行程所假設之指標安全的類型。
 
@@ -450,18 +539,18 @@ pointer_safety get_pointer_safety();
 
 此函式傳回任何自動的記憶體回收行程所假設的指標安全的類型。
 
-## <a name="get_temporary_buffer"></a>  get_temporary_buffer
+## <a name="get_temporary_buffer"></a> get_temporary_buffer
 
 為項目序列 (不超過指定的項目數目) 配置暫時儲存區。
 
 ```cpp
 template <class Type>
-pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
+    pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 所要求的元素數目上限，將針對這些元素配置記憶體。
 
 ### <a name="return-value"></a>傳回值
@@ -507,21 +596,19 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.
 ```
 
-## <a name="make_shared"></a>  make_shared
+## <a name="make_shared"></a> make_shared
 
 建立並傳回 `shared_ptr`，它會指向使用預設配置器從零個或多個引數建構的配置物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。
 
 ```cpp
 template <class Type, class... Types>
-shared_ptr<Type>
-make_shared(Types&&... _Args);
+    shared_ptr<Type> make_shared(Types&&... _Args);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*_Args*|零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。|
+*_Args*\
+零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="remarks"></a>備註
 
@@ -602,47 +689,45 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3
 ```
 
-## <a name="make_unique"></a>  make_unique
+## <a name="make_unique"></a> make_unique
 
 建立並傳回指向指定類型之物件的 [unique_ptr](../standard-library/unique-ptr-class.md)，該類型是使用指定的引數所建構。
 
 ```cpp
 // make_unique<T>
 template <class T, class... Types>
-unique_ptr<T>
-make_unique(Types&&... Args)
-{
-    return (unique_ptr<T>(new T(forward<Types>(Args)...)));
-}
+    unique_ptr<T> make_unique(Types&&... Args)
+    {
+        return (unique_ptr<T>(new T(forward<Types>(Args)...)));
+    }
 
 // make_unique<T[]>
 template <class T>
-make_unique(size_t Size)
-{
-    return (unique_ptr<T>(new Elem[Size]()));
-}
+    make_unique(size_t Size)
+    {
+        return (unique_ptr<T>(new Elem[Size]()));
+    }
 
 // make_unique<T[N]> disallowed
 template <class T, class... Types>
-typename enable_if<extent<T>::value != 0, void>::type
-make_unique(Types&&...) = delete;
+    typename enable_if<extent<T>::value != 0, void>::type make_unique(Types&&...) = delete;
 ```
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*T*\
 `unique_ptr` 指向的物件類型。
 
-*型別*<br/>
+*類型*\
 建構函式引數所指定的型別*Args*。
 
-*Args*<br/>
+*引數*\
 要傳遞至類型的物件的建構函式的引數*T*。
 
-*Elem*<br/>
+*Elem*\
 型別的項目陣列*T*。
 
-*Size*<br/>
+*大小*\
 在新陣列中要為其配置空間的元素數目。
 
 ### <a name="remarks"></a>備註
@@ -659,13 +744,13 @@ make_unique(Types&&...) = delete;
 
 當您看到與 `unique_ptr` 有關的錯誤 C2280 時，通常都是因為您嘗試叫用它的複製建構函式，這是一個被刪除的函式。
 
-## <a name="owner_less"></a>  owner_less
+## <a name="owner_less"></a> owner_less
 
 允許按擁有權混合比較共用指標和弱式指標。 傳回**真**如果 left 的參數排序在 right 參數之前，由成員函式`owner_before`。
 
 ```cpp
 template <class Type>
-struct owner_less; // not defined
+    struct owner_less; // not defined
 
 template <class Type>
 struct owner_less<shared_ptr<Type>> {
@@ -700,28 +785,28 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>參數
 
-*_left*<br/>
+*_left*\
 共用指標或弱式指標。
 
-*right*<br/>
+*權限*\
 共用指標或弱式指標。
 
 ### <a name="remarks"></a>備註
 
 這些範本類型會將其所有成員運算子都定義成傳回 `left.owner_before(right)`。
 
-## <a name="return_temporary_buffer"></a>  return_temporary_buffer
+## <a name="return_temporary_buffer"></a> return_temporary_buffer
 
 將使用 `get_temporary_buffer` 樣板函式配置的暫存記憶體取消配置。
 
 ```cpp
 template <class Type>
-void return_temporary_buffer(Type* _Pbuf);
+    void return_temporary_buffer(Type* _Pbuf);
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Pbuf*<br/>
+*_Pbuf*\
 指向要配置之記憶體的指標。
 
 ### <a name="remarks"></a>備註
@@ -766,25 +851,24 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 7.
 ```
 
-## <a name="static_pointer_cast"></a>  static_pointer_cast
+## <a name="static_pointer_cast"></a> static_pointer_cast
 
 靜態轉型至 shared_ptr。
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-static_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> static_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 傳回之共用指標所控制的類型。
 
-*其他*<br/>
+*其他*\
 引數共用指標所控制的類型。
 
-*其他*<br/>
+*其他*\
 引數共用指標。
 
 ### <a name="remarks"></a>備註
@@ -826,30 +910,30 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="swap"></a>  swap (C++ 標準程式庫)
+## <a name="swap"></a> 交換
 
 交換兩個 shared_ptr 或 weak_ptr 物件。
 
 ```cpp
 template <class Ty, class Other>
-void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
+    void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
 
 template <class Ty, class Other>
-void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
+    void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 由左側共用/弱式指標控制的類型。
 
-*其他*<br/>
+*其他*\
 由右側共用/弱式指標所控制的類型。
 
-*left*<br/>
+*左邊*\
 左側共用/弱式指標。
 
-*right*<br/>
+*權限*\
 右側共用/弱式指標。
 
 ### <a name="remarks"></a>備註
@@ -909,57 +993,54 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="undeclare_no_pointers"></a>  undeclare_no_pointers
+## <a name="undeclare_no_pointers"></a> undeclare_no_pointers
 
 通知記憶體回收行程，基底位址指標和區塊大小定義的記憶體區塊中的字元現在可能會包含可追蹤的指標。
 
 ```cpp
-void undeclare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void undeclare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="remarks"></a>備註
 
 函式會通知任何記憶體回收行程的位址範圍`[ptr, ptr + _Size)`現在可能會包含可追蹤的指標。
 
-## <a name="undeclare_reachable"></a>  undeclare_reachable
+## <a name="undeclare_reachable"></a> undeclare_reachable
 
 撤銷指定的記憶體位置的連線能力的宣告。
 
 ```cpp
 template <class Type>
-Type *undeclare_reachable(Type* ptr);
+    Type *undeclare_reachable(Type* ptr);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*ptr*|指向要宣告為不可存取之記憶體位置的指標。|
+*ptr*\
+指向要宣告為不可存取之記憶體位置的指標。
 
 ### <a name="remarks"></a>備註
 
 如果*ptr*不是**nullptr**，函式會通知任何記憶體回收行程所*ptr*不再可供存取。 它會傳回以安全方式衍生的指標比較相等*ptr*。
 
-## <a name="uninitialized_copy"></a>  uninitialized_copy
+## <a name="uninitialized_copy"></a> uninitialized_copy
 
 從指定的來源範圍將物件複製到未初始化的目的範圍內。
 
 ```cpp
 template <class InputIterator, class ForwardIterator>
-ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
+    ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
 ```
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*第一個*\
 輸入迭代器，為來源範圍中的第一個項目定址。
 
-*last*<br/>
+*最後一個*\
 輸入迭代器，為來源範圍中的最後一個項目定址。
 
-*dest*<br/>
+*目的地*\
 正向迭代器，為目的範圍中的第一個項目定址。
 
 ### <a name="return-value"></a>傳回值
@@ -1047,7 +1128,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_copy_n"></a>  uninitialized_copy_n
+## <a name="uninitialized_copy_n"></a> uninitialized_copy_n
 
 從輸入迭代器建立所指定項目數的複本。 複本會放在正向迭代器中。
 
@@ -1061,13 +1142,13 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*第一個*\
 輸入迭代器，參考要複製的物件。
 
-*count*<br/>
+*計數*\
 帶正負號或不帶正負號的整數類型，指定複製物件的次數。
 
-*dest*<br/>
+*目的地*\
 正向迭代器，參考放置新複本的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1087,24 +1168,58 @@ ForwardIterator uninitialized_copy_n(
 
 除非程式碼擲回例外狀況。 在這種情況下，會終結所有建構的物件，並重新擲回例外狀況。
 
-## <a name="uninitialized_fill"></a>  uninitialized_fill
+## <a name="uninitialized_default_construct"></a> uninitialized_default_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_default_construct(ForwardIterator first, ForwardIterator last); 
+```
+
+### <a name="remarks"></a>備註
+
+與相同：
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type;
+```
+
+## <a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_default_construct_n(ForwardIterator first, Size n)
+```
+
+### <a name="remarks"></a>備註
+
+與相同：
+
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type; return first;
+```
+
+## <a name="uninitialized_fill"></a> uninitialized_fill
 
 將所指定值的物件複製到未初始化的目的範圍內。
 
 ```cpp
 template <class ForwardIterator, class Type>
-void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
+    void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
 ```
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*第一個*\
 正向迭代器，定址對象是要起始之目的範圍中的第一個元素。
 
-*last*<br/>
+*最後一個*\
 正向迭代器，定址對象是要起始之目的範圍中的最後一個元素。
 
-*val*<br/>
+*val*\
 用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
@@ -1159,24 +1274,24 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 ```
 
-## <a name="uninitialized_fill_n"></a>  uninitialized_fill_n
+## <a name="uninitialized_fill_n"></a> uninitialized_fill_n
 
 將所指定值的物件複製到未初始化目的範圍的指定項目數內。
 
 ```cpp
 template <class FwdIt, class Size, class Type>
-void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
+    void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*第一個*\
 正向迭代器，為目的範圍中要起始的第一個項目定址。
 
-*count*<br/>
+*計數*\
 要初始化的項目數目。
 
-*val*<br/>
+*val*\
 用來初始化目的範圍的值。
 
 ### <a name="remarks"></a>備註
@@ -1221,6 +1336,83 @@ int main() {
    for ( i = 0 ; i < N; i++ )
       cout << Array [ i ].get( ) <<  " ";
 }
+```
+
+## <a name="uninitialized_move"></a> uninitialized_move
+
+```cpp
+template <class InputIterator, class ForwardIterator>
+    ForwardIterator uninitialized_move(InputIterator first, InputIterator last, ForwardIterator result); 
+```
+
+### <a name="remarks"></a>備註
+
+與相同：
+
+```cpp
+for (; first != last; (void)++result, ++first)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); 
+        return result;
+```
+
+如果擲回例外狀況，範圍中的某些物件可能會處於正確的但未指定的狀態。
+
+## <a name="uninitialized_move_n"></a> uninitialized_move_n
+
+```cpp
+template <class InputIterator, class Size, class ForwardIterator>
+    pair<InputIterator, ForwardIterator> uninitialized_move_n(InputIterator first, Size n, ForwardIterator result);
+```
+
+### <a name="remarks"></a>備註
+
+與相同：
+
+```cpp
+for (; n > 0; ++result, (void) ++first, --n)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); return {first,result};
+```
+
+如果擲回例外狀況，範圍中的某些物件可能會處於正確的但未指定的狀態。
+
+## <a name="uninitialized_value_construct"></a> uninitialized_value_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_value_construct(ForwardIterator first, ForwardIterator last);
+```
+
+### <a name="remarks"></a>備註
+
+與相同：
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type();
+```
+
+## <a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_value_construct_n(ForwardIterator first, Size n);
+```
+
+與相同：
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type(); return first;
+```
+
+## <a name="uses_allocator_v"></a> uses_allocator_v
+
+```cpp
+template <class T, class Alloc>
+    inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
 ## <a name="see-also"></a>另請參閱

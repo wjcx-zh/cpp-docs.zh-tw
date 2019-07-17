@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e491c376f110f48b0b02a30fc39f6c6da1a5ab02
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410848"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240900"
 ---
 # <a name="weakptr-class"></a>weak_ptr 類別
 
@@ -57,17 +57,18 @@ public:
       weak_ptr& operator=(const weak_ptr<Other>&);
    template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
+      
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 弱式指標所控制的類型。
 
 ## <a name="remarks"></a>備註
@@ -84,7 +85,7 @@ public:
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[weak_ptr](#weak_ptr)|建構 `weak_ptr`。|
 
@@ -102,17 +103,11 @@ public:
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator=](#op_eq)|取代所擁有的資源。|
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<memory>
-
-**命名空間：** std
-
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> element_type
 
 項目的類型。
 
@@ -120,11 +115,11 @@ public:
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 此類型是範本參數 `Ty`的同義字。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -148,7 +143,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>  expired
+### <a name="expired"></a> 已過期
 
 測試擁有權是否已到期。
 
@@ -156,11 +151,11 @@ int main()
 bool expired() const;
 ```
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 此成員函式會傳回**真**如果`*this`已過期，否則為**false**。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -205,7 +200,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>  lock
+### <a name="lock"></a> 鎖定
 
 取得資源的獨佔擁有權。
 
@@ -213,11 +208,11 @@ wp.expired() == true
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 如果此成員函式會傳回空的 shared_ptr 物件`*this`已過期; 否則會傳回[shared_ptr 類別](../standard-library/shared-ptr-class.md)\<Ty > 所擁有之資源物件`*this`指向。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -262,7 +257,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>  operator=
+### <a name="op_eq"></a> 運算子 =
 
 取代所擁有的資源。
 
@@ -270,28 +265,28 @@ wp.expired() == true
 weak_ptr& operator=(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+    weak_ptr& operator=(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+    weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*其他*<br/>
+*其他*\
 引數共用/弱式指標所控制的類型。
 
-*wp*<br/>
+*wp*\
 要複製的弱式指標。
 
-*sp*<br/>
+*預存程序*\
 要複製的共用指標。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 這些運算子都會釋放目前 `*this` 所指向的資源，並將運算元序列所命名的資源指派給 `*this`。 如果運算子失敗，則會保留 `*this` 不變。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -323,28 +318,28 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>  owner_before
+### <a name="owner_before"></a> owner_before
 
 傳回**真**如果這個`weak_ptr`排序之前 (或小於) 所提供的指標。
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*ptr*\
 針對 `shared_ptr` 或 `weak_ptr` 的 `lvalue` 參考。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 範本成員函式會傳回**真**如果`*this`是`ordered before` `ptr`。
 
-## <a name="reset"></a>  reset
+### <a name="reset"></a> 重設
 
 釋放所擁有的資源。
 
@@ -352,11 +347,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 ```
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 成員函式會釋放 `*this` 所指向的資源，並將 `*this` 轉換為空的 weak_ptr 物件。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -386,7 +381,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>  swap
+### <a name="swap"></a> 交換
 
 交換兩個 `weak_ptr` 物件。
 
@@ -394,16 +389,23 @@ wp.expired() == true
 void swap(weak_ptr& wp);
 ```
 
-### <a name="parameters"></a>參數
+也包含特製化。
 
-*wp*<br/>
+```cpp
+template<class T>
+    void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
+```
+
+#### <a name="parameters"></a>參數
+
+*wp*\
 要交換的弱式指標。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 此成員函式會保留原先所指向的資源`*this`後續所指的*wp*，和原先所指向的資源*wp*後續指向`*this`. 此函式不會變更這兩個資源的參考計數，且不會擲回任何例外狀況。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -456,7 +458,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>  use_count
+### <a name="use_count"></a> use_count
 
 指定之 `shared_ptr` 物件的計數數目。
 
@@ -464,11 +466,11 @@ int main()
 long use_count() const;
 ```
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 成員函式會傳回擁有 `*this` 所指向之資源的 `shared_ptr` 物件數目。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -496,9 +498,9 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>  weak_ptr
+### <a name="weak_ptr"></a> weak_ptr
 
-建構 `weak_ptr`。
+建構 `weak_ptr`。 也包含解構函式。
 
 ```cpp
 weak_ptr();
@@ -506,28 +508,30 @@ weak_ptr();
 weak_ptr(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+    weak_ptr(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+    weak_ptr(const shared_ptr<Other>& sp);
+
+~weak_ptr();
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*其他*<br/>
+*其他*\
 引數共用/弱式指標所控制的類型。
 
-*wp*<br/>
+*wp*\
 要複製的弱式指標。
 
-*sp*<br/>
+*預存程序*\
 要複製的共用指標。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 每個建構函式會建構指向由運算元序列所命名之資源的物件。
 
-### <a name="example"></a>範例
+#### <a name="example"></a>範例
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp
@@ -559,7 +563,3 @@ wp0.expired() == true
 *wp1.lock() == 5
 *wp2.lock() == 5
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[shared_ptr 類別](../standard-library/shared-ptr-class.md)<br/>

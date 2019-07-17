@@ -4,40 +4,31 @@ ms.date: 11/04/2016
 f1_keywords:
 - forward_list/std::swap
 ms.assetid: 0d6bc656-7049-4651-a4bd-c9a805e47756
-ms.openlocfilehash: b425461f1428470b04a525efdd9a702ae038a283
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78b1eaa44ed464de67d8ec45fab3241179bb94b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159830"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240675"
 ---
 # <a name="ltforwardlistgt-functions"></a>&lt;forward_list&gt; 函式
 
-||
-|-|
-|[swap](#swap)|
-
-## <a name="swap"></a>  swap
+## <a name="swap"></a> 交換
 
 交換兩個轉送清單的項目。
 
 ```cpp
-void swap(
-    forward_list <Type, Allocator>& left,
-    forward_list <Type, Allocator>& right);
+void swap(forward_list <Type, Allocator>& left, forward_list <Type, Allocator>& right);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
 此範本函式會執行 `left.swap(right)`。
-
-## <a name="see-also"></a>另請參閱
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

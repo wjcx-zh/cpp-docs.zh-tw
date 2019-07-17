@@ -1,41 +1,38 @@
 ---
-title: '&lt;new&gt; 運算子'
+title: '&lt;新&gt;運算子和列舉'
 ms.date: 11/04/2016
 f1_keywords:
 - new/std::operator delete
 - new/std::operator new
 ms.assetid: d1af4b56-9a95-4c65-ab01-bf43e982c7bd
-ms.openlocfilehash: 87f7b6cfd6a06ab03b27ebe6aa4dd41b0b900673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3fd5b825fe1eaf3a07d9d001f03b9d0c64ffa31
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223684"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243673"
 ---
-# <a name="ltnewgt-operators"></a>&lt;new&gt; 運算子
+# <a name="ltnewgt-operators-and-enums"></a>&lt;新&gt;運算子和列舉
 
-||||
-|-|-|-|
-|[operator delete](#op_delete)|[operator delete[]](#op_delete_arr)|[operator new](#op_new)|
-|[operator new[]](#op_new_arr)|
+## <a name="op_align_val_t"></a> 列舉 align_val_t
 
-## <a name="op_delete"></a>  operator delete
+```cpp
+enum class align_val_t : size_t {};
+```
 
-由 delete 陳述式呼叫的函式，藉此取消配置物件個體的儲存區。
+## <a name="op_delete"></a> 運算子 delete
+
+刪除運算式可取消配置物件個體的儲存體所呼叫的函式。
 
 ```cpp
 void operator delete(void* ptr) throw();
-
-void operator delete(void *,
-    void*) throw();
-
-void operator delete(void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete(void *, void*) throw();
+void operator delete(void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*ptr*\
 要藉由刪除來讓值變成無效的指標。
 
 ### <a name="remarks"></a>備註
@@ -46,29 +43,25 @@ Null 值的預設行為*ptr*是不執行任何動作。 任何其他值*ptr*必�
 
 呼叫第二個函式的是與 **new**( **std::size_t**) 格式之 new 運算式對應的位置 delete 運算式。 它不會執行任何動作。
 
-呼叫第三個函式的是與 **new**( **std::size_t**, **conststd::nothrow_t&**) 格式之 new 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 `operator new`( **size_t**) 的呼叫所傳回的值。 預設行為是評估**刪除**(`ptr`)。
+呼叫第三個函式的是與 **new**( **std::size_t**, **conststd::nothrow_t&** ) 格式之 new 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受 `ptr` 的值，該值為 Null 或是先前對 `operator new`( **size_t**) 的呼叫所傳回的值。 預設行為是評估**刪除**(`ptr`)。
 
 ### <a name="example"></a>範例
 
 請參閱[new 運算子](../standard-library/new-operators.md#op_new)如需使用的範例**運算子 delete**。
 
-## <a name="op_delete_arr"></a>  operator delete[]
+## <a name="op_delete_arr"></a> operator delete]
 
 由 delete 陳述式呼叫的函式，藉此取消配置物件陣列的儲存區。
 
 ```cpp
 void operator delete[](void* ptr) throw();
-
-void operator delete[](void *,
-    void*) throw();
-
-void operator delete[](void* ptr,
-    const std::nothrow_t&) throw();
+void operator delete[](void *, void*) throw();
+void operator delete[](void* ptr, const std::nothrow_t&) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*ptr*\
 要藉由刪除來讓值變成無效的指標。
 
 ### <a name="remarks"></a>備註
@@ -77,32 +70,28 @@ void operator delete[](void* ptr,
 
 第二個函式呼叫的位置`delete[]`運算式對應`new[]`格式的運算式`new[]`(**std:: size_t**)。 它不會執行任何動作。
 
-呼叫第三個函式的是與 `new[]`( **std::size_t**, **const std::nothrow_t&**) 格式之 `new[]` 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受的值*ptr*也就是 null 或是已由先前呼叫運算子`new[]`(**size_t**)。 預設行為是評估 `delete[]`( `ptr`)。
+呼叫第三個函式的是與 `new[]`( **std::size_t**, **const std::nothrow_t&** ) 格式之 `new[]` 運算式對應的位置 delete 運算式。 程式可以使用此函式簽章來定義函式，以取代「C++ 標準程式庫」所定義的預設版本。 所需的行為是接受的值*ptr*也就是 null 或是已由先前呼叫運算子`new[]`(**size_t**)。 預設行為是評估 `delete[]`( `ptr`)。
 
 ### <a name="example"></a>範例
 
 如需使用 `operator delete[]` 的範例，請參閱 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
 
-## <a name="op_new"></a>  operator new
+## <a name="op_new"></a> new 運算子
 
 new 運算式所呼叫來為個別物件配置儲存體的函式。
 
 ```cpp
 void* operator new(std::size_t count) throw(bad_alloc);
-
-void* operator new(std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new(std::size_t count,
-    void* ptr) throw();
+void* operator new(std::size_t count, const std::nothrow_t&) throw();
+void* operator new(std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 要配置的儲存體位元組數。
 
-*ptr*<br/>
+*ptr*\
 必須傳回指標。
 
 ### <a name="return-value"></a>傳回值
@@ -137,7 +126,7 @@ void* operator new(std::size_t count,
 
 若要釋放所配置的儲存體**new 運算子**，呼叫[運算子 delete](../standard-library/new-operators.md#op_delete)。
 
-如需有關 new 的擲回或不擲回行為的詳細資訊，請參閱 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)。
+如需擲回或非擲回新的請參閱行為[新和 delete 運算子](../cpp/new-and-delete-operators.md)。
 
 ### <a name="example"></a>範例
 
@@ -182,26 +171,22 @@ int main( )
 }
 ```
 
-## <a name="op_new_arr"></a>  operator new[]
+## <a name="op_new_arr"></a> 運算子 new]
 
 new 運算式所呼叫來為物件陣列配置儲存體的配置函式。
 
 ```cpp
 void* operator new[](std::size_t count) throw(std::bad_alloc);
-
-void* operator new[](std::size_t count,
-    const std::nothrow_t&) throw();
-
-void* operator new[](std::size_t count,
-    void* ptr) throw();
+void* operator new[](std::size_t count, const std::nothrow_t&) throw();
+void* operator new[](std::size_t count, void* ptr) throw();
 ```
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 要為陣列物件配置的儲存體位元組數。
 
-*ptr*<br/>
+*ptr*\
 必須傳回指標。
 
 ### <a name="return-value"></a>傳回值
@@ -260,7 +245,3 @@ int main() {
    delete[ ] fPtr3;
 }
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<new>](../standard-library/new.md)<br/>

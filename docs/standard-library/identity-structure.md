@@ -7,12 +7,12 @@ helpviewer_keywords:
 - identity class
 - identity structure
 ms.assetid: 990756fd-7969-4b39-ad7e-0878e8dac8fd
-ms.openlocfilehash: 722eb9c0579d0c07765434127d0a7c43718fbc37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49b2c1eb3ca03f9bf9199bdbca49348866ff0a7e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404991"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246157"
 ---
 # <a name="identity-structure"></a>identity 結構
 
@@ -24,27 +24,16 @@ ms.locfileid: "62404991"
 struct identity {
    typedef Type type;
    Type operator()(const Type& left) const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|要識別的值。|
+*左邊*\
+要識別的值。
 
 ## <a name="remarks"></a>備註
 
 此類別包含公用類型定義 `type`，這與範本參數 Type 相同。 它是與範本函式 [forward](../standard-library/utility-functions.md#forward) 搭配使用，以確保函式參數具有所需的類型。
 
 為了與舊版程式碼相容，此類別亦定義識別函式`operator()`它會傳回其引數*左*。
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<utility>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[\<utility>](../standard-library/utility.md)<br/>

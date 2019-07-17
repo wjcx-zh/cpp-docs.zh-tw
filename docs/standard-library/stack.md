@@ -7,26 +7,31 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: b8f2bb6cf74d0607bd3105196336a515adcade9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65f2197a4a9ac37ad5910bfa8dbef457fda5f611
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412458"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244121"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
 定義樣板類別堆疊和兩個支援的樣板。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <stack>
-```
+**標頭︰** \<stack>
+
+**命名空間：** std
+
+> [!NOTE]
+> \<堆疊 > 程式庫也會使用`#include <initializer_list>`陳述式。
+
+## <a name="members"></a>成員
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/stack-operators.md#op_neq)|測試運算子左邊的堆疊物件是否不等於右邊的堆疊物件。|
 |[operator<](../standard-library/stack-operators.md#op_lt)|測試運算子左邊的堆疊物件是否小於右邊的堆疊物件。|
@@ -35,9 +40,15 @@ ms.locfileid: "62412458"
 |[operator>](../standard-library/stack-operators.md#op_gt)|測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。|
 
+### <a name="functions"></a>函式
+
+|||
+|-|-|
+|[swap]()||
+
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[stack 類別](../standard-library/stack-class.md)|範本容器配接器類別，其提供的功能限制將對項目的存取限制為最近加入一些基礎容器類型的項目。|
 

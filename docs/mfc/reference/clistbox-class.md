@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225265"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243572"
 ---
 # <a name="clistbox-class"></a>CListBox 類別
 
@@ -129,7 +129,7 @@ class CListBox : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|將字串加入至清單方塊中。|
 |[CListBox::CharToItem](#chartoitem)|覆寫，以提供自訂的 WM_CHAR 為主控描繪清單方塊沒有字串處理。|
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|清單方塊中，傳回字串的數目。|
 |[CListBox::GetCurSel](#getcursel)|清單方塊中，會傳回目前所選字串之以零為起始索引。|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|傳回在清單方塊可以水平捲動的像素的寬度。|
-|[CListBox::GetItemData](#getitemdata)|傳回清單方塊項目相關聯的 32 位元值。|
+|[CListBox::GetItemData](#getitemdata)|傳回值，清單方塊項目相關聯。|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|讓指標回到清單方塊項目。|
 |[CListBox::GetItemHeight](#getitemheight)|判斷清單方塊中的項目的高度。|
 |[CListBox::GetItemRect](#getitemrect)|傳回目前顯示的清單方塊項目的週框。|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|設定多重資料行的清單方塊的資料行寬度。|
 |[CListBox::SetCurSel](#setcursel)|選取清單方塊的字串。|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|設定在清單方塊可以水平捲動的像素的寬度。|
-|[CListBox::SetItemData](#setitemdata)|設定清單方塊項目相關聯的 32 位元值。|
+|[CListBox::SetItemData](#setitemdata)|設定值，清單方塊項目相關聯。|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|清單方塊項目設定的指標。|
 |[CListBox::SetItemHeight](#setitemheight)|清單方塊中，設定項目的高度。|
 |[CListBox::SetLocale](#setlocale)|設定清單方塊的地區設定識別碼。|
@@ -525,7 +525,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox::FindString
+##  <a name="findstring"></a>  Clistbox:: Findstring
 
 尋找第一個字串，而不需要變更清單方塊選取項目包含指定的前置詞的清單方塊中。
 
@@ -702,7 +702,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果發生錯誤相關聯的項目或 LB_ERR 32 位元值。
+如果發生錯誤，與項目或 LB_ERR 關聯的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1288,7 +1288,7 @@ void SetHorizontalExtent(int cxExtent);
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-設定清單方塊中指定的項目相關聯的 32 位元值。
+設定值，清單方塊中指定的項目相關聯。
 
 ```
 int SetItemData(

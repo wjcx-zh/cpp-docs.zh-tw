@@ -2,17 +2,17 @@
 title: 逐步解說：建立並使用您自己的動態連結程式庫 (C++)
 description: 在 Visual Studio 中使用 C++ 建立 Windows 動態連結程式庫 (DLL)。
 ms.custom: conceptual
-ms.date: 07/14/2019
+ms.date: 07/17/2019
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 5db16c834f3e42aee0cc558ab1ea18bcb2a35063
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: 8ca89471177ba2d1fa98bfaf51b86ed15dcd6d2f
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894379"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299816"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己的動態連結程式庫 (C++)
 
@@ -34,7 +34,7 @@ ms.locfileid: "67894379"
 
 此逐步解說會建立兩個 Visual Studio 方案；一個是建置 DLL，另一個是建置用戶端應用程式。 DLL 會使用 C 呼叫慣例，因此可以從使用其他語言建置的應用程式來呼叫，只要平台和呼叫與連結慣例相符即可。 用戶端應用程式會使用「隱含連結」  ，其中 Windows 會在載入時將應用程式連結到 DLL。 如同靜態連結程式庫中的函式，此連結可讓應用程式呼叫 DLL 提供的函式。
 
-本逐步解說不涵蓋某些常見的情況。 不會示範其他程式設計語言的 C++ DLL 使用方式。 不會示範如何建立僅限資源的 DLL。 也不會顯示在執行階段 (而非載入時) 載入 DLL 的明確連結使用方式。 接下來請放心，您可以使用 Visual Studio 來執行這些工作。 如需 DLL 的詳細資訊連結，請參閱[在 Visual Studio 中建立 C/C++ DLL](dlls-in-visual-cpp.md)。 如需隱含連結和明確連結的詳細資訊，請參閱[判斷要使用哪一種連結方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立 C++ DLL 以與使用 C 語言連結之慣例程式設計語言搭配使用的資訊，請參閱[匯出 C++ 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 DLL 以與 .NET 語言搭配使用的資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
+本逐步解說不涵蓋某些常見的情況。 不會示範其他程式設計語言的 C++ DLL 使用方式。 不會示範如何建立僅限資源的 DLL。 也不會顯示在執行階段 (而非載入時) 載入 DLL 的明確連結使用方式。 請放心, 您可以使用 Visual Studio 來執行所有這些動作。 如需 DLL 的詳細資訊連結，請參閱[在 Visual Studio 中建立 C/C++ DLL](dlls-in-visual-cpp.md)。 如需隱含連結和明確連結的詳細資訊，請參閱[判斷要使用哪一種連結方法](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)。 如需建立 C++ DLL 以與使用 C 語言連結之慣例程式設計語言搭配使用的資訊，請參閱[匯出 C++ 函式以用於 C 語言可執行檔](exporting-cpp-functions-for-use-in-c-language-executables.md)。 如需如何建立 DLL 以與 .NET 語言搭配使用的資訊，請參閱[從 Visual Basic 應用程式呼叫 DLL 函式](calling-dll-functions-from-visual-basic-applications.md)。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -267,7 +267,7 @@ ms.locfileid: "67894379"
    }
    ```
 
-為了確認目前為止一切順利，請編譯動態連結程式庫。 在功能表列上選擇 [建置]   > [建置方案]  來編譯。 輸出應類似於如下：
+為了確認目前為止一切順利，請編譯動態連結程式庫。 在功能表列上選擇 [建置]   > [建置方案]  來編譯。 輸出應該會看起來像這樣。 請注意, DLL 可執行檔和相關編譯器輸出會放在 [方案] 資料夾正下方的資料夾中, 名為*Debug* 。 如果您建立發行組建, 輸出將會放在名為*Release*的資料夾中:
 
 ```Output
 1>------ Build started: Project: MathLibrary, Configuration: Debug Win32 ------
@@ -280,7 +280,7 @@ ms.locfileid: "67894379"
 ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
 ```
 
-恭喜，您已使用 Visual Studio 的 DLL ！ 接下來，您將建立一個用戶端應用程式，該應用程式使用由 DLL 匯出的函式。
+恭喜, 您已使用 Visual Studio 建立 DLL! 接下來，您將建立一個用戶端應用程式，該應用程式使用由 DLL 匯出的函式。
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>建立使用 DLL 的用戶端應用程式
 
@@ -354,17 +354,17 @@ ms.locfileid: "67894379"
 
 1. 在上方窗格中按兩下 [其他 Include 目錄]  對話方塊以啟用編輯控制項。
 
-1. 在編輯控制項中，指定 **MathLibrary.h** 標頭檔的位置路徑。 按一下向下箭頭，然後選擇 **\<編輯 >** 。 您可以按一下資料夾圖示，然後省略符號 ( **...** ) 瀏覽至正確的資料夾。
+1. 在編輯控制項中，指定 **MathLibrary.h** 標頭檔的位置路徑。 按一下向下箭號, 然後選擇 [  **\<編輯 >** ]。 您可以按一下資料夾圖示, 然後按省略號 ( **...** ) 流覽至正確的資料夾。
  
-   您也可以此情況下，您可以輸入包含用戶端專案來包含在 DLL 專案中的.h 檔案的資料夾中的.cpp 檔案的資料夾的相對路徑。 如果用戶端專案位於與 DLL 方案相同資料夾的不同方案中，則相對路徑應如下所示：
+   您也可以在此情況下, 輸入在用戶端專案中包含 .cpp 檔案之資料夾的相對路徑, 以及 DLL 專案中包含 .h 檔案的資料夾。 如果用戶端專案位於與 DLL 方案相同資料夾的不同方案中，則相對路徑應如下所示：
 
    `..\MathLibrary\MathLibrary`
 
-   如果您的 DLL 和用戶端專案位於相同方案中，或解決的辦法是在不同的資料夾，然後您必須據以調整相對路徑，或是瀏覽資料夾，使用先前所述的方法。
+   如果您的 DLL 和用戶端專案位於相同的方案中, 或方案位於不同的資料夾中, 則您必須據以調整相對路徑, 或使用先前所述的方法流覽資料夾。
 
    ![將標頭位置新增至其他 Include 目錄屬性](media/mathclient-additional-include-directories.png "將標頭位置新增至其他 Include 目錄屬性")
 
-1. 標頭檔中輸入路徑之後**其他 Include 目錄**對話方塊方塊中，選擇**確定**按鈕來返回**屬性頁** 對話方塊中，然後選擇**確定**按鈕以儲存您的變更。
+1. 在 [**其他 Include 目錄**] 對話方塊中輸入標頭檔的路徑之後, 請選擇 [**確定]** 按鈕以返回 [**屬性頁**] 對話方塊, 然後選擇 [**確定]** 按鈕以儲存變更。
 
 您現在可以包含 **MathLibrary.h** 檔案，並使用其在用戶端應用程式中宣告的函式。 使用此程式碼取代 **MathClient.cpp** 的內容：
 
@@ -412,16 +412,16 @@ int main()
 
    ![編輯 [其他程式庫目錄] 屬性](media/mathclient-additional-library-directories-property.png "編輯 [其他程式庫目錄] 屬性")
 
-1. 在 [其他程式庫目錄]  對話方塊的上方窗格中按兩下以啟用編輯控制項。 在編輯控制項中，指定 **MathLibrary.lib** 檔案的位置路徑。 輸入此值，以使用適用於偵錯與發行組建的巨集：
+1. 在 [其他程式庫目錄]  對話方塊的上方窗格中按兩下以啟用編輯控制項。 在編輯控制項中，指定 **MathLibrary.lib** 檔案的位置路徑。 它位於您方案資料夾下`Debug`的直接名為的資料夾中。 如果您建立發行組建, 輸出將會放在名`Release`為的資料夾中。 您可以使用下列宏, 讓連結器可以找到您的 DLL, 而不論您所建立的組建種類為何:
 
    **Visual Studio 2019:**
 
    `..\MathLibrary\$(IntDir)`
 
-   **Visual Studio 2017 及更早版本：**
+   **Visual Studio 2017 和更早版本:**
 
    `..\..\MathLibrary\$(IntDir)`
- 
+
    ![新增程式庫目錄](media/mathclient-additional-library-directories.png "新增程式庫目錄")
 
 1. 一旦您在 [其他程式庫目錄]  對話方塊中輸入程式庫檔案的路徑，請選擇 [確定]  按鈕返回 [屬性頁]  對話方塊。
@@ -442,7 +442,7 @@ int main()
 
    `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-    **Visual Studio 2017 及更早版本：**
+    **Visual Studio 2017 和更早版本:**
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
@@ -450,7 +450,7 @@ int main()
 
 1. 選擇 [確定]  按鈕，儲存您對專案屬性進行的變更。
 
-現在您的用戶端應用程式已具備建置與執行所需所有項目。 選擇功能表列上的 [建置]   > [建置方案]  以建置應用程式。 **輸出**Visual Studio 中的視窗應該會看見下列 Visual studio 版本而定：
+現在您的用戶端應用程式已具備建置與執行所需所有項目。 選擇功能表列上的 [建置]   > [建置方案]  以建置應用程式。 Visual Studio 中的 [**輸出**] 視窗應該會有類似下列範例的內容, 視您的 Visual Studio 版本而定:
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------

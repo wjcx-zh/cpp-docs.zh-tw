@@ -1,6 +1,6 @@
 ---
 title: /FORCE (強制檔案輸出)
-ms.date: 11/04/2016
+ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCLinkerTool.ForceLink
 - /force
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: af7962a4b3b5805e7e0c4d59752254c8ade17f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292467"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299725"
 ---
 # <a name="force-force-file-output"></a>/FORCE (強制檔案輸出)
 
@@ -25,29 +25,31 @@ ms.locfileid: "62292467"
 
 ## <a name="remarks"></a>備註
 
-/FORCE 選項會指示連結器，以建立有效的.exe 檔或 DLL 即使符號參考但未定義或多次定義。
+/FORCE 選項會指示連結器建立有效的 .exe 檔或 DLL, 即使符號已被參考但未定義或已進行乘法定義也一樣。
 
-/FORCE 選項可以採取的選擇性引數：
+/FORCE 選項可以接受選擇性引數:
 
-- 使用 /force: multiple 都會建立輸出檔，不論是否連結找到一個以上的符號定義。
+- 使用/FORCE: MULTIPLE 來建立輸出檔, 不論連結是否會尋找一個以上的符號定義。
 
-- 使用 /FORCE： 無法解析的建立輸出檔案，不論是否連結找到未定義的符號。 / 強制： 無法解析未解析進入點符號是否會被忽略。
+- 使用/FORCE: 無法解析來建立輸出檔, 不論連結是否找到未定義的符號。 /FORCE: 如果無法解析進入點符號, 則會忽略無法解析的。
 
-/ 強制不含引數隱含多次，而無法解析。
+不含引數的/FORCE 會隱含多個和無法解析。
 
-使用這個選項建立的檔案可能無法如預期執行。 指定 /FORCE 選項時，不會將以累加方式連結，連結器。
+使用此選項建立的檔案可能無法如預期般執行。 當指定/FORCE 選項時, 連結器不會以累加方式連結。
 
-如果模組以編譯 **/clr**， **/force**將不會建立映像。
+如果模組是使用 **/clr**編譯, **/force**將不會建立映射。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 以滑鼠右鍵按一下**方案總管**中的專案, 然後選擇 [**屬性**]。 
 
-1. 按一下 **連結器**資料夾。
+1. 按一下 **Linker** 資料夾。
 
 1. 按一下 [命令列]  屬性頁。
 
-1. 輸入到選項**其他選項** 方塊中。
+1. 在 [**其他選項**] 方塊中輸入選項。
+
+如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

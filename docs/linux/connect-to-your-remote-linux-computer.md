@@ -3,12 +3,12 @@ title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦或 WSL。
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
-ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
+ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285251"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861140"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 

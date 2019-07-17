@@ -42,25 +42,16 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: a67955da21c1229c3492d5b52dd6e14c9caa33fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389199"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244721"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt; 函式
 
-||||
-|-|-|-|
-|[abs](#abs)|[arg](#arg)|[conj](#conj)|
-|[cos](#cos)|[cosh](#cosh)|[exp](#exp)|
-|[imag](#imag)|[log](#log)|[log10](#log10)|
-|[norm](#norm)|[polar](#polar)|[pow](#pow)|
-|[real](#real)|[sin](#sin)|[sinh](#sinh)|
-|[sqrt](#sqrt)|[tan](#tan)|[tanh](#tanh)|
-
-## <a name="abs"></a>  abs
+## <a name="abs"></a> abs
 
 計算複數的模。
 
@@ -71,7 +62,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其模數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -80,7 +71,7 @@ Type abs(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>備註
 
-複數的「模數」是代表複數的向量長度量值。 複數 a + bi 的模數為 sqrt (a<sup>2</sup> + b<sup>2</sup>)，寫為 &#124;a + bi&#124;。 複數 a + bi 的範數為 (a<sup>2</sup> + b<sup>2</sup>)，因此複數的模數即為其範數的平方根。
+複數的「模數」  是代表複數的向量長度量值。 複數 a + bi 的模數為 sqrt (a<sup>2</sup> + b<sup>2</sup>)，寫為 &#124;a + bi&#124;。 複數 a + bi 的範數  為 (a<sup>2</sup> + b<sup>2</sup>)，因此複數的模數即為其範數的平方根。
 
 ### <a name="example"></a>範例
 
@@ -147,7 +138,19 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="arg"></a>  arg
+## <a name="acos"></a> acos
+
+```cpp
+template<class T> complex<T> acos(const complex<T>&);
+```
+
+## <a name="acosh"></a> acosh
+
+```cpp
+template<class T> complex<T> acosh(const complex<T>&);
+```
+
+## <a name="arg"></a> 引數
 
 從複數擷取幅角。
 
@@ -158,7 +161,7 @@ Type arg(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其引數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -234,6 +237,30 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
+## <a name="asin"></a> asin
+
+```cpp
+template<class T> complex<T> asin(const complex<T>&);
+```
+
+## <a name="asinh"></a> asinh
+
+```cpp
+template<class T> complex<T> asinh(const complex<T>&);
+```
+
+## <a name="atan"></a> atan
+
+```cpp
+template<class T> complex<T> atan(const complex<T>&);
+```
+
+## <a name="atanh"></a> atanh
+
+```cpp
+template<class T> complex<T> atanh(const complex<T>&);
+```
+
 ## <a name="conj"></a>  conj
 
 傳回複數的共軛複數。
@@ -245,7 +272,7 @@ complex<Type> conj(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要傳回其共軛複數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -309,7 +336,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a>  cos
+## <a name="cos"></a> cos
 
 傳回複數的餘弦值。
 
@@ -320,7 +347,7 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其餘弦值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -331,9 +358,9 @@ complex<Type> cos(const complex<Type>& complexNum);
 
 定義複變餘弦的恆等式如下：
 
-cos ( *z*) = (1/2)\*( exp ( *iz*) + exp (- *iz*) )
+cos (*z*) = (1/2)\*(exp (*iz 會分別*) + exp (- *iz 會分別*))
 
-cos ( *z*) = cos ( *a* + *bi*) = cos ( *a*) cosh ( *b*) - isin ( *a*) sinh ( *b*)
+cos (*z*) = cos (   + *bi*) = cos (  ) cosh ( *b*)-isin (  ) sinh (*b*)
 
 ### <a name="example"></a>範例
 
@@ -400,7 +427,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)
 ```
 
-## <a name="cosh"></a>  cosh
+## <a name="cosh"></a> cosh
 
 傳回複數的雙曲餘弦值。
 
@@ -411,7 +438,7 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其雙曲餘弦值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -422,9 +449,9 @@ complex<Type> cosh(const complex<Type>& complexNum);
 
 定義複變雙曲餘弦的恆等式如下：
 
-cos ( *z*) = (1/2)\*( exp ( *z*) + exp (- *z*) )
+cos (*z*) = (1/2)\*(exp (*z*) + exp (- *z*))
 
-cos ( *z*) = cosh ( *a + bi*) = cosh ( *a*) cos ( *b*) + isinh ( *a*) sin ( *b*)
+cos (*z*) = cosh (*a + bi*) = cosh (  ) cos (*b*) + isinh (  ) sin (*b*)
 
 ### <a name="example"></a>範例
 
@@ -491,7 +518,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)
 ```
 
-## <a name="exp"></a>  exp
+## <a name="exp"></a> exp
 
 傳回複數的指數函式值。
 
@@ -502,7 +529,7 @@ complex<Type> exp(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其指數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -562,7 +589,7 @@ int main() {
 }
 ```
 
-## <a name="imag"></a>  imag
+## <a name="imag"></a> imag
 
 擷取複數的虛數部分。
 
@@ -573,7 +600,7 @@ Type imag(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -614,7 +641,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="log"></a>  log
+## <a name="log"></a> 記錄檔
 
 傳回複數的自然對數值。
 
@@ -625,7 +652,7 @@ complex<Type> log(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其自然對數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -684,7 +711,7 @@ int main() {
 }
 ```
 
-## <a name="log10"></a>  log10
+## <a name="log10"></a> log10
 
 傳回複數之底數為 10 的對數值。
 
@@ -695,7 +722,7 @@ complex<Type> log10(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其底數為 10 之對數值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -754,7 +781,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a>  norm
+## <a name="norm"></a> norm
 
 擷取複數的範數。
 
@@ -765,7 +792,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其範數的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -774,7 +801,7 @@ Type norm(const complex<Type>& complexNum);
 
 ### <a name="remarks"></a>備註
 
-複數 *a + bi* 的範數為 *(a*<sup>2</sup> *+ b*<sup>2</sup>*)。* 複數的範數為其模數的平方。 複數的模數是代表複數的向量長度量值。 複數 *a + bi* 的模數為 `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*)，* 寫為 *&#124;a + bi&#124;。*
+複數 *a + bi* 的範數為 *(a*<sup>2</sup> *+ b*<sup>2</sup> *)。* 複數的範數為其模數的平方。 複數的模數是代表複數的向量長度量值。 複數 *a + bi* 的模數為 `sqrt` *(a*<sup>2</sup> *+ b*<sup>2</sup> *)，* 寫為 *&#124;a + bi&#124;。*
 
 ### <a name="example"></a>範例
 
@@ -837,7 +864,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a>  polar
+## <a name="polar"></a> 極座標圖
 
 傳回以笛卡兒座標形式表示的複數，其對應到指定的模和幅角。
 
@@ -848,10 +875,10 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Modulus*<br/>
+*_Modulus*\
 輸入複數的模數。
 
-*_Argument*<br/>
+*_Argument*\
 輸入複數的引數。
 
 ### <a name="return-value"></a>傳回值
@@ -860,7 +887,7 @@ complex<Type> polar(const Type& _Modulus, const Type& _Argument = 0);
 
 ### <a name="remarks"></a>備註
 
-複數的極座標形式可提供模數*r*並將引數*p*，其中這些參數相關的實數和虛數的笛卡兒座標元件和*b* ，方程式 = r \* cos *p*並*b* = *r* \* sin *p*。
+複數的極座標形式可提供模數*r*並將引數*p*，其中這些參數相關的實數和虛數的笛卡兒座標元件  和*b* ，方程式  = r \* cos *p*並*b* = *r* \* sin *p*。
 
 ### <a name="example"></a>範例
 
@@ -914,7 +941,7 @@ Argument of c2 is recovered from c2 using:
 arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="pow"></a>  pow
+## <a name="pow"></a> pow
 
 計算底數為複數且次方為另一個複數的乘冪，評估藉此取得的複數。
 
@@ -934,10 +961,10 @@ complex<Type> pow(const Type& _Base, const complex<Type>& _Power);
 
 ### <a name="parameters"></a>參數
 
-*_Base*<br/>
+*（_b)* \
 複數或數字，其為由成員函式乘至乘冪之基底複數的參數類型。
 
-*_Power*<br/>
+*電源 （_p)* \
 整數或複數或數字，其為由成員函式乘至乘冪之基底複數的參數類型。
 
 ### <a name="return-value"></a>傳回值
@@ -1059,7 +1086,13 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
 
-## <a name="real"></a>  real
+## <a name="proj"></a> proj
+
+```cpp
+template<class T> complex<T> proj(const complex<T>&);
+```
+
+## <a name="real"></a> real
 
 擷取複數的實數部分。
 
@@ -1070,7 +1103,7 @@ Type real(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1111,7 +1144,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="sin"></a>  sin
+## <a name="sin"></a> sin
 
 傳回複數的正弦值。
 
@@ -1122,7 +1155,7 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1133,9 +1166,9 @@ complex<Type> sin(const complex<Type>& complexNum);
 
 定義複變正弦的恆等式如下：
 
-sin ( *z*) = (1/2 *i*)\*( exp ( *iz*) - exp (- *iz*) )
+sin (*z*) = (1/2*我*)\*(exp (*iz 會分別*)-exp (- *iz 會分別*))
 
-sin ( *z*) = sin ( *a + bi*) = sin ( *a*) cosh ( *b*) + icos ( *a*) sinh ( *b*)
+sin (*z*) = sin (*a + bi*) = sin (  ) cosh (*b*) + icos (  ) sinh (*b*)
 
 ### <a name="example"></a>範例
 
@@ -1202,7 +1235,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)
 ```
 
-## <a name="sinh"></a>  sinh
+## <a name="sinh"></a> sinh
 
 傳回複數的雙曲正弦值。
 
@@ -1213,7 +1246,7 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其雙曲線正弦值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1224,9 +1257,9 @@ complex<Type> sinh(const complex<Type>& complexNum);
 
 定義複變雙曲正弦的恆等式如下：
 
-sinh ( *z*) = (1/2)\*( exp ( *z*) - exp (- *z*) )
+sinh (*z*) = (1/2)\*(exp (*z*)-exp (- *z*))
 
-sinh ( *z*) = sinh ( *a + bi*) = sinh ( *a*) cos ( *b*) + *i*cosh ( *a*) sin ( *b*)
+sinh (*z*) = sinh (*a + bi*) = sinh (  ) cos (*b*) +*我*cosh (  ) sin (*b*)
 
 ### <a name="example"></a>範例
 
@@ -1293,7 +1326,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)
 ```
 
-## <a name="sqrt"></a>  sqrt
+## <a name="sqrt"></a> sqrt
 
 計算複數的平方根。
 
@@ -1304,7 +1337,7 @@ complex<Type> sqrt(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要找出其平方根的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1381,7 +1414,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其正切值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1392,7 +1425,7 @@ complex<Type> tan(const complex<Type>& complexNum);
 
 定義複變餘切的恆等式如下：
 
-tan ( *z*) = sin ( *z*) / cos ( *z*) = ( exp ( *iz*) - exp (- *iz*) ) / *i*( exp ( *iz*) + exp (- *iz*) )
+tan (*z*) = sin (*z*) / cos (*z*) = (exp (*iz 會分別*)-exp (- *iz 會分別*)) / *i*(exp (*iz 會分別*) + exp (- *iz 會分別*))
 
 ### <a name="example"></a>範例
 
@@ -1459,7 +1492,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)
 ```
 
-## <a name="tanh"></a>  tanh
+## <a name="tanh"></a> tanh
 
 傳回複數的雙曲正切值。
 
@@ -1470,7 +1503,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 要判斷其雙曲線正切值的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -1481,7 +1514,7 @@ complex<Type> tanh(const complex<Type>& complexNum);
 
 定義複變雙曲餘切的恆等式如下：
 
-tanh ( *z*) = sinh ( *z*) / cosh ( *z*) = ( exp ( *z*) - exp (- *z*) ) / ( exp ( *z*) + exp (- *z*) )
+tanh (*z*) = sinh (*z*) / cosh (*z*) = (exp (*z*)-exp (- *z*)) / (exp (*z*)+ exp (- *z*))
 
 ### <a name="example"></a>範例
 
@@ -1547,7 +1580,3 @@ The complex components tanh (vci), where abs (vci) = 1
 (-0.792403,0.24356)
 (-0.761594,-8.68604e-014)
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<complex>](../standard-library/complex.md)<br/>

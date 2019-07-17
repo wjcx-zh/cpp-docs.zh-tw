@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cassert header
 ms.assetid: 6ead15a3-ac45-4075-be8e-350bca995c26
-ms.openlocfilehash: 6634ddd9adb4e7e7364aec2354c4ebd707e6ccd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14dda03e835ec411013b2d827bd1ccaa77f8982e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380035"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245024"
 ---
 # <a name="ltcassertgt"></a>&lt;cassert&gt;
 
-包含標準 C 程式庫標頭 \<assert.h>，並將相關名稱新增至 `std` 命名空間。
+包含標準 C 程式庫標頭\<assert.h> >，並將關聯的名稱加入`std`命名空間。 包含此標頭中宣告的宣告 C 標準程式庫標頭中使用外部連結的名稱可確保`std`命名空間。
+
+> [!NOTE]
+> \<assert.h> > 未定義`static_assert`巨集。
 
 ## <a name="syntax"></a>語法
 
@@ -23,9 +26,15 @@ ms.locfileid: "62380035"
 #include <cassert>
 ```
 
-## <a name="remarks"></a>備註
+## <a name="macros"></a>巨集
 
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+```cpp
+#define assert(E)
+```
+
+### <a name="remarks"></a>備註
+
+`assert(E)` 只為常數，如果在定義 NDEBUG 所在`assert`上次定義或重新定義，或*電子*轉換為 bool 評估為 **，則為 true**。
 
 ## <a name="see-also"></a>另請參閱
 

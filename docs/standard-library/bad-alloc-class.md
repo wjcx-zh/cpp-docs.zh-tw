@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bad_alloc class
 ms.assetid: 6429a8e6-5a49-4907-8d56-f4a4ec8131d0
-ms.openlocfilehash: 63b474d0209a5cc385de9dc11b56d5de8382a9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d1d81e393b4a3eb27ea08bc53634bfcbc119240
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376415"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243983"
 ---
 # <a name="badalloc-class"></a>bad_alloc 類別
 
@@ -22,20 +22,16 @@ ms.locfileid: "62376415"
 ```cpp
 class bad_alloc : public exception {
     bad_alloc();
-virtual ~bad_alloc();
-
+    virtual ~bad_alloc();
+    bad_alloc(const bad_alloc&);
+    bad_alloc& operator=(const bad_alloc&);
+    const char* what() const override;
 };
 ```
 
 ## <a name="remarks"></a>備註
 
 所傳回的值`what`是一個實作定義的 C 字串。 所有成員函式都不會擲回任何例外狀況。
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<new>
-
-**命名空間：** std
 
 ## <a name="example"></a>範例
 
@@ -58,17 +54,6 @@ int main() {
 }
 ```
 
-## <a name="sample-output"></a>範例輸出
-
 ```Output
 bad allocation
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<new>
-
-## <a name="see-also"></a>另請參閱
-
-[exception 類別](../standard-library/exception-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

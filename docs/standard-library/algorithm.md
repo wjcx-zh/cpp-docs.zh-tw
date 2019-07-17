@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411145"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245949"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ ms.locfileid: "62411145"
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> \<演算法 > 程式庫也會使用`#include <initializer_list>`陳述式。
 
 ## <a name="remarks"></a>備註
 
@@ -41,19 +44,20 @@ C++ 標準程式庫演算法通常分類為表示其目的或需求的相關群�
 
 為數值處理提供的 C++ 標準程式庫數值演算法有自己的標頭檔 [\<numeric>](../standard-library/numeric.md)，而函式物件和配接器定義於標頭 [\<functional>](../standard-library/functional.md)。傳回布林值的函式物件稱為述詞。 預設二元述詞是比較 `operator<`。 通常，排序的項目必須是小於比較，因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致在非對等元件中的排序。
 
-### <a name="function-templates"></a>函式樣板
+### <a name="function-templates"></a>函式範本
 
-|函式樣板|描述|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|搜尋等於或符合指定之條件的兩個相鄰項目。|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|傳回 **，則為 true**條件時出現在每個項目指定的範圍中。|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|傳回 **，則為 true**條件時出現的項目指定的範圍中的至少一次。|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|測試已排序的範圍中是否有等於指定之值 (或在二元述詞指定的意義上，相當於該值) 的項目。|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以正向方向指派它們新位置。|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以反向方向指派它們新位置。|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|指定的範圍，以測試中複製所有項目 **，則為 true**針對指定的條件|
 |[copy_n](../standard-library/algorithm-functions.md#copy_n)|複製指定的項目數目。|
-|[count](../standard-library/algorithm-functions.md#count)|傳回範圍中值符合指定值的項目數目。|
+|[計數](../standard-library/algorithm-functions.md#count)|傳回範圍中值符合指定值的項目數目。|
 |[count_if](../standard-library/algorithm-functions.md#count_if)|傳回範圍中值符合指定條件的項目數目。|
 |[equal](../standard-library/algorithm-functions.md#equal)|逐一比較兩個範圍的每個項目是否相等 (或在二元述詞指定的意義上，是否對等)。|
 |[equal_range](../standard-library/algorithm-functions.md#equal_range)|在已排序的範圍中尋找一對位置，第一個位置小於或等於指定項目的位置，第二個位置大於該項目的位置，其中用於建立序列中位置的等價或順序意義可由二元述詞指定。|
@@ -65,6 +69,7 @@ C++ 標準程式庫演算法通常分類為表示其目的或需求的相關群�
 |[find_if](../standard-library/algorithm-functions.md#find_if)|在範圍中找出滿足特定條件的第一個項目的位置。|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|傳回指定範圍中不滿足條件的第一個項目。|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|將指定的函式物件以正向順序套用至範圍內的每個項目，並傳回函式物件。|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|將函式物件產生的值指派給範圍內的每個項目。|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|將函式物件產生的值指派給範圍內的指定項目數，並返回到超過最後一個指定值的位置。|
 |[includes](../standard-library/algorithm-functions.md#includes)|測試一個排序範圍是否包含第二個排序範圍內的所有項目，其中項目之間的順序或等價準則可由二元述詞指定。|
@@ -113,6 +118,7 @@ C++ 標準程式庫演算法通常分類為表示其目的或需求的相關群�
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|反轉來源範圍內項目的順序，並將其複製到目的範圍|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|交換兩個相鄰範圍的項目。|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|交換來源範圍內兩個相鄰範圍的項目，並將結果複製到目的範圍。|
+|[sample](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|在目標範圍中搜尋第一個序列，其項目等於指定項目序列中的項目，或在二元述詞指定的意義上，其項目相當於指定序列中的項目。|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|在範圍中搜尋包含指定項目數的第一個子序列，這些項目具有特定值或在二元述詞指定的意義上與該值關聯。|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|將屬於一個排序來源範圍但不屬於第二個排序來源範圍的所有項目聯集為單一排序的目的範圍，其中順序準則可由二元述詞指定。|

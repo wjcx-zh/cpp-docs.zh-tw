@@ -2,22 +2,25 @@
 title: '&lt;cstdbool&gt;'
 ms.date: 11/04/2016
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 8d9b0ec81e0364b409b4518beb291a56648a6ab1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394269"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244493"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
 包含標準 C 程式庫標頭 \<stdbool.h>，並將相關名稱加入 `std` 命名空間。
 
-## <a name="syntax"></a>語法
+> [!NOTE]
+> 此標頭中已被取代C++17。
 
-```cpp
-#include <cstdbool>
-```
+## <a name="requirements"></a>需求
+
+**標頭：** \<cstdbool >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 

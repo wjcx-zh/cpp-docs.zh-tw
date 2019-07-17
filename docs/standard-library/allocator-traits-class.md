@@ -40,46 +40,48 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410965"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245895"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits 類別
 
-此範本類別所描述的物件補充說明「配置器類型」。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。
+此範本類別所描述的物件補充說明「配置器類型」  。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。
 
 ## <a name="syntax"></a>語法
 
 ```cpp
 template <class Alloc>
-class allocator_traits;
+    class allocator_traits;
 ```
+
+## <a name="members"></a>成員
 
 ### <a name="typedefs"></a>Typedefs
 
-|名稱|描述|
-|----------|-----------------|
-|`allocator_traits::allocator_type`|此類型是範本參數 `Alloc` 的同義字。|
-|`allocator_traits::const_pointer`|如果該類型的格式良好，則此類型為 `Alloc::const_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<const value_type>`。|
-|`allocator_traits::const_void_pointer`|如果該類型的格式良好，則此類型為 `Alloc::const_void_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<const void>`。|
-|`allocator_traits::difference_type`|如果該類型的格式良好，則此類型為 `Alloc::difference_type`；否則，此類型為 `pointer_traits<pointer>::difference_type`。|
-|`allocator_traits::pointer`|如果該類型的格式良好，則此類型為 `Alloc::pointer`；否則，此類型為 `value_type *`。|
-|`allocator_traits::propagate_on_container_copy_assignment`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_copy_assignment`；否則，此類型為 `false_type`。|
-|`allocator_traits::propagate_on_container_move_assignment`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_move_assignment`；否則，此類型為 `false_type`。 如果類型為 true，則啟用配置器的容器會複製其在 move 指派上的預存配置器。|
-|`allocator_traits::propagate_on_container_swap`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_swap`；否則，此類型為 `false_type`。 如果類型為 true，則啟用配置器的容器會在交換時交換其預存配置器。|
-|`allocator_traits::size_type`|如果該類型的格式良好，則此類型為 `Alloc::size_type`；否則，此類型為 `make_unsigned<difference_type>::type`。|
-|`allocator_traits::value_type`|這個類型是 `Alloc::value_type` 的同義字。|
-|`allocator_traits::void_pointer`|如果該類型的格式良好，則此類型為 `Alloc::void_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<void>`。|
+|||
+|-|-|
+|`allocator_type`|此類型是範本參數 `Alloc` 的同義字。|
+|`const_pointer`|如果該類型的格式良好，則此類型為 `Alloc::const_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<const value_type>`。|
+|`const_void_pointer`|如果該類型的格式良好，則此類型為 `Alloc::const_void_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<const void>`。|
+|`difference_type`|如果該類型的格式良好，則此類型為 `Alloc::difference_type`；否則，此類型為 `pointer_traits<pointer>::difference_type`。|
+|`pointer`|如果該類型的格式良好，則此類型為 `Alloc::pointer`；否則，此類型為 `value_type *`。|
+|`propagate_on_container_copy_assignment`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_copy_assignment`；否則，此類型為 `false_type`。|
+|`propagate_on_container_move_assignment`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_move_assignment`；否則，此類型為 `false_type`。 如果類型為 true，則啟用配置器的容器會複製其在 move 指派上的預存配置器。|
+|`propagate_on_container_swap`|如果該類型的格式良好，則此類型為 `Alloc::propagate_on_container_swap`；否則，此類型為 `false_type`。 如果類型為 true，則啟用配置器的容器會在交換時交換其預存配置器。|
+|`size_type`|如果該類型的格式良好，則此類型為 `Alloc::size_type`；否則，此類型為 `make_unsigned<difference_type>::type`。|
+|`value_type`|這個類型是 `Alloc::value_type` 的同義字。|
+|`void_pointer`|如果該類型的格式良好，則此類型為 `Alloc::void_pointer`；否則，此類型為 `pointer_traits<pointer>::rebind<void>`。|
 
 ### <a name="static-methods"></a>靜態方法
 
 下列靜態方法會在指定的配置器參數上呼叫對應方法。
 
-|名稱|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[allocate](#allocate)|靜態方法，使用指定的配置器參數來配置記憶體。|
 |[construct](#construct)|靜態方法，使用指定的配置器來建構物件。|
 |[deallocate](#deallocate)|靜態方法，使用指定的配置器來解除配置指定數目的物件。|
@@ -87,13 +89,7 @@ class allocator_traits;
 |[max_size](#max_size)|靜態方法，使用指定的配置器來決定可配置的物件數目上限。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|靜態方法，可在指定的配置器上呼叫 `select_on_container_copy_construction`。|
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<memory>
-
-**命名空間：** std
-
-## <a name="allocate"></a>  allocator_traits::allocate
+### <a name="allocate"></a> 配置
 
 靜態方法，使用指定的配置器參數來配置記憶體。
 
@@ -104,18 +100,18 @@ static pointer allocate(Alloc& al, size_type count,
     typename allocator_traits<void>::const_pointer* hint);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-*count*<br/>
+*計數*\
 要配置的元素數。
 
-*hint*<br/>
+*提示*\
 `const_pointer`，可找出要求之前所配置物件的位址，來協助配置器物件符合儲存要求。 Null 指標視為沒有提示。
 
-### <a name="return-value"></a>傳回值
+#### <a name="return-value"></a>傳回值
 
 每個方法都會傳回所配置物件的指標。
 
@@ -123,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 如果該運算式的格式良好，則第二個方法會傳回 `al.allocate(count, hint)`；否則會傳回 `al.allocate(count)`。
 
-## <a name="construct"></a>  allocator_traits::construct
+### <a name="construct"></a> 建構
 
 靜態方法，使用指定的配置器來建構物件。
 
@@ -132,22 +128,22 @@ template <class Uty, class Types>
 static void construct(Alloc& al, Uty* ptr, Types&&... args);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-*ptr*<br/>
+*ptr*\
 要建構物件之位置的指標。
 
-*args*<br/>
+*引數*\
 傳遞給物件建構函式的引數清單。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則靜態成員函式會呼叫 `al.construct(ptr, args...)`；否則會評估 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`。
 
-## <a name="deallocate"></a>  allocator_traits::deallocate
+### <a name="deallocate"></a> 解除配置
 
 靜態方法，使用指定的配置器來解除配置指定數目的物件。
 
@@ -157,45 +153,45 @@ static void deallocate(Alloc al,
     size_type count);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-*ptr*<br/>
+*ptr*\
 要解除配置之物件的起始位置指標。
 
-*count*<br/>
+*計數*\
 要解除配置的物件數目。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 此方法會呼叫 `al.deallocate(ptr, count)`。
 
 這個方法不會擲回任何項目。
 
-## <a name="destroy"></a>  allocator_traits::destroy
+### <a name="destroy"></a> 損毀
 
 靜態方法，使用指定的配置器在物件上呼叫解構函式，而不解除配置其記憶體。
 
 ```cpp
 template <class Uty>
-static void destroy(Alloc& al, Uty* ptr);
+    static void destroy(Alloc& al, Uty* ptr);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-*ptr*<br/>
+*ptr*\
 物件位置的指標。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則此方法會呼叫 `al.destroy(ptr)`；否則會評估 `ptr->~Uty()`。
 
-## <a name="max_size"></a>  allocator_traits::max_size
+### <a name="max_size"></a> max_size
 
 靜態方法，使用指定的配置器來決定可配置的物件數目上限。
 
@@ -203,16 +199,16 @@ static void destroy(Alloc& al, Uty* ptr);
 static size_type max_size(const Alloc& al);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則此方法會傳回 `al.max_size()`；否則會傳回 `numeric_limits<size_type>::max()`。
 
-## <a name="select_on_container_copy_construction"></a>  allocator_traits::select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
 
 靜態方法，可在指定的配置器上呼叫 `select_on_container_copy_construction`。
 
@@ -220,21 +216,15 @@ static size_type max_size(const Alloc& al);
 static Alloc select_on_container_copy_construction(const Alloc& al);
 ```
 
-### <a name="parameters"></a>參數
+#### <a name="parameters"></a>參數
 
-*al*<br/>
+*Al*\
 配置器物件。
 
-### <a name="return-value"></a>傳回值
+#### <a name="return-value"></a>傳回值
 
 這個方法會傳回`al.select_on_container_copy_construction()`，如果該型別格式良好，否則傳回*al*。
 
-### <a name="remarks"></a>備註
+#### <a name="remarks"></a>備註
 
 此方法用來在建構複製相關聯的容器時指定配置器。
-
-## <a name="see-also"></a>另請參閱
-
-[\<memory>](../standard-library/memory.md)<br/>
-[pointer_traits 結構](../standard-library/pointer-traits-struct.md)<br/>
-[scoped_allocator_adaptor 類別](../standard-library/scoped-allocator-adaptor-class.md)<br/>

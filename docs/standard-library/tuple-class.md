@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 7e85ad445743cc02ba078eb3c09342f69915c09c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279046"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241828"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -22,7 +22,6 @@ ms.locfileid: "62279046"
 
 ```
 class tuple {
-public:
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
    tuple(const tuple&);
@@ -37,12 +36,12 @@ public:
       tuple& operator=(const tuple<U1, U2, ..., UN>&);
    template <class U1, class U2>
       tuple& operator=(const pair<U1, U2>&); // N == 2
-   };
+};
 ```
 
 ### <a name="parameters"></a>參數
 
-*TN*<br/>
+*TN*\
 第 N 個 tuple 項目類型。
 
 ## <a name="remarks"></a>備註
@@ -117,13 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="requirements"></a>需求
-
-**標頭：** \<tuple>
-
-**命名空間：** std
-
-## <a name="op_eq"></a>  tuple::operator=
+## <a name="op_eq"></a> 運算子 =
 
 指派 `tuple` 物件。
 
@@ -144,10 +137,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-*UN*<br/>
+*取消*\
 第 N 個複製的元組項目類型。
 
-*right*<br/>
+*權限*\
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
@@ -196,7 +189,7 @@ int main()
     std::cout << std::endl;
 
     return (0);
-    }
+}
 ```
 
 ```Output
@@ -205,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a>  tuple:swap
+## <a name="tuple_swap"></a> 交換
 
 交換兩個 tuple 的元素。
 
@@ -216,16 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|其項目要與 tuple 交換的 tuple*右*。|
-|*right*|其項目要與 tuple 交換的 tuple*左*。|
+*左邊*\
+其項目要與 tuple 交換的 tuple*右*。
+
+*權限*\
+其項目要與 tuple 交換的 tuple*左*。
 
 ### <a name="remarks"></a>備註
 
 此函式會執行 `left.swap(right)`。
 
-## <a name="tuple"></a>  tuple::tuple
+## <a name="tuple"></a> 元組
 
 建構 `tuple` 物件。
 
@@ -252,10 +246,10 @@ template <class U1, class U2>
 
 ### <a name="parameters"></a>參數
 
-*UN*<br/>
+*取消*\
 第 N 個複製的元組項目類型。
 
-*right*<br/>
+*權限*\
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
@@ -338,8 +332,3 @@ x 4
 0 1 2 3
 4 5 6 7
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[make_tuple](../standard-library/tuple-functions.md#make_tuple)<br/>

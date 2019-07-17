@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412653"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246064"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt; 函式
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 取得目前例外狀況的智慧型指標。
 
@@ -62,18 +55,18 @@ exception_ptr current_exception();
 
 `current_exception` 函式的後續呼叫會傳回參考目前例外狀況不同複本的 `exception_ptr` 物件。 因此，物件比較結果會是不相等，因為兩者參考不同的複本 (即使複本的二進位值相同也一樣)。
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 建立持有例外狀況複本的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) 物件。
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Except*<br/>
+*除了*\
 具有待複製例外狀況的類別。 雖然任何類別物件都可以是 `make_exception_ptr` 函式的引數，但一般會指定 [exception 類別](../standard-library/exception-class.md)物件作為其引數。
 
 ### <a name="return-value"></a>傳回值
@@ -86,7 +79,7 @@ exception_ptr make_exception_ptr(E Except);
 
 一般來說，應用程式通常不需要使用 `make_exception_ptr` 函式，所以我們不建議使用此功能。
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 擲回做為參數傳遞的例外狀況。
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>參數
 
-*P*<br/>
+*P*\
 要重新擲回的已攔截例外狀況。 如果*P*為 null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)，此函式會擲回[std:: bad_exception](../standard-library/bad-exception-class.md)。
 
 ### <a name="remarks"></a>備註
 
 將攔截到的例外狀況儲存在 `exception_ptr` 物件之後，主執行緒即可處理物件。 在主執行緒中呼叫 `rethrow_exception` 函式，並使用 `exception_ptr` 物件做為其引數。 `rethrow_exception` 函式會從 `exception_ptr` 物件擷取例外狀況，然後在主執行緒的內容中擲回該例外狀況。
 
-## <a name="get_terminate"></a>  get_terminate
+## <a name="get_terminate"></a> get_terminate
 
 取得目前的 `terminate_handler` 函式。
 
@@ -111,7 +104,7 @@ void rethrow_exception(exception_ptr P);
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 建立新 `terminate_handler`，在程式終止時呼叫。
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>參數
 
-*fnew*<br/>
+*fnew*\
 要在終止時呼叫的函式。
 
 ### <a name="return-value"></a>傳回值
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected
+## <a name="get_unexpected"></a> get_unexpected
 
 取得目前的 `unexpected_handler` 函式。
 
@@ -168,7 +161,18 @@ int main()
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>備註
+
+如果不是多型類別類型，或如果`nested_exception`無法存取或模稜兩可，沒有任何作用。 否則，會執行動態轉換。
+
+## <a name="set_unexpected"></a> set_unexpected
 
 建立新的 `unexpected_handler`，當未預期的例外狀況發生時擲回。
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>參數
 
-*fnew*<br/>
+*fnew*\
 當未預期的例外狀況發生時要呼叫的函式。
 
 ### <a name="return-value"></a>傳回值
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  terminate
+## <a name="terminate"></a> 終止
 
 呼叫終止處理常式。
 
@@ -234,7 +238,18 @@ void terminate();
 
 如需 `terminate` 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>備註
+
+會使用巢狀例外狀況的例外狀況。
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 只有當系統正在處理擲回的例外狀況時，才傳回 **true**。
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a>  unexpected
+## <a name="unexpected"></a> 未預期
 
 呼叫未預期的處理常式。
 
@@ -326,7 +341,3 @@ C++ 標準要求在函式擲回例外狀況時，必須呼叫 `unexpected`。 �
 ### <a name="example"></a>範例
 
 如需 `unexpected` 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
-
-## <a name="see-also"></a>另請參閱
-
-[\<exception>](../standard-library/exception.md)<br/>

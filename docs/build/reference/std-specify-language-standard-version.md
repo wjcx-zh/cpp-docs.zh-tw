@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 0f45727c61d55ff57befc7ff23a3d434e86673bc
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 9bdeb92e03b3ae00258ac48a29cec42ef7e18e81
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837535"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241219"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (指定語言標準版本)
 
@@ -23,7 +23,7 @@ ms.locfileid: "65837535"
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 2017 及更新版本有提供 **/std** 選項。 該選項會用來控制特定版本的 ISO C++ 程式設計語言標準功能，而這些功能會在編譯您的程式碼時啟用。 此選項可讓您停用某些新語言和程式庫功能的支援，因為這些功能可能會破壞符合特定語言標準版本的現有程式碼。 根據預設，系統會指定 **/std:c++14**，以停用較新版 C++ 語言標準中找到的語言和標準程式庫功能。 使用 **/std:c++17** 可啟用 C++ 17 標準特有的功能和行為。 若要明確啟用目前實作的編譯器和標準程式庫功能以用於下一個草稿標準，請使用 **/std:c++latest**。 所有 C++20 功能都需要 **/std:latest**；實作完成時，新的 **/std:c++20** 選項將會啟用。
+Visual Studio 2017 及更新版本有提供 **/std** 選項。 該選項會用來控制特定版本的 ISO C++ 程式設計語言標準功能，而這些功能會在編譯您的程式碼時啟用。 此選項可讓您停用某些新語言和程式庫功能的支援，因為這些功能可能會破壞符合特定語言標準版本的現有程式碼。 根據預設，系統會指定 **/std:c++14**，以停用較新版 C++ 語言標準中找到的語言和標準程式庫功能。 使用 **/std:c++17** 可啟用 C++ 17 標準特有的功能和行為。 若要明確啟用目前實作的編譯器和標準程式庫功能以用於下一個草稿標準，請使用 **/std:c++latest**。 所有 C + + 20 功能都需要 **/std: c + + 最新**; 實作完成時，新 **/std: c + + 20**選項將會啟用。
 
 預設的 **/std:c++14** 選項能啟用 MSVC 編譯器實作的一組 C++14 功能。 針對最近語言標準版本中的已變更或新建功能，此選項能停用編譯器和標準程式庫支援，但一些已實作在舊版 MSVC 編譯器中的 C++17 功能除外。 若使用者已經依賴使用自 Visual Studio 2015 Update 2 起開始提供的功能，為避免對使用者造成中斷性變更，指定 **/std:c++14** 選項時，這些功能仍可使用：
 
@@ -57,9 +57,9 @@ Visual Studio 2017 及更新版本有提供 **/std** 選項。 該選項會用�
 
 1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [組態屬性] 、[C/C++] 、[語言]。
+1. 選取 [組態屬性]  、[C/C++]  、[語言]  。
 
-1. 在 [C++語言標準] 中，從下拉式清單中選擇要支援的語言標準，然後選擇[確定] 或 [套用] 來儲存您的變更。
+1. 在 [C++語言標準]  中，從下拉式清單中選擇要支援的語言標準，然後選擇[確定]  或 [套用]  來儲存您的變更。
 
 ## <a name="see-also"></a>另請參閱
 

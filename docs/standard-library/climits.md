@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - climits header
 ms.assetid: 7ca8a539-aa45-4ac3-86e8-74513be3f07e
-ms.openlocfilehash: 09989f5181e45867b5c74bb96f7d8a4891fc537c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67cddab4f42d10c4d1c78762c32ed1e4fd1e6175
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386222"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244794"
 ---
 # <a name="ltclimitsgt"></a>&lt;climits&gt;
 
-包含標準 C 程式庫標頭 \<limits.h>，並將相關名稱新增至 `std` 命名空間。
+包含 C 標準程式庫標頭\<limits.h >，並將關聯的名稱加入`std`命名空間。 包含此標頭中宣告的宣告 C 標準程式庫標頭中使用外部連結的名稱可確保`std`命名空間。
 
 ## <a name="syntax"></a>語法
 
@@ -23,9 +23,29 @@ ms.locfileid: "62386222"
 #include <climits>
 ```
 
-## <a name="remarks"></a>備註
+## <a name="macros"></a>巨集
 
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+```cpp
+#define CHAR_BIT
+#define SCHAR_MIN
+#define SCHAR_MAX
+#define UCHAR_MAX
+#define CHAR_MIN
+#define CHAR_MAX
+#define MB_LEN_MAX
+#define SHRT_MIN
+#define SHRT_MAX
+#define USHRT_MAX
+#define INT_MIN
+#define INT_MAX
+#define UINT_MAX
+#define LONG_MIN
+#define LONG_MAX
+#define ULONG_MAX
+#define LLONG_MIN
+#define LLONG_MAX
+#define ULLONG_MAX
+```
 
 ## <a name="see-also"></a>另請參閱
 

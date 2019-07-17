@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159713"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243798"
 ---
 # <a name="function-class"></a>function 類別
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*Fty*<br/>
+*Fty*\
 要包裝的函式類型。
 
-*Ax*<br/>
+*Ax*\
 配置器函數。
 
 ## <a name="remarks"></a>備註
@@ -103,21 +103,23 @@ public:
 
 空的 `function` 物件不會保留可呼叫物件或可呼叫物件的參考。
 
+## <a name="members"></a>成員
+
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[function](#function)|可建構空的包裝函式，或儲存含固定簽章的任意類型可呼叫物件。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[result_type](#result_type)|為預存的可呼叫物件的傳回類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="functions"></a>函式
 
-|成員函式|描述|
+|||
 |-|-|
 |[assign](#assign)|會將可呼叫物件指派給此函式物件。|
 |[swap](#swap)|交換兩個可呼叫物件。|
@@ -126,19 +128,13 @@ public:
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|測試預存的可呼叫物件是否存在。|
-|[function::operator()](#op_call)|呼叫可呼叫物件。|
-|[function::operator=](#op_eq)|取代預存的可呼叫物件。|
+|[未指定的運算子](#op_unspecified)|測試預存的可呼叫物件是否存在。|
+|[operator()](#op_call)|呼叫可呼叫物件。|
+|[operator=](#op_eq)|取代預存的可呼叫物件。|
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> 指派
 
 會將可呼叫物件指派給此函式物件。
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*_Func*<br/>
+*_Func*\
 可呼叫的物件。
 
-*_Fnref*<br/>
+*_Fnref*\
 參考包裝函式，其中包含可呼叫物件。
 
-*Ax*<br/>
+*Ax*\
 配置器物件。
 
 ### <a name="remarks"></a>備註
 
 每個成員函式皆會將 `*this` 所保留的 `callable object` 取代為以 `operand` 傳遞的可呼叫物件。 兩者皆會配置的配置器物件的儲存體*Ax*。
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> 函式
 
 可建構空的包裝函式，或儲存含固定簽章的任意類型可呼叫物件。
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*權限*\
 要複製的函式物件。
 
-*Fx*<br/>
+*Fx*\
 可呼叫物件的類型。
 
-*_Func*<br/>
+*_Func*\
 要包裝的可呼叫物件。
 
-*Alloc*<br/>
+*配置*\
 配置器類型。
 
-*Ax*<br/>
+*Ax*\
 配置器。
 
-*_Fnref*<br/>
+*_Fnref*\
 要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator unspecified
+## <a name="op_unspecified"></a> 未指定的運算子
 
 測試預存的可呼叫物件是否存在。
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> operator()
 
 呼叫可呼叫物件。
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>參數
 
-*TN*<br/>
+*TN*\
 第 N 個呼叫引數類型。
 
-*tN*<br/>
+*TN*\
 第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> 運算子 =
 
 取代預存的可呼叫物件。
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>參數
 
-*npc*<br/>
+*npc*\
 null 指標常數。
 
-*right*<br/>
+*權限*\
 要複製的函式物件。
 
-*fn*<br/>
+*fn*\
 要包裝的可呼叫物件。
 
-*fnref*<br/>
+*fnref*\
 要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 為預存的可呼叫物件的傳回類型。
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> 交換
 
 交換兩個可呼叫物件。
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*權限*\
 要交換的函式物件。
 
 ### <a name="remarks"></a>備註
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> 目標
 
 測試預存的可呼叫物件是否如指定般為可呼叫。
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>參數
 
-*Fty2*<br/>
+*Fty2*\
 要測試的目標可呼叫物件類型。
 
 ### <a name="remarks"></a>備註
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 取得可呼叫物件的類型資訊。
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[reference_wrapper 類別](../standard-library/reference-wrapper-class.md)<br/>

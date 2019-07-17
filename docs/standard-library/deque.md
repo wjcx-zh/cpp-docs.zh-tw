@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393983"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246728"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
 定義容器範本類別 deque，以及數個支援的範本。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <deque>
-```
+**標頭**：\<deque>
+
+> [!NOTE]
+> \<Deque > 程式庫也會使用`#include <initializer_list>`陳述式。
+
+## <a name="members"></a>成員
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/deque-operators.md#op_neq)|測試運算子左邊的 deque 物件是否不等於右邊的 deque 物件。|
 |[operator<](../standard-library/deque-operators.md#op_lt)|測試運算子左邊的 deque 物件是否小於右邊的 deque 物件。|
@@ -36,13 +39,13 @@ ms.locfileid: "62393983"
 
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|交換兩個 deque 的項目。|
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[deque 類別](../standard-library/deque-class.md)|序列容器的範本類別，以線性排列方式排列指定類型的項目，並且像向量一樣允許快速隨機存取任何項目，可有效率地在容器背面插入和刪除。|
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413173"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245413"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -152,7 +152,7 @@ cout.imbue(loc);
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[combine](#combine)|將指定之地區設定的 facet 插入至目標地區設定。|
 |[name](#name)|傳回儲存的地區設定名稱。|
@@ -168,20 +168,21 @@ cout.imbue(loc);
 
 |運算子|描述|
 |-|-|
+|[operator=](#op_eq)|指派的地區設定。|
 |[operator!=](#op_neq)|測試兩個地區設定是否不等。|
 |[operator( )](#op_call)|比較兩個 `basic_string` 物件。|
 |[operator==](#op_eq_eq)|測試兩個地區設定是否相等。|
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|類別|說明|
 |-|-|
 |[facet](#facet_class)|做為所有地區設定 facet 之基底類別的類別。|
 |[id](#id_class)|此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。|
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -417,7 +418,7 @@ class id
 
 ## <a name="locale"></a>  locale::locale
 
-建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。
+建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。 也包含解構函式。
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>參數
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  locale:: operator =
+
+指派的地區設定。
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a>  locale::operator!=

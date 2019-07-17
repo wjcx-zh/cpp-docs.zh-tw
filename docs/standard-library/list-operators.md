@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413186"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246455"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試運算子左邊的清單物件是否不等於右邊的清單物件。
 
@@ -42,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -81,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的清單物件是否小於右邊的清單物件。
 
@@ -93,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試運算子左邊的清單物件是否小於或等於右邊的清單物件。
 
@@ -148,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試運算子左邊的清單物件是否等於右邊的清單物件。
 
@@ -203,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -242,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試運算子左邊的清單物件是否大於右邊的清單物件。
 
@@ -254,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試運算子左邊的清單物件是否大於或等於右邊的清單物件。
 
@@ -309,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `list` 類型的物件。
 
-*right*<br/>
+*權限*\
 `list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<list>](../standard-library/list.md)<br/>

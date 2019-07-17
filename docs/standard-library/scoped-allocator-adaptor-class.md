@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348207"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245596"
 ---
 # <a name="scopedallocatoradaptor-class"></a>scoped_allocator_adaptor 類別
 
@@ -49,7 +49,7 @@ class scoped_allocator_adaptor;
 
 巢狀的行為就如同它含有任意深度，可視需要複寫其最內層的封裝配置器。
 
-有數個不屬於可見介面一部分的概念，有助於說明此樣板類別的行為。 「最外層的配置器」會調解所有對建構和終結方法的呼叫。 這實際上是透過遞迴函式 `OUTERMOST(X)` 所定義，其中 `OUTERMOST(X)` 為下列其中一項。
+有數個不屬於可見介面一部分的概念，有助於說明此樣板類別的行為。 「最外層的配置器」  會調解所有對建構和終結方法的呼叫。 這實際上是透過遞迴函式 `OUTERMOST(X)` 所定義，其中 `OUTERMOST(X)` 為下列其中一項。
 
 - 如果 `X.outer_allocator()` 格式正確，則 `OUTERMOST(X)` 是 `OUTERMOST(X.outer_allocator())`。
 
@@ -57,7 +57,7 @@ class scoped_allocator_adaptor;
 
 有三種類型是基於說明目的而定義：
 
-|類型|描述|
+|類型|說明|
 |----------|-----------------|
 |`Outermost`|`OUTERMOST(*this)` 的類型。|
 |`Outermost_traits`|`allocator_traits<Outermost>`|
@@ -105,9 +105,17 @@ class scoped_allocator_adaptor;
 |[outer_allocator](#outer_allocator)|擷取 `outer_allocator_type` 類型之預存物件的參考。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|建立新的 `scoped_allocator_adaptor` 物件，以及針對每個對應配置器呼叫 `select_on_container_copy_construction` 來初始化的每個預存配置器物件。|
 
+### <a name="operators"></a>運算子
+
+|運算子|說明|
+|-|-|
+|[operator=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[operator!=](#op_noeq)||
+
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<scoped_allocator >
+**標頭︰** \<scoped_allocator >
 
 **命名空間：** std
 
@@ -121,10 +129,10 @@ pointer allocate(size_type count);pointer allocate(size_type count, const_void_p
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*<br/>
 要配置足夠儲存空間的元素數。
 
-*hint*<br/>
+*提示*<br/>
 指標，可藉由找出要求之前所配置的物件位址，來協助配置器物件。
 
 ### <a name="return-value"></a>傳回值
@@ -163,7 +171,7 @@ void construct(pair<Ty1, Ty2>* ptr, pair<Uy1, Uy2>&& right);
 *ptr*<br/>
 要建構物件之記憶體位置的指標。
 
-*args*<br/>
+*引數*<br/>
 引數清單。
 
 *first*<br/>
@@ -208,7 +216,7 @@ void deallocate(pointer ptr, size_type count);
 *ptr*<br/>
 要解除配置之物件的起始位置指標。
 
-*count*<br/>
+*計數*<br/>
 要解除配置的物件數目。
 
 ## <a name="destroy"></a>  scoped_allocator_adaptor::destroy
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::operator = =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::operator ！ =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
 
 擷取 `outer_allocator_type` 類型之預存物件的參考。
@@ -275,7 +306,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 ## <a name="scoped_allocator_adaptor"></a>  scoped_allocator_adaptor::scoped_allocator_adaptor 建構函式
 
-建構 `scoped_allocator_adaptor` 物件。
+建構 `scoped_allocator_adaptor` 物件。 也包含解構函式。
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>參數

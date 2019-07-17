@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aa79d458c964bf3e8bdd34e564bba4965546930
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158587"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245304"
 ---
 # <a name="iosbase-class"></a>ios_base 類別
 
@@ -135,15 +135,17 @@ Ios_base 類別的物件會儲存格式設定資訊，包括：
 
 ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#iostate) 類型的物件中，以及儲存一個回呼堆疊。
 
+## <a name="members"></a>成員
+
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[ios_base](#ios_base)|建構 `ios_base` 物件。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[event_callback](#event_callback)|描述傳遞給 [register_call](#register_callback) 的函式。|
 |[fmtflags](#fmtflags)|指定輸出外觀的常數。|
@@ -193,9 +195,9 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 |[unitbuf](#fmtflags)|導致在每次插入之後清除輸出。|
 |[uppercase](#fmtflags)|指定在進行某些插入時，插入小寫字母的大寫對應。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="functions"></a>函式
 
-|成員函式|描述|
+|||
 |-|-|
 |[failure](#failure)|成員類別會作為範本類別 [basic_ios](../standard-library/basic-ios-class.md) 中成員函式 [clear](../standard-library/basic-ios-class.md#clear) 所擲回之所有例外狀況的基底類別。|
 |[flags](#flags)|設定或傳回目前的旗標設定。|
@@ -214,17 +216,17 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator=](#op_eq)|`ios_base` 物件的指派運算子。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<ios>
+**標頭：** \<ios>
 
 **命名空間：** std
 
-## <a name="event"></a>  ios_base::event
+## <a name="event"></a> 事件
 
 指定事件類型。
 
@@ -249,7 +251,7 @@ enum event {
 
 如需範例，請參閱 [register_callback](#register_callback)。
 
-## <a name="event_callback"></a>  ios_base::event_callback
+## <a name="event_callback"></a> event_callback
 
 描述傳遞給 [register_call](#register_callback) 的函式。
 
@@ -262,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>參數
 
-*_E*<br/>
+*址 （_E)* \
 [事件](#event)。
 
-*_Base*<br/>
+*（_b)* \
 在其中呼叫事件的資料流。
 
-*_I*<br/>
+*（_I)* \
 使用者定義的數字。
 
 ### <a name="remarks"></a>備註
@@ -279,7 +281,7 @@ typedef void (__cdecl *event_callback)(
 
 如需使用 `event_callback` 的範例，請參閱 [register_call](#register_callback)。
 
-## <a name="failure"></a>  ios_base::failure
+## <a name="failure"></a> 失敗
 
 類別 `failure` 可為以例外狀況方式擲回之所有物件的類型定義基底類別，這些例外狀況是 `iostreams` 程式庫中的函式所擲回，用來回報在資料流緩衝作業期間偵測到的錯誤。
 
@@ -331,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>  ios_base::flags
+## <a name="flags"></a> 旗標
 
 設定或傳回目前的旗標設定。
 
@@ -342,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>參數
 
-*fmtfl*<br/>
+*fmtfl*\
 新的 `fmtflags` 設定。
 
 ### <a name="return-value"></a>傳回值
@@ -377,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>  ios_base::fmtflags
+## <a name="fmtflags"></a> fmtflags
 
 指定輸出外觀的常數。
 
@@ -453,7 +455,7 @@ public:
 
 如需修改這些格式旗標的函式範例，請參閱 [\<iomanip>](../standard-library/iomanip.md)。
 
-## <a name="getloc"></a>  ios_base::getloc
+## <a name="getloc"></a> getloc
 
 傳回儲存的地區設定物件。
 
@@ -483,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>  ios_base::imbue
+## <a name="imbue"></a> imbue
 
 變更地區設定。
 
@@ -493,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>參數
 
-*_Loc*<br/>
+*_Loc*\
 新的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -508,7 +510,7 @@ locale imbue(const locale& _Loc);
 
 如需範例，請參閱 [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue)。
 
-## <a name="init"></a>  ios_base::Init
+## <a name="init"></a> Init
 
 建構時建立標準 iostream 物件。
 
@@ -520,7 +522,7 @@ class Init { };
 
 此巢狀類別會描述一個物件，其中此物件的建構可確保以正確方式建構標準 iostream 物件，甚至是在執行任意靜態物件的建構函式之前。
 
-## <a name="ios_base"></a>  ios_base::ios_base
+## <a name="ios_base"></a> ios_base
 
 建構 ios_base 物件。
 
@@ -530,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>備註
 
-(受保護的) 建構函式不會執行任何動作。 稍後對 **basic_ios::**[init](../standard-library/basic-ios-class.md#init) 的呼叫必須先將物件初始化，之後才能將它安全地終結。 因此，ios_base 類別的唯一安全用法就是當作範本類別 [basic_ios](../standard-library/basic-ios-class.md) 的基底類別。
+(受保護的) 建構函式不會執行任何動作。 稍後對 **basic_ios::** [init](../standard-library/basic-ios-class.md#init) 的呼叫必須先將物件初始化，之後才能將它安全地終結。 因此，ios_base 類別的唯一安全用法就是當作範本類別 [basic_ios](../standard-library/basic-ios-class.md) 的基底類別。
 
-## <a name="iostate"></a>  ios_base::iostate
+## <a name="iostate"></a> iostate
 
 描述資料流狀態的常數類型。
 
@@ -560,7 +562,7 @@ public:
 
 此外，就會很有用的值`goodbit`，其中任何先前所述的位元會設定 (`goodbit`保證為零)。
 
-## <a name="iword"></a>  ios_base::iword
+## <a name="iword"></a> iword
 
 指派將值儲存為 `iword`。
 
@@ -570,14 +572,14 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>參數
 
-*idx*<br/>
+*idx*\
 要以 `iword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回元素的參考*idx*類型的項目之可延伸陣列**長**。 所有元素都實際存在，且一開始儲存的值為零。 在下一次呼叫物件的 `iword` 之後、在呼叫 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 來更改物件之後，或在終結物件之後，傳回的參考便無效。
+此成員函式會傳回元素的參考*idx*類型的項目之可延伸陣列**長**。 所有元素都實際存在，且一開始儲存的值為零。 在下一次呼叫物件的 `iword` 之後、在呼叫 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 來更改物件之後，或在終結物件之後，傳回的參考便無效。
 
-如果*idx*是負數，或是如果唯一的儲存體項目無法使用，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** 並傳回可能不是唯一的參考。
+如果*idx*是負數，或是如果唯一的儲存體項目無法使用，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** 並傳回可能不是唯一的參考。
 
 若要取得唯一索引以在 `ios_base` 類型的所有物件上使用，請呼叫 [xalloc](#xalloc)。
 
@@ -585,7 +587,7 @@ long& iword(int idx);
 
 如需如何使用 `iword` 的範例，請參閱 [xalloc](#xalloc)。
 
-## <a name="openmode"></a>  ios_base::openmode
+## <a name="openmode"></a> openmode
 
 描述如何與資料流互動。
 
@@ -635,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>  ios_base::operator=
+## <a name="op_eq"></a> 運算子 =
 
 ios_base 物件的指派運算子。
 
@@ -645,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*權限*\
 `ios_base` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -658,7 +660,7 @@ ios_base& operator=(const ios_base& right);
 
 此運算子僅供衍生自 `ios_base` 的類別使用。
 
-## <a name="precision"></a>  ios_base::precision
+## <a name="precision"></a> 有效位數
 
 指定要在浮點數顯示的數字位數。
 
@@ -669,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>參數
 
-*_Prec*<br/>
+*_Prec*\
 要顯示的有效位數，或是固定標記法中的小數點後位數。
 
 ### <a name="return-value"></a>傳回值
@@ -704,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>  ios_base::pword
+## <a name="pword"></a> pword
 
 指派將值儲存為 `pword`。
 
@@ -714,14 +716,14 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>參數
 
-*_Idx*<br/>
+*_Idx*\
 要以 `pword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式傳回的參考項目 _ *Idx*類型的項目之可延伸陣列**void**指標。 所有元素都實際存在，且一開始儲存 Null 指標。 在下一次呼叫物件的 `pword` 之後、在呼叫 **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) 來更改物件之後，或在終結物件之後，傳回的參考便無效。
+此成員函式傳回的參考項目 _ *Idx*類型的項目之可延伸陣列**void**指標。 所有元素都實際存在，且一開始儲存 Null 指標。 在下一次呼叫物件的 `pword` 之後、在呼叫 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 來更改物件之後，或在終結物件之後，傳回的參考便無效。
 
-如果 _ *Idx* 是負數或是沒有唯一儲存體可供元素使用，函式就會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)**，並傳回可能並非唯一的參考。
+如果 _ *Idx* 是負數或是沒有唯一儲存體可供元素使用，函式就會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** ，並傳回可能並非唯一的參考。
 
 若要取得唯一索引以在 `ios_base` 類型的所有物件上使用，請呼叫 [xalloc](#xalloc)。
 
@@ -729,7 +731,7 @@ void *& pword(int _Idx);
 
 如需使用 `pword` 的範例，請參閱 [xalloc](#xalloc)。
 
-## <a name="register_callback"></a>  ios_base::register_callback
+## <a name="register_callback"></a> register_callback
 
 指定回呼函式。
 
@@ -740,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>參數
 
-*pfn*<br/>
+*pfn*\
 回呼函式的指標。
 
-*idx*<br/>
+*idx*\
 使用者定義的數字。
 
 ### <a name="remarks"></a>備註
@@ -837,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a> ios_base::seekdir
+## <a name="seekdir"></a> seekdir
 
 指定位移作業的起點。
 
@@ -886,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a> ios_base::setf
+## <a name="setf"></a> setf
 
 設定指定的旗標。
 
@@ -902,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>參數
 
-*_Mask*<br/>
+*遮罩 （_m)* \
 要開啟的旗標。
 
-*_Unset*<br/>
+*_Unset*\
 若要關閉旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -940,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a> ios_base::sync_with_stdio
+## <a name="sync_with_stdio"></a> sync_with_stdio
 
 可確保 iostream 和 C 執行階段程式庫作業依照它們在原始程式碼中出現的順序發生。
 
@@ -952,7 +954,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>參數
 
-*_Sync*<br/>
+*_Sync*\
 所有資料流是否與同步`stdio`。
 
 ### <a name="return-value"></a>傳回值
@@ -963,7 +965,7 @@ static bool sync_with_stdio(
 
 靜態成員函式存放區`stdio`同步處理的旗標，也就是最初 **，則為 true**。 當 **，則為 true**，這個旗標可確保在相同的檔案上的作業會正確同步處理之間[iostreams](../standard-library/iostreams-conventions.md)函式和中定義的C++標準程式庫。 否則，同步處理可能會或可能不保證，但可能會改善效能。 此函式會 *_Sync*在`stdio`同步旗標，並傳回其先前儲存的值。 您可以呼叫它可靠地只之前的標準資料流上執行任何作業。
 
-## <a name="unsetf"></a> ios_base::unsetf
+## <a name="unsetf"></a> unsetf
 
 使指定的旗標為關閉。
 
@@ -975,7 +977,7 @@ void unsetf(
 
 ### <a name="parameters"></a>參數
 
-*_Mask*<br/>
+*遮罩 （_m)* \
 您想要關閉的旗標。
 
 ### <a name="remarks"></a>備註
@@ -986,7 +988,7 @@ void unsetf(
 
 請參閱[ios_base:: setf](#setf)如需範例使用`unsetf`。
 
-## <a name="width"></a> ios_base::width
+## <a name="width"></a> 寬度
 
 設定輸出資料流的長度。
 
@@ -999,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>參數
 
-*_Wide*<br/>
+*_Wide*\
 所需的輸出資料流大小。
 
 ### <a name="return-value"></a>傳回值
@@ -1031,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a> ios_base::xalloc
+## <a name="xalloc"></a> xalloc
 
 指定變數的資料流的一部分。
 

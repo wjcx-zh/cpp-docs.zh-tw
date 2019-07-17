@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224086"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245774"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 定義迭代器基本、預先定義的迭代器和串流迭代器，以及一些支援的範本。 預先定義的迭代器包含插入和反向配接器。 插入迭代器配接器有三個類別：前面、背面、一般。 它們提供插入語意，而不是覆寫語意 (由容器成員函式迭代器提供的)。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <iterator>
-```
+**標頭：** \<iterator>
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
@@ -42,17 +42,23 @@ ms.locfileid: "62224086"
 
 Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支援已檢查和未檢查迭代器的各種偵錯模式情況。 如需詳細資訊，請參閱[安全程式庫：C++標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)。
 
+## <a name="members"></a>成員
+
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|依指定的位置數目遞增迭代器。|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|建立可以在指定的容器背面插入項目的迭代器。|
 |[begin](../standard-library/iterator-functions.md#begin)|擷取在指定的容器中第一個項目的迭代器。|
 |[cbegin](../standard-library/iterator-functions.md#cbegin)|擷取在指定的容器中第一個項目的常數迭代器。|
 |[cend](../standard-library/iterator-functions.md#cend)|擷取常數迭代器，指向在指定的容器中最後一個項目後面的項目。|
+|[crbegin](../standard-library/iterator-functions.md#crbegin)||
+|[crend](../standard-library/iterator-functions.md#crend)||
+|[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|判斷在兩個迭代器定址的位置之間的增量數。|
 |[end](../standard-library/iterator-functions.md#end)|擷取迭代器，指向在指定的容器中最後一個項目後面的項目。|
+|[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|建立可以在指定的容器前面插入項目的迭代器。|
 |[inserter](../standard-library/iterator-functions.md#inserter)|迭代器配接器，將新的項目新增至容器中指定的插入點。|
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|建立其他演算法可使用的 [checked_array_iterator](../standard-library/checked-array-iterator-class.md)。 **注意：** 這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
@@ -60,10 +66,13 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|建立其他演算法可使用的 [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)。 **注意：** 這個函式是「C++ 標準程式庫」的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 |[next](../standard-library/iterator-functions.md#next)|反覆運算指定的次數，並傳回新的迭代器位置。|
 |[prev](../standard-library/iterator-functions.md#prev)|以反向方向反覆運算指定的次數，並傳回新的迭代器位置。|
+|[rbegin](../standard-library/iterator-functions.md#rbegin)||
+|[rend](../standard-library/iterator-functions.md#rend)||
+|[size](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/iterator-operators.md#op_neq)|測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。|
@@ -76,7 +85,7 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示雙向迭代器函式。|

@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - vector header
 ms.assetid: c1431ad8-c0b6-4dbb-89c4-5f651e432d7f
-ms.openlocfilehash: 348b5c53ecd3fb7900d03fed7c1209a2c94eeb4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96f329bfdcc13bb557ef0cc487a1f414612e96c5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410849"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240970"
 ---
 # <a name="ltvectorgt"></a>&lt;vector&gt;
 
 定義容器範本類別 vector 以及數個支援的範本。
 
 `vector` 是以線性順序組織指定類型項目的容器。 它可讓您快速隨機存取任何項目，並動態地加入序列及從序列中移除。 當隨機存取效能很重要時，`vector` 是慣用的序列容器。
+
+> [!NOTE]
+> \<向量 > 程式庫也會使用`#include <initializer_list>`陳述式。
 
 如需類別 `vector` 的詳細資訊，請參閱 [vector 類別](../standard-library/vector-class.md)。 如需特製化 `vector<bool>` 的相關資訊，請參閱 [vector\<bool> 類別](../standard-library/vector-bool-class.md)。
 
@@ -74,21 +77,23 @@ void swap (
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型別*\
 儲存在向量中之資料類型的樣板參數。
 
-*Allocator*<br/>
+*配置器*\
 儲存之配置器物件的樣板參數，負責記憶體配置和解除配置。
 
-*left*<br/>
+*左邊*\
 比較作業中的第一個 (左) 向量
 
-*right*<br/>
+*權限*\
 比較作業中的第二個 (右) 向量。
+
+## <a name="members"></a>成員
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator! =](../standard-library/vector-operators.md#op_neq)|測試運算子左邊的向量物件是否不等於右邊的向量物件。|
 |[operator<](../standard-library/vector-operators.md#op_lt)|測試運算子左邊的向量物件是否小於右邊的向量物件。|
@@ -99,7 +104,7 @@ void swap (
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[vector 類別](../standard-library/vector-class.md)|序列容器的類別範本，其以線性排列方式排列指定類型的項目，並允許快速隨機存取任何項目。|
 
@@ -107,6 +112,7 @@ void swap (
 
 |||
 |-|-|
+|[hash]()||
 |[vector\<bool> 類別](../standard-library/vector-bool-class.md)|`bool` 類型項目之樣板類別向量的完整特製化，並提供特製化所使用之基礎類型的配置器。|
 
 ## <a name="requirements"></a>需求

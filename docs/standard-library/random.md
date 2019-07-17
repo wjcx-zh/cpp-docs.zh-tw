@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1448ad2b703aa6dcf26fad2e4adcbeb2aec2c956
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450800"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240407"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 定義亂數產生工具，允許建立統一分佈的亂數。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <random>
-```
+**標頭**:\<隨機 >
+
+**命名空間：** std
+
+> [!NOTE]
+> \<隨機 > 程式庫會使用 ' #include < initializer_list >' 陳述式。
 
 ## <a name="summary"></a>總結
 
@@ -455,7 +458,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="distributions"></a>分佈
 
-[「隨機亂數分佈」](#distributions)是一種類別或樣板類別，其執行個體會將取自引擎之統一分佈亂數的資料流，轉換為具有特定分佈之亂數的資料流。 每個分佈都有下列成員：
+          [「隨機亂數分佈」](#distributions)是一種類別或樣板類別，其執行個體會將取自引擎之統一分佈亂數的資料流，轉換為具有特定分佈之亂數的資料流。 每個分佈都有下列成員：
 
 - `typedef` `numeric-type` `result_type` 是分佈的 `operator()` 所傳回的類型。 在具現化時，會將 `numeric-type` 傳遞為範本參數。
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278978"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243529"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "62278978"
 
 類別和範本\<type_traits > 用來支援型別推斷、 分類及在編譯時期的轉換。 它們也可以用來偵測類型相關的錯誤，並協助您最佳化您的一般程式碼。 一元類型特性描述屬性的型別、 二進位類型特性描述型別之間的關聯性和轉換特性修改類型的屬性。
 
-協助程式類別`integral_constant`和其範本特製化`true_type`和`false_type`形成類型述詞的基底類別。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞*成立*，它會公開衍生，直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞*會是 false*，它會公開衍生，直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)。
+協助程式類別`integral_constant`和其範本特製化`true_type`和`false_type`形成類型述詞的基底類別。 「類型述詞」  是採用一或兩個類型引數的範本。 當類型述詞*成立*，它會公開衍生，直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)。 當類型述詞*會是 false*，它會公開衍生，直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)。
 
 *類型修飾詞*或*轉換特性*是採用一或多個範本引數的範本，且具有一個成員 `type`，這是已修改類型的同義字。
 
@@ -109,7 +109,8 @@ Helper 類別和 typedef
 |[is_empty](../standard-library/is-empty-class.md)|測試類型是否為空的類別。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|測試類型是否為多型類別。|
 |[is_abstract](../standard-library/is-abstract-class.md)|測試類型是否有抽象類別。|
-|[is_final](../standard-library/is-final-class.md)|測試類型是否為標示 `final` 的類別類型。|
+|[is_final](../standard-library/is-final-class.md)|測試類型是否是標示為 `final` 的類別類型。|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|測試類型是否為有正負號整數。|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|測試類型是否為無正負號整數。|
 |[is_constructible](../standard-library/is-constructible-class.md)|測試類型是否可使用指定的引數類型建構。|
@@ -119,6 +120,8 @@ Helper 類別和 typedef
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|測試第一個類型是否可以指派第二個類型的值。|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|測試類型是否可指派類型的常數參考值。|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|測試類型是否可指派類型的右值參考。|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|測試類型是否為易損壞的。|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|測試類型在使用指定的類型建構時是否不使用任何非 trivial 作業。|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|測試類型在預設建構時是否不使用任何非 trivial 作業。|
@@ -135,8 +138,11 @@ Helper 類別和 typedef
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|測試類型是否可使用指定類型指派，且已知指派不會擲回。|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|測試類型是否可指派複製，且已知指派不會擲回。|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|測試類型是否可指派移動，且已知指派不會擲回。|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|測試類型是否可破壞，且已知解構函式不會擲回。|
 |`has_virtual_destructor`|測試類型是否有虛擬解構函式。|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用來叫用指定的引數型別。<br/> 在 C + + 17 中新增。 |
 | [is_invocable_r](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用叫用指定的引數類型和結果轉換成指定的型別。<br/> 在 C + + 17 中新增。 |
 | [is_nothrow_invocable](is-invocable-classes.md) | 測試是否可呼叫的型別可以使用叫用指定的引數類型，且已知不會擲回例外狀況。<br/> 在 C + + 17 中新增。 |
@@ -211,6 +217,14 @@ Helper 類別和 typedef
 |[invoke_result](invoke-result-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>在 C + + 17 中新增。 |
 |[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>新增在 c++14 中，在 c++17 中已被取代。 |
 |[underlying_type](../standard-library/underlying-type-class.md)|產生列舉類型的基礎整數類型。|
+
+邏輯運算子特性
+
+|||
+|-|-|
+|[搭配使用](../standard-library/conjunction-class.md)||
+|[分離](../standard-library/disjunction-class.md)||
+|[否定](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>另請參閱
 

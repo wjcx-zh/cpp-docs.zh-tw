@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ciso646 header
 ms.assetid: 9d570924-d299-4225-9a58-8c4c820f5903
-ms.openlocfilehash: 70305581fb8afff71c87d284c773e50977342c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 299bbad53b75457e3b30caee031ab717cea0597f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386742"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244806"
 ---
 # <a name="ltciso646gt"></a>&lt;ciso646&gt;
 
 包含標準 C 程式庫標頭 \<iso646.h>，並將相關名稱新增至 `std` 命名空間。
 
-## <a name="syntax"></a>語法
+> [!NOTE]
+> 使用這個標頭中不需要C++。
 
-```cpp
-#include <ciso646>
-```
+## <a name="requirements"></a>需求
+
+**標頭：** \<ciso646 >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 

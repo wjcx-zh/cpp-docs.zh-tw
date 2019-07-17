@@ -7,12 +7,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 9632227619d0cad337a1cb026a20c9af0ec9d2a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413810"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244143"
 ---
 # <a name="divides-struct"></a>divides 結構
 
@@ -39,12 +39,13 @@ struct divides<void>
 
 ### <a name="parameters"></a>參數
 
-*型別*， *T*， *U*支援的型別`operator/`會指定或推斷類型的運算元。
+*型別*， *T*， *U*\
+支援 `operator/` 的類型，其接受指定或推斷類型的運算元。
 
-*左邊*<br/>
+*左邊*\
 除法運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右邊*<br/>
+*權限*\
 除法運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
@@ -99,21 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

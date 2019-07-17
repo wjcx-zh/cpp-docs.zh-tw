@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 089c4fc9a9bc33809f20ad6c13048a8740c95fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394256"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244452"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-包含標準 C 程式庫標頭 \<stddef.h>，並將關聯名稱加入 `std` 命名空間。
+包含 C 標準程式庫標頭\<stddef.h > 並將關聯的名稱加入`std`命名空間。 包含此標頭中宣告的宣告 C 標準程式庫標頭中使用外部連結的名稱可確保`std`命名空間。
+
+> [!NOTE]
+> \<cstddef > 包含型別**位元組**並且不包含型別**wchar_t**。
 
 ## <a name="syntax"></a>語法
 
@@ -23,9 +26,56 @@ ms.locfileid: "62394256"
 #include <cstddef>
 ```
 
-## <a name="remarks"></a>備註
+## <a name="namespace-and-macros"></a>命名空間和巨集
 
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+```cpp
+namespace std {
+    using ptrdiff_t = see definition;
+    using size_t = see definition;
+    using max_align_t = see definition;
+    using nullptr_t = decltype(nullptr);
+}
+
+#define NULL  // an implementation-defined null pointer constant
+#define offsetof(type, member-designator)
+```
+
+### <a name="parameters"></a>參數
+
+*ptrdiff_t*\
+實作定義，將帶正負號的整數類型，可保存兩個註標的陣列物件中的差異。
+
+*size_t*\
+實作定義不帶正負號的整數類型，夠大，足以容納的大小，以位元組為單位的任何物件。
+
+*max_align_t*\
+POD 類型的對齊需求是至少一樣大，每一個純量類型，並支援每個內容的對齊需求。
+
+*nullptr_t*\
+類型的同義字**nullptr**運算式。 雖然**nullptr**位址無法採用另一個位址*nullptr_t*可以採取是左值的物件。
+
+## <a name="byte-class"></a>位元組類別
+
+```cpp
+enum class byte : unsigned char {};
+
+template <class IntType>
+    constexpr byte& operator<<=(byte& b, IntType shift) noexcept;
+    constexpr byte operator<<(byte b, IntType shift) noexcept;
+    constexpr byte& operator>>=(byte& b, IntType shift) noexcept;
+    constexpr byte operator>>(byte b, IntType shift) noexcept;
+
+constexpr byte& operator|=(byte& left, byte right) noexcept;
+constexpr byte operator|(byte left, byte right) noexcept;
+constexpr byte& operator&=(byte& left, byte right) noexcept;
+constexpr byte operator&(byte left, byte right) noexcept;
+constexpr byte& operator^=(byte& left, byte right) noexcept;
+constexpr byte operator^(byte left, byte right) noexcept;
+constexpr byte operator~(byte b) noexcept;
+
+template <class IntType>
+    IntType to_integer(byte b) noexcept;
+```
 
 ## <a name="see-also"></a>另請參閱
 

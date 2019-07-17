@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405127"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240749"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -24,7 +24,7 @@ ms.locfileid: "62405127"
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<experimental/filesystem>
+**標頭：** \<experimental/filesystem>
 
 **命名空間：** std::experimental::filesystem
 
@@ -51,7 +51,7 @@ enum class copy_options {
 
 ### <a name="values"></a>值
 
-|`Name`|描述|
+|`Name`|說明|
 |------------|-----------------|
 |`none`|執行作業的預設行為。|
 |`skip_existing`|若檔案已經存在，請不要複製，也不要回報錯誤。|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|代表 UNIX 系統上的 FIFO 檔案。 (不支援。)|
 |`socket`|7|代表 UNIX 系統上的通訊端。 (不支援。)|
 |`unknown`|8|代表無法判斷狀態的檔案。|
+
+## <a name="perm_options"></a>  perm_options
+
+包含值`replace`， `add`， `remove`，和`nofollow`。
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

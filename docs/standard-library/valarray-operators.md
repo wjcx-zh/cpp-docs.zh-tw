@@ -30,25 +30,16 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365484"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246116"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator%](#op_mod)|[operator&amp;](#op_amp)|
-|[operator&amp;&amp;](#op_amp_amp)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator*](#op_star)|[operator+](#op_add)|
-|[operator-](#operator-)|[operator/](#op_div)|[operator==](#op_eq_eq)|
-|[operator^](#op_xor)|[operator&#124;](#op_or)|[operator&#124;&#124;](#op_lor)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試兩個大小相等之 valarray 的對應項目是否不相等，或測試 valarray 的所有項目是否都和指定值不相等。
 
@@ -74,10 +65,10 @@ operator!=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要測試不相等項目之兩個 valarray 的第一個。
 
-*right*<br/>
+*權限*\
 要測試不相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
@@ -136,15 +127,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_mod"></a>  operator%
+## <a name="op_mod"></a> operator %
 
 取得兩個相等大小 valarray 之對應項目相除的餘數，或 valarray 除以指定值的餘數，或指定值除以 valarray 的餘數。
 
@@ -170,10 +162,10 @@ operator%(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 當作被除數的值或是 valarray，除以另一個值或 valarray。
 
-*right*<br/>
+*權限*\
 當作除數的值或 valarray，除另一個值或 valarray。
 
 ### <a name="return-value"></a>傳回值
@@ -220,15 +212,16 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
-*/
 ```
 
-## <a name="op_amp"></a> operator&amp;
+## <a name="op_amp"></a> 運算子&amp;
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該項目型別指定值之間的位元 **AND**。
 
@@ -254,10 +247,10 @@ operator&(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*<br/>
+*權限*\
 要使用位元 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -310,15 +303,16 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
 valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*/
 ```
 
-## <a name="op_amp_amp"></a> operator&amp;&amp;
+## <a name="op_amp_amp"></a> 運算子&amp;&amp;
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間的邏輯 **AND**。
 
@@ -344,10 +338,10 @@ operator&&(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-*right*<br/>
+*權限*\
 要使用邏輯 `AND` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -398,15 +392,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試一個 valarray 的項目是否大於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或小於指定值。
 
@@ -432,10 +427,10 @@ operator>(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*<br/>
+*權限*\
 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -490,15 +485,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試一個 valarray 的項目是否大於或等於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或等於、小於或等於指定值。
 
@@ -524,10 +520,10 @@ operator>=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*<br/>
+*權限*\
 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -582,15 +578,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> 運算子&gt;&gt;
 
 依位置的指定數目或依第二個 valarray 指定的項目數量，將 valarray 的每個項目之位元右移。
 
@@ -616,10 +613,10 @@ operator>>(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要移位的值，或是其項目要移位的 valarray。
 
-*right*<br/>
+*權限*\
 指出右移數量的值，或是其項目指出項目右移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
@@ -670,15 +667,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*/
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試一個 valarray 的項目是否小於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或小於指定值。
 
@@ -704,10 +702,10 @@ operator<(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*<br/>
+*權限*\
 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -762,15 +760,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試一個 valarray 的項目是否小於或等於一個大小相等的 valarray 之項目，或測試 valarray 的所有項目是否大於或等於、小於或等於指定值。
 
@@ -796,10 +795,10 @@ operator<=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較其項目之兩個 valarray 的第一個，或是要與 valarray 比較每個項目的指定值。
 
-*right*<br/>
+*權限*\
 要比較其項目之兩個 valarray 的第二個，或是要與 valarray 比較每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -854,15 +853,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> 運算子&lt;&lt;
 
 依位置的指定數目或依第二個 valarray 指定的項目數量，將 valarray 的每個項目之位元左移。
 
@@ -888,10 +888,10 @@ operator<<(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要移位的值，或是其項目要移位的 valarray。
 
-*right*<br/>
+*權限*\
 指出左移數量的值，或是其項目指出項目左移數量的 valarray。
 
 ### <a name="return-value"></a>傳回值
@@ -942,15 +942,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
 valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*/
 ```
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a> 運算子 *
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間項目的乘積。
 
@@ -976,10 +977,10 @@ operator*(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要相乘其項目之兩個 valarray 的第一個，或是 valarray 每個項目要乘以的指定值。
 
-*right*<br/>
+*權限*\
 要相乘其項目之兩個 valarray 的第二個，或是 valarray 每個項目要乘以的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -1026,15 +1027,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
 valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*/
 ```
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> operator +
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間項目的總和。
 
@@ -1060,10 +1062,10 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要相加其項目之兩個 valarray 的第一個，或是要加上 valarray 每個項目的指定值。
 
-*right*<br/>
+*權限*\
 要相加其項目之兩個 valarray 的第二個，或是要加上 valarray 每個項目的指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -1110,15 +1112,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
-*/
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> 運算子-
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間項目的差。
 
@@ -1144,10 +1147,10 @@ operator-(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 當作被減數的值或 valarray，要減去其他值或 valarray 以得出差。
 
-*right*<br/>
+*權限*\
 當作減數的值或 valarray，要與其他值或 valarray 相減以得出差。
 
 ### <a name="return-value"></a>傳回值
@@ -1200,15 +1203,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*/
 ```
 
-## <a name="op_div"></a>  operator/
+## <a name="op_div"></a> 運算子 /
 
 取得兩個相同大小 valarray 對應項目之間，或 valarray 和該 valarray 的項目型別指定值之間項目的商。
 
@@ -1234,10 +1238,10 @@ operator/(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 當作被除數的值或是 valarray，除以另一個值或 valarray 以得出商。
 
-*right*<br/>
+*權限*\
 當作除數的值或 valarray，除另一個值或 valarray 以得出商。
 
 ### <a name="return-value"></a>傳回值
@@ -1290,15 +1294,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*/
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試兩個大小相等之 valarray 的對應項目是否相等，或測試 valarray 的所有項目是否都和指定值相等。
 
@@ -1324,10 +1329,10 @@ operator==(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要測試相等項目之兩個 valarray 的第一個。
 
-*right*<br/>
+*權限*\
 要測試相等項目之兩個 valarray 的第二個。
 
 ### <a name="return-value"></a>傳回值
@@ -1382,15 +1387,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_xor"></a>  operator^
+## <a name="op_xor"></a> 運算子 ^
 
 取得兩個相同大小 valarray 項目之間，或 valarray 和該項目型別指定值之間的位元互斥 `OR` (**XOR**)。
 
@@ -1416,10 +1422,10 @@ operator^(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*<br/>
+*權限*\
 要使用位元 **XOR** 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -1476,15 +1482,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*/
 ```
 
-## <a name="op_or"></a>  operator&#124;
+## <a name="op_or"></a> 運算子&#124;
 
 取得兩個相同大小 valarray 項目之間、或 valarray 和該項目類型指定值之間的位元 `OR`。
 
@@ -1510,10 +1517,10 @@ operator|(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
-*right*<br/>
+*權限*\
 要使用位元 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併位元的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -1570,15 +1577,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
 valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*/
 ```
 
-## <a name="op_lor"></a>  operator&#124;&#124;
+## <a name="op_lor"></a> 運算子&#124;&#124;
 
 取得兩個相同大小 valarray 項目之間，或 valarray 和該 valarray 的項目類型指定值之間的邏輯 `OR`。
 
@@ -1604,10 +1612,10 @@ operator||(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第一個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
-*right*<br/>
+*權限*\
 要使用邏輯 `OR` 合併其中每個項目之兩個 valarray 的第二個，或是要與 valarray 中每個項目合併的項目型別指定值。
 
 ### <a name="return-value"></a>傳回值
@@ -1662,14 +1670,11 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
 valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*/
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<valarray>](../standard-library/valarray.md)<br/>

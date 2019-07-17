@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240666"
 ---
 # <a name="ltforwardlistgt-operators"></a>&lt;forward_list&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試運算子左邊的轉送清單物件是否等於右邊的轉送清單物件。
 
@@ -42,16 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
 這個範本函式會多載 `operator==` 來比較 `forward_list` 範本類別的兩個物件。 函式會傳回 `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`。
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試運算子左邊的轉送清單物件是否不等於右邊的轉送清單物件。
 
@@ -63,10 +59,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -76,7 +73,7 @@ bool operator!=(
 
 此範本函式會傳回 `!(left == right)`。
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的轉送清單物件是否小於右邊的轉送清單物件。
 
@@ -88,10 +85,11 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -101,7 +99,7 @@ bool operator<(
 
 這個範本函式會多載 `operator<` 來比較 `forward_list` 範本類別的兩個物件。 函式會傳回 `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`。
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試運算子左邊的轉送清單物件是否小於或等於右邊的轉送清單物件。
 
@@ -113,10 +111,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -126,7 +125,7 @@ bool operator<=(
 
 此範本函式會傳回 `!(right < left)`。
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試運算子左邊的轉送清單物件是否大於右邊的轉送清單物件。
 
@@ -138,10 +137,11 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -151,7 +151,7 @@ bool operator>(
 
 此範本函式會傳回 `right < left`。
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試運算子左邊的轉送清單物件是否大於或等於右邊的轉送清單物件。
 
@@ -163,10 +163,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*left*|`forward_list` 類型的物件。|
-|*right*|`forward_list` 類型的物件。|
+*左邊*\
+`forward_list` 類型的物件。
+
+*權限*\
+`forward_list` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -175,7 +176,3 @@ bool operator>=(
 ### <a name="remarks"></a>備註
 
 此範本函式會傳回 `!(left < right)`。
-
-## <a name="see-also"></a>另請參閱
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

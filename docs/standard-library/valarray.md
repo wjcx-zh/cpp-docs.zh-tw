@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365412"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246662"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 定義範本類別 valarray 和許多支援的範本類別和函式。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <valarray>
-```
+**標頭：** \<valarray>
+
+**命名空間：** std
+
+> [!NOTE]
+> \<Valarray > 程式庫會使用 ' #include < initializer_list >' 陳述式。
 
 ## <a name="remarks"></a>備註
 
 這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言，任何函式會傳回型別`valarray<T1>`可能會傳回某些其他 T2 類型的物件。 在此情況下，任何函式會接受一或多個引數的型別`valarray<T2>`必須具有接受這些引數，每個都取代 T2 類型的引數任意組合的多載。
 
+## <a name="members"></a>成員
+
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的絕對值相等。|
 |[acos](../standard-library/valarray-functions.md#acos)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反餘弦值相等。|
 |[asin](../standard-library/valarray-functions.md#asin)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正弦值相等。|
 |[atan](../standard-library/valarray-functions.md#atan)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的反正切主值相等。|
 |[atan2](../standard-library/valarray-functions.md#atan2)|傳回 valarray，而常數及 valarray 項目組合指定之笛卡兒座標分量的反正切值會與其中的項目相等。|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的餘弦值相等。|
 |[cosh](../standard-library/valarray-functions.md#cosh)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的雙曲餘弦值相等。|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然指數值相等。|
 |[log](../standard-library/valarray-functions.md#log)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的自然對數值相等。|
 |[log10](../standard-library/valarray-functions.md#log10)|在輸入的 valarray 項目上運作，傳回 valarray ，其中的項目和輸入的 valarray 項目的常用對數值 (底數為 10 的對數) 相等。|
@@ -51,7 +58,7 @@ ms.locfileid: "62365412"
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|測試兩個大小相等之 valarray 的對應項目是否不相等，或測試 valarray 的所有項目是否都和 valarray 的項目類型指定值不相等。|
 |[operator%](../standard-library/valarray-operators.md#op_mod)|取得兩個相等大小 valarray 之對應項目相除的餘數，或 valarray 除以此 valarray 項目類型指定值的餘數，或指定值除以 valarray 的餘數。|
@@ -74,7 +81,7 @@ ms.locfileid: "62365412"
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[gslice 類別](../standard-library/gslice-class.md)|valarray 的一個公用程式類別，用來定義 valarray 的多維度切割。|
 |[gslice_array 類別](../standard-library/gslice-array-class.md)|可藉由提供 valarray 之一般切割所定義的子集陣列之間的作業，支援一般切割物件的內部、輔助的範本類別。|

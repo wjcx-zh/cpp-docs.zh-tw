@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: feb8af3992b9f56164ded0e3b6a4529a46fe2a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396284"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244394"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU 類別
 
@@ -37,13 +37,13 @@ class CD2DRectU : public D2D1_RECT_U;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CD2DRectU::IsNull](#isnull)|傳回**布林**值，指出運算式是否包含任何有效的資料 (NULL)。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CD2DRectU::operator CRect](#operator_crect)|將轉換`CD2DRectU`至`CRect`物件。|
 
@@ -64,7 +64,7 @@ class CD2DRectU : public D2D1_RECT_U;
 ```
 CD2DRectU(const CRect& rect);
 CD2DRectU(const D2D1_RECT_U& rect);
-  CD2DRectU(const D2D1_RECT_U* rect);
+CD2DRectU(const D2D1_RECT_U* rect);
 
 CD2DRectU(
     UINT32 uLeft = 0,

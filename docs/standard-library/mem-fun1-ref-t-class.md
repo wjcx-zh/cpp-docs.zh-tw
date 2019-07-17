@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: d4f0f2064ac6771e2c351b70097137fed12c8262
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412874"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243858"
 ---
 # <a name="memfun1reft-class"></a>mem_fun1_ref_t 類別
 
@@ -28,19 +28,18 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
     Result operator()(
     Type& left,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Pm*<br/>
+*_Pm*\
 要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*left*<br/>
+*左邊*\
 物件， *_Pm*上呼叫成員函式。
 
-*right*<br/>
+*權限*\
 提供給引數 *_Pm*。
 
 ## <a name="return-value"></a>傳回值
@@ -54,14 +53,3 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 ## <a name="example"></a>範例
 
 通常並不直接使用 `mem_fun1_ref_t` 的建構函式，而協助程式函式 `mem_fun_ref` 可用來調整成員函式。 如需如何使用成員函式配接器的範例，請參閱 [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)。
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

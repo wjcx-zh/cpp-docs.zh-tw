@@ -1,6 +1,6 @@
 ---
-title: 建立 C /C++在 Visual Studio 中的 Dll
-ms.date: 05/06/2019
+title: 在 Visual Studio 中C++建立 C/dll
+ms.date: 07/18/2019
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,58 +8,58 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: 7f1c2b71a58c59bf0662aa4ffec53344ce657df0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9f5b34fda8a429f8e55631e1e0125ed6f79d5bae
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220753"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341078"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>建立 C /C++在 Visual Studio 中的 Dll
+# <a name="create-cc-dlls-in-visual-studio"></a>在 Visual Studio 中C++建立 C/dll
 
-在 Windows，動態連結程式庫 (DLL) 會是一種可做為函式和資源的共用程式庫的可執行檔。 動態連結是一項作業系統功能，可讓可執行檔呼叫函式，或使用儲存在個別的檔案中的資源。 這些函式和資源可以與使用它們的可執行檔分開編譯和部署。 DLL 不是獨立的可執行檔;它會呼叫它的應用程式內容中執行。 作業系統可以將 DLL 載入應用程式的記憶體空間在載入應用程式 (*隱含連結*)，或視需要在執行階段 (*明確連結*)。 DLL 也讓您輕鬆地在可執行檔之間共用函式和資源。 多個應用程式可以同時存取記憶體中單一 DLL 複本的內容。
+在 Windows 中, 動態連結程式庫 (DLL) 是一種可執行檔, 作為函式和資源的共用程式庫。 動態連結是一種作業系統功能, 可以讓可執行檔呼叫函式, 或使用儲存在另一個檔案中的資源。 這些函式和資源可以與使用它們的可執行檔分開編譯和部署。 DLL 不是獨立的可執行檔;它會在呼叫它的應用程式內容中執行。 作業系統可以在載入應用程式 (*隱含連結*) 時, 或視需要在執行時間 (*明確連結*) 將 DLL 載入應用程式的記憶體空間。 DLL 也讓您輕鬆地在可執行檔之間共用函式和資源。 多個應用程式可以同時存取記憶體中單一 DLL 複本的內容。
 
 ## <a name="differences-between-dynamic-linking-and-static-linking"></a>動態連結與靜態連結之間的差異
 
-靜態連結，會同時在靜態程式庫中所有的物件程式碼複製到會在建置時使用它的可執行檔中。 動態連結包含只將 Windows 執行階段，以找出並載入包含資料項目或函式的 DLL 所需的資訊。 當您建立 DLL 時，您也可以建立包含這項資訊匯入程式庫。 當您建置呼叫 DLL 的可執行檔時，則連結器會使用匯入程式庫中的已匯出的符號來儲存此資訊，Windows 載入器。 當載入器載入 DLL 時，DLL 會對應到您的應用程式的記憶體空間中。 如果有的話，DLL 中函式的特殊`DllMain`，呼叫以執行 DLL 需要任何初始設定。
+靜態連結會將靜態程式庫中的所有物件程式碼複製到在建立時使用它的可執行檔。 動態連結只包含 Windows 在執行時間所需的資訊, 以找出並載入包含資料項目或函數的 DLL。 當您建立 DLL 時, 也會建立包含此資訊的匯入程式庫。 當您建立呼叫 DLL 的可執行檔時, 連結器會使用匯入程式庫中的已匯出符號來儲存此 Windows 載入程式的資訊。 當載入器載入 DLL 時, DLL 會對應至應用程式的記憶體空間。 如果存在, 則會呼叫 dll `DllMain`中的特殊函式, 以執行 dll 所需的任何初始化。
 
 <a name="differences-between-applications-and-dlls"></a>
 
 ## <a name="differences-between-applications-and-dlls"></a>應用程式和 Dll 之間的差異
 
-即使 Dll 和應用程式都是這兩個可執行檔的模組，但會在數種方式不同。 給使用者，最明顯的差異是 Dll 不是可以直接執行的應用程式。 從系統觀點來看，有兩個應用程式和 Dll 之間的基本差異：
+雖然 Dll 和應用程式都是可執行檔模組, 但它們的差異有好幾種。 對使用者來說, 最明顯的差異在於 Dll 不是可以直接執行的應用程式。 從系統的觀點來看, 應用程式和 Dll 之間有兩個基本差異:
 
-- 應用程式可以有多個執行個體的系統中執行的同時，本身，而 DLL 只能有一個執行個體。
+- 應用程式可以有多個本身的實例同時在系統中執行, 而 DLL 只能有一個實例。
 
-- 應用程式可以載入做為處理序可以擁有一個堆疊、 執行、 全域記憶體、 檔案控制代碼和訊息佇列的執行緒等項目，但 DLL 不能。
+- 應用程式可以載入為可擁有堆疊、執行執行緒、全域記憶體、檔案控制代碼和訊息佇列等專案的進程, 但 DLL 則不能。
 
 <a name="advantages-of-using-dlls"></a>
 
 ## <a name="advantages-of-using-dlls"></a>使用 Dll 的優點
 
-動態連結，而不靜態連結至程式碼和資源，可提供許多優點。 當您使用 DLL 時，可以節省記憶體空間，並降少交換。 當多個應用程式可以使用單一 DLL 複本時，您可以節省磁碟空間和下載頻寬。 DLL 可分開部署和更新，這讓您提供售後支援和軟體更新而無須重新建置和提供所有程式碼。 DLL 是提供特定地區設定資源時便利的方式，它可以支援多語言程式，並簡化應用程式國際版本的建立。 明確連結，可以讓您的應用程式，來探索及載入的 Dll 在執行階段，例如提供新功能的延伸模組。
+對程式碼和資源的動態連結, 與靜態連結相比, 提供了數個優點:
 
-動態連結具有下列優點：
+- 動態連結可節省記憶體並減少交換。 許多進程可以同時使用 DLL, 在記憶體中共用 DLL 唯讀部分的單一複本。 相反地, 使用靜態程式庫建立的每個應用程式都有一個完整的程式庫程式碼複本, Windows 必須載入記憶體中。
 
-- 動態連結時，節省記憶體，並減少交換。 許多程序可以使用 DLL，同時共用一份在記憶體中 DLL 的唯讀部分。 相反地，使用靜態連結程式庫建置的每個應用程式具有 Windows 必須載入記憶體的程式庫程式碼的完整複本。
+- 動態連結可節省磁碟空間和頻寬。 許多應用程式都可以在磁片上共用一個 DLL 複本。 相反地, 使用靜態程式庫建立的每個應用程式都有連結到其可執行映射的程式庫程式碼, 其使用更多的磁碟空間, 而且需要更多頻寬來傳送。
 
-- 動態連結可節省磁碟空間和頻寬。 許多應用程式可以共用磁碟上的 DLL 單一的複本。 相反地，使用靜態連結程式庫所建置的每個應用程式已連結至其可執行檔映像，其使用更多磁碟空間，並採用更多的頻寬，將程式庫程式碼。
+- 維護、安全性修正和升級會變得更容易。 當您的應用程式使用 DLL 中的通用函式時, 只要函式引數和傳回值沒有變更, 您就可以執行 bug 修正, 並將更新部署至 DLL。 當 Dll 更新時, 使用它們的應用程式不需要重新編譯或重新連結, 而是在部署時立即使用新的 DLL。 相反地, 您在靜態連結的物件程式碼中所做的修正, 會要求您重新連結和重新部署使用它的每個應用程式。
 
-- 維護安全性問題修正，並可以更輕鬆地升級。 當您的應用程式會使用常見的函式在 DLL 中時，然後只要函式引數和傳回值不會變更，您可以實作錯誤修正並部署更新 dll。 更新 Dll 時, 使用它們的應用程式不需要重新編譯或重新連結，和他們進行部署時，立即使用新的 DLL。 相較之下，您在靜態連結的物件程式碼中進行的修正程式會要求您重新連結並重新部署會使用它的每個應用程式。
+- 您可以使用 Dll 來提供上市後的支援。 例如, 您可以修改顯示驅動程式 DLL, 以支援在出貨時無法使用的顯示。
 
-- 您可以提供售後支援使用 Dll。 比方說，可以修改顯示驅動程式 DLL，以支援應用程式推出時無法使用的顯示。 您可以使用 載入應用程式延伸模組 Dll，為 明確連結，並加入您的應用程式中的新功能，而不需要重建或重新部署它。
+- 您可以在執行時間使用明確連結來探索和載入 DLL, 例如應用程式延伸模組, 可將新功能新增至您的應用程式, 而不需要重建或重新部署。
 
-- 動態連結可讓您更輕鬆地支援以不同的程式設計語言撰寫的應用程式。 以不同的程式設計語言撰寫的程式可以呼叫相同的 DLL 函式，只要程式遵循函式的呼叫慣例。 程式和 DLL 函式必須以下列方式相容： 函式預期的引數推送至堆疊，函式或應用程式是否負責清除堆疊，以及是否有任何引數的順序暫存器中傳遞。
+- 動態連結可讓您更輕鬆地支援以不同程式設計語言撰寫的應用程式。 只要程式遵循函式的呼叫慣例, 以不同程式設計語言撰寫的程式就可以呼叫相同的 DLL 函式。 程式和 DLL 函式必須以下列方式相容: 函式預期其引數會推送至堆疊的順序、函式或應用程式是否負責清除堆疊, 以及是否有任何引數傳入暫存器。
 
-- 動態連結提供擴充 MFC 程式庫類別機制。 您可以從現有的 MFC 類別衍生的類別，並將它們放在使用 MFC 擴充 DLL 中，MFC 應用程式。
+- 動態連結提供了擴充 MFC 程式庫類別的機制。 您可以從現有的 MFC 類別衍生類別, 並將它們放在 MFC 延伸 DLL 中, 以供 MFC 應用程式使用。
 
-- 動態連結更輕鬆建立應用程式的國際版本。 將地區設定特有的資源放在 DLL 中，很容易建立國際版本的應用程式。 而不是傳送應用程式的許多當地語系化的版本，您可以將字串和每種語言的映像放在不同的資源 DLL，然後您的應用程式可以載入適當的資源，在執行階段該地區設定。
+- 動態連結可讓您更輕鬆地建立應用程式的國際版本。 Dll 是提供地區設定特定資源的便利方式, 可讓您更輕鬆地建立應用程式的國際版本。 您可以將每個語言的字串和影像放在個別的資源 DLL 中, 而不是運送應用程式的許多當地語系化版本, 然後您的應用程式就可以在執行時間載入該地區設定的適當資源。
 
-使用 Dll 的潛在缺點是應用程式不是自封式;這取決於個別的 DLL 模組，您必須部署，或您自己驗證為您安裝的一部分存在。
+使用 Dll 的可能缺點是應用程式不是獨立的,這取決於是否存在個別的 DLL 模組, 您必須在安裝過程中自行部署或驗證。
 
-## <a name="more-information-on-how-to-create-and-use-dlls"></a>如何建立和使用 Dll 的詳細資訊
+## <a name="more-information-on-how-to-create-and-use-dlls"></a>有關如何建立和使用 Dll 的詳細資訊
 
-下列主題提供有關如何建立 C 的詳細的資訊 /C++在 Visual Studio 中的 Dll。
+下列主題提供有關如何在 Visual Studio 中建立 C/C++ dll 的詳細資訊。
 
 [逐步解說：建立和使用動態連結程式庫 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 描述如何使用 Visual Studio 來建立並使用 DLL。
@@ -67,32 +67,32 @@ ms.locfileid: "65220753"
 [DLL 的種類](kinds-of-dlls.md)<br/>
 提供關於各種不同可建置 DLL 的資訊。
 
-[DLL 常見問題集](dll-frequently-asked-questions.md)<br/>
+[DLL 的常見問題](dll-frequently-asked-questions.md)<br/>
 提供 DLL 常見問題的解答。
 
 [將可執行檔連結至 DLL](linking-an-executable-to-a-dll.md)<br/>
 說明 DLL 的明確和隱含連結方式。
 
 [初始化 DLL](run-time-library-behavior.md#initializing-a-dll)<br/>
-討論您的 DLL 載入時必須執行的 DLL 初始化程式碼。
+討論當您的 DLL 載入時, 必須執行的 DLL 初始化程式碼。
 
 [DLL 和 Visual C++ 執行階段程式庫行為](run-time-library-behavior.md)<br/>
 說明執行階段程式庫如何執行 DLL 啟動程序。
 
 [LoadLibrary 和 AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
-討論如何使用**LoadLibrary**和`AfxLoadLibrary`明確地連結至 DLL，以在執行階段。
+討論如何  在運行`AfxLoadLibrary`時間使用 LoadLibrary 和明確連結到 DLL。
 
 [GetProcAddress](getprocaddress.md)<br/>
-討論如何使用**GetProcAddress**取得 DLL 中匯出的函式的位址。
+討論如何使用**GetProcAddress**取得 DLL 中匯出函式的位址。
 
 [FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
-討論如何使用**FreeLibrary**和`AfxFreeLibrary`不再需要 DLL 模組時。
+討論使用**FreeLibrary** , `AfxFreeLibrary`以及不再需要 DLL 模組的時機。
 
 [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 說明 Windows 作業系統在系統上找出 DLL 時所用的搜尋路徑。
 
 [動態連結至 MFC 之 MFC DLL 的模組狀態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
-描述的一般 MFC DLL 動態連結至 MFC 的模組狀態。
+描述動態連結至 MFC 之一般 MFC DLL 的模組狀態。
 
 [MFC 延伸模組 DLL](extension-dlls-overview.md)<br/>
 說明實作衍生自現有 MFC 程式庫類別的重複使用類別的 DLL。
@@ -120,8 +120,8 @@ ms.locfileid: "65220753"
 
 ## <a name="related-sections"></a>相關章節
 
-[將 MFC 當成 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
-說明標準 MFC Dll，可讓您使用 MFC 程式庫當成 Windows 動態連結程式庫。
+[將 MFC 當做 DLL 的一部分使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)<br/>
+描述一般 MFC Dll, 可讓您使用 MFC 程式庫做為 Windows 動態連結程式庫的一部分。
 
 [MFC 的 DLL 版本](../mfc/tn033-dll-version-of-mfc.md)<br/>
-描述如何使用 MFCxx.dll 和 MFCxxD.dll （其中 x 是 MFC 版本號碼） 共用動態連結程式庫與 MFC 應用程式和 MFC 擴充 Dll。
+描述如何搭配 MFC 應用程式和 MFC 延伸 Dll, 使用 MFCxx 和 MFCxxD (其中 x 是 MFC 版本號碼) 共用動態連結程式庫。

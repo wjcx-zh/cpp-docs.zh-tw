@@ -200,16 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245981"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313401"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
-## <a name="adjacent_find"></a> adjacent_find
+## <a name="adjacent_find"></a>adjacent_find
 
 搜尋等於或符合指定之條件的兩個相鄰項目。
 
@@ -223,7 +223,7 @@ template<class ForwardIterator , class BinaryPredicate>
 ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator adjacent_find(
@@ -241,18 +241,21 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 二元述詞提供所搜尋的範圍中相鄰元素的值要符合的條件。
 
 ### <a name="return-value"></a>傳回值
 
-等於彼此 (在第一版中)，或符合二元述詞所指定條件 (在第二個版本中，且前提是找不到此類元素配對) 之相鄰的配對的第一個元素的正向迭代器。 否則，迭代器，指向*最後一個*會傳回。
+第一個相鄰專案的正向反覆運算器, 彼此相等 (在第一個版本中), 或符合二元述詞所指定的條件 (在第二個版本中), 前提是找到這種類型的元素。 否則, 會傳回指向*last*的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
@@ -272,47 +275,47 @@ ForwardIterator adjacent_find(
 // Returns whether second element is twice the first
 bool twice (int elem1, int elem2 )
 {
-   return elem1 * 2 == elem2;
+    return elem1 * 2 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   list <int> L;
-   list <int>::iterator Iter;
-   list <int>::iterator result1, result2;
+    using namespace std;
+    list<int> L;
+    list<int>::iterator Iter;
+    list<int>::iterator result1, result2;
 
-   L.push_back( 50 );
-   L.push_back( 40 );
-   L.push_back( 10 );
-   L.push_back( 20 );
-   L.push_back( 20 );
+    L.push_back( 50 );
+    L.push_back( 40 );
+    L.push_back( 10 );
+    L.push_back( 20 );
+    L.push_back( 20 );
 
-   cout << "L = ( " ;
-   for ( Iter = L.begin( ) ; Iter != L.end( ) ; Iter++ )
-      cout << *Iter << " ";
-   cout << ")" << endl;
+    cout << "L = ( " ;
+    for ( Iter = L.begin( ) ; Iter != L.end( ) ; Iter++ )
+        cout << *Iter << " ";
+    cout << ")" << endl;
 
-   result1 = adjacent_find( L.begin( ), L.end( ) );
-   if ( result1 == L.end( ) )
-      cout << "There are not two adjacent elements that are equal."
-           << endl;
-   else
-      cout << "There are two adjacent elements that are equal.\n"
-           << "They have a value of "
-           << *( result1 ) << "." << endl;
+    result1 = adjacent_find( L.begin( ), L.end( ) );
+    if ( result1 == L.end( ) )
+        cout << "There are not two adjacent elements that are equal."
+            << endl;
+    else
+        cout << "There are two adjacent elements that are equal.\n"
+            << "They have a value of "
+            << *( result1 ) << "." << endl;
 
-   result2 = adjacent_find( L.begin( ), L.end( ), twice );
-   if ( result2 == L.end( ) )
-      cout << "There are not two adjacent elements where the "
-           << "second is twice the first." << endl;
-   else
-   {
-      cout << "There are two adjacent elements where "
-           << "the second is twice the first.\n"
-           << "They have values of " << *(result2++)
-           << " & " << *result2 << "." << endl;
-   }
+    result2 = adjacent_find( L.begin( ), L.end( ), twice );
+    if ( result2 == L.end( ) )
+        cout << "There are not two adjacent elements where the "
+            << "second is twice the first." << endl;
+    else
+    {
+        cout << "There are two adjacent elements where "
+            << "the second is twice the first.\n"
+            << "They have values of " << *(result2++)
+            << " & " << *result2 << "." << endl;
+    }
 }
 ```
 
@@ -324,43 +327,46 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a> all_of
+## <a name="all_of"></a>all_of
 
-傳回 **，則為 true**條件時出現在每個項目指定的範圍中。
+當指定範圍內的每個專案都有條件時, 傳回**true** 。
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 bool all_of(
     InputIterator first,
     InputIterator last,
-    BinaryPredicatecomp);
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool all_of(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示開始檢查條件的位置。 某範圍元素的開始迭代器標記。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
-*comp*<br/>
-要測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**中所指出範圍的每個元素偵測到條件，或如果範圍是空的並**false**否則。
+如果在指定範圍內的每個專案上偵測到條件, 或如果範圍是空的, 則傳回**true** , 否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回 **，則為 true**只有當，每個`N`範圍內`[0,Last - first)`，述詞`comp(*(_First + N))`是**true**。
+`N`只有在範圍`[0, last - first)`中的每個   都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
 
 ### <a name="example"></a>範例
 
@@ -397,45 +403,48 @@ li = ( 50 40 10 20 20 )
 All the elements are even numbers.
 ```
 
-## <a name="any_of"></a> any_of
+## <a name="any_of"></a>any_of
 
-傳回 **，則為 true**條件時出現的項目指定的範圍中的至少一次。
+當條件出現在指定的專案範圍中至少一次時, 傳回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
 bool any_of(
     InputIterator first,
     InputIterator last,
-    UnaryPredicate comp);
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool any_of(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示檢查條件的某範圍元素開始。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
-*Comp*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回**真**偵測到條件至少一次在指定範圍中，如果**false**永遠不會偵測到條件。
+如果在指定的範圍內偵測到至少一次的條件, 則傳回**true** , 如果從未偵測到條件, 則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回 **，則為 true**只有當，某些`N`範圍中
+只有在範圍內  的某些`N`中, 範本函式才會傳回 true
 
-`[0, last - first)`述詞`comp(*(first + N))`為 true。
+`[0, last - first)`, 述詞為 true。 `pred(*(first + N))`
 
 ### <a name="example"></a>範例
 
@@ -471,7 +480,7 @@ li = ( 51 41 11 21 20 )
 There's an even element in li.
 ```
 
-## <a name="binary_search"></a> binary_search
+## <a name="binary_search"></a>binary_search
 
 測試已排序的範圍中是否有等於指定之值 (或在二元述詞指定的意義上，相當於該值) 的項目。
 
@@ -482,31 +491,31 @@ bool binary_search(
     ForwardIterator last,
     const Type& value);
 
-template<class ForwardIterator,  class Type,  class BinaryPredicate>
+template<class ForwardIterator, class Type, class BinaryPredicate>
 bool binary_search(
     ForwardIterator first,
     ForwardIterator last,
     const Type& value,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *value*\
 必要的值，比對元素值或必須符合條件的元素值與二元述詞所指定的元素值。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果項目位於相同或相當於指定的值; 否則即為範圍**false**。
+如果在等於或等同于指定值的範圍中找到元素, 則為**true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -518,7 +527,7 @@ bool binary_search(
 
 正向迭代器的實值類型必須是小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-演算法的複雜度是對數隨機存取迭代器，並且，否則為線性步驟數目成正比到 (`last` - `first`)。
+隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last`  -  `first`) 成正比的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -545,7 +554,7 @@ int main()
 {
     using namespace std;
 
-    list <int> List1;
+    list<int> List1;
 
     List1.push_back( 50 );
     List1.push_back( 10 );
@@ -602,16 +611,48 @@ int main()
 }
 ```
 
-## <a name="clamp"></a> clamp
+## <a name="clamp"></a>夾具
+
+比較值與上限和下限, 並傳回值的參考 (如果它介於界限之間), 或如果值高於或低於其上方或下限, 則傳回上限或下限的參考。
 
 ```cpp
-template<class T>
-constexpr const T& clamp(const T& v, const T& lo, const T& hi);
-template<class T, class Compare>
-constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+template<class Type>
+constexpr const Type& clamp(
+    const Type& value,
+    const Type& lower,
+    const Type& upper);
+
+template<class Type, class Compare>
+constexpr const Type& clamp(
+    const Type& value,
+    const Type& lower,
+    const Type& upper,
+    Compare pred);
 ```
 
-## <a name="copy"></a> 複製
+### <a name="parameters"></a>參數
+
+*value*\
+要與*upper*和*lower*比較的值。
+
+*零下*\
+要將*值*夾具的值下限。
+
+*臨界*\
+要將*值*夾具的值上限。
+
+*pred*\
+用來比較*值*與*lower*或*上限*的述詞。 比較述詞會採用兩個引數, 如果第一個的意義小於第二個, 則傳回**true** , 否則傳回**false**。
+
+### <a name="return-value"></a>傳回值
+
+傳回*較低*if `value < lower`的參考, 或傳回*大寫*if `upper < value`的參考。 否則, 它會傳回*值*的參考。
+
+### <a name="remarks"></a>備註
+
+如果*上限*小於*下限*, 則行為是未定義的。
+
+## <a name="copy"></a>複製
 
 從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以正向方向指派它們新位置。
 
@@ -625,16 +666,20 @@ OutputIterator copy(
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*\
+*次*\
 輸入迭代器，用於定址來源範圍中最後一個項目的後面一個位置。
 
 *destBeg*\
@@ -642,13 +687,13 @@ ForwardIterator2 copy(
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，也就是會在目的範圍中最後一個項目的其中一個位置定址，此迭代器會定址`result`+ (*上次* - *第一個*)。
+輸出反覆運算器, 用於定址目的範圍中最後一個元素之後的位置, 也就`result`是反覆運算器定址 + (*最後* - *一個*)。
 
 ### <a name="remarks"></a>備註
 
 來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。
 
-因為此演算法會複製來源元素中的第一個元素的順序開頭，則目的範圍可以重疊與來源範圍*最後一個*來源範圍的位置不包含在目的地中範圍。 `copy` 可用來將項目移到左邊，而不是向右移，除非來源和目的範圍之間沒有重疊。 若要向右移動任何數目的位置，請使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 演算法。
+因為演算法從第一個元素開始依序複製來源元素, 所以如果來源範圍的*最後一個*位置不包含在目的範圍中, 則目的範圍可以與來源範圍重迭。 `copy`除非來源和目的範圍之間沒有重迭, 否則可以用來將專案向左移, 而不是向右移位。 若要向右移動任何數目的位置，請使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 演算法。
 
 `copy` 演算法只修改迭代器指向的值，並指派新值給目的範圍的項目。 它不是用來建立新的項目，也不能直接將項目插入空的容器。
 
@@ -662,44 +707,44 @@ ForwardIterator2 copy(
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1.push_back( 10 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1.push_back( 10 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 10 ; ii++ )
-      v2.push_back( 3 * ii );
+    int ii;
+    for ( ii = 0 ; ii <= 10 ; ii++ )
+        v2.push_back( 3 * ii );
 
-   cout << "v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To copy the first 3 elements of v1 into the middle of v2
-   copy( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 4 );
+    // To copy the first 3 elements of v1 into the middle of v2
+    copy( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 4 );
 
-   cout << "v2 with v1 insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with v1 insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To shift the elements inserted into v2 two positions
-   // to the left
-   copy( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 2 );
+    // To shift the elements inserted into v2 two positions
+    // to the left
+    copy( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 2 );
 
-   cout << "v2 with shifted insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with shifted insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -710,7 +755,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a> copy_backward
+## <a name="copy_backward"></a>copy_backward
 
 從來源範圍將項目的值指定到目的範圍，逐一查看項目的來源序列，並以反向方向指派它們新位置。
 
@@ -724,10 +769,10 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 雙向迭代器，在來源範圍的第一個項目位置定址。
 
-*最後一個*\
+*次*\
 雙向迭代器，在來源範圍中越過最後一個項目的位置定址。
 
 *destEnd*\
@@ -735,17 +780,17 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，也就是會在目的範圍中最後一個項目的其中一個位置定址，此迭代器會定址*destEnd* -(*上次* - *第一個*).
+輸出反覆運算器, 用於定址目的範圍中最後一個元素之後的位置, 也就是說, 反覆運算器會處理*destEnd* -(*最後* - *一個*)。
 
 ### <a name="remarks"></a>備註
 
 來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。
 
-`copy_backward` 演算法較複製演算法強加更嚴格的需求。 其輸入和輸出迭代器必須是雙向的。
+演算法會強加比演算法更嚴格的需求。 `copy` `copy_backward` 其輸入和輸出迭代器必須是雙向的。
 
 `copy_backward` 和 [move_backward](../standard-library/algorithm-functions.md#move_backward) 演算法是指定輸出範圍並以迭代器指向目的範圍結尾的唯一 C++ 標準程式庫演算法。
 
-因為此演算法會複製來源元素中的最後一個元素的順序開頭，則目的範圍可以重疊與來源範圍*第一個*來源範圍的位置不包含在目的地中範圍。 除非來源和目的範圍之間沒有重疊，`copy_backward` 可以用來將項目向右位移，而不是向左移。 若要向左移動任何數目的位置，請使用 [copy](../standard-library/algorithm-functions.md#copy) 演算法。
+因為演算法從最後一個元素開始依序複製來源元素, 所以如果來源範圍的*第一個*位置不包含在目的範圍中, 則目的範圍可以與來源範圍重迭。 除非來源和目的範圍之間沒有重疊，`copy_backward` 可以用來將項目向右位移，而不是向左移。 若要向左移動任何數目的位置，請使用 [copy](../standard-library/algorithm-functions.md#copy) 演算法。
 
 `copy_backward` 演算法只修改迭代器指向的值，並指派新值給目的範圍的項目。 它不是用來建立新的項目，也不能直接將項目插入空的容器。
 
@@ -759,94 +804,98 @@ BidirectionalIterator2 copy_backward(
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; ++i )
-      v1.push_back( 10 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; ++i )
+        v1.push_back( 10 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 10 ; ++ii )
-      v2.push_back( 3 * ii );
+    int ii;
+    for ( ii = 0 ; ii <= 10 ; ++ii )
+        v2.push_back( 3 * ii );
 
-   cout << "v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; ++Iter1 )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; ++Iter1 )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To copy_backward the first 3 elements of v1 into the middle of v2
-   copy_backward( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 7 );
+    // To copy_backward the first 3 elements of v1 into the middle of v2
+    copy_backward( v1.begin( ), v1.begin( ) + 3, v2.begin( ) + 7 );
 
-   cout << "v2 with v1 insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with v1 insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // To shift the elements inserted into v2 two positions
-   // to the right
-   copy_backward( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 9 );
+    // To shift the elements inserted into v2 two positions
+    // to the right
+    copy_backward( v2.begin( )+4, v2.begin( ) + 7, v2.begin( ) + 9 );
 
-   cout << "v2 with shifted insert = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    cout << "v2 with shifted insert = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 }
 ```
 
-## <a name="copy_if"></a> copy_if
+## <a name="copy_if"></a>copy_if
 
-在範圍中的項目，將複製的項目 **，則為 true**指定條件。
+在某個範圍的專案中, 針對指定的條件複製**true**的元素。
 
 ```cpp
-template<class InputIterator, class OutputIterator, class BinaryPredicate>
+template<class InputIterator, class OutputIterator, class UnaryPredicate>
 OutputIterator copy_if(
     InputIterator first,
     InputIterator last,
     OutputIterator dest,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
 ForwardIterator2 copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, ForwardIterator1 last,
-    ForwardIterator2 result, Predicate pred);
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示範圍的結尾。
 
-*目的地*\
+*dest*\
 輸出迭代器，表示所複製元素的目的地。
 
-*_Pred*\
-測試範圍中每個元素的條件。 這種條件是由使用者定義的述詞函式物件所提供。 述詞會採用一個引數，並傳回**真**或是**false**。
+*pred*\
+測試範圍中每個元素的條件。 這種條件是由使用者定義的述詞函式物件所提供。 一元述詞會接受一個引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，等於*dest*遞增後的每個項目可滿足條件。 換句話說，傳回的值減去*dest*等於複製的項目數目。
+針對每個符合條件的專案, 等於*dest*的輸出反覆運算器會遞增一次。 換句話說, 傳回值減去*dest*等於複製的元素數目。
 
 ### <a name="remarks"></a>備註
 
 範本函式會針對下列項目評估一次：
 
-`if (pred(*_First + N)) * dest++ = *(_First + N))`
+`if (pred(*first + N)) * dest++ = *(first + N))`
 
-範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果*dest*並*第一個*指定的儲存體、 區域*dest*不得在範圍`[ first, last )`。
+範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果*dest*和*第一次*指定儲存區, 則*dest*不得在範圍`[ first, last )`內。
 
-## <a name="copy_n"></a> copy_n
+## <a name="copy_n"></a>copy_n
 
 複製指定的項目數目。
 
@@ -857,32 +906,35 @@ OutputIterator copy_n(
     Size count,
     OutputIterator dest);
 
-template<class ExecutionPolicy, class ForwardIterator1, class Size,
-class ForwardIterator2>
+template<class ExecutionPolicy, class ForwardIterator1, class Size, class ForwardIterator2>
 ForwardIterator2 copy_n(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, Size n,
-    ForwardIterator2 result);
+    ForwardIterator1 first,
+    Size count,
+    ForwardIterator2 dest);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示要複製元素的位置。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要複製的元素數目。
 
-*目的地*\
+*dest*\
 輸出迭代器，表示要將元素複製過去的位置。
 
 ### <a name="return-value"></a>傳回值
 
-傳回輸出迭代器，其中已將元素複製過去。 它等同於第三個參數，傳回的值*dest*。
+傳回輸出迭代器，其中已將元素複製過去。 它與*dest*參數的傳回值相同。
 
 ### <a name="remarks"></a>備註
 
-範本函式會評估`*(dest + N) = *(first + N))`每個`N`範圍內`[0, count)`，可完全增加值`N`從最低值開始。 然後它會傳回 `dest + N`。 如果*dest*並*第一個*指定的儲存體、 區域*dest*不得在範圍`[first, last)`。
+此範本函式`*(dest + N) = *(first + N))`會針對範圍`N` `[0, count)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `dest + N`。 如果*dest*和*第一次*指定儲存區, 則*dest*不得在範圍`[first, last)`內。
 
 ### <a name="example"></a>範例
 
@@ -900,8 +952,8 @@ int main()
     string s2{"badger"};
 
     cout << s1 << " + " << s2 << " = ";
-    
-    // Copy the first 3 letters from s1 
+
+    // Copy the first 3 letters from s1
     // to the first 3 positions in s2
     copy_n(s1.begin(), 3, s2.begin());
 
@@ -913,7 +965,7 @@ int main()
 dandelion + badger = danger
 ```
 
-## <a name="count"></a> 計數
+## <a name="count"></a>計數
 
 傳回範圍中值符合指定值的項目數目。
 
@@ -922,31 +974,34 @@ template<class InputIterator, class Type>
 typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator, class T>
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 typename iterator_traits<ForwardIterator>::difference_type
 count(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，定址要周遊範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，定址要周遊範圍中最後一個元素之後的位置。
 
-*val*\
+*value*\
 要計算之元素的值。
 
 ### <a name="return-value"></a>傳回值
 
-差異類型`InputIterator`，計算範圍中的項目數 [*第一次*，*最後*) 值*val*。
+的差異類型`InputIterator` , 計算具有值的範圍 [*first*, *last*) 中的元素數目。 
 
 ### <a name="remarks"></a>備註
 
@@ -991,36 +1046,39 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a> count_if
+## <a name="count_if"></a>count_if
 
 傳回範圍中值符合指定條件的元素數。
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 typename iterator_traits<ForwardIterator>::difference_type
 count_if(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*_Pred*\
-使用者定義的述詞函式物件，定義計算元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+使用者定義的述詞函式物件，定義計算元素時所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1073,7 +1131,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a> 等於
+## <a name="equal"></a>等於
 
 逐一比較兩個範圍的每個項目是否相等 (或在二元述詞指定的意義上，是否對等)。
 
@@ -1084,61 +1142,69 @@ The number of elements in v1 greater than 10 is: 2.
 ```cpp
 template<class InputIterator1, class InputIterator2>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2);
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    BinaryPredicate Comp); // C++14
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    BinaryPredicate pred); // C++14
 
 template<class InputIterator1, class InputIterator2>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    InputIterator2  Last2);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2);
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate>
 bool equal(
-    InputIterator1  First1,
-    InputIterator1  Last1,
-    InputIterator2  First2,
-    InputIterator2  Last2,
-    BinaryPredicate Comp);
-    
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
     ForwardIterator2 first2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, BinaryPredicate pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, ForwardIterator2 last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool equal(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, ForwardIterator1 last1,
-    ForwardIterator2 first2, ForwardIterator2 last2,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
@@ -1149,10 +1215,10 @@ bool equal(
 *first2*\
 輸入迭代器，定址要測試的第二個範圍中第一個項目的位置。
 
-*first2*\
+*last2*\
 輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -1163,7 +1229,7 @@ bool equal(
 
 要搜尋的範圍必須有效；所有迭代器都必須可以取值，而且可透過遞增從第一個位置到達最後一個位置。
 
-如果兩個範圍有相等的長度，則演算法的時間複雜性，在範圍包含的項目數目中是線性。 否則函式立即傳回**false**。
+如果兩個範圍有相等的長度，則演算法的時間複雜性，在範圍包含的項目數目中是線性。 否則, 函數會立即傳回**false**。
 
 `operator==` 和使用者定義的述詞不需要在運算元之間強加對稱、自反和遞移的等價關係。
 
@@ -1200,7 +1266,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a> equal_range
+## <a name="equal_range"></a>equal_range
 
 如果提供排序範圍，則會尋找所有元素都等於指定值的子範圍。
 
@@ -1209,35 +1275,35 @@ template<class ForwardIterator, class Type>
 pair<ForwardIterator, ForwardIterator> equal_range(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val);
+    const Type& value);
 
-template<class ForwardIterator, class Type, class Predicate>
+template<class ForwardIterator, class Type, class Compare>
 pair<ForwardIterator, ForwardIterator> equal_range(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val,
-    Predicate comp);
+    const Type& value,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*val*\
+*value*\
 排序範圍中要搜尋的值。
 
-*Comp*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
-正向迭代器只要指定子範圍，包含搜尋，範圍內的所有元素都等於一組*val*中所用的二元述詞所定義之意義 (任一*comp*或預設值： 小於-比)。
+一對正向反覆運算器, 指定包含在搜尋範圍內的子範圍, 其中所有專案都等同于所使用之二元述詞所定義的意義 ( *pred*或預設*值*, 小於)。
 
-如果範圍中的沒有項目相當於*val*，傳回的正向迭代器配對相等，並指定點所在*val*可插入而不干擾範圍順序。
+如果範圍中沒有任何專案與*值*相等, 則傳回的配對中的正向反覆運算器會相等, 並指定可以插入*值*而不影響範圍順序的點。
 
 ### <a name="remarks"></a>備註
 
@@ -1245,9 +1311,9 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 範圍必須根據提供給 `equal_range` 的述詞來進行排序。 例如，如果您要使用大於述詞，則必須以遞減順序排序範圍。
 
-所傳回的迭代器配對定義之可能是空的子範圍中的項目`equal_range`相當於*val*使用述詞所定義的意義。
+由傳回`equal_range`的反覆運算器配對所定義之可能空白子範圍中的元素, 將會相當於所使用之述詞所定義的意義中的*值*。
 
-演算法的複雜度是對數隨機存取迭代器，並且，否則為線性步驟數目成正比到 (*上次* - *第一個*)。
+隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種則是與 (*最後* - *一個*) 比例的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -1281,7 +1347,7 @@ template<class T> void dump_vector( const vector<T>& v, pair<typename vector<T>:
     cout << endl;
 }
 
-template<class T> void equal_range_demo( const vector<T>& original_vector, T val )
+template<class T> void equal_range_demo( const vector<T>& original_vector, T value )
 {
     vector<T> v(original_vector);
 
@@ -1294,14 +1360,14 @@ template<class T> void equal_range_demo( const vector<T>& original_vector, T val
     cout << endl << endl;
 
     pair<vector<T>::iterator, vector<T>::iterator> result
-        = equal_range( v.begin(), v.end(), val );
+        = equal_range( v.begin(), v.end(), value );
 
-    cout << "Result of equal_range with val = " << val << ":" << endl << '\t';
+    cout << "Result of equal_range with value = " << value << ":" << endl << '\t';
     dump_vector( v, result );
     cout << endl;
 }
 
-template<class T, class F> void equal_range_demo( const vector<T>& original_vector, T val, F pred, string predname )
+template<class T, class F> void equal_range_demo( const vector<T>& original_vector, T value, F pred, string predname )
 {
     vector<T> v(original_vector);
 
@@ -1314,9 +1380,9 @@ template<class T, class F> void equal_range_demo( const vector<T>& original_vect
     cout << endl << endl;
 
     pair<typename vector<T>::iterator, typename vector<T>::iterator> result
-        = equal_range( v.begin(), v.end(), val, pred );
+        = equal_range( v.begin(), v.end(), value, pred );
 
-    cout << "Result of equal_range with val = " << val << ":" << endl << '\t';
+    cout << "Result of equal_range with value = " << value << ":" << endl << '\t';
     dump_vector( v, result );
     cout << endl;
 }
@@ -1366,7 +1432,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a> 填滿
+## <a name="fill"></a>填滿
 
 將相同的新值指派到指定範圍內的每個項目。
 
@@ -1375,26 +1441,29 @@ template<class ForwardIterator, class Type>
 void fill(
     ForwardIterator first,
     ForwardIterator last,
-    const Type& val);
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 void fill(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    const T& value);
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，定址要周遊之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，定址要周遊之範圍中最後一個元素之後的位置。
 
-*val*\
-要指派給範圍中的元素的值 [*第一*，*最後一個*)。
+*value*\
+要指派給範圍 [*first*, *last*) 中之元素的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1411,28 +1480,28 @@ void fill(
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Fill the last 5 positions with a value of 2
-   fill( v1.begin( ) + 5, v1.end( ), 2 );
+    // Fill the last 5 positions with a value of 2
+    fill( v1.begin( ) + 5, v1.end( ), 2 );
 
-   cout << "Modified v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Modified v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -1441,40 +1510,42 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a> fill_n
+## <a name="fill_n"></a>fill_n
 
 將新值指派給範圍中以特定元素開頭的指定元素數目。
 
 ```cpp
 template<class OutputIterator, class Size, class Type>
 OutputIterator fill_n(
-    OutputIterator First,
-    Size Count,
-    const Type& Val);
+    OutputIterator first,
+    Size count,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator,
-class Size, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type>
 ForwardIterator fill_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    Size n, 
-    const T& value);
+    ForwardIterator first,
+    Size count,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
-輸出迭代器，定址範圍中的第一個元素位置的值指派給*Val*。
+*exec*\
+要使用的執行原則。
+
+*頭*\
+輸出反覆運算器, 用於定址要指派值*值*之範圍中第一個元素的位置。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要獲指派值的元素數目。
 
-*val*\
-要指派給範圍中的元素的值 [*第一*， *First + Count*)。
+*value*\
+要指派給範圍 [*first*, *first + count*) 中之元素的值。
 
 ### <a name="return-value"></a>傳回值
 
-若項目，最後一個項目後面的迭代器會填入*計數*> 零，否則第一個項目。
+專案的反覆運算器, 如果*count* > 零, 則緊接在最後一個元素之後, 否則為第一個元素。
 
 ### <a name="remarks"></a>備註
 
@@ -1492,12 +1563,12 @@ ForwardIterator fill_n(
 int main()
 {
     using namespace std;
-    vector <int> v;
+    vector<int> v;
 
     for ( auto i = 0 ; i < 9 ; ++i )
         v.push_back( 0 );
 
-    cout << "  vector v = ( " ;
+    cout << " vector v = ( " ;
     for ( const auto &w : v )
         cout << w << " ";
     cout << ")" << endl;
@@ -1528,39 +1599,42 @@ int main()
 }
 ```
 
-## <a name="find"></a> 尋找
+## <a name="find"></a>尋找
 
 在範圍中找出有指定值的第一個項目的位置。
 
 ```cpp
-template<class InputIterator, class T>
+template<class InputIterator, class Type>
 InputIterator find(
     InputIterator first,
     InputIterator last,
-    const T& val);
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 ForwardIterator find(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，其定址要搜尋指定值的範圍中，第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，其定址要搜尋指定值的範圍中，最後一個元素後方的位置。
 
-*val*\
+*value*\
 要搜尋的值。
 
 ### <a name="return-value"></a>傳回值
 
-輸入迭代器，其定址所搜尋的範圍中第一次出現的指定值。 如果找到具有相等值沒有任何項目，則會傳回*最後一個*。
+輸入迭代器，其定址所搜尋的範圍中第一次出現的指定值。 如果找不到具有對等值的元素, 則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -1568,43 +1642,43 @@ ForwardIterator find(
 
 如需使用 `find()` 的程式碼範例，請參閱 [find_if](../standard-library/algorithm-functions.md#find_if)。
 
-## <a name="find_end"></a> find_end
+## <a name="find_end"></a>find_end
 
 在範圍中尋找與指定序列相同 (或在二元述詞指定的意義上，相當於該序列) 的最後一個子序列。
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 find_end(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
 template<class ForwardIterator1, class ForwardIterator2, class Pred>
 ForwardIterator1 find_end(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2,
-    Pred Comp);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    Pred pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1
 find_end(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
+
 template<class ExecutionPolicy, class ForwardIterator1,
 class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1
 find_end(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
@@ -1623,12 +1697,12 @@ find_end(
 *last2*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
-正向迭代器會定址符合指定序列 [First2, Last2) 的 [First1, Last1) 中最後一個子序列的第一個元素的位置。
+正向反覆運算器, 用於定址 [first1, last1) 內最後一個子序列的第一個元素的位置, 此專案符合指定的序列 [first2, last2)。
 
 ### <a name="remarks"></a>備註
 
@@ -1649,77 +1723,77 @@ find_end(
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for a match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = find_end ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for a match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = find_end ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a match of L1 in v1 that begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a match of L1 in v1 that begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = find_end ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = find_end ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent to those\n in v2 under the binary "
-           << "predicate twice and that begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent to those\n in v2 under the binary "
+            << "predicate twice and that begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -1732,33 +1806,33 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a> find_first_of
+## <a name="find_first_of"></a>find_first_of
 
 在目標範圍內搜尋第一次出現的任何多個值，或第一次出現的任何多個項目 (在二元述詞指定的意義上，相當於指定之項目集合)。
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 find_first_of(
-    ForwardIterator1  first1,
-    ForwardIterator1 Last1,
-    ForwardIterator2  first2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
 template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 find_first_of(
-    ForwardIterator1  first1,
-    ForwardIterator1 Last1,
-    ForwardIterator2  first2,
-    ForwardIterator2 Last2,
-    BinaryPredicate  comp);
-    
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1
 find_first_of(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
 template<class ExecutionPolicy, class ForwardIterator1,
@@ -1766,9 +1840,9 @@ class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1
 find_first_of(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
@@ -1787,7 +1861,7 @@ find_first_of(
 *last2*\
 正向迭代器，其定址要比對範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -1813,78 +1887,78 @@ find_first_of(
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 3 ; ii <= 4 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 3 ; ii <= 4 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for first match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = find_first_of ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for first match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = find_first_of ( v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is at least one match of L1 in v1"
-           << "\n and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is at least one match of L1 in v1"
+            << "\n and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = find_first_of ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = find_first_of ( v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent\n to those in v2 under the binary "
-           << "predicate twice\n and the first one begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent\n to those in v2 under the binary "
+            << "predicate twice\n and the first one begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -1899,38 +1973,38 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a> find_if
+## <a name="find_if"></a>find_if
 
 在範圍中找出滿足特定條件的第一個項目的位置。
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 InputIterator find_if(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator find_if(
     ExecutionPolicy&& exec,
     ForwardIterator first, ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*預測*\
-使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
+*pred*\
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。 *Pred*的簽章必須有效地`bool pred(const T& arg);`是, `T`其中是可在取值`InputIterator`時以隱含方式轉換的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
-輸入迭代器指向第一個範圍中的元素符合述詞所指定的條件 (述詞會導致 **，則為 true**)。 如果沒有任何項目發現任何符合述詞，就會傳回*最後一個*。
+輸入反覆運算器, 參考範圍中符合述詞所指定之條件的第一個元素 (述詞會產生**true**)。 如果找不到符合述詞的元素, 則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -2021,38 +2095,38 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a> find_if_not
+## <a name="find_if_not"></a>find_if_not
 
 傳回指定範圍中不滿足條件的第一個項目。
 
 ```cpp
-template<class InputIterator, class Predicate>
+template<class InputIterator, class UnaryPredicate>
 InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator find_if_not(
     ExecutionPolicy&& exec,
     ForwardIterator first, ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
-*預測*\
-使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 述詞會接受單一引數，並傳回**真**（符合） 或**false** （不符合）。 簽章*pred*必須有效地`bool pred(const T& arg);`，其中`T`是要類型`InputIterator`取值時可隱含轉換。 **Const**關鍵字顯示只是為了說明，函式物件或 lambda 不應修改引數。
+*pred*\
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。 *Pred*的簽章必須有效地`bool pred(const T& arg);`是, `T`其中是可在取值`InputIterator`時以隱含方式轉換的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
-輸入迭代器指向第一個範圍中的元素不符合述詞所指定的條件 (述詞會導致**false**)。 如果所有項目都滿足述詞 (述詞會導致 **，則為 true**每個項目)，會傳回*最後一個*。
+輸入反覆運算器, 參考範圍中不符合述詞所指定之條件的第一個元素 (述詞會產生**false**)。 如果所有元素都符合述詞 (述詞會針對每個元素產生**true** ), 則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -2060,7 +2134,7 @@ ForwardIterator find_if_not(
 
 如需快速適用於 `find_if_not()` 的程式碼範例，請參閱 [find_if](../standard-library/algorithm-functions.md#find_if)。
 
-## <a name="for_each"></a> for_each
+## <a name="for_each"></a>for_each
 
 將指定的函式物件以正向順序套用至範圍內的每個項目，並傳回函式物件。
 
@@ -2070,24 +2144,24 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
-    
+
 template<class ExecutionPolicy, class ForwardIterator, class Function>
 void for_each(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Function f);
+    Function func);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 輸入迭代器，定址要對其作業之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，定址要對其作業之範圍中最後一個元素之後的位置。
 
-*_Func*\
+*func*\
 套用至範圍中每個元素的使用者定義函式物件。
 
 ### <a name="return-value"></a>傳回值
@@ -2100,7 +2174,7 @@ void for_each(
 
 參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。
 
-複雜度為線性，最多 (*上次* - *第一個*) 比較。
+複雜度為線性, 最多有 (*最後* - *一次*) 的比較。
 
 ### <a name="example"></a>範例
 
@@ -2116,95 +2190,95 @@ template <class Type>
 class MultValue
 {
 private:
-   Type Factor;   // The value to multiply by
+    Type Factor;   // The value to multiply by
 public:
-   // Constructor initializes the value to multiply by
-   MultValue ( const Type& val ) : Factor ( val ) {
-   }
+    // Constructor initializes the value to multiply by
+    MultValue ( const Type& value ) : Factor ( value ) {
+    }
 
-   // The function call for the element to be multiplied
-   void operator( ) ( Type& elem ) const
-   {
-      elem *= Factor;
-   }
+    // The function call for the element to be multiplied
+    void operator( ) ( Type& elem ) const
+    {
+        elem *= Factor;
+    }
 };
 
 // The function object to determine the average
 class Average
 {
 private:
-   long num;      // The number of elements
-   long sum;      // The sum of the elements
+    long num;      // The number of elements
+    long sum;      // The sum of the elements
 public:
-   // Constructor initializes the value to multiply by
-   Average( ) : num ( 0 ) , sum ( 0 )
-   {
-   }
+    // Constructor initializes the value to multiply by
+    Average( ) : num ( 0 ) , sum ( 0 )
+    {
+    }
 
-   // The function call to process the next elment
-   void operator( ) ( int elem ) \
-   {
-      num++;      // Increment the element count
-      sum += elem;   // Add the value to the partial sum
-   }
+    // The function call to process the next elment
+    void operator( ) ( int elem )
+    {
+        num++;      // Increment the element count
+        sum += elem;   // Add the value to the partial sum
+    }
 
-   // return Average
-   operator double( )
-   {
-      return  static_cast <double> (sum) /
-      static_cast <double> (num);
-   }
+    // return Average
+    operator double( )
+    {
+        return static_cast<double> (sum) /
+            static_cast<double> (num);
+    }
 };
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   // Constructing vector v1
-   int i;
-   for ( i = -4 ; i <= 2 ; i++ )
-   {
-      v1.push_back(  i );
-   }
+    // Constructing vector v1
+    int i;
+    for ( i = -4 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Original vector  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Using for_each to multiply each element by a Factor
-   for_each ( v1.begin( ), v1.end( ), MultValue<int> ( -2 ) );
+    // Using for_each to multiply each element by a Factor
+    for_each ( v1.begin( ), v1.end( ), MultValue<int> ( -2 ) );
 
-   cout << "Multiplying the elements of the vector v1\n "
-        <<  "by the factor -2 gives:\n v1mod1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1\n "
+            << "by the factor -2 gives:\n v1mod1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // The function object is templatized and so can be
-   // used again on the elements with a different Factor
-   for_each (v1.begin( ), v1.end( ), MultValue<int> (5 ) );
+    // The function object is templatized and so can be
+    // used again on the elements with a different Factor
+    for_each (v1.begin( ), v1.end( ), MultValue<int> (5 ) );
 
-   cout << "Multiplying the elements of the vector v1mod\n "
-        <<  "by the factor 5 gives:\n v1mod2 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1mod\n "
+            << "by the factor 5 gives:\n v1mod2 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // The local state of a function object can accumulate
-   // information about a sequence of actions that the
-   // return value can make available, here the Average
-   double avemod2 = for_each ( v1.begin( ), v1.end( ),
-      Average( ) );
-   cout << "The average of the elements of v1 is:\n Average ( v1mod2 ) = "
-        << avemod2 << "." << endl;
+    // The local state of a function object can accumulate
+    // information about a sequence of actions that the
+    // return value can make available, here the Average
+    double avemod2 = for_each ( v1.begin( ), v1.end( ),
+        Average( ) );
+    cout << "The average of the elements of v1 is:\n Average ( v1mod2 ) = "
+            << avemod2 << "." << endl;
 }
 ```
 
 ```Output
-Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
+Original vector v1 = ( -4 -3 -2 -1 0 1 2 ).
 Multiplying the elements of the vector v1
 by the factor -2 gives:
 v1mod1 = ( 8 6 4 2 0 -2 -4 ).
@@ -2215,24 +2289,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="for_each_n"></a> for_each_n
+## <a name="for_each_n"></a>for_each_n
 
 ```cpp
 template<class InputIterator, class Size, class Function>
 InputIterator for_each_n(
-    InputIterator first, 
-    Size n, 
+    InputIterator first,
+    Size n,
     Function f);
 
 template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
 ForwardIterator for_each_n(
-    ExecutionPolicy&& exec, 
-    ForwardIterator first, 
-    Size n, 
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    Size n,
     Function f);
 ```
 
-## <a name="generate"></a> 產生
+## <a name="generate"></a>創造
 
 將函式物件產生的值指派給範圍內的每個項目。
 
@@ -2241,8 +2315,8 @@ template<class ForwardIterator, class Generator>
 void generate(
     ForwardIterator first,
     ForwardIterator last,
-    Generator _Gen);
-    
+    Generator gen);
+
 template<class ExecutionPolicy, class ForwardIterator, class Generator>
 void generate(
     ExecutionPolicy&& exec,
@@ -2252,13 +2326,13 @@ void generate(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 正向迭代器，定址要指派值之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，定址要指派值之範圍中最後一個元素之後的位置。
 
-*_Gen*\
+*代*\
 不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
@@ -2267,7 +2341,7 @@ void generate(
 
 參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。
 
-複雜度為線性，完全 ( `last`  -   `first`) 呼叫，因此需要產生器。
+複雜度為線性, 需要有產生器`last`的確切 (  -  `first`) 呼叫。
 
 ### <a name="example"></a>範例
 
@@ -2282,28 +2356,28 @@ void generate(
 
 int main()
 {
-   using namespace std;
+    using namespace std;
 
-   // Assigning random values to vector integer elements
-   vector <int> v1 ( 5 );
-   vector <int>::iterator Iter1;
-   deque <int> deq1 ( 5 );
-   deque <int>::iterator d1_Iter;
+    // Assigning random values to vector integer elements
+    vector<int> v1 ( 5 );
+    vector<int>::iterator Iter1;
+    deque<int> deq1 ( 5 );
+    deque<int>::iterator d1_Iter;
 
-   generate ( v1.begin( ), v1.end( ), rand );
+    generate ( v1.begin( ), v1.end( ), rand );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Assigning random values to deque integer elements
-   generate ( deq1.begin( ), deq1.end( ), rand );
+    // Assigning random values to deque integer elements
+    generate ( deq1.begin( ), deq1.end( ), rand );
 
-   cout << "Deque deq1 is ( " ;
-   for ( d1_Iter = deq1.begin( ) ; d1_Iter != deq1.end( ) ; d1_Iter++ )
-      cout << *d1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Deque deq1 is ( " ;
+    for ( d1_Iter = deq1.begin( ) ; d1_Iter != deq1.end( ) ; d1_Iter++ )
+        cout << *d1_Iter << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -2312,34 +2386,37 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a> generate_n
+## <a name="generate_n"></a>generate_n
 
 將函式物件產生的值指派給範圍內的指定項目數，並返回到超過最後一個指定值的位置。
 
 ```cpp
 template<class OutputIterator, class Diff, class Generator>
 void generate_n(
-    OutputIterator First,
-    Diff Count,
-    Generator Gen);
+    OutputIterator first,
+    Diff count,
+    Generator gen);
 
 template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
 ForwardIterator generate_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    Size n, 
+    ForwardIterator first,
+    Size count,
     Generator gen);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸出迭代器，指向範圍中第一個項目的位置 (要指派值至其中)。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要由產生器函式指派值的項目數。
 
-*一般*\
+*代*\
 不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
@@ -2348,7 +2425,7 @@ ForwardIterator generate_n(
 
 參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。
 
-線性具有複雜度，因此需要對產生器執行明確的 `Count` 呼叫。
+線性具有複雜度，因此需要對產生器執行明確的 `count` 呼叫。
 
 ### <a name="example"></a>範例
 
@@ -2363,7 +2440,9 @@ ForwardIterator generate_n(
 
 using namespace std;
 
-template <typename C> void print(const string& s, const C& c) {
+template <typename C>
+void print(const string& s, const C& c)
+{
     cout << s;
 
     for (const auto& e : c) {
@@ -2393,7 +2472,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a> 包含
+## <a name="includes"></a>包含
 
 測試一個排序範圍是否包含第二個排序範圍內的所有項目，其中項目之間的順序或等價準則可由二元述詞指定。
 
@@ -2405,34 +2484,36 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2);
 
-template<class InputIterator1, class InputIterator2, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class Compare>
 bool includes(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
-    BinaryPredicate comp );
-    
+    Compare pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool includes(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Compare>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Compare>
 bool includes(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
-    ForwardIterator2 last2, 
-    Compare comp);
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，定址要進行下列作業之兩個排序來源範圍的第一個範圍中第一個元素的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
@@ -2446,8 +2527,8 @@ bool includes(
 *last2*\
 輸入迭代器，定址要進行下列作業之兩個連續排序來源範圍的第二個範圍中最後一個元素之後的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
-*Comp*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2461,11 +2542,11 @@ bool includes(
 
 每個排序來源範圍都必須根據 includes 演算法用來排序結合範圍的相同順序，排列成套用此演算法包含的前置條件。
 
-此演算法不會修改來源範圍`merge`。
+演算法`merge`不會修改來源範圍。
 
 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。
 
-演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-(* last2-first2 *))-1 次比較非空白來源範圍。
+此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
 
 ### <a name="example"></a>範例
 
@@ -2480,121 +2561,121 @@ bool includes(
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b;
-   vector <int>::iterator Iter1a,  Iter1b;
+    using namespace std;
+    vector<int> v1a, v1b;
+    vector<int>::iterator Iter1a, Iter1b;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -2 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -2 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-2 ; ii <= 3 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-2 ; ii <= 3 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        << "binary predicate less than is v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+            << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+            << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b );
-   vector <int>::iterator Iter2a,  Iter2b;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
-   v2a.pop_back( );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b );
+    vector<int>::iterator Iter2a, Iter2b;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    v2a.pop_back( );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is v2a = ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+            << "binary predicate greater is v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is v2b = ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+            << "binary predicate greater is v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ;
-   vector <int>::iterator Iter3a, Iter3b;
-   reverse (v3a.begin( ), v3a.end( ) );
-   v3a.pop_back( );
-   v3a.pop_back( );
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) ;
+    vector<int>::iterator Iter3a, Iter3b;
+    reverse (v3a.begin( ), v3a.end( ) );
+    v3a.pop_back( );
+    v3a.pop_back( );
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3a = ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+            << "binary predicate mod_lesser is v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3b = ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+            << "binary predicate mod_lesser is v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To test for inclusion under an asscending order
-   // with the default binary predicate less <int>( )
-   bool Result1;
-   Result1 = includes ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ) );
-   if ( Result1 )
-      cout << "All the elements in vector v1b are "
-           << "contained in vector v1a." << endl;
-   else
-      cout << "At least one of the elements in vector v1b "
-           << "is not contained in vector v1a." << endl;
+    // To test for inclusion under an asscending order
+    // with the default binary predicate less<int>( )
+    bool Result1;
+    Result1 = includes ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ) );
+    if ( Result1 )
+        cout << "All the elements in vector v1b are "
+            << "contained in vector v1a." << endl;
+    else
+        cout << "At least one of the elements in vector v1b "
+            << "is not contained in vector v1a." << endl;
 
-   // To test for inclusion under descending
-   // order specify binary predicate greater<int>( )
-   bool Result2;
-   Result2 = includes ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ), greater <int>( ) );
-   if ( Result2 )
-      cout << "All the elements in vector v2b are "
-           << "contained in vector v2a." << endl;
-   else
-      cout << "At least one of the elements in vector v2b "
-           << "is not contained in vector v2a." << endl;
+    // To test for inclusion under descending
+    // order specify binary predicate greater<int>( )
+    bool Result2;
+    Result2 = includes ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ), greater<int>( ) );
+    if ( Result2 )
+        cout << "All the elements in vector v2b are "
+            << "contained in vector v2a." << endl;
+    else
+        cout << "At least one of the elements in vector v2b "
+            << "is not contained in vector v2a." << endl;
 
-   // To test for inclusion under a user
-   // defined binary predicate mod_lesser
-   bool Result3;
-   Result3 = includes ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), mod_lesser );
-   if ( Result3 )
-      cout << "All the elements in vector v3b are "
-           << "contained under mod_lesser in vector v3a."
-           << endl;
-   else
-      cout << "At least one of the elements in vector v3b is "
-           << " not contained under mod_lesser in vector v3a."
-           << endl;
+    // To test for inclusion under a user
+    // defined binary predicate mod_lesser
+    bool Result3;
+    Result3 = includes ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), mod_lesser );
+    if ( Result3 )
+        cout << "All the elements in vector v3b are "
+            << "contained under mod_lesser in vector v3a."
+            << endl;
+    else
+        cout << "At least one of the elements in vector v3b is "
+            << " not contained under mod_lesser in vector v3a."
+            << endl;
 }
 ```
 
@@ -2613,10 +2694,10 @@ Original vector v3b with range sorted by the
 binary predicate mod_lesser is v3b = ( 0 -1 1 -2 2 3 ).
 All the elements in vector v1b are contained in vector v1a.
 At least one of the elements in vector v2b is not contained in vector v2a.
-At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
+At least one of the elements in vector v3b is not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a> inplace_merge
+## <a name="inplace_merge"></a>inplace_merge
 
 將兩個連續排序範圍內的項目結合成單一排序範圍，其中順序準則可由二元述詞指定。
 
@@ -2627,42 +2708,45 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last);
 
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class Compare>
 void inplace_merge(
     BidirectionalIterator first,
     BidirectionalIterator middle,
     BidirectionalIterator last,
-    Predicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class BidirectionalIterator>
 void inplace_merge(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator middle,
     BidirectionalIterator last);
-    
+
 template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
 void inplace_merge(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator middle,
-    BidirectionalIterator last, 
-    Compare comp);
+    BidirectionalIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第一個範圍中第一個元素的位置。
 
-*中間*\
+*干預*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -2670,7 +2754,7 @@ void inplace_merge(
 
 每個排序連續範圍都必須根據 `inplace_merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。 因為會保留每個範圍內元素的相對順序，所以這項作業十分穩定。 兩個來源範圍中有對等元素時，結合範圍之第一個範圍中的元素會優先於第二個範圍中的元素。
 
-因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果有足夠的記憶體可供使用，最好的情況下為線性 (*最後一個* - *第一個*)-1 比較; 如果沒有輔助記憶體可用，最壞的情況是*N*記錄檔 (*N*)，其中*N* = (*最後* - *第一個*)。
+因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果有足夠的記憶體可用, 最好的情況是具有`(last - first) - 1`比較的線性; 如果沒有輔助記憶體可用, 則最壞`N log(N)`的情況是, 其中*N*  = 是*最後* - *一個*。
 
 ### <a name="example"></a>範例
 
@@ -2685,92 +2769,92 @@ void inplace_merge(
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2, Iter3;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2, Iter3;
 
-   // Constructing vector v1 with default less-than ordering
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    // Constructing vector v1 with default less-than ordering
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-5 ; ii <= 0 ; ii++ )
-   {
-      v1.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-5 ; ii <= 0 ; ii++ )
+    {
+        v1.push_back( ii );
+    }
 
-   cout << "Original vector v1 with subranges sorted by the\n "
-        <<  "binary predicate less than is  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 with subranges sorted by the\n "
+            << "binary predicate less than is v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Constructing vector v2 with ranges sorted by greater
-   vector <int> v2 ( v1 );
-   vector <int>::iterator break2;
-   break2 = find ( v2.begin( ), v2.end( ), -5 );
-   sort ( v2.begin( ), break2 , greater<int>( ) );
-   sort ( break2 , v2.end( ), greater<int>( ) );
-   cout << "Original vector v2 with subranges sorted by the\n "
-        << "binary predicate greater is v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    // Constructing vector v2 with ranges sorted by greater
+    vector<int> v2 ( v1 );
+    vector<int>::iterator break2;
+    break2 = find ( v2.begin( ), v2.end( ), -5 );
+    sort ( v2.begin( ), break2 , greater<int>( ) );
+    sort ( break2 , v2.end( ), greater<int>( ) );
+    cout << "Original vector v2 with subranges sorted by the\n "
+            << "binary predicate greater is v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // Constructing vector v3 with ranges sorted by mod_lesser
-   vector <int> v3 ( v1 );
-   vector <int>::iterator break3;
-   break3 = find ( v3.begin( ), v3.end( ), -5 );
-   sort ( v3.begin( ), break3 , mod_lesser );
-   sort ( break3 , v3.end( ), mod_lesser );
-   cout << "Original vector v3 with subranges sorted by the\n "
-        << "binary predicate mod_lesser is v3 = ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")" << endl;
+    // Constructing vector v3 with ranges sorted by mod_lesser
+    vector<int> v3 ( v1 );
+    vector<int>::iterator break3;
+    break3 = find ( v3.begin( ), v3.end( ), -5 );
+    sort ( v3.begin( ), break3 , mod_lesser );
+    sort ( break3 , v3.end( ), mod_lesser );
+    cout << "Original vector v3 with subranges sorted by the\n "
+            << "binary predicate mod_lesser is v3 = ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")" << endl;
 
-   vector <int>::iterator break1;
-   break1 = find (v1.begin( ), v1.end( ), -5 );
-   inplace_merge ( v1.begin( ), break1, v1.end( ) );
-   cout << "Merged inplace with default order,\n vector v1mod = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    vector<int>::iterator break1;
+    break1 = find (v1.begin( ), v1.end( ), -5 );
+    inplace_merge ( v1.begin( ), break1, v1.end( ) );
+    cout << "Merged inplace with default order,\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To merge inplace in descending order, specify binary
-   // predicate greater<int>( )
-   inplace_merge ( v2.begin( ), break2 , v2.end( ) , greater<int>( ) );
-   cout << "Merged inplace with binary predicate greater specified,\n "
-        << "vector v2mod = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")" << endl;
+    // To merge inplace in descending order, specify binary
+    // predicate greater<int>( )
+    inplace_merge ( v2.begin( ), break2 , v2.end( ) , greater<int>( ) );
+    cout << "Merged inplace with binary predicate greater specified,\n "
+            << "vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")" << endl;
 
-   // Applying a user defined (UD) binary predicate mod_lesser
-   inplace_merge ( v3.begin( ), break3, v3.end( ), mod_lesser );
-   cout << "Merged inplace with binary predicate mod_lesser specified,\n "
-        << "vector v3mod = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")" << endl;
+    // Applying a user defined (UD) binary predicate mod_lesser
+    inplace_merge ( v3.begin( ), break3, v3.end( ), mod_lesser );
+    cout << "Merged inplace with binary predicate mod_lesser specified,\n "
+            << "vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")" << endl;
 }
 ```
 
 ```Output
 Original vector v1 with subranges sorted by the
-binary predicate less than is  v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
+binary predicate less than is v1 = ( 0 1 2 3 4 5 -5 -4 -3 -2 -1 0 )
 Original vector v2 with subranges sorted by the
 binary predicate greater is v2 = ( 5 4 3 2 1 0 0 -1 -2 -3 -4 -5 )
 Original vector v3 with subranges sorted by the
@@ -2783,9 +2867,9 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a> is_heap
+## <a name="is_heap"></a>is_heap
 
-傳回 **，則為 true**如果指定的範圍內的項目形成堆積。
+如果指定範圍內的元素形成堆積, 則傳回**true** 。
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2793,171 +2877,180 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 bool is_heap(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 bool is_heap(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 隨機存取迭代器，表示檢查堆積的範圍開始。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，表示範圍結尾。
 
-*Comp*\
-要測試以排序元素的條件。 二元述詞會接受單一引數，並傳回**真**或是**false**。
+*pred*\
+要測試以排序元素的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**的項目中指定的範圍形成堆積，如果**false**如果不相符。
+如果指定範圍中的元素形成堆積, 則傳回**true** , 否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`。
+第一個範本函式會傳回[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until) `(first , last) == last`。
 
 第二個範本函式會傳回
 
-`is_heap_until(first, last, comp) == last`.
+`is_heap_until(first, last, pred) == last`.
 
-## <a name="is_heap_until"></a> is_heap_until
+## <a name="is_heap_until"></a>is_heap_until
 
-傳回位於範圍中的第一個元素的迭代器 [ `begin`， `end`) 中不符合堆積排序條件，或是*結束*如果範圍形成堆積。
+傳回位於範圍 [ `first`, `last`) 中不符合堆積排序條件之第一個元素的反覆運算器; 如果範圍形成堆積, 則為*結尾*。
 
 ```cpp
 template<class RandomAccessIterator>
 RandomAccessIterator is_heap_until(
-    RandomAccessIterator begin,
-    RandomAccessIterator end);
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 RandomAccessIterator is_heap_until(
-    RandomAccessIterator begin,
-    RandomAccessIterator end,
-    BinaryPredicate compare);
-    
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 RandomAccessIterator is_heap_until(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 RandomAccessIterator is_heap_until(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*開始*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 隨機存取迭代器，指定要檢查有無堆積之範圍的第一個項目。
 
-*結束*\
+*次*\
 隨機存取迭代器，指定要檢查有無堆積的範圍結尾。
 
-*比較*\
-二元述詞，指定定義堆積的嚴格弱式排序條件。 預設述詞的時機*比較*未指定為`std::less<>`。
+*pred*\
+二元述詞，指定定義堆積的嚴格弱式排序條件。 當未指定`std::less<>` *pred*時, 預設的述詞為。
 
 ### <a name="return-value"></a>傳回值
 
-傳回*結束*如果指定的範圍形成堆積，或包含一個或更少的項目。 否則會傳回所找到第一個不符合堆積條件之項目的迭代器。
+如果指定的範圍形成堆積或包含一或多個元素, 則傳回*last* 。 否則會傳回所找到第一個不符合堆積條件之項目的迭代器。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回最後一個迭代器`next`中`[begin , end]`何處`[begin , next)`是函式物件所排序的堆積`std::less<>`。 如果距離`end - begin < 2`，則函數會傳回*端*。
+第一個範本函式會傳回中`next` `[first, last)`的最後`[first, next)`一個反覆運算器, 其中是由函`std::less<>`式物件排序的堆積。 如果距離`last - first`小於 2, 函數會傳回*last*。
 
-第二個樣板函式的行為與第一個樣板函式相同，但會使用述詞 `compare` (而不是 `std::less<>`) 做為堆積排序條件。
+第二個範本函式的行為與第一個相同, 不同之處在于  它會使用`std::less<>`述詞 pred, 而不是堆積排序條件。
 
-## <a name="is_partitioned"></a> is_partitioned
+## <a name="is_partitioned"></a>is_partitioned
 
-傳回 **，則為 true**如果指定的範圍中的所有項目，來測試 **，則為 true**的條件會顯示測試的任何項目之前**false**。
+如果指定範圍中的條件測試**true**的所有專案都在測試**false**的任何專案之前, 則傳回**true** 。
 
 ```cpp
-template<class InputIterator, class BinaryPredicate>
+template<class InputIterator, class UnaryPredicate>
 bool is_partitioned(
     InputIterator first,
     InputIterator last,
-    BinaryPredicate comp);
-    
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool is_partitioned(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示範圍開始檢查條件的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示範圍結尾。
 
-*Comp*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 true 的所有測試指定的範圍中項目 **，則為 true**的條件會顯示測試的任何項目之前**false**，否則會傳回**false**。
+當指定範圍中的所有專案在條件中測試**為 true**時, 傳回**true** , 否則傳回**false**。 
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回 **，則為 true**只有當中的所有項目`[first, last)`會由分割*comp*; 也就是所有的項目`X`中`[first, last)`的`comp (X)`為 true所有的項目之前會發生`Y`為其`comp (Y)`是**false**。
+只有當中`[first, last)`的所有專案都是由*pred*分割時, 此範本函式才會傳回`X` **true** ; 也就是說`pred (X)` , 中`[first, last)`的所有專案都`Y`是 true, 而所有元素都在為**false**。 `pred (Y)`
 
-## <a name="is_permutation"></a> is_permutation
+## <a name="is_permutation"></a>is_permutation
 
 如果兩個範圍包含相同的項目，則不論項目的順序是否相同，都會傳回 true。 使用 C++14 程式碼中的雙重範圍多載，因為如果第二個範圍超過第一個範圍，只為第二個範圍採用單一迭代器的多載不會偵測到差異；而如果第二個範圍比第一個範圍短，則會導致未定義的行為。
 
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    Predicate Pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    BinaryPredicate Pred);
 
 // C++14
 template<class ForwardIterator1, class ForwardIterator2>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 bool is_permutation(
-    ForwardIterator1 First1,
-    ForwardIterator1 Last1,
-    ForwardIterator2 First2,
-    ForwardIterator2 Last2,
-    Predicate Pred);
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
@@ -2974,18 +3067,18 @@ bool is_permutation(
 *last2*\
 指向第二個範圍的最後一個項目之某個項目的正向迭代器，用於比較。
 
-*預測*\
-測試是否相等，並傳回的述詞**bool**。
+*pred*\
+述詞, 用於測試是否相等並傳回**bool**。
 
 ### <a name="return-value"></a>傳回值
 
-**真**時可以重新排列範圍，以便根據比較子述詞相同，否則**false**。
+當範圍可以重新排列, 使其根據比較子述詞而完全相同時, 則為**true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
 `is_permutation` 在最壞的情況有二次方的複雜性。
 
-第一個範本函式會假設開頭的範圍中有多個項目*First2*所指定之範圍中有 [ `First1`， `Last1`)。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。  兩者都會傳回 **，則為 true**只有在所指定之範圍中每個項目的 X [ `First1`， `Last1`) 的 X 的相同範圍中有多個項目 Y 開頭的範圍中有 = = Y *First2*或 [`First2, Last2).`這裡`operator==`必須執行其運算元之間的成對比較。
+第一個樣板函式假設範圍中的元素數目從*first2*開始, 與指定`[first1, last1)`的範圍相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。 只有在  指定`[first1, last1)`範圍內的每個專案 x, 其 x = = y 的相同範圍內有多個元素 Y 時, 才會傳回 true, 其範圍從*first2*或`[first2, last2)`開始。 在這裡`operator==` , 必須在其運算元之間執行成對比較。
 
 第二個和第四個樣板函式的行為相同，不同之處是它們會以 `Pred(X, Y)` 取代 `operator==(X, Y)`。 若要正常運作，述詞必須對稱、自反和轉移。
 
@@ -3045,9 +3138,9 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a> is_sorted
+## <a name="is_sorted"></a>is_sorted
 
-傳回 **，則為 true**如果指定的範圍內的項目是在排序順序。
+如果指定範圍內的專案為排序次序, 則傳回**true** 。
 
 ```cpp
 template<class ForwardIterator>
@@ -3055,96 +3148,103 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last);
 
-template<class ForwardIterator, class BinaryPredicate>
+template<class ForwardIterator, class Compare>
 bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 bool is_sorted(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
-    
+
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 bool is_sorted(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*\
+*次*\
 正向迭代器，表示範圍結尾。
 
-*Comp*\
-要測試以判斷兩個元素間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。 這會執行與 `operator<` 相同的工作。
+*pred*\
+要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。 這會執行與 `operator<` 相同的工作。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回[is_sorted_until](#is_sorted_until)`( first, last ) == last`。 `operator<`函式會執行順序比較。
+第一個範本函式會傳回[is_sorted_until](#is_sorted_until) `( first, last ) == last`。 `operator<`函式會執行順序比較。
 
-第二個範本函式會傳回`is_sorted_until( first, last , comp ) == last`。 *Comp*述詞的函式會執行順序比較。
+第二個範本`is_sorted_until( first, last , pred ) == last`函式會傳回。 *Pred*述詞函式會執行順序比較。
 
-## <a name="is_sorted_until"></a> is_sorted_until
+## <a name="is_sorted_until"></a>is_sorted_until
 
 傳回 `ForwardIterator`，以設定為指定範圍中依排序順序的最後一個元素。
 
-第二個版本可讓您提供`BinaryPredicate`函式會傳回 **，則為 true**當兩個指定的元素處於排序順序，以及**false**否則。
+第二個版本可讓您提供比較函式物件, 以在兩個指定的專案為排序次序時傳回**true** , 否則為**false** 。
 
 ```cpp
 template<class ForwardIterator>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last);
-template<class ForwardIterator, class BinaryPredicate>
+
+template<class ForwardIterator, class Compare>
 ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator is_sorted_until(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator is_sorted_until(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*最後一個*\
+*次*\
 正向迭代器，表示範圍結尾。
 
-*Comp*\
-要測試以判斷兩個元素間之順序的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回設定為排序順序中最後一個元素的 `ForwardIterator`。 排序的序列開始於*第一個*。
+傳回設定為排序順序中最後一個元素的 `ForwardIterator`。 排序的序列會從*第一個*開始。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回最後一個迭代器`next`中`[first, last]`以便`[first, next)`依據排序已排序的序列`operator<`。 如果`distance()``< 2`函式會傳回*最後一個*。
+第一個樣板`next`函式`[first, next)`會傳回中`[first, last]`的最後一個反覆運算器, 因此是由`operator<`排序的排序序列。 如果`distance()`小於 2, 函數會傳回*last*。
 
-第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp (X, Y)`。
+第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `pred(X, Y)`。
 
-## <a name="iter_swap"></a> iter_swap
+## <a name="iter_swap"></a>iter_swap
 
 交換由一組指定之迭代器所參考的兩個值。
 
@@ -3155,15 +3255,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左面*\
 要交換其值的其中一個正向迭代器。
 
-*權限*\
+*再*\
 要交換其值的第二個正向迭代器。
 
 ### <a name="remarks"></a>備註
 
-`swap` 應該優先使用到 i **ter_swap**，這基於回溯相容性包含於 C++ 標準中。 如果`Fit1`並`Fit2`是正向迭代器，則`iter_swap(Fit1, Fit2)`，相當於`swap( *Fit1, *Fit2)`。
+`swap`應使用於**iter_swap**的喜好設定中, 這是為了回溯C++相容性而包含在標準中的。 如果`Fit1` `iter_swap( Fit1, Fit2 )` `swap( *Fit1, *Fit2 )`和`Fit2`是正向反覆運算器, 則就相當於。
 
 輸入正向迭代器的實值類型值必須相同。
 
@@ -3185,105 +3285,105 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) { m_nVal =
-   rhs.m_nVal; return *this; }
-   bool operator<( const CInt& rhs ) const
-      { return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) { m_nVal =
+    rhs.m_nVal; return *this; }
+    bool operator<( const CInt& rhs ) const
+        { return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt(" << rhs.m_nVal << ")";
-   return osIn;
+    osIn << "CInt(" << rhs.m_nVal << ")";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   CInt c1 = 5, c2 = 1, c3 = 10;
-   deque<CInt> deq1;
-   deque<CInt>::iterator d1_Iter;
+    CInt c1 = 5, c2 = 1, c3 = 10;
+    deque<CInt> deq1;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Exchanging first and last elements with iter_swap
-   iter_swap ( deq1.begin( ), --deq1.end( ) );
+    // Exchanging first and last elements with iter_swap
+    iter_swap ( deq1.begin( ), --deq1.end( ) );
 
-   cout << "The deque of CInts with first & last elements swapped is:\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The deque of CInts with first & last elements swapped is:\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Swapping back first and last elements with swap
-   swap ( *deq1.begin( ), *(deq1.end( ) -1 ) );
+    // Swapping back first and last elements with swap
+    swap ( *deq1.begin( ), *(deq1.end( ) -1 ) );
 
-   cout << "The deque of CInts with first & last elements swapped back is:\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The deque of CInts with first & last elements swapped back is:\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   // Swapping a vector element with a deque element
-   vector <int> v1;
-   vector <int>::iterator Iter1;
-   deque <int> deq2;
-   deque <int>::iterator d2_Iter;
+    // Swapping a vector element with a deque element
+    vector<int> v1;
+    vector<int>::iterator Iter1;
+    deque<int> deq2;
+    deque<int>::iterator d2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 4 ; ii <= 5 ; ii++ )
-   {
-      deq2.push_back( ii );
-   }
+    int ii;
+    for ( ii = 4 ; ii <= 5 ; ii++ )
+    {
+        deq2.push_back( ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Deque deq2 is ( " ;
-   for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
-      cout << *d2_Iter << " ";
-   cout << ")." << endl;
+    cout << "Deque deq2 is ( " ;
+    for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
+        cout << *d2_Iter << " ";
+    cout << ")." << endl;
 
-   iter_swap ( v1.begin( ), deq2.begin( ) );
+    iter_swap ( v1.begin( ), deq2.begin( ) );
 
-   cout << "After exchanging first elements,\n vector v1 is: v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << " & deque deq2 is: deq2 = ( ";
-   for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
-      cout << *d2_Iter << " ";
-   cout << ")." << endl;
+    cout << "After exchanging first elements,\n vector v1 is: v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << " & deque deq2 is: deq2 = ( ";
+    for ( d2_Iter = deq2.begin( ) ; d2_Iter != deq2.end( ) ; d2_Iter++ )
+        cout << *d2_Iter << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -3300,46 +3400,48 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a> lexicographical_compare
+## <a name="lexicographical_compare"></a>lexicographical_compare
 
 逐一比較兩個序列之間的每個項目，判斷兩者較小者。
 
 ```cpp
 template<class InputIterator1, class InputIterator2>
 bool lexicographical_compare(
-    InputIterator1  first1,
-    InputIterator1 Last1,
-    InputIterator2  first2,
-    InputIterator2 Last2  );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2 );
 
-template<class InputIterator1, class InputIterator2, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class Compare>
 bool lexicographical_compare(
-    InputIterator1  first1,
-    InputIterator1 Last1,
-    InputIterator2  first2,
-    InputIterator2 Last2,
-    BinaryPredicate  comp  );
-    
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    Compare pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 bool lexicographical_compare(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Compare>
 bool lexicographical_compare(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，定址要比較之第一個範圍中第一個元素的位置。
@@ -3353,8 +3455,8 @@ bool lexicographical_compare(
 *last2*\
 輸入迭代器，定址要比較之第二個範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3368,7 +3470,7 @@ bool lexicographical_compare(
 
 - 找不到任何差異，但有一個序列的元素數比另一個序列還要多，因而將較短的序列視為小於較長的序列。
 
-- 找不到任何差異，而且序列的元素數相同，因此序列會相等，而且比較結果為 false。
+- 找不到任何到差異, 而且序列具有相同數目的元素, 因此序列相等, 且比較結果為**false**。
 
 ### <a name="example"></a>範例
 
@@ -3383,76 +3485,76 @@ bool lexicographical_compare(
 // Return whether second element is twice the first
 bool twice ( int elem1, int elem2 )
 {
-   return 2 * elem1 < elem2;
+    return 2 * elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   int ii;
-   for ( ii = 0 ; ii <= 6 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    int ii;
+    for ( ii = 0 ; ii <= 6 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Self lexicographical_comparison of v1 under identity
-   bool result1;
-   result1 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  v1.begin( ), v1.end( ) );
-   if ( result1 )
-      cout << "Vector v1 is lexicographically_less than v1." << endl;
-   else
-      cout << "Vector v1 is not lexicographically_less than v1." << endl;
+    // Self lexicographical_comparison of v1 under identity
+    bool result1;
+    result1 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    v1.begin( ), v1.end( ) );
+    if ( result1 )
+        cout << "Vector v1 is lexicographically_less than v1." << endl;
+    else
+        cout << "Vector v1 is not lexicographically_less than v1." << endl;
 
-   // lexicographical_comparison of v1 and L2 under identity
-   bool result2;
-   result2 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  L1.begin( ), L1.end( ) );
-   if ( result2 )
-      cout << "Vector v1 is lexicographically_less than L1." << endl;
-   else
-      cout << "Vector v1 is lexicographically_less than L1." << endl;
+    // lexicographical_comparison of v1 and L2 under identity
+    bool result2;
+    result2 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    L1.begin( ), L1.end( ) );
+    if ( result2 )
+        cout << "Vector v1 is lexicographically_less than L1." << endl;
+    else
+        cout << "Vector v1 is lexicographically_less than L1." << endl;
 
-   bool result3;
-   result3 = lexicographical_compare (v1.begin( ), v1.end( ),
-                  v2.begin( ), v2.end( ), twice );
-   if ( result3 )
-      cout << "Vector v1 is lexicographically_less than v2 "
-           << "under twice." << endl;
-   else
-      cout << "Vector v1 is not lexicographically_less than v2 "
-           << "under twice." << endl;
+    bool result3;
+    result3 = lexicographical_compare (v1.begin( ), v1.end( ),
+                    v2.begin( ), v2.end( ), twice );
+    if ( result3 )
+        cout << "Vector v1 is lexicographically_less than v2 "
+            << "under twice." << endl;
+    else
+        cout << "Vector v1 is not lexicographically_less than v2 "
+            << "under twice." << endl;
 }
 ```
 
@@ -3465,7 +3567,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a> lower_bound
+## <a name="lower_bound"></a>lower_bound
 
 在已排序範圍中尋找值大於或相當於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。
 
@@ -3481,21 +3583,21 @@ ForwardIterator lower_bound(
     ForwardIterator first,
     ForwardIterator last,
     const Type& value,
-    BinaryPredicate comp );
+    BinaryPredicate pred );
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *value*\
 正在搜尋排序範圍中第一個位置或可能第一個位置的值。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -3512,7 +3614,7 @@ ForwardIterator lower_bound(
 
 正向迭代器的實值類型必須小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-演算法的複雜度是對數隨機存取迭代器，並且數目成正比的步驟，否則為線性 (`last - first`)。
+隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last - first`) 成正比的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -3542,12 +3644,12 @@ int main()
     // Constructing vector v1 with default less-than ordering
     for ( auto i = -1 ; i <= 4 ; ++i )
     {
-        v1.push_back(  i );
+        v1.push_back( i );
     }
 
     for ( auto ii =-3 ; ii <= 0 ; ++ii )
     {
-        v1.push_back(  ii  );
+        v1.push_back( ii );
     }
 
     cout << "Starting vector v1 = ( " ;
@@ -3578,7 +3680,7 @@ int main()
     sort(v3.begin(), v3.end(), mod_lesser);
 
     cout << "Original vector v3 with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3 = ( " ;
+        << "binary predicate mod_lesser is v3 = ( " ;
     for (const auto &Iter : v3)
         cout << Iter << " ";
     cout << ")." << endl;
@@ -3597,14 +3699,14 @@ int main()
     cout << "The lower_bound in v2 for the element with a value of 3 is: "
         << *Result << "." << endl;
 
-    // lower_bound of 3 in v3 with the binary predicate  mod_lesser
-    Result = lower_bound(v3.begin(), v3.end(), 3,  mod_lesser);
+    // lower_bound of 3 in v3 with the binary predicate mod_lesser
+    Result = lower_bound(v3.begin(), v3.end(), 3, mod_lesser);
     cout << "The lower_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
 ```
 
-## <a name="make_heap"></a> make_heap
+## <a name="make_heap"></a>make_heap
 
 將在指定範圍內的項目轉換為堆積，其中第一個項目是最大，而且排序準則可由二元述詞指定。
 
@@ -3618,18 +3720,18 @@ template<class RandomAccessIterator, class BinaryPredicate>
 void make_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
-    BinaryPredicate comp );
+    BinaryPredicate pred );
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 隨機存取迭代器，定址要轉換為堆積之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
@@ -3642,7 +3744,7 @@ void make_heap(
 
 堆積是實作優先順序佇列的理想方式，並且用於實作 C++ 標準程式庫容器配接器 [priority_queue 類別](../standard-library/priority-queue-class.md)。
 
-複雜度為線性，需要 3 \* (* 姓氏-名字 *) 的比較。
+複雜度為線性, 需要`3 * (last - first)`進行比較。
 
 ### <a name="example"></a>範例
 
@@ -3655,38 +3757,38 @@ void make_heap(
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   random_shuffle( v1.begin( ), v1.end( ) );
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with default less than ordering
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with greater than ordering
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater-than heaped version of v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with greater than ordering
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater-than heaped version of v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="max"></a> 最大
+## <a name="max"></a>讀數
 
 比較兩個物件並傳回兩者較大者，其中順序準則可由二元述詞指定。
 
@@ -3699,28 +3801,28 @@ template<class Type, class Pr>
 constexpr Type& max(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 template<class Type>
 constexpr Type& max (
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
 template<class Type, class Pr>
 constexpr Type& max(
-    initializer_list<Type> ,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左面*\
 正在比較的兩個物件之第一個。
 
-*權限*\
+*再*\
 正在比較的兩個物件之第二個。
 
-*Comp*\
+*pred*\
 用來比較兩個物件的二元述詞。
 
-*_IList*\
+*inlist*\
 包含要比較的物件之初始設定式清單。
 
 ### <a name="return-value"></a>傳回值
@@ -3729,7 +3831,7 @@ constexpr Type& max(
 
 ### <a name="remarks"></a>備註
 
-`max` 是不尋常的演算法，因為它將物件做為參數傳遞。 大部分 C++ 標準程式庫演算法可對某範圍的元素作業，其位置由迭代器作為參數傳遞來加以指定。 如果您需要對某範圍元素運作的函式，請改用 [max_element](../standard-library/algorithm-functions.md#max_element)。 Visual Studio 2017 可讓**constexpr**上的多載會採用 initializer_list。
+`max` 是不尋常的演算法，因為它將物件做為參數傳遞。 大部分 C++ 標準程式庫演算法可對某範圍的元素作業，其位置由迭代器作為參數傳遞來加以指定。 如果您需要對某範圍元素運作的函式，請改用 [max_element](../standard-library/algorithm-functions.md#max_element)。 Visual Studio 2017 會在接受 initializer_list 的多載上啟用**constexpr** 。
 
 ### <a name="example"></a>範例
 
@@ -3749,137 +3851,137 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether absolute value of elem1 is greater than
 // absolute value of elem2
 bool abs_greater ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = -elem1;
-   if ( elem2 < 0 )
-      elem2 = -elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = -elem1;
+    if ( elem2 < 0 )
+        elem2 = -elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   int a = 6, b = -7;
-   // Return the integer with the larger absolute value
-   const int& result1 = max(a, b, abs_greater);
-   // Return the larger integer
-   const int& result2 = max(a, b);
+    int a = 6, b = -7;
+    // Return the integer with the larger absolute value
+    const int& result1 = max(a, b, abs_greater);
+    // Return the larger integer
+    const int& result2 = max(a, b);
 
-   cout << "Using integers 6 and -7..." << endl;
-   cout << "The integer with the greater absolute value is: "
-        << result1 << "." << endl;
-   cout << "The integer with the greater value is: "
-        << result2 << "." << endl;
-   cout << endl;
+    cout << "Using integers 6 and -7..." << endl;
+    cout << "The integer with the greater absolute value is: "
+            << result1 << "." << endl;
+    cout << "The integer with the greater value is: "
+            << result2 << "." << endl;
+    cout << endl;
 
-// Comparing the members of an initializer_list
-const int& result3 = max({ a, b });
-const int& result4 = max({ a, b }, abs_greater);
+    // Comparing the members of an initializer_list
+    const int& result3 = max({ a, b });
+    const int& result4 = max({ a, b }, abs_greater);
 
-cout << "Comparing the members of an initializer_list..." << endl;
-cout << "The member with the greater value is: " << result3 << endl;
-cout << "The integer with the greater absolute value is: " << result4 << endl;
+    cout << "Comparing the members of an initializer_list..." << endl;
+    cout << "The member with the greater value is: " << result3 << endl;
+    cout << "The integer with the greater absolute value is: " << result4 << endl;
 
-   // Comparing set containers with elements of type CInt
-   // using the max algorithm
-   CInt c1 = 1, c2 = 2, c3 = 3;
-   set<CInt> s1, s2, s3;
-   set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
+    // Comparing set containers with elements of type CInt
+    // using the max algorithm
+    CInt c1 = 1, c2 = 2, c3 = 3;
+    set<CInt> s1, s2, s3;
+    set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s2.insert ( c2 );
-   s2.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s2.insert ( c2 );
+    s2.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   cout << "s2 = (";
-   for ( s2_Iter = s2.begin( ); s2_Iter != --s2.end( ); s2_Iter++ )
-      cout << " " << *s2_Iter << ",";
-   s2_Iter = --s2.end( );
-   cout << " " << *s2_Iter << " )." << endl;
+    cout << "s2 = (";
+    for ( s2_Iter = s2.begin( ); s2_Iter != --s2.end( ); s2_Iter++ )
+        cout << " " << *s2_Iter << ",";
+    s2_Iter = --s2.end( );
+    cout << " " << *s2_Iter << " )." << endl;
 
-   s3 = max ( s1, s2 );
-   cout << "s3 = max ( s1, s2 ) = (";
-   for ( s3_Iter = s3.begin( ); s3_Iter != --s3.end( ); s3_Iter++ )
-      cout << " " << *s3_Iter << ",";
-   s3_Iter = --s3.end( );
-   cout << " " << *s3_Iter << " )." << endl << endl;
+    s3 = max ( s1, s2 );
+    cout << "s3 = max ( s1, s2 ) = (";
+    for ( s3_Iter = s3.begin( ); s3_Iter != --s3.end( ); s3_Iter++ )
+        cout << " " << *s3_Iter << ",";
+    s3_Iter = --s3.end( );
+    cout << " " << *s3_Iter << " )." << endl << endl;
 
-   // Comparing vectors with integer elements using the max algorithm
-   vector <int> v1, v2, v3, v4, v5;
-   vector <int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
+    // Comparing vectors with integer elements using the max algorithm
+    vector<int> v1, v2, v3, v4, v5;
+    vector<int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
 
-   int i;
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 2 ; ii++ )
-   {
-      v2.push_back( ii );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 2 ; ii++ )
+    {
+        v2.push_back( ii );
+    }
 
-   int iii;
-   for ( iii = 0 ; iii <= 2 ; iii++ )
-   {
-      v3.push_back( 2 * iii );
-   }
+    int iii;
+    for ( iii = 0 ; iii <= 2 ; iii++ )
+    {
+        v3.push_back( 2 * iii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v3 is ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Vector v3 is ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 
-   v4 = max ( v1, v2 );
-   v5 = max ( v1, v3 );
+    v4 = max ( v1, v2 );
+    v5 = max ( v1, v3 );
 
-   cout << "Vector v4 = max (v1,v2) is ( " ;
-   for ( Iter4 = v4.begin( ) ; Iter4 != v4.end( ) ; Iter4++ )
-      cout << *Iter4 << " ";
-   cout << ")." << endl;
+    cout << "Vector v4 = max (v1,v2) is ( " ;
+    for ( Iter4 = v4.begin( ) ; Iter4 != v4.end( ) ; Iter4++ )
+        cout << *Iter4 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v5 = max (v1,v3) is ( " ;
-   for ( Iter5 = v5.begin( ) ; Iter5 != v5.end( ) ; Iter5++ )
-      cout << *Iter5 << " ";
-   cout << ")." << endl;
+    cout << "Vector v5 = max (v1,v3) is ( " ;
+    for ( Iter5 = v5.begin( ) ; Iter5 != v5.end( ) ; Iter5++ )
+        cout << *Iter5 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -3899,41 +4001,49 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a> max_element
+## <a name="max_element"></a>max_element
 
 在指定的範圍內尋找第一個最大項目，其中順序準則可由二元述詞指定。
 
 ```cpp
 template<class ForwardIterator>
-constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last );
+constexpr ForwardIterator max_element(
+    ForwardIterator first,
+    ForwardIterator last );
 
-template<class ForwardIterator, class BinaryPredicate>
-constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+template<class ForwardIterator, class Compare>
+constexpr ForwardIterator max_element(
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred );
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator max_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator max_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，定址要搜尋最大元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，定址要搜尋最大元素之範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3943,7 +4053,7 @@ ForwardIterator max_element(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性: (`last` - `first`)-1 比較所需的非空白的範圍。
+複雜度為線性: `(last - first) - 1`非空白範圍需要進行比較。
 
 ### <a name="example"></a>範例
 
@@ -3963,89 +4073,89 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt& operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<(ostream& osIn, const CInt& rhs)
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is greater than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Searching a set container with elements of type CInt
-   // for the maximum element
-   CInt c1 = 1, c2 = 2, c3 = -3;
-   set<CInt> s1;
-   set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
+    // Searching a set container with elements of type CInt
+    // for the maximum element
+    CInt c1 = 1, c2 = 2, c3 = -3;
+    set<CInt> s1;
+    set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s1.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s1.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   s1_R1_Iter = max_element ( s1.begin( ), s1.end( ) );
+    s1_R1_Iter = max_element ( s1.begin( ), s1.end( ) );
 
-   cout << "The largest element in s1 is: " << *s1_R1_Iter << endl;
-   cout << endl;
+    cout << "The largest element in s1 is: " << *s1_R1_Iter << endl;
+    cout << endl;
 
-   // Searching a vector with elements of type int for the maximum
-   // element under default less than & mod_lesser binary predicates
-   vector <int> v1;
-   vector <int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
+    // Searching a vector with elements of type int for the maximum
+    // element under default less than & mod_lesser binary predicates
+    vector<int> v1;
+    vector<int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      v1.push_back( - 2 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        v1.push_back( - 2 * ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
-      cout << *v1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
+        cout << *v1_Iter << " ";
+    cout << ")." << endl;
 
-   v1_R1_Iter = max_element ( v1.begin( ), v1.end( ) );
-   v1_R2_Iter = max_element ( v1.begin( ), v1.end( ), mod_lesser);
+    v1_R1_Iter = max_element ( v1.begin( ), v1.end( ) );
+    v1_R2_Iter = max_element ( v1.begin( ), v1.end( ), mod_lesser);
 
-   cout << "The largest element in v1 is: " << *v1_R1_Iter << endl;
-   cout << "The largest element in v1 under the mod_lesser"
-        << "\n binary predicate is: " << *v1_R2_Iter << endl;
+    cout << "The largest element in v1 is: " << *v1_R1_Iter << endl;
+    cout << "The largest element in v1 under the mod_lesser"
+            << "\n binary predicate is: " << *v1_R2_Iter << endl;
 }
 ```
 
-## <a name="merge"></a> 合併式
+## <a name="merge"></a>merge
 
 將兩個排序來源範圍內的所有項目結合成單一排序目的範圍，其中順序準則可由二元述詞指定。
 
@@ -4058,38 +4168,39 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator merge(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator merge(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator merge(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，用於定址要結合並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個項目的位置。
@@ -4103,11 +4214,11 @@ ForwardIterator merge(
 *last2*\
 輸入迭代器，用於定址要結合並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會結合成單一排序範圍。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4121,11 +4232,11 @@ ForwardIterator merge(
 
 每個排序來源範圍必須根據 `merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 此演算法不會修改來源範圍`merge`。
+這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法`merge`不會修改來源範圍。
 
 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。
 
-演算法的複雜度為線性，最多 (*last1* - *first1*)-(*last2* - *first2*)-1 的比較。
+演算法的複雜度為線性, 最多`(last1 - first1) - (last2 - first2) - 1`有個比較。
 
 [list 類別](../standard-library/list-class.md)提供成員函式 "merge" 來合併兩個清單的元素。
 
@@ -4141,105 +4252,105 @@ ForwardIterator merge(
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 ) {
-   if (elem1 < 0)
-      elem1 = - elem1;
-   if (elem2 < 0)
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if (elem1 < 0)
+        elem1 = - elem1;
+    if (elem2 < 0)
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main() {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1;
 
-   // Constructing vector v1a and v1b with default less than ordering
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1a.push_back(  i );
+    // Constructing vector v1a and v1b with default less than ordering
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1a.push_back( i );
 
-   int ii;
-   for ( ii =-5 ; ii <= 0 ; ii++ )
-      v1b.push_back(  ii  );
+    int ii;
+    for ( ii =-5 ; ii <= 0 ; ii++ )
+        v1b.push_back( ii );
 
-   cout << "Original vector v1a with range sorted by the\n "
-        << "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+            << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        << "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+            << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vector v2 with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a,  Iter2b, Iter2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vector v2 with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+            << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+            << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vector v3 with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vector v3 with ranges sorted by mod_lesser
+    vector<int> v3a( v1a ), v3b( v1b ) , v3( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        << "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+            << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        << "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+            << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To merge inplace in ascending order with default binary
-   // predicate less <int>( )
-   merge ( v1a.begin( ), v1a.end( ), v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Merged inplace with default order,\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To merge inplace in ascending order with default binary
+    // predicate less<int>( )
+    merge ( v1a.begin( ), v1a.end( ), v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Merged inplace with default order,\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To merge inplace in descending order, specify binary
-   // predicate greater<int>( )
-   merge ( v2a.begin( ), v2a.end( ), v2b.begin( ), v2b.end( ),
-       v2.begin( ),  greater <int>( ) );
-   cout << "Merged inplace with binary predicate greater specified,\n "
-        << "vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To merge inplace in descending order, specify binary
+    // predicate greater<int>( )
+    merge ( v2a.begin( ), v2a.end( ), v2b.begin( ), v2b.end( ),
+        v2.begin( ), greater<int>( ) );
+    cout << "Merged inplace with binary predicate greater specified,\n "
+            << "vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // Applying A user-defined (UD) binary predicate mod_lesser
-   merge ( v3a.begin( ), v3a.end( ), v3b.begin( ), v3b.end( ),
-       v3.begin( ),  mod_lesser );
-   cout << "Merged inplace with binary predicate mod_lesser specified,\n "
-        << "vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // Applying A user-defined (UD) binary predicate mod_lesser
+    merge ( v3a.begin( ), v3a.end( ), v3b.begin( ), v3b.end( ),
+        v3.begin( ), mod_lesser );
+    cout << "Merged inplace with binary predicate mod_lesser specified,\n "
+            << "vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="min"></a> 最小值
+## <a name="min"></a>分鐘
 
 比較兩個物件並傳回兩者較小者，其中順序準則可由二元述詞指定。
 
@@ -4248,41 +4359,44 @@ template<class Type>
 constexpr const Type& min(
     const Type& left,
     const Type& right);
+
 template<class Type, class Pr>
 constexpr const Type& min(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
+
 template<class Type>
 constexpr Type min(
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
+
 template<class Type, class Pr>
 constexpr Type min(
-    initializer_list<Type>,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左面*\
 正在比較的兩個物件之第一個。
 
-*權限*\
+*再*\
 正在比較的兩個物件之第二個。
 
-*Comp*\
+*pred*\
 用來比較兩個物件的二元述詞。
 
-*_IList*\
-包含要比較之成員的 initializer_list。
+*inlist*\
+`initializer_list` , 包含要比較的成員。
 
 ### <a name="return-value"></a>傳回值
 
-除非兩者一樣大，否則會傳回兩個物件中較小的一個；在此情況下，它會傳回兩個物件的第一個。 在使用 initializer_list 的情況下，它會傳回此清單中最小的物件。
+除非兩者一樣大，否則會傳回兩個物件中較小的一個；在此情況下，它會傳回兩個物件的第一個。 如果是`initializer_list`, 它會傳回清單中的最小物件。
 
 ### <a name="remarks"></a>備註
 
-`min` 是不尋常的演算法，因為它將物件做為參數傳遞。 大部分 C++ 標準程式庫演算法可對某範圍的元素作業，其位置由迭代器作為參數傳遞來加以指定。 如果您需要使用某範圍元素的函式，請使用 [min_element](../standard-library/algorithm-functions.md#min_element)。 [constexpr](../cpp/constexpr-cpp.md)上已啟用`initializer_list`Visual Studio 2017 中的多載。
+`min` 是不尋常的演算法，因為它將物件做為參數傳遞。 大部分 C++ 標準程式庫演算法可對某範圍的元素作業，其位置由迭代器作為參數傳遞來加以指定。 如果您需要使用某範圍元素的函式，請使用 [min_element](../standard-library/algorithm-functions.md#min_element)。 [constexpr](../cpp/constexpr-cpp.md)已在 Visual Studio 2017 中`initializer_list`的多載上啟用 。
 
 ### <a name="example"></a>範例
 
@@ -4317,7 +4431,7 @@ private:
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
     osIn << "CInt( " << rhs.m_nVal << " )";
-       return osIn;
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
@@ -4344,7 +4458,7 @@ int main()
         << result2 << "." << endl;
     cout << endl;
 
-// Comparing the members of an initializer_list
+    // Comparing the members of an initializer_list
     const int& result3 = min({ a, c });
     const int& result4 = min({ a, b }, mod_lesser);
 
@@ -4355,7 +4469,7 @@ int main()
     cout << endl;
 
     // Comparing set containers with elements of type CInt
-       // using the min algorithm
+    // using the min algorithm
     CInt c1 = 1, c2 = 2, c3 = 3;
     set<CInt> s1, s2, s3;
     set<CInt>::iterator s1_Iter, s2_Iter, s3_Iter;
@@ -4385,8 +4499,8 @@ int main()
     cout << " " << *s3_Iter << " )." << endl << endl;
 
     // Comparing vectors with integer elements using min algorithm
-    vector <int> v1, v2, v3, v4, v5;
-    vector <int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
+    vector<int> v1, v2, v3, v4, v5;
+    vector<int>::iterator Iter1, Iter2, Iter3, Iter4, Iter5;
 
     int i;
     for ( i = 0 ; i <= 2 ; i++ )
@@ -4451,44 +4565,49 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a> min_element
+## <a name="min_element"></a>min_element
 
 在指定的範圍內尋找第一個最小項目，其中順序準則可由二元述詞指定。
 
 ```cpp
 template<class ForwardIterator>
-constexpr ForwardIterator min_element(ForwardIterator first, ForwardIterator last );
+constexpr ForwardIterator min_element(
+    ForwardIterator first,
+    ForwardIterator last );
 
-template<class ForwardIterator, class BinaryPredicate>
+template<class ForwardIterator, class Compare>
 constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
-    BinaryPredicate comp);
+    Compare pred);
 
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator min_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
 ForwardIterator min_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，定址要搜尋最小元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，定址要搜尋最小元素之範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4498,7 +4617,7 @@ ForwardIterator min_element(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性: (`last` - `first`)-1 比較所需的非空白的範圍。
+複雜度為線性: `(last - first) - 1`非空白範圍需要進行比較。
 
 ### <a name="example"></a>範例
 
@@ -4518,84 +4637,84 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt& operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Searching a set container with elements of type CInt
-   // for the minimum element
-   CInt c1 = 1, c2 = 2, c3 = -3;
-   set<CInt> s1;
-   set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
+    // Searching a set container with elements of type CInt
+    // for the minimum element
+    CInt c1 = 1, c2 = 2, c3 = -3;
+    set<CInt> s1;
+    set<CInt>::iterator s1_Iter, s1_R1_Iter, s1_R2_Iter;
 
-   s1.insert ( c1 );
-   s1.insert ( c2 );
-   s1.insert ( c3 );
+    s1.insert ( c1 );
+    s1.insert ( c2 );
+    s1.insert ( c3 );
 
-   cout << "s1 = (";
-   for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
-      cout << " " << *s1_Iter << ",";
-   s1_Iter = --s1.end( );
-   cout << " " << *s1_Iter << " )." << endl;
+    cout << "s1 = (";
+    for ( s1_Iter = s1.begin( ); s1_Iter != --s1.end( ); s1_Iter++ )
+        cout << " " << *s1_Iter << ",";
+    s1_Iter = --s1.end( );
+    cout << " " << *s1_Iter << " )." << endl;
 
-   s1_R1_Iter = min_element ( s1.begin( ), s1.end( ) );
+    s1_R1_Iter = min_element ( s1.begin( ), s1.end( ) );
 
-   cout << "The smallest element in s1 is: " << *s1_R1_Iter << endl;
-   cout << endl;
+    cout << "The smallest element in s1 is: " << *s1_R1_Iter << endl;
+    cout << endl;
 
-   // Searching a vector with elements of type int for the maximum
-   // element under default less than & mod_lesser binary predicates
-   vector <int> v1;
-   vector <int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
+    // Searching a vector with elements of type int for the maximum
+    // element under default less than & mod_lesser binary predicates
+    vector<int> v1;
+    vector<int>::iterator v1_Iter, v1_R1_Iter, v1_R2_Iter;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii = 1 ; ii <= 4 ; ii++ )
-   {
-      v1.push_back( - 2 * ii );
-   }
+    int ii;
+    for ( ii = 1 ; ii <= 4 ; ii++ )
+    {
+        v1.push_back( - 2 * ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
-      cout << *v1_Iter << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter = v1.begin( ) ; v1_Iter != v1.end( ) ; v1_Iter++ )
+        cout << *v1_Iter << " ";
+    cout << ")." << endl;
 
-   v1_R1_Iter = min_element ( v1.begin( ), v1.end( ) );
-   v1_R2_Iter = min_element ( v1.begin( ), v1.end( ), mod_lesser);
+    v1_R1_Iter = min_element ( v1.begin( ), v1.end( ) );
+    v1_R2_Iter = min_element ( v1.begin( ), v1.end( ), mod_lesser);
 
-   cout << "The smallest element in v1 is: " << *v1_R1_Iter << endl;
-   cout << "The smallest element in v1 under the mod_lesser"
+    cout << "The smallest element in v1 is: " << *v1_R1_Iter << endl;
+    cout << "The smallest element in v1 under the mod_lesser"
         << "\n binary predicate is: " << *v1_R2_Iter << endl;
 }
 ```
@@ -4610,7 +4729,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a> minmax_element
+## <a name="minmax_element"></a>minmax_element
 
 在一個呼叫中執行 `min_element` 和 `max_element` 所執行的工作。
 
@@ -4618,61 +4737,59 @@ binary predicate is: 0
 template<class ForwardIterator>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator first,
-    ForwardIterator Last);
-template<class ForwardIterator, class BinaryPredicate>
+    ForwardIterator last);
+
+template<class ForwardIterator, class Compare>
 constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
-    ForwardIterator  first,
-    ForwardIterator Last,
-    BinaryPredicate  comp);
-    
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
-pair<ForwardIterator, ForwardIterator>
-minmax_element(
+pair<ForwardIterator, ForwardIterator> minmax_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class Compare>
-pair<ForwardIterator, ForwardIterator>
-minmax_element(
+pair<ForwardIterator, ForwardIterator> minmax_element(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Compare comp);
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，表示範圍開頭。
 
-*最後一個*\
+*次*\
 正向迭代器，表示範圍結尾。
 
-*Comp*\
-用來排序元素的選擇性測試。
+*pred*\
+使用者定義的述詞函式物件, 定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數, 而且當第一個小於第二個時, 應該傳回**true** , 否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
 傳回值
 
-`pair<ForwardIterator, ForwardIterator>`
-
-`(` [min_element](../standard-library/algorithm-functions.md#min_element)`(first, last), `[max_element](../standard-library/algorithm-functions.md#max_element)`(first, last))`。
+`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
 ### <a name="remarks"></a>備註
 
 第一個範本函式會傳回
 
-`pair<ForwardIterator,ForwardIterator>`
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
 
-`(min_element(_First,Last), max_element(_First,Last))`.
+第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `pred(X, Y)`。
 
-第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `comp (X, Y)`。
+如果序列不是空的, 函數會執行最多`3 * (last - first - 1) / 2`的比較。
 
-如果序列是空，函數執行最多`3 * (last - first - 1) / 2`比較。
-
-## <a name="minmax"></a> minmax
+## <a name="minmax"></a>minmax
 
 比較兩個輸入參數並作為一組傳回，從小排到大。
 
@@ -4681,45 +4798,48 @@ template<class Type>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right);
+
 template<class Type, class BinaryPredicate>
 constexpr pair<const Type&, const Type&> minmax(
     const Type& left,
     const Type& right,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
+
 template<class Type>
 constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type> );
+    initializer_list<Type> ilist);
+
 template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
-    initializer_list<Type>,
-    BinaryPredicate comp);
+    initializer_list<Type> ilist,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左面*\
 正在比較的兩個物件之第一個。
 
-*權限*\
+*再*\
 正在比較的兩個物件之第二個。
 
-*Comp*\
+*pred*\
 用來比較兩個物件的二元述詞。
 
-*_IList*\
-包含要比較之成員的 initializer_list。
+*inlist*\
+`initializer_list` , 包含要比較的成員。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回`pair<const Type&, const Type&>( right , left )`如果*右*是小於*左*。 否則，它會傳回 `pair<const Type&, const Type&>( left , right )`。
+`pair<const Type&, const Type&>( right, left )`如果*right*小於 left, 第一個範本函*式*會傳回。 否則，它會傳回 `pair<const Type&, const Type&>( left, right )`。
 
-第二個成員函式會傳回一組，其中的第一個元素較小，而第二個較大的述詞相較之下*comp*。
+第二個成員函式會傳回一個配對, 其中第一個專案是較小的, 而第二個則是比述詞*pred*更大的時間。
 
-其餘範本函式的行為相同，不同之處在於它們取代*左*並*右*參數搭配 *_IList*。
+其餘範本函式的行為相同, 不同之處在于它們會以*inlist*取代*left*和*right*參數。
 
 此函式只會執行一個比較。
 
-## <a name="mismatch"></a> 不相符
+## <a name="mismatch"></a>之
 
 逐一比較兩個範圍的每個項目，找出差異發生的第一個位置。
 
@@ -4729,75 +4849,76 @@ constexpr pair<Type&, Type&> minmax(
 template<class InputIterator1, class InputIterator2>
 pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2 );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2 );
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate> pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    BinaryPredicate Comp );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    BinaryPredicate pred );
 
 //C++14
 template<class InputIterator1, class InputIterator2>
 pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    InputIterator2 Last2 );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2 );
 
 template<class InputIterator1, class InputIterator2, class BinaryPredicate> pair<InputIterator1, InputIterator2>>
 mismatch(
-    InputIterator1 First1,
-    InputIterator1 Last1,
-    InputIterator2 First2,
-    InputIterator2 Last2,
-    BinaryPredicate Comp);
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    BinaryPredicate pred);
 
 //C++17
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     BinaryPredicate pred);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 pair<ForwardIterator1, ForwardIterator2>
 mismatch(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，定址要測試的第一個範圍中第一個項目的位置。
@@ -4811,7 +4932,7 @@ mismatch(
 *last2*\
 輸入迭代器，定址要測試的第二個範圍中最後一個項目的後面一個位置。
 
-*Comp*\
+*pred*\
 使用者定義述詞函式物件，比較每個範圍中的目前項目，並判斷是否相等。 符合時傳回 **true**，不符合則傳回 **false**。
 
 ### <a name="return-value"></a>傳回值
@@ -4820,7 +4941,7 @@ mismatch(
 
 ### <a name="remarks"></a>備註
 
-第一個樣板函式會假設範圍中從 first2 開始的項目數，與 [first1, last1) 指定的範圍中的項目數相同。 如果第二個範圍中的項目較多，則會忽略它們；如果較少，則會導致未定義的行為。
+第一個樣板函式會假設範圍中從 first2 開始的項目數，與 [first1, last1) 指定的範圍中的項目數相同。 如果第二個範圍中有更多, 則會忽略它們;如果較少, 則會產生未定義的行為。
 
 要搜尋的範圍必須有效；所有迭代器都必須可以取值，而且可透過遞增從第一個位置到達最後一個位置。
 
@@ -4917,13 +5038,13 @@ int main()
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
-C++14 vec_3 v. vec_4 with pred:  match.
+C++14 vec_3 v. vec_4 with pred: match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a> &lt;alg&gt;移動
+## <a name="alg_move"></a>&lt;alg移動&gt;
 
 移動與所指定範圍相關聯的項目。
 
@@ -4933,49 +5054,51 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
-    
-template<class ExecutionPolicy, class ForwardIterator1,
-class ForwardIterator2>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 move(
-    ExecutionPolicy&& exec, 
-    ForwardIterator1 first, 
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示項目移動範圍的開始位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示項目移動範圍的結束位置。
 
-*目的地*\
+*dest*\
 要包含已移動項目的輸出迭代器。
 
 ### <a name="remarks"></a>備註
 
-範本函式會評估`*(dest + N) = move(*(first + N))`每個`N`範圍內`[0, last - first)`，可完全增加值`N`從最低值開始。 然後它會傳回 `dest + N`。 如果`dest`並*第一次*指定的儲存體、 區域*dest*不得在範圍`[first, last)`。
+此範本函式`*(dest + N) = move(*(first + N))`會針對範圍`N` `[0, last - first)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `dest + N`。 如果`dest`和*第一次*指定儲存區, 則*目的地*不得在範圍`[first, last)`內。
 
-## <a name="move_backward"></a> move_backward
+## <a name="move_backward"></a>move_backward
 
 將一個迭代器的項目移至另一個迭代器。 從指定範圍內的最後一個項目開始移動，並以該範圍內的第一個項目結束。
 
 ```cpp
 template<class BidirectionalIterator1, class BidirectionalIterator2>
-   BidirectionalIterator2 move_backward(
-       BidirectionalIterator1 first,
-       BidirectionalIterator1 last,
-       BidirectionalIterator2 destEnd);
+BidirectionalIterator2 move_backward(
+    BidirectionalIterator1 first,
+    BidirectionalIterator1 last,
+    BidirectionalIterator2 destEnd);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 迭代器，表示要從中移動元素的範圍開始。
 
-*最後一個*\
+*次*\
 迭代器，表示要從中移動元素的範圍結尾。 這個元素不會進行移動。
 
 *destEnd*\
@@ -4983,31 +5106,36 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="remarks"></a>備註
 
-範本函式會評估`*(destEnd - N - 1) = move(*(last - N - 1))`每個`N`範圍內`[0, last - first)`，可完全增加值`N`從最低值開始。 然後它會傳回 `destEnd - (last - first)`。 如果*destEnd*並*第一次*指定的儲存體、 區域*destEnd*不得在範圍`[first, last)`。
+此範本函式`*(destEnd - N - 1) = move(*(last - N - 1))`會針對範圍`N` `[0, last - first)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `destEnd - (last - first)`。 如果*destEnd*和*第一次*指定儲存區, *destEnd*不得在範圍`[first, last)`內。
 
 `move` 和 `move_backward` 的功能等同於搭配使用 `copy` 和 `copy_backward` 與移動迭代器。
 
-## <a name="next_permutation"></a> next_permutation
+## <a name="next_permutation"></a>next_permutation
 
 重新排列範圍的項目，讓原始順序由語彙方面下一個較大的排列取代 (如果有的話)，其中下一個的意義可由二元述詞指定。
 
 ```cpp
 template<class BidirectionalIterator>
-bool next_permutation(BidirectionalIterator first, BidirectionalIterator last);
+bool next_permutation(
+    BidirectionalIterator first,
+    BidirectionalIterator last);
 
 template<class BidirectionalIterator, class BinaryPredicate>
-bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, BinaryPredicate comp);
+bool next_permutation(
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -5018,9 +5146,9 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-預設二元述詞為小於，而且範圍中的元素必須小於比較值，確保已正確定義下一個排列。
+預設的二元述詞小於, 而且範圍中的元素必須小於可比較的, 以確保下一個排列已妥善定義。
 
-複雜度為線性，最多 (* 姓氏-名字 *) / 2 次交換。
+複雜度為線性, 最多`(last - first) / 2`可進行交換。
 
 ### <a name="example"></a>範例
 
@@ -5040,102 +5168,102 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 class CInt
 {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      { return ( m_nVal < rhs.m_nVal );}
-   friend   ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ) {}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ) {}
+    CInt& operator=( const CInt& rhs ) {m_nVal =
+        rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        { return ( m_nVal < rhs.m_nVal ); }
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs )
 {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
 int main()
 {
-   // Reordering the elements of type CInt in a deque
-   // using the prev_permutation algorithm
-   CInt c1 = 5, c2 = 1, c3 = 10;
-   bool deq1Result;
-   deque<CInt> deq1, deq2, deq3;
-   deque<CInt>::iterator d1_Iter;
+    // Reordering the elements of type CInt in a deque
+    // using the prev_permutation algorithm
+    CInt c1 = 5, c2 = 1, c3 = 10;
+    bool deq1Result;
+    deque<CInt> deq1, deq2, deq3;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   deq1Result = next_permutation ( deq1.begin( ), deq1.end( ) );
+    deq1Result = next_permutation ( deq1.begin( ), deq1.end( ) );
 
-   if ( deq1Result )
-      cout << "The lexicographically next permutation "
-           << "exists and has\nreplaced the original "
-           << "ordering of the sequence in deq1." << endl;
-   else
-      cout << "The lexicographically next permutation doesn't "
-           << "exist\n and the lexicographically "
-           << "smallest permutation\n has replaced the "
-           << "original ordering of the sequence in deq1." << endl;
+    if ( deq1Result )
+        cout << "The lexicographically next permutation "
+            << "exists and has\nreplaced the original "
+            << "ordering of the sequence in deq1." << endl;
+    else
+        cout << "The lexicographically next permutation doesn't "
+            << "exist\n and the lexicographically "
+            << "smallest permutation\n has replaced the "
+            << "original ordering of the sequence in deq1." << endl;
 
-   cout << "After one application of next_permutation,\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl << endl;
+    cout << "After one application of next_permutation,\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl << endl;
 
-   // Permuting vector elements with binary function mod_lesser
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    // Permuting vector elements with binary function mod_lesser
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 3 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = -3 ; i <= 3 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+    next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
 
-   cout << "After the first next_permutation, vector v1 is:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the first next_permutation, vector v1 is:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= 5 ) {
-      next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
-      cout << "After another next_permutation of vector v1,\n v1 =   ( " ;
-      for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
-         cout << *Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= 5 ) {
+        next_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+        cout << "After another next_permutation of vector v1,\n v1 =   ( " ;
+        for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
+            cout << *Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -5161,56 +5289,66 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a> nth_element
+## <a name="nth_element"></a>nth_element
 
 分割某範圍的元素，將序列的第 *n* 個元素正確放入範圍中，以便在它前面的所有元素小於或等於它，而且序列中在它後面的所有元素大於或等於它。
 
 ```cpp
 template<class RandomAccessIterator>
-void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last);
+void nth_element(
+    RandomAccessIterator first,
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
-void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+template<class RandomAccessIterator, class Compare>
+void nth_element(
+    RandomAccessIterator first,
+    RandomAccessIterator nth,
+    RandomAccessIterator last,
+    Compare pred);
 
 template<class ExecutionPolicy, class RandomAccessIterator>
 void nth_element(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator nth,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void nth_element(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator nth,
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 隨機存取迭代器，定址要分割之範圍中第一個元素的位置。
 
-*_Nth*\
+*個*\
 隨機存取迭代器，定址要在磁碟分割界限上正確排序之元素的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`nth_element` 演算法不保證會排序第 *n* 個元素之子範圍任一端中的元素。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。
+此`nth_element`演算法不保證會排序第*n*個元素的子範圍中的專案。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。
 
 如果任一個都不小於另一個，則元素對等，但不一定相等。
 
-平均排序複雜度為線性與 * 姓氏-名字 *。
+排序複雜度的平均值是相對於*最後一個*的線性。
 
 ### <a name="example"></a>範例
 
@@ -5224,96 +5362,102 @@ void nth_element(
 
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 ) {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-      v1.push_back( 3 * i );
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+        v1.push_back( 3 * i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-      v1.push_back( 3 * ii + 1 );
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+        v1.push_back( 3 * ii + 1 );
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-      v1.push_back( 3 * iii +2 );
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+        v1.push_back( 3 * iii +2 );
 
-   cout << "Original vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   nth_element(v1.begin( ), v1.begin( ) + 3, v1.end( ) );
-   cout << "Position 3 partitioned vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    nth_element(v1.begin( ), v1.begin( ) + 3, v1.end( ) );
+    cout << "Position 3 partitioned vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order, specify binary predicate
-   nth_element( v1.begin( ), v1.begin( ) + 4, v1.end( ),
-          greater<int>( ) );
-   cout << "Position 4 partitioned (greater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order, specify binary predicate
+    nth_element( v1.begin( ), v1.begin( ) + 4, v1.end( ),
+            greater<int>( ) );
+    cout << "Position 4 partitioned (greater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   random_shuffle( v1.begin( ), v1.end( ) );
-   cout << "Shuffled vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    random_shuffle( v1.begin( ), v1.end( ) );
+    cout << "Shuffled vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   nth_element( v1.begin( ), v1.begin( ) + 5, v1.end( ), UDgreater );
-   cout << "Position 5 partitioned (UDgreater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    nth_element( v1.begin( ), v1.begin( ) + 5, v1.end( ), UDgreater );
+    cout << "Position 5 partitioned (UDgreater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
-## <a name="none_of"></a> none_of
+## <a name="none_of"></a>none_of
 
-傳回 **，則為 true**條件時永遠不會出現在 項目指定的範圍中。
+當條件永遠不會出現在給定範圍中的專案之間時, 傳回**true** 。
 
 ```cpp
-template<class InputIterator, class BinaryPredicate>
-bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+template<class InputIterator, class UnaryPredicate>
+bool none_of(
+    InputIterator first,
+    InputIterator last,
+    UnaryPredicate pred);
 
-template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+template <class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 bool none_of(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last, 
-    Predicate pred);
+    ForwardIterator first,
+    ForwardIterator last,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示開始檢查條件之某範圍元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示某範圍元素的結尾。
 
-*Comp*\
-要測試的條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 **，則為 true**如果條件未偵測到至少一次在指定範圍中，並**false**在偵測到條件。
+如果在指定的範圍內至少偵測不到一次條件, 則傳回**true** , 如果偵測到條件, 則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-範本函式會傳回 **，則為 true**只有當，某些`N`範圍內`[0, last - first)`，述詞`comp(*(first + N))`總是**false**。
+`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才   會傳回true,述詞`pred(*(first + N))`一律為 false。
 
-## <a name="partial_sort"></a> partial_sort
+## <a name="partial_sort"></a>partial_sort
 
 將範圍中指定的較小項目數目排列成非遞減排列，或是依據二元述詞指定的順序準則。
 
@@ -5324,13 +5468,13 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last);
 
-template<class RandomAccessIterator, class BinaryPredicate>
+template<class RandomAccessIterator, class Compare>
 void partial_sort(
     RandomAccessIterator first,
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void partial_sort(
     ExecutionPolicy&& exec,
@@ -5343,31 +5487,34 @@ void partial_sort(
     ExecutionPolicy&& exec,
     RandomAccessIterator first,
     RandomAccessIterator middle,
-    RandomAccessIterator last, 
-    Compare comp);
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
 *sortEnd*\
 隨機存取迭代器，定址要排序之子範圍中最後一個元素之後的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址要局部排序之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法不穩定，因此不保證會保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
+如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
 
-平均部分排序複雜性會變得*O*((`last`- `first`) 記錄檔 (`sortEnd`- `first`))。
+平均部分排序複雜度為*O* `last`((`first` - ) log (`sortEnd` -  `first`))。
 
 ### <a name="example"></a>範例
 
@@ -5382,52 +5529,51 @@ void partial_sort(
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-   {
-      v1.push_back( 2 * ii +1 );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+    {
+        v1.push_back( 2 * ii +1 );
+    }
 
-   cout << "Original vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   partial_sort(v1.begin( ), v1.begin( ) + 6, v1.end( ) );
-   cout << "Partially sorted vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    partial_sort(v1.begin( ), v1.begin( ) + 6, v1.end( ) );
+    cout << "Partially sorted vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To partially sort in descending order, specify binary predicate
-   partial_sort(v1.begin( ), v1.begin( ) + 4, v1.end( ), greater<int>( ) );
-   cout << "Partially resorted (greater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To partially sort in descending order, specify binary predicate
+    partial_sort(v1.begin( ), v1.begin( ) + 4, v1.end( ), greater<int>( ) );
+    cout << "Partially resorted (greater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ),
-UDgreater );
-   cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    partial_sort(v1.begin( ), v1.begin( ) + 8, v1.end( ), UDgreater );
+    cout << "Partially resorted (UDgreater) vector:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -5442,7 +5588,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a> partial_sort_copy
+## <a name="partial_sort_copy"></a>partial_sort_copy
 
 從來源範圍將項目複製到目的範圍，其中來源項目是依小於排序，或依據二元述詞指定的順序準則。
 
@@ -5454,34 +5600,36 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2 );
 
-template<class InputIterator, class RandomAccessIterator, class BinaryPredicate>
+template<class InputIterator, class RandomAccessIterator, class Compare>
 RandomAccessIterator partial_sort_copy(
     InputIterator first1,
     InputIterator last1,
     RandomAccessIterator first2,
     RandomAccessIterator last2,
-    BinaryPredicate comp);
-    
+    Compare pred);
+
 template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
 RandomAccessIterator partial_sort_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     RandomAccessIterator result_first,
     RandomAccessIterator result_last);
 
-template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
-class Compare>
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator, class Compare>
 RandomAccessIterator partial_sort_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     RandomAccessIterator result_first,
     RandomAccessIterator result_last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，在來源範圍的第一個項目位置定址。
@@ -5495,8 +5643,8 @@ RandomAccessIterator partial_sort_copy(
 *last2*\
 隨機存取迭代器，定址排序目的範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5584,35 +5732,38 @@ int main() {
 }
 ```
 
-## <a name="partition"></a> 資料分割
+## <a name="partition"></a>劃分
 
 將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前。
 
 ```cpp
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate comp);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator partition(
     ExecutionPolicy&& exec,
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5622,9 +5773,9 @@ ForwardIterator partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果 *Pr* (*a*, *b*) 為 false 且 *Pr* (*b*, *a*) 為 false (其中 *Pr* 是參數指定的述詞)，則元素 *a* 和 *b* 對等，但不一定相等。 `partition`演算法不穩定，因此不保證會保留對等元素的相對順序。 `stable_ partition` 演算法確實會保留這個原始順序。
+`pred( b, a )`如果兩者  `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `partition`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_partition` 演算法確實會保留這個原始順序。
 
-複雜度為線性： 有 (`last` - `first`) 的應用程式*comp*最多 (`last` - `first`) / 2 次交換。
+複雜度為線性: 有`(last - first)` *pred*的應用程式和最多`(last - first)/2`的交換。
 
 ### <a name="example"></a>範例
 
@@ -5635,135 +5786,142 @@ ForwardIterator partition(
 #include <algorithm>
 #include <iostream>
 
-bool greater5 ( int value ) {
-   return value > 5;
+bool greater5 ( int value )
+{
+    return value > 5;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 10 ; i++ )
-   {
-      v1.push_back( i );
-   }
-   random_shuffle( v1.begin( ), v1.end( ) );
+    int i;
+    for ( i = 0 ; i <= 10 ; i++ )
+    {
+        v1.push_back( i );
+    }
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Partition the range with predicate greater10
-   partition ( v1.begin( ), v1.end( ), greater5 );
-   cout << "The partitioned set of elements in v1 is: ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Partition the range with predicate greater10
+    partition ( v1.begin( ), v1.end( ), greater5 );
+    cout << "The partitioned set of elements in v1 is: ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="partition_copy"></a> partition_copy
+## <a name="partition_copy"></a>partition_copy
 
-條件的項目複製 **，則為 true**到目的地，以及將條件是**false**到另一個。 項目必須來自指定的範圍。
+將條件為**true**的元素複製到一個目的地, 並將其條件為**false** 。 項目必須來自指定的範圍。
 
 ```cpp
-template<class InputIterator, class OutputIterator1, class OutputIterator2, class Predicate>
-pair<OutputIterator1, OutputIterator2>
-    partition_copy(
+template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
+pair<OutputIterator1, OutputIterator2> partition_copy(
     InputIterator first,
     InputIterator last,
     OutputIterator1 dest1,
     OutputIterator2 dest2,
-    Predicate pred);
-    
-template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
-class ForwardIterator2, class Predicate>
-pair<ForwardIterator1, ForwardIterator2>
-partition_copy(
+    UnaryPredicate pred);
+
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
+pair<ForwardIterator1, ForwardIterator2> partition_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    ForwardIterator1 out_true, 
+    ForwardIterator1 out_true,
     ForwardIterator2 out_false,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，表示檢查條件的範圍開始。
 
-*最後一個*\
+*次*\
 輸入迭代器，表示範圍結尾。
 
 *dest1*\
-輸出迭代器，用來複製項目傳回 true 的條件使用測試 *_Pred*。
+輸出反覆運算器, 用來針對使用*pred*測試的條件, 複製傳回 true 的元素。
 
 *dest2*\
-輸出迭代器，用來將傳回 false 條件的項目複製使用測試 *_Pred*。
+輸出反覆運算器, 用來針對使用*pred*測試的條件, 複製傳回 false 的元素。
 
-*_Pred*\
-要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="remarks"></a>備註
 
-範本函式會複製每個項目`X`中`[first,last)`要`*dest1++`如果`_Pred(X)`為 true，或`*dest2++`如果不是。 它會傳回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
+如果`X` `[first,last)` `*dest1++` `*dest2++`為 true, 則範本函式會將中的每個專案複製到, 如果不是, 則為。 `pred(X)` 它會傳回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
 
-## <a name="partition_point"></a> partition_point
+## <a name="partition_point"></a>partition_point
 
 傳回給定範圍中不滿足條件的第一個項目。 排序項目，以便滿足條件的項目在不滿足條件的項目之前。
 
 ```cpp
-template<class ForwardIterator, class Predicate>
+template<class ForwardIterator, class UnaryPredicate>
 ForwardIterator partition_point(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate comp);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 `ForwardIterator`，表示檢查條件的範圍開始。
 
-*最後一個*\
+*次*\
 `ForwardIterator`，表示範圍結尾。
 
-*Comp*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回`ForwardIterator`無法滿足的條件式測試的第一個項目，是指*comp*，或傳回*最後一個*如果找不到。
+傳回, 其參考不符合*pred*所測試之條件的第一個元素, 或如果找不到, 則傳回最後一個專案。  `ForwardIterator`
 
 ### <a name="remarks"></a>備註
 
-範本函式會尋找第一個迭代器`it`中`[first, last)`讓`comp(*it)`是**false**。 序列必須依排序*comp*。
+此範本函式`it` `pred(*it)`會尋找中`[first, last)`的第一個反覆運算器為**false**。 順序必須依*pred*排序。
 
-## <a name="pop_heap"></a> pop_heap
+## <a name="pop_heap"></a>pop_heap
 
 從堆積的前面移動最大的項目至範圍的倒數第二個位置，然後從其餘項目形成新的堆積。
 
 ```cpp
 template<class RandomAccessIterator>
-void pop_heap( RandomAccessIterator first, RandomAccessIterator last);
+void pop_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
-void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
+void pop_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址堆積中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
@@ -5782,7 +5940,7 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 結尾不包括新增元素的範圍必須是堆積。
 
-複雜度為對數，最多需要 log (* 姓氏-名字 *) 的比較。
+複雜度為對數, 最多`log (last - first)`需要比較。
 
 ### <a name="example"></a>範例
 
@@ -5794,59 +5952,60 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 #include <functional>
 #include <iostream>
 
-int main()  {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 1 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 1 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   // Make v1 a heap with default less than ordering
-   random_shuffle( v1.begin( ), v1.end( ) );
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    random_shuffle( v1.begin( ), v1.end( ) );
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Add an element to the back of the heap
-   v1.push_back( 10 );
-   push_heap( v1.begin( ), v1.end( ) );
-   cout << "The reheaped v1 with 10 added is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Add an element to the back of the heap
+    v1.push_back( 10 );
+    push_heap( v1.begin( ), v1.end( ) );
+    cout << "The reheaped v1 with 10 added is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove the largest element from the heap
-   pop_heap( v1.begin( ), v1.end( ) );
-   cout << "The heap v1 with 10 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << endl;
+    // Remove the largest element from the heap
+    pop_heap( v1.begin( ), v1.end( ) );
+    cout << "The heap v1 with 10 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << endl;
 
-   // Make v1 a heap with greater-than ordering with a 0 element
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   v1.push_back( 0 );
-   push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The 'greater than' reheaped v1 puts the smallest "
+    // Make v1 a heap with greater-than ordering with a 0 element
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    v1.push_back( 0 );
+    push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The 'greater than' reheaped v1 puts the smallest "
         << "element first:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Application of pop_heap to remove the smallest element
-   pop_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The 'greater than' heaped v1 with the smallest element\n "
+    // Application of pop_heap to remove the smallest element
+    pop_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The 'greater than' heaped v1 with the smallest element\n "
         << "removed from the heap is: ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="prev_permutation"></a> prev_permutation
+## <a name="prev_permutation"></a>prev_permutation
 
 重新排列範圍的元素，讓原始順序由語彙方面上一個較大的排列取代 (如果有的話)，其中上一個的意義可由二元述詞指定。
 
@@ -5860,31 +6019,31 @@ template<class BidirectionalIterator, class BinaryPredicate>
 bool prev_permutation(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    BinaryPredicate comp);
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果由語彙方面上一個排列存在，而且已取代的原始順序的範圍; 否則為**false**，在此情況下，順序會轉換為由語彙方面最大排列。
+如果詞典編纂上一個排列存在, 並且已取代範圍的原始順序,**則為 true** ;否則**為 false**, 在此情況下, 會將順序轉換成詞典編纂最大的排列。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-預設二元述詞為小於，而且範圍中的元素必須小於比較值，確保已正確定義上一個排列。
+預設的二元述詞小於, 而且範圍中的元素必須小於比較, 以確保先前的排列已妥善定義。
 
-複雜度為線性，最多 (`last` -  `first`) / 2 次交換。
+複雜度為線性, 最多有 (`last`  -  `first`)/2 次交換。
 
 ### <a name="example"></a>範例
 
@@ -5903,97 +6062,98 @@ ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 class CInt {
 public:
-   CInt( int n = 0 ) : m_nVal( n ){}
-   CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
-   CInt&   operator=( const CInt& rhs ) {m_nVal =
-   rhs.m_nVal; return *this;}
-   bool operator<( const CInt& rhs ) const
-      {return ( m_nVal < rhs.m_nVal );}
-   friend ostream& operator<<( ostream& osIn, const CInt& rhs );
+    CInt( int n = 0 ) : m_nVal( n ){}
+    CInt( const CInt& rhs ) : m_nVal( rhs.m_nVal ){}
+    CInt&   operator=( const CInt& rhs ) {m_nVal =
+    rhs.m_nVal; return *this;}
+    bool operator<( const CInt& rhs ) const
+        {return ( m_nVal < rhs.m_nVal );}
+    friend ostream& operator<<( ostream& osIn, const CInt& rhs );
 
 private:
-   int m_nVal;
+    int m_nVal;
 };
 
 inline ostream& operator<<( ostream& osIn, const CInt& rhs ) {
-   osIn << "CInt( " << rhs.m_nVal << " )";
-   return osIn;
+    osIn << "CInt( " << rhs.m_nVal << " )";
+    return osIn;
 }
 
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 };
 
-int main() {
-   // Reordering the elements of type CInt in a deque
-   // using the prev_permutation algorithm
-   CInt c1 = 1, c2 = 5, c3 = 10;
-   bool deq1Result;
-   deque<CInt> deq1, deq2, deq3;
-   deque<CInt>::iterator d1_Iter;
+int main()
+{
+    // Reordering the elements of type CInt in a deque
+    // using the prev_permutation algorithm
+    CInt c1 = 1, c2 = 5, c3 = 10;
+    bool deq1Result;
+    deque<CInt> deq1, deq2, deq3;
+    deque<CInt>::iterator d1_Iter;
 
-   deq1.push_back ( c1 );
-   deq1.push_back ( c2 );
-   deq1.push_back ( c3 );
+    deq1.push_back ( c1 );
+    deq1.push_back ( c2 );
+    deq1.push_back ( c3 );
 
-   cout << "The original deque of CInts is deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl;
+    cout << "The original deque of CInts is deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl;
 
-   deq1Result = prev_permutation ( deq1.begin( ), deq1.end( ) );
+    deq1Result = prev_permutation ( deq1.begin( ), deq1.end( ) );
 
-   if ( deq1Result )
-      cout << "The lexicographically previous permutation "
-           << "exists and has \nreplaced the original "
-           << "ordering of the sequence in deq1." << endl;
-   else
-      cout << "The lexicographically previous permutation doesn't "
-           << "exist\n and the lexicographically "
-           << "smallest permutation\n has replaced the "
-           << "original ordering of the sequence in deq1." << endl;
+    if ( deq1Result )
+        cout << "The lexicographically previous permutation "
+            << "exists and has \nreplaced the original "
+            << "ordering of the sequence in deq1." << endl;
+    else
+        cout << "The lexicographically previous permutation doesn't "
+            << "exist\n and the lexicographically "
+            << "smallest permutation\n has replaced the "
+            << "original ordering of the sequence in deq1." << endl;
 
-   cout << "After one application of prev_permutation,\n deq1 = (";
-   for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
-      cout << " " << *d1_Iter << ",";
-   d1_Iter = --deq1.end( );
-   cout << " " << *d1_Iter << " )." << endl << endl;
+    cout << "After one application of prev_permutation,\n deq1 = (";
+    for ( d1_Iter = deq1.begin( ); d1_Iter != --deq1.end( ); d1_Iter++ )
+        cout << " " << *d1_Iter << ",";
+    d1_Iter = --deq1.end( );
+    cout << " " << *d1_Iter << " )." << endl << endl;
 
-   // Permutating vector elements with binary function mod_lesser
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    // Permutating vector elements with binary function mod_lesser
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 3 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = -3 ; i <= 3 ; i++ )
+        v1.push_back( i );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+    prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
 
-   cout << "After the first prev_permutation, vector v1 is:\n v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the first prev_permutation, vector v1 is:\n v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= 5 ) {
-      prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
-      cout << "After another prev_permutation of vector v1,\n v1 =   ( " ;
-      for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
-         cout << *Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= 5 ) {
+        prev_permutation ( v1.begin( ), v1.end( ), mod_lesser );
+        cout << "After another prev_permutation of vector v1,\n v1 =   ( " ;
+        for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ;Iter1 ++ )
+            cout << *Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -6020,27 +6180,32 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a> push_heap
+## <a name="push_heap"></a>push_heap
 
 將在範圍結尾的項目加入至由範圍中之前項目所組成的現有堆積。
 
 ```cpp
 template<class RandomAccessIterator>
-void push_heap( RandomAccessIterator first, RandomAccessIterator last );
+void push_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last );
 
 template<class RandomAccessIterator, class BinaryPredicate>
-void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
+void push_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
@@ -6059,7 +6224,7 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 結尾不包括新增元素的範圍必須是堆積。
 
-複雜度為對數，最多需要 log (*姓氏-名字*) 比較。
+複雜度為對數, 最多`log(last - first)`需要比較。
 
 ### <a name="example"></a>範例
 
@@ -6072,91 +6237,97 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 1 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 1 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   random_shuffle( v1.begin( ), v1.end( ) );
+    random_shuffle( v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Make v1 a heap with default less than ordering
-   make_heap ( v1.begin( ), v1.end( ) );
-   cout << "The heaped version of vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with default less than ordering
+    make_heap ( v1.begin( ), v1.end( ) );
+    cout << "The heaped version of vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Add an element to the heap
-   v1.push_back( 10 );
-   cout << "The heap v1 with 10 pushed back is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Add an element to the heap
+    v1.push_back( 10 );
+    cout << "The heap v1 with 10 pushed back is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   push_heap( v1.begin( ), v1.end( ) );
-   cout << "The reheaped v1 with 10 added is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl << endl;
+    push_heap( v1.begin( ), v1.end( ) );
+    cout << "The reheaped v1 with 10 added is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl << endl;
 
-   // Make v1 a heap with greater than ordering
-   make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater-than heaped version of v1 is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Make v1 a heap with greater than ordering
+    make_heap ( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater-than heaped version of v1 is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   v1.push_back(0);
-   cout << "The greater-than heap v1 with 11 pushed back is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    v1.push_back(0);
+    cout << "The greater-than heap v1 with 11 pushed back is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "The greater than reheaped v1 with 11 added is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    push_heap( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "The greater than reheaped v1 with 11 added is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="random_shuffle"></a> random_shuffle
+## <a name="random_shuffle"></a>random_shuffle
 
-Std::random_shuffle() 函式已遭取代，取代[std:: shuffle](../standard-library/algorithm-functions.md#shuffle)。 如需程式碼範例和詳細資訊，請參閱 < [\<隨機 >](../standard-library/random.md)和 Stack Overflow 文章[std:: random_shuffle 方法為何要取代 C + + 14？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std:: random_shuffle () 函式已被取代, 由[std:: 隨機](../standard-library/algorithm-functions.md#shuffle)使用。 如需程式碼範例和詳細資訊, 請參閱[ \<random >](../standard-library/random.md)和 Stack Overflow 文章,[原因是 std:: random_shuffle 方法在 c + + 14 中被取代？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
-## <a name="remove"></a> 移除
+## <a name="remove"></a>取消
 
 從指定範圍中排除指定的值，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。
 
 ```cpp
 template<class ForwardIterator, class Type>
-ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+ForwardIterator remove(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator, class T>
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 ForwardIterator remove(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& value);
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 轉送迭代器，定址要從中移除元素之範圍中，第一個元素的位置。
 
-*最後一個*\
+*次*\
 轉送迭代器，定址要從中移除元素之範圍中，最後一個元素的位置後方。
 
-*val*\
+*value*\
 要從範圍中移除的值。
 
 ### <a name="return-value"></a>傳回值
@@ -6171,9 +6342,9 @@ ForwardIterator remove(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有 (`last` - `first`) 相等比較。
+複雜度為線性;有相等的`last`( -  `first`) 比較。
 
-[List 類別](../standard-library/list-class.md)具有更有效率的成員函式版本的`remove`，這也會重新連結指標。
+[List 類別](../standard-library/list-class.md)具有更有效率的`remove`成員函式版本, 這也會重新連結指標。
 
 ### <a name="example"></a>範例
 
@@ -6184,73 +6355,80 @@ ForwardIterator remove(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value of 7
-   new_end = remove ( v1.begin( ), v1.end( ), 7 );
+    // Remove elements with a value of 7
+    new_end = remove ( v1.begin( ), v1.end( ), 7 );
 
-   cout << "Vector v1 with value 7 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 with value 7 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To change the sequence size, use erase
-   v1.erase (new_end, v1.end( ) );
+    // To change the sequence size, use erase
+    v1.erase (new_end, v1.end( ) );
 
-   cout << "Vector v1 resized with value 7 removed is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 resized with value 7 removed is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_copy"></a> remove_copy
+## <a name="remove_copy"></a>remove_copy
 
 從來源範圍將項目複製到目的範圍，不過不會複製一個指定值的項目，也不會干擾其餘項目的順序，並傳回新目的範圍結尾。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
-OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+OutputIterator remove_copy(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    const Type& value);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class T>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
 ForwardIterator2 remove_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
-    const T& value);
+    ForwardIterator2 result,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
-*val*\
+*value*\
 要從範圍中移除的值。
 
 ### <a name="return-value"></a>傳回值
@@ -6267,7 +6445,7 @@ ForwardIterator2 remove_copy(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 指派。
+複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個指派。`first`
 
 ### <a name="example"></a>範例
 
@@ -6278,70 +6456,77 @@ ForwardIterator2 remove_copy(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2(10);
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2(10);
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle (v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:     ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle (v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:     ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value of 7
-   new_end = remove_copy ( v1.begin( ), v1.end( ), v2.begin( ), 7 );
+    // Remove elements with a value of 7
+    new_end = remove_copy ( v1.begin( ), v1.end( ), v2.begin( ), 7 );
 
-   cout << "Vector v1 is left unchanged as ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is left unchanged as ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is a copy of v1 with the value 7 removed:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is a copy of v1 with the value 7 removed:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_copy_if"></a> remove_copy_if
+## <a name="remove_copy_if"></a>remove_copy_if
 
-從來源範圍將項目複製到目的範圍，不過不會複製滿足述詞的項目，也不會干擾其餘項目的順序，並傳回新目的範圍結尾。
+將專案從來源範圍複製到目的範圍, 但符合述詞的元素除外。 專案會複製, 而不會干擾其餘元素的順序。 傳回新目的範圍的結尾。
 
 ```cpp
-template<class InputIterator, class OutputIterator, class Predicate>
-OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+template<class InputIterator, class OutputIterator, class UnaryPredicate>
+OutputIterator remove_copy_if(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    UnaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate>
 ForwardIterator2 remove_copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
-    Predicate pred);
+    ForwardIterator2 result,
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
-*_Pred*\
+*pred*\
 必須符合的一元述詞，也就是要被取代的項目值。
 
 ### <a name="return-value"></a>傳回值
@@ -6358,7 +6543,7 @@ ForwardIterator2 remove_copy_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性： 有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 指派。
+複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個指派。
 
 如需這些函式運作方式的相關資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -6372,74 +6557,78 @@ ForwardIterator2 remove_copy_if(
 #include <iostream>
 
 bool greater6 ( int value ) {
-   return value > 6;
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2(10);
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2(10);
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:      ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:      ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements with a value greater than 6
-   new_end = remove_copy_if ( v1.begin( ), v1.end( ),
-      v2.begin( ), greater6 );
+    // Remove elements with a value greater than 6
+    new_end = remove_copy_if ( v1.begin( ), v1.end( ),
+        v2.begin( ), greater6 );
 
-   cout << "After the appliation of remove_copy_if to v1,\n "
-        << "vector v1 is left unchanged as ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the appliation of remove_copy_if to v1,\n "
+         << "vector v1 is left unchanged as ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is a copy of v1 with values greater "
-        << "than 6 removed:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != new_end ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is a copy of v1 with values greater "
+         << "than 6 removed:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != new_end ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="remove_if"></a> remove_if
+## <a name="remove_if"></a>remove_if
 
 從指定範圍中排除滿足述詞的項目，而不會干擾其餘項目的順序，並傳回沒有指定值、新範圍的結尾。
 
 ```cpp
-template<class ForwardIterator, class Predicate>
+template<class ForwardIterator, class UnaryPredicate>
 ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+    UnaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate>
 ForwardIterator remove_if(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，指向要從中移除元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，指向要從中移除元素之範圍中最後一個元素之後的位置。
 
-*_Pred*\
+*pred*\
 必須符合的一元述詞，也就是要被取代的項目值。
 
 ### <a name="return-value"></a>傳回值
@@ -6454,7 +6643,7 @@ ForwardIterator remove_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性： 有 (`last` - `first`) 相等比較。
+複雜度為線性: 有 (`last`  -  `first`) 比較是否相等。
 
 list 具有更具效率之成員函式版本的 remove，而這會重新連結指標。
 
@@ -6467,48 +6656,50 @@ list 具有更具效率之成員函式版本的 remove，而這會重新連結�
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, new_end;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, new_end;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove elements satisfying predicate greater6
-   new_end = remove_if (v1.begin( ), v1.end( ), greater6 );
+    // Remove elements satisfying predicate greater6
+    new_end = remove_if (v1.begin( ), v1.end( ), greater6 );
 
-   cout << "Vector v1 with elements satisfying greater6 removed is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 with elements satisfying greater6 removed is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To change the sequence size, use erase
-   v1.erase (new_end, v1.end( ) );
+    // To change the sequence size, use erase
+    v1.erase (new_end, v1.end( ) );
 
-   cout << "Vector v1 resized elements satisfying greater6 removed is\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 resized elements satisfying greater6 removed is\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace"></a> 取代
+## <a name="replace"></a>取代
 
 檢查範圍內的每個項目，如果符合指定的值則予以取代。
 
@@ -6519,28 +6710,31 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
-    
-template<class ExecutionPolicy, class ForwardIterator, class T>
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
 void replace(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    const T& old_value, 
-    const T& new_value);
+    const Type& oldVal,
+    const Type& newVal);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
-*_OldVal*\
+*oldVal*\
 所取代之項目的舊值。
 
-*_NewVal*\
+*newVal*\
 要指派給具有舊值之項目的新值。
 
 ### <a name="remarks"></a>備註
@@ -6551,7 +6745,7 @@ void replace(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 個新值指派。
+複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個新值指派。`first`
 
 ### <a name="example"></a>範例
 
@@ -6562,36 +6756,37 @@ void replace(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle (v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle (v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements with a value of 7 with a value of 700
-   replace (v1.begin( ), v1.end( ), 7 , 700);
+    // Replace elements with a value of 7 with a value of 700
+    replace (v1.begin( ), v1.end( ), 7 , 700);
 
-   cout << "The vector v1 with a value 700 replacing that of 7 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 700 replacing that of 7 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_copy"></a> replace_copy
+## <a name="replace_copy"></a>replace_copy
 
 檢查來源範圍內的每個項目，如果符合指定的值則予以取代，同時將結果複製到新目的範圍。
 
@@ -6603,37 +6798,40 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
 ForwardIterator2 replace_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result,
-    const T& old_value, 
-    const T& new_value);
+    const Type& oldVal,
+    const Type& newVal);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於指向要複製已更改順序的項目之目的範圍中，第一個項目的位置。
 
-*_OldVal*\
+*oldVal*\
 所取代之項目的舊值。
 
-*_NewVal*\
+*newVal*\
 要指派給具有舊值之項目的新值。
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，用於指向要複製已更改順序的元素之目的範圍中，最後一個元素的後面一個位置。
+輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -6643,7 +6841,7 @@ ForwardIterator2 replace_copy(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性： 有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 個新值指派。
+複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個新值指派。
 
 ### <a name="example"></a>範例
 
@@ -6655,97 +6853,100 @@ ForwardIterator2 replace_copy(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   list <int> L1 (15);
-   vector <int>::iterator Iter1;
-   list <int>::iterator L_Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    list<int> L1 (15);
+    vector<int>::iterator Iter1;
+    list<int>::iterator L_Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
+    random_shuffle ( v1.begin( ), v1.end( ) );
 
-   int iii;
-   for ( iii = 0 ; iii <= 15 ; iii++ )
-      v1.push_back( 1 );
+    int iii;
+    for ( iii = 0 ; iii <= 15 ; iii++ )
+        v1.push_back( 1 );
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in one part of a vector with a value of 7
-   // with a value of 70 and copy into another part of the vector
-   replace_copy ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -15, 7 , 70);
+    // Replace elements in one part of a vector with a value of 7
+    // with a value of 70 and copy into another part of the vector
+    replace_copy ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -15, 7 , 70);
 
-   cout << "The vector v1 with a value 70 replacing that of 7 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 70 replacing that of 7 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in a vector with a value of 70
-   // with a value of 1 and copy into a list
-   replace_copy ( v1.begin( ), v1.begin( ) + 14,L1.begin( ), 7 , 1);
+    // Replace elements in a vector with a value of 70
+    // with a value of 1 and copy into a list
+    replace_copy ( v1.begin( ), v1.begin( ) + 14,L1.begin( ), 7 , 1);
 
-   cout << "The list copy L1 of v1 with the value 0 replacing "
-        << "that of 7 is:\n ( " ;
-   for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
-      cout << *L_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The list copy L1 of v1 with the value 0 replacing "
+            << "that of 7 is:\n ( " ;
+    for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
+        cout << *L_Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_copy_if"></a> replace_copy_if
+## <a name="replace_copy_if"></a>replace_copy_if
 
 檢查來源範圍內的每個項目，如果滿足指定的述詞則予以取代，同時將結果複製到新目的範圍。
 
 ```cpp
-template<class InputIterator, class OutputIterator, class Predicate, class Type>
+template<class InputIterator, class OutputIterator, class UnaryPredicate, class Type>
 OutputIterator replace_copy_if(
     InputIterator first,
     InputIterator last,
     OutputIterator result,
-    Predicate pred,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class Predicate, class T>
+    UnaryPredicate pred,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryPredicate, class Type>
 ForwardIterator2 replace_copy_if(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result,
-    Predicate pred, 
-    const T& new_value);
+    UnaryPredicate pred,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*最後一個*\
+*次*\
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
-*_Pred*\
+*pred*\
 必須符合的一元述詞，也就是要被取代的項目值。
 
-*val*\
+*value*\
 要指派給其舊值符合此述詞之項目的新值。
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，用於指向要複製已更改順序的元素之目的範圍中，最後一個元素的後面一個位置。
+輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -6755,7 +6956,7 @@ ForwardIterator2 replace_copy_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 個新值指派。
+複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個新值指派。`first`
 
 ### <a name="example"></a>範例
 
@@ -6767,93 +6968,98 @@ ForwardIterator2 replace_copy_if(
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   list <int> L1 (13);
-   vector <int>::iterator Iter1;
-   list <int>::iterator L_Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    list<int> L1 (13);
+    vector<int>::iterator Iter1;
+    list<int>::iterator L_Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
+    random_shuffle ( v1.begin( ), v1.end( ) );
 
-   int iii;
-   for ( iii = 0 ; iii <= 13 ; iii++ )
-      v1.push_back( 1 );
+    int iii;
+    for ( iii = 0 ; iii <= 13 ; iii++ )
+        v1.push_back( 1 );
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements with a value of 7 in the 1st half of a vector
-   // with a value of 70 and copy it into the 2nd half of the vector
-   replace_copy_if ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -14,
-      greater6 , 70);
+    // Replace elements with a value of 7 in the 1st half of a vector
+    // with a value of 70 and copy it into the 2nd half of the vector
+    replace_copy_if ( v1.begin( ), v1.begin( ) + 14,v1.end( ) -14,
+        greater6 , 70);
 
-   cout << "The vector v1 with values of 70 replacing those greater"
+    cout << "The vector v1 with values of 70 replacing those greater"
         << "\n than 6 in the 1st half & copied into the 2nd half is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements in a vector with a value of 70
-   // with a value of 1 and copy into a list
-   replace_copy_if ( v1.begin( ), v1.begin( ) + 13,L1.begin( ),
-      greater6 , -1 );
+    // Replace elements in a vector with a value of 70
+    // with a value of 1 and copy into a list
+    replace_copy_if ( v1.begin( ), v1.begin( ) + 13,L1.begin( ),
+        greater6 , -1 );
 
-   cout << "A list copy of vector v1 with the value -1\n replacing "
+    cout << "A list copy of vector v1 with the value -1\n replacing "
         << "those greater than 6 is:\n ( " ;
-   for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
-      cout << *L_Iter1 << " ";
-   cout << ")." << endl;
+    for ( L_Iter1 = L1.begin( ) ; L_Iter1 != L1.end( ) ; L_Iter1++ )
+        cout << *L_Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="replace_if"></a> replace_if
+## <a name="replace_if"></a>replace_if
 
 檢查範圍內的每個項目，如果滿足指定的述詞則予以取代。
 
 ```cpp
-template<class ForwardIterator, class Predicate, class Type>
+template<class ForwardIterator, class UnaryPredicate, class Type>
 void replace_if(
     ForwardIterator first,
     ForwardIterator last,
-    Predicate pred,
-    const Type& val);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+    UnaryPredicate pred,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class UnaryPredicate, class Type>
 void replace_if(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Predicate pred, 
-    const T& new_value);
+    UnaryPredicate pred,
+    const Type& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
-*_Pred*\
+*pred*\
 必須符合的一元述詞，也就是要被取代的項目值。
 
-*val*\
+*value*\
 要指派給其舊值符合此述詞之項目的新值。
 
 ### <a name="remarks"></a>備註
@@ -6862,11 +7068,11 @@ void replace_if(
 
 未取代之項目的順序會保持穩定。
 
-此演算法`replace_if`為演算法的一般化`replace`，允許任何述詞，以指定，而不是等號比較指定的常數值。
+演算法`replace_if`是演算法`replace`的一般化, 允許指定任何述詞, 而不是等於指定的常數值。
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性： 有 (`last` - `first`) 比較是否相等，而且最 (`last` - `first`) 個新值指派。
+複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個新值指派。
 
 ### <a name="example"></a>範例
 
@@ -6877,62 +7083,69 @@ void replace_if(
 #include <algorithm>
 #include <iostream>
 
-bool greater6 ( int value ) {
-   return value > 6;
+bool greater6 ( int value )
+{
+    return value > 6;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-      v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+        v1.push_back( 7 );
 
-   random_shuffle ( v1.begin( ), v1.end( ) );
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    random_shuffle ( v1.begin( ), v1.end( ) );
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Replace elements satisfying the predicate greater6
-   // with a value of 70
-   replace_if ( v1.begin( ), v1.end( ), greater6 , 70);
+    // Replace elements satisfying the predicate greater6
+    // with a value of 70
+    replace_if ( v1.begin( ), v1.end( ), greater6 , 70);
 
-   cout << "The vector v1 with a value 70 replacing those\n "
-        << "elements satisfying the greater6 predicate is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The vector v1 with a value 70 replacing those\n "
+         << "elements satisfying the greater6 predicate is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="reverse"></a> 反向
+## <a name="reverse"></a>反向
 
 反轉範圍內項目的順序。
 
 ```cpp
 template<class BidirectionalIterator>
-void reverse(BidirectionalIterator first, BidirectionalIterator last);
+void reverse(
+    BidirectionalIterator first,
+    BidirectionalIterator last);
 
 template<class ExecutionPolicy, class BidirectionalIterator>
 void reverse(
     ExecutionPolicy&& exec,
-    BidirectionalIterator first, 
+    BidirectionalIterator first,
     BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，指向要排列元素之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，指向要排列元素之範圍中最後一個元素之後的位置。
 
 ### <a name="remarks"></a>備註
@@ -6948,29 +7161,30 @@ void reverse(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+int main()
+{
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Reverse the elements in the vector
-   reverse (v1.begin( ), v1.end( ) );
+    // Reverse the elements in the vector
+    reverse (v1.begin( ), v1.end( ) );
 
-   cout << "The modified vector v1 with values reversed is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The modified vector v1 with values reversed is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -6981,7 +7195,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a> reverse_copy
+## <a name="reverse_copy"></a>reverse_copy
 
 反轉來源範圍內項目的順序，並將其複製到目的範圍
 
@@ -6989,9 +7203,9 @@ The modified vector v1 with values reversed is:
 template<class BidirectionalIterator, class OutputIterator>
 OutputIterator reverse_copy(
     BidirectionalIterator first,
-    BidirectionalIterator Last,
+    BidirectionalIterator last,
     OutputIterator result);
-    
+
 template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
 ForwardIterator reverse_copy(
     ExecutionPolicy&& exec,
@@ -7002,18 +7216,21 @@ ForwardIterator reverse_copy(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，用於指向要排列的來源範圍中，第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，用於指向要排列元素的來源範圍中，最後一個元素的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，用於指向要複製已更改順序的元素之目的範圍中，最後一個元素的後面一個位置。
+輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -7028,38 +7245,39 @@ ForwardIterator reverse_copy(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2( 10 );
-   vector <int>::iterator Iter1, Iter2;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2( 10 );
+    vector<int>::iterator Iter1, Iter2;
 
-   int i;
-   for ( i = 0 ; i <= 9 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 9 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "The original vector v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Reverse the elements in the vector
-   reverse_copy (v1.begin( ), v1.end( ), v2.begin( ) );
+    // Reverse the elements in the vector
+    reverse_copy (v1.begin( ), v1.end( ), v2.begin( ) );
 
-   cout << "The copy v2 of the reversed vector v1 is:\n ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "The copy v2 of the reversed vector v1 is:\n ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   cout << "The original vector v1 remains unmodified as:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "The original vector v1 remains unmodified as:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="rotate"></a> 旋轉
+## <a name="rotate"></a>向
 
 交換兩個相鄰範圍的項目。
 
@@ -7069,7 +7287,7 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
-    
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator rotate(
     ExecutionPolicy&& exec,
@@ -7080,20 +7298,23 @@ ForwardIterator rotate(
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*\
+*干預*\
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
-*最後一個*\
+*次*\
 正向迭代器，用於定址要旋轉之範圍中最後一個項目的後面一個位置。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性，最多 (`last` - `first`) 次交換。
+複雜度為線性, 最多有 (`last`  -  `first`) 次交換。
 
 ### <a name="example"></a>範例
 
@@ -7106,49 +7327,49 @@ ForwardIterator rotate(
 #include <iostream>
 
 int main() {
-   using namespace std;
-   vector <int> v1;
-   deque <int> d1;
-   vector <int>::iterator v1Iter1;
-   deque<int>::iterator d1Iter1;
+    using namespace std;
+    vector<int> v1;
+    deque<int> d1;
+    vector<int>::iterator v1Iter1;
+    deque<int>::iterator d1Iter1;
 
-   int i;
-   for ( i = -3 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = -3 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =0 ; ii <= 5 ; ii++ )
-   {
-      d1.push_back( ii );
-   }
+    int ii;
+    for ( ii =0 ; ii <= 5 ; ii++ )
+    {
+        d1.push_back( ii );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   rotate ( v1.begin( ), v1.begin( ) + 3 , v1.end( ) );
-   cout << "After rotating, vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    rotate ( v1.begin( ), v1.begin( ) + 3 , v1.end( ) );
+    cout << "After rotating, vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "The original deque d1 is ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "The original deque d1 is ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= d1.end( ) - d1.begin( ) ) {
-      rotate ( d1.begin( ), d1.begin( ) + 1 , d1.end( ) );
-      cout << "After the rotation of a single deque element to the back,\n d1 is   ( " ;
-      for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-         cout << *d1Iter1  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= d1.end( ) - d1.begin( ) ) {
+        rotate ( d1.begin( ), d1.begin( ) + 1 , d1.end( ) );
+        cout << "After the rotation of a single deque element to the back,\n d1 is   ( " ;
+        for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+            cout << *d1Iter1 << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
@@ -7170,7 +7391,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a> rotate_copy
+## <a name="rotate_copy"></a>rotate_copy
 
 交換來源範圍內兩個相鄰範圍的項目，並將結果複製到目的範圍。
 
@@ -7181,28 +7402,31 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
-    
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 rotate_copy(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 middle,
-    ForwardIterator1 last, 
+    ForwardIterator1 last,
     ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*中間*\
+*干預*\
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
-*最後一個*\
+*次*\
 正向迭代器，用於定址要旋轉之範圍中最後一個項目的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -7213,7 +7437,7 @@ ForwardIterator2 rotate_copy(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性，最多 (`last` - `first`) 次交換。
+複雜度為線性, 最多有 (`last`  -  `first`) 次交換。
 
 ### <a name="example"></a>範例
 
@@ -7225,66 +7449,69 @@ ForwardIterator2 rotate_copy(
 #include <algorithm>
 #include <iostream>
 
-int main() {
-   using namespace std;
-   vector <int> v1 , v2 ( 9 );
-   deque <int> d1 , d2 ( 6 );
-   vector <int>::iterator v1Iter , v2Iter;
-   deque<int>::iterator d1Iter , d2Iter;
+int main()
+{
+    using namespace std;
+    vector<int> v1 , v2 ( 9 );
+    deque<int> d1 , d2 ( 6 );
+    vector<int>::iterator v1Iter , v2Iter;
+    deque<int>::iterator d1Iter , d2Iter;
 
-   int i;
-   for ( i = -3 ; i <= 5 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = -3 ; i <= 5 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii =0 ; ii <= 5 ; ii++ )
-      d1.push_back( ii );
+    int ii;
+    for ( ii =0 ; ii <= 5 ; ii++ )
+        d1.push_back( ii );
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
-      cout << *v1Iter  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
+        cout << *v1Iter << " ";
+    cout << ")." << endl;
 
-   rotate_copy ( v1.begin( ), v1.begin( ) + 3 , v1.end( ), v2.begin( ) );
-   cout << "After rotating, the vector v1 remains unchanged as:\n v1 = ( " ;
-   for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
-      cout << *v1Iter  << " ";
-   cout << ")." << endl;
+    rotate_copy ( v1.begin( ), v1.begin( ) + 3 , v1.end( ), v2.begin( ) );
+    cout << "After rotating, the vector v1 remains unchanged as:\n v1 = ( " ;
+    for ( v1Iter = v1.begin( ) ; v1Iter != v1.end( ) ;v1Iter ++ )
+        cout << *v1Iter << " ";
+    cout << ")." << endl;
 
-   cout << "After rotating, the copy of vector v1 in v2 is:\n v2 = ( " ;
-   for ( v2Iter = v2.begin( ) ; v2Iter != v2.end( ) ;v2Iter ++ )
-      cout << *v2Iter  << " ";
-   cout << ")." << endl;
+    cout << "After rotating, the copy of vector v1 in v2 is:\n v2 = ( " ;
+    for ( v2Iter = v2.begin( ) ; v2Iter != v2.end( ) ;v2Iter ++ )
+        cout << *v2Iter << " ";
+    cout << ")." << endl;
 
-   cout << "The original deque d1 is ( " ;
-   for ( d1Iter = d1.begin( ) ; d1Iter != d1.end( ) ;d1Iter ++ )
-      cout << *d1Iter  << " ";
-   cout << ")." << endl;
+    cout << "The original deque d1 is ( " ;
+    for ( d1Iter = d1.begin( ) ; d1Iter != d1.end( ) ;d1Iter ++ )
+        cout << *d1Iter << " ";
+    cout << ")." << endl;
 
-   int iii = 1;
-   while ( iii <= d1.end( ) - d1.begin( ) )
-   {
-      rotate_copy ( d1.begin( ), d1.begin( ) + iii , d1.end( ), d2.begin( ) );
-      cout << "After the rotation of a single deque element to the back,\n d2 is   ( " ;
-      for ( d2Iter = d2.begin( ) ; d2Iter != d2.end( ) ;d2Iter ++ )
-         cout << *d2Iter  << " ";
-      cout << ")." << endl;
-      iii++;
-   }
+    int iii = 1;
+    while ( iii <= d1.end( ) - d1.begin( ) )
+    {
+        rotate_copy ( d1.begin( ), d1.begin( ) + iii , d1.end( ), d2.begin( ) );
+        cout << "After the rotation of a single deque element to the back,\n d2 is   ( " ;
+        for ( d2Iter = d2.begin( ) ; d2Iter != d2.end( ) ;d2Iter ++ )
+            cout << *d2Iter << " ";
+        cout << ")." << endl;
+        iii++;
+    }
 }
 ```
 
-## <a name="sample"></a> 範例
+## <a name="sample"></a>抽樣
 
 ```cpp
-template<class PopulationIterator, class SampleIterator,
-class Distance, class UniformRandomBitGenerator>
-SampleIterator sample(PopulationIterator first, PopulationIterator last,
-SampleIterator out, Distance n,
-UniformRandomBitGenerator&& g);
+template<class PopulationIterator, class SampleIterator, class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(
+    PopulationIterator first,
+    PopulationIterator last,
+    SampleIterator out,
+    Distance n,
+    UniformRandomBitGenerator&& g);
 ```
 
-## <a name="search"></a> 搜尋
+## <a name="search"></a>search
 
 在目標範圍中搜尋第一個序列，其項目等於指定項目序列中的項目，或在二元述詞指定的意義上，其項目相當於指定序列中的項目。
 
@@ -7296,40 +7523,42 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2);
 
-template<class ForwardIterator1, class ForwardIterator2, class Predicate>
+template<class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 search(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2,
     ForwardIterator2 last2
-    Predicate comp);
-    
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator1 search(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryPredicate>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryPredicate>
 ForwardIterator1 search(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     BinaryPredicate pred);
-    
+
 template <class ForwardIterator, class Searcher>
 ForwardIterator search(
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
@@ -7343,8 +7572,11 @@ ForwardIterator search(
 *last2*\
 正向迭代器，其定址要比對範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+
+*搜索*\
+封裝要尋找之模式的搜尋, 以及要使用的搜尋演算法。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7371,77 +7603,78 @@ ForwardIterator search(
 // Return whether second element is twice the first
 bool twice (int elem1, int elem2 )
 {
-   return 2 * elem1 == elem2;
+    return 2 * elem1 == elem2;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   list <int> L1;
-   vector <int>::iterator Iter1, Iter2;
-   list <int>::iterator L1_Iter, L1_inIter;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    list<int> L1;
+    vector<int>::iterator Iter1, Iter2;
+    list<int>::iterator L1_Iter, L1_inIter;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   int ii;
-   for ( ii = 4 ; ii <= 5 ; ii++ )
-   {
-      L1.push_back( 5 * ii );
-   }
+    int ii;
+    for ( ii = 4 ; ii <= 5 ; ii++ )
+    {
+        L1.push_back( 5 * ii );
+    }
 
-   int iii;
-   for ( iii = 2 ; iii <= 4 ; iii++ )
-   {
-      v2.push_back( 10 * iii );
-   }
+    int iii;
+    for ( iii = 2 ; iii <= 4 ; iii++ )
+    {
+        v2.push_back( 10 * iii );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   cout << "List L1 = ( " ;
-   for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
-      cout << *L1_Iter << " ";
-   cout << ")" << endl;
+    cout << "List L1 = ( " ;
+    for ( L1_Iter = L1.begin( ) ; L1_Iter!= L1.end( ) ; L1_Iter++ )
+        cout << *L1_Iter << " ";
+    cout << ")" << endl;
 
-   cout << "Vector v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-      cout << ")" << endl;
+    cout << "Vector v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+        cout << ")" << endl;
 
-   // Searching v1 for first match to L1 under identity
-   vector <int>::iterator result1;
-   result1 = search (v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
+    // Searching v1 for first match to L1 under identity
+    vector<int>::iterator result1;
+    result1 = search (v1.begin( ), v1.end( ), L1.begin( ), L1.end( ) );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is at least one match of L1 in v1"
-           << "\n and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is at least one match of L1 in v1"
+            << "\n and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for a match to L1 under the binary predicate twice
-   vector <int>::iterator result2;
-   result2 = search  (v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
+    // Searching v1 for a match to L1 under the binary predicate twice
+    vector<int>::iterator result2;
+    result2 = search (v1.begin( ), v1.end( ), v2.begin( ), v2.end( ), twice );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match of L1 in v1."
-           << endl;
-   else
-      cout << "There is a sequence of elements in v1 that "
-           << "are equivalent\n to those in v2 under the binary "
-           << "predicate twice\n and the first one begins at position "
-           << result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match of L1 in v1."
+            << endl;
+    else
+        cout << "There is a sequence of elements in v1 that "
+            << "are equivalent\n to those in v2 under the binary "
+            << "predicate twice\n and the first one begins at position "
+            << result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -7456,7 +7689,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a> search_n
+## <a name="search_n"></a>search_n
 
 在範圍中搜尋包含指定項目數的第一個子序列，這些項目具有特定值或在二元述詞指定的意義上與該值關聯。
 
@@ -7466,35 +7699,38 @@ ForwardIterator1 search_n(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     Diff2 count,
-    const Type& val);
+    const Type& value);
 
 template<class ForwardIterator1, class Diff2, class Type, class BinaryPredicate>
 ForwardIterator1 search_n(
     ForwardIterator1 first1,
     ForwardIterator1 last1,
     Diff2 count,
-    const Type& val,
-    BinaryPredicate comp);
-    
-template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
-ForwardIterator search_n(
-    ExecutionPolicy&& exec,
-    ForwardIterator first, 
-    ForwardIterator last,
-    Size count, const T& value);
+    const Type& value,
+    BinaryPredicate pred);
 
-template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
-class BinaryPredicate>
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type>
 ForwardIterator search_n(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
-    Size count, 
-    const T& value,
+    Size count,
+    const Type& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Type, class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Size count,
+    const Type& value,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
@@ -7505,10 +7741,10 @@ ForwardIterator search_n(
 *計數*\
 所搜尋子序列的大小。
 
-*val*\
+*value*\
 所搜尋序列中元素的值。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -7536,65 +7772,65 @@ ForwardIterator search_n(
 // Return whether second element is 1/2 of the first
 bool one_half ( int elem1, int elem2 )
 {
-   return elem1 == 2 * elem2;
+    return elem1 == 2 * elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( 5  );
-   }
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( 5 );
+    }
 
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 5 * i );
-   }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 5 * i );
+    }
 
-   for ( i = 0 ; i <= 2 ; i++ )
-   {
-      v1.push_back( 10  );
-   }
+    for ( i = 0 ; i <= 2 ; i++ )
+    {
+        v1.push_back( 10 );
+    }
 
-   cout << "Vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // Searching v1 for first match to (5 5 5) under identity
-   vector <int>::iterator result1;
-   result1 = search_n ( v1.begin( ), v1.end( ), 3, 5 );
+    // Searching v1 for first match to (5 5 5) under identity
+    vector<int>::iterator result1;
+    result1 = search_n ( v1.begin( ), v1.end( ), 3, 5 );
 
-   if ( result1 == v1.end( ) )
-      cout << "There is no match for a sequence ( 5 5 5 ) in v1."
-           << endl;
-   else
-      cout << "There is at least one match of a sequence ( 5 5 5 )"
-           << "\n in v1 and the first one begins at "
-           << "position "<< result1 - v1.begin( ) << "." << endl;
+    if ( result1 == v1.end( ) )
+        cout << "There is no match for a sequence ( 5 5 5 ) in v1."
+            << endl;
+    else
+        cout << "There is at least one match of a sequence ( 5 5 5 )"
+            << "\n in v1 and the first one begins at "
+            << "position "<< result1 - v1.begin( ) << "." << endl;
 
-   // Searching v1 for first match to (5 5 5) under one_half
-   vector <int>::iterator result2;
-   result2 = search_n (v1.begin( ), v1.end( ), 3, 5, one_half );
+    // Searching v1 for first match to (5 5 5) under one_half
+    vector<int>::iterator result2;
+    result2 = search_n (v1.begin( ), v1.end( ), 3, 5, one_half );
 
-   if ( result2 == v1.end( ) )
-      cout << "There is no match for a sequence ( 5 5 5 ) in v1"
-           << " under the equivalence predicate one_half." << endl;
-   else
-      cout << "There is a match of a sequence ( 5 5 5 ) "
-           << "under the equivalence\n predicate one_half "
-           << "in v1 and the first one begins at "
-           << "position "<< result2 - v1.begin( ) << "." << endl;
+    if ( result2 == v1.end( ) )
+        cout << "There is no match for a sequence ( 5 5 5 ) in v1"
+            << " under the equivalence predicate one_half." << endl;
+    else
+        cout << "There is a match of a sequence ( 5 5 5 ) "
+            << "under the equivalence\n predicate one_half "
+            << "in v1 and the first one begins at "
+            << "position "<< result2 - v1.begin( ) << "." << endl;
 }
 ```
 
@@ -7606,51 +7842,52 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a> set_difference
+## <a name="set_difference"></a>set_difference
 
 將屬於一個排序來源範圍但不屬於第二個排序來源範圍的所有項目聯集為單一排序的目的範圍，其中順序準則可由二元述詞指定。
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class OutputIterator>
 OutputIterator set_difference(
-    InputIterator1  first1,
-    InputIterator1  last1,
-    InputIterator2  first2,
-    InputIterator2  last2,
-    OutputIterator  result );
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_difference(
-    InputIterator1  first1,
-    InputIterator1  last1,
-    InputIterator2  first2,
-    InputIterator2  last2,
-    OutputIterator  result,
-    BinaryPredicate  comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    InputIterator2 last2,
+    OutputIterator result,
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的差異。
@@ -7664,11 +7901,11 @@ ForwardIterator set_difference(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的差異。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的差異。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7686,7 +7923,7 @@ ForwardIterator set_difference(
 
 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，使得第一個來源範圍中的元素比第二個來源範圍多，則目的範圍會包含第一個來源範圍中這些元素的發生次數超過第二個來源範圍中這些元素的發生次數的數目。
 
-演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 次比較非空白來源範圍。
+此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
 
 ### <a name="example"></a>範例
 
@@ -7701,113 +7938,113 @@ ForwardIterator set_difference(
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if (elem1 < 0)
-      elem1 = - elem1;
-   if (elem2 < 0)
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if (elem1 < 0)
+        elem1 = - elem1;
+    if (elem2 < 0)
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -1 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -1 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 0 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 0 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference in asscending
-   // order with the default binary predicate less <int>( )
-   Result1 = set_difference ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Set_difference of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a difference in asscending
+    // order with the default binary predicate less<int>( )
+    Result1 = set_difference ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Set_difference of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference in descending
-   // order specify binary predicate greater<int>( )
-   Result2 = set_difference ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Set_difference of source ranges with binary"
-        << "predicate greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a difference in descending
+    // order specify binary predicate greater<int>( )
+    Result2 = set_difference ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Set_difference of source ranges with binary"
+         << "predicate greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a difference applying a user
-   // defined binary predicate mod_lesser
-   Result3 = set_difference (  v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Set_difference of source ranges with binary "
-        << "predicate mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a difference applying a user
+    // defined binary predicate mod_lesser
+    Result3 = set_difference ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Set_difference of source ranges with binary "
+         << "predicate mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_intersection"></a> set_intersection
+## <a name="set_intersection"></a>set_intersection
 
 將屬於兩個排序來源範圍的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。
 
@@ -7818,40 +8055,41 @@ OutputIterator set_intersection(
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
-    OutputIterator result );
+    OutputIterator result);
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_intersection(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_intersection(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_intersection(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的交集。
@@ -7865,10 +8103,11 @@ ForwardIterator set_intersection(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的交集。
 
-**_** *結果*集成單一排序範圍代表兩個來源的交集為輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置範圍。
+*result*\
+輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的交集。
 
-*Comp*\
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7886,7 +8125,7 @@ ForwardIterator set_intersection(
 
 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
-演算法的複雜度為線性，最多有 2 \* (( *last1-first1*) + ( *last2-first2*))-1 次比較非空白來源範圍。
+此演算法的複雜度為線性, 最多`2 * ((last1 - first1) + (last2 - first2)) - 1`可為非空白來源範圍進行比較。
 
 ### <a name="example"></a>範例
 
@@ -7899,109 +8138,111 @@ ForwardIterator set_intersection(
 #include <iostream>
 
 // Return whether modulus of elem1 is less than modulus of elem2
-bool mod_lesser (int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+bool mod_lesser (int elem1, int elem2 )
+{
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+int main()
+{
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less than ordering
-   int i;
-   for ( i = -1 ; i <= 3 ; i++ )
-      v1a.push_back( i );
+    // Constructing vectors v1a & v1b with default less than ordering
+    int i;
+    for ( i = -1 ; i <= 3 ; i++ )
+        v1a.push_back( i );
 
-   int ii;
-   for ( ii =-3 ; ii <= 1 ; ii++ )
-      v1b.push_back( ii );
+    int ii;
+    for ( ii =-3 ; ii <= 1 ; ii++ )
+        v1b.push_back( ii );
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        << "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        << "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
-   vector <int>::iterator Iter3a,  Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-           <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection in asscending order with the
-   // default binary predicate less <int>( )
-   Result1 = set_intersection ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Intersection of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; ++Iter1 )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection in asscending order with the
+    // default binary predicate less<int>( )
+    Result1 = set_intersection ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Intersection of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; ++Iter1 )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection in descending order, specify
-   // binary predicate greater<int>( )
-   Result2 = set_intersection ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Intersection of source ranges with binary predicate"
-        << " greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; ++Iter2 )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection in descending order, specify
+    // binary predicate greater<int>( )
+    Result2 = set_intersection ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Intersection of source ranges with binary predicate"
+            << " greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; ++Iter2 )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into an intersection applying a user-defined
-   // binary predicate mod_lesser
-   Result3 = set_intersection ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Intersection of source ranges with binary predicate "
-        << "mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; ++Iter3 )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into an intersection applying a user-defined
+    // binary predicate mod_lesser
+    Result3 = set_intersection ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Intersection of source ranges with binary predicate "
+            << "mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; ++Iter3 )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_symmetric_difference"></a> set_symmetric_difference
+## <a name="set_symmetric_difference"></a>set_symmetric_difference
 
 將屬於兩個排序來源範圍之一 (但非兩者) 的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。
 
@@ -8014,38 +8255,39 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_symmetric_difference(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_symmetric_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_symmetric_difference(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個項目的位置，此聯集範圍代表兩個來源範圍的對稱差。
@@ -8059,10 +8301,11 @@ ForwardIterator set_symmetric_difference(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置，此聯集範圍代表兩個來源範圍的對稱差。
 
-**_** *結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置是集成單一排序範圍代表兩個的對稱差異來源範圍。
+*result*\
+輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的對稱差。
 
-*comp*<br/>
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8080,7 +8323,7 @@ ForwardIterator set_symmetric_difference(
 
 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的項目，且這些項目在其中一個來源範圍中出現的數目，超過在第二個來源範圍中出現的數目，則目的範圍會包含同時出現之數目的絕對值。
 
-演算法的複雜度為線性，最多有 2 \* ((*last1-first1*)-(*last2-first2*))-1 次比較非空白來源範圍。
+此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
 
 ### <a name="example"></a>範例
 
@@ -8095,113 +8338,113 @@ ForwardIterator set_symmetric_difference(
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser (int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a,  Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less-than ordering
-   int i;
-   for ( i = -1 ; i <= 4 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less-than ordering
+    int i;
+    for ( i = -1 ; i <= 4 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 0 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 0 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) ,  v2 ( v1 );
-   vector <int>::iterator Iter2a, Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a, Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference in ascending
-   // order with the default binary predicate less <int>( )
-   Result1 = set_symmetric_difference ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Set_symmetric_difference of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference in ascending
+    // order with the default binary predicate less<int>( )
+    Result1 = set_symmetric_difference ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Set_symmetric_difference of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference in descending
-   // order, specify binary predicate greater<int>( )
-   Result2 = set_symmetric_difference ( v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Set_symmetric_difference of source ranges with binary"
-        << "predicate greater specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference in descending
+    // order, specify binary predicate greater<int>( )
+    Result2 = set_symmetric_difference ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Set_symmetric_difference of source ranges with binary"
+         << "predicate greater specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a symmetric difference applying a user
-   // defined binary predicate mod_lesser
-   Result3 = set_symmetric_difference ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Set_symmetric_difference of source ranges with binary "
-        << "predicate mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a symmetric difference applying a user
+    // defined binary predicate mod_lesser
+    Result3 = set_symmetric_difference ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Set_symmetric_difference of source ranges with binary "
+         << "predicate mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="set_union"></a> set_union
+## <a name="set_union"></a>set_union
 
 將至少屬於兩個排序來源範圍之一的所有項目聯集為單一排序目的範圍，其中順序準則可由二元述詞指定。
 
@@ -8214,38 +8457,39 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result );
 
-template<class InputIterator1, class InputIterator2, class OutputIterator, class BinaryPredicate>
+template<class InputIterator1, class InputIterator2, class OutputIterator, class Compare>
 OutputIterator set_union(
     InputIterator1 first1,
     InputIterator1 last1,
     InputIterator2 first2,
     InputIterator2 last2,
     OutputIterator result,
-    BinaryPredicate comp );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator>
+    Compare pred );
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator>
 ForwardIterator set_union(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
     ForwardIterator result);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class Compare>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class Compare>
 ForwardIterator set_union(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator2 last2,
-    ForwardIterator result, 
-    Compare comp);
+    ForwardIterator result,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個排序來源範圍的第一個範圍中，第一個元素的位置，此聯集範圍代表兩個來源範圍的聯集。
@@ -8259,10 +8503,11 @@ ForwardIterator set_union(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的聯集。
 
-**_** *結果*輸出迭代器，定址目的範圍，其中兩個來源範圍中的第一個元素的位置是集成單一排序範圍代表兩個來源範圍的聯集。
+*result*\
+輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的聯集。
 
-*comp*<br/>
-使用者定義述詞函式物件，定義一個項目大於另一個項目的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8276,11 +8521,11 @@ ForwardIterator set_union(
 
 每個排序來源範圍必須根據 `merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 此演算法不會修改來源範圍`merge`。
+這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法`merge`不會修改來源範圍。
 
 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
-演算法的複雜度為線性，最多有 2 \* (( *last1-first1*)-( *last2-first2*))-1 的比較。
+演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`有個比較。
 
 ### <a name="example"></a>範例
 
@@ -8295,178 +8540,182 @@ ForwardIterator set_union(
 // Return whether modulus of elem1 is less than modulus of elem2
 bool mod_lesser ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 < elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 < elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1a, v1b, v1 ( 12 );
-   vector <int>::iterator Iter1a, Iter1b, Iter1, Result1;
+    using namespace std;
+    vector<int> v1a, v1b, v1 ( 12 );
+    vector<int>::iterator Iter1a, Iter1b, Iter1, Result1;
 
-   // Constructing vectors v1a & v1b with default less than ordering
-   int i;
-   for ( i = -1 ; i <= 3 ; i++ )
-   {
-      v1a.push_back(  i );
-   }
+    // Constructing vectors v1a & v1b with default less than ordering
+    int i;
+    for ( i = -1 ; i <= 3 ; i++ )
+    {
+        v1a.push_back( i );
+    }
 
-   int ii;
-   for ( ii =-3 ; ii <= 1 ; ii++ )
-   {
-      v1b.push_back(  ii  );
-   }
+    int ii;
+    for ( ii =-3 ; ii <= 1 ; ii++ )
+    {
+        v1b.push_back( ii );
+    }
 
-   cout << "Original vector v1a with range sorted by the\n "
-        <<  "binary predicate less than is  v1a = ( " ;
-   for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
-      cout << *Iter1a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1a with range sorted by the\n "
+         << "binary predicate less than is v1a = ( " ;
+    for ( Iter1a = v1a.begin( ) ; Iter1a != v1a.end( ) ; Iter1a++ )
+        cout << *Iter1a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v1b with range sorted by the\n "
-        <<  "binary predicate less than is  v1b = ( " ;
-   for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
-      cout << *Iter1b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1b with range sorted by the\n "
+         << "binary predicate less than is v1b = ( " ;
+    for ( Iter1b = v1b.begin( ) ; Iter1b != v1b.end( ) ; Iter1b++ )
+        cout << *Iter1b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v2a & v2b with ranges sorted by greater
-   vector <int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
-   vector <int>::iterator Iter2a,  Iter2b, Iter2, Result2;
-   sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
-   sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
+    // Constructing vectors v2a & v2b with ranges sorted by greater
+    vector<int> v2a ( v1a ) , v2b ( v1b ) , v2 ( v1 );
+    vector<int>::iterator Iter2a, Iter2b, Iter2, Result2;
+    sort ( v2a.begin( ), v2a.end( ), greater<int>( ) );
+    sort ( v2b.begin( ), v2b.end( ), greater<int>( ) );
 
-   cout << "Original vector v2a with range sorted by the\n "
-        <<  "binary predicate greater is   v2a =  ( " ;
-   for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
-      cout << *Iter2a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2a with range sorted by the\n "
+         << "binary predicate greater is   v2a = ( " ;
+    for ( Iter2a = v2a.begin( ) ; Iter2a != v2a.end( ) ; Iter2a++ )
+        cout << *Iter2a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v2b with range sorted by the\n "
-        <<  "binary predicate greater is   v2b =  ( " ;
-   for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
-      cout << *Iter2b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v2b with range sorted by the\n "
+         << "binary predicate greater is   v2b = ( " ;
+    for ( Iter2b = v2b.begin( ) ; Iter2b != v2b.end( ) ; Iter2b++ )
+        cout << *Iter2b << " ";
+    cout << ")." << endl;
 
-   // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
-   vector <int> v3a ( v1a ), v3b ( v1b ) ,  v3 ( v1 );
-   vector <int>::iterator Iter3a, Iter3b, Iter3, Result3;
-   sort ( v3a.begin( ), v3a.end( ), mod_lesser );
-   sort ( v3b.begin( ), v3b.end( ), mod_lesser  );
+    // Constructing vectors v3a & v3b with ranges sorted by mod_lesser
+    vector<int> v3a ( v1a ), v3b ( v1b ) , v3 ( v1 );
+    vector<int>::iterator Iter3a, Iter3b, Iter3, Result3;
+    sort ( v3a.begin( ), v3a.end( ), mod_lesser );
+    sort ( v3b.begin( ), v3b.end( ), mod_lesser );
 
-   cout << "Original vector v3a with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3a =  ( " ;
-   for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
-      cout << *Iter3a << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3a with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3a = ( " ;
+    for ( Iter3a = v3a.begin( ) ; Iter3a != v3a.end( ) ; Iter3a++ )
+        cout << *Iter3a << " ";
+    cout << ")." << endl;
 
-   cout << "Original vector v3b with range sorted by the\n "
-        <<  "binary predicate mod_lesser is   v3b =  ( " ;
-   for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
-      cout << *Iter3b << " ";
-   cout << ")." << endl;
+    cout << "Original vector v3b with range sorted by the\n "
+         << "binary predicate mod_lesser is   v3b = ( " ;
+    for ( Iter3b = v3b.begin( ) ; Iter3b != v3b.end( ) ; Iter3b++ )
+        cout << *Iter3b << " ";
+    cout << ")." << endl;
 
-   // To combine into a union in ascending order with the default
-    // binary predicate less <int>( )
-   Result1 = set_union ( v1a.begin( ), v1a.end( ),
-      v1b.begin( ), v1b.end( ), v1.begin( ) );
-   cout << "Union of source ranges with default order,"
-        << "\n vector v1mod =  ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // To combine into a union in ascending order with the default
+        // binary predicate less<int>( )
+    Result1 = set_union ( v1a.begin( ), v1a.end( ),
+        v1b.begin( ), v1b.end( ), v1.begin( ) );
+    cout << "Union of source ranges with default order,"
+         << "\n vector v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != Result1 ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // To combine into a union in descending order, specify binary
-   // predicate greater<int>( )
-   Result2 = set_union (  v2a.begin( ), v2a.end( ),
-      v2b.begin( ), v2b.end( ),v2.begin( ), greater <int>( ) );
-   cout << "Union of source ranges with binary predicate greater "
-        << "specified,\n vector v2mod  = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    // To combine into a union in descending order, specify binary
+    // predicate greater<int>( )
+    Result2 = set_union ( v2a.begin( ), v2a.end( ),
+        v2b.begin( ), v2b.end( ),v2.begin( ), greater<int>( ) );
+    cout << "Union of source ranges with binary predicate greater "
+         << "specified,\n vector v2mod = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != Result2 ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // To combine into a union applying a user-defined
-   // binary predicate mod_lesser
-   Result3 = set_union ( v3a.begin( ), v3a.end( ),
-      v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
-   cout << "Union of source ranges with binary predicate "
-        << "mod_lesser specified,\n vector v3mod  = ( " ; ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    // To combine into a union applying a user-defined
+    // binary predicate mod_lesser
+    Result3 = set_union ( v3a.begin( ), v3a.end( ),
+        v3b.begin( ), v3b.end( ), v3.begin( ), mod_lesser );
+    cout << "Union of source ranges with binary predicate "
+         << "mod_lesser specified,\n vector v3mod = ( " ; ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != Result3 ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="shuffle"></a> 隨機播放
+## <a name="shuffle"></a>播放
 
 使用亂數產生器隨機播放 (重新整理) 指定範圍的元素。
 
 ```cpp
 template<class RandomAccessIterator, class UniformRandomNumberGenerator>
-void shuffle(RandomAccessIterator first,
+void shuffle(
+    RandomAccessIterator first,
     RandomAccessIterator last,
     UniformRandomNumberGenerator&& gen);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 範圍中要隨機播放之第一個元素的迭代器，內含。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*最後一個*\
+*次*\
 範圍中要隨機播放之最後一個元素的迭代器，專用。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*一般*\
+*代*\
 `shuffle()` 函式將用於作業的亂數產生器。 必須符合 `UniformRandomNumberGenerator` 的需求。
 
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，以及使用 `shuffle()` 的程式碼範例，請參閱 [\<random>](../standard-library/random.md)。
 
-## <a name="sort"></a> 排序
+## <a name="sort"></a>方式
 
 將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則。
 
 ```cpp
 template<class RandomAccessIterator>
-   void sort(
-      RandomAccessIterator first,
-      RandomAccessIterator last);
+void sort(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class Predicate>
-   void sort(
-      RandomAccessIterator first,
-      RandomAccessIterator last,
-      Predicate comp);
-      
+template<class RandomAccessIterator, class Compare>
+void sort(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 此二元述詞會採用兩個引數，並傳回 **，則為 true**如果兩個引數的順序並**false**否則。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
+*pred*\
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 此二元述詞接受兩個引數, 並在兩個引數為順序時傳回**true** , 否則傳回**false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -8474,7 +8723,7 @@ void sort(
 
 如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法不穩定，因此不保證保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
 
-平均排序複雜度*O*( *N*記錄*N*)，其中*N* =  *姓氏-名字*.
+排序複雜度的平均值是, 其中`O( N log N )` *N*  = 是*最後* - *一個*。
 
 ### <a name="example"></a>範例
 
@@ -8489,51 +8738,51 @@ void sort(
 // Return whether first element is greater than the second
 bool UDgreater ( int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 5 ; ii++ )
-   {
-      v1.push_back( 2 * ii + 1 );
-   }
+    int ii;
+    for ( ii = 0 ; ii <= 5 ; ii++ )
+    {
+        v1.push_back( 2 * ii + 1 );
+    }
 
-   cout << "Original vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   sort( v1.begin( ), v1.end( ) );
-   cout << "Sorted vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    sort( v1.begin( ), v1.end( ) );
+    cout << "Sorted vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order. specify binary predicate
-   sort( v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "Resorted (greater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order. specify binary predicate
+    sort( v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "Resorted (greater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   sort( v1.begin( ), v1.end( ), UDgreater );
-   cout << "Resorted (UDgreater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    sort( v1.begin( ), v1.end( ), UDgreater );
+    cout << "Resorted (UDgreater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -8544,33 +8793,33 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a> sort_heap
+## <a name="sort_heap"></a>sort_heap
 
 將堆積轉換為排序的範圍。
 
 ```cpp
 template<class RandomAccessIterator>
-   void sort_heap(
-      RandomAccessIterator first,
-      RandomAccessIterator last);
+void sort_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last);
 
-template<class RandomAccessIterator, class Predicate>
-   void sort_heap(
-      RandomAccessIterator first,
-      RandomAccessIterator last,
-      Predicate comp);
+template<class RandomAccessIterator, class Compare>
+void sort_heap(
+    RandomAccessIterator first,
+    RandomAccessIterator last,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 隨機存取迭代器，定址目標堆積中第一個元素的位置。
 
-*最後一個*\
+*次*\
 隨機存取迭代器，定址目標堆積中最後一個元素之後的位置。
 
-*Comp*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -8588,7 +8837,7 @@ template<class RandomAccessIterator, class Predicate>
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為最*N*記錄檔*N*，其中*N* = (*姓氏-名字*)。
+`N log N`複雜程度最高, 其中*N*  = 是*最後* - 一次。 
 
 ### <a name="example"></a>範例
 
@@ -8603,19 +8852,23 @@ template<class RandomAccessIterator, class Predicate>
 #include <vector>
 using namespace std;
 
-void print(const string& s, const vector<int>& v) {
+void print(const string& s, const vector<int>& v)
+{
     cout << s << ": ( ";
 
-    for (auto i = v.begin(); i != v.end(); ++i) {
+    for (auto i = v.begin(); i != v.end(); ++i)
+    {
         cout << *i << " ";
     }
 
     cout << ")" << endl;
 }
 
-int main() {
+int main()
+{
     vector<int> v;
-    for (int i = 1; i <= 9; ++i) {
+    for (int i = 1; i <= 9; ++i)
+    {
         v.push_back(i);
     }
     print("Initially", v);
@@ -8640,35 +8893,38 @@ int main() {
 }
 ```
 
-## <a name="stable_partition"></a> stable_partition
+## <a name="stable_partition"></a>stable_partition
 
 將範圍中的項目分類為兩個斷續集合，而滿足一元述詞的項目在無法滿足一元述詞的項目之前，保留對等項目的相對順序。
 
 ```cpp
-template<class BidirectionalIterator, class Predicate>
+template<class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate pred );
-    
-template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+    UnaryPredicate pred );
+
+template<class ExecutionPolicy, class BidirectionalIterator, class UnaryPredicate>
 BidirectionalIterator stable_partition(
     ExecutionPolicy&& exec,
     BidirectionalIterator first,
     BidirectionalIterator last,
-    Predicate pred);
+    UnaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
-*_Pred*\
-使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 述詞會接受單一引數，並傳回 **true** 或 **false**。
+*pred*\
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8678,7 +8934,7 @@ BidirectionalIterator stable_partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果 *Pr* (*a*, *b*) 為 false 且 *Pr* (*b*, *a*) 為 false (其中 *Pr* 是參數指定的述詞)，則元素 *a* 和 *b* 對等，但不一定相等。 `stable_ partition`演算法穩定，並且保證會保留對等元素的相對順序。 此演算法`partition`並不一定會保留這個原始順序。
+`pred( b, a )`如果兩者  `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `stable_partition`演算法是穩定的, 可保證會保留對等元素的相對順序。 演算法`partition`不一定會保留這種原始順序。
 
 ### <a name="example"></a>範例
 
@@ -8689,88 +8945,95 @@ BidirectionalIterator stable_partition(
 #include <algorithm>
 #include <iostream>
 
-bool greater5 ( int value ) {
-   return value > 5;
+bool greater5 ( int value )
+{
+    return value > 5;
 }
 
-int main() {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, result;
+int main()
+{
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, result;
 
-   int i;
-   for ( i = 0 ; i <= 10 ; i++ )
-      v1.push_back( i );
+    int i;
+    for ( i = 0 ; i <= 10 ; i++ )
+        v1.push_back( i );
 
-   int ii;
-   for ( ii = 0 ; ii <= 4 ; ii++ )
-      v1.push_back( 5 );
+    int ii;
+    for ( ii = 0 ; ii <= 4 ; ii++ )
+        v1.push_back( 5 );
 
-   random_shuffle(v1.begin( ), v1.end( ) );
+    random_shuffle(v1.begin( ), v1.end( ) );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Partition the range with predicate greater10
-   result = stable_partition (v1.begin( ), v1.end( ), greater5 );
-   cout << "The partitioned set of elements in v1 is:\n ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Partition the range with predicate greater10
+    result = stable_partition (v1.begin( ), v1.end( ), greater5 );
+    cout << "The partitioned set of elements in v1 is:\n ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "The first element in v1 to fail to satisfy the"
-        << "\n predicate greater5 is: " << *result << "." << endl;
+    cout << "The first element in v1 to fail to satisfy the"
+         << "\n predicate greater5 is: " << *result << "." << endl;
 }
 ```
 
-## <a name="stable_sort"></a> stable_sort
+## <a name="stable_sort"></a>stable_sort
 
 將在指定範圍中的項目排列成非遞減排列，或是依據二元述詞指定的順序準則，並保留對等項目的相對順序。
 
 ```cpp
 template<class BidirectionalIterator>
-void stable_sort( BidirectionalIterator first, BidirectionalIterator last );
+void stable_sort(
+    BidirectionalIterator first,
+    BidirectionalIterator last );
 
-template<class BidirectionalIterator, class BinaryPredicate>
+template<class BidirectionalIterator, class Compare>
 void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
-    BinaryPredicate comp );
-    
+    Compare pred );
+
 template<class ExecutionPolicy, class RandomAccessIterator>
 void stable_sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last);
 
 template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
 void stable_sort(
     ExecutionPolicy&& exec,
-    RandomAccessIterator first, 
+    RandomAccessIterator first,
     RandomAccessIterator last,
-    Compare comp);
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 雙向迭代器，定址要排序之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 雙向迭代器，定址要排序之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法穩定，並且保證會保留對等元素的相對順序。
+如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法是穩定的, 可保證會保留對等元素的相對順序。
 
-執行階段複雜性`stable_sort`取決於可用的記憶體數量 （提供足夠的記憶體） 的最佳案例是，但*O*( *N*記錄*N*) 和最壞的情況已*O*( *N* (記錄*N* ) 2)，其中*N* =  *姓氏-名字。* 通常`sort`演算法速度明顯比`stable_sort`。
+`stable_sort`的執行時間複雜性取決於可用的記憶體數量, 但最大的情況 (有足夠的記憶體) 是`O(N (log N)^2)` `O(N log N)` , 最壞的情況是, 其中*N*  = *最後* -  *首先*。 通常, 此`sort`演算法的速度會明顯`stable_sort`比更快。
 
 ### <a name="example"></a>範例
 
@@ -8785,50 +9048,50 @@ void stable_sort(
 // Return whether first element is greater than the second
 bool UDgreater (int elem1, int elem2 )
 {
-   return elem1 > elem2;
+    return elem1 > elem2;
 }
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   vector <int>::iterator Iter1;
+    using namespace std;
+    vector<int> v1;
+    vector<int>::iterator Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( 2 * i  );
-   }
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( 2 * i );
+    }
 
-   cout << "Original vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   stable_sort(v1.begin( ), v1.end( ) );
-   cout << "Sorted vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    stable_sort(v1.begin( ), v1.end( ) );
+    cout << "Sorted vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // To sort in descending order, specify binary predicate
-   stable_sort(v1.begin( ), v1.end( ), greater<int>( ) );
-   cout << "Resorted (greater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // To sort in descending order, specify binary predicate
+    stable_sort(v1.begin( ), v1.end( ), greater<int>( ) );
+    cout << "Resorted (greater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 
-   // A user-defined (UD) binary predicate can also be used
-   stable_sort(v1.begin( ), v1.end( ), UDgreater );
-   cout << "Resorted (UDgreater) vector v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")" << endl;
+    // A user-defined (UD) binary predicate can also be used
+    stable_sort(v1.begin( ), v1.end( ), UDgreater );
+    cout << "Resorted (UDgreater) vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")" << endl;
 }
 ```
 
@@ -8839,27 +9102,27 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a>調換
 
 第一個覆寫會交換兩個物件的值。 第二個覆寫會交換兩個物件陣列之間的值。
 
 ```cpp
 template<class Type>
-   void swap(
-      Type& left,
-      Type& right);
+void swap(
+    Type& left,
+    Type& right);
 template<class Type, size_t N>
-   void swap(
-      Type (& left)[N],
-      Type (& right)[N]);\r
+void swap(
+    Type (& left)[N],
+    Type (& right)[N]);
 ```
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左面*\
 針對第一個覆寫，第一個物件會交換其內容。 針對第二個覆寫，第一個物件陣列會交換其內容。
 
-*權限*\
+*再*\
 針對第一個覆寫，第二個物件會交換其內容。 針對第二個覆寫，第二個物件陣列會交換其內容。
 
 ### <a name="remarks"></a>備註
@@ -8877,41 +9140,41 @@ template<class Type, size_t N>
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2;
-   vector <int>::iterator Iter1, Iter2, result;
+    using namespace std;
+    vector<int> v1, v2;
+    vector<int>::iterator Iter1, Iter2, result;
 
-   for ( int i = 0 ; i <= 10 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    for ( int i = 0 ; i <= 10 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   for ( int ii = 0 ; ii <= 4 ; ii++ )
-   {
-      v2.push_back( 5 );
-   }
+    for ( int ii = 0 ; ii <= 4 ; ii++ )
+    {
+        v2.push_back( 5 );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   swap( v1, v2 );
+    swap( v1, v2 );
 
-   cout << "Vector v1 is ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Vector v2 is ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Vector v2 is ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -8922,7 +9185,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a> swap_ranges
+## <a name="swap_ranges"></a>swap_ranges
 
 將某個範圍的項目與另一個相等大小之範圍的項目交換。
 
@@ -8932,16 +9195,19 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
-   
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
 ForwardIterator2 swap_ranges(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
     ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 正向迭代器，指向要交換其元素之第一個範圍中的第一個位置。
@@ -8960,7 +9226,7 @@ ForwardIterator2 swap_ranges(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。 第二個範圍都必須與第一個範圍一樣大。
 
-複雜度為線性*last1* - *first1*執行交換。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。
+複雜度為線性, 並已執行*last1*  -  *first1*交換。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。
 
 ### <a name="example"></a>範例
 
@@ -8974,45 +9240,45 @@ ForwardIterator2 swap_ranges(
 
 int main()
 {
-   using namespace std;
-   vector <int> v1;
-   deque <int> d1;
-   vector <int>::iterator v1Iter1;
-   deque<int>::iterator d1Iter1;
+    using namespace std;
+    vector<int> v1;
+    deque<int> d1;
+    vector<int>::iterator v1Iter1;
+    deque<int>::iterator d1Iter1;
 
-   int i;
-   for ( i = 0 ; i <= 5 ; i++ )
-   {
-      v1.push_back( i );
-   }
+    int i;
+    for ( i = 0 ; i <= 5 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   int ii;
-   for ( ii =4 ; ii <= 9 ; ii++ )
-   {
-      d1.push_back( 6 );
-   }
+    int ii;
+    for ( ii =4 ; ii <= 9 ; ii++ )
+    {
+        d1.push_back( 6 );
+    }
 
-   cout << "Vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "Deque d1 is  ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1  << " ";
-   cout << ")." << endl;
+    cout << "Deque d1 is  ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 
-   swap_ranges ( v1.begin( ), v1.end( ), d1.begin( ) );
+    swap_ranges ( v1.begin( ), v1.end( ), d1.begin( ) );
 
-   cout << "After the swap_range, vector v1 is ( " ;
-   for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
-      cout << *v1Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the swap_range, vector v1 is ( " ;
+    for ( v1Iter1 = v1.begin( ) ; v1Iter1 != v1.end( ) ;v1Iter1 ++ )
+        cout << *v1Iter1 << " ";
+    cout << ")." << endl;
 
-   cout << "After the swap_range deque d1 is   ( " ;
-   for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
-      cout << *d1Iter1 << " ";
-   cout << ")." << endl;
+    cout << "After the swap_range deque d1 is   ( " ;
+    for ( d1Iter1 = d1.begin( ) ; d1Iter1 != d1.end( ) ;d1Iter1 ++ )
+        cout << *d1Iter1 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -9023,7 +9289,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a> 轉換
+## <a name="transform"></a>轉換
 
 將指定的函式物件應用至來源範圍中的每個項目，或是一組來自兩個來源範圍的項目，並複製函式物件的傳回值到目的範圍。
 
@@ -9042,28 +9308,29 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
-    
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class UnaryOperation>
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class UnaryOperation>
 ForwardIterator2 transform(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
+    ForwardIterator2 result,
     UnaryOperation op);
 
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class ForwardIterator, class BinaryOperation>
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class ForwardIterator, class BinaryOperation>
 ForwardIterator transform(
     ExecutionPolicy&& exec,
-    ForwardIterator1 first1, 
+    ForwardIterator1 first1,
     ForwardIterator1 last1,
-    ForwardIterator2 first2, 
+    ForwardIterator2 first2,
     ForwardIterator result,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>參數
+
+*exec*\
+要使用的執行原則。
 
 *first1*\
 輸入迭代器，定址要對其作業之第一個來源範圍中第一個元素的位置。
@@ -9074,10 +9341,10 @@ ForwardIterator transform(
 *first2*\
 輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
-*_Func*\
+*func*\
 套用至第一個來源範圍中每個元素之演算法第一版中所使用的使用者定義一元函式物件，或以正向順序成對套用至兩個來源範圍之演算法第二版中所使用的使用者定義 (UD) 二元函式物件。
 
 ### <a name="return-value"></a>傳回值
@@ -9088,9 +9355,9 @@ ForwardIterator transform(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，必須可透過遞增從第一個位置到達最後一個位置。 目的範圍必須夠大，才能包含已轉換的來源範圍。
 
-如果*結果*設為等於*first1*在演算法第一版，則來源和目的範圍會相同，並將就地修改序列。 但是*結果*可能無法應付範圍內的位置 [`first1` + 1、 `last1`)。
+如果在演算法的第一個版本中, 將*result*設定為等於*first1* , 則來源和目的範圍會相同, 而且順序會就地修改。 但*結果*可能無法處理範圍 [`first1` + 1, `last1`) 內的位置。
 
-複雜度為線性，最多 (`last1` - `first1`) 比較。
+複雜度為線性, 最多有 (`last1`  -  `first1`) 次比較。
 
 ### <a name="example"></a>範例
 
@@ -9106,70 +9373,69 @@ ForwardIterator transform(
 template <class Type>
 class MultValue
 {
-   private:
-      Type Factor;   // The value to multiply by
-   public:
-      // Constructor initializes the value to multiply by
-      MultValue ( const Type& val ) : Factor ( val ) {
-      }
+private:
+    Type Factor;   // The value to multiply by
+public:
+    // Constructor initializes the value to multiply by
+    MultValue ( const Type& value ) : Factor ( value ) { }
 
-      // The function call for the element to be multiplied
-      Type operator( ) ( Type& elem ) const
-      {
-         return elem * Factor;
-      }
+    // The function call for the element to be multiplied
+    Type operator( ) ( Type& elem ) const
+    {
+        return elem * Factor;
+    }
 };
 
 int main()
 {
-   using namespace std;
-   vector <int> v1, v2 ( 7 ), v3 ( 7 );
-   vector <int>::iterator Iter1, Iter2 , Iter3;
+    using namespace std;
+    vector<int> v1, v2 ( 7 ), v3 ( 7 );
+    vector<int>::iterator Iter1, Iter2 , Iter3;
 
-   // Constructing vector v1
-   int i;
-   for ( i = -4 ; i <= 2 ; i++ )
-   {
-      v1.push_back(  i );
-   }
+    // Constructing vector v1
+    int i;
+    for ( i = -4 ; i <= 2 ; i++ )
+    {
+        v1.push_back( i );
+    }
 
-   cout << "Original vector  v1 = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Original vector v1 = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Modifying the vector v1 in place
-   transform (v1.begin( ), v1.end( ), v1.begin( ), MultValue<int> ( 2 ) );
-   cout << "The elements of the vector v1 multiplied by 2 in place gives:"
-        << "\n v1mod = ( " ;
-   for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
-      cout << *Iter1 << " ";
-   cout << ")." << endl;
+    // Modifying the vector v1 in place
+    transform (v1.begin( ), v1.end( ), v1.begin( ), MultValue<int> ( 2 ) );
+    cout << "The elements of the vector v1 multiplied by 2 in place gives:"
+            << "\n v1mod = ( " ;
+    for ( Iter1 = v1.begin( ) ; Iter1 != v1.end( ) ; Iter1++ )
+        cout << *Iter1 << " ";
+    cout << ")." << endl;
 
-   // Using transform to multiply each element by a factor of 5
-   transform ( v1.begin( ), v1.end( ), v2.begin( ), MultValue<int> ( 5 ) );
+    // Using transform to multiply each element by a factor of 5
+    transform ( v1.begin( ), v1.end( ), v2.begin( ), MultValue<int> ( 5 ) );
 
-   cout << "Multiplying the elements of the vector v1mod\n "
-        <<  "by the factor 5 & copying to v2 gives:\n v2 = ( " ;
-   for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
-      cout << *Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying the elements of the vector v1mod\n "
+            << "by the factor 5 & copying to v2 gives:\n v2 = ( " ;
+    for ( Iter2 = v2.begin( ) ; Iter2 != v2.end( ) ; Iter2++ )
+        cout << *Iter2 << " ";
+    cout << ")." << endl;
 
-   // The second version of transform used to multiply the
-   // elements of the vectors v1mod & v2 pairwise
-   transform ( v1.begin( ), v1.end( ),  v2.begin( ), v3.begin( ),
-      multiplies <int>( ) );
+    // The second version of transform used to multiply the
+    // elements of the vectors v1mod & v2 pairwise
+    transform ( v1.begin( ), v1.end( ), v2.begin( ), v3.begin( ),
+        multiplies<int>( ) );
 
-   cout << "Multiplying elements of the vectors v1mod and v2 pairwise "
-        <<  "gives:\n v3 = ( " ;
-   for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
-      cout << *Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Multiplying elements of the vectors v1mod and v2 pairwise "
+            << "gives:\n v3 = ( " ;
+    for ( Iter3 = v3.begin( ) ; Iter3 != v3.end( ) ; Iter3++ )
+        cout << *Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
 ```Output
-Original vector  v1 = ( -4 -3 -2 -1 0 1 2 ).
+Original vector v1 = ( -4 -3 -2 -1 0 1 2 ).
 The elements of the vector v1 multiplied by 2 in place gives:
 v1mod = ( -8 -6 -4 -2 0 2 4 ).
 Multiplying the elements of the vector v1mod
@@ -9179,45 +9445,48 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a> 唯一
+## <a name="unique"></a>唯一
 
 移除在指定範圍內彼此相鄰的重複項目。
 
 ```cpp
 template<class ForwardIterator>
-   ForwardIterator unique(
-      ForwardIterator first,
-      ForwardIterator last);
+ForwardIterator unique(
+    ForwardIterator first,
+    ForwardIterator last);
 
-template<class ForwardIterator, class Predicate>
-   ForwardIterator unique(
-      ForwardIterator first,
-      ForwardIterator last,
-      Predicate comp);
-      
+template<class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
+
 template<class ExecutionPolicy, class ForwardIterator>
 ForwardIterator unique(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last);
 
 template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
 ForwardIterator unique(
     ExecutionPolicy&& exec,
-    ForwardIterator first, 
+    ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，定址要掃描重複移除之範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，定址要掃描重複項目移除之範圍中最後一個元素之後的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -9230,9 +9499,9 @@ ForwardIterator unique(
 
 此演算法作業很穩定，因此不會變更未刪除項目的相對順序。
 
-參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。 此演算法不會變更的序列中的元素數`unique`和已修改的序列結尾之外的元素是可取值但未指定。
+參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。 此演算法`unique`不會變更序列中的元素數目, 而且已取值但未指定超出已修改序列結尾的元素。
 
-複雜度為線性，需要 (`last` - `first`)-1 的比較。
+複雜度為線性, 需要`(last - first) - 1`進行比較。
 
 list 提供更具效率的成員函式 "unique"，後者的效能可能較佳。
 
@@ -9254,63 +9523,63 @@ using namespace std;
 // Return whether modulus of elem1 is equal to modulus of elem2
 bool mod_equal ( int elem1, int elem2 )
 {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 == elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 == elem2;
 };
 
 int main()
 {
-   vector <int> v1;
-   vector <int>::iterator v1_Iter1, v1_Iter2, v1_Iter3,
-         v1_NewEnd1, v1_NewEnd2, v1_NewEnd3;
+    vector<int> v1;
+    vector<int>::iterator v1_Iter1, v1_Iter2, v1_Iter3,
+            v1_NewEnd1, v1_NewEnd2, v1_NewEnd3;
 
-   int i;
-   for ( i = 0 ; i <= 3 ; i++ )
-   {
-      v1.push_back( 5 );
-      v1.push_back( -5 );
-   }
+    int i;
+    for ( i = 0 ; i <= 3 ; i++ )
+    {
+        v1.push_back( 5 );
+        v1.push_back( -5 );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 3 ; ii++ )
-   {
-      v1.push_back( 4 );
-   }
-   v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 3 ; ii++ )
+    {
+        v1.push_back( 4 );
+    }
+    v1.push_back( 7 );
 
-   cout << "Vector v1 is ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove consecutive duplicates
-   v1_NewEnd1 = unique ( v1.begin( ), v1.end( ) );
+    // Remove consecutive duplicates
+    v1_NewEnd1 = unique ( v1.begin( ), v1.end( ) );
 
-   cout << "Removing adjacent duplicates from vector v1 gives\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent duplicates from vector v1 gives\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Remove consecutive duplicates under the binary prediate mod_equals
-   v1_NewEnd2 = unique ( v1.begin( ), v1_NewEnd1 , mod_equal );
+    // Remove consecutive duplicates under the binary prediate mod_equals
+    v1_NewEnd2 = unique ( v1.begin( ), v1_NewEnd1 , mod_equal );
 
-   cout << "Removing adjacent duplicates from vector v1 under the\n "
-        << " binary predicate mod_equal gives\n ( " ;
-   for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
-      cout << *v1_Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent duplicates from vector v1 under the\n "
+            << " binary predicate mod_equal gives\n ( " ;
+    for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
+        cout << *v1_Iter2 << " ";
+    cout << ")." << endl;
 
-   // Remove elements if preceded by an element that was greater
-   v1_NewEnd3 = unique ( v1.begin( ), v1_NewEnd2, greater<int>( ) );
+    // Remove elements if preceded by an element that was greater
+    v1_NewEnd3 = unique ( v1.begin( ), v1_NewEnd2, greater<int>( ) );
 
-   cout << "Removing adjacent elements satisfying the binary\n "
-        << " predicate mod_equal from vector v1 gives ( " ;
-   for ( v1_Iter3 = v1.begin( ) ; v1_Iter3 != v1_NewEnd3 ; v1_Iter3++ )
-      cout << *v1_Iter3 << " ";
-   cout << ")." << endl;
+    cout << "Removing adjacent elements satisfying the binary\n "
+            << " predicate mod_equal from vector v1 gives ( " ;
+    for ( v1_Iter3 = v1.begin( ) ; v1_Iter3 != v1_NewEnd3 ; v1_Iter3++ )
+        cout << *v1_Iter3 << " ";
+    cout << ")." << endl;
 }
 ```
 
@@ -9325,49 +9594,55 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a> unique_copy
+## <a name="unique_copy"></a>unique_copy
 
 將來源範圍的項目複製到目的範圍，但是彼此相鄰的重複項目除外。
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator unique_copy( InputIterator first,
+OutputIterator unique_copy(
+    InputIterator first,
     InputIterator last,
     OutputIterator result );
 
 template<class InputIterator, class OutputIterator, class BinaryPredicate>
-OutputIterator unique_copy( InputIterator first,
+OutputIterator unique_copy(
+    InputIterator first,
     InputIterator last,
     OutputIterator result,
-    BinaryPredicate comp );
-    
+    BinaryPredicate pred );
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+ForwardIterator2 unique_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
     ForwardIterator1 last,
     ForwardIterator2 result);
 
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryPredicate>
 ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
-    ForwardIterator1 first, 
+    ForwardIterator1 first,
     ForwardIterator1 last,
-    ForwardIterator2 result, 
+    ForwardIterator2 result,
     BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*exec*\
+要使用的執行原則。
+
+*頭*\
 正向迭代器，用於定址要複製之來源範圍中第一個項目的位置。
 
-*最後一個*\
+*次*\
 正向迭代器，用於定址要複製之來源範圍中最後一個項目的後面一個位置。
 
-*結果*\
+*result*\
 輸出迭代器，用於定址正在接收所移除的連續重複項目複本之目的範圍中，第一個項目的位置。
 
-*Comp*\
+*pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
@@ -9382,7 +9657,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在一個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性，需要 (`last` - `first`) 比較。
+複雜度為線性, 需要 (`last`  -  `first`) 比較。
 
 ### <a name="example"></a>範例
 
@@ -9399,95 +9674,95 @@ using namespace std;
 
 // Return whether modulus of elem1 is equal to modulus of elem2
 bool mod_equal ( int elem1, int elem2 ) {
-   if ( elem1 < 0 )
-      elem1 = - elem1;
-   if ( elem2 < 0 )
-      elem2 = - elem2;
-   return elem1 == elem2;
+    if ( elem1 < 0 )
+        elem1 = - elem1;
+    if ( elem2 < 0 )
+        elem2 = - elem2;
+    return elem1 == elem2;
 };
 
 int main() {
-   vector <int> v1;
-   vector <int>::iterator v1_Iter1, v1_Iter2,
-         v1_NewEnd1, v1_NewEnd2;
+    vector<int> v1;
+    vector<int>::iterator v1_Iter1, v1_Iter2,
+            v1_NewEnd1, v1_NewEnd2;
 
-   int i;
-   for ( i = 0 ; i <= 1 ; i++ ) {
-      v1.push_back( 5 );
-      v1.push_back( -5 );
-   }
+    int i;
+    for ( i = 0 ; i <= 1 ; i++ ) {
+        v1.push_back( 5 );
+        v1.push_back( -5 );
+    }
 
-   int ii;
-   for ( ii = 0 ; ii <= 2 ; ii++ )
-      v1.push_back( 4 );
-   v1.push_back( 7 );
+    int ii;
+    for ( ii = 0 ; ii <= 2 ; ii++ )
+        v1.push_back( 4 );
+    v1.push_back( 7 );
 
-   int iii;
-   for ( iii = 0 ; iii <= 5 ; iii++ )
-      v1.push_back( 10 );
+    int iii;
+    for ( iii = 0 ; iii <= 5 ; iii++ )
+        v1.push_back( 10 );
 
-   cout << "Vector v1 is\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Vector v1 is\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1.end( ) ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   // Copy first half to second, removing consecutive duplicates
-   v1_NewEnd1 = unique_copy ( v1.begin( ), v1.begin( ) + 8, v1.begin( ) + 8 );
+    // Copy first half to second, removing consecutive duplicates
+    v1_NewEnd1 = unique_copy ( v1.begin( ), v1.begin( ) + 8, v1.begin( ) + 8 );
 
-   cout << "Copying the first half of the vector to the second half\n "
-        << "while removing adjacent duplicates gives\n ( " ;
-   for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
-      cout << *v1_Iter1 << " ";
-   cout << ")." << endl;
+    cout << "Copying the first half of the vector to the second half\n "
+            << "while removing adjacent duplicates gives\n ( " ;
+    for ( v1_Iter1 = v1.begin( ) ; v1_Iter1 != v1_NewEnd1 ; v1_Iter1++ )
+        cout << *v1_Iter1 << " ";
+    cout << ")." << endl;
 
-   int iv;
-   for ( iv = 0 ; iv <= 7 ; iv++ )
-      v1.push_back( 10 );
+    int iv;
+    for ( iv = 0 ; iv <= 7 ; iv++ )
+        v1.push_back( 10 );
 
-   // Remove consecutive duplicates under the binary prediate mod_equals
-   v1_NewEnd2 = unique_copy ( v1.begin( ), v1.begin( ) + 14,
-      v1.begin( ) + 14 , mod_equal );
+    // Remove consecutive duplicates under the binary prediate mod_equals
+    v1_NewEnd2 = unique_copy ( v1.begin( ), v1.begin( ) + 14,
+        v1.begin( ) + 14 , mod_equal );
 
-   cout << "Copying the first half of the vector to the second half\n "
-        << " removing adjacent duplicates under mod_equals gives\n ( " ;
-   for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
-      cout << *v1_Iter2 << " ";
-   cout << ")." << endl;
+    cout << "Copying the first half of the vector to the second half\n "
+            << " removing adjacent duplicates under mod_equals gives\n ( " ;
+    for ( v1_Iter2 = v1.begin( ) ; v1_Iter2 != v1_NewEnd2 ; v1_Iter2++ )
+        cout << *v1_Iter2 << " ";
+    cout << ")." << endl;
 }
 ```
 
-## <a name="upper_bound"></a> upper_bound
+## <a name="upper_bound"></a>upper_bound
 
 在已排序範圍中尋找值大於指定值的第一個項目的位置，其中順序準則可由二元述詞指定。
 
 ```cpp
 template<class ForwardIterator, class Type>
-   ForwardIterator upper_bound(
-      ForwardIterator first,
-      ForwardIterator last,
-      const Type& value);
+ForwardIterator upper_bound(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value);
 
-template<class ForwardIterator, class Type, class Predicate>
-   ForwardIterator upper_bound(
-      ForwardIterator first,
-      ForwardIterator last,
-      const Type& value,
-      Predicate comp);
+template<class ForwardIterator, class Type, class Compare>
+ForwardIterator upper_bound(
+    ForwardIterator first,
+    ForwardIterator last,
+    const Type& value,
+    Compare pred);
 ```
 
 ### <a name="parameters"></a>參數
 
-*第一個*\
+*頭*\
 所搜尋範圍中第一個元素的位置。
 
-*最後一個*\
+*次*\
 所搜尋範圍中最後一個元素之後的位置。
 
 *value*\
 需要超出所傳回迭代器定址之元素值的排序範圍中的值。
 
-*Comp*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
+*pred*\
+使用者定義的比較述詞函式物件, 定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -9497,13 +9772,13 @@ template<class ForwardIterator, class Type, class Predicate>
 
 參考的排序來源範圍必須有效；所有迭代器都必須可以取值，而且在序列中，必須可透過遞增從第一個位置到達最後一個位置。
 
-排序範圍是使用 `upper_bound` 的前置條件，而且順序準則與二元述詞所指定的順序準則相同。
+已排序範圍是使用`upper_bound`的前置條件, 而且順序準則與比較述詞所指定的相同。
 
 `upper_bound` 不會修改範圍。
 
 正向迭代器的實值類型必須小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-演算法的複雜度是對數隨機存取迭代器，並且數目成正比的步驟，否則為線性 (`last - first`)。
+隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last - first`) 成正比的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -9533,12 +9808,12 @@ int main()
     // Constructing vector v1 with default less-than ordering
     for ( auto i = -1 ; i <= 4 ; ++i )
     {
-        v1.push_back(  i );
+        v1.push_back( i );
     }
 
     for ( auto ii =-3 ; ii <= 0 ; ++ii )
     {
-        v1.push_back(  ii  );
+        v1.push_back( ii );
     }
 
     cout << "Starting vector v1 = ( " ;
@@ -9569,7 +9844,7 @@ int main()
     sort(v3.begin(), v3.end(), mod_lesser);
 
     cout << "Original vector v3 with range sorted by the\n "
-        <<  "binary predicate mod_lesser is v3 = ( " ;
+        << "binary predicate mod_lesser is v3 = ( " ;
     for (const auto &Iter : v3)
         cout << Iter << " ";
     cout << ")." << endl;
@@ -9588,8 +9863,8 @@ int main()
     cout << "The upper_bound in v2 for the element with a value of 3 is: "
         << *Result << "." << endl;
 
-    // upper_bound of 3 in v3 with the binary predicate  mod_lesser
-    Result = upper_bound(v3.begin(), v3.end(), 3,  mod_lesser);
+    // upper_bound of 3 in v3 with the binary predicate mod_lesser
+    Result = upper_bound(v3.begin(), v3.end(), 3, mod_lesser);
     cout << "The upper_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }

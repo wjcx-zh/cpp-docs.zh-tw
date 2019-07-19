@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: 一般屬性頁
                   href: build/reference/general-property-page-file.md
+                - name: 進階屬性頁面
+                  href: build/reference/advanced-property-page.md
                 - name: VC++ 目錄屬性頁
                   href: build/reference/vcpp-directories-property-page.md
                 - name: 命令列屬性頁

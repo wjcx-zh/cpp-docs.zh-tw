@@ -24,12 +24,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: 7248eb08409b50d855dbb70c7638a856302b345b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287872"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376175"
 ---
 # <a name="fread"></a>fread
 
@@ -54,7 +54,7 @@ size_t fread(
 *size*<br/>
 項目大小 (位元組)。
 
-*count*<br/>
+*計數*<br/>
 要讀取項目的最大數量。
 
 *stream*<br/>
@@ -62,17 +62,17 @@ size_t fread(
 
 ## <a name="return-value"></a>傳回值
 
-**fread**傳回實際讀取的完整項目數，可能會小於*計數*發生錯誤，或如果到達之前遇到檔案結尾，則*計數*。 使用**feof**或是**ferror**函式來區分讀取的錯誤與檔案結尾條件。 如果*大小*或是*計數*為 0， **fread**傳回 0，而且緩衝區內容未變更。 如果*資料流*或是*緩衝區*為 null 指標， **fread**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
+**fread**會傳回實際讀取的完整專案數, 如果發生錯誤, 或在到達*計數*之前遇到檔案結尾, 則可能少於*計數*。 使用**feof**或**ferror**函式來區別讀取錯誤與檔案結尾條件。 如果*size*或*count*為 0, 則**fread**會傳回 0, 而緩衝區內容則不會變更。 如果*stream*或*buffer*是 null 指標, **fread**會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會將**errno**設定為**EINVAL** , 並傳回0。
 
-請參閱[ \_doserrno，errno， \_sys\_errlist，並\_sys\_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)如需有關這些錯誤碼。
+如需這些錯誤碼的詳細資訊, 請參閱[ \_doserrno、errno、 \_sys\_errlist \_和\_sys nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 。
 
 ## <a name="remarks"></a>備註
 
-**Fread**函式會讀取多達*計數*的項目*大小*從輸入位元組*串流*並將它們儲存在*緩衝區*. 與相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果指定的資料流以開啟[文字模式](../../c-runtime-library/text-and-binary-mode-file-i-o.md)，Windows 樣式的換行符號會轉換成 Unix 樣式的換行符號。 也就是歸位字元復位換行 (CRLF) 組是由單一換行字元 (LF) 字元所取代。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread**函式會從輸入  *資料流程*讀取*大小*為位元組的專案, 並將它們儲存在*buffer*中。 與*資料流程*相關聯的檔案指標 (如果有的話) 會隨著實際讀取的位元組數而增加。 如果在[文字模式](../../c-runtime-library/text-and-binary-mode-file-i-o.md)中開啟給定的資料流程, Windows 樣式的分行符號會轉換成 Unix 樣式的分行符號。 也就是, 換行字元換行 (CRLF) 會由單行換行字元 (LF) 取代。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-使用文字模式資料流，如果要求的資料量時 (亦即*大小* \* *計數*) 大於或等於內部**檔案** \*緩衝區大小 (根據預設，這是 4096 個位元組，使用可設定[setvbuf](../../c-runtime-library/reference/setvbuf.md))、 資料流資料會直接複製到使用者所提供的緩衝區和新行字元的轉換已完成該緩衝區。 因為已轉換的資料可能會短於資料流資料複製到緩衝區，也就是過去的資料*緩衝區*\[*return_value* \* *大小*] (何處*return_value*傳回的值從**fread**) 可能包含未轉換的資料，從檔案。 基於這個理由，我們建議您以 null 結束的字元資料，在*緩衝區*\[*return_value* \* *大小*] 如果緩衝區的目的是若要做為 C 樣式字串。 請參閱[fopen](fopen-wfopen.md)如需詳細資訊，在文字模式和二進位模式的效果。
+在文字模式資料流程上使用時, 如果所要求的資料量 (也就是*大小* \*  \* *計數*) 大於或等於內部檔案緩衝區大小 (根據預設, 這是4096個位元組, 可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 資料流程資料會直接複製到使用者提供的緩衝區中, 而在該緩衝區中進行了新行轉換。 由於轉換後的資料可能會比複製到緩衝區的資料流程資料短, 因此資料過去的*緩衝區*\[ *return_value* \* *大小*] (其中*return_value*是來自**fread**的傳回值) 可能包含檔案中未轉換的資料。 基於這個理由, 如果緩衝區的目的是做為 C 樣式字串, 建議您在*buffer* \[ *return_value* \* *size*時以 null 終止字元資料。 如需文字模式和二進位模式效果的詳細資訊, 請參閱[fopen](fopen-wfopen.md) 。
 
-此函式會鎖定其他執行緒。 如果您需要非鎖定版本時，使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本, 請使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>需求
 
@@ -135,7 +135,7 @@ Contents of buffer = zyxwvutsrqponmlkjihgfedcb
 ## <a name="see-also"></a>另請參閱
 
 [資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[文字和二進位檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[文字和二進位檔案 i/o](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
 [fopen](fopen-wfopen.md)<br/>
 [fwrite](fwrite.md)<br/>
 [_read](read.md)<br/>

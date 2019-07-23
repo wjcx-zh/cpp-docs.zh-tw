@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042753"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299799"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -31,8 +31,6 @@ Visual Studio 2017 及更新版本支援 Linux 專案。
 ::: moniker range="vs-2019"
 
 在 Visual Studio 2019 中，您可以指定不同的目標來進行建置和偵錯。 以 WSL 為目標時，不再需要新增遠端連線或設定 SSH。
-
-[AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) 的支援已整合到適用於 Linux 專案的 Visual Studio 中。
 
 ::: moniker-end
 

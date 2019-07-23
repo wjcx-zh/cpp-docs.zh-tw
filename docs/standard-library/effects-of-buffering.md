@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23e241794455a92f9e3628a786d75a6d4c7b037e
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413784"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376326"
 ---
 # <a name="effects-of-buffering"></a>緩衝的效果
 
@@ -39,7 +39,7 @@ int main( )
 cout <<"Please wait..." <<flush;
 ```
 
-這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用`endl`操作工具，排清緩衝區以及輸出歸位換行，或者您可以使用`cin`物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。
+這個步驟會排清緩衝區，確保訊息在等待前即印出。 您也可以使用`endl`操作工具, 這會清除緩衝區並輸出一條換行字元, 或者您可以`cin`使用物件。 這個物件 (與 `cerr` 或 `clog` 物件) 通常會繫結至 `cout` 物件。 因此，只要使用 `cin` (或 `cerr` 或 `clog` 物件) 就會排清 `cout` 物件。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -20,12 +20,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1adc999d37025392f03a11daebfffdeeb637d92b
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287807"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376144"
 ---
 # <a name="freads"></a>fread_s
 
@@ -54,7 +54,7 @@ size_t fread_s(
 *elementSize*<br/>
 以位元組為單位的讀取項目大小。
 
-*count*<br/>
+*計數*<br/>
 要讀取項目的最大數量。
 
 *stream*<br/>
@@ -62,15 +62,15 @@ size_t fread_s(
 
 ## <a name="return-value"></a>傳回值
 
-**fread_s**會傳回讀入緩衝區，它可能是數字 （整數） 的項目少於*計數*如果發生讀取的錯誤或檔案結尾之前*計數*為止。 使用**feof**或是**ferror**函式來區分錯誤與檔案結尾條件。 如果*大小*或是*計數*為 0， **fread_s**傳回 0，而且緩衝區內容未變更。 如果*資料流*或是*緩衝區*為 null 指標， **fread_s**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
+**fread_s**會傳回讀取到緩衝區的 (整個) 專案數, 如果讀取錯誤或到達*計數*之前遇到檔案結尾, 則可能小於*計數*。 使用**feof**或**ferror**函式來區分錯誤與檔案結尾條件。 如果*size*或*count*為 0, 則**fread_s**會傳回 0, 而緩衝區內容則不會變更。 如果*stream*或*buffer*是 null 指標, **fread_s**會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會將**errno**設定為**EINVAL** , 並傳回0。
 
 如需錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fread_s**函式會讀取多達*計數*的項目*elementSize*從輸入位元組*串流*並將它們儲存在*緩衝區*。  相關聯的檔案指標*資料流*（如果有的話） 會增加實際讀取的位元組數目。 如果指定的資料流以文字模式開啟，則歸位字元復位換行組，將取代為單一換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread_s**函式會從輸入*資料流程*讀取以*計算* *elementSize*位元組的專案, 並將它們儲存在*buffer*中。  與*資料流程*相關聯的檔案指標 (如果有的話) 會隨著實際讀取的位元組數而增加。 如果在文字模式中開啟給定的資料流程, 則會以單一換行字元取代換行字元。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-此函式會鎖定其他執行緒。 如果您需要非鎖定版本，請使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本, 請使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>需求
 

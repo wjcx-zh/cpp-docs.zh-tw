@@ -1,30 +1,30 @@
 ---
-title: 逐步解說：將 D2D 物件加入至 MFC 專案
+title: 逐步解說：將 D2D 物件新增至 MFC 專案
 ms.date: 04/25/2019
 helpviewer_keywords:
 - MFC, D2D
 - D2D [MFC]
 ms.assetid: dda36c33-c231-4da6-a62f-72d69a12b6dd
-ms.openlocfilehash: 5710add59c0e5d27b2969ae22087533cae901ca9
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cbb9e4002bb47ad8f65678c7a324267ca9717e94
+ms.sourcegitcommit: f82a6de52470070accb09a3a8f8b08060c492efa
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64558182"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68411762"
 ---
-# <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件加入至 MFC 專案
+# <a name="walkthrough-adding-a-d2d-object-to-an-mfc-project"></a>逐步解說：將 D2D 物件新增至 MFC 專案
 
-本逐步解說將說明如何新增基本 Direct2D (D2D) 物件的視覺效果C++，Microsoft Foundation Class 程式庫 (MFC) 專案，並再建置專案到應用程式會列印"Hello，world"漸層背景。
+本逐步解說將教您如何將基本 Direct2D (D2D) 物件加入至C++視覺效果的 MFC 程式庫 (MFC) 專案, 然後將專案建立到列印 "Hello, World!" 的應用程式中。 在漸層背景上。
 
-本逐步解說示範如何完成這些工作：
+本逐步解說會示範如何完成這些工作:
 
 - 建立 MFC 應用程式。
 
-- 建立單色筆刷和線性漸層筆刷。
+- 建立純色筆刷和線性漸層筆刷。
 
-- 修改漸層筆刷，讓它將會變更適當地調整視窗的大小。
+- 修改漸層筆刷, 使其在調整大小視窗時可以適當地變更。
 
-- 實作 D2D 繪製處理常式。
+- 執行 D2D 繪製處理常式。
 
 - 驗證結果。
 
@@ -32,19 +32,19 @@ ms.locfileid: "64558182"
 
 ## <a name="prerequisites"></a>必要條件
 
-若要完成此逐步解說中，您必須擁有 Visual Studio 已安裝**使用的桌面開發C++** 工作負載和選擇性**視覺化C++適用於 x86 和 x64 的 MFC**元件。
+若要完成此逐步解說, 您必須在**使用C++** 工作負載的桌面開發和適用于**x86 C++和 x64 的選用 Visual MFC**元件中安裝 Visual Studio。
 
-## <a name="to-create-an-mfc-application"></a>若要建立 MFC 應用程式
+## <a name="to-create-an-mfc-application"></a>建立 MFC 應用程式
 
-1. 使用**MFC 應用程式精靈**建立 MFC 應用程式。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md)如需有關如何開啟您的 Visual Studio 版本的精靈。
+1. 使用**Mfc 應用程式精靈**來建立 mfc 應用程式。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md) , 以取得如何針對您的 Visual Studio 版本開啟嚮導的指示。
 
-1. 在 **名稱**方塊中，輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
+1. 在 [**名稱**] 方塊中, 輸入*MFCD2DWalkthrough*。 選擇 [確定] 。
 
-1. 在  **MFC 應用程式精靈**，選擇**完成**而不需要變更任何設定。
+1. 在**MFC 應用程式精靈**中, 選擇 **[完成]** 而不變更任何設定。
 
-## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>若要建立單色筆刷和線性漸層筆刷
+## <a name="to-create-a-solid-color-brush-and-a-linear-gradient-brush"></a>建立純色筆刷和線性漸層筆刷
 
-1. 在 [**方案總管] 中**，請在**MFCD2DWalkthrough**專案，在**標頭檔**資料夾中，開啟 MFCD2DWalkthroughView.h。 新增下列程式碼`CMFCD2DWalkthroughView`類別來建立資料的三個變數：
+1. 在**方案總管**中, 在**MFCD2DWalkthrough**專案的 [**標頭檔**] 資料夾中, 開啟 MFCD2DWalkthroughView。 將此程式碼新增`CMFCD2DWalkthroughView`至類別, 以建立三個數據變數:
 
    ```cpp
    CD2DTextFormat* m_pTextFormat;
@@ -52,9 +52,9 @@ ms.locfileid: "64558182"
    CD2DLinearGradientBrush* m_pLinearGradientBrush;
    ```
 
-   儲存檔案，並將它關閉。
+   儲存檔案並加以關閉。
 
-1. 在 **原始程式檔**資料夾中，開啟 MFCD2DWalkthroughView.cpp。 建構函式中`CMFCD2DWalkthroughView`類別中，加入下列程式碼：
+1. 在 [**來源**檔案] 資料夾中, 開啟 MFCD2DWalkthroughView。 在`CMFCD2DWalkthroughView`類別的函式中, 加入下列程式碼:
 
    ```cpp
    // Enable D2D support for this window:
@@ -96,35 +96,35 @@ ms.locfileid: "64558182"
            D2D1::Point2F(0,0)));
    ```
 
-   儲存檔案，並將它關閉。
+   儲存檔案並加以關閉。
 
-## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>若要修改漸層筆刷，讓它將會變更適當地調整視窗的大小
+## <a name="to-modify-the-gradient-brush-so-that-it-will-change-appropriately-when-the-window-is-resized"></a>修改漸層筆刷, 使其在調整大小時會適當地變更
 
-1. 在 **專案**功能表上，選擇**類別精靈**。
+1. 在 [**專案**] 功能表上, 選擇 [**類別 Wizard]** 。
 
-1. 在  **MFC 類別精靈**下方**類別名稱**，選取`CMFCD2DWalkthroughView`。
+1. 在**MFC 類別 Wizard**的 [**類別名稱**] 底下, `CMFCD2DWalkthroughView`選取。
 
-1. 在上**訊息**索引標籤中，於**訊息**方塊中，選取`WM_SIZE`，然後選擇**加入處理常式**。 這個動作會將`OnSize`訊息處理常式以`CMFCD2DWalkthroughView`類別。
+1. 在 [**訊息**] 索引標籤的 [**訊息**] `WM_SIZE`方塊中, 選取, 然後選擇 [**加入處理常式**]。 此動作會將`OnSize`訊息處理常式新增`CMFCD2DWalkthroughView`至類別。
 
-1. 在 **現有處理常式**方塊中，選取`OnSize`。 選擇**編輯程式碼**顯示`CMFCD2DWalkthroughView::OnSize`方法。 在方法結尾，加入下列程式碼。
+1. 在 [**現有處理常式**] 方塊`OnSize`中, 選取。 選擇 [**編輯程式碼**] `CMFCD2DWalkthroughView::OnSize`以顯示方法。 在方法的結尾, 新增下列程式碼。
 
    ```cpp
    m_pLinearGradientBrush->SetEndPoint(CPoint(cx, cy));
    ```
 
-   儲存檔案，並將它關閉。
+   儲存檔案並加以關閉。
 
-## <a name="to-implement-a-d2d-drawing-handler"></a>若要實作 D2D 繪製處理常式
+## <a name="to-implement-a-d2d-drawing-handler"></a>若要執行 D2D 繪製處理常式
 
-1. 在 **專案**功能表上，選擇**類別精靈**。
+1. 在 [**專案**] 功能表上, 選擇 [**類別 Wizard]** 。
 
-1. 在  **MFC 類別精靈**下方**類別名稱**，選取`CMFCD2DWalkthroughView`。
+1. 在**MFC 類別 Wizard**的 [**類別名稱**] 底下, `CMFCD2DWalkthroughView`選取。
 
-1. 在 **訊息**索引標籤上，選擇**加入自訂訊息**。
+1. 在 [**訊息**] 索引標籤上, 選擇 [**新增自訂訊息**]。
 
-1. 在 **加入自訂訊息**對話方塊中，於**自訂 Windows 訊息**方塊中，輸入*AFX_WM_DRAW2D*。 在 **訊息處理常式名稱**方塊中，輸入*OnDraw2D*。 選取 **註冊的訊息**選項，然後選擇**確定**。 這個動作會將訊息處理常式 AFX_WM_DRAW2D 訊息`CMFCD2DWalkthroughView`類別。
+1. 在 [**加入自訂訊息**] 對話方塊的 [**自訂 Windows] 消息**框中, 輸入*AFX_WM_DRAW2D*。 在 [**訊息處理常式名稱**] 方塊中, 輸入*OnDraw2D*。 選取 [**已註冊的訊息**] 選項, 然後選擇 [**確定]** 。 此動作會將 AFX_WM_DRAW2D 訊息的訊息處理常式新增至`CMFCD2DWalkthroughView`類別。
 
-1. 在 **現有處理常式**方塊中，選取`OnDraw2D`。 選擇**編輯程式碼**顯示`CMFCD2DWalkthroughView::OnDraw2D`方法。 使用此程式碼`CMFCD2DWalkthroughView::OnDrawD2D`方法：
+1. 在 [**現有處理常式**] 方塊`OnDraw2D`中, 選取。 選擇 [**編輯程式碼**] `CMFCD2DWalkthroughView::OnDraw2D`以顯示方法。 將此程式碼用於`CMFCD2DWalkthroughView::OnDrawD2D`方法:
 
    ```cpp
    afx_msg LRESULT CMFCD2DWalkthroughView::OnDraw2D(
@@ -149,11 +149,11 @@ ms.locfileid: "64558182"
    }
    ```
 
-   儲存檔案，並將它關閉。
+   儲存檔案並加以關閉。
 
-## <a name="to-verify-the-results"></a>若要確認結果
+## <a name="to-verify-the-results"></a>驗證結果
 
-建置並執行應用程式。 它應該有漸層停駐的矩形，當您調整視窗大小變更。 "Hello World ！" 應該會顯示在矩形的中心。
+建置並執行應用程式。 當您調整視窗大小時, 它應該會有變更的漸層矩形。 "Hello World!" 應該顯示在矩形的中央。
 
 ## <a name="see-also"></a>另請參閱
 

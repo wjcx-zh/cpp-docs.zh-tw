@@ -3,12 +3,12 @@ title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦或 WSL。
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 00d7facca2857efb0b8b43b5aaf38edce348a511
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861140"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313417"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 
@@ -20,11 +20,11 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range=">=vs-2017"
 
-您可以設定 Linux 專案，以遠端電腦或適用於 Linux 的 Windows 子系統 (WSL) 為目標。 針對遠端電腦以及 Visual Studio 2017 上的 WSL，您需要設定連線。 
+您可以設定 Linux 專案，以遠端電腦或適用於 Linux 的 Windows 子系統 (WSL) 為目標。 針對遠端電腦以及 Visual Studio 2017 上的 WSL，您需要設定遠端連線。 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>連線至遠端 Linux 電腦
 
-針對遠端 Linux 系統 (VM 或實體機器) 建置 C++ Linux 專案時，Linux 程式碼會複製到您的遠端 Linux 電腦，然後根據 Visual Studio 設定編譯。
+針對遠端 Linux 系統 (VM 或實體機器) 建置 C++ Linux 專案時，Linux 原始程式碼會複製到您的遠端 Linux 電腦，然後根據 Visual Studio 設定編譯。
 
 設定此遠端連線：
 
@@ -92,15 +92,15 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range="vs-2019"
 
-在 Visual Studio 2019 16.1 版中，以 WSL 為目標時，不需要新增遠端連線或設定 SSH。 Linux 系統上只需要 gcc、gdb、make、rsync 及 zip。 Visual Studio 僅需要 rsync 及 zip 在第一次使用時，將標頭檔從 WSL 執行個體擷取到 Windows 檔案系統，就能用於 IntelliSense。 在 Visual Studio 2019 16.1 版中，WSL 支援是以 Windows 1809 版為基礎。 您可以執行更新版本的 Windows，但 Visual Studio 還不會利用新的 WSL 功能。
+使用[適用於 Linux 的 Windows 子系統 (WSL)](https://docs.microsoft.com/windows/wsl/about) 時對使用 C++ 的 Visual Studio 2019 16.1 版新增原生支援。  這表示您不再需要新增遠端連線，也不需要設定 SSH，就可在自己的本機 WSL 安裝上進行建置及偵錯。 您可於此處找到[如何安裝 WSL](https://docs.microsoft.com/windows/wsl/install-win10)的詳細資料。
 
-如果您的散發套件支援 apt，可以使用下列命令來安裝所需的套件：
+若要將 WSL 安裝設定為使用 Visual Studio，您需要安裝下列工具：gcc、gdb、make、rsync 和 zip。 您可以在搭配此命令使用 apt 的發行版上安裝它們： 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
 
-若要設定 WSL 的專案，請參閱[設定 Linux 專案](configure-a-linux-project.md)或[設定 Linux CMake 專案](cmake-linux-project.md)，端視您所擁有的專案類型而定。
+若要設定 WSL 的專案，請參閱[設定 Linux 專案](configure-a-linux-project.md)或[設定 Linux CMake 專案](cmake-linux-project.md)，端視您所擁有的專案類型而定。 為了遵循逐步指示來透過 WSL 建立簡單的主控台應用程式，請閱讀這篇簡介部落格文章：[C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)。
 
 ::: moniker-end
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ed2fae935850837ebace880d78c206754b3061bd
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743328"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375912"
 ---
 # <a name="file-translation-constants"></a>檔案轉譯常數
 
@@ -28,13 +28,13 @@ ms.locfileid: "57743328"
 
 ## <a name="remarks"></a>備註
 
-這些常數會指定轉譯的模式 (**"b"** 或 **"t"**)。 該模式會包含在指定存取類型的字串中 (**"r"**、**"w"**、**"a"**、**"r+"**、**"w+"**、**"a+"**)。
+這些常數會指定轉譯的模式 ( **"b"** 或 **"t"** )。 該模式會包含在指定存取類型的字串中 ( **"r"** 、 **"w"** 、 **"a"** 、 **"r+"** 、 **"w+"** 、 **"a+"** )。
 
 轉譯模式如下所示：
 
 - **t**
 
-   以文字 (已轉譯) 模式開啟。 在此模式中，會將歸位字元/換行字元 (CR-LF) 組合會在輸入中轉譯成單行換行字元 (LF)，且會將 LF 字元在輸出中轉譯為 CR-LF 組合。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在為了讀取或讀取/寫入而開啟的檔案中，`fopen` 會儘可能檢查檔案結尾是否有 Ctrl+Z 並加以移除。 這樣做的原因是因為使用 `fseek` 和 `ftell` 函式在以 Ctrl+Z 結束的檔案內移動可能會讓 `fseek` 在檔案結尾附近產生不當行為。
+   以文字 (已轉譯) 模式開啟。 在此模式中，會將歸位字元-換行字元 (CR-LF) 組合在輸入中轉譯成單行換行字元 (LF)，且會將 LF 字元在輸出中轉譯為 CR-LF 組合。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在為了讀取或讀取和寫入而開啟的檔案中，`fopen` 會儘可能檢查檔案結尾是否有 Ctrl+Z 並加以移除。 這樣做的原因是因為使用 `fseek` 和 `ftell` 函式在以 Ctrl+Z 結束的檔案內移動可能會讓 `fseek` 在檔案結尾附近產生不當行為。
 
    > [!NOTE]
    > **t** 選項並不屬於 `fopen` 和 `freopen` 的 ANSI 標準。 它是 Microsoft 擴充功能，且不應在需要 ANSI 可攜性的情況中使用。

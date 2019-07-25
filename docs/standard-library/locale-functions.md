@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: b1ffe9e5294e4b945f81dbecbabba64c15c188a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413160"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453560"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt; 函式
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*Loc*<br/>
+*Loc*\
 要測試是否有 facet 存在的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的英數字元元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之英數字元元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之字母元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要測試的元素。
 
-*Loc*<br/>
+*Loc*\
 包含要測試之元素的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要轉換為小寫的字元。
 
-*Loc*<br/>
+*Loc*\
 包含要轉換之字元的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 要轉換為大寫的字元。
 
-*Loc*<br/>
+*Loc*\
 包含要轉換之字元的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>參數
 
-*Loc*<br/>
+*Loc*\
 包含所要參考之 facet 類型的常數地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)

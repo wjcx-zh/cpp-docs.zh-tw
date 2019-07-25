@@ -17,12 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385151"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449071"
 ---
 # <a name="iostream-programming"></a>iostream 程式設計
 
@@ -44,5 +44,5 @@ ms.locfileid: "62385151"
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

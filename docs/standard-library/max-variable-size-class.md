@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_variable_size [C++], released
 - stdext::max_variable_size [C++], saved
 ms.assetid: 9f2e9df0-4148-4b37-bc30-f8eca0ef86ae
-ms.openlocfilehash: a7fde40352a878575ddce8b48b4c97093ae7a960
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8b3c61676f784bf9369c22b5db97d7b251f7ac6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412926"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447287"
 ---
 # <a name="maxvariablesize-class"></a>max_variable_size 類別
 
@@ -41,7 +41,7 @@ class max_variable_size
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[allocated](#allocated)|遞增已配置的記憶體區塊計數。|
 |[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|
@@ -51,7 +51,7 @@ class max_variable_size
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -65,13 +65,13 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*_Nx*|遞增值。|
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將 *_Nx*的預存值`_Nallocs`。 每個成功呼叫之後呼叫此成員函式`cache_freelist::allocate`運算子**新**。 引數 *_Nx*運算子所配置之區塊中的記憶體區塊數目**新**。
+此成員函式會將 *_Nx*新增至`_Nallocs`預存值。 每次成功呼叫`cache_freelist::allocate`運算子**new**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **new**所配置之區塊中的記憶體區塊數目。
 
 ## <a name="deallocated"></a>  max_variable_size::deallocated
 
@@ -89,7 +89,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式減去 *_Nx*預存值`_Nallocs`。 此成員函式會依每次呼叫之後呼叫`cache_freelist::deallocate`運算子**刪除**。 引數 *_Nx*是由運算子解除配置之區塊中的記憶體區塊數目**刪除**。
+成員函式會將 *_Nx*從預存`_Nallocs`值中減去。 每次呼叫`cache_freelist::deallocate`運算子**delete**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
 
 ## <a name="full"></a>  max_variable_size::full
 
@@ -101,11 +101,11 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果`_Nallocs / 16 + 16 <= _Nblocks`。
+如果`_Nallocs / 16 + 16 <= _Nblocks`**為, 則為 true** 。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回 **，則為 true**，`deallocate`如果傳回 false，記憶體區塊放到可用的清單;`deallocate`呼叫運算子**刪除**解除配置的區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true** `deallocate` , 則會將記憶體區塊放在可用的清單上; 如果傳回 false `deallocate` , 則呼叫 operator **delete**來解除配置區塊。
 
 ## <a name="max_variable_size"></a>  max_variable_size::max_variable_size
 
@@ -145,4 +145,4 @@ void saved();
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

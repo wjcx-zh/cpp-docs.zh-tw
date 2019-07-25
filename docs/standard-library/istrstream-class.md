@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224269"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448080"
 ---
 # <a name="istrstream-class"></a>istrstream 類別
 
@@ -33,7 +33,7 @@ class istrstream : public istream
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[istrstream](#istrstream)|建構類型 `istrstream` 的物件。|
 
@@ -46,7 +46,7 @@ class istrstream : public istream
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<strstream>
+**標頭：** \<strstream>
 
 **命名空間：** std
 
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 緩衝區的長度 (*ptr*)。
 
-*ptr*<br/>
+*指標*\
 用來將緩衝區初始化的內容。
 
 ### <a name="remarks"></a>備註
 
-所有建構函式初始化基底類別，藉由呼叫[istream](../standard-library/istream-typedefs.md#istream)(**sb**)，其中`sb`是類別的預存的物件[strstreambuf](../standard-library/strstreambuf-class.md)。 前兩個建構函式也會初始化`sb`藉由呼叫`strstreambuf`(( **const** `char` \*) `ptr`，0)。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
+所有的函式都會呼叫[istream](../standard-library/istream-typedefs.md#istream)(**sb**) 來初始化基類, 其中`sb`是[strstreambuf](../standard-library/strstreambuf-class.md)類別的預存物件。 前兩個函式也`sb`會藉`strstreambuf`由呼叫 (( `ptr` **const** `char` \*), 0) 進行初始化。 其餘兩個建構函式會改為呼叫 `strstreambuf`( ( **const**`char` *) `ptr`, `count` )。
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -120,11 +120,11 @@ char *str();
 
 ### <a name="example"></a>範例
 
-請參閱[strstream:: str](../standard-library/strstreambuf-class.md#str)如需範例，會使用`str`。
+如需使用`str`的範例, 請參閱[strstream:: str](../standard-library/strstreambuf-class.md#str) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_const class
 - remove_const
 ms.assetid: feb76fb3-9228-41d6-80f6-2fbb04daec43
-ms.openlocfilehash: 04f7c6475d88f843ef381563f80559529e6b59e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0091c77d33e1fcd2be5b361680c9422210866be2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368964"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451348"
 ---
 # <a name="removeconst-class"></a>remove_const 類別
 
@@ -32,12 +32,12 @@ using remove_const_t = typename remove_const<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要修改的類型。
 
 ## <a name="remarks"></a>備註
 
-執行個體`remove_const<T>`儲存修改的類型是`T1`當*T*的格式`const T1`，否則為*T*。
+的`remove_const<T>`實例會保存已修改的類型, 當`T1` *T*的格式`const T1`為時, 則為, 否則為*t*。
 
 ## <a name="example"></a>範例
 
@@ -63,12 +63,12 @@ remove_const_t<const int> == int
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_const 類別](../standard-library/add-const-class.md)<br/>
-[remove_cv 類別](../standard-library/remove-cv-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_const 類別](../standard-library/add-const-class.md)\
+[remove_cv 類別](../standard-library/remove-cv-class.md)

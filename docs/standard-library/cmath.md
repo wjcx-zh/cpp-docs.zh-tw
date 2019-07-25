@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244742"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459273"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "68244742"
 #include <cmath>
 ```
 
-## <a name="constants-and-types"></a>常數和型別
+## <a name="constants-and-types"></a>常數和類型
 
 ```cpp
 namespace std {
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>分類 / 比較函式
+## <a name="classification--comparison-functions"></a>分類/比較函式
 
 ```cpp
 int fpclassify(float x);
@@ -409,7 +409,7 @@ float assoc_laguerref(unsigned n, unsigned m, float x);
 long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 ```
 
-### <a name="associated-legendre-functions"></a>相關聯的 Legendre 函式
+### <a name="associated-legendre-functions"></a>相關聯的 Legendre 函數
 
 ```cpp
 double assoc_legendre(unsigned l, unsigned m, double x);
@@ -417,7 +417,7 @@ float assoc_legendref(unsigned l, unsigned m, float x);
 long double assoc_legendrel(unsigned l, unsigned m, long double x);
 ```
 
-### <a name="beta-function"></a>Beta 函式
+### <a name="beta-function"></a>搶鮮版 (Beta)
 
 ```cpp
 double beta(double x, double y);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>第一類的完整橢圓積分
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>完成第一個類型的橢圓整數
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>第二個類型的完整橢圓積分
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>完成第二個類型的橢圓整數
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>第三個類型的完整橢圓積分
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>完成第三種的橢圓整數
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>一般修改圓柱 Bessel 函式
+### <a name="regular-modified-cylindrical-bessel-functions"></a>一般修改的圓柱形貝耳函式
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>第一類的圓柱 Bessel 函式
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>第一種類型的圓柱形貝賽耳函式
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>異常修改圓柱 Bessel 函式
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>不規則修改的圓柱形貝耳函式
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>圓柱 Neumann 函式
+### <a name="cylindrical-neumann-functions"></a>圓柱 Neumann 函數
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -481,7 +481,7 @@ float cyl_neumannf(float nu, float x);
 long double cyl_neumannl(long double nu, long double x);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>第一類的不完整橢圓積分
+### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>第一種類型的橢圓整數不完整
 
 ```cpp
 double ellint_1(double k, double phi);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>第二個類型的不完整橢圓積分
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>第二種類型的橢圓整數不完整
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -497,7 +497,7 @@ float ellint_2f(float k, float phi);
 long double ellint_2l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>第三個種類的不完整橢圓積分
+### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>第三種類型的橢圓整數不完整
 
 ```cpp
 double ellint_3(double k, double nu, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>指數的整數
+### <a name="exponential-integral"></a>指數整數
 
 ```cpp
 double expint(double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>黎曼 zeta 函式
+### <a name="riemann-zeta-function"></a>Riemann zeta 函數
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>第一類的球面 Bessel 函式
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>第一種類型的球面貝耳函數
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>更低的球面的相關聯 Legendre 函式
+### <a name="spherical-associated-legendre-functions"></a>球面關聯的 Legendre 函數
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>更低的球面 Neumann 函式
+### <a name="spherical-neumann-functions"></a>球面 Neumann 函式
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -575,6 +575,6 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

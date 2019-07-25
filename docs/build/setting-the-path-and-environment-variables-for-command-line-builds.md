@@ -1,7 +1,7 @@
 ---
-title: 設定命令列建置的路徑和環境變數
+title: 設定命令列組建的路徑和環境變數
 ms.custom: conceptual
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 helpviewer_keywords:
 - environment variables [C++]
 - VCVARS32.bat file
@@ -14,23 +14,23 @@ helpviewer_keywords:
 - compiling source code [C++], from command line
 - environment variables [C++], CL compiler
 ms.assetid: 99389528-deb5-43b9-b99a-03c8773ebaf4
-ms.openlocfilehash: 30dadf365186ae74144a3225889c08eedfb89b47
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 6e7882b169805e3c62596341986a83d476ac5ec1
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217611"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492144"
 ---
-# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>設定命令列建置的路徑和環境變數
+# <a name="set-the-path-and-environment-variables-for-command-line-builds"></a>設定命令列組建的路徑和環境變數
 
-Microsoft C++ (MSVC) 命令列建置工具需要安裝和組建組態的客製化的數個環境變數。 當C++Visual Studio 安裝程式安裝工作負載，它會建立自訂的命令檔或設定所需的環境變數的批次檔案。 安裝程式然後會使用這些命令檔案來建立 Windows 開始 功能表開啟 開發人員命令提示字元 視窗的快速鍵。 這些快速鍵設定環境變數以供特定建置組態。 當您想要使用命令列工具時，您可以執行其中一個捷徑，或您可以開啟純文字的命令提示字元 視窗，然後執行其中一個要自行設定組建設定環境的自訂命令檔。 如需詳細資訊，請參閱 <<c0> [ 使用 MSVC 工具組，從命令列](building-on-the-command-line.md)。
+Microsoft C++ (MSVC) 命令列組建工具需要數個針對您的安裝和組建設定自訂的環境變數。 當 Visual Studio C++安裝程式安裝工作負載時, 它會建立自訂的命令檔或批次檔, 以設定所需的環境變數。 然後, 安裝程式會使用這些命令檔來建立 Windows [開始] 功能表的快捷方式, 以開啟 [開發人員命令提示字元] 視窗。 這些快捷方式會設定特定組建設定的環境變數。 當您想要使用命令列工具時, 可以執行下列其中一個快捷方式, 或者您可以開啟純文字命令提示字元視窗, 然後執行其中一個自訂命令檔, 自行設定組建環境。 如需詳細資訊, 請參閱[從命令列使用 MSVC 工具](building-on-the-command-line.md)組。 若要使用命令檔搭配純文字命令提示字元, 請參閱「[開發人員命令檔位置](building-on-the-command-line.md#developer_command_file_locations)」一節。
 
-MSVC 命令列工具使用的路徑、 TMP、 INCLUDE、 LIB 和 LIBPATH 環境變數，並也使用您已安裝的工具、 平台和 Sdk 的特定其他環境變數。 甚至是簡單的 Visual Studio 安裝可能設定 20 個或多個環境變數。 由於這些環境變數的值專屬於您的安裝，而且您選擇的組建組態，而且可以變更產品更新或升級，我們強烈建議您使用開發人員命令提示字元捷徑或其中一個自訂設定，而不是自己設定這些 Windows 環境中的命令檔。
+MSVC 命令列工具會使用 PATH、TMP、INCLUDE、LIB 和 LIBPATH 環境變數, 也會使用您已安裝的工具、平臺和 Sdk 特有的其他環境變數。 即使是簡單的 Visual Studio 安裝也可能會設定二十個或更多的環境變數。 因為這些環境變數的值專屬於您的安裝以及您選擇的組建設定, 而且可以透過產品更新或升級進行變更, 所以強烈建議您使用開發人員命令提示字元快捷方式或其中一項自訂命令檔來設定它們, 而不是自行在 Windows 環境中設定它們。
 
-若要查看哪些環境變數所設定的開發人員命令提示字元捷徑，您可以使用 SET 命令。 開啟純文字的命令提示字元視窗，並擷取基準的 SET 命令的輸出。 開啟開發人員命令提示字元視窗，並擷取輸出的 SET 命令的比較。 例如 Visual Studio IDE 內建的 diff 工具可用來比較的環境變數，並請參閱什麼由開發人員命令提示字元設定。 編譯器和連結器所使用之特定環境變數的詳細資訊，請參閱[CL 環境變數](reference/cl-environment-variables.md)。
+若要查看開發人員命令提示字元快捷方式所設定的環境變數, 您可以使用 SET 命令。 開啟純文字 [命令提示字元] 視窗, 並針對基準捕捉 SET 命令的輸出。 開啟 [開發人員命令提示字元] 視窗, 並捕捉 SET 命令的輸出以進行比較。 Visual Studio IDE 內建的 diff 工具, 可能有助於比較環境變數, 並查看開發人員命令提示字元所設定的功能。 如需編譯器和連結器所使用之特定環境變數的詳細資訊, 請參閱[CL 環境變數](reference/cl-environment-variables.md)。
 
 > [!NOTE]
->  數個命令列工具或工具選項，可能需要系統管理員權限。 如果您有權限問題，當您使用它們時，我們建議您開啟開發人員命令提示字元視窗中，使用**系統管理員身分執行**選項。 在 Windows 10 中，以滑鼠右鍵按一下以開啟 [命令提示字元] 視窗的捷徑功能表，然後選擇**更多**，**系統管理員身分執行**。
+>  數個命令列工具或工具選項可能需要系統管理員許可權。 如果您在使用時遇到許可權問題, 建議您使用 [以**系統管理員身分執行**] 選項開啟 [開發人員命令提示字元] 視窗。 在 Windows 10 上, 以滑鼠右鍵按一下以開啟 [命令提示字元] 視窗的快捷方式功能表, 然後選擇 [**更多**]、[**以系統管理員身分執行**]。
 
 ## <a name="see-also"></a>另請參閱
 

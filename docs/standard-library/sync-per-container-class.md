@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 641595f663c382129a40ce503ebdb789f8042cf0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412159"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450294"
 ---
 # <a name="syncpercontainer-class"></a>sync_per_container 類別
 
@@ -40,7 +40,7 @@ class sync_per_container
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -61,10 +61,10 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式一律會傳回**false**。
+成員函式一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

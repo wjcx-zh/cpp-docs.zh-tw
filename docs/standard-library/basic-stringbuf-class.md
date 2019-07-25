@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409755"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447850"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf 類別
 
@@ -51,13 +51,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*Elem*<br/>
+*Elem*\
 字串之基本項目的類型。
 
-*Tr*<br/>
+*Tr*\
 字元特性是在字串的基本項目上特製化。
 
 ## <a name="remarks"></a>備註
@@ -78,13 +78,13 @@ basic_stringbuf< `Elem`, `Tr`, `Alloc`> 類別的物件會將其建構函式中�
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
-|[allocator_type](#allocator_type)|類型是範本參數的同義字*Alloc*。|
+|[allocator_type](#allocator_type)|此類型是樣板參數配置的同義字。|
 |[char_type](#char_type)|將類型名稱與 *Elem* 範本參數建立關聯。|
-|[int_type](#int_type)|建立此類型內`basic_filebuf`的範圍中的相同名稱的型別對等*Tr*範圍。|
-|[off_type](#off_type)|建立此類型內`basic_filebuf`的範圍中的相同名稱的型別對等*Tr*範圍。|
-|[pos_type](#pos_type)|建立此類型內`basic_filebuf`的範圍中的相同名稱的型別對等*Tr*範圍。|
+|[int_type](#int_type)|使此類型在`basic_filebuf`的範圍內, 等同于*Tr*範圍中相同名稱的類型。|
+|[off_type](#off_type)|使此類型在`basic_filebuf`的範圍內, 等同于*Tr*範圍中相同名稱的類型。|
+|[pos_type](#pos_type)|使此類型在`basic_filebuf`的範圍內, 等同于*Tr*範圍中相同名稱的類型。|
 |[traits_type](#traits_type)|將類型名稱與 *Tr* 範本參數建立關聯。|
 
 ### <a name="member-functions"></a>成員函式
@@ -101,13 +101,13 @@ basic_stringbuf< `Elem`, `Tr`, `Alloc`> 類別的物件會將其建構函式中�
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<sstream>
+**標頭︰** \<sstream>
 
 **命名空間：** std
 
 ## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
 
-類型是範本參數的同義字*Alloc*。
+此類型是樣板參數配置的同義字。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -128,17 +128,17 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>參數
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*str*<br/>
+*str*\
 [basic_string](../standard-library/basic-string-class.md) 類型的物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會在控制輸入緩衝區和輸出緩衝區的所有指標中儲存一個 null 指標。 如需詳細資訊，請參閱 [basic_streambuf 類別](../standard-library/basic-streambuf-class.md)的＜備註＞一節。 它也會儲存*模式 （_m)* 為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。
+第一個建構函式會在控制輸入緩衝區和輸出緩衝區的所有指標中儲存一個 null 指標。 如需詳細資訊，請參閱 [basic_streambuf 類別](../standard-library/basic-streambuf-class.md)的＜備註＞一節。 它也會將 *_Mode*儲存為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。
 
-第二個建構函式會配置字串物件所控制之序列的複本*str*。 如果 `_Mode & ios_base::in` 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 `_Mode & ios_base::out` 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。 它也會儲存*模式 （_m)* 為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。
+第二個函式會配置字串物件*str*所控制的序列複本。 如果 `_Mode & ios_base::in` 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 `_Mode & ios_base::out` 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。 它也會將 *_Mode*儲存為 stringbuf 模式。 如需詳細資訊，請參閱 [basic_stringbuf 類別](../standard-library/basic-stringbuf-class.md)的＜備註＞一節。
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
@@ -150,7 +150,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -158,7 +158,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -174,16 +174,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
+*_Meta*\
 要插入緩衝區的字元，或 `traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
 
 ### <a name="remarks"></a>備註
 
-如果 *\_Meta*不會比較等於**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保護虛擬成員函式會嘗試將元素**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：
+*如果\_Meta*與**traits_type::** [eof](../standard-library/char-traits-struct.md#eof)比較的結果不相等, 受保護的虛擬成員函式會嘗試將元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 插入至輸出緩衝區。 它可以透過下列各種方式來執行：
 
 - 如果有寫入位置可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -199,16 +199,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
+*_Meta*\
 要插入緩衝區的字元，或 `traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
 
 ### <a name="remarks"></a>備註
 
-如果 *_Meta*的比較結果相等**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，要推回的元素實際上是一個已在資料流中目前的項目之前。 否則會以 **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) 取代該元素。 此函式可以透過下列各種方式來放回元素：
+如果 *_Meta*比較等於**traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 則要回傳的專案實際上是已在資料流程中目前元素之前的元素。 否則會以 **byte** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*) 取代該元素。 此函式可以透過下列各種方式來放回元素：
 
 - 如果有 putback 位置可供使用，而且儲存在其中的元素與位元組比較的結果相等，則可以遞減輸入緩衝區的下一個指標。
 
@@ -216,7 +216,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
-要搜尋的相對位置 *_Way*。 如需詳細資訊，請參閱 [basic_stringbuf::off_type](#off_type)。
+*_Off*\
+要搜尋的相對於 *_Way*的位置。 如需詳細資訊，請參閱 [basic_stringbuf::off_type](#off_type)。
 
-*_Way*<br/>
+*_Way*\
 位移作業的起點。 如需可能的值，請參閱 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Mode*<br/>
+*_Mode*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
 ### <a name="return-value"></a>傳回值
@@ -254,13 +254,13 @@ virtual pos_type seekoff(
 
 新位置的判斷方式如下：
 
-- 如果`_Way`  ==  `ios_base::beg`，新的位置是加上資料流開頭 *_Off*。
+- 如果`_Way`為 == ,則新位置是資料流程的開頭加上 *_Off。* `ios_base::beg`
 
-- 如果`_Way`  ==  `ios_base::cur`，新的位置是目前的資料流位置加上 *_Off*。
+- 如果`_Way`為 == ,則新位置是目前的資料流程位置加上 *_Off。* `ios_base::cur`
 
-- 如果`_Way`  ==  `ios_base::end`，新的位置是加上資料流結尾 *_Off*。
+- 如果`_Way`為 == ,則新位置是資料流程的結尾加上 *_Off。* `ios_base::end`
 
-如果 `_Mode & ios_base::in` 為非零值，此函式會改變要讀入輸入緩衝區的下一個位置。 如果 `_Mode & ios_base::out` 為非零值，此函式會改變要寫入輸出緩衝區的下一個位置。 若要影響資料流，其緩衝區必須存在。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。 如果函式會影響這兩個資料流位置， *_Way*必須`ios_base::beg`或`ios_base::end`和兩個資料流都位於相同的項目。 否則 (若不影響任一位置)，置放作業會失敗。
+如果 `_Mode & ios_base::in` 為非零值，此函式會改變要讀入輸入緩衝區的下一個位置。 如果 `_Mode & ios_base::out` 為非零值，此函式會改變要寫入輸出緩衝區的下一個位置。 若要影響資料流，其緩衝區必須存在。 若要讓置放作業能夠成功，產生的資料流位置必須位於受控制的序列內。 如果函式會影響兩個數據流位置, 則`ios_base::beg` _Way `ios_base::end`必須是或, 而且兩個數據流都位於相同的元素。 否則 (若不影響任一位置)，置放作業會失敗。
 
 如果函式成功改變一個或兩個資料流位置，則會傳回結果資料流位置。 否則會失敗，並傳回無效的資料流位置。
 
@@ -274,10 +274,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>參數
 
-*_Sp*<br/>
+*_Sp*\
 要搜尋的位置。
 
-*_Mode*<br/>
+*_Mode*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -302,7 +302,7 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-*_Newstr*<br/>
+*_Newstr*\
 新字串。
 
 ### <a name="return-value"></a>傳回值
@@ -319,7 +319,7 @@ void str(
 
 - 否則，複製的序列是空的。
 
-第二個成員函式會解除配置 **\*this** 目前所控制的任何序列。 然後會配置所控制之序列的複本 *_Newstr*。 如果 **mode & ios_base::in** 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 **mode & ios_base::out** 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。
+第二個成員函式會解除配置 **\*this** 目前所控制的任何序列。 然後, 它會配置 *_Newstr*所控制的序列複本。 如果 **mode & ios_base::in** 為非零值，它會設定輸入緩衝區從序列開頭開始讀取。 如果 **mode & ios_base::out** 為非零值，它會設定輸出緩衝區從序列開頭開始寫入。
 
 ### <a name="example"></a>範例
 
@@ -375,11 +375,11 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 否則會傳回輸入資料流中已轉換的目前元素。
+如果函式不成功，則傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 否則會傳回輸入資料流中已轉換的目前元素。
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會嘗試擷取目前的項目`byte`輸入緩衝區中，從目前資料流位置前移，並傳回此元素作為**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(**位元組**)。 它可以在其中一個方法來這樣做：如果有讀取的位置可用，它會採用`byte`作為項目儲存在讀取位置，並前進到輸入緩衝區的下一個指標。
+受保護的虛擬成員`byte`函式會嘗試從輸入緩衝區解壓縮目前的專案, 並將目前的資料流程位置前移, 並以**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **byte**) 的形式傳回此元素。 它可以透過一種方式來執行這項操作:如果有讀取位置可供使用, 它`byte`會將專案當做儲存在讀取位置中的元素, 並前進到輸入緩衝區的下一個指標。
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
@@ -391,7 +391,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
+*另一方面*\
 內容即將與此 basic_stringbuf 交換的 basic_stringbuf。
 
 ### <a name="remarks"></a>備註
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>參數
 
-*other*<br/>
+*另一方面*\
 其內容 (包括地區設定特性) 將被指派到運算子左邊 stringbuf 的 basic_stringbuf。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

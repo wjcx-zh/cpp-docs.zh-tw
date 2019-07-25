@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299733"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492139"
 ---
 # <a name="c-project-property-page-reference"></a>C++專案屬性頁參考
 
@@ -47,21 +47,7 @@ ms.locfileid: "68299733"
 
 [一般屬性頁 (檔案)](general-property-page-file.md)
 
-
-
-
-
 [HLSL 屬性頁](hlsl-property-pages.md)
-
-[HLSL 屬性頁：進階](hlsl-property-pages-advanced.md)
-
-[HLSL 屬性頁：一般](hlsl-property-pages-general.md)
-
-[HLSL 屬性頁：輸出檔案](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [連結器屬性頁](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ ms.locfileid: "68299733"
 
 [MIDL 屬性頁](midl-property-pages.md)
 
-[MIDL 屬性頁：進階](midl-property-pages-advanced.md)
-
-[MIDL 屬性頁：一般](midl-property-pages-general.md)
-
-[MIDL 屬性頁：輸出](midl-property-pages-output.md)
-
 [NMake 屬性頁](nmake-property-page.md)
 
 [資源屬性頁](resources-property-pages.md)
-
-
 
 [Web 參考屬性頁](web-references-property-page.md)
 

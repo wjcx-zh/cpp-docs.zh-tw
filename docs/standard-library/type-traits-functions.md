@@ -24,12 +24,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: d607e68bd61a4f9aa6c00ab66c5ded3ecd508082
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241499"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447036"
 ---
 # <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt; 函式
 
@@ -43,7 +43,7 @@ ms.locfileid: "68241499"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-測試的值是否*從*型別可以指派給*到*型別。
+測試是否可以將*From*類型的值指派給類型。
 
 ```cpp
 template <class To, class From>
@@ -52,15 +52,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>參數
 
-*若要*<br/>
+*自*\
 接收指派的物件類型。
 
-*From*<br/>
+*從*\
 提供值的物件類型。
 
 ### <a name="remarks"></a>備註
 
-未評估的運算式 `declval<To>() = declval<From>()` 必須格式正確。 兩者*從*並*要*必須是完整的類型**void**，或界限未知的陣列。
+未評估的運算式 `declval<To>() = declval<From>()` 必須格式正確。 *From*和*To*都必須是完整的類型、 **void**或未知系結的陣列。
 
 ## <a name="is_copy_assignable"></a>  is_copy_assignable
 
@@ -73,12 +73,12 @@ struct is_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是具有複製指派運算子，否則為 false 的類別。 相當於 is_assignable\<Ty&, const Ty&>。
+如果類型*Ty*是具有複製指派運算子的類別, 則類型述詞的實例會保留 true, 否則會保留 false。 相當於 is_assignable\<Ty&, const Ty&>。
 
 ## <a name="is_copy_constructible"></a>  is_copy_constructible
 
@@ -91,12 +91,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是複製建構函式，否則為 false 的類別。
+如果類型*Ty*是具有複製參數的類別, 則類型述詞的實例為 true, 否則為 false。
 
 ### <a name="example"></a>範例
 
@@ -143,12 +143,12 @@ struct is_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*是類別類型具有預設建構函式，否則為 false。 這相當於述詞 `is_constructible<T>`。 型別*T*必須是完整的型別**void**，或是界限未知的陣列。
+如果類型*T*是具有預設的構造函式的類別類型, 則類型述詞的實例為 true, 否則為 false。 這相當於述詞 `is_constructible<T>`。 類型*T*必須是完整的類型、 **void**, 或未知系結的陣列。
 
 ### <a name="example"></a>範例
 
@@ -195,7 +195,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
@@ -213,12 +213,12 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要評估的類型
 
 ### <a name="remarks"></a>備註
 
-類型述詞評估為 true 的型別*T*可以藉由使用移動作業建構。 這個述詞相當於 `is_constructible<T, T&&>`。
+如果可以使用 move 作業來建立類型*T* , 則會評估為 true 的類型述詞。 這個述詞相當於 `is_constructible<T, T&&>`。
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
@@ -231,32 +231,32 @@ struct is_nothrow_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*具有 nothrow 移動指派運算子，否則為 false。
+如果型別*Ty*有 nothrow 的移動指派運算子, 則型別述詞的實例為 true, 否則保留 false。
 
-## <a name="is_nothrow_swappable"></a>  is_nothrow_swappable
+## <a name="is_nothrow_swappable"></a>is_nothrow_swappable
 
 ```cpp
 template <class T> struct is_nothrow_swappable;
 ```
 
-## <a name="is_nothrow_swappable_with"></a>  is_nothrow_swappable_with
+## <a name="is_nothrow_swappable_with"></a>is_nothrow_swappable_with
 
 ```cpp
 template <class T, class U> struct is_nothrow_swappable_with;
 ```
 
-## <a name="is_swappable"></a>  is_swappable
+## <a name="is_swappable"></a>is_swappable
 
 ```cpp
 template <class T> struct is_swappable;
 ```
 
-## <a name="is_swappable_with"></a>  is_swappable_with
+## <a name="is_swappable_with"></a>is_swappable_with
 
 ```cpp
 template <class T, class U> struct is_swappable_with;
@@ -273,14 +273,14 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*是具有 trivial 複製指派運算子，否則為 false 的類別。
+如果類型*T*是具有簡單複製指派運算子的類別, 則類型述詞的實例為 true, 否則為 false。
 
-類別的指派建構函式*T*微不足道，如果它以隱含方式提供，類別*T*沒有虛擬函式類別*T*沒有虛擬基底類別類別類型的所有非靜態資料成員都有 trivial 指派運算子和陣列的類別類型的所有非靜態資料成員的類別具有 trivial 指派運算子。
+類別*t*的指派函式若隱含提供, 則為不常用, 類別*t*沒有虛擬函數, 類別*t*沒有虛擬基底, 類別類型的所有非靜態資料成員的類別都有簡單的指派運算子, 以及類別之類型陣列的所有非靜態資料成員的類別, 都具有簡單的指派運算子。
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -293,20 +293,20 @@ struct is_trivially_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是具有 trivial 移動指派運算子，否則為 false 的類別。
+如果類型*Ty*是具有簡單的移動指派運算子的類別, 則類型述詞的實例為 true, 否則為 false。
 
-類別的移動指派運算子*Ty*輕而易舉的事如果：
+*Ty*類別的移動指派運算子在下列情況中是很簡單的:
 
 它會隱含地提供
 
-此類別*Ty*沒有虛擬函式
+類別*Ty*沒有虛擬函式
 
-此類別*Ty*沒有虛擬基底
+類別*Ty*沒有虛擬基底
 
 類別類型的所有非靜態資料成員的類別具有 trivial 移動指派運算子
 
@@ -323,26 +323,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ### <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是具有 trivial 移動建構函式，否則為 false 的類別。
+如果型別*Ty*是具有簡單的移動函式的類別, 則類型述詞的實例為 true, 否則為 false。
 
-類別的移動建構函式*Ty*輕而易舉的事如果：
+如果有下列情況, 類別*Ty*的移動函式就很簡單:
 
 它是隱含宣告
 
 其參數類型相等於隱含宣告的參數類型
 
-此類別*Ty*沒有虛擬函式
+類別*Ty*沒有虛擬函式
 
-此類別*Ty*沒有虛擬基底
+類別*Ty*沒有虛擬基底
 
 類別沒有任何變動性的非靜態資料成員
 
-所有直接基都底類別的*Ty*具有 trivial 移動建構函式
+類別*Ty*的所有直接基底都有簡單的移動函式
 
 類別類型的所有非靜態資料成員的類別都具有 trivial 移動建構函式
 
@@ -350,4 +350,4 @@ struct is_trivially_move_constructible;
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 448b4d03e4d38dc45621cddab7d8f5d03b805968
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369640"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451676"
 ---
 # <a name="recursivemutex-class"></a>recursive_mutex 類別
 
@@ -50,7 +50,7 @@ class recursive_mutex;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
@@ -96,11 +96,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex**; otherwise, **false`。
+如果方法成功取得的擁有權, `mutex`或如果呼叫的執行緒已經擁有, `mutex**; otherwise, **false`則**為 true** 。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有`mutex`，則函數會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`, 函式會立即傳回**true**, 而先前的鎖定仍會生效。
 
 ## <a name="unlock"></a>  unlock
 
@@ -118,5 +118,5 @@ void unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

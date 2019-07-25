@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple header
 ms.assetid: e4ef5c2d-318b-44f6-8bce-fce4ecd796a3
-ms.openlocfilehash: ce6e005990d05676fb20752b5808d32ec88dd7b3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: a391a77ea65a203a7eddde12046c5df89a77194a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241543"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447151"
 ---
 # <a name="lttuplegt"></a>&lt;tuple&gt;
 
@@ -45,26 +45,26 @@ ms.locfileid: "68241543"
 
 |||
 |-|-|
-|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|比較`tuple`物件，等於。|
-|[operator!=](../standard-library/tuple-operators.md#op_neq)|比較`tuple`物件不相等。|
-|[operator<](../standard-library/tuple-operators.md#op_lt)|比較`tuple`物件小於。|
-|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|比較`tuple`物件小於或等於。|
-|[operator>](../standard-library/tuple-operators.md#op_gt)|比較`tuple`大於物件。|
-|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|比較`tuple`大於或相等的物件。|
+|[operator==](../standard-library/tuple-operators.md#op_eq_eq)|物件的`tuple`比較, 等於。|
+|[operator!=](../standard-library/tuple-operators.md#op_neq)|物件的`tuple`比較, 不等於。|
+|[operator<](../standard-library/tuple-operators.md#op_lt)|物件的`tuple`比較, 小於。|
+|[operator<=](../standard-library/tuple-operators.md#op_lt_eq)|物件的`tuple`比較, 小於或等於。|
+|[operator>](../standard-library/tuple-operators.md#op_gt)|物件的`tuple`比較, 大於。|
+|[operator>=](../standard-library/tuple-operators.md#op_gt_eq)|物件的`tuple`比較 (大於或等於)。|
 
 ### <a name="functions"></a>函式
 
 |||
 |-|-|
-|[apply](../standard-library/tuple-functions.md#apply)|呼叫使用 tuple 的函數。|
-|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|建構 tuple 的參考。|
+|[apply](../standard-library/tuple-functions.md#apply)|使用元組呼叫函式。|
+|[forward_as_tuple](../standard-library/tuple-functions.md#forward)|結構參考的元組。|
 |[get](../standard-library/tuple-functions.md#get)|從 `tuple` 物件取得項目。|
-|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|進行的速記`tuple`。|
+|[make_from_tuple](../standard-library/tuple-functions.md#make_from_tuple)|建立的`tuple`速記。|
 |[make_tuple](../standard-library/tuple-functions.md#make_tuple)|從元素值製作 `tuple`。|
 |[swap](../standard-library/tuple-functions.md#swap)||
 |[tie](../standard-library/tuple-functions.md#tie)|從元素參考製作 `tuple`。|
-|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|建構 tuple 物件的型別項目範圍。|
+|[tuple_cat](../standard-library/tuple-functions.md#tuple_cat)|使用類型元素的範圍來建立元組物件。|
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

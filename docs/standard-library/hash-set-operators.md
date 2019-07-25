@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 901070731d372904ae297a5360ec0da78d179468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405023"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452025"
 ---
 # <a name="lthashsetgt-operators"></a>&lt;hash_set&gt; 運算子
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*\
 `hash_set` 類型的物件。
 
-*right*<br/>
+*再*\
 `hash_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -46,7 +46,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 hash_set 物件之間的比較是以其元素之間的成對比較為基礎。 兩個 hash_set 如果元素數目相同，且其個別元素的值也相同，兩者便相等。 反之則為不相等。
 
-成員[< p >](../standard-library/hash-map.md)並[< hash_set >](../standard-library/hash-set.md)標頭檔位於[stdext 命名空間](../standard-library/stdext-namespace.md)。
+[< Hash_map >](../standard-library/hash-map.md)和[< hash_set >](../standard-library/hash-set.md)標頭檔的成員都在[stdext 命名空間](../standard-library/stdext-namespace.md)中。
 
 ### <a name="example"></a>範例
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*\
 `hash_set` 類型的物件。
 
-*right*<br/>
+*再*\
 `hash_set` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*\
 `hash_multiset` 類型的物件。
 
-*right*<br/>
+*再*\
 `hash_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左面*\
 `hash_multiset` 類型的物件。
 
-*right*<br/>
+*再*\
 `hash_multiset` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -287,4 +287,4 @@ The hash_multisets s1 and s2 are equal.
 
 ## <a name="see-also"></a>另請參閱
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

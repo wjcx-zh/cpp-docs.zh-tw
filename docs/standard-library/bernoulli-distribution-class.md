@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450859"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447777"
 ---
 # <a name="bernoullidistribution-class"></a>bernoulli_distribution 類別
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此類別描述產生之類型的值分佈**bool**、 分佈是根據白努利分佈離散可能性函式。 下表提供各個成員的文章連結。
+此類別描述產生**bool**類型值的分佈, 此散發是根據每個「按量值分佈離散機率函數」來散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*p&id*\
 儲存的 `p` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -193,7 +193,7 @@ struct param_type { typedef bernoulli_distribution distribution_type; param_type
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*p&id*\
 儲存的 `p` 分佈參數。
 
 ### <a name="remarks"></a>備註
@@ -204,4 +204,4 @@ struct param_type { typedef bernoulli_distribution distribution_type; param_type
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

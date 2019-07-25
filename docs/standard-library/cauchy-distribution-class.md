@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450233"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449854"
 ---
 # <a name="cauchydistribution-class"></a>cauchy_distribution 類別
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生值，使用者指定的浮點類型**double**如果未提供，分佈根據柯西分佈進行分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之浮點類型值的分佈, 如果沒有提供, 則為**double**類型, 這是根據柯西分佈散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 `a` 分佈參數。
 
-*b*<br/>
+*位元組*\
 `b` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 `a` 分佈參數。
 
-*b*<br/>
+*位元組*\
 `b` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -303,4 +303,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

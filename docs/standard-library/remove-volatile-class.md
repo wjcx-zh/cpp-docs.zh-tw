@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: b327bb8362e1f6523d22950974012747e0de99f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451268"
 ---
 # <a name="removevolatile-class"></a>remove_volatile 類別
 
@@ -30,12 +30,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要修改的類型。
 
 ## <a name="remarks"></a>備註
 
-執行個體`remove_volatile<T>`儲存修改的類型是`T1`當*T*的格式`volatile T1`，否則為*T*。
+的`remove_volatile<T>`實例會保存已修改的類型, 當`T1` *T*的格式`volatile T1`為時, 則為, 否則為*t*。
 
 ## <a name="example"></a>範例
 
@@ -61,11 +61,11 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_volatile 類別](../standard-library/add-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_volatile 類別](../standard-library/add-volatile-class.md)

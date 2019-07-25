@@ -6,12 +6,12 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: 5a7ea891a314d69b8bc3378edce9fa0de2d89ace
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cca38386892ce4df6bf9863e0cbac3dc16106d35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159492"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448657"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -28,14 +28,14 @@ ms.locfileid: "62159492"
 
 ### <a name="operators"></a>運算子
 
-|Hash_map 版本|Hash_multimap 版本|描述|
+|Hash_map 版本|Hash_multimap 版本|說明|
 |-----------------------|----------------------------|-----------------|
 |[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|測試運算子左邊的 hash_map 或 hash_multimap 物件是否不等於右邊的 hash_map 或 hash_multimap 物件。|
 |[operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|測試運算子左邊的 hash_map 或 hash_multimap 物件是否等於右邊的 hash_map 或 hash_multimap 物件。|
 
 ### <a name="specialized-template-functions"></a>特製化樣板函式
 
-|Hash_map 版本|Hash_multimap 版本|描述|
+|Hash_map 版本|Hash_multimap 版本|說明|
 |-----------------------|----------------------------|-----------------|
 |[swap (hash_map)](hash-map-class.md#swap)|[swap (hash_multimap)](hash-multimap-class.md#swap)|交換兩個 hash_maps 或 hash_multimaps 的項目。|
 
@@ -43,19 +43,19 @@ ms.locfileid: "62159492"
 
 |類別|描述|
 |-|-|
-|[hash_compare 類別](hash-compare-class.md)|描述可由任一雜湊關聯容器的物件 — hash_map、 hash_multimap、 hash_set 或 hash_multiset — 預設值為`Traits`參數物件，以便排序與雜湊所包含的元素。|
+|[hash_compare 類別](hash-compare-class.md)|描述可由任何雜湊關聯容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 用來做為預設`Traits`參數物件的物件, 以排序及雜湊其包含的元素。|
 |[value_compare 類別](value-compare-class.md)|提供函式物件，該物件可透過比較 hash_map 項目的索引鍵值來比較項目，以判斷項目在 hash_map 中的相對順序。|
 |[hash_map 類別](hash-map-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值唯一) 和相關聯資料值的配對。|
 |[hash_multimap 類別](hash-multimap-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值可重複) 和相關聯資料值的配對。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<hash_map>
+**標頭：** \<hash_map>
 
 **命名空間：** stdext
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準程式庫參考](cpp-standard-library-reference.md)

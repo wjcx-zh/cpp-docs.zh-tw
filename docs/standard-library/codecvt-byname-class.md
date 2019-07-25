@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405270"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459855"
 ---
 # <a name="codecvtbyname-class"></a>codecvt_byname 類別
 
@@ -43,24 +43,24 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*_Locname*<br/>
+*_Locname*\
 具名地區設定。
 
-*_Refs*<br/>
+*_Refs*\
 初始參考計數。
 
 ## <a name="remarks"></a>備註
 
 建構具名地區設定時，會自動建立 Byname Facet。
 
-其行為取決於具名地區設定 *_Locname*。 每個建構函式會以 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基底物件。
+其行為取決於已命名的地區設定 *_Locname*。 每個建構函式會以 [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`) 初始化其基底物件。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

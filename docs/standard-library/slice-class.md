@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412523"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450350"
 ---
 # <a name="slice-class"></a>slice 類別
 
@@ -25,7 +25,7 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 ## <a name="remarks"></a>備註
 
-此類別會儲存用來描述類型 [slice_array](../standard-library/slice-array-class.md) 之物件特性的參數。當類別 slice 的物件顯示為類別 [valarray](../standard-library/valarray-class.md#op_at)**\<Type>** 之物件的引數時，將會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：
+此類別會儲存用來描述類型 [slice_array](../standard-library/slice-array-class.md) 之物件特性的參數。當類別 slice 的物件顯示為類別 [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** 之物件的引數時，將會間接建構 valarray 的子集。 會指定從父 valarray 選取之子集的預存值包括：
 
 - valarray 中的起始索引。
 
@@ -45,7 +45,7 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[size](#size)|尋找 `valarray` 之配量中的項目數。|
 |[start](#start)|尋找 `valarray` 之配量的起始索引。|
@@ -53,7 +53,7 @@ valarray 的一個公用程式類別，用來定義父代 valarray 的一維子�
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<valarray>
+**標頭：** \<valarray>
 
 **命名空間：** std
 
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>參數
 
-*_StartIndex*<br/>
+*_StartIndex*\
 子集中第一個項目的 valarray 索引。
 
-*_Len*<br/>
+*_Len*\
 子集中的項目數。
 
-*stride*<br/>
+*長足*\
 子集中項目之間的距離。
 
 ### <a name="return-value"></a>傳回值
 
-預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個建構函式儲存 *_StartIndex*起始的索引，如 *_Len*的總長度，並*stride*針對分散。
+預設的建構函式會針對起始索引、總長度及分散儲存零。 第二個函式會儲存起始索引的 *_StartIndex* 、 *_Len*作為總長度, 以及 stride 的*stride* 。
 
 ### <a name="remarks"></a>備註
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

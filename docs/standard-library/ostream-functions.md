@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370983"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447200"
 ---
 # <a name="ltostreamgt-functions"></a>&lt;ostream&gt; 函式
 
-這些是定義的通用範本函式&lt;ostream&gt;。 成員函式，請參閱[basic_ostream 類別](basic-ostream-class.md)文件。
+這些是在 ostream &lt; &gt;中定義的全域範本函式。 如需成員函式, 請參閱[Basic_ostream 類別](basic-ostream-class.md)檔。
 
 ||||
 |-|-|-|
@@ -40,22 +40,22 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 元素類型。
 
-*Ostr*<br/>
-型別的物件**basic_ostream**。
+*Ostr*\
+**Basic_ostream**類型的物件。
 
-*Tr*<br/>
+*Tr*\
 字元特性。
 
 ### <a name="return-value"></a>傳回值
 
-型別的物件**basic_ostream**。
+**Basic_ostream**類型的物件。
 
 ### <a name="remarks"></a>備註
 
-操作工具呼叫*Ostr*。[放](../standard-library/basic-ostream-class.md#put)(*Ostr*。[widen](../standard-library/basic-ios-class.md#widen)('\n'))，然後呼叫*Ostr*。[排清](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
+操作工具會呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Ostr*。[加寬](../standard-library/basic-ios-class.md#widen)(' \n ')), 然後呼叫*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 元素類型。
 
-*Ostr*<br/>
+*Ostr*\
 `basic_ostream` 類型的物件。
 
-*Tr*<br/>
+*Tr*\
 字元特性。
 
 ### <a name="return-value"></a>傳回值
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>備註
 
-操作工具呼叫*Ostr*。[放](../standard-library/basic-ostream-class.md#put)(*Elem*('\0'))。 它會傳回*Ostr*。
+操作工具會呼叫*Ostr*。[put](../standard-library/basic-ostream-class.md#put)(*Elem*(' \ 0 '))。 它會傳回*Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 元素類型。
 
-*Ostr*<br/>
+*Ostr*\
 `basic_ostream` 類型的物件。
 
-*Tr*<br/>
+*Tr*\
 字元特性。
 
 ### <a name="return-value"></a>傳回值
@@ -151,7 +151,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>備註
 
-操作工具呼叫*Ostr*。[排清](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
+操作工具會呼叫*Ostr*。[flush](../standard-library/basic-ostream-class.md#flush)。 它會傳回*Ostr*。
 
 ### <a name="example"></a>範例
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 元素類型。
 
-*Tr*<br/>
+*Tr*\
 字元特性。
 
-*left*<br/>
+*左面*\
 `basic_ostream` 物件的 lvalue 參考。
 
-*right*<br/>
+*再*\
 `basic_ostream` 物件的 lvalue 參考。
 
 ### <a name="remarks"></a>備註

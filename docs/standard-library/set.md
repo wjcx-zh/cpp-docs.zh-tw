@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246389"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450516"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -24,13 +24,13 @@ ms.locfileid: "68246389"
 **命名空間：** std
 
 > [!NOTE]
-> \<設定 > 文件庫也會使用`#include <initializer_list>`陳述式。
+> Set > 程式庫也會`#include <initializer_list>`使用語句。 \<
 
 ## <a name="members"></a>成員
 
 ### <a name="operators"></a>運算子
 
-|set 版本|multiset 版本|說明|
+|set 版本|multiset 版本|描述|
 |-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|測試運算子左邊的 set 或 multiset 物件是否不等於右邊的 set 或 multiset 物件。|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|測試運算子左邊的 set 或 multiset 物件是否小於右邊的 set 或 multiset 物件。|
@@ -54,6 +54,6 @@ ms.locfileid: "68246389"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

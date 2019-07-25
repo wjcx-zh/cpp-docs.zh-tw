@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - csignal header
 ms.assetid: d18bcf82-a89a-476c-a6bf-726af956f7c0
-ms.openlocfilehash: 298aa14c4e41f1473cac72fc79aa3e180dfe183f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2e82877a54c433b9db638b908be290535b1cc857
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243564"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452335"
 ---
 # <a name="ltcsignalgt"></a>&lt;csignal&gt;
 
-包含標準 C 程式庫標頭\<signal.h >，並將關聯的名稱加入`std`命名空間。 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+包含 C 標準程式庫標\<頭信號 .h > 並將相關名稱新增`std`至命名空間。 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
 
 
 ## <a name="syntax"></a>語法
@@ -24,7 +24,7 @@ ms.locfileid: "68243564"
 #include <csignal>
 ```
 
-## <a name="namespace-and-macros"></a>命名空間和巨集
+## <a name="namespace-and-macros"></a>命名空間和宏
 
 ```cpp
 namespace std {
@@ -53,6 +53,6 @@ int raise(int sig);
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

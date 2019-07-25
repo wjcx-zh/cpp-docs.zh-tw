@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246662"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448344"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -24,11 +24,11 @@ ms.locfileid: "68246662"
 **命名空間：** std
 
 > [!NOTE]
-> \<Valarray > 程式庫會使用 ' #include < initializer_list >' 陳述式。
+> \<Valarray > 程式庫使用 ' #include < initializer_list > ' 語句。
 
 ## <a name="remarks"></a>備註
 
-這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言，任何函式會傳回型別`valarray<T1>`可能會傳回某些其他 T2 類型的物件。 在此情況下，任何函式會接受一或多個引數的型別`valarray<T2>`必須具有接受這些引數，每個都取代 T2 類型的引數任意組合的多載。
+這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言, 任何傳回類型`valarray<T1>`的函式都可能會傳回其他類型 T2 的物件。 在此情況下, 接受類型`valarray<T2>`的一或多個引數的任何函式都必須具有接受這些引數任意組合的多載, 而且每個函式都會取代為 T2 類型的引數。
 
 ## <a name="members"></a>成員
 
@@ -89,15 +89,15 @@ ms.locfileid: "68246662"
 |[mask_array 類別](../standard-library/mask-array-class.md)|可藉由提供子集之間的作業，以布林運算式指定，並支援父代 valarray 子集物件的內部、輔助的範本類別。|
 |[slice 類別](../standard-library/slice-class.md)|valarray 的一個公用程式類別，用來定義 valarray 的一維、類似向量的子集。|
 |[slice_array 類別](../standard-library/slice-array-class.md)|可藉由提供 valarray 之切割所定義的子集陣列之間的作業，支援切割物件的內部、輔助的範本類別。|
-|[valarray 類別](../standard-library/valarray-class.md)|此範本類別描述控制序列的項目型別的物件`Type`會儲存成陣列，專門設計來執行高速的數學運算，針對計算效能最佳化。|
+|[valarray 類別](../standard-library/valarray-class.md)|此樣板類別所描述的物件可控制一系列類型`Type`的專案, 這些專案會儲存為數組, 並專為執行高速的數學運算而設計, 並針對計算效能優化。|
 
 ### <a name="specializations"></a>特製化
 
 |||
 |-|-|
-|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|範本類別 valarray 的特製化的版本\<**型別**> 項目型別的**bool**。|
+|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|樣板類別的特殊版本 valarray\<**類型**> 到**bool**類型的元素。|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

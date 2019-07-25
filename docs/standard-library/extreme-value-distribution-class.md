@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451184"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457765"
 ---
 # <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
+*URNG*\
 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生值，使用者指定的浮點類型**double**如果未提供，根據極值分佈進行分佈的分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之浮點類型值的分佈, 或如果沒有提供, 則為**double**類型, 這是根據最大值分佈所散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a_value*<br/>
+*a_value*\
 `a` 分佈參數。
 
-*b_value*<br/>
+*b_value*\
 `b` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a_value*<br/>
+*a_value*\
 `a` 分佈參數。
 
-*b_value*<br/>
+*b_value*\
 `b` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

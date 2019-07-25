@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404882"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447668"
 ---
 # <a name="insertiterator-class"></a>insert_iterator 類別
 
@@ -30,16 +30,16 @@ class insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-*Container*<br/>
+*箱*\
 容器的類型，`insert_iterator` 將在其中插入項目。
 
 ## <a name="remarks"></a>備註
 
-類型的容器`Container`必須滿足可變大小容器的需求，而且有兩個引數插入成員函式的參數都屬於型別`Container::iterator`並`Container::value_type`，以及傳回型別`Container::iterator`。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
+類型`Container`的容器必須滿足可變大小容器的需求, 而且具有兩個引數 insert 成員函式, 其中參數的類型`Container::iterator`為和`Container::value_type` , 且會傳回類型`Container::iterator`。 「C++ 標準程式庫」序列容器和已排序關聯容器可滿足這些需求，並可調整來與 `insert_iterator` 搭配使用。 對於關聯容器，位置引數視為提示，可能會根據提示品質改善或降低效能。 `insert_iterator` 一定要以其容器初始化。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[insert_iterator](#insert_iterator)|建構 `insert_iterator`，將項目插入容器中的指定位置。|
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>參數
 
-*_Cont*<br/>
+*_Cont*\
 `insert_iterator` 要在其中插入元素的容器。
 
-*_It*<br/>
+*_It*\
 插入的位置。
 
 ### <a name="remarks"></a>備註
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>備註
 
-用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果`Iter`是迭代器，定址的項目順序，然後 **\*Iter** = **值**會以值取代該元素，並不會變更總數序列中的項目。
+用來實作輸出迭代器運算式 **\*Iter** = **value**。 如果`Iter`是定址序列中專案的反覆運算器, 則 **\*Iter**  = **值**會以值取代該元素, 而且不會變更序列中的元素總數。
 
 ### <a name="example"></a>範例
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 要指派給容器的值。
 
 ### <a name="return-value"></a>傳回值
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

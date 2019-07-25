@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 89c554bda1c82fbedda5b027dbb70b12c2c7cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413644"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455857"
 ---
 # <a name="isobject-class"></a>is_object 類別
 
@@ -27,12 +27,12 @@ struct is_object;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-類型述詞的執行個體保留為 false，如果型別*Ty*是參考型別、 函式類型或 void，或`cv-qualified`形式的其中一項，否則會保存，則為 true。
+如果類型*Ty*是參考型別、函式類型或 void, 或`cv-qualified`其中之一的形式, 則類型述詞的實例會保留 false, 否則會保留 true。
 
 ## <a name="example"></a>範例
 
@@ -79,11 +79,11 @@ is_object<void> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_function 類別](../standard-library/is-function-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_function 類別](../standard-library/is-function-class.md)

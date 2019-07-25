@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-ms.openlocfilehash: 366b40af45c57d058d918c4c2f21d1b2ba486d35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44de1f1fae1ea542aa247c0b39f04ee6bbd6308a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217322"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455910"
 ---
 # <a name="isnothrowdestructible-class"></a>is_nothrow_destructible 類別
 
@@ -26,19 +26,19 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*易損壞的類型，且編譯器已知解構函式不是用來擲回。 否則值會是 false。
+如果類型*T*是易損壞類型, 而且編譯器已知不會擲回此析構函式, 則類型述詞的實例會保留 true。 否則值會是 false。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

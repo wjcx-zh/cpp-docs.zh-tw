@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5862ddd812308c7bf81a5029249caf7e9b4a1168
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246689"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453546"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
@@ -19,7 +19,7 @@ ms.locfileid: "68246689"
 
 ## <a name="requirements"></a>需求
 
-**標頭**:\<數字 >
+**標頭**: \<數值 >
 
 **命名空間：** std
 
@@ -51,6 +51,6 @@ ms.locfileid: "68246689"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244630"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449452"
 ---
 # <a name="conditionvariable-class"></a>condition_variable 類別
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。|
 |[wait_until](#wait_until)|封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。|
 
-## <a name="condition_variable"></a> condition_variable
+## <a name="condition_variable"></a>condition_variable
 
 建構 `condition_variable` 物件。
 
@@ -68,7 +68,7 @@ condition_variable();
 
 如果可用的記憶體不足，建構函式會擲回具有 `not_enough_memory` 錯誤碼的 [system_error](../standard-library/system-error-class.md) 物件。 如果因為無法使用其他部分資源，而無法建構物件，建構函式會擲回具有 `resource_unavailable_try_again` 錯誤碼的 `system_error` 物件。
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 傳回代表 condition_variable 控制代碼的實作特定類型。
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 系統會將 `native_handle_type` 定義為並行執行階段內部資料結構的指標。
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 解除封鎖所有等候 `condition_variable` 物件的執行緒。
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 解除封鎖其中一個等候 `condition_variable` 物件的執行緒。
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> 等候
+## <a name="wait"></a>等候
 
 封鎖執行緒。
 
@@ -112,8 +112,8 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 *Lck*\
 [unique_lock\<mutex>](../standard-library/unique-lock-class.md) 物件。
 
-*預測*\
-傳回的任何運算式 **，則為 true**或是**false**。
+*Pred*\
+傳回**true**或**false**的任何運算式。
 
 ### <a name="remarks"></a>備註
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 封鎖執行緒，並設定要在多久時間間隔之後解除封鎖執行緒。
 
@@ -151,18 +151,18 @@ bool wait_for(
 *Rel_time*\
 `chrono::duration` 物件，指定喚醒執行緒之前的時間。
 
-*預測*\
-傳回的任何運算式 **，則為 true**或是**false**。
+*Pred*\
+傳回**true**或**false**的任何運算式。
 
 ### <a name="return-value"></a>傳回值
 
-第一種方法會傳回`cv_status::timeout`而等候終止時，如果*Rel_time*已過。 否則，方法會傳回 `cv_status::no_timeout`。
+`cv_status::timeout`如果*Rel_time*已過, 則第一個方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
 
-第二個方法會傳回值*Pred*。
+第二個方法會傳回*Pred*的值。
 
 ### <a name="remarks"></a>備註
 
-第一種方法會封鎖直到`condition_variable`物件的呼叫所收到[notify_one](#notify_one)或[notify_all](#notify_all)或之前的時間間隔*Rel_time*經過。 它也可能會假性喚醒。
+第一個方法會封鎖, `condition_variable`直到物件被呼叫[notify_one](#notify_one)或[notify_all](#notify_all) , 或直到時間間隔*Rel_time*已過為止。 它也可能會假性喚醒。
 
 而第二種方法會執行下列程式碼。
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 封鎖執行緒，並設定要解除封鎖執行緒的時間點上限。
 
@@ -209,14 +209,14 @@ bool wait_until(
 *Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 物件。
 
-*預測*\
-傳回的任何運算式 **，則為 true**或是**false**。
+*Pred*\
+傳回**true**或**false**的任何運算式。
 
 ### <a name="return-value"></a>傳回值
 
-方法會傳回`cv_status`類型傳回`cv_status::timeout`而等候終止時，如果*Abs_time*耗盡。 否則，方法會傳回 `cv_status::no_timeout`。
+當*Abs_time*結束時`cv_status` , `cv_status::timeout`如果等候終止, 傳回類型的方法會傳回。 否則，方法會傳回 `cv_status::no_timeout`。
 
-方法會傳回**bool**傳回的值*Pred*。
+傳回**bool**的方法會傳回*Pred*的值。
 
 ### <a name="remarks"></a>備註
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

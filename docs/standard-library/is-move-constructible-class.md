@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83ed4365fd0e73a7daa8b9894c5e85f20387a79
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383629"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456109"
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible 類別
 
@@ -26,19 +26,19 @@ struct is_move_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要評估的類型
 
 ## <a name="remarks"></a>備註
 
-類型述詞評估為 true 的型別*T*可以藉由使用移動作業建構。 這個述詞相當於 `is_constructible<T, T&&>`。
+如果可以使用 move 作業來建立類型*T* , 則會評估為 true 的類型述詞。 這個述詞相當於 `is_constructible<T, T&&>`。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245242"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449125"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -25,11 +25,11 @@ ms.locfileid: "68245242"
 **命名空間：** std
 
 > [!NOTE]
-> \<Ios > 程式庫會使用`#include <iosfwd>`陳述式。
+> Ios > 程式庫會`#include <iosfwd>`使用語句。 \<
 
 ## <a name="remarks"></a>備註
 
-操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 清除的格式旗標`ios_base::skipws`物件中`str`，這可以是其中一種類型。
+操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 會清除物件`ios_base::skipws` `str`中的格式旗標, 它可以是下列其中一種類型。
 
 基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如：
 
@@ -101,7 +101,7 @@ istr>> noskipws;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

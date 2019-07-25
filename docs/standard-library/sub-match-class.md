@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412211"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447434"
 ---
 # <a name="submatch-class"></a>sub_match 類別
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 子相符項目的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -50,7 +50,7 @@ class sub_match
 
 如果擷取群組與物件的資料成員不符，則 `matched` 為 false，且兩個迭代器 `first` 和 `second` (繼承自基底 `std::pair`) 相等。 如果擷取群組相符，則 `matched` 為 true，迭代器 `first` 會指向目標序列中符合擷取群組的第一個字元，而 `second` 會指向目標序列中符合擷取群組之最後一個字元後的一個位置。 請注意，如果零長度與成員相符，則 `matched` 為零，且兩個迭代器相等，並且都會指向相符項目的位置。
 
-當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如: 
+當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如：
 
 "^" 與目標序列 "a" 相符；對應至擷取群組 0 的 `sub_match` 物件會保存同時指向序列中第一個字元的兩個迭代器。
 
@@ -58,7 +58,7 @@ class sub_match
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[difference_type](#difference_type)|迭代器差值的類型。|
 |[iterator](#iterator)|迭代器的類型。|
@@ -70,7 +70,7 @@ class sub_match
 |-|-|
 |[compare](#compare)|比較子相符項目與序列。|
 |[length](#length)|傳回子相符項目的長度。|
-|[比對](#matched)|指出比對是否成功。|
+|[相符](#matched)|指出比對是否成功。|
 |[str](#str)|將子對應轉換成字串。|
 
 ### <a name="operators"></a>運算子
@@ -133,7 +133,7 @@ compare(sub) == 0
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要比較子相符項目。
 
-*str*<br/>
+*str*\
 要比較的字串。
 
-*ptr*<br/>
+*指標*\
 要比較的以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>備註
 
-成員保留**真**與相關聯之擷取群組時，才`*this`是規則運算式比對的一部分。
+只有當與 `*this`關聯的 capture 群組是正則運算式比對的一部分時, 成員才會保留 true。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

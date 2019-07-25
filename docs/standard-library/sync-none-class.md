@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: eba2c60e621df717f29c0b25c735df3fda285fa0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412172"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450309"
 ---
 # <a name="syncnone-class"></a>sync_none 類別
 
@@ -32,7 +32,7 @@ class sync_none
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |`Cache`|與同步處理篩選相關聯的快取類型。 這可以是 [cache_chunklist](../standard-library/cache-chunklist-class.md)、[cache_freelist](../standard-library/cache-freelist-class.md) 或 [cache_suballoc](../standard-library/cache-suballoc-class.md)。|
 
@@ -46,7 +46,7 @@ class sync_none
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -62,7 +62,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="remarks"></a>備註
 
@@ -81,7 +81,7 @@ void deallocate(void* ptr, std::size_t count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -97,17 +97,17 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*快取*|同步處理篩選的快取物件。|
 |*其他*|要比較是否相等的快取物件。|
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式一律會傳回 **，則為 true**。
+成員函式一律會傳回**true**。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

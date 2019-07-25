@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - thread/std::hash
 ms.assetid: 4a8bf5bc-4334-4070-936b-98585f8a073b
-ms.openlocfilehash: bb230d401d5061f4951f8007f93c3a28ce3dab03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6d0cea7bfc8cd745e7276f7fc29d493f178fc9b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405010"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451955"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash 結構 (C++ 標準程式庫)
 
@@ -29,12 +29,12 @@ struct hash<thread::id> :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<執行緒 >
+**標頭:** \<執行緒 >
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<thread>](../standard-library/thread.md)<br/>
-[unary_function 結構](../standard-library/unary-function-struct.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<thread>](../standard-library/thread.md)\
+[unary_function 結構](../standard-library/unary-function-struct.md)

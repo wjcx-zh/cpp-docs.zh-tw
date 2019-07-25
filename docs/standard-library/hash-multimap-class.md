@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multimap::upper_bound
 - stdext::hash_multimap::value_comp
 ms.assetid: f41a6db9-67aa-43a3-a3c5-dbfe9ec3ae7d
-ms.openlocfilehash: 8510bbc89a22fe3eb8df6bbf8ce77db44c7a65a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2022031a52efbc8e8064ae23e14ae19e4aefb77c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405075"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448678"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap 類別
 
@@ -112,16 +112,16 @@ class hash_multimap
 
 ### <a name="parameters"></a>參數
 
-*Key*<br/>
+*擊鍵*\
 要存放在 hash_multimap 中的索引鍵資料類型。
 
-*Type*<br/>
+*型*\
 要存放在 hash_multimap 中的項目資料類型。
 
-*特性*<br/>
-包含兩個函式物件，其中一個類別的型別*Traits*能夠比較兩個項目值做為排序鍵來判斷其相對順序是一元述詞的對應之項目的索引鍵值的雜湊函式不帶正負號整數型別的`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
+*共同*\
+包含兩個函式物件的類型: 其中一個類別*特性*, 可以將兩個專案值做為排序關鍵字進行比較, 以判斷其相對順序和雜湊函式, 這是將專案的索引鍵值對應至不帶正負號整數的一元述詞輸入`size_t`。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key>>`。
 
-*Allocator*<br/>
+*配置器*\
 代表預存配置器物件的類型，其可封裝有關 hash_multimap 之記憶體配置與解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<pair <const Key, Type>>`。
 
 ## <a name="remarks"></a>備註
@@ -148,7 +148,7 @@ hash_multimap 是：
 
 hash_multimap 會藉由呼叫 [value_compare](../standard-library/value-compare-class.md) 類型的預存雜湊 `Traits` 物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](../standard-library/hash-map-class.md#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 [hash_compare](../standard-library/hash-compare-class.md)`<Key, less<Key>>` 類別的物件相同。 尤其是針對 `Key` 類型的所有 `Key` 值，呼叫 `Traits (Key)` 會產生 `size_t` 類型值的分佈。
 
-通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等項目之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f （x，y） 是有兩個引數物件的函式物件`x`並`y`，傳回值是 **，則為 true**或**false**。 加諸於 hash_multimap 的順序是嚴格弱式排序如果二元述詞為非反身屬性、 對稱性，且可轉移而且如果等價是可轉移的其中兩個物件`x`和`y`會定義為相等時這兩個 f (xy） 和 f （y，x） 會**false**。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
+通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等項目之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 f (x, y) 是有兩個引數`x`物件和`y`以及傳回值**true**或**false**的函式物件。 如果二元述詞是非反、對稱性和可轉移的, 而且如果等價是可轉移的, 而且兩個物件`x`和`y`都在 f (x) 中定義為相等, 則強加于 hash_multimap 的順序就是嚴格的弱式排序。、y) 和 f (y, x) 為**false**。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
 受控制序列中實際的項目順序取決於雜湊函式、排序函式以及儲存於此容器物件中雜湊資料表目前的大小。 您無法判斷目前雜湊資料表的大小，因此一般而言，無法預測受控制序列中項目的順序。 插入項目不會使任何迭代器無效，移除項目則僅會使特別指向被移除項目的迭代器無效。
 
@@ -166,9 +166,9 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `hash_multimap` 類別。|
 |[const_iterator](#const_iterator)|提供雙向迭代器的類型，這個迭代器可以讀取 `const` 中的 `hash_multimap` 項目。|
-|[const_pointer](#const_pointer)|此類型提供的指標**const**中的項目`hash_multimap`。|
-|[const_reference](#const_reference)|提供的參考型別**const**項目儲存在`hash_multimap`供讀取和執行**const**作業。|
-|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供雙向迭代器可以讀取任何**const**中的項目`hash_multimap`。|
+|[const_pointer](#const_pointer)|一種類型, 提供中`hash_multimap` **const**元素的指標。|
+|[const_reference](#const_reference)|一種類型, 提供儲存在中 `hash_multimap`以供讀取和執行**const**運算之 const 元素的參考。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型, 提供可讀取中`hash_multimap`任何**const**元素的雙向反覆運算器。|
 |[difference_type](#difference_type)|帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的項目) 中 `hash_multimap` 的項目數。|
 |[iterator](#iterator)|類型，其提供可讀取或修改 `hash_multimap` 中任何項目的雙向迭代器。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_multimap` 中的相對順序。|
@@ -218,7 +218,7 @@ hash_multimap 類別提供的迭代器是雙向迭代器，但類別成員函式
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<hash_map>
+**標頭：** \<hash_map>
 
 **命名空間：** stdext
 
@@ -262,7 +262,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果傳回值`begin`指派給`const_iterator`，無法修改 hash_multimap 物件中的項目。 如果傳回值`begin`指派給`iterator`，可以修改 hash_multimap 物件中的項目。
+如果將的傳回值`begin`指派`const_iterator`給, 則無法修改 hash_multimap 物件中的元素。 如果將的傳回值`begin`指派`iterator`給, 則可以修改 hash_multimap 物件中的元素。
 
 ### <a name="example"></a>範例
 
@@ -468,11 +468,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_iterator` 無法用來修改元素的值。
 
-`const_iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，類型`pair<const Key, Type>`。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
+由`const_iterator` hash_multimap 定義的會指向[value_type](#value_type)的物件, 其類型`pair<const Key, Type>`為。 透過該配對的第一個成員，即可取得此索引鍵的值，而透過該配對的第二個成員，則可取得所對應元素的值。
 
-取值 （dereference) `const_iterator` `cIter`指向 hash_multimap 中的項目，使用`->`運算子。
+若要對`const_iterator`指向 hash_multimap 中某個元素的`cIter`進行取值, 請`->`使用運算子。
 
-若要存取元素的索引鍵的值，請使用`cIter->first`，這相當於`(*cIter).first`。 若要存取的項目對應的資料，請使用`cIter->second`，這相當於`(*cIter).second`。
+若要存取元素的索引鍵值, 請使用`cIter->first`, 這相當於。 `(*cIter).first` 若要存取專案的對應基準值, 請使用`cIter->second`, 這相當於。 `(*cIter).second`
 
 ### <a name="example"></a>範例
 
@@ -566,11 +566,11 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 
 類型 `const_reverse_iterator` 無法修改元素的值，而是用來反向逐一查看 hash_multimap。
 
-`const_reverse_iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，類型`pair<const Key, Type>`其第一個成員是元素的索引鍵，其第二個成員是該元素所持有的對應的資料。
+由`const_reverse_iterator` hash_multimap 定義的會指向[value_type](#value_type)的物件, 其型`pair<const Key, Type>`別為, 其第一個成員是專案的索引鍵, 而第二個成員是元素所持有的對應基準。
 
-取值 （dereference) `const_reverse_iterator` `crIter`指向 hash_multimap 中的項目，使用`->`運算子。
+若要對`const_reverse_iterator`指向 hash_multimap 中某個元素的`crIter`進行取值, 請`->`使用運算子。
 
-若要存取元素的索引鍵的值，請使用`crIter->first`，這相當於`(*crIter).first`。 若要存取的項目對應的資料，請使用`crIter->second`，這相當於`(*crIter).second`。
+若要存取元素的索引鍵值, 請使用`crIter->first`, 這相當於。 `(*crIter).first` 若要存取專案的對應基準值, 請使用`crIter->second`, 這相當於。 `(*crIter).second`
 
 ### <a name="example"></a>範例
 
@@ -589,7 +589,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*擊鍵*\
 要從 hash_multimap 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -602,7 +602,7 @@ size_type count(const Key& key) const;
 
 **[lower_bound (** `key` **), upper_bound (** `key` **) )**
 
-其中有索引鍵值*金鑰*。
+具有金鑰值索引*鍵*的。
 
 ### <a name="example"></a>範例
 
@@ -904,7 +904,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |*val*|用來建構要插入到 [hash_multimap](../standard-library/hash-multimap-class.md) 中之元素的值，除非 `hash_multimap` 已經包含該元素 (或更廣泛地說，即索引鍵以同等方式排序的元素)。|
 |*_Where*|有關要從何處開始搜尋正確插入點的提示。|
@@ -917,7 +917,7 @@ iterator emplace_hint(
 
 元素的 [hash_multimap::value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-如果插入點緊接在平攤常數時間的詳細資訊，而不是對數時間，可能會插入 *_Where*。
+如果插入點緊接在 *_Where*之後, 則會在分攤的常數時間 (而不是對數時間) 中進行插入。
 
 ### <a name="example"></a>範例
 
@@ -1085,7 +1085,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*擊鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -1176,16 +1176,16 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where*<br/>
+*_Where*\
 要從 hash_multimap 移除之元素的位置。
 
-*first*<br/>
+*頭*\
 從 hash_multimap 移除之第一個元素的位置。
 
-*last*<br/>
+*次*\
 從 hash_multimap 移除之最後一個元素以外的最近位置。
 
-*key*<br/>
+*擊鍵*\
 要從 hash_multimap 中移除之元素的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -1300,7 +1300,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*擊鍵*\
 要以所搜尋之 hash_multimap 中元素的排序鍵比對的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -1309,9 +1309,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回迭代器，其排序鍵會是 hash_multimap 中的元素`equivalent`引數索引鍵來引發排序的二元述詞下根據較少的比較性關聯。
+此成員函式會傳回反覆運算器, 其定址 hash_multimap 中的專案, 其`equivalent`排序關鍵字是在根據小於可比較性關聯來引發排序的二元述詞下的引數索引鍵。
 
-如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果傳回值`find`指派給`iterator`，可以修改 hash_multimap 物件。
+如果將 `find` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將的傳回值`find`指派`iterator`給, 則可以修改 hash_multimap 物件。
 
 ### <a name="example"></a>範例
 
@@ -1516,10 +1516,10 @@ hash_multimap(
 |參數|描述|
 |-|-|
 |*Al*|要用於此 hash_multimap 物件的儲存體配置器類別，預設為 `Allocator`。|
-|*Comp*|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `Traits`。|
+|*背光*|類型為 `const Traits` 並用來排序 map 中元素的比較函式，預設為 `Traits`。|
 |*右邊*|要從中複製所建構之集合的對應。|
-|*第一個*|要複製的元素範圍中第一個元素的位置。|
-|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*頭*|要複製的元素範圍中第一個元素的位置。|
+|*次*|超出要複製之元素範圍的第一個元素的位置。|
 |*IList*|要作為複製來源的 initializer_list。|
 
 ### <a name="remarks"></a>備註
@@ -1530,7 +1530,7 @@ hash_multimap(
 
 所有建構函式都會儲存一個 `Traits` 類型的函式物件，此物件可用來在 hash_multimap 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。
 
-前三個建構函式指定空的初始 hash_multimap;第二個指定的比較函式類型 (*Comp*) 來明確建立的項目，且第三個順序指定的配置器類型 (`_Al`) 使用。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
+前三個函式會指定空的初始 hash_multimap;第二個指定要用來建立元素順序的比較函數 (*Comp*) 類型, 而第三個則明確指定要使用的配置器`_Al`類型 ()。 關鍵字 `explicit` 會隱藏某些類型的自動類型轉換。
 
 第四個建構函式會指定 hash_multimap `Right` 的複本。
 
@@ -1575,10 +1575,10 @@ iterator insert(
 
 |參數|描述|
 |-|-|
-|*Val*|要插入 hash_multimap 中的項目值，除非其中已包含了該項目，或是更廣泛性地，其中已包含索引鍵經過對等排序的項目。|
+|*初始值*|要插入 hash_multimap 中的項目值，除非其中已包含了該項目，或是更廣泛性地，其中已包含索引鍵經過對等排序的項目。|
 |*Where*|要開始搜尋正確插入點之位置的提示。|
-|*第一個*|要從對應複製之第一個項目的位置。|
-|*最後一個*|要從對應複製之最後一個項目後方的位置。|
+|*頭*|要從對應複製之第一個項目的位置。|
+|*次*|要從對應複製之最後一個項目後方的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1594,7 +1594,7 @@ iterator insert(
 
 元素的 [value_type](#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-可能會在分攤的提示版本的常數時間插入`insert`，而不是對數時間，如果插入點緊接*其中*。
+如果插入點緊接在*Where 的位置*, 則會以`insert`分攤的常數時間 (而不是對數時間) 進行插入。
 
 ## <a name="iterator"></a>  hash_multimap::iterator
 
@@ -1609,13 +1609,13 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 
 ### <a name="remarks"></a>備註
 
-`iterator` Hash_multimap 指向的物件所定義[value_type](#value_type)，這是型別的`pair` \< **const Key，Type**>，其第一個成員是元素的索引鍵成員是該元素所持有的對應的資料的第二個。
+由`iterator` hash_multimap 定義的會指向[value_type](#value_type)的物件 (其為 const 索引`pair` **鍵**類型\< ), 類型 >, 其第一個成員是專案的索引鍵, 而其第二個成員是所持有的對應基準元素。
 
-取值 （dereference)**迭代器**`Iter`指向 hash_multimap 中的項目，使用`->`運算子。
+若要對指向`->` hash_multimap 中某個元素的**反覆運算器**`Iter`取值, 請使用運算子。
 
 若要存取該元素的索引鍵值，請使用 `Iter` -> **first**，這等同於 (\* `Iter`). **first**。 若要存取該元素的已對應資料值，請使用 `Iter` -> **second**，這等同於 (\* `Iter`). **first**。
 
-型別`iterator`可用來修改元素的值。
+類型`iterator`可用於修改元素的值。
 
 ### <a name="example"></a>範例
 
@@ -1706,9 +1706,9 @@ typedef Traits key_compare;
 
 ### <a name="remarks"></a>備註
 
-`key_compare` 範本參數同義*特性*。
+`key_compare`是範本參數*特性*的同義字。
 
-如需詳細資訊*Traits*請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
+如需有關*特性*的詳細資訊, 請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -1727,9 +1727,9 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-`key_type` 範本參數同義*金鑰*。
+`key_type`是範本參數索引*鍵*的同義字。
 
-如需詳細資訊*金鑰*，請參閱 < 備註 > 一節[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
+如需*金鑰*的詳細資訊, 請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題的「備註」一節。
 
 ### <a name="example"></a>範例
 
@@ -1750,14 +1750,14 @@ const_iterator lower_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*擊鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multimap 中索引鍵等於或大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multimap 中最後一個元素後面的位置。
 
-如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果傳回值`lower_bound`指派給`iterator`，可以修改 hash_multimap 物件。
+如果將 `lower_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將的傳回值`lower_bound`指派`iterator`給, 則可以修改 hash_multimap 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1845,7 +1845,7 @@ typedef Type mapped_type;
 
 `mapped_type` 與範本參數 *Type* 同義。
 
-如需詳細資訊*型別*請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
+如需*類型*的詳細資訊, 請參閱[hash_multimap 類別](../standard-library/hash-multimap-class.md)主題。
 
 ### <a name="example"></a>範例
 
@@ -1904,13 +1904,13 @@ hash_multimap& operator=(hash_multimap&& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |*right*|要複製到 `hash_multimap` 中的 [hash_multimap](../standard-library/hash-multimap-class.md)。|
 
 ### <a name="remarks"></a>備註
 
-在清除任何現有的項目，在之後`hash_multimap`，`operator=`複製或移動的內容*右*到`hash_multimap`。
+清除中的任何現有專案之後`hash_multimap`, `operator=`會將的`hash_multimap`內容複寫或移到中。
 
 ### <a name="example"></a>範例
 
@@ -1963,7 +1963,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 
 ### <a name="remarks"></a>備註
 
-型別`pointer`可用來修改元素的值。
+類型`pointer`可用於修改元素的值。
 
 在大多數情況下，應該使用 [iterator](#iterator) 來存取 hash_multimap 物件中的元素。
 
@@ -2304,7 +2304,7 @@ void swap(hash_multimap& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 提供要交換之元素的 hash_multimap，或要與該 hash_multimap 交換元素的 hash_multimap。
 
 ### <a name="remarks"></a>備註
@@ -2378,14 +2378,14 @@ const_iterator upper_bound(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
+*擊鍵*\
 要與所搜尋之 hash_multimap 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 [iterator](#iterator) 或 [const_iterator](#const_iterator)，定址對象是 hash_multimap 中索引鍵大於引數索引鍵的元素位置，或如果找不到與該索引鍵相符的項目，定址對象就會是 hash_multimap 中最後一個元素後面的位置。
 
-如果將 `upper_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果傳回值`upper_bound`指派給`iterator`，可以修改 hash_multimap 物件。
+如果將 `upper_bound` 的傳回值指派給 `const_iterator`，便無法修改 hash_multimap 物件。 如果將的傳回值`upper_bound`指派`iterator`給, 則可以修改 hash_multimap 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -2466,7 +2466,7 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>備註
 
-針對 hash_multimap *m*，如果兩個項目*e1* (*版 k1 的 powerapps*， *d1*) 及*e2*(*k2*， *d2*) 物件的型別[value_type](#value_type)，其中*版 k1 的 powerapps*並*k2*都是其索引鍵的型別[key_type](#key_type)和*d1*並*d2*會其資料型別的[mapped_type](#mapped_type)，再`m.value_comp()(e1, e2)`就相當於`m.key_comp()(k1, k2)`. 預存物件會定義成員函式
+針對 hash_multimap *m*, 如果兩個元素*e1* (*版 k1*, *d1*) 和*e2*(*k2*, *d2*) 是[value_type](#value_type)類型的物件, 其中*版 k1*和*k2*是其類型為[key_type](#key_type)的索引鍵, 而*d1*和*d2*是其類型為[mapped_type](#mapped_type)的資料, `m.value_comp()(e1, e2)`因此相當於`m.key_comp()(k1, k2)`。 預存物件會定義成員函式
 
 `bool operator( value_type& left, value_type& right);`
 
@@ -2532,7 +2532,7 @@ typedef pair<const Key, Type> value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 會宣告為配對\<const [key_type](#key_type)， [mapped_type](#mapped_type)> 與未配對\<key_type，mapped_type> > 因為不能變更關聯容器的索引鍵使用非常數迭代器或參考。
+`value_type`宣告為成對\<的 const [key_type](#key_type), [mapped_type](#mapped_type)> 和 not 配對\<key_type, mapped_type > 因為關聯容器的索引鍵可能無法使用非常數反覆運算器或參考來變更。
 
 ### <a name="example"></a>範例
 
@@ -2595,5 +2595,5 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

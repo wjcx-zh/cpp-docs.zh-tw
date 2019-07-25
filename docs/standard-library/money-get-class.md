@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_get [C++], do_get
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
-ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb5e1a7b83db561687f83be96c79add8b54589e8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383525"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455547"
 ---
 # <a name="moneyget-class"></a>money_get 類別
 
@@ -36,10 +36,10 @@ class money_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
-*InputIterator*<br/>
+*InputIterator*\
 get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -62,14 +62,14 @@ get 函式從中讀取其輸入的迭代器類型。
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[do_get](#do_get)|虛擬函式，呼叫以從代表貨幣值的字元序列擷取數值。|
 |[get](#get)|從代表貨幣值的字元序列擷取數值。|
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -105,22 +105,22 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*last*<br/>
+*次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*Intl*<br/>
+*號碼*\
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*Iosbase*<br/>
+*Iosbase*\
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*狀態*<br/>
+*狀態*\
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*val*<br/>
+*初始值*\
 儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -129,9 +129,9 @@ virtual iter_type do_get(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的貨幣輸入欄位為止。 如果成功，它將此欄位轉換為一連串的一或多個十進位數字可以選擇性加上負號 ( `-`)，以代表承諾用量金額，並將結果[string_type](#string_type)物件*val*. 它會傳回迭代器，此迭代器指定貨幣輸入欄位後的第一個元素。 否則，函式會儲存在空的序列*val*並設定`ios_base::failbit`中*狀態*。 它會傳回迭代器，此迭代器指定有效貨幣輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `State` 中設定 `ios_base::eofbit`。
+第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的貨幣輸入欄位為止。 如果成功, 它會將此欄位轉換成一或多個十進位數的序列, 並選擇性地在前面`-`加上減號 () 以表示數量, 並將結果儲存在[string_type](#string_type)物件*val*中。 它會傳回迭代器，此迭代器指定貨幣輸入欄位後的第一個元素。 否則, 函式會以*val*儲存空的序列, `ios_base::failbit`並以*狀態*設定。 它會傳回迭代器，此迭代器指定有效貨幣輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `State` 中設定 `ios_base::eofbit`。
 
-第二個受保護的虛擬成員函式行為與第一個相同，不同之處在於如果成功的話就選擇性帶正負號的數字將序列轉換成類型的值**長雙精度**並將該值儲存在*val*.
+第二個虛擬受保護成員函式的行為與第一個相同, 不同的是, 如果成功, 它會將選擇性帶正負號的數位序列轉換成**long double**類型的值, 並將該值儲存在*val*中。
 
 貨幣輸入欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class)**fac** (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**>>( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。
 
@@ -187,22 +187,22 @@ iter_type get(iter_type first,
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 輸入迭代器，定址對象是要轉換之序列的開頭。
 
-*last*<br/>
+*次*\
 輸入迭代器，定址對象是要轉換之序列的結尾。
 
-*Intl*<br/>
+*號碼*\
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*Iosbase*<br/>
+*Iosbase*\
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*狀態*<br/>
+*狀態*\
 根據作業是否成功，為資料流狀態設定適當的位元遮罩元素。
 
-*val*<br/>
+*初始值*\
 儲存已轉換之序列的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -211,7 +211,7 @@ iter_type get(iter_type first,
 
 ### <a name="remarks"></a>備註
 
-這兩個成員函式會傳回[do_get](#do_get)`(first, last, Intl, Iosbase, State, val)`。
+這兩個成員函式都會傳回[do_get](#do_get) `(first, last, Intl, Iosbase, State, val)`。
 
 ### <a name="example"></a>範例
 
@@ -284,22 +284,22 @@ explicit money_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
-- 0:物件的存留期是由包含它的地區設定管理。
+- 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \> 1:未定義這些值。
+- \>1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(*_Refs*)。
+此函式會使用**locale::** [facet](../standard-library/locale-class.md#facet_class)( *_Refs*) 初始化其基底物件。
 
 ## <a name="string_type"></a>  money_get::string_type
 
@@ -315,6 +315,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 類別](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 類別](../standard-library/locale-class.md#facet_class)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

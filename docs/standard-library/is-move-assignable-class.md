@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_move_assignable
 ms.assetid: f33137f2-0639-4912-8745-bc0f9fd18d28
-ms.openlocfilehash: da4734507bac14ecf0278117deb7668518305be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8563db51eeb1988697b3e07a1a8673a777783e38
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351062"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456124"
 ---
 # <a name="ismoveassignable-class"></a>is_move_assignable 類別
 
@@ -26,7 +26,7 @@ struct is_move_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
@@ -35,10 +35,10 @@ struct is_move_assignable;
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

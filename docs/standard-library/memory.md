@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246814"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451893"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ ms.locfileid: "68246814"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|通知記憶體回收行程，在指定之位址開頭且落在指示之區塊大小內的字元不包含任何可追蹤指標。|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|告知記憶體回收，指示的位址是前往配置儲存體且可連接。|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|刪除使用 `operator new` 配置的物件。 適合搭配 `unique_ptr` 使用。|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|速記`destroy`方法。|
-|[destroy](../standard-library/memory-functions.md#destroy)|速記`destroy`方法。|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|速記`destroy`方法。|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|縮寫`destroy`方法。|
+|[destroy](../standard-library/memory-functions.md#destroy)|縮寫`destroy`方法。|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|縮寫`destroy`方法。|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|動態轉型為 `shared_ptr`。|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|從 `shared_ptr` 取得刪除者。|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|傳回任何記憶體回收行程所假設之指標安全的類型。|
@@ -65,14 +65,14 @@ ms.locfileid: "68246814"
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|通知 `garbage_collector`，指定的記憶體位置無法連接。|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|從指定的輸入範圍將物件複製到未初始化的目的範圍內。|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|從輸入迭代器建立所指定項目數的複本。 複本會放在正向迭代器中。|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|速記`uninitialized_default_construct`方法。|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|速記`uninitialized_construct`方法。|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|縮寫`uninitialized_default_construct`方法。|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|縮寫`uninitialized_construct`方法。|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|將所指定值的物件複製到未初始化的目的範圍內。|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|將所指定值的物件複製到未初始化目的範圍的指定項目數內。|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|速記`uninitialized_move`方法。|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|速記`uninitialized_move`方法。|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|速記`uninitialized_value_construct`方法。|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|速記`uninitialized_value_construct`方法。|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|縮寫`uninitialized_move`方法。|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|縮寫`uninitialized_move`方法。|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|縮寫`uninitialized_value_construct`方法。|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|縮寫`uninitialized_value_construct`方法。|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>運算子
@@ -93,7 +93,7 @@ ms.locfileid: "68246814"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|此範本類別描述一個物件，該物件會管理 **Type** 類型之物件陣列的儲存體配置和釋出。|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|描述物件，用來判斷啟用配置器之容器所需的所有資訊。|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|此範本類別描述可儲存類型的配置物件的指標**型別** <strong>\*</strong>這可確保它點被刪除時取得其上層 auto_ptr 物件損毀。|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|此樣板類別所描述的物件會儲存類型**類型** <strong>\*</strong>之設定物件的指標, 以確保它所指向的物件會在其封入 auto_ptr 終結時遭到刪除。|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|報告錯誤 weak_ptr 例外狀況。|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|幫助產生 `shared_ptr`。|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|提供樣板類別 `allocator_traits` 的物件所需的資訊，以描述具有指標類型 `Ptr` 的配置器。|
@@ -120,5 +120,5 @@ ms.locfileid: "68246814"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

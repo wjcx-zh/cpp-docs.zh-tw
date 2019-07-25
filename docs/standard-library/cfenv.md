@@ -2,12 +2,12 @@
 title: '&lt;cfenv&gt;'
 ms.date: 11/04/2016
 ms.assetid: 6a17ad51-2182-4e91-8108-65997382acd3
-ms.openlocfilehash: dcaf49d19009ac831776134cf3d5b6cbce7e14d4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b1ae987d49c95b781cb255a4d7e3a9a04ab6043a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244964"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449866"
 ---
 # <a name="ltcfenvgt"></a>&lt;cfenv&gt;
 
@@ -23,7 +23,7 @@ ms.locfileid: "68244964"
 
 包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
 
-## <a name="constants-and-types"></a>常數和型別
+## <a name="constants-and-types"></a>常數和類型
 
 ```cpp
 #define FE_ALL_EXCEPT see below
@@ -62,6 +62,6 @@ int feupdateenv(const fenv_t* penv);
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

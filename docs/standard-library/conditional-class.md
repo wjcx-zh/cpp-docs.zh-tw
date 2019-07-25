@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212101"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457317"
 ---
 # <a name="conditional-class"></a>conditional 類別
 
@@ -30,25 +30,25 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>參數
 
-*B*<br/>
+*位元組*\
 判斷這個選取之類型的值。
 
-*T1*<br/>
+*T1*\
 B 為 true 時的類型結果。
 
-*T2*<br/>
+\
 B 為 false 時的類型結果。
 
 ## <a name="remarks"></a>備註
 
-範本成員 typedef`conditional<B, T1, T2>::type`評估為*T1*當*B*評估 **，則為 true**，並且判斷值為*T2*時*B*評估為**false**。
+當*b*評估為`conditional<B, T1, T2>::type` **true**時, 範本成員 typedef 會評估為*T1* , 而當*b*評估為**false**時, 則評估為*T2* 。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

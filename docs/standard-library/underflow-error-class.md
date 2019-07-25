@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-ms.openlocfilehash: 84657677fc672fc227d40423ffb217b1b550761b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41e3c8606cb8c6c90a84927f01eb953be138534a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411847"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454996"
 ---
 # <a name="underflowerror-class"></a>underflow_error 類別
 
@@ -61,11 +61,11 @@ Type: class std::underflow_error
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<stdexcept>
+**標頭：** \<stdexcept>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[runtime_error 類別](../standard-library/runtime-error-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[runtime_error 類別](../standard-library/runtime-error-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

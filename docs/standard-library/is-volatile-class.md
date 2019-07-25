@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: 7fc873a2ec21dbfad83fd9d9c006d8345b83cdb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413355"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458848"
 ---
 # <a name="isvolatile-class"></a>is_volatile 類別
 
@@ -27,12 +27,12 @@ struct is_volatile;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true *Ty*是`volatile-qualified`。
+如果*Ty*為, 則類型述詞的實例會`volatile-qualified`保留 true。
 
 ## <a name="example"></a>範例
 
@@ -71,11 +71,11 @@ is_volatile<volatile int> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_const 類別](../standard-library/is-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_const 類別](../standard-library/is-const-class.md)

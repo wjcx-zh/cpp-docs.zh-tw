@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348168"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454961"
 ---
 # <a name="uniformintdistribution-class"></a>uniform_int_distribution 類別
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*<br/>
-整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*\
+整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -175,7 +175,7 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -191,20 +191,20 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 隨機值的下限 (內含)。
 
-*b*<br/>
+*位元組*\
 隨機值的上限 (內含)。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`a ≤ b`
+**前置條件：** `a ≤ b`
 
-第一個建構函式會建構一個物件的預存值具有值 ，且預存*b*值保留值*b*。
+第一個函式會建立一個物件, 其儲存*的*值保留值*a* , 而其預存*b*值保留值*b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 隨機值的下限 (內含)。
 
-*b*<br/>
+*位元組*\
 隨機值的上限 (內含)。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`a ≤ b`
+**前置條件：** `a ≤ b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

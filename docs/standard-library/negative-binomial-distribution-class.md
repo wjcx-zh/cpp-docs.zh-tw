@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 11e705629675903803f7230d540417846417cc77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449275"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456953"
 ---
 # <a name="negativebinomialdistribution-class"></a>negative_binomial_distribution 類別
 
@@ -71,19 +71,19 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*<br/>
-整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*\
+整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數的值類型**int**如果未提供，根據負二項式分佈離散可能性函式的分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**int**類型, 這是根據負二項式分佈離散機率函數來散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-屬性成員`k()`並`p()`會傳回目前儲存的分佈參數值*k*並*p*分別。
+屬性成員`k()`和`p()`會分別傳回目前儲存的散發參數值*k*和*p* 。
 
 屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
@@ -95,7 +95,7 @@ public:
 
 如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
-如需負二項式分佈離散可能性函式的詳細資訊，請參閱 Wolfram MathWorld 文章[負二項式分佈](https://go.microsoft.com/fwlink/p/?linkid=400516)。
+如需負二項式分佈離散機率函數的詳細資訊, 請參閱 Wolfram MathWorld 文章[負二項式分佈](https://go.microsoft.com/fwlink/p/?linkid=400516)。
 
 ## <a name="example"></a>範例
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*k*<br/>
+*k*\
 `k` 分佈參數。
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -259,13 +259,13 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ### <a name="parameters"></a>參數
 
-*k*<br/>
+*k*\
 `k` 分佈參數。
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*right*<br/>
+*再*\
 用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -276,4 +276,4 @@ struct param_type { typedef negative_binomial_distribution`<`result_type> distri
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

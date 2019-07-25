@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245397"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459195"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 - 以 Null 結束的字元陣列，通常稱為 C 字串。
 
-- 範本類別物件的型別`basic_string`，可處理所有**char**-例如樣板引數。
+- 類型`basic_string`為的範本類別物件, 可處理所有類似**char**的範本引數。
 
 ### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|類型，描述範本類別的特製化`basic_string`類型的項目**char**做為`string`。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|類型，描述範本類別的特製化`basic_string`類型的項目**wchar_t**做為`wstring`。|
+|[string](../standard-library/string-typedefs.md#string)|一種類型, 描述範本類別`basic_string`的特製化, 其中包含 `string`char 類型的元素做為。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|一種類型, 描述範本類別`basic_string`的特製化, 其專案的類型為 `wstring`wchar_t 的元素為。|
 |[u16string](../standard-library/string-typedefs.md#u16string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char16_t` 的特製化。|
 |[u32string](../standard-library/string-typedefs.md#u32string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char32_t` 的特製化。|
 
@@ -63,13 +63,13 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|交換兩個字串的字元陣列。|
-|[stod](../standard-library/string-functions.md#stod)|將字元序列**double**。|
-|[stof](../standard-library/string-functions.md#stof)|將字元序列**浮點數**。|
+|[stod](../standard-library/string-functions.md#stod)|將字元序列轉換成**雙精度浮點數**。|
+|[stof](../standard-library/string-functions.md#stof)|將字元序列轉換成**float**。|
 |[stoi](../standard-library/string-functions.md#stoi)|將字元序列轉換為整數。|
-|[stold](../standard-library/string-functions.md#stold)|將字元序列**長雙精度**。|
-|[stoll](../standard-library/string-functions.md#stoll)|將字元序列**long long**。|
-|[stoul](../standard-library/string-functions.md#stoul)|將字元序列**unsigned long**。|
-|[stoull](../standard-library/string-functions.md#stoull)|將字元序列**unsigned long long**。|
+|[stold](../standard-library/string-functions.md#stold)|將字元序列轉換成**長雙精度浮點數**。|
+|[stoll](../standard-library/string-functions.md#stoll)|將字元序列轉換成**長長**的。|
+|[stoul](../standard-library/string-functions.md#stoul)|將字元序列轉換成不**帶正負**號的長整數。|
+|[stoull](../standard-library/string-functions.md#stoull)|將字元序列轉換成不**帶正負**號的長整數。|
 |[to_string](../standard-library/string-functions.md#to_string)|將值轉換成 `string`。|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|將值轉換成寬 `string`。|
 
@@ -103,5 +103,5 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

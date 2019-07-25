@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412315"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450258"
 ---
 # <a name="syncperthread-class"></a>sync_per_thread 類別
 
@@ -50,7 +50,7 @@ class sync_per_thread
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="remarks"></a>備註
 
@@ -85,7 +85,7 @@ void deallocate(void* ptr, std::size_t count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -101,17 +101,17 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*快取*|同步處理篩選的快取物件。|
 |*其他*|要比較是否相等的快取物件。|
 
 ### <a name="return-value"></a>傳回值
 
-**false**針對這個物件或如果已配置任何快取物件*其他*目前執行緒中。 否則會傳回將 `operator==` 套用到這兩個快取物件的結果。
+如果尚未為這個物件配置任何快取物件, 或目前線程中的*其他*沒有配置, 則為**false** 。 否則會傳回將 `operator==` 套用到這兩個快取物件的結果。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

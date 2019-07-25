@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - match_results class
 ms.assetid: b504fdca-e5dd-429d-9960-6e27c9167fa6
-ms.openlocfilehash: 32a5f9d20999740d4368f7901c797d87acce0be9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72a948c7f8422b36b94a16cdb2c815bca92d20c7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412965"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456379"
 ---
 # <a name="matchresults-class"></a>match_results 類別
 
@@ -26,10 +26,10 @@ class match_results
 
 ## <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 子相符項目的迭代器類型。
 
-*Alloc*<br/>
+*配置*\
 管理儲存體的配置器類型。
 
 ## <a name="remarks"></a>備註
@@ -44,7 +44,7 @@ class match_results
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
 |[char_type](#char_type)|元素的類型。|
@@ -68,7 +68,7 @@ class match_results
 |[get_allocator](#get_allocator)|傳回已儲存的配置器。|
 |[length](#length)|傳回子相符項目的長度。|
 |[max_size](#max_size)|取得最大子相符項目數。|
-|[position](#position)|取得子群組的起始位移。|
+|[移動](#position)|取得子群組的起始位移。|
 |[prefix](#prefix)|取得第一個子相符項目之前的序列。|
 |[size](#size)|計算子相符項目數。|
 |[str](#str)|傳回子相符項目。|
@@ -77,14 +77,14 @@ class match_results
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[operator=](#op_eq)|複製 match_results 物件。|
 |[operator\[\]](#op_at)|存取子物件。|
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
@@ -198,7 +198,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是範本引數的同義字*Alloc*。
+Typedef 是範本引數配置的同義字。
 
 ## <a name="begin"></a>  match_results::begin
 
@@ -298,21 +298,21 @@ string_type format(const string_type& fmt, match_flag_type flags = format_defaul
 
 ### <a name="parameters"></a>參數
 
-*OutIt*<br/>
+*OutIt*\
 輸出迭代器類型。
 
-*out*<br/>
+*out*\
 要寫入的輸出資料流。
 
-*fmt*<br/>
+*bcp.fmt*\
 格式字串。
 
-*flags*<br/>
+*旗幟*\
 格式旗標。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式會產生格式化的文字格式的控制之下*fmt*。 第一個成員函式會將格式化的文字寫入其引數所定義的順序*放大*，然後傳回*出*。第二個成員函式會傳回保存格式化文件複本的字串物件。
+每個成員函式都會在*bcp.fmt*格式的控制項底下產生格式化的文字。 第一個成員函式會將格式化的文字寫入其引數所定義的序列, 並傳回*out*。第二個成員函式會傳回保存格式化文件複本的字串物件。
 
 若要產生格式化文字， 格式字串中的常值文字通常會複製到目標序列。 格式字串中的每個逸出序列由所代表的文字取代。 複製和取代的詳細資料受到傳遞至函式的格式旗標控制。
 
@@ -350,7 +350,7 @@ difference_type length(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*sub*<br/>
+*sub*\
 子相符項目的索引。
 
 ### <a name="remarks"></a>備註
@@ -369,15 +369,15 @@ match_results(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-*alloc*<br/>
+*配置*\
 要儲存的配置器物件。
 
-*right*<br/>
+*再*\
 要複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個建構函式建構`match_results`物件，是一份*右*。
+第一個建構函式會建構不含子相符項目的 `match_results` 物件。 第二個`match_results`函式會建立屬於*right*複本的物件。
 
 ## <a name="max_size"></a>  match_results::max_size
 
@@ -401,12 +401,12 @@ match_results& operator=(const match_results& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要複製的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會取代所控制的序列`*this`所控制之序列的複本*右*。
+成員運算子會將所控制`*this`的序列取代為*right*所控制的序列複本。
 
 ## <a name="op_at"></a>  match_results::operator[]
 
@@ -418,12 +418,12 @@ const_reference operator[](size_type n) const;
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*n*\
 子相符項目的索引。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回元素的參考*n*的受控制的序列或設為空白參考`sub_match`物件`size() <= n`或擷取群組*n*不是比對的一部分。
+此成員函式會傳回受控制序列之元素*n*的參考, 或如果`sub_match` `size() <= n` capture 群組*n*不是相符專案的一部分, 則傳回空物件的參考。
 
 ## <a name="position"></a>  match_results::position
 
@@ -435,7 +435,7 @@ difference_type position(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*sub*<br/>
+*sub*\
 子相符項目的索引。
 
 ### <a name="remarks"></a>備註
@@ -500,7 +500,7 @@ string_type str(size_type sub = 0) const;
 
 ### <a name="parameters"></a>參數
 
-*sub*<br/>
+*sub*\
 子相符項目的索引。
 
 ### <a name="remarks"></a>備註
@@ -541,12 +541,12 @@ void swap(const match_results& right) throw();
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要交換的 match_results 物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式的內容交換`*this`並*右*以常數時間並不會擲回例外狀況。
+成員函式會以常數時間`*this`交換和的內容, 而不會擲回例外狀況。
 
 ## <a name="value_type"></a>  match_results::value_type
 
@@ -562,4 +562,4 @@ typedef 與類型 `sub_match<BidIt>`同義。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
+[\<regex>](../standard-library/regex.md)

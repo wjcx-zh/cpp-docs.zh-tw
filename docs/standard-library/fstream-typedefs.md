@@ -11,12 +11,12 @@ f1_keywords:
 - fstream/std::wifstream
 - fstream/std::wofstream
 ms.assetid: 8dddef2d-7f17-42a6-ba08-6f6f20597d23
-ms.openlocfilehash: d5a4b0e2d671bb787501767d4321bd3ed61deb88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6144826254c6acc509db2c0285b21811fe37bd4e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159531"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454047"
 ---
 # <a name="ltfstreamgt-typedefs"></a>&lt;fstream&gt; typedefs
 
@@ -28,7 +28,7 @@ ms.locfileid: "62159531"
 
 ## <a name="filebuf"></a>  filebuf
 
-型別`basic_filebuf`特殊化**char**範本參數。
+在`basic_filebuf` **char**樣板參數上特製化的類型。
 
 ```cpp
 typedef basic_filebuf<char, char_traits<char>> filebuf;
@@ -36,11 +36,11 @@ typedef basic_filebuf<char, char_traits<char>> filebuf;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_filebuf](../standard-library/basic-filebuf-class.md)類型的項目所特製化**char**具有預設字元特性。
+此類型與範本類別[basic_filebuf](../standard-library/basic-filebuf-class.md)同義, 專門用於具有預設字元特性之**char**類型的元素。
 
 ## <a name="fstream"></a>  fstream
 
-型別`basic_fstream`特殊化**char**範本參數。
+在`basic_fstream` **char**樣板參數上特製化的類型。
 
 ```cpp
 typedef basic_fstream<char, char_traits<char>> fstream;
@@ -48,13 +48,13 @@ typedef basic_fstream<char, char_traits<char>> fstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_fstream](../standard-library/basic-fstream-class.md)類型的項目所特製化**char**具有預設字元特性。
+此類型與範本類別[basic_fstream](../standard-library/basic-fstream-class.md)同義, 專門用於具有預設字元特性之**char**類型的元素。
 
 ## <a name="ifstream"></a>  ifstream
 
-定義用來從檔案連續讀取單一位元組字元的資料流。 `ifstream` 是特製化樣板類別的 typedef `basic_ifstream` for **char**。
+定義用來從檔案連續讀取單一位元組字元的資料流。 `ifstream`是專門針對`basic_ifstream` **char**的樣板類別特製化的 typedef。
 
-另外還有`wifstream`，特製化的 typedef`basic_ifstream`讀取**wchar_t**全形字。 如需詳細資訊，請參閱 [wifstream](../standard-library/fstream-typedefs.md#wifstream)。
+另外`wifstream`還有一個會專門`basic_ifstream`用來讀取**wchar_t**雙重寬字元的 typedef。 如需詳細資訊，請參閱 [wifstream](../standard-library/fstream-typedefs.md#wifstream)。
 
 ```cpp
 typedef basic_ifstream<char, char_traits<char>> ifstream;
@@ -62,7 +62,7 @@ typedef basic_ifstream<char, char_traits<char>> ifstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_ifstream](../standard-library/basic-ifstream-class.md)、 具有預設字元特性的 char 類型的項目進行特製化。 例如，
+此類型與範本類別[basic_ifstream](../standard-library/basic-ifstream-class.md)同義, 專門用於具有預設字元特性之 char 類型的元素。 例如，
 
 ```cpp
 using namespace std;
@@ -78,7 +78,7 @@ if (!infile.bad())
 
 ## <a name="ofstream"></a>  ofstream
 
-型別`basic_ofstream`特殊化**char**範本參數。
+在`basic_ofstream` **char**樣板參數上特製化的類型。
 
 ```cpp
 typedef basic_ofstream<char, char_traits<char>> ofstream;
@@ -86,11 +86,11 @@ typedef basic_ofstream<char, char_traits<char>> ofstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_ofstream](../standard-library/basic-ofstream-class.md)類型的項目所特製化**char**具有預設字元特性。
+此類型與範本類別[basic_ofstream](../standard-library/basic-ofstream-class.md)同義, 專門用於具有預設字元特性之**char**類型的元素。
 
 ## <a name="wfstream"></a>  wfstream
 
-型別`basic_fstream`特殊化**wchar_t**範本參數。
+在`basic_fstream` **wchar_t**範本參數上特製化的類型。
 
 ```cpp
 typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
@@ -98,11 +98,11 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_fstream](../standard-library/basic-fstream-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
+此類型與樣板類別[basic_fstream](../standard-library/basic-fstream-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
 
 ## <a name="wifstream"></a>  wifstream
 
-型別`basic_ifstream`特殊化**wchar_t**範本參數。
+在`basic_ifstream` **wchar_t**範本參數上特製化的類型。
 
 ```cpp
 typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
@@ -110,11 +110,11 @@ typedef basic_ifstream<wchar_t, char_traits<wchar_t>> wifstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_ifstream](../standard-library/basic-ifstream-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
+此類型與樣板類別[basic_ifstream](../standard-library/basic-ifstream-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
 
 ## <a name="wofstream"></a>  wofstream
 
-型別`basic_ofstream`特殊化**wchar_t**範本參數。
+在`basic_ofstream` **wchar_t**範本參數上特製化的類型。
 
 ```cpp
 typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
@@ -122,11 +122,11 @@ typedef basic_ofstream<wchar_t, char_traits<wchar_t>> wofstream;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_ofstream](../standard-library/basic-ofstream-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
+此類型與樣板類別[basic_ofstream](../standard-library/basic-ofstream-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
 
 ## <a name="wfilebuf"></a>  wfilebuf
 
-型別`basic_filebuf`特殊化**wchar_t**範本參數。
+在`basic_filebuf` **wchar_t**範本參數上特製化的類型。
 
 ```cpp
 typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
@@ -134,8 +134,8 @@ typedef basic_filebuf<wchar_t, char_traits<wchar_t>> wfilebuf;
 
 ### <a name="remarks"></a>備註
 
-類型是範本類別同義[basic_filebuf](../standard-library/basic-filebuf-class.md)類型的項目所特製化**wchar_t**具有預設字元特性。
+此類型與樣板類別[basic_filebuf](../standard-library/basic-filebuf-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<fstream>](../standard-library/fstream.md)<br/>
+[\<fstream>](../standard-library/fstream.md)

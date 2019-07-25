@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: 41ce5590476a8327c9449ece5e3173146a04760f
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449901"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447580"
 ---
 # <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
 
@@ -45,17 +45,17 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>參數
 
-*UIntType*<br/>
+*UIntType*\
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*A*<br/>
-**乘數**。 **前置條件**:請參閱 < 備註 > 一節。
+*為*\
+**乘數**。 **前置條件**:請參閱備註一節。
 
-*C*<br/>
-**遞增**。 **前置條件**:請參閱 < 備註 > 一節。
+*C*\
+**遞增**。 **前置條件**:請參閱備註一節。
 
-*M*<br/>
-**模數**。 **前置條件**:請參閱 < 備註 >。
+*分鐘*\
+**模數**。 **前置條件**:請參閱備註。
 
 ## <a name="members"></a>成員
 
@@ -74,9 +74,9 @@ class linear_congruential_engine{
 
 此引擎使用週期關聯 ( *period*) `x(i) = (A * x(i-1) + C) mod M` 來產生使用者指定之不帶正負號的整數類型值。
 
-如果*M*為零，此模數作業所使用的值是`numeric_limits<result_type>::max() + 1`。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。
+如果*M*為零, 則用於此模數運算的值為`numeric_limits<result_type>::max() + 1`。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。
 
-如果*M*不是零，範本引數的值*A*並*C*必須是小於*M*。
+如果*M*不是零, 則範本引數*A*和*C*的值必須小於*M*。
 
 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef。
 
@@ -102,4 +102,4 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

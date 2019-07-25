@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-ms.openlocfilehash: 2e39c0de5b11c9aa0a4c69f0142841469ef798c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ad27bf849e8d4b9188868b9a29bf423b4cafafa
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413277"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458736"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -27,10 +27,10 @@ ms.locfileid: "62413277"
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
-|[iostream](../standard-library/istream-typedefs.md#iostream)|型別`basic_iostream`特殊化**char**。|
-|[istream](../standard-library/istream-typedefs.md#istream)|型別`basic_istream`特殊化**char**。|
+|[iostream](../standard-library/istream-typedefs.md#iostream)|在`basic_iostream` **char**上特製化的類型。|
+|[istream](../standard-library/istream-typedefs.md#istream)|在`basic_istream` **char**上特製化的類型。|
 |[wiostream](../standard-library/istream-typedefs.md#wiostream)|針對 **wchar** 特殊化的 `basic_iostream` 類型。|
 |[wistream](../standard-library/istream-typedefs.md#wistream)|針對 **wchar** 特殊化的 `basic_istream` 類型。|
 
@@ -52,10 +52,10 @@ ms.locfileid: "62413277"
 |類別|描述|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|可執行輸入和輸出的資料流類別。|
-|[basic_istream](../standard-library/basic-istream-class.md)|此範本類別描述的物件可控制擷取元素和編碼的物件從資料流緩衝區類型的項目`Elem`也稱為[char_type](../standard-library/basic-ios-class.md#char_type)，其字元特性由類別`Tr`也稱為[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
+|[basic_istream](../standard-library/basic-istream-class.md)|此樣板類別所描述的物件可控制從資料流程緩衝區提取專案和編碼物件, 以及具有類型`Elem`專案 (也稱為[char_type](../standard-library/basic-ios-class.md#char_type)), 其字元特性是由類別`Tr`所決定, 也是稱為[traits_type](../standard-library/basic-ios-class.md#traits_type)。|
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

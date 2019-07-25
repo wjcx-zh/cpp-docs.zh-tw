@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_base class
 ms.assetid: 7e95c083-91b4-4b3f-8918-0d4ea244a040
-ms.openlocfilehash: 6f957c39f9c78fd182b7ba2a14bdab7f27db56ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a32ba5e583fdb20118a3397f1ddb326302f2de1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405296"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459394"
 ---
 # <a name="codecvtbase-class"></a>codecvt_base 類別
 
-Codecvt 類別用來定義列舉類型的基底類別稱為`result`用作 facet 成員函式的傳回類型，表示轉換的結果。
+Codecvt 類別的基類, 用來定義稱為`result`的列舉型別, 做為 facet 成員函式的傳回型別, 以指示轉換的結果。
 
 ## <a name="syntax"></a>語法
 
@@ -40,20 +40,20 @@ protected:
 
 此類別描述樣板類別 [codecvt](../standard-library/codecvt-class.md) 之所有特製化通用的列舉。 列舉結果描述可能從 [do_in](../standard-library/codecvt-class.md#do_in) 或 [do_out](../standard-library/codecvt-class.md#do_out) 傳回的值：
 
-- `ok` 如果內部和外部字元編碼之間的轉換會成功。
+- `ok`如果內部和外部字元編碼之間的轉換成功, 則為。
 
-- `partial` 如果目的地無法夠大，才能成功轉換。
+- `partial`如果目的地不夠大, 所以轉換成功。
 
-- `error` 如果來源序列的格式不，正確。
+- `error`如果來源序列的格式不正確。
 
 - `noconv` (如果函式不會執行任何轉換)。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

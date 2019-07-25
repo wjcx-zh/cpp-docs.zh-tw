@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411990"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459980"
 ---
 # <a name="timepoint-class"></a>time_point 類別
 
@@ -42,13 +42,13 @@ class time_point;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[time_point](#time_point)|建構 `time_point` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[max](#max)|指定 `time_point::ref` 的上限。|
 |[min](#min)|指定 `time_point::ref` 的下限。|
@@ -63,7 +63,7 @@ class time_point;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<chrono >
+**標頭:** \<chrono >
 
 **命名空間：** std::chrono
 
@@ -101,8 +101,8 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*Dur*<br/>
-`duration` 物件。
+*工期*\
+          `duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -118,8 +118,8 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>參數
 
-*Dur*<br/>
-`duration` 物件。
+*工期*\
+          `duration` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>參數
 
-*Dur*<br/>
+*工期*\
 [duration](../standard-library/duration-class.md) 物件。
 
-*Tp*<br/>
-`time_point` 物件。
+*Tp*\
+          `time_point` 物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構預存 `duration` 值等於 [duration::zero](../standard-library/duration-class.md#zero) 的物件。
 
-第二個建構函式會建構一個物件，其預存的 duration 值等於*Dur*。 除非`is_convertible<Duration2, duration>`保留 true，第二個建構函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
+第二個函式會建立一個物件, 其預存的 duration 值等於「*工期*」。 除非`is_convertible<Duration2, duration>`保留 true, 否則第二個函式不會參與多載解析。 如需詳細資訊，請參閱 [<type_traits>](../standard-library/type-traits.md)。
 
 第三個建構函式會使用 `Tp.time_since_epoch()` 初始化其 `duration` 值。
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

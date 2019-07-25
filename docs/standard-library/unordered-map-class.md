@@ -138,12 +138,12 @@ helpviewer_keywords:
 - std::unordered_map::size
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
-ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a2e9958bda96ffbfce407c8e9981a0fab14cde1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159141"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454832"
 ---
 # <a name="unorderedmap-class"></a>unordered_map 類別
 
@@ -162,13 +162,13 @@ class unordered_map;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |*Key*|索引鍵類型。|
 |*Ty*|對應的類型。|
-|*雜湊*|雜湊函式物件類型。|
-|*預測*|相等比較函式物件類型。|
-|*Alloc*|配置器類別。|
+|*散列*|雜湊函式物件類型。|
+|*Pred*|相等比較函式物件類型。|
+|*配置*|配置器類別。|
 
 ## <a name="members"></a>成員
 
@@ -191,7 +191,7 @@ class unordered_map;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|元素的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[at](#at)|尋找具有指定之索引鍵的項目。|
 |[begin](#begin)|指定受控制序列的開頭。|
@@ -201,7 +201,7 @@ class unordered_map;
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
 |[clear](#clear)|移除所有項目。|
-|[count](#count)|尋找符合指定索引鍵的項目數目。|
+|[計數](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
@@ -350,7 +350,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="remarks"></a>備註
 
-最前面兩個成員函式傳回的正向迭代器，指向序列的第一個項目 (或在空序列結尾以外的位置)。 最後兩個成員函式傳回的正向迭代器，指向值區的第一個項目*nbucket* （或只是超出空值區結尾）。
+最前面兩個成員函式傳回的正向迭代器，指向序列的第一個項目 (或在空序列結尾以外的位置)。 最後兩個成員函式會傳回正向反覆運算器, 指向值區*nbucket*的第一個元素 (或空值區結尾以外的位置)。
 
 ### <a name="example"></a>範例
 
@@ -406,12 +406,12 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回目前對應至索引鍵值的值區數目*keyval*。
+此成員函式會傳回目前對應至索引鍵值*keyval*的值區數目。
 
 ### <a name="example"></a>範例
 
@@ -548,12 +548,12 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*<br/>
+*nbucket*\
 Bucket 編號。
 
 ### <a name="remarks"></a>備註
 
-成員函式傳回的值區數目的大小*nbucket*。
+成員函式會傳回值區號碼*nbucket*的大小。
 
 ### <a name="example"></a>範例
 
@@ -596,7 +596,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_map::cbegin
 
-傳回**const**迭代器，定址範圍中的第一個元素。
+傳回**常數**反覆運算器, 定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -604,13 +604,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-A **const**正向存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
+**常數**正向存取反覆運算器, 指向範圍的第一個元素, 或指向空白範圍結尾 (空白範圍`cbegin() == cend()`) 之外的位置。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改 (非**const**) 容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -622,7 +622,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_map::cend
 
-傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
+傳回**常數**反覆運算器, 定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -630,13 +630,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-A **const**指向範圍結尾之外的正向存取迭代器。
+指向範圍結尾之外的**常數**正向存取反覆運算器。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`end()`和`cend()`的任何種類的可修改 (非**const**) 容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -907,7 +907,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1022,15 +1022,15 @@ pair<iterator, bool>  emplace( Args&&... args);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
-|*args*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
+|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非它已經包含一個值以同等方式排序的元素。|
 
 ### <a name="return-value"></a>傳回值
 
-A`pair`其**bool**元件會傳回，如果已進行插入則為 true 和 false`unordered_map`已經包含索引鍵具有對等排序值，且其 iterator 元件傳回的項目新的項目插入的位置，或元素已在地址。
+, 其**bool**元件會在進行插入時傳回 true `unordered_map` , 如果已經包含元素, 且其索引鍵具有對等的排序值, 且其 iterator 元件傳回新元素的位址, 則為 false。 `pair`已插入, 或元素已在其中。
 
-若要存取此成員函式所傳回的配對 `pr` 迭代器元件，請使用 `pr.first`，若要取其值，請使用 `*(pr.first)`。 若要存取**bool**元件的一組`pr`傳回此成員函式，使用`pr.second`。
+若要存取此成員函式所傳回的配對 `pr` 迭代器元件，請使用 `pr.first`，若要取其值，請使用 `*(pr.first)`。 若要存取這個成員函式所`pr`傳回之配對的 bool 元件, `pr.second`請使用。
 
 ### <a name="remarks"></a>備註
 
@@ -1053,7 +1053,7 @@ iterator emplace_hint(const_iterator where, Args&&... args);
 
 |參數|描述|
 |-|-|
-|*args*|轉送以建構插入 unordered_map 之元素的引數，除非該 unordered_map 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
+|*引數*|轉送以建構插入 unordered_map 之元素的引數，除非該 unordered_map 中已經包含該元素，或廣義而言，除非它已經包含索引鍵以同等方式排序的元素。|
 |*where*|有關要從何處開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
@@ -1158,7 +1158,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="remarks"></a>備註
 
-前兩個成員函式會傳回指向序列結尾之外的正向迭代器。 最後兩個成員函式會傳回正向迭代器，指向值區結尾之外*nbucket*。
+前兩個成員函式會傳回指向序列結尾之外的正向迭代器。 最後兩個成員函式會傳回指向值區*nbucket*結尾以外的正向反覆運算器。
 
 ## <a name="equal_range"></a>  unordered_map::equal_range
 
@@ -1171,12 +1171,12 @@ std::pair<const_iterator, const_iterator>  equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回一組迭代器`X`使得`[X.first, X.second)`分隔的項目具有相同的順序，與受控制序列*keyval*。 如果沒有這類項目存在，則兩個迭代器皆為 `end()`。
+此成員函式會傳回一組`X`反覆運算器`[X.first, X.second)` , 使其只分隔受控制序列中具有*keyval*之對等順序的元素。 如果沒有這類項目存在，則兩個迭代器皆為 `end()`。
 
 ### <a name="example"></a>範例
 
@@ -1240,16 +1240,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>參數
 
-*Where*<br/>
+*希望*\
 要移除之項目的位置。
 
-*第一個*<br/>
+*頭*\
 要移除之第一個項目的位置。
 
-*最後一個*<br/>
+*次*\
 緊接在要移除之最後一個項目後面的位置。
 
-*Key*<br/>
+*擊鍵*\
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -1272,7 +1272,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*<br/>
+*keyval*\
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1472,17 +1472,17 @@ IList);
 
 |參數|描述|
 |-|-|
-|*Val*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|
+|*初始值*|除非其中包含了索引鍵已經過對等地排序的項目，否則為要插入 unordered_map 中的項目值。|
 |*Where*|要開始搜尋正確的插入點的地方。|
-|*ValTy*|範本參數，指定 unordered_map 可用於建構的項目引數型別[value_type](../standard-library/map-class.md#value_type)，和完美轉送*Val*做為引數。|
-|*第一個*|要複製之第一個元素的位置。|
-|*最後一個*|要複製之最一個元素後方的位置。|
+|*ValTy*|範本參數, 指定 unordered_map 可用於建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型, 並將*Val*當做引數完美轉送。|
+|*頭*|要複製之第一個元素的位置。|
+|*次*|要複製之最一個元素後方的位置。|
 |*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
 |*IList*|要從中複製項目的 [initializer_list](../standard-library/initializer-list.md)。|
 
 ### <a name="return-value"></a>傳回值
 
-單一元素成員函式 （1） 和 (2)，傳回[配對](../standard-library/pair-structure.md)其**bool**元件是，如果已進行插入，則為 true，若 unordered_map 已包含其中索引鍵具有的項目，則為 false。對等排序值。 傳回值組的迭代器元件會指向新插入的項目，如果**bool**元件為 true，或指向現有元素如果**bool**元件為 false。
+單一元素成員函式 (1) 和 (2) 會傳回一個[配對](../standard-library/pair-structure.md), 如果已進行插入, 則其**bool**元件為 true, 如果 unordered_map 已經包含一個專案, 而該專案的索引鍵具有對等順序中的對等值, 則為 false。 如果**bool**元件為 true, 傳回值組的反覆運算器元件會指向新插入的元素; 如果**bool**元件為 false, 則會指向現有的元素。
 
 具有提示的單一項目成員函式 (3) 及 (4) 會傳回指向位置的迭代器，該位置是新項目插入 unordered_map 中的位置，或者，若對等索引鍵已存在，則指向現有項目。
 
@@ -1492,7 +1492,7 @@ IList);
 
 在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
-若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取**bool**元件，請使用`pr.second`。 例如，請參閱本文中稍後的範例程式碼。
+若要存取 `pair` `pr` 的迭代器元件 (由單一元素成員函式傳回)，請使用 `pr.first`；若要對傳回的 pair 中的迭代器取值，請使用 `*pr.first` (提供您元素)。 若要存取**bool**元件, 請`pr.second`使用。 例如，請參閱本文中稍後的範例程式碼。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
@@ -1969,12 +1969,12 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*factor*<br/>
+*在內*\
 新的最大載入因數。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回儲存的最大載入因數。 第二個成員函式會取代使用儲存的最大載入因數*因素*。
+第一個成員函式會傳回儲存的最大載入因數。 第二個成員函式會以*因數*取代儲存的最大載入因數。
 
 ### <a name="example"></a>範例
 
@@ -2109,7 +2109,7 @@ Ty& operator[](Key&& keyval);
 
 如果找不到引數索引鍵值，則將它與資料類型的預設值一起插入。
 
-`operator[]` 可用來將元素插入到地圖*m*使用*m*[*金鑰*] = `DataValue`; 其中`DataValue`的值`mapped_type`具有索引鍵的項目值*金鑰*。
+`operator[]`可以用來將專案插入使用*m*[*Key* `DataValue`] = 的 map *m* , 其中 `DataValue`是索引鍵值為 key 的`mapped_type`元素的值。
 
 當使用 `operator[]` 插入項目時，傳回的參考不會指出插入是變更預先存在的項目，還是建立新的項目。 成員函式 [find](../standard-library/map-class.md#find) 和 [insert](../standard-library/map-class.md#insert) 可用來判斷具有指定索引鍵的元素在插入之前是否已經存在。
 
@@ -2184,15 +2184,15 @@ unordered_map& operator=(unordered_map&& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
 |*right*|此運算子函式從中指派內容的 unordered_map。|
 
 ### <a name="remarks"></a>備註
 
-第一個版本會複製所有的項目*右*到這個 unordered_map。
+第一個版本會將所有元素從*右邊*複製到這個 unordered_map。
 
-第二個版本中將所有的項目移*右*到這個 unordered_map。
+第二個版本會將所有元素從*右邊*移動到這個 unordered_map。
 
 這個 unordered_map 中 `operator`= executes 之前的所有項目都會被捨棄。
 
@@ -2335,12 +2335,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*<br/>
+*nbuckets*\
 要求的值區數目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會改變為至少的貯體數目*nbuckets*並視需要重建雜湊資料表。
+此成員函式會將值區數目改變為至少*nbuckets* , 並視需要重建雜湊資料表。
 
 ### <a name="example"></a>範例
 
@@ -2516,12 +2516,12 @@ void swap(unordered_map& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要交換的容器。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會交換之間受控制的序列`*this`並*右*。 如果是 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。
+成員函式會在和*right*之間`*this`交換受控制的序列。 如果是 [unordered_map::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。
 
 ### <a name="example"></a>範例
 
@@ -2628,27 +2628,27 @@ unordered_map(
 |參數|描述|
 |-|-|
 |*Al*|要儲存的配置器物件。|
-|*Comp*|要儲存的比較函式物件。|
-|*雜湊*|要儲存的雜湊函式物件。|
+|*背光*|要儲存的比較函式物件。|
+|*散列*|要儲存的雜湊函式物件。|
 |*Bucket_count*|Bucket 最小數目。|
 |*右邊*|要複製的容器。|
-|*第一個*||
-|*最後一個*||
+|*頭*||
+|*次*||
 |*IList*|包含要複製之項目的 initializer_list。|
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式指定由 `right` 控制之序列的複本。 第二個建構函式會指定空白的受控制序列。 第三個建構函式會插入項目值序列 `[first, last)`。 第四個建構函式透過移動 `right` 來指定序列的複本。
 
-所有建構函式也會初始化數個儲存值。 複製建構函式中，值取自*右*。 否則就是：
+所有建構函式也會初始化數個儲存值。 若為複製的函式, 則會從*右方*取得值。 否則就是：
 
-bucket 最小數目為引數*Bucket_count*，如果存在，則它是所述的預設值由實作定義的值為`N0`。
+值區的最小數目是引數*Bucket_count*(如果有的話)。否則, 它會在此處描述為實值`N0`的預設值。
 
-雜湊函式物件是引數*雜湊*，如果存在，則它是`Hash()`。
+雜湊函式物件是引數*雜湊*(如果有的話)。否則為`Hash()`。
 
-比較函式物件是引數*Comp*，如果存在，則它是`Pred()`。
+比較函式物件是引數*Comp*(如果有的話)。否則為`Pred()`。
 
-配置器物件是引數*Al*，如果存在，否則就`Alloc()`。
+配置器物件是引數*Al*(如果有的話)。否則, 它會`Alloc()`是。
 
 ### <a name="example"></a>範例
 
@@ -2841,7 +2841,7 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
-[容器](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)\
+[容器](../cpp/containers-modern-cpp.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

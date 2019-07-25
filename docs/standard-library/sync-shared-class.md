@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412237"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450254"
 ---
 # <a name="syncshared-class"></a>sync_shared 類別
 
@@ -38,7 +38,7 @@ class sync_shared
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[allocate](#allocate)|配置記憶體區塊。|
 |[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
@@ -46,7 +46,7 @@ class sync_shared
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -62,7 +62,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -85,7 +85,7 @@ void deallocate(void* ptr, std::size_t count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -101,17 +101,17 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*快取*|與同步處理篩選相關聯的快取類型。|
 |*其他*|要比較是否相等的快取。|
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果的結果`cache.equals(Other.cache)`，其中`cache`代表的快取物件，是 **，則為 true**; 否則**false**。
+如果的結果`cache.equals(Other.cache)`(其中`cache`代表 cache 物件) 為**true**, 則為 true, 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

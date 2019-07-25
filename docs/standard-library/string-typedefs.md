@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 534c51e8a627ca893ea42e023f12d8bc62d6fb5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412328"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459226"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
 
@@ -23,7 +23,7 @@ ms.locfileid: "62412328"
 
 ## <a name="string"></a>  string
 
-類型，描述範本類別的特製化[basic_string](../standard-library/basic-string-class.md)類型的項目**char**。
+一種類型, 描述範本類別[basic_string](../standard-library/basic-string-class.md)的特製化, 其中包含**char**類型的元素。
 
 其他特製化 `basic_string` 的 typedef 包含 [wstring](../standard-library/string-typedefs.md#wstring)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -73,7 +73,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a>  wstring
 
-類型，描述範本類別的特製化[basic_string](../standard-library/basic-string-class.md)類型的項目**wchar_t**。
+一種類型, 描述範本類別[basic_string](../standard-library/basic-string-class.md)的特製化, 其專案類型為**wchar_t**。
 
 其他特製化 `basic_string` 的 typedef 包含 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。
 
 > [!NOTE]
-> 大小**wchar_t**是由實作定義。 如果您的程式碼相依於**wchar_t**若要為特定的大小，請檢查您的平台實作 (例如，使用`sizeof(wchar_t)`)。 如果您需要的字串字元類型保證會在所有平台上具有相同寬度，請使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
+> **Wchar_t**的大小是實作為定義的。 如果您的程式碼相依于**wchar_t**以作為特定大小, 請檢查平臺的執行 (例如, 使用`sizeof(wchar_t)`)。 如果您需要的字串字元類型保證會在所有平台上具有相同寬度，請使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

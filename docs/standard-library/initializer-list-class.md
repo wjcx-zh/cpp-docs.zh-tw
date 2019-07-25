@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::initializer_list::begin
 - std::initializer_list::end
 - std::initializer_list::size
-ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: acd11f3b3a3bf0ba17e34a802cc8988410e17b12
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159297"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455352"
 ---
 # <a name="initializerlist-class"></a>initializer_list 類別
 
@@ -34,7 +34,7 @@ class initializer_list
 
 |參數|描述|
 |---------------|-----------------|
-|*Type*|要存放在 `initializer_list` 中的項目資料類型。|
+|*型別*|要存放在 `initializer_list` 中的項目資料類型。|
 
 ## <a name="remarks"></a>備註
 
@@ -73,7 +73,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<initializer_list>
+**標頭：** \<initializer_list>
 
 **命名空間：** std
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |參數|描述|
 |---------------|-----------------|
-|*第一個*|要複製的元素範圍中第一個元素的位置。|
-|*最後一個*|超出要複製之元素範圍的第一個元素的位置。|
+|*頭*|要複製的元素範圍中第一個元素的位置。|
+|*次*|超出要複製之元素範圍的第一個元素的位置。|
 
 ### <a name="remarks"></a>備註
 
@@ -202,4 +202,4 @@ constexpr size_t size() const noexcept;
 
 ## <a name="see-also"></a>另請參閱
 
-[<forward_list>](../standard-library/forward-list.md)<br/>
+[<forward_list>](../standard-library/forward-list.md)

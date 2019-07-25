@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_copy_constructible
 ms.assetid: f13a0bea-63b1-492a-9a45-d445df35c282
-ms.openlocfilehash: 7682ce8fd8f127ac20a20fb0918e69d8c2d76947
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 229083f4569647bd65d1ce7e640f753a9418371d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413667"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455953"
 ---
 # <a name="isnothrowcopyconstructible-class"></a>is_nothrow_copy_constructible 類別
 
@@ -26,19 +26,19 @@ struct is_nothrow_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty* nothrow 複製建構函式，否則為 false。
+如果類型*Ty*具有 nothrow 複製的程式, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

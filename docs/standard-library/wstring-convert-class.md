@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::wstring_convert [C++], converted
 - std::wstring_convert [C++], state
 ms.assetid: e34f5b65-d572-4bdc-ac69-20778712e376
-ms.openlocfilehash: df3b003289dcd86e8033521d8cb0cacdbb7dfbd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35689f79f8987cb55c4578869369f35d8656faec
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410794"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450905"
 ---
 # <a name="wstringconvert-class"></a>wstring_convert 類別
 
@@ -42,10 +42,10 @@ class wstring_convert
 
 ### <a name="parameters"></a>參數
 
-*Codecvt*<br/>
+*Codecvt*\
 [locale](../standard-library/locale-class.md) Facet，代表轉換物件。
 
-*Elem*<br/>
+*Elem*\
 寬字元項目類型。
 
 ## <a name="remarks"></a>備註
@@ -66,13 +66,13 @@ class wstring_convert
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[wstring_convert](#wstring_convert)|建構類型 `wstring_convert` 的物件。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[byte_string](#byte_string)|代表位元組字串的類型。|
 |[wide_string](#wide_string)|代表寬字串的類型。|
@@ -81,7 +81,7 @@ class wstring_convert
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[from_bytes](#from_bytes)|將位元組字串轉換為寬字串。|
 |[to_bytes](#to_bytes)|將寬字串轉換為位元組字串。|
@@ -90,7 +90,7 @@ class wstring_convert
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -141,7 +141,7 @@ wide_string from_bytes(const char* first, const char* last);
 |*ptr*|要轉換的 C-style、以 Null 結束的字元序列。|
 |*Bstr*|要轉換的 [byte_string](#byte_string)。|
 |*first*|在字元範圍中要轉換的第一個字元。|
-|*last*|在字元範圍中要轉換的最後一個字元。|
+|*次*|在字元範圍中要轉換的最後一個字元。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -149,7 +149,7 @@ wide_string from_bytes(const char* first, const char* last);
 
 ### <a name="remarks"></a>備註
 
-如果[轉換狀態](../standard-library/wstring-convert-class.md)物件已*不*建構以明確的值，它會設定為其預設值 （初始轉換狀態） 開始轉換之前。 否則會維持不變。
+如果[轉換狀態](../standard-library/wstring-convert-class.md)物件*未*以明確的值進行建立, 則會在轉換開始之前, 將其設定為預設值 (初始轉換狀態)。 否則會維持不變。
 
 成功轉換的輸入項目數目會儲存在轉換計數物件中。 如果未發生轉換錯誤，成員函式會傳回已轉換的寬字串。 否則，如果物件是以 wide-string 錯誤訊息的初始設定式建構，則成員函式會傳回 wide-string 錯誤訊息物件。 否則，成員函式會擲回 [range_error](../standard-library/range-error-class.md) 類別的物件。
 
@@ -210,11 +210,11 @@ byte_string to_bytes(const Elem* first, const Elem* last);
 |*Wptr*|要轉換的 C-style、以 Null 結束的序列 (開始於 `wptr`)。|
 |*Wstr*|要轉換的 [wide_string](#wide_string)。|
 |*first*|項目範圍中要轉換的第一個項目。|
-|*last*|項目範圍中要轉換的最後一個項目。|
+|*次*|項目範圍中要轉換的最後一個項目。|
 
 ### <a name="remarks"></a>備註
 
-如果[轉換狀態](../standard-library/wstring-convert-class.md)物件已*不*建構以明確的值，它會設定為其預設值 （初始轉換狀態） 開始轉換之前。 否則會維持不變。
+如果[轉換狀態](../standard-library/wstring-convert-class.md)物件*未*以明確的值進行建立, 則會在轉換開始之前, 將其設定為預設值 (初始轉換狀態)。 否則會維持不變。
 
 成功轉換的輸入項目數目會儲存在轉換計數物件中。 如果未發生轉換錯誤，成員函式會傳回已轉換的位元組字串。 否則，如果物件是以 byte-string 錯誤訊息的初始設定式建構，則成員函式會傳回 byte-string 錯誤訊息物件。 否則，成員函式會擲回 [range_error](../standard-library/range-error-class.md) 類別的物件。
 
@@ -242,7 +242,7 @@ wstring_convert(const byte_string& _Berr, const wide_string& Werr = wide_string(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*\*Pcvt*|`Codecvt` 類型的物件，用以執行轉換。|
 |*_State*|[state_type](#state_type) 類型的物件，代表轉換狀態。|

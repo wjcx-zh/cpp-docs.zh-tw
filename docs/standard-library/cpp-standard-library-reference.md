@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60bfed322985b1345f4b3842a21f836953813657
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210745"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452435"
 ---
 # <a name="c-standard-library-reference"></a>C++ 標準程式庫參考
 
@@ -22,11 +22,11 @@ C++ 程式可以透過 C++ 標準程式庫的這個合格實作呼叫大量函�
 
 ## <a name="in-this-section"></a>本節內容
 
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
 提供 C++ 標準程式庫之 Microsoft 實作的概觀。
 
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
+[iostream 程式設計](../standard-library/iostream-programming.md)\
 提供 iostream 程式設計的概觀。
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 提供 C++ 標準程式庫標頭檔之參考主題的說明連結與程式碼範例。

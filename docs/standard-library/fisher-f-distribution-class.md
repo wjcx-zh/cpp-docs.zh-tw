@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::fisher_f_distribution [C++], param_type
 - std::fisher_f_distribution [C++], param_type
 ms.assetid: 9513b6ce-3309-4be1-829b-f504bca35bbf
-ms.openlocfilehash: 643c564d7407a79bd9e2e776946c4b8df37a2974
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: c5e45af5d350ba9c3f1e4e240dec2c13366318c3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457029"
 ---
 # <a name="fisherfdistribution-class"></a>fisher_f_distribution 類別
 
@@ -69,15 +69,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生值，使用者指定的浮點類型**double**如果未提供，根據費雪 F 分佈的分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之浮點類型值的散發, 或如果沒有提供, 則為**double**類型 (根據費雪的 F 分佈散發)。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -248,13 +248,13 @@ explicit fisher_f_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*m*<br/>
+*分鐘*\
 `m` 分佈參數。
 
-*n*<br/>
+*n*\
 `n` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -283,13 +283,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*m*<br/>
+*分鐘*\
 `m` 分佈參數。
 
-*n*<br/>
+*n*\
 `n` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -300,4 +300,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

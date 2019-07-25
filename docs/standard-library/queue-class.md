@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458348"
 ---
 # <a name="queue-class"></a>queue 類別
 
@@ -42,19 +42,19 @@ class queue
 
 ### <a name="parameters"></a>參數
 
-*型別*\
+*型*\
 要存放在佇列中的項目資料類型
 
-*容器*\
+*箱*\
 用來實作佇列的基礎容器類型。
 
 ## <a name="remarks"></a>備註
 
-類別的元素`Type`約定的第一個範本中的佇列物件的參數是同義詞[value_type](#value_type) ，而且必須符合的基礎容器類別中的項目類型`Container`所規定第二個樣板參數。 `Type`必須是可指派，，如此就可以複製該類型的物件，並將值指派給該類型的變數。
+在佇列物件的`Type`第一個樣板參數中, 類別約定的元素與[value_type](#value_type)同義, 而且必須符合第二個範本所約定之基礎容器`Container`類別中的元素類型。實參. `Type`必須是可指派的, 如此才能複製該類型的物件, 並將值指派給該類型的變數。
 
-適當的佇列的基礎容器類別包括[deque](../standard-library/deque-class.md)並[清單](../standard-library/list-class.md)，或任何其他支援的作業序列容器`front`， `back`， `push_back`，和`pop_front`。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
+適用于佇列的基礎容器類別[包括 deque](../standard-library/deque-class.md)和[list](../standard-library/list-class.md), 或任何其他支援`front`、 `back`、 `push_back`和`pop_front`作業的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
-佇列物件是否相等比較，並且只有當類別的元素`Type`進行等號比較，並小於-比比較，並且只有當類別的項目`Type`小於-比較。
+佇列物件只有在類別`Type`的專案可進行等號比較時才可進行等號比較, 而且只有在類別`Type`的元素小於可比較時, 才會小於可比較的。
 
 有三種由 C++ 標準程式庫定義的容器配接器類型：stack、queue 和 priority_queue。 每個類型都會限制某些基礎容器類別的功能，以精確地提供標準資料結構受控制的介面。
 
@@ -91,7 +91,7 @@ class queue
 |[push](#push)|將項目加入 `queue` 的後端。|
 |[size](#size)|傳回 `queue` 中項目的數目。|
 
-## <a name="back"></a> 上一步
+## <a name="back"></a>返回
 
 傳回佇列後端最後且最近新增的項目。
 
@@ -107,7 +107,7 @@ const_reference back() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果傳回值`back`指派給`reference`，可以修改佇列物件。
+如果 `back` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值`back`指派`reference`給, 則可以修改佇列物件。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -137,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a> container_type
+## <a name="container_type"></a>container_type
 
 提供要配接之基底容器的類型。
 
@@ -155,7 +155,7 @@ typedef Container container_type;
 
 如需如何宣告及使用 `container_type` 的範例，請參閱 [queue](#queue) 的範例。
 
-## <a name="empty"></a> 空白
+## <a name="empty"></a>空
 
 測試佇列是否為空白。
 
@@ -201,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a> 前端
+## <a name="front"></a>前端
 
 傳回佇列前端第一個項目的參考。
 
@@ -217,9 +217,9 @@ const_reference front() const;
 
 ### <a name="remarks"></a>備註
 
-如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果傳回值`front`指派給`reference`，可以修改佇列物件。
+如果 `front` 的傳回值已指派給 `const_reference`，則無法修改佇列物件。 如果將的傳回值`front`指派`reference`給, 則可以修改佇列物件。
 
-成員函式傳回`reference`受控制序列的第一個元素，絕對不能空白。
+此成員`reference`函式會將傳回至受控制序列的第一個元素, 這不能是空的。
 
 在您使用定義為 1 或 2 的 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) 進行編譯之後，如果嘗試存取空佇列中的項目，則會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md) 。
 
@@ -253,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a> pop
+## <a name="pop"></a>提示
 
 從佇列前端移除項目。
 
@@ -309,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a> 推播
+## <a name="push"></a>式
 
 將項目加入佇列的後端。
 
@@ -319,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*初始值*\
 加入至佇列後端的項目。
 
 ### <a name="remarks"></a>備註
@@ -358,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a> 佇列
+## <a name="queue"></a>佇列
 
 建構佇列，它可以是空的，或是基底容器物件的複本。
 
@@ -370,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*再*\
 其中建構佇列為複本的 **const** 容器。
 
 ### <a name="remarks"></a>備註
@@ -425,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a> 大小
+## <a name="size"></a>容量
 
 傳回佇列中的項目數目。
 
@@ -466,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 不帶正負號的整數類型，可以表示佇列中的項目數。
 
@@ -526,5 +526,5 @@ The element at the front of the queue is 69.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

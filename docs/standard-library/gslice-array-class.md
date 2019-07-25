@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159546"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448925"
 ---
 # <a name="gslicearray-class"></a>gslice_array 類別
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此類別描述可儲存物件的參考`va`類別的[valarray](../standard-library/valarray-class.md)**\<型別 >**，以及物件`gs`類別的[gslice](../standard-library/gslice-class.md)其中描述要從選取的元素序列`valarray<Type>`物件。
+類別會描述`va`一個物件, 它會儲存[valarray](../standard-library/valarray-class.md)  **\<> 類型**之物件的參考, 並使用[gslice](../standard-library/gslice-class.md)類別的`gs`物件, 其中描述要從中選取的專案序列。`valarray<Type>`物件。
 
-您建構`gslice_array<Type>`物件只能藉由撰寫運算式的形式[va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)。 Gslice_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。
+您只能藉`gslice_array<Type>`由撰寫格式為[va&#91;gs&#93;](../standard-library/valarray-class.md#op_at)的運算式來建立物件。 類別 gslice_array 的成員函式的行為就像是針對定義的`valarray<Type>`對應函式簽章, 但只有所選項目的順序會受到影響。
 
 此樣板類別是由某些 valarray 運算間接建立的，無法直接在程式中使用。 配量註標運算子會改用內部輔助範本類別：
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**)。
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** )。
 
-您建構`gslice_array<Type>`物件只能藉由撰寫運算式的形式`va[gsl]`，配量`gsl`valarray 的`va`。 Gslice_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。
+您只需`gslice_array<Type>`針對`va[gsl]` `gsl` valarray`va`的配量撰寫表單的運算式, 即可建立物件。 類別 gslice_array 的成員函式的行為就像是針對定義的`valarray<Type>`對應函式簽章, 但只有所選項目的順序會受到影響。 gslice_array 所控制的序列是由配量建構函式的三個參數所定義，亦即第一個配量中第一個元素的索引、每個配量中的元素數目，以及每個配量中元素之間的距離。
 
 在以下範例中：
 
@@ -83,10 +83,10 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<valarray>
+**標頭：** \<valarray>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

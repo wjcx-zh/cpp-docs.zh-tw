@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bb043c40774b102dee023773349223a2fbb4a9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158556"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449224"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -53,15 +53,15 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>參數
 
-*_Amount*<br/>
+*_Amount*\
 所擷取的貨幣值。
 
-*_Intl*<br/>
-如果 **，則為 true**，使用國際格式。 預設值為 **false**。
+*_Intl*\
+若**為 true**, 則使用國際格式。 預設值為 **false**。
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回物件，擷取自資料流時`str`，行為會如同`formatted input function`呼叫此成員函式`get`地區設定 facet`money_get`相關聯`str`，並使用 *_Intl*來指出使用國際格式。 如果成功，呼叫會儲存在 *_Amount*擷取的貨幣值。 接著，操作工具會傳回 `str`。
+操作工具會`str`傳回物件, 當從資料流程解壓縮時, 其行為`get`會是`formatted input function`呼叫與相關聯之地區設定 facet `money_get`的成員函`str`式, 並使用 *_Intl*表示國際格式。 如果成功, 呼叫會在 *_Amount*中儲存已解壓縮的貨幣值。 接著，操作工具會傳回 `str`。
 
 `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。
 
@@ -76,10 +76,10 @@ T10 put_time(struct tm *_Tptr, const Elem *_Fmt);
 
 ### <a name="parameters"></a>參數
 
-*_Tptr*<br/>
+*_Tptr*\
 採用時間結構形式的時間。
 
-*_Fmt*<br/>
+*_Fmt*\
 用來取得時間值的所需格式。
 
 ### <a name="remarks"></a>備註
@@ -97,11 +97,11 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>參數
 
-*_Amount*<br/>
+*_Amount*\
 要插入到資料流中的金額。
 
-*_Intl*<br/>
-設定為 **，則為 true**如果操作工具應該使用國際格式**false**如果不應該。
+*_Intl*\
+如果操作工具應該使用國際格式, 則設定為**true** ; 如果不應該, 則設為**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -109,7 +109,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像已格式化的輸出函式一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `money_put` 的成員函式 `put`。 如果成功，呼叫就會插入`amount`適當地格式化，使用 * _Intl` to indicate international format and `str.fill()`, as the fill element. The manipulator then returns `str'。
+操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像已格式化的輸出函式一樣，此函式會呼叫與 `str` 關聯之地區設定 facet `money_put` 的成員函式 `put`。 如果成功, 則會使用`amount` * _Intl` to indicate international format and `str. fill ()`, as the fill element. The manipulator then returns `str 來插入適當格式的呼叫。
 
 `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。
 
@@ -124,15 +124,15 @@ T10 put_time(struct tm* _Tptr, const Elem* _Fmt);
 
 ### <a name="parameters"></a>參數
 
-*_Tptr*<br/>
+*_Tptr*\
 時間結構中所提供要寫入到資料流中的時間值。
 
-*_Fmt*<br/>
+*_Fmt*\
 寫入時間值時所需的格式。
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用 *_Tptr*來指出時間結構並 *_Fmt*來表示 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用 *_Tptr*來指示時間結構和 *_Fmt* , 以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-Std:: string、 char\*，字串常值或原始字串常值或其中任何一項的寬版本 (例如 std:: wstring、 wchar_t\*)。
+*str*\
+Std:: string、char\*、string 常值或原始字串常值, 或其中任何一項的寬版本 (例如 std:: wstring、wchar_t\*)。
 
-*delimiter*<br/>
+*為止*\
 使用者指定的字元或寬字元，用作字串開頭和結尾的分隔符號。
 
-*escape*<br/>
+*符*\
 使用者指定的字元或寬字元，用作字串內逸出序列的逸出字元。
 
 ### <a name="remarks"></a>備註
@@ -311,12 +311,12 @@ T1 resetiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>參數
 
-*遮罩*<br/>
+*遮罩*\
 要清除的旗標。
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 [setf](../standard-library/ios-base-class.md#setf)( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags)，_*遮罩*)，然後傳回`str`。
+操作工具會傳回物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 [setf](../standard-library/ios-base-class.md#setf)( `ios_base::` [fmtflags](../standard-library/ios-base-class.md#fmtflags), _ *Mask*), 然後`str`傳回。
 
 ### <a name="example"></a>範例
 
@@ -332,18 +332,18 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>參數
 
-*_Base*<br/>
+*_Base*\
 數字基底。
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 `setf`(**遮罩**， [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags))，然後傳回`str`。 在這裡，`mask`判斷方式如下：
+操作工具會傳回物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 `setf`( **mask**, [ios_base:: basefield](../standard-library/ios-base-class.md#fmtflags)), 然後`str`傳回。 在這裡`mask` , 是以下列方式決定:
 
-- 如果 _*基底*為 8，則`mask`是`ios_base::` [oct](../standard-library/ios-functions.md#oct)。
+- 如果 _ *Base*為 8, `mask`則為`ios_base::` [oct](../standard-library/ios-functions.md#oct)。
 
 - 如果 _ *Base* 為 10，則 mask 為 `ios_base::`[dec](../standard-library/ios-functions.md#dec)。
 
-- 如果 _*基底*為 16，則`mask`是`ios_base::`[十六進位](../standard-library/ios-functions.md#hex)。
+- 如果 _ *Base*為 16, `mask`則為`ios_base::` [hex](../standard-library/ios-functions.md#hex)。
 
 - 如果 _ *Base* 是任何其他值，則 mask 為 `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)(0)。
 
@@ -362,12 +362,12 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>參數
 
-*Ch*<br/>
+*頻道*\
 將用來填滿靠右對齊顯示中空格的字元。
 
 ### <a name="return-value"></a>傳回值
 
-範本操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 [填滿](../standard-library/basic-ios-class.md#fill)(`Ch`)，然後傳回`str`。 型別`Elem`必須是資料流的元素類型相同`str`。
+範本操作工具會傳回一個物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 [填滿](../standard-library/basic-ios-class.md#fill)(`Ch`), `str`然後傳回。 型`Elem`別必須與資料流程`str`的元素型別相同。
 
 ### <a name="example"></a>範例
 
@@ -383,12 +383,12 @@ T2 setiosflags(ios_base::fmtflags Mask);
 
 ### <a name="parameters"></a>參數
 
-*遮罩*<br/>
+*遮罩*\
 要設定的旗標。
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 [setf](../standard-library/ios-base-class.md#setf)(_*遮罩*)，然後傳回`str`。
+操作工具會傳回物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 [setf](../standard-library/ios-base-class.md#setf)(_ *Mask*), `str`然後傳回。
 
 ### <a name="example"></a>範例
 
@@ -404,12 +404,12 @@ T5 setprecision(streamsize Prec);
 
 ### <a name="parameters"></a>參數
 
-*Prec*<br/>
+*Prec*\
 浮點數值的有效位數。
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 [有效位數](../standard-library/ios-base-class.md#precision)(`Prec`)，然後傳回`str`。
+操作工具會傳回物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 [精確度](../standard-library/ios-base-class.md#precision)(`Prec`), `str`然後傳回。
 
 ### <a name="example"></a>範例
 
@@ -425,12 +425,12 @@ T6 setw(streamsize Wide);
 
 ### <a name="parameters"></a>參數
 
-*Wide*<br/>
+*廣*\
 顯示欄位的寬度。
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，從擷取或插入資料流時`str`，呼叫**str**。 [寬度](../standard-library/ios-base-class.md#width)(_*寬*)，然後傳回`str`。
+操作工具會傳回物件, 從解壓縮或插入資料流程`str`時, 會呼叫**str**。 [寬度](../standard-library/ios-base-class.md#width)(_*寬*), 然後`str`傳回。
 
 ### <a name="remarks"></a>備註
 
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iomanip>](../standard-library/iomanip.md)<br/>
+[\<iomanip>](../standard-library/iomanip.md)

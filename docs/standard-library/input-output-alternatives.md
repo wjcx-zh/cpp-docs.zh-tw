@@ -1,19 +1,19 @@
 ---
-title: 輸入 / 輸出替代項目
+title: 輸入-輸出替代專案
 ms.date: 05/07/2019
 helpviewer_keywords:
 - I/O [C++], alternatives
 ms.assetid: 9f8401c7-d90d-4285-8918-63573df74a80
-ms.openlocfilehash: 5fb98714a96dedf725ea17332d7c1627e3390896
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: b46ff242fc263be5069eb691dd0ea9e8fb00b0f9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221398"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455296"
 ---
 # <a name="inputoutput-alternatives"></a>輸入/輸出替代項目
 
-MicrosoftC++編譯器會提供 I/O 程式設計中的多個替代方案：
+Microsoft C++編譯器提供了數個 i/o 程式設計的替代方法:
 
 - C 執行階段程式庫直接、無緩衝 I/O。
 
@@ -31,4 +31,4 @@ iostream 類別適用於緩衝、格式化的文字 I/O。 如果您需要 C++ �
 
 ## <a name="see-also"></a>另請參閱
 
-[什麼是資料流](../standard-library/what-a-stream-is.md)<br/>
+[什麼是資料流](../standard-library/what-a-stream-is.md)

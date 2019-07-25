@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference::flip method
 ms.assetid: ef940365-cbe4-4a87-a3e2-1f3cfa357e29
-ms.openlocfilehash: 68172de6e50a599d5b1822b83787be3a3a94e037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1743df7773d577e53f054fa4e403cf0d00da8ce7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205121"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452178"
 ---
 # <a name="vectorltboolgtreferenceflip"></a>vector&lt;bool&gt;::reference::flip
 
@@ -72,5 +72,5 @@ The vector with first element flipped is:
 
 ## <a name="see-also"></a>另請參閱
 
-[向量\<bool >:: reference 類別](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference 類別](../standard-library/vector-bool-reference-class.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

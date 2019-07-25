@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369627"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458172"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-範本`ratio`定義靜態常數`num`並`den`使得`num`  /  `den` = = 分子 / 分母和`num`和`den`有共通的因素。 `num` / `den` 此範本類別所表示的值。 因此，`type`指定具現化`ratio<num, den>`。
+此範本`ratio`會定義靜態常數`num` , `den` `num`  /  `num`因此 = = 分子/分母, 而和`den`沒有常見的因素。 `den` `num` / `den`是範本類別所代表的值。 因此, `type`會指定具`ratio<num, den>`現化。
 
 ### <a name="specializations"></a>特製化
 
@@ -85,7 +85,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 ### <a name="typedefs"></a>typedefs
 
-為了方便起見，這個標頭會定義標準的 SI 前置詞的比例：
+為了方便起見, 標頭會定義標準 SI 首碼的比率:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

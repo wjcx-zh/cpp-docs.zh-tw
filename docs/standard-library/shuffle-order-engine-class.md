@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399430"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450419"
 ---
 # <a name="shuffleorderengine-class"></a>shuffle_order_engine 類別
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>參數
 
-*Engine*<br/>
+*搜尋引擎優化*\
 基底引擎類型。
 
-*K*<br/>
+*K*\
 **資料表大小**。 緩衝區 (資料表) 中的項目數。 **前置條件**：`0 < K`
 
 ## <a name="members"></a>成員
@@ -52,14 +52,14 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>備註
 
-此範例類別描述「引擎配接器」，會透過重新排列其基底引擎所傳回的值來產生值。 每個建構函式會將內部資料表填滿*K*基底引擎所傳回的值和值，要求時從資料表選取隨機項目。
+此範例類別描述「引擎配接器」，會透過重新排列其基底引擎所傳回的值來產生值。 每個函式都會使用基底引擎傳回的*K*值來填滿內部資料表, 而在要求值時, 會從資料表中選取隨機元素。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

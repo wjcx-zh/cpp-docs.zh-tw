@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::unique_lock
 ms.assetid: f4ed8ba9-c8af-446f-8ef0-0b356bad14bd
-ms.openlocfilehash: 235307a09796b21979c33ded18f8ce69414c0c3f
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 655d7b08c452bed94277aaed2cc8368aaeb462c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454934"
 ---
 # <a name="uniquelock-class"></a>unique_lock 類別
 
@@ -24,9 +24,9 @@ class unique_lock;
 
 ## <a name="remarks"></a>備註
 
-範本引數 `Mutex` 必須指定一個「mutex 類型」  。
+範本引數 `Mutex` 必須指定一個「mutex 類型」。
 
-就內部而言，`unique_lock`儲存至相關聯的指標`mutex`物件並**bool** ，表示目前的執行緒是否擁有`mutex`。
+就內部而言`unique_lock` , 會儲存相關聯`mutex`物件的指標, 以及**布林**值, `mutex`指出目前的執行緒是否擁有。
 
 ## <a name="members"></a>成員
 
@@ -45,7 +45,7 @@ class unique_lock;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得相關聯 `mutex` 的擁有權。|
 |[mutex](#mutex)|擷取相關聯 `mutex` 的已儲存指標。|
@@ -70,7 +70,7 @@ class unique_lock;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
@@ -84,11 +84,11 @@ void lock();
 
 ### <a name="remarks"></a>備註
 
-如果預存`mutex`指標為 NULL，這個方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
+如果儲存`mutex`的指標是 Null, 則這個方法會[](../standard-library/system-error-class.md)擲回錯誤碼為的`operation_not_permitted`system_error。
 
 如果呼叫的執行緒已經擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
-否則，這個方法會呼叫`lock`上相關聯`mutex`並將內部執行緒擁有權旗標設定為 **，則為 true**。
+否則, 這個方法會`lock`在相關聯`mutex`的上呼叫, 並將內部執行緒擁有權旗標設定為**true**。
 
 ## <a name="mutex"></a>  mutex
 
@@ -108,7 +108,7 @@ explicit operator bool() noexcept
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果執行緒擁有 mutex; 否則為**false**。
+如果執行緒擁有 mutex, 則為**true** ;否則**為 false**。
 
 ## <a name="op_eq"></a>  operator=
 
@@ -120,8 +120,8 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-`unique_lock` 物件。
+*另一方面*\
+          `unique_lock` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,7 +131,7 @@ unique_lock& operator=(unique_lock&& Other) noexcept;
 
 如果呼叫的執行緒擁有先前的相關聯 `mutex`，在此方法於 `mutex` 上呼叫 `unlock` 之前，它會指派新的值。
 
-複製之後，這個方法會設定*其他*為預設建構狀態。
+複製之後, 這個方法會將*其他*設定為預設結構的狀態。
 
 ## <a name="owns_lock"></a>  owns_lock
 
@@ -143,7 +143,7 @@ bool owns_lock() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果執行緒擁有`mutex`，否則**false**。
+如果執行緒擁有, `mutex`則為 true, 否則為**false**。
 
 ## <a name="release"></a>  release
 
@@ -159,7 +159,7 @@ mutex_type *release() noexcept;
 
 ### <a name="remarks"></a>備註
 
-這個方法會設定的預存值`mutex`為 0，將內部指標`mutex`擁有權旗標**false**。
+這個方法會將儲存`mutex`的指標值設定為 0, 並將內部`mutex`擁有權旗標設定為**false**。
 
 ## <a name="swap"></a>  swap
 
@@ -171,8 +171,8 @@ void swap(unique_lock& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-`unique_lock` 物件。
+*另一方面*\
+          `unique_lock` 物件。
 
 ## <a name="try_lock"></a>  try_lock
 
@@ -184,11 +184,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
+如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -204,16 +204,16 @@ bool try_lock_for(
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*<br/>
+*Rel_time*\
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
+如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -230,16 +230,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*<br/>
+*Abs_time*\
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果預存`mutex`指標為 NULL，則方法會擲回[system_error](../standard-library/system-error-class.md)具有錯誤碼`operation_not_permitted`。
+如果儲存`mutex`的指標是 Null, 則方法會擲[](../standard-library/system-error-class.md)回錯誤碼為的`operation_not_permitted`system_error。
 
 如果呼叫的執行緒已經擁有 `mutex`，方法會擲回錯誤碼為 `resource_deadlock_would_occur` 的 `system_error`。
 
@@ -273,25 +273,25 @@ unique_lock(mutex_type& Mtx,
 
 ### <a name="parameters"></a>參數
 
-*Mtx*<br/>
+*.Mtx*\
 mutex 類型物件。
 
-*Rel_time*<br/>
+*Rel_time*\
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
-*Abs_time*<br/>
+*Abs_time*\
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
-*其他*<br/>
-`unique_lock` 物件。
+*另一方面*\
+          `unique_lock` 物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構相關聯 mutex 指標值為 0 的物件。
 
-第二個建構函式會移動相關聯的 mutex 狀態從*其他*。 移動之後，*其他*已不再與 mutex 相關聯。
+第二個函式會將相關聯的 mutex 狀態與*其他的相互*關聯。 移動之後,*其他*則不再與 mutex 相關聯。
 
-其餘的建構函式存放區 & *Mtx*設為儲存`mutex`指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
+其餘的函式會將 & *.mtx*儲存`mutex`為儲存的指標。 `mutex` 的擁有權取決於第二個引數 (如果存在的話)。
 
 |||
 |-|-|
@@ -326,9 +326,9 @@ void unlock();
 
 如果呼叫的執行緒不擁有相關聯 `mutex`，此方法會擲回錯誤碼為 `operation_not_permitted` 的 [system_error](../standard-library/system-error-class.md)。
 
-否則，這個方法會呼叫`unlock`上相關聯`mutex`並將內部執行緒擁有權旗標設定為**false**。
+否則, 這個方法會`unlock`在相關聯`mutex`的上呼叫, 並將內部執行緒擁有權旗標設定為**false**。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

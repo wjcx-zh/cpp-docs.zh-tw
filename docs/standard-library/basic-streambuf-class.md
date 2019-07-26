@@ -94,12 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-ms.openlocfilehash: 581652ea39d0729079666dc675b7214b4b3a4da3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e51831dde9461a3d52cdaaf37d1f6c87966caeb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414174"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453362"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf 類別
 
@@ -114,15 +114,15 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 [char_type](#char_type)。
 
-*Tr*<br/>
+*Tr*\
 字元 [traits_type](#traits_type)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。 類別的物件`basic_streambuf`有助於控制資料流類型的項目*Tr*，也稱為[char_type](#char_type)，其字元特性由類別[char_traits](../standard-library/char-traits-struct.md)也稱為[traits_type](#traits_type)。
+此範本類別描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。 類別`basic_streambuf`的物件有助於控制具有類型*Tr*元素的資料流程 (也稱為[char_type](#char_type)), 其字元特性是由類別[char_traits](../standard-library/char-traits-struct.md)(也稱為[traits_type](#traits_type)) 所決定。
 
 每個資料流緩衝區在概念上會控制兩個獨立的資料流：一個用於擷取 (輸入)，一個用於插入 (輸出)。 不過，特定的表示法可能使這些資料流之一或兩者無法存取。 它通常會維護兩個資料流之間的某種關聯性。 例如，您插入 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> 物件輸出資料流的內容，即是您稍後從其輸入資料流擷取的內容。 當您定位 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 物件的一個資料流時，您會串聯地定位其他資料流。
 
@@ -160,7 +160,7 @@ class basic_streambuf;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[basic_streambuf](#basic_streambuf)|建構類型 `basic_streambuf` 的物件。|
 
@@ -226,7 +226,7 @@ class basic_streambuf;
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<streambuf>
+**標頭：** \<streambuf>
 
 **命名空間：** std
 
@@ -242,14 +242,14 @@ basic_streambuf(const basic_streambuf& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 `basic_streambuf` 物件的左值參考，用來設定這個 `basic_streambuf` 物件的值。
 
 ### <a name="remarks"></a>備註
 
 第一個受保護的建構函式會在控制輸入緩衝區和輸出緩衝區的所有指標中儲存一個 null 指標。 它也會在地區設定物件中儲存 `locale::classic`。 如需詳細資訊，請參閱 [locale::classic](../standard-library/locale-class.md#classic)。
 
-第二個受保護的建構函式複製指標和地區設定，從*右*。
+第二個受保護的函式會從*右方*複製指標和地區設定。
 
 ## <a name="char_type"></a>  basic_streambuf::char_type
 
@@ -297,7 +297,7 @@ char_type *epptr() const;
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-受保護的函式，將它新增*計數*到輸入緩衝區的下一個指標。
+受保護的函式, 會將*計數*加入至輸入緩衝區的下一個指標。
 
 ```cpp
 void gbump(int count);
@@ -305,7 +305,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 用來將指標向前移的數量。
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
@@ -364,7 +364,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>參數
 
-*_Loc*<br/>
+*_Loc*\
 地區設定的參考。
 
 ### <a name="remarks"></a>備註
@@ -385,7 +385,7 @@ streamsize in_avail();
 
 ### <a name="remarks"></a>備註
 
-如果[讀取位置](../standard-library/basic-streambuf-class.md)可供使用，此成員函式會傳回[egptr](#egptr) - [gptr](#gptr)。 否則會傳回 [showmanyc](#showmanyc)。
+如果有[讀取位置](../standard-library/basic-streambuf-class.md)可供使用, 此成員函式會傳回[egptr](#egptr)  -  [gptr](#gptr)。 否則會傳回 [showmanyc](#showmanyc)。
 
 ### <a name="example"></a>範例
 
@@ -431,12 +431,12 @@ basic_streambuf& operator=(const basic_streambuf& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 用來指派值給此物件的 `basic_streambuf` 左值參考物件。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員運算子會從複製*右*控制輸入的緩衝區和輸出緩衝區的指標。 它也會在 `locale object` 中儲存 `right.`[getloc()](#getloc)。 它會傳回 `*this`。
+受保護的成員運算子會從控制輸入緩衝區和輸出緩衝區的指標*向右*複製。 它也會在 `locale object` 中儲存 `right.`[getloc()](#getloc)。 它會傳回 `*this`。
 
 ## <a name="overflow"></a>  basic_streambuf::overflow
 
@@ -448,16 +448,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
-要插入緩衝區的字元，或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*\
+要插入緩衝區的字元，或 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則傳回 **traits_type::eof** 或擲回例外狀況。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。 預設行為是傳回 **traits_type::eof**。
+如果函式不成功，則傳回 **traits_type::eof** 或擲回例外狀況。 否則會傳回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。 預設行為是傳回 **traits_type::eof**。
 
 ### <a name="remarks"></a>備註
 
-如果 *\_Meta*不會比較等於**traits_type:: eof**，受保護虛擬成員函式會致力於將元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_中繼*) 插入輸出資料流。 它可以透過下列各種方式來執行：
+*如果\_Meta*與**traits_type:: eof**比較的結果不相等, 受保護的虛擬成員函式會致力於將元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 插入輸出中資料流程. 它可以透過下列各種方式來執行：
 
 - 如果有`write position`可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -483,8 +483,8 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
-要插入緩衝區的字元，或 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。
+*_Meta*\
+要插入緩衝區的字元，或 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>備註
 
-如果 *\_Meta*比較結果相等**traits_type:: eof**，要推回的元素實際上是一個已在資料流中目前的項目之前。 否則，該項目會取代**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*)。 函式可透過下列各種方式來放回項目：
+*如果\_Meta*與**traits_type:: eof**比較, 則要推回的元素實際上是已在資料流程中目前元素之前的專案。 否則, 該元素會由**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 取代。 函式可透過下列各種方式來放回項目：
 
 - 如果有放回位置可供使用，它可以將元素儲存在放回位置，並遞減輸入緩衝區的下一個指標。
 
@@ -514,7 +514,7 @@ char_type *pbase() const;
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-受保護的函式，將它新增*計數*至輸出緩衝區的下一個指標。
+受保護的函式, 會將*計數*加入至輸出緩衝區的下一個指標。
 
 ```cpp
 void pbump(int count);
@@ -522,7 +522,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 用來將寫入位置向前移動的字元數。
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
@@ -555,7 +555,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>參數
 
-*_Loc*<br/>
+*_Loc*\
 地區設定的參考。
 
 ### <a name="return-value"></a>傳回值
@@ -582,13 +582,13 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
-要搜尋的相對位置 *_Way*。
+*_Off*\
+要搜尋的相對於 *_Way*的位置。
 
-*_Way*<br/>
+*_Way*\
 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -597,7 +597,7 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="remarks"></a>備註
 
-移動指標相對於 *_Way*。
+將指標移到 *_Way*的相對位置。
 
 ## <a name="pubseekpos"></a>  basic_streambuf::pubseekpos
 
@@ -609,10 +609,10 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>參數
 
-*_Sp*<br/>
+*_Sp*\
 要搜尋的位置。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -635,10 +635,10 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>參數
 
-*_Buffer*<br/>
+*_Buffer*\
 此具現化的 `char_type` 指標。
 
-*count*<br/>
+*計數*\
 緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -655,7 +655,7 @@ int pubsync();
 
 ### <a name="return-value"></a>傳回值
 
-傳回[同步](#sync)或-1 表示失敗。
+傳回[同步](#sync), 如果失敗, 則傳回-1。
 
 ## <a name="sbumpc"></a>  basic_streambuf::sbumpc
 
@@ -671,7 +671,7 @@ int_type sbumpc();
 
 ### <a name="remarks"></a>備註
 
-如果有讀取位置可供使用，此成員函式會傳回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr))，並遞增輸入緩衝區的下一個指標。 否則會傳回 [uflow](#uflow)。
+如果有讀取位置可供使用，此成員函式會傳回 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( <strong>\*</strong>[gptr](#gptr))，並遞增輸入緩衝區的下一個指標。 否則會傳回 [uflow](#uflow)。
 
 ### <a name="example"></a>範例
 
@@ -711,13 +711,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
-要搜尋的相對位置 *_Way*。
+*_Off*\
+要搜尋的相對於 *_Way*的位置。
 
-*_Way*<br/>
+*_Way*\
 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -748,10 +748,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>參數
 
-*_Sp*<br/>
+*_Sp*\
 要搜尋的位置。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -778,10 +778,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>參數
 
-*_Buffer*<br/>
+*_Buffer*\
 緩衝區的指標。
 
-*count*<br/>
+*計數*\
 緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -804,18 +804,18 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>參數
 
-*_Gbeg*<br/>
+*_Gbeg*\
 緩衝區開頭的指標。
 
-*_Gnext*<br/>
+*_Gnext*\
 緩衝區中間某個位置的指標。
 
-*_Gend*<br/>
+*_Gend*\
 緩衝區結尾的指標。
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-受保護的函數，可儲存 *_Pbeg*在開頭指標和 *_Pend*輸出緩衝區的結尾指標。
+受保護的函式, 會將 *_Pbeg*儲存在輸出緩衝區的結尾指標和 *_Pend*中。
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -823,10 +823,10 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>參數
 
-*_Pbeg*<br/>
+*_Pbeg*\
 緩衝區開頭的指標。
 
-*_Pend*<br/>
+*_Pend*\
 緩衝區結尾的指標。
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
@@ -843,7 +843,7 @@ int_type sgetc();
 
 ### <a name="remarks"></a>備註
 
-如果有讀取位置可供使用，此成員函式會傳回 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr))。 否則會傳回 [underflow](#underflow)。
+如果有讀取位置可供使用，此成員函式會傳回 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `*`[gptr](#gptr))。 否則會傳回 [underflow](#underflow)。
 
 ### <a name="example"></a>範例
 
@@ -867,7 +867,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-最多會擷取*計數*從輸入緩衝區的字元，並將它們儲存在提供的緩衝區*ptr*。
+解壓縮以*計算*輸入緩衝區中的字元, 並將它們儲存在所提供的緩衝區*ptr*中。
 
 此方法有賴於呼叫者檢查傳遞的值是否正確，因此可能不安全。
 
@@ -879,10 +879,10 @@ streamsize sgetn(
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*指標*\
 要包含所擷取字元的緩衝區。
 
-*count*<br/>
+*計數*\
 要讀取的元素數目。
 
 ### <a name="return-value"></a>傳回值
@@ -946,7 +946,7 @@ int_type snextc();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [sbumpc](#sbumpc)；如果該函式傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，則傳回 **traits_type::eof**。 否則會傳回 [sgetc](#sgetc)。
+此成員函式會呼叫 [sbumpc](#sbumpc)；如果該函式傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)，則傳回 **traits_type::eof**。 否則會傳回 [sgetc](#sgetc)。
 
 ### <a name="example"></a>範例
 
@@ -982,7 +982,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 字元。
 
 ### <a name="return-value"></a>傳回值
@@ -991,7 +991,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>備註
 
-如果有 putback 位置可供使用並 *_Ch*字元儲存在該位置中，成員函式會遞減輸入的緩衝區和傳回的下一個指標比較結果相等**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否則會傳回 [pbackfail](#pbackfail)( `_Ch`)。
+如果 putback 位置可供使用, 且 *_Ch*比較的結果等於儲存在該位置的字元, 則成員函式會遞減輸入緩衝區的下一個指標, 並傳回**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否則會傳回 [pbackfail](#pbackfail)( `_Ch`)。
 
 ### <a name="example"></a>範例
 
@@ -1030,7 +1030,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1039,7 +1039,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>備註
 
-如果`write position`可供使用，此成員函式會 *_Ch*在寫入位置，遞增輸出緩衝區的下一個指標，並傳回**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`). 否則會傳回 [overflow](#overflow)( `_Ch`)。
+`_Ch`如果可以使用, 成員函式 會將_Ch儲存在寫入位置,並遞增輸出緩衝區的下一個指標,並傳回traits_type::to_int_type(`write position` )。  [](../standard-library/char-traits-struct.md#to_int_type) 否則會傳回 [overflow](#overflow)( `_Ch`)。
 
 ### <a name="example"></a>範例
 
@@ -1073,10 +1073,10 @@ streamsize sputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*指標*\
 字元字串。
 
-*count*<br/>
+*計數*\
 字元計數。
 
 ### <a name="return-value"></a>傳回值
@@ -1206,7 +1206,7 @@ void swap(basic_streambuf& right);
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式交換*右*控制的所有指標`input buffer`而`output buffer`。 它也會將 `right.`[getloc()](#getloc) 與 `locale` 物件交換。
+受保護的成員函式會與控制`input buffer`和`output buffer`的所有指標直接交換。 它也會將 `right.`[getloc()](#getloc) 與 `locale` 物件交換。
 
 ## <a name="sync"></a>  basic_streambuf::sync
 
@@ -1246,7 +1246,7 @@ virtual int_type uflow();
 
 ### <a name="remarks"></a>備註
 
-此受保護的虛擬成員函式會嘗試從輸入資料流擷取目前的元素 **ch**，然後從目前的資料流位置前移，並傳回此元素作為 **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**)。 它可以透過下列各種方式來執行：
+此受保護的虛擬成員函式會嘗試從輸入資料流擷取目前的元素 **ch**，然後從目前的資料流位置前移，並傳回此元素作為 **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **ch**)。 它可以透過下列各種方式來執行：
 
 - 如果有讀取位置可供使用，它會採用 **ch** 作為儲存在讀取位置中的元素，並前進到輸入緩衝區的下一個指標。
 
@@ -1254,7 +1254,7 @@ virtual int_type uflow();
 
 - 針對具有通用輸入和輸出資料流的資料流緩衝區，藉由將輸出緩衝區的開頭指標和下一個指標之間的部分或所有元素寫出至特定外部目的地，即可提供讀取位置。 或者，它可以為輸入緩衝區配置新的或額外的儲存體。 此函式接著會從特定外部來源讀入一或多個元素。
 
-如果函式不成功，則傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof) 或擲回例外狀況。 否則，它會傳回輸入資料流中目前的元素 `ch` (已如上所述進行轉換)，並前進到輸入緩衝區的下一個指標。 預設行為是呼叫 [underflow](#underflow)；如果該函式傳回 **traits_type::eof**，則傳回 **traits_type::eof**。 否則，此函式會傳回輸入資料流中目前的元素 **ch** (已如上所述進行轉換)，並前進到輸入緩衝區的下一個指標。
+如果函式不成功，則傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof) 或擲回例外狀況。 否則，它會傳回輸入資料流中目前的元素 `ch` (已如上所述進行轉換)，並前進到輸入緩衝區的下一個指標。 預設行為是呼叫 [underflow](#underflow)；如果該函式傳回 **traits_type::eof**，則傳回 **traits_type::eof**。 否則，此函式會傳回輸入資料流中目前的元素 **ch** (已如上所述進行轉換)，並前進到輸入緩衝區的下一個指標。
 
 ## <a name="underflow"></a>  basic_streambuf::underflow
 
@@ -1300,10 +1300,10 @@ virtual streamsize xsgetn(
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*指標*\
 要包含所擷取字元的緩衝區。
 
-*count*<br/>
+*計數*\
 要擷取的元素數目。
 
 ### <a name="return-value"></a>傳回值
@@ -1312,7 +1312,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式最多會擷取*計數*項目，從輸入資料流中，像重複呼叫[sbumpc](#sbumpc)，並將它們儲存在開頭的陣列中*ptr*. 它會傳回實際擷取的元素數目。
+受保護的虛擬成員函式會從輸入資料流程中解壓縮專案, 就像是重複呼叫[sbumpc](#sbumpc), 然後將它們儲存在陣列中 (從*ptr*開始*計算*)。 它會傳回實際擷取的元素數目。
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1324,10 +1324,10 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="parameters"></a>參數
 
-*ptr*<br/>
+*指標*\
 要插入的元素指標。
 
-*count*<br/>
+*計數*\
 要插入的元素數目。
 
 ### <a name="return-value"></a>傳回值
@@ -1336,10 +1336,10 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會插入最多*計數*元素插入輸出串流，一樣重複呼叫[sputc](#sputc)，從陣列開頭*ptr*。 將插入的字元輸出資料流一次停止所有*計數*已寫入的字元，或如果呼叫`sputc( count)`會傳回`traits::eof()`。 它會傳回實際插入的元素數目。
+受保護的虛擬成員函式會在輸出資料流程中插入多個專案, 如同從*ptr*開始的陣列中重複呼叫[sputc](#sputc)。 在寫入所有*計數*字元之後, 或呼叫`sputc( count)`會`traits::eof()`傳回時, 將字元插入輸出資料流程中就會停止。 它會傳回實際插入的元素數目。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

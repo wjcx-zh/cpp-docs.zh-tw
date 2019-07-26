@@ -34,16 +34,16 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: 1a0c8a04dda6c396b4f56d0939838fb6cb8e7455
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 09c30eb58655113ef3daa8338829ad43b37bc415
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245930"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456413"
 ---
 # <a name="allocator-class"></a>allocator 類別
 
-此範本類別描述物件管理之物件型別陣列的儲存體配置和釋放`Type`。 類別的物件`allocator`是在數個容器範本類別的建構函式中指定的預設配置器物件C++標準程式庫。
+此範本類別描述的物件會管理類型`Type`之物件陣列的儲存空間配置和釋放。 類別`allocator`的物件是C++標準程式庫中數個容器範本類別的函式中所指定的預設配置器物件。
 
 ## <a name="syntax"></a>語法
 
@@ -54,30 +54,30 @@ class allocator
 
 ### <a name="parameters"></a>參數
 
-*型別*<br/>
+*型*\
 正在配置或取消配置儲存體的物件類型。
 
 ## <a name="remarks"></a>備註
 
-所有C++標準程式庫容器都具有範本參數，預設值為`allocator`。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
+所有C++標準程式庫容器都有一個預設為`allocator`的範本參數。 建構包含自訂配置器的容器可控制該容器之項目的配置與釋放。
 
 例如，配置器物件可在私密堆積或共用記憶體中配置儲存體，或是可針對小型或大型物件最佳化。 它也能指定透過其提供的類型定義，透過管理共用記憶體的特殊存取子物件來存取項目，或是執行自動化記憶體回收。 因此，使用配置器物件來配置儲存區的類別，應該使用這些類型來宣告指標和參考物件，如 C++ 標準程式庫中的容器所做的一般。
 
-<strong>(C + + 98/03 只)</strong>當您從 allocator 類別衍生時，您必須提供[重新繫結](#rebind)結構，其`_Other`typedef 會參考您最近衍生的類別。
+<strong>(僅限 c + + 98/03)</strong>當您從配置器類別衍生時, 您必須提供[](#rebind)重新系結結構`_Other` , 其 typedef 會參考您新衍生的類別。
 
 因此，配置器會定義下列類型：
 
-- [指標](#pointer)行為類似指標`Type`。
+- [指標](#pointer)的行為就像是`Type`的指標。
 
-- [const_pointer](#const_pointer)行為類似的 const 指標`Type`。
+- [const_pointer](#const_pointer)的行為就像是的`Type`const 指標。
 
-- [參考](#reference)行為類似的參考`Type`。
+- [參考](#reference)的行為就像是`Type`的參考。
 
-- [const_reference](#const_reference)行為類似的 const 參考`Type`。
+- [const_reference](#const_reference)的行為類似于的 const `Type`參考。
 
-這些`Type`指定指標和參考必須採取的配置元素的格式。 ( [allocator:: pointer](#pointer)不一定相同`Type*`所有配置器物件，即使它有類別明顯定義此`allocator`。)
+這些`Type`會指定指標和參考必須針對配置的元素採用的格式。 (配置器[::p ointer](#pointer)不一定與所有配置`Type*`器物件相同, 即使它具有類別`allocator`的明顯定義也一樣)。
 
-**C + + 11 和更新版本：** 若要啟用您的配置器中的移動作業，使用最小配置器介面與實作複製建構函式、 = = 和 ！ = 運算子、 配置及取消配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
+**C + + 11 和更新版本:** 若要在您的配置器中啟用移動作業, 請使用最小配置器介面, 並執行複製程式化、= = 和! = 運算子、配置和解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
 
 ## <a name="members"></a>成員
 
@@ -117,7 +117,7 @@ class allocator
 |-|-|
 |[operator=](#op_eq)|將一個 `allocator` 物件指派給另一個 `allocator` 物件。|
 
-### <a name="address"></a> 地址
+### <a name="address"></a>應對
 
 尋找指定值所屬物件的位址。
 
@@ -128,7 +128,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="parameters"></a>參數
 
-*val*\
+*初始值*\
 搜尋其位址之物件的 const 或 nonconst 值。
 
 #### <a name="return-value"></a>傳回值
@@ -137,7 +137,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="remarks"></a>備註
 
-成員函式傳回的位址*val*中指標必須採取的表單配置項目。
+成員函式會傳回*val*的位址, 格式為指標必須針對配置的元素採取的方式。
 
 #### <a name="example"></a>範例
 
@@ -183,7 +183,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 8.
 ```
 
-### <a name="allocate"></a> 配置
+### <a name="allocate"></a>定位
 
 配置夠大的記憶體區塊，至少儲存某些指定的項目數。
 
@@ -205,7 +205,7 @@ const 指標，可找出要求之前所配置物件的位址，來協助配置�
 
 #### <a name="remarks"></a>備註
 
-此成員函式會配置儲存體陣列的類型之計算元素`Type`，方法是呼叫新的運算子 (*計數*)。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
+成員函式會藉由呼叫 operator new (*count*) 來`Type`配置類型的 count 元素陣列的儲存區。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
 
 #### <a name="example"></a>範例
 
@@ -243,7 +243,7 @@ int main( )
 0 1 2 3 4 5 6 7 8 9
 ```
 
-### <a name="allocator"></a> 配置器
+### <a name="allocator"></a>配置器
 
 建構函式用來建立配置器物件。
 
@@ -256,7 +256,7 @@ template <class Other>
 
 #### <a name="parameters"></a>參數
 
-*權限*\
+*再*\
 要複製的配置器物件。
 
 #### <a name="remarks"></a>備註
@@ -326,7 +326,7 @@ The allocator objects cv1Alloc & v1Alloc are equal.
 The allocator objects cAlloc & Alloc are equal.
 ```
 
-### <a name="const_pointer"></a> const_pointer
+### <a name="const_pointer"></a>const_pointer
 
 一種類型，可提供配置器管理之物件類型的常數指標。
 
@@ -336,7 +336,7 @@ typedef const value_type *const_pointer;
 
 #### <a name="remarks"></a>備註
 
-指標類型所描述的物件`ptr`，可以指定，透過運算式`*ptr`，範本類別配置器物件可配置的任何 const 物件。
+指標類型所描述的物件`ptr`可透過運算式`*ptr`來指定範本類別配置器物件可配置的任何 const 物件。
 
 #### <a name="example"></a>範例
 
@@ -381,7 +381,7 @@ The original vector v1 is:
 The integer's address found has a value of: 10.
 ```
 
-### <a name="const_reference"></a> const_reference
+### <a name="const_reference"></a>const_reference
 
 一種類型，可提供配置器管理之物件類型的常數參考。
 
@@ -447,7 +447,7 @@ The value of the element referred to by vcref,
 after nofication through its nonconst iterator, is: 175.
 ```
 
-### <a name="construct"></a> 建構
+### <a name="construct"></a>建構
 
 在指定值初始化的指定位址上，建構特定類型的物件。
 
@@ -460,15 +460,15 @@ template <class _Other>
 
 #### <a name="parameters"></a>參數
 
-*ptr*\
+*指標*\
 要建構物件之位置的指標。
 
-*val*\
+*初始值*\
 用來初始化所建構物件的值。
 
 #### <a name="remarks"></a>備註
 
-第一個成員函式相當於**新**((`void` \*) `ptr`)**型別**(`val`)。
+第一個成員函式相當於**new** ((`void` \*) `ptr`)**型**別`val`()。
 
 #### <a name="example"></a>範例
 
@@ -519,7 +519,7 @@ The modified vector v1 is:
 ( 3 7 9 12 15 18 21 ).
 ```
 
-### <a name="deallocate"></a> 解除配置
+### <a name="deallocate"></a>解除配置
 
 從指定位置起算的儲存體中，釋放指定數目的物件。
 
@@ -529,7 +529,7 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="parameters"></a>參數
 
-*ptr*\
+*指標*\
 要從儲存體解除配置之第一個物件的指標。
 
 *計數*\
@@ -537,13 +537,13 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="remarks"></a>備註
 
-此成員函式釋放之計算物件的類型陣列的儲存體`Type`開始*ptr*，藉由呼叫`operator delete(ptr)`。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件 **\*這** ，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
+此成員函式會呼叫`Type` `operator delete(ptr)`, 以釋出類型的計數物件之陣列的儲存空間 (以*ptr*開頭)。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件 **\*這** ，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
 
 #### <a name="example"></a>範例
 
 如需使用成員函式的範例，請參閱 [allocator::allocate](#allocate)。
 
-### <a name="destroy"></a> 損毀
+### <a name="destroy"></a>予以
 
 呼叫物件解構函式，而不取消配置儲存物件的記憶體。
 
@@ -553,12 +553,12 @@ void destroy(pointer ptr);
 
 #### <a name="parameters"></a>參數
 
-*ptr*\
+*指標*\
 指定要終結之物件位址的指標。
 
 #### <a name="remarks"></a>備註
 
-此成員函式會終結指定的物件*ptr*，藉由呼叫解構函式`ptr->`**類型**:: **~ 類型**。
+成員函式會藉由呼叫「 析構函數`ptr->`**類型**:: **~ 類型**」, 終結由 ptr 指定的物件。
 
 #### <a name="example"></a>範例
 
@@ -609,7 +609,7 @@ The modified vector v1 is:
 ( 2 4 6 8 10 -99 14 ).
 ```
 
-### <a name="difference_type"></a> difference_type
+### <a name="difference_type"></a>difference_type
 
 帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。
 
@@ -670,7 +670,7 @@ Pointer v1PtrB addresses 12.
 The difference between the integer's addresses is: 8.
 ```
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
 傳回在可用記憶體用完之前，無法由類別配置器的物件配置之類型 `Type` 的元素數。
 
@@ -739,7 +739,7 @@ int main( )
 }
 ```
 
-### <a name="op_eq"></a> 運算子 =
+### <a name="op_eq"></a>operator =
 
 將一個配置器物件指派給另一個配置器物件。
 
@@ -750,7 +750,7 @@ template <class Other>
 
 #### <a name="parameters"></a>參數
 
-*權限*\
+*再*\
 要指派給另一個這類物件的配置器物件。
 
 #### <a name="return-value"></a>傳回值
@@ -802,7 +802,7 @@ int main( )
 }
 ```
 
-### <a name="pointer"></a> 指標
+### <a name="pointer"></a>滑鼠
 
 一種類型，可提供配置器管理之物件類型的指標。
 
@@ -812,7 +812,7 @@ typedef value_type *pointer;
 
 #### <a name="remarks"></a>備註
 
-指標類型所描述的物件`ptr`，可以指定，透過運算式 **\*ptr**，範本類別配置器物件可配置的任何物件。
+指標類型所描述的物件`ptr`可以透過運算式 **\*ptr**來指定範本類別配置器物件可配置的任何物件。
 
 #### <a name="example"></a>範例
 
@@ -857,7 +857,7 @@ The original vector v1 is:
 The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```
 
-### <a name="rebind"></a> 重新繫結
+### <a name="rebind"></a>重新系結
 
 一種結構，可讓某個類型的物件配置器，為另一種類型的物件配置儲存體。
 
@@ -867,7 +867,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 #### <a name="parameters"></a>參數
 
-*其他*\
+*另一方面*\
 正在配置儲存空間的元素類型。
 
 #### <a name="remarks"></a>備註
@@ -876,7 +876,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 此成員範本類別會定義 other 類型。 其唯一目的是提供類型名稱 **allocator**\<_ **Other**>，但前提是類型名稱 **allocator**\< **Type**>。
 
-例如，指定配置器物件`al`型別的`A`，您可以配置類型的物件`_Other`使用運算式：
+例如, 假設有一個類型`al` `A`的配置器物件, 您可以使用運算式來配置`_Other`類型的物件:
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)
@@ -913,7 +913,7 @@ int main( )
 }
 ```
 
-### <a name="reference"></a> 參考
+### <a name="reference"></a>證明
 
 一種類型，可提供配置器管理之物件類型的參考。
 
@@ -973,7 +973,7 @@ the first element in the vector.
 The element referred to by vref after being modified is: 150.
 ```
 
-### <a name="size_type"></a> size_type
+### <a name="size_type"></a>size_type
 
 不帶正負號的整數類型，可以代表範本類別配置器物件可配置之任何序列的長度。
 
@@ -1079,16 +1079,16 @@ The modified vector v is:
 ( 150 200 300 400 500 600 700 ).
 ```
 
-## <a name="helpers"></a>協助程式
+## <a name="helpers"></a>助手
 
-### <a name="allocator_arg_t"></a> allocator_arg_t
+### <a name="allocator_arg_t"></a>allocator_arg_t
 
 ```cpp
 struct allocator_arg_t { explicit allocator_arg_t() = default; };
 inline constexpr allocator_arg_t allocator_arg{};
 ```
 
-### <a name="uses_allocator"></a> uses_allocator
+### <a name="uses_allocator"></a>uses_allocator
 
 ```cpp
 template <class T, class Alloc> struct uses_allocator;

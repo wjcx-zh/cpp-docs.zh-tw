@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370823"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453441"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>其他單一引數輸出資料流操作工具
 
-下列範例會使用類別`money`，即**長**型別。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。
+下列範例會使用類別`money`, 這是一種**很長**的類型。 `setpic` 操作工具會附加格式「圖片」字串到類別，可由類別 `money` 的多載資料流插入運算子使用。 圖片字串會當作靜態變數儲存於 `money` 類別，而不是資料流類別的資料成員，因此您不需要衍生新的輸出資料流類別。
 
 ## <a name="example"></a>範例
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>另請參閱
 
-[使用引數來建立自訂操作工具](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[使用引數來建立自訂操作工具](../standard-library/custom-manipulators-with-arguments.md)

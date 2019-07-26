@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404945"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451012"
 ---
 # <a name="integersequence-class"></a>integer_sequence 類別
 
@@ -34,10 +34,10 @@ struct integer_sequence
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 值類型，必須是整數類型：bool、char、char16_t、char32_t、wchar_t 或代正負號或不帶正負號的整數類型。
 
-*Vals*<br/>
+*Vals*\
 非類型參數封裝，表示整數類型 T 之值的序列。
 
 ## <a name="members"></a>成員
@@ -57,7 +57,7 @@ struct integer_sequence
 
 在 `a2t` 函式中，根據 `size_t` 整數類資料類型，`index_sequence` 是 `integer_sequence` 的別名。 `make_index_sequence` 是編譯時期的別名，會以呼叫端傳入之陣列相同的項目數，建立以零為起始的 `index_sequence`。 `a2t` 會將 `index_sequence` 以值傳遞至 `a2t_`，其中運算式 `a[I]...` 會解除封裝 `I`，然後項目會饋送至 `make_tuple`，它會使用它們做為個別引數。 例如，如果序列包含三個項目，則 `make_tuple` 稱為 make_tuple (a[0]、a[1]、a[2])。 當然，陣列項目本身可以是任何類型。
 
-套用函式會接受[std:: tuple](../standard-library/tuple-class.md)，並產生`integer_sequence`使用`tuple_size`協助程式類別。 請注意， [std:: decay_t](../standard-library/decay-class.md)需要因為[tuple_size](../standard-library/tuple-size-class-tuple.md)不適用於參考型別。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
+Apply 函數會接受[std:: 元組](../standard-library/tuple-class.md), 並使用`integer_sequence` `tuple_size` helper 類別來產生。 請注意, [std::d ecay_t](../standard-library/decay-class.md)是必要的, 因為[tuple_size](../standard-library/tuple-size-class-tuple.md)無法搭配參考型別使用。 `apply_` 函式會解除封裝 tuple 成員，並且將它們當作個別引數轉送至函式呼叫。 在此範例中，函式是會列印出值的簡單 Lambda 運算式。
 
 ```cpp
 #include <stddef.h>
@@ -119,10 +119,10 @@ int main()
 
 ## <a name="requirements"></a>需求
 
-標頭： \<type_traits\>
+標頭\<: type_traits\>
 
 命名空間：std
 
 ## <a name="see-also"></a>另請參閱
 
-[省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)<br/>
+[省略符號和 Variadic 範本](../cpp/ellipses-and-variadic-templates.md)

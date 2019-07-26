@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412250"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458995"
 ---
 # <a name="studenttdistribution-class"></a>student_t_distribution 類別
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數的值類型**雙**如果未提供，根據學生的分佈*t*-發佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**double**類型 (根據學生的*t*分佈散發)。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -159,7 +159,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -174,15 +174,15 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*n*\
 `n` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用於建構分佈的參數封裝。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < n`
+**前置條件：** `0.0 < n`
 
 第一個建構函式建構的物件，其預存的 `n` 值具有 *n* 值。
 
@@ -205,18 +205,18 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*n*<br/>
+*n*\
 `n` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < n`
+**前置條件：** `0.0 < n`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

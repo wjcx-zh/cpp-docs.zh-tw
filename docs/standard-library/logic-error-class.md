@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - logic_error class
 ms.assetid: b290d73d-94e1-4288-af86-2bb5d71f677a
-ms.openlocfilehash: 56470040365f1b1aa0e311f43937d7ec33f7f148
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b7c432a649b566b455109f6de1f7bcc0734ff9b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413121"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453794"
 ---
 # <a name="logicerror-class"></a>logic_error 類別
 
@@ -62,11 +62,11 @@ Type: class std::logic_error
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<stdexcept>
+**標頭：** \<stdexcept>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[exception 類別](../standard-library/exception-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[exception 類別](../standard-library/exception-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352108"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449692"
 ---
 # <a name="cachefreelist-class"></a>cache_freelist 類別
 
@@ -37,26 +37,26 @@ class cache_freelist
 
 ## <a name="remarks"></a>備註
 
-Cache_freelist 樣板類別有一份可用的記憶體區塊的大小*Sz*。 可用清單已滿時它會使用**運算子 delete**解除配置記憶體區塊。 當可用清單為空白時它會使用**new 運算子**配置新的記憶體區塊。 可用清單的大小上限取決於的類別中的 max 類別傳遞*Max*參數。
+Cache_freelist 範本類別會維護一份大小為*Sz*的記憶體區塊的免費清單。 當免費清單已滿時, 會使用**運算子 delete**來解除配置記憶體區塊。 當免費清單是空的時, 它會使用**operator new**來配置新的記憶體區塊。 可用清單的大小上限取決於*最大值*參數中傳遞的類別 max 類別。
 
-每個記憶體區塊會保留*Sz*個位元組的可用記憶體，以及資料的**new 運算子**並**運算子 delete**需要。
+每個記憶體區塊會保留可使用記憶體的*Sz*位元組, 以及**operator new**和**operator delete**所需的資料。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[cache_freelist](#cache_freelist)|建構類型 `cache_freelist` 的物件。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[allocate](#allocate)|配置記憶體區塊。|
 |[deallocate](#deallocate)|從指定位置起算的儲存體中，釋放指定數目的物件。|
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -103,10 +103,10 @@ void deallocate(void* ptr, std::size_t count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

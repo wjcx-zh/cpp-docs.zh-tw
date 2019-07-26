@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8715ae4816be9c8f1453b243d1c8d3574d8c97cf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371646"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457873"
 ---
 # <a name="basicostream-class"></a>basic_ostream 類別
 
-此範本類別描述的物件可控制插入的項目和編碼的物件類型的項目使用的資料流緩衝區`Elem`也稱為[char_type](../standard-library/basic-ios-class.md#char_type)，其字元特性由類別`Tr`也稱為[traits_type](../standard-library/basic-ios-class.md#traits_type)。
+此樣板類別所描述的物件可控制如何將元素和編碼物件插入至資料流程緩衝區, 其中包含`Elem`類型的元素 (也稱為[char_type](../standard-library/basic-ios-class.md#char_type)), 其字元特性是由`Tr`類別所決定, 也是稱為[traits_type](../standard-library/basic-ios-class.md#traits_type)。
 
 ## <a name="syntax"></a>語法
 
@@ -40,10 +40,10 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 `char_type`。
 
-*Tr*<br/>
+*Tr*\
 字元 `traits_type`。
 
 ## <a name="remarks"></a>備註
@@ -100,9 +100,9 @@ setstate(state);
 return (*this);
 ```
 
-這兩個群組的函式呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**) 如果在插入項目時遭遇失敗。
+如果在插入專案時遇到失敗, 這兩個函數群組都會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。
 
-basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../standard-library/basic-ios-class.md)**\<Elem**, **Tr>** 類別的虛擬公用基底物件。
+basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** 類別的虛擬公用基底物件。
 
 ## <a name="example"></a>範例
 
@@ -110,7 +110,7 @@ basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../sta
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[basic_ostream](#basic_ostream)|建構 `basic_ostream` 物件。|
 
@@ -135,7 +135,7 @@ basic_istream\< **Elem**, **Tr**> 類別的物件只會儲存 [basic_ios](../sta
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<ostream>
+**標頭︰** \<ostream>
 
 **命名空間：** std
 
@@ -153,13 +153,13 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*strbuf*<br/>
+*strbuf*\
 [basic_streambuf](../standard-library/basic-streambuf-class.md) 類型的物件。
 
-*_Isstd*<br/>
-**true**如果這是標準的資料流; 否則**false**。
+*_Isstd*\
+如果這是標準資料流程, 則為**true** ;否則**為 false**。
 
-*right*<br/>
+*再*\
 類型為 `basic_ostream` 之物件的右值參考。
 
 ### <a name="remarks"></a>備註
@@ -184,7 +184,7 @@ basic_ostream 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 不是 null 指標，函式會呼叫 **rdbuf->**[pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果傳回 -1，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。 它會傳回 **\*this**。
+如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 不是 null 指標，函式會呼叫 **rdbuf->** [pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果傳回 -1，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)(**badbit**)。 它會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -237,13 +237,13 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>參數
 
-*Pfn*<br/>
+*Pfn*\
 函式指標。
 
-*strbuf*<br/>
-`stream_buf` 物件的指標。
+*strbuf*\
+          `stream_buf` 物件的指標。
 
-*val*<br/>
+*初始值*\
 要寫入至資料流的元素。
 
 ### <a name="return-value"></a>傳回值
@@ -252,7 +252,7 @@ basic_ostream 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-\<Ostream > 標頭也會定義數個全域插入運算子。 如需詳細資訊，請參閱 <<c0> [ 運算子 <<](../standard-library/ostream-operators.md#op_lt_lt)。
+\<Ostream > 標頭也會定義數個全域插入運算子。 如需詳細資訊, 請參閱[operator < <](../standard-library/ostream-operators.md#op_lt_lt)。
 
 第一個成員函式可確保表單的運算式`ostr << endl`呼叫[endl](../standard-library/ostream-functions.md#endl) **(ostr)** ，然後傳回 **\*這** 。 第二個和第三個函式可確保其他操作工具 (例如 [hex](../standard-library/ios-functions.md#hex)) 具有類似的行為。 其餘函式都是格式化的輸出函式。
 
@@ -262,7 +262,7 @@ basic_ostream 物件的參考。
 basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-擷取中的項目*strbuf*，如果*strbuf*不是 null 指標，並將其插入。 擷取會在檔案結尾處停止，或在擷取擲回例外狀況時停止 (此例外狀況會再次擲回)。 如果插入失敗，它也會停止，而不會擷取有問題的元素。 如果函式未插入任何元素，或是擷取擲回例外狀況，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情況下，此函式都會傳回 **\*this**。
+如果*strbuf*不是 null 指標, 則會從*strbuf*中解壓縮專案, 並將其插入。 擷取會在檔案結尾處停止，或在擷取擲回例外狀況時停止 (此例外狀況會再次擲回)。 如果插入失敗，它也會停止，而不會擷取有問題的元素。 如果函式未插入任何元素，或是擷取擲回例外狀況，函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 在任何情況下，此函式都會傳回 **\*this**。
 
 函式
 
@@ -270,7 +270,7 @@ basic_ostream<Elem, Tr>& operator<<(basic_streambuf<Elem, Tr>* strbuf);
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-將轉換`_Val`為布林值欄位，並將它插入藉由呼叫[use_facet](../standard-library/basic-filebuf-class.md#open)**< num_put\<Elem，Outit> >**`(`[getloc](../standard-library/ios-base-class.md#getloc))。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**)。 在這裡，`OutIt`指[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)**\<Elem，Tr> >**。 此函式會傳回 **\*this**。
+將`_Val`轉換成布林值欄位, 並藉由呼叫[use_facet](../standard-library/basic-filebuf-class.md#open) **<\<num_put Elem, OutIt >** `(` [getloc](../standard-library/ios-base-class.md#getloc)) 加以插入。 [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**)。 在這裡`OutIt` , 定義為[ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)  **\<Elem, Tr >** 。 此函式會傳回 **\*this**。
 
 函式
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-每個轉換*val*為數值欄位，並將其插入呼叫**use_facet < num_put\<Elem，Outit> >**(`getloc`)。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**)。 此處的 **OutIt** 會定義為 **ostreambuf_iterator\<Elem, Tr>**。 此函式會傳回 **\*this**。
+每個都會將*val*轉換為數值欄位, 並藉由呼叫**use_facet\<< num_put Elem, OutIt >** (`getloc`) 插入它。 **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**)。 此處的 **OutIt** 會定義為 **ostreambuf_iterator\<Elem, Tr>** 。 此函式會傳回 **\*this**。
 
 函式
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-每個轉換*val*為數值欄位，並將其插入呼叫**use_facet < num_put\<Elem，Outit> >**(`getloc`)**。 放**(**OutIt**(`rdbuf`)， **\*這**， `getloc`， **val**)。 此處的 **OutIt** 會定義為 **ostreambuf_iterator\<Elem, Tr>**。 此函式會傳回 **\*this**。
+每個都會將*val*轉換為數值欄位, 並藉由呼叫**use_facet\<< num_put Elem, OutIt >** (`getloc`) 來插入它`rdbuf` **。 put**(OutIt (),  **\*this**, `getloc`, **val**)。 此處的 **OutIt** 會定義為 **ostreambuf_iterator\<Elem, Tr>** 。 此函式會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -358,7 +358,7 @@ basic_ostream& operator=(basic_ostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 `basic_ostream` 物件的 `rvalue` 參考。
 
 ### <a name="remarks"></a>備註
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 字元。
 
 ### <a name="return-value"></a>傳回值
@@ -384,7 +384,7 @@ basic_ostream 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-未格式化的輸出函式會插入之項目的 *_Ch*。 它會傳回 **\*this**。
+未格式化的輸出函式會插入元素 *_Ch*。 它會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>參數
 
-*_Pos*<br/>
+*_Pos*\
 資料流中的位置。
 
-*_Off*<br/>
-相對位移 *_Way*。
+*_Off*\
+相對於 *_Way*的位移。
 
-*_Way*<br/>
+*_Way*\
 其中一個 [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir) 列舉。
 
 ### <a name="return-value"></a>傳回值
@@ -434,7 +434,7 @@ basic_ostream 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-如果[失敗](../standard-library/basic-ios-class.md#fail)是**false**，第一個成員函式呼叫**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->**[pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)(*_Pos*)，某些`pos_type`暫存物件`newpos`。 如果`fail`為 false，第二個函式會呼叫**newpos = rdbuf-> >** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(*_Off，_Way*)。 在任一情況下，如果 (`off_type`)**newpos ==** (`off_type`)(-1) (置放作業失敗)，則函式會呼叫 **istr.**[setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 兩個函式都會傳回 **\*this**。
+如果[fail](../standard-library/basic-ios-class.md#fail)為**false**, 則第一個成員函式會針對某些`pos_type`暫存`newpos`物件呼叫**newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*)。 如果`fail`為 false, 則第二個函式會呼叫**newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_Off, _Way*)。 在任一情況下，如果 (`off_type`)**newpos ==** (`off_type`)(-1) (置放作業失敗)，則函式會呼叫 **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**)。 兩個函式都會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -470,11 +470,11 @@ int main()
 
 此巢狀的類別會描述物件，該物件的宣告會將格式化輸出函式和未格式化輸出函式結構化。
 
-類別 sentry {public： 明確 sentry (basic_ostream\<Elem，Tr> > & _Ostr); 運算子 bool （) const; ~ sentry();};
+類別 sentry {public: explicit sentry (basic_ostream\<Elem, Tr > & _Ostr); operator bool () const; ~ sentry ();};
 
 ### <a name="remarks"></a>備註
 
-此巢狀的類別會描述物件，該物件的宣告會將格式化輸出函式和未格式化輸出函式結構化。 如果 **ostr.**[good](../standard-library/basic-ios-class.md#good) 為 **true** 且 **ostr.**[tie](../standard-library/basic-ios-class.md#tie) 不是 null 指標，建構函式會呼叫 **ostr.tie->**[flush](#flush)。 建構函式將儲存所傳回的值`ostr.good`在`status`。 稍後呼叫`operator bool`提供此預存的值。
+此巢狀的類別會描述物件，該物件的宣告會將格式化輸出函式和未格式化輸出函式結構化。 如果 **ostr.** [good](../standard-library/basic-ios-class.md#good) 為 **true** 且 **ostr.** [tie](../standard-library/basic-ios-class.md#tie) 不是 null 指標，建構函式會呼叫 **ostr.tie->** [flush](#flush)。 然後, 此函式會將所`ostr.good`傳回`status`的值儲存在中。 稍後的呼叫`operator bool`會傳遞此儲存值。
 
 如果 `uncaught_exception` 傳回 **false** 且 [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) 為非零值，解構函氏會呼叫 [flush](#flush)。
 
@@ -488,12 +488,12 @@ void swap(basic_ostream& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 對 `basic_ostream` 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-成員函式呼叫[basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)`的內容，此物件的內容交換*右*。
+此成員函式會呼叫[basic_ios:: swap](../standard-library/basic-ios-class.md#swap) `(right)`來交換這個物件的內容, 以取得*右邊*的內容。
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -509,7 +509,7 @@ pos_type tellp();
 
 ### <a name="remarks"></a>備註
 
-如果 [fail](../standard-library/basic-ios-class.md#fail) 為 **false**，成員函式會傳回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf)**->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否則會傳回 `pos_type`(-1)。
+如果 [fail](../standard-library/basic-ios-class.md#fail) 為 **false**，成員函式會傳回 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**)。 否則會傳回 `pos_type`(-1)。
 
 ### <a name="example"></a>範例
 
@@ -525,10 +525,10 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 要置入資料流中的字元計數。
 
-*str*<br/>
+*str*\
 要置入資料流中的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -537,7 +537,7 @@ basic_ostream 物件的參考。
 
 ### <a name="remarks"></a>備註
 
-[未格式化的輸出函式](../standard-library/basic-ostream-class.md)插入序列*計數*開頭的項目*str*。
+未[格式化的輸出](../standard-library/basic-ostream-class.md)函式會插入從*str*開始的*計數*元素序列。
 
 ### <a name="example"></a>範例
 
@@ -545,6 +545,6 @@ basic_ostream 物件的參考。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

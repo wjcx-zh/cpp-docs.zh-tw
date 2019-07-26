@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240701"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457028"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 中，發行\<filesystem > 標頭不是尚未C++標準。 C++在 Visual Studio 2017 (MSVC v141) 實作草稿最終版標準中，找到[ISO/IEC JTC 1/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)。
+> 從 Visual Studio 2017 發行以來, \<filesystem > 標頭尚未是C++標準。 C++在 Visual Studio 2017 (MSVC v141) 中, 會執行最終的草稿標準, 其可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到。
 
-此標頭支援的兩個廣泛的類別，主機作業系統的其中一個檔案系統：Microsoft Windows 和 Posix。
+此標頭支援兩種廣泛的主機作業系統類別之一的檔案系統:Microsoft Windows 和 Posix。
 
 雖然大部分功能對這兩個作業系統而言是共通的，不過本文還是指出其中的差異。 例如：
 
@@ -129,4 +129,4 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

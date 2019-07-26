@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380113"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449648"
 ---
 # <a name="cachesuballoc-class"></a>cache_suballoc 類別
 
@@ -36,9 +36,9 @@ class cache_suballoc
 
 ## <a name="remarks"></a>備註
 
-Cache_suballoc 樣板類別會儲存已解除配置的記憶體區塊長度的可用清單中使用`freelist<sizeof(Type), max_unbounded>`，和 suballocates 之較大的區塊，以配置的記憶體區塊**new 運算子**時可用的清單空的。
+Cache_suballoc 範本類別會將解除配置的記憶體區塊儲存在具有未受限制長度`freelist<sizeof(Type), max_unbounded>`的可用清單中, 並使用, 並從使用**operator new**所配置的較大區塊 suballocates 記憶體區塊 (當可用清單是空的時)。
 
-每個區塊會保留`Sz * Nelts`個位元組的可用記憶體，以及資料的**new 運算子**並**運算子 delete**需要。 永遠不會釋放已配置的區塊。
+每個區塊`Sz * Nelts`都保留可用記憶體的位元組, 以及**operator new**和**operator delete**所需的資料。 永遠不會釋放已配置的區塊。
 
 ### <a name="constructors"></a>建構函式
 
@@ -55,7 +55,7 @@ Cache_suballoc 樣板類別會儲存已解除配置的記憶體區塊長度的�
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -71,7 +71,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -99,13 +99,13 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

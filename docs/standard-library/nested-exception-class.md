@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - bad_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: a568a8d9a3817883656406d63c3dd948539bb385
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268520"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460183"
 ---
 # <a name="nestedexception-class"></a>nested_exception 類別
 
-此類別描述使用具有多重繼承的例外狀況。 它會擷取目前處理的例外狀況，並將其儲存供稍後使用。
+類別描述搭配多重繼承使用的例外狀況。 它會捕獲目前處理的例外狀況, 並加以儲存以供稍後使用。
 
 ## <a name="syntax"></a>語法
 
@@ -40,16 +40,16 @@ class nested_exception {
 
 |||
 |-|-|
-|[rethrow_nested](#rethrow_nested)|預存的例外狀況會擲回。|
+|[rethrow_nested](#rethrow_nested)|擲回儲存的例外狀況。|
 |[nested_ptr](#nested_ptr)|傳回預存的例外狀況。|
 
-### <a name="op_as"></a> 運算子 =
+### <a name="op_as"></a>operator =
 
 ```cpp
 nested_exception& operator=(const nested_exception&) = default;
 ```
 
-### <a name="nested_ptr"></a> nested_ptr
+### <a name="nested_ptr"></a>nested_ptr
 
 ```cpp
 exception_ptr nested_ptr() const;
@@ -57,9 +57,9 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>傳回值
 
-擷取由這個預存的例外狀況`nested_exception`物件。
+這個`nested_exception`物件所捕捉到的儲存例外狀況。
 
-### <a name="rethrow_nested"></a> rethrow_nested
+### <a name="rethrow_nested"></a>rethrow_nested
 
 ```cpp
 [[noreturn]] void rethrow_nested() const;
@@ -67,7 +67,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="remarks"></a>備註
 
-如果`nested_ptr()`會傳回 null 指標，函式呼叫`std::terminate()`。 否則，會擷取預存的例外狀況擲回`*this`。
+如果`nested_ptr()`傳回 null 指標, 則函式會`std::terminate()`呼叫。 否則, 它會擲回所捕捉`*this`到的儲存例外狀況。
 
 ## <a name="requirements"></a>需求
 
@@ -77,5 +77,5 @@ exception_ptr nested_ptr() const;
 
 ## <a name="see-also"></a>另請參閱
 
-[exception 類別](../standard-library/exception-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[exception 類別](../standard-library/exception-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

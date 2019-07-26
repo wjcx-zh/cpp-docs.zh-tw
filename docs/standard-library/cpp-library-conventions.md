@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: f1790b75baea340d0b3ab1044290317055ac81d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210771"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450688"
 ---
 # <a name="c-library-conventions"></a>C++ 程式庫慣例
 
@@ -50,5 +50,5 @@ C++ 程式庫遵循的慣例大致與標準 C 程式庫相同，再加上幾個�
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

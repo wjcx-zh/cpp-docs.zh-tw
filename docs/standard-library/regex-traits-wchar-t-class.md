@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
-ms.openlocfilehash: cba5a7a036806f244f45a2d3b7a6317393f7a196
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a1f08509a20b5a0eabb26b715e22bf7c6de544c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369081"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451466"
 ---
 # <a name="regextraitsltwchartgt-class"></a>regex_traits&lt;wchar_t&gt; 類別
 
-特製化`regex_traits`for **wchar_t**。
+Wchar_t 的`regex_traits`特製化。
 
 ## <a name="syntax"></a>語法
 
@@ -26,22 +26,22 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>備註
 
-類別是範本類別明確特製化[regex_traits](../standard-library/regex-traits-class.md)類型的項目**wchar_t** （使其能夠運用操作此類型物件的程式庫函式）。
+類別是**wchar_t**類型專案的樣板類別[RegEx_traits](../standard-library/regex-traits-class.md)的明確特製化 (使其能夠利用操作此類型物件的程式庫函式)。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 類別](../standard-library/regex-constants-class.md)<br/>
-[regex_error 類別](../standard-library/regex-error-class.md)<br/>
-[\<regex> 函式](../standard-library/regex-functions.md)<br/>
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 運算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 類別](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函式](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[\<RegEx > 運算子](../standard-library/regex-operators.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

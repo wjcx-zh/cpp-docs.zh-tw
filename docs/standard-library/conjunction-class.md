@@ -1,18 +1,18 @@
 ---
-title: 搭配類別
+title: 結合類別
 ms.date: 11/04/2016
 f1_keywords:
 - type_traits/std::conjunction
 helpviewer_keywords:
 - conjunction
-ms.openlocfilehash: 28d22dcd4d3623bad2de44ab848ca578a8cd3464
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 32e80fd588c98aebbcf77ebdf267f3cac2adb569
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268840"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457305"
 ---
-# <a name="conjunction-class"></a>搭配類別
+# <a name="conjunction-class"></a>結合類別
 
 ## <a name="syntax"></a>語法
 
@@ -29,4 +29,4 @@ struct conjunction;
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412978"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460144"
 ---
 # <a name="maskarray-class"></a>mask_array 類別
 
@@ -21,11 +21,11 @@ ms.locfileid: "62412978"
 
 ## <a name="remarks"></a>備註
 
-此類別描述可儲存物件的參考`va`類別的[valarray](../standard-library/valarray-class.md)**\<型別 >**，以及物件`ba`類別的[valarray\<bool >](../standard-library/valarray-bool-class.md)，其中描述要從選取的元素序列`valarray<Type>`物件。
+類別描述的物件會儲存`va` [valarray](../standard-library/valarray-class.md)  **\<> 類型**之物件的參考, 以及[\<valarray bool >](../standard-library/valarray-bool-class.md)的物件`ba` , 其描述要從`valarray<Type>`物件選取的專案序列。
 
-您建構`mask_array<Type>`物件只能藉由撰寫運算式的形式[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)。 Mask_array 類別的成員函式行為接著便會像對應的函式簽章定義`valarray<Type>`，不過只有選取的元素序列會受到影響。
+您只能藉`mask_array<Type>`由撰寫格式為[va&#91;ba&#93;](../standard-library/valarray-class.md#op_at)的運算式來建立物件。 類別 mask_array 的成員函式的行為就像是針對定義的`valarray<Type>`對應函式簽章, 但只有所選項目的順序會受到影響。
 
-序列最多包含`ba.size`項目。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此，有多個序列中項目中的 true 項`ba`。 如果`I`中最低 true 項目的索引`ba`，然後**va**[ `I`] 是選取之序列中的零個項目。
+順序包含最多`ba.size`個元素。 只有在 *ba* [ **J**] 為 true 時才會包含項目 *J*。 因此, 序列中的元素數目會與中`ba`的真正元素相同。 如果`I`是中`ba`最低 true 專案的索引, 則**va**[ `I`] 是選取之序列中的元素零。
 
 ## <a name="example"></a>範例
 
@@ -70,10 +70,10 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<valarray>
+**標頭：** \<valarray>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

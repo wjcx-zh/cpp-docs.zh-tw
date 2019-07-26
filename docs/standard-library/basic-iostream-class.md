@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400639"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460091"
 ---
 # <a name="basiciostream-class"></a>basic_iostream 類別
 
@@ -39,7 +39,7 @@ public:
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[basic_iostream](#basic_iostream)|建立 `basic_iostream` 物件。|
 
@@ -57,7 +57,7 @@ public:
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<istream>
+**標頭︰** \<istream>
 
 **命名空間：** std
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*<br/>
+*strbuf*\
 現有的 `basic_streambuf` 物件。
 
-*right*<br/>
+*再*\
 現有的 `basic_iostream` 物件，用來建構新的 `basic_iostream`。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會藉由 `basic_istream(strbuf)` 和 `basic_ostream(strbuf)` 初始化基底物件。
 
-第二個建構函式呼叫來初始化基底物件`move(right)`。
+第二個函式會藉由呼叫`move(right)`來初始化基底物件。
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要指派之來源 `basic_iostream` 物件的 `rvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會呼叫`swap(right)`。
+成員運算子會呼叫`swap(right)`。
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要交換的 `basic_iostream` 物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式呼叫`swap(right)`。
+此成員函式`swap(right)`會呼叫。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

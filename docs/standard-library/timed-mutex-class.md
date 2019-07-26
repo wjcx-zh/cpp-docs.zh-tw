@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411951"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459916"
 ---
 # <a name="timedmutex-class"></a>timed_mutex 類別
 
@@ -46,7 +46,7 @@ class timed_mutex;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[lock](#lock)|封鎖呼叫的執行緒，直到執行緒取得 `mutex` 的擁有權。|
 |[try_lock](#try_lock)|嘗試在不造成封鎖的情況下，取得 `mutex` 的擁有權。|
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*<br/>
+*Rel_time*\
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -143,18 +143,18 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*<br/>
+*Abs_time*\
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`，否則**false**。
+如果方法成功取得的擁有權`mutex`, 則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
 如果呼叫的執行緒已經擁有 `mutex`，則行為是未定義的。
 
-## <a name="unlock"></a>  timed_mutex::unlock
+## <a name="unlock"></a>timed_mutex:: unlock
 
 釋放 `mutex` 的擁有權。
 
@@ -168,5 +168,5 @@ void unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

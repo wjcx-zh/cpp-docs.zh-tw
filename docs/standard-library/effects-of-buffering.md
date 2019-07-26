@@ -5,12 +5,12 @@ helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-ms.openlocfilehash: 23e241794455a92f9e3628a786d75a6d4c7b037e
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 1f28748f1e7a837ad87ef1cfcebc56d3410d0fd2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376326"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458901"
 ---
 # <a name="effects-of-buffering"></a>緩衝的效果
 
@@ -43,4 +43,4 @@ cout <<"Please wait..." <<flush;
 
 ## <a name="see-also"></a>另請參閱
 
-[輸出資料流](../standard-library/output-streams.md)<br/>
+[輸出資料流](../standard-library/output-streams.md)

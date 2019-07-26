@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370667"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450085"
 ---
 # <a name="packagedtask-class"></a>packaged_task 類別
 
@@ -42,7 +42,7 @@ class packaged_task;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[packaged_task](#packaged_task)|建構 `packaged_task` 物件。|
 |[packaged_task::~packaged_task 解構函式](#dtorpackaged_task_destructor)|終結 `packaged_task` 物件。|
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<未來 >
+**標頭:** \<未來 >
 
 **命名空間：** std
 
@@ -113,8 +113,8 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
-`packaged_task` 物件。
+*再*\
+          `packaged_task` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -122,7 +122,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>備註
 
-作業之後，*右*不再具有相關聯的非同步狀態。
+在作業之後, *Right*不再有相關聯的非同步狀態。
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果物件有相關聯的非同步狀態; 否則**false**。
+如果物件具有相關聯的非同步狀態, 則為**true** ;否則**為 false**。
 
 ## <a name="packaged_task"></a>  packaged_task::packaged_task 建構函式
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
-`packaged_task` 物件。
+*再*\
+          `packaged_task` 物件。
 
-*alloc*<br/>
+*配置*\
 記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
 
-*fn*<br/>
+*fn*\
 函式物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構沒有「相關聯的非同步狀態」的 `packaged_task` 物件。
 
-第二個建構函式建構`packaged_task`物件，並將轉移相關聯的非同步狀態，從*右*。 作業之後，*右*不再具有相關聯的非同步狀態。
+第二個函式`packaged_task`會建立物件, 並從*右邊*傳輸相關聯的非同步狀態。 在作業之後, *Right*不再有相關聯的非同步狀態。
 
-第三個建構函式建構`packaged_task`物件具有一份*fn*儲存在其相關聯的非同步狀態。
+第三個`packaged_task`函式會將具有*fn*複本的物件, 儲存在其相關聯的非同步狀態中。
 
-第四個建構函式建構`packaged_task`物件具有一份*fn*儲存在其相關聯的非同步狀態，並使用`alloc`進行記憶體配置。
+第四個函式`packaged_task`會建立具有一份*fn*的物件, 並以其相關聯的非同步`alloc`狀態儲存, 並使用進行記憶體配置。
 
 ## <a name="dtorpackaged_task_destructor"></a>  packaged_task::~packaged_task 解構函式
 
@@ -222,8 +222,8 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
-`packaged_task` 物件。
+*再*\
+          `packaged_task` 物件。
 
 ## <a name="valid"></a>  packaged_task::valid
 
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果物件有相關聯的非同步狀態; 否則**false**。
+如果物件具有相關聯的非同步狀態, 則為**true** ;否則**為 false**。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

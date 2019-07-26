@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5faf55eebecf473f45074f862ef64929df6f4374
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245774"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452977"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "68245774"
 
 具有更大的需求和更強大的項目存取權的迭代器，可取代較少需求的迭代器。 舉例來說，如果正向迭代器被呼叫，可改用隨機存取迭代器。
 
-Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支援已檢查和未檢查迭代器的各種偵錯模式情況。 如需詳細資訊，請參閱[安全程式庫：C++標準程式庫](../standard-library/safe-libraries-cpp-standard-library.md)。
+Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支援已檢查和未檢查迭代器的各種偵錯模式情況。 如需詳細資訊, [請參閱安全程式庫:C++標準連結](../standard-library/safe-libraries-cpp-standard-library.md)庫。
 
 ## <a name="members"></a>成員
 
@@ -87,27 +87,27 @@ Visual Studio 已將擴充功能加入至 C++ Standard 程式庫迭代器，支�
 
 |||
 |-|-|
-|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
-|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示雙向迭代器函式。|
+|[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將專案插入類型`Container`的容器中, 其會透過它所儲存之受保護`pointer`的物件 (稱為容器) 來存取。|
+|[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|類別, 為表示雙向反覆運算器的函`iterator_category`式提供傳回型別。|
 |[checked_array_iterator](../standard-library/checked-array-iterator-class.md)|類別，使用隨機存取、已檢查的迭代器來存取陣列。 **注意：** 這個類別是 C++ 標準程式庫的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
-|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表正向迭代器的函式。|
-|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。|
-|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`代表輸入迭代器的函式。|
-|[insert_iterator](../standard-library/insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 項目插入容器的型別`Container`，它會透過受保護存取的`pointer`它所儲存的物件稱為容器。 它也會儲存受保護`iterator`類別的物件`Container::iterator`稱為`iter`。|
-|[istream_iterator](../standard-library/istream-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會擷取類別的物件`Ty`它會透過它所儲存之類型指標的物件存取輸入資料流`basic_istream` \< **Elem**， **Tr**>。|
-|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會插入項目類別的`Elem`輸出資料流緩衝區中，存取物件透過其儲存的型別`pointer`要`basic_streambuf` \< **Elem**， **Tr**>。|
+|[forward_iterator_tag](../standard-library/forward-iterator-tag-struct.md)|類別, 為表示正向反覆運算器的`iterator_category`函式提供傳回型別。|
+|[front_insert_iterator](../standard-library/front-insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將專案插入類型`Container`的容器中, 其會透過它所儲存之受保護`pointer`的物件 (稱為容器) 來存取。|
+|[input_iterator_tag](../standard-library/input-iterator-tag-struct.md)|類別, 為表示輸入反覆運算器的函`iterator_category`式提供傳回型別。|
+|[insert_iterator](../standard-library/insert-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將專案插入類型`Container`的容器中, 其會透過它所儲存之受保護`pointer`的物件 (稱為容器) 來存取。 它也會儲存類別`iterator` `Container::iterator`的受保護物件, 稱為`iter`。|
+|[istream_iterator](../standard-library/istream-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會從輸入資料流程`Ty` (它會透過它所儲存的物件、 **Elem**、 **Tr**> 的類型`basic_istream` \<指標), 將類別的物件解壓縮。|
+|[istreambuf_iterator](../standard-library/istreambuf-iterator-class.md)|此樣板類別描述輸入迭代器物件。 它會將`Elem`類別的元素插入輸出資料流程緩衝區, 其會透過它所儲存的物件 (屬於**Elem**、 `basic_streambuf` **Tr**> 的類型`pointer` ) 來\<存取。|
 |[iterator](../standard-library/iterator-struct.md)|此樣板類別做為所有迭代器的基底類型。|
 |[iterator_traits](../standard-library/iterator-traits-struct.md)|樣板協助程式類別，提供與不同迭代器類型相關聯的關鍵類型，因此可以相同方式參考這些不同迭代器類型。|
 |[move_iterator](../standard-library/move-iterator-class.md)|`move_iterator` 物件儲存 `RandomIterator` 類型的隨機存取迭代器。 它的行為就像隨機存取迭代器 (除非取值時)。 `operator*` 的結果會隱含轉型為 `value_type&&:` 以建立 `rvalue reference`。|
-|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會插入類別的物件`Type`輸出資料流中，存取物件透過其儲存的型別`pointer`要`basic_ostream` \< **Elem**， **Tr**>。|
-|[ostreambuf_iterator 類別](../standard-library/ostreambuf-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會插入類別的元素`Elem`輸出資料流緩衝區，它會透過它所儲存之類型指標的物件存取這`basic_streambuf` \< **Elem**， **Tr**>。|
-|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示輸出迭代器函式。|
-|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|這個類別提供的傳回型別`iterator_category`表示隨機存取迭代器函式。|
+|[ostream_iterator](../standard-library/ostream-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會`Type`將類別的物件插入輸出資料流程, 它會透過它所儲存的物件 (屬於**Elem**、 `basic_ostream` **Tr**> 的類型`pointer` ) 來\<存取。|
+|[ostreambuf_iterator 類別](../standard-library/ostreambuf-iterator-class.md)|此樣板類別描述輸出迭代器物件。 它會將類別`Elem`的元素插入輸出資料流程緩衝區中, 而它會透過它所儲存的物件 (屬於**Elem**的指標類型) 來`basic_streambuf` \<存取它: **Tr**>。|
+|[output_iterator_tag](../standard-library/output-iterator-tag-struct.md)|類別, 為表示輸出反覆運算器的`iterator_category`函式提供傳回型別。|
+|[random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)|提供代表隨機存取反覆運算器之`iterator_category`函數傳回類型的類別。|
 |[reverse_iterator](../standard-library/reverse-iterator-class.md)|此樣板類別描述行為類似隨機存取迭代器，只不過是反向方向的物件。|
 |[unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md)|類別，使用隨機存取、未檢查的迭代器來存取陣列。 **注意：** 這個類別是 C++ 標準程式庫的 Microsoft 擴充功能。 透過使用這個函式實作的程式碼不可移植到不支援此 Microsoft 擴充功能的 C++ Standard 建置環境。|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

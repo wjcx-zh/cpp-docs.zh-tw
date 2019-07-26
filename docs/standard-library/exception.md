@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exception header
 ms.assetid: 28900768-5dd7-4834-b907-5e37ab3407db
-ms.openlocfilehash: 5036f2efc782c3b2f385960cd9cbf6935212f720
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 681baee5ac5d19e8b3ffdf37c37599c9cb68f253
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240759"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457908"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -42,11 +42,11 @@ ms.locfileid: "68240759"
 |[get_unexpected](../standard-library/exception-functions.md#get_unexpected)|取得目前的 `unexpected_handler` 函式。|
 |[make_exception_ptr](../standard-library/exception-functions.md#make_exception_ptr)|建立持有例外狀況複本的 `exception_ptr` 物件。|
 |[rethrow_exception](../standard-library/exception-functions.md#rethrow_exception)|擲回做為參數傳遞的例外狀況。|
-|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|擲回例外狀況，如果巢狀和轉換。|
+|[rethrow_if_nested](../standard-library/exception-functions.md#rethrow_if_nested)|轉換和擲回例外狀況 (如果有嵌套)。|
 |[set_terminate](../standard-library/exception-functions.md#set_terminate)|建立新 `terminate_handler`，在程式終止時呼叫。|
 |[set_unexpected](../standard-library/exception-functions.md#set_unexpected)|建立新的 `unexpected_handler`，當未預期的例外狀況發生時擲回。|
 |[terminate](../standard-library/exception-functions.md#terminate)|呼叫終止處理常式。|
-|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|如果巢狀，則會擲回例外狀況。|
+|[throw_with_nested](../standard-library/exception-functions.md#throw_with_nested)|如果有嵌套, 則擲回例外狀況。|
 |[uncaught_exception](../standard-library/exception-functions.md#uncaught_exception)|只有當系統正在處理擲回的例外狀況時，才傳回 **true**。|
 |[unexpected](../standard-library/exception-functions.md#unexpected)|呼叫未預期的處理常式。|
 
@@ -56,9 +56,9 @@ ms.locfileid: "68240759"
 |-|-|
 |[bad_exception 類別](../standard-library/bad-exception-class.md)|此類別描述從 `unexpected_handler` 所擲回的例外狀況。|
 |[exception 類別](../standard-library/exception-class.md)|此類別可作為特定運算式和 C++ 標準程式庫所擲回之所有例外狀況的基底類別。|
-|[nested_exception 類別](../standard-library/nested-exception-class.md)|此類別描述可以擷取和儲存供日後使用的例外狀況。|
+|[nested_exception 類別](../standard-library/nested-exception-class.md)|類別會描述可以加以捕捉並儲存以供稍後使用的例外狀況。|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

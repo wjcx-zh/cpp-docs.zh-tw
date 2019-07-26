@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148480"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455936"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible 類別
 
@@ -26,19 +26,19 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty* nothrow 預設建構函式，否則為 false。 類型述詞的執行個體相當於 `is_nothrow_constructible<Ty>`。
+如果類型*Ty*具有 nothrow 預設的函式, 則類型述詞的實例為 true, 否則為 false。 類型述詞的執行個體相當於 `is_nothrow_constructible<Ty>`。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

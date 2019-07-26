@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412042"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458433"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt; 運算子
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果*左*前面*右邊*總排序; 中，否則為**false**。
+如果*左*在總排序中的*右邊*,**則為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
+*左面*\
 左 `thread::id` 物件。
 
-*右邊*<br/>
+*再*\
 右 `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果兩個物件代表在相同的執行緒，或都未代表執行; 的執行緒，否則為**false**。
+如果兩個物件代表相同的執行執行緒, 或如果沒有物件代表執行的執行緒,**則為 true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -203,11 +203,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*Ostr*<br/>
+*Ostr*\
 [basic_ostream](../standard-library/basic-ostream-class.md) 物件。
 
-*ID*<br/>
-`thread::id` 物件。
+*號*\
+          `thread::id` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -215,10 +215,10 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="remarks"></a>備註
 
-此函式會插入*識別碼*成*Ostr*。
+此函式會將*識別碼*插入*Ostr*中。
 
 如果有兩個 `thread::id` 物件要比較是否相等，則這些物件插入的文字表示會一樣。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

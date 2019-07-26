@@ -1,19 +1,19 @@
 ---
-title: '&lt;執行&gt;'
+title: '&lt;過程&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268420"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457974"
 ---
-# <a name="ltexecutiongt"></a>&lt;執行&gt;
+# <a name="ltexecutiongt"></a>&lt;過程&gt;
 
 描述平行演算法的執行原則。
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy 結構](is-execution-policy-struct.md)|偵測到執行原則，以排除否則模稜兩可的多載解析參與的函式簽章。|
-|[parallel_policy 類別](parallel-policy-class.md)|釐清平行演算法多載，並指出可能平行處理平行演算法的執行，以用做為唯一的類型。|
-|[parallel_unsequenced_policy 類別](parallel-unsequenced-policy-class.md)|釐清平行演算法多載，並指出平行演算法的執行可能會平行處理和向量化，以用做為唯一的類型。|
-|[sequenced_policy 類別](sequenced-policy-class.md)|釐清平行演算法多載，並要求可能不可以平行執行的平行演算法，以用做為唯一的類型。|
+|[is_execution_policy 結構](is-execution-policy-struct.md)|針對排除函式簽章的目的, 偵測執行原則, 否則不明確的多載解析參與。|
+|[parallel_policy 類別](parallel-policy-class.md)|用來做為唯一的類型, 以區分平行演算法多載, 並指出平行演算法的執行可能會平行處理。|
+|[parallel_unsequenced_policy 類別](parallel-unsequenced-policy-class.md)|用來做為唯一的類型來區分平行演算法多載, 並指出平行演算法的執行可能會平行處理和向量化。|
+|[sequenced_policy 類別](sequenced-policy-class.md)|用來做為唯一的類型來區分平行演算法多載, 並要求平行演算法的執行可能不會平行處理。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<執行 >
+**標頭:** \<執行 >
 
 **命名空間：** stdext
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準程式庫參考](cpp-standard-library-reference.md)

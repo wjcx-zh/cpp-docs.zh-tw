@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_base class
 ms.assetid: 9aad38c6-4c13-445d-b096-364bd0836efb
-ms.openlocfilehash: 750c9f36ce7f96a065e0e29111ea379a48595328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79b6cb5f0b0c219e959f53fdc667f4c8af273cef
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167760"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451842"
 ---
 # <a name="messagesbase-class"></a>messages_base 類別
 
-基底類別會描述**int**類型類別目錄的訊息。
+基類描述訊息目錄的**int**型別。
 
 ## <a name="syntax"></a>語法
 
@@ -28,14 +28,14 @@ struct messages_base : locale::facet {
 
 ## <a name="remarks"></a>備註
 
-類型目錄是類型的同義字**int**描述可能的傳回值，從訊息:: [do_open](../standard-library/messages-class.md#do_open)。
+類型目錄是**int**類型的同義字, 描述來自訊息的可能傳回值:: [do_open](../standard-library/messages-class.md#do_open)。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

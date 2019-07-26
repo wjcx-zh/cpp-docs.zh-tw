@@ -7,16 +7,16 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 6e6b8a286dca8c451e6920e7f25f07829d3b453f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451260"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454220"
 ---
 # <a name="enableif-class"></a>enable_if 類別
 
-有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 巢狀的 typedef`enable_if<Condition,Type>::type`存在 — 和同義`Type`— 如果且只有`Condition`是**true**。
+有條件地建立類型的執行個體，以進行 SFINAE 多載解析。 只有`enable_if<Condition,Type>::type` `Type` 在為 true 時, 才會有 nested typedef, 而且是的同義字。 `Condition`
 
 ## <a name="syntax"></a>語法
 
@@ -27,17 +27,17 @@ struct enable_if;
 
 ### <a name="parameters"></a>參數
 
-*B*<br/>
+*位元組*\
 判斷所產生類型是否存在的值。
 
-*T*<br/>
-如果具現化的型別*B*為 true。
+*而已*\
+*B*為 true 時要具現化的類型。
 
 ## <a name="remarks"></a>備註
 
-如果*B*為 true，`enable_if<B, T>`具有名為 「 類型 」 同義的巢狀的 typedef *T*。
+如果*B*為 true, `enable_if<B, T>`則具有名為 "type" 的嵌套 typedef, 這是*T*的同義字。
 
-如果*B*為 false，`enable_if<B, T>`沒有巢狀的 typedef，名為 「 類型 」。
+如果*B*為 false, `enable_if<B, T>`則沒有名為 "type" 的嵌套 typedef。
 
 會提供此別名範本：
 
@@ -50,7 +50,7 @@ using enable_if_t = typename enable_if<B,T>::type;
 
 以下是四個範例情節：
 
-- 案例 1:包裝函式的傳回型別：
+- 案例 1:包裝函式的傳回型別:
 
 ```cpp
     template <your_stuff>
@@ -64,7 +64,7 @@ yourfunction(args) {// ...
 }
 ```
 
-- 案例 2:加入具有預設引數的函式參數：
+- 案例 2:加入具有預設引數的函式參數:
 
 ```cpp
     template <your_stuff>
@@ -73,14 +73,14 @@ your_return_type_if_present
 }
 ```
 
-- 案例 3:加入具有預設引數的範本參數：
+- 案例 3:加入具有預設引數的範本參數:
 
 ```cpp
     template <your_stuff, typename Dummy = enable_if_t<your_condition>>
 rest_of_function_declaration_goes_here
 ```
 
-- 案例 4:如果您的函式具有非範本引數，您可以包裝其類型：
+- 案例 4:如果您的函式具有非樣板化引數, 您可以包裝其類型:
 
 ```cpp
     template <typename T>
@@ -92,7 +92,7 @@ s) {// ...
 
 情節 1 未使用建構函式和轉換運算子，因為它們沒有傳回類型。
 
-情節 2 會將參數保持為未命名。 您可以指定 `::type Dummy = BAR`，但是名稱 `Dummy` 為無關，而賦予它名稱可能會觸發「未參考的參數」警告。 您需要選擇 `FOO` 函式參數類型和 `BAR` 預設引數。  您可以說**int**和`0`，但接著您的程式碼的使用者可以不小心將傳遞至函式會遭到忽略的額外整數。 相反地，我們建議您使用`void **`以及`0`或是**nullptr**因為幾乎沒有可以轉換成`void **`:
+情節 2 會將參數保持為未命名。 您可以指定 `::type Dummy = BAR`，但是名稱 `Dummy` 為無關，而賦予它名稱可能會觸發「未參考的參數」警告。 您需要選擇 `FOO` 函式參數類型和 `BAR` 預設引數。  您可以說出 int `0`和, 但是您的程式碼的使用者可能會意外地將會忽略的額外整數傳遞給函式。 相反地, 我們建議您使用`void **` `0`和或**nullptr** , 因為幾乎沒有任何內容可轉換`void **`為:
 
 ```cpp
 template <your_stuff>
@@ -109,7 +109,7 @@ yourfunction(args, typename enable_if<your_condition, void **>::type = nullptr) 
 
 `enable_if` 功能十分強大，但是誤用也十分危險。  因為它的目的是讓候選項在多載解析之前消失，所以誤用的效果可能會讓人十分混淆。  部分建議如下：
 
-- 請勿使用 `enable_if`，在編譯時期選取不同的實作。 請勿針對 `enable_if` 寫入一個 `CONDITION`，而針對 `!CONDITION` 寫入另一個。  請改用「標記分派」  模式，例如，根據提供給實作的迭代器強度來選取實作的演算法。
+- 請勿使用 `enable_if`，在編譯時期選取不同的實作。 請勿針對 `enable_if` 寫入一個 `CONDITION`，而針對 `!CONDITION` 寫入另一個。  請改用「標記分派」模式，例如，根據提供給實作的迭代器強度來選取實作的演算法。
 
 - 請勿使用 `enable_if` 來強制執行需求。  如果您想要驗證範本參數，但驗證失敗而導致錯誤，則請改用 [static_assert](../cpp/static-assert.md)，而不要選取另一個實作。
 
@@ -127,7 +127,7 @@ void func(const pair<string, string>&);
 func(make_pair("foo", "bar"));
 ```
 
-在此範例中，`make_pair("foo", "bar")` 會傳回 `pair<const char *, const char *>`。 多載解析必須判斷您要的 `func()`。 `pair<A, B>` 具有來自 `pair<X, Y>` 的隱含轉換建構函式。  這不是新功能，而是 C++98 中的功能。 不過，在 C++98/03 中，一律會有隱含轉換建構函式的簽章，即使是 `pair<int, int>(const pair<const char *, const char *>&)` 也是一樣。  多載解析不在意，嘗試具現化該建構函式急遽增加，因為`const char *`不是隱含地轉換成**int**; 它只會查看簽章、 函式之前定義為具現化。  因此，此範例程式碼會模稜兩可，因為有簽章可以將 `pair<const char *, const char *>` 轉換為 `pair<int, int>` 和 `pair<string, string>`。
+在此範例中，`make_pair("foo", "bar")` 會傳回 `pair<const char *, const char *>`。 多載解析必須判斷您要的 `func()`。 `pair<A, B>` 具有來自 `pair<X, Y>` 的隱含轉換建構函式。  這不是新功能，而是 C++98 中的功能。 不過，在 C++98/03 中，一律會有隱含轉換建構函式的簽章，即使是 `pair<int, int>(const pair<const char *, const char *>&)` 也是一樣。  多載解析不會在意嘗試具現化該函式的`const char *`郵差先生大, 因為無法隱含地轉換成**int**; 它只會查看簽章, 然後才會具現化函式定義。  因此，此範例程式碼會模稜兩可，因為有簽章可以將 `pair<const char *, const char *>` 轉換為 `pair<int, int>` 和 `pair<string, string>`。
 
 C++11 已解決這項模稜兩可，方法是使用 `enable_if` 來確定**僅有當**  `const X&` 可隱含轉換為 `A` 且 `const Y&` 可隱含轉換為 `B` 時，`pair<A, B>(const pair<X, Y>&)` 才存在。  這讓多載解析可以判斷 `pair<const char *, const char *>` 不可轉換為 `pair<int, int>`，而且採用 `pair<string, string>` 的多載是可行的。
 
@@ -139,4 +139,4 @@ C++11 已解決這項模稜兩可，方法是使用 `enable_if` 來確定**僅�
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

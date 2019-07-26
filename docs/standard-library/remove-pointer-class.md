@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_pointer class
 - remove_pointer
 ms.assetid: 2cd4e417-32fb-4f53-bd16-4e8a98240832
-ms.openlocfilehash: 6bc735af1c1af292b32b56aae599eef019836254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 786a1cba5fc35014e33e3e19245271adefec1372
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368860"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451245"
 ---
 # <a name="removepointer-class"></a>remove_pointer 類別
 
@@ -30,12 +30,12 @@ using remove_pointer_t = typename remove_pointer<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要修改的類型。
 
 ## <a name="remarks"></a>備註
 
-執行個體`remove_pointer<T>`儲存修改的類型是`T1`當*T*的格式`T1*`， `T1* const`， `T1* volatile`，或`T1* const volatile`，否則為*T*。
+的`remove_pointer<T>`實例會保存已修改的類型, 當`T1` *T*的`T1*`格式為、 `T1* volatile` `T1* const`、或`T1* const volatile`, 則為, 否則為*t*。
 
 ## <a name="example"></a>範例
 
@@ -61,11 +61,11 @@ remove_pointer_t<int *> == int
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[add_pointer 類別](../standard-library/add-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[add_pointer 類別](../standard-library/add-pointer-class.md)

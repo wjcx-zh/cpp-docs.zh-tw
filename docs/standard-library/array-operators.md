@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377331"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456758"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt; 運算子
 
-\<陣列 > 標頭包含這些**陣列**非成員比較範本函式。
+陣列 > 標頭包含這些陣列非成員比較範本函數。  \<
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要比較的左容器。
 
-*right*<br/>
+*再*\
 要比較的右容器。
 
 ### <a name="remarks"></a>備註
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159453"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454151"
 ---
 # <a name="fpos-class"></a>fpos 類別
 
@@ -24,7 +24,7 @@ ms.locfileid: "62159453"
 
 - 位元組位移，屬於 [streamoff](../standard-library/ios-typedefs.md#streamoff) 類型。
 
-- 轉換狀態，以供屬於類別 basic_filebuf 的物件型別的`St`，通常是`mbstate_t`。
+- 轉換狀態 (供類別 basic_filebuf 的物件使用, 其類型`St`通常`mbstate_t`為)。
 
 它也可以儲存 `fpos_t` 類型的任意檔案位置，以供 [basic_filebuf](../standard-library/basic-filebuf-class.md) 類別的物件使用。 但在大小受限的環境中，`streamoff` 與 `fpos_t` 有時候可以互換使用。 若環境中沒有任何資料流有依存於狀態的編碼，實際上可能不會用到 `mbstate_t`。 因此，儲存的成員物件數目可能會不同。
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>參數
 
-*Statetype*<br/>
+*Statetype*\
 狀態資訊。
 
 ### <a name="constructors"></a>建構函式
@@ -55,7 +55,7 @@ class fpos
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[operator!=](#op_neq)|測試檔案位置指標是否不相等。|
 |[operator+](#op_add)|遞增檔案位置指標|
@@ -83,20 +83,20 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
+*_Off*\
 資料流中的位移。
 
-*_State*<br/>
+*_State*\
 `fpos` 物件的開始狀態。
 
-*_Filepos*<br/>
+*_Filepos*\
 資料流中的位移。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式儲存的位移 *_Off*，相對於檔案開頭和初始轉換狀態 （如果重要的話）。 如果 *_Off*為-1，產生的物件代表無效的資料流位置。
+第一個函式會儲存相對於檔案開頭和初始轉換狀態的位移 *_Off*(如果有問題的話)。 如果 *_Off*為-1, 則產生的物件代表不正確資料流程位置。
 
-第二個建構函式會儲存一個零位移與物件 *_State*。
+第二個函式會儲存零位移和物件 *_State*。
 
 ## <a name="op_neq"></a>  fpos::operator!=
 
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 以比較目標為依據的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
+*_Off*\
 遞增檔案位置指標時所要依據的位移。
 
 ### <a name="return-value"></a>傳回值
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
+*_Off*\
 遞增檔案位置指標時所要依據的位移。
 
 ### <a name="return-value"></a>傳回值
@@ -215,7 +215,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>備註
 
-成員函式會將 *_Off*至預存的位移的成員物件，然後傳回 **\*這**。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。
+成員函式會將 *_Off*加入至預存的 offset 成員物件 **\*** , 然後傳回 this。 針對檔案中的定位，通常僅當二進位資料流沒有依存於狀態的編碼時，結果才有效。
 
 ### <a name="example"></a>範例
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 檔案位置。
 
-*_Off*<br/>
+*_Off*\
 資料流位移。
 
 ### <a name="return-value"></a>傳回值
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
+*_Off*\
 資料流位移。
 
 ### <a name="return-value"></a>傳回值
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 以比較目標為依據的檔案位置指標。
 
 ### <a name="return-value"></a>傳回值
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>參數
 
-*_State*<br/>
+*_State*\
 新的轉換狀態。
 
 ### <a name="return-value"></a>傳回值
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式傳回值儲存在`St`成員物件。 第二個成員函式存放區 *_State*在`St`成員物件。
+第一個成員函式會傳回儲存在`St`成員物件中的值。 第二個成員函式會將`St` _State 儲存在成員物件中。
 
 ### <a name="example"></a>範例
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

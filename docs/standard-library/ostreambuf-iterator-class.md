@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 5114a658cfde965556f4663d2ba92c9ba4d1eaeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370943"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448182"
 ---
 # <a name="ostreambufiterator-class"></a>ostreambuf_iterator 類別
 
@@ -35,11 +35,11 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
-類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選擇性的預設值是**char**。
+*CharType*\
+類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選擇性的, 而且預設值為**char**。
 
-*特性*<br/>
-類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*共同*\
+類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>* 。
 
 ## <a name="remarks"></a>備註
 
@@ -70,13 +70,13 @@ ostreambuf_iterator 類別必須符合輸出迭代器的需求。 使用 `ostrea
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `i`  =  `x`。|
+|[operator*](#op_star)|取值運算子, 用來執行輸出反覆運算器\*運算式 =  `i`。 `x`|
 |[operator++](#op_add_add)|無作用的遞增運算子，傳回 `ostreambuf_iterator`，指向在呼叫作業之前它所定址的相同物件。|
 |[operator=](#op_eq)|此運算子會將字元插入至相關聯的資料流緩衝區。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<iterator>
+**標頭：** \<iterator>
 
 **命名空間：** std
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>  ostreambuf_iterator::operator\*
+## <a name="op_star"></a>ostreambuf_iterator:: operator\*
 
 無作用的取值運算子，用來實作輸出迭代器運算式 \* *i* = *x*。
 
@@ -195,7 +195,7 @@ ostreambuf 迭代器物件。
 
 ### <a name="remarks"></a>備註
 
-此運算子只能在輸出迭代器運算式 \* *i* = *x* 中運作，將字元輸出到資料流緩衝區。 若套用至 ostreambuf 迭代器，它會傳回迭代器；**\*iter** 則傳回 **iter**。
+此運算子只能在輸出迭代器運算式 \* *i* = *x* 中運作，將字元輸出到資料流緩衝區。 若套用至 ostreambuf 迭代器，它會傳回迭代器； **\*iter** 則傳回 **iter**。
 
 ### <a name="example"></a>範例
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>參數
 
-*_Char*<br/>
+*_Char*\
 要插入至資料流緩衝區的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -339,15 +339,15 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*<br/>
+*strbuf*\
 用於初始化輸出資料流緩衝區指標的輸出 streambuf 物件。
 
-*Ostr*<br/>
+*Ostr*\
 用於初始化輸出資料流緩衝區指標的輸出資料流物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會初始化輸出資料流緩衝區指標*strbuf*。
+第一個函式會使用*strbuf*來初始化輸出資料流程緩衝區指標。
 
 第二個建構函式會使用 `Ostr` 初始化輸出資料流緩衝區指標。 `rdbuf`. 儲存的指標不能是 null 指標。
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>備註
 
-類型是同義字`basic_streambuf` \< **CharType**，**特性**>，成為 I/O 緩衝區資料流類別`streambuf`時特製化為字元類型**char**。
+`basic_streambuf`此類型是**CharType**、**特性**> 的同義字`streambuf` \< , 適用于在特殊字元類型為**char**時變成的 i/o 緩衝區資料流程類別。
 
 ### <a name="example"></a>範例
 
@@ -468,6 +468,6 @@ by charOutBuf are: OUT.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

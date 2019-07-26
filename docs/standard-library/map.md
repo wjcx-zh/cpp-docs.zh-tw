@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243316"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456297"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
@@ -24,13 +24,13 @@ ms.locfileid: "68243316"
 **命名空間：** std
 
 > [!NOTE]
-> \<對應 > 程式庫也會使用`#include <initializer_list>`陳述式。
+> Map > 程式庫也會`#include <initializer_list>`使用語句。 \<
 
 ## <a name="members"></a>成員
 
 ### <a name="operators"></a>運算子
 
-|對應版本|多重對應版本|說明|
+|對應版本|多重對應版本|描述|
 |-----------------|----------------------|-----------------|
 |[operator!= (map)](../standard-library/map-operators.md#op_neq)|[operator!= (multimap)](../standard-library/map-operators.md#op_neq)|測試運算子左邊的對應或多重對應物件是否不等於右邊的對應或多重對應物件。|
 |[operator< (map)](../standard-library/map-operators.md#op_eq_eq)|[operator< (multimap)](../standard-library/map-operators.md#op_eq_eq)|測試運算子左邊的對應或多重對應物件是否小於右邊的對應或多重對應物件。|
@@ -41,7 +41,7 @@ ms.locfileid: "68243316"
 
 ### <a name="specialized-template-functions"></a>特製化樣板函式
 
-|對應版本|多重對應版本|說明|
+|對應版本|多重對應版本|描述|
 |-----------------|----------------------|-----------------|
 |[swap (map)](../standard-library/map-functions.md#swap)|[swap (multimap)](../standard-library/map-functions.md#swap_multimap)|交換兩個對應或多重對應的項目。|
 
@@ -55,6 +55,6 @@ ms.locfileid: "68243316"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

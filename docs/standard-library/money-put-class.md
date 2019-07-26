@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: 346dd4f681432143c954ca125c3862fc6827db60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383538"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460238"
 ---
 # <a name="moneyput-class"></a>money_put 類別
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
-*OutputIterator*<br/>
+*OutputIterator*\
 貨幣 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -55,7 +55,7 @@ class money_put : public locale::facet;
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸出迭代器的類型。|
@@ -70,7 +70,7 @@ class money_put : public locale::facet;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*next*<br/>
+*下一個*\
 迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*<br/>
+*_Intl*\
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*<br/>
+*_Iosbase*\
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*<br/>
+*_Fill*\
 間距所使用的字元。
 
-*val*<br/>
+*初始值*\
 要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
@@ -129,9 +129,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護的成員函式會產生開始的循序元素*下一步*產生貨幣輸出欄位從[string_type](#string_type)物件*val*。 所控制的序列*val*必須開始一個或多個小數位數，選擇性地加上減號 （-），以代表總額。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
+第一個虛擬的受保護成員函式會產生從*下一個*開始的順序元素, 以從[string_type](#string_type)物件*val*產生貨幣輸出欄位。 由*val*控制的序列必須以一或多個十進位數開頭, 並選擇性地在前面加上負號 (-), 代表數量。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
 
-第二個受保護的虛擬成員函式的行為與第一個相同除了其第一個有效的轉換*val*為一連串十進位數字，選擇性地加上負號，然後將轉換為上述該序列。
+第二個虛擬受保護成員函式的行為與第一個相同, 不同之處在于它會先將*val*轉換成十進位數的序列, 並選擇性地在前面加上負號, 然後再依照上述方式轉換該序列。
 
 貨幣輸出欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class) fac (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。
 
@@ -191,22 +191,22 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \> 1： 未定義這些值。
+- \>1: 未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
+建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
 
 ## <a name="put"></a>  money_put::put
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-*next*<br/>
+*下一個*\
 迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*<br/>
+*_Intl*\
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*<br/>
+*_Iosbase*\
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*<br/>
+*_Fill*\
 間距所使用的字元。
 
-*val*<br/>
+*初始值*\
 要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
@@ -295,6 +295,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 類別](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 類別](../standard-library/locale-class.md#facet_class)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

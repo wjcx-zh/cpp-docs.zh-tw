@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76a78a2f47bd160c6b2b981b1ccdda2ef3a90575
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386196"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454402"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine 類別
 
@@ -26,14 +26,14 @@ class discard_block_engine;
 
 ### <a name="parameters"></a>參數
 
-*Engine*<br/>
+*搜尋引擎優化*\
 基底引擎類型。
 
-*P*<br/>
+*P&ID*\
 **區塊大小**。 每個區塊中的值數目。
 
-*R*<br/>
-**已使用的區塊**。 每個區塊中使用的值數目。 捨棄其餘 (`P` - `R`)。 **前置條件**：`0 < R ≤ P`
+*R*\
+**已使用的區塊**。 每個區塊中使用的值數目。 其餘部分會被捨棄`P`( -  `R`)。 **前置條件**：`0 < R ≤ P`
 
 ## <a name="members"></a>成員
 
@@ -50,10 +50,10 @@ class discard_block_engine;
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -46,16 +46,16 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6cd2524f8ae010e81d06a30d9a001398a106622
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349117"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460196"
 ---
 # <a name="moneypunct-class"></a>moneypunct 類別
 
-此範本類別描述可以做為物件，來描述類型的序列地區設定 facet *CharType*用來表示貨幣輸入的欄位或貨幣輸出欄位。 如果範本參數*Intl*是 *，則為 true*，則遵守國際慣例。
+此範本類別描述可做為地區設定 facet 的物件, 以描述用來表示貨幣輸入欄位或貨幣輸出欄位的*CharType*類型序列。 如果範本參數*國際*為*true*, 則會觀察到國際慣例。
 
 ## <a name="syntax"></a>語法
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 用於程式內部字元編碼的類型。
 
-*Intl*<br/>
+*號碼*\
 旗標，指定是否要遵守國際慣例。
 
 ## <a name="remarks"></a>備註
@@ -80,7 +80,7 @@ class moneypunct;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[moneypunct](#moneypunct)|`moneypunct` 類型物件的建構函式。|
 
@@ -116,7 +116,7 @@ class moneypunct;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -277,7 +277,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-範例，請參閱[分組](#grouping)，其中虛擬成員函式會呼叫`grouping`。
+請參閱[群組](#grouping)的範例, 其中會呼叫`grouping`虛擬成員函式。
 
 ## <a name="do_neg_format"></a>  moneypunct::do_neg_format
 
@@ -289,19 +289,19 @@ virtual pattern do_neg_format() const;
 
 ### <a name="return-value"></a>傳回值
 
-受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 每四個項目的`pattern::field`可以有值：
+受保護的虛擬成員函式會傳回地區設定特定規則，來決定如何為負數金額產生貨幣輸出欄位。 四個元素`pattern::field`中的每個都可以有下列值:
 
-- `none` 若要比對零或多個空格，或產生任何項目。
+- `none`符合零或多個空格, 或不產生任何內容。
 
-- `sign` 若要比對或產生正負號。
+- `sign`若要比對或產生正號或負號。
 
-- `space` 若要比對零或多個空格，或是產生空格。
+- `space`表示比對零個或多個空格或產生空格。
 
-- `symbol` 若要比對或產生貨幣符號。
+- `symbol`符合或產生貨幣符號。
 
-- `value` 若要比對或產生貨幣值。
+- `value`以符合或產生貨幣值。
 
-產生貨幣輸出欄位的元件，以及這些項目中出現的順序在比對貨幣輸入欄位的元件`pattern::field`。 每個值`sign`， `symbol`， `value`，以及`none`或`space`必須確切出現一次。 值`none`不會出現第一次。 space 值「不得」第一個或最後一個出現。 如果`Intl`為 true，順序`symbol`， `sign`， `none`，然後`value`。
+會產生貨幣輸出欄位的元件, 而貨幣輸入欄位的元件會依照這些元素出現`pattern::field`的順序進行比對。 每`sign`個值、 `value` 、和`none`都必須只出現一次。`space` `symbol` 此值`none`不能先出現。 space 值「不得」第一個或最後一個出現。 如果`Intl`為 true, 則順序為`symbol`、 `sign`、 `none`、then `value`。
 
 `moneypunct`\< **CharType**, **Intl**> 的範本版本會傳回 `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`。
 
@@ -523,18 +523,18 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
-- 0:物件的存留期是由包含它的地區設定管理。
+- 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \> 1:未定義這些值。
+- \>1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
@@ -835,5 +835,5 @@ English_Canada.1252 domestic thousands separator: ,
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

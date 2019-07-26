@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78d01ed8606e65e55af7e0c8dc24c02b51c53a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369419"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451548"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator 類別
 
@@ -45,13 +45,13 @@ class regex_token_iterator
 
 ## <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 子相符項目的迭代器類型。
 
-*Elem*<br/>
+*Elem*\
 要符合之項目的類型。
 
-*RXtraits*<br/>
+*RXtraits*\
 項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
@@ -70,13 +70,13 @@ class regex_token_iterator
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|建構迭代器。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[difference_type](#difference_type)|迭代器差值的類型。|
 |[iterator_category](#iterator_category)|迭代器分類的類型。|
@@ -97,7 +97,7 @@ class regex_token_iterator
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
@@ -231,7 +231,7 @@ bool operator!=(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要比較的迭代器。
 
 ### <a name="remarks"></a>備註
@@ -276,7 +276,7 @@ bool operator==(const regex_token_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要比較的迭代器。
 
 ### <a name="remarks"></a>備註
@@ -342,16 +342,16 @@ regex_token_iterator(BidIt first, BidIt last,
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要比對的序列開頭。
 
-*last*<br/>
+*次*\
 要比對的序列結尾。
 
-*re*<br/>
+*重新*\
 比對的規則運算式。
 
-*f*<br/>
+*f*\
 比對的旗標。
 
 ### <a name="remarks"></a>備註
@@ -390,11 +390,11 @@ typedef sub_match<BidIt> value_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 類別](../standard-library/regex-constants-class.md)<br/>
-[regex_error 類別](../standard-library/regex-error-class.md)<br/>
-[\<regex> 函式](../standard-library/regex-functions.md)<br/>
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 運算子](../standard-library/regex-operators.md)<br/>
-[regex_traits 類別](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函式](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[\<RegEx > 運算子](../standard-library/regex-operators.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

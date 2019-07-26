@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-ms.openlocfilehash: cc08fb426df289b3478ad9d29b03f9a6dd5d3978
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8284e56e8afb1e5518cbcbb772079b4f19d57b18
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412471"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451737"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -77,20 +77,20 @@ void swap (
 
 ## <a name="remarks"></a>備註
 
-`char *` 類型的物件可以使用 [\<strstream>](../standard-library/strstream.md) 中的功能進行串流處理。 不過， \<strstream > 已被取代，以及善用\<sstream > 建議您。
+`char *` 類型的物件可以使用 [\<strstream>](../standard-library/strstream.md) 中的功能進行串流處理。 不過, \<strstream > 已被取代, 而且鼓勵\<使用 sstream >。
 
 ### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
-|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|建立類型`basic_istringstream`特殊化**char**樣板參數。|
-|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|建立類型`basic_ostringstream`特殊化**char**樣板參數。|
-|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|建立類型`basic_stringbuf`特殊化**char**樣板參數。|
-|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|建立類型`basic_stringstream`特殊化**char**樣板參數。|
-|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|建立類型`basic_istringstream`特殊化**wchar_t**樣板參數。|
-|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|建立類型`basic_ostringstream`特殊化**wchar_t**樣板參數。|
-|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|建立類型`basic_stringbuf`特殊化**wchar_t**樣板參數。|
-|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|建立類型`basic_stringstream`特殊化**wchar_t**樣板參數。|
+|[istringstream](../standard-library/sstream-typedefs.md#istringstream)|建立在`basic_istringstream` **char**樣板參數上特製化的型別。|
+|[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|建立在`basic_ostringstream` **char**樣板參數上特製化的型別。|
+|[stringbuf](../standard-library/sstream-typedefs.md#stringbuf)|建立在`basic_stringbuf` **char**樣板參數上特製化的型別。|
+|[stringstream](../standard-library/sstream-typedefs.md#stringstream)|建立在`basic_stringstream` **char**樣板參數上特製化的型別。|
+|[wistringstream](../standard-library/sstream-typedefs.md#wistringstream)|建立在`basic_istringstream` **wchar_t**樣板參數上特製化的類型。|
+|[wostringstream](../standard-library/sstream-typedefs.md#wostringstream)|建立在`basic_ostringstream` **wchar_t**樣板參數上特製化的類型。|
+|[wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf)|建立在`basic_stringbuf` **wchar_t**樣板參數上特製化的類型。|
+|[wstringstream](../standard-library/sstream-typedefs.md#wstringstream)|建立在`basic_stringstream` **wchar_t**樣板參數上特製化的類型。|
 
 ### <a name="manipulators"></a>操作工具
 
@@ -100,22 +100,22 @@ void swap (
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|類別|說明|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與陣列物件中儲存的項目序列之間的往來傳輸。|
-|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述的物件可控制擷取元素和編碼的物件類別的資料流緩衝區[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，類型的項目`Elem`，其字元特性由類別`Tr`，和其項目由類別配置器配置`Alloc`。|
-|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述的物件可控制將項目和編碼的物件類別的資料流緩衝區[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，類型的項目`Elem`，其字元特性由類別`Tr`，和其項目由類別配置器配置`Alloc`。|
-|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述的物件可控制插入及擷取項目和編碼的物件，使用類別的資料流緩衝區[basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**， **Tr**， `Alloc`>，類型的項目`Elem`，其字元特性由類別`Tr`，和其項目由類別配置器配置`Alloc`。|
+|[basic_istringstream](../standard-library/basic-istringstream-class.md)|描述一個物件, 它會從[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **Tr**, `Alloc`> 類別的資料流程緩衝區中, 控制專案和編碼物件的解壓縮, 並`Elem`以類型的元素 (其字元特性是由類別`Tr`所決定, 且其元素是由類別`Alloc`的配置器所配置。|
+|[basic_ostringstream](../standard-library/basic-ostringstream-class.md)|描述的物件可控制如何將元素和編碼物件插入[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **Tr**, `Alloc`> 類別的資料流程緩衝區中, 其中包含類型`Elem`的元素, 其字元特性為是由類別`Tr`所決定, 且其元素是由類別`Alloc`的配置器所配置。|
+|[basic_stringstream](../standard-library/basic-stringstream-class.md)|描述一個物件, 該物件會使用[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**, **Tr**, `Alloc`> 類別的資料流程緩衝區 (具有類型`Elem`的元素) 來控制插入和解壓縮元素和編碼物件, 其字元特性是由類別`Tr`所決定, 且其元素是由類別`Alloc`的配置器所配置。|
 
 ## <a name="requirements"></a>需求
 
-- **標頭︰**\<sstream>
+- **標頭︰** \<sstream>
 
 - **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

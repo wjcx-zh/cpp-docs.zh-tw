@@ -38,12 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 47e0a1e51809efad2924a2051d1627fe2e9ff95f
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400669"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451513"
 ---
 # <a name="regextraits-class"></a>regex_traits 類別
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 要描述的字元項目類型。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述各種類型的規則運算式特性*Elem*。 此範本類別[basic_regex 類別](../standard-library/basic-regex-class.md)使用此資訊來管理項目型別的*Elem*。
+此範本類別會描述類型*Elem*的各種正則運算式特性。 樣板類別[Basic_RegEx 類別](../standard-library/basic-regex-class.md)會使用這項資訊來操作*Elem*類型的元素。
 
 每個 `regex_traits` 物件都擁有一個類型 `regex_traits::locale` 的物件，這種類型可為其部分成員函式使用。 預設的地區設定是 `regex_traits::locale()`的複本。 成員函式 `imbue` 取代了地區設定物件，而成員函式 `getloc` 會傳回地區設定物件的複本。
 
@@ -85,12 +85,12 @@ class regex_traits
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[getloc](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|修改儲存的地區設定物件。|
 |[isctype](#isctype)|測試是否有類別成員資格。|
-|[length](#length)|傳回以 null 終止的序列的長度。|
+|[length](#length)|傳回以 null 結束之序列的長度。|
 |[lookup_classname](#lookup_classname)|將序列對應至字元類別。|
 |[lookup_collatename](#lookup_collatename)|將序列對應至定序項目。|
 |[transform](#transform)|轉換成相等的已排序序列。|
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*loc*<br/>
+*loc*\
 要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
-成員函式複製*loc*至預存`locale`物件，並傳回一份儲存的先前值`locale`物件。
+此成員函式會將*loc*複製`locale`到儲存的物件, 並傳回預存`locale`物件先前值的複本。
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*頻道*\
 待測試的項目。
 
-*cls*<br/>
+*本身*\
 做為測試對象的類別。
 
 ### <a name="remarks"></a>備註
 
-此成員函式為 true，則只有當傳回字元*ch*中所指定的字元類別*cls*。
+只有當字元*ch*位於*cls*所指定的字元類別時, 成員函式才會傳回 true。
 
 ## <a name="length"></a>  regex_traits::length
 
-傳回以 null 終止的序列的長度。
+傳回以 null 結束之序列的長度。
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,8 +258,8 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
-Null 終止的序列。
+*str*\
+以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
 
@@ -288,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要查閱之序列的開頭。
 
-*last*<br/>
+*次*\
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -313,10 +313,10 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要查閱之序列的開頭。
 
-*last*<br/>
+*次*\
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -372,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要轉換之序列的開頭。
 
-*last*<br/>
+*次*\
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -393,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要轉換之序列的開頭。
 
-*last*<br/>
+*次*\
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -413,7 +413,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*頻道*\
 要轉換的項目。
 
 ### <a name="remarks"></a>備註
@@ -430,7 +430,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*頻道*\
 要轉換的項目。
 
 ### <a name="remarks"></a>備註
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>參數
 
-*ch*<br/>
+*頻道*\
 要轉換的項目。
 
-*radix*<br/>
+*基*\
 要使用的算術基底。
 
 ### <a name="remarks"></a>備註
 
-此成員函式傳回值的字元來表示*ch*基底*基數*，或-1 *ch*不是有效的數字的基底中*基數*. 此函式才會呼叫具有*基數*8、 10 或 16 的引數。
+此成員函式會傳回基底中字元*ch*所表示的值, 如果*ch*不是基底*基數*中的有效數字, 則傳回-1。 函數只會以8、10或16的*基數*引數呼叫。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 類別](../standard-library/regex-constants-class.md)<br/>
-[regex_error 類別](../standard-library/regex-error-class.md)<br/>
-[\<regex> 函式](../standard-library/regex-functions.md)<br/>
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 運算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > 類別](../standard-library/regex-traits-char-class.md)<br/>
-[regex_traits\<wchar_t> 類別](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函式](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[\<RegEx > 運算子](../standard-library/regex-operators.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[\<RegEx > typedef](../standard-library/regex-typedefs.md)\
+[regex_traits\<char> 類別](../standard-library/regex-traits-char-class.md)\
+[regex_traits\<wchar_t> 類別](../standard-library/regex-traits-wchar-t-class.md)

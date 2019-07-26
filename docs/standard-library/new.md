@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243555"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457680"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ ms.locfileid: "68243555"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|提供要用來做為引數物件**nothrow**新版**新**並**刪除**。|
+|[nothrow](../standard-library/new-functions.md#nothrow)|提供物件, 做為**new**和**delete**之**nothrow**版本的引數。|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -76,5 +76,5 @@ ms.locfileid: "68243555"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

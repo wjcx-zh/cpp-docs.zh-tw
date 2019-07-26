@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_assignable
 ms.assetid: 7410133e-f367-493f-92a7-e34e3ec5e879
-ms.openlocfilehash: 831e7c5afdd39980876a8e8284a68fec2084a4e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0019257a032d3becc268513336ed59e58a2e1d5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413459"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448002"
 ---
 # <a name="istriviallycopyassignable-class"></a>is_trivially_copy_assignable 類別
 
@@ -26,21 +26,21 @@ struct is_trivially_copy_assignable;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*是具有 trivial 複製指派運算子，否則為 false 的類別。
+如果類型*T*是具有簡單複製指派運算子的類別, 則類型述詞的實例為 true, 否則為 false。
 
-類別的指派建構函式*T*微不足道，如果它以隱含方式提供，類別*T*沒有虛擬函式類別*T*沒有虛擬基底類別類別類型的所有非靜態資料成員都有 trivial 指派運算子和陣列的類別類型的所有非靜態資料成員的類別具有 trivial 指派運算子。
+類別*t*的指派函式若隱含提供, 則為不常用, 類別*t*沒有虛擬函數, 類別*t*沒有虛擬基底, 類別類型的所有非靜態資料成員的類別都有簡單的指派運算子, 以及類別之類型陣列的所有非靜態資料成員的類別, 都具有簡單的指派運算子。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

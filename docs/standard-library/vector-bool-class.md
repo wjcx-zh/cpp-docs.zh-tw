@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364996"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452261"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
-`vector<bool>`類別是部分特製化[向量](../standard-library/vector-class.md)類型的項目**bool**。 它具有特製化，提供空間最佳化，將儲存其中使用的基礎類型的配置器**bool**每個位元的值。
+類別是**bool**類型專案之 vector 的部分特製化。 [](../standard-library/vector-class.md) `vector<bool>` 它具有特殊化所使用之基礎類型的配置器, 它會藉由儲存每位一個**bool**值, 來提供空間優化。
 
 ## <a name="syntax"></a>語法
 
@@ -37,14 +37,14 @@ class vector<bool, Allocator>
 
 這個類別範本特製化的行為就像 vector，除了在本文中說明的差異之外。
 
-處理作業**bool**型別對應至容器的儲存體中的值。 `allocator_traits::construct` 不用來建構這些值。
+處理**bool**類型的作業會對應到容器儲存體中的值。 `allocator_traits::construct` 不用來建構這些值。
 
 ### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[const_pointer](#const_pointer)|`const_iterator` 的 typedef，可做為常數指標指向 `vector<bool>` 的布林值項目。|
-|[const_reference](#const_reference)|Typedef **bool**。 在初始化之後，就無法觀察原始值的更新。|
+|[const_reference](#const_reference)|**Bool**的 typedef。 在初始化之後，就無法觀察原始值的更新。|
 |[pointer](#pointer)|`iterator` 的 typedef，可做為指標指向 `vector<bool>` 的布林值項目。|
 
 ### <a name="member-functions"></a>成員函式
@@ -140,9 +140,9 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |-|-|
-|*pos*|`vector<bool>` 項目的位置。|
+|*採購*|`vector<bool>` 項目的位置。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>備註
 
-如果您 _ITERATOR_DEBUG_LEVEL 組編譯時，如果您嘗試存取向量界限以外的項目，就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如果您使用 _ITERATOR_DEBUG_LEVEL 集進行編譯, 如果您嘗試存取向量界限以外的元素, 就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-提供的隱含轉換`vector<bool>::reference`要**bool**。
+提供從`vector<bool>::reference`到**bool**的隱含轉換。
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
+*再*\
 值會指派給位元的項目參考。
 
-*Val*<br/>
+*初始值*\
 要指派給位元的布林值。
 
 #### <a name="example"></a>範例
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>參數
 
-*左邊*<br/>
-要與交換的項目*右*項目。
+*左面*\
+要與*右*元素交換的元素。
 
-*右邊*<br/>
-要與交換的項目*左*項目。
+*再*\
+要與*左*元素交換的元素。
 
 ### <a name="remarks"></a>備註
 
@@ -383,5 +383,5 @@ static void swap(
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

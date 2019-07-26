@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::swap
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
-ms.openlocfilehash: 05a7ffd1e3bf02a88fe6a6cce841a440550c1057
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159128"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448600"
 ---
 # <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函式
 
@@ -33,15 +33,15 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
-提供要交換之元素的 hash_set 或其項目要與 hash_set 交換的 hash_set*左*。
+*再*\
+提供要交換之元素的 hash_set, 或要與 hash_set*左邊*的專案交換其元素的 hash_set。
 
-*left*<br/>
-其項目要與 hash_set 交換的 hash_set*右*。
+*左面*\
+要與 hash_set*許可權*的元素交換其專案的 hash_set。
 
 ### <a name="remarks"></a>備註
 
-`swap`範本函式是執行成員函式的容器類別 hash_set 特製化的演算法`left.`[交換](../standard-library/hash-set-class.md#swap)(`right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
+範本函式是在容器類別 hash_set 上特製化的演算法, 用來執行`left.`成員函`right`式 swap ()。 [](../standard-library/hash-set-class.md#swap) `swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
 
 **template \<class T> void swap(T&, T&)**
 
@@ -64,15 +64,15 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
-提供要交換之元素的 hash_multiset 或其項目要與 hash_multiset 交換的 hash_multiset*左*。
+*再*\
+提供要交換之元素的 hash_multiset, 或要與 hash_multiset*左邊*的專案交換其元素的 hash_multiset。
 
-*left*<br/>
-其項目要與 hash_multiset 交換的 hash_multiset*右*。
+*左面*\
+要與 hash_multiset*許可權*的元素交換其專案的 hash_multiset。
 
 ### <a name="remarks"></a>備註
 
-`swap`範本函式是執行成員函式的容器類別 hash_multiset 特製化的演算法`left.`[交換](../standard-library/hash-multiset-class.md#swap)(`right`)。 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
+範本函式是在容器類別 hash_multiset 上特製化的演算法, 用來執行`left.`成員函`right`式 swap ()。 [](../standard-library/hash-multiset-class.md#swap) `swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
 
 **template \<class T> void swap(T&, T&)**
 
@@ -84,4 +84,4 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ## <a name="see-also"></a>另請參閱
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

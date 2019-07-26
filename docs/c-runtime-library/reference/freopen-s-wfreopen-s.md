@@ -29,12 +29,12 @@ helpviewer_keywords:
 - wfreopen_s function
 - freopen_s function
 ms.assetid: ad25a4da-6ad4-476b-a86d-660b221ca84d
-ms.openlocfilehash: 2cdc16f21882c32933868000c6fd1d66accc74b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6efe858713bf8c315536098f1b6dabdbcba01bfa
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332997"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376108"
 ---
 # <a name="freopens-wfreopens"></a>freopen_s、_wfreopen_s
 
@@ -77,9 +77,9 @@ errno_t _wfreopen(
 
 ## <a name="remarks"></a>備註
 
-**Freopen_s**函式會關閉目前與相關聯的檔案*串流*並重試*串流*所指定的檔案*路徑*. **_wfreopen_s**是寬字元版本的 **_freopen_s**;*路徑*並*模式*引數 **_wfreopen_s**是寬字元字串。 **_wfreopen_s**並 **_freopen_s**行為相同。
+**Freopen_s**函式會關閉目前與*stream*相關聯的檔案, 並將*資料流程*重新指派至*path*所指定的檔案。 **_wfreopen_s**是寬字元版本的 **_freopen_s**; **_wfreopen_s**的*路徑*和*模式*引數是寬字元字串。 相反地, **_wfreopen_s**和 **_freopen_s**的行為相同。
 
-如果任一*pFile*，*路徑*，*模式*，或*串流*是**NULL**，或如果*路徑*為空字串，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果任何*pFile*、*路徑*、*模式*或*資料流程*為**Null**, 或是*path*是空字串, 則這些函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -87,33 +87,33 @@ errno_t _wfreopen(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tfreopen_s**|**freopen_s**|**freopen_s**|**_wfreopen_s**|
 
-**freopen_s**通常用來重新導向預先開啟的檔案**stdin**， **stdout**，和**stderr**使用者所指定的檔案。 新的檔案與相關聯*資料流*以開啟*模式*，這是字元字串，指定要求檔案，如下所示的存取類型：
+**freopen_s**通常用來將預先開啟的檔案 ( **stdin**、 **stdout**和**stderr** ) 重新導向至使用者所指定的檔案。 與*stream*相關聯的新檔案會以*模式*開啟, 這是一個字元字串, 用來指定針對檔案所要求的存取類型, 如下所示:
 
 |*mode*|Access|
 |-|-|
-| **"r"** | 開啟以讀取。 如果檔案不存在或無法找到**freopen_s**呼叫就會失敗。 |
+| **"r"** | 開啟以讀取。 如果檔案不存在或找不到, **freopen_s**呼叫將會失敗。 |
 | **"w"** | 開啟空白檔案以寫入。 如果指定的檔案已存在，其內容將被終結。 |
 | **"a"** | 開啟以供在檔案結尾寫入 (附加)，並且在將新資料寫入檔案之前，不會移除檔案結尾 (EOF) 標記。 如果檔案不存在時，建立檔案。 |
 | **"r+"** | 開啟以進行讀取和寫入。 檔案必須存在。 |
 | **"w+"** | 開啟空白檔案以進行讀取和寫入。 如果檔案存在，其內容會遭到銷毀。 |
 | **"a+"** | 開啟以進行讀取和附加。 附加作業包括在將新資料寫入檔案之前移除 EOF 標記。 寫入完成後，不會還原 EOF 標記。 如果檔案不存在時，建立檔案。 |
 
-使用 **"w"** 並 **"w +"** 類型使用時請小心，因為它們可以終結現有的檔案。
+請小心使用 **"w"** 和 **"w +"** 類型, 因為它們可以摧毀現有的檔案。
 
-與開啟檔案時 **"a"** 或是 **"a +"** 存取類型，所有寫入作業發生在檔案結尾。 雖然檔案指標可以使用定位[fseek](fseek-fseeki64.md)或是[倒轉](rewind.md)，檔案指標會永遠移回至檔案結尾之前執行任何寫入作業會。因此，無法覆寫現有資料。
+以 **"a"** 或 **"a +"** 存取類型開啟檔案時, 所有寫入作業都會在檔案結尾進行。 雖然可以使用[fseek](fseek-fseeki64.md)或倒轉來重新置放檔案[](rewind.md)指標, 但是在執行任何寫入作業之前, 檔案指標一律會移回至檔案結尾。因此，無法覆寫現有資料。
 
-**"A"** 模式不會附加到檔案之前移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"A +"** 模式會附加到檔案之前移除 EOF 標記。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 **"A +"** 模式，才能附加至以 CTRL + Z EOF 標記終止的資料流檔案。
+在附加到檔案之前, **"a"** 模式不會移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"A +"** 模式會先移除 EOF 標記, 再將附加至檔案。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 附加至以 CTRL + Z EOF 標記終止的資料流程檔案時, 需要 **"a +"** 模式。
 
-當 **"r +"**， **"w +"**，或 **"a +"** 指定存取類型，允許讀取和寫入 （檔案要開啟以供 「 更新 」）。 不過，當您在讀取和寫入之間切換時，必須有中間的 [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md) 或 [rewind](rewind.md) 作業。 可以指定目前的位置，如[fsetpos](fsetpos.md)或是[fseek](fseek-fseeki64.md)作業，如有需要。 除了上述的值，其中一個下列的字元可能會包含在*模式*字串，以指定新行的轉譯模式。
+指定 **"r +"** 、 **"w +"** 或 **"a +"** 存取類型時, 同時允許讀取和寫入 (此檔案稱為「更新」)。 不過，當您在讀取和寫入之間切換時，必須有中間的 [fsetpos](fsetpos.md)、[fseek](fseek-fseeki64.md) 或 [rewind](rewind.md) 作業。 如有需要, 可以為[fsetpos](fsetpos.md)或[fseek](fseek-fseeki64.md)作業指定目前的位置。 除了上述的值,*模式*字串中可能會包含下列其中一個字元, 以指定新行的轉譯模式。
 
 |*模式*修飾詞|轉譯模式|
 |-|-|
 | **t** | 以文字 (已轉譯) 模式開啟。 |
-| **b** | 以二進位 (未轉譯) 模式開啟；抑制涉及歸位字元和換行字元的轉譯。 |
+| **b** | 以二進位 (未轉譯) 模式開啟;會隱藏涉及回車和換行字元的翻譯。 |
 
-在文字 （已轉譯） 模式下，歸位字元傳回換行字元 (CR-LF) 組合會轉譯成單行換行字元 (LF) 字元上輸入;會將 LF 字元轉譯為 CR-LF 組合，在輸出上。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在 檔案開啟供讀取或寫入和讀取與 **"a +"**，執行階段程式庫會檢查是否有 CTRL + Z 結尾的檔案，並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)並[ftell](ftell-ftelli64.md)為的檔案內移動可能會導致[fseek](fseek-fseeki64.md)檔案結尾附近產生不當行為。 **t**選項是 Microsoft 擴充功能，不應在需要 ANSI 可攜性。
+在文字 (已轉譯) 模式中, 在輸入時, 會將換行字元 (CR-LF) 組合轉譯成單行換行字元 (LF)在輸出時, LF 字元會轉譯成 CR-LF 組合。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在開啟以供讀取的檔案, 或使用 **"a +"** 進行寫入和讀取的檔案中, 執行時間程式庫會在檔案結尾檢查是否有 CTRL + Z, 並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)在檔案內移動可能會使[fseek](fseek-fseeki64.md)在檔案結尾附近的行為不正確。 **T**選項是 Microsoft 擴充功能, 不應在需要 ANSI 可攜性的情況下使用。
 
-如果**t**或是**b**中未指定*模式*，則預設轉譯模式由全域變數[_fmode](../../c-runtime-library/fmode.md)。 如果**t**或是**b**前面加上引數，函式會失敗並傳回**NULL**。
+如果未在*模式*中指定**t**或**b** , 則預設轉譯模式是由全域變數[_fmode](../../c-runtime-library/fmode.md)所定義。 如果**t**或**b**前面加上引數, 則函式會失敗並傳回**Null**。
 
 如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
@@ -124,7 +124,7 @@ errno_t _wfreopen(
 |**freopen_s**|\<stdio.h>|
 |**_wfreopen_s**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

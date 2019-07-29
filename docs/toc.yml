@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: 範例專案檔
                   href: build/reference/project-files.md
-            - name: C++ 專案屬性參考
+            - name: C++ 專案屬性頁
               expanded: false
               items:
                 - name: C++ 專案屬性參考
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: 進階屬性頁面
                   href: build/reference/advanced-property-page.md
+                - name: 偵錯屬性頁
+                  href: build/reference/debugging-prop-pages.md
                 - name: VC++ 目錄屬性頁
                   href: build/reference/vcpp-directories-property-page.md
                 - name: C/C++ 屬性頁
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: 模組
+              expanded: false
+              items:
+                - name: C++ 中的模組概觀
+                  href: cpp/modules-cpp.md
+                - name: 模組、匯入、匯出
+                  href: cpp/import-export-module.md
             - name: 範本
               expanded: false
               items:

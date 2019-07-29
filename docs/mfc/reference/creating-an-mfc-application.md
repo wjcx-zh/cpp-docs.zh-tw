@@ -1,26 +1,26 @@
 ---
 title: 建立 MFC 應用程式
-ms.date: 11/04/2016
+ms.date: 07/28/2019
 helpviewer_keywords:
 - applications [MFC]
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 0f16fe577f1dc02dc9a2fc0cffb5899b16ad8cca
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 454a994da6db2841317d41ea1cdacfd36b0705e4
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708239"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606476"
 ---
 # <a name="creating-an-mfc-application"></a>建立 MFC 應用程式
 
-MFC 應用程式以 MFC 程式庫為基礎，是 Windows 的可執行應用程式。 要建立 MFC 應用程式，最簡單的方法就是使用 MFC 應用程式精靈。
+MFC 應用程式以 MFC 程式庫為基礎，是 Windows 的可執行應用程式。 建立 MFC 應用程式最簡單的方式, 是使用 MFC 應用程式精靈 (Visual Studio 2019 中的**Mfc 應用程式專案**)。 若要建立 MFC 主控台應用程式, 請使用 Windows 桌面 Wizard 並選擇 [**主控台應用程式**] 和 [ **MFC 標頭**] 選項。
 
 > [!IMPORTANT]
 >  Visual Studio Express 版本不支援 MFC 專案。
 
-MFC 可執行檔一般分為五種類型： 標準的 Windows 應用程式、 對話方塊、 表單架構應用程式、 檔案總管樣式應用程式和 Web 瀏覽器型應用程式。 如需詳細資訊，請參閱:
+MFC 可執行檔通常分成五種類型: 標準 Windows 應用程式、對話方塊、表單架構應用程式、Explorer 樣式的應用程式, 以及網頁瀏覽器樣式的應用程式。 如需詳細資訊，請參閱：
 
 - [使用類別來撰寫 Windows 應用程式](../../mfc/using-the-classes-to-write-applications-for-windows.md)
 
@@ -36,18 +36,18 @@ MFC 應用程式精靈可根據您在精靈中選取的選項，為任意類型�
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>若要使用 MFC 應用程式精靈建立 MFC 應用程式
 
-1. 請依照下列說明主題中的指示[建立C++主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
+1. 依照說明主題[建立C++主控台應用程式專案](../../get-started/tutorial-console-cpp.md)中的指示進行。
 
-1. 在 **新的專案**對話方塊中，選取**MFC 應用程式**以開啟精靈的 範本 窗格中。
+1. 在 [**新增專案**] 對話方塊中, 選取 [範本] 窗格中的 [ **MFC 應用程式**], 以開啟嚮導。
 
-1. 定義使用的應用程式設定[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)。
+1. 使用[MFC 應用程式精靈](../../mfc/reference/mfc-application-wizard.md)來定義應用程式設定。
 
     > [!NOTE]
     >  若要保留精靈的預設值，請略過此步驟。
 
-1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
+1. 按一下 [完成] 以關閉精靈，並在開發環境中開啟新專案。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[適用於 Visual Studio 建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+專案一旦建立完成之後，即可檢視在 [方案總管] 內建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[為 Visual Studio C++ 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 

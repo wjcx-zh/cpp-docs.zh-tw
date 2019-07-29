@@ -429,18 +429,7 @@
                 - name: NMake 屬性頁
                   href: build/reference/nmake-property-page.md
                 - name: 資訊清單工具屬性頁
-                  expanded: false
-                  items:
-                    - name: 資訊清單工具屬性頁
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、一般
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、輸入和輸出
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、隔離的 COM
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、進階
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: 資源屬性頁
                   href: build/reference/resources-property-pages.md
                 - name: 受控資源屬性頁
@@ -456,16 +445,7 @@
                 - name: 自訂建置步驟屬性頁：一般
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: HLSL 屬性頁
-                  expanded: false
-                  items:
-                    - name: HLSL 屬性頁
-                      href: build/reference/hlsl-property-pages.md
-                    - name: HLSL 屬性頁：一般
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: HLSL 屬性頁：進階
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: HLSL 屬性頁：輸出檔案
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: MSVC 編譯器參考
           expanded: false
           items:
@@ -1607,10 +1587,10 @@
 - name: Windows 桌面開發
   expanded: false
   items:
-    - name: 以 C++ 撰寫的桌面應用程式
-      href: windows/desktop-applications-visual-cpp.md
     - name: 使用 C++ 設計 Windows 應用程式概觀
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: 以 C++ 撰寫的桌面應用程式
+      href: windows/desktop-applications-visual-cpp.md
     - name: 逐步解說：建立標準 C++ 程式
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 逐步解說：建立 Windows 桌面應用程式

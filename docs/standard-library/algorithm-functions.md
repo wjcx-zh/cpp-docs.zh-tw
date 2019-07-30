@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: cf6c1267b1dea86c2cad62708192a4c0a1970ed8
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313401"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661533"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -366,7 +366,7 @@ bool all_of(
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的每個   都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
+`N`只有在範圍`[0, last - first)`中的每個  都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
 
 ### <a name="example"></a>範例
 
@@ -611,6 +611,14 @@ int main()
 }
 ```
 
+```Output
+List1 = ( 5 10 20 25 30 50 )
+There is an element in list List1 with a value equal to 10.
+There is an element in list List1 with a value greater than 10 under greater than.
+Ordered using mod_lesser, vector v1 = ( 0 -1 1 -2 2 3 4 )
+There is an element with a value equivalent to -3 under mod_lesser.
+```
+
 ## <a name="clamp"></a>夾具
 
 比較值與上限和下限, 並傳回值的參考 (如果它介於界限之間), 或如果值高於或低於其上方或下限, 則傳回上限或下限的參考。
@@ -845,6 +853,13 @@ int main() {
 }
 ```
 
+```Output
+v1 = ( 0 10 20 30 40 50 )
+v2 = ( 0 3 6 9 12 15 18 21 24 27 30 )
+v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
+v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
+```
+
 ## <a name="copy_if"></a>copy_if
 
 在某個範圍的專案中, 針對指定的條件複製**true**的元素。
@@ -894,6 +909,61 @@ ForwardIterator2 copy_if(
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
 範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果*dest*和*第一次*指定儲存區, 則*dest*不得在範圍`[ first, last )`內。
+
+### <a name="example"></a>範例
+
+```cpp
+// alg_copy_if.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+void listlist(std::list<int> l)
+{
+    std::cout << "( ";
+    for (auto const& el : l)
+        std::cout << el << " ";
+    std::cout << ")" << std::endl;
+}
+
+int main()
+{
+    using namespace std;
+    list<int> li{ 46, 59, 88, 72, 79, 71, 60, 5, 40, 84 };
+    list<int> le(li.size()); // le = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+    list<int> lo(li.size()); // lo = { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+
+    cout << "li = ";
+    listlist(li);
+
+    // is_even checks if the element is even.
+    auto is_even = [](int const elem) { return !(elem % 2); };
+    // use copy_if to select only even elements from li 
+    // and copy them to le, starting from le's begin position
+    auto ec = copy_if(li.begin(),li.end(), le.begin(), is_even);
+    le.resize(std::distance(le.begin(), ec));  // shrink le to new size
+
+    cout << "Even numbers are le = ";
+    listlist(le);
+
+    // is_odd checks if the element is odd.
+    auto is_odd = [](int const elem) { return (elem % 2); };
+    // use copy_if to select only odd elements from li
+    // and copy them to lo, starting from lo's begin position
+    auto oc = copy_if(li.begin(), li.end(), lo.begin(), is_odd);
+    lo.resize(std::distance(lo.begin(), oc));  // shrink lo to new size
+
+    cout << "Odd numbers are lo = ";
+    listlist(lo);
+}
+```
+
+```Output
+li = ( 46 59 88 72 79 71 60 5 40 84 )
+Even numbers are le = ( 46 88 72 60 40 84 )
+Odd numbers are lo = ( 59 79 71 5 )
+```
 
 ## <a name="copy_n"></a>copy_n
 
@@ -1001,7 +1071,7 @@ count(
 
 ### <a name="return-value"></a>傳回值
 
-的差異類型`InputIterator` , 計算具有值的範圍 [*first*, *last*) 中的元素數目。 
+的差異類型`InputIterator` , 計算具有值的範圍 [*first*, *last*) 中的元素數目。
 
 ### <a name="remarks"></a>備註
 
@@ -3012,7 +3082,7 @@ bool is_partitioned(
 
 ### <a name="return-value"></a>傳回值
 
-當指定範圍中的所有專案在條件中測試**為 true**時, 傳回**true** , 否則傳回**false**。 
+當指定範圍中的所有專案在條件中測試**為 true**時, 傳回**true** , 否則傳回**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -5455,7 +5525,7 @@ bool none_of(
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才   會傳回true,述詞`pred(*(first + N))`一律為 false。
+`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才  會傳回true,述詞`pred(*(first + N))`一律為 false。
 
 ## <a name="partial_sort"></a>partial_sort
 
@@ -5890,7 +5960,7 @@ ForwardIterator partition_point(
 
 ### <a name="return-value"></a>傳回值
 
-傳回, 其參考不符合*pred*所測試之條件的第一個元素, 或如果找不到, 則傳回最後一個專案。  `ForwardIterator`
+傳回, 其參考不符合*pred*所測試之條件的第一個元素, 或如果找不到, 則傳回最後一個專案。 `ForwardIterator`
 
 ### <a name="remarks"></a>備註
 

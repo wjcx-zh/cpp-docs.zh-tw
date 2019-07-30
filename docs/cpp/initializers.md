@@ -1,19 +1,17 @@
 ---
 title: 初始設定式
-ms.date: 11/19/2018
+ms.date: 07/29/2019
+description: 如何初始化中的C++類別、結構、陣列和基本類型。
 helpviewer_keywords:
-- array-element initializers
-- initializing arrays [C++], initializers
 - arrays [C++], array-element initializers
-- declarators, as initializers
-- initializers, array element
+- aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183516"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661607"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -83,11 +81,11 @@ ms.locfileid: "62183516"
 
 - 數值變數初始化為 0 (或 0.0、0.0000000000 等)。
 
-- Char 變數初始化為`'\0'`。
+- Char 變數會初始化為`'\0'`。
 
-- 若要初始化的指標**nullptr**。
+- 指標會初始化為**nullptr**。
 
-- 陣列， [POD](../standard-library/is-pod-class.md)類別、 結構和等位成員一定會初始化為零的值。
+- 陣列、 [POD](../standard-library/is-pod-class.md)類別、結構和等位, 其成員會初始化為零值。
 
 零初始化在不同時期執行：
 
@@ -116,9 +114,9 @@ int main() {
 }
 ```
 
-### <a name="default_initialization"></a> 預設初始化
+### <a name="default_initialization"></a>預設初始化
 
-類別、結構和等位的預設初始化是使用預設建構函式的初始化。 可以呼叫預設建構函式，或未使用初始化運算式**新**關鍵字：
+類別、結構和等位的預設初始化是使用預設建構函式的初始化。 預設的函式可以使用沒有初始化運算式或使用**new**關鍵字來呼叫:
 
 ```cpp
 MyClass mc1;
@@ -175,7 +173,7 @@ int main() {
 }
 ```
 
-如需全域靜態物件初始化的詳細資訊，請參閱 <<c0> [ 其他啟動考量](../cpp/additional-startup-considerations.md)。
+如需全域靜態物件初始化的詳細資訊, 請參閱[其他啟動考慮](../cpp/additional-startup-considerations.md)。
 
 ### <a name="value-initialization"></a>值初始化
 
@@ -185,7 +183,7 @@ int main() {
 
 - 使用空括號或大括號初始化匿名暫存物件。
 
-- 物件初始化**新**關鍵字加上空括號或大括號
+- 使用**new**關鍵字加上空括弧或大括弧初始化物件
 
 值初始化會執行下列作業：
 
@@ -226,7 +224,7 @@ int main() {
 
 - 使用等號初始化非靜態資料成員
 
-- 複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 請參閱[彙總初始化](#agginit)的範例。
+- 複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 如需範例, 請參閱[匯總初始化](#agginit)。
 
 下列程式碼示範數個複製初始化範例：
 
@@ -276,9 +274,9 @@ shared_ptr<int> sp = new int(1729); // the constructor is explicit; same error
 
 - 使用非空白大括號或括號初始化變數。
 
-- 使用初始化的變數**新**關鍵字加上非空白大括號或括號
+- 使用**new**關鍵字加上非空白大括弧或括弧初始化變數
 
-- 變數會使用初始化**static_cast**
+- 使用**static_cast**初始化變數
 
 - 在建構函式中，會使用初始設定式清單初始化基底類別和非靜態成員。
 
@@ -319,7 +317,7 @@ int main(){
 
 - 初始化變數
 
-- 類別會使用初始化**新**關鍵字
+- 使用**new**關鍵字初始化類別
 
 - 從函式傳回物件
 
@@ -364,7 +362,7 @@ int main() {
 }
 ```
 
-### <a name="agginit"></a> 彙總初始化
+### <a name="agginit"></a>匯總初始化
 
 彙總初始化是陣列或類別類型 (通常是結構或等位) 的清單初始化表單，這些陣列或類別類型具有：
 
@@ -377,7 +375,7 @@ int main() {
 - 沒有虛擬成員函式
 
 > [!NOTE]
-> <!--conformance note-->在 Visual Studio 2015 和更早版本，不允許彙總有大括號或等號初始設定式的非靜態成員。 這項限制已移除的 C + + 14 標準，並在 Visual Studio 2017 中實作。
+> <!--conformance note-->在 Visual Studio 2015 和更早版本中, 匯總不允許非靜態成員有大括弧或相等的初始化運算式。 這項限制已在 c + + 14 標準中移除, 並在 Visual Studio 2017 中執行。
 
 彙總初始設定式包含以大括號括住的初始化清單 (包含或不含等號) (如下列範例所示)：
 
@@ -390,9 +388,14 @@ struct MyAggregate{
     char myChar;
 };
 
+struct MyAggregate2{
+    int myInt;
+    char myChar = 'Z'; // member-initializer OK in C++14
+};
+
 int main() {
     MyAggregate agg1{ 1, 'c' };
-
+    MyAggregate2 agg2{2};
     cout << "agg1: " << agg1.myChar << ": " << agg1.myInt << endl;
     cout << "agg2: " << agg2.myChar << ": " << agg2.myInt << endl;
 
@@ -418,13 +421,13 @@ int main() {
 
 ```Output
 agg1: c: 1
-agg2: d: 2
+agg2: Z: 2
 myArr1: 1 2 3 4
 myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 陣列成員已宣告但未明確初始化彙總初始化期間初始化為零，如同`myArr3`上方。
+> 在`myArr3`匯總初始化期間宣告但未明確初始化的陣列成員, 會以零初始化, 如上所示。
 
 #### <a name="initializing-unions-and-structs"></a>初始化等位和結構
 
@@ -502,13 +505,13 @@ int main()
 
 只有在下列情況下，可以不使用初始設定式宣告參考類型變數：
 
-- 函式宣告 (原型)。 例如: 
+- 函式宣告 (原型)。 例如：
 
     ```cpp
     int func( int& );
     ```
 
-- 函式傳回類型宣告。 例如: 
+- 函式傳回類型宣告。 例如：
 
     ```cpp
     int& func( int& );
@@ -520,7 +523,7 @@ int main()
     class c {public:   int& i;};
     ```
 
-- 明確地指定為變數的宣告**extern**。 例如: 
+- 明確指定為**extern**的變數宣告。 例如：
 
     ```cpp
     extern int& iVal;
@@ -528,13 +531,13 @@ int main()
 
 初始化參考類型變數時，編譯器會使用下圖所示的決策圖，在建立物件參考或建立參考指向之暫存物件之間做選擇。
 
-![初始化參考類型的決策圖形](../cpp/media/vc38s71.gif "決策圖表初始化參考類型") <br/>
-初始化參考類型的決策圖形
+![初始化參考型別的決策圖表](../cpp/media/vc38s71.gif "初始化參考型別的決策圖表") <br/>
+初始化參考型別的決策圖表
 
-參考**volatile**類型 (宣告為**volatile** *typename* <strong>&</strong> *的識別項*)可以 nelze s položkami **volatile**物件的相同型別，或者使用尚未宣告為**volatile**。 它們不能不過，nelze s položkami **const**該類型的物件。 同樣地，參考**const**類型 (宣告為**const** *typename* <strong>&</strong> *識別碼*) 可以 nelze s položkami **const**相同類型的物件 (或轉換成該類型，或者使用尚未宣告為任何項目**const**)。 它們不能不過，nelze s položkami **volatile**該類型的物件。
+**Volatile**類型的參考 (宣告為**volatile** *typename* <strong>&</strong> *identifier*) 可以使用相同類型的**volatile**物件或尚未宣告為**volatile**的物件來初始化. 不過, 它們無法使用該類型的**const**物件進行初始化。 同樣地,**常數**類型的參考 (宣告為**const** *typename* <strong>&</strong> *identifier*) 可以使用相同類型的**const**物件進行初始化 (或轉換成該類型或使用物件的任何專案)尚未宣告為**const**)。 不過, 它們無法使用該類型的**volatile**物件進行初始化。
 
-使用未限定的參考**const**或**volatile**關鍵字可以只使用宣告為物件初始化**const**也**volatile**。
+不是以**const**或**volatile**關鍵字限定的參考只能使用宣告為**const**或**volatile**的物件進行初始化。
 
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化
 
-自動 （靜態） 和外部變數的宣告可以包含初始設定式。 不過，外部變數宣告可以包含初始設定式未宣告為變數時，才**extern**。
+自動、靜態和外部變數的宣告可以包含初始化運算式。 不過, 只有在變數未宣告為**extern**時, 外部變數的宣告才可包含初始化運算式。

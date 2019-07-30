@@ -19,7 +19,7 @@ helpviewer_keywords:
 ms.assetid: 15bf52d4-91cf-4b1d-8b37-87c3ae70123a
 ms.openlocfilehash: ab9946609fa20c4644873a684a754cbc8a41742f
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62396011"
@@ -30,7 +30,7 @@ ms.locfileid: "62396011"
 
 - [當您不需要使用文件](#_core_when_you_don.92.t_need_documents)例如文件序列化。
 
-- [應用程式精靈選項](#_core_appwizard_options_for_documents_and_views)來支援應用程式沒有序列化而文件相關**檔案** 功能表命令，例如**新增**，**開啟****儲存**，並**存**。
+- [應用程式精靈選項](#_core_appwizard_options_for_documents_and_views)來支援應用程式沒有序列化而文件相關**檔案** 功能表命令，例如**新增**，**開啟** **儲存**，並**存**。
 
 - [如何使用最少的文件的應用程式使用](#_core_applications_with_minimal_documents)。
 

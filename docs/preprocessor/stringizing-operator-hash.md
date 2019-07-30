@@ -12,39 +12,29 @@ helpviewer_keywords:
 - macros [C++], converting parameters to strings
 - '# preprocessor operator'
 ms.assetid: 1175dd19-4538-43b3-ad97-a008ab80e7b1
-ms.openlocfilehash: 4f23eea017197ae1f984e097bb3967c1228fef09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 720817b34326d822ef797351655e4ace907e4baf
+ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661632"
 ---
 # <a name="stringizing-operator-"></a>字串化運算子 (#)
 
-數字符號或 「 字串化 」 的運算子 (**#**) 將巨集參數轉換為字串常值中，而不會擴充參數定義。 只會搭配接受引數的巨集使用。 如果出現在巨集定義的型式參數之前，巨集引動過程傳入的實質引數會以引號括住並且將視為字串常值。 然後字串常值會取代巨集定義中每個字串化運算子和型式參數的組合。
+數位記號或 "字串化" 運算子 ( **#** ) 會將巨集引數轉換為字串常值, 而不會擴充參數定義。 只會搭配接受引數的巨集使用。 如果出現在巨集定義的型式參數之前，巨集引動過程傳入的實質引數會以引號括住並且將視為字串常值。 然後字串常值會取代巨集定義中每個字串化運算子和型式參數的組合。
 
 > [!NOTE]
-> ANSI C 標準的 Microsoft C (6.0 版和之前版本) 擴充功能之前會展開字串常值和字元常數中的巨集型式引數，但目前已不再支援此功能。 依賴此擴充功能的程式碼應該使用字串化改寫 (**#**) 運算子。
+> ANSI C 標準的 Microsoft C (6.0 版和之前版本) 擴充功能之前會展開字串常值和字元常數中的巨集型式引數，但目前已不再支援此功能。 依賴此延伸模組的程式碼應該使用字串化 ( **#** ) 運算子來重寫。
 
 實際引數的第一個語彙基元之前和最後一個語彙基元之後的空白字元則會予以忽略。 在實際引數中語彙基元之間的任何空白字元，在產生的字串常值中皆會縮短為單一空白字元。 因此，如果在實際引數的兩個語彙基元之間出現註解，將會縮短為單一空白字元。 產生的字串常值會自動與任何僅以空白字元分隔的相鄰字串常值串連。
 
-此外，如果通常包含引數中的字元需要逸出序列用於字串常值時 (例如引號 (**」**) 或反斜線 (**\\**) 字元)，必要的逸出反斜線字元之前，會自動插入。
+此外, 如果引數中包含的字元通常需要在字串常值 (例如引號 ( **"** ) 或反斜線 ( **\\** ) 字元) 中使用時的轉義順序, 則會自動插入必要的 escape 反斜線字元之前。
 
-視覺效果C++字串化運算子不正常的行為時搭配包含逸出序列的字串。 在此情況下，編譯器會產生[編譯器錯誤 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
+當 Visual C++字串化運算子與包含逸出序列的字串搭配使用時, 其行為不正確。 在這種情況下, 編譯器會產生[編譯器錯誤 C2017](../error-messages/compiler-errors-1/compiler-error-c2017.md)。
 
 ## <a name="examples"></a>範例
 
 下列範例中展示一項巨集定義，其中包含字串化運算子和叫用巨集的主函式：
-
-這類引動過程會在前置處理期間展開並且產生下列程式碼：
-
-```cpp
-int main() {
-   printf_s( "In quotes in the printf function call\n" "\n" );
-   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
-   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
-}
-```
 
 ```cpp
 // stringizer.cpp
@@ -54,6 +44,16 @@ int main() {
    stringer( In quotes in the printf function call );
    stringer( "In quotes when printed to the screen" );
    stringer( "This: \"  prints an escaped double quote" );
+}
+```
+
+這類引動過程會在前置處理期間展開並且產生下列程式碼：
+
+```cpp
+int main() {
+   printf_s( "In quotes in the printf function call\n" "\n" );
+   printf_s( "\"In quotes when printed to the screen\"\n" "\n" );
+   printf_s( "\"This: \\\" prints an escaped double quote\"" "\n" );
 }
 ```
 

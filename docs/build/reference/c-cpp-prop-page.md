@@ -3,14 +3,12 @@ title: C/C++ Project 屬性 (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342259"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537562"
 ---
 # <a name="cc-property-pages"></a>C/C++屬性頁
 
@@ -436,7 +434,7 @@ C++模組 TS 和標準程式庫模組的實驗性支援。
 **做**
 
 - **__cdecl** -指定所有函式的 __cdecl 呼叫慣例, C++但成員函式和函式 (標記為 __stdcall 或 __fastcall) 除外。
-- **__fastcall** -指定所有函式的 __fastcall 呼叫慣例, C++但成員 sfunctions 和函式標記為 __cdecl 或 __stdcall 除外。 所有 __fastcall 函數都必須具有原型。
+- **__fastcall** -指定所有函式的 __fastcall 呼叫慣例, C++但成員函式和函式標記為 __cdecl 或 __stdcall 除外。 所有 __fastcall 函數都必須具有原型。
 - **__stdcall** -針對所有函式指定 __stdcall 呼叫慣例, C++但成員函式和函式除外, 但標記為 __cdecl 或 __fastcall。 所有 __stdcall 函數都必須具有原型。
 - **__vectorcall** -指定所有函式的 __vectorcall 呼叫慣例, C++但成員函式和函式標記為 __cdecl、__fastcall 或 __stdcall。 所有 __vectorcall 函數都必須具有原型。
 

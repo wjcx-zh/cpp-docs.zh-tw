@@ -1,25 +1,25 @@
 ---
-title: HOW TO：建立和使用 weak_ptr 執行個體
+title: 作法：建立和使用 weak_ptr 實例
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63eed40117d1a79c69bd05e5bd1503d4222f556d
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184697"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787082"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>HOW TO：建立和使用 weak_ptr 執行個體
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>HOW TO：建立和使用 weak_ptr 實例
 
-有時候物件必須儲存存取的基礎物件的方法`shared_ptr`而不會造成參考計數遞增。 一般而言，這種情況發生時有循環參考之間`shared_ptr`執行個體。
+有時候, 物件必須儲存一種方法來存取的基礎物件`shared_ptr` , 而不會導致參考計數遞增。 一般而言, 當您在實例之間`shared_ptr`有迴圈參考時, 就會發生這種情況。
 
-最好的設計是儘可能避免共用的指標擁有。 不過，如果您必須有共用的擁有權`shared_ptr`情況下，避免兩者之間的循環參考。 當循環參考無法避免，或者甚至比基於某些原因，請使用`weak_ptr`提供一或多個擁有者之間的弱式參考`shared_ptr`。 藉由使用`weak_ptr`，您可以建立`shared_ptr`以聯結相關的執行個體，但僅限於一組現有的基礎記憶體資源是否仍然有效。 A`weak_ptr`本身不會參與參考計數，因此，它無法防止參考計數變成零。 不過，您可以使用`weak_ptr`來嘗試取得一份新`shared_ptr`與初始化。 如果已刪除的記憶體，`bad_weak_ptr`擲回例外狀況。 如果記憶體仍然有效，新的共用的指標會遞增參考計數，並保證記憶體才有效，只要`shared_ptr`變數保持在範圍內。
+最佳的設計是避免在每次可以時共用指標的擁有權。 不過, 如果您必須擁有實例的共用`shared_ptr`擁有權, 請避免其間的迴圈參考。 當迴圈參考無法避免, 或甚至是基於某些原因而偏好`weak_ptr`時, 請使用來為一或多個擁有者提供`shared_ptr`另一個的弱式參考。 藉由使用`weak_ptr`, 您可以`shared_ptr`建立聯結至現有相關實例集的, 但僅限於基礎記憶體資源仍然有效時。 `weak_ptr`本身不會參與參考計數, 因此無法防止參考計數到達零。 不過, 您可以使用`weak_ptr`來嘗試取得其初始化所在的新複本。 `shared_ptr` 如果記憶體已刪除, `bad_weak_ptr`則會擲回例外狀況。 如果記憶體仍然有效, 新的共用指標會遞增參考計數, 並保證只要`shared_ptr`變數留在範圍內, 記憶體就會是有效的。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例所示的範例位置`weak_ptr`用來確保正確刪除有循環相依性的物件。 當您檢查的範例，假設它建立在考慮替代方案之後，才。 `Controller`物件代表機器程序的某些層面，以及其個別運作。 每個控制站必須能夠隨時查詢其他控制器的狀態，而且每個包含私用`vector<weak_ptr<Controller>>`針對此目的。 每個向量包含循環參考，因此`weak_ptr`執行個體來取代`shared_ptr`。
+下列`weak_ptr`程式碼範例示範用來確保適當刪除具有迴圈相依性之物件的案例。 當您檢查範例時, 假設它只是在考慮替代方案之後才建立的。 `Controller`物件代表電腦進程的某些層面, 並獨立運作。 每個控制站都必須能夠隨時查詢其他控制器的狀態, 而且每個控制器都包含此用途的`vector<weak_ptr<Controller>>`私用。 每個向量都包含迴圈參考, 因此`weak_ptr`會使用實例, `shared_ptr`而不是。
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -65,8 +65,8 @@ Status of 1 = On
 Status of 3 = On
 Status of 4 = On
 use_count = 1
-Status of 0 = O
-nStatus of 1 = On
+Status of 0 = On
+Status of 1 = On
 Status of 2 = On
 Status of 4 = On
 use_count = 1
@@ -82,7 +82,7 @@ Destroying Controller4
 Press any key
 ```
 
-做一個試驗，修改向量`others`要`vector<shared_ptr<Controller>>`，然後在輸出中，請注意任何解構函式會叫用時`TestRun`傳回。
+在實驗中, 將向量`others`修改為`vector<shared_ptr<Controller>>`, 然後在輸出中, 請注意, 當傳回時`TestRun` , 不會叫用任何析構函數。
 
 ## <a name="see-also"></a>另請參閱
 

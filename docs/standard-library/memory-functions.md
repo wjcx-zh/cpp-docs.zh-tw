@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt; 函式'
-ms.date: 07/30/2019
+ms.date: 08/05/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -77,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 67b5dbb70222d215de4d0457e6acfcd0987763cd
-ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
+ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68682583"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821323"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -196,7 +196,7 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="remarks"></a>備註
 
-函式會建立物件`shared_ptr<T>`, `T(args...)`這是由配置所配置和建立  的指標。
+函式會建立物件`shared_ptr<T>`, `T(args...)`這是由配置所配置和建立的指標。
 
 ## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
@@ -778,21 +778,15 @@ Playing Blackbird by The Beatles, use count: 3
 ```cpp
 // make_unique<T>
 template <class T, class... Args>
-unique_ptr<T> make_unique(Args&&... args)
-    {
-        return (unique_ptr<T>(new T(forward<Args>(args)...)));
-    }
+unique_ptr<T> make_unique(Args&&... args);
 
 // make_unique<T[]>
 template <class T>
-make_unique(size_t size)
-    {
-        return (unique_ptr<T>(new elements[size]()));
-    }
+unique_ptr<T> make_unique(size_t size);
 
 // make_unique<T[N]> disallowed
 template <class T, class... Args>
-typename enable_if<extent<T>::value != 0, void>::type make_unique(Args&&...) = delete;
+/* unspecified */ make_unique(Args&&...) = delete;
 ```
 
 ### <a name="parameters"></a>參數
@@ -828,7 +822,7 @@ typename enable_if<extent<T>::value != 0, void>::type make_unique(Args&&...) = d
 
 ## <a name="owner_less"></a>owner_less
 
-允許按擁有權混合比較共用指標和弱式指標。 如果  左側參數是在成員`owner_before`函式的 right 參數之前排序, 則傳回 true。
+允許按擁有權混合比較共用指標和弱式指標。 如果左側參數是在成員`owner_before`函式的 right 參數之前排序, 則傳回 true。
 
 ```cpp
 template <class T>

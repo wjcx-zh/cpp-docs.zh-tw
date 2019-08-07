@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc9c0190ea200b25b8ea3b20311c98c1c131838
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324229"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821263"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 類別
 
@@ -59,13 +59,13 @@ class CScrollBar : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CScrollBar::Create](#create)|建立 Windows 捲軸，並將它附加至`CScrollBar`物件。|
+|[CScrollBar::Create](#create)|建立 Windows 捲軸, 並將其附加至`CScrollBar`物件。|
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|啟用或停用一個捲軸的一或兩個箭號。|
-|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|擷取捲軸使用的相關資訊`SCROLLBARINFO`結構。|
-|[CScrollBar::GetScrollInfo](#getscrollinfo)|擷取捲軸的相關資訊。|
-|[CScrollBar::GetScrollLimit](#getscrolllimit)|擷取捲軸限制|
+|[CScrollBar::GetScrollBarInfo](#getscrollbarinfo)|使用`SCROLLBARINFO`結構抓取捲軸的相關資訊。|
+|[CScrollBar::GetScrollInfo](#getscrollinfo)|抓取捲軸的相關資訊。|
+|[CScrollBar::GetScrollLimit](#getscrolllimit)|抓取捲軸的限制|
 |[CScrollBar::GetScrollPos](#getscrollpos)|擷取捲動方塊的目前位置。|
-|[CScrollBar::GetScrollRange](#getscrollrange)|擷取給定的捲軸的目前最小和最大捲軸位置。|
+|[CScrollBar::GetScrollRange](#getscrollrange)|針對指定的捲軸, 抓取目前的最小和最大捲軸位置。|
 |[CScrollBar::SetScrollInfo](#setscrollinfo)|設定捲軸的相關資訊。|
 |[CScrollBar::SetScrollPos](#setscrollpos)|設定捲動方塊的目前位置。|
 |[CScrollBar::SetScrollRange](#setscrollrange)|設定給定捲軸的最小和最大位置值。|
@@ -73,17 +73,17 @@ class CScrollBar : public CWnd
 
 ## <a name="remarks"></a>備註
 
-您會將捲軸控制項在兩個步驟。 首先，呼叫建構函式`CScrollBar`來建構`CScrollBar`物件，然後呼叫[建立](#create)成員函式來建立 Windows 捲軸控制項，並將其附加至`CScrollBar`物件。
+您可以使用兩個步驟來建立捲軸控制項。 首先`CScrollBar` , 呼叫函式`CScrollBar`來建立物件, 然後呼叫[create](#create)成員函式來建立 Windows 滾動`CScrollBar`條控制項, 並將它附加至物件。
 
-如果您建立`CScrollBar` 對話方塊中 （透過對話方塊資源），物件`CScrollBar`即會自動終結，當使用者關閉對話方塊。
+如果您在對話方塊`CScrollBar`中建立物件 (透過對話資源) `CScrollBar` , 當使用者關閉對話方塊時, 會自動終結。
 
-如果您建立`CScrollBar`物件內的視窗中，您可能也需要終結它。
+如果您在視窗`CScrollBar`中建立物件, 您可能也需要將它摧毀。
 
-如果您建立`CScrollBar`物件在堆疊上，它會自動終結。 如果您建立`CScrollBar`物件上使用堆積**新**函式，您必須呼叫**刪除**使用者終止 Windows 捲軸時終結該物件上。
+如果您在堆疊`CScrollBar`上建立物件, 它會自動終結。 如果您使用`CScrollBar` **新**的函式在堆積上建立物件, 您必須在物件上呼叫**delete** , 以在使用者終止 Windows 捲軸時終結它。
 
-如果您配置任何記憶體`CScrollBar`物件，覆寫`CScrollBar`解構函式來進行處置的配置。
+如果您在`CScrollBar`物件中配置任何記憶體, 請覆`CScrollBar`寫析構函式以處置配置。
 
-如需使用的相關資訊`CScrollBar`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)。
+如需使用`CScrollBar`的相關資訊, 請參閱[控制項](../../mfc/controls-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -99,9 +99,9 @@ class CScrollBar : public CWnd
 
 **標題:** afxwin.h
 
-##  <a name="create"></a>  CScrollBar::Create
+##  <a name="create"></a>CScrollBar:: Create
 
-建立 Windows 捲軸，並將它附加至`CScrollBar`物件。
+建立 Windows 捲軸, 並將其附加至`CScrollBar`物件。
 
 ```
 virtual BOOL Create(
@@ -114,13 +114,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定捲軸列的樣式。 套用的任何組合[捲軸樣式](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)要捲軸。
+指定捲軸的樣式。 將任何[捲軸樣式](../../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)的組合套用至捲軸。
 
 *rect*<br/>
-指定捲軸的大小和位置。 可以是`RECT`結構或`CRect`物件。
+指定捲軸的大小和位置。 可以是`CRect`結構或物件。 `RECT`
 
 *pParentWnd*<br/>
-指定捲軸列的父視窗，通常`CDialog`物件。 它必須不是 NULL。
+指定捲軸的父視窗, 通常是`CDialog`物件。 不得為 Null。
 
 *nID*<br/>
 捲軸的控制項識別碼。
@@ -131,9 +131,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-您建構`CScrollBar`兩個步驟中的物件。 首先，呼叫建構函式，建構`CScrollBar`物件，然後呼叫`Create`，這會建立並初始化相關聯的 Windows 捲軸，並將它附加至`CScrollBar`物件。
+您可以使用`CScrollBar`兩個步驟來建立物件。 首先, 呼叫構造`CScrollBar`物件的函式, 然後呼叫`Create`, 它會建立並初始化相關聯的 Windows 捲軸, `CScrollBar`並將其附加至物件。
 
-套用下列[的視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)捲軸來：
+將下列[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)套用至捲軸:
 
 - WS_CHILD 一律
 
@@ -141,13 +141,13 @@ virtual BOOL Create(
 
 - WS_DISABLED 很少
 
-- WS_GROUP 群組控制項
+- WS_GROUP 至群組控制項
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CScrollBar#1](../../mfc/reference/codesnippet/cpp/cscrollbar-class_1.cpp)]
 
-##  <a name="cscrollbar"></a>  CScrollBar::CScrollBar
+##  <a name="cscrollbar"></a>CScrollBar::CScrollBar
 
 建構 `CScrollBar` 物件。
 
@@ -157,13 +157,13 @@ CScrollBar();
 
 ### <a name="remarks"></a>備註
 
-之後建構物件，呼叫`Create`成員函式來建立和初始化 Windows 捲軸。
+在建立物件之後, 呼叫`Create`成員函式來建立和初始化 Windows 捲軸。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CScrollBar#2](../../mfc/reference/codesnippet/cpp/cscrollbar-class_2.h)]
 
-##  <a name="enablescrollbar"></a>  CScrollBar::EnableScrollBar
+##  <a name="enablescrollbar"></a>CScrollBar::EnableScrollBar
 
 啟用或停用一個捲軸的一或兩個箭號。
 
@@ -174,25 +174,25 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 ### <a name="parameters"></a>參數
 
 *nArrowFlags*<br/>
-指定捲動箭號是否已啟用或停用和啟用或停用的箭號。 這個參數可以是下列值之一：
+指定是否啟用或停用捲動箭號, 以及啟用或停用的箭號。 這個參數可以是下列其中一個值:
 
-- ESB_ENABLE_BOTH 可讓這兩個捲軸的箭號。
+- ESB_ENABLE_BOTH 可同時啟用捲軸的兩個箭號。
 
-- 水平捲軸向左箭號或垂直捲軸向上箭號，會停用 ESB_DISABLE_LTUP。
+- ESB_DISABLE_LTUP 會停用水準捲軸的向左箭號或垂直捲動條的向上箭號。
 
-- 水平捲軸向右箭頭或向下的箭號，在垂直捲軸上，會停用 ESB_DISABLE_RTDN。
+- ESB_DISABLE_RTDN 會停用水準捲軸的向右箭號或垂直捲動條的向下箭號。
 
-- ESB_DISABLE_BOTH 停用這兩個捲軸的箭號。
+- ESB_DISABLE_BOTH 會停用捲軸的兩個箭號。
 
 ### <a name="return-value"></a>傳回值
 
-如果啟用或停用指定; 箭號，非零值。否則為 0，表示箭號已要求的狀態，或發生錯誤。
+如果依指定啟用或停用箭號, 則為非零值;否則為 0, 表示箭號已處於要求的狀態或發生錯誤。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CScrollBar::SetScrollRange](#setscrollrange)。
+  請參閱[CScrollBar:: SetScrollRange](#setscrollrange)的範例。
 
-##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo
+##  <a name="getscrollbarinfo"></a>CScrollBar:: GetScrollBarInfo
 
 擷取 `SCROLLBARINFO` 結構維護的捲軸相關資訊。
 
@@ -203,17 +203,17 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="parameters"></a>參數
 
 *pScrollInfo*<br/>
-指標[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)結構。
+[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)訊息、 Windows SDK 中所述。
+此成員函式會模擬[SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)訊息的功能, 如 Windows SDK 中所述。
 
-##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo
+##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo
 
 擷取 `SCROLLINFO` 結構維護的捲軸相關資訊。
 
@@ -226,30 +226,30 @@ BOOL GetScrollInfo(
 ### <a name="parameters"></a>參數
 
 *lpScrollInfo*<br/>
-指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構。 請參閱 Windows SDK，如需有關這個結構。
+[SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)結構的指標。 如需此結構的詳細資訊, 請參閱 Windows SDK。
 
 *nMask*<br/>
-指定要擷取的捲軸列參數。 典型的用法，SIF_ALL，指定 SIF_PAGE、 SIF_POS、 SIF_TRACKPOS 和 SIF_RANGE 的組合。 請參閱`SCROLLINFO`如需有關 nMask 值。
+指定要取出的捲軸參數。 一般使用方式 (SIF_ALL) 會指定 SIF_PAGE、SIF_POS、SIF_TRACKPOS 和 SIF_RANGE 的組合。 如`SCROLLINFO`需 nMask 值的詳細資訊, 請參閱。
 
 ### <a name="return-value"></a>傳回值
 
-如果訊息中擷取的任何值，傳回為 TRUE。 否則，它就是 FALSE。
+如果訊息已抓取任何值, 則傳回為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-`GetScrollInfo` 可讓應用程式使用 32 位元捲動位置。
+`GetScrollInfo`可讓應用程式使用32位的捲軸位置。
 
-[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱`SCROLLINFO`結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。
+[SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)結構包含捲軸的相關資訊, 包括最小和最大的滾動位置、頁面大小, 以及捲動方塊的位置 (thumb)。 如需`SCROLLINFO`變更結構預設值的詳細資訊, 請參閱 Windows SDK 中的結構主題。
 
-MFC Windows 訊息，表示捲軸列位置，處理常式[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)並[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)，提供僅 16 位元的位置資料。 `GetScrollInfo` 和`SetScrollInfo`提供 32 位元的捲軸位置資料。 因此，應用程式可以呼叫`GetScrollInfo`同時處理`CWnd::OnHScroll`或`CWnd::OnVScroll`取得 32 位元捲軸列位置資料。
+指出捲軸位置、[CWnd:: OnHScroll 和[CWnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)的 MFC Windows 訊息處理常式, 只提供16個位的位置資料。 `GetScrollInfo`和`SetScrollInfo`提供32位的捲軸位置資料。 因此, 應用程式可以在`GetScrollInfo` `CWnd::OnHScroll`處理或`CWnd::OnVScroll`來取得32位捲軸位置資料時呼叫。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。
+  請參閱[CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)的範例。
 
-##  <a name="getscrolllimit"></a>  CScrollBar::GetScrollLimit
+##  <a name="getscrolllimit"></a>CScrollBar::GetScrollLimit
 
-擷取捲動捲軸位置的最大值。
+抓取捲軸的最大滾動位置。
 
 ```
 int GetScrollLimit();
@@ -257,13 +257,13 @@ int GetScrollLimit();
 
 ### <a name="return-value"></a>傳回值
 
-指定如果成功則為捲軸的最大值的位置否則為 0。
+指定捲軸成功時的最大位置;否則為0。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。
+  請參閱[CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)的範例。
 
-##  <a name="getscrollpos"></a>  CScrollBar::GetScrollPos
+##  <a name="getscrollpos"></a>CScrollBar::GetScrollPos
 
 擷取捲動方塊的目前位置。
 
@@ -273,19 +273,19 @@ int GetScrollPos() const;
 
 ### <a name="return-value"></a>傳回值
 
-指定捲動方塊成功; 如果目前的位置否則為 0。
+指定捲動方塊的目前位置 (如果成功);否則為0。
 
 ### <a name="remarks"></a>備註
 
-目前的位置會取決於目前的捲動範圍的相對值。 比方說，如果捲動的範圍是 100 到 200，位於中間列的捲動方塊目前位置為 150。
+目前的位置是相依于目前滾動範圍的相對值。 例如, 如果捲軸範圍是100到 200, 而且捲動方塊位於橫條的中間, 則目前的位置是150。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。
+  請參閱[CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)的範例。
 
-##  <a name="getscrollrange"></a>  CScrollBar::GetScrollRange
+##  <a name="getscrollrange"></a>CScrollBar::GetScrollRange
 
-將給定的捲軸的目前最小和最大捲軸位置複製到指定的位置*lpMinPos*並*lpMaxPos*。
+將指定捲軸的目前最小和最大捲軸位置複製到*lpMinPos*和*lpMaxPos*所指定的位置。
 
 ```
 void GetScrollRange(
@@ -296,22 +296,22 @@ void GetScrollRange(
 ### <a name="parameters"></a>參數
 
 *lpMinPos*<br/>
-指向要接收的最小位置的整數變數。
+指向要接收最小位置的整數變數。
 
 *lpMaxPos*<br/>
-指向要接收的最大位置的整數變數。
+指向要接收最大位置的整數變數。
 
 ### <a name="remarks"></a>備註
 
-捲軸控制項的預設範圍是空的 （這兩個值是 0）。
+捲軸控制項的預設範圍是空的 (這兩個值都是 0)。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)。
+  請參閱[CWnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)的範例。
 
-##  <a name="setscrollinfo"></a>  CScrollBar::SetScrollInfo
+##  <a name="setscrollinfo"></a>CScrollBar::SetScrollInfo
 
-設定的資訊`SCROLLINFO`結構維護的捲軸相關。
+設定`SCROLLINFO`結構維護捲軸的相關資訊。
 
 ```
 BOOL SetScrollInfo(
@@ -322,28 +322,28 @@ BOOL SetScrollInfo(
 ### <a name="parameters"></a>參數
 
 *lpScrollInfo*<br/>
-指標[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構。
+[SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)結構的指標。
 
 *bRedraw*<br/>
-指定捲軸是否應該重新繪製以反映新的資訊。 如果*bRedraw*為 TRUE 時，會重新繪製捲軸。 如果是 FALSE，會不重新繪製。 根據預設，會重新繪製捲軸。
+指定是否應該重新繪製捲軸以反映新的資訊。 如果*bRedraw*為 TRUE, 則會重新繪製捲軸。 如果為 FALSE, 則不會重新繪製。 預設會重新繪製捲軸。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，傳回為 TRUE。 否則，它就是 FALSE。
+如果成功, 則傳回為 TRUE。 否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您必須提供所需的值`SCROLLINFO`結構參數，包括旗標值。
+您必須提供`SCROLLINFO`結構參數所需的值, 包括旗標值。
 
-`SCROLLINFO`結構包含捲軸，包括最小值和最大捲動位置、 頁面大小和捲軸方塊 （捲動方塊） 的位置的相關資訊。 請參閱[SCROLLINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollinfo)結構變更結構的預設值的詳細資訊的 Windows SDK 中的主題。
+`SCROLLINFO`結構包含捲軸的相關資訊, 包括最小和最大的滾動位置、頁面大小, 以及捲動方塊的位置 (thumb)。 如需變更結構預設值的詳細資訊, 請參閱 Windows SDK 中的[SCROLLINFO](/windows/win32/api/winuser/ns-winuser-scrollinfo)結構主題。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CScrollBar#3](../../mfc/reference/codesnippet/cpp/cscrollbar-class_3.cpp)]
 
-##  <a name="setscrollpos"></a>  CScrollBar::SetScrollPos
+##  <a name="setscrollpos"></a>CScrollBar::SetScrollPos
 
-將捲動方塊的目前位置設定為所指定*nPos*而且，如果指定，會重新繪製捲軸以反映新的位置。
+將捲動方塊的目前位置設定為*nPos*所指定的位置, 如果有指定, 則會重新繪製捲軸以反映新的位置。
 
 ```
 int SetScrollPos(
@@ -354,24 +354,24 @@ int SetScrollPos(
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定捲動方塊的新位置。 它必須是捲動的範圍內。
+指定捲動方塊的新位置。 它必須在滾動範圍內。
 
 *bRedraw*<br/>
-指定捲軸是否應該重新繪製以反映新的位置。 如果*bRedraw*為 TRUE 時，會重新繪製捲軸。 如果是 FALSE，會不重新繪製。 根據預設，會重新繪製捲軸。
+指定是否應該重新繪製捲軸以反映新的位置。 如果*bRedraw*為 TRUE, 則會重新繪製捲軸。 如果為 FALSE, 則不會重新繪製。 預設會重新繪製捲軸。
 
 ### <a name="return-value"></a>傳回值
 
-指定捲動方塊成功; 如果上一個位置否則為 0。
+指定捲動方塊的先前位置 (如果成功);否則為0。
 
 ### <a name="remarks"></a>備註
 
-設定*bRedraw*設為 FALSE 時的捲軸會重新繪製另一個函式的後續呼叫若要避免在短暫的間隔內的兩次重新繪製捲軸。
+每當後續呼叫另一個函式來重新繪製捲軸時, 將*bRedraw*設定為 FALSE, 以避免捲軸在短時間內重新繪製兩次。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CScrollBar::SetScrollRange](#setscrollrange)。
+  請參閱[CScrollBar:: SetScrollRange](#setscrollrange)的範例。
 
-##  <a name="setscrollrange"></a>  CScrollBar::SetScrollRange
+##  <a name="setscrollrange"></a>CScrollBar::SetScrollRange
 
 設定給定捲軸的最小和最大位置值。
 
@@ -385,29 +385,29 @@ void SetScrollRange(
 ### <a name="parameters"></a>參數
 
 *nMinPos*<br/>
-指定捲動位置的最小值。
+指定最小的滾動位置。
 
 *nMaxPos*<br/>
-指定捲動位置的最大值。
+指定最大的滾動位置。
 
 *bRedraw*<br/>
-指定捲軸是否應該重新繪製以反映變更。 如果*bRedraw*為 TRUE 時，會重新繪製捲軸; 如果為 FALSE，不繪製。 根據預設，它會重新繪製。
+指定是否應該重新繪製捲軸以反映變更。 如果*bRedraw*為 TRUE, 則會重新繪製捲軸;如果為 FALSE, 則不會重新繪製。 預設會重新繪製它。
 
 ### <a name="remarks"></a>備註
 
-設定*nMinPos*並*nMaxPos*為 0，以隱藏標準捲軸。
+將*nMinPos*和*nMaxPos*設定為 0, 以隱藏標準捲軸。
 
-請勿呼叫這個函式來處理捲軸通知訊息時隱藏捲軸。
+請勿呼叫此函式, 在處理捲軸通知訊息時隱藏捲軸。
 
-如果呼叫`SetScrollRange`緊接在呼叫`SetScrollPos`成員函式，設定*bRedraw*在`SetScrollPos`為 0，以防止兩次重新繪製捲軸。
+如果呼叫`SetScrollRange`緊接在`SetScrollPos`成員函式的呼叫之後, 請將中的 `SetScrollPos` bRedraw 設定為 0, 以防止捲軸重新繪製兩次。
 
-所指定的值之間的差異*nMinPos*並*nMaxPos*不能大於 32,767。 捲軸控制項的預設範圍是空的 (兩者*nMinPos*並*nMaxPos*都是 0)。
+*NMinPos*和*nMaxPos*所指定的值之間的差異不得大於32767。 捲軸控制項的預設範圍是空的 ( *nMinPos*和*nMaxPos*都是 0)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CScrollBar#4](../../mfc/reference/codesnippet/cpp/cscrollbar-class_4.cpp)]
 
-##  <a name="showscrollbar"></a>  CScrollBar::ShowScrollBar
+##  <a name="showscrollbar"></a>CScrollBar:: ShowScrollBar
 
 顯示或隱藏捲軸。
 
@@ -418,15 +418,15 @@ void ShowScrollBar(BOOL bShow = TRUE);
 ### <a name="parameters"></a>參數
 
 *bShow*<br/>
-指定捲軸是否顯示或隱藏。 如果此參數為 TRUE 時，會顯示捲軸;否則它會隱藏。
+指定是否要顯示或隱藏捲軸。 如果此參數為 TRUE, 則會顯示捲軸;否則會隱藏。
 
 ### <a name="remarks"></a>備註
 
-應用程式不應該呼叫此函式以處理捲軸通知訊息時隱藏捲軸。
+應用程式不應該呼叫此函式, 在處理捲軸通知訊息時隱藏捲軸。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CScrollBar::Create](#create)。
+  請參閱[CScrollBar:: Create](#create)的範例。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -114,18 +114,18 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: 9d0d16062f6808cbeb2d3e73fac9f4bbdfd7e69c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3c0af8b608afd4effab710479108f1eb07fdaba
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358201"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821299"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton 類別
 
 `CMFCRibbonButton` 類別實作可以放置在功能區列項目 (例如面板、快速存取工具列和快顯功能表) 上的按鈕。
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -137,40 +137,40 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CMFCRibbonButton::CMFCRibbonButton](#cmfcribbonbutton)|建構功能區按鈕物件。|
+|[CMFCRibbonButton:: CMFCRibbonButton](#cmfcribbonbutton)|建構功能區按鈕物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
 |[CMFCRibbonButton::AddSubItem](#addsubitem)|將功能表項目加入至與按鈕相關聯的快顯功能表。|
-|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(覆寫[cmfcribbonbaseelement:: Canbestretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched)。)|
-|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(覆寫[cmfcribbonbaseelement:: Cleanupsizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes)。)|
-|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(覆寫[cmfcribbonbaseelement:: Closepopupmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu)。)|
+|[CMFCRibbonButton::CanBeStretched](#canbestretched)|(覆寫[CMFCRibbonBaseElement:: CanBeStretched](../../mfc/reference/cmfcribbonbaseelement-class.md#canbestretched)。)|
+|[CMFCRibbonButton::CleanUpSizes](#cleanupsizes)|(覆寫[CMFCRibbonBaseElement:: CleanUpSizes](../../mfc/reference/cmfcribbonbaseelement-class.md#cleanupsizes)。)|
+|[CMFCRibbonButton::ClosePopupMenu](#closepopupmenu)|(覆寫[CMFCRibbonBaseElement:: ClosePopupMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#closepopupmenu)。)|
 |[CMFCRibbonButton::DrawBottomText](#drawbottomtext)||
-|[CMFCRibbonButton::DrawImage](#drawimage)|(覆寫[cmfcribbonbaseelement:: Drawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage)。)|
+|[CMFCRibbonButton::DrawImage](#drawimage)|(覆寫[CMFCRibbonBaseElement::D rawimage](../../mfc/reference/cmfcribbonbaseelement-class.md#drawimage)。)|
 |[CMFCRibbonButton::DrawRibbonText](#drawribbontext)||
 |[CMFCRibbonButton::FindSubItemIndexByID](#findsubitemindexbyid)|傳回與指定之命令識別碼相關聯的快顯功能表項目索引。|
 |[CMFCRibbonButton::GetCommandRect](#getcommandrect)||
-|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|傳回功能區項目的壓縮大小。 (覆寫[cmfcribbonbaseelement:: Getcompactsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize)。)|
+|[CMFCRibbonButton::GetCompactSize](#getcompactsize)|傳回功能區項目的壓縮大小。 (覆寫[CMFCRibbonBaseElement:: GetCompactSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getcompactsize)。)|
 |[CMFCRibbonButton::GetIcon](#geticon)||
 |[CMFCRibbonButton::GetImageIndex](#getimageindex)|傳回與按鈕相關聯的映像索引。|
-|[CMFCRibbonButton::GetImageSize](#getimagesize)|傳回功能區項目的影像大小。 (覆寫[cmfcribbonbaseelement:: Getimagesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|
-|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。 (覆寫[cmfcribbonbaseelement:: Getintermediatesize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize)。)|
+|[CMFCRibbonButton::GetImageSize](#getimagesize)|傳回功能區項目的影像大小。 (覆寫[CMFCRibbonBaseElement:: GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize)。)|
+|[CMFCRibbonButton::GetIntermediateSize](#getintermediatesize)|傳回中繼狀態之功能區項目的大小。 (覆寫[CMFCRibbonBaseElement:: GetIntermediateSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getintermediatesize)。)|
 |[CMFCRibbonButton::GetMenu](#getmenu)|傳回已指派給功能區按鈕之 Windows 功能表的控制代碼。|
 |[CMFCRibbonButton::GetMenuRect](#getmenurect)||
-|[CMFCRibbonButton::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[cmfcribbonbaseelement:: Getregularsize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
+|[CMFCRibbonButton::GetRegularSize](#getregularsize)|傳回功能區項目的一般大小。 (覆寫[CMFCRibbonBaseElement:: GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize)。)|
 |[CMFCRibbonButton::GetSubItems](#getsubitems)||
 |[CMFCRibbonButton::GetTextRowHeight](#gettextrowheight)||
-|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|傳回功能區項目的工具提示文字。 (覆寫[cmfcribbonbaseelement:: Gettooltiptext](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext)。)|
-|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|指定功能區項目是否有精簡模式。 (覆寫[cmfcribbonbaseelement:: Hascompactmode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode)。)|
-|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|指定功能區項目是否有中繼模式。 (覆寫[cmfcribbonbaseelement:: Hasintermediatemode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode)。)|
-|[CMFCRibbonButton::HasLargeMode](#haslargemode)|指定功能區項目是否有大型模式。 (覆寫[cmfcribbonbaseelement:: Haslargemode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode)。)|
-|[CMFCRibbonButton::HasMenu](#hasmenu)|(覆寫[cmfcribbonbaseelement:: Hasmenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu)。)|
+|[CMFCRibbonButton::GetToolTipText](#gettooltiptext)|傳回功能區項目的工具提示文字。 (覆寫[CMFCRibbonBaseElement:: GetToolTipText](../../mfc/reference/cmfcribbonbaseelement-class.md#gettooltiptext)。)|
+|[CMFCRibbonButton::HasCompactMode](#hascompactmode)|指定功能區項目是否有精簡模式。 (覆寫[CMFCRibbonBaseElement:: HasCompactMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hascompactmode)。)|
+|[CMFCRibbonButton::HasIntermediateMode](#hasintermediatemode)|指定功能區項目是否有中繼模式。 (覆寫[CMFCRibbonBaseElement:: HasIntermediateMode](../../mfc/reference/cmfcribbonbaseelement-class.md#hasintermediatemode)。)|
+|[CMFCRibbonButton::HasLargeMode](#haslargemode)|指定功能區項目是否有大型模式。 (覆寫[CMFCRibbonBaseElement:: HasLargeMode](../../mfc/reference/cmfcribbonbaseelement-class.md#haslargemode)。)|
+|[CMFCRibbonButton::HasMenu](#hasmenu)|(覆寫[CMFCRibbonBaseElement:: HasMenu](../../mfc/reference/cmfcribbonbaseelement-class.md#hasmenu)。)|
 |[CMFCRibbonButton::IsAlwaysDrawBorder](#isalwaysdrawborder)||
-|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(覆寫[cmfcribbonbaseelement:: Isalwayslargeimage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage)。)|
+|[CMFCRibbonButton::IsAlwaysLargeImage](#isalwayslargeimage)|(覆寫[CMFCRibbonBaseElement:: IsAlwaysLargeImage](../../mfc/reference/cmfcribbonbaseelement-class.md#isalwayslargeimage)。)|
 |[CMFCRibbonButton::IsApplicationButton](#isapplicationbutton)||
 |[CMFCRibbonButton::IsCommandAreaHighlighted](#iscommandareahighlighted)||
 |[CMFCRibbonButton::IsDefaultCommand](#isdefaultcommand)|判定您是否已啟用功能區按鈕的預設命令。|
@@ -182,25 +182,25 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 |[CMFCRibbonButton::IsPopupDefaultMenuLook](#ispopupdefaultmenulook)||
 |[CMFCRibbonButton::IsRightAlignMenu](#isrightalignmenu)|判定功能表是否靠右對齊。|
 |[CMFCRibbonButton::IsSingleLineText](#issinglelinetext)||
-|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(覆寫[cmfcribbonbaseelement:: Oncalctextsize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize)。)|
+|[CMFCRibbonButton::OnCalcTextSize](#oncalctextsize)|(覆寫[CMFCRibbonBaseElement:: OnCalcTextSize](../../mfc/reference/cmfcribbonbaseelement-class.md#oncalctextsize)。)|
 |[CMFCRibbonButton::OnDrawBorder](#ondrawborder)||
-|[CMFCRibbonButton::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[cmfcribbonbaseelement:: Ondraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
+|[CMFCRibbonButton::OnDraw](#ondraw)|由架構呼叫以繪製功能區項目。 (覆寫[CMFCRibbonBaseElement:: OnDraw](../../mfc/reference/cmfcribbonbaseelement-class.md#ondraw)。)|
 |[CMFCRibbonButton::OnFillBackground](#onfillbackground)||
 |[CMFCRibbonButton::RemoveAllSubItems](#removeallsubitems)|從快顯功能表中移除所有功能表項目。|
 |[CMFCRibbonButton::RemoveSubItem](#removesubitem)|從快顯功能表中移除功能表項目。|
-|[CMFCRibbonButton::SetACCData](#setaccdata)|(覆寫[cmfcribbonbaseelement:: Setaccdata](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata)。)|
+|[CMFCRibbonButton::SetACCData](#setaccdata)|(覆寫[CMFCRibbonBaseElement:: SetACCData](../../mfc/reference/cmfcribbonbaseelement-class.md#setaccdata)。)|
 |[CMFCRibbonButton::SetAlwaysLargeImage](#setalwayslargeimage)|指定使用者摺疊按鈕時，按鈕是顯示大型影像還是小型影像。|
 |[CMFCRibbonButton::SetDefaultCommand](#setdefaultcommand)|啟用功能區按鈕的預設命令。|
-|[CMFCRibbonButton::SetDescription](#setdescription)|設定功能區項目的描述。 (覆寫[cmfcribbonbaseelement:: Setdescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription)。)|
+|[CMFCRibbonButton::SetDescription](#setdescription)|設定功能區項目的描述。 (覆寫[CMFCRibbonBaseElement:: SetDescription](../../mfc/reference/cmfcribbonbaseelement-class.md#setdescription)。)|
 |[CMFCRibbonButton::SetImageIndex](#setimageindex)|將索引指派給按鈕的影像。|
 |[CMFCRibbonButton::SetMenu](#setmenu)|將快顯功能表上指派給功能區按鈕。|
-|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(覆寫[cmfcribbonbaseelement:: Setparentcategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|
+|[CMFCRibbonButton::SetParentCategory](#setparentcategory)|(覆寫[CMFCRibbonBaseElement:: SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory)。)|
 |[CMFCRibbonButton::SetRightAlignMenu](#setrightalignmenu)|將快顯功能表對齊按鈕右邊。|
-|[CMFCRibbonButton::SetText](#settext)|設定功能區項目的文字。 (覆寫[cmfcribbonbaseelement:: Settext](../../mfc/reference/cmfcribbonbaseelement-class.md#settext)。)|
+|[CMFCRibbonButton::SetText](#settext)|設定功能區項目的文字。 (覆寫[CMFCRibbonBaseElement:: SetText](../../mfc/reference/cmfcribbonbaseelement-class.md#settext)。)|
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMFCRibbonButton::OnClick](#onclick)|使用者按一下按鈕時由架構呼叫。|
 
@@ -212,9 +212,9 @@ class CMFCRibbonButton : public CMFCRibbonBaseElement
 
 ## <a name="remarks"></a>備註
 
-若要使用功能區按鈕的應用程式中，建構按鈕物件並將它新增至適當的功能區[面板](../../mfc/reference/cmfcribbonpanel-class.md)。
+若要在應用程式中使用功能區按鈕, 請建立按鈕物件, 並將它新增至適當的功能區[面板](../../mfc/reference/cmfcribbonpanel-class.md)。
 
-```
+```cpp
 CMFCRibbonPanel* pPanel = pCategory->AddPanel (
     _T("Clipboard"), // Panel name
     m_PanelIcons.ExtractIcon (0)); // Panel icon
@@ -246,7 +246,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 **標頭：** afxribbonbutton.h
 
-##  <a name="addsubitem"></a>  CMFCRibbonButton::AddSubItem
+##  <a name="addsubitem"></a>CMFCRibbonButton:: AddSubItem
 
 將功能表項目加入至與按鈕相關聯的快顯功能表。
 
@@ -259,12 +259,12 @@ void AddSubItem(
 ### <a name="parameters"></a>參數
 
 *pSubItem*<br/>
-[in]指定要加入的新元素的指標。
+在指定要加入之新元素的指標。
 
 *nIndex*<br/>
-[in]指定要加入的按鈕，功能表項目的陣列中的項目索引若要加入功能表項目的陣列結尾處的項目為-1。
+在指定要將專案加入按鈕之功能表項目陣列的索引。-1, 在功能表項目的陣列結尾加入元素。
 
-##  <a name="canbestretched"></a>  CMFCRibbonButton::CanBeStretched
+##  <a name="canbestretched"></a>CMFCRibbonButton:: CanBeStretched
 
 ```
 virtual BOOL CanBeStretched();
@@ -274,7 +274,7 @@ virtual BOOL CanBeStretched();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cleanupsizes"></a>  CMFCRibbonButton::CleanUpSizes
+##  <a name="cleanupsizes"></a>CMFCRibbonButton:: CleanUpSizes
 
 ```
 virtual void CleanUpSizes();
@@ -282,7 +282,7 @@ virtual void CleanUpSizes();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="closepopupmenu"></a>  CMFCRibbonButton::ClosePopupMenu
+##  <a name="closepopupmenu"></a>CMFCRibbonButton:: ClosePopupMenu
 
 ```
 virtual void ClosePopupMenu();
@@ -290,7 +290,7 @@ virtual void ClosePopupMenu();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cmfcribbonbutton"></a>  CMFCRibbonButton::CMFCRibbonButton
+##  <a name="cmfcribbonbutton"></a>CMFCRibbonButton:: CMFCRibbonButton
 
 建構功能區按鈕物件。
 
@@ -315,27 +315,27 @@ CMFCRibbonButton(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-[in]指定按鈕的命令識別碼。
+在指定按鈕的命令 ID。
 
 *lpszText*<br/>
-[in]指定按鈕的文字標籤。
+在指定按鈕的文字標籤。
 
 *nSmallImageIndex*<br/>
-[in]影像清單中的父類別指定按鈕的小型影像的以零為起始索引。
+在在父類別目錄的影像清單中, 指定按鈕的小型影像之以零為基底的索引。
 
 *nLargeImageIndex*<br/>
-[in]影像清單中的父類別指定按鈕的大型影像的以零為起始索引。
+在在父類別目錄的影像清單中, 指定按鈕的大型影像之以零為基底的索引。
 
 *hIcon*<br/>
-[in]指定應用程式做為按鈕的影像之圖示的控制代碼。
+在指定應用程式用來作為按鈕影像之圖示的控制碼。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何建構`CMFCRibbonButton`物件。
+下列範例示範如何建立`CMFCRibbonButton`物件。
 
 [!code-cpp[NVC_MFC_RibbonApp#6](../../mfc/reference/codesnippet/cpp/cmfcribbonbutton-class_2.cpp)]
 
-##  <a name="drawbottomtext"></a>  CMFCRibbonButton::DrawBottomText
+##  <a name="drawbottomtext"></a>CMFCRibbonButton::D rawBottomText
 
 ```
 CSize DrawBottomText(
@@ -346,7 +346,7 @@ CSize DrawBottomText(
 ### <a name="parameters"></a>參數
 
 [in] *pDC*<br/>
-[in] *bCalcOnly*<br/>
+在*bCalcOnly*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -365,7 +365,7 @@ virtual void DrawImage(
 
 [in] *pDC*<br/>
 [in] *type*<br/>
-[in] *rectImage*<br/>
+在*rectImage*<br/>
 
 ### <a name="remarks"></a>備註
 
@@ -383,16 +383,16 @@ virtual int DrawRibbonText(
 ### <a name="parameters"></a>參數
 
 [in] *pDC*<br/>
-[in] *strText*<br/>
-[in] *rectText*<br/>
-[in] *uiDTFlags*<br/>
-[in] *clrText*<br/>
+在*strText*<br/>
+在*rectText*<br/>
+在*uiDTFlags*<br/>
+在*clrText*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findsubitemindexbyid"></a>  CMFCRibbonButton::FindSubItemIndexByID
+##  <a name="findsubitemindexbyid"></a>CMFCRibbonButton:: FindSubItemIndexByID
 
 傳回與指定之命令識別碼相關聯的快顯功能表項目索引。
 
@@ -403,13 +403,13 @@ int FindSubItemIndexByID(UINT uiID) const;
 ### <a name="parameters"></a>參數
 
 *uiID*<br/>
-[in]指定命令識別碼的快顯功能表項目。
+在指定快顯功能表項的命令識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-以零起始的索引子相關聯的項目的*uiID*。 如果沒有這類子項目，為-1。
+與*uiID*相關聯之子專案的以零為基底的索引。 如果沒有這類子專案, 則為-1。
 
-##  <a name="getcommandrect"></a>  CMFCRibbonButton::GetCommandRect
+##  <a name="getcommandrect"></a>CMFCRibbonButton:: GetCommandRect
 
 ```
 CRect GetCommandRect() const;
@@ -433,7 +433,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="geticon"></a>  CMFCRibbonButton::GetIcon
+##  <a name="geticon"></a>CMFCRibbonButton:: GetIcon
 
 ```
 HICON GetIcon(BOOL bLargeIcon = TRUE) const;
@@ -441,13 +441,13 @@ HICON GetIcon(BOOL bLargeIcon = TRUE) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *bLargeIcon*<br/>
+在*bLargeIcon*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getimageindex"></a>  CMFCRibbonButton::GetImageIndex
+##  <a name="getimageindex"></a>CMFCRibbonButton:: GetImageIndex
 
 傳回與按鈕相關聯的映像索引。
 
@@ -458,13 +458,13 @@ int GetImageIndex(BOOL bLargeImage) const;
 ### <a name="parameters"></a>參數
 
 *bLargeImage*<br/>
-[in]如果為 TRUE，則傳回映像的索引包含大型的映像，映像清單中否則，會傳回包含小型的映像的映像清單中的影像索引。
+在若為 TRUE, 則傳回影像清單中包含大型影像的影像索引;否則, 會傳回影像清單中包含小型影像的影像索引。
 
 ### <a name="return-value"></a>傳回值
 
-相關聯的映像清單中的按鈕的影像索引。
+相關影像清單中按鈕影像的索引。
 
-##  <a name="getimagesize"></a>  CMFCRibbonButton::GetImageSize
+##  <a name="getimagesize"></a>CMFCRibbonButton:: GetImageSize
 
 ```
 virtual CSize GetImageSize(RibbonImageType type) const;
@@ -478,7 +478,7 @@ virtual CSize GetImageSize(RibbonImageType type) const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getintermediatesize"></a>  CMFCRibbonButton::GetIntermediateSize
+##  <a name="getintermediatesize"></a>CMFCRibbonButton:: GetIntermediateSize
 
 ```
 virtual CSize GetIntermediateSize(CDC* pDC);
@@ -492,7 +492,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getmenu"></a>  CMFCRibbonButton::GetMenu
+##  <a name="getmenu"></a>CMFCRibbonButton:: GetMenu
 
 傳回已指派給功能區按鈕之 Windows 功能表的控制代碼。
 
@@ -502,9 +502,9 @@ HMENU GetMenu() const;
 
 ### <a name="return-value"></a>傳回值
 
-指派給按鈕; Windows 功能表控制代碼如果不沒有指派任何功能表，則為 NULL。
+指派給按鈕之 Windows 功能表的控制碼;如果沒有指派功能表, 則為 Null。
 
-##  <a name="getmenurect"></a>  CMFCRibbonButton::GetMenuRect
+##  <a name="getmenurect"></a>CMFCRibbonButton:: GetMenuRect
 
 ```
 CRect GetMenuRect() const;
@@ -514,7 +514,7 @@ CRect GetMenuRect() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getregularsize"></a>  CMFCRibbonButton::GetRegularSize
+##  <a name="getregularsize"></a>CMFCRibbonButton:: GetRegularSize
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -528,7 +528,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsubitems"></a>  CMFCRibbonButton::GetSubItems
+##  <a name="getsubitems"></a>CMFCRibbonButton:: GetSubItems
 
 ```
 const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() const;
@@ -538,7 +538,7 @@ const CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& GetSubItems() cons
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettextrowheight"></a>  CMFCRibbonButton::GetTextRowHeight
+##  <a name="gettextrowheight"></a>CMFCRibbonButton:: GetTextRowHeight
 
 ```
 int GetTextRowHeight() const;
@@ -548,7 +548,7 @@ int GetTextRowHeight() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonButton::GetToolTipText
+##  <a name="gettooltiptext"></a>CMFCRibbonButton:: GetToolTipText
 
 ```
 virtual CString GetToolTipText() const;
@@ -558,7 +558,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hascompactmode"></a>  CMFCRibbonButton::HasCompactMode
+##  <a name="hascompactmode"></a>CMFCRibbonButton:: HasCompactMode
 
 ```
 virtual BOOL HasCompactMode() const;
@@ -568,7 +568,7 @@ virtual BOOL HasCompactMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasintermediatemode"></a>  CMFCRibbonButton::HasIntermediateMode
+##  <a name="hasintermediatemode"></a>CMFCRibbonButton:: HasIntermediateMode
 
 ```
 virtual BOOL HasIntermediateMode() const;
@@ -578,7 +578,7 @@ virtual BOOL HasIntermediateMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="haslargemode"></a>  CMFCRibbonButton::HasLargeMode
+##  <a name="haslargemode"></a>CMFCRibbonButton:: HasLargeMode
 
 ```
 virtual BOOL HasLargeMode() const;
@@ -588,7 +588,7 @@ virtual BOOL HasLargeMode() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasmenu"></a>  CMFCRibbonButton::HasMenu
+##  <a name="hasmenu"></a>CMFCRibbonButton:: HasMenu
 
 ```
 virtual BOOL HasMenu() const;
@@ -598,7 +598,7 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isalwaysdrawborder"></a>  CMFCRibbonButton::IsAlwaysDrawBorder
+##  <a name="isalwaysdrawborder"></a>CMFCRibbonButton:: IsAlwaysDrawBorder
 
 ```
 virtual BOOL IsAlwaysDrawBorder() const;
@@ -608,7 +608,7 @@ virtual BOOL IsAlwaysDrawBorder() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isalwayslargeimage"></a>  CMFCRibbonButton::IsAlwaysLargeImage
+##  <a name="isalwayslargeimage"></a>CMFCRibbonButton:: IsAlwaysLargeImage
 
 ```
 virtual BOOL IsAlwaysLargeImage() const;
@@ -628,7 +628,7 @@ virtual BOOL IsApplicationButton() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="iscommandareahighlighted"></a>  CMFCRibbonButton::IsCommandAreaHighlighted
+##  <a name="iscommandareahighlighted"></a>CMFCRibbonButton:: IsCommandAreaHighlighted
 
 ```
 virtual BOOL IsCommandAreaHighlighted() const;
@@ -638,7 +638,7 @@ virtual BOOL IsCommandAreaHighlighted() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdefaultcommand"></a>  CMFCRibbonButton::IsDefaultCommand
+##  <a name="isdefaultcommand"></a>CMFCRibbonButton:: IsDefaultCommand
 
 指定是否啟用功能區按鈕的預設命令。
 
@@ -648,9 +648,9 @@ BOOL IsDefaultCommand() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果您已啟用功能區按鈕; 的預設命令，則為 TRUE。FALSE 否則。
+如果您已啟用功能區按鈕的預設命令, 則為 TRUE;否則為 FALSE。
 
-##  <a name="isdefaultpanelbutton"></a>  CMFCRibbonButton::IsDefaultPanelButton
+##  <a name="isdefaultpanelbutton"></a>CMFCRibbonButton:: IsDefaultPanelButton
 
 ```
 virtual BOOL IsDefaultPanelButton() const;
@@ -670,7 +670,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="islargeimage"></a>  CMFCRibbonButton::IsLargeImage
+##  <a name="islargeimage"></a>CMFCRibbonButton:: IsLargeImage
 
 ```
 BOOL IsLargeImage() const;
@@ -680,7 +680,7 @@ BOOL IsLargeImage() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenuareahighlighted"></a>  CMFCRibbonButton::IsMenuAreaHighlighted
+##  <a name="ismenuareahighlighted"></a>CMFCRibbonButton:: IsMenuAreaHighlighted
 
 ```
 virtual BOOL IsMenuAreaHighlighted() const;
@@ -690,7 +690,7 @@ virtual BOOL IsMenuAreaHighlighted() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismenuonbottom"></a>  CMFCRibbonButton::IsMenuOnBottom
+##  <a name="ismenuonbottom"></a>CMFCRibbonButton:: IsMenuOnBottom
 
 ```
 BOOL IsMenuOnBottom() const;
@@ -710,7 +710,7 @@ virtual BOOL IsPopupDefaultMenuLook() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isrightalignmenu"></a>  CMFCRibbonButton::IsRightAlignMenu
+##  <a name="isrightalignmenu"></a>CMFCRibbonButton:: IsRightAlignMenu
 
 指定功能表是否靠右對齊。
 
@@ -720,9 +720,9 @@ BOOL IsRightAlignMenu() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果功能表是靠右對齊;，則為 TRUE。否則為 FALSE。
+如果功能表靠右對齊, 則為 TRUE;否則為 FALSE。
 
-##  <a name="issinglelinetext"></a>  CMFCRibbonButton::IsSingleLineText
+##  <a name="issinglelinetext"></a>CMFCRibbonButton:: IsSingleLineText
 
 ```
 BOOL IsSingleLineText() const;
@@ -744,7 +744,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onclick"></a>  CMFCRibbonButton::OnClick
+##  <a name="onclick"></a>CMFCRibbonButton:: OnClick
 
 使用者按一下按鈕時由架構呼叫。
 
@@ -755,11 +755,11 @@ virtual void OnClick(CPoint point);
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-[in]指定滑鼠點選的位置。
+在指定滑鼠點擊的位置。
 
 ### <a name="remarks"></a>備註
 
-如果您想要處理這個事件，請覆寫這個方法在衍生類別中。
+如果您想要處理這個事件, 請在衍生類別中覆寫這個方法。
 
 ##  <a name="ondraw"></a>  CMFCRibbonButton::OnDraw
 
@@ -773,7 +773,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondrawborder"></a>  CMFCRibbonButton::OnDrawBorder
+##  <a name="ondrawborder"></a>CMFCRibbonButton:: OnDrawBorder
 
 ```
 virtual void OnDrawBorder(CDC* pDC);
@@ -818,11 +818,11 @@ BOOL RemoveSubItem(int nIndex);
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定您想要移除功能表項目的以零為起始的索引。
+在指定您要移除之功能表項目的以零為起始的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果已順利移除指定的項目，則為 TRUE。否則為 FALSE 的 if *nIndex*是負數，或超過快顯功能表中功能表項目數目。
+如果已成功移除指定的專案, 則為 TRUE;如果*nIndex*為負數, 或超過快顯功能表中的功能表項目數目, 則為 FALSE。
 
 ##  <a name="setaccdata"></a>  CMFCRibbonButton::SetACCData
 
@@ -844,11 +844,11 @@ virtual BOOL SetACCData(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 TRUE否則為 FALSE。
+如果成功, 則傳回 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setalwayslargeimage"></a>  CMFCRibbonButton::SetAlwaysLargeImage
+##  <a name="setalwayslargeimage"></a>CMFCRibbonButton:: SetAlwaysLargeImage
 
 指定使用者摺疊按鈕時，按鈕是顯示大型影像還是小型影像。
 
@@ -859,9 +859,9 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-[in]如果為 TRUE，按鈕會顯示大型影像。 否則，按鈕會顯示小型影像。
+在若為 TRUE, 則按鈕會顯示大型影像。 否則, 按鈕會顯示小型影像。
 
-##  <a name="setdefaultcommand"></a>  CMFCRibbonButton::SetDefaultCommand
+##  <a name="setdefaultcommand"></a>CMFCRibbonButton:: SetDefaultCommand
 
 啟用功能區按鈕的預設命令。
 
@@ -872,13 +872,13 @@ void SetDefaultCommand(BOOL bSet=TRUE);
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-[in]如果為 TRUE，按鈕可以執行其預設的命令。 如果為 FALSE，則按鈕無法執行其預設的命令。
+在若為 TRUE, 則按鈕可以執行其預設命令。 如果為 FALSE, 則按鈕無法執行其預設命令。
 
 ### <a name="remarks"></a>備註
 
-*bSet*無關僅當按鈕的功能表。 如果*bSet*為 TRUE，按鈕可以執行其預設命令而指派的快顯功能表會顯示只有當使用者按一下按鈕右邊的箭號時，才。 否則，按鈕無法執行其預設的命令，而快顯功能表會出現在使用者按一下不論哪一個區域中按鈕。
+只有當按鈕具有功能表時, *bSet*才會相關。 如果*bSet*為 TRUE, 則按鈕可以執行其預設命令, 而且只有在使用者按一下按鈕右邊緣的箭號時, 才會顯示指派的快顯功能表。 否則, 按鈕無法執行其預設命令, 而不論使用者按一下按鈕的哪個區域, 都會出現快顯功能表。
 
-##  <a name="setdescription"></a>  CMFCRibbonButton::SetDescription
+##  <a name="setdescription"></a>CMFCRibbonButton:: SetDescription
 
 ```
 virtual void SetDescription(LPCTSTR lpszText);
@@ -890,7 +890,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setimageindex"></a>  CMFCRibbonButton::SetImageIndex
+##  <a name="setimageindex"></a>CMFCRibbonButton:: SetImageIndex
 
 將索引指派給按鈕的影像。
 
@@ -903,12 +903,12 @@ void SetImageIndex(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-[in]指定的影像索引。
+在指定影像索引。
 
 *bLargeImage*<br/>
-[in]如果為 TRUE，指定的索引是指大型映像清單。 否則，索引是指的小型影像清單。
+在若為 TRUE, 指定的索引會參考大型影像的清單。 否則, 索引會參考小型影像的清單。
 
-##  <a name="setmenu"></a>  CMFCRibbonButton::SetMenu
+##  <a name="setmenu"></a>CMFCRibbonButton:: SetMenu
 
 將快顯功能表上指派給功能區按鈕。
 
@@ -927,22 +927,22 @@ void SetMenu(
 ### <a name="parameters"></a>參數
 
 *hMenu*<br/>
-Windows 功能表控制代碼。
+Windows 功能表的控制碼。
 
 *bIsDefaultCommand*<br/>
-如果為 TRUE，按鈕可以執行其預設的命令;否則，按鈕會顯示快顯功能表。
+若為 TRUE, 則按鈕可以執行其預設命令;否則, 按鈕會顯示快顯功能表。
 
 *bRightAlign*<br/>
-如果為 TRUE，功能表會靠右對齊。 否則，功能表會靠左對齊。
+若為 TRUE, 則功能表靠右對齊。 否則, 功能表會靠左對齊。
 
 *uiMenuResID*<br/>
 功能表資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-當應用程式會指派給按鈕的功能表時，按鈕會顯示箭號右側。 如果*bIsDefaultCommand*為 TRUE 時，只有當使用者按一下箭號時，才會出現的功能表。 如果使用者按一下按鈕時，它會執行預設命令。 如果*bIsDefaultCommand*為 FALSE 時，在功能表顯示的任何位置按一下這個按鈕。
+當應用程式將功能表指派給按鈕時, 按鈕會在右側顯示箭號。 如果*bIsDefaultCommand*為 TRUE, 則只有在使用者按一下箭號時, 才會顯示功能表。 如果使用者按一下按鈕, 就會執行其預設命令。 如果*bIsDefaultCommand*為 FALSE, 按一下按鈕上的任何位置, 就會顯示功能表。
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButton::SetParentCategory
+##  <a name="setparentcategory"></a>CMFCRibbonButton:: SetParentCategory
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pParent);
@@ -954,9 +954,9 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setrightalignmenu"></a>  CMFCRibbonButton::SetRightAlignMenu
+##  <a name="setrightalignmenu"></a>CMFCRibbonButton:: SetRightAlignMenu
 
-對齊按鈕的邊緣快顯功能表。
+將快顯功能表對齊按鈕的邊緣。
 
 ```
 void SetRightAlignMenu(BOOL bSet=TRUE);
@@ -965,9 +965,9 @@ void SetRightAlignMenu(BOOL bSet=TRUE);
 ### <a name="parameters"></a>參數
 
 *bSet*<br/>
-[in]如果為 TRUE，功能表會靠右對齊。 否則，功能表是靠左對齊
+在若為 TRUE, 則功能表靠右對齊。 否則, 功能表會靠左對齊
 
-##  <a name="settext"></a>  CMFCRibbonButton::SetText
+##  <a name="settext"></a>CMFCRibbonButton:: SetText
 
 ```
 virtual void SetText(LPCTSTR lpszText);

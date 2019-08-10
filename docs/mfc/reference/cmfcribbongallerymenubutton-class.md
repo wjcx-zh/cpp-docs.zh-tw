@@ -18,17 +18,17 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: b63eab7c1e4d03a9103795892603b819eb7d02f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ec295fa64b835064435992a398d4292ccf26f38
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236930"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866180"
 ---
 # <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton 類別
 
 實作包含功能區組件庫的功能區功能表按鈕。
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +40,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|建構並初始化 `CMFCRibbonGalleryMenuButton` 物件。|
 
@@ -48,11 +48,11 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(覆寫[cmfctoolbarmenubutton:: Copyfrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom)。)|
-|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(覆寫[cmfctoolbarmenubutton:: Createpopupmenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu)。)|
+|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(覆寫[CMFCToolBarMenuButton:: CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom)。)|
+|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(覆寫[CMFCToolBarMenuButton:: CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu)。)|
 |[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||
 |[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|(覆寫 `CMFCToolBarMenuButton::HasButton`。)|
-|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(覆寫[cmfctoolbarmenubutton:: Isemptymenuallowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed)。)|
+|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(覆寫[CMFCToolBarMenuButton:: IsEmptyMenuAllowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed)。)|
 
 ### <a name="remarks"></a>備註
 
@@ -62,40 +62,42 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 下列範例示範如何顯示功能表按鈕中項目符號的組件庫：
 
-```
+```cpp
 BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)
 {
     int nBulletIndex = pMenuBar->CommandToIndex (ID_PARA_BULLETS);
 
     if (nBulletIndex>= 0)
-{
-    CMFCToolBarButton* pExButton =
-    pMenuBar->GetButton(nBulletIndex);
-ASSERT_VALID (pExButton);
+    {
+        CMFCToolBarButton* pExButton =
+        pMenuBar->GetButton(nBulletIndex);
+        ASSERT_VALID (pExButton);
 
-    CMFCRibbonGalleryMenuButton paletteBullet (
-    pExButton->m_nID,
-    pExButton->GetImage (),
-    pExButton->m_strText);
+        CMFCRibbonGalleryMenuButton paletteBullet (
+        pExButton->m_nID,
+        pExButton->GetImage (),
+        pExButton->m_strText);
 
-InitBulletPalette (&paletteBullet.GetPalette ());
+        InitBulletPalette (&paletteBullet.GetPalette ());
 
-    pMenuBar->ReplaceButton (ID_PARA_BULLETS,
-    paletteBullet);
-
-}
+        pMenuBar->ReplaceButton (ID_PARA_BULLETS,
+        paletteBullet);
+    }
 }
 ```
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp; [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp; [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxRibbonPaletteGallery.h
+**標頭:** afxribbonpalettegallery.h。h
 
-##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom
+##  <a name="copyfrom"></a>CMFCRibbonGalleryMenuButton:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -107,9 +109,9 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
+##  <a name="cmfcribbongallerymenubutton"></a>CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
 
-建構並初始化[CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)物件。
+建立[CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)物件的結構並加以初始化。
 
 ```
 CMFCRibbonGalleryMenuButton(
@@ -129,30 +131,30 @@ CMFCRibbonGalleryMenuButton(
 ### <a name="parameters"></a>參數
 
 *uiID*<br/>
-按鈕的命令識別碼。 這是當使用者按一下此按鈕傳送 WM_COMMAND 訊息中的值。
+按鈕的命令 ID。 這是使用者按一下此按鈕時, 在 WM_COMMAND 訊息中傳送的值。
 
 *iImage*<br/>
-要與組件庫功能表按鈕一起顯示之影像的索引。 影像會儲存在*imagesPalette*參數。
+要與圖庫功能表按鈕一起顯示之影像的索引。 影像會儲存在*imagesPalette*參數中。
 
 *lpszText*<br/>
-要顯示的功能表按鈕上的文字。
+要顯示在功能表按鈕上的文字。
 
 *imagesPalette*<br/>
-包含要顯示在資源庫上的映像清單。
+包含要顯示在資源庫上的影像清單。
 
 *uiImagesPaletteResID*<br/>
-要顯示在資源庫映像的映像清單的資源識別碼。
+要顯示在圖庫上之影像的影像清單資源識別碼。
 
 *cxPaletteImage*<br/>
-指定像素為單位的資源庫上顯示影像的寬度。
+指定要在圖庫上顯示之影像的寬度 (以圖元為單位)。
 
 ### <a name="remarks"></a>備註
 
-組件庫功能表按鈕會顯示為快顯功能表有個箭號。 當使用者按一下此按鈕時，會顯示影像庫。
+[主機庫] 功能表按鈕會顯示為具有箭號的快顯功能表。 當使用者按一下此按鈕時，會顯示影像庫。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用的建構函式`CMFCRibbonGalleryMenuButton`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`CMFCRibbonGalleryMenuButton`類別的函式。 此程式碼片段是[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
 
@@ -166,7 +168,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette
+##  <a name="getpalette"></a>CMFCRibbonGalleryMenuButton::GetPalette
 
 ```
 CMFCRibbonGallery& GetPalette();
@@ -176,7 +178,7 @@ CMFCRibbonGallery& GetPalette();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hasbutton"></a>  CMFCRibbonGalleryMenuButton::HasButton
+##  <a name="hasbutton"></a>CMFCRibbonGalleryMenuButton::HasButton
 
 ```
 virtual BOOL HasButton() const;
@@ -186,7 +188,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
+##  <a name="isemptymenuallowed"></a>CMFCRibbonGalleryMenuButton:: IsEmptyMenuAllowed
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: a66597f7a43e0730ae8b32369235ac860f51a0f1
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: ccf7445100977e1205bbcffe230e1919ac33adea
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68375851"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916146"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -115,7 +115,7 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|`CEdit`結構控制物件。|
 
@@ -1098,7 +1098,7 @@ void SetHighlight(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ichStart*|在要反白顯示的文字範圍中第一個字元之以零為起始的索引。|
 |*ichEnd*|在要反白顯示的文字範圍中, 最後一個字元的索引 (以零為基底)。|
@@ -1205,7 +1205,7 @@ void SetPasswordChar(TCHAR ch);
 
 這個成員函式對多行編輯控制項沒有任何作用。
 
-呼叫成員函式時, `CEdit`會使用 ch 指定的字元來重繪所有可見字元。  `SetPasswordChar`
+呼叫成員函式時, `CEdit`會使用 ch 指定的字元來重繪所有可見字元。 `SetPasswordChar`
 
 如果編輯控制項是使用[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)樣式所建立, 則預設密碼字元會設定為星號 ( <strong>\*</strong>)。 如果`SetPasswordChar`使用設定為0的*ch*呼叫, 則會移除此樣式。
 
@@ -1400,10 +1400,10 @@ BOOL ShowBalloonTip(
 
 |參數|說明|
 |---------------|-----------------|
-|*pEditBalloonTip*|在描述氣球提示之[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)結構的指標。|
+|*pEditBalloonTip*|在描述氣球提示之[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)結構的指標。|
 |*lpszTitle*|在Unicode 字串的指標, 其中包含氣球提示的標題。|
 |*lpszText*|在包含氣球提示文字之 Unicode 字串的指標。|
-|*ttiIcon*|在**INT** , 指定要與氣球提示相關聯的圖示類型。 預設值為 TTI_NONE。 如需詳細資訊, 請`ttiIcon`參閱[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)結構的成員。|
+|*ttiIcon*|在**INT** , 指定要與氣球提示相關聯的圖示類型。 預設值為 TTI_NONE。 如需詳細資訊, 請`ttiIcon`參閱[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-editballoontip)結構的成員。|
 
 ### <a name="return-value"></a>傳回值
 

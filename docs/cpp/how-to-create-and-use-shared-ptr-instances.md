@@ -4,14 +4,14 @@ ms.custom: how-to
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: ac6db74122383ef8adb0f208860a6f6fba02dcc7
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821690"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866141"
 ---
-# <a name="how-to-create-and-use-sharedptr-instances"></a>作法：建立及使用 shared_ptr 執行個體
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>HOW TO：建立及使用 shared_ptr 執行個體
 
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。
 
@@ -84,7 +84,7 @@ int main()
 
 ## <a name="example-3"></a>範例 3
 
-當您在 C++ 標準程式庫容器內使用會複製元素的演算法時，`shared_ptr` 也相當實用。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `replace_copy_if` 執行個體上運用 `shared_ptr` 演算法。
+當您在 C++ 標準程式庫容器內使用會複製元素的演算法時，`shared_ptr` 也相當實用。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `remove_copy_if` 執行個體上運用 `shared_ptr` 演算法。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 

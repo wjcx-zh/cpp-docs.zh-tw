@@ -21,19 +21,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277977"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915692"
 ---
 # <a name="csid-class"></a>CSid 類別
 
-這個類別是包裝函式`SID`（安全性識別碼） 結構。
+這個類別是`SID` (安全識別碼) 結構的包裝函式。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -60,52 +60,52 @@ class CSid
 
 |名稱|描述|
 |----------|-----------------|
-|[CSid::AccountName](#accountname)|傳回與相關聯的帳戶名稱`CSid`物件。|
-|[CSid::Domain](#domain)|傳回與相關聯的網域名稱`CSid`物件。|
-|[CSid::EqualPrefix](#equalprefix)|測試`SID`是否相等的 （安全性識別碼） 前置詞。|
-|[CSid::GetLength](#getlength)|傳回的長度`CSid`物件。|
-|[CSid::GetPSID](#getpsid)|將指標傳回至`SID`結構。|
-|[CSid::GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|將指標傳回至`SID_IDENTIFIER_AUTHORITY`結構。|
-|[CSid::GetSubAuthority](#getsubauthority)|傳回在指定的局部授權`SID`結構。|
-|[CSid::GetSubAuthorityCount](#getsubauthoritycount)|傳回局部授權計數。|
-|[CSid::IsValid](#isvalid)|測試`CSid`有效性的物件。|
-|[CSid::LoadAccount](#loadaccount)|更新`CSid`指定的帳戶名稱和網域，或將現有的物件`SID`結構。|
-|[CSid::Sid](#sid)|傳回的識別碼字串。|
-|[CSid::SidNameUse](#sidnameuse)|傳回的狀態描述`CSid`物件。|
+|[CSid::AccountName](#accountname)|傳回與`CSid`物件相關聯之帳戶的名稱。|
+|[CSid::Domain](#domain)|傳回與`CSid`物件相關聯之網域的名稱。|
+|[CSid::EqualPrefix](#equalprefix)|相等`SID`的測試 (安全識別碼) 首碼。|
+|[CSid::GetLength](#getlength)|傳回`CSid`物件的長度。|
+|[CSid::GetPSID](#getpsid)|傳回`SID`結構的指標。|
+|[CSid::GetPSID_IDENTIFIER_AUTHORITY](#getpsid_identifier_authority)|傳回結構的`SID_IDENTIFIER_AUTHORITY`指標。|
+|[CSid::GetSubAuthority](#getsubauthority)|傳回`SID`結構中的指定 subauthority。|
+|[CSid::GetSubAuthorityCount](#getsubauthoritycount)|傳回 subauthority 計數。|
+|[CSid::IsValid](#isvalid)|`CSid`測試物件的有效性。|
+|[CSid::LoadAccount](#loadaccount)|根據指定的帳號名稱和網域, 或現有`SID`的結構來更新物件。`CSid`|
+|[CSid::Sid](#sid)|傳回識別碼字串。|
+|[CSid::SidNameUse](#sidnameuse)|傳回`CSid`物件狀態的描述。|
 
 ### <a name="operators"></a>運算子
 
 |||
 |-|-|
 |[operator =](#operator_eq)|指派運算子。|
-|[運算子 const SID *](#operator_const_sid__star)|轉型`CSid`物件的指標`SID`結構。|
+|[operator const SID *](#operator_const_sid__star)|將物件轉換成`SID`結構的指標。 `CSid`|
 
 ### <a name="global-operators"></a>全域運算子
 
 |||
 |-|-|
-|[operator ==](#operator_eq_eq)|測試相等的兩個安全性描述元物件|
-|[operator !=](#operator_neq)|測試兩個安全性描述元物件不相等|
-|[運算子 \<](#operator_lt)|比較兩個安全性描述元物件的相對值。|
-|[operator >](#operator_gt)|比較兩個安全性描述元物件的相對值。|
-|[operator \<=](#operator_lt__eq)|比較兩個安全性描述元物件的相對值。|
-|[operator >=](#operator_gt__eq)|比較兩個安全性描述元物件的相對值。|
+|[operator ==](#operator_eq_eq)|測試兩個安全描述項物件是否相等|
+|[operator !=](#operator_neq)|測試兩個安全描述項物件是否不相等|
+|[操作\<](#operator_lt)|比較兩個安全描述項物件的相對值。|
+|[operator >](#operator_gt)|比較兩個安全描述項物件的相對值。|
+|[操作\<=](#operator_lt__eq)|比較兩個安全描述項物件的相對值。|
+|[operator >=](#operator_gt__eq)|比較兩個安全描述項物件的相對值。|
 
 ## <a name="remarks"></a>備註
 
 `SID`結構是用來唯一識別使用者或群組的可變長度結構。
 
-應用程式不應該修改`SID`結構是直接，但改為使用此包裝函式類別所提供的方法。 另請參閱[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)， [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)， [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)，以及[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。
+應用程式不應直接`SID`修改結構, 而是使用此包裝函式類別中提供的方法。 另請參閱[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)、 [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)、 [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)和[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。
 
-在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h
+**標頭:** atlsecurity。h
 
 ##  <a name="accountname"></a>  CSid::AccountName
 
-傳回與相關聯的帳戶名稱`CSid`物件。
+傳回與`CSid`物件相關聯之帳戶的名稱。
 
 ```
 LPCTSTR AccountName() const throw(...);
@@ -113,13 +113,13 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-傳回指向的帳戶名稱 LPCTSTR。
+傳回指向帳戶名稱的 LPCTSTR。
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果沒有帳戶名稱`SID`可以找到`AccountName`傳回空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 它也會發生的安全性識別元，但沒有對應的帳戶名稱，例如`SID`可識別登入工作階段。
+如果找不到的帳戶`SID`名稱, `AccountName`則會傳回空字串。 如果網路延遲阻止此方法尋找名稱, 就會發生這種情況。 不含對應帳戶名稱的安全識別碼 (例如`SID`識別登入會話的) 也會發生此錯誤。
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -147,28 +147,28 @@ explicit CSid(
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-將現有`CSid`物件或`SID`（安全性識別碼） 結構。
+現有`CSid`的物件或`SID` (安全識別碼) 結構。
 
 *IdentifierAuthority*<br/>
 授權單位。
 
 *nSubAuthorityCount*<br/>
-局部授權計數。
+Subauthority 計數。
 
 *pszAccountName*<br/>
 帳戶名稱。
 
 *pszSystem*<br/>
-系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串為 NULL，會改用本機系統。
+系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串是 Null, 則會改用本機系統。
 
 *pSid*<br/>
-指標`SID`結構。
+`SID`結構的指標。
 
 ### <a name="remarks"></a>備註
 
-建構函式初始化`CSid`物件，若要設定的內部資料成員*SidTypeInvalid*，或藉由將設定複製的現有`CSid`， `SID`，或現有的帳戶。
+此函式會`CSid`初始化物件、將內部資料成員設定為*SidTypeInvalid*, 或從現有`CSid`的、或現有的`SID`帳戶複製設定。
 
-如果初始化失敗，建構函式會擲回[CAtlException 類別](../../atl/reference/catlexception-class.md)。
+如果初始化失敗, 則此函式會擲回[CAtlException 類別](../../atl/reference/catlexception-class.md)。
 
 ##  <a name="dtor"></a>  CSid::~CSid
 
@@ -180,11 +180,11 @@ virtual ~CSid() throw();
 
 ### <a name="remarks"></a>備註
 
-解構函式會釋放物件所取得的任何資源。
+此析構函式會釋放物件所取得的任何資源。
 
 ##  <a name="csidarray"></a>  CSid::CSidArray
 
-陣列[CSid](../../atl/reference/csid-class.md)物件。
+[CSid](../../atl/reference/csid-class.md)物件的陣列。
 
 ```
 typedef CAtlArray<CSid> CSidArray;
@@ -192,11 +192,11 @@ typedef CAtlArray<CSid> CSidArray;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 指定可用來擷取 ACL （存取控制清單） 中的安全性識別碼的陣列類型。 請參閱[CAcl::GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)。
+這個 typedef 會指定可用來從 ACL (存取控制清單) 抓取安全識別碼的陣列類型。 請參閱[CAcl:: GetAclEntries](../../atl/reference/cacl-class.md#getaclentries)。
 
-##  <a name="domain"></a>  CSid::Domain
+##  <a name="domain"></a>CSid::D omain
 
-傳回與相關聯的網域名稱`CSid`物件。
+傳回與`CSid`物件相關聯之網域的名稱。
 
 ```
 LPCTSTR Domain() const throw(...);
@@ -204,17 +204,17 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-傳回`LPCTSTR`指向網域。
+傳回指向`LPCTSTR`網域的。
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試尋找指定的名稱`SID`（安全性識別碼）。 完整的詳細資訊，請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
 
-如果沒有帳戶名稱`SID`可以找到`Domain`傳回的網域為空字串。 如果網路逾時可防止此方法尋找名稱，也可能會發生。 它也會發生的安全性識別元，但沒有對應的帳戶名稱，例如`SID`可識別登入工作階段。
+如果找不到的`SID`帳戶名稱, `Domain`則會傳回網域做為空字串。 如果網路延遲阻止此方法尋找名稱, 就會發生這種情況。 不含對應帳戶名稱的安全識別碼 (例如`SID`識別登入會話的) 也會發生此錯誤。
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 
-測試`SID`是否相等的 （安全性識別碼） 前置詞。
+相等`SID`的測試 (安全識別碼) 首碼。
 
 ```
 bool EqualPrefix(const SID& rhs) const throw();
@@ -224,19 +224,19 @@ bool EqualPrefix(const CSid& rhs) const throw();
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`SID` （安全性識別碼） 的結構或`CSid`来比較的物件。
+要`SID`比較的 (安全識別碼) `CSid`結構或物件。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-請參閱[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid)在 Windows SDK 中，如需詳細資訊。
+如需詳細資訊, 請參閱 Windows SDK 中的[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
-傳回的長度`CSid`物件。
+傳回`CSid`物件的長度。
 
 ```
 UINT GetLength() const throw();
@@ -244,18 +244,18 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回的長度，以位元組為單位的`CSid`物件。
+傳回`CSid`物件的長度 (以位元組為單位)。
 
 ### <a name="remarks"></a>備註
 
-如果`CSid`結構無效，傳回的值為未定義。 然後再呼叫`GetLength`，使用[CSid::IsValid](#isvalid)成員函式來確認`CSid`有效。
+`CSid`如果結構無效, 則傳回值為未定義。 在呼叫`GetLength`之前, 請使用[CSid:: IsValid](#isvalid)成員函式來`CSid`確認是否有效。
 
 > [!NOTE]
->  在 偵錯組建中的函式會判斷提示，如果下`CSid`物件無效。
+>  在 debug build 底下, 如果`CSid`物件無效, 函式會造成判斷提示。
 
 ##  <a name="getpsid"></a>  CSid::GetPSID
 
-將指標傳回至`SID`（安全性識別碼） 結構。
+傳回`SID` (安全識別碼) 結構的指標。
 
 ```
 const SID* GetPSID() const throw(...);
@@ -263,11 +263,11 @@ const SID* GetPSID() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-傳回的位址`CSid`物件的基礎`SID`結構。
+傳回`CSid`物件基礎`SID`結構的位址。
 
 ##  <a name="getpsid_identifier_authority"></a>  CSid::GetPSID_IDENTIFIER_AUTHORITY
 
-將指標傳回至`SID_IDENTIFIER_AUTHORITY`結構。
+傳回結構的`SID_IDENTIFIER_AUTHORITY`指標。
 
 ```
 const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
@@ -275,14 +275,14 @@ const SID_IDENTIFIER_AUTHORITY* GetPSID_IDENTIFIER_AUTHORITY() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回的位址`SID_IDENTIFIER_AUTHORITY`結構。 如果失敗，則傳回的值會是未定義。 如果失敗可能會發生`CSid`物件不是有效的在此情況下[CSid::IsValid](#isvalid)方法會傳回 FALSE。 此函式`GetLastError`可以呼叫擴充的錯誤資訊。
+如果方法成功, 它會傳回`SID_IDENTIFIER_AUTHORITY`結構的位址。 如果失敗, 則傳回值為未定義。 如果`CSid`物件無效, 則可能會發生失敗, 在此情況下, [CSid:: IsValid](#isvalid)方法會傳回 FALSE。 可以針對`GetLastError`擴充的錯誤資訊呼叫函數。
 
 > [!NOTE]
->  在 偵錯組建中的函式會判斷提示，如果下`CSid`物件無效。
+>  在 debug build 底下, 如果`CSid`物件無效, 函式會造成判斷提示。
 
 ##  <a name="getsubauthority"></a>  CSid::GetSubAuthority
 
-傳回在指定的局部授權`SID`（安全性識別碼） 結構。
+傳回`SID` (安全識別碼) 結構中的指定 subauthority。
 
 ```
 DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
@@ -291,22 +291,22 @@ DWORD GetSubAuthority(DWORD nSubAuthority) const throw();
 ### <a name="parameters"></a>參數
 
 *nSubAuthority*<br/>
-局部授權。
+Subauthority。
 
 ### <a name="return-value"></a>傳回值
 
-傳回所參考的局部授權*nSubAuthority。* 局部授權值是相對識別碼 (RID)。
+傳回 NSubAuthority 所參考的 subauthority *。* Subauthority 值是相對識別碼 (RID)。
 
 ### <a name="remarks"></a>備註
 
-*NSubAuthority*參數會指定用來識別此方法會傳回局部授權陣列元素的索引值。 方法會執行沒有驗證測試，這個值。 應用程式可以呼叫[CSid::GetSubAuthorityCount](#getsubauthoritycount)來探索各種可接受的值。
+*NSubAuthority*參數會指定索引值, 以識別方法將傳回的 subauthority 陣列元素。 此方法不會對此值執行任何驗證測試。 應用程式可以呼叫[CSid:: GetSubAuthorityCount](#getsubauthoritycount)來探索可接受值的範圍。
 
 > [!NOTE]
->  在 偵錯組建中的函式會判斷提示，如果下`CSid`物件無效。
+>  在 debug build 底下, 如果`CSid`物件無效, 函式會造成判斷提示。
 
 ##  <a name="getsubauthoritycount"></a>  CSid::GetSubAuthorityCount
 
-傳回局部授權計數。
+傳回 subauthority 計數。
 
 ```
 UCHAR GetSubAuthorityCount() const throw();
@@ -314,16 +314,16 @@ UCHAR GetSubAuthorityCount() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則傳回的值會是局部授權計數。
+如果方法成功, 則傳回值為 subauthority 計數。
 
-如果方法失敗，則傳回的值會是未定義。 如果此方法會失敗`CSid`物件無效。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
+如果方法失敗, 則傳回值為未定義。 如果`CSid`物件無效, 方法會失敗。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
 
 > [!NOTE]
->  在 偵錯組建中的函式會判斷提示，如果下`CSid`物件無效。
+>  在 debug build 底下, 如果`CSid`物件無效, 函式會造成判斷提示。
 
 ##  <a name="isvalid"></a>  CSid::IsValid
 
-測試`CSid`有效性的物件。
+`CSid`測試物件的有效性。
 
 ```
 bool IsValid() const throw();
@@ -331,15 +331,15 @@ bool IsValid() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果為 true`CSid`物件是否有效，FALSE 如果不是。 沒有任何擴充的錯誤資訊，此方法;請勿呼叫`GetLastError`。
+如果`CSid`物件有效, 則傳回 TRUE, 否則傳回 FALSE。 這個方法沒有任何擴充的錯誤資訊;請勿呼叫`GetLastError`。
 
 ### <a name="remarks"></a>備註
 
-`IsValid`方法會驗證`CSid`驗證修訂編號是已知的範圍內，而且 subauthorities 數目小於最大值的物件。
+`IsValid` 方法`CSid`驗證物件的方式是確認修訂編號在已知的範圍內, 而且 subauthorities 的數目小於最大值。
 
-##  <a name="loadaccount"></a>  CSid::LoadAccount
+##  <a name="loadaccount"></a>CSid:: LoadAccount
 
-更新`CSid`物件指定的帳戶名稱和網域或現有 SID （安全性識別碼） 結構。
+根據指定的帳號名稱和網域, 或現有的 SID (安全識別碼) 結構, 更新物件。`CSid`
 
 ```
 bool LoadAccount(
@@ -357,20 +357,20 @@ bool LoadAccount(
 帳戶名稱。
 
 *pszSystem*<br/>
-系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串為 NULL，會改用本機系統。
+系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串是 Null, 則會改用本機系統。
 
 *pSid*<br/>
-指標[SID](/windows/desktop/api/winnt/ns-winnt-_sid)結構。
+[SID](/windows/desktop/api/winnt/ns-winnt-sid)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
+成功時傳回 TRUE, 失敗時傳回 FALSE。 若要取得延伸錯誤資訊，請呼叫 `GetLastError`。
 
 ### <a name="remarks"></a>備註
 
-`LoadAccount` 嘗試尋找指定之名稱的安全性識別碼。 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)如需詳細資訊。
+`LoadAccount`嘗試尋找指定名稱的安全識別碼。 如需詳細資訊, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) 。
 
-##  <a name="operator_eq"></a>  CSid::operator =
+##  <a name="operator_eq"></a>CSid:: operator =
 
 指派運算子。
 
@@ -382,15 +382,15 @@ CSid& operator= (const SID& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`若要指派給`CSid`物件。
+(安全識別碼), 或`CSid`指派`CSid`給物件。 `SID`
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新的參考`CSid`物件。
+傳回已更新`CSid`物件的參考。
 
-##  <a name="operator_eq_eq"></a>  CSid::operator = =
+##  <a name="operator_eq_eq"></a>CSid:: operator = =
 
-測試相等的兩個安全性描述元物件。
+測試兩個安全描述項物件是否相等。
 
 ```
 bool operator==(
@@ -401,18 +401,18 @@ bool operator==(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 = = 運算子。
+(安全識別碼), 或`CSid`出現在 = = 運算子的左邊。 `SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右側 = = 運算子。
+(安全識別碼), 或`CSid`出現在 = = 運算子右邊的。 `SID`
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元相等，否則為 FALSE，則為 TRUE。
+如果安全描述項相等, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_neq"></a>  CSid::operator ！ =
+##  <a name="operator_neq"></a>CSid:: operator! =
 
-測試兩個安全性描述元物件不相等。
+測試兩個安全描述項物件是否不相等。
 
 ```
 bool operator!=(
@@ -423,18 +423,18 @@ bool operator!=(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
+出現在! = 運算子左邊`CSid`的(安全識別碼)或。`SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
+出現在! = 運算子右邊`CSid`的(安全識別碼)。`SID`
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元不相等，否則為 FALSE，則為 TRUE。
+如果安全描述項不相等, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_lt"></a>  CSid::operator &lt;
+##  <a name="operator_lt"></a>CSid:: operator&lt;
 
-比較兩個安全性描述元物件的相對值。
+比較兩個安全描述項物件的相對值。
 
 ```
 bool operator<(
@@ -445,18 +445,18 @@ bool operator<(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
+出現在! = 運算子左邊`CSid`的(安全識別碼)或。`SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
+出現在! = 運算子右邊`CSid`的(安全識別碼)。`SID`
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE *lhs*是小於*rhs*，否則為 FALSE。
+如果*lhs*小於*rhs*, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_lt__eq"></a>  CSid::operator &lt;=
+##  <a name="operator_lt__eq"></a>CSid:: operator&lt;=
 
-比較兩個安全性描述元物件的相對值。
+比較兩個安全描述項物件的相對值。
 
 ```
 bool operator<=(
@@ -467,18 +467,18 @@ bool operator<=(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
+出現在! = 運算子左邊`CSid`的(安全識別碼)或。`SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
+出現在! = 運算子右邊`CSid`的(安全識別碼)。`SID`
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE *lhs*小於或等於*rhs*，否則為 FALSE。
+如果*lhs*小於或等於*rhs*, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_gt"></a>  CSid::operator &gt;
+##  <a name="operator_gt"></a>CSid:: operator&gt;
 
-比較兩個安全性描述元物件的相對值。
+比較兩個安全描述項物件的相對值。
 
 ```
 bool operator>(
@@ -489,18 +489,18 @@ bool operator>(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
+出現在! = 運算子左邊`CSid`的(安全識別碼)或。`SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
+出現在! = 運算子右邊`CSid`的(安全識別碼)。`SID`
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE *lhs*大於*rhs*，否則為 FALSE。
+如果*lhs*大於*rhs*, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_gt__eq"></a>  CSid::operator &gt;=
+##  <a name="operator_gt__eq"></a>CSid:: operator&gt;=
 
-比較兩個安全性描述元物件的相對值。
+比較兩個安全描述項物件的相對值。
 
 ```
 bool operator>=(
@@ -511,18 +511,18 @@ bool operator>=(
 ### <a name="parameters"></a>參數
 
 *lhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在左邊 ！ = 運算子。
+出現在! = 運算子左邊`CSid`的(安全識別碼)或。`SID`
 
 *rhs*<br/>
-`SID` （安全性識別碼） 或`CSid`，會出現在右邊 ！ = 運算子。
+出現在! = 運算子右邊`CSid`的(安全識別碼)。`SID`
 
 ### <a name="return-value"></a>傳回值
 
-則為 TRUE *lhs*大於或等於*rhs*，否則為 FALSE。
+如果*lhs*大於或等於*rhs*, 則為 TRUE, 否則為 FALSE。
 
-##  <a name="operator_const_sid__star"></a>  CSid::operator const SID \*
+##  <a name="operator_const_sid__star"></a>CSid:: operator const SID\*
 
-轉型`CSid`物件的指標`SID`（安全性識別碼） 結構。
+將物件轉換成`SID` (安全識別碼) 結構的指標。 `CSid`
 
 ```
 operator const SID *() const throw(...);
@@ -530,11 +530,11 @@ operator const SID *() const throw(...);
 
 ### <a name="remarks"></a>備註
 
-傳回的位址`SID`結構。
+傳回`SID`結構的位址。
 
 ##  <a name="sid"></a>  CSid::Sid
 
-傳回`SID`（安全性識別碼） 做為字串的結構。
+以字串形式傳回(安全識別碼)結構。`SID`
 
 ```
 LPCTSTR Sid() const throw(...);
@@ -542,11 +542,11 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-傳回`SID`為適用於顯示、 儲存或傳輸的格式字串的結構。 相當於[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。
+以適用于顯示、儲存或傳輸的格式, 傳回結構做為字串。`SID` 相當於[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。
 
-##  <a name="sidnameuse"></a>  CSid::SidNameUse
+##  <a name="sidnameuse"></a>CSid:: SidNameUse
 
-傳回的狀態描述`CSid`物件。
+傳回`CSid`物件狀態的描述。
 
 ```
 SID_NAME_USE SidNameUse() const throw();
@@ -554,27 +554,27 @@ SID_NAME_USE SidNameUse() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回儲存值，這個值描述的狀態資料成員的值`CSid`物件。
+傳回資料成員的值, 該值會儲存描述`CSid`物件狀態的值。
 
 |值|描述|
 |-----------|-----------------|
-|SidTypeUser|表示使用者`SID`（安全性識別碼）。|
-|SidTypeGroup|表示一組`SID`。|
+|SidTypeUser|表示使用者`SID` (安全識別碼)。|
+|SidTypeGroup|表示群組`SID`。|
 |SidTypeDomain|表示網域`SID`。|
-|SidTypeAlias|指出別名`SID`。|
-|SidTypeWellKnownGroup|指出`SID`已知的群組。|
-|SidTypeDeletedAccount|指出`SID`已刪除的帳戶。|
-|SidTypeInvalid|表示無效`SID`。|
-|SidTypeUnknown|表示未知`SID`型別。|
-|SidTypeComputer|指出`SID`電腦。|
+|SidTypeAlias|表示別名`SID`。|
+|SidTypeWellKnownGroup|`SID`表示適用于已知群組的。|
+|SidTypeDeletedAccount|`SID`表示已刪除之帳戶的。|
+|SidTypeInvalid|表示無效`SID`的。|
+|SidTypeUnknown|表示未知`SID`的類型。|
+|SidTypeComputer|`SID`表示電腦的。|
 
 ### <a name="remarks"></a>備註
 
-呼叫[CSid::LoadAccount](#loadaccount)更新`CSid`物件，再呼叫`SidNameUse`来傳回其狀態。 `SidNameUse` 不會變更物件的狀態 (呼叫`LookupAccountName`或`LookupAccountSid`)，但只會傳回目前的狀態。
+呼叫[CSid:: LoadAccount](#loadaccount)來更新`CSid`物件, 然後再`SidNameUse`呼叫以傳回其狀態。 `SidNameUse`不會變更物件的狀態 (藉由呼叫`LookupAccountName`或`LookupAccountSid`), 而只會傳回目前的狀態。
 
 ## <a name="see-also"></a>另請參閱
 
 [安全性範例](../../overview/visual-cpp-samples.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)<br/>
+[類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
 [運算子](../../atl/reference/atl-operators.md)

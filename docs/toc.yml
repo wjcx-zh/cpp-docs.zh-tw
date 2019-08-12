@@ -10529,22 +10529,8 @@
                   items:
                     - name: 使用 C 和 Win32 進行多執行緒處理
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: 多執行緒程式
-                      href: parallel/multithread-programs.md
-                    - name: 多執行緒的程式庫支援
-                      href: parallel/library-support-for-multithreading.md
-                    - name: 多執行緒的 Include 檔
-                      href: parallel/include-files-for-multithreading.md
-                    - name: 執行緒控制的 C 執行階段程式庫函式
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: 多執行緒 C 程式範例
                       href: parallel/sample-multithread-c-program.md
-                    - name: 撰寫多執行緒 Win32 程式
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: 編譯和連結多執行緒程式
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: 避免具有多執行緒程式的問題區域
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: 執行緒本機存放區 (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: 使用 C++ 和 MFC 進行多執行緒處理

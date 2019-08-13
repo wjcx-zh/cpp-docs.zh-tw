@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: f389d38cf84f8f72d12242e798010d53a26f81a8
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661533"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68956964"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -366,7 +366,7 @@ bool all_of(
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的每個  都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
+`N`只有在範圍`[0, last - first)`中的每個都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
 
 ### <a name="example"></a>範例
 
@@ -442,7 +442,7 @@ bool any_of(
 
 ### <a name="remarks"></a>備註
 
-只有在範圍內  的某些`N`中, 範本函式才會傳回 true
+只有在範圍內的某些`N`中, 範本函式才會傳回 true
 
 `[0, last - first)`, 述詞為 true。 `pred(*(first + N))`
 
@@ -3045,7 +3045,7 @@ RandomAccessIterator is_heap_until(
 
 第一個範本函式會傳回中`next` `[first, last)`的最後`[first, next)`一個反覆運算器, 其中是由函`std::less<>`式物件排序的堆積。 如果距離`last - first`小於 2, 函數會傳回*last*。
 
-第二個範本函式的行為與第一個相同, 不同之處在于  它會使用`std::less<>`述詞 pred, 而不是堆積排序條件。
+第二個範本函式的行為與第一個相同, 不同之處在于它會使用`std::less<>`述詞 pred, 而不是堆積排序條件。
 
 ## <a name="is_partitioned"></a>is_partitioned
 
@@ -3148,7 +3148,7 @@ bool is_permutation(
 
 `is_permutation` 在最壞的情況有二次方的複雜性。
 
-第一個樣板函式假設範圍中的元素數目從*first2*開始, 與指定`[first1, last1)`的範圍相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。 只有在  指定`[first1, last1)`範圍內的每個專案 x, 其 x = = y 的相同範圍內有多個元素 Y 時, 才會傳回 true, 其範圍從*first2*或`[first2, last2)`開始。 在這裡`operator==` , 必須在其運算元之間執行成對比較。
+第一個樣板函式假設範圍中的元素數目從*first2*開始, 與指定`[first1, last1)`的範圍相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。 只有在指定`[first1, last1)`範圍內的每個專案 x, 其 x = = y 的相同範圍內有多個元素 Y 時, 才會傳回 true, 其範圍從*first2*或`[first2, last2)`開始。 在這裡`operator==` , 必須在其運算元之間執行成對比較。
 
 第二個和第四個樣板函式的行為相同，不同之處是它們會以 `Pred(X, Y)` 取代 `operator==(X, Y)`。 若要正常運作，述詞必須對稱、自反和轉移。
 
@@ -5525,7 +5525,7 @@ bool none_of(
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才  會傳回true,述詞`pred(*(first + N))`一律為 false。
+`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才會傳回true,述詞`pred(*(first + N))`一律為 false。
 
 ## <a name="partial_sort"></a>partial_sort
 
@@ -5843,7 +5843,7 @@ ForwardIterator partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`pred( b, a )`如果兩者  `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `partition`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_partition` 演算法確實會保留這個原始順序。
+`pred( b, a )`如果兩者 `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `partition`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_partition` 演算法確實會保留這個原始順序。
 
 複雜度為線性: 有`(last - first)` *pred*的應用程式和最多`(last - first)/2`的交換。
 
@@ -7646,7 +7646,7 @@ ForwardIterator search(
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
 *搜索*\
-封裝要尋找之模式的搜尋, 以及要使用的搜尋演算法。
+封裝要尋找之模式的搜尋, 以及要使用的搜尋演算法。 如需 searchers 的詳細資訊, 請參閱[default_searcher 類別](default-searcher-class.md)、 [boyer_moore_horspool_searcher 類別](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 類別](boyer-moore-searcher-class.md)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8907,7 +8907,7 @@ void sort_heap(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`N log N`複雜程度最高, 其中*N*  = 是*最後* - 一次。 
+`N log N`複雜程度最高, 其中*N*  = 是*最後* - 一次。
 
 ### <a name="example"></a>範例
 
@@ -9004,7 +9004,7 @@ BidirectionalIterator stable_partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`pred( b, a )`如果兩者  `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `stable_partition`演算法是穩定的, 可保證會保留對等元素的相對順序。 演算法`partition`不一定會保留這種原始順序。
+`pred( b, a )`如果兩者 `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `stable_partition`演算法是穩定的, 可保證會保留對等元素的相對順序。 演算法`partition`不一定會保留這種原始順序。
 
 ### <a name="example"></a>範例
 

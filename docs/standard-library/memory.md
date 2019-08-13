@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451893"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957081"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -108,7 +108,7 @@ ms.locfileid: "68451893"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|雜湊|提供和`unique_ptr` `shared_ptr`專用的多載。|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|允許按擁有權混合比較共用指標和弱式指標。|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ ms.locfileid: "68451893"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|void 類型的樣板類別配置器特製化，只用於定義在此特殊內容中具有意義的成員形別。|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|樣板類別配置器到**void**類型的特製化, 只定義在這個特殊化內容中有意義的成員類型。|
 
 ## <a name="see-also"></a>另請參閱
 

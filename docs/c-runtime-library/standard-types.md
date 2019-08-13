@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d2b209e29b0690ec2003031e160ce9fd1f749b13
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740468"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915308"
 ---
 # <a name="standard-types"></a>標準類型
 
@@ -198,11 +198,11 @@ Microsoft 執行階段程式庫定義下列標準類型和 Typedefs。
 |`_CrtMemState` 結構|提供關於 C 執行階段偵錯堆積的目前狀態資訊。|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|將在 [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md) 被呼叫之回呼函式的類型定義。<br /><br /> 這個函式的參數是：來自回呼函式的報告類型、輸出訊息和傳回值。|CRTDBG.H|
 |`dev_t`、`_dev_t` 短的或不帶正負號的整數。|表示裝置控制代碼。|SYS\TYPES.H|
-|`_diskfree_t` 結構|包含磁碟機的詳細資訊。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)使用。|DOS.H 和 DIRECT.H|
+|`_diskfree_t` 結構|包含磁碟機的詳細資訊。 由 [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)使用。 |DOS.H 和 DIRECT.H|
 |`div_t`、`ldiv_t` 和 `lldiv_t` 結構|將 [div](../c-runtime-library/reference/div.md)、[ldiv](../c-runtime-library/reference/ldiv-lldiv.md) 和 [lldiv](../c-runtime-library/reference/ldiv-lldiv.md) 所傳回的值分別儲存。|STDLIB.H|
 |`errno_t` 整數|用於處理 `errno`錯誤碼的函式傳回類型或參數。|STDDEF.H,<br /><br /> CRTDEFS.H|
 |`_exception` 結構|儲存 [_matherr](../c-runtime-library/reference/matherr.md) 的錯誤資訊。|MATH.H|
-|`_EXCEPTION_POINTERS`|包含例外狀況記錄。 如需詳細資訊，請參閱 [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-_exception_pointers)。|FPIEEE.H|
+|`_EXCEPTION_POINTERS`|包含例外狀況記錄。 如需詳細資訊，請參閱 [EXCEPTION_POINTERS](/windows/desktop/api/winnt/ns-winnt-exception_pointers)。|FPIEEE.H|
 |`FILE` 結構|儲存有關資料流目前狀態的資訊，用於所有資料流 I/O 作業。|STDIO.H|
 |`_finddata_t`、`_wfinddata_t`、`_finddata32_t`、`_wfinddata32_t`、`_finddatai64_t`、`_wfinddatai64_t`、`__finddata64_t`、`__wfinddata64_t`、`__finddata32i64_t`、`__wfinddata32i64_t`、`__finddata64i32_t`、`__wfinddata64i32_t` 結構|儲存 [_findfirst、_wfindfirst 以及相關函式](../c-runtime-library/reference/findfirst-functions.md)和 [_findnext、_wfindnext 以及相關函式](../c-runtime-library/reference/findnext-functions.md)傳回的檔案屬性資訊。 如需結構成員的詳細資訊，請參閱[檔案名稱搜尋函式](../c-runtime-library/filename-search-functions.md)。|IO.H, WCHAR.H|
 |`_FPIEEE_RECORD` 結構|包含有關於 IEEE 浮點例外狀況的資訊，會由 [_fpieee_flt](../c-runtime-library/reference/fpieee-flt.md) 傳遞至使用者定義的設陷處理常式。|FPIEEE.H|

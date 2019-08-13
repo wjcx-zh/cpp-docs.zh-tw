@@ -9,21 +9,21 @@ helpviewer_keywords:
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151490"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "62326075"
 ---
 # <a name="initializing-aggregate-types"></a>初始化彙總類型
 
-「彙總」類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。
+「彙總」  類型是一種結構、等位或陣列類型。 如果彙總類型包含彙總類型的成員，則會以遞迴方式套用初始化規則。
 
 ## <a name="syntax"></a>語法
 
 *initializer*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **}** /* 針對彙總初始設定式 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-list*  **, }**
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* 針對彙總初始設定式 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
 
 *initializer-list*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*初始設定式*<br/>
@@ -35,7 +35,7 @@ ms.locfileid: "56151490"
 
 如果 *initializer-list* 包含的值少於彙總類型，則彙總類型的其餘成員或元素都會初始化為 0。 未明確初始化的自動識別項初始值會是未定義。 如果 *initializer-list* 包含的值多於彙總類型，則會產生錯誤。 這些規則適用於每個內嵌的初始設定式清單，同時適用於整個彙總。
 
-結構的初始設定式會是相同類型的運算式，或是其成員以大括號 (**{ }**) 括住的初始設定式清單。 未命名的位元欄位成員不會初始化。
+結構的初始設定式會是相同類型的運算式，或是其成員以大括號 ( **{ }** ) 括住的初始設定式清單。 未命名的位元欄位成員不會初始化。
 
 初始化等位時，*initializer-list* 必須是單一常數運算式。 常數運算式的值會指派給等位的第一個成員。
 

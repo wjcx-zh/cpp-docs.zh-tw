@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459195"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957119"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -61,7 +61,7 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 |||
 |-|-|
-|[hash]()||
+|雜湊|產生字串的雜湊。|
 |[swap](../standard-library/string-functions.md#swap)|交換兩個字串的字元陣列。|
 |[stod](../standard-library/string-functions.md#stod)|將字元序列轉換成**雙精度浮點數**。|
 |[stof](../standard-library/string-functions.md#stof)|將字元序列轉換成**float**。|

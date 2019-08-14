@@ -1124,16 +1124,7 @@
                 - name: Visual Studio 中的 NMAKE 專案
                   href: build/reference/creating-a-makefile-project.md
                 - name: 執行 NMAKE
-                  expanded: false
-                  items:
-                    - name: 執行 NMAKE
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE 選項
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini 和 NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: NMAKE 的結束代碼
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: Makefile 內容
                   expanded: false
                   items:

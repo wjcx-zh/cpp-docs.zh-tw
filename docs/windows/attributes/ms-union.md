@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409105"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514376"
 ---
-# <a name="msunion"></a>ms_union
+# <a name="ms_union"></a>ms_union
 
-控制 nonencapsulated 等位的網路資料表示法對齊方式。
+控制 nonencapsulated 等位的網路資料標記法對齊。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409105"
 
 ## <a name="remarks"></a>備註
 
-**Ms_union** C++屬性具有相同的功能[ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 屬性。
+**Ms_union** C++屬性具有與[ms_union](/windows/win32/Midl/ms-union-attrib) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示的位置**ms_union**:
+下列程式碼顯示**ms_union**的位置:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -62,7 +62,7 @@ __interface IFireTabCtrl {
 |-|-|
 |**適用於**|Nonencapsulated 等位|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|`dispinterface`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

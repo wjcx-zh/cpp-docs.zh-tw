@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337709"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512821"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 
@@ -33,7 +33,7 @@ ms.locfileid: "62337709"
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>先佔式與合作式排程
 
-*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先佔式排程中很常見的多工作業系統，例如 Windows。 *合作式排程*是一種機制，讓每項工作獨佔存取運算資源，直到工作完成或工作讓渡其資源的存取權。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
+*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先占式排程在多工作業系統 (例如 Windows) 中很常見。 「*合作排程*」是一種機制, 可讓每個工作獨佔存取運算資源, 直到工作完成或工作產生其資源存取權為止。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>先佔式排程器與合作式排程器之間的差異
 
@@ -63,7 +63,7 @@ Windows API 可使用 C 程式設計語言公開程式設計模型。 並行執�
 
 ### <a name="threads-and-thread-pools"></a>執行緒與執行緒集區
 
-Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) 函式來建立執行緒。 雖然執行緒相對而言較易建立及使用，但是作業系統必須配置大量的時間與其他資源來管理執行緒。 此外，雖然能確保每個執行緒的執行時間與相同優先順序層級上的任何其他執行緒相同，但您必須建立夠大型工作，才能因應相關聯的額外負荷。 針對較小或較精細的工作，與並行相關聯的額外負荷，可能會高於以平行方式執行工作的優點。
+Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createthread) 函式來建立執行緒。 雖然執行緒相對而言較易建立及使用，但是作業系統必須配置大量的時間與其他資源來管理執行緒。 此外，雖然能確保每個執行緒的執行時間與相同優先順序層級上的任何其他執行緒相同，但您必須建立夠大型工作，才能因應相關聯的額外負荷。 針對較小或較精細的工作，與並行相關聯的額外負荷，可能會高於以平行方式執行工作的優點。
 
 執行緒集區是能夠減少執行緒管理成本的方式之一。 自訂執行緒集區以及 Windows API 所提供的執行緒集區實作，都能夠讓小型工作項目有效地以平行方式執行。 Windows 執行緒集區將工作項目保存在先進先出 (FIFO) 佇列中。 每個工作項目都會以其加入集區的順序啟動。
 
@@ -77,7 +77,7 @@ Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThrea
 
 在 Windows 7 和 Windows Server 2008 R2 中，作業系統可進一步支援並行和延展性。 例如，這些作業系統可支援硬體執行緒超過 64 個的電腦。 使用 Windows API 的現有應用程式必須經過修改，才能利用這些新功能。 不過，使用並行執行階段的應用程式則會自動使用這些功能，而不需要修改。
 
-[base.user-mode_scheduling](https://msdn.microsoft.com/library/windows/desktop/dd627187)
+[base.user-mode_scheduling](/windows/win32/procthread/user-mode-scheduling)
 
 [[靠上](#top)]
 

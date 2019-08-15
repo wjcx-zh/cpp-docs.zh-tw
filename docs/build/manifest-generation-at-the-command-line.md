@@ -5,20 +5,20 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: 37036ceedc59e20374fd1106a051ab2a66edd143
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 381406213422e286dd9aba26adcdbd6caff7bfe3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273772"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493196"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>命令列的資訊清單產生過程
 
-當建置 C /C++連結器已處理所有目的檔，並建置最終二進位檔之後，會產生從命令列使用 nmake 或類似的工具、 資訊清單的應用程式。 連結器會收集儲存在目的檔中的組件資訊，並結合成最終的資訊清單檔案的這項資訊。 根據預設，連結器會產生名為的檔案*binary_name*。*延伸模組*以描述最終二進位檔。 連結器不會內嵌於二進位檔的資訊清單檔，並只會產生資訊清單中的，外部檔案。 有數種方式可內嵌於最終的二進位檔，例如使用資訊清單[資訊清單工具 (mt.exe)](https://msdn.microsoft.com/library/aa375649)或編譯成資源檔的資訊清單。 請務必記住，特定的規則有內嵌於最終的二進位檔，以啟用累加連結，這類功能的資訊清單時所需遵循簽章，以及編輯後繼續。 中會討論這些和其他選項[How to:內嵌資訊清單內的 C /C++應用程式](how-to-embed-a-manifest-inside-a-c-cpp-application.md)建置命令列上時。
+當您使用 nmakeC++或類似的工具從命令列建立 C/應用程式時, 會在連結器處理所有目的檔並建立最終二進位檔之後, 產生資訊清單。 連結器會收集儲存在物件檔中的元件資訊, 並將這些資訊結合成最終的資訊清單檔。 根據預設, 連結器會產生名為*binary_name*的檔案。描述最終二進位檔的*擴充*功能資訊清單。 連結器不會在二進位檔中內嵌資訊清單檔, 而且只能產生資訊清單做為外部檔案。 有數種方式可以將資訊清單內嵌在最後的二進位檔中, 例如使用[資訊清單工具 (mt.exe)](/windows/win32/sbscs/mt-exe)或將資訊清單編譯成資源檔。 請務必記住, 在最後一個二進位檔中內嵌資訊清單時, 必須遵循特定規則, 以啟用累加連結、簽章和編輯後繼續這類功能。 這些和其他選項會在[如何:在命令列上建立時,C++在](how-to-embed-a-manifest-inside-a-c-cpp-application.md) C/應用程式中內嵌資訊清單。
 
 ## <a name="see-also"></a>另請參閱
 
-[資訊清單](/windows/desktop/sbscs/manifests)<br/>
+[Mdac](/windows/win32/sbscs/manifests)<br/>
 [/INCREMENTAL (以累加方式連結)](reference/incremental-link-incrementally.md)<br/>
 [強式名稱組件 (組件簽署) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
 [編輯後繼續](/visualstudio/debugger/edit-and-continue)<br/>

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], using
 - tab controls [MFC], using
 ms.assetid: 6bda6798-0085-4c09-a5ea-fe0e97af5c95
-ms.openlocfilehash: 97844fea667edab5a4d1f1a49c3908454a203d1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f07452fd52e2da3187e89ceafcd9f74e3f0cb159
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411678"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510777"
 ---
 # <a name="using-ctabctrl"></a>使用 CTabCtrl
 
-「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用 tab 控制項，由類別[CTabCtrl](../mfc/reference/ctabctrl-class.md)、 資訊或控制項的多個頁面顯示給使用者，一次一個，建議的對等或每個頁面之間的邏輯關聯性的格式。
+「索引標籤控制項」類似於筆記本裡的分隔頁或檔案櫃中的標籤資料夾。 使用 [類別[CTabCtrl](../mfc/reference/ctabctrl-class.md)] 所代表的 [索引標籤控制項], 以建議每個頁面之間的對等或邏輯關聯性, 一次顯示多頁資訊或控制項給使用者。
 
-如需有關索引標籤控制項的詳細資訊，請參閱[索引標籤控制項](/windows/desktop/Controls/tab-controls)Windows SDK 中。
+如需索引標籤控制項的詳細資訊, 請參閱 Windows SDK 中的[索引標籤控制項](/windows/win32/Controls/tab-controls)。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - [索引標籤控制項和屬性工作表](../mfc/tab-controls-and-property-sheets.md)
 

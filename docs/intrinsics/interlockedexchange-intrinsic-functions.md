@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96ce57854bfb3eea0e1b8bc6283984c7fce50f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396739"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509399"
 ---
-# <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 內建函式
+# <a name="_interlockedexchange-intrinsic-functions"></a>_InterlockedExchange 內建函式
 
 **Microsoft 專屬**
 
@@ -145,10 +145,10 @@ __int64 _InterlockedExchange64_rel(
 #### <a name="parameters"></a>參數
 
 *Target*<br/>
-[in、 out]要交換之值的指標。 函式會將此變數設定為 `Value`，並傳回其先前的值。
+[in、out]要交換之值的指標。 函式會將此變數設定為 `Value`，並傳回其先前的值。
 
 *值*<br/>
-[in]要交換值的值所指向`Target`。
+在要與所指向`Target`的值交換的值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -158,13 +158,13 @@ __int64 _InterlockedExchange64_rel(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedExchange_acq`、`_InterlockedExchange_nf`、`_InterlockedExchange_rel`、`_InterlockedExchange8_acq`、`_InterlockedExchange8_nf`、`_InterlockedExchange8_rel`、`_InterlockedExchange16_acq`、`_InterlockedExchange16_nf`、`_InterlockedExchange16_rel`、`_InterlockedExchange64_acq`、`_InterlockedExchange64_nf`、`_InterlockedExchange64_rel`、|ARM|\<intrin.h>|
 |`_InterlockedExchange_HLEAcquire`, `_InterlockedExchange_HLERelease`, `_InterlockedExchange64_HLEAcquire`, `_InterlockedExchange64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
 
-`_InterlockedExchange` 提供 Win32 Windows SDK 的編譯器內建支援[InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)函式。
+`_InterlockedExchange`為 Win32 Windows SDK [InterlockedExchange](/windows/win32/api/winnt/nf-winnt-interlockedexchange)函數提供編譯器內建支援。
 
 在 `_InterlockedExchange` 上有數個變化，會因所涉及的資料類型，以及是否使用處理器專用的取得或釋放語意，而有所不同。
 
@@ -178,7 +178,7 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例`_InterlockedExchange`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+如需如何使用`_InterlockedExchange`的範例, 請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 **結束 Microsoft 專屬**
 

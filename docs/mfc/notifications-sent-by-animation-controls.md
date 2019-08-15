@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [MFC], animation
 - animation controls [MFC], notifications
 ms.assetid: 584f5824-446b-4a1a-85f7-ef61842c8186
-ms.openlocfilehash: 2a736e4315091b1b26daceb4fe0ce9672ab33ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68ede3bc55669a29eef192d38b29b8c1ab433e4b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238305"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508021"
 ---
 # <a name="notifications-sent-by-animation-controls"></a>動畫控制項傳送的告知
 
-動畫控制項 ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 會傳送兩種不同的通知訊息。 傳送通知的形式[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息。
+動畫控制項 ([CAnimateCtrl](../mfc/reference/canimatectrl-class.md)) 會傳送兩種不同類型的通知訊息。 通知會以[WM_COMMAND](/windows/win32/menurc/wm-command)訊息的形式傳送。
 
-[ACN_START](/windows/desktop/Controls/acn-start)當動畫控制項開始播放短片時，傳送訊息。 [ACN_STOP](/windows/desktop/Controls/acn-stop)動畫控制項完成或停止播放短片時，會傳送訊息。
+當動畫控制項已開始播放剪輯時, 就會傳送[ACN_START](/windows/win32/Controls/acn-start)訊息。 當動畫控制項已完成或停止播放剪輯時, 就會傳送[ACN_STOP](/windows/win32/Controls/acn-stop)訊息。
 
 ## <a name="see-also"></a>另請參閱
 

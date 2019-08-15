@@ -24,12 +24,12 @@ helpviewer_keywords:
 - wmemcpy function
 - memcpy function
 ms.assetid: 34abb90b-bffb-46dc-a2f3-a5e9940839d6
-ms.openlocfilehash: afdb854bd28b55735cc6b5e26788307e2db0caa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f687e231060c287e206017dc61fe1d5193d8f0de
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156586"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499630"
 ---
 # <a name="memcpy-wmemcpy"></a>memcpy、wmemcpy
 
@@ -58,26 +58,26 @@ wchar_t *wmemcpy(
 *src*<br/>
 要複製的緩衝區。
 
-*count*<br/>
+*計數*<br/>
 要複製的字元數目。
 
 ## <a name="return-value"></a>傳回值
 
-值*dest*。
+*Dest*的值。
 
 ## <a name="remarks"></a>備註
 
-**memcpy**複本*計數*位元組*src*來*dest*;**wmemcpy**複本*計數*寬字元 （兩個位元組為單位）。 如果來源和目的地重疊，行為**memcpy**是未定義。 使用**memmove**處理重疊的區域。
+**memcpy**會將*計數*位元組從*src*複製到*目的地*;**wmemcpy**會複製整個*計數*的寬字元 (兩個位元組)。 如果來源和目的地重迭, **memcpy**的行為會是未定義的。 使用**memmove**來處理重迭的區域。
 
 > [!IMPORTANT]
-> 確定目的地緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 確定目的地緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!IMPORTANT]
-> 因為這麼多緩衝區滿溢，並因此有潛在的安全性弱點，進而追蹤到不當的使用方式**memcpy**，此函式會列在 「 禁止 」 函式的安全性開發生命週期 (SDL)。  您可能會注意到一些 VC + + 程式庫類別仍繼續使用**memcpy**。  此外，您可能會注意到 VC + + 編譯器最佳化工具有時會呼叫**memcpy**。  Visual C++ 產品開發是依據 SDL 程序，因此已仔細評估過此禁用函式的使用方式。  程式庫使用它時，已仔細檢查過呼叫，以確定這些呼叫不會容許緩衝區滿溢。  若在編譯器中，有時特定程式碼模式會被辨識為相同的模式**memcpy**，並因此會以函式的呼叫取代。  在此情況下，使用**memcpy**不再不安全，比原始指令; 它們只是已經過最佳化，呼叫的效能微調**memcpy**函式。  就像使用「安全的」CRT 函式並不保證安全性一樣 (只是使其較少有不安全的情況發生)，使用「禁止的」函式並不一定危險 (只是需要更嚴謹的監督以確保安全性)。
+> 因為有太多緩衝區溢位, 因而導致潛在的安全性漏洞, 所以已追蹤到不當的**memcpy**使用方式, 所以安全性開發週期 (SDL) 會在「禁止」的功能中列出此功能。  您可能會發現有些 VC + + 程式庫類別會繼續使用**memcpy**。  此外, 您可能會發現 VC + + 編譯器優化工具有時會發出對**memcpy**的呼叫。  Visual C++ 產品開發是依據 SDL 程序，因此已仔細評估過此禁用函式的使用方式。  程式庫使用它時，已仔細檢查過呼叫，以確定這些呼叫不會容許緩衝區滿溢。  在編譯器的情況下, 有時會將某些程式碼模式辨識為與**memcpy**的模式相同, 因此會以函式的呼叫取代。  在這種情況下, 使用**memcpy**並不會比原本的指示更安全:它們只是為了呼叫效能微調的**memcpy**函數而優化。  就像使用「安全的」CRT 函式並不保證安全性一樣 (只是使其較少有不安全的情況發生)，使用「禁止的」函式並不一定危險 (只是需要更嚴謹的監督以確保安全性)。
 >
-> 因為**memcpy**因此請謹慎仔細檢查的 VC + + 編譯器和程式庫的使用量，否則就不符合 SDL 的程式碼中會允許這些呼叫。  **memcpy**使用經過審閱由安全性專家時，才符合 SDL 應用程式原始程式碼中導入的呼叫。
+> 由於 VC + + 編譯器和程式庫的**memcpy**使用已經仔細檢查過, 因此在程式碼中允許這些呼叫與 SDL 相容。  應用程式原始程式碼中引進的**memcpy**呼叫, 只有在安全性專家已審查過該使用方式時, 才符合 SDL 的規範。
 
-**Memcpy**並**wmemcpy**函式就只能被取代，如果常數 **_CRT_SECURE_DEPRECATE_MEMORY**定義之前在順序中包含的陳述式函式已被取代，如下列範例所示：
+只有在包含語句之前定義了常數 **_CRT_SECURE_DEPRECATE_MEMORY** , 才會取代**memcpy**和**wmemcpy**函式, 如下列範例所示:
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY
@@ -102,7 +102,7 @@ wchar_t *wmemcpy(
 
 ## <a name="example"></a>範例
 
-請參閱[memmove](memmove-wmemmove.md)如需如何使用的範例**memcpy**。
+如需如何使用**memcpy**的範例, 請參閱[memmove](memmove-wmemmove.md) 。
 
 ## <a name="see-also"></a>另請參閱
 

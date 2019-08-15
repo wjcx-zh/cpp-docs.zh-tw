@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd399368e46e4e9a86b4c6260e07aee07b80defb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237853"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507506"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile 類別
 
@@ -62,34 +62,34 @@ class CAsyncMonikerFile : public CMonikerFile
 |名稱|描述|
 |----------|-----------------|
 |[CAsyncMonikerFile::Close](#close)|關閉並釋放所有資源。|
-|[CAsyncMonikerFile::GetBinding](#getbinding)|擷取繫結的非同步傳輸的指標。|
-|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|擷取資料流中的資料的格式。|
+|[CAsyncMonikerFile::GetBinding](#getbinding)|抓取非同步傳輸系結的指標。|
+|[CAsyncMonikerFile::GetFormatEtc](#getformatetc)|抓取資料流程中的資料格式。|
 |[CAsyncMonikerFile::Open](#open)|以非同步方式開啟檔案。|
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|建立 COM 物件實作`IBindStatusCallback`。|
-|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|呼叫 OLE 系統程式庫上建立的繫結類型的要求資訊。|
-|[CAsyncMonikerFile::GetPriority](#getpriority)|呼叫 OLE 系統程式庫，來取得繫結的優先權。|
-|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|呼叫以提供可用來在用戶端非同步繫結作業期間的資料。|
-|[CAsyncMonikerFile::OnLowResource](#onlowresource)|當資源過低時呼叫。|
-|[CAsyncMonikerFile::OnProgress](#onprogress)|呼叫以表示資料下載程序的進度。|
-|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|當繫結啟動時呼叫。|
-|[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|當非同步傳輸已停止時呼叫。|
+|[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|建立可`IBindStatusCallback`執行的 COM 物件。|
+|[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|由 OLE 系統程式庫呼叫, 以要求要建立之系結類型的資訊。|
+|[CAsyncMonikerFile::GetPriority](#getpriority)|由 OLE 系統程式庫呼叫以取得系結的優先順序。|
+|[CAsyncMonikerFile::OnDataAvailable](#ondataavailable)|呼叫以提供資料, 使其在非同步系結作業期間可供用戶端使用。|
+|[CAsyncMonikerFile::OnLowResource](#onlowresource)|當資源不足時呼叫。|
+|[CAsyncMonikerFile::OnProgress](#onprogress)|呼叫以指出資料下載進程的進度。|
+|[CAsyncMonikerFile::OnStartBinding](#onstartbinding)|在啟動系結時呼叫。|
+|[CAsyncMonikerFile::OnStopBinding](#onstopbinding)|停止非同步傳輸時呼叫。|
 
 ## <a name="remarks"></a>備註
 
-衍生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md)，而後者又衍生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md)，`CAsyncMonikerFile`會使用[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)介面，以存取任何資料流以非同步的方式，包括從 URL 非同步載入檔案。 這些檔案可以 ActiveX 控制項的資料路徑屬性。
+衍生自[CMonikerFile](../../mfc/reference/cmonikerfile-class.md), 而後者又衍生自[COleStreamFile](../../mfc/reference/colestreamfile-class.md), `CAsyncMonikerFile`使用[IMoniker](/windows/win32/api/objidl/nn-objidl-imoniker)介面以非同步方式存取任何資料流程, 包括以非同步方式從 URL 載入檔案。 這些檔案可以是 ActiveX 控制項的資料路徑屬性。
 
-非同步 moniker 可啟用網際網路的應用程式和 ActiveX 控制項中的主要檔案傳輸期間提供回應的使用者介面。 主要範例是使用[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)為 ActiveX 控制項提供非同步屬性。 `CDataPathProperty`物件會重複收到的回呼，長時間的屬性交換過程中表示的新資料的可用性。
+非同步名字標記主要是用於具備網際網路功能的應用程式和 ActiveX 控制項, 以便在檔案傳輸期間提供回應式的使用者介面。 其主要的範例是使用[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)來提供 ActiveX 控制項的非同步屬性。 `CDataPathProperty`物件會重複取得回呼, 表示在冗長的屬性交換過程中, 新資料的可用性。
 
-如需如何在網際網路應用程式中使用非同步 moniker 和 ActiveX 控制項的詳細資訊，請參閱下列文章：
+如需如何在網際網路應用程式中使用非同步名字和 ActiveX 控制項的詳細資訊, 請參閱下列文章:
 
-- [網際網路的第一個步驟：非同步 Moniker](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [網際網路的第一個步驟:非同步名字](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [網際網路的第一個步驟：ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)
+- [網際網路的第一個步驟:ActiveX 控制項](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -105,9 +105,9 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxole.h
+**標頭:** afxole。h
 
-##  <a name="casyncmonikerfile"></a>  CAsyncMonikerFile::CAsyncMonikerFile
+##  <a name="casyncmonikerfile"></a>CAsyncMonikerFile:: CAsyncMonikerFile
 
 建構 `CAsyncMonikerFile` 物件。
 
@@ -117,13 +117,13 @@ CAsyncMonikerFile();
 
 ### <a name="remarks"></a>備註
 
-它不會建立`IBindHost`介面。 `IBindHost` 只有當您在提供時，才會使用`Open`成員函式。
+它不會建立`IBindHost`介面。 `IBindHost`只有當您在`Open`成員函式中提供它時, 才會使用。
 
-如需描述`IBindHost`介面中，請參閱 Windows SDK。
+如需`IBindHost`介面的說明, 請參閱 Windows SDK。
 
-##  <a name="close"></a>  CAsyncMonikerFile::Close
+##  <a name="close"></a>CAsyncMonikerFile:: Close
 
-呼叫此函式來關閉並釋放所有資源。
+呼叫此函式以關閉並釋放所有資源。
 
 ```
 virtual void Close();
@@ -131,11 +131,11 @@ virtual void Close();
 
 ### <a name="remarks"></a>備註
 
-可以呼叫未開啟或已關閉檔案。
+可以在未開啟或已關閉的檔案上呼叫。
 
-##  <a name="createbindstatuscallback"></a>  CAsyncMonikerFile::CreateBindStatusCallback
+##  <a name="createbindstatuscallback"></a>CAsyncMonikerFile:: CreateBindStatusCallback
 
-建立 COM 物件實作`IBindStatusCallback`。
+建立可`IBindStatusCallback`執行的 COM 物件。
 
 ```
 virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
@@ -144,25 +144,25 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 ### <a name="parameters"></a>參數
 
 *pUnkControlling*<br/>
-控制未知的指標 (外部`IUnknown`) 或如果未使用彙總，則為 NULL。
+控制不明 (外部`IUnknown`) 的指標, 如果未使用匯總則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
-如果*pUnkControlling*不是 NULL，函式會傳回內部指標`IUnknown`在新的 COM 物件支援`IBindStatusCallback`。 如果`pUnkControlling`為 NULL，則函數會傳回的指標`IUnknown`在新的 COM 物件支援`IBindStatusCallback`。
+如果*pUnkControlling*不是 Null, 此函式會將指標傳回至`IUnknown`支援`IBindStatusCallback`的新 COM 物件上的內部。 如果`pUnkControlling`為 Null, 則函式`IUnknown`會將指標傳回至支援`IBindStatusCallback`的新 COM 物件上的。
 
 ### <a name="remarks"></a>備註
 
-`CAsyncMonikerFile` 需要實作的 COM 物件`IBindStatusCallback`。 MFC 實作這類物件，而且彙總。 您可以覆寫`CreateBindStatusCallback`傳回您自己的 COM 物件。 您的 COM 物件可以藉由呼叫項目彙總 MFC 實作`CreateBindStatusCallback`與 COM 物件的控制未知。 使用實作的 COM 物件`CCmdTarget`COM 支援可以擷取控制未知使用`CCmdTarget::GetControllingUnknown`。
+`CAsyncMonikerFile`需要執行的 COM 物件`IBindStatusCallback`。 MFC 會執行這類物件, 而且它是可匯總的。 您可以覆`CreateBindStatusCallback`寫以傳回您自己的 COM 物件。 您的 com 物件可以藉由呼叫`CreateBindStatusCallback` , 並對您的 com 物件使用控制不明, 來匯總 MFC 的執行。 使用`CCmdTarget` com 支援所實作用的 com 物件可以使用`CCmdTarget::GetControllingUnknown`來抓取的控制不明。
 
-或者，您的 COM 物件可以委派給 MFC 實作藉由呼叫`CreateBindStatusCallback( NULL )`。
+或者, 您的 COM 物件可以藉由呼叫`CreateBindStatusCallback( NULL )`來委派給 MFC 的執行。
 
-[CAsyncMonikerFile::Open](#open)呼叫`CreateBindStatusCallback`。
+[CAsyncMonikerFile:: Open](#open)呼叫`CreateBindStatusCallback`。
 
-如需有關非同步 moniker 和非同步繫結的詳細資訊，請參閱 < [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))介面並[如何在非同步繫結和儲存體工作](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)。 如需彙總的討論，請參閱 <<c0> [ 彙總](/windows/desktop/com/aggregation)。 所有的三個主題都在 Windows SDK 中。
+如需非同步名字和非同步系結的詳細資訊, 請參閱[IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))介面和非同步系結[和儲存的工作方式](/windows/win32/Stg/how-asynchronous-binding-and-storage-work)。 如需匯總的討論, 請參閱[匯總](/windows/win32/com/aggregation)。 這三個主題都在 Windows SDK 中。
 
-##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
+##  <a name="getbindinfo"></a>CAsyncMonikerFile:: GetBindInfo
 
-從用戶端的非同步 moniker，告訴它要繫結的方式的非同步 moniker 呼叫。
+從非同步標記的用戶端呼叫, 以告知非同步標記其所要系結的方式。
 
 ```
 virtual DWORD GetBindInfo() const;
@@ -170,17 +170,17 @@ virtual DWORD GetBindInfo() const;
 
 ### <a name="return-value"></a>傳回值
 
-擷取的設定`IBindStatusCallBack`。 如需描述`IBindStatusCallback`介面中，請參閱 Windows SDK。
+抓取的設定`IBindStatusCallBack`。 如需`IBindStatusCallback`介面的說明, 請參閱 Windows SDK。
 
 ### <a name="remarks"></a>備註
 
-預設實作會設定為非同步，若要使用儲存媒體 （串流），並將資料推送模型繫結。 如果您想要變更繫結的行為，請覆寫這個函式。
+預設的執行會將系結設定為非同步, 以使用儲存媒體 (資料流程), 並使用資料推送模型。 如果您想要變更系結的行為, 請覆寫此函式。
 
-執行此動作的其中一個原因是使用資料提取模型，而不資料推送模型繫結。 在資料提取模型，用戶端磁碟機繫結作業，和 moniker 只提供資料給用戶端會在讀取。 在資料推入模型中，moniker 驅動非同步繫結作業，並持續在每當有新資料可用時通知用戶端。
+執行這項作業的其中一個原因是使用資料提取模型來系結, 而不是資料推送模型。 在資料提取模型中, 用戶端會驅動系結作業, 而該名字標記只會在讀取時提供資料給用戶端。 在資料推送模型中, 標記會驅動非同步系結作業, 並在有可用的新資料時持續通知用戶端。
 
-##  <a name="getbinding"></a>  CAsyncMonikerFile::GetBinding
+##  <a name="getbinding"></a>CAsyncMonikerFile:: Getbindingexpression
 
-呼叫此函式可擷取非同步傳輸繫結的指標。
+呼叫此函式可取得非同步傳輸系結的指標。
 
 ```
 IBinding* GetBinding() const;
@@ -188,17 +188,17 @@ IBinding* GetBinding() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標`IBinding`非同步傳輸開始時所提供的介面。 傳回 NULL，如果基於任何原因傳輸無法在以非同步方式進行。
+非同步傳輸開始時`IBinding`所提供之介面的指標。 如果基於任何原因而無法以非同步方式進行傳送, 則會傳回 Null。
 
 ### <a name="remarks"></a>備註
 
-這可讓您控制的資料傳輸程序，透過`IBinding`介面，例如，使用`IBinding::Abort`， `IBinding::Pause`，和`IBinding::Resume`。
+這`IBinding`可讓您透過介面控制資料傳輸進程, 例如, 使用`IBinding::Abort`、 `IBinding::Pause`和`IBinding::Resume`。
 
-如需描述`IBinding`介面中，請參閱 Windows SDK。
+如需`IBinding`介面的說明, 請參閱 Windows SDK。
 
-##  <a name="getformatetc"></a>  CAsyncMonikerFile::GetFormatEtc
+##  <a name="getformatetc"></a>CAsyncMonikerFile:: GetFormatEtc
 
-呼叫此函式可擷取的資料流中的資料格式。
+呼叫此函式可取得資料流程中資料的格式。
 
 ```
 FORMATETC* GetFormatEtc() const;
@@ -206,11 +206,11 @@ FORMATETC* GetFormatEtc() const;
 
 ### <a name="return-value"></a>傳回值
 
-Windows 結構的指標[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc)目前開啟的資料流。 如果 moniker 未繫結，如果不是非同步的或尚未開始執行非同步作業，則傳回 NULL。
+目前開啟的資料流程之 Windows 結構[FORMATETC](/windows/win32/api/objidl/ns-objidl-formatetc)的指標。 如果名字尚未系結, 則傳回 Null, 如果不是非同步, 則傳回, 如果非同步作業尚未開始, 則傳回。
 
-##  <a name="getpriority"></a>  CAsyncMonikerFile::GetPriority
+##  <a name="getpriority"></a>CAsyncMonikerFile:: GetPriority
 
-呼叫從用戶端的非同步 moniker 繫結程序開始時接收到執行緒給繫結作業的優先順序。
+從非同步標記的用戶端呼叫, 因為系結程式會開始接收指定給系結作業之執行緒的優先順序。
 
 ```
 virtual LONG GetPriority() const;
@@ -218,15 +218,15 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>傳回值
 
-優先權處非同步傳輸，就會進行。 其中一個標準的執行緒優先順序旗標：THREAD_PRIORITY_ABOVE_NORMAL、 THREAD_PRIORITY_BELOW_NORMAL、 THREAD_PRIORITY_HIGHEST、 THREAD_PRIORITY_IDLE、 THREAD_PRIORITY_LOWEST、 THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 請參閱 Windows 函式[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)如需這些值的描述。
+將進行非同步傳輸的優先順序。 其中一個標準執行緒優先順序旗標:THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL 和 THREAD_PRIORITY_TIME_CRITICAL。 如需這些值的說明, 請參閱 Windows 函數[SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 。
 
 ### <a name="remarks"></a>備註
 
-`GetPriority` 應該不會直接呼叫。 預設實作會傳回 THREAD_PRIORITY_NORMAL。
+`GetPriority`不應直接呼叫。 預設的執行會傳回 THREAD_PRIORITY_NORMAL。
 
-##  <a name="ondataavailable"></a>  CAsyncMonikerFile::OnDataAvailable
+##  <a name="ondataavailable"></a>CAsyncMonikerFile:: OnDataAvailable
 
-非同步 moniker 呼叫`OnDataAvailable`提供資料給用戶端上，可供使用，在非同步繫結作業。
+非同步標記會`OnDataAvailable`呼叫, 在非同步系結作業期間, 將資料提供給用戶端。
 
 ```
 virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
@@ -235,28 +235,28 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 ### <a name="parameters"></a>參數
 
 *dwSize*<br/>
-（以位元組為單位） 的繫結開始之後，您可以使用資料的累積數量。 可以是零，表示的資料量不相關的作業，或特定數量變成可用。
+自系結開始後可用的資料累計量 (以位元組為單位)。 可以是零, 表示資料量與作業無關, 或沒有可用的特定數量。
 
 *bscfFlag*<br/>
-BSCF 列舉值。 可以是下列一或多個下列值：
+BSCF 列舉值。 可以是下列一個或多個值:
 
-- BSCF_FIRSTDATANOTIFICATION 識別的第一個呼叫`OnDataAvailable`指定繫結作業。
+- BSCF_FIRSTDATANOTIFICATION 識別給定系結作業`OnDataAvailable`的第一個呼叫。
 
-- BSCF_INTERMEDIATEDATANOTIFICATION 識別的中間呼叫`OnDataAvailable`繫結作業。
+- BSCF_INTERMEDIATEDATANOTIFICATION 識別系結作業的`OnDataAvailable`中繼呼叫。
 
-- BSCF_LASTDATANOTIFICATION 識別上次呼叫`OnDataAvailable`繫結作業。
+- BSCF_LASTDATANOTIFICATION 識別系結作業的`OnDataAvailable`最後一個呼叫。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作不做任何動作。 請參閱以下範例的範例實作。
+此函式的預設實作不做任何動作。 請參閱下列範例以取得範例執行。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWinInet#5](../../mfc/codesnippet/cpp/casyncmonikerfile-class_1.cpp)]
 
-##  <a name="onlowresource"></a>  CAsyncMonikerFile::OnLowResource
+##  <a name="onlowresource"></a>CAsyncMonikerFile:: OnLowResource
 
-當資源不足時呼叫的 moniker。
+當資源較低時, 由標記呼叫。
 
 ```
 virtual void OnLowResource();
@@ -264,11 +264,11 @@ virtual void OnLowResource();
 
 ### <a name="remarks"></a>備註
 
-預設實作會呼叫`GetBinding( )-> Abort( )`。
+預設的執行會`GetBinding( )-> Abort( )`呼叫。
 
-##  <a name="onprogress"></a>  CAsyncMonikerFile::OnProgress
+##  <a name="onprogress"></a>CAsyncMonikerFile:: OnProgress
 
-呼叫重複，以指出此繫結作業中，通常會在合理的時間間隔，在長時間作業期間的目前進度的 moniker。
+由名字重複呼叫以指出此系結作業的目前進度, 通常是在冗長的作業期間合理的間隔。
 
 ```
 virtual void OnProgress(
@@ -281,36 +281,36 @@ virtual void OnProgress(
 ### <a name="parameters"></a>參數
 
 *ulProgress*<br/>
-指出目前相對於所示的預期最大值的繫結作業的進度*ulProgressMax*。
+指出系結作業目前的進度, 相對於*ulProgressMax*中所指出的預期最大值。
 
 *ulProgressMax*<br/>
-表示預期的最大值的*ulProgress*的呼叫期間`OnProgress`這項作業。
+針對這項作業的呼叫 `OnProgress`持續時間, 指出 ulProgress 的預期最大值。
 
 *ulStatusCode*<br/>
-提供繫結作業的進度相關的其他的資訊。 有效的值取自`BINDSTATUS`列舉型別。 如需可能值，請參閱 < 備註 >。
+提供有關系結作業進度的其他資訊。 有效的值取自`BINDSTATUS`列舉。 如需可能的值, 請參閱備註。
 
 *szStatusText*<br/>
-目前的進度，根據的值的相關資訊*ulStatusCode*。 如需可能值，請參閱 < 備註 >。
+目前進度的相關資訊, 視*ulStatusCode*的值而定。 如需可能的值, 請參閱備註。
 
 ### <a name="remarks"></a>備註
 
-可能值為*ulStatusCode* (並*szStatusText*每個值) 是：
+*UlStatusCode*的可能值 (以及每個值的*szStatusText* ) 為:
 
 |||
 |-|-|
-|BINDSTATUS_FINDINGRESOURCE  |繫結作業尋找保存物件或繫結至的儲存體資源。 *SzStatusText*提供所搜尋之資源的顯示名稱 (例如，"www.microsoft.com")。  |
-|BINDSTATUS_CONNECTING  |繫結作業已連線至資源所在的物件或繫結至的儲存體。 *SzStatusText*提供 （例如，IP 位址） 連線至資源的顯示名稱。  |
-|BINDSTATUS_SENDINGREQUEST|繫結作業要求的物件或繫結至的儲存體。 *SzStatusText*提供物件 （例如，檔案名稱） 的顯示名稱。|
-|BINDSTATUS_REDIRECTING  |繫結作業已重新導向不同的資料位置。 *SzStatusText*提供新的資料位置的顯示名稱。  |
-|BINDSTATUS_USINGCACHEDCOPY  |繫結作業會從快取複本擷取要求的物件或儲存體。 *SzStatusText*是 NULL。  |
-|BINDSTATUS_BEGINDOWNLOADDATA  |繫結作業已開始接收的物件或繫結至的儲存體。 *SzStatusText*提供的資料位置的顯示名稱。|
-|BINDSTATUS_DOWNLOADINGDATA  |繫結作業會繼續接收的物件或繫結至的儲存體。 *SzStatusText*提供的資料位置的顯示名稱。  |
-|BINDSTATUS_ENDDOWNLOADDATA  |繫結作業已完成接收的物件或繫結至的儲存體。 *SzStatusText*提供的資料位置的顯示名稱。  |
-|BINDSTATUS_CLASSIDAVAILABLE  |繫結至物件的執行個體只是要建立的。 *SzStatusText*提供讓用戶端有機會取消繫結作業中，視字串格式的新物件的 CLSID。  |
+|BINDSTATUS_FINDINGRESOURCE  |系結作業會尋找保存要系結之物件或儲存體的資源。 *SzStatusText*會提供所搜尋資源的顯示名稱 (例如 "www.microsoft.com")。  |
+|BINDSTATUS_CONNECTING  |系結作業會連接到保存要系結之物件或儲存體的資源。 *SzStatusText*會提供所連線之資源的顯示名稱 (例如, IP 位址)。  |
+|BINDSTATUS_SENDINGREQUEST|系結作業要求將物件或儲存體系結至。 *SzStatusText*會提供物件的顯示名稱 (例如, 檔案名)。|
+|BINDSTATUS_REDIRECTING  |已將系結作業重新導向至不同的資料位置。 *SzStatusText*會提供新資料位置的顯示名稱。  |
+|BINDSTATUS_USINGCACHEDCOPY  |系結作業會從快取的複本抓取要求的物件或儲存體。 *SzStatusText*是 Null。  |
+|BINDSTATUS_BEGINDOWNLOADDATA  |系結作業已開始接收要系結的物件或儲存體。 *SzStatusText*會提供資料位置的顯示名稱。|
+|BINDSTATUS_DOWNLOADINGDATA  |系結作業會繼續接收所系結的物件或儲存體。 *SzStatusText*會提供資料位置的顯示名稱。  |
+|BINDSTATUS_ENDDOWNLOADDATA  |系結作業已完成接收要系結的物件或儲存體。 *SzStatusText*會提供資料位置的顯示名稱。  |
+|BINDSTATUS_CLASSIDAVAILABLE  |要系結之物件的實例只會建立。 *SzStatusText*會以字串格式提供新物件的 CLSID, 讓用戶端有機會取消系結作業 (如有需要)。  |
 
-##  <a name="onstartbinding"></a>  CAsyncMonikerFile::OnStartBinding
+##  <a name="onstartbinding"></a>CAsyncMonikerFile:: OnStartBinding
 
-覆寫您繫結啟動時執行動作的衍生類別中此函式。
+覆寫衍生類別中的這個函式, 以便在啟動系結時執行動作。
 
 ```
 virtual void OnStartBinding();
@@ -318,11 +318,11 @@ virtual void OnStartBinding();
 
 ### <a name="remarks"></a>備註
 
-此函式會呼叫回 moniker。 預設實作不做任何動作。
+此函式是由標記傳回。 預設實作不做任何動作。
 
-##  <a name="onstopbinding"></a>  CAsyncMonikerFile::OnStopBinding
+##  <a name="onstopbinding"></a>CAsyncMonikerFile:: OnStopBinding
 
-呼叫繫結作業結尾的 moniker。
+由系結作業結尾的標記所呼叫。
 
 ```
 virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
@@ -331,20 +331,20 @@ virtual void OnStopBinding(HRESULT hresult, LPCTSTR szError);
 ### <a name="parameters"></a>參數
 
 *hresult*<br/>
-HRESULT 的錯誤或警告值。
+屬於錯誤或警告值的 HRESULT。
 
 *szErrort*<br/>
-字元字串，描述錯誤。
+描述錯誤的字元字串。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個函式來執行動作時停止傳輸。 根據預設，函式會釋放`IBinding`。
+覆寫此函式, 以在傳輸停止時執行動作。 根據預設, 函式會`IBinding`發行。
 
-如需描述`IBinding`介面中，請參閱 Windows SDK。
+如需`IBinding`介面的說明, 請參閱 Windows SDK。
 
-##  <a name="open"></a>  CAsyncMonikerFile::Open
+##  <a name="open"></a>CAsyncMonikerFile:: Open
 
-呼叫此成員函式，以非同步方式開啟檔案。
+呼叫這個成員函式以非同步方式開啟檔案。
 
 ```
 virtual BOOL Open(
@@ -389,32 +389,32 @@ virtual BOOL Open(
 ### <a name="parameters"></a>參數
 
 *lpszURL*<br/>
-若要以非同步方式開啟的檔案指標。 檔案可以是任何有效的 URL 或檔案名稱。
+要以非同步方式開啟之檔案的指標。 檔案可以是任何有效的 URL 或檔案名。
 
 *pError*<br/>
-檔案例外狀況指標。 發生錯誤時，它會設定為原因。
+檔案例外狀況的指標。 發生錯誤時, 會將其設定為原因。
 
 *pMoniker*<br/>
-非同步 moniker 介面的指標`IMoniker`，文件自己的 moniker 時，您可以使用擷取的組合精確 moniker `IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`，並建立從路徑名稱的 moniker。 控制項可以使用這個 moniker 繫結，但這不是控制項應該儲存的 moniker。
+非同步「名字」介面`IMoniker`的指標, 這是一種精確的標記, 它是檔本身的名字標記的組合, 您可以用`IOleClientSite::GetMoniker(OLEWHICHMK_CONTAINER)`來抓取, 以及從路徑名稱建立的「名字」。 控制項可以使用此標記來進行系結, 但這不是控制項應儲存的標記。
 
 *pBindHost*<br/>
-指標`IBindHost`將用於從可能的相對路徑名稱建立 moniker 的介面。 如果繫結主機無效或未提供的 moniker，呼叫就會預設為`Open(lpszFileName,pError)`。 如需描述`IBindHost`介面中，請參閱 Windows SDK。
+`IBindHost`介面的指標, 將用來從可能的相對路徑名稱建立名字標記。 如果系結主機無效或未提供名字標記, 則呼叫會預設為`Open(lpszFileName,pError)`。 如需`IBindHost`介面的說明, 請參閱 Windows SDK。
 
 *pServiceProvider*<br/>
-指標`IServiceProvider`介面。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫會預設為`Open(lpszFileName,pError)`。
+`IServiceProvider`介面的指標。 如果服務提供者無效或無法提供的服務`IBindHost`, 則呼叫會預設為。 `Open(lpszFileName,pError)`
 
 *pUnknown*<br/>
-指標`IUnknown`介面。 如果`IServiceProvider`找到，則此函式中的查詢`IBindHost`。 如果服務提供者無效或無法提供的服務`IBindHost`，呼叫會預設為`Open(lpszFileName,pError)`。
+`IUnknown`介面的指標。 如果`IServiceProvider`找到, 則函數會`IBindHost`查詢。 如果服務提供者無效或無法提供的服務`IBindHost`, 則呼叫會預設為。 `Open(lpszFileName,pError)`
 
 ### <a name="return-value"></a>傳回值
 
-如果順利開啟檔案，非零值。否則為 0。
+如果檔案已順利開啟, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-這個呼叫初始化繫結程序。
+此呼叫會起始系結程式。
 
-您可以使用 URL 或檔名*lpszURL*參數。 例如: 
+您可以使用 URL 或 filename 作為*lpszURL*參數。 例如：
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]
 

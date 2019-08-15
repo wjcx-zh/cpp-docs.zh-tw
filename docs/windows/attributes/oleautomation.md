@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - oleautomation attribute
 ms.assetid: c1086c91-260b-4dc3-b244-662852d09906
-ms.openlocfilehash: 74701742de904b76e7b1152c8ddb3f2f5dd953c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56970d8b1067e1ac38230b6995074210ddc5549b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407610"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514357"
 ---
 # <a name="oleautomation"></a>oleautomation
 
-表示與 Automation 相容介面。
+指出介面與 Automation 相容。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407610"
 
 ## <a name="remarks"></a>備註
 
-**Oleautomation** C++屬性具有相同的功能[oleautomation](/windows/desktop/Midl/oleautomation) MIDL 屬性。
+**Oleautomation** C++屬性具有與[oleautomation](/windows/win32/Midl/oleautomation) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-請參閱範例[defaultvalue](defaultvalue.md)並[nonextensible](nonextensible.md)的範例使用**oleautomation**。
+如需使用**oleautomation**的範例, 請參閱[defaultvalue](defaultvalue.md)和[nonextensible](nonextensible.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -39,7 +39,7 @@ ms.locfileid: "62407610"
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|**dispinterface**|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

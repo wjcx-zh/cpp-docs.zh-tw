@@ -41,79 +41,79 @@ f1_keywords:
 - ATLPATH/ATL::ATLPath::StripToRoot
 - ATLPATH/ATL::ATLPath::UnquoteSpaces
 ms.assetid: d1ec2b8d-7ec7-43ea-90dd-0a740d2a742b
-ms.openlocfilehash: 683fd9c6464187e416ea032840507b2062de1fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76efbb0bd43b800f186eac1afa168fc2a0c939f6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62248186"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497976"
 ---
 # <a name="atl-path-functions"></a>ATL 路徑函式
 
-ATL 提供 ATLPath 類別，以管理路徑的形式[CPathT](cpatht-class.md)。 此程式碼可以找到 atlpath.h 中。
+ATL 提供與 atlpath.h 類別來以[CPathT](cpatht-class.md)的形式操作路徑。 這段程式碼可以在與 atlpath.h 中找到。
 
-### <a name="related-classes"></a>相關的類別
+### <a name="related-classes"></a>相關類別
 
 |||
 |-|-|
-|[CPathT 類別](cpatht-class.md)|此類別代表的路徑。|
+|[CPathT 類別](cpatht-class.md)|此類別代表路徑。|
 
 ### <a name="related-typedefs"></a>相關的 Typedef
 
 |||
 |-|-|
-|`CPath`|特製化[CPathT](cpatht-class.md)使用`CString`。|
-|`CPathA`|特製化[CPathT](cpatht-class.md)使用`CStringA`。|
-|`CPathW`|特製化[CPathT](cpatht-class.md)使用`CStringW`。|
+|`CPath`|使用`CString` [CPathT](cpatht-class.md)的特製化。|
+|`CPathA`|使用`CStringA` [CPathT](cpatht-class.md)的特製化。|
+|`CPathW`|使用`CStringW` [CPathT](cpatht-class.md)的特製化。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
-|[ATLPath::AddBackslash](#addbackslash)|此函式是多載包裝函式[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)。|
-|[ATLPath::AddExtension](#addextension)|此函式是多載包裝函式[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)。|
-|[ATLPath::Append](#append)|此函式是多載包裝函式[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)。|
-|[ATLPath::BuildRoot](#buildroot)|此函式是多載包裝函式[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)。|
-|[ATLPath::Canonicalize](#canonicalize)|此函式是多載包裝函式[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)。|
-|[ATLPath::Combine](#combine)|此函式是多載包裝函式[PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)。|
-|[ATLPath::CommonPrefix](#commonprefix)|此函式是多載包裝函式[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。|
-|[ATLPath::CompactPath](#compactpath)|此函式是多載包裝函式[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)。|
-|[ATLPath::CompactPathEx](#compactpathex)|此函式是多載包裝函式[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)。|
-|[ATLPath::FileExists](#fileexists)|此函式是多載包裝函式[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)。|
-|[ATLPath::FindExtension](#findextension)|此函式是多載包裝函式[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)。|
-|[ATLPath::FindFileName](#findfilename)|此函式是多載包裝函式[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)。|
-|[ATLPath::GetDriveNumber](#getdrivenumber)|此函式是多載包裝函式[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)。|
-|[ATLPath::IsDirectory](#isdirectory)|此函式是多載包裝函式[PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)。|
-|[ATLPath::IsFileSpec](#isfilespec)|此函式是多載包裝函式[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)。|
-|[ATLPath::IsPrefix](#isprefix)|此函式是多載包裝函式[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)。|
-|[ATLPath::IsRelative](#isrelative)|此函式是多載包裝函式[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)。|
-|[ATLPath::IsRoot](#isroot)|此函式是多載包裝函式[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)。|
-|[ATLPath::IsSameRoot](#issameroot)|此函式是多載包裝函式[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)。|
-|[ATLPath::IsUNC](#isunc)|此函式是多載包裝函式[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)。|
-|[ATLPath::IsUNCServer](#isuncserver)|此函式是多載包裝函式[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)。|
-|[ATLPath::IsUNCServerShare](#isuncservershare)|此函式是多載包裝函式[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)。|
-|[ATLPath::MakePretty](#makepretty)|此函式是多載包裝函式[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)。|
-|[ATLPath::MatchSpec](#matchspec)|此函式是多載包裝函式[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)。|
-|[ATLPath::QuoteSpaces](#quotespaces)|此函式是多載包裝函式[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)。|
-|[ATLPath::RelativePathTo](#relativepathto)|此函式是多載包裝函式[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)。|
-|[ATLPath::RemoveArgs](#removeargs)|此函式是多載包裝函式[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)。|
-|[ATLPath::RemoveBackslash](#removebackslash)|此函式是多載包裝函式[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)。|
-|[ATLPath::RemoveBlanks](#removeblanks)|此函式是多載包裝函式[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)。|
-|[ATLPath::RemoveExtension](#removeextension)|此函式是多載包裝函式[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)。|
-|[ATLPath::RemoveFileSpec](#removefilespec)|此函式是多載包裝函式[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)。|
-|[ATLPath::RenameExtension](#renameextension)|此函式是多載包裝函式[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)。|
-|[ATLPath::SkipRoot](#skiproot)|此函式是多載包裝函式[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)。|
-|[ATLPath::StripPath](#strippath)|此函式是多載包裝函式[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)。|
-|[ATLPath::StripToRoot](#striptoroot)|此函式是多載包裝函式[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)。|
-|[ATLPath::UnquoteSpaces](#unquotespaces)|此函式是多載包裝函式[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)。|
+|[ATLPath::AddBackslash](#addbackslash)|此函數是[pathaddbackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)的多載包裝函式。|
+|[ATLPath::AddExtension](#addextension)|此函數是[pathaddextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)的多載包裝函式。|
+|[ATLPath::Append](#append)|此函數是[pathappend 式](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)的多載包裝函式。|
+|[ATLPath::BuildRoot](#buildroot)|此函數是[pathbuildroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)的多載包裝函式。|
+|[ATLPath::Canonicalize](#canonicalize)|此函數是[pathcanonicalize 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)的多載包裝函式。|
+|[ATLPath::Combine](#combine)|此函數是[pathcombine 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)的多載包裝函式。|
+|[ATLPath::CommonPrefix](#commonprefix)|此函數是[pathcommonprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)的多載包裝函式。|
+|[ATLPath::CompactPath](#compactpath)|此函數是[pathcompactpath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)的多載包裝函式。|
+|[ATLPath::CompactPathEx](#compactpathex)|此函數是[pathcompactpathex 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)的多載包裝函式。|
+|[ATLPath::FileExists](#fileexists)|此函數是[pathfileexists 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)的多載包裝函式。|
+|[ATLPath::FindExtension](#findextension)|此函數是[pathfindextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)的多載包裝函式。|
+|[ATLPath::FindFileName](#findfilename)|此函數是[pathfindfilename 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)的多載包裝函式。|
+|[ATLPath::GetDriveNumber](#getdrivenumber)|此函數是[pathgetdrivenumber 式](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)的多載包裝函式。|
+|[ATLPath::IsDirectory](#isdirectory)|此函數是[pathisdirectory 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)的多載包裝函式。|
+|[ATLPath::IsFileSpec](#isfilespec)|此函數是[pathisfilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)的多載包裝函式。|
+|[ATLPath::IsPrefix](#isprefix)|此函數是[pathisprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)的多載包裝函式。|
+|[ATLPath::IsRelative](#isrelative)|此函數是[pathisrelative 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)的多載包裝函式。|
+|[ATLPath::IsRoot](#isroot)|此函數是[pathisroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)的多載包裝函式。|
+|[ATLPath::IsSameRoot](#issameroot)|此函數是[pathissameroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)的多載包裝函式。|
+|[ATLPath::IsUNC](#isunc)|此函數是[pathisunc 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)的多載包裝函式。|
+|[ATLPath::IsUNCServer](#isuncserver)|此函數是[pathisuncserver 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)的多載包裝函式。|
+|[ATLPath::IsUNCServerShare](#isuncservershare)|此函數是[pathisuncservershare 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)的多載包裝函式。|
+|[ATLPath::MakePretty](#makepretty)|此函數是[pathmakepretty 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)的多載包裝函式。|
+|[ATLPath::MatchSpec](#matchspec)|此函數是[pathmatchspec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)的多載包裝函式。|
+|[ATLPath::QuoteSpaces](#quotespaces)|此函數是[pathquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)的多載包裝函式。|
+|[ATLPath::RelativePathTo](#relativepathto)|此函數是[pathrelativepathto 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)的多載包裝函式。|
+|[ATLPath::RemoveArgs](#removeargs)|此函數是[pathremoveargs 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)的多載包裝函式。|
+|[ATLPath::RemoveBackslash](#removebackslash)|此函數是[pathremovebackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)的多載包裝函式。|
+|[ATLPath::RemoveBlanks](#removeblanks)|此函數是[pathremoveblanks 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)的多載包裝函式。|
+|[ATLPath::RemoveExtension](#removeextension)|此函數是[pathremoveextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)的多載包裝函式。|
+|[ATLPath::RemoveFileSpec](#removefilespec)|此函數是[pathremovefilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)的多載包裝函式。|
+|[ATLPath::RenameExtension](#renameextension)|此函數是[pathrenameextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)的多載包裝函式。|
+|[ATLPath::SkipRoot](#skiproot)|此函數是[pathskiproot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)的多載包裝函式。|
+|[ATLPath::StripPath](#strippath)|此函數是[pathstrippath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)的多載包裝函式。|
+|[ATLPath::StripToRoot](#striptoroot)|此函數是[pathstriptoroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)的多載包裝函式。|
+|[ATLPath::UnquoteSpaces](#unquotespaces)|此函數是[pathunquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)的多載包裝函式。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlpath.h
+**標頭:** 與 atlpath.h。h
 
-## <a name="addbackslash"></a> ATLPath::AddBackSlash
+## <a name="addbackslash"></a>與 atlpath.h:: AddBackSlash
 
-此函式是多載包裝函式[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)。
+此函數是[pathaddbackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -124,11 +124,11 @@ inline wchar_t* AddBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathAddBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddbackslasha)如需詳細資訊。
+如需詳細資訊, 請參閱[pathaddbackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddbackslashw)。
 
-## <a name="addextension"></a> ATLPath::AddExtension
+## <a name="addextension"></a>與 atlpath.h:: AddExtension
 
-此函式是多載包裝函式[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)。
+此函數是[pathaddextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -139,11 +139,11 @@ inline BOOL AddExtension(wchar_t* pszPath, const wchar_t* pszExtension);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathAddExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathaddextensiona)如需詳細資訊。
+如需詳細資訊, 請參閱[pathaddextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathaddextensionw)。
 
-## <a name="append"></a> ATLPath::Append
+## <a name="append"></a>與 atlpath.h:: Append
 
-此函式是多載包裝函式[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)。
+此函數是[pathappend 式](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -154,11 +154,11 @@ inline BOOL Append(wchar_t* pszPath, const wchar_t* pszMore);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathAppend](/windows/desktop/api/shlwapi/nf-shlwapi-pathappenda)如需詳細資訊。
+如需詳細資訊, 請參閱[pathappend 式](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)。
 
 ## <a name="buildroot"></a> ATLPath::BuildRoot
 
-此函式是多載包裝函式[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)。
+此函數是[pathbuildroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -169,11 +169,11 @@ inline wchar_t* BuildRoot(wchar_t* pszPath, int iDrive);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathBuildRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathbuildroota)如需詳細資訊。
+如需詳細資訊, 請參閱[pathbuildroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathbuildrootw)。
 
-## <a name="canonicalize"></a> ATLPath::Canonicalize
+## <a name="canonicalize"></a>與 atlpath.h:: 正常化
 
-此函式是多載包裝函式[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)。
+此函數是[pathcanonicalize 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -184,11 +184,11 @@ inline BOOL Canonicalize(wchar_t* pszDest, const wchar_t* pszSrc);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathCanonicalize](/windows/desktop/api/shlwapi/nf-shlwapi-pathcanonicalizea)如需詳細資訊。
+如需詳細資訊, 請參閱[pathcanonicalize 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcanonicalizew)。
 
-## <a name="combine"></a> ATLPath::Combine
+## <a name="combine"></a>與 atlpath.h:: 組合
 
-此函式是多載包裝函式[PathCombine](/windows/desktop/api/shlwapi/nf-shlwapi-pathcombinea)。
+此函數是[pathcombine 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -207,11 +207,11 @@ inline wchar_t* Combine(
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 PathCombine。
+如需詳細資訊, 請參閱 Pathcombine 式。
 
 ## <a name="commonprefix"></a> ATLPath::CommonPrefix
 
-此函式是多載包裝函式[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)。
+此函數是[pathcommonprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -229,11 +229,11 @@ inline int CommonPrefix(
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathcommonprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
 
 ## <a name="compactpath"></a> ATLPath::CompactPath
 
-此函式是多載包裝函式[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)。
+此函數是[pathcompactpath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -251,11 +251,11 @@ inline BOOL CompactPath(
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathCompactPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpatha)如需詳細資訊。
+如需詳細資訊, 請參閱[pathcompactpath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathw)。
 
 ## <a name="compactpathex"></a> ATLPath::CompactPathEx
 
-此函式是多載包裝函式[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)。
+此函數是[pathcompactpathex 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -275,11 +275,11 @@ inline BOOL CompactPathEx(
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathCompactPathEx](/windows/desktop/api/shlwapi/nf-shlwapi-pathcompactpathexa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathcompactpathex 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcompactpathexw)。
 
-## <a name="fileexists"></a> ATLPath::FileExists
+## <a name="fileexists"></a>與 atlpath.h:: FileExists
 
-此函式是多載包裝函式[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)。
+此函數是[pathfileexists 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -290,11 +290,11 @@ inline BOOL FileExists(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathFileExists](/windows/desktop/api/shlwapi/nf-shlwapi-pathfileexistsa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathfileexists 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfileexistsw)。
 
-## <a name="findextension"></a> ATLPath::FindExtension
+## <a name="findextension"></a>與 atlpath.h:: FindExtension
 
-此函式是多載包裝函式[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)。
+此函數是[pathfindextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -305,11 +305,11 @@ inline wchar_t* FindExtension(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathFindExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindextensiona)如需詳細資訊。
+如需詳細資訊, 請參閱[pathfindextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindextensionw)。
 
 ## <a name="findfilename"></a> ATLPath::FindFileName
 
-此函式是多載包裝函式[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)。
+此函數是[pathfindfilename 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -320,11 +320,11 @@ inline wchar_t* FindFileName(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathFindFileName](/windows/desktop/api/shlwapi/nf-shlwapi-pathfindfilenamea)如需詳細資訊。
+如需詳細資訊, 請參閱[pathfindfilename 式](/windows/win32/api/shlwapi/nf-shlwapi-pathfindfilenamew)。
 
 ## <a name="getdrivenumber"></a> ATLPath::GetDriveNumber
 
-此函式是多載包裝函式[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)。
+此函數是[pathgetdrivenumber 式](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -335,11 +335,11 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathGetDriveNumber](/windows/desktop/api/shlwapi/nf-shlwapi-pathgetdrivenumbera)如需詳細資訊。
+如需詳細資訊, 請參閱[pathgetdrivenumber 式](/windows/win32/api/shlwapi/nf-shlwapi-pathgetdrivenumberw)。
 
 ## <a name="isdirectory"></a>  ATLPath::IsDirectory
 
-此函式是多載包裝函式[PathIsDirectory](/windows/desktop/api/shlwapi/nf-shlwapi-pathisdirectorya)。
+此函數是[pathisdirectory 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)的多載包裝函式。
 
 ```
 inline BOOL IsDirectory(const char* pszPath);
@@ -348,11 +348,11 @@ inline BOOL IsDirectory(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 PathIsDirectory。
+如需詳細資訊, 請參閱 Pathisdirectory 式。
 
 ## <a name="isfilespec"></a> ATLPath::IsFileSpec
 
-此函式是多載包裝函式[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)。
+此函數是[pathisfilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -363,11 +363,11 @@ inline BOOL IsFileSpec(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathisfilespeca)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisfilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisfilespecw)。
 
 ## <a name="isprefix"></a> ATLPath::IsPrefix
 
-此函式是多載包裝函式[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)。
+此函數是[pathisprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -378,11 +378,11 @@ inline BOOL IsPrefix(const wchar_t* pszPrefix, const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathisprefixa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisprefixw)。
 
 ## <a name="isrelative"></a> ATLPath::IsRelative
 
-此函式是多載包裝函式[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)。
+此函數是[pathisrelative 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -393,11 +393,11 @@ inline BOOL IsRelative(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsRelative](/windows/desktop/api/shlwapi/nf-shlwapi-pathisrelativea)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisrelative 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrelativew)。
 
 ## <a name="isroot"></a> ATLPath::IsRoot
 
-此函式是多載包裝函式[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)。
+此函數是[pathisroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -408,11 +408,11 @@ inline BOOL IsRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathisroota)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisrootw)。
 
 ## <a name="issameroot"></a> ATLPath::IsSameRoot
 
-此函式是多載包裝函式[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)。
+此函數是[pathissameroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -423,11 +423,11 @@ inline BOOL IsSameRoot(const wchar_t* pszPath1, const wchar_t* pszPath2);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsSameRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathissameroota)如需詳細資訊。
+如需詳細資訊, 請參閱[pathissameroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathissamerootw)。
 
 ## <a name="isunc"></a> ATLPath::IsUNC
 
-此函式是多載包裝函式[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)。
+此函數是[pathisunc 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -438,11 +438,11 @@ inline BOOL IsUNC(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsUNC](/windows/desktop/api/shlwapi/nf-shlwapi-pathisunca)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisunc 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncw)。
 
 ## <a name="isuncserver"></a> ATLPath::IsUNCServer
 
-此函式是多載包裝函式[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)。
+此函數是[pathisuncserver 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -453,11 +453,11 @@ inline BOOL IsUNCServer(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsUNCServer](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncservera)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisuncserver 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserverw)。
 
-## <a name="isuncservershare"></a> ATLPath::IsUNCServerShare
+## <a name="isuncservershare"></a>與 atlpath.h:: IsUNCServerShare
 
-此函式是多載包裝函式[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)。
+此函數是[pathisuncservershare 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -468,11 +468,11 @@ inline BOOL IsUNCServerShare(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathIsUNCServerShare](/windows/desktop/api/shlwapi/nf-shlwapi-pathisuncserversharea)如需詳細資訊。
+如需詳細資訊, 請參閱[pathisuncservershare 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)。
 
 ## <a name="makepretty"></a> ATLPath::MakePretty
 
-此函式是多載包裝函式[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)。
+此函數是[pathmakepretty 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -483,11 +483,11 @@ inline BOOL MakePretty(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathMakePretty](/windows/desktop/api/shlwapi/nf-shlwapi-pathmakeprettya)如需詳細資訊。
+如需詳細資訊, 請參閱[pathmakepretty 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmakeprettyw)。
 
 ## <a name="matchspec"></a> ATLPath::MatchSpec
 
-此函式是多載包裝函式[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)。
+此函數是[pathmatchspec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -498,11 +498,11 @@ inline BOOL MatchSpec(const wchar_t* pszPath, const wchar_t* pszSpec);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)如需詳細資訊。
+如需詳細資訊, 請參閱[pathmatchspec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathmatchspecw)。
 
 ## <a name="quotespaces"></a> ATLPath::QuoteSpaces
 
-此函式是多載包裝函式[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)。
+此函數是[pathquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -513,11 +513,11 @@ inline void QuoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathQuoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathquotespacesa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathquotespacesw)。
 
-## <a name="relativepathto"></a> ATLPath::RelativePathTo
+## <a name="relativepathto"></a>與 atlpath.h:: RelativePathTo
 
-此函式是多載包裝函式[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)。
+此函數是[pathrelativepathto 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -539,11 +539,11 @@ inline BOOL RelativePathTo(
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRelativePathTo](/windows/desktop/api/shlwapi/nf-shlwapi-pathrelativepathtoa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathrelativepathto 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)。
 
-## <a name="removeargs"></a> ATLPath::RemoveArgs
+## <a name="removeargs"></a>與 atlpath.h:: RemoveArgs
 
-此函式是多載包裝函式[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)。
+此函數是[pathremoveargs 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -554,11 +554,11 @@ inline void RemoveArgs(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRemoveArgs](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveargsa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathremoveargs 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveargsw)。
 
-## <a name="removebackslash"></a> ATLPath::RemoveBackslash
+## <a name="removebackslash"></a>與 atlpath.h:: RemoveBackslash
 
-此函式是多載包裝函式[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)。
+此函數是[pathremovebackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -569,11 +569,11 @@ inline wchar_t* RemoveBackslash(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRemoveBackslash](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovebackslasha)如需詳細資訊。
+如需詳細資訊, 請參閱[pathremovebackslash 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovebackslashw)。
 
-## <a name="removeblanks"></a> ATLPath::RemoveBlanks
+## <a name="removeblanks"></a>與 atlpath.h:: RemoveBlanks
 
-此函式是多載包裝函式[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)。
+此函數是[pathremoveblanks 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -584,11 +584,11 @@ inline void RemoveBlanks(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRemoveBlanks](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveblanksa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathremoveblanks 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveblanksw)。
 
-## <a name="removeextension"></a> ATLPath::RemoveExtension
+## <a name="removeextension"></a>與 atlpath.h:: RemoveExtension
 
-此函式是多載包裝函式[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)。
+此函數是[pathremoveextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -599,11 +599,11 @@ inline void RemoveExtension(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRemoveExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathremoveextensiona)如需詳細資訊。
+如需詳細資訊, 請參閱[pathremoveextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。
 
 ## <a name="removefilespec"></a> ATLPath::RemoveFileSpec
 
-此函式是多載包裝函式[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)。
+此函數是[pathremovefilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -614,11 +614,11 @@ inline BOOL RemoveFileSpec(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRemoveFileSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathremovefilespeca)如需詳細資訊。
+如需詳細資訊, 請參閱[pathremovefilespec 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremovefilespecw)。
 
 ## <a name="renameextension"></a> ATLPath::RenameExtension
 
-此函式是多載包裝函式[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)。
+此函數是[pathrenameextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -629,11 +629,11 @@ inline BOOL RenameExtension(wchar_t* pszPath, const wchar_t* pszExt);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathRenameExtension](/windows/desktop/api/shlwapi/nf-shlwapi-pathrenameextensiona)如需詳細資訊。
+如需詳細資訊, 請參閱[pathrenameextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrenameextensionw)。
 
 ## <a name="skiproot"></a> ATLPath::SkipRoot
 
-此函式是多載包裝函式[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)。
+此函數是[pathskiproot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -644,11 +644,11 @@ inline wchar_t* SkipRoot(const wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathSkipRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathskiproota)如需詳細資訊。
+如需詳細資訊, 請參閱[pathskiproot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)。
 
 ## <a name="strippath"></a> ATLPath::StripPath
 
-此函式是多載包裝函式[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)。
+此函數是[pathstrippath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -659,11 +659,11 @@ inline void StripPath(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathStripPath](/windows/desktop/api/shlwapi/nf-shlwapi-pathstrippatha)如需詳細資訊。
+如需詳細資訊, 請參閱[pathstrippath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)。
 
 ## <a name="striptoroot"></a> ATLPath::StripToRoot
 
-此函式是多載包裝函式[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)。
+此函數是[pathstriptoroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -674,11 +674,11 @@ inline BOOL StripToRoot(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)如需詳細資訊。
+如需詳細資訊, 請參閱[pathstriptoroot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstriptorootw)。
 
-## <a name="unquotespaces"></a> ATLPath::UnquoteSpaces
+## <a name="unquotespaces"></a>與 atlpath.h:: UnquoteSpaces
 
-此函式是多載包裝函式[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)。
+此函數是[pathunquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)的多載包裝函式。
 
 ### <a name="syntax"></a>語法
 
@@ -689,4 +689,4 @@ inline void UnquoteSpaces(wchar_t* pszPath);
 
 ### <a name="remarks"></a>備註
 
-請參閱[PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)如需詳細資訊。
+如需詳細資訊, 請參閱[pathunquotespaces 式](/windows/win32/api/shlwapi/nf-shlwapi-pathunquotespacesw)。

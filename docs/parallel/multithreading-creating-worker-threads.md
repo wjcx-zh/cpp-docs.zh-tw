@@ -1,5 +1,5 @@
 ---
-title: 多執行緒：建立 MFC 中的背景工作執行緒
+title: 多執行緒：在 MFC 中建立背景工作執行緒
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multithreading [C++], worker threads
@@ -10,60 +10,60 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: 38757337b1bfe5c7994f9a9f26aad2526aa0279c
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: c8df3dd9d17819b23362a3b31d8e198883aa9143
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504570"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512059"
 ---
-# <a name="multithreading-creating-worker-threads-in-mfc"></a>多執行緒：建立 MFC 中的背景工作執行緒
+# <a name="multithreading-creating-worker-threads-in-mfc"></a>多執行緒：在 MFC 中建立背景工作執行緒
 
-背景工作執行緒通常會用來處理背景工作，使用者應該不需要等候以繼續使用您的應用程式中。 重新計算和背景列印等工作是背景工作執行緒的良好範例。 本主題詳細說明建立背景工作執行緒所需的步驟。 主題包括：
+工作者執行緒通常用來處理背景工作, 使用者不應該等待繼續使用您的應用程式。 重新計算和背景列印等工作, 都是工作者執行緒的絕佳範例。 本主題詳細說明建立背景工作執行緒所需的步驟。 主題包括：
 
 - [啟動執行緒](#_core_starting_the_thread)
 
-- [實作控制函式](#_core_implementing_the_controlling_function)
+- [執行控制函數](#_core_implementing_the_controlling_function)
 
 - [範例](#_core_controlling_function_example)
 
-建立背景工作執行緒是相當簡單的工作。 只有兩個步驟，才能取得您執行的執行緒： 實作控制函式和啟動執行緒。 您不需要衍生的類別[CWinThread](../mfc/reference/cwinthread-class.md)。 如果您需要的特殊版本，您可以衍生一個類別`CWinThread`，但它不是必要的最簡單的背景工作執行緒。 您可以使用`CWinThread`而不需修改。
+建立背景工作執行緒相當簡單。 若要讓您的執行緒執行, 只需要兩個步驟: 執行控制函式和啟動執行緒。 不需要從[CWinThread](../mfc/reference/cwinthread-class.md)衍生類別。 如果您需要特殊版本的`CWinThread`, 您可以衍生類別, 但大部分簡單的背景工作執行緒都不需要。 您可以在`CWinThread`不修改的情況下使用。
 
-##  <a name="_core_starting_the_thread"></a> 啟動執行緒
+##  <a name="_core_starting_the_thread"></a>啟動執行緒
 
-有兩個多載的版本`AfxBeginThread`： 一個只能建立背景工作執行緒，就可以建立使用者介面執行緒和背景工作執行緒的另一個。 若要開始執行您使用第一個多載的背景工作執行緒，請呼叫[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)，提供下列資訊：
+有兩個多載版本`AfxBeginThread`: 一個只能建立背景工作執行緒, 另一個則可以同時建立使用者介面執行緒和背景工作執行緒。 若要使用第一個多載來開始執行您的背景工作執行緒, 請呼叫[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread), 並提供下列資訊:
 
 - 控制函式的位址。
 
-- 要傳遞至控制函式的參數。
+- 要傳遞至控制函數的參數。
 
-- （選擇性）想要的執行緒優先權。 預設值是一般優先權。 如需可用的優先權層級的詳細資訊，請參閱[SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) Windows SDK 中。
+- 選擇性所需的執行緒優先順序。 預設值為一般優先權。 如需可用優先權層級的詳細資訊, 請參閱 Windows SDK 中的[SetThreadPriority](/windows/win32/api/processthreadsapi/nf-processthreadsapi-setthreadpriority) 。
 
-- （選擇性）執行緒所需的堆疊大小。 預設值是相同的大小堆疊，與建立的執行緒。
+- 選擇性執行緒所需的堆疊大小。 預設值與建立執行緒的大小堆疊相同。
 
-- （選擇性）如果您想要在暫停狀態中建立的執行緒，CREATE_SUSPENDED。 預設值為 0，或以正常方式啟動執行緒。
+- 選擇性CREATE_SUSPENDED, 如果您想要以暫停狀態建立執行緒。 預設值為 0, 或正常啟動執行緒。
 
-- （選擇性）所需的安全性屬性。 預設為與父執行緒相同的存取權。 此安全性資訊的格式的相關資訊，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
+- 選擇性所需的安全性屬性。 預設值是與父執行緒相同的存取權。 如需有關此安全性資訊格式的詳細資訊, 請參閱 Windows SDK 中的[security attributes 這個](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))。
 
-`AfxBeginThread` 建立並初始化`CWinThread`物件，它啟動，並傳回它的位址，因此您可以稍後參考它。 整個程序進行檢查以確定所有物件都是已解除配置正確建立的任何部分萬一失敗。
+`AfxBeginThread`為您建立並`CWinThread`初始化物件, 並將其啟動並傳回其位址, 讓您稍後可以參考它。 整個程式中都會進行檢查, 以確保在建立過程中, 所有物件都已適當地解除配置。
 
-##  <a name="_core_implementing_the_controlling_function"></a> 實作控制函式
+##  <a name="_core_implementing_the_controlling_function"></a>執行控制函數
 
-控制函式會定義執行緒。 輸入此函式之後，請在執行緒啟動時，並當其存在時，執行緒終止。 此函式應該具有下列原型：
+控制函數會定義執行緒。 當您輸入這個函式時, 執行緒就會啟動, 而當它結束時, 執行緒就會終止。 此函式應具有下列原型:
 
 ```
 UINT MyControllingFunction( LPVOID pParam );
 ```
 
-參數是單一值。 函式會接收此參數中的值會是執行緒物件建立時傳遞至建構函式的值。 控制函式可以解譯以任何方式，它會選擇此值。 它可以視為純量值的指標或結構，包含多個參數，或可以忽略它。 如果參數參考結構，結構可用來將資料從呼叫端傳遞至執行緒，不僅要將資料從執行緒傳遞給呼叫者。 如果您使用這種結構將資料傳遞至呼叫端時，執行緒會需要告知呼叫端，當結果準備好。 如需從背景工作執行緒通訊給呼叫端資訊，請參閱[多執行緒：程式設計提示](multithreading-programming-tips.md)。
+參數是單一值。 函式在此參數中接收的值是建立執行緒物件時, 傳遞至函式的值。 控制函式可以透過其選擇的任何方式來解讀此值。 它可以被視為純量值或包含多個參數之結構的指標, 也可以忽略它。 如果參數參考結構, 則結構不僅可以用來將資料從呼叫端傳遞至執行緒, 也不能用來將資料從執行緒回傳給呼叫者。 如果您使用這類結構將資料傳回給呼叫者, 則在結果準備就緒時, 執行緒必須通知呼叫者。 如需從背景工作執行緒到呼叫端通訊的詳細資訊[, 請參閱多執行緒:程式設計](multithreading-programming-tips.md)提示。
 
-當函式結束時，它應該傳回 UINT 值，指出終止的原因。 一般而言，這個結束代碼是 0 代表成功，其他值則代表不同類型的錯誤。 這是完全與實作相關。 有些執行緒可能會維護物件的使用計數，並傳回該物件會使用目前的數目。 若要查看應用程式可以擷取此值的方式，請參閱[多執行緒：終止執行緒](multithreading-terminating-threads.md)。
+當函式終止時, 它應該會傳回指示終止原因的 UINT 值。 這個結束代碼通常是 0, 表示有其他值指出不同類型錯誤的成功。 這與純粹的執行相依。 有些執行緒可能會維護物件的使用量計數, 並傳回目前該物件的使用次數。 若要查看應用程式可以如何取得此值[, 請參閱多執行緒:終止執行緒](multithreading-terminating-threads.md)。
 
-有可進行撰寫與 MFC 程式庫的多執行緒程式中的一些限制。 如需描述這些限制和其他使用執行緒的秘訣，請參閱[多執行緒：程式設計提示](multithreading-programming-tips.md)。
+在以 MFC 程式庫撰寫的多執行緒程式中, 您可以執行的動作有一些限制。 如需這些限制的說明, 以及使用執行緒的其他秘訣[, 請參閱多執行緒:程式設計](multithreading-programming-tips.md)提示。
 
-##  <a name="_core_controlling_function_example"></a> 控制函式範例
+##  <a name="_core_controlling_function_example"></a>控制函數範例
 
-下列範例示範如何定義控制函式，並從另一個部分的程式使用它。
+下列範例顯示如何定義控制函式, 並從程式的另一個部分加以使用。
 
 ```
 UINT MyThreadProc( LPVOID pParam )

@@ -8,32 +8,32 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a52e9c9dcd53b01f17dc36825732b34771c75bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318559"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492633"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (指定區段屬性)
 
-> **/SECTION:**_name_,[[**!**]{**DEKPRSW**}][**,ALIGN=**_number_]
+> **/SECTION:** _名稱_、[ **!** ]{**DEKPRSW**}][ **, 對齊 =** _數位_]
 
 ## <a name="remarks"></a>備註
 
-**/Section**選項變更的屬性區段中，覆寫設定編譯區段.obj 檔時的屬性。
+**/SECTION**選項會變更區段的屬性, 並覆寫在編譯區段的 .obj 檔案時所設定的屬性。
 
-A*一節*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶體的具名連續區塊。 某些章節包含程式碼或程式直接宣告和使用，而其他的資料區段會為您建立的連結器和程式庫管理員 (lib.exe)，並包含作業系統的重要資訊的資料。 如需詳細資訊，請參閱 < [PE 格式](/windows/desktop/Debug/pe-format)。
+可移植執行檔 (PE) 中的*區段*是名為連續的記憶體區塊, 其中包含程式碼或資料。 某些區段包含程式所宣告並直接使用的程式碼或資料, 而連結器和程式庫管理員 (lib) 會為您建立其他資料區段, 並包含作業系統的重要資訊。 如需詳細資訊, 請參閱[PE 格式](/windows/win32/Debug/pe-format)。
 
-指定冒號 （:） 和區段*名稱*。 *名稱*會區分大小寫。
+指定冒號 (:)和區段*名稱*。 *名稱*區分大小寫。
 
-請勿使用下列名稱，因為它們與標準的名稱衝突。 比方說，.sdata 用於 RISC 平台：
+請勿使用下列名稱, 因為它們與標準名稱衝突。 例如, 在 RISC 平臺上使用 .sdata:
 
-- .arch
+- 。
 
 - .bss
 
-- .data
+- 。資料
 
 - .edata
 
@@ -41,7 +41,7 @@ A*一節*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶�
 
 - .pdata
 
-- .rdata
+- . .rdata
 
 - .reloc
 
@@ -57,33 +57,33 @@ A*一節*在可攜式執行檔 (PE) 檔案是包含程式碼或資料的記憶�
 
 - .xdata
 
-指定一或多個區段的屬性。 下面列出的屬性字元不區分大小寫。 您必須指定您想要有; 一節的所有屬性省略的屬性字元會導致該屬性位元設定為關閉。 如果您未指定 R、 W、 或 E，現有的讀取、 寫入或可執行檔的狀態會維持不變。
+指定區段的一個或多個屬性。 下面所列的屬性字元並不區分大小寫。 您必須指定要讓區段擁有的所有屬性;省略的屬性字元會導致關閉該屬性位。 如果您未指定 R、W 或 E, 現有的讀取、寫入或可執行檔狀態會維持不變。
 
-要變換正負號的屬性，在屬性和一個驚嘆號 （！） 字元前面。 此表格顯示屬性字元的意義：
+若要否定屬性, 請在其字元前面加上驚嘆號 (!)。 屬性字元的意義如下表所示:
 
 |字元|屬性|意義|
 |---------------|---------------|-------------|
 |E|執行|區段是可執行檔|
-|R|讀取|允許對於資料的讀取的作業|
-|W|Write|允許對於資料的寫入作業|
-|S|Shared|共用區段載入影像的所有處理程序|
-|D|可捨棄|標記為可棄置區段|
-|K|可快取|標記為不可快取區段|
-|P|可分頁|標記為不可分頁區段|
+|R|讀取|允許對資料進行讀取作業|
+|W|Write|允許對資料進行寫入作業|
+|S|Shared|在所有載入影像的進程之間共用區段|
+|D|可捨棄|將區段標記為可捨棄|
+|K|高速|將區段標記為不可快取|
+|P|一部分|將區段標記為不可分頁|
 
-K 和 P 是不尋常的區段旗標對應到它們都使用負值的意義。 如果您指定其中一個在.text 區段使用 **/SECTION:.text，K**選項，並無差別區段旗標中執行時[DUMPBIN](dumpbin-options.md)使用[/HEADERS](headers.md)選項;已隱含已快取一節。 若要移除預設值，指定 **/SECTION:.text，！K**改。 DUMPBIN 顯示區段特性，包括 「 未快取 」。
+K 和 P 不尋常, 其對應的區段旗標會用於負意義。 如果您使用 **/SECTION:. text, K**選項在. text 區段上指定其中一個專案, 當您使用[/HEADERS](headers.md)選項執行[DUMPBIN](dumpbin-options.md)時, 區段旗標中並沒有任何差異;區段已經隱含快取。 若要移除預設值, 請指定 **/SECTION:. text,!** 改為 K。 DUMPBIN 會顯示區段特性, 包括「未快取」。
 
-沒有 E、 R、 設定或 W PE 檔中的區段可能無效。
+PE 檔案中沒有 E、R 或 W 集的區段可能無效。
 
-**ALIGN =**_數目_引數可讓您指定的特定區段的對齊值。 _數字_引數是以位元組為單位，而且必須是 2 的乘冪。 請參閱[/對齊](align-section-alignment.md)如需詳細資訊。
+**ALIGN =** _number_引數可讓您指定特定區段的對齊值。 _Number_引數是以位元組為單位, 而且必須是2的乘冪。 如需詳細資訊, 請參閱[/align](align-section-alignment.md) 。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選擇 [設定] [**屬性** > ] [**連結器** > **命令列**] 屬性頁。
 
-1. 輸入中的選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以套用變更。
+1. 在 [**其他選項**] 方塊中, 輸入選項。 選擇 **[確定]** 或 [套用] 以套用變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

@@ -2,12 +2,12 @@
 title: 使用 C++ 設計 Windows 應用程式概觀
 ms.date: 07/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: f72e6320493027728a85741ba6d87025454c3b9e
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 10ef9698e27099d5856c1ed5f8ed2f21cea72c24
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607526"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514803"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>使用 C++ 設計 Windows 應用程式概觀
 
@@ -21,9 +21,9 @@ C++主控台應用程式會從主控台視窗中的命令列執行, 而且只能
 
 ## <a name="native-desktop-client-applications"></a>原生桌面用戶端應用程式
 
-*原生桌面用戶端應用程式*是一C++種 C 或視窗型應用程式, 它會使用原始的原生[Windows C api 或元件物件模型 (COM) api](/windows/desktop/apiindex/windows-api-list)來存取作業系統。 這些 Api 的本身大部分都是以 C 撰寫。建立原生桌面應用程式的方法有很多種:您可以使用處理作業系統事件的 C 樣式訊息迴圈, 直接使用 Win32 Api 進行程式設計。 或者, 您可以使用*Microsoft Foundation* class (MFC) 來進行程式設計, 這是C++包裝 Win32 的輕微物件導向程式庫。 相較于通用 Windows 平臺 (UWP), 這兩種方法都不會被視為「現代化」, 但這兩者仍然受到完整支援, 且目前有數百萬個在世界各地執行的程式程式碼。 在視窗中執行的 Win32 應用程式需要開發人員在 Windows 程式函式內明確地處理 Windows 訊息。 無論名稱是什麼, Win32 應用程式都可以編譯為32位 (x86) 或64位 (x64) 二進位檔。 在 Visual Studio IDE 中, x86 和 Win32 這兩者都是同義。
+*原生桌面用戶端應用程式*是一C++種 C 或視窗型應用程式, 它會使用原始的原生[Windows C api 或元件物件模型 (COM) api](/windows/win32/apiindex/windows-api-list)來存取作業系統。 這些 Api 的本身大部分都是以 C 撰寫。建立原生桌面應用程式的方法有很多種:您可以使用處理作業系統事件的 C 樣式訊息迴圈, 直接使用 Win32 Api 進行程式設計。 或者, 您可以使用*Microsoft Foundation* class (MFC) 來進行程式設計, 這是C++包裝 Win32 的輕微物件導向程式庫。 相較于通用 Windows 平臺 (UWP), 這兩種方法都不會被視為「現代化」, 但這兩者仍然受到完整支援, 且目前有數百萬個在世界各地執行的程式程式碼。 在視窗中執行的 Win32 應用程式需要開發人員在 Windows 程式函式內明確地處理 Windows 訊息。 無論名稱是什麼, Win32 應用程式都可以編譯為32位 (x86) 或64位 (x64) 二進位檔。 在 Visual Studio IDE 中, x86 和 Win32 這兩者都是同義。
 
-若要開始使用傳統的C++ Windows 程式設計, 請參閱[開始使用C++Win32 和](/windows/desktop/LearnWin32/learn-to-program-for-windows)。 在您對 Win32 有一些瞭解之後, 就可以更輕鬆地瞭解[MFC 桌面應用程式](../mfc/mfc-desktop-applications.md)。 如需使用複雜圖形的C++傳統桌面應用程式範例, 請參閱[Hilo:開發C++適用于 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)的應用程式。
+若要開始使用傳統的C++ Windows 程式設計, 請參閱[開始使用C++Win32 和](/windows/win32/LearnWin32/learn-to-program-for-windows)。 在您對 Win32 有一些瞭解之後, 就可以更輕鬆地瞭解[MFC 桌面應用程式](../mfc/mfc-desktop-applications.md)。 如需使用複雜圖形的C++傳統桌面應用程式範例, 請參閱[Hilo:開發C++適用于 Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)的應用程式。
 
 ### <a name="c-or-net"></a>C++或 .NET？
 
@@ -39,7 +39,7 @@ C++主控台應用程式會從主控台視窗中的命令列執行, 而且只能
 
 ## <a name="com-components"></a>COM 元件
 
-[元件物件模型 (COM)](/windows/desktop/com/the-component-object-model)是一種規格, 可讓以不同語言撰寫的程式彼此通訊。 許多 Windows 元件會實作為 COM 物件, 並遵循標準 COM 規則來建立物件、介面探索和物件銷毀。  從C++桌面應用程式使用 COM 物件相當簡單, 但撰寫自己的 COM 物件更為先進。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)提供宏和 helper 函式, 可簡化 COM 開發工作。 如需詳細資訊, 請參閱[ATL COM desktop components](../atl/atl-com-desktop-components.md)。
+[元件物件模型 (COM)](/windows/win32/com/the-component-object-model)是一種規格, 可讓以不同語言撰寫的程式彼此通訊。 許多 Windows 元件會實作為 COM 物件, 並遵循標準 COM 規則來建立物件、介面探索和物件銷毀。  從C++桌面應用程式使用 COM 物件相當簡單, 但撰寫自己的 COM 物件更為先進。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)提供宏和 helper 函式, 可簡化 COM 開發工作。 如需詳細資訊, 請參閱[ATL COM desktop components](../atl/atl-com-desktop-components.md)。
 
 ## <a name="universal-windows-platform-apps"></a>通用 Windows 平台應用程式
 
@@ -55,7 +55,7 @@ Visual Studio 2017 15.4 版和更新版本可讓您建立 Windows 應用程式�
 
 ## <a name="games"></a>遊戲
 
-DirectX 遊戲可以在電腦或 Xbox 上執行。 如需詳細資訊, 請參閱[DirectX 圖形和遊戲](/windows/desktop/directx)。
+DirectX 遊戲可以在電腦或 Xbox 上執行。 如需詳細資訊, 請參閱[DirectX 圖形和遊戲](/windows/win32/directx)。
 
 ## <a name="sql-server-database-clients"></a>SQL Server 資料庫用戶端
 
@@ -67,7 +67,7 @@ DirectX 遊戲可以在電腦或 Xbox 上執行。 如需詳細資訊, 請參閱
 
 ## <a name="windows-services"></a>Windows 服務
 
-Windows*服務*是一種程式, 可以在背景中執行, 幾乎不需要使用者互動。 這些程式稱為 UNIX 系統上的*守護*程式。 如需詳細資訊, 請參閱[服務](/windows/desktop/services/services)。
+Windows*服務*是一種程式, 可以在背景中執行, 幾乎不需要使用者互動。 這些程式稱為 UNIX 系統上的*守護*程式。 如需詳細資訊, 請參閱[服務](/windows/win32/services/services)。
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、程式庫和標頭檔
 
@@ -96,7 +96,7 @@ Microsoft 程式庫包括:
 Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、圖形偵錯工具、全功能的程式碼編輯器、單元測試支援，以及許多其他工具和公用程式。 如需詳細資訊, 請參閱[開始使用 Visual Studio 進行開發](/visualstudio/ide/get-started-developing-with-visual-studio)和[Visual Studio C++中的開發總覽](../overview/overview-of-cpp-development.md)。
 
 ## <a name="in-this-section"></a>本節內容
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[逐步解說：建立標準 C++ 程式](walkthrough-creating-a-standard-cpp-program-cpp.md)| 建立 Windows 主控台應用程式。|
 |[逐步解說：建立 Windows 傳統型應用程式 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|建立原生 Windows 桌面應用程式。|
@@ -115,7 +115,7 @@ Visual Studio 含有功能強大的機器碼偵錯工具、靜態分析工具、
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
 |[Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)|Visual C++ developer content 的父主題。|
 [使用 C++/CLI 進行 .NET 開發](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|建立原生C++程式庫的包裝函式, 讓它能夠與 .net 應用程式和元件通訊。|

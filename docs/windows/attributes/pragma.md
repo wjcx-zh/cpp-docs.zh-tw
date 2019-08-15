@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - pragma attribute
 ms.assetid: 3f90d023-b8b5-4007-8311-008bb72cbea1
-ms.openlocfilehash: 159e1570c2bde07bb4df8fa904a519e8e0018a6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3ee0d3f99bd27ca41d68b11c11522e92c8d40a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407454"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514272"
 ---
 # <a name="pragma"></a>pragma
 
-發出指定的字串到產生的.idl 檔案，而不使用引號。
+將指定的字串發出到產生的 .idl 檔案中, 而不使用引號。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ ms.locfileid: "62407454"
 ### <a name="parameters"></a>參數
 
 *pragma_statement*<br/>
-Pragma，您想要移至所產生的.idl 檔案。
+您想要移入產生之 .idl 檔的 pragma。
 
 ## <a name="remarks"></a>備註
 
-**Pragma** C++屬性具有相同的功能[pragma](/windows/desktop/Midl/pragma) MIDL 屬性。
+**Pragma** C++屬性的功能與[pragma](/windows/win32/Midl/pragma) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -56,8 +56,8 @@ __interface A
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

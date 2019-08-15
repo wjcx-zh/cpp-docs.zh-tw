@@ -46,43 +46,43 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6be7d29a4b43ac10980601708f5bcc666a48dd58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62309053"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511380"
 ---
 # <a name="reflected-window-message-ids"></a>反映視窗訊息 ID
 
-一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊，請參閱[MFC ActiveX 控制項：子類別化 Windows 控制項](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)。
+一種較快建立 ActiveX 控制項或其他特殊控制項的方法是子類別化一個視窗。 如需詳細資訊, [請參閱 MFC ActiveX 控制項:子類別化 Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)控制項。
 
-若要防止控制項的容器接收視窗訊息，由子類別化 Windows 控制項，傳送[COleControl](../mfc/reference/colecontrol-class.md)建立攔截某些視窗訊息，並將其傳回給控制項的"reflector"視窗。 控制項 (在其視窗程序中) 接著可以針對 ActiveX 控制項採取適當的動作，然後再處理這些反映訊息。
+為了防止控制項的容器接收由子類別化之 Windows 控制項所傳送的視窗訊息, [COleControl](../mfc/reference/colecontrol-class.md)會建立「反映程式」視窗來攔截特定視窗訊息, 並將它們傳回給控制項。 控制項 (在其視窗程序中) 接著可以針對 ActiveX 控制項採取適當的動作，然後再處理這些反映訊息。
 
 下表顯示攔截的訊息和反映程式視窗傳送的對應訊息。
 
 |由控制項傳送的訊息|反映至控制項的訊息|
 |---------------------------------|--------------------------------------|
-|[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|
-|[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
-|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
-|[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
-|[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
-|[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
-|[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
-|[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|
-|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
-|[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|
-|[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
-|[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
-|[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
-|[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
+|[WM_COMMAND](/windows/win32/menurc/wm-command)|OCM_COMMAND|
+|[WM_CTLCOLORBTN](/windows/win32/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
+|[WM_CTLCOLOREDIT](/windows/win32/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
+|[WM_CTLCOLORDLG](/windows/win32/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
+|[WM_CTLCOLORLISTBOX](/windows/win32/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
+|[WM_CTLCOLORSCROLLBAR](/windows/win32/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
+|[WM_CTLCOLORSTATIC](/windows/win32/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
+|[WM_DRAWITEM](/windows/win32/Controls/wm-drawitem)|OCM_DRAWITEM|
+|[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)|OCM_MEASUREITEM|
+|[WM_DELETEITEM](/windows/win32/Controls/wm-deleteitem)|OCM_DELETEITEM|
+|[WM_VKEYTOITEM](/windows/win32/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
+|[WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem)|OCM_CHARTOITEM|
+|[WM_COMPAREITEM](/windows/win32/Controls/wm-compareitem)|OCM_COMPAREITEM|
+|[WM_HSCROLL](/windows/win32/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_VSCROLL](/windows/win32/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
-|[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
+|[WM_NOTIFY](/windows/win32/controls/wm-notify)|OCM_NOTIFY|
 
 > [!NOTE]
->  如果控制項是在 Win32 系統上執行，有數種類型的 WM_CTLCOLOR\*它可能會收到的訊息。 如需詳細資訊，請參閱 WM_CTLCOLORBTN、 WM_CTLCOLORDLG、 WM_CTLCOLOREDIT、 WM_CTLCOLORLISTBOX、 WM_CTLCOLORMSGBOX、 WM_CTLCOLORSCROLLBAR、 WM_CTLCOLORSTATIC。
+>  如果控制項在 Win32 系統上執行, 它可能會收到幾種類型\*的 WM_CTLCOLOR 訊息。 如需詳細資訊, 請參閱 WM_CTLCOLORBTN、WM_CTLCOLORDLG、WM_CTLCOLOREDIT、WM_CTLCOLORLISTBOX、WM_CTLCOLORMSGBOX、WM_CTLCOLORSCROLLBAR、WM_CTLCOLORSTATIC。
 
 ## <a name="see-also"></a>另請參閱
 

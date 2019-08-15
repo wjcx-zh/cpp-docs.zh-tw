@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 5c7204f5207b85e4b9ada4b68e9feedaf83deccd
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2d00a7216778f4a9a40b9d503bce7d26982669e0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916223"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506059"
 ---
 # <a name="chtmlview-class"></a>CHtmlView 類別
 
@@ -215,7 +215,7 @@ class CHtmlView : public CFormView
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CHtmlView::Create](#create)|建立 WebBrowser 控制項。|
 |[CHtmlView::CreateControlSite](#createcontrolsite)|可覆寫，用來建立主控表單上之控制項的控制項網站執行個體。|
@@ -259,14 +259,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|在給定的 WebBrowser 中發生巡覽前呼叫 (無論是在視窗或框架項目上)。|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|呼叫以通知應用程式， 網頁瀏覽器命令啟用的狀態已經變更。|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|呼叫以通知應用程式, 檔已達到 READYSTATE_COMPLETE 狀態。|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)呼叫，這會在容器文件視窗啟用或停用時，通知使用中的就地物件。|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)呼叫，這會在容器文件視窗啟用或停用時，通知使用中的就地物件。|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|呼叫以通知應用程式，巡覽作業已經啟動。|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|當巡覽作業結束、暫止或失敗時呼叫。|
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|當容器建立或終結強制回應對話方塊時，呼叫以啟用或停用非強制回應對話方塊。|
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Internet Explorer 或 MSHTML 在主機上呼叫，允許主機替換 Internet Explorer 或 MSHTML 的資料物件。|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。|
 |[CHtmlView::OnFullScreen](#onfullscreen)|當 FullScreen 屬性變更時呼叫。|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|當它用做為置放目標，讓主機提供另一個 [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)時，由 Internet Explorer 或 MSHTML 呼叫。|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|當它用做為置放目標，讓主機提供另一個 [IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)時，由 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnGetExternal](#ongetexternal)|由 Internet Explorer 或 MSHTML 呼叫，以取得主機的 `IDispatch` 介面。|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|擷取 Internet Explorer 或 MSHTML 主機的 UI 功能。|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|傳回 Internet Explorer 或 MSHTML 儲存使用者喜好設定的登錄機碼。|
@@ -278,7 +278,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|呼叫以通知應用程式，下載作業的進度已經更新。|
 |[CHtmlView::OnPropertyChange](#onpropertychange)|呼叫以通知應用程式， [PutProperty](#putproperty) 方法已經變更屬性的值。|
 |[CHtmlView::OnQuit](#onquit)|呼叫以通知應用程式，Internet Explorer 應用程式已經可以結束。 (僅限 Internet Explorer)|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。|
+|[CHtmlView::OnResizeBorder](#onresizeborder)|從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。|
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|當它正要顯示內容功能表時，從 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnShowUI](#onshowui)|在 Internet Explorer 或 MSHTML 顯示其功能表與工具列之前呼叫。|
 |[CHtmlView::OnStatusBar](#onstatusbar)|當 StatusBar 屬性變更時呼叫。|
@@ -286,7 +286,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|當 TheaterMode 屬性變更時呼叫。|
 |[CHtmlView::OnTitleChange](#ontitlechange)|呼叫以通知應用程式，WebBrowser 控制項中文件的標題是否變成可用或變更。|
 |[CHtmlView::OnToolBar](#ontoolbar)|當 ToolBar 屬性變更時呼叫。|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|由 Internet Explorer 或 MSHTML 呼叫，讓主機有機會修改要載入的 URL。|
 |[CHtmlView::OnUpdateUI](#onupdateui)|通知主機命令狀態已變更。|
 |[CHtmlView::OnVisible](#onvisible)|當 WebBrowser 控制項的視窗必須顯示/隱藏時呼叫。|
@@ -459,11 +459,11 @@ HRESULT ExecFormsCommand(
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。 如需可能值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec) 。
+標準的 HRESULT 值。 如需可能值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec) 。
 
 ### <a name="remarks"></a>備註
 
-`ExecFormsCommand`[執行 IOleCommandTarget:: Exec](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-exec)方法的行為。
+`ExecFormsCommand`[執行 IOleCommandTarget:: Exec](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-exec)方法的行為。
 
 ##  <a name="execwb"></a>  CHtmlView::ExecWB
 
@@ -1092,7 +1092,7 @@ void Navigate2(
 ### <a name="parameters"></a>參數
 
 *pIDL*<br/>
-[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist)結構的指標。
+[ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist)結構的指標。
 
 *dwFlags*<br/>
 變數的旗標, 指定是否要將資源加入至歷程記錄清單、是否要讀取或寫入快取, 以及是否要在新視窗中顯示資源。 變數可以是[BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列舉所定義之值的組合。
@@ -1271,7 +1271,7 @@ virtual HRESULT OnFilterDataObject(
 ### <a name="parameters"></a>參數
 
 *pDataObject*<br/>
-Internet Explorer 或 MSHTML 所提供的[IDataObject](/windows/desktop/api/objidl/nn-objidl-idataobject)介面位址。
+Internet Explorer 或 MSHTML 所提供的[IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject)介面位址。
 
 *ppDataObject*<br/>
 接收主機所提供`IDataObject`之介面指標的位址。 即使方法失敗, 此參數的內容也應一律初始化為 Null。
@@ -1286,7 +1286,7 @@ Internet Explorer 或 MSHTML 所提供的[IDataObject](/windows/desktop/api/obji
 
 ##  <a name="onframewindowactivate"></a>CHtmlView:: Onframewindowactivate 呼叫
 
-從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。
+從 [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) 呼叫，在容器的最上層框架視窗啟用或停用時通知物件。
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1331,7 +1331,7 @@ virtual HRESULT OnGetDropTarget(
 ### <a name="parameters"></a>參數
 
 *pDropTarget*<br/>
-[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)建議使用 Internet Explorer 或 MSHTML。
+[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)建議使用 Internet Explorer 或 MSHTML。
 
 *ppDropTarget*<br/>
 接收主機想`IDropTarget`要提供之介面指標的位址。`IDropTarget`
@@ -1399,7 +1399,7 @@ virtual HRESULT OnGetOptionKeyPath(
 ### <a name="parameters"></a>參數
 
 *pchKey*<br/>
-的位址, 它會接收登錄子機碼字串, 其中主機會儲存其預設選項。 `LPOLESTR` 這個子機碼將會在 HKEY_CURRENT_USER 金鑰之下。 使用[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)配置此記憶體。 呼叫應用程式會負責使用[CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)釋放此記憶體。 即使方法失敗, 此參數也應一律初始化為 Null。
+的位址, 它會接收登錄子機碼字串, 其中主機會儲存其預設選項。 `LPOLESTR` 這個子機碼將會在 HKEY_CURRENT_USER 金鑰之下。 使用[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)配置此記憶體。 呼叫應用程式會負責使用[CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)釋放此記憶體。 即使方法失敗, 此參數也應一律初始化為 Null。
 
 *dwReserved*<br/>
 保留供未來使用。 目前未使用。
@@ -1559,7 +1559,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>CHtmlView:: OnResizeBorder
 
-從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。
+從 Internet Explorer 或 MSHTML 實作的 [IOleInPlaceActiveObject::ResizeBorder](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)呼叫，警示物件它需要調整框線空間的大小。
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1577,7 +1577,7 @@ virtual HRESULT OnResizeBorder(
 框架或文件視窗物件的介面指標, 其框線已變更。
 
 *fFrameWindow*<br/>
-如果框架視窗呼叫[IOleInPlaceActiveObject:: resizeborder 呼叫](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), 則為 TRUE, 否則為 FALSE。
+如果框架視窗呼叫[IOleInPlaceActiveObject:: resizeborder 呼叫](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), 則為 TRUE, 否則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1608,7 +1608,7 @@ virtual HRESULT OnShowContextMenu(
 功能表的螢幕座標。
 
 *pcmdtReserved*<br/>
-[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)介面, 用來查詢此物件上的命令狀態和執行命令。
+[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)介面, 用來查詢此物件上的命令狀態和執行命令。
 
 *pdispReserved*<br/>
 位於螢幕座標之物件的 IDispatch 介面。 這可讓主機區分特定物件, 以提供更具體的內容。
@@ -1640,16 +1640,16 @@ virtual HRESULT OnShowUI(
 保留供未來使用。
 
 *pActiveObject*<br/>
-目前現用物件的[IOleInPlaceActiveObject](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceactiveobject)介面。
+目前現用物件的[IOleInPlaceActiveObject](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceactiveobject)介面。
 
 *pCommandTarget*<br/>
-物件的[IOleCommandTarget](/windows/desktop/api/docobj/nn-docobj-iolecommandtarget)介面。
+物件的[IOleCommandTarget](/windows/win32/api/docobj/nn-docobj-iolecommandtarget)介面。
 
 *pFrame*<br/>
-物件的[IOleInPlaceFrame](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceframe)介面。 這是功能表和工具列的必要程式。
+物件的[IOleInPlaceFrame](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceframe)介面。 這是功能表和工具列的必要程式。
 
 *pDoc*<br/>
-物件的[IOleInPlaceUIWindow](/windows/desktop/api/oleidl/nn-oleidl-ioleinplaceuiwindow)介面。 這是工具列的必要程式。
+物件的[IOleInPlaceUIWindow](/windows/win32/api/oleidl/nn-oleidl-ioleinplaceuiwindow)介面。 這是工具列的必要程式。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1730,7 +1730,7 @@ virtual void OnToolBar(BOOL bToolBar);
 
 ##  <a name="ontranslateaccelerator"></a>CHtmlView:: OnTranslateAccelerator
 
-當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。
+當呼叫 [IOleInPlaceActiveObject::TranslateAccelerator](/windows/win32/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) 或 [IOleControlSite::TranslateAccelerator](/windows/win32/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) 處理來自容器訊息佇列的功能表快速鍵訊息時，由 Internet Explorer 或 MSHTML 呼叫。
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1902,11 +1902,11 @@ HRESULT QueryFormsCommand(
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT 值。 如需可能值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
+標準的 HRESULT 值。 如需可能值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
 
 ### <a name="remarks"></a>備註
 
-`QueryFormsCommand`[執行 IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行為。
+`QueryFormsCommand`[執行 IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行為。
 
 ##  <a name="querystatuswb"></a>CHtmlView:: QueryStatusWB
 
@@ -1919,15 +1919,15 @@ OLECMDF QueryStatusWB(OLECMDID cmdID) const;
 ### <a name="parameters"></a>參數
 
 *cmdID*<br/>
-呼叫端需要其狀態資訊之命令的[OLECMDID](/windows/desktop/api/docobj/ne-docobj-olecmdid)值。
+呼叫端需要其狀態資訊之命令的[OLECMDID](/windows/win32/api/docobj/ne-docobj-olecmdid)值。
 
 ### <a name="return-value"></a>傳回值
 
-接收命令狀態之[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)值的位址。
+接收命令狀態之[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)值的位址。
 
 ### <a name="remarks"></a>備註
 
-`QueryStatusWB`[執行 IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行為。
+`QueryStatusWB`[執行 IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的行為。
 
 適用於 Internet Explorer 和 WebBrowser。
 
@@ -2236,4 +2236,4 @@ void Stop();
 [MFC 範例 MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CFormView 類別](../../mfc/reference/cformview-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)
+[IWebBrowser2](/windows/win32/api/exdisp/nn-exdisp-iwebbrowser2)

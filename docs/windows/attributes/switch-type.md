@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407116"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513958"
 ---
-# <a name="switchtype"></a>switch_type
+# <a name="switch_type"></a>switch_type
 
-識別做為等位的判別變數的型別。
+識別用來做為聯集判別之變數的類型。
 
 ## <a name="syntax"></a>語法
 
@@ -28,13 +28,13 @@ type
 ### <a name="parameters"></a>參數
 
 *type*<br/>
-參數型別可以是整數、 字元、 布林值或列舉類型。
+參數類型可以是整數、字元、布林值或列舉類型。
 
 ## <a name="remarks"></a>備註
 
-**Switch_type** C++屬性具有相同的功能[switch_type](/windows/desktop/Midl/switch-type) MIDL 屬性。
+**Switch_type** C++屬性具有與[switch_type](/windows/win32/Midl/switch-type) MIDL 屬性相同的功能。
 
-C++不支援屬性[封裝等位](/windows/desktop/Midl/encapsulated-unions)。 [Nonencapsulated 等位](/windows/desktop/Midl/nonencapsulated-unions)只支援下列格式：
+C++屬性不支援[封裝](/windows/win32/Midl/encapsulated-unions)的等位。 僅支援下列形式的[Nonencapsulated](/windows/win32/Midl/nonencapsulated-unions)等位:
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -55,7 +55,7 @@ struct SizedValue2 {
 
 ## <a name="example"></a>範例
 
-請參閱[案例](case-cpp.md)的範例使用的範例**switch_type**。
+如需使用**switch_type**的範例, 請參閱[案例](case-cpp.md)範例。
 
 ## <a name="requirements"></a>需求
 

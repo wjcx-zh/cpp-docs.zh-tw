@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
-ms.openlocfilehash: b75dc4110b785f0ab1f55ba5c31df7d3fc6fbd37
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c4bbdfccb2d6d8b167c537b7ae4df57c89438479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915748"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496507"
 ---
 # <a name="csacl-class"></a>CSacl 類別
 
@@ -36,7 +36,7 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|建構函式。|
 |[CSacl::~CSacl](#dtor)|解構函式。|
@@ -64,7 +64,7 @@ SACL 包含存取控制專案 (Ace), 可指定在網域控制站的安全性事�
 
 使用提供的類別方法來新增、移除、建立和刪除物件中的`SACL` ace。 另請參閱[AtlGetSacl](security-global-functions.md#atlgetsacl)和[AtlSetSacl](security-global-functions.md#atlsetsacl)。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -129,7 +129,7 @@ bool AddAuditAce(
 
 `CSacl`物件包含存取控制專案 (ace), 可指定在安全性事件記錄檔中產生 audit 記錄的存取嘗試類型。 這個方法會將這類 ACE 新增`CSacl`至物件。
 
-如需可在*AceFlags*參數中設定之各種旗標的說明, 請參閱[ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header) 。
+如需可在*AceFlags*參數中設定之各種旗標的說明, 請參閱[ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header) 。
 
 ##  <a name="csacl"></a>  CSacl::CSacl
 
@@ -222,7 +222,7 @@ void RemoveAllAces() throw();
 ## <a name="see-also"></a>另請參閱
 
 [CAcl 類別](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[A](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[A](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

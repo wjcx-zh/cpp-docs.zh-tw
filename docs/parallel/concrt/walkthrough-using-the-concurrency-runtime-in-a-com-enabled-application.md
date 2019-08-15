@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 7249dc1c715861230170bc3efd4fb4aa75029bdb
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 23488522287ab5767c88cd3a3e90c09392634f46
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857504"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512094"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>逐步解說：在啟用 COM 的應用程式中使用並行執行階段
 
-本文件將示範如何使用並行執行階段中使用元件物件模型 (COM) 的應用程式。
+本檔示範如何在使用元件物件模型 (COM) 的應用程式中使用並行執行階段。
 
 ## <a name="prerequisites"></a>必要條件
 
-在開始本逐步解說之前，請閱讀下列文件：
+開始進行本逐步解說之前, 請先閱讀下列檔:
 
-- [工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
+- [工作平行處理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
 - [平行演算法](../../parallel/concrt/parallel-algorithms.md)
 
@@ -28,101 +28,101 @@ ms.locfileid: "64857504"
 
 - [例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)
 
-如需有關 COM 的詳細資訊，請參閱[元件物件模型 (COM)](/windows/desktop/com/component-object-model--com--portal)。
+如需 COM 的詳細資訊, 請參閱[元件物件模型 (COM)](/windows/win32/com/component-object-model--com--portal)。
 
 ## <a name="managing-the-lifetime-of-the-com-library"></a>管理 COM 程式庫的存留期
 
-雖然使用 COM 與並行執行階段會遵循相同的原則，做為任何其他並行機制，下列指導方針可協助您有效地一起使用這些程式庫。
+雖然使用 COM 搭配並行執行階段遵循與任何其他並行機制相同的原則, 但下列指導方針可協助您有效地使用這些程式庫。
 
-- 必須在呼叫執行緒[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)它會使用 COM 程式庫之前。
+- 執行緒必須先呼叫[CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) , 才會使用 COM 程式庫。
 
-- 執行緒可以呼叫`CoInitializeEx`多次，只要它會提供每個呼叫的相同引數。
+- 執行緒可以呼叫`CoInitializeEx`多次, 只要它提供每個呼叫的相同引數。
 
-- 每次呼叫`CoInitializeEx`，還必須呼叫執行緒[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize)。 換句話說，呼叫`CoInitializeEx`和`CoUninitialize`必須達成平衡。
+- 對於的每個`CoInitializeEx`呼叫, 執行緒也必須呼叫[CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize)。 換句話說, 對`CoInitializeEx`和`CoUninitialize`的呼叫必須平衡。
 
-- 若要從單一執行緒 apartment 中，切換到另一個，執行緒必須完全釋放 COM 程式庫之前它會呼叫`CoInitializeEx`與新執行緒規格。
+- 若要從某個執行緒單元切換至另一個執行緒, 執行緒必須先完全釋放 COM 程式庫`CoInitializeEx` , 才能使用新的執行緒規格來呼叫它。
 
-當您將 COM 使用並行執行階段時，就會適用其他 COM 原則。 例如，在單一執行緒 apartment (STA) 中建立的物件，並封送處理至另一個 apartment，該物件的應用程式也必須提供處理內送訊息的訊息迴圈。 也請記住封送處理物件 apartment 之間可能會降低效能。
+當您使用 COM 搭配並行執行階段時, 適用其他 COM 原則。 例如, 在單一執行緒單元 (STA) 中建立物件, 並將該物件封送處理至另一個公寓的應用程式, 也必須提供訊息迴圈來處理傳入訊息。 也請記住, 在公寓之間封送處理物件可能會降低效能。
 
-### <a name="using-com-with-the-parallel-patterns-library"></a>使用平行模式程式庫中的 COM
+### <a name="using-com-with-the-parallel-patterns-library"></a>使用 COM 搭配平行模式程式庫
 
-當您使用的 COM 元件在平行模式程式庫 (PPL)，例如工作群組或平行演算法，與呼叫`CoInitializeEx`每個工作或反覆項目，並呼叫期間使用的 COM 程式庫之前`CoUninitialize`每個工作或反覆項目完成之前. 下列範例示範如何管理與 COM 程式庫的存留期[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件。
+當您使用 com 搭配平行模式程式庫 (PPL) 中的元件 (例如, 工作組或平行演算法) 時, 請在`CoInitializeEx`每個工作或反復專案中使用 com 程式庫之前呼叫, `CoUninitialize`並在每個工作或反復專案完成之前呼叫. 下列範例顯示如何使用[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件管理 COM 程式庫的存留期。
 
 [!code-cpp[concrt-parallel-scripts#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_1.cpp)]
 
-您必須確定取消工作或平行演算法時，或工作主體擲回例外狀況時，就會正確地釋放 COM 程式庫。 若要保證，工作會呼叫`CoUninitialize`結束之前，請使用`try-finally`區塊或*資源擷取即初始化*(RAII) 模式。 下列範例會使用`try-finally`區塊來釋放 COM 程式庫，當工作完成或已取消，或擲回例外狀況時。
+當工作或平行處理演算法取消或工作主體擲回例外狀況時, 您必須確定 COM 程式庫已正確釋放。 若要確保工作在結束`CoUninitialize`之前呼叫, 請`try-finally`使用區塊或資源取得*為初始化*(RAII) 模式。 下列範例會在工作`try-finally`完成或取消時, 或擲回例外狀況時, 使用區塊來釋放 COM 程式庫。
 
 [!code-cpp[concrt-parallel-scripts#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_2.cpp)]
 
-下列範例會使用 RAII 模式來定義`CCoInitializer`類別，用來管理在給定範圍中的 COM 程式庫的存留期。
+下列範例會使用 RAII 模式來定義`CCoInitializer`類別, 以管理指定範圍內 COM 程式庫的存留期。
 
 [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]
 
-您可以使用`CCoInitializer`，如下所示的工作結束時，會自動釋放 COM 程式庫的類別。
+您可以使用`CCoInitializer`類別, 在工作結束時自動釋放 COM 程式庫, 如下所示。
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
-如需並行執行階段中的取消作業的詳細資訊，請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。
+如需有關在並行執行階段中取消的詳細資訊, 請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。
 
-### <a name="using-com-with-asynchronous-agents"></a>使用非同步代理程式的 COM
+### <a name="using-com-with-asynchronous-agents"></a>使用 COM 搭配非同步代理程式
 
-當您使用非同步代理程式使用 COM 時，呼叫`CoInitializeEx`才能使用中的 COM 程式庫[2&gt;concurrency::agent::run&lt;2}](reference/agent-class.md#run)代理程式的方法。 然後呼叫`CoUninitialize`之前`run`方法會傳回。 不使用 COM 管理常式中的建構函式或解構函式的代理程式，並不會覆寫[concurrency::agent::start](reference/agent-class.md#start)或是[concurrency:: agent:: 完成](reference/agent-class.md#done)方法因為這些方法從以外的執行緒呼叫`run`方法。
+當您使用 com 搭配非同步代理程式時`CoInitializeEx` , 請先呼叫, 再于您的 agent 的[concurrency:: agent:: run](reference/agent-class.md#run)方法中使用 com 程式庫。 然後在`CoUninitialize` `run`方法傳回之前呼叫。 請勿在您的代理程式的函數或析構函式中使用 COM 管理常式, 而且不會覆寫[concurrency:: agent:: start](reference/agent-class.md#start)或[concurrency:: agent::d 一種](reference/agent-class.md#done)方法, 因為這些方法是從不同的執行緒呼叫,而不是從`run`方法。
 
-下列範例示範基本的代理程式類別，名為`CCoAgent`，其可管理中的 COM 程式庫`run`方法。
+下列範例顯示名為`CCoAgent`的基本代理程式類別, 它會管理`run`方法中的 COM 程式庫。
 
 [!code-cpp[concrt-parallel-scripts#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_5.cpp)]
 
 本逐步解說稍後會提供完整的範例。
 
-### <a name="using-com-with-lightweight-tasks"></a>COM 使用輕量型工作
+### <a name="using-com-with-lightweight-tasks"></a>使用具有輕量工作的 COM
 
-文件[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)說明並行執行階段的輕量型工作的角色。 您可以使用 COM 使用輕量型工作，就如同您傳遞至任何執行緒常式與`CreateThread`Windows API 中的函式。 這在下列範例中顯示。
+檔[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)描述並行執行階段中的輕量工作角色。 您可以使用 COM 搭配輕量工作, 就像您在 Windows API 中傳遞給`CreateThread`函式的任何執行緒常式一樣。 這在下列範例中顯示。
 
 [!code-cpp[concrt-parallel-scripts#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_6.cpp)]
 
 ## <a name="an-example-of-a-com-enabled-application"></a>啟用 COM 的應用程式範例
 
-此區段會顯示完整啟用 COM 使用的應用程式`IScriptControl`介面，以執行指令碼，會計算 n<sup>th</sup> Fibonacci 數字。 此範例會從主執行緒中，會先呼叫指令碼，並接著會使用 PPL 和代理程式同時呼叫指令碼。
+本節說明完整的啟用 COM 的應用程式, 它會`IScriptControl`使用介面來執行腳本, 以計算<sup>第</sup>n 個斐的量值。 這個範例會先從主執行緒呼叫腳本, 然後使用 PPL 和代理程式同時呼叫腳本。
 
-請考慮下列 helper 函式`RunScriptProcedure`，它會在呼叫程序`IScriptControl`物件。
+請考慮下列 helper 函式`RunScriptProcedure`, 其會呼叫物件中的`IScriptControl`程式。
 
 [!code-cpp[concrt-parallel-scripts#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_7.cpp)]
 
-`wmain`函式會建立`IScriptControl`物件，將指令碼的程式碼加入至它計算 n<sup>th</sup> Fibonacci 數字，然後再呼叫`RunScriptProcedure`函式來執行該指令碼。
+函式`IScriptControl`會建立物件, 並在其中新增腳本, 以計算<sup>第</sup>n 個`RunScriptProcedure`斐波的數量詞, 然後呼叫函式來執行該腳本。 `wmain`
 
 [!code-cpp[concrt-parallel-scripts#8](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_8.cpp)]
 
-### <a name="calling-the-script-from-the-ppl"></a>從 PPL 呼叫指令碼
+### <a name="calling-the-script-from-the-ppl"></a>從 PPL 呼叫腳本
 
-下列函式中， `ParallelFibonacci`，使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法以平行方式呼叫指令碼。 此函式會使用`CCoInitializer`類別來管理工作的每個反覆項目期間的 COM 程式庫的存留期。
+下列`ParallelFibonacci`函式會使用[concurrency::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法, 以平行方式呼叫腳本。 此函式會`CCoInitializer`在工作的每次反覆運算期間, 使用類別來管理 COM 程式庫的存留期。
 
 [!code-cpp[concrt-parallel-scripts#9](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_9.cpp)]
 
-若要使用`ParallelFibonacci`函式的範例中，新增下列程式碼，再`wmain`函式會傳回。
+若要在`ParallelFibonacci`範例中使用函數, 請在函式傳回`wmain`之前加入下列程式碼。
 
 [!code-cpp[concrt-parallel-scripts#10](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_10.cpp)]
 
-### <a name="calling-the-script-from-an-agent"></a>呼叫指令碼，從代理程式
+### <a name="calling-the-script-from-an-agent"></a>從代理程式呼叫腳本
 
-下列範例所示`FibonacciScriptAgent`類別，呼叫的指令碼程序，來計算 n<sup>th</sup> Fibonacci 數字。 `FibonacciScriptAgent`類別會使用訊息傳遞至接收，從主程式中，輸入指令碼函式的值。 `run`方法會管理的 COM 程式庫，在整個工作存留期。
+下列範例`FibonacciScriptAgent`會示範類別, 它會呼叫腳本程式來計算<sup>第</sup>n 個斐的量值。 `FibonacciScriptAgent`類別會使用訊息傳遞, 從主要程式接收到腳本函式的輸入值。 `run`方法會管理整個工作中 COM 程式庫的存留期。
 
 [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]
 
-下列函式中， `AgentFibonacci`，建立數個`FibonacciScriptAgent`物件，並使用訊息傳遞至傳送數個輸入值，這些物件。
+下列`AgentFibonacci`函式會建立數個`FibonacciScriptAgent`物件, 並使用訊息傳遞, 將數個輸入值傳送至這些物件。
 
 [!code-cpp[concrt-parallel-scripts#12](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_12.cpp)]
 
-若要使用`AgentFibonacci`函式的範例中，新增下列程式碼，再`wmain`函式會傳回。
+若要在`AgentFibonacci`範例中使用函數, 請在函式傳回`wmain`之前加入下列程式碼。
 
 [!code-cpp[concrt-parallel-scripts#13](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_13.cpp)]
 
 ### <a name="the-complete-example"></a>完整範例
 
-下列程式碼顯示完整的範例中，會使用平行演算法和非同步代理程式來呼叫計算 Fibonacci 數字的指令碼程序。
+下列程式碼顯示完整的範例, 其使用平行演算法和非同步代理程式呼叫可計算斐數列數位的腳本程式。
 
 [!code-cpp[concrt-parallel-scripts#14](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_14.cpp)]
 
-此範例會產生下列輸出範例。
+此範例會產生下列範例輸出。
 
 ```Output
 Main Thread:
@@ -149,14 +149,14 @@ fib(12) = 144
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`parallel-scripts.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼, 並將它貼入 Visual Studio 專案中, 或貼入名`parallel-scripts.cpp`為的檔案中, 然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc 平行 scripts.cpp /link ole32.lib**
+**cl/EHsc parallel-scripts .cpp/link ole32.lib .lib**
 
 ## <a name="see-also"></a>另請參閱
 
 [並行執行階段逐步解說](../../parallel/concrt/concurrency-runtime-walkthroughs.md)<br/>
-[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[工作平行處理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)<br/>
 [例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>

@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: fa50282f3aa1f4db3ebf6306fa9dc3dab1311d1b
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 33fbaae5dafaccdf7f7e6880eaa42dd68352e840
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915904"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497923"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken 類別
 
@@ -132,9 +132,9 @@ class CAccessToken
 
 ## <a name="remarks"></a>備註
 
-[存取權杖](/windows/desktop/SecAuthZ/access-tokens)是一種物件, 可描述處理常式或執行緒的安全性內容, 並配置給每位登入 Windows 系統的使用者。
+[存取權杖](/windows/win32/SecAuthZ/access-tokens)是一種物件, 可描述處理常式或執行緒的安全性內容, 並配置給每位登入 Windows 系統的使用者。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
@@ -216,7 +216,7 @@ bool CreateImpersonationToken(
 新`CAccessToken`物件的指標。
 
 *sil*<br/>
-指定[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列舉類型, 以提供新權杖的模擬層級。
+指定[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型, 以提供新權杖的模擬層級。
 
 ### <a name="return-value"></a>傳回值
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>備註
 
-`CreateImpersonationToken`呼叫[DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)以建立新的模擬權杖。
+`CreateImpersonationToken`呼叫[DuplicateToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetoken)以建立新的模擬權杖。
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -243,7 +243,7 @@ bool CreatePrimaryToken(
 新`CAccessToken`物件的指標。
 
 *dwDesiredAccess*<br/>
-指定新權杖的要求存取權限。 預設的 MAXIMUM_ALLOWED 會要求對呼叫者有效的所有存取權限。 如需存取權限的詳細資訊, 請參閱[存取權限和存取遮罩](/windows/desktop/SecAuthZ/access-rights-and-access-masks)。
+指定新權杖的要求存取權限。 預設的 MAXIMUM_ALLOWED 會要求對呼叫者有效的所有存取權限。 如需存取權限的詳細資訊, 請參閱[存取權限和存取遮罩](/windows/win32/SecAuthZ/access-rights-and-access-masks)。
 
 *pTokenAttributes*<br/>
 [Security attributes 這個](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標, 指定新權杖的安全描述項, 並決定子進程是否可以繼承該 token。 如果*pTokenAttributes*為 Null, 則權杖會取得預設的安全描述項, 而且無法繼承控制碼。
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>備註
 
-`CreatePrimaryToken`呼叫[DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)以建立新的主要權杖。
+`CreatePrimaryToken`呼叫[DuplicateTokenEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)以建立新的主要權杖。
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -286,13 +286,13 @@ bool CreateProcessAsUser(
 [PROCESS_INFORMATION 結構](/windows/win32/api/processthreadsapi/ns-processthreadsapi-process_information)的指標, 它會接收關於新進程的識別資訊。
 
 *pStartupInfo*<br/>
-[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-startupinfoa)結構的指標, 指定新處理常式的主視窗應該如何出現。
+[STARTUPINFO](/windows/win32/api/processthreadsapi/ns-processthreadsapi-startupinfow)結構的指標, 指定新處理常式的主視窗應該如何出現。
 
 *dwCreationFlags*<br/>
-指定其他旗標, 以控制優先順序類別和進程的建立。 如需旗標的清單, 請參閱 Win32 函數[CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) 。
+指定其他旗標, 以控制優先順序類別和進程的建立。 如需旗標的清單, 請參閱 Win32 函數[CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw) 。
 
 *bLoadProfile*<br/>
-若為 TRUE, 則會使用[LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)載入使用者的設定檔。
+若為 TRUE, 則會使用[LoadUserProfile](/windows/win32/api/userenv/nf-userenv-loaduserprofilew)載入使用者的設定檔。
 
 *pProcessAttributes*<br/>
 [Security attributes 這個](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))結構的指標, 指定新進程的安全描述項, 並決定子進程是否可以繼承傳回的控制碼。 如果*pProcessAttributes*為 Null, 進程會取得預設的安全描述項, 而且無法繼承控制碼。
@@ -312,7 +312,7 @@ bool CreateProcessAsUser(
 
 ### <a name="remarks"></a>備註
 
-`CreateProcessAsUser`會使用`CAccessToken` Win32 函式來建立新的處理常式, 該進程會在物件所代表之使用者的安全性內容中執行。 `CreateProcessAsUser` 請參閱[CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)函數的說明, 以取得所需參數的完整討論。
+`CreateProcessAsUser`會使用`CAccessToken` Win32 函式來建立新的處理常式, 該進程會在物件所代表之使用者的安全性內容中執行。 `CreateProcessAsUser` 請參閱[CreateProcessAsUser](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessasuserw)函數的說明, 以取得所需參數的完整討論。
 
 若要讓此方法成功, `CAccessToken`物件必須保留 AssignPrimaryToken (除非它是受限制的 token) 和 IncreaseQuota 許可權。
 
@@ -348,7 +348,7 @@ bool CreateRestrictedToken(
 
 ### <a name="remarks"></a>備註
 
-`CreateRestrictedToken`會使用[CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 函式來建立新`CAccessToken`的物件, 但有其限制。
+`CreateRestrictedToken`會使用[CreateRestrictedToken](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 函式來建立新`CAccessToken`的物件, 但有其限制。
 
 > [!IMPORTANT]
 >  使用`CreateRestrictedToken`時, 請確定下列事項: 現有的權杖有效 (而且不是由使用者輸入), 而且*SidsToDisable*和*PrivilegesToDelete*都是有效的 (而且不是由使用者輸入)。 如果方法傳回 FALSE, 則拒絕功能。
@@ -532,7 +532,7 @@ bool GetImpersonationLevel(
 ### <a name="parameters"></a>參數
 
 *pImpersonationLevel*<br/>
-[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列舉類型的指標, 會接收模擬層級資訊。
+[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型的指標, 會接收模擬層級資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -549,7 +549,7 @@ bool GetLogonSessionId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pluid*<br/>
-將接收登入會話識別碼之[LUID](/windows/desktop/api/winnt/ns-winnt-luid)的指標。
+將接收登入會話識別碼之[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫[OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 函數。
+呼叫[OpenProcessToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) Win32 函數。
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -686,7 +686,7 @@ bool GetSource(TOKEN_SOURCE* pSource) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pSource*<br/>
-[TOKEN_SOURCE](/windows/desktop/api/winnt/ns-winnt-token_source)結構的指標。
+[TOKEN_SOURCE](/windows/win32/api/winnt/ns-winnt-token_source)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -703,7 +703,7 @@ bool GetStatistics(TOKEN_STATISTICS* pStatistics) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pStatistics*<br/>
-[TOKEN_STATISTICS](/windows/desktop/api/winnt/ns-winnt-token_statistics)結構的指標。
+[TOKEN_STATISTICS](/windows/win32/api/winnt/ns-winnt-token_statistics)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -765,7 +765,7 @@ bool GetTokenId(LUID* pluid) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pluid*<br/>
-將接收 Token 識別碼之[LUID](/windows/desktop/api/winnt/ns-winnt-luid)的指標。
+將接收 Token 識別碼之[LUID](/windows/win32/api/winnt/ns-winnt-luid)的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -782,7 +782,7 @@ bool GetType(TOKEN_TYPE* pType) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pType*<br/>
-成功時, [TOKEN_TYPE](/windows/desktop/api/winnt/ne-winnt-token_type)變數的位址會接收 TOKEN 的類型。
+成功時, [TOKEN_TYPE](/windows/win32/api/winnt/ne-winnt-token_type)變數的位址會接收 TOKEN 的類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -914,10 +914,10 @@ bool LogonUser(
 以 null 結束的字串指標, 指定*pszUserName*所指定之使用者帳戶的純文字密碼。
 
 *dwLogonType*<br/>
-指定要執行的登入操作類型。 如需詳細資訊, 請參閱[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 。
+指定要執行的登入操作類型。 如需詳細資訊, 請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
 
 *dwLogonProvider*<br/>
-指定登入提供者。 如需詳細資訊, 請參閱[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 。
+指定登入提供者。 如需詳細資訊, 請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -925,7 +925,7 @@ bool LogonUser(
 
 ### <a name="remarks"></a>備註
 
-登入所產生的存取權杖將會與`CAccessToken`建立關聯。 若要讓此方法成功, `CAccessToken`物件必須持有 SE_TCB_NAME 許可權, 並將持有者識別為信任的電腦基底的一部分。 如需有關必要許可權的詳細資訊, 請參閱[LogonUser](/windows/desktop/api/winbase/nf-winbase-logonusera) 。
+登入所產生的存取權杖將會與`CAccessToken`建立關聯。 若要讓此方法成功, `CAccessToken`物件必須持有 SE_TCB_NAME 許可權, 並將持有者識別為信任的電腦基底的一部分。 如需有關必要許可權的詳細資訊, 請參閱[LogonUser](/windows/win32/api/winbase/nf-winbase-logonuserw) 。
 
 ##  <a name="opencomclienttoken"></a>  CAccessToken::OpenCOMClientToken
 
@@ -947,7 +947,7 @@ bool OpenCOMClientToken(
 若為 TRUE, 當此呼叫成功完成時, 目前的執行緒會模擬呼叫的 COM 用戶端。 若為 FALSE, 將會開啟存取權杖, 但當此呼叫完成時, 執行緒將不會有模擬 token。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
 
 如果此參數為 FALSE, 則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端, 此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE, 則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
 
@@ -983,7 +983,7 @@ bool OpenNamedPipeClientToken(
 若為 TRUE, 當此呼叫成功完成時, 目前的執行緒會模擬呼叫管道用戶端。 若為 FALSE, 將會開啟存取權杖, 但當此呼叫完成時, 執行緒將不會有模擬 token。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
 
 如果此參數為 FALSE, 則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端, 此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE, 則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
 
@@ -1019,7 +1019,7 @@ bool OpenRPCClientToken(
 若為 TRUE, 當此呼叫成功完成時, 目前的執行緒會模擬呼叫 RPC 用戶端。 若為 FALSE, 將會開啟存取權杖, 但當此呼叫完成時, 執行緒將不會有模擬 token。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
 
 如果此參數為 FALSE, 則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端, 此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE, 則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
 
@@ -1052,12 +1052,12 @@ bool OpenThreadToken(
 若為 TRUE, 則在此方法完成後, 執行緒會保留在要求的模擬層級。 如果為 FALSE, 則執行緒會還原為其原始模擬層級。
 
 *bOpenAsSelf*<br/>
-指出是否要針對呼叫[GetThreadToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
+指出是否要針對呼叫[GetThreadToken](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread)方法的執行緒安全性內容, 或針對呼叫執行緒之進程的安全性內容進行存取檢查。
 
 如果此參數為 FALSE, 則會使用呼叫執行緒的安全性內容來執行存取檢查。 如果執行緒正在模擬用戶端, 此安全性內容就可能是用戶端進程的其中一個。 如果此參數為 TRUE, 則會使用呼叫執行緒之進程的安全性內容來進行存取檢查。
 
 *sil*<br/>
-指定提供權杖模擬層級的[SECURITY_IMPERSONATION_LEVEL](/windows/desktop/api/winnt/ne-winnt-security_impersonation_level)列舉類型。
+指定提供權杖模擬層級的[SECURITY_IMPERSONATION_LEVEL](/windows/win32/api/winnt/ne-winnt-security_impersonation_level)列舉類型。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1082,7 +1082,7 @@ bool PrivilegeCheck(
 ### <a name="parameters"></a>參數
 
 *RequiredPrivileges*<br/>
-[PRIVILEGE_SET](/windows/desktop/api/winnt/ns-winnt-privilege_set)結構的指標。
+[PRIVILEGE_SET](/windows/win32/api/winnt/ns-winnt-privilege_set)結構的指標。
 
 *pbResult*<br/>
 此方法所設定之值的指標, 指出`CAccessToken`物件中是否已啟用任何或所有指定的許可權。
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>備註
 
-當`PrivilegeCheck`傳回時, `Attributes`如果已啟用對應的許可權, 則每個[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-luid_and_attributes)結構的成員都會設定為 SE_PRIVILEGE_USED_FOR_ACCESS。 這個方法會呼叫[PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 函數。
+當`PrivilegeCheck`傳回時, `Attributes`如果已啟用對應的許可權, 則每個[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)結構的成員都會設定為 SE_PRIVILEGE_USED_FOR_ACCESS。 這個方法會呼叫[PrivilegeCheck](/windows/win32/api/securitybaseapi/nf-securitybaseapi-privilegecheck) Win32 函數。
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 
@@ -1182,5 +1182,5 @@ bool SetPrimaryGroup(const CSid& rSid) throw(...);
 ## <a name="see-also"></a>另請參閱
 
 [ATLSecurity 範例](../../overview/visual-cpp-samples.md)<br/>
-[存取權杖](/windows/desktop/SecAuthZ/access-tokens)<br/>
+[存取權杖](/windows/win32/SecAuthZ/access-tokens)<br/>
 [類別總覽](../../atl/atl-class-overview.md)

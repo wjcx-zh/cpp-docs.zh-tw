@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504789"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513762"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ 應用程式的 ClickOnce 部署
 
-Visual Studio 提供兩種不同的技術來部署 Windows 應用程式：ClickOnce 部署或 [Windows Installer](/windows/desktop/Msi/windows-installer-portal) 部署。
+Visual Studio 提供兩種不同的技術來部署 Windows 應用程式：ClickOnce 部署或 [Windows Installer](/windows/win32/Msi/windows-installer-portal) 部署。
 
 ## <a name="clickonce-deployment-in-c"></a>C++ 中的 ClickOnce 部署
 
-視覺效果C++開發環境不直接支援 Visual Studio 部署C++ClickOnce，但工具的專案就可以使用它。
+視覺化C++開發環境不直接支援使用 ClickOnce 部署 Visual Studio C++專案, 但有工具可供使用。
 
 > [!NOTE]
->  Visual Studio 在 Visual C# 和 Visual Basic 開發環境中支援 ClickOnce。 如果您的 Visual StudioC++專案是具有相依性視覺效果C#專案中，您可以發行應用程式 （包括其相依性） 使用視覺效果中的 ClickOnce 部署C#開發環境。
+>  Visual Studio 在 Visual C# 和 Visual Basic 開發環境中支援 ClickOnce。 如果您的C++ Visual Studio 專案是 visual C#專案的相依性, 您可以使用 visual C#開發環境中的 ClickOnce 部署來發行應用程式 (包括其相依性)。
 
 若要使用 ClickOnce 部署 Visual c + + 應用程式，您必須先使用 [Mage.exe (資訊清單產生和編輯工具)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) 或它的圖形化使用者介面版本 (如需資訊，請參閱[MageUI.exe (資訊清單產生和編輯工具、圖形化用戶端)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client))，建置 [ClickOnce 應用程式資訊清單](/visualstudio/deployment/clickonce-application-manifest)和 [ClickOnce 部署資訊清單](/visualstudio/deployment/clickonce-deployment-manifest)。
 
@@ -42,7 +42,7 @@ Visual Studio 提供兩種不同的技術來部署 Windows 應用程式：ClickO
 
 [Mage.exe (資訊清單產生和編輯工具)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (憑證建立工具)](/windows/desktop/SecCrypto/makecert)<br>
+[Makecert.exe (憑證建立工具)](/windows/win32/SecCrypto/makecert)<br>
 [部署傳統型應用程式](deploying-native-desktop-applications-visual-cpp.md)<br>
 [部署應用程式、服務和元件](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)<br>

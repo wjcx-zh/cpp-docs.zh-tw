@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e018c122cded09e5366c3b349525fa7cc004897
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403733"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505332"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog 類別
 
-`CMFCColorDialog`類別代表色彩選取對話方塊。
+`CMFCColorDialog`類別表示色彩選取對話方塊。
 
 ## <a name="syntax"></a>語法
 
@@ -43,7 +43,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|建構 `CMFCColorDialog` 物件。|
 |`CMFCColorDialog::~CMFCColorDialog`|解構函式。|
@@ -53,36 +53,36 @@ class CMFCColorDialog : public CDialogEx
 |名稱|描述|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|傳回目前選取的色彩。|
-|[CMFCColorDialog::GetPalette](#getpalette)|傳回的色彩調色盤。|
-|`CMFCColorDialog::PreTranslateMessage`|將轉譯視窗訊息，再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)並[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊，請參閱[cwnd:: Pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|
-|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|自系統調色盤中的調色盤。|
+|[CMFCColorDialog::GetPalette](#getpalette)|傳回色彩的調色板。|
+|`CMFCColorDialog::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊, 請參閱[CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。 (覆寫 `CDialogEx::PreTranslateMessage`。)|
+|[CMFCColorDialog::RebuildPalette](#rebuildpalette)|從系統調色板衍生調色板。|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|設定目前選取的色彩。|
-|[CMFCColorDialog::SetNewColor](#setnewcolor)|設定最相當於指定的 RGB 值的色彩。|
+|[CMFCColorDialog::SetNewColor](#setnewcolor)|將色彩設定為與指定的 RGB 值最相等。|
 |[CMFCColorDialog::SetPageOne](#setpageone)|選取第一個屬性頁的 RGB 值。|
 |[CMFCColorDialog::SetPageTwo](#setpagetwo)|選取第二個屬性頁的 RGB 值。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|`m_bIsMyPalette`|如果色彩選取對話方塊會使用它自己的調色盤，則為 TRUE 或 FALSE 的對話方塊會使用調色盤中指定`CMFCColorDialog`建構函式。|
-|`m_bPickerMode`|當使用者從 [選取項目] 對話方塊中，選取色彩，則為 TRUE。否則為 FALSE。|
-|`m_btnColorSelect`|使用者選取 [色彩] 按鈕。|
+|`m_bIsMyPalette`|如果色彩選取對話方塊使用自己的調色板, 則為 TRUE, 如果對話方塊使用在此`CMFCColorDialog`函式中指定的調色板, 則為 FALSE。|
+|`m_bPickerMode`|當使用者從 [選取範圍] 對話方塊中選取色彩時, 即為 TRUE;否則為 FALSE。|
+|`m_btnColorSelect`|使用者已選取的色彩按鈕。|
 |`m_CurrentColor`|目前選取的色彩。|
-|`m_hcurPicker`|資料指標用來選擇色彩。|
-|`m_NewColor`|潛在選取的色彩，可以永久選取或已還原成原始的色彩。|
-|`m_pColourSheetOne`|色彩選取範圍的屬性工作表的第一個屬性頁面指標。|
-|`m_pColourSheetTwo`|色彩選取範圍的屬性工作表的第二個屬性頁面指標。|
-|`m_pPalette`|目前的邏輯色板。|
-|`m_pPropSheet`|色彩選取對話方塊的屬性工作表指標。|
+|`m_hcurPicker`|用來挑選色彩的游標。|
+|`m_NewColor`|預期的選取色彩, 可以永久選取或還原為原始色彩。|
+|`m_pColourSheetOne`|色彩選取屬性工作表之第一個屬性頁的指標。|
+|`m_pColourSheetTwo`|色彩選取屬性工作表之第二個屬性頁的指標。|
+|`m_pPalette`|目前的邏輯調色板。|
+|`m_pPropSheet`|色彩選取對話方塊之屬性工作表的指標。|
 |`m_wndColors`|色彩選擇器控制項物件。|
-|`m_wndStaticPlaceHolder`|靜態控制項，這是一個預留位置，色彩選擇器的屬性工作表。|
+|`m_wndStaticPlaceHolder`|靜態控制項, 這是色彩選擇器屬性工作表的預留位置。|
 
 ## <a name="remarks"></a>備註
 
-色彩選取對話方塊會顯示為兩個頁面的屬性工作表。 您可以在第一個頁面上，選取標準色彩來從系統調色盤;在第二個頁面上，您可以選取自訂色彩。
+[色彩選取] 對話方塊會顯示為具有兩個頁面的屬性工作表。 在第一頁上, 您可以從系統元件中選取標準色彩;在第二個頁面上, 您可以選取自訂色彩。
 
-您可以建構`CMFCColorDialog`物件在堆疊上，然後呼叫`DoModal`，做為參數傳遞的初始色彩`CMFCColorDialog`建構函式。 色彩選取對話方塊接著會建立數個[CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)物件來處理每個色彩調色盤。
+您可以在堆疊`CMFCColorDialog`上建立物件, 然後呼叫`DoModal`, 並將初始色彩當做參數傳遞給此`CMFCColorDialog`函式。 [色彩選取] 對話方塊接著會建立數個[CMFCColorPickerCtrl 類別](../../mfc/reference/cmfccolorpickerctrl-class.md)物件來處理每個調色板。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -100,15 +100,15 @@ class CMFCColorDialog : public CDialogEx
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用中的各種方法來設定色彩對話方塊`CMFCColorDialog`類別。 此範例示範如何設定目前的和新的色彩的對話方塊中，以及如何在兩個屬性頁的 [色彩] 對話方塊上設定所選取之色彩的紅色、 綠色和藍色元件。 此範例中是屬於[新的控制項範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`CMFCColorDialog`類別中的各種方法來設定色彩對話方塊。 此範例示範如何設定對話方塊的目前和新色彩, 以及如何在 [色彩] 對話方塊的兩個屬性頁上, 設定所選色彩的紅色、綠色和藍色元件。 這個範例是[新控制項範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxcolordialog.h
+**標頭:** afxcolordialog。h
 
-##  <a name="cmfccolordialog"></a>  CMFCColorDialog::CMFCColorDialog
+##  <a name="cmfccolordialog"></a>CMFCColorDialog::CMFCColorDialog
 
 建構 `CMFCColorDialog` 物件。
 
@@ -123,24 +123,24 @@ CMFCColorDialog(
 ### <a name="parameters"></a>參數
 
 *clrInit*<br/>
-[in]預設色彩選取範圍。 如果未不指定任何值，預設會為 RGB(0,0,0) （黑色）。
+在預設色彩選取範圍。 如果未指定任何值, 則預設值為 RGB (0, 0, 0) (黑色)。
 
 *dwFlags*<br/>
 [in] 保留。
 
 *pParentWnd*<br/>
-[in]對話方塊的父代或擁有者視窗的指標。
+在對話方塊的父代或擁有者視窗的指標。
 
 *hPal*<br/>
-[in]色彩調色盤控制代碼。
+在色調色板的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcolor"></a>  CMFCColorDialog::GetColor
+##  <a name="getcolor"></a>CMFCColorDialog:: GetColor
 
-擷取使用者從 [色彩] 對話方塊中選取的色彩。
+抓取使用者從 [色彩] 對話方塊中選取的色彩。
 
 ```
 COLORREF GetColor() const;
@@ -148,15 +148,15 @@ COLORREF GetColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-A [COLORREF](/windows/desktop/gdi/colorref)包含 [色彩] 對話方塊中選取的色彩的 RGB 資訊的值。
+[COLORREF](/windows/win32/gdi/colorref)值, 其中包含 [色彩] 對話方塊中所選取之色彩的 RGB 資訊。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式之後您呼叫,`DoModal`方法。
+呼叫`DoModal`方法之後, 請呼叫此函式。
 
-##  <a name="getpalette"></a>  CMFCColorDialog::GetPalette
+##  <a name="getpalette"></a>CMFCColorDialog::GetPalette
 
-擷取在目前的色彩 對話方塊中可用的色彩調色盤。
+抓取目前色彩對話方塊中可用的調色板。
 
 ```
 CPalette* GetPalette() const;
@@ -164,23 +164,23 @@ CPalette* GetPalette() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標`CPalette`中所指定的物件`CMFCColorDialog`建構函式。
+在此`CPalette` `CMFCColorDialog`函數中指定之物件的指標。
 
 ### <a name="remarks"></a>備註
 
-色彩調色盤中，指定使用者可以選擇的色彩。
+色調色板會指定使用者可以選擇的色彩。
 
-##  <a name="rebuildpalette"></a>  CMFCColorDialog::RebuildPalette
+##  <a name="rebuildpalette"></a>CMFCColorDialog::RebuildPalette
 
-自系統調色盤中的調色盤。
+從系統調色板衍生調色板。
 
 ```
 void RebuildPalette();
 ```
 
-##  <a name="setcurrentcolor"></a>  CMFCColorDialog::SetCurrentColor
+##  <a name="setcurrentcolor"></a>CMFCColorDialog::SetCurrentColor
 
-設定目前的色彩 對話方塊。
+設定對話方塊的目前色彩。
 
 ```
 void SetCurrentColor(COLORREF rgb);
@@ -189,13 +189,13 @@ void SetCurrentColor(COLORREF rgb);
 ### <a name="parameters"></a>參數
 
 *rgb*<br/>
-[in]RGB 色彩值
+在RGB 色彩值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setnewcolor"></a>  CMFCColorDialog::SetNewColor
+##  <a name="setnewcolor"></a>CMFCColorDialog::SetNewColor
 
-目前最相似的調色盤的色彩會設定目前的色彩。
+將目前的色彩設定為目前調色板中最類似的色彩。
 
 ```
 void SetNewColor(COLORREF rgb);
@@ -204,13 +204,13 @@ void SetNewColor(COLORREF rgb);
 ### <a name="parameters"></a>參數
 
 *rgb*<br/>
-[in]A [COLORREF](/windows/desktop/gdi/colorref)表示的 RGB 色彩。
+在指定 RGB 色彩的[COLORREF](/windows/win32/gdi/colorref) 。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpageone"></a>  CMFCColorDialog::SetPageOne
+##  <a name="setpageone"></a>CMFCColorDialog::SetPageOne
 
-在 [色彩] 對話方塊的第一個屬性頁面上，明確指定所選取之色彩的紅色、 綠色和藍色元件。
+在色彩對話方塊的第一個屬性頁上, 明確地指定所選色彩的紅色、綠色和藍色元件。
 
 ```
 void SetPageOne(
@@ -222,19 +222,19 @@ void SetPageOne(
 ### <a name="parameters"></a>參數
 
 *R*<br/>
-[in]指定的 RGB 值的紅色元件。
+在指定 RGB 值的紅色元件。
 
 *G*<br/>
-[in]指定的 RGB 值的綠色元件。
+在指定 RGB 值的綠色元件。
 
 *B*<br/>
-[in]指定的 RGB 值的藍色元件。
+在指定 RGB 值的藍色元件。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setpagetwo"></a>  CMFCColorDialog::SetPageTwo
+##  <a name="setpagetwo"></a>CMFCColorDialog::SetPageTwo
 
-在 [色彩] 對話方塊的第二個的 [屬性] 頁面上，明確指定所選取之色彩的紅色、 綠色和藍色元件。
+在色彩對話方塊的第二個屬性頁上, 明確指定所選色彩的紅色、綠色和藍色元件。
 
 ```
 void SetPageTwo(
@@ -246,13 +246,13 @@ void SetPageTwo(
 ### <a name="parameters"></a>參數
 
 *R*<br/>
-[in]指定 RGB 值的紅色元件
+在指定 RGB 值的紅色元件
 
 *G*<br/>
-[in]指定 RGB 值的綠色元件
+在指定 RGB 值的綠色元件
 
 *B*<br/>
-[in]指定 RGB 值的藍色元件
+在指定 RGB 值的藍色元件
 
 ### <a name="remarks"></a>備註
 

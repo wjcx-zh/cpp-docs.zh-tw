@@ -24,14 +24,14 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348727"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509435"
 ---
-# <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 內建函式
+# <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 內建函式
 
 **Microsoft 專屬**
 
@@ -80,13 +80,13 @@ long _InterlockedCompareExchangePointer_rel (
 #### <a name="parameters"></a>參數
 
 *目的地*<br/>
-[in、 out]指向目的地值的指標。 會忽略正負號。
+[in、out]指向目的地值之指標的指標。 會忽略正負號。
 
 *Exchange*<br/>
-[in]交換指標。 會忽略正負號。
+在交換指標。 會忽略正負號。
 
 *比較元*<br/>
-[in]比較目的地的指標。 會忽略正負號。
+在要與目的地比較的指標。 會忽略正負號。
 
 ## <a name="return-value"></a>傳回值
 
@@ -96,7 +96,7 @@ long _InterlockedCompareExchangePointer_rel (
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86、 x64、 ARM|\<intrin.h>|
+|`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedCompareExchangePointer_acq`、`_InterlockedCompareExchangePointer_nf`、`_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`、 `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -104,9 +104,9 @@ long _InterlockedCompareExchangePointer_rel (
 
 `_InterlockedCompareExchangePointer` 執行 `Destination` 位址與`Comparand` 位址的不可部分完成比較。 如果 `Destination` 位址等於 `Comparand` 位址，`Exchange` 位址會儲存在 `Destination` 所指定的位址中。 否則，不會執行任何作業。
 
-`_InterlockedCompareExchangePointer` 提供 Win32 Windows SDK 的編譯器內建支援[_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)函式。
+`_InterlockedCompareExchangePointer`為 Win32 Windows SDK [InterlockedCompareExchangePointer](/windows-hardware/drivers/ddi/content/wdm/nf-wdm-interlockedcompareexchangepointer)函數提供編譯器內建支援。
 
-如需如何使用的範例`_InterlockedCompareExchangePointer`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+如需如何使用`_InterlockedCompareExchangePointer`的範例, 請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` (「沒有圍牆」) 後置字元的 ARM 內建函式不做為記憶體屏障。
 

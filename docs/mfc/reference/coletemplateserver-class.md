@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a1997497f3bddb405b712b5534f76e577dabfa8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373549"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503086"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer 類別
 
@@ -35,7 +35,7 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|建構 `COleTemplateServer` 物件。|
 
@@ -43,17 +43,17 @@ class COleTemplateServer : public COleObjectFactory
 
 |名稱|描述|
 |----------|-----------------|
-|[COleTemplateServer::ConnectTemplate](#connecttemplate)|連接至基礎的文件範本`COleObjectFactory`物件。|
-|[COleTemplateServer::Unregister](#unregister)|取消註冊的相關聯的文件範本。|
-|[COleTemplateServer::UpdateRegistry](#updateregistry)|使用 OLE 系統登錄中註冊的文件類型。|
+|[COleTemplateServer::ConnectTemplate](#connecttemplate)|將檔範本連接到基礎`COleObjectFactory`物件。|
+|[COleTemplateServer::Unregister](#unregister)|取消註冊相關聯的檔範本。|
+|[COleTemplateServer::UpdateRegistry](#updateregistry)|向 OLE 系統登錄註冊檔案類型。|
 
 ## <a name="remarks"></a>備註
 
-這個類別衍生自類別[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md); 通常，您可以使用`COleTemplateServer`直接而不是衍生您自己的類別。 `COleTemplateServer` 會使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件來管理伺服器文件。 使用`COleTemplateServer`實作完整的伺服器，也就是可以當作獨立的應用程式執行的伺服器時。 完整的伺服器通常是多個文件介面 (MDI) 應用程式，雖然支援單一文件介面 (SDI) 應用程式。 一`COleTemplateServer`所需應用程式支援的伺服器文件的每個類型的物件; 也就是說，如果您的伺服器應用程式支援的工作表和圖表，您必須有兩個`COleTemplateServer`物件。
+這個類別衍生自類別[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md);通常, 您可以直接`COleTemplateServer`使用, 而不是衍生您自己的類別。 `COleTemplateServer`使用[CDocTemplate](../../mfc/reference/cdoctemplate-class.md)物件來管理伺服器檔。 在`COleTemplateServer`執行完整伺服器 (也就是可當做獨立應用程式執行的伺服器) 時使用。 完整伺服器通常是多個檔介面 (MDI) 應用程式, 不過支援單一檔介面 (SDI) 應用程式。 應用`COleTemplateServer`程式支援的每個伺服器檔案類型都需要一個物件; 也就是說, 如果您的伺服器應用程式同時支援工作表和圖表, 則您`COleTemplateServer`必須有兩個物件。
 
-`COleTemplateServer` 覆寫`OnCreateInstance`所定義的成員函式`COleObjectFactory`。 此成員函式會呼叫 framework 來建立C++物件的適當的型別。
+`COleTemplateServer`覆寫`OnCreateInstance`由`COleObjectFactory`定義的成員函式。 此成員函式會由架構呼叫, 以建立C++適當類型的物件。
 
-如需有關伺服器的詳細資訊，請參閱[伺服器：實作伺服器](../../mfc/servers-implementing-a-server.md)。
+如需伺服器的詳細資訊, 請參閱[伺服器:執行伺服器](../../mfc/servers-implementing-a-server.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -69,7 +69,7 @@ class COleTemplateServer : public COleObjectFactory
 
 **標頭：** afxdisp.h
 
-##  <a name="coletemplateserver"></a>  COleTemplateServer::COleTemplateServer
+##  <a name="coletemplateserver"></a>COleTemplateServer:: COleTemplateServer
 
 建構 `COleTemplateServer` 物件。
 
@@ -79,11 +79,11 @@ COleTemplateServer();
 
 ### <a name="remarks"></a>備註
 
-如需簡短的使用說明`COleTemplateServer`類別，請參閱[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)類別概觀。
+如需使用`COleTemplateServer`類別的簡短描述, 請參閱[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)類別總覽。
 
 ##  <a name="connecttemplate"></a>  COleTemplateServer::ConnectTemplate
 
-連接所指的文件範本*pDocTemplate*基礎[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)物件。
+將*pDocTemplate*所指向的檔範本連接到基礎[COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)物件。
 
 ```
 void ConnectTemplate(
@@ -95,21 +95,21 @@ void ConnectTemplate(
 ### <a name="parameters"></a>參數
 
 *clsid*<br/>
-參考範本要求的 OLE 類別識別碼。
+範本要求之 OLE 類別 ID 的參考。
 
 *pDocTemplate*<br/>
-文件範本的指標。
+檔範本的指標。
 
 *bMultiInstance*<br/>
-指出應用程式的單一執行個體是否可以支援多個具現化。 如果為 TRUE，針對每個要求建立物件啟動應用程式的多個執行個體。
+指出應用程式的單一實例是否可以支援多個具現化。 若為 TRUE, 則會針對每個建立物件的要求啟動應用程式的多個實例。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [CLSID 金鑰](/windows/desktop/com/clsid-key-hklm)Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[CLSID 金鑰](/windows/win32/com/clsid-key-hklm)。
 
 ##  <a name="unregister"></a>  COleTemplateServer::Unregister
 
-取消註冊的相關聯的文件範本。
+取消註冊相關聯的檔範本。
 
 ```
 BOOL Unregister();
@@ -123,9 +123,9 @@ BOOL Unregister();
 
 EnterRemarks
 
-##  <a name="updateregistry"></a>  COleTemplateServer::UpdateRegistry
+##  <a name="updateregistry"></a>COleTemplateServer:: UpdateRegistry
 
-檔案型別資訊從載入的文件樣板字串，並將該資訊放在 OLE 系統登錄中。
+從檔範本字串載入檔案類型資訊, 並將該資訊放在 OLE 系統登錄中。
 
 ```
 void UpdateRegistry(
@@ -138,34 +138,34 @@ void UpdateRegistry(
 ### <a name="parameters"></a>參數
 
 *nAppType*<br/>
-從定義於 AFXDISP OLE_APPTYPE 列舉的值。H. 它可以包含下列值之一：
+來自 OLE_APPTYPE 列舉的值, 其定義于 AFXDISP.H 中。H. 它可以具有下列任何一個值:
 
-- OAT_INPLACE_SERVER 伺服器具有完整伺服器的使用者介面。
+- OAT_INPLACE_SERVER 伺服器具有完整的伺服器使用者介面。
 
-- OAT_SERVER 伺服器支援僅內嵌。
+- OAT_SERVER 伺服器僅支援內嵌。
 
-- OAT_CONTAINER 容器支援內嵌物件連結。
+- OAT_CONTAINER 容器支援内嵌物件的連結。
 
-- OAT_DISPATCH_OBJECT 物件是`IDispatch`-支援。
+- OAT_DISPATCH_OBJECT 物件是`IDispatch`可支援的。
 
-- OAT_DOC_OBJECT_SERVER 伺服器同時支援內嵌和文件物件元件模型。
+- OAT_DOC_OBJECT_SERVER 伺服器支援內嵌和檔物件元件模型。
 
 *rglpszRegister*<br/>
-只有當沒有任何項目存在，會寫入登錄的項目清單。
+只有在沒有專案存在時, 才會寫入登錄中的專案清單。
 
 *rglpszOverwrite*<br/>
-寫入到登錄中，不論任何上述項目是否存在的項目清單。
+寫入登錄中的專案清單, 不論任何先前的專案是否存在。
 
 *bRegister*<br/>
-判斷類別是否註冊。 如果*bRegister*為 TRUE 時，此類別向系統登錄。 否則，它會取消註冊類別。
+判斷是否要註冊類別。 如果*bRegister*為 TRUE, 則會向系統登錄註冊類別。 否則, 它會取消註冊類別。
 
 ### <a name="remarks"></a>備註
 
-註冊資訊會透過呼叫載入[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)。 擷取子字串是索引所識別出那些`regFileTypeId`， `regFileTypeName`，並`fileNewName`所述，在`GetDocString`參考頁面。
+註冊資訊是藉由呼叫[CDocTemplate:: GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)來載入。 所抓取的子字串是由`regFileTypeId`索引、 `regFileTypeName`和`fileNewName`所識別, 如`GetDocString`參考頁面所述。
 
-如果`regFileTypeId`是空的子字串或是呼叫`GetDocString`失敗的任何其他原因，此函式失敗，而且未在登錄中輸入的檔案資訊。
+如果子`regFileTypeId`字串是空的, 或`GetDocString`呼叫因任何其他原因而失敗, 則此函式會失敗, 且不會在登錄中輸入檔案資訊。
 
-引數中的資訊*rglpszRegister*並*rglpszOverwrite*透過呼叫登錄寫入[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)。 預設資訊，註冊之後，當兩個引數都是 NULL 時，適合大部分的應用程式。 如需這些引數中的資訊結構的資訊，請參閱`AfxOleRegisterServerClass`。
+引數*rglpszRegister*和*rglpszOverwrite*中的資訊會透過對[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)的呼叫寫入登錄。 當兩個引數都是 Null 時, 所註冊的預設資訊適用于大部分的應用程式。 如需這些引數中資訊結構的詳細資訊, 請`AfxOleRegisterServerClass`參閱。
 
 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 

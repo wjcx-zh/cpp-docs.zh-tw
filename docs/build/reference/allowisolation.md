@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /ALLOWISOLATION editbin option
 - ALLOWISOLATION editbin option
 ms.assetid: 91430344-f64f-491a-a5a5-7ea3b21cbe68
-ms.openlocfilehash: 02012e7561fe8462f5f25ae13d961c35561666ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 359a68d5ec0a8c7390b5f0343530864e880a057c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273140"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493122"
 ---
 # <a name="allowisolation"></a>/ALLOWISOLATION
 
@@ -28,16 +28,16 @@ ms.locfileid: "62273140"
 
 ## <a name="remarks"></a>備註
 
-**/ALLOWISOLATION**會導致作業系統查閱和載入資訊清單。
+**/ALLOWISOLATION**會導致作業系統執行資訊清單查閱和載入。
 
 **/ALLOWISOLATION**是預設值。
 
-**/ALLOWISOLATION:NO**指出已載入可執行檔，好像沒有資訊清單，並會使[EDITBIN 參考](editbin-reference.md)來設定`IMAGE_DLLCHARACTERISTICS_NO_ISOLATION`選擇性標頭的位元`DllCharacteristics`欄位。
+**/ALLOWISOLATION: NO**表示會載入可執行檔, 就好像沒有資訊清單一樣, 並會導致[EDITBIN 參考](editbin-reference.md)在選擇性標頭的`IMAGE_DLLCHARACTERISTICS_NO_ISOLATION` `DllCharacteristics`欄位中設定位。
 
-可執行檔停用隔離時，Windows 載入器並不會試圖尋找新建立處理序的應用程式資訊清單。 新的處理序沒有預設啟用內容，即使可執行檔本身的資訊清單，或者如果沒有資訊清單具有名稱*可執行檔名稱*.exe.manifest。
+可執行檔停用隔離時，Windows 載入器並不會試圖尋找新建立處理序的應用程式資訊清單。 新的進程沒有預設啟用內容, 即使可執行檔本身中有資訊清單, 或者如果有資訊清單具有名稱*可執行檔*名稱 .exe。
 
 ## <a name="see-also"></a>另請參閱
 
 [EDITBIN 選項](editbin-options.md)<br/>
 [/ALLOWISOLATION (資訊清單查閱)](allowisolation-manifest-lookup.md)<br/>
-[資訊清單檔案參考](/windows/desktop/SbsCs/manifest-files-reference)
+[資訊清單檔案參考](/windows/win32/SbsCs/manifest-files-reference)

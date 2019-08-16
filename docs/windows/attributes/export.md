@@ -1,21 +1,21 @@
 ---
-title: 匯出 (C++ COM 屬性)
+title: export (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.export
 helpviewer_keywords:
 - export attribute
 ms.assetid: 70b3e848-fad6-4e09-8c72-be60ca72a4df
-ms.openlocfilehash: 5ffa4283b8a2b265809d06b72be96e217cf8bf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 771bfdfe4eab2acf31e97a606795066e8938a8a1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409612"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501609"
 ---
 # <a name="export"></a>匯出
 
-會導致資料結構，以放入.idl 檔案。
+導致將資料結構放在 .idl 檔案中。
 
 ## <a name="syntax"></a>語法
 
@@ -25,17 +25,17 @@ ms.locfileid: "62409612"
 
 ## <a name="remarks"></a>備註
 
-**匯出**C++屬性會導致放入.idl 檔案，然後才能在類型程式庫中的二進位檔相容的格式，使它可以用於任何語言中的 使用的資料結構。
+**Export** C++屬性會將資料結構放在 .idl 檔案中, 然後在類型程式庫中以二進位相容格式提供, 讓它可與任何語言搭配使用。
 
-您不能套用**匯出**屬性的類別，即使類別只有公用成員 (相當於**結構**)。
+即使類別只有公用成員 (等同于**結構**), 您也無法將**export**屬性套用至類別。
 
-如果您匯出未命名**列舉**或是**結構**，它指定名稱的開頭 **__unnamed**<em>x</em>，其中*x*是一個循序號碼。
+如果您匯出未命名的**列舉**或**結構**, 它會被指定一個以 **__unnamed**<em>x</em>開頭的名稱, 其中*x*是一個連續的數位。
 
-適用於匯出的 typedef 基底類型、 結構、 等位、 列舉、 或型別識別項。  請參閱[typedef](/windows/desktop/Midl/typedef)如需詳細資訊。
+適用于匯出的 typedef 是基底類型、結構、等位、列舉或類型識別碼。  如需詳細資訊, 請參閱[typedef](/windows/win32/Midl/typedef) 。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**匯出**屬性：
+下列程式碼顯示如何使用**export**屬性:
 
 ```cpp
 // cpp_attr_ref_export.cpp
@@ -54,9 +54,9 @@ struct MyStruct {
 
 |||
 |-|-|
-|**適用於**|**union**， **typedef**，**列舉**，**結構**，或**介面**|
+|**適用於**|**union**、 **typedef**、 **enum**、 **struct**或**interface**|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

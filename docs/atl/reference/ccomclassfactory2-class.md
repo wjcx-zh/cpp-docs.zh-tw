@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e34ebffc937c3e4ef1272fdf13ddcde7513d28e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259686"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497464"
 ---
 # <a name="ccomclassfactory2-class"></a>CComClassFactory2 類別
 
-這個類別會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面。
+這個類別會實[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)介面。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ class CComClassFactory2 : public IClassFactory2,
 #### <a name="parameters"></a>參數
 
 *license*<br/>
-類別若實作下列靜態函式：
+實作用下列靜態函式的類別:
 
 - `static BOOL VerifyLicenseKey( BSTR bstr );`
 
@@ -47,27 +47,27 @@ class CComClassFactory2 : public IClassFactory2,
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CComClassFactory2::CreateInstance](#createinstance)|建立指定的 CLSID 的物件。|
-|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|指定的授權金鑰，會建立指定的 CLSID 的物件。|
-|[CComClassFactory2::GetLicInfo](#getlicinfo)|擷取描述的 class factory 的授權功能的資訊。|
-|[CComClassFactory2::LockServer](#lockserver)|鎖定記憶體中的 class factory。|
-|[CComClassFactory2::RequestLicKey](#requestlickey)|建立並傳回的授權金鑰。|
+|[CComClassFactory2::CreateInstance](#createinstance)|建立指定之 CLSID 的物件。|
+|[CComClassFactory2::CreateInstanceLic](#createinstancelic)|提供授權金鑰後, 會建立指定之 CLSID 的物件。|
+|[CComClassFactory2::GetLicInfo](#getlicinfo)|抓取描述 Class Factory 授權功能的資訊。|
+|[CComClassFactory2::LockServer](#lockserver)|鎖定記憶體中的 Class Factory。|
+|[CComClassFactory2::RequestLicKey](#requestlickey)|建立並傳回授權金鑰。|
 
 ## <a name="remarks"></a>備註
 
-`CComClassFactory2` 會實作[IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)介面，這是延伸模組的[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)。 `IClassFactory2` 透過授權的控制項物件建立。 類別處理站執行已授權的電腦上，可以提供執行階段授權金鑰。 這種授權金鑰可讓應用程式的完整機器授權不存在時，具現化物件。
+`CComClassFactory2`會執行[IClassFactory2](/windows/win32/api/ocidl/nn-ocidl-iclassfactory2)介面, 這是[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)的延伸模組。 `IClassFactory2`透過授權控制物件的建立。 在授權的電腦上執行的 Class Factory 可以提供執行時間授權金鑰。 當完整的電腦授權不存在時, 此授權金鑰可讓應用程式具現化物件。
 
-ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)。 這個類別包含巨集[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory)，其中宣告[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)做為預設 class factory。 若要使用`CComClassFactory2`，指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)物件的類別定義中的巨集。 例如: 
+ATL 物件通常會藉由衍生自[CComCoClass](../../atl/reference/ccomcoclass-class.md)來取得 Class Factory。 這個類別包含宏[DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), 其會將[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)宣告為預設 Class Factory。 若要`CComClassFactory2`使用, 請在物件的類別定義中指定[DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2)宏。 例如：
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomclassfactory2-class_1.h)]
 
-`CMyLicense`要與範本參數`CComClassFactory2`，必須實作的靜態函式`VerifyLicenseKey`， `GetLicenseKey`，和`IsLicenseValid`。 以下是簡單的授權類別的範例：
+`CMyLicense``CComClassFactory2`, 的樣板參數必須實作用`VerifyLicenseKey`、 `GetLicenseKey`和`IsLicenseValid`的靜態函式。 以下是簡單授權類別的範例:
 
 [!code-cpp[NVC_ATL_COM#3](../../atl/codesnippet/cpp/ccomclassfactory2-class_2.h)]
 
-`CComClassFactory2` 衍生自兩者`CComClassFactory2Base`並*授權*。 `CComClassFactory2Base`反而是衍生自`IClassFactory2`和`CComObjectRootEx< CComGlobalsThreadModel >`。
+`CComClassFactory2`衍生自`CComClassFactory2Base`和*授權*。 `CComClassFactory2Base`接著, 衍生自`IClassFactory2`和。 `CComObjectRootEx< CComGlobalsThreadModel >`
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -83,11 +83,11 @@ ATL 物件通常取得 class factory 藉由衍生自[CComCoClass](../../atl/refe
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="createinstance"></a>  CComClassFactory2::CreateInstance
+##  <a name="createinstance"></a>CComClassFactory2:: CreateInstance
 
-建立指定的 CLSID 的物件，並擷取此物件的介面指標。
+建立指定之 CLSID 的物件, 並抓取這個物件的介面指標。
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -96,13 +96,13 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>參數
 
 *pUnkOuter*<br/>
-[in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
+在如果將物件建立為匯總的一部分, 則*pUnkOuter*必須是外部未知的。 否則, *pUnkOuter*必須是 Null。
 
 *riid*<br/>
-[in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
+在所要求介面的 IID。 如果*pUnkOuter*為非 Null, 則*riid*必須是`IID_IUnknown`。
 
 *ppvObj*<br/>
-[out]所識別之介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObj*設為 NULL。
+脫銷由*riid*識別之介面指標的指標。 如果物件不支援這個介面, *ppvObj*會設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -110,11 +110,11 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 
 ### <a name="remarks"></a>備註
 
-需要電腦的完整授權。 如果不存在完整的機器授權，呼叫[CreateInstanceLic](#createinstancelic)。
+需要完整授權的電腦。 如果完整電腦授權不存在, 請呼叫[CreateInstanceLic](#createinstancelic)。
 
-##  <a name="createinstancelic"></a>  CComClassFactory2::CreateInstanceLic
+##  <a name="createinstancelic"></a>CComClassFactory2::CreateInstanceLic
 
-類似於[CreateInstance](#createinstance)，差異在於`CreateInstanceLic`需要的授權金鑰。
+類似于[CreateInstance](#createinstance), 但`CreateInstanceLic`需要授權金鑰。
 
 ```
 STDMETHOD(CreateInstanceLic)(
@@ -129,19 +129,19 @@ STDMETHOD(CreateInstanceLic)(
 ### <a name="parameters"></a>參數
 
 *pUnkOuter*<br/>
-[in]如果物件過程中建立的彙總，然後*pUnkOuter*必須是外部未知。 否則，請*pUnkOuter*必須是 NULL。
+在如果將物件建立為匯總的一部分, 則*pUnkOuter*必須是外部未知的。 否則, *pUnkOuter*必須是 Null。
 
 *pUnkReserved*<br/>
-[in]不使用。 必須是 Null。
+在未使用。 必須是 Null。
 
 *riid*<br/>
-[in]要求的介面 IID。 如果*pUnkOuter*為非 NULL *riid*必須是`IID_IUnknown`。
+在所要求介面的 IID。 如果*pUnkOuter*為非 Null, 則*riid*必須是`IID_IUnknown`。
 
 *bstrKey*<br/>
-[in]執行階段授權金鑰之前取得呼叫`RequestLicKey`。 此金鑰，才能建立物件。
+在先前從的呼叫`RequestLicKey`取得的執行時間授權金鑰。 建立物件時需要此金鑰。
 
 *ppvObject*<br/>
-[out]所指定的介面指標的指標*riid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
+脫銷由*riid*指定之介面指標的指標。 如果物件不支援這個介面, *ppvObject*會設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -149,11 +149,11 @@ STDMETHOD(CreateInstanceLic)(
 
 ### <a name="remarks"></a>備註
 
-您可以取得授權金鑰 using [RequestLicKey](#requestlickey)。 若要建立物件，在未經授權的電腦上，您必須呼叫`CreateInstanceLic`。
+您可以使用[RequestLicKey](#requestlickey)取得授權金鑰。 若要在未授權的電腦上建立物件, 您必須呼叫`CreateInstanceLic`。
 
-##  <a name="getlicinfo"></a>  CComClassFactory2::GetLicInfo
+##  <a name="getlicinfo"></a>CComClassFactory2::GetLicInfo
 
-填滿[LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)結構描述的 class factory 資訊的授權功能。
+以描述 Class Factory 授權功能的資訊填入[LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)結構。
 
 ```
 STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
@@ -162,7 +162,7 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 ### <a name="parameters"></a>參數
 
 *pLicInfo*<br/>
-[out]指標`LICINFO`結構。
+脫銷結構的`LICINFO`指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -170,11 +170,11 @@ STDMETHOD(GetLicInfo)(LICINFO* pLicInfo);
 
 ### <a name="remarks"></a>備註
 
-`fRuntimeKeyAvail`這個結構的成員會指出是否，取得授權金鑰，class factory 允許未經授權的電腦上建立的物件。 *FLicVerified*成員表示完整的電腦授權是否存在。
+此`fRuntimeKeyAvail`結構的成員指出, 在指定授權金鑰的情況下, Class Factory 是否允許在未授權的電腦上建立物件。 *FLicVerified*成員指出是否有完整的電腦授權存在。
 
 ##  <a name="lockserver"></a>  CComClassFactory2::LockServer
 
-遞增和遞減模組鎖定計數藉由呼叫`_Module::Lock`和`_Module::Unlock`分別。
+分別呼叫`_Module::Lock`和`_Module::Unlock`, 以遞增和遞減模組鎖定計數。
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -183,7 +183,7 @@ STDMETHOD(LockServer)(BOOL fLock);
 ### <a name="parameters"></a>參數
 
 *fLock*<br/>
-[in]如果為 TRUE，就會遞增的鎖定計數;否則，鎖定計數會遞減。
+在若為 TRUE, 則鎖定計數會遞增;否則, 鎖定計數就會遞減。
 
 ### <a name="return-value"></a>傳回值
 
@@ -191,13 +191,13 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="remarks"></a>備註
 
-`_Module` 全域執行個體是指[CComModule](../../atl/reference/ccommodule-class.md)或從它衍生的類別。
+`_Module`指的是[CComModule](../../atl/reference/ccommodule-class.md)的全域實例或衍生自它的類別。
 
-呼叫`LockServer`允許用戶端，以便可以快速建立多個物件保留的 class factory。
+呼叫`LockServer`可讓用戶端保存到 Class Factory, 以便快速建立多個物件。
 
-##  <a name="requestlickey"></a>  CComClassFactory2::RequestLicKey
+##  <a name="requestlickey"></a>CComClassFactory2::RequestLicKey
 
-建立並傳回授權金鑰，但前提`fRuntimeKeyAvail`隸屬[LICINFO](/windows/desktop/api/ocidl/ns-ocidl-taglicinfo)結構為 TRUE。
+建立並傳回授權金鑰, 前提是[LICINFO](/windows/win32/api/ocidl/ns-ocidl-licinfo)結構`fRuntimeKeyAvail`的成員為 TRUE。
 
 ```
 STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
@@ -206,10 +206,10 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 ### <a name="parameters"></a>參數
 
 *dwReserved*<br/>
-[in]不使用。 必須是零。
+在未使用。 必須為零。
 
 *pbstrKey*<br/>
-[out]授權金鑰的指標。
+脫銷授權金鑰的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -217,9 +217,9 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 
 ### <a name="remarks"></a>備註
 
-呼叫的授權金鑰須[CreateInstanceLic](#createinstancelic)未經授權的電腦上建立的物件。 如果`fRuntimeKeyAvail`是 FALSE，則只有在完整授權版的電腦上建立物件。
+呼叫[CreateInstanceLic](#createinstancelic)以在未授權的電腦上建立物件時, 需要授權金鑰。 如果`fRuntimeKeyAvail`為 FALSE, 則只能在完整授權的電腦上建立物件。
 
-呼叫[GetLicInfo](#getlicinfo)擷取的值`fRuntimeKeyAvail`。
+呼叫[GetLicInfo](#getlicinfo)以取出的值`fRuntimeKeyAvail`。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -227,4 +227,4 @@ STDMETHOD(RequestLicKey)(DWORD dwReserved, BSTR* pbstrKey);
 [CComClassFactorySingleton 類別](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

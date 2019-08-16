@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 6fac62e396791da69d8d94f6c42337c8c3afd528
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 00515e6822dad000c6745063c72d0ffaf367670b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916991"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504258"
 ---
 # <a name="colecurrency-class"></a>COleCurrency 類別
 
@@ -43,7 +43,7 @@ class COleCurrency
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[COleCurrency::COleCurrency](#colecurrency)|建構 `COleCurrency` 物件。|
 
@@ -128,15 +128,15 @@ COleCurrency(
 
 - COleCurrency () 會將`COleCurrency`初始化為 0 (零) 的物件結構化。
 
-- COleCurrency (`cySrc`) 會從`COleCurrency` [貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)值來構造物件。
+- COleCurrency (`cySrc`) 會從`COleCurrency` [貨幣](/windows/win32/api/wtypes/ns-wtypes-cy)值來構造物件。
 
 - COleCurrency (`curSrc`) 會從`COleCurrency`現有`COleCurrency`的物件來構造物件。 新物件的狀態與來源物件相同。
 
-- COleCurrency (`varSrc`) 會`COleCurrency`構造物件。 嘗試將[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)結構或`COleVariant`物件轉換為貨幣 (VT_CY) 值。 如果這種轉換成功, 轉換後的值會複製到新`COleCurrency`的物件中。 如果不是, 則`COleCurrency`物件的值會設定為零 (0), 且其狀態會是 [無效]。
+- COleCurrency (`varSrc`) 會`COleCurrency`構造物件。 嘗試將[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)結構或`COleVariant`物件轉換為貨幣 (VT_CY) 值。 如果這種轉換成功, 轉換後的值會複製到新`COleCurrency`的物件中。 如果不是, 則`COleCurrency`物件的值會設定為零 (0), 且其狀態會是 [無效]。
 
 - `COleCurrency(`從`, `指定`) Constructs a `的數值元件 nUnits nFractionalUnits COleCurrency ' 物件。 如果小數部分的絕對值大於 10000, 則會對單位進行適當的調整。 請注意, 單位和分數部分是以帶正負號的長數值來指定。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)和[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/win32/api/wtypes/ns-wtypes-cy)和[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)專案。
 
 ### <a name="example"></a>範例
 
@@ -236,14 +236,14 @@ enum CurrencyStatus {
 
 ##  <a name="m_cur"></a>  COleCurrency::m_cur
 
-這個`COleCurrency`物件的基礎[貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)結構。
+這個`COleCurrency`物件的基礎[貨幣](/windows/win32/api/wtypes/ns-wtypes-cy)結構。
 
 ### <a name="remarks"></a>備註
 
 > [!CAUTION]
 >  變更此函式所`CURRENCY`傳回之指標所存取的結構中的值, 將會變更這個`COleCurrency`物件的值。 它不會變更此`COleCurrency`物件的狀態。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/win32/api/wtypes/ns-wtypes-cy)專案。
 
 ##  <a name="m_status"></a>COleCurrency:: m_status
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const VARIANT& varSrc);
 
 - **operator = (** *varSrc* **)** 如果將`VARIANT`值 (或[COleVariant](../../mfc/reference/colevariant-class.md)物件) 轉換為貨幣 ( `VT_CY`) 成功, 轉換的值會複製到這個`COleCurrency`物件, 而且其狀態會設定為有效。 如果轉換不成功, `COleCurrency`物件的值會設定為 0, 且其狀態會是 [無效]。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/desktop/api/wtypes/ns-wtypes-tagcy)和[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[貨幣](/windows/win32/api/wtypes/ns-wtypes-cy)和[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)專案。
 
 ### <a name="example"></a>範例
 

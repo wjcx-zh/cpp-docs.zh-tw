@@ -23,12 +23,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 1d9dca16ca905afbc94d912a8083017ba9cc84e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c977bc204f4c9428a4aae09300269b1ed82d53e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188528"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498958"
 ---
 # <a name="wctob"></a>wctob
 
@@ -49,13 +49,13 @@ int wctob(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctob**成功轉換寬字元，其其多位元組字元表示法中，只有當傳回多位元組字元剛好一個位元組長。 如果**wctob**遇到它無法轉換成多位元組字元或多位元組字元的寬字元不是正好一個位元組長，則傳回-1。
+如果**wctob**成功轉換寬字元, 則只有在多位元組字元剛好是一個位元組長時, 才會傳回其多位元組字元標記法。 如果**wctob**遇到無法轉換成多位元組字元的寬字元, 或多位元組字元的長度不是正好一個位元組, 則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**Wctob**函式會轉換中所包含的寬字元*wchar*傳遞所傳回的對應多位元組字元**int**值，如果多位元組字元是剛好一個位元組長。
+**Wctob**函式會將*wchar*中包含的寬字元轉換成傳回**int**值所傳遞的對應多位元組字元 (如果多位元組字元剛好是一個位元組長)。
 
-如果**wctob**成功，但沒有對應的多位元組字元找不到，此函式設定**errno**來**EILSEQ**並傳回-1。
+如果**wctob**不成功, 而且找不到對應的多位元組字元, 則函式會將**Errno**設定為**EILSEQ** , 並傳回-1。
 
 ## <a name="requirements"></a>需求
 
@@ -67,7 +67,7 @@ int wctob(
 
 ## <a name="example"></a>範例
 
-此程式說明的行為**wcstombs**函式。
+此程式說明**wcstombs**函數的行為。
 
 ```C
 // crt_wctob.c
@@ -107,4 +107,4 @@ Determined the corresponding multibyte character to be "A".
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

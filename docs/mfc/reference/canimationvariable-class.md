@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6767ed42d66aff467ef36bd2a7b5234ad181ced
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338268"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507534"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable 類別
 
@@ -65,33 +65,33 @@ class CAnimationVariable;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CAnimationVariable::CAnimationVariable](#canimationvariable)|建構的動畫變數的物件。|
-|[CAnimationVariable::~CAnimationVariable](#_dtorcanimationvariable)|解構函式。 CAnimationVariable 物件正在被終結時呼叫。|
+|[CAnimationVariable::CAnimationVariable](#canimationvariable)|構造動畫變數物件。|
+|[CAnimationVariable:: ~ CAnimationVariable](#_dtorcanimationvariable)|解構函式。 在終結 CAnimationVariable 物件時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationVariable::AddTransition](#addtransition)|新增轉換。|
-|[CAnimationVariable::ApplyTransitions](#applytransitions)|將轉換加入從分鏡腳本的內部清單。|
+|[CAnimationVariable::AddTransition](#addtransition)|加入轉換。|
+|[CAnimationVariable::ApplyTransitions](#applytransitions)|將內部清單的轉換新增至分鏡腳本。|
 |[CAnimationVariable::ClearTransitions](#cleartransitions)|清除轉換。|
 |[CAnimationVariable::Create](#create)|建立基礎動畫變數 COM 物件。|
-|[CAnimationVariable::CreateTransitions](#createtransitions)|建立要套用至這個動畫變數的所有轉換。|
+|[CAnimationVariable::CreateTransitions](#createtransitions)|建立要套用至此動畫變數的所有轉換。|
 |[CAnimationVariable::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|啟用或停用 IntegerValueChanged 事件。|
 |[CAnimationVariable::EnableValueChangedEvent](#enablevaluechangedevent)|啟用或停用 ValueChanged 事件。|
 |[CAnimationVariable::GetDefaultValue](#getdefaultvalue)|傳回預設值。|
 |[CAnimationVariable::GetParentAnimationObject](#getparentanimationobject)|傳回父系動畫物件。|
-|[CAnimationVariable::GetValue](#getvalue)|多載。 傳回目前動畫變數的值。|
-|[CAnimationVariable::GetVariable](#getvariable)|讓指標回到 IUIAnimationVariable COM 物件。|
-|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|設定預設值，並釋放 IUIAnimationVariable COM 物件。|
+|[CAnimationVariable::GetValue](#getvalue)|多載。 傳回動畫變數目前的值。|
+|[CAnimationVariable::GetVariable](#getvariable)|傳回 IUIAnimationVariable COM 物件的指標。|
+|[CAnimationVariable::SetDefaultValue](#setdefaultvalue)|設定預設值和釋放 IUIAnimationVariable COM 物件。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|設定動畫變數和動畫物件之間的關聯性。|
+|[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|設定動畫變數與動畫物件之間的關聯性。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -103,14 +103,14 @@ class CAnimationVariable;
 
 |名稱|描述|
 |----------|-----------------|
-|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|指定預設值，也會傳播到 IUIAnimationVariable。|
-|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|包含一份以動畫顯示此動畫變數的轉換。|
+|[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|指定預設值, 這會傳播至 IUIAnimationVariable。|
+|[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|包含以動畫顯示此動畫變數的轉換清單。|
 |[CAnimationVariable::m_pParentObject](#m_pparentobject)|封裝這個動畫變數的動畫物件指標。|
-|[CAnimationVariable::m_variable](#m_variable)|儲存 IUIAnimationVariable COM 物件的指標。 如果是，尚未建立 COM 物件，或建立失敗，NULL。|
+|[CAnimationVariable::m_variable](#m_variable)|儲存 IUIAnimationVariable COM 物件的指標。 如果尚未建立 COM 物件, 或如果建立失敗, 則為 Null。|
 
 ## <a name="remarks"></a>備註
 
-CAnimationVariable 類別會封裝 IUIAnimationVariable COM 物件。 它也會保存一份要套用至在分鏡腳本動畫變數的轉換。 CAnimationVariable 物件會內嵌到動畫物件，表示應用程式的動畫的值、 點、 大小、 色彩和矩形中。
+CAnimationVariable 類別會封裝 IUIAnimationVariable COM 物件。 它也會保留要套用至分鏡腳本中之動畫變數的轉換清單。 CAnimationVariable 物件內嵌于動畫物件中, 可以在應用程式中代表動畫值、點、大小、色彩和矩形。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -120,17 +120,17 @@ CAnimationVariable 類別會封裝 IUIAnimationVariable COM 物件。 它也會�
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationvariable"></a>  CAnimationVariable:: ~ CAnimationVariable
+##  <a name="_dtorcanimationvariable"></a>CAnimationVariable:: ~ CAnimationVariable
 
-解構函式。 CAnimationVariable 物件正在被終結時呼叫。
+解構函式。 在終結 CAnimationVariable 物件時呼叫。
 
 ```
 virtual ~CAnimationVariable();
 ```
 
-##  <a name="addtransition"></a>  CAnimationVariable::AddTransition
+##  <a name="addtransition"></a>CAnimationVariable:: AddTransition
 
-新增轉換。
+加入轉換。
 
 ```
 void AddTransition(CBaseTransition* pTransition);
@@ -139,15 +139,15 @@ void AddTransition(CBaseTransition* pTransition);
 ### <a name="parameters"></a>參數
 
 *pTransition*<br/>
-若要新增的轉換指標。
+要加入之轉換的指標。
 
 ### <a name="remarks"></a>備註
 
-將轉換套用至動畫變數的內部清單中的轉換，會呼叫此方法。 已排定動畫時，就應該清除這份清單。
+呼叫這個方法時, 會將轉換加入至要套用至動畫變數的轉換內部清單。 已排程動畫時, 應清除此清單。
 
-##  <a name="applytransitions"></a>  CAnimationVariable::ApplyTransitions
+##  <a name="applytransitions"></a>CAnimationVariable:: ApplyTransitions
 
-將轉換加入從分鏡腳本的內部清單。
+將內部清單的轉換新增至分鏡腳本。
 
 ```
 void ApplyTransitions(
@@ -159,21 +159,21 @@ void ApplyTransitions(
 ### <a name="parameters"></a>參數
 
 *pController*<br/>
-父動畫控制器指標。
+父動畫控制器的指標。
 
 *pStoryboard*<br/>
 分鏡腳本的指標。
 
 *bDependOnKeyframes*<br/>
-如果為 TRUE，此方法應將取決於主要畫面格的轉換。
+若此方法應新增相依于主要畫面格的轉換, 則為 TRUE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會將轉換，從分鏡腳本的內部清單。 它會從最上層程式碼數次呼叫將不取決於主要畫面格並加入轉換，取決於主要畫面格的轉換。 如果尚未建立基礎的動畫變數的 COM 物件，則這個方法會建立它在這個階段。
+這個方法會將內部清單的轉換新增至分鏡腳本。 它會從最上層程式碼呼叫數次, 以新增不依賴主要畫面格的轉換, 以及新增相依于關鍵畫面的轉換。 如果尚未建立基礎動畫變數 COM 物件, 這個方法會在這個階段建立它。
 
-##  <a name="canimationvariable"></a>  CAnimationVariable::CAnimationVariable
+##  <a name="canimationvariable"></a>CAnimationVariable:: CAnimationVariable
 
-建構的動畫變數的物件。
+構造動畫變數物件。
 
 ```
 CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
@@ -186,9 +186,9 @@ CAnimationVariable(DOUBLE dblDefaultValue = 0.0);
 
 ### <a name="remarks"></a>備註
 
-會建構一個動畫變數的物件，並設定其預設值。 變數沒有建立動畫，或無法以動畫顯示時，會使用預設值。
+構造動畫變數物件, 並設定其預設值。 當變數未繪製動畫或無法繪製動畫時, 會使用預設值。
 
-##  <a name="cleartransitions"></a>  CAnimationVariable::ClearTransitions
+##  <a name="cleartransitions"></a>CAnimationVariable:: ClearTransitions
 
 清除轉換。
 
@@ -199,13 +199,13 @@ void ClearTransitions(BOOL bAutodestroy);
 ### <a name="parameters"></a>參數
 
 *bAutodestroy*<br/>
-指定此方法是否應該刪除轉換物件。
+指定這個方法是否應刪除轉換物件。
 
 ### <a name="remarks"></a>備註
 
-這個方法會移除之轉換的內部清單中的所有轉換。 如果 bAutodestroy 為 TRUE，或 m_bAutodestroyTransitions 為 TRUE，則會刪除轉換。 否則呼叫端應該解除配置的轉換物件。
+這個方法會將所有轉換從內部的轉換清單移除。 如果 bAutodestroy 為 TRUE, 或 m_bAutodestroyTransitions 為 TRUE, 則會刪除轉換。 否則呼叫端應該將轉換物件解除配置。
 
-##  <a name="create"></a>  CAnimationVariable::Create
+##  <a name="create"></a>CAnimationVariable:: Create
 
 建立基礎動畫變數 COM 物件。
 
@@ -216,19 +216,19 @@ virtual BOOL Create(IUIAnimationManager* pManager);
 ### <a name="parameters"></a>參數
 
 *pManager*<br/>
-動畫管理員指標。
+動畫管理員的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立動畫變數;，則為 TRUE。否則為 FALSE。
+如果已成功建立動畫變數, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會建立基礎的動畫變數的 COM 物件，並設定其預設值。
+這個方法會建立基礎動畫變數 COM 物件, 並設定其預設值。
 
-##  <a name="createtransitions"></a>  CAnimationVariable::CreateTransitions
+##  <a name="createtransitions"></a>CAnimationVariable:: CreateTransitions
 
-建立要套用至這個動畫變數的所有轉換。
+建立要套用至此動畫變數的所有轉換。
 
 ```
 BOOL CreateTransitions(
@@ -239,17 +239,17 @@ BOOL CreateTransitions(
 ### <a name="parameters"></a>參數
 
 *pLibrary*<br/>
-指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。
+[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功; 建立轉換，則為 TRUE。否則為 FALSE。
+如果成功建立轉換, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-需要建立已新增至該變數之轉換的內部清單的轉換時，這個方法是由架構呼叫。
+當此方法需要建立已加入至變數內部轉換清單的轉換時, 會由架構呼叫。
 
-##  <a name="enableintegervaluechangedevent"></a>  CAnimationVariable::EnableIntegerValueChangedEvent
+##  <a name="enableintegervaluechangedevent"></a>CAnimationVariable:: EnableIntegerValueChangedEvent
 
 啟用或停用 IntegerValueChanged 事件。
 
@@ -262,16 +262,16 @@ void EnableIntegerValueChangedEvent (
 ### <a name="parameters"></a>參數
 
 *pController*<br/>
-父控制器指標。
+父控制器的指標。
 
 *bEnable*<br/>
-TRUE-啟用 FALSE-停用事件的事件。
+TRUE-啟用事件, FALSE-停用事件。
 
 ### <a name="remarks"></a>備註
 
-啟用 ValueChanged 事件時，架構會呼叫虛擬方法 CAnimationController::OnAnimationIntegerValueChanged。 您需要以處理此事件來自 CAnimationController 類別中覆寫它。 每次變更動畫變數的整數值時，會呼叫這個方法。
+當 ValueChanged 事件啟用時, 架構會呼叫虛擬方法 CAnimationController:: OnAnimationIntegerValueChanged。 您必須在衍生自 CAnimationController 的類別中覆寫它, 才能處理這個事件。 每當動畫變數的整數值變更時, 就會呼叫這個方法。
 
-##  <a name="enablevaluechangedevent"></a>  CAnimationVariable::EnableValueChangedEvent
+##  <a name="enablevaluechangedevent"></a>CAnimationVariable:: EnableValueChangedEvent
 
 啟用或停用 ValueChanged 事件。
 
@@ -284,16 +284,16 @@ void EnableValueChangedEvent (
 ### <a name="parameters"></a>參數
 
 *pController*<br/>
-父控制器指標。
+父控制器的指標。
 
 *bEnable*<br/>
-TRUE-啟用 FALSE-停用事件的事件。
+TRUE-啟用事件, FALSE-停用事件。
 
 ### <a name="remarks"></a>備註
 
-啟用 ValueChanged 事件時，架構會呼叫虛擬方法 CAnimationController::OnAnimationValueChanged。 您需要以處理此事件來自 CAnimationController 類別中覆寫它。 每次變更動畫變數的值時，會呼叫這個方法。
+當 ValueChanged 事件啟用時, 架構會呼叫虛擬方法 CAnimationController:: OnAnimationValueChanged。 您必須在衍生自 CAnimationController 的類別中覆寫它, 才能處理這個事件。 每當動畫變數的值變更時, 就會呼叫這個方法。
 
-##  <a name="getdefaultvalue"></a>  CAnimationVariable::GetDefaultValue
+##  <a name="getdefaultvalue"></a>CAnimationVariable:: GetDefaultValue
 
 傳回預設值。
 
@@ -307,9 +307,9 @@ DOUBLE GetDefaultValue() const;
 
 ### <a name="remarks"></a>備註
 
-您可以使用此函式來取得動畫變數的預設值。 在建構函式或 SetDefaultValue 方法，就可以設定的預設值。
+使用此函式可取得動畫變數的預設值。 預設值可以在 [函數] 或 [SetDefaultValue] 方法中設定。
 
-##  <a name="getparentanimationobject"></a>  CAnimationVariable::GetParentAnimationObject
+##  <a name="getparentanimationobject"></a>CAnimationVariable:: GetParentAnimationObject
 
 傳回父系動畫物件。
 
@@ -319,15 +319,15 @@ CAnimationBaseObject* GetParentAnimationObject();
 
 ### <a name="return-value"></a>傳回值
 
-指向父動畫物件，如果已建立關聯性，否則為 NULL。
+如果已建立關聯性, 則為父動畫物件的指標, 否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-可以呼叫這個方法，來擷取父動畫物件 （容器） 的指標。
+您可以呼叫這個方法, 以取得父動畫物件 (容器) 的指標。
 
-##  <a name="getvalue"></a>  CAnimationVariable::GetValue
+##  <a name="getvalue"></a>CAnimationVariable:: GetValue
 
-傳回目前動畫變數的值。
+傳回動畫變數目前的值。
 
 ```
 HRESULT GetValue(DOUBLE& dblValue);
@@ -344,15 +344,15 @@ HRESULT GetValue(INT32& nValue);
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功，取得值，或尚未建立基礎的動畫變數為 S_OK。 否則 HRESULT 錯誤碼。
+如果已成功取得值, 或尚未建立基礎動畫變數, 則為 S_OK。 否則為 HRESULT 錯誤碼。
 
 ### <a name="remarks"></a>備註
 
-可以呼叫這個方法，來擷取目前的動畫變數的值。 如果尚未建立的基礎 COM 物件，dblValue 會包含預設值，當函式會傳回。
+您可以呼叫這個方法, 以取得動畫變數目前的值。 如果尚未建立基礎 COM 物件, 當函式傳回時, dblValue 會包含預設值。
 
-##  <a name="getvariable"></a>  CAnimationVariable::GetVariable
+##  <a name="getvariable"></a>CAnimationVariable:: GetVariable
 
-讓指標回到 IUIAnimationVariable COM 物件。
+傳回 IUIAnimationVariable COM 物件的指標。
 
 ```
 IUIAnimationVariable* GetVariable();
@@ -360,13 +360,13 @@ IUIAnimationVariable* GetVariable();
 
 ### <a name="return-value"></a>傳回值
 
-IUIAnimationVariable COM 物件或如果動畫變數未建立，或無法建立為 NULL 的有效指標。
+IUIAnimationVariable COM 物件的有效指標, 如果未建立動畫變數或無法建立, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-存取基礎 IUIAnimationVariable COM 物件，並直接呼叫其方法，如有需要使用此函式。
+使用此函式可存取基礎 IUIAnimationVariable COM 物件, 並在需要時直接呼叫其方法。
 
-##  <a name="m_bautodestroytransitions"></a>  CAnimationVariable::m_bAutodestroyTransitions
+##  <a name="m_bautodestroytransitions"></a>CAnimationVariable:: m_bAutodestroyTransitions
 
 指定是否應該刪除相關的轉換物件。
 
@@ -376,25 +376,25 @@ BOOL m_bAutodestroyTransitions;
 
 ### <a name="remarks"></a>備註
 
-正在轉換的內部清單中移除後，請將此值設為 true 可強制刪除轉換物件。 如果此值為 FALSE，轉換就應該刪除藉由呼叫應用程式。 已排程的動畫後，便一律會清除之轉換的清單。 預設值為 FALSE。
+將此值設定為 TRUE, 可在從轉換的內部清單中移除時, 強制刪除轉換物件。 如果此值為 FALSE, 則應該藉由呼叫應用程式來刪除轉換。 排定動畫之後, 一律會清除轉換清單。 預設值為 FALSE。
 
-##  <a name="m_dbldefaultvalue"></a>  CAnimationVariable::m_dblDefaultValue
+##  <a name="m_dbldefaultvalue"></a>CAnimationVariable:: m_dblDefaultValue
 
-指定預設值，也會傳播到 IUIAnimationVariable。
+指定預設值, 這會傳播至 IUIAnimationVariable。
 
 ```
 DOUBLE m_dblDefaultValue;
 ```
 
-##  <a name="m_lsttransitions"></a>  CAnimationVariable::m_lstTransitions
+##  <a name="m_lsttransitions"></a>CAnimationVariable:: m_lstTransitions
 
-包含一份以動畫顯示此動畫變數的轉換。
+包含以動畫顯示此動畫變數的轉換清單。
 
 ```
 CObList m_lstTransitions;
 ```
 
-##  <a name="m_pparentobject"></a>  CAnimationVariable::m_pParentObject
+##  <a name="m_pparentobject"></a>CAnimationVariable:: m_pParentObject
 
 封裝這個動畫變數的動畫物件指標。
 
@@ -402,17 +402,17 @@ CObList m_lstTransitions;
 CAnimationBaseObject* m_pParentObject;
 ```
 
-##  <a name="m_variable"></a>  CAnimationVariable::m_variable
+##  <a name="m_variable"></a>CAnimationVariable:: m_variable
 
-儲存 IUIAnimationVariable COM 物件的指標。 如果是，尚未建立 COM 物件，或建立失敗，NULL。
+儲存 IUIAnimationVariable COM 物件的指標。 如果尚未建立 COM 物件, 或如果建立失敗, 則為 Null。
 
 ```
 ATL::CComPtr<IUIAnimationVariable> m_variable;
 ```
 
-##  <a name="setdefaultvalue"></a>  CAnimationVariable::SetDefaultValue
+##  <a name="setdefaultvalue"></a>CAnimationVariable:: SetDefaultValue
 
-設定預設值，並釋放 IUIAnimationVariable COM 物件。
+設定預設值和釋放 IUIAnimationVariable COM 物件。
 
 ```
 void SetDefaultValue(DOUBLE dblDefaultValue);
@@ -425,11 +425,11 @@ void SetDefaultValue(DOUBLE dblDefaultValue);
 
 ### <a name="remarks"></a>備註
 
-使用此方法來重設預設值。 這個方法會釋放內部的 IUIAnimationVariable COM 物件，因此當動畫變數會重新建立時，基礎 COM 物件取得新的預設值。 如果不建立 COM 物件，表示動畫變數，或如果變數沒有建立動畫，GetValue 會傳回預設值。
+使用此方法來重設預設值。 這個方法會釋放內部 IUIAnimationVariable COM 物件, 因此當重新建立動畫變數時, 基礎 COM 物件會取得新的預設值。 如果未建立代表動畫變數的 COM 物件, 或變數尚未進行動畫處理, 則會傳回預設值。
 
-##  <a name="setparentanimationobject"></a>  CAnimationVariable::SetParentAnimationObject
+##  <a name="setparentanimationobject"></a>CAnimationVariable:: SetParentAnimationObject
 
-設定動畫變數和動畫物件之間的關聯性。
+設定動畫變數與動畫物件之間的關聯性。
 
 ```
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
@@ -438,11 +438,11 @@ void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ### <a name="parameters"></a>參數
 
 *pParentObject*<br/>
-動畫物件，包含這個變數指標。
+包含這個變數之動畫物件的指標。
 
 ### <a name="remarks"></a>備註
 
-這個方法會在內部呼叫，以建立動畫變數與封裝它的動畫物件之間的一對一關聯性。
+這個方法會在內部呼叫, 以便在動畫變數和封裝它的動畫物件之間建立一對一關聯性。
 
 ## <a name="see-also"></a>另請參閱
 

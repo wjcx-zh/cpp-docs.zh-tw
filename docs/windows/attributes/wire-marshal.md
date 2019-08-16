@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
-ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1067b74191dcde98dd9c85a246db2acd26eff9c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407012"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514857"
 ---
-# <a name="wiremarshal"></a>wire_marshal
+# <a name="wire_marshal"></a>wire_marshal
 
-指定將用於傳輸，而不是應用程式特定資料類型的資料類型。
+指定將用於傳輸的資料類型, 而不是應用程式特定的資料類型。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407012"
 
 ## <a name="remarks"></a>備註
 
-**Wire_marshal** C++屬性具有相同的功能[wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 屬性。
+**Wire_marshal** C++屬性具有與[wire_marshal](/windows/win32/Midl/wire-marshal) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例將示範用法**wire_marshal**:
+下列程式碼示範如何使用**wire_marshal**:
 
 ```cpp
 // cpp_attr_ref_wire_marshal.cpp
@@ -56,7 +56,7 @@ ms.locfileid: "62407012"
 |**適用於**|**typedef**|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

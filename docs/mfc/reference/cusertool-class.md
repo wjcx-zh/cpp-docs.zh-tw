@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b73cb3d3c6e244a9aa41a91a3ee9ff1efa98d496
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323420"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502249"
 ---
 # <a name="cusertool-class"></a>CUserTool 類別
 
-使用者工具是執行外部應用程式的功能表項目。 **工具**索引標籤**自訂** 對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 可讓使用者加入使用者工具，並指定名稱、 命令、 引數，以及每個使用者工具的初始目錄。
+使用者工具是執行外部應用程式的功能表項目。 [**自訂**] 對話方塊 ( [CMFCToolBarsCustomizeDialog 類別](../../mfc/reference/cmfctoolbarscustomizedialog-class.md)) 的 [**工具**] 索引標籤可讓使用者加入使用者工具, 以及指定每個使用者工具的名稱、命令、引數和初始目錄。
 
 ## <a name="syntax"></a>語法
 
@@ -54,13 +54,13 @@ class CUserTool : public CObject
 |名稱|描述|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
-|[CUserTool::DrawToolIcon](#drawtoolicon)|指定的矩形中繪製使用者工具圖示。|
-|[CUserTool::GetCommand](#getcommand)|傳回字串，包含與使用者工具相關聯的命令文字。|
-|[CUserTool::GetCommandId](#getcommandid)|傳回的命令識別碼的使用者工具的功能表項目。|
+|[CUserTool::DrawToolIcon](#drawtoolicon)|在指定的矩形中繪製使用者工具圖示。|
+|[CUserTool::GetCommand](#getcommand)|傳回字串, 其中包含與使用者工具相關聯的命令文字。|
+|[CUserTool::GetCommandId](#getcommandid)|傳回使用者工具功能表項目的命令識別碼。|
 |[CUserTool::Invoke](#invoke)|執行與使用者工具相關聯的命令。|
 |[CUserTool::Serialize](#serialize)|從封存中讀取或寫入此物件。 (覆寫 [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)。)|
-|[CUserTool::SetCommand](#setcommand)|設定使用者工具相關聯的命令。|
-|[CUserTool::SetToolIcon](#settoolicon)|從工具相關聯的應用程式載入使用者工具圖示。|
+|[CUserTool::SetCommand](#setcommand)|設定與使用者工具相關聯的命令。|
+|[CUserTool::SetToolIcon](#settoolicon)|從與工具相關聯的應用程式載入使用者工具的圖示。|
 
 ### <a name="protected-methods"></a>保護方法
 
@@ -72,17 +72,17 @@ class CUserTool : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CUserTool::m_strArguments](#m_strarguments)|[使用者] 工具命令列引數。|
+|[CUserTool::m_strArguments](#m_strarguments)|使用者工具的命令列引數。|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|使用者工具的初始目錄。|
-|[CUserTool::m_strLabel](#m_strlabel)|工具名稱，會顯示在工具功能表項目。|
+|[CUserTool::m_strLabel](#m_strlabel)|工具的功能表項目中顯示的工具名稱。|
 
 ## <a name="remarks"></a>備註
 
-如需如何啟用您的應用程式中的使用者工具的詳細資訊，請參閱[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。
+如需如何在您的應用程式中啟用使用者工具的詳細資訊, 請參閱[CUserToolsManager 類別](../../mfc/reference/cusertoolsmanager-class.md)。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何建立提供的工具`CUserToolsManager`物件，設定`m_strLabel`成員變數，並設定使用者工具執行的應用程式。 此程式碼片段是一部分[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何從`CUserToolsManager`物件建立工具、 `m_strLabel`設定成員變數, 以及設定使用者工具執行的應用程式。 此程式碼片段是[Visual Studio 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -94,11 +94,11 @@ class CUserTool : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxusertool.h
+**標頭:** afxusertool。h
 
-##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard
+##  <a name="copyicontoclipboard"></a>CUserTool::CopyIconToClipboard
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ```
 BOOL CopyIconToClipboard();
@@ -108,9 +108,9 @@ BOOL CopyIconToClipboard();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="drawtoolicon"></a>  CUserTool::DrawToolIcon
+##  <a name="drawtoolicon"></a>CUserTool::D rawToolIcon
 
-繪製指定矩形的中心的使用者工具圖示。
+在指定矩形的中央繪製使用者工具圖示。
 
 ```
 void DrawToolIcon(
@@ -121,14 +121,14 @@ void DrawToolIcon(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-[in]裝置內容指標。
+在裝置內容的指標。
 
 *rectImage*<br/>
-[in]指定區域的座標，要顯示的圖示。
+在指定要顯示圖示之區域的座標。
 
-##  <a name="getcommand"></a>  CUserTool::GetCommand
+##  <a name="getcommand"></a>CUserTool:: Iclientvirtualdevice
 
-傳回字串，包含與使用者工具相關聯的命令文字。
+傳回字串, 其中包含與使用者工具相關聯的命令文字。
 
 ```
 const CString& GetCommand() const;
@@ -136,9 +136,9 @@ const CString& GetCommand() const;
 
 ### <a name="return-value"></a>傳回值
 
-參考`CString`物件，其中包含與使用者工具相關聯的命令文字。
+`CString`物件的參考, 其中包含與使用者工具相關聯的命令文字。
 
-##  <a name="getcommandid"></a>  CUserTool::GetCommandId
+##  <a name="getcommandid"></a>CUserTool::GetCommandId
 
 傳回使用者工具的命令識別碼。
 
@@ -150,7 +150,7 @@ UINT GetCommandId() const;
 
 此使用者工具的命令識別碼。
 
-##  <a name="invoke"></a>  CUserTool::Invoke
+##  <a name="invoke"></a>CUserTool:: Invoke
 
 執行與使用者工具相關聯的命令。
 
@@ -160,13 +160,13 @@ virtual BOOL Invoke();
 
 ### <a name="return-value"></a>傳回值
 
-命令執行成功; 如果為非零否則為 0。
+如果命令執行成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-呼叫[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)執行與使用者工具相關聯的命令。 函式失敗，如果是空的命令，或如果[ShellExecute](/windows/desktop/api/shellapi/nf-shellapi-shellexecutea)失敗。
+呼叫[ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew)來執行與使用者工具相關聯的命令。 如果命令是空的或[ShellExecute](/windows/win32/api/shellapi/nf-shellapi-shellexecutew)失敗, 則函式會失敗。
 
-##  <a name="loaddefaulticon"></a>  CUserTool::LoadDefaultIcon
+##  <a name="loaddefaulticon"></a>CUserTool::LoadDefaultIcon
 
 載入使用者工具的預設圖示。
 
@@ -176,17 +176,17 @@ virtual HICON LoadDefaultIcon();
 
 ### <a name="return-value"></a>傳回值
 
-載入的圖示 (HICON) 或為 NULL，如果無法載入預設圖示控制代碼。
+載入圖示的控制碼 (HICON), 如果無法載入預設圖示, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-無法載入此工具可執行檔的使用者定義的工具的圖示時，架構會呼叫這個方法。
+當此架構無法從工具的可執行檔載入使用者定義工具的圖示時, 會呼叫這個方法。
 
-覆寫這個方法，以提供您自己的預設工具圖示。
+覆寫此方法, 以提供您自己的預設工具圖示。
 
-##  <a name="m_strarguments"></a>  CUserTool::m_strArguments
+##  <a name="m_strarguments"></a>CUserTool::m_strArguments
 
-[使用者] 工具命令列引數。
+使用者工具的命令列引數。
 
 ```
 CString m_strArguments;
@@ -194,9 +194,9 @@ CString m_strArguments;
 
 ### <a name="remarks"></a>備註
 
-這個字串會傳遞至工具，當您呼叫[CUserTool::Invoke](#invoke)或當使用者按一下此工具相關聯的命令。
+當您呼叫[CUserTool:: Invoke](#invoke)時, 或當使用者按一下與此工具相關聯的命令時, 這個字串會傳遞至工具。
 
-##  <a name="m_strinitialdirectory"></a>  CUserTool::m_strInitialDirectory
+##  <a name="m_strinitialdirectory"></a>CUserTool::m_strInitialDirectory
 
 指定使用者工具的初始目錄。
 
@@ -206,19 +206,19 @@ CString m_strInitialDirectory;
 
 ### <a name="remarks"></a>備註
 
-此變數會指定當您呼叫中執行此工具的初始目錄[CUserTool::Invoke](#invoke)或當使用者按一下此工具相關聯的命令。
+當您呼叫[CUserTool:: Invoke](#invoke)時, 或當使用者按一下與此工具相關聯的命令時, 這個變數會指定工具在中執行的初始目錄。
 
-##  <a name="m_strlabel"></a>  CUserTool::m_strLabel
+##  <a name="m_strlabel"></a>CUserTool::m_strLabel
 
-此工具的功能表項目中顯示的標籤。
+顯示在工具的功能表項目中的標籤。
 
 ```
 CString m_strLabel;
 ```
 
-##  <a name="serialize"></a>  CUserTool::Serialize
+##  <a name="serialize"></a>CUserTool:: 序列化
 
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -230,7 +230,7 @@ virtual void Serialize(CArchive& ar);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setcommand"></a>  CUserTool::SetCommand
+##  <a name="setcommand"></a>CUserTool::SetCommand
 
 設定使用者工具執行的應用程式。
 
@@ -241,15 +241,15 @@ void SetCommand(LPCTSTR lpszCmd);
 ### <a name="parameters"></a>參數
 
 *lpszCmd*<br/>
-[in]指定新的應用程式與使用者工具相關聯。
+在指定要與使用者工具產生關聯的新應用程式。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法以設定使用者工具執行的新應用程式。 方法會終結舊的圖示，並從指定的應用程式載入新的圖示。 如果它無法載入圖示，從應用程式，它會藉由呼叫載入使用者工具的預設圖示[CUserTool::LoadDefaultIcon](#loaddefaulticon)。
+呼叫這個方法, 以設定使用者工具執行的新應用程式。 方法會終結舊的圖示, 並從指定的應用程式載入新的圖示。 如果它無法從應用程式載入圖示, 它會藉由呼叫[CUserTool:: LoadDefaultIcon](#loaddefaulticon)來載入使用者工具的預設圖示。
 
-##  <a name="settoolicon"></a>  CUserTool::SetToolIcon
+##  <a name="settoolicon"></a>CUserTool::SetToolIcon
 
-從使用此工具的應用程式中載入使用者工具圖示。
+從工具所使用的應用程式載入使用者工具的圖示。
 
 ```
 virtual HICON SetToolIcon();
@@ -257,11 +257,11 @@ virtual HICON SetToolIcon();
 
 ### <a name="return-value"></a>傳回值
 
-載入圖示控制代碼。
+載入圖示的控制碼。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來載入功能表項目要顯示的圖示。 這個方法會搜尋此工具會使用可執行檔中的圖示。 如果它沒有預設的圖示，所提供的圖示[CUserTool::LoadDefaultIcon](#loaddefaulticon)改為使用。
+呼叫這個方法, 載入要顯示在功能表項目上的圖示。 這個方法會搜尋工具所使用之可執行檔中的圖示。 如果沒有預設圖示, 則會改用[CUserTool:: LoadDefaultIcon](#loaddefaulticon)所提供的圖示。
 
 ## <a name="see-also"></a>另請參閱
 

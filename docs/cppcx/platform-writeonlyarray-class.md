@@ -12,18 +12,18 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: fb582106fe2f18e939f11180048a125c683ca2f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5652123d4866262515f804dba790af51610eb426
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182934"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500513"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray 類別
 
 表示一維陣列。當呼叫端傳遞陣列讓方法填滿其中元素時，就會將這個陣列當做輸入參數來傳遞。
 
-這個 ref 類別在 vccorlib.h 中是宣告為私用，因此不會在中繼資料內發出，而且只能從 C++ 使用。 這個類別只做為用來接收呼叫端所配置之陣列的輸入參數。 您無法從使用者程式碼建構這個類別。 它可以讓 C++ 方法直接在陣列中寫入資料，這就稱為「 *FillArray* 」模式。 如需詳細資訊，請參閱 < [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+這個 ref 類別在 vccorlib.h 中是宣告為私用，因此不會在中繼資料內發出，而且只能從 C++ 使用。 這個類別只做為用來接收呼叫端所配置之陣列的輸入參數。 您無法從使用者程式碼建構這個類別。 它可以讓 C++ 方法直接在陣列中寫入資料，這就稱為「 *FillArray* 」模式。 如需詳細資訊, 請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -37,11 +37,11 @@ private ref class WriteOnlyArray<T, 1>
 
 這些方法的存取範圍都是 internal，也就是說，您只能在 C++ 應用程式或元件內存取這些方法。
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[WriteOnlyArray::begin](#begin)|指向陣列中第一個元素的迭代器。|
+|[WriteOnlyArray:: begin](#begin)|指向陣列中第一個元素的迭代器。|
 |[WriteOnlyArray::Data](#data)|資料緩衝區的指標。|
-|[WriteOnlyArray::end](#end)|指向陣列中最後一個元素後加一的迭代器。|
+|[WriteOnlyArray:: end](#end)|指向陣列中最後一個元素後加一的迭代器。|
 |[WriteOnlyArray::FastPass](#fastpass)|表示陣列是否可以使用 FastPass 機制，這是由系統悄悄執行的最佳化作業。 請勿在您的程式碼中使用此屬性。|
 |[WriteOnlyArray::Length](#length)|傳回陣列中的元素數目。|
 |[WriteOnlyArray::set](#set)|為指定的元素設定指定的值。|
@@ -54,9 +54,9 @@ private ref class WriteOnlyArray<T, 1>
 
 編譯器選項： **/ZW**
 
-**中繼資料：** Platform.winmd
+**中繼資料**Platform.winmd
 
-**命名空間：** Platform
+**命名空間：** 平台
 
 ## <a name="begin"></a>  WriteOnlyArray::begin 方法
 
@@ -126,7 +126,7 @@ property bool FastPass{
 
 表示陣列是否為 FastPass 的布林值。
 
-## <a name="get"></a>  Writeonlyarray:: Get 方法
+## <a name="get"></a>WriteOnlyArray:: get 方法
 
 傳回位於指定之索引處的元素。
 
@@ -185,7 +185,7 @@ T& set(
 
 ### <a name="remarks"></a>備註
 
-如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes)。
+如需如何解讀 HRESULT 值的詳細資訊, 請參閱[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ## <a name="see-also"></a>另請參閱
 

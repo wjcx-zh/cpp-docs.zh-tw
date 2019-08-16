@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: 337fe03ab09a6ed3da283f45dd4eb58aaaad5bc5
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: d33da7a9bc81f9733df840a87fbbbeca1e02cc04
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957493"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502551"
 ---
 # <a name="exception-processing"></a>例外狀況處理
 
@@ -380,7 +380,7 @@ void AfxThrowMemoryException();
 
 ### <a name="remarks"></a>備註
 
-如果對基礎系統記憶體配置器的呼叫 (例如**malloc**和[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) Windows 函數) 失敗, 請呼叫此函式。 您不需要為**新**的呼叫它, 因為如果記憶體配置失敗,**新**的會自動擲回記憶體例外狀況。
+如果對基礎系統記憶體配置器的呼叫 (例如**malloc**和[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc) Windows 函數) 失敗, 請呼叫此函式。 您不需要為**新**的呼叫它, 因為如果記憶體配置失敗,**新**的會自動擲回記憶體例外狀況。
 
 ### <a name="requirements"></a>需求
 
@@ -491,7 +491,7 @@ void AFXAPI AfxThrowOleException(HRESULT hr);
 
 ### <a name="remarks"></a>備註
 
-接受 HRESULT 做為引數的版本, 會將該結果程式碼轉換成對應的 SCODE。 如需 HRESULT 和 SCODE 的詳細資訊, 請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/desktop/com/structure-of-com-error-codes)。
+接受 HRESULT 做為引數的版本, 會將該結果程式碼轉換成對應的 SCODE。 如需 HRESULT 和 SCODE 的詳細資訊, 請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="requirements"></a>需求
 

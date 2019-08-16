@@ -13,19 +13,19 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e82a397b6d2abb66f773908c72a287c979e5ae1d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275317"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495924"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl 類別
 
-這個類別提供的實作`IDispatch`方法。
+這個類別會提供`IDispatch`方法的執行。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -42,16 +42,16 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 #### <a name="parameters"></a>參數
 
 *nID*<br/>
-來源物件的唯一識別碼。 當`IDispEventImpl`的基底類別為複合控制項，使用此參數所需的自主控制的資源識別碼。 在其他情況下，使用任意的正整數。
+來源物件的唯一識別碼。 當`IDispEventImpl`是複合控制項的基類時, 請針對此參數使用所需包含控制項的資源識別碼。 在其他情況下, 請使用任意正整數。
 
 *T*<br/>
-使用者的類別，衍生自`IDispEventImpl`。
+使用者的類別, 衍生自`IDispEventImpl`。
 
 *pdiid*<br/>
-要由此類別實作的事件分配程式介面的 IID 的指標。 此介面必須定義在所表示的類型程式庫*plibid*， *wMajor*，並*wMinor*。
+這個類別所執行之事件分配介面的 IID 指標。 此介面必須定義于*plibid*、 *wMajor*和*wMinor*所表示的類型程式庫中。
 
 *plibid*<br/>
-類型程式庫定義分派介面的指標所指向*pdiid*。 如果 **& GUID_NULL**，會從來源事件的物件載入類型程式庫。
+類型程式庫的指標, 定義*pdiid*所指向的分派介面。 如果 **&AMP; GUID_Null**, 則會從來源為事件的物件載入類型程式庫。
 
 *wMajor*<br/>
 類型程式庫的主要版本。 預設值為 0。
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 類型程式庫的次要版本。 預設值為 0。
 
 *tihclass*<br/>
-用來管理的類型資訊的類別*T*。預設值是類型的類別之`CComTypeInfoHolder`; 不過，您可以提供型別的類別以外的其他連線，覆寫此範本參數`CComTypeInfoHolder`。
+用來管理*T*之類型資訊的類別。預設值是類型`CComTypeInfoHolder`的類別, 不過, 您可以提供以外類型`CComTypeInfoHolder`的類別來覆寫此範本參數。
 
 ## <a name="members"></a>成員
 
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 |名稱|描述|
 |----------|-----------------|
-|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|用來管理的型別資訊的類別。 根據預設， `CComTypeInfoHolder`。|
+|[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|用來管理類型資訊的類別。 預設`CComTypeInfoHolder`為。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
@@ -80,30 +80,30 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 |名稱|描述|
 |----------|-----------------|
-|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|找出指定的分派識別項的函式的索引。|
-|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|將單一成員和一組選擇性的引數名稱對應至一組對應的 Dispid 的整數。|
-|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|擷取物件的型別資訊。|
-|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|擷取型別資訊介面數目。|
-|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|擷取使用者定義型別的基本類型。|
+|[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|尋找指定分派識別碼的函數索引。|
+|[IDispEventImpl::GetIDsOfNames](#getidsofnames)|將單一成員和一組選擇性的引數名稱對應至一組相對應的整數 Dispid。|
+|[IDispEventImpl::GetTypeInfo](#gettypeinfo)|抓取物件的類型資訊。|
+|[IDispEventImpl::GetTypeInfoCount](#gettypeinfocount)|抓取類型資訊介面的數目。|
+|[IDispEventImpl::GetUserDefinedType](#getuserdefinedtype)|抓取使用者定義類型的基本類型。|
 
 ## <a name="remarks"></a>備註
 
-`IDispEventImpl` 提供實作事件分配程式介面，而不需要您的方式，提供每個方法/事件上該介面的實作程式碼。 `IDispEventImpl` 提供的實作`IDispatch`方法。 您只需要提供您感興趣處理事件的實作。
+`IDispEventImpl`提供一種方法來執行事件分配介面, 而不需要您為該介面上的每個方法/事件提供實作為程式碼。 `IDispEventImpl``IDispatch`提供方法的執行。 您只需要提供您想要處理之事件的「執行」。
 
-`IDispEventImpl` 適用於搭配事件接收對應，在您的類別，以將事件路由至適當的處理常式函式。 若要使用此類別：
+`IDispEventImpl`與類別中的事件接收器對應搭配使用, 以將事件路由至適當的處理函式。 若要使用此類別:
 
-新增[SINK_ENTRY](composite-control-macros.md#sink_entry)或是[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)針對每個您想要處理的物件上的每個事件的事件接收對應的巨集。 使用時`IDispEventImpl`複合控制項的基底類別，您可以呼叫[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)建立，並針對所有項目在事件接收對應會中斷與事件來源的連接。 在其他情況下，或大於控制項中，呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)以建立來源物件與基底類別之間的連線。 呼叫[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)中斷連線。
+針對您要處理的每個物件上的每個事件, 將[SINK_ENTRY](composite-control-macros.md#sink_entry)或[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)宏新增至事件接收對應。 使用`IDispEventImpl`做為複合控制項的基類時, 您可以呼叫[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)來建立和中斷與事件接收對應中所有專案之事件來源的連接。 在其他情況下, 或若要進行更好的控制, 請呼叫[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)來建立來源物件與基類之間的連接。 呼叫[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)以中斷連接。
 
-您必須衍生自`IDispEventImpl`(使用的唯一值*nID*) 針對每個您要處理事件的物件。 您可以藉由取消通知對一個來源物件，則建議針對不同的來源物件，重複使用的基底類別，但可由單一物件一次的來源物件的數目上限的數目受限於`IDispEventImpl`基底類別。
+您必須針對需要`IDispEventImpl`處理事件的每個物件, 衍生自 (針對*nID*使用唯一的值)。 您可以針對某個來源物件 unadvising 重複使用基類, 然後針對不同的來源物件進行建議, 但是單一物件可一次處理的最大來源物件數目會受到`IDispEventImpl`基類數目的限制。
 
-`IDispEventImpl` 提供與相同的功能[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)，但它會從類型程式庫，而不需要它的指標當做提供取得有關介面的類型資訊[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)結構。 使用`IDispEventSimpleImpl`時您不具有描述事件介面的型別程式庫或不想以避免與使用類型程式庫相關聯的額外負荷。
+`IDispEventImpl`提供與[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)相同的功能, 不同之處在于它會從型別程式庫取得介面的類型資訊, 而不是將它當做[_ATL_FUNC_INFO](../../atl/reference/atl-func-info-structure.md)結構的指標提供。 當`IDispEventSimpleImpl`您沒有描述事件介面的類型程式庫, 或想要避免與使用類型程式庫相關聯的額外負荷時, 請使用。
 
 > [!NOTE]
-> `IDispEventImpl` 並`IDispEventSimpleImpl`提供其自己實作的`IUnknown::QueryInterface`啟用每個`IDispEventImpl`和`IDispEventSimpleImpl`基底類別，作為個別的 COM 識別，同時仍然允許對類別成員的直接存取，您主要的 COM 物件中。
+> `IDispEventImpl`和`IDispEventSimpleImpl`提供自己的`IUnknown::QueryInterface`實作為, 讓`IDispEventImpl`每`IDispEventSimpleImpl`個和基類作為個別的 com 身分識別, 同時仍允許直接存取主要 COM 物件中的類別成員。
 
-CE ATL 實作 ActiveX 事件接收器只支援傳回值的型別 HRESULT 或 void，從您的事件處理常式方法;任何傳回的值不受支援，且其行為未定義。
+適用于 ActiveX 事件接收的 CE ATL 實作為, 只支援事件處理常式方法中 HRESULT 或 void 類型的傳回值;不支援任何其他傳回值, 且其行為未定義。
 
-如需詳細資訊，請參閱 <<c0> [ 支援 IDispEventImpl](../../atl/supporting-idispeventimpl.md)。
+如需詳細資訊, 請參閱[支援 IDispEventImpl](../../atl/supporting-idispeventimpl.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -117,11 +117,11 @@ CE ATL 實作 ActiveX 事件接收器只支援傳回值的型別 HRESULT 或 voi
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="getfuncinfofromid"></a>  IDispEventImpl::GetFuncInfoFromId
+##  <a name="getfuncinfofromid"></a>IDispEventImpl:: GetFuncInfoFromId
 
-找出指定的分派識別項的函式的索引。
+尋找指定分派識別碼的函數索引。
 
 ```
 HRESULT GetFuncInfoFromId(
@@ -134,24 +134,24 @@ HRESULT GetFuncInfoFromId(
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]Id 函式的參考。
+在函數識別碼的參考。
 
 *dispidMember*<br/>
-[in]函式的分派識別碼。
+在函數的分派識別碼。
 
 *lcid*<br/>
-[in]地區設定內容的函式識別碼。
+在函數識別碼的地區設定內容。
 
 *info*<br/>
-[in]結構，表示呼叫此函式的方式。
+在結構, 表示呼叫函數的方式。
 
 ### <a name="return-value"></a>傳回值
 
 標準的 HRESULT 值。
 
-##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispEventImpl:: GetIDsOfNames
 
-將單一成員和一組選擇性的引數名稱對應至一組對應的整數 Dispid，可用來在後續呼叫[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)。
+將單一成員和一組選擇性的引數名稱對應至相對應的整數 Dispid 集合, 可在後續呼叫[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)時使用。
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,9 +164,9 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+請參閱 Windows SDK 中的[IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 。
 
-##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispEventImpl:: GetTypeInfo
 
 擷取物件的類型資訊，可以用來取得介面的類型資訊。
 
@@ -179,7 +179,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettypeinfocount"></a>  IDispEventImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispEventImpl:: GetTypeInfoCount
 
 擷取物件提供的類型資訊介面數目 (0 或 1)。
 
@@ -189,11 +189,11 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK 中。
+請參閱 Windows SDK 中的[IDispatch:: GetTypeInfoCount](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) 。
 
-##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
+##  <a name="getuserdefinedtype"></a>IDispEventImpl:: GetUserDefinedType
 
-擷取使用者定義型別的基本類型。
+抓取使用者定義類型的基本類型。
 
 ```
 VARTYPE GetUserDefinedType(
@@ -204,30 +204,30 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>參數
 
 *pTI*<br/>
-[in]指標[ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)包含使用者定義類型的介面。
+在包含使用者定義型別之[ITypeInfo](/windows/win32/api/oaidl/nn-oaidl-itypeinfo)介面的指標。
 
 *hrt*<br/>
-[in]要擷取之型別描述的控制代碼。
+在要抓取之類型描述的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-Variant 類型。
+Variant 的類型。
 
 ### <a name="remarks"></a>備註
 
-請參閱[ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
+請參閱[ITypeInfo:: GetRefTypeInfo](/windows/win32/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)。
 
-##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
+##  <a name="idispeventimpl"></a>IDispEventImpl:: IDispEventImpl
 
-建構函式。 儲存類別範本參數的值*plibid*， *pdiid*， *wMajor*，以及*wMinor*。
+建構函式。 儲存類別範本參數*plibid*、 *pdiid*、 *wMajor*和*wMinor*的值。
 
 ```
 IDispEventImpl();
 ```
 
-##  <a name="tihclass"></a>  IDispEventImpl::tihclass
+##  <a name="tihclass"></a>IDispEventImpl:: tihclass
 
-此 typedef 是類別範本參數的執行個體*tihclass*。
+此 typedef 是類別樣板參數*tihclass*的實例。
 
 ```
 typedef tihclass _tihclass;
@@ -235,7 +235,7 @@ typedef tihclass _tihclass;
 
 ### <a name="remarks"></a>備註
 
-根據預設，此類別是`CComTypeInfoHolder`。 `CComTypeInfoHolder` 管理類別的型別資訊。
+根據預設, 類別是`CComTypeInfoHolder`。 `CComTypeInfoHolder`管理類別的類型資訊。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -245,4 +245,4 @@ typedef tihclass _tihclass;
 [SINK_ENTRY](composite-control-macros.md#sink_entry)<br/>
 [SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)<br/>
 [SINK_ENTRY_INFO](composite-control-macros.md#sink_entry_info)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

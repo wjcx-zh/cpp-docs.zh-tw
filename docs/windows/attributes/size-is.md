@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
-ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504f1bf72b8ffa15e8df50bb00c86ef909688f1e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407324"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514035"
 ---
-# <a name="sizeis"></a>size_is
+# <a name="size_is"></a>size_is
 
-指定記憶體的大小配置大小的指標、 調整大小來調整大小的指標，以及單一或多維陣列的指標。
+指定配置給大小指標的記憶體大小、大小指標的大小指標, 以及單一或多維陣列。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62407324"
 ### <a name="parameters"></a>參數
 
 *expression*<br/>
-所配置的記憶體大小調整大小的指標。
+配置給大小指標的記憶體大小。
 
 ## <a name="remarks"></a>備註
 
-**Size_is** C++屬性具有相同的功能[size_is](/windows/desktop/Midl/size-is) MIDL 屬性。
+**Size_is** C++屬性的功能與[size_is](/windows/win32/Midl/size-is) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[first_is](first-is.md)如需如何指定的陣列區段的範例。
+如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -42,7 +42,7 @@ ms.locfileid: "62407324"
 
 |||
 |-|-|
-|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|
+|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|`max_is`|

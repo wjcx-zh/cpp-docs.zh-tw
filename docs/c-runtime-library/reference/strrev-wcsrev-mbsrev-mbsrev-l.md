@@ -47,19 +47,19 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: a8794177f4f92a1928ffeaaa1d7e183aa67cf886
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366650"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499418"
 ---
-# <a name="strrev-wcsrev-mbsrev-mbsrevl"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
+# <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
 反轉字串字元。
 
 > [!IMPORTANT]
-> **_mbsrev**並 **_mbsrev_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsrev**和 **_mbsrev_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -93,14 +93,14 @@ unsigned char *_mbsrev_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strrev**函式會反轉中的字元順序*str*。 原地保留終止的 Null 字元。 **_wcsrev**並 **_mbsrev**是寬字元和多位元組字元版本的 **_strrev**。 引數和傳回值 **_wcsrev**是寬字元字串; **_mbsrev**是多位元組字元字串。 針對 **_mbsrev**中的每個多位元組字元的位元組順序*str*則不會變更。 除此之外，這三個函式的行為相同。
+**_Strrev**函數會反轉*str*中字元的順序。 原地保留終止的 Null 字元。 **_wcsrev**和 **_mbsrev**是 **_strrev**的寬字元和多位元組字元版本。 **_Wcsrev**的引數和傳回值是寬字元字串; **_mbsrev**的是多位元組字元字串。 若為 **_mbsrev**, *str*中每個多位元組字元的位元組順序不會變更。 除此之外，這三個函式的行為相同。
 
-**_mbsrev**會驗證其參數。 如果有任一*string1*或是*string2*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_mbsrev**會傳回**NULL**並設定**errno**至**EINVAL**。 **_strrev**並 **_wcsrev**不會驗證其參數。
+**_mbsrev**會驗證其參數。 如果*string1*或*string2*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **_mbsrev**會傳回**Null** , 並將**errno**設定為**EINVAL**。 **_strrev**和 **_wcsrev**不會驗證它們的參數。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式的版本完全相同，只不過沒有具有 **_l**後置詞使用目前的地區設定，而沒有 **_l**後置詞改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -115,7 +115,7 @@ unsigned char *_mbsrev_l(
 |-------------|---------------------|
 |**_strrev**|\<string.h>|
 |**_wcsrev**|\<string.h> 或 \<wchar.h>|
-|**_mbsrev**， **_mbsrev_l**|\<mbstring.h>|
+|**_mbsrev**、 **_mbsrev_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

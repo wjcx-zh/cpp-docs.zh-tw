@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: f2dfd3421d2154b4894b62b71d7993c483a77c53
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2ec8c50a317a09e97a212e8cd7b9be1b58272af9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916130"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506563"
 ---
 # <a name="cfilefind-class"></a>CFileFind 類別
 
@@ -77,7 +77,7 @@ class CFileFind : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFileFind::CFileFind](#cfilefind)|建構 `CFileFind` 物件。|
 
@@ -116,7 +116,7 @@ class CFileFind : public CObject
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CFileFind::m_pTM](#m_ptm)|指向 `CAtlTransactionManager` 物件的指標。|
 
@@ -212,7 +212,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -270,7 +270,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>傳回值
 
-如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
+如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
 
 ### <a name="remarks"></a>備註
 
@@ -314,7 +314,7 @@ virtual BOOL FindNextFile();
 
 - [MatchesMask](#matchesmask)
 
-`FindNextFile`包裝 Win32 函數[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。
+`FindNextFile`包裝 Win32 函數[FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)。
 
 ### <a name="example"></a>範例
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含建立檔案的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含建立檔案的時間。
 
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
@@ -346,7 +346,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 呼叫`GetCreationTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ### <a name="example"></a>範例
 
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含上次存取檔案的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含上次存取檔案的時間。
 
 ### <a name="return-value"></a>傳回值
 
@@ -484,7 +484,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 呼叫`GetLastAccessTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ### <a name="example"></a>範例
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含檔案上次被寫入的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含檔案上次被寫入的時間。
 
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
@@ -516,7 +516,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 呼叫`GetLastWriteTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_Find_Data](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ### <a name="example"></a>範例
 
@@ -538,7 +538,7 @@ ULONGLONG GetLength() const;
 
 呼叫`GetLength`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
-`GetLength`使用 Win32 結構[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)來取得並傳回檔案大小的值 (以位元組為單位)。
+`GetLength`使用 Win32 結構[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)來取得並傳回檔案大小的值 (以位元組為單位)。
 
 > [!NOTE]
 >  從 MFC 7.0, `GetLength`支援64位整數類型。 先前使用此新版程式庫建立的現有程式碼可能會產生截斷警告。
@@ -583,7 +583,7 @@ BOOL IsArchived() const;
 
 ### <a name="remarks"></a>備註
 
-應用程式會使用 FILE_ATTRIBUTE_ARCHIVE (在[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中識別的檔案屬性) 來標示要備份或移除的封存檔案。
+應用程式會使用 FILE_ATTRIBUTE_ARCHIVE (在[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中識別的檔案屬性) 來標示要備份或移除的封存檔案。
 
 呼叫`IsArchived`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -607,7 +607,7 @@ BOOL IsCompressed() const;
 
 ### <a name="remarks"></a>備註
 
-壓縮的檔案會標記為 FILE_ATTRIBUTE_COMPRESSED, 這是[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 若為檔案, 這個屬性會指出檔案中的所有資料都是壓縮檔案。 若為目錄, 此屬性工作表示壓縮是新建立之檔案和子目錄的預設值。
+壓縮的檔案會標記為 FILE_ATTRIBUTE_COMPRESSED, 這是[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 若為檔案, 這個屬性會指出檔案中的所有資料都是壓縮檔案。 若為目錄, 此屬性工作表示壓縮是新建立之檔案和子目錄的預設值。
 
 呼叫`IsCompressed`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -631,7 +631,7 @@ BOOL IsDirectory() const;
 
 ### <a name="remarks"></a>備註
 
-目錄的檔案會以 FILE_ATTRIBUTE_DIRECTORY 標示[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。
+目錄的檔案會以 FILE_ATTRIBUTE_DIRECTORY 標示[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。
 
 呼叫`IsDirectory`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -677,7 +677,7 @@ BOOL IsHidden() const;
 
 ### <a name="remarks"></a>備註
 
-隱藏的檔案, 以 FILE_ATTRIBUTE_HIDDEN 標示, [WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 一般目錄清單中不會包含隱藏的檔案。
+隱藏的檔案, 以 FILE_ATTRIBUTE_HIDDEN 標示, [WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 一般目錄清單中不會包含隱藏的檔案。
 
 呼叫`IsHidden`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -701,7 +701,7 @@ BOOL IsNormal() const;
 
 ### <a name="remarks"></a>備註
 
-以 FILE_ATTRIBUTE_NORMAL 標記的檔案, 這是[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 一般檔案未設定其他屬性。 所有其他檔案屬性都會覆寫這個屬性。
+以 FILE_ATTRIBUTE_NORMAL 標記的檔案, 這是[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 一般檔案未設定其他屬性。 所有其他檔案屬性都會覆寫這個屬性。
 
 呼叫`IsNormal`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -725,7 +725,7 @@ BOOL IsReadOnly() const;
 
 ### <a name="remarks"></a>備註
 
-唯讀檔案會標記為 FILE_ATTRIBUTE_READONLY, 這是[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 應用程式可以讀取這類檔案, 但無法寫入或刪除檔案。
+唯讀檔案會標記為 FILE_ATTRIBUTE_READONLY, 這是[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 應用程式可以讀取這類檔案, 但無法寫入或刪除檔案。
 
 呼叫`IsReadOnly`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -749,7 +749,7 @@ BOOL IsSystem() const;
 
 ### <a name="remarks"></a>備註
 
-系統檔案標記為 FILE_ATTRIBUTE_SYSTEM, 這是[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 系統檔案屬於, 或由作業系統獨佔使用。
+系統檔案標記為 FILE_ATTRIBUTE_SYSTEM, 這是[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 系統檔案屬於, 或由作業系統獨佔使用。
 
 呼叫`IsSystem`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -773,7 +773,7 @@ BOOL IsTemporary() const;
 
 ### <a name="remarks"></a>備註
 
-暫存檔案會標記為 FILE_ATTRIBUTE_TEMPORARY, 這是[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的檔案屬性。 暫存檔案用於暫時儲存。 只有在絕對必要時, 應用程式才應該寫入檔案。 大部分檔案的資料會保留在記憶體中, 而不會排清到媒體, 因為檔案很快就會遭到刪除。
+暫存檔案會標記為 FILE_ATTRIBUTE_TEMPORARY, 這是[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的檔案屬性。 暫存檔案用於暫時儲存。 只有在絕對必要時, 應用程式才應該寫入檔案。 大部分檔案的資料會保留在記憶體中, 而不會排清到媒體, 因為檔案很快就會遭到刪除。
 
 呼叫`IsTemporary`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
@@ -804,7 +804,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 ### <a name="parameters"></a>參數
 
 *dwMask*<br/>
-針對找到的檔案, 指定[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構中所識別的一個或多個檔案屬性。 若要搜尋多個屬性, 請使用位 OR&#124;() 運算子。 下列屬性的任何組合都是可接受的:
+針對找到的檔案, 指定[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構中所識別的一個或多個檔案屬性。 若要搜尋多個屬性, 請使用位 OR&#124;() 運算子。 下列屬性的任何組合都是可接受的:
 
 - FILE_ATTRIBUTE_ARCHIVE 檔案是封存檔案。 應用程式會使用此屬性來標示要備份或移除的檔案。
 
@@ -824,7 +824,7 @@ virtual BOOL MatchesMask(DWORD dwMask) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 

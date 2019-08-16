@@ -34,14 +34,14 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156833"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499901"
 ---
-# <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
+# <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
 將多位元組字元從某個字串複製到另一個字串。 這些函式已有更安全的版本可用，請參閱 [_mbccpy_s、_mbccpy_s_l](mbccpy-s-mbccpy-s-l.md)。
 
@@ -75,13 +75,13 @@ void _mbccpy_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbccpy**函式會複製一個多位元組字元從*src*來*dest*。
+**_Mbccpy**函數會將一個多位元組字元從*src*複製到*dest*。
 
-這個函式會驗證它的參數。 如果 **_mbccpy**為 null 指標傳遞*dest*或是*src*，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行**errno**設為**EINVAL**。
+這個函式會驗證它的參數。 如果為 **_mbccpy**傳遞了*dest*或*src*的 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設定為**EINVAL**。
 
-**_mbccpy**針對任何地區設定相關行為使用目前的地區設定。 **_mbccpy_l**等同於 **_mbccpy**不同之處在於 **_mbccpy_l**會針對任何地區設定相關行為傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**會針對任何與地區設定相關的行為使用目前的地區設定。 **_mbccpy_l**與 **_mbccpy**相同, 不同之處在于 **_mbccpy_l**會使用傳入的地區設定來進行任何與地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
+**安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: bbd369d282df1cac59e6966a2d832e23b8ff6da0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 046c8a3f99e8b505ee6a6e8b534318263090e07d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916732"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502259"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -99,7 +99,7 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CToolTipCtrl::Activate](#activate)|啟用和停用工具提示控制項。|
 |[CToolTipCtrl::AddTool](#addtool)|向工具提示控制項註冊工具。|
@@ -261,7 +261,7 @@ BOOL AdjustRect(
 
 此成員函式會從視窗矩形中計算工具提示控制項的文字顯示矩形, 或在顯示指定之文字顯示矩形時所需的工具提示視窗矩形。
 
-此成員函式會執行 Win32 message [TTM_ADJUSTRECT](/windows/desktop/Controls/ttm-adjustrect)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="create"></a>CToolTipCtrl:: Create
 
@@ -322,7 +322,7 @@ virtual BOOL CreateEx(
 指定工具提示控制項的樣式。 如需詳細資訊, 請參閱[建立](#create)的「**備註**」一節。
 
 *dwStyleEx*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)的*dwExStyle*參數。
+指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -377,7 +377,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 ### <a name="parameters"></a>參數
 
 *lpToolInfo*<br/>
-工具提示之[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的指標。
+工具提示之[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -385,7 +385,7 @@ CSize GetBubbleSize(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETBUBBLESIZE](/windows/desktop/Controls/ttm-getbubblesize)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="getcurrenttool"></a>CToolTipCtrl:: GetCurrentTool
 
@@ -399,7 +399,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 |參數|描述|
 |---------------|-----------------|
-|*lpToolInfo*|脫銷[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的指標, 它會接收目前工具提示視窗的相關資訊。|
+|*lpToolInfo*|脫銷[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的指標, 它會接收目前工具提示視窗的相關資訊。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -407,7 +407,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TTM_GETCURRENTTOOL](/windows/desktop/Controls/ttm-getcurrenttool)訊息, 如 Windows SDK 中所述。
+這個方法會傳送[TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool)訊息, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -440,7 +440,7 @@ int GetDelayTime(DWORD dwDuration) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETDELAYTIME](/windows/desktop/Controls/ttm-getdelaytime)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="getmargin"></a>CToolTipCtrl:: GetMargin
 
@@ -464,7 +464,7 @@ void GetMargin(LPRECT lprc) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETMARGIN](/windows/desktop/Controls/ttm-getmargin)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="getmaxtipwidth"></a>CToolTipCtrl:: GetMaxTipWidth
 
@@ -480,7 +480,7 @@ int GetMaxTipWidth() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETMAXTIPWIDTH](/windows/desktop/Controls/ttm-getmaxtipwidth)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="gettext"></a>CToolTipCtrl:: GetText
 
@@ -518,11 +518,11 @@ COLORREF GetTipBkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-代表背景色彩的[COLORREF](/windows/desktop/gdi/colorref)值。
+代表背景色彩的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETTIPBKCOLOR](/windows/desktop/Controls/ttm-gettipbkcolor)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="gettiptextcolor"></a>CToolTipCtrl:: GetTipTextColor
 
@@ -534,11 +534,11 @@ COLORREF GetTipTextColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-代表文字色彩的[COLORREF](/windows/desktop/gdi/colorref)值。
+代表文字色彩的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_GETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-gettiptextcolor)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="gettitle"></a>CToolTipCtrl:: GetTitle
 
@@ -550,13 +550,13 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*pttgt*|脫銷[TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)結構的指標, 其中包含工具提示控制項的相關資訊。 當這個方法傳回時, [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-ttgettitle)結構的*pszTitle*成員會指向標題的文字。|
+|*pttgt*|脫銷[TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)結構的指標, 其中包含工具提示控制項的相關資訊。 當這個方法傳回時, [TTGETTITLE](/windows/win32/api/commctrl/ns-commctrl-ttgettitle)結構的*pszTitle*成員會指向標題的文字。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TTM_GETTITLE](/windows/desktop/Controls/ttm-gettitle)訊息, 如 Windows SDK 中所述。
+這個方法會傳送[TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle)訊息, 如 Windows SDK 中所述。
 
 ##  <a name="gettoolcount"></a>CToolTipCtrl:: GetToolCount
 
@@ -598,7 +598,7 @@ BOOL GetToolInfo(
 
 ### <a name="remarks"></a>備註
 
-CToolInfo 所`uId`參考之[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的 和成員可識別此工具。`hwnd` 如果已透過先前的呼叫向`AddTool`工具提示控制項註冊該工具, 此`TOOLINFO`結構會填入工具的相關資訊。
+CToolInfo 所`uId`參考之[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的 和成員可識別此工具。`hwnd` 如果已透過先前的呼叫向`AddTool`工具提示控制項註冊該工具, 此`TOOLINFO`結構會填入工具的相關資訊。
 
 ##  <a name="hittest"></a>CToolTipCtrl:: HitTest
 
@@ -620,7 +620,7 @@ BOOL HitTest(
 `CPoint`物件的指標, 包含要測試之點的座標。
 
 *lpToolInfo*<br/>
-[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的指標, 其中包含工具的相關資訊。
+[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的指標, 其中包含工具的相關資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -662,7 +662,7 @@ void Pop();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_POP](/windows/desktop/Controls/ttm-pop)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_POP](/windows/win32/Controls/ttm-pop)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="popup"></a>CToolTipCtrl::P opup
 
@@ -674,7 +674,7 @@ void Popup();
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TTM_POPUP](/windows/desktop/Controls/ttm-popup)訊息, 如 Windows SDK 中所述。
+這個方法會傳送[TTM_POPUP](/windows/win32/Controls/ttm-popup)訊息, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>參數
 
 *lpMsg*<br/>
-包含要轉送之訊息的[MSG](/windows/desktop/api/winuser/ns-winuser-msg)結構的指標。
+包含要轉送之訊息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -751,7 +751,7 @@ void SetMargin(LPRECT lprc);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_SETMARGIN](/windows/desktop/Controls/ttm-setmargin)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="setmaxtipwidth"></a>CToolTipCtrl:: Setmaxtipwidth:
 
@@ -772,7 +772,7 @@ int SetMaxTipWidth(int iWidth);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_SETMAXTIPWIDTH](/windows/desktop/Controls/ttm-setmaxtipwidth)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="settipbkcolor"></a>CToolTipCtrl:: Settipbkcolor:
 
@@ -789,7 +789,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_SETTIPBKCOLOR](/windows/desktop/Controls/ttm-settipbkcolor)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="settiptextcolor"></a>CToolTipCtrl:: Settiptextcolor:
 
@@ -806,7 +806,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_SETTIPTEXTCOLOR](/windows/desktop/Controls/ttm-settiptextcolor)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="settitle"></a>CToolTipCtrl:: SetTitle
 
@@ -821,7 +821,7 @@ BOOL SetTitle(
 ### <a name="parameters"></a>參數
 
 *uIcon*<br/>
-請參閱 *圖示* 中[TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle) Windows SDK 中。
+請參閱 *圖示* 中[TTM_SETTITLE](/windows/win32/Controls/ttm-settitle) Windows SDK 中。
 
 *lpstrTitle*<br/>
 標題字串的指標。
@@ -832,7 +832,7 @@ BOOL SetTitle(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 Win32 message [TTM_SETTITLE](/windows/desktop/Controls/ttm-settitle)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 message [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="settoolinfo"></a>CToolTipCtrl:: SetToolInfo
 
@@ -845,7 +845,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 ### <a name="parameters"></a>參數
 
 *lpToolInfo*<br/>
-[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的指標, 指定要設定的資訊。
+[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的指標, 指定要設定的資訊。
 
 ##  <a name="settoolrect"></a>CToolTipCtrl:: SetToolRect
 
@@ -888,7 +888,7 @@ Unicode 字串的指標, 其中包含要設定的視覺化樣式。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[TTM_SETWINDOWTHEME](/windows/desktop/Controls/ttm-setwindowtheme)訊息的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme)訊息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="update"></a>CToolTipCtrl:: Update
 

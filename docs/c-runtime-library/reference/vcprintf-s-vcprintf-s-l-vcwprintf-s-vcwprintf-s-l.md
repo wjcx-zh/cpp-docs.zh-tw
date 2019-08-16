@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: e27018d02c8fb77b0e2a1c02164d3b6d112448ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365341"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499319"
 ---
-# <a name="vcprintfs-vcprintfsl-vcwprintfs-vcwprintfsl"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
+# <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
 使用引數清單的指標，將格式化輸出寫入主控台。 這些版本的 [_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l](vcprintf-vcprintf-l-vcwprintf-vcwprintf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -97,16 +97,16 @@ int _vcwprintf_s_l(
 
 寫入的字元數，或是當發生輸出錯誤時為負值。
 
-與這些函式中，較不安全的版本，如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 此外，與不同的是較不安全的版本，這些函式，如果*格式*未指定有效的格式，會產生無效參數例外狀況。 如果允許繼續執行，這些函式會傳回錯誤程式碼和設定執行**errno**該錯誤的程式碼。 預設的錯誤程式碼**EINVAL**如果更精確的值不會套用。
+如同這些函式的較不安全版本, 如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外, 與這些函式的不安全版本不同, 如果*格式*未指定有效的格式, 則會產生不正確參數例外狀況。 如果允許繼續執行, 這些函式會傳回錯誤碼, 並將**errno**設定為該錯誤碼。 如果較特定的值不適用, 則會**EINVAL**預設錯誤碼。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是寬字元版本 **_vcprintf_s**。 它接受寬字元字串作為引數。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是 **_vcprintf_s**的寬字元版本。 它接受寬字元字串作為引數。
 
-有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的地區設定。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -119,8 +119,8 @@ int _vcwprintf_s_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_vcprintf_s**， **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf_s**， **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf_s**、 **_vcprintf_s_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf_s**、 **_vcwprintf_s_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

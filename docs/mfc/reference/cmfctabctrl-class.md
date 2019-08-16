@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: db2dcf7c60d164f9d04eb98f8eaac79ae14e3e73
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821261"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504878"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -132,7 +132,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|顯示目前索引標籤控制項的指定索引標籤, 並將焦點設定在該索引標籤上。|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -177,7 +177,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragEnter](#ondragenter)|第一次將游標拖曳至 [索引標籤] 控制項視窗時, 由架構呼叫。|
 |[CMFCTabCtrl::OnDragOver](#ondragover)|當滑鼠移到放置目標視窗上時, 由架構在拖曳作業期間呼叫。 (覆寫[CMFCBaseTabCtrl:: system.windows.uielement.ondragover](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover)。)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|顯示索引標籤式視窗的快顯功能表, 等待使用者選取索引標籤, 並使選取的索引標籤變成使用中的索引標籤。|
-|`CMFCTabCtrl::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 (覆寫[CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|
+|`CMFCTabCtrl::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 (覆寫[CMFCBaseTabCtrl::P retranslatemessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage)。)|
 |`CMFCTabCtrl::RecalcLayout`|重新計算索引標籤控制項的內部版面配置。 (覆寫[CMFCBaseTabCtrl:: RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout)。)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|將索引標籤控制項的 [目前] 索引標籤設定為多重文件介面索引標籤群組中的使用中索引標籤。|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|啟動索引標籤。(覆寫[CMFCBaseTabCtrl:: SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab)。)|
@@ -336,7 +336,7 @@ BOOL Create(
 
 下表描述您可以為*樣式*參數指定的值。
 
-|樣式|說明|
+|樣式|描述|
 |-----------|-----------------|
 |STYLE_3D|建立具有三維外觀的索引標籤控制項。|
 |STYLE_FLAT|建立具有平面索引標籤的索引標籤控制項。|
@@ -874,7 +874,7 @@ virtual DROPEFFECT OnDragEnter(
 在指向資料物件, 其中包含使用者拖曳的資料。
 
 *dwKeyState*<br/>
-在包含輔助按鍵的狀態。 這個參數是下列值的位元組合 (或):MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)的**訊息參數**一節。
+在包含輔助按鍵的狀態。 這個參數是下列值的位元組合 (或):MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)的**訊息參數**一節。
 
 *point*<br/>
 在包含目前在用戶端座標中的游標位置。
@@ -906,7 +906,7 @@ virtual DROPEFFECT OnDragOver(
 在要拖曳到放置目標上之[COleDataObject](../../mfc/reference/coledataobject-class.md)物件的指標。
 
 *dwKeyState*<br/>
-在輔助按鍵的狀態, 也就是 MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON 的位合 (OR)。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)中的「訊息參數」。
+在輔助按鍵的狀態, 也就是 MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON 的位合 (OR)。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)中的「訊息參數」。
 
 *point*<br/>
 在目前的滑鼠位置。

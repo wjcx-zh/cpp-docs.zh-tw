@@ -1587,7 +1587,7 @@
     - name: 逐步解說：建立 Windows 桌面應用程式
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows 桌面精靈
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Active Template Library (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1607,10 +1607,6 @@
               items:
                 - name: 日期和時間概觀
                   href: atl-mfc-shared/date-and-time.md
-                - name: 日期和時間：自動化支援
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 日期和時間：資料庫支援
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: DATE 類型
                   href: atl-mfc-shared/date-type.md
             - name: 字串 (ATL-MFC)
@@ -2766,10 +2762,10 @@
           items:
             - name: 同步處理 (lock 類別)
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: 鎖定
               expanded: false
               items:
-                - name: lock
+                - name: 鎖定
                   href: dotnet/lock.md
                 - name: lock 類別
                   href: dotnet/lock-class.md
@@ -2888,6 +2884,8 @@
 - name: 參考資料
   expanded: false
   items:
+    - name: C/C++ 語言和標準程式庫
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: 語言參考
       expanded: false
       items:
@@ -4503,7 +4501,7 @@
                       href: cpp/selectany.md
                     - name: spectre
                       href: cpp/spectre.md
-                    - name: thread
+                    - name: 執行緒
                       href: cpp/thread.md
                     - name: uuid
                       href: cpp/uuid-cpp.md
@@ -5990,7 +5988,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: enum 類別
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: Event - 事件
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: 例外狀況處理
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6179,7 +6177,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: default
+                - name: 預設
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6271,7 +6269,7 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: object
+                - name: 物件 (object)
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md
@@ -6347,7 +6345,7 @@
                   href: windows/attributes/v1-enum.md
                 - name: vararg
                   href: windows/attributes/vararg.md
-                - name: 版本
+                - name: version
                   href: windows/attributes/version-cpp.md
                 - name: vi_progid
                   href: windows/attributes/vi-progid.md

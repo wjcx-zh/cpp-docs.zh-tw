@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - uidefault attribute
 ms.assetid: 200de0e0-2e34-40a2-bae4-8d485a62264d
-ms.openlocfilehash: a5bb8d3ad869d9ee60b2ab04743f5a926a10dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4090011aade4ebab2f5c07a8e56e91253cc7c49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407090"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513906"
 ---
 # <a name="uidefault"></a>uidefault
 
-表示型別資訊成員是在使用者介面中顯示的預設成員。
+表示類型資訊成員是要在使用者介面中顯示的預設成員。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407090"
 
 ## <a name="remarks"></a>備註
 
-**Uidefault** C++屬性具有相同的功能[uidefault](/windows/desktop/Midl/uidefault) MIDL 屬性。
+**Uidefault** C++屬性具有與[uidefault](/windows/win32/Midl/uidefault) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示的範例**uidefault**:
+下列程式碼顯示**uidefault**的範例:
 
 ```cpp
 // cpp_attr_ref_uidefault.cpp
@@ -56,8 +56,8 @@ __interface ICustom{
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

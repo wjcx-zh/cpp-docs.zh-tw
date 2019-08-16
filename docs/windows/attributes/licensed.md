@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 90fba74fb97ce49088145888c3b1925b4ee0829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409326"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514461"
 ---
 # <a name="licensed"></a>licensed
 
-表示已取得授權，它所套用的 COM 物件，而且必須具現化使用`IClassFactory2`。
+表示它所套用的 COM 物件已獲得授權, 而且必須使用`IClassFactory2`來具現化。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409326"
 
 ## <a name="remarks"></a>備註
 
-**授權**C++屬性具有相同的功能[授權](/windows/desktop/Midl/licensed)MIDL 屬性。
+**授權** C++屬性的功能與已[授權](/windows/win32/Midl/licensed)的 MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -54,7 +54,7 @@ public:
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|`coclass`|
 |**無效屬性**|None|

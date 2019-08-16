@@ -58,19 +58,19 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 477d80ec170463a2315e2e891998ed32d84c75dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209850"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499443"
 ---
-# <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
+# <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
 附加字串字元。 這些函式已有更安全的版本可供使用，請參閱 [strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsncat**並 **_mbsncat_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat**和 **_mbsncat_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -131,7 +131,7 @@ unsigned char *_mbsncat_l(
 *strSource*<br/>
 以 Null 結束的來源字串。
 
-*count*<br/>
+*計數*<br/>
 要附加的字元數。
 
 *locale*<br/>
@@ -143,12 +143,12 @@ unsigned char *_mbsncat_l(
 
 ## <a name="remarks"></a>備註
 
-**Strncat**函式附加最多會第一個*計數*字元*strSource*至*strDest*。 起始字元*strSource*會結束的 null 字元的覆寫*strDest*。 如果 null 字元會出現在*strSource*之前*計數*字元會附加， **strncat**附加所有字元從*strSource*，直到 null 字元。 如果*計數*大於的長度*strSource*，長度*strSource*用來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Strncat**函數最多可將*strSource*的第一個*計數*字元附加至*strDest*。 *StrSource*的初始字元會覆寫*strDest*的終止 null 字元。 如果在附加*計數*字元之前, *strSource*中出現 null 字元, **strncat**會將所有字元從*strSource*附加到 null 字元。 如果*count*大於*strSource*的長度, 則會使用*strSource*的長度來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> **strncat**不會檢查在有足夠的空間*strDest*; 因此，它是緩衝區滿溢的潛在原因。 請記住*計數*限制數目的字元附加，而非大小的限制*strDest*。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> **strncat**不會檢查*strDest*中是否有足夠的空間;因此可能造成緩衝區溢位。 請記住, *count*會限制附加的字元數;這不是*strDest*大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**wcsncat**並 **_mbsncat**是寬字元和多位元組字元版本的**strncat**。 字串引數和傳回值**wcsncat**是寬字元字串; **_mbsncat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat**和 **_mbsncat**是**strncat**的寬字元和多位元組字元版本。 **Wcsncat**的字串引數和傳回值是寬字元字串; **_mbsncat**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -162,7 +162,7 @@ unsigned char *_mbsncat_l(
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**並 **_wcsncat_l**沒有任何地區設定相依性，不是直接呼叫。 它們專供內部使用 **_tcsncat_l**。
+> **_strncat_l**和 **_wcsncat_l**沒有地區設定相依性, 因此不應該直接呼叫。 其提供供 **_tcsncat_l**內部使用。
 
 ## <a name="requirements"></a>需求
 
@@ -222,7 +222,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-請注意， **BadAppend**造成緩衝區溢位。
+請注意, **BadAppend**造成緩衝區溢位。
 
 ## <a name="see-also"></a>另請參閱
 

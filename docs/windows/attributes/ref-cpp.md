@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: f051fe577087d81515ddf0b44dfb15ad0fb2c616
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514122"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407415"
 
 ## <a name="remarks"></a>備註
 
-**Ref** C++屬性具有相同的功能[ref](/windows/desktop/Midl/ref) MIDL 屬性。
+**Ref** C++屬性的功能與[ref](/windows/win32/Midl/ref) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**ref**屬性：
+下列程式碼顯示如何使用**ref**屬性:
 
 ```cpp
 // cpp_attr_ref_ref.cpp
@@ -49,10 +49,10 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**適用於**|**typedef**，參數的介面，介面方法|
+|**適用於**|**typedef**, 介面參數, 介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

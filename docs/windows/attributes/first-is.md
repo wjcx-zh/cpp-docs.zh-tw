@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409599"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501563"
 ---
-# <a name="firstis"></a>first_is
+# <a name="first_is"></a>first_is
 
-指定要傳送的第一個陣列元素的索引。
+指定要傳送之第一個陣列元素的索引。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409599"
 ### <a name="parameters"></a>參數
 
 *expression*<br/>
-一或多個 C 語言的運算式。 允許空白的引數位置。
+一或多個 C 語言運算式。 允許空的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**First_is** C++屬性具有相同的功能[first_is](/windows/desktop/Midl/first-is) MIDL 屬性。
+**First_is** C++屬性具有與[first_is](/windows/win32/Midl/first-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範各種方法來指定陣列中的區段：
+下列程式碼顯示在陣列中指定區段的各種方式:
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -62,10 +62,10 @@ requestedit] HRESULT get_I([out, retval]long *i);
 
 |||
 |-|-|
-|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|
+|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

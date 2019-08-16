@@ -25,14 +25,14 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e82686c4b33dc11f02f387a97966d3ff5a47085
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332113"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499920"
 ---
-# <a name="getheaphandle"></a>_get_heap_handle
+# <a name="_get_heap_handle"></a>_get_heap_handle
 
 傳回 C 執行階段系統所使用之堆積的控制代碼。
 
@@ -48,7 +48,7 @@ intptr_t _get_heap_handle( void );
 
 ## <a name="remarks"></a>備註
 
-如果您想要呼叫 [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) 並在 CRT 堆積上啟用低分散堆積，請使用這個函式。
+如果您想要呼叫 [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) 並在 CRT 堆積上啟用低分散堆積，請使用這個函式。
 
 ## <a name="requirements"></a>需求
 

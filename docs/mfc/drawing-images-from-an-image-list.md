@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: e4e60f0e6e4ee22712e4bbce344fd6437cf3db7e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: fb307d5557c0e136c1c44c29f08af6062bb1c19d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508606"
 ---
 # <a name="drawing-images-from-an-image-list"></a>從影像清單描繪影像
 
@@ -28,7 +28,7 @@ ms.locfileid: "68916415"
 
 Nonmasked 影像會使用`SRCCOPY` 「點陣」作業複製到目的地裝置內容。 不論裝置內容的背景色彩為何，影像色彩都與之相同。 中`Draw`指定的繪圖樣式也不會影響 nonmasked 影像的外觀。
 
-除了 Draw 成員函式之外, 另一個函式[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)會擴充呈現影像的能力。 `DrawIndirect`以參數的形式接受[IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)結構。 這個結構可以用來自訂目前影像的呈現，包括使用點陣化操作 (ROP) 程式碼。 如需 ROP 碼的詳細資訊, 請參閱點陣作業程式[代碼](/windows/desktop/gdi/raster-operation-codes)和點陣圖作為 Windows SDK 中的[筆刷](/windows/desktop/gdi/bitmaps-as-brushes)。
+除了 Draw 成員函式之外, 另一個函式[DrawIndirect](../mfc/reference/cimagelist-class.md#drawindirect)會擴充呈現影像的能力。 `DrawIndirect`以參數的形式接受[IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)結構。 這個結構可以用來自訂目前影像的呈現，包括使用點陣化操作 (ROP) 程式碼。 如需 ROP 碼的詳細資訊, 請參閱點陣作業程式[代碼](/windows/win32/gdi/raster-operation-codes)和點陣圖作為 Windows SDK 中的[筆刷](/windows/win32/gdi/bitmaps-as-brushes)。
 
 ## <a name="see-also"></a>另請參閱
 

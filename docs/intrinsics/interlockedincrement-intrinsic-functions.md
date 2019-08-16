@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58c71c577e3d87ca72836134a4f895f32170fe7f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350084"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509352"
 ---
-# <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
+# <a name="_interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement 內建函式
 
 **Microsoft 專屬**
 
-提供 Win32 Windows SDK 的編譯器內建支援[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)函式。
+提供 Win32 Windows SDK [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement)函數的編譯器內建支援。
 
 ## <a name="syntax"></a>語法
 
@@ -101,7 +101,7 @@ __int64 _InterlockedIncrement64_nf(
 #### <a name="parameters"></a>參數
 
 *lpAddend*<br/>
-[in、 out]要遞增之變數的指標。
+[in、out]要遞增之變數的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -111,8 +111,8 @@ __int64 _InterlockedIncrement64_nf(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`、`_InterlockedIncrement16`、`_InterlockedIncrement64`|x86、 x64、 ARM|\<intrin.h>|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
+|`_InterlockedIncrement`、`_InterlockedIncrement16`、`_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
+|+`_InterlockedIncrement_acq`、`_InterlockedIncrement_rel`、`_InterlockedIncrement_nf`、`_InterlockedIncrement16_acq`、`_InterlockedIncrement16_rel`、`_InterlockedIncrement16_nf`、`_InterlockedIncrement64_acq`、`_InterlockedIncrement64_rel`、`_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -122,7 +122,7 @@ __int64 _InterlockedIncrement64_nf(
 
 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` (「沒有圍牆」) 後置字元的內建函式不做為記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
+`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊, 請參閱[align](../cpp/align-cpp.md)。
 
 Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 
@@ -130,7 +130,7 @@ Win32 函式在 `Wdm.h` 或 `Ntddk.h` 中宣告。
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例`_InterlockedIncrement`，請參閱 < [_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
+如需如何使用`_InterlockedIncrement`的範例, 請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
 **結束 Microsoft 專屬**
 

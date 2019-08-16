@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CConstantTransition [MFC], Create
 - CConstantTransition [MFC], m_duration
 ms.assetid: f6fa4780-a71b-4cd6-80aa-d4792ace36c2
-ms.openlocfilehash: 9641af2f184d2edaa82922363dff75783e79f87e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccf08b309e64cd82215acb6032bc2a777f4c809a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182180"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507159"
 ---
 # <a name="cconstanttransition-class"></a>CConstantTransition 類別
 
@@ -35,23 +35,23 @@ class CConstantTransition : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CConstantTransition::CConstantTransition](#cconstanttransition)|建構轉換物件並初始化其持續時間。|
+|[CConstantTransition::CConstantTransition](#cconstanttransition)|會建立轉換物件, 並初始化其持續時間。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CConstantTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CConstantTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CConstantTransition::m_duration](#m_duration)|轉換的持續時間。|
 
 ## <a name="remarks"></a>備註
 
-常數的轉換，在動畫變數的值會保持在初始的值轉換的持續期間內。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+在常數轉換期間, 動畫變數的值會保留在轉換期間的初始值。 由於所有轉換都會自動清除, 因此建議您使用 operator new 加以配置。 封裝的 IUIAnimationTransition COM 物件是由 CAnimationController:: AnimateGroup 所建立, 直到它是 Null 為止。 在建立此 COM 物件之後變更成員變數不會有任何作用。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -65,9 +65,9 @@ class CConstantTransition : public CBaseTransition;
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="cconstanttransition"></a>  CConstantTransition::CConstantTransition
+##  <a name="cconstanttransition"></a>CConstantTransition:: CConstantTransition
 
-建構轉換物件並初始化其持續時間。
+會建立轉換物件, 並初始化其持續時間。
 
 ```
 CConstantTransition (UI_ANIMATION_SECONDS duration);
@@ -78,7 +78,7 @@ CConstantTransition (UI_ANIMATION_SECONDS duration);
 *duration*<br/>
 轉換的持續時間。
 
-##  <a name="create"></a>  CConstantTransition::Create
+##  <a name="create"></a>CConstantTransition:: Create
 
 呼叫轉換程式庫來建立封裝的轉換 COM 物件。
 
@@ -91,13 +91,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *pLibrary*<br/>
-指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。
+[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+如果成功建立轉換, 則為 TRUE;否則為 FALSE。
 
-##  <a name="m_duration"></a>  CConstantTransition::m_duration
+##  <a name="m_duration"></a>CConstantTransition:: m_duration
 
 轉換的持續時間。
 

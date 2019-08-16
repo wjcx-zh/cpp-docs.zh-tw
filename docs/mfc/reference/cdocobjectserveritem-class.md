@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d44791415626f1a94500b9c3885581d67e8fe42
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391136"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506825"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem 類別
 
@@ -37,7 +37,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CDocObjectServerItem::CDocObjectServerItem](#cdocobjectserveritem)|建構 `CDocObjectServerItem` 物件。|
 
@@ -45,23 +45,23 @@ class CDocObjectServerItem : public COleServerItem
 
 |名稱|描述|
 |----------|-----------------|
-|[CDocObjectServerItem::GetDocument](#getdocument)|擷取包含項目的文件的指標。|
+|[CDocObjectServerItem::GetDocument](#getdocument)|抓取包含專案之檔的指標。|
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|呼叫以執行動詞命令。|
-|[CDocObjectServerItem::OnHide](#onhide)|如果架構嘗試隱藏 DocObject 項目，則會擲回例外狀況。|
-|[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫以讓 DocObject 項目就地使用中。 如果項目不是 DocObject，呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|呼叫以執行動詞。|
+|[CDocObjectServerItem::OnHide](#onhide)|如果架構嘗試隱藏 DocObject 專案, 則會擲回例外狀況。|
+|[CDocObjectServerItem::OnShow](#onshow)|由架構呼叫, 讓 DocObject 專案就地啟用。 如果專案不是 DocObject, 則會呼叫[COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onshow)。|
 
 ## <a name="remarks"></a>備註
 
-`CDocObjectServerItem` 定義可覆寫成員函式：[OnHide](#onhide)， [OnDoVerb](#ondoverb)，以及[OnShow](#onshow)。
+`CDocObjectServerItem`定義可覆寫的成員函式:[OnHide](#onhide)、 [OnDoVerb](#ondoverb)和[OnShow](#onshow)。
 
-若要使用`CDocObjectServerItem`，確保[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)覆寫中您`COleServerDoc`-衍生的類別會傳回新`CDocObjectServerItem`物件。 如果您需要變更您的項目中的任何功能，您可以建立您自己的新執行個體`CDocObjectServerItem`-衍生的類別。
+若要`CDocObjectServerItem`使用, 請確保衍生類別中`COleServerDoc`的[OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)覆寫會傳回新`CDocObjectServerItem`的物件。 如果您需要變更專案中的任何功能, 您可以為自己`CDocObjectServerItem`的衍生類別建立新的實例。
 
-如需 DocObjects 的詳細資訊，請參閱[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)並[COleCmdUI](../../mfc/reference/colecmdui-class.md)中*MFC 參考 》*。
+如需 DocObjects 的詳細資訊, 請參閱*MFC 參考*中的[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)和[COleCmdUI](../../mfc/reference/colecmdui-class.md) 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -77,9 +77,9 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdocob.h
+**標頭:** afxdocob。h
 
-##  <a name="cdocobjectserveritem"></a>  CDocObjectServerItem::CDocObjectServerItem
+##  <a name="cdocobjectserveritem"></a>CDocObjectServerItem:: CDocObjectServerItem
 
 建構 `CDocObjectServerItem` 物件。
 
@@ -90,14 +90,14 @@ CDocObjectServerItem(COleServerDoc* pServerDoc, BOOL bAutoDelete);
 ### <a name="parameters"></a>參數
 
 *pServerDoc*<br/>
-文件會包含新的 DocObject 項目的指標。
+將包含新 DocObject 專案之檔的指標。
 
 *bAutoDelete*<br/>
-指出發行它的連結時，是否可以刪除物件。 設定引數為 false`CDocObjectServerItem`物件是您的文件資料中不可或缺的一部分。 請將它設定為 TRUE，如果物件是用來識別架構來刪除您的文件資料中某個範圍的第二個結構。
+指出當物件的連結已釋放時, 是否可以刪除它。 如果`CDocObjectServerItem`物件是檔資料不可或缺的一部分, 請將引數設定為 FALSE。 如果物件是用來識別檔資料中可由架構刪除之範圍的次要結構, 請將它設定為 TRUE。
 
-##  <a name="getdocument"></a>  CDocObjectServerItem::GetDocument
+##  <a name="getdocument"></a>CDocObjectServerItem:: GetDocument
 
-擷取包含項目的文件的指標。
+抓取包含專案之檔的指標。
 
 ```
 COleServerDoc* GetDocument() const;
@@ -105,15 +105,15 @@ COleServerDoc* GetDocument() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含項目; 的文件指標如果項目不是文件的一部分，則為 NULL。
+包含專案之檔的指標;如果專案不是檔的一部分, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-這可讓您傳遞的引數為伺服器文件存取權[CDocObjectServerItem](#cdocobjectserveritem)建構函式。
+這可讓您存取當做引數傳遞至[CDocObjectServerItem](#cdocobjectserveritem)函數的伺服器檔。
 
 ##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
 
-由架構呼叫以執行指定的動詞命令。
+由架構呼叫以執行指定的動詞。
 
 ```
 virtual void OnDoVerb(LONG iVerb);
@@ -122,15 +122,15 @@ virtual void OnDoVerb(LONG iVerb);
 ### <a name="parameters"></a>參數
 
 *iVerb*<br/>
-指定要執行的動詞命令。 如需可能的值，請參閱[IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK 中。
+指定要執行的指令動詞。 如需可能的值, 請參閱 Windows SDK 中的[IOleObject::D overb](/windows/win32/api/oleidl/nf-oleidl-ioleobject-doverb) 。
 
 ### <a name="remarks"></a>備註
 
-預設實作會呼叫[OnShow](#onshow)如果項目是 DocObject 而且 OLEIVERB_INPLACEACTIVATE 或 OLEIVERB_SHOW 指定的成員函式。 如果項目不 DocObject 或指定不同的動詞的預設實作會呼叫[COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
+如果專案是 DocObject, 而且已指定 OLEIVERB_INPLACEACTI加值稅E 或 OLEIVERB_SHOW, 則預設的執行會呼叫[OnShow](#onshow)成員函式。 如果專案不是 DocObject, 或指定了不同的動詞, 則預設的執行會呼叫[COleServerItem:: OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)。
 
-##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
+##  <a name="onhide"></a>CDocObjectServerItem:: OnHide
 
-由架構呼叫以隱藏項目。
+由架構呼叫以隱藏專案。
 
 ```
 virtual void OnHide();
@@ -138,11 +138,11 @@ virtual void OnHide();
 
 ### <a name="remarks"></a>備註
 
-如果項目 DocObject，則預設實作會擲回例外狀況。 您無法隱藏現用的 DocObject 項目，因為這會整個檢視。 您必須停用 DocObject 項目，以使其消失。 如果項目不是 DocObject 的預設實作會呼叫[COleServerItem::OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。
+如果專案是 DocObject, 則預設的執行會擲回例外狀況。 您無法隱藏作用中的 DocObject 專案, 因為它會取得整個視圖。 您必須停用 DocObject 專案, 使其消失。 如果專案不是 DocObject, 則預設的執行會呼叫[COleServerItem:: OnHide](../../mfc/reference/coleserveritem-class.md#onhide)。
 
-##  <a name="onshow"></a>  CDocObjectServerItem::OnShow
+##  <a name="onshow"></a>CDocObjectServerItem:: OnShow
 
-由架構呼叫以指示伺服器應用程式做出 DocObject 項目就地使用中。
+由架構呼叫以指示伺服器應用程式將 DocObject 專案設為現用。
 
 ```
 virtual void OnShow();
@@ -150,7 +150,7 @@ virtual void OnShow();
 
 ### <a name="remarks"></a>備註
 
-如果項目不是 DocObject 的預設實作會呼叫[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果您想要執行的特殊處理開啟 DocObject 項目時，請覆寫這個函式。
+如果專案不是 DocObject, 則預設的執行會呼叫[COleServerItem:: OnShow](../../mfc/reference/coleserveritem-class.md#onopen)。 如果您想要在開啟 DocObject 專案時執行特殊處理, 請覆寫此函數。
 
 ## <a name="see-also"></a>另請參閱
 

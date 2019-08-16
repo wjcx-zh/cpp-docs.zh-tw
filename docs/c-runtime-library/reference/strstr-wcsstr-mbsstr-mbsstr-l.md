@@ -44,14 +44,14 @@ helpviewer_keywords:
 - _mbsstr_l function
 - strstr function
 ms.assetid: 03d70c3f-2473-45cb-a5f8-b35beeb2748a
-ms.openlocfilehash: 42e02473e062c3af9524ed432aa163b7574342de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 003e5fd88bdfaafff539c5c993a99cd9ecca0b82
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223075"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500812"
 ---
-# <a name="strstr-wcsstr-mbsstr-mbsstrl"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
+# <a name="strstr-wcsstr-_mbsstr-_mbsstr_l"></a>strstr、wcsstr、_mbsstr、_mbsstr_l
 
 傳回字串中第一次出現的搜尋字串指標。
 
@@ -127,18 +127,18 @@ const unsigned char *_mbsstr_l(
 
 ## <a name="return-value"></a>傳回值
 
-讓指標回到第一個出現*strSearch*中*str*，則為 NULL 如果*strSearch*不會顯示在*str*。 如果*strSearch*指向長度為零的字串函式會傳回*str*。
+傳回*str*中第一次出現*strSearch*的指標, 如果*strSearch*未出現在*str*中, 則傳回 Null。 如果*strSearch*指向長度為零的字串, 則函數會傳回*str*。
 
 ## <a name="remarks"></a>備註
 
-`strstr`函式會將讓指標回到第一個出現*strSearch*中*str*。 搜尋不包含終止的 Null 字元。 `wcsstr` 為 `strstr` 的寬字元版本，而 `_mbsstr` 則為多位元組字元版本。 `wcsstr` 的引數和傳回值是寬字元字串；`_mbsstr` 的引數則是多位元組字元字串。 `_mbsstr` 會驗證其參數。 如果*str*或是*strSearch*是 NULL 時，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續，請執行`_mbsstr`設定`errno`EINVAL，然後傳回 0。 `strstr` 和 `wcsstr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
+函數會傳回*str*中第一次出現 strSearch 的指標。 `strstr` 搜尋不包含終止的 Null 字元。 `wcsstr` 為 `strstr` 的寬字元版本，而 `_mbsstr` 則為多位元組字元版本。 `wcsstr` 的引數和傳回值是寬字元字串；`_mbsstr` 的引數則是多位元組字元字串。 `_mbsstr` 會驗證其參數。 如果*str*或*strSearch*為 Null, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, `_mbsstr`會將設定`errno`為 EINVAL, 並傳回0。 `strstr` 和 `wcsstr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 > [!IMPORTANT]
-> 這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 這些函式可能帶來因緩衝區滿溢問題引發的威脅。 緩衝區滿溢問題可用來攻擊系統，因為它們允許執行任意程式碼，這會造成非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 採用指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**傳回的指標，非**const**。 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩者的行為C++多載，定義符號 _CONST_RETURN。
+在 C 中, 這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 接受**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些函式的**CONST**和非**const**版本都可以使用, 則會定義宏 _CRT_CONST_CORRECT_OVERLOADS。 如果您需要這兩個 C++多載的非 const 行為, 請定義符號 _CONST_RETURN。
 
-輸出值會受到 LC_CTYPE; 的地區設定分類設定如需詳細資訊，請參閱 < [setlocale、 _wsetlocale](setlocale-wsetlocale.md)。 不需要這些函式的版本 **_l**後置字元在針對此與地區設定相關行為使用目前的地區設定; 具有 **_l**尾碼都相同，只不過它們改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到 LC_CTYPE 的地區設定類別設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本, 會針對此與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同, 不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

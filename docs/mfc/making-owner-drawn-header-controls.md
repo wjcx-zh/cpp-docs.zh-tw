@@ -8,16 +8,16 @@ helpviewer_keywords:
 - controls [MFC], header
 - owner-drawn header controls [MFC]
 ms.assetid: 455c113b-e8d0-400c-8690-dbb92cba0d05
-ms.openlocfilehash: 145134a4c3a0518d5248d72c098927ed4ee5042a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9147708f672a5aec26f58a3c81ed7a5dfcf8cad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310841"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508314"
 ---
 # <a name="making-owner-drawn-header-controls"></a>建立主控描繪標題控制項
 
-您可以定義標題控制項的個別項目 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 為主控描繪項目。 如需詳細資訊，請參閱 <<c0> [ 主控描繪標題控制項](/windows/desktop/Controls/header-controls)Windows SDK 中。
+您可以將標題控制項 ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) 的個別專案定義為主控描繪專案。 如需詳細資訊, 請參閱 Windows SDK 中的主控描繪[標題控制項](/windows/win32/Controls/header-controls)。
 
 ## <a name="see-also"></a>另請參閱
 

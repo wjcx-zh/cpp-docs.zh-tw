@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LCID attribute
 ms.assetid: 7f248c69-ee1c-42c3-9411-39cf27c9f43d
-ms.openlocfilehash: d97ad86e143102c96e87ae0a32245b0c01042501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c737661bb8429e416b515e4e7fcaf54956385d0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409261"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514547"
 ---
 # <a name="lcid"></a>lcid
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409261"
 
 ## <a name="remarks"></a>備註
 
-**Lcid** C++屬性會實作的功能[lcid](/windows/desktop/Midl/lcid) MIDL 屬性。 如果您想要實作的程式庫區塊的地區設定，使用**lcid =** `lcid`參數來[模組](module-cpp.md)屬性。
+**Lcid** C++屬性會執行[lcid](/windows/win32/Midl/lcid) MIDL 屬性的功能。 如果您想要執行程式庫區塊的地區設定, 請使用 [[模組](module-cpp.md)] 屬性的**lcid =** `lcid`參數。
 
 ## <a name="example"></a>範例
 
@@ -50,8 +50,8 @@ __interface IStatic {
 |-|-|
 |**適用於**|介面參數|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

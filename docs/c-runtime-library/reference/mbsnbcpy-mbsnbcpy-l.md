@@ -33,16 +33,16 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 1f22e8066b5b32feef642b01ad82955935a450e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9940146e46990c91a49478a0450d5ff489e51bc5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285567"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499838"
 ---
-# <a name="mbsnbcpy-mbsnbcpyl"></a>_mbsnbcpy、_mbsnbcpy_l
+# <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy、_mbsnbcpy_l
 
-複本**n**個位元組的字串到目的地字串。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcpy_s、_mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)。
+將字串的**n**個位元組複製到目的地字串。 這些函式已有更安全的版本可用，請參閱 [_mbsnbcpy_s、_mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)。
 
 > [!IMPORTANT]
 > 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -84,7 +84,7 @@ unsigned char * _mbsnbcpy_l(
 *strSource*<br/>
 要複製的字元字串。
 
-*count*<br/>
+*計數*<br/>
 要複製的位元組數目。
 
 *locale*<br/>
@@ -92,18 +92,18 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsnbcpy**傳回目的字元字串的指標。 未保留表示錯誤的傳回值。
+**_mbsnbcpy**會傳回目的字元字串的指標。 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbcpy**函式複製*計數*位元組*strSource*至*strDest*。 如果*計數*大小超過*strDest*或 來源和目的字串重疊，就會有的行為 **_mbsnbcpy**是未定義。
+**_Mbsnbcpy**函數會將*count*個位元組從*strSource*複製到*strDest*。 如果*count*超過*strDest*的大小, 或來源和目的字串重迭, 則 **_mbsnbcpy**的行為是未定義的。
 
-如果*strSource*或是*strDest*為 null 指標，此函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回**NULL**並設定**errno**來**EINVAL**。
+如果*strSource*或*strDest*是 null 指標, 則此函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回**Null** , 並將**Errno**設為**EINVAL**。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式版本都相同，除了沒有 **_l**後置詞使用目前的地區設定和版本沒有 **_l**後置詞改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的版本則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可以用來執行任意的攻擊者程式碼，這會造成非預期的提高權限，並且危害系統。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可以用來執行任意的攻擊者程式碼，這會造成非預期的提高權限，並且危害系統。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 在 C++ 中，這些函式具有多載樣板，可以叫用這些函式的更新、更安全之對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

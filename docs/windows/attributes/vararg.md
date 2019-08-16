@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: a433522b78424c48c4afe754f7b8337e3952dc8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407207"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514893"
 ---
 # <a name="vararg"></a>vararg
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407207"
 
 ## <a name="remarks"></a>備註
 
-**Vararg** C++屬性具有相同的功能[vararg](/windows/desktop/Midl/vararg) MIDL 屬性。
+**Vararg** C++屬性的功能與[vararg](/windows/win32/Midl/vararg) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例將示範用法**vararg**:
+下列程式碼將示範如何使用**vararg**:
 
 ```cpp
 // cpp_attr_ref_vararg.cpp
@@ -54,7 +54,7 @@ __interface X : public IUnknown
 |**適用於**|介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

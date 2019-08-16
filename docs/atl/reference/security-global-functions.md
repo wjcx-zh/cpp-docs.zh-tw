@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 435ab4756808a530749e110302b73d16a31c38c6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 5f3c0464b239f4500d416b80ae4fdf06c2dc386f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915516"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495179"
 ---
 # <a name="security-global-functions"></a>安全性全域函式
 
@@ -66,7 +66,7 @@ inline bool AtlGetDacl(
 物件的控制碼, 其可取得安全性資訊。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *pDacl*<br/>
 DACL 物件的指標, 其中將包含已抓取的安全性資訊。
@@ -100,7 +100,7 @@ inline bool AtlSetDacl(
 要設定安全性資訊之物件的控制碼。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *rDacl*<br/>
 包含新安全性資訊的 DACL。
@@ -139,7 +139,7 @@ inline bool AtlGetGroupSid(
 物件的控制碼, 用來抓取安全性資訊。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *pSid*<br/>
 `CSid`物件的指標, 其中將包含新的安全性資訊。
@@ -172,7 +172,7 @@ inline bool AtlSetGroupSid(
 要設定安全性資訊之物件的控制碼。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *rSid*<br/>
 包含`CSid`新安全性資訊的物件。
@@ -205,7 +205,7 @@ inline bool AtlGetOwnerSid(
 物件的控制碼, 用來抓取安全性資訊。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *pSid*<br/>
 `CSid`物件的指標, 其中將包含新的安全性資訊。
@@ -238,7 +238,7 @@ inline bool AtlSetOwnerSid(
 要設定安全性資訊之物件的控制碼。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *rSid*<br/>
 包含`CSid`新安全性資訊的物件。
@@ -272,7 +272,7 @@ inline bool AtlGetSacl(
 物件的控制碼, 從中取得安全性資訊。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *pSacl*<br/>
 SACL 物件的指標, 其中將包含已抓取的安全性資訊。
@@ -314,7 +314,7 @@ inline bool AtlSetSacl(
 要設定安全性資訊之物件的控制碼。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*hObject*參數所識別的物件類型。
 
 *rSacl*<br/>
 包含新安全性資訊的 SACL。
@@ -363,13 +363,13 @@ bool bRequestNeededPrivileges = true) throw(...);
 以 null 結束的字串指標, 指定要從中取得安全性資訊的物件名稱。
 
 *ObjectType*<br/>
-指定[SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*pszObjectName*參數所識別的物件類型。
+指定[SE_OBJECT_TYPE](/windows/win32/api/accctrl/ne-accctrl-se_object_type)列舉中的值, 指出*pszObjectName*參數所識別的物件類型。
 
 *pSecurityDescriptor*<br/>
 物件, 它會接收要求的安全描述項。
 
 *requestedInfo*<br/>
-一組[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位旗標, 指出要取得的安全性資訊類型。 這個參數可以是下列值的組合。
+一組[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位旗標, 指出要取得的安全性資訊類型。 這個參數可以是下列值的組合。
 
 *bRequestNeededPrivileges*<br/>
 若為 true, 則函式會嘗試啟用 SE_SECURITY_NAME 許可權, 並在完成時將它還原。

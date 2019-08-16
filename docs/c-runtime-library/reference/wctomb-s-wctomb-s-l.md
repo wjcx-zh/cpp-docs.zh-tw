@@ -29,14 +29,14 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188481"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498920"
 ---
-# <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
+# <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s、_wctomb_s_l
 
 將寬字元轉換為對應的多位元組字元。 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [wctomb、_wctomb_l](wctomb-wctomb-l.md) 版本。
 
@@ -67,7 +67,7 @@ errno_t _wctomb_s_l(
 多位元組字元的位址。
 
 *sizeInBytes*<br/>
-緩衝區的大小*mbchar*。
+緩衝區*mbchar*的大小。
 
 *wchar*<br/>
 寬字元。
@@ -87,15 +87,15 @@ errno_t _wctomb_s_l(
 |any|>**INT_MAX**|**EINVAL**|未修改|
 |any|太小|**EINVAL**|未修改|
 
-如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**wctomb**會傳回**EINVAL**並設定**errno**至**EINVAL**。
+如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **wctomb**會傳回**EINVAL** , 並將**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Wctomb_s**函式會將其*wchar*的對應的多位元組字元的引數，並將儲存在結果*mbchar*。 您可以在任何程式的任何點呼叫函式。
+**Wctomb_s**函數會將其*wchar*引數轉換為對應的多位元組字元, 並將結果儲存在*mbchar*。 您可以在任何程式的任何點呼叫函式。
 
-如果**wctomb_s**寬字元轉換成多位元組字元，它會將位元組數目 (絕不會大於**MB_CUR_MAX**) 中成為整數所指向的寬字元*pRetValue*。 如果*wchar*是寬字元的 null 字元 (L '\0')， **wctomb_s**填滿*pRetValue* 1。 如果目標指標*mbchar*是**NULL**， **wctomb_s**將 0 放入*pRetValue*。 如果目前的地區設定，不可能轉換**wctomb_s** -1 會置於*pRetValue*。
+如果**wctomb_s**將寬字元轉換成多位元組字元, 則會將寬字元中的位元組數目 (絕不大於**MB_CUR_MAX**) 放入*pRetValue*所指向的整數。 如果*wchar*是寬字元的 null 字元 (L ' \ 0 '), **Wctomb_s**會將*pRetValue*填入1。 如果目標指標*mbchar*是**Null**, **wctomb_s**會將0放在*pRetValue*中。 如果在目前的地區設定中無法進行轉換, **wctomb_s**會將-1 放在*pRetValue*中。
 
-**wctomb_s**地區設定相關資訊; 針對使用目前的地區設定 **_wctomb_s_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**wctomb_s**會針對與地區設定相關的資訊, 使用目前的地區設定; **_wctomb_s_l**相同, 不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -108,7 +108,7 @@ errno_t _wctomb_s_l(
 
 ## <a name="example"></a>範例
 
-此程式說明的行為**wctomb**函式。
+此程式說明**wctomb**函數的行為。
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -142,4 +142,4 @@ Convert a wide character:
 [mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[WideCharToMultiByte](/windows/desktop/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>
+[WideCharToMultiByte](/windows/win32/api/stringapiset/nf-stringapiset-widechartomultibyte)<br/>

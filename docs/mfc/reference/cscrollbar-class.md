@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 5bc9c0190ea200b25b8ea3b20311c98c1c131838
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: cd0c1ed85969d50548cf6b2be1d5677ed62110bc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821263"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502563"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar 類別
 
@@ -57,7 +57,7 @@ class CScrollBar : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CScrollBar::Create](#create)|建立 Windows 捲軸, 並將其附加至`CScrollBar`物件。|
 |[CScrollBar::EnableScrollBar](#enablescrollbar)|啟用或停用一個捲軸的一或兩個箭號。|
@@ -203,7 +203,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 ### <a name="parameters"></a>參數
 
 *pScrollInfo*<br/>
-[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)結構的指標。
+[SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -211,7 +211,7 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[SBM_SCROLLBARINFO](/windows/desktop/Controls/sbm-getscrollbarinfo)訊息的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[SBM_SCROLLBARINFO](/windows/win32/Controls/sbm-getscrollbarinfo)訊息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getscrollinfo"></a>CScrollBar::GetScrollInfo
 

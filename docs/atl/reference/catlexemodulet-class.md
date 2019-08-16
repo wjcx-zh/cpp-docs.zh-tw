@@ -1,5 +1,5 @@
 ---
-title: Catldllmodulet 類別
+title: CAtlExeModuleT 類別
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlExeModuleT
@@ -22,14 +22,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247053"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497835"
 ---
-# <a name="catlexemodulet-class"></a>Catldllmodulet 類別
+# <a name="catlexemodulet-class"></a>CAtlExeModuleT 類別
 
 此類別代表應用程式的模組。
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別衍生自`CAtlExeModuleT`。
+衍生自的`CAtlExeModuleT`類別。
 
 ## <a name="members"></a>成員
 
@@ -52,41 +52,41 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 |名稱|描述|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|建構函式。|
-|[CAtlExeModuleT::~CAtlExeModuleT](#dtor)|解構函式。|
+|[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlExeModuleT::InitializeCom](#initializecom)|初始化 com。|
-|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|剖析命令列，並執行必要的註冊。|
-|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|這個方法是只有在訊息迴圈結束之後，立即呼叫。|
-|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|輸入訊息迴圈之前，立即會呼叫這個方法。|
+|[CAtlExeModuleT::InitializeCom](#initializecom)|初始化 COM。|
+|[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|剖析命令列, 並視需要執行註冊。|
+|[CAtlExeModuleT::PostMessageLoop](#postmessageloop)|這個方法會在訊息迴圈結束之後立即呼叫。|
+|[CAtlExeModuleT::PreMessageLoop](#premessageloop)|在輸入訊息迴圈之前, 會立即呼叫此方法。|
 |[CAtlExeModuleT::RegisterClassObjects](#registerclassobjects)|註冊類別物件。|
 |[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)|撤銷類別物件。|
-|[CAtlExeModuleT::Run](#run)|這個方法來初始化、 執行訊息迴圈的 EXE 模組中執行的程式碼，並清除。|
+|[CAtlExeModuleT::Run](#run)|這個方法會執行 EXE 模組中的程式碼, 以初始化、執行訊息迴圈和清除。|
 |[CAtlExeModuleT::RunMessageLoop](#runmessageloop)|這個方法會執行訊息迴圈。|
-|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|取消初始化 com。|
-|[CAtlExeModuleT::Unlock](#unlock)|模組的鎖定計數遞減。|
-|[CAtlExeModuleT::WinMain](#winmain)|這個方法會實作程式碼，以執行 EXE。|
+|[CAtlExeModuleT::UninitializeCom](#uninitializecom)|取消初始化 COM。|
+|[CAtlExeModuleT::Unlock](#unlock)|遞減模組的鎖定計數。|
+|[CAtlExeModuleT::WinMain](#winmain)|這個方法會實行執行 EXE 所需的程式碼。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|旗標，指出應該在關閉此模組的延遲。|
-|[CAtlExeModuleT::m_dwPause](#m_dwpause)|暫停值，用來確保關機前在釋放所有物件。|
-|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|逾時值，用來延遲卸載模組。|
+|[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|旗標, 表示應關閉模組的延遲。|
+|[CAtlExeModuleT::m_dwPause](#m_dwpause)|用來確保在關閉前釋放所有物件的暫停值。|
+|[CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)|用來延遲卸載模組的超時值。|
 
 ## <a name="remarks"></a>備註
 
-`CAtlExeModuleT` 代表應用程式 (EXE) 的模組，並包含支援建立 EXE、 處理命令列、 註冊類別物件、 執行訊息迴圈，以及清除結束的程式碼。
+`CAtlExeModuleT`表示應用程式 (EXE) 的模組, 並包含支援建立 EXE、處理命令列、註冊類別物件、執行訊息迴圈, 以及在結束時清除的程式碼。
 
-此類別被設計來改善效能，當 EXE 伺服器中的 COM 物件持續建立和終結。 所指定的持續時間內的最後一個的 COM 物件發行後，等候 EXE [CAtlExeModuleT::m_dwTimeOut](#m_dwtimeout)資料成員。 如果沒有任何活動，在這段期間 （也就是會建立任何 COM 物件，） 起始關機程序。
+這個類別是設計用來在 EXE 伺服器中的 COM 物件持續建立和終結時改善效能。 在最後一個 COM 物件釋放之後, EXE 會等待[CAtlExeModuleT:: m_dwTimeOut](#m_dwtimeout)資料成員所指定的持續時間。 如果在這段期間沒有活動 (也就是不會建立任何 COM 物件), 就會起始關機程式。
 
-[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)資料成員是用來判斷是否將 EXE 應該使用以上定義的機制的旗標。 如果它設定為 false，則會立即終止該模組。
+[CAtlExeModuleT:: m_bDelayShutdown](#m_bdelayshutdown)資料成員是用來判斷 EXE 是否應使用上述所定義機制的旗標。 如果設定為 false, 則模組會立即終止。
 
-如需有關在 ATL 中的模組的詳細資訊，請參閱[ATL 模組類別](../../atl/atl-module-classes.md)。
+如需 ATL 中模組的詳細資訊, 請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -100,9 +100,9 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭:** atlbase.h。h
 
-##  <a name="catlexemodulet"></a>  CAtlExeModuleT::CAtlExeModuleT
+##  <a name="catlexemodulet"></a>CAtlExeModuleT:: CAtlExeModuleT
 
 建構函式。
 
@@ -112,9 +112,9 @@ CAtlExeModuleT() throw();
 
 ### <a name="remarks"></a>備註
 
-如果 EXE 模組無法初始化，WinMain 會立即傳回而不需要進一步處理。
+如果無法初始化 EXE 模組, WinMain 會立即傳回, 而不會進一步處理。
 
-##  <a name="dtor"></a>  CAtlExeModuleT:: ~ CAtlExeModuleT
+##  <a name="dtor"></a>CAtlExeModuleT:: ~ CAtlExeModuleT
 
 解構函式。
 
@@ -126,9 +126,9 @@ CAtlExeModuleT() throw();
 
 釋放所有配置的資源。
 
-##  <a name="initializecom"></a>  CAtlExeModuleT::InitializeCom
+##  <a name="initializecom"></a>CAtlExeModuleT:: InitializeCom
 
-初始化 com。
+初始化 COM。
 
 ```
 static HRESULT InitializeCom() throw();
@@ -136,17 +136,17 @@ static HRESULT InitializeCom() throw();
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從建構函式呼叫，並可以覆寫預設實作不同的方式初始化 COM。 預設實作是呼叫`CoInitializeEx(NULL, COINIT_MULTITHREADED)`或`CoInitialize(NULL)`視專案設定而定。
+這個方法是從函式呼叫, 而且可以覆寫以與預設實作為不同的方式初始化 COM。 預設的實作為會`CoInitializeEx(NULL, COINIT_MULTITHREADED)`呼叫`CoInitialize(NULL)`或, 視專案設定而定。
 
-覆寫此方法時，通常需要覆寫[CAtlExeModuleT::UninitializeCom](#uninitializecom)。
+覆寫這個方法通常需要覆寫[CAtlExeModuleT:: UninitializeCom](#uninitializecom)。
 
-##  <a name="m_bdelayshutdown"></a>  CAtlExeModuleT::m_bDelayShutdown
+##  <a name="m_bdelayshutdown"></a>CAtlExeModuleT:: m_bDelayShutdown
 
-旗標，指出應該在關閉此模組的延遲。
+旗標, 表示應關閉模組的延遲。
 
 ```
 bool m_bDelayShutdown;
@@ -154,11 +154,11 @@ bool m_bDelayShutdown;
 
 ### <a name="remarks"></a>備註
 
-請參閱[CAtlExeModuleT 概觀](../../atl/reference/catlexemodulet-class.md)如需詳細資訊。
+如需詳細資訊, 請參閱[CAtlExeModuleT 總覽](../../atl/reference/catlexemodulet-class.md)。
 
-##  <a name="m_dwpause"></a>  CAtlExeModuleT::m_dwPause
+##  <a name="m_dwpause"></a>CAtlExeModuleT:: m_dwPause
 
-用來確保所有的物件會進入關機之前暫停值。
+用來確保所有物件在關閉前都已消失的暫停值。
 
 ```
 DWORD m_dwPause;
@@ -166,11 +166,11 @@ DWORD m_dwPause;
 
 ### <a name="remarks"></a>備註
 
-將此值變更之後呼叫[CAtlExeModuleT::InitializeCom](#initializecom)設定做為伺服器正在關閉暫停值的毫秒數。 預設值為 1000年毫秒。
+呼叫[CAtlExeModuleT:: InitializeCom](#initializecom)之後, 請變更此值, 以設定用來關閉伺服器之暫停值的毫秒數。 預設值為1000毫秒。
 
-##  <a name="m_dwtimeout"></a>  CAtlExeModuleT::m_dwTimeOut
+##  <a name="m_dwtimeout"></a>CAtlExeModuleT:: m_dwTimeOut
 
-逾時值，用來延遲卸載模組。
+用來延遲卸載模組的超時值。
 
 ```
 DWORD m_dwTimeOut;
@@ -178,11 +178,11 @@ DWORD m_dwTimeOut;
 
 ### <a name="remarks"></a>備註
 
-將此值變更之後呼叫[CAtlExeModuleT::InitializeCom](#initializecom)來定義的逾時值為用於伺服器正在關閉的毫秒數。 預設值是 5000 毫秒。 請參閱[CAtlExeModuleT 概觀](../../atl/reference/catlexemodulet-class.md)如需詳細資訊。
+呼叫[CAtlExeModuleT:: InitializeCom](#initializecom)之後, 請變更此值, 以定義用來關閉伺服器的超時值所使用的毫秒數。 預設值是 5000 毫秒。 如需詳細資訊, 請參閱[CAtlExeModuleT 總覽](../../atl/reference/catlexemodulet-class.md)。
 
-##  <a name="parsecommandline"></a>  CAtlExeModuleT::ParseCommandLine
+##  <a name="parsecommandline"></a>CAtlExeModuleT::P arseCommandLine
 
-剖析命令列，並執行必要的註冊。
+剖析命令列, 並視需要執行註冊。
 
 ```
 bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
@@ -191,22 +191,22 @@ bool ParseCommandLine(LPCTSTR lpCmdLine, HRESULT* pnRetCode) throw();
 ### <a name="parameters"></a>參數
 
 *lpCmdLine*<br/>
-命令列傳遞至應用程式。
+傳遞給應用程式的命令列。
 
 *pnRetCode*<br/>
-對應至註冊 （如果它發生） 的 HRESULT。
+對應至註冊的 HRESULT (如果已發生)。
 
 ### <a name="return-value"></a>傳回值
 
-如果應用程式應該繼續執行，否則為 false 的傳回 true。
+如果應用程式應該繼續執行, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-這個方法會從呼叫[CAtlExeModuleT::WinMain](#winmain)可覆寫來處理命令列參數。 預設實作會檢查 **/RegServer**並 **/UnRegServer**命令列引數，並執行註冊或取消註冊。
+這個方法是從[CAtlExeModuleT:: WinMain](#winmain)呼叫, 而且可以覆寫以處理命令列參數。 預設的執行會檢查 **/RegServer**和 **/UnRegServer**命令列引數, 並執行登錄或取消註冊。
 
 ##  <a name="postmessageloop"></a>  CAtlExeModuleT::PostMessageLoop
 
-這個方法是只有在訊息迴圈結束之後，立即呼叫。
+這個方法會在訊息迴圈結束之後立即呼叫。
 
 ```
 HRESULT PostMessageLoop() throw();
@@ -214,15 +214,15 @@ HRESULT PostMessageLoop() throw();
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法，以執行自訂的應用程式的清除作業。 預設實作會呼叫[CAtlExeModuleT::RevokeClassObjects](#revokeclassobjects)。
+覆寫此方法以執行自訂應用程式清除。 預設的實值會呼叫[CAtlExeModuleT:: RevokeClassObjects](#revokeclassobjects)。
 
-##  <a name="premessageloop"></a>  CAtlExeModuleT::PreMessageLoop
+##  <a name="premessageloop"></a>CAtlExeModuleT::P reMessageLoop
 
-輸入訊息迴圈之前，立即會呼叫這個方法。
+在輸入訊息迴圈之前, 會立即呼叫此方法。
 
 ```
 HRESULT PreMessageLoop(int nShowCmd) throw();
@@ -231,19 +231,19 @@ HRESULT PreMessageLoop(int nShowCmd) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-做為傳遞的值*nShowCmd* WinMain 中的參數。
+當做 WinMain 中的*nShowCmd*參數傳遞的值。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-覆寫這個方法，以加入應用程式的自訂初始化程式碼。 預設實作會註冊類別物件。
+覆寫這個方法, 以加入應用程式的自訂初始化程式碼。 預設的實作為註冊類別物件。
 
-##  <a name="registerclassobjects"></a>  CAtlExeModuleT::RegisterClassObjects
+##  <a name="registerclassobjects"></a>CAtlExeModuleT:: RegisterClassObjects
 
-讓其他應用程式可以連線到它，則您可以向 OLE 類別物件。
+向 OLE 註冊類別物件, 讓其他應用程式可以與其連接。
 
 ```
 HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
@@ -252,18 +252,18 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>參數
 
 *dwClsContext*<br/>
-指定要執行的類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、 CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
+指定要在其中執行類別物件的內容。 可能的值為 CLSCTX_INPROC_SERVER、CLSCTX_INPROC_HANDLER 或 CLSCTX_LOCAL_SERVER。
 
 *dwFlags*<br/>
-決定類別物件的連接類型。 可能的值為 REGCLS_SINGLEUSE、 REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
+判斷類別物件的連線類型。 可能的值為 REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE 或 REGCLS_MULTI_SEPARATE。
 
 ### <a name="return-value"></a>傳回值
 
-在成功、 S_FALSE，如果沒有任何類別，若要註冊或失敗的錯誤 HRESULT 會傳回 S_OK。
+成功時傳回 S_OK, 如果沒有可註冊的類別, 則傳回 S_FALSE, 否則會在失敗時傳回錯誤 HRESULT。
 
-##  <a name="revokeclassobjects"></a>  CAtlExeModuleT::RevokeClassObjects
+##  <a name="revokeclassobjects"></a>CAtlExeModuleT:: RevokeClassObjects
 
-移除類別的物件。
+移除類別物件。
 
 ```
 HRESULT RevokeClassObjects() throw();
@@ -271,11 +271,11 @@ HRESULT RevokeClassObjects() throw();
 
 ### <a name="return-value"></a>傳回值
 
-在成功、 S_FALSE，如果沒有任何類別，若要註冊或失敗的錯誤 HRESULT 會傳回 S_OK。
+成功時傳回 S_OK, 如果沒有可註冊的類別, 則傳回 S_FALSE, 否則會在失敗時傳回錯誤 HRESULT。
 
-##  <a name="run"></a>  CAtlExeModuleT::Run
+##  <a name="run"></a>CAtlExeModuleT:: Run
 
-這個方法來初始化、 執行訊息迴圈的 EXE 模組中執行的程式碼，並清除。
+這個方法會執行 EXE 模組中的程式碼, 以初始化、執行訊息迴圈和清除。
 
 ```
 HRESULT Run(int nShowCmd = SW_HIDE) throw();
@@ -284,17 +284,17 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節。 預設為 SW_HIDE。
+指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。 預設為 SW_HIDE。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-可以覆寫此方法。 不過，在實務上最好是覆寫[CAtlExeModuleT::PreMessageLoop](#premessageloop)， [CAtlExeModuleT::RunMessageLoop](#runmessageloop)，或[CAtlExeModuleT::PostMessageLoop](#postmessageloop)改為。
+可以覆寫這個方法。 不過, 在實務上, 最好改為覆寫[CAtlExeModuleT::P remessageloop](#premessageloop)、 [CAtlExeModuleT:: RunMessageLoop](#runmessageloop)或[CAtlExeModuleT::P ostmessageloop](#postmessageloop) 。
 
-##  <a name="runmessageloop"></a>  CAtlExeModuleT::RunMessageLoop
+##  <a name="runmessageloop"></a>CAtlExeModuleT:: RunMessageLoop
 
 這個方法會執行訊息迴圈。
 
@@ -304,11 +304,11 @@ void RunMessageLoop() throw();
 
 ### <a name="remarks"></a>備註
 
-若要變更訊息迴圈的行為，可以覆寫此方法。
+可以覆寫這個方法, 以變更訊息迴圈的行為。
 
-##  <a name="uninitializecom"></a>  CAtlExeModuleT::UninitializeCom
+##  <a name="uninitializecom"></a>CAtlExeModuleT:: UninitializeCom
 
-取消初始化 com。
+取消初始化 COM。
 
 ```
 static void UninitializeCom() throw();
@@ -316,11 +316,11 @@ static void UninitializeCom() throw();
 
 ### <a name="remarks"></a>備註
 
-依預設這個方法只會呼叫[CoUninitialize](/windows/desktop/api/combaseapi/nf-combaseapi-couninitialize) ，而從解構函式呼叫。 覆寫這個方法，如果您覆寫[CAtlExeModuleT::InitializeCom](#initializecom)。
+根據預設, 這個方法只會呼叫[CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize) , 並從「析構函式」呼叫。 如果您覆寫[CAtlExeModuleT:: InitializeCom](#initializecom), 請覆寫這個方法。
 
-##  <a name="unlock"></a>  CAtlExeModuleT::Unlock
+##  <a name="unlock"></a>CAtlExeModuleT:: Unlock
 
-模組的鎖定計數遞減。
+遞減模組的鎖定計數。
 
 ```
 LONG Unlock() throw();
@@ -328,11 +328,11 @@ LONG Unlock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回值，這個值可能是適用於診斷或測試。
+傳回可能有助於診斷或測試的值。
 
-##  <a name="winmain"></a>  CAtlExeModuleT::WinMain
+##  <a name="winmain"></a>CAtlExeModuleT:: WinMain
 
-這個方法會實作程式碼，以執行 EXE。
+這個方法會實行執行 EXE 所需的程式碼。
 
 ```
 int WinMain(int nShowCmd) throw();
@@ -341,7 +341,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定要顯示的視窗的方式。 這個參數可以是其中一個值所述[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節。
+指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -349,11 +349,11 @@ int WinMain(int nShowCmd) throw();
 
 ### <a name="remarks"></a>備註
 
-可以覆寫此方法。 如果覆寫[CAtlExeModuleT::PreMessageLoop](#premessageloop)， [CAtlExeModuleT::PostMessageLoop](#postmessageloop)，或[CAtlExeModuleT::RunMessageLoop](#runmessageloop)未提供足夠的彈性可覆寫`WinMain`函式使用此方法。
+可以覆寫這個方法。 如果覆寫[CAtlExeModuleT::P remessageloop](#premessageloop)、 [CAtlExeModuleT::P ostmessageloop](#postmessageloop)或[CAtlExeModuleT:: RunMessageLoop](#runmessageloop)無法提供足夠的彈性, 則可以使用這個來`WinMain`覆寫函數方法.
 
 ## <a name="see-also"></a>另請參閱
 
 [ATLDuck 範例](../../overview/visual-cpp-samples.md)<br/>
 [CAtlModuleT 類別](../../atl/reference/catlmodulet-class.md)<br/>
 [CAtlDllModuleT 類別](../../atl/reference/catldllmodulet-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

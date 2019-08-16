@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 31fadc0a960ddfcf216951e1af481983b122ea0f
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: db99c5e72e84bb359184f4c62594fcddff7d8ff6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821311"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505345"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl 類別
 
@@ -54,7 +54,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|啟用或停用 (隱藏) [流覽] 按鈕。|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|啟用 [流覽] 按鈕, 並將 [編輯流覽] 控制項放在檔案*流覽*模式。|
@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|重新繪製目前的編輯流覽控制項。|
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|由架構呼叫以繪製 [流覽] 按鈕。|
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|當編輯控制項中輸入了不合法的檔案名時, 由架構呼叫。|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊, 請參閱[CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|會先轉譯視窗訊息, 再將它們分派至[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)和[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式。 如需語法和詳細資訊, 請參閱[CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|設定 [流覽] 按鈕的自訂影像。|
 
 ## <a name="remarks"></a>備註

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 889b722c91fd56613c5902eb4ce6439763a49bd9
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606495"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498406"
 ---
 # <a name="comptr-class"></a>ComPtr 類別
 
@@ -84,7 +84,7 @@ friend class ComPtr;
 
 `ComPtr<>`宣告代表基礎介面指標的類型。 使用`ComPtr<>`來宣告變數, 然後使用箭號成員存取運算子 (`->`) 來存取介面成員函式。
 
-如需智慧型指標的詳細資訊, 請參閱 MSDN Library 中[Com 編碼實務](/windows/desktop/LearnWin32/com-coding-practices)主題的「Com 智慧型指標」子節。
+如需智慧型指標的詳細資訊, 請參閱 MSDN Library 中[Com 編碼實務](/windows/win32/LearnWin32/com-coding-practices)主題的「Com 智慧型指標」子節。
 
 ## <a name="members"></a>成員
 
@@ -137,7 +137,7 @@ friend class ComPtr;
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-名稱                 | 描述
+名稱                 | 說明
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr::ptr_](#ptr) | 包含與這個相關聯之介面的指標, 並由這個`ComPtr`所管理。
 
@@ -181,7 +181,7 @@ HRESULT As(
 要由參數*p*表示的介面。
 
 *p*<br/>
-物件, 表示參數 U 所指定的介面。  `ComPtr`參數*p*不能參考目前`ComPtr`的物件。
+物件, 表示參數 U 所指定的介面。 `ComPtr`參數*p*不能參考目前`ComPtr`的物件。
 
 ### <a name="remarks"></a>備註
 

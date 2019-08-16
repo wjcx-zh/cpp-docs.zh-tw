@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 3cd194d0b6303c6d337d7157a521c825f77fc312
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916227"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507446"
 ---
 # <a name="cbitmap-class"></a>CBitmap 類別
 
@@ -55,7 +55,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|建構 `CBitmap` 物件。|
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 當您完成使用 `CBitmap` 函式所建立的 `CreateBitmap` 物件時，請先選取點陣圖並移出裝置內容，再刪除 `CBitmap` 物件。
 
-如需詳細資訊, 請參閱`bmBits` `BITMAP`結構中的欄位描述。 [CBitmap::CreateBitmapIndirect](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
+如需詳細資訊, 請參閱`bmBits` `BITMAP`結構中的欄位描述。 [CBitmap::CreateBitmapIndirect](/windows/win32/api/wingdi/ns-wingdi-bitmap) 成員函式下提供 [BITMAP](#createbitmapindirect) 結構的說明。
 
 ##  <a name="createbitmapindirect"></a>CBitmap:: CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>參數
 
 *lpBitmap*<br/>
-指向包含點陣圖相關資訊的[點陣圖](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)結構。
+指向包含點陣圖相關資訊的[點陣圖](/windows/win32/api/wingdi/ns-wingdi-bitmap)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -178,7 +178,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 
 雖然無法直接選取顯示裝置的點陣圖, 但可以使用[cdc:: SelectObject](../../mfc/reference/cdc-class.md#selectobject)將它選取為記憶體裝置內容的目前點陣圖, 並使用[Cdc:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[cdc:: 複製到任何相容的裝置內容。StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)函式。 ( [CDC::P atblt](../../mfc/reference/cdc-class.md#patblt)函數可以將目前筆刷的點陣圖直接複製到顯示裝置內容)。
 
-如果使用`BITMAP` 函`GetObject`式來填入*lpBitmap*參數所指向的結構, 則不會指定點陣圖的位, 且點陣圖會未初始化。 若要初始化點陣圖, 應用程式可以使用[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits)之類的函數, 將位從的`CGdiObject::GetObject`第一個參數所識別的點陣圖複製到所建立`CreateBitmapIndirect`的點陣圖。
+如果使用`BITMAP` 函`GetObject`式來填入*lpBitmap*參數所指向的結構, 則不會指定點陣圖的位, 且點陣圖會未初始化。 若要初始化點陣圖, 應用程式可以使用[CDC:: BitBlt](../../mfc/reference/cdc-class.md#bitblt)或[SetDIBits](/windows/win32/api/wingdi/nf-wingdi-setdibits)之類的函數, 將位從的`CGdiObject::GetObject`第一個參數所識別的點陣圖複製到所建立`CreateBitmapIndirect`的點陣圖。
 
 當您完成使用函`CBitmap`式`CreateBitmapIndirect`建立的物件時, 請先從裝置`CBitmap`內容選取點陣圖, 然後刪除物件。
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>參數
 
 *pBitMap*<br/>
-將會接收影像屬性之[點陣圖](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)結構的指標。 此參數不得為 Null。
+將會接收影像屬性之[點陣圖](/windows/win32/api/wingdi/ns-wingdi-bitmap)結構的指標。 此參數不得為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -408,7 +408,7 @@ BOOL LoadMappedBitmap(
 
 根據預設, `LoadMappedBitmap`會對應按鈕圖像中常用的色彩。
 
-如需建立對應點陣圖的詳細資訊, 請參閱 Windows 函式[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562)和 Windows SDK 中的[COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-colormap)結構。
+如需建立對應點陣圖的詳細資訊, 請參閱 Windows 函式[CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562)和 Windows SDK 中的[COLORMAP](/windows/win32/api/commctrl/ns-commctrl-colormap)結構。
 
 ##  <a name="loadoembitmap"></a>CBitmap:: LoadOEMBitmap
 
@@ -469,7 +469,7 @@ operator HBITMAP() const;
 
 這個運算子是可支援直接使用`HBITMAP`物件的轉換運算子。
 
-如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/desktop/gdi/graphic-objects)。
+如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/win32/gdi/graphic-objects)。
 
 ##  <a name="setbitmapbits"></a>CBitmap:: SetBitmapBits
 

@@ -2,12 +2,12 @@
 title: 以 Visual C++ 進行雲端和 Web 程式設計
 ms.date: 05/14/2019
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 677e9da18e8d171f523994d21bfbd0411270e3c8
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.openlocfilehash: 3f4786d8b17aed2d7faeddf1e2c32a825fd8d0e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65790365"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498862"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>以 Visual C++ 進行雲端和 Web 程式設計
 
@@ -48,11 +48,11 @@ ms.locfileid: "65790365"
 
   Windows 執行階段 HTTP 用戶端類別會在 System.Web 命名空間中相同名稱的 .NET Framework 類別上建立模型。 `HttpClient` 完全支援透過 HTTP 的非同步上傳和下載，以及可讓自訂 HTTP 處理常式插入管線的管線篩選器。 Windows SDK 包含計量網路、OAuth 驗證等等的範例篩選條件。 針對只以「通用 Windows 平台」為目標的應用程式，建議您使用 `Windows::Web:HttpClient` 類別。
 
-- [IXMLHTTPRequest2 介面](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
+- [IXMLHTTPRequest2 介面](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
   提供一個原生 COM 介面，可供您在「Windows 執行階段」應用程式或 Windows 傳統型應用程式中使用，以透過 HTTP 連線至網際網路及發出 GET、PUT 和其他 HTTP 命令。 如需詳細資訊，請參閱[逐步解說：使用工作和 XML HTTP 要求來進行連線](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)。
 
-- [Windows 網際網路 (WinInet)](/windows/desktop/WinInet/portal)
+- [Windows 網際網路 (WinInet)](/windows/win32/WinInet/portal)
 
   您可以在 Windows 桌面應用程式中使用，以便連接到網際網路的 Windows 應用程式開發介面。
 

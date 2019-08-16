@@ -5,40 +5,40 @@ helpviewer_keywords:
 - CHeaderCtrl class [MFC], creating
 - header controls [MFC], creating
 ms.assetid: 7864d9d2-4a2c-4622-b58b-7b110a1e28d2
-ms.openlocfilehash: 669b13cf566f24bfcd5a29ae41af1cdb90513f73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99269214666c324214422ad989dbbd8bff6fc345
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242311"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508805"
 ---
 # <a name="creating-the-header-control"></a>建立標題控制項
 
-標題控制項無法直接使用。 在對話方塊編輯器中 （雖然您可以新增清單控制項，其中包含標頭控制項）
+標題控制項無法直接在對話方塊編輯器中使用 (雖然您可以加入清單控制項, 其中包括標題控制項)。
 
-### <a name="to-put-a-header-control-in-a-dialog-box"></a>在對話方塊中放入標題控制項
+### <a name="to-put-a-header-control-in-a-dialog-box"></a>將標題控制項放在對話方塊中
 
-1. 手動內嵌型別的成員變數[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)對話方塊類別中。
+1. 在您的對話方塊類別中, 手動內嵌[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)類型的成員變數。
 
-1. 在  [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)、 建立和設定的樣式`CHeaderCtrl`、 位置，並顯示它。
+1. 在[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)中, 建立並設定的樣式`CHeaderCtrl`、定位它, 然後顯示。
 
-1. 加入至標題控制項的項目。
+1. 將專案加入至標題控制項。
 
-1. 使用 [屬性] 視窗來對應對話方塊類別中的處理常式函式，針對任何標題控制項通知訊息，您需要將處理 (請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md))。
+1. 使用屬性視窗來對應對話方塊類別中的處理常式函式, 以取得您需要處理的任何標頭控制項通知訊息 (請參閱將[訊息對應至](../mfc/reference/mapping-messages-to-functions.md)函式)。
 
-### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>若要將標題控制項放在一個檢視 (不 CListView)
+### <a name="to-put-a-header-control-in-a-view-not-a-clistview"></a>將標題控制項放在視圖中 (不是 CListView)
 
-1. 內嵌[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md) view 類別中的物件。
+1. 在您的 view 類別中內嵌[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)物件。
 
-1. 樣式、 定位，以及在檢視中顯示標頭的 [控制] 視窗[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成員函式。
+1. [樣式]、[位置] 和 [顯示[OnInitialUpdate](../mfc/reference/cview-class.md#oninitialupdate)成員函式中的標題控制項] 視窗。
 
-1. 加入至標題控制項的項目。
+1. 將專案加入至標題控制項。
 
-1. 使用 [屬性] 視窗，對應的 view 類別中的處理常式函式，針對任何標題控制項通知訊息，您需要將處理 (請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md))。
+1. 您可以使用屬性視窗來對應 view 類別中的處理常式函式, 以取得您需要處理的任何標頭控制項通知訊息 (請參閱[將訊息對應至函數](../mfc/reference/mapping-messages-to-functions.md))。
 
-在任一情況下，建立檢視或對話方塊物件時，會建立內嵌的控制項物件。 您必須呼叫[Dwstyle](../mfc/reference/cheaderctrl-class.md#create)來建立控制項的視窗。 要放置控制項，請呼叫[CHeaderCtrl::Layout](../mfc/reference/cheaderctrl-class.md#layout)來判斷控制項的初始大小和位置並[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)設定想要的位置。 然後加入項目中所述[將項目加入至標題控制項](../mfc/adding-items-to-the-header-control.md)。
+不論是哪一種情況, 都是在建立 view 或 dialog 物件時建立內嵌控制項物件。 接著, 您必須呼叫[CHeaderCtrl:: create](../mfc/reference/cheaderctrl-class.md#create)來建立控制項視窗。 若要定位控制項, 請呼叫[CHeaderCtrl:: Layout](../mfc/reference/cheaderctrl-class.md#layout)來決定控制項的初始大小和位置, 並[SetWindowPos](../mfc/reference/cwnd-class.md#setwindowpos)以設定您想要的位置。 然後新增專案, 如[將專案新增至標題控制項](../mfc/adding-items-to-the-header-control.md)中所述。
 
-如需詳細資訊，請參閱 <<c0> [ 建立標題控制項](/windows/desktop/Controls/header-controls)Windows SDK 中。
+如需詳細資訊, 請參閱在 Windows SDK 中[建立標題控制項](/windows/win32/Controls/header-controls)。
 
 ## <a name="see-also"></a>另請參閱
 

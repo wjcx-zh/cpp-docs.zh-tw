@@ -24,73 +24,73 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387912"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513653"
 ---
 # <a name="resource-files-c"></a>資源檔 (C++)
 
 > [!NOTE]
-> 。因為 .NET 程式設計語言中的專案不使用資源指令碼檔案，所以您必須從 **方案總管**。 使用[影像編輯器](../windows/image-editor-for-icons.md)並[二進位編輯器](binary-editor.md)來處理 managed 專案中的資源檔。
+> 。因為 .NET 程式設計語言中的專案不使用資源指令碼檔案，所以您必須從 **方案總管**。 使用[影像編輯器](../windows/image-editor-for-icons.md)和[二進位編輯器](binary-editor.md)來處理 managed 專案中的資源檔。
 >
 > 您想要編輯的任何 Managed 資源皆必須為連結的資源。 Visual Studio 資源編輯器並不支援對內嵌資源的編輯功能。
 
-詞彙*資源檔*像可以參考多種檔案類型：
+「*資源檔*」一詞可以參考數種檔案類型, 例如:
 
 - 程式的資源指令碼 (.rc) 檔。
 
 - 資源範本 (.rct) 檔。
 
-- 存在為獨立檔案的個別資源。 此類型包含的.rc 檔案提及的點陣圖、 圖示或游標檔案。
+- 以獨立檔案形式存在的個別資源。 此類型包含從 .rc 檔參考的點陣圖、圖示或游標檔案。
 
-- 標頭所產生的檔案在開發環境。 這種類型包括`Resource.h`，.rc 檔案提及。
+- 開發環境所產生的標頭檔。 這種類型`Resource.h`包括, 這是從 .rc 檔參考的。
 
-例如.exe、.dll 和.res 檔稱為其他檔案類型 中找到的資源*資源*。
+在其他檔案類型 (例如 .exe、.dll 和 .res 檔案) 中找到的資源稱為「*資源*」。
 
-您可以使用*資源檔*並*資源*從您的專案內。 您也可以使用的不是目前專案的一部分，或在建立 Visual Studio 的開發環境以外的地方。 例如，您可以：
+您可以從專案內使用*資源檔*和*資源*。 您也可以使用不屬於目前專案的元件, 或在 Visual Studio 的開發環境之外建立。 例如，您可以：
 
 - 使用巢狀和條件限定的資源檔案。
 
-- 更新現有的資源，或將它們轉換至視覺效果C++。
+- 更新現有的資源, 或將它們C++轉換成視覺效果。
 
 - 從目前的資源檔匯入或匯出圖形資源。
 
 - 包含開發環境無法修改的共用或唯讀識別項 (符號)。
 
-- 您不需要編輯 （或不應該編輯），例如數個專案之間共用資源的可執行檔 (.exe) 檔案中包含資源。
+- 包含您的可執行檔 (.exe) 中不需要編輯 (或不應編輯) 的資源, 例如數個專案之間的共用資源。
 
 - 包含開發環境不支援的類型。
 
-如需有關資源的詳細資訊，請參閱如何[建立的資源](../windows/how-to-create-a-resource-script-file.md)，[管理資源](../windows/how-to-copy-resources.md)，並[在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)。
+如需資源的詳細資訊, 請參閱如何[建立資源](../windows/how-to-create-a-resource-script-file.md)、[管理資源](../windows/how-to-copy-resources.md), 以及[在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)。
 
 ## <a name="editable-resources"></a>可編輯的資源
 
-若要編輯所包含的資源，可以開啟下列類型的檔案：
+您可以開啟下列類型的檔案來編輯其包含的資源:
 
-| 檔案名稱 | 描述 |
+| 檔案名稱 | 說明 |
 |---|---|
-| .rc | 資源指令碼檔案 |
-| .rct | 資源範本檔 |
+| .rc | 資源腳本檔 |
+| .rct | 資源範本檔案 |
 | .res | 資源檔 |
-| .resx | Managed 的資源檔 |
+| .resx | 受控資源檔 |
 | .exe | 可執行檔 |
 | .dll | 動態連結程式庫檔案 |
-| .bmp, .ico, .dib, .cur | 點陣圖、 圖示、 工具列和游標檔案 |
+| .bmp、.ico、.dib、中 | 點陣圖、圖示、工具列和游標檔案 |
 
-當編輯資源，Visual Studio 環境與搭配運作，而且會影響下列檔案：
+編輯資源時, Visual Studio 環境會與搭配使用, 並影響下列檔案:
 
-| 檔案名稱 | 描述 |
+| 檔案名稱 | 說明 |
 |---|---|
-| 偵錯工具 | 包含符號定義的開發環境所產生的標頭檔。<br/><br/>原始檔控制中包含此檔案。 |
-| Filename.aps | 用於快速載入的目前資源指令碼檔的二進位版本。<br /><br /> 資源編輯器不會直接讀取.rc 或 resource.h 檔。 資源編譯器會將它們編譯成.aps 檔所使用的資源編輯器。 此檔案是一個編譯步驟，只會儲存符號資料。<br/><br/>正常編譯處理程序，在編譯程序期間會捨棄未符號，例如註解的資訊。<br/><br/>每當.aps 檔未與.rc 檔同步處理時，會重新產生.rc 檔。 例如，當您**儲存**，資源編輯器會覆寫.rc 檔和 resource.h 檔案。 資源本身的任何變更繼續合併在.rc 檔，但總是遺失註解，一旦.rc 檔被覆寫。 如需如何保留註解的資訊，請參閱[在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)。<br/><br/>一般而言，您不應包含.aps 檔未在原始檔控制。 |
-| .rc | 包含目前專案中的資源所適用之指令碼的資源指令碼檔。 .aps 檔會在您每次存檔時覆寫此檔案。<br/><br/>原始檔控制中包含此檔案。 |
+| 偵錯工具 | 包含符號定義的開發環境所產生的標頭檔。<br/><br/>將此檔案包含在原始檔控制中。 |
+| Filename.aps | 用於快速載入之目前資源腳本檔案的二進位版本。<br /><br /> 資源編輯器不會直接讀取 .rc 或資源 .h 檔案。 資源編譯器會將它們編譯為資源編輯器所使用的 ap 檔案。 此檔案是一個編譯步驟，只會儲存符號資料。<br/><br/>就像一般的編譯器一樣, 在編譯過程中會捨棄不是符號的資訊, 例如批註。<br/><br/>當 ap 檔案與 .rc 檔案不同步時, 會重新產生 .rc 檔案。 例如, 當您**儲存**時, 資源編輯器會覆寫 .rc 檔和資源 .h 檔案。 資源本身的任何變更都會保留在 .rc 檔中, 但是一旦覆寫 .rc 檔案, 批註一定會遺失。 如需如何保留批註的相關資訊, 請參閱[在編譯時期包含資源](../windows/how-to-include-resources-at-compile-time.md)。<br/><br/>一般來說, 您不應該在原始檔控制中包含此 ap 檔案。 |
+| .rc | 包含目前專案中的資源所適用之指令碼的資源指令碼檔。 .aps 檔會在您每次存檔時覆寫此檔案。<br/><br/>將此檔案包含在原始檔控制中。 |
 
 ## <a name="manifest-resources"></a>資訊清單資源
 
-在C++傳統型專案中，資訊清單資源是描述應用程式使用的相依性的 XML 檔案。 例如，在 Visual Studio 這個 MFC 精靈產生資訊清單檔案定義應用程式應該使用哪個版本的 Windows 通用控制項 Dll:
+在C++桌面專案中, 資訊清單資源是描述應用程式所使用之相依性的 XML 檔案。 例如, 在 Visual Studio 此 MFC wizard 產生的資訊清單檔案會定義應用程式應使用的 Windows 通用控制項 Dll 版本:
 
 ```xml
 <description>Your app description here</description>
@@ -108,22 +108,22 @@ ms.locfileid: "62387912"
 </dependency>
 ```
 
-Windows XP 或 Windows Vista 應用程式資訊清單資源應該指定應用程式使用的 Windows 通用控制項的最新版本。 上述範例中使用版本`6.0.0.0`，支援[Syslink 控制項](/windows/desktop/Controls/syslink-overview)。
+對於 Windows XP 或 Windows Vista 應用程式, 資訊清單資源應指定最新版本的 Windows 通用控制項, 以供應用程式使用。 上述範例會使用支援`6.0.0.0` [Syslink 控制項](/windows/win32/Controls/syslink-overview)的版本。
 
 > [!NOTE]
 > 每個模組只能有一個資訊清單資源。
 
-若要檢視版本和類型資訊清單資源內含的資訊，請在 XML 檢視器] 或 [Visual Studio 文字編輯器中開啟檔案。 如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。
+若要查看資訊清單資源中包含的版本和類型資訊, 請在 XML 檢視器或 Visual Studio 文字編輯器中開啟檔案。 如果您從 [ [資源檢視](../windows/resource-view-window.md)] 開啟資訊清單資源，資源會以二進位格式開啟。
 
-### <a name="to-open-a-manifest-resource"></a>若要開啟 資訊清單資源
+### <a name="to-open-a-manifest-resource"></a>開啟資訊清單資源
 
-1. 在 Visual Studio 中開啟您的專案，並瀏覽至**方案總管 中**。
+1. 在 Visual Studio 中開啟您的專案, 然後流覽至 [**方案總管**]。
 
-1. 依序展開**資源檔**資料夾，然後：
+1. 展開 [**資源檔**] 資料夾, 然後:
 
-   - 若要在文字編輯器中開啟，按兩下 *.manifest*檔案。
+   - 若要在文字編輯器中開啟, 請按兩下 *.manifest*檔案。
 
-   - 若要開啟在其他編輯器中，以滑鼠右鍵按一下 *.manifest*檔案，然後選取**開啟**。 指定編輯器使用，並選取**開啟**。
+   - 若要在其他編輯器中開啟, 請以滑鼠右鍵按一下 *.manifest*檔案, 然後選取 [**開啟方式**]。 指定要使用的編輯器, 然後選取 [**開啟**]。
 
 ## <a name="requirements"></a>需求
 

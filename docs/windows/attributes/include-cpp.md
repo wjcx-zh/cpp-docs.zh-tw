@@ -1,21 +1,21 @@
 ---
-title: 包含 (C++ COM 屬性)
+title: include (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.include
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: d9c68601bea4cecd92b371dada5fb086aeb7657f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409443"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514560"
 ---
 # <a name="include-c"></a>include (C++)
 
-指定要包含在產生的.idl 檔案中的一或多個標頭檔。
+指定要包含在產生的 .idl 檔案中的一或多個標頭檔。
 
 ## <a name="syntax"></a>語法
 
@@ -26,17 +26,17 @@ ms.locfileid: "62409443"
 ### <a name="parameters"></a>參數
 
 *header_file*<br/>
-您想要包含在產生的.idl 檔案中的檔案名稱。
+您想要包含在產生的 .idl 檔案中的檔案名。
 
 ## <a name="remarks"></a>備註
 
-**包括**C++屬性會導致`#include`陳述式置於以下`import "docobj.idl"`產生的.idl 檔案中的陳述式。
+`import "docobj.idl"` **Include** C++屬性會使語句放在產生的.idl檔案中的語句底下。`#include`
 
-**包括**C++屬性具有相同的功能[包含](/windows/desktop/Midl/include)MIDL 屬性。
+**Include** C++屬性的功能與[include](/windows/win32/Midl/include) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**包含**。 例如，檔案 include.h 只包含`#include`陳述式。
+下列程式碼顯示如何使用**include**的範例。 在此範例中, 檔案包含 .h 只`#include`包含語句。
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -53,7 +53,7 @@ ms.locfileid: "62409443"
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

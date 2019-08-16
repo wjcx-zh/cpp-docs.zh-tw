@@ -6,28 +6,28 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: a96c54a01788f03158b9fcdcd0bf72eb2b1ce84d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449690"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510559"
 ---
 # <a name="concurrency-runtime"></a>並行執行階段
 
 C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的平行應用程式。 它會引發抽象的層級，讓您不需要管理並行存取相關的基礎結構詳細資料。 您也可以使用它來指定符合您應用程式服務需求品質的排程原則。 使用這些資源以協助您開始使用並行執行階段。
 
-如需參考文件，請參閱[參考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
+如需參考檔, 請參閱[參考](../../parallel/concrt/reference/reference-concurrency-runtime.md)。
 
 > [!TIP]
->  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要進一步了解，請閱讀[歡迎使用上一步 C++ ](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
+>  並行執行階段非常依賴 C++11 功能，並採用更現代的 C++ 樣式。 若要深入瞭解, 請閱讀[歡迎C++回到](../../cpp/welcome-back-to-cpp-modern-cpp.md)。
 
 ## <a name="choosing-concurrency-runtime-features"></a>選擇並行執行階段功能
 
 |||
 |-|-|
 |[概觀](../../parallel/concrt/overview-of-the-concurrency-runtime.md)|教導為何並行執行階段很重要，並說明其重要功能。|
-|[相較於其他並行模型](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|顯示並行執行階段如何與其他並行模型進行比較，例如 Windows 執行緒集區和 OpenMP，以讓您可以使用最符合您應用程式需求的並行存取模型。|
+|[與其他並行模型比較](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|顯示並行執行階段如何與其他並行模型進行比較，例如 Windows 執行緒集區和 OpenMP，以讓您可以使用最符合您應用程式需求的並行存取模型。|
 |[從 OpenMP 移轉至並行執行階段](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)|比較 OpenMP 與並行執行階段，並提供有關如何移轉現有的 OpenMP 程式碼以使用並行執行階段的範例。|
 |[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|為您介紹提供平行迴圈、工作和平行容器的 PPL。|
 |[非同步代理程式程式庫](../../parallel/concrt/asynchronous-agents-library.md)|為您介紹如何使用非同步代理程式和訊息傳遞來輕鬆地將資料流程與流水線操作工作納入您的應用程式中。|
@@ -37,7 +37,7 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 
 |||
 |-|-|
-|[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：建立延遲後才會完成的工作](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|描述工作和工作群組，可協助您撰寫非同步程式碼並將平行工作分解成較小的片段。|
+|[工作平行處理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br /><br /> [如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br /><br /> [如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)<br /><br /> [如何：建立延遲後才會完成的工作](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|描述工作和工作群組，可協助您撰寫非同步程式碼並將平行工作分解成較小的片段。|
 |[逐步解說：實作 Future](../../parallel/concrt/walkthrough-implementing-futures.md)|示範如何結合並行執行階段功能以做到更多。|
 |[逐步解說：從使用者介面執行緒移除工作](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)|顯示如何將 MFC 應用程式中的 UI 執行緒所執行的工作移至背景工作執行緒。|
 |[平行模式程式庫中的最佳做法](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br /><br /> [並行執行階段中的一般最佳做法](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)|提供使用 PPL 的秘訣和最佳作法。|
@@ -61,9 +61,9 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 
 |||
 |-|-|
-|[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|描述一些重點来牢記在心，當您使用並行執行階段產生非同步作業的 UWP 應用程式中。|
-|[逐步解說：使用工作和 XML HTTP 要求進行連線](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|顯示如何結合使用 PPL 工作`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務的介面。|
-|[Windows 執行階段應用程式範例](https://code.msdn.microsoft.com/windowsapps)|包含可下載的程式碼範例和示範應用程式，針對 Windows 8.x。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|
+|[在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|說明當您使用並行執行階段在 UWP 應用程式中產生非同步作業時, 要牢記在心的部分重點。|
+|[逐步解說：使用工作和 XML HTTP 要求進行連線](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|示範如何結合 PPL 工作與`IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`介面, 以將 HTTP GET 和 POST 要求傳送至 UWP 應用程式中的 web 服務。|
+|[Windows 執行階段應用程式範例](https://code.msdn.microsoft.com/windowsapps)|包含適用于 Windows 8.x 的可下載程式代碼範例和示範應用程式。 C + + 範例使用並行執行階段功能 (例如 PPL 工作) 來處理在背景中的資料以保留 UX 的回應性。|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>非同步代理程式程式庫中的資料流程程式撰寫
 
@@ -98,10 +98,10 @@ C++ 的並行執行階段可協助您寫入強固、可擴充且回應靈敏的�
 
 |||
 |-|-|
-|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|了解我們如何使用並行執行階段來實作非同步作業，Windows 執行階段應用程式，使用C++和 XAML。|
+|[Hilo 的非同步程式設計模式和祕訣 (使用 C++ 和 XAML 的 Windows 市集應用程式)](/previous-versions/windows/apps/jj160321(v=win.10))|瞭解我們如何使用並行執行階段在 Hilo (使用C++和 XAML 的 Windows 執行階段應用程式) 中執行非同步作業。|
 |[機器碼平行程式設計部落格](https://go.microsoft.com/fwlink/p/?linkid=183873)|提供有關在並行執行階段中之平行程式設計的其他深入部落格文章。|
 |[C++ 和機器碼平行程式設計論壇](https://go.microsoft.com/fwlink/p/?linkid=183874)|讓您參與有關並行執行階段的社群討論。|
-|[平行程式設計](/dotnet/standard/parallel-programming/index)|將教導您有關使用.NET Framework 中平行程式設計模型。|
+|[平行程式設計](/dotnet/standard/parallel-programming/index)|教您有關 .NET Framework 中提供的平行程式設計模型。|
 
 ## <a name="see-also"></a>另請參閱
 

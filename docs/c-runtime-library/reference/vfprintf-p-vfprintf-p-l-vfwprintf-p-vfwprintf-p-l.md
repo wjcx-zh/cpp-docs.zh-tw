@@ -43,14 +43,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - vfwprintf_p function
 ms.assetid: 4d4a0914-4175-4b65-9ca1-037c4ef29147
-ms.openlocfilehash: 7e93972ccd77d730d873177fe92f958877c83fe4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f3a1fa472949d6d1f7880acc942a99c0f32c7ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365360"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499274"
 ---
-# <a name="vfprintfp-vfprintfpl-vfwprintfp-vfwprintfpl"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
+# <a name="_vfprintf_p-_vfprintf_p_l-_vfwprintf_p-_vfwprintf_p_l"></a>_vfprintf_p、_vfprintf_p_l、_vfwprintf_p、_vfwprintf_p_l
 
 使用引數清單的指標將格式化輸出，而且可以指定在格式字串中使用引數的順序。
 
@@ -99,20 +99,20 @@ int _vfwprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vfprintf_p**並 **_vfwprintf_p**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。
+**_vfprintf_p**和 **_vfwprintf_p**會傳回寫入的字元數, 不包括結束的 null 字元, 或如果發生輸出錯誤, 則傳回負數值。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化並寫入至指定的資料*資料流*。 這些函式與差異 **_vfprint_s**並 **_vfwprint_s**版本僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+所有這些函式都會接受引數清單的指標, 然後格式化指定的資料, 並將其寫入*資料流程*。 這些函式與 **_vfprint_s**和 **_vfwprint_s**版本不同, 僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_vfwprintf_p**是寬字元版本 **_vprintf_p**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **_vprintf_p**目前不支援輸出至 UNICODE 資料流。
+**_vfwprintf_p**是 **_vprintf_p**的寬字元版本;如果資料流程是以 ANSI 模式開啟, 則這兩個函式的行為相同。 **_vprintf_p**目前不支援輸出至 UNICODE 資料流程。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果有任一*資料流*或是*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*資料流程*或*格式*為 null 指標, 或如果格式字串包含不正確格式化字元, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -125,8 +125,8 @@ int _vfwprintf_p_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_vfprintf_p**， **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vfwprintf_p**， **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
+|**_vfprintf_p**、 **_vfprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vfwprintf_p**、 **_vfwprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

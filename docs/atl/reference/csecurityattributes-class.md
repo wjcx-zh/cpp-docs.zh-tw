@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 2139c25cb6d941d9debe0655ba91ba458b1f8c09
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ebffbea120101a77450a5e8da3cdb6e34723e7be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915719"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496506"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes 類別
 
@@ -39,15 +39,15 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CSecurityAttributes::Set](#set)|呼叫這個方法以設定`CSecurityAttributes`物件的屬性。|
 
 ## <a name="remarks"></a>備註
 
-結構包含用來建立物件的[安全描述項](/windows/desktop/api/winnt/ns-winnt-security_descriptor), 並指定透過指定此結構抓取的控制碼是否可繼承。 `SECURITY_ATTRIBUTES`
+結構包含用來建立物件的[安全描述項](/windows/win32/api/winnt/ns-winnt-security_descriptor), 並指定透過指定此結構抓取的控制碼是否可繼承。 `SECURITY_ATTRIBUTES`
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -100,6 +100,6 @@ void Set(const CSecurityDesc& rSecurityDescriptor, bool bInheritHandle = false) 
 
 [安全性範例](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))<br/>
-[安全描述項](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[安全描述項](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonextensible attribute
 ms.assetid: c7ef1554-809f-4ea0-a7cd-dc7786d40c3e
-ms.openlocfilehash: ed396b3d55e16cf195949c713ab574812b796a1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2947e223d068ea6cc92a41abe19cb7f920112b2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407571"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514405"
 ---
 # <a name="nonextensible"></a>nonextensible
 
-指定`IDispatch`實作只包括屬性和方法介面描述中所列，而且無法在執行階段延伸與其他成員。
+`IDispatch`指定執行只包含介面描述中所列的屬性和方法, 而且無法在執行時間以其他成員擴充。
 
 ## <a name="syntax"></a>語法
 
@@ -25,13 +25,13 @@ ms.locfileid: "62407571"
 
 ## <a name="remarks"></a>備註
 
-**Nonextensible** C++屬性具有相同的功能[nonextensible](/windows/desktop/Midl/nonextensible) MIDL 屬性。
+**Nonextensible** C++屬性具有與[nonextensible](/windows/win32/Midl/nonextensible) MIDL 屬性相同的功能。
 
-利用**nonextensible**也需要[oleautomation](oleautomation.md)屬性。
+使用**nonextensible**也需要[oleautomation](oleautomation.md)屬性。
 
 ## <a name="example"></a>範例
 
-下列程式碼顯示的其中一種用法**nonextensible**屬性：
+下列程式碼顯示**nonextensible**屬性的一種用法:
 
 ```cpp
 // cpp_attr_ref_nonextensible.cpp
@@ -56,8 +56,8 @@ __interface IFireTabCtrl
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|`dual` 和`oleautomation`，或 `dispinterface`|
-|**無效屬性**|None|
+|**必要屬性**|`dual`and `oleautomation`、or`dispinterface`|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

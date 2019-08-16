@@ -1,22 +1,22 @@
 ---
-title: 非 MFC Dll:總覽
+title: 非 MFC DLL：總覽
 ms.date: 11/04/2016
 helpviewer_keywords:
 - non-MFC DLLs [C++]
 - DLLs [C++], non-MFC
 ms.assetid: 1ed5d1ee-e20c-47d7-801d-87ea26a73842
-ms.openlocfilehash: 14cbdadd8c66d6fdf282f644102a6d4a783893b5
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 88afb41205e63a837d7bc134133c3c36eccf5dc1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341152"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493168"
 ---
-# <a name="non-mfc-dlls-overview"></a>非 MFC Dll:總覽
+# <a name="non-mfc-dlls-overview"></a>非 MFC DLL：總覽
 
-非 MFC 的 DLL 是在內部，不會使用 MFC 的 DLL，而且在 DLL 中匯出的函式可以呼叫由 MFC 或非 MFC 可執行檔。 從非 MFC DLL 使用標準的 C 介面通常被匯出函式。
+非 MFC DLL 是不會在內部使用 MFC 的 DLL, 而且可以由 MFC 或非 MFC 可執行檔呼叫 DLL 中匯出的函式。 函數通常會使用標準 C 介面從非 MFC DLL 匯出。
 
-如需非 MFC Dll 的詳細資訊，請參閱 <<c0> [ 動態連結程式庫](/windows/desktop/dlls/dynamic-link-libraries)Windows SDK 中。
+如需非 MFC Dll 的詳細資訊, 請參閱 Windows SDK 中的[動態連結程式庫](/windows/win32/dlls/dynamic-link-libraries)。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 

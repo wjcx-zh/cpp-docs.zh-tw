@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: da247524dae77627bbf041b83bc1534a75c3b073
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916695"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502434"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 
@@ -53,13 +53,13 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|建構 `CSpinButtonCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CSpinButtonCtrl::Create](#create)|建立微調按鈕控制項, 並將其附加至`CSpinButtonCtrl`物件。|
 |[CSpinButtonCtrl::CreateEx](#createex)|使用指定的 Windows 擴充樣式建立微調按鈕控制項, 並將其附加至`CSpinButtonCtrl`物件。|
@@ -117,7 +117,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/desktop/Controls/up-down-control-styles)中加以描述。
+指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/win32/Controls/up-down-control-styles)中加以描述。
 
 *rect*<br/>
 指定微調按鈕控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構
@@ -154,10 +154,10 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定所要建立之控制項的延伸樣式。 如需擴充 windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)的*dwExStyle*參數。
+指定所要建立之控制項的延伸樣式。 如需擴充 windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/desktop/Controls/up-down-control-styles)中加以描述。
+指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/win32/Controls/up-down-control-styles)中加以描述。
 
 *rect*<br/>
 [矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考, 描述要建立之視窗的大小和位置, 以*pParentWnd*的用戶端座標表示。
@@ -200,7 +200,7 @@ UINT GetAccel(
 *PAccel*所指定之陣列中的元素數目。
 
 *pAccel*<br/>
-接收加速資訊之[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)結構陣列的指標。
+接收加速資訊之[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)結構陣列的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -298,7 +298,7 @@ BOOL SetAccel(
 ### <a name="parameters"></a>參數
 
 *nAccel*<br/>
-*PAccel*所指定的[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-udaccel)結構數目。
+*PAccel*所指定的[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)結構數目。
 
 *pAccel*<br/>
 UDACCEL 結構陣列的指標, 其中包含加速資訊。 元素應根據`nSec`成員以遞增順序排序。

@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 1f2c0387cd0a78ad0179e251654d2fa82b1eef13
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 68b4aaef06e40a8ec7b00f9ba744d83ce3388da2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707091"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492386"
 ---
 # <a name="example-implementing-a-property-page"></a>範例：實作屬性頁
 
@@ -71,7 +71,7 @@ Visual Studio 2019 及更新版本中未提供 ATL 屬性頁精靈。
 這些控制項將用來顯示文件的檔案名稱及其唯讀狀態。
 
 > [!NOTE]
->  對話方塊資源不包含框架或命令按鈕，也沒有您可能預期的索引標籤式外觀。 屬性頁框架會提供這些功能，例如，透過呼叫 [OleCreatePropertyFrame](/windows/desktop/api/olectl/nf-olectl-olecreatepropertyframe) 建立的功能。
+>  對話方塊資源不包含框架或命令按鈕，也沒有您可能預期的索引標籤式外觀。 屬性頁框架會提供這些功能，例如，透過呼叫 [OleCreatePropertyFrame](/windows/win32/api/olectl/nf-olectl-olecreatepropertyframe) 建立的功能。
 
 ##  <a name="vcconadding_message_handlers"></a> 加入訊息處理常式
 

@@ -41,14 +41,14 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 357cc1f28e5495385b67fdb7c1b86bbc15f79950
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386183"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499107"
 ---
-# <a name="vscprintfp-vscprintfpl-vscwprintfp-vscwprintfpl"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
+# <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
 使用引數清單的指標傳回格式化的字串字元數，還能夠指定引數使用的順序。
 
@@ -90,18 +90,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vscprintf_p**傳回如果指向的字串所產生的引數清單的字元數被列印或傳送到檔案或緩衝區使用指定的格式化程式碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**執行相同的函式的寬字元。
+如果引數清單所指向的字串已列印, 或使用指定的格式化程式碼傳送至檔案或緩衝區, 則 **_vscprintf_p**會傳回所要產生的字元數。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**會針對寬字元執行相同的功能。
 
 ## <a name="remarks"></a>備註
 
-這些函式與差異 **_vscprintf**並 **_vscwprintf**僅在於它們支援讓您指定在其中使用的引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式與 **_vscprintf**和 **_vscwprintf**不同之處在于, 它們支援指定引數使用順序的能力。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
 
-如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
 
 > [!IMPORTANT]
-> 請確定如果*格式*是使用者定義的字串，它是以 null 終止，且具有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 請確定如果*format*是使用者定義的字串, 它會以 null 終止, 而且具有正確的參數數目和類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -114,8 +114,8 @@ int _vscwprintf_p _l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_vscprintf_p**， **_vscprintf_p_l**|\<stdio.h>|
-|**_vscwprintf_p**， **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_vscprintf_p**、 **_vscprintf_p_l**|\<stdio.h>|
+|**_vscwprintf_p**、 **_vscwprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

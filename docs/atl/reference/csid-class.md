@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: fb496e3bd58d0fe134c37b240eb2698302c6aa64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: ed19ed3cdeb77612e20d826480ab73b9361366e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915692"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496443"
 ---
 # <a name="csid-class"></a>CSid 類別
 
@@ -97,7 +97,7 @@ class CSid
 
 應用程式不應直接`SID`修改結構, 而是使用此包裝函式類別中提供的方法。 另請參閱[AtlGetOwnerSid](security-global-functions.md#atlgetownersid)、 [AtlSetGroupSid](security-global-functions.md#atlsetgroupsid)、 [AtlGetGroupSid](security-global-functions.md#atlgetgroupsid)和[AtlSetOwnerSid](security-global-functions.md#atlsetownersid)。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
@@ -117,7 +117,7 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
 如果找不到的帳戶`SID`名稱, `AccountName`則會傳回空字串。 如果網路延遲阻止此方法尋找名稱, 就會發生這種情況。 不含對應帳戶名稱的安全識別碼 (例如`SID`識別登入會話的) 也會發生此錯誤。
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)。
+這個方法會嘗試尋找指定`SID` (安全識別碼) 的名稱。 如需完整詳細資料, 請參閱[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw)。
 
 如果找不到的`SID`帳戶名稱, `Domain`則會傳回網域做為空字串。 如果網路延遲阻止此方法尋找名稱, 就會發生這種情況。 不含對應帳戶名稱的安全識別碼 (例如`SID`識別登入會話的) 也會發生此錯誤。
 
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱 Windows SDK 中的[EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[EqualPrefixSid](/windows/win32/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) 。
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -360,7 +360,7 @@ bool LoadAccount(
 系統名稱。 這個字串可以是遠端電腦的名稱。 如果這個字串是 Null, 則會改用本機系統。
 
 *pSid*<br/>
-[SID](/windows/desktop/api/winnt/ns-winnt-sid)結構的指標。
+[SID](/windows/win32/api/winnt/ns-winnt-sid)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -368,7 +368,7 @@ bool LoadAccount(
 
 ### <a name="remarks"></a>備註
 
-`LoadAccount`嘗試尋找指定名稱的安全識別碼。 如需詳細資訊, 請參閱[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida) 。
+`LoadAccount`嘗試尋找指定名稱的安全識別碼。 如需詳細資訊, 請參閱[LookupAccountSid](/windows/win32/api/winbase/nf-winbase-lookupaccountsidw) 。
 
 ##  <a name="operator_eq"></a>CSid:: operator =
 
@@ -542,7 +542,7 @@ LPCTSTR Sid() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-以適用于顯示、儲存或傳輸的格式, 傳回結構做為字串。`SID` 相當於[ConvertSidToStringSid](/windows/desktop/api/sddl/nf-sddl-convertsidtostringsida)。
+以適用于顯示、儲存或傳輸的格式, 傳回結構做為字串。`SID` 相當於[ConvertSidToStringSid](/windows/win32/api/sddl/nf-sddl-convertsidtostringsidw)。
 
 ##  <a name="sidnameuse"></a>CSid:: SidNameUse
 

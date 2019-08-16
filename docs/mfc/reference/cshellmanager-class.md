@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916688"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502626"
 ---
 # <a name="cshellmanager-class"></a>CShellManager 類別
 
@@ -49,13 +49,13 @@ class CShellManager : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|建構 `CShellManager` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CShellManager::BrowseForFolder](#browseforfolder)|顯示可讓使用者選取 shell 資料夾的對話方塊。|
 |[CShellManager::ConcatenateItem](#concatenateitem)|串連兩個 Pidl。|
@@ -113,7 +113,7 @@ BOOL BrowseForFolder(
 在對話方塊的標題。
 
 *ulFlags*<br/>
-在指定對話方塊選項的旗標。 如需詳細描述, 請參閱[BROWSEINFO](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) 。
+在指定對話方塊選項的旗標。 如需詳細描述, 請參閱[BROWSEINFO](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) 。
 
 *piFolderImage*<br/>
 脫銷整數值的指標, 此方法會在其中寫入所選資料夾的影像索引。
@@ -156,7 +156,7 @@ LPITEMIDLIST ConcatenateItem(
 
 ### <a name="remarks"></a>備註
 
-這個方法會建立夠大的新[ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) , 以同時包含*pidl1*和*pidl2*。 然後, 它會將*pidl1*和*pidl2*複製到新的清單。
+這個方法會建立夠大的新[ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , 以同時包含*pidl1*和*pidl2*。 然後, 它會將*pidl1*和*pidl2*複製到新的清單。
 
 ##  <a name="copyitem"></a>CShellManager:: CopyItem
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInternetException [MFC], m_dwContext
 - CInternetException [MFC], m_dwError
 ms.assetid: 44fb3cbe-523e-4754-8843-a77909990b14
-ms.openlocfilehash: dedf8926f02dd36dc8d6ac8ab5ff4056b60dfc91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4f4c7a5b7594270aff9dfbc224e9a66ba09be3f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345704"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505912"
 ---
 # <a name="cinternetexception-class"></a>CInternetException 類別
 
@@ -33,22 +33,22 @@ class CInternetException : public CException
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CInternetException::CInternetException](#cinternetexception)|建構 `CInternetException` 物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CInternetException::m_dwContext](#m_dwcontext)|造成例外狀況的作業相關聯的內容值。|
-|[CInternetException::m_dwError](#m_dwerror)|造成例外狀況時發生錯誤。|
+|[CInternetException::m_dwContext](#m_dwcontext)|與造成例外狀況之作業相關聯的內容值。|
+|[CInternetException::m_dwError](#m_dwerror)|造成例外狀況的錯誤。|
 
 ## <a name="remarks"></a>備註
 
-`CInternetException`類別包含兩個公用資料成員： 其中保留例外狀況相關聯的錯誤碼，而其他則會保留與錯誤相關聯的網際網路應用程式的內容識別碼。
+`CInternetException`類別包含兩個公用資料成員: 一個保存與例外狀況相關聯的錯誤碼, 另一個則保存與錯誤相關聯之網際網路應用程式的內容識別碼。
 
-如需詳細的網際網路應用程式的內容識別碼的詳細資訊，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+如需有關網際網路應用程式內容識別碼的詳細資訊, 請參閱[使用 WinInet 進行網際網路程式設計](../../mfc/win32-internet-extensions-wininet.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -60,11 +60,11 @@ class CInternetException : public CException
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxinet.h
+**標頭:** afxinet.h。h
 
-##  <a name="cinternetexception"></a>  CInternetException::CInternetException
+##  <a name="cinternetexception"></a>CInternetException:: CInternetException
 
-此成員函式時，會呼叫`CInternetException`建立物件。
+建立`CInternetException`物件時, 會呼叫這個成員函式。
 
 ```
 CInternetException(DWORD dwError);
@@ -73,15 +73,15 @@ CInternetException(DWORD dwError);
 ### <a name="parameters"></a>參數
 
 *dwError*<br/>
-造成例外狀況時發生錯誤。
+造成例外狀況的錯誤。
 
 ### <a name="remarks"></a>備註
 
-擲回 CInternetException，呼叫 MFC 的全域函式[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。
+若要擲回 CInternetException, 請呼叫 MFC 全域函數[AfxThrowInternetException](internet-url-parsing-globals.md#afxthrowinternetexception)。
 
 ##  <a name="m_dwcontext"></a>  CInternetException::m_dwContext
 
-與相關的網際網路作業相關聯的內容值。
+與相關網際網路作業相關聯的內容值。
 
 ```
 DWORD_PTR m_dwContext;
@@ -89,11 +89,11 @@ DWORD_PTR m_dwContext;
 
 ### <a name="remarks"></a>備註
 
-中原本指定的內容識別項[CInternetSession](../../mfc/reference/cinternetsession-class.md) ，並傳遞到 mfc [CInternetConnection](../../mfc/reference/cinternetconnection-class.md)-並[CInternetFile](../../mfc/reference/cinternetfile-class.md)-衍生的類別。 您可以覆寫此預設值，並指派任何*dwContext*參數您選擇的值。 *dwContext*與指定任何的物件作業相關聯。 *dwContext*識別傳回作業的狀態資訊[CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)。
+內容識別碼最初是在[CInternetSession](../../mfc/reference/cinternetsession-class.md)中指定, 並由 MFC 傳遞至[CInternetConnection](../../mfc/reference/cinternetconnection-class.md)和[CInternetFile](../../mfc/reference/cinternetfile-class.md)衍生的類別。 您可以覆寫此預設值, 並為任何*dwCoNtext*參數指派您所選擇的值。 *dwCoNtext*與指定物件的任何作業相關聯。 *dwCoNtext*會識別[CInternetSession:: OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback)傳回的作業狀態資訊。
 
 ##  <a name="m_dwerror"></a>  CInternetException::m_dwError
 
-造成例外狀況時發生錯誤。
+造成例外狀況的錯誤。
 
 ```
 DWORD m_dwError;
@@ -101,9 +101,9 @@ DWORD m_dwError;
 
 ### <a name="remarks"></a>備註
 
-此錯誤的值可能是系統 WINERROR 中找到的錯誤碼。H 或從 WININET 錯誤值。H.
+這個錯誤值可能是系統錯誤碼, 可在 WINERROR.H 中找到。H, 或來自 WININET 的錯誤值。H.
 
-如需 Win32 錯誤碼的清單，請參閱 <<c0> [ 錯誤碼](/windows/desktop/Debug/system-error-codes)。 如需網際網路特定錯誤訊息的清單，請參閱。 這兩個主題位於 Windows SDK 中。
+如需 Win32 錯誤碼的清單, 請參閱[錯誤碼](/windows/win32/Debug/system-error-codes)。 如需網際網路特定的錯誤訊息清單, 請參閱。 這兩個主題都在 Windows SDK 中。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL, connection points
 - connection points [C++], about connection points
 ms.assetid: 17d76165-5f83-4f95-b36d-483821c247a1
-ms.openlocfilehash: 4d94396ef8839516d9bfee15a2611cce66baa6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df69496a6d245702a9598d684b25122ca55b1e6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252297"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491804"
 ---
 # <a name="atl-connection-points"></a>ATL 連接點
 
@@ -19,7 +19,7 @@ ms.locfileid: "62252297"
 
 ![連接點](../atl/media/vc2zw31.gif "連接點")
 
-每個連接點支援[IConnectionPoint](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpoint)介面。 可連接物件會公開至用戶端透過其連接點[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)介面。
+每個連接點都支援[IConnectionPoint](/windows/win32/api/ocidl/nn-ocidl-iconnectionpoint)介面。 可連線物件會透過[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)介面公開其連接點給用戶端。
 
 ## <a name="in-this-section"></a>本節內容
 

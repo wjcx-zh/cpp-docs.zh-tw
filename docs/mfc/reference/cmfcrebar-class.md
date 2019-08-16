@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: ccd500547bdcf65e922f7b5e5ca8d30e0423933d
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: d348cf7aac57ce213e4d3f602501d12cee8e20d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866175"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505448"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar 類別
 
@@ -120,7 +120,7 @@ BOOL AddBar(
 [in、out]指定要在 Rebar 背景上顯示的點陣圖。
 
 *dwStyle*<br/>
-在包含要套用至寬線的樣式。 如需頻外樣式的完整清單, 請參閱 Windows SDK `fStyle`檔中[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)結構的描述。
+在包含要套用至寬線的樣式。 如需頻外樣式的完整清單, 請參閱 Windows SDK `fStyle`檔中[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)結構的描述。
 
 *clrFore*<br/>
 在代表 Rebar 的前景色彩。
@@ -150,7 +150,7 @@ BOOL Create(
 [in、out]這個 Rebar 控制項的父視窗指標。
 
 *dwCtrlStyle*<br/>
-在指定 Rebar 控制項的樣式。 預設的樣式值為**RBS_BANDBORDERS**, 它會顯示窄行來分隔 Rebar 控制項上的相鄰群組。 如需有效樣式的清單, 請參閱 Windows SDK 檔中的[Rebar 控制項樣式](/windows/desktop/Controls/rebar-control-styles)。
+在指定 Rebar 控制項的樣式。 預設的樣式值為**RBS_BANDBORDERS**, 它會顯示窄行來分隔 Rebar 控制項上的相鄰群組。 如需有效樣式的清單, 請參閱 Windows SDK 檔中的[Rebar 控制項樣式](/windows/win32/Controls/rebar-control-styles)。
 
 *dwStyle*<br/>
 在Rebar 控制項的視窗樣式。 如需有效樣式的清單, 請參閱[視窗樣式](../../mfc/reference/styles-used-by-mfc.md#window-styles)。

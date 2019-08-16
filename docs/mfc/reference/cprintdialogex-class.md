@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: ebef892e174525c0b907818c02b7d34b1b41f850
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2334fb0a420e14aa4fa8b8b570671fb9a611de32
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916889"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502875"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx 類別
 
@@ -59,13 +59,13 @@ class CPrintDialogEx : public CCommonDialog
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|建構 `CPrintDialogEx` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|建立印表機裝置內容, 而不顯示 [列印] 對話方塊。|
 |[CPrintDialogEx::DoModal](#domodal)|顯示對話方塊, 並允許使用者進行選取。|
@@ -94,7 +94,7 @@ class CPrintDialogEx : public CCommonDialog
 
 如果您想要讓應用程式在不需要架構介入的情況下處理列印, `CPrintDialogEx`您可以使用提供的函式來「依原樣」類別, 也可以從`CPrintDialogEx`衍生您自己的對話方塊類別, 並撰寫符合您需求的函式。 不論是哪一種情況, 這些對話方塊的行為都像標準 MFC 對話方塊, 因為它們是`CCommonDialog`從類別衍生而來。
 
-若要使用`CPrintDialogEx`物件, 請先使用此`CPrintDialogEx`函數建立物件。 建立對話方塊之後, 您可以設定或修改[m_pdex](#m_pdex)結構中的任何值, 以初始化對話方塊控制項的值。 結構的型別為[PRINTDLGEX。](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) `m_pdex` 如需此結構的詳細資訊, 請參閱 Windows SDK。
+若要使用`CPrintDialogEx`物件, 請先使用此`CPrintDialogEx`函數建立物件。 建立對話方塊之後, 您可以設定或修改[m_pdex](#m_pdex)結構中的任何值, 以初始化對話方塊控制項的值。 結構的型別為[PRINTDLGEX。](/windows/win32/api/commdlg/ns-commdlg-pdexw) `m_pdex` 如需此結構的詳細資訊, 請參閱 Windows SDK。
 
 如果`m_pdex`您未在中`hDevMode`為和`hDevNames`成員提供自己的控制碼`GlobalFree` , 請務必在完成對話方塊時, 為這些控制碼呼叫 Windows 函式。
 
@@ -143,7 +143,7 @@ CPrintDialogEx(
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-一或多個旗標, 可供您用來自訂對話方塊的設定, 並使用位 OR 運算子進行結合。 例如, PD_ALLPAGES 旗標會將預設的列印範圍設定為檔的所有頁面。 如需這些旗標的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa)結構。
+一或多個旗標, 可供您用來自訂對話方塊的設定, 並使用位 OR 運算子進行結合。 例如, PD_ALLPAGES 旗標會將預設的列印範圍設定為檔的所有頁面。 如需這些旗標的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw)結構。
 
 *pParentWnd*<br/>
 對話方塊的父代或擁有者視窗的指標。
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構建立印表機裝置內容 (DC)。
+從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構建立印表機裝置內容 (DC)。
 
 ```
 HDC CreatePrinterDC();
@@ -188,7 +188,7 @@ INT_PTR 傳回值實際上是 HRESULT。 請參閱 Windows SDK 中[PrintDlgEx](/
 
 呼叫`DoModal`之後, 您可以呼叫其他成員函式, 以抓取使用者在對話方塊中輸入的設定或資訊。
 
-如果在呼叫`DoModal`時使用 PD_RETURNDC 旗標, 則會在[m_pdex](#m_pdex)的`hDC`成員中傳回印表機 DC。 此 DC 必須透過呼叫呼叫端的`CPrintDialogEx` [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)來釋放。
+如果在呼叫`DoModal`時使用 PD_RETURNDC 旗標, 則會在[m_pdex](#m_pdex)的`hDC`成員中傳回印表機 DC。 此 DC 必須透過呼叫呼叫端的`CPrintDialogEx` [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)來釋放。
 
 ##  <a name="getcopies"></a>  CPrintDialogEx::GetCopies
 
@@ -216,11 +216,11 @@ BOOL GetDefaults();
 
 ### <a name="remarks"></a>備註
 
-從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構建立印表機裝置內容 (DC)。
+從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構建立印表機裝置內容 (DC)。
 
-`GetDefaults`不會顯示 [列印] 屬性工作表。 相反地, 它會`hDevNames`將`hDevMode` [m_pdex](#m_pdex)的和成員設定為處理為系統預設印表機初始化的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構。 `GetDefaults`和`hDevNames` 都`hDevMode`必須是 Null 或失敗。
+`GetDefaults`不會顯示 [列印] 屬性工作表。 相反地, 它會`hDevNames`將`hDevMode` [m_pdex](#m_pdex)的和成員設定為處理為系統預設印表機初始化的[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構。 `GetDefaults`和`hDevNames` 都`hDevMode`必須是 Null 或失敗。
 
-如果已設定 PD_RETURNDC 旗標, 則此函式不只`hDevNames`會`hDevMode`將和 ( `m_pdex.hDevNames`位於`m_pdex.hDevMode`和) 傳回給呼叫者, 而且也會傳回中`m_pdex.hDC`的印表機 DC。 當您完成`CPrintDialogEx`物件時, 呼叫端會負責刪除印表機 DC, 並在控制碼上呼叫 Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)函數。
+如果已設定 PD_RETURNDC 旗標, 則此函式不只`hDevNames`會`hDevMode`將和 ( `m_pdex.hDevNames`位於`m_pdex.hDevMode`和) 傳回給呼叫者, 而且也會傳回中`m_pdex.hDC`的印表機 DC。 當您完成`CPrintDialogEx`物件時, 呼叫端會負責刪除印表機 DC, 並在控制碼上呼叫 Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)函數。
 
 ##  <a name="getdevicename"></a>  CPrintDialogEx::GetDeviceName
 
@@ -248,7 +248,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
 
 ##  <a name="getdrivername"></a>  CPrintDialogEx::GetDriverName
 
@@ -292,7 +292,7 @@ HDC GetPrinterDC() const;
 
 ### <a name="remarks"></a>備註
 
-當您使用完裝置內容時, 您必須呼叫 Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)函式來加以刪除。
+當您使用完裝置內容時, 您必須呼叫 Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)函式來加以刪除。
 
 ##  <a name="m_pdex"></a>  CPrintDialogEx::m_pdex
 
@@ -304,7 +304,7 @@ PRINTDLGEX m_pdex;
 
 ### <a name="remarks"></a>備註
 
-在建立`CPrintDialogEx`物件之後, 您可以使用`m_pdex`在呼叫[DoModal](#domodal)成員函式之前, 設定對話方塊的各個層面。 如需`m_pdex`結構的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa) 。
+在建立`CPrintDialogEx`物件之後, 您可以使用`m_pdex`在呼叫[DoModal](#domodal)成員函式之前, 設定對話方塊的各個層面。 如需`m_pdex`結構的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw) 。
 
 如果您直接修改`m_pdex`資料成員, 將會覆寫任何預設行為。
 
@@ -358,7 +358,7 @@ BOOL PrintRange() const;
 
 ### <a name="remarks"></a>備註
 
-您可以從[m_pdex](#m_pdex)判斷指定的頁面範圍 (請`nPageRanges`參閱`nMaxPageRanges`中的`lpPageRanges` [PRINTDLGEX](/windows/desktop/api/commdlg/ns-commdlg-tagpdexa)結構 Windows SDK 中的、和)。
+您可以從[m_pdex](#m_pdex)判斷指定的頁面範圍 (請`nPageRanges`參閱`nMaxPageRanges`中的`lpPageRanges` [PRINTDLGEX](/windows/win32/api/commdlg/ns-commdlg-pdexw)結構 Windows SDK 中的、和)。
 
 ##  <a name="printselection"></a>  CPrintDialogEx::PrintSelection
 

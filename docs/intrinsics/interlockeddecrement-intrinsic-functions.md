@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396752"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509400"
 ---
-# <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 內建函式
+# <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 內建函式
 
 **Microsoft 專屬**
 
-提供 Win32 Windows SDK 的編譯器內建支援[InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)函式。
+為 Win32 Windows SDK [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement)函數提供編譯器內建支援。
 
 ## <a name="syntax"></a>語法
 
@@ -101,7 +101,7 @@ __int64 _InterlockedDecrement64_nf(
 #### <a name="parameters"></a>參數
 
 *lpAddend*<br/>
-[in、 out]要遞減之變數的指標。
+[in、out]要遞減之變數的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -111,10 +111,10 @@ __int64 _InterlockedDecrement64_nf(
 
 |內建|架構|
 |---------------|------------------|
-|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、 x64、 ARM|
+|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、ARM、x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -124,7 +124,7 @@ __int64 _InterlockedDecrement64_nf(
 
 在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱 <<c0> [ 對齊](../cpp/align-cpp.md)。
+`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊, 請參閱[align](../cpp/align-cpp.md)。
 
 這些常式僅以內建函式的形式供您使用。
 

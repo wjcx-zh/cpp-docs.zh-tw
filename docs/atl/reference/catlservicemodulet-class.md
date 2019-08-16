@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 095d909fefe0053b742368f260cf61937c2f5426
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2854d0902700b268383eca094bed35843ea73272
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915862"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497730"
 ---
 # <a name="catlservicemodulet-class"></a>CAtlServiceModuleT 類別
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CAtlServiceModuleT::m_bService](#m_bservice)|表示程式是以服務方式執行的旗標。|
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|儲存執行緒識別碼的成員變數。|
@@ -244,7 +244,7 @@ void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用[ReportEvent](/windows/desktop/api/winbase/nf-winbase-reporteventa)函數, 將詳細資料寫入事件記錄檔。 如果沒有任何服務正在執行, 則會將字串傳送至主控台。
+這個方法會使用[ReportEvent](/windows/win32/api/winbase/nf-winbase-reporteventw)函數, 將詳細資料寫入事件記錄檔。 如果沒有任何服務正在執行, 則會將字串傳送至主控台。
 
 ##  <a name="m_bservice"></a>  CAtlServiceModuleT::m_bService
 
@@ -280,7 +280,7 @@ SERVICE_STATUS_HANDLE m_hServiceStatus;
 
 ### <a name="remarks"></a>備註
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)結構包含服務的相關資訊。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)結構包含服務的相關資訊。
 
 ##  <a name="m_status"></a>CAtlServiceModuleT:: m_status
 
@@ -292,7 +292,7 @@ SERVICE_STATUS m_status;
 
 ### <a name="remarks"></a>備註
 
-[SERVICE_STATUS](/windows/desktop/api/winsvc/ns-winsvc-service_status)結構包含服務的相關資訊。
+[SERVICE_STATUS](/windows/win32/api/winsvc/ns-winsvc-service_status)結構包含服務的相關資訊。
 
 ##  <a name="m_szservicename"></a>  CAtlServiceModuleT::m_szServiceName
 
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。 預設值為 SW_HIDE。
+指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。 預設值為 SW_HIDE。
 
 ### <a name="return-value"></a>傳回值
 
@@ -475,7 +475,7 @@ void SetServiceStatus(DWORD dwState) throw();
 ### <a name="parameters"></a>參數
 
 *dwState*<br/>
-新狀態。 如需可能的值, 請參閱[SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 。
+新狀態。 如需可能的值, 請參閱[SetServiceStatus](/windows/win32/api/winsvc/nf-winsvc-setservicestatus) 。
 
 ### <a name="remarks"></a>備註
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。
+指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>參數
 
 *nShowCmd*<br/>
-指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。
+指定視窗的顯示方式。 這個參數可以是[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)一節中所討論的其中一個值。
 
 ### <a name="return-value"></a>傳回值
 

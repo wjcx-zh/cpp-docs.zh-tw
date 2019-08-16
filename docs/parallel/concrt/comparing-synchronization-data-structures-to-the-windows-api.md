@@ -5,46 +5,46 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d58431ae3f9859677302010f15a75b37ebedbf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414031"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510587"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>比較同步處理資料結構與 Windows API
 
-本主題會比較同步處理資料結構所提供的 Windows API 所提供之並行執行階段的行為。
+本主題會比較並行執行階段所提供的同步處理資料結構與 Windows API 所提供的行為。
 
-並行執行階段所提供的同步處理資料結構遵循*合作式執行緒模型*。 在合作式執行緒模型中，同步處理原始物件來明確地產生它們的處理資源的其他執行緒。 這不同於*先佔式執行緒模型*，其中處理資源會轉移到其他執行緒所控制的排程器或作業系統。
+並行執行階段所提供的同步處理資料結構會遵循合作式*執行緒模型*。 在合作式執行緒模型中, 同步處理原始物件會明確地將其處理資源產生到其他執行緒。 這不同于*搶先式執行緒模型*, 其中處理資源會由控制排程器或作業系統傳輸到其他執行緒。
 
-## <a name="criticalsection"></a>critical_section
+## <a name="critical_section"></a>critical_section
 
-[Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)類別類似於 Windows`CRITICAL_SECTION`結構，因為它可供只能有一個處理序執行緒。 如需 Windows API 中的重要區段的詳細資訊，請參閱[重要區段物件](/windows/desktop/Sync/critical-section-objects)。
+[Concurrency:: critical_section](../../parallel/concrt/reference/critical-section-class.md)類別類似于 Windows `CRITICAL_SECTION`結構, 因為它只能由一個進程的執行緒使用。 如需 Windows API 中重要區段的詳細資訊, 請參閱[重要區段物件](/windows/win32/Sync/critical-section-objects)。
 
-## <a name="readerwriterlock"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a>reader_writer_lock
 
-[Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)類別類似於 Windows 輕型讀取器/寫入器 (SRW) 鎖定。 下表說明的相似性與差異。
+[Concurrency:: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)類別類似于 Windows 超薄讀取器/寫入器 (SRW) 鎖定。 下表說明兩者的相似性和差異。
 
 |功能|`reader_writer_lock`|SRW 鎖定|
 |-------------|--------------------------|--------------|
-|非可重新進入|是|是|
-|可以升級至寫入器 （升級支援） 的讀取器|否|否|
-|可以降級的讀取器 （不支援降級） 的寫入器|否|否|
+|不可重新進入|是|是|
+|可以將讀取器升級為寫入器 (升級支援)|否|否|
+|可以將寫入器降級為讀取器 (降級支援)|否|否|
 |寫入喜好設定鎖定|是|否|
-|寫入器的 FIFO 存取|是|否|
+|對寫入器的 FIFO 存取|是|否|
 
-如需 SRW 鎖定的詳細資訊，請參閱[輕型讀取器/寫入器 (SRW) 鎖定](https://msdn.microsoft.com/library/windows/desktop/aa904937)平台 SDK 中。
+如需 SRW 鎖定的詳細資訊, 請參閱 Platform SDK 中的[超薄讀取器/寫入器 (SRW) 鎖定](/windows/win32/sync/slim-reader-writer--srw--locks)。
 
-## <a name="event"></a>Event - 事件
+## <a name="event"></a>event
 
-[Concurrency:: event](../../parallel/concrt/reference/event-class.md)類別類似於未命名的 Windows 手動重設事件。 不過，`event`物件行為以合作方式，而 Windows 事件事先行為。 如需有關 Windows 事件的詳細資訊，請參閱 <<c0> [ 事件物件](/windows/desktop/Sync/event-objects)。
+[Concurrency:: 事件](../../parallel/concrt/reference/event-class.md)類別類似于未命名的 Windows 手動重設事件。 不過, `event`物件會以合作方式運作, 而 Windows 事件的行為事先。 如需 Windows 事件的詳細資訊, 請參閱[事件物件](/windows/win32/Sync/event-objects)。
 
 ## <a name="example"></a>範例
 
-### <a name="description"></a>描述
+### <a name="description"></a>說明
 
-若要深入了解之間的差異`event`類別和 Windows 事件，請考慮下列的範例。 這個範例會啟用排程器，建立最多兩項同時工作，然後呼叫類似的兩個函式使用`event`類別和 Windows 的手動重設事件。 每個函式會先建立等候共用的事件變成收到訊號的幾項工作。 每個函式接著會產生要執行的工作，然後發出訊號的事件。 每個函式然後等候信號的事件。
+若要進一步瞭解`event`類別和 Windows 事件之間的差異, 請考慮下列範例。 這個範例可讓排程器建立最多兩個同時執行的工作, 然後呼叫使用`event`類別和 Windows 手動重設事件的兩個類似函式。 每個函式會先建立數個等待共用事件變成信號的工作。 然後, 每個函式都會產生執行中的工作, 然後對事件發出信號。 然後, 每個函式都會等候訊號事件。
 
 ### <a name="code"></a>程式碼
 
@@ -52,7 +52,7 @@ ms.locfileid: "62414031"
 
 ### <a name="comments"></a>註解
 
-此範例會產生下列的範例輸出：
+這個範例會產生下列範例輸出:
 
 ```Output
 Cooperative event:
@@ -81,9 +81,9 @@ Windows event:
     Context 13: received the event.
 ```
 
-因為`event`類別的行為以合作方式，排程器可以重新配置到另一個內容的處理資源，當事件在等候輸入收到信號的狀態。 因此，所使用的版本來完成更多工作`event`類別。 在使用 Windows 事件的版本，之後才啟動下一個工作每個等待中工作時，必須輸入收到信號的狀態。
+`event`因為類別會以合作方式運作, 所以排程器可以在事件等候進入已發出信號的狀態時, 將處理資源重新配置給另一個內容。 因此, 使用`event`類別的版本會完成更多工具。 在使用 Windows 事件的版本中, 每個等待工作都必須進入 [已通知] 狀態, 然後才會啟動下一個工作。
 
-如需有關工作的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+如需工作的詳細資訊, 請參閱工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則。
 
 ## <a name="see-also"></a>另請參閱
 

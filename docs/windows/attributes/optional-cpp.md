@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - optional attribute
 ms.assetid: 86656a66-8e11-4589-8e30-9b0f34eeed03
-ms.openlocfilehash: bc6422ff652cfaba5fa71285294b93c1f0e8990e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7891d75adbfeba0d91d4a3aed60423975838951f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407584"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514353"
 ---
 # <a name="optional-c"></a>optional (C++)
 
-指定的成員函式的選擇性參數。
+指定成員函式的選擇性參數。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407584"
 
 ## <a name="remarks"></a>備註
 
-**選擇性**C++屬性具有相同的功能[選擇性](/windows/desktop/Midl/optional)MIDL 屬性。
+**選擇性** C++屬性的功能與[選擇性](/windows/win32/Midl/optional)的 MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何**選擇性**可能會使用：
+下列程式碼顯示可能使用**選擇性**的方式:
 
 ```cpp
 // cpp_attr_ref_optional.cpp

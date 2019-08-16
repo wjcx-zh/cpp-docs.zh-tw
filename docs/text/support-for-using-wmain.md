@@ -8,30 +8,30 @@ helpviewer_keywords:
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-ms.openlocfilehash: f4705e65551b57e3e52c0c8f060032a93280f67d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4af389c00f6065df631f891dadcb0b2f350f984d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410534"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491191"
 ---
 # <a name="support-for-using-wmain"></a>wmain 使用的支援
 
-視覺化C++支援定義**wmain**函式，並將寬字元引數傳遞至您的 Unicode 應用程式。 宣告型式參數**wmain**，使用格式類似於`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如：
+Visual C++支援定義**wmain**函式, 並將寬字元引數傳遞至您的 Unicode 應用程式。 您可以使用類似于 `main`的格式, 將正式參數宣告為 wmain。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **wmain** 的 `argv` 與 `envp` 參數都是 `wchar_t*` 類型。 例如：
 
 ```cpp
 wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]
-> MFC Unicode 應用程式使用`wWinMain`做為進入點。 在此情況下，`CWinApp::m_lpCmdLine`是 Unicode 字串。 請務必設定`wWinMainCRTStartup`具有[/ENTRY](../build/reference/entry-entry-point-symbol.md)連結器選項。
+> MFC Unicode 應用程式`wWinMain`會使用做為進入點。 在此情況下`CWinApp::m_lpCmdLine` , 是 Unicode 字串。 請務必使用`wWinMainCRTStartup` [/ENTRY](../build/reference/entry-entry-point-symbol.md)連結器選項設定。
 
-如果您的程式使用 **main** 函式，則多位元組字元環境就會在程式啟動時由執行階段程式庫建立。 環境的寬字元複本只有在需要時才建立 (例如，藉著呼叫 `_wgetenv` 或 `_wputenv` 函式)。 在第一次呼叫`_wputenv`，或在第一個呼叫`_wgetenv`如果 MBCS 環境已經存在，會建立對應的寬字元字串環境。 環境則指向`_wenviron`全域變數，也就是寬字元版本的`_environ`全域變數。 到目前為止，兩個複本 （MBCS 和 Unicode） 環境的同時存在，且會由執行階段系統維護程式的生命週期。
+如果您的程式使用 **main** 函式，則多位元組字元環境就會在程式啟動時由執行階段程式庫建立。 環境的寬字元複本只有在需要時才建立 (例如，藉著呼叫 `_wgetenv` 或 `_wputenv` 函式)。 在第一次呼叫`_wputenv` `_wgetenv`時, 或在第一次呼叫時, 如果 MBCS 環境已經存在, 則會建立對應的寬字元字串環境。 然後, `_wenviron`全域變數會指向該環境, 這是通用變數的寬字元版本`_environ` 。 此時, 環境的兩個複本 (MBCS 和 Unicode) 會同時存在, 並在程式的整個生命週期中由執行時間系統維護。
 
-同樣的，如果您的程式使用 **wmain** 函式，寬字元環境在程式啟動時建立，並且由 `_wenviron` 全域變數指著。 在第一個呼叫建立 MBCS (ASCII) 環境`_putenv`或是`getenv`和所指的`_environ`全域變數。
+同樣的，如果您的程式使用 **wmain** 函式，寬字元環境在程式啟動時建立，並且由 `_wenviron` 全域變數指著。 在第一次呼叫`_putenv`或`getenv` `_environ`時, 會建立 MBCS (ASCII) 環境, 並由全域變數指向。
 
 ## <a name="see-also"></a>另請參閱
 
 [Unicode 的支援](../text/support-for-unicode.md)<br/>
 [Unicode 程式設計摘要](../text/unicode-programming-summary.md)<br/>
-[WinMain 函式](/windows/desktop/api/winbase/nf-winbase-winmain)
+[WinMain 函式](/windows/win32/api/winbase/nf-winbase-winmain)

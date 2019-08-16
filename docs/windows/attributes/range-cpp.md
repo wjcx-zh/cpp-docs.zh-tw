@@ -1,21 +1,21 @@
 ---
-title: 範圍 (C++ COM 屬性)
+title: range (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.range
 helpviewer_keywords:
 - range attribute
 ms.assetid: f352f79e-ecb3-4cdd-9cdd-8406ef473594
-ms.openlocfilehash: 9ce941fe95f2bbef3895c039984db1e1d2985ae1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1221192eb1813d759f293fe5555d7aaa5b367ab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407480"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514149"
 ---
 # <a name="range-c"></a>range (C++)
 
-指定引數或在執行階段設定其值的欄位的允許值的範圍。
+針對在執行時間設定其值的引數或欄位, 指定允許的值範圍。
 
 ## <a name="syntax"></a>語法
 
@@ -26,14 +26,14 @@ ms.locfileid: "62407480"
 ### <a name="parameters"></a>參數
 
 *low*<br/>
-下限範圍值。
+低範圍的值。
 
 *high*<br/>
-高範圍的值。
+最大範圍值。
 
 ## <a name="remarks"></a>備註
 
-**範圍**C++屬性具有相同的功能[範圍](/windows/desktop/Midl/range)MIDL 屬性。
+**Range** C++屬性的功能與[範圍](/windows/win32/Midl/range)MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -57,10 +57,10 @@ __interface ICustom {
 
 |||
 |-|-|
-|**適用於**|介面方法，介面參數|
+|**適用於**|介面方法, 介面參數|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

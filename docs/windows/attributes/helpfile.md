@@ -1,21 +1,21 @@
 ---
-title: 說明檔案 (C++ COM 屬性)
+title: 説明 (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpfile
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 7aff6addffb13d2d45953d190eeaac518fe48d6d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409560"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501544"
 ---
 # <a name="helpfile"></a>helpfile
 
-設定型別程式庫的說明檔的名稱。
+設定類型程式庫的說明檔名稱。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409560"
 ### <a name="parameters"></a>參數
 
 *filename*<br/>
-包含 [說明] 主題的檔案名稱。
+包含說明主題的檔案名。
 
 ## <a name="remarks"></a>備註
 
-**Helpfile** C++屬性具有相同的功能[helpfile](/windows/desktop/Midl/helpfile) MIDL 屬性。
+[ C++提供人員] 屬性的功能與 [[説明](/windows/win32/Midl/helpfile)] MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[模組](module-cpp.md)如需如何使用的範例**helpfile**。
+如需如何使用「**説明**」的範例, 請參閱[module](module-cpp.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409560"
 
 |||
 |-|-|
-|**適用於**|**介面**， **typedef**，**類別**，方法中，**屬性**|
+|**適用於**|**介面**、 **typedef**、**類別**、方法、**屬性**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

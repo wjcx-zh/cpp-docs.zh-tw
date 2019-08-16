@@ -8,44 +8,44 @@ helpviewer_keywords:
 - notifications [MFC], tool tips
 - tool tips [MFC], notifications
 ms.assetid: d0370a65-21ba-4676-bcc5-8cf851bbb15c
-ms.openlocfilehash: 97db98322cd7c0d14e46f54a055bbc646c90d785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63154f3da539676f31709899568b6486dc6017e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62240385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508523"
 ---
-# <a name="handling-ttnneedtext-notification-for-tool-tips"></a>處理工具提示的 TTN_NEEDTEXT 告知
+# <a name="handling-ttn_needtext-notification-for-tool-tips"></a>處理工具提示的 TTN_NEEDTEXT 告知
 
-做為一部分[啟用工具提示](../mfc/enabling-tool-tips.md)，您處理**TTN_NEEDTEXT**藉由將下列項目加入至主控視窗的訊息對應的訊息：
+[啟用工具提示](../mfc/enabling-tool-tips.md)時, 您可以藉由將下列專案新增至您的擁有者視窗的訊息對應, 來處理**TTN_NEEDTEXT**訊息:
 
 [!code-cpp[NVC_MFCControlLadenDialog#40](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_1.cpp)]
 
 *memberFxn*<br/>
-此按鈕需要文字時要呼叫此成員函式。
+當此按鈕需要文字時, 所要呼叫的成員函式。
 
-請注意，工具提示的識別碼一律為 0。
+請注意, 工具提示的識別碼一律為0。
 
-宣告您的處理常式函式，在類別定義如下所示：
+在類別定義中宣告您的處理常式函式, 如下所示:
 
 [!code-cpp[NVC_MFCControlLadenDialog#53](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_2.h)]
 
-其中的斜體的參數如下：
+其中的斜體參數如下:
 
 *id*<br/>
-傳送通知之控制項的識別項。 未使用。 控制項 id 取自**NMHDR**結構。
+傳送通知之控制項的識別碼。 未使用。 控制項識別碼取自**NMHDR**結構。
 
 *pNMHDR*<br/>
-指標[NMTTDISPINFO](/windows/desktop/api/commctrl/ns-commctrl-tagnmttdispinfoa)結構。 也會討論這個結構中進一步[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)。
+[NMTTDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmttdispinfow)結構的指標。 此結構也會在[TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)中進一步討論。
 
 *pResult*<br/>
-您設定的指標，結果程式碼前您傳回。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。
+您可以在傳回之前設定的結果程式碼指標。 **TTN_NEEDTEXT**處理常式可以忽略*pResult*參數。
 
-表單檢視的通知處理常式的範例：
+表單檢視通知處理常式的範例如下:
 
 [!code-cpp[NVC_MFCControlLadenDialog#54](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_3.cpp)]
 
-呼叫`EnableToolTips`(取自此片段`OnInitDialog`):
+呼叫`EnableToolTips` (此片段`OnInitDialog`取自):
 
 [!code-cpp[NVC_MFCControlLadenDialog#55](../mfc/codesnippet/cpp/handling-ttn-needtext-notification-for-tool-tips_4.cpp)]
 

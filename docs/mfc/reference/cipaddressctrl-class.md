@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe8e3109b110c27ab32dc1a4f9a132f1e1c18638
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392592"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505821"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl 類別
 
@@ -45,30 +45,30 @@ class CIPAddressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CIPAddressCtrl::CIPAddressCtrl](#cipaddressctrl)|建構 `CIPAddressCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|清除 IP 位址控制項的內容。|
-|[CIPAddressCtrl::Create](#create)|建立 IP 位址控制項，並將它附加至`CIPAddressCtrl`物件。|
-|[CIPAddressCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式建立的 IP 位址控制項，並將它附加至`CIPAddressCtrl`物件。|
-|[CIPAddressCtrl::GetAddress](#getaddress)|擷取 IP 位址控制項中的所有四個欄位的位址值。|
-|[CIPAddressCtrl::IsBlank](#isblank)|判斷 IP 位址控制項中的所有欄位都是否空白。|
-|[CIPAddressCtrl::SetAddress](#setaddress)|設定 IP 位址控制項中的所有四個欄位的位址值。|
-|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|將鍵盤焦點設定為 IP 位址控制項中的指定欄位。|
-|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|在 IP 位址控制項中指定的欄位會設定範圍。|
+|[CIPAddressCtrl::Create](#create)|建立 IP 位址控制項, 並將它附加至`CIPAddressCtrl`物件。|
+|[CIPAddressCtrl::CreateEx](#createex)|使用指定的 Windows 擴充樣式建立 IP 位址控制項, 並將其附加至`CIPAddressCtrl`物件。|
+|[CIPAddressCtrl::GetAddress](#getaddress)|抓取 IP 位址控制中所有四個欄位的位址值。|
+|[CIPAddressCtrl::IsBlank](#isblank)|判斷 IP 位址控制項中的所有欄位是否都是空的。|
+|[CIPAddressCtrl::SetAddress](#setaddress)|設定 IP 位址控制中所有四個欄位的位址值。|
+|[CIPAddressCtrl::SetFieldFocus](#setfieldfocus)|將鍵盤焦點設定為 IP 位址控制中的指定欄位。|
+|[CIPAddressCtrl::SetFieldRange](#setfieldrange)|設定 IP 位址控制中指定欄位內的範圍。|
 
 ## <a name="remarks"></a>備註
 
-為 IP 位址控制項，類似於編輯控制項，控制項可讓您輸入及管理以網際網路通訊協定 (IP) 格式的數值位址。
+IP 位址控制 (類似于編輯控制項的控制項) 可讓您輸入和操作網際網路通訊協定 (IP) 格式的數位位址。
 
-這個控制項 (並因此`CIPAddressCtrl`類別) 僅適用於在 Microsoft Internet Explorer 4.0 和更新版本執行的程式。 它們也可在未來的版本的 Windows 和 Windows NT。
+這個控制項 (因此`CIPAddressCtrl`類別) 僅適用于在 Microsoft Internet Explorer 4.0 和更新版本下執行的程式。 未來的 Windows 和 Windows NT 版本也會提供這些功能。
 
-更多一般 IP 位址控制項的詳細資訊，請參閱[IP 位址控制項](/windows/desktop/Controls/ip-address-controls)Windows SDK 中。
+如需有關 IP 位址控制的一般資訊, 請參閱 Windows SDK 中的[Ip 位址控制項](/windows/win32/Controls/ip-address-controls)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -102,11 +102,11 @@ void ClearAddress();
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_CLEARADDRESS](/windows/desktop/Controls/ipm-clearaddress)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [IPM_CLEARADDRESS](/windows/win32/Controls/ipm-clearaddress)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="create"></a>  CIPAddressCtrl::Create
 
-建立 IP 位址控制項，並將它附加至`CIPAddressCtrl`物件。
+建立 IP 位址控制項, 並將它附加至`CIPAddressCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -119,34 +119,34 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for windows 樣式的清單。
+IP 位址控制項的樣式。 套用視窗樣式的組合。 您必須包含 WS_CHILD 樣式, 因為控制項必須是子視窗。 如需 Windows 樣式的清單, 請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 *rect*<br/>
-IP 位址控制項的大小和位置參考。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
+IP 位址控制項的大小和位置的參考。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
-IP 位址控制項的父視窗的指標。 它必須不是 NULL。
+IP 位址控制項的父視窗指標。 不得為 Null。
 
 *nID*<br/>
-IP 位址控制項的 id。
+IP 位址控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果初始化成功;否則為 0。
+如果初始化成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-您建構`CIPAddressCtrl`兩個步驟中的物件。
+您可以使用`CIPAddressCtrl`兩個步驟來建立物件。
 
-1. 呼叫建構函式，這會建立`CIPAddressCtrl`物件。
+1. 呼叫會建立`CIPAddressCtrl`物件的函式。
 
-1. 呼叫`Create`，這會建立 IP 位址控制項。
+1. 呼叫`Create`, 它會建立 IP 位址控制項。
 
-如果您想要使用擴充的 windows 樣式和控制項，呼叫[CreateEx](#createex)而不是`Create`。
+如果您想要搭配控制項使用擴充的 windows 樣式, 請呼叫[CreateEx](#createex) , `Create`而不是。
 
 ##  <a name="createex"></a>  CIPAddressCtrl::CreateEx
 
-呼叫此函式來建立控制項 （子視窗），但其關聯`CIPAddressCtrl`物件。
+呼叫這個函式以建立控制項 (子視窗), 並將它與`CIPAddressCtrl`物件產生關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -160,16 +160,16 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定正在建立之控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+指定所要建立之控制項的延伸樣式。 如需擴充 Windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必須是子視窗，您必須包含 WS_CHILD 樣式。 請參閱[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows sdk for windows 樣式的清單。
+IP 位址控制項的樣式。 套用視窗樣式的組合。 您必須包含 WS_CHILD 樣式, 因為控制項必須是子視窗。 如需 Windows 樣式的清單, 請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 *rect*<br/>
-參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考, 描述要建立之視窗的大小和位置, 以*pParentWnd*的用戶端座標表示。
 
 *pParentWnd*<br/>
-是控制項的父視窗的指標。
+做為控制項父系之視窗的指標。
 
 *nID*<br/>
 控制項的子視窗識別碼。
@@ -180,11 +180,11 @@ IP 位址控制項的樣式。 套用視窗樣式的組合。 因為控制項必
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式，由 Windows 延伸的樣式前置詞**WS_EX_**。
+使用`CreateEx` , 而不是[Create](#create)來套用擴充的 windows 樣式 (由 Windows 擴充樣式指定于**WS_EX_** 的前面)。
 
 ##  <a name="getaddress"></a>  CIPAddressCtrl::GetAddress
 
-擷取 IP 位址控制項中的所有四個欄位的位址值。
+抓取 IP 位址控制中所有四個欄位的位址值。
 
 ```
 int GetAddress(
@@ -199,38 +199,38 @@ int GetAddress(DWORD& dwAddress);
 ### <a name="parameters"></a>參數
 
 *nField0*<br/>
-從壓縮的 IP 位址欄位 0 值參考。
+來自已封裝 IP 位址之欄位0值的參考。
 
 *nField1*<br/>
-從壓縮的 IP 位址欄位 1 值參考。
+來自已封裝 IP 位址之欄位1值的參考。
 
 *nField2*<br/>
-從壓縮的 IP 位址欄位 2 值參考。
+來自已封裝 IP 位址之欄位2值的參考。
 
 *nField3*<br/>
-從壓縮的 IP 位址欄位 3 值參考。
+來自已封裝 IP 位址之欄位3值的參考。
 
 *dwAddress*<br/>
-接收的 IP 位址的 DWORD 值的位址參考。 請參閱**備註**的資料表，其中顯示如何*dwAddress*填滿。
+接收 IP 位址的 DWORD 值之位址的參考。 如需顯示如何填滿*dwAddress*的表格, 請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-在 IP 位址控制項中的非空白欄位數目。
+IP 位址控制中非空白欄位的數目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddress)、 Windows SDK 中所述。 在上述第一個原型，讀取欄位 0 到 3 的控制項中的數字由左到右分別，填入的四個參數。 在上述的第二個原型*dwAddress*已填入，如下所示。
+此成員函式會執行 Win32 message [IPM_GETADDRESS](/windows/win32/Controls/ipm-getaddress)的行為, 如 Windows SDK 中所述。 在上述的第一個原型中, 控制項的欄位0到3中的數位會分別由左至右讀取, 以填入四個參數。 在上述的第二個原型中, *dwAddress*的填入方式如下。
 
-|欄位|包含欄位值的位元|
+|欄位|包含域值的位|
 |-----------|-------------------------------------|
-|0|24 到 31|
-|1|16 到 23|
-|2|8 到 15|
-|3|0 到 7|
+|0|24到31|
+|1|16到23|
+|2|8至15|
+|3|0到7|
 
-##  <a name="isblank"></a>  CIPAddressCtrl::IsBlank
+##  <a name="isblank"></a>CIPAddressCtrl:: IsBlank
 
-判斷 IP 位址控制項中的所有欄位都是否空白。
+判斷 IP 位址控制項中的所有欄位是否都是空的。
 
 ```
 BOOL IsBlank() const;
@@ -238,15 +238,15 @@ BOOL IsBlank() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果所有的 IP 位址控制項欄位是空的則為非零否則為 0。
+如果所有 IP 位址控制欄位都是空的, 則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_ISBLANK](/windows/desktop/Controls/ipm-isblank)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [IPM_ISBLANK](/windows/win32/Controls/ipm-isblank)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="setaddress"></a>  CIPAddressCtrl::SetAddress
 
-設定 IP 位址控制項中的所有四個欄位的位址值。
+設定 IP 位址控制中所有四個欄位的位址值。
 
 ```
 void SetAddress(
@@ -261,34 +261,34 @@ void SetAddress(DWORD dwAddress);
 ### <a name="parameters"></a>參數
 
 *nField0*<br/>
-從壓縮的 IP 位址欄位 0 值。
+來自已封裝 IP 位址的欄位0值。
 
 *nField1*<br/>
-從壓縮的 IP 位址欄位 1 值。
+來自已封裝 IP 位址的欄位1值。
 
 *nField2*<br/>
-從壓縮的 IP 位址欄位 2 值。
+來自已封裝 IP 位址的欄位2值。
 
 *nField3*<br/>
-從壓縮的 IP 位址欄位 3 值。
+來自已封裝 IP 位址的欄位3值。
 
 *dwAddress*<br/>
-包含新的 IP 位址的 DWORD 值。 請參閱**備註**如何填滿的 DWORD 值會顯示為資料表。
+DWORD 值, 其中包含新的 IP 位址。 如需顯示如何填滿 DWORD 值的資料表, 請參閱**備註**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_SETADDRESS](/windows/desktop/Controls/ipm-setaddress)、 Windows SDK 中所述。 在上述第一個原型，讀取欄位 0 到 3 的控制項中的數字由左到右分別，填入的四個參數。 在上述的第二個原型*dwAddress*已填入，如下所示。
+此成員函式會執行 Win32 message [IPM_SETADDRESS](/windows/win32/Controls/ipm-setaddress)的行為, 如 Windows SDK 中所述。 在上述的第一個原型中, 控制項的欄位0到3中的數位會分別由左至右讀取, 以填入四個參數。 在上述的第二個原型中, *dwAddress*的填入方式如下。
 
-|欄位|包含欄位值的位元|
+|欄位|包含域值的位|
 |-----------|-------------------------------------|
-|0|24 到 31|
-|1|16 到 23|
-|2|8 到 15|
-|3|0 到 7|
+|0|24到31|
+|1|16到23|
+|2|8至15|
+|3|0到7|
 
-##  <a name="setfieldfocus"></a>  CIPAddressCtrl::SetFieldFocus
+##  <a name="setfieldfocus"></a>CIPAddressCtrl::SetFieldFocus
 
-將鍵盤焦點設定為 IP 位址控制項中的指定欄位。
+將鍵盤焦點設定為 IP 位址控制中的指定欄位。
 
 ```
 void SetFieldFocus(WORD nField);
@@ -297,15 +297,15 @@ void SetFieldFocus(WORD nField);
 ### <a name="parameters"></a>參數
 
 *nField*<br/>
-以零為起始的欄位應該設定焦點的索引。 如果此值大於欄位數目，會將焦點設的第一個空白欄位。 如果所有的欄位是 非空白，會將焦點設第一個欄位。
+應設定焦點之以零為起始的欄位索引。 如果這個值大於欄位數目, 焦點就會設為第一個空白欄位。 如果所有欄位都不是空白, 則焦點會設定為第一個欄位。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_SETFOCUS](/windows/desktop/Controls/ipm-setfocus)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [IPM_SETFOCUS](/windows/win32/Controls/ipm-setfocus)的行為, 如 Windows SDK 中所述。
 
-##  <a name="setfieldrange"></a>  CIPAddressCtrl::SetFieldRange
+##  <a name="setfieldrange"></a>CIPAddressCtrl::SetFieldRange
 
-在 IP 位址控制項中指定的欄位會設定範圍。
+設定 IP 位址控制中指定欄位內的範圍。
 
 ```
 void SetFieldRange(
@@ -317,17 +317,17 @@ void SetFieldRange(
 ### <a name="parameters"></a>參數
 
 *nField*<br/>
-將套用該範圍的以零為起始的欄位索引。
+以零為基底的欄位索引, 將套用範圍。
 
 *nLower*<br/>
-在此 IP 位址控制項中接收指定之欄位的下限的整數參考。
+在此 IP 位址控制中, 接收指定欄位之下限的整數參考。
 
 *nUpper*<br/>
-在此 IP 位址控制項中接收指定之欄位的上限的整數參考。
+在此 IP 位址控制中, 接收指定欄位上限的整數參考。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[IPM_SETRANGE](/windows/desktop/Controls/ipm-setrange)、 Windows SDK 中所述。 您可以使用兩個參數， *nLower*並*nUpper*，以指出的下限和上限的限制和欄位，而不是*wRange*參數搭配的 Win32 訊息。
+此成員函式會執行 Win32 message [IPM_SETRANGE](/windows/win32/Controls/ipm-setrange)的行為, 如 Windows SDK 中所述。 使用*nLower*和*nUpper*這兩個參數, 表示欄位的下限和上限, 而不是與 Win32 訊息搭配使用的*wRange*參數。
 
 ## <a name="see-also"></a>另請參閱
 

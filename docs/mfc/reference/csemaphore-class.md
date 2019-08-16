@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d5a0e4187107aaab7cedf4e7a0e2fc47b9f9f305
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504705"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502588"
 ---
 # <a name="csemaphore-class"></a>CSemaphore 類別
 
-類別的物件`CSemaphore`表示 「 信號 」 — 允許有限的數目的執行緒在存取持續的一或多個處理序的目前存取指定的資源的執行緒數目的同步處理物件。
+類別`CSemaphore`的物件代表「信號」, 這是一個或多個處理常式中允許有限數目的執行緒來存取的同步處理物件, 它會維護目前存取指定資源的執行緒數目計數。
 
 ## <a name="syntax"></a>語法
 
@@ -35,17 +35,17 @@ class CSemaphore : public CSyncObject
 
 ## <a name="remarks"></a>備註
 
-號誌可用於控制只能支援有限的數目的使用者共用資源的存取權。 目前的計數`CSemaphore`物件是允許其他使用者的數目。 當計數到達零時，所有嘗試使用所控制的資源`CSemaphore`物件就會插入到系統佇列，並等到它們其中一個逾時時間或計數高於 0。 在建構期間指定的使用者可以一次存取受控制的資源數目上限`CSemaphore`物件。
+信號在控制共用資源的存取時很有用, 只支援數量有限的使用者。 `CSemaphore`物件的目前計數是允許的其他使用者數目。 當計數達到零時, 所有使用`CSemaphore`物件所控制之資源的嘗試都會插入到系統佇列中, 並等到其超時或計數高於0為止。 在`CSemaphore`物件的結構中, 會指定一次可存取受控制資源的使用者數目上限。
 
-若要使用`CSemaphore`物件，建構`CSemaphore`物件時需要它。 指定您想要等候，號誌的名稱和您的應用程式應該一開始所擁有。 然後，建構函式傳回時，您可以存取號誌。 呼叫[CSyncObject::Unlock](../../mfc/reference/csyncobject-class.md#unlock)完成時存取控制的資源。
+若要使用`CSemaphore`物件, 請在`CSemaphore`需要時建立物件。 指定您想要等候的信號名稱, 並讓您的應用程式一開始就擁有它。 接著, 您可以在此函式傳回時存取信號。 當您完成存取受控制的資源時, 請呼叫[CSyncObject:: Unlock](../../mfc/reference/csyncobject-class.md#unlock) 。
 
-使用替代方法`CSemaphore`物件是新增類型的變數`CSemaphore`以您想要控制的類別資料成員。 在建構期間之受控制的物件，呼叫的建構函式`CSemaphore`指定初始的資料成員存取計數、 最高存取權的計數、 號誌 （如果它將會使用跨處理序界限） 的名稱，以及所需的安全性屬性。
+使用`CSemaphore`物件的替代方法是將類型`CSemaphore`的變數當做資料成員加入至您要控制的類別。 在結構控制物件的建立期間, 呼叫`CSemaphore`資料成員的函式, 以指定初始存取計數、最大存取計數、信號名稱 (如果它將跨進程界限使用), 以及所需的安全性屬性。
 
-存取控制的資源`CSemaphore`物件，如此一來，在第一次建立的其中一種類型的變數[CSingleLock](../../mfc/reference/csinglelock-class.md)或型別[CMultiLock](../../mfc/reference/cmultilock-class.md)在您的資源存取成員函式。 然後呼叫之鎖定物件的`Lock`成員函式 (例如[CSingleLock::Lock](../../mfc/reference/csinglelock-class.md#lock))。 此時，您的執行緒會取得資源的存取權，等待資源釋出，並存取應用程式，或等候的資源釋出和逾時，無法取得資源的存取權。 在任何情況下，您的資源已存取具備執行緒安全的方式。 若要釋放資源，使用 鎖定物件的`Unlock`成員函式 (例如[CSingleLock::Unlock](../../mfc/reference/csinglelock-class.md#unlock))，或允許超出範圍的鎖定物件。
+若要以這種`CSemaphore`方式存取物件所控制的資源, 請先在資源的存取成員函式中建立類型為[CSingleLock](../../mfc/reference/csinglelock-class.md)或類型為[CMultiLock](../../mfc/reference/cmultilock-class.md)的變數。 然後呼叫鎖定物件的`Lock`成員函式 (例如[CSingleLock:: lock](../../mfc/reference/csinglelock-class.md#lock))。 此時, 您的執行緒會取得資源的存取權、等待資源釋放並取得存取權, 或等待資源釋放並超時, 而無法取得資源的存取權。 在任何情況下, 您的資源都是以執行緒安全的方式存取。 若要釋放資源, 請使用鎖定物件的`Unlock`成員函式 (例如, [CSingleLock:: Unlock](../../mfc/reference/csinglelock-class.md#unlock)), 或允許鎖定物件超出範圍。
 
-或者，您可以建立`CSemaphore`物件獨立的並嘗試存取受控制的資源之前明確地存取它。 此方法，並清楚給其他人讀取您的原始程式碼，是更容易發生錯誤。
+或者, 您可以建立獨立`CSemaphore`的物件, 並明確地存取它, 然後再嘗試存取受控制的資源。 這個方法雖然對閱讀原始程式碼的人更清楚, 但更容易發生錯誤。
 
-如需有關如何使用`CSemaphore`物件，請參閱文章[多執行緒：如何使用同步類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
+如需如何使用`CSemaphore`物件的詳細資訊, 請參閱[多執行緒:如何使用同步處理類別](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -57,11 +57,11 @@ class CSemaphore : public CSyncObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmt.h
+**標頭:** afxmt。h
 
-##  <a name="csemaphore"></a>  CSemaphore::CSemaphore
+##  <a name="csemaphore"></a>CSemaphore::CSemaphore
 
-建構具名或未命名`CSemaphore`物件。
+構造已命名或未`CSemaphore`命名的物件。
 
 ```
 CSemaphore(
@@ -74,23 +74,23 @@ CSemaphore(
 ### <a name="parameters"></a>參數
 
 *lInitialCount*<br/>
-號誌初始的使用計數。 必須是大於或等於 0，且小於或等於*lMaxCount*。
+信號的初始使用計數。 必須大於或等於 0, 且小於或等於*lMaxCount*。
 
 *lMaxCount*<br/>
-號誌的最大使用量計數。 必須大於 0。
+信號的最大使用量計數。 必須大於 0。
 
 *pstrName*<br/>
-號誌的名稱。 如果將會跨處理序界限來存取號誌，必須提供。 如果`NULL`，物件會是未命名。 如果名稱符合現有的旗號，建構函式會建置新`CSemaphore`參考該名稱的號誌的物件。 如果名稱符合現有的同步處理物件，不是號誌，建構將會失敗。
+信號的名稱。 如果要跨進程界限存取信號, 就必須提供。 如果`NULL`為, 則物件將為未命名。 如果名稱符合現有的信號, 則此函式會建立`CSemaphore`參考該名稱之信號的新物件。 如果名稱符合不是信號的現有同步處理物件, 則結構將會失敗。
 
 *lpsaAttributes*<br/>
-號誌物件的安全性屬性。 如需這個結構的完整說明，請參閱[SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) Windows SDK 中。
+信號物件的安全性屬性。 如需此結構的完整說明, 請參閱 Windows SDK 中的[security attributes 這個](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\))。
 
 ### <a name="remarks"></a>備註
 
-存取或釋放`CSemaphore`物件，建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件並呼叫其[鎖定](../../mfc/reference/csinglelock-class.md#lock)並[解除鎖定](../../mfc/reference/csinglelock-class.md#unlock)成員函式。
+若要存取或釋放`CSemaphore`物件, 請建立[CMultiLock](../../mfc/reference/cmultilock-class.md)或[CSingleLock](../../mfc/reference/csinglelock-class.md)物件, 並呼叫其[Lock](../../mfc/reference/csinglelock-class.md#lock)和[Unlock](../../mfc/reference/csinglelock-class.md#unlock)成員函式。
 
 > [!IMPORTANT]
->  在建立後`CSemaphore`物件，請使用[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)以確保該 mutex 不存在。 如果存在非預期地 mutex，可能表示處理序會佔用，而且可能會想要進行惡意使用 mutex。 在此情況下，建議的注重安全性的程序會關閉控制代碼，並繼續如同在建立物件時發生失敗。
+>  建立`CSemaphore`物件之後, 請使用[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來確保 mutex 不存在。 如果 mutex 意外存在, 可能表示有惡意的進程佔用, 而且可能會有意使用此 mutex。 在此情況下, 建議的安全性意識程式是關閉控制碼, 並繼續執行, 就像建立物件失敗一樣。
 
 ## <a name="see-also"></a>另請參閱
 

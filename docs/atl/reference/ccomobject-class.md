@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2051932413d8658eb7cedb67ed0eab2077b599d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246335"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497140"
 ---
 # <a name="ccomobject-class"></a>CComObject 類別
 
-這個類別會實作`IUnknown`非彙總的物件。
+這個類別`IUnknown`會針對非匯總物件進行。
 
 ## <a name="syntax"></a>語法
 
@@ -32,8 +32,8 @@ class CComObject : public Base
 
 #### <a name="parameters"></a>參數
 
-*基底*<br/>
-您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
+*群體*<br/>
+衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)的類別, 以及您想要在物件上支援的其他任何介面。
 
 ## <a name="members"></a>成員
 
@@ -48,16 +48,16 @@ class CComObject : public Base
 
 |名稱|描述|
 |----------|-----------------|
-|[CComObject::AddRef](#addref)|遞增參考計數物件上。|
-|[CComObject::CreateInstance](#createinstance)|（靜態）建立新`CComObject`物件。|
+|[CComObject::AddRef](#addref)|遞增物件上的參考計數。|
+|[CComObject::CreateInstance](#createinstance)|靜止建立新`CComObject`的物件。|
 |[CComObject::QueryInterface](#queryinterface)|擷取所要求介面的指標。|
-|[CComObject::Release](#release)|遞減參考計數物件。|
+|[CComObject::Release](#release)|遞減物件上的參考計數。|
 
 ## <a name="remarks"></a>備註
 
-`CComObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非彙總的物件。 不過，呼叫`QueryInterface`， `AddRef`，並`Release`委派給`CComObjectRootEx`。
+`CComObject`執行非匯總物件的[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。 不過, 對`QueryInterface`、 `AddRef`和`Release`的呼叫會委派給`CComObjectRootEx`。
 
-如需使用詳細資訊`CComObject`，請參閱文章[ATL COM 物件的基本概念](../../atl/fundamentals-of-atl-com-objects.md)。
+如需使用`CComObject`的詳細資訊, 請參閱[ATL COM 物件的基本概念一](../../atl/fundamentals-of-atl-com-objects.md)文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -67,11 +67,11 @@ class CComObject : public Base
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
 ##  <a name="addref"></a>  CComObject::AddRef
 
-遞增參考計數物件上。
+遞增物件上的參考計數。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -79,11 +79,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>傳回值
 
-此函數會傳回新的遞增的參考計數物件上。 此值可能適用於診斷或測試。
+此函式會傳回物件上新遞增的參考計數。 這個值可能有助於診斷或測試。
 
 ##  <a name="ccomobject"></a>  CComObject::CComObject
 
-建構函式會遞增模組鎖定計數。
+此函式會遞增模組鎖定計數。
 
 ```
 CComObject(void* = NULL);
@@ -92,13 +92,13 @@ CComObject(void* = NULL);
 ### <a name="parameters"></a>參數
 
 <em>void\*</em><br/>
-[in]不使用這個未命名的參數。 存在與其他對稱`CComXXXObjectXXX`建構函式。
+在未使用這個未命名的參數。 它存在於與其他`CComXXXObjectXXX`的函式的對稱。
 
 ### <a name="remarks"></a>備註
 
-解構函式會遞減它。
+此函式會將它遞減。
 
-如果`CComObject`-使用成功建構衍生的物件**新**運算子，初始參考計數為 0。 若要設定為適當的值 (1) 的參考計數，請呼叫[AddRef](#addref)函式。
+如果衍生的物件成功使用 new 運算子進行結構化, 則初始參考計數為0。 `CComObject` 若要將參考計數設定為適當的值 (1), 請呼叫[AddRef](#addref)函數。
 
 ##  <a name="dtor"></a>  CComObject::~CComObject
 
@@ -110,11 +110,11 @@ CComObject();
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源，呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)，並遞減模組鎖定計數。
+釋放所有配置的資源、呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease), 並遞減模組鎖定計數。
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 
-此靜態函式可讓您建立新**CComObject <** `Base` **>** 物件，而不需要的額外負荷[CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance)。
+此靜態函式可讓您建立新的**CComObject <** `Base` **>** 物件, 而不會產生[CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance)的額外負荷。
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -123,7 +123,7 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 ### <a name="parameters"></a>參數
 
 *pp*<br/>
-[out]指標**CComObject <** `Base` **>** 指標。 如果`CreateInstance`不成功， *pp*設為 NULL。
+脫銷指向**CComObject <** `Base` **>** 指標的指標。 如果`CreateInstance`不成功, *pp*會設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -131,9 +131,9 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="remarks"></a>備註
 
-傳回的物件擁有的參考計數為零，因此呼叫`AddRef`立即執行，然後使用`Release`釋放物件指標的參考，當您完成時。
+傳回的物件具有的參考計數為零, 因此, `AddRef`當您完成時`Release` , 請立即呼叫, 然後使用釋放物件指標的參考。
 
-如果您執行不需要直接存取物件，但仍想要建立新的物件，而不需要的額外負荷`CoCreateInstance`，使用[CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance)改。
+如果您不需要直接存取物件, 但仍想要建立新的物件`CoCreateInstance`, 而沒有額外負荷, 請改用[CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) 。
 
 ### <a name="example"></a>範例
 
@@ -154,21 +154,21 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]所要求的介面識別碼。
+在所要求之介面的識別碼。
 
 *ppvObject*<br/>
-[out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
+脫銷*Iid*所識別之介面指標的指標。 如果物件不支援這個介面, *ppvObject*會設定為 Null。
 
 *pp*<br/>
-[out]依類型識別之介面指標的指標`Q`。 如果物件不支援這個介面， *pp*設為 NULL。
+脫銷類型`Q`所識別之介面指標的指標。 如果物件不支援這個介面, 則會將*pp*設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
 標準的 HRESULT 值。
 
-##  <a name="release"></a>  CComObject::Release
+##  <a name="release"></a>CComObject:: Release
 
-遞減參考計數物件。
+遞減物件上的參考計數。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -176,7 +176,7 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>傳回值
 
-此函數會傳回新的遞減參考計數物件上。 在偵錯組建中，傳回的值可能有助於診斷或測試。 在非偵錯組建中，`Release`一律會傳回 0。
+此函數會傳回物件上新的遞減參考計數。 在 debug 組建中, 傳回值可能有助於診斷或測試。 在非 debug 組建中, `Release`一律會傳回0。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -184,4 +184,4 @@ STDMETHOD_(ULONG, Release)();
 [CComPolyObject 類別](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

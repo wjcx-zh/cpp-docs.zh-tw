@@ -238,17 +238,17 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403878"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505460"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
 實作索引標籤式視窗的基本功能。
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -260,7 +260,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CMFCBaseTabCtrl::AddIcon](#addicon)||
 |[CMFCBaseTabCtrl::AddTab](#addtab)|將新的索引標籤加入至索引標籤式視窗。|
@@ -348,7 +348,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::OnDragOver](#ondragover)||
 |[CMFCBaseTabCtrl::OnDrop](#ondrop)||
 |[CMFCBaseTabCtrl::OnRenameTab](#onrenametab)||
-|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|
+|[CMFCBaseTabCtrl::PreTranslateMessage](#pretranslatemessage)|[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。 (覆寫 [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)。)|
 |[CMFCBaseTabCtrl::RecalcLayout](#recalclayout)|重新計算索引標籤式視窗的內部配置。|
 |[CMFCBaseTabCtrl::RemoveAllTabs](#removealltabs)|從索引標籤式視窗中移除所有索引標籤。|
 |[CMFCBaseTabCtrl::RemoveTab](#removetab)|從索引標籤式視窗中移除一個索引標籤。|
@@ -393,7 +393,7 @@ class CMFCBaseTabCtrl : public CWnd
 
 `CMFCBaseTabCtrl` 類別是抽象類別。 因此，無法具現化。 若要建立索引標籤式視窗，您必須從 `CMFCBaseTabCtrl`衍生類別。 MFC 程式庫包含一些衍生類別的範例，其中兩個是 [CMFCTabCtrl Class](../../mfc/reference/cmfctabctrl-class.md) 和 [CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)。
 
-從 Visual Studio 2015 開始，此類別支援 Microsoft Active Accessibility。
+從 Visual Studio 2015 開始, 這個類別支援 Microsoft Active Accessibility。
 
 ## <a name="customization-tips"></a>自訂秘訣
 
@@ -421,9 +421,9 @@ class CMFCBaseTabCtrl : public CWnd
 
 **標頭：** afxbasetabctrl.h
 
-##  <a name="addicon"></a>  CMFCBaseTabCtrl::AddIcon
+##  <a name="addicon"></a>CMFCBaseTabCtrl:: AddIcon
 
-將圖示新增至在受保護的圖示清單`CMap m_mapAddedIcons`成員。
+將圖示新增至受保護`CMap m_mapAddedIcons`成員中的圖示清單。
 
 ```
 void AddIcon(
@@ -434,10 +434,10 @@ void AddIcon(
 ### <a name="parameters"></a>參數
 
 *hIcon*<br/>
-[in]要加入圖示控制代碼。
+在要加入之圖示的控制碼。
 
 *iIcon*<br/>
-[in]以零起始的索引，在受保護的圖示`CImageList m_Images`成員。
+在受保護`CImageList m_Images`成員中圖示以零為基底的索引。
 
 ### <a name="remarks"></a>備註
 
@@ -462,25 +462,25 @@ virtual void AddTab(
 ### <a name="parameters"></a>參數
 
 *pTabWnd*<br/>
-[in]這個方法表示為新的索引標籤視窗的指標。
+在這個方法表示為新索引標籤之視窗的指標。
 
 *lpszTabLabel*<br/>
-[in]字串，包含新的索引標籤的標籤。
+在包含新索引標籤的字串。
 
 *uiImageId*<br/>
-[in]從影像清單的映像識別碼。 索引標籤控制項的新索引標籤為圖示使用此映像。
+在影像清單中的影像識別碼。 此索引標籤控制項使用此影像做為新索引標籤的圖示。
 
 *uiResTabLabel*<br/>
-[in]標籤的資源識別碼。
+在標籤的資源識別碼。
 
 *bDetachable*<br/>
-[in]布林值參數，判斷是否可以中斷連結的新索引標籤。
+在布林值參數, 決定是否可卸離新的索引標籤。
 
 ### <a name="remarks"></a>備註
 
-如果*pTabWnd*指向的物件，不衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)如果*bDetachable*為 TRUE 時，架構會自動建立的包裝函式*pTabWnd*物件。 包裝函式可讓*pTabWnd*物件中斷連結。 根據預設，包裝函式是的執行個體[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)。 如果無法接受預設的包裝函式所提供的功能，請使用[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)方法，以指定不同的包裝函式。
+如果*pTabWnd*指向不是衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)的物件, 而且*bDetachable*為 TRUE, 則架構會自動建立*pTabWnd*物件的包裝函式。 包裝函式會將*pTabWnd*物件分離。 根據預設, 包裝函式是[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)的實例。 如果無法接受預設包裝函式所提供的功能, 請使用[CMFCBaseTabCtrl:: setdockingbarwrapperrtc 類別](#setdockingbarwrapperrtc)方法來指定不同的包裝函式。
 
-##  <a name="applyrestoredtabinfo"></a>  CMFCBaseTabCtrl::ApplyRestoredTabInfo
+##  <a name="applyrestoredtabinfo"></a>CMFCBaseTabCtrl:: ApplyRestoredTabInfo
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -488,11 +488,11 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bUseTabIndexes*<br/>
+在*bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="autodestroywindow"></a>  CMFCBaseTabCtrl::AutoDestroyWindow
+##  <a name="autodestroywindow"></a>CMFCBaseTabCtrl:: AutoDestroyWindow
 
 ```
 void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
@@ -500,11 +500,11 @@ void AutoDestroyWindow(BOOL bAutoDestroy = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bAutoDestroy*<br/>
+在*bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcrectedit"></a>  CMFCBaseTabCtrl::CalcRectEdit
+##  <a name="calcrectedit"></a>CMFCBaseTabCtrl:: CalcRectEdit
 
 ```
 virtual void CalcRectEdit(CRect& rectEdit);
@@ -512,11 +512,11 @@ virtual void CalcRectEdit(CRect& rectEdit);
 
 ### <a name="parameters"></a>參數
 
-[in] *rectEdit*<br/>
+在*rectEdit*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="cleanup"></a>  CMFCBaseTabCtrl::CleanUp
+##  <a name="cleanup"></a>CMFCBaseTabCtrl:: 清除
 
 ```
 virtual void CleanUp();
@@ -524,7 +524,7 @@ virtual void CleanUp();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="clearimagelist"></a>  CMFCBaseTabCtrl::ClearImageList
+##  <a name="clearimagelist"></a>CMFCBaseTabCtrl:: ClearImageList
 
 ```
 virtual void ClearImageList();
@@ -532,9 +532,9 @@ virtual void ClearImageList();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="createwrapper"></a>  CMFCBaseTabCtrl::CreateWrapper
+##  <a name="createwrapper"></a>CMFCBaseTabCtrl:: CreateWrapper
 
-建立衍生自框架視窗的包裝函式[CWnd 類別](../../mfc/reference/cwnd-class.md)但不衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。
+為框架視窗建立衍生自[CWnd 類別](../../mfc/reference/cwnd-class.md)的包裝函式, 但不是衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)。
 
 ```
 virtual CWnd* CreateWrapper(
@@ -546,29 +546,29 @@ virtual CWnd* CreateWrapper(
 ### <a name="parameters"></a>參數
 
 *pWndToWrap*<br/>
-[in]包裝框架視窗的指標。
+在已包裝之框架視窗的指標。
 
 *lpszTabLabel*<br/>
-[in]字串，包含視窗的標籤。
+在包含視窗標籤的字串。
 
 *bDetachable*<br/>
-[in]布林值參數，指出視窗是否可以中斷連結。
+在指出是否可卸離視窗的布林值參數。
 
 ### <a name="return-value"></a>傳回值
 
-包裝函式的指標衍生自`CDockablePane`類別，如果`CreateWrapper`已成功建立的包裝函數類別*pWndToWrap*。 如果方法失敗，它 retruns *pWndToWrap*。
+如果`CDockablePane` 成功`CreateWrapper`建立*pWndToWrap*的包裝函式類別, 則為衍生自類別之包裝函式的指標。 如果方法失敗, 則會 retruns *pWndToWrap*。
 
 ### <a name="remarks"></a>備註
 
-索引標籤式的視窗可以停駐任何物件衍生自`CWnd`。 不過，為了讓`CMFCBaseTabCtrl Class`可停駐的物件，每個物件上的`CMFCBaseTabCtrl`必須是可以中斷連結。 因此，`CMFCBaseTabCtrl`會自動換行不從衍生的任何物件`CDockablePane`。
+索引標籤式視窗可以停駐衍生`CWnd`自的任何物件。 不過, 為了讓`CMFCBaseTabCtrl Class`物件成為可停駐, 上的`CMFCBaseTabCtrl`每個物件都必須可卸離。 因此, `CMFCBaseTabCtrl`會自動包裝不是衍生自`CDockablePane`的任何物件。
 
-根據預設，`CMFCBaseTabCtrl`建立的執行個體[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)。 若要變更的包裝函式的預設類別，呼叫[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)。
+根據預設, `CMFCBaseTabCtrl`會建立[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)的實例。 若要變更包裝函式的預設類別, 請呼叫[CMFCBaseTabCtrl:: setdockingbarwrapperrtc 類別](#setdockingbarwrapperrtc)。
 
-如果*pWndToWrap*衍生自`CDockablePane`，這個方法將不會建立一個包裝函式。 相反地，它將會失敗，並傳回*pWndToWrap*。
+如果*pWndToWrap*衍生自`CDockablePane`, 這個方法就不會建立包裝函式。 相反地, 它會失敗並傳回*pWndToWrap*。
 
 ##  <a name="detachtab"></a>  CMFCBaseTabCtrl::DetachTab
 
-架構會呼叫這個方法，以中斷連結索引標籤上，從索引標籤控制項。
+架構會呼叫這個方法, 從索引標籤控制項卸離索引標籤。
 
 ```
 virtual BOOL DetachTab(
@@ -580,13 +580,13 @@ virtual BOOL DetachTab(
 ### <a name="parameters"></a>參數
 
 *dockMethod*<br/>
-[in]所提供的列舉的資料型別[CBasePane 類別](../../mfc/reference/cbasepane-class.md)。 此資料型別會指定用來中斷連結索引標籤的方法。
+在[CBasePane 類別](../../mfc/reference/cbasepane-class.md)所提供的列舉資料類型。 這個資料類型會指定用來卸離索引標籤的方法。
 
 *nTabNum*<br/>
 [in]要卸離索引標籤的以零為起始的索引。
 
 *bHide*<br/>
-[in]布林值參數，指出架構是否應該隱藏 [中斷連結] 索引標籤。
+在布林值參數, 指出架構是否應隱藏已卸離的索引標籤。
 
 ### <a name="return-value"></a>傳回值
 
@@ -594,9 +594,9 @@ virtual BOOL DetachTab(
 
 ### <a name="remarks"></a>備註
 
-如果所指定的索引標籤*nTabNum*是不可中斷連結，此函式會失敗並傳回 FALSE。
+如果*nTabNum*所指定的索引標籤不可分離, 此函式會失敗並傳回 FALSE。
 
-##  <a name="enableactivatelastactive"></a>  CMFCBaseTabCtrl::EnableActivateLastActive
+##  <a name="enableactivatelastactive"></a>CMFCBaseTabCtrl:: EnableActivateLastActive
 
 ```
 void EnableActivateLastActive(BOOL bLastActive = TRUE);
@@ -604,13 +604,13 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>參數
 
-[in] *bLastActive*<br/>
+在*bLastActive*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="enableautocolor"></a>  CMFCBaseTabCtrl::EnableAutoColor
+##  <a name="enableautocolor"></a>CMFCBaseTabCtrl:: EnableAutoColor
 
-控制是否架構會使用自動的背景色彩繪製索引標籤時。
+控制在繪製索引標籤時, 架構是否使用自動背景色彩。
 
 ```
 void EnableAutoColor(BOOL bEnable = TRUE);
@@ -619,17 +619,17 @@ void EnableAutoColor(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-[in]布林值參數，決定是否架構會使用自動的色彩。
+在判斷架構是否使用自動色彩的布林值參數。
 
 ### <a name="remarks"></a>備註
 
-索引標籤控制項具有數個預先定義之色彩的陣列。 架構會使用自動的色彩，在一系列索引標籤中的每個索引標籤會從這個陣列中指派下一個色彩。
+索引標籤控制項有數個預先定義色彩的陣列。 當架構使用自動色彩時, 一系列索引標籤中的每個索引標籤都會被指派此陣列中的下一個色彩。
 
-根據預設，自動色彩取決程式庫所定義的色彩。 您可以藉由呼叫提供的自訂色彩陣列[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)。
+根據預設, 自動色彩是由程式庫定義的色彩決定。 您可以藉由呼叫[CMFCBaseTabCtrl:: SetAutoColors](#setautocolors)來提供自訂的色彩陣列。
 
-##  <a name="enablecustomtooltips"></a>  CMFCBaseTabCtrl::EnableCustomToolTips
+##  <a name="enablecustomtooltips"></a>CMFCBaseTabCtrl:: EnableCustomToolTips
 
-可讓索引標籤控制項的自訂工具提示。
+啟用索引標籤控制項的自訂工具提示。
 
 ```
 BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
@@ -638,7 +638,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-[in]布林值，決定是否要使用自訂的工具提示。
+在布林值, 決定是否要使用自訂工具提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -646,11 +646,11 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-如果啟用自訂的工具提示，此索引標籤控制項就會傳送 AFX_WM_ON_GET_TAB_TOOLTIP 訊息回主框架。 如果您想要支援自訂的工具提示在您的應用程式中，主框架視窗必須處理這個方法，並提供自訂的工具提示文字。 如需有關如何提供自訂的工具提示文字的詳細資訊，請參閱 < [CMFCTabToolTipInfo 結構](../../mfc/reference/cmfctabtooltipinfo-structure.md)。
+如果已啟用自訂工具提示, 則索引標籤控制項會將 AFX_WM_ON_GET_TAB_TOOLTIP 訊息傳送到主框架。 如果您想要在應用程式中支援自訂工具提示, 主框架視窗必須處理這個方法, 並提供自訂的工具提示文字。 如需提供自訂工具提示文字的詳細資訊, 請參閱[CMFCTabToolTipInfo 結構](../../mfc/reference/cmfctabtooltipinfo-structure.md)。
 
-##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
+##  <a name="enableinplaceedit"></a>CMFCBaseTabCtrl:: EnableInPlaceEdit
 
-可讓您直接編輯的使用者索引標籤。
+可讓使用者直接編輯索引標籤標記。
 
 ```
 virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
@@ -659,15 +659,15 @@ virtual void EnableInPlaceEdit(BOOL bEnable) = 0;
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-[in]布林值參數，指定是否要啟用的索引標籤的直接編輯。
+在布林值參數, 指定是否要啟用定位鍵標籤的直接編輯。
 
 ### <a name="remarks"></a>備註
 
-根據預設，直接編輯索引標籤已停用的索引標籤控制項。
+根據預設, 索引標籤控制項的 [直接編輯] 索引標籤會停用。
 
-您可以啟用直接編輯索引標籤控制項上的索引標籤的子集。 若要這樣做，請覆寫方法`CMFCBaseTabCtrl::StartRenameTab`。 `StartRenameTab` 應該會傳回非零的值，支援直接編輯索引標籤的所有索引標籤。
+您可以針對索引標籤控制項上的索引標籤子集啟用直接編輯。 若要這麼做, 請覆`CMFCBaseTabCtrl::StartRenameTab`寫方法。 `StartRenameTab`應針對支援 tab 標籤之直接編輯的所有索引標籤, 傳回非零值。
 
-在  `CMFCBaseTabCtrl Class`，這個方法是純虛擬函式，而且沒有實作。 如果您在衍生類別，以從`CMFCBaseTabCtrl`，您必須實作此函式。
+在中`CMFCBaseTabCtrl Class`, 這個方法是純虛擬函式, 而且沒有任何實作為。 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須執行此函式。
 
 ##  <a name="enabletabdetach"></a>  CMFCBaseTabCtrl::EnableTabDetach
 
@@ -682,10 +682,10 @@ virtual BOOL EnableTabDetach(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *bEnable*<br/>
-[in]布林值，指出是否要中斷連結索引標籤。
+在布林值, 指出是否要讓索引標籤可分離。
 
 ### <a name="return-value"></a>傳回值
 
@@ -693,7 +693,7 @@ virtual BOOL EnableTabDetach(
 
 ##  <a name="enabletabswap"></a>  CMFCBaseTabCtrl::EnableTabSwap
 
-可讓使用者變更定位順序，使用滑鼠。
+可讓使用者使用滑鼠來變更定位順序。
 
 ```
 void EnableTabSwap(BOOL bEnable);
@@ -702,13 +702,13 @@ void EnableTabSwap(BOOL bEnable);
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-[in]布林值，指出是否啟用 [交換] 索引標籤。
+在布林值, 指出是否啟用定位鍵交換。
 
 ### <a name="remarks"></a>備註
 
-啟用索引標籤上交換時，使用者可以拖曳索引標籤，並變更其索引標籤控制項中的相對位置。
+啟用索引標籤交換時, 使用者可以拖曳索引標籤, 並在索引標籤控制項中變更其相對位置。
 
-##  <a name="ensurevisible"></a>  CMFCBaseTabCtrl::EnsureVisible
+##  <a name="ensurevisible"></a>CMFCBaseTabCtrl:: EnsureVisible
 
 將索引標籤捲動直到看見指定的索引標籤。
 
@@ -719,7 +719,7 @@ virtual BOOL EnsureVisible(int iTab);
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
@@ -727,11 +727,11 @@ virtual BOOL EnsureVisible(int iTab);
 
 ### <a name="remarks"></a>備註
 
-如果所指定的索引標籤，這個方法會有任何作用*iTab*已經可見。
+如果*iTab*所指示的索引標籤已可見, 則此方法沒有作用。
 
-根據預設，這個方法不支援`CMFCBaseTabCtrl Class`。 您應該實作此函式中的自訂類別，衍生自`CMFCBaseTabCtrl`如果該自訂索引標籤控制項支援捲動 索引標籤。 這個方法受到[CMFCTabCtrl 類別](../../mfc/reference/cmfctabctrl-class.md)。
+根據預設, 不支援`CMFCBaseTabCtrl Class`這個方法。 `CMFCBaseTabCtrl`如果自訂的索引標籤控制項支援索引標籤滾動, 您應該在衍生自的自訂類別中執行此函式。 [CMFCTabCtrl 類別](../../mfc/reference/cmfctabctrl-class.md)支援這個方法。
 
-##  <a name="enterdragmode"></a>  CMFCBaseTabCtrl::EnterDragMode
+##  <a name="enterdragmode"></a>CMFCBaseTabCtrl:: EnterDragMode
 
 ```
 void EnterDragMode();
@@ -739,9 +739,9 @@ void EnterDragMode();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="findtargetwnd"></a>  CMFCBaseTabCtrl::FindTargetWnd
+##  <a name="findtargetwnd"></a>CMFCBaseTabCtrl:: FindTargetWnd
 
-識別包含指定的點的窗格。
+識別包含指定點的窗格。
 
 ```
 virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
@@ -750,17 +750,17 @@ virtual CWnd* FindTargetWnd(const CPoint& pt) = 0;
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-[in]使用用戶端區域定義的點座標[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件。
+在使用[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件的工作區座標所定義的點。
 
 ### <a name="return-value"></a>傳回值
 
-指標[CWnd](../../mfc/reference/cwnd-class.md)如果成功，否則為 NULL 的物件。
+如果成功, 則為[CWnd](../../mfc/reference/cwnd-class.md)物件的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-在 `CMFCBaseTabCtrl`類別，這個方法是純虛擬函式： 您必須實作它衍生的類別`CMFCBaseTabCtrl`。
+在類別中, 這個方法是純虛擬函式: 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須加以執行。 `CMFCBaseTabCtrl`
 
-##  <a name="firechangeactivetab"></a>  CMFCBaseTabCtrl::FireChangeActiveTab
+##  <a name="firechangeactivetab"></a>CMFCBaseTabCtrl:: FireChangeActiveTab
 
 ```
 virtual void FireChangeActiveTab(int nNewTab);
@@ -772,7 +772,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="firechangingactivetab"></a>  CMFCBaseTabCtrl::FireChangingActiveTab
+##  <a name="firechangingactivetab"></a>CMFCBaseTabCtrl:: FireChangingActiveTab
 
 ```
 virtual BOOL FireChangingActiveTab(int nNewTab);
@@ -786,9 +786,9 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getactivetab"></a>  CMFCBaseTabCtrl::GetActiveTab
+##  <a name="getactivetab"></a>CMFCBaseTabCtrl:: GetActiveTab
 
-擷取目前作用中 索引標籤的索引。
+抓取目前作用中索引標籤的索引。
 
 ```
 virtual int GetActiveTab() const;
@@ -796,11 +796,11 @@ virtual int GetActiveTab() const;
 
 ### <a name="return-value"></a>傳回值
 
-使用中索引標籤，以零起始的索引如果沒有任何作用中的索引標籤，為-1。
+作用中索引標籤的以零為起始的索引;如果沒有使用中的索引標籤, 則為-1。
 
-##  <a name="getactivetabcolor"></a>  CMFCBaseTabCtrl::GetActiveTabColor
+##  <a name="getactivetabcolor"></a>CMFCBaseTabCtrl:: GetActiveTabColor
 
-擷取目前作用中的索引標籤的背景色彩。
+抓取目前作用中索引標籤的背景色彩。
 
 ```
 virtual COLORREF GetActiveTabColor() const;
@@ -808,15 +808,15 @@ virtual COLORREF GetActiveTabColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-A [COLORREF](/windows/desktop/gdi/colorref)值，指定 [作用中] 索引標籤的背景色彩。
+[COLORREF](/windows/win32/gdi/colorref)值, 指定使用中索引標籤的背景色彩。
 
 ### <a name="remarks"></a>備註
 
-根據預設，作用中的索引標籤的背景色彩會是 COLOR_WINDOW。 您也可以使用方法來變更 「 作用中的索引標籤的背景色彩[CMFCBaseTabCtrl::SetActiveTabColor](#setactivetabcolor)。
+根據預設, [使用中] 索引標籤的背景色彩為 [COLOR_WINDOW]。 您可以使用[CMFCBaseTabCtrl:: SetActiveTabColor](#setactivetabcolor)方法, 來變更 [作用中] 索引標籤的背景色彩。
 
-##  <a name="getactivetabtextcolor"></a>  CMFCBaseTabCtrl::GetActiveTabTextColor
+##  <a name="getactivetabtextcolor"></a>CMFCBaseTabCtrl:: GetActiveTabTextColor
 
-擷取作用中的索引標籤的文字色彩。
+抓取現用索引標籤的文字色彩。
 
 ```
 virtual COLORREF GetActiveTabTextColor() const;
@@ -824,15 +824,15 @@ virtual COLORREF GetActiveTabTextColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-A [COLORREF](/windows/desktop/gdi/colorref)值，指定 [作用中] 索引標籤的文字色彩。
+[COLORREF](/windows/win32/gdi/colorref)值, 指定使用中索引標籤的文字色彩。
 
 ### <a name="remarks"></a>備註
 
-根據預設，作用中的索引標籤的文字色彩會是 COLOR_WINDOWTEXT。 您可以使用此方法來變更文字色彩[CMFCBaseTabCtrl::SetActiveTabTextColor](#setactivetabtextcolor)。
+根據預設, 作用中索引標籤的文字色彩為 [COLOR_WINDOWTEXT]。 您可以使用[CMFCBaseTabCtrl:: SetActiveTabTextColor](#setactivetabtextcolor)方法來變更文字色彩。
 
-##  <a name="getactivewnd"></a>  CMFCBaseTabCtrl::GetActiveWnd
+##  <a name="getactivewnd"></a>CMFCBaseTabCtrl:: GetActiveWnd
 
-擷取目前作用中 索引標籤視窗的指標。
+抓取目前現用索引標籤視窗的指標。
 
 ```
 virtual CWnd* GetActiveWnd() const;
@@ -842,9 +842,9 @@ virtual CWnd* GetActiveWnd() const;
 
 視窗的指標。
 
-##  <a name="getautocolors"></a>  CMFCBaseTabCtrl::GetAutoColors
+##  <a name="getautocolors"></a>CMFCBaseTabCtrl:: GetAutoColors
 
-擷取用於自動上色之色彩的陣列。
+抓取用於自動著色的色彩陣列。
 
 ```
 const CArray<COLORREF,COLORREF>& GetAutoColors() const;
@@ -852,15 +852,15 @@ const CArray<COLORREF,COLORREF>& GetAutoColors() const;
 
 ### <a name="return-value"></a>傳回值
 
-陣列的參考[COLORREF](/windows/desktop/gdi/colorref)值[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件使用的自動索引標籤著色。
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件用於自動索引標籤著色之[COLORREF](/windows/win32/gdi/colorref)值陣列的參考。
 
 ### <a name="remarks"></a>備註
 
-根據預設，架構會初始化程式庫所定義的色彩的色彩陣列。 您可以藉由呼叫的方法提供的自訂色彩陣列[CMFCBaseTabCtrl::SetAutoColors](#setautocolors)。
+根據預設, 架構會將色彩的陣列初始化為程式庫定義的色彩。 您可以藉由呼叫[CMFCBaseTabCtrl:: SetAutoColors](#setautocolors)方法, 提供自訂的色彩陣列。
 
-##  <a name="getfirstvisibletab"></a>  CMFCBaseTabCtrl::GetFirstVisibleTab
+##  <a name="getfirstvisibletab"></a>CMFCBaseTabCtrl:: GetFirstVisibleTab
 
-擷取第一個可見的索引標籤的指標。
+抓取第一個可見索引標籤的指標。
 
 ```
 virtual CWnd* GetFirstVisibleTab(int& iTabNum);
@@ -873,22 +873,22 @@ virtual CWnd* GetFirstVisibleTab(
 ### <a name="parameters"></a>參數
 
 *iTabNum*<br/>
-[out]整數的參考。 這個方法會寫入此參數中的第一個可見的索引標籤的以零為起始的索引。
+脫銷整數的參考。 這個方法會將第一個可見索引標籤之以零為基底的索引寫入此參數。
 
 *iStartFrom*<br/>
-[in]第一個索引標籤，來檢查之以零起始的索引。
+在要檢查的第一個索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-第一個可見的索引標籤成功; 如果指標否則為 NULL。
+如果成功, 則為第一個可見索引標籤的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果此方法失敗，它會寫入到的值為-1 *iStartFrom*。
+如果此方法失敗, 則會將值-1 寫入*iStartFrom*。
 
-如果*iStartFrom*大於或等於 索引標籤控制項，počet karet`GetFirstVisibleTab`自動失敗。
+如果*iStartFrom*大於或等於索引標籤控制項中的索引標籤數目, `GetFirstVisibleTab`就會自動失敗。
 
-##  <a name="getfirstvisibletabnum"></a>  CMFCBaseTabCtrl::GetFirstVisibleTabNum
+##  <a name="getfirstvisibletabnum"></a>CMFCBaseTabCtrl:: GetFirstVisibleTabNum
 
 ```
 virtual int GetFirstVisibleTabNum() const;
@@ -898,9 +898,9 @@ virtual int GetFirstVisibleTabNum() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gethighlightedtab"></a>  CMFCBaseTabCtrl::GetHighlightedTab
+##  <a name="gethighlightedtab"></a>CMFCBaseTabCtrl:: GetHighlightedTab
 
-擷取目前反白顯示 索引標籤的索引。
+抓取目前反白顯示之索引標籤的索引。
 
 ```
 int GetHighlightedTab() const;
@@ -908,9 +908,9 @@ int GetHighlightedTab() const;
 
 ### <a name="return-value"></a>傳回值
 
-反白顯示 索引標籤的以零為起始的索引。
+反白顯示的索引標籤之以零為基底的索引。
 
-##  <a name="getimagelist"></a>  CMFCBaseTabCtrl::GetImageList
+##  <a name="getimagelist"></a>CMFCBaseTabCtrl:: GetImageList
 
 ```
 virtual const CImageList* GetImageList() const;
@@ -920,7 +920,7 @@ virtual const CImageList* GetImageList() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getimagesize"></a>  CMFCBaseTabCtrl::GetImageSize
+##  <a name="getimagesize"></a>CMFCBaseTabCtrl:: GetImageSize
 
 ```
 virtual CSize GetImageSize() const;
@@ -938,15 +938,15 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>參數
 
-[in] *iTabNum*<br/>
+在*iTabNum*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getlocation"></a>  CMFCBaseTabCtrl::GetLocation
+##  <a name="getlocation"></a>CMFCBaseTabCtrl:: GetLocation
 
-擷取索引標籤控制項的索引標籤區域一部分的位置。
+抓取索引標籤控制項的索引標籤區域部分的位置。
 
 ```
 Location GetLocation() const;
@@ -958,9 +958,9 @@ Location GetLocation() const;
 
 ### <a name="remarks"></a>備註
 
-可能的索引標籤區域位置的值為 LOCATION_BOTTOM 和 LOCATION_TOP。
+可能的索引標籤區域位置值為 LOCATION_BOTTOM 和 LOCATION_TOP。
 
-##  <a name="getmaxwindowsize"></a>  CMFCBaseTabCtrl::GetMaxWindowSize
+##  <a name="getmaxwindowsize"></a>CMFCBaseTabCtrl:: GetMaxWindowSize
 
 ```
 virtual CSize GetMaxWindowSize() const;
@@ -970,9 +970,9 @@ virtual CSize GetMaxWindowSize() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabarea"></a>  CMFCBaseTabCtrl::GetTabArea
+##  <a name="gettabarea"></a>CMFCBaseTabCtrl:: GetTabArea
 
-擷取的大小和位置的索引標籤控制項的索引標籤區域。
+抓取索引標籤控制項的索引標籤區域的大小和位置。
 
 ```
 virtual void GetTabArea(
@@ -983,20 +983,20 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>參數
 
 *rectTabAreaTop*<br/>
-[in]參考`CRect`物件。 `GetTabArea` 您可以使用這個物件來儲存的大小和最上層索引標籤區域的位置。
+在`CRect`物件的參考。 `GetTabArea`會使用這個物件來儲存頂端索引標籤區域的大小和位置。
 
 *rectTabAreaBottom*<br/>
-[in]參考`CRect`物件。 `GetTabArea` 您可以使用這個物件來儲存的大小和底部的索引標籤區域的位置。
+在`CRect`物件的參考。 `GetTabArea`會使用這個物件來儲存底部索引標籤區域的大小和位置。
 
 ### <a name="remarks"></a>備註
 
-在後`GetTabArea`傳回，`CRect`參數包含的大小和位置的索引標籤區域中的索引標籤控制項的用戶端座標。 在頂端或底部索引標籤控制項，不含索引標籤區域是否`rectTabAreaTop`或`rectTabAreaBottom`是空的。
+在`GetTabArea`傳回之後`CRect` , 參數會包含索引標籤區域的大小和位置, 以及索引標籤控制項的工作區座標。 如果索引標籤控制項的頂端或底部沒有索引標籤區域, `rectTabAreaTop`或`rectTabAreaBottom`為空白。
 
-在  `CMFCBaseTabCtrl Class`，這個方法是純虛擬函式，而且沒有實作。 如果您在衍生類別，以從`CMFCBaseTabCtrl`，您必須實作此函式。
+在中`CMFCBaseTabCtrl Class`, 這個方法是純虛擬函式, 而且沒有任何實作為。 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須執行此函式。
 
-##  <a name="gettabbkcolor"></a>  CMFCBaseTabCtrl::GetTabBkColor
+##  <a name="gettabbkcolor"></a>CMFCBaseTabCtrl:: GetTabBkColor
 
-擷取指定的索引標籤的背景色彩。
+抓取指定之索引標籤的背景色彩。
 
 ```
 virtual COLORREF GetTabBkColor(int iTab) const;
@@ -1005,15 +1005,15 @@ virtual COLORREF GetTabBkColor(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-A [COLORREF](/windows/desktop/gdi/colorref)值，指出指定的索引標籤的背景色彩;-1 表示*iTab*超出範圍。
+[COLORREF](/windows/win32/gdi/colorref)值, 表示指定之索引標籤的背景色彩;如果*iTab*超出範圍, 則為-1。
 
-##  <a name="gettabbordersize"></a>  CMFCBaseTabCtrl::GetTabBorderSize
+##  <a name="gettabbordersize"></a>CMFCBaseTabCtrl:: GetTabBorderSize
 
-擷取索引標籤控制項中的索引標籤框線的大小。
+抓取索引標籤控制項中的索引標籤框線大小。
 
 ```
 virtual int GetTabBorderSize() const;
@@ -1021,15 +1021,15 @@ virtual int GetTabBorderSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-索引標籤的框線，像素為單位的大小。
+索引標籤框線的大小 (以圖元為單位)。
 
 ### <a name="remarks"></a>備註
 
-索引標籤框線的預設大小為三個像素。 您可以使用方法來變更這個框線大小[CMFCBaseTabCtrl::SetTabBorderSize](#settabbordersize)。
+索引標籤框線的預設大小為三個圖元。 您可以使用[CMFCBaseTabCtrl:: SetTabBorderSize](#settabbordersize)方法來變更此框線大小。
 
-##  <a name="gettabbyid"></a>  CMFCBaseTabCtrl::GetTabByID
+##  <a name="gettabbyid"></a>CMFCBaseTabCtrl:: GetTabByID
 
-擷取的索引標籤索引根據的索引標籤的識別碼。
+根據定位鍵識別碼抓取索引標籤的索引。
 
 ```
 virtual int GetTabByID(int id) const;
@@ -1038,17 +1038,17 @@ virtual int GetTabByID(int id) const;
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]索引標籤的識別碼。
+在索引標籤識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果找到; 索引標籤的以零起始的索引如果找不到索引標籤的識別碼，為-1。
+如果找到, 則為索引標籤以零為基底的索引;如果找不到索引標籤識別碼, 則為-1。
 
 ### <a name="remarks"></a>備註
 
-[] 索引標籤的識別碼會自動指派索引標籤新增至索引標籤控制項時。
+索引標籤識別碼會在索引標籤加入至索引標籤控制項時自動指派。
 
-##  <a name="gettabclosebutton"></a>  CMFCBaseTabCtrl::GetTabCloseButton
+##  <a name="gettabclosebutton"></a>CMFCBaseTabCtrl:: GetTabCloseButton
 
 ```
 CRect GetTabCloseButton() const;
@@ -1058,9 +1058,9 @@ CRect GetTabCloseButton() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabfromhwnd"></a>  CMFCBaseTabCtrl::GetTabFromHwnd
+##  <a name="gettabfromhwnd"></a>CMFCBaseTabCtrl:: GetTabFromHwnd
 
-擷取包含指定的 HWND 物件的索引標籤的索引。
+抓取包含指定 HWND 物件的索引標籤。
 
 ```
 virtual int GetTabFromHwnd(HWND hwnd) const;
@@ -1069,15 +1069,15 @@ virtual int GetTabFromHwnd(HWND hwnd) const;
 ### <a name="parameters"></a>參數
 
 *hwnd*<br/>
-[in]視窗的控制代碼。
+在視窗的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則 索引標籤的以零起始的索引如果沒有索引標籤包含-1 *hwnd*。
+如果成功, 則為索引標籤以零為基底的索引;如果沒有索引標籤包含*hwnd*, 則為-1。
 
-##  <a name="gettabfrompoint"></a>  CMFCBaseTabCtrl::GetTabFromPoint
+##  <a name="gettabfrompoint"></a>CMFCBaseTabCtrl:: GetTabFromPoint
 
-擷取包含指定的點的索引標籤。
+抓取包含指定點的索引標籤。
 
 ```
 virtual int GetTabFromPoint(CPoint& pt) const;
@@ -1086,13 +1086,13 @@ virtual int GetTabFromPoint(CPoint& pt) const;
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-[in]用戶端座標中的索引標籤控制項的點。
+在索引標籤控制項的工作區座標中的點。
 
 ### <a name="return-value"></a>傳回值
 
-包含的索引標籤的索引*pt*; 如果沒有索引標籤包含-1 *pt*。
+包含*pt*的索引標籤索引鍵;如果沒有索引標籤包含*pt*, 則為-1。
 
-##  <a name="gettabfullwidth"></a>  CMFCBaseTabCtrl::GetTabFullWidth
+##  <a name="gettabfullwidth"></a>CMFCBaseTabCtrl:: GetTabFullWidth
 
 ```
 virtual int GetTabFullWidth(int iTab) const;
@@ -1100,15 +1100,15 @@ virtual int GetTabFullWidth(int iTab) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *iTab*<br/>
+在*iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabhicon"></a>  CMFCBaseTabCtrl::GetTabHicon
+##  <a name="gettabhicon"></a>CMFCBaseTabCtrl:: GetTabHicon
 
-傳回與指定的索引標籤相關聯 HICON。
+傳回與指定之索引標籤相關聯的 HICON。
 
 ```
 virtual HICON GetTabHicon(int iTab) const;
@@ -1117,15 +1117,15 @@ virtual HICON GetTabHicon(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-相關聯的索引標籤，如果成功則 HICON如果沒有任何 HICON 如果方法失敗，或 NULL。
+如果成功, 則為與定位鍵標籤相關聯的 HICON;如果沒有 HICON 或方法失敗, 則為 Null。
 
-##  <a name="gettabicon"></a>  CMFCBaseTabCtrl::GetTabIcon
+##  <a name="gettabicon"></a>CMFCBaseTabCtrl:: GetTabIcon
 
-擷取與指定的索引標籤相關聯的圖示。
+抓取與指定之索引標籤相關聯的圖示。
 
 ```
 virtual UINT GetTabIcon(int iTab) const;
@@ -1134,19 +1134,19 @@ virtual UINT GetTabIcon(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，[指定] 索引標籤圖示識別碼如果索引是無效的-1。
+如果成功, 則為指定之索引標籤的圖示識別碼;如果索引無效, 則為-1。
 
 ### <a name="remarks"></a>備註
 
-[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件會儲存在內部的圖示[CImageList](../../mfc/reference/cimagelist-class.md)物件。
+[CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)物件會將圖示儲存在內部[CImageList](../../mfc/reference/cimagelist-class.md)物件中。
 
-##  <a name="gettabid"></a>  CMFCBaseTabCtrl::GetTabID
+##  <a name="gettabid"></a>CMFCBaseTabCtrl:: GetTabID
 
-擷取索引標籤索引所指定的索引標籤的識別碼。
+抓取 tab 鍵索引所指定的索引標籤識別碼。
 
 ```
 int GetTabID(int iTab) const;
@@ -1155,15 +1155,15 @@ int GetTabID(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-識別碼為 [] 索引標籤或-1 *iTab*超出範圍。
+索引標籤的識別碼, 如果*iTab*超出範圍, 則為-1。
 
-##  <a name="gettablabel"></a>  CMFCBaseTabCtrl::GetTabLabel
+##  <a name="gettablabel"></a>CMFCBaseTabCtrl:: GetTabLabel
 
-擷取的索引標籤的文字。
+抓取定位鍵標籤的文字。
 
 ```
 virtual BOOL GetTabLabel(
@@ -1174,24 +1174,24 @@ virtual BOOL GetTabLabel(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *strLabel*<br/>
-[out]參考`CString`物件。 此方法將此參數中儲存的索引標籤。
+脫銷`CString`物件的參考。 這個方法會將索引標籤的標籤儲存在此參數中。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUEFALSE 否則。
+如果成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會失敗，如果索引*iTab*無效。
+如果索引*iTab*無效, 這個方法就會失敗。
 
-當您使用建立的索引標籤時，會設定 索引標籤的標籤[:: Addtab](#addtab)。 您也可以變更之後建立標籤，使用方法[CMFCBaseTabCtrl::SetTabLabel](#settablabel)。
+當您使用[CMFCBaseTabCtrl:: AddTab](#addtab)建立索引標籤時, 您可以設定定位鍵的標籤。 您也可以使用[CMFCBaseTabCtrl:: SetTabLabel](#settablabel)方法, 在建立後變更標籤。
 
-##  <a name="gettabrect"></a>  CMFCBaseTabCtrl::GetTabRect
+##  <a name="gettabrect"></a>CMFCBaseTabCtrl:: GetTabRect
 
-擷取的大小和指定的索引標籤的位置。
+抓取指定之索引標籤的大小和位置。
 
 ```
 virtual BOOL GetTabRect(
@@ -1202,16 +1202,16 @@ virtual BOOL GetTabRect(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *rect*<br/>
-[out]參考`CRect`物件。 此方法將此參數中儲存的大小和索引標籤的位置。
+脫銷`CRect`物件的參考。 這個方法會在這個參數中儲存索引標籤的大小和位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE如果定位點索引無效，則為 FALSE。
+如果成功, 則為 TRUE;如果 tab 鍵索引無效, 則為 FALSE。
 
-##  <a name="gettabsheight"></a>  CMFCBaseTabCtrl::GetTabsHeight
+##  <a name="gettabsheight"></a>CMFCBaseTabCtrl:: GetTabsHeight
 
 ```
 virtual int GetTabsHeight() const;
@@ -1221,9 +1221,9 @@ virtual int GetTabsHeight() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabsnum"></a>  CMFCBaseTabCtrl::GetTabsNum
+##  <a name="gettabsnum"></a>CMFCBaseTabCtrl:: GetTabsNum
 
-擷取索引標籤控制項中的索引標籤數目。
+抓取索引標籤控制項中的索引標籤數目。
 
 ```
 virtual int GetTabsNum() const;
@@ -1233,7 +1233,7 @@ virtual int GetTabsNum() const;
 
 索引標籤控制項中的索引標籤數目。
 
-##  <a name="gettabsrect"></a>  CMFCBaseTabCtrl::GetTabsRect
+##  <a name="gettabsrect"></a>CMFCBaseTabCtrl:: GetTabsRect
 
 ```
 virtual void GetTabsRect(CRect& rect) const;
@@ -1241,13 +1241,13 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *rect*<br/>
+在*rect*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gettabtextcolor"></a>  CMFCBaseTabCtrl::GetTabTextColor
+##  <a name="gettabtextcolor"></a>CMFCBaseTabCtrl:: GetTabTextColor
 
-擷取指定的索引標籤的文字色彩。
+抓取指定之索引標籤的文字色彩。
 
 ```
 virtual COLORREF GetTabTextColor(int iTab) const;
@@ -1256,15 +1256,15 @@ virtual COLORREF GetTabTextColor(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-A [COLORREF](/windows/desktop/gdi/colorref)參數，指出指定的索引標籤的文字色彩;-1 表示*iTab*超出範圍。
+[COLORREF](/windows/win32/gdi/colorref)參數, 表示指定之索引標籤的文字色彩。如果*iTab*超出範圍, 則為-1。
 
-##  <a name="gettabwnd"></a>  CMFCBaseTabCtrl::GetTabWnd
+##  <a name="gettabwnd"></a>CMFCBaseTabCtrl:: GetTabWnd
 
-傳回位於指定的索引標籤的窗格的指標。
+傳回位於指定之索引標籤上的窗格指標。
 
 ```
 virtual CWnd* GetTabWnd(int iTab) const;
@@ -1273,21 +1273,21 @@ virtual CWnd* GetTabWnd(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-指標[CWnd](../../mfc/reference/cwnd-class.md)位於 [] 索引標籤的物件， *iTab*指定。 如果*iTab*無效。
+位於*iTab*指定之索引標籤上的[CWnd](../../mfc/reference/cwnd-class.md)物件指標。 如果*iTab*無效, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-傳回的物件就是呼叫其中一個時，新增應用程式[:: Addtab](#addtab)或是[cmfcbasetabctrl:: Inserttab](#inserttab)。
+傳回的物件是應用程式在呼叫[CMFCBaseTabCtrl:: AddTab](#addtab)或[CMFCBaseTabCtrl:: InsertTab](#inserttab)時所加入的物件。
 
-如果在索引標籤上的物件有包裝函式，這個方法會傳回物件的包裝函式。 如需有關包裝函式的詳細資訊，請參閱[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)。 如果您想要存取沒有包裝函式的直接物件的指標，使用方法[CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)。
+如果索引標籤上的物件有包裝函式, 這個方法會傳回物件的包裝函式。 如需包裝函式的詳細資訊, 請參閱[CMFCBaseTabCtrl:: CreateWrapper](#createwrapper)。 如果您想要在沒有包裝函式的情況下存取直接物件的指標, 請使用[CMFCBaseTabCtrl:: GetTabWndNoWrapper](#gettabwndnowrapper)方法。
 
-##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
+##  <a name="gettabwndnowrapper"></a>CMFCBaseTabCtrl:: GetTabWndNoWrapper
 
-讓指標回到控制項所在的索引標籤上，即使控制項有包裝函式。
+傳回位於索引標籤上之控制項的指標, 即使控制項有包裝函式也一樣。
 
 ```
 virtual CWnd* GetTabWndNoWrapper(int iTab) const;
@@ -1296,21 +1296,21 @@ virtual CWnd* GetTabWndNoWrapper(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-指標[CWnd](../../mfc/reference/cwnd-class.md)位於指定的索引標籤; 的物件如果*iTab*無效。
+位於指定索引標籤上之[CWnd](../../mfc/reference/cwnd-class.md)物件的指標;如果*iTab*無效, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-這個方法會擷取的直接指標`CWnd`物件使用任一種方法，加入[:: Addtab](#addtab)或是[cmfcbasetabctrl:: Inserttab](#inserttab)。 `GetTabWndNoWrapper` 會擷取已加入的指標`CWnd`，即使 framework 加入物件的包裝函式。 如需有關包裝函式和[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)，請參閱[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)。
+這個方法會使用`CWnd` [CMFCBaseTabCtrl:: AddTab](#addtab)或[CMFCBaseTabCtrl:: InsertTab](#inserttab)方法, 來抓取您加入之物件的直接指標。 `GetTabWndNoWrapper`會抓取已加入`CWnd`的指標, 即使架構已加入物件的包裝函式。 如需包裝函式和[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)的詳細資訊, 請參閱[CMFCBaseTabCtrl:: CreateWrapper](#createwrapper)。
 
-使用方法[CMFCBaseTabCtrl::GetTabWnd](#gettabwnd)如果您不想要忽略的包裝函式類別。
+如果您不想要忽略包裝函式類別, 請使用[CMFCBaseTabCtrl:: GetTabWnd](#gettabwnd)方法。
 
-##  <a name="gettooltipctrl"></a>  CMFCBaseTabCtrl::GetToolTipCtrl
+##  <a name="gettooltipctrl"></a>CMFCBaseTabCtrl:: GetToolTipCtrl
 
-擷取工具提示 contorl 的參考。
+抓取工具提示 contorl 的參考。
 
 ```
 CToolTipCtrl& GetToolTipCtrl() const;
@@ -1320,9 +1320,9 @@ CToolTipCtrl& GetToolTipCtrl() const;
 
 工具提示控制項的參考。
 
-##  <a name="getvisibletabsnum"></a>  CMFCBaseTabCtrl::GetVisibleTabsNum
+##  <a name="getvisibletabsnum"></a>CMFCBaseTabCtrl:: GetVisibleTabsNum
 
-擷取目前可見的索引標籤數目。
+抓取目前可見索引標籤的數目。
 
 ```
 virtual int GetVisibleTabsNum() const;
@@ -1330,9 +1330,9 @@ virtual int GetVisibleTabsNum() const;
 
 ### <a name="return-value"></a>傳回值
 
-可見索引標籤數目。
+可見索引標籤的數目。
 
-##  <a name="hasimage"></a>  CMFCBaseTabCtrl::HasImage
+##  <a name="hasimage"></a>CMFCBaseTabCtrl:: HasImage
 
 ```
 virtual BOOL HasImage(int iTab) const;
@@ -1340,15 +1340,15 @@ virtual BOOL HasImage(int iTab) const;
 
 ### <a name="parameters"></a>參數
 
-[in] *iTab*<br/>
+在*iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="hidesingletab"></a>  CMFCBaseTabCtrl::HideSingleTab
+##  <a name="hidesingletab"></a>CMFCBaseTabCtrl:: HideSingleTab
 
-設定要有一個可見的索引標籤時隱藏索引標籤控制項的索引標籤的選項。
+設定選項, 以在有一個可見的索引標籤時隱藏索引標籤控制項的索引標籤。
 
 ```
 virtual void HideSingleTab(BOOL bHide = TRUE);
@@ -1361,11 +1361,11 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 ### <a name="remarks"></a>備註
 
-您的應用程式設定為隱藏單一索引標籤，架構會在第二個索引標籤新增至索引標籤控制項時，自動會顯示索引標籤。
+當您的應用程式設定為隱藏單一索引標籤時, 此架構會在將第二個索引標籤加入至索引標籤控制項時自動顯示索引標籤。
 
-##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
+##  <a name="inserttab"></a>CMFCBaseTabCtrl:: InsertTab
 
-插入索引標籤控制項中的索引標籤。
+在索引標籤控制項中插入索引標籤。
 
 ```
 Virtual void InsertTab(
@@ -1386,28 +1386,28 @@ virtual void InsertTab(
 ### <a name="parameters"></a>參數
 
 *pNewWnd*<br/>
-[in]這個方法會加入成為新的索引標籤視窗的指標。
+在這個方法新增為新索引標籤之視窗的指標。
 
 *lpszTabLabel*<br/>
-[in]字串，包含新的索引標籤的標籤。
+在包含新索引標籤的字串。
 
 *nInsertAt*<br/>
-[in]新的索引標籤的以零為起始的索引。
+在新索引標籤之以零為基底的索引。
 
 *uiImageId*<br/>
-[in]從影像清單的映像識別碼。 索引標籤控制項的新索引標籤為圖示使用此映像。
+在影像清單中的影像識別碼。 此索引標籤控制項使用此影像做為新索引標籤的圖示。
 
 *bDetachable*<br/>
-[in]布林值參數，判斷是否可以中斷連結的新索引標籤。
+在布林值參數, 決定是否可卸離新的索引標籤。
 
 *uiResTabLabel*<br/>
-[in]標籤的資源識別碼。
+在標籤的資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-如果物件由*pNewWnd*不衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md)如果*bDetachable*參數為 TRUE，此架構會建立特殊包裝函式新的索引標籤。根據預設，包裝函式是的執行個體[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)。 使用[:: Setdockingbarwrapperrtc](#setdockingbarwrapperrtc)方法用來建立不同的包裝函式類別。 任何自訂包裝函式的類別必須衍生自`CDockablePaneAdapter`。
+如果*pNewWnd*所指定的物件不是衍生自[CDockablePane 類別](../../mfc/reference/cdockablepane-class.md), 而且*bDetachable*參數為 TRUE, 則架構會為新的索引標籤建立特殊的包裝函式。根據預設, 包裝函式是[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)的實例。 請使用[CMFCBaseTabCtrl:: setdockingbarwrapperrtc 類別](#setdockingbarwrapperrtc)方法來建立不同的包裝函式類別。 任何自訂的`CDockablePaneAdapter`包裝函式類別都必須衍生自。
 
-##  <a name="invalidatetab"></a>  CMFCBaseTabCtrl::InvalidateTab
+##  <a name="invalidatetab"></a>CMFCBaseTabCtrl:: InvalidateTab
 
 ```
 void InvalidateTab(int iTab);
@@ -1415,11 +1415,11 @@ void InvalidateTab(int iTab);
 
 ### <a name="parameters"></a>參數
 
-[in] *iTab*<br/>
+在*iTab*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isactivetabclosebutton"></a>  CMFCBaseTabCtrl::IsActiveTabCloseButton
+##  <a name="isactivetabclosebutton"></a>CMFCBaseTabCtrl:: IsActiveTabCloseButton
 
 ```
 virtual BOOL IsActiveTabCloseButton() const;
@@ -1429,9 +1429,9 @@ virtual BOOL IsActiveTabCloseButton() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isautocolor"></a>  CMFCBaseTabCtrl::IsAutoColor
+##  <a name="isautocolor"></a>CMFCBaseTabCtrl:: IsAutoColor
 
-決定在索引標籤控制項是否為 autocolor 模式。
+判斷索引標籤控制項是否處於 autocolor 模式。
 
 ```
 BOOL IsAutoColor() const;
@@ -1439,13 +1439,13 @@ BOOL IsAutoColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果此索引標籤控制項為 autocolor 模式，則為 TRUEFALSE 否則。
+如果索引標籤控制項處於 autocolor 模式, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以啟用或停用使用的 autocolor 模式[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)方法。
+您可以使用[CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor)方法來啟用或停用 autocolor 模式。
 
-##  <a name="isautodestroywindow"></a>  CMFCBaseTabCtrl::IsAutoDestroyWindow
+##  <a name="isautodestroywindow"></a>CMFCBaseTabCtrl:: IsAutoDestroyWindow
 
 ```
 BOOL IsAutoDestroyWindow() const;
@@ -1455,7 +1455,7 @@ BOOL IsAutoDestroyWindow() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="iscolored"></a>  CMFCBaseTabCtrl::IsColored
+##  <a name="iscolored"></a>CMFCBaseTabCtrl:: IsColored
 
 ```
 virtual BOOL IsColored() const;
@@ -1465,7 +1465,7 @@ virtual BOOL IsColored() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdialogcontrol"></a>  CMFCBaseTabCtrl::IsDialogControl
+##  <a name="isdialogcontrol"></a>CMFCBaseTabCtrl:: IsDialogControl
 
 ```
 BOOL IsDialogControl() const;
@@ -1475,7 +1475,7 @@ BOOL IsDialogControl() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isdrawnoprefix"></a>  CMFCBaseTabCtrl::IsDrawNoPrefix
+##  <a name="isdrawnoprefix"></a>CMFCBaseTabCtrl:: IsDrawNoPrefix
 
 ```
 BOOL IsDrawNoPrefix() const;
@@ -1485,9 +1485,9 @@ BOOL IsDrawNoPrefix() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isflatframe"></a>  CMFCBaseTabCtrl::IsFlatFrame
+##  <a name="isflatframe"></a>CMFCBaseTabCtrl:: IsFlatFrame
 
-指出是否要在平面的樣式或 3D 樣式呈現索引標籤控制項的畫面格。
+指出是否要以平面樣式或3D 樣式呈現索引標籤控制項的框架。
 
 ```
 virtual BOOL IsFlatFrame() const;
@@ -1495,15 +1495,15 @@ virtual BOOL IsFlatFrame() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果此索引標籤控制項的畫面格呈現一般樣式; 中，則為 TRUE。如果畫面格呈現 3D 樣式，則為 FALSE。
+如果索引標籤控制項的框架是以平面樣式呈現, 則為 TRUE;如果框架是以3D 樣式呈現, 則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用[CMFCTabCtrl::SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe)變更索引標籤控制項的畫面格的樣式。
+使用[CMFCTabCtrl:: SetFlatFrame](../../mfc/reference/cmfctabctrl-class.md#setflatframe)來變更索引標籤控制項框架的樣式。
 
-使用 Outlook 樣式的索引標籤控制項無法使用一般的畫面格轉譯。 這包括[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)和任何衍生自該類別。
+使用 Outlook 樣式的索引標籤控制項不能以平面框架轉譯。 這包括[CMFCOutlookBarTabCtrl 類別](../../mfc/reference/cmfcoutlookbartabctrl-class.md)和衍生自該類別的任何類別。
 
-##  <a name="isflattab"></a>  CMFCBaseTabCtrl::IsFlatTab
+##  <a name="isflattab"></a>CMFCBaseTabCtrl:: IsFlatTab
 
 ```
 virtual BOOL IsFlatTab() const;
@@ -1513,9 +1513,9 @@ virtual BOOL IsFlatTab() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ishidesingletab"></a>  CMFCBaseTabCtrl::IsHideSingleTab
+##  <a name="ishidesingletab"></a>CMFCBaseTabCtrl:: IsHideSingleTab
 
-判斷是否只有一個索引標籤的索引標籤控制項是否會隱藏索引標籤的標籤。
+決定如果只有一個索引標籤, 索引標籤控制項是否隱藏索引標籤。
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -1523,13 +1523,13 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果此索引標籤控制項隱藏索引標籤的標籤，具有一個索引標籤; 時，則為 TRUE。否則為 FALSE。
+如果在有一個索引標籤時, 索引標籤控制項隱藏了定位鍵, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用方法[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)啟用只有一個索引標籤時隱藏索引標籤的標籤。
+當只有一個索引標籤時, 請使用[CMFCBaseTabCtrl:: HideSingleTab](#hidesingletab)方法來啟用隱藏定位標籤。
 
-##  <a name="isiconadded"></a>  CMFCBaseTabCtrl::IsIconAdded
+##  <a name="isiconadded"></a>CMFCBaseTabCtrl:: IsIconAdded
 
 ```
 BOOL IsIconAdded(
@@ -1539,17 +1539,17 @@ BOOL IsIconAdded(
 
 ### <a name="parameters"></a>參數
 
-[in] *hIcon*<br/>
+在*hIcon*<br/>
 
-[in] *iIcon*<br/>
+在*圖示*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isinplaceedit"></a>  CMFCBaseTabCtrl::IsInPlaceEdit
+##  <a name="isinplaceedit"></a>CMFCBaseTabCtrl:: IsInPlaceEdit
 
-指出是否要將索引標籤控制項設定，讓使用者動態修改索引標籤。
+指出是否已設定索引標籤控制項, 讓使用者能夠動態修改索引標籤標籤。
 
 ```
 virtual BOOL IsInPlaceEdit() const;
@@ -1557,13 +1557,13 @@ virtual BOOL IsInPlaceEdit() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果就地編輯已啟用;否則為 0。
+如果已啟用就地編輯, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-您可以啟用或停用就地編輯呼叫的方法[CMFCBaseTabCtrl::EnableInPlaceEdit](#enableinplaceedit)。
+您可以藉由呼叫[CMFCBaseTabCtrl:: EnableInPlaceEdit](#enableinplaceedit)方法來啟用或停用就地編輯。
 
-##  <a name="isleftrightrounded"></a>  CMFCBaseTabCtrl::IsLeftRightRounded
+##  <a name="isleftrightrounded"></a>CMFCBaseTabCtrl:: IsLeftRightRounded
 
 ```
 virtual BOOL IsLeftRightRounded() const;
@@ -1573,7 +1573,7 @@ virtual BOOL IsLeftRightRounded() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ismditab"></a>  CMFCBaseTabCtrl::IsMDITab
+##  <a name="ismditab"></a>CMFCBaseTabCtrl:: IsMDITab
 
 ```
 BOOL IsMDITab() const;
@@ -1583,9 +1583,9 @@ BOOL IsMDITab() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="isonenotestyle"></a>  CMFCBaseTabCtrl::IsOneNoteStyle
+##  <a name="isonenotestyle"></a>CMFCBaseTabCtrl:: IsOneNoteStyle
 
-判斷是否會以 Microsoft onenote 樣式顯示索引標籤。
+決定是否要以 Microsoft OneNote 的風格來顯示索引標籤。
 
 ```
 virtual BOOL IsOneNoteStyle() const;
@@ -1593,17 +1593,17 @@ virtual BOOL IsOneNoteStyle() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果索引標籤會顯示在 Microsoft onenote; 樣式，則為 TRUE。否則為 FALSE。
+如果索引標籤顯示在 Microsoft OneNote 的樣式中, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫方法[CMDIFrameWndEx::EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs)若要啟用 Microsoft OneNote 樣式。 您也可以啟用此樣式，當您具現化[CMFCTabCtrl 類別](../../mfc/reference/cmfctabctrl-class.md)： 只要傳遞至方法的 樣式 STYLE_3D_ONENOTE [CMFCTabCtrl::Create](../../mfc/reference/cmfctabctrl-class.md#create)。
+呼叫[CMDIFrameWndEx:: EnableMDITabs](../../mfc/reference/cmdiframewndex-class.md#enablemditabs)方法, 以啟用 Microsoft OneNote 樣式。 當您具現化[CMFCTabCtrl 類別](../../mfc/reference/cmfctabctrl-class.md)時, 您也可以啟用這種樣式: 只要將 STYLE_3D_ONENOTE 樣式傳遞給[CMFCTabCtrl:: Create](../../mfc/reference/cmfctabctrl-class.md#create)方法即可。
 
-根據預設，Microsoft OneNote 樣式不支援自訂的類別衍生自`CMFCBaseTabCtrl Class`。 不過，支援在`CMFCTabCtrl`類別。
+根據預設, 從`CMFCBaseTabCtrl Class`衍生的自訂類別中不支援 Microsoft OneNote 樣式。 不過, 它在`CMFCTabCtrl`類別中受到支援。
 
-##  <a name="isptintabarea"></a>  CMFCBaseTabCtrl::IsPtInTabArea
+##  <a name="isptintabarea"></a>CMFCBaseTabCtrl:: IsPtInTabArea
 
-判斷點是否在索引標籤區域內。
+判斷某個點是否在索引標籤區域內。
 
 ```
 virtual BOOL IsPtInTabArea(CPoint point) const = 0;
@@ -1612,17 +1612,17 @@ virtual BOOL IsPtInTabArea(CPoint point) const = 0;
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-[in]要測試的點。
+在要測試的點。
 
 ### <a name="return-value"></a>傳回值
 
-如果該點是在索引標籤區域中，為非零否則為 0。
+如果點位在索引標籤區域中, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-在  `CMFCBaseTabCtrl Class`，這個方法是純虛擬函式，而且沒有實作。 如果您在衍生類別，以從`CMFCBaseTabCtrl`，您必須實作此函式。
+在中`CMFCBaseTabCtrl Class`, 這個方法是純虛擬函式, 而且沒有任何實作為。 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須執行此函式。
 
-##  <a name="istabclosebuttonhighlighted"></a>  CMFCBaseTabCtrl::IsTabCloseButtonHighlighted
+##  <a name="istabclosebuttonhighlighted"></a>CMFCBaseTabCtrl:: IsTabCloseButtonHighlighted
 
 ```
 BOOL IsTabCloseButtonHighlighted() const;
@@ -1632,7 +1632,7 @@ BOOL IsTabCloseButtonHighlighted() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="istabclosebuttonpressed"></a>  CMFCBaseTabCtrl::IsTabCloseButtonPressed
+##  <a name="istabclosebuttonpressed"></a>CMFCBaseTabCtrl:: IsTabCloseButtonPressed
 
 ```
 BOOL IsTabCloseButtonPressed() const;
@@ -1642,9 +1642,9 @@ BOOL IsTabCloseButtonPressed() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="istabdetachable"></a>  CMFCBaseTabCtrl::IsTabDetachable
+##  <a name="istabdetachable"></a>CMFCBaseTabCtrl:: IsTabDetachable
 
-判斷是否可以中斷連結索引標籤。
+決定是否可卸離索引標籤。
 
 ```
 virtual BOOL IsTabDetachable(int iTab) const;
@@ -1653,19 +1653,19 @@ virtual BOOL IsTabDetachable(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]若要檢查索引標籤的以零起始的索引。
+在要檢查的索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-如果中斷連結; 索引標籤，則為 TRUE。FALSE 否則。
+如果索引標籤可卸離, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-若要中斷連結的標籤，請使用方法[:: Enabletabdetach](#enabletabdetach)。
+若要讓索引標籤可分離, 請使用[CMFCBaseTabCtrl:: EnableTabDetach](#enabletabdetach)方法。
 
-##  <a name="istabicononly"></a>  CMFCBaseTabCtrl::IsTabIconOnly
+##  <a name="istabicononly"></a>CMFCBaseTabCtrl:: IsTabIconOnly
 
-判斷是否要只圖示和文字不包含的索引標籤。
+決定 tab 標籤是否只包含圖示, 而且沒有文字。
 
 ```
 virtual BOOL IsTabIconOnly(int iTab) const;
@@ -1674,19 +1674,19 @@ virtual BOOL IsTabIconOnly(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-索引標籤是否只圖示;，則為 TRUE。FALSE 否則。
+如果定位字元標籤只有圖示, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-若要設定您的應用程式顯示只有圖示索引標籤，呼叫方法[CMFCBaseTabCtrl::SetTabIconOnly](#settabicononly)。
+若要將應用程式中的索引標籤設定為只顯示圖示, 請呼叫[CMFCBaseTabCtrl:: SetTabIconOnly](#settabicononly)方法。
 
-##  <a name="istabswapenabled"></a>  CMFCBaseTabCtrl::IsTabSwapEnabled
+##  <a name="istabswapenabled"></a>CMFCBaseTabCtrl:: IsTabSwapEnabled
 
-決定是否在索引標籤控制項可讓使用者使用滑鼠變更索引標籤位置。
+決定索引標籤控制項是否允許使用者使用滑鼠來變更定位位置。
 
 ```
 BOOL IsTabSwapEnabled() const;
@@ -1694,13 +1694,13 @@ BOOL IsTabSwapEnabled() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果定位點位置可以變更使用者資訊。否則為 0。
+如果使用者可以變更索引標籤位置, 則為非零值。否則為0。
 
 ### <a name="remarks"></a>備註
 
-根據預設，使用者無法變更索引標籤控制項中的索引標籤的順序。 使用[cmfcbasetabctrl:: Enabletabswap](#enabletabswap)方法，以啟用這項功能。
+根據預設, 使用者無法變更索引標籤控制項中索引標籤的順序。 請使用[CMFCBaseTabCtrl:: EnableTabSwap](#enabletabswap)方法來啟用此功能。
 
-##  <a name="istabvisible"></a>  CMFCBaseTabCtrl::IsTabVisible
+##  <a name="istabvisible"></a>CMFCBaseTabCtrl:: IsTabVisible
 
 指出指定的索引標籤是否可見。
 
@@ -1711,13 +1711,13 @@ virtual BOOL IsTabVisible(int iTab) const;
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]若要檢查索引標籤的以零起始的索引。
+在要檢查的索引標籤之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果指定的索引標籤是可見的。否則為 0。
+如果指定的索引標籤可見, 則為非零。否則為0。
 
-##  <a name="isvs2005style"></a>  CMFCBaseTabCtrl::IsVS2005Style
+##  <a name="isvs2005style"></a>CMFCBaseTabCtrl:: IsVS2005Style
 
 ```
 virtual BOOL IsVS2005Style() const;
@@ -1727,9 +1727,9 @@ virtual BOOL IsVS2005Style() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="m_bactivatetabonrightclick"></a>  CMFCBaseTabCtrl::m_bActivateTabOnRightClick
+##  <a name="m_bactivatetabonrightclick"></a>CMFCBaseTabCtrl:: m_bActivateTabOnRightClick
 
-`m_bActivateTabOnRightClick` 決定當使用者使用滑鼠右鍵按一下的索引標籤上是否在焦點中索引標籤。
+`m_bActivateTabOnRightClick`當使用者使用滑鼠右鍵按一下定位點標籤時, 決定定位點是否為焦點。
 
 ```
 BOOL m_bActivateTabOnRightClick;
@@ -1739,9 +1739,9 @@ BOOL m_bActivateTabOnRightClick;
 
 此資料成員的預設值為 FALSE。
 
-##  <a name="m_bautodestroywindow"></a>  CMFCBaseTabCtrl::m_bAutoDestroyWindow
+##  <a name="m_bautodestroywindow"></a>CMFCBaseTabCtrl:: m_bAutoDestroyWindow
 
-`m_bAutoDestroyWindow` 決定移除索引標籤時，是否架構會自動終結索引標籤上的物件。
+`m_bAutoDestroyWindow`決定當移除索引標籤時, 架構是否會自動終結索引標籤上的物件。
 
 ```
 BOOL m_bAutoDestroyWindow;
@@ -1749,7 +1749,7 @@ BOOL m_bAutoDestroyWindow;
 
 ### <a name="remarks"></a>備註
 
-根據預設，這個成員會是 FALSE。
+根據預設, 此成員為 FALSE。
 
 ##  <a name="movetab"></a>  CMFCBaseTabCtrl::MoveTab
 
@@ -1763,13 +1763,13 @@ virtual void MoveTab(
 
 [in] *nSource*<br/>
 
-[in] *nDest*<br/>
+在*nDest*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onchangetabs"></a>  CMFCBaseTabCtrl::OnChangeTabs
+##  <a name="onchangetabs"></a>CMFCBaseTabCtrl:: OnChangeTabs
 
-Počet karet 索引標籤上的控制項變更時，架構會呼叫這個方法。
+當選項卡控制項的索引標籤數目變更時, 架構會呼叫這個方法。
 
 ```
 virtual void OnChangeTabs();
@@ -1777,9 +1777,9 @@ virtual void OnChangeTabs();
 
 ### <a name="remarks"></a>備註
 
-根據預設，這個方法沒有任何作用。 覆寫這個方法，以執行自訂程式碼 索引標籤上的索引標籤數目控制項變更時。
+根據預設, 這個方法不會執行任何操作。 當選項卡控制項的索引標籤數目變更時, 覆寫這個方法以執行自訂程式碼。
 
-##  <a name="ondrop"></a>  CMFCBaseTabCtrl::OnDrop
+##  <a name="ondrop"></a>CMFCBaseTabCtrl:: System.windows.uielement.ondrop
 
 ```
 virtual BOOL OnDrop(
@@ -1790,17 +1790,17 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>參數
 
-[in] _COleDataObject\*_<br/>
+在_COleDataObject\*_<br/>
 
-[in]*DROPEFFECT*<br/>
+在*DROPEFFECT*<br/>
 
-[in]*CPoint*<br/>
+在*CPoint*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondragover"></a>  CMFCBaseTabCtrl::OnDragOver
+##  <a name="ondragover"></a>CMFCBaseTabCtrl:: System.windows.uielement.ondragover
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -1811,17 +1811,17 @@ virtual DROPEFFECT OnDragOver(
 
 ### <a name="parameters"></a>參數
 
-[in] _COleDataObject\*_<br/>
+在_COleDataObject\*_<br/>
 
-[in] *DWORD*<br/>
+在*DWORD*<br/>
 
-[in]*CPoint*<br/>
+在*CPoint*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondragleave"></a>  CMFCBaseTabCtrl::OnDragLeave
+##  <a name="ondragleave"></a>CMFCBaseTabCtrl:: System.windows.uielement.ondragleave
 
 ```
 virtual void OnDragLeave();
@@ -1829,7 +1829,7 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondragenter"></a>  CMFCBaseTabCtrl::OnDragEnter
+##  <a name="ondragenter"></a>CMFCBaseTabCtrl:: System.windows.uielement.ondragenter
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -1840,17 +1840,17 @@ virtual DROPEFFECT OnDragEnter(
 
 ### <a name="parameters"></a>參數
 
-[in] _COleDataObject\*_<br/>
+在_COleDataObject\*_<br/>
 
-[in] *DWORD*<br/>
+在*DWORD*<br/>
 
-[in]*CPoint*<br/>
+在*CPoint*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onrenametab"></a>  CMFCBaseTabCtrl::OnRenameTab
+##  <a name="onrenametab"></a>CMFCBaseTabCtrl:: OnRenameTab
 
 ```
 virtual BOOL OnRenameTab(int, CString&);
@@ -1860,13 +1860,13 @@ virtual BOOL OnRenameTab(int, CString&);
 
 [in] *int*<br/>
 
-[in]*CString （& s)*<br/>
+在*CString &*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="pretranslatemessage"></a>  CMFCBaseTabCtrl::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCBaseTabCtrl::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1874,7 +1874,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in] *pMsg*<br/>
+在*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
@@ -1882,7 +1882,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCBaseTabCtrl::RecalcLayout
 
-重新計算索引標籤控制項的內部配置。
+重新計算索引標籤控制項的內部版面配置。
 
 ```
 virtual void RecalcLayout() = 0;
@@ -1890,11 +1890,11 @@ virtual void RecalcLayout() = 0;
 
 ### <a name="remarks"></a>備註
 
-在  `CMFCBaseTabCtrl Class`，這個方法是純虛擬函式。 如果您在衍生類別，以從`CMFCBaseTabCtrl`，您必須實作此函式。
+在中`CMFCBaseTabCtrl Class`, 這個方法是純虛擬函式。 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須執行此函式。
 
 ##  <a name="removealltabs"></a>  CMFCBaseTabCtrl::RemoveAllTabs
 
-移除索引標籤控制項中的所有索引標籤。
+從索引標籤控制項移除所有索引標籤。
 
 ```
 virtual void RemoveAllTabs();
@@ -1902,9 +1902,9 @@ virtual void RemoveAllTabs();
 
 ### <a name="remarks"></a>備註
 
-如果[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)為 TRUE 時，framework 刪除所有[CWnd](../../mfc/reference/cwnd-class.md)物件附加至已移除的索引標籤。
+如果[CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow)為 TRUE, 則架構會刪除附加至已移除之索引標籤的所有[CWnd](../../mfc/reference/cwnd-class.md)物件。
 
-##  <a name="removetab"></a>  CMFCBaseTabCtrl::RemoveTab
+##  <a name="removetab"></a>CMFCBaseTabCtrl:: RemoveTab
 
 移除索引標籤控制項中的索引標籤。
 
@@ -1917,20 +1917,20 @@ virtual BOOL RemoveTab(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *bRecalcLayout*<br/>
-[in]布林值參數，指定是否要重新計算索引標籤的版面配置。
+在布林值參數, 指定是否要重新計算索引標籤的版面配置。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功; 移除 [] 索引標籤，則為 TRUE。否則為 FALSE。
+如果方法會成功移除索引標籤, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果[CMFCBaseTabCtrl::m_bAutoDestroyWindow](#m_bautodestroywindow)為 TRUE 時，`RemoveTab`終結[CWnd](../../mfc/reference/cwnd-class.md)與指定的索引標籤相關聯的物件。
+如果[CMFCBaseTabCtrl:: m_bAutoDestroyWindow](#m_bautodestroywindow)為 TRUE, `RemoveTab`則會終結與指定之索引標籤相關聯的[CWnd](../../mfc/reference/cwnd-class.md)物件。
 
-##  <a name="renametab"></a>  CMFCBaseTabCtrl::RenameTab
+##  <a name="renametab"></a>CMFCBaseTabCtrl:: RenameTab
 
 ```
 virtual BOOL RenameTab();
@@ -1940,15 +1940,15 @@ virtual BOOL RenameTab();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="resetimagelist"></a>  CMFCBaseTabCtrl::ResetImageList
+##  <a name="resetimagelist"></a>CMFCBaseTabCtrl:: ResetImageList
 
-重設執行個體的映像清單[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)。
+重設[CMFCBaseTabCtrl 類別](../../mfc/reference/cmfcbasetabctrl-class.md)之實例的影像清單。
 
 ```
 void ResetImageList();
 ```
 
-##  <a name="serialize"></a>  CMFCBaseTabCtrl::Serialize
+##  <a name="serialize"></a>CMFCBaseTabCtrl:: 序列化
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -1979,11 +1979,11 @@ virtual BOOL SetActiveTab(int iTab) = 0;
 
 ### <a name="remarks"></a>備註
 
-在  `CMFCBaseTabCtrl Class`，這個方法是純虛擬函式。 如果您在衍生類別，以從`CMFCBaseTabCtrl`，您必須實作此函式。
+在中`CMFCBaseTabCtrl Class`, 這個方法是純虛擬函式。 如果您從`CMFCBaseTabCtrl`衍生類別, 則必須執行此函式。
 
-##  <a name="setactivetabcolor"></a>  CMFCBaseTabCtrl::SetActiveTabColor
+##  <a name="setactivetabcolor"></a>CMFCBaseTabCtrl:: SetActiveTabColor
 
-設定作用中的索引標籤的背景色彩。
+設定 [使用中] 索引標籤的背景色彩。
 
 ```
 virtual void SetActiveTabColor(COLORREF clr);
@@ -1992,13 +1992,13 @@ virtual void SetActiveTabColor(COLORREF clr);
 ### <a name="parameters"></a>參數
 
 *clr*<br/>
-[in]指定新的背景色彩。
+在指定新的背景色彩。
 
 ### <a name="remarks"></a>備註
 
-此架構會取得從作用中的索引標籤的預設背景色彩[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)方法。
+架構會從[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)方法取得作用中索引標籤的預設背景色彩。
 
-##  <a name="setactivetabtextcolor"></a>  CMFCBaseTabCtrl::SetActiveTabTextColor
+##  <a name="setactivetabtextcolor"></a>CMFCBaseTabCtrl:: SetActiveTabTextColor
 
 設定使用中索引標籤的文字色彩。
 
@@ -2009,15 +2009,15 @@ virtual void SetActiveTabTextColor(COLORREF clr);
 ### <a name="parameters"></a>參數
 
 *clr*<br/>
-[in]A [COLORREF](/windows/desktop/gdi/colorref)參數，指定新的文字色彩。
+在指定新文字色彩的[COLORREF](/windows/win32/gdi/colorref)參數。
 
 ### <a name="remarks"></a>備註
 
-根據預設，架構會取得從文字色彩[GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)。 使用覆寫這個預設色彩`SetActiveTabTextColor`方法。
+根據預設, 架構會從[GetSysColor](/windows/win32/api/winuser/nf-winuser-getsyscolor)取得文字色彩。 使用`SetActiveTabTextColor`方法覆寫此預設色彩。
 
-##  <a name="setautocolors"></a>  CMFCBaseTabCtrl::SetAutoColors
+##  <a name="setautocolors"></a>CMFCBaseTabCtrl:: SetAutoColors
 
-自動色彩模式中設定架構會使用索引標籤控制項的色彩。
+設定架構在自動色彩模式中使用的索引標籤控制項色彩。
 
 ```
 void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
@@ -2026,13 +2026,13 @@ void SetAutoColors(const CArray<COLORREF,COLORREF>& arColors);
 ### <a name="parameters"></a>參數
 
 *arColors*<br/>
-[in]RGB 色彩的陣列。
+在RGB 色彩的陣列。
 
 ### <a name="remarks"></a>備註
 
-如果您提供的自訂色彩陣列時，會忽略預設色彩陣列。 如果參數*arColors*是空的架構會還原為預設色彩陣列。
+如果您提供自訂的色彩陣列, 則會忽略預設的色彩陣列。 如果參數*arColors*是空的, 則架構會還原為預設的色彩陣列。
 
-若要啟用 autocolor 模式，請使用[CMFCBaseTabCtrl::EnableAutoColor](#enableautocolor)方法。
+若要啟用 autocolor 模式, 請使用[CMFCBaseTabCtrl:: EnableAutoColor](#enableautocolor)方法。
 
 ##  <a name="setdockingbarwrapperrtc"></a>  CMFCBaseTabCtrl::SetDockingBarWrapperRTC
 
@@ -2045,15 +2045,15 @@ void SetDockingBarWrapperRTC(CRuntimeClass* pRTC);
 ### <a name="parameters"></a>參數
 
 *pRTC*<br/>
-[in]新的包裝函式類別的執行階段類別資訊。
+在新包裝函式類別的執行時間類別資訊。
 
 ### <a name="remarks"></a>備註
 
-將索引標籤新增至索引標籤控制項的使用方法[:: Addtab](#addtab)並[cmfcbasetabctrl:: Inserttab](#inserttab)。 當您新增工作索引標籤時，在該索引標籤上的每個控制項必須是可停駐。 不從衍生的任何物件`CDockablePane`必須包裝。 `AddTab` 和`InsertTab`建立這些物件的包裝函式。 預設的包裝函式類別是[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)。 此方法`SetDockingBarWrapperRTC`可讓您變更做為包裝函式類別的類別。 您提供的包裝函式類別必須衍生自`CDockablePaneAdapter`。
+您可以使用[CMFCBaseTabCtrl:: AddTab](#addtab)和[CMFCBaseTabCtrl:: InsertTab](#inserttab)方法, 將索引標籤加入至索引標籤控制項。 當您新增索引標籤時, 該索引標籤上的每個控制項都必須可停駐。 不是衍生自`CDockablePane`的任何物件都必須加以包裝。 `AddTab`並`InsertTab`為這些物件建立包裝函式。 預設的包裝函式類別是[CDockablePaneAdapter 類別](../../mfc/reference/cdockablepaneadapter-class.md)。 方法`SetDockingBarWrapperRTC`可讓您變更做為包裝函式類別使用的類別。 您提供的包裝函式類別必須衍生自`CDockablePaneAdapter`。
 
-##  <a name="setdrawnoprefix"></a>  CMFCBaseTabCtrl::SetDrawNoPrefix
+##  <a name="setdrawnoprefix"></a>CMFCBaseTabCtrl:: SetDrawNoPrefix
 
-啟用和停用的索引標籤中的前置詞字元處理。
+啟用和停用定位標籤中的前置詞字元處理。
 
 ```
 void SetDrawNoPrefix(
@@ -2064,16 +2064,16 @@ void SetDrawNoPrefix(
 ### <a name="parameters"></a>參數
 
 *bNoPrefix*<br/>
-[in]如果您想要處理的前置詞的字元，則為 TRUE否則為 FALSE。
+在如果您想要處理前置詞字元, 則為 TRUE;否則為 FALSE。
 
 *bRedraw*<br/>
-[in]如果您想要重繪索引標籤式的視窗中，則為 TRUE否則為 FALSE。
+在如果您想要重繪索引標籤式視窗, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-前置詞字元是助憶鍵字元，加上連字號 (&)。
+前置詞字元是前面加上連字號 (&) 的助憶鍵字元。
 
-##  <a name="setimagelist"></a>  CMFCBaseTabCtrl::SetImageList
+##  <a name="setimagelist"></a>CMFCBaseTabCtrl:: SetImageList
 
 設定索引標籤控制項的圖示影像清單。
 
@@ -2089,30 +2089,30 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 ### <a name="parameters"></a>參數
 
 *uiID*<br/>
-[in]點陣圖的資源識別碼。 `SetImageList` 從這個資源中載入的影像清單。
+在點陣圖資源識別碼。 `SetImageList`從這個資源載入影像清單。
 
 *cx*<br/>
-[in]每個影像像素為單位的寬度。
+在每個影像的寬度 (以圖元為單位)。
 
 *clrTransp*<br/>
-[in]A [COLORREF](/windows/desktop/gdi/colorref)參數，表示影像的透明色彩。
+在[COLORREF](/windows/win32/gdi/colorref)參數, 表示影像的透明色彩。
 
 *hImageList*<br/>
-[in]預先載入的影像清單控制代碼。
+在預先載入影像清單的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，為非零否則為 0。
+如果方法成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-圖示影像清單中的映像會顯示 [] 索引標籤的標籤旁。若要顯示的圖示，您必須指定其索引當您呼叫[:: Addtab](#addtab)。
+圖示影像清單中的影像會與索引標籤一起顯示。若要顯示圖示, 您必須在呼叫[CMFCBaseTabCtrl:: AddTab](#addtab)時指定其索引。
 
-`SetImageList` 如果建立使用一般樣式 索引標籤控制項，將會失敗。 它也會失敗如果架構無法載入所指定的映像*uiID*。
+`SetImageList`如果索引標籤控制項是使用平面樣式所建立, 將會失敗。 如果架構無法載入*uiID*所指示的影像, 它也會失敗。
 
-這個方法會重新計算根據映像和文字大小 索引標籤的高度。
+這個方法會根據影像和文字大小重新計算索引標籤的高度。
 
-##  <a name="setlocation"></a>  CMFCBaseTabCtrl::SetLocation
+##  <a name="setlocation"></a>CMFCBaseTabCtrl:: SetLocation
 
 ```
 virtual void SetLocation(Location location);
@@ -2120,13 +2120,13 @@ virtual void SetLocation(Location location);
 
 ### <a name="parameters"></a>參數
 
-[in] *location*<br/>
+在*位置*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="settabbkcolor"></a>  CMFCBaseTabCtrl::SetTabBkColor
+##  <a name="settabbkcolor"></a>CMFCBaseTabCtrl:: SetTabBkColor
 
-設定指定的索引標籤的背景色彩。
+設定指定之索引標籤的背景色彩。
 
 ```
 virtual BOOL SetTabBkColor(
@@ -2137,16 +2137,16 @@ virtual BOOL SetTabBkColor(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *color*<br/>
-[in]若要設定色彩。
+在要設定的色彩。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUEFALSE 否則。
+如果成功, 則為 TRUE;否則為 FALSE。
 
-##  <a name="settabbordersize"></a>  CMFCBaseTabCtrl::SetTabBorderSize
+##  <a name="settabbordersize"></a>CMFCBaseTabCtrl:: SetTabBorderSize
 
 設定索引標籤控制項的新框線大小。
 
@@ -2159,14 +2159,14 @@ virtual void SetTabBorderSize(
 ### <a name="parameters"></a>參數
 
 *nTabBorderSize*<br/>
-[in]新框線的大小，以像素為單位。
+在新的框線大小 (以圖元為單位)。
 
 *bRepaint*<br/>
-[in]布林值參數，指出是否在 framework 重新繪製控制項。
+在布林值參數, 指出架構是否重新繪製控制項。
 
-##  <a name="settabhicon"></a>  CMFCBaseTabCtrl::SetTabHicon
+##  <a name="settabhicon"></a>CMFCBaseTabCtrl:: SetTabHicon
 
-設定的索引標籤的圖示。
+設定定位鍵標籤的圖示。
 
 ```
 virtual BOOL SetTabHicon(
@@ -2177,16 +2177,16 @@ virtual BOOL SetTabHicon(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。這個方法會變更此索引標籤的圖示。
+在索引標籤之以零為基底的索引。這個方法會變更此索引標籤的圖示。
 
 *hIcon*<br/>
-[in]圖示控制代碼。
+在圖示的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功，則為 TRUE，否則為 FALSE。
 
-##  <a name="settabicon"></a>  CMFCBaseTabCtrl::SetTabIcon
+##  <a name="settabicon"></a>CMFCBaseTabCtrl:: SetTabIcon
 
 設定索引標籤的圖示。
 
@@ -2202,15 +2202,15 @@ virtual BOOL SetTabIcon(
 [in]更新索引標籤的以零為起始的索引。
 
 *uiIcon*<br/>
-[in][新增] 圖示的圖示識別碼。 此識別碼會參考內部[CImageList](../../mfc/reference/cimagelist-class.md)物件。
+在新圖示的圖示識別碼。 此識別碼會參考內部[CImageList](../../mfc/reference/cimagelist-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功，則為 TRUE，否則為 FALSE。
 
-##  <a name="settabicononly"></a>  CMFCBaseTabCtrl::SetTabIconOnly
+##  <a name="settabicononly"></a>CMFCBaseTabCtrl:: SetTabIconOnly
 
-啟用特定的索引標籤上顯示只有圖示 （並沒有文字標籤）。
+只在特定的索引標籤上顯示圖示 (不含文字標籤)。
 
 ```
 virtual BOOL SetTabIconOnly(
@@ -2222,13 +2222,13 @@ virtual BOOL SetTabIconOnly(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]若要變更索引標籤的以零起始的索引。
+在要變更的索引標籤之以零為基底的索引。
 
 *bIconOnly*<br/>
-[in]布林值參數，決定是否要顯示只有圖示。
+在布林值參數, 決定是否只顯示圖示。
 
 *bShowTooltipAlways*<br/>
-[in]布林值參數，決定是否在架構顯示工具提示會顯示只有圖示的索引標籤。
+在布林值參數, 決定架構是否會針對只顯示圖示的索引標籤標記顯示工具提示。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2236,11 +2236,11 @@ virtual BOOL SetTabIconOnly(
 
 ### <a name="remarks"></a>備註
 
-根據預設，索引標籤控制項就會顯示每個索引標籤的圖示和文字標籤。
+根據預設, 索引標籤控制項會顯示每個索引標籤的圖示和文字標籤。
 
-##  <a name="settablabel"></a>  CMFCBaseTabCtrl::SetTabLabel
+##  <a name="settablabel"></a>CMFCBaseTabCtrl:: SetTabLabel
 
-設定的索引標籤的文字。
+設定制表符標籤的文字。
 
 ```
 virtual BOOL SetTabLabel(
@@ -2254,13 +2254,13 @@ virtual BOOL SetTabLabel(
 [in]更新索引標籤的以零為起始的索引。
 
 *strLabel*<br/>
-[in]包含新索引標籤的標籤文字字串的參考。
+在字串的參考, 其中包含定位標籤的新文字。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零否則為 0。
+如果成功, 則為非零;否則為0。
 
-##  <a name="settabsheight"></a>  CMFCBaseTabCtrl::SetTabsHeight
+##  <a name="settabsheight"></a>CMFCBaseTabCtrl:: SetTabsHeight
 
 ```
 virtual void SetTabsHeight();
@@ -2268,9 +2268,9 @@ virtual void SetTabsHeight();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="settabsorder"></a>  CMFCBaseTabCtrl::SetTabsOrder
+##  <a name="settabsorder"></a>CMFCBaseTabCtrl:: SetTabsOrder
 
-排列依據指定順序中的索引標籤。
+依照指定的順序排列索引標籤。
 
 ```
 BOOL SetTabsOrder(const CArray<int,int>& arOrder);
@@ -2279,19 +2279,19 @@ BOOL SetTabsOrder(const CArray<int,int>& arOrder);
 ### <a name="parameters"></a>參數
 
 *arOrder*<br/>
-[in]以零為起始的索引陣列，定義新的索引標籤順序。
+在以零為基底的索引陣列, 定義新的定位順序。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE否則會失敗。
+如果成功, 則為 TRUE;否則會失敗。
 
 ### <a name="remarks"></a>備註
 
-大小*arOrder*陣列必須等於索引標籤控制項中的索引標籤數目。
+*ArOrder*陣列的大小必須等於索引標籤控制項中的索引標籤數目。
 
-##  <a name="settabtextcolor"></a>  CMFCBaseTabCtrl::SetTabTextColor
+##  <a name="settabtextcolor"></a>CMFCBaseTabCtrl:: SetTabTextColor
 
-設定特定的索引標籤的文字色彩。
+設定特定索引標籤的文字色彩。
 
 ```
 virtual BOOL SetTabTextColor(
@@ -2302,16 +2302,16 @@ virtual BOOL SetTabTextColor(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in]索引標籤的以零為起始的索引。
+在索引標籤之以零為基底的索引。
 
 *color*<br/>
-[in]A [COLORREF](/windows/desktop/gdi/colorref)參數，指出新的文字色彩。
+在表示新文字色彩的[COLORREF](/windows/win32/gdi/colorref)參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零否則為 0。
+如果成功, 則為非零;否則為0。
 
-##  <a name="showtab"></a>  CMFCBaseTabCtrl::ShowTab
+##  <a name="showtab"></a>CMFCBaseTabCtrl:: Showtab
 
 顯示或隱藏指定的索引標籤。
 
@@ -2326,16 +2326,16 @@ virtual BOOL ShowTab(
 ### <a name="parameters"></a>參數
 
 *iTab*<br/>
-[in][] 索引標籤的索引，`ShowTab`將顯示或隱藏。
+在`ShowTab`要顯示或隱藏之索引標籤的索引。
 
 *bShow*<br/>
-[in]布林值參數，指出是否要顯示索引標籤。
+在布林值參數, 指出是否要顯示索引標籤。
 
 *bRecalcLayout*<br/>
-[in]布林值參數，指出是否要立即重新計算的視窗版面配置。
+在布林值參數, 指出是否要立即重新計算視窗版面配置。
 
 *bActivate*<br/>
-[in]布林值參數，指出是否要選取所指定的索引標籤*iTab*。
+在布林值參數, 指出是否要選取*iTab*所指定的索引標籤。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2343,9 +2343,9 @@ virtual BOOL ShowTab(
 
 ### <a name="remarks"></a>備註
 
-參數*bActivate*僅適用於*bShow*為 TRUE。 如果*bActivate*為 TRUE，否則如果`ShowTab`成功，`ShowTab`會傳送訊息 AFX_WM_CHANGE_ACTIVE_TAB 父系的索引標籤視窗。
+只有在*bShow*為 TRUE 時, 才會套用參數*bActivate* 。 如果*bActivate*為 TRUE, 且`ShowTab`成功時, `ShowTab`會將訊息 AFX_WM_CHANGE_ACTIVE_TAB 傳送至索引標籤視窗的父系。
 
-##  <a name="startrenametab"></a>  CMFCBaseTabCtrl::StartRenameTab
+##  <a name="startrenametab"></a>CMFCBaseTabCtrl:: StartRenameTab
 
 ```
 virtual BOOL StartRenameTab(int iTab);
@@ -2353,13 +2353,13 @@ virtual BOOL StartRenameTab(int iTab);
 
 ### <a name="parameters"></a>參數
 
-[in] *iTab*<br/>
+在*iTab*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="swaptabs"></a>  CMFCBaseTabCtrl::SwapTabs
+##  <a name="swaptabs"></a>CMFCBaseTabCtrl:: SwapTabs
 
 ```
 virtual void SwapTabs(

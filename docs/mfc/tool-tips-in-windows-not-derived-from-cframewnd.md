@@ -9,18 +9,18 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f68fb62335219ea498163e6124c8e91e49f2938
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168020"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511032"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>非衍生自 CFrameWnd 之視窗中的工具提示
 
-此系列的文章涵蓋包含在視窗中，不衍生自控制項啟用工具提示[CFrameWnd](../mfc/reference/cframewnd-class.md)。 發行項[工具列工具提示](../mfc/toolbar-tool-tips.md)中的控制項提供工具提示資訊`CFrameWnd`。
+本文系列涵蓋的工具提示, 可讓您在不是衍生自[CFrameWnd](../mfc/reference/cframewnd-class.md)的視窗中包含控制項。 文章[工具列工具提示](../mfc/toolbar-tool-tips.md)提供中`CFrameWnd`控制項的工具提示的相關資訊。
 
-在此系列的文章中涵蓋的主題包括：
+本文系列涵蓋的主題包括:
 
 - [啟用工具提示](../mfc/enabling-tool-tips.md)
 
@@ -28,11 +28,11 @@ ms.locfileid: "62168020"
 
 - [TOOLTIPTEXT 結構](../mfc/tooltiptext-structure.md)
 
-工具提示會自動顯示按鈕，並包含在父視窗中其他控制項衍生自`CFrameWnd`。 這是因為`CFrameWnd`有的預設處理常式[TTN_GETDISPINFO](/windows/desktop/Controls/ttn-getdispinfo)通知，用來處理**TTN_NEEDTEXT**通知從工具提示與控制項相關聯的控制項。
+從衍生自之`CFrameWnd`父視窗中包含的按鈕和其他控制項, 會自動顯示工具提示。 這是因為`CFrameWnd`具有[TTN_GETDISPINFO](/windows/win32/Controls/ttn-getdispinfo)通知的預設處理常式, 它會處理與控制項相關聯的工具提示控制項中的**TTN_NEEDTEXT**通知。
 
-不過，這個預設處理常式不會呼叫的時機**TTN_NEEDTEXT**時傳送通知，從 工具提示控制項的視窗中，不是控制項相關聯`CFrameWnd`，例如對話方塊或 表單 檢視上的控制項。 因此，就必須為您提供的處理常式函式**TTN_NEEDTEXT**通知訊息，以顯示子控制項的工具提示。
+不過, 當**TTN_NEEDTEXT**通知是從不是的`CFrameWnd`視窗 (例如對話方塊或表單檢視中的控制項) 所關聯的工具提示控制項傳送時, 不會呼叫這個預設處理常式。 因此, 您必須提供**TTN_NEEDTEXT**通知訊息的處理常式函式, 才能顯示子控制項的工具提示。
 
-針對您的 windows 所提供的預設工具提示[CWnd::EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)沒有與其相關聯的文字。 若要擷取要顯示的工具提示的文字**TTN_NEEDTEXT**在顯示工具提示視窗之前，將會傳送至工具提示控制項的父視窗的通知。 如果沒有將一些值指派給這個訊息處理常式*pszText*隸屬**TOOLTIPTEXT**結構，會有任何工具提示所顯示的文字。
+提供給 windows 的[CWnd:: EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips)的預設工具提示沒有相關聯的文字。 若要取得工具提示顯示的文字, 在顯示工具提示視窗之前, **TTN_NEEDTEXT**通知會傳送至工具提示控制項的父視窗。 如果此訊息沒有處理常式可將某個值指派給**TOOLTIPTEXT**結構的*pszText*成員, 則工具提示不會顯示任何文字。
 
 ## <a name="see-also"></a>另請參閱
 

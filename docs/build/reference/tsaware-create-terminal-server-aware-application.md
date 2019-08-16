@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981158125cf978c2f685501117f95553df9c3c89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317428"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498192"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (建立終端伺服器感知應用程式)
 
@@ -26,29 +26,29 @@ ms.locfileid: "62317428"
 
 ## <a name="remarks"></a>備註
 
-/TSAWARE 選項會設定旗標，在程式映像的選擇性標頭的 IMAGE_OPTIONAL_HEADER DllCharacteristics 欄位中。 設定此旗標時，終端機伺服器將不會對應用程式進行某些變更。
+/TSAWARE 選項會在程式映射的選擇性標頭的 [IMAGE_OPTIONAL_HEADER DllCharacteristics] 欄位中設定旗標。 設定此旗標時，終端機伺服器將不會對應用程式進行某些變更。
 
-當應用程式不是終端伺服器感知 （也就是舊版應用程式） 時，終端機伺服器會讓某些修改舊版的應用程式，以讓它在多使用者環境中正常運作。 比方說，終端機伺服器將會建立虛擬 Windows 資料夾中，使每個使用者取得 Windows 資料夾，而不是取得系統的 Windows 目錄。 這可讓使用者存取他們自己的 INI 檔案。 此外，終端機伺服器可讓舊版應用程式的登錄一些調整。 這些修改會減慢終端機伺服器上的舊版應用程式載入。
+當應用程式不是終端機伺服器感知 (也稱為繼承應用程式) 時, 終端機伺服器會對繼承應用程式進行某些修改, 使其在多使用者環境中能夠正常運作。 例如, 終端機伺服器會建立虛擬 Windows 資料夾, 讓每個使用者取得 Windows 資料夾, 而不是取得系統的 Windows 目錄。 這可讓使用者存取自己的 INI 檔案。 此外, 終端機伺服器會對繼承應用程式的登錄進行一些調整。 這些修改會使終端機伺服器上繼承應用程式的載入速度變慢。
 
-如果終端伺服器感知應用程式，它必須不依賴 INI 檔案也不寫入**HKEY_CURRENT_USER**在安裝期間登錄。
+如果應用程式是終端機伺服器感知, 則在安裝期間, 它不能依賴 INI 檔案, 也不能寫入**HKEY_CURRENT_USER**登錄。
 
-如果您使用 /TSAWARE，而且您的應用程式仍會使用的 INI 檔案，檔案會共用系統的所有使用者。 如果是可接受，您仍然可以連結 /TSAWARE; 您的應用程式否則，您必須使用 /tsaware: no。
+如果您使用/TSAWARE, 而您的應用程式仍然使用 INI 檔案, 則系統的所有使用者都會共用這些檔案。 如果這是可接受的, 您仍然可以使用/TSAWARE 連結應用程式;否則, 您必須使用/TSAWARE: NO。
 
-/TSAWARE 選項會預設啟用 Windows 和主控台應用程式。 請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)並[/VERSION](version-version-information.md)的資訊。
+Windows 和主控台應用程式預設會啟用/TSAWARE 選項。 如需相關資訊, 請參閱[/SUBSYSTEM](subsystem-specify-subsystem.md)和[/VERSION](version-version-information.md) 。
 
-/TSAWARE 不正確的驅動程式、 Vxd 或 Dll。
+/TSAWARE 對驅動程式、Vxd 或 Dll 無效。
 
-如果應用程式已連結 /TSAWARE，DUMPBIN [/HEADERS](headers.md)會顯示所造成影響的資訊。
+如果應用程式已與/TSAWARE 連結, DUMPBIN [/HEADERS](headers.md)會顯示該效果的資訊。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個連結器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 **連結器**資料夾。
+1. 按一下 **Linker** 資料夾。
 
-1. 按一下 **系統**屬性頁。
+1. 按一下 [**系統**] 屬性頁。
 
-1. 修改**終端機伺服器**屬性。
+1. 修改 [**終端機伺服器**] 屬性。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 
@@ -58,5 +58,5 @@ ms.locfileid: "62317428"
 
 [MSVC 連結器參考](linking.md)<br/>
 [MSVC 連結器選項](linker-options.md)<br/>
-[儲存使用者專屬資訊](/windows/desktop/TermServ/storing-user-specific-information)<br/>
-[在終端機服務環境中的舊版應用程式](https://msdn.microsoft.com/library/aa382957.aspx)
+[儲存使用者特定資訊](/windows/win32/TermServ/storing-user-specific-information)<br/>
+[終端機服務環境中的繼承應用程式](https://msdn.microsoft.com/library/aa382957.aspx)

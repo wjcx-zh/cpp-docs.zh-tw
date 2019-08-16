@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: bbd859018210d3c972ae9d4b0e9f659d96d95aab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 6e0036b7008b67a1e21bcbe64977f4703bbdf3be
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504235"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514641"
 ---
-# <a name="implementscategory"></a>implements_category
+# <a name="implements_category"></a>implements_category
 
-指定目標類別所實作的元件類別。
+指定目標類別所執行的元件類別目錄。
 
 ## <a name="syntax"></a>語法
 
@@ -26,17 +26,17 @@ ms.locfileid: "66504235"
 ### <a name="parameters"></a>參數
 
 *implements_category*<br/>
-實作的類別目錄的識別碼。
+實作為分類的識別碼。
 
 ## <a name="remarks"></a>備註
 
-**Implements_category** C++屬性會指定目標類別所實作的元件類別。 這是藉由建立類別目錄的對應，並加入所指定的個別項目**implements_category**屬性。 如需詳細資訊，請參閱 <<c0> [ 元件類別 and How They Work](/windows/desktop/com/component-categories-and-how-they-work)。
+**Implements_category** C++屬性會指定目標類別所執行的元件類別目錄。 這是藉由建立分類對應並加入**implements_category**屬性所指定的個別專案來完成。 如需詳細資訊, 請參閱[元件類別及其使用方式](/windows/win32/com/component-categories-and-how-they-work)。
 
-此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如，如果`progid`會套用`vi_progid`和`coclass`也會套用。
+此屬性需要 [coclass](coclass.md)、 [progid](progid.md)或 [vi_progid](vi-progid.md) 屬性 (或表示上述其中一項的另一個屬性) 也套用至相同的項目。 如果使用任何單一屬性，則會自動套用其他兩項。 例如, 如果`progid`套用, `vi_progid`和`coclass`也會套用。
 
 ## <a name="example"></a>範例
 
-下列程式碼可讓您指定下列物件會實作`Control`類別目錄。
+下列程式碼會指定下列物件`Control`來執行類別目錄。
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -57,10 +57,10 @@ class CMyClass {};
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|是|
-|**必要屬性**|下列其中之一： `coclass`， `progid`，或 `vi_progid`|
-|**無效屬性**|None|
+|**必要屬性**|下列其中一項: `coclass`、 `progid`或`vi_progid`|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

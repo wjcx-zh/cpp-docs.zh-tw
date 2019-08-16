@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915469"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492923"
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "68915469"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-擲回的例外狀況代碼是標準的 VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) 和 VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) 值。 例外狀況會將指標傳遞至 LPDWORD 值中的**DelayLoadInfo**結構, 而**GetExceptionInformation**會在[EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record)結構的 ExceptionInformation [0] 欄位中加以抓取。
+擲回的例外狀況代碼是標準的 VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) 和 VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) 值。 例外狀況會將指標傳遞至 LPDWORD 值中的**DelayLoadInfo**結構, 而**GetExceptionInformation**會在[EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record)結構的 ExceptionInformation [0] 欄位中加以抓取。
 
 此外, 如果在 grAttrs 欄位中設定了不正確的位, 就會擲回例外狀況 ERROR_INVALID_PARAMETER。 這個例外狀況適用于所有意圖和用途, 嚴重。
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: 8219c8fdd1b1df93f92fc6c1d0324a2475d3384b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490939"
 ---
 # <a name="appobject"></a>appobject
 
-識別做為應用程式物件，這是完整的.exe 應用程式相關聯，表示全域可用在此函式和屬性的 coclass coclass[型別程式庫](../../mfc/automation-clients-using-type-libraries.md)。
+將 coclass 識別為與完整 .exe 應用程式相關聯的應用程式物件, 並指出 coclass 的函式和屬性在此[類型程式庫](../../mfc/automation-clients-using-type-libraries.md)中可全域使用。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409703"
 
 ## <a name="remarks"></a>備註
 
-**Appobject** C++屬性具有相同的功能[appobject](/windows/desktop/Midl/appobject) MIDL 屬性。
+**Appobject** C++屬性具有與[appobject](/windows/win32/Midl/appobject) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範簡單的類別定義，加上包含的屬性區塊**appobject**:
+下列程式碼顯示一個簡單的類別定義, 前面加上包含**appobject**的屬性區塊:
 
 ```cpp
 // cpp_attr_ref_appobject.cpp
@@ -52,10 +52,10 @@ class A : public ICustom {
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
 |**必要屬性**|`coclass`|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

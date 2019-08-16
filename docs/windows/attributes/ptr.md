@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: 2c712a2d9c85e0fe8fd8c4dbad5c7f48812ab1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514163"
 ---
 # <a name="ptr"></a>ptr
 
-指定指標做為完整的指標。
+將指標指定為完整指標。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407389"
 
 ## <a name="remarks"></a>備註
 
-**Ptr** C++屬性具有相同的功能[ptr](/windows/desktop/Midl/ptr) MIDL 屬性。
+**Ptr** C++屬性的功能與[ptr](/windows/win32/Midl/ptr) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[defaultvalue](defaultvalue.md)範例使用**ptr**。
+如需使用**ptr**的範例, 請參閱[defaultvalue](defaultvalue.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407389"
 
 |||
 |-|-|
-|**適用於**|介面參數、 介面方法， **typedef**|
+|**適用於**|介面參數, 介面方法, **typedef**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

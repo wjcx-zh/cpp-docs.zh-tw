@@ -1,21 +1,21 @@
 ---
-title: helpstringcontext (C++ COM 屬性)
+title: helpstringcoNtext (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringcontext
 helpviewer_keywords:
 - helpstringcontext attribute [C++]
 ms.assetid: d4cd135e-d91c-4aa3-9353-8aeb096f52cf
-ms.openlocfilehash: a6df5b63291fbc54d6c12a116fccd8372e8ced9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae48c6216b1f1d987b33eff50acf9d82dc551400
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409573"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501496"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
-指定.hlp 或.chm 檔案中的說明主題的識別碼。
+在 .hlp 或 .chm 檔案中指定說明主題的識別碼。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409573"
 ### <a name="parameters"></a>參數
 
 *contextID*<br/>
-在 32 位元說明內容識別碼**協助**檔案。
+說明檔中的32位說明內容識別碼 。
 
 ## <a name="remarks"></a>備註
 
-**Helpstringcontext** C++屬性具有相同的功能[helpstringcontext](/windows/desktop/Midl/helpstringcontext) ODL 屬性。
+**HelpstringcoNtext** C++屬性的功能與[helpstringcoNtext](/windows/win32/Midl/helpstringcontext) ODL 屬性相同。
 
 ## <a name="example"></a>範例
 
@@ -54,10 +54,10 @@ __interface IMyI
 
 |||
 |-|-|
-|**適用於**|**類別**，**介面**，介面方法|
+|**適用於**|**類別**,**介面**, 介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

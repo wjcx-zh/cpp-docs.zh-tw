@@ -10,19 +10,19 @@ helpviewer_keywords:
 - CGopherLocator [MFC], CGopherLocator
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
-ms.openlocfilehash: f25273f1d982092adc8b8010cc60818e7c0e24a2
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 9ce95a712af6502bff2a2502582a7fa843bf9653
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503671"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506164"
 ---
 # <a name="cgopherlocator-class"></a>CGopherLocator 類別
 
-從 gopher 伺服器取得 gopher 「 定位器 」，判斷定位器的類型，並將定位器提供給[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。
+從 Gopher 伺服器取得 gopher 「定位器」, 判斷定位器的類型, 並讓定位器可供[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)。
 
 > [!NOTE]
->  類別`CGopherConnection`， `CGopherFile`， `CGopherFileFind`，`CGopherLocator`和其成員已被取代，因為它們不在 Windows XP 平台上運作，但它們會繼續在舊版平台上運作。
+>  類別`CGopherConnection`、 `CGopherFile`、和其成員`CGopherLocator`已被取代, 因為它們無法在 Windows XP 平臺上使用, 但它們將繼續在舊版平臺上使用。 `CGopherFileFind`
 
 ## <a name="syntax"></a>語法
 
@@ -42,23 +42,23 @@ class CGopherLocator : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CGopherLocator::GetLocatorType](#getlocatortype)|剖析 gopher 定位器，並判斷它的屬性。|
+|[CGopherLocator::GetLocatorType](#getlocatortype)|剖析 gopher 定位器, 並決定其屬性。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|直接存取儲存在字元`CGopherLocator`為 C 樣式字串的物件。|
+|[CGopherLocator:: operator LPCTSTR](#operator_lpctstr)|直接存取以 C 樣式字串`CGopherLocator`儲存在物件中的字元。|
 
 ## <a name="remarks"></a>備註
 
-應用程式必須取得 gopher 伺服器的定位器之前它可以擷取該伺服器中的資訊。 Jakmile obsahuje 定位器時，它必須視為不透明的語彙基元來定位程式。
+應用程式必須先取得 Gopher 伺服器的定位器, 才能從該伺服器抓取資訊。 一旦有了定位器, 它就必須將定位器視為不透明的 token。
 
-每個 gopher 定位器已判斷的檔案或找到的伺服器類型的屬性。 請參閱[GetLocatorType](#getlocatortype) gopher 定位器類型的清單。
+每個 gopher 定位器都有屬性, 可決定找到的檔或伺服器類型。 如需 gopher 定位器類型的清單, 請參閱[GetLocatorType](#getlocatortype) 。
 
-應用程式的呼叫通常使用定位器[CGopherFileFind::FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile)擷取特定資訊。
+應用程式通常會使用定位器來呼叫[CGopherFileFind:: FindFile](../../mfc/reference/cgopherfilefind-class.md#findfile) , 以取得特定的資訊片段。
 
-若要進一步了解如何`CGopherLocator`運作方式與其他 MFC 網際網路類別，請參閱文章[網際網路程式設計 WinInet](../../mfc/win32-internet-extensions-wininet.md)。
+若要深入瞭解如何`CGopherLocator`與其他 MFC 網際網路類別搭配運作, 請參閱[使用 WinInet 進行網際網路程式設計](../../mfc/win32-internet-extensions-wininet.md)一文。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -68,11 +68,11 @@ class CGopherLocator : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxinet.h
+**標頭:** afxinet.h。h
 
-##  <a name="cgopherlocator"></a>  CGopherLocator::CGopherLocator
+##  <a name="cgopherlocator"></a>CGopherLocator::CGopherLocator
 
-此成員函式呼叫來建立`CGopherLocator`物件。
+呼叫這個成員函式以建立`CGopherLocator`物件。
 
 ```
 CGopherLocator(const CGopherLocator& ref);
@@ -81,15 +81,15 @@ CGopherLocator(const CGopherLocator& ref);
 ### <a name="parameters"></a>參數
 
 *ref*<br/>
-常數的參考`CGopherLocator`物件。
+常數`CGopherLocator`物件的參考。
 
 ### <a name="remarks"></a>備註
 
-您永遠不會建立`CGopherLocator`直接物件。 請改為呼叫[CGopherConnection::CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)建立並傳回的指標`CGopherLocator`物件。
+您永遠不會`CGopherLocator`直接建立物件。 相反地, 請呼叫[CGopherConnection:: CreateLocator](../../mfc/reference/cgopherconnection-class.md#createlocator)來建立並傳回`CGopherLocator`物件的指標。
 
-##  <a name="getlocatortype"></a>  CGopherLocator::GetLocatorType
+##  <a name="getlocatortype"></a>CGopherLocator::GetLocatorType
 
-呼叫此成員函式，以取得定位器類型。
+呼叫這個成員函式以取得定位器類型。
 
 ```
 BOOL GetLocatorType(DWORD& dwRef) const;
@@ -98,46 +98,46 @@ BOOL GetLocatorType(DWORD& dwRef) const;
 ### <a name="parameters"></a>參數
 
 *dwRef*<br/>
-對一個 DWORD，將會收到定位器類型的參考。 請參閱**備註**定位器類型的資料表。
+將接收定位器型別之 DWORD 的參考。 如需定位器類型的資料表, 請參閱**備註**。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗，Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)可能會呼叫以判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
-可能的類型如下所示：
+可能的類型如下所示:
 
 |值|意義|
 |-----------|-------------|
 |GOPHER_TYPE_TEXT_FILE|ASCII 文字檔。|
-|GOPHER_TYPE_DIRECTORY|Gopher 的其他項目目錄。|
+|GOPHER_TYPE_DIRECTORY|其他 Gopher 專案的目錄。|
 |GOPHER_TYPE_CSO|CSO 電話簿伺服器。|
 |GOPHER_TYPE_ERROR|表示錯誤狀況。|
-|GOPHER_TYPE_MAC_BINHEX|Macintosh 的 BINHEX 格式檔案。|
-|GOPHER_TYPE_DOS_ARCHIVE|DOS 封存檔。|
-|GOPHER_TYPE_UNIX_UUENCODED|使用 uuencode 編碼檔案。|
+|GOPHER_TYPE_MAC_BINHEX|BINHEX 格式的 Macintosh 檔案。|
+|GOPHER_TYPE_DOS_ARCHIVE|DOS 封存檔案。|
+|GOPHER_TYPE_UNIX_UUENCODED|UUENCODE 編碼檔案。|
 |GOPHER_TYPE_INDEX_SERVER|索引伺服器。|
 |GOPHER_TYPE_TELNET|Telnet 伺服器。|
 |GOPHER_TYPE_BINARY|二進位檔案。|
-|GOPHER_TYPE_REDUNDANT|重複的伺服器。 內含的資訊是主要伺服器的複本。 主要伺服器是最後一個沒有 GOPHER_TYPE_REDUNDANT 類型的目錄項目。|
+|GOPHER_TYPE_REDUNDANT|重複的伺服器。 內所包含的資訊是主伺服器的複本。 主伺服器是最後一個沒有 GOPHER_TYPE_REDUNDANT 類型的目錄專案。|
 |GOPHER_TYPE_TN3270|TN3270 伺服器。|
 |GOPHER_TYPE_GIF|GIF 圖形檔案。|
-|GOPHER_TYPE_IMAGE|影像檔。|
+|GOPHER_TYPE_IMAGE|影像檔案。|
 |GOPHER_TYPE_BITMAP|點陣圖檔案。|
-|GOPHER_TYPE_MOVIE|影片檔。|
+|GOPHER_TYPE_MOVIE|電影檔案。|
 |GOPHER_TYPE_SOUND|音效檔。|
 |GOPHER_TYPE_HTML|HTML 文件。|
-|GOPHER_TYPE_PDF|此 PDF 檔案。|
+|GOPHER_TYPE_PDF|PDF 檔案。|
 |GOPHER_TYPE_CALENDAR|行事曆檔案。|
-|GOPHER_TYPE_INLINE|Inline 檔。|
-|GOPHER_TYPE_UNKNOWN|未知的項目類型。|
-|GOPHER_TYPE_ASK|Ask + 項目。|
-|GOPHER_TYPE_GOPHER_PLUS|Gopher + 項目。|
+|GOPHER_TYPE_INLINE|內嵌檔案。|
+|GOPHER_TYPE_UNKNOWN|專案類型不明。|
+|GOPHER_TYPE_ASK|Ask + 專案。|
+|GOPHER_TYPE_GOPHER_PLUS|Gopher + 專案。|
 
-##  <a name="operator_lpctstr"></a>  CGopherLocator::operator LPCTSTR
+##  <a name="operator_lpctstr"></a>CGopherLocator:: operator LPCTSTR
 
-這個實用的轉型運算子提供有效率的方法，來存取中包含的 null 終止 C 字串`CGopherLocator`物件。
+這個有用的轉型運算子提供有效率的方法來存取`CGopherLocator`物件中包含之以 null 終止的 C 字串。
 
 ```
 operator LPCTSTR () const;
@@ -149,7 +149,7 @@ operator LPCTSTR () const;
 
 ### <a name="remarks"></a>備註
 
-沒有字元會複製;只有指標會傳回。
+不會複製任何字元;只會傳回指標。
 
 ## <a name="see-also"></a>另請參閱
 

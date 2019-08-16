@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: c1ac15d4d8254107a66e577321edb3c40578f240
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 97ea2b8411b404caf9f833ad85f226d18aea1e73
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915799"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496574"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc 類別
 
@@ -33,14 +33,14 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|建構函式。|
 |[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::ConvertToAutoInherit](#converttoautoinherit)|呼叫這個方法, 將安全描述項和其存取控制清單 (Acl) 轉換成支援自動傳播可繼承存取控制專案 (Ace) 的格式。|
 |[CPrivateObjectSecurityDesc::Create](#create)|呼叫這個方法, 為呼叫資源管理員所建立的私用物件配置及初始化自我關聯的安全描述項。|
@@ -57,7 +57,7 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 這個類別衍生自[CSecurityDesc](../../atl/reference/csecuritydesc-class.md), 提供建立和管理私用物件安全描述項的方法。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -93,7 +93,7 @@ bool ConvertToAutoInherit(
 指定新的物件是否可以包含其他物件。 值為 true 時, 表示新的物件是容器。 值為 false 時, 表示新的物件不是容器。
 
 *GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
 
 ### <a name="return-value"></a>傳回值
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>備註
 
-這個方法會嘗試判斷目前安全描述項的任意存取控制清單 (DACL) 和系統存取控制清單 (SACL) 中的 Ace 是否繼承自父系安全描述項。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函數。
+這個方法會嘗試判斷目前安全描述項的任意存取控制清單 (DACL) 和系統存取控制清單 (SACL) 中的 Ace 是否繼承自父系安全描述項。 它會呼叫[ConvertToAutoInheritPrivateObjectSecurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)函數。
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -164,7 +164,7 @@ bool Create(
 代表建立物件之用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件參考。
 
 *GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
 
 *ObjectType*<br/>
 `GUID`結構的指標, 識別與目前物件相關聯的物件類型。 如果物件沒有 GUID, 請將*ObjectType*設定為 Null。
@@ -173,7 +173,7 @@ bool Create(
 指定新的物件是否可以包含其他物件。 值為 true 時, 表示新的物件是容器。 值為 false 時, 表示新的物件不是容器。
 
 *AutoInheritFlags*<br/>
-一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
+這個方法會呼叫[CreatePrivateObjectSercurity](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)或[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex)。
 
 第二種方法允許指定新物件的物件類型 GUID, 或控制 Ace 的繼承方式。
 
@@ -201,7 +201,7 @@ bool Get(
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-一組位旗標, 指出要取得的安全描述項部分。 這個值可以是[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位旗標的組合。
+一組位旗標, 指出要取得的安全描述項部分。 這個值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位旗標的組合。
 
 *pResult*<br/>
 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標, 它會從指定的安全描述項接收要求的資訊複本。
@@ -253,19 +253,19 @@ bool Set(
 ### <a name="parameters"></a>參數
 
 *si*<br/>
-一組位旗標, 指出要設定的安全描述項的各個部分。 這個值可以是[SECURITY_INFORMATION](/windows/desktop/SecAuthZ/security-information)位旗標的組合。
+一組位旗標, 指出要設定的安全描述項的各個部分。 這個值可以是[SECURITY_INFORMATION](/windows/win32/SecAuthZ/security-information)位旗標的組合。
 
 *他人*<br/>
 [CSecurityDesc](../../atl/reference/csecuritydesc-class.md)物件的指標。 *Si*參數所指示的此安全描述項的部分會套用至物件的安全描述項。
 
 *GenericMapping*<br/>
-[GENERIC_MAPPING](/windows/desktop/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
+[GENERIC_MAPPING](/windows/win32/api/winnt/ns-winnt-generic_mapping)結構的指標, 指定從每個泛型許可權到物件之特定許可權的對應。
 
 *權杖*<br/>
 代表建立物件之用戶端進程的[CAccessToken](../../atl/reference/caccesstoken-class.md)物件參考。
 
 *AutoInheritFlags*<br/>
-一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
+一組位旗標, 控制如何從*pParent*繼承存取控制專案 (ace)。 如需詳細資訊, 請參閱[CreatePrivateObjectSecurityEx](/windows/win32/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -277,7 +277,7 @@ bool Set(
 
 ## <a name="see-also"></a>另請參閱
 
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-security_descriptor)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
 [類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)<br/>
 [CSecurityDesc 類別](../../atl/reference/csecuritydesc-class.md)

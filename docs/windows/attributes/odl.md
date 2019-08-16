@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - odl attribute
 ms.assetid: 75dcb314-b50f-4a63-9180-507ac1bc78f3
-ms.openlocfilehash: 90f9f1df23542138b2fac0dcfe0e122f1993d805
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4ae1aa7f27348e37c565b35e3dc0b2b1011c9cb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407636"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514312"
 ---
 # <a name="odl"></a>odl
 
-識別物件描述語言 (ODL) 介面的介面。 MIDL 編譯器不需要**odl**屬性; 它會辨識僅針對與較舊的.odl 檔的相容性。
+將介面識別為物件描述語言 (ODL) 介面。 MIDL 編譯器不需要**odl**屬性。它僅能與較舊的 odl 檔案相容。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ ms.locfileid: "62407636"
 
 ## <a name="remarks"></a>備註
 
-**Odl** C++屬性具有相同的功能[odl](/windows/desktop/Midl/odl) MIDL 屬性。
+**Odl** C++屬性具有與[odl](/windows/win32/Midl/odl) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -57,8 +57,8 @@ public:
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

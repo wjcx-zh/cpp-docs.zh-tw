@@ -56,16 +56,16 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69365b66b12d5a9284c9b097b225ba041e07b6b0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164110"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506800"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager 類別
 
-`CDrawingManager`類別會實作複雜繪圖演算法。
+`CDrawingManager`類別會執行複雜的繪圖演算法。
 
 ## <a name="syntax"></a>語法
 
@@ -86,35 +86,35 @@ class CDrawingManager : public CObject
 
 |名稱|描述|
 |----------|-----------------|
-|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|建立應用程式可以直接寫入 32 位元裝置獨立點陣圖 (DIB)。|
-|[CDrawingManager::DrawAlpha](#drawalpha)|顯示具有透明或半透明的像素的點陣圖。|
-|[CDrawingManager::DrawRotated](#drawrotated)|旋轉的來源 DC + /-90 度，將所指定之矩形內部的內容|
-|[CDrawingManager::DrawEllipse](#drawellipse)|繪製橢圓形使用提供的填滿和框線色彩。|
-|[CDrawingManager::DrawGradientRing](#drawgradientring)|繪製通道和其填滿漸層色彩。|
-|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|繪製一條線。|
-|[CDrawingManager::DrawRect](#drawrect)|繪製矩形與所提供的填滿和框線色彩。|
-|[CDrawingManager::DrawShadow](#drawshadow)|繪製一個陰影的矩形區域。|
-|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|會使用兩個色彩漸層，填滿的矩形區域。|
-|[CDrawingManager::FillGradient](#fillgradient)|使用指定的色彩漸層，填滿的矩形區域。|
-|[CDrawingManager::FillGradient2](#fillgradient2)|使用指定的色彩漸層，填滿的矩形區域。 此外，也會指定漸層的色彩變更的方向。|
-|[CDrawingManager::GrayRect](#grayrect)|使用指定的灰色色彩，填滿的矩形。|
-|[CDrawingManager::HighlightRect](#highlightrect)|反白顯示的矩形區域。|
-|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|將色彩從 HLS 表示法轉換為 RGB 表示。|
-|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|將色彩從 HLS 表示法轉換為 RGB 表示。|
-|[CDrawingManager::HSVtoRGB](#hsvtorgb)|將色彩從 HSV 表示法轉換為 RGB 表示。|
-|[CDrawingManager::HuetoRGB](#huetorgb)|Helper 方法，將 hue 值轉換成紅色、 綠色或藍色元件。|
-|[CDrawingManager::MirrorRect](#mirrorrect)|翻轉的矩形區域。|
-|[CDrawingManager::PixelAlpha](#pixelalpha)|決定半透明的像素的完稿色彩的 helper 方法。|
-|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|建立可用作陰影的點陣圖。|
-|[CDrawingManager::RGBtoHSL](#rgbtohsl)|將色彩從 RGB 表示法轉換為的 HSL 表示。|
-|[CDrawingManager::RGBtoHSV](#rgbtohsv)|將色彩 RGB 表示轉換成 HSV 表示。|
-|[CDrawingManager::SetAlphaPixel](#setalphapixel)|色彩點陣圖中的部分透明像素的 helper 方法。|
-|[CDrawingManager::SetPixel](#setpixel)|變更指定的色彩點陣圖中的單一像素的 helper 方法。|
-|[CDrawingManager::SmartMixColors](#smartmixcolors)|結合的加權比例為基礎的兩個色彩。|
+|[CDrawingManager::CreateBitmap_32](#createbitmap_32)|建立應用程式可以直接寫入32位與裝置無關的點陣圖 (DIB)。|
+|[CDrawingManager::DrawAlpha](#drawalpha)|顯示具有透明或半透明圖元的點陣圖。|
+|[CDrawingManager::DrawRotated](#drawrotated)|以 +/-90 度旋轉給定矩形內的來源 DC 內容|
+|[CDrawingManager::DrawEllipse](#drawellipse)|以提供的填滿和框線色彩繪製橢圓形。|
+|[CDrawingManager::DrawGradientRing](#drawgradientring)|繪製環形, 並以色彩漸層填滿。|
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|繪製線條。|
+|[CDrawingManager::DrawRect](#drawrect)|以提供的填滿和框線色彩繪製矩形。|
+|[CDrawingManager::DrawShadow](#drawshadow)|繪製矩形區域的陰影。|
+|[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|以兩個色彩漸層填滿矩形區域。|
+|[CDrawingManager::FillGradient](#fillgradient)|使用指定的色彩漸層填滿矩形區域。|
+|[CDrawingManager::FillGradient2](#fillgradient2)|使用指定的色彩漸層填滿矩形區域。 也會指定漸層色彩變更的方向。|
+|[CDrawingManager::GrayRect](#grayrect)|以指定的灰色色彩填滿矩形。|
+|[CDrawingManager::HighlightRect](#highlightrect)|反白顯示矩形區域。|
+|[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)|將色彩從 HLS 表示轉換成 RGB 標記法。|
+|[CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)|將色彩從 HLS 表示轉換成 RGB 標記法。|
+|[CDrawingManager::HSVtoRGB](#hsvtorgb)|將色彩從 HSV 表示轉換成 RGB 標記法。|
+|[CDrawingManager::HuetoRGB](#huetorgb)|將色調值轉換成紅色、綠色或藍色元件的 Helper 方法。|
+|[CDrawingManager::MirrorRect](#mirrorrect)|翻轉矩形區域。|
+|[CDrawingManager::PixelAlpha](#pixelalpha)|判斷半透明圖元之最終色彩的 Helper 方法。|
+|[CDrawingManager::PrepareShadowMask](#prepareshadowmask)|建立可當做陰影使用的點陣圖。|
+|[CDrawingManager::RGBtoHSL](#rgbtohsl)|將色彩從 RGB 標記法轉換為 HSL 標記法。|
+|[CDrawingManager::RGBtoHSV](#rgbtohsv)|將色彩從 RGB 標記法轉換為 HSV 標記法。|
+|[CDrawingManager::SetAlphaPixel](#setalphapixel)|協助程式方法, 可將點陣圖中的部分透明圖元色彩。|
+|[CDrawingManager::SetPixel](#setpixel)|Helper 方法, 可將點陣圖中的單一圖元變更為指定的色彩。|
+|[CDrawingManager::SmartMixColors](#smartmixcolors)|根據加權比例結合兩個色彩。|
 
 ## <a name="remarks"></a>備註
 
-`CDrawingManager`類別會提供函數來繪製陰影的色彩漸層，反白顯示的矩形。 它也會執行 alpha 透明混色。 若要直接變更應用程式的 UI，您可以使用這個類別。
+`CDrawingManager`類別提供繪製陰影、色彩漸層和反白顯示矩形的功能。 它也會執行 Alpha 混色。 您可以使用這個類別來直接變更應用程式的 UI。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -123,11 +123,11 @@ class CDrawingManager : public CObject
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdrawmanager.h
+**標頭:** afxdrawmanager。h
 
-##  <a name="cdrawingmanager"></a>  CDrawingManager::CDrawingManager
+##  <a name="cdrawingmanager"></a>CDrawingManager::CDrawingManager
 
-建構[CDrawingManager](../../mfc/reference/cdrawingmanager-class.md)物件。
+結構[CDrawingManager](../../mfc/reference/cdrawingmanager-class.md)物件。
 
 ```
 CDrawingManager(CDC& dc);
@@ -136,11 +136,11 @@ CDrawingManager(CDC& dc);
 ### <a name="parameters"></a>參數
 
 *dc*<br/>
-[in]裝置內容的參考。 `CDrawingManager`會使用此內容為繪圖。
+在裝置內容的參考。 會`CDrawingManager`使用此內容進行繪製。
 
-##  <a name="createbitmap_32"></a>  CDrawingManager::CreateBitmap_32
+##  <a name="createbitmap_32"></a>CDrawingManager::CreateBitmap_32
 
-建立應用程式可以直接寫入 32 位元裝置獨立點陣圖 (DIB)。
+建立應用程式可以直接寫入32位與裝置無關的點陣圖 (DIB)。
 
 ```
 static HBITMAP __stdcall CreateBitmap_32(
@@ -157,22 +157,22 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |參數|描述|
-|*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)參數，表示點陣圖的大小。|
-|*pBits*|[out]指向資料指標所收到的 DIB 位置的位元值。|
-|*bitmap*|原始點陣圖控制代碼|
-|*clrTransparent*|指定的原始點陣圖的透明色彩的 RGB 值。|
+|*size*|在表示點陣圖大小的[CSize](../../atl-mfc-shared/reference/csize-class.md)參數。|
+|*pBits*|脫銷資料指標的指標, 可接收 DIB 位值的位置。|
+|*bitmap*|原始點陣圖的控制碼|
+|*clrTransparent*|RGB 值, 指定原始點陣圖的透明色彩。|
 
 ### <a name="return-value"></a>傳回值
 
-如果這個方法成功，新建立 DIB 點陣圖控制代碼否則為 NULL。
+如果此方法成功, 則為新建立之 DIB 點陣圖的控制碼;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如需如何建立 DIB 點陣圖的詳細資訊，請參閱[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)。
+如需如何建立 DIB 點陣圖的詳細資訊, 請參閱[CreateDIBSection](/windows/win32/api/wingdi/nf-wingdi-createdibitmap)。
 
-##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha
+##  <a name="drawalpha"></a>CDrawingManager::D rawAlpha
 
-顯示具有透明或半透明的像素的點陣圖。
+顯示具有透明或半透明圖元的點陣圖。
 
 ```
 void DrawAlpha(
@@ -185,24 +185,24 @@ void DrawAlpha(
 ### <a name="parameters"></a>參數
 
 *pDstDC*<br/>
-[in]目的地裝置內容指標。
+在目的地之裝置內容的指標。
 
 *rectDst*<br/>
-[in]目的矩形。
+在目的地矩形。
 
 *pSrcDC*<br/>
-[in]來源裝置內容指標。
+在來源之裝置內容的指標。
 
 *rectSrc*<br/>
-[in]來源矩形。
+在來源矩形。
 
 ### <a name="remarks"></a>備註
 
-這個方法執行兩個點陣圖 alpha 透明混色。 如需 alpha 透明混色的詳細資訊，請參閱[alphablend，還有旁邊](/windows/desktop/api/wingdi/nf-wingdi-alphablend)Windows SDK 中。
+這個方法會針對兩個位圖執行 Alpha 混合。 如需 Alpha 混合的詳細資訊, 請參閱 Windows SDK 中的[AlphaBlend](/windows/win32/api/wingdi/nf-wingdi-alphablend) 。
 
 ##  <a name="drawellipse"></a>  CDrawingManager::DrawEllipse
 
-繪製橢圓形使用提供的填滿和框線色彩。
+以提供的填滿和框線色彩繪製橢圓形。
 
 ```
 void DrawEllipse(
@@ -214,21 +214,21 @@ void DrawEllipse(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]橢圓形的週框。
+在橢圓形的周框。
 
 *clrFill*<br/>
-[in]這個方法會使用以填滿橢圓形的色彩。
+在這個方法用來填滿橢圓形的色彩。
 
 *clrLine*<br/>
-[in]這個方法會使用為橢圓形的框線色彩。
+在這個方法用來做為橢圓形框線的色彩。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳回不繪製橢圓形，如果其中一個色彩設定為-1。 它也會傳回不繪製橢圓形，如果指定的週框的任一個維度是 0。
+如果其中一種色彩設為-1, 這個方法就會傳回而不繪製橢圓形。 如果周框的任一個維度為 0, 它也會傳回而不繪製橢圓形。
 
-##  <a name="drawgradientring"></a>  CDrawingManager::DrawGradientRing
+##  <a name="drawgradientring"></a>CDrawingManager::D rawGradientRing
 
-繪製通道和其填滿漸層色彩。
+繪製環形, 並以色彩漸層填滿。
 
 ```
 BOOL DrawGradientRing(
@@ -244,25 +244,25 @@ BOOL DrawGradientRing(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]A [CRect](../../atl-mfc-shared/reference/crect-class.md)參數，指定漸層停駐的信號的界限。
+在[CRect](../../atl-mfc-shared/reference/crect-class.md)參數, 指定漸層環形的界限。
 
 *colorStart*<br/>
-[in]漸層的第一個色彩。
+在漸層的第一個色彩。
 
 *colorFinish*<br/>
-[in]最後的色彩漸層。
+在漸層的最後一個色彩。
 
 *colorBorder*<br/>
-[in]框線的色彩。
+在框線的色彩。
 
 *nAngle*<br/>
-[in]參數來指定初始的漸層繪製角度。 這個值應該是介於 0 和 360 之間。
+在指定初始漸層繪製角度的參數。 此值應介於0到360之間。
 
 *nWidth*<br/>
-[in]響鈴框線的寬度。
+在環形框線的寬度。
 
 *clrFace*<br/>
-[in]環形的內部的色彩。
+在環形內部的色彩。
 
 ### <a name="return-value"></a>傳回值
 
@@ -270,11 +270,11 @@ BOOL DrawGradientRing(
 
 ### <a name="remarks"></a>備註
 
-所定義的矩形*rect*必須至少 5 個像素寬和 5 個像素高。
+*Rect*所定義的矩形必須至少為5圖元寬, 5 圖元高。
 
 ##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
-繪製一條線。
+繪製線條。
 
 ```
 void DrawLine(
@@ -297,19 +297,19 @@ void DrawLineA(
 |||
 |-|-|
 |參數|描述|
-|*x1*|[in]行開頭位置的 x 座標。|
-|*y1*|[in]行開頭位置的 y 座標。|
-|*x2*|[in]線條的結束位置的 x 座標。|
-|*y2*|[in]線條的結束位置的 y 座標。|
-|*clrLine*|[in]線條色彩。|
+|*x1*|在行開始的 x 座標。|
+|*y1*|在行開始的 y 座標。|
+|*x2*|在行結束的 x 座標。|
+|*y2*|在行結束的 y 座標。|
+|*clrLine*|在線條的色彩。|
 
 ### <a name="remarks"></a>備註
 
-如果這個方法會失敗*clrLine*等於-1。
+如果*clrLine*等於-1, 這個方法就會失敗。
 
 ##  <a name="drawrect"></a>  CDrawingManager::DrawRect
 
-繪製矩形與所提供的填滿和框線色彩。
+以提供的填滿和框線色彩繪製矩形。
 
 ```
 void DrawRect(
@@ -321,21 +321,21 @@ void DrawRect(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]矩形界限。
+在矩形的界限。
 
 *clrFill*<br/>
-[in]這個方法會使用以填滿矩形的色彩。
+在這個方法用來填滿矩形的色彩。
 
 *clrLine*<br/>
-[in]這個方法會使用矩形的框線色彩。
+在這個方法用於矩形框線的色彩。
 
 ### <a name="remarks"></a>備註
 
-這個方法傳回時不繪製矩形，如果其中一個色彩設定為-1。 它也會傳回如果任一個矩形的維度是 0。
+如果其中一種色彩設為-1, 這個方法就會傳回而不繪製矩形。 如果矩形的任一個維度為 0, 它也會傳回。
 
-##  <a name="drawshadow"></a>  CDrawingManager::DrawShadow
+##  <a name="drawshadow"></a>CDrawingManager::D rawShadow
 
-繪製一個陰影的矩形區域。
+繪製矩形區域的陰影。
 
 ```
 BOOL DrawShadow(
@@ -352,28 +352,28 @@ BOOL DrawShadow(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]您的應用程式中的矩形區域。 繪製管理員將此區域下方繪製一個陰影。
+在應用程式中的矩形區域。 繪圖管理員會在此區域下方繪製陰影。
 
 *nDepth*<br/>
-[in]寬度和高度的陰影。
+在陰影的寬度和高度。
 
 *iMinBrightness*<br/>
-[in]陰影的最小的亮度。
+在陰影的最小亮度。
 
 *iMaxBrightness*<br/>
-[in]陰影的最大的亮度。
+在陰影的最大亮度。
 
 *pBmpSaveBottom*<br/>
-[in]指標，包含影像的下半部陰影的點陣圖。
+在點陣圖的指標, 其中包含陰影下半部的影像。
 
 *pBmpSaveRight*<br/>
-[in]指標，包含該映像，矩形右側繪製陰影的點陣圖。
+在點陣圖的指標, 其中包含在矩形右側繪製之陰影的影像。
 
 *clrBase*<br/>
-[in]陰影色彩。
+在陰影的色彩。
 
 *bRightShadow*<br/>
-[in]布林值參數，指出如何繪製陰影。 如果*bRightShadow*是`TRUE`，`DrawShadow`矩形右側上繪製一個陰影。
+在布林值參數, 指出陰影的繪製方式。 如果*bRightShadow*為`TRUE`, `DrawShadow`則會在矩形的右側繪製陰影。
 
 ### <a name="return-value"></a>傳回值
 
@@ -381,21 +381,21 @@ BOOL DrawShadow(
 
 ### <a name="remarks"></a>備註
 
-您也可以使用參數的下框線和右 shadows 提供兩個有效的點陣圖*pBmpSaveBottom*並*pBmpSaveRight*。 如果有這些[CBitmap](../../mfc/reference/cbitmap-class.md)物件具有附加的 GDI 物件，`DrawShadow`將用作陰影的點陣圖。 如果`CBitmap`參數沒有附加的 GDI 物件，`DrawShadow`繪製陰影，並將點陣圖附加的參數。 在未來呼叫`DrawShadow`，您可以提供這些點陣圖，以加快繪製程序。 如需詳細資訊`CBitmap`類別和 GDI 物件，請參閱 <<c2> [ 圖形物件](../../mfc/graphic-objects.md)。
+您可以使用*pBmpSaveBottom*和*pBmpSaveRight*參數, 為下和右陰影提供兩個有效的點陣圖。 如果這些[CBitmap](../../mfc/reference/cbitmap-class.md)物件具有附加的 GDI 物件, `DrawShadow`將會使用這些點陣圖作為陰影。 如果參數沒有附加的 GDI 物件, `DrawShadow`則繪製陰影, 並將點陣圖附加至參數。 `CBitmap` 在未來的呼叫`DrawShadow`中, 您可以提供這些點陣圖來加速繪製進程。 如需`CBitmap`類別和 GDI 物件的詳細資訊, 請參閱[繪圖物件](../../mfc/graphic-objects.md)。
 
-如果其中一個參數是`NULL`，`DrawShadow`將自動繪製陰影。
+如果其中一個參數是`NULL`, `DrawShadow`則會自動繪製陰影。
 
-如果您設定*bRightShadow*設為 FALSE，陰影繪製下方和左側的矩形區域。
+如果您將 [ *bRightShadow* ] 設定為 [FALSE], 陰影將會繪製在矩形區域的下方和左側。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`DrawShadow`方法的`CDrawingManager`類別。 此程式碼片段是一部分[Prop 表示範範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`DrawShadow` `CDrawingManager`類別的方法。 此程式碼片段是「元件[表示范」範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
-##  <a name="fill4colorsgradient"></a>  CDrawingManager::Fill4ColorsGradient
+##  <a name="fill4colorsgradient"></a>CDrawingManager::Fill4ColorsGradient
 
-會使用兩個色彩漸層，填滿的矩形區域。
+以兩個色彩漸層填滿矩形區域。
 
 ```
 void Fill4ColorsGradient(
@@ -411,35 +411,35 @@ void Fill4ColorsGradient(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]要填滿的矩形。
+在要填滿的矩形。
 
 *colorStart1*<br/>
-[in]第一個的色彩漸層的初始色彩。
+在第一個色彩漸層的初始色彩。
 
 *colorFinish1*<br/>
-[in]第一個色彩漸層的完稿色彩。
+在第一個色彩漸層的最終色彩。
 
 *colorStart2*<br/>
-[in]第二個的色彩漸層的初始色彩。
+在第二個色彩漸層的初始色彩。
 
 *colorFinish2*<br/>
-[in]第二個色彩漸層的完稿色彩。
+在第二個色彩漸層的最終色彩。
 
 *bHorz*<br/>
-[in]布林值，指出參數是否`Fill4ColorsGradient`水平或垂直的漸層的色彩。 TRUE 表示水平漸層。
+在布林值參數, 指出是否`Fill4ColorsGradient`將色彩水準或垂直漸層。 TRUE 表示水準漸層。
 
 *nPercentage*<br/>
-[in]從 0 到 100 的整數。 這個值表示要使用的第一個色彩漸層填滿的矩形的百分比。
+在0-100 的整數。 此值表示要填滿第一個色彩漸層的矩形百分比。
 
 ### <a name="remarks"></a>備註
 
-當兩個色彩漸層填滿矩形時，它們會位於彼此的上方或下一步，值而定*bHorz*。 每個色彩漸層的計算，使用方法的方式單獨[CDrawingManager::FillGradient](#fillgradient)。
+當矩形填滿兩個色彩漸層時, 視*bHorz*的值而定, 兩者都位於彼此上方或彼此相鄰。 每個色彩漸層都會與[CDrawingManager:: FillGradient](#fillgradient)方法分開計算。
 
-如果這個方法會產生判斷提示失敗*nPercentage*小於 0 或大於 100。
+如果*nPercentage*小於0或大於 100, 則這個方法會產生判斷提示失敗。
 
-##  <a name="fillgradient"></a>  CDrawingManager::FillGradient
+##  <a name="fillgradient"></a>CDrawingManager::FillGradient
 
-使用指定的色彩漸層，填滿的矩形區域。
+使用指定的色彩漸層填滿矩形區域。
 
 ```
 void FillGradient(
@@ -454,32 +454,32 @@ void FillGradient(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]要填滿的矩形區域。
+在要填滿的矩形區域。
 
 *colorStart*<br/>
-[in]漸層的第一個色彩。
+在漸層的第一個色彩。
 
 *colorFinish*<br/>
-[in]完稿色彩的漸層。
+在漸層的最終色彩。
 
 *bHorz*<br/>
-[in]布林值參數，指定是否`FillGradient`應該繪製在水平或垂直漸層。
+在布林值參數, 指定是否`FillGradient`應該繪製水準或垂直漸層。
 
 *nStartFlatPercentage*<br/>
-[in]矩形的百分比，`FillGradient`填入*colorStart*開始之漸層之前。
+在在啟動漸層之前, `FillGradient`填滿*colorStart*的矩形百分比。
 
 *nEndFlatPercentage*<br/>
-[in]矩形的百分比，`FillGradient`填入*colorFinish*完成之漸層之後。
+在完成漸層之後, `FillGradient`填滿*colorFinish*的矩形百分比。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`FillGradient`方法的`CDrawingManager`類別。 此程式碼片段是一部分[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`FillGradient` `CDrawingManager`類別的方法。 此程式碼片段是[MS Office 2007 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
-##  <a name="fillgradient2"></a>  CDrawingManager::FillGradient2
+##  <a name="fillgradient2"></a>CDrawingManager::FillGradient2
 
-使用指定的色彩漸層，填滿的矩形區域。
+使用指定的色彩漸層填滿矩形區域。
 
 ```
 void FillGradient2 (
@@ -492,30 +492,30 @@ void FillGradient2 (
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]要填滿的矩形區域。
+在要填滿的矩形區域。
 
 *colorStart*<br/>
-[in]漸層的第一個色彩。
+在漸層的第一個色彩。
 
 *colorFinish*<br/>
-[in]最後的色彩漸層。
+在漸層的最後一種色彩。
 
 *nAngle*<br/>
-[in]整數，介於 0 和 360 之間。 此參數指定之色彩漸層的方向。
+在介於0到360之間的整數。 這個參數會指定色彩漸層的方向。
 
 ### <a name="remarks"></a>備註
 
-使用*nAngle*以指定之色彩漸層的方向。 當您指定之色彩漸層的方向時，您也指定之色彩漸層的開始位置。 值為 0，表示*nAngle*表示從矩形頂端的漸層開始。 作為*nAngle*增加時，起始位置的漸層中根據角度以逆時鐘方向的移動。
+使用 [ *nAngle* ] 來指定色彩漸層的方向。 當您指定色彩漸層的方向時, 您也可以指定色彩漸層的開始位置。 *NAngle*的值為 0, 表示漸層從矩形頂端開始。 當*nAngle*增加時, 漸層的開始位置會根據角度以逆時針方向移動。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`FillGradient2`方法的`CDrawingManager`類別。 此程式碼片段是一部分[新的控制項範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`FillGradient2` `CDrawingManager`類別的方法。 此程式碼片段是[新控制項範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
-##  <a name="grayrect"></a>  CDrawingManager::GrayRect
+##  <a name="grayrect"></a>CDrawingManager::GrayRect
 
-使用指定的灰色色彩，填滿的矩形。
+以指定的灰色色彩填滿矩形。
 
 ```
 BOOL GrayRect(
@@ -528,30 +528,30 @@ BOOL GrayRect(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]要填滿的矩形區域。
+在要填滿的矩形區域。
 
 *nPercentage*<br/>
-[in]您想要在矩形的灰色的百分比。
+在矩形中您想要的灰色百分比。
 
 *clrTransparent*<br/>
-[in]透明的色彩。
+在透明色彩。
 
 *clrDisabled*<br/>
-[in]如果這個方法會使用取消的飽和度的色彩*nPercentage*設定為-1。
+在當*nPercentage*設定為-1 時, 此方法用於取消飽和度的色彩。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-參數*nPercentage*，較低的值表示較深的色彩。
+對於參數*nPercentage*, 較低的值表示較暗的色彩。
 
-最大值*nPercentage*為 200。 大於 200 的值不會變更矩形的外觀。 如果值為-1，這個方法會使用*clrDisabled*限制矩形的飽和度。
+*NPercentage*的最大值為200。 大於200的值不會變更矩形的外觀。 如果值為-1, 則這個方法會使用*clrDisabled*來限制矩形的飽和度。
 
-##  <a name="highlightrect"></a>  CDrawingManager::HighlightRect
+##  <a name="highlightrect"></a>CDrawingManager::HighlightRect
 
-反白顯示的矩形區域。
+反白顯示矩形區域。
 
 ```
 BOOL HighlightRect(
@@ -565,33 +565,33 @@ BOOL HighlightRect(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]若要反白顯示的矩形區域。
+在要反白顯示的矩形區域。
 
 *nPercentage*<br/>
-[in]百分比來指出應該是透明的反白顯示。
+在表示反白顯示應如何透明化的百分比。
 
 *clrTransparent*<br/>
-[in]透明的色彩。
+在透明色彩。
 
 *nTolerance*<br/>
-[in]表示的整數 0 和 255 之間的色彩容錯。
+在介於0和255之間的整數, 表示色彩承受度。
 
 *clrBlend*<br/>
-[in]混用基底的色彩。
+在要進行混合的基底色彩。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-如果*nPercentage*是介於 0 到 99，`HighlightRect`使用 alpha 透明混色演算法。 如需 alpha 透明混色的詳細資訊，請參閱[Alpha 混色線條和填色](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)。 如果*nPercentage*為-1，這個方法會使用預設的反白顯示的層級。 如果*nPercentage*是 100，這個方法不做任何動作，並傳回 TRUE。
+如果*nPercentage*介於0到99之間, `HighlightRect`會使用 Alpha 混合演算法。 如需 Alpha 混色的詳細資訊, 請參閱[Alpha 混合線條和填滿](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)。 如果*nPercentage*為-1, 則這個方法會使用預設的反白顯示層級。 如果*nPercentage*為 100, 則這個方法不會執行任何操作, 而且會傳回 TRUE。
 
-此方法會使用參數*nTolerance*來判斷是否要反白顯示的矩形區域。 反白顯示在矩形中，您的應用程式的背景色彩之間的差異並*clrTransparent*必須是小於*nTolerance* （紅色、 綠色和藍色），每個色彩元件中。
+方法會使用參數*nTolerance*來決定是否要反白顯示矩形區域。 若要反白顯示矩形, 應用程式和*clrTransparent*的背景色彩之間的差異必須小於每個色彩元件中的*nTolerance* (紅色、綠色和藍色)。
 
-##  <a name="hlstorgb_one"></a>  CDrawingManager::HLStoRGB_ONE
+##  <a name="hlstorgb_one"></a>CDrawingManager::HLStoRGB_ONE
 
-將色彩從 HLS 表示法轉換為 RGB 表示。
+將色彩從 HLS 表示轉換成 RGB 標記法。
 
 ```
 static COLORREF __stdcall HLStoRGB_ONE(
@@ -603,27 +603,27 @@ static COLORREF __stdcall HLStoRGB_ONE(
 ### <a name="parameters"></a>參數
 
 *H*<br/>
-[in]介於 0 到 1，表示色彩的色調。
+在介於0和1之間的數位, 表示色彩的色調。
 
 *L*<br/>
-[in]介於 0 和 1，表示色彩的亮度。
+在介於0和1之間的數位, 表示色彩的亮度。
 
 *S*<br/>
-[in]介於 0 和 1，表示色彩的飽和度。
+在介於0和1之間的數位, 表示色彩的飽和度。
 
 ### <a name="return-value"></a>傳回值
 
-提供的 HLS 色彩 RGB 表示法。
+所提供之 HLS 色彩的 RGB 標記法。
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
+色彩可以表示為 HSV (色調、飽和度和值)、HSL (色調、飽和度和亮度) 或 RGB (紅色、綠色和藍色)。 如需不同色彩表示的詳細資訊, 請參閱[color](/windows/win32/uxguide/vis-color)。
 
-這個方法和`CDrawingManager::HLStoRGB_TWO`方法執行相同的作業，但需要不同的值，如*H*參數。 在此方法中， *H*是圓形的百分比。 在 `CDrawingManager::HLStoRGB_TWO`方法中， *H*是程度，值介於 0 到 360 度，表示這兩個紅色。 比方說，使用`HLStoRGB_ONE`，值 0.25，如*H*相當於值與 90 `HLStoRGB_TWO`。
+這個方法和`CDrawingManager::HLStoRGB_TWO`方法會執行相同的作業, 但不需要*H*參數的不同值。 在此方法中, *H*是圓形的百分比。 在方法中, H 是介於0和360之間的度數值, 兩者都代表紅色。 `CDrawingManager::HLStoRGB_TWO` 例如, 使用`HLStoRGB_ONE`, *H*的值為 0.25, 相當於的`HLStoRGB_TWO`值90。
 
-##  <a name="hlstorgb_two"></a>  CDrawingManager::HLStoRGB_TWO
+##  <a name="hlstorgb_two"></a>CDrawingManager::HLStoRGB_TWO
 
-將色彩從 HLS 表示法轉換為 RGB 表示。
+將色彩從 HLS 表示轉換成 RGB 標記法。
 
 ```
 static COLORREF __stdcall HLStoRGB_TWO(
@@ -635,27 +635,27 @@ static COLORREF __stdcall HLStoRGB_TWO(
 ### <a name="parameters"></a>參數
 
 *H*<br/>
-[in]表示數字介於 0 和 360 之間的色彩色調。
+在介於0和360之間的數位, 表示色彩的色調。
 
 *L*<br/>
-[in]介於 0 和 1，表示色彩的亮度。
+在介於0和1之間的數位, 表示色彩的亮度。
 
 *S*<br/>
-[in]介於 0 和 1，表示色彩的飽和度。
+在介於0和1之間的數位, 表示色彩的飽和度。
 
 ### <a name="return-value"></a>傳回值
 
-提供的 HLS 色彩 RGB 表示法。
+所提供之 HLS 色彩的 RGB 標記法。
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
+色彩可以表示為 HSV (色調、飽和度和值)、HSL (色調、飽和度和亮度) 或 RGB (紅色、綠色和藍色)。 如需不同色彩表示的詳細資訊, 請參閱[color](/windows/win32/uxguide/vis-color)。
 
-這個方法和[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法執行相同的作業，但需要不同的值，如*H*參數。 在此方法中， *H*是程度，值介於 0 到 360 度，表示這兩個紅色。 在  [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)方法， *H*是圓形的百分比。 比方說，使用`HLStoRGB_ONE`，值 0.25，如*H*相當於值與 90 `HLStoRGB_TWO`。
+這個方法和[CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one)方法會執行相同的作業, 但不需要*H*參數的不同值。 在此方法中, *H*是介於0和360之間的度數值, 兩者都代表紅色。 在[CDrawingManager:: HLStoRGB_ONE](#hlstorgb_one)方法中, *H*是圓形的百分比。 例如, 使用`HLStoRGB_ONE`, *H*的值為 0.25, 相當於的`HLStoRGB_TWO`值90。
 
-##  <a name="hsvtorgb"></a>  CDrawingManager::HSVtoRGB
+##  <a name="hsvtorgb"></a>CDrawingManager::HSVtoRGB
 
-將色彩從 HSV 表示法轉換為 RGB 表示。
+將色彩從 HSV 表示轉換成 RGB 標記法。
 
 ```
 static COLORREF __stdcall HSVtoRGB(
@@ -669,21 +669,21 @@ static COLORREF __stdcall HSVtoRGB(
 |||
 |-|-|
 |參數|描述|
-|*H*|[in]表示的數字介於 0 和 360 之間的色彩色調。|
-|*S*|[in]介於 0 和 1，表示色彩的飽和度。|
-|*V*|[in]介於 0 和 1，表示色彩的值。|
+|*H*|在介於0和360之間的數位, 表示色彩的色調。|
+|*S*|在介於0和1之間的數位, 表示色彩的飽和度。|
+|*V*|在介於0和1之間的數位, 表示色彩的值。|
 
 ### <a name="return-value"></a>傳回值
 
-提供 HSV 色彩的 RGB 呈現。
+所提供之 HSV 色彩的 RGB 標記法。
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
+色彩可以表示為 HSV (色調、飽和度和值)、HSL (色調、飽和度和亮度) 或 RGB (紅色、綠色和藍色)。 如需不同色彩表示的詳細資訊, 請參閱[color](/windows/win32/uxguide/vis-color)。
 
-##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
+##  <a name="huetorgb"></a>CDrawingManager::HuetoRGB
 
-紅色、 綠色或藍色元件會將色調值。
+將色調值轉換成紅色、綠色或藍色的元件。
 
 ```
 static double __stdcall HuetoRGB(
@@ -700,32 +700,32 @@ static BYTE __stdcall HueToRGB(
 ### <a name="parameters"></a>參數
 
 *m1*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 *m2*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 *h*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 *rm1*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 *rm2*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 *rh*<br/>
-[in]請參閱 < 備註 >。
+在請參閱備註。
 
 ### <a name="return-value"></a>傳回值
 
-提供 hue 的個別紅色、 綠色或藍色元件。
+所提供之色調的個別紅色、綠色或藍色元件。
 
 ### <a name="remarks"></a>備註
 
-這個方法是一個 helper 方法，`CDrawingManager`類別用來計算個別的紅色、 綠色和藍色元件 HSV 或 HSL 的表示法中的色彩。 這個方法不是直接由程式設計人員呼叫。 輸入的參數是取決於轉換演算法的值。
+這個方法是一個 helper 方法, `CDrawingManager`類別會使用它來計算 HSV 或 HSL 標記法中色彩的個別紅色、綠色和藍色元件。 這個方法並非設計成由程式設計師直接呼叫。 輸入參數是相依于轉換演算法的值。
 
-若要轉換 HSV 或 HSL 色彩的 RGB 表示法，呼叫下列方法之一：
+若要將 HSV 或 HSL 色彩轉換成 RGB 標記法, 請呼叫下列其中一個方法:
 
 - [CDrawingManager::HSVtoRGB](#hsvtorgb)
 
@@ -733,9 +733,9 @@ static BYTE __stdcall HueToRGB(
 
 - [CDrawingManager::HLStoRGB_TWO](#hlstorgb_two)
 
-##  <a name="mirrorrect"></a>  CDrawingManager::MirrorRect
+##  <a name="mirrorrect"></a>CDrawingManager::MirrorRect
 
-翻轉的矩形區域。
+翻轉矩形區域。
 
 ```
 void MirrorRect(
@@ -746,18 +746,18 @@ void MirrorRect(
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-[in]若要翻轉區域的周框。
+在要翻轉之區域的周框。
 
 *bHorz*<br/>
-[in]布林值參數，指出矩形是否會水平或垂直翻轉。
+在布林值參數, 指出矩形是水準或垂直翻轉。
 
 ### <a name="remarks"></a>備註
 
-這個方法可以反轉所擁有的裝置任何的內容區域`CDrawingManager`類別。 如果*bHorz*是設為 TRUE，這個方法的區域會水平翻轉。 否則，它的區域垂直翻轉。
+這個方法可以翻轉`CDrawingManager`類別所擁有之裝置內容的任何區域。 如果*bHorz*設定為 TRUE, 這個方法會水準翻轉區域。 否則, 它會垂直翻轉區域。
 
 ##  <a name="pixelalpha"></a>  CDrawingManager::PixelAlpha
 
-計算半透明的像素的完稿色彩。
+計算半透明圖元的最終色彩。
 
 ```
 static COLORREF __stdcall PixelAlpha(
@@ -779,36 +779,36 @@ static COLORREF __stdcall PixelAlpha(
 ### <a name="parameters"></a>參數
 
 *srcPixel*<br/>
-[in]像素的初始色彩。
+在圖元的初始色彩。
 
 *percent*<br/>
-[in]表示數字介於 0 到 100 之間的透明度百分比。 值為 100 表示的初始色彩是完全透明的。
+在介於0和100之間的數位, 表示透明度的百分比。 值為100表示初始色彩是完全透明的。
 
 *percentR*<br/>
-[in]表示數字介於 0 到 100 之間的紅色元件的透明度百分比。
+在介於0和100之間的數位, 表示紅色元件的透明度百分比。
 
 *percentG*<br/>
-[in]表示數字介於 0 到 100 之間的綠色元件的透明度百分比。
+在介於0和100之間的數位, 代表綠色元件的透明度百分比。
 
 *percentB*<br/>
-[in]表示數字介於 0 到 100 之間的藍色元件透明度百分比。
+在介於0和100之間的數位, 表示藍色元件的透明度百分比。
 
 *dstPixel*<br/>
-[in]基底的像素色彩。
+在圖元的基底色彩。
 
 ### <a name="return-value"></a>傳回值
 
-半透明的像素的完稿色彩。
+半透明圖元的最終色彩。
 
 ### <a name="remarks"></a>備註
 
-這是一個 helper 類別，以色彩標示半透明的點陣圖，而且不是直接由程式設計人員呼叫。
+這是用來為半透明點陣圖著色的協助程式類別, 而且不是直接由程式設計人員呼叫。
 
-當您使用的版本具有方法*dstPixel*，完稿色彩是由組成*dstPixel*並*srcPixel*。 *SrcPixel*色彩停留的基底的色彩為部分透明的色彩*dstPixel*。
+當您使用具有*dstPixel*的方法版本時, 最後的色彩會是*dstPixel*和*srcPixel*的組合。 *SrcPixel*色彩是*dstPixel*基底色彩上的部分透明色彩。
 
-##  <a name="prepareshadowmask"></a>  CDrawingManager::PrepareShadowMask
+##  <a name="prepareshadowmask"></a>CDrawingManager::P repareShadowMask
 
-建立可用作陰影的點陣圖。
+建立可當做陰影使用的點陣圖。
 
 ```
 static HBITMAP __stdcall PrepareShadowMask (
@@ -821,28 +821,28 @@ static HBITMAP __stdcall PrepareShadowMask (
 ### <a name="parameters"></a>參數
 
 *nDepth*<br/>
-[in]寬度和高度的陰影。
+在陰影的寬度和高度。
 
 *clrBase*<br/>
-[in]陰影色彩。
+在陰影的色彩。
 
 *iMinBrightness*<br/>
-[in]陰影的最小的亮度。
+在陰影的最小亮度。
 
 *iMaxBrightness*<br/>
-[in]陰影的最大的亮度。
+在陰影的最大亮度。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，這個方法建立點陣圖控制代碼否則為 NULL。
+如果此方法成功, 則為所建立之點陣圖的控制碼;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果*nDepth*是設為 0，這個方法會結束，並傳回 NULL。 如果*nDepth*小於 3，陰影的高度與寬度設定為 3 個像素為單位。
+如果*nDepth*設定為 0, 這個方法會結束並傳回 Null。 如果*nDepth*小於 3, 陰影的寬度和高度會設定為3圖元。
 
-##  <a name="rgbtohsl"></a>  CDrawingManager::RGBtoHSL
+##  <a name="rgbtohsl"></a>CDrawingManager::RGBtoHSL
 
-將色彩從紅色、 綠色和藍 (RGB) 表示法的色調、 飽和度和亮度 (HSL) 表示法。
+將色彩從紅色、綠色和藍色 (RGB) 標記法轉換成色調、飽和度和亮度 (HSL) 標記法。
 
 ```
 static void __stdcall RGBtoHSL(
@@ -857,20 +857,20 @@ static void __stdcall RGBtoHSL(
 |||
 |-|-|
 |參數|描述|
-|*rgb*|[in]色彩 RGB 值。|
-|*H*|[out]Double 值，這個方法儲存的色彩色調的位置指標。|
-|*S*|[out]Double 值，這個方法儲存的色彩飽和度的位置指標。|
-|*L*|[out]Double 值，這個方法儲存的色彩亮度的位置指標。|
+|*rgb*|在RGB 值中的色彩。|
+|*H*|脫銷雙精度浮點數的指標, 其中方法會儲存色彩的色調。|
+|*S*|脫銷雙精度浮點數的指標, 其中方法會儲存色彩的飽和度。|
+|*L*|脫銷雙精度浮點數的指標, 其中方法會儲存色彩的亮度。|
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
+色彩可以表示為 HSV (色調、飽和度和值)、HSL (色調、飽和度和亮度) 或 RGB (紅色、綠色和藍色)。 如需不同色彩表示的詳細資訊, 請參閱[color](/windows/win32/uxguide/vis-color)。
 
-傳回的值*H*以介於 0 和 1 0 和 1 代表紅色的一小部分。 傳回的值*S*並*L*是介於 0 和 1 之間的數字。
+*H*的傳回值會表示為0和1之間的分數, 其中0和1代表紅色。 *S*和*L*的傳回值是介於0和1之間的數位。
 
-##  <a name="rgbtohsv"></a>  CDrawingManager::RGBtoHSV
+##  <a name="rgbtohsv"></a>CDrawingManager::RGBtoHSV
 
-將色彩 RGB 表示轉換成 HSV 表示。
+將色彩從 RGB 標記法轉換為 HSV 標記法。
 
 ```
 static void __stdcall RGBtoHSV(
@@ -883,26 +883,26 @@ static void __stdcall RGBtoHSV(
 ### <a name="parameters"></a>參數
 
 *rgb*<br/>
-[in]要轉換的 RGB 表示法中的色彩。
+在要以 RGB 標記法轉換的色彩。
 
 *H*<br/>
-[out]Double 值，這個方法儲存產生的色彩色調的位置指標。
+脫銷雙精度浮點數的指標, 這個方法會儲存色彩的結果色調。
 
 *S*<br/>
-[out]Double 值，這個方法儲存產生的色彩飽和度的位置指標。
+脫銷雙精度浮點數的指標, 這個方法會儲存色彩的產生飽和度。
 
 *V*<br/>
-[out]Double 值，這個方法儲存產生的色彩值的位置指標。
+脫銷雙精度浮點數的指標, 這個方法會儲存色彩的結果值。
 
 ### <a name="remarks"></a>備註
 
-色彩可以表示為 HSV （色調、 飽和度和值）、 （色調、 飽和度和亮度） 的 HSL 或 RGB （紅色、 綠色和藍色）。 如需不同的色彩表示方式的詳細資訊，請參閱[色彩](/windows/desktop/uxguide/vis-color)。
+色彩可以表示為 HSV (色調、飽和度和值)、HSL (色調、飽和度和亮度) 或 RGB (紅色、綠色和藍色)。 如需不同色彩表示的詳細資訊, 請參閱[color](/windows/win32/uxguide/vis-color)。
 
-傳回的值*H*是 0 和 360 之間的數字 0 到 360 度指出紅色。 傳回值*S*並*V*是介於 0 和 1 之間的數字。
+*H*的傳回值是介於0和360之間的數位, 其中0和360都表示紅色。 *S*和*V*的傳回值是介於0和1之間的數位。
 
-##  <a name="setalphapixel"></a>  CDrawingManager::SetAlphaPixel
+##  <a name="setalphapixel"></a>CDrawingManager::SetAlphaPixel
 
-色彩點陣圖中的透明像素。
+在點陣圖中將透明圖元色彩。
 
 ```
 static void __stdcall SetAlphaPixel(
@@ -919,38 +919,38 @@ static void __stdcall SetAlphaPixel(
 ### <a name="parameters"></a>參數
 
 *pBits*<br/>
-[in]點陣圖的位元值指標。
+在點陣圖之位值的指標。
 
 *rect*<br/>
-[in]您的應用程式中的矩形區域。 繪圖 manager 繪製一個陰影下方和右邊的這個區域。
+在應用程式中的矩形區域。 [繪圖管理員] 會在此區域的下方和右邊繪製一個陰影。
 
 *x*<br/>
-[in]色彩的像素水平座標。
+在要色彩之圖元的水準座標。
 
 *y*<br/>
-[in]像素色彩的垂直座標。
+在要色彩之圖元的垂直座標。
 
 *percent*<br/>
-[in]透明度百分比。
+在透明度的百分比。
 
 *iShadowSize*<br/>
-[in]寬度和高度的陰影。
+在陰影的寬度和高度。
 
 *clrBase*<br/>
-[in]陰影色彩。
+在陰影的色彩。
 
 *bIsRight*<br/>
-[in]布林值參數，指出哪一個像素的色彩。 如需詳細資訊，請參閱＜備註＞一節。
+在布林值參數, 指出要著色的圖元。 如需詳細資訊，請參閱＜備註＞一節。
 
 ### <a name="remarks"></a>備註
 
-這個方法是 helper 方法，以供[CDrawingManager::DrawShadow](#drawshadow)方法。 我們建議，如果您想要繪製一個陰影，呼叫`CDrawingManager::DrawShadow`改。
+這個方法是[CDrawingManager::D rawshadow](#drawshadow)方法所使用的 helper 方法。 如果您想要繪製陰影, 建議您改為呼叫`CDrawingManager::DrawShadow` 。
 
-如果*bIsRight*是設為 TRUE，色彩的像素為單位*x*的右邊緣像素*rect*。 如果是 FALSE，以像素色彩*x*像素的左邊緣*rect*。
+如果*bIsRight*設定為 TRUE, 則要色彩的圖元會從*矩形*右邊緣測量*x*圖元。 如果為 FALSE, 則色彩的圖元會從*矩形*左邊緣測量*x*圖元。
 
-##  <a name="setpixel"></a>  CDrawingManager::SetPixel
+##  <a name="setpixel"></a>CDrawingManager:: Bitmap.setpixel
 
-變更指定的色彩點陣圖中的單一像素。
+將點陣圖中的單一圖元變更為指定的色彩。
 
 ```
 static void __stdcall SetPixel(
@@ -967,16 +967,16 @@ static void __stdcall SetPixel(
 |||
 |-|-|
 |參數|描述|
-|*pBits*|[in]點陣圖的位元值指標。|
-|*cx*|[in]點陣圖的總寬度。|
-|*cy*|[in]點陣圖的高度總計。|
-|*x*|[in]若要變更點陣圖與像素 x 座標。|
-|*y*|[in]若要變更點陣圖與像素的 y 座標。|
-|*color*|[in]新提供的座標所識別的像素色彩。|
+|*pBits*|在點陣圖位值的指標。|
+|*cx*|在點陣圖的總寬度。|
+|*cy*|在點陣圖的總高度。|
+|*x*|在要變更之點陣圖中圖元的 x 座標。|
+|*y*|在要變更之點陣圖中圖元的 y 座標。|
+|*color*|在所提供座標所識別圖元的新色彩。|
 
-##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
+##  <a name="smartmixcolors"></a>CDrawingManager::SmartMixColors
 
-結合的加權比例為基礎的兩個色彩。
+根據加權比例結合兩個色彩。
 
 ```
 static COLORREF __stdcall SmartMixColors(
@@ -991,26 +991,26 @@ static COLORREF __stdcall SmartMixColors(
 
 |||
 |-|-|
-|參數|描述|
-|*color1*|[in]混合的第一個色彩。|
-|*color2*|[in]混用第二個色彩。|
-|*dblLumRatio*|[in]新的色彩亮度的比例。 `SmartMixColors` 乘以此比率的混合色彩的亮度然後再判斷完稿色彩。|
-|*k1*|[in]第一個色彩加權的比例。|
-|*k2*|[in]第二個色彩的加權的比例。|
+|參數|說明|
+|*color1*|在要混合的第一個色彩。|
+|*color2*|在要混合的第二個色彩。|
+|*dblLumRatio*|在新色彩亮度的比例。 `SmartMixColors`在決定最終色彩之前, 將混合色彩的亮度乘以此比例。|
+|*k1*|在第一個色彩的加權比例。|
+|*k2*|在第二個色彩的加權比例。|
 
 ### <a name="return-value"></a>傳回值
 
-表示加權的混合提供色彩的色彩。
+表示所提供色彩之加權混合的色彩。
 
 ### <a name="remarks"></a>備註
 
-這個方法會失敗並發生錯誤，如果有任一*k1*或是*k2*小於零。 如果這兩個參數會設定為 0，則方法會傳回`RGB(0, 0, 0)`。
+如果*版 k1*或*k2*小於零, 這個方法就會失敗並產生錯誤。 如果這兩個參數都設定為 0, 則方法`RGB(0, 0, 0)`會傳回。
 
-加權的比例使用下列公式計算: (color1\*版 k1 的 powerapps + 色 2 \* k2) /(k1 + k2)。 決定的加權的比例之後，方法會計算的混合色彩的亮度。 它接著會將由亮度*dblLumRatio*。 如果值大於 1.0，方法會設定為新值的混合色彩的亮度。 否則，亮度會設定為 1.0。
+加權比例的計算公式如下: (color1 \*版 k1 + color2 \* k2)/(版 k1 + k2)。 判斷加權比例之後, 方法會計算混合色彩的亮度。 然後, 它會將亮度乘以*dblLumRatio*。 如果值大於 1.0, 則方法會將混合色彩的亮度設定為新的值。 否則, 亮度會設定為1.0。
 
 ##  <a name="drawrotated"></a>  CDrawingManager::DrawRotated
 
-旋轉 90 度的來源 DC 給定矩形內的內容。
+將指定矩形內的來源 DC 內容旋轉90度。
 
 ```
 void DrawRotated(
@@ -1022,13 +1022,13 @@ void DrawRotated(
 ### <a name="parameters"></a>參數
 
 *rectDest*<br/>
-目的矩形。
+目的地矩形。
 
 *dcSrc*<br/>
 來源裝置內容。
 
 *bClockWise*<br/>
-TRUE 表示旋轉的 + 90 度。FALSE 表示旋轉的-90 度。
+TRUE 表示旋轉 + 90 度;FALSE 表示旋轉-90 度。
 
 ### <a name="remarks"></a>備註
 

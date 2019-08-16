@@ -10,19 +10,19 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-ms.openlocfilehash: 3f5db65d1c318677a630307f44533e51d63ec44d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c201cf6d9d89ab1a6a8e888deee1be79e5770490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495403"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>ISpecifyPropertyPagesImpl 類別
 
-這個類別會實作`IUnknown`，並提供的預設實作[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面。
+這個類別`IUnknown`會執行並提供[ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages)介面的預設實值。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,7 +35,7 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`ISpecifyPropertyPagesImpl`。
+衍生自`ISpecifyPropertyPagesImpl`的類別。
 
 ## <a name="members"></a>成員
 
@@ -43,16 +43,16 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 
 |名稱|描述|
 |----------|-----------------|
-|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填滿計算 UUID 的陣列值。 每個 UUID 會對應至其中一個可顯示物件的屬性工作表中的屬性頁的 CLSID。|
+|[ISpecifyPropertyPagesImpl::GetPages](#getpages)|填入已計算的 UUID 值陣列。 每個 UUID 都會對應到其中一個屬性頁的 CLSID, 而其中其中一個可顯示在物件的屬性工作表中。|
 
 ## <a name="remarks"></a>備註
 
-[ISpecifyPropertyPages](/windows/desktop/api/ocidl/nn-ocidl-ispecifypropertypages)介面可讓用戶端取得物件所支援的屬性頁 Clsid 的清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。
+[ISpecifyPropertyPages](/windows/win32/api/ocidl/nn-ocidl-ispecifypropertypages)介面可讓用戶端取得物件所支援之屬性頁的 clsid 清單。 類別`ISpecifyPropertyPagesImpl`提供此介面的預設執行, 並藉`IUnknown`由將資訊傳送至偵錯工具組建中的傾印裝置來實現。
 
 > [!NOTE]
->  不會公開`ISpecifyPropertyPages`介面，如果您的物件不支援屬性頁。
+>  如果您的物件`ISpecifyPropertyPages`不支援屬性頁, 請勿公開介面。
 
-**相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程,[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -62,11 +62,11 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="getpages"></a>  ISpecifyPropertyPagesImpl::GetPages
+##  <a name="getpages"></a>ISpecifyPropertyPagesImpl::GetPages
 
-填入陣列[CAUUID](/windows/desktop/api/ocidl/ns-ocidl-tagcauuid)結構可以顯示物件的屬性工作表中之屬性頁面的 Clsid。
+使用可在物件的屬性工作表中顯示之屬性頁的 Clsid, 將[CAUUID](/windows/win32/api/ocidl/ns-ocidl-cauuid)結構中的陣列填滿。
 
 ```
 STDMETHOD(GetPages)(CAUUID* pPages);
@@ -74,12 +74,12 @@ STDMETHOD(GetPages)(CAUUID* pPages);
 
 ### <a name="remarks"></a>備註
 
-ATL 會使用物件的屬性對應，來擷取每個 CLSID。
+ATL 會使用物件的屬性對應來抓取每個 CLSID。
 
-請參閱[ISpecifyPropertyPages::GetPages](/windows/desktop/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) Windows SDK 中。
+請參閱 Windows SDK 中的[ISpecifyPropertyPages:: GetPages](/windows/win32/api/ocidl/nf-ocidl-ispecifypropertypages-getpages) 。
 
 ## <a name="see-also"></a>另請參閱
 
 [IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)<br/>
 [IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

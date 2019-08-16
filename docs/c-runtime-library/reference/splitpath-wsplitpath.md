@@ -33,14 +33,14 @@ helpviewer_keywords:
 - path names
 - _tsplitpath function
 ms.assetid: 32bd76b5-1385-4ee8-a64c-abcb541cd2e4
-ms.openlocfilehash: d079bd17912c0711a4e1fbadadf12430520f2c96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5aab68524c0833bff0e09927587c0362c5194f9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354999"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500985"
 ---
-# <a name="splitpath-wsplitpath"></a>_splitpath、_wsplitpath
+# <a name="_splitpath-_wsplitpath"></a>_splitpath、_wsplitpath
 
 將一個路徑名稱分割為多個元件。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
 
@@ -69,22 +69,22 @@ void _wsplitpath(
 完整路徑。
 
 *drive*<br/>
-磁碟機代號，後面接著冒號 (**:**)。 您可以傳遞**NULL**此參數，如果您不需要的磁碟機代號。
+磁碟機號, 後面接著冒號 ( **:** )。 如果您不需要磁碟機號, 您可以為此參數傳遞**Null** 。
 
 *dir*<br/>
-目錄路徑，包括結尾斜線。 正斜線 ( **/** )，反斜線 ( **\\** )，或可以使用。 您可以傳遞**NULL**此參數，如果您不需要的目錄路徑。
+目錄路徑，包括結尾斜線。 可以使用正 **/** 斜線 ()、 **\\** 反斜線 () 或兩者。 如果您不需要目錄路徑, 您可以為此參數傳遞**Null** 。
 
 *fname*<br/>
-基底檔名 (無副檔名)。 您可以傳遞**NULL**此參數，如果您不需要檔案名稱。
+基底檔名 (無副檔名)。 如果您不需要檔案名, 可以針對這個參數傳遞**Null** 。
 
 *ext*<br/>
-副檔名，包括前置句點 (**。**)。 您可以傳遞**NULL**此參數，如果您不需要檔名的副檔名。
+副檔名, 包括前置句點 ( **.** )。 如果您不需要副檔名, 則可以傳遞此參數的**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_Splitpath**函式會分成四個元件中的路徑。 **_splitpath**自動多位元組字元字串引數處理為適當，辨識多位元組字元序列，根據目前使用中的多位元組字碼頁。 **_wsplitpath**是寬字元版本的 **_splitpath**; 的引數 **_wsplitpath**是寬字元字串。 除此之外，這些函式的行為相同。
+**_Splitpath**函式會將路徑分割成四個元件。 **_splitpath**會自動將多位元組字元字串引數處理為適當, 並根據目前使用中的多位元組字碼頁來辨識多位元組字元序列。 **_wsplitpath**是寬字元版本的 **_splitpath**; **_wsplitpath**的引數是寬字元字串。 除此之外，這些函式的行為相同。
 
-**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
+**安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 這些函式已有更安全的版本可供使用，請參閱 [_splitpath_s、_wsplitpath_s](splitpath-s-wsplitpath-s.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,7 +92,7 @@ void _wsplitpath(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsplitpath**|**_splitpath**|**_splitpath**|**_wsplitpath**|
 
-完整路徑的每個元件都會儲存在個別的緩衝區;資訊清單常數 **_MAX_DRIVE**， **_MAX_DIR**， **_MAX_FNAME**，以及 **_MAX_EXT** （定義於 STDLIB。H） 指定每個檔案元件的大小上限。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
+完整路徑的每個元件都會儲存在個別的緩衝區中;資訊清單常數 **_MAX_DRIVE**、 **_MAX_DIR**、 **_MAX_FNAME**和 **_MAX_EXT** (定義于 stdlib.h> 中。H) 指定每個檔案元件的大小上限。 大於對應資訊清單常數的檔案元件會造成堆積損毀。
 
 每個緩衝區都必須與其對應的資訊清單常數一樣大，以避免潛在緩衝區滿溢。
 
@@ -105,11 +105,11 @@ void _wsplitpath(
 |**_MAX_FNAME**|256|
 |**_MAX_EXT**|256|
 
-如果完整路徑未包含的元件 （例如，檔名）， **_splitpath**空字串指派給對應的緩衝區。
+如果完整路徑未包含元件 (例如檔案名), 則 **_splitpath**會將空字串指派給對應的緩衝區。
 
-您可以傳遞**NULL**要 **_splitpath**以外的任何參數*路徑*，您不需要。
+您可以針對不需要的*路徑*以外的任何參數, 將**Null**傳遞給 **_splitpath** 。
 
-如果*路徑*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。
+如果*path*為**Null**, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 而函數會傳回**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

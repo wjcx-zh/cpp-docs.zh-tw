@@ -11,18 +11,18 @@ helpviewer_keywords:
 - CListCtrl class [MFC], sorting
 - CListCtrl class [MFC], arranging the list
 ms.assetid: dcc51e4c-0ca8-4319-bec5-6994cc8ac9e5
-ms.openlocfilehash: 7826b7d08869f8df01f8dad2c4da3c24c468d1be
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 76cff3e5b972c41d395ccec671f95c921005f1b9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504251"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511261"
 ---
 # <a name="scrolling-arranging-sorting-and-finding-in-list-controls"></a>在清單控制項中捲動、排列、排序和尋找
 
-清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 是可捲動的預設值。 如需詳細資訊，請參閱 <<c0> [ 捲軸位置](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中並[捲動](../mfc/reference/clistctrl-class.md#scroll)成員函式。
+清單控制項 ([CListCtrl](../mfc/reference/clistctrl-class.md)) 預設為可滾動。 如需詳細資訊, 請參閱 Windows SDK 和[scroll](../mfc/reference/clistctrl-class.md#scroll)成員函式中的[滾動位置](/windows/win32/Controls/using-list-view-controls)。
 
-您可以呼叫`CListCtrl`排序項目，來排列的清單項目在控制項中，成員函式，並尋找特定的項目。 如需詳細資訊，請參閱 <<c0> [ 使用 ListView 控制項](/windows/desktop/Controls/using-list-view-controls)Windows SDK 中的[CListCtrl](../mfc/reference/clistctrl-class.md)成員[排列](../mfc/reference/clistctrl-class.md#arrange)， [SortItems](../mfc/reference/clistctrl-class.md#sortitems)，及[FindItem](../mfc/reference/clistctrl-class.md#finditem)。
+您可以呼叫`CListCtrl`成員函式來排列控制項中的清單專案、排序專案, 以及尋找特定專案。 如需詳細資訊, 請參閱在 Windows SDK 中[使用 ListView 控制項](/windows/win32/Controls/using-list-view-controls)和[CListCtrl](../mfc/reference/clistctrl-class.md)成員[排列](../mfc/reference/clistctrl-class.md#arrange)、 [SortItems](../mfc/reference/clistctrl-class.md#sortitems)和[FindItem](../mfc/reference/clistctrl-class.md#finditem)。
 
 ## <a name="see-also"></a>另請參閱
 

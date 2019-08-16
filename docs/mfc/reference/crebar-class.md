@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 5a87f70816e9342c7aa203a53d13699659cebb28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 434232e8f99bf914b00379db53d4b4a37d24fe36
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372349"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502787"
 ---
 # <a name="crebar-class"></a>CReBar 類別
 
@@ -35,24 +35,24 @@ class CReBar : public CControlBar
 
 |名稱|描述|
 |----------|-----------------|
-|[CReBar::AddBar](#addbar)|將 rebar 群組列。|
-|[CReBar::Create](#create)|建立 rebar 控制項，並將它附加至`CReBar`物件。|
-|[CReBar::GetReBarCtrl](#getrebarctrl)|允許直接存取基礎的通用控制項。|
+|[CReBar::AddBar](#addbar)|將寬線加入至 Rebar。|
+|[CReBar::Create](#create)|建立 Rebar 控制項並將其附加至`CReBar`物件。|
+|[CReBar::GetReBarCtrl](#getrebarctrl)|允許直接存取基礎通用控制項。|
 
 ## <a name="remarks"></a>備註
 
-Rebar 物件可以包含各種子視窗 (通常是其他控制項)，包括編輯方塊、工具列和清單方塊。 Rebar 物件可以在指定的點陣圖上顯示其子視窗。 您的應用程式可以自動調整 rebar，或使用者可以手動調整 rebar 藉由按一下或拖曳它的移駐夾列。
+Rebar 物件可以包含各種子視窗 (通常是其他控制項)，包括編輯方塊、工具列和清單方塊。 Rebar 物件可以在指定的點陣圖上顯示其子視窗。 您的應用程式可以自動調整 Rebar 的大小, 或者使用者可以按一下或拖曳其移駐夾列來手動調整 Rebar 大小。
 
-![Rebarmenu 範例](../../mfc/reference/media/vc4sc61.gif "rebarmenu 範例")
+![RebarMenu 的範例](../../mfc/reference/media/vc4sc61.gif "RebarMenu 的範例")
 
 ## <a name="rebar-control"></a>Rebar 控制項
 
-Rebar 物件的操作方式類似工具列物件。 Rebar 會使用按一下並拖曳機制，來調整其群組列的大小。 Rebar 控制項可以包含一個或多個群組列，而且每個群組列都具有移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。 不過，群組列不能包含一個以上的子視窗。
+Rebar 物件的行為類似工具列物件。 Rebar 會使用按一下和拖曳機制來調整其群組的大小。 Rebar 控制項可以包含一個或多個群組列，而且每個群組列都具有移駐夾列、點陣圖、文字標籤和子視窗中的任何組合。 不過，群組列不能包含一個以上的子視窗。
 
-`CReBar` 會使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)類別，以提供它的實作。 您可以存取透過 rebar 控制項[GetReBarCtrl](#getrebarctrl)利用控制項的自訂選項。 如需 rebar 控制項的詳細資訊，請參閱`CReBarCtrl`。 如需使用 rebar 控制項的詳細資訊，請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。
+`CReBar`會使用[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)類別來提供其執行。 您可以透過[GetReBarCtrl](#getrebarctrl)存取 Rebar 控制項, 以利用控制項的自訂選項。 如需 Rebar 控制項的詳細資訊, `CReBarCtrl`請參閱。 如需有關使用 Rebar 控制項的詳細資訊, 請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。
 
 > [!CAUTION]
->  Rebar 和 rebar 控制項物件不支援 MFC 控制列的停駐。 如果`CRebar::EnableDocking`呼叫時，您的應用程式會判斷提示。
+>  Rebar 和 Rebar 控制項物件不支援 MFC 控制列銜接。 如果`CRebar::EnableDocking`呼叫, 您的應用程式將會判斷提示。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -68,11 +68,11 @@ Rebar 物件的操作方式類似工具列物件。 Rebar 會使用按一下並�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxext.h
+**標頭:** afxext.h。h
 
-##  <a name="addbar"></a>  CReBar::AddBar
+##  <a name="addbar"></a>CReBar:: AddBar
 
-呼叫此成員函式，將 rebar 群組列。
+呼叫這個成員函式, 將一個寬線加入至 Rebar。
 
 ```
 BOOL AddBar(
@@ -92,22 +92,22 @@ BOOL AddBar(
 ### <a name="parameters"></a>參數
 
 *pBar*<br/>
-指標`CWnd`是要插入至 rebar 的子視窗的物件。 參考的物件必須有 WS_CHILD。
+`CWnd`物件的指標, 這是要插入 Rebar 中的子視窗。 參考的物件必須有 WS_CHILD。
 
 *lpszText*<br/>
-字串，包含要顯示 rebar 上的文字指標。 預設為 NULL。 中包含的文字*lpszText*不屬於子視窗中，它位於 rebar 本身。
+字串的指標, 其中包含要出現在 Rebar 上的文字。 預設值為 Null。 包含在*lpszText*中的文字不是子視窗的一部分;它是在 Rebar 本身。
 
 *pbmp*<br/>
-指標`CBitmap`rebar 背景上顯示的物件。 預設為 NULL。
+要在 Rebar 背景`CBitmap`上顯示之物件的指標。 預設值為 Null。
 
 *dwStyle*<br/>
-DWORD 包含樣式来套用至 rebar。 請參閱`fStyle`函數在 Win32 結構描述[REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa)的寬線樣式的完整清單。
+包含要套用至 Rebar 之樣式的 DWORD。 如需`fStyle`頻外樣式的完整清單, 請參閱 Win32 結構[REBARBANDINFO](/windows/win32/api/commctrl/ns-commctrl-rebarbandinfow)中的函數描述。
 
 *clrFore*<br/>
-COLORREF 值，表示 rebar 的前景色彩。
+代表 Rebar 前景色彩的 COLORRE光圈值。
 
 *clrBack*<br/>
-COLORREF 值，表示 rebar 的背景色彩。
+代表 Rebar 背景色彩的 COLORRE光圈值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -117,9 +117,9 @@ COLORREF 值，表示 rebar 的背景色彩。
 
 [!code-cpp[NVC_MFC_CReBarCtrl#1](../../mfc/reference/codesnippet/cpp/crebar-class_1.cpp)]
 
-##  <a name="create"></a>  CReBar::Create
+##  <a name="create"></a>CReBar:: Create
 
-呼叫此成員函式建立 rebar。
+呼叫這個成員函式以建立 Rebar。
 
 ```
 virtual BOOL Create(
@@ -132,13 +132,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-指標`CWnd`其 Windows 視窗是 [狀態] 列的父代的物件。 通常框架視窗。
+`CWnd`物件的指標, 其 Windows 視窗為狀態列的父系。 通常是您的框架視窗。
 
 *dwCtrlStyle*<br/>
-Rebar 控制項樣式。 根據預設，RBS_BANDBORDERS，它會顯示有限的幾行，以分隔相鄰的群組列的 rebar 控制項中。 請參閱[Rebar 控制項的樣式](/windows/desktop/Controls/rebar-control-styles)Windows SDK，如需樣式的清單中。
+Rebar 控制項樣式。 根據預設, RBS_BANDBORDERS 會顯示窄行, 以分隔 Rebar 控制項內的相鄰等區。 如需樣式清單, 請參閱 Windows SDK 中的[Rebar 控制項樣式](/windows/win32/Controls/rebar-control-styles)。
 
 *dwStyle*<br/>
-Rebar 的視窗樣式。
+Rebar 視窗樣式。
 
 *nID*<br/>
 Rebar 的子視窗識別碼。
@@ -149,11 +149,11 @@ Rebar 的子視窗識別碼。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CReBar::AddBar](#addbar)。
+  請參閱[CReBar:: AddBar](#addbar)的範例。
 
-##  <a name="getrebarctrl"></a>  CReBar::GetReBarCtrl
+##  <a name="getrebarctrl"></a>CReBar:: GetReBarCtrl
 
-此成員函式允許直接存取基礎的通用控制項。
+這個成員函式可讓您直接存取基礎通用控制項。
 
 ```
 CReBarCtrl& GetReBarCtrl() const;
@@ -161,13 +161,13 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ### <a name="return-value"></a>傳回值
 
-參考[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)物件。
+[CReBarCtrl](../../mfc/reference/crebarctrl-class.md)物件的參考。
 
 ### <a name="remarks"></a>備註
 
-呼叫此成員函式，以善用 Windows rebar 通用控制項，自訂您 rebar 的功能。 當您呼叫`GetReBarCtrl`，它會傳回參考物件，以`CReBarCtrl`物件，以便您可以使用任一組成員函式。
+呼叫這個成員函式可在自訂 Rebar 中利用 Windows Rebar 通用控制項的功能。 當您呼叫`GetReBarCtrl`時, 它會將參考物件傳回`CReBarCtrl`給物件, 讓您可以使用一組成員函式。
 
-如需使用詳細資訊`CReBarCtrl`若要自訂您 rebar，請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。
+如需使用`CReBarCtrl`自訂 Rebar 的詳細資訊, 請參閱[使用 CReBarCtrl](../../mfc/using-crebarctrl.md)。
 
 ### <a name="example"></a>範例
 

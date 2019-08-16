@@ -1,5 +1,5 @@
 ---
-title: TN071:IOleCommandTarget 實作
+title: TN071：MFC IOleCommandTarget 的執行
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -7,43 +7,43 @@ helpviewer_keywords:
 - TN071 [MFC]
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
-ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7077211396c68750d47b91c7b2bb113370990f62
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167994"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511096"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071:IOleCommandTarget 實作
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071：MFC IOleCommandTarget 的執行
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-`IOleCommandTarget`介面可讓物件和其容器來分派命令給彼此。 比方說，物件的工具列可能會包含命令的按鈕這類`Print`， `Print Preview`， `Save`， `New`，和`Zoom`。 如果這類物件已內嵌在支援的容器`IOleCommandTarget`，可以啟用其按鈕物件，並將其轉送至容器以進行處理，當使用者按一下這些命令。 如果容器會想要列印本身的內嵌的物件，它可能提出這項要求所傳送的命令，透過`IOleCommandTarget`內嵌物件的介面。
+`IOleCommandTarget`介面可讓物件和其容器分派命令給彼此。 例如, 物件的`Print`工具列可能包含命令的按鈕, 例如、 `Print Preview`、 `Save`、 `New`和`Zoom`。 如果這類物件內嵌在支援`IOleCommandTarget`的容器中, 則物件可以啟用其按鈕, 並將命令轉送至容器, 以便在使用者按一下時進行處理。 如果容器想要讓内嵌物件自行列印, 它可以透過内嵌物件的`IOleCommandTarget`介面傳送命令來提出此要求。
 
-`IOleCommandTarget` 是自動化類似的介面，因為它正由用戶端來叫用伺服器上的方法。 不過，使用`IOleCommandTarget`儲存透過 Automation 介面進行呼叫，因為程式設計師不必使用通常很昂貴的額外負荷`Invoke`方法`IDispatch`。
+`IOleCommandTarget`是類似 Automation 的介面, 可讓用戶端用來叫用伺服器上的方法。 不過, 使用`IOleCommandTarget`會節省透過 Automation 介面進行呼叫的額外負荷, 因為程式設計人員不需要使用`Invoke`通常昂貴`IDispatch`的方法。
 
-在 MFC 中，`IOleCommandTarget`介面由作用中的文件伺服程式來允許將命令分派給伺服器的作用中的文件容器。 主動式文件的伺服器類別， `CDocObjectServerItem`，會使用 MFC 介面對應 (請參閱[TN038:MFC/OLE IUnknown 實作](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 來實作`IOleCommandTarget`介面。
+在 MFC 中, `IOleCommandTarget`活動文檔伺服器會使用此介面來允許活動文檔容器將命令分派至伺服器。 活動文檔伺服器類別`CDocObjectServerItem`使用 MFC 介面對應 (請參閱[TN038:MFC/OLE IUnknown 執行](../mfc/tn038-mfc-ole-iunknown-implementation.md)) 來`IOleCommandTarget`執行介面。
 
-`IOleCommandTarget` 也實作於`COleFrameHook`類別。 `COleFrameHook` 是未記載的 MFC 類別，實作就地編輯容器的框架視窗功能。 `COleFrameHook` 也使用 MFC 介面對應實作`IOleCommandTarget`介面。 `COleFrameHook`實作`IOleCommandTarget`轉送 OLE 命令`COleDocObjectItem`-衍生主動式文件容器。 這可讓任何 MFC 作用中的文件容器，以接收來自包含作用中的文件伺服程式的訊息。
+`IOleCommandTarget`也會在`COleFrameHook`類別中執行。 `COleFrameHook`是未記載的 MFC 類別, 可執行就地編輯容器的框架視窗功能。 `COleFrameHook`也會使用 MFC 介面對應來執行`IOleCommandTarget`介面。 `COleFrameHook`的執行會`IOleCommandTarget`將 OLE 命令轉送`COleDocObjectItem`至衍生的活動文檔容器。 這可讓任何 MFC 使用中檔容器從包含的現用文檔伺服器接收訊息。
 
 ## <a name="mfc-ole-command-maps"></a>MFC OLE 命令對應
 
-MFC 開發人員可以利用`IOleCommandTarget`使用 MFC OLE 命令對應。 OLE 命令對應就像訊息對應，因為它們可以用來將 OLE 命令對應到包含命令對應之類別的成員函式。 若要這麼做，請將巨集放在命令對應，以指定您想要處理的命令、 OLE 命令和命令識別碼的 OLE 命令群組[WM_COMMAND](/windows/desktop/menurc/wm-command)收到 OLE 命令時，將會傳送的訊息。 MFC 也提供幾個預先定義巨集的標準 OLE 命令。 取得一份標準的 OLE 命令原本是設計為會使用與 Microsoft Office 應用程式，，請參閱 OLECMDID 列舉型別，其定義於 docobj.h。
+Mfc 開發人員可以`IOleCommandTarget`利用 mfc OLE 命令對應來使用。 OLE 命令對應就像訊息對應, 因為它們可以用來將 OLE 命令對應至包含命令對應之類別的成員函式。 若要進行這項工作, 請將宏放在命令對應中, 以指定您想要處理之命令的 OLE 命令群組、OLE 命令, 以及收到 OLE 命令時將傳送之[WM_COMMAND](/windows/win32/menurc/wm-command)訊息的命令識別碼。 MFC 也針對標準的 OLE 命令提供了許多預先定義的宏。 如需原先設計用於 Microsoft Office 應用程式的標準 OLE 命令清單, 請參閱 OLECMDID 列舉 (定義于 docobj.idl)。
 
-當包含 OLE 命令對應的 MFC 應用程式收到 OLE 命令時，MFC 會嘗試尋找所要求的命令，在 OLE 命令對應的應用程式中的命令識別碼和命令群組。 如果找到相符項目，則會將 WM_COMMAND 訊息分派至包含所要求的命令識別碼的命令對應的應用程式。 (請參閱描述`ON_OLECMD`下方。)如此一來，OLE 分派至應用程式的命令會轉變成 WM_COMMAND 訊息由 MFC。 透過使用 MFC 的標準應用程式的訊息對應會接著路由傳送 WM_COMMAND 訊息[命令路由](../mfc/command-routing.md)架構。
+當包含 OLE 命令對應的 MFC 應用程式收到 OLE 命令時, MFC 會嘗試在應用程式的 OLE 命令對應中, 尋找所要求之命令的命令 ID 和命令群組。 如果找到相符的結果, 則會將 WM_COMMAND 訊息分派至包含命令對應的應用程式, 並提供所要求之命令的識別碼。 (請參閱`ON_OLECMD`下面的說明)。如此一來, 分派至應用程式的 OLE 命令就會由 MFC 轉換成 WM_COMMAND 訊息。 然後會使用 MFC 標準[命令路由](../mfc/command-routing.md)架構, 透過應用程式的訊息對應來路由傳送 WM_COMMAND 訊息。
 
-不同於訊息對應，MFC OLE 命令對應不會受到 ClassWizard。 MFC 開發人員必須將 OLE 命令對應支援和 OLE 命令對應項目以手動方式。 OLE 命令 WM_COMMAND 訊息路由鏈結中當時作用中的文件的是任何類別中作用中的 MFC 文件伺服程式可以加入對應是就地啟用作用中的容器中。 這些類別包括應用程式的類別衍生自[CWinApp](../mfc/reference/cwinapp-class.md)， [CView](../mfc/reference/cview-class.md)， [CDocument](../mfc/reference/cdocument-class.md)，以及[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)。 在使用中文件容器中，OLE 命令對應只會新增至[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)-衍生的類別。 此外，在使用中文件容器中，WM_COMMAND 訊息只會發送至訊息對應中`COleDocObjectItem`-衍生的類別。
+與訊息對應不同的是, ClassWizard 不支援 MFC OLE 命令對應。 MFC 開發人員必須手動加入 OLE 命令對應支援和 OLE 命令對應專案。 當使用中的檔在容器中就地作用時, 可以將 OLE 命令對應加入至 WM_COMMAND 訊息路由鏈中任何類別的 MFC 活動文檔伺服器。 這些類別包括衍生自[CWinApp](../mfc/reference/cwinapp-class.md)、 [CView](../mfc/reference/cview-class.md)、 [CDocument](../mfc/reference/cdocument-class.md)和[coleipframewnd 來衍生](../mfc/reference/coleipframewnd-class.md)的應用程式類別。 在活動文檔容器中, OLE 命令對應只能加入至[COleDocObjectItem](../mfc/reference/coledocobjectitem-class.md)衍生類別。 此外, 在活動文檔容器中, WM_COMMAND 訊息只會分派至衍生類別中`COleDocObjectItem`的訊息對應。
 
-## <a name="ole-command-map-macros"></a>OLE 命令對應巨集
+## <a name="ole-command-map-macros"></a>OLE 命令對應宏
 
-您可以使用下列巨集來將命令對應功能新增至您的類別：
+使用下列宏將命令對應功能新增至您的類別:
 
 ```cpp
 DECLARE_OLECMD_MAP ()
 ```
 
-這個巨集，會包含命令對應的類別 （通常是在標頭檔） 的類別宣告中。
+這個宏會進入包含命令對應之類別的類別宣告 (通常是在標頭檔中)。
 
 ```cpp
 BEGIN_OLECMD_MAP(theClass, baseClass)
@@ -53,39 +53,39 @@ BEGIN_OLECMD_MAP(theClass, baseClass)
 包含命令對應的類別名稱。
 
 *baseClass*<br/>
-包含命令對應之類別的基底類別的名稱。
+包含命令對應之類別的基類名稱。
 
-這個巨集標記命令對應的開頭。 包含命令對應之類別的實作檔中使用這個巨集。
+這個宏會標示命令對應的開頭。 請在包含命令對應之類別的執行檔案中使用此宏。
 
 ```
 END_OLECMD_MAP()
 ```
 
-這個巨集標記命令 map 的結尾。 包含命令對應之類別的實作檔中使用這個巨集。 這個巨集都必須依照 BEGIN_OLECMD_MAP 巨集。
+這個宏會標示命令對應的結尾。 請在包含命令對應之類別的執行檔案中使用此宏。 這個宏必須一律跟隨在 BEGIN_OLECMD_MAP 宏的後面。
 
 ```
 ON_OLECMD(pguid, olecmdid, id)
 ```
 
 *pguid*<br/>
-OLE 命令的命令群組 GUID 的指標。 這個參數是**NULL**標準 OLE 命令群組。
+OLE 命令的命令群組之 GUID 的指標。 標準 OLE 命令群組的此參數為**Null** 。
 
 *olecmdid*<br/>
-要叫用命令 OLE 命令識別碼。
+要叫用之命令的 OLE 命令識別碼。
 
 *id*<br/>
-WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應用程式的識別碼。
+叫用此 OLE 命令時, 要傳送至包含命令對應之應用程式的 WM_COMMAND 訊息識別碼。
 
-使用命令對應中的 ON_OLECMD 巨集，來新增您想要處理的 OLE 命令的項目。 OLE 命令收到時，它們會轉換成指定的 WM_COMMAND 訊息並透過使用標準的 MFC 命令路由架構的應用程式的訊息對應路由傳送。
+在命令對應中使用 ON_OLECMD 宏, 為您要處理的 OLE 命令新增專案。 收到 OLE 命令時, 會將它們轉換成指定的 WM_COMMAND 訊息, 並使用標準 MFC 命令路由架構, 透過應用程式的訊息對應來路由傳送。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將 OLE 命令處理功能新增至使用 MFC 的文件伺服器來處理[OLECMDID_PRINT](/windows/desktop/api/docobj/ne-docobj-olecmdid) OLE 命令。 這個範例假設您使用 AppWizard 產生是使用中文件伺服器的 MFC 應用程式。
+下列範例顯示如何將 OLE 命令處理功能加入至 MFC 使用中文檔伺服器, 以處理[OLECMDID_PRINT](/windows/win32/api/docobj/ne-docobj-olecmdid) OLE 命令。 這個範例假設您使用了啟動程式來產生屬於活動文檔伺服器的 MFC 應用程式。
 
-1. 在您`CView`-衍生類別的標頭檔案中，新增至類別宣告的 DECLARE_OLECMD_MAP 巨集。
+1. `CView`在衍生類別的標頭檔中, 將 DECLARE_OLECMD_MAP 宏新增至類別宣告。
 
     > [!NOTE]
-    > 使用`CView`-衍生類別，因為它是其中一個 WM_COMMAND 訊息路由鏈結中的使用中文件伺服器中的類別。
+    > `CView`使用衍生類別, 因為它是活動文檔伺服器中的其中一個類別, 位於 WM_COMMAND 訊息路由鏈中。
 
     ```cpp
     class CMyServerView : public CView
@@ -98,7 +98,7 @@ WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應�
     };
     ```
 
-2. 實作檔中`CView`-衍生的類別，新增 BEGIN_OLECMD_MAP 和 END_OLECMD_MAP 巨集：
+2. 在衍生類別的執行`CView`檔案中, 新增 BEGIN_OLECMD_MAP 和 END_OLECMD_MAP 宏:
 
     ```cpp
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -106,7 +106,7 @@ WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應�
     END_OLECMD_MAP()
     ```
 
-3. 若要處理的標準 OLE 的列印命令，新增[ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd)巨集來指定標準列印命令的 OLE 命令 ID 的命令對應並**ID_FILE_PRINT** WM_COMMAND id。 **ID_FILE_PRINT**是 AppWizard 所產生的 MFC 應用程式所使用的列印命令 ID 的標準：
+3. 若要處理標準的 OLE 列印命令, 請在命令對應中新增[ON_OLECMD](reference/message-map-macros-mfc.md#on_olecmd)宏, 指定標準 print 命令的 OLE 命令識別碼, 並針對 WM_COMMAND 識別碼指定**ID_FILE_PRINT** 。 **ID_FILE_PRINT**是由程式層產生的 MFC 應用程式所使用的標準列印命令識別碼:
 
     ```
     BEGIN_OLECMD_MAP(CMyServerView, CView)
@@ -114,9 +114,9 @@ WM_COMMAND 訊息傳送到叫用這個 OLE 命令時，包含命令對應的應�
     END_OLECMD_MAP()
     ```
 
-請注意，其中一個標準 OLE 命令定義的巨集，在 afxdocob.h，無法使用，來 ON_OLECMD 巨集取代因為**OLECMDID_PRINT**是標準的 OLE 命令識別碼。 ON_OLECMD_PRINT 巨集將會完成相同的工作當做 ON_OLECMD 巨集使用如上所示。
+請注意, 您可以使用 afxdocob 中定義的其中一個標準 OLE 命令宏來取代 ON_OLECMD 宏, 因為**OLECMDID_PRINT**是標準的 OLE 命令識別碼。 ON_OLECMD_PRINT 宏會完成與上面所示的 ON_OLECMD 宏相同的工作。
 
-當容器應用程式傳送此伺服器**OLECMDID_PRINT**命令的伺服器透過`IOleCommandTarget`介面，MFC 列印命令處理常式將會叫用在伺服器中，導致伺服器列印應用程式。 主動式文件容器的程式碼叫用上述步驟中新增的列印命令看起來像這樣：
+當容器應用程式透過伺服器的`IOleCommandTarget`介面傳送**OLECMDID_PRINT**命令給此伺服器時, 將會在伺服器中叫用 MFC 列印命令處理常式, 使伺服器列印應用程式。 活動文檔容器的程式碼若要叫用上述步驟中新增的列印命令, 如下所示:
 
 ```cpp
 void CContainerCntrItem::DoOleCmd()

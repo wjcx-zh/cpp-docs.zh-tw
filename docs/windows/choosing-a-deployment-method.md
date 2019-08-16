@@ -12,12 +12,12 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: 5ca1f33a809bc81b7dcc090231e507ba66775205
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2281effaa94c32454e88100c8b7020961f748d9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407051"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514837"
 ---
 # <a name="choosing-a-deployment-method"></a>選擇部署方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "62407051"
 
 若部署使用可轉散發合併模組，但由不具系統管理權限的使用者執行安裝，則不會安裝 Visual C++ DLL，應用程式也不會執行。 此外，以合併模組建置 (允許個別使用者安裝) 的應用程式安裝程式會將程式庫安裝在共用位置，此位置會影響系統的所有使用者。 您可以使用本機部署將必要的 Visual C++ DLL 安裝在特定使用者的應用程式目錄中，而不會影響其他使用者，也不需要具備系統管理員權限。 由於這可能會產生服務性問題，因此我們不建議本機部署 Visual C++ 可轉散發 DLL。
 
-不正確的 Visual C++ 程式庫部署方式可能會在執行相依的應用程式時發生執行階段錯誤。 當作業系統載入應用程式時，它會使用所述的搜尋順序[LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)。
+不正確的 Visual C++ 程式庫部署方式可能會在執行相依的應用程式時發生執行階段錯誤。 當作業系統載入應用程式時, 它會使用[LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)中所述的搜尋順序。
 
 ## <a name="dynamic-linking-is-better-than-static-linking"></a>動態連結比靜態連結適合
 

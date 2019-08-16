@@ -13,18 +13,18 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 59deb75ad77b0a80efc69d9991e093ecef95c51e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9c657bb0d583270f81658afa53f36b1be6a4fd4a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221421"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493270"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>FreeLibrary 和 AfxFreeLibrary
 
-明確連結至 DLL 呼叫的程序[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)函式時不再需要 DLL 模組。 這個函式模組的參考計數會遞減，並參考計數為零，如果取消從處理序位址空間。
+當不再需要 DLL 模組時, 明確連結至 DLL 的進程會呼叫[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)函式。 此函式會遞減模組的參考計數, 而如果參考計數為零, 則會從進程的位址空間 unmaps 它。
 
-在 MFC 應用程式中，使用[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)而不是`FreeLibrary`卸載 MFC 擴充 DLL。 介面 （函式原型），如`AfxFreeLibrary`等同於`FreeLibrary`。
+在 mfc 應用程式中, 使用[AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)而`FreeLibrary`非來卸載 MFC 擴充 DLL。 的介面 (函數原型) `AfxFreeLibrary`與`FreeLibrary`相同。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
@@ -40,6 +40,6 @@ ms.locfileid: "65221421"
 
 ## <a name="see-also"></a>另請參閱
 
-[建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)<br/>
-[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
+[在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)<br/>
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

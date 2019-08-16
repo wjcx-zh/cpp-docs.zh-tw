@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: c6e00bf42cf20b46c949c218efe1820cc7ce0f9b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916970"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504014"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem 類別
 
@@ -51,7 +51,7 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|使用預設印表機設定來列印容器應用程式的檔。|
 |[COleDocObjectItem::ExecCommand](#execcommand)|執行使用者指定的命令。|
@@ -142,7 +142,7 @@ HRESULT ExecCommand(
 要執行之命令的識別碼。 必須位於*pguidCmdGroup*所識別的群組中。
 
 *nCmdExecOpt*<br/>
-指定命令執行選項。 預設會將設定為執行命令, 而不提示使用者。 如需值清單, 請參閱[OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) 。
+指定命令執行選項。 預設會將設定為執行命令, 而不提示使用者。 如需值清單, 請參閱[OLECMDEXECOPT](/windows/win32/api/docobj/ne-docobj-olecmdexecopt) 。
 
 *pguidCmdGroup*<br/>
 命令群組的唯一識別碼。 根據預設, Null 會指定標準群組。 傳入*nCmdID*的命令必須屬於群組。
@@ -151,7 +151,7 @@ HRESULT ExecCommand(
 
 如果成功, 則傳回 S_OK;否則, 會傳回下列其中一個錯誤碼。
 
-|值|說明|
+|值|描述|
 |-----------|-----------------|
 |E_UNEXPECTED|發生未預期的錯誤。|
 |E_FAIL|發生錯誤。|
@@ -176,7 +176,7 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前現用視圖之[IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview)介面的指標。 如果沒有目前的視圖, 它會傳回 Null。
+目前現用視圖之[IOleDocumentView](/windows/win32/api/docobj/nn-docobj-ioledocumentview)介面的指標。 如果沒有目前的視圖, 它會傳回 Null。
 
 ### <a name="remarks"></a>備註
 
@@ -270,21 +270,21 @@ HRESULT QueryCommand(
 正在查詢之命令的識別碼。
 
 *pdwStatus*<br/>
-查詢結果所傳回之旗標的指標。 如需可能值的清單, 請參閱[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)。
+查詢結果所傳回之旗標的指標。 如需可能值的清單, 請參閱[OLECMDF](/windows/win32/api/docobj/ne-docobj-olecmdf)。
 
 *pCmdText*<br/>
-[OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-olecmdtext)結構的指標, 會在其中傳回單一命令的名稱和狀態資訊。 可以是 Null, 表示呼叫端不需要此資訊。
+[OLECMDTEXT](/windows/win32/api/docobj/ns-docobj-olecmdtext)結構的指標, 會在其中傳回單一命令的名稱和狀態資訊。 可以是 Null, 表示呼叫端不需要此資訊。
 
 *pguidCmdGroup*<br/>
 命令群組的唯一識別碼;可以是 Null 以指定標準群組。
 
 ### <a name="return-value"></a>傳回值
 
-如需傳回值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
+如需傳回值的完整清單, 請參閱 Windows SDK 中的[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus) 。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[IOleCommandTarget:: QueryStatus](/windows/win32/api/docobj/nf-docobj-iolecommandtarget-querystatus)方法的功能, 如 Windows SDK 中所述。
 
 ##  <a name="release"></a>  COleDocObjectItem::Release
 

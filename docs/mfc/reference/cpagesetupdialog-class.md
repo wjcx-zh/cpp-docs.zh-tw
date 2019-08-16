@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: a9009c4ea08771949cea2c44e4f6265783ced35a
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916927"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503005"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION 會停用 [頁面方向] 對話方塊控制項。
 
-- PSD_RETURNDEFAULT 會`CPageSetupDialog`導致傳回[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構, 其已針對系統預設印表機初始化, 而不會顯示對話方塊。 假設`hDevNames` 和`hDevMode`都是 Null, 否則函數會傳回錯誤。 如果舊的印表機驅動程式 (早于 Windows 3.0 版) 支援系統預設印表機, 則只`hDevNames`會傳回;`hDevMode`為 Null。
+- PSD_RETURNDEFAULT 會`CPageSetupDialog`導致傳回[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構, 其已針對系統預設印表機初始化, 而不會顯示對話方塊。 假設`hDevNames` 和`hDevMode`都是 Null, 否則函數會傳回錯誤。 如果舊的印表機驅動程式 (早于 Windows 3.0 版) 支援系統預設印表機, 則只`hDevNames`會傳回;`hDevMode`為 Null。
 
 - PSD_DISABLEPAPER 會停用紙張選取控制項。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
 
-從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構建立印表機裝置內容。
+從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構建立印表機裝置內容。
 
 ```
 HDC CreatePrinterDC();
@@ -191,7 +191,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
+IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
 
 IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
 
@@ -231,7 +231,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
 
 ##  <a name="getdrivername"></a>CPageSetupDialog:: GetDriverName
 
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>參數
 
 *lpRectMargins*<br/>
-[矩形](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標, 描述目前所選印表機的列印邊界 (1/1000 英寸或 1/100 mm)。 如果您對此矩形不感興趣, 請傳遞 Null 給此參數。
+[矩形](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標, 描述目前所選印表機的列印邊界 (1/1000 英寸或 1/100 mm)。 如果您對此矩形不感興趣, 請傳遞 Null 給此參數。
 
 *lpRectMinMargins*<br/>
 `RECT`結構或`CRect`物件的指標, 描述目前所選印表機的最小列印邊界 (1/1000 英寸或 1/100 mm)。 如果您對此矩形不感興趣, 請傳遞 Null 給此參數。
@@ -305,7 +305,7 @@ PAGESETUPDLG m_psd;
 
 如果您直接修改`m_psd`資料成員, 將會覆寫任何預設行為。
 
-如需有關[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)結構的詳細資訊, 請參閱 Windows SDK。
+如需有關[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)結構的詳細資訊, 請參閱 Windows SDK。
 
 請參閱[CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)的範例。
 
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - 傳回位址標記法的 WM_PSD_YAFULLPAGERECT 區域。 這個區域會延伸至範例頁面區域的邊緣。
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)或[矩形](/windows/desktop/api/windef/ns-windef-tagrect)物件的指標, 其中包含繪圖區的座標。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或[矩形](/windows/win32/api/windef/ns-windef-rect)物件的指標, 其中包含繪圖區的座標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -393,7 +393,7 @@ virtual UINT PreDrawPage(
 - 直向模式中的0x01f 信封 (點矩陣)
 
 *pPSD*<br/>
-`PAGESETUPDLG` 結構的指標。 如需[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)的詳細資訊, 請參閱 Windows SDK。
+`PAGESETUPDLG` 結構的指標。 如需[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)的詳細資訊, 請參閱 Windows SDK。
 
 ### <a name="return-value"></a>傳回值
 

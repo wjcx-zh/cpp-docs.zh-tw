@@ -30,16 +30,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5afbc907356d4c5b14b749de5de0c8d36280891e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288819"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499954"
 ---
-# <a name="endthread-endthreadex"></a>_endthread、_endthreadex
+# <a name="_endthread-_endthreadex"></a>_endthread、_endthreadex
 
-中止執行緒;**_endthread**終止所建立的執行緒 **_beginthread**並 **_endthreadex**中止執行緒所建立的 **_beginthreadex**.
+終止執行緒; **_endthread**會終止由 **_beginthread**建立的執行緒, 而 **_endthreadex**會終止由 **_beginthreadex**所建立的執行緒。
 
 ## <a name="syntax"></a>語法
 
@@ -57,21 +57,21 @@ void _endthreadex(
 
 ## <a name="remarks"></a>備註
 
-您可以呼叫 **_endthread**或 **_endthreadex**明確地終止執行緒; 不過， **_endthread**或是 **_endthreadex**稱為自動從常式的執行緒傳回時做為參數傳遞 **_beginthread**或是 **_beginthreadex**。 結束藉由呼叫執行緒**endthread**或是 **_endthreadex**有助於確保適當復原配置執行緒的資源。
+您可以明確地呼叫 **_endthread**或 **_endthreadex**來終止執行緒;不過, 當執行緒從做為參數傳遞至 **_beginthread**或 **_beginthreadex**的常式返回時, 會自動呼叫 **_endthread**或 **_endthreadex** 。 透過呼叫**endthread**或 **_endthreadex**來終止執行緒, 有助於確保適當復原配置給執行緒的資源。
 
 > [!NOTE]
-> 對於與 Libcmt.lib 連結的可執行檔，請勿呼叫 Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) 應用程式開發介面，這會阻止執行階段系統回收配置的資源。 **_endthread**並 **_endthreadex**回收配置的執行緒資源，然後呼叫**ExitThread**。
+> 對於與 Libcmt.lib 連結的可執行檔，請勿呼叫 Win32 [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) 應用程式開發介面，這會阻止執行階段系統回收配置的資源。 **_endthread**和 **_endthreadex**會回收配置的執行緒資源, 然後呼叫**ExitThread**。
 
-**_endthread**會自動關閉執行緒控制代碼。 (此行為不同於 Win32 **ExitThread** API。)因此，當您使用 **_beginthread**並 **_endthread**，不要明確地關閉執行緒控制代碼藉由呼叫 Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API。
+**_endthread**會自動關閉執行緒控制碼。 (此行為與 Win32 **ExitThread** API 不同)。因此, 當您使用 **_beginthread**和 **_endthread**時, 請不要藉由呼叫 Win32 [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) API 來明確關閉執行緒控制碼。
 
-像是 Win32 **ExitThread** API **_endthreadex**不會關閉執行緒控制代碼。 因此，當您使用 **_beginthreadex**並 **_endthreadex**，您必須關閉執行緒控制代碼藉由呼叫 Win32 **CloseHandle** API。
+如同 Win32 **ExitThread** API, **_endthreadex**不會關閉執行緒控制碼。 因此, 當您使用 **_beginthreadex**和 **_endthreadex**時, 您必須藉由呼叫 Win32 **CloseHandle** API 來關閉執行緒控制碼。
 
 > [!NOTE]
-> **_endthread**並 **_endthreadex**導致C++暫止的解構函式，不是要呼叫的執行緒中。
+> **_endthread**和 **_endthreadex**會C++導致不會呼叫執行緒中暫止的析構函數。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|

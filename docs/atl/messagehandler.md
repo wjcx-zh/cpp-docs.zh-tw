@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: 1acd56357f9ce234e3c479fd8fa88c1ed8407878
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261692"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492315"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
-`MessageHandler` 是 MESSAGE_HANDLER 巨集訊息對應中的第二個參數所識別的函式的名稱。
+`MessageHandler`這是訊息對應中 MESSAGE_HANDLER 宏的第二個參數所識別的函式名稱。
 
 ## <a name="syntax"></a>語法
 
@@ -29,27 +29,27 @@ LRESULT MessageHandler(
 ### <a name="parameters"></a>參數
 
 *uMsg*<br/>
-指定的訊息。
+指定訊息。
 
 *wParam*<br/>
-其他特定訊息資訊。
+其他訊息特定資訊。
 
 *lParam*<br/>
-其他特定訊息資訊。
+其他訊息特定資訊。
 
 *bHandled*<br/>
-訊息對應集*bHandled*設為 TRUE 之前`MessageHandler`呼叫。 如果`MessageHandler`完全不會處理訊息，它應該設定*bHandled*為 FALSE，以指出需要進一步處理的訊息。
+在呼叫之前`MessageHandler` , 訊息對應會將*bHandled*設定為 TRUE。 如果`MessageHandler`未完整處理訊息, 則應該將*bHandled*設定為 FALSE, 以指出訊息需要進一步處理。
 
 ## <a name="return-value"></a>傳回值
 
-訊息處理的結果。 0，表示成功。
+訊息處理的結果。 如果成功, 則為0。
 
 ## <a name="remarks"></a>備註
 
-如需訊息對應中使用此訊息處理常式的範例，請參閱[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)。
+如需在訊息對應中使用此訊息處理常式的範例, 請參閱[MESSAGE_HANDLER](reference/message-map-macros-atl.md#message_handler)。
 
 ## <a name="see-also"></a>另請參閱
 
 [實作視窗](../atl/implementing-a-window.md)<br/>
 [訊息對應](../atl/message-maps-atl.md)<br/>
-[WM_NOTIFY](/windows/desktop/controls/wm-notify)
+[WM_NOTIFY](/windows/win32/controls/wm-notify)

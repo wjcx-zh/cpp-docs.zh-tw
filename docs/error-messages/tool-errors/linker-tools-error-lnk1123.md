@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1123
 helpviewer_keywords:
 - LNK1123
-ms.openlocfilehash: b67a2a4ddad13988967b7cc7d827862a2a6fe933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31fd634291bfb0af17348197ae8a6225ac490c89
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255225"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509908"
 ---
 # <a name="linker-tools-error-lnk1123"></a>連結器工具錯誤 LNK1123
 
@@ -25,13 +25,13 @@ ms.locfileid: "62255225"
 
 - 套用適用於您的 Visual Studio 版本的所有 Service Pack 和更新。 這對於 Visual Studio 2010 尤其重要。
 
-- 請嘗試在已停用累加連結下進行建置。 在功能表列上，依序選擇 [專案] 和 [屬性]。 在 **屬性頁**對話方塊方塊中，展開**組態屬性**，**連結器**。 值變更**啟用累加連結**要**No**。
+- 請嘗試在已停用累加連結下進行建置。 在功能表列上，依序選擇 [專案] 和 [屬性]。 在 [**屬性頁**] 對話方塊中, 展開 [設定**屬性**]、[**連結器**]。 將 [**啟用增量連結**] 的值變更為 [**否**]。
 
 - 驗證在 PATH 環境變數中找到的 CVTRES.EXE 版本與建置工具的版本相符，或者與專案所使用的平台工具組版本相符。
 
-- 請嘗試關閉內嵌資訊清單選項。 在功能表列上，依序選擇 [專案] 和 [屬性]。 在 **屬性頁**對話方塊方塊中，展開**組態屬性**，**資訊清單工具**，**輸入和輸出**。 值變更**內嵌資訊清單**要**No**。
+- 請嘗試關閉內嵌資訊清單選項。 在功能表列上，依序選擇 [專案] 和 [屬性]。 在 [**屬性頁**] 對話方塊中, 展開 [設定**屬性**]、[**資訊清單工具**]、[**輸入和輸出**]。 將 [**內嵌資訊清單**] 的值變更為 [**否**]。
 
-- 請確認檔案類型有效。 例如，確保 OMF 物件是 32 位元而不是 16 位元。 如需詳細資訊，請參閱[。Obj 檔做為連結器輸入](../../build/reference/dot-obj-files-as-linker-input.md)並[PE 格式](/windows/desktop/Debug/pe-format)。
+- 請確認檔案類型有效。 例如，確保 OMF 物件是 32 位元而不是 16 位元。 如需詳細資訊, 請參閱[。做為連結器輸入](../../build/reference/dot-obj-files-as-linker-input.md)和[PE 格式](/windows/win32/Debug/pe-format)的 Obj 檔案。
 
 - 請確認檔案未損毀。 若有需要，請重建它。
 

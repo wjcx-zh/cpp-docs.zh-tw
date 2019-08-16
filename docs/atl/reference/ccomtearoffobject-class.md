@@ -15,16 +15,16 @@ helpviewer_keywords:
 - tear-off interfaces
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
-ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d27a6fa3c0070cd32c78971a7544327c51d4393
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259413"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496921"
 ---
 # <a name="ccomtearoffobject-class"></a>CComTearOffObject 類別
 
-這個類別會實作分割的介面。
+這個類別會執行一個卸載介面。
 
 ## <a name="syntax"></a>語法
 
@@ -35,10 +35,10 @@ class CComTearOffObject : public Base
 
 #### <a name="parameters"></a>參數
 
-*基底*<br/>
-您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
+*群體*<br/>
+您的卸載類別, 衍生自`CComTearOffObjectBase`和您想要卸載的物件所支援的介面。
 
-ATL 中兩個階段實作其 tear-off 介面 —`CComTearOffObjectBase`方法會處理參考計數和`QueryInterface`，雖然`CComTearOffObject`實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)。
+ATL 會在兩個階段中執行其卸載的介面`CComTearOffObjectBase` : 方法會處理參考計數`QueryInterface`和, `CComTearOffObject`同時執行[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)。
 
 ## <a name="members"></a>成員
 
@@ -47,15 +47,15 @@ ATL 中兩個階段實作其 tear-off 介面 —`CComTearOffObjectBase`方法會
 |名稱|描述|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|建構函式。|
-|[CComTearOffObject::~CComTearOffObject](#dtor)|解構函式。|
+|[CComTearOffObject:: ~ CComTearOffObject](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CComTearOffObject::AddRef](#addref)|參考計數會遞增`CComTearOffObject`物件。|
-|[CComTearOffObject::QueryInterface](#queryinterface)|傳回要求的介面指標上撕下類別或擁有者類別。|
-|[CComTearOffObject::Release](#release)|遞減參考計數的`CComTearOffObject`物件，並將其終結。|
+|[CComTearOffObject::AddRef](#addref)|遞增`CComTearOffObject`物件的參考計數。|
+|[CComTearOffObject::QueryInterface](#queryinterface)|在您的卸載類別或擁有者類別上, 傳回所要求介面的指標。|
+|[CComTearOffObject::Release](#release)|遞減`CComTearOffObject`物件的參考計數, 並將其損毀。|
 
 ### <a name="ccomtearoffobjectbase-methods"></a>CComTearOffObjectBase 方法
 
@@ -67,17 +67,17 @@ ATL 中兩個階段實作其 tear-off 介面 —`CComTearOffObjectBase`方法會
 
 |||
 |-|-|
-|[m_pOwner](#m_powner)|指標`CComObject`衍生自擁有者類別。|
+|[m_pOwner](#m_powner)|從擁有者類別`CComObject`衍生的指標。|
 
 ## <a name="remarks"></a>備註
 
-`CComTearOffObject` 實作分割介面為個別的物件，該介面針對查詢時，才會具現化。 分割會刪除其參考計數變成零。 通常，您會建置撕下介面，介面很少使用，因為使用分割的主要物件的所有執行個體中儲存的 vtable 指標。
+`CComTearOffObject`將卸載介面實作為個別的物件, 只有在查詢該介面時才會具現化。 當其參考計數變成零時, 會刪除卸載。 一般來說, 您會針對很少使用的介面建立一個中斷介面, 因為使用卸載功能會將 vtable 指標儲存在主要物件的所有實例中。
 
-您應該衍生類別實作分割從`CComTearOffObjectBase`和從要分割物件以支援任何介面。 `CComTearOffObjectBase` 是樣板化的擁有者類別和執行緒模型。 擁有者類別是為其分割所實作之物件的類別。 如果您未指定執行緒模型，則會使用預設的執行緒模型。
+您應該從`CComTearOffObjectBase`和您想要卸載的物件所要支援的任何介面, 衍生一個執行卸載的類別。 `CComTearOffObjectBase`會範本化在擁有者類別和執行緒模型上。 擁有者類別是正在執行卸載的物件類別。 如果您未指定執行緒模型, 則會使用預設的執行緒模型。
 
-您應該建立 COM 對應分割類別。 當 ATL 具現化分割中時，它會建立`CComTearOffObject<CYourTearOffClass>`或`CComCachedTearOffObject<CYourTearOffClass>`。
+您應該為您的卸載類別建立 COM 對應。 當 ATL 具現化卸載時, 它會建立`CComTearOffObject<CYourTearOffClass>`或`CComCachedTearOffObject<CYourTearOffClass>`。
 
-例如，在呼叫器範例中，`CBeeper2`類別是分割類別和`CBeeper`類別是擁有者類別：
+例如, 在 BEEPER 範例中, `CBeeper2`類別是卸載類別, `CBeeper`而類別是擁有者類別:
 
 [!code-cpp[NVC_ATL_COM#43](../../atl/codesnippet/cpp/ccomtearoffobject-class_1.h)]
 
@@ -89,11 +89,11 @@ ATL 中兩個階段實作其 tear-off 介面 —`CComTearOffObjectBase`方法會
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="addref"></a>  CComTearOffObject::AddRef
+##  <a name="addref"></a>CComTearOffObject:: AddRef
 
-參考計數遞增`CComTearOffObject`由其中的物件。
+將`CComTearOffObject`物件的參考計數遞增一。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -101,9 +101,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>傳回值
 
-值，這個值可能有助於診斷和測試。
+可能有助於診斷和測試的值。
 
-##  <a name="ccomtearoffobject"></a>  CComTearOffObject::CComTearOffObject
+##  <a name="ccomtearoffobject"></a>CComTearOffObject::CComTearOffObject
 
 建構函式。
 
@@ -114,13 +114,13 @@ CComTearOffObject(void* pv);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-[in]將會轉換成指標的指標`CComObject<Owner>`物件。
+在將轉換成`CComObject<Owner>`物件指標的指標。
 
 ### <a name="remarks"></a>備註
 
-擁有者的參考計數遞增一。
+將擁有者的參考計數遞增一。
 
-##  <a name="dtor"></a>  CComTearOffObject:: ~ CComTearOffObject
+##  <a name="dtor"></a>CComTearOffObject:: ~ CComTearOffObject
 
 解構函式。
 
@@ -130,9 +130,9 @@ CComTearOffObject(void* pv);
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源、 呼叫 FinalRelease，並遞減模組鎖定計數。
+釋放所有配置的資源、呼叫 FinalRelease, 並遞減模組鎖定計數。
 
-##  <a name="ccomtearoffobjectbase"></a>  CComTearOffObject::CComTearOffObjectBase
+##  <a name="ccomtearoffobjectbase"></a>CComTearOffObject::CComTearOffObjectBase
 
 建構函式。
 
@@ -142,11 +142,11 @@ CComTearOffObjectBase();
 
 ### <a name="remarks"></a>備註
 
-初始化[m_pOwner](#m_powner)為 NULL 的成員。
+將[m_pOwner](#m_powner)成員初始化為 Null。
 
 ##  <a name="m_powner"></a>  CComTearOffObject::m_pOwner
 
-指標[CComObject](../../atl/reference/ccomobject-class.md)物件衍生自*擁有者*。
+衍生自*Owner*的[CComObject](../../atl/reference/ccomobject-class.md)物件指標。
 
 ```
 CComObject<Owner>* m_pOwner;
@@ -154,14 +154,14 @@ CComObject<Owner>* m_pOwner;
 
 ### <a name="parameters"></a>參數
 
-*Owner*<br/>
-[in]其分割所實作的類別。
+*主人*<br/>
+在正在執行卸載的類別。
 
 ### <a name="remarks"></a>備註
 
-在建構期間，滑鼠指標會初始化為 NULL。
+在結構化期間, 指標會初始化為 Null。
 
-##  <a name="queryinterface"></a>  CComTearOffObject::QueryInterface
+##  <a name="queryinterface"></a>CComTearOffObject:: QueryInterface
 
 擷取所要求介面的指標。
 
@@ -172,10 +172,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]所要求之介面的 IID。
+在所要求之介面的 IID。
 
 *ppvObject*<br/>
-[out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
+脫銷*Iid*所識別之介面指標的指標, 如果找不到介面, 則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -183,11 +183,11 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="remarks"></a>備註
 
-第一次查詢以取得分割類別上的介面。 如果介面不存在，查詢的擁有者物件上的介面。 要求的介面是否`IUnknown`，傳回`IUnknown`的擁有者。
+會先查詢您的卸載類別介面。 如果介面不存在, 就會查詢擁有者物件上的介面。 如果要求的介面是`IUnknown`, `IUnknown`會傳回擁有者的。
 
-##  <a name="release"></a>  CComTearOffObject::Release
+##  <a name="release"></a>CComTearOffObject:: Release
 
-遞減參考計數的其中一個，如果參考計數為零，會刪除`CComTearOffObject`。
+將參考計數遞減一, 如果參考計數為零, 則會刪除`CComTearOffObject`。
 
 ```
 STDMETHOD_ULONG Release();
@@ -195,9 +195,9 @@ STDMETHOD_ULONG Release();
 
 ### <a name="return-value"></a>傳回值
 
-在非偵錯組建中，一律會傳回零。 在偵錯組建中，傳回值，可能有助於診斷或測試。
+在非 debug 組建中, 一律會傳回零。 在 [偵錯工具] 組建中, 傳回可能有助於診斷或測試的值。
 
 ## <a name="see-also"></a>另請參閱
 
 [CComCachedTearOffObject 類別](../../atl/reference/ccomcachedtearoffobject-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

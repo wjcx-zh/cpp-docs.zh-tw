@@ -35,14 +35,14 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 889fedde263b9815597702f1e9d5b252f3998bdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18ba244bceb2deaf5ada78ae85aa8cab7058d51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364892"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499226"
 ---
-# <a name="vfprintf-vfprintfl-vfwprintf-vfwprintfl"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
+# <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 
 使用引數清單的指標，寫入格式化輸出。 這些函式已有更安全的版本可供使用，請參閱 [vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l](vfprintf-s-vfprintf-s-l-vfwprintf-s-vfwprintf-s-l.md)。
 
@@ -91,20 +91,20 @@ int _vfwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**vfprintf**並**vfwprintf**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果有任一*資料流*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+**vfprintf**和**vfwprintf**會傳回寫入的字元數, 不包括結束的 null 字元, 或如果發生輸出錯誤, 則傳回負數值。 如果*資料流程*或*格式*為 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化並寫入至指定的資料*資料流*。
+所有這些函式都會接受引數清單的指標, 然後格式化指定的資料, 並將其寫入*資料流程*。
 
-**vfwprintf**是寬字元版本**vfprintf**; 如果資料流以 ANSI 模式開啟兩個函式行為相同。 **vfprintf**目前不支援輸出至 UNICODE 資料流。
+**vfwprintf**是**vfprintf**的寬字元版本;如果資料流程是以 ANSI 模式開啟, 則這兩個函式的行為相同。 **vfprintf**目前不支援輸出至 UNICODE 資料流程。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -117,8 +117,8 @@ int _vfwprintf_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**vfprintf**, **_vfprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**vfwprintf**， **_vfwprintf_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
+|**vfprintf**、 **_vfprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vfwprintf**、 **_vfwprintf_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

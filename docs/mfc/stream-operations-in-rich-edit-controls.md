@@ -9,16 +9,16 @@ helpviewer_keywords:
 - stream operations in CRichEditCtrl
 - stream storage and CRichEditCtrl
 ms.assetid: 110b4684-1e76-4ca6-9ef0-5bc8b2d93c78
-ms.openlocfilehash: 04bf49371b3ab5eaaad2775b532d8d35bf990ce3
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 73277f59dc0ad4dfe21d481d0b893903ed407ea9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915283"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69512949"
 ---
 # <a name="stream-operations-in-rich-edit-controls"></a>Rich Edit 控制項中的資料流作業
 
-您可以使用資料流程, 將資料傳入或傳出 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 資料流程是由[EDITSTREAM](/windows/desktop/api/richedit/ns-richedit-editstream)結構所定義, 它會指定緩衝區和應用程式定義的回呼函式。
+您可以使用資料流程, 將資料傳入或傳出 rich edit 控制項 ([CRichEditCtrl](../mfc/reference/cricheditctrl-class.md))。 資料流程是由[EDITSTREAM](/windows/win32/api/richedit/ns-richedit-editstream)結構所定義, 它會指定緩衝區和應用程式定義的回呼函式。
 
 若要將資料讀入 rich edit 控制項 (也就是將中的資料串流), 請使用[StreamIn](../mfc/reference/cricheditctrl-class.md#streamin)成員函式。 控制項會重複呼叫應用程式定義的回呼函式，每一次呼叫都會將一部分的資料傳送至緩衝區。
 

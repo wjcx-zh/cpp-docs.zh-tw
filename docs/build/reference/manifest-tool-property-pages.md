@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: adc821370201eeb83b6c6b4b875e5e62b0fa523f
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68606436"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492692"
 ---
 # <a name="manifest-tool-property-pages"></a>資訊清單工具屬性頁
 
-使用這些頁面來指定[mt.exe](https://msdn.microsoft.com/library/aa375649)的一般選項。 這些頁面會在 [**專案** > **屬性** > 設定] [**屬性** > ] [**資訊清單工具**] 下找到。
+使用這些頁面來指定[mt.exe](/windows/win32/sbscs/mt-exe)的一般選項。 這些頁面會在 [**專案** > **屬性** > 設定] [**屬性** > ] [**資訊清單工具**] 下找到。
 
 ## <a name="general-property-page"></a>一般屬性頁
 
@@ -105,7 +105,7 @@ ms.locfileid: "68606436"
 
 ## <a name="isolated-com-property-page"></a>隔離的 COM 屬性頁
 
-如需有關隔離的 COM 的詳細資訊, 請[參閱[隔離的應用程式](/windows/desktop/SbsCs/isolated-applications)和如何:建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
+如需有關隔離的 COM 的詳細資訊, 請[參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如何:建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
 
 ###  <a name="type-library-file"></a>類型程式庫檔案
 

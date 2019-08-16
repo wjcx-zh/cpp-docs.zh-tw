@@ -13,19 +13,19 @@ helpviewer_keywords:
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-ms.openlocfilehash: 54c475e736425718e954b0e954ea2b327d938556
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 263f6826ac921d864dee646ef063c8b456b00af1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274915"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495720"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl 類別
 
-這個類別會實作`IUnknown`，並可讓用戶端來存取物件的屬性頁中的資訊。
+這個類別`IUnknown`會執行並允許用戶端存取物件屬性頁中的資訊。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -39,7 +39,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IPerPropertyBrowsingImpl`。
+衍生自`IPerPropertyBrowsingImpl`的類別。
 
 ## <a name="members"></a>成員
 
@@ -47,19 +47,19 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 |名稱|描述|
 |----------|-----------------|
-|[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|擷取字串，描述指定的屬性。|
-|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|擷取對應至指定的屬性可以接受的值的字串陣列。|
-|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|擷取變數，包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯的 DISPID `GetPredefinedStrings`。 ATL 實作會傳回 E_NOTIMPL。|
-|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|擷取指定的屬性相關聯的屬性頁 CLSID。|
+|[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|抓取描述指定屬性的字串。|
+|[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|抓取字串陣列, 其對應于指定屬性可接受的值。|
+|[IPerPropertyBrowsingImpl::GetPredefinedValue](#getpredefinedvalue)|抓取 VARIANT, 其中包含指定的 DISPID 所識別之屬性的值。 DISPID 與取自的字串名稱`GetPredefinedStrings`相關聯。 ATL 執行會傳回 E_NOTIMPL。|
+|[IPerPropertyBrowsingImpl::MapPropertyToPage](#mappropertytopage)|抓取與指定屬性相關聯之屬性頁的 CLSID。|
 
 ## <a name="remarks"></a>備註
 
-[IPerPropertyBrowsing](/windows/desktop/api/ocidl/nn-ocidl-iperpropertybrowsing)介面允許用戶端存取物件的屬性頁中的資訊。 類別`IPerPropertyBrowsingImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。
+[IPerPropertyBrowsing](/windows/win32/api/ocidl/nn-ocidl-iperpropertybrowsing)介面可讓用戶端存取物件屬性頁中的資訊。 類別`IPerPropertyBrowsingImpl`提供此介面的預設執行, 並藉`IUnknown`由將資訊傳送至偵錯工具組建中的傾印裝置來實現。
 
 > [!NOTE]
->  如果您使用 Microsoft Access 作為容器應用程式，您必須衍生您的類別，從`IPerPropertyBrowsingImpl`。 否則，存取將不會載入您的控制項。
+>  如果您使用 Microsoft Access 作為容器應用程式, 您必須從`IPerPropertyBrowsingImpl`衍生類別。 否則, Access 將不會載入您的控制項。
 
-**相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程,[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -69,11 +69,11 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlctl.h
+**標頭:** atlctl。h
 
-##  <a name="getdisplaystring"></a>  IPerPropertyBrowsingImpl::GetDisplayString
+##  <a name="getdisplaystring"></a>IPerPropertyBrowsingImpl::GetDisplayString
 
-擷取字串，描述指定的屬性。
+抓取描述指定屬性的字串。
 
 ```
 STDMETHOD(GetDisplayString)(
@@ -83,11 +83,11 @@ STDMETHOD(GetDisplayString)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPerPropertyBrowsing::GetDisplayString](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) Windows SDK 中。
+請參閱 Windows SDK 中的[IPerPropertyBrowsing:: GetDisplayString](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getdisplaystring) 。
 
-##  <a name="getpredefinedstrings"></a>  IPerPropertyBrowsingImpl::GetPredefinedStrings
+##  <a name="getpredefinedstrings"></a>IPerPropertyBrowsingImpl::GetPredefinedStrings
 
-填滿零個項目每個陣列。
+以零個專案填滿每個陣列。
 
 ```
 STDMETHOD(GetPredefinedStrings)(
@@ -98,15 +98,15 @@ STDMETHOD(GetPredefinedStrings)(
 
 ### <a name="return-value"></a>傳回值
 
-ATL 的實作[GetPredefinedValue](#getpredefinedvalue)傳回 E_NOTIMPL。
+ATL 的[GetPredefinedValue](#getpredefinedvalue)的執行會傳回 E_NOTIMPL。
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPerPropertyBrowsing::GetPredefinedStrings](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings) Windows SDK 中。
+請參閱 Windows SDK 中的[IPerPropertyBrowsing:: GetPredefinedStrings](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedstrings) 。
 
-##  <a name="getpredefinedvalue"></a>  IPerPropertyBrowsingImpl::GetPredefinedValue
+##  <a name="getpredefinedvalue"></a>IPerPropertyBrowsingImpl::GetPredefinedValue
 
-擷取變數，包含所指定的 DISPID 識別屬性的值。 從擷取的字串名稱是相關聯的 DISPID `GetPredefinedStrings`。
+抓取 VARIANT, 其中包含指定的 DISPID 所識別之屬性的值。 DISPID 與取自的字串名稱`GetPredefinedStrings`相關聯。
 
 ```
 STDMETHOD(GetPredefinedValue)(
@@ -121,13 +121,13 @@ STDMETHOD(GetPredefinedValue)(
 
 ### <a name="remarks"></a>備註
 
-ATL 的實作[GetPredefinedStrings](#getpredefinedstrings)會抓取沒有對應的字串。
+ATL 的[GetPredefinedStrings](#getpredefinedstrings)的執行會抓取沒有對應的字串。
 
-請參閱[IPerPropertyBrowsing::GetPredefinedValue](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue) Windows SDK 中。
+請參閱 Windows SDK 中的[IPerPropertyBrowsing:: GetPredefinedValue](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-getpredefinedvalue) 。
 
-##  <a name="mappropertytopage"></a>  IPerPropertyBrowsingImpl::MapPropertyToPage
+##  <a name="mappropertytopage"></a>IPerPropertyBrowsingImpl::MapPropertyToPage
 
-擷取與指定的屬性相關聯的屬性頁 CLSID。
+抓取與指定屬性相關聯之屬性頁的 CLSID。
 
 ```
 STDMETHOD(MapPropertyToPage)(
@@ -137,12 +137,12 @@ STDMETHOD(MapPropertyToPage)(
 
 ### <a name="remarks"></a>備註
 
-ATL 會使用物件的屬性對應，以取得此資訊。
+ATL 會使用物件的屬性對應來取得此資訊。
 
-請參閱[IPerPropertyBrowsing::MapPropertyToPage](/windows/desktop/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) Windows SDK 中。
+請參閱 Windows SDK 中的[IPerPropertyBrowsing:: MapPropertyToPage](/windows/win32/api/ocidl/nf-ocidl-iperpropertybrowsing-mappropertytopage) 。
 
 ## <a name="see-also"></a>另請參閱
 
 [IPropertyPageImpl 類別](../../atl/reference/ipropertypageimpl-class.md)<br/>
 [ISpecifyPropertyPagesImpl 類別](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

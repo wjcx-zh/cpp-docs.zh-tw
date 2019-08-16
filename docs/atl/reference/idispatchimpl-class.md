@@ -14,19 +14,19 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: bf6b416337c58f5e9b8a62dda841615412573666
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e9cb903742cdc31c1d9bba2c4aabbb0472407c1
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495954"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl 類別
 
-提供的預設實作`IDispatch`雙重介面的一部分。
+提供雙重介面`IDispatch`元件的預設實值。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -43,22 +43,22 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-[in]雙重介面。
+在雙重介面。
 
 *piid*<br/>
-[in]指向 IID *T*。
+在*T*之 IID 的指標。
 
 *plibid*<br/>
-[in]指標，包含介面的相關資訊的類型程式庫的 LIBID。 根據預設，會傳遞伺服器層級類型程式庫。
+在類型程式庫之 LIBID 的指標, 其中包含介面的相關資訊。 根據預設, 會傳遞伺服器層級類型程式庫。
 
 *wMajor*<br/>
-[in]型別程式庫主要版本。 根據預設，此值為 1。
+在類型程式庫的主要版本。 根據預設, 此值為1。
 
 *wMinor*<br/>
-[in]型別程式庫次要版本。 根據預設，此值為 0。
+在類型程式庫的次要版本。 根據預設, 此值為0。
 
 *tihclass*<br/>
-[in]用來管理的類型資訊的類別*T*。預設值為 `CComTypeInfoHolder`。
+在用來管理*T*之類型資訊的類別。預設值為 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
 
@@ -66,28 +66,28 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 |名稱|描述|
 |----------|-----------------|
-|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|建構函式。 呼叫`AddRef`管理雙重介面的型別資訊的受保護的成員變數上。 此解構函式會呼叫 `Release`。|
+|[IDispatchImpl::IDispatchImpl](#idispatchimpl)|建構函式。 在`AddRef`管理雙重介面之類型資訊的受保護成員變數上呼叫。 此解構函式會呼叫 `Release`。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[IDispatchImpl::GetIDsOfNames](#getidsofnames)|將一組名稱對應至一組對應的分派識別項 (Dispatch Identifier)。|
-|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|擷取的雙重介面的型別資訊。|
-|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|判斷是否有可用的型別資訊的雙重介面。|
-|[IDispatchImpl::Invoke](#invoke)|提供存取權的方法和雙重介面所公開的屬性。|
+|[IDispatchImpl::GetTypeInfo](#gettypeinfo)|抓取雙重介面的類型資訊。|
+|[IDispatchImpl::GetTypeInfoCount](#gettypeinfocount)|判斷雙重介面是否有可用的類型資訊。|
+|[IDispatchImpl::Invoke](#invoke)|提供雙重介面所公開之方法和屬性的存取權。|
 
 ## <a name="remarks"></a>備註
 
-`IDispatchImpl` 提供的預設實作`IDispatch`任何物件上的雙重介面的一部分。 雙重介面衍生自`IDispatch`，並使用只有 Automation 相容型別。 例如分配介面，雙重介面支援早期繫結和晚期繫結;不過，雙重介面也支援 vtable 繫結。
+`IDispatchImpl`為物件上任何雙重介面`IDispatch`的部分提供預設的執行。 雙重介面衍生自`IDispatch` , 並且只使用與 Automation 相容的類型。 就像分配介面一樣, 雙重介面支援早期繫結和晚期繫結;不過, 雙重介面也支援 vtable 系結。
 
-下列範例示範的典型實作`IDispatchImpl`。
+下列範例顯示的一般執行`IDispatchImpl`。
 
 [!code-cpp[NVC_ATL_COM#47](../../atl/codesnippet/cpp/idispatchimpl-class_1.h)]
 
-根據預設，`IDispatchImpl`類別查閱的類型資訊*T*在登錄中。 若要實作取消註冊的介面，您可以使用`IDispatchImpl`類別，而不使用預先定義的版本號碼來存取登錄。 如果您建立`IDispatchImpl`物件具有的值 0xFFFF *wMajor*和 0xFFFF 做為值*wMinor*，`IDispatchImpl`類別的.dll 檔案，而不是從擷取類型程式庫登錄中。
+根據預設, `IDispatchImpl`類別會在登錄中查閱*T*的類型資訊。 若要執行未註冊的介面, 您可以`IDispatchImpl`使用類別, 而不需要使用預先定義的版本號碼來存取登錄。 如果您建立`IDispatchImpl`的物件具有0xffff 做為*wMajor*的值, 且0xffff 為*wMinor*的值, 則`IDispatchImpl`類別會從 .dll 檔案 (而不是登錄) 抓取類型程式庫。
 
-`IDispatchImpl` 包含類型的靜態成員`CComTypeInfoHolder`管理雙重介面的型別資訊。 如果您有多個物件，實作相同的雙重介面，只有一個執行個體`CComTypeInfoHolder`用。
+`IDispatchImpl`包含類型`CComTypeInfoHolder`的靜態成員, 它會管理雙重介面的類型資訊。 如果您有多個物件執行相同的雙重介面, 則只會使用`CComTypeInfoHolder`一個的實例。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -97,9 +97,9 @@ class ATL_NO_VTABLE IDispatchImpl : public T
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="getidsofnames"></a>  IDispatchImpl::GetIDsOfNames
+##  <a name="getidsofnames"></a>IDispatchImpl:: GetIDsOfNames
 
 將一組名稱對應至一組對應的分派識別項 (Dispatch Identifier)。
 
@@ -114,11 +114,11 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK 中。
+請參閱 Windows SDK 中的[IDispatch:: GetIDsOfNames](/windows/win32/api/oaidl/nf-oaidl-idispatch-getidsofnames) 。
 
-##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
+##  <a name="gettypeinfo"></a>IDispatchImpl:: GetTypeInfo
 
-擷取的雙重介面的型別資訊。
+抓取雙重介面的類型資訊。
 
 ```
 STDMETHOD(GetTypeInfo)(
@@ -129,11 +129,11 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IDispatch::GetTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo) Windows SDK 中。
+請參閱 Windows SDK 中的[IDispatch:: GetTypeInfo](/windows/win32/api/oaidl/nf-oaidl-idispatch-gettypeinfo) 。
 
-##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
+##  <a name="gettypeinfocount"></a>IDispatchImpl::GetTypeInfoCount
 
-判斷是否有可用的型別資訊的雙重介面。
+判斷雙重介面是否有可用的類型資訊。
 
 ```
 STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
@@ -141,19 +141,19 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>備註
 
-請參閱`IDispatch::GetTypeInfoCount`Windows SDK 中。
+請`IDispatch::GetTypeInfoCount`參閱 Windows SDK 中的。
 
-##  <a name="idispatchimpl"></a>  IDispatchImpl::IDispatchImpl
+##  <a name="idispatchimpl"></a>IDispatchImpl::IDispatchImpl
 
-建構函式。 呼叫`AddRef`管理雙重介面的型別資訊的受保護的成員變數上。 此解構函式會呼叫 `Release`。
+建構函式。 在`AddRef`管理雙重介面之類型資訊的受保護成員變數上呼叫。 此解構函式會呼叫 `Release`。
 
 ```
 IDispatchImpl();
 ```
 
-##  <a name="invoke"></a>  IDispatchImpl::Invoke
+##  <a name="invoke"></a>IDispatchImpl:: Invoke
 
-提供存取權的方法和雙重介面所公開的屬性。
+提供雙重介面所公開之方法和屬性的存取權。
 
 ```
 STDMETHOD(Invoke)(
@@ -169,8 +169,8 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。
+請參閱 Windows SDK 中的[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

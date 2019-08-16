@@ -1,17 +1,17 @@
 ---
-title: 分配介面 (C++ COM 屬性)
+title: 分配介面C++ (COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dispinterface
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6fd5010dc20d03c518206d81919e3beafbcaa9a9
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346295"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501618"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -29,7 +29,7 @@ ms.locfileid: "64346295"
 
 除非您指定基底類別，否則分派介面將衍生自 `IDispatch`。 您必須指定分派介面成員的 [id](id.md) 。
 
-MIDL 文件中 [dispinterface](/windows/desktop/Midl/dispinterface) 的用法範例：
+MIDL 文件中 [dispinterface](/windows/win32/Midl/dispinterface) 的用法範例：
 
 ```cpp
 dispinterface helloPro
@@ -50,7 +50,7 @@ dispinterface helloPro
 |-|-|
 |**適用於**|**interface**|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

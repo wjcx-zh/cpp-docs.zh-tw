@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GetActiveObject method [C++]
 ms.assetid: 2fa94853-0410-4620-91f2-136dae923f9f
-ms.openlocfilehash: 84e43de9c40baa3c596c68ed7739471c059cbac7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13a42878392f63096cdfcb405f3f91cc0efe451
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154847"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498886"
 ---
-# <a name="comptrtgetactiveobject"></a>_com_ptr_t::GetActiveObject
+# <a name="_com_ptr_tgetactiveobject"></a>_com_ptr_t::GetActiveObject
 
 **Microsoft 專屬**
 
-將附加至現有的執行個體的物件的給定`CLSID`或`ProgID`。
+使用指定的`CLSID`或`ProgID`, 附加至物件的現有實例。
 
 ## <a name="syntax"></a>語法
 
@@ -36,23 +36,23 @@ HRESULT GetActiveObject(
 #### <a name="parameters"></a>參數
 
 *rclsid*<br/>
-`CLSID`的物件。
+物件`CLSID`的。
 
 *clsidString*<br/>
-Unicode 字串保存`CLSID`(開頭為"**{**") 或`ProgID`。
+保存`CLSID` (開頭為 " **{** ") 或的`ProgID`Unicode 字串。
 
 *clsidStringA*<br/>
-多位元組的字串，並使用保留的 ANSI 字碼頁`CLSID`(開頭為"**{**") 或`ProgID`。
+使用 ANSI 字碼頁的多位元組字元串, 其中包含`CLSID` (以 " **{** `ProgID`" 為開頭) 或。
 
 ## <a name="remarks"></a>備註
 
-這些成員函式呼叫**GetActiveObject**擷取已向 OLE 執行物件的指標，然後查詢這個智慧型指標的介面類型。 然後產生的指標就會封裝在這個 `_com_ptr_t` 物件內。 `Release` 呼叫以遞減先前封裝之指標的參考計數。 此常式會傳回指出成功或失敗的 HRESULT。
+這些成員函式會呼叫**GetActiveObject** , 以取得已向 OLE 註冊之執行中物件的指標, 然後查詢此智慧型指標的介面類別型。 然後產生的指標就會封裝在這個 `_com_ptr_t` 物件內。 `Release`呼叫以遞減先前封裝之指標的參考計數。 此常式會傳回 HRESULT 以表示成功或失敗。
 
-- **GetActiveObject (**`rclsid`**)** 附加至現有的執行個體的指定物件`CLSID`。
+- **GetActiveObject (** `rclsid` **)** 會附加至指定`CLSID`之物件的現有實例。
 
-- **GetActiveObject (**`clsidString`**)** 附加至現有的執行個體的物件指定的 Unicode 字串保存`CLSID`(開頭為"**{**") 或`ProgID`.
+- **GetActiveObject (** `clsidString` **)** 會附加至物件的現有實例, 指定的 Unicode `CLSID`字串會保留 ( `ProgID`開頭為 " **{** ") 或。
 
-- **GetActiveObject (**`clsidStringA`**)** 附加至現有的執行個體的物件，指定保留的多位元組字元字串`CLSID`(開頭為"**{**") 或`ProgID`. 呼叫[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)，它會假設字串位於 ANSI 字碼頁，而不是 OEM 字碼頁。
+- **GetActiveObject (** `clsidStringA` **)** 會附加至物件的現有實例, 指定的多位元組字元`CLSID`字串會保留 ( `ProgID`開頭為 " **{** ") 或。 呼叫[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), 它會假設字串位於 ANSI 字碼頁, 而不是 OEM 字碼頁。
 
 **結束 Microsoft 專屬**
 

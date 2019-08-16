@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182208"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506450"
 ---
 # <a name="cfontholder-class"></a>CFontHolder 類別
 
@@ -55,26 +55,26 @@ class CFontHolder
 
 |名稱|描述|
 |----------|-----------------|
-|[CFontHolder::GetDisplayString](#getdisplaystring)|擷取容器的屬性瀏覽器中顯示的字串。|
+|[CFontHolder::GetDisplayString](#getdisplaystring)|抓取容器的屬性瀏覽器中顯示的字串。|
 |[CFontHolder::GetFontDispatch](#getfontdispatch)|傳回字型的`IDispatch`介面。|
-|[CFontHolder::GetFontHandle](#getfonthandle)|傳回 Windows 字型的控制代碼。|
-|[CFontHolder::InitializeFont](#initializefont)|初始化`CFontHolder`物件。|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|擷取相關的字型資訊。|
-|[CFontHolder::ReleaseFont](#releasefont)|中斷`CFontHolder`物件從`IFont`和`IFontNotification`介面。|
-|[CFontHolder::Select](#select)|選取字型資源放入裝置內容中。|
-|[CFontHolder::SetFont](#setfont)|連接`CFontHolder`物件至`IFont`介面。|
+|[CFontHolder::GetFontHandle](#getfonthandle)|傳回 Windows 字型的控制碼。|
+|[CFontHolder::InitializeFont](#initializefont)|`CFontHolder`初始化物件。|
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|抓取相關字型的資訊。|
+|[CFontHolder::ReleaseFont](#releasefont)|`CFontHolder`中斷物件`IFont`與和`IFontNotification`介面的連接。|
+|[CFontHolder::Select](#select)|在裝置內容中選取字型資源。|
+|[CFontHolder::SetFont](#setfont)|將物件連接至`IFont`介面。 `CFontHolder`|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|指標`CFontHolder`物件的`IFont`介面。|
+|[CFontHolder::m_pFont](#m_pfont)|`CFontHolder`物件介面的指標。`IFont`|
 
 ## <a name="remarks"></a>備註
 
-`CFontHolder` 沒有基底類別。
+`CFontHolder`沒有基類。
 
-使用此類別來實作自訂的字型屬性，為您的控制項。 如需建立這類屬性的詳細資訊，請參閱文章[ActiveX 控制項：使用字型](../../mfc/mfc-activex-controls-using-fonts.md)。
+使用此類別來為您的控制項執行自訂字型屬性。 如需建立這類屬性的相關資訊, [請參閱 ActiveX 控制項:使用字型](../../mfc/mfc-activex-controls-using-fonts.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -82,9 +82,9 @@ class CFontHolder
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxctl.h
+**標頭:** afxctl.h。h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+##  <a name="cfontholder"></a>CFontHolder::CFontHolder
 
 建構 `CFontHolder` 物件。
 
@@ -95,15 +95,15 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 ### <a name="parameters"></a>參數
 
 *pNotify*<br/>
-字型的指標`IPropertyNotifySink`介面。
+字型`IPropertyNotifySink`介面的指標。
 
 ### <a name="remarks"></a>備註
 
-您必須呼叫`InitializeFont`使用之前，先初始化產生的物件。
+您必須先`InitializeFont`呼叫來初始化產生的物件, 才能使用它。
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+##  <a name="getdisplaystring"></a>CFontHolder::GetDisplayString
 
-擷取可以容器的屬性瀏覽器中顯示的字串。
+抓取可在容器的屬性瀏覽器中顯示的字串。
 
 ```
 BOOL GetDisplayString(CString& strValue);
@@ -112,15 +112,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>參數
 
 *strValue*<br/>
-若要參考[CString](../../atl-mfc-shared/reference/cstringt-class.md)要保存的顯示字串。
+用來存放顯示字串之[CString](../../atl-mfc-shared/reference/cstringt-class.md)的參考。
 
 ### <a name="return-value"></a>傳回值
 
-已成功擷取的字串; 如果為非零否則為 0。
+如果成功取出字串, 則為非零;否則為0。
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+##  <a name="getfontdispatch"></a>CFontHolder::GetFontDispatch
 
-呼叫此函式可擷取字型的分派介面的指標。
+呼叫此函式可抓取字型分派介面的指標。
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>傳回值
 
-指標`CFontHolder`物件的`IFontDisp`介面。 請注意，此函式，呼叫`GetFontDispatch`必須呼叫`IUnknown::Release`當它完成時，此介面指標上。
+`CFontHolder`物件介面的指標。`IFontDisp` 請注意, 呼叫`GetFontDispatch`的函式必須在此介面指標上呼叫`IUnknown::Release` , 才能使用它。
 
 ### <a name="remarks"></a>備註
 
-呼叫`InitializeFont`再呼叫`GetFontDispatch`。
+在`InitializeFont` 呼叫`GetFontDispatch`之前呼叫。
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+##  <a name="getfonthandle"></a>CFontHolder::GetFontHandle
 
-呼叫此函式可取得 Windows 字型的控制代碼。
+呼叫此函式可取得 Windows 字型的控制碼。
 
 ```
 HFONT GetFontHandle();
@@ -149,26 +149,26 @@ HFONT GetFontHandle(
 ### <a name="parameters"></a>參數
 
 *cyLogical*<br/>
-以邏輯單位，在其中繪製控制項的矩形的高度。
+繪製控制項之矩形的高度 (以邏輯單位表示)。
 
 *cyHimetric*<br/>
-MM_HIMETRIC 單位，控制項的高度。
+控制項的高度 (以 MM_HIMETRIC 為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-字型物件控制代碼否則為 NULL。
+字型物件的控制碼;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-比率*cyLogical*並*cyHimetric*用來計算適當的顯示大小，以邏輯單位，如 MM_HIMETRIC 單位表示字型的點數大小：
+*CyLogical*和*cyHimetric*的比率是用來針對以 MM_HIMETRIC 單位表示的字型點大小, 計算適當的顯示大小 (以邏輯單位):
 
-顯示大小 = ( *cyLogical* / *cyHimetric*) X 字型大小
+顯示大小 = ( *cyLogical*  /  *cyHimetric*) X 字型大小
 
-不含任何參數的版本將控制代碼傳回螢幕的正確調整大小的字型。
+沒有參數的版本, 會針對螢幕正確地傳回字型大小的控制碼。
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+##  <a name="initializefont"></a>CFontHolder::InitializeFont
 
-初始化`CFontHolder`物件。
+`CFontHolder`初始化物件。
 
 ```
 void InitializeFont(
@@ -179,30 +179,30 @@ void InitializeFont(
 ### <a name="parameters"></a>參數
 
 *pFontDesc*<br/>
-字型描述結構的指標 ( [FONTDESC](/windows/desktop/api/olectl/ns-olectl-tagfontdesc))，指定字型的特性。
+字型描述結構 ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)) 的指標, 指定字型的特性。
 
 *pFontDispAmbient*<br/>
-容器的環境字型屬性的指標。
+容器之環境字型屬性的指標。
 
 ### <a name="remarks"></a>備註
 
-如果*pFontDispAmbient*不是 NULL，`CFontHolder`物件所連接的複製品`IFont`容器的環境字型屬性所使用的介面。
+如果*pFontDispAmbient*不是 Null, `CFontHolder`物件就會連接到容器的環境字型屬性所`IFont`使用之介面的複製。
 
-如果*pFontDispAmbient*是 NULL，新的字型物件會建立從所指向的字型描述*pFontDesc*或者，如果*pFontDesc*從預設值是 NULL，描述。
+如果*pFontDispAmbient*為 Null, 則會從*pFontDesc*所指向的字型描述建立新的字型物件, 或從預設的描述中*pFontDesc*為 Null。
 
-呼叫此函式之後建構`CFontHolder`物件。
+在建立`CFontHolder`物件之後, 呼叫這個函式。
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+##  <a name="m_pfont"></a>CFontHolder::m_pFont
 
-指標`CFontHolder`物件的`IFont`介面。
+`CFontHolder`物件介面的指標。`IFont`
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+##  <a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics
 
-擷取資訊所代表的實體字型`CFontHolder`物件。
+抓取`CFontHolder`物件所代表之實體字型的資訊。
 
 ```
 void QueryTextMetrics(LPTEXTMETRIC lptm);
@@ -211,19 +211,19 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 ### <a name="parameters"></a>參數
 
 *lptm*<br/>
-指標[TEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-tagtextmetrica)接收資訊的結構。
+將接收資訊之[TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw)結構的指標。
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+##  <a name="releasefont"></a>CFontHolder::ReleaseFont
 
-此函式中斷`CFontHolder`物件從其`IFont`介面。
+此函式會`CFontHolder`中斷物件與其`IFont`介面的連接。
 
 ```
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+##  <a name="select"></a>CFontHolder:: Select
 
-呼叫此函式以指定的裝置內容至選取控制項的字型。
+呼叫此函式可在指定的裝置內容中選取您的控制項字型。
 
 ```
 CFont* Select(
@@ -235,25 +235,25 @@ CFont* Select(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-在其中選取字型的裝置內容。
+要在其中選取字型的裝置內容。
 
 *cyLogical*<br/>
-以邏輯單位，在其中繪製控制項的矩形的高度。
+繪製控制項之矩形的高度 (以邏輯單位表示)。
 
 *cyHimetric*<br/>
-MM_HIMETRIC 單位，控制項的高度。
+控制項的高度 (以 MM_HIMETRIC 為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-已取代為字型的指標。
+要被取代之字型的指標。
 
 ### <a name="remarks"></a>備註
 
-請參閱[GetFontHandle](#getfonthandle)的討論*cyLogical*並*cyHimetric*參數。
+如需*cyLogical*和*cyHimetric*參數的討論, 請參閱[GetFontHandle](#getfonthandle) 。
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+##  <a name="setfont"></a>CFontHolder::SetFont
 
-釋放任何現有的字型，並連接`CFontHolder`物件至`IFont`介面。
+釋放任何現有的字型, 並`CFontHolder`將物件連接`IFont`至介面。
 
 ```
 void SetFont(LPFONT pNewFont);
@@ -262,7 +262,7 @@ void SetFont(LPFONT pNewFont);
 ### <a name="parameters"></a>參數
 
 *pNewFont*<br/>
-新的指標`IFont`介面。
+新`IFont`介面的指標。
 
 ## <a name="see-also"></a>另請參閱
 

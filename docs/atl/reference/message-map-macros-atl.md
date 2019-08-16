@@ -1,5 +1,5 @@
 ---
-title: 訊息對應巨集 (ATL)
+title: 訊息對應宏 (ATL)
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::ALT_MSG_MAP
@@ -37,57 +37,57 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42fdc7a3f09568b641229e897a2a493994a7ba8a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197428"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495361"
 ---
-# <a name="message-map-macros-atl"></a>訊息對應巨集 (ATL)
+# <a name="message-map-macros-atl"></a>訊息對應宏 (ATL)
 
-這些巨集會定義訊息對應 」 和 「 項目。
+這些宏會定義訊息對應和專案。
 
 |||
 |-|-|
 |[ALT_MSG_MAP](#alt_msg_map)|標記替代訊息對應的開頭。|
 |[BEGIN_MSG_MAP](#begin_msg_map)|標記預設訊息對應的開頭。|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|鏈結至替代的訊息對應中的基底類別。|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|鏈結至替代的訊息對應中的類別資料成員。|
-|[CHAIN_MSG_MAP](#chain_msg_map)|預設訊息中對應的基底類別鏈結。|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|鏈結至另一個類別，在執行階段中的訊息對應。|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|預設訊息中對應的類別資料成員的鏈結。|
-|[COMMAND_CODE_HANDLER](#command_code_handler)|對應的 WM_COMMAND 訊息處理常式函式，以通知程式碼。|
-|[COMMAND_HANDLER](#command_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和功能表項目、 控制項或加速器的識別碼。|
-|[COMMAND_ID_HANDLER](#command_id_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據識別項的功能表項目、 控制項或加速器。|
-|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據連續控制識別項的範圍。|
-|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|實作空白的訊息對應。|
-|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|提供反映的訊息，否則為未處理的預設處理常式。|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|連結至基類中的替代訊息對應。|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|連結至類別的資料成員中的替代訊息對應。|
+|[CHAIN_MSG_MAP](#chain_msg_map)|連結至基類中的預設訊息對應。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|在執行時間, 將連結至另一個類別中的訊息對應。|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|連結至類別的資料成員中的預設訊息對應。|
+|[COMMAND_CODE_HANDLER](#command_code_handler)|根據通知碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_HANDLER](#command_handler)|根據通知碼和功能表項目、控制項或快速鍵的識別碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_ID_HANDLER](#command_id_handler)|根據功能表項目、控制項或快速鍵的識別碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|根據連續的控制項識別碼範圍, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|執行空的訊息對應。|
+|[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|針對不是以其他方式處理的反映訊息, 提供預設的處理常式。|
 |[END_MSG_MAP](#end_msg_map)|標記訊息對應的結尾。|
-|[FORWARD_NOTIFICATIONS](#forward_notifications)|將轉送通知訊息給父視窗。|
+|[FORWARD_NOTIFICATIONS](#forward_notifications)|將通知訊息轉送到父視窗。|
 |[MESSAGE_HANDLER](#message_handler)|將 Windows 訊息對應至處理常式函式。|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|將連續的 Windows 訊息對應至處理常式函式。|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|對應處理常式函式，通知程式碼為基礎的 WM_NOTIFY 訊息。|
-|[NOTIFY_HANDLER](#notify_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據通知程式碼和控制項識別項。|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據的控制項識別項。|
-|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據連續控制識別項的範圍。|
-|[REFLECT_NOTIFICATIONS](#reflect_notifications)|會反映回傳送它們的視窗通知訊息。|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，以通知程式碼。|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和功能表項目、 控制項或加速器的識別碼。|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據識別項的功能表項目、 控制項或加速器。|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據連續控制識別項的範圍。|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，以通知程式碼。|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和控制項識別項。|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據的控制項識別項。|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據連續控制識別項的範圍。|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|將連續的 Windows 訊息範圍對應至處理常式函式。|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|根據通知碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_HANDLER](#notify_handler)|根據通知碼和控制項識別碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|根據控制項識別碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|根據連續的控制項識別碼範圍, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECT_NOTIFICATIONS](#reflect_notifications)|將通知訊息反映回傳送給它們的視窗。|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|根據通知碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|根據通知碼和功能表項目、控制項或快速鍵的識別碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|根據功能表項目、控制項或快速鍵的識別碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|根據連續的控制項識別碼範圍, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|根據通知碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|根據通知碼和控制項識別碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|根據控制項識別碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|根據連續的控制項識別碼範圍, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -100,33 +100,33 @@ ALT_MSG_MAP(msgMapID)
 ### <a name="parameters"></a>參數
 
 *msgMapID*<br/>
-[in]訊息對應識別項。
+在訊息對應識別碼。
 
 ### <a name="remarks"></a>備註
 
-ATL 識別數字的每個訊息對應。 預設訊息對應 （BEGIN_MSG_MAP 巨集宣告） 是由 0 識別。 替代的訊息對應由*msgMapID*。
+ATL 會以數位來識別每個訊息對應。 預設的訊息對應 (使用 BEGIN_MSG_MAP 宏宣告) 是由0所識別。 替代訊息對應是由*msgMapID*所識別。
 
-訊息對應用來處理訊息傳送至視窗。 例如， [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)可讓您指定的識別項的訊息對應中包含的物件。 [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc)然後會使用此訊息對應將導向包含的視窗的訊息至適當的處理常式函式或另一個訊息對應。 如需宣告處理常式的函式的巨集的清單，請參閱 < [BEGIN_MSG_MAP](#begin_msg_map)。
+訊息對應用來處理傳送至視窗的訊息。 例如, [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)可讓您在包含物件中指定訊息對應的識別碼。 [CContainedWindow:: WindowProc](ccontainedwindowt-class.md#windowproc)接著會使用此訊息對應, 將所包含視窗的訊息導向至適當的處理常式函式或另一個訊息對應。 如需宣告處理常式函式的宏清單, 請參閱[BEGIN_MSG_MAP](#begin_msg_map)。
 
-一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告替代的後續訊息對應。
+一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以宣告後續的替代訊息對應。
 
-[END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 請注意，總是 BEGIN_MSG_MAP 和 END_MSG_MAP 只有一個執行個體。
+[END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 請注意, 一律只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
-下列範例會顯示預設訊息對應以及每一個都包含一個處理常式函式的一個替代的訊息對應：
+下列範例會顯示預設的訊息對應和一個替代訊息對應, 每個都包含一個處理函式:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-下一個範例顯示兩個替代的訊息對應。 預設訊息對應是空的。
+下一個範例會顯示兩個替代訊息對應。 預設的訊息對應是空的。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
@@ -139,77 +139,77 @@ BEGIN_MSG_MAP(theClass)
 ### <a name="parameters"></a>參數
 
 *theClass*<br/>
-[in]包含訊息對應的類別名稱。
+在包含訊息對應的類別名稱。
 
 ### <a name="remarks"></a>備註
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)會使用預設的訊息對應來處理訊息傳送至視窗。 訊息對應會將導向至適當的處理常式函式或另一個訊息對應的訊息。
+[CWindowImpl:: WindowProc](cwindowimpl-class.md#windowproc)會使用預設的訊息對應來處理傳送至視窗的訊息。 訊息對應會將訊息導向至適當的處理常式函式或另一個訊息對應。
 
-下列巨集對應至處理常式函式的訊息。 此函式必須定義於*theClass*。
+下列宏會將訊息對應至處理常式函式。 此函式必須定義在*theClass*中。
 
 |巨集|描述|
 |-----------|-----------------|
 |[MESSAGE_HANDLER](#message_handler)|將 Windows 訊息對應至處理常式函式。|
-|[MESSAGE_RANGE_HANDLER](#message_range_handler)|將連續的 Windows 訊息對應至處理常式函式。|
-|[COMMAND_HANDLER](#command_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和功能表項目、 控制項或加速器的識別碼。|
-|[COMMAND_ID_HANDLER](#command_id_handler)|對應的 WM_COMMAND 訊息處理常式函式，根據識別項的功能表項目、 控制項或加速器。|
-|[COMMAND_CODE_HANDLER](#command_handler)|對應的 WM_COMMAND 訊息處理常式函式，以通知程式碼。|
-|[COMMAND_RANGE_HANDLER](#command_range_handler)|對應連續 WM_COMMAND 訊息處理常式函式，根據識別項的功能表項目、 控制項或加速器。|
-|[NOTIFY_HANDLER](#notify_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據通知程式碼和控制項識別項。|
-|[NOTIFY_ID_HANDLER](#notify_id_handler)|對應的 WM_NOTIFY 訊息處理常式函式，根據的控制項識別項。|
-|[NOTIFY_CODE_HANDLER](#notify_code_handler)|對應處理常式函式，通知程式碼為基礎的 WM_NOTIFY 訊息。|
-|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|將連續的 WM_NOTIFY 訊息對應處理常式函式，根據的控制項識別項。|
+|[MESSAGE_RANGE_HANDLER](#message_range_handler)|將連續的 Windows 訊息範圍對應至處理常式函式。|
+|[COMMAND_HANDLER](#command_handler)|根據通知碼和功能表項目、控制項或快速鍵的識別碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_ID_HANDLER](#command_id_handler)|根據功能表項目、控制項或快速鍵的識別碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_CODE_HANDLER](#command_handler)|根據通知碼, 將 WM_COMMAND 訊息對應至處理常式函式。|
+|[COMMAND_RANGE_HANDLER](#command_range_handler)|根據功能表項目、控制項或快速鍵的識別碼, 將 WM_COMMAND 訊息的連續範圍對應至處理常式函式。|
+|[NOTIFY_HANDLER](#notify_handler)|根據通知碼和控制項識別碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_ID_HANDLER](#notify_id_handler)|根據控制項識別碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_CODE_HANDLER](#notify_code_handler)|根據通知碼, 將 WM_NOTIFY 訊息對應至處理常式函式。|
+|[NOTIFY_RANGE_HANDLER](#notify_range_handler)|根據控制項識別碼, 將連續的 WM_NOTIFY 訊息範圍對應至處理常式函式。|
 
-下列巨集直接加入另一個訊息對應的訊息。 此程序稱為 「 鏈結 」。
-
-|巨集|描述|
-|-----------|-----------------|
-|[CHAIN_MSG_MAP](#chain_msg_map)|預設訊息中對應的基底類別鏈結。|
-|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|預設訊息中對應的類別資料成員的鏈結。|
-|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|鏈結至替代的訊息對應中的基底類別。|
-|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|鏈結至替代的訊息對應中的類別資料成員。|
-|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|鏈結至另一個類別，在執行階段中的預設訊息對應。|
-
-下列巨集直接從父視窗的 「 反映 」 訊息。 例如，控制項通常會傳送通知訊息至其父視窗，如處理，但父視窗可反映出控制項的訊息。
+下列宏會將訊息導向至另一個訊息對應。 此程式稱為「連結」。
 
 |巨集|描述|
 |-----------|-----------------|
-|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和功能表項目、 控制項或加速器的識別碼。|
-|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據識別項的功能表項目、 控制項或加速器。|
-|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，以通知程式碼。|
-|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據連續控制識別項的範圍。|
-|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|對應反映的 WM_COMMAND 訊息處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
-|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和控制項識別項。|
-|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據的控制項識別項。|
-|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，以通知程式碼。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據連續控制識別項的範圍。|
-|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|將反映的 WM_NOTIFY 訊息對應處理常式函式，根據通知程式碼和連續範圍的控制識別項。|
+|[CHAIN_MSG_MAP](#chain_msg_map)|連結至基類中的預設訊息對應。|
+|[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|連結至類別的資料成員中的預設訊息對應。|
+|[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|連結至基類中的替代訊息對應。|
+|[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|連結至類別的資料成員中的替代訊息對應。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|在執行時間, 將連結至另一個類別中的預設訊息對應。|
+
+下列宏會從父視窗直接「反映」訊息。 例如, 控制項通常會將通知訊息傳送至其父視窗以進行處理, 但是父視窗可以將訊息反映回控制項。
+
+|巨集|說明|
+|-----------|-----------------|
+|[REFLECTED_COMMAND_HANDLER](#reflected_command_handler)|根據通知碼和功能表項目、控制項或快速鍵的識別碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_ID_HANDLER](#reflected_command_id_handler)|根據功能表項目、控制項或快速鍵的識別碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_CODE_HANDLER](#reflected_command_code_handler)|根據通知碼, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_RANGE_HANDLER](#reflected_command_range_handler)|根據連續的控制項識別碼範圍, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_COMMAND_RANGE_CODE_HANDLER](#reflected_command_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將反映的 WM_COMMAND 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|根據通知碼和控制項識別碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|根據控制項識別碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_CODE_HANDLER](#reflected_notify_code_handler)|根據通知碼, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|根據連續的控制項識別碼範圍, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
+|[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|根據通知碼和連續的控制項識別碼範圍, 將反映的 WM_NOTIFY 訊息對應至處理常式函式。|
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#102](../../atl/codesnippet/cpp/message-map-macros-atl_3.h)]
 
-當`CMyExtWindow`物件收到 WM_PAINT 訊息時，訊息導向到`CMyExtWindow::OnPaint`的實際處理。 如果`OnPaint`指出訊息需要進一步處理，則訊息會接著被導向至預設的訊息對應中`CMyBaseWindow`。
+當物件接收到 WM_PAINT 訊息時, 會將訊息導向至`CMyExtWindow::OnPaint`以進行實際處理。 `CMyExtWindow` 如果`OnPaint`表示訊息需要進一步處理, 則會將訊息導向至中`CMyBaseWindow`的預設訊息對應。
 
-除了預設訊息對應中，您可以定義具有替代訊息對應[ALT_MSG_MAP](#alt_msg_map)。 一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告替代的後續訊息對應。 下列範例會顯示預設訊息對應以及每一個都包含一個處理常式函式的一個替代的訊息對應：
+除了預設的訊息對應以外, 您還可以使用[ALT_MSG_MAP](#alt_msg_map)來定義替代訊息對應。 一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以宣告後續的替代訊息對應。 下列範例會顯示預設的訊息對應和一個替代訊息對應, 每個都包含一個處理函式:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-下一個範例顯示兩個替代的訊息對應。 預設訊息對應是空的。
+下一個範例會顯示兩個替代訊息對應。 預設的訊息對應是空的。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-[END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 請注意，總是 BEGIN_MSG_MAP 和 END_MSG_MAP 只有一個執行個體。
+[END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 請注意, 一律只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="chain_msg_map_alt"></a>  CHAIN_MSG_MAP_ALT
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
@@ -218,27 +218,27 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 ### <a name="parameters"></a>參數
 
 *theChainClass*<br/>
-[in]包含訊息對應的基底類別名稱。
+在包含訊息對應之基類的名稱。
 
 *msgMapID*<br/>
-[in]訊息對應識別項。
+在訊息對應識別碼。
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP_ALT 將基底類別中導向至替代的訊息對應的訊息。 您也必須宣告與此替代訊息對應[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要將基底類別的預設訊息對應的訊息 (使用宣告[BEGIN_MSG_MAP](#begin_msg_map))，使用 CHAIN_MSG_MAP。 如需範例，請參閱[CHAIN_MSG_MAP](#chain_msg_map)。
+CHAIN_MSG_MAP_ALT 會將訊息導向基類中的替代訊息對應。 您必須已經使用[ALT_MSG_MAP (msgMapID)](#alt_msg_map)宣告此替代訊息對應。 若要將訊息導向至基類的預設訊息對應 (以[BEGIN_MSG_MAP](#begin_msg_map)宣告), 請使用 CHAIN_MSG_MAP。 如需範例, 請參閱[CHAIN_MSG_MAP](#chain_msg_map)。
 
 > [!NOTE]
->  一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以使用 ALT_MSG_MAP 來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="chain_msg_map_alt_member"></a>  CHAIN_MSG_MAP_ALT_MEMBER
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
@@ -247,27 +247,27 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 ### <a name="parameters"></a>參數
 
 *theChainMember*<br/>
-[in]包含訊息對應的資料成員名稱。
+在包含訊息對應的資料成員名稱。
 
 *msgMapID*<br/>
-[in]訊息對應識別項。
+在訊息對應識別碼。
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP_ALT_MEMBER 指示訊息至替代的訊息對應中的資料成員。 您也必須宣告與此替代訊息對應[ALT_MSG_MAP(msgMapID)](#alt_msg_map)。 若要將資料成員的預設訊息對應的訊息 (使用宣告[BEGIN_MSG_MAP](#begin_msg_map))，使用 CHAIN_MSG_MAP_MEMBER。 如需範例，請參閱[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)。
+CHAIN_MSG_MAP_ALT_MEMBER 會將訊息導向至資料成員中的替代訊息對應。 您必須已經使用[ALT_MSG_MAP (msgMapID)](#alt_msg_map)宣告此替代訊息對應。 若要將訊息導向至資料成員的預設訊息對應 (使用[BEGIN_MSG_MAP](#begin_msg_map)宣告), 請使用 CHAIN_MSG_MAP_MEMBER。 如需範例, 請參閱[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)。
 
 > [!NOTE]
->  一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以使用 ALT_MSG_MAP 來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="chain_msg_map"></a>  CHAIN_MSG_MAP
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 CHAIN_MSG_MAP(theChainClass)
@@ -276,36 +276,36 @@ CHAIN_MSG_MAP(theChainClass)
 ### <a name="parameters"></a>參數
 
 *theChainClass*<br/>
-[in]包含訊息對應的基底類別名稱。
+在包含訊息對應之基類的名稱。
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP 指示基底類別的預設訊息對應的訊息 (使用宣告[BEGIN_MSG_MAP](#begin_msg_map))。 若要將基底類別的替代訊息對應的訊息 (使用宣告[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)。
+CHAIN_MSG_MAP 會將訊息導向至基類的預設訊息對應 (使用[BEGIN_MSG_MAP](#begin_msg_map)宣告)。 若要將訊息導向至基類的替代訊息對應 (以[ALT_MSG_MAP](#alt_msg_map)宣告), 請使用[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)。
 
 > [!NOTE]
->  一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以使用 ALT_MSG_MAP 來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#107](../../atl/codesnippet/cpp/message-map-macros-atl_4.h)]
 
-此範例說明下列要點：
+此範例說明下列各項:
 
-- 如果使用的視窗程序`CMyClass`的預設訊息對應和`OnPaint`不會的處理訊息時，訊息導向到`CMyBaseClass`的預設處理的訊息對應。
+- 如果視窗程式使用`CMyClass`的是預設的訊息對應, 而且`OnPaint`不處理訊息, 則會將訊息導向至`CMyBaseClass`的預設訊息對應以進行處理。
 
-- 如果視窗程序正在使用中的第一個替代訊息對應`CMyClass`，所有訊息會被都導向至`CMyBaseClass`的預設訊息對應。
+- 如果視窗程式使用中`CMyClass`的第一個替代訊息對應, 所有訊息都會導向至`CMyBaseClass`的預設訊息對應。
 
-- 如果使用的視窗程序`CMyClass`的第二個替代的訊息對應並`OnChar`不會的處理訊息，訊息會導向至指定的替代訊息對應中`CMyBaseClass`。 `CMyBaseClass` 必須有宣告 ALT_MSG_MAP(1) 與此訊息對應。
+- 如果視窗程式使用`CMyClass`的是第二個替代訊息對應, 而且`OnChar`不處理訊息, 則會將訊息導向至中`CMyBaseClass`的指定替代訊息對應。 `CMyBaseClass`必須已經使用 ALT_MSG_MAP (1) 宣告此訊息對應。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
@@ -314,24 +314,24 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 ### <a name="parameters"></a>參數
 
 *dynaChainID*<br/>
-[in]物件的訊息對應的唯一識別碼。
+在物件訊息對應的唯一識別碼。
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP_DYNAMIC 指示訊息，在執行階段，在另一個物件的預設訊息對應。 物件，其訊息對應相關聯*dynaChainID*，其中您透過定義[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)。 您必須衍生您的類別，從`CDynamicChain`才能使用 CHAIN_MSG_MAP_DYNAMIC。 如需範例，請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)概觀。
+CHAIN_MSG_MAP_DYNAMIC 會在執行時間將訊息導向另一個物件中的預設訊息對應。 物件和其訊息對應會與您透過[CDynamicChain:: SetChainEntry](cdynamicchain-class.md#setchainentry)定義的*dynaChainID*相關聯。 您必須從`CDynamicChain`衍生您的類別, 才能使用 CHAIN_MSG_MAP_DYNAMIC。 如需範例, 請參閱[CDynamicChain](../../atl/reference/cdynamicchain-class.md)總覽。
 
 > [!NOTE]
->  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用[BEGIN_MSG_MAP](#begin_msg_map)開始訊息對應。 接著, 您可以使用 ALT_MSG_MAP 來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="chain_msg_map_member"></a>  CHAIN_MSG_MAP_MEMBER
+##  <a name="chain_msg_map_member"></a>CHAIN_MSG_MAP_MEMBER
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 CHAIN_MSG_MAP_MEMBER(theChainMember)
@@ -340,36 +340,36 @@ CHAIN_MSG_MAP_MEMBER(theChainMember)
 ### <a name="parameters"></a>參數
 
 *theChainMember*<br/>
-[in]包含訊息對應的資料成員名稱。
+在包含訊息對應的資料成員名稱。
 
 ### <a name="remarks"></a>備註
 
-CHAIN_MSG_MAP_MEMBER 會指示訊息的資料成員的預設訊息對應 (以宣告[BEGIN_MSG_MAP](#begin_msg_map))。 若要將導向至資料成員的替代訊息對應的訊息 (使用宣告[ALT_MSG_MAP](#alt_msg_map))，使用[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)。
+CHAIN_MSG_MAP_MEMBER 會將訊息導向至資料成員的預設訊息對應 (使用[BEGIN_MSG_MAP](#begin_msg_map)宣告)。 若要將訊息導向至資料成員的替代訊息對應 (以[ALT_MSG_MAP](#alt_msg_map)宣告), 請使用[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)。
 
 > [!NOTE]
->  一定會開始與 BEGIN_MSG_MAP 訊息對應。 然後，您可以宣告使用 ALT_MSG_MAP 的後續替代的訊息對應。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用 BEGIN_MSG_MAP 開始訊息對應。 接著, 您可以使用 ALT_MSG_MAP 來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#108](../../atl/codesnippet/cpp/message-map-macros-atl_5.h)]
 
-此範例說明下列要點：
+此範例說明下列各項:
 
-- 如果使用的視窗程序`CMyClass`的預設訊息對應和`OnPaint`不會的處理訊息時，訊息導向到`m_obj`的預設處理的訊息對應。
+- 如果視窗程式使用`CMyClass`的是預設的訊息對應, 而且`OnPaint`不處理訊息, 則會將訊息導向至`m_obj`的預設訊息對應以進行處理。
 
-- 如果視窗程序正在使用中的第一個替代訊息對應`CMyClass`，所有訊息會被都導向至`m_obj`的預設訊息對應。
+- 如果視窗程式使用中`CMyClass`的第一個替代訊息對應, 所有訊息都會導向至`m_obj`的預設訊息對應。
 
-- 如果使用的視窗程序`CMyClass`的第二個替代的訊息對應並`OnChar`不會的處理訊息，訊息會導向至指定的替代訊息對應的`m_obj`。 類別`CMyContainedClass`必須有宣告 ALT_MSG_MAP(1) 與此訊息對應。
+- 如果視窗程式使用`CMyClass`的是第二個替代訊息對應, 而且`OnChar`不處理訊息, 則會將訊息導向至的`m_obj`指定替代訊息對應。 類別`CMyContainedClass`必須已經使用 ALT_MSG_MAP (1) 宣告此訊息對應。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="command_code_handler"></a>  COMMAND_CODE_HANDLER
+##  <a name="command_code_handler"></a>COMMAND_CODE_HANDLER
 
-類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息只根據通知程式碼。
+類似于[COMMAND_HANDLER](#command_handler), 但只會根據通知碼來對應[WM_COMMAND](/windows/win32/menurc/wm-command)訊息。
 
 ```
 COMMAND_CODE_HANDLER(code, func)
@@ -378,18 +378,18 @@ COMMAND_CODE_HANDLER(code, func)
 ### <a name="parameters"></a>參數
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="command_handler"></a>  COMMAND_HANDLER
+##  <a name="command_handler"></a>COMMAND_HANDLER
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 COMMAND_HANDLER(id, code, func)
@@ -398,40 +398,40 @@ COMMAND_HANDLER(id, code, func)
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或加速器的識別項。
+在功能表項目、控制項或快速鍵的識別碼。
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-對應 COMMAND_HANDLER [WM_COMMAND](/windows/desktop/menurc/wm-command)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。 例如: 
+COMMAND_HANDLER 會根據通知碼和控制項識別碼, 將[WM_COMMAND](/windows/win32/menurc/wm-command)訊息對應至指定的處理常式函式。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
-必須定義在 COMMAND_HANDLER 巨集中指定的任何函式如下所示：
+COMMAND_HANDLER 宏中指定的任何函式都必須定義如下:
 
 `LRESULT CommandHandler(WORD wNotifyCode, WORD wID, HWND hWndCtl, BOOL& bHandled);`
 
-訊息對應集`bHandled`設為 TRUE 之前`CommandHandler`呼叫。 如果`CommandHandler`完全不會處理訊息，它應該設定`bHandled`為 FALSE，以指出需要進一步處理的訊息。
+訊息對應會在`bHandled`呼叫之前`CommandHandler`將設定為 TRUE。 如果`CommandHandler`未完整處理訊息, 則應該將設定`bHandled`為 FALSE, 表示訊息需要進一步處理。
 
 > [!NOTE]
->  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用後續的替代訊息對應[ALT_MSG_MAP](#alt_msg_map)。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用[BEGIN_MSG_MAP](#begin_msg_map)開始訊息對應。 接著, 您可以使用[ALT_MSG_MAP](#alt_msg_map)來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-除了 COMMAND_HANDLER，您可以使用[MESSAGE_HANDLER](#message_handler) WM_COMMAND 訊息，而不是識別碼或程式碼對應。 在此情況下，`MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)`會將所有 WM_COMMAND 訊息都導向`OnHandlerFunction`。
+除了 COMMAND_HANDLER 之外, 您還可以使用[MESSAGE_HANDLER](#message_handler)來對應 WM_COMMAND 訊息, 而不考慮識別碼或程式碼。 在此情況下`MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)` , 會將所有 WM_COMMAND 訊息`OnHandlerFunction`導向至。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="command_id_handler"></a>  COMMAND_ID_HANDLER
+##  <a name="command_id_handler"></a>COMMAND_ID_HANDLER
 
-類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息只會依據的功能表項目、 控制項或加速器的識別項。
+類似于[COMMAND_HANDLER](#command_handler), 但只會根據功能表項目、控制項或快速鍵的識別碼來對應[WM_COMMAND](/windows/win32/menurc/wm-command)訊息。
 
 ```
 COMMAND_ID_HANDLER(id, func)
@@ -440,18 +440,18 @@ COMMAND_ID_HANDLER(id, func)
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或傳送訊息的對應鍵的識別碼。
+在用來傳送訊息之功能表項目、控制項或快速鍵的識別碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="command_range_code_handler"></a>  COMMAND_RANGE_CODE_HANDLER
+##  <a name="command_range_code_handler"></a>COMMAND_RANGE_CODE_HANDLER
 
-類似於[COMMAND_RANGE_HANDLER](#command_range_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。
+類似于[COMMAND_RANGE_HANDLER](#command_range_handler), 但會將來自控制項範圍的特定通知碼的[WM_COMMAND](/windows/win32/menurc/wm-command)訊息對應至單一處理程式函式。
 
 ```
 COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
@@ -460,28 +460,28 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-此範圍為基礎的功能表項目、 控制項或傳送訊息的對應鍵的識別碼。
+此範圍是以功能表項目、控制項或快速鍵傳送訊息的識別碼為基礎。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="command_range_handler"></a>  COMMAND_RANGE_HANDLER
+##  <a name="command_range_handler"></a>COMMAND_RANGE_HANDLER
 
-類似於[COMMAND_HANDLER](#command_handler)，但會將對應[WM_COMMAND](/windows/desktop/menurc/wm-command)單一處理常式函式從一組控制項台中的訊息。
+類似于[COMMAND_HANDLER](#command_handler), 但會將來自控制項範圍的[WM_COMMAND](/windows/win32/menurc/wm-command)訊息對應至單一處理程式函式。
 
 ```
 COMMAND_RANGE_HANDLER( idFirst, idLast, func)
@@ -490,25 +490,25 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-此範圍為基礎的功能表項目、 控制項或傳送訊息的對應鍵的識別碼。
+此範圍是以功能表項目、控制項或快速鍵傳送訊息的識別碼為基礎。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="declare_empty_msg_map"></a>  DECLARE_EMPTY_MSG_MAP
 
-宣告空白的訊息對應。
+宣告空的訊息對應。
 
 ```
 DECLARE_EMPTY_MSG_MAP()
@@ -516,13 +516,13 @@ DECLARE_EMPTY_MSG_MAP()
 
 ### <a name="remarks"></a>備註
 
-DECLARE_EMPTY_MSG_MAP 是為了方便起見巨集呼叫巨集[BEGIN_MSG_MAP](#begin_msg_map)並[END_MSG_MAP](#end_msg_map)建立空白的訊息對應：
+DECLARE_EMPTY_MSG_MAP 是一個方便的宏, 它會呼叫宏[BEGIN_MSG_MAP](#begin_msg_map)和[END_MSG_MAP](#end_msg_map)來建立空的訊息對應:
 
 [!code-cpp[NVC_ATL_Windowing#122](../../atl/codesnippet/cpp/message-map-macros-atl_7.h)]
 
-##  <a name="default_reflection_handler"></a>  DEFAULT_REFLECTION_HANDLER
+##  <a name="default_reflection_handler"></a>DEFAULT_REFLECTION_HANDLER
 
-提供預設處理常式會收到子視窗 （控制） 反映訊息;處理常式將會正確傳遞未處理的訊息，以`DefWindowProc`。
+為將會接收反映訊息的子視窗 (控制項) 提供預設的處理常式;處理常式會將未處理的訊息`DefWindowProc`正確地傳遞給。
 
 ```
 DEFAULT_REFLECTION_HANDLER()
@@ -530,7 +530,7 @@ DEFAULT_REFLECTION_HANDLER()
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
 ##  <a name="end_msg_map"></a>  END_MSG_MAP
 
@@ -542,29 +542,29 @@ END_MSG_MAP()
 
 ### <a name="remarks"></a>備註
 
-一律使用[BEGIN_MSG_MAP](#begin_msg_map)巨集來標示訊息對應的開頭。 使用[ALT_MSG_MAP](#alt_msg_map)宣告替代的後續訊息對應。
+請一律使用[BEGIN_MSG_MAP](#begin_msg_map)宏來標記訊息對應的開頭。 使用[ALT_MSG_MAP](#alt_msg_map)來宣告後續的替代訊息對應。
 
-請注意，總是 BEGIN_MSG_MAP 和 END_MSG_MAP 只有一個執行個體。
+請注意, 一律只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
-下列範例會顯示預設訊息對應以及每一個都包含一個處理常式函式的一個替代的訊息對應：
+下列範例會顯示預設的訊息對應和一個替代訊息對應, 每個都包含一個處理函式:
 
 [!code-cpp[NVC_ATL_Windowing#98](../../atl/codesnippet/cpp/message-map-macros-atl_1.h)]
 
-下一個範例顯示兩個替代的訊息對應。 預設訊息對應是空的。
+下一個範例會顯示兩個替代訊息對應。 預設的訊息對應是空的。
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="forward_notifications"></a>  FORWARD_NOTIFICATIONS
+##  <a name="forward_notifications"></a>FORWARD_NOTIFICATIONS
 
-將轉送通知訊息給父視窗。
+將通知訊息轉送到父視窗。
 
 ```
 FORWARD_NOTIFICATIONS()
@@ -572,15 +572,15 @@ FORWARD_NOTIFICATIONS()
 
 ### <a name="remarks"></a>備註
 
-指定此巨集做為訊息對應的一部分。
+指定此宏做為訊息對應的一部分。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="message_handler"></a>  MESSAGE_HANDLER
+##  <a name="message_handler"></a>MESSAGE_HANDLER
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 MESSAGE_HANDLER( msg, func )
@@ -589,27 +589,27 @@ MESSAGE_HANDLER( msg, func )
 ### <a name="parameters"></a>參數
 
 *msg*<br/>
-[in]Windows 訊息。
+在Windows 訊息。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
 MESSAGE_HANDLER 會將 Windows 訊息對應至指定的處理常式函式。
 
-必須定義在 MESSAGE_HANDLER 巨集中指定的任何函式如下所示：
+MESSAGE_HANDLER 宏中指定的任何函式都必須定義如下:
 
 `LRESULT MessageHandler(UINT uMsg, WPARAM wParam, LPARAM lParam, BOOL& bHandled);`
 
-訊息對應集`bHandled`設為 TRUE 之前`MessageHandler`呼叫。 如果`MessageHandler`完全不會處理訊息，它應該設定`bHandled`為 FALSE，以指出需要進一步處理的訊息。
+訊息對應會在`bHandled`呼叫之前`MessageHandler`將設定為 TRUE。 如果`MessageHandler`未完整處理訊息, 則應該將設定`bHandled`為 FALSE, 表示訊息需要進一步處理。
 
 > [!NOTE]
->  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用後續的替代訊息對應[ALT_MSG_MAP](#alt_msg_map)。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用[BEGIN_MSG_MAP](#begin_msg_map)開始訊息對應。 接著, 您可以使用[ALT_MSG_MAP](#alt_msg_map)來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-除了 MESSAGE_HANDLER，您可以使用[COMMAND_HANDLER](#command_handler)並[NOTIFY_HANDLER](#notify_handler)對應[WM_COMMAND](/windows/desktop/menurc/wm-command)並[WM_NOTIFY](/windows/desktop/controls/wm-notify)訊息分別。
+除了 MESSAGE_HANDLER 之外, 您也可以分別使用[COMMAND_HANDLER](#command_handler)和[NOTIFY_HANDLER](#notify_handler)來對應[WM_COMMAND](/windows/win32/menurc/wm-command)和[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
@@ -617,11 +617,11 @@ MESSAGE_HANDLER 會將 Windows 訊息對應至指定的處理常式函式。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="message_range_handler"></a>  MESSAGE_RANGE_HANDLER
+##  <a name="message_range_handler"></a>MESSAGE_RANGE_HANDLER
 
-類似於[MESSAGE_HANDLER](#message_handler)，但範圍的 Windows 訊息的單一處理常式函式的對應。
+類似于[MESSAGE_HANDLER](#message_handler), 但會將某個範圍的 Windows 訊息對應至單一處理程式函式。
 
 ```
 MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
@@ -630,21 +630,21 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 ### <a name="parameters"></a>參數
 
 *msgFirst*<br/>
-[in]標記訊息的連續範圍的開頭。
+在標記連續訊息範圍的開頭。
 
 *msgLast*<br/>
-[in]標記結尾的連續範圍的訊息。
+在標記連續訊息範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
+##  <a name="notify_code_handler"></a>NOTIFY_CODE_HANDLER
 
-類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](/windows/desktop/controls/wm-notify)訊息只根據通知程式碼。
+類似于[NOTIFY_HANDLER](#notify_handler), 但只會根據通知碼來對應[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息。
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -653,18 +653,18 @@ NOTIFY_CODE_HANDLER(cd, func)
 ### <a name="parameters"></a>參數
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="notify_handler"></a>  NOTIFY_HANDLER
+##  <a name="notify_handler"></a>NOTIFY_HANDLER
 
-訊息對應中定義的項目。
+定義訊息對應中的專案。
 
 ```
 NOTIFY_HANDLER( id, cd, func )
@@ -673,30 +673,30 @@ NOTIFY_HANDLER( id, cd, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]傳送訊息的控制項識別項。
+在傳送訊息之控制項的識別碼。
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-對應 NOTIFY_HANDLER [WM_NOTIFY](/windows/desktop/controls/wm-notify)至指定的處理常式函式，根據通知程式碼和控制項識別項的訊息。
+NOTIFY_HANDLER 會根據通知碼和控制項識別碼, 將[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息對應至指定的處理常式函式。
 
-必須定義在 NOTIFY_HANDLER 巨集中指定的任何函式如下所示：
+NOTIFY_HANDLER 宏中指定的任何函式都必須定義如下:
 
 `LRESULT NotifyHandler(int idCtrl, LPNMHDR pnmh, BOOL& bHandled);`
 
-訊息對應集`bHandled`設為 TRUE 之前`NotifyHandler`呼叫。 如果`NotifyHandler`完全不會處理訊息，它應該設定`bHandled`為 FALSE，以指出需要進一步處理的訊息。
+訊息對應會在`bHandled`呼叫之前`NotifyHandler`將設定為 TRUE。 如果`NotifyHandler`未完整處理訊息, 則應該將設定`bHandled`為 FALSE, 表示訊息需要進一步處理。
 
 > [!NOTE]
->  一定會開始使用的訊息對應[BEGIN_MSG_MAP](#begin_msg_map)。 然後，您可以宣告使用後續的替代訊息對應[ALT_MSG_MAP](#alt_msg_map)。 [END_MSG_MAP](#end_msg_map)巨集標記訊息對應的結尾。 每個訊息對應必須有一個執行個體 BEGIN_MSG_MAP 和 END_MSG_MAP。
+>  一律使用[BEGIN_MSG_MAP](#begin_msg_map)開始訊息對應。 接著, 您可以使用[ALT_MSG_MAP](#alt_msg_map)來宣告後續的替代訊息對應。 [END_MSG_MAP](#end_msg_map)宏會標記訊息對應的結尾。 每個訊息對應都必須只有一個 BEGIN_MSG_MAP 和 END_MSG_MAP 實例。
 
-除了 NOTIFY_HANDLER，您可以使用[MESSAGE_HANDLER](#message_handler) WM_NOTIFY 訊息，而不是識別碼或程式碼對應。 在此情況下，`MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)`會將所有 WM_NOTIFY 訊息都導向`OnHandlerFunction`。
+除了 NOTIFY_HANDLER 之外, 您還可以使用[MESSAGE_HANDLER](#message_handler)來對應 WM_NOTIFY 訊息, 而不考慮識別碼或程式碼。 在此情況下`MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)` , 會將所有 WM_NOTIFY 訊息`OnHandlerFunction`導向至。
 
-如需使用 ATL 中的訊息對應的詳細資訊，請參閱[訊息對應](../../atl/message-maps-atl.md)。
+如需在 ATL 中使用訊息對應的詳細資訊, 請參閱[訊息對應](../../atl/message-maps-atl.md)。
 
 ### <a name="example"></a>範例
 
@@ -704,11 +704,11 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
+##  <a name="notify_id_handler"></a>NOTIFY_ID_HANDLER
 
-類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](/windows/desktop/controls/wm-notify)訊息只會依據的控制項識別項。
+類似于[NOTIFY_HANDLER](#notify_handler), 但只會根據控制項識別碼對應[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息。
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -717,18 +717,18 @@ NOTIFY_ID_HANDLER( id, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]傳送訊息的控制項識別項。
+在傳送訊息之控制項的識別碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
+##  <a name="notify_range_code_handler"></a>NOTIFY_RANGE_CODE_HANDLER
 
-類似於[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但會將對應[WM_NOTIFY](/windows/desktop/controls/wm-notify)特定通知的程式碼從一組控制項台中單一處理常式函式的訊息。
+類似于[NOTIFY_RANGE_HANDLER](#notify_range_handler), 但會將來自控制項範圍的特定通知碼的[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息對應至單一處理程式函式。
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -737,28 +737,28 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-此範圍取決於傳送訊息之控制項的識別項。
+此範圍是以傳送訊息之控制項的識別碼為基礎。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
+##  <a name="notify_range_handler"></a>NOTIFY_RANGE_HANDLER
 
-類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應[WM_NOTIFY](/windows/desktop/controls/wm-notify)單一處理常式函式從一組控制項台中的訊息。
+類似于[NOTIFY_HANDLER](#notify_handler), 但會將來自控制項範圍的[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息對應至單一處理程式函式。
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -767,25 +767,25 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="remarks"></a>備註
 
-此範圍取決於傳送訊息之控制項的識別項。
+此範圍是以傳送訊息之控制項的識別碼為基礎。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflect_notifications"></a>  REFLECT_NOTIFICATIONS
+##  <a name="reflect_notifications"></a>REFLECT_NOTIFICATIONS
 
-會反映回傳送給子視窗 （控制項） 的通知訊息。
+將通知訊息反映回傳送給它的子視窗 (控制項)。
 
 ```
 REFLECT_NOTIFICATIONS()
@@ -793,15 +793,15 @@ REFLECT_NOTIFICATIONS()
 
 ### <a name="remarks"></a>備註
 
-指定此巨集做為父視窗的訊息對應的一部分。
+指定這個宏做為父視窗的訊息對應的一部分。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_command_code_handler"></a>  REFLECTED_COMMAND_CODE_HANDLER
+##  <a name="reflected_command_code_handler"></a>REFLECTED_COMMAND_CODE_HANDLER
 
-類似於[COMMAND_CODE_HANDLER](#command_code_handler)，但反映從父視窗的命令會將對應。
+類似于[COMMAND_CODE_HANDLER](#command_code_handler), 但會對應從父視窗反映的命令。
 
 ```
 REFLECTED_COMMAND_CODE_HANDLER( code, func )
@@ -810,18 +810,18 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 ### <a name="parameters"></a>參數
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_command_handler"></a>  REFLECTED_COMMAND_HANDLER
+##  <a name="reflected_command_handler"></a>REFLECTED_COMMAND_HANDLER
 
-類似於[COMMAND_HANDLER](#command_handler)，但反映從父視窗的命令會將對應。
+類似于[COMMAND_HANDLER](#command_handler), 但會對應從父視窗反映的命令。
 
 ```
 REFLECTED_COMMAND_HANDLER( id, code, func )
@@ -830,21 +830,21 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或加速器的識別項。
+在功能表項目、控制項或快速鍵的識別碼。
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
+##  <a name="reflected_command_id_handler"></a>REFLECTED_COMMAND_ID_HANDLER
 
-類似於[COMMAND_ID_HANDLER](#command_id_handler)，但反映從父視窗的命令會將對應。
+類似于[COMMAND_ID_HANDLER](#command_id_handler), 但會對應從父視窗反映的命令。
 
 ```
 REFLECTED_COMMAND_ID_HANDLER( id, func )
@@ -853,18 +853,18 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或加速器的識別項。
+在功能表項目、控制項或快速鍵的識別碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
+##  <a name="reflected_command_range_code_handler"></a>REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
-類似於[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler)，但反映從父視窗的命令會將對應。
+類似于[COMMAND_RANGE_CODE_HANDLER](#command_range_code_handler), 但會對應從父視窗反映的命令。
 
 ```
 REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
@@ -873,24 +873,24 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *程式碼*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
+##  <a name="reflected_command_range_handler"></a>REFLECTED_COMMAND_RANGE_HANDLER
 
-類似於[COMMAND_RANGE_HANDLER](#command_range_handler)，但反映從父視窗的命令會將對應。
+類似于[COMMAND_RANGE_HANDLER](#command_range_handler), 但會對應從父視窗反映的命令。
 
 ```
 REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
@@ -899,21 +899,21 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
+##  <a name="reflected_notify_code_handler"></a>REFLECTED_NOTIFY_CODE_HANDLER
 
-類似於[NOTIFY_CODE_HANDLER](#notify_code_handler)，但會將對應從父視窗所反映的通知。
+類似于[NOTIFY_CODE_HANDLER](#notify_code_handler), 但會對應從父視窗反映的通知。
 
 ```
 REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
@@ -922,18 +922,18 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 ### <a name="parameters"></a>參數
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
+##  <a name="reflected_notify_handler"></a>REFLECTED_NOTIFY_HANDLER
 
-類似於[NOTIFY_HANDLER](#notify_handler)，但會將對應從父視窗所反映的通知。
+類似于[NOTIFY_HANDLER](#notify_handler), 但會對應從父視窗反映的通知。
 
 ```
 REFLECTED_NOTIFY_HANDLER( id, cd, func )
@@ -942,21 +942,21 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或加速器的識別項。
+在功能表項目、控制項或快速鍵的識別碼。
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
+##  <a name="reflected_notify_id_handler"></a>REFLECTED_NOTIFY_ID_HANDLER
 
-類似於[NOTIFY_ID_HANDLER](#notify_id_handler)，但會將對應從父視窗所反映的通知。
+類似于[NOTIFY_ID_HANDLER](#notify_id_handler), 但會對應從父視窗反映的通知。
 
 ```
 REFLECTED_NOTIFY_ID_HANDLER( id, func )
@@ -965,18 +965,18 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 ### <a name="parameters"></a>參數
 
 *id*<br/>
-[in]功能表項目、 控制項或加速器的識別項。
+在功能表項目、控制項或快速鍵的識別碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
+##  <a name="reflected_notify_range_code_handler"></a>REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
-類似於[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler)，但會將對應從父視窗所反映的通知。
+類似于[NOTIFY_RANGE_CODE_HANDLER](#notify_range_code_handler), 但會對應從父視窗反映的通知。
 
 ```
 REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -985,24 +985,24 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *cd*<br/>
-[in]通知的程式碼。
+在通知碼。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="reflected_notify_range_handler"></a>  REFLECTED_NOTIFY_RANGE_HANDLER
+##  <a name="reflected_notify_range_handler"></a>REFLECTED_NOTIFY_RANGE_HANDLER
 
-類似於[NOTIFY_RANGE_HANDLER](#notify_range_handler)，但會將對應從父視窗所反映的通知。
+類似于[NOTIFY_RANGE_HANDLER](#notify_range_handler), 但會對應從父視窗反映的通知。
 
 ```
 REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
@@ -1011,13 +1011,13 @@ REFLECTED_NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 ### <a name="parameters"></a>參數
 
 *idFirst*<br/>
-[in]標記控制識別項的連續範圍的開頭。
+在標記連續控制項識別碼範圍的開頭。
 
 *idLast*<br/>
-[in]標記的控制項識別項的連續範圍的結尾。
+在標記連續控制項識別碼範圍的結尾。
 
 *func*<br/>
-[in]訊息處理常式函式的名稱。
+在訊息處理常式函式的名稱。
 
 ## <a name="see-also"></a>另請參閱
 

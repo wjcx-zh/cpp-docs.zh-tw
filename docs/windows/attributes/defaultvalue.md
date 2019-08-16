@@ -1,21 +1,21 @@
 ---
-title: 預設值 (C++ COM 屬性)
+title: defaultvalue (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.defaultvalue
 helpviewer_keywords:
 - defaultvalue attribute
 ms.assetid: efa5d050-b2cc-4d9e-9b8e-79954f218d3a
-ms.openlocfilehash: ff6924db6f4805bb5f2dbab69076a86020b2a075
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2057658b5881efd0c3ff095d51e5ee88c9c533e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62147960"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490925"
 ---
 # <a name="defaultvalue"></a>defaultvalue
 
-允許指定的具類型的選擇性參數的預設值。
+允許指定具類型的選擇性參數的預設值。
 
 ## <a name="syntax"></a>語法
 
@@ -30,11 +30,11 @@ ms.locfileid: "62147960"
 
 ## <a name="remarks"></a>備註
 
-**Defaultvalue** C++屬性具有相同的功能[defaultvalue](/windows/desktop/Midl/defaultvalue) MIDL 屬性。
+**Defaultvalue** C++屬性的功能與[defaultvalue](/windows/win32/Midl/defaultvalue) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼會顯示介面的方法使用**defaultvalue**屬性：
+下列程式碼顯示使用**defaultvalue**屬性的介面方法:
 
 ```cpp
 // cpp_attr_ref_defaultvalue.cpp
@@ -62,8 +62,8 @@ __interface IFireTabCtrl : IDispatch {
 |-|-|
 |**適用於**|介面參數|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: 8164ede1379e573b08f699cd55c199f6fa228823
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220982"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493351"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>建置 C/C++ 隔離應用程式和並存組件
 
-Visual Studio 支援 Windows 用戶端應用程式的概念為基礎的部署模型[隔離應用程式](/windows/desktop/SbsCs/isolated-applications)並[並排顯示組件](/windows/desktop/SbsCs/about-side-by-side-assemblies-)。 根據預設，Visual Studio 會建置原生 C /C++應用程式使用的隔離應用程式視為[資訊清單](/windows/desktop/sbscs/manifests)來描述它們的相依性視覺效果上C++程式庫。
+Visual Studio 根據[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和[並存元件](/windows/win32/SbsCs/about-side-by-side-assemblies-)的概念, 支援 Windows 用戶端應用程式的部署模型。 根據預設, Visual Studio 會將所有的原C++生 C/應用程式建立為隔離的應用程式, 以C++使用[資訊清單](/windows/win32/sbscs/manifests)來描述其對 Visual 程式庫的相依性
 
-將 C/C++ 程式建置為隔離應用程式會帶來很多好處。 例如，當其他 C/C++ 應用程式安裝或解除安裝 Visual C++ 程式庫時，不會影響到隔離應用程式。 隔離的應用程式所使用的 Visual C++ 程式庫可能仍會在應用程式的本機資料夾轉散發，或者由安裝轉散發至原生組件快取 (WinSxS) 中；不過，使用 [發行者組態檔](/windows/desktop/SbsCs/publisher-configuration)可簡化提供已部署應用程式的 Visual C++ 程式庫。 隔離應用程式部署模型可更輕鬆地確保在特定電腦上執行的 C/C++ 應用程式，使用最新版本的 Visual C++ 程式庫，同時仍保留系統管理員和應用程式作者可控制將應用程式的版本，明確繫結至其相依 DLL 的可能性。
+將 C/C++ 程式建置為隔離應用程式會帶來很多好處。 例如，當其他 C/C++ 應用程式安裝或解除安裝 Visual C++ 程式庫時，不會影響到隔離應用程式。 隔離的應用程式所使用的 Visual C++ 程式庫可能仍會在應用程式的本機資料夾轉散發，或者由安裝轉散發至原生組件快取 (WinSxS) 中；不過，使用 [發行者組態檔](/windows/win32/SbsCs/publisher-configuration)可簡化提供已部署應用程式的 Visual C++ 程式庫。 隔離應用程式部署模型可更輕鬆地確保在特定電腦上執行的 C/C++ 應用程式，使用最新版本的 Visual C++ 程式庫，同時仍保留系統管理員和應用程式作者可控制將應用程式的版本，明確繫結至其相依 DLL 的可能性。
 
-本節討論您可以如何將 C/C++ 應用程式建置為隔離應用程式，並確保其使用資訊清單，繫結至 Visual C++ 程式庫。 在本節中的資訊主要適用於原生或 unmanaged，C++應用程式。 如需部署原生C++使用 Visual Studio 中建置應用程式請參閱[轉散發 VisualC++檔案](../windows/redistributing-visual-cpp-files.md)。
+本節討論您可以如何將 C/C++ 應用程式建置為隔離應用程式，並確保其使用資訊清單，繫結至 Visual C++ 程式庫。 本節中的資訊主要適用于原生或未受管理C++的應用程式。 如需部署以 Visual Studio C++建立的原生應用程式的詳細資訊, 請參閱轉散發[視覺效果C++ ](../windows/redistributing-visual-cpp-files.md)檔案。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -42,6 +42,6 @@ Visual Studio 支援 Windows 用戶端應用程式的概念為基礎的部署模
 
 ## <a name="related-sections"></a>相關章節
 
-[隔離應用程式和並存組件](/windows/desktop/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
+[隔離應用程式和並存組件](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
 [部署傳統型應用程式](../windows/deploying-native-desktop-applications-visual-cpp.md)

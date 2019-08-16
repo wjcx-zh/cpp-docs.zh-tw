@@ -19,26 +19,26 @@ helpviewer_keywords:
 - TVS_HASBUTTONS [MFC]
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
-ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5f28025d0349e9bcd95aba50d4110d304fed376
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181519"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510933"
 ---
 # <a name="tree-control-styles"></a>樹狀目錄控制項樣式
 
-樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 樣式管理樹狀目錄控制項的外觀的層面。 當您建立的樹狀結構控制項時，您可以設定初始的樣式。 您可以擷取，並在建立樹狀結構控制項中使用之後變更樣式[GetWindowLong](/windows/desktop/api/winuser/nf-winuser-getwindowlonga)並[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函式，指定**GWL_STYLE**的*nIndex*參數。 如需完整的樣式清單，請參閱[樹狀檢視控制項的視窗樣式](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK 中。
+樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) 樣式負責控制樹狀結構控制面板的各個層面。 當您建立樹狀目錄控制項時, 您可以設定初始樣式。 您可以使用[GetWindowLong](/windows/win32/api/winuser/nf-winuser-getwindowlongw)和[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows 函式, 指定*nIndex*參數的**GWL_STYLE** , 在建立樹狀目錄控制項之後, 抓取和變更樣式。 如需樣式的完整清單, 請參閱 Windows SDK 中的[樹狀檢視控制項視窗樣式](/windows/win32/Controls/tree-view-control-window-styles)。
 
-**TVS_HASLINES**樣式繪製線條的子系項目連結至其對應的父項目以增強樹狀目錄控制項的階層架構的圖形表示法。 這個樣式不會連結階層的根目錄中的項目。 若要這樣做，您需要結合**TVS_HASLINES**並**TVS_LINESATROOT**樣式。
+**TVS_HASLINES**樣式會藉由繪製將子專案連結至對應父專案的線條, 來增強樹狀結構控制項階層的圖形表示。 此樣式不會連結階層根目錄的專案。 若要這樣做, 您必須結合**TVS_HASLINES**和**TVS_LINESATROOT**樣式。
 
-使用者可以展開或摺疊子項目的父項目的清單，方法是按兩下父項目。 樹狀目錄控制項具有**TVS_SINGLEEXPAND**樣式會導致正在以展開選取的項目] 和 [摺疊正在取消選取項目。 如果滑鼠來按一下選取的項目，且該項目已關閉，它將會展開。 如果選取的項目是按一下開啟時，它將會摺疊。
+使用者可以按兩下父專案, 展開或折迭父項目的子專案清單。 具有**TVS_SINGLEEXPAND**樣式的樹狀目錄控制項, 會使選取的專案展開, 並取消選取要折迭的專案。 如果滑鼠是用來按一下選取的專案, 而該專案已關閉, 則會展開。 如果選取的專案在開啟時按下滑鼠, 則會折迭。
 
-樹狀目錄控制項具有**TVS_HASBUTTONS**樣式會將按鈕新增至每個父項目的左邊。 使用者可以按一下 [展開或摺疊子項目，做為替代按兩下父項目] 按鈕。 **TVS_HASBUTTONS**不會將按鈕新增至階層的根目錄中的項目。 若要這樣做，您必須結合**TVS_HASLINES**， **TVS_LINESATROOT**，並**TVS_HASBUTTONS**。
+具有**TVS_HASBUTTONS**樣式的樹狀目錄控制項, 會在每個父項目的左側加入一個按鈕。 使用者可以按一下按鈕展開或折迭子專案, 做為按兩下父專案的替代方案。 **TVS_HASBUTTONS**不會將按鈕新增至階層根目錄的專案。 若要這樣做, 您必須結合**TVS_HASLINES**、 **TVS_LINESATROOT**和**TVS_HASBUTTONS**。
 
-**CTREECTRL**樣式可讓使用者編輯樹狀目錄控制項目標籤。 如需有關如何編輯標籤的詳細資訊，請參閱 <<c0> [ 樹狀目錄控制項標籤編輯](../mfc/tree-control-label-editing.md)本主題稍後的。
+**TVS_EDITLABELS**樣式可以讓使用者編輯樹狀目錄控制項專案的標籤。 如需編輯標籤的詳細資訊, 請參閱本主題稍後的[樹狀目錄控制項標籤編輯](../mfc/tree-control-label-editing.md)。
 
-**TVS_NOTOOLTIPS**樣式會停用樹狀檢視控制項的自動工具提示功能。 這項功能會自動顯示工具提示，如果目前看不到完整的標題，其中包含滑鼠資料指標下項目的標題。
+**TVS_NOTOOLTIPS**樣式會停用樹狀檢視控制項的自動工具提示功能。 如果整個標題目前不可見, 此功能會自動顯示工具提示, 其中包含滑鼠游標下的專案標題。
 
 ## <a name="see-also"></a>另請參閱
 

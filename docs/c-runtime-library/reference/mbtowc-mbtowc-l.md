@@ -26,14 +26,14 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: c02d1a636db75b4a26891a93fa20327b7430443d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156612"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499721"
 ---
-# <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
+# <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
 將多位元組字元轉換為對應的寬字元。
 
@@ -56,12 +56,12 @@ int _mbtowc_l(
 ### <a name="parameters"></a>參數
 
 *wchar*<br/>
-寬字元的位址 (型別**wchar_t**)。
+寬字元 ( **wchar_t**類型) 的位址。
 
 *mbchar*<br/>
 位元組序列 (多位元組字元) 的位址。
 
-*count*<br/>
+*計數*<br/>
 要檢查的位元組數目。
 
 *locale*<br/>
@@ -69,11 +69,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**mbchar**不是**NULL**如果物件的*mbchar*指向有效的多位元組字元時，表單**mbtowc**傳回的長度多位元組字元的位元組。 如果*mbchar*是**NULL**或它所指向的物件是寬字元的 null 字元 (L '\0')，則函數會傳回 0。 如果物件的*mbchar*點不會構成有效的多位元組字元，在第一個*計數*字元，則傳回-1。
+如果**mbchar**不是**Null** , 而且*mbchar*所指向的物件形成有效的多位元組字元, 則**mbtowc**會傳回多位元組字元的長度 (以位元組為單位)。 如果*mbchar*為**Null** , 或其所指向的物件是寬字元的 Null 字元 (L ' \ 0 '), 則函式會傳回0。 如果*mbchar*指向的物件未在第一個*計數*字元內形成有效的多位元組字元, 則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**Mbtowc**函式會將*計數*或更少個位元組，指向*mbchar*的話*mbchar*不**NULL**，以對應的寬字元。 **mbtowc**會儲存在產生的寬字元*wchar*如果*wchar*不是**NULL**。 **mbtowc**不會檢查多個**MB_CUR_MAX**位元組。 **mbtowc**地區設定相關行為; 針對使用目前的地區設定 **_mbtowc_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*mbchar*不是**Null**, 則**mbtowc**函式會將*mbchar*所指向的*count*或較少位元組轉換成對應的寬字元。 如果*wchar*不是**Null**, **mbtowc**會將產生的寬字元儲存在*wchar* 。 **mbtowc**不會檢查超過**MB_CUR_MAX**個位元組。 **mbtowc**會針對與地區設定相關的行為使用目前的地區設定; **_mbtowc_l**相同, 不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -147,7 +147,7 @@ Attempt to convert a NULL pointer to a wide character:
 ## <a name="see-also"></a>另請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
+[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>
 [多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>

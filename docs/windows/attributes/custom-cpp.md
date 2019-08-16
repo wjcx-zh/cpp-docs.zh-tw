@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - custom attributes, defining
 ms.assetid: 3abac928-4d55-4ea6-8cf6-8427a4ad79f1
-ms.openlocfilehash: 227e67696e679452a9c6c0e18c04e3d918f7a93f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19f28963a18abf42c6f629ac0f6491628387aa6d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148170"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491004"
 ---
 # <a name="custom-c"></a>custom (C++)
 
-類型程式庫中定義物件之中繼資料。
+在類型程式庫中定義物件的中繼資料。
 
 ## <a name="syntax"></a>語法
 
@@ -32,13 +32,13 @@ ms.locfileid: "62148170"
 唯一 ID。
 
 *value*<br/>
-值，這個值可以放入變數。
+可以放入 variant 中的值。
 
 ## <a name="remarks"></a>備註
 
-**自訂**C++屬性會放入類型程式庫的資訊。 您必須讀取類型程式庫中的自訂值的工具。
+**自訂** C++屬性會導致資訊放入類型程式庫中。 您將需要一個從型別程式庫讀取自訂值的工具。
 
-**自訂**屬性有相同的功能[自訂](/windows/desktop/Midl/custom)MIDL 屬性。
+**自訂**屬性的功能與[自訂](/windows/win32/Midl/custom)MIDL 屬性相同。
 
 ## <a name="requirements"></a>需求
 
@@ -46,10 +46,10 @@ ms.locfileid: "62148170"
 
 |||
 |-|-|
-|**適用於**|非 COM**介面**，**類別**， **enum**s`idl_module`方法、 介面成員、 介面參數**typedef**s，**union**s**結構**s|
+|**適用於**|非 COM**介面**,**類別**,**列舉** `idl_module` s, 方法, 介面成員, 介面參數, **typedef**s, 聯**集**s,**結構**s|
 |**可重複**|是|
-|**必要屬性**|**coclass** （當使用類別上）|
-|**無效屬性**|None|
+|**必要屬性**|**coclass**(在類別上使用時)|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

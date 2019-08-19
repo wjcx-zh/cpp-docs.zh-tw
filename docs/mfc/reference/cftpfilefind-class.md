@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 9afe2bf563ffa80a3238548d75efa69178fa1f64
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 2f4a394e29be135cac95edf6f504d8b066f53414
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916060"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506239"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind 類別
 
@@ -35,7 +35,7 @@ class CFtpFileFind : public CFileFind
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|建構 `CFtpFileFind` 物件。|
 
@@ -86,6 +86,7 @@ explicit CFtpFileFind(
 ### <a name="parameters"></a>參數
 
 *pConnection*<br/>
+
           `CFtpConnection` 物件的指標。 您可以藉由呼叫[CInternetSession:: GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)來取得 FTP 連接。
 
 *dwContext*<br/>
@@ -121,7 +122,7 @@ virtual BOOL FindFile(
 
 - INTERNET_FLAG_DONT_CACHE 不會在本機或任何閘道上快取資料。
 
-- INTERNET_FLAG_RAW_DATA 會覆寫預設值, 以傳回原始資料 (FTP 的[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構)。
+- INTERNET_FLAG_RAW_DATA 會覆寫預設值, 以傳回原始資料 (FTP 的[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構)。
 
 - INTERNET_FLAG_SECURE 會使用安全通訊端層或 PCT 來保護網路上的交易。 此旗標僅適用于 HTTP 要求。
 
@@ -129,7 +130,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -149,13 +150,13 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>傳回值
 
-如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
+如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
 
 ### <a name="remarks"></a>備註
 
 呼叫任何屬性函數之前, 您至少必須呼叫此函式一次 (請參閱[CFileFind:: FindNextFile](../../mfc/reference/cfilefind-class.md#findnextfile))。
 
-`FindNextFile`包裝 Win32 函數[FindNextFile](/windows/desktop/api/fileapi/nf-fileapi-findnextfilea)。
+`FindNextFile`包裝 Win32 函數[FindNextFile](/windows/win32/api/fileapi/nf-fileapi-findnextfilew)。
 
 ### <a name="example"></a>範例
 

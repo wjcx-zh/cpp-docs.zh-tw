@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t method [C++]
 ms.assetid: 0c00620a-28d2-4f60-ae4a-1696be36137e
-ms.openlocfilehash: 779fd1008f6763f4b5ca95938018a5129e89aa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3923ee488771e807600069855299fc240b3212
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154873"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498716"
 ---
-# <a name="comptrtcomptrt"></a>_com_ptr_t::_com_ptr_t
+# <a name="_com_ptr_t_com_ptr_t"></a>_com_ptr_t::_com_ptr_t
 
 **Microsoft 專屬**
 
-建構 **_com_ptr_t**物件。
+結構 **_com_ptr_t**物件。
 
 ## <a name="syntax"></a>語法
 
@@ -139,28 +139,28 @@ explicit _com_ptr_t(
 原始的介面指標。
 
 *fAddRef*<br/>
-如果為 TRUE，`AddRef`稱為遞增封裝的介面指標的參考計數。
+若為 TRUE `AddRef` , 則呼叫以遞增封裝介面指標的參考計數。
 
 *cp*<br/>
-A **_com_ptr_t**物件。
+**_Com_ptr_t**物件。
 
 *p*<br/>
-原始的介面指標，它不同的智慧型指標類型的型別 **_com_ptr_t**物件。
+原始介面指標, 其類型與這個 **_com_ptr_t**物件的智慧型指標類型不同。
 
 *varSrc*<br/>
-`_variant_t` 物件。
+          `_variant_t` 物件。
 
 *clsid*<br/>
-`CLSID`的 coclass。
+`CLSID` Coclass 的。
 
 *dwClsContext*<br/>
 執行中的可執行程式碼內容。
 
 *lpcStr*<br/>
-保留的多位元組字串`CLSID`(開頭為"**{**") 或`ProgID`。
+保存`CLSID` (開頭為 " **{** ") 或的`ProgID`多位元組字元串。
 
 *pOuter*<br/>
-外部未知[彙總](/windows/desktop/com/aggregation)。
+[匯總](/windows/win32/com/aggregation)的外部未知。
 
 ## <a name="see-also"></a>另請參閱
 

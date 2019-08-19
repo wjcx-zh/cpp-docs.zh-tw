@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: d493a2d4d1c531250abc1cd60d1d3d5b79dea1b7
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916783"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502844"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 
@@ -54,7 +54,7 @@ class CSplitButton : public CButton
 
 ## <a name="remarks"></a>備註
 
-類別衍生自 [CButton](../../mfc/reference/cbutton-class.md) 類別。`CSplitButton` 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 的按鈕控制項。 當使用者按一下下拉箭號時, 它會顯示自訂功能表。 如需詳細資訊, 請參閱[按鈕樣式](/windows/desktop/Controls/button-styles)中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 樣式。
+類別衍生自 [CButton](../../mfc/reference/cbutton-class.md) 類別。`CSplitButton` 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 的按鈕控制項。 當使用者按一下下拉箭號時, 它會顯示自訂功能表。 如需詳細資訊, 請參閱[按鈕樣式](/windows/win32/Controls/button-styles)中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 樣式。
 
 下圖說明一個對話方塊, 其中包含一個分頁控制項和一個 (1) 分割按鈕控制項。 已按下 (2) 下拉箭號, 並顯示 (3) 子功能表。
 
@@ -144,8 +144,8 @@ afx_msg void OnDropDown(
 
 |參數|描述|
 |---------------|-----------------|
-|*pNMHDR*|在[NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr)結構的指標, 其中包含[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知的相關資訊。|
-|*pResult*|脫銷(未使用; 不會傳回任何值)。[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知的傳回值。|
+|*pNMHDR*|在[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)結構的指標, 其中包含[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的相關資訊。|
+|*pResult*|脫銷(未使用; 不會傳回任何值)。[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的傳回值。|
 
 ### <a name="remarks"></a>備註
 

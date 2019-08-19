@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: a7287b2e3011159573f44e9247e016d81d893491
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
-ms.translationtype: HT
+ms.openlocfilehash: c301766b64af7fc1523b39adad91d9b52a5e88f7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821077"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506601"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog 類別
 
@@ -258,11 +258,11 @@ Windows `CFileDialog` Vista 或更新版本不支援某些方法。 請檢查個
 初始化對話方塊控制項之後, 請呼叫[CFileDialog::D omodal](#domodal)方法來顯示對話方塊, 讓使用者可以輸入路徑和檔案名。 `DoModal`傳回使用者是否已按一下 [確定] (IDOK) 或 [取消] (IDCANCEL) 按鈕。 如果`DoModal`傳回 IDOK, 您可以使用其中一個`CFileDialog`公用成員函式來抓取使用者所放入的資訊。
 
 > [!NOTE]
-> 在 Windows Vista 或更新版本中, 對[IFileDialog:: SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)的多次呼叫會造成錯誤。 `SetFileTypes`針對任何實例`CFileDialog`的第二個呼叫會在 Windows Vista 或更新版本中傳回 E_UNEXPECTED。 某些`CFileDialog`方法函數會`SetFileTypes`呼叫。 例如, `CFileDialog::DoModal`針對相同實例 `CFileDialog`的兩個呼叫會產生[判斷提示](diagnostic-services.md#assert)。
+> 在 Windows Vista 或更新版本中, 對[IFileDialog:: SetFileTypes](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)的多次呼叫會造成錯誤。 `SetFileTypes`針對任何實例`CFileDialog`的第二個呼叫會在 Windows Vista 或更新版本中傳回 E_UNEXPECTED。 某些`CFileDialog`方法函數會`SetFileTypes`呼叫。 例如, `CFileDialog::DoModal`針對相同實例 `CFileDialog`的兩個呼叫會產生[判斷提示](diagnostic-services.md#assert)。
 
 `CFileDialog`包含數個受保護的成員, 可讓您進行共用違規、檔案名驗證和清單方塊變更通知的自訂處理。 這些受保護的成員是回呼函式, 大部分的應用程式都不需要使用, 因為預設處理會自動執行。 這些函式的訊息對應專案並不是必要的, 因為它們都是標準虛擬函數。
 
-您可以使用 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷對話方塊初始化期間是否發生錯誤, 並深入瞭解錯誤。
+您可以使用 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷對話方塊初始化期間是否發生錯誤, 並深入瞭解錯誤。
 
 `CFileDialog`物件的銷毀會自動處理。 您不需要呼叫[CDialog:: EndDialog](../../mfc/reference/cdialog-class.md#enddialog)。
 
@@ -604,7 +604,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
+IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
 
 IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
 
@@ -827,7 +827,7 @@ IFileDialogCustomize* GetIFileDialogCustomize();
 
 僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果您在*bVistaStyle*為 FALSE 時使用此函式, 它會在發行模式中傳回 Null, 並在 debug 模式中擲回判斷提示。
 
-如需`IFileDialogCustomize`介面的詳細資訊, 請參閱[IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
+如需`IFileDialogCustomize`介面的詳細資訊, 請參閱[IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
 
 ### <a name="example"></a>範例
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果不是`CFileDialog` **開啟**的對話方塊, 或*bVistaStyle*設定為 FALSE, 則此函式會傳回 Null。 在這最後一個案例中, 函式只會在發行模式中傳回 Null-在 debug 模式中, 它會擲回判斷提示。
 
-如需`IFileOpenDialog`介面的詳細資訊, 請參閱[IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
+如需`IFileOpenDialog`介面的詳細資訊, 請參閱[IFileOpenDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)。
 
 ### <a name="example"></a>範例
 
@@ -875,7 +875,7 @@ IFileSaveDialog* GetIFileSaveDialog();
 
 僅在 Windows Vista 或更新版本中使用此函式, 並將*bVistaStyle*設定為 TRUE 的物件。 如果不是 [ `CFileDialog` **儲存**] 對話方塊, 或*bVistaStyle*設定為 FALSE, 則此函式會傳回 Null。 在這最後一個案例中, 函式只會在發行模式中傳回 Null-在 debug 模式中, 它會擲回判斷提示。
 
-如需`IFileSaveDialog`介面的詳細資訊, 請參閱[IFileSaveDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog)。
+如需`IFileSaveDialog`介面的詳細資訊, 請參閱[IFileSaveDialog](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifilesavedialog)。
 
 ### <a name="example"></a>範例
 
@@ -1185,7 +1185,7 @@ virtual void OnFileNameChange();
 
 當使用者在 [**開啟**] 或 [**另存**新檔] 對話方塊的 [檔案] 清單中選取新的檔案或資料夾時, 系統會傳送 CDN_SELCHANGE 訊息。 如果您想要執行任何動作來回應此訊息, 請覆寫這個方法。
 
-只有在已開啟 [OFN_EXPLORER] 旗標的情況下建立對話方塊時, 系統才會傳送此訊息。 如需有關通知的詳細資訊, 請參閱[CDN_SELCHANGE](/windows/desktop/dlgbox/cdn-selchange)。 如需 OFN_EXPLORER 旗標的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和[開啟和另存](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)新檔對話方塊。
+只有在已開啟 [OFN_EXPLORER] 旗標的情況下建立對話方塊時, 系統才會傳送此訊息。 如需有關通知的詳細資訊, 請參閱[CDN_SELCHANGE](/windows/win32/dlgbox/cdn-selchange)。 如需 OFN_EXPLORER 旗標的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和[開啟和另存](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)新檔對話方塊。
 
 ##  <a name="onfilenameok"></a>  CFileDialog::OnFileNameOK
 
@@ -1217,7 +1217,7 @@ virtual void OnFolderChange();
 
 在 [開啟] 或 [另存新檔] 對話方塊中開啟新資料夾時, 就會傳送通知訊息。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_FOLDERCHANGE](/windows/desktop/dlgbox/cdn-folderchange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。
+只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_FOLDERCHANGE](/windows/win32/dlgbox/cdn-folderchange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
 
 ##  <a name="oninitdone"></a>CFileDialog:: OnInitDone
 
@@ -1231,7 +1231,7 @@ virtual void OnInitDone();
 
 系統會在系統完成 [**開啟**] 或 [**另存**新檔] 對話方塊中的控制項排列時傳送此通知訊息, 以騰出空間給子對話方塊的控制項。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 系統才會傳送此程式。 如需有關通知的詳細資訊, 請參閱[CDN_INITDONE](/windows/desktop/dlgbox/cdn-initdone)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。
+只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 系統才會傳送此程式。 如需有關通知的詳細資訊, 請參閱[CDN_INITDONE](/windows/win32/dlgbox/cdn-initdone)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
 
 > [!NOTE]
 > Windows Vista 或更新版本的樣式檔案對話方塊不支援此功能。 嘗試在 Windows Vista 或更新版本的樣式檔案對話方塊上使用此函式, 將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。
@@ -1331,7 +1331,7 @@ virtual void OnTypeChange();
 
 當使用者從 [開啟] 或 [另存新檔] 對話方塊的檔案類型清單中選取新的檔案類型時, 就會傳送通知訊息。
 
-只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_TYPECHANGE](/windows/desktop/dlgbox/cdn-typechange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/desktop/dlgbox/open-and-save-as-dialog-boxes)。
+只有在使用 OFN_EXPLORER 樣式建立對話方塊時, 才會傳送通知。 如需有關通知的詳細資訊, 請參閱[CDN_TYPECHANGE](/windows/win32/dlgbox/cdn-typechange)。 如需 OFN_EXPLORER 樣式的詳細資訊, 請參閱[OPENFILENAME](/windows/win32/api/commdlg/ns-commdlg-openfilenamew)結構和 [[開啟] 和 [另存新檔] 對話方塊](/windows/win32/dlgbox/open-and-save-as-dialog-boxes)。
 
 ##  <a name="removecontrolitem"></a>  CFileDialog::RemoveControlItem
 
@@ -1594,7 +1594,7 @@ void SetTemplate(
 系統將只會使用其中一個指定的範本。 系統會根據 OFN_EXPLORER 樣式和應用程式執行所在的作業系統, 決定要使用哪一個範本。 藉由指定非 Explorer 和 Explorer 樣式的範本, 就可以輕鬆地支援 Windows NT 3.51、Windows NT 4.0 和更新版本, 以及 Windows 95 和更新版本。
 
 > [!NOTE]
-> Windows Vista 或更新版本的樣式檔案對話方塊不支援此功能。 嘗試在 Windows Vista 或更新版本的 [樣式檔案] 對話方塊中使用此功能, 將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 另一種方式是使用自訂的對話方塊。 如需使用自訂`CFileDialog`的詳細資訊, 請參閱[IFileDialogCustomize](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
+> Windows Vista 或更新版本的樣式檔案對話方塊不支援此功能。 嘗試在 Windows Vista 或更新版本的 [樣式檔案] 對話方塊中使用此功能, 將會擲回[CNotSupportedException](../../mfc/reference/cnotsupportedexception-class.md)。 另一種方式是使用自訂的對話方塊。 如需使用自訂`CFileDialog`的詳細資訊, 請參閱[IFileDialogCustomize](/windows/win32/api/shobjidl_core/nn-shobjidl_core-ifiledialogcustomize)。
 
 ##  <a name="startvisualgroup"></a>CFileDialog:: StartVisualGroup
 
@@ -1628,7 +1628,7 @@ void UpdateOFNFromShellDialog();
 
 在 Windows Vista 之前的 Windows 版本中, 成員[OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\))資料結構會持續與的狀態`CFileDialog`同步處理。 對[m_ofn](#m_ofn)成員變數所做的任何變更都會直接影響對話方塊的狀態。 此外, 對對話方塊狀態所做的任何變更都會立即更新 m_ofn 成員變數。
 
-在 Windows Vista 或更新版本中`m_ofn` , 資料結構不會自動更新。 若要保證`m_ofn`成員變數中資料的精確度, 您應該在存取資料之前`UpdateOFNFromShellDialog`呼叫函數。 在處理[IFileDialog:: OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)時, Windows 會自動呼叫此函式。
+在 Windows Vista 或更新版本中`m_ofn` , 資料結構不會自動更新。 若要保證`m_ofn`成員變數中資料的精確度, 您應該在存取資料之前`UpdateOFNFromShellDialog`呼叫函數。 在處理[IFileDialog:: OnFileOK](/windows/win32/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok)時, Windows 會自動呼叫此函式。
 
 如需如何在 Windows Vista 或更新`CFileDialog`版本中使用類別的詳細資訊, 請參閱[CFileDialog 類別](../../mfc/reference/cfiledialog-class.md)。
 

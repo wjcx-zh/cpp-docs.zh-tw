@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 07fd470a6aeab0575f2733d72650bd695b8e2752
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: f0b732efdce5cf04349f468363b8d86621d90204
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915680"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496299"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool 類別
 
@@ -78,7 +78,7 @@ class CThreadPool : public IThreadPoolConfig
 
 建立執行緒之後, 會立即在與該執行緒`Initialize`相關聯的物件上呼叫 Worker::。 線上程的銷毀之前, 會立即呼叫 Worker`Terminate` ::。 這兩種方法都必須接受**void** <strong>\*</strong>引數。 這個引數的值會透過[CThreadPool:: Initialize](#initialize)的*pvWorkerParam*參數傳遞至執行緒集區。
 
-當佇列和背景工作執行緒中有工作專案可用於工作時, 背景工作執行緒會從佇列提取專案, 並呼叫`Execute`該執行緒之背景*工作*物件的方法。 然後會將三個專案傳遞至方法: 佇列中的專案、 `pvWorkerParam`傳遞給*worker*:: `Initialize`和*worker*:: `Terminate`, 以及用於 IO 完成埠佇列之[重疊](/windows/desktop/api/minwinbase/ns-minwinbase-overlapped)結構的指標。
+當佇列和背景工作執行緒中有工作專案可用於工作時, 背景工作執行緒會從佇列提取專案, 並呼叫`Execute`該執行緒之背景*工作*物件的方法。 然後會將三個專案傳遞至方法: 佇列中的專案、 `pvWorkerParam`傳遞給*worker*:: `Initialize`和*worker*:: `Terminate`, 以及用於 IO 完成埠佇列之[重疊](/windows/win32/api/minwinbase/ns-minwinbase-overlapped)結構的指標。
 
 *Worker*類別會藉由提供 Typedef, *worker*:: `RequestType`, 宣告將線上程集區上排入佇列的專案類型。 這個類型必須能夠在 ULONG_PTR 中來回轉換。
 
@@ -344,7 +344,7 @@ void Shutdown(DWORD dwMaxWait = 0) throw();
 
 ### <a name="remarks"></a>備註
 
-這個方法會將關閉要求張貼至集區中的所有線程。 如果超時時間過期, 這個方法會在未結束的任何執行緒上呼叫[TerminateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-terminatethread) 。 這個方法是從類別的「析構函式」自動呼叫。
+這個方法會將關閉要求張貼至集區中的所有線程。 如果超時時間過期, 這個方法會在未結束的任何執行緒上呼叫[TerminateThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-terminatethread) 。 這個方法是從類別的「析構函式」自動呼叫。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -20,16 +20,16 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: 66ff3d684dba6b876ae94699209a43aaf4db5f23
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0676f4896401ab777570666236c4639ad94c3a05
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916940"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503056"
 ---
 # <a name="colevariant-class"></a>COleVariant 類別
 
-封裝 [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) 資料類型。
+封裝 [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) 資料類型。
 
 ## <a name="syntax"></a>語法
 
@@ -68,14 +68,14 @@ class COleVariant : public tagVARIANT
 
 ## <a name="remarks"></a>備註
 
-此資料類型用於 OLE automation 中。 具體而言, [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)結構包含 VARIANT 結構陣列的指標。 結構是用來將參數傳遞給[IDispatch:: Invoke。](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
+此資料類型用於 OLE automation 中。 具體而言, [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)結構包含 VARIANT 結構陣列的指標。 結構是用來將參數傳遞給[IDispatch:: Invoke。](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke) `DISPPARAMS`
 
 > [!NOTE]
 > 這個類別衍生自`VARIANT`結構。 這`COleVariant`表示您可以在呼叫`VARIANT`的參數中傳遞, 而且`VARIANT`結構的資料成員是可存取的資料成員`COleVariant`。
 
 [COleCurrency](../../mfc/reference/colecurrency-class.md)和[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)這兩個相關的 MFC 類別會封裝 variant 資料類型`VT_CY`CURRENCY () 和`VT_DATE`DATE ()。 在 DAO 類別中廣泛使用類別;如需此類別的一般用法,例如 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md) 和 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)，請參閱這些`COleVariant`類別。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [CURRENCY](/windows/desktop/api/wtypes/ns-wtypes-tagcy)、 [DISPPARAMS](/windows/desktop/api/oaidl/ns-oaidl-tagdispparams)和[IDispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)、 [CURRENCY](/windows/win32/api/wtypes/ns-wtypes-cy)、 [DISPPARAMS](/windows/win32/api/oaidl/ns-oaidl-tagdispparams)和[IDispatch:: Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)專案。
 
 如需有關`COleVariant`類別及其在 ole automation 中使用之用法的詳細資訊, 請參閱[automation](../../mfc/automation.md)一文中的「在 ole automation 中傳遞參數」。
 
@@ -91,7 +91,7 @@ class COleVariant : public tagVARIANT
 
 ##  <a name="attach"></a>COleVariant:: Attach
 
-呼叫此函式可將指定的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)物件附加至`COleVariant`目前的物件。
+呼叫此函式可將指定的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)物件附加至`COleVariant`目前的物件。
 
 ```
 void Attach(VARIANT& varSrc);
@@ -106,7 +106,7 @@ void Attach(VARIANT& varSrc);
 
 此函式會將*varSrc*的 VARTYPE 設定為 VT_EMPTY。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)和[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)和[VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)專案。
 
 ##  <a name="colevariant"></a>COleVariant:: COleVariant
 
@@ -170,7 +170,7 @@ COleVariant(LPCITEMIDLIST pidl);
 要複製到新`COleVariant`物件中的 [CLongBinary](../../mfc/reference/clongbinary-class.md) 物件。
 
 *pidl*<br/>
-要複製到新 `COleVariant`物件中之 [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) 結構的指標。
+要複製到新 `COleVariant`物件中之 [ITEMIDLIST](/windows/win32/api/shtypes/ns-shtypes-itemidlist) 結構的指標。
 
 ### <a name="remarks"></a>備註
 
@@ -206,7 +206,7 @@ COleVariant(LPCITEMIDLIST pidl);
 
 - **COleVariant (** *lbSrc* **)** `CLongBinary`將物件複製到新的物件 VT_EMPTY。
 
-如需 SCODE 的詳細資訊, 請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/desktop/com/structure-of-com-error-codes)。
+如需 SCODE 的詳細資訊, 請參閱 Windows SDK 中[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ##  <a name="changetype"></a>COleVariant:: ChangeType
 
@@ -222,11 +222,11 @@ void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 這個`COleVariant`物件的 VARTYPE。
 
 *pSrc*<br/>
-要轉換之[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)物件的指標。 如果此值為 Null, 則`COleVariant`會使用這個物件做為轉換的來源。
+要轉換之[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)物件的指標。 如果此值為 Null, 則`COleVariant`會使用這個物件做為轉換的來源。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)和[VariantChangeType](/windows/desktop/api/oleauto/nf-oleauto-variantchangetype)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)、 [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)和[VariantChangeType](/windows/win32/api/oleauto/nf-oleauto-variantchangetype)專案。
 
 ##  <a name="clear"></a>COleVariant:: Clear
 
@@ -244,7 +244,7 @@ void Clear();
 
 ##  <a name="detach"></a>COleVariant::D etach
 
-從這個`COleVariant`物件卸離基礎[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)物件。
+從這個`COleVariant`物件卸離基礎[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)物件。
 
 ```
 VARIANT Detach();
@@ -257,7 +257,7 @@ VARIANT Detach();
 > [!NOTE]
 >  呼叫之後`VariantClear` `VARIANT` , 呼叫端必須負責在產生的結構上呼叫。 `Detach`
 
-如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)和[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)、 [VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)和[VariantClear](/windows/win32/api/oleauto/nf-oleauto-variantclear)專案。
 
 ##  <a name="getbytearrayfromvariantarray"></a>COleVariant:: GetByteArrayFromVariantArray
 
@@ -344,7 +344,7 @@ const COleVariant& operator=(const CLongBinary& lbSrc);
 
 - **operator = (** *lbSrc* **)** 將[CLongBinary](../../mfc/reference/clongbinary-class.md)物件複製到這個`COleVariant`物件。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)和[VARENUM](/windows/desktop/api/wtypes/ne-wtypes-varenum)專案。
+如需詳細資訊, 請參閱 Windows SDK 中的[VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant)和[VARENUM](/windows/win32/api/wtypes/ne-wtypes-varenum)專案。
 
 ##  <a name="operator_eq_eq"></a>COleVariant:: operator = =
 

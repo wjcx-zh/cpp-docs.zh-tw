@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 2bc962407bac947f475368b43f5039bca3c1da1e
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: a37ef47a4ea89d9ec24fac417e5b715bd2602fd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915820"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496935"
 ---
 # <a name="cdacl-class"></a>CDacl 類別
 
@@ -66,7 +66,7 @@ class CDacl : public CAcl
 
 使用提供的類別方法, 從`CDacl`物件建立、新增、移除和刪除 ace。 另請參閱[AtlGetDacl](security-global-functions.md#atlgetdacl)和[AtlSetDacl](security-global-functions.md#atlsetdacl)。
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -121,7 +121,7 @@ bool AddAllowedAce(
 
 `CDacl`物件包含零個或多個 ace (存取控制專案), 用以識別可以存取物件的使用者和群組。 這個方法會加入允許存取`CDacl`物件的 ACE。
 
-如需可在`AceFlags`參數中設定之各種旗標的說明, 請參閱 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)。
+如需可在`AceFlags`參數中設定之各種旗標的說明, 請參閱 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)。
 
 ##  <a name="adddeniedace"></a>  CDacl::AddDeniedAce
 
@@ -144,8 +144,7 @@ bool AddDeniedAce(
 ### <a name="parameters"></a>參數
 
 *rSid*<br/>
-
-          `CSid` 物件。
+`CSid` 物件。
 
 *AccessMask*<br/>
 指定要拒絕之指定`CSid`物件的存取權限遮罩。
@@ -167,7 +166,7 @@ bool AddDeniedAce(
 
 `CDacl`物件包含零個或多個 ace (存取控制專案), 用以識別可以存取物件的使用者和群組。 這個方法會加入一個 ACE, 以拒絕對`CDacl`物件的存取。
 
-如需可在`AceFlags`參數中設定之各種旗標的說明, 請參閱 [ACE_HEADER](/windows/desktop/api/winnt/ns-winnt-ace_header)。
+如需可在`AceFlags`參數中設定之各種旗標的說明, 請參閱 [ACE_HEADER](/windows/win32/api/winnt/ns-winnt-ace_header)。
 
 ##  <a name="cdacl"></a>  CDacl::CDacl
 
@@ -265,7 +264,7 @@ void RemoveAllAces() throw();
 
 [安全性範例](../../overview/visual-cpp-samples.md)<br/>
 [CAcl 類別](../../atl/reference/cacl-class.md)<br/>
-[Acl](/windows/desktop/SecAuthZ/access-control-lists)<br/>
-[A](/windows/desktop/SecAuthZ/access-control-entries)<br/>
+[Acl](/windows/win32/SecAuthZ/access-control-lists)<br/>
+[A](/windows/win32/SecAuthZ/access-control-entries)<br/>
 [類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - delete keyword [C++], deallocating objects
 - delete keyword [C++]
 ms.assetid: de39c900-3f57-489c-9598-dcb73c4b3930
-ms.openlocfilehash: d6e1be0b06beed8cf68a1ec90571281b592af21d
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
-ms.translationtype: HT
+ms.openlocfilehash: 3b00bf78d286ba530dee85240236a2a9ea171113
+ms.sourcegitcommit: a146b169664c001406a0cccc7fbda1b8d7be5078
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980458"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69024639"
 ---
 # <a name="delete-operator-c"></a>delete 運算子 (C++)
 
@@ -21,7 +21,8 @@ ms.locfileid: "68980458"
 
 ## <a name="syntax"></a>語法
 
-> [`::`] `delete` *cast*運算式[`::`] cast`delete []` *運算式*
+> [`::`] `delete` *cast 運算式*\
+> [`::`] `delete []` *cast 運算式*
 
 ## <a name="remarks"></a>備註
 
@@ -35,7 +36,7 @@ delete MyDialog;
 
 在不是以**new**配置之物件的指標上使用**delete** , 會產生無法預期的結果。 不過, 您可以在值為0的指標上使用**delete** 。 這項布建表示, 當**new**在失敗時傳回0時, 刪除失敗之**新**作業的結果是無害的。 如需詳細資訊, 請參閱[new 和 Delete 運算子](../cpp/new-and-delete-operators.md)。
 
-**New**和**delete**運算子也可以用於內建類型, 包括陣列。 如果 `pointer` 指的是陣列，請在 `pointer` 前面放置空大括號：
+**New**和**delete**運算子也可以用於內建類型, 包括陣列。 如果`pointer`參考陣列, 請在之前`pointer`放置空的`[]`括弧 ():
 
 ```cpp
 int* set = new int[100];
@@ -89,10 +90,10 @@ int main()
 
 Delete 運算子會叫用函數**operator delete**。
 
-對於不屬於類別類型 ([類別](../cpp/class-cpp.md)、[結構](../cpp/struct-cpp.md)或[等位](../cpp/unions.md)) 的物件, 會叫用全域 delete 運算子。 對於類別類型的物件，如果刪除運算式是以一元範圍解析運算子 (::) 開頭，則會在全域範圍中解析解除配置函式的名稱。 否則，如果指標不是 Null，delete 運算子會在解除配置記憶體之前叫用物件的解構函式。 delete 運算子可以依類別來定義；如果指定類別沒有這類定義，會叫用全域 delete 運算子。 如果使用刪除運算式來解除配置靜態類型包含虛擬解構函式的類別物件，則會透過該物件之動態類型的虛擬解構函式來解析解除配置函式。
+對於不屬於類別類型 ([類別](../cpp/class-cpp.md)、[結構](../cpp/struct-cpp.md)或[等位](../cpp/unions.md)) 的物件, 會叫用全域 delete 運算子。 對於類別類型的物件, 如果刪除運算式是以一元範圍解析運算子 (`::`) 開頭, 則會在全域範圍中解析解除配置函式的名稱。 否則，如果指標不是 Null，delete 運算子會在解除配置記憶體之前叫用物件的解構函式。 delete 運算子可以依類別來定義；如果指定類別沒有這類定義，會叫用全域 delete 運算子。 如果使用刪除運算式來解除配置靜態類型包含虛擬解構函式的類別物件，則會透過該物件之動態類型的虛擬解構函式來解析解除配置函式。
 
 ## <a name="see-also"></a>另請參閱
 
-[具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)<br/>
-[關鍵字](../cpp/keywords-cpp.md)<br/>
+[具有一元運算子的運算式](../cpp/expressions-with-unary-operators.md)\
+[關鍵字](../cpp/keywords-cpp.md)\
 [new 和 delete 運算子](../cpp/new-and-delete-operators.md)

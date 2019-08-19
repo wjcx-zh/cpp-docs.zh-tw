@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 4e5d06ca01201bf415afedbe6f6e5bca096f68fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 88096747f45d4a81c873837cdd4975da9d8c24e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915583"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496288"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups 類別
 
@@ -67,11 +67,11 @@ class CTokenGroups
 
 ## <a name="remarks"></a>備註
 
-[存取權杖](/windows/desktop/SecAuthZ/access-tokens)是一種物件, 可描述處理常式或執行緒的安全性內容, 並配置給每位登入 Windows 系統的使用者。
+[存取權杖](/windows/win32/SecAuthZ/access-tokens)是一種物件, 可描述處理常式或執行緒的安全性內容, 並配置給每位登入 Windows 系統的使用者。
 
-類別是 [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) 結構的包裝函式, 其中包含存取權杖中的群組安全識別碼 (sid) 的相關資訊。`CTokenGroups`
+類別是 [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 結構的包裝函式, 其中包含存取權杖中的群組安全識別碼 (sid) 的相關資訊。`CTokenGroups`
 
-如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/desktop/SecAuthZ/access-control)。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
@@ -95,7 +95,7 @@ void Add(const TOKEN_GROUPS& rTokenGroups) throw(...);
 要與`CSid`物件產生關聯的屬性。
 
 *rTokenGroups*<br/>
-[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)結構。
+[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)結構。
 
 ### <a name="remarks"></a>備註
 
@@ -114,7 +114,7 @@ CTokenGroups(const TOKEN_GROUPS& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-用`CTokenGroups`來建立 `CTokenGroups`物件的物件或 [TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups) 結構。
+用`CTokenGroups`來建立 `CTokenGroups`物件的物件或 [TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups) 結構。
 
 ### <a name="remarks"></a>備註
 
@@ -191,7 +191,7 @@ const TOKEN_GROUPS* GetPTOKEN_GROUPS() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-抓取屬於`CTokenGroups`存取權杖物件之[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)結構的指標。
+抓取屬於`CTokenGroups`存取權杖物件之[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)結構的指標。
 
 ##  <a name="getsidsandattributes"></a>  CTokenGroups::GetSidsAndAttributes
 
@@ -253,7 +253,7 @@ CTokenGroups& operator= (const CTokenGroups& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-要指派`CTokenGroups`給 物件的物件或[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)`CTokenGroups`結構。
+要指派`CTokenGroups`給 物件的物件或[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)`CTokenGroups`結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -269,7 +269,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ### <a name="remarks"></a>備註
 
-將值轉換成[TOKEN_GROUPS](/windows/desktop/api/winnt/ns-winnt-token_groups)結構的指標。
+將值轉換成[TOKEN_GROUPS](/windows/win32/api/winnt/ns-winnt-token_groups)結構的指標。
 
 ## <a name="see-also"></a>另請參閱
 

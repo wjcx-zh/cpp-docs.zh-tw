@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: d296185fe2ea2216f4abe17b191f71b6fa36e1f9
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: def0c55ff1faf12729226aa445c9614119c546c4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916715"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502668"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc 類別
 
@@ -88,7 +88,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 ### <a name="parameters"></a>參數
 
 *preo*<br/>
-描述 OLE 專案之[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)結構的指標。 新`CRichEditCntrItem`的物件是以這個 OLE 專案為圍繞。 如果*preo*為 Null, 新的用戶端專案會是空的。
+描述 OLE 專案之[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構的指標。 新`CRichEditCntrItem`的物件是以這個 OLE 專案為圍繞。 如果*preo*為 Null, 新的用戶端專案會是空的。
 
 ### <a name="return-value"></a>傳回值
 
@@ -98,7 +98,7 @@ virtual CRichEditCntrItem* CreateClientItem(REOBJECT* preo = NULL) const = 0;
 
 此函式不會執行任何 OLE 初始化。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[REOBJECT](/windows/desktop/api/richole/ns-richole-reobject)結構。
+如需詳細資訊, 請參閱 Windows SDK 中的[REOBJECT](/windows/win32/api/richole/ns-richole-reobject)結構。
 
 ##  <a name="getstreamformat"></a>CRichEditDoc:: GetStreamFormat
 

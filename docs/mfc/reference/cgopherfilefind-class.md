@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 31b013a14f24dcd59b9e7f23bc5284d882039990
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 55c40fc04934f00ccb541a01cce611d9532bee1a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916181"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506179"
 ---
 # <a name="cgopherfilefind-class"></a>CGopherFileFind 類別
 
@@ -161,7 +161,7 @@ virtual BOOL FindFile(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果成功則為非零；否則為 0。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
@@ -177,7 +177,7 @@ virtual BOOL FindNextFile();
 
 ### <a name="return-value"></a>傳回值
 
-如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
+如果有多個檔案, 則為非零值;如果找到的檔案是目錄中的最後一個檔案, 或如果發生錯誤, 則為零。 若要取得延伸錯誤資訊, 請呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。 如果找到的檔案是目錄中的最後一個檔案, 或如果找不到相符的檔案, 則`GetLastError`函式會傳回 ERROR_NO_MORE_FILES。
 
 ##  <a name="getcreationtime"></a>CGopherFileFind:: GetCreationTime
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含建立檔案的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含建立檔案的時間。
 
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
@@ -205,7 +205,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 呼叫`GetCreationTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlastaccesstime"></a>  CGopherFileFind::GetLastAccessTime
 
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含上次存取檔案的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含上次存取檔案的時間。
 
 ### <a name="return-value"></a>傳回值
 
@@ -233,7 +233,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 呼叫`GetLastAccessTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlastwritetime"></a>CGopherFileFind:: GetLastWriteTime
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>參數
 
 *pTimeStamp*<br/>
-[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含檔案上次被寫入的時間。
+[FILETIME](/windows/win32/api/minwinbase/ns-minwinbase-filetime)結構的指標, 其中包含檔案上次被寫入的時間。
 
 *refTime*<br/>
 [CTime](../../atl-mfc-shared/reference/ctime-class.md)物件的參考。
@@ -261,7 +261,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 呼叫`GetLastWriteTime`之前, 您必須至少呼叫[FindNextFile](#findnextfile)一次。
 
 > [!NOTE]
->  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[Win32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/desktop/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
+>  並非所有檔案系統都使用相同的語義來執行此函式所傳回的時間戳記。 如果基礎檔案系統或伺服器不支援保留時間屬性, 則此函式可能會傳回其他時間戳記函式所傳回的相同值。 如需時間格式的詳細資訊, 請參閱[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)結構。 在某些作業系統上, 所傳回的時間會是該檔案所在的本機時區。 如需詳細資訊, 請參閱 Win32 [FileTimeToLocalFileTime](/windows/win32/api/fileapi/nf-fileapi-filetimetolocalfiletime) API。
 
 ##  <a name="getlength"></a>CGopherFileFind:: GetLength
 
@@ -277,7 +277,7 @@ virtual ULONGLONG GetLength() const;
 
 ### <a name="remarks"></a>備註
 
-`GetLength`使用 Win32 結構[WIN32_FIND_DATA](/windows/desktop/api/minwinbase/ns-minwinbase-win32_find_dataa)來取得檔案大小的值 (以位元組為單位)。
+`GetLength`使用 Win32 結構[WIN32_FIND_DATA](/windows/win32/api/minwinbase/ns-minwinbase-win32_find_dataw)來取得檔案大小的值 (以位元組為單位)。
 
 > [!NOTE]
 >  從 MFC 7.0, `GetLength`支援64位整數類型。 先前的現有程式碼 (使用這個較新版本的程式庫所建立) 可能會導致截斷警告。

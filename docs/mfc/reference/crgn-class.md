@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 66721f34a8ac2b6dac6addcfa04a88b46a37ee60
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 34dcc618f603302c5598e42588ffad78d61ee222
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916835"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502718"
 ---
 # <a name="crgn-class"></a>CRgn 類別
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|設定物件, 使其相當於兩個指定`CRgn`之物件的聯集。 `CRgn`|
 |[CRgn::CopyRgn](#copyrgn)|設定物件, 使其成為指定`CRgn`之物件的複本。 `CRgn`|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|初始化具有橢圓形區域的物件。`CRgn`|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|使用[矩形](/windows/desktop/api/windef/ns-windef-tagrect)結構所定義的橢圓形區域, 初始化物件。`CRgn`|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|使用[矩形](/windows/win32/api/windef/ns-windef-tagrect)結構所定義的橢圓形區域, 初始化物件。`CRgn`|
 |[CRgn::CreateFromData](#createfromdata)|從指定的區域和轉換資料建立區域。|
 |[CRgn::CreateFromPath](#createfrompath)|從選取的路徑建立區域到指定的裝置內容。|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|使用多邊形區域初始化物件。`CRgn` 系統會在必要時自動關閉多邊形, 方法是從最後一個頂點繪製一條線到第一個。|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|使用由一系列封閉多邊形組成的區域, 初始化物件。`CRgn` 多邊形可能不相鄰, 或可能會重迭。|
 |[CRgn::CreateRectRgn](#createrectrgn)|使用矩形區域初始化物件。`CRgn`|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|使用[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構所定義的矩形區域, 初始化物件。`CRgn`|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|使用由[矩形](/windows/win32/api/windef/ns-windef-rect)結構 t) 所定義的矩形區域, 初始化物件。`CRgn`|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|使用具有圓角的矩形區域, 初始化物件。`CRgn`|
 |[CRgn::EqualRgn](#equalrgn)|檢查兩`CRgn`個物件, 判斷它們是否相等。|
 |[CRgn::FromHandle](#fromhandle)|當指定 Windows 區域的`CRgn`控制碼時, 傳回物件的指標。|
@@ -97,7 +97,7 @@ class CRgn : public CGdiObject
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CRgn:: operator HRGN](#operator_hrgn)|傳回包含在`CRgn`物件中的 Windows 控制碼。|
 
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>參數
 
 *lpXForm*<br/>
-指向定義要在區域上執行之轉換的[XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)資料結構。 如果此指標為 Null, 則會使用身分識別轉換。
+指向[XFORM](/windows/win32/api/wingdi/ns-wingdi-xform)ata 結構, 其定義要在區域上執行的轉換。 如果此指標為 Null, 則會使用身分識別轉換。
 
 *nCount*<br/>
 指定*pRgnData*所指向的位元組數目。
 
 *pRgnData*<br/>
-指向包含區域資料的[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)資料結構。
+指向包含區域資料的[RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata)資料結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>參數
 
 *lpRgnData*<br/>
-指向接收資訊的[RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-rgndata)資料結構。 如果這個參數是 Null, 則傳回值會包含區域資料所需的位元組數目。
+指向接收資訊的[RGNDATA](/windows/win32/api/wingdi/ns-wingdi-rgndata)資料結構。 如果這個參數是 Null, 則傳回值會包含區域資料所需的位元組數目。
 
 *nCount*<br/>
 指定*lpRgnData*緩衝區的大小 (以位元組為單位)。
@@ -746,7 +746,7 @@ operator HRGN() const;
 
 這個運算子是一個轉型運算子, 可支援直接使用 HRGN 物件。
 
-如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/desktop/gdi/graphic-objects)一文。
+如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/win32/gdi/graphic-objects)一文。
 
 ##  <a name="ptinregion"></a>CRgn::P tInRegion
 

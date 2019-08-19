@@ -3858,6 +3858,8 @@
           href: compiler-warnings/compiler-warning-level-1-c4581.md
         - name: 編譯器警告 (層級 1) C4584
           href: compiler-warnings/compiler-warning-level-1-c4584.md
+        - name: 編譯器警告 (層級 4) C4596
+          href: compiler-warnings/c4596.md
     - name: 編譯器警告 C4600 至 C4799
       expanded: false
       items:

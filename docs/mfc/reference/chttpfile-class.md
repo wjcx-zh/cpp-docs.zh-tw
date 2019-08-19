@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: ff050a89a10c68c639c141891dd51b1b2d58e105
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 0c8c401b43361a5e1472e3470f5ea452c91b957f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916003"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505968"
 ---
 # <a name="chttpfile-class"></a>CHttpFile 類別
 
@@ -126,7 +126,7 @@ BOOL AddRequestHeaders(
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
@@ -198,10 +198,10 @@ BOOL EndRequest(
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-描述作業的旗標。 如需適當旗標的清單, 請參閱 Windows SDK 中的[HttpEndRequest](/windows/desktop/api/wininet/nf-wininet-httpendrequesta) 。
+描述作業的旗標。 如需適當旗標的清單, 請參閱 Windows SDK 中的[HttpEndRequest](/windows/win32/api/wininet/nf-wininet-httpendrequestw) 。
 
 *lpBuffIn*<br/>
-已初始化[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa)的指標, 其描述用於作業的輸入緩衝區。
+已初始化[INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw)的指標, 其描述用於作業的輸入緩衝區。
 
 *dwContext*<br/>
 作業的內容識別碼`CHttpFile` 。 如需此參數的詳細資訊, 請參閱備註。
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - 通常, 應用程式會查詢回應標頭, 但應用程式也可以使用此旗標來查詢要求標頭。
 
-- HTTP_QUERY_FLAG_SYSTEMTIME, 其值為日期/時間字串的標頭 (例如「上次修改時間」), 此旗標會以不需要應用程式剖析資料的標準 Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構傳回標頭值。 如果您使用這個旗標, 您可能會想要`SYSTEMTIME`使用函式的覆寫。
+- HTTP_QUERY_FLAG_SYSTEMTIME, 其值為日期/時間字串的標頭 (例如「上次修改時間」), 此旗標會以不需要應用程式剖析資料的標準 Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)結構傳回標頭值。 如果您使用這個旗標, 您可能會想要`SYSTEMTIME`使用函式的覆寫。
 
 - HTTP_QUERY_FLAG_NUMBER, 其值為數字的標頭 (例如狀態碼), 此旗標會將資料傳回為32位數位。
 
@@ -315,11 +315,11 @@ BOOL QueryInfo(
 索引值。 請參閱*lpdwIndex*。
 
 *pSysTime*<br/>
-Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)結構的指標。
+Win32 [SYSTEMTIME](/windows/win32/api/minwinbase/ns-minwinbase-systemtime)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
@@ -398,7 +398,7 @@ BOOL QueryInfoStatusCode(DWORD& dwStatusCode) const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
+如果成功則為非零；否則為 0。 如果呼叫失敗, 則可以呼叫 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)來判斷錯誤的原因。
 
 ### <a name="remarks"></a>備註
 
@@ -485,13 +485,13 @@ BOOL SendRequestEx(
 要在要求中傳送的位元組數目。
 
 *dwFlags*<br/>
-描述作業的旗標。 如需適當旗標的清單, 請參閱 Windows SDK 中的[HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) 。
+描述作業的旗標。 如需適當旗標的清單, 請參閱 Windows SDK 中的[HttpSendRequestEx](/windows/win32/api/wininet/nf-wininet-httpsendrequestexw) 。
 
 *dwContext*<br/>
 作業的內容識別碼`CHttpFile` 。 如需此參數的詳細資訊, 請參閱備註。
 
 *lpBuffIn*<br/>
-已初始化[INTERNET_BUFFERS](/windows/desktop/api/wininet/ns-wininet-internet_buffersa)的指標, 其描述用於作業的輸入緩衝區。
+已初始化[INTERNET_BUFFERS](/windows/win32/api/wininet/ns-wininet-internet_buffersw)的指標, 其描述用於作業的輸入緩衝區。
 
 *lpBuffOut*<br/>
 已初始化 INTERNET_BUFFERS 的指標, 其描述用於作業的輸出緩衝區。

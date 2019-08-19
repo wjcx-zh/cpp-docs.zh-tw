@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 6c419081a649fddd65120270decb0cb57ee743fa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916192"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505946"
 ---
 # <a name="cimagelist-class"></a>CImageList 類別
 
@@ -269,7 +269,7 @@ CImageList();
 
 ##  <a name="copy"></a>CImageList:: Copy
 
-此成員函式會執行 Win32 函數[ImageList_Copy](/windows/desktop/api/commctrl/nf-commctrl-imagelist_copy)的行為, 如 Windows SDK 中所述。
+此成員函式會執行 Win32 函數[ImageList_Copy](/windows/win32/api/commctrl/nf-commctrl-imagelist_copy)的行為, 如 Windows SDK 中所述。
 
 ```
 BOOL Copy(
@@ -402,8 +402,7 @@ BOOL Create(CImageList* pImageList);
 第二個影像 y 軸與第一個影像之間的位移 (以圖元為單位)。
 
 *pImageList*<br/>
-
-          `CImageList` 物件的指標。
+`CImageList` 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -635,16 +634,16 @@ BOOL DrawEx(
 要在指定的裝置內容中繪製的位置。
 
 *sz*<br/>
-相對於影像左上角繪製之影像部分的大小。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)的*dx*和*dy* 。
+相對於影像左上角繪製之影像部分的大小。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)的*dx*和*dy* 。
 
 *clrBk*<br/>
-影像的背景色彩。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)的*rgbBk* 。
+影像的背景色彩。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)的*rgbBk* 。
 
 *clrFg*<br/>
-影像的前景色彩。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)的*rgbFg* 。
+影像的前景色彩。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)的*rgbFg* 。
 
 *nStyle*<br/>
-指定繪製樣式的旗標。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/desktop/api/commctrl/nf-commctrl-imagelist_drawex)的*fStyle* 。
+指定繪製樣式的旗標。 請參閱 Windows SDK 中[ImageList_DrawEx](/windows/win32/api/commctrl/nf-commctrl-imagelist_drawex)的*fStyle* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -683,7 +682,7 @@ BOOL DrawIndirect(
 ### <a name="parameters"></a>參數
 
 *pimldp*<br/>
-[IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)結構的指標, 其中包含繪製作業的相關資訊。
+[IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)結構的指標, 其中包含繪製作業的相關資訊。
 
 *pDC*<br/>
 目的地裝置內容的指標。 當您完成此[CDC](../../mfc/reference/cdc-class.md)物件時, 必須將其刪除。
@@ -695,7 +694,7 @@ BOOL DrawIndirect(
 包含將繪製影像之 x 和 y 座標的[點](/previous-versions/dd162805\(v=vs.85\))結構。
 
 *sz*<br/>
-[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構, 指出要繪製的影像大小。
+[大小](/windows/win32/api/windef/ns-windef-size)結構, 指出要繪製的影像大小。
 
 *ptOrigin*<br/>
 包含 x 和 y 座標的[POINT](/previous-versions/dd162805\(v=vs.85\))結構, 指定相對於影像本身的繪圖作業的左上角。 不會繪製位於 x 座標左邊且高於 y 座標的影像圖元。
@@ -703,12 +702,12 @@ BOOL DrawIndirect(
 *fStyle*<br/>
 指定繪製樣式的旗標, 並可選擇是否要重迭影像。 如需覆迭影像的詳細資訊, 請參閱備註一節。 MFC 預設實 ILD_NORMAL 會使用影像清單的背景色彩繪製影像。 如果背景色彩是 CLR_NONE 值, 則會使用遮罩以透明的方式繪製影像。
 
-[IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)結構的*fStyle*成員底下會描述其他可能的樣式。
+[IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)結構的*fStyle*成員底下會描述其他可能的樣式。
 
 *dwRop*<br/>
 指定點陣操作程式碼的值。 這些程式碼會定義來源矩形的色彩資料如何與目的地矩形的色彩資料結合, 以達到最終色彩。 MFC 的預設實 SRCCOPY 會將來源矩形直接複製到目的地矩形。 如果*fStyle*參數不包含 ILD_ROP 旗標, 則會忽略這個參數。
 
-[IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-imagelistdrawparams)結構的*dwRop*成員底下會描述其他可能的值。
+[IMAGELISTDRAWPARAMS](/windows/win32/api/commctrl/ns-commctrl-imagelistdrawparams)結構的*dwRop*成員底下會描述其他可能的值。
 
 *rgbBack*<br/>
 影像背景色彩, 預設為 CLR_DEFAULT。 這個參數可以是應用程式定義的 RGB 值或下列其中一個值:
@@ -739,7 +738,7 @@ BOOL DrawIndirect(
 與 ILS_APLHA 搭配使用時, 這個成員會保存 Alpha 色板的值。 這個值可以是0到 255, 0 是完全透明, 而255則完全不透明。
 
 *crEffect*<br/>
-用於發光和陰影效果的[COLORREF](/windows/desktop/gdi/colorref)值。
+用於發光和陰影效果的[COLORREF](/windows/win32/gdi/colorref)值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -749,7 +748,7 @@ BOOL DrawIndirect(
 
 如果您想要自行填入 Win32 結構, 請使用第一個版本。 如果您想要利用 MFC 的一或多個預設引數, 或避免管理結構, 請使用第二個版本。
 
-重迭影像是在主要影像之上繪製的影像, 由*nImage*參數在此成員函式中指定。 使用[draw](#draw)成員函式, 搭配使用[INDEXTOOVERLAYMASK](/windows/desktop/api/commctrl/nf-commctrl-indextooverlaymask)宏指定之覆迭遮罩的以一為基的索引, 繪製覆迭遮罩。
+重迭影像是在主要影像之上繪製的影像, 由*nImage*參數在此成員函式中指定。 使用[draw](#draw)成員函式, 搭配使用[INDEXTOOVERLAYMASK](/windows/win32/api/commctrl/nf-commctrl-indextooverlaymask)宏指定之覆迭遮罩的以一為基的索引, 繪製覆迭遮罩。
 
 ### <a name="example"></a>範例
 
@@ -790,7 +789,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="remarks"></a>備註
 
-這個方法會依賴[ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)宏的行為來建立圖示。 如需有關建立和清除圖示的詳細資訊, 請參閱[ImageList_ExtractIcon](/windows/desktop/api/commctrl/nf-commctrl-imagelist_extracticon)宏。
+這個方法會依賴[ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)宏的行為來建立圖示。 如需有關建立和清除圖示的詳細資訊, 請參閱[ImageList_ExtractIcon](/windows/win32/api/commctrl/nf-commctrl-imagelist_extracticon)宏。
 
 ### <a name="example"></a>範例
 
@@ -916,7 +915,7 @@ BOOL GetImageInfo(
 以零為基底的影像索引。
 
 *pImageInfo*<br/>
-接收影像相關資訊之[IMAGEINFO](/windows/desktop/api/commctrl/ns-commctrl-imageinfo)結構的指標。 此結構中的資訊可以用來直接操作影像的點陣圖。
+接收影像相關資訊之[IMAGEINFO](/windows/win32/api/commctrl/ns-commctrl-imageinfo)結構的指標。 此結構中的資訊可以用來直接操作影像的點陣圖。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1110,7 +1109,7 @@ BOOL SetDragCursorImage(
 
 ### <a name="remarks"></a>備註
 
-因為拖曳函式會在拖曳作業期間使用新的影像, 所以您應該在呼叫`CImageList::SetDragCursorImage`之後, 使用 Windows [ShowCursor](/windows/desktop/api/winuser/nf-winuser-showcursor) 函式來隱藏實際的滑鼠游標。 否則，系統可能會在拖曳作業期間出現兩個滑鼠游標。
+因為拖曳函式會在拖曳作業期間使用新的影像, 所以您應該在呼叫`CImageList::SetDragCursorImage`之後, 使用 Windows [ShowCursor](/windows/win32/api/winuser/nf-winuser-showcursor) 函式來隱藏實際的滑鼠游標。 否則，系統可能會在拖曳作業期間出現兩個滑鼠游標。
 
 ##  <a name="setimagecount"></a>CImageList:: SetImageCount
 

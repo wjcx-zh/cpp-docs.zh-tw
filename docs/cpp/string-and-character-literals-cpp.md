@@ -14,12 +14,12 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: df690bea81b9799b30ae91313ce7157400ef8413
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
-ms.translationtype: HT
+ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866086"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498523"
 ---
 # <a name="string-and-character-literals-c"></a>字串和字元常值C++()
 
@@ -216,7 +216,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 通用字元名稱無法編碼代理程式碼點範圍 D800-DFFF 中的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 必要時, 編譯器會產生代理配對。
 
-過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 此錯誤已在 c + + 11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱 [Character Sets](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](https://msdn.microsoft.com/library/dd374081)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](/windows/desktop/Intl/surrogates-and-supplementary-characters)。
+過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 此錯誤已在 c + + 11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱 [Character Sets](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](/windows/win32/intl/unicode)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](/windows/win32/Intl/surrogates-and-supplementary-characters)。
 
 ## <a name="string-literals"></a>字串常值
 

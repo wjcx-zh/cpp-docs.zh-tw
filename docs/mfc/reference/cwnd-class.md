@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 91acc8255cd5f22092790f9dcf45558012caf7dc
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 5e7a0b0d7f5c41c60fc10784518c4c075c13f778
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916788"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502134"
 ---
 # <a name="cwnd-class"></a>CWnd 類別
 
@@ -1021,7 +1021,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnHelpIndex](#onhelpindex)|處理 ID_HELP_INDEX 命令, 並提供預設說明主題。|
 |[CWnd::OnHelpUsing](#onhelpusing)|處理 ID_HELP_USING 命令。|
 |[CWnd::OnToolHitTest](#ontoolhittest)|決定一個點是否位於指定工具的週框中並擷取工具的相關資訊。|
-|[CWnd::OpenClipboard](#openclipboard)|開啟剪貼簿。 其他應用程式將無法修改剪貼簿, 直到呼叫 Windows [CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard)函式為止。|
+|[CWnd::OpenClipboard](#openclipboard)|開啟剪貼簿。 其他應用程式將無法修改剪貼簿, 直到呼叫 Windows [CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard)函式為止。|
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|在控制項容器上繪製無視窗控制項。|
 |[CWnd::PostMessage](#postmessage)|在應用程式佇列中放置訊息，然後傳回，而不需等待視窗處理訊息。|
 |[CWnd::PreCreateWindow](#precreatewindow)|在建立附加至此 `CWnd` 物件的 Windows 視窗前呼叫。|
@@ -1122,7 +1122,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnDeadChar](#ondeadchar)|當按鍵轉譯為非系統無效字元 (例如強調符號) 時呼叫。|
 |[CWnd::OnDeleteItem](#ondeleteitem)|當主控描繪子清單方塊或下拉式方塊損毀，或從控制項移除項目時呼叫。|
 |[CWnd::OnDestroy](#ondestroy)|`CWnd` 正在損毀時呼叫。|
-|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|當剪貼簿透過呼叫 Windows [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard)函數清空時呼叫。|
+|[CWnd::OnDestroyClipboard](#ondestroyclipboard)|當剪貼簿透過呼叫 Windows [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard)函數清空時呼叫。|
 |[CWnd::OnDeviceChange](#ondevicechange)|將裝置或電腦的硬體組態變更通知應用程式或裝置驅動程式。|
 |[CWnd::OnDevModeChange](#ondevmodechange)|當使用者變更裝置模式設定時，針對所有最上層視窗呼叫。|
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|於剪貼簿內容變更時呼叫。|
@@ -1166,9 +1166,9 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMenuRButtonUp](#onmenurbuttonup)|當游標位於功能表項目上，而使用者放開滑鼠右鍵時呼叫。|
 |[CWnd::OnMenuSelect](#onmenuselect)|當使用者選取功能表項目時呼叫。|
 |[CWnd::OnMouseActivate](#onmouseactivate)|當游標處於非使用中視窗，且使用者按下滑鼠按鈕時呼叫。|
-|[CWnd::OnMouseHover](#onmousehover)|當游標停留在先前呼叫中指定的時間週期 視窗的工作區時呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)。|
+|[CWnd::OnMouseHover](#onmousehover)|當游標停留在先前呼叫中指定的時間週期 視窗的工作區時呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)。|
 |[CWnd::OnMouseHWheel](#onmousehwheel)|當目前的視窗由桌面視窗管理員 (DWM) 組成，且該視窗最大化時呼叫。|
-|[CWnd::OnMouseLeave](#onmouseleave)|當游標離開先前呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的工作區時呼叫。|
+|[CWnd::OnMouseLeave](#onmouseleave)|當游標離開先前呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的工作區時呼叫。|
 |[CWnd::OnMouseMove](#onmousemove)|當滑鼠游標移動時呼叫。|
 |[CWnd::OnMouseWheel](#onmousewheel)|當使用者旋轉滑鼠滾輪時呼叫。 使用 Windows NT 4.0 訊息處理。|
 |[CWnd::OnMove](#onmove)|在 `CWnd` 的位置變更後呼叫。|
@@ -1184,8 +1184,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonDblClk](#onncmbuttondblclk)|當使用者按兩下滑鼠中鍵，而游標位於 `CWnd` 的非工作區內時呼叫。|
 |[CWnd::OnNcMButtonDown](#onncmbuttondown)|當使用者按下滑鼠中鍵，而游標位於 `CWnd` 的非工作區內時呼叫。|
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|當使用者放開滑鼠中鍵，而游標位於 `CWnd` 的非工作區內時呼叫。|
-|[CWnd::OnNcMouseHover](#onncmousehover)|當游標停留在視窗的非工作區上, 且在先前呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)中指定的期間內時呼叫。|
-|[CWnd::OnNcMouseLeave](#onncmouseleave)|當游標離開先前呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的非工作區時, 架構會呼叫這個成員函式。|
+|[CWnd::OnNcMouseHover](#onncmousehover)|當游標停留在視窗的非工作區上, 且在先前呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)中指定的期間內時呼叫。|
+|[CWnd::OnNcMouseLeave](#onncmouseleave)|當游標離開先前呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的非工作區時, 架構會呼叫這個成員函式。|
 |[CWnd::OnNcMouseMove](#onncmousemove)|當游標在 `CWnd` 的非工作區內移動時呼叫。|
 |[CWnd::OnNcPaint](#onncpaint)|當非工作區需要繪製時呼叫。|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|當使用者按兩下滑鼠右鍵，而游標位於 `CWnd` 的非工作區內時呼叫。|
@@ -1224,8 +1224,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|當剪貼簿檢視器視窗中的工作區大小變更後呼叫。|
 |[CWnd::OnSizing](#onsizing)|表示使用者正在重新調整矩形的大小。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|每當加入工作或從列印管理員佇列中移除工作時，從列印管理員呼叫。|
-|[CWnd::OnStyleChanged](#onstylechanged)|表示[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函式已變更一或多個視窗的樣式。|
-|[CWnd::OnStyleChanging](#onstylechanging)|表示[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga) Windows 函數即將變更一或多個視窗的樣式。|
+|[CWnd::OnStyleChanged](#onstylechanged)|表示[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows 函式已變更一或多個視窗的樣式。|
+|[CWnd::OnStyleChanging](#onstylechanging)|表示[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw) Windows 函數即將變更一或多個視窗的樣式。|
 |[CWnd::OnSysChar](#onsyschar)|按鍵轉譯為系統字元時呼叫。|
 |[CWnd::OnSysColorChange](#onsyscolorchange)|當系統色彩設定中進行變更時，為所有最上層視窗呼叫。|
 |[CWnd::OnSysCommand](#onsyscommand)|當使用者從 [控制] 功能表中選取命令時，或在使用者選取 [最大化] 或 [最小化] 按鈕時呼叫。|
@@ -1237,7 +1237,7 @@ class CWnd : public CCmdTarget
 |[CWnd::OnTimer](#ontimer)|在[SetTimer](#settimer)中指定的每個間隔之後呼叫。|
 |[CWnd::OnTouchInput](#ontouchinput)|處理來自 Windows 觸控的單一輸入。|
 |[CWnd::OnTouchInputs](#ontouchinputs)|處理來自 Windows 觸控的輸入。|
-|[CWnd::OnUniChar](#onunichar)|按下按鍵時呼叫。 也就是說, 目前視窗具有鍵盤焦點, 而[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息則是由[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函數轉譯。|
+|[CWnd::OnUniChar](#onunichar)|按下按鍵時呼叫。 也就是說, 目前視窗具有鍵盤焦點, 而[WM_KEYDOWN](/windows/win32/inputdev/wm-keydown)訊息則是由[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)函數轉譯。|
 |[CWnd::OnUnInitMenuPopup](#onuninitmenupopup)|於下拉式功能表或子功能表被終結時呼叫。|
 |[CWnd::OnUpdateUIState](#onupdateuistate)|呼叫以變更指定的視窗及其所有子視窗的使用者介面 (UI) 狀態。|
 |[CWnd::OnUserChanged](#onuserchanged)|在使用者登入或登出後呼叫。|
@@ -1314,13 +1314,13 @@ virtual HRESULT accDoDefaultAction(VARIANT varChild);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
-覆寫衍生類別中`CWnd`的這個函式, 以執行物件的預設動作。 如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accDoDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 。
+覆寫衍生類別中`CWnd`的這個函式, 以執行物件的預設動作。 如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accDoDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accdodefaultaction) 。
 
 ##  <a name="acchittest"></a>  CWnd::accHitTest
 
@@ -1342,7 +1342,7 @@ virtual HRESULT accHitTest(
 要點擊測試之點的 Y 座標 (以螢幕單位表示)。
 
 *pvarChild*<br/>
-接收在*xLeft*和*yTop*所指定的點上識別物件的資訊。 請參閱 Windows SDK 的[IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest)中的*pvarID* 。
+接收在*xLeft*和*yTop*所指定的點上識別物件的資訊。 請參閱 Windows SDK 的[IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest)中的*pvarID* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1350,11 +1350,11 @@ virtual HRESULT accHitTest(
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accHitTest](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-acchittest) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accHitTest](/windows/win32/api/oleacc/nf-oleacc-iaccessible-acchittest) 。
 
 ##  <a name="acclocation"></a>  CWnd::accLocation
 
@@ -1410,7 +1410,7 @@ virtual HRESULT accNavigate(
 ### <a name="parameters"></a>參數
 
 *navDir*<br/>
-指定要流覽的方向。 請參閱 Windows SDK 的[IAccessible:: accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate)中的*navDir* 。
+指定要流覽的方向。 請參閱 Windows SDK 的[IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate)中的*navDir* 。
 
 *varStart*<br/>
 指定起始物件。 請參閱 Windows SDK `IAccessible::accNavigate`中的 varStart。
@@ -1424,11 +1424,11 @@ virtual HRESULT accNavigate(
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accNavigate](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accnavigate) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accNavigate](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accnavigate) 。
 
 ##  <a name="accselect"></a>  CWnd::accSelect
 
@@ -1443,7 +1443,7 @@ virtual HRESULT accSelect(
 ### <a name="parameters"></a>參數
 
 *flagsSelect*<br/>
-指定如何變更目前的選取範圍或焦點。 請參閱 Windows SDK 的[IAccessible:: accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect)中的*flagsSelect* 。
+指定如何變更目前的選取範圍或焦點。 請參閱 Windows SDK 的[IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect)中的*flagsSelect* 。
 
 *varChild*<br/>
 指定要選取的物件。 這個參數可以是 CHILDID_SELF (用來選取物件本身) 或子識別碼 (以選取其中一個物件的子系)。
@@ -1454,11 +1454,11 @@ virtual HRESULT accSelect(
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accSelect](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-accselect) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: accSelect](/windows/win32/api/oleacc/nf-oleacc-iaccessible-accselect) 。
 
 ##  <a name="animatewindow"></a>CWnd:: AnimateWindow
 
@@ -1476,7 +1476,7 @@ BOOL AnimateWindow(
 指定播放動畫所花的時間 (以毫秒為單位)。 通常, 動畫會花費200毫秒來播放。
 
 *dwFlags*<br/>
-指定動畫的類型。 如需可能值的完整清單, 請參閱[AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)。
+指定動畫的類型。 如需可能值的完整清單, 請參閱[AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1484,7 +1484,7 @@ BOOL AnimateWindow(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[AnimateWindow](/windows/win32/api/winuser/nf-winuser-animatewindow)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="arrangeiconicwindows"></a>  CWnd::ArrangeIconicWindows
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>參數
 
 *lpPaint*<br/>
-指向要接收繪製資訊的[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)結構。
+指向要接收繪製資訊的[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1648,7 +1648,7 @@ void BringWindowToTop();
 
 此外，`BringWindowToTop` 會啟用快顯、最上層和 MDI 子視窗。 需使用 `BringWindowToTop` 成員函式，才能顯示出重疊視窗部分或完全遮住的視窗。
 
-此函式只會呼叫 Win32 [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式以變更視窗在迭置順序中的位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊, 請參閱[HWND_TOP 與 HWND_TOPMOST 之間的差異](https://devblogs.microsoft.com/oldnewthing/?p=33263)
+此函式只會呼叫 Win32 [BringWindowToTop](/windows/win32/api/winuser/nf-winuser-bringwindowtotop)函式。 呼叫[SetWindowPos](#setwindowpos)函式以變更視窗在迭置順序中的位置。 `BringWindowToTop` 函式不會將視窗樣式變更為最上層視窗。 如需詳細資訊, 請參閱[HWND_TOP 與 HWND_TOPMOST 之間的差異](https://devblogs.microsoft.com/oldnewthing/?p=33263)
 
 ### <a name="example"></a>範例
 
@@ -1676,7 +1676,7 @@ virtual void CalcWindowRect(
 
 計算的視窗矩形大小不包含功能表列的空間。
 
-如需更多使用限制, 請參閱[AdjustWindowRectEx](/windows/desktop/api/winuser/nf-winuser-adjustwindowrectex)。
+如需更多使用限制, 請參閱[AdjustWindowRectEx](/windows/win32/api/winuser/nf-winuser-adjustwindowrectex)。
 
 ### <a name="example"></a>範例
 
@@ -1762,7 +1762,7 @@ void CheckDlgButton(
 
 ### <a name="remarks"></a>備註
 
-函式會將 [BM_SETCHECK](/windows/desktop/Controls/bm-setcheck) 訊息傳送至指定的按鈕。`CheckDlgButton`
+函式會將 [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) 訊息傳送至指定的按鈕。`CheckDlgButton`
 
 ### <a name="example"></a>範例
 
@@ -1792,7 +1792,7 @@ void CheckRadioButton(
 
 ### <a name="remarks"></a>備註
 
-函式會將 [BM_SETCHECK](/windows/desktop/Controls/bm-setcheck) 訊息傳送至指定的選項按鈕。`CheckRadioButton`
+函式會將 [BM_SETCHECK](/windows/win32/Controls/bm-setcheck) 訊息傳送至指定的選項按鈕。`CheckRadioButton`
 
 ### <a name="example"></a>範例
 
@@ -1850,10 +1850,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-指向包含要轉換之客戶`CPoint`端座標的[點結構](/windows/desktop/api/windef/ns-windef-tagpoint)或物件。
+指向包含要轉換之客戶`CPoint`端座標的[點結構](/windows/win32/api/windef/ns-windef-point)或物件。
 
 *lpRect*<br/>
-指向[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`物件, 其中包含要轉換的用戶端座標。
+指向[矩形結構](/windows/win32/api/windef/ns-windef-rect)或`CRect`物件, 其中包含要轉換的用戶端座標。
 
 ### <a name="remarks"></a>備註
 
@@ -1875,7 +1875,7 @@ void CloseWindow();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[closewindowsg](/windows/desktop/api/winuser/nf-winuser-closewindow)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[closewindowsg](/windows/win32/api/winuser/nf-winuser-closewindow)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="continuemodal"></a>  CWnd::ContinueModal
 
@@ -1995,7 +1995,7 @@ void CreateCaret(CBitmap* pBitmap);
 
 ### <a name="remarks"></a>備註
 
-點陣圖必須先前由[CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)成員函式、 [CreateDIBitmap](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap) Windows 函數或[CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)成員函式建立。
+點陣圖必須先前由[CBitmap:: CreateBitmap](../../mfc/reference/cbitmap-class.md#createbitmap)成員函式、 [CreateDIBitmap](/windows/win32/api/wingdi/nf-wingdi-createdibitmap) Windows 函數或[CBitmap:: LoadBitmap](../../mfc/reference/cbitmap-class.md#loadbitmap)成員函式建立。
 
 `CreateCaret`會自動終結先前的插入號圖形 (如果有的話), 而不論哪一個視窗擁有插入號。 一旦建立之後, 插入號就會一開始隱藏。 若要顯示插入號, 必須呼叫[ShowCaret](#showcaret)成員函式。
 
@@ -2057,13 +2057,13 @@ BOOL CreateControl(
 視窗樣式。 可用的樣式會列在 [備註] 底下。
 
 *rect*<br/>
-指定控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)。
+指定控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/win32/api/windef/ns-windef-rect)。
 
 *ppt*<br/>
-指向包含控制項左上角的`CPoint` [點結構](/windows/desktop/api/windef/ns-windef-tagpoint)或物件。
+指向包含控制項左上角的`CPoint` [點結構](/windows/win32/api/windef/ns-windef-point)或物件。
 
 *pSize*<br/>
-指向包含控制項大小的[大小](/windows/desktop/api/windef/ns-windef-tagsize)`CSize`結構或物件
+指向包含控制項大小的[大小](/windows/win32/api/windef/ns-windef-size)`CSize`結構或物件
 
 *pParentWnd*<br/>
 指定控制項的父視窗。 不得為 Null。
@@ -2227,7 +2227,7 @@ void CreateGrayCaret(
 
 參數*nWidth*和*nHeight*會指定插入號的寬度和高度 (以邏輯單位表示);確切的寬度和高度 (以圖元為單位) 取決於對應模式。
 
-[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 函數可以使用 SM_CXBORDER 和 SM_CYBORDER 索引來抓取系統的視窗框線寬度或高度。 使用 [視窗框線寬度] 或 [高度] 可確保在高解析度顯示時, 會顯示插入號。
+[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 函數可以使用 SM_CXBORDER 和 SM_CYBORDER 索引來抓取系統的視窗框線寬度或高度。 使用 [視窗框線寬度] 或 [高度] 可確保在高解析度顯示時, 會顯示插入號。
 
 `CreateGrayCaret`成員函式會自動終結先前的插入號圖形 (如果有的話), 而不論哪一個視窗擁有插入號。 一旦建立之後, 插入號就會一開始隱藏。 若要顯示插入號, 必須呼叫[ShowCaret](#showcaret)成員函式。
 
@@ -2261,7 +2261,7 @@ void CreateSolidCaret(
 
 參數*nWidth*和*nHeight*會指定插入號的寬度和高度 (以邏輯單位表示);確切的寬度和高度 (以圖元為單位) 取決於對應模式。
 
-[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 函數可以使用 SM_CXBORDER 和 SM_CYBORDER 索引來抓取系統的視窗框線寬度或高度。 使用 [視窗框線寬度] 或 [高度] 可確保在高解析度顯示時, 會顯示插入號。
+[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 函數可以使用 SM_CXBORDER 和 SM_CYBORDER 索引來抓取系統的視窗框線寬度或高度。 使用 [視窗框線寬度] 或 [高度] 可確保在高解析度顯示時, 會顯示插入號。
 
 `CreateSolidCaret`成員函式會自動終結先前的插入號圖形 (如果有的話), 而不論哪一個視窗擁有插入號。 一旦建立之後, 插入號就會一開始隱藏。 若要顯示插入號, 必須呼叫[ShowCaret](#showcaret)成員函式。
 
@@ -2445,7 +2445,7 @@ int DlgDirList(
 
 ### <a name="remarks"></a>備註
 
-`DlgDirList`將[LB_RESETCONTENT](/windows/desktop/Controls/lb-resetcontent)和[LB_DIR](/windows/desktop/Controls/lb-dir)訊息傳送至清單方塊。 它會將*nIDListBox*所指定的清單方塊填入所有檔案的名稱, 這些檔案符合*lpPathSpec*所指定的路徑。
+`DlgDirList`將[LB_RESETCONTENT](/windows/win32/Controls/lb-resetcontent)和[LB_DIR](/windows/win32/Controls/lb-dir)訊息傳送至清單方塊。 它會將*nIDListBox*所指定的清單方塊填入所有檔案的名稱, 這些檔案符合*lpPathSpec*所指定的路徑。
 
 *LpPathSpec*參數具有下列格式:
 
@@ -2513,7 +2513,7 @@ int DlgDirListComboBox(
 
 ### <a name="remarks"></a>備註
 
-`DlgDirListComboBox`將[CB_RESETCONTENT](/windows/desktop/Controls/cb-resetcontent)和[CB_DIR](/windows/desktop/Controls/cb-dir)訊息傳送至下拉式方塊。 它會將*nIDComboBox*所指定之下拉式方塊的清單方塊填入所有檔案的名稱, 這些檔案符合*lpPathSpec*所指定的路徑。
+`DlgDirListComboBox`將[CB_RESETCONTENT](/windows/win32/Controls/cb-resetcontent)和[CB_DIR](/windows/win32/Controls/cb-dir)訊息傳送至下拉式方塊。 它會將*nIDComboBox*所指定之下拉式方塊的清單方塊填入所有檔案的名稱, 這些檔案符合*lpPathSpec*所指定的路徑。
 
 *LpPathSpec*參數具有下列格式:
 
@@ -2559,7 +2559,7 @@ BOOL DlgDirSelect(
 
 此`DlgDirSelect`成員函式會將選取範圍複製到*lpString*所指定的緩衝區。 如果沒有選取專案, *lpString*就不會變更。
 
-`DlgDirSelect`將[LB_GETCURSEL](/windows/desktop/Controls/lb-getcursel)和[LB_GETTEXT](/windows/desktop/Controls/lb-gettext)訊息傳送至清單方塊。
+`DlgDirSelect`將[LB_GETCURSEL](/windows/win32/Controls/lb-getcursel)和[LB_GETTEXT](/windows/win32/Controls/lb-gettext)訊息傳送至清單方塊。
 
 不允許從清單方塊傳回一個以上的檔案名。 清單方塊不得為多重選取清單方塊。
 
@@ -2591,7 +2591,7 @@ BOOL DlgDirSelectComboBox(
 
 此`DlgDirSelectComboBox`成員函式會將選取範圍複製到指定的緩衝區。 如果沒有選取專案, 則不會變更緩衝區的內容。
 
-`DlgDirSelectComboBox`將[CB_GETCURSEL](/windows/desktop/Controls/cb-getcursel)和[CB_GETLBTEXT](/windows/desktop/Controls/cb-getlbtext)訊息傳送至下拉式方塊。
+`DlgDirSelectComboBox`將[CB_GETCURSEL](/windows/win32/Controls/cb-getcursel)和[CB_GETLBTEXT](/windows/win32/Controls/cb-getlbtext)訊息傳送至下拉式方塊。
 
 不允許從下拉式方塊傳回一個以上的檔案名。
 
@@ -2662,7 +2662,7 @@ BOOL DragDetect(POINT pt) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[DragDetect](/windows/desktop/api/winuser/nf-winuser-dragdetect)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[DragDetect](/windows/win32/api/winuser/nf-winuser-dragdetect)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="drawanimatedrects"></a>CWnd::D rawAnimatedRects
 
@@ -2692,7 +2692,7 @@ BOOL DrawAnimatedRects(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[DrawAnimatedRects](/windows/desktop/api/winuser/nf-winuser-drawanimatedrects)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[DrawAnimatedRects](/windows/win32/api/winuser/nf-winuser-drawanimatedrects)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="drawcaption"></a>CWnd::D rawCaption
 
@@ -2714,7 +2714,7 @@ BOOL DrawCaption(
 矩形結構的指標, 指定視窗標題的周框。
 
 *uFlags*<br/>
-指定繪圖選項。 如需值的完整清單, 請參閱[DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption)。
+指定繪圖選項。 如需值的完整清單, 請參閱[DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2722,7 +2722,7 @@ BOOL DrawCaption(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[DrawCaption](/windows/desktop/api/winuser/nf-winuser-drawcaption)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[DrawCaption](/windows/win32/api/winuser/nf-winuser-drawcaption)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="drawmenubar"></a>CWnd::D rawMenuBar
 
@@ -2750,7 +2750,7 @@ void EnableActiveAccessibility();
 
 ### <a name="remarks"></a>備註
 
-MFC 的預設 Active Accessibility 支援對標準視窗和控制項 (包括 ActiveX 控制項) 而言已足夠。不過, 如果您`CWnd`的衍生類別包含 nonwindowed 的使用者介面元素, MFC 就無法得知它們。 在這種情況下, 您必須在類別中覆寫適當的[Active Accessibility 成員](/windows/desktop/winauto/sdk-components)函式, `EnableActiveAccessibility`而且您必須在類別的函式中呼叫。
+MFC 的預設 Active Accessibility 支援對標準視窗和控制項 (包括 ActiveX 控制項) 而言已足夠。不過, 如果您`CWnd`的衍生類別包含 nonwindowed 的使用者介面元素, MFC 就無法得知它們。 在這種情況下, 您必須在類別中覆寫適當的[Active Accessibility 成員](/windows/win32/winauto/sdk-components)函式, `EnableActiveAccessibility`而且您必須在類別的函式中呼叫。
 
 ##  <a name="enabledynamiclayout"></a>  CWnd::EnableDynamicLayout
 
@@ -2864,12 +2864,12 @@ BOOL EnableToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>備註
 
-覆寫[OnToolHitTest](#ontoolhittest)以提供視窗的[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構或結構。
+覆寫[OnToolHitTest](#ontoolhittest)以提供視窗的[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構或結構。
 
 > [!NOTE]
 > 有些視窗 (例如[CToolBar](../../mfc/reference/ctoolbar-class.md)) 會提供內建的[OnToolHitTest](#ontoolhittest)執行。
 
-如需此結構的詳細資訊, 請參閱 Windows SDK 中的[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) 。
+如需此結構的詳細資訊, 請參閱 Windows SDK 中的[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow) 。
 
 除非父`EnableToolTips`視窗是衍生自`CFrameWnd`, 否則只要呼叫就無法顯示子控制項的工具提示。 這是因為`CFrameWnd`會提供 TTN_NEEDTEXT 通知的預設處理常式。 如果您的父視窗並非衍生自`CFrameWnd`, 也就是說, 如果它是對話方塊或表單檢視, 除非您提供 TTN_NEEDTEXT 工具提示通知的處理常式, 否則子控制項的工具提示不會正確顯示。 請參閱[工具提示](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)。
 
@@ -2973,7 +2973,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>參數
 
 *lpPaint*<br/>
-指向包含[BeginPaint](#beginpaint)成員函式所抓取之繪製資訊的[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)結構。
+指向包含[BeginPaint](#beginpaint)成員函式所抓取之繪製資訊的[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)結構。
 
 ### <a name="remarks"></a>備註
 
@@ -3082,7 +3082,7 @@ static CWnd* FindWindowEx(
 子視窗的控制碼。 搜尋會以 Z 軸順序從下一個子視窗開始。 子視窗必須是*hwndParent*的直接子視窗, 而不只是子代視窗。
 
 *lpszClass*<br/>
-以 null 結束的字串指標, 指定類別名稱或先前呼叫[RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa)或[RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa)所建立的類別 atom。
+以 null 結束的字串指標, 指定類別名稱或先前呼叫[RegisterClass](/windows/win32/api/winuser/nf-winuser-registerclassw)或[RegisterClassEx](/windows/win32/api/winuser/nf-winuser-registerclassexw)所建立的類別 atom。
 
 *lpszWindow*<br/>
 以 null 結束的字串指標, 指定視窗名稱 (視窗的標題)。 如果此參數為 Null, 則所有視窗名稱都相符。
@@ -3093,7 +3093,7 @@ static CWnd* FindWindowEx(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[FindWindowEx](/windows/desktop/api/winuser/nf-winuser-findwindowexa)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[FindWindowEx](/windows/win32/api/winuser/nf-winuser-findwindowexw)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="flashwindow"></a>  CWnd::FlashWindow
 
@@ -3140,7 +3140,7 @@ BOOL FlashWindowEx(
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-指定 flash 狀態。 如需值的完整清單, 請參閱[FLASHWINFO](/windows/desktop/api/winuser/ns-winuser-flashwinfo)結構。
+指定 flash 狀態。 如需值的完整清單, 請參閱[FLASHWINFO](/windows/win32/api/winuser/ns-winuser-flashwinfo)結構。
 
 *uCount*<br/>
 指定要快閃視窗的次數。
@@ -3154,7 +3154,7 @@ BOOL FlashWindowEx(
 
 ### <a name="remarks"></a>備註
 
-這個方法會模擬函數[FlashWindowEx](/windows/desktop/api/winuser/nf-winuser-flashwindowex)的功能, 如 Windows SDK 中所述。
+這個方法會模擬函數[FlashWindowEx](/windows/win32/api/winuser/nf-winuser-flashwindowex)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="fromhandle"></a>  CWnd::FromHandle
 
@@ -3218,15 +3218,15 @@ virtual HRESULT get_accChild(
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accChild](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchild) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accChild](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchild) 。
 
 ##  <a name="get_accchildcount"></a>  CWnd::get_accChildCount
 
@@ -3243,15 +3243,15 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。 呼叫基底類別版本，然後再加入 nonwindowed 子項目。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accChildCount](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accChildCount](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accchildcount) 。
 
 ##  <a name="get_accdefaultaction"></a>  CWnd::get_accDefaultAction
 
@@ -3273,15 +3273,15 @@ BSTR 的位址, 會接收描述指定物件之預設動作的當地語系化字�
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以描述物件的預設動作。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accDefaultAction](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accDefaultAction](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdefaultaction) 。
 
 ##  <a name="get_accdescription"></a>  CWnd::get_accDescription
 
@@ -3303,15 +3303,15 @@ BSTR 的位址, 會接收描述指定之物件的當地語系化字串, 如果�
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以描述您的物件。 呼叫基類版本, 並新增您的描述。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accDescription](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accDescription](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accdescription) 。
 
 ##  <a name="get_accfocus"></a>  CWnd::get_accFocus
 
@@ -3324,7 +3324,7 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ### <a name="parameters"></a>參數
 
 *pvarChild*<br/>
-接收具有焦點之物件的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus)中的*pvarID* 。
+接收具有焦點之物件的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus)中的*pvarID* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3332,11 +3332,11 @@ virtual HRESULT get_accFocus(VARIANT* pvarChild);
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accFocus](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accFocus](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accfocus) 。
 
 ##  <a name="get_acchelp"></a>  CWnd::get_accHelp
 
@@ -3358,15 +3358,15 @@ BSTR 的位址, 接收包含指定物件之說明資訊的當地語系化字串,
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以提供物件的解說文字。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accHelp](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accHelp](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelp) 。
 
 ##  <a name="get_acchelptopic"></a>  CWnd::get_accHelpTopic
 
@@ -3388,7 +3388,7 @@ BSTR 的位址, 接收與指定物件相關聯之`WinHelp`檔案的完整路徑 
 指定要抓取的說明主題是物件的還是物件的其中一個子專案。 這個參數可以是子的 CHILDID_SELF （若要取得說明 主題的物件） 或 （若要取得說明主題的其中一個物件元素） 的子識別碼。
 
 *pidTopic*<br/>
-識別與指定物件相關聯的說明檔主題。 請參閱 Windows SDK 的[IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic)中的*pidTopic* 。
+識別與指定物件相關聯的說明檔主題。 請參閱 Windows SDK 的[IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic)中的*pidTopic* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3396,11 +3396,11 @@ BSTR 的位址, 接收與指定物件相關聯之`WinHelp`檔案的完整路徑 
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以提供有關物件的說明資訊。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accHelpTopic](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accHelpTopic](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acchelptopic) 。
 
 ##  <a name="get_acckeyboardshortcut"></a>  CWnd::get_accKeyboardShortcut
 
@@ -3422,15 +3422,15 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以識別物件的鍵盤快速鍵。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accKeyboardShortcut](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accKeyboardShortcut](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_acckeyboardshortcut) 。
 
 ##  <a name="get_accname"></a>  CWnd::get_accName
 
@@ -3452,15 +3452,15 @@ virtual HRESULT get_accName(
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 覆寫衍生類別中`CWnd`的這個函式, 以傳回物件的名稱。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accName](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accname) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accName](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accname) 。
 
 ##  <a name="get_accparent"></a>  CWnd::get_accParent
 
@@ -3477,15 +3477,15 @@ virtual HRESULT get_accParent(IDispatch** ppdispParent);
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 在大多數情況下, 您不需要覆寫此函數。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accParent](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accparent) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accParent](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accparent) 。
 
 ##  <a name="get_accrole"></a>  CWnd::get_accRole
 
@@ -3503,7 +3503,7 @@ virtual HRESULT get_accRole(
 指定要抓取的角色資訊是物件的, 還是物件的其中一個子項目。 這個參數可以是 CHILDID_SELF (取得物件的相關資訊) 或子識別碼 (以取得物件之子專案的相關資訊)。
 
 *pvarRole*<br/>
-接收角色資訊。 請參閱 Windows SDK 的[IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole)中的*pvarRole* 。
+接收角色資訊。 請參閱 Windows SDK 的[IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole)中的*pvarRole* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3511,11 +3511,11 @@ virtual HRESULT get_accRole(
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accRole](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accrole) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accRole](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accrole) 。
 
 ##  <a name="get_accselection"></a>  CWnd::get_accSelection
 
@@ -3528,7 +3528,7 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ### <a name="parameters"></a>參數
 
 *pvarChildren*<br/>
-接收所選子系的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection)中的*pvarChildren* 。
+接收所選子系的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection)中的*pvarChildren* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3536,11 +3536,11 @@ virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accSelection](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accselection) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accSelection](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accselection) 。
 
 ##  <a name="get_accstate"></a>  CWnd::get_accState
 
@@ -3558,7 +3558,7 @@ virtual HRESULT get_accState(
 指定要抓取的狀態資訊是物件或物件的其中一個子項目。 這個參數可以是 CHILDID_SELF (取得物件的相關資訊) 或子識別碼 (以取得物件之子專案的相關資訊)。
 
 *pvarState*<br/>
-接收物件狀態的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate)中的*pvarState* 。
+接收物件狀態的相關資訊。 請參閱 Windows SDK 的[IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate)中的*pvarState* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3566,11 +3566,11 @@ virtual HRESULT get_accState(
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accState](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accstate) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accState](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accstate) 。
 
 ##  <a name="get_accvalue"></a>  CWnd::get_accValue
 
@@ -3592,15 +3592,15 @@ virtual HRESULT get_accValue(
 
 ### <a name="return-value"></a>傳回值
 
-在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue)中的傳回**值**。
+在成功時傳回 S_OK, 失敗時傳回 COM 錯誤碼。 請參閱 Windows SDK 的[IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue)中的傳回**值**。
 
 ### <a name="remarks"></a>備註
 
-此函式是 MFC [Active Accessibility](/windows/desktop/WinAuto/microsoft-active-accessibility)支援的一部分。
+此函式是 MFC [Active Accessibility](/windows/win32/WinAuto/microsoft-active-accessibility)支援的一部分。
 
 如果您有 nonwindowed 使用者`CWnd`介面專案 (MFC 所處理的無視窗 ActiveX 控制項), 請覆寫衍生類別中的這個函式。
 
-如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accValue](/windows/desktop/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 。
+如需詳細資訊, 請參閱 Windows SDK 中的[IAccessible:: get_accValue](/windows/win32/api/oleacc/nf-oleacc-iaccessible-get_accvalue) 。
 
 ##  <a name="getactivewindow"></a>  CWnd::GetActiveWindow
 
@@ -3629,7 +3629,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="parameters"></a>參數
 
 *gaFlags*<br/>
-指定要抓取的祖系。 如需可能值的完整清單, 請參閱[GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor)。
+指定要抓取的祖系。 如需可能值的完整清單, 請參閱[GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3637,7 +3637,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetAncestor](/windows/win32/api/winuser/nf-winuser-getancestor)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getcapture"></a>  CWnd::GetCapture
 
@@ -3706,7 +3706,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect)或`CRect`物件以接收用戶端座標。 `left` 和`top`成員將會是0。 `right` 和`bottom`成員將包含視窗的寬度和高度。
+指向[矩形結構](/windows/win32/api/windef/ns-windef-rect)或`CRect`物件以接收用戶端座標。 `left` 和`top`成員將會是0。 `right` 和`bottom`成員將包含視窗的寬度和高度。
 
 ### <a name="remarks"></a>備註
 
@@ -3758,13 +3758,13 @@ LPUNKNOWN GetControlUnknown();
 
 ### <a name="return-value"></a>傳回值
 
-這個`CWnd`物件所表示之 OLE 控制項的[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)介面指標。 如果這個物件不代表 OLE 控制項, 則傳回值會是 Null。
+這個`CWnd`物件所表示之 OLE 控制項的[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)介面指標。 如果這個物件不代表 OLE 控制項, 則傳回值會是 Null。
 
 ### <a name="remarks"></a>備註
 
 您不應該釋放這個`IUnknown`指標。 一般來說, 您會使用來取得控制項的特定介面。
 
-傳回的介面指標不`GetControlUnknown`是參考計數。 請勿在指標上呼叫[iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) , 除非您先前已在其上呼叫 iunknown [:: AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref) 。
+傳回的介面指標不`GetControlUnknown`是參考計數。 請勿在指標上呼叫[iunknown:: Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) , 除非您先前已在其上呼叫 iunknown [:: AddRef](/windows/win32/api/unknwn/nf-unknwn-iunknown-addref) 。
 
 ### <a name="example"></a>範例
 
@@ -3780,7 +3780,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>傳回值
 
-傳回包含視窗目前正在處理之訊息的[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構的指標。 只有在<em>訊息</em>處理常式**上**的時, 才應該呼叫。
+傳回包含視窗目前正在處理之訊息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構的指標。 只有在<em>訊息</em>處理常式**上**的時, 才應該呼叫。
 
 ### <a name="example"></a>範例
 
@@ -3848,13 +3848,13 @@ CDC* GetDCEx(
 
 裝置內容可用於後續的 GDI 函式, 以便在工作區中繪製。
 
-此函式是[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)函數的擴充功能, 可讓應用程式更充分掌控視窗的裝置內容是否已裁剪。
+此函式是[GetDC](/windows/win32/api/winuser/nf-winuser-getdc)函數的擴充功能, 可讓應用程式更充分掌控視窗的裝置內容是否已裁剪。
 
-裝置內容所屬的視窗類別，除非[ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)呼叫函式必須在 繪圖之後釋出內容。 由於在任何指定的時間都只能使用五個常見的裝置內容, 因此無法釋放裝置內容, 可能會導致其他應用程式無法存取裝置內容。
+裝置內容所屬的視窗類別，除非[ReleaseDC](/windows/win32/api/winuser/nf-winuser-releasedc)呼叫函式必須在 繪圖之後釋出內容。 由於在任何指定的時間都只能使用五個常見的裝置內容, 因此無法釋放裝置內容, 可能會導致其他應用程式無法存取裝置內容。
 
-若要取得快取的裝置內容, 應用程式必須指定[DCX_CACHE](/windows/desktop/api/winuser/nf-winuser-getdcex)。 如果未指定 DCX_CACHE, 而且視窗既不是 CS_OWNDC 也不是[CS_CLASSDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa), 則此函式會傳回 Null。
+若要取得快取的裝置內容, 應用程式必須指定[DCX_CACHE](/windows/win32/api/winuser/nf-winuser-getdcex)。 如果未指定 DCX_CACHE, 而且視窗既不是 CS_OWNDC 也不是[CS_CLASSDC](/windows/win32/api/winuser/ns-winuser-wndclassw), 則此函式會傳回 Null。
 
-如果已在註冊類別時, 在[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)結構中指定 CS_CLASSDC、 [CS_OWNDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)或[CS_PARENTDC](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式, 則[GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex)函數會傳回具有特殊特性的裝置內容。
+如果已在註冊類別時, 在[WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)結構中指定 CS_CLASSDC、 [CS_OWNDC](/windows/win32/api/winuser/ns-winuser-wndclassw)或[CS_PARENTDC](/windows/win32/api/winuser/ns-winuser-wndclassw)樣式, 則[GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex)函數會傳回具有特殊特性的裝置內容。
 
 如需有關這些特性的詳細資訊, 請參閱 Windows SDK `WNDCLASS`中結構的描述。
 
@@ -4004,7 +4004,7 @@ UINT GetDlgItemInt(
 
 如果*bSigned*為 TRUE, `GetDlgItemInt`則會檢查文字開頭的減號 (-), 並將文字轉譯成帶正負號的數位。 否則, 它會建立不帶正負號的值。
 
-它會將[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext)訊息傳送至控制項。
+它會將[WM_GETTEXT](/windows/win32/winmsg/wm-gettext)訊息傳送至控制項。
 
 ##  <a name="getdlgitemtext"></a>  CWnd::GetDlgItemText
 
@@ -4198,7 +4198,7 @@ COLORRE光圈值的指標, 它會接收在組成分層視窗時要使用的透�
 位元組的指標, 接收用來描述分層視窗不透明度的 Alpha 值。 當*pbAlpha*所參考的變數是0時, 視窗會完全透明。 當*pbAlpha*所參考的變數是255時, 視窗是不透明的。 如果不需要引數, 這可能是 Null。
 
 *pdwFlags*<br/>
-接收分層旗標之 DWORD 的指標。 如果不需要引數, 這可能是 Null。 如需可能值的完整清單, 請參閱[GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)。
+接收分層旗標之 DWORD 的指標。 如果不需要引數, 這可能是 Null。 如需可能值的完整清單, 請參閱[GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4206,7 +4206,7 @@ COLORRE光圈值的指標, 它會接收在組成分層視窗時要使用的透�
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetLayeredWindowAttributes](/windows/win32/api/winuser/nf-winuser-getlayeredwindowattributes)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getmenu"></a>  CWnd::GetMenu
 
@@ -4244,13 +4244,13 @@ BOOL GetMenuBarInfo(
 ### <a name="parameters"></a>參數
 
 *idObject*<br/>
-指定功能表物件。 如需可能值的清單, 請參閱[GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)。
+指定功能表物件。 如需可能值的清單, 請參閱[GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)。
 
 *idItem*<br/>
 指定要為其取得資訊的專案。 如果此參數為零, 則函式會抓取功能表本身的相關資訊。 如果這個參數是 1, 則函式會抓取功能表上第一個專案的相關資訊, 依此類推。
 
 *pmbi*<br/>
-接收資訊之[MENUBARINFO](/windows/desktop/api/winuser/ns-winuser-tagmenubarinfo)結構的指標。
+接收資訊之[MENUBARINFO](/windows/win32/api/winuser/ns-winuser-menubarinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4258,7 +4258,7 @@ BOOL GetMenuBarInfo(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetMenuBarInfo](/windows/win32/api/winuser/nf-winuser-getmenubarinfo)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getnextdlggroupitem"></a>  CWnd::GetNextDlgGroupItem
 
@@ -4404,7 +4404,7 @@ CWnd* GetOwner() const;
 
 如果視窗沒有擁有者, 則預設會傳回父視窗物件的指標。 請注意, 擁有者和擁有者之間的關聯性, 與幾個重要層面的父子式層面不同。 例如, 具有父系的視窗會局限于其父視窗的工作區。 您可以在桌面上的任何位置繪製擁有的視窗。
 
-此功能的擁有權概念與[GetWindow](/windows/desktop/api/winuser/nf-winuser-getwindow)的擁有權概念不同。
+此功能的擁有權概念與[GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow)的擁有權概念不同。
 
 ##  <a name="getparent"></a>  CWnd::GetParent
 
@@ -4416,7 +4416,7 @@ CWnd* GetParent() const;
 
 ### <a name="return-value"></a>傳回值
 
-請參閱 Windows SDK 中[GetParent](/windows/desktop/api/winuser/nf-winuser-getparent)的傳回值一節。
+請參閱 Windows SDK 中[GetParent](/windows/win32/api/winuser/nf-winuser-getparent)的傳回值一節。
 
 ### <a name="remarks"></a>備註
 
@@ -4582,10 +4582,10 @@ BOOL GetScrollBarInfo(
 ### <a name="parameters"></a>參數
 
 *idObject*<br/>
-指定功能表物件。 如需可能值的清單, 請參閱[GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)。
+指定功能表物件。 如需可能值的清單, 請參閱[GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)。
 
 *psbi*<br/>
-接收資訊之[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)結構的指標。
+接收資訊之[SCROLLBARINFO](/windows/win32/api/winuser/ns-winuser-scrollbarinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4593,7 +4593,7 @@ BOOL GetScrollBarInfo(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetScrollBarInfo](/windows/win32/api/winuser/nf-winuser-getscrollbarinfo)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getscrollinfo"></a>  CWnd::GetScrollInfo
 
@@ -4769,11 +4769,11 @@ BOOL GetTitleBarInfo(PTITLEBARINFO pti) const;
 ### <a name="parameters"></a>參數
 
 *pti*<br/>
-接收資訊之[TITLEBARINFO](/windows/desktop/api/winuser/ns-winuser-tagtitlebarinfo)結構的指標。
+接收資訊之[TITLEBARINFO](/windows/win32/api/winuser/ns-winuser-titlebarinfo)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetTitleBarInfo](/windows/desktop/api/winuser/nf-winuser-gettitlebarinfo)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetTitleBarInfo](/windows/win32/api/winuser/nf-winuser-gettitlebarinfo)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="gettoplevelframe"></a>  CWnd::GetTopLevelFrame
 
@@ -4858,7 +4858,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向物件或`CRect` [矩形結構](/windows/desktop/api/windef/ns-windef-tagrect), 用來接收包含更新區域之更新的用戶端座標。
+指向物件或`CRect` [矩形結構](/windows/win32/api/windef/ns-windef-rect), 用來接收包含更新區域之更新的用戶端座標。
 
 將此參數設定為 Null, 以判斷更新區域是否存在於`CWnd`中。 如果*lpRect*為 Null, 則`GetUpdateRect`如果更新區域存在, 成員函式會傳回非零, 如果沒有的話, 則會傳回0。 這會提供一種方式來判斷是否從不正確區域產生 WM_PAINT 訊息。 請勿在 Windows 3.0 版和更早版本中將此參數設定為 Null。
 
@@ -4992,7 +4992,7 @@ CDC* GetWindowDC();
 
 `GetWindowDC`旨在用於非工作`CWnd`區中的特殊繪製效果。 不建議在任何視窗的非工作區中繪製。
 
-[GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics) Windows 函式可以用來抓取非工作區各部分的維度, 例如標題列、功能表和捲軸。
+[GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics) Windows 函式可以用來抓取非工作區各部分的維度, 例如標題列、功能表和捲軸。
 
 繪製完成之後, 必須呼叫[ReleaseDC](#releasedc)成員函式以釋放顯示內容。 若無法釋放顯示內容, 將會嚴重影響應用程式所要求的繪製, 因為可以同時開啟的裝置內容數目有所限制。
 
@@ -5007,11 +5007,11 @@ BOOL GetWindowInfo(PWINDOWINFO pwi) const;
 ### <a name="parameters"></a>參數
 
 *pwi*<br/>
-[WINDOWINFO](/windows/desktop/api/winuser/ns-winuser-tagwindowinfo)結構的指標。
+[WINDOWINFO](/windows/win32/api/winuser/ns-winuser-windowinfo)結構的指標。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[GetWindowInfo](/windows/desktop/api/winuser/nf-winuser-getwindowinfo)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[GetWindowInfo](/windows/win32/api/winuser/nf-winuser-getwindowinfo)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="getwindowlesschildcount"></a>  CWnd::GetWindowlessChildCount
 
@@ -5044,7 +5044,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>備註
 
-此函式所抓取之[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)結構的成員一律為0。`flags` 如果`CWnd`已最大化, `showCmd`則的`WINDOWPLACEMENT`成員為 SW_SHOWMAXIMIZED。 如果視窗最小化, 則會 SW_SHOWMINIMIZED。 否則會 SW_SHOWNORMAL。
+此函式所抓取之[WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement)結構的成員一律為0。`flags` 如果`CWnd`已最大化, `showCmd`則的`WINDOWPLACEMENT`成員為 SW_SHOWMAXIMIZED。 如果視窗最小化, 則會 SW_SHOWMINIMIZED。 否則會 SW_SHOWNORMAL。
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5057,7 +5057,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向物件或[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect), 其會接收左上角和右下角的螢幕座標。`CRect`
+指向物件或[矩形結構](/windows/win32/api/windef/ns-windef-rect), 其會接收左上角和右下角的螢幕座標。`CRect`
 
 ### <a name="remarks"></a>備註
 
@@ -5128,7 +5128,7 @@ void GetWindowText(
 
 如果物件是控制項, 則`GetWindowText`成員函式會複製控制項內的文字, 而不是複製標題。 `CWnd`
 
-此成員函式會將[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext)訊息傳送至`CWnd`物件。
+此成員函式會將[WM_GETTEXT](/windows/win32/winmsg/wm-gettext)訊息傳送至`CWnd`物件。
 
 ### <a name="example"></a>範例
 
@@ -5150,7 +5150,7 @@ int GetWindowTextLength() const;
 
 如果`CWnd`是控制項, 則`GetWindowTextLength`成員函式會傳回控制項內的文字長度, 而不是標題。
 
-此成員函式會將[WM_GETTEXTLENGTH](/windows/desktop/winmsg/wm-gettextlength)訊息傳送至`CWnd`物件。
+此成員函式會將[WM_GETTEXTLENGTH](/windows/win32/winmsg/wm-gettextlength)訊息傳送至`CWnd`物件。
 
 ### <a name="example"></a>範例
 
@@ -5280,7 +5280,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向物件或[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect), 其中包含要新增至更新區域的矩形 (以工作區座標表示)。`CRect` 如果*lpRect*為 Null, 則會將整個工作區新增至區域。
+指向物件或[矩形結構](/windows/win32/api/windef/ns-windef-rect), 其中包含要新增至更新區域的矩形 (以工作區座標表示)。`CRect` 如果*lpRect*為 Null, 則會將整個工作區新增至區域。
 
 *bErase*<br/>
 指定是否要清除更新區域內的背景。
@@ -5410,7 +5410,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>參數
 
 *lpMsg*<br/>
-指向包含要檢查之訊息的[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構。
+指向包含要檢查之訊息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5422,7 +5422,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 
 `IsDialogMessage`當函式處理訊息時, 它會檢查鍵盤訊息, 並將它們轉換成對應對話方塊的選擇命令。 例如, TAB 鍵會選取下一個控制項或控制項群組, 而向下鍵則會選取群組中的下一個控制項。
 
-您不能將處理`IsDialogMessage`的訊息傳遞至[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)或[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式, 因為它已經過處理。
+您不能將處理`IsDialogMessage`的訊息傳遞至[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)或[DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式, 因為它已經過處理。
 
 ##  <a name="isdlgbuttonchecked"></a>  CWnd::IsDlgButtonChecked
 
@@ -5601,9 +5601,9 @@ BOOL LockWindowUpdate();
 
 無法移動鎖定的視窗。 一次只能鎖定一個視窗。 若要解除鎖定已鎖定`LockWindowUpdate`的視窗, 請呼叫[UnlockWindowUpdate](#unlockwindowupdate)。
 
-如果具有鎖定視窗的應用程式 (或任何已鎖定的子視窗) 呼叫[GetDC、](/windows/desktop/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/desktop/api/winuser/nf-winuser-getdcex)或[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint) windows 函數, 則被呼叫的函式會傳回其可見區域為空白的裝置內容。 在應用程式藉由呼叫`UnlockWindowUpdate`成員函式來解除鎖定視窗之前, 會發生這種情況。
+如果具有鎖定視窗的應用程式 (或任何已鎖定的子視窗) 呼叫[GetDC、](/windows/win32/api/winuser/nf-winuser-getdc) [GetDCEx](/windows/win32/api/winuser/nf-winuser-getdcex)或[BeginPaint](/windows/win32/api/winuser/nf-winuser-beginpaint) windows 函數, 則被呼叫的函式會傳回其可見區域為空白的裝置內容。 在應用程式藉由呼叫`UnlockWindowUpdate`成員函式來解除鎖定視窗之前, 會發生這種情況。
 
-當視窗更新被鎖定時, 系統會將任何繪圖作業的周框矩形, 追蹤到與鎖定視窗相關聯的裝置內容。 重新啟用繪製時, 這個周框矩形在鎖定的視窗及其子視窗中會失效, 以強制最終的[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息更新畫面。 如果視窗更新鎖定時沒有發生任何繪製, 則沒有任何區域失效。
+當視窗更新被鎖定時, 系統會將任何繪圖作業的周框矩形, 追蹤到與鎖定視窗相關聯的裝置內容。 重新啟用繪製時, 這個周框矩形在鎖定的視窗及其子視窗中會失效, 以強制最終的[WM_PAINT](/windows/win32/gdi/wm-paint)訊息更新畫面。 如果視窗更新鎖定時沒有發生任何繪製, 則沒有任何區域失效。
 
 成員函式不會使指定的視窗變成可見, 且不會清除 [WS_VISIBLE](styles-used-by-mfc.md#window-styles) 樣式位。`LockWindowUpdate`
 
@@ -5643,7 +5643,7 @@ void MapWindowPoints(
 指定要轉換其點的矩形。 此函式的第一個版本僅適用于 Windows 3.1 和更新版本。
 
 *lpPoint*<br/>
-[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)陣列的指標, 其中包含要轉換的點集合。
+[POINT 結構](/windows/win32/api/windef/ns-windef-point)陣列的指標, 其中包含要轉換的點集合。
 
 *nCount*<br/>
 指定 lpPoint 所指向`POINT`之陣列中的結構數目。
@@ -5672,7 +5672,7 @@ int MessageBox(
 
 ### <a name="return-value"></a>傳回值
 
-這個方法會利用 Windows SDK 中所定義的[MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox)函數。 這個方法會傳回呼叫此函式的結果。
+這個方法會利用 Windows SDK 中所定義的[MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox)函數。 這個方法會傳回呼叫此函式的結果。
 
 ### <a name="remarks"></a>備註
 
@@ -5719,9 +5719,9 @@ BOOL ModifyStyle(
 
 ### <a name="remarks"></a>備註
 
-您可以使用位 OR (&#124;) 運算子來結合要加入或移除的樣式。 如需可用視窗樣式的詳細資訊, 請參閱 Windows SDK 中的主題[視窗樣式](/windows/desktop/winmsg/window-styles)和[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) 。
+您可以使用位 OR (&#124;) 運算子來結合要加入或移除的樣式。 如需可用視窗樣式的詳細資訊, 請參閱 Windows SDK 中的主題[視窗樣式](/windows/win32/winmsg/window-styles)和[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
-如果*nFlags*為非零`ModifyStyle`值, 則會呼叫 Windows API 函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) , 並藉由結合*nFlags*與下列四個預設旗標來重新繪製視窗:
+如果*nFlags*為非零`ModifyStyle`值, 則會呼叫 Windows API 函式[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) , 並藉由結合*nFlags*與下列四個預設旗標來重新繪製視窗:
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -5768,9 +5768,9 @@ BOOL ModifyStyleEx(
 
 ### <a name="remarks"></a>備註
 
-您可以使用位 OR (&#124;) 運算子來結合要加入或移除的樣式。 如需可用擴充樣式的詳細資訊, 請參閱本書中的主題[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)和 Windows SDK [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)
+您可以使用位 OR (&#124;) 運算子來結合要加入或移除的樣式。 如需可用擴充樣式的詳細資訊, 請參閱本書中的主題[延伸視窗樣式](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)和 Windows SDK [CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)
 
-如果*nFlags*為非零`ModifyStyleEx`值, 則會呼叫 Windows API 函式[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) , 並藉由結合*nFlags*與下列四個預設旗標來重新繪製視窗:
+如果*nFlags*為非零`ModifyStyleEx`值, 則會呼叫 Windows API 函式[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos) , 並藉由結合*nFlags*與下列四個預設旗標來重新繪製視窗:
 
 - SWP_NOSIZE 會保留目前的大小。
 
@@ -5818,10 +5818,10 @@ void MoveWindow(
 指定的新高度`CWnd`。
 
 *bRepaint*<br/>
-指定是否`CWnd`要重新繪製。 若為 TRUE `CWnd` , 則會如往常般在其[OnPaint](#onpaint)訊息處理常式中接收[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息。 如果此參數為 FALSE, 則不會重新繪製任何類型。 這適用于工作區、非工作區 (包括標題和捲軸), 以及由移動後所發現`CWnd`之父視窗的任何部分。 當此參數為 FALSE 時, 應用程式必須明確地使必須重新繪製`CWnd`的部分和父視窗失效。
+指定是否`CWnd`要重新繪製。 若為 TRUE `CWnd` , 則會如往常般在其[OnPaint](#onpaint)訊息處理常式中接收[WM_PAINT](/windows/win32/gdi/wm-paint)訊息。 如果此參數為 FALSE, 則不會重新繪製任何類型。 這適用于工作區、非工作區 (包括標題和捲軸), 以及由移動後所發現`CWnd`之父視窗的任何部分。 當此參數為 FALSE 時, 應用程式必須明確地使必須重新繪製`CWnd`的部分和父視窗失效。
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect), 指定新的大小和位置。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/win32/api/windef/ns-windef-rect), 指定新的大小和位置。
 
 ### <a name="remarks"></a>備註
 
@@ -5847,17 +5847,17 @@ void NotifyWinEvent(
 ### <a name="parameters"></a>參數
 
 *event*<br/>
-指定發生的事件。 這個值必須是其中一個[事件常數](/windows/desktop/WinAuto/event-constants)。
+指定發生的事件。 這個值必須是其中一個[事件常數](/windows/win32/WinAuto/event-constants)。
 
 *idObjectType*<br/>
-識別產生事件的物件種類。 這個值是其中一個預先定義的[物件識別碼](/windows/desktop/WinAuto/object-identifiers)或自訂物件識別碼值。
+識別產生事件的物件種類。 這個值是其中一個預先定義的[物件識別碼](/windows/win32/WinAuto/object-identifiers)或自訂物件識別碼值。
 
 *idObject*<br/>
 識別事件是由物件的物件或子項目所產生。 如果這個值是 CHILDID_SELF, 則事件是由物件本身產生。 如果不是, 這個值就是產生事件之元素的子系識別碼。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[NotifyWinEvent](/windows/desktop/api/winuser/nf-winuser-notifywinevent)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[NotifyWinEvent](/windows/win32/api/winuser/nf-winuser-notifywinevent)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="onactivate"></a>  CWnd::OnActivate
 
@@ -5966,13 +5966,13 @@ afx_msg void OnAppCommand(
 |參數|描述|
 |---------------|-----------------|
 |*pWnd*|在`CWnd`物件的指標, 表示使用者按一下命令按鈕或按下命令鍵的視窗。 這個視窗可以是接收訊息之視窗的子視窗。|
-|*nCmd*|在表示應用程式命令。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)的*lParam*參數之*cmd*區段底下的命令。|
-|*nDevice*|在產生輸入事件的輸入裝置。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)之*LParam*參數的*uDevice*區段底下的裝置。|
-|*nKey*|在表示任何關閉的虛擬機器碼, 例如 CTRL 鍵或滑鼠左鍵。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)之*LParam*參數的*dwKeys*區段下的索引鍵。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)中的「訊息參數」子標題。|
+|*nCmd*|在表示應用程式命令。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)的*lParam*參數之*cmd*區段底下的命令。|
+|*nDevice*|在產生輸入事件的輸入裝置。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)之*LParam*參數的*uDevice*區段底下的裝置。|
+|*nKey*|在表示任何關閉的虛擬機器碼, 例如 CTRL 鍵或滑鼠左鍵。 如需可能值的清單, 請參閱[WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)之*LParam*參數的*dwKeys*區段下的索引鍵。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)中的「訊息參數」子標題。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_APPCOMMAND](/windows/desktop/inputdev/wm-appcommand)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_APPCOMMAND](/windows/win32/inputdev/wm-appcommand)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6016,7 +6016,7 @@ afx_msg void OnCancelMode();
 
 如果物件具有焦點, 則會在`OnCancelMode`顯示對話方塊或訊息方塊時呼叫它的成員函式。 `CWnd` 這讓`CWnd`您有機會取消模式, 例如滑鼠捕捉。
 
-預設的實作用是藉由呼叫[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture) Windows 函式來回應。 覆寫衍生類別中的這個成員函式, 以處理其他模式。
+預設的實作用是藉由呼叫[ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture) Windows 函式來回應。 覆寫衍生類別中的這個成員函式, 以處理其他模式。
 
 ##  <a name="oncapturechanged"></a>CWnd:: OnCaptureChanged
 
@@ -6033,7 +6033,7 @@ afx_msg void OnCaptureChanged(CWnd* pWnd);
 
 ### <a name="remarks"></a>備註
 
-視窗會接收此訊息, 即使它呼叫[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)本身也一樣。 應用程式不應該嘗試設定滑鼠捕捉以回應此訊息。 當它收到此訊息時, 視窗應該視需要重繪本身, 以反映新的滑鼠捕捉狀態。
+視窗會接收此訊息, 即使它呼叫[ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture)本身也一樣。 應用程式不應該嘗試設定滑鼠捕捉以回應此訊息。 當它收到此訊息時, 視窗應該視需要重繪本身, 以反映新的滑鼠捕捉狀態。
 
 如需`ReleaseCapture` Windows 函數的詳細資訊, 請參閱 Windows SDK。
 
@@ -6060,7 +6060,7 @@ afx_msg void OnChangeCbChain(
 
 ### <a name="remarks"></a>備註
 
-`CWnd`  `SetClipboardViewer` 接收呼叫的每個物件都應該使用 [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 函式, 將 [WM_CHANGECBCHAIN](/windows/desktop/dataxchg/wm-changecbchain) 訊息傳送至剪貼簿檢視器鏈中的下一個視窗 (所傳回的控制碼)。`OnChangeCbChain` 如果*hWndRemove*是鏈中的下一個視窗, *hWndAfter*所指定的視窗就會變成下一個視窗, 並將剪貼簿訊息傳遞給它。
+`CWnd`  `SetClipboardViewer` 接收呼叫的每個物件都應該使用 [SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 函式, 將 [WM_CHANGECBCHAIN](/windows/win32/dataxchg/wm-changecbchain) 訊息傳送至剪貼簿檢視器鏈中的下一個視窗 (所傳回的控制碼)。`OnChangeCbChain` 如果*hWndRemove*是鏈中的下一個視窗, *hWndAfter*所指定的視窗就會變成下一個視窗, 並將剪貼簿訊息傳遞給它。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6082,7 +6082,7 @@ afx_msg void OnChangeUIState(
 
 - UIS_CLEAR UI state 元素 (由*nUIElement*指定) 應該隱藏起來。
 
-- UIS_INITIALIZE UI state 元素 (由*nUIElement*指定) 應該根據最後一個輸入事件來變更。 如需詳細資訊, 請參閱[WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)的「**備註**」一節。
+- UIS_INITIALIZE UI state 元素 (由*nUIElement*指定) 應該根據最後一個輸入事件來變更。 如需詳細資訊, 請參閱[WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate)的「**備註**」一節。
 
 - UIS_SET UI state 元素 (由*nUIElement*指定) 應該是可見的。
 
@@ -6097,7 +6097,7 @@ afx_msg void OnChangeUIState(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)訊息的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[WM_CHANGEUISTATE](/windows/win32/menurc/wm-changeuistate)訊息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="onchar"></a>  CWnd::OnChar
 
@@ -6144,7 +6144,7 @@ afx_msg void OnChar(
 
 ##  <a name="onchartoitem"></a>CWnd:: OnCharToItem
 
-當具有[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式的清單方塊將[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)訊息傳送給其擁有者時呼叫, 以回應[WM_CHAR](#onchar)訊息。
+當具有[LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)樣式的清單方塊將[WM_CHARTOITEM](/windows/win32/Controls/wm-chartoitem)訊息傳送給其擁有者時呼叫, 以回應[WM_CHAR](#onchar)訊息。
 
 ```
 afx_msg int OnCharToItem(
@@ -6258,7 +6258,7 @@ afx_msg void OnColorizationColorChanged(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmcolorizationcolorchanged)通知訊息, 如 Windows SDK 中所述。
+這個方法會接收[WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmcolorizationcolorchanged)通知訊息, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6289,7 +6289,7 @@ virtual BOOL OnCommand(
 
 `OnCommand`處理控制項通知和 ON_COMMAND 專案的訊息對應, 並呼叫適當的成員函式。
 
-覆寫衍生類別中的這個成員函式, 以處理[WM_COMMAND](/windows/desktop/menurc/wm-command)訊息。 除非呼叫基類`OnCommand` , 否則覆寫將不會處理訊息對應。
+覆寫衍生類別中的這個成員函式, 以處理[WM_COMMAND](/windows/win32/menurc/wm-command)訊息。 除非呼叫基類`OnCommand` , 否則覆寫將不會處理訊息對應。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6332,7 +6332,7 @@ afx_msg int OnCompareItem(
 傳送 WM_COMPAREITEM 訊息之控制項的識別碼。
 
 *lpCompareItemStruct*<br/>
-包含[COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)資料結構的長指標, 其中包含下拉式方塊或清單方塊中兩個專案的識別碼和應用程式提供的資料。
+包含[COMPAREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-compareitemstruct)資料結構的長指標, 其中包含下拉式方塊或清單方塊中兩個專案的識別碼和應用程式提供的資料。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6365,7 +6365,7 @@ afx_msg void OnCompositionChanged();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_DWMCOMPOSITIONCHANGED](/windows/desktop/dwm/wm-dwmcompositionchanged)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_DWMCOMPOSITIONCHANGED](/windows/win32/dwm/wm-dwmcompositionchanged)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6410,7 +6410,7 @@ afx_msg BOOL OnCopyData(
 傳送資料之`CWnd`物件的指標。
 
 *pCopyDataStruct*<br/>
-[COPYDATASTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcopydatastruct)結構的指標, 其中包含要傳送的資料。
+[COPYDATASTRUCT](/windows/win32/api/winuser/ns-winuser-copydatastruct)結構的指標, 其中包含要傳送的資料。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6440,7 +6440,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>參數
 
 *lpCreateStruct*<br/>
-指向[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構, 其中包含所建立物件的`CWnd`相關資訊。
+指向[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)結構, 其中包含所建立物件的`CWnd`相關資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6575,7 +6575,7 @@ afx_msg void OnDeleteItem(
 傳送 WM_DELETEITEM 訊息之控制項的識別碼。
 
 *lpDeleteItemStruct*<br/>
-指定[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)資料結構的長指標, 其中包含已刪除清單方塊專案的相關資訊。
+指定[DELETEITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-deleteitemstruct)資料結構的長指標, 其中包含已刪除清單方塊專案的相關資訊。
 
 ### <a name="remarks"></a>備註
 
@@ -6602,7 +6602,7 @@ afx_msg void OnDestroy();
 
 ##  <a name="ondestroyclipboard"></a>  CWnd::OnDestroyClipboard
 
-當您透過呼叫[EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) Windows 函式清空剪貼簿時, 架構會為剪貼簿擁有者呼叫這個成員函式。
+當您透過呼叫[EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows 函式清空剪貼簿時, 架構會為剪貼簿擁有者呼叫這個成員函式。
 
 ```
 afx_msg void OnDestroyClipboard();
@@ -6634,19 +6634,19 @@ afx_msg BOOL OnDeviceChange(
 
 *NEvent*參數可以是下列其中一個值:
 
-- [DBT_DEVICEARRIVAL](/windows/desktop/DevIO/dbt-devicearrival)已插入裝置, 且現在已可使用。
+- [DBT_DEVICEARRIVAL](/windows/win32/DevIO/dbt-devicearrival)已插入裝置, 且現在已可使用。
 
-- [DBT_DEVICEQUERYREMOVE](/windows/desktop/DevIO/dbt-devicequeryremove)已要求移除裝置的許可權。 任何應用程式都可以拒絕此要求並取消移除。
+- [DBT_DEVICEQUERYREMOVE](/windows/win32/DevIO/dbt-devicequeryremove)已要求移除裝置的許可權。 任何應用程式都可以拒絕此要求並取消移除。
 
-- [DBT_DEVICEQUERYREMOVEFAILED](/windows/desktop/DevIO/dbt-devicequeryremovefailed)已取消移除裝置的要求。
+- [DBT_DEVICEQUERYREMOVEFAILED](/windows/win32/DevIO/dbt-devicequeryremovefailed)已取消移除裝置的要求。
 
-- [DBT_DEVICEREMOVEPENDING](/windows/desktop/DevIO/dbt-deviceremovepending)即將移除裝置。 無法拒絕。
+- [DBT_DEVICEREMOVEPENDING](/windows/win32/DevIO/dbt-deviceremovepending)即將移除裝置。 無法拒絕。
 
-- [DBT_DEVICEREMOVECOMPLETE](/windows/desktop/DevIO/dbt-deviceremovecomplete)裝置已移除。
+- [DBT_DEVICEREMOVECOMPLETE](/windows/win32/DevIO/dbt-deviceremovecomplete)裝置已移除。
 
-- [DBT_DEVICETYPESPECIFIC](/windows/desktop/DevIO/dbt-devicetypespecific)裝置特定事件。
+- [DBT_DEVICETYPESPECIFIC](/windows/win32/DevIO/dbt-devicetypespecific)裝置特定事件。
 
-- [DBT_CONFIGCHANGED](/windows/desktop/DevIO/dbt-configchanged)目前的設定已變更。
+- [DBT_CONFIGCHANGED](/windows/win32/DevIO/dbt-configchanged)目前的設定已變更。
 
 - DBT_DEVNODES_CHANGED 裝置節點已變更。
 
@@ -6687,7 +6687,7 @@ afx_msg void OnDrawClipboard();
 
 只有已藉由呼叫[SetClipboardViewer](#setclipboardviewer)成員函式加入剪貼簿檢視器鏈的應用程式, 才需要回應此呼叫。
 
-接收`OnDrawClipboard`呼叫的每個視窗都應該呼叫[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 函式, 將[WM_DRAWCLIPBOARD](/windows/desktop/dataxchg/wm-drawclipboard)訊息傳遞至剪貼簿檢視器鏈中的下一個視窗。 下一個視窗的控制碼是由[SetClipboardViewer](#setclipboardviewer)成員函式傳回;它可能會修改以回應[OnChangeCbChain](#onchangecbchain)成員函式呼叫。
+接收`OnDrawClipboard`呼叫的每個視窗都應該呼叫[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 函式, 將[WM_DRAWCLIPBOARD](/windows/win32/dataxchg/wm-drawclipboard)訊息傳遞至剪貼簿檢視器鏈中的下一個視窗。 下一個視窗的控制碼是由[SetClipboardViewer](#setclipboardviewer)成員函式傳回;它可能會修改以回應[OnChangeCbChain](#onchangecbchain)成員函式呼叫。
 
 ##  <a name="ondrawiconicthumbnailorlivepreview"></a>  CWnd::OnDrawIconicThumbnailOrLivePreview
 
@@ -6743,7 +6743,7 @@ afx_msg void OnDrawItem(
 
 ### <a name="remarks"></a>備註
 
-[DRAWITEMSTRUCT 結構](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)的成員會定義要執行的繪製`itemAction`作業。 這個成員中的資料可讓控制項的擁有者判斷需要何種繪圖動作。
+[DRAWITEMSTRUCT 結構](/windows/win32/api/winuser/ns-winuser-drawitemstruct)的成員會定義要執行的繪製`itemAction`作業。 這個成員中的資料可讓控制項的擁有者判斷需要何種繪圖動作。
 
 在從處理此訊息傳回之前, 應用程式應該確保`DRAWITEMSTRUCT`結構的*hDC*成員所識別的裝置內容已還原為預設狀態。
 
@@ -6811,7 +6811,7 @@ afx_msg void OnEndSession(BOOL bEnding);
 
 如果*彎曲*為 TRUE, 則在所有應用程式從處理此呼叫傳回之後, Windows 可以隨時終止。 因此, 讓應用程式執行在中`OnEndSession`終止所需的所有工作。
 
-當會話結束時, 您不需要呼叫[DestroyWindow](#destroywindow)成員函式或[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows 函式。
+當會話結束時, 您不需要呼叫[DestroyWindow](#destroywindow)成員函式或[PostQuitMessage](/windows/win32/api/winuser/nf-winuser-postquitmessage) Windows 函式。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6873,9 +6873,9 @@ afx_msg void OnEnterSizeMove();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_ENTERSIZEMOVE](/windows/desktop/winmsg/wm-entersizemove)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_ENTERSIZEMOVE](/windows/win32/winmsg/wm-entersizemove)通知, 如 Windows SDK 中所述。
 
-當使用者按一下視窗的標題列或調整大小框線, 或當視窗將[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)訊息傳遞給[CWnd::D efwindowproc](#defwindowproc)函式和該訊息的*wParam*參數時, 視窗會進入移動或調整大小的強制回應迴圈指定 SC_MOVE 或 SC_SIZE。
+當使用者按一下視窗的標題列或調整大小框線, 或當視窗將[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)訊息傳遞給[CWnd::D efwindowproc](#defwindowproc)函式和該訊息的*wParam*參數時, 視窗會進入移動或調整大小的強制回應迴圈指定 SC_MOVE 或 SC_SIZE。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6903,7 +6903,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 預設的執行會使用視窗類別結構`hbrBackground`成員所指定的視窗類別背景筆刷來清除背景。
 
-如果成員為 Null, 您的`OnEraseBkgnd`覆寫版本應該會清除背景色彩。 `hbrBackground` 您的版本也應該對齊與預期的筆刷的原點`CWnd`藉由第一個呼叫的座標[UnrealizeObject](/windows/desktop/api/wingdi/nf-wingdi-unrealizeobject)的筆刷，，然後選取 筆刷。
+如果成員為 Null, 您的`OnEraseBkgnd`覆寫版本應該會清除背景色彩。 `hbrBackground` 您的版本也應該對齊與預期的筆刷的原點`CWnd`藉由第一個呼叫的座標[UnrealizeObject](/windows/win32/api/wingdi/nf-wingdi-unrealizeobject)的筆刷，，然後選取 筆刷。
 
 如果它`OnEraseBkgnd`處理訊息並清除背景, 則覆寫的會傳回非零以回應 WM_ERASEBKGND; 這表示不需要進一步清除。 如果傳回 0, 視窗仍會標示為需要清除。 (一般而言, 這表示`fErase` `PAINTSTRUCT`結構的成員將會是 TRUE)。
 
@@ -6940,9 +6940,9 @@ afx_msg void OnExitSizeMove();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_EXITSIZEMOVE](/windows/desktop/winmsg/wm-exitsizemove)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_EXITSIZEMOVE](/windows/win32/winmsg/wm-exitsizemove)通知, 如 Windows SDK 中所述。
 
-當使用者按一下視窗的標題列或調整大小框線, 或當視窗將[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)訊息傳遞給[CWnd::D efwindowproc](#defwindowproc)函式和該訊息的*wParam*參數時, 視窗會進入移動或調整大小的強制回應迴圈指定 SC_MOVE 或 SC_SIZE。
+當使用者按一下視窗的標題列或調整大小框線, 或當視窗將[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)訊息傳遞給[CWnd::D efwindowproc](#defwindowproc)函式和該訊息的*wParam*參數時, 視窗會進入移動或調整大小的強制回應迴圈指定 SC_MOVE 或 SC_SIZE。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -6957,9 +6957,9 @@ afx_msg void OnFontChange();
 
 ### <a name="remarks"></a>備註
 
-在系統中新增或移除字型的應用程式 (例如, 透過[AddFontResource](/windows/desktop/api/wingdi/nf-wingdi-addfontresourcea)或[RemoveFontResource](/windows/desktop/api/wingdi/nf-wingdi-removefontresourcea) Windows 函式), 應該將[WM_FONTCHANGE](/windows/desktop/gdi/wm-fontchange)訊息傳送至所有最上層視窗。
+在系統中新增或移除字型的應用程式 (例如, 透過[AddFontResource](/windows/win32/api/wingdi/nf-wingdi-addfontresourcew)或[RemoveFontResource](/windows/win32/api/wingdi/nf-wingdi-removefontresourcew) Windows 函式), 應該將[WM_FONTCHANGE](/windows/win32/gdi/wm-fontchange)訊息傳送至所有最上層視窗。
 
-若要傳送此訊息, 請使用[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) Windows 函數, 並將*hWnd*參數設為 HWND_BROADCAST。
+若要傳送此訊息, 請使用[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) Windows 函數, 並將*hWnd*參數設為 HWND_BROADCAST。
 
 ##  <a name="ongetdlgcode"></a>  CWnd::OnGetDlgCode
 
@@ -7012,7 +7012,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>參數
 
 *lpMMI*<br/>
-`MINMAXINFO`指向結構, 其中包含視窗最大化大小和位置及其最小和最大追蹤大小的相關資訊。 如需此結構的詳細資訊, 請參閱[MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)結構。
+`MINMAXINFO`指向結構, 其中包含視窗最大化大小和位置及其最小和最大追蹤大小的相關資訊。 如需此結構的詳細資訊, 請參閱[MINMAXINFO](/windows/win32/api/winuser/ns-winuser-minmaxinfo)結構。
 
 ### <a name="remarks"></a>備註
 
@@ -7070,7 +7070,7 @@ afx_msg BOOL OnHelpInfo(HELPINFO* lpHelpInfo);
 ### <a name="parameters"></a>參數
 
 *lpHelpInfo*<br/>
-指標[HELPINFO](/windows/desktop/api/winuser/ns-winuser-taghelpinfo)包含功能表項目、 控制項、 對話方塊中或要求說明 視窗的相關資訊的結構。
+指標[HELPINFO](/windows/win32/api/winuser/ns-winuser-helpinfo)包含功能表項目、 控制項、 對話方塊中或要求說明 視窗的相關資訊的結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7113,7 +7113,7 @@ afx_msg void OnHotKey(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)通知, 如 Windows SDK 中所述。 此訊息會放在與登錄熱鍵的執行緒相關聯之訊息佇列的頂端。 使用[RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)函數來註冊全系統的熱鍵。
+這個方法會接收[WM_HOTKEY](/windows/win32/inputdev/wm-hotkey)通知, 如 Windows SDK 中所述。 此訊息會放在與登錄熱鍵的執行緒相關聯之訊息佇列的頂端。 使用[RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey)函數來註冊全系統的熱鍵。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7305,7 +7305,7 @@ afx_msg void OnInputDeviceChange(unsigned short uFlag);
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_INPUT_DEVICE_CHANGE](/windows/desktop/inputdev/wm-input-device-change)通知, 如 Windows SDK 中所述。 是一般輸入裝置訊息。
+這個方法會接收[WM_INPUT_DEVICE_CHANGE](/windows/win32/inputdev/wm-input-device-change)通知, 如 Windows SDK 中所述。 是一般輸入裝置訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7324,12 +7324,12 @@ afx_msg void OnInputLangChange(
 
 |參數|描述|
 |---------------|-----------------|
-|*nCharSet*|在新地區設定的字元集。 如需詳細資訊, 請參閱[LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)結構的*lfCharSet*參數。|
-|*nLocaleId*|在輸入地區設定識別碼。 如需詳細資訊, 請參閱[語言識別項常數和字串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
+|*nCharSet*|在新地區設定的字元集。 如需詳細資訊, 請參閱[LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw)結構的*lfCharSet*參數。|
+|*nLocaleId*|在輸入地區設定識別碼。 如需詳細資訊, 請參閱[語言識別項常數和字串](/windows/win32/Intl/language-identifier-constants-and-strings)。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_INPUTLANGCHANGE](/windows/desktop/winmsg/wm-inputlangchange)通知訊息, 如 Windows SDK 中所述。
+這個方法會接收[WM_INPUTLANGCHANGE](/windows/win32/winmsg/wm-inputlangchange)通知訊息, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7349,11 +7349,11 @@ afx_msg void OnInputLangChangeRequest(
 |參數|描述|
 |---------------|-----------------|
 |*nFlags*|在旗標的位 (OR) 組合, 表示已從已安裝之地區設定清單中的上一個或下一個地區設定選取了新的地區設定, 或新輸入地區設定的鍵盤配置可與系統字元集搭配使用。<br /><br /> 可能的值為 INPUTLANGCHANGE_BACKWARD、INPUTLANGCHANGE_FORWARD 和 INPUTLANGCHANGE_SYSCHARSET。|
-|*nLocaleId*|在輸入地區設定識別碼。 如需詳細資訊, 請參閱[語言識別項常數和字串](/windows/desktop/Intl/language-identifier-constants-and-strings)。|
+|*nLocaleId*|在輸入地區設定識別碼。 如需詳細資訊, 請參閱[語言識別項常數和字串](/windows/win32/Intl/language-identifier-constants-and-strings)。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_INPUTLANGCHANGEREQUEST](/windows/desktop/winmsg/wm-inputlangchangerequest)通知訊息, 如 Windows SDK 中所述。 當使用者使用鍵盤控制台應用程式中指定的熱鍵, 或從系統工作列上的指標來選擇新的輸入語言時, 就會張貼此訊息。
+這個方法會接收[WM_INPUTLANGCHANGEREQUEST](/windows/win32/winmsg/wm-inputlangchangerequest)通知訊息, 如 Windows SDK 中所述。 當使用者使用鍵盤控制台應用程式中指定的熱鍵, 或從系統工作列上的指標來選擇新的輸入語言時, 就會張貼此訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7496,7 +7496,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-只有具有 CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式的 windows 才會收到`OnLButtonDblClk`呼叫。 這是 Microsoft Foundation Class windows 的預設值。 當使用者`OnLButtonDblClk`按下、放開, 然後在系統的按兩下時間限制內再次按下滑鼠左鍵時, Windows 就會呼叫。 按兩下滑鼠左鍵, 實際上會產生四個事件:[WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)訊息、WM_LBUTTONDBLCLK 呼叫, 以及釋放按鈕時的另一個 WM_LBUTTONUP 訊息。
+只有具有 CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)樣式的 windows 才會收到`OnLButtonDblClk`呼叫。 這是 Microsoft Foundation Class windows 的預設值。 當使用者`OnLButtonDblClk`按下、放開, 然後在系統的按兩下時間限制內再次按下滑鼠左鍵時, Windows 就會呼叫。 按兩下滑鼠左鍵, 實際上會產生四個事件:[WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)訊息、WM_LBUTTONDBLCLK 呼叫, 以及釋放按鈕時的另一個 WM_LBUTTONUP 訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7595,7 +7595,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-只有具有 CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式的 windows 才會收到`OnMButtonDblClk`呼叫。 這是所有 [Microsoft Foundation Class] 視窗的預設值。 當使用者按`OnMButtonDblClk`下、放開, 然後在系統的按兩下時間限制內再次按下滑鼠按鍵時, Windows 就會產生呼叫。 按兩下滑鼠中間按鈕, 實際上會產生四個事件:[WM_MBUTTONDOWN](#onmbuttondown)和[WM_MBUTTONUP](#onmbuttonup)訊息、WM_MBUTTONDBLCLK 呼叫, 以及另一個 WM_MBUTTONUP 訊息。
+只有具有 CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)樣式的 windows 才會收到`OnMButtonDblClk`呼叫。 這是所有 [Microsoft Foundation Class] 視窗的預設值。 當使用者按`OnMButtonDblClk`下、放開, 然後在系統的按兩下時間限制內再次按下滑鼠按鍵時, Windows 就會產生呼叫。 按兩下滑鼠中間按鈕, 實際上會產生四個事件:[WM_MBUTTONDOWN](#onmbuttondown)和[WM_MBUTTONUP](#onmbuttonup)訊息、WM_MBUTTONDBLCLK 呼叫, 以及另一個 WM_MBUTTONUP 訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7708,7 +7708,7 @@ afx_msg void OnMeasureItem(
 控制項的識別碼。
 
 *lpMeasureItemStruct*<br/>
-指向包含擁有者繪製控制項之維度的[MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)資料結構。
+指向包含擁有者繪製控制項之維度的[MEASUREITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-measureitemstruct)資料結構。
 
 ### <a name="remarks"></a>備註
 
@@ -7716,11 +7716,11 @@ afx_msg void OnMeasureItem(
 
 如果清單方塊或下拉式方塊是以[LBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)或[CBS_OWNERDRAWVARIABLE](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)樣式建立的, 則架構會針對控制項中的每個專案, 呼叫此函式的擁有者。否則, 會呼叫此函數一次。
 
-在傳送[WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)訊息之前`OnMeasureItem` , Windows 會針對使用 OWNERDRAWFIXED 樣式所建立的下拉式方塊和清單方塊的擁有者, 起始的呼叫。 因此, 當擁有者收到此呼叫時, Windows 尚未決定控制項中所使用字型的高度和寬度;需要這些值的函式呼叫和計算, 應出現在應用程式或程式庫的 main 函式中。
+在傳送[WM_INITDIALOG](/windows/win32/dlgbox/wm-initdialog)訊息之前`OnMeasureItem` , Windows 會針對使用 OWNERDRAWFIXED 樣式所建立的下拉式方塊和清單方塊的擁有者, 起始的呼叫。 因此, 當擁有者收到此呼叫時, Windows 尚未決定控制項中所使用字型的高度和寬度;需要這些值的函式呼叫和計算, 應出現在應用程式或程式庫的 main 函式中。
 
 如果要`CMenu`測量的專案是`CListBox`或`CComboBox`物件, 則會呼叫適當`MeasureItem`類別的虛擬函式。 覆寫適當控制項類別的成員函式,以計算和設定每個專案的大小。`MeasureItem`
 
-`OnMeasureItem`只有在執行時間建立控制項的類別, 或使用 LBS_OWNERDRAWVARIABLE 或 CBS_OWNERDRAWVARIABLE 樣式建立時, 才會呼叫。 如果控制項是由對話方塊編輯器所建立, `OnMeasureItem`則不會呼叫。 這是因為[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)訊息會在控制項的建立過程中及早傳送。 如果您使用`DDX_Control`、 `SubclassDlgItem`或`SubclassWindow`來子類別化, 通常會在建立程式之後發生子類別化。 因此, 沒有任何方法可以處理控制項`OnChildNotify`函式中的[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)訊息, 這是 MFC 用來執行 ON_WM_MEASUREITEM_REFLECT 的機制。
+`OnMeasureItem`只有在執行時間建立控制項的類別, 或使用 LBS_OWNERDRAWVARIABLE 或 CBS_OWNERDRAWVARIABLE 樣式建立時, 才會呼叫。 如果控制項是由對話方塊編輯器所建立, `OnMeasureItem`則不會呼叫。 這是因為[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)訊息會在控制項的建立過程中及早傳送。 如果您使用`DDX_Control`、 `SubclassDlgItem`或`SubclassWindow`來子類別化, 通常會在建立程式之後發生子類別化。 因此, 沒有任何方法可以處理控制項`OnChildNotify`函式中的[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)訊息, 這是 MFC 用來執行 ON_WM_MEASUREITEM_REFLECT 的機制。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7792,7 +7792,7 @@ afx_msg UINT OnMenuDrag(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MENUDRAG](/windows/desktop/menurc/wm-menudrag)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_MENUDRAG](/windows/win32/menurc/wm-menudrag)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7807,20 +7807,20 @@ afx_msg UINT OnMenuGetObject(MENUGETOBJECTINFO* pMenuGetObjectInfo);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*pMenu*|在[MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)結構的指標, 其中包含滑鼠游標所在之拖放功能表的相關資訊。|
+|*pMenu*|在[MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo)結構的指標, 其中包含滑鼠游標所在之拖放功能表的相關資訊。|
 
 ### <a name="return-value"></a>傳回值
 
 |傳回值|意義|
 |------------------|-------------|
-|MNGO_NOERROR|支援拖放作業的介面指標會在`pvObj` [MENUGETOBJECTINFO](/windows/desktop/api/winuser/ns-winuser-tagmenugetobjectinfo)結構的成員中傳回。 目前只支援[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)介面。|
+|MNGO_NOERROR|支援拖放作業的介面指標會在`pvObj` [MENUGETOBJECTINFO](/windows/win32/api/winuser/ns-winuser-menugetobjectinfo)結構的成員中傳回。 目前只支援[IDropTarget](/windows/win32/api/oleidl/nn-oleidl-idroptarget)介面。|
 |MNGO_NOINTERFACE|不支援拖放式和拖曳介面。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MENUGETOBJECT](/windows/desktop/menurc/wm-menugetobject)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_MENUGETOBJECT](/windows/win32/menurc/wm-menugetobject)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7844,7 +7844,7 @@ afx_msg void OnMenuRButtonUp(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup)通知, 如 Windows SDK 中所述。 [WM_MENURBUTTONUP](/windows/desktop/menurc/wm-menurbuttonup)訊息可讓應用程式為訊息中指定的功能表項目提供內容相關性功能表。
+這個方法會接收[WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup)通知, 如 Windows SDK 中所述。 [WM_MENURBUTTONUP](/windows/win32/menurc/wm-menurbuttonup)訊息可讓應用程式為訊息中指定的功能表項目提供內容相關性功能表。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -7945,7 +7945,7 @@ afx_msg int OnMouseActivate(
 
 ##  <a name="onmousehover"></a>  CWnd::OnMouseHover
 
-當游標停留在先前呼叫中指定的時間週期 視窗的工作區時，架構會呼叫此成員函式[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)。
+當游標停留在先前呼叫中指定的時間週期 視窗的工作區時，架構會呼叫此成員函式[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)。
 
 ```
 afx_msg void OnMouseHover(
@@ -7962,9 +7962,9 @@ afx_msg void OnMouseHover(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MOUSEHOVER](/windows/desktop/inputdev/wm-mousehover)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_MOUSEHOVER](/windows/win32/inputdev/wm-mousehover)通知, 如 Windows SDK 中所述。
 
-*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
+*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)。
 
 |輔助按鍵|描述|
 |------------------|-----------------|
@@ -7992,22 +7992,22 @@ afx_msg void OnMouseHWheel(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*nFlags*|在旗標的位元組合 (OR), 指出所按的輔助按鍵。 例如, MK_CONTROL 旗標表示已按下 CTRL 鍵。<br /><br /> 如需旗標的清單, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)中的「訊息參數」子標題。|
+|*nFlags*|在旗標的位元組合 (OR), 指出所按的輔助按鍵。 例如, MK_CONTROL 旗標表示已按下 CTRL 鍵。<br /><br /> 如需旗標的清單, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)中的「訊息參數」子標題。|
 |*zDelta*|在表示滾輪旋轉的距離, 以 WHEEL_DELTA 的倍數或除法表示, 也就是120。 正數值表示滾輪已旋轉至右側;負數值表示滾輪已旋轉至左邊。|
 |*pt*|在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件, 指定相對於工作區左上角之游標的*x*和*y*座標。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MOUSEHWHEEL](/windows/desktop/inputdev/wm-mousehwheel)通知訊息, 如 Windows SDK 中所述。 當滑鼠的水準滾輪為傾斜或旋轉時, 此訊息會傳送至具有焦點的視窗。
+這個方法會接收[WM_MOUSEHWHEEL](/windows/win32/inputdev/wm-mousehwheel)通知訊息, 如 Windows SDK 中所述。 當滑鼠的水準滾輪為傾斜或旋轉時, 此訊息會傳送至具有焦點的視窗。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
 
 ##  <a name="onmouseleave"></a>  CWnd::OnMouseLeave
 
-當游標離開先前呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的工作區時, 架構會呼叫這個成員函式。
+當游標離開先前呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的工作區時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg void OnMouseLeave();
@@ -8015,7 +8015,7 @@ afx_msg void OnMouseLeave();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_MOUSELEAVE](/windows/desktop/inputdev/wm-mouseleave)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_MOUSELEAVE](/windows/win32/inputdev/wm-mouseleave)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8093,7 +8093,7 @@ afx_msg BOOL OnMouseWheel(
 
 ### <a name="remarks"></a>備註
 
-除非予以覆`OnMouseWheel`寫, 否則會呼叫[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)的預設值。 Windows 會自動將訊息路由至具有焦點的控制項或子視窗。 Win32 函式[DefWindowProc](/windows/desktop/api/winuser/nf-winuser-defwindowproca)會將訊息向上傳播到處理它的視窗。
+除非予以覆`OnMouseWheel`寫, 否則會呼叫[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)的預設值。 Windows 會自動將訊息路由至具有焦點的控制項或子視窗。 Win32 函式[DefWindowProc](/windows/win32/api/winuser/nf-winuser-defwindowprocw)會將訊息向上傳播到處理它的視窗。
 
 *ZDelta*參數是 WHEEL_DELTA 的倍數, 其設定為120。 此值是要採取之動作的閾值, 而每個差異都應該執行一個這類動作 (例如, 向前滾動一個凹槽)。
 
@@ -8143,7 +8143,7 @@ afx_msg void OnMoving(
 要移動的視窗邊緣。
 
 *lpRect*<br/>
-將包含專案座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)的位址。
+將包含專案座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 結構](/windows/win32/api/windef/ns-windef-rect)的位址。
 
 ### <a name="remarks"></a>備註
 
@@ -8190,7 +8190,7 @@ afx_msg void OnNcCalcSize(
 指定應用程式是否應指定工作區的哪個部分包含有效的資訊。 Windows 會將有效的資訊複製到新工作區中的指定區域。 如果此參數為 TRUE, 則應用程式應該指定工作區的哪個部分是有效的。
 
 *lpncsp*<br/>
-指向[NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)資料結構, 其中包含應用程式可用來計算`CWnd`矩形新大小和位置的資訊 (包括工作區、框線、標題、捲軸等等)。
+指向[NCCALCSIZE_PARAMS](/windows/win32/api/winuser/ns-winuser-nccalcsize_params)資料結構, 其中包含應用程式可用來計算`CWnd`矩形新大小和位置的資訊 (包括工作區、框線、標題、捲軸等等)。
 
 ### <a name="remarks"></a>備註
 
@@ -8216,7 +8216,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>參數
 
 *lpCreateStruct*<br/>
-指向的[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)資料結構`CWnd`。
+指向的[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)資料結構`CWnd`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8256,7 +8256,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>傳回值
 
-其中一個滑鼠點擊測試列舉值。 如需值清單, 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 。
+其中一個滑鼠點擊測試列舉值。 如需值清單, 請參閱[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
 
 ### <a name="remarks"></a>備註
 
@@ -8276,7 +8276,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 。
+指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
 
 *point*<br/>
 `CPoint`指定物件, 其中包含游標位置的 x 和 y 螢幕座標。 這些座標一律相對於螢幕的左上角。
@@ -8301,7 +8301,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 。
+指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
 
 *point*<br/>
 `CPoint`指定物件, 其中包含游標位置的 x 和 y 螢幕座標。 這些座標一律相對於螢幕的左上角。
@@ -8326,7 +8326,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>參數
 
 *nHitTest*<br/>
-指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) 。
+指定[點擊測試程式碼](#onnchittest)。 點擊測試是判斷游標位置的測試。 如需值清單, 請參閱[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest) 。
 
 *point*<br/>
 `CPoint`指定物件, 其中包含游標位置的 x 和 y 螢幕座標。 這些座標一律相對於螢幕的左上角。
@@ -8409,7 +8409,7 @@ afx_msg void OnNcMButtonUp(
 
 ##  <a name="onncmousehover"></a>  CWnd::OnNcMouseHover
 
-當游標停留在先前呼叫中指定的時間週期 視窗中非工作區時，架構會呼叫此成員函式[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)。
+當游標停留在先前呼叫中指定的時間週期 視窗中非工作區時，架構會呼叫此成員函式[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)。
 
 ```
 afx_msg void OnNcMouseHover(
@@ -8419,21 +8419,21 @@ afx_msg void OnNcMouseHover(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息的結果。|
+|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)訊息的結果。|
 |*point*|在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件, 指定相對於螢幕左上角之游標的*x*和*y*座標。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_NCMOUSEHOVER](/windows/desktop/inputdev/wm-ncmousehover)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_NCMOUSEHOVER](/windows/win32/inputdev/wm-ncmousehover)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
 
 ##  <a name="onncmouseleave"></a>  CWnd::OnNcMouseLeave
 
-當游標離開先前呼叫[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的非工作區時, 架構會呼叫這個成員函式。
+當游標離開先前呼叫[TrackMouseEvent](/windows/win32/api/winuser/nf-winuser-trackmouseevent)中指定之視窗的非工作區時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg void OnNcMouseLeave();
@@ -8441,7 +8441,7 @@ afx_msg void OnNcMouseLeave();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_NCMOUSELEAVE](/windows/desktop/inputdev/wm-ncmouseleave)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_NCMOUSELEAVE](/windows/win32/inputdev/wm-ncmouseleave)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8570,7 +8570,7 @@ afx_msg void OnNcRenderingChanged(BOOL bIsRendering);
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_DWMNCRENDERINGCHANGED](/windows/desktop/dwm/wm-dwmncrenderingchanged)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_DWMNCRENDERINGCHANGED](/windows/win32/dwm/wm-dwmncrenderingchanged)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8588,15 +8588,15 @@ void OnNcXButtonDblClk(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息的結果。|
+|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)訊息的結果。|
 |*nButton*|在如果按兩下第一個 Microsoft 的 [全選] X 按鈕, 則為 XBUTTON1 的值, 如果按兩下第二個 X 按鈕, 則為 XBUTTON2。|
 |*point*|在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件, 指定相對於工作區左上角之游標的*x*和*y*座標。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
+這個方法會接收[WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8614,15 +8614,15 @@ afx_msg void OnNcXButtonDown(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息的結果。|
+|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)訊息的結果。|
 |*nButton*|在如果按下第一個滑鼠 X 按鈕, 則為 XBUTTON1 的值, 如果按下第二個 X 按鈕, 則為 XBUTTON2。|
 |*point*|在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件, 指定相對於螢幕左上角之游標的*x*和*y*座標。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_NCXBUTTONDOWN](/windows/desktop/inputdev/wm-ncxbuttondown)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
+這個方法會接收[WM_NCXBUTTONDOWN](/windows/win32/inputdev/wm-ncxbuttondown)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8642,13 +8642,13 @@ afx_msg void OnNcXButtonUp(
 
 |參數|說明|
 |---------------|-----------------|
-|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest)訊息的結果。|
+|*nHitTest*|在[CWnd::D efwindowproc](#defwindowproc)函數所傳回的點擊測試值, 是處理[WM_NCHITTEST](/windows/win32/inputdev/wm-nchittest)訊息的結果。|
 |*nButton*|在若已釋放第一個滑鼠 X 按鈕, 則為 XBUTTON1 的值, 如果已釋放第二個 X 按鈕, 則為 XBUTTON2。|
 |*point*|在[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件, 指定相對於螢幕左上角之游標的*x*和*y*座標。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_NCXBUTTONUP](/windows/desktop/inputdev/wm-ncxbuttonup)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
+這個方法會接收[WM_NCXBUTTONUP](/windows/win32/inputdev/wm-ncxbuttonup)通知, 如 Windows SDK 中所述。 這則訊息會張貼至包含資料指標的視窗中。 如果視窗已捕捉滑鼠, 則不會張貼此訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8667,12 +8667,12 @@ afx_msg void OnNextMenu(
 
 |參數|說明|
 |---------------|-----------------|
-|*nKey*|在旗標的位元組合 (OR), 指出所按的輔助按鍵。 例如, MK_CONTROL 旗標表示已按下 CTRL 鍵。<br /><br /> 如需旗標的清單, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)中的「訊息參數」子標題。|
-|*lpMdiNextMenu*|在[MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)結構的指標, 其中包含要啟用之功能表的相關資訊。|
+|*nKey*|在旗標的位元組合 (OR), 指出所按的輔助按鍵。 例如, MK_CONTROL 旗標表示已按下 CTRL 鍵。<br /><br /> 如需旗標的清單, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)中的「訊息參數」子標題。|
+|*lpMdiNextMenu*|在[MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu)結構的指標, 其中包含要啟用之功能表的相關資訊。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup)通知, 如 Windows SDK 中所述。 回應此訊息時, 您的應用程式可以設定`hmenuNext` [MDINEXTMENU](/windows/desktop/api/winuser/ns-winuser-tagmdinextmenu)結構的成員, 以指定要切換的功能表, 以及`hwndNext`指定要接收功能表通知訊息之視窗的成員。
+這個方法會接收[WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup)通知, 如 Windows SDK 中所述。 回應此訊息時, 您的應用程式可以設定`hmenuNext` [MDINEXTMENU](/windows/win32/api/winuser/ns-winuser-mdinextmenu)結構的成員, 以指定要切換的功能表, 以及`hwndNext`指定要接收功能表通知訊息之視窗的成員。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8725,7 +8725,7 @@ afx_msg UINT OnNotifyFormat(
 
 |參數|描述|
 |---------------|-----------------|
-|*pWnd*|在`CWnd`物件的指標, 表示傳送[WM_NOTIFY](/windows/desktop/controls/wm-notify)訊息的視窗。<br /><br /> 如果*nCommand*參數是 NF_QUERY, 則此參數是控制項的指標, 如果*nCommand*為 NF_REQUERY, 則為控制項父視窗的指標。|
+|*pWnd*|在`CWnd`物件的指標, 表示傳送[WM_NOTIFY](/windows/win32/controls/wm-notify)訊息的視窗。<br /><br /> 如果*nCommand*參數是 NF_QUERY, 則此參數是控制項的指標, 如果*nCommand*為 NF_REQUERY, 則為控制項父視窗的指標。|
 |*nCommand*|在專門用來 WM_NOTIFY 訊息的命令值。 可能值為：<br /><br /> - NF_QUERY -<br />     此訊息是用來判斷是否應該在 WM_NOTIFY 訊息中使用 ANSI 或 Unicode 結構的查詢。 這則訊息會在建立控制項時, 從控制項傳送至其父視窗, 並回應此訊息的 NF_REQUERY 表單。<br />- NF_REQUERY -<br />     訊息是控制項的要求, 可將此訊息的 NF_QUERY 表單傳送至其父視窗。 此要求會從父視窗傳送, 並要求控制項重新查詢父項, 以在 WM_NOTIFY 訊息中使用的結構類型。 如果*nCommand*參數是 NF_REQUERY, 則傳回值會是重新查詢作業的結果。|
 
 ### <a name="return-value"></a>傳回值
@@ -8738,7 +8738,7 @@ afx_msg UINT OnNotifyFormat(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_NOTIFYFORMAT](/windows/desktop/Controls/wm-notifyformat)通知, 如 Windows SDK 中所述。 WM_NOTIFY 訊息會從通用控制項傳送至其父視窗, 並從父視窗傳送到通用控制項。
+這個方法會接收[WM_NOTIFYFORMAT](/windows/win32/Controls/wm-notifyformat)通知, 如 Windows SDK 中所述。 WM_NOTIFY 訊息會從通用控制項傳送至其父視窗, 並從父視窗傳送到通用控制項。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8753,7 +8753,7 @@ afx_msg void OnPaint();
 
 ### <a name="remarks"></a>備註
 
-呼叫[UpdateWindow](#updatewindow)或[RedrawWindow](#redrawwindow)成員函式時, 會傳送[WM_PAINT](/windows/desktop/gdi/the-wm-paint-message)訊息。
+呼叫[UpdateWindow](#updatewindow)或[RedrawWindow](#redrawwindow)成員函式時, 會傳送[WM_PAINT](/windows/win32/gdi/the-wm-paint-message)訊息。
 
 視窗可能會因呼叫`RedrawWindow`具有 RDW_INTERNALPAINT 旗標的成員函式而收到內部繪製訊息。 在此情況下, 視窗可能不會有更新區域。 應用程式應該呼叫[GetUpdateRect](#getupdaterect)成員函式, 以判斷視窗是否具有更新區域。 如果`GetUpdateRect`傳回 0, 則應用程式不應呼叫[BeginPaint](#beginpaint)和[EndPaint](#endpaint)成員函式。
 
@@ -8765,9 +8765,9 @@ afx_msg void OnPaint();
 
 如需有關使用`WM_Paint`的詳細資訊, 請參閱 Windows SDK 中的下列主題:
 
-- [WM_PAINT 訊息](/windows/desktop/gdi/the-wm-paint-message)
+- [WM_PAINT 訊息](/windows/win32/gdi/the-wm-paint-message)
 
-- [使用 WM_PAINT 訊息](/windows/desktop/gdi/using-the-wm-paint-message)
+- [使用 WM_PAINT 訊息](/windows/win32/gdi/using-the-wm-paint-message)
 
 ##  <a name="onpaintclipboard"></a>  CWnd::OnPaintClipboard
 
@@ -8785,13 +8785,13 @@ afx_msg void OnPaintClipboard(
 指定 [剪貼簿] 應用程式視窗的指標。 該指標可能是暫時性的，因此不應該儲存供日後使用。
 
 *hPaintStruct*<br/>
-識別 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) 資料結構，其定義要繪製工作區的哪一部分。
+識別 [PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) 資料結構，其定義要繪製工作區的哪一部分。
 
 ### <a name="remarks"></a>備註
 
 若要判斷整個工作區或其中一部分是否需要重新繪製, 剪貼簿擁有者必須將`rcpaint` `PAINTSTRUCT`結構成員中所指定之繪圖區域的維度, 與最近的[OnSizeClipboard](#onsizeclipboard)成員函式呼叫。
 
-`OnPaintClipboard`應該使用[GlobalLock](/windows/desktop/api/winbase/nf-winbase-globallock) windows 函式鎖定包含`PAINTSTRUCT`資料結構的記憶體, 並在結束前使用[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) Windows 函式解除鎖定該記憶體。
+`OnPaintClipboard`應該使用[GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) windows 函式鎖定包含`PAINTSTRUCT`資料結構的記憶體, 並在結束前使用[GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows 函式解除鎖定該記憶體。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8899,9 +8899,9 @@ afx_msg UINT OnPowerBroadcast(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)訊息, 如 Windows SDK 中所述。
+這個方法會接收[WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast)訊息, 如 Windows SDK 中所述。
 
-*NPowerEvent*參數指定的事件如電池電力偏低、電源狀態已變更、要求或拒絕暫停作業的許可權、作業會在事件之後自動繼續、系統暫停作業, 或暫止之後正在繼續作業。 通常不會使用*nEventData*參數。 如需詳細資訊, 請參閱[WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast)訊息的*wParam*和*lParam*參數。
+*NPowerEvent*參數指定的事件如電池電力偏低、電源狀態已變更、要求或拒絕暫停作業的許可權、作業會在事件之後自動繼續、系統暫停作業, 或暫止之後正在繼續作業。 通常不會使用*nEventData*參數。 如需詳細資訊, 請參閱[WM_POWERBROADCAST](/windows/win32/Power/wm-powerbroadcast)訊息的*wParam*和*lParam*參數。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -8924,7 +8924,7 @@ afx_msg HCURSOR OnQueryDragIcon();
 
 ##  <a name="onqueryendsession"></a>  CWnd::OnQueryEndSession
 
-當使用者選擇結束 Windows 會話時, 或當應用程式呼叫[ExitWindows](/windows/desktop/api/winuser/nf-winuser-exitwindows) Windows 函式時, 架構會呼叫這個成員函式。
+當使用者選擇結束 Windows 會話時, 或當應用程式呼叫[ExitWindows](/windows/win32/api/winuser/nf-winuser-exitwindows) Windows 函式時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg BOOL OnQueryEndSession();
@@ -8986,7 +8986,7 @@ afx_msg UINT OnQueryUIState();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[WM_QUERYUISTATE](/windows/desktop/menurc/wm-queryuistate)訊息的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[WM_QUERYUISTATE](/windows/win32/menurc/wm-queryuistate)訊息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="onrawinput"></a>  CWnd::OnRawInput
 
@@ -9003,11 +9003,11 @@ afx_msg void OnRawInput(
 |參數|描述|
 |---------------|-----------------|
 |*nInputCode*|在輸入代碼, 指出應用程式是否在前景時是否發生輸入。 不論是哪一種情況, 應用程式都必須呼叫[CWnd::D efwindowproc](#defwindowproc) , 讓系統可以執行清除。<br /><br /> 這個參數可以是下列其中一個值:<br /><br /> -RIM_INPUT-當應用程式在前景時, 就會發生輸入。<br />-RIM_INPUTSINK-當應用程式不在前景時, 就會發生輸入。|
-|*hRawInput*|在[RAWINPUT](/windows/desktop/api/winuser/ns-winuser-tagrawinput)結構的控制碼, 其中包含來自裝置的原始輸入。|
+|*hRawInput*|在[RAWINPUT](/windows/win32/api/winuser/ns-winuser-rawinput)結構的控制碼, 其中包含來自裝置的原始輸入。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_INPUT](/windows/desktop/inputdev/wm-appcommand)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_INPUT](/windows/win32/inputdev/wm-appcommand)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9042,7 +9042,7 @@ afx_msg void OnRButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-只有具有 CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)樣式的視窗可以接收`OnRButtonDblClk`呼叫。 這是 MFC 程式庫內的 windows 預設值。 當使用者`OnRButtonDblClk`按下、放開, 然後在系統的按兩下時間限制內, 再次按下滑鼠右鍵時, Windows 就會呼叫。 按兩下滑鼠右鍵, 實際上會產生四個事件:[WM_RBUTTONDOWN](#onrbuttondown)和[WM_RBUTTONUP](#onrbuttonup) `OnRButtonDblClk`訊息、呼叫, 以及釋放按鈕時的另一個 WM_RBUTTONUP 訊息。
+只有具有 CS_DBLCLKS [WNDCLASS](/windows/win32/api/winuser/ns-winuser-wndclassw)樣式的視窗可以接收`OnRButtonDblClk`呼叫。 這是 MFC 程式庫內的 windows 預設值。 當使用者`OnRButtonDblClk`按下、放開, 然後在系統的按兩下時間限制內, 再次按下滑鼠右鍵時, Windows 就會呼叫。 按兩下滑鼠右鍵, 實際上會產生四個事件:[WM_RBUTTONDOWN](#onrbuttondown)和[WM_RBUTTONUP](#onrbuttonup) `OnRButtonDblClk`訊息、呼叫, 以及釋放按鈕時的另一個 WM_RBUTTONUP 訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9133,7 +9133,7 @@ afx_msg LRESULT OnRegisteredMouseWheel(
 
 ### <a name="remarks"></a>備註
 
-除非予以覆`OnRegisteredMouseWheel`寫, 否則會將訊息路由至適當的視窗 (具有焦點的父視窗), 並呼叫該視窗的[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)處理常式。
+除非予以覆`OnRegisteredMouseWheel`寫, 否則會將訊息路由至適當的視窗 (具有焦點的父視窗), 並呼叫該視窗的[WM_MOUSEWHEEL](/windows/win32/inputdev/wm-mousewheel)處理常式。
 
 覆寫此成員函式以提供您自己的訊息路由, 或改變滑鼠滾輪的滾動行為。
 
@@ -9150,7 +9150,7 @@ afx_msg void OnRenderAllFormats();
 
 ### <a name="remarks"></a>備註
 
-剪貼簿擁有者應該會以能夠產生的所有格式來轉譯資料, 並藉由呼叫[SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) Windows 函式, 將每個格式的資料控制碼傳遞至剪貼簿。 這可確保即使轉譯資料的應用程式已終結, 剪貼簿還是包含有效的資料。 應用程式應該在呼叫[SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) Windows 函式之前呼叫[OpenClipboard](#openclipboard)成員函式, 然後在之後呼叫[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Windows 函式。
+剪貼簿擁有者應該會以能夠產生的所有格式來轉譯資料, 並藉由呼叫[SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 函式, 將每個格式的資料控制碼傳遞至剪貼簿。 這可確保即使轉譯資料的應用程式已終結, 剪貼簿還是包含有效的資料。 應用程式應該在呼叫[SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 函式之前呼叫[OpenClipboard](#openclipboard)成員函式, 然後在之後呼叫[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows 函式。
 
 ##  <a name="onrenderformat"></a>  CWnd::OnRenderFormat
 
@@ -9167,7 +9167,7 @@ afx_msg void OnRenderFormat(UINT nFormat);
 
 ### <a name="remarks"></a>備註
 
-接收者應會以該格式轉譯資料, 並藉由呼叫[SetClipboardData](/windows/desktop/api/winuser/nf-winuser-setclipboarddata) Windows 函式將它傳遞至剪貼簿。
+接收者應會以該格式轉譯資料, 並藉由呼叫[SetClipboardData](/windows/win32/api/winuser/nf-winuser-setclipboarddata) Windows 函式將它傳遞至剪貼簿。
 
 請勿從中`OpenClipboard` `CloseClipboard` 呼叫`OnRenderFormat`成員函式或 Windows 函式。
 
@@ -9193,9 +9193,9 @@ afx_msg void OnSessionChange(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change)通知, 如 Windows SDK 中所述。
 
-*NSessionState*參數指定會話已連接或中斷與主控台或遠端終端機機、使用者登入或關閉、會話已鎖定或解除鎖定, 或會話已變更為遠端控制狀態。 如需詳細資訊, 請參閱[WM_WTSSESSION_CHANGE](/windows/desktop/TermServ/wm-wtssession-change)訊息的*wParam*參數。
+*NSessionState*參數指定會話已連接或中斷與主控台或遠端終端機機、使用者登入或關閉、會話已鎖定或解除鎖定, 或會話已變更為遠端控制狀態。 如需詳細資訊, 請參閱[WM_WTSSESSION_CHANGE](/windows/win32/TermServ/wm-wtssession-change)訊息的*wParam*參數。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9272,7 +9272,7 @@ afx_msg void OnSettingChange(
 ### <a name="parameters"></a>參數
 
 *uFlags*<br/>
-當系統以`SystemParametersInfo`呼叫的結果傳送訊息時, 這個參數會是一個旗標, 指出已變更的系統參數。 如需值清單, 請參閱 Windows SDK 中的[SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) 。 當應用程式傳送訊息時, 這個參數必須是0。
+當系統以`SystemParametersInfo`呼叫的結果傳送訊息時, 這個參數會是一個旗標, 指出已變更的系統參數。 如需值清單, 請參閱 Windows SDK 中的[SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) 。 當應用程式傳送訊息時, 這個參數必須是0。
 
 *lpszSection*<br/>
 指向字串, 指定已變更之區段的名稱。 (此字串不包含用來括住區段名稱的方括弧)。
@@ -9383,7 +9383,7 @@ afx_msg void OnSizeClipboard(
 
 當剪貼簿應用程式即將終結或最小化時, 會使用 null 矩形 (0, 0, 0, 0) 來呼叫成員函式,做為新的大小。`OnSizeClipboard` 這允許剪貼簿擁有者釋放其顯示資源。
 
-在`OnSizeClipboard`中, 應用程式必須使用[GlobalLock](/windows/desktop/api/winbase/nf-winbase-globallock) Windows 函數來鎖定包含 RECT 資料結構的記憶體。 讓應用程式在產生或傳回控制項之前, 使用[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock) Windows 函式解除鎖定該記憶體。
+在`OnSizeClipboard`中, 應用程式必須使用[GlobalLock](/windows/win32/api/winbase/nf-winbase-globallock) Windows 函數來鎖定包含 RECT 資料結構的記憶體。 讓應用程式在產生或傳回控制項之前, 使用[GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock) Windows 函式解除鎖定該記憶體。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9404,7 +9404,7 @@ afx_msg void OnSizing(
 要移動的視窗邊緣。
 
 *lpRect*<br/>
-將包含專案座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect)的位址。
+將包含專案座標的[CRect](../../atl-mfc-shared/reference/crect-class.md)或[RECT 結構](/windows/win32/api/windef/ns-windef-rect)的位址。
 
 ### <a name="remarks"></a>備註
 
@@ -9444,7 +9444,7 @@ afx_msg void OnSpoolerStatus(
 
 ##  <a name="onstylechanged"></a>  CWnd::OnStyleChanged
 
-架構會在[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函式變更一個或多個視窗樣式之後, 呼叫這個成員函式。
+架構會在[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw)函式變更一個或多個視窗樣式之後, 呼叫這個成員函式。
 
 ```
 afx_msg void OnStyleChanged(
@@ -9462,7 +9462,7 @@ afx_msg void OnStyleChanged(
 - GWL_STYLE 視窗的 nonextended 樣式已經變更。
 
 *lpStyleStruct*<br/>
-指向包含視窗新樣式的[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)結構。 應用程式可以檢查樣式, 但不能變更它們。
+指向包含視窗新樣式的[STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct)結構。 應用程式可以檢查樣式, 但不能變更它們。
 
 ### <a name="remarks"></a>備註
 
@@ -9471,7 +9471,7 @@ afx_msg void OnStyleChanged(
 
 ##  <a name="onstylechanging"></a>CWnd:: OnStyleChanging
 
-當[SetWindowLong](/windows/desktop/api/winuser/nf-winuser-setwindowlonga)函數即將變更一個或多個視窗樣式時, 架構會呼叫這個成員函式。
+當[SetWindowLong](/windows/win32/api/winuser/nf-winuser-setwindowlongw)函數即將變更一個或多個視窗樣式時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg void OnStyleChanging(
@@ -9489,7 +9489,7 @@ afx_msg void OnStyleChanging(
 - GWL_STYLE 視窗的 nonextended 樣式已經變更。
 
 *lpStyleStruct*<br/>
-指向包含視窗新樣式的[STYLESTRUCT](/windows/desktop/api/winuser/ns-winuser-stylestruct)結構。 應用程式可以檢查樣式並加以變更。
+指向包含視窗新樣式的[STYLESTRUCT](/windows/win32/api/winuser/ns-winuser-stylestruct)結構。 應用程式可以檢查樣式並加以變更。
 
 ### <a name="remarks"></a>備註
 
@@ -9532,7 +9532,7 @@ afx_msg void OnSysChar(
 
 它會指定控制項功能表鍵的虛擬按鍵代碼。 (如需標準虛擬按鍵代碼的清單, 請參閱 Winuser)。
 
-當內容代碼為0時, WM_SYSCHAR 可以將[WM_SYSCHAR](/windows/desktop/menurc/wm-syschar)訊息傳遞至[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 函式, 這將會處理它, 就好像它是一般的索引鍵訊息, 而不是系統字元按鍵。 這允許在使用中視窗中使用快速鍵, 即使使用中視窗沒有輸入焦點也一樣。
+當內容代碼為0時, WM_SYSCHAR 可以將[WM_SYSCHAR](/windows/win32/menurc/wm-syschar)訊息傳遞至[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 函式, 這將會處理它, 就好像它是一般的索引鍵訊息, 而不是系統字元按鍵。 這允許在使用中視窗中使用快速鍵, 即使使用中視窗沒有輸入焦點也一樣。
 
 針對 IBM 增強的101和102金鑰鍵盤, 增強式金鑰是鍵盤主要區段上的右 ALT 和右 CTRL 鍵;數位鍵臺上左邊的叢集中的 INS、DEL、HOME、END、PAGE UP、PAGE DOWN 和方向鍵;和斜線 (/), 然後在數位鍵臺上輸入按鍵。 有些其他鍵盤可能支援*nFlags*中的延伸金鑰位。
 
@@ -9697,7 +9697,7 @@ afx_msg void OnSysKeyDown(
 
 如果目前沒有任何視窗具有輸入焦點, 則會呼叫活動`OnSysKeyDown`視窗的成員函式。 接收`CWnd`訊息的物件可以藉由檢查中`nFlags`的內容程式碼來區分這兩個內容。
 
-當內容代碼為0時, 所接收`OnSysKeyDown`的 WM_SYSKEYDOWN 訊息可以傳遞至[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 函式, 這將會處理它, 就如同它是一般的索引鍵訊息, 而不是系統金鑰訊息。 這允許在使用中視窗中使用快速鍵, 即使使用中視窗沒有輸入焦點也一樣。
+當內容代碼為0時, 所接收`OnSysKeyDown`的 WM_SYSKEYDOWN 訊息可以傳遞至[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 函式, 這將會處理它, 就如同它是一般的索引鍵訊息, 而不是系統金鑰訊息。 這允許在使用中視窗中使用快速鍵, 即使使用中視窗沒有輸入焦點也一樣。
 
 因為有`OnSysKeyDown`自動重複的情況, 所以在收到[WM_SYSKEYUP](#onsyskeyup)訊息之前, 可能會發生多個呼叫。 先前的索引鍵狀態 (位 14) 可以用來判斷`OnSysKeyDown`呼叫是否表示第一個向下轉換或重複的向下轉換。
 
@@ -9744,7 +9744,7 @@ afx_msg void OnSysKeyUp(
 
 如果目前沒有任何視窗具有輸入焦點, 則會呼叫活動`OnSysKeyUp`視窗的成員函式。 接收`CWnd`呼叫的物件可以藉由檢查*nFlags*中的內容程式碼來區分這兩個內容。
 
-當內容代碼為0時, 所接收`OnSysKeyUp`的 WM_SYSKEYUP 訊息可以傳遞至[TranslateAccelerator](/windows/desktop/api/winuser/nf-winuser-translateacceleratora) Windows 函式, 這將會處理它, 就如同它是一般的索引鍵訊息, 而不是系統金鑰訊息。 這可讓快速鍵 (快捷方式) 索引鍵與使用中視窗搭配使用, 即使使用中視窗沒有輸入焦點也一樣。
+當內容代碼為0時, 所接收`OnSysKeyUp`的 WM_SYSKEYUP 訊息可以傳遞至[TranslateAccelerator](/windows/win32/api/winuser/nf-winuser-translateacceleratorw) Windows 函式, 這將會處理它, 就如同它是一般的索引鍵訊息, 而不是系統金鑰訊息。 這可讓快速鍵 (快捷方式) 索引鍵與使用中視窗搭配使用, 即使使用中視窗沒有輸入焦點也一樣。
 
 針對 IBM 增強的101和102金鑰鍵盤, 增強式金鑰是鍵盤主要區段上的右 ALT 和右 CTRL 鍵;數位鍵臺上左邊的叢集中的 INS、DEL、HOME、END、PAGE UP、PAGE DOWN 和方向鍵;和斜線 (/), 然後在數位鍵臺上輸入按鍵。 有些其他鍵盤可能支援*nFlags*中的延伸金鑰位。
 
@@ -9755,7 +9755,7 @@ afx_msg void OnSysKeyUp(
 |1.|[WM_KEYDOWN](#onkeydown)|VK_CONTROL|
 |2.|[WM_KEYDOWN](#onkeydown)|VK_MENU|
 |3.|[WM_KEYUP](#onkeyup)|VK_CONTROL|
-|4.|[WM_SYSKEYUP](/windows/desktop/inputdev/wm-syskeyup)|VK_MENU|
+|4.|[WM_SYSKEYUP](/windows/win32/inputdev/wm-syskeyup)|VK_MENU|
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9816,7 +9816,7 @@ afx_msg void OnTimeChange();
 
 ### <a name="remarks"></a>備註
 
-若有任何應用程式變更系統時間, 請將此訊息傳送至所有最上層視窗。 若要將 WM_TIMECHANGE 訊息傳送至所有最上層視窗, 應用程式可以使用[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) windows 函數, 並將其*hwnd*參數設定為 HWND_BROADCAST。
+若有任何應用程式變更系統時間, 請將此訊息傳送至所有最上層視窗。 若要將 WM_TIMECHANGE 訊息傳送至所有最上層視窗, 應用程式可以使用[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) windows 函數, 並將其*hwnd*參數設定為 HWND_BROADCAST。
 
 ##  <a name="ontimer"></a>  CWnd::OnTimer
 
@@ -9833,7 +9833,7 @@ afx_msg void OnTimer(UINT_PTR nIDEvent);
 
 ### <a name="remarks"></a>備註
 
-當應用程式的訊息佇列中沒有其他訊息時, [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函數會傳送[WM_TIMER](/windows/desktop/winmsg/wm-timer)訊息。
+當應用程式的訊息佇列中沒有其他訊息時, [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函數會傳送[WM_TIMER](/windows/win32/winmsg/wm-timer)訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9858,7 +9858,7 @@ virtual INT_PTR OnToolHitTest(
 指定游標的 x 和 y 座標。 這些座標一律相對於視窗的左上角
 
 *pTI*<br/>
-[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)結構的指標。 預設會設定下列結構值:
+[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)結構的指標。 預設會設定下列結構值:
 
 -  = 視窗的 hwnd`m_hWnd`控制碼
 
@@ -9880,7 +9880,7 @@ virtual INT_PTR OnToolHitTest(
 
 覆`OnToolHitTest`寫以提供與預設所提供不同的資訊。
 
-如需結構的詳細資訊, 請參閱 Windows SDK 中的[TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa)。
+如需結構的詳細資訊, 請參閱 Windows SDK 中的[TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-toolinfow)。
 
 ##  <a name="ontouchinput"></a>  CWnd::OnTouchInput
 
@@ -9940,7 +9940,7 @@ TOUCHINPUT 的陣列。
 
 ##  <a name="onunichar"></a>  CWnd::OnUniChar
 
-當按下按鍵時, 架構會呼叫這個成員函式。 也就是說, 目前視窗具有鍵盤焦點, 而[WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)訊息則是由[TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)函數轉譯。
+當按下按鍵時, 架構會呼叫這個成員函式。 也就是說, 目前視窗具有鍵盤焦點, 而[WM_KEYDOWN](/windows/win32/inputdev/wm-keydown)訊息則是由[TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage)函數轉譯。
 
 ```
 afx_msg void OnUniChar(
@@ -9959,7 +9959,7 @@ afx_msg void OnUniChar(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_UNICHAR](/windows/desktop/inputdev/wm-unichar)通知, 如 Windows SDK 中所述。 [WM_UNICHAR](/windows/desktop/inputdev/wm-unichar)訊息是設計用來將 Unicode 字元傳送或張貼到 ANSI 視窗。 它相當於[WM_CHAR](/windows/desktop/inputdev/wm-char)訊息, 但使用 Unicode 轉換格式-32 編碼 (UTF-32), 而[WM_CHAR](/windows/desktop/inputdev/wm-char)訊息使用 utf-16。
+這個方法會接收[WM_UNICHAR](/windows/win32/inputdev/wm-unichar)通知, 如 Windows SDK 中所述。 [WM_UNICHAR](/windows/win32/inputdev/wm-unichar)訊息是設計用來將 Unicode 字元傳送或張貼到 ANSI 視窗。 它相當於[WM_CHAR](/windows/win32/inputdev/wm-char)訊息, 但使用 Unicode 轉換格式-32 編碼 (UTF-32), 而[WM_CHAR](/windows/win32/inputdev/wm-char)訊息使用 utf-16。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -9983,7 +9983,7 @@ afx_msg void OnUnInitMenuPopup(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_UNINITMENUPOPUP](/windows/desktop/menurc/wm-uninitmenupopup)通知, 如 Windows SDK 中所述。
+這個方法會接收[WM_UNINITMENUPOPUP](/windows/win32/menurc/wm-uninitmenupopup)通知, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -10005,7 +10005,7 @@ afx_msg void OnUpdateUIState(
 
 - UIS_CLEAR UI state 元素 (由*nUIElement*指定) 應該隱藏起來。
 
-- UIS_INITIALIZE UI state 元素 (由*nUIElement*指定) 應該根據最後一個輸入事件來變更。 如需詳細資訊, 請參閱[WM_UPDATEISTATE](/windows/desktop/menurc/wm-updateuistate)的「**備註**」一節。
+- UIS_INITIALIZE UI state 元素 (由*nUIElement*指定) 應該根據最後一個輸入事件來變更。 如需詳細資訊, 請參閱[WM_UPDATEISTATE](/windows/win32/menurc/wm-updateuistate)的「**備註**」一節。
 
 - UIS_SET UI state 元素 (由*nUIElement*指定) 應該是可見的。
 
@@ -10020,7 +10020,7 @@ afx_msg void OnUpdateUIState(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬[WM_UPDATEUISTATE](/windows/desktop/menurc/wm-updateuistate)訊息的功能, 如 Windows SDK 中所述。
+此成員函式會模擬[WM_UPDATEUISTATE](/windows/win32/menurc/wm-updateuistate)訊息的功能, 如 Windows SDK 中所述。
 
 ##  <a name="onuserchanged"></a>CWnd:: OnUserChanged
 
@@ -10032,7 +10032,7 @@ afx_msg void OnUserChanged();
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_USERCHANGED](/windows/desktop/winmsg/wm-userchanged)通知訊息, 如 Windows SDK 中所述。 當使用者登入或關閉時, 作業系統會更新使用者特定的設定。 系統會在更新設定之後立即傳送此訊息。
+這個方法會接收[WM_USERCHANGED](/windows/win32/winmsg/wm-userchanged)通知訊息, 如 Windows SDK 中所述。 當使用者登入或關閉時, 作業系統會更新使用者特定的設定。 系統會在更新設定之後立即傳送此訊息。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -10180,14 +10180,14 @@ afx_msg void OnWindowMaximizedChanged(BOOL bIsMaximized);
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/desktop/dwm/wm-dwmwindowmaximizedchange)通知訊息, 如 Windows SDK 中所述。
+這個方法會接收[WM_DWMWINDOWMAXIMIZEDCHANGE](/windows/win32/dwm/wm-dwmwindowmaximizedchange)通知訊息, 如 Windows SDK 中所述。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
 
 ##  <a name="onwindowposchanged"></a>  CWnd::OnWindowPosChanged
 
-當大小、位置或迭置順序因呼叫[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成員函式或其他視窗管理功能而變更時, 架構會呼叫這個成員函式。
+當大小、位置或迭置順序因呼叫[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)成員函式或其他視窗管理功能而變更時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
@@ -10196,18 +10196,18 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>參數
 
 *lpwndpos*<br/>
-指向[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)資料結構, 其中包含視窗新大小和位置的相關資訊。
+指向[WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)資料結構, 其中包含視窗新大小和位置的相關資訊。
 
 ### <a name="remarks"></a>備註
 
-預設的執行會將[WM_SIZE](/windows/desktop/winmsg/wm-size)和[WM_MOVE](/windows/desktop/winmsg/wm-move)訊息傳送至視窗。 如果應用程式在`OnWindowPosChanged`未呼叫其基類的情況下處理呼叫, 則不會傳送這些訊息。 在呼叫`OnWindowPosChanged`期間執行任何移動或大小變更處理, 而不需要呼叫其基類, 會更有效率。
+預設的執行會將[WM_SIZE](/windows/win32/winmsg/wm-size)和[WM_MOVE](/windows/win32/winmsg/wm-move)訊息傳送至視窗。 如果應用程式在`OnWindowPosChanged`未呼叫其基類的情況下處理呼叫, 則不會傳送這些訊息。 在呼叫`OnWindowPosChanged`期間執行任何移動或大小變更處理, 而不需要呼叫其基類, 會更有效率。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
 
 ##  <a name="onwindowposchanging"></a>CWnd:: OnWindowPosChanging
 
-當大小、位置或迭置順序即將因呼叫[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos)成員函式或其他視窗管理功能而變更時, 架構會呼叫這個成員函式。
+當大小、位置或迭置順序即將因呼叫[SetWindowPos](/windows/win32/api/winuser/nf-winuser-setwindowpos)成員函式或其他視窗管理功能而變更時, 架構會呼叫這個成員函式。
 
 ```
 afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
@@ -10220,9 +10220,9 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="remarks"></a>備註
 
-應用程式可以藉由在[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)結構的**flags**成員中設定或清除適當的位, 來防止變更視窗。
+應用程式可以藉由在[WINDOWPOS](/windows/win32/api/winuser/ns-winuser-windowpos)結構的**flags**成員中設定或清除適當的位, 來防止變更視窗。
 
-針對具有[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)或[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)樣式的視窗, 預設的執行會將[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)訊息傳送至視窗。 這是為了驗證視窗的新大小和位置, 以及強制執行 CS_BYTEALIGNCLIENT 和 CS_BYTEALIGN 用戶端樣式而完成。 應用程式可以藉由不呼叫其基類來覆寫這項功能。
+針對具有[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)或[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)樣式的視窗, 預設的執行會將[WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo)訊息傳送至視窗。 這是為了驗證視窗的新大小和位置, 以及強制執行 CS_BYTEALIGNCLIENT 和 CS_BYTEALIGN 用戶端樣式而完成。 應用程式可以藉由不呼叫其基類來覆寫這項功能。
 
 > [!NOTE]
 > 架構會呼叫此成員函式，以允許您的應用程式處理 Windows 訊息。 傳遞至函式的參數反映收到訊息時架構所收到的參數。 如果您呼叫此函式的基底類別實作，該實作會使用原本隨訊息傳遞的參數，而不是您提供給函式的參數。
@@ -10242,9 +10242,9 @@ afx_msg void OnWinIniChange(LPCTSTR lpszSection);
 
 ### <a name="remarks"></a>備註
 
-在應用程式使用函`OnWinIniChange`式來變更 WIN 中的設定之後, [SystemParametersInfo](/windows/desktop/api/winuser/nf-winuser-systemparametersinfoa) Windows 函數會呼叫。INI 檔案。
+在應用程式使用函`OnWinIniChange`式來變更 WIN 中的設定之後, [SystemParametersInfo](/windows/win32/api/winuser/nf-winuser-systemparametersinfow) Windows 函數會呼叫。INI 檔案。
 
-若要將 WM_WININICHANGE 訊息傳送至所有最上層視窗, 應用程式可以使用[SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) windows 函數, 並將其*hwnd*參數設定為 HWND_BROADCAST。
+若要將 WM_WININICHANGE 訊息傳送至所有最上層視窗, 應用程式可以使用[SendMessage](/windows/win32/api/winuser/nf-winuser-sendmessage) windows 函數, 並將其*hwnd*參數設定為 HWND_BROADCAST。
 
 如果應用程式變更 WIN 中的許多不同區段。INI 時, 應用程式應該傳送一個 WM_WININICHANGE 訊息, 並將*lpszSection*設定為 Null。 否則, 應用程式應該在每次進行變更時傳送 WM_WININICHANGE.INI.
 
@@ -10310,9 +10310,9 @@ afx_msg void OnXButtonDblClk(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
+這個方法會接收[WM_XBUTTONDBLCLK](/windows/win32/inputdev/wm-xbuttondblclk)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
 
-*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
+*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)。
 
 |輔助按鍵|描述|
 |------------------|-----------------|
@@ -10340,7 +10340,7 @@ afx_msg void OnXButtonDown(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*nFlags*|在旗標的位元組合 (OR), 指出所按的輔助按鍵。 例如, MK_CONTROL 旗標表示已按下 CTRL 鍵。|
 |*nButton*|在如果已按下第一個 Microsoft 的 [滑鼠] [X] 按鈕, 則為 XBUTTON1 的值, 如果按一下第二個 X 按鈕, 則為 XBUTTON2。|
@@ -10348,9 +10348,9 @@ afx_msg void OnXButtonDown(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_XBUTTONDOWN](/windows/desktop/inputdev/wm-xbuttondown)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
+這個方法會接收[WM_XBUTTONDOWN](/windows/win32/inputdev/wm-xbuttondown)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
 
-*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
+*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)。
 
 |輔助按鍵|描述|
 |------------------|-----------------|
@@ -10386,9 +10386,9 @@ afx_msg void OnXButtonUp(
 
 ### <a name="remarks"></a>備註
 
-這個方法會接收[WM_XBUTTONUP](/windows/desktop/inputdev/wm-xbuttonup)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
+這個方法會接收[WM_XBUTTONUP](/windows/win32/inputdev/wm-xbuttonup)通知, 如 Windows SDK 中所述。 如果未捕捉到滑鼠, 訊息就會張貼到游標下方的視窗中。 否則, 訊息就會張貼到已捕獲滑鼠的視窗中。
 
-*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/desktop/inputdev/about-mouse-input)。
+*NFlags*參數可以是下表所列輔助按鍵的組合。 如需詳細資訊, 請參閱[關於滑鼠輸入](/windows/win32/inputdev/about-mouse-input)。
 
 |輔助按鍵|描述|
 |------------------|-----------------|
@@ -10417,9 +10417,9 @@ BOOL OpenClipboard();
 
 ### <a name="remarks"></a>備註
 
-在呼叫[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Windows 函數之前, 其他應用程式將無法修改剪貼簿。
+在呼叫[CloseClipboard](/windows/win32/api/winuser/nf-winuser-closeclipboard) Windows 函數之前, 其他應用程式將無法修改剪貼簿。
 
-在呼叫`CWnd` [EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard) Windows 函數之前, 目前的物件將不會成為剪貼簿的擁有者。
+在呼叫`CWnd` [EmptyClipboard](/windows/win32/api/winuser/nf-winuser-emptyclipboard) Windows 函數之前, 目前的物件將不會成為剪貼簿的擁有者。
 
 ### <a name="example"></a>範例
 
@@ -10512,9 +10512,9 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>備註
 
-訊息佇列中的訊息是透過呼叫[GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)或[PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) Windows 函數來抓取。
+訊息佇列中的訊息是透過呼叫[GetMessage](/windows/win32/api/winuser/nf-winuser-getmessage)或[PeekMessage](/windows/win32/api/winuser/nf-winuser-peekmessagew) Windows 函數來抓取。
 
-Windows [PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea)函數可用來存取另一個應用程式。
+Windows [PostMessage](/windows/win32/api/winuser/nf-winuser-postmessagew)函數可用來存取另一個應用程式。
 
 ### <a name="example"></a>範例
 
@@ -10543,7 +10543,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>參數
 
 *cs*<br/>
-[CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)結構。
+[CREATESTRUCT](/windows/win32/api/winuser/ns-winuser-createstructw)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -10582,7 +10582,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。
+[CWinApp](../../mfc/reference/cwinapp-class.md) 類別用來轉譯分派至 [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) 和 [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Windows 函式之前的視窗訊息。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -10591,7 +10591,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>參數
 
 *pMsg*<br/>
-指向包含要處理之訊息的[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)結構。
+指向包含要處理之訊息的[MSG](/windows/win32/api/winuser/ns-winuser-msg)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -10635,11 +10635,11 @@ void Print(
 
 - 如果指定 PRF_NONCLIENT, 請在指定的裝置內容中繪製非工作區。
 
-- 如果指定 PRF_ERASEBKGND, 請將[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)訊息傳送給視窗。
+- 如果指定 PRF_ERASEBKGND, 請將[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)訊息傳送給視窗。
 
-- 如果指定 PRF_CLIENT, 請將[WM_PRINTCLIENT](/windows/desktop/gdi/wm-printclient)訊息傳送給視窗。
+- 如果指定 PRF_CLIENT, 請將[WM_PRINTCLIENT](/windows/win32/gdi/wm-printclient)訊息傳送給視窗。
 
-- 如果已設定 PRF_CHILDREN, 請將[WM_PRINT](/windows/desktop/gdi/wm-print)訊息傳送給每個可見的子視窗。
+- 如果已設定 PRF_CHILDREN, 請將[WM_PRINT](/windows/win32/gdi/wm-print)訊息傳送給每個可見的子視窗。
 
 - 如果已設定 PRF_OWNED, 則傳送每個可見的擁有視窗 WM_PRINT 訊息。
 
@@ -10689,7 +10689,7 @@ BOOL PrintWindow(
 要列印到之裝置內容的指標。
 
 *nFlags*<br/>
-指定繪圖選項。 如需可能值的清單, 請參閱[PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow)。
+指定繪圖選項。 如需可能值的清單, 請參閱[PrintWindow](/windows/win32/api/winuser/nf-winuser-printwindow)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -10697,7 +10697,7 @@ BOOL PrintWindow(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[PrintWindow](/windows/win32/api/winuser/nf-winuser-printwindow)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="redrawwindow"></a>  CWnd::RedrawWindow
 
@@ -10713,7 +10713,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>參數
 
 *lpRectUpdate*<br/>
-指向包含更新矩形座標的[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect)。 如果*prgnUpdate*包含有效的區域控制碼, 則會忽略這個參數。
+指向包含更新矩形座標的[矩形結構](/windows/win32/api/windef/ns-windef-rect)。 如果*prgnUpdate*包含有效的區域控制碼, 則會忽略這個參數。
 
 *prgnUpdate*<br/>
 識別更新區域。 如果*prgnUpdate*和*LPRECTUPDATE*都是 Null, 則會將整個工作區新增至更新區域。
@@ -10721,11 +10721,11 @@ BOOL RedrawWindow(
 *flags*<br/>
 下列旗標用來使視窗失效:
 
-- RDW_ERASE 會在重新繪製視窗時, 讓視窗接收[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)訊息。 您也必須指定 RDW_INVALIDATE 旗標;否則 RDW_ERASE 不會有任何作用。
+- RDW_ERASE 會在重新繪製視窗時, 讓視窗接收[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)訊息。 您也必須指定 RDW_INVALIDATE 旗標;否則 RDW_ERASE 不會有任何作用。
 
-- RDW_FRAME 會使視窗中非工作區的任何部分與更新區域相交, 以接收[WM_NCPAINT](/windows/desktop/gdi/wm-ncpaint)訊息。 您也必須指定 RDW_INVALIDATE 旗標;否則 RDW_FRAME 不會有任何作用。
+- RDW_FRAME 會使視窗中非工作區的任何部分與更新區域相交, 以接收[WM_NCPAINT](/windows/win32/gdi/wm-ncpaint)訊息。 您也必須指定 RDW_INVALIDATE 旗標;否則 RDW_FRAME 不會有任何作用。
 
-- 無論視窗是否包含不正確區域, RDW_INTERNALPAINT 都會使[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息張貼至視窗。
+- 無論視窗是否包含不正確區域, RDW_INTERNALPAINT 都會使[WM_PAINT](/windows/win32/gdi/wm-paint)訊息張貼至視窗。
 
 - RDW_INVALIDATE 會使*lpRectUpdate*或*prgnUpdate*失效 (只有一個可能不是 Null)。 如果兩者都是 Null, 則整個視窗都會失效。
 
@@ -10757,7 +10757,7 @@ BOOL RedrawWindow(
 
 ### <a name="remarks"></a>備註
 
-當成員函式用來使部分的桌面視窗失效時, 該視窗不會收到 [WM_PAINT](/windows/desktop/gdi/wm-paint) 訊息。`RedrawWindow` 若要重新繪製桌面, 應用程式應該使用[CWnd:: ValidateRgn](#validatergn)、 [Cwnd:: InvalidateRgn](#invalidatergn)、 [CWnd:: UpdateWindow](#updatewindow)或[RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)
+當成員函式用來使部分的桌面視窗失效時, 該視窗不會收到 [WM_PAINT](/windows/win32/gdi/wm-paint) 訊息。`RedrawWindow` 若要重新繪製桌面, 應用程式應該使用[CWnd:: ValidateRgn](#validatergn)、 [Cwnd:: InvalidateRgn](#invalidatergn)、 [CWnd:: UpdateWindow](#updatewindow)或[RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)
 
 ##  <a name="reflectchildnotify"></a>CWnd:: ReflectChildNotify
 
@@ -10883,10 +10883,10 @@ void RepositionBars(UINT nIDFirst,
 - `CWnd::reposExtra`將*lpRectParam*的值加入至*nIDLast*的工作區, 也會執行版面配置。
 
 *lpRectParam*<br/>
-指向[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect);的使用方式取決於*nFlag*的值。
+指向[矩形結構](/windows/win32/api/windef/ns-windef-rect);的使用方式取決於*nFlag*的值。
 
 *lpRectClient*<br/>
-指向包含可用工作區的[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect)。 如果是 Null, 則會使用視窗的工作區。
+指向包含可用工作區的[矩形結構](/windows/win32/api/windef/ns-windef-rect)。 如果是 Null, 則會使用視窗的工作區。
 
 *bStretch*<br/>
 指出是否要將橫條延展到框架的大小。
@@ -10908,7 +10908,7 @@ int RunModalLoop(DWORD dwFlags = 0);
 *dwFlags*<br/>
 指定要傳送的 Windows 訊息。 可為下列其中一個值：
 
-- MLF_NOIDLEMSG 不會將[WM_ENTERIDLE](/windows/desktop/dlgbox/wm-enteridle)訊息傳送到父系。
+- MLF_NOIDLEMSG 不會將[WM_ENTERIDLE](/windows/win32/dlgbox/wm-enteridle)訊息傳送到父系。
 
 - MLF_NOKICKIDLE 不會將 WM_KICKIDLE 訊息傳送至視窗。
 
@@ -10933,10 +10933,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>參數
 
 *lpPoint*<br/>
-指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點結構](/windows/desktop/api/windef/ns-windef-tagpoint), 其中包含要轉換的螢幕座標。
+指向[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點結構](/windows/win32/api/windef/ns-windef-point), 其中包含要轉換的螢幕座標。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect), 其中包含要轉換的螢幕座標。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[矩形結構](/windows/win32/api/windef/ns-windef-rect), 其中包含要轉換的螢幕座標。
 
 ### <a name="remarks"></a>備註
 
@@ -10967,7 +10967,7 @@ void ScrollWindow(
 指定垂直捲動的數量 (以裝置為單位)。 這個參數必須是要向上滾動的負值。
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect), 指定要滾動的工作區部分。 如果*lpRect*為 Null, 則會滾動整個工作區。 如果游標矩形與捲軸矩形相交, 插入號就會重新置放。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/win32/api/windef/ns-windef-rect), 指定要滾動的工作區部分。 如果*lpRect*為 Null, 則會滾動整個工作區。 如果游標矩形與捲軸矩形相交, 插入號就會重新置放。
 
 *lpClipRect*<br/>
 指向物件或`RECT`結構, 指定要滾動的裁剪矩形。 `CRect` 只有這個矩形內的位會進行滾動。 這個矩形外的位不會受到影響, 即使它們位於*lpRect*矩形中也一樣。 如果*lpClipRect*為 Null, 則不會在捲軸矩形上執行任何裁剪。
@@ -10976,7 +10976,7 @@ void ScrollWindow(
 
 如果插入號是在滾動`CWnd`中, 會`ScrollWindow`自動隱藏插入號, 以防止它被清除, 然後在捲軸完成後還原插入號。 插入號位置會據以調整。
 
-`ScrollWindow`成員函式所發現的區域不會重新繪製, 而是會合並`CWnd`到目前物件的更新區域。 應用程式最後會收到[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息, 通知它該區域需要重新繪製。 若要在完成滾動時重新繪製未發現的區域, 請在呼叫 `ScrollWindow`之後立即呼叫 [UpdateWindow](#updatewindow) 成員函式。
+`ScrollWindow`成員函式所發現的區域不會重新繪製, 而是會合並`CWnd`到目前物件的更新區域。 應用程式最後會收到[WM_PAINT](/windows/win32/gdi/wm-paint)訊息, 通知它該區域需要重新繪製。 若要在完成滾動時重新繪製未發現的區域, 請在呼叫 `ScrollWindow`之後立即呼叫 [UpdateWindow](#updatewindow) 成員函式。
 
 如果*lpRect*為 Null, 則視窗中任何子視窗的位置都會以*xAmount*和*yAmount*所指定的數量來位移, 而且中的`CWnd`任何無效 (未上色) 區域也會位移。 `ScrollWindow`當*lpRect*為 Null 時, 會更快。
 
@@ -11006,7 +11006,7 @@ int ScrollWindowEx(
 指定垂直捲動的數量 (以裝置為單位)。 這個參數的值必須是負值, 才能向上滾動。
 
 *lpRectScroll*<br/>
-指向[矩形結構](/windows/desktop/api/windef/ns-windef-tagrect), 指定要滾動的工作區部分。 如果此參數為 Null, 則會滾動整個工作區。
+指向[矩形結構](/windows/win32/api/windef/ns-windef-rect), 指定要滾動的工作區部分。 如果此參數為 Null, 則會滾動整個工作區。
 
 *lpRectClip*<br/>
 `RECT`指向結構, 指定要滾動的裁剪矩形。 這個結構優先于*lpRectScroll*所指向的矩形。 只有這個矩形內的位會進行滾動。 這個矩形外的位不會受到影響, 即使它們位於*lpRectScroll*矩形中也一樣。 如果此參數為 Null, 則不會在捲軸矩形上執行任何裁剪。
@@ -11020,11 +11020,11 @@ int ScrollWindowEx(
 *flags*<br/>
 可以具有下列其中一個值:
 
-- 使用 SW_INVALIDATE 指定 SW_ERASE 時, 會將[WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)訊息傳送至視窗, 以清除新的無效區域。
+- 使用 SW_INVALIDATE 指定 SW_ERASE 時, 會將[WM_ERASEBKGND](/windows/win32/winmsg/wm-erasebkgnd)訊息傳送至視窗, 以清除新的無效區域。
 
 - SW_INVALIDATE 會使*prgnUpdate*在滾動後所識別的區域失效。
 
-- SW_SCROLLCHILDREN 會將所有與所指向之矩形相交的子視窗, 以*dx*和*dy*中指定的圖元數目來進行滾動。 Windows 會將[WM_MOVE](/windows/desktop/winmsg/wm-move)訊息傳送到與*lpRectScroll*相交的所有子視窗, 即使沒有移動也一樣。 當子視窗滾動時, 插入號會重新置放, 而游標矩形會與滾動矩形相交。
+- SW_SCROLLCHILDREN 會將所有與所指向之矩形相交的子視窗, 以*dx*和*dy*中指定的圖元數目來進行滾動。 Windows 會將[WM_MOVE](/windows/win32/winmsg/wm-move)訊息傳送到與*lpRectScroll*相交的所有子視窗, 即使沒有移動也一樣。 當子視窗滾動時, 插入號會重新置放, 而游標矩形會與滾動矩形相交。
 
 ### <a name="return-value"></a>傳回值
 
@@ -11032,15 +11032,15 @@ int ScrollWindowEx(
 
 ### <a name="remarks"></a>備註
 
-此函式與[ScrollWindow](/windows/desktop/api/winuser/nf-winuser-scrollwindow)函式類似, 還有一些額外的功能。
+此函式與[ScrollWindow](/windows/win32/api/winuser/nf-winuser-scrollwindow)函式類似, 還有一些額外的功能。
 
-如果未指定[SW_INVALIDATE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)和[SW_ERASE](/windows/desktop/api/winuser/nf-winuser-scrollwindowex) , 則`ScrollWindowEx`成員函式不會使從外滾動的區域無效。 如果設定了其中一個旗標, `ScrollWindowEx`會使此區域失效。 除非應用程式呼叫[UpdateWindow](/windows/desktop/api/winuser/nf-winuser-updatewindow)成員函式、呼叫[RedrawWindow](/windows/desktop/api/winuser/nf-winuser-redrawwindow)成員函式 (指定[RDW_UPDATENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)或[RDW_ERASENOW](/windows/desktop/api/winuser/nf-winuser-redrawwindow)), 或從中抓取[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息, 否則此區域不會更新。應用程式佇列。
+如果未指定[SW_INVALIDATE](/windows/win32/api/winuser/nf-winuser-scrollwindowex)和[SW_ERASE](/windows/win32/api/winuser/nf-winuser-scrollwindowex) , 則`ScrollWindowEx`成員函式不會使從外滾動的區域無效。 如果設定了其中一個旗標, `ScrollWindowEx`會使此區域失效。 除非應用程式呼叫[UpdateWindow](/windows/win32/api/winuser/nf-winuser-updatewindow)成員函式、呼叫[RedrawWindow](/windows/win32/api/winuser/nf-winuser-redrawwindow)成員函式 (指定[RDW_UPDATENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)或[RDW_ERASENOW](/windows/win32/api/winuser/nf-winuser-redrawwindow)), 或從中抓取[WM_PAINT](/windows/win32/gdi/wm-paint)訊息, 否則此區域不會更新。應用程式佇列。
 
-如果視窗具有[WS_CLIPCHILDREN](/windows/desktop/api/winuser/nf-winuser-createwindowa)樣式, *prgnUpdate*和*lpRectUpdate*所指定的傳回區域就會代表必須更新之滾動視窗的總區域, 包括需要更新之子視窗中的任何區域。
+如果視窗具有[WS_CLIPCHILDREN](/windows/win32/api/winuser/nf-winuser-createwindoww)樣式, *prgnUpdate*和*lpRectUpdate*所指定的傳回區域就會代表必須更新之滾動視窗的總區域, 包括需要更新之子視窗中的任何區域。
 
-如果指定了[SW_SCROLLCHILDREN](/windows/desktop/api/winuser/nf-winuser-scrollwindowex)旗標, Windows 將不會在子視窗的一部分滾動時, 適當地更新畫面。 位於來源矩形外之滾動子視窗的部分不會被清除, 而且不會在其新的目的地中正確地重新繪製。 您可以使用[DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) Windows 函式來移動未完全落在*lpRectScroll*矩形內的子視窗。 如果已設定 SW_SCROLLCHILDREN 旗標, 且插入號矩形與捲軸矩形相交, 則游標會重新置放。
+如果指定了[SW_SCROLLCHILDREN](/windows/win32/api/winuser/nf-winuser-scrollwindowex)旗標, Windows 將不會在子視窗的一部分滾動時, 適當地更新畫面。 位於來源矩形外之滾動子視窗的部分不會被清除, 而且不會在其新的目的地中正確地重新繪製。 您可以使用[DeferWindowPos](/windows/win32/api/winuser/nf-winuser-deferwindowpos) Windows 函式來移動未完全落在*lpRectScroll*矩形內的子視窗。 如果已設定 SW_SCROLLCHILDREN 旗標, 且插入號矩形與捲軸矩形相交, 則游標會重新置放。
 
-所有的輸入和輸出座標 (針對*lpRectScroll*、 *lpRectClip*、 *lpRectUpdate*和*prgnUpdate*) 都會假設為在用戶端座標中, 不論視窗是否具有 CS_OWNDC 或 CS_CLASSDC 類別樣式。 如有需要, 請使用[LPtoDP](/windows/desktop/api/wingdi/nf-wingdi-lptodp)和[DPtoLP](/windows/desktop/api/wingdi/nf-wingdi-dptolp) Windows 函式來轉換為邏輯座標。
+所有的輸入和輸出座標 (針對*lpRectScroll*、 *lpRectClip*、 *lpRectUpdate*和*prgnUpdate*) 都會假設為在用戶端座標中, 不論視窗是否具有 CS_OWNDC 或 CS_CLASSDC 類別樣式。 如有需要, 請使用[LPtoDP](/windows/win32/api/wingdi/nf-wingdi-lptodp)和[DPtoLP](/windows/win32/api/wingdi/nf-wingdi-dptolp) Windows 函式來轉換為邏輯座標。
 
 ##  <a name="sendchildnotifylastmsg"></a>  CWnd::SendChildNotifyLastMsg
 
@@ -11241,7 +11241,7 @@ CWnd* SetCapture();
 
 ### <a name="remarks"></a>備註
 
-當`CWnd`不再需要所有的滑鼠輸入時, 應用程式應該呼叫[ReleaseCapture](/windows/desktop/api/winuser/nf-winuser-releasecapture)函數, 讓其他視窗可以接收滑鼠輸入。
+當`CWnd`不再需要所有的滑鼠輸入時, 應用程式應該呼叫[ReleaseCapture](/windows/win32/api/winuser/nf-winuser-releasecapture)函數, 讓其他視窗可以接收滑鼠輸入。
 
 當系統捕捉到滑鼠輸入時, 不會將任何 WM_NCHITTEST 或 WM_SETCURSOR 訊息傳送到使用中視窗。
 
@@ -11333,7 +11333,7 @@ void SetDlgItemInt(
 
 ### <a name="remarks"></a>備註
 
-`SetDlgItemInt`將[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)訊息傳送至指定的控制項。
+`SetDlgItemInt`將[WM_SETTEXT](/windows/win32/winmsg/wm-settext)訊息傳送至指定的控制項。
 
 ### <a name="example"></a>範例
 
@@ -11359,7 +11359,7 @@ void SetDlgItemText(
 
 ### <a name="remarks"></a>備註
 
-`SetDlgItemText`將[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)訊息傳送至指定的控制項。
+`SetDlgItemText`將[WM_SETTEXT](/windows/win32/winmsg/wm-settext)訊息傳送至指定的控制項。
 
 ### <a name="example"></a>範例
 
@@ -11401,7 +11401,7 @@ CWnd* SetFocus();
 
 輸入焦點會將所有後續鍵盤輸入導向此視窗。 任何先前具有輸入焦點的視窗都會失去它。
 
-成員函式會將[WM_KILLFOCUS](/windows/desktop/inputdev/wm-killfocus)訊息傳送到失去輸入焦點的視窗, 並將 [WM_SETFOCUS](/windows/desktop/inputdev/wm-setfocus) 訊息傳送至接收輸入焦點的視窗。`SetFocus` 它也會啟用視窗或其父系。
+成員函式會將[WM_KILLFOCUS](/windows/win32/inputdev/wm-killfocus)訊息傳送到失去輸入焦點的視窗, 並將 [WM_SETFOCUS](/windows/win32/inputdev/wm-setfocus) 訊息傳送至接收輸入焦點的視窗。`SetFocus` 它也會啟用視窗或其父系。
 
 如果目前的視窗作用中, 但沒有焦點 (也就是沒有任何視窗具有焦點), 則任何按下的按鍵都會產生[WM_SYSCHAR](#onsyschar)、 [WM_SYSKEYDOWN](#onsyskeydown)或[WM_SYSKEYUP](#onsyskeyup)訊息。
 
@@ -11474,10 +11474,10 @@ BOOL SetLayeredWindowAttributes(
 COLORRE光圈值的指標, 指定撰寫分層視窗時要使用的透明度色彩索引鍵。 視窗在此色彩中繪製的所有圖元都是透明的。 若要產生 COLORREF, 請使用 RGB 宏。
 
 *bAlpha*<br/>
-用來描述分層視窗之不透明度的 Alpha 值。 如需詳細資訊, 請`SourceConstantAlpha`參閱[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)結構的成員。 當*bAlpha*為0時, 視窗會完全透明。 當*bAlpha*為255時, 視窗是不透明的。
+用來描述分層視窗之不透明度的 Alpha 值。 如需詳細資訊, 請`SourceConstantAlpha`參閱[BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction)結構的成員。 當*bAlpha*為0時, 視窗會完全透明。 當*bAlpha*為255時, 視窗是不透明的。
 
 *dwFlags*<br/>
-指定要採取的動作。 這個參數可以是下列一個或多個值。 如需可能值的清單, 請參閱[setlayeredwindowattributes 簡單](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)。
+指定要採取的動作。 這個參數可以是下列一個或多個值。 如需可能值的清單, 請參閱[setlayeredwindowattributes 簡單](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -11485,7 +11485,7 @@ COLORRE光圈值的指標, 指定撰寫分層視窗時要使用的透明度色�
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[setlayeredwindowattributes 簡單](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[setlayeredwindowattributes 簡單](/windows/win32/api/winuser/nf-winuser-setlayeredwindowattributes)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="setmenu"></a>  CWnd::SetMenu
 
@@ -11533,7 +11533,7 @@ void SetOwner(CWnd* pOwnerWnd);
 
 在與視窗階層無關的視窗物件之間建立連接通常會很有用。 例如, [CToolBar](../../mfc/reference/ctoolbar-class.md)會將通知傳送給其擁有者, 而不是傳送至其父系。 這可讓工具列成為一個視窗 (例如 OLE 容器應用程式視窗) 的子系, 同時將通知傳送至另一個視窗 (例如就地框架視窗)。 此外, 當您在就地編輯期間停用或啟用伺服器視窗時, 框架視窗所擁有的任何視窗都會隱藏或顯示。 這個擁有權是透過呼叫來`SetOwner`明確設定。
 
-此功能的擁有權概念與[GetWindow](/windows/desktop/api/winuser/nf-winuser-getwindow)的擁有權概念不同。
+此功能的擁有權概念與[GetWindow](/windows/win32/api/winuser/nf-winuser-getwindow)的擁有權概念不同。
 
 ##  <a name="setparent"></a>  CWnd::SetParent
 
@@ -11743,7 +11743,7 @@ UINT_PTR SetTimer(
 指定超時值或間隔 (以毫秒為單位)。
 
 *lpfnTimer*<br/>
-指定應用程式提供`TimerProc`的回呼函式的位址, 該函數會處理[WM_TIMER](/windows/desktop/winmsg/wm-timer)的訊息。 如果此參數為 Null, 則 WM_TIMER 訊息會放在應用程式的訊息佇列中, 並由`CWnd`物件處理。
+指定應用程式提供`TimerProc`的回呼函式的位址, 該函數會處理[WM_TIMER](/windows/win32/winmsg/wm-timer)的訊息。 如果此參數為 Null, 則 WM_TIMER 訊息會放在應用程式的訊息佇列中, 並由`CWnd`物件處理。
 
 ### <a name="return-value"></a>傳回值
 
@@ -11805,7 +11805,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>參數
 
 *lpwndpl*<br/>
-指向指定新顯示狀態和位置的[WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)結構。
+指向指定新顯示狀態和位置的[WINDOWPLACEMENT](/windows/win32/api/winuser/ns-winuser-windowplacement)結構。
 
 ### <a name="return-value"></a>傳回值
 
@@ -11962,7 +11962,7 @@ void SetWindowText(LPCTSTR lpszString);
 
 如果視窗是控制項, 則會設定控制項內的文字。
 
-此函式會將[WM_SETTEXT](/windows/desktop/winmsg/wm-settext)訊息傳送到這個視窗。
+此函式會將[WM_SETTEXT](/windows/win32/winmsg/wm-settext)訊息傳送到這個視窗。
 
 ### <a name="example"></a>範例
 
@@ -12152,7 +12152,7 @@ void UnlockWindowUpdate();
 
 ### <a name="remarks"></a>備註
 
-一次只能使用`LockWindowUpdate`一個視窗來鎖定。 如需有關鎖定視窗的詳細資訊, 請參閱[CWnd:: LockWindowUpdate](#lockwindowupdate)或 Win32 函數[LockWindowUpdate](/windows/desktop/api/winuser/nf-winuser-lockwindowupdate) 。
+一次只能使用`LockWindowUpdate`一個視窗來鎖定。 如需有關鎖定視窗的詳細資訊, 請參閱[CWnd:: LockWindowUpdate](#lockwindowupdate)或 Win32 函數[LockWindowUpdate](/windows/win32/api/winuser/nf-winuser-lockwindowupdate) 。
 
 ##  <a name="unsubclasswindow"></a>CWnd:: UnsubclassWindow
 
@@ -12258,10 +12258,10 @@ BOOL UpdateLayeredWindow(
 COLORRE光圈值的指標, 指定撰寫分層視窗時要使用的透明度色彩索引鍵。 視窗在此色彩中繪製的所有圖元都是透明的。 若要產生 COLORREF, 請使用 RGB 宏。
 
 *pblend*<br/>
-[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-blendfunction)結構的指標, 指定撰寫分層視窗時要使用的透明度值。
+[BLENDFUNCTION](/windows/win32/api/wingdi/ns-wingdi-blendfunction)結構的指標, 指定撰寫分層視窗時要使用的透明度值。
 
 *dwFlags*<br/>
-指定要採取的動作。 這個參數可以是下列一個或多個值。 如需可能值的清單, 請參閱[UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)。
+指定要採取的動作。 這個參數可以是下列一個或多個值。 如需可能值的清單, 請參閱[UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -12269,11 +12269,11 @@ COLORRE光圈值的指標, 指定撰寫分層視窗時要使用的透明度色�
 
 ### <a name="remarks"></a>備註
 
-此成員函式會模擬函數[UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)的功能, 如 Windows SDK 中所述。
+此成員函式會模擬函數[UpdateLayeredWindow](/windows/win32/api/winuser/nf-winuser-updatelayeredwindow)的功能, 如 Windows SDK 中所述。
 
 ##  <a name="updatewindow"></a>  CWnd::UpdateWindow
 
-如果更新區域不是空的, 則藉由傳送[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息來更新工作區。
+如果更新區域不是空的, 則藉由傳送[WM_PAINT](/windows/win32/gdi/wm-paint)訊息來更新工作區。
 
 ```
 void UpdateWindow();
@@ -12298,11 +12298,11 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/desktop/api/windef/ns-windef-tagrect), 其中包含要從更新區域中移除之矩形的用戶端座標。 如果*lpRect*為 Null, 則會驗證整個視窗。
+指向[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT 結構](/windows/win32/api/windef/ns-windef-rect), 其中包含要從更新區域中移除之矩形的用戶端座標。 如果*lpRect*為 Null, 則會驗證整個視窗。
 
 ### <a name="remarks"></a>備註
 
-[BeginPaint](#beginpaint)成員函式會自動驗證整個工作區。 如果需要驗證更新區域的一部分, 才會下一次產生[WM_PAINT](/windows/desktop/gdi/wm-paint) , 則不應呼叫 或 [ValidateRgn](#validatergn) 成員函`ValidateRect`式。
+[BeginPaint](#beginpaint)成員函式會自動驗證整個工作區。 如果需要驗證更新區域的一部分, 才會下一次產生[WM_PAINT](/windows/win32/gdi/wm-paint) , 則不應呼叫 或 [ValidateRgn](#validatergn) 成員函`ValidateRect`式。
 
 Windows 會繼續產生 WM_PAINT 訊息, 直到驗證目前的更新區域為止。
 
@@ -12323,7 +12323,7 @@ void ValidateRgn(CRgn* pRgn);
 
 指定的區域必須已經由區域函式建立。 區域座標會假設為用戶端座標。
 
-[BeginPaint](#beginpaint)成員函式會自動驗證整個工作區。 既不[ValidateRect](#validaterect)和`ValidateRgn`應該呼叫成員函式，如果必須在下一步 之前進行驗證的更新區域一部分[WM_PAINT](/windows/desktop/gdi/wm-paint)會產生訊息。
+[BeginPaint](#beginpaint)成員函式會自動驗證整個工作區。 既不[ValidateRect](#validaterect)和`ValidateRgn`應該呼叫成員函式，如果必須在下一步 之前進行驗證的更新區域一部分[WM_PAINT](/windows/win32/gdi/wm-paint)會產生訊息。
 
 ##  <a name="windowfrompoint"></a>  CWnd::WindowFromPoint
 
@@ -12336,7 +12336,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點](/windows/desktop/api/windef/ns-windef-tagpoint)資料結構, 其定義要檢查的點。
+指定[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件或[點](/windows/win32/api/windef/ns-windef-point)資料結構, 其定義要檢查的點。
 
 ### <a name="return-value"></a>傳回值
 
@@ -12392,7 +12392,7 @@ virtual void WinHelp(
 指定其他資料。 使用的值取決於*nCmd*參數的值。
 
 *nCmd*<br/>
-指定要求的說明類型。 如需可能值的清單, 以及它們對*dwData*參數的影響, 請參閱 Windows SDK 中的[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa) Windows 函式。
+指定要求的說明類型。 如需可能值的清單, 以及它們對*dwData*參數的影響, 請參閱 Windows SDK 中的[WinHelp](/windows/win32/api/winuser/nf-winuser-winhelpw) Windows 函式。
 
 ### <a name="remarks"></a>備註
 

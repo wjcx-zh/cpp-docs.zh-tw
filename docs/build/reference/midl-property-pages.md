@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 8174f6382ea2dab4ef2a49f5d30a6e27e8af3f5b
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: 0113fbd68d7687236b91b098ead2ac6b8338fee9
+ms.sourcegitcommit: af4ab63866ed09b5988ed53f1bb6996a54f02484
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492168"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68787067"
 ---
 # <a name="midl-property-pages"></a>MIDL 屬性頁
 
@@ -62,11 +62,11 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="preprocessor-definitions"></a>前置處理器定義
 
-指定一或多個定義, 包括 MIDL 宏[](/windows/win32/midl/-d)(/d\[)\]宏。
+指定一或多個定義, 包括 MIDL 宏([/d](/windows/win32/midl/-d))\[macros\]。
 
 ### <a name="additional-include-directories"></a>其他 Include 目錄
 
-指定一或多個要新增至 include 路徑的目錄[](/windows/win32/midl/-i) \[(/i\]路徑)。
+指定一或多個要新增至 include 路徑的目錄 ([/i](/windows/win32/midl/-i)\[路徑\])。
 
 ### <a name="additional-metadata-directories"></a>其他中繼資料目錄
 
@@ -129,15 +129,15 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="generate-stubless-proxies"></a>產生 Stubless proxy
 
-使用物件介面 ([/Oicf](/windows/win32/midl/-Oicf)、 [/Oif](/windows/win32/midl/-Oif) ) 的延伸模組和 stubless proxy, 產生完全解讀的存根。
+使用物件介面 ([/Oicf](/windows/win32/midl/-oi)、 [/Oif](/windows/win32/midl/-oi) ) 的延伸模組和 stubless proxy, 產生完全解讀的存根。
 
 ### <a name="suppress-compiler-warnings"></a>隱藏編譯器警告
 
-隱藏編譯器警告訊息 ([/no_warn](/windows/win32/midl/-no_warn))。
+隱藏編譯器警告訊息 ([/no_warn](/windows/win32/midl/-no-warn))。
 
 ### <a name="application-configuration-mode"></a>應用程式設定模式
 
-允許在 IDL 檔案中選取的 ACF 屬性 ([/app_config](/windows/win32/midl/-app_config))。
+允許在 IDL 檔案中選取的 ACF 屬性 ([/app_config](/windows/win32/midl/-app-config))。
 
 ### <a name="locale-id"></a>地區設定識別碼
 
@@ -220,7 +220,7 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="c-preprocess-options"></a>C 前置處理選項
 
-指定要傳遞至 C 編譯器預處理器 ([/cpp_opt](/windows/win32/midl/-cpp_opt)參數) 的參數。
+指定要傳遞至 C 編譯器預處理器 ([/cpp_opt](/windows/win32/midl/-cpp-opt)參數) 的參數。
 
 ### <a name="undefine-preprocessor-definitions"></a>取消前置處理器的定義
 
@@ -258,15 +258,15 @@ MIDL 屬性頁在上是以專案屬性的形式提供。使用 COM 之C++專案�
 
 ### <a name="prepend-with-abi-namespace"></a>前面加上 ' ABI ' 命名空間
 
-在所有類型前面加上 ' ABI ' 命名空間。  ([/ns_prefix](/windows/win32/midl/-ns_prefix))。
+在所有類型前面加上 ' ABI ' 命名空間。  ([/ns_prefix](/windows/win32/midl/-ns-prefix))。
 
 ### <a name="validate-parameters"></a>驗證參數
 
-產生其他資訊來驗證參數 ([/robust](/windows/win32/midl/-robust)  |  [/robust](/windows/win32/midl/-no_robust))。
+產生其他資訊來驗證參數 ([/robust](/windows/win32/midl/-robust)  |  [/no_robust](/windows/win32/midl/-no-robust))。
 
 ### <a name="struct-member-alignment"></a>結構成員對齊
 
-指定目標系統中結構的封裝層級 ([/ZpN](/windows/win32/midl/-zpn))。
+指定目標系統中結構的封裝層級 (/ZpN)。
 
 **做**
 

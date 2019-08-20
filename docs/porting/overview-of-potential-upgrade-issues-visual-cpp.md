@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 27cfe90f33f71d82af90cf4fa62186c1c0a189ce
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66182938"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511549"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -86,7 +86,7 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 dumpbin.exe /LINKERMEMBER somelibrary.lib
 ```
 
-### <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
+### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
 (在 Microsoft Visual C++ 6.0 和更舊版本中，**wchar_t** 並未實作為內建類型，而是在 wchar.h 中宣告為 unsigned short 的 typedef。)C++ 標準要求 **wchar_t** 必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
@@ -168,7 +168,7 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ATL 和 MFC 是相當穩定的 API，但偶而會進行變更。 如需詳細資訊，請參閱 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)、[Visual Studio 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)和 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)。
 
-### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 已定義於 MSVCRTD.lib 中
+### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 已定義於 MSVCRTD.lib 中
 
 MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC 程式庫之間的順序問題。 必須先連結 MFC，才能提供 new 和 delete 運算子。 若要修正錯誤，請使用 `/NODEFAULTLIB` 參數來忽略這些預設程式庫：MSVCRTD.lib 與 mfcs140d.lib。 然後將這些相同的程式庫新增為其他相依性。
 
@@ -176,7 +176,7 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 
 如果您的原始程式碼是針對 32 位元系統所編譯，則可以選擇建立 64 位元版本，而不是新的 32 位元應用程式，或是包含新的 32 位元應用程式。 一般而言，您應該先以 32 位元模式編譯程式，然後嘗試 64 位元。 針對 64 位元進行編譯十分簡單，但在部分情況下，它可以顯示 32 位元組建所隱藏的 Bug。
 
-此外，您應該注意下列項目可能發生的編譯時期和執行階段問題：指標大小、時間和大小值，以及 printf 和 scanf 函式中的格式規範。 如需詳細資訊，請參閱[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)。 如需其他移轉提示，請參閱 [Programming Guide for 64-bit Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows) (64 位元 Windows 程式設計指南)。
+此外，您應該注意下列項目可能發生的編譯時期和執行階段問題：指標大小、時間和大小值，以及 printf 和 scanf 函式中的格式規範。 如需詳細資訊，請參閱[針對 64 位元 x64 目標設定 Visual C++](../build/configuring-programs-for-64-bit-visual-cpp.md) 和 [Visual C++ 64 位元移轉時常見的問題](../build/common-visual-cpp-64-bit-migration-issues.md)。 如需其他移轉提示，請參閱 [Programming Guide for 64-bit Windows](/windows/win32/WinProg64/programming-guide-for-64-bit-windows) (64 位元 Windows 程式設計指南)。
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 與 MBCS/ASCII
 

@@ -45,14 +45,14 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748043"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498899"
 ---
-# <a name="spawn-wspawn-functions"></a>_spawn、_wspawn 函式
+# <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函式
 
 所有 `_spawn` 函式都會建立並執行新的處理序：
 
@@ -117,13 +117,13 @@ ms.locfileid: "57748043"
 >  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_spawn` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
 
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
+>  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_spawn`。 `_spawn` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
 
 您可以將引數指標當做個別的參數 (在 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 中) 或指標陣列 (在 `_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 中) 傳遞。 您必須至少將一個引數，`arg0` 或 `argv`[0]，傳遞至繁衍的處理序。 依照慣例，此引數是您會在命令列上輸入的程式名稱。 不同的值不會產生錯誤。
 
 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 呼叫通常是在預知引數數目時使用。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn` 之後必須有一個 **NULL** 指標，以標記引數清單的結尾。
 
-當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
+當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。  引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
 
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境
 
@@ -139,7 +139,7 @@ ms.locfileid: "57748043"
 
 如果從 DLL 或 GUI 應用程式呼叫 `_spawn`，而且想要將輸出重新導向至管道，您有兩個選項︰
 
-- 使用 Win32 API 建立管道，然後呼叫[AllocConsole](/windows/console/allocconsole) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)。
+- 使用 Win32 API 建立管道，然後呼叫[AllocConsole](/windows/console/allocconsole) (AllocConsole 函式)，在啟動結構中設定控制代碼值，再呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)。
 
 - 呼叫會建立管道的 [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md)，並叫用使用 **cmd.exe /c** (或 **command.exe /c**) 的應用程式。
 

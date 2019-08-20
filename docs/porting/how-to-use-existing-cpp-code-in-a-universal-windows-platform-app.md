@@ -2,12 +2,12 @@
 title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: b46cbdc088908f59d6cbdc0ecd7cd6475da370d8
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861138"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510380"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
@@ -19,13 +19,13 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 如果程式庫有可用的原始程式碼，您也許能夠排除禁止的 API 呼叫。 如需詳細資料，包括允許或禁止的 API 清單，請參閱[適用於 Win32 和 COM API 的 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)和[通用 Windows 平台應用程式中不支援的 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。 [UWP 應用程式中的 Windows API 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)也提供了幾種替代方案。
 
-如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在 UWP 應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
+如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在 UWP 應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
 
 如果您有 DLL 或靜態程式庫的原始程式碼，您可以使用 `/ZW` 重新編譯為 UWP 專案。 如果您這麼做，可以使用**方案總管**新增參考，然後在 C++ UWP 應用程式中使用。 若為 DLL，請您使用匯出程式庫來連結。
 
 若要向其他語言的呼叫者公開功能，您可以將程式庫轉換成 Windows 執行階段元件。 Windows 執行階段元件不同於一般的 DLL，因為它們以 .winmd 檔案的形式包含的中繼資料，會以 .NET 與 JavaScript 客戶所需的方式描述內容。 若要向其他語言公開 API 項目，您可以加入 C++/CX 建構 (例如 ref 類別) 並設定為公用，或使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  在 Windows 10 和更新版本中，您可以使用 [C++/WinRT library](https://github.com/microsoft/cppwinrt) (C++/WinRT 程式庫)，而非 C++/CX。
 
-前述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它，只要將它封裝為[免註冊的 COM 元件](/windows/desktop/sbscs/creating-registration-free-com-objects)，並當成內容檔案新增至專案，然後使用 [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 加以具現化即可。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (在 Microsoft Store C++ 專案中使用 Free-COM DLL)。
+前述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它，只要將它封裝為[免註冊的 COM 元件](/windows/win32/sbscs/creating-registration-free-com-objects)，並當成內容檔案新增至專案，然後使用 [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 加以具現化即可。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (在 Microsoft Store C++ 專案中使用 Free-COM DLL)。
 
 若您有想要移植到 UWP 的現有 COM 程式庫，則可以使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 將其轉換成 Windows 執行階段元件。 WRL 不支援所有的 ATL 與 OLE 功能，因此這類移植是否可行，取決於 COM 程式碼有多麼依存於您的元件所需的那些 COM、ATL 及 OLE 功能。
 

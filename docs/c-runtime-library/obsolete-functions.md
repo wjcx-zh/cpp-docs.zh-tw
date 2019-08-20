@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: edac8fde530752c911058acdaccccea6d0318b8c
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: ff0e4376c021fcfd46d4631d1598a3826e9f2851
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702670"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500027"
 ---
 # <a name="obsolete-functions"></a>過時的函式
 
@@ -66,14 +66,14 @@ ms.locfileid: "55702670"
 |已過時的函式|替代函式|
 |-----------------------|-----------------|
 |`is_wctype`|[iswctype](../c-runtime-library/reference/isctype-iswctype-isctype-l-iswctype-l.md)|
-|`_loaddll`|[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)、 [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)|
-|`_unloaddll`|[FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)|
+|`_loaddll`|[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)、 [LoadLibraryEx](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw)或 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)|
+|`_unloaddll`|[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)|
 |`_getdllprocaddr`|[GetProcAddress](../build/getprocaddress.md)|
-|`_seterrormode`|[SetErrorMode](https://msdn.microsoft.com/library/windows/desktop/ms680621)|
-|`_beep`|[Beep](/windows/desktop/api/utilapiset/nf-utilapiset-beep)|
-|`_sleep`|[Sleep](/windows/desktop/api/synchapi/nf-synchapi-sleep)|
-|`_getsystime`|[GetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
-|`_setsystime`|[SetLocalTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
+|`_seterrormode`|[SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode)|
+|`_beep`|[Beep](/windows/win32/api/utilapiset/nf-utilapiset-beep)|
+|`_sleep`|[Sleep](/windows/win32/api/synchapi/nf-synchapi-sleep)|
+|`_getsystime`|[GetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getlocaltime)|
+|`_setsystime`|[SetLocalTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-setlocaltime)|
 
 ## <a name="removed-from-the-crt-in-visual-studio-2015"></a>Visual Studio 2015 中已從 CRT 移除的函式
 
@@ -81,14 +81,14 @@ ms.locfileid: "55702670"
 |-----------------------|-----------------|
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets、_getws](../c-runtime-library/gets-getws.md)|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|無|
-|[_heapadd](../c-runtime-library/heapadd.md)|無|
-|[_heapset](../c-runtime-library/heapset.md)|無|
-|[inp、inpw](../c-runtime-library/inp-inpw.md)|無|
-|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|無|
-|[outp、outpw](../c-runtime-library/outp-outpw.md)|無|
-|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|無|
-|[_set_output_format](../c-runtime-library/set-output-format.md)|無|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|None|
+|[_heapadd](../c-runtime-library/heapadd.md)|None|
+|[_heapset](../c-runtime-library/heapset.md)|None|
+|[inp、inpw](../c-runtime-library/inp-inpw.md)|None|
+|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|None|
+|[outp、outpw](../c-runtime-library/outp-outpw.md)|None|
+|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|None|
+|[_set_output_format](../c-runtime-library/set-output-format.md)|None|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>舊版 Visual Studio 中已從 CRT 移除的函式
 

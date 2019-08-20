@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stock properties, about stock properties
 - stock properties
 ms.assetid: 37bd4db7-efd3-4faa-87ad-64902ed16a36
-ms.openlocfilehash: 79938cb5c762292c5e1802832477c3a568ae2fdb
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5c472b74fee690c0cf33f78eca9e2e8462930eb8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504477"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69509525"
 ---
 # <a name="add-a-property"></a>新增屬性
 
@@ -149,15 +149,15 @@ ms.locfileid: "66504477"
 
 - `id`
 
-  設定識別屬性的數值識別碼。 此選項不適用於自訂介面的屬性。 請參閱＜MIDL 參考＞  中的 [id](/windows/desktop/Midl/id)。
+  設定識別屬性的數值識別碼。 此選項不適用於自訂介面的屬性。 請參閱＜MIDL 參考＞  中的 [id](/windows/win32/Midl/id)。
 
 - `helpcontext`
 
-  指定內容識別碼，讓使用者可在說明檔中檢視此屬性的相關資訊。 請參閱＜MIDL 參考＞  中的 [helpcontext](/windows/desktop/Midl/helpcontext)。
+  指定內容識別碼，讓使用者可在說明檔中檢視此屬性的相關資訊。 請參閱＜MIDL 參考＞  中的 [helpcontext](/windows/win32/Midl/helpcontext)。
 
 - `helpstring`
 
-  指定用來描述所套用項目的字元字串。 根據預設，其會設定為 `property`&nbsp;*Property&nbsp;name*。 請參閱＜MIDL 參考＞  中的 [helpstring](/windows/desktop/Midl/helpstring)。
+  指定用來描述所套用項目的字元字串。 根據預設，其會設定為 `property`&nbsp;*Property&nbsp;name*。 請參閱＜MIDL 參考＞  中的 [helpstring](/windows/win32/Midl/helpstring)。
 
 ### <a name="other-options"></a>其他選項
 
@@ -165,17 +165,17 @@ ms.locfileid: "66504477"
 
 |選項|說明|
 |------------|-----------------|
-|`bindable`|表示支援資料繫結的屬性。 請參閱＜MIDL 參考＞  中的 [bindable](/windows/desktop/Midl/bindable)。 對於屬性的內建實作，預設會設定此選項，而且無法變更。|
-|`defaultbind`|表示這個單一可繫結屬性最能代表物件。 請參閱＜MIDL 參考＞  中的 [defaultbind](/windows/desktop/Midl/defaultbind)。|
-|`displaybind`|表示這個屬性應向使用者顯示為可繫結。 請參閱＜MIDL 參考＞  中的 [displaybind](/windows/desktop/Midl/displaybind)。|
-|`immediatebind`|表示該資料庫將立即被告知此資料繫結物件屬性的所有變更。 請參閱＜MIDL 參考＞  中的 [immediatebind](/windows/desktop/Midl/immediatebind)。|
-|`defaultcollelem`|表示屬性是預設集合項目的存取子函式。 請參閱＜MIDL 參考＞  中的 [defaultcollelem](/windows/desktop/Midl/defaultcollelem)。|
-|`nonbrowsable`|標記不應顯示在屬性瀏覽器中的介面或分派介面成員。 請參閱＜MIDL 參考＞  中的 [nonbrowsable](/windows/desktop/Midl/nonbrowsable)。|
-|`requestedit`|表示屬性支援 `OnRequestEdit` 通知。 請參閱＜MIDL 參考＞  中的 [requestedit](/windows/desktop/Midl/requestedit)。 對於屬性的內建實作，預設會設定此選項，而且無法變更。|
-|`source`|表示屬性的成員是事件來源。 請參閱＜MIDL 參考＞  中的 [source](/windows/desktop/Midl/source)。|
-|`hidden`|表示屬性存在，但不應該在使用者導向的瀏覽器中顯示。 請參閱＜MIDL 參考＞  中的 [hidden](/windows/desktop/Midl/hidden)。|
-|`restricted`|指定無法任意呼叫屬性。 請參閱＜MIDL 參考＞  中的 [restricted](/windows/desktop/Midl/restricted)。|
-|`local`|對 MIDL 編譯器指定屬性不是遠端。 請參閱＜MIDL 參考＞  中的 [local](/windows/desktop/Midl/local)。|
+|`bindable`|表示支援資料繫結的屬性。 請參閱＜MIDL 參考＞  中的 [bindable](/windows/win32/Midl/bindable)。 對於屬性的內建實作，預設會設定此選項，而且無法變更。|
+|`defaultbind`|表示這個單一可繫結屬性最能代表物件。 請參閱＜MIDL 參考＞  中的 [defaultbind](/windows/win32/Midl/defaultbind)。|
+|`displaybind`|表示這個屬性應向使用者顯示為可繫結。 請參閱＜MIDL 參考＞  中的 [displaybind](/windows/win32/Midl/displaybind)。|
+|`immediatebind`|表示該資料庫將立即被告知此資料繫結物件屬性的所有變更。 請參閱＜MIDL 參考＞  中的 [immediatebind](/windows/win32/Midl/immediatebind)。|
+|`defaultcollelem`|表示屬性是預設集合項目的存取子函式。 請參閱＜MIDL 參考＞  中的 [defaultcollelem](/windows/win32/Midl/defaultcollelem)。|
+|`nonbrowsable`|標記不應顯示在屬性瀏覽器中的介面或分派介面成員。 請參閱＜MIDL 參考＞  中的 [nonbrowsable](/windows/win32/Midl/nonbrowsable)。|
+|`requestedit`|表示屬性支援 `OnRequestEdit` 通知。 請參閱＜MIDL 參考＞  中的 [requestedit](/windows/win32/Midl/requestedit)。 對於屬性的內建實作，預設會設定此選項，而且無法變更。|
+|`source`|表示屬性的成員是事件來源。 請參閱＜MIDL 參考＞  中的 [source](/windows/win32/Midl/source)。|
+|`hidden`|表示屬性存在，但不應該在使用者導向的瀏覽器中顯示。 請參閱＜MIDL 參考＞  中的 [hidden](/windows/win32/Midl/hidden)。|
+|`restricted`|指定無法任意呼叫屬性。 請參閱＜MIDL 參考＞  中的 [restricted](/windows/win32/Midl/restricted)。|
+|`local`|對 MIDL 編譯器指定屬性不是遠端。 請參閱＜MIDL 參考＞  中的 [local](/windows/win32/Midl/local)。|
 
 ## <a name="stock-properties"></a>內建屬性
 

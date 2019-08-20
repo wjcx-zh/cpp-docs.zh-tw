@@ -60,7 +60,6 @@ void my_class::do_something()
 
 現在我們可以在其他 .cpp 檔案使用 `my_class` 了。我們會 #include 標頭檔，以讓編譯器提取宣告。所有編譯器皆需要知道 my_class 是個類別，其包含一個稱之為 `do_something()` 的公用成員函式。
 
-
 ```cpp
 // my_program.cpp
 #include "my_class.h"

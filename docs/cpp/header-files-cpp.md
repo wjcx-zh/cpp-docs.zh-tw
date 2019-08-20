@@ -1,12 +1,13 @@
 ---
-title: "標頭檔 (C++)"
-ms.date: "04/20/2018"
-helpviewer_keywords: ["header files [C++]", "標頭檔 [C++]"]
+title: 標頭檔 (C++)
+ms.date: 04/20/2018
+helpviewer_keywords:
+- header files [C++]
 ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
 ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
+ms.lasthandoff: 08/13/2019
 ms.locfileid: "68980478"
 ---
 

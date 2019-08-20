@@ -8,18 +8,18 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152127"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500276"
 ---
 # <a name="thread-local-storage"></a>執行緒區域儲存區
 
 **Microsoft 專屬**
 
-執行緒區域儲存區 (Thread Local Storage，TLS) 是一種機制，讓指定之多執行緒處理序中的每個執行緒用來配置儲存區，以儲存執行緒特定資料。 在標準多執行緒程式中，資料是在特定處理序的所有執行緒之間共用，而執行緒區域儲存區則是用於配置每個執行緒資料的機制。 如需執行緒的完整討論，請參閱 Windows SDK 中的[處理序與執行緒](/windows/desktop/ProcThread/processes-and-threads)。
+執行緒區域儲存區 (Thread Local Storage，TLS) 是一種機制，讓指定之多執行緒處理序中的每個執行緒用來配置儲存區，以儲存執行緒特定資料。 在標準多執行緒程式中，資料是在特定處理序的所有執行緒之間共用，而執行緒區域儲存區則是用於配置每個執行緒資料的機制。 如需執行緒的完整討論，請參閱 Windows SDK 中的[處理序與執行緒](/windows/win32/ProcThread/processes-and-threads)。
 
 Microsoft C 語言包括擴充儲存類別屬性 thread，可搭配 __declspec 關鍵字宣告執行緒區域變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
 

@@ -17,14 +17,14 @@ f1_keywords:
 helpviewer_keywords:
 - __crtLCMapStringW
 ms.assetid: 45b4ac0e-438c-4fa3-b4d1-34195f4467d9
-ms.openlocfilehash: 0c3752baba05e18903c32919505d702081d09dca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e79ac5d4072595ef1034a0483b9edc8eada916d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468415"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500220"
 ---
-# <a name="crtlcmapstringw"></a>__crtLCMapStringW
+# <a name="__crtlcmapstringw"></a>__crtLCMapStringW
 
 將一個字元字串對應至另一個字元字串，並執行指定的地區設定相關轉換。 此函式也可用來產生輸入字串的排序鍵。
 
@@ -72,7 +72,7 @@ int __crtLCMapStringW(
 
 ## <a name="remarks"></a>備註
 
-如果 `cchSrc` 大於零且 `lpSrcStr` 為以 null 終止的字串， `__crtLCMapStringW` 會將 `cchSrc` 設定為字串的長度。 然後 `__crtLCMapStringW` 會呼叫寬字串 (Unicode) 版本的 `LCMapString` 函式並指定其參數。 如需此函式的參數和傳回值詳細資訊，請參閱 [LCMapString](/windows/desktop/api/winnls/nf-winnls-lcmapstringa)。
+如果 `cchSrc` 大於零且 `lpSrcStr` 為以 null 終止的字串， `__crtLCMapStringW` 會將 `cchSrc` 設定為字串的長度。 然後 `__crtLCMapStringW` 會呼叫寬字串 (Unicode) 版本的 `LCMapString` 函式並指定其參數。 如需此函式的參數和傳回值詳細資訊，請參閱 [LCMapString](/windows/win32/api/winnls/nf-winnls-lcmapstringw)。
 
 ## <a name="requirements"></a>需求
 

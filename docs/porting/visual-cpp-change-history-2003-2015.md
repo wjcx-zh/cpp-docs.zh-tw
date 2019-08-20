@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: f05656612e464395117e77c82fb9dc9eb2290e0e
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 9597f04781c9009cf6f8f284348f0831c347201d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451282"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510351"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
@@ -277,7 +277,7 @@ ms.locfileid: "66451282"
 
 - **時鐘**
 
-   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 實作 [clock](../c-runtime-library/reference/clock.md) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 重新實作 clock 函式，因此該函式現在是單調函式。
+   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 實作 [clock](../c-runtime-library/reference/clock.md) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新實作 clock 函式，因此該函式現在是單調函式。
 
 - **fstat 和 _utime**
 
@@ -313,7 +313,7 @@ ms.locfileid: "66451282"
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為符合 C++ 標準的穩定性和單一性需求。 `steady_clock` 目前是以 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他實作的情況不一定也如此。
+   [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為符合 C++ 標準的穩定性和單一性需求。 `steady_clock` 目前是以 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他實作的情況不一定也如此。
 
 - **配置器和常數**
 
@@ -2541,7 +2541,7 @@ ms.locfileid: "66451282"
 
 - **屬性化 ATL 程式碼支援已標示為即將淘汰** (層級 1 (`/W1`) 預設為開啟)
 
-   舊版編譯器支援屬性化 ATL 程式碼。 因為從 [Visual Studio 2008 開始](https://msdn.microsoft.com/library/bb384632)下一階段對屬性化 ATL 支援的移除，所以已淘汰屬性化 ATL 程式碼。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
+   舊版編譯器支援屬性化 ATL 程式碼。 因為從 [Visual Studio 2008 開始](../porting/visual-cpp-what-s-new-2003-through-2015.md#whats-new-for-c-in-visual-studio-2008)下一階段對屬性化 ATL 支援的移除，所以已淘汰屬性化 ATL 程式碼。 編譯器現在會發出編譯器警告 C4467，協助識別這類已標示為即將淘汰的程式碼。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
@@ -3238,7 +3238,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 新的 lambda 標記法支援不支援在 IDL UUID 屬性中編寫未加引號的的 GUID。
 
-- .NET Framework 4 引進了損毀狀態例外狀況概念，亦即在此例外狀況中，處理序會處於無法復原的損毀狀態。 根據預設，您無法捕捉損毀狀態例外狀況，即使使用可捕捉所有其他例外狀況的 /EHa 編譯器選項也無法達成此目的。                 若要明確捕捉損毀狀態例外狀況，請使用 __try-\__except 陳述式。 或是套用 [HandledProcessCorruptedStateExceptions] 屬性啟用函式，以捕捉損毀狀態例外狀況。  此變更主要會影響可能需要擷取損毀狀態例外狀況的系統程式設計人員。 這八個例外狀況包括：STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 如需這些例外狀況的詳細資訊，請參閱 [GetExceptionCode](/windows/desktop/Debug/getexceptioncode) 巨集。
+- .NET Framework 4 引進了損毀狀態例外狀況概念，亦即在此例外狀況中，處理序會處於無法復原的損毀狀態。 根據預設，您無法捕捉損毀狀態例外狀況，即使使用可捕捉所有其他例外狀況的 /EHa 編譯器選項也無法達成此目的。                 若要明確捕捉損毀狀態例外狀況，請使用 __try-\__except 陳述式。 或是套用 [HandledProcessCorruptedStateExceptions] 屬性啟用函式，以捕捉損毀狀態例外狀況。  此變更主要會影響可能需要擷取損毀狀態例外狀況的系統程式設計人員。 這八個例外狀況包括：STATUS_ACCESS_VIOLATION、STATUS_STACK_OVERFLOW、EXCEPTION_ILLEGAL_INSTRUCTION、EXCEPTION_IN_PAGE_ERROR、EXCEPTION_INVALID_DISPOSITION、EXCEPTION_NONCONTINUABLE_EXCEPTION、EXCEPTION_PRIV_INSTRUCTION、STATUS_UNWIND_CONSOLIDATE。                 如需這些例外狀況的詳細資訊，請參閱 [GetExceptionCode](/windows/win32/Debug/getexceptioncode) 巨集。
 
 - 相較於舊版，修改後的 `/GS` 編譯器選項會更密集地監視緩衝區滿溢狀況。 此版可能會在堆疊中插入額外安全性檢查，因而造成效能降低。 使用新的 `__declspec(safebuffers)` 關鍵字可指示編譯器，針對特定函式不要插入安全性檢查。
 

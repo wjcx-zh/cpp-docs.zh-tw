@@ -2,12 +2,12 @@
 title: Visual C++ 移植和升級指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: cd74168419006388b8469086560452a8a99e05e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450373"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511495"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 
@@ -67,7 +67,7 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 您的使用者介面呢？ 如果您使用 MFC，可能會想要更新 UI。 您正在使用 2008 中以功能套件形式引進的任何新版 MFC 功能嗎？ 如果您只想讓應用程式有較新的外觀與風格，則不需要重寫整個應用程式；您可以考慮在 MFC 中使用功能區 API，或使用 MFC 的一些新功能。
 
-如果您要提供程式的 XAML 使用者介面，但不想要建立 UWP 應用程式，則可以搭配使用 C# 與 WPF 來建立 UI 層，以及將標準 C++ 邏輯重構為 DLL。 在 C++/CLI 中建立交互操作層，以連線 C# 與您的原生程式碼。 另一個選項是使用 [C++/CX](https://msdn.microsoft.com/library/windows/apps/xaml/hh699871.aspx) 或 [C++/WinRT](https://github.com/microsoft/cppwinrt) 建立 UWP 應用程式。 在 Windows 10 中，您可以使用 [Desktop App Converter](https://msdn.microsoft.com/windows/uwp/porting/desktop-to-uwp-run-desktop-app-converter) 將現有傳統型應用程式封裝為 UWP 應用程式，而不需要修改任何程式碼。
+如果您要提供程式的 XAML 使用者介面，但不想要建立 UWP 應用程式，則可以搭配使用 C# 與 WPF 來建立 UI 層，以及將標準 C++ 邏輯重構為 DLL。 在 C++/CLI 中建立交互操作層，以連線 C# 與您的原生程式碼。 另一個選項是使用 [C++/CX](../cppcx/visual-c-language-reference-c-cx.md) 或 [C++/WinRT](/windows/uwp/cpp-and-winrt-apis/) 建立 UWP 應用程式。 在 Windows 10 中，您可以使用 [Desktop App Converter](/windows/msix/desktop/desktop-to-uwp-run-desktop-app-converter) 將現有傳統型應用程式封裝為 UWP 應用程式，而不需要修改任何程式碼。
 
 或者，您可能現在有新的需求，或可以預見會有以非 Windows 桌面的平台 (例如 Windows Phone 或 Android 裝置) 為目標的需求。 您可以將使用者介面程式碼移植到跨平台 UI 程式庫。 有了這些 UI 架構，您就能夠以多個裝置為目標，但仍然使用 Visual Studio 和 Visual Studio 偵錯工具作為開發環境。
 

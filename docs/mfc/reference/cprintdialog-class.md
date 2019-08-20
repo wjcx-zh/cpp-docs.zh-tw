@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: ab194b1c289f8347243b36354f4f314b7450a7aa
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
-ms.translationtype: HT
+ms.openlocfilehash: 1f4a4dbec9a1c79ac1e0cec925156ae7db4c293e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916905"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502906"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog 類別
 
@@ -104,7 +104,7 @@ class CPrintDialog : public CCommonDialog
 
 如果您想要讓應用程式在不需要架構介入的情況下處理列印, `CPrintDialog`您可以使用提供的函式來「依原樣」類別, 也可以從`CPrintDialog`衍生您自己的對話方塊類別, 並撰寫符合您需求的函式。 不論是哪一種情況, 這些對話方塊的行為都像標準 MFC 對話方塊, 因為它們是`CCommonDialog`從類別衍生而來。
 
-若要使用`CPrintDialog`物件, 請先使用此`CPrintDialog`函數建立物件。 建立對話方塊之後, 您可以設定或修改[m_pd](#m_pd)結構中的任何值, 以初始化對話方塊控制項的值。 結構的型別為[PRINTDLG。](/windows/desktop/api/commdlg/ns-commdlg-tagpda) `m_pd` 如需此結構的詳細資訊, 請參閱 Windows SDK。
+若要使用`CPrintDialog`物件, 請先使用此`CPrintDialog`函數建立物件。 建立對話方塊之後, 您可以設定或修改[m_pd](#m_pd)結構中的任何值, 以初始化對話方塊控制項的值。 結構的型別為[PRINTDLG。](/windows/win32/api/commdlg/ns-commdlg-pdw) `m_pd` 如需此結構的詳細資訊, 請參閱 Windows SDK。
 
 如果`m_pd`您未在中`hDevMode`為和`hDevNames`成員提供自己的控制碼`GlobalFree` , 請務必在完成對話方塊時, 為這些控制碼呼叫 Windows 函式。 使用所提供`CWinApp::OnFilePrintSetup`的架構列印安裝程式時, 您不需要釋放這些控制碼。 控制碼是由`CWinApp`維護, 並在的析構函式中`CWinApp`釋放。 只有在使用`CPrintDialog`獨立時, 才需要釋放這些控制碼。
 
@@ -159,7 +159,7 @@ CPrintDialog(
 指定是否要顯示標準的 Windows [列印] 對話方塊或 [列印設定] 對話方塊。 將此參數設定為 [TRUE], 以顯示 [標準 Windows 列印安裝程式] 對話方塊。 將它設定為 FALSE 以顯示 [Windows 列印] 對話方塊。 如果*bPrintSetupOnly*為 FALSE, 則 [列印] 對話方塊中仍會顯示 [列印設定] 選項按鈕。
 
 *dwFlags*<br/>
-一或多個旗標, 可供您用來自訂對話方塊的設定, 並使用位 OR 運算子進行結合。 例如, PD_ALLPAGES 旗標會將預設的列印範圍設定為檔的所有頁面。 如需這些旗標的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda)結構。
+一或多個旗標, 可供您用來自訂對話方塊的設定, 並使用位 OR 運算子進行結合。 例如, PD_ALLPAGES 旗標會將預設的列印範圍設定為檔的所有頁面。 如需這些旗標的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw)結構。
 
 *pParentWnd*<br/>
 對話方塊的父代或擁有者視窗的指標。
@@ -168,7 +168,7 @@ CPrintDialog(
 
 這個成員函式只會建立物件。 `DoModal`使用成員函式來顯示對話方塊。
 
-請注意, 當您呼叫*bPrintSetupOnly*設定為 FALSE 的函式時, 會自動使用 PD_RETURNDC 旗標。 呼叫`DoModal`、 `GetDefaults`或`m_pd.hDC`之後, 將會在中傳回印表機 DC。 `GetPrinterDC` 此 DC 必須透過呼叫呼叫端的`CPrintDialog` [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)來釋放。
+請注意, 當您呼叫*bPrintSetupOnly*設定為 FALSE 的函式時, 會自動使用 PD_RETURNDC 旗標。 呼叫`DoModal`、 `GetDefaults`或`m_pd.hDC`之後, 將會在中傳回印表機 DC。 `GetPrinterDC` 此 DC 必須透過呼叫呼叫端的`CPrintDialog` [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)來釋放。
 
 ### <a name="example"></a>範例
 
@@ -176,7 +176,7 @@ CPrintDialog(
 
 ##  <a name="createprinterdc"></a>  CPrintDialog::CreatePrinterDC
 
-從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構建立印表機裝置內容 (DC)。
+從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構建立印表機裝置內容 (DC)。
 
 ```
 HDC CreatePrinterDC();
@@ -204,7 +204,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
+IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
 
 IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
 
@@ -214,7 +214,7 @@ IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] �
 
 呼叫`DoModal`之後, 您可以呼叫其他成員函式, 以抓取使用者在對話方塊中輸入的設定或資訊。
 
-請注意, 當您呼叫*bPrintSetupOnly*設定為 FALSE 的函式時, 會自動使用 PD_RETURNDC 旗標。 呼叫`DoModal`、 `GetDefaults`或`m_pd.hDC`之後, 將會在中傳回印表機 DC。 `GetPrinterDC` 此 DC 必須透過呼叫呼叫端的`CPrintDialog` [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)來釋放。
+請注意, 當您呼叫*bPrintSetupOnly*設定為 FALSE 的函式時, 會自動使用 PD_RETURNDC 旗標。 呼叫`DoModal`、 `GetDefaults`或`m_pd.hDC`之後, 將會在中傳回印表機 DC。 `GetPrinterDC` 此 DC 必須透過呼叫呼叫端的`CPrintDialog` [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)來釋放。
 
 ### <a name="example"></a>範例
 
@@ -258,7 +258,7 @@ BOOL GetDefaults();
 
 在某些情況下，呼叫此函式將會呼叫 `CPrintDialog` 的 [constructor](#cprintdialog)，並將 *bPrintSetupOnly* 設定為 FALSE。 在這些情況下, 系統會自動`hDevNames`配置`hDevMode`印表機 DC 和和 (位於`m_pd`資料成員中的兩個控制碼)。
 
-如果呼叫的的`CPrintDialog`函式,*且 bPrintSetupOnly*設定為 FALSE, 則此`hDevNames`函式`hDevMode`不只會將和`m_pd.hDevMode`中`m_pd.hDevNames`的傳回到呼叫端, 而且也會傳回中的印表機 DC`m_pd.hDC`。 當您完成`CPrintDialog`物件時, 呼叫端會負責刪除印表機 DC, 並在控制碼上呼叫 Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)函數。
+如果呼叫的的`CPrintDialog`函式,*且 bPrintSetupOnly*設定為 FALSE, 則此`hDevNames`函式`hDevMode`不只會將和`m_pd.hDevMode`中`m_pd.hDevNames`的傳回到呼叫端, 而且也會傳回中的印表機 DC `m_pd.hDC`。 當您完成`CPrintDialog`物件時, 呼叫端會負責刪除印表機 DC, 並在控制碼上呼叫 Windows [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)函數。
 
 ### <a name="example"></a>範例
 
@@ -298,7 +298,7 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
 
 ### <a name="remarks"></a>備註
 
@@ -382,7 +382,7 @@ HDC GetPrinterDC() const;
 
 ### <a name="remarks"></a>備註
 
-如果此 `CPrintDialog`函式的 bPrintSetupOnly 參數為 FALSE (表示顯示 [列印] 對話方塊), 則`GetPrinterDC`會傳回印表機裝置內容的控制碼。 當您使用完裝置內容時, 您必須呼叫 Windows [DeleteDC](/windows/desktop/api/wingdi/nf-wingdi-deletedc)函式來加以刪除。
+如果此 `CPrintDialog`函式的 bPrintSetupOnly 參數為 FALSE (表示顯示 [列印] 對話方塊), 則`GetPrinterDC`會傳回印表機裝置內容的控制碼。 當您使用完裝置內容時, 您必須呼叫 Windows [DeleteDC](/windows/win32/api/wingdi/nf-wingdi-deletedc)函式來加以刪除。
 
 ### <a name="example"></a>範例
 
@@ -418,7 +418,7 @@ PRINTDLG& m_pd;
 
 ### <a name="remarks"></a>備註
 
-在建立`CPrintDialog`物件之後, 您可以使用`m_pd`在呼叫[DoModal](#domodal)成員函式之前, 設定對話方塊的各個層面。 如需`m_pd`結構的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpda) 。
+在建立`CPrintDialog`物件之後, 您可以使用`m_pd`在呼叫[DoModal](#domodal)成員函式之前, 設定對話方塊的各個層面。 如需`m_pd`結構的詳細資訊, 請參閱 Windows SDK 中的[PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-pdw) 。
 
 如果您直接修改`m_pd`資料成員, 將會覆寫任何預設行為。
 

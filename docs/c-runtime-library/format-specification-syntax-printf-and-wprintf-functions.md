@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: 3ba4f91c86727986762b3431c093ee7304a3a83f
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68915499"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500096"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -74,7 +74,7 @@ ms.locfileid: "68915499"
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
 |**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
-|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/desktop/api/ntdef/ns-ntdef-string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
+|**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
 

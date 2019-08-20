@@ -53,14 +53,14 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d31192a25cce86dad6f8e1e8b0258a457d0a5436
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746197"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500142"
 ---
-# <a name="exec-wexec-functions"></a>_exec、_wexec 函式
+# <a name="_exec-_wexec-functions"></a>_exec、_wexec 函式
 
 每個此系列中的函式都會載入並執行新處理序：
 
@@ -82,7 +82,7 @@ ms.locfileid: "57746197"
 
 ## <a name="remarks"></a>備註
 
-每個 `_exec` 函式都會載入並執行新處理序。 所有 `_exec` 函式會使用相同的作業系統函式 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa))。 `_exec` 函式會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wexec` 函式是寬字元版本的 `_exec` 函式。 `_wexec` 函式的行為和其 `_exec` 系列對應項目一樣，只不過他們不處理多位元組字元字串。
+每個 `_exec` 函式都會載入並執行新處理序。 所有 `_exec` 函式會使用相同的作業系統函式 ([CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw))。 `_exec` 函式會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當且可辨識的多位元組字元序列。 `_wexec` 函式是寬字元版本的 `_exec` 函式。 `_wexec` 函式的行為和其 `_exec` 系列對應項目一樣，只不過他們不處理多位元組字元字串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -105,7 +105,7 @@ ms.locfileid: "57746197"
 >  字串中嵌入的空格可能會導致未預期的行為；例如，傳遞字串 `_exec` 至 `"hi there"` 會導致新處理序取得兩個引數 `"hi"` 和 `"there"`。 若目的是要使新處理序開啟名為 "hi there" 的檔案，則處理序會失敗。 您可以用引號括住字串來避免此情況：`"\"hi there\""`。
 
 > [!IMPORTANT]
->  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
+>  請勿在沒有明確檢查內容的情況下將使用者輸入傳遞至 `_exec`。 `_exec` 會導致呼叫 [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw) (CreateProcess 函式)，所以請記得，不合格的路徑名稱可能會導致潛在的安全性漏洞。
 
 `_exec` 函式會驗證它們的參數。 若預期的參數是 Null 指標、空字串，或是已省略，則 `_exec` 函式會叫用無效參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 -1。 沒有執行任何新處理序。
 

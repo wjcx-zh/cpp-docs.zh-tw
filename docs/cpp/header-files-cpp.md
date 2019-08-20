@@ -10,7 +10,7 @@ ms.lasthandoff: 08/20/2019
 ms.locfileid: "68980478"
 ---
 
-# 標頭檔 (C++)
+# <a name="header-files-c"></a>標頭檔 (C++)
 
 程式元素的名稱，例如變數、函數、類別等等，必須先宣告才能使用。舉個例子，你在宣告 'x' 前不能只寫 `x = 42`。
 
@@ -30,7 +30,7 @@ x = 42; // 使用 x
 然後在每個 .cpp 檔案或其他需要該宣告的標頭檔中使用 #include 指示詞。#include 指示詞會在編譯前，
 將標頭檔的副本直接插入每個 .cpp 檔案。
 
-## 範例
+## <a name="example"></a>範例
 下述例子列出了用於宣告類別，並於不同來源檔案中使用的常見方法。我們會從標頭檔：
 `my_class.h` 開始。它包含了類別定義，但注意，定義是不完整的；未定義 `do_something` 成員函數：
 
@@ -93,7 +93,7 @@ int main()
 當連結器合併物件檔案時，它會剛好找到一個 my_class 定義；其位於 my_class.cpp 產生的 .obj 檔中，
 而後編譯成功。
 
-## Include 防護 (Include guard)
+## <a name="include-guards"></a>Include 防護 (Include guard)
 一般來說，標頭檔案會有 *include 防護* 或 `#pragma once` 指示詞，
 以確保它們不會被多次插入單一 .cpp 檔案中。
 
@@ -114,7 +114,7 @@ namespace N
 #endif /* MY_CLASS_H */
 ```
 
-## 要插入標頭檔的內容
+## <a name="what-to-put-in-a-header-file"></a>要插入標頭檔的內容
 因為標頭檔可能會被包含在多個檔案內，因此它不能包含「可能產生多個相同名稱定義」的定義。
 下列所述是不允許，或被視為非常糟糕的作法：
 
@@ -129,7 +129,7 @@ namespace N
 但可能會因為它將命名空間帶入每個直接或間接包含該標頭檔的 .cpp 檔案作用域，
 而導致問題。
 
-## 範例標頭檔
+## <a name="sample-header-file"></a>範例標頭檔
 
 以下範例列出了標頭檔所允許的各種宣告及定義種類：
 

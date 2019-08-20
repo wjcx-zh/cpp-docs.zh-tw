@@ -16,8 +16,8 @@ ms.locfileid: "68980478"
 程式元素的名稱，例如變數、函式、類別等等，必須先宣告才能使用。舉個例子，你在宣告 'x' 前不能只寫 `x = 42`。
 
 ```cpp
-int x; // 宣告
-x = 42; // 使用 x
+int x; // declaration
+x = 42; // use x
 ```
 
 「宣告」會告訴編譯器元素到底是 **int**、**double**、**函數**、**類別** 還是其他東西。
@@ -59,8 +59,8 @@ my_class.cpp，並提供成員宣告的定義。我們為 `my_class.h` 檔案新
 
 ```cpp
 // my_class.cpp
-#include "my_class.h" // 存在本機目錄的標頭檔
-#include <iostream> // 存在標準程式庫的標頭檔
+#include "my_class.h" // header in local directory
+#include <iostream> // header in standard library
 
 using namespace N;
 using namespace std;
@@ -100,7 +100,7 @@ int main()
 
 ```cpp
 // my_class.h
-#ifndef MY_CLASS_H // include 防護
+#ifndef MY_CLASS_H // include guard
 #define MY_CLASS_H
 
 namespace N
@@ -136,10 +136,10 @@ namespace N
 
 ```cpp
 #pragma once
-#include <vector> // #include 指示詞
+#include <vector> // #include directive
 #include <string>
 
-namespace N  // 命名空間宣告
+namespace N  // namespace declaration
 {
     inline namespace P
     {
@@ -148,29 +148,29 @@ namespace N  // 命名空間宣告
 
     enum class colors : short { red, blue, purple, azure };
 
-    const double PI = 3.14;  // const 及 constexpr 定義
+    const double PI = 3.14;  // const and constexpr definitions
     constexpr int MeaningOfLife{ 42 };
     constexpr int get_meaning()
     {
         static_assert(MeaningOfLife == 42, "unexpected!"); // static_assert
         return MeaningOfLife;
     }
-    using vstr = std::vector<int>;  // 類型別名
-    extern double d; // extern 變數
+    using vstr = std::vector<int>;  // type alias
+    extern double d; // extern variable
 
-#define LOG   // 巨集定義
+#define LOG   // macro definition
 
-#ifdef LOG   // 條件式編譯指示詞
+#ifdef LOG   // conditional compilation directive
     void print_to_log();
 #endif
 
-    class my_class   // 一般類型定義，
-    {                // 但沒有非內嵌函數定義。
+    class my_class   // regular class definition,
+    {                // but no non-inline function definitions
 
         friend class other_class;
     public:
-        void do_something();   // 定義於 my_class.cpp
-        inline void put_value(int i) { vals.push_back(i); } // 可以內嵌
+        void do_something();   // definition in my_class.cpp
+        inline void put_value(int i) { vals.push_back(i); } // inline OK
 
     private:
         vstr vals;
@@ -179,25 +179,25 @@ namespace N  // 命名空間宣告
 
     struct RGB
     {
-        short r{ 0 };  // 成員初始化
+        short r{ 0 };  // member initialization
         short g{ 0 };
         short b{ 0 };
     };
 
-    template <typename T>  // 範本 (template) 定義
+    template <typename T>  // template definition
     class value_store
     {
     public:
         value_store<T>() = default;
         void write_value(T val)
         {
-            //... 範本 (template) 中也可以定義變數
+            //... function definition OK in template
         }
     private:
         std::vector<T> vals;
     };
 
-    template <typename T>  // 範本 (template) 宣告
+    template <typename T>  // template declaration
     class value_widget;
 }
 ```

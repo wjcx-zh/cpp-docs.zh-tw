@@ -11,22 +11,7 @@
         - name: 一般 MFC 主題
           href: general-mfc-topics.md
         - name: 使用 MFC 原始程式檔
-          expanded: false
-          items:
-            - name: 使用 MFC 原始程式檔
-              href: using-the-mfc-source-files.md
-            - name: 註解的範例
-              href: an-example-of-the-comments.md
-            - name: '-- 實作註解'
-              href: decrement-implementation-comment.md
-            - name: '-- 建構函式註解'
-              href: decrement-constructors-comment.md
-            - name: '-- 屬性註解'
-              href: decrement-attributes-comment.md
-            - name: '-- 作業註解'
-              href: decrement-operations-comment.md
-            - name: '-- 可覆寫函式註解'
-              href: decrement-overridables-comment.md
+          href: using-the-mfc-source-files.md
         - name: MFC 程式庫版本
           expanded: false
           items:
@@ -333,10 +318,10 @@
               href: active-document-servers.md
             - name: 主動式文件
               href: active-documents.md
-        - name: 自動化
+        - name: Automation
           expanded: false
           items:
-            - name: 自動化
+            - name: Automation
               href: automation.md
             - name: 自動化用戶端
               expanded: false

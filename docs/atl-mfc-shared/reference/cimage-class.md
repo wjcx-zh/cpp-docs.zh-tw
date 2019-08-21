@@ -1,6 +1,6 @@
 ---
 title: CImage 類別
-ms.date: 02/01/2018
+ms.date: 08/19/2019
 f1_keywords:
 - CImage
 - ATLIMAGE/ATL::CImage
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 6c651f160fdab582b769cf1764add2cc482745bf
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3b278f37bbcbe2ee879d9c3d2837267fe31e57e2
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491321"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630721"
 ---
 # <a name="cimage-class"></a>CImage 類別
 
@@ -78,7 +78,7 @@ class CImage
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|建構函式。|
 
@@ -193,9 +193,9 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 您可以從`CImage` MFC 或 ATL 使用。
 
 > [!NOTE]
-> 當您使用`CImage`建立專案時, 必須在包含`CString` `atlimage.h`之前定義。 如果您的專案使用 ATL 但沒有 MFC `atlstr.h` , 請在`atlimage.h`包含之前包含。 如果您的專案使用 mfc (或如果它是具有 mfc 支援的 ATL 專案), `afxstr.h`請在包含`atlimage.h`之前包含。<br/>
+> 當您使用`CImage`建立專案時, 您必須在`CString`包含*atlimage*之前定義。 如果您的專案使用 ATL 但沒有 MFC, 請在包含*atlimage*之前加入*和 atlstr.h* 。 如果您的專案使用 MFC (或者, 如果它是具有 MFC 支援的 ATL 專案), 請在包含*atlimage*之前加入*afxstr* 。<br/>
 > <br/>
-> 同樣地, 您必須`atlimage.h`在包含`atlimpl.cpp`之前加入。 若要輕鬆完成這項`atlimage.h`操作, `stdafx.h`請將納入您的中。
+> 同樣地, 在包含*atlimpl*之前, 您必須包含*atlimage* 。 若要輕鬆完成這項操作, 請在您的*pch .h*中包含*atlimage* (在 Visual Studio 2017 和更早版本中的*stdafx.h* )。
 
 ## <a name="requirements"></a>需求
 

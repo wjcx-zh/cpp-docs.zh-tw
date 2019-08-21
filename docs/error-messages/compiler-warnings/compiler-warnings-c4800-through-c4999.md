@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 518efdd74a90198818538c1548adb2b7ff37290c
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: ae73d4ba503dfbbc27f91040c31beb91da3b7e54
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821111"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631542"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>編譯器警告 C4800 至 C5999
 
@@ -266,7 +266,8 @@ ms.locfileid: "68821111"
 |編譯器警告 (層級 1) C4973|'*symbol*': 標示為已被取代|
 |編譯器警告 (層級 1) C4974|'*symbol*': 標示為已被取代|
 |編譯器警告 (層級 3) C4981|Warbird: 標記為 __forceinline 的函式 '*function*' 不是內嵌的, 因為它包含例外狀況的語義|
-|編譯器警告 (層級 3) C4985|符號名稱 ': 屬性不存在於先前的宣告中。|
+|[編譯器警告 C4984](compiler-warning-c4984.md)|' if constexpr ' 是 c + + 17 語言延伸模組|
+|編譯器警告 (層級 3) C4985|'*symbol_name*': 屬性不存在先前的宣告中。|
 |[編譯器警告 C4986](compiler-warning-c4986.md)|'宣告 ': 例外狀況規格與上一個宣告不符|
 |編譯器警告 (層級 4) C4987|使用非標準的擴充：'throw (...)'|
 |編譯器警告 (層級 4) C4988|'*variable*': 變數已在類別/函式範圍外宣告|

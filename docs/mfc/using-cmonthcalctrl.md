@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - CMonthCalCtrl class [MFC], about CMonthCalCtrl class
 ms.assetid: 2be0e8c2-ed03-4853-aea1-4461eba18611
-ms.openlocfilehash: f97941bfd8d0a27f640757343cd360a1bec3050c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e21cba7062a21913c5be230d3488d963fb8b769b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411821"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631688"
 ---
 # <a name="using-cmonthcalctrl"></a>使用 CMonthCalCtrl
 
-月曆控制項 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 實作類似行事曆的使用者介面。 這提供使用者一個用於輸入或選取日期之非常直接易懂和辨識的方法。 藉由使用現有的資料類型，控制項也提供應用程式取得和設定控制項中日期資訊的方法。 根據預設，月曆控制項會顯示目前的日期和月份。 不過，使用者也可捲動到之前及後續月份，並選取特定月份和/或年份。
+月曆控制項 ([CMonthCalCtrl](../mfc/reference/cmonthcalctrl-class.md)) 會實行類似行事曆的使用者介面。 這提供使用者一個用於輸入或選取日期之非常直接易懂和辨識的方法。 藉由使用現有的資料類型，控制項也提供應用程式取得和設定控制項中日期資訊的方法。 根據預設，月曆控制項會顯示目前的日期和月份。 不過，使用者也可捲動到之前及後續月份，並選取特定月份和/或年份。
 
 > [!NOTE]
->  若要在您的專案中使用 `CMonthCalCtrl` 類別，在 STDAFX.H 通常必須包含 AFXDTCTL.H。
+>  若要在`CMonthCalCtrl`專案中使用類別, 您必須包含 AFXDTCTL。H, 通常是在*stdafx.h*中。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - [建立月曆控制項](../mfc/creating-the-month-calendar-control.md)
 

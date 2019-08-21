@@ -1,37 +1,37 @@
 ---
 title: 使用 IDispEventSimpleImpl (ATL)
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-ms.openlocfilehash: 40edca3a99fb6e9d57d617e79d0bd37ebbfcd4ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a5e64093d2687efc6c6c5e9b0ce89402d2b99a4
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62196712"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630575"
 ---
 # <a name="using-idispeventsimpleimpl"></a>使用 IDispEventSimpleImpl
 
-當使用`IDispEventSimpleImpl`來處理事件，您必須：
+使用`IDispEventSimpleImpl`來處理事件時, 您將需要:
 
-- 衍生您的類別，從[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)。
+- 從[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)衍生您的類別。
 
-- 將事件接收對應新增至您的類別。
+- 將事件接收器對應新增至您的類別。
 
-- 定義[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)結構描述的事件。
+- 定義描述事件的[_ATL_FUNC_INFO](../atl/reference/atl-func-info-structure.md)結構。
 
-- 將項目新增至事件接收對應使用[SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)巨集。
+- 使用[SINK_ENTRY_INFO](reference/composite-control-macros.md#sink_entry_info)宏, 將專案加入至事件接收對應。
 
-- 實作您想要處理的方法。
+- 執行您想要處理的方法。
 
-- 通知與取消通知的事件來源。
+- 建議並 unadvise 事件來源。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何處理`DocumentChange`事件引發的 Word**應用程式**物件。 此事件上定義為方法`ApplicationEvents`dispinterface。
+下列範例顯示如何處理 Word 的`DocumentChange` **應用程式**物件所引發的事件。 這個事件會定義為分配`ApplicationEvents`介面上的方法。
 
-此範例是來自[ATLEventHandling 範例](../overview/visual-cpp-samples.md)。
+範例來自[ATLEventHandling 範例](../overview/visual-cpp-samples.md)。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -49,17 +49,17 @@ methods:
 };
 ```
 
-此範例會使用`#import`從 Word 的型別程式庫產生必要的標頭檔。 如果您想要與其他版本的 Word 中使用此範例中，您必須指定正確的 mso dll 檔案。 例如，Office 2000 提供 mso9.dll 和 OfficeXP 提供 mso.dll。 此程式碼被簡化從 stdafx.h 中：
+這個範例會`#import`使用, 從 Word 的型別程式庫產生必要的標頭檔。 如果您想要搭配其他版本的 Word 使用此範例, 您必須指定正確的 mso dll 檔案。 例如, Office 2000 提供了 mso9, 而 OfficeXP 則提供 mso.dll。 這段程式碼已從*pch* (Visual Studio 2017 和更早版本中的*stdafx.h* ) 中簡化:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#1](../atl/codesnippet/cpp/using-idispeventsimpleimpl_1.h)]
 
-在此範例中實際使用的類型程式庫的唯一資訊是這個字的 CLSID`Application`物件和 IID`ApplicationEvents`介面。 在編譯時期只使用此資訊。
+此範例中實際使用之類型程式庫的唯一資訊是 Word `Application`物件的 CLSID 和`ApplicationEvents`介面的 IID。 此資訊只會在編譯時期使用。
 
-下列程式碼會出現在 Simple.h。 相關的程式碼註解所註明：
+下列程式碼會以簡單的 .h 顯示。 相關的程式碼會以批註來注明:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#3](../atl/codesnippet/cpp/using-idispeventsimpleimpl_2.h)]
 
-下列程式碼取自 Simple.cpp:
+下列程式碼來自簡單的 .cpp:
 
 [!code-cpp[NVC_ATL_EventHandlingSample#4](../atl/codesnippet/cpp/using-idispeventsimpleimpl_3.cpp)]
 

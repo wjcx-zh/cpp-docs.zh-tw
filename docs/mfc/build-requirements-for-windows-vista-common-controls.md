@@ -1,44 +1,40 @@
 ---
-title: Windows Vista 通用控制項的組建需求
-ms.date: 11/04/2016
+title: Windows 通用控制項的組建需求
+ms.date: 08/19/2019
 helpviewer_keywords:
-- common controls (MFC), build requirements
-- common controls (MFC)
+- Common Controls (MFC), build requirements
+- Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 1a2e79d91a41ea178eeb6f74ec7fa7b22588b277
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386248"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630853"
 ---
-# <a name="build-requirements-for-windows-vista-common-controls"></a>Windows Vista 通用控制項的組建需求
+# <a name="build-requirements-for-windows-common-controls"></a>Windows 通用控制項的組建需求
 
-Microsoft Foundation Class (MFC) 程式庫支援 Windows 通用控制項 6.1 版。 Windows Vista 中包含的通用控制項和程式庫包含在 Visual Studio SDK。 程式庫提供增強現有的類別，以及新的類別的新方法和支援 Windows Vista 通用控制項的方法。 當您建置應用程式時，您應該遵循下列章節中描述的編譯和移轉需求。
+Microsoft Foundation Class (MFC) 程式庫支援[Windows 通用控制項](/windows/win32/controls/common-controls-intro)。 通用控制項包含在 Windows 中, 而程式庫則包含在 Visual Studio 中。 MFC 程式庫提供新的方法, 可增強現有的類別, 以及其他支援 Windows 通用控制項的類別和方法。 當您建置應用程式時，您應該遵循下列章節中描述的編譯和移轉需求。
 
 ## <a name="compilation-requirements"></a>編譯需求
 
 ### <a name="supported-versions"></a>支援的版本
 
-一些新的類別和方法支援只有 Windows Vista 和更新版本中，而其他方法也支援舊版作業系統。 附註`Requirements`區段的每個方法主題可讓您指定的最小必要作業系統是 Windows Vista。
-
-即使您的電腦未執行 Windows Vista，您可以建置 MFC 應用程式將您的 Windows Vista 上執行，如果您有 6.1 版 MFC 標頭檔，在您的電腦上。 不過，專為 Windows Vista 通用控制項只能在該系統上運作，而且會忽略先前的作業系統。
+MFC 支援所有版本的通用控制項。 如需 Windows 通用控制項版本的相關資訊, 請參閱[通用控制項版本](/windows/win32/controls/common-control-versions)。
 
 ### <a name="supported-character-sets"></a>支援的字元集。
 
-新的 Windows 通用控制項僅支援 Unicode 字元集，而非 ANSI 字元集。 如果您已在命令列建置應用程式，請使用下列二者定義 (/D) 編譯器選項，以指定 Unicode 做為基底字元集：
+Windows 通用控制項僅支援 Unicode 字元集, 而非 ANSI 字元集。 如果您已在命令列建置應用程式，請使用下列二者定義 (/D) 編譯器選項，以指定 Unicode 做為基底字元集：
 
 ```
 /D_UNICODE /DUNICODE
 ```
 
-如果您要建置您的應用程式，Visual Studio 整合式的開發環境 (IDE) 中，指定**Unicode 字元集**選項**字元集**中的屬性**一般**專案屬性的節點。
-
-從 Windows 通用控制項 6.1 版開始，ANSI 版本的幾個 MFC 方法已被取代。 如需詳細資訊，請參閱 <<c0> [ 已被取代的 ANSI Api](../mfc/deprecated-ansi-apis.md)。
+如果您在 Visual Studio 整合式開發環境 (IDE) 中建立應用程式, 請在專案屬性的 [**一般**] 節點中, 指定 [**字元集**] 屬性的 [ **Unicode 字元集**] 選項。
 
 ## <a name="migration-requirements"></a>移轉需求
 
-如果您使用 Visual Studio IDE 建置使用 Windows 通用控制項 6.1 版的新 MFC 應用程式，IDE 會自動宣告適當的資訊清單。 不過，如果您移轉舊版 Visual Studio 的現有的 MFC 應用程式，而且想要使用新的通用控制項，IDE 不會自動提供資訊清單資訊來升級您的應用程式。 相反地，您必須手動插入下列程式碼置於您**stdafx.h**檔案：
+如果您使用 Visual Studio IDE 來建立使用 Windows 通用控制項的新 MFC 應用程式, IDE 會自動宣告適當的資訊清單。 不過, 如果您將現有的 MFC 應用程式從 Visual Studio 2005 或更早版本遷移, 而且想要使用通用控制項, 則 IDE 不會自動提供資訊清單資訊來升級您的應用程式。 相反地, 您必須在先行編譯標頭檔中手動插入下列原始程式碼:
 
 ```
 #ifdef UNICODE

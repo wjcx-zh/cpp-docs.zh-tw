@@ -1,6 +1,6 @@
 ---
 title: Dll 和 Visual C++執行時間程式庫行為
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 f1_keywords:
 - _DllMainCRTStartup
 - CRT_INIT
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - run-time [C++], DLL startup sequence
 - DLLs [C++], startup sequence
 ms.assetid: e06f24ab-6ca5-44ef-9857-aed0c6f049f2
-ms.openlocfilehash: d44f3bf7a8b06f567b1af221e17085d589e56aca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 572a0ba70c1ba2d46d2d9fd6d8ac543a77bbbc01
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492611"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630361"
 ---
 # <a name="dlls-and-visual-c-run-time-library-behavior"></a>Dll 和 Visual C++執行時間程式庫行為
 
@@ -30,7 +30,7 @@ ms.locfileid: "69492611"
 
 在 Windows 中, 所有 dll 都可以包含選擇性的進入點函式 ( `DllMain`通常稱為), 以同時呼叫初始化和終止。 這讓您有機會視需要配置或釋放額外的資源。 Windows 會在四種情況下呼叫進入點函式: 進程附加、進程卸離、執行緒附加和執行緒卸離。 當 DLL 載入至進程位址空間時 (不論是載入使用它的應用程式), 或應用程式在執行時間要求 DLL 時, 作業系統會建立個別的 DLL 資料複本。 這稱為「*進程附加*」。 當載入 DLL 的進程建立新的執行緒時, 就會發生*執行緒附加*。 執行緒中斷時就會發生*執行緒卸離*, 而*進程卸離*則是在不再需要 DLL, 而是由應用程式釋放時。 作業系統會個別呼叫每個事件的 DLL 進入點, 並傳遞每個事件種類的*reason*引數。 例如, OS `DLL_PROCESS_ATTACH`會傳送作為「*原因*」引數, 以處理「附加」信號。
 
-VCRuntime 程式庫會提供一個稱為`_DllMainCRTStartup`的進入點函式, 以處理預設的初始化和終止作業。 在進程附加上, `_DllMainCRTStartup`函式會設定緩衝區安全性檢查、初始化 CRT 和其他程式庫、初始化執行時間類型資訊、初始化和呼叫靜態和非本機資料的構造函式、初始化執行緒區域儲存區, 為每個附加增加一個內部靜態計數器, 然後呼叫使用者或程式庫提供`DllMain`的。 在進程卸離時, 函式會反向執行這些步驟。 它會`DllMain`呼叫、遞減內部計數器、呼叫析構函式、呼叫 CRT 終止函`atexit`式和已註冊的函式, 以及通知任何其他終止的程式庫。 當附件計數器變成零時, `FALSE`函式會傳回以向 Windows 表示 DLL 可以卸載。 `_DllMainCRTStartup`函數也會線上程附加和執行緒卸離期間呼叫。 在這些情況下, VCRuntime 程式碼本身不會執行任何額外的初始化或終止, 而`DllMain`只會呼叫以傳遞訊息。 `DllMain` `DLL_PROCESS_DETACH` `DllMain`如果從進程附加、信號失敗、 `_DllMainCRTStartup`再次呼叫, 並以 reason 引數的方式傳回, 則會進行終止進程的其餘部分。 `FALSE`
+VCRuntime 程式庫會提供一個稱為`_DllMainCRTStartup`的進入點函式, 以處理預設的初始化和終止作業。 在進程附加上, `_DllMainCRTStartup`函式會設定緩衝區安全性檢查、初始化 CRT 和其他程式庫、初始化執行時間類型資訊、初始化和呼叫靜態和非本機資料的構造函式、初始化執行緒區域儲存區, 為每個附加增加一個內部靜態計數器, 然後呼叫使用者或程式庫提供`DllMain`的。 在進程卸離時, 函式會反向執行這些步驟。 它會`DllMain`呼叫、遞減內部計數器、呼叫析構函式、呼叫 CRT 終止函`atexit`式和已註冊的函式, 以及通知任何其他終止的程式庫。 當附件計數器變成零時, `FALSE`函式會傳回以向 Windows 表示 DLL 可以卸載。 `_DllMainCRTStartup`函數也會線上程附加和執行緒卸離期間呼叫。 在這些情況下, VCRuntime 程式碼本身不會執行任何額外的初始化或終止, 而`DllMain`只會呼叫以傳遞訊息。 `DllMain` `_DllMainCRTStartup` `DllMain` `DLL_PROCESS_DETACH`如果從進程附加作業傳回, 信號失敗, 再次呼叫並傳遞做為 reason 引數, 則會進行終止進程的其餘部分。 `FALSE`
 
 在 Visual Studio 中建立 dll 時, VCRuntime 所提供`_DllMainCRTStartup`的預設進入點會自動連結在中。 您不需要使用[/ENTRY (進入點符號)](reference/entry-entry-point-symbol.md)連結器選項來指定 DLL 的進入點函式。
 
@@ -125,7 +125,7 @@ extern "C" BOOL WINAPI DllMain (
 此 wizard 提供 MFC 延伸 Dll 的下列程式碼。 在程式碼中`PROJNAME` , 是專案名稱的預留位置。
 
 ```cpp
-#include "stdafx.h"
+#include "pch.h" // For Visual Studio 2017 and earlier, use "stdafx.h"
 #include <afxdllx.h>
 
 #ifdef _DEBUG
@@ -174,7 +174,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 請注意, 標頭檔 Afxdllx 包含 MFC 延伸 dll 中使用之結構的特殊定義, 例如`AFX_EXTENSION_MODULE`和`CDynLinkLibrary`的定義。 您應該在 MFC 延伸模組 DLL 中包含此標頭檔。
 
 > [!NOTE]
->  請務必不要在 stdafx.h 中定義任何宏, `_AFX_NO_XXX`也不會取消定義。 這些宏僅適用于檢查特定目標平臺是否支援該功能的目的。 您可以撰寫程式來檢查這些宏 ( `#ifndef _AFX_NO_OLE_SUPPORT`例如), 但您的程式絕對不應定義或取消定義這些宏。
+>  請務必不要在*pch. h* (Visual Studio 2017 和更`_AFX_NO_XXX`早版本) 中定義或取消定義任何宏。 這些宏僅適用于檢查特定目標平臺是否支援該功能的目的。 您可以撰寫程式來檢查這些宏 ( `#ifndef _AFX_NO_OLE_SUPPORT`例如), 但您的程式絕對不應定義或取消定義這些宏。
 
 在 Windows SDK 的[動態連結程式庫中使用執行緒區域儲存區](/windows/win32/Dlls/using-thread-local-storage-in-a-dynamic-link-library)中包含處理多執行緒處理的範例初始化函式。 請注意, 此範例包含名`LibMain`為的進入點函式, 但您應該命名`DllMain`此函式, 使其適用于 MFC 和 C 執行時間程式庫。
 

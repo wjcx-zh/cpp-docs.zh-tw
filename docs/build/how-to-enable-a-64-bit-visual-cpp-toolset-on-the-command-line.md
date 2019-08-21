@@ -27,7 +27,7 @@ Visual Studio 包含 C++編譯器、連結器和其他工具，可用來建立�
 
  若要在 Windows 10 上存取這些命令提示字元，請在 [開始] 功能表上開啟您的 Visual Studio 版本的資料夾 (例如 **Visual Studio 2019**)，然後選擇其中一個 x64 原生或跨平台工具開發人員命令提示字元。 
 
-![x64 Native Tools 命令提示字元][(media/x64-native-tools-command-prompt.png "開始] 功能表中的 X64 原生工具")
+![x64 Native Tools 命令提示字元](media/x64-native-tools-command-prompt.png "開始 功能表中的 X64 原生工具")
 
 若要在 Windows 8 上存取這些命令提示字元，請開啟 [開始] 畫面上的 [所有應用程式]。 在已安裝的 Visual Studio 版本的標題下方，開啟 **Visual Studio** 資料夾 (在舊版的 Visual Studio 中，其名稱可能是 **Visual Studio Tools**)。 在舊版 Windows 上選擇 [開始]，展開 [所有程式]，然後開啟您的 **Visual Studio** 版本的資料夾 (在舊版的 Visual Studio 上為 **Visual Studio Tools**)。 如需詳細資訊，請參閱[開發人員命令提示字元捷徑](building-on-the-command-line.md#developer_command_prompt_shortcuts)。
 

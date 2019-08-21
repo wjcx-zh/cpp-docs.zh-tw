@@ -23,7 +23,7 @@ ms.locfileid: "69498130"
 
 當您建立專案時，系統會指派各種屬性值。 預設值會依據專案類型以及您在應用程式精靈中選擇的選項而稍有不同。 例如，ATL 專案具有與 MIDL 檔案相關的屬性，但這些屬性不存在於基本的主控台應用程式中。 預設屬性會顯示在 [屬性頁] 的 [一般] 窗格中：
 
-![Visual C&#43; &#43;專案預設]的(media/visual-c---project-defaults.png "視覺C++專案預設值")
+![Visual C&#43; &#43;專案預設](media/visual-c---project-defaults.png "視覺C++專案預設值")
 
 ## <a name="applying-properties-to-build-configurations-and-target-platforms"></a>將屬性套用至組建設定和目標平臺
 

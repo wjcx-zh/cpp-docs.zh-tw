@@ -350,7 +350,7 @@ class CMFCTasksPane : public CDockablePane
 
 下圖顯示典型的工作窗格控制項。 第一個群組是*特殊*群組, 而其標題是較暗的色彩。 第三個群組會摺疊。 最後一個群組會與工作窗格的底端對齊，並且沒有標題，而群組中的最後一個工作是簡單的標籤：
 
-工作![窗格的範例]工作(../../mfc/reference/media/nexttaskpane.png "窗格的範例")
+工作![窗格的範例](../../mfc/reference/media/nexttaskpane.png "窗格的範例")
 
 您可以藉由調整各種邊界和位移來自訂工作窗格的外觀。 下圖將釐清這些變數的意義：
 

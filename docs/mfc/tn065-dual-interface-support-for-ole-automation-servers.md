@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: afcbfd643d8b931e61b0f011b66482be5b2bcc82
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1508b5219f7bb7fd2e9c9a56c42c30bb99686804
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510994"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630398"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065：OLE Automation 伺服器的雙重介面支援
 
@@ -267,7 +267,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
 
 若要將 Mktyplib.exe 產生的標頭檔中的**UUID**定義新增至您的專案:
 
-1. 在您的標準中包含 Mktyplib.exe 產生的標頭檔, 包括標頭檔 (STDAFX.H)。H.
+1. 在您的標準中包含 Mktyplib.exe 產生的標頭檔, 包括標頭檔 ( *stdafx.h*)。
 
 2. 建立新的檔案 INITIIDS。CPP, 然後將它新增至您的專案。 在此檔案中, 請在包含 OLE2 之後包含 Mktyplib.exe 產生的標頭檔。H 和 d。H
 

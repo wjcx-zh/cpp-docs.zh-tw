@@ -1,6 +1,6 @@
 ---
 title: CComModule 類別
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - CComModule
 - ATLBASE/ATL::CComModule
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 53138081a6d712f775a2cc8f1e6905c45d95d34d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 482f29bae28841ab40ca8a8f80ab7f0df42ddc8b
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497112"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630651"
 ---
 # <a name="ccommodule-class"></a>CComModule 類別
 
@@ -681,7 +681,7 @@ virtual HRESULT UpdateRegistryFromResourceS(
 
 類似于[UpdateRegistryFromResourceD](#updateregistryfromresourced) , `UpdateRegistryFromResourceS`但會建立 ATL 登錄元件 (註冊機構) 的靜態連結。
 
-`UpdateRegistryFromResourceS`當您處理物件對應時, 會自動叫用, 前提是`#define _ATL_STATIC_REGISTRY`您會將新增至 stdafx.h。
+`UpdateRegistryFromResourceS`當您處理物件對應時, 將會自動叫用, 前提`#define _ATL_STATIC_REGISTRY`是您將新增至您的*pch* (Visual Studio 2017 和更早版本中的*stdafx.h* )。
 
 > [!NOTE]
 >  若要在執行時間取代取代值, 請不要指定[DECLARE_REGISTRY_RESOURCE](registry-macros.md#declare_registry_resource)或[DECLARE_REGISTRY_RESOURCEID](registry-macros.md#declare_registry_resourceid)宏。 相反地, 請建立結構`_ATL_REGMAP_ENTRIES`的陣列, 其中每個專案都包含變數預留位置與值配對, 以在執行時間取代預留位置。 然後呼叫`UpdateRegistryFromResourceS`, 傳遞*pMapEntries*參數的陣列。 這會將`_ATL_REGMAP_ENTRIES`結構中的所有取代值新增至註冊機構的取代對應。

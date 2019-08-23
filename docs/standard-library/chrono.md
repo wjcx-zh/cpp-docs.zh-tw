@@ -10,12 +10,12 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b3352110c2074b325ac345c05dbf899c0bdbd0ab
+ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459455"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69975914"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "68459455"
 |[system_clock 結構](../standard-library/system-clock-structure.md)|代表以系統的即時時鐘為基礎的「計時類型」。|
 |[treat_as_floating_point 結構](../standard-library/treat-as-floating-point-structure.md)|指定是否可將類型視為浮點類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -76,7 +76,14 @@ ms.locfileid: "68459455"
 
 如需用於下列 typedef 的比率類型的詳細資訊，請參閱 [\<ratio>](../standard-library/ratio.md)。
 
-|||||||`typedef duration<long long, nano> nanoseconds;`|具有1個毫微秒之刻度期間之`typedef duration<long long, micro> microseconds;`類型的同義字。|||`duration`具有1微秒之刻度週期的`typedef duration<long long, milli> milliseconds;`類型同義字。|||`duration`具有1毫秒之刻度週期的`typedef duration<long long> seconds;`類型同義字。|||`duration`具有1秒之刻度週期的`typedef duration<int, ratio<60> > minutes;`類型同義字。|||`duration`具有1分鐘刻度期間之`typedef duration<int, ratio<3600> > hours;`類型的同義字。|||`duration`具有1小時之刻度期間之類型的同義字。|`duration`
+|||
+|-|-|
+|`typedef duration<long long, nano> nanoseconds;`|具有1毫微秒之刻度期間之類型的同義字。`duration`|
+|`typedef duration<long long, micro> microseconds;`|具有1微秒之刻度期間之類型的同義字。`duration`|
+|`typedef duration<long long, milli> milliseconds;`|具有1毫秒刻度期間之類型的同義字。`duration`|
+|`typedef duration<long long> seconds;`|具有1秒刻度期間之類型的同義字。`duration`|
+|`typedef duration<int, ratio<60> > minutes;`|具有1分鐘刻度期間之類型的同義字。`duration`|
+|`typedef duration<int, ratio<3600> > hours;`|具有1小時刻度期間之類型的同義字。`duration`|
 
 ### <a name="literals"></a>常值
 

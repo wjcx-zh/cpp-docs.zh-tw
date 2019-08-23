@@ -86,6 +86,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Tasks.vs.json 結構描述參考 (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Launch.vs.json 結構描述參考 (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: CMake 專案
       expanded: false
       items:
@@ -211,13 +213,13 @@
           items:
             - name: DLL 的類型
               href: build/kinds-of-dlls.md
-            - name: 非 MFC DLL：總覽
+            - name: 非 MFC DLL：概觀
               href: build/non-mfc-dlls-overview.md
             - name: 靜態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-statically-linked-to-mfc.md
             - name: 動態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-dynamically-linked-to-mfc.md
-            - name: MFC 延伸模組 DLL：總覽
+            - name: MFC 延伸模組 DLL：概觀
               href: build/extension-dlls-overview.md
         - name: MFC DLL 常見問題集
           href: build/dll-frequently-asked-questions.md
@@ -1434,7 +1436,7 @@
               items:
                 - name: BSCMAKE 參考
                   href: build/reference/bscmake-reference.md
-                - name: 建置瀏覽資訊檔：總覽
+                - name: 建置瀏覽資訊檔：概觀
                   href: build/reference/building-browse-information-files-overview.md
                 - name: 建置 .Bsc 檔
                   expanded: false

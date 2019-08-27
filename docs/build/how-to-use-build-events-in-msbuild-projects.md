@@ -1,56 +1,56 @@
 ---
-title: HOW TO：在 MSBuild 專案中使用建置事件
+title: HOW TO：在 MSBuild 專案中使用組建事件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 3fe205223b6cf381bbf3e2872b1a84f9d81a3cb7
+ms.sourcegitcommit: 2da5c42928739ca8cd683a9002598f28d8ec5f8e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221468"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70060064"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>HOW TO：在 MSBuild 專案中使用建置事件
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>作法：在 MSBuild 專案中使用組建事件
 
-建置事件是在建置流程中的特定階段中執行 MSBuild 的命令。 *建置前*在建置開始前，就會發生事件，而*連結前*連結步驟開始; 之前發生的事件和*建置後*建置之後所發生的事件已成功結束。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如，連結前事件不會發生連結步驟不會執行。
+組建事件是 MSBuild 在組建程式中的特定階段執行的命令。 *預先組建*事件會在組建開始之前發生;連結步驟開始之前, 會先進行*連結前*事件;建立後事件會在組建成功結束之後發生。 只有在相關聯的建置步驟發生時，才會發生建置事件。 例如, 如果連結步驟沒有執行, 則不會發生連結前事件。
 
-每三個建置事件命令項目所表示的項目定義群組中 (`<Command>`) 時要執行的和訊息項目 (`<Message>`) 也就是顯示何時**MSBuild**執行建置事件。 是選擇性的每個項目，如果您多次指定相同的項目，最後一個相符項目會優先使用。
+這三個組建事件中的每一個都是由執行的 command 元素 (`<Command>`) 以及**MSBuild**執行組建事件時所顯示的訊息元素 (`<Message>`), 在專案定義群組中表示。 每個專案都是選擇性的, 如果您多次指定相同的專案, 則會優先使用最後一次出現的專案。
 
-選擇性*使用內建*項目 (`<`*建置事件*`UseInBuild>`) 可以指定表示是否要執行建置事件屬性群組中。 內容的值*使用內建*項目是 **，則為 true**或是**false**。 根據預設，建置事件時執行，除非其相對應*使用內建*元素設定為`false`。
+您可以在屬性群組中指定選擇性的`<`*使用內*建元素 (*組建-事件*`UseInBuild>`), 以指出是否執行組建事件。 *使用中組建*元素的內容值為**true**或**false**。 根據預設, 會執行組建事件, 除非其對應的*使用中組建*元素設定為`false`。
 
-下表列出每個組建事件 XML 項目：
+下表列出每個 build event XML 元素:
 
-|XML 項目|描述|
+|XML 元素|描述|
 |-----------------|-----------------|
-|`PreBuildEvent`|在建置開始之前，就會執行此事件。|
-|`PreLinkEvent`|連結步驟開始之前，就會執行此事件。|
-|`PostBuildEvent`|建置完成之後，就會執行此事件。|
+|`PreBuildEvent`|這個事件會在組建開始之前執行。|
+|`PreLinkEvent`|這個事件會在連結步驟開始之前執行。|
+|`PostBuildEvent`|這個事件會在組建完成之後執行。|
 
-下表列出每個*使用內建*項目：
+下表列出每個*使用中組建*元素:
 
-|XML 項目|描述|
+|XML 元素|描述|
 |-----------------|-----------------|
-|`PreBuildEventUseInBuild`|指定是否要執行*建置前*事件。|
-|`PreLinkEventUseInBuild`|指定是否要執行*連結前*事件。|
-|`PostBuildEventUseInBuild`|指定是否要執行*post-build*事件。|
+|`PreBuildEventUseInBuild`|指定是否要執行*預先建立*的事件。|
+|`PreLinkEventUseInBuild`|指定是否執行*連結前*事件。|
+|`PostBuildEventUseInBuild`|指定是否要執行*建立後*事件。|
 
 ## <a name="example"></a>範例
 
-下列範例可以 myproject.vcxproj 檔案中建立的專案項目內新增[逐步解說：使用 MSBuild 來建立C++專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)。 A*建置前*事件會的 main.cpp;*連結前*main.obj; 的複本和 「 事件 」 可讓*建置後*事件會建立一份 myproject.exe。 如果使用發行組態來建置專案時，會執行建置事件。 如果使用的偵錯組態來建置專案時，不會執行建置事件。
+下列範例可以新增至在逐步解說中[建立之 myproject .vcxproj 檔案的專案元素內:使用 MSBuild 來建立C++專案。](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md) *預先組建*事件會建立主要 .cpp 的複本;*連結前*事件會建立主要 .obj 的複本;和*後*置事件會建立 myproject 的複本。 如果專案是使用發行設定所建立, 則會執行組建事件。 如果專案是使用 debug 設定建立的, 則不會執行組建事件。
 
-```
+``` xml
 <ItemDefinitionGroup>
   <PreBuildEvent>
     <Command>copy $(ProjectDir)main.cpp $(ProjectDir)copyOfMain.cpp</Command>
     <Message>Making a copy of main.cpp </Message>
   </PreBuildEvent>
   <PreLinkEvent>
-<Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\main.obj $(ProjectDir)$(Configuration)\copyOfMain.obj</Command>
     <Message>Making a copy of main.obj</Message>
   </PreLinkEvent>
   <PostBuildEvent>
-<Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
+    <Command>copy $(ProjectDir)$(Configuration)\$(TargetFileName) $(ProjectDir)$(Configuration)\copyOfMyproject.exe</Command>
     <Message>Making a copy of myproject.exe</Message>
   </PostBuildEvent>
 </ItemDefinitionGroup>
@@ -70,5 +70,5 @@ ms.locfileid: "65221468"
 
 ## <a name="see-also"></a>另請參閱
 
-[MSBuild 命令列-C++](msbuild-visual-cpp.md)<br/>
+[命令列上的 MSBuild - C++](msbuild-visual-cpp.md)<br/>
 [逐步解說：使用 MSBuild 建立 C++ 專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

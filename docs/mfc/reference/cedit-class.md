@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 5ad8784f3bff999eec046aa91f52b1cd164764e5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503738"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69506795"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -117,105 +117,105 @@ class CEdit : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CEdit::CEdit](#cedit)|建構`CEdit`控制項物件。|
+|[CEdit::CEdit](#cedit)|`CEdit`結構控制物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CEdit::CanUndo](#canundo)|判斷是否可以復原的編輯控制項作業。|
-|[CEdit::CharFromPos](#charfrompos)|擷取字元的最接近的指定位置的行和字元索引。|
-|[CEdit::Clear](#clear)|刪除 （清除） 目前的選取範圍 （如果有的話） 中編輯控制項。|
-|[CEdit::Copy](#copy)|複製目前的選取範圍 （如果有的話） 中編輯控制項到 CF_TEXT 格式剪貼簿。|
-|[CEdit::Create](#create)|建立 Windows 編輯控制項，並將它附加至`CEdit`物件。|
-|[CEdit::Cut](#cut)|刪除 （切割） 目前的選取範圍 （如果有的話） 中編輯控制項，並複製到剪貼簿 CF_TEXT 刪除的文字格式。|
-|[CEdit::EmptyUndoBuffer](#emptyundobuffer)|重設 （清除） 復原旗標的編輯控制項。|
-|[CEdit::FmtLines](#fmtlines)|設定開啟或關閉軟換行字元包含在多行編輯控制項。|
-|[CEdit::GetCueBanner](#getcuebanner)|擷取做為文字提示或提示，當控制項為空白，且未取得焦點的編輯控制項中顯示的文字。|
-|[CEdit::GetFirstVisibleLine](#getfirstvisibleline)|決定在編輯控制項中的最上層的可見行。|
-|[CEdit::GetHandle](#gethandle)|擷取多行編輯控制項的目前配置的記憶體的控制代碼。|
-|[CEdit::GetHighlight](#gethighlight)|取得開始和結束目前的編輯控制項中反白顯示的文字範圍中的字元的索引。|
-|[CEdit::GetLimitText](#getlimittext)|取得這個文字的最大數量`CEdit`可以包含。|
-|[CEdit::GetLine](#getline)|擷取編輯控制項中的文字行。|
-|[CEdit::GetLineCount](#getlinecount)|擷取多行編輯控制項中的行數。|
-|[CEdit::GetMargins](#getmargins)|取得這個左、 右邊界`CEdit`。|
-|[CEdit::GetModify](#getmodify)|判斷是否已修改的編輯控制項內容。|
-|[CEdit::GetPasswordChar](#getpasswordchar)|擷取使用者輸入文字時，在編輯控制項中顯示的密碼字元。|
+|[CEdit::CanUndo](#canundo)|決定編輯控制作業是否可以復原。|
+|[CEdit::CharFromPos](#charfrompos)|抓取最接近指定位置之字元的行和字元索引。|
+|[CEdit::Clear](#clear)|刪除 (清除) 編輯控制項中目前的選取範圍 (如果有的話)。|
+|[CEdit::Copy](#copy)|以 CF_TEXT 格式將編輯控制項中目前的選取範圍 (如果有的話) 複製到剪貼簿。|
+|[CEdit::Create](#create)|建立 Windows 編輯控制項, 並將它附加至`CEdit`物件。|
+|[CEdit::Cut](#cut)|刪除 (剪下) 編輯控制項中目前的選取範圍 (如果有的話), 並以 CF_TEXT 格式將已刪除的文字複製到剪貼簿。|
+|[CEdit::EmptyUndoBuffer](#emptyundobuffer)|重設 (清除) 編輯控制項的復原旗標。|
+|[CEdit::FmtLines](#fmtlines)|設定在多行編輯控制項內包含或關閉虛分行字元。|
+|[CEdit::GetCueBanner](#getcuebanner)|當控制項為空白且沒有焦點時, 抓取在編輯控制項中顯示為文字提示或提示的文字。|
+|[CEdit::GetFirstVisibleLine](#getfirstvisibleline)|決定編輯控制項中最上層的可見線。|
+|[CEdit::GetHandle](#gethandle)|抓取目前配置給多行編輯控制項之記憶體的控制碼。|
+|[CEdit::GetHighlight](#gethighlight)|取得在目前編輯控制項中反白顯示的文字範圍中, 開頭和結尾字元的索引。|
+|[CEdit::GetLimitText](#getlimittext)|取得此`CEdit`可包含的最大文字量。|
+|[CEdit::GetLine](#getline)|從編輯控制項抓取一行文字。|
+|[CEdit::GetLineCount](#getlinecount)|抓取多行編輯控制項中的行數。|
+|[CEdit::GetMargins](#getmargins)|取得這個`CEdit`的左邊和右邊邊界。|
+|[CEdit::GetModify](#getmodify)|決定編輯控制項的內容是否已修改。|
+|[CEdit::GetPasswordChar](#getpasswordchar)|當使用者輸入文字時, 抓取編輯控制項中顯示的密碼字元。|
 |[CEdit::GetRect](#getrect)|取得編輯控制項的格式化矩形。|
-|[CEdit::GetSel](#getsel)|取得目前的選取範圍，在編輯控制項中的第一個和最後一個字元位置。|
-|[CEdit::HideBalloonTip](#hideballoontip)|會隱藏任何目前的編輯控制項相關聯的汽球提示。|
-|[CEdit::LimitText](#limittext)|限制使用者可以輸入編輯控制項文字的長度。|
-|[CEdit::LineFromChar](#linefromchar)|擷取包含指定的字元索引的那一行的行號。|
-|[CEdit::LineIndex](#lineindex)|擷取線，以多行編輯控制項中的字元索引。|
-|[CEdit::LineLength](#linelength)|擷取編輯控制項中的資料行的長度。|
-|[CEdit::LineScroll](#linescroll)|捲動的多行編輯控制項的文字。|
-|[CEdit::Paste](#paste)|從剪貼簿將資料插入在目前游標位置的編輯控制項。 只有當剪貼簿包含 CF_TEXT 格式的資料插入資料。|
-|[CEdit::PosFromChar](#posfromchar)|擷取指定的字元索引的左上角的座標。|
-|[CEdit::ReplaceSel](#replacesel)|取代指定的文字編輯控制項中目前的選取範圍。|
-|[CEdit::SetCueBanner](#setcuebanner)|設定會顯示為文字提示或提示，當控制項為空白，且未取得焦點的編輯控制項中的文字。|
-|[CEdit::SetHandle](#sethandle)|設定將多行編輯控制項所使用的本機記憶體控制代碼。|
-|[CEdit::SetHighlight](#sethighlight)|反白顯示的範圍會顯示在目前的文字編輯控制項。|
-|[CEdit::SetLimitText](#setlimittext)|設定這個文字的最大數量`CEdit`可以包含。|
-|[CEdit::SetMargins](#setmargins)|設定這個左、 右邊界`CEdit`。|
+|[CEdit::GetSel](#getsel)|取得編輯控制項中目前選取範圍的第一個和最後一個字元位置。|
+|[CEdit::HideBalloonTip](#hideballoontip)|隱藏與目前編輯控制項相關聯的任何球形氣球提示。|
+|[CEdit::LimitText](#limittext)|限制使用者可以在編輯控制項中輸入的文字長度。|
+|[CEdit::LineFromChar](#linefromchar)|抓取包含指定字元索引之行的行號。|
+|[CEdit::LineIndex](#lineindex)|抓取多行編輯控制項內一行的字元索引。|
+|[CEdit::LineLength](#linelength)|抓取編輯控制項中的行長度。|
+|[CEdit::LineScroll](#linescroll)|滾動多行編輯控制項的文字。|
+|[CEdit::Paste](#paste)|將剪貼簿中的資料插入目前游標位置的編輯控制項。 只有當剪貼簿包含 CF_TEXT 格式的資料時, 才會插入資料。|
+|[CEdit::PosFromChar](#posfromchar)|抓取指定字元索引左上角的座標。|
+|[CEdit::ReplaceSel](#replacesel)|以指定的文字取代編輯控制項中目前的選取範圍。|
+|[CEdit::SetCueBanner](#setcuebanner)|設定當控制項為空白且沒有焦點時, 在編輯控制項中顯示為文字提示或提示的文字。|
+|[CEdit::SetHandle](#sethandle)|將控制碼設定為將由多行編輯控制項使用的本機記憶體。|
+|[CEdit::SetHighlight](#sethighlight)|反白顯示目前編輯控制項中顯示的文字範圍。|
+|[CEdit::SetLimitText](#setlimittext)|設定此`CEdit`可包含的最大文字量。|
+|[CEdit::SetMargins](#setmargins)|設定這個`CEdit`的左邊和右邊邊界。|
 |[CEdit::SetModify](#setmodify)|設定或清除編輯控制項的修改旗標。|
-|[CEdit::SetPasswordChar](#setpasswordchar)|設定或移除時使用者輸入文字編輯控制項中顯示的密碼字元。|
+|[CEdit::SetPasswordChar](#setpasswordchar)|設定或移除使用者輸入文字時, 編輯控制項中所顯示的密碼字元。|
 |[CEdit::SetReadOnly](#setreadonly)|設定編輯控制項的唯讀狀態。|
-|[CEdit::SetRect](#setrect)|設定多行編輯控制項的格式化矩形並更新控制項。|
-|[CEdit::SetRectNP](#setrectnp)|設定多行編輯控制項的格式化矩形，而不需要重新繪製控制項的視窗。|
-|[CEdit::SetSel](#setsel)|在編輯控制項中選取字元的範圍。|
-|[CEdit::SetTabStops](#settabstops)|設定定位停駐點在多行編輯控制項。|
-|[CEdit::ShowBalloonTip](#showballoontip)|顯示與目前的編輯控制項相關聯的汽球提示。|
-|[CEdit::Undo](#undo)|反轉上一個編輯控制項作業。|
+|[CEdit::SetRect](#setrect)|設定多行編輯控制項的格式化矩形, 並更新控制項。|
+|[CEdit::SetRectNP](#setrectnp)|設定多行編輯控制項的格式化矩形, 而不重新繪製控制項視窗。|
+|[CEdit::SetSel](#setsel)|選取編輯控制項中的字元範圍。|
+|[CEdit::SetTabStops](#settabstops)|設定多行編輯控制項中的定位停駐點。|
+|[CEdit::ShowBalloonTip](#showballoontip)|顯示與目前編輯控制項相關聯的氣球提示。|
+|[CEdit::Undo](#undo)|反轉上次編輯控制作業。|
 
 ## <a name="remarks"></a>備註
 
-編輯控制項是使用者可以在其中輸入文字的矩形的子視窗。
+編輯控制項是一個矩形子視窗, 使用者可以在其中輸入文字。
 
-從對話方塊範本，或是直接在您的程式碼中，您可以建立一個編輯控制項。 在這兩種情況下，第一次呼叫建構函式`CEdit`來建構`CEdit`物件，然後呼叫[建立](#create)成員函式來建立 Windows 編輯控制項，並將其附加至`CEdit`物件。
+您可以從對話方塊範本或直接在程式碼中建立編輯控制項。 在這兩種情況下, 請`CEdit`先呼叫函`CEdit`式來建立物件, 然後呼叫[create](#create)成員函式來建立 Windows `CEdit`編輯控制項, 並將它附加至物件。
 
-建構可以是單一步驟中的處理序類別，衍生自`CEdit`。 寫入的建構函式在衍生的類別並呼叫`Create`從建構函式內。
+在衍生自`CEdit`的類別中, 結構可以是一個步驟的處理常式。 撰寫衍生類別的函式, 並從`Create`函式內呼叫。
 
-`CEdit` 繼承重要的功能，從`CWnd`。 設定及擷取成文字檔`CEdit`物件，請使用`CWnd`成員函式[SetWindowText](cwnd-class.md#setwindowtext)並[GetWindowText](cwnd-class.md#getwindowtext)，編輯的整個內容所控制的 set 或 get，即使它是多行的控制項。 在多行控制項中的文字行分隔 '\r\n' 字元序列。 此外，如果多行編輯控制項，取得並設定控制項的文字的一部分，藉由呼叫`CEdit`成員函式[GetLine](#getline)， [SetSel](#setsel)， [GetSel](#getsel)，以及[ReplaceSel](#replacesel)。
+`CEdit`從繼承重要的`CWnd`功能。 若`CEdit`要設定和抓取物件中的文字, 請`CWnd`使用成員函式[SetWindowText](cwnd-class.md#setwindowtext)和[GetWindowText](cwnd-class.md#getwindowtext), 這會設定或取得編輯控制項的完整內容, 即使它是多行控制項也一樣。 多行控制項中的文字會以 ' \r\n ' 字元序列分隔。 此外, 如果編輯控制項是多行, `CEdit`請藉由呼叫成員函式[GetLine](#getline)、 [SetSel](#setsel)、 [GetSel](#getsel)和[ReplaceSel](#replacesel), 取得並設定部分的控制項文字。
 
-如果您想要處理 Windows 通知訊息傳送給其父代的編輯控制項 (通常是從衍生的類別`CDialog`)，將訊息對應項目和訊息處理常式成員函式新增至每個訊息的父類別。
+如果您想要處理編輯控制項傳送給其父系的 Windows 通知訊息 (通常是衍生自`CDialog`的類別), 請將訊息對應專案和訊息處理常式成員函式新增至每個訊息的父類別。
 
-每個訊息對應項目都會使用下列格式：
+每個訊息對應專案會採用下列格式:
 
   **ON_** _NOTIFICATION_ **(** _id_ **,** _memberFxn_ **)**
 
-何處`id`指定傳送通知，編輯控制項的子視窗識別碼和`memberFxn`是您撰寫來處理通知的父成員函式的名稱。
+其中`id`指定要傳送通知之編輯控制項的子視窗識別碼, 而`memberFxn`則是您已撰寫來處理通知之父成員函式的名稱。
 
-父代的函式原型如下所示：
+父系的函數原型如下所示:
 
-**afx_msg** void memberFxn **( );**
+**afx_msg** void memberFxn **();**
 
-以下是一份潛在的訊息對應項目並在其中它們就會傳送到父代的案例的描述：
+以下是可能的訊息對應專案清單, 以及其會傳送至父系的案例描述:
 
-- ON_EN_CHANGE 使用者所執行的動作，可能已變更編輯控制項中的文字。 不同於 EN_UPDATE 通知訊息時，Windows 更新顯示之後，會傳送此通知訊息。
+- ON_EN_CHANGE 使用者所採取的動作可能已更改編輯控制項中的文字。 不同于 EN_UPDATE 通知訊息, 此通知訊息會在 Windows 更新顯示後傳送。
 
-- ON_EN_ERRSPACE 編輯控制項無法配置足夠的記憶體，以滿足特定的要求。
+- ON_EN_ERRSPACE 編輯控制項無法配置足夠的記憶體來符合特定的要求。
 
-- ON_EN_HSCROLL 使用者按一下編輯控制項的水平捲軸。 父視窗會收到通知，才會更新畫面。
+- ON_EN_HSCROLL 使用者按一下編輯控制項的水準捲軸。 在更新螢幕之前, 會通知父視窗。
 
-- ON_EN_KILLFOCUS 編輯控制項失去輸入的焦點。
+- ON_EN_KILLFOCUS 編輯控制項失去輸入焦點。
 
-- ON_EN_MAXTEXT 目前的插入動作已超過指定的編輯控制項的字元數，且已遭截斷。 也傳送時編輯控制項並沒有 ES_AUTOHSCROLL 樣式，而且要插入的字元數會超過編輯控制項的寬度。 也傳送時編輯控制項並沒有 ES_AUTOVSCROLL 樣式，而且所產生的文字插入幾行的總數會超過編輯控制項的高度。
+- ON_EN_MAXTEXT 目前的插入已超過編輯控制項指定的字元數, 而且已被截斷。 當編輯控制項沒有 ES_AUTOHSCROLL 樣式, 而且要插入的字元數超過編輯控制項的寬度時, 也會傳送。 當編輯控制項沒有 ES_AUTOVSCROLL 樣式, 而且文字插入所產生的總行數超過編輯控制項的高度時, 也會一併傳送。
 
-- 當編輯控制項收到輸入的焦點時，就會傳送 ON_EN_SETFOCUS。
+- 當編輯控制項收到輸入焦點時, 就會傳送 ON_EN_SETFOCUS。
 
-- ON_EN_UPDATE 編輯控制項即將變更的顯示文字。 控制項已格式化文字後，但它螢幕文字，以便可以變更視窗大小，必要時傳送。
+- ON_EN_UPDATE 編輯控制項即將顯示改變的文字。 在控制項已格式化文字之後, 但在螢幕上會先傳送, 以便在必要時變更視窗大小。
 
-- ON_EN_VSCROLL 使用者按一下編輯控制項的垂直捲軸。 父視窗會收到通知，才會更新畫面。
+- ON_EN_VSCROLL 使用者按一下編輯控制項的垂直捲動條。 在更新螢幕之前, 會通知父視窗。
 
-如果您建立`CEdit` 對話方塊中，物件`CEdit`使用者關閉對話方塊時，即會自動終結物件。
+如果您在對話方塊`CEdit`中建立物件`CEdit` , 當使用者關閉對話方塊時, 就會自動終結物件。
 
-如果您建立`CEdit`從對話方塊資源使用對話方塊編輯器中，物件`CEdit`使用者關閉對話方塊時，即會自動終結物件。
+如果您使用對話方塊`CEdit`編輯器從對話方塊資源建立物件`CEdit` , 當使用者關閉對話方塊時, 會自動終結物件。
 
-如果您建立`CEdit`物件內的視窗中，您可能也需要終結它。 如果您建立`CEdit`物件在堆疊上，它會自動終結。 如果您建立`CEdit`物件上使用堆積**新**函式，您必須呼叫**刪除**物件終結它，當使用者終止 Windows 編輯控制項。 如果您配置任何記憶體`CEdit`物件，覆寫`CEdit`解構函式來進行處置的配置。
+如果您在視窗`CEdit`中建立物件, 您可能也需要將它摧毀。 如果您在堆疊`CEdit`上建立物件, 它會自動終結。 如果您使用`CEdit` **新**的函式在堆積上建立物件, 您必須在物件上呼叫**delete** , 以在使用者終止 Windows 編輯控制項時加以摧毀。 如果您在`CEdit`物件中配置任何記憶體, 請覆`CEdit`寫析構函式以處置配置。
 
-若要修改特定樣式的編輯控制項 （例如 ES_READONLY) 必須將特定訊息傳送至控制項而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 請參閱[編輯控制項的樣式](/windows/desktop/Controls/edit-control-styles)Windows SDK 中。
+若要修改編輯控制項 (例如 ES_READONLY) 中的特定樣式, 您必須將特定訊息傳送至控制項, 而不是使用[ModifyStyle](cwnd-class.md#modifystyle)。 請參閱 Windows SDK 中的[編輯控制項樣式](/windows/win32/Controls/edit-control-styles)。
 
-如需詳細資訊`CEdit`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)。
+如需的詳細`CEdit`資訊, 請參閱[控制項](../../mfc/controls-mfc.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -233,7 +233,7 @@ class CEdit : public CWnd
 
 ##  <a name="canundo"></a>  CEdit::CanUndo
 
-呼叫此函式來判斷是否可以復原上次的編輯作業。
+呼叫此函式, 以判斷是否可以復原最後的編輯作業。
 
 ```
 BOOL CanUndo() const;
@@ -241,17 +241,17 @@ BOOL CanUndo() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果可以復原上次的編輯作業，藉由呼叫`Undo`成員函式; 0，如果無法復原。
+如果可以透過`Undo`成員函式的呼叫來復原最後一個編輯作業, 則為非零, 如果無法復原, 則為0。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [EM_CANUNDO](/windows/desktop/Controls/em-canundo) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_CANUNDO](/windows/win32/Controls/em-canundo) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::Undo](#undo)。
+  請參閱[CEdit:: Undo](#undo)的範例。
 
-##  <a name="cedit"></a>  CEdit::CEdit
+##  <a name="cedit"></a>CEdit:: CEdit
 
 建構 `CEdit` 物件。
 
@@ -261,15 +261,15 @@ CEdit();
 
 ### <a name="remarks"></a>備註
 
-使用[建立](#create)建構 Windows 編輯控制項。
+使用 [[建立](#create)] 來建立 Windows 編輯控制項。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#1](../../mfc/reference/codesnippet/cpp/cedit-class_1.cpp)]
 
-##  <a name="charfrompos"></a>  CEdit::CharFromPos
+##  <a name="charfrompos"></a>CEdit:: CharFromPos
 
-呼叫此函式可擷取的以零為起始的行和字元的字元，最接近指定點在此索引`CEdit`控制項
+呼叫此函式可抓取最接近此`CEdit`控制項中指定點的字元之以零為起始的行和字元索引
 
 ```
 int CharFromPos(CPoint pt) const;
@@ -278,26 +278,26 @@ int CharFromPos(CPoint pt) const;
 ### <a name="parameters"></a>參數
 
 *pt*<br/>
-工作區中此點的座標`CEdit`物件。
+這個`CEdit`物件的工作區中某個點的座標。
 
 ### <a name="return-value"></a>傳回值
 
-低序位字組中的字元索引，高序位文字中的行索引。
+低序位字組中的字元索引, 以及高序位單字中的行索引。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  此成員函式是從 Windows 95 和 Windows NT 4.0。
+>  從 Windows 95 和 Windows NT 4.0 開始提供此成員函式。
 
-如需詳細資訊，請參閱 < [EM_CHARFROMPOS](/windows/desktop/Controls/em-charfrompos) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_CHARFROMPOS](/windows/win32/Controls/em-charfrompos) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#3](../../mfc/reference/codesnippet/cpp/cedit-class_2.cpp)]
 
-##  <a name="clear"></a>  CEdit::Clear
+##  <a name="clear"></a>CEdit:: Clear
 
-呼叫此函式來刪除 （清除） 目前的選取範圍 （如果有的話） 中編輯控制項。
+呼叫此函式可刪除 (清除) 編輯控制項中目前的選取範圍 (如果有的話)。
 
 ```
 void Clear();
@@ -305,11 +305,11 @@ void Clear();
 
 ### <a name="remarks"></a>備註
 
-刪除由`Clear`可以藉由呼叫復原[復原](#undo)成員函式。
+您`Clear`可以藉由呼叫[Undo](#undo)成員函式來復原所執行的刪除作業。
 
-若要刪除目前選取範圍，並將已刪除的內容放到剪貼簿，請呼叫[剪下](#cut)成員函式。
+若要刪除目前的選取範圍, 並將已刪除的內容放入剪貼簿中, 請呼叫[剪](#cut)下成員函式。
 
-如需詳細資訊，請參閱 < [WM_CLEAR](/windows/desktop/dataxchg/wm-clear) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[WM_CLEAR](/windows/win32/dataxchg/wm-clear) 。
 
 ### <a name="example"></a>範例
 
@@ -317,7 +317,7 @@ void Clear();
 
 ##  <a name="copy"></a>  CEdit::Copy
 
-呼叫此函式以下列方式複製目前的選取範圍 （如果有的話） 到剪貼簿格式 CF_TEXT 編輯控制項中。
+呼叫此函式可將編輯控制項中的目前選取範圍 (如果有的話) 下列方式複製為 CF_TEXT 格式的剪貼簿。
 
 ```
 void Copy();
@@ -325,15 +325,15 @@ void Copy();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [WM_COPY](/windows/desktop/dataxchg/wm-copy) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[WM_COPY](/windows/win32/dataxchg/wm-copy) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#5](../../mfc/reference/codesnippet/cpp/cedit-class_4.cpp)]
 
-##  <a name="create"></a>  CEdit::Create
+##  <a name="create"></a>CEdit:: Create
 
-建立 Windows 編輯控制項，並將它附加至`CEdit`物件。
+建立 Windows 編輯控制項, 並將它附加至`CEdit`物件。
 
 ```
 virtual BOOL Create(
@@ -346,30 +346,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定編輯控制項的樣式。 套用的任何組合[編輯樣式](styles-used-by-mfc.md#edit-styles)至控制項。
+指定編輯控制項的樣式。 將[編輯樣式](styles-used-by-mfc.md#edit-styles)的任何組合套用至控制項。
 
 *rect*<br/>
 指定編輯控制項的大小和位置。 可以是`CRect`物件或`RECT`結構。
 
 *pParentWnd*<br/>
-指定編輯控制項的父視窗 (通常`CDialog`)。 它必須不是 NULL。
+指定編輯控制項的父視窗 (通常是`CDialog`)。 不得為 Null。
 
 *nID*<br/>
 指定編輯控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功則為非零否則為 0。
+如果初始化成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-您建構`CEdit`兩個步驟中的物件。 首先，呼叫`CEdit`建構函式，然後呼叫`Create`，這會建立 Windows 編輯控制項，並將它附加至`CEdit`物件。
+您可以使用`CEdit`兩個步驟來建立物件。 首先, 呼叫此`CEdit`函式, 然後`Create`呼叫, 它會建立 Windows 編輯控制項`CEdit`並將其附加至物件。
 
-當`Create`執行時，Windows 會傳送[WM_NCCREATE](/windows/desktop/winmsg/wm-nccreate)， [WM_NCCALCSIZE](/windows/desktop/winmsg/wm-nccalcsize)， [WM_CREATE](/windows/desktop/winmsg/wm-create)，並[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)編輯控制項的訊息。
+當`Create`執行時, Windows 會將[WM_NCCREATE](/windows/win32/winmsg/wm-nccreate)、 [WM_NCCALCSIZE](/windows/win32/winmsg/wm-nccalcsize)、 [WM_CREATE](/windows/win32/winmsg/wm-create)和[WM_GETMINMAXINFO](/windows/win32/winmsg/wm-getminmaxinfo)訊息傳送至編輯控制項。
 
-根據預設，處理這些訊息[OnNcCreate](cwnd-class.md#onnccreate)， [OnNcCalcSize](cwnd-class.md#onnccalcsize)， [OnCreate](cwnd-class.md#oncreate)，以及[OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo)成員函式在 `CWnd`基底類別。 若要擴充的預設訊息處理，衍生的類別`CEdit`、 將訊息對應新增至新的類別，並覆寫上述的訊息處理常式成員函式。 覆寫`OnCreate`，例如，若要執行的新類別所需的初始設定。
+根據預設, 這些`CWnd`訊息會由基類中的[OnNcCreate](cwnd-class.md#onnccreate)、 [OnNcCalcSize](cwnd-class.md#onnccalcsize)、 [OnCreate](cwnd-class.md#oncreate)和[OnGetMinMaxInfo](cwnd-class.md#ongetminmaxinfo)成員函式來處理。 若要擴充預設訊息處理, 請從`CEdit`衍生類別, 將訊息對應加入至新的類別, 並覆寫上述的訊息處理常式成員函式。 例如`OnCreate`, 覆寫以執行新類別所需的初始化。
 
-套用下列[的視窗樣式](styles-used-by-mfc.md#window-styles)至編輯控制項。
+將下列[視窗樣式](styles-used-by-mfc.md#window-styles)套用至編輯控制項。
 
 - WS_CHILD 一律
 
@@ -377,17 +377,17 @@ virtual BOOL Create(
 
 - WS_DISABLED 很少
 
-- WS_GROUP 群組控制項
+- WS_GROUP 至群組控制項
 
-- 若要在 tab 鍵順序中包含編輯控制項的 WS_TABSTOP
+- WS_TABSTOP 以按 tab 鍵順序加入編輯控制項
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#2](../../mfc/reference/codesnippet/cpp/cedit-class_5.cpp)]
 
-##  <a name="cut"></a>  CEdit::Cut
+##  <a name="cut"></a>CEdit:: Cut
 
-呼叫此函式來刪除 （剪下） 編輯控制項中目前的選取範圍 （如果有的話），並將已刪除的文字複製到剪貼簿 CF_TEXT 格式。
+呼叫此函式可在編輯控制項中刪除 (剪下) 目前的選取範圍 (如果有的話), 並以 CF_TEXT 格式將已刪除的文字複製到剪貼簿。
 
 ```
 void Cut();
@@ -395,11 +395,11 @@ void Cut();
 
 ### <a name="remarks"></a>備註
 
-刪除由`Cut`可以藉由呼叫復原[復原](#undo)成員函式。
+您`Cut`可以藉由呼叫[Undo](#undo)成員函式來復原所執行的刪除作業。
 
-若要刪除目前選取範圍，不需將刪除的文字放到剪貼簿，請呼叫[清除](#clear)成員函式。
+若要刪除目前的選取範圍, 而不將已刪除的文字放入剪貼簿中, 請呼叫[Clear](#clear)成員函式。
 
-如需詳細資訊，請參閱 < [WM_CUT](/windows/desktop/dataxchg/wm-cut) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[WM_CUT](/windows/win32/dataxchg/wm-cut) 。
 
 ### <a name="example"></a>範例
 
@@ -407,7 +407,7 @@ void Cut();
 
 ##  <a name="emptyundobuffer"></a>  CEdit::EmptyUndoBuffer
 
-編輯控制項的復原旗標呼叫此函式來重設 （清除）。
+呼叫此函式以重設 (清除) 編輯控制項的復原旗標。
 
 ```
 void EmptyUndoBuffer();
@@ -415,19 +415,19 @@ void EmptyUndoBuffer();
 
 ### <a name="remarks"></a>備註
 
-編輯控制項現在無法復原最後一個作業。 編輯控制項中的作業可以進行復原時，會設定復原旗標。
+編輯控制項現在將無法復原最後一個作業。 每當編輯控制項內的作業可以復原時, 就會設定「復原」旗標。
 
-復原旗標會自動清除每當[SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)或是[sethandle，然後](#sethandle)`CWnd`呼叫成員函式。
+每當呼叫[SetWindowText](../../mfc/reference/cwnd-class.md#setwindowtext)或[SetHandle](#sethandle) `CWnd`成員函式時, 就會自動清除復原旗標。
 
-如需詳細資訊，請參閱 < [EM_EMPTYUNDOBUFFER](/windows/desktop/Controls/em-emptyundobuffer) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_EMPTYUNDOBUFFER](/windows/win32/Controls/em-emptyundobuffer) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#7](../../mfc/reference/codesnippet/cpp/cedit-class_7.cpp)]
 
-##  <a name="fmtlines"></a>  CEdit::FmtLines
+##  <a name="fmtlines"></a>CEdit:: FmtLines
 
-呼叫此函式可設定多行編輯控制項中包含的軟換行字元 on 或 off。
+呼叫此函式可在多行編輯控制項內設定包含虛分行符號字元的功能。
 
 ```
 BOOL FmtLines(BOOL bAddEOL);
@@ -436,21 +436,21 @@ BOOL FmtLines(BOOL bAddEOL);
 ### <a name="parameters"></a>參數
 
 *bAddEOL*<br/>
-指定是否要插入軟換行字元。 如果為 true 會插入下列字元:;值為 FALSE 可移除它們。
+指定是否要插入軟換行字元。 TRUE 的值會插入字元;值為 FALSE 時, 會將其移除。
 
 ### <a name="return-value"></a>傳回值
 
-如果有任何非零值，會進行格式化;否則為 0。
+如果發生任何格式, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-軟換行符號是由兩個歸位字元和換行字元插入已中斷，因為自動換行尾所組成。 硬碟換行符號是由一個歸位字元和換行字元所組成。 不會影響硬碟換行符號結尾的行`FmtLines`。
+軟換行是由兩個回車傳回, 而且在行尾插入的換行是因為斷字而中斷。 硬式分行符號包含一個回車和一個換行字元。 以硬式分行符號結尾的行不會受到的影響`FmtLines`。
 
-如果只會回應 Windows`CEdit`物件是多行編輯控制項。
+只有當物件為多行`CEdit`編輯控制項時, Windows 才會回應。
 
-`FmtLines` 只會影響所傳回的緩衝區[GetHandle](#gethandle)和所傳回的文字[WM_GETTEXT](/windows/desktop/winmsg/wm-gettext)。 它的文字編輯控制項中顯示沒有任何影響。
+`FmtLines`只會影響[GetHandle](#gethandle)所傳回的緩衝區, 以及[WM_GETTEXT](/windows/win32/winmsg/wm-gettext)所傳回的文字。 它對編輯控制項內的文字顯示不會有任何影響。
 
-如需詳細資訊，請參閱 < [EM_FMTLINES](/windows/desktop/Controls/em-fmtlines) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_FMTLINES](/windows/win32/Controls/em-fmtlines) 。
 
 ### <a name="example"></a>範例
 
@@ -458,7 +458,7 @@ BOOL FmtLines(BOOL bAddEOL);
 
 ##  <a name="getcuebanner"></a>  CEdit::GetCueBanner
 
-擷取做為文字提示或提示，在編輯控制項的控制項是空白時顯示的文字。
+當控制項為空白時, 抓取編輯控制項中顯示為文字提示或提示的文字。
 
 ```
 BOOL GetCueBanner(
@@ -471,24 +471,24 @@ CString GetCueBanner() const;
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[out]包含提示文字的字串指標。
+脫銷包含提示文字之字串的指標。
 
 *cchText*<br/>
-[in]可以接收到的字元數。 這個數目包括結束的 NULL 字元。
+在可以接收的字元數。 這個數位包含結束的 Null 字元。
 
 ### <a name="return-value"></a>傳回值
 
-第一個多載而言，TRUE 如果方法成功，否則為 FALSE。
+針對第一個多載, 如果方法成功, 則為 TRUE;否則為 FALSE。
 
-第二個多載而言， [CString](../../atl-mfc-shared/using-cstring.md)其中包含提示文字，如果方法成功，否則為空字串 ("")。
+針對第二個多載, 如果方法成功, 則為包含提示文字的[CString](../../atl-mfc-shared/using-cstring.md) ;否則為空字串 ("")。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[EM_GETCUEBANNER](/windows/desktop/Controls/em-getcuebanner)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [Edit_GetCueBannerText](/windows/desktop/api/commctrl/nf-commctrl-edit_getcuebannertext)巨集。
+這個方法會傳送[EM_GETCUEBANNER](/windows/win32/Controls/em-getcuebanner)訊息, 如 Windows SDK 中所述。 如需詳細資訊, 請參閱[Edit_GetCueBannerText](/windows/win32/api/commctrl/nf-commctrl-edit_getcuebannertext)宏。
 
 ##  <a name="getfirstvisibleline"></a>  CEdit::GetFirstVisibleLine
 
-呼叫此函式來判斷最上層的可見行編輯控制項中。
+呼叫此函式可判斷編輯控制項中最上層的可見線。
 
 ```
 int GetFirstVisibleLine() const;
@@ -496,11 +496,11 @@ int GetFirstVisibleLine() const;
 
 ### <a name="return-value"></a>傳回值
 
-最上層的可見行以零為起始的索引。 單行編輯控制項，傳回的值為 0。
+最上層可見行之以零為起始的索引。 若為單行編輯控制項, 則傳回值為0。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [EM_GETFIRSTVISIBLELINE](/windows/desktop/Controls/em-getfirstvisibleline) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETFIRSTVISIBLELINE](/windows/win32/Controls/em-getfirstvisibleline) 。
 
 ### <a name="example"></a>範例
 
@@ -508,7 +508,7 @@ int GetFirstVisibleLine() const;
 
 ##  <a name="gethandle"></a>  CEdit::GetHandle
 
-呼叫此函式來擷取多行編輯控制項的目前配置的記憶體的控制代碼。
+呼叫此函式可抓取目前配置給多行編輯控制項的記憶體控制碼。
 
 ```
 HLOCAL GetHandle() const;
@@ -516,28 +516,28 @@ HLOCAL GetHandle() const;
 
 ### <a name="return-value"></a>傳回值
 
-本機記憶體控制代碼識別保留的編輯控制項內容的緩衝區。 如果發生錯誤，例如傳送訊息至單一行編輯控制項，則傳回的值為 0。
+本機記憶體控制碼, 可識別保存編輯控制項內容的緩衝區。 如果發生錯誤, 例如將訊息傳送至單行編輯控制項, 則傳回值為0。
 
 ### <a name="remarks"></a>備註
 
-控制代碼的本機記憶體控制代碼，而且可由任一**本機**採用本機記憶體的 Windows 記憶體函式處理做為參數。
+控制碼是本機記憶體控制碼, 可供接受本機記憶體控制碼做為參數的任何**本機**Windows 記憶體函數使用。
 
-`GetHandle` 處理只能由多行編輯控制項。
+`GetHandle`只由多行編輯控制項處理。
 
-呼叫`GetHandle`多行編輯控制項在對話方塊中，只有當對話方塊中已建立設定 DS_LOCALEDIT 樣式旗標。 如果未設定 DS_LOCALEDIT 樣式，仍會得到零的傳回值，但不是能使用傳回的值。
+只有`GetHandle`在已設定 DS_LOCALEDIT 樣式旗標的對話方塊建立時, 才會在對話方塊中呼叫多行編輯控制項。 如果未設定 DS_LOCALEDIT 樣式, 您仍然會得到非零的傳回值, 但您將無法使用傳回的值。
 
 > [!NOTE]
-> `GetHandle` 不適用於 Windows 95/98。 如果您呼叫`GetHandle`在 Windows 95/98，它會傳回 NULL。 `GetHandle` 可在 Windows NT 3.51 及更新版本下所述。
+> `GetHandle`將無法用於 Windows 95/98。 如果您在`GetHandle` Windows 95/98 中呼叫, 它會傳回 Null。 `GetHandle`會如 Windows NT 3.51 版和更新版本中所記載的方式工作。
 
-如需詳細資訊，請參閱 < [EM_GETHANDLE](/windows/desktop/Controls/em-gethandle) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETHANDLE](/windows/win32/Controls/em-gethandle) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#10](../../mfc/reference/codesnippet/cpp/cedit-class_10.cpp)]
 
-##  <a name="gethighlight"></a>  CEdit::GetHighlight
+##  <a name="gethighlight"></a>CEdit:: GetHighlight
 
-在目前的編輯控制項中反白顯示的文字範圍中取得的第一個和最後一個字元的索引。
+取得文字範圍中的第一個和最後一個字元的索引, 在目前的編輯控制項中反白顯示。
 
 ```
 BOOL GetHighlight(
@@ -549,20 +549,20 @@ BOOL GetHighlight(
 
 |參數|描述|
 |---------------|-----------------|
-|*pichStart*|[out]反白顯示的文字範圍中的第一個字元的以零為起始索引。|
-|*pichEnd*|[out]反白顯示的文字範圍中的最後一個字元的以零為起始索引。|
+|*pichStart*|脫銷反白顯示的文字範圍中第一個字元之以零為起始的索引。|
+|*pichEnd*|脫銷反白顯示的文字範圍中, 最後一個字元的索引 (以零為基底)。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，這個方法，則為 TRUE。否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[EM_GETHILITE](/windows/desktop/Controls/em-gethilite)訊息，Windows SDK 中所述。 兩者`SetHighlight`和`GetHighlight`UNICODE 組建只目前已啟用。
+這個方法會傳送[EM_GETHILITE](/windows/win32/Controls/em-gethilite)訊息, 如 Windows SDK 中所述。 `SetHighlight` 和`GetHighlight`目前僅針對 UNICODE 組建啟用。
 
 ##  <a name="getlimittext"></a>  CEdit::GetLimitText
 
-呼叫此成員函式，以取得此文字限制`CEdit`物件。
+呼叫這個成員函式以取得此`CEdit`物件的文字限制。
 
 ```
 UINT GetLimitText() const;
@@ -570,16 +570,16 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前文字中的限制，TCHARs，這個`CEdit`物件。
+這個`CEdit`物件目前的文字限制 (以 TCHARs 為限)。
 
 ### <a name="remarks"></a>備註
 
-文字限制為文字，請在 TCHARs，編輯控制項可接受的最大數量。
+文字限制是編輯控制項可以接受的最大文字量 (以 TCHARs 為限)。
 
 > [!NOTE]
->  此成員函式是從 Windows 95 和 Windows NT 4.0。
+>  從 Windows 95 和 Windows NT 4.0 開始提供此成員函式。
 
-如需詳細資訊，請參閱 < [EM_GETLIMITTEXT](/windows/desktop/Controls/em-getlimittext) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETLIMITTEXT](/windows/win32/Controls/em-getlimittext) 。
 
 ### <a name="example"></a>範例
 
@@ -587,7 +587,7 @@ UINT GetLimitText() const;
 
 ##  <a name="getline"></a>  CEdit::GetLine
 
-呼叫此函式來擷取編輯控制項中的文字行，並將它放入*lpszBuffer*。
+呼叫此函式可從編輯控制項取出一行文字, 並將它放在*lpszBuffer*中。
 
 ```
 int GetLine(
@@ -603,31 +603,31 @@ int GetLine(
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-指定的行號，來擷取多行編輯控制項。 行號是以零為起始;值為 0 指定的第一行。 單行編輯控制項，會忽略這個參數。
+指定要從多行編輯控制項取出的行號。 行號是以零為基底;值為0會指定第一行。 單一行編輯控制項會忽略這個參數。
 
 *lpszBuffer*<br/>
-指向接收一份列的緩衝區。 緩衝區的第一個字組必須指定可以複製到緩衝區的 TCHARs 的最大數目。
+指向接收一行複本的緩衝區。 緩衝區的第一個字必須指定可複製到緩衝區的最大 TCHARs 數目。
 
 *nMaxLength*<br/>
-指定 TCHAR 可以複製到緩衝區的字元的數目上限。 `GetLine` 將此值放在第一個文字*lpszBuffer*進行呼叫 Windows 之前。
+指定可以複製到緩衝區的 TCHAR 字元數目上限。 `GetLine`在呼叫 Windows 之前, 將此值放在*lpszBuffer*的第一個字組中。
 
 ### <a name="return-value"></a>傳回值
 
-實際複製的字元數。 傳回值為 0，如果所指定的行號*nIndex*大於編輯控制項中的行數。
+實際複製的字元數。 如果*nIndex*所指定的行號大於編輯控制項中的行數, 則傳回值為0。
 
 ### <a name="remarks"></a>備註
 
-所複製的行不包含 null 結束字元。
+複製的行不包含 null 終止字元。
 
-如需詳細資訊，請參閱 < [EM_GETLINE](/windows/desktop/Controls/em-getline) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETLINE](/windows/win32/Controls/em-getline) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::GetLineCount](#getlinecount)。
+  請參閱[CEdit:: GetLineCount](#getlinecount)的範例。
 
 ##  <a name="getlinecount"></a>  CEdit::GetLineCount
 
-呼叫此函式來擷取多行編輯控制項中的行數。
+呼叫此函式可取出多行編輯控制項中的行數。
 
 ```
 int GetLineCount() const;
@@ -635,21 +635,21 @@ int GetLineCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-包含多行中的行號的整數的編輯控制項。 如果沒有文字輸入至編輯控制項，則傳回的值為 1。
+整數, 包含多行編輯控制項中的行數。 如果編輯控制項中未輸入任何文字, 則傳回值為1。
 
 ### <a name="remarks"></a>備註
 
-`GetLineCount` 只會處理多行編輯控制項。
+`GetLineCount`只由多行編輯控制項處理。
 
-如需詳細資訊，請參閱 < [EM_GETLINECOUNT](/windows/desktop/Controls/em-getlinecount) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETLINECOUNT](/windows/win32/Controls/em-getlinecount) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#12](../../mfc/reference/codesnippet/cpp/cedit-class_12.cpp)]
 
-##  <a name="getmargins"></a>  CEdit::GetMargins
+##  <a name="getmargins"></a>CEdit:: GetMargins
 
-呼叫此成員函式，來擷取此編輯控制項的左邊和右邊邊界。
+呼叫這個成員函式, 以抓取此編輯控制項的左邊和右邊邊界。
 
 ```
 DWORD GetMargins() const;
@@ -657,24 +657,24 @@ DWORD GetMargins() const;
 
 ### <a name="return-value"></a>傳回值
 
-在低序位字組和高序位文字的右邊界的寬度左邊界的寬度。
+低序位單字中左邊界的寬度, 以及高序位單字中右邊界的寬度。
 
 ### <a name="remarks"></a>備註
 
-邊界被測量單位為像素。
+邊界是以圖元為單位。
 
 > [!NOTE]
->  此成員函式是從 Windows 95 和 Windows NT 4.0。
+>  從 Windows 95 和 Windows NT 4.0 開始提供此成員函式。
 
-如需詳細資訊，請參閱 < [EM_GETMARGINS](/windows/desktop/Controls/em-getmargins) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETMARGINS](/windows/win32/Controls/em-getmargins) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。
+  請參閱[CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl)的範例。
 
 ##  <a name="getmodify"></a>  CEdit::GetModify
 
-呼叫此函式可判斷是否已經修改編輯控制項的內容。
+呼叫此函式可判斷編輯控制項的內容是否已修改。
 
 ```
 BOOL GetModify() const;
@@ -682,13 +682,13 @@ BOOL GetModify() const;
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果已修改的編輯控制項內容;0，如果它們維持不變。
+如果編輯控制項內容已修改, 則為非零值;如果保持不變, 則為0。
 
 ### <a name="remarks"></a>備註
 
-Windows 會維護內部的旗標，指出是否已變更編輯控制項的內容。 當編輯控制項第一次建立時可能也會清除藉由呼叫時，清除這個旗標[SetModify](#setmodify)成員函式。
+Windows 會維護一個內部旗標, 指出編輯控制項的內容是否已經變更。 第一次建立編輯控制項時, 會清除此旗標, 而且也可以藉由呼叫[SetModify](#setmodify)成員函式來清除。
 
-如需詳細資訊，請參閱 < [EM_GETMODIFY](/windows/desktop/Controls/em-getmodify) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETMODIFY](/windows/win32/Controls/em-getmodify) 。
 
 ### <a name="example"></a>範例
 
@@ -696,7 +696,7 @@ Windows 會維護內部的旗標，指出是否已變更編輯控制項的內容
 
 ##  <a name="getpasswordchar"></a>  CEdit::GetPasswordChar
 
-呼叫此函式可擷取使用者輸入文字時，會將編輯控制項中顯示的密碼字元。
+呼叫此函式可在使用者輸入文字時, 取得編輯控制項中顯示的密碼字元。
 
 ```
 TCHAR GetPasswordChar() const;
@@ -704,13 +704,13 @@ TCHAR GetPasswordChar() const;
 
 ### <a name="return-value"></a>傳回值
 
-指定要顯示而不是使用者所輸入字元的字元。 如果沒有密碼字元存在，則傳回的值是 NULL。
+指定要顯示的字元, 而不是使用者輸入的字元。 如果不存在任何密碼字元, 則傳回值為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果您建立的 ES_PASSWORD 樣式的編輯控制項，則支援控制 DLL 會決定預設密碼字元。 資訊清單或[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)方法會判斷 DLL 支援編輯控制項。 如果 user32.dll 支援編輯控制項的預設密碼字元是星號 ('* '，U + 002A)。 如果 comctl32.dll 版本 6 支援編輯控制項的預設字元是黑色圓形 （'●'，U + 25CF）。 如需有關哪些 DLL 和版本支援的通用控制項，請參閱[殼層和通用控制項版本](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))。
+如果您使用 ES_PASSWORD 樣式建立編輯控制項, 則支援該控制項的 DLL 會決定預設密碼字元。 資訊清單或[InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex)方法會決定哪一個 DLL 支援編輯控制項。 如果連結支援編輯控制項, 則預設的密碼字元為星號 (' * '、U + 002A)。 如果 comctl32.dll 版本6支援編輯控制項, 則預設字元為黑色圓圈 (' ● ', U + 25CF)。 如需哪些 DLL 和版本支援通用控制項的詳細資訊, 請參閱[Shell 和通用控制項版本](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\))。
 
-這個方法會傳送[EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar)訊息，Windows SDK 中所述。
+這個方法會傳送[EM_GETPASSWORDCHAR](/windows/win32/Controls/em-getpasswordchar)訊息, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
@@ -718,7 +718,7 @@ TCHAR GetPasswordChar() const;
 
 ##  <a name="getrect"></a>  CEdit::GetRect
 
-呼叫此函式來取得編輯控制項的格式化矩形。
+呼叫此函式可取得編輯控制項的格式化矩形。
 
 ```
 void GetRect(LPRECT lpRect) const;
@@ -727,23 +727,23 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`RECT`接收格式化矩形的結構。
+指向接收格式化矩形的結構。`RECT`
 
 ### <a name="remarks"></a>備註
 
-格式化矩形是大小的文字，也就是大小的獨立的編輯控制項視窗限制的矩形。
+格式化矩形是文字的限制矩形, 與編輯控制視窗的大小無關。
 
-可以藉由修改多行編輯控制項的格式化矩形[SetRect](#setrect)並[SetRectNP](#setrectnp)成員函式。
+多行編輯控制項的格式化矩形可以由[SetRect](#setrect)和[SetRectNP](#setrectnp)成員函式進行修改。
 
-如需詳細資訊，請參閱 < [EM_GETRECT](/windows/desktop/Controls/em-getrect) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETRECT](/windows/win32/Controls/em-getrect) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::LimitText](#limittext)。
+  請參閱[CEdit:: LimitText](#limittext)的範例。
 
 ##  <a name="getsel"></a>  CEdit::GetSel
 
-呼叫此函式可取得的起始和結束目前的選取範圍 （如果有的話） 中編輯控制項，使用傳回的值或參數的字元位置。
+呼叫此函式, 以使用傳回值或參數, 取得編輯控制項中目前選取範圍的開始和結束字元位置 (如果有的話)。
 
 ```
 DWORD GetSel() const;
@@ -756,18 +756,18 @@ void GetSel(
 ### <a name="parameters"></a>參數
 
 *nStartChar*<br/>
-整數，會在目前的選取範圍中收到的第一個字元的位置參考。
+參考會接收目前選取範圍中第一個字元位置的整數。
 
 *nEndChar*<br/>
-整數，將會收到的未選取的第一個字元，超過目前的選取範圍結尾的位置參考。
+整數的參考, 將會在目前選取範圍結束之後接收第一個 nonselected 字元的位置。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 DWORD 的版本會傳回包含高序位文字中的選取範圍結束之後的低序位字組中的開始位置和位置的第一個未選取字元的值。
+傳回 DWORD 的版本會傳回一個值, 其中包含低序位單字中的開始位置, 以及在高序位單字選取範圍結尾之後第一個 nonselected 字元的位置。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [EM_GETSEL](/windows/desktop/Controls/em-getsel) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_GETSEL](/windows/win32/Controls/em-getsel) 。
 
 ### <a name="example"></a>範例
 
@@ -775,7 +775,7 @@ void GetSel(
 
 ##  <a name="hideballoontip"></a>  CEdit::HideBalloonTip
 
-會隱藏任何目前的編輯控制項相關聯的汽球提示。
+隱藏與目前編輯控制項相關聯的任何球形氣球提示。
 
 ```
 BOOL HideBalloonTip();
@@ -783,15 +783,15 @@ BOOL HideBalloonTip();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，這個方法，則為 TRUE。否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此函式會將[EM_HIDEBALLOONTIP](/windows/desktop/Controls/em-hideballoontip)訊息，Windows SDK 中所述。
+此函式會傳送[EM_HIDEBALLOONTIP](/windows/win32/Controls/em-hideballoontip)訊息, 如 Windows SDK 中所述。
 
 ##  <a name="limittext"></a>  CEdit::LimitText
 
-呼叫此函式來限制使用者可能會在編輯控制項中輸入文字的長度。
+呼叫此函式可限制使用者可以在編輯控制項中輸入的文字長度。
 
 ```
 void LimitText(int nChars = 0);
@@ -800,24 +800,24 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>參數
 
 *nChars*<br/>
-指定使用者可以輸入之文字的長度 （以 TCHARs)。 如果此參數為 0，會將文字長度設 UINT_MAX 位元組。 這是預設行為。
+指定使用者可以輸入文字的長度 (以 TCHARs)。 如果此參數為 0, 則文字長度會設定為 UINT_MAX 個位元組。 這是預設行為。
 
 ### <a name="remarks"></a>備註
 
-變更文字限制會限制只有使用者可以輸入的文字。 它不會影響任何文字中已有編輯控制項，也不會影響複製到編輯控制項的文字長度[SetWindowText](cwnd-class.md#setwindowtext)成員函式中的`CWnd`。 如果應用程式使用`SetWindowText`函式，將更多的文字編輯控制項的呼叫中指定以外`LimitText`，使用者可以刪除任何編輯控制項中的文字。 不過，文字限制會防止使用者以新文字取代現有的文字，除非刪除目前選取範圍會導致低於文字限制的文字。
+變更文字限制只會限制使用者可以輸入的文字。 它不會影響任何已經在編輯控制項中的文字, 也不會影響中`CWnd`的[SetWindowText](cwnd-class.md#setwindowtext)成員函式複製到編輯控制項的文字長度。 如果應用程式使用`SetWindowText`函式將更多文字放入編輯控制項中`LimitText`, 而不是呼叫中指定的, 則使用者可以刪除編輯控制項中的任何文字。 不過, 文字限制會讓使用者無法以新的文字取代現有的文字, 除非刪除目前的選取範圍會導致文字低於文字限制。
 
 > [!NOTE]
->  在 Win32 中 （Windows NT 和 Windows 95/98） [SetLimitText](#setlimittext)會取代此函式。
+>  在 Win32 (Windows NT 和 Windows 95/98) 中, [SetLimitText](#setlimittext)會取代此功能。
 
-如需詳細資訊，請參閱 < [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_LIMITTEXT](/windows/win32/Controls/em-limittext) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#17](../../mfc/reference/codesnippet/cpp/cedit-class_16.cpp)]
 
-##  <a name="linefromchar"></a>  CEdit::LineFromChar
+##  <a name="linefromchar"></a>CEdit:: LineFromChar
 
-呼叫此函式來擷取包含指定的字元索引的那一行的行號。
+呼叫此函式可取出包含指定字元索引之行的行號。
 
 ```
 int LineFromChar(int nIndex = -1) const;
@@ -826,19 +826,19 @@ int LineFromChar(int nIndex = -1) const;
 ### <a name="parameters"></a>參數
 
 *nIndex*<br/>
-包含編輯控制項的文字中所需的字元的以零為起始的索引值，或包含-1。 如果*nIndex*為-1，它會指定目前這一行，也就是包含插入號的行。
+包含編輯控制項文字中所需字元的以零為基底的索引值, 或包含-1。 如果*nIndex*為-1, 則會指定目前的行, 也就是包含插入號的行。
 
 ### <a name="return-value"></a>傳回值
 
-包含所指定的字元索引的那一行的以零為起始的行號*nIndex*。 如果*nIndex*為-1，會傳回包含選取範圍的第一個字元的行號。 如果沒有選取範圍，則會傳回目前的行號。
+包含*nIndex*所指定之字元索引的行之以零為起始的行號。 如果*nIndex*為-1, 則會傳回包含選取範圍之第一個字元的行號。 如果沒有選取專案, 則會傳回目前的行號。
 
 ### <a name="remarks"></a>備註
 
-字元索引是編輯控制項的開頭的字元數。
+字元索引是編輯控制項開頭的字元數。
 
-此成員函式只會使用多行編輯控制項。
+這個成員函式僅供多行編輯控制項使用。
 
-如需詳細資訊，請參閱 < [EM_LINEFROMCHAR](/windows/desktop/Controls/em-linefromchar) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_LINEFROMCHAR](/windows/win32/Controls/em-linefromchar) 。
 
 ### <a name="example"></a>範例
 
@@ -846,7 +846,7 @@ int LineFromChar(int nIndex = -1) const;
 
 ##  <a name="lineindex"></a>  CEdit::LineIndex
 
-呼叫此函式來擷取多行編輯控制項中列的字元索引。
+呼叫此函式可抓取多行編輯控制項內一行的字元索引。
 
 ```
 int LineIndex(int nLine = -1) const;
@@ -855,27 +855,27 @@ int LineIndex(int nLine = -1) const;
 ### <a name="parameters"></a>參數
 
 *nLine*<br/>
-包含編輯控制項的文字行的索引值，或包含-1。 如果*n 行*為-1，它會指定目前這一行，也就是包含插入號的行。
+在編輯控制項的文字中包含所需行的索引值, 或包含-1。 如果*n 行*為-1, 則會指定目前的行, 也就是包含插入號的行。
 
 ### <a name="return-value"></a>傳回值
 
-在指定的行的字元索引*n 行*則為-1 大於編輯控制項中的行數的指定的行號。
+*N 行*中指定之行的字元索引, 如果指定的行號大於編輯控制項中的行數, 則為-1。
 
 ### <a name="remarks"></a>備註
 
-字元索引是從一開始編輯控制項的指定行的字元數目。
+字元索引是從編輯控制項開頭到指定行的字元數。
 
-此成員函式只會處理多行編輯控制項。
+這個成員函式只會由多行編輯控制項處理。
 
-如需詳細資訊，請參閱 < [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_LINEINDEX](/windows/win32/controls/em-lineindex) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#19](../../mfc/reference/codesnippet/cpp/cedit-class_18.cpp)]
 
-##  <a name="linelength"></a>  CEdit::LineLength
+##  <a name="linelength"></a>CEdit:: LineLength
 
-擷取編輯控制項中的資料行的長度。
+抓取編輯控制項中的行長度。
 
 ```
 int LineLength(int nLine = -1) const;
@@ -884,31 +884,31 @@ int LineLength(int nLine = -1) const;
 ### <a name="parameters"></a>參數
 
 *nLine*<br/>
-其長度是要擷取的行中的字元以零為起始的索引。 預設值為 -1。
+要抓取其長度之行中的字元之以零為基底的索引。 預設值為 -1。
 
 ### <a name="return-value"></a>傳回值
 
-單行編輯控制項，傳回的值會是編輯控制項中文字的長度，在 TCHARs。
+對於單行編輯控制項, 傳回值是編輯控制項中文字的長度 (以 TCHARs 為單位)。
 
-對於多行編輯控制項，傳回的值是由指定的行的長度，以 TCHARs， *n 行*參數。 ANSI 文字的長度是在行中的位元組數目Unicode 文字的長度為行中的字元數。 長度不包含行尾的歸位字元。
+針對多行編輯控制項, 傳回值是*n 行*參數所指定之行的長度 (以 TCHARs)。 若為 ANSI 文字, 長度為行中的位元組數目;若為 Unicode 文字, 長度為行中的字元數。 長度不包含行尾的回車符。
 
-如果*n 行*參數大於控制項中的字元數、 傳回值為零。
+如果*n 行*參數超過控制項中的字元數, 則傳回值會是零。
 
-如果*n 行*參數值-1，則傳回的值為未選取中的字元數行，其中包含所選的字元。 例如，如果從一條從下一行的結尾的第八個字元的第四個字元，延伸選取範圍，傳回的值為 10。 也就是說，三個字元的第一行和七個下一步。
+如果*n 行*參數為-1, 則傳回值為包含所選取字元之行中未選取的字元數。 例如, 如果選取範圍從一行的第四個字元延伸到下一行結尾的第八個字元, 則傳回值會是10。 也就是第一行有三個字元, 而下一個則是七個字元。
 
-如需 TCHAR 類型的詳細資訊，請參閱 TCHAR 中的資料列中的資料表[Windows 資料類型](/windows/desktop/WinProg/windows-data-types)。
+如需 TCHAR 類型的詳細資訊, 請參閱[Windows 資料類型](/windows/win32/WinProg/windows-data-types)中資料表的 TCHAR 一列。
 
 ### <a name="remarks"></a>備註
 
-這個方法受到[EM_LINELENGTH](/windows/desktop/Controls/em-linelength)訊息，Windows SDK 中所述。
+[EM_LINELENGTH](/windows/win32/Controls/em-linelength)訊息支援此方法, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::LineIndex](#lineindex)。
+  請參閱[CEdit:: LineIndex](#lineindex)的範例。
 
-##  <a name="linescroll"></a>  CEdit::LineScroll
+##  <a name="linescroll"></a>CEdit:: LineScroll
 
-呼叫此函式可捲動的多行編輯控制項的文字。
+呼叫此函式可滾動多行編輯控制項的文字。
 
 ```
 void LineScroll(
@@ -919,28 +919,28 @@ void LineScroll(
 ### <a name="parameters"></a>參數
 
 *nLines*<br/>
-指定要垂直捲動行的數。
+指定要垂直捲動的行數。
 
 *nChars*<br/>
-指定以水平捲動的字元位置數目。 如果編輯控制項有 ES_RIGHT] 或是 [ES_CENTER 樣式，則會忽略此值。
+指定要水準滾動的字元位置數目。 如果編輯控制項具有 ES_RIGHT 或 ES_CENTER 樣式, 則會忽略這個值。
 
 ### <a name="remarks"></a>備註
 
-多行編輯控制項只會處理此成員函式。
+這個成員函式只會由多行編輯控制項處理。
 
-編輯控制項不會以垂直方式捲動過去的文字編輯控制項中的最後一行。 如果目前的行加上所指定的行數*nLines*超過的編輯控制項中的總行數，此值會調整，以便編輯控制項的最後一行會捲動至編輯控制項視窗的頂端。
+編輯控制項不會垂直捲動超過編輯控制項中的最後一行文字。 如果目前的行加上*nLines*所指定的行數超過編輯控制項中的總行數, 則會調整值, 使編輯控制項的最後一行滾動到編輯控制項視窗的頂端。
 
-`LineScroll` 可用來水平捲動的任一行之最後一個字元。
+`LineScroll`可以用來水準滾動到任何一行的最後一個字元之後。
 
-如需詳細資訊，請參閱 < [EM_LINESCROLL](/windows/desktop/Controls/em-linescroll) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_LINESCROLL](/windows/win32/Controls/em-linescroll) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::GetFirstVisibleLine](#getfirstvisibleline)。
+  請參閱[CEdit:: GetFirstVisibleLine](#getfirstvisibleline)的範例。
 
-##  <a name="paste"></a>  CEdit::Paste
+##  <a name="paste"></a>CEdit::P aste
 
-呼叫此函式可將資料從剪貼簿插入`CEdit`的插入點。
+呼叫此函式可將剪貼`CEdit`簿中的資料插入至插入點。
 
 ```
 void Paste();
@@ -948,9 +948,9 @@ void Paste();
 
 ### <a name="remarks"></a>備註
 
-只有當剪貼簿包含 CF_TEXT 格式的資料插入資料。
+只有當剪貼簿包含 CF_TEXT 格式的資料時, 才會插入資料。
 
-如需詳細資訊，請參閱 < [WM_PASTE](/windows/desktop/dataxchg/wm-paste) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[WM_PASTE](/windows/win32/dataxchg/wm-paste) 。
 
 ### <a name="example"></a>範例
 
@@ -958,7 +958,7 @@ void Paste();
 
 ##  <a name="posfromchar"></a>  CEdit::PosFromChar
 
-呼叫此函式可取得指定的字元，在這個位置 （左上角）`CEdit`物件。
+呼叫此函式可取得此`CEdit`物件內指定字元的位置 (左上角)。
 
 ```
 CPoint PosFromChar(UINT nChar) const;
@@ -967,28 +967,28 @@ CPoint PosFromChar(UINT nChar) const;
 ### <a name="parameters"></a>參數
 
 *nChar*<br/>
-指定的字元以零為起始的索引。
+指定字元之以零為基底的索引。
 
 ### <a name="return-value"></a>傳回值
 
-所指定的字元左上角的座標*nChar*。
+*NChar*所指定之字元左上角的座標。
 
 ### <a name="remarks"></a>備註
 
-藉由提供其以零為起始的索引值，指定的字元。 如果*nChar*大於最後一個字元，在此索引`CEdit`物件，傳回的值在此指定剛好超過最後一個字元的字元位置的座標`CEdit`物件。
+字元是藉由提供其以零為基底的索引值來指定。 如果*nChar*大於這個`CEdit`物件中最後一個字元的索引, 則傳回值會指定緊接在這個`CEdit`物件中最後一個字元之後的字元位置座標。
 
 > [!NOTE]
->  此成員函式是從 Windows 95 和 Windows NT 4.0。
+>  從 Windows 95 和 Windows NT 4.0 開始提供此成員函式。
 
-如需詳細資訊，請參閱 < [EM_POSFROMCHAR](/windows/desktop/Controls/em-posfromchar) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_POSFROMCHAR](/windows/win32/Controls/em-posfromchar) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::LineFromChar](#linefromchar)。
+  請參閱[CEdit:: LineFromChar](#linefromchar)的範例。
 
 ##  <a name="replacesel"></a>  CEdit::ReplaceSel
 
-呼叫此函式，以取代所指定的文字編輯控制項中目前的選取範圍*lpszNewText*。
+呼叫此函式可將編輯控制項中目前的選取範圍取代為*lpszNewText*所指定的文字。
 
 ```
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
@@ -997,26 +997,26 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ### <a name="parameters"></a>參數
 
 *lpszNewText*<br/>
-指向以 null 終止的字串，包含取代文字。
+指向以 null 終止的字串, 其中包含取代文字。
 
 *bCanUndo*<br/>
-若要指定此函式可以復原，設定此參數的值為 TRUE。 預設值為 FALSE。
+若要指定此函數可以復原, 請將此參數的值設定為 TRUE。 預設值為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-取代只包含編輯控制項中文字的一部分。 如果您要取代的所有文字，請使用[CWnd::SetWindowText](cwnd-class.md#setwindowtext)成員函式。
+只取代編輯控制項中的部分文字。 如果您想要取代所有的文字, 請使用[CWnd:: SetWindowText](cwnd-class.md#setwindowtext)成員函式。
 
-如果沒有目前的選取項目，取代文字會插入在目前游標位置。
+如果沒有目前的選取範圍, 則會在目前的游標位置插入取代文字。
 
-如需詳細資訊，請參閱 < [EM_REPLACESEL](/windows/desktop/Controls/em-replacesel) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_REPLACESEL](/windows/win32/Controls/em-replacesel) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::LineIndex](#lineindex)。
+  請參閱[CEdit:: LineIndex](#lineindex)的範例。
 
 ##  <a name="setcuebanner"></a>  CEdit::SetCueBanner
 
-設定會顯示為文字提示，或提示，在編輯控制當控制項是空白的文字。
+設定當控制項為空白時, 在編輯控制項中顯示為文字提示或提示的文字。
 
 ```
 BOOL SetCueBanner(LPCWSTR lpszText);
@@ -1029,32 +1029,32 @@ BOOL SetCueBanner(
 ### <a name="parameters"></a>參數
 
 *lpszText*<br/>
-[in]包含要編輯控制項中顯示提示的字串指標。
+在字串的指標, 其中包含要顯示在編輯控制項中的提示。
 
 *fDrawWhenFocused*<br/>
-[in]如果為 FALSE，是不會繪製提示橫幅，當使用者在編輯控制項中按一下，並提供控制項焦點。
+在若為 FALSE, 當使用者在編輯控制項中按一下並提供焦點給控制項時, 不會繪製提示橫幅。
 
-如果為 TRUE，即使控制項有焦點時，才繪製提示橫幅。 當使用者開始輸入控制項中時，就會消失提示橫幅。
+若為 TRUE, 則即使控制項有焦點, 也會繪製提示橫幅。 當使用者開始鍵入控制項時, 提示橫幅就會消失。
 
 預設值為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[EM_SETCUEBANNER](/windows/desktop/Controls/em-setcuebanner)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [Edit_SetCueBannerTextFocused](/windows/desktop/api/commctrl/nf-commctrl-edit_setcuebannertextfocused)巨集。
+這個方法會傳送[EM_SETCUEBANNER](/windows/win32/Controls/em-setcuebanner)訊息, 如 Windows SDK 中所述。 如需詳細資訊, 請參閱[Edit_SetCueBannerTextFocused](/windows/win32/api/commctrl/nf-commctrl-edit_setcuebannertextfocused)宏。
 
 ### <a name="example"></a>範例
 
-下列範例示範[CEdit::SetCueBanner](#setcuebanner)方法。
+下列範例示範[CEdit:: SetCueBanner](#setcuebanner)方法。
 
 [!code-cpp[NVC_MFC_CEdit_s1#2](../../mfc/reference/codesnippet/cpp/cedit-class_20.cpp)]
 
 ##  <a name="sethandle"></a>  CEdit::SetHandle
 
-呼叫此函式可將多行編輯控制項所使用的本機記憶體設定的控制代碼。
+呼叫此函式可將控制碼設定為將由多行編輯控制項使用的本機記憶體。
 
 ```
 void SetHandle(HLOCAL hBuffer);
@@ -1063,32 +1063,32 @@ void SetHandle(HLOCAL hBuffer);
 ### <a name="parameters"></a>參數
 
 *hBuffer*<br/>
-包含本機記憶體的控制代碼。 這個控制代碼必須都由先前呼叫[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)使用 LMEM_MOVEABLE 旗標的 Windows 函式。 記憶體會假設包含以 null 結束的字串。 如果這不是這樣，就應該配置的記憶體中的第一個位元組設定為 0。
+包含本機記憶體的控制碼。 這個控制碼必須由先前使用 LMEM_MOVEABLE 旗標的[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc) Windows 函數呼叫所建立。 記憶體會假設為包含以 null 終止的字串。 如果不是這種情況, 則配置記憶體的第一個位元組應該設定為0。
 
 ### <a name="remarks"></a>備註
 
-然後編輯控制項就會使用這個緩衝區，來儲存目前顯示的文字，而不是它自己的緩衝區配置。
+編輯控制項接著會使用這個緩衝區來儲存目前顯示的文字, 而不是配置自己的緩衝區。
 
-多行編輯控制項只會處理此成員函式。
+這個成員函式只會由多行編輯控制項處理。
 
-應用程式設定新的記憶體處理之前，應該使用[GetHandle](#gethandle)成員函式來取得目前的記憶體緩衝區中的控制代碼，並釋放該記憶體使用`LocalFree`Windows 函式。
+在應用程式設定新的記憶體控制碼之前, 它應該使用[GetHandle](#gethandle)成員函式來取得目前記憶體緩衝區的控制碼, 並使用`LocalFree` Windows 函數釋放該記憶體。
 
-`SetHandle` 清除復原緩衝區 ( [CanUndo](#canundo)成員函式則會傳回 0) 和內部修改旗標 ( [GetModify](#getmodify)成員函式則會傳回 0)。 編輯控制項的視窗會重新繪製。
+`SetHandle`清除復原緩衝區 ( [CanUndo](#canundo)成員函式會傳回 0) 和內部修改旗標 ( [GetModify](#getmodify)成員函式會傳回 0)。 [編輯控制] 視窗會重新繪製。
 
-只有當您設定 DS_LOCALEDIT 樣式旗標建立對話方塊中，您可以在對話方塊中使用多行編輯控制項中的此成員函式。
+只有在已建立 DS_LOCALEDIT 樣式旗標設定的對話方塊時, 您才可以在對話方塊中的多行編輯控制項中使用這個成員函式。
 
 > [!NOTE]
-> `GetHandle` 不適用於 Windows 95/98。 如果您呼叫`GetHandle`在 Windows 95/98，它會傳回 NULL。 `GetHandle` 可在 Windows NT 3.51 及更新版本下所述。
+> `GetHandle`將無法用於 Windows 95/98。 如果您在`GetHandle` Windows 95/98 中呼叫, 它會傳回 Null。 `GetHandle`會如 Windows NT 3.51 版和更新版本中所記載的方式工作。
 
-如需詳細資訊，請參閱 < [EM_SETHANDLE](/windows/desktop/Controls/em-sethandle)， [LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)，並[LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETHANDLE](/windows/win32/Controls/em-sethandle)、 [LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)和[LocalFree](/windows/win32/api/winbase/nf-winbase-localfree) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CEdit#22](../../mfc/reference/codesnippet/cpp/cedit-class_21.cpp)]
 
-##  <a name="sethighlight"></a>  CEdit::SetHighlight
+##  <a name="sethighlight"></a>CEdit:: SetHighlight
 
-反白顯示的範圍會顯示在目前的文字編輯控制項。
+反白顯示目前編輯控制項中顯示的文字範圍。
 
 ```
 void SetHighlight(
@@ -1098,18 +1098,18 @@ void SetHighlight(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*ichStart*|[in]反白顯示的文字範圍中的第一個字元的以零為起始索引。|
-|*ichEnd*|[in]反白顯示的文字範圍中的最後一個字元的以零為起始索引。|
+|*ichStart*|在要反白顯示的文字範圍中第一個字元之以零為起始的索引。|
+|*ichEnd*|在要反白顯示的文字範圍中, 最後一個字元的索引 (以零為基底)。|
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。  這個方法會傳送[EM_SETHILITE](/windows/desktop/Controls/em-sethilite)訊息，Windows SDK 中所述。 兩者`SetHighlight`和`GetHighlight`UNICODE 組建只會啟用。
+這個方法會傳送[EM_SETHILITE](/windows/win32/Controls/em-sethilite)訊息, 如 Windows SDK 中所述。  這個方法會傳送[EM_SETHILITE](/windows/win32/Controls/em-sethilite)訊息, 如 Windows SDK 中所述。 `SetHighlight` 和`GetHighlight`都僅針對 UNICODE 組建啟用。
 
 ##  <a name="setlimittext"></a>  CEdit::SetLimitText
 
-呼叫此成員函式，若要設定此文字限制`CEdit`物件。
+呼叫這個成員函式可設定這個`CEdit`物件的文字限制。
 
 ```
 void SetLimitText(UINT nMax);
@@ -1118,25 +1118,25 @@ void SetLimitText(UINT nMax);
 ### <a name="parameters"></a>參數
 
 *nMax*<br/>
-新文字的限制，以字元為單位。
+新的文字限制 (以字元為單位)。
 
 ### <a name="remarks"></a>備註
 
-文字限制為文字，請在編輯控制項可接受的字元的最大數量。
+文字限制是編輯控制項可以接受的文字數量上限 (以字元為單位)。
 
-變更文字限制會限制只有使用者可以輸入的文字。 它不會影響任何文字中已有編輯控制項，也不會影響複製到編輯控制項的文字長度[SetWindowText](cwnd-class.md#setwindowtext)成員函式中的`CWnd`。 如果應用程式使用`SetWindowText`函式，將更多的文字編輯控制項的呼叫中指定以外`LimitText`，使用者可以刪除任何編輯控制項中的文字。 不過，文字限制會防止使用者以新文字取代現有的文字，除非刪除目前選取範圍會導致低於文字限制的文字。
+變更文字限制只會限制使用者可以輸入的文字。 它不會影響任何已經在編輯控制項中的文字, 也不會影響中`CWnd`的[SetWindowText](cwnd-class.md#setwindowtext)成員函式複製到編輯控制項的文字長度。 如果應用程式使用`SetWindowText`函式將更多文字放入編輯控制項中`LimitText`, 而不是呼叫中指定的, 則使用者可以刪除編輯控制項中的任何文字。 不過, 文字限制會讓使用者無法以新的文字取代現有的文字, 除非刪除目前的選取範圍會導致文字低於文字限制。
 
-此函數會取代[LimitText](#limittext)在 Win32 中。
+此函式會取代 Win32 中的[LimitText](#limittext) 。
 
-如需詳細資訊，請參閱 < [EM_SETLIMITTEXT](/windows/desktop/Controls/em-setlimittext) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETLIMITTEXT](/windows/win32/Controls/em-setlimittext) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。
+  請參閱[CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl)的範例。
 
-##  <a name="setmargins"></a>  CEdit::SetMargins
+##  <a name="setmargins"></a>CEdit:: SetMargins
 
-呼叫這個方法來設定此編輯控制項的左邊和右邊邊界。
+呼叫這個方法, 以設定此編輯控制項的左右邊界。
 
 ```
 void SetMargins(
@@ -1147,25 +1147,25 @@ void SetMargins(
 ### <a name="parameters"></a>參數
 
 *nLeft*<br/>
-新的左邊界，單位為像素的寬度。
+新左邊界的寬度 (以圖元為單位)。
 
 *nRight*<br/>
-新的右邊界，單位為像素的寬度。
+新右邊界的寬度 (以圖元為單位)。
 
 ### <a name="remarks"></a>備註
 
 > [!NOTE]
->  此成員函式是從 Windows 95 和 Windows NT 4.0。
+>  從 Windows 95 和 Windows NT 4.0 開始提供此成員函式。
 
-如需詳細資訊，請參閱 < [EM_SETMARGINS](/windows/desktop/Controls/em-setmargins) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETMARGINS](/windows/win32/Controls/em-setmargins) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEditView::GetEditCtrl](ceditview-class.md#geteditctrl)。
+  請參閱[CEditView:: GetEditCtrl](ceditview-class.md#geteditctrl)的範例。
 
 ##  <a name="setmodify"></a>  CEdit::SetModify
 
-呼叫此函式可設定或清除編輯控制項修改的旗標。
+呼叫此函式可設定或清除編輯控制項的修改旗標。
 
 ```
 void SetModify(BOOL bModified = TRUE);
@@ -1174,21 +1174,21 @@ void SetModify(BOOL bModified = TRUE);
 ### <a name="parameters"></a>參數
 
 *bModified*<br/>
-如果為 true 值表示已修改的文字，，和 FALSE 值，指出它是未經修改。 根據預設，會設定已修改的旗標。
+值為 TRUE 時, 表示已修改文字, 而值為 FALSE 則表示未修改。 根據預設, 已修改的旗標已設定。
 
 ### <a name="remarks"></a>備註
 
-修改的旗標表示已修改的文字編輯控制項中。 它會自動設定的每當使用者變更文字。 其值用來擷取[GetModify](#getmodify)成員函式。
+修改過的旗標會指出是否已修改編輯控制項內的文字。 每當使用者變更文字時, 就會自動設定它。 它的值可以使用[GetModify](#getmodify)成員函式來抓取。
 
-如需詳細資訊，請參閱 < [EM_SETMODIFY](/windows/desktop/Controls/em-setmodify) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETMODIFY](/windows/win32/Controls/em-setmodify) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::GetModify](#getmodify)。
+  請參閱[CEdit:: GetModify](#getmodify)的範例。
 
 ##  <a name="setpasswordchar"></a>  CEdit::SetPasswordChar
 
-呼叫此函式可設定或移除時使用者輸入的文字編輯控制項中顯示的密碼字元。
+呼叫此函式可在使用者輸入文字時, 設定或移除編輯控制項中顯示的密碼字元。
 
 ```
 void SetPasswordChar(TCHAR ch);
@@ -1197,19 +1197,19 @@ void SetPasswordChar(TCHAR ch);
 ### <a name="parameters"></a>參數
 
 *ch*<br/>
-指定要顯示使用者輸入的字元取代的字元。 如果*ch*是 0，則會顯示使用者輸入的實際字元。
+指定要顯示的字元, 以取代使用者所輸入的字元。 如果*ch*為 0, 則會顯示使用者輸入的實際字元。
 
 ### <a name="remarks"></a>備註
 
-設定密碼字元時，該字元會顯示每個字元的使用者類型。
+設定密碼字元時, 會針對使用者所輸入的每個字元顯示該字元。
 
-此成員函式已不會影響多行編輯控制項。
+這個成員函式對多行編輯控制項沒有任何作用。
 
-當`SetPasswordChar`成員函式呼叫時，`CEdit`將會重新繪製所有可見的字元，使用指定的字元*ch*。
+呼叫成員函式時, `CEdit`會使用 ch 指定的字元來重繪所有可見字元。 `SetPasswordChar`
 
-如果編輯控制項以建立[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)樣式，預設密碼字元設為星號 ( <strong>\*</strong>)。 如果移除此樣式`SetPasswordChar`以呼叫*ch*設為 0。
+如果編輯控制項是使用[ES_PASSWORD](styles-used-by-mfc.md#edit-styles)樣式所建立, 則預設密碼字元會設定為星號 ( <strong>\*</strong>)。 如果`SetPasswordChar`使用設定為0的*ch*呼叫, 則會移除此樣式。
 
-如需詳細資訊，請參閱 < [EM_SETPASSWORDCHAR](/windows/desktop/Controls/em-setpasswordchar) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETPASSWORDCHAR](/windows/win32/Controls/em-setpasswordchar) 。
 
 ### <a name="example"></a>範例
 
@@ -1217,7 +1217,7 @@ void SetPasswordChar(TCHAR ch);
 
 ##  <a name="setreadonly"></a>  CEdit::SetReadOnly
 
-呼叫此函式可將編輯控制項的唯讀狀態。
+會呼叫這個函式來設定編輯控制項的唯讀狀態。
 
 ```
 BOOL SetReadOnly(BOOL bReadOnly = TRUE);
@@ -1226,17 +1226,17 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 ### <a name="parameters"></a>參數
 
 *bReadOnly*<br/>
-指定是否要設定或移除編輯控制項的唯讀狀態。 如果為 true 會將狀態設定為唯讀的;FALSE 值設定為讀取/寫入的狀態。
+指定是否要設定或移除編輯控制項的唯讀狀態。 TRUE 值會將狀態設定為唯讀;值為 FALSE 時, 會將狀態設定為讀取/寫入。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果作業成功，則為 0，如果錯誤發生。
+如果作業成功, 則為非零, 如果發生錯誤, 則為0。
 
 ### <a name="remarks"></a>備註
 
-目前的設定可以測試所發現[ES_READONLY](styles-used-by-mfc.md#edit-styles)中的傳回值的旗標[CWnd::GetStyle](cwnd-class.md#getstyle)。
+藉由測試[CWnd:: GetStyle](cwnd-class.md#getstyle)的傳回值中的[ES_READONLY](styles-used-by-mfc.md#edit-styles)旗標, 即可找到目前的設定。
 
-如需詳細資訊，請參閱 < [EM_SETREADONLY](/windows/desktop/Controls/em-setreadonly) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETREADONLY](/windows/win32/Controls/em-setreadonly) 。
 
 ### <a name="example"></a>範例
 
@@ -1244,7 +1244,7 @@ BOOL SetReadOnly(BOOL bReadOnly = TRUE);
 
 ##  <a name="setrect"></a>  CEdit::SetRect
 
-呼叫此函式可設定使用指定的座標是矩形的維度。
+呼叫此函式可使用指定的座標來設定矩形的維度。
 
 ```
 void SetRect(LPCRECT lpRect);
@@ -1253,19 +1253,19 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`RECT`結構或`CRect`物件，指定新的格式化矩形的維度。
+指向結構或`CRect`物件, 指定格式化矩形的新維度。 `RECT`
 
 ### <a name="remarks"></a>備註
 
-多行編輯控制項只會處理此成員。
+這個成員只會由多行編輯控制項處理。
 
-使用`SetRect`設定的格式化矩形的多行編輯控制項。 格式化矩形是大小的文字，也就是大小的獨立的編輯控制項視窗限制的矩形。 編輯控制項最初建立時，格式化矩形是編輯控制項視窗的工作區相同。 使用`SetRect`成員函式，大於或小於編輯控制項視窗的應用程式可以進行格式化的矩形。
+用`SetRect`來設定多行編輯控制項的格式化矩形。 格式化矩形是文字的限制矩形, 與編輯控制視窗的大小無關。 第一次建立編輯控制項時, [格式化] 矩形會與 [編輯控制] 視窗的工作區相同。 藉由使用`SetRect`成員函式, 應用程式可以讓格式化矩形大於或小於編輯控制視窗。
 
-如果編輯控制項有沒有捲軸，文字會裁剪，不會包裝，如果格式化矩形超過視窗。 如果編輯控制項包含框線，框線的大小減少格式化矩形。 如果您調整所傳回的矩形`GetRect`成員函式，您必須移除框線的大小，才能傳遞至矩形`SetRect`。
+如果編輯控制項沒有捲軸, 則如果格式化矩形的設定大於視窗, 則會裁剪文字, 而不會換行。 如果編輯控制項包含框線, 則格式化矩形會縮小框線的大小。 如果您調整`GetRect`成員函式所傳回的矩形, 就必須先移除框線的大小, 然後再將矩形傳遞給`SetRect`。
 
-當`SetRect`呼叫時，編輯控制項的文字也重新格式化並重新顯示。
+當`SetRect`呼叫時, 編輯控制項的文字也會重新格式化並重新顯示。
 
-如需詳細資訊，請參閱 < [EM_SETRECT](/windows/desktop/Controls/em-setrect) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETRECT](/windows/win32/Controls/em-setrect) 。
 
 ### <a name="example"></a>範例
 
@@ -1273,7 +1273,7 @@ void SetRect(LPCRECT lpRect);
 
 ##  <a name="setrectnp"></a>  CEdit::SetRectNP
 
-呼叫此函式來設定多行編輯控制項的格式化矩形。
+呼叫此函式可設定多行編輯控制項的格式化矩形。
 
 ```
 void SetRectNP(LPCRECT lpRect);
@@ -1282,29 +1282,29 @@ void SetRectNP(LPCRECT lpRect);
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向`RECT`結構或`CRect`物件，指定矩形的新的維度。
+指向指定矩形新維度`CRect`的結構或物件。`RECT`
 
 ### <a name="remarks"></a>備註
 
-格式化矩形是大小的文字，也就是大小的獨立的編輯控制項視窗限制的矩形。
+格式化矩形是文字的限制矩形, 與編輯控制視窗的大小無關。
 
-`SetRectNP` 等同於`SetRect`成員函式不同之處在於不會重新繪製編輯控制項的視窗。
+`SetRectNP`與`SetRect`成員函式相同, 不同之處在于編輯控制視窗不會重新繪製。
 
-編輯控制項最初建立時，格式化矩形是編輯控制項視窗的工作區相同。 藉由呼叫`SetRectNP`成員函式，大於或小於編輯控制項視窗的應用程式可以進行格式化的矩形。
+第一次建立編輯控制項時, [格式化] 矩形會與 [編輯控制] 視窗的工作區相同。 藉由呼叫`SetRectNP`成員函式, 應用程式可以讓格式化矩形大於或小於編輯控制視窗。
 
-如果編輯控制項有沒有捲軸，文字會裁剪，不會包裝，如果格式化矩形超過視窗。
+如果編輯控制項沒有捲軸, 則如果格式化矩形的設定大於視窗, 則會裁剪文字, 而不會換行。
 
-多行編輯控制項只會處理此成員。
+這個成員只會由多行編輯控制項處理。
 
-如需詳細資訊，請參閱 < [EM_SETRECTNP](/windows/desktop/Controls/em-setrectnp) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETRECTNP](/windows/win32/Controls/em-setrectnp) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::SetRect](#setrect)。
+  請參閱[CEdit:: SetRect](#setrect)的範例。
 
 ##  <a name="setsel"></a>  CEdit::SetSel
 
-呼叫此函式可編輯控制項中選取的字元範圍。
+呼叫此函式可選取編輯控制項中的字元範圍。
 
 ```
 void SetSel(
@@ -1320,28 +1320,28 @@ void SetSel(
 ### <a name="parameters"></a>參數
 
 *dwSelection*<br/>
-指定低序位字組中的開始位置和結束的位置中的高序位文字。 如果低序位字組為 0，而高序位字組為-1，則會選取編輯控制項中的所有文字。 如果低序位字組為-1，則會移除任何目前的選取範圍。
+指定低序位字組中的開始位置, 以及高序位單字中的結束位置。 如果低序位字組為 0, 且高序位單字為-1, 則會選取編輯控制項中的所有文字。 如果低序位字組為-1, 則會移除任何目前的選取範圍。
 
 *bNoScroll*<br/>
-指出是否應該插入號捲動到檢視。 如果為 FALSE，則會將插入號捲動到檢視。 如果為 TRUE，插入號不會捲動到檢視中。
+指出插入號是否應滾動到 view。 若為 FALSE, 則會將插入號滾動到 view。 若為 TRUE, 則插入號不會滾動到 view。
 
 *nStartChar*<br/>
-指定的開始位置。 如果*nStartChar*為 0 並*nEndChar*為-1，所有選取的文字編輯控制項中。 如果*nStartChar*為-1，會移除任何目前的選取範圍。
+指定開始位置。 如果*nStartChar*為 0, 而*nEndChar*為-1, 則會選取編輯控制項中的所有文字。 如果*nStartChar*為-1, 則會移除任何目前的選取範圍。
 
 *nEndChar*<br/>
-指定的結束位置。
+指定結束位置。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [EM_SETSEL](/windows/desktop/Controls/em-setsel) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETSEL](/windows/win32/Controls/em-setsel) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEdit::GetSel](#getsel)。
+  請參閱[CEdit:: GetSel](#getsel)的範例。
 
 ##  <a name="settabstops"></a>  CEdit::SetTabStops
 
-呼叫此函式以多行編輯控制項中設定定位停駐點。
+呼叫此函式可在多行編輯控制項中設定制表位。
 
 ```
 void SetTabStops();
@@ -1355,37 +1355,37 @@ BOOL SetTabStops(
 ### <a name="parameters"></a>參數
 
 *cxEachStop*<br/>
-指定在設定定位停駐點每隔*cxEachStop*對話方塊單位。
+指定要在每個*cxEachStop*對話單位上設定制表位。
 
 *nTabStops*<br/>
-指定定位停駐點中包含的數目*rgTabStops*。 此數目必須大於 1。
+指定*rgTabStops*中包含的定位停駐點數目。 這個數位必須大於1。
 
 *rgTabStops*<br/>
-對話方塊單位，就會停止指向指定的索引標籤的不帶正負號整數的陣列。 對話方塊單位是水平或垂直距離。 一個水平對話方塊單位等於目前對話方塊基底寬度單位的四分之一，而且 1 個垂直對話方塊單位等於目前對話方塊基底的高度單位的八分之一。 對話方塊基本單位是根據目前系統字型的高度和寬度計算。 `GetDialogBaseUnits` Windows 函式會傳回目前對話方塊基底的單位像素為單位。
+指向不帶正負號整數的陣列, 指定對話方塊單位中的定位停駐點。 對話單位是水準或垂直距離。 一個水準對話單位等於目前對話基底寬度單位的四分之一, 而1個垂直對話方塊單位等於目前對話基底高度單位的八分之一。 對話方塊基本單位是根據目前系統字型的高度和寬度計算。 `GetDialogBaseUnits` Windows 函式會傳回目前的對話方塊基底單位 (以圖元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果已設定索引標籤，為非零否則為 0。
+如果已設定索引標籤, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-當文字複製到多行編輯控制項時，任何索引標籤文字中的字元會導致產生到下一個定位停駐點的空間。
+當文字複製到多行編輯控制項時, 文字中的任何定位字元都會產生下一個定位停駐點的空間。
 
-若要設定 32 個對話方塊單位的預設大小的定位停駐點，呼叫此成員函式的無參數的版本。 若要設定定位停駐點至 32 以外的大小，呼叫的版本與*cxEachStop*參數。 若要設定定位停駐點陣列的大小，請使用兩個參數使用的版本。
+若要將 tab 鍵停駐于預設大小的32對話單位, 請呼叫此成員函式的無參數版本。 若要將 tab 鍵停駐于32以外的大小, 請使用*cxEachStop*參數呼叫版本。 若要將 tab 鍵停駐于大小陣列, 請使用具有兩個參數的版本。
 
-此成員函式只會處理多行編輯控制項。
+這個成員函式只會由多行編輯控制項處理。
 
-`SetTabStops` 不會自動重新繪製 [編輯] 視窗。 如果您變更已在編輯控制項中文字的定位停駐點時，呼叫[CWnd::InvalidateRect](cwnd-class.md#invalidaterect)重繪 [編輯] 視窗。
+`SetTabStops`不會自動重繪 [編輯] 視窗。 如果您變更已在編輯控制項中之文字的定位停駐點, 請呼叫[CWnd:: InvalidateRect](cwnd-class.md#invalidaterect)來重繪 [編輯] 視窗。
 
-如需詳細資訊，請參閱 < [EM_SETTABSTOPS](/windows/desktop/Controls/em-settabstops)並[GetDialogBaseUnits](/windows/desktop/api/winuser/nf-winuser-getdialogbaseunits) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_SETTABSTOPS](/windows/win32/Controls/em-settabstops)和[GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CEditView::SetTabStops](ceditview-class.md#settabstops)。
+  請參閱[CEditView:: SetTabStops](ceditview-class.md#settabstops)的範例。
 
-##  <a name="showballoontip"></a>  CEdit::ShowBalloonTip
+##  <a name="showballoontip"></a>CEdit:: ShowBalloonTip
 
-顯示與目前的編輯控制項相關聯的汽球提示。
+顯示與目前編輯控制項相關聯的氣球提示。
 
 ```
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
@@ -1400,34 +1400,34 @@ BOOL ShowBalloonTip(
 
 |參數|描述|
 |---------------|-----------------|
-|*pEditBalloonTip*|[in]指標[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)該結構描述之氣球提示。|
-|*lpszTitle*|[in]包含的汽球提示標題的 Unicode 字串指標。|
-|*lpszText*|[in]包含的汽球提示文字的 Unicode 字串指標。|
-|*ttiIcon*|[in]**INT**指定類型的相關聯之氣球提示的圖示。 預設值是 TTI_NONE。 如需詳細資訊，請參閱 <<c0> `ttiIcon` 隸屬[EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip)結構。|
+|*pEditBalloonTip*|在描述氣球提示之[EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip)結構的指標。|
+|*lpszTitle*|在Unicode 字串的指標, 其中包含氣球提示的標題。|
+|*lpszText*|在包含氣球提示文字之 Unicode 字串的指標。|
+|*ttiIcon*|在**INT** , 指定要與氣球提示相關聯的圖示類型。 預設值為 TTI_NONE。 如需詳細資訊, 請`ttiIcon`參閱[EDITBALLOONTIP](/windows/win32/api/commctrl/ns-commctrl-editballoontip)結構的成員。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，這個方法，則為 TRUE。否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此函式會將[EM_SHOWBALLOONTIP](/windows/desktop/Controls/em-showballoontip)訊息，Windows SDK 中所述。 如需詳細資訊，請參閱 < [Edit_ShowBalloonTip](/windows/desktop/api/commctrl/nf-commctrl-edit_showballoontip)巨集。
+此函式會傳送[EM_SHOWBALLOONTIP](/windows/win32/Controls/em-showballoontip)訊息, 如 Windows SDK 中所述。 如需詳細資訊, 請參閱[Edit_ShowBalloonTip](/windows/win32/api/commctrl/nf-commctrl-edit_showballoontip)宏。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義變數`m_cedit`，也就是用來存取目前的編輯控制項。 下一個範例中會使用此變數。
+下列程式碼範例會定義用來`m_cedit`存取目前編輯控制項的變數。 下一個範例中會使用此變數。
 
 [!code-cpp[NVC_MFC_CEdit_s1#1](../../mfc/reference/codesnippet/cpp/cedit-class_25.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會顯示編輯控制項的汽球提示。 [CEdit::ShowBalloonTip](#showballoontip)方法指定標題和註解方塊的提示文字。
+下列程式碼範例會顯示編輯控制項的氣球提示。 [CEdit:: ShowBalloonTip](#showballoontip)方法會指定標題和氣球提示文字。
 
 [!code-cpp[NVC_MFC_CEdit_s1#3](../../mfc/reference/codesnippet/cpp/cedit-class_26.cpp)]
 
-##  <a name="undo"></a>  CEdit::Undo
+##  <a name="undo"></a>CEdit:: Undo
 
-呼叫此函式可復原上次的編輯控制項作業。
+呼叫此函式可復原上次編輯控制作業。
 
 ```
 BOOL Undo();
@@ -1435,13 +1435,13 @@ BOOL Undo();
 
 ### <a name="return-value"></a>傳回值
 
-單行編輯控制項，則傳回值永遠為非零值。 對於多行編輯控制項，傳回的值為非零，如果復原作業成功，則為 0，如果復原作業失敗。
+針對單行編輯控制項, 傳回值一律為非零。 若為多行編輯控制項, 如果復原作業成功, 傳回值為非零, 如果復原作業失敗, 則傳回0。
 
 ### <a name="remarks"></a>備註
 
-復原作業也會復原。 例如，您可以在其中還原刪除的文字，與第一次呼叫`Undo`。 只要沒有任何中介的編輯作業，您可以移除第二個呼叫一次的文字`Undo`。
+復原作業也可以復原。 例如, 您可以在第一次呼叫`Undo`時還原已刪除的文字。 只要沒有中間的編輯作業, 您就可以在第二次呼叫`Undo`時, 再次移除文字。
 
-如需詳細資訊，請參閱 < [EM_UNDO](/windows/desktop/Controls/em-undo) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[EM_UNDO](/windows/win32/Controls/em-undo) 。
 
 ### <a name="example"></a>範例
 
@@ -1449,7 +1449,7 @@ BOOL Undo();
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 CALCDRIV:](../../overview/visual-cpp-samples.md)<br/>
 [MFC 範例 CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>

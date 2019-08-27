@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: 115d1c6f3298ea08b7c97061d37d4e27829247ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450666"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453926"
 ---
 # <a name="geometricdistribution-class"></a>geometric_distribution 類別
 
@@ -66,11 +66,11 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*<br/>
-整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*\
+整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*right*<br/>
+*再*\
 要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註
@@ -265,4 +265,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

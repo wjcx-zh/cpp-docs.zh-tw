@@ -54,7 +54,7 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的迭代器會提供其他層級的回應取決於指派給前置處理器的值，定義這類 **\_SECURE\_SCL\_就會擲回**和 **\_迭代器\_偵錯\_層級**。 例如，在**\_迭代器\_偵錯\_LEVEL = 2**，已檢查的迭代器會提供完整正確性檢查偵錯模式，可使用判斷提示。 如需詳細資訊，請參閱 < [Checked Iterators](../standard-library/checked-iterators.md)並[\_迭代器\_偵錯\_層級](../standard-library/iterator-debug-level.md)。
+已檢查的迭代器會強制執行容器界限。 根據預設，已檢查的迭代器超出範圍時，會產生例外狀況並結束程式執行。 已檢查的迭代器會提供其他層級的回應取決於指派給前置處理器的值，定義這類 **\_SECURE\_SCL\_就會擲回**和 **\_迭代器\_偵錯\_層級**。 例如，在 **\_迭代器\_偵錯\_LEVEL = 2**，已檢查的迭代器會提供完整正確性檢查偵錯模式，可使用判斷提示。 如需詳細資訊，請參閱 < [Checked Iterators](../standard-library/checked-iterators.md)並[\_迭代器\_偵錯\_層級](../standard-library/iterator-debug-level.md)。
 
 ## <a name="code-analysis-for-managed-code"></a>Managed 程式碼的程式碼分析
 

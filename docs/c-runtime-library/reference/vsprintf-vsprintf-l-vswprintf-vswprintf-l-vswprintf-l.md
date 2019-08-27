@@ -46,14 +46,14 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 4b6dd55f90a3766dc250040e27b80f9b1c64fde3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383421"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499016"
 ---
-# <a name="vsprintf-vsprintfl-vswprintf-vswprintfl-vswprintfl"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
+# <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 
 使用引數清單的指標，寫入格式化輸出。 這些函式已有更安全的版本，請參閱 [vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)。
 
@@ -123,8 +123,8 @@ int _vswprintf_l(
 *buffer*<br/>
 輸出的儲存位置。
 
-*count*<br/>
-要儲存，此函式的寬字串版本中的字元數目上限。
+*計數*<br/>
+此函式的寬字元串版本中要儲存的最大字元數。
 
 *格式*<br/>
 格式規格。
@@ -137,20 +137,20 @@ int _vswprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**vsprintf**並**vswprintf**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果*緩衝區*或是*格式*為 null 指標，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+**vsprintf**和**vswprintf**會傳回寫入的字元數, 不包括結束的 null 字元, 或如果發生輸出錯誤, 則傳回負數值。 如果*buffer*或*format*是 null 指標, 則這些函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會傳回-1, 並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化並將寫入指定的資料所指向的記憶體*緩衝區*。
+所有這些函式都會接受引數清單的指標, 然後格式化指定的資料, 並將其寫入*緩衝區*所指向的記憶體。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
-> 使用**vsprintf**有方法可限制的字元數寫入時，這表示，使用此函式的程式碼是容易發生緩衝區溢位。 請改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)，或呼叫 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 來判斷需要多大的緩衝區。 此外，請確認*格式*不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 使用**vsprintf**時, 沒有任何方法可限制寫入的字元數, 這表示使用此函式的程式碼很容易發生緩衝區溢位。 請改用 [_vsnprintf](vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)，或呼叫 [_vscprintf](vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md) 來判斷需要多大的緩衝區。 此外, 請確定*格式*不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-**vswprintf**符合 ISO C 標準，而這需要第二個參數，*計數*，型別的**size_t**。 若要強制執行舊的非標準行為，請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 舊的行為不可能在未來的版本中，因此應該變更程式碼，以使用新的一致行為。
+**vswprintf**符合 ISO C 標準, 其需要類型**size_t**的第二個參數*count*。 若要強制執行舊的非標準行為, 請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 舊的行為可能不在未來的版本中, 因此程式碼應該變更為使用新的一致行為。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -165,8 +165,8 @@ int _vswprintf_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**vsprintf**， **_vsprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**vswprintf**， **_vswprintf_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
+|**vsprintf**、 **_vsprintf_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vswprintf**、 **_vswprintf_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

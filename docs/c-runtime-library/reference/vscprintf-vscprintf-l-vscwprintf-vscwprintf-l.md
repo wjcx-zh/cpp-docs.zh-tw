@@ -42,14 +42,14 @@ helpviewer_keywords:
 - vscprintf function
 - vscprintf_l function
 ms.assetid: 1bc67d3d-21d5-49c9-ac8d-69e26b16a3c3
-ms.openlocfilehash: 18b177114fe0e2984fee518b06a72bea72905ed1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 543b8d1024a355bbe92bf63684a7933ca177e3bb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383473"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499096"
 ---
-# <a name="vscprintf-vscprintfl-vscwprintf-vscwprintfl"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
+# <a name="_vscprintf-_vscprintf_l-_vscwprintf-_vscwprintf_l"></a>_vscprintf、_vscprintf_l、_vscwprintf、_vscwprintf_l
 
 使用引數清單的指標傳回格式化的字串字元數。
 
@@ -91,18 +91,18 @@ int _vscwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vscprintf**傳回如果指向的字串所產生的引數清單的字元數被列印或傳送到檔案或緩衝區使用指定的格式化程式碼。 傳回的值不包含終止 Null 字元。 **_vscwprintf**執行相同的函式的寬字元。
+如果引數清單所指向的字串已列印, 或使用指定的格式化程式碼傳送至檔案或緩衝區, 則 **_vscprintf**會傳回所要產生的字元數。 傳回的值不包含終止 Null 字元。 **_vscwprintf**會針對寬字元執行相同的功能。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
 
-如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-每個*引數*（如果有的話） 會根據對應格式規格中轉換*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每個*引數*(如果有的話) 都會根據*格式*的對應格式規格進行轉換。 此格式包含一般字元, 與[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*引數具有相同的形式和功能。
 
 > [!IMPORTANT]
-> 請確定如果*格式*是使用者定義的字串，它是以 null 終止，且具有正確的數目和參數的類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 請確定如果*format*是使用者定義的字串, 它會以 null 終止, 而且具有正確的參數數目和類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -115,8 +115,8 @@ int _vscwprintf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_vscprintf**， **_vscprintf_l**|\<stdio.h>|
-|**_vscwprintf**， **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**_vscprintf**、 **_vscprintf_l**|\<stdio.h>|
+|**_vscwprintf**、 **_vscwprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

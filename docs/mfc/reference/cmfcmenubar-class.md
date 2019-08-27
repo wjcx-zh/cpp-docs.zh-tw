@@ -106,17 +106,17 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 61a5f83e31b4793ca6467287c99f3b9708659402
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775890"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505236"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar 類別
 
 實作停駐的功能表列。
-如需詳細資訊，請參閱中的原始程式碼**VC\\atlmfc\\src\\mfc** Visual Studio 安裝資料夾。
+如需詳細資訊, 請參閱位於 Visual Studio 安裝**的\\VC\\atlmfc\\src mfc**資料夾中的原始程式碼。
 
 ## <a name="syntax"></a>語法
 
@@ -130,68 +130,68 @@ class CMFCMenuBar : public CMFCToolbar
 
 |名稱|描述|
 |----------|-----------------|
-|[CMFCMenuBar::AdjustLocations](#adjustlocations)|(覆寫 `CMFCToolBar::AdjustLocations`。)|
-|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|指定是否可以顯示文字標籤底下的工具列按鈕上的映像。 (覆寫[CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels)。)|
+|[CMFCMenuBar:: AdjustLocations](#adjustlocations)|(覆寫 `CMFCToolBar::AdjustLocations`。)|
+|[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|指定文字標籤是否可以在工具列按鈕的 [影像] 下顯示。 (覆寫[CMFCToolBar:: AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels)。)|
 |[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(覆寫 `CPane::AllowShowOnPaneMenu`。)|
-|[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|計算工具列的水平大小。 (覆寫[CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout)。)|
+|[CMFCMenuBar:: CalcFixedLayout](#calcfixedlayout)|計算工具列的水準大小。 (覆寫[CMFCToolBar:: CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout)。)|
 |[CMFCMenuBar::CalcLayout](#calclayout)|(覆寫 `CMFCToolBar::CalcLayout`。)|
-|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|計算中的工具列按鈕的最大高度。 (覆寫[CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight)。)|
-|[CMFCMenuBar::CanBeClosed](#canbeclosed)|指定使用者是否可以關閉工具列。 (覆寫[CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed)。)|
-|[CMFCMenuBar::CanBeRestored](#canberestored)|判斷是否系統可以還原工具列為其原始狀態後自訂。 (覆寫[CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored)。)|
-|[CMFCMenuBar::Create](#create)|建立功能表控制項，並將它附加至`CMFCMenuBar`物件。|
-|[CMFCMenuBar::CreateEx](#createex)|建立`CMFCMenuBar`具有其他樣式選項物件。|
-|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|初始化`CMFCMenuBar`物件。 接受做為填入範本的 HMENU 參數`CMFCMenuBar`。|
-|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|可讓**協助**位於功能表列右邊的下拉式方塊。|
+|[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|計算工具列中按鈕的最大高度。 (覆寫[CMFCToolBar:: CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight)。)|
+|[CMFCMenuBar:: CanBeClosed](#canbeclosed)|指定使用者是否可以關閉工具列。 (覆寫[CMFCToolBar:: CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed)。)|
+|[CMFCMenuBar:: CanBeRestored](#canberestored)|判斷系統是否可以在自訂之後, 將工具列還原成其原始狀態。 (覆寫[CMFCToolBar:: CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored)。)|
+|[CMFCMenuBar::Create](#create)|建立功能表控制項並將其附加至`CMFCMenuBar`物件。|
+|[CMFCMenuBar::CreateEx](#createex)|建立具有其他樣式選項的物件。`CMFCMenuBar`|
+|[CMFCMenuBar::CreateFromMenu](#createfrommenu)|`CMFCMenuBar`初始化物件。 接受 HMENU 參數, 作為填入`CMFCMenuBar`的範本。|
+|[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)|啟用位於功能表列右側的 [說明] 下拉式方塊。|
 |[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)|指定是否要顯示快顯功能表的陰影。|
-|[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(覆寫[CPane::GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize)。)|
-|[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|傳回的工具列按鈕的寬度。 (覆寫[CMFCToolBar::GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth)。)|
-|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|傳回原始的功能表資源檔中的控制代碼。|
-|[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|資源檔中會傳回原始的功能表資源識別項。|
+|[CMFCMenuBar::GetAvailableExpandSize](#getavailableexpandsize)|(覆寫[CPane:: GetAvailableExpandSize](../../mfc/reference/cpane-class.md#getavailableexpandsize)。)|
+|[CMFCMenuBar::GetColumnWidth](#getcolumnwidth)|傳回工具列按鈕的寬度。 (覆寫[CMFCToolBar:: GetColumnWidth](../../mfc/reference/cmfctoolbar-class.md#getcolumnwidth)。)|
+|[CMFCMenuBar::GetDefaultMenu](#getdefaultmenu)|傳回資源檔中原始功能表的控制碼。|
+|[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)|傳回資源檔中原始功能表的資源識別碼。|
 |[CMFCMenuBar::GetFloatPopupDirection](#getfloatpopupdirection)||
 |[CMFCMenuBar::GetForceDownArrows](#getforcedownarrows)||
-|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|將指標傳回至**協助**下拉式方塊。|
-|[CMFCMenuBar::GetHMenu](#gethmenu)|傳回附加至 功能表的控制代碼`CMFCMenuBar`物件。|
+|[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)|傳回說明下拉式方塊的指標。|
+|[CMFCMenuBar::GetHMenu](#gethmenu)|傳回附加至`CMFCMenuBar`物件之功能表的控制碼。|
 |[CMFCMenuBar::GetMenuFont](#getmenufont)|傳回功能表物件的目前全域字型。|
-|[CMFCMenuBar::GetMenuItem](#getmenuitem)|傳回與提供項目索引相關聯的工具列按鈕。|
-|[CMFCMenuBar::GetRowHeight](#getrowheight)|傳回的工具列按鈕的高度。 (覆寫[CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。)|
+|[CMFCMenuBar::GetMenuItem](#getmenuitem)|傳回與所提供專案索引相關聯的工具列按鈕。|
+|[CMFCMenuBar:: GetRowHeight](#getrowheight)|傳回工具列按鈕的高度。 (覆寫[CMFCToolBar:: GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight)。)|
 |[CMFCMenuBar::GetSystemButton](#getsystembutton)||
 |[CMFCMenuBar::GetSystemButtonsCount](#getsystembuttonscount)||
 |[CMFCMenuBar::GetSystemMenu](#getsystemmenu)||
-|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|指出是否已停用的功能表項目會反白顯示。|
-|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|判斷工具列是否可以顯示擴充框線的按鈕。 (覆寫[CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。)|
-|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|指出是否已停用的項目會反白顯示。|
-|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|表示是否繪製陰影，以針對快顯功能表。|
-|[CMFCMenuBar::IsRecentlyUsedMenus](#isrecentlyusedmenus)|指出是否在功能表列上顯示最近使用的功能表命令。|
-|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|表示快顯功能表是否顯示所有命令。|
-|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|指出功能表是否顯示在短暫延遲之後的所有命令。|
-|[CMFCMenuBar::LoadState](#loadstate)|載入的狀態`CMFCMenuBar`從登錄的物件。|
-|[CMFCMenuBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕時由架構呼叫。 (覆寫[CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot)。)|
-|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|框架視窗從資源檔載入預設功能表時，由架構呼叫。|
+|[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)|指出是否反白顯示已停用的功能表項目。|
+|[CMFCMenuBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|決定工具列是否可以顯示具有延伸框線的按鈕。 (覆寫[CMFCToolBar:: IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable)。)|
+|[CMFCMenuBar::IsHighlightDisabledItems](#ishighlightdisableditems)|指出是否反白顯示停用的專案。|
+|[CMFCMenuBar::IsMenuShadows](#ismenushadows)|指出是否繪製快顯功能表的陰影。|
+|[CMFCMenuBar:: IsRecentlyUsedMenus](#isrecentlyusedmenus)|指出最近使用的功能表命令是否顯示在功能表列上。|
+|[CMFCMenuBar::IsShowAllCommands](#isshowallcommands)|指出快顯功能表是否顯示所有命令。|
+|[CMFCMenuBar::IsShowAllCommandsDelay](#isshowallcommandsdelay)|指出功能表在短暫延遲之後是否顯示所有命令。|
+|[CMFCMenuBar::LoadState](#loadstate)|從登錄載入`CMFCMenuBar`物件的狀態。|
+|[CMFCMenuBar::OnChangeHot](#onchangehot)|當使用者選取工具列上的按鈕時由架構呼叫。 (覆寫[CMFCToolBar:: OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot)。)|
+|[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|框架視窗從資源檔載入預設功能表時由架構呼叫。|
 |[CMFCMenuBar::OnSendCommand](#onsendcommand)|(覆寫 `CMFCToolBar::OnSendCommand`。)|
-|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|當功能表中自訂模式中，而且使用者變更功能表項目的文字時，由架構呼叫。|
+|[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|當功能表處於自訂模式, 而且使用者變更功能表項目的文字時, 由架構呼叫。|
 |[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(覆寫 `CMFCToolBar::OnToolHitTest`。)|
 |[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(覆寫 `CMFCToolBar::PreTranslateMessage`。)|
-|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|當功能表中自訂模式中，而且使用者選取時，由架構呼叫**重設**功能表列。|
-|[CMFCMenuBar::SaveState](#savestate)|儲存的狀態`CMFCMenuBar`登錄的物件。|
-|[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|資源檔中設定的原始的功能表。|
+|[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|當功能表處於自訂模式, 而且使用者選取功能表列的 [**重設**] 時, 由架構呼叫。|
+|[CMFCMenuBar::SaveState](#savestate)|將`CMFCMenuBar`物件的狀態儲存至登錄。|
+|[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|設定資源檔中的原始功能表。|
 |[CMFCMenuBar::SetForceDownArrows](#setforcedownarrows)||
-|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|當 MDI 子視窗變更其顯示模式時，由架構呼叫。 如果 MDI 子視窗新最大化，或不再最大化時，這個方法會更新功能表列。|
-|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|設定使用者以動態方式建立功能表按鈕時，會產生執行階段類別資訊。|
-|[CMFCMenuBar::SetMenuFont](#setmenufont)|設定應用程式中的所有功能表的字型。|
-|[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)|指定是否功能表列會顯示最近使用的功能表命令。|
-|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|指定是否在功能表列會顯示所有命令。|
+|[CMFCMenuBar::SetMaximizeMode](#setmaximizemode)|當 MDI 子視窗變更其顯示模式時由架構呼叫。 如果 MDI 子視窗剛最大化或不再最大化, 則此方法會更新功能表列。|
+|[CMFCMenuBar::SetMenuButtonRTC](#setmenubuttonrtc)|設定當使用者以動態方式建立功能表按鈕時, 所產生的執行時間類別資訊。|
+|[CMFCMenuBar::SetMenuFont](#setmenufont)|設定應用程式中所有功能表的字型。|
+|[CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus)|指定功能表列是否顯示最近使用的功能表命令。|
+|[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)|指定功能表列是否顯示所有命令。|
 
 ## <a name="remarks"></a>備註
 
-`CMFCMenuBar`類別是實作停駐的功能的功能表列。 它類似於工具列中，雖然無法關閉-它一律會顯示。
+`CMFCMenuBar`類別是用來執行銜接功能的功能表列。 它與工具列類似, 但它並不會被關閉, 它一律會顯示。
 
-`CMFCMenuBar` 支援的選項，顯示最近使用的功能表項目物件。 如果已啟用此選項，`CMFCMenuBar`僅會顯示可用命令的第一個檢視上。 此後，最近使用的命令會顯示與原始命令的子集。 此外，使用者一律可以展開以檢視所有可用的命令功能表。 因此，每個可用的命令被設定來顯示一直在改變，或具有最近選取時，才會顯示。
+`CMFCMenuBar`支援顯示最近使用的功能表項目物件的選項。 如果啟用此選項, 則`CMFCMenuBar`會在第一次查看時只顯示可用命令的子集。 之後, 最近使用的命令會與原始的命令子集一起顯示。 此外, 使用者一律可以展開功能表來查看所有可用的命令。 因此, 每個可用的命令都會設定為持續顯示, 或只在最近選取時才顯示。
 
-若要使用`CMFCMenuBar`物件、 將它內嵌在主視窗框架物件。 處理時`WM_CREATE`訊息，請呼叫`CMFCMenuBar::Create`或`CMFCMenuBar::CreateEx`。 不論其中建立函式，您使用，傳入至主框架視窗的指標。 然後啟用 藉由呼叫停駐[cframewndex:: Enabledocking](../../mfc/reference/cframewndex-class.md#enabledocking)。 停駐此功能表中，藉由呼叫[CFrameWndEx::DockPane](../../mfc/reference/cframewndex-class.md#dockpane)。
+若要使用`CMFCMenuBar`物件, 請將它內嵌在主視窗框架物件中。 處理`WM_CREATE`訊息時, 請呼叫`CMFCMenuBar::Create`或`CMFCMenuBar::CreateEx`。 不論您使用哪一個 create 函式, 請將指標傳入主框架視窗。 然後藉由呼叫[CFrameWndEx:: EnableDocking](../../mfc/reference/cframewndex-class.md#enabledocking)來啟用銜接。 藉由呼叫[CFrameWndEx::D ockpane](../../mfc/reference/cframewndex-class.md#dockpane)來停駐此功能表。
 
 ## <a name="example"></a>範例
 
-下例示範如何在 `CMFCMenuBar` 類別中使用各種方法。 此範例示範如何設定窗格的樣式、 啟用 [自訂] 按鈕、 啟用說明方塊、 啟用快顯功能表的陰影和更新功能表列。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
+下例示範如何在 `CMFCMenuBar` 類別中使用各種方法。 此範例示範如何設定窗格的樣式、啟用 [自訂] 按鈕、啟用 [說明] 方塊、針對快顯功能表啟用陰影, 以及更新功能表列。 此程式碼片段是[IE 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -216,11 +216,11 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxmenubar.h
+**標頭:** afxmenubar。h
 
-##  <a name="adjustlocations"></a>  CMFCMenuBar::AdjustLocations
+##  <a name="adjustlocations"></a>CMFCMenuBar:: AdjustLocations
 
-調整的功能表項目，功能表列上的位置。
+在功能表列上調整功能表項目的位置。
 
 ```
 virtual void AdjustLocations();
@@ -228,9 +228,9 @@ virtual void AdjustLocations();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="allowchangetextlabels"></a>  CMFCMenuBar::AllowChangeTextLabels
+##  <a name="allowchangetextlabels"></a>CMFCMenuBar:: AllowChangeTextLabels
 
-決定是否允許文字標籤，以在功能表列中的映像。
+決定功能表列的 [影像] 下是否允許文字標籤。
 
 ```
 virtual BOOL AllowChangeTextLabels() const;
@@ -238,11 +238,11 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果使用者可以選擇要顯示影像下方的文字標籤，則傳回 TRUE。
+如果使用者可以選擇在 [影像] 下顯示文字標籤, 則傳回 TRUE。
 
 ### <a name="remarks"></a>備註
 
-##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu
+##  <a name="allowshowonpanemenu"></a>CMFCMenuBar:: AllowShowOnPaneMenu
 
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
@@ -252,7 +252,7 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CMFCMenuBar:: CalcFixedLayout
 
 ```
 virtual CSize CalcFixedLayout(
@@ -262,7 +262,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>參數
 
-[in] *bStretch*<br/>
+在*bStretch*<br/>
 
 [in] *bHorz*<br/>
 
@@ -270,7 +270,7 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout
+##  <a name="calclayout"></a>CMFCMenuBar:: CalcLayout
 
 ```
 virtual CSize CalcLayout(
@@ -280,15 +280,15 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>參數
 
-[in] *dwMode*<br/>
+在*dwMode*<br/>
 
-[in] *nLength*<br/>
+在*nLength*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight
+##  <a name="calcmaxbuttonheight"></a>CMFCMenuBar:: CalcMaxButtonHeight
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -298,7 +298,7 @@ virtual int CalcMaxButtonHeight();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed
+##  <a name="canbeclosed"></a>CMFCMenuBar:: CanBeClosed
 
 ```
 virtual BOOL CanBeClosed() const;
@@ -308,7 +308,7 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored
+##  <a name="canberestored"></a>CMFCMenuBar:: CanBeRestored
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -318,9 +318,9 @@ virtual BOOL CanBeRestored() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="create"></a>  CMFCMenuBar::Create
+##  <a name="create"></a>CMFCMenuBar:: Create
 
-建立功能表控制項，並將它附加至[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。
+建立功能表控制項, 並將它附加至[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。
 
 ```
 virtual BOOL Create(
@@ -332,13 +332,13 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-[in]新的父視窗指標`CMFCMenuBar`物件。
+在新`CMFCMenuBar`物件之父視窗的指標。
 
 *dwStyle*<br/>
-[in]新的功能表列的樣式。
+在新功能表列的樣式。
 
 *nID*<br/>
-[in]在功能表列的子視窗識別碼。
+在功能表列之子視窗的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
@@ -346,13 +346,13 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-建構之後`CMFCMenuBar`物件，您必須呼叫`Create`。 這個方法會建立`CMFCMenuBar`控制項，並將它附加至`CMFCMenuBar`物件。
+在您建立`CMFCMenuBar`物件之後, 必須呼叫`Create`。 這個方法會建立`CMFCMenuBar`控制項, 並將它附加`CMFCMenuBar`至物件。
 
-如需有關 toolbar 樣式的詳細資訊，請參閱[CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)。
+如需工具列樣式的詳細資訊, 請參閱[CBasePane:: SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)。
 
-##  <a name="createex"></a>  CMFCMenuBar::CreateEx
+##  <a name="createex"></a>CMFCMenuBar:: CreateEx
 
-會建立[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件與指定的延伸樣式。
+建立具有指定擴充樣式的[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。
 
 ```
 virtual BOOL CreateEx(
@@ -369,40 +369,40 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *pParentWnd*<br/>
-[in]新的父視窗指標`CMFCMenuBar`物件。
+在新`CMFCMenuBar`物件之父視窗的指標。
 
 *dwCtrlStyle*<br/>
-[in]新的功能表列的其他樣式。
+在新功能表列的其他樣式。
 
 *dwStyle*<br/>
-[in]新的功能表列的主樣式。
+在新功能表列的主要樣式。
 
 *rcBorders*<br/>
-[in]A`CRect`參數，指定的框線大小`CMFCMenuBar`物件。
+在參數, 指定`CMFCMenuBar`物件的框線大小。 `CRect`
 
 *nID*<br/>
-[in]在功能表列的子視窗識別碼。
+在功能表列之子視窗的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功則為非零否則為 0。
+如果方法成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-您應該使用此函式，而不是[CMFCMenuBar::Create](#create)想要指定除了工具列樣式的樣式時。 一些常用的其他樣式為 TBSTYLE_TRANSPARENT 和 CBRS_TOP。
+當您想要指定除了工具列樣式以外的樣式時, 您應該使用此函式, 而不是[CMFCMenuBar:: Create](#create) 。 一些經常使用的其他樣式是 TBSTYLE_TRANSPARENT 和 CBRS_TOP。
 
-如需其他樣式清單，請參閱[工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)，[通用控制項的樣式](/windows/desktop/Controls/common-control-styles)，並[通用的視窗樣式](/windows/desktop/winmsg/window-styles)。
+如需其他樣式的清單, 請參閱[工具列控制項和按鈕樣式](/windows/win32/Controls/toolbar-control-and-button-styles)、[通用控制項樣式](/windows/win32/Controls/common-control-styles), 以及[常用的視窗樣式](/windows/win32/winmsg/window-styles)。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`CreateEx`方法的`CMFCMenuBar`類別。 此程式碼片段是一部分[IE 示範範例](../../overview/visual-cpp-samples.md)。
+下列範例示範如何使用`CreateEx` `CMFCMenuBar`類別的方法。 此程式碼片段是[IE 示範範例](../../overview/visual-cpp-samples.md)的一部分。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]
 
-##  <a name="createfrommenu"></a>  CMFCMenuBar::CreateFromMenu
+##  <a name="createfrommenu"></a>CMFCMenuBar:: CreateFromMenu
 
-初始化[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。 此方法模型`CMFCMenuBar`HMENU 參數之後的物件。
+初始化[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。 這個方法會在`CMFCMenuBar` HMENU 參數之後建立物件的模型。
 
 ```
 virtual void CreateFromMenu(
@@ -414,21 +414,21 @@ virtual void CreateFromMenu(
 ### <a name="parameters"></a>參數
 
 *hMenu*<br/>
-[in]功能表資源控制代碼。 `CreateFromMenu` 使用這項資源的範本作為`CMFCMenuBar`。
+在功能表資源的控制碼。 `CreateFromMenu`會使用此資源做為的範本`CMFCMenuBar`。
 
 *bDefaultMenu*<br/>
-[in]布林值，指出新的功能表是否為預設的功能表。
+在布林值, 指出新功能表是否為預設功能表。
 
 *bForceUpdate*<br/>
-[in]布林值，指出這個方法是否會強制功能表更新。
+在布林值, 指出這個方法是否強制功能表更新。
 
 ### <a name="remarks"></a>備註
 
-如果您想要有相同的功能表項目，為功能表資源功能表控制項，請使用這個方法。 您會呼叫這個方法之後您可以呼叫, [CMFCMenuBar::Create](#create)或是[CMFCMenuBar::CreateEx](#createex)。
+如果您想要功能表控制項具有與功能表資源相同的功能表項目, 請使用這個方法。 呼叫[CMFCMenuBar:: Create](#create)或[CMFCMenuBar:: CreateEx](#createex)之後, 請呼叫這個方法。
 
-##  <a name="enablehelpcombobox"></a>  CMFCMenuBar::EnableHelpCombobox
+##  <a name="enablehelpcombobox"></a>CMFCMenuBar:: EnableHelpCombobox
 
-可讓**協助**位於功能表列右邊的下拉式方塊。
+啟用位於功能表列右側的 [說明] 下拉式方塊。
 
 ```
 void EnableHelpCombobox(
@@ -440,23 +440,23 @@ void EnableHelpCombobox(
 ### <a name="parameters"></a>參數
 
 *uiID*<br/>
-[in]按鈕的命令 ID**協助**下拉式方塊。
+在[說明] 下拉式方塊按鈕的命令 ID。
 
 *lpszPrompt*<br/>
-[in]字串，其中包含架構會顯示在下拉式方塊中，如果它是空的而且非作用中的文字。 例如，"輸入的文字 」。
+在字串, 其中包含架構在下拉式方塊中顯示的文字 (如果它是空的且不在使用中)。 例如, 「在此輸入文字」。
 
 *nComboBoxWidth*<br/>
-[in]像素為單位的下拉式方塊按鈕的寬度。
+在下拉式方塊按鈕的寬度 (以圖元為單位)。
 
 ### <a name="remarks"></a>備註
 
-**幫助**下拉式方塊類似**協助**Microsoft Word 的功能表列中的下拉式方塊。
+[說明] 下拉式列示方塊類似 Microsoft Word 功能表列中的 [說明] 下拉式方塊。
 
-當您呼叫這個方法時*uiID*設為 0，這個方法會隱藏下拉式方塊。 否則這個方法會顯示下拉式方塊會自動在右側的功能表列上。 呼叫這個方法之後，請呼叫[CMFCMenuBar::GetHelpCombobox](#gethelpcombobox)以取得要插入的指標[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件。
+當您呼叫這個方法, 並將*uiID*設為0時, 這個方法會隱藏下拉式方塊。 否則, 這個方法會自動在功能表列的右側顯示下拉式方塊。 在您呼叫這個方法之後, 請呼叫[CMFCMenuBar:: GetHelpCombobox](#gethelpcombobox)來取得所插入之[CMFCToolBarComboBoxButton](../../mfc/reference/cmfctoolbarcomboboxbutton-class.md)物件的指標。
 
-##  <a name="enablemenushadows"></a>  CMFCMenuBar::EnableMenuShadows
+##  <a name="enablemenushadows"></a>CMFCMenuBar:: EnableMenuShadows
 
-可讓快顯功能表的陰影。
+啟用快顯功能表的陰影。
 
 ```
 static void EnableMenuShadows(BOOL bEnable = TRUE);
@@ -465,13 +465,13 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>參數
 
 *bEnable*<br/>
-[in]布林值參數，指出是否應該啟用快顯功能表的陰影。
+在布林值參數, 指出是否應該啟用快顯功能表的陰影。
 
 ### <a name="remarks"></a>備註
 
-這個方法會使用的演算法很複雜，而且可能會降低速度較慢的系統上的應用程式的效能。
+這個方法所使用的演算法很複雜, 而且可能會降低您的應用程式在較慢的系統上的效能。
 
-##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize
+##  <a name="getavailableexpandsize"></a>CMFCMenuBar:: GetAvailableExpandSize
 
 ```
 virtual int GetAvailableExpandSize() const;
@@ -481,7 +481,7 @@ virtual int GetAvailableExpandSize() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth
+##  <a name="getcolumnwidth"></a>CMFCMenuBar:: GetColumnWidth
 
 ```
 virtual int GetColumnWidth() const;
@@ -491,9 +491,9 @@ virtual int GetColumnWidth() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getdefaultmenu"></a>  CMFCMenuBar::GetDefaultMenu
+##  <a name="getdefaultmenu"></a>CMFCMenuBar:: GetDefaultMenu
 
-擷取原始的功能表的控制代碼。 架構會從資源檔載入原始的功能表。
+抓取原始功能表的控制碼。 架構會從資源檔載入原始功能表。
 
 ```
 HMENU GetDefaultMenu() const;
@@ -501,15 +501,15 @@ HMENU GetDefaultMenu() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能表資源控制代碼。
+功能表資源的控制碼。
 
 ### <a name="remarks"></a>備註
 
-如果您的應用程式自訂功能表，您可以使用這個方法來擷取原始的功能表的控制代碼。
+如果您的應用程式自訂功能表, 您可以使用這個方法來抓取原始功能表的控制碼。
 
-##  <a name="getdefaultmenuresid"></a>  CMFCMenuBar::GetDefaultMenuResId
+##  <a name="getdefaultmenuresid"></a>CMFCMenuBar:: GetDefaultMenuResId
 
-擷取預設的功能表資源識別碼。
+抓取預設功能表的資源識別碼。
 
 ```
 UINT GetDefaultMenuResId() const;
@@ -517,13 +517,13 @@ UINT GetDefaultMenuResId() const;
 
 ### <a name="return-value"></a>傳回值
 
-功能表資源的識別項。
+功能表資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-Framework 載入的預設功能表`CMFCMenuBar`從資源檔的物件。
+架構會從資源檔載入`CMFCMenuBar`物件的預設功能表。
 
-##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection
+##  <a name="getfloatpopupdirection"></a>CMFCMenuBar:: GetFloatPopupDirection
 
 ```
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
@@ -531,13 +531,13 @@ int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in] *pButton*<br/>
+在*pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows
+##  <a name="getforcedownarrows"></a>CMFCMenuBar:: GetForceDownArrows
 
 ```
 BOOL GetForceDownArrows();
@@ -547,9 +547,9 @@ BOOL GetForceDownArrows();
 
 ### <a name="remarks"></a>備註
 
-##  <a name="gethelpcombobox"></a>  CMFCMenuBar::GetHelpCombobox
+##  <a name="gethelpcombobox"></a>CMFCMenuBar:: GetHelpCombobox
 
-將指標傳回至**協助**下拉式方塊。
+傳回說明下拉式方塊的指標。
 
 ```
 CMFCToolBarComboBoxButton* GetHelpCombobox();
@@ -557,23 +557,23 @@ CMFCToolBarComboBoxButton* GetHelpCombobox();
 
 ### <a name="return-value"></a>傳回值
 
-指標**協助**下拉式方塊。 如果**協助**下拉式方塊會隱藏，或未啟用。
+[說明] 下拉式方塊的指標。 如果 [說明 ] 下拉式方塊已隱藏或未啟用, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-**協助**下拉式方塊位於功能表列的右邊。 呼叫方法[CMFCMenuBar::EnableHelpCombobox](#enablehelpcombobox)若要啟用此下拉式方塊。
+[說明] 下拉式方塊位於功能表列的右側。 呼叫[CMFCMenuBar:: EnableHelpCombobox](#enablehelpcombobox)方法, 以啟用此下拉式方塊。
 
-##  <a name="gethmenu"></a>  CMFCMenuBar::GetHMenu
+##  <a name="gethmenu"></a>CMFCMenuBar:: GetHMenu
 
-擷取附加至 功能表的控制代碼[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件。
+抓取附加至[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件之功能表的控制碼。
 
 ```
 HMENU GetHMenu() const;
 ```
 
-##  <a name="getmenufont"></a>  CMFCMenuBar::GetMenuFont
+##  <a name="getmenufont"></a>CMFCMenuBar:: GetMenuFont
 
-擷取目前的功能表字型。
+抓取目前的功能表字型。
 
 ```
 static const CFont& GetMenuFont(BOOL bHorz = TRUE);
@@ -582,19 +582,19 @@ static const CFont& GetMenuFont(BOOL bHorz = TRUE);
 ### <a name="parameters"></a>參數
 
 *bHorz*<br/>
-[in]布林值參數，指定是否要傳回的水平或垂直字型。 TRUE 表示將水平字型。
+在指定是否要傳回水準或垂直字型的布林值參數。 TRUE 表示水準字型。
 
 ### <a name="return-value"></a>傳回值
 
-指標[CFont](../../mfc/reference/cfont-class.md)參數，其中包含目前的功能表列字型。
+[CFont](../../mfc/reference/cfont-class.md)參數的指標, 其中包含目前的功能表列字型。
 
 ### <a name="remarks"></a>備註
 
-傳回的字型是應用程式的全域參數。 兩個全域字型會維護所有`CMFCMenuBar`物件。 對於水平和垂直的功能表列，會使用這些不同的字型。
+傳回的字型是應用程式的全域參數。 系統會針對所有`CMFCMenuBar`物件維護兩個全域字型。 這些個別字型會用於水準和垂直功能表列。
 
-##  <a name="getmenuitem"></a>  CMFCMenuBar::GetMenuItem
+##  <a name="getmenuitem"></a>CMFCMenuBar:: GetMenuItem
 
-擷取[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)功能表列上的物件，根據項目索引。
+根據專案索引, 在功能表列上抓取[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件。
 
 ```
 CMFCToolBarButton* GetMenuItem(int iItem) const;
@@ -603,13 +603,13 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 ### <a name="parameters"></a>參數
 
 *iItem*<br/>
-[in]傳回功能表項目的索引。
+在要傳回之功能表項目的索引。
 
 ### <a name="return-value"></a>傳回值
 
-指標`CMFCToolBarButton`符合所指定之索引的物件*iItem*。 如果索引無效，則為 NULL。
+`CMFCToolBarButton`物件的指標, 符合*iItem*所指定的索引。 如果索引無效, 則為 Null。
 
-##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight
+##  <a name="getrowheight"></a>CMFCMenuBar:: GetRowHeight
 
 ```
 virtual int GetRowHeight() const;
@@ -619,7 +619,7 @@ virtual int GetRowHeight() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton
+##  <a name="getsystembutton"></a>CMFCMenuBar:: GetSystemButton
 
 ```
 CMFCToolBarMenuButtonsButton* GetSystemButton(
@@ -629,15 +629,15 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>參數
 
-[in] *uiBtn*<br/>
+在*uiBtn*<br/>
 
-[in] *bByCommand*<br/>
+在*bByCommand*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount
+##  <a name="getsystembuttonscount"></a>CMFCMenuBar:: GetSystemButtonsCount
 
 ```
 int GetSystemButtonsCount() const;
@@ -647,7 +647,7 @@ int GetSystemButtonsCount() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu
+##  <a name="getsystemmenu"></a>CMFCMenuBar:: GetSystemMenu
 
 ```
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
@@ -657,9 +657,9 @@ CMFCToolBarSystemMenuButton* GetSystemMenu() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="highlightdisableditems"></a>  CMFCMenuBar::HighlightDisabledItems
+##  <a name="highlightdisableditems"></a>CMFCMenuBar:: HighlightDisabledItems
 
-控制是否架構會反白顯示已停用的功能表項目。
+控制架構是否反白顯示已停用的功能表項目。
 
 ```
 static void HighlightDisabledItems(BOOL bHighlight = TRUE);
@@ -668,13 +668,13 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 ### <a name="parameters"></a>參數
 
 *bHighlight*<br/>
-[in]布林值參數，指出是否此架構會反白顯示無法使用的功能表項目。
+在布林值參數, 指出架構是否會反白顯示無法使用的功能表項目。
 
 ### <a name="remarks"></a>備註
 
-根據預設，架構不會不反白顯示無法使用的功能表項目時，使用者將滑鼠指標停留。
+根據預設, 當使用者將滑鼠指標置於其上時, 架構不會反白顯示無法使用的功能表項目。
 
-##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable
+##  <a name="isbuttonextrasizeavailable"></a>CMFCMenuBar:: IsButtonExtraSizeAvailable
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -684,9 +684,9 @@ virtual BOOL IsButtonExtraSizeAvailable() const;
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ishighlightdisableditems"></a>  CMFCMenuBar::IsHighlightDisabledItems
+##  <a name="ishighlightdisableditems"></a>CMFCMenuBar:: IsHighlightDisabledItems
 
-指出是否此架構會反白顯示無法使用的功能表項目。
+指出架構是否會反白顯示無法使用的功能表項目。
 
 ```
 static BOOL IsHighlightDisabledItems();
@@ -694,15 +694,15 @@ static BOOL IsHighlightDisabledItems();
 
 ### <a name="return-value"></a>傳回值
 
-如果無法使用，則為 TRUE 的功能表項目會反白顯示;否則為 FALSE。
+如果反白顯示無法使用的功能表項目, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-根據預設，架構不會不反白顯示無法使用的功能表項目時，使用者將滑鼠指標停留。 使用[CMFCMenuBar::HighlightDisabledItems](#highlightdisableditems)方法，以啟用這項功能。
+根據預設, 當使用者將滑鼠指標置於其上時, 架構不會反白顯示無法使用的功能表項目。 請使用[CMFCMenuBar:: HighlightDisabledItems](#highlightdisableditems)方法來啟用這項功能。
 
-##  <a name="ismenushadows"></a>  CMFCMenuBar::IsMenuShadows
+##  <a name="ismenushadows"></a>CMFCMenuBar:: IsMenuShadows
 
-指出架構是否繪製陰影的快顯功能表。
+指出架構是否繪製快顯功能表的陰影。
 
 ```
 static BOOL IsMenuShadows();
@@ -710,15 +710,15 @@ static BOOL IsMenuShadows();
 
 ### <a name="return-value"></a>傳回值
 
-如果架構繪製功能表陰影;，則為 TRUE。否則為 FALSE。
+如果架構繪製功能表陰影, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用[CMFCMenuBar::EnableMenuShadows](#enablemenushadows)方法可啟用或停用此功能。
+請使用[CMFCMenuBar:: EnableMenuShadows](#enablemenushadows)方法來啟用或停用這項功能。
 
-##  <a name="isrecentlyusedmenus"></a>  CMFCMenuBar::IsRecentlyUsedMenus
+##  <a name="isrecentlyusedmenus"></a>CMFCMenuBar:: IsRecentlyUsedMenus
 
-指出是否在功能表列上顯示最近使用的功能表命令。
+指出最近使用的功能表命令是否顯示在功能表列上。
 
 ```
 static BOOL IsRecentlyUsedMenus();
@@ -726,13 +726,13 @@ static BOOL IsRecentlyUsedMenus();
 
 ### <a name="return-value"></a>傳回值
 
-非零`CMFCMenuBar`物件顯示最近使用功能表命令，否則將 0。
+如果`CMFCMenuBar`物件顯示最近使用的功能表命令, 則為非零, 否則為0。
 
 ### <a name="remarks"></a>備註
 
-使用函式[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)來控制是否的功能表列會顯示最近使用的功能表命令。
+使用[CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus)函式來控制功能表列是否顯示最近使用的功能表命令。
 
-##  <a name="isshowallcommands"></a>  CMFCMenuBar::IsShowAllCommands
+##  <a name="isshowallcommands"></a>CMFCMenuBar:: IsShowAllCommands
 
 指出功能表是否顯示所有命令。
 
@@ -742,17 +742,17 @@ static BOOL IsShowAllCommands();
 
 ### <a name="return-value"></a>傳回值
 
-非零`CMFCMenuBar`會顯示所有命令; 否則為 0。
+如果顯示所有`CMFCMenuBar`命令, 則為非零, 否則為0。
 
 ### <a name="remarks"></a>備註
 
-A`CMFCMenuBar`物件可以設定為顯示所有命令，或都顯示命令的子集。 如需這項功能的詳細資訊，請參閱[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。
+`CMFCMenuBar`物件可以設定為顯示所有命令, 或只顯示命令的子集。 如需這項功能的詳細資訊, 請參閱[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。
 
-`IsShowAllCommands` 會告訴您如何這項功能已針對`CMFCMenuBar`物件。 若要控制顯示哪一個功能表命令，使用方法[CMFCMenuBar::SetShowAllCommands](#setshowallcommands)並[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)。
+`IsShowAllCommands`會告訴您如何為`CMFCMenuBar`物件設定這項功能。 若要控制所顯示的功能表命令, 請使用[CMFCMenuBar:: SetShowAllCommands](#setshowallcommands)和[CMFCMenuBar:: SetRecentlyUsedMenus](#setrecentlyusedmenus)方法。
 
-##  <a name="isshowallcommandsdelay"></a>  CMFCMenuBar::IsShowAllCommandsDelay
+##  <a name="isshowallcommandsdelay"></a>CMFCMenuBar:: IsShowAllCommandsDelay
 
-指出是否[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件會顯示在短暫延遲之後的所有命令。
+指出[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件是否會在短暫延遲後顯示所有命令。
 
 ```
 static BOOL IsShowAllCommandsDelay();
@@ -760,19 +760,19 @@ static BOOL IsShowAllCommandsDelay();
 
 ### <a name="return-value"></a>傳回值
 
-如果在功能表列會顯示完整的功能表，在短暫的延遲; 之後，非零值。否則為 0。
+如果功能表列在短暫延遲之後顯示完整功能表, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-當您設定功能表列來顯示最近使用過的項目時，功能表列會顯示完整的功能表中有兩種：
+當您設定功能表列以顯示 [最近使用的專案] 時, 功能表列會以下列兩種方式的其中一種來顯示 [完整] 功能表:
 
-- 從使用者當游標停留在功能表底部的箭號的程式化的延遲之後顯示完整的功能表。
+- 當使用者將游標停留在功能表底部的箭號上時, 顯示 [從設計的延遲後] 的 [完整] 功能表。
 
-- 在使用者按一下功能表底部的箭頭之後，請顯示完整的功能表。
+- 在使用者按一下功能表底部的箭號之後, 顯示 [完整] 功能表。
 
-根據預設，所有`CMFCMenuBar`物件使用選項來顯示 在短暫延遲之後的 完整 功能表。 無法變更此選項以程式設計方式在`CMFCMenuBar`類別。 不過，使用者可以使用變更行為期間工具列自訂**自訂**對話方塊...
+根據預設, 所有`CMFCMenuBar`物件都會使用選項, 在短暫延遲之後顯示完整的功能表。 此選項無法在`CMFCMenuBar`類別中以程式設計方式變更。 不過, 使用者可以使用 [**自訂**] 對話方塊, 在自訂工具列期間變更行為。
 
-##  <a name="loadstate"></a>  CMFCMenuBar::LoadState
+##  <a name="loadstate"></a>CMFCMenuBar:: LoadState
 
 從 Windows 登錄載入功能表列的狀態。
 
@@ -786,25 +786,25 @@ virtual BOOL LoadState(
 ### <a name="parameters"></a>參數
 
 *lpszProfileName*<br/>
-[in]字串，包含 Windows 登錄機碼的路徑。
+在字串, 其中包含 Windows 登錄機碼的路徑。
 
 *nIndex*<br/>
-[in]在功能表列控制項識別碼。
+在功能表列的控制項 ID。
 
 *uiID*<br/>
-[in]保留的值。
+在保留的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用[CMFCMenuBar::SaveState](#savestate)方法，將功能表列的狀態儲存至登錄。 已儲存的資訊包含功能表項目、 停駐狀態和功能表列的位置。
+使用[CMFCMenuBar:: SaveState](#savestate)方法, 將功能表列的狀態儲存至登錄。 儲存的資訊包括功能表項目、停駐狀態和功能表列的位置。
 
-在大部分情況下您的應用程式不會呼叫`LoadState`。 初始化工作區時，架構會呼叫這個方法。
+在大多數情況下, 您的應用`LoadState`程式不會呼叫。 架構會在初始化工作區時呼叫這個方法。
 
-##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot
+##  <a name="onchangehot"></a>CMFCMenuBar:: OnChangeHot
 
 ```
 virtual void OnChangeHot(int iHot);
@@ -812,13 +812,13 @@ virtual void OnChangeHot(int iHot);
 
 ### <a name="parameters"></a>參數
 
-[in] *iHot*<br/>
+在*iHot*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="ondefaultmenuloaded"></a>  CMFCMenuBar::OnDefaultMenuLoaded
+##  <a name="ondefaultmenuloaded"></a>CMFCMenuBar:: OnDefaultMenuLoaded
 
-從資源檔載入功能表資源時，架構會呼叫這個方法。
+當此架構從資源檔載入功能表資源時, 會呼叫這個方法。
 
 ```
 virtual void OnDefaultMenuLoaded(HMENU hMenu);
@@ -827,13 +827,13 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 ### <a name="parameters"></a>參數
 
 *hMenu*<br/>
-[in][] 功能表的控制代碼附加至`CMFCMenuBar`物件。
+在附加至`CMFCMenuBar`物件之功能表的控制碼。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作不做任何動作。 覆寫這個函式來執行自訂程式碼之後，架構會從資源檔載入功能表資源。
+此函式的預設實作不做任何動作。 在架構從資源檔載入功能表資源之後, 覆寫此函式以執行自訂程式碼。
 
-##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand
+##  <a name="onsendcommand"></a>CMFCMenuBar:: OnSendCommand
 
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
@@ -841,15 +841,15 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>參數
 
-[in] *pButton*<br/>
+在*pButton*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="onsetdefaultbuttontext"></a>  CMFCMenuBar::OnSetDefaultButtonText
+##  <a name="onsetdefaultbuttontext"></a>CMFCMenuBar:: OnSetDefaultButtonText
 
-當使用者變更的項目在功能表列上的文字，架構會呼叫這個方法。
+當使用者在功能表列上變更專案的文字時, 架構會呼叫這個方法。
 
 ```
 virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
@@ -858,17 +858,17 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 ### <a name="parameters"></a>參數
 
 *pButton*<br/>
-[in]指標[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)使用者想要自訂的物件。
+在使用者想要自訂之[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果架構將使用者變更套用至功能表列中，則為 TRUE否則為 FALSE。
+如果架構將使用者變更套用至功能表列, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個方法的預設實作會變更按鈕的文字，為使用者提供的文字。
+這個方法的預設執行會將按鈕的文字變更為使用者所提供的文字。
 
-##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest
+##  <a name="ontoolhittest"></a>CMFCMenuBar:: OnToolHitTest
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -878,7 +878,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>參數
 
-[in] *point*<br/>
+在*點*<br/>
 
 [in] *pTI*<br/>
 
@@ -886,7 +886,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="remarks"></a>備註
 
-##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage
+##  <a name="pretranslatemessage"></a>CMFCMenuBar::P reTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -894,15 +894,15 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>參數
 
-[in] *pMsg*<br/>
+在*pMsg*<br/>
 
 ### <a name="return-value"></a>傳回值
 
 ### <a name="remarks"></a>備註
 
-##  <a name="restoreoriginalstate"></a>  CMFCMenuBar::RestoreOriginalstate
+##  <a name="restoreoriginalstate"></a>CMFCMenuBar:: RestoreOriginalstate
 
-由架構呼叫，當使用者選取**重設**從**自訂** 對話方塊。
+當使用者從 [**自訂**] 對話方塊中選取 [**重設**] 時, 由架構呼叫。
 
 ```
 virtual BOOL RestoreOriginalstate();
@@ -910,17 +910,17 @@ virtual BOOL RestoreOriginalstate();
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功則為非零否則為 0。
+如果方法成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-當使用者選取時，會呼叫這個方法**重設**從自訂功能表。 您可以手動呼叫這個方法，以程式設計方式重設功能表列的狀態。 這個方法會從資源檔載入原始狀態。
+當使用者從 [自訂] 功能表選取 [**重設**] 時, 會呼叫這個方法。 您也可以手動呼叫這個方法, 以程式設計方式重設功能表列的狀態。 這個方法會從資源檔載入原始狀態。
 
-覆寫這個方法，如果您想要進行任何處理，當使用者選取**重設**選項。
+如果您想要在使用者選取 [**重設**] 選項時進行任何處理, 請覆寫這個方法。
 
-##  <a name="savestate"></a>  CMFCMenuBar::SaveState
+##  <a name="savestate"></a>CMFCMenuBar:: SaveState
 
-儲存的狀態[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)至 Windows 登錄的物件。
+將[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件的狀態儲存至 Windows 登錄。
 
 ```
 virtual BOOL SaveState (
@@ -932,27 +932,27 @@ virtual BOOL SaveState (
 ### <a name="parameters"></a>參數
 
 *lpszProfileName*<br/>
-[in]字串，包含 Windows 登錄機碼的路徑。
+在字串, 其中包含 Windows 登錄機碼的路徑。
 
 *nIndex*<br/>
-[in]在功能表列控制項識別碼。
+在功能表列的控制項 ID。
 
 *uiID*<br/>
-[in]保留的值。
+在保留的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為 TRUE否則為 FALSE。
+如果成功, 則為 TRUE;否則為 FALSE;
 
 ### <a name="remarks"></a>備註
 
-您的應用程式不會呼叫的通常`SaveState`。 序列化的工作區時，架構會呼叫這個方法。 如需詳細資訊，請參閱 < [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)。
+通常, 您的應用程式不`SaveState`會呼叫。 當工作區序列化時, 架構會呼叫這個方法。 如需詳細資訊, 請參閱[CWinAppEx:: SaveState](../../mfc/reference/cwinappex-class.md#savestate)。
 
-已儲存的資訊包含功能表項目、 停駐狀態和功能表列的位置。
+儲存的資訊包括功能表項目、停駐狀態和功能表列的位置。
 
-##  <a name="setdefaultmenuresid"></a>  CMFCMenuBar::SetDefaultMenuResId
+##  <a name="setdefaultmenuresid"></a>CMFCMenuBar:: SetDefaultMenuResId
 
-設定的預設功能表[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件，根據資源識別碼。
+根據資源識別碼設定[CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md)物件的預設功能表。
 
 ```
 void SetDefaultMenuResId(UINT uiResId);
@@ -961,15 +961,15 @@ void SetDefaultMenuResId(UINT uiResId);
 ### <a name="parameters"></a>參數
 
 *uiResId*<br/>
-[in]新的預設功能表資源識別碼。
+在新預設功能表的資源識別碼。
 
 ### <a name="remarks"></a>備註
 
-[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)方法會從資源檔來還原預設的功能表。
+[CMFCMenuBar:: RestoreOriginalstate](#restoreoriginalstate)方法會從資源檔案還原預設功能表。
 
-使用[CMFCMenuBar::GetDefaultMenuResId](#getdefaultmenuresid)方法來擷取預設的功能表，而不還原它。
+使用[CMFCMenuBar:: GetDefaultMenuResId](#getdefaultmenuresid)方法來抓取預設功能表, 而不將它還原。
 
-##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows
+##  <a name="setforcedownarrows"></a>CMFCMenuBar:: SetForceDownArrows
 
 ```
 void SetForceDownArrows(BOOL bValue);
@@ -977,13 +977,13 @@ void SetForceDownArrows(BOOL bValue);
 
 ### <a name="parameters"></a>參數
 
-[in] *bValue*<br/>
+在*其中 bvalue system.boolean.true*<br/>
 
 ### <a name="remarks"></a>備註
 
-##  <a name="setmaximizemode"></a>  CMFCMenuBar::SetMaximizeMode
+##  <a name="setmaximizemode"></a>CMFCMenuBar:: SetMaximizeMode
 
-當 MDI 改變它的顯示模式，且必須更新功能表列時，架構會呼叫這個方法。
+當 MDI 變更其顯示模式, 而且必須更新功能表列時, 架構會呼叫這個方法。
 
 ```
 void SetMaximizeMode(
@@ -995,21 +995,21 @@ void SetMaximizeMode(
 ### <a name="parameters"></a>參數
 
 *bMax*<br/>
-[in]布林值，指定的模式。 如需詳細資訊，請參閱＜備註＞一節。
+在指定模式的布林值。 如需詳細資訊，請參閱＜備註＞一節。
 
 *pWnd*<br/>
-[in]正在變更的 MDI 子視窗指標。
+在要變更之 MDI 子視窗的指標。
 
 *bRecalcLayout*<br/>
-[in]布林值，指定是否要立即計算的功能表列版面配置。
+在布林值, 指定是否應該立即重新計算功能表列的版面配置。
 
 ### <a name="remarks"></a>備註
 
-附加至 MDI 主框架視窗的功能表列的 MDI 子視窗會最大化時，會顯示系統功能表並**最小化**，**最大化**並**關閉**按鈕。 如果*bMax*為 TRUE 並*pWnd*不是 NULL，MDI 子視窗最大化，並在功能表列必須加入額外的控制項。 否則，在功能表列會傳回其規則的狀態。
+當 MDI 子視窗最大化時, 附加至 MDI 主框架視窗的功能表列會顯示 [系統] 功能表和 [**最小化**]、[**最大化**] 和 [**關閉**] 按鈕。 如果*bMax*為 TRUE 且*PWND*不是 Null, 則會將 MDI 子視窗最大化, 而且功能表列必須併入額外的控制項。 否則, 功能表列會回到其正常狀態。
 
-##  <a name="setmenubuttonrtc"></a>  CMFCMenuBar::SetMenuButtonRTC
+##  <a name="setmenubuttonrtc"></a>CMFCMenuBar:: SetMenuButtonRTC
 
-設定使用者建立功能表按鈕時，架構會使用執行階段類別資訊。
+設定當使用者建立功能表按鈕時, 架構所使用的執行時間類別資訊。
 
 ```
 void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
@@ -1018,15 +1018,15 @@ void SetMenuButtonRTC(CRuntimeClass* pMenuButtonRTC);
 ### <a name="parameters"></a>參數
 
 *pMenuButtonRTC*<br/>
-[in][CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)類別的資訊衍生自[CMFCMenuButton 類別](../../mfc/reference/cmfcmenubutton-class.md)。
+在衍生自[CMFCMenuButton 類別](../../mfc/reference/cmfcmenubutton-class.md)之類別的[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)資訊。
 
 ### <a name="remarks"></a>備註
 
-當使用者將新按鈕新增至功能表列中時，架構會以動態方式建立按鈕。 根據預設，它會建立`CMFCMenuButton`物件。 覆寫這個方法，以變更架構所建立的按鈕物件的型別。
+當使用者將新按鈕新增至功能表列時, 架構會動態建立按鈕。 根據預設, 它會`CMFCMenuButton`建立物件。 覆寫這個方法, 以變更架構所建立之按鈕物件的類型。
 
-##  <a name="setmenufont"></a>  CMFCMenuBar::SetMenuFont
+##  <a name="setmenufont"></a>CMFCMenuBar:: SetMenuFont
 
-在您的應用程式中設定所有的功能表列的字型。
+設定應用程式中所有功能表列的字型。
 
 ```
 static BOOL SetMenuFont(
@@ -1037,24 +1037,24 @@ static BOOL SetMenuFont(
 ### <a name="parameters"></a>參數
 
 *lpLogFont*<br/>
-[in]指標[LOGFONT](/windows/desktop/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)結構，定義要設定的字型。
+在[LOGFONT](/windows/win32/api/dimm/ns-dimm-__midl___midl_itf_dimm_0000_0000_0003)結構的指標, 定義要設定的字型。
 
 *bHorz*<br/>
-[in]如果您想要則為 TRUE *lpLogFont*參數，如果您想要用於水平字型，要用於垂直字型，也就是 FALSE。
+在如果您想要將*lpLogFont*參數用於垂直字型, 則為 TRUE, 如果您想要將它用於水準字型, 則為 FALSE。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，則為 TRUE否則為 FALSE。
+如果方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-兩種字型會用於所有`CMFCMenuBar`物件。 對於水平和垂直的功能表列，會使用這些不同的字型。
+所有`CMFCMenuBar`物件都會使用兩個字型。 這些個別字型會用於水準和垂直功能表列。
 
-字型設定的全域變數，而且會影響所有`CMFCMenuBar`物件。
+字型設定為全域變數, 並會影響`CMFCMenuBar`所有物件。
 
-##  <a name="setrecentlyusedmenus"></a>  CMFCMenuBar::SetRecentlyUsedMenus
+##  <a name="setrecentlyusedmenus"></a>CMFCMenuBar:: SetRecentlyUsedMenus
 
-功能表列是否顯示最近使用的功能表命令的控制項。
+控制功能表列是否顯示最近使用的功能表命令。
 
 ```
 static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
@@ -1063,9 +1063,9 @@ static void SetRecentlyUsedMenus (BOOL bOn = TRUE);
 ### <a name="parameters"></a>參數
 
 *bOn*<br/>
-[in]布林值，控制是否要顯示的最近使用的功能表命令。
+在布林值, 控制是否顯示最近使用的功能表命令。
 
-##  <a name="setshowallcommands"></a>  CMFCMenuBar::SetShowAllCommands
+##  <a name="setshowallcommands"></a>CMFCMenuBar:: SetShowAllCommands
 
 控制功能表是否顯示所有可用的命令。
 
@@ -1076,11 +1076,11 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 ### <a name="parameters"></a>參數
 
 *bShowAllCommands*<br/>
-[in]布林值參數，指定是否快顯功能表會顯示所有的功能表命令。
+在布林值參數, 指定快顯功能表是否顯示所有功能表命令。
 
 ### <a name="remarks"></a>備註
 
-如果功能表未顯示所有的功能表命令，則會隱藏很少使用的命令。 如需有關如何顯示功能表命令的詳細資訊，請參閱[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。
+如果功能表未顯示所有功能表命令, 則會隱藏很少使用的命令。 如需顯示功能表命令的詳細資訊, 請參閱[CMFCMenuBar 類別](../../mfc/reference/cmfcmenubar-class.md)。
 
 ## <a name="see-also"></a>另請參閱
 

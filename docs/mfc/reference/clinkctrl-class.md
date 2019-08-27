@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d9e624c40f0d6aa7f3d3fa1ed3d97ffa478ee7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225476"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505708"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl 類別
 
@@ -63,27 +63,27 @@ class CLinkCtrl : public CWnd
 
 |名稱|描述|
 |----------|-----------------|
-|[CLinkCtrl::Create](#create)|建立連結控制項，並將它附加至`CLinkCtrl`物件。|
-|[CLinkCtrl::CreateEx](#createex)|使用延伸樣式中建立連結控制項，並將它附加至`CLinkCtrl`物件。|
-|[CLinkCtrl::GetIdealHeight](#getidealheight)|擷取連結控制項的理想高度。|
-|[CLinkCtrl::GetIdealSize](#getidealsize)|計算目前的連結控制，根據指定的寬度，連結的連結文字的慣用的高度。|
-|[CLinkCtrl::GetItem](#getitem)|擷取狀態和連結控制項項目的屬性。|
-|[CLinkCtrl::GetItemID](#getitemid)|擷取連結控制項項目的識別碼。|
-|[CLinkCtrl::GetItemState](#getitemstate)|擷取連結控制項項目的狀態。|
-|[CLinkCtrl::GetItemUrl](#getitemurl)|擷取連結控制項項目所代表的 URL。|
-|[CLinkCtrl::HitTest](#hittest)|判斷使用者是否按下指定的連結。|
-|[CLinkCtrl::SetItem](#setitem)|設定的狀態和屬性的連結控制項項目。|
-|[CLinkCtrl::SetItemID](#setitemid)|設定連結控制項項目的識別碼。|
-|[CLinkCtrl::SetItemState](#setitemstate)|設定連結控制項項目的狀態。|
-|[CLinkCtrl::SetItemUrl](#setitemurl)|設定連結控制項目所代表的 URL。|
+|[CLinkCtrl::Create](#create)|建立連結控制項, 並將它附加至`CLinkCtrl`物件。|
+|[CLinkCtrl::CreateEx](#createex)|建立具有擴充樣式的連結控制項, 並將其附加`CLinkCtrl`至物件。|
+|[CLinkCtrl::GetIdealHeight](#getidealheight)|抓取連結控制項的理想高度。|
+|[CLinkCtrl::GetIdealSize](#getidealsize)|根據連結的指定寬度, 計算目前連結控制項的連結文字慣用高度。|
+|[CLinkCtrl::GetItem](#getitem)|抓取連結控制項專案的狀態和屬性。|
+|[CLinkCtrl::GetItemID](#getitemid)|抓取連結控制項專案的識別碼。|
+|[CLinkCtrl::GetItemState](#getitemstate)|抓取連結控制項專案的狀態。|
+|[CLinkCtrl::GetItemUrl](#getitemurl)|抓取連結控制項專案所代表的 URL。|
+|[CLinkCtrl::HitTest](#hittest)|判斷使用者是否已按一下指定的連結。|
+|[CLinkCtrl::SetItem](#setitem)|設定連結控制項專案的狀態和屬性。|
+|[CLinkCtrl::SetItemID](#setitemid)|設定連結控制項專案的識別碼。|
+|[CLinkCtrl::SetItemState](#setitemstate)|設定連結控制項專案的狀態。|
+|[CLinkCtrl::SetItemUrl](#setitemurl)|設定連結控制項專案所代表的 URL。|
 
 ## <a name="remarks"></a>備註
 
-[連結控制] 提供便利的方式，在視窗中內嵌超文字連結。 實際的控制項是一個視窗，呈現標記文字，並啟動適當的應用程式，當使用者按一下內嵌的連結。 多個連結其中一個控制項內支援，並可以存取的以零為起始的索引。
+「連結控制項」提供一個便利的方式, 可在視窗中內嵌超文字連結。 實際的控制項是一種視窗, 可呈現已標記的文字, 並在使用者按一下內嵌連結時啟動適當的應用程式。 一個控制項內支援多個連結, 而且可以透過以零為起始的索引來存取。
 
-這個控制項 (並因此`CLinkCtrl`類別) 僅適用於在 Windows XP 及更新版本執行的程式。
+這個控制項 (因此`CLinkCtrl`類別) 僅適用于在 Windows XP 和更新版本下執行的程式。
 
-如需詳細資訊，請參閱 < [SysLink 控制項](/windows/desktop/Controls/syslink-overview)Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[SysLink 控制項](/windows/win32/Controls/syslink-overview)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -99,7 +99,7 @@ class CLinkCtrl : public CWnd
 
 **標頭：** afxcmn.h
 
-##  <a name="clinkctrl"></a>  CLinkCtrl::CLinkCtrl
+##  <a name="clinkctrl"></a>CLinkCtrl:: CLinkCtrl
 
 建構 `CLinkCtrl` 物件。
 
@@ -107,9 +107,9 @@ class CLinkCtrl : public CWnd
 CLinkCtrl();
 ```
 
-##  <a name="create"></a>  CLinkCtrl::Create
+##  <a name="create"></a>CLinkCtrl:: Create
 
-建立連結控制項，並將它附加至`CLinkCtrl`物件。
+建立連結控制項, 並將它附加至`CLinkCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -128,45 +128,45 @@ virtual BOOL Create(DWORD dwStyle,
 ### <a name="parameters"></a>參數
 
 *lpszLinkMarkup*<br/>
-要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。
+以零結束的字串指標, 其中包含已標示要顯示的文字。 如需詳細資訊, 請參閱[SysLink 控制項的總覽](/windows/win32/Controls/syslink-overview)主題中的「標記和連結存取」一節。
 
 *dwStyle*<br/>
-指定連結控制項的樣式。 適用於任何控制項樣式的組合。 請參閱[常見的控制項樣式](/windows/desktop/Controls/common-control-styles)在`Windows SDK`如需詳細資訊。
+指定連結控制項的樣式。 套用控制項樣式的任何組合。 如需詳細資訊, 請`Windows SDK`參閱中的[通用控制項樣式](/windows/win32/Controls/common-control-styles)。
 
 *rect*<br/>
-指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
+指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pParentWnd*<br/>
-指定連結控制項的父視窗。 它必須不是 NULL。
+指定連結控制項的父視窗。 不得為 Null。
 
 *nID*<br/>
 指定連結控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功，則為 TRUE否則為 FALSE。
+如果初始化成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您建構`CLinkCtrl`兩個步驟中的物件。 首先，呼叫建構函式，然後呼叫`Create`，這會建立連結的控制，並將它附加至`CLinkCtrl`物件。 如果您想要使用擴充的 windows 樣式和控制項，呼叫[CLinkCtrl::CreateEx](#createex)而不是`Create`。
+您可以使用`CLinkCtrl`兩個步驟來建立物件。 首先, 呼叫此函式, 然後`Create`呼叫, 它會建立連結控制項並將其附加`CLinkCtrl`至物件。 如果您想要搭配控制項使用擴充的 windows 樣式, 請呼叫[CLinkCtrl:: CreateEx](#createex) , `Create`而不是。
 
-第二個形式`Create`方法已被取代。 使用指定的第一個表單*lpszLinkMarkup*參數。
+第二種形式的`Create`方法已被取代。 使用指定*lpszLinkMarkup*參數的第一個表單。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義兩個變數，名為`m_Link1`和`m_Link2`，用來存取兩個連結控制項。
+下列程式碼範例會定義兩個名`m_Link1`為`m_Link2`和的變數, 用來存取兩個連結控制項。
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#2](../../mfc/reference/codesnippet/cpp/clinkctrl-class_1.h)]
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會建立一個連結控制，根據另一個連結控制項的位置。 資源載入器應用程式啟動時，會建立第一個連結控制項。 當您的應用程式進入 OnInitDialog 方法時，您會建立第二個連結控制項的第一個連結控制項的相對位置。 然後，您要調整第二個連結控制項以符合它所顯示的文字。
+下列程式碼範例會根據另一個連結控制項的位置, 建立一個連結控制項。 當您的應用程式啟動時, 資源載入器會建立第一個連結控制項。 當您的應用程式進入 OnInitDialog 方法時, 您會建立相對於第一個連結控制項位置的第二個連結控制項。 然後, 調整第二個連結控制項的大小, 以符合它所顯示的文字。
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]
 
-##  <a name="createex"></a>  CLinkCtrl::CreateEx
+##  <a name="createex"></a>CLinkCtrl:: CreateEx
 
-使用延伸樣式中建立連結控制項，並將它附加至`CLinkCtrl`物件。
+建立具有擴充樣式的連結控制項, 並將其附加`CLinkCtrl`至物件。
 
 ```
 virtual BOOL CreateEx(
@@ -187,36 +187,36 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 ### <a name="parameters"></a>參數
 
 *lpszLinkMarkup*<br/>
-要顯示的文字包含標示的零結尾字串的指標。 如需詳細資訊，請參閱主題中的 「 標記和連結存取 」 一節[SysLink 控制項概觀](/windows/desktop/Controls/syslink-overview)。
+以零結束的字串指標, 其中包含已標示要顯示的文字。 如需詳細資訊, 請參閱[SysLink 控制項的總覽](/windows/win32/Controls/syslink-overview)主題中的「標記和連結存取」一節。
 
 *dwExStyle*<br/>
-指定連結控制項的延伸的樣式。 如需延伸的 Windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+指定連結控制項的延伸樣式。 如需擴充 Windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定連結控制項的樣式。 適用於任何控制項樣式的組合。 如需詳細資訊，請參閱 <<c0> [ 常見的控制項樣式](/windows/desktop/Controls/common-control-styles)Windows SDK 中。
+指定連結控制項的樣式。 套用控制項樣式的任何組合。 如需詳細資訊, 請參閱 Windows SDK 中的[通用控制項樣式](/windows/win32/Controls/common-control-styles)。
 
 *rect*<br/>
-指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構。
+指定連結控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *pParentWnd*<br/>
-指定連結控制項的父視窗。 它必須不是 NULL。
+指定連結控制項的父視窗。 不得為 Null。
 
 *nID*<br/>
 指定連結控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功，則為 TRUE否則為 FALSE。
+如果初始化成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式常數。
+使用`CreateEx`而非[Create](#create)來套用擴充的 Windows 樣式常數。
 
-第二個形式`CreateEx`方法已被取代。 使用指定的第一個表單*lpszLinkMarkup*參數。
+第二種形式的`CreateEx`方法已被取代。 使用指定*lpszLinkMarkup*參數的第一個表單。
 
 ##  <a name="getidealheight"></a>  CLinkCtrl::GetIdealHeight
 
-擷取連結控制項的理想高度。
+抓取連結控制項的理想高度。
 
 ```
 int GetIdealHeight() const;
@@ -224,15 +224,15 @@ int GetIdealHeight() const;
 
 ### <a name="return-value"></a>傳回值
 
-控制項，像素為單位的理想高度。
+控制項的理想高度 (以圖元為單位)。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[LM_GETIDEALHEIGHT](/windows/desktop/Controls/lm-getidealheight)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [LM_GETIDEALHEIGHT](/windows/win32/Controls/lm-getidealheight)的行為, 如 Windows SDK 中所述。
 
 ##  <a name="getidealsize"></a>  CLinkCtrl::GetIdealSize
 
-計算目前的連結控制，根據指定的寬度，連結的連結文字的慣用的高度。
+根據連結的指定寬度, 計算目前連結控制項的連結文字慣用高度。
 
 ```
 int GetIdealSize(
@@ -242,24 +242,24 @@ int GetIdealSize(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*cxMaxWidth*|[in]連結，像素為單位的最大寬度。|
-|[out] \* *pSize*|Windows 的指標[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構。 當這個方法傳回時， *cy*隸屬`SIZE`結構中包含所指定的連結文字寬度的理想的連結文字高度*cxMaxWidth*。 *Cx*結構成員會包含實際所需的連結文字寬度。|
+|*cxMaxWidth*|在連結的最大寬度 (以圖元為單位)。|
+|脫銷\* *pSize*|Windows[大小](/windows/win32/api/windef/ns-windef-size)結構的指標。 當這個方法傳回時, `SIZE`結構的 cy 成員會包含*cxMaxWidth*所指定之連結文字寬度的理想連結文字高度。 結構的*cx*成員包含實際需要的連結文字寬度。|
 
 ### <a name="return-value"></a>傳回值
 
-連結文字、 像素為單位的慣用的高度。 傳回值是相同的值*cy*隸屬`SIZE`結構。
+連結文字的慣用高度 (以圖元為單位)。 傳回值與`SIZE`結構的*cy*成員值相同。
 
 ### <a name="remarks"></a>備註
 
-如需`GetIdealSize`方法，請參閱中的範例[CLinkCtrl::Create](#create)。
+如需`GetIdealSize`方法的範例, 請參閱[CLinkCtrl:: Create](#create)中的範例。
 
-這個方法會傳送[LM_GETIDEALSIZE](/windows/desktop/Controls/lm-getidealsize)訊息，Windows SDK 中所述。
+這個方法會傳送[LM_GETIDEALSIZE](/windows/win32/Controls/lm-getidealsize)訊息, 如 Windows SDK 中所述。
 
-##  <a name="getitem"></a>  CLinkCtrl::GetItem
+##  <a name="getitem"></a>CLinkCtrl:: GetItem
 
-擷取狀態和連結控制項項目的屬性。
+抓取連結控制項專案的狀態和屬性。
 
 ```
 BOOL GetItem(PLITEM pItem) const;
@@ -268,19 +268,19 @@ BOOL GetItem(PLITEM pItem) const;
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指標[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)接收項目資訊的結構。
+接收專案資訊之[LITEM](/windows/win32/api/commctrl/ns-commctrl-litem)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[LM_GETITEM](/windows/desktop/Controls/lm-getitem)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [LM_GETITEM](/windows/win32/Controls/lm-getitem)的行為, 如 Windows SDK 中所述。
 
-##  <a name="getitemid"></a>  CLinkCtrl::GetItemID
+##  <a name="getitemid"></a>CLinkCtrl:: GetItemID
 
-擷取連結控制項項目的識別碼。
+抓取連結控制項專案的識別碼。
 
 ```
 BOOL GetItemID(
@@ -296,31 +296,31 @@ BOOL GetItemID(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *strID*<br/>
-A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含指定項目的識別碼。
+[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)物件, 其中包含指定專案的識別碼。
 
 *szID*<br/>
-以 null 結束的字串，包含指定項目的識別碼。
+以 null 終止的字串, 其中包含指定專案的識別碼。
 
 *cchID*<br/>
-以字元為單位的大小*szID*緩衝區。
+*SzID*緩衝區的大小 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 > [!NOTE]
->  此函式也會傳回 FALSE，如果緩衝區*szID 或 strID*小於 MAX_LINKID_TEXT。
+>  如果*szID 或 strID*的緩衝區小於 MAX_LINKID_TEXT, 此函數也會傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-擷取特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。
+抓取特定連結控制項專案的識別碼。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_GETITEM](/windows/win32/Controls/lm-getitem) 。
 
-##  <a name="getitemstate"></a>  CLinkCtrl::GetItemState
+##  <a name="getitemstate"></a>CLinkCtrl:: GetItemState
 
-擷取連結控制項項目的狀態。
+抓取連結控制項專案的狀態。
 
 ```
 BOOL GetItemState(
@@ -332,25 +332,25 @@ BOOL GetItemState(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *pnState*<br/>
-指定的狀態項目的值。
+指定之狀態專案的值。
 
 *stateMask*<br/>
-描述要取得的狀態項目旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構。 允許的項目是相同中允許`state`。
+旗標的組合, 描述要取得的狀態專案。 如需值清單, 請參閱[LITEM](/windows/win32/api/commctrl/ns-commctrl-litem)結構中的`state`成員描述。 允許的專案與中`state`允許的專案完全相同。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-擷取的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。
+抓取特定連結控制項專案之指定狀態專案的值。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_GETITEM](/windows/win32/Controls/lm-getitem) 。
 
-##  <a name="getitemurl"></a>  CLinkCtrl::GetItemUrl
+##  <a name="getitemurl"></a>CLinkCtrl:: GetItemUrl
 
-擷取連結控制項項目所代表的 URL。
+抓取連結控制項專案所代表的 URL。
 
 ```
 BOOL GetItemUrl(
@@ -366,31 +366,31 @@ BOOL GetItemUrl(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *strUrl*<br/>
-A [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)物件，其中包含指定的項目所代表的 URL
+[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)物件, 其中包含指定專案所代表的 URL。
 
 *szUrl*<br/>
-Null 終止的字串，包含指定的項目所代表的 URL
+以 null 終止的字串, 其中包含指定專案所代表的 URL
 
 *cchUrl*<br/>
-以字元為單位的大小*szURL*緩衝區。
+*SzURL*緩衝區的大小 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 > [!NOTE]
->  此函式也會傳回 FALSE，如果緩衝區*szUrl 或 strUrl*小於 MAX_LINKID_TEXT。
+>  如果*szUrl 或 strUrl*的緩衝區小於 MAX_LINKID_TEXT, 此函數也會傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-擷取指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_GETITEM](/windows/desktop/Controls/lm-getitem) Windows SDK 中。
+抓取指定的連結控制項專案所代表的 URL。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_GETITEM](/windows/win32/Controls/lm-getitem) 。
 
-##  <a name="hittest"></a>  CLinkCtrl::HitTest
+##  <a name="hittest"></a>CLinkCtrl:: HitTest
 
-判斷使用者是否按指定的連結。
+判斷使用者是否已按一下指定的連結。
 
 ```
 BOOL HitTest(PLHITTESTINFO phti) const;
@@ -399,19 +399,19 @@ BOOL HitTest(PLHITTESTINFO phti) const;
 ### <a name="parameters"></a>參數
 
 *phti*<br/>
-指標`LHITTESTINFO`結構，其中包含連結的相關使用者已按下任何資訊。
+`LHITTESTINFO`結構的指標, 其中包含使用者所按之連結的任何相關資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[LM_HITTEST](/windows/desktop/Controls/lm-hittest)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [LM_HITTEST](/windows/win32/Controls/lm-hittest)的行為, 如 Windows SDK 中所述。
 
-##  <a name="setitem"></a>  CLinkCtrl::SetItem
+##  <a name="setitem"></a>CLinkCtrl:: SetItem
 
-設定的狀態和屬性的連結控制項項目。
+設定連結控制項專案的狀態和屬性。
 
 ```
 BOOL SetItem(PLITEM pItem);
@@ -420,19 +420,19 @@ BOOL SetItem(PLITEM pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指標[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構，其中包含要設定的資訊。
+[LITEM](/windows/win32/api/commctrl/ns-commctrl-litem)結構的指標, 其中包含要設定的資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 訊息的行為[LM_SETITEM](/windows/desktop/Controls/lm-setitem)、 Windows SDK 中所述。
+此成員函式會執行 Win32 message [LM_SETITEM](/windows/win32/Controls/lm-setitem)的行為, 如 Windows SDK 中所述。
 
-##  <a name="setitemid"></a>  CLinkCtrl::SetItemID
+##  <a name="setitemid"></a>CLinkCtrl:: SetItemID
 
-擷取連結控制項項目的識別碼。
+抓取連結控制項專案的識別碼。
 
 ```
 BOOL SetItemID(
@@ -443,22 +443,22 @@ BOOL SetItemID(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *szID*<br/>
-以 null 結束的字串，包含指定項目的識別碼。
+以 null 終止的字串, 其中包含指定專案的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-設定特定連結控制項項目的識別碼。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。
+設定特定連結控制項專案的識別碼。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_SETITEM](/windows/win32/Controls/lm-setitem) 。
 
-##  <a name="setitemstate"></a>  CLinkCtrl::SetItemState
+##  <a name="setitemstate"></a>CLinkCtrl:: SetItemState
 
-擷取連結控制項項目的狀態。
+抓取連結控制項專案的狀態。
 
 ```
 BOOL SetItemState(
@@ -470,25 +470,25 @@ BOOL SetItemState(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *pnState*<br/>
-設定指定的狀態項目的值。
+所設定之指定狀態專案的值。
 
 *stateMask*<br/>
-描述狀態項目的所設定的旗標的組合。 如需值的清單，請參閱說明`state`中的成員[LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)結構。 允許的項目是相同中允許`state`。
+旗標的組合, 用來描述所設定的狀態專案。 如需值清單, 請參閱[LITEM](/windows/win32/api/commctrl/ns-commctrl-litem)結構中的`state`成員描述。 允許的專案與中`state`允許的專案完全相同。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-設定的特定連結控制項項目指定的狀態項目的值。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。
+設定特定連結控制項專案之指定狀態專案的值。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_SETITEM](/windows/win32/Controls/lm-setitem) 。
 
-##  <a name="setitemurl"></a>  CLinkCtrl::SetItemUrl
+##  <a name="setitemurl"></a>CLinkCtrl:: SetItemUrl
 
-設定連結控制項目所代表的 URL。
+設定連結控制項專案所代表的 URL。
 
 ```
 BOOL SetItemUrl(
@@ -499,18 +499,18 @@ BOOL SetItemUrl(
 ### <a name="parameters"></a>參數
 
 *iLink*<br/>
-連結控制項項目的索引。
+連結控制項專案的索引。
 
 *szUrl*<br/>
-Null 終止的字串，包含指定的項目所代表的 URL
+以 null 終止的字串, 其中包含指定專案所代表的 URL
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-設定指定的連結控制項項目所代表的 URL。 如需詳細資訊，請參閱 Win32 訊息[LM_SETITEM](/windows/desktop/Controls/lm-setitem) Windows SDK 中。
+設定指定的連結控制項專案所代表的 URL。 如需詳細資訊, 請參閱 Windows SDK 中的 Win32 message [LM_SETITEM](/windows/win32/Controls/lm-setitem) 。
 
 ## <a name="see-also"></a>另請參閱
 

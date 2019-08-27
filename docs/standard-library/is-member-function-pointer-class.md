@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351926"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456174"
 ---
 # <a name="ismemberfunctionpointer-class"></a>is_member_function_pointer 類別
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*成員函式的指標或`cv-qualified`成員函式指標，否則為 false。
+如果類型*Ty*是成員函式的指標或成員函式的`cv-qualified`指標, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -79,11 +79,11 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_member_pointer 類別](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_member_pointer 類別](../standard-library/is-member-pointer-class.md)

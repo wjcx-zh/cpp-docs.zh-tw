@@ -16,7 +16,7 @@ ms.locfileid: "65707494"
 ---
 # <a name="supporting-schema-rowsets"></a>支援結構描述資料列集
 
-結構描述資料列集可讓消費者取得資料存放區的相關資訊，而不需要知道其基礎結構或結構描述。 例如，資料存放區可能會將資料表組織成使用者定義的階層，因此除了讀取結構描述之外，沒辦法確保知道結構描述  (另一個範例，Visual C++ 精靈會使用結構描述資料列產生存取子以供消費者使用)。若要讓消費者這樣做，提供者的工作階段物件會在 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面上公開方法。 在 Visual C++ 應用程式中，您可以使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 類別實作 `IDBSchemaRowset`。
+結構描述資料列集可讓消費者取得資料存放區的相關資訊，而不需要知道其基礎結構或結構描述。 例如，資料存放區可能會將資料表組織成使用者定義的階層，因此除了讀取結構描述之外，沒辦法確保知道結構描述 (另一個範例，Visual C++ 精靈會使用結構描述資料列產生存取子以供消費者使用)。若要讓消費者這樣做，提供者的工作階段物件會在 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) 介面上公開方法。 在 Visual C++ 應用程式中，您可以使用 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) 類別實作 `IDBSchemaRowset`。
 
 `IDBSchemaRowsetImpl` 支援下列方法：
 
@@ -194,7 +194,7 @@ if (cRestrictions >= 3 && rgRestrictions[2].vt != VT_EMPTY)
 }
 ```
 
-支援第四個限制 (TABLE_TYPE) 類似於第三個限制。 請檢查此值不是 VT_EMPTY。 此限制只會傳回資料表類型 TABLE。 若要判斷 DBSCHEMA_TABLES 的有效值，請查閱 **OLE DB 程式設計人員參考****附錄 B** 中的 TABLES 資料列集一節。
+支援第四個限制 (TABLE_TYPE) 類似於第三個限制。 請檢查此值不是 VT_EMPTY。 此限制只會傳回資料表類型 TABLE。 若要判斷 DBSCHEMA_TABLES 的有效值，請查閱 **OLE DB 程式設計人員參考** **附錄 B** 中的 TABLES 資料列集一節。
 
 ```cpp
 // TABLE_TYPE restriction:

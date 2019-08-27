@@ -40,19 +40,19 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: 7e88bcf5bf7ffc5eba6feecd545cda8f7950829c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353874"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500911"
 ---
-# <a name="strdec-wcsdec-mbsdec-mbsdecl"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
+# <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
 將字串指標後移一個字元。
 
 > [!IMPORTANT]
-> **mbsdec**並**mbsdec_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **mbsdec**和**mbsdec_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -79,28 +79,28 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>參數
 
 *start*<br/>
-為任何字元的指標 (或 **_mbsdec**並 **_mbsdec_l**，任何多位元組字元的第一個位元組) 在來源字串中;*開始*前面必須加上*目前*來源字串中。
+來源字串中任何字元 (或任何多位元組字元的第一個位元組) 的指標 ( **_mbsdec**和 **_mbsdec_l**);*開始*必須在來源字串中的*目前*之前。
 
 *current*<br/>
-為任何字元的指標 (或 **_mbsdec**並 **_mbsdec_l**，任何多位元組字元的第一個位元組) 在來源字串中;*目前*必須遵循*開始*來源字串中。
+來源字串中任何字元 (或任何多位元組字元的第一個位元組) 的指標 ( **_mbsdec**和 **_mbsdec_l**);*current*必須緊接在來源字串中的*開頭*。
 
 *locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsdec**， **_mbsdec_l**， **_strdec**，和 **_wcsdec**每個傳回的前置字元的指標*目前*;**_mbsdec**會傳回**NULL**如果的值*啟動*大於或等於*目前*。 **_tcsdec**會對應至其中一個這些函式和它的傳回值取決於此對應。
+**_mbsdec**、 **_mbsdec_l**、 **_strdec**和 **_wcsdec**都會傳回緊接在*目前*之前的字元指標。如果*start*的值大於或等於*current*, 則 **_mbsdec**會傳回**Null** 。 **_tcsdec**會對應至這些函式的其中一個, 而其傳回值則取決於對應。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsdec**並 **_mbsdec_l**函式會傳回緊接在之前的多位元組字元的第一個位元組指標*目前*中包含的字串*啟動*。
+**_Mbsdec**和 **_mbsdec_l**函式會將指標傳回至包含*start*之字串中*目前*正前面的多位元組字元的第一個位元組。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。  **_mbsdec**辨識多位元組字元序列，根據地區設定，目前正在使用中，雖然 **_mbsdec_l**完全相同，不同之處在於它改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。  **_mbsdec**會根據目前使用中的地區設定辨識多位元組字元序列, 而 **_mbsdec_l**則相同, 不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*開始*或是*目前*會**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**EINVAL**並設定**errno**來**EINVAL**。
+如果*start*或*current*是**Null**, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回**EINVAL** , 並將**Errno**設定為**EINVAL**。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -108,7 +108,7 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**並 **_wcsdec**是單一位元組字元和寬字元版本的 **_mbsdec**並 **_mbsdec_l**。 **_strdec**並 **_wcsdec**只供此對應，否則應該不會使用。
+**_strdec**和 **_wcsdec**是 **_mbsdec**和 **_mbsdec_l**的單一位元組字元和寬字元版本。 僅針對此對應提供 **_strdec**和 **_wcsdec** , 否則不應使用。
 
 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
@@ -125,7 +125,7 @@ unsigned char *_mbsdec_l(
 
 ## <a name="example"></a>範例
 
-下列範例顯示的用法 **_tcsdec**。
+下列範例示範如何使用 **_tcsdec**。
 
 ```cpp
 // crt_tcsdec.cpp
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-下列範例顯示的用法 **_mbsdec**。
+下列範例示範如何使用 **_mbsdec**。
 
 ```cpp
 // crt_mbsdec.cpp

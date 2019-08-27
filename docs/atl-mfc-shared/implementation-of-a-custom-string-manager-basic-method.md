@@ -1,35 +1,35 @@
 ---
-title: 自訂字串管理員實作 （基本方法）
+title: 自訂字串管理員的實作為 (基本方法)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92c1c46f5251980f9cefb55e052e9aff395e0e60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235897"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491319"
 ---
-# <a name="implementation-of-a-custom-string-manager-basic-method"></a>自訂字串管理員實作 （基本方法）
+# <a name="implementation-of-a-custom-string-manager-basic-method"></a>自訂字串管理員的實作為 (基本方法)
 
-若要自訂記憶體配置方案，字串資料是使用 ATL 提供最簡單的方式`CAtlStringMgr`類別，但提供您自己的記憶體配置常式。 建構函式`CAtlStringMgr`接受單一參數： 指向`IAtlMemMgr`物件。 `IAtlMemMgr` 是提供成堆積的泛型介面的抽象基底類別。 使用`IAtlMemMgr`介面，`CAtlStringMgr`配置、 重新配置，並釋放用來儲存字串資料的記憶體。 您可以實作`IAtlMemMgr`介面，或使用其中一個五個的 ATL 提供的記憶體管理員類別。 ATL 提供的記憶體管理員僅會包裝現有的記憶體配置功能：
+自訂字串資料的記憶體配置配置最簡單的方式, 就是使用 ATL 提供`CAtlStringMgr`的類別, 但提供您自己的記憶體配置常式。 的函`IAtlMemMgr`式會採用單一參數:`CAtlStringMgr`物件的指標。 `IAtlMemMgr`是提供堆積泛型介面的抽象基類。 使用介面時`CAtlStringMgr` , 會配置、重新配置和釋放用來儲存字串資料的記憶體。 `IAtlMemMgr` 您可以自行執行`IAtlMemMgr`介面, 或使用五個 ATL 提供的記憶體管理員類別其中之一。 ATL 提供的記憶體管理員只會包裝現有的記憶體配置設備:
 
-- [CCRTHeap](../atl/reference/ccrtheap-class.md)包裝標準 CRT 堆積函式 ([malloc](../c-runtime-library/reference/malloc.md)，[免費](../c-runtime-library/reference/free.md)，和[realloc](../c-runtime-library/reference/realloc.md))
+- [CCRTHeap](../atl/reference/ccrtheap-class.md)包裝標準 CRT 堆積函數 ([malloc](../c-runtime-library/reference/malloc.md)、 [free](../c-runtime-library/reference/free.md)和[realloc](../c-runtime-library/reference/realloc.md))
 
-- [CWin32Heap](../atl/reference/cwin32heap-class.md)包裝 Win32 堆積處理，請使用[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)， [HeapFree](/windows/desktop/api/heapapi/nf-heapapi-heapfree)，和[HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
+- [CWin32Heap](../atl/reference/cwin32heap-class.md)使用[HeapAlloc](/windows/win32/api/heapapi/nf-heapapi-heapalloc)、 [HeapFree](/windows/win32/api/heapapi/nf-heapapi-heapfree)和[HeapRealloc](/windows/win32/api/heapapi/nf-heapapi-heaprealloc)包裝 Win32 堆積控制碼
 
-- [CLocalHeap](../atl/reference/clocalheap-class.md)包裝 Win32 Api:[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)， [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)，和[LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md)包裝 Win32 Api:[LocalAlloc](/windows/win32/api/winbase/nf-winbase-localalloc)、 [LocalFree](/windows/win32/api/winbase/nf-winbase-localfree)和[LocalRealloc](/windows/win32/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md)包裝 Win32 Api:[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)， [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)，以及[GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)。
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md)包裝 Win32 Api:[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)、 [GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree)和[GlobalRealloc](/windows/win32/api/winbase/nf-winbase-globalrealloc)。
 
-- [CComHeap](../atl/reference/ccomheap-class.md)包裝 COM 工作配置器 Api:[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)， [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)，和[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md)包裝 COM 工作配置器 Api:[CoTaskMemAlloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemalloc)、 [CoTaskMemFree](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemfree)和[CoTaskMemRealloc](/windows/win32/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
-最有用的類別是以字串的記憶體管理、`CWin32Heap`因為它可讓您建立多個獨立的堆積。 例如，如果您想要只針對字串使用不同堆積，您可以執行下列項目：
+基於字串記憶體管理的目的, 最有用的類別是`CWin32Heap` , 因為它可讓您建立多個獨立的堆積。 例如, 如果您想要只針對字串使用個別的堆積, 您可以執行下列動作:
 
 [!code-cpp[NVC_ATLMFC_Utilities#180](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_1.cpp)]
 
-若要使用此私用 string 管理員來管理記憶體`CString`變數中，管理員做為參數傳遞指標`CString`變數的建構函式：
+若要使用這個私用字串管理員來管理`CString`變數的記憶體, 請將指標傳遞給管理員, 做為`CString`變數的函式的參數:
 
 [!code-cpp[NVC_ATLMFC_Utilities#181](../atl-mfc-shared/codesnippet/cpp/implementation-of-a-custom-string-manager-basic-method_2.cpp)]
 

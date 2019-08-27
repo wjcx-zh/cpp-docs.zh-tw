@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220369"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457028"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> Visual Studio 2017 中，發行\<filesystem > 標頭不是尚未C++標準。 C++在 Visual Studio 2017 (MSVC v141) 實作草稿最終版標準中，找到[ISO/IEC JTC 1/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)。
+> 從 Visual Studio 2017 發行以來, \<filesystem > 標頭尚未是C++標準。 C++在 Visual Studio 2017 (MSVC v141) 中, 會執行最終的草稿標準, 其可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到。
 
-此標頭支援的兩個廣泛的類別，主機作業系統的其中一個檔案系統：Microsoft Windows 和 Posix。
+此標頭支援兩種廣泛的主機作業系統類別之一的檔案系統:Microsoft Windows 和 Posix。
 
 雖然大部分功能對這兩個作業系統而言是共通的，不過本文還是指出其中的差異。 例如：
 
@@ -89,10 +89,12 @@ using namespace std::experimental::filesystem::v1;
 
 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。
 
-## <a name="classes"></a>類別
+## <a name="members"></a>成員
 
-|名稱|描述|
-|----------|-----------------|
+### <a name="classes"></a>類別
+
+|||
+|-|-|
 |[directory_entry 類別](../standard-library/directory-entry-class.md)|描述 `directory_iterator` 或 `recursive_directory_iterator` 傳回的物件，且物件中包含路徑。|
 |[directory_iterator 類別](../standard-library/directory-iterator-class.md)|描述可循序遍訪檔案系統目錄中的檔案名稱的輸入迭代器。|
 |[filesystem_error 類別](../standard-library/filesystem-error-class.md)|擲回例外狀況的基底類別，以報告低階系統溢位。|
@@ -100,10 +102,10 @@ using namespace std::experimental::filesystem::v1;
 |[recursive_directory_iterator 類別](../standard-library/recursive-directory-iterator-class.md)|描述可循序遍訪檔案系統目錄中的檔案名稱的輸入迭代器。 迭代器也可以下降到子目錄。|
 |[file_status 類別](../standard-library/file-status-class.md)|包裝 `file_type`。|
 
-## <a name="structs"></a>結構
+### <a name="structs"></a>結構
 
-|名稱|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[space_info 結構](../standard-library/space-info-structure.md)|保留磁碟區的相關資訊。|
 
 ## <a name="functions"></a>函式
@@ -116,14 +118,15 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>列舉
 
-|名稱|描述|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

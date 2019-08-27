@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: a1f24221-5b09-4824-be48-92eae5644b53
-ms.openlocfilehash: ff8d9f214b4fe4d004691c54474dcdabf2c0af85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16d5efc5c5f7ce81b4b60269b0c666fd5d24266e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62314737"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492517"
 ---
 # <a name="understanding-manifest-generation-for-cc-programs"></a>了解 C/C++ 程式的資訊清單產生過程
 
-A[資訊清單](/windows/desktop/sbscs/manifests)內嵌在應用程式或組件的 XML 文件可以是外部的 XML 檔案或資源。 資訊清單[隔離的應用程式](/windows/desktop/SbsCs/isolated-applications)用來管理的名稱和共用的應用程式應繫結在執行階段的並排顯示組件的版本。 並排顯示組件資訊清單指定名稱、 版本、 資源和其他組件及其相依性。
+[資訊清單](/windows/win32/sbscs/manifests)是 XML 檔, 可以是外部 xml 檔案, 或是內嵌在應用程式或元件內的資源。 [隔離應用程式](/windows/win32/SbsCs/isolated-applications)的資訊清單是用來管理共用並存元件的名稱和版本, 應用程式應該在執行時間進行系結。 並存元件的資訊清單會指定其名稱、版本、資源和其他元件的相依性。
 
-有兩種方式可建立隔離的應用程式或並排顯示組件的資訊清單。 首先，組件的作者，可以手動建立遵循規則，並命名需求的資訊清單檔。 或者，如果程式只依賴視覺效果C++可以自動產生組件，例如 CRT、 MFC、 ATL 或其他項目，然後將資訊清單，由連結器。
+有兩種方式可以建立隔離應用程式或並存元件的資訊清單。 首先, 元件的作者可以手動建立遵循規則和命名需求的資訊清單檔。 或者, 如果程式只相依于 Visual C++元件 (例如 CRT、MFC、ATL 或其他專案), 則連結器可以自動產生資訊清單。
 
-視覺效果的標頭C++程式庫包含組件的詳細資訊，並當應用程式程式碼中包含程式庫時，連結器會使用此組件資訊來形成最終二進位檔的資訊清單。 連結器不會內嵌於二進位檔，資訊清單檔案，並只會產生做為外部檔案的清單。 將做為外部檔案的資訊清單可能不適用於所有案例。 比方說，建議您使用私用組件有內嵌資訊清單。 在命令列組建，例如使用 nmake 來建置程式碼，資訊清單可以內嵌使用資訊清單的工具;如需詳細資訊，請參閱[在命令列的資訊清單產生](manifest-generation-at-the-command-line.md)。 建置時 Visual Studio 中，您可以內嵌資訊清單設定中的資訊清單工具屬性**專案屬性**對話方塊，請參閱[Visual Studio 中的資訊清單產生](manifest-generation-in-visual-studio.md)。
+視覺效果C++程式庫的標頭包含元件資訊, 而當程式庫包含在應用程式代碼中時, 連結器會使用此元件資訊來形成最後二進位檔的資訊清單。 連結器不會在二進位檔中內嵌資訊清單檔案, 而且只能將資訊清單產生為外部檔案。 將資訊清單當做外部檔案使用, 可能不適用於所有案例。 例如, 建議私用元件具有內嵌的資訊清單。 在使用 nmake 建立程式碼的命令列組建中, 可以使用資訊清單工具內嵌資訊清單;如需詳細資訊, 請參閱[在命令列產生資訊清單](manifest-generation-at-the-command-line.md)。 以 Visual Studio 建立時, 可以在 [**專案屬性**] 對話方塊中設定資訊清單工具的屬性, 以內嵌資訊清單。請參閱[Visual Studio 中的資訊清單產生](manifest-generation-in-visual-studio.md)。
 
 ## <a name="see-also"></a>另請參閱
 

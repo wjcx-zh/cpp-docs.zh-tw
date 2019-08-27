@@ -96,12 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba7026fa60045720c893478c1ea637dbaa037c1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377500"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456923"
 ---
 # <a name="array-class-c-standard-library"></a>array 類別 (C++ 標準程式庫)
 
@@ -137,7 +137,7 @@ class array;
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
 |[value_type](#value_type)|元素的類型。|
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[array](#array)|建構陣列物件。|
 |[assign](#assign)|取代所有項目。|
@@ -159,10 +159,10 @@ class array;
 |[size](#size)|計算元素的數目。|
 |[swap](#swap)|交換兩個容器的內容。|
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[array::operator=](#op_eq)|取代受控制的序列。|
-|[array::operator\[\]](#op_at)|存取指定位置的項目。|
+|[array:: operator\[\]](#op_at)|存取指定位置的項目。|
 
 ## <a name="remarks"></a>備註
 
@@ -176,7 +176,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<array>
+**標頭：** \<array>
 
 **命名空間：** std
 
@@ -192,7 +192,7 @@ array(const array& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要插入的物件或範圍。
 
 ### <a name="remarks"></a>備註
@@ -247,12 +247,12 @@ void assign(const Ty& val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 要指派的值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會取代所控制的序列`*this`重複`N`值之項目的*val*。
+成員函式會將所控制`*this`的序列取代為值`N` *val*的元素重複。
 
 ### <a name="example"></a>範例
 
@@ -303,12 +303,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*off*<br/>
+*停止*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回位置的受控制序列的項目參考*關閉*。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
+成員函式會在位置*off*傳回受控制序列之元素的參考。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
 
 ### <a name="example"></a>範例
 
@@ -432,7 +432,7 @@ int main()
 
 ## <a name="cbegin"></a> array::cbegin
 
-傳回**const**迭代器，定址範圍中的第一個元素。
+傳回**常數**反覆運算器, 定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -440,13 +440,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-A **const**隨機存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
+**常數**隨機存取反覆運算器, 指向範圍的第一個元素, 或指向空白範圍結尾 (空白範圍`cbegin() == cend()`) 之外的位置。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改 (非**const**) 容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> array::cend
 
-傳回**const**迭代器，定址範圍中最後一個項目之外的位置。
+傳回**常數**反覆運算器, 定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -472,7 +472,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`end()`和`cend()`的任何種類的可修改 (非**const**) 容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1149,14 +1149,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*off*<br/>
+*停止*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回位置的受控制序列的項目參考*關閉*。 如果位置不正確，就不會定義行為。
+成員函式會在位置*off*傳回受控制序列之元素的參考。 如果位置不正確，就不會定義行為。
 
-另外還有非成員[取得](array-functions.md#get)函式可用來取得參考之項目的**陣列**。
+還有一個非成員[get](array-functions.md#get)函式可供取得**陣列**元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -1201,12 +1201,12 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要複製的容器。
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會將指派的每個項目*右*受控制序列的對應項目，然後傳回`*this`。 您使用它來取代受控制的序列中的受控制序列的複本*右*。
+成員運算子會將的每個元素指派給受控制序列的對應元素, 然後`*this`傳回。 您可以使用它, 將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1571,14 +1571,14 @@ void swap(array& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要與之交換內容的陣列。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會交換之間受控制的序列`*this`並*右*。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
+成員函式會在和*right*之間`*this`交換受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
 
-另外還有非成員[交換](array-functions.md#swap)函式可用來交換兩個**陣列**執行個體。
+另外還有一個非成員[交換](array-functions.md#swap)函式, 可用來交換兩個**陣列**實例。
 
 ### <a name="example"></a>範例
 
@@ -1677,4 +1677,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

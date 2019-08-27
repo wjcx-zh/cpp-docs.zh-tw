@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370069"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460111"
 ---
 # <a name="recursivetimedmutex-class"></a>recursive_timed_mutex 類別
 
@@ -39,7 +39,7 @@ class recursive_timed_mutex;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[recursive_timed_mutex](#recursive_timed_mutex)|建構未鎖定的 `recursive_timed_mutex` 物件。|
 |[~recursive_timed_mutex 解構函式](#dtorrecursive_timed_mutex_destructor)|釋出 `recursive_timed_mutex` 物件所使用的任何資源。|
@@ -56,7 +56,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
+如果方法成功取得的擁有權, `mutex`或如果呼叫的執行緒已經擁有, `mutex`則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有`mutex`，則函數會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`, 函式會立即傳回**true**, 而先前的鎖定仍會生效。
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -119,16 +119,16 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*<br/>
+*Rel_time*\
 [chrono::duration](../standard-library/duration-class.md) 物件，此物件會指定方法嘗試取得 `mutex` 擁有權的時間上限。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
+如果方法成功取得的擁有權, `mutex`或如果呼叫的執行緒已經擁有, `mutex`則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有`mutex`，方法會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`, 方法會立即傳回**true**, 而先前的鎖定仍會生效。
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -143,16 +143,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*<br/>
+*Abs_time*\
 這個時間點所指定的臨界值一超過，方法就不再嘗試取得 `mutex` 的擁有權。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果方法成功取得擁有權`mutex`或是呼叫執行緒已經擁有`mutex`，否則**false**。
+如果方法成功取得的擁有權, `mutex`或如果呼叫的執行緒已經擁有, `mutex`則**為 true** , 否則為**false**。
 
 ### <a name="remarks"></a>備註
 
-如果呼叫執行緒已經擁有`mutex`，方法會立即傳回 **，則為 true**，和先前的鎖定仍持續有效。
+如果呼叫執行緒已經擁有`mutex`, 方法會立即傳回**true**, 而先前的鎖定仍會生效。
 
 ## <a name="unlock"></a>  unlock
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14e5ea3a051d81828c5f88ac16df60b6ebb5b559
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184436"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498808"
 ---
 # <a name="argument-definitions"></a>引數定義
 
@@ -27,26 +27,26 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 允許使用方便命令列剖析的引數，同時可選擇性地存取環境變數。 引數定義如下：
 
 *argc*<br/>
-整數，包含所遵循的引數的計數*argv*。 *Argc*參數一律是大於或等於 1。
+包含*argv*中後面的引數計數的整數。 *Argc*參數一律大於或等於1。
 
 *argv*<br/>
-以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。 依照慣例，`argv[0]`會叫用程式與命令`argv[1]`是第一個命令列引數，並依此類推，直到`argv[argc]`，一律為 NULL。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏命令列處理的資訊。
+以 null 終止之字串的陣列，表示由程式的使用者所輸入的命令列引數。 依照慣例, `argv[0]`是用來叫用程式的命令, `argv[1]`是第一個命令列引數, 依此類推, 直到`argv[argc]`, 一律為 Null。 如需隱藏命令列處理的相關資訊, 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)。
 
 第一個命令列引數一定是 `argv[1]`，而最後一個是 `argv[argc - 1]`。
 
 > [!NOTE]
-> 依照慣例，`argv[0]`是與該程式會叫用的命令。  不過，就可以繁衍 （spawn） 處理程序，使用[CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)如果您使用第一個和第二個引數 (*lpApplicationName*並*lpCommandLine*)， `argv[0]`可能不是可執行檔的名稱;使用  [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)擷取可執行檔的名稱和其完整路徑。
+> 依照慣例, `argv[0]`是用來叫用程式的命令。  不過, 如果您同時使用第一個和第二個引數 (*lpApplicationName*和*lpCommandLine*), 則可以使用[CreateProcess](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)來產生進程`argv[0]` , 而不能是可執行檔名稱; 使用[GetModuleFileName](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulefilenamew)取得可執行檔名稱及其完整路徑。
 
 ## <a name="microsoft-specific"></a>Microsoft 特定的
 
 *envp*<br/>
-*Envp*陣列，這是常見的擴充功能，許多 UNIX 系統中，會在 Microsoft C++。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列由 NULL 項目終止。 它可以宣告為陣列的指標**char** (`char *envp[]`) 或為指標的指標**char** (`char **envp`)。 如果您的程式使用`wmain`而非`main`，使用**wchar_t**資料類型，而非**char**。 環境區塊傳遞給`main`和`wmain`是目前環境的 「 凍結 」 複本。 如果您接著變更環境中的，透過呼叫`putenv`或`_wputenv`，目前的環境 (所傳回的`getenv`或`_wgetenv`並`_environ`或`_wenviron`變數) 將會變更，不過所指向的區塊envp 不會變更。 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)如需隱藏環境處理的資訊。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。
+在許多 UNIX 系統中, *envp*陣列是通用的延伸模組, 可在 Microsoft C++中使用。 它是一個字串的陣列，表示在使用者的環境中設定的變數。 這個陣列由 NULL 項目終止。 它可以宣告為**char** `char *envp[]`() 的指標陣列, 或宣告為**char** (`char **envp`) 指標的指標。 如果您的`main`程式`wmain`使用, 而不是, 請使用**wchar_t**資料類型, 而不是**char**。 環境區塊會傳遞至`main` , `wmain`而且是目前環境的「凍結」複本。 如果您後續透過`putenv`呼叫或`_wputenv`來變更環境, 則目前`getenv`環境 (如或`_wgetenv`和`_environ`或`_wenviron`變數所傳回) 將會變更, 但所指向的區塊則是由envp 不會變更。 如需隱藏環境處理的相關資訊, 請參閱[自訂命令列處理](../cpp/customizing-cpp-command-line-processing.md)。 此引數在 C 中可與 ANSI 相容，但是在 C++ 中則不相容。
 
 **結束 Microsoft 專屬**
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用*argc*， *argv*，並*envp*引數`main`:
+下列範例顯示如何使用*argc*、 *argv*和*envp*引數來`main`執行下列動作:
 
 ```cpp
 // argument_definitions.cpp

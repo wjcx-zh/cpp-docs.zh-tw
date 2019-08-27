@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: 7bfce54253ffcd217bb98345893724a509879abc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 927b9f5031bb6262c2f4a071b535802eb9e6990a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247509"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497956"
 ---
 # <a name="ca2wex-class"></a>CA2WEX 類別
 
-這個類別會使用字串轉換巨集 CA2TEX、 CA2CTEX、 CT2WEX，和 CT2CWEX 和 typedef CA2W。
+這個類別是由字串轉換宏 CA2TEX、CA2CTEX、CT2WEX 和 CT2CWEX, 以及 typedef CA2W 所使用。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,7 +34,7 @@ class CA2WEX
 #### <a name="parameters"></a>參數
 
 *t_nBufferLength*<br/>
-轉譯程序中使用的緩衝區大小。 預設長度為 128 位元組。
+轉譯進程中使用的緩衝區大小。 預設長度為128個位元組。
 
 ## <a name="members"></a>成員
 
@@ -49,26 +49,26 @@ class CA2WEX
 
 |名稱|描述|
 |----------|-----------------|
-|[CA2WEX::operator LPWSTR](#operator_lpwstr)|轉換運算子。|
+|[CA2WEX:: operator LPWSTR](#operator_lpwstr)|轉換運算子。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|儲存在來源字串資料成員。|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|靜態緩衝區，用來儲存已轉換的字串。|
+|[CA2WEX::m_psz](#m_psz)|儲存來源字串的資料成員。|
+|[CA2WEX::m_szBuffer](#m_szbuffer)|靜態緩衝區, 用來儲存已轉換的字串。|
 
 ## <a name="remarks"></a>備註
 
-除非需要額外的功能，使用 CA2TEX、 CA2CTEX、 CT2WEX、 CT2CWEX 或 CA2W 程式碼中。
+除非需要額外的功能, 否則請在您的程式碼中使用 CA2TEX、CA2CTEX、CT2WEX、CT2CWEX 或 CA2W。
 
-這個類別包含固定大小的靜態緩衝區可用來儲存轉換的結果。 如果結果太大而無法放入靜態緩衝區，類別配置的記憶體使用**malloc**，當物件超出範圍時，即釋放記憶體。 這可確保，不同於文字轉換巨集可在舊版的 ATL，這個類別能夠安全地在迴圈中使用，而且它不會堆疊溢位。
+這個類別包含固定大小的靜態緩衝區, 用來儲存轉換的結果。 如果結果太大而無法放入靜態緩衝區, 類別會使用**malloc**配置記憶體, 當物件超出範圍時釋放記憶體。 這可確保與舊版 ATL 中提供的文字轉換宏不同, 此類別可安全地在迴圈中使用, 而且不會使堆疊溢位。
 
-如果類別嘗試失敗與堆積上配置記憶體時，它會呼叫`AtlThrow`E_OUTOFMEMORY 引數。
+如果類別嘗試在堆積上配置記憶體且失敗, 則會使用 E_OUTOFMEMORY 的`AtlThrow`引數呼叫。
 
-根據預設，ATL 轉換類別和巨集會使用目前的執行緒 ANSI 字碼頁轉換。 如果您想要覆寫特定轉換，行為，請做為類別的建構函式的第二個參數指定的字碼頁。
+根據預設, ATL 轉換類別和宏會使用目前線程的 ANSI 字碼頁進行轉換。 如果您想要覆寫特定轉換的行為, 請將字碼頁指定為類別之函式的第二個參數。
 
-下列巨集根據此類別：
+下列宏是以這個類別為基礎:
 
 - CA2TEX
 
@@ -78,19 +78,19 @@ class CA2WEX
 
 - CT2CWEX
 
-下列的 typedef 根據此類別：
+下列 typedef 是以這個類別為基礎:
 
 - CA2W
 
-如需這些文字轉換巨集的討論，請參閱 < [ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)。
+如需這些文字轉換宏的討論, 請參閱[ATL 和 MFC 字串轉換宏](string-conversion-macros.md)。
 
 ## <a name="example"></a>範例
 
-請參閱[ATL 和 MFC 字串轉換巨集](string-conversion-macros.md)如需使用這些字串轉換巨集的範例。
+如需使用這些字串轉換宏的範例, 請參閱[ATL 和 MFC 字串轉換宏](string-conversion-macros.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlconv.h
+**標頭:** atlconv.h。h
 
 ##  <a name="ca2wex"></a>  CA2WEX::CA2WEX
 
@@ -107,13 +107,13 @@ CA2WEX(LPCSTR psz) throw(...);
 要轉換的文字字串。
 
 *nCodePage*<br/>
-使用的字碼頁來執行轉換。 請參閱 Windows SDK 函式的程式碼頁面參數討論[MultiByteToWideChar](/windows/desktop/api/stringapiset/nf-stringapiset-multibytetowidechar)如需詳細資訊。
+用來執行轉換的字碼頁。 如需詳細資訊, 請參閱 Windows SDK 函數[MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)的字碼頁參數討論。
 
 ### <a name="remarks"></a>備註
 
-配置轉譯程序中使用的緩衝區。
+配置用於轉譯進程的緩衝區。
 
-##  <a name="dtor"></a>  CA2WEX::~CA2WEX
+##  <a name="dtor"></a>CA2WEX:: ~ CA2WEX
 
 解構函式。
 
@@ -127,7 +127,7 @@ CA2WEX(LPCSTR psz) throw(...);
 
 ##  <a name="m_psz"></a>  CA2WEX::m_psz
 
-儲存在來源字串資料成員。
+儲存來源字串的資料成員。
 
 ```
 LPWSTR m_psz;
@@ -135,13 +135,13 @@ LPWSTR m_psz;
 
 ##  <a name="m_szbuffer"></a>  CA2WEX::m_szBuffer
 
-靜態緩衝區，用來儲存已轉換的字串。
+靜態緩衝區, 用來儲存已轉換的字串。
 
 ```
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-##  <a name="operator_lpwstr"></a>  CA2WEX::operator LPWSTR
+##  <a name="operator_lpwstr"></a>CA2WEX:: operator LPWSTR
 
 轉換運算子。
 
@@ -151,7 +151,7 @@ operator LPWSTR() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回文字字串，當輸入 LPWSTR。
+傳回文字字串, 類型為 LPWSTR。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -160,4 +160,4 @@ operator LPWSTR() const throw();
 [CW2AEX 類別](../../atl/reference/cw2aex-class.md)<br/>
 [CW2CWEX 類別](../../atl/reference/cw2cwex-class.md)<br/>
 [CW2WEX 類別](../../atl/reference/cw2wex-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

@@ -1,25 +1,25 @@
 ---
-title: 'Catlservicemodulet:: Run 函式'
+title: 'CAtlServiceModuleT:: Run 函式'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-ms.openlocfilehash: 0f50c13912bbfef861e8650ee7589daea1e45725
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c35020996852731a8f22c15860d4cceb7a8bdb6
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62250838"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491524"
 ---
-# <a name="catlservicemoduletrun-function"></a>Catlservicemodulet:: Run 函式
+# <a name="catlservicemoduletrun-function"></a>CAtlServiceModuleT:: Run 函式
 
-`Run` 包含呼叫`PreMessageLoop`， `RunMessageLoop`，和`PostMessageLoop`。 在被呼叫之後`PreMessageLoop`第一次儲存服務的執行緒 id。 服務會使用此 ID 來傳送 WM_QUIT 訊息使用 Win32 API 函式，就可以將它關閉本身[PostThreadMessage](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)。
+`Run`包含`PreMessageLoop`、 `RunMessageLoop`和的呼叫。`PostMessageLoop` 在呼叫之後, `PreMessageLoop`會先儲存服務的執行緒識別碼。 服務會使用此識別碼來關閉本身, 方法是使用 WIN32 API 函式[PostThreadMessage](/windows/win32/api/winuser/nf-winuser-postthreadmessagew)傳送 WM_QUIT 訊息。
 
-`PreMessageLoop` 然後呼叫`InitializeSecurity`。 根據預設，`InitializeSecurity`呼叫[CoInitializeSecurity](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializesecurity)與安全性描述元設定為 NULL，這表示任何使用者可對您物件的存取。
+`PreMessageLoop`然後呼叫`InitializeSecurity`。 根據預設, `InitializeSecurity`會呼叫[CoInitializeSecurity](/windows/win32/api/combaseapi/nf-combaseapi-coinitializesecurity) , 並將安全描述項設定為 Null, 這表示任何使用者都可以存取您的物件。
 
-如果您不想要指定自己的安全性服務，會覆寫`PreMessageLoop`，且不要呼叫`InitializeSecurity`，COM 然後會判斷來自登錄的安全性設定。 若要設定登錄設定方便的方法是使用[DCOMCNFG](../atl/dcomcnfg.md)本章節稍後所討論的公用程式。
+如果您不想讓服務指定自己的安全性, 請覆寫`PreMessageLoop`並不要呼叫`InitializeSecurity`, 然後 COM 會從登錄判斷安全性設定。 設定登錄設定的便利方式是使用本節稍後討論的[dcomcnfg.exe](../atl/dcomcnfg.md)公用程式。
 
-安全性指定之後，物件會向 COM，讓新的用戶端可以連線到的程式。 最後，程式執行，而且程式進入的訊息迴圈會告知服務控制管理員 (SCM)。 在服務關閉時將 quit 的訊息張貼之後，直到執行程式。
+一旦指定了安全性, 就會向 COM 註冊物件, 讓新的用戶端可以連接到程式。 最後, 此程式會告訴服務控制管理員 (SCM) 它正在執行, 而且程式會進入訊息迴圈。 程式會持續執行, 直到服務關閉時張貼 quit 訊息為止。
 
 ## <a name="see-also"></a>另請參閱
 

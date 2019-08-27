@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7c13ef8b9656c5c2fa6a90fefca0d9babbe1c84
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491219"
 ---
 # <a name="cpoint-class"></a>CPoint 類別
 
@@ -34,36 +34,36 @@ class CPoint : public tagPOINT
 
 |名稱|描述|
 |----------|-----------------|
-|[CPoint::CPoint](#cpoint)|建構 `CPoint`。|
+|[CPoint:: CPoint](#cpoint)|建構 `CPoint`。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPoint::Offset](#offset)|將值加入至`x`並`y`的成員`CPoint`。|
+|[CPoint::Offset](#offset)|將值加入至`x`的`y`和成員`CPoint`。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CPoint::operator-](#operator_-)|傳回的差異`CPoint`和大小或一個點，或兩個點或以負值大小的位移大小差異的負值。|
-|[CPoint::operator !=](#operator_neq)|檢查兩個點之間的不等比較。|
-|[CPoint::operator +](#operator_add)|傳回的總和`CPoint`和大小或點，或`CRect`位移大小。|
-|[CPoint::operator +=](#operator_add_eq)|位移`CPoint`加上大小或點。|
-|[CPoint::operator -=](#operator_-_eq)|位移`CPoint`減去大小或點。|
-|[CPoint::operator ==](#operator_eq_eq)|檢查兩個點之間相等。|
+|[CPoint:: operator-](#operator_-)|傳回`CPoint`和大小的差異, 或點的負數, 或兩個點之間的大小差異, 或以負大小的位移。|
+|[CPoint:: operator! =](#operator_neq)|檢查兩個點之間是否不相等。|
+|[CPoint:: operator +](#operator_add)|傳回`CPoint`和大小或點的總和, `CRect`或大小的位移。|
+|[CPoint:: operator + =](#operator_add_eq)|藉`CPoint`由新增大小或點來位移。|
+|[CPoint::operator -=](#operator_-_eq)|藉`CPoint`由減去大小或點來位移。|
+|[CPoint:: operator = =](#operator_eq_eq)|檢查兩個點之間是否相等。|
 
 ## <a name="remarks"></a>備註
 
-它也包含成員函式來操作`CPoint`並[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構。
+它也包含操作`CPoint`和[指向](/windows/win32/api/windef/ns-windef-point)結構的成員函式。
 
-A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 「 大小 」 進行互動的運算子都接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構，因為這兩個是可互換。
-
-> [!NOTE]
->  此類別衍生自`tagPOINT`結構。 (名稱`tagPOINT`是較不常使用的名稱`POINT`結構。)這表示的資料成員`POINT`結構`x`並`y`，可存取的資料成員的`CPoint`。
+物件可以在使用`POINT`結構的任何位置使用。 `CPoint` 這個類別的運算子與「大小」互動會接受[CSize](../../atl-mfc-shared/reference/csize-class.md)物件或[大小](/windows/win32/api/windef/ns-windef-size)結構, 因為這兩者都可以互換。
 
 > [!NOTE]
->  如需有關共用 公用程式類別 (例如`CPoint`)，請參閱 <<c2> [ 共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
+>  這個類別衍生自`tagPOINT`結構。 (名稱`tagPOINT`是`POINT`結構較不常使用的名稱)。這表示`POINT`結構的資料成員 ( `x`和`y`) 是的`CPoint`可存取資料成員。
+
+> [!NOTE]
+>  如需共用公用程式類別 (例如`CPoint`) 的詳細資訊, 請參閱[共用類別](../../atl-mfc-shared/atl-mfc-shared-classes.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -73,9 +73,9 @@ A`CPoint`物件可以是任一處使用`POINT`使用結構。 這個類別的 �
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atltypes.h
+**標頭:** atltypes。h
 
-##  <a name="cpoint"></a>  CPoint::CPoint
+##  <a name="cpoint"></a>CPoint:: CPoint
 
 建構 `CPoint` 物件。
 
@@ -96,13 +96,13 @@ CPoint(LPARAM dwPoint) throw();
 指定 `y` 之 `CPoint` 成員的值。
 
 *initPt*<br/>
-[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`，指定用來初始化值`CPoint`。
+[點](/windows/win32/api/windef/ns-windef-point)結構或`CPoint` , 指定用來初始化`CPoint`的值。
 
 *initSize*<br/>
-[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) ，指定用來初始化值`CPoint`。
+[大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md) , 指定用來初始化`CPoint`的值。
 
 *dwPoint*<br/>
-設定組`x`的低序位字組的成員*dwPoint*並`y`高序位字組的成員*dwPoint*。
+將成員設為`y` *dwPoint*的低序位單字, 並將成員設定為 dwPoint 的高序位單字。 `x`
 
 ### <a name="remarks"></a>備註
 
@@ -135,9 +135,9 @@ CPoint ptFromDouble(dwSize);
 ASSERT(ptFromDouble == ptMFCHere);
 ```
 
-##  <a name="offset"></a>  CPoint::Offset
+##  <a name="offset"></a>CPoint:: Offset
 
-將值加入至`x`並`y`的成員`CPoint`。
+將值加入至`x`的`y`和成員`CPoint`。
 
 ```
 void Offset(int xOffset, int yOffset) throw();
@@ -148,24 +148,24 @@ void Offset(SIZE size) throw();
 ### <a name="parameters"></a>參數
 
 *xOffset*<br/>
-指定的位移數量`x`隸屬`CPoint`。
+指定`x` 成員`CPoint`的位移數量。
 
 *yOffset*<br/>
-指定的位移數量`y`隸屬`CPoint`。
+指定`y` 成員`CPoint`的位移數量。
 
 *point*<br/>
-指定的數量 ([點](/windows/desktop/api/windef/ns-windef-tagpoint)或是`CPoint`) 位移`CPoint`。
+指定要位移的`CPoint`數量 ( `CPoint`[點](/windows/win32/api/windef/ns-windef-point)或)。
 
 *size*<br/>
-指定的數量 ([大小](/windows/desktop/api/windef/ns-windef-tagsize)或是[CSize](../../atl-mfc-shared/reference/csize-class.md)) 位移`CPoint`。
+指定要位移的`CPoint`數量 ([大小](/windows/win32/api/windef/ns-windef-size)或[CSize](../../atl-mfc-shared/reference/csize-class.md))。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CPoint::operator = =
+##  <a name="operator_eq_eq"></a>CPoint:: operator = =
 
-檢查兩個點之間相等。
+檢查兩個點之間是否相等。
 
 ```
 BOOL operator==(POINT point) const throw();
@@ -174,19 +174,19 @@ BOOL operator==(POINT point) const throw();
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`物件。
+包含[點](/windows/win32/api/windef/ns-windef-point)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
 
-非零的點是否相等;否則為 0。
+如果點相等, 則為非零值;否則為0。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#29](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_2.cpp)]
 
-##  <a name="operator_neq"></a>  CPoint::operator ！ =
+##  <a name="operator_neq"></a>CPoint:: operator! =
 
-檢查兩個點之間的不等比較。
+檢查兩個點之間是否不相等。
 
 ```
 BOOL operator!=(POINT point) const throw();
@@ -195,19 +195,19 @@ BOOL operator!=(POINT point) const throw();
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或`CPoint`物件。
+包含[點](/windows/win32/api/windef/ns-windef-point)結構或`CPoint`物件。
 
 ### <a name="return-value"></a>傳回值
 
-點是否不相等; 如果為非零否則為 0。
+如果點不相等, 則為非零值;否則為0。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#30](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_3.cpp)]
 
-##  <a name="operator_add_eq"></a>  CPoint::operator + =
+##  <a name="operator_add_eq"></a>CPoint:: operator + =
 
-第一個多載會加入至大小`CPoint`。
+第一個多載會將大小新增`CPoint`至。
 
 ```
 void operator+=(SIZE size) throw();
@@ -217,26 +217,26 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+包含[大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *point*<br/>
-包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-第二個多載會加入指向`CPoint`。
+第二個多載會將點`CPoint`加入至。
 
-在這兩種情況下，新增會藉由新增`x`(或`cx`) 成員的右運算元`x`隸屬`CPoint`並新增`y`(或`cy`) 的右運算元的成員`y`隸屬`CPoint`。
+在這兩種情況下, 只要將右`x`運算元的`cx`(或`CPoint` ) 成員加入至`x`的成員, 並將右運算元的`y` (或`cy`) 成員加入至, 即可完成加法。`y` 的`CPoint`成員。
 
-例如，新增`CPoint(5, -7)`，其中包含此變數`CPoint(30, 40)`變更變數`CPoint(35, 33)`。
+例如, 將新增`CPoint(5, -7)`至包含`CPoint(30, 40)`的變數會將變數變更為`CPoint(35, 33)`。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#31](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_4.cpp)]
 
-##  <a name="operator_-_eq"></a>  CPoint::operator -=
+##  <a name="operator_-_eq"></a>CPoint:: operator-=
 
-第一個多載減去大小`CPoint`。
+第一個多載會從`CPoint`減去大小。
 
 ```
 void operator-=(SIZE size) throw();
@@ -246,26 +246,26 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+包含[大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *point*<br/>
-包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
-第二個多載減去的點`CPoint`。
+第二個多載會將中`CPoint`的點減去。
 
-在這兩種情況下，用減法，是藉由減去`x`(或`cx`) 成員的右運算元`x`的成員`CPoint`然後減去`y`(或`cy`) 的右手邊的成員從運算元`y`隸屬`CPoint`。
+在這兩種情況下, 減法都是`x`藉由`cx` `CPoint`從`x`的成員減去右運算元的 (或) 成員來完成, 並減去`y`右手邊`cy`的 (或) 成員來自`y` 成員`CPoint`的運算元。
 
-比方說，減去`CPoint(5, -7)`變數，其中包含來自`CPoint(30, 40)`變更變數`CPoint(25, 47)`。
+例如, 減去`CPoint(5, -7)`包含`CPoint(30, 40)`的變數會將變數變更為`CPoint(25, 47)`。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#32](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_5.cpp)]
 
-##  <a name="operator_add"></a>  CPoint::operator +
+##  <a name="operator_add"></a>CPoint:: operator +
 
-使用這個運算子來位移`CPoint`所`CPoint`或`CSize`物件，或位移`CRect`由`CPoint`。
+使用這個運算子, 以`CPoint` `CPoint`或`CSize` 物件位移`CRect` , 或由位移。 `CPoint`
 
 ```
 CPoint operator+(SIZE size) const throw();
@@ -276,31 +276,31 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>參數
 
 *size*<br/>
-包含[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+包含[大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *point*<br/>
-包含[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+包含[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *lpRect*<br/>
-包含的指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+包含[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-A`CPoint`大小，位移`CPoint`的位移點，或`CRect`點位移。
+, 其位移為大小、以`CPoint`點位移的, 或`CRect`某個點的位移。 `CPoint`
 
 ### <a name="remarks"></a>備註
 
-例如，使用前兩個多載的其中一個位移點`CPoint(25, -19)`原點`CPoint(15, 5)`] 或 [大小`CSize(15, 5)`傳回的值`CPoint(40, -14)`。
+例如, 使用前兩個多載的其中一個, 以點`CPoint(25, -19)` `CPoint(15, 5)`或大小`CSize(15, 5)`來位移點, 會傳回`CPoint(40, -14)`值。
 
-將矩形加入至某個點之後要位移傳回周框`x`和`y`點中指定的值。 例如，使用最後一個多載位移的矩形`CRect(125, 219, 325, 419)`原點`CPoint(25, -19)`傳回`CRect(150, 200, 350, 400)`。
+將矩形加入至某個點之後, 會傳回以點中指定`x`的`y`和值位移後的矩形。 例如, 使用最後一個多載, 以`CRect(125, 219, 325, 419)` `CRect(150, 200, 350, 400)`點`CPoint(25, -19)`來位移矩形。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator -
+##  <a name="operator_-"></a>CPoint:: operator-
 
-使用其中一種的前兩個多載減法`CPoint`或是`CSize`物件從`CPoint`。
+使用前兩個多載的其中一個來`CPoint`減去`CSize`中`CPoint`的或物件。
 
 ```
 CSize operator-(POINT point) const throw();
@@ -312,29 +312,29 @@ CPoint operator-() const throw();
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-A[點](/windows/desktop/api/windef/ns-windef-tagpoint)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
+[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)物件。
 
 *size*<br/>
-A[大小](/windows/desktop/api/windef/ns-windef-tagsize)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
+[大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](../../atl-mfc-shared/reference/csize-class.md)物件。
 
 *lpRect*<br/>
-指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件。
+[RECT](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位移的資料點，否定或`CPoint`也就是一個點的否定運算。
+, 這是兩個點之間的差異, `CPoint`其位移為大小的否定、 `CRect`位移為點否定的, 或`CPoint`為負的點。 `CSize`
 
 ### <a name="remarks"></a>備註
 
-第三個多載位移`CRect`的否定`CPoint`。 最後，使用要變換正負號的一元運算子`CPoint`。
+第三個多載`CRect`會以的`CPoint`否定位移。 最後, 使用一元運算子來否定`CPoint`。
 
-例如，使用第一個多載，來尋找兩個點之間的差異`CPoint(25, -19)`並`CPoint(15, 5)`傳回`CSize(10, -24)`。
+例如, 使用第一個多載來找出兩個點`CPoint(25, -19)`之間的差異`CSize(10, -24)`, 然後`CPoint(15, 5)`傳回。
 
-減去`CSize`從`CPoint`並未與上述相同的計算，但會傳回`CPoint`物件，不`CSize`物件。 例如，若要尋找的點之間的差異使用第二個多載`CPoint(25, -19)`和大小`CSize(15, 5)`傳回`CPoint(10, -24)`。
+從減去, 會執行與上述相同的計算, 但`CPoint`會傳回物件, `CSize`而不是物件。 `CPoint` `CSize` 例如, 使用第二個多載來尋找點`CPoint(25, -19)`和`CPoint(10, -24)`大小`CSize(15, 5)`之間的差異。
 
-減去一個矩形從點傳回的矩形位移的否定`x`和`y`點中指定的值。 例如，使用最後一個多載位移的矩形`CRect(125, 200, 325, 400)`點`CPoint(25, -19)`傳回`CRect(100, 219, 300, 419)`。
+從點減去矩形會傳回以點中指定之`x`和`y`值的否定位移的矩形。 例如, 使用最後一個多載, 在`CRect(125, 200, 325, 400)` `CRect(100, 219, 300, 419)`點`CPoint(25, -19)`傳回時位移矩形。
 
-要變換正負號的點使用一元運算子。 例如，使用與點的一元運算子`CPoint(25, -19)`傳回`CPoint(-25, 19)`。
+使用一元運算子來否定某個點。 例如, 搭配使用一元運算子與點`CPoint(25, -19)` `CPoint(-25, 19)`會傳回。
 
 ### <a name="example"></a>範例
 
@@ -344,6 +344,6 @@ A`CSize`也就是兩個點之間的差異`CPoint`的大小，負位移`CRect`位
 
 [MFC 範例 MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
-[POINT 結構](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
+[點結構](/windows/win32/api/windef/ns-windef-point)<br/>
 [CRect 類別](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize 類別](../../atl-mfc-shared/reference/csize-class.md)

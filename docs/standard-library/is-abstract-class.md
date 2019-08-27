@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_abstract class
 - is_abstract
 ms.assetid: 8867f660-3434-404c-ba90-c26607a5e0d2
-ms.openlocfilehash: 02863f5694f519e8cca54d07622a185f69de82d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b2413e673f92e5258bee5711db2870e2b58a11
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404815"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448994"
 ---
 # <a name="isabstract-class"></a>is_abstract 類別
 
@@ -27,12 +27,12 @@ struct is_abstract;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是具有至少一個純虛擬函式，否則為 false 的類別。
+如果類型*Ty*是至少有一個純虛擬函式的類別, 則類型述詞的實例會保留 true, 否則會保留 false。
 
 ## <a name="example"></a>範例
 
@@ -70,11 +70,11 @@ is_abstract<abstract> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_polymorphic 類別](../standard-library/is-polymorphic-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_polymorphic 類別](../standard-library/is-polymorphic-class.md)

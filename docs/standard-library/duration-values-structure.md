@@ -7,12 +7,12 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413771"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454295"
 ---
 # <a name="durationvalues-structure"></a>duration_values 結構
 
@@ -33,11 +33,11 @@ struct duration_values;
 |----------|-----------------|
 |[max](#max)|靜態。 指定 `Rep` 類型的值上限。|
 |[min](#min)|靜態。 指定 `Rep` 類型的值下限。|
-|[zero](#zero)|靜態。 傳回 `Rep(0)`。|
+|[零](#zero)|靜態。 傳回 `Rep(0)`。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<chrono >
+**標頭:** \<chrono >
 
 **命名空間：** std::chrono
 
@@ -87,5 +87,5 @@ static constexpr Rep zero();
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

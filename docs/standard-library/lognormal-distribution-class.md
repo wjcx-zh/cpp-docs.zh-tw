@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449787"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453813"
 ---
 # <a name="lognormaldistribution-class"></a>lognormal_distribution 類別
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數的值類型**double**如果未提供，分散根據對數常態分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**double**類型, 根據記錄一般散發散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*m*<br/>
+*分鐘*\
 `m` 分佈參數。
 
-*s*<br/>
+*今日*\
 `s` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*m*<br/>
+*分鐘*\
 `m` 分佈參數。
 
-*s*<br/>
+*今日*\
 `s` 分佈參數。
 
-*right*<br/>
+*再*\
 用來進行比較的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -247,4 +247,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

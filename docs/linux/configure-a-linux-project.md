@@ -1,13 +1,13 @@
 ---
 title: 在 Visual Studio 中設定 C++ Linux 專案
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5acd9edeef8f09f86c394c39939d8408821dd691
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821563"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042629"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -37,7 +37,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ![一般組態](media/settings_general.png)
 
-預設會使用此工具來建置可執行檔 (.out)。 若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型]  設定。
+預設會建置可執行檔 (.out)。 若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型]  設定。
 
 如需屬性頁中設定的詳細資訊，請參閱 [Linux 專案屬性頁參考](prop-pages-linux.md)。
 
@@ -105,7 +105,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 這項功能取決於已安裝 ZIP 的 Linux 電腦。 您可以使用這個 apt-get 命令來安裝 ZIP：
 
 ```cmd
-apt install zip
+sudo apt install zip
 ```
 
 若要管理標頭快取，請巡覽至 [工具] > [選項]、[跨平台] > [連線管理員] > [遠端標頭 IntelliSense 管理員]  。 若要在 Linux 電腦上進行變更後更新標頭快取，請選取遠端連線，然後選取 [更新]  。 選取 [刪除]  來移除標頭，但不刪除連線本身。 選取 [探索]  ，在**檔案總管**中開啟本機目錄。 將此資料夾視為唯讀。 若要針對 Visual Studio 2017 15.3 版之前建立的現有連線下載標頭，請選取連線，然後選取 [下載]  。

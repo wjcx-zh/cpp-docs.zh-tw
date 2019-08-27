@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::promise [C++], set_value
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
-ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560339dee5b13ddc13ff2f8af8283ea8615d804a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369952"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458356"
 ---
 # <a name="promise-class"></a>promise 類別
 
@@ -44,7 +44,7 @@ class promise;
 
 |名稱|描述|
 |----------|-----------------|
-|[promise](#promise)|建構 `promise` 物件。|
+|[承諾](#promise)|建構 `promise` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -65,11 +65,11 @@ class promise;
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
-*promise*<br/>
+*承諾*
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<未來 >
+**標頭:** \<未來 >
 
 **命名空間：** std
 
@@ -97,8 +97,8 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-`promise` 物件。
+*另一方面*\
+          `promise` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -106,7 +106,7 @@ promise& operator=(promise&& Other) noexcept;
 
 ### <a name="remarks"></a>備註
 
-此運算子轉移相關聯的非同步狀態，從*其他*。 轉移之後，*其他*是*空白*。
+這個運算子會從*另*一個傳輸相關聯的非同步狀態。 在傳送之後,*其他*則是*空*的。
 
 ## <a name="promise"></a>  promise::promise 建構函式
 
@@ -121,19 +121,19 @@ promise(promise&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Al*<br/>
+*Al*\
 記憶體配置器。 如需詳細資訊，請參閱 [\<allocators>](../standard-library/allocators-header.md)。
 
-*其他*<br/>
-`promise` 物件。
+*另一方面*\
+          `promise` 物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式建構*空*`promise`物件。
+第一個函式會建立*空* `promise`的物件。
 
-第二個建構函式會建構空`promise`物件，並使用*Al*進行記憶體配置。
+第二個函式會`promise`建立空的物件, 並使用*Al*來進行記憶體配置。
 
-第三個建構函式建構`promise`物件，並將轉移相關聯的非同步狀態，從*其他*，並將保留*其他*空白。
+第三個函式`promise`會建立物件, 並將相關聯的非同步狀態傳送至*其他*, 並保留*另*一個空白。
 
 ## <a name="set_exception"></a>  promise::set_exception
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>參數
 
-*Exc*<br/>
+*專有*\
 由這個方法儲存為例外狀況結果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>備註
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>參數
 
-*Exc*<br/>
+*專有*\
 由這個方法儲存為例外狀況結果的 [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)。
 
 ### <a name="remarks"></a>備註
@@ -190,7 +190,7 @@ void promise<void>::set_value();
 
 ### <a name="parameters"></a>參數
 
-*Val*<br/>
+*初始值*\
 要儲存為結果的值。
 
 ### <a name="remarks"></a>備註
@@ -201,11 +201,11 @@ void promise<void>::set_value();
 
 由於此方法的緣故，封鎖於相關聯非同步狀態上的任何執行緒會解除封鎖。
 
-第一種方法也會擲回任何例外狀況時擲回*Val*複製到相關聯的非同步狀態。 在此情況下，相關聯非同步狀態將不會設定為就緒。
+第一個方法也會擲回當*Val*複製到相關聯的非同步狀態時所擲回的任何例外狀況。 在此情況下，相關聯非同步狀態將不會設定為就緒。
 
-第二種方法也會擲回任何例外狀況時擲回*Val*移至相關聯的非同步狀態。 在此情況下，相關聯非同步狀態將不會設定為就緒。
+第二個方法也會擲回當*Val*移至相關聯的非同步狀態時所擲回的任何例外狀況。 在此情況下，相關聯非同步狀態將不會設定為就緒。
 
-部分特製化`promise<Ty&>`，儲存的值實際上是參考*Val*。
+對於部分特製化`promise<Ty&>`而言, 預存值實際上是*Val*的參考。
 
 對於特製化的 `promise<void>`，儲存值不存在。
 
@@ -222,7 +222,7 @@ void promise<void>::set_value_at_thread_exit();
 
 ### <a name="parameters"></a>參數
 
-*Val*<br/>
+*初始值*\
 要儲存為結果的值。
 
 ### <a name="remarks"></a>備註
@@ -233,11 +233,11 @@ void promise<void>::set_value_at_thread_exit();
 
 與 `set_value` 相反，直到目前執行緒的所有執行緒區域物件皆已終結後，才會將相關聯非同步狀態設為就緒。 通常，除非目前的執行緒結束，否則被封鎖於關聯非同步狀態的執行緒不會解除封鎖。
 
-第一種方法也會擲回任何例外狀況時擲回*Val*複製到相關聯的非同步狀態。
+第一個方法也會擲回當*Val*複製到相關聯的非同步狀態時所擲回的任何例外狀況。
 
-第二種方法也會擲回任何例外狀況時擲回*Val*移至相關聯的非同步狀態。
+第二個方法也會擲回當*Val*移至相關聯的非同步狀態時所擲回的任何例外狀況。
 
-部分特製化`promise<Ty&>`，預存的值實際上是參考*Val*。
+對於部分特製化`promise<Ty&>`而言, 預存值實際上是*Val*的參考。
 
 對於特製化的 `promise<void>`，儲存值不存在。
 
@@ -251,9 +251,9 @@ void swap(promise& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-`promise` 物件。
+*另一方面*\
+          `promise` 物件。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

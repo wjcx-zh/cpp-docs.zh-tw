@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae72523c5c0a769a0267da94fead5ea29664276e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377143"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459473"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf 類別
 
-描述控制項類型的項目傳輸的資料流緩衝區*Elem*，其字元特性由類別*Tr*，與儲存在外部檔案中的項目序列。
+描述資料流程緩衝區, 其控制*Elem*類型之元素的傳輸, 其字元特性是由類別*Tr*和外部檔案中儲存的專案序列所決定。
 
 ## <a name="syntax"></a>語法
 
@@ -60,10 +60,10 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 檔案緩衝區的基本項目。
 
-*Tr*<br/>
+*Tr*\
 檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
@@ -71,7 +71,7 @@ class basic_filebuf : public basic_streambuf<Elem, Tr>
 此範本類別描述的資料流緩衝區，可控制 *Elem* 類型的元素 (其字元特性由類別 *Tr* 所決定) 與外部檔案中儲存之元素序列間的往來傳輸。
 
 > [!NOTE]
-> 類型的物件`basic_filebuf`會建立具有類型的內部緩衝區`char *`不論`char_type`型別參數所指定*Elem*。 這表示 Unicode 字串 (包含**wchar_t**個字元) 會轉換為 ANSI 字串 (包含**char**字元) 會寫入內部緩衝區之前。 若要在緩衝區中儲存 Unicode 字串，建立類型的新緩衝區**wchar_t**並設定它使用[basic_streambuf:: pubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()`方法。 若要查看示範此行為的範例，請參閱以下範例。
+> 類型`basic_filebuf`的物件是使用類型`char *`的內部緩衝區所建立, 而不論`char_type`類型參數*Elem*所指定的。 這表示 Unicode 字串 (包含**wchar_t**字元) 在寫入內部緩衝區之前, 會轉換成 ANSI 字串 (包含**char**字元)。 若要在緩衝區中儲存 Unicode 字串, 請建立**wchar_t**類型的新緩衝區, 並使用[basic_streambuf::p ubsetbuf](../standard-library/basic-streambuf-class.md#pubsetbuf) `()`方法加以設定。 若要查看示範此行為的範例，請參閱以下範例。
 
 類別 `basic_filebuf`< `Elem`, `Tr`> 的物件會儲存檔案指標，而檔案指標指定 `FILE` 物件以控制與開啟的檔案相關聯的資料流。 它也會將指標儲存至兩個檔案轉換 Facet，以供受保護成員函式 [overflow](#overflow) 和 [underflow](#underflow) 使用。 如需詳細資訊，請參閱 [basic_filebuf::open](#open)。
 
@@ -229,7 +229,7 @@ Hex Dump of wwHello.txt - note that output is wchar_t chars:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<fstream>
+**標頭：** \<fstream>
 
 **命名空間：** std
 
@@ -271,9 +271,9 @@ basic_filebuf<Elem, Tr> *close();
 
 ### <a name="remarks"></a>備註
 
-`close` 呼叫`fclose`( **fp**)。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this**，表示已成功關閉檔案。
+`close`呼叫`fclose`( **fp**)。 如果該函式傳回非零值，則函式會傳回 Null 指標。 否則，它會傳回 **this**，表示已成功關閉檔案。
 
-針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態中，使用檔案轉換 facet 所需的任何序列`fac`呼叫`fac.unshift`視。 每個項目`byte`型別的**char**因此，產生相關聯的檔案指標所指定的資料流寫入`fp`做為表單的後續呼叫`fputc`(**位元組**， **fp**)。 如果呼叫`fac.unshift`或任何寫入失敗，此函式不成功。
+針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態所需的任何順序, 方法是使用 [檔案`fac`轉換] `fac.unshift` facet 視需要呼叫。 `fp`因此, **char**類型`fputc`  的每個專案都會寫入至檔案指標所指定的相關聯資料流程, 就像後續呼叫形式 (byte, fp) 一樣。 `byte` 如果對`fac.unshift`或任何寫入的呼叫失敗, 函數不會成功。
 
 ### <a name="example"></a>範例
 
@@ -326,7 +326,7 @@ s
 
 ## <a name="int_type"></a> basic_filebuf::int_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -370,7 +370,7 @@ true
 
 ## <a name="off_type"></a> basic_filebuf::off_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -402,14 +402,14 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*<br/>
+*_Filename*\
 要開啟之檔案的名稱。
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*<br/>
-預設檔案開啟保護，相當於*shflag*中的參數[_fsopen、 _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)。
+*_Prot*\
+預設檔案開啟保護, 相當於[_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)中的*shflag*參數。
 
 ### <a name="return-value"></a>傳回值
 
@@ -417,9 +417,9 @@ basic_filebuf<Elem, Tr> *open(
 
 ### <a name="remarks"></a>備註
 
-成員函式會開啟檔名為 *filename* 的檔案，方法是呼叫 [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**)。 `strmode` 從決定**模式 （& s)**~ ( [ate](../standard-library/ios-base-class.md#openmode)和&#124;[二進位](../standard-library/ios-base-class.md#openmode)):
+成員函式會開啟檔名為 *filename* 的檔案，方法是呼叫 [fopen](../c-runtime-library/reference/fopen-wfopen.md)( *filename*, **strmode**)。 `strmode`是從**模式判斷 &** ~ ( [ate](../standard-library/ios-base-class.md#openmode) & &#124; [二進位](../standard-library/ios-base-class.md#openmode)):
 
-- `ios_base::in` 會變成 **"r"** （開啟現有的檔案進行讀取）。
+- `ios_base::in`會變成 **"r"** (開啟現有的檔案以供讀取)。
 
 - [ios_base::out](../standard-library/ios-base-class.md#fmtflags) 或 **ios_base::out &#124; ios_base::trunc** 變成 **"w"** (截斷現有檔案，或建立以進行寫入)。
 
@@ -431,9 +431,9 @@ basic_filebuf<Elem, Tr> *open(
 
 - **ios_base::in &#124; ios_base::out &#124; ios_base::app** 變成 **"a+"** (開啟現有檔案以讀取和附加所有寫入)。
 
-如果**mode & ios_base:: binary**為非零值，此函式會將附加`b`到`strmode`開啟二進位資料流，而不是文字資料流。 接著會儲存所傳回的值`fopen`在檔案指標`fp`。 如果 **mode & ios_base::ate** 為非零，而且檔案指標不是 Null 指標，則此函式會呼叫 `fseek`( **fp**, 0, `SEEK_END`) 以在檔案結尾放置資料流。 如果該定位作業失敗，函式會呼叫[關閉 ](#close)( `fp`)，並將 null 指標儲存在檔案指標。
+如果**模式 & ios_base:: binary**為非零值, 則`b`函`strmode`式會將附加至以開啟二進位資料流程, 而不是文字資料流程。 然後, 它會將所傳回`fopen`的值儲存在`fp`檔案指標中。 如果 **mode & ios_base::ate** 為非零，而且檔案指標不是 Null 指標，則此函式會呼叫 `fseek`( **fp**, 0, `SEEK_END`) 以在檔案結尾放置資料流。 如果該定位作業失敗, 此函式[](#close)會呼叫`fp`close (), 並將 null 指標儲存在檔案指標中。
 
-如果檔案指標不是 null 指標，函式會判斷檔案轉換 facet:`use_facet`< `codecvt`< **Elem**， `char`， **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc))，以供[反向溢位](#underflow)和[溢位](#overflow)。
+如果檔案指標不是 null 指標, 此函式會判斷檔案轉換 facet:`use_facet`< `codecvt`< **Elem**, `char`, **traits_type::** [state_type](../standard-library/char-traits-struct.md#state_type)> > ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), 供[下溢](#underflow)和溢[](#overflow)位使用。
 
 如果檔案指標為 Null 指標，則函式會傳回 Null 指標。 否則，它會傳回 **this**。
 
@@ -451,7 +451,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 [basic_filebuf](../standard-library/basic-filebuf-class.md) 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
@@ -460,7 +460,7 @@ basic_filebuf& operator=(basic_filebuf&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會取代物件的內容使用的內容*右*，視為右值參考。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+成員運算子會使用*right*的內容來取代物件的內容, 並將其視為右值參考。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="overflow"></a> basic_filebuf::overflow
 
@@ -472,22 +472,22 @@ virtual int_type overflow(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
-要插入緩衝區的字元或`traits_type::eof`。
+*_Meta*\
+要插入緩衝區或`traits_type::eof`的字元。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
+如果函式不成功，則會傳回 `traits_type::eof`。 否則會傳回 **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*)。
 
 ### <a name="remarks"></a>備註
 
-如果 *_Meta* **！ = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，受保護虛擬成員函式會致力於將元素**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*_Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：
+如果 *_Meta* **! = traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 受保護的虛擬成員函式會致力於將元素**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *_Meta*) 插入輸出緩衝區。 它可以透過下列各種方式來執行：
 
 - 如果有寫入位置可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
 - 為輸出緩衝區配置新的或額外的儲存空間，即可提供寫入位置。
 
-- 它可以轉換任何暫止的輸出，在輸出緩衝區，後面接著`ch`，使用檔案轉換 facet`fac`呼叫`fac.out`視。 每個項目`ch`型別的*char*因此，產生相關聯的檔案指標所指定的資料流寫入`fp`做為表單的後續呼叫`fputc`( **ch**， **fp**)。 如果任何轉換或寫入失敗，則函式會失敗。
+- 它可以在輸出緩衝區中轉換任何暫止的輸出, `ch`接著使用 [檔案轉換] facet `fac`視需要`fac.out`呼叫。 `fp`因此, *char*類型`fputc`  的每個專案都會寫入至檔案指標所指定的相關聯資料流程, 就像後續呼叫形式 (ch, fp) 一樣。 `ch` 如果任何轉換或寫入失敗，則函式會失敗。
 
 ## <a name="pbackfail"></a> basic_filebuf::pbackfail
 
@@ -499,26 +499,26 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="parameters"></a>參數
 
-*_Meta*<br/>
+*_Meta*\
 要插入緩衝區的字元，或 `traits_type::eof`。
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則會傳回 `traits_type::eof`。 否則，它會傳回**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*)。
+如果函式不成功，則會傳回 `traits_type::eof`。 否則, 它會傳回**traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)( *\_Meta*)。
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會將元素放回輸入緩衝區，然後將其設成目前元素 (透過下一個指標所指向)。 如果 *\_Meta* **= = traits_type::**[eof](../standard-library/char-traits-struct.md#eof)，要推回的元素實際上是一個已在資料流中目前的項目之前。 否則，該項目會取代**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*)。 函式可透過下列各種方式來放回項目：
+受保護虛擬成員函式會將元素放回輸入緩衝區，然後將其設成目前元素 (透過下一個指標所指向)。 *如果\_Meta* **= = traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 要推回的元素實際上就是目前專案之前已在資料流程中的專案。 否則, 該元素會取代為**ch = traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*)。 函式可透過下列各種方式來放回項目：
 
-- 如果有 putback 位置可供使用，而且儲存在該處的項目比較為相等`ch`，則可遞減輸入緩衝區的下一個指標。
+- 如果有 putback 位置可供使用, 而且儲存在其中的元素比較`ch`等於, 它可以遞減輸入緩衝區的下一個指標。
 
-- 如果函式可讓`putback`位置可供使用，它可以這麼做，請設定下一個指標指向位於該位置，然後儲存`ch`在該位置。
+- 如果函式可以讓`putback`位置可供使用, 它可以執行這項操作, 將下一個指標設定為指向該位置, 並儲存`ch`在該位置。
 
-- 如果函式可以推送回項目放置到輸入資料流，它可以這樣做，例如藉由呼叫`ungetc`類型之元素**char**。
+- 如果函式可以將專案推送回輸入資料流程, 它可以執行這項操作, 例如藉由呼叫`ungetc` **char**類型的元素。
 
 ## <a name="pos_type"></a> basic_filebuf::pos_type
 
-使 basic_filebuf 範圍中的此類型等同於在相同名稱的型別`Tr`範圍。
+讓此類型在 basic_filebuf's 範圍內相當於`Tr`範圍中相同名稱的類型。
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -536,13 +536,13 @@ virtual pos_type seekoff(off_type _Off,
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
-要搜尋的相對位置 *_Way*。
+*_Off*\
+要搜尋的相對於 *_Way*的位置。
 
-*_Way*<br/>
+*_Way*\
 位移作業的起點。 如需可能的值，請參閱 [seekdir](../standard-library/ios-base-class.md#seekdir)。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
@@ -555,7 +555,7 @@ virtual pos_type seekoff(off_type _Off,
 
 針對開啟進行讀取和寫入的檔案，輸入和輸出資料流會一前一後地放置在一起。 若要切換插入與擷取，您必須呼叫 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 `pubseekoff` 呼叫 (因而 `seekoff` 呼叫) 具有[文字資料流](../c-runtime-library/text-and-binary-streams.md)、[二進位資料流](../c-runtime-library/text-and-binary-streams.md)和[寬資料流](../c-runtime-library/byte-and-wide-streams.md)的各種限制。
 
-如果檔案指標`fp`為 null 指標，則函式會失敗。 否則，它會致力於呼叫 `fseek`( **fp**, `_Off`, `_Way`) 來改變資料流位置。 如果該函式成功，產生的位置`fposn`可藉由呼叫`fgetpos`( **fp**， **& fposn**)，函式成功。 如果此函數成功，它會傳回類型的值`pos_type`包含`fposn`。 否則會傳回無效的資料流位置。
+如果檔案指標`fp`為 null 指標, 則函式會失敗。 否則，它會致力於呼叫 `fseek`( **fp**, `_Off`, `_Way`) 來改變資料流位置。 如果該函式成功, 且產生`fposn`的位置可以藉由`fgetpos`呼叫 ( **fp**, **& fposn**) 來判斷, 則函式會成功。 如果函式成功, 它會傳回包含`pos_type` `fposn`之類型的值。 否則會傳回無效的資料流位置。
 
 ## <a name="seekpos"></a> basic_filebuf::seekpos
 
@@ -567,15 +567,15 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>參數
 
-*_Sp*<br/>
+*_Sp*\
 要搜尋的位置。
 
-*_Which*<br/>
+*_Which*\
 指定指標位置的模式。 預設為允許您修改讀取和寫入位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果檔案指標`fp`為 null 指標，則函式會失敗。 否則，它會致力於改變資料流位置，藉由呼叫`fsetpos`( **fp**， **& fposn**)，其中`fposn`是`fpos_t`物件儲存在`pos`。 如果該函式成功，則函式會傳回 `pos`。 否則會傳回無效的資料流位置。 若要判斷資料流位置是否無效，請比較傳回值與 `pos_type(off_type(-1))`。
+如果檔案指標`fp`為 null 指標, 則函式會失敗。 `fsetpos`否則, 它會藉由呼叫 ( **fp**, **& fposn**) 來致力於修改資料流程位置`fposn` , 其中`fpos_t`是儲存在`pos`中的物件。 如果該函式成功，則函式會傳回 `pos`。 否則會傳回無效的資料流位置。 若要判斷資料流位置是否無效，請比較傳回值與 `pos_type(off_type(-1))`。
 
 ### <a name="remarks"></a>備註
 
@@ -583,7 +583,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 針對開啟進行讀取和寫入的檔案，輸入和輸出資料流會一前一後地放置在一起。 若要切換插入與擷取，您必須呼叫 [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff) 或 [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)。 `pubseekoff` 呼叫 (因而 `seekoff` 呼叫) 具有文字資料流、二進位資料流和寬資料流的各種限制。
 
-針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態中，使用檔案轉換 facet 所需的任何序列`fac`來呼叫**fac** `.unshift`視。 每個項目`byte`型別的**char**因此，產生相關聯的檔案指標所指定的資料流寫入`fp`做為表單的後續呼叫`fputc`(**位元組**， **fp**)。 如果呼叫`fac.unshift`或任何寫入失敗，此函式不成功。
+針對寬資料流，如果在開啟資料流之後或最後一次呼叫 `streampos` 之後進行過任何插入，則函式會呼叫 [overflow](#overflow)。 它也會插入還原初始轉換狀態所需的任何順序, 方法是使用 [檔案`fac`轉換] facet, 視需要呼叫**fac** `.unshift` 。 `fp`因此, **char**類型`fputc`  的每個專案都會寫入至檔案指標所指定的相關聯資料流程, 就像後續呼叫形式 (byte, fp) 一樣。 `byte` 如果對`fac.unshift`或任何寫入的呼叫失敗, 函數不會成功。
 
 ## <a name="setbuf"></a> basic_filebuf::setbuf
 
@@ -597,10 +597,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>參數
 
-*_Buffer*<br/>
+*_Buffer*\
 緩衝區的指標。
 
-*count*<br/>
+*計數*\
 緩衝區的大小。
 
 ### <a name="return-value"></a>傳回值
@@ -621,7 +621,7 @@ void swap(basic_filebuf& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 對其他 `basic_filebuf` 的 `lvalue` 參考。
 
 ## <a name="sync"></a> basic_filebuf::sync
@@ -634,7 +634,7 @@ virtual int sync();
 
 ### <a name="return-value"></a>傳回值
 
-傳回零，如果檔案指標`fp`為 null 指標。 否則，只有在 [overflow](#overflow) 和 `fflush`( **fp**) 呼叫成功將任何暫止輸出清除到資料流時，才會傳回零。
+如果檔案指標`fp`為 null 指標, 則會傳回零。 否則，只有在 [overflow](#overflow) 和 `fflush`( **fp**) 呼叫成功將任何暫止輸出清除到資料流時，才會傳回零。
 
 ## <a name="traits_type"></a> basic_filebuf::traits_type
 
@@ -654,19 +654,19 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>傳回值
 
-如果函式不成功，則傳回 **traits_type::**[eof](../standard-library/char-traits-struct.md#eof)。 否則，它會傳回`ch`，如 < 備註 > 一節中所述的轉換。
+如果函式不成功，則傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 否則, 它會`ch`傳回, 如「備註」一節所述進行轉換。
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會嘗試擷取目前的項目`ch`從輸入資料流，並傳回此元素作為**traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`)。 它可以透過下列各種方式來執行：
+受保護的虛擬成員函式會致力`ch`于從輸入資料流程解壓縮目前的專案, 並以**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`ch`) 傳回元素。 它可以透過下列各種方式來執行：
 
-- 如果有讀取的位置可用，它會採用`ch`作為項目儲存在讀取位置，並前進到輸入緩衝區的下一個指標。
+- 如果有讀取位置可供使用, 它`ch`會將專案當做儲存在讀取位置中的元素, 並前進到輸入緩衝區的下一個指標。
 
-- 它可以讀取類型的一或多個項目**char**數字，如同後續呼叫表單`fgetc`(**fp**)，並將它們轉換成項目**ch**型別的`Elem`使用檔案轉換 facet fac 來呼叫`fac.in`視。 如果任何讀取或轉換失敗，則函式會失敗。
+- 它可以讀取**char**類型的一或多個專案, 如同後續`fgetc`呼叫表單 (**fp**), 然後使用檔案轉換 facet fac 視需要呼叫`fac.in` , 將`Elem`它們轉換成類型的元素**ch** 。 如果任何讀取或轉換失敗，則函式會失敗。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<fstream>](../standard-library/fstream.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[\<fstream>](../standard-library/fstream.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

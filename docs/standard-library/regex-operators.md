@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369549"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460126"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
-每個範本運算子將其引數轉換成字串類型，會傳回 true，只有當轉換的值*左*比較的轉換值大於或等於*右*。
+每個範本運算子都會將其引數轉換成字串類型, 而且只有在*left*的轉換值比*right*的轉換值小時, 才會傳回 true。
 
 ### <a name="example"></a>範例
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 元素類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*os*<br/>
+*等於*\
 輸出資料流。
 
-*right*<br/>
+*再*\
 要插入的物件。
 
 ### <a name="remarks"></a>備註
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*<br/>
+*BidIt*\
 迭代器類型。
 
-*IOtraits*<br/>
+*IOtraits*\
 字串特性類別。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要比較的左側物件。
 
-*right*<br/>
+*再*\
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_constants 類別](../standard-library/regex-constants-class.md)<br/>
-[regex_error 類別](../standard-library/regex-error-class.md)<br/>
-[\<regex> 函式](../standard-library/regex-functions.md)<br/>
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 類別](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函式](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

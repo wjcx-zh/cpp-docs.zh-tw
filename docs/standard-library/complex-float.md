@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279082"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453107"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述可儲存型別之物件的排序的配對**浮點數**，第一個代表第二個複數的實數部分代表虛數部分。
+描述一個物件, 它會儲存類型為**float**之物件的已排序對, 第一個代表複數的實數部分, 而第二個代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -41,14 +41,14 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*<br/>
+*_RealVal*\
 要建構之複數實數部分的 **float** 類型值。
 
-*_ImagVal*<br/>
+*_ImagVal*\
 要建構之複數虛數部分的 **float** 類型值。
 
-*complexNum*<br/>
-類型的複數**雙**或型別的**長雙精度**其實部及虛部用於初始化類型的複數**float**所建構。
+*complexNum*\
+**Double**類型或類型**長 double**的複數, 其實際和虛數部分用來初始化所建立之**float**類型的複數。
 
 ## <a name="return-value"></a>傳回值
 
@@ -56,7 +56,7 @@ constexpr complex(
 
 ## <a name="remarks"></a>備註
 
-**float** 類型 complex 類別的 complex 範本類別明確特製化，其與範本類別的差異只在於所定義的建構函式。 從轉換**浮點數**來**double**允許隱含的但較不安全的轉換，從**float**至**長雙精度**是一定要**明確**。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
+**float** 類型 complex 類別的 complex 範本類別明確特製化，其與範本類別的差異只在於所定義的建構函式。 允許從**float**到**double**的轉換是隱含的, 但從**float**到**long double**的較不安全轉換必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
 
 如需 `complex` 範本類別的詳細資訊，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱
 
@@ -124,5 +124,5 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>另請參閱
 
-[complex 類別](../standard-library/complex-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex 類別](../standard-library/complex-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

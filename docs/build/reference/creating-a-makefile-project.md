@@ -1,22 +1,21 @@
 ---
 title: 在 Visual Studio 中建立 C++ Makefile 專案
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837385"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866137"
 ---
 # <a name="create-a-c-makefile-project"></a>建立 C++ Makefile 專案
 
-*Makefile* 是文字檔，其中包含如何編譯和連結 (或「建置」) 一組 C++ 原始程式碼檔案的指示。 *Make* 程式會讀取 Makefile 並叫用編譯器、連結器和可能的其他程式來產生可執行檔。 Microsoft 對 make 程式的實作稱為 [NMAKE](nmake-reference.md)；
+*Makefile* 是文字檔，其中包含如何編譯和連結 (或「建置」) 一組 C++ 原始程式碼檔案的指示。 *Make* 程式會讀取 Makefile 並叫用編譯器、連結器和可能的其他程式來產生可執行檔。 Microsoft 對 *Make* 程式的實作稱為 [NMAKE](nmake-reference.md)。
 
 如果您有現有的 Makefile 專案，則當您希望在 Visual Studio IDE 中撰寫和/或對其進行偵錯時，可以選擇這些選項：
 
@@ -25,7 +24,7 @@ ms.locfileid: "65837385"
 - **Visual Studio 2017 及更新版本**：使用**開啟資料夾**功能編輯和建置未變更的 Makefile 專案，無須任何 MSBuild 系統。 如需詳細資訊，請參閱 [Open Folder projects for C++](../open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 - **Visual Studio 2019 及更新版本**：建立適用於 Linux 的 UNIX Makefile 專案。
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 使用 Makefile 專案範本建立 Makefile 專案
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> 使用 Makefile 專案範本建立 Makefile 專案
 
 在 Visual Studio 2017 和更新版本中，已安裝 C++ 桌面開發工作負載時，可以使用 Makefile 專案範本。
 

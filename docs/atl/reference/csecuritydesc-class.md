@@ -34,19 +34,19 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90f8cfd66fbab88bfa29c39ff27189f02447a7c7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277964"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496482"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc 類別
 
-這個類別是包裝函式`SECURITY_DESCRIPTOR`結構。
+這個類別是`SECURITY_DESCRIPTOR`結構的包裝函式。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -67,51 +67,51 @@ class CSecurityDesc
 
 |名稱|描述|
 |----------|-----------------|
-|[CSecurityDesc::FromString](#fromstring)|將字串格式的安全性描述元轉換成有效、 功能安全性描述元。|
-|[CSecurityDesc::GetControl](#getcontrol)|擷取控制從安全性描述元的資訊。|
-|[CSecurityDesc::GetDacl](#getdacl)|擷取安全性描述元中 discretionary 存取控制清單 (DACL) 資訊。|
-|[CSecurityDesc::GetGroup](#getgroup)|擷取安全性描述元主要群組資訊。|
-|[CSecurityDesc::GetOwner](#getowner)|擷取安全性描述元擁有者資訊。|
-|[CSecurityDesc::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|將指標傳回至`SECURITY_DESCRIPTOR`結構。|
-|[CSecurityDesc::GetSacl](#getsacl)|擷取安全性描述元的系統存取控制清單 (SACL) 資訊。|
-|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|決定是否 DACL 已設定為支援自動傳播。|
-|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|決定是否已使用預設 DACL 的安全性描述元。|
-|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|判斷安全性描述元是否包含 DACL。|
-|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|決定是否 DACL 設定為防止修改。|
-|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|決定是否預設已設定的安全性描述元的群組安全性識別碼 (SID)。|
-|[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|決定是否預設已設定的安全性描述元擁有者 SID。|
-|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|決定是否 SACL 已設定為支援自動傳播。|
-|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|決定是否安全性描述元會設定預設的 SACL。|
-|[CSecurityDesc::IsSaclPresent](#issaclpresent)|判斷安全性描述元是否包含 SACL。|
-|[CSecurityDesc::IsSaclProtected](#issaclprotected)|決定是否 SACL 設定為防止修改。|
-|[CSecurityDesc::IsSelfRelative](#isselfrelative)|決定是否在自我相關格式的安全性描述元。|
-|[CSecurityDesc::MakeAbsolute](#makeabsolute)|呼叫這個方法來將安全性描述元轉換為絕對的格式。|
-|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|呼叫這個方法來將安全性描述元轉換成自我相關格式。|
+|[CSecurityDesc::FromString](#fromstring)|將字串格式的安全描述項轉換成有效的功能安全描述項。|
+|[CSecurityDesc::GetControl](#getcontrol)|從安全描述項抓取控制項資訊。|
+|[CSecurityDesc::GetDacl](#getdacl)|從安全描述項中抓取任意存取控制清單 (DACL) 資訊。|
+|[CSecurityDesc::GetGroup](#getgroup)|從安全描述項抓取主要群組資訊。|
+|[CSecurityDesc::GetOwner](#getowner)|從安全描述項中抓取擁有者資訊。|
+|[CSecurityDesc::GetPSECURITY_DESCRIPTOR](#getpsecurity_descriptor)|傳回結構的`SECURITY_DESCRIPTOR`指標。|
+|[CSecurityDesc::GetSacl](#getsacl)|從安全描述項抓取系統存取控制清單 (SACL) 資訊。|
+|[CSecurityDesc::IsDaclAutoInherited](#isdaclautoinherited)|判斷 DACL 是否設定為支援自動傳播。|
+|[CSecurityDesc::IsDaclDefaulted](#isdacldefaulted)|判斷安全描述項是否設定為使用預設的 DACL。|
+|[CSecurityDesc::IsDaclPresent](#isdaclpresent)|判斷安全描述項是否包含 DACL。|
+|[CSecurityDesc::IsDaclProtected](#isdaclprotected)|判斷 DACL 是否設定為防止修改。|
+|[CSecurityDesc::IsGroupDefaulted](#isgroupdefaulted)|判斷安全描述項的群組安全識別碼 (SID) 是否預設為設定。|
+|[CSecurityDesc::IsOwnerDefaulted](#isownerdefaulted)|判斷安全描述項的擁有者 SID 是否預設為設定。|
+|[CSecurityDesc::IsSaclAutoInherited](#issaclautoinherited)|判斷 SACL 是否設定為支援自動傳播。|
+|[CSecurityDesc::IsSaclDefaulted](#issacldefaulted)|判斷安全描述項是否設定為使用預設 SACL。|
+|[CSecurityDesc::IsSaclPresent](#issaclpresent)|判斷安全描述項是否包含 SACL。|
+|[CSecurityDesc::IsSaclProtected](#issaclprotected)|判斷 SACL 是否設定為防止修改。|
+|[CSecurityDesc::IsSelfRelative](#isselfrelative)|判斷安全描述項是否為自我關聯格式。|
+|[CSecurityDesc::MakeAbsolute](#makeabsolute)|呼叫這個方法, 將安全描述項轉換成絕對格式。|
+|[CSecurityDesc::MakeSelfRelative](#makeselfrelative)|呼叫這個方法, 將安全描述項轉換成自我關聯的格式。|
 |[CSecurityDesc::SetControl](#setcontrol)|設定安全性描述元的控制位元。|
-|[CSecurityDesc::SetDacl](#setdacl)|設定在 DACL 中的資訊。 如果 DACL 中已有的安全性描述元，它會取代它。|
-|[CSecurityDesc::SetGroup](#setgroup)|設定主要群組的資訊的絕對格式的安全性描述元，取代任何已存在的主要群組資訊。|
-|[CSecurityDesc::SetOwner](#setowner)|設定擁有者的資訊的絕對格式的安全性描述元，取代任何已存在的擁有者資訊。|
-|[CSecurityDesc::SetSacl](#setsacl)|設定 SACL 中的資訊。 如果 SACL 中已有的安全性描述元，它會取代它。|
-|[CSecurityDesc::ToString](#tostring)|將安全性描述元轉換成字串格式。|
+|[CSecurityDesc::SetDacl](#setdacl)|在 DACL 中設定資訊。 如果 DACL 已經存在於安全描述項中, 就會被取代。|
+|[CSecurityDesc::SetGroup](#setgroup)|設定絕對格式安全描述項的主要群組資訊, 並取代已存在的任何主要群組資訊。|
+|[CSecurityDesc::SetOwner](#setowner)|設定絕對格式安全描述項的擁有者資訊, 並取代已存在的所有擁有者資訊。|
+|[CSecurityDesc::SetSacl](#setsacl)|設定 SACL 中的資訊。 如果 SACL 已經存在於安全描述項中, 就會被取代。|
+|[CSecurityDesc::ToString](#tostring)|將安全描述項轉換成字串格式。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|將指標傳回至`SECURITY_DESCRIPTOR`結構。|
+|[CSecurityDesc:: operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|傳回結構的`SECURITY_DESCRIPTOR`指標。|
 |[CSecurityDesc::operator =](#operator_eq)|指派運算子。|
 
 ## <a name="remarks"></a>備註
 
-`SECURITY_DESCRIPTOR`結構包含與物件相關聯的安全性資訊。 應用程式會使用此結構，來設定和查詢物件的安全性狀態。 另請參閱[AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor)。
+`SECURITY_DESCRIPTOR`結構包含與物件相關聯的安全性資訊。 應用程式會使用這個結構來設定及查詢物件的安全性狀態。 另請參閱[AtlGetSecurityDescriptor](security-global-functions.md#atlgetsecuritydescriptor)。
 
-應用程式不應該修改`SECURITY_DESCRIPTOR`結構直接，並改為應該使用類別提供的方法。
+應用程式不應直接`SECURITY_DESCRIPTOR`修改結構, 而應改用提供的類別方法。
 
-在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h
+**標頭:** atlsecurity。h
 
 ##  <a name="csecuritydesc"></a>  CSecurityDesc::CSecurityDesc
 
@@ -126,11 +126,11 @@ CSecurityDesc(const SECURITY_DESCRIPTOR& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`CSecurityDesc`物件或`SECURITY_DESCRIPTOR`若要指派給新的結構`CSecurityDesc`物件。
+要`CSecurityDesc`指派給`SECURITY_DESCRIPTOR` 新`CSecurityDesc`物件的物件或結構。
 
 ### <a name="remarks"></a>備註
 
-`CSecurityDesc`物件可以選擇性地使用來建立`SECURITY_DESCRIPTOR`結構或先前定義`CSecurityDesc`物件。
+您`CSecurityDesc`可以選擇性地`SECURITY_DESCRIPTOR`使用結構或先前定義`CSecurityDesc`的物件來建立物件。
 
 ##  <a name="dtor"></a>  CSecurityDesc::~CSecurityDesc
 
@@ -142,11 +142,11 @@ virtual ~CSecurityDesc() throw();
 
 ### <a name="remarks"></a>備註
 
-解構函式會釋放所有配置的資源。
+此析構函式會釋放所有配置的資源。
 
 ##  <a name="fromstring"></a>  CSecurityDesc::FromString
 
-將字串格式的安全性描述元轉換成有效、 功能安全性描述元。
+將字串格式的安全描述項轉換成有效的功能安全描述項。
 
 ```
 bool FromString(LPCTSTR pstr) throw(...);
@@ -155,21 +155,21 @@ bool FromString(LPCTSTR pstr) throw(...);
 ### <a name="parameters"></a>參數
 
 *pstr*<br/>
-以 null 終止的字串，其中包含的指標[字串格式的安全性描述元](/windows/desktop/SecAuthZ/security-descriptor-string-format)轉換。
+以 null 結束的字串指標, 其中包含要轉換的[字串格式安全描述項](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則傳回 true。 在失敗時擲回例外狀況。
+成功時傳回 true。 失敗時會擲回例外狀況。
 
 ### <a name="remarks"></a>備註
 
-可以使用建立的字串[CSecurityDesc::ToString](#tostring)。 將安全性描述元轉換成字串，可讓您更輕鬆地儲存和傳輸。
+您可以使用[CSecurityDesc:: ToString](#tostring)來建立字串。 將安全描述項轉換成字串, 可讓您更輕鬆地儲存和傳輸。
 
-這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)。
+這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)。
 
 ##  <a name="getcontrol"></a>  CSecurityDesc::GetControl
 
-擷取控制從安全性描述元的資訊。
+從安全描述項抓取控制項資訊。
 
 ```
 bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
@@ -178,19 +178,19 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 ### <a name="parameters"></a>參數
 
 *psdc*<br/>
-指標`SECURITY_DESCRIPTOR_CONTROL`接收的安全性描述元控制資訊的結構。
+`SECURITY_DESCRIPTOR_CONTROL`結構的指標, 可接收安全描述項的控制項資訊。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 失敗時傳回 true。
+如果方法成功, 則傳回 true, 如果失敗, 則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)。
+這個方法會呼叫[GetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)。
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
-擷取安全性描述元中 discretionary 存取控制清單 (DACL) 資訊。
+從安全描述項中抓取任意存取控制清單 (DACL) 資訊。
 
 ```
 bool GetDacl(
@@ -202,21 +202,21 @@ bool GetDacl(
 ### <a name="parameters"></a>參數
 
 *pDacl*<br/>
-指標`CDacl`結構用來儲存一份安全性描述元的 DACL。 如果存在判別 ACL，方法會設定*pDacl*安全性描述元的判別 ACL 的位址。 如果判別 ACL 不存在，則會不儲存任何值。
+`CDacl`結構的指標, 要在其中儲存安全描述項的 DACL 複本。 如果有任意的 ACL 存在, 方法就會將*pDacl*設定為安全描述項之任意 acl 的位址。 如果任意的 ACL 不存在, 則不會儲存任何值。
 
 *pbPresent*<br/>
-值，指出指定的安全性描述元中的判別 ACL 的目前狀態的指標。 如果安全性描述元包含判別 ACL，此參數會設定為 true。 如果安全性描述元不包含判別 ACL，此參數設為 false。
+值的指標, 表示指定的安全描述項中是否存在任意的 ACL。 如果安全描述項包含任意的 ACL, 此參數會設定為 true。 如果安全描述項不包含任意的 ACL, 此參數會設定為 false。
 
 *pbDefaulted*<br/>
-為 SE_DACL_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構判別 ACL 有的安全性描述元。 如果這個旗標為 true，判別 ACL 已擷取由預設機制;如果為 false，使用者已明確指定判別 ACL。
+旗標的指標, 如果安全描述項有任意 ACL 存在, 則`SECURITY_DESCRIPTOR_CONTROL`會設定為結構中 SE_DACL_DEFAULTED 旗標的值。 如果此旗標為 true, 則預設機制會抓取任意 ACL;如果為 false, 則表示使用者已明確指定任意 ACL。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 失敗時傳回 true。
+如果方法成功, 則傳回 true, 如果失敗, 則傳回 false。
 
 ##  <a name="getgroup"></a>  CSecurityDesc::GetGroup
 
-擷取安全性描述元主要群組資訊。
+從安全描述項抓取主要群組資訊。
 
 ```
 bool GetGroup(
@@ -227,18 +227,18 @@ bool GetGroup(
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-指標[CSid](../../atl/reference/csid-class.md) （安全性識別碼），會收到一份 CDacl 中儲存的群組。
+[CSid](../../atl/reference/csid-class.md) (安全識別碼) 的指標, 接收儲存在 CDacl 中的群組複本。
 
 *pbDefaulted*<br/>
-為 SE_GROUP_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構方法傳回時。
+當方法傳回時, 設定為`SECURITY_DESCRIPTOR_CONTROL`結構中 SE_GROUP_DEFAULTED 旗標值的旗標指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 失敗時傳回 true。
+如果方法成功, 則傳回 true, 如果失敗, 則傳回 false。
 
 ##  <a name="getowner"></a>  CSecurityDesc::GetOwner
 
-擷取安全性描述元擁有者資訊。
+從安全描述項中抓取擁有者資訊。
 
 ```
 bool GetOwner(
@@ -249,18 +249,18 @@ bool GetOwner(
 ### <a name="parameters"></a>參數
 
 *pSid*<br/>
-指標[CSid](../../atl/reference/csid-class.md) （安全性識別碼），會收到一份 CDacl 中儲存的群組。
+[CSid](../../atl/reference/csid-class.md) (安全識別碼) 的指標, 接收儲存在 CDacl 中的群組複本。
 
 *pbDefaulted*<br/>
-為 SE_OWNER_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構方法傳回時。
+當方法傳回時, 設定為`SECURITY_DESCRIPTOR_CONTROL`結構中 SE_OWNER_DEFAULTED 旗標值的旗標指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 失敗時傳回 true。
+如果方法成功, 則傳回 true, 如果失敗, 則傳回 false。
 
 ##  <a name="getpsecurity_descriptor"></a>  CSecurityDesc::GetPSECURITY_DESCRIPTOR
 
-將指標傳回至`SECURITY_DESCRIPTOR`結構。
+傳回結構的`SECURITY_DESCRIPTOR`指標。
 
 ```
 const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
@@ -268,11 +268,11 @@ const SECURITY_DESCRIPTOR* GetPSECURITY_DESCRIPTOR() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-將指標傳回至[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)結構。
+傳回[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)結構的指標。
 
 ##  <a name="getsacl"></a>  CSecurityDesc::GetSacl
 
-擷取安全性描述元的系統存取控制清單 (SACL) 資訊。
+從安全描述項抓取系統存取控制清單 (SACL) 資訊。
 
 ```
 bool GetSacl(
@@ -284,21 +284,21 @@ bool GetSacl(
 ### <a name="parameters"></a>參數
 
 *pSacl*<br/>
-指標`CSacl`結構用來儲存一份安全性描述元的 SACL。 如果系統 ACL 存在，方法會設定*pSacl*安全性描述元的系統 ACL 的位址。 如果系統 ACL 不存在，則會不儲存任何值。
+`CSacl`結構的指標, 用來儲存安全描述項的 SACL 複本。 如果系統 ACL 存在, 此方法會將*pSacl*設定為安全描述項系統 acl 的位址。 如果系統 ACL 不存在, 則不會儲存任何值。
 
 *pbPresent*<br/>
-方法的旗標的指標將設定為表示指定的安全性描述元中的系統 ACL 存在。 如果安全性描述元包含系統 ACL，此參數會設定為 true。 如果安全性描述元不包含系統 ACL，此參數設為 false。
+方法所設定之旗標的指標, 表示指定的安全描述項中是否有系統 ACL。 如果安全描述項包含系統 ACL, 此參數會設定為 true。 如果安全描述項不包含系統 ACL, 此參數會設定為 false。
 
 *pbDefaulted*<br/>
-為 SE_SACL_DEFAULTED 旗標值的一組旗標指標`SECURITY_DESCRIPTOR_CONTROL`結構的安全性描述元的系統 ACL 有。
+旗標的指標, 如果安全描述項有系統 ACL, 則會`SECURITY_DESCRIPTOR_CONTROL`設定為結構中 SE_SACL_DEFAULTED 旗標的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 失敗時傳回 true。
+如果方法成功, 則傳回 true, 如果失敗, 則傳回 false。
 
 ##  <a name="isdaclautoinherited"></a>  CSecurityDesc::IsDaclAutoInherited
 
-決定是否判別存取控制清單 (DACL) 已設定為支援自動傳播。
+決定是否將任意存取控制清單 (DACL) 設定為支援自動傳播。
 
 ```
 bool IsDaclAutoInherited() const throw();
@@ -306,15 +306,15 @@ bool IsDaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含設定為支援自動傳播繼承的存取控制項目 (Ace) 至現有的子物件 DACL，則傳回 true。 否則會傳回 False。
+如果安全描述項包含一個 DACL, 其設定為支援將可繼承的存取控制專案 (Ace) 自動傳播到現有的子物件, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-執行自動繼承演算法的物件和其現有的子物件時，系統就會設定此位元。
+系統會在執行物件及其現有子物件的自動繼承演算法時設定此位。
 
 ##  <a name="isdacldefaulted"></a>  CSecurityDesc::IsDaclDefaulted
 
-決定是否已使用預設的判別存取控制清單 (DACL) 的安全性描述元。
+判斷安全描述項是否已設定預設的任意存取控制清單 (DACL)。
 
 ```
 bool IsDaclDefaulted() const throw();
@@ -322,19 +322,19 @@ bool IsDaclDefaulted() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含預設 DACL，false 否則，傳回 true。
+如果安全描述項包含預設的 DACL, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-這個旗標可能會影響系統的 DACL，相對於存取控制項目 (ACE) 繼承的處理方式。 例如，如果物件的建立者未指定 DACL，物件會接收預設 DACL 從建立者的存取權杖。 如果未設定 SE_DACL_PRESENT 旗標，系統就會忽略此旗標。
+此旗標可能會影響系統處理 DACL 的方式, 與存取控制專案 (ACE) 繼承有關。 例如, 如果物件的建立者未指定 DACL, 物件會從建立者的存取權杖接收預設的 DACL。 如果未設定 SE_DACL_PRESENT 旗標, 系統會忽略此旗標。
 
-這個旗標用來判斷要如何計算最終的 DACL 物件上，並不會儲存實際在安全性實體物件的安全性描述元控制。
+這個旗標是用來決定如何計算物件的最後一個 DACL, 而不是實際儲存在安全物件的安全性描述項控制項中。
 
-若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetDacl](#setdacl)方法。
 
 ##  <a name="isdaclpresent"></a>  CSecurityDesc::IsDaclPresent
 
-判斷安全性描述元是否包含判別存取控制清單 (DACL)。
+判斷安全描述項是否包含任意存取控制清單 (DACL)。
 
 ```
 bool IsDaclPresent() const throw();
@@ -342,19 +342,19 @@ bool IsDaclPresent() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含 DACL，false 否則，就會傳回 true。
+如果安全描述項包含 DACL, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-如果未設定此旗標，或如果在設定這個旗標，而 DACL 是 NULL，安全性描述元可讓所有人都能完整存取。
+如果未設定此旗標, 或已設定此旗標, 而且 DACL 為 Null, 則安全描述項會允許所有人的完整存取權。
 
-這個旗標用來保存的安全性描述元相關聯的安全性實體物件之前，呼叫端所指定的安全性資訊。 安全性實體物件相關聯的安全性描述元之後，SE_DACL_PRESENT 旗標一定會設定安全性描述元控制中。
+這個旗標是用來保存呼叫者所指定的安全性資訊, 直到安全描述項與安全物件相關聯為止。 一旦安全描述項與安全物件相關聯, 就一定會在安全描述項控制項中設定 SE_DACL_PRESENT 旗標。
 
-若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetDacl](#setdacl)方法。
 
 ##  <a name="isdaclprotected"></a>  CSecurityDesc::IsDaclProtected
 
-決定是否判別存取控制清單 (DACL) 設定為防止修改。
+判斷是否已設定任意存取控制清單 (DACL) 以防止修改。
 
 ```
 bool IsDaclProtected() const throw();
@@ -362,17 +362,17 @@ bool IsDaclProtected() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果 DACL 設定為可繼承的存取控制項目 (Ace) 正在修改時，防止安全性描述元，則傳回 true。 否則會傳回 False。
+如果 DACL 設定為防止可繼承的存取控制專案 (Ace) 修改安全描述項, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-若要設定此旗標，使用[csecuritydesc:: Setdacl](#setdacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetDacl](#setdacl)方法。
 
-這個方法支援自動傳播繼承的 Ace。
+這個方法支援自動傳播可繼承的 Ace。
 
 ##  <a name="isgroupdefaulted"></a>  CSecurityDesc::IsGroupDefaulted
 
-決定是否預設已設定的安全性描述元的群組安全性識別碼 (SID)。
+判斷安全描述項的群組安全識別碼 (SID) 是否預設為設定。
 
 ```
 bool IsGroupDefaulted() const throw();
@@ -380,15 +380,15 @@ bool IsGroupDefaulted() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果預設的機制，而不是原始的提供者的安全性描述元，提供的安全性描述元，群組 SID，則傳回 true。 否則會傳回 False。
+如果預設機制 (而不是安全描述項的原始提供者) 提供安全描述項的群組 SID, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-若要設定此旗標，使用[csecuritydesc:: Setgroup](#setgroup)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetGroup](#setgroup)方法。
 
 ##  <a name="isownerdefaulted"></a>  CSecurityDesc::IsOwnerDefaulted
 
-決定是否預設已設定的安全性描述元擁有者安全性識別碼 (SID)。
+判斷是否預設設定安全描述項的擁有者安全識別碼 (SID)。
 
 ```
 bool IsOwnerDefaulted() const throw();
@@ -396,15 +396,15 @@ bool IsOwnerDefaulted() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果預設的機制，而不是原始的提供者的安全性描述元，提供的安全性描述元擁有者 SID，則傳回 true。 否則會傳回 False。
+如果預設機制 (而不是安全描述項的原始提供者) 提供安全描述項的擁有者 SID, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-若要設定此旗標，使用[csecuritydesc:: Setowner](#setowner)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetOwner](#setowner)方法。
 
 ##  <a name="issaclautoinherited"></a>  CSecurityDesc::IsSaclAutoInherited
 
-決定系統存取控制清單 (SACL) 是否設定為支援自動傳播。
+判斷系統存取控制清單 (SACL) 是否設定為支援自動傳播。
 
 ```
 bool IsSaclAutoInherited() const throw();
@@ -412,15 +412,15 @@ bool IsSaclAutoInherited() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含設定為支援自動傳播繼承的存取控制項目 (Ace) 至現有的子物件的 SACL，則傳回 true。 否則會傳回 False。
+如果安全描述項包含 SACL, 其設定為支援將可繼承的存取控制專案 (Ace) 自動傳播到現有的子物件, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-執行自動繼承演算法的物件和其現有的子物件時，系統就會設定此位元。
+系統會在執行物件及其現有子物件的自動繼承演算法時設定此位。
 
 ##  <a name="issacldefaulted"></a>  CSecurityDesc::IsSaclDefaulted
 
-決定是否已使用預設系統存取控制清單 (SACL) 安全性描述元。
+判斷安全描述項是否設定為使用預設的系統存取控制清單 (SACL)。
 
 ```
 bool IsSaclDefaulted() const throw();
@@ -428,17 +428,17 @@ bool IsSaclDefaulted() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含預設 SACL，false 否則，傳回 true。
+如果安全描述項包含預設 SACL, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-這個旗標可能會影響系統的 SACL，相對於存取控制項目 (ACE) 繼承的處理方式。 如果未設定 SE_SACL_PRESENT 旗標，系統就會忽略此旗標。
+這個旗標可能會影響系統處理 SACL 的方式, 與存取控制專案 (ACE) 繼承有關。 如果未設定 SE_SACL_PRESENT 旗標, 系統會忽略此旗標。
 
-若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetSacl](#setsacl)方法。
 
 ##  <a name="issaclpresent"></a>  CSecurityDesc::IsSaclPresent
 
-判斷安全性描述元是否包含系統存取控制清單 (SACL)。
+判斷安全描述項是否包含系統存取控制清單 (SACL)。
 
 ```
 bool IsSaclPresent() const throw();
@@ -446,15 +446,15 @@ bool IsSaclPresent() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元包含 SACL，false 否則，就會傳回 true。
+如果安全描述項包含 SACL, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetSacl](#setsacl)方法。
 
 ##  <a name="issaclprotected"></a>  CSecurityDesc::IsSaclProtected
 
-決定系統存取控制清單 (SACL) 是否設定為防止修改。
+判斷系統存取控制清單 (SACL) 是否設定為防止修改。
 
 ```
 bool IsSaclProtected() const throw();
@@ -462,17 +462,17 @@ bool IsSaclProtected() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果 SACL 設定為可繼承的存取控制項目 (Ace) 正在修改時，防止安全性描述元，則傳回 true。 否則會傳回 False。
+如果 SACL 已設定為防止可繼承的存取控制專案 (Ace) 修改安全描述項, 則傳回 true。 否則會傳回 False。
 
 ### <a name="remarks"></a>備註
 
-若要設定此旗標，使用[csecuritydesc:: Setsacl](#setsacl)方法。
+若要設定此旗標, 請使用[CSecurityDesc:: SetSacl](#setsacl)方法。
 
-這個方法支援自動傳播繼承的 Ace。
+這個方法支援自動傳播可繼承的 Ace。
 
 ##  <a name="isselfrelative"></a>  CSecurityDesc::IsSelfRelative
 
-決定是否在自我相關格式的安全性描述元。
+判斷安全描述項是否為自我關聯格式。
 
 ```
 bool IsSelfRelative() const throw();
@@ -480,11 +480,11 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果安全性描述元與連續的記憶體區塊中的所有安全性資訊處於自我相關格式，則傳回 true。 如果安全性描述元是絕對格式，就會傳回 false。 如需詳細資訊，請參閱 < [Absolute 和 Self-Relative 安全性描述元](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+如果安全描述項是獨立的格式, 而且所有安全性資訊都在連續的記憶體區塊中, 則傳回 true。 如果安全描述項是絕對格式, 則傳回 false。 如需詳細資訊, 請參閱[絕對和自我相關的安全描述項](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
 
-呼叫這個方法來將安全性描述元轉換為絕對的格式。
+呼叫這個方法, 將安全描述項轉換成絕對格式。
 
 ```
 bool MakeAbsolute() throw(...);
@@ -492,15 +492,15 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 否則，就會傳回 true。
+如果方法成功, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-絕對格式的安全性描述元包含它所包含的資訊，而不是本身的資訊的指標。 自我相關格式的安全性描述元包含連續的記憶體區塊中的資訊。 自我關聯的安全性描述元中`SECURITY_DESCRIPTOR`結構永遠啟動的詳細資訊，但安全性描述元的其他元件可以依照任何順序中的結構。 而不是使用記憶體位址，從安全性描述元開頭的位移被識別自我關聯的安全性描述元的元件。 必須儲存在磁碟上或透過通訊協定傳輸的安全性描述元時，此格式會很有用。 如需詳細資訊，請參閱 < [Absolute 和 Self-Relative 安全性描述元](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+絕對格式的安全描述項包含其所包含之資訊的指標, 而不是資訊本身。 自我相關格式的安全描述項包含連續記憶體區塊中的資訊。 在自我關聯的安全描述項中, `SECURITY_DESCRIPTOR`結構一律會啟動資訊, 但安全描述項的其他元件可依照任何順序追蹤結構。 與其使用記憶體位址, 自我關聯安全描述項的元件是由安全描述項開頭的位移所識別。 當安全描述項必須儲存在磁片上, 或透過通訊協定傳輸時, 此格式會很有用。 如需詳細資訊, 請參閱[絕對和自我相關的安全描述項](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
-呼叫這個方法來將安全性描述元轉換成自我相關格式。
+呼叫這個方法, 將安全描述項轉換成自我關聯的格式。
 
 ```
 bool MakeSelfRelative() throw(...);
@@ -508,13 +508,13 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，false 否則，就會傳回 true。
+如果方法成功, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-絕對格式的安全性描述元包含它所包含的資訊，而不是包含本身的資訊的指標。 自我相關格式的安全性描述元包含連續的記憶體區塊中的資訊。 自我關聯的安全性描述元中`SECURITY_DESCRIPTOR`結構永遠啟動的詳細資訊，但安全性描述元的其他元件可以依照任何順序中的結構。 而不是使用記憶體位址，從安全性描述元開頭的位移所識別的安全性描述元的元件。 必須儲存在磁碟上或透過通訊協定傳輸的安全性描述元時，此格式會很有用。 如需詳細資訊，請參閱 < [Absolute 和 Self-Relative 安全性描述元](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)。
+絕對格式的安全描述項包含其所包含之資訊的指標, 而不是包含資訊本身。 自我相關格式的安全描述項包含連續記憶體區塊中的資訊。 在自我關聯的安全描述項中, `SECURITY_DESCRIPTOR`結構一律會啟動資訊, 但安全描述項的其他元件可依照任何順序追蹤結構。 安全描述項的元件不會使用記憶體位址, 而是由安全描述項開頭的位移來識別。 當安全描述項必須儲存在磁片上, 或透過通訊協定傳輸時, 此格式會很有用。 如需詳細資訊, 請參閱[絕對和自我相關的安全描述項](/windows/win32/SecAuthZ/absolute-and-self-relative-security-descriptors)。
 
-##  <a name="operator_eq"></a>  CSecurityDesc::operator =
+##  <a name="operator_eq"></a>CSecurityDesc:: operator =
 
 指派運算子。
 
@@ -526,15 +526,15 @@ CSecurityDesc& operator= (const CSecurityDesc& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`SECURITY_DESCRIPTOR`結構或`CSecurityDesc`物件指派給`CSecurityDesc`物件。
+要`SECURITY_DESCRIPTOR`指派給`CSecurityDesc` `CSecurityDesc`物件的結構或物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新`CSecurityDesc`物件。
+傳回已更新`CSecurityDesc`的物件。
 
-##  <a name="operator_const_security_descriptor__star"></a>  CSecurityDesc::operator const SECURITY_DESCRIPTOR *
+##  <a name="operator_const_security_descriptor__star"></a>CSecurityDesc:: operator const SECURITY_DESCRIPTOR *
 
-將指標值轉換`SECURITY_DESCRIPTOR`結構。
+將值轉換成結構的`SECURITY_DESCRIPTOR`指標。
 
 ```
 operator const SECURITY_DESCRIPTOR *() const throw();
@@ -553,10 +553,10 @@ bool SetControl(
 ### <a name="parameters"></a>參數
 
 *ControlBitsOfInterest*<br/>
-SECURITY_DESCRIPTOR_CONTROL 遮罩，指出若要設定的控制位元。 如需可設定之旗標的清單，請參閱 < [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
+SECURITY_DESCRIPTOR_CONTROL mask, 表示要設定的控制項位。 如需可設定之旗標的清單, 請參閱[SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 *ControlBitsToSet*<br/>
-SECURITY_DESCRIPTOR_CONTROL 遮罩，表示新的值，指定控制位元*ControlBitsOfInterest*遮罩。 這個參數可以是針對列出的旗標的組合*ControlBitsOfInterest*參數。
+SECURITY_DESCRIPTOR_CONTROL mask, 表示*ControlBitsOfInterest* mask 所指定之控制項位的新值。 這個參數可以是針對*ControlBitsOfInterest*參數所列出的旗標組合。
 
 ### <a name="return-value"></a>傳回值
 
@@ -564,11 +564,11 @@ SECURITY_DESCRIPTOR_CONTROL 遮罩，表示新的值，指定控制位元*Contro
 
 ### <a name="remarks"></a>備註
 
-這個方法會呼叫[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
+這個方法會呼叫[SetSecurityDescriptorControl](/windows/win32/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
-判別存取控制清單 (DACL) 中設定資訊。 如果 DACL 中已有的安全性描述元，它會取代它。
+設定任意存取控制清單 (DACL) 中的資訊。 如果 DACL 已經存在於安全描述項中, 就會被取代。
 
 ```
 inline void SetDacl(
@@ -583,13 +583,13 @@ inline void SetDacl(
 ### <a name="parameters"></a>參數
 
 *Dacl*<br/>
-若要參考`CDacl`物件，指定安全性描述元的 DACL。 這個參數必須不是 NULL。 若要設定安全性描述元中的 NULL DACL，第一種形式的方法應該搭配*bPresent*設為 false。
+`CDacl`物件的參考, 指定安全描述項的 DACL。 此參數不得為 Null。 若要在安全描述項中設定 Null DACL, 應該使用方法的第一個形式, 並將*bPresent*設為 false。
 
 *bPresent*<br/>
-指定旗標，指出安全性描述元中 DACL 的目前狀態。 如果此參數為 true，則方法會設定 SE_DACL_PRESENT 旗標中`SECURITY_DESCRIPTOR_CONTROL`結構，並使用中的值*Dacl*並*bDefaulted*參數。 如果為 false，方法會清除 SE_DACL_PRESENT 旗標，並*bDefaulted*會被忽略。
+指定表示安全描述項中是否存在 DACL 的旗標。 如果此參數為 true, 方法會在`SECURITY_DESCRIPTOR_CONTROL`結構中設定 SE_DACL_PRESENT 旗標, 並使用*DACL*和*bDefaulted*參數中的值。 如果為 false, 則方法會清除 SE_DACL_PRESENT 旗標, 並忽略*bDefaulted* 。
 
 *bDefaulted*<br/>
-指定旗標，指出 DACL 的來源。 如果這個旗標為 true，DACL 已擷取的一些預設的機制。 如果為 false，DACL 已明確指定的使用者。 方法會將此值儲存在 SE_DACL_DEFAULTED 旗標的`SECURITY_DESCRIPTOR_CONTROL`結構。 如果未指定此參數，則會清除 SE_DACL_DEFAULTED 旗標。
+指定表示 DACL 來源的旗標。 如果此旗標為 true, 則表示 DACL 已由某些預設機制抓取。 如果為 false, 則表示 DACL 已由使用者明確指定。 方法會將這個值儲存在`SECURITY_DESCRIPTOR_CONTROL`結構的 SE_DACL_DEFAULTED 旗標中。 如果未指定此參數, 則會清除 SE_DACL_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -597,11 +597,11 @@ inline void SetDacl(
 
 ### <a name="remarks"></a>備註
 
-沒有空白且不存在的 DACL 的重要差異。 DACL 是空的它不包含存取控制項目，並沒有存取權限已明確授與。 如此一來，會隱含拒絕物件的存取權。 當物件有沒有 DACL 時，相反地，沒有保護指派給物件，並授與任何存取要求。
+空白和不存在的 DACL 之間有重要的差異。 當 DACL 是空的時, 它不會包含任何存取控制專案, 也不會明確授與存取權限。 因此, 會隱含拒絕對物件的存取。 另一方面, 當物件沒有 DACL 時, 就不會將任何保護指派給物件, 而且會授與任何存取要求。
 
 ##  <a name="setgroup"></a>  CSecurityDesc::SetGroup
 
-設定主要群組的資訊的絕對格式的安全性描述元，取代任何已存在的主要群組資訊。
+設定絕對格式安全描述項的主要群組資訊, 並取代已存在的任何主要群組資訊。
 
 ```
 bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -610,10 +610,10 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>參數
 
 *Sid*<br/>
-若要參考[CSid](../../atl/reference/csid-class.md)物件安全性描述元的新主要群組。 這個參數必須不是 NULL。 安全性描述元可以標示為沒有 DACL 或 SACL，但它必須擁有群組和擁有者，這些甚至會 NULL SID （這是具有特殊意義的內建 SID）。
+安全描述項新主要群組的[CSid](../../atl/reference/csid-class.md)物件參考。 此參數不得為 Null。 安全描述項可以標示為不具備 DACL 或 SACL, 但必須擁有群組和擁有者, 即使是 Null SID (這是具有特殊意義的內建 SID)。
 
 *bDefaulted*<br/>
-表示主要群組資訊是否衍生自預設機制。 如果此值為 true，它是預設的詳細資訊，方法會將此值儲存為 SE_GROUP_DEFAULTED 旗標`SECURITY_DESCRIPTOR_CONTROL`結構。 如果此參數為零，則會清除 SE_GROUP_DEFAULTED 旗標。
+指出主要群組資訊是否衍生自預設機制。 如果此值為 true, 則為預設資訊, 而方法會將這個值儲存為`SECURITY_DESCRIPTOR_CONTROL`結構中的 SE_GROUP_DEFAULTED 旗標。 如果此參數為零, 則會清除 SE_GROUP_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -621,7 +621,7 @@ bool SetGroup(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ##  <a name="setowner"></a>  CSecurityDesc::SetOwner
 
-設定絕對格式的安全性描述元的擁有者資訊。 它會取代任何已存在的擁有者資訊。
+設定絕對格式安全描述項的擁有者資訊。 它會取代任何已存在的擁有者資訊。
 
 ```
 bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
@@ -630,10 +630,10 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>參數
 
 *Sid*<br/>
-[CSid](../../atl/reference/csid-class.md)安全性描述元的新主要擁有者的物件。 這個參數必須不是 NULL。
+安全描述項新主要擁有者的[CSid](../../atl/reference/csid-class.md)物件。 此參數不得為 Null。
 
 *bDefaulted*<br/>
-指出是否要將擁有者資訊衍生自預設機制。 如果此值為 true，則預設資訊。 方法會將此值儲存為 SE_OWNER_DEFAULTED 旗標`SECURITY_DESCRIPTOR_CONTROL`結構。 如果此參數為零，則會清除 SE_OWNER_DEFAULTED 旗標。
+指出擁有者資訊是否衍生自預設機制。 如果此值為 true, 則為預設資訊。 方法會將這個值儲存為`SECURITY_DESCRIPTOR_CONTROL`結構中的 SE_OWNER_DEFAULTED 旗標。 如果此參數為零, 則會清除 SE_OWNER_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -641,7 +641,7 @@ bool SetOwner(const CSid& Sid, bool bDefaulted = false) throw(...);
 
 ##  <a name="setsacl"></a>  CSecurityDesc::SetSacl
 
-設定系統存取控制清單 (SACL) 中的資訊。 如果 SACL 中已有的安全性描述元，它會取代它。
+設定系統存取控制清單 (SACL) 中的資訊。 如果 SACL 已經存在於安全描述項中, 就會被取代。
 
 ```
 bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
@@ -650,10 +650,10 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 ### <a name="parameters"></a>參數
 
 *Sacl*<br/>
-指標`CSacl`物件，指定安全性描述元的 SACL。 這個參數不可以是 NULL，且必須是 CSacl 物件。 不同於 Dacl，並無差別 NULL 和空的 SACL，之間，SACL 物件未指定存取權限，只有稽核資訊。
+`CSacl`物件的指標, 指定安全描述項的 SACL。 這個參數不得為 Null, 而且必須是 CSacl 物件。 與 Dacl 不同的是, Null 和空白 SACL 之間沒有任何差異, 因為 SACL 物件不會指定存取權限, 只有審核資訊。
 
 *bDefaulted*<br/>
-指定旗標，指出 SACL 的來源。 如果這個旗標為 true，SACL 已擷取的一些預設的機制。 如果為 false，SACL 已明確指定的使用者。 方法會將此值儲存在 SE_SACL_DEFAULTED 旗標的`SECURITY_DESCRIPTOR_CONTROL`結構。 如果未指定此參數，則會清除 SE_SACL_DEFAULTED 旗標。
+指定表示 SACL 來源的旗標。 如果此旗標為 true, 則表示 SACL 已被部分預設機制抓取。 如果為 false, 則表示 SACL 已由使用者明確指定。 方法會將這個值儲存在`SECURITY_DESCRIPTOR_CONTROL`結構的 SE_SACL_DEFAULTED 旗標中。 如果未指定此參數, 則會清除 SE_SACL_DEFAULTED 旗標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -661,7 +661,7 @@ bool SetSacl(const CSacl& Sacl, bool bDefaulted = false) throw(...);
 
 ##  <a name="tostring"></a>  CSecurityDesc::ToString
 
-將安全性描述元轉換成字串格式。
+將安全描述項轉換成字串格式。
 
 ```
 bool ToString(
@@ -673,10 +673,10 @@ bool ToString(
 ### <a name="parameters"></a>參數
 
 *pstr*<br/>
-將會收到的 null 終止字串的指標[字串格式的安全性描述元](/windows/desktop/SecAuthZ/security-descriptor-string-format)。
+以 null 結束的字串指標, 將會接收[字串格式的安全描述項](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
 *si*<br/>
-指定 SECURITY_INFORMATION 位元旗標，表示要包含在輸出字串中的安全性描述元的元件組合。
+指定 SECURITY_INFORMATION 位旗標的組合, 以指示要包含在輸出字串中的安全描述項元件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -684,26 +684,26 @@ bool ToString(
 
 ### <a name="remarks"></a>備註
 
-字串格式的安全性描述元之後，它可以更輕鬆地儲存或傳輸。 使用`CSecurityDesc::FromString`方法將字串轉換回的安全性描述元。
+一旦安全描述項的格式為字串, 就可以更輕鬆地加以儲存或傳送。 `CSecurityDesc::FromString`使用方法, 將字串轉換回安全描述項。
 
-*Si*參數可以包含下列 SECURITY_INFORMATION 旗標：
+*Si*參數可以包含下列 SECURITY_INFORMATION 旗標:
 
 |值|意義|
 |-----------|-------------|
 |OWNER_SECURITY_INFORMATION|包含擁有者。|
-|GROUP_SECURITY_INFORMATION|包含的主要群組。|
-|DACL_SECURITY_INFORMATION|包含的 DACL。|
-|SACL_SECURITY_INFORMATION|包括 SACL。|
+|GROUP_SECURITY_INFORMATION|包含主要群組。|
+|DACL_SECURITY_INFORMATION|包含 DACL。|
+|SACL_SECURITY_INFORMATION|包含 SACL。|
 
-如果 DACL 受到 NULL 輸入的安全性描述元中設定 SE_DACL_PRESENT 控制位元，方法就會失敗。
+如果 DACL 是 Null, 而且在輸入安全描述項中設定了 SE_DACL_PRESENT 控制項位, 方法就會失敗。
 
-如果 DACL 受到 NULL 輸入的安全性描述元中未設定 SE_DACL_PRESENT 控制位元，產生的安全性描述元字串，並沒有 d： 元件。 請參閱[安全性描述元字串格式](/windows/desktop/SecAuthZ/security-descriptor-string-format)如需詳細資訊。
+如果 DACL 為 Null, 且輸入安全描述項中未設定 SE_DACL_PRESENT 控制位, 則產生的安全描述項字串不會有 D: 元件。 如需詳細資訊, 請參閱[安全描述項字串格式](/windows/win32/SecAuthZ/security-descriptor-string-format)。
 
-這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/desktop/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptora)。
+這個方法會呼叫[ConvertStringSecurityDescriptorToSecurityDescriptor](/windows/win32/api/sddl/nf-sddl-convertstringsecuritydescriptortosecuritydescriptorw)。
 
 ## <a name="see-also"></a>另請參閱
 
 [安全性範例](../../overview/visual-cpp-samples.md)<br/>
-[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
-[類別概觀](../../atl/atl-class-overview.md)<br/>
+[SECURITY_DESCRIPTOR](/windows/win32/api/winnt/ns-winnt-security_descriptor)<br/>
+[類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: IPersistStreamInitImpl 類別
+title: Ipersiststreaminitimpl<ccomspy> 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IPersistStreamInitImpl
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - IPersistStreamInitImpl class
 - streams, ATL
 ms.assetid: ef217c3c-020f-4cf8-871e-ef68e57865b8
-ms.openlocfilehash: b5ab433ed08b150e6c344d65657a910542856e77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a350a4349cb825795a18dd860a2482952b04dcb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197615"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496144"
 ---
-# <a name="ipersiststreaminitimpl-class"></a>IPersistStreamInitImpl 類別
+# <a name="ipersiststreaminitimpl-class"></a>Ipersiststreaminitimpl<ccomspy> 類別
 
-這個類別會實作`IUnknown`，並提供的預設實作[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)介面。
+這個類別`IUnknown`會執行並提供[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面的預設實值。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -40,26 +40,26 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IPersistStreamInitImpl`。
+衍生自`IPersistStreamInitImpl`的類別。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[IPersistStreamInitImpl::GetClassID](#getclassid)|擷取物件的 CLSID。|
-|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|擷取儲存物件的資料所需的資料流的大小。 ATL 實作會傳回 E_NOTIMPL。|
+|[IPersistStreamInitImpl::GetClassID](#getclassid)|抓取物件的 CLSID。|
+|[IPersistStreamInitImpl::GetSizeMax](#getsizemax)|抓取儲存物件資料所需的資料流程大小。 ATL 執行會傳回 E_NOTIMPL。|
 |[IPersistStreamInitImpl::InitNew](#initnew)|初始化新建立的物件。|
-|[IPersistStreamInitImpl::IsDirty](#isdirty)|會檢查自上次儲存後，是否已變更物件的資料。|
-|[IPersistStreamInitImpl::Load](#load)|從指定的資料流載入物件的屬性。|
-|[IPersistStreamInitImpl::Save](#save)|將指定的資料流物件的屬性。|
+|[IPersistStreamInitImpl::IsDirty](#isdirty)|檢查物件的資料自從上次儲存之後是否已變更。|
+|[IPersistStreamInitImpl::Load](#load)|從指定的資料流程載入物件的屬性。|
+|[IPersistStreamInitImpl::Save](#save)|將物件的屬性儲存至指定的資料流程。|
 
 ## <a name="remarks"></a>備註
 
-[IPersistStreamInit](/windows/desktop/api/ocidl/nn-ocidl-ipersiststreaminit)介面可讓用戶端要求載入您的物件，並將其持續性資料儲存至單一資料流。 類別`IPersistStreamInitImpl`提供此介面的預設實作，並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。
+[IPersistStreamInit](/windows/win32/api/ocidl/nn-ocidl-ipersiststreaminit)介面可讓用戶端要求您的物件載入, 並將其持續性資料儲存至單一資料流程。 類別`IPersistStreamInitImpl`提供此介面的預設執行, 並藉`IUnknown`由將資訊傳送至偵錯工具組建中的傾印裝置來實現。
 
-**相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程,[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -69,11 +69,11 @@ class ATL_NO_VTABLE IPersistStreamInitImpl
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
-##  <a name="getclassid"></a>  IPersistStreamInitImpl::GetClassID
+##  <a name="getclassid"></a>Ipersiststreaminitimpl<ccomspy>:: GetClassID
 
-擷取物件的 CLSID。
+抓取物件的 CLSID。
 
 ```
 STDMETHOD(GetClassID)(CLSID* pClassID);
@@ -81,11 +81,11 @@ STDMETHOD(GetClassID)(CLSID* pClassID);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPersist::GetClassID](/windows/desktop/api/objidl/nf-objidl-ipersist-getclassid) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersist:: GetClassID](/windows/win32/api/objidl/nf-objidl-ipersist-getclassid) 。
 
-##  <a name="getsizemax"></a>  IPersistStreamInitImpl::GetSizeMax
+##  <a name="getsizemax"></a>Ipersiststreaminitimpl<ccomspy>:: GetSizeMax
 
-擷取儲存物件的資料所需的資料流的大小。
+抓取儲存物件資料所需的資料流程大小。
 
 ```
 STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
@@ -97,9 +97,9 @@ STDMETHOD(GetSizeMax)(ULARGE_INTEGER FAR* pcbSize);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPersistStreamInit::GetSizeMax](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersistStreamInit:: GetSizeMax](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-getsizemax) 。
 
-##  <a name="initnew"></a>  IPersistStreamInitImpl::InitNew
+##  <a name="initnew"></a>Ipersiststreaminitimpl<ccomspy>:: InitNew
 
 初始化新建立的物件。
 
@@ -109,11 +109,11 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPersistStreamInit::InitNew](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersistStreamInit:: InitNew](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-initnew) 。
 
-##  <a name="isdirty"></a>  IPersistStreamInitImpl::IsDirty
+##  <a name="isdirty"></a>Ipersiststreaminitimpl<ccomspy>:: IsDirty
 
-會檢查自上次儲存後，是否已變更物件的資料。
+檢查物件的資料自從上次儲存之後是否已變更。
 
 ```
 STDMETHOD(IsDirty)();
@@ -121,11 +121,11 @@ STDMETHOD(IsDirty)();
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPersistStreamInit::IsDirty](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersistStreamInit:: IsDirty](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-isdirty) 。
 
-##  <a name="load"></a>  IPersistStreamInitImpl::Load
+##  <a name="load"></a>Ipersiststreaminitimpl<ccomspy>:: Load
 
-從指定的資料流載入物件的屬性。
+從指定的資料流程載入物件的屬性。
 
 ```
 STDMETHOD(Load)(LPSTREAM pStm);
@@ -133,13 +133,13 @@ STDMETHOD(Load)(LPSTREAM pStm);
 
 ### <a name="remarks"></a>備註
 
-ATL 會使用物件的屬性對應，來擷取這項資訊。
+ATL 會使用物件的屬性對應來抓取此資訊。
 
-請參閱[IPersistStreamInit::Load](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-load) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersistStreamInit:: Load](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-load) 。
 
-##  <a name="save"></a>  IPersistStreamInitImpl::Save
+##  <a name="save"></a>Ipersiststreaminitimpl<ccomspy>:: Save
 
-將指定的資料流物件的屬性。
+將物件的屬性儲存至指定的資料流程。
 
 ```
 STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
@@ -147,11 +147,11 @@ STDMETHOD(Save)(LPSTREAM pStm, BOOL fClearDirty);
 
 ### <a name="remarks"></a>備註
 
-ATL 會使用物件的屬性對應來儲存這項資訊。
+ATL 會使用物件的屬性對應來儲存此資訊。
 
-請參閱[IPersistStreamInit::Save](/windows/desktop/api/ocidl/nf-ocidl-ipersiststreaminit-save) Windows SDK 中。
+請參閱 Windows SDK 中的[IPersistStreamInit:: Save](/windows/win32/api/ocidl/nf-ocidl-ipersiststreaminit-save) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[儲存體和資料流](/windows/desktop/Stg/storages-and-streams)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[儲存體和串流](/windows/win32/Stg/storages-and-streams)<br/>
+[類別總覽](../../atl/atl-class-overview.md)

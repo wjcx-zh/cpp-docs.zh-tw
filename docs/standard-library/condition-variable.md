@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: 3ce9125a13f0dd2f2e4f98a217c4373f2be2f8a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212062"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457389"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -17,14 +17,14 @@ ms.locfileid: "62212062"
 
 此標頭使用並行執行階段 (ConcRT)，因此您可以搭配使用其他 ConcRT 機制。 如需有關 ConcRT 的詳細資訊，請參閱[並行執行階段](../parallel/concrt/concurrency-runtime.md)。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <condition_variable>
-```
+**標頭:** \<condition_variable >
+
+**命名空間：** std
 
 > [!NOTE]
-> 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
+> 在使用 **/clr**編譯的程式碼中, 此標頭會遭到封鎖。
 
 ### <a name="remarks"></a>備註
 
@@ -49,16 +49,24 @@ while (condition is false)
 
 - `wait_for` 會等候指定的 `time interval`。
 
-每種方法皆有兩個多載的版本。 其中一個只會等待，並可能會假喚醒。 另一個則會使用述詞中定義的其他範本引數。 方法不會傳回的述詞是直到 **，則為 true**。
+每種方法皆有兩個多載的版本。 其中一個只會等待，並可能會假喚醒。 另一個則會使用述詞中定義的其他範本引數。 除非述詞為**true**, 否則方法不會傳回。
 
-每個類別也有兩種方法，用來通知其條件是條件變數 **，則為 true**。
+每個類別也有兩個方法, 可用來通知條件變數其條件為**true**。
 
 - `notify_one` 會喚醒正在等候條件變數的其中一個執行緒。
 
 - `notify_all` 會喚醒正在等候條件變數的所有執行緒。
 
+## <a name="functions-and-enums"></a>函數和列舉
+
+```cpp
+void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
+
+enum class cv_status { no_timeout, timeout };
+```
+
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[condition_variable 類別](../standard-library/condition-variable-class.md)<br/>
-[condition_variable_any 類別](../standard-library/condition-variable-any-class.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[condition_variable 類別](../standard-library/condition-variable-class.md)\
+[condition_variable_any 類別](../standard-library/condition-variable-any-class.md)

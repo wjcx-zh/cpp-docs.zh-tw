@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_rvalue_reference class
 - is_rvalue_reference
 ms.assetid: 40a97072-7b5c-4274-9154-298d3dcf064a
-ms.openlocfilehash: ea3be02db2a4a840ed8f8b8a253d7409c26cf759
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58cbf5709eda4f41d2edab7ddac1e0a04a9c74cf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413589"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455675"
 ---
 # <a name="isrvaluereference-class"></a>is_rvalue_reference 類別
 
@@ -27,20 +27,20 @@ struct is_rvalue_reference;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果這個型別述詞執行個體保留 true 的型別*Ty*是[右值參考](../cpp/rvalue-reference-declarator-amp-amp.md)。
+如果類型*Ty*是[右值參考](../cpp/rvalue-reference-declarator-amp-amp.md), 此類型述詞的實例會保留 true。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)

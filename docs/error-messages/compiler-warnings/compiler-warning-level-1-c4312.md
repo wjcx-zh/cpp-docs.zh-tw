@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4312
 ms.assetid: 541906ed-4f62-4bcb-947f-cf9ae7411bcb
-ms.openlocfilehash: 666df7904a7aac88983af40d31a67271beaa0b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1983d7b89688568b8152372328216c2a814f7bc0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408312"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510089"
 ---
 # <a name="compiler-warning-level-1-c4312"></a>編譯器警告 (層級 1) C4312
 
@@ -21,7 +21,7 @@ ms.locfileid: "62408312"
 
 這可能是不安全的轉換，即使在發生正負號擴充時納入 32 位元指標值也是如此。 負的 32 位元整數指派給 64 位元指標類型，正負號擴充會使指標值參考不同於整數值的記憶體位址。
 
-只會針對 64 位元編譯目標發出這個警告。 如需詳細資訊，請參閱 <<c0> [ 規則使用指標](/windows/desktop/WinProg64/rules-for-using-pointers)。
+只會針對 64 位元編譯目標發出這個警告。 如需詳細資訊, 請參閱[使用指標的規則](/windows/win32/WinProg64/rules-for-using-pointers)。
 
 為 64 位元目標編譯時，下列程式碼範例會產生 C4312：
 

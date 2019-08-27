@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 719377be2ac130100e3f9e9ea608c5c27be3101f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377266"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456777"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt; 函式
 
-\<陣列 > 標頭包含兩個非成員函式`get`並`swap`，以運作於**陣列**物件。
+陣列 > 標頭包含在**陣列**物件上運作的`get`兩個非成員函式和`swap`。 \<
 
 |||
 |-|-|
@@ -42,16 +42,16 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Tuple*<br/>
+*指數*\
 項目位移。
 
-*T*<br/>
+*而已*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列中的項目數。
 
-*arr*<br/>
+*arr*\
 要從中選取的陣列。
 
 ### <a name="example"></a>範例
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-非成員範本特製化`std::swap`可交換兩個**陣列**物件。
+交換兩個`std::swap` **陣列**物件之的非成員範本特製化。
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -97,16 +97,16 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 元素的類型。
 
-*N*<br/>
+*位*\
 陣列的大小。
 
-*left*<br/>
+*左面*\
 要交換的第一個陣列。
 
-*right*<br/>
+*再*\
 要交換的第二個陣列。
 
 ### <a name="remarks"></a>備註
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

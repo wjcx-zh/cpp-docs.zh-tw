@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_map header
 ms.assetid: eb90ecb2-250a-4be1-83d2-f66b2917edde
-ms.openlocfilehash: 6ccb2c0c54f8094110d37e6dfd2c504fa8173641
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ac1bf2772e7eb6b2f61aa7b4f79de21fb675afe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167591"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454766"
 ---
 # <a name="ltunorderedmapgt"></a>&lt;unordered_map&gt;
 
@@ -23,6 +23,9 @@ ms.locfileid: "62167591"
 #include <unordered_map>
 ```
 
+> [!NOTE]
+> Unordered_map > 程式庫也會`#include <initializer_list>`使用語句。 \<
+
 ### <a name="classes"></a>類別
 
 |類別|描述|
@@ -32,7 +35,7 @@ ms.locfileid: "62167591"
 
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|功能|說明|
 |-|-|
 |[operator!=](../standard-library/unordered-map-operators.md#op_neq)|測試運算子左邊的 unordered_map 物件是否不等於右邊的 unordered_map 物件。|
 |[operator==](../standard-library/unordered-map-operators.md#op_eq_eq)|測試運算子左邊的 unordered_map 物件是否等於右邊的 unordered_map 物件。|
@@ -43,5 +46,5 @@ ms.locfileid: "62167591"
 
 ## <a name="see-also"></a>另請參閱
 
-[unordered_multiset 類別](../standard-library/unordered-multiset-class.md)<br/>
-[unordered_set 類別](../standard-library/unordered-set-class.md)<br/>
+[unordered_multiset 類別](../standard-library/unordered-multiset-class.md)\
+[unordered_set 類別](../standard-library/unordered-set-class.md)

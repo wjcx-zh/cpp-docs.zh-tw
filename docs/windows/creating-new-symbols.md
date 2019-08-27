@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立符號 (C++)
+title: 作法：建立符號 (C++)
 ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03246d2c701961c824b55fb0cbb781ee3f65028
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350945"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344192"
 ---
-# <a name="how-to-create-symbols-c"></a>HOW TO：建立符號 (C++)
+# <a name="how-to-create-symbols-c"></a>作法：建立符號 (C++)
 
 當您開始新的專案時，您可能會發現它方便您需要在之前建立的資源，它們會被指派的符號名稱對應。
 

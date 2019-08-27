@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IID_PPV_ARGS_Helper function
 ms.assetid: afee9b23-8df1-4575-903f-e9ba748418f0
-ms.openlocfilehash: 5ef4dd6c9db2d19e0c8a4143c5b4ed3f0ac75f6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7733ae6084b64c20dff5a2c35d7a31c614d6e44
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398260"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500511"
 ---
-# <a name="iidppvargshelper-function"></a>IID_PPV_ARGS_Helper 函式
+# <a name="iid_ppv_args_helper-function"></a>IID_PPV_ARGS_Helper 函式
 
-確認指定的引數的型別衍生自`IUnknown`介面。
+驗證指定引數的類型衍生自`IUnknown`介面。
 
 > [!IMPORTANT]
-> 此樣板特製化支援 WRL 結構，而且不是直接從您的程式碼使用。 使用[IID_PPV_ARGS](/windows/desktop/api/combaseapi/nf-combaseapi-iid_ppv_args)改。
+> 此範本特製化支援 WRL 基礎結構, 但不適合直接從您的程式碼使用。 請改用[IID_PPV_ARGS](/windows/win32/api/combaseapi/nf-combaseapi-iid_ppv_args) 。
 
 ## <a name="syntax"></a>語法
 
@@ -33,18 +33,18 @@ void** IID_PPV_ARGS_Helper(
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-引數的型別*pp*。
+引數*pp*的類型。
 
 *pp*<br/>
 雙向間接指標。
 
 ## <a name="return-value"></a>傳回值
 
-引數*pp*轉換成指標-至-a-指標**void**。
+引數*pp*轉型為指標對 a 的指標至**void**。
 
 ## <a name="remarks"></a>備註
 
-如果，就會產生編譯時期錯誤的範本參數*T*不是衍生自`IUnknown`。
+如果範本參數*T*不是衍生自`IUnknown`, 則會產生編譯時期錯誤。
 
 ## <a name="requirements"></a>需求
 

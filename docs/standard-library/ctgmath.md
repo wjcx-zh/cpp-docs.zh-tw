@@ -1,34 +1,40 @@
 ---
 title: '&lt;ctgmath&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <ctgmath>
+- ctgmath
+helpviewer_keywords:
+- ctgmath header
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30eca273ac41139251c024c27c16d4adefe7f784
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394193"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341117"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-實際上，包括 C++ 標準程式庫標頭 \<ccomplex> 和 \<cmath>，提供相當於 \<tgmath.h> 的泛型算術巨集。
+實際上, 包含C++標準程式庫標頭\<complex > 和\<h >, 這會提供相當於\<> tgmath.h> 的類型泛型 math 宏。
 
-## <a name="syntax"></a>語法
+> [!NOTE]
+> \<Ctgmath > 不包含\<C 標準程式庫 tgmath.h> > 標頭, 因為它實際上是以複雜 > 和\<h C++ > 中\<的多載來取代。 這會讓\<ctgmath > 標頭重複。 在\<中C++, tgmath.h> > 標頭已被取代。 \<Ctgmath > 標頭在 c + + 17 中已被取代, 並已在 draft c + + 20 標準中移除。
 
-```cpp
-#include <ctgmath>
-```
+## <a name="requirements"></a>需求
+
+**標頭:** \<ctgmath >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
-標準 C 程式庫標頭 \<tgmath.h> 的功能是由 \<ccomplex> 和 \<cmath> 的多載提供。
-
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
+C 標準程式庫標頭\<tgmath.h> 的功能 > 是由複雜 > 和\<h > 中\<的多載所提供。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<ccomplex>](../standard-library/ccomplex.md)<br/>
-[\<cmath>](../standard-library/cmath.md)<br/>
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<複雜 >](complex.md)\
+[\<cmath>](cmath.md)\
+[標頭檔參考](cpp-standard-library-header-files.md)\
+[C++標準程式庫總覽](cpp-standard-library-overview.md)\
+[標準程式庫中C++的執行緒安全](thread-safety-in-the-cpp-standard-library.md)

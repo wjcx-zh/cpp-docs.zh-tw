@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411093"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456470"
 ---
 # <a name="alignedstorage-class"></a>aligned_storage 類別
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>參數
 
-*Len*<br/>
+*Len*\
 物件大小。
 
-*對齊*<br/>
+*對齊*\
 物件對齊。
 
 ## <a name="remarks"></a>備註
 
-範本成員 typedef`type`對齊的 POD 類型同義*對齊*和大小*Len*。 *對齊*必須等於`alignment_of<T>::value`某種`T`，或等於預設對齊。
+範本成員 typedef `type`是具有對齊和大小*Len*之 POD 類型的同義字。 某些`alignment_of<T>::value` 類型`T`的對齊必須等於, 或預設的對齊方式。
 
 ## <a name="example"></a>範例
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[alignment_of 類別](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[alignment_of 類別](../standard-library/alignment-of-class.md)

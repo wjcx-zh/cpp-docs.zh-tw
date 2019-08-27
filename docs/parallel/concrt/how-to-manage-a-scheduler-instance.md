@@ -1,50 +1,50 @@
 ---
-title: HOW TO：管理排程器執行個體
+title: 作法：管理排程器實例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f402e82a18f7b804f2c25ebf0a4392d19694d25c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413875"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510521"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>HOW TO：管理排程器執行個體
+# <a name="how-to-manage-a-scheduler-instance"></a>作法：管理排程器實例
 
-排程器執行個體可讓您關聯各種類型的工作負載的特定排程的原則。 本主題包含兩個基本的範例，示範如何建立和管理排程器執行個體。
+排程器實例可讓您將特定排程原則與各種類型的工作負載產生關聯。 本主題包含兩個基本範例, 示範如何建立和管理排程器實例。
 
-範例會建立使用預設排程器原則的排程器。 如需建立排程器的範例會使用自訂原則，請參閱[How to:指定特定排程器原則](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)。
+範例會建立使用預設排程器原則的排程器。 如需建立使用自訂原則之排程器的範例, 請[參閱如何:指定特定排程器](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)原則。
 
-### <a name="to-manage-a-scheduler-instance-in-your-application"></a>若要管理您的應用程式中的排程器執行個體
+### <a name="to-manage-a-scheduler-instance-in-your-application"></a>在您的應用程式中管理排程器實例
 
-1. 建立[schedulerpolicy](../../parallel/concrt/reference/schedulerpolicy-class.md)物件，其中包含原則值要使用的排程器。
+1. 建立[concurrency:: SchedulerPolicy](../../parallel/concrt/reference/schedulerpolicy-class.md)物件, 其中包含要使用之排程器的原則值。
 
-1. 呼叫[concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create)方法或[scheduler](reference/scheduler-class.md#create)方法，以建立排程器執行個體。
+1. 呼叫[concurrency:: CurrentScheduler:: create](reference/currentscheduler-class.md#create)方法或[concurrency:: 排程器:: create](reference/scheduler-class.md#create)方法來建立排程器實例。
 
-   如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)方法時您必須將與目前內容關聯的排程器。
+   如果您使用`Scheduler::Create`方法, 當您需要將排程器與目前內容建立關聯時, 請呼叫[concurrency:: 排程器:: Attach](reference/scheduler-class.md#attach)方法。
 
-1. 呼叫[CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa)函式來建立未收到信號、 自動重設事件物件的控制代碼。
+1. 呼叫[CreateEvent](/windows/win32/api/synchapi/nf-synchapi-createeventw)函式, 以建立非信號、自動重設事件物件的控制碼。
 
-1. 將控制代碼傳遞至您剛才建立的事件物件[concurrency::CurrentScheduler::RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)方法或[concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)方法。 這會註冊事件時終結排程器設定。
+1. 將控制碼傳遞至您剛才建立的事件物件, 以[concurrency:: CurrentScheduler:: RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)方法或[concurrency:: 排程器:: RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)方法。 這會在終結排程器時註冊要設定的事件。
 
-1. 執行您想要排程的目前排程器工作。
+1. 執行您想要目前排程器排定的工作。
 
-1. 呼叫[concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach)卸離目前的排程器，並還原先前的排程器與目前的方法。
+1. 呼叫[concurrency:: CurrentScheduler::D etach](reference/currentscheduler-class.md#detach)方法來卸離目前的排程器, 並將先前的排程器還原為目前的排程器。
 
-   如果您使用`Scheduler::Create`方法中，呼叫[concurrency::Scheduler::Release](reference/scheduler-class.md#release)方法，以遞減參考計數的`Scheduler`物件。
+   如果您使用`Scheduler::Create`方法, 請呼叫[concurrency:: 排程器:: release](reference/scheduler-class.md#release)方法來遞減`Scheduler`物件的參考計數。
 
-1. 將控制代碼傳遞至事件，以[WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)等待關閉的排程器的函式。
+1. 將事件的控制碼傳遞給[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject)函式, 以等候排程器關閉。
 
-1. 呼叫[CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle)函式來關閉事件物件的控制代碼。
+1. 呼叫[CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle)函數, 關閉事件物件的控制碼。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範兩種方式管理排程器執行個體。 第一次，每個範例會使用預設排程器來執行會印出目前的排程器的唯一識別碼的工作。 每個範例則使用排程器執行個體再次執行相同的工作。 最後，每個範例會還原為目前的預設排程器，並執行一次的工作。
+下列程式碼顯示兩種管理排程器實例的方式。 每個範例會先使用預設排程器來執行工作, 以列印出目前排程器的唯一識別碼。 然後, 每個範例都會使用排程器實例, 再次執行相同的工作。 最後, 每個範例都會將預設排程器還原為目前的排程器, 然後再執行一次工作。
 
-第一個範例會使用[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立排程器執行個體，並將它與目前內容產生關聯。 第二個範例會使用[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)類別來執行相同的工作。 一般而言，`CurrentScheduler`類別用來處理目前的排程器。 第二個範例中，它會使用`Scheduler`類別中，當您想要控制當排程器是與目前內容相關聯，或當您想要特定排程器相關聯的特定工作時非常有用。
+第一個範例使用[concurrency:: CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立排程器實例, 並將它與目前的內容產生關聯。 第二個範例使用[concurrency::](../../parallel/concrt/reference/scheduler-class.md)排程器類別來執行相同的工作。 通常, `CurrentScheduler`類別是用來處理目前的排程器。 當您想要控制排程器`Scheduler`與目前內容相關聯的時間, 或當您想要將特定排程器與特定工作建立關聯時, 第二個範例會使用類別。
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -71,9 +71,9 @@ Current scheduler id: 0
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`scheduler-instance.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼, 並將它貼入 Visual Studio 專案中, 或貼入名`scheduler-instance.cpp`為的檔案中, 然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc 排程器 instance.cpp**
+**cl/EHsc scheduler-instance .cpp**
 
 ## <a name="see-also"></a>另請參閱
 

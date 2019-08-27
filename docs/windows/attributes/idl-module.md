@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409456"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514669"
 ---
-# <a name="idlmodule"></a>idl_module
+# <a name="idl_module"></a>idl_module
 
-.Dll 檔中指定的進入點。
+指定 .dll 檔案中的進入點。
 
 ## <a name="syntax"></a>語法
 
@@ -27,45 +27,45 @@ function declaration
 ### <a name="parameters"></a>參數
 
 *name*<br/>
-會在.idl 檔中的程式碼區塊的使用者定義的名稱。
+將出現在 .idl 檔案中之程式碼區塊的使用者定義名稱。
 
 *dllname*<br/>
-（選擇性）包含匯出的.dll 檔案。
+選擇性包含匯出的 .dll 檔案。
 
 *uuid*<br/>
-（選擇性）唯一的識別碼。
+選擇性唯一識別碼。
 
 *helpstring*<br/>
-（選擇性）字元字串，用來描述類型程式庫。
+選擇性用來描述類型程式庫的字元字串。
 
 *helpstringcontext*<br/>
-（選擇性）.Hlp 或.chm 檔案中的 [說明] 主題的識別碼。
+選擇性.Hlp 或 .chm 檔案中說明主題的識別碼。
 
 *helpcontext*<br/>
-（選擇性）這個類型程式庫說明識別碼。
+選擇性此類型程式庫的說明識別碼。
 
 *hidden*<br/>
-（選擇性）避免程式庫顯示為參數。 如需詳細資訊，請參閱 [hidden](/windows/desktop/Midl/hidden) MIDL 屬性。
+選擇性防止顯示媒體櫃的參數。 如需詳細資訊，請參閱 [hidden](/windows/win32/Midl/hidden) MIDL 屬性。
 
 *restricted*<br/>
-（選擇性）程式庫成員不能任意呼叫。 如需詳細資訊，請參閱 [restricted](/windows/desktop/Midl/restricted) MIDL 屬性。
+選擇性無法任意呼叫程式庫的成員。 如需詳細資訊，請參閱 [restricted](/windows/win32/Midl/restricted) MIDL 屬性。
 
 *函式宣告*<br/>
-您將定義的函式。
+您將定義的函數。
 
 ## <a name="remarks"></a>備註
 
-**Idl_module** C++屬性可讓您指定的.dll 檔案，可讓您從.dll 檔案匯入項目點。
+**Idl_module** C++屬性可讓您指定 .dll 檔案中的進入點, 這可讓您從 .dll 檔案匯入。
 
-**Idl_module**屬性有類似的功能[模組](/windows/desktop/Midl/module)MIDL 屬性。
+**Idl_module**屬性具有類似[模組](/windows/win32/Midl/module)MIDL 屬性的功能。
 
-您可以匯出任何項目從 COM 物件，您可以從匯出的.dll 檔案置於的程式庫區塊的.idl 檔中的 DLL 進入點。
+您可以藉由將 DLL 進入點放在 .idl 檔案的程式庫區塊中, 從您可以從 .dll 檔案匯出的 COM 物件匯出任何專案。
 
-您必須使用**idl_module**兩個步驟。 首先，您必須定義的名稱/DLL 組。 然後，當您使用**idl_module**以指定進入點，請指定名稱和任何額外的屬性。
+您必須透過兩個步驟來使用**idl_module** 。 首先, 您必須定義名稱/DLL 配對。 然後, 當您使用**idl_module**指定進入點時, 請指定名稱和任何其他屬性。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**idl_module**屬性：
+下列程式碼顯示如何使用**idl_module**屬性:
 
 ```cpp
 // cpp_attr_ref_idl_module.cpp
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common controls [MFC]
 - controls [MFC]
 ms.assetid: b2842884-6435-4b8f-933b-21671bf8af95
-ms.openlocfilehash: c0738128d20839046e0885e7489b494d84349e4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3155889f2fd4002286340ccec7f4a35d1a6a9c20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297264"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508803"
 ---
 # <a name="controls-mfc"></a>控制項 (MFC)
 
@@ -49,7 +49,7 @@ ActiveX 控制項 (先前稱為 OLE 控制項) 可用於 Windows 應用程式的
 
 ### <a name="_core_windows_common_controls_and_mfc_classes"></a>  Windows 通用控制項和 MFC 類別
 
-|控制項|MFC 類別|描述|Windows 95 的新功能|
+|控制項|MFC 類別|描述|Windows 95 中的新功能|
 |-------------|---------------|-----------------|------------------------|
 |[動畫](../mfc/using-canimatectrl.md)|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|顯示 AVI 視訊剪輯的連續畫面格|是|
 |按鈕|[CButton](../mfc/reference/cbutton-class.md)|造成動作的按鈕；也用於核取方塊、選項按鈕和群組方塊|否|
@@ -76,7 +76,7 @@ ActiveX 控制項 (先前稱為 OLE 控制項) 可用於 Windows 應用程式的
 |[工具提示](../mfc/using-ctooltipctrl.md)|[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)|小型快顯視窗，描述工具列按鈕或其他工具的用途|是|
 |[樹狀](../mfc/using-ctreectrl.md)|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|顯示階層式項目清單的視窗|是|
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
 - 個別控制項︰請參閱本主題的 [Windows 通用控制項和 MFC 類別](#_core_windows_common_controls_and_mfc_classes) 表格，以取得所有控制項的連結
 
@@ -102,9 +102,9 @@ ActiveX 控制項 (先前稱為 OLE 控制項) 可用於 Windows 應用程式的
 
 - [範例](../mfc/common-control-sample-list.md)
 
-Windows SDK 中的 Windows 通用控制項的相關資訊，請參閱[通用控制項](/windows/desktop/Controls/common-controls-intro)。
+如需 Windows SDK 中 Windows 通用控制項的相關資訊, 請參閱[通用控制項](/windows/win32/Controls/common-controls-intro)。
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
+[使用者介面元素](../mfc/user-interface-elements-mfc.md)<br/>
 [對話方塊編輯器](../windows/dialog-editor.md)

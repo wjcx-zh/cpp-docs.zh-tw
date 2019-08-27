@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85565dc0c0ec904551eb8dd981cfacc9a2e1f256
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412016"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460044"
 ---
 # <a name="timebase-class"></a>time_base 類別
 
-類別可做為 facet 的基底類別的樣板類別 time_get，只會將列舉型別定義`dateorder`和此類型的數個常數。
+類別可做為樣板類別 time_get facet 的基類, 只定義列舉類型`dateorder`和此類型的數個常數。
 
 ## <a name="syntax"></a>語法
 
@@ -38,22 +38,22 @@ public:
 
 每個常數特性都會以不同的方式描述，來將日期元件排序。 這些常數如下：
 
-- `no_order` 指定沒有特定順序。
+- `no_order`不指定特定的順序。
 
-- `dmy` 指定該順序天、 月、 年，如 2 年 12 月 1979 年。
+- `dmy`指定訂單 day、month、year, 如1979年12月2日。
 
-- `mdy` 指定該順序月、 日、 年，如 12 月 2 日，1979 年。
+- `mdy`以1979年12月2日的順序指定訂單月份、日、年。
 
-- `ymd` 指定該順序年、 月、 日，1979年/12/2 如。
+- `ymd`指定訂單年、月、日, 如1979/12/2。
 
-- `ydm` 指定訂購年份、 一天，然後如 1979 年的月份：2 年 12 月。
+- `ydm`指定訂單 year、day、then month, 如1979所示:12月2日。
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

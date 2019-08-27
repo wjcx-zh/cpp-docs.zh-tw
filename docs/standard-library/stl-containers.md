@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412406"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449601"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準程式庫容器
 
@@ -166,11 +166,11 @@ map、multimap、set 和 multiset 中的下列成員函式已多載來支援異�
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比較不同的容器 (C++14)
 
-在 C + + 14 和更新版本，您可以使用其中一種比較不同的容器和/或不同的項目類型`std::equal`， `std::mismatch`，或`std::is_permutation`函式採用兩個完整範圍的多載。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。
+在 c + + 14 和更新版本中, 您可以使用兩個完整範圍的其中一個`std::equal`、 `std::mismatch`或`std::is_permutation`函數多載, 來比較不同的容器和/或不同的元素類型。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。
 
 ## <a name="see-also"></a>另請參閱
 
-[容器](../cpp/containers-modern-cpp.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<範例容器>](../standard-library/sample-container.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[容器](../cpp/containers-modern-cpp.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)\
+[\<sample container>](../standard-library/sample-container.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

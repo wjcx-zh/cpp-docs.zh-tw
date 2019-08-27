@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
-ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbf5ab2bc4263356a1cfcf789865a3f7e286ccd7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404763"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514865"
 ---
-# <a name="viprogid"></a>vi_progid
+# <a name="vi_progid"></a>vi_progid
 
-指定與版本無關的 ProgID 表單。
+指定與版本無關的 ProgID 形式。
 
 ## <a name="syntax"></a>語法
 
@@ -26,23 +26,23 @@ ms.locfileid: "62404763"
 ### <a name="parameters"></a>參數
 
 *name*<br/>
-版本無關的 ProgID，表示的物件。
+與版本無關的 ProgID, 代表物件。
 
-Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的類別識別項 (CLSID)。
+Progid 呈現了人類看得懂的類別識別碼 (CLSID) 版本, 用來識別 COM/ActiveX 物件。
 
 ## <a name="remarks"></a>備註
 
-**Vi_progid** C++屬性可讓您指定 COM 物件與版本無關的 ProgID。 ProgID 的形式*name1.name2.version*。 沒有與版本無關的 ProgID*版本*。 可同時指定兩者`progid`而**vi_progid**上的屬性`coclass`。 如果您未指定**vi_progid**，則版本無關的 ProgID 是所指定的值[progid](progid.md)屬性。
+**Vi_progid** C++屬性可讓您為 COM 物件指定與版本無關的 progid。 ProgID 的格式為*name1*。 與版本無關的 ProgID 沒有*版本*。 您可以在上`progid` `coclass`同時指定和**vi_progid**屬性。 如果您未指定**vi_progid**, 與版本無關的 progid 就是[progid](progid.md)屬性所指定的值。
 
-**vi_progid**意味著`coclass`屬性，也就是如果您指定**vi_progid**，它是與指定的相同項目`coclass`並**vi_progid**屬性。
+**vi_progid**意指`coclass`屬性, 也就是說, 如果您指定**vi_progid**, 這與指定`coclass`和**vi_progid**屬性的做法相同。
 
-**Vi_progid**屬性會導致自動註冊指定的名稱下的類別。 產生的.idl 檔案不會顯示 ProgID 的值。
+**Vi_progid**屬性會使類別以指定的名稱自動註冊。 產生的 .idl 檔案不會顯示 ProgID 值。
 
-在 ATL 專案中，如果[coclass](coclass.md)也有屬性時，會使用指定的 ProgID`GetVersionIndependentProgID`函式 (插入`coclass`屬性)。
+在 ATL 專案中, 如果[coclass](coclass.md)屬性也存在, 則函式會使用`GetVersionIndependentProgID`指定的 ProgID `coclass` (由屬性插入)。
 
 ## <a name="example"></a>範例
 
-請參閱[coclass](coclass.md)的範例使用的範例**vi_progid**。
+如需使用**vi_progid**的範例, 請參閱[coclass](coclass.md)範例。
 
 ## <a name="requirements"></a>需求
 
@@ -50,9 +50,9 @@ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的
 
 |||
 |-|-|
-|**適用於**|**類別**，**結構**|
+|**適用於**|**class**、 **struct**|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
@@ -62,4 +62,4 @@ Progid 會提供人類看得懂的版本，用來識別的 COM/ActiveX 物件的
 [IDL 屬性](idl-attributes.md)<br/>
 [Typedef、Enum、Union 和 Struct 屬性](typedef-enum-union-and-struct-attributes.md)<br/>
 [類別屬性](class-attributes.md)<br/>
-[ProgID 的索引鍵](/windows/desktop/com/-progid--key)
+[ProgID 金鑰](/windows/win32/com/-progid--key)

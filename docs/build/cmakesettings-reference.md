@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042598"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516378"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
-**cmakesettings.json**` 檔案包含的資訊會指定 Visual Studio 應該如何與 CMake 互動，為指定的平台建置專案。 此檔案會儲存環境變數或 cmake.exe 環境引數等資訊。 您可以直接編輯或使用 **CMake 設定編輯器** (Visual Studio 2019 及更新版本)。 如需有關編輯器的詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 建置設定](customize-cmake-settings.md)。
+**Cmakesettings.json**檔案包含指定 Visual Studio 應該如何互動以建置專案，以供指定的平台的 CMake 的資訊。 此檔案會儲存環境變數或 cmake.exe 環境引數等資訊。 您可以直接編輯或使用 **CMake 設定編輯器** (Visual Studio 2019 及更新版本)。 如需有關編輯器的詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 建置設定](customize-cmake-settings.md)。
 
 ## <a name="environments"></a>環境
 

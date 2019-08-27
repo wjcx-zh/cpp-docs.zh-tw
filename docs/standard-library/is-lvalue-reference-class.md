@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_lvalue_reference class
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
-ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bcd5c8333f011475cb11a452759c8986ab22215
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351939"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456209"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference 類別
 
@@ -27,20 +27,20 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果這個型別述詞執行個體保留 true 的型別*Ty*物件或函式，否則為 false 的參考。 請注意， *Ty*可能不是右值參考。 如需有關 rvalue 的詳細資訊，請參閱 [Rvalue 參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
+如果類型*Ty*是物件或函式的參考, 則此類型述詞的實例為 true, 否則為 false。 請注意, *Ty*可能不是右值參考。 如需有關 rvalue 的詳細資訊，請參閱 [Rvalue 參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)

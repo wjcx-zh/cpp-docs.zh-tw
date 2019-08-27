@@ -1,21 +1,21 @@
 ---
-title: 字串 (C++ COM 屬性)
+title: string (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.string
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: e1b528fb922a15655de403c6099ee1d36e2fb3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407272"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514014"
 ---
 # <a name="string-c"></a>string (C++)
 
-表示一維**char**， **wchar_t**， `byte` （或同等權限） 做為字串，則必須處理陣列或這類陣列的指標。
+表示一維**char**、 **wchar_t**、 `byte` (或對等) 陣列或這類陣列的指標必須被視為字串。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407272"
 
 ## <a name="remarks"></a>備註
 
-**字串**C++屬性具有相同的功能[字串](/windows/desktop/Midl/string)MIDL 屬性。
+**String** C++屬性的功能與[字串](/windows/win32/Midl/string)MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**字串**介面上，並在 typedef 上：
+下列程式碼示範如何在介面和 typedef 上使用**string** :
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -50,9 +50,9 @@ __interface IFireTabCtrl
 
 |||
 |-|-|
-|**適用於**|陣列或指標的陣列、 介面參數、 介面方法|
+|**適用於**|陣列的陣列或指標, 介面參數, 介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

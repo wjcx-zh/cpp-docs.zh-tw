@@ -7,12 +7,12 @@ helpviewer_keywords:
 - negate struct
 - negate class
 ms.assetid: 8a372686-786e-4262-b37c-ca13dc11e62f
-ms.openlocfilehash: d865577ed7052937b9fa2c2c1023b3a4befcb776
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb45f61323a407e90c2a455460a4d2cdd7b6720a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223752"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240558"
 ---
 # <a name="negate-struct"></a>negate 結構
 
@@ -39,15 +39,15 @@ struct negate<void>
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型別*\
 任何支援 `operator-` (接受指定或推斷類型的運算元) 的類型。
 
-*左邊*<br/>
+*左邊*\
 要否定的運算元。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*型別*。
 
 ## <a name="return-value"></a>傳回值
 
-`-Left.` 的結果。此特製化範本會完整轉送結果 (具有一元 `operator-` 所傳回的類型)。
+`-Left` 的結果。 此特製化的範本會完美地轉送結果，其具有一元 （unary） 所傳回的型別`operator-`。
 
 ## <a name="example"></a>範例
 
@@ -85,19 +85,9 @@ int main( )
       cout << *Iter2 << " ";
    cout << ")" << endl;
 }
-/* Output:
-The vector v1 = ( -10 -5 0 5 10 15 20 25 )
-The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
-*/
 ```
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+```Output
+The vector v1 = ( -10 -5 0 5 10 15 20 25 )
+The negated elements of the vector = ( 10 5 0 -5 -10 -15 -20 -25 )
+```

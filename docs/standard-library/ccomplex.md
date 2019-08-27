@@ -1,33 +1,40 @@
 ---
 title: '&lt;ccomplex&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - <ccomplex>
+- ccomplex
+helpviewer_keywords:
+- ccomplex header
 ms.assetid: a9fcb5f0-88e3-464b-a5fd-d1afb8cd7e6f
-ms.openlocfilehash: ab9e95eb7b432a85a75d73d388ec069b0d04ac62
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5383b1eca4fda72f5f9e3a78637373acbcf7ab
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351101"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341136"
 ---
 # <a name="ltccomplexgt"></a>&lt;ccomplex&gt;
 
-包括 C++ 標準程式庫標頭 [\<complex>](../standard-library/complex.md)，它會有效率地包括標準 C 程式庫標頭 \<complex.h>，並將相關聯的名稱新增至 `std` 命名空間。
+包含C++標準程式庫標頭[ \<複雜 >](complex.md)。
 
-## <a name="syntax"></a>語法
+> [!NOTE]
+> C 標準程式庫\<> 標頭不\<包含在 x > 中, 因為它實際上是以複雜 > 和C++ \<h > \<中的多載來取代。 這會讓\<x > 標頭重複。 在\<中C++, 複雜的 .h > 標頭已被取代。 \<X > 標頭在 c + + 17 中已被取代, 並已在 draft c + + 20 標準中移除。
 
-```cpp
-#include <ccomplex>
-```
+## <a name="requirements"></a>需求
+
+**標頭:** \<x >
+
+**命名空間：** std
 
 ## <a name="remarks"></a>備註
 
-包含此標頭可保證，透過使用 Standard C 程式庫標頭中的外部連結所宣告的名稱會在 `std` 命名空間中宣告。
-
-名稱 `clog` (宣告於 \<complex.h> 中) 未定義在 `std` 命名空間中，因為可能發生與 `clog` (宣告於 [\<iostream>](../standard-library/iostream.md) 中) 的衝突。
+因為可能`clog`與`clog` [iostream >中\<](iostream.md)所\<宣告的發生衝突, 所以不會在`std`命名空間中定義在複雜 .h > 中宣告的名稱。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
+[\<複雜 >](complex.md)\
+[\<cmath>](cmath.md)\
+[標頭檔參考](cpp-standard-library-header-files.md)\
+[C++標準程式庫總覽](cpp-standard-library-overview.md)\
+[標準程式庫中C++的執行緒安全](thread-safety-in-the-cpp-standard-library.md)

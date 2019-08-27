@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413134"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453849"
 ---
 # <a name="lockguard-class"></a>lock_guard 類別
 
@@ -44,7 +44,7 @@ class lock_guard;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>參數
 
-*Mtx*<br/>
+*.Mtx*\
 「mutex 類型」物件。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構一個物件的型別`lock_guard`和鎖定*Mtx*。 如果*Mtx*不是遞迴的 mutex，必須解除鎖定時呼叫這個建構函式。
+第一個函式會建立類型`lock_guard`的物件, 並鎖定 *.mtx*。 如果 *.mtx*不是遞迴 mutex, 則必須在呼叫此函式時解除鎖定。
 
-第二個建構函式不會鎖定*Mtx*。 *Mtx*呼叫這個建構函式時，必須先鎖定。 此建構函式不會擲回任何例外狀況。
+第二個函式不會鎖定 *.mtx*。 呼叫此函式時, 必須鎖定 *.mtx* 。 此建構函式不會擲回任何例外狀況。
 
 ## <a name="dtorlock_guard_destructor"></a>  lock_guard::~lock_guard 解構函式
 
@@ -83,5 +83,5 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

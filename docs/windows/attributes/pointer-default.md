@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407506"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514266"
 ---
-# <a name="pointerdefault"></a>pointer_default
+# <a name="pointer_default"></a>pointer_default
 
-指定出現在參數清單的最上層指標除外的所有指標的預設指標屬性。
+指定所有指標的預設指標屬性, 但出現在參數清單中的最上層指標除外。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62407506"
 ### <a name="parameters"></a>參數
 
 *value*<br/>
-描述此指標類型的值： **ptr**， **ref**，或**唯一**。
+描述指標類型的值: **ptr**、 **ref**或**unique**。
 
 ## <a name="remarks"></a>備註
 
-**Pointer_default** C++屬性具有相同的功能[pointer_default](/windows/desktop/Midl/pointer-default) MIDL 屬性。
+**Pointer_default** C++屬性具有與[pointer_default](/windows/win32/Midl/pointer-default) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[defaultvalue](defaultvalue.md)範例使用**pointer_default**。
+如需使用**pointer_default**的範例, 請參閱[defaultvalue](defaultvalue.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -45,7 +45,7 @@ ms.locfileid: "62407506"
 |**適用於**|**interface**|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371473"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454190"
 ---
 # <a name="numpunct-class"></a>numpunct 類別
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
@@ -76,7 +76,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|
 |[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|
-|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回要做為值的文字表示的字串**false**。|
+|[do_falsename](#do_falsename)|受保護的虛擬成員函式, 呼叫以傳回字串, 做為**false**值的文字表示。|
 |[do_grouping](#do_grouping)|受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。|
 |[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。|
 |[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。|
@@ -87,7 +87,7 @@ class numpunct : public locale::facet;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-範例，請參閱[分組](#grouping)，其中虛擬成員函式會呼叫`grouping`。
+請參閱[群組](#grouping)的範例, 其中會呼叫`grouping`虛擬成員函式。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式傳回的地區設定特定項目型別`CharType`作為任何小數點左邊的群組分隔符號。
+受保護的虛擬成員函式會傳回類型`CharType`的地區設定特定元素, 以做為任何小數點左邊的群組分隔符號使用。
 
 ### <a name="example"></a>範例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>傳回值
 
-字串，包含一連串`CharType`以使用以值的文字表示法**false**。
+字串, 包含要做為`CharType`值**false**之文字表示的序列。
 
 ### <a name="remarks"></a>備註
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
-- 0:物件的存留期是由包含它的地區設定管理。
+- 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \> 1:未定義這些值。
+- \>1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+此函式會使用**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基底物件。
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[facet 類別](../standard-library/locale-class.md#facet_class)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[facet 類別](../standard-library/locale-class.md#facet_class)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

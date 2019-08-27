@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - defaultcollelem attribute
 ms.assetid: 3dbbd293-8b83-4f70-a36b-64cc1d0b6713
-ms.openlocfilehash: be4ea7097bd811444fca050525338931867998d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8848562c1470198d3f2a1b6f285510bcbb43d7c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148051"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501659"
 ---
 # <a name="defaultcollelem"></a>defaultcollelem
 
-使用 Visual Basic 程式碼最佳化。
+用於 Visual Basic 程式碼優化。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62148051"
 
 ## <a name="remarks"></a>備註
 
-**Defaultcollelem** C++屬性具有相同的功能[defaultcollelem](/windows/desktop/Midl/defaultcollelem) MIDL 屬性。
+**Defaultcollelem** C++屬性具有與[defaultcollelem](/windows/win32/Midl/defaultcollelem) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼會顯示介面的方法使用**defaultcollelem**屬性：
+下列程式碼顯示使用**defaultcollelem**屬性的介面方法:
 
 ```cpp
 // cpp_attr_ref_defaultcollelem.cpp
@@ -52,8 +52,8 @@ __interface IMyForm
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

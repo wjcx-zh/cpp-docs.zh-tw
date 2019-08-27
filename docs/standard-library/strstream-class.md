@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53baa350121796d5198211e1fdb08f4341df6b80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412289"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459108"
 ---
 # <a name="strstream-class"></a>strstream 類別
 
@@ -38,13 +38,13 @@ class strstream : public iostream
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[strstream](#strstream)|建構類型 `strstream` 的物件。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[freeze](#freeze)|導致資料流緩衝區無法在資料流緩衝區作業中使用。|
 |[pcount](#pcount)|傳回寫入至受控制序列的元素計數。|
@@ -53,7 +53,7 @@ class strstream : public iostream
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<strstream>
+**標頭：** \<strstream>
 
 **命名空間：** std
 
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>參數
 
-*_Freezeit*<br/>
-A **bool**指出您是否要凍結的資料流。
+*_Freezeit*\
+**布林**值, 指出您是否要凍結資料流程。
 
 ### <a name="remarks"></a>備註
 
@@ -76,7 +76,7 @@ A **bool**指出您是否要凍結的資料流。
 
 ### <a name="example"></a>範例
 
-請參閱[strstreambuf:: freeze](../standard-library/strstreambuf-class.md#freeze)如需範例，會使用`freeze`。
+如需使用`freeze`的範例, 請參閱[strstreambuf:: 凍結](../standard-library/strstreambuf-class.md#freeze)。
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -112,7 +112,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回類型的預存資料流緩衝區的位址`pointer`要[strstreambuf](../standard-library/strstreambuf-class.md)。
+此成員函式會將類型`pointer`之儲存資料流程緩衝區的位址傳回至[strstreambuf](../standard-library/strstreambuf-class.md)。
 
 ### <a name="example"></a>範例
 
@@ -136,7 +136,7 @@ char *str();
 
 ### <a name="example"></a>範例
 
-請參閱[strstreambuf:: str](../standard-library/strstreambuf-class.md#str)如需範例，會使用`str`。
+如需使用`str`的範例, 請參閱[strstreambuf:: str](../standard-library/strstreambuf-class.md#str) 。
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -152,26 +152,26 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>參數
 
-*count*<br/>
+*計數*\
 緩衝區的大小。
 
-*_Mode*<br/>
+*_Mode*\
 緩衝區的輸入和輸出模式。 如需詳細資訊，請參閱 [ios_base::openmode](../standard-library/ios-base-class.md#openmode)。
 
-*ptr*<br/>
+*指標*\
 緩衝區。
 
 ### <a name="remarks"></a>備註
 
-這兩個建構函式初始化基底類別，藉由呼叫[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**)，其中`sb`是類別的預存的物件[strstreambuf](../standard-library/strstreambuf-class.md)。 第一個建構函式也會初始化`sb`藉由呼叫[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)。 第二個建構函式會使用下列其中一種方法來初始化基底類別：
+這兩個函式都會呼叫[streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**) 來初始化基類`sb` , 其中是[strstreambuf](../standard-library/strstreambuf-class.md)類別的預存物件。 第一個函式也`sb`會藉由呼叫[strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf)來初始化。 第二個建構函式會使用下列其中一種方法來初始化基底類別：
 
-- 如果`_Mode`  &  **ios_base:: app**= = 0，然後*ptr*必須指定陣列的第一個項目`count`項目，以及建構函式呼叫`strstreambuf`( `ptr`, `count`, `ptr`).
+- 如果`_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: app = = 0, 則 ptr 必須指定元素陣列的第一個元素, 而此函式會呼叫 (,,)  & .
 
-- 否則，請*ptr*必須指定 count 項目之陣列包含 C 字串的第一個項目所指定的第一個元素*ptr*，並建構函式呼叫`strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- 否則, *ptr*必須指定 count 元素陣列的第一個元素, 其中包含的 C 字串中的第一個元素是由*ptr*所指定, 而此`strstreambuf`函`ptr`式會`ptr`呼叫 (, `count`,  + `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>另請參閱
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

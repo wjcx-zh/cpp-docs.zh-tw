@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 09d80e7c45875ad2e6ed8b599d4e01d2110d562f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2668d35c24e9d95440a96c5b3eda1fab7bbf3891
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378312"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507990"
 ---
 # <a name="ole-in-mfc"></a>MFC 中的 OLE
 
@@ -73,7 +73,7 @@ ms.locfileid: "62378312"
 [容器/伺服器 COM 元件](../mfc/containers-advanced-features.md)<br/>
 說明將選擇性的進階功能併入現有的容器應用程式中的必要步驟。
 
-[元件物件模型](/windows/desktop/com/the-component-object-model)<br/>
+[元件物件模型](/windows/win32/com/the-component-object-model)<br/>
 說明使用 OLE 而不使用 MFC。
 
 ## <a name="see-also"></a>另請參閱

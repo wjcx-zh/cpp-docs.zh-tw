@@ -7,42 +7,42 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c788f5ec499f0edf0c44f1ff269af9767af6c08
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320366"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69492668"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (與資料執行防止相容)
 
-表示可執行檔是與 Windows 資料執行防止功能相容。
+指出可執行檔與 Windows 資料執行防止功能相容。
 
 ## <a name="syntax"></a>語法
 
-> **/NXCOMPAT**[**:NO**]
+> **/NXCOMPAT**[ **:NO**]
 
 ## <a name="remarks"></a>備註
 
-根據預設， **/NXCOMPAT**上。
+根據預設, **/NXCOMPAT**是 on。
 
-**/Nxcompat: no**可用來明確指定為與資料執行防止不相容的可執行檔。
+**/NXCOMPAT: NO**可以用來將可執行檔明確指定為與資料執行防止不相容。
 
-如需詳細資料執行防止的詳細資訊，請參閱下列文章：
+如需資料執行防止的詳細資訊, 請參閱下列文章:
 
-- [資料執行防止 (DEP) 功能的詳細的說明](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
+- [資料執行防止 (DEP) 功能的詳細描述](https://support.microsoft.com/help/875352/a-detailed-description-of-the-data-execution-prevention-dep-feature-in)
 
-- [資料執行防止](/windows/desktop/Memory/data-execution-prevention)
+- [資料執行防止](/windows/win32/Memory/data-execution-prevention)
 
 - [資料執行防止 (Windows Embedded)](/previous-versions/windows/embedded/ms913190\(v=winembedded.5\))
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選擇**組態屬性** > **連結器** > **命令列**屬性頁。
+1. 選擇 [設定] [**屬性** > ] [**連結器** > **命令列**] 屬性頁。
 
-1. 輸入中的選項**其他選項** 方塊中。 選擇 **[確定]** 或是**套用**以套用變更。
+1. 在 [**其他選項**] 方塊中, 輸入選項。 選擇 **[確定]** 或 [套用] 以套用變更。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>若要以程式設計方式設定這個連結器選項
 

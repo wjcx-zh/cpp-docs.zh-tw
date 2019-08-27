@@ -1,25 +1,25 @@
 ---
 title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
-ms.date: 05/06/2019
+ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221400"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630695"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
-本教學課程將逐步引導您逐步完成建立 ActiveX 物件顯示多邊形的非屬性化 ATL 專案。 物件包含的選項可讓使用者變更重新整理顯示組成的 polygon 和程式碼的邊數。
+本教學課程會逐步引導您逐步執行非特性化 ATL 專案, 以建立會顯示多邊形的 ActiveX 物件。 物件包含的選項可讓使用者變更組成多邊形的側邊數目, 以及用來重新整理顯示的程式碼。
 
 > [!NOTE]
-> ATL 和 MFC 不正式支援 Visual Studio 的 Express 版本中。
+> Visual Studio 的 Express 版本中, 通常不支援 ATL 和 MFC。
 
 > [!NOTE]
-> 本教學課程會建立相同的原始程式碼，多邊形的範例。 如果您想要避免以手動方式輸入的原始程式碼，您可以下載從[Polygon 範例摘要](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)。 當您逐步進行教學課程中，或使用它來查看您自己的專案中的錯誤，您接著可以參考多邊形的原始程式碼。
-> 若要編譯，請開啟 stdafx.h 並取代：
+> 本教學課程會建立與多邊形範例相同的原始程式碼。 如果您想要避免手動輸入原始程式碼, 可以從[多邊形範例摘要](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)下載。 接著, 您可以在進行教學課程時參考多邊形原始程式碼, 或使用它來檢查您自己專案中的錯誤。
+> 若要編譯, 請開啟*pch* (Visual Studio 2017 和更早版本中的*stdafx.h* ), 並取代:
 > ```
 > #ifndef WINVER
 > #define WINVER 0x0400
@@ -32,51 +32,66 @@ ms.locfileid: "65221400"
 > #define _WIN32_WINNT 0x0500
 > #endif
 > ```
-> 編譯器仍會抱怨`regsvr32`未正確地結束，但您仍應該有內建且可供使用的控制項之 DLL。
+> 編譯器仍然會抱怨`regsvr32`未正確結束, 但您仍應建立控制項的 DLL, 並可供使用。
 
-### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要建立初始的 ATL 專案使用 ATL 專案精靈
+### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>若要使用 ATL 專案 Wizard 建立初始 ATL 專案
 
-1. 在 Visual Studio 2017 及更早版本：**檔案** > **新** > **專案**。 開放**Visual C++** 索引標籤，然後選取**MFC/ATL**。 選取  **ATL 專案**。
+1. 在 Visual Studio 2017 和更早版本中: **[檔案**] [**新增** > 專案]。  >  開啟 [**視覺效果C++**  ] 索引標籤, 然後選取 [ **MFC/ATL**]。 選取 [ **ATL 專案**]。
 
-   在 Visual Studio 2019:選擇**檔案** > **新增** > **專案**，在 搜尋 方塊中，輸入 「 atl"，然後選擇  **ATL 專案**。
+   在 Visual Studio 2019:  > 選擇 [檔案] [新增專案], 在 [搜尋] 方塊中輸入 "atl", 然後選擇 [atl 專案]。 > 
 
-1. 型別*多邊形*做為專案名稱。
+1. 輸入*多邊形*做為專案名稱。
 
-    原始碼的位置通常會預設為 \Users\\\<使用者名稱 > 將會自動建立 \source\repos 和新的資料夾。
+    原始程式碼的位置通常會預設為 \Users\\ \<username > \source\repos, 並會自動建立新的資料夾。
 
-1. 按一下 [ **[確定]** 並**ATL 專案**精靈] 隨即開啟。
+1. 在 Visual Studio 2019 中, 接受預設值, 然後按一下 **[確定]** 。 
+   在 Visual Studio 2017 中, 按一下 **[確定]** 以開啟 [ **ATL 專案**嚮導]。 按一下 [**應用程式設定**] 以查看可用的選項。 因為此專案會建立控制項, 且控制項必須是同進程伺服器, 所以請將**應用程式類型**保留為 DLL。 按一下 [確定]。
 
-1. 按一下 **應用程式設定**若要查看可用的選項。
+Visual Studio 會產生數個檔案來建立專案。 您可以藉由展開`Polygon`物件, 在**方案總管**中查看這些檔案。 檔案如下所示。
 
-1. 如您所建立控制項，控制項必須是同處理序伺服器，讓**應用程式類型**做為 DLL。
+::: moniker range="<=vs-2017"
 
-1. 其他選項保留其預設值，然後按**確定**。
+|檔案|說明|
+|----------|-----------------|
+|多邊形 .cpp|包含`DllMain`、 `DllCanUnloadNow`、 `DllGetClassObject` 、和`DllUnregisterServer`的執行。 `DllRegisterServer` 也包含物件對應, 也就是專案中的 ATL 物件清單。 這一開始是空白的。|
+|多邊形 .def|此模組定義檔會提供連結器, 其中包含 DLL 所需之匯出的相關資訊。|
+|多邊形 .idl|介面定義語言檔案, 描述物件特定的介面。|
+|多邊形 .rgs|此登入指令檔包含註冊程式 DLL 的資訊。|
+|多邊形 .rc|資源檔, 一開始包含版本資訊和包含專案名稱的字串。|
+|偵錯工具|資源檔的標頭檔。|
+|Polygonps .def|此模組定義檔會提供連結器, 其中包含 proxy 和 stub 程式碼所需之匯出的相關資訊, 以支援跨各單元的呼叫。|
+|stdafx.cpp|將`#include` *stdafx.h*的檔案。|
+|stdafx.h|將`#include`和先行編譯 ATL 標頭檔的檔案。|
 
-**ATL 專案精靈**會產生數個檔案來建立專案。 您可以檢視中的這些檔案**方案總管**藉由展開`Polygon`物件。 以下列出的檔案。
+::: moniker-end
+
+::: moniker range=">=vs-2019"
 
 |檔案|描述|
 |----------|-----------------|
-|Polygon.cpp|包含實作`DllMain`， `DllCanUnloadNow`， `DllGetClassObject`， `DllRegisterServer`，和`DllUnregisterServer`。 也包含物件的對應，也就是您的專案中的 ATL 物件的清單。 這是一開始空白的。|
-|Polygon.def|此模組定義檔會提供您的 DLL 所需之匯出的相關資訊的連結器。|
-|Polygon.idl|介面定義語言檔案，其中描述您物件的特定介面。|
-|Polygon.rgs|此登錄指令碼包含註冊您的程式 DLL 的資訊。|
-|Polygon.rc|資源檔，一開始包含版本資訊，以及包含專案名稱的字串。|
+|多邊形 .cpp|包含`DllMain`、 `DllCanUnloadNow`、 `DllGetClassObject` 、和`DllUnregisterServer`的執行。 `DllRegisterServer` 也包含物件對應, 也就是專案中的 ATL 物件清單。 這一開始是空白的。|
+|多邊形 .def|此模組定義檔會提供連結器, 其中包含 DLL 所需之匯出的相關資訊。|
+|多邊形 .idl|介面定義語言檔案, 描述物件特定的介面。|
+|多邊形 .rgs|此登入指令檔包含註冊程式 DLL 的資訊。|
+|多邊形 .rc|資源檔, 一開始包含版本資訊和包含專案名稱的字串。|
 |偵錯工具|資源檔的標頭檔。|
-|Polygonps.def|此模組定義檔會提供連結器支援在 apartment 之間的呼叫匯出所需的 proxy 和虛設常式程式碼的相關資訊。|
-|stdafx.cpp|將檔案`#include`ATL 實作檔案。|
-|stdafx.h|將檔案`#include`ATL 標頭檔。|
+|Polygonps .def|此模組定義檔會提供連結器, 其中包含 proxy 和 stub 程式碼所需之匯出的相關資訊, 以支援跨各單元的呼叫。|
+|pch .cpp|將會`#include`是*pch*的檔案。|
+|pch. h|將`#include`和先行編譯 ATL 標頭檔的檔案。|
 
-1. 在 **方案總管**，以滑鼠右鍵按一下`Polygon`專案。
+::: moniker-end
 
-1. 在捷徑功能表，按一下 **屬性**。
+1. 在 [方案總管] 中，以滑鼠右鍵按一下 `Polygon` 專案。
 
-1. 按一下 **連結器**。 變更**每個 UserRedirection**選項設定為**是**。
+1. 在快捷方式功能表上, 按一下 [**屬性**]。
 
-1. 按一下 [確定] 。
+1. 按一下 [**連結器**]。 將 [**每個 UserRedirection** ] 選項變更為 **[是]** 。
 
-在下一個步驟中，您會將控制項加入您的專案。
+1. 按一下 [確定 **Deploying Office Solutions**]。
 
-[至步驟 2](../atl/adding-a-control-atl-tutorial-part-2.md)
+在下一個步驟中, 您會將控制項新增至您的專案。
+
+[至步驟2](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 ## <a name="see-also"></a>另請參閱
 

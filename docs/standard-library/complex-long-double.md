@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 19d4569523879911209bf0c05e762eba2c9852a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 280fb4c15219b11d2325ff37a296e133810bf2b5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389162"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449485"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
-此明確特製化的範本類別描述可儲存已排序的配對的物件，這兩個型別**長雙精度**，第一個代表第二個複數的實數部分代表虛數部分。
+這個明確特製化的樣板類別描述一個物件, 它會儲存一組已排序的物件, 這兩個類型都是**long double**, 第一個代表複數的實數部分, 而第二個代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -38,26 +38,26 @@ complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*<br/>
+*_RealVal*\
 要建構之複數實數部分的 **long double** 類型值。
 
-*_ImagVal*<br/>
-類型的值**長雙精度**的建構中複數之虛數部分。
+*_ImagVal*\
+要建立之複數虛數部分的**long double**類型值。
 
-*complexNum*<br/>
-類型的複數**雙**或型別的**float**其實部及虛部用於初始化類型的複數**長雙精度**所建構。
+*complexNum*\
+**Double**類型或**float**類型的複數, 其實際和虛數部分是用來初始化所建立之**long double**類型的複數。
 
 ## <a name="return-value"></a>傳回值
 
-類型的複數**長雙精度**。
+**Long double**類型的複數。
 
 ## <a name="remarks"></a>備註
 
-此範本類別明確特製化`complex`複雜類型類別之**長雙精度**不同於樣板類別，只在它所定義的建構函式中。 從轉換**長雙精度**來**float**允許隱含的但從轉換**double**至**長雙精度**需要要**明確**。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
+樣板類別`complex`對**long double**類型之複雜類別的明確特製化, 與樣板類別僅限於它所定義的函式。 允許從**long double**轉換成**float**是隱含的, 但從**double**轉換成**long double**必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
 
-如需有關此範本類別`complex`和其成員，請參閱[complex 類別](../standard-library/complex-class.md)。
+如需範本類別`complex`及其成員的詳細資訊, 請參閱[complex 類別](../standard-library/complex-class.md)。
 
-**Microsoft 專有**:**長雙精度**並**double**類型有相同表示法，但是不同的類型。 如需詳細資訊，請參閱 <<c0> [ 基本類型](../cpp/fundamental-types-cpp.md)。
+**Microsoft 特定**:**Long double**和**double**類型具有相同的標記法, 但為不同的類型。 如需詳細資訊, 請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
 
 ## <a name="example"></a>範例
 
@@ -123,5 +123,5 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 ## <a name="see-also"></a>另請參閱
 
-[complex 類別](../standard-library/complex-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[complex 類別](../standard-library/complex-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

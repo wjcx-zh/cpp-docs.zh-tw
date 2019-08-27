@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413615"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455755"
 ---
 # <a name="ispod-class"></a>is_pod 類別
 
@@ -27,12 +27,12 @@ struct is_pod;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-`is_pod<T>::value` 已**真**如果型別*T*是一般舊資料 (POD)。 否則，它會**false**。
+`is_pod<T>::value`如果類型*T*是單純的舊資料 (POD), 則為**true** 。 否則為**false**。
 
 算術類型、列舉類型、指標類型和成員類型的指標是 POD。
 
@@ -96,10 +96,10 @@ is_pod<throws> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

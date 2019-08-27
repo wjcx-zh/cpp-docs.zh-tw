@@ -1,17 +1,17 @@
 ---
-title: helpstring (C++ COM 屬性)
+title: < > helpstring (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstring
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409586"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490867"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409586"
 ### <a name="parameters"></a>參數
 
 *string*<br/>
-[說明] 字串文字。
+說明字串的文字。
 
 ## <a name="remarks"></a>備註
 
-**Helpstring** C++屬性具有相同的功能[helpstring](/windows/desktop/Midl/helpstring) MIDL 屬性。
+**< > Helpstring** C++屬性具有與[< > helpstring](/windows/win32/Midl/helpstring) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[defaultvalue](defaultvalue.md)如需如何使用的範例**helpstring**。
+如需如何使用 **< > helpstring**的範例, 請參閱[defaultvalue](defaultvalue.md)的範例。
 
 ## <a name="requirements"></a>需求
 
@@ -42,9 +42,9 @@ ms.locfileid: "62409586"
 
 |||
 |-|-|
-|**適用於**|**介面**， **typedef**，**類別**、 方法、 屬性|
+|**適用於**|**介面**、 **typedef**、**類別**、方法、屬性|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

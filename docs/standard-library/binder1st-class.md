@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 384a870a10c9f806684443d8c67647e924b6b2aa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388211"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243376"
 ---
 # <a name="binder1st-class"></a>binder1st 類別
 
@@ -43,13 +43,13 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*binary_fn*<br/>
+*binary_fn*\
 要轉換為一元函式物件的二元函式物件。
 
-*left*<br/>
+*左邊*\
 二元函式物件的第一個引數所要繫結的值。
 
-*right*<br/>
+*權限*\
 調整後的二元物件用來與第二個引數的固定值進行比較的引數值。
 
 ## <a name="return-value"></a>傳回值
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存二元函式物件的複本*binary_fn*中`op`，和一份*左*在`value`。 它會定義其成員函式`operator()`做為傳回`op( value, right )`。
+此範本類別會儲存二元函式物件的複本*binary_fn*中`op`，和一份*左*在`value`。 它會定義其成員函式`operator()`做為傳回`op(value, right)`。
 
-如果*binary_fn*是類型的物件`Operation`並`c`是常數，則`bind1st( binary_fn, c )`更方便對等項目`binder1st<Operation>( binary_fn, c )`。 如需詳細資訊，請參閱 < [bind1st](../standard-library/functional-functions.md#bind1st)。
+如果*binary_fn*是類型的物件`Operation`並`c`是常數，則`bind1st(binary_fn, c)`更方便對等項目`binder1st<Operation>(binary_fn, c)`。 如需詳細資訊，請參閱 < [bind1st](../standard-library/functional-functions.md#bind1st)。
 
 ## <a name="example"></a>範例
 
@@ -105,20 +105,10 @@ int main()
     cout << "The number of elements in v1 less than 10 is: "
          << result2 << "." << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 0 5 10 15 20 25 )
 The number of elements in v1 greater than 10 is: 3.
 The number of elements in v1 less than 10 is: 2.
-*/
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

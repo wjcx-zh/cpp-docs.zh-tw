@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: abc1373e1bca2afcce493eef5245fb73b56cce4f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323331"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502169"
 ---
 # <a name="cview-class"></a>CView 類別
 
@@ -73,81 +73,81 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>受保護的建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CView::CView](#cview)|建構 `CView` 物件。|
+|[CView:: CView](#cview)|建構 `CView` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CView::DoPreparePrinting](#doprepareprinting)|顯示 [列印] 對話方塊中，並建立印表機裝置內容;當覆寫時，呼叫`OnPreparePrinting`成員函式。|
-|[CView::GetDocument](#getdocument)|傳回與檢視相關聯的文件。|
-|[CView::IsSelected](#isselected)|測試是否已選取文件項目。 OLE 支援的必要項。|
-|[CView::OnDragEnter](#ondragenter)|當項目第一次拖曳到檢視的拖放區域時呼叫。|
-|[CView::OnDragLeave](#ondragleave)|拖曳的項目離開檢視的拖放區域時呼叫。|
-|[CView::OnDragOver](#ondragover)|當項目拖曳至檢視的拖放區域上方時呼叫。|
-|[CView::OnDragScroll](#ondragscroll)|呼叫以判斷是否要將資料指標拖曳至視窗的捲軸的區域。|
-|[CView::OnDrop](#ondrop)|已經卸除檢視時，預設處理常式的拖放區域到的項目時呼叫。|
-|[CView::OnDropEx](#ondropex)|已經卸除到檢視中，主要的處理常式的拖放區域的項目時呼叫。|
-|[CView::OnInitialUpdate](#oninitialupdate)|檢視第一次附加至文件之後呼叫。|
-|[CView::OnPrepareDC](#onpreparedc)|之前呼叫`OnDraw`螢幕上的呼叫成員函式或`OnPrint`成員函式稱為列印或預覽列印。|
-|[CView::OnScroll](#onscroll)|當 OLE 項目拖曳超出檢視的邊界時呼叫。|
-|[CView::OnScrollBy](#onscrollby)|捲動檢視，其中包含作用中的就地 OLE 項目時呼叫。|
+|[CView::DoPreparePrinting](#doprepareprinting)|顯示 [列印] 對話方塊並建立印表機裝置內容;覆寫`OnPreparePrinting`成員函式時呼叫。|
+|[CView::GetDocument](#getdocument)|傳回與此視圖相關聯的檔。|
+|[CView::IsSelected](#isselected)|測試是否已選取檔專案。 OLE 支援所需。|
+|[CView::OnDragEnter](#ondragenter)|當專案第一次拖曳至視圖的拖放區域時呼叫。|
+|[CView::OnDragLeave](#ondragleave)|當拖曳的專案離開視圖的拖放區域時呼叫。|
+|[CView::OnDragOver](#ondragover)|當專案拖曳至視圖的拖放區域時呼叫。|
+|[CView::OnDragScroll](#ondragscroll)|呼叫以決定是否將游標拖曳至視窗的捲軸區域。|
+|[CView::OnDrop](#ondrop)|當專案已放入視圖的拖放區域中時呼叫 (預設處理常式)。|
+|[CView::OnDropEx](#ondropex)|當專案已放入視圖的拖放區域、主要處理常式時呼叫。|
+|[CView::OnInitialUpdate](#oninitialupdate)|在第一次將視圖附加至檔後呼叫。|
+|[CView::OnPrepareDC](#onpreparedc)|呼叫`OnDraw`成員函式以進行螢幕顯示, `OnPrint`或呼叫成員函式進行列印或預覽列印之前呼叫。|
+|[CView::OnScroll](#onscroll)|當 OLE 專案拖曳至超過視圖的框線時呼叫。|
+|[CView::OnScrollBy](#onscrollby)|當包含作用中就地 OLE 專案的視圖滾動時呼叫。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CView::OnActivateFrame](#onactivateframe)|包含檢視的框架視窗啟用或停用時呼叫。|
-|[CView::OnActivateView](#onactivateview)|檢視啟動時呼叫。|
-|[CView::OnBeginPrinting](#onbeginprinting)|列印工作開始; 時呼叫覆寫，以配置圖形裝置介面 (GDI) 資源。|
-|[CView::OnDraw](#ondraw)|呼叫以呈現螢幕顯示、 列印或預覽列印文件中的影像。 所需的實作。|
-|[CView::OnEndPrinting](#onendprinting)|當列印工作結束; 時呼叫若要解除配置 GDI 資源覆寫。|
-|[CView::OnEndPrintPreview](#onendprintpreview)|結束 [預覽] 模式時呼叫。|
-|[CView::OnPreparePrinting](#onprepareprinting)|在列印或預覽; 文件之前呼叫覆寫以初始化 [列印] 對話方塊。|
-|[CView::OnPrint](#onprint)|呼叫以列印或預覽文件的頁面。|
-|[CView::OnUpdate](#onupdate)|呼叫以通知檢視其文件已修改。|
+|[CView::OnActivateFrame](#onactivateframe)|當包含此視圖的框架視窗已啟用或停用時呼叫。|
+|[CView::OnActivateView](#onactivateview)|在啟動視圖時呼叫。|
+|[CView:: OnBeginPrinting](#onbeginprinting)|當列印工作開始時呼叫;覆寫以配置圖形裝置介面 (GDI) 資源。|
+|[CView::OnDraw](#ondraw)|呼叫以呈現螢幕顯示、列印或預覽列印檔的影像。 需要執行。|
+|[CView::OnEndPrinting](#onendprinting)|當列印工作結束時呼叫;覆寫以解除配置 GDI 資源。|
+|[CView::OnEndPrintPreview](#onendprintpreview)|當預覽模式結束時呼叫。|
+|[CView::OnPreparePrinting](#onprepareprinting)|在列印或預覽檔之前呼叫;覆寫以初始化 [列印] 對話方塊。|
+|[CView::OnPrint](#onprint)|呼叫以列印或預覽檔的頁面。|
+|[CView:: OnUpdate](#onupdate)|呼叫以通知視圖其檔已修改。|
 
 ## <a name="remarks"></a>備註
 
-檢視附加至文件，並做為文件與使用者之間的媒介： 檢視呈現螢幕或印表機上的文件的映像，並將使用者輸入解譯為文件作業。
+視圖會附加至檔, 並做為檔與使用者之間的媒介: 此視圖會在螢幕或印表機上轉譯檔的影像, 並將使用者輸入轉譯為檔上的作業。
 
-檢視是框架視窗的子系。 多個檢視可以共用框架視窗中，分隔器視窗的情況。 檢視類別、 框架視窗類別，與文件類別之間的關聯性藉由`CDocTemplate`物件。 當使用者開啟新視窗，或將分割的現有架構，其中建構新的檢視，並將它附加至文件。
+View 是框架視窗的子系。 一個以上的視圖可以共用框架視窗, 就像在分隔視窗中的情況一樣。 View 類別、框架視窗類別和檔類別之間的關聯性是由`CDocTemplate`物件所建立。 當使用者開啟新視窗或分割現有視窗時, 架構會建立新的視圖, 並將其附加至檔。
 
-檢視可以附加到只有一個文件，但文件可以有多個同時連接的檢視 — 比方說，如果文件會顯示在分隔器視窗，或多個文件介面 (MDI) 應用程式中的多個子視窗中。 您的應用程式可支援不同類型的檢視，給定文件類型;例如，文書處理程式可能會提供文件的完整文字檢視和顯示區段標題的大綱檢視。 這些不同類型的檢視可以放在個別的框架視窗中，或在個別的單一框架視窗的窗格如果您使用分隔器視窗。
+一個視圖只能附加至一個檔, 但一個檔可以同時附加多個視圖, 例如, 如果檔顯示在分隔視窗中, 或在多重文件介面 (MDI) 應用程式的多個子視窗中。 您的應用程式可以針對指定的檔案類型支援不同類型的視圖;例如, 文字處理程式可能會同時提供檔的完整文字視圖, 以及只顯示區段標題的大綱視圖。 如果您使用分隔視窗, 這些不同類型的視圖可以放在不同的框架視窗中, 或放置在單一框架視窗的個別窗格中。
 
-檢視可能會負責處理許多不同類型的輸入，例如鍵盤、 滑鼠輸入或透過拖放，以及命令的功能表、 工具列或捲軸的輸入。 檢視接收轉送的及其框架視窗的命令。 如果檢視不會處理指定的命令，它會轉送至其相關聯的文件的命令。 所有的命令目標，例如檢視會處理透過訊息對應的訊息。
+視圖可能負責處理數種不同類型的輸入, 例如鍵盤輸入、滑鼠輸入或透過拖放的輸入, 以及來自功能表、工具列或捲軸的命令。 View 會接收其框架視窗所轉送的命令。 如果此視圖未處理指定的命令, 它會將命令轉送至其相關聯的檔。 如同所有的命令目標, 視圖會透過訊息對應來處理訊息。
 
-檢視是負責顯示和修改文件的資料，但不是用來儲存它。 文件提供有關其資料與必要的詳細資料檢視。 您可以讓文件的資料成員直接，或者您可以提供成員函式呼叫的檢視類別的文件類別中的檢視存取權。
+此視圖會負責顯示和修改檔的資料, 但不會儲存它。 檔會提供其資料所需的詳細資訊給視圖。 您可以讓此視圖直接存取檔的資料成員, 或者您可以在檔類別中提供成員函式, 以供 view 類別呼叫。
 
-當文件的資料變更時，檢視負責所做的變更通常會呼叫[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews)文件，就會通知所有其他的檢視，藉由呼叫的函式`OnUpdate`成員函式每個。 預設實作`OnUpdate`失效檢視的整個工作區。 您可以覆寫它要使其失效的只有這些區域的工作區對應至文件已修改的部分。
+當檔的資料變更時, 負責變更的視圖通常會呼叫檔的[CDocument:: UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews)函式, 藉由呼叫`OnUpdate`每個的成員函式來通知所有其他視圖。 的預設執行`OnUpdate`會使視圖的整個工作區失效。 您可以覆寫它, 使工作區中對應至已修改檔部分的區域失效。
 
-若要使用`CView`，從它衍生的類別並實作`OnDraw`成員函式來執行螢幕顯示。 您也可以使用`OnDraw`執行列印和預覽列印。 架構會處理列印和文件預覽的列印迴圈。
+若要`CView`使用, 請從它衍生類別, 並`OnDraw`執行成員函式來執行螢幕畫面。 您也可以使用`OnDraw`來執行列印和預覽列印。 架構會處理列印迴圈, 以列印和預覽您的檔。
 
-檢視會處理具有捲軸訊息[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)並[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成員函式。 您可以實作捲軸訊息處理的這些函式，或者您可以使用`CView`衍生類別[CScrollView](../../mfc/reference/cscrollview-class.md)來處理您捲動功能。
+View 會使用[cwnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[Cwnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)成員函式來處理捲軸訊息。 您可以在這些函數中執行捲軸訊息處理, 也可以使用`CView`衍生類別[CScrollView](../../mfc/reference/cscrollview-class.md)來處理您的滾動。
 
-除了`CScrollView`，Microsoft Foundation 類別庫提供九個衍生自其他類別`CView`:
+除了`CScrollView`之外, MFC 程式庫還提供其他九個衍生`CView`自的類別:
 
-- [CCtrlView](../../mfc/reference/cctrlview-class.md)，允許使用的文件-檢視架構與樹狀目錄、 清單和 rich edit 控制項的檢視。
+- [CCtrlView](../../mfc/reference/cctrlview-class.md), 這是允許使用具有樹狀結構、清單和豐富編輯控制項之檔視圖架構的視圖。
 
-- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)，對話方塊在控制項中顯示資料庫記錄的檢視。
+- [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md), 這是在對話方塊控制項中顯示資料庫記錄的視圖。
 
-- [CEditView](../../mfc/reference/ceditview-class.md)，提供一個簡單的多行文字編輯器的檢視。 您可以使用`CEditView`物件做為控制項在對話方塊中，以及文件的檢視。
+- [CEditView](../../mfc/reference/ceditview-class.md), 提供簡單多行文字編輯器的視圖。 您可以使用`CEditView`物件做為對話方塊中的控制項, 以及檔的視圖。
 
-- [CFormView](../../mfc/reference/cformview-class.md)，其中包含對話方塊控制項，且會以對話方塊範本資源為基礎的可捲動檢視。
+- [CFormView](../../mfc/reference/cformview-class.md), 這是一個可滾動的視圖, 其中包含對話方塊控制項, 而且是以對話方塊範本資源為基礎。
 
-- [CListView](../../mfc/reference/clistview-class.md)，允許使用的文件-檢視架構與清單控制項的檢視。
+- [CListView](../../mfc/reference/clistview-class.md), 這是允許使用檔視圖架構與清單控制項的視圖。
 
-- [CRecordView](../../mfc/reference/crecordview-class.md)，對話方塊在控制項中顯示資料庫記錄的檢視。
+- [CRecordView](../../mfc/reference/crecordview-class.md), 這是在對話方塊控制項中顯示資料庫記錄的視圖。
 
-- [CRichEditView](../../mfc/reference/cricheditview-class.md)，允許使用的文件-檢視架構與 rich edit 控制項的檢視。
+- [CRichEditView](../../mfc/reference/cricheditview-class.md), 這是允許使用具有豐富編輯控制項之檔視圖架構的視圖。
 
-- [CScrollView](../../mfc/reference/cscrollview-class.md)，會自動提供捲動支援的檢視。
+- [CScrollView](../../mfc/reference/cscrollview-class.md), 這是自動提供滾動支援的視圖。
 
-- [CTreeView](../../mfc/reference/ctreeview-class.md)，允許使用的文件-檢視架構與樹狀目錄控制項的檢視。
+- [CTreeView](../../mfc/reference/ctreeview-class.md), 這是允許使用具有樹狀目錄控制項之檔查看架構的視圖。
 
-`CView`類別也有一個名為的衍生的實作類別`CPreviewView`，這由架構進行預覽列印。 這個類別會提供支援特有的功能 [預覽列印] 視窗中，例如工具列、 單一或雙精度浮點數頁面預覽和縮放的，加大預覽映像。 您不需要呼叫或覆寫任何`CPreviewView`的成員函式，除非您想要實作您自己的介面，預覽列印 （例如，如果您想要支援在預覽列印模式中編輯）。 如需有關使用`CView`，請參閱 <<c2> [ 文件/檢視架構](../../mfc/document-view-architecture.md)並[列印](../../mfc/printing.md)。 此外，請參閱 <<c0> [ 技術的附註 30](../../mfc/tn030-customizing-printing-and-print-preview.md)如需有關自訂列印預覽。
+類別也具有名為`CPreviewView`的衍生實作為類別, 架構會使用此類別來執行預覽列印。 `CView` 這個類別可支援預覽列印視窗特有的功能, 例如工具列、單一或雙頁預覽, 以及縮放, 也就是放大預覽的影像。 您不需要呼叫或覆寫任何`CPreviewView`的成員函式, 除非您想要針對預覽列印執行自己的介面 (例如, 如果您想要支援在預覽列印模式中編輯)。 如需使用`CView`的詳細資訊, 請參閱[檔/視圖架構](../../mfc/document-view-architecture.md)和[列印](../../mfc/printing.md)。 此外, 如需自訂預覽列印的詳細資訊, 請參閱[技術提示 30](../../mfc/tn030-customizing-printing-and-print-preview.md) 。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -163,7 +163,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 **標題:** afxwin.h
 
-##  <a name="cview"></a>  CView::CView
+##  <a name="cview"></a>CView:: CView
 
 建構 `CView` 物件。
 
@@ -173,11 +173,11 @@ CView();
 
 ### <a name="remarks"></a>備註
 
-建立新的框架視窗或分隔視窗時，架構會呼叫建構函式。 覆寫[OnInitialUpdate](#oninitialupdate)成員函式來初始化之後附加文件的檢視。
+當建立新的框架視窗或分割視窗時, 架構會呼叫這個函式。 在附加檔之後, 覆寫[OnInitialUpdate](#oninitialupdate)成員函式以初始化 view。
 
-##  <a name="doprepareprinting"></a>  CView::DoPreparePrinting
+##  <a name="doprepareprinting"></a>CView::D oPreparePrinting
 
-呼叫此函式的覆寫從[OnPreparePrinting](#onprepareprinting)來叫用 [列印] 對話方塊中，並建立印表機裝置內容。
+從您的[OnPreparePrinting](#onprepareprinting)覆寫呼叫此函式, 以叫用 [列印] 對話方塊並建立印表機裝置內容。
 
 ```
 BOOL DoPreparePrinting(CPrintInfo* pInfo);
@@ -190,17 +190,17 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="return-value"></a>傳回值
 
-列印或預覽列印就可以開始; 如果為非零0，表示作業已取消。
+如果列印或預覽列印可以開始, 則為非零;如果作業已取消, 則為0。
 
 ### <a name="remarks"></a>備註
 
-此函式的行為取決於是否呼叫它的列印或預覽列印 (所指定`m_bPreview`隸屬*pInfo*參數)。 如果列印檔案時，此函式會叫用列印對話方塊中，使用中的值[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構*pInfo*指向; 使用者已關閉對話方塊之後，會建立函式印表機裝置內容 對話方塊中指定的使用者為基礎的設定，並傳回這個裝置內容，透過*pInfo*參數。 這個裝置內容用來列印文件。
+此函式的行為取決於是否針對列印或預覽列印 (由`m_bPreview` *pInfo*參數的成員指定) 呼叫它。 如果檔案正在列印, 此函式會叫用 [列印] 對話方塊, 並使用*pInfo*指向的[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構中的值。在使用者關閉對話方塊之後, 此函式會根據使用者在對話方塊中指定的設定來建立印表機裝置內容, 並透過*pInfo*參數傳回此裝置內容。 此裝置內容是用來列印檔案。
 
-如果正開放預覽檔案，此函式，將會建立使用目前的印表機設定; 印表機裝置內容在預覽期間模擬印表機用於這個裝置內容。
+如果檔案正在預覽中, 此函式會使用目前的印表機設定來建立印表機裝置內容;此裝置內容用於在預覽期間模擬印表機。
 
-##  <a name="getdocument"></a>  CView::GetDocument
+##  <a name="getdocument"></a>CView:: GetDocument
 
-呼叫此函式可取得檢視的文件的指標。
+呼叫此函式可取得視圖檔的指標。
 
 ```
 CDocument* GetDocument() const;
@@ -208,15 +208,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>傳回值
 
-指標[CDocument](../../mfc/reference/cdocument-class.md)與檢視相關聯的物件。 如果檢視未附加至文件，則為 NULL。
+與視圖相關聯之[CDocument](../../mfc/reference/cdocument-class.md)物件的指標。 如果未將此視圖附加至檔, 則為 Null。
 
 ### <a name="remarks"></a>備註
 
-這可讓您呼叫文件的成員函式。
+這可讓您呼叫檔的成員函式。
 
-##  <a name="isselected"></a>  CView::IsSelected
+##  <a name="isselected"></a>CView:: IsSelected
 
-由架構呼叫以檢查是否已選取指定的文件項目。
+由架構呼叫, 以檢查指定的檔專案是否已選取。
 
 ```
 virtual BOOL IsSelected(const CObject* pDocItem) const;
@@ -225,19 +225,19 @@ virtual BOOL IsSelected(const CObject* pDocItem) const;
 ### <a name="parameters"></a>參數
 
 *pDocItem*<br/>
-正在測試的文件項目點。
+指向正在測試的檔專案。
 
 ### <a name="return-value"></a>傳回值
 
-選取指定的文件項目; 如果為非零否則為 0。
+如果已選取指定的檔專案, 則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會傳回 FALSE。 如果您要實作選取項目使用覆寫此函數[CDocItem](../../mfc/reference/cdocitem-class.md)物件。 如果您的檢視包含 OLE 項目，您必須覆寫這個函式。
+此函式的預設實作用會傳回 FALSE。 如果您要使用[CDocItem](../../mfc/reference/cdocitem-class.md)物件來執行選取專案, 請覆寫此函式。 如果您的視圖包含 OLE 專案, 您必須覆寫這個函式。
 
-##  <a name="onactivateframe"></a>  CView::OnActivateFrame
+##  <a name="onactivateframe"></a>CView:: OnActivateFrame
 
-包含檢視的框架視窗啟用或停用時由架構呼叫。
+當包含此視圖的框架視窗已啟用或停用時, 由架構呼叫。
 
 ```
 virtual void OnActivateFrame(
@@ -248,24 +248,24 @@ virtual void OnActivateFrame(
 ### <a name="parameters"></a>參數
 
 *nState*<br/>
-指定是否要在框架視窗啟用或停用。 它可以是下列值之一：
+指定是否要啟用或停用框架視窗。 它可以是下列其中一個值:
 
-- 正在停用 WA_INACTIVE 框架視窗。
+- WA_INACTIVE 框架視窗已停用。
 
-- 框架視窗正在啟用透過滑鼠以外的某種方法 WA_ACTIVE 按一下 （例如，藉由使用的鍵盤介面，以選取的視窗）。
+- WA_ACTIVE 框架視窗是透過滑鼠按一下以外的某種方法來啟動 (例如, 藉由使用鍵盤介面來選取視窗)。
 
-- 正在啟用按一下滑鼠 WA_CLICKACTIVE 框架視窗
+- WA_CLICKACTIVE 畫面格視窗正由滑鼠按一下而啟用
 
 *pFrameWnd*<br/>
-要啟動的框架視窗的指標。
+要啟動之框架視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-如果您想要執行特殊處理與檢視相關聯的框架視窗啟用或停用時，請覆寫此成員函式。 例如， [CFormView](../../mfc/reference/cformview-class.md)執行此覆寫時，它會將儲存並還原具有焦點的控制項。
+如果您想要在與視圖相關聯的框架視窗啟動或停用時執行特殊處理, 請覆寫這個成員函式。 例如, 當[CFormView](../../mfc/reference/cformview-class.md)儲存並還原具有焦點的控制項時, 會執行此覆寫。
 
-##  <a name="onactivateview"></a>  CView::OnActivateView
+##  <a name="onactivateview"></a>CView:: OnActivateView
 
-啟用或停用檢視時，由架構呼叫。
+當 view 已啟動或停用時, 由架構呼叫。
 
 ```
 virtual void OnActivateView(
@@ -277,23 +277,23 @@ virtual void OnActivateView(
 ### <a name="parameters"></a>參數
 
 *bActivate*<br/>
-表示正在檢視是否啟用或停用。
+指出是否正在啟動或停用此視圖。
 
 *pActivateView*<br/>
-正在啟動的檢視物件的點。
+指向正在啟用的 view 物件。
 
 *pDeactiveView*<br/>
-正在停用的檢視物件的點。
+指向要停用的 view 物件。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會將焦點設定到 [啟動] 檢視。 如果您想要執行特殊處理，啟用或停用檢視時，請覆寫這個函式。 例如，如果您想要提供特殊的視覺提示以區別現用檢視從非作用中的檢視，您會檢查*bActivate*參數並據此更新檢視的外觀。
+此函式的預設實作用會將焦點設定為正在啟動的視圖。 如果您想要在啟用或停用視圖時執行特殊處理, 請覆寫此函數。 例如, 如果您想要提供特別的視覺提示來區分現用視圖與非使用中的視圖, 您會檢查*bActivate*參數, 並據以更新視圖的外觀。
 
-*PActivateView*並*pDeactiveView*參數指向相同的檢視如果應用程式的主框架視窗已啟動且不會變更使用中的檢視 — 比方說，如果正在焦點在 MDI 子視窗之間切換時，傳送到這台，另一個應用程式，而不是一個檢視，以另一個應用程式內或。 如有需要這可讓重新了解其選擇區中，檢視。
+如果應用程式的主框架視窗在使用中的模式下啟動而未變更, 則*pActivateView*和*pDeactiveView*參數會指向相同的視圖, 例如, 如果焦點是從另一個應用程式轉移到這一部,而不是從應用程式內的一個觀點, 或在 MDI 子視窗之間切換。 這可讓視圖視需要重新實現其調色板。
 
-這些參數與不同時[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)什麼不同的檢視稱為[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)會傳回。 發生這種情況最常使用的分隔視窗。
+當以不同于[CFrameWnd:: GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)會傳回的視圖呼叫[CFrameWnd:: SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)時, 這些參數會有所不同。 這種情況最常發生在分隔視窗中。
 
-##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting
+##  <a name="onbeginprinting"></a>CView:: OnBeginPrinting
 
 在呼叫 `OnPreparePrinting` 之後，由架構在列印或預覽列印工作開始時呼叫。
 
@@ -317,9 +317,9 @@ virtual void OnBeginPrinting(
 
 您也可以使用此函式，執行因印表機裝置內容屬性而異的初始設定。 例如，列印文件所需的頁數可能會因使用者在 [列印] 對話方塊中指定的設定 (例如頁面長度) 而異。 在這種情況下，您無法在通常使用的 [OnPreparePrinting](#onprepareprinting) 成員函式中指定文件長度，而必須等到印表機裝置內容已根據對話方塊設定建立完成。 [OnBeginPrinting](#onbeginprinting) 是第一個可讓您存取代表印表機裝置內容之 [CDC](../../mfc/reference/cdc-class.md) 物件的可覆寫函式，因此您可以從此函式設定文件長度。 請注意，如果此時未指定文件長度，預覽列印期間將不會顯示捲軸。
 
-##  <a name="ondragenter"></a>  CView::OnDragEnter
+##  <a name="ondragenter"></a>CView:: System.windows.uielement.ondragenter
 
-當滑鼠初次進入置放目標視窗的非捲動區域，由架構呼叫。
+當滑鼠第一次進入 [放置目標] 視窗的非捲動區域時, 由架構呼叫。
 
 ```
 virtual DROPEFFECT OnDragEnter(
@@ -331,37 +331,37 @@ virtual DROPEFFECT OnDragEnter(
 ### <a name="parameters"></a>參數
 
 *pDataObject*<br/>
-指向[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到檢視的卸除區域。
+指向要拖曳至視圖放置區的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含輔助按鍵的狀態。 這是下列任意數目的組合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-目前滑鼠位置相對於用戶端區域的檢視。
+相對於視圖工作區的目前滑鼠位置。
 
 ### <a name="return-value"></a>傳回值
 
-DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該物件就會發生的卸除的型別。 卸除類型通常取決於目前所指示的索引鍵狀態*dwKeyState*。 Keystates DROPEFFECT 值的標準對應是：
+DROPEFFECT 列舉型別中的值, 指出當使用者在這個位置卸載物件時, 會發生的卸載型別。 Drop 的類型通常取決於*dwKeyState*所指出的目前索引鍵狀態。 Keystates 與 DROPEFFECT 值的標準對應為:
 
-- 無法卸除 DROPEFFECT_NONE 資料物件，此視窗中。
+- DROPEFFECT_NONE 無法在此視窗中卸載資料物件。
 
-- 針對 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 建立物件和它的伺服器之間的連結。
+- DROPEFFECT_LINK for MK_CONTROL &#124; MK_SHIFT 會在物件與其伺服器之間建立連結。
 
-- 如 MK_CONTROL DROPEFFECT_COPY 會建立一份已卸除的物件。
+- MK_CONTROL 的 DROPEFFECT_COPY 會建立已卸載之物件的複本。
 
-- 如 MK_ALT DROPEFFECT_MOVE 會建立一份已卸除的物件和刪除原始的物件。 這通常是預設的拖放效果，檢視可接受這個資料物件。
+- DROPEFFECT_MOVE for MK_ALT 會建立已捨棄物件的複本, 並刪除原始物件。 當 view 可以接受這個資料物件時, 這通常是預設的捨棄效果。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
+如需詳細資訊, 請參閱 MFC Advanced 概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
-預設實作是不執行任何動作，並傳回 DROPEFFECT_NONE。
+預設的實作為不執行任何動作, 並傳回 DROPEFFECT_NONE。
 
-覆寫這個函式來準備進行後續的呼叫來[OnDragOver](#ondragover)成員函式。 從其中擷取從資料物件所需的任何資料，在此階段供稍後用於`OnDragOver`成員函式。 檢視也應該更新目前使用者的視覺化回饋提供。 如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+覆寫此函式, 以準備未來呼叫[system.windows.uielement.ondragover](#ondragover)成員函式。 此時應該會抓取資料物件所需的任何資料, 以供稍後在`OnDragOver`成員函式中使用。 此時應該也會更新此視圖, 以提供使用者視覺效果的意見反應。 如需詳細資訊, 請參閱[拖放的文章:執行放置目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
-##  <a name="ondragleave"></a>  CView::OnDragLeave
+##  <a name="ondragleave"></a>CView:: System.windows.uielement.ondragleave
 
-由架構中，呼叫時有效的置放區超出該視窗移動滑鼠拖曳作業期間中。
+在拖曳作業期間, 當滑鼠移出該視窗的有效下拉區域時, 由架構呼叫。
 
 ```
 virtual void OnDragLeave();
@@ -369,11 +369,11 @@ virtual void OnDragLeave();
 
 ### <a name="remarks"></a>備註
 
-如果目前的檢視必須清除期間採取任何動作，請覆寫這個函式[OnDragEnter](#ondragenter)或是[OnDragOver](#ondragover)呼叫，例如拖曳和卸除物件時，移除任何視覺化使用者意見反應.
+如果目前的視圖需要清除在[system.windows.uielement.ondragenter](#ondragenter)或[system.windows.uielement.ondragover](#ondragover)呼叫期間所採取的任何動作 (例如, 在拖放物件時移除任何視覺使用者意見反應), 請覆寫此函式。
 
-##  <a name="ondragover"></a>  CView::OnDragOver
+##  <a name="ondragover"></a>CView:: System.windows.uielement.ondragover
 
-當滑鼠移動經過置放目標視窗呼叫由架構在拖曳作業期間。
+當滑鼠移到放置目標視窗上時, 由架構在拖曳作業期間呼叫。
 
 ```
 virtual DROPEFFECT OnDragOver(
@@ -385,37 +385,37 @@ virtual DROPEFFECT OnDragOver(
 ### <a name="parameters"></a>參數
 
 *pDataObject*<br/>
-指向[COleDataObject](../../mfc/reference/coledataobject-class.md)被拖曳到置放目標。
+指向拖放目標上的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含輔助按鍵的狀態。 這是下列任意數目的組合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-目前的滑鼠位置相對於檢視用戶端區域。
+相對於 view 工作區的目前滑鼠位置。
 
 ### <a name="return-value"></a>傳回值
 
-DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該物件就會發生的卸除的型別。 卸除類型通常取決於目前的索引鍵狀態所示*dwKeyState*。 Keystates DROPEFFECT 值的標準對應是：
+DROPEFFECT 列舉型別中的值, 指出當使用者在這個位置卸載物件時, 會發生的卸載型別。 卸載的類型通常取決於目前的索引鍵狀態, 如*dwKeyState*所示。 Keystates 與 DROPEFFECT 值的標準對應為:
 
-- 無法卸除 DROPEFFECT_NONE 資料物件，此視窗中。
+- DROPEFFECT_NONE 無法在此視窗中卸載資料物件。
 
-- 針對 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 建立物件和它的伺服器之間的連結。
+- DROPEFFECT_LINK for MK_CONTROL &#124; MK_SHIFT 會在物件與其伺服器之間建立連結。
 
-- 如 MK_CONTROL DROPEFFECT_COPY 會建立一份已卸除的物件。
+- MK_CONTROL 的 DROPEFFECT_COPY 會建立已卸載之物件的複本。
 
-- 如 MK_ALT DROPEFFECT_MOVE 會建立一份已卸除的物件和刪除原始的物件。 這通常是預設的拖放效果，檢視可接受的資料物件。
+- DROPEFFECT_MOVE for MK_ALT 會建立已捨棄物件的複本, 並刪除原始物件。 當 view 可以接受資料物件時, 這通常是預設的捨棄效果。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
+如需詳細資訊, 請參閱 MFC Advanced 概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
-預設實作是不執行任何動作，並傳回 DROPEFFECT_NONE。
+預設的實作為不執行任何動作, 且會傳回 DROPEFFECT_NONE。
 
-此函式以使用者的視覺化回饋提供拖曳作業期間會覆寫。 因為連續呼叫此函式，其內所含的任何程式碼應該最佳化盡量。 如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+覆寫此函式, 以在拖曳作業期間提供使用者視覺效果的意見反應。 因為此函式會持續呼叫, 所以包含在其中的任何程式碼都應該盡可能優化。 如需詳細資訊, 請參閱[拖放的文章:執行放置目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
-##  <a name="ondragscroll"></a>  CView::OnDragScroll
+##  <a name="ondragscroll"></a>CView:: OnDragScroll
 
-由架構呼叫之前，先呼叫[OnDragEnter](#ondragenter)或是[OnDragOver](#ondragover)來判斷點是否在捲軸的區域中。
+在呼叫[system.windows.uielement.ondragenter](#ondragenter)或[system.windows.uielement.ondragover](#ondragover)來判中斷點是否在捲動區域中之前, 由架構呼叫。
 
 ```
 virtual DROPEFFECT OnDragScroll(
@@ -426,34 +426,34 @@ virtual DROPEFFECT OnDragScroll(
 ### <a name="parameters"></a>參數
 
 *dwKeyState*<br/>
-包含的輔助按鍵的狀態。 這是任意數目的下列組合：MK_CONTROL、 MK_SHIFT、 MK_ALT、 MK_LBUTTON、 MK_MBUTTON 和 MK_RBUTTON。
+包含輔助按鍵的狀態。 這是下列任意數目的組合:MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON 和 MK_RBUTTON。
 
 *point*<br/>
-包含的資料指標，像素為單位，相對於畫面的位置。
+包含游標相對於螢幕的位置 (以圖元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-DROPEFFECT 值的列舉型別，這表示如果使用者在這個位置卸除該物件就會發生的卸除的型別。 卸除類型通常取決於目前所指示的索引鍵狀態*dwKeyState*。 Keystates DROPEFFECT 值的標準對應是：
+DROPEFFECT 列舉型別中的值, 指出當使用者在這個位置卸載物件時, 會發生的卸載型別。 Drop 的類型通常取決於*dwKeyState*所指出的目前索引鍵狀態。 Keystates 與 DROPEFFECT 值的標準對應為:
 
-- 無法卸除 DROPEFFECT_NONE 資料物件，此視窗中。
+- DROPEFFECT_NONE 無法在此視窗中卸載資料物件。
 
-- 針對 MK_CONTROL DROPEFFECT_LINK &#124; MK_SHIFT 建立物件和它的伺服器之間的連結。
+- DROPEFFECT_LINK for MK_CONTROL &#124; MK_SHIFT 會在物件與其伺服器之間建立連結。
 
-- 如 MK_CONTROL DROPEFFECT_COPY 會建立一份已卸除的物件。
+- MK_CONTROL 的 DROPEFFECT_COPY 會建立已卸載之物件的複本。
 
-- 如 MK_ALT DROPEFFECT_MOVE 會建立一份已卸除的物件和刪除原始的物件。
+- DROPEFFECT_MOVE for MK_ALT 會建立已捨棄物件的複本, 並刪除原始物件。
 
-- DROPEFFECT_SCROLL 表示拖曳捲軸作業會發生，或作業在目標檢視。
+- DROPEFFECT_SCROLL 表示拖曳捲軸操作即將發生或發生在目標視圖中。
 
-如需詳細資訊，請參閱 MFC 進階概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
+如需詳細資訊, 請參閱 MFC Advanced 概念範例[OCLIENT](../../overview/visual-cpp-samples.md)。
 
 ### <a name="remarks"></a>備註
 
-當您想要提供特殊的行為，這個事件時，請覆寫這個函式。 預設實作會自動捲動 windows 游標拖曳到 預設的捲動區域內的每個視窗的框線時。如需詳細資訊，請參閱文章[將拖放：實作置放目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
+當您想要為此事件提供特殊行為時, 請覆寫此函式。 當游標拖曳到每個視窗的框線內的預設捲動區域時, 預設的執行會自動滾動視窗。如需詳細資訊, 請參閱[拖放的文章:執行放置目標](../../mfc/drag-and-drop-implementing-a-drop-target.md)。
 
-##  <a name="ondraw"></a>  CView::OnDraw
+##  <a name="ondraw"></a>CView:: OnDraw
 
-由架構呼叫以呈現文件的影像。
+由架構呼叫以呈現檔的影像。
 
 ```
 virtual void OnDraw(CDC* pDC) = 0;
@@ -462,19 +462,19 @@ virtual void OnDraw(CDC* pDC) = 0;
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-指向裝置內容，以用來呈現文件的映像。
+指向用來呈現檔影像的裝置內容。
 
 ### <a name="remarks"></a>備註
 
-架構會呼叫此函式來執行螢幕顯示、 列印和預覽列印，並且會傳遞不同的裝置內容中每個案例。 沒有預設的實作。
+此架構會呼叫此函式來執行螢幕顯示、列印和預覽列印, 並在每個案例中傳遞不同的裝置內容。 沒有預設的實作。
 
-您必須覆寫這個函式，以顯示您的文件的檢視。 您可以使用的圖形裝置介面 (GDI) 呼叫[CDC](../../mfc/reference/cdc-class.md)指向的物件*pDC*參數。 您可以選取 GDI 資源，例如畫筆或字型繪製前的裝置內容，然後之後取消選取它們。 您的繪圖程式碼通常可以與裝置無關;也就是說，它不需要哪種裝置類型會顯示映像的相關資訊。
+您必須覆寫這個函式, 以顯示檔的視圖。 您可以使用*pDC*參數所指向的[CDC](../../mfc/reference/cdc-class.md)物件, 進行圖形裝置介面 (GDI) 呼叫。 您可以選取 GDI 資源 (例如畫筆或字型) 到裝置內容中, 然後再進行繪製, 然後在之後取消選取。 您的繪圖程式碼通常可以與裝置無關;也就是, 它不需要顯示影像的裝置類型的相關資訊。
 
-若要最佳化的繪圖，呼叫[RectVisible](../../mfc/reference/cdc-class.md#rectvisible)成員函式的裝置內容，以查明是否會繪製指定的矩形。 如果您需要區別正常螢幕顯示和列印，呼叫[IsPrinting](../../mfc/reference/cdc-class.md#isprinting)裝置內容的成員函式。
+若要優化繪圖, 請呼叫裝置內容的[RectVisible](../../mfc/reference/cdc-class.md#rectvisible)成員函式, 以瞭解是否將繪製指定的矩形。 如果您需要區別一般螢幕顯示和列印, 請呼叫裝置內容的[IsPrinting](../../mfc/reference/cdc-class.md#isprinting)成員函式。
 
-##  <a name="ondrop"></a>  CView::OnDrop
+##  <a name="ondrop"></a>CView:: System.windows.uielement.ondrop
 
-在使用者釋放資料物件的有效置放目標時，由架構呼叫。
+當使用者透過有效的放置目標釋放資料物件時, 由架構呼叫。
 
 ```
 virtual BOOL OnDrop(
@@ -485,36 +485,36 @@ virtual BOOL OnDrop(
 
 ### <a name="parameters"></a>參數
 
-' pDataObject * 指向[COleDataObject](../../mfc/reference/coledataobject-class.md) ，控制項置放到置放目標。
+' pDataObject * 指向拖放到放置目標的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
 *dropEffect*<br/>
-使用者已要求下拉式效果。
+使用者所要求的捨棄效果。
 
-- DROPEFFECT_COPY 會建立一份要卸除的資料物件。
+- DROPEFFECT_COPY 會建立要卸載之資料物件的複本。
 
-- DROPEFFECT_MOVE 資料將物件移至目前的滑鼠位置。
+- DROPEFFECT_MOVE 會將資料物件移至目前的滑鼠位置。
 
-- DROPEFFECT_LINK 建立資料物件與其伺服器之間的連結。
+- DROPEFFECT_LINK 會在資料物件與其伺服器之間建立連結。
 
 *point*<br/>
-目前的滑鼠位置相對於檢視用戶端區域。
+相對於 view 工作區的目前滑鼠位置。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果卸除成功;否則為 0。
+如果卸載成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-預設實作不做任何動作，且會傳回 FALSE。
+預設的執行不會執行任何操作, 而且會傳回 FALSE。
 
-覆寫這個函式來實作的 OLE 拖放效果到檢視的工作區。 資料物件可以透過檢查*pDataObject*剪貼簿資料格式和資料在卸除指定的點。
+覆寫此函式, 以實作用於將 OLE 拖放到 view 的工作區。 您可以透過*pDataObject*檢查資料物件, 以取得剪貼簿資料格式, 並在指定的點上捨棄資料。
 
 > [!NOTE]
->  架構不會呼叫此函式，如果沒有要覆寫[OnDropEx](#ondropex)這個檢視類別中。
+>  如果此 view 類別中有[OnDropEx](#ondropex)的覆寫, 則架構不會呼叫這個函式。
 
-##  <a name="ondropex"></a>  CView::OnDropEx
+##  <a name="ondropex"></a>CView:: OnDropEx
 
-在使用者釋放資料物件的有效置放目標時，由架構呼叫。
+當使用者透過有效的放置目標釋放資料物件時, 由架構呼叫。
 
 ```
 virtual DROPEFFECT OnDropEx(
@@ -527,58 +527,58 @@ virtual DROPEFFECT OnDropEx(
 ### <a name="parameters"></a>參數
 
 *pDataObject*<br/>
-指向[COleDataObject](../../mfc/reference/coledataobject-class.md) ，控制項置放到置放目標。
+指向放入放置目標的[COleDataObject](../../mfc/reference/coledataobject-class.md) 。
 
 *dropDefault*<br/>
-使用者選擇針對根據目前的索引鍵狀態預設拖放作業效果。 它可能是 DROPEFFECT_NONE。 置放效果是 < 備註 > 一節所述。
+根據目前的索引鍵狀態, 使用者為預設的卸載作業所選擇的效果。 可能是 DROPEFFECT_NONE。 「備註」一節會討論捨棄效果。
 
 *dropList*<br/>
-拖曳來源所支援的拖放效果的清單。 可以使用的位元 OR 組合置放效果值 ( **&#124;**) 作業。 置放效果是 < 備註 > 一節所述。
+捨棄來源所支援的卸載效果清單。 捨棄效果值可以使用位 OR ( **&#124;** ) 運算來結合。 「備註」一節會討論捨棄效果。
 
 *point*<br/>
-目前的滑鼠位置相對於檢視用戶端區域。
+相對於 view 工作區的目前滑鼠位置。
 
 ### <a name="return-value"></a>傳回值
 
-卸除嘗試在所指定的位置產生的置放效果*點*。 這必須是其中一個值所指示*dropEffectList*。 置放效果是 < 備註 > 一節所述。
+從*point*指定之位置的 drop 嘗試產生的捨棄效果。 這必須是*dropEffectList*所指示的其中一個值。 「備註」一節會討論捨棄效果。
 
 ### <a name="remarks"></a>備註
 
-預設實作是不執行任何動作，並傳回空值 (-1)，表示應該呼叫 framework [OnDrop](#ondrop)處理常式。
+預設的實作為不執行任何動作, 且會傳回虛擬值 (-1), 表示架構應該呼叫[system.windows.uielement.ondrop](#ondrop)處理常式。
 
-覆寫這個函式，以實作正確的滑鼠按鈕拖曳和卸除的效果。 滑鼠右鍵拖曳和置放通常顯示選項的功能表，當使用者放開滑鼠右按鈕。
+覆寫此函式以實作用滑鼠按鍵拖放功能。 滑鼠右鍵拖放通常會在放開滑鼠右鍵時, 顯示選項的功能表。
 
-覆寫`OnDropEx`應該查詢適當的滑鼠按鈕。 您可以呼叫[GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate)或從右滑鼠按鈕狀態儲存您[OnDragEnter](#ondragenter)處理常式。
+您的`OnDropEx`覆寫應該查詢右鍵的滑鼠按鍵。 您可以從[system.windows.uielement.ondragenter](#ondragenter)處理常式呼叫[GetKeyState](/windows/win32/api/winuser/nf-winuser-getkeystate)或儲存滑鼠右鍵的狀態。
 
-- 如果滑鼠右按鈕已關閉，您的覆寫應該會顯示快顯功能表來提供拖曳來源所支援的置放效果。
+- 如果滑鼠右鍵已關閉, 您的覆寫應該會顯示快顯功能表, 提供卸載來源所支援的捨棄效果。
 
-   - 檢查*下拉清單*以判斷拖曳來源所支援的置放效果。 啟用快顯功能表中的這些動作。
+   - 檢查*dropList* , 以判斷卸載來源所支援的捨棄效果。 只在快顯功能表上啟用這些動作。
 
-   - 使用[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem)設定為基礎的預設動作*dropDefault*。
+   - 根據*dropDefault*, 使用[SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem)來設定預設動作。
 
-   - 最後，採取動作以從快顯功能表的使用者選取項目。
+   - 最後, 從快顯功能表中, 採取使用者選擇所指示的動作。
 
-- 如果未按下滑鼠右按鈕，覆寫應該處理此做為標準的卸除要求。 使用指定的拖放效果*dropDefault*。 或者，您的覆寫可以傳回空值 (-1) 表示`OnDrop`會處理這項拖放作業。
+- 如果滑鼠右鍵未關閉, 您的覆寫應該將此處理為標準 drop 要求。 使用*dropDefault*中指定的捨棄效果。 或者, 您的覆寫可能會傳回虛擬值 (-1), `OnDrop`以指出將會處理此 drop 作業。
 
-使用*pDataObject*檢查`COleDataObject`剪貼簿資料格式和資料在卸除指定的點。
+使用*pDataObject*來檢查`COleDataObject`是否有剪貼簿資料格式, 以及是否在指定的點上捨棄資料。
 
-置放效果描述與拖放作業相關聯的動作。 請參閱下列清單中的拖放效果：
+捨棄效果描述與 drop 作業相關聯的動作。 請參閱下列捨棄效果清單:
 
-- DROPEFFECT_NONE 不會允許卸除。
+- 不允許 DROPEFFECT_NONE drop。
 
-- DROPEFFECT_COPY 執行複製作業。
+- DROPEFFECT_COPY 會執行複製作業。
 
-- DROPEFFECT_MOVE 會執行移動作業。
+- DROPEFFECT_MOVE 會執行移動操作。
 
-- 會建立已卸除的資料從原始資料的 DROPEFFECT_LINK 的連結。
+- DROPEFFECT_LINK 從已卸載的資料到原始資料的連結將會建立。
 
-- DROPEFFECT_SCROLL 表示拖曳捲軸作業會發生，或在目標中進行。
+- DROPEFFECT_SCROLL 表示拖曳捲軸操作即將發生或發生在目標中。
 
-如需有關如何設定預設的功能表命令的詳細資訊，請參閱 < [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) Windows SDK 中並[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)此磁碟區中。
+如需設定預設功能表命令的詳細資訊, 請參閱在此磁片區中的 Windows SDK 和[CMenu:: GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)中的[SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem) 。
 
-##  <a name="onendprinting"></a>  CView::OnEndPrinting
+##  <a name="onendprinting"></a>CView:: OnEndPrinting
 
-列印或預覽文件之後，由架構呼叫。
+在列印或預覽檔之後, 由架構呼叫。
 
 ```
 virtual void OnEndPrinting(
@@ -596,11 +596,11 @@ virtual void OnEndPrinting(
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作不做任何動作。 覆寫這個函式來釋放配置在任何 GDI 資源[OnBeginPrinting](#onbeginprinting)成員函式。
+此函式的預設實作不做任何動作。 覆寫此函式以釋放您在[OnBeginPrinting](#onbeginprinting)成員函式中配置的任何 GDI 資源。
 
-##  <a name="onendprintpreview"></a>  CView::OnEndPrintPreview
+##  <a name="onendprintpreview"></a>CView:: OnEndPrintPreview
 
-當使用者結束預覽列印模式時，由架構呼叫。
+當使用者離開預覽列印模式時, 由架構呼叫。
 
 ```
 virtual void OnEndPrintPreview(
@@ -619,20 +619,20 @@ virtual void OnEndPrintPreview(
 指向描述目前列印工作的 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 結構。
 
 *point*<br/>
-上次在預覽模式中顯示的頁面上指定的點。
+指定頁面上上次以預覽模式顯示的時間點。
 
 *pView*<br/>
-指向用來預覽的檢視物件。
+指向用於預覽的 view 物件。
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會呼叫[OnEndPrinting](#onendprinting)成員函式並還原到之前預覽列印狀態的主框架視窗開始。 覆寫這個函式來執行特殊處理序終止 [預覽] 模式時。 例如，如果您想要維護文件中的使用者的位置，從 [預覽] 模式切換到一般顯示模式時，您可以捲動到所描述的位置*點*參數和`m_nCurPage`的成員`CPrintInfo`結構*pInfo*參數所指向。
+此函式的預設實作用會呼叫[OnEndPrinting](#onendprinting)成員函式, 並將主框架視窗還原至預覽列印開始之前的狀態。 當預覽模式終止時, 覆寫此函式以執行特殊處理。 例如, 如果您想要在從 [預覽] 模式切換至 [一般顯示模式] 時, 維護使用者在檔中的位置, 您可以滾動到*point*參數和`m_nCurPage` `CPrintInfo`結構成員所描述的位置。*pInfo*參數所指向的。
 
-請務必呼叫基底類別版本`OnEndPrintPreview`從您的覆寫通常是在函式結尾。
+一律`OnEndPrintPreview`從您的覆寫呼叫的基類版本, 通常是在函式的結尾。
 
-##  <a name="oninitialupdate"></a>  Cview:: Oninitialupdate
+##  <a name="oninitialupdate"></a>CView:: OnInitialUpdate
 
-檢視第一次附加至文件之後，但一開始顯示檢視之前，由架構呼叫。
+在第一次將視圖附加至檔, 但在一開始顯示視圖之前, 由架構呼叫。
 
 ```
 virtual void OnInitialUpdate();
@@ -640,11 +640,11 @@ virtual void OnInitialUpdate();
 
 ### <a name="remarks"></a>備註
 
-此函式的預設實作會呼叫[OnUpdate](#onupdate)成員函式，而不提示的資訊 (也就使用預設值為 0，表示*lHint*參數，則為 NULL *pHint*參數)。 覆寫這個函式來執行任何需要的文件的相關資訊的單次初始化。 比方說，如果您的應用程式有固定大小的文件，您可以使用此函式來初始化檢視的捲動文件大小為基礎的限制。 如果您的應用程式支援可變大小的文件，請使用[OnUpdate](#onupdate)更新捲動會限制每次文件變更。
+此函式的預設執行會呼叫[OnUpdate](#onupdate)成員函式, 但不含任何提示資訊 (也就是針對*lHint*參數使用0的預設值, 而*pHint*參數為 Null)。 覆寫這個函式, 以執行需要檔相關資訊的任何一次性初始化。 例如, 如果您的應用程式具有固定大小的檔, 您可以使用此函式, 根據檔案大小來初始化視圖的滾動限制。 如果您的應用程式支援可變大小的檔, 請使用[OnUpdate](#onupdate)來更新每次檔變更時的滾動限制。
 
-##  <a name="onpreparedc"></a>  CView::OnPrepareDC
+##  <a name="onpreparedc"></a>CView:: OnPrepareDC
 
-由架構之前呼叫[OnDraw](#ondraw)進行螢幕顯示和之前，呼叫成員函式[OnPrint](#onprint)成員函式列印或預覽列印期間，會呼叫每個頁面。
+在將[OnDraw](#ondraw)成員函式用於螢幕顯示之前, 以及在列印或預覽列印期間針對每個頁面呼叫[OnPrint](#onprint)成員函式之前, 由架構呼叫。
 
 ```
 virtual void OnPrepareDC(
@@ -655,34 +655,34 @@ virtual void OnPrepareDC(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-指向裝置內容，以用來呈現文件的映像。
+指向用來呈現檔影像的裝置內容。
 
 *pInfo*<br/>
-指向[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構，描述目前列印工作，如果`OnPrepareDC`呼叫的列印或預覽列印;`m_nCurPage`成員指定即將列印的頁面。 這個參數是 NULL，如果`OnPrepareDC`呼叫進行螢幕顯示。
+指向描述目前列印工作的[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構 (如果`OnPrepareDC`是針對列印或`m_nCurPage`預覽列印而呼叫); 成員會指定要列印的頁面。 如果`OnPrepareDC`要針對螢幕顯示呼叫, 這個參數會是 Null。
 
 ### <a name="remarks"></a>備註
 
-如果函式針對螢幕上顯示呼叫此函式的預設實作沒有任何作用。 不過，此函式會覆寫在衍生類別中，這類[CScrollView](../../mfc/reference/cscrollview-class.md)調整裝置內容; 的屬性中，因此，務必呼叫基底類別實作覆寫的開頭。
+如果針對螢幕顯示呼叫函式, 此函式的預設執行不會執行任何操作。 不過, 此函式會在衍生類別 (例如[CScrollView](../../mfc/reference/cscrollview-class.md)) 中覆寫, 以調整裝置內容的屬性;因此, 您應該一律在覆寫的開頭呼叫基類實。
 
-如果列印呼叫函式，則預設實作會檢查中儲存的頁面資訊*pInfo*參數。 如果未指定文件長度，`OnPrepareDC`假設要很長的一頁的文件，並列印一頁之後，停止列印迴圈。 此函式來設定停止列印迴圈`m_bContinuePrinting`為 FALSE 結構的成員。
+如果呼叫函式來進行列印, 則預設的執行會檢查儲存在*pInfo*參數中的頁面資訊。 如果尚未指定檔的長度, `OnPrepareDC`則會假設檔為一頁長, 並在列印一頁之後停止列印迴圈。 函式會將結構的`m_bContinuePrinting`成員設定為 FALSE, 以停止列印迴圈。
 
-覆寫`OnPrepareDC`任何原因如下：
+因`OnPrepareDC`下列任何原因而覆寫:
 
-- 若要視需要針對指定的頁面，請調整裝置內容的屬性。 例如，如果您需要設定對應模式] 或 [裝置內容的其他特性，這麼做在此函式。
+- 視需要針對指定的頁面調整裝置內容的屬性。 例如, 如果您需要設定對應模式或裝置內容的其他特性, 請在此函式中執行此動作。
 
-- 若要執行列印時分頁。 通常您指定長度的文件列印開始時，使用[OnPreparePrinting](#onprepareprinting)成員函式。 不過，如果您不知道事先多久文件 （例如，當列印不確定的數目的記錄從資料庫），覆寫`OnPrepareDC`時它正在列印的文件結尾的測試。 當有沒有其他要列印的文件，來設定`m_bContinuePrinting`隸屬`CPrintInfo`結構為 FALSE。
+- 執行列印時間分頁。 一般來說, 您可以使用[OnPreparePrinting](#onprepareprinting)成員函式, 在列印開始時指定檔的長度。 不過, 如果您事先不知道檔的時間長度 (例如, 從資料庫列印不確定的記錄數目時), 請覆寫`OnPrepareDC`以測試檔案列印期間的結尾。 當不再需要列印檔案時, 請將`m_bContinuePrinting` `CPrintInfo`結構的成員設定為 FALSE。
 
-- 若要將逸出程式碼傳送到印表機的頁面為基礎。 要傳送的逸出代碼`OnPrepareDC`，呼叫`Escape`成員函式*pDC*參數。
+- 以逐頁的方式將 escape 程式碼傳送至印表機。 若要從`OnPrepareDC`傳送轉義碼, 請`Escape`呼叫*pDC*參數的成員函式。
 
-呼叫的基底類別版本`OnPrepareDC`覆寫的開頭。
+在覆寫的開頭呼叫`OnPrepareDC`的基類版本。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting
+##  <a name="onprepareprinting"></a>CView:: OnPreparePrinting
 
-列印或預覽文件之前，由架構呼叫。
+在列印或預覽檔之前, 由架構呼叫。
 
 ```
 virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
@@ -695,33 +695,33 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 
 ### <a name="return-value"></a>傳回值
 
-若要開始列印; Nonzero0，表示列印工作已取消。
+要開始列印的非零值;如果列印工作已取消, 則為0。
 
 ### <a name="remarks"></a>備註
 
 預設實作不做任何動作。
 
-您必須覆寫這個函式，可讓列印和預覽列印。 呼叫[DoPreparePrinting](#doprepareprinting)成員函式，將它傳遞*pInfo*參數，然後傳回它的傳回值;`DoPreparePrinting`會顯示 [列印] 對話方塊中，並建立印表機裝置內容。 如果您想要初始化 [列印] 對話方塊中，使用預設值以外的值，則將值指派給成員*pInfo*。 例如，如果您知道文件長度，將值傳遞至[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成員函式*pInfo*再呼叫`DoPreparePrinting`。 這個值會顯示在 [收件者:] 方塊中的 [列印] 對話方塊中的範圍部分。
+您必須覆寫此函式, 才能啟用列印和預覽列印。 呼叫[DoPreparePrinting](#doprepareprinting)成員函式, 將*pInfo*參數傳遞給它, 然後傳回其傳回值。`DoPreparePrinting`顯示 [列印] 對話方塊, 並建立印表機裝置內容。 如果您想要使用非預設值來初始化 [列印] 對話方塊, 請將值指派給*pInfo*的成員。 例如, 如果您知道檔的長度, 請在呼叫`DoPreparePrinting`之前, 將值傳遞至*pInfo*的[SetMaxPage](../../mfc/reference/cprintinfo-structure.md#setmaxpage)成員函式。 這個值會顯示在 [列印] 對話方塊範圍部分的 [到:] 方塊中。
 
-`DoPreparePrinting` 不會顯示預覽工作 [列印] 對話方塊。 如果您想要略過的列印工作的 [列印] 對話方塊，請確認`m_bPreview`隸屬*pInfo*為 FALSE，然後將它設定為 TRUE，再傳遞給`DoPreparePrinting`; 之後重設為 FALSE。
+`DoPreparePrinting`不會顯示預覽作業的 [列印] 對話方塊。 如果您想要略過列印工作的 [列印] 對話方塊, 請檢查`m_bPreview` *pInfo*的成員是否為 FALSE, 然後在將它傳遞給`DoPreparePrinting`之前將它設定為 TRUE; 之後再將它重設為 false。
 
-如果您需要執行初始化，需要存取`CDC`物件，代表印表機裝置內容 （例如，如果您需要之前要知道的頁面大小指定文件的長度），覆寫`OnBeginPrinting`成員函式。
+如果您需要執行需要存取代表印表機裝置內容之`CDC`物件的初始化 (例如, 如果您需要在指定檔長度之前知道頁面大小), 請覆`OnBeginPrinting`寫成員函數.
 
-如果您想要設定的值`m_nNumPreviewPages`或是`m_strPageDesc`的成員*pInfo*參數，這樣做之後呼叫`DoPreparePrinting`。 `DoPreparePrinting`成員函式會將`m_nNumPreviewPages`應用程式中找到的值。INI 檔案，並設定`m_strPageDesc`為其預設值。
+如果您想要設定`m_nNumPreviewPages` *pInfo*參數的或`DoPreparePrinting` `m_strPageDesc`成員值, 請在呼叫之後執行此動作。 成員函式會`m_nNumPreviewPages`將設定為在應用程式的中找到的值。 `DoPreparePrinting`INI 檔案, 並`m_strPageDesc`將設為其預設值。
 
 ### <a name="example"></a>範例
 
-  覆寫`OnPreparePrinting`並呼叫`DoPreparePrinting`從覆寫，讓架構會顯示 [列印] 對話方塊，並為您建立是印表機 DC。
+  覆`OnPreparePrinting`寫並`DoPreparePrinting`從覆寫呼叫, 讓架構會顯示 [列印] 對話方塊, 並為您建立印表機 DC。
 
 [!code-cpp[NVC_MFCDocView#184](../../mfc/codesnippet/cpp/cview-class_2.cpp)]
 
-如果您知道文件中包含的頁數，請在中設定最大頁面`OnPreparePrinting`再呼叫`DoPreparePrinting`。 架構會顯示在 [列印] 對話方塊中的 [到] 方塊中的最大頁面數目。
+如果您知道檔包含多少頁數, 請在呼叫`OnPreparePrinting` `DoPreparePrinting`之前, 在中設定最大的頁面。 此架構會顯示 [列印] 對話方塊的 [到] 方塊中的最大頁數。
 
 [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]
 
-##  <a name="onprint"></a>  CView::OnPrint
+##  <a name="onprint"></a>CView:: OnPrint
 
-由架構呼叫以列印或預覽文件的頁面。
+由架構呼叫, 以列印或預覽檔的頁面。
 
 ```
 virtual void OnPrint(
@@ -735,37 +735,37 @@ virtual void OnPrint(
 指向印表機裝置內容。
 
 *pInfo*<br/>
-指向`CPrintInfo`結構，描述目前列印工作。
+指向描述目前列印工作的結構。`CPrintInfo`
 
 ### <a name="remarks"></a>備註
 
-針對每個列印頁面，架構會呼叫此函式後立即呼叫[OnPrepareDC](#onpreparedc)成員函式。 正在列印的頁面由`m_nCurPage`隸屬[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構*pInfo*指向。 預設實作會呼叫[OnDraw](#ondraw)成員函式，並將它傳遞印表機裝置內容。
+針對每個列印的頁面, 架構會在呼叫[OnPrepareDC](#onpreparedc)成員函式之後立即呼叫此函式。 要列印的頁面是由`m_nCurPage` *pInfo*指向之[CPrintInfo](../../mfc/reference/cprintinfo-structure.md)結構的成員所指定。 預設的實值會呼叫[OnDraw](#ondraw)成員函式, 並將它傳遞至印表機裝置內容。
 
-覆寫此函數，任何原因如下：
+基於下列任何原因, 覆寫此函式:
 
-- 若要允許列印多頁文件。 呈現只對應於目前列印的頁面的文件的一部分。 如果您使用`OnDraw`用以執行呈現，您可以調整檢視區原點，因此會列印文件的適當部分。
+- 允許列印多頁檔。 只轉譯檔中與目前列印的頁面對應的部分。 如果您使用`OnDraw`來執行轉譯, 您可以調整 [視口] 原點, 只列印檔案的適當部分。
 
-- 若要列印的影像 （也就是如果您的應用程式不是 WYSIWYG） 不同畫面影像。 而不是傳遞印表機裝置內容`OnDraw`，使用裝置內容來呈現使用屬性不會顯示在螢幕上的影像。
+- 讓列印的影像看起來與螢幕影像不同 (也就是, 如果您的應用程式不是 WYSIWYG)。 使用裝置內容來轉譯影像, 而`OnDraw`不是將印表機裝置內容傳遞至, 而是使用畫面上未顯示的屬性。
 
-   如果您需要不用於螢幕顯示的列印的 GDI 資源，將其選取至裝置內容的繪圖之前和之後將它們取消選取。 中應該配置這些 GDI 資源[OnBeginPrinting](#onbeginprinting)並在發行[OnEndPrinting](#onendprinting)。
+   如果您需要用來列印的 GDI 資源, 而不是用於螢幕顯示, 請先將其選取到裝置內容中, 然後再進行繪製和取消選取。 這些 GDI 資源應配置於[OnBeginPrinting](#onbeginprinting)中, 並在[OnEndPrinting](#onendprinting)中發行。
 
-- 若要實作的頁首或頁尾。 您仍然可以使用`OnDraw`藉由限制它就可以列印的區域中進行轉譯。
+- 以執行標頭或頁尾。 您仍然可以使用`OnDraw`來執行轉譯, 方法是限制可列印的區域。
 
-請注意，`m_rectDraw`隸屬*pInfo*參數描述中的邏輯單元的頁面可列印區域。
+請注意, `m_rectDraw` *pInfo*參數的成員會以邏輯單元描述頁面的可列印範圍。
 
-請勿呼叫`OnPrepareDC`中的覆寫`OnPrint`; 架構會呼叫`OnPrepareDC`自動再呼叫`OnPrint`。
+請勿在的`OnPrepareDC` `OnPrint`覆寫中呼叫; 架構會在`OnPrepareDC`呼叫`OnPrint`之前自動呼叫。
 
 ### <a name="example"></a>範例
 
-以下是覆寫基本架構`OnPrint`函式：
+以下是覆寫`OnPrint`函式的基本架構:
 
 [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]
 
-如需其他範例，請參閱[CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)。
+如需其他範例, 請參閱[CRichEditView::P rintinsiderect](../../mfc/reference/cricheditview-class.md#printinsiderect)。
 
-##  <a name="onscroll"></a>  CView::OnScroll
+##  <a name="onscroll"></a>CView:: OnScroll
 
-由架構呼叫以判斷是否捲動是可行的。
+由架構呼叫以判斷是否可能進行滾動。
 
 ```
 virtual BOOL OnScroll(
@@ -777,39 +777,39 @@ virtual BOOL OnScroll(
 ### <a name="parameters"></a>參數
 
 *nScrollCode*<br/>
-捲軸的程式碼，指出使用者的捲動要求。 這個參數由兩個部分組成： 低序位位元組，這會決定捲動發生水平的型別，以及高序位位元組，這會決定捲動發生垂直的類型：
+表示使用者的滾動要求的捲軸程式碼。 這個參數是由兩個部分組成: 低序位位元組, 可決定水準發生的滾動類型, 而高序位位元組則會決定垂直發生的滾動類型:
 
-- SB_BOTTOM 捲動至底部。
+- SB_BOTTOM 會向下滾動。
 
-- SB_LINEDOWN 捲動下一行。
+- SB_LINEDOWN 會向下滾動一行。
 
-- SB_LINEUP 捲動上一行。
+- SB_LINEUP 會向上滾動一行。
 
-- 向下 SB_PAGEDOWN 捲動一頁。
+- SB_PAGEDOWN 會向下滾動一頁。
 
-- 向上 SB_PAGEUP 捲動一頁。
+- SB_PAGEUP 會向上滾動一頁。
 
-- SB_THUMBTRACK 拖曳捲動方塊以指定的位置。 在指定目前位置*nPos*。
+- SB_THUMBTRACK 將捲動方塊拖曳至指定的位置。 目前的位置是在*nPos*中指定。
 
-- SB_TOP 捲動至頂端。
+- SB_TOP 會滾動至頁首。
 
 *nPos*<br/>
-如果捲軸的程式碼 SB_THUMBTRACK;，包含目前的捲動方塊位置否則它不會使用。 初始的捲軸範圍，根據*nPos*可以是負數，並且應該轉換成**int**如有必要。
+包含捲軸程式碼 SB_THUMBTRACK 時的目前捲動方塊位置。否則不會使用它。 視初始捲軸範圍而定, *nPos*可能是負值, 而且應該在必要時轉換成**int** 。
 
 *bDoScroll*<br/>
-決定是否實際上就應該指定捲動的動作。 如果為 TRUE，然後捲動應該進行;如果為 FALSE，然後捲動應該不會發生。
+決定您是否應該實際執行指定的滾動動作。 若為 TRUE, 則應該進行滾動;如果為 FALSE, 則不應該進行滾動。
 
 ### <a name="return-value"></a>傳回值
 
-如果*bDoScroll*為 TRUE，而且實際上捲動檢視，然後傳回非零值; 否則為 0。 如果*bDoScroll*為 FALSE，則傳回值，如果會傳回您*bDoScroll*是 TRUE，即使您沒有實際進行捲動。
+如果*bDoScroll*為 TRUE 且此視圖實際為滾動, 則傳回非零值;否則為0。 如果*bDoScroll*為 FALSE, 則會傳回您在*bDoScroll*為 TRUE 時所傳回的值, 即使您不會實際進行滾動也一樣。
 
 ### <a name="remarks"></a>備註
 
-使用架構在其中一個案例呼叫此函式*bDoScroll*設為 TRUE，當檢視收到的捲軸的訊息。 在此情況下，您應該實際捲動檢視。 在其他情況下呼叫此函式與*bDoScroll*捲動實際發生之前一開始 OLE 項目拖曳到置放目標的自動捲動區域時，設定為 FALSE。 在此情況下，您不應該實際捲動檢視。
+在其中一種情況下, 此函式是由架構呼叫, 而當*bDoScroll*設定為 TRUE 時, 則是在視圖收到捲軸訊息時。 在此情況下, 您應該實際地滾動視圖。 在另一種情況下, 當 OLE 專案一開始拖曳至放置目標的自動捲動區域, 並實際進行滾動之前, 會呼叫此函式, 並將*bDoScroll*設為 FALSE。 在這種情況下, 您實際上不應流覽此視圖。
 
-##  <a name="onscrollby"></a>  CView::OnScrollBy
+##  <a name="onscrollby"></a>CView:: OnScrollBy
 
-當使用者檢視之外存在檢視文件，將 OLE 項目，針對檢視的目前框線拖曳，或藉由操作的垂直或水平捲軸的區域時由架構呼叫。
+當使用者透過將 OLE 專案拖曳至視圖的目前框線, 或藉由操作垂直或水準捲軸, 來流覽檔目前視圖以外的區域時, 由架構呼叫。
 
 ```
 virtual BOOL OnScrollBy(
@@ -820,26 +820,26 @@ virtual BOOL OnScrollBy(
 ### <a name="parameters"></a>參數
 
 *sizeScroll*<br/>
-水平和垂直，捲動到像素數目。
+水準和垂直捲動的圖元數目。
 
 *bDoScroll*<br/>
-決定是否捲動檢視的發生。 如果為 TRUE，然後捲動會發生;如果為 FALSE，不會再捲動。
+決定是否要進行視圖的滾動。 若為 TRUE, 則會進行滾動;如果為 FALSE, 則不會進行滾動。
 
 ### <a name="return-value"></a>傳回值
 
-如果能夠捲動; 檢視，非零值。否則為 0。
+如果可以滾動視圖, 則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-在衍生類別中這個方法會檢查檢視是否可捲動的方向，使用者要求，並如有必要，然後更新新的區域。 此函式會自動呼叫[CWnd::OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)並[CWnd::OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)執行實際的捲動要求。
+在衍生類別中, 這個方法會查看使用者要求的方向是否可以滾動此視圖, 然後視需要更新新的區域。 [Cwnd:: OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)和[Cwnd:: OnVScroll](../../mfc/reference/cwnd-class.md#onvscroll)會自動呼叫此函式, 以執行實際的滾動要求。
 
-這個方法的預設實作不會變更檢視，但如果不呼叫它時，檢視將無法捲動中`CScrollView`-衍生的類別。
+這個方法的預設執行不會變更視圖, 但如果沒有呼叫, 則此視圖不會在衍生類別中`CScrollView`進行滾動。
 
-如果文件寬度或高度超過 32767 的像素為單位，超過 32767 捲動會失敗，因為`OnScrollBy`呼叫無效*sizeScroll*引數。
+如果檔寬度或高度超過32767圖元, 則超過32767的滾動會失敗`OnScrollBy` , 因為使用不正確*sizeScroll*引數呼叫。
 
-##  <a name="onupdate"></a>  CView::OnUpdate
+##  <a name="onupdate"></a>CView:: OnUpdate
 
-修改檢視的文件; 之後，由架構呼叫此函式會呼叫[CDocument::UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews) ，並可讓更新以反映這些修改其顯示的檢視。
+在修改視圖的檔之後, 由架構呼叫;此函式是由[CDocument:: UpdateAllViews](../../mfc/reference/cdocument-class.md#updateallviews)所呼叫, 可讓此視圖更新其顯示以反映這些修改。
 
 ```
 virtual void OnUpdate(
@@ -851,23 +851,23 @@ virtual void OnUpdate(
 ### <a name="parameters"></a>參數
 
 *pSender*<br/>
-指向修改文件中，檢視或更新所有的檢視是否為 NULL。
+指向修改檔的視圖, 如果要更新所有的視圖, 則為 Null。
 
 *lHint*<br/>
-包含資訊所做的修改。
+包含修改的相關資訊。
 
 *pHint*<br/>
-指向儲存修改的相關資訊的物件。
+指向儲存修改相關資訊的物件。
 
 ### <a name="remarks"></a>備註
 
-它也會呼叫的預設實作[OnInitialUpdate](#oninitialupdate)。 預設實作會使整個工作區中，將其標示為繪製，收到下一步 WM_PAINT 訊息時的失效。 如果您想要更新只有在對應至文件的部分修改過的區域，請覆寫這個函式。 若要這樣做，您必須傳遞所做的修改使用提示參數的相關資訊。
+[OnInitialUpdate](#oninitialupdate)的預設執行也會呼叫它。 預設的執行會使整個工作區失效, 並將其標示為在收到下一個 WM_PAINT 訊息時繪製。 如果您只想要更新對應至檔之修改部分的區域, 請覆寫此函式。 若要這麼做, 您必須使用提示參數傳遞有關修改的資訊。
 
-若要使用*lHint*、 定義特殊的提示值、 通常位元遮罩或列舉的類型，並傳遞其中一個值的文件。 若要使用*pHint*，衍生的提示類別[CObject](../../mfc/reference/cobject-class.md)文件的覆寫時，將指標傳遞到提示的物件; 還有`OnUpdate`，使用[cobject:: Iskindof](../../mfc/reference/cobject-class.md#iskindof)若要判斷提示物件的執行階段類型的成員函式。
+若要使用*lHint*, 請定義特殊提示值 (通常是位元遮罩或列舉類型), 並讓檔傳遞其中一個值。 若要使用*pHint*, 請從[CObject](../../mfc/reference/cobject-class.md)衍生一個提示類別, 並讓檔將指標傳遞給提示物件;當覆`OnUpdate`寫時, 請使用[CObject:: IsKindOf](../../mfc/reference/cobject-class.md#iskindof)成員函式來判斷提示物件的執行時間類型。
 
-通常您不應該執行任何繪製直接從`OnUpdate`。 相反地，判斷裝置的座標，描述需要更新; 區域的矩形傳遞到這個矩形[CWnd::InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)。 這會導致發生在下一次繪製[WM_PAINT](/windows/desktop/gdi/wm-paint)接收訊息。
+一般來說, 您不應該直接從`OnUpdate`執行任何繪製。 相反地, 請決定在裝置座標中描述需要更新之區域的矩形;將此矩形傳遞給[CWnd:: InvalidateRect](../../mfc/reference/cwnd-class.md#invalidaterect)。 這會導致在下一次收到[WM_PAINT](/windows/win32/gdi/wm-paint)訊息時進行繪製。
 
-如果*lHint*為 0 並*pHint*是 NULL，文件已傳送的一般更新通知。 如果檢視收到的一般更新通知，或如果無法解碼的提示，其應該使其整個工作區失效。
+如果*lHint*為 0, 而*pHint*為 Null, 則檔已傳送一般更新通知。 如果視圖收到一般更新通知, 或如果無法解碼提示, 則會使其整個工作區失效。
 
 ## <a name="see-also"></a>另請參閱
 

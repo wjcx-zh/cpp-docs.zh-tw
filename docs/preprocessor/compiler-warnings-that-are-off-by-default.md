@@ -5,20 +5,20 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
+ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236552"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69550475"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器支援根據預設，已關閉的警告，因為大部分的開發人員找不到它們很有用。 在某些情況下，它們會警告有關樣式的選擇，或在較舊的程式碼中常見的習慣用語。 其他警告會使用該語言的 Microsoft 擴充功能的相關資訊。 在其他情況下，它們表示程式設計人員通常都會不正確的假設，可能會導致非預期或未定義行為的區域。 如果啟用，有些警告可能會多次出現在 程式庫標頭。 C 執行階段程式庫和C++標準程式庫要不發出任何警告，警告層級只[/w4](../build/reference/compiler-option-warning-level.md)。
+編譯器支援預設會關閉的警告, 因為大部分的開發人員都找不到它們很有用。 在某些情況下, 他們會警告有關樣式的選擇, 或較舊程式碼中常見的慣用語。 其他警告則是關於使用語言的 Microsoft 擴充功能。 在其他情況下, 它們表示程式設計人員通常會做出不正確的假設, 這可能會導致未預期或未定義的行為。 若已啟用, 這些警告可能會在程式庫標頭中出現多次。 C 執行時間程式庫和C++標準程式庫的目的, 只是在警告層級[/W4](../build/reference/compiler-option-warning-level.md)時, 才會發出任何警告。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>啟用預設為關閉的警告
 
-您可以啟用為正常關閉警告預設使用下列選項之一：
+您可以使用下列其中一個選項, 啟用通常預設為關閉的警告:
 
 - **#pragma warning(default :** *warning_number* **)**
 
@@ -26,157 +26,157 @@ ms.locfileid: "62236552"
 
 - **#pragma warning(** *warning_level* **:** *warning_number* **)**
 
-   指定的警告 (*warning_number*) 指定的層級啟用 (*warning_level*)。
+   指定的警告 (*warning_number*) 已在指定的層級 (*warning_level*) 啟用。
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` 會啟用所有預設停用的警告。 如果您使用此選項時，您可以使用將關閉個別警告[/wd](../build/reference/compiler-option-warning-level.md)選項。
+   `/Wall` 會啟用所有預設停用的警告。 如果您使用此選項, 您可以使用[/wd](../build/reference/compiler-option-warning-level.md)選項來關閉個別的警告。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   此選項會啟用警告*nnnn*層級*L*。
+   此選項會在層級*L*啟用警告*nnnn* 。
 
 ## <a name="warnings-that-are-off-by-default"></a>預設為關閉的警告
 
-在 Visual Studio 2015 和更新版本的預設會關閉下列警告：
+在 Visual Studio 2015 和更新版本中, 預設會關閉下列警告:
 
 |||
 |-|-|
-|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) （層級 4）|列舉值 '*識別碼*'參數中的列舉'*列舉*' case 標籤並未明確處理|
-|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) （層級 4）|列舉值 '*識別碼*'參數中的列舉'*列舉*' 未處理|
-| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) （層級 1） | 'HRESULT' 轉換為 'bool';確定這是您想要？ |
-| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) （層級 3）|'*運算子*': 不安全的轉換，從'*type_of_expression*'to'*type_required*'|
-|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) （層級 4）|'*識別碼*': 從轉換'*type1*'to'*type2*'，資料可能遺失|
-|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) （層級 4）|'*運算子*': 從轉換'*type1*'to'*type2*'，資料可能遺失|
-|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) （層級 4）|'*函式*': 未提供的函式原型： 轉換為 '(void)' 的' （）'|
-|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md) （層級 4）|'*函式*': 成員函式不覆寫任何基底類別虛擬成員函式|
-|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md) （層級 1）|'*virtual_function*': 沒有可用的基底虛擬成員函式的覆寫'*類別*'; 函式已隱藏|
-|[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md) （層級 3）|'*類別*': 類別有虛擬函式，但不是虛擬解構函式|
-|[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md) （層級 4）|'*函式*': 沒有可用的基底虛擬成員函式的覆寫'*型別*'; 函式已隱藏|
-|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md) （層級 3）|'*operator*': unsigned/negative constant mismatch|
-|[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md) （層級 4）|使用非標準擴充: '*var*': for 迴圈範圍外使用 for-loop 中所宣告的迴圈控制變數|
-|[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md) （層級 4）|'*運算子*': 運算式永遠是 false|
-|[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md) （層級 4）|'*型別*': 未定義的類型使用中偵測到 CLR 中繼資料-使用這個型別可能會導致執行階段例外狀況|
-|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md) （層級 1）|行為變更: '*函式*' 呼叫，但在舊版中呼叫成員運算子|
-|[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md) （層級 1）|行為變更: '*member1*'呼叫而不是'*member2*'|
+|[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md)(層級 4)|case 標籤未明確處理列舉 '*enumeration*' 的參數中的列舉值 '*identifier*'|
+|[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md)(層級 4)|未處理列舉 '*enumeration*' 的參數中的枚舉器 '*identifier*'|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md)(層級 1) | ' HRESULT ' 正在轉換成 ' bool ';您確定這是您想要的嗎？ |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md)(層級 3)|'*operator*': 不安全的從 '*type_of_expression*' 轉換為 '*type_required*'|
+|[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md)(層級 4)|'*identifier*': 從 '*type1*' 轉換為 '*type2*', 資料可能遺失|
+|[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md)(層級 4)|'*operator*': 從 '*type1*' 轉換為 '*type2*', 資料可能遺失|
+|[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md)(層級 4)|'*function*': 未指定函數原型: 將 ' () ' 轉換為 ' (void) '|
+|[C4263](../error-messages/compiler-warnings/compiler-warning-level-4-c4263.md)(層級 4)|'*function*': 成員函式不會覆寫任何基類虛擬成員函式|
+|[C4264](../error-messages/compiler-warnings/compiler-warning-level-1-c4264.md)(層級 1)|'*virtual_function*': 基底 '*class*' 的虛擬成員函式沒有可用的覆寫;函式已隱藏|
+|[C4265](../error-messages/compiler-warnings/compiler-warning-level-3-c4265.md)(層級 3)|'*class*': 類別有虛擬函式, 但析構函數不是虛擬的|
+|[C4266](../error-messages/compiler-warnings/compiler-warning-level-4-c4266.md)(層級 4)|'*function*': 基底 '*type*' 的虛擬成員函式沒有可用的覆寫;函式已隱藏|
+|[C4287](../error-messages/compiler-warnings/compiler-warning-level-3-c4287.md)(層級 3)|'*operator*': 不帶正負號/負常數不相符|
+|[C4289](../error-messages/compiler-warnings/compiler-warning-level-4-c4289.md)(層級 4)|使用非標準的擴充: '*var*': for 迴圈中宣告的迴圈控制變數會在 for 迴圈範圍外使用|
+|[C4296](../error-messages/compiler-warnings/compiler-warning-level-4-c4296.md)(層級 4)|'*operator*': 運算式一律為 false|
+|[C4339](../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)(層級 4)|'*type*': 在 CLR 中繼資料中偵測到使用未定義的類型-使用此類型可能會導致執行時間例外狀況|
+|[C4342](../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)(層級 1)|行為變更: 呼叫了 '*function*', 但在先前的版本中呼叫了成員運算子|
+|[C4350](../error-messages/compiler-warnings/compiler-warning-level-1-c4350.md)(層級 1)|行為變更: 呼叫了 '*member1*', 而非 '*member2*'|
 |[C4355](../error-messages/compiler-warnings/compiler-warning-c4355.md)|'this' : 在基底成員初始設定式清單中使用|
-|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md) （層級 4）|'*動作*': 從轉換'*type_1*'to'*type_2*'，signed/unsigned 不相符|
-|C4370 （層級 3）|因為較佳的封裝，類別配置已從舊版的編譯器變更|
-|[C4371](../error-messages/compiler-warnings/c4371.md) （層級 3）|'*classname*': 從舊版的編譯器，因為較佳的成員的封裝，類別配置可能已變更'*成員*'|
-|C4388 （層級 4）|帶正負號/不帶正負號不相符|
-|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) （層級 2）|'*函式*': 函式簽章含有類型'*型別*';C++物件都是 unsafe 純程式碼之間傳遞並混合或原生|
-|C4426 （層級 1）|變更包含標頭之後最佳化旗標可能會因為 #pragma optimize （） <sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) （層級 4）|'*class1*':/ Vd2 底下的物件配置將因虛擬基底 '*class2*'|
-|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) （層級 4）|從虛擬基底 dynamic_cast '*class1*'到'*class2*' 無法在某些內容中|
-|C4444 （層級 3）|此內容未實作最上層的 '__unaligned'|
-|[C4464](../error-messages/compiler-warnings/c4464.md) （層級 4）|相對 include 路徑包含 '..'|
-|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md) （層級 4）|不限範圍列舉之向前宣告必須含有基礎類型 (假設是 int)<sup>為永久</sup>|
-|C4472 （層級 1）|'*識別碼*' 是原生列舉： 新增存取規範 (private/public) 來宣告 managed 的列舉|
-|[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md) （層級 4）|'*函式*': 已移除未參考的內嵌函式|
-|[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md) （層級 4）|'type name': 類型名稱超出中繼資料的限制 '*限制*' 字元|
-|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md) （層級 1）|逗號之前的運算式判斷值為遺漏引數清單的函式|
-|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md) （層級 1）|逗號之前的函式呼叫遺漏引數清單|
-|[C4547](../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md) （層級 1）|'*運算子*': 運算子逗號之前無效; 必須是具有副作用的運算子|
-|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md) （層級 1）|逗號之前的運算式無效; 必須是具有副作用的運算式|
-|[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md) （層級 1）|'*operator1*': 逗號之前的運算子無效; 您是否想'*operator2*' 嗎？|
-|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md) （層級 1）|運算式無效; 必須是具有副作用的運算式|
-|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md) （層級 3）|'__assume '包含'*效果*'|
-|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md) （層級 4）|告知性： catch 語意變更自 Visual C++ 7.1;不再攔截結構化例外狀況 (SEH)|
-|C4574 （層級 4）|'*識別碼*'已定義為' 0': 您是否想要使用 ' #if*識別項*'？|
-|C4577 （層級 1）|搭配任何例外狀況處理模式指定; 使用 ' noexcept'不保證終止的例外狀況。 指定 /EHsc|
-|C4582 （層級 4）|'*型別*': 未隱含呼叫建構函式|
-|C4583 （層級 4）|'*型別*': 未隱含呼叫解構函式|
-|C4587 （層級 1）|'*anonymous_structure*': 行為變更： 不再隱含呼叫建構函式|
-|C4588 （層級 1）|'*anonymous_structure*': 行為變更： 不再隱含呼叫解構函式|
-|C4596 （層級 4）|'*識別碼*': 成員宣告中不合法的限定的名稱<sup>14.3</sup> <sup>為永久</sup>|
-|C4598 （層級 1 和層級 3）|' #include"*標頭*"': 標頭數目*數目*先行編譯標頭中不符合目前的編譯該位置<sup>14.3</sup>|
-|C4599 （層級 3）|'*選項* *路徑*': 命令列引數數目*號碼*不符合預先編譯的標頭<sup>14.3</sup>|
-|C4605 （層級 1）|'/D*巨集*' 在目前的命令列上指定，但未指定建置先行編譯標頭時|
-|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) （層級 3）|'*union_member*'已經初始化的另一個等位的成員，在初始設定式清單中，'*union_member*'<sup>為永久</sup>|
-|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) （層級 3）|#pragma 警告： 沒有警告編號 '*數字*'|
-|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md) （層級 4）|'derived class': 因為無法存取基底類別預設建構函式，所以無法產生預設建構函式|
-|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md) （層級 4）|'derived class': 因為無法存取基底類別複製建構函式，所以無法產生複製建構函式|
-|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) （層級 4）|'derived class': 因為無法存取基底類別的指派運算子，所以無法產生指派運算子|
-|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) （層級 1）|不支援使用 -Ze 的雙拼詞。 字元順序 '*雙拼詞*'沒有解譯為替代語彙基元'*char*'|
-|[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) （層級 3）|'*執行個體*': 區域靜態物件的建構不是安全執行緒|
-| C4643 （層級 4） | 向前宣告 '*識別碼*' 中不允許 std 命名空間C++標準。 <sup>15.8</sup> |
-|C4647 （層級 3）|行為變更： __is_pod (*型別*) 之前的版本會有不同的值|
-|C4654 （層級 4）|放在之前的程式碼包含先行編譯標頭行都會被忽略。 您可以將程式碼加入先行編譯標頭。 <sup>14.1</sup>|
-|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) （層級 4）|'*符號*'未定義成前置處理器巨集，以 '0' 取代'*指示詞*'|
-|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md) （層級 4）|'*符號*': 沒有方向參數屬性指定，預設為 [in]|
-|[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md) （層級 3）|'*使用者定義型別*': 行為可能變更，在 UDT 傳回呼叫慣例|
-|[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md) （層級 1）|'*函式*': 非私用成員簽章含有組件的私用原生類型'*native_type*'|
-|[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md) （層級 4）|'*函式*': 未內嵌函式|
-|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md) （層級 3）|在記憶體中儲存 32 位元浮點結果，可能會損失效能|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|暫時性存取的 '*運算式*' 受限於 /volatile:\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
-|C4749 （層級 4）|有條件地支援： offsetof 套用至非標準配置類型 '*型別*'|
-|C4767 （層級 4）|區段名稱 '*符號*' 超過 8 個字元，將由連結器截斷|
-|C4768 （層級 3）|會忽略連結規格前的 __declspec 屬性|
-|C4774 （層級 4）|'*字串*': 格式字串引數中必須要有*數目*不是字串常值|
-|C4777 （層級 4）|'*函式*': 格式字串'*字串*'需要類型的引數'*type1*'，但 variadic 引數*數目*具有類型 '*type2*'|
-|C4786 （層級 3）|'*符號*': 物件名稱被截斷成'*數目*' 的偵錯資訊中的字元|
-| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) （層級 4） | 隱含的轉換，從 '*型別*' 為 bool。 可能導致資訊遺失<sup>16.0</sup> |
-|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) （層級 4）|'*位元組*'位元組填補已加建構後'*member_name*'|
-| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) （層級 1） | '*成員*': 區域類別成員函式沒有主體 |
-|C4826 （層級 2）|從 '*type1*'到'*type2*' 是 sign-extended。 這可能會導致意外發生執行階段行為。|
-|C4837 （層級 4）|偵測到的三併詞: '??*字元*'取代'*字元*'|
-|C4841 （層級 4）|非標準擴充： offsetof 中所使用的複合成員指示項|
-|C4842 （層級 4）|'offsetof' 套用至使用多重繼承類型的結果不保證編譯器版本之間保持一致|
-|[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md) （層級 4）|'_檔案_(*line_number*)' 編譯器可能不會強制執行大括號的初始化清單中的左到右評估順序|
-|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md) （層級 1）|寬字串常值轉換成 'LPSTR'|
-|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md) （層級 1）|字串常值轉換成 'LPWSTR'|
-|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md) （層級 1）|'*宣告子*': GUID 僅能與類別、 介面或命名空間相關聯|
-|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md) （層級 1）|不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換|
-|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md) （層級 4）|我們假設已針對 number 位元指標建置類型程式庫|
-|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md) （層級 1）|相關的類別之間使用的 reinterpret_cast: '*class1*'和'*class2*'|
-|C4962|'*函式*': 特性指引最佳化已停用，因為最佳化導致分析資料變成不一致|
-|[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md) （層級 4）|'*符號*': 例外狀況規格與上一個宣告不符|
-|C4987 （層級 4）|使用非標準的擴充：'throw (...)'|
-|C4988 （層級 4）|'*符號*': 變數宣告範圍外的類別/函式|
-|C5022|'*型別*': 多個移動建構函式指定|
-|C5023|'*型別*': 多個指定的移動指派運算子|
-|C5024 （層級 4）|'*型別*': move 建構函式已隱含定義為已刪除|
-|C5025 （層級 4）|'*型別*': move 指派運算子已隱含定義為已刪除|
-|C5026 （層級 1 和層級 4）|'*型別*': move 建構函式已隱含定義為已刪除|
-|C5027 （層級 1 和層級 4）|'*型別*': move 指派運算子已隱含定義為已刪除|
-|C5029 （層級 4）|使用非標準擴充： 對齊屬性在C++變數、 資料成員及標記類型只適用於|
-|C5031 （層級 4）|#pragma warning （pop): 可能不相符，彈出的警告狀態推入不同的檔案<sup>14.1</sup>|
-|C5032 （層級 4）|偵測到 #pragma warning (push) 沒有對應的 #pragma warning <sup>14.1</sup>|
-|C5034|使用內建函式 '*內建函式*' 會導致函式*函式*編譯為客體程式碼<sup>15.3</sup>|
-|C5035|使用功能 '*功能*' 會導致函式*函式*編譯為客體程式碼<sup>15.3</sup>|
-|C5036 （層級 1）|varargs 函式指標轉換時使用/hybrid:x86arm64 編譯 '*type1*'到'*type2*' <sup>15.3</sup>|
-|[C5038](../error-messages/compiler-warnings/c5038.md) （層級 4）|資料成員 '*member1*'將初始化之後資料成員'*member2*' <sup>15.3</sup>|
-|C5039 （層級 4）|'*函式*': 指標或參考可能會擲回傳遞給-EHc 下 extern C 函式。 如果此函式會擲回的例外狀況，可能會發生未定義的行為。 <sup>15.5</sup>|
-|C5042 （層級 3）|'*函式*': 在區塊範圍內的函式宣告不能指定 'inline' standard C++; 移除 'inline' 規範<sup>15.5</sup>|
-|[C5045](../error-messages/compiler-warnings/c5045.md)|如果指定了 /Qspectre 參數，編譯器會插入 Spectre 風險降低為記憶體負載<sup>15.7</sup>|
+|[C4365](../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)(層級 4)|'*action*': 從 '*type_1*' 轉換為 '*type_2*'、已簽署/不帶正負號的不相符|
+|C4370 (層級 3)|因為較佳的封裝，類別配置已從舊版的編譯器變更|
+|[C4371](../error-messages/compiler-warnings/c4371.md)(層級 3)|'*classname*': 因為成員「*成員*」的封裝較佳, 所以類別的版面配置可能已從舊版的編譯器變更|
+|C4388 (層級 4)|帶正負號/不帶正負號不相符|
+|[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md)(層級 2)|'*function*': 函數簽名碼包含類型 '*type*';C++物件在純程式碼與混合或原生之間傳遞不安全|
+|C4426 (層級 1)|優化旗標在包含標頭之後已變更, 可能是因為 #pragma optimize () <sup>14.1</sup>|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)(層級 4)|'*class1*':/Vd2 下的物件配置會因為虛擬基底 '*class2*' 而變更|
+|[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)(層級 4)|從虛擬基底 '*class1*' 到 '*class2*' 的 dynamic_cast 在某些內容中可能會失敗|
+|C4444 (層級 3)|此內容未實作最上層的 '__unaligned'|
+|[C4464](../error-messages/compiler-warnings/c4464.md)(層級 4)|相對包含路徑包含 ': '|
+|[C4471](../error-messages/compiler-warnings/compiler-warning-level-4-c4471.md)(層級 4)|不限範圍列舉的向前宣告必須有基礎類型 (假設為 int)<sup>永久</sup>|
+|C4472 (層級 1)|'*identifier*' 是原生列舉: 新增存取規範 (私用/公用) 以宣告受控列舉|
+|[C4514](../error-messages/compiler-warnings/compiler-warning-level-4-c4514.md)(層級 4)|'*function*': 已移除未參考的內嵌函數|
+|[C4536](../error-messages/compiler-warnings/compiler-warning-level-4-c4536.md)(層級 4)|' type name ': 類型名稱超出中繼資料 '*limit*' 個字元的限制|
+|[C4545](../error-messages/compiler-warnings/compiler-warning-level-1-c4545.md)(層級 1)|逗號之前的運算式判斷值為遺漏引數清單的函式|
+|[C4546](../error-messages/compiler-warnings/compiler-warning-level-1-c4546.md)(層級 1)|逗號之前的函式呼叫遺漏引數清單|
+|[C4547](../error-messages/compiler-warnings/compiler-warning-level-1-c4547.md)(層級 1)|'*operator*': 逗號之前的運算子不會有任何作用;具有副作用的預期運算子|
+|[C4548](../error-messages/compiler-warnings/compiler-warning-level-1-c4548.md)(層級 1)|逗號之前的運算式無效; 必須是具有副作用的運算式|
+|[C4549](../error-messages/compiler-warnings/compiler-warning-level-1-c4549.md)(層級 1)|'*operator1*': 逗號之前的運算子不會有任何作用;您想要「*operator2*」嗎？|
+|[C4555](../error-messages/compiler-warnings/compiler-warning-level-1-c4555.md)(層級 1)|運算式無效; 必須是具有副作用的運算式|
+|[C4557](../error-messages/compiler-warnings/compiler-warning-level-3-c4557.md)(層級 3)|' __assume ' 包含效果 '*effect*'|
+|[C4571](../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)(層級 4)|資訊: catch (...) 自 Visual C++ 7.1 後已變更的語法;已不再攔截結構化例外狀況 (SEH)|
+|C4574 (層級 4)|'*identifier*' 已定義為 ' 0 ': 您是指使用 ' #if *identifier*' 嗎？|
+|C4577 (層級 1)|使用了 ' noexcept ', 但未指定例外狀況處理模式;不保證例外狀況的終止。 指定/EHsc|
+|C4582 (層級 4)|'*type*': 未隱含呼叫此函式|
+|C4583 (層級 4)|'*type*': 未隱含呼叫析構函式|
+|C4587 (層級 1)|'*anonymous_structure*': 行為變更: 不再隱含呼叫此函式|
+|C4588 (層級 1)|'*anonymous_structure*': 行為變更: 不再隱含呼叫析構函式|
+|[C4596](../error-messages/compiler-warnings/c4596.md)(層級 4)|'*identifier*': 成員宣告<sup>14.3</sup> <sup>永久</sup>中有不合法的限定名稱|
+|C4598 (層級1和層級 3)|' #include "*標頭*" ': 先行編譯標頭檔中的標頭編號不符合位於該位置<sup>14.3</sup>的目前編譯|
+|至 c4599 (層級 3)|'*選項* *路徑*': 命令列引數數目*號碼*不符合預先編譯的標頭<sup>14.3</sup>|
+|C4605 (層級 1)|在目前的命令列上指定了 '/d*宏*', 但在建立先行編譯標頭檔時未指定|
+|[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)(層級 3)|'*union_member*' 已由初始化運算式清單 '*union_member*'<sup>永久</sup>中的另一個聯集成員所初始化|
+|[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md)(層級 3)|#pragma 警告: 沒有警告編號 '*number*'|
+|[C4623](../error-messages/compiler-warnings/compiler-warning-level-4-c4623.md)(層級 4)|'derived class': 因為無法存取基底類別預設建構函式，所以無法產生預設建構函式|
+|[C4625](../error-messages/compiler-warnings/compiler-warning-level-4-c4625.md)(層級 4)|'derived class': 因為無法存取基底類別複製建構函式，所以無法產生複製建構函式|
+|[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md)(層級 4)|'derived class': 因為無法存取基底類別的指派運算子，所以無法產生指派運算子|
+|[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)(層級 1)|不支援使用 -Ze 的雙拼詞。 字元順序 '*連*詞 ' 未解讀為 '*char*' 的替代 token|
+|[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md)(層級 3)|'*instance*': 本機靜態物件的結構不是安全線程|
+| C4643 (層級 4) | 標準不允許命名空間 std 中的C++向前宣告 ' identifier '。 <sup>15.8</sup> |
+|C4647 (層級 3)|行為變更: __is_pod (*類型*) 在舊版中具有不同的值|
+|C4654 (層級 4)|包含先行編譯標頭檔的程式碼會被忽略。 將程式碼加入先行編譯標頭檔。 <sup>14.1</sup>|
+|[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md)(層級 4)|'*symbol*' 未定義為預處理器宏, 以 ' 0 ' 取代 ' 指示詞'|
+|[C4682](../error-messages/compiler-warnings/compiler-warning-level-4-c4682.md)(層級 4)|'*symbol*': 沒有指定方向參數屬性, 預設為 [in]|
+|[C4686](../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)(層級 3)|'*使用者定義類型*': 行為的可能變更, UDT 傳回呼叫慣例中的變更|
+|[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)(層級 1)|'*function*': 非私用成員的簽章包含元件私用原生類型 '*native_type*'|
+|[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)(層級 4)|'*function*': 未內嵌函式|
+|[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)(層級 3)|在記憶體中儲存 32 位元浮點結果，可能會損失效能|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|「*運算式*」的變動性存取受限於/volatile:\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
+|C4749 (層級 4)|有條件地支援: offsetof 套用至非標準版面配置類型 '*type*'|
+|C4767 (層級 4)|區段名稱 '*symbol*' 長度超過8個字元, 且連結器將截斷|
+|C4768 (層級 3)|忽略連結規格前的 __declspec 屬性|
+|C4774 (層級 4)|'*字串*': 引數編號中預期的格式字串不是字串常*值*|
+|C4777 (層級 4)|'*function*': 格式字串 '*string*' 需要類型 '*type1*' 的引數, 但 variadic 引數*編號*具有類型 '*type2*'|
+|C4786 (層級 3)|'*symbol*': 物件名稱已被截斷為偵錯工具資訊中的 '*number*' 個字元|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md)(層級 4) | 從 '*type*' 隱含轉換為 bool。 可能的資訊遺失<sup>16.0</sup> |
+|[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md)(層級 4)|結構 '*member_name*' 之後加入的 '*bytes*' 位元組填補|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md)(層級 1) | '*member*': 區域類別成員函式沒有主體 |
+|C4826 (層級 2)|從 '*type1*' 到 '*type2*' 的轉換已進行正負號擴充。 這可能會導致非預期的執行時間行為。|
+|C4837 (層級 4)|偵測到三並詞: '？？*字元*' 已取代成 '*字元*'|
+|C4841 (層級 4)|使用的非標準擴充: offsetof 中使用的複合成員指示項|
+|C4842 (層級 4)|套用至使用多重繼承之類型的 ' offsetof ' 結果, 在編譯器版本之間不保證一致|
+|[C4868](../error-messages/compiler-warnings/compiler-warning-c4868.md)(層級 4)|'_file_(*line_number*) ' 編譯器可能不會在括弧初始化清單中強制執行由左至右的評估順序|
+|[C4905](../error-messages/compiler-warnings/compiler-warning-level-1-c4905.md)(層級 1)|寬字串常值轉換成 'LPSTR'|
+|[C4906](../error-messages/compiler-warnings/compiler-warning-level-1-c4906.md)(層級 1)|字串常值轉換成 'LPWSTR'|
+|[C4917](../error-messages/compiler-warnings/compiler-warning-level-1-c4917.md)(層級 1)|'宣告子 ': GUID 只能與類別、介面或命名空間產生關聯|
+|[C4928](../error-messages/compiler-warnings/compiler-warning-level-1-c4928.md)(層級 1)|不合法的 copy-initialization; 已經隱含套用一個以上的使用者定義的轉換|
+|[C4931](../error-messages/compiler-warnings/compiler-warning-level-4-c4931.md)(層級 4)|我們假設已針對 number 位元指標建置類型程式庫|
+|[C4946](../error-messages/compiler-warnings/compiler-warning-level-1-c4946.md)(層級 1)|在相關類別之間使用的 reinterpret_cast: '*class1*' 和 '*class2*'|
+|C4962|'*function*': 特性指引優化已停用, 因為優化導致分析資料變成不一致|
+|[C4986](../error-messages/compiler-warnings/compiler-warning-c4986.md)(層級 4)|'*symbol*': 例外狀況規格與上一個宣告不符|
+|C4987 (層級 4)|使用非標準的擴充：'throw (...)'|
+|C4988 (層級 4)|'*symbol*': 變數已在類別/函式範圍外宣告|
+|C5022|'*type*': 指定了多個移動的構造函式|
+|C5023|'*type*': 指定了多個移動指派運算子|
+|C5024 (層級 4)|'*type*': move 函數已隱含定義為 deleted|
+|C5025 (層級 4)|'*type*': 移動指派運算子已隱含定義為刪除|
+|C5026 (層級1和層級 4)|'*type*': move 函數已隱含定義為 deleted|
+|C5027 (層級1和層級 4)|'*type*': 移動指派運算子已隱含定義為刪除|
+|C5029 (層級 4)|使用非標準的擴充: 中C++的對齊屬性僅適用于變數、資料成員和標記類型|
+|C5031 (層級 4)|#pragma 警告 (pop): 可能不相符, 彈出的警告狀態已推送至不同的檔案<sup>14.1</sup>|
+|C5032 (層級 4)|偵測到 #pragma 警告 (push), 但沒有對應的 #pragma 警告 (pop) <sup>14.1</sup>|
+|C5034|使用內建的 '*內部*' 會導致函式函式編譯為來賓程式碼<sup>15.3</sup>|
+|C5035|使用功能「*功能*」會使函式函式編譯為來賓程式碼<sup>15.3</sup>|
+|C5036 (層級 1)|以/hybrid: x86arm64 '*type1*' 編譯為 '*type2*' <sup>15.3</sup>時的 varargs 函式指標轉換|
+|[C5038](../error-messages/compiler-warnings/c5038.md)(層級 4)|資料成員 '*member1*' 將會在資料成員 '*member2*' <sup>15.3</sup>之後初始化|
+|C5039 (層級 4)|'*function*': 可能擲回函式的指標或參考, 而該函式會傳遞至-EHc 底下的 extern C 函數。 如果此函式擲回例外狀況, 則可能會發生未定義的行為。 <sup>15.5</sup>|
+|C5042 (層級 3)|'*function*': 在區塊範圍中的函式宣告不能在 standard C++中指定為 ' inline ';移除 ' inline ' 規範<sup>15.5</sup>|
+|[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 參數指定<sup>15.7</sup> , 編譯器會插入記憶體負載的 Spectre 緩和措施|
 
-<sup>14.1</sup>這項警告是使用 Visual Studio 2015 Update 1 開始。<br/>
-<sup>14.3</sup>這項警告是在 Visual Studio 2015 Update 3 開始提供。<br/>
-<sup>15.3</sup>這項警告是在 Visual Studio 2017 15.3 版開始提供。<br/>
-<sup>15.5</sup>這項警告是從 Visual Studio 2017 15.5 版中推出。<br/>
-<sup>15.7</sup>這項警告是從 Visual Studio 2017 15.7 版中推出。<br/>
-<sup>15.8</sup>這項警告是在 Visual Studio 2017 版本 15.8 開始提供。<br/>
+<sup>14.1</sup>從 Visual Studio 2015 Update 1 開始可取得此警告。<br/>
+<sup>14.3</sup>從 Visual Studio 2015 Update 3 開始會提供這項警告。<br/>
+<sup>15.3</sup>從 Visual Studio 2017 15.3 版開始會提供此警告。<br/>
+<sup>15.5</sup>從 Visual Studio 2017 15.5 版開始會提供此警告。<br/>
+<sup>15.7</sup>從 Visual Studio 2017 15.7 版開始會提供此警告。<br/>
+<sup>15.8</sup>從 Visual Studio 2017 15.8 版開始會提供此警告。<br/>
 ::: moniker range=">= vs-2019"
-<sup>16.0</sup>這項警告是可用以啟動 Visual Studio 2019 RTM。<br/>
+<sup>16.0</sup>從 VISUAL STUDIO 2019 RTM 開始可取得此警告。<br/>
 ::: moniker-end
-<sup>為永久</sup>此警告為關閉，除非[/permissive--](../build/reference/permissive-standards-conformance.md)設定編譯器選項。<br/>
+<sup>永久</sup>除非已設定[/permissive-](../build/reference/permissive-standards-conformance.md)編譯器選項, 否則此警告是關閉的。
 
-## <a name="warnings-off-by-default-in-earlier-versions"></a>在舊版中預設關閉警告
+## <a name="warnings-off-by-default-in-earlier-versions"></a>先前版本中的警告預設為關閉
 
-根據預設，在 Visual Studio 2015 之前，編譯器的版本，這些警告已關閉：
-
-|||
-|-|-|
-|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md) （層級 2）|'*轉換*': 從'*type1*'to'*type2*'|
-|[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md) （層級 1）|'*變數*': 從指標截斷'*型別*'to'*型別*'|
-|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md) （層級 1）|'*作業*': 從轉換'*type1*'to'*type2*' 更大的|
-|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md) （層級 1）|'*運算子*': 零擴充'*type1*'to'*type2*' 更大的|
-
-這個警告的編譯器，在 Visual Studio 2012 之前的版本中的預設為關閉：
+在 Visual Studio 2015 之前, 這些警告在編譯器版本中預設為關閉:
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) （層級 4）|遺漏類型規範 - 假設為 int。 注意:C 不再支援 default-int|
+|[C4302](../error-messages/compiler-warnings/compiler-warning-level-2-c4302.md)(層級 2)|'*轉換*': 從 '*type1*' 截斷為 '*type2*'|
+|[C4311](../error-messages/compiler-warnings/compiler-warning-level-1-c4311.md)(層級 1)|'*variable*': 從 '*type*' 到 '*type*' 的指標截斷|
+|[C4312](../error-messages/compiler-warnings/compiler-warning-level-1-c4312.md)(層級 1)|'*operation*': 從 '*type1*' 轉換為較大的 '*type2*'|
+|[C4319](../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)(層級 1)|'*operator*': 零將 '*type1*' 延伸至較大的 '*type2*'|
+
+在 Visual Studio 2012 之前, 編譯器的版本中, 預設會關閉此警告:
+
+|||
+|-|-|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)(層級 4)|遺漏類型規範 - 假設為 int。 注意:C 不再支援 default-int|
 
 ## <a name="see-also"></a>另請參閱
 

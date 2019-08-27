@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383668"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456614"
 ---
 # <a name="isbaseof-class"></a>is_base_of 類別
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>參數
 
-*基底*<br/>
+*群體*\
 要測試的基底類別。
 
-*衍生*<br/>
+*源于*\
 要測試的衍生類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*基底*型別的基底類別*衍生*，否則為 false。
+如果類型*基底*為*衍生*類型的基類, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -74,11 +74,11 @@ is_base_of<derived, base> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_convertible 類別](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_convertible 類別](../standard-library/is-convertible-class.md)

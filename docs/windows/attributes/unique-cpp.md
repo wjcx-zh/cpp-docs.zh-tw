@@ -1,17 +1,17 @@
 ---
-title: 唯一 (C++ COM 屬性)
+title: unique (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: c5d7a2d60dc295a4390f777a9ff3718f41321ddd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91e563ed121ba09e0c2ca2660f30c75956232ea0
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407103"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514909"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407103"
 
 ## <a name="remarks"></a>備註
 
-**唯一**C++屬性具有相同的功能[唯一](/windows/desktop/Midl/unique)MIDL 屬性。
+**Unique** C++屬性的功能與[唯一](/windows/win32/Midl/unique)的 MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-請參閱[ref](ref-cpp.md)的範例使用的範例**唯一**。
+如需使用**unique**的範例, 請參閱[ref](ref-cpp.md)範例。
 
 ## <a name="requirements"></a>需求
 
@@ -37,10 +37,10 @@ ms.locfileid: "62407103"
 
 |||
 |-|-|
-|**適用於**|**typedef**， **struct**， **union**，參數的介面，介面方法|
+|**適用於**|**typedef**、 **struct**、 **union**、interface 參數、interface 方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

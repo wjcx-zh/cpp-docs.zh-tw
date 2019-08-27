@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: bca5e912d28124e8d5d6e56cc234ef7bf9bceb89
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451131"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630453"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -65,9 +65,9 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
 
 Microsoft 不再支援 Windows XP，因此即使可在 Visual Studio 中將其設為目標，您也應該逐步淘汰應用程式對該版的支援，並建議使用者採用新版 Windows。
 
-若要解決這個錯誤，請定義 WINVER，並將 [專案屬性]  設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/desktop/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。
+若要解決這個錯誤，請定義 WINVER，並將 [專案屬性]  設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/win32/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。
 
-stdafx.h 檔案包含其中一些巨集定義。
+*stdafx.h* 檔案包含其中一些巨集定義。
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -404,7 +404,7 @@ DWORD dwWindowsVersion = GetVersion();
 
 後面接著大量程式碼，以檢查 dwWindowsVersion 值，判斷我們是否在 Windows 95 上執行，以及 Windows NT 的版本。 由於這些全都過時，因此我們會移除程式碼，並處理這些變數的任何參考。
 
-[Operating system version changes in Windows 8.1 and Windows Server 2012 R2](https://msdn.microsoft.com/library/windows/desktop/dn302074.aspx) (Windows 8.1 和 Windows Server 2012 R2 中的作業系統版本變更) 一文說明這種情況。
+[Operating system version changes in Windows 8.1 and Windows Server 2012 R2](/windows/win32/w8cookbook/operating-system-version-changes-in-windows-8-1) (Windows 8.1 和 Windows Server 2012 R2 中的作業系統版本變更) 一文說明這種情況。
 
 `CSpyApp` 類別中有方法可以查詢作業系統版本：`IsWindows9x`、`IsWindows4x` 和 `IsWindows5x`。 您可以一開始先假設就這個舊版應用程式所使用的技術而言，所要支援的 Windows 版本 (Windows 7 (含) 以後版本) 全部接近 Windows NT 5。 這些方法可用來解決舊版作業系統的限制。 因此，我們變更這些方法，針對 `IsWindows5x` 傳回 TRUE，並針對其他方法傳回 FALSE。
 
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode
 
-請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器]  區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 stdafx.h 標頭檔或其他常見標頭檔的開頭。
+請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器]  區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 *stdafx.h* 標頭檔或其他常見標頭檔的開頭。
 
 現在出現一些連結器錯誤。
 
@@ -520,7 +520,7 @@ msvcrtd.lib;msvcirtd.lib;kernel32.lib;user32.lib;gdi32.lib;advapi32.lib;Debug\Sp
 
 移植到 UTF-16 Unicode 時，我們必須決定是否仍然需要編譯為 MBCS 的選項。  如果想要具有支援 MBCS 的選項，我們應該使用 TCHAR 巨集作為字元類型，其會根據在編譯期間定義的是 \_MBCS 或 \_UNICODE，來解析為 **char** 或 **wchar_t**。 若是切換為 TCHAR 和 TCHAR 版的各式 API，而不是 **wchar_t** 及其相關 API，表示您只要定義 \_MBCS 巨集 (而不是 \_UNICODE)，就能返回程式碼的 MBCS 版本。 除了 TCHAR 之外，還存在廣泛使用之 typedef、巨集和函式的各種 TCHAR 版本。 例如，以 LPCTSTR 取代 LPCSTR 等。 在專案屬性對話方塊中，於 [組態屬性]  的 [一般]  區段中，將 [字元集]  屬性從 [使用 MBCS 字元集]  變更為 [使用 Unicode 字元集]  。 這個設定會影響在編譯期間預先定義的巨集。 同時會影響 UNICODE 巨集和 \_UNICODE 巨集。 這個專案屬性對兩者的影響會一致。 Windows 標頭使用 UNICODE，而 Visual C++ 標頭 (例如 MFC) 使用 \_UNICODE，但是只要定義了其中一個，就也會定義另一個。
 
-目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](https://msdn.microsoft.com/library/cc194801.aspx)。 我們將選擇這個方法。 首先，我們將 [字元集]  屬性變更為 [使用 Unicode 字元集]  並重建專案。
+目前有使用 TCHAR 從 MBCS 移植到 UTF-16 Unicode 的良好[指南](/previous-versions/cc194801(v=msdn.10))。 我們將選擇這個方法。 首先，我們將 [字元集]  屬性變更為 [使用 Unicode 字元集]  並重建專案。
 
 程式碼中有些位置已在使用 TCHAR，顯然是預期最終需要支援 Unicode。 有些位置則未使用。 我們搜尋 CHAR 的執行個體 (即 **char** 的 **typedef**)，並將大多數執行個體取代成 TCHAR。 我們也會尋找 `sizeof(CHAR)`。 每當從 CHAR 變更為 TCHAR 時，通常必須變更為 `sizeof(TCHAR)`，因為這個選項經常會用來判斷字串中的字元數。 在此使用錯誤的類型不會產生編譯器錯誤，因此請特別注意這種情況。
 
@@ -544,7 +544,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
 
 \_T 巨集的效果是根據 MBCS 或 UNICODE 的設定，將字串常值編譯為 **char** 字串或 **wchar_t** 字串。 若要使用 Visual Studio 中的 \_T 來取代所有字串，請先開啟 [快速取代]  (鍵盤：**Ctrl**+**F**) 方塊或 [在檔案中取代]  (鍵盤：**Ctrl**+**Shift**+**H**)，然後選擇 [使用規則運算式]  核取方塊。 輸入 `((\".*?\")|('.+?'))` 做為搜尋文字，以及 `_T($1)` 做為取代文字。 如果某些字串前後已經有 \_T 巨集，這個程序會再新增巨集一次；您也可能發現不需要 \_T 的情況 (例如使用 `#include` 時)，因此最好使用 [取代下一個]  ，而不是 [全部取代]  。
 
-這個特定函式 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。
+這個特定函式 [wsprintf](/windows/win32/api/winuser/nf-winuser-wsprintfw) 實際上是定義於 Windows 標頭中，其文件建議不要使用它，因為可能會發生緩衝區滿溢的情況。 `szTmp` 緩衝區未指定大小，因此該函式無法檢查緩衝區是否可以保留寫入的所有資料。 請參閱下一節有關移植到安全 CRT 的資訊，我們在該節中會修正其他類似問題。 我們最後會以 [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 來取代它。
 
 轉換成 Unicode 的另一個常見錯誤如下。
 

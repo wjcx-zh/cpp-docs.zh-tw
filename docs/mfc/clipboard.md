@@ -8,41 +8,41 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: 5814b2fdfc7fbcaca00037cc64dd71aa27d65cc3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504617"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508925"
 ---
 # <a name="clipboard"></a>剪貼簿
 
-此系列文章說明如何實作 MFC 應用程式中的 Windows 剪貼簿的支援。 兩種方式使用 Windows 剪貼簿：
+這系列文章說明如何在 MFC 應用程式中執行 Windows 剪貼簿的支援。 Windows 剪貼簿的使用方式有兩種:
 
-- 實作標準編輯功能表命令，例如剪下、 複製和貼。
+- 執行標準 [編輯] 功能表命令, 例如剪下、複製和貼上。
 
-- 實作統一的資料傳輸使用拖放拖放 (OLE)。
+- 使用拖放 (OLE) 來執行統一的資料傳輸。
 
-剪貼簿是在來源與目的地之間傳輸資料的標準 Windows 方法。 它也可以在 OLE 作業非常有用。 使用 OLE 的問世，有兩種剪貼簿機制在 Windows 中。 標準的 Windows 剪貼簿 API 仍然可用，但它有已增添 OLE 資料傳輸機制。 OLE 制式資料傳輸 (UDT) 支援剪下、 複製和貼上剪貼簿和拖放。
+剪貼簿是在來源與目的地之間傳送資料的標準 Windows 方法。 它在 OLE 作業中也非常有用。 隨著 OLE 的出現, Windows 中有兩個剪貼簿機制。 標準 Windows 剪貼簿 API 仍然可用, 但已使用 OLE 資料傳輸機制進行補充。 OLE 制式資料傳輸 (UDT) 支援剪下、複製和貼上剪貼簿並拖放。
 
-剪貼簿是共用整個 Windows 工作階段中，因此不需要的控制代碼或類別自己的系統服務。 管理類別成員函式透過剪貼簿[CWnd](../mfc/reference/cwnd-class.md)。
+剪貼簿是整個 Windows 會話共用的系統服務, 因此沒有自己的控制碼或類別。 您可以透過[CWnd](../mfc/reference/cwnd-class.md)類別的成員函式來管理剪貼簿。
 
-## <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [何時使用每個剪貼簿機制](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
+- [使用每個剪貼簿機制的時機](../mfc/clipboard-when-to-use-each-clipboard-mechanism.md)
 
 - [使用傳統的 Windows 剪貼簿 API](../mfc/clipboard-using-the-windows-clipboard.md)
 
 - [使用 OLE 剪貼簿機制](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
 
-- [複製並貼上資料](../mfc/clipboard-copying-and-pasting-data.md)
+- [複製和貼上資料](../mfc/clipboard-copying-and-pasting-data.md)
 
-- [加入其他格式](../mfc/clipboard-adding-other-formats.md)
+- [新增其他格式](../mfc/clipboard-adding-other-formats.md)
 
-- [Windows 剪貼簿](/windows/desktop/dataxchg/clipboard)
+- [Windows 剪貼簿](/windows/win32/dataxchg/clipboard)
 
-- [實作拖放 (OLE)](../mfc/drag-and-drop-ole.md)
+- [執行拖放 (OLE)](../mfc/drag-and-drop-ole.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)
+[使用者介面元素](../mfc/user-interface-elements-mfc.md)

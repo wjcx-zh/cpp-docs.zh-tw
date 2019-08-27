@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383577"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449931"
 ---
 # <a name="messages-class"></a>messages 類別
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
@@ -79,7 +79,7 @@ class messages : public messages_base;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*<br/>
+*_Catval*\
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*<br/>
+*_Catval*\
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會關閉訊息目錄 *_Catval*，其必須已開啟的先前呼叫[do_open](#do_open)。
+Protected 成員函式會關閉訊息目錄 *_Catval*, 這必須由先前的[do_open](#do_open)呼叫所開啟。
 
 *_Catval* 必須是從先前開啟且尚未關閉的目錄取得。
 
@@ -149,25 +149,25 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*<br/>
+*_Catval*\
 識別值，指定所要搜尋的訊息目錄。
 
-*_Set*<br/>
+*設置*\
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message*<br/>
+*_Message*\
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*<br/>
+*_Dfault*\
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會傳回一份 *_Dfault*失敗。 否則，會傳回所指定訊息序列的複本。
+它會在失敗時傳回 *_Dfault*的複本。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會嘗試從訊息目錄中取得訊息序列 *_Catval*。 它可能會使用 *（_s)*，*訊息 （_m)*，並 *_Dfault*在此情況下。
+受保護的成員函式會嘗試從訊息目錄 *_Catval*取得訊息序列。 在此情況下, 它可能會使用 *_ _* 、 *_Message*和 *_Dfault* 。
 
 ### <a name="example"></a>範例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*<br/>
+*_Catname*\
 所要搜尋之目錄的名稱。
 
-*_Loc*<br/>
+*_Loc*\
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -197,7 +197,7 @@ virtual catalog do_open(
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會嘗試開啟訊息目錄，其名稱是 *_Catname*。 它可能會利用地區設定 *_Loc*在此情況下
+受保護的成員函式會嘗試開啟名稱為 *_Catname*的訊息目錄。 它可能會利用地區設定 *_Loc*來進行
 
 傳回值應該用來作為稍後對 [close](#close) 進行呼叫時的引數。
 
@@ -219,21 +219,21 @@ string_type get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*<br/>
+*_Catval*\
 識別值，指定所要搜尋的訊息目錄。
 
-*_Set*<br/>
+*設置*\
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message*<br/>
+*_Message*\
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*<br/>
+*_Dfault*\
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
 
-它會傳回一份 *_Dfault*失敗。 否則，會傳回所指定訊息序列的複本。
+它會在失敗時傳回 *_Dfault*的複本。 否則，會傳回所指定訊息序列的複本。
 
 ### <a name="remarks"></a>備註
 
@@ -254,25 +254,25 @@ protected: messages(
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*<br/>
+*_Locname*\
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
-- 0:物件的存留期是由包含它的地區設定管理。
+- 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \> 1:未定義這些值。
+- \>1:未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
-建構函式會以 **locale::**[facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
+建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
 
 ## <a name="open"></a>  messages::open
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*<br/>
+*_Catname*\
 所要搜尋之目錄的名稱。
 
-*_Loc*<br/>
+*_Loc*\
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -314,6 +314,6 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[messages_base 類別](../standard-library/messages-base-class.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[messages_base 類別](../standard-library/messages-base-class.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -1,17 +1,22 @@
 ---
 title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821576"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299799"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
+::: moniker range="vs-2015"
+
+Visual Studio 2017 及更新版本支援 Linux 專案。
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -27,15 +32,16 @@ ms.locfileid: "66821576"
 
 在 Visual Studio 2019 中，您可以指定不同的目標來進行建置和偵錯。 以 WSL 為目標時，不再需要新增遠端連線或設定 SSH。
 
-[AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) 的支援已整合到適用於 Linux 專案的 Visual Studio 中。
-
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
 ## <a name="visual-studio-setup"></a>Visual Studio 安裝程式
 
-1. 在 Windows 搜尋方塊中鍵入「Visual Studio 安裝程式」：![Windows 搜尋方塊](media/visual-studio-installer-search.png)
+1. 在 Windows 搜尋方塊中鍵入「Visual Studio 安裝程式」：
+
+   ![Windows 搜尋方塊](media/visual-studio-installer-search.png)
+
 2. 在 [應用程式]  結果下方尋找該安裝程式，然後按兩下。 安裝程式開啟後，選擇 [修改]  ，然後按一下 [工作負載]  標籤。向下捲動至 [其他工具組]  ，然後選取 [使用 C++ 進行 Linux 開發]  工作負載。
 
    ![適用於 Linux 開發的 Visual C++ 工作負載](media/linuxworkload.png)
@@ -56,10 +62,10 @@ ms.locfileid: "66821576"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安裝程式：WSL 上的 Ubuntu
 
-在 WSL 上，不需要任何遠端連線。 使用 Visual Studio 自動同步處理 Linux 標頭以獲取 Intellisense 支援時，需要 **zip** 和 **rsync**。 如果還沒有這些必要的應用程式，您可以依下列方式進行安裝：
+當您以 WSL 為目標時，不需要新增遠端連線，也不需要設定 SSH，就可以建置及偵錯。 使用 Visual Studio 自動同步處理 Linux 標頭以獲取 Intellisense 支援時，需要 **zip** 和 **rsync**。 如果還沒有這些必要的應用程式，您可以依下列方式進行安裝：
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 

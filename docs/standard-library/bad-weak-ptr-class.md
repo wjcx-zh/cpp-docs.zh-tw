@@ -7,12 +7,12 @@ helpviewer_keywords:
 - bad_weak_ptr
 - bad_weak_ptr class
 ms.assetid: a09336d5-7237-4480-ab6b-3787e0e6025e
-ms.openlocfilehash: 78438ef3378e5002396eecb32b9b7a76d5b50325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1d536eed6727a5d1e828d358aa6b64521d748b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377487"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454260"
 ---
 # <a name="badweakptr-class"></a>bad_weak_ptr 類別
 
@@ -23,7 +23,6 @@ ms.locfileid: "62377487"
 ```cpp
 class bad_weak_ptr : public std::exception
 {
-public:
     bad_weak_ptr();
     const char *what() throw();
 };
@@ -71,12 +70,6 @@ int main()
 bad weak pointer
 ```
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<memory>
-
-**命名空間：** std
-
 ## <a name="see-also"></a>另請參閱
 
-[weak_ptr 類別](../standard-library/weak-ptr-class.md)<br/>
+[weak_ptr 類別](../standard-library/weak-ptr-class.md)

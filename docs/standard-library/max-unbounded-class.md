@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: ba99d6ed3af34363bf88cde1a40e4bf37841cd8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412913"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447209"
 ---
 # <a name="maxunbounded-class"></a>max_unbounded 類別
 
@@ -35,7 +35,7 @@ class max_unbounded
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[allocated](#allocated)|遞增已配置的記憶體區塊計數。|
 |[deallocated](#deallocated)|遞減已配置的記憶體區塊計數。|
@@ -45,7 +45,7 @@ class max_unbounded
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -65,7 +65,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 它依每次成功呼叫之後呼叫`cache_freelist::allocate`運算子**新**。 引數 *_Nx*運算子所配置之區塊中的記憶體區塊數目**新**。
+此成員函式不會執行任何動作。 這會在每次成功呼叫`cache_freelist::allocate`至 operator **new**之後被呼叫。 引數 *_Nx*是由 operator **new**所配置之區塊中的記憶體區塊數目。
 
 ## <a name="deallocated"></a>  max_unbounded::deallocated
 
@@ -83,7 +83,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 此成員函式會依每次呼叫之後呼叫`cache_freelist::deallocate`運算子**刪除**。 引數 *_Nx*是由運算子解除配置之區塊中的記憶體區塊數目**刪除**。
+此成員函式不會執行任何動作。 每次呼叫`cache_freelist::deallocate`運算子**delete**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
 
 ## <a name="full"></a>  max_unbounded::full
 
@@ -95,11 +95,11 @@ bool full();
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式一律會傳回**false**。
+成員函式一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回 **，則為 true**，`deallocate`如果傳回 false，記憶體區塊放到可用的清單;`deallocate`呼叫運算子**刪除**解除配置的區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true** `deallocate` , 則會將記憶體區塊放在可用的清單上; 如果傳回 false `deallocate` , 則呼叫 operator **delete**來解除配置區塊。
 
 ## <a name="released"></a>  max_unbounded::released
 
@@ -127,4 +127,4 @@ void saved();
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

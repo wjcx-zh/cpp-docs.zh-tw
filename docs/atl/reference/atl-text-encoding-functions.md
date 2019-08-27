@@ -1,5 +1,5 @@
 ---
-title: ATL 文字編碼函式
+title: ATL 文字編碼函數
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
@@ -25,22 +25,22 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: 1e3e44e99e6f3a53a930ed5b3ac1f7cd5ae23063
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1380d33c485c1ac895558bbcaf86c902c6074cd4
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449552"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68375890"
 ---
-# <a name="atl-text-encoding-functions"></a>ATL 文字編碼函式
+# <a name="atl-text-encoding-functions"></a>ATL 文字編碼函數
 
-這些函式支援編碼和解碼的文字。
+這些函數支援文字編碼和解碼。
 
 |||
 |-|-|
 |[AtlGetHexValue](#atlgethexvalue)|呼叫此函式可取得十六進位的數值。|
-|[AtlGetVersion](#atlgetversion)|呼叫此函式可取得您正在使用 ATL 程式庫的版本。  |
-|[AtlHexDecode](#atlhexdecode)|將已編碼為十六進位的文字，例如由先前呼叫的資料字串解碼[AtlHexEncode](#atlhexencode)。|
+|[AtlGetVersion](#atlgetversion)|呼叫此函式可取得您所使用的 ATL 程式庫版本。  |
+|[AtlHexDecode](#atlhexdecode)|將已編碼為十六進位文字的資料字串 (例如先前的[AtlHexEncode](#atlhexencode)呼叫) 解碼。|
 |[AtlHexDecodeGetRequiredLength](#atlhexdecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的十六進位編碼字串解碼的資料。|
 |[AtlHexEncode](#atlhexencode)|呼叫此函式可將一些資料編碼為十六進位文字字串。|
 |[AtlHexEncodeGetRequiredLength](#atlhexencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
@@ -50,21 +50,21 @@ ms.locfileid: "66449552"
 |[BEncodeGetRequiredLength](#bencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
 |[EscapeXML](#escapexml)|呼叫此函式可將無法在 XML 中安全使用的字元轉換成安全的對等字元。|
 |[GetExtendedChars](#getextendedchars)|呼叫此函式可取得字串中的擴充字元數目。|
-|[IsExtendedChar](#isextendedchar)|呼叫此函式，了解所指字元是否為擴充字元 (小於 32、大於 126，而且不是定位字元、換行字元或歸位字元)|
+|[IsExtendedChar](#isextendedchar)|呼叫此函式可找出指定的字元是否為擴充字元 (小於 32, 大於 126, 而不是定位字元、換行字元或回車符)|
 |[QEncode](#qencode)|呼叫此函式可使用 "Q" 編碼方式轉換部分資料。  |
 |[QEncodeGetRequiredLength](#qencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
-|[QPDecode](#qpdecode)|將已編碼為 quoted-printable 格式，例如由先前呼叫的資料字串解碼[QPEncode](#qpencode)。|
+|[QPDecode](#qpdecode)|將已以引號可列印格式編碼的資料字串 (例如先前的[QPEncode](#qpencode)呼叫) 解碼。|
 |[QPDecodeGetRequiredLength](#qpdecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的加上引號可列印編碼字串解碼的資料。|
 |[QPEncode](#qpencode)|呼叫此函式可採用加上引號的可列印格式對一些資料進行編碼。|
 |[QPEncodeGetRequiredLength](#qpencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
-|[UUDecode](#uudecode)|將已使用 uuencode 編碼例如由先前呼叫的資料字串解碼[UUEncode](#uuencode)。|
+|[UUDecode](#uudecode)|將已 uuencode 編碼的資料字串 (例如先前呼叫的[UUEncode](#uuencode)) 解碼。|
 |[UUDecodeGetRequiredLength](#uudecodegetrequiredlength)|呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的 UUENCODE 編碼字串解碼的資料。|
 |[UUEncode](#uuencode)|呼叫此函式可對一些資料進行 UUENCODE 編碼。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlenc.h
+**標頭:** atlenc。h
 
 ## <a name="atlgethexvalue"></a> AtlGetHexValue
 
@@ -77,15 +77,15 @@ inline char AtlGetHexValue(char chIn) throw();
 ### <a name="parameters"></a>參數
 
 *chIn*<br/>
-十六進位字元 '0'-'9'、 'A'-'F' 或 'a'-'f'。
+十六進位字元 ' 0 '-' 9 '、' A'-'z-'F ' 或 ' a'-'z-'F '。
 
 ### <a name="return-value"></a>傳回值
 
-輸入字元的數字值解譯為十六進位的數字。 例如，'0' 的輸入傳回值為 0，而 'A' 的輸入傳回值為 10。 如果輸入的字元不是十六進位數字，則此函式會傳回-1。
+輸入字元的數值, 此值會解讀為十六進位數位。 例如, ' 0 ' 的輸入傳回0的值, 而 ' A ' 的輸入傳回10的值。 如果輸入字元不是十六進位數位, 此函數會傳回-1。
 
-## <a name="atlgetversion"></a> AtlGetVersion
+## <a name="atlgetversion"></a>AtlGetVersion
 
-呼叫此函式可取得您正在使用 ATL 程式庫的版本。
+呼叫此函式可取得您所使用的 ATL 程式庫版本。
 
 ```
 ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
@@ -98,21 +98,21 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 ### <a name="return-value"></a>傳回值
 
-傳回的 ATL 程式庫，您編譯或執行版本為 DWORD 的整數值。
+傳回您要編譯或執行之 ATL 程式庫版本的 DWORD 整數值。
 
 ## <a name="example"></a>範例
 
-此函式應該呼叫，如下所示。
+函式的呼叫方式應如下所示。
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭:** atlbase.h。h
 
 ## <a name="atlhexdecode"></a> AtlHexDecode
 
-將已編碼為十六進位的文字，例如由先前呼叫的資料字串解碼[AtlHexEncode](#atlhexencode)。
+將已編碼為十六進位文字的資料字串 (例如先前的[AtlHexEncode](#atlhexencode)呼叫) 解碼。
 
 ```
 inline BOOL AtlHexDecode(
@@ -125,22 +125,22 @@ inline BOOL AtlHexDecode(
 ### <a name="parameters"></a>參數
 
 *pSrcData*<br/>
-字串，包含要解碼的資料。
+字串, 包含要解碼的資料。
 
 *nSrcLen*<br/>
-中的字元長度*pSrcData*。
+*PSrcData*的長度 (以字元為單位)。
 
 *pbDest*<br/>
-呼叫端配置緩衝區，以接收已解碼的資料。
+呼叫端配置的緩衝區, 用來接收解碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以位元組為單位的長度*pbDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。
+變數的指標, 其中包含*pbDest*的長度 (以位元組為單位)。 如果函式成功, 變數會接收寫入緩衝區的位元組數目。 如果函式失敗, 變數會收到緩衝區所需的長度 (以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
-## <a name="atlhexdecodegetrequiredlength"></a> AtlHexDecodeGetRequiredLength
+## <a name="atlhexdecodegetrequiredlength"></a>AtlHexDecodeGetRequiredLength
 
 呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的十六進位編碼字串解碼的資料。
 
@@ -151,13 +151,13 @@ inline int AtlHexDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-編碼的字串中的字元數。
+編碼字串中的字元數。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，可保存的解碼的字串的位元組數目*nSrcLen*字元。
+緩衝區所需的位元組數目, 可以保存*nSrcLen*字元的已解碼字串。
 
-## <a name="atlhexencode"></a> AtlHexEncode
+## <a name="atlhexencode"></a>AtlHexEncode
 
 呼叫此函式可將一些資料編碼為十六進位文字字串。
 
@@ -172,26 +172,26 @@ int * pnDestLen) throw();
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-包含要編碼的資料緩衝區。
+包含要編碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-要編碼之資料的位元組長度。
+要編碼之資料的長度 (以位元組為單位)。
 
 *szDest*<br/>
-要接收的編碼的資料的呼叫端配置緩衝區。
+呼叫端配置的緩衝區, 用來接收編碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以字元為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。
+變數的指標, 其中包含*szDest*的長度 (以字元為單位)。 如果函式成功, 變數會接收寫入緩衝區的字元數。 如果函式失敗, 變數會接收緩衝區中所需的長度 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-每個位元組的來源資料被編碼為 2 的十六進位字元。
+來源資料的每個位元組都會編碼為2個十六進位字元。
 
-## <a name="atlhexencodegetrequiredlength"></a> AtlHexEncodeGetRequiredLength
+## <a name="atlhexencodegetrequiredlength"></a>AtlHexEncodeGetRequiredLength
 
 呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。
 
@@ -202,11 +202,11 @@ inline int AtlHexEncodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-要編碼的資料的位元組數目。
+要編碼的資料位元組數目。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，無法容納編碼的資料的字元數目*nSrcLen*位元組。
+可能保存*nSrcLen*位元組之編碼資料的緩衝區所需的字元數。
 
 ## <a name="atlhexvalue"></a> AtlHexValue
 
@@ -219,11 +219,11 @@ inline short AtlHexValue(char chIn) throw();
 ### <a name="parameters"></a>參數
 
 *chIn*<br/>
-十六進位字元 '0'-'9'、 'A'-'F' 或 'a'-'f'。
+十六進位字元 ' 0 '-' 9 '、' A'-'z-'F ' 或 ' a'-'z-'F '。
 
 ### <a name="return-value"></a>傳回值
 
-輸入字元的數字值解譯為十六進位的數字。 例如，'0' 的輸入傳回值為 0，而 'A' 的輸入傳回值為 10。 如果輸入的字元不是十六進位數字，則此函式會傳回-1。
+輸入字元的數值, 此值會解讀為十六進位數位。 例如, ' 0 ' 的輸入傳回0的值, 而 ' A ' 的輸入傳回10的值。 如果輸入字元不是十六進位數位, 此函數會傳回-1。
 
 ## <a name="atlunicodetoutf8"></a> AtlUnicodeToUTF8
 
@@ -243,23 +243,23 @@ ATL_NOINLINE inline int AtlUnicodeToUTF8(
 要轉換的 Unicode 字串
 
 *nSrc*<br/>
-以 Unicode 字串的字元長度。
+Unicode 字串的長度 (以字元為單位)。
 
 *szDest*<br/>
-呼叫端配置緩衝區，以接收已轉換的字串。
+呼叫端配置的緩衝區, 用來接收轉換後的字串。
 
 *nDest*<br/>
-以位元組為單位的緩衝區長度。
+緩衝區的長度 (以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已轉換的字串字元數。
+傳回已轉換字串的字元數。
 
 ### <a name="remarks"></a>備註
 
-若要判斷所需的已轉換的字串緩衝區的大小，呼叫此函式傳遞 0 *szDest*並*nDest*。
+若要判斷轉換後的字串所需的緩衝區大小, 請呼叫此函式, 為*szDest*和*nDest*傳遞0。
 
-## <a name="bencode"></a> BEncode
+## <a name="bencode"></a>BEncode
 
 呼叫此函式可使用 "B" 編碼方式轉換部分資料。
 
@@ -275,27 +275,27 @@ inline BOOL BEncode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-包含要編碼的資料緩衝區。
+包含要編碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-要編碼之資料的位元組長度。
+要編碼之資料的長度 (以位元組為單位)。
 
 *szDest*<br/>
-要接收的編碼的資料的呼叫端配置緩衝區。
+呼叫端配置的緩衝區, 用來接收編碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以字元為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。
+變數的指標, 其中包含*szDest*的長度 (以字元為單位)。 如果函式成功, 變數會接收寫入緩衝區的字元數。 如果函式失敗, 變數會接收緩衝區中所需的長度 (以字元為單位)。
 
 *pszCharSet*<br/>
-設定要用於轉換的字元。
+轉換時要使用的字元集。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-"B"編碼配置述 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
+"B" 編碼配置會在 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) 中說明。
 
 ## <a name="bencodegetrequiredlength"></a> BEncodeGetRequiredLength
 
@@ -308,20 +308,20 @@ inline int BEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-要編碼的資料的位元組數目。
+要編碼的資料位元組數目。
 
 *nCharsetLen*<br/>
-以字元為單位設定為使用轉換的字元長度。
+要用於轉換之字元集的長度 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，無法容納編碼的資料的字元數目*nSrcLen*位元組。
+可能保存*nSrcLen*位元組之編碼資料的緩衝區所需的字元數。
 
 ### <a name="remarks"></a>備註
 
-"B"編碼配置述 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
+"B" 編碼配置會在 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) 中說明。
 
-## <a name="escapexml"></a> EscapeXML
+## <a name="escapexml"></a>EscapeXML
 
 呼叫此函式可將無法在 XML 中安全使用的字元轉換成安全的對等字元。
 
@@ -340,27 +340,27 @@ inline int EscapeXML(
 要轉換的字串。
 
 *nSrclen*<br/>
-中要轉換之字串的字元長度。
+要轉換之字串的長度 (以字元為單位)。
 
 *szEsc*<br/>
-呼叫端配置緩衝區，以接收已轉換的字串。
+呼叫端配置的緩衝區, 用來接收轉換後的字串。
 
 *nDestLen*<br/>
-呼叫端配置緩衝區的字元長度。
+呼叫端配置緩衝區的長度 (以字元為單位)。
 
 *dwFlags*<br/>
-描述如何執行轉換所 ATL_ESC 旗標。
+描述如何執行轉換的 ATL_ESC 旗標。
 
-- ATL_ESC_FLAG_NONE 預設行為。 雙引號標記與所有格符號不會轉換。
-- ATL_ESC_FLAG_ATTR 加上引號的標記和所有格符號會轉換成`&quot;`和`&apos;`分別。
+- ATL_ESC_FLAG_NONE 預設行為。 不會轉換引號和單引號。
+- ATL_ESC_FLAG_ATTR 的引號和單引號會分別轉換`&quot;`為`&apos;`和。
 
 ### <a name="return-value"></a>傳回值
 
-以字元為單位的已轉換的字串長度。
+已轉換字串的長度 (以字元為單位)。
 
 ### <a name="remarks"></a>備註
 
-此函式所執行的可能轉換是由表所示：
+此函式所執行的可能轉換如下表所示:
 
 |Source|目的地|
 |------------|-----------------|
@@ -370,7 +370,7 @@ inline int EscapeXML(
 |'|&apos;|
 |"|&quot;|
 
-## <a name="getextendedchars"></a> GetExtendedChars
+## <a name="getextendedchars"></a>GetExtendedChars
 
 呼叫此函式可取得字串中的擴充字元數目。
 
@@ -384,15 +384,15 @@ inline int GetExtendedChars(LPCSTR szSrc, int nSrcLen) throw();
 要分析的字串。
 
 *nSrcLen*<br/>
-中字元的字串長度。
+字串的長度 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-傳回由字串中找到的擴充字元的數目[IsExtendedChar](#isextendedchar)。
+傳回在字串中找到的擴充字元數, 由[IsExtendedChar](#isextendedchar)決定。
 
-## <a name="isextendedchar"></a> IsExtendedChar
+## <a name="isextendedchar"></a>IsExtendedChar
 
-呼叫此函式，了解所指字元是否為擴充字元 (小於 32、大於 126，而且不是定位字元、換行字元或歸位字元)
+呼叫此函式可找出指定的字元是否為擴充字元 (小於 32, 大於 126, 而不是定位字元、換行字元或回車符)
 
 ```
 inline int IsExtendedChar(char ch) throw();
@@ -405,9 +405,9 @@ inline int IsExtendedChar(char ch) throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果字元已延伸，FALSE 否則，則為 TRUE。
+如果已擴充字元, 則為 TRUE, 否則為 FALSE。
 
-## <a name="qencode"></a> QEncode
+## <a name="qencode"></a>QEncode
 
 呼叫此函式可使用 "Q" 編碼方式轉換部分資料。
 
@@ -424,32 +424,32 @@ inline BOOL QEncode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-包含要編碼的資料緩衝區。
+包含要編碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-要編碼之資料的位元組長度。
+要編碼之資料的長度 (以位元組為單位)。
 
 *szDest*<br/>
-要接收的編碼的資料的呼叫端配置緩衝區。
+呼叫端配置的緩衝區, 用來接收編碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以字元為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。
+變數的指標, 其中包含*szDest*的長度 (以字元為單位)。 如果函式成功, 變數會接收寫入緩衝區的字元數。 如果函式失敗, 變數會接收緩衝區中所需的長度 (以字元為單位)。
 
 *pszCharSet*<br/>
-設定要用於轉換的字元。
+轉換時要使用的字元集。
 
 *pnNumEncoded*<br/>
-緩衝區的指標，此變數會在傳回時包含不安全的字元必須轉換的數目。
+傳回之變數的指標, 包含必須轉換的不安全字元數目。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-RFC 2047 中描述的"Q"編碼配置 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
+「Q」編碼配置會在 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) 中說明。
 
-## <a name="qencodegetrequiredlength"></a> QEncodeGetRequiredLength
+## <a name="qencodegetrequiredlength"></a>QEncodeGetRequiredLength
 
 呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。
 
@@ -460,22 +460,22 @@ inline int QEncodeGetRequiredLength(int nSrcLen, int nCharsetLen) throw();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-要編碼的資料的位元組數目。
+要編碼的資料位元組數目。
 
 *nCharsetLen*<br/>
-以字元為單位設定為使用轉換的字元長度。
+要用於轉換之字元集的長度 (以字元為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，無法容納編碼的資料的字元數目*nSrcLen*位元組。
+可能保存*nSrcLen*位元組之編碼資料的緩衝區所需的字元數。
 
 ### <a name="remarks"></a>備註
 
-RFC 2047 中描述的"Q"編碼配置 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt))。
+「Q」編碼配置會在 RFC 2047 ([https://www.ietf.org/rfc/rfc2047.txt](https://www.ietf.org/rfc/rfc2047.txt)) 中說明。
 
-## <a name="qpdecode"></a> QPDecode
+## <a name="qpdecode"></a>QPDecode
 
-將已編碼為 quoted-printable 格式，例如由先前呼叫的資料字串解碼[QPEncode](#qpencode)。
+將已以引號可列印格式編碼的資料字串 (例如先前的[QPEncode](#qpencode)呼叫) 解碼。
 
 ```
 inline BOOL QPDecode(
@@ -489,29 +489,29 @@ inline BOOL QPDecode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-[in]包含要解碼的資料緩衝區。
+在包含要解碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-[in]以位元組為單位的長度*pbSrcData*。
+在*PbSrcData*的長度 (以位元組為單位)。
 
 *szDest*<br/>
-[out]呼叫端配置緩衝區，以接收已解碼的資料。
+脫銷呼叫端配置的緩衝區, 用來接收解碼的資料。
 
 *pnDestLen*<br/>
-[out]指標變數，其中包含以位元組為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。
+脫銷變數的指標, 其中包含*szDest*的長度 (以位元組為單位)。 如果函式成功, 變數會接收寫入緩衝區的位元組數目。 如果函式失敗, 變數會收到緩衝區所需的長度 (以位元組為單位)。
 
 *dwFlags*<br/>
-[in]描述如何執行轉換所 ATLSMTP_QPENCODE 旗標。
+在描述如何執行轉換的 ATLSMTP_QPENCODE 旗標。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-加上引號的可列印的編碼配置在 RFC 2045 中所述 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
+在 RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) 中會描述以引號列印的編碼配置。
 
-## <a name="qpdecodegetrequiredlength"></a> QPDecodeGetRequiredLength
+## <a name="qpdecodegetrequiredlength"></a>QPDecodeGetRequiredLength
 
 呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的加上引號可列印編碼字串解碼的資料。
 
@@ -522,17 +522,17 @@ inline int QPDecodeGetRequiredLength(int nSrcLen) throw();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-編碼的字串中的字元數。
+編碼字串中的字元數。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，可保存的解碼的字串的位元組數目*nSrcLen*字元。
+緩衝區所需的位元組數目, 可以保存*nSrcLen*字元的已解碼字串。
 
 ### <a name="remarks"></a>備註
 
-加上引號的可列印的編碼配置在 RFC 2045 中所述 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
+在 RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) 中會描述以引號列印的編碼配置。
 
-## <a name="qpencode"></a> QPEncode
+## <a name="qpencode"></a>QPEncode
 
 呼叫此函式可採用加上引號的可列印格式對一些資料進行編碼。
 
@@ -548,35 +548,35 @@ inline BOOL QPEncode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-包含要編碼的資料緩衝區。
+包含要編碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-要編碼之資料的位元組長度。
+要編碼之資料的長度 (以位元組為單位)。
 
 *szDest*<br/>
-要接收的編碼的資料的呼叫端配置緩衝區。
+呼叫端配置的緩衝區, 用來接收編碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以字元為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。
+變數的指標, 其中包含*szDest*的長度 (以字元為單位)。 如果函式成功, 變數會接收寫入緩衝區的字元數。 如果函式失敗, 變數會接收緩衝區中所需的長度 (以字元為單位)。
 
 *dwFlags*<br/>
-描述如何執行轉換所 ATLSMTP_QPENCODE 旗標。
+描述如何執行轉換的 ATLSMTP_QPENCODE 旗標。
 
-- ATLSMTP_QPENCODE_DOT 如果句號會出現在一行的開頭，它會加入至輸出，以及編碼。
+- ATLSMTP_QPENCODE_DOT 如果期間出現在行首, 則會將它新增至輸出以及編碼。
 
-- ATLSMTP_QPENCODE_TRAILING_SOFT 附加`=\r\n`編碼的字串。
+- ATLSMTP_QPENCODE_TRAILING_SOFT 會`=\r\n`附加至編碼的字串。
 
-加上引號的可列印的編碼配置所述[RFC 2045](https://www.ietf.org/rfc/rfc2045.txt)。
+以引號列印的編碼配置會在[RFC 2045](https://www.ietf.org/rfc/rfc2045.txt)中說明。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-加上引號的可列印的編碼配置在 RFC 2045 中所述 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
+在 RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) 中會描述以引號列印的編碼配置。
 
-## <a name="qpencodegetrequiredlength"></a> QPEncodeGetRequiredLength
+## <a name="qpencodegetrequiredlength"></a>QPEncodeGetRequiredLength
 
 呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。
 
@@ -587,19 +587,19 @@ inline int QPEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-要編碼的資料的位元組數目。
+要編碼的資料位元組數目。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，無法容納編碼的資料的字元數目*nSrcLen*位元組。
+可能保存*nSrcLen*位元組之編碼資料的緩衝區所需的字元數。
 
 ### <a name="remarks"></a>備註
 
-加上引號的可列印的編碼配置在 RFC 2045 中所述 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt))。
+在 RFC 2045 ([https://www.ietf.org/rfc/rfc2045.txt](https://www.ietf.org/rfc/rfc2045.txt)) 中會描述以引號列印的編碼配置。
 
-## <a name="uudecode"></a> UUDecode
+## <a name="uudecode"></a>UUDecode
 
-將已使用 uuencode 編碼例如由先前呼叫的資料字串解碼[UUEncode](#uuencode)。
+將已 uuencode 編碼的資料字串 (例如先前呼叫的[UUEncode](#uuencode)) 解碼。
 
 ```
 inline BOOL UUDecode(
@@ -612,26 +612,26 @@ inline BOOL UUDecode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-字串，包含要解碼的資料。
+字串, 包含要解碼的資料。
 
 *nSrcLen*<br/>
-以位元組為單位的長度*pbSrcData*。
+*PbSrcData*的長度 (以位元組為單位)。
 
 *pbDest*<br/>
-呼叫端配置緩衝區，以接收已解碼的資料。
+呼叫端配置的緩衝區, 用來接收解碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以位元組為單位的長度*pbDest*。 如果函式成功時，變數會接收寫入緩衝區的位元組數目。 如果函式失敗，變數會收到所需的長度，以位元組為單位的緩衝區。
+變數的指標, 其中包含*pbDest*的長度 (以位元組為單位)。 如果函式成功, 變數會接收寫入緩衝區的位元組數目。 如果函式失敗, 變數會收到緩衝區所需的長度 (以位元組為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。
+這個 uuencoding 的執行會遵循 POSIX P 1003.2 b/D11 規格。
 
-## <a name="uudecodegetrequiredlength"></a> UUDecodeGetRequiredLength
+## <a name="uudecodegetrequiredlength"></a>UUDecodeGetRequiredLength
 
 呼叫此函式可取得以位元組為單位的緩衝區大小，該緩衝區大小可包含從指定長度的 UUENCODE 編碼字串解碼的資料。
 
@@ -642,17 +642,17 @@ inline int UUDecodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-編碼的字串中的字元數。
+編碼字串中的字元數。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，可保存的解碼的字串的位元組數目*nSrcLen*字元。
+緩衝區所需的位元組數目, 可以保存*nSrcLen*字元的已解碼字串。
 
 ### <a name="remarks"></a>備註
 
-這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。
+這個 uuencoding 的執行會遵循 POSIX P 1003.2 b/D11 規格。
 
-## <a name="uuencode"></a> UUEncode
+## <a name="uuencode"></a>UUEncode
 
 呼叫此函式可對一些資料進行 UUENCODE 編碼。
 
@@ -669,38 +669,38 @@ inline BOOL UUEncode(
 ### <a name="parameters"></a>參數
 
 *pbSrcData*<br/>
-包含要編碼的資料緩衝區。
+包含要編碼之資料的緩衝區。
 
 *nSrcLen*<br/>
-要編碼之資料的位元組長度。
+要編碼之資料的長度 (以位元組為單位)。
 
 *szDest*<br/>
-要接收的編碼的資料的呼叫端配置緩衝區。
+呼叫端配置的緩衝區, 用來接收編碼的資料。
 
 *pnDestLen*<br/>
-指標變數，其中包含以字元為單位的長度*szDest*。 如果函式成功時，變數會接收寫入緩衝區的字元數。 如果函式失敗，變數會收到所需的長度，以字元為單位的緩衝區。
+變數的指標, 其中包含*szDest*的長度 (以字元為單位)。 如果函式成功, 變數會接收寫入緩衝區的字元數。 如果函式失敗, 變數會接收緩衝區中所需的長度 (以字元為單位)。
 
 *lpszFile*<br/>
-要加入至標頭中指定 ATLSMTP_UUENCODE_HEADER 時檔案*dwFlags*。
+在*dwFlags*中指定 ATLSMTP_UUENCODE_HEADER 時, 要加入標頭的檔案。
 
 *dwFlags*<br/>
 控制此函式行為的旗標。
 
-- 將編碼 ATLSMTP_UUENCODE_HEADE 標頭。
+- ATLSMTP_UUENCODE_HEADE 標頭將會進行編碼。
 
-- 將編碼 ATLSMTP_UUENCODE_END 結尾。
+- 將會編碼結尾的 ATLSMTP_UUENCODE_END。
 
-- 載滿 ATLSMTP_UUENCODE_DOT 資料將會執行。
+- 將會執行 ATLSMTP_UUENCODE_DOT 資料裝。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則傳回 TRUE 失敗則為 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。
+這個 uuencoding 的執行會遵循 POSIX P 1003.2 b/D11 規格。
 
-## <a name="uuencodegetrequiredlength"></a> UUEncodeGetRequiredLength
+## <a name="uuencodegetrequiredlength"></a>UUEncodeGetRequiredLength
 
 呼叫此函式可取得以字元為單位的緩衝區大小，該緩衝區大小可包含從指定大小的資料解碼的字串。
 
@@ -711,15 +711,15 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 ### <a name="parameters"></a>參數
 
 *nSrcLen*<br/>
-要編碼的資料的位元組數目。
+要編碼的資料位元組數目。
 
 ### <a name="return-value"></a>傳回值
 
-所需的緩衝區，無法容納編碼的資料的字元數目*nSrcLen*位元組。
+可能保存*nSrcLen*位元組之編碼資料的緩衝區所需的字元數。
 
 ### <a name="remarks"></a>備註
 
-這個 uuencoding 實作遵循 POSIX P1003.2b/D11 規格。
+這個 uuencoding 的執行會遵循 POSIX P 1003.2 b/D11 規格。
 
 ## <a name="see-also"></a>另請參閱
 

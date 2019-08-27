@@ -7,40 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
-ms.openlocfilehash: 6fd4e25b3ca7b56e2221cb99b64f7c8e109bf452
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159547"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243765"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt; 運算子
 
-|||
-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試可呼叫的物件是否是空的。
 
 ```cpp
 template <class Fty>
-bool operator==(const function<Fty>& f, null_ptr_type npc);
+    bool operator==(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator==(null_ptr_type npc, const function<Fty>& f);
+    bool operator==(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Fty*<br/>
+*Fty*\
 要包裝的函式類型。
 
-*f*<br/>
+*F*\
 函式物件
 
-*npc*<br/>
+*npc*\
 Null 指標。
 
 ### <a name="remarks"></a>備註
@@ -79,27 +75,27 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試可呼叫的物件是否不是空的。
 
 ```cpp
 template <class Fty>
-bool operator!=(const function<Fty>& f, null_ptr_type npc);
+    bool operator!=(const function<Fty>& f, null_ptr_type npc);
 
 template <class Fty>
-bool operator!=(null_ptr_type npc, const function<Fty>& f);
+    bool operator!=(null_ptr_type npc, const function<Fty>& f);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Fty*<br/>
+*Fty*\
 要包裝的函式類型。
 
-*f*<br/>
+*F*\
 函式物件
 
-*npc*<br/>
+*npc*\
 Null 指標。
 
 ### <a name="remarks"></a>備註
@@ -137,7 +133,3 @@ int main()
 not empty == false
 not empty == true
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<functional>](../standard-library/functional.md)<br/>

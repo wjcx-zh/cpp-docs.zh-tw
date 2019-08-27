@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3591264efec87c2c3454d0f885c19b30b73ae51c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370007"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458432"
 ---
 # <a name="priorityqueue-class"></a>priority_queue 類別
 
@@ -40,20 +40,20 @@ class priority_queue
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型*\
 要存放在 priority_queue 中的項目資料類型。
 
-*Container*<br/>
+*箱*\
 用來實作 priority_queue 的基礎容器類型。
 
-*Compare*<br/>
+*何*\
 此類型提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在 priority_queue 中的相對順序。 這個引數是選用引數，且預設值是二元述詞 `less<typename Container::value_type>`。
 
 ## <a name="remarks"></a>備註
 
-類別的元素`Type`約定的第一個範本中的佇列物件的參數是同義詞[value_type](#value_type) ，而且必須符合的基礎容器類別中的項目類型`Container`所規定第二個樣板參數。 `Type`必須是可指派，，如此就可以複製該類型的物件，並將值指派給該類型的變數。
+在佇列物件的`Type`第一個樣板參數中, 類別約定的元素與[value_type](#value_type)同義, 而且必須符合第二個範本所約定之基礎容器`Container`類別中的元素類型。實參. `Type`必須是可指派的, 如此才能複製該類型的物件, 並將值指派給該類型的變數。
 
-藉由呼叫類別的預存函式物件所控制之序列 priority_queue `Traits`。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。
+Priority_queue 會藉由呼叫類別`Traits`的預存函式物件, 排序它所控制的序列。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。
 
 適用於 priority_queue 的基礎容器類別包括 [deque 類別](../standard-library/deque-class.md)和預設的 [vector 類別](../standard-library/vector-class.md)，或是任何其他支援 `front`、`push_back` 和 `pop_back` 作業，以及隨機存取迭代器的序列容器。 基礎容器類別會封裝在容器介面卡內，它只會公開有限的序列容器成員函式集做為公用的介面。
 
@@ -75,7 +75,7 @@ class priority_queue
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[container_type](#container_type)|提供基底容器以讓 `priority_queue` 調整的類型。|
 |[size_type](#size_type)|不帶正負號的整數類型，可以表示 `priority_queue` 中的項目數。|
@@ -93,7 +93,7 @@ class priority_queue
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<queue>
+**標頭：** \<queue>
 
 **命名空間：** std
 
@@ -242,28 +242,28 @@ priority_queue(InputIterator first, InputIterator last, const Traits& _comp, con
 
 ### <a name="parameters"></a>參數
 
-*_comp*<br/>
+*_comp*\
 類型為 **constTraits** 並用來排序 priority_queue 中項目的比較函式，預設為基底容器的比較函式。
 
-*_Cont*<br/>
+*_Cont*\
 建構的 priority_queue 將成為複本的基底容器。
 
-*right*<br/>
+*再*\
 建構的集合將成為複本的 priority_queue。
 
-*first*<br/>
+*頭*\
 要複製的元素範圍中第一個元素的位置。
 
-*last*<br/>
+*次*\
 超出要複製之元素範圍的第一個元素的位置。
 
 ### <a name="remarks"></a>備註
 
-每個第三個建構函式指定空的初始 priority_queue，第二個指定的比較函式類型 (`comp`) 來明確建立的項目，且第三個順序指定`container_type`(`_Cont`) 使用。 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。
+前三個函式中的每一個都會指定空的初始 priority_queue, 第二個則指定要`comp`用來建立元素順序的比較函數 () 類型, 而第三個是明確指定`container_type`要`_Cont`使用的 ()。 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。
 
-第四個建構函式會指定 priority_queue 的複本*右*。
+第四個函式會指定 priority_queue*許可權*的複本。
 
-最後三個建構函式會將範圍複製\[*第一次*，*最後一個*) 的某個容器並使用值來初始化 priority_queue 以越來越明確指定的型別類別的比較函式`Traits`和`container_type`。
+最後三個函式會複製\[某些容器的*第一個*、*最後一個*範圍, 並使用這些值來初始化 priority_queue, 並在指定類別`Traits`的比較函式類型和時增加越來越明確`container_type`.
 
 ### <a name="example"></a>範例
 
@@ -386,7 +386,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 加入到 priority_queue 頂端的項目。
 
 ### <a name="remarks"></a>備註
@@ -492,7 +492,7 @@ const_reference top() const;
 
 ### <a name="return-value"></a>傳回值
 
-最大的項目，取決於參考`Traits`函式、 priority_queue 的物件。
+最大元素的參考, 由`Traits`函式所決定, 也就是 priority_queue 的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -574,5 +574,5 @@ The element at the top of the priority_queue is 69.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: 安全程式庫：C++ 標準程式庫
+title: 安全程式庫:C++ 標準程式庫
 ms.date: 11/04/2016
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220463"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454553"
 ---
-# <a name="safe-libraries-c-standard-library"></a>安全程式庫：C++ 標準程式庫
+# <a name="safe-libraries-c-standard-library"></a>安全程式庫:C++ 標準程式庫
 
-數個增強功能已對 Microsoft 所隨附的程式庫C++，包括C++標準程式庫，使其更安全。
+Microsoft C++隨附的程式庫有幾項增強功能, 包括C++標準程式庫, 讓它們更安全。
 
 C++ 標準程式庫中有幾個方法已知可能不安全，因為這些方法可能導致緩衝區溢位或其他程式碼缺失。 建議您不要使用這些方法，目前已建立更安全的新方法來取代這些方法。 這些新方法的結尾全部都是 `_s`。
 
@@ -46,4 +46,4 @@ C++ 標準程式庫中有幾個方法已知可能不安全，因為這些方法�
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)<br/>
+[C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)

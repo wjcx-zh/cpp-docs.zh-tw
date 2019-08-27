@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336627"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452799"
 ---
 # <a name="iscopyconstructible-class"></a>is_copy_constructible 類別
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是複製建構函式，否則為 false 的類別。
+如果類型*Ty*是具有複製參數的類別, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -69,10 +69,10 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

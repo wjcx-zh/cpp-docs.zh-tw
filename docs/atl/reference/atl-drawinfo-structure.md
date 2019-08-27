@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ATL_DRAWINFO structure
 ms.assetid: dd2e2aa8-e8c5-403b-b4df-35c0f6f57fb7
-ms.openlocfilehash: 77ef56f73be1ed9ddfc63c459b6bab3ad4decb3f
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 728a7eed418a6600c9247b91ff7b777dd458e621
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503421"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69498013"
 ---
-# <a name="atldrawinfo-structure"></a>ATL_DRAWINFO 結構
+# <a name="atl_drawinfo-structure"></a>ATL_DRAWINFO 結構
 
-包含用於轉譯成各種不同的目標，例如印表機、 中繼檔或 ActiveX 控制項的資訊。
+包含用來轉譯成各種目標的資訊, 例如印表機、中繼檔或 ActiveX 控制項。
 
 ## <a name="syntax"></a>語法
 
@@ -42,56 +42,56 @@ struct ATL_DRAWINFO {
 ## <a name="members"></a>成員
 
 `cbSize`<br/>
-結構，以位元組為單位的大小。
+結構的大小 (以位元組為單位)。
 
 `dwDrawAspect`<br/>
-指定目標是要表示的方式。 表示可以包含內容、 圖示、 縮圖或列印的文件。 如需可能值的清單，請參閱 < [DVASPECT](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)並[DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2)。
+指定要如何表示目標。 標記法可以包含內容、圖示、縮圖或列印檔案。 如需可能值的清單, 請參閱[DVASPECT](/windows/win32/api/wtypes/ne-wtypes-dvaspect)和[DVASPECT2](/windows/win32/api/ocidl/ne-ocidl-dvaspect2)。
 
 `lindex`<br/>
-目標進行繪製作業的相關部分。 它的解譯方式中的值而異`dwDrawAspect`成員。
+繪製作業的相關目標部分。 其轉譯會根據`dwDrawAspect`成員中的值而有所不同。
 
 `ptd`<br/>
-指標[DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice)可根據指定的外觀的繪圖最佳化的結構。 請注意，較新的物件和支援最佳化的繪圖介面的容器支援以及這個成員。 較舊的物件和一律不支援最佳化的繪圖介面的容器指定這個成員為 NULL。
+[DVTARGETDEVICE](/windows/win32/api/objidl/ns-objidl-dvtargetdevice)結構的指標, 可根據指定的外觀啟用繪製優化。 請注意, 支援優化繪圖介面的較新物件和容器也支援此成員。 較舊的物件和不支援優化繪圖介面的容器, 一律會為這個成員指定 Null。
 
 `hicTargetDev`<br/>
-所指向的目標裝置的資訊內容`ptd`物件可以從中擷取裝置度量資訊，並測試裝置的功能。 如果`ptd`為 NULL，該物件應該忽略中的值`hicTargetDev`成員。
+目標裝置`ptd`的資訊內容, 物件可以從中解壓縮裝置計量並測試裝置的功能。 如果`ptd`為 Null, 則物件應忽略`hicTargetDev`成員中的值。
 
 `hdcDraw`<br/>
-在其上繪製的裝置內容。 無視窗的物件，如`hdcDraw`成員是在`MM_TEXT`對應模式比對包含視窗的用戶端座標其邏輯座標。 此外，裝置內容應該在相同的狀態是通常傳遞`WM_PAINT`訊息。
+要在其上繪製的裝置內容。 對於無視窗物件, `hdcDraw`成員是`MM_TEXT`在對應模式中, 其邏輯座標符合包含視窗的用戶端座標。 此外, 裝置內容的狀態應該與一般由`WM_PAINT`訊息傳遞的相同。
 
 `prcBounds`<br/>
-指標[RECTL](/previous-versions//dd162907\(v=vs.85\))結構，指定矩形上`hdcDraw`，在應該繪製的物件。 這個成員控制項的定位和延伸的物件。 這個成員應該是 NULL，來繪製無視窗的就地使用中的物件。 在每個其他情況下，NULL 不是合法的值，並應該會導致`E_INVALIDARG`錯誤碼。 如果容器會將非 NULL 值傳遞至無視窗的物件，該物件應該轉譯要求的長寬成指定的裝置內容和矩形。 容器可以要求從無視窗物件來呈現物件的第二個 」、 「 非作用中的檢視，或列印物件。
+[RECTL](/previous-versions//dd162907\(v=vs.85\))結構的指標, 指定在和上`hdcDraw`應該繪製物件的矩形。 這個成員控制物件的定位和延展。 這個成員應該是 Null, 才能繪製無視窗的就地作用中物件。 在其他所有情況下, Null 不是合法的值, 而且應該會`E_INVALIDARG`產生錯誤碼。 如果容器將非 Null 值傳遞給無視窗物件, 物件應該會將要求的外觀轉譯為指定的裝置內容和矩形。 容器可以從無視窗物件要求此項, 以轉譯物件的第二個非現用視圖, 或列印物件。
 
 `prcWBounds`<br/>
-如果`hdcDraw`中繼檔裝置內容 (請參閱 < [GetDeviceCaps](/windows/desktop/api/wingdi/nf-wingdi-getdevicecaps) Windows SDK 中)，這是一個指向`RECTL`結構基礎中繼檔中指定的週框。 矩形結構包含視窗範圍和視窗原點。 這些值可用於繪製中繼檔。 所表示的矩形`prcBounds`在此為巢狀`prcWBounds`矩形; 它們是相同的座標空間中。
+如果`hdcDraw`是中繼檔裝置內容 (請參閱 Windows SDK 中的[GetDeviceCaps](/windows/win32/api/wingdi/nf-wingdi-getdevicecaps) ), 這是`RECTL`結構的指標, 指定基礎中繼檔中的周框。 矩形結構包含視窗範圍和視窗原點。 這些值適用于繪製中繼檔。 所表示`prcBounds`的矩形會嵌套在這個`prcWBounds`矩形內部, 它們位於相同的座標空間中。
 
 `bOptimize`<br/>
-如果控制項的繪圖是要最佳化，否則為 0，非零值。 當您完成時，如果最佳化的繪圖，就會自動還原裝置內容的狀態呈現。
+如果要優化控制項的繪製, 則為非零, 否則為0。 如果繪圖已優化, 則當您完成轉譯時, 會自動還原裝置內容的狀態。
 
 `bZoomed`<br/>
-如果目標有縮放因數，否則為 0，非零值。 縮放因數會儲存在`ZoomNum`。
+如果目標具有縮放因數, 則為非零, 否則為0。 縮放因數會儲存在中`ZoomNum`。
 
 `bRectInHimetric`<br/>
-非零的尺寸`prcBounds`位於 HIMETRIC，否則為 0。
+如果的維度`prcBounds`位於 HIMETRIC 中, 則為非零, 否則為0。
 
 `ZoomNum`<br/>
-寬度和轉譯之物件的矩形的高度。 縮放因數，沿著 x 軸 （其目前的範圍內的物件的原始大小比例） 的目標是 windows 7`ZoomNum.cx`的值來分割`ZoomDen.cx`。 沿 y 軸的縮放因數是以類似的方式來達成。
+呈現物件之矩形的寬度和高度。 目標的縮放因數沿著 X 軸 (物件的自然大小和其目前範圍的比例) 是`ZoomNum.cx`值除以的`ZoomDen.cx`值。 沿著 y 軸的縮放因數是以類似的方式來達成。
 
 `ZoomDen`<br/>
-實際寬度和高度的目標。
+目標的實際寬度和高度。
 
 ## <a name="remarks"></a>備註
 
-此結構的典型用法就是資訊的擷取期間的目標物件呈現。 例如，您可以從 ATL_DRAWINFO 擷取值內您多載[CComControlBase::OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)。
+此結構的一般用法是在轉譯目標物件期間的資訊的抓取。 例如, 您可以從[CComControlBase:: OnDrawAdvanced](ccomcontrolbase-class.md#ondrawadvanced)的多載內部, 抓取 ATL_DRAWINFO 的值。
 
-此結構會儲存用來呈現物件的目標裝置之外觀的相關資訊。 提供的資訊可以用於繪製到螢幕、 印表機或甚至在中繼檔。
+這個結構會儲存用來呈現目標裝置之物件外觀的相關資訊。 提供的資訊可用於繪製到螢幕、印表機, 甚至是中繼檔。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlctl.h
+**標頭:** atlctl。h
 
 ## <a name="see-also"></a>另請參閱
 
 [類別和結構](../../atl/reference/atl-classes.md)<br/>
-[IViewObject::Draw](/windows/desktop/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
+[IViewObject::Draw](/windows/win32/api/oleidl/nf-oleidl-iviewobject-draw)<br/>
 [CComControlBase::OnDrawAdvanced](../../atl/reference/ccomcontrolbase-class.md#ondrawadvanced)

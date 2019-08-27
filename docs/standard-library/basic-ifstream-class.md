@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::basic_ifstream [C++], rdbuf
 - std::basic_ifstream [C++], swap
 ms.assetid: 366cd9a7-efc4-4b7f-ba10-c8271e47ffcf
-ms.openlocfilehash: 30ae1e6384b3861bc4324d42f095516f80dce6e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e5e22c837ca2d6389591cec6d2cdd256ca50b1a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400678"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455509"
 ---
 # <a name="basicifstream-class"></a>basic_ifstream 類別
 
@@ -36,10 +36,10 @@ class basic_ifstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 檔案緩衝區的基本項目。
 
-*Tr*<br/>
+*Tr*\
 檔案緩衝區之基本元素的特性 (通常是 `char_traits`< `Elem`>)。
 
 ## <a name="remarks"></a>備註
@@ -91,7 +91,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[close](#close)|關閉檔案。|
 |[is_open](#is_open)|判斷檔案是否為開啟。|
@@ -107,7 +107,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<fstream>
+**標頭：** \<fstream>
 
 **命名空間：** std
 
@@ -133,13 +133,13 @@ basic_ifstream(basic_ifstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*_Filename*<br/>
+*_Filename*\
 要開啟之檔案的名稱。
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*<br/>
+*_Prot*\
 預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
 
 ### <a name="remarks"></a>備註
@@ -185,7 +185,7 @@ void close();
 
 ### <a name="remarks"></a>備註
 
-成員函式呼叫[rdbuf](#rdbuf) **->** [關閉](../standard-library/basic-filebuf-class.md#close)。
+此成員函式會呼叫[rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close)。
 
 ### <a name="example"></a>範例
 
@@ -237,22 +237,22 @@ void open(
 
 ### <a name="parameters"></a>參數
 
-*_Filename*<br/>
+*_Filename*\
 要開啟之檔案的名稱。
 
-*_Mode*<br/>
+*_Mode*\
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*_Prot*<br/>
+*_Prot*\
 預設檔案開啟保護，相當於 [_fsopen、_wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md) 中的 `shflag` 參數。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果開啟失敗，函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)，這可能會擲回 ios_base:: failure 例外狀況。
+此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果 open 失敗, 此函式[](../standard-library/basic-ios-class.md#setstate)會呼叫`failbit`setstate (), 這可能會擲回 ios_base:: 失敗例外狀況。
 
 ### <a name="example"></a>範例
 
-請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open)如需範例，會使用`open`。
+如需使用`open`的範例, 請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -264,7 +264,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 `basic_ifstream` 物件的右值參考。
 
 ### <a name="return-value"></a>傳回值
@@ -273,7 +273,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會取代物件的內容使用的內容*右*，視為右值參考。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成員運算子會使用*right*的內容來取代物件的內容, 並將其視為右值參考。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 
@@ -301,15 +301,15 @@ void swap(basic_ifstream& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 對另一個資料流緩衝區的參考。
 
 ### <a name="remarks"></a>備註
 
-此成員函式交換的內容，此物件的內容*右*。
+成員函式會將此物件的內容與*右邊*的內容交換。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

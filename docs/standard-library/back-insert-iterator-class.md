@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376441"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459533"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator 類別
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>參數
 
-*Container*<br/>
+*箱*\
 容器的類型，其項目後端要由 `back_insert_iterator` 插入。
 
 ## <a name="remarks"></a>備註
@@ -45,7 +45,7 @@ class back_insert_iterator;
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[container_type](#container_type)|類型，提供 `back_insert_iterator` 的容器。|
 |[reference](#reference)|類型，提供 `back_insert_iterator` 的參考。|
@@ -54,9 +54,9 @@ class back_insert_iterator;
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `i`  =  `x`的後端插入。|
+|[operator*](#op_star)|取值運算子, 用來為後置插入\*執行輸出反覆運算器運算式 =  `i`。 `x`|
 |[operator++](#op_add_add)|將 `back_insert_iterator` 遞增至可儲存值的下一個位置。|
-|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式\* `i`  =  `x`的後端插入。|
+|[operator=](#op_eq)|指派運算子, 用來針對後置插入\*執行輸出反覆運算器運算式 =  `i`。 `x`|
 
 ## <a name="requirements"></a>需求
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>參數
 
-*_Cont*<br/>
+*_Cont*\
 `back_insert_iterator` 要在其中插入元素的容器。
 
 ### <a name="return-value"></a>傳回值
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 要插入容器的值。
 
 ### <a name="return-value"></a>傳回值
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

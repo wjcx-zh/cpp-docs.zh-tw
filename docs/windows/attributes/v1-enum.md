@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - v1_enum attribute
 ms.assetid: 2fe92d92-81b9-4a1c-b6ce-437d0eb770ca
-ms.openlocfilehash: 08654eed7ad467dc22d2cbbf811c9169e5292f16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c67f6303e73da42db5efd006bd6cdf3ded5bb8cf
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407142"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513865"
 ---
-# <a name="v1enum"></a>v1_enum
+# <a name="v1_enum"></a>v1_enum
 
-指示指定的列舉型別會傳輸為 32 位元的實體，而不是 16 位元的預設值。
+指示指定的列舉型別會以32位實體而非16位的預設值來傳送。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407142"
 
 ## <a name="remarks"></a>備註
 
-**V1_enum** C++屬性具有相同的功能[v1_enum](/windows/desktop/Midl/v1-enum) MIDL 屬性。
+**V1_enum** C++屬性具有與[v1_enum](/windows/win32/Midl/v1-enum) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例將示範用法**v1_enum**:
+下列程式碼示範如何使用**v1_enum**:
 
 ```cpp
 // cpp_attr_ref_v1_enum.cpp
@@ -48,10 +48,10 @@ enum eList {
 
 |||
 |-|-|
-|**適用於**|列舉型別|
+|**適用於**|列舉類型|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

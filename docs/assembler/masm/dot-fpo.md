@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b793b3efa72a676b800c10b98ea06001ddcf10d5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204054"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491427"
 ---
 # <a name="fpo"></a>.FPO
 
-。FPO 指示詞會控制偵錯記錄至.debug$ F 區段或區段的發出。
+該.FPO 指示詞會控制將 debug 記錄發出至 debug $ F 區段或區段。
 
 ## <a name="syntax"></a>語法
 
-> FPO (*cdwLocals*， *cdwParams*， *cbProlog*， *cbRegs*， *fUseBP*， *cbFrame*)
+> FPO (*cdwLocals*、 *cdwParams*、 *cbProlog*、 *cbRegs*、 *fUseBP*、 *cbFrame*)
 
 ### <a name="parameters"></a>參數
 
 *cdwLocals*<br/>
-本機變數，不帶正負號的 32 位元值數目。
+本機變數的數目, 不帶正負號的32位值。
 
 *cdwParams*<br/>
-DWORD，不帶正負號的 16 位元值參數的大小。
+DWORD 中的參數大小, 不帶正負號的16位值。
 
 *cbProlog*<br/>
-在函式初構程式碼，不帶正負號的 8 位元值的位元組數目。
+函數初構程式碼中的位元組數目, 不帶正負號的8位值。
 
 *cbRegs*<br/>
-數字儲存的暫存器。
+已儲存的數位暫存器。
 
 *fUseBP*<br/>
-指出是否已配置的 ebp 暫存器。 0 或 1。
+指出是否已配置 EBP 暫存器。 為0或1。
 
 *cbFrame*<br/>
-指出畫面格型別。  請參閱[FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data)如需詳細資訊。
+表示框架類型。  如需詳細資訊, 請參閱[FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 。
 
 ## <a name="see-also"></a>另請參閱
 

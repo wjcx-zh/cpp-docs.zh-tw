@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
-ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
+ms.openlocfilehash: 2cf9928d56c564edc0e3bda1935eb11004000985
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64877395"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861125"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式 (C++)
 
@@ -24,15 +24,15 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ## <a name="prerequisites"></a>必要條件
 
-- 執行 Microsoft Windows 7 或更新版本的電腦。 我們建議的最佳開發體驗的 Windows 10。
+- 執行 Microsoft Windows 7 或更新版本的電腦。 建議使用 Windows 10 以獲得最佳開發體驗。
 
-- Visual Studio 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確定**使用的桌面開發C++** 會檢查工作負載。 別擔心，如果您在安裝 Visual Studio 時，未安裝此工作負載。 您可以再次執行安裝程式，並立即安裝。
+- Visual Studio 的複本。 如需如何下載並安裝 Visual Studio 的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。 當您執行安裝程式時，請確認已選取**使用 C++ 的桌面開發**工作負載。 如果您在安裝 Visual Studio 時未安裝此工作負載，也不用擔心。 您可以再次執行安裝程式並立即安裝。
 
-   ![使用的桌面開發C++ ](../build/media/desktop-development-with-cpp.png "使用的桌面開發C++")
+   ![使用 C++ 的桌面開發](../build/media/desktop-development-with-cpp.png "使用 C++ 的桌面開發")
 
-- 使用 Visual Studio IDE 的基本概念了解。 如果您已使用之前的 Windows 傳統型應用程式，您可能可以保留。 如需簡介，請參閱[Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
+- 了解使用 Visual Studio IDE 的基本概念。 如果您先前使用過 Windows 傳統型應用程式，您應能輕鬆跟上。 如需簡介，請參閱 [Visual Studio IDE 功能導覽](/visualstudio/ide/visual-studio-ide)。
 
-- 足夠的基本概念了解C++若要跟著做的語言。 別擔心，我們不會有太過複雜。
+- 了解足夠的 C++ 語言基本概念。 別擔心，我們不會進行太複雜的操作。
 
 ## <a name="create-a-windows-desktop-project"></a>建立 Windows 桌面專案
 
@@ -42,21 +42,21 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>若要在 Visual Studio 2019 建立 Windows 桌面專案
 
-1. 從主功能表中，選擇**檔案** > **新增** > **專案**開啟**建立新的專案**對話方塊方塊。
+1. 從主功能表，選擇 [檔案]  > [新增]  > [專案]  ，以開啟 [建立新專案]  對話方塊。
 
-1. 在對話方塊頂端，設定**語言**來**C++**，將**平台**至**Windows**，並將**專案類型**要**桌面**。 
+1. 在對話方塊頂端，設定**語言**來**C++** ，將**平台**至**Windows**，並將**專案類型**要**桌面**。 
 
-1. 從 [專案類型的篩選清單，選擇**Windows Desktop 精靈**然後選擇**下一步]**。 在下一步 頁面中，輸入專案名稱，然後指定專案位置，如有需要。
+1. 從 [專案類型的篩選清單，選擇**Windows Desktop 精靈**然後選擇**下一步]** 。 在下一步 頁面中，輸入專案名稱，然後指定專案位置，如有需要。
 
-1. 選擇**建立**按鈕，以建立專案。
+1. 選擇 [建立]  按鈕以建立專案。
 
-1. **Windows 桌面專案** 對話方塊隨即顯示。 底下**應用程式類型**，選取**Windows 應用程式 (.exe)**。 在 [其他選項] 下，選取 [空專案] 。 選擇**確定**建立專案。
+1. **Windows 桌面專案** 對話方塊隨即顯示。 底下**應用程式類型**，選取**Windows 應用程式 (.exe)** 。 在 [其他選項]  下，選取 [空專案]  。 選擇**確定**建立專案。
 
 1. 中**方案總管 中**，以滑鼠右鍵按一下**DesktopApp**專案，選擇**新增**，然後選擇**新項目**。
 
    ![新增項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 專案加入新的項目")
 
-1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
+1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)]  。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]  。
 
    ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 專案新增.cpp 檔案")
 
@@ -68,15 +68,15 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>若要在 Visual Studio 2017 中建立 Windows 桌面專案
 
-1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
+1. 在 [檔案]  功能表上，選擇 [新增]  然後選擇 [專案]  。
 
 1. 在**新的專案**對話方塊中，在左窗格中，展開**已安裝** > **Visual C++** ，然後選取**Windows Desktop**. 在中間窗格中，選取**Windows Desktop 精靈**。
 
-   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
+   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定]  。
 
    ![將專案命名為 DesktopApp](../build/media/desktop-app-new-project-name-153.png "DesktopApp 專案的名稱")
 
-1. 在 [ **Windows 桌面專案**] 對話方塊底下**應用程式類型**，選取**Windows 應用程式 (.exe)**。 在 [其他選項] 下，選取 [空專案] 。 選擇**確定**建立專案。
+1. 在 [ **Windows 桌面專案**] 對話方塊底下**應用程式類型**，選取**Windows 應用程式 (.exe)** 。 在 [其他選項]  下，選取 [空專案]  。 選擇**確定**建立專案。
 
    ![在 Windows 桌面專案精靈 建立 DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "Windows 桌面專案精靈 建立 DesktopApp")
 
@@ -84,7 +84,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    ![新增項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-153.gif "DesktopApp 專案加入新的項目")
 
-1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
+1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)]  。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]  。
 
    ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-153.png "DesktopApp 專案新增.cpp 檔案")
 
@@ -96,19 +96,19 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 ### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>若要在 Visual Studio 2015 中建立 Windows 桌面專案
 
-1. 在 [檔案] 功能表上，選擇 [新增] 然後選擇 [專案]。
+1. 在 [檔案]  功能表上，選擇 [新增]  然後選擇 [專案]  。
 
-1. 在 **新的專案**對話方塊中，在左窗格中，展開**已安裝** > **範本** > **Visual C++** ，然後選取**Win32**。 在中間窗格選取 [Win32 專案] 。
+1. 在 **新的專案**對話方塊中，在左窗格中，展開**已安裝** > **範本** > **Visual C++** ，然後選取**Win32**。 在中間窗格選取 [Win32 專案]  。
 
-   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定] 。
+   在 **名稱**方塊中，輸入專案名稱，例如*DesktopApp*。 選擇 [確定]  。
 
    ![將專案命名為 DesktopApp](../build/media/desktop-app-new-project-name-150.png "DesktopApp 專案的名稱")
 
-1. 在 [**概觀**頁**Win32 應用程式精靈**，選擇**下一步]**。
+1. 在 [**概觀**頁**Win32 應用程式精靈**，選擇**下一步]** 。
 
    ![在 Win32 應用程式精靈概觀中建立 DesktopApp](../build/media/desktop-app-win32-wizard-overview-150.png "DesktopApp 在 Win32 應用程式精靈概觀")
 
-1. 在 **應用程式設定**頁面的 **應用程式類型**，選取**Windows 應用程式**。 在 [其他選項] 下，選取 [空專案] 。 選擇**完成**建立專案。
+1. 在 **應用程式設定**頁面的 **應用程式類型**，選取**Windows 應用程式**。 在 [其他選項]  下，選取 [空專案]  。 選擇**完成**建立專案。
 
    ![在 Win32 應用程式精靈設定中建立 DesktopApp](../build/media/desktop-app-win32-wizard-settings-150.png "DesktopApp 在 Win32 應用程式精靈設定")
 
@@ -116,7 +116,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
    ![新增項目至 DesktopApp 專案](../build/media/desktop-app-project-add-new-item-150.gif "DesktopApp 專案加入新的項目")
 
-1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)] 。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]。
+1. 在 [加入新項目]  對話方塊中，選取 [C++ 檔 (.cpp)]  。 在 **名稱**方塊中，輸入檔案名稱，例如*HelloWindowsDesktop.cpp*。 選擇 [新增]  。
 
    ![將.cpp 檔案，加入 DesktopApp 專案](../build/media/desktop-app-add-cpp-file-150.png "DesktopApp 專案新增.cpp 檔案")
 
@@ -589,7 +589,7 @@ Windows API （也稱為 Win32 API、 Windows 桌面 API 和 Windows 的傳統 A
 
 1. 若要執行的應用程式，請按**F5**。 視窗，其中包含文字"Hello，Windows desktop"！ 應該會出現在顯示畫面的左上角。
 
-   ![執行 DesktopApp 專案](../build/media/desktop-app-project-run-157.png "執行 DesktopApp 專案")
+   ![執行 DesktopApp 專案](../build/media/desktop-app-project-run-157.PNG "執行 DesktopApp 專案")
 
 恭喜您！ 當您完成本逐步解說，並建置傳統 Windows 桌面應用程式。
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::gamma_distribution [C++], param_type
 - std::gamma_distribution [C++], param_type
 ms.assetid: 2a6798ac-6152-41d7-8ef6-d684d92f1572
-ms.openlocfilehash: 06a7cbc8b054075f881474dbf49ad3bd42f0a9dc
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ac6a82cc7f342f6a96b5f79f36b23d23a1d27097
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450678"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453943"
 ---
 # <a name="gammadistribution-class"></a>gamma_distribution 類別
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生值，使用者指定的浮點類型**double**如果未提供，分佈根據 Gamma 分佈進行分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之浮點類型值的分佈, 或如果沒有提供, 則為**double**類型, 這是根據 Gamma 散發散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -199,13 +199,13 @@ explicit gamma_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*alpha*<br/>
+*分量*\
 `alpha` 分佈參數。
 
-*beta*<br/>
+*試用版*\
 `beta` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -234,13 +234,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*alpha*<br/>
+*分量*\
 `alpha` 分佈參數。
 
-*beta*<br/>
+*試用版*\
 `beta` 分佈參數。
 
-*right*<br/>
+*再*\
 要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註
@@ -251,4 +251,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

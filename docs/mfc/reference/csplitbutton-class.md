@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a552334adb4963f45388a798eb0723e61c09ec85
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346267"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502844"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton 類別
 
@@ -43,22 +43,22 @@ class CSplitButton : public CButton
 
 |名稱|描述|
 |----------|-----------------|
-|[CSplitButton::Create](#create)|使用指定的樣式中建立分割按鈕控制項，並將它附加至目前`CSplitButton`物件。|
-|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|設定當使用者按一下目前的分割按鈕控制項的下拉箭號會顯示下拉式選單。|
+|[CSplitButton::Create](#create)|建立具有指定樣式的分割按鈕控制項, 並將它附加至`CSplitButton`目前的物件。|
+|[CSplitButton::SetDropDownMenu](#setdropdownmenu)|設定當使用者按一下目前分割按鈕控制項的下拉箭號時, 所顯示的下拉式功能表。|
 
 ### <a name="protected-methods"></a>保護方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CSplitButton::OnDropDown](#ondropdown)|處理當使用者按一下目前的分割按鈕控制項的下拉箭號時，系統會傳送 BCN_DROPDOWN 通知。|
+|[CSplitButton::OnDropDown](#ondropdown)|處理當使用者按一下目前分割按鈕控制項的下拉箭號時, 系統所傳送的 BCN_DROPDOWN 通知。|
 
 ## <a name="remarks"></a>備註
 
-`CSplitButton`類別衍生自[CButton](../../mfc/reference/cbutton-class.md)類別。 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 按鈕控制項。 當使用者按一下下拉箭號，它就會顯示一個自訂功能表。 如需詳細資訊，請參閱 BS_SPLITBUTTON BS_DEFSPLITBUTTON 中的和樣式[按鈕樣式](/windows/desktop/Controls/button-styles)。
+類別衍生自 [CButton](../../mfc/reference/cbutton-class.md) 類別。`CSplitButton` 分割按鈕控制項是其樣式為 BS_SPLITBUTTON 的按鈕控制項。 當使用者按一下下拉箭號時, 它會顯示自訂功能表。 如需詳細資訊, 請參閱[按鈕樣式](/windows/win32/Controls/button-styles)中的 BS_SPLITBUTTON 和 BS_DEFSPLITBUTTON 樣式。
 
-下圖說明對話方塊中，其中包含頁面巡覽區控制項和 (1) 的分割按鈕控制項。 已按下的 (2) 的下拉式箭號，並顯示 (3) 的子功能表。
+下圖說明一個對話方塊, 其中包含一個分頁控制項和一個 (1) 分割按鈕控制項。 已按下 (2) 下拉箭號, 並顯示 (3) 子功能表。
 
-![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton 和 pager 控制項 對話方塊。")
+![具有 splitbutton 和呼機控制項的對話方塊。](../../mfc/reference/media/splitbutton_pager.png "具有 splitbutton 和呼機控制項的對話方塊。")
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -76,13 +76,13 @@ class CSplitButton : public CButton
 
 **標頭：** afxcmn.h
 
-這個類別支援在 Windows Vista 和更新版本。
+Windows Vista 和更新版本支援此類別。
 
-這個類別的其他需求所述[建置需求的 Windows Vista 通用控制項](../../mfc/build-requirements-for-windows-vista-common-controls.md)。
+如需此類別的其他需求, 請參閱[Windows Vista 通用控制項的組建需求](../../mfc/build-requirements-for-windows-vista-common-controls.md)。
 
 ##  <a name="create"></a>  CSplitButton::Create
 
-使用指定的樣式中建立分割按鈕控制項，並將它附加至目前`CSplitButton`物件。
+建立具有指定樣式的分割按鈕控制項, 並將它附加至`CSplitButton`目前的物件。
 
 ```
 virtual BOOL Create(
@@ -94,20 +94,20 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*dwStyle*|[in]位元組合 (OR) 套用至控制項的樣式。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|
-|*rect*|[in]參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構，包含控制項的大小與位置。|
-|*pParentWnd*|[in]非 null 指標[CWnd](../../mfc/reference/cwnd-class.md)是控制項的父視窗的物件。|
-|*nID*|[in]控制項的 ID。|
+|*dwStyle*|在要套用至控制項之樣式的位元組合 (OR)。 如需詳細資訊, 請參閱[按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。|
+|*rect*|在[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考, 其中包含控制項的位置和大小。|
+|*pParentWnd*|在[CWnd](../../mfc/reference/cwnd-class.md)物件的非 null 指標, 這是控制項的父視窗。|
+|*nID*|在控制項的識別碼。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，這個方法，則為 TRUE。否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
-##  <a name="csplitbutton"></a>  CSplitButton::CSplitButton
+##  <a name="csplitbutton"></a>CSplitButton:: CSplitButton
 
-建構 `CSplitButton` 物件。 建構函式的參數會指定當使用者按一下分割按鈕控制項的下拉式箭號會顯示子功能表。
+建構 `CSplitButton` 物件。 此函式的參數會指定當使用者按一下 [分割按鈕] 控制項的下拉箭號時, 所顯示的子功能表。
 
 ```
 CSplitButton();
@@ -122,17 +122,17 @@ CSplitButton(CMenu* pMenu)
 
 |參數|描述|
 |---------------|-----------------|
-|*nMenuId*|[in]在功能表列的資源識別碼。|
-|*nSubMenuId*|[in]為子功能表的資源識別碼。|
-|*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|
+|*nMenuId*|在功能表列的資源識別碼。|
+|*nSubMenuId*|在子功能表的資源識別碼。|
+|*pMenu*|在指定子功能表之[CMenu](../../mfc/reference/cmenu-class.md)物件的指標。 當物件超出範圍`CMenu`時`CSplitButton` `CSplitButton` , 物件會刪除物件及其相關聯的 HMENU。|
 
 ### <a name="remarks"></a>備註
 
-使用[CSplitButton::Create](#create)方法來建立分割按鈕控制項，並將其附加至`CSplitButton`物件。
+使用[CSplitButton:: create](#create)方法來建立分割按鈕控制項, 並將它附加至`CSplitButton`物件。
 
-##  <a name="ondropdown"></a>  CSplitButton::OnDropDown
+##  <a name="ondropdown"></a>CSplitButton:: OnDropDown
 
-處理當使用者按一下目前的分割按鈕控制項的下拉箭號時，系統會傳送 BCN_DROPDOWN 通知。
+處理當使用者按一下目前分割按鈕控制項的下拉箭號時, 系統所傳送的 BCN_DROPDOWN 通知。
 
 ```
 afx_msg void OnDropDown(
@@ -144,16 +144,16 @@ afx_msg void OnDropDown(
 
 |參數|描述|
 |---------------|-----------------|
-|*pNMHDR*|[in]指標[NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)結構，其中包含有關的資訊[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|
-|*pResult*|[out]（未使用，會傳回任何值）。傳回值[BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知。|
+|*pNMHDR*|在[NMHDR](/windows/win32/api/richedit/ns-richedit-nmhdr)結構的指標, 其中包含[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的相關資訊。|
+|*pResult*|脫銷(未使用; 不會傳回任何值)。[BCN_DROPDOWN](/windows/win32/Controls/bcn-dropdown)通知的傳回值。|
 
 ### <a name="remarks"></a>備註
 
-當使用者按一下下拉箭號，分割按鈕控制項上的時，系統會傳送 BCN_DROPDOWN 通知訊息，其中`OnDropDown`方法控制代碼。 不過，`CSplitButton`物件不會轉送 BCN_DROPDOWN 通知，以包含分割按鈕控制項的控制項。 因此，包含控制項無法支援的自訂動作以回應通知。
+當使用者按一下分割按鈕控制項上的下拉箭號時, 系統就`OnDropDown`會傳送 BCN_DROPDOWN 通知訊息, 方法會處理此訊息。 不過, `CSplitButton`物件不會將 BCN_DROPDOWN 通知轉送至包含分割按鈕控制項的控制項。 因此, 包含控制項無法支援自訂動作來回應通知。
 
-若要實作的自訂動作，包含控制項支援，請使用[CButton](../../mfc/reference/cbutton-class.md)物件而不是 BS_SPLITBUTTON 樣式`CSplitButton`物件。 然後實作 BCN_DROPDOWN 通知中的處理常式`CButton`物件。 如需詳細資訊，請參閱 <<c0> [ 按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
+若要執行包含控制項支援的自訂動作, 請使用[CButton](../../mfc/reference/cbutton-class.md)物件搭配 BS_SPLITBUTTON 樣式, 而不`CSplitButton`是物件。 然後在`CButton`物件中, 為 BCN_DROPDOWN 通知執行處理常式。 如需詳細資訊, 請參閱[按鈕樣式](../../mfc/reference/styles-used-by-mfc.md#button-styles)。
 
-若要實作自訂動作，分割按鈕控制項本身支援，請使用[訊息反映](../../mfc/tn062-message-reflection-for-windows-controls.md)。 衍生您自己的類別，從`CSplitButton`類別，並加以命名，例如 CMySplitButton。 然後新增下列的訊息對應至您的應用程式，以處理 BCN_DROPDOWN 通知：
+若要執行分割按鈕控制項本身支援的自訂動作, 請使用[訊息反映](../../mfc/tn062-message-reflection-for-windows-controls.md)。 從類別衍生您自己的`CSplitButton`類別, 並將其命名為, 例如 CMySplitButton。 然後將下列訊息對應新增至您的應用程式, 以處理 BCN_DROPDOWN 通知:
 
 ```
 BEGIN_MESSAGE_MAP(CMySplitButton,
@@ -162,9 +162,9 @@ BEGIN_MESSAGE_MAP(CMySplitButton,
 END_MESSAGE_MAP()
 ```
 
-##  <a name="setdropdownmenu"></a>  CSplitButton::SetDropDownMenu
+##  <a name="setdropdownmenu"></a>CSplitButton:: SetDropDownMenu
 
-設定當使用者按一下目前的分割按鈕控制項的下拉箭號會顯示下拉式選單。
+設定當使用者按一下目前分割按鈕控制項的下拉箭號時, 所顯示的下拉式功能表。
 
 ```
 void SetDropDownMenu(
@@ -178,21 +178,21 @@ void SetDropDownMenu(CMenu* pMenu);
 
 |參數|描述|
 |---------------|-----------------|
-|*nMenuId*|[in]在功能表列的資源識別碼。|
-|*nSubMenuId*|[in]為子功能表的資源識別碼。|
-|*pMenu*|[in]指標[CMenu](../../mfc/reference/cmenu-class.md)物件，指定子功能表。 `CSplitButton`物件刪除`CMenu`物件和其相關聯的 HMENU 時`CSplitButton`物件超出範圍。|
+|*nMenuId*|在功能表列的資源識別碼。|
+|*nSubMenuId*|在子功能表的資源識別碼。|
+|*pMenu*|在指定子功能表之[CMenu](../../mfc/reference/cmenu-class.md)物件的指標。 當物件超出範圍`CMenu`時`CSplitButton` `CSplitButton` , 物件會刪除物件及其相關聯的 HMENU。|
 
 ### <a name="remarks"></a>備註
 
-*NMenuId*參數會識別功能表列，也就是水平功能表列項目清單。 *NSubMenuId*參數是以零為起始的索引編號識別的子功能表，也就是下拉式清單中的每個功能表列項目相關聯的功能表項目。 比方說，一般的應用程式有一個包含功能表的功能表列項目，「 檔案 」，[編輯] 和 [說明]。 [檔案] 功能表列項目具有子功能表，其中包含的功能表項目中，[開啟，]"Close"和"Exit"。 按一下下拉箭號，分割按鈕控制項時，控制項就會顯示指定的子功能表功能表列。
+*NMenuId*參數會識別功能表列, 這是功能表列專案的水準清單。 *NSubMenuId*參數是以零為基底的索引編號, 用來識別子功能表, 這是與每個功能表列專案相關聯之功能表項目的下拉式清單。 例如, 一般應用程式有一個功能表, 其中包含功能表列專案、[檔案]、[編輯] 和 [說明]。 [檔案] 功能表列專案有一個子功能表, 其中包含功能表項目 [開啟]、[關閉] 和 [結束]。 按一下分割按鈕控制項的下拉箭號時, 控制項會顯示指定的子功能表, 而不是功能表列。
 
-下圖說明對話方塊中，其中包含頁面巡覽區控制項和 (1) 的分割按鈕控制項。 已按下的 (2) 的下拉式箭號，並顯示 (3) 的子功能表。
+下圖說明一個對話方塊, 其中包含一個分頁控制項和一個 (1) 分割按鈕控制項。 已按下 (2) 下拉箭號, 並顯示 (3) 子功能表。
 
-![包含 splitbutton 和 pager 控制項對話方塊。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton 和 pager 控制項 對話方塊。")
+![具有 splitbutton 和呼機控制項的對話方塊。](../../mfc/reference/media/splitbutton_pager.png "具有 splitbutton 和呼機控制項的對話方塊。")
 
 ### <a name="example"></a>範例
 
-第一個陳述式，在下列程式碼範例示範[CSplitButton::SetDropDownMenu](#setdropdownmenu)方法。 我們建立功能表與 Visual Studio 資源編輯器，它會自動命名為功能表列的識別碼，IDR_MENU1。 *NSubMenuId*參數，也就是零，指的是唯一的子功能表中的功能表列。
+下列程式碼範例中的第一個語句示範[CSplitButton:: SetDropDownMenu](#setdropdownmenu)方法。 我們建立了具有 Visual Studio 資源編輯器的功能表, 其會自動命名為 IDR_MENU1 的功能表列識別碼。 *NSubMenuId*參數為零, 表示功能表列的唯一子功能表。
 
 [!code-cpp[NVC_MFC_CSplitButton_s2#1](../../mfc/reference/codesnippet/cpp/csplitbutton-class_1.cpp)]
 

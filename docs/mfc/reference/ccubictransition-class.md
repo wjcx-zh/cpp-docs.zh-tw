@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_dblFinalVelocity
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
-ms.openlocfilehash: f4d5898172c0544064fad82856e404f4fb12b561
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b6bb626f944ce87748809a5eb03a6f06f92c3de5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163977"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507133"
 ---
 # <a name="ccubictransition-class"></a>CCubicTransition 類別
 
@@ -39,25 +39,25 @@ class CCubicTransition : public CBaseTransition;
 
 |名稱|描述|
 |----------|-----------------|
-|[CCubicTransition::CCubicTransition](#ccubictransition)|建構轉換物件並初始化其參數。|
+|[CCubicTransition::CCubicTransition](#ccubictransition)|會建立轉換物件, 並初始化其參數。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CCubicTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create)。)|
+|[CCubicTransition::Create](#create)|呼叫轉換程式庫來建立封裝的轉換 COM 物件。 (覆寫[CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create)。)|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|結尾的轉換動畫變數的值。|
-|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|在轉換結束變數的速度。|
+|[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|轉換結束時的動畫變數值。|
+|[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|變數在轉換結束時的速度。|
 |[CCubicTransition::m_duration](#m_duration)|轉換的持續時間。|
 
 ## <a name="remarks"></a>備註
 
-三次方的轉換，期間動畫變數的值從變更其初始值為指定的最終值的轉換，結束於指定的速度持續期間。 因為所有的轉換會自動清除，所以建議配置它們使用新的運算子。 封裝的 IUIAnimationTransition COM 物件會建立 CAnimationController::AnimateGroup 之前, 則是 NULL。 不會影響這個 COM 物件建立後，請變更成員變數。
+在三次轉換期間, 動畫變數的值會在轉換期間從其初始值變更為指定的最終值, 並以指定的速度結束。 由於所有轉換都會自動清除, 因此建議您使用 operator new 加以配置。 封裝的 IUIAnimationTransition COM 物件是由 CAnimationController:: AnimateGroup 所建立, 直到它是 Null 為止。 在建立此 COM 物件之後變更成員變數不會有任何作用。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -71,9 +71,9 @@ class CCubicTransition : public CBaseTransition;
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="ccubictransition"></a>  CCubicTransition::CCubicTransition
+##  <a name="ccubictransition"></a>CCubicTransition:: CCubicTransition
 
-建構轉換物件並初始化其參數。
+會建立轉換物件, 並初始化其參數。
 
 ```
 CCubicTransition(
@@ -88,12 +88,12 @@ CCubicTransition(
 轉換的持續時間。
 
 *finalValue*<br/>
-結尾的轉換動畫變數的值。
+轉換結束時的動畫變數值。
 
 *finalVelocity*<br/>
-在轉換結束變數的速度。
+變數在轉換結束時的速度。
 
-##  <a name="create"></a>  CCubicTransition::Create
+##  <a name="create"></a>CCubicTransition:: Create
 
 呼叫轉換程式庫來建立封裝的轉換 COM 物件。
 
@@ -106,29 +106,29 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *pLibrary*<br/>
-指標[IUIAnimationTransitionLibrary 介面](/windows/desktop/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)，其定義的標準轉換程式庫。
+[IUIAnimationTransitionLibrary 介面](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary)的指標, 它會定義標準轉換的程式庫。
 
 ### <a name="return-value"></a>傳回值
 
-如果轉換成功; 建立，則為 TRUE。否則為 FALSE。
+如果成功建立轉換, 則為 TRUE;否則為 FALSE。
 
-##  <a name="m_dblfinalvalue"></a>  CCubicTransition::m_dblFinalValue
+##  <a name="m_dblfinalvalue"></a>CCubicTransition:: m_dblFinalValue
 
-結尾的轉換動畫變數的值。
+轉換結束時的動畫變數值。
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CCubicTransition::m_dblFinalVelocity
+##  <a name="m_dblfinalvelocity"></a>CCubicTransition:: m_dblFinalVelocity
 
-在轉換結束變數的速度。
+變數在轉換結束時的速度。
 
 ```
 DOUBLE m_dblFinalVelocity;
 ```
 
-##  <a name="m_duration"></a>  CCubicTransition::m_duration
+##  <a name="m_duration"></a>CCubicTransition:: m_duration
 
 轉換的持續時間。
 

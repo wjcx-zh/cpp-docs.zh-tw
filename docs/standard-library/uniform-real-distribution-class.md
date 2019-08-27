@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 389d7c96867ee0ca597330c1bee61b71e9777802
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348935"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454944"
 ---
 # <a name="uniformrealdistribution-class"></a>uniform_real_distribution 類別
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -174,7 +174,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -189,20 +189,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 隨機值的下限 (內含)。
 
-*b*<br/>
+*位元組*\
 隨機值的上限 (專有)。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`a < b`
+**前置條件：** `a < b`
 
-第一個建構函式會建構一個物件的預存值具有值 ，且預存*b*值保留值*b*。
+第一個函式會建立一個物件, 其儲存*的*值保留值*a* , 而其預存*b*值保留值*b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
@@ -224,21 +224,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 隨機值的下限 (內含)。
 
-*b*<br/>
+*位元組*\
 隨機值的上限 (專有)。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`a < b`
+**前置條件：** `a < b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

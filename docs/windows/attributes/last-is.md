@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409417"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514514"
 ---
-# <a name="lastis"></a>last_is
+# <a name="last_is"></a>last_is
 
-指定要傳送的最後一個陣列元素的索引。
+指定要傳送之最後一個陣列元素的索引。
 
 ## <a name="syntax"></a>語法
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409417"
 ### <a name="parameters"></a>參數
 
 *expression*<br/>
-一或多個 C 語言的運算式。 允許空白的引數位置。
+一或多個 C 語言運算式。 允許空的引數位置。
 
 ## <a name="remarks"></a>備註
 
-**Last_is** C++屬性具有相同的功能[last_is](/windows/desktop/Midl/last-is) MIDL 屬性。
+**Last_is** C++屬性具有與[last_is](/windows/win32/Midl/last-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-請參閱[first_is](first-is.md)如需如何指定的陣列區段的範例。
+如需如何指定陣列區段的範例, 請參閱[first_is](first-is.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409417"
 
 |||
 |-|-|
-|**適用於**|欄位**結構**或是**聯集**，參數的介面，介面方法|
+|**適用於**|**Struct**或**union**中的欄位, 介面參數, 介面方法|
 |**可重複**|否|
 |**必要屬性**|None|
-|**無效屬性**|None|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

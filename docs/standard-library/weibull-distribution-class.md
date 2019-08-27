@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: bbcfa23ae84d0a035d4b00d1c154da4b4281be32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3c5a2a3d8e4b5f2c8a13ef7525b29683b94acc4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410833"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459624"
 ---
 # <a name="weibulldistribution-class"></a>weibull_distribution 類別
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>參數
 
-*RealType*<br/>
-浮點結果類型中，預設值為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType*\
+浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定的浮點數的值類型**double**如果未提供，分散根據 Weibull 分佈進行分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之浮點類型值的分佈, 如果沒有提供, 則為**double**類型, 這是根據 Weibull 分佈散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -209,7 +209,7 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -222,18 +222,18 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 `a` 分佈參數。
 
-*b*<br/>
+*位元組*\
 `b` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < a` 和 `0.0 < b`
+**前置條件：** `0.0 < a` 和 `0.0 < b`
 
 第一個建構函式建構的物件，其預存的 `a` 值具有 *a* 值，而其預存的 `b` 值具有 *b* 值。
 
@@ -257,21 +257,21 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
+*為*\
 `a` 分佈參數。
 
-*b*<br/>
+*位元組*\
 `b` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
 
-**前置條件：**`0.0 < a` 和 `0.0 < b`
+**前置條件：** `0.0 < a` 和 `0.0 < b`
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

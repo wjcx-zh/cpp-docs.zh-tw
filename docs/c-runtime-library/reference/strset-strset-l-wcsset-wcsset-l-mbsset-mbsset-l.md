@@ -60,19 +60,19 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 486e53a38f5b91732a422f01dce9dbd5c1b36c3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375362"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500828"
 ---
-# <a name="strset-strsetl-wcsset-wcssetl-mbsset-mbssetl"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
+# <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
 將字串字元設定為字元。 這些函式已有更安全的版本可供使用，請參閱 [_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l](strset-s-strset-s-l-wcsset-s-wcsset-s-l-mbsset-s-mbsset-s-l.md)。
 
 > [!IMPORTANT]
-> **_mbsset**並 **_mbsset_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsset**和 **_mbsset_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -123,14 +123,14 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strset**函式會設定 （除了結束的 null 字元） 的所有字元*str*來*c*，轉換成**char**。 **_wcsset**並 **_mbsset_l**是寬字元和多位元組字元版本的 **_strset**，和引數和傳回值的資料類型會隨之改變。 除此之外，這些函式的行為相同。
+**_Strset**函式會將*str*的所有字元 (結尾的 null 字元除外) 設定為*c*, 轉換成**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的寬字元和多位元組字元版本, 而引數和傳回值的資料類型也會隨之改變。 除此之外，這些函式的行為相同。
 
-**_mbsset**會驗證其參數。 如果*str*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行 **_mbsset**會傳回**NULL**並設定**errno**至**EINVAL**。 **_strset**並 **_wcsset**不會驗證其參數。
+**_mbsset**會驗證其參數。 如果*str*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **_mbsset**會傳回**Null** , 並將**errno**設定為**EINVAL**。 **_strset**和 **_wcsset**不會驗證它們的參數。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些函式的版本完全相同，只不過沒有具有 **_l**後置詞使用目前的地區設定，而沒有 **_l**後置詞改為使用的地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
-> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -147,7 +147,7 @@ unsigned char *_mbsset_l(
 |**_strset_l**|\<tchar.h>|
 |**_wcsset**|\<string.h> 或 \<wchar.h>|
 |**_wcsset_l**|\<tchar.h>|
-|**_mbsset**， **_mbsset_l**|\<mbstring.h>|
+|**_mbsset**、 **_mbsset_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

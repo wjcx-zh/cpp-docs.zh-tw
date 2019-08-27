@@ -22,14 +22,14 @@ helpviewer_keywords:
 - _memccpy function
 - memccpy function
 ms.assetid: 9a2337df-6e85-4eba-b247-dd0532f45ddb
-ms.openlocfilehash: 5cd037974d8580b6ee90b1af736e8f2c6897fe8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 704aab84ea3e39c91def1d4ac8b6d2d9d3650759
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156599"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499693"
 ---
-# <a name="memccpy"></a>_memccpy
+# <a name="_memccpy"></a>_memccpy
 
 從緩衝區複製字元。
 
@@ -55,18 +55,18 @@ void *_memccpy(
 *C*<br/>
 要複製的最後一個字元。
 
-*count*<br/>
+*計數*<br/>
 字元數。
 
 ## <a name="return-value"></a>傳回值
 
-如果字元*c*會複製 **_memccpy**讓指標回到中 char *dest*緊接著的字元。 如果*c*不會複製，則會傳回**NULL**。
+如果複製*c*字元, **_memccpy**會將指標傳回至*dest*中緊接在字元後面的字元。 如果未複製*c* , 則會傳回**Null**。
 
 ## <a name="remarks"></a>備註
 
-**_Memccpy**函式會將複製的 0 或多個字元*src*來*dest*，並字元*c*已複製或當*計數*已複製的字元，視何者先。
+**_Memccpy**函數會將*src*的0個或多個字元複製到*目的地*, 並在複製字元*c*或已複製*計數*字元時停止, 視何者先發生。
 
-**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>需求
 

@@ -1,5 +1,5 @@
 ---
-title: 語彙基元 (C++)
+title: 權杖 (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd104b7308716ca182374bbff2df61731c84d574
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330436"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376250"
 ---
-# <a name="tokens-c"></a>語彙基元 (C++)
+# <a name="tokens-c"></a>權杖 (C++)
 
 語彙基元是 C++ 程式中對編譯器有意義的最小項目。 C++ 剖析器可辨識下列語彙基元類型：識別項、關鍵字、常值、運算子、標點符號和任何其他分隔符號。 這些語彙基元資料流組成轉譯單位。
 
-語彙基元通常由 *「空白字元」*(White Space) 分隔。 空白字元可以是下列一項或多項：
+語彙基元通常由 *「空白字元」* (White Space) 分隔。 空白字元可以是下列一項或多項：
 
 - 空白
 
@@ -26,7 +26,7 @@ ms.locfileid: "62330436"
 
 - 新行
 
-- 換頁字元
+- 表單摘要
 
 - 註解
 

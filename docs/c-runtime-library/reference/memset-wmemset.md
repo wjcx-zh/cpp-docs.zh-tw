@@ -26,12 +26,12 @@ helpviewer_keywords:
 - wmemset function
 - memset function
 ms.assetid: e7ceb01b-df69-49c2-b294-a39358ad4699
-ms.openlocfilehash: d517c5565ef07a834d7ef864e495a4bb33351007
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7b57292f582491a7750b4e12a8072112eac4dd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285141"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501018"
 ---
 # <a name="memset-wmemset"></a>memset、wmemset
 
@@ -60,18 +60,18 @@ wchar_t *wmemset(
 *C*<br/>
 要設定的字元。
 
-*count*<br/>
+*計數*<br/>
 字元數。
 
 ## <a name="return-value"></a>傳回值
 
-值*dest*。
+*Dest*的值。
 
 ## <a name="remarks"></a>備註
 
-設定第一個*計數*個字元*dest*字元*c*。
+將*dest*的第一個*計數*字元設定為*c*字元。
 
-**安全性注意事項**請確定目的緩衝區有足夠的空間至少*計數*字元。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+**安全性注意事項**請確定目的地緩衝區有足夠的空間供至少*計數*字元用。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ## <a name="requirements"></a>需求
 

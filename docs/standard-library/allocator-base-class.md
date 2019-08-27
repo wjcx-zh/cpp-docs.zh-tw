@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411067"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456438"
 ---
 # <a name="allocatorbase-class"></a>allocator_base 類別
 
@@ -58,10 +58,10 @@ class allocator_base
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*Type*|配置器所配置的元素類型。|
-|*Sync*|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|
+|*型別*|配置器所配置的元素類型。|
+|*保持*|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>建構函式
 
@@ -71,7 +71,7 @@ class allocator_base
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
 |[const_pointer](#const_pointer)|一種類型，可提供配置器管理之物件類型的常數指標。|
 |[const_reference](#const_reference)|一種類型，可提供配置器管理之物件類型的常數參考。|
@@ -83,10 +83,10 @@ class allocator_base
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
-|[_Charalloc](#charalloc)|配置儲存體陣列的型別**char**。|
-|[_Chardealloc](#chardealloc)|釋放儲存體陣列，包含類型的項目**char**。|
+|[_Charalloc](#charalloc)|為**char**類型的陣列配置儲存體。|
+|[_Chardealloc](#chardealloc)|釋放包含**char**類型元素之陣列的儲存體。|
 |[address](#address)|尋找指定值所屬物件的位址。|
 |[allocate](#allocate)|配置夠大的記憶體區塊，至少儲存某些指定的項目數。|
 |[construct](#construct)|在指定值初始化的指定位址上，建構特定類型的物件。|
@@ -96,13 +96,13 @@ class allocator_base
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
 ## <a name="charalloc"></a> allocator_base::_Charalloc
 
-配置儲存體陣列的型別**char**。
+為**char**類型的陣列配置儲存體。
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -110,9 +110,9 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a> allocator_base::_Chardealloc
 
-釋放儲存體陣列，包含類型的項目**char**。
+釋放包含**char**類型元素之陣列的儲存體。
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -135,7 +135,7 @@ void _Chardealloc(void* ptr, size_type count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 搜尋其位址之物件的 const 或 nonconst 值。
 
 ### <a name="return-value"></a>傳回值
@@ -177,7 +177,7 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*_Nx*|所配置陣列中的元素數。|
 |*_Hint*|這個參數已忽略。|
@@ -203,7 +203,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*right*|要複製的配置器物件。|
 
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|要建構物件之位置的指標。|
 |*val*|用來初始化所建構物件的值。|
@@ -256,7 +256,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
 |*_Nx*|要從儲存空間解除配置的物件數目。|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
+|參數|說明|
 |---------------|-----------------|
 |*ptr*|指定要終結之物件位址的指標。|
 
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455685"
 ---
 # <a name="isreference-class"></a>is_reference 類別
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*物件或函式，否則為 false 的參考。
+如果類型*Ty*是物件或函式的參考, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -71,11 +71,11 @@ is_reference<int(&)()> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_pointer 類別](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_pointer 類別](../standard-library/is-pointer-class.md)

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: 9f050bbf69edf1ab8327a283299cb5e687ce5380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407064"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513889"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-會告知呼叫端，是否沒有發生錯誤時呼叫該函式，然後呼叫端可以再呼叫`GetLastError`擷取錯誤碼。
+告訴呼叫者, 如果呼叫該函式時發生錯誤, 則呼叫端可以呼叫`GetLastError`來抓取錯誤碼。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407064"
 
 ## <a name="remarks"></a>備註
 
-**Usesgetlasterror** C++屬性具有相同的功能[usesgetlasterror](/windows/desktop/Midl/usesgetlasterror) MIDL 屬性。
+**Usesgetlasterror** C++屬性具有與[usesgetlasterror](/windows/win32/Midl/usesgetlasterror) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-請參閱[idl_module](idl-module.md)如需範例示範如何使用**usesgetlasterror**。
+如需如何使用**usesgetlasterror**的範例, 請參閱[idl_module](idl-module.md)範例。
 
 ## <a name="requirements"></a>需求
 
@@ -37,7 +37,7 @@ ms.locfileid: "62407064"
 
 |||
 |-|-|
-|**適用於**|**模組**屬性|
+|**適用於**|**module**屬性|
 |**可重複**|否|
 |**必要屬性**|None|
 |**無效屬性**|None|

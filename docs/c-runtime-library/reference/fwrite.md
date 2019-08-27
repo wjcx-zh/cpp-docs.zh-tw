@@ -22,12 +22,12 @@ helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: b4d6b9ce4fb66ee545f52946e28e4984d9e4f924
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287543"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376059"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -52,7 +52,7 @@ size_t fwrite(
 *size*<br/>
 項目大小 (位元組)。
 
-*count*<br/>
+*計數*<br/>
 要寫入之項目的最大數量。
 
 *stream*<br/>
@@ -60,15 +60,15 @@ size_t fwrite(
 
 ## <a name="return-value"></a>傳回值
 
-**fwrite**傳回的完整實際寫入的項目，這可能會小於*計數*發生錯誤。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果有任一*資料流*或是*緩衝區*為 null 指標，或如果奇數數目的可寫入的位元組會指定在 Unicode 模式中，函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
+**fwrite**會傳回實際寫入的完整專案數, 如果發生錯誤, 可能會小於*計數*。 此外，若發生錯誤，也無法判斷檔案位置指標。 如果*資料流程*或*緩衝區*是 null 指標, 或者如果要寫入的奇數位節數目是以 Unicode 模式指定, 則此函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會將**errno**設定為**EINVAL** , 並傳回0。
 
 ## <a name="remarks"></a>備註
 
-**Fwrite**函式會寫入最多*計數*項目 的*大小*長度，從*緩衝區*輸出*資料流*. 與相關聯的檔案指標*資料流*（如果有的話） 會遞增的實際寫入的位元組數目。 如果*資料流*開啟在文字模式中，每個換行字元會取代為歸位/換行字元組。 這種取代不會對傳回值產生影響。
+**Fwrite**函式會將每  個專案的*大小*上限, 從*緩衝區*寫入輸出*資料流程*。 與*資料流程*相關聯的檔案指標 (如果有的話) 會以實際寫入的位元組數遞增。 如果在文字模式中開啟*資料流程*, 則會將每個換行字元換行一組。 這種取代不會對傳回值產生影響。
 
-當*資料流*在 Unicode 轉譯模式中開啟 — 比方說，如果*串流*開啟藉由呼叫**fopen**和使用模式參數，其包含**ccs= UNICODE**， **ccs =-16LE**，或**ccs = utf-8**，或如果模式變更為 Unicode 轉譯模式使用 **_setmode**和模式包含的參數 **_O_WTEXT**， **_O_U16TEXT**，或 **_O_U8TEXT**—*緩衝區*會解譯為變數的指標，陣列**wchar_t**包含 utf-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+在 Unicode 轉譯模式中開啟*資料流程*時 (例如, 如果透過呼叫**fopen**來開啟*資料流程*, 並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數), 或如果模式為使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式-將*緩衝區*解讀為包含的**wchar_t**陣列的指標UTF-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
-因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 < **_fwrite_nolock**。
+因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本, 請參閱 **_fwrite_nolock**。
 
 ## <a name="requirements"></a>需求
 

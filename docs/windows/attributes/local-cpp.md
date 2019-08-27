@@ -1,21 +1,21 @@
 ---
-title: 本機 (C++ COM 屬性)
+title: local (C++ COM 屬性)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.local
 helpviewer_keywords:
 - local attribute
 ms.assetid: 35cdd668-bd8e-492a-b7b8-263e7b662437
-ms.openlocfilehash: 678968bb7b0f2e7af94124bea5b0967df27e43f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853331ce191f8fe41d5967d2d625a3dac8543a4d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409222"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514410"
 ---
 # <a name="local-c"></a>local (C++)
 
-介面的標頭中使用時，可讓您使用 MIDL 編譯器為標頭的產生器。 中的個別函式使用時，會指定任何虛設常式所產生的本機程序。
+在介面標頭中使用時, 可讓您使用 MIDL 編譯器做為標頭產生器。 在個別函式中使用時, 會指定不會產生任何存根的本機程式。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409222"
 
 ## <a name="remarks"></a>備註
 
-**本機**C++屬性具有相同的功能[本機](/windows/desktop/Midl/local)MIDL 屬性。
+**區域** C++屬性的功能與[本機](/windows/win32/Midl/local)MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-請參閱[call_as](call-as.md)如需如何使用的範例**本機**。
+如需如何使用**本機**的範例, 請參閱[call_as](call-as.md) 。
 
 ## <a name="requirements"></a>需求
 
@@ -37,9 +37,9 @@ ms.locfileid: "62409222"
 
 |||
 |-|-|
-|**適用於**|**介面**，介面方法|
+|**適用於**|**介面**, 介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|`dispinterface`|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

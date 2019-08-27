@@ -43,14 +43,14 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5991f903771408a22722dceec3e0c5d84b878e2
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364840"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69499305"
 ---
-# <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
+# <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
 使用引數清單的指標，將格式化輸出寫入主控台。 這些函式已有更安全的版本可供使用，請參閱 [_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l](vcprintf-s-vcprintf-s-l-vcwprintf-s-vcwprintf-s-l.md)。
 
@@ -95,16 +95,16 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入的字元數，或是當發生輸出錯誤時為負值。 如果*格式*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL** ，則傳回-1。
+寫入的字元數，或是當發生輸出錯誤時為負值。 如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 並傳回-1。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf**是寬字元版本 **_vcprintf**。 它接受寬字元字串作為引數。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf**是 **_vcprintf**的寬字元版本。 它接受寬字元字串作為引數。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的地區設定。
 
 > [!IMPORTANT]
-> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/desktop/SecBP/avoiding-buffer-overruns)。
+> 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -117,8 +117,8 @@ int _vcwprintf_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_vcprintf**， **_vcprintf_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vcwprintf**， **_vcwprintf_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcprintf**、 **_vcprintf_l**|\<conio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vcwprintf**、 **_vcwprintf_l**|\<conio.h> 或 \<wchar.h> 和 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

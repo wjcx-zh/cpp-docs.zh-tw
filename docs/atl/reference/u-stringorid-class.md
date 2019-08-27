@@ -9,19 +9,19 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 4e6c086f9d2ff4061c6404444a3b4c61dd91fe1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57363dbe2a1e7166b8da401900c3a7f913e63a9d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62197110"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495105"
 ---
-# <a name="ustringorid-class"></a>_U_STRINGorID 類別
+# <a name="_u_stringorid-class"></a>_U_STRINGorID 類別
 
-資源名稱 (LPCTSTRs)] 或 [資源識別碼 （所） 傳遞至函式，而不需要呼叫者識別碼轉換為使用 MAKEINTRESOURCE 巨集的字串，可讓這個引數的配接器類別。
+這個引數介面卡類別允許將資源名稱 (LPCTSTRs) 或資源識別碼 (UINTs) 傳遞至函式, 而不需要呼叫者使用 MAKEINTRESOURCE 宏將識別碼轉換成字串。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -33,37 +33,37 @@ class _U_STRINGorID
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|建構函式。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|資源識別項。|
+|[_U_STRINGorID::m_lpstr](#_u_stringorid__m_lpstr)|資源識別碼。|
 
 ## <a name="remarks"></a>備註
 
-這個類別專為這類實作的 Windows 資源管理 API 的包裝函式[FindResource](/windows/desktop/api/winbase/nf-winbase-findresourcea)， [LoadIcon](/windows/desktop/api/winuser/nf-winuser-loadicona)，並[LoadMenu](/windows/desktop/api/winuser/nf-winuser-loadmenua)函式，可接受可能是資源的名稱或識別碼為 LPCTSTR 引數
+這個類別是設計用來將包裝函式實作為 Windows 資源管理 API, 例如[FindResource](/windows/win32/api/winbase/nf-winbase-findresourcew)、 [LoadIcon](/windows/win32/api/winuser/nf-winuser-loadiconw)和[LoadMenu](/windows/win32/api/winuser/nf-winuser-loadmenuw)函式, 其接受的 LPCTSTR 引數可能是資源的名稱或識別碼。
 
-此類別會定義兩個建構函式多載︰ 一個接受 LPCTSTR 引數和一個接受 UINT 引數。 UINT 引數會轉換成相容於使用 MAKEINTRESOURCE 巨集和結果儲存在該類別的單一資料成員的 Windows 資源管理函式的資源類型[m_lpstr](#_u_stringorid__m_lpstr)。 轉換不直接儲存 LPCTSTR 建構函式的引數。
+類別會定義兩個函式多載: 一個會接受 LPCTSTR 引數, 另一個則接受 UINT 引數。 UINT 引數會轉換成與 Windows 資源管理函式相容的資源類型, 使用 MAKEINTRESOURCE 宏和儲存在類別的單一資料成員[m_lpstr](#_u_stringorid__m_lpstr)中的結果。 LPCTSTR 函式的引數會直接儲存而不進行轉換。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="_u_stringorid__m_lpstr"></a>  _U_STRINGorID::m_lpstr
+##  <a name="_u_stringorid__m_lpstr"></a>_U_STRINGorID::m_lpstr
 
-類別包含傳遞至其建構函式做為公用的 LPCTSTR 資料成員的值。
+類別會保存傳遞至其任何一個函式做為公用 LPCTSTR 資料成員的值。
 
 ```
 LPCTSTR m_lpstr;
 ```
 
-##  <a name="_u_stringorid___u_stringorid"></a>  _U_STRINGorID::_U_STRINGorID
+##  <a name="_u_stringorid___u_stringorid"></a>_U_STRINGorID::_U_STRINGorID
 
-UINT 建構函式會將其引數轉換成相容於 Windows 資源管理函式使用 MAKEINTRESOURCE 巨集的資源類型，並將結果儲存在該類別的單一資料成員中， [m_lpstr](#_u_stringorid__m_lpstr)。
+UINT 處理常式會使用 MAKEINTRESOURCE 宏, 將其引數轉換成與 Windows 資源管理函式相容的資源類型, 並將結果儲存在類別的單一資料成員[m_lpstr](#_u_stringorid__m_lpstr)中。
 
 ```
 _U_STRINGorID(UINT nID);
@@ -80,8 +80,8 @@ _U_STRINGorID(LPCTSTR lpString);
 
 ### <a name="remarks"></a>備註
 
-轉換不直接儲存 LPCTSTR 建構函式的引數。
+LPCTSTR 函式的引數會直接儲存而不進行轉換。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

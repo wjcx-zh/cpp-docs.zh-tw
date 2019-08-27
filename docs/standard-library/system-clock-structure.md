@@ -9,12 +9,12 @@ f1_keywords:
 - chrono/std::chrono::system_clock::is_monotonic Constant
 - chrono/std::chrono::system_clock::is_steady Constant
 ms.assetid: a97bd46e-267a-4836-9f7d-af1f664e99ae
-ms.openlocfilehash: 66710f94d96f069d6d388d6b49c76747c618a0d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9fd83840883de5172df8b2e1e451984a95ea47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412146"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450181"
 ---
 # <a name="systemclock-structure"></a>system_clock 結構
 
@@ -47,10 +47,10 @@ struct system_clock;
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[from_time_t](#from_time_t)|靜態。 傳回最接近指定時間的 `time_point`。|
-|[now](#now)|靜態。 傳回目前時間。|
+|[至此](#now)|靜態。 傳回目前時間。|
 |[to_time_t](#to_time_t)|靜態。 傳回最接近指定 `time_point` 的 `time_t` 物件。|
 
 ### <a name="public-constants"></a>公用常數
@@ -62,13 +62,13 @@ struct system_clock;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<chrono >
+**標頭:** \<chrono >
 
 **命名空間：** std::chrono
 
 ## <a name="from_time_t"></a>  system_clock::from_time_t
 
-靜態方法會傳回[time_point](../standard-library/time-point-class.md)估計最接近所表示的時間*Tm*。
+傳回最接近*Tm*所表示之時間的[time_point](../standard-library/time-point-class.md)的靜態方法。
 
 ```cpp
 static time_point from_time_t(time_t Tm) noexcept;
@@ -76,7 +76,7 @@ static time_point from_time_t(time_t Tm) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*Tm*<br/>
+*迅馳*\
 [time_t](../c-runtime-library/standard-types.md) 物件。
 
 ## <a name="is_monotonic_constant"></a>  system_clock::is_monotonic 常數
@@ -89,7 +89,7 @@ static const bool is_monotonic = false;
 
 ### <a name="return-value"></a>傳回值
 
-在此實作中，`system_clock::is_monotonic`一律會傳回**false**。
+在此執行中`system_clock::is_monotonic` , 一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -105,7 +105,7 @@ static const bool is_steady = false;
 
 ### <a name="return-value"></a>傳回值
 
-在此實作中，`system_clock::is_steady`一律會傳回**false**。
+在此執行中`system_clock::is_steady` , 一律會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
@@ -125,7 +125,7 @@ static time_point now() noexcept;
 
 ## <a name="to_time_t"></a>  system_clock::to_time_t
 
-靜態方法會傳回[time_t](../c-runtime-library/standard-types.md)估計最接近所表示的時間*時間*。
+靜態方法, 會傳回最接近以*時間*表示之時間的[time_t](../c-runtime-library/standard-types.md) 。
 
 ```cpp
 static time_t to_time_t(const time_point& Time) noexcept;
@@ -133,11 +133,11 @@ static time_t to_time_t(const time_point& Time) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*時間*<br/>
+*階段*\
 [time_point](../standard-library/time-point-class.md) 物件。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
-[steady_clock 結構](../standard-library/steady-clock-struct.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)\
+[steady_clock 結構](../standard-library/steady-clock-struct.md)

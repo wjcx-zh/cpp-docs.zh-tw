@@ -45,7 +45,7 @@ ms.locfileid: "62156547"
 ### <a name="parameters"></a>參數
 
 *a*, *b*<br/>
-值的任何型別**<** 作用於運算子。
+值的任何型別 **<** 作用於運算子。
 
 ## <a name="return-value"></a>傳回值
 

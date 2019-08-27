@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 29c7df8fbedbd107a9bb0b05466addc4672fc555
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409373"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514604"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,11 +30,11 @@ ms.locfileid: "62409373"
 
 ## <a name="remarks"></a>備註
 
-**Importlib** C++屬性會導致`importlib`放在產生的.idl 檔的程式庫區塊的陳述式。 **Importlib**屬性有相同的功能[importlib](/windows/desktop/Midl/importlib) MIDL 屬性。
+C++ Importlib`importlib`屬性會將語句放在產生的 .idl 檔案的程式庫區塊中。 **Importlib**屬性具有與[importlib](/windows/win32/Midl/importlib) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**importlib**:
+下列程式碼顯示如何使用**importlib**的範例:
 
 ```cpp
 // cpp_attr_ref_importlib.cpp
@@ -51,8 +51,8 @@ ms.locfileid: "62409373"
 |-|-|
 |**適用於**|任何位置|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

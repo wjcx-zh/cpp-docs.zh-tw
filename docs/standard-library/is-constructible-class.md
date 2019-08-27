@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_constructible
 ms.assetid: 7cdec5ff-73cf-4f78-a9db-ced2e9c0fd7f
-ms.openlocfilehash: c921efd5b7e12873ce986952029ae39f118ad763
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc0596ac7a3fc2bcbcbe49f5fa4b20a971e5e445
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336851"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452868"
 ---
 # <a name="isconstructible-class"></a>is_constructible 類別
 
@@ -26,22 +26,22 @@ struct is_constructible;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
-*Args*<br/>
-引數類型的建構函式中要比對*T*。
+*引數*\
+要在*T*的函式中符合的引數類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*使用中的引數類型是可建構*Args*，否則為 false。 型別*T*是可建構如果變數定義`T t(std::declval<Args>()...);`而言是否格式正確。 兩者*T*和中的所有型別*Args*必須是完整類型**void**，或界限未知的陣列。
+如果類型*T*是使用*Args*中的引數類型來可建構, 則類型述詞的實例為 true, 否則為 false。 如果變數定義`T t(std::declval<Args>()...);`的格式正確, 類型 T 就會可建構。 *參數*中的*T*和所有類型都必須是完整的類型、 **void**或未知系結的陣列。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

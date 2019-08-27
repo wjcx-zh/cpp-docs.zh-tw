@@ -17,22 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224255"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244023"
 ---
 # <a name="ltiteratorgt-operators"></a>&lt;iterator&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|
-|[operator-](#operator-)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試運算子左邊的迭代器物件是否不等於右邊的迭代器物件。
 
@@ -49,10 +43,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `iterator` 類型的物件。
 
-*right*<br/>
+*權限*\
 `iterator` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -125,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試運算子左邊的迭代器物件是否等於右邊的迭代器物件。
 
@@ -153,10 +147,10 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 iterator 類型的物件。
 
-*right*<br/>
+*權限*\
 iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -167,7 +161,7 @@ iterator 類型的物件。
 
 一個迭代器物件與另一個迭代器物件如果定址對象是容器中的相同元素，兩者便相等。 如果兩個迭代器指向容器中不同的元素，它們便不相等。
 
-第一次的兩個範本運算子會傳回則為 true，只有當這兩個*左*並*右*儲存相同的迭代器。 第三個範本運算子會傳回 true，只有當這兩個*左*並*右*儲存相同的資料流指標。 第四個範本運算子會傳回 ` left.equal ( right)`。
+第一次的兩個範本運算子會傳回則為 true，只有當這兩個*左*並*右*儲存相同的迭代器。 第三個範本運算子會傳回 true，只有當這兩個*左*並*右*儲存相同的資料流指標。 第四個範本運算子會傳回 `left.equal (right)`。
 
 ### <a name="example"></a>範例
 
@@ -231,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試運算子左邊的迭代器物件是否小於右邊的迭代器物件。
 
@@ -242,10 +236,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 `iterator` 類型的物件。
 
-*right*<br/>
+*權限*\
 `iterator` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -322,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試運算子左邊的迭代器物件是否小於或等於右邊的迭代器物件。
 
@@ -333,10 +327,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 iterator 類型的物件。
 
-*right*<br/>
+*權限*\
 iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -417,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試運算子左邊的迭代器物件是否大於右邊的迭代器物件。
 
@@ -428,10 +422,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 iterator 類型的物件。
 
-*right*<br/>
+*權限*\
 iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -506,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試運算子左邊的迭代器物件是否大於或等於右邊的迭代器物件。
 
@@ -517,10 +511,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 iterator 類型的物件。
 
-*right*<br/>
+*權限*\
 iterator 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -601,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> operator +
 
 將位移新增至迭代器，並傳回定址對象是在新位移位置中插入之元素的 `move_iterator` 或 `reverse_iterator`。
 
@@ -621,15 +615,15 @@ operator+(
 
 ### <a name="parameters"></a>參數
 
-*_Off*<br/>
+*_Off*\
 要為常數 move_iterator 或常數 reverse_iterator 調整位移的位置數目。
 
-*right*<br/>
+*權限*\
 要調整位移的迭代器。
 
 ### <a name="return-value"></a>傳回值
 
-傳回總和*右* + *_Off*。
+傳回總和*右* +  *_Off*。
 
 ### <a name="example"></a>範例
 
@@ -680,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> 運算子-
 
 將一個迭代器減去另一個，並傳回差異。
 
@@ -698,10 +692,10 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 迭代器。
 
-*right*<br/>
+*權限*\
 迭代器。
 
 ### <a name="return-value"></a>傳回值
@@ -772,7 +766,3 @@ The iterator rVPOS2 now points to the fifth element
 in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<iterator>](../standard-library/iterator.md)<br/>

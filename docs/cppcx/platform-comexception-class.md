@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb6f3e0e4860687d0d47294e11b7741294abac20
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383343"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500539"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException 類別
 
@@ -73,15 +73,15 @@ COMException 類別具有下列屬性。
 
 ### <a name="requirements"></a>需求
 
-**最低支援用戶端：** Windows 8
+**最低支援用戶端:** Windows 8
 
-**最低支援伺服器：** Windows Server 2012
+**最低支援伺服器:** Windows Server 2012
 
-**命名空間：** Platform
+**命名空間：** 平台
 
 **中繼資料：** platform.winmd
 
-## <a name="ctor"></a> Comexception:: Comexception 建構函式
+## <a name="ctor"></a>COMException:: COMException 函式
 
 初始化 COMException 類別的新執行個體。
 
@@ -96,7 +96,7 @@ COMException( int hresult )
 *hresult*<br/>
 由例外狀況表示的錯誤 HRESULT。
 
-## <a name="hresult"></a> Comexception:: Hresult 屬性
+## <a name="hresult"></a>COMException:: HResult 屬性
 
 對應於例外狀況的 HRESULT。
 
@@ -113,9 +113,9 @@ public:
 
 ### <a name="remarks"></a>備註
 
-如需如何解譯 HRESULT 值的詳細資訊，請參閱[錯誤碼的結構 COM](/windows/desktop/com/structure-of-com-error-codes)。
+如需如何解讀 HRESULT 值的詳細資訊, 請參閱[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
-## <a name="message"></a> Comexception:: Message 屬性
+## <a name="message"></a>COMException:: Message 屬性
 
 說明例外狀況的訊息。
 

@@ -1,21 +1,21 @@
 ---
-title: 限制 (C++ COM 屬性)
+title: 受限制C++ (COM 屬性)
 ms.date: 10/03/2018
 f1_keywords:
 - vc-attr.restricted
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 86f40fa49daf88668e37bef07f0db33d01cf1942
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407350"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514056"
 ---
 # <a name="restricted"></a>restricted
 
-指定的模組、 介面或 dispinterface 成員不能任意呼叫。
+指定不能任意呼叫模組、介面或分配介面的成員。
 
 ## <a name="syntax"></a>語法
 
@@ -28,15 +28,15 @@ ms.locfileid: "62407350"
 ### <a name="parameters"></a>參數
 
 *interfaces*<br/>
-Metodu nelze volat 任意 COM 物件的一或多個介面。 此參數才有效時套用至類別。
+在 COM 物件上可能不會任意呼叫的一個或多個介面。 這個參數只有在套用至類別時才有效。
 
 ## <a name="remarks"></a>備註
 
-**受限**C++屬性具有相同的功能[限制](/windows/desktop/Midl/restricted)MIDL 屬性。
+**受限制** C++的屬性與[限制](/windows/win32/Midl/restricted)的 MIDL 屬性具有相同的功能。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用**限制**屬性：
+下列程式碼顯示如何使用**受限制**的屬性:
 
 ```cpp
 // cpp_attr_ref_restricted.cpp
@@ -67,10 +67,10 @@ class c : public a, public b
 
 |||
 |-|-|
-|**適用於**|介面方法，**介面**，**類別**，**結構**|
+|**適用於**|介面方法、**介面**、**類別**、**結構**|
 |**可重複**|否|
-|**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
-|**無效屬性**|None|
+|**必要屬性**|**coclass**(套用至**類別**或**結構**時)|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 0a5e01c0fde49c7debb7749f5a1d148acb9cca6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409118"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514380"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
-指出介面成員不會顯示在屬性瀏覽器。
+表示介面成員不應顯示在屬性瀏覽器中。
 
 ## <a name="syntax"></a>語法
 
@@ -25,7 +25,7 @@ ms.locfileid: "62409118"
 
 ## <a name="remarks"></a>備註
 
-**Nonbrowsable** C++屬性具有相同的功能[nonbrowsable](/windows/desktop/Midl/nonbrowsable) MIDL 屬性。
+**Nonbrowsable** C++屬性具有與[nonbrowsable](/windows/win32/Midl/nonbrowsable) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 

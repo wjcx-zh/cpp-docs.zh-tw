@@ -240,7 +240,7 @@
             - name: 建立登錄器指令碼
               href: creating-registrar-scripts.md
             - name: 了解巴格斯格式 (BNF) 語法
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: 了解剖析樹狀目錄
               href: understanding-parse-trees.md
             - name: 登錄指令碼範例

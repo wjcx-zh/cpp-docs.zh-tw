@@ -14,34 +14,34 @@ helpviewer_keywords:
 - DTN_FORMAT notification [MFC]
 - DateTimePicker control [MFC]
 ms.assetid: ffbe29ab-ff80-4609-89f7-260b404439c4
-ms.openlocfilehash: ce84863744629d30248f94b94448d776177f9841
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fead5643299aee4beace55abde0b6a6c801a324f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339555"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69507883"
 ---
 # <a name="processing-notification-messages-in-date-and-time-picker-controls"></a>處理日期時間選擇器控制項中的通知訊息
 
-當使用者與日期和時間選擇器控制項、 控制項互動 (`CDateTimeCtrl`) 傳送通知訊息至其父視窗，通常是檢視或對話方塊物件。 如果您想要執行動作以作為回應，請處理這些訊息。 例如，當使用者開啟以顯示內嵌的月曆控制項的日期和時間選擇器時，會傳送 DTN_DROPDOWN 告知。
+當使用者與日期和時間選擇器控制項互動時, 控制項 (`CDateTimeCtrl`) 會將通知訊息傳送至其父視窗, 通常是 view 或 dialog 物件。 如果您想要執行動作以作為回應，請處理這些訊息。 例如, 當使用者開啟日期和時間選擇器以顯示內嵌月曆控制項時, 就會傳送 DTN_DROPDOWN 通知。
 
 使用 [屬性] 視窗，將通知處理常式加入您想要實作之這些訊息的父類別。
 
-下列清單將描述各種日期和時間選擇器控制項所傳送的通知。
+下列清單描述日期和時間選擇器控制項所傳送的各種通知。
 
-- DTN_DROPDOWN 告知在即將顯示內嵌月曆控制項的父代。 尚未設定 DTS_UPDOWN 樣式時，才會傳送此通知。 如需有關這項通知的詳細資訊，請參閱 <<c0> [ 存取內嵌月曆控制項](../mfc/accessing-the-embedded-month-calendar-control.md)。
+- DTN_DROPDOWN 會通知父系即將顯示內嵌月份行事曆控制項。 只有在尚未設定 DTS_UPDOWN 樣式時, 才會傳送此通知。 如需有關此通知的詳細資訊, 請參閱[存取內嵌月曆控制項](../mfc/accessing-the-embedded-month-calendar-control.md)。
 
-- DTN_CLOSEUP 告知內嵌月曆控制項的父代即將關閉。 尚未設定 DTS_UPDOWN 樣式時，才會傳送此通知。
+- DTN_CLOSEUP 會通知父系, 即將關閉內嵌月曆控制項。 只有在尚未設定 DTS_UPDOWN 樣式時, 才會傳送此通知。
 
-- DTN_DATETIMECHANGE 告知已發生變更，在控制項中的父代。
+- DTN_DATETIMECHANGE 會通知父系控制項中已發生變更。
 
-- DTN_FORMAT 告知在回呼欄位會顯示所需的文字是父代。 如需有關此通知和回呼欄位的詳細資訊，請參閱 <<c0> [ 日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
+- DTN_FORMAT 會通知父系需要在回呼欄位中顯示文字。 如需有關此通知和回呼欄位的詳細資訊, 請參閱[在日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
 
-- DTN_FORMATQUERY 要求提供在字串中會顯示在回呼欄位的允許大小上限的父代。 處理此通知可讓控制項正確地顯示在任何時間，減少重繪閃動內控制項的顯示的輸出。 如需有關這項通知的詳細資訊，請參閱 <<c0> [ 日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
+- DTN_FORMATQUERY 會要求父代, 以提供將在回呼欄位中顯示之字串的允許大小上限。 處理此通知可讓控制項隨時正確地顯示輸出, 減少控制項顯示內的閃爍。 如需有關此通知的詳細資訊, 請參閱[在日期和時間選擇器控制項中使用回呼欄位](../mfc/using-callback-fields-in-a-date-and-time-picker-control.md)。
 
-- DTN_USERSTRING 通知使用者已完成編輯的日期和時間選擇器內容的父控制項。 當已設定了 DTS_APPCANPARSE 樣式時，才會傳送此通知。
+- DTN_USERSTRING 會通知父系, 使用者已完成編輯日期和時間選擇器控制項的內容。 只有在已設定 DTS_APPCANPARSE 樣式時, 才會傳送此通知。
 
-- 當使用者輸入的回呼欄位中時，DTN_WMKEYDOWN 會告知父代。 處理這個通知可模擬相同的鍵盤回應的日期和時間選擇器控制項中的非回呼欄位的支援。 如需有關這項通知的詳細資訊，請參閱 < [DTP 控制項支援回呼欄位](/windows/desktop/Controls/date-and-time-picker-controls)Windows SDK 中。
+- 當使用者在回呼欄位中輸入時, DTN_WMKEYDOWN 會通知父系。 處理此通知, 以模擬日期和時間選擇器控制項中, 非回呼欄位支援的相同鍵盤回應。 如需有關此通知的詳細資訊, 請參閱 Windows SDK 中的[DTP 控制項支援回呼欄位](/windows/win32/Controls/date-and-time-picker-controls)。
 
 ## <a name="see-also"></a>另請參閱
 

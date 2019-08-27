@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405166"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458613"
 ---
 # <a name="collate-class"></a>collate 類別
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
@@ -51,7 +51,7 @@ class collate : public locale::facet;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[collate](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
 
@@ -75,7 +75,7 @@ class collate : public locale::facet;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<locale>
+**標頭︰** \<locale>
 
 **命名空間：** std
 
@@ -108,23 +108,23 @@ const char* _Locname,
 
 ### <a name="parameters"></a>參數
 
-*_Refs*<br/>
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*<br/>
+*_Locname*\
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-可能值 *_Refs*參數和其意義如下：
+*_Refs*參數的可能值和其重要性如下:
 
-- 0:物件的存留期是由包含它的地區設定管理。
+- 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \> 1:未定義這些值。
+- \>1:未定義這些值。
 
-建構函式會初始化其基底物件**地區設定::**[facet](../standard-library/locale-class.md#facet_class)(`_Refs`)。
+此函式會使用**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基底物件。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*first1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1*<br/>
+*last1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*<br/>
+*first2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2*<br/>
+*last2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*<br/>
+*first1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1*<br/>
+*last1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*<br/>
+*first2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2*<br/>
+*last2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護虛擬成員函式會比較 [* first1，Last1) * 與在順序 *[first2，last2*)。 它會比較值，藉由套用`operator<`類型的對應項目配對之間`CharType`。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護的虛擬成員函式會將位於 [* first1, Last1) * 的順序與序列 (位於 *[first2, last2*)) 進行比較。 它會`operator<`在類型`CharType`的對應元素配對之間套用, 藉以比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要決定其序列值之第一個字元的指標。
 
-*last*<br/>
+*次*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要轉換之序列中第一個字元的指標。
 
-*last*<br/>
+*次*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要決定其序列值之第一個字元的指標。
 
-*last*<br/>
+*次*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*first*<br/>
+*頭*\
 要轉換之序列中第一個字元的指標。
 
-*last*<br/>
+*次*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回[do_transform](#do_transform)(`first`， `last`)。
+此成員函式[](#do_transform)會傳回`first`do_transform `last`(,)。
 
 ### <a name="example"></a>範例
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>另請參閱
 
-[\<locale>](../standard-library/locale.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -2,23 +2,64 @@
 title: '&lt;new&gt; 函式'
 ms.date: 11/04/2016
 f1_keywords:
+- new/std::get_new_handler
 - new/std::nothrow
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
-ms.openlocfilehash: b5803b5fdf44392b6096f9c9a5ebdde7f94eae59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223727"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243672"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt; 函式
 
-|||
-|-|-|
-|[nothrow](#nothrow)|[set_new_handler](#set_new_handler)|
+## <a name="get_new_handler"></a> get_new_handler
 
-## <a name="nothrow"></a>  nothrow
+```cpp
+new_handler get_new_handler() noexcept;
+```
+
+### <a name="remarks"></a>備註
+
+傳回目前`new_handler`。
+
+## <a name="launder"></a> launder
+
+```cpp
+template <class T>
+    constexpr T* launder(T* ptr) noexcept;
+```
+
+### <a name="parameters"></a>參數
+
+*ptr*\
+其中包含物件類型的記憶體中的位元組的位址是類似*T*。
+
+### <a name="return-value"></a>傳回值
+
+型別的值*T\** 指向 X。
+
+### <a name="remarks"></a>備註
+
+也稱為指標最佳化屏障。
+
+當其引數的值可用於常數運算式，請使用當做常數運算式。 連線到透過指向的物件，如果是在另一個物件，具有類似指標的物件所佔用的儲存體的指標值的位元組的儲存體。
+
+### <a name="example"></a>範例
+
+```cpp
+struct X { const int n; };
+
+X *p = new X{3};
+const int a = p->n;
+new (p) X{5}; // p does not point to new object because X::n is const
+const int b = p->n; // undefined behavior
+const int c = std::launder(p)->n; // OK
+```
+
+## <a name="nothrow"></a> nothrow
 
 提供要用來做為引數物件**nothrow**新版**新**並**刪除**。
 
@@ -34,7 +75,7 @@ extern const std::nothrow_t nothrow;
 
 如需如何使用 `std::nothrow_t` 作為函式參數的範例，請參閱 [operator new](../standard-library/new-operators.md#op_new) 和 [operator new&#91;&#93;](../standard-library/new-operators.md#op_new_arr)。
 
-## <a name="set_new_handler"></a>  set_new_handler
+## <a name="set_new_handler"></a> set_new_handler
 
 安裝時要呼叫的使用者函式**new 運算子**中嘗試配置記憶體失敗。
 
@@ -44,7 +85,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 
 ### <a name="parameters"></a>參數
 
-*Pnew*<br/>
+*Pnew*\
 `new_handler`安裝。
 
 ### <a name="return-value"></a>傳回值
@@ -117,7 +158,3 @@ Allocating 5000000 ints.
 The new_handler is called:
 bad allocation
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<new>](../standard-library/new.md)<br/>

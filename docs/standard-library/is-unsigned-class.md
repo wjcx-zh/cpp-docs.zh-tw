@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_unsigned class
 - is_unsigned
 ms.assetid: ba5bec3d-796b-4e54-8595-a3941ec6a8dc
-ms.openlocfilehash: fc27689eb367950daf9dfdf113e1472b0945f9af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3da9f71543815b507307f2cf4969e8f19c79e8c5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413420"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458883"
 ---
 # <a name="isunsigned-class"></a>is_unsigned 類別
 
@@ -27,12 +27,12 @@ struct is_unsigned;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是不帶正負號的整數類資料類型或`cv-qualified`不帶正負號整數類資料類型，否則為 false。
+如果類型*Ty*是不帶正負號的整數類資料類型或`cv-qualified`不帶正負號的整數類型, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -71,11 +71,11 @@ is_unsigned<float> == false
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_signed 類別](../standard-library/is-signed-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_signed 類別](../standard-library/is-signed-class.md)

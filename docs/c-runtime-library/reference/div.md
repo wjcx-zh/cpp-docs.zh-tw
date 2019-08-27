@@ -74,13 +74,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>傳回值
 
-**div**使用的型別引數呼叫**int**會傳回類型的結構**div_t**，其中包括商數和餘數。 傳回值與類型的引數**長**是**ldiv_t**，和傳回值的型別引數**長****長**是**lldiv_t**。 **div_t**， **ldiv_t**，以及**lldiv_t**中所定義\<stdlib.h >。
+**div**使用的型別引數呼叫**int**會傳回類型的結構**div_t**，其中包括商數和餘數。 傳回值與類型的引數**長**是**ldiv_t**，和傳回值的型別引數**長** **長**是**lldiv_t**。 **div_t**， **ldiv_t**，以及**lldiv_t**中所定義\<stdlib.h >。
 
 ## <a name="remarks"></a>備註
 
 **Div**函式除以*號碼*由*denom* ，並藉此計算商數和餘數。 [Div_t](../../c-runtime-library/standard-types.md)結構包含商數**q u o t**，和餘數**rem**。商數的正負號與數學商數相同。 其絕對值是小於數學商數絕對值的最大整數。 如果分母為 0，程式會終止並出現錯誤訊息。
 
-多載**div**可接受類型引數**長**或**長****長**而僅適用於C++的程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)並[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**並**rem**，其中具有相同意義隸屬**div_t**。
+多載**div**可接受類型引數**長**或**長** **長**而僅適用於C++的程式碼。 傳回型別[ldiv_t](../../c-runtime-library/standard-types.md)並[lldiv_t](../../c-runtime-library/standard-types.md)包含成員**q u o t**並**rem**，其中具有相同意義隸屬**div_t**。
 
 ## <a name="requirements"></a>需求
 

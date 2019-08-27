@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18b17d0f40aaab6ba2a018a568950549eda23016
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373163"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503005"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog 類別
 
@@ -59,35 +59,35 @@ class CPageSetupDialog : public CCommonDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|建立列印裝置內容。|
-|[CPageSetupDialog::DoModal](#domodal)|顯示對話方塊，並允許使用者進行選取。|
-|[CPageSetupDialog::GetDeviceName](#getdevicename)|傳回印表機裝置名稱。|
-|[CPageSetupDialog::GetDevMode](#getdevmode)|傳回目前的 DEVMODE 的印表機。|
-|[CPageSetupDialog::GetDriverName](#getdrivername)|傳回由印表機驅動程式。|
-|[CPageSetupDialog::GetMargins](#getmargins)|傳回目前的邊界設定的印表機。|
+|[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|建立列印的裝置內容。|
+|[CPageSetupDialog::DoModal](#domodal)|顯示對話方塊, 並允許使用者進行選取。|
+|[CPageSetupDialog::GetDeviceName](#getdevicename)|傳回印表機的裝置名稱。|
+|[CPageSetupDialog::GetDevMode](#getdevmode)|傳回印表機目前的 DEVMODE。|
+|[CPageSetupDialog::GetDriverName](#getdrivername)|傳回印表機所使用的驅動程式。|
+|[CPageSetupDialog::GetMargins](#getmargins)|傳回印表機的目前邊界設定。|
 |[CPageSetupDialog::GetPaperSize](#getpapersize)|傳回印表機的紙張大小。|
-|[CPageSetupDialog::GetPortName](#getportname)|傳回的輸出連接埠名稱。|
-|[CPageSetupDialog::OnDrawPage](#ondrawpage)|由架構呼叫以呈現列印頁面的畫面影像。|
-|[CPageSetupDialog::PreDrawPage](#predrawpage)|呈現列印頁面的畫面影像前，由架構呼叫。|
+|[CPageSetupDialog::GetPortName](#getportname)|傳回輸出埠名稱。|
+|[CPageSetupDialog::OnDrawPage](#ondrawpage)|由架構呼叫以呈現列印頁面的螢幕影像。|
+|[CPageSetupDialog::PreDrawPage](#predrawpage)|在呈現列印頁面的螢幕影像之前, 由架構呼叫。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPageSetupDialog::m_psd](#m_psd)|結構，用來自訂`CPageSetupDialog`物件。|
+|[CPageSetupDialog::m_psd](#m_psd)|用來自訂`CPageSetupDialog`物件的結構。|
 
 ## <a name="remarks"></a>備註
 
-此類別被設計來取代 [設定列印格式] 對話方塊。
+這個類別是設計用來取代 [列印設定] 對話方塊。
 
-若要使用`CPageSetupDialog`物件，請先建立物件使用`CPageSetupDialog`建構函式。 一旦建構的對話方塊中，您可以設定或修改中的任何值`m_psd`來初始化對話方塊的控制項值的資料成員。 [M_psd](#m_psd)結構屬於 PAGESETUPDLG 的型別。
+若要使用`CPageSetupDialog`物件, 請先使用此`CPageSetupDialog`函數建立物件。 建立對話方塊之後, 您可以設定或修改`m_psd`資料成員中的任何值, 以初始化對話方塊控制項的值。 [M_psd](#m_psd)結構的類型為 PAGESETUPDLG。
 
-在初始化對話方塊的控制項之後, 呼叫`DoModal`成員函式，以顯示對話方塊，並允許使用者選取列印選項。 `DoModal` 傳回使用者是否已選取 確定 (IDOK) 或 取消 (IDCANCEL) 按鈕。
+在初始化對話方塊控制項之後, 呼叫`DoModal`成員函式以顯示對話方塊, 並允許使用者選取列印選項。 `DoModal`傳回使用者是否選取 [確定] (IDOK) 或 [取消] (IDCANCEL) 按鈕。
 
-如果`DoModal`傳回 IDOK，您可以使用數個`CPageSetupDialog`的成員函式或存取`m_psd`資料成員，來擷取使用者的資訊輸入。
+如果`DoModal`傳回 IDOK, 您可以使用數`CPageSetupDialog`個的成員函式或存取`m_psd`資料成員, 以取出使用者的資訊輸入。
 
 > [!NOTE]
->  通用 OLE 版面設定對話方塊關閉之後，使用者所做的任何變更將不會儲存由架構。 這是由應用程式本身儲存至永久的位置，例如應用程式的文件或應用程式類別的成員的這個對話方塊中任何值。
+>  在 [一般 OLE 版面設定] 對話方塊關閉之後, 架構將不會儲存使用者所做的任何變更。 應用程式本身會負責將此對話方塊中的任何值儲存到永久位置, 例如應用程式的檔或應用程式類別的成員。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -105,11 +105,11 @@ class CPageSetupDialog : public CCommonDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdlgs.h
+**標頭:** afxdlgs。h
 
-##  <a name="cpagesetupdialog"></a>  CPageSetupDialog::CPageSetupDialog
+##  <a name="cpagesetupdialog"></a>CPageSetupDialog::CPageSetupDialog
 
-呼叫此函式來建構`CPageSetupDialog`物件。
+呼叫此函式以建立`CPageSetupDialog`物件。
 
 ```
 CPageSetupDialog(
@@ -120,58 +120,58 @@ CPageSetupDialog(
 ### <a name="parameters"></a>參數
 
 *dwFlags*<br/>
-您可以使用自訂的對話方塊中設定的一或多個標幟。 值，可以使用位元 OR 運算子加以結合。 這些值具有下列意義：
+一或多個旗標, 可供您用來自訂對話方塊的設定。 這些值可以使用位 OR 運算子結合。 這些值具有下列意義:
 
-- PSD_DEFAULTMINMARGINS 設定允許，使印表機的最小值與相同的頁面邊界寬度下限。 如果也指定 PSD_MARGINS 和 PSD_MINMARGINS 旗標，則會忽略此旗標。
+- PSD_DEFAULTMINMARGINS 會將頁面邊界的最小允許寬度設定為與印表機的最低值相同。 如果同時指定 PSD_MARGINS 和 PSD_MINMARGINS 旗標, 則會忽略此旗標。
 
-- PSD_INWININIINTLMEASURE 未實作。
+- 未執行 PSD_INWININIINTLMEASURE。
 
-- PSD_MINMARGINS 會導致系統使用中指定的值`rtMinMargin`作為允許的最小寬度，左側、 頂端、 右側，和下方邊界的成員。 系統會防止使用者輸入小於指定的最小寬度。 如果未指定 PSD_MINMARGINS，系統就會設定允許的寬度下限所允許的印表機。
+- PSD_MINMARGINS 會使系統使用`rtMinMargin`成員中指定的值, 做為左邊、上、右和下邊界的最小允許寬度。 系統會防止使用者輸入小於指定之最小值的寬度。 如果未指定 PSD_MINMARGINS, 系統會將允許的最小寬度設定為印表機允許的寬度。
 
-- PSD_MARGINS 啟動邊界控制項區域。
+- PSD_MARGINS 會啟用邊界控制區域。
 
-- PSD_INTHOUSANDTHSOFINCHES 會導致單位 對話方塊中的度量單位是英吋的 1/1000 之間。
+- PSD_INTHOUSANDTHSOFINCHES 會導致對話方塊的單位以一英寸的1/1000 測量。
 
-- PSD_INHUNDREDTHSOFMILLIMETERS 會導致單位 對話方塊中的度量單位是 1/100 公釐。
+- PSD_INHUNDREDTHSOFMILLIMETERS 會導致對話方塊的單位以一毫米的1/100 測量。
 
-- PSD_DISABLEMARGINS 停用邊界對話方塊的控制項。
+- PSD_DISABLEMARGINS 會停用邊界對話方塊控制項。
 
-- PSD_DISABLEPRINTER 停用 [印表機] 按鈕。
+- PSD_DISABLEPRINTER 會停用 [印表機] 按鈕。
 
-- PSD_NOWARNING 避免預設的印表機時顯示警告訊息。
+- PSD_NOWARNING 可防止在沒有預設印表機時顯示警告訊息。
 
-- PSD_DISABLEORIENTATION 停用頁面方向對話方塊控制項。
+- PSD_DISABLEORIENTATION 會停用 [頁面方向] 對話方塊控制項。
 
-- PSD_RETURNDEFAULT 會導致`CPageSetupDialog`返回[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)會初始化為系統預設的印表機，而不會顯示一個對話方塊中的結構。 它假設這兩個`hDevNames`和`hDevMode`都為 NULL; 否則函數會傳回錯誤。 如果系統預設的印表機支援舊的印表機驅動程式 （早於 Windows 3.0 版） 只能`hDevNames`傳回;`hDevMode`為 NULL。
+- PSD_RETURNDEFAULT 會`CPageSetupDialog`導致傳回[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構, 其已針對系統預設印表機初始化, 而不會顯示對話方塊。 假設`hDevNames` 和`hDevMode`都是 Null, 否則函數會傳回錯誤。 如果舊的印表機驅動程式 (早于 Windows 3.0 版) 支援系統預設印表機, 則只`hDevNames`會傳回;`hDevMode`為 Null。
 
-- PSD_DISABLEPAPER 停用文件選取範圍控制項。
+- PSD_DISABLEPAPER 會停用紙張選取控制項。
 
-- PSD_SHOWHELP 會導致對話方塊中，以顯示 [說明] 按鈕。 `hwndOwner`成員不得為 NULL，如果指定此旗標。
+- PSD_SHOWHELP 會導致對話方塊顯示 [說明] 按鈕。 如果指定此旗標,成員不得為Null。`hwndOwner`
 
-- PSD_ENABLEPAGESETUPHOOK 啟用攔截函式中指定`lpfnSetupHook`。
+- PSD_ENABLEPAGESETUPHOOK 會啟用中`lpfnSetupHook`指定的攔截函式。
 
-- PSD_ENABLEPAGESETUPTEMPLATE 會造成要建立對話方塊中，使用範本 對話方塊所識別的作業系統`hInstance`和`lpSetupTemplateName`。
+- PSD_ENABLEPAGESETUPTEMPLATE 會讓作業系統使用`hInstance`和`lpSetupTemplateName`所識別的對話方塊範本方塊來建立對話方塊。
 
-- PSD_ENABLEPAGESETUPTEMPLATEHANDLE 表示`hInstance`識別包含預先載入的對話方塊範本的資料區塊。 系統會忽略`lpSetupTemplateName`如果指定此旗標。
+- PSD_ENABLEPAGESETUPTEMPLATEHANDLE 指出`hInstance`可識別包含預先載入之對話方塊範本的資料區塊。 如果指定此`lpSetupTemplateName`旗標, 系統就會忽略。
 
-- PSD_ENABLEPAGEPAINTHOOK 啟用攔截函式中指定`lpfnPagePaintHook`。
+- PSD_ENABLEPAGEPAINTHOOK 會啟用中`lpfnPagePaintHook`指定的攔截函式。
 
-- PSD_DISABLEPAGEPAINTING 停用對話方塊中的 [繪製] 的區域。
+- PSD_DISABLEPAGEPAINTING 會停用對話方塊的繪製區域。
 
 *pParentWnd*<br/>
-至對話方塊的父成員或擁有者的指標。
+對話方塊的父系或擁有者的指標。
 
 ### <a name="remarks"></a>備註
 
-使用[DoModal](../../mfc/reference/cdialog-class.md#domodal)函式來顯示對話方塊。
+使用[DoModal](../../mfc/reference/cdialog-class.md#domodal)函數來顯示對話方塊。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#94](../../mfc/codesnippet/cpp/cpagesetupdialog-class_1.cpp)]
 
-##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
+##  <a name="createprinterdc"></a>CPageSetupDialog::CreatePrinterDC
 
-建立從印表機裝置內容[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)並[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)結構。
+從[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)和[DEVNAMES](/windows/win32/api/commdlg/ns-commdlg-devnames)結構建立印表機裝置內容。
 
 ```
 HDC CreatePrinterDC();
@@ -179,11 +179,11 @@ HDC CreatePrinterDC();
 
 ### <a name="return-value"></a>傳回值
 
-新建立的印表機裝置內容 (DC) 的控制代碼。
+新建立之印表機裝置內容 (DC) 的控制碼。
 
-##  <a name="domodal"></a>  CPageSetupDialog::DoModal
+##  <a name="domodal"></a>CPageSetupDialog::D oModal
 
-呼叫此函式可顯示 [Windows 通用 OLE 版面設定] 對話方塊中，而且允許使用者選取各種列印設定選項，例如列印邊界、 大小和方向的紙張，以及目的地印表機。
+呼叫此函式以顯示 [Windows 通用 OLE 版面設定] 對話方塊, 並允許使用者選取各種列印設定選項, 例如列印邊界、紙張大小和方向, 以及目的地印表機。
 
 ```
 virtual INT_PTR DoModal();
@@ -191,27 +191,27 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-IDOK 或 IDCANCEL。 如果傳回 IDCANCEL，呼叫 Windows [CommDlgExtendedError](/windows/desktop/api/commdlg/nf-commdlg-commdlgextendederror)函式來判斷是否發生錯誤。
+IDOK 或 IDCANCEL。 如果傳回 IDCANCEL, 請呼叫 Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror)函數來判斷是否發生錯誤。
 
-IDOK 及 IDCANCEL 是常數，指出使用者是否已選取 [確定] 或 [取消] 按鈕。
+IDOK 和 IDCANCEL 是常數, 指出使用者是否選取 [確定] 或 [取消] 按鈕。
 
 ### <a name="remarks"></a>備註
 
-此外，使用者可以存取印表機安裝選項，例如網路位置和所選印表機的特定屬性。
+此外, 使用者也可以存取印表機安裝選項, 例如所選印表機特定的網路位置和內容。
 
-如果您想要初始化的各種版面設定對話方塊選項所設定的成員`m_psd`結構，您應該先呼叫如此做`DoModal`，前後建構對話方塊物件。 之後呼叫`DoModal`，呼叫其他成員函式來擷取在對話方塊中的 設定 或 使用者的資訊輸入。
+如果您想要藉由設定`m_psd`結構的成員來初始化各種 [版面設定] 對話方塊選項, 您應該在呼叫`DoModal`之前, 以及在建立對話方塊物件之後, 執行此動作。 呼叫`DoModal`之後, 呼叫其他成員函式, 以抓取使用者在對話方塊中輸入的設定或資訊。
 
-如果您想要傳播目前使用者所輸入的設定，請呼叫[CWinApp::SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter)。 此函式會將資訊從`CPageSetupDialog`物件初始化，並選取適當的屬性的新印表機 DC。
+如果您想要傳播使用者所輸入的目前設定, 請呼叫[CWinApp:: SelectPrinter](../../mfc/reference/cwinapp-class.md#selectprinter)。 此函式會從`CPageSetupDialog`物件取得資訊, 並使用適當的屬性來初始化並選取新的印表機 DC。
 
 [!code-cpp[NVC_MFCDocView#95](../../mfc/codesnippet/cpp/cpagesetupdialog-class_2.cpp)]
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。
+  請參閱[CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)的範例。
 
-##  <a name="getdevicename"></a>  CPageSetupDialog::GetDeviceName
+##  <a name="getdevicename"></a>CPageSetupDialog::GetDeviceName
 
-呼叫此函式之後`DoModal`來擷取目前所選印表機的名稱。
+請在之後`DoModal`呼叫此函式, 以取得目前選取之印表機的名稱。
 
 ```
 CString GetDeviceName() const;
@@ -219,11 +219,11 @@ CString GetDeviceName() const;
 
 ### <a name="return-value"></a>傳回值
 
-所使用的裝置名稱`CPageSetupDialog`物件。
+`CPageSetupDialog`物件所使用的裝置名稱。
 
-##  <a name="getdevmode"></a>  CPageSetupDialog::GetDevMode
+##  <a name="getdevmode"></a>CPageSetupDialog::GetDevMode
 
-呼叫此函式之後呼叫`DoModal`擷取印表機裝置內容的相關資訊`CPageSetupDialog`物件。
+呼叫`DoModal`以抓取`CPageSetupDialog`物件之印表機裝置內容的相關資訊之後, 呼叫此函式。
 
 ```
 LPDEVMODE GetDevMode() const;
@@ -231,11 +231,11 @@ LPDEVMODE GetDevMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)資料結構，其中包含裝置的初始設定和環境的列印驅動程式的相關資訊。 您必須解除鎖定這個結構與 Windows 所取用的記憶體[GlobalUnlock](/windows/desktop/api/winbase/nf-winbase-globalunlock)函式，Windows SDK 中所述。
+[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)資料結構, 其中包含有關列印驅動程式之裝置初始化和環境的資訊。 您必須使用 Windows [GlobalUnlock](/windows/win32/api/winbase/nf-winbase-globalunlock)函數 (如 Windows SDK 中所述), 解除鎖定此結構所佔用的記憶體。
 
-##  <a name="getdrivername"></a>  CPageSetupDialog::GetDriverName
+##  <a name="getdrivername"></a>CPageSetupDialog:: GetDriverName
 
-呼叫此函式之後呼叫[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)來擷取系統定莪印表機裝置驅動程式的名稱。
+呼叫[DoModal](../../mfc/reference/cprintdialog-class.md#domodal)來取得系統定義的印表機設備磁碟機名稱之後, 請呼叫此函式。
 
 ```
 CString GetDriverName() const;
@@ -243,15 +243,15 @@ CString GetDriverName() const;
 
 ### <a name="return-value"></a>傳回值
 
-A`CString`指定系統定義的驅動程式名稱。
+, `CString`指定系統定義的驅動程式名稱。
 
 ### <a name="remarks"></a>備註
 
-使用指標`CString`所傳回的物件`GetDriverName`的值為`lpszDriverName`呼叫中[CDC::CreateDC](../../mfc/reference/cdc-class.md#createdc)。
+`CString`在[CDC:: CreateDC](../../mfc/reference/cdc-class.md#createdc)的呼叫中`GetDriverName` , 使用所傳回`lpszDriverName`之物件的指標做為的值。
 
-##  <a name="getmargins"></a>  CPageSetupDialog::GetMargins
+##  <a name="getmargins"></a>CPageSetupDialog::GetMargins
 
-呼叫此函式在呼叫之後`DoModal`擷取印表機裝置驅動程式的邊界。
+呼叫`DoModal`以取得印表機設備磁碟機的邊界之後, 呼叫此函式。
 
 ```
 void GetMargins(
@@ -262,14 +262,14 @@ void GetMargins(
 ### <a name="parameters"></a>參數
 
 *lpRectMargins*<br/>
-指標[RECT](/windows/desktop/api/windef/ns-windef-tagrect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)告訴您目前所選印表機的列印邊界 （以 1/1000年英吋或 1/100 公釐） 的物件。 如果您不想要這個矩形，這個參數，傳遞 NULL。
+[矩形](/windows/win32/api/windef/ns-windef-rect)結構或[CRect](../../atl-mfc-shared/reference/crect-class.md)物件的指標, 描述目前所選印表機的列印邊界 (1/1000 英寸或 1/100 mm)。 如果您對此矩形不感興趣, 請傳遞 Null 給此參數。
 
 *lpRectMinMargins*<br/>
-指標`RECT`結構或`CRect`告訴您目前所選印表機的最小列印邊界 （以 1/1000年英吋或 1/100 公釐） 的物件。 如果您不想要這個矩形，這個參數，傳遞 NULL。
+`RECT`結構或`CRect`物件的指標, 描述目前所選印表機的最小列印邊界 (1/1000 英寸或 1/100 mm)。 如果您對此矩形不感興趣, 請傳遞 Null 給此參數。
 
-##  <a name="getpapersize"></a>  CPageSetupDialog::GetPaperSize
+##  <a name="getpapersize"></a>CPageSetupDialog::GetPaperSize
 
-呼叫此函式以擷取列印選取的紙張大小。
+呼叫此函式可抓取選取要列印的紙張大小。
 
 ```
 CSize GetPaperSize() const;
@@ -277,11 +277,11 @@ CSize GetPaperSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-A [CSize](../../atl-mfc-shared/reference/csize-class.md)物件，包含選取列印在紙張 （在 1/1000年英吋或 1/100 公釐） 的大小。
+[CSize](../../atl-mfc-shared/reference/csize-class.md)物件, 其中包含選取要列印的紙張大小 (1/1000 英寸或 1/100 mm)。
 
-##  <a name="getportname"></a>  CPageSetupDialog::GetPortName
+##  <a name="getportname"></a>CPageSetupDialog::GetPortName
 
-呼叫此函式之後呼叫`DoModal`來擷取目前選取的印表機連接埠的名稱。
+呼叫`DoModal`以抓取目前選取的印表機埠名稱之後, 呼叫此函式。
 
 ```
 CString GetPortName() const;
@@ -289,11 +289,11 @@ CString GetPortName() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前選取的印表機連接埠的名稱。
+目前選取之印表機埠的名稱。
 
 ##  <a name="m_psd"></a>  CPageSetupDialog::m_psd
 
-類型 PAGESETUPDLG，其成員儲存對話方塊物件的特性結構。
+PAGESETUPDLG 類型的結構, 其成員會儲存對話方塊物件的特性。
 
 ```
 PAGESETUPDLG m_psd;
@@ -301,17 +301,17 @@ PAGESETUPDLG m_psd;
 
 ### <a name="remarks"></a>備註
 
-在建構之後`CPageSetupDialog`物件，您可以使用`m_psd`若要設定的對話方塊中，然後再呼叫的各個層面`DoModal`成員函式。
+在建立`CPageSetupDialog`物件之後, 您可以在`m_psd`呼叫`DoModal`成員函式之前, 使用來設定對話方塊的各個層面。
 
-如果您修改`m_psd`資料成員直接，您將會覆寫任何預設行為。
+如果您直接修改`m_psd`資料成員, 將會覆寫任何預設行為。
 
-如需詳細資訊[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)結構，請參閱 Windows SDK。
+如需有關[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)結構的詳細資訊, 請參閱 Windows SDK。
 
-範例，請參閱[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)。
+請參閱[CPageSetupDialog:: CPageSetupDialog](#cpagesetupdialog)的範例。
 
 ##  <a name="ondrawpage"></a>  CPageSetupDialog::OnDrawPage
 
-由架構呼叫以繪製於列印頁面的畫面影像。
+由架構呼叫以繪製列印頁面的螢幕影像。
 
 ```
 virtual UINT OnDrawPage(
@@ -323,43 +323,43 @@ virtual UINT OnDrawPage(
 ### <a name="parameters"></a>參數
 
 *pDC*<br/>
-印表機裝置內容指標。
+印表機裝置內容的指標。
 
 *nMessage*<br/>
-指定的訊息，指出頁面目前所繪製的區域。 可以是下列其中一項：
+指定訊息, 指出目前正在繪製的頁面區域。 可以是下列其中一項：
 
 - WM_PSD_FULLPAGERECT 整個頁面區域。
 
 - WM_PSD_MINMARGINRECT 目前的最小邊界。
 
-- 目前 WM_PSD_MARGINRECT 邊界。
+- WM_PSD_MARGINRECT 目前的邊界。
 
-- WM_PSD_GREEKTEXTRECT 頁面內容。
+- WM_PSD_GREEKTEXTRECT 頁面的內容。
 
-- 保留給使用郵票表示 WM_PSD_ENVSTAMPRECT 區域。
+- 保留給郵資戳記標記法的 WM_PSD_ENVSTAMPRECT 區域。
 
-- 用於代表寄件地址的 WM_PSD_YAFULLPAGERECT 區域。 這個區域會延伸到範例的頁面區域的邊緣。
+- 傳回位址標記法的 WM_PSD_YAFULLPAGERECT 區域。 這個區域會延伸至範例頁面區域的邊緣。
 
 *lpRect*<br/>
-指標[CRect](../../atl-mfc-shared/reference/crect-class.md)或是[RECT](/windows/desktop/api/windef/ns-windef-tagrect)物件，含有在繪圖區域的座標。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)或[矩形](/windows/win32/api/windef/ns-windef-rect)物件的指標, 其中包含繪圖區的座標。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果處理;否則為 0。
+如果已處理, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-此映像，然後會顯示通用 OLE 版面設定對話方塊的一部分。 預設實作會繪製的文字頁面的影像。
+然後, 此影像會顯示為 [一般 OLE 版面設定] 對話方塊的一部分。 預設的執行會繪製一頁文字的影像。
 
-覆寫此函式以自訂繪製的映像或整個映像的特定區域。 您可以使用**切換**陳述式搭配**案例**檢查值的陳述式*n 訊息*。 例如，若要自訂內容的頁面影像轉譯，您可以使用下列的範例程式碼：
+覆寫此函式, 以自訂影像特定區域的繪圖或整個影像。 若要這麼做, 您可以使用**switch**語句, 並使用**Case**語句檢查*n 訊息*的值。 例如, 若要自訂頁面影像內容的呈現方式, 您可以使用下列範例程式碼:
 
 [!code-cpp[NVC_MFCDocView#96](../../mfc/codesnippet/cpp/cpagesetupdialog-class_3.cpp)]
 
-請注意，您不需要處理的每個案例*n 訊息*。 您可以選擇處理映像的映像或整個區域的數個元件的一個元件。
+請注意, 您不需要處理*n 訊息*的每個案例。 您可以選擇處理影像的一個元件、影像的數個元件或整個區域。
 
-##  <a name="predrawpage"></a>  CPageSetupDialog::PreDrawPage
+##  <a name="predrawpage"></a>CPageSetupDialog::P reDrawPage
 
-繪製畫面的影像列印的頁面之前由架構呼叫。
+在繪製列印頁面的螢幕影像之前, 由架構呼叫。
 
 ```
 virtual UINT PreDrawPage(
@@ -371,37 +371,37 @@ virtual UINT PreDrawPage(
 ### <a name="parameters"></a>參數
 
 *wPaper*<br/>
-指定值，指出的紙張大小。 這個值可以是其中一個**DMPAPER_** 值的描述中所列出[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)結構。
+指定表示紙張大小的值。 這個值可以是[DEVMODE](/windows/win32/api/wingdi/ns-wingdi-devmodea)結構描述中所列的其中一個**DMPAPER_** 值。
 
 *wFlags*<br/>
-表示紙張或信封的方向和印表機是點陣印表機或 HPPCL （Hewlett Packard 印表機控制語言） 裝置。 這個參數的值可以是下列其中一個：
+指出紙張或信封的方向, 以及印表機是否為單點矩陣或 HPPCL (Hewlett Packard 印表機控制語言) 裝置。 這個參數的值可以是下列其中一個：
 
-- 0x001 紙張以橫向模式 （點陣式）
+- 橫向模式的0x001 紙張 (點矩陣)
 
-- 0x003 紙張以橫向模式 (HPPCL)
+- 橫向模式的0x003 紙張 (HPPCL)
 
-- 0x005 紙張以直向模式 （點陣式）
+- 以直向模式0x005 紙張 (點矩陣)
 
-- 0x007 紙張以直向模式 (HPPCL)
+- 以直向模式0x007 紙張 (HPPCL)
 
-- 0x00b 信封以橫向模式 (HPPCL)
+- 橫向模式的0x00b 信封 (HPPCL)
 
-- 0x00d 信封以直向模式 （點陣式）
+- 直向模式中的0x00d 信封 (點矩陣)
 
-- 0x019 信封以橫向模式 （點陣式）
+- 橫向模式的0x019 信封 (點矩陣)
 
-- 0x01f 信封以直向模式 （點陣式）
+- 直向模式中的0x01f 信封 (點矩陣)
 
 *pPSD*<br/>
-`PAGESETUPDLG` 結構的指標。 如需詳細資訊[PAGESETUPDLG](/windows/desktop/api/commdlg/ns-commdlg-tagpsda)，請參閱 Windows SDK。
+`PAGESETUPDLG` 結構的指標。 如需[PAGESETUPDLG](/windows/win32/api/commdlg/ns-commdlg-psdw)的詳細資訊, 請參閱 Windows SDK。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果處理;否則為 0。
+如果已處理, 則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-覆寫此函式以自訂繪製影像。 如果您覆寫這個函式，並傳回 TRUE，則必須繪製整個映像。 如果您覆寫這個函式，並傳回 FALSE，由架構繪製整個預設影像。
+覆寫此函式以自訂影像的繪圖。 如果您覆寫此函式並傳回 TRUE, 則必須繪製整個影像。 如果您覆寫此函式並傳回 FALSE, 則架構會繪製整個預設影像。
 
 ## <a name="see-also"></a>另請參閱
 

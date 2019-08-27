@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: ae00a9204e2bd5dc5220f3b2755e16b895193df3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158543"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454828"
 ---
 # <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt; 函式
 
@@ -34,25 +34,25 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Key*<br/>
+*擊鍵*\
 索引鍵類型。
 
-*Ty*<br/>
+*Ty*\
 對應的類型。
 
-*雜湊*<br/>
+*散列*\
 雜湊函式物件類型。
 
-*預測*<br/>
+*Pred*\
 相等比較函式物件類型。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要交換的第一個容器。
 
-*right*<br/>
+*再*\
 要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
@@ -127,25 +127,25 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*Key*<br/>
+*擊鍵*\
 索引鍵類型。
 
-*Ty*<br/>
+*Ty*\
 對應的類型。
 
-*雜湊*<br/>
+*散列*\
 雜湊函式物件類型。
 
-*預測*<br/>
+*Pred*\
 相等比較函式物件類型。
 
-*Alloc*<br/>
+*配置*\
 配置器類別。
 
-*left*<br/>
+*左面*\
 要交換的第一個容器。
 
-*right*<br/>
+*再*\
 要交換的第二個容器。
 
 ### <a name="remarks"></a>備註
@@ -209,4 +209,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

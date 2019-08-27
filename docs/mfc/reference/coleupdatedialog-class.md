@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 150e78b7880a61343db21c3c787ffdd1f0b734a5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373592"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503161"
 ---
 # <a name="coleupdatedialog-class"></a>COleUpdateDialog 類別
 
@@ -31,7 +31,7 @@ class COleUpdateDialog : public COleLinksDialog
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|建構 `COleUpdateDialog` 物件。|
 
@@ -39,11 +39,11 @@ class COleUpdateDialog : public COleLinksDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COleUpdateDialog::DoModal](#domodal)|顯示**編輯連結**處於更新模式的對話方塊。|
+|[COleUpdateDialog::DoModal](#domodal)|以更新模式顯示 [**編輯連結**] 對話方塊。|
 
 ## <a name="remarks"></a>備註
 
-如需有關特定 OLE 對話方塊的詳細資訊，請參閱文章[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。
+如需有關 OLE 特定對話方塊的詳細資訊, 請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -65,9 +65,9 @@ class COleUpdateDialog : public COleLinksDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxodlgs.h
+**標頭:** afxodlgs。h
 
-##  <a name="coleupdatedialog"></a>  COleUpdateDialog::COleUpdateDialog
+##  <a name="coleupdatedialog"></a>COleUpdateDialog::COleUpdateDialog
 
 建構 `COleUpdateDialog` 物件。
 
@@ -82,24 +82,24 @@ explicit COleUpdateDialog(
 ### <a name="parameters"></a>參數
 
 *pDoc*<br/>
-指向包含的連結，可能需要更新的文件。
+指向包含可能需要更新之連結的檔。
 
 *bUpdateLinks*<br/>
-連結的物件會決定要更新的旗標。
+判斷是否要更新連結化物件的旗標。
 
 *bUpdateEmbeddings*<br/>
-內嵌的物件會決定要更新的旗標。
+判斷是否要更新内嵌物件的旗標。
 
 *pParentWnd*<br/>
-指向的父系或擁有者的視窗物件 (類型的`CWnd`) 所屬之對話方塊物件。 如果它是 NULL 時，對話方塊中的父視窗將回到主應用程式視窗。
+指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`(類型為)。 如果它是 Null, 則對話方塊的父視窗將會設定為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-此函式會建構只`COleUpdateDialog`物件。 若要顯示的對話方塊，請呼叫[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 應該使用這個類別，而不是`COleLinksDialog`當您想要更新只有現有連結或內嵌項目。
+此函式只會`COleUpdateDialog`對物件進行結構。 若要顯示對話方塊, 請呼叫[DoModal](../../mfc/reference/colelinksdialog-class.md#domodal)。 `COleLinksDialog`當您只想要更新現有的連結或內嵌專案時, 應該使用這個類別, 而不是。
 
-##  <a name="domodal"></a>  COleUpdateDialog::DoModal
+##  <a name="domodal"></a>COleUpdateDialog::D oModal
 
-[編輯連結] 對話方塊會顯示更新模式。
+在更新模式中顯示 [編輯連結] 對話方塊。
 
 ```
 virtual INT_PTR DoModal();
@@ -107,17 +107,17 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊中的完成狀態。 下列其中一個值：
+對話方塊的完成狀態。 下列其中一個值：
 
-- IDOK 如果對話方塊傳回成功。
+- 如果對話方塊傳回成功, 則 IDOK。
 
-- 如果目前的文件中連結或內嵌項目都不需要更新，IDCANCEL。
+- 如果目前檔中沒有任何連結或內嵌專案需要更新, 則 IDCANCEL。
 
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫[COleDialog::GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函式。
+- 如果發生錯誤, 則 IDABORT。 如果傳回 IDABORT, 請呼叫[COleDialog:: GetLastError](../../mfc/reference/coledialog-class.md#getlasterror)成員函式, 以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單, 請參閱 Windows SDK 中的[OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)函數。
 
 ### <a name="remarks"></a>備註
 
-除非使用者選取 [取消] 按鈕，會更新所有的連結和/或內嵌項目。
+除非使用者選取 [取消] 按鈕, 否則所有連結和/或內嵌都會更新。
 
 ## <a name="see-also"></a>另請參閱
 

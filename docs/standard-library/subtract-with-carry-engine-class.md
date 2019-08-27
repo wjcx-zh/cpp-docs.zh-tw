@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412185"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447421"
 ---
 # <a name="subtractwithcarryengine-class"></a>subtract_with_carry_engine 類別
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType*<br/>
+*UIntType*\
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*W*<br/>
+*寬*\
 **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*今日*\
 **短延隔**。 整數值數目。 **前置條件**：`0 < S < R`
 
-*R*<br/>
+*R*\
 **長延隔**。 決定所產生數列中的週期。
 
 ## <a name="members"></a>成員
@@ -62,7 +62,7 @@ class subtract_with_carry_engine;
 
 `substract_with_carry_engine` 樣板類別是針對 [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md) 的改良。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
 
-此引擎會使用週期關聯 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定的不帶正負號整數類型值，其中，如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則 `cy(i)` 的值為 `1`，否則為 `0`，而`M` 的值為 `2`<sup>W</sup>。引擎的狀態是一個進位指標加上*R*值。 這些值包含的最後*R*值時所傳回`operator()`已至少呼叫*R*逾，否則`N`傳回的值，而最後`R - N`之種子的值。
+此引擎會使用週期關聯 ( *period*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M` 來產生使用者指定的不帶正負號整數類型值，其中，如果 `x(i - S) - x(i - R) - cy(i - 1) < 0`，則 `cy(i)` 的值為 `1`，否則為 `0`，而`M` 的值為 `2`<sup>W</sup>。引擎的狀態是一個帶有指標加上*R*值。 如果`R - N` `N`  `operator()`至少已呼叫*r*次, 則這些值包含最後一個傳回的 r 值, 否則為已傳回的值和種子的最後一個值。
 
 範本引數 `UIntType` 必須夠大，才能保留最多 `M - 1` 個值。
 
@@ -78,10 +78,10 @@ class subtract_with_carry_engine;
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

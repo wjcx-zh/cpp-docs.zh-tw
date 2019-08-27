@@ -1,15 +1,15 @@
 ---
-title: HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59424192"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630432"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>HOW TO：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
 在通用 Windows 平台 (UWP) 環境中執行傳統型程式的最簡單方式，可能是使用傳統型橋接器技術。 其中包括 Desktop App Converter，這會將現有應用程式封裝為 UWP 應用程式，而不需要變更程式碼。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
@@ -19,13 +19,13 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 如果程式庫有可用的原始程式碼，您也許能夠排除禁止的 API 呼叫。 如需詳細資料，包括允許或禁止的 API 清單，請參閱[適用於 Win32 和 COM API 的 UWP 應用程式](/uwp/win32-and-com/win32-and-com-for-uwp-apps)和[通用 Windows 平台應用程式中不支援的 CRT 函式](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。 [UWP 應用程式中的 Windows API 替代方案](/uwp/win32-and-com/alternatives-to-windows-apis-uwp)也提供了幾種替代方案。
 
-如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在 UWP 應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](/windows/desktop/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
+如果您只是嘗試將通用的 Windows 專案的參考加入傳統桌面程式庫，您會收到指出程式庫並不相容的錯誤訊息。 如果是靜態程式庫，您只要像傳統的 Win32 應用程式中一樣，將程式庫 (.lib 檔案) 加入您的連結器輸入，就可以連結程式庫。 其中只有二進位檔可用的程式庫，這是唯一的選項。 靜態程式庫可連結至應用程式可執行檔，但您必須將 UWP 應用程式中使用的 Win32 DLL 納入專案中並標示為內容以封裝為應用程式。 若要在 UWP 應用程式中載入 Win32 DLL，您還必須呼叫 [LoadPackagedLibrary](/windows/win32/api/winbase/nf-winbase-loadpackagedlibrary)，而不是 `LoadLibrary` 或 `LoadLibraryEx`。
 
 如果您有 DLL 或靜態程式庫的原始程式碼，您可以使用 `/ZW` 重新編譯為 UWP 專案。 如果您這麼做，可以使用**方案總管**新增參考，然後在 C++ UWP 應用程式中使用。 若為 DLL，請您使用匯出程式庫來連結。
 
 若要向其他語言的呼叫者公開功能，您可以將程式庫轉換成 Windows 執行階段元件。 Windows 執行階段元件不同於一般的 DLL，因為它們以 .winmd 檔案的形式包含的中繼資料，會以 .NET 與 JavaScript 客戶所需的方式描述內容。 若要向其他語言公開 API 項目，您可以加入 C++/CX 建構 (例如 ref 類別) 並設定為公用，或使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)。  在 Windows 10 和更新版本中，您可以使用 [C++/WinRT library](https://github.com/microsoft/cppwinrt) (C++/WinRT 程式庫)，而非 C++/CX。
 
-前述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它，只要將它封裝為[免註冊的 COM 元件](/windows/desktop/sbscs/creating-registration-free-com-objects)，並當成內容檔案新增至專案，然後使用 [CoCreateInstanceFromApp](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 加以具現化即可。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (在 Microsoft Store C++ 專案中使用 Free-COM DLL)。
+前述討論不適用於必須以不同方式處理的 COM 元件。 如果您在 EXE 或 DLL 中有 COM 伺服器，則可以在通用 Windows 專案中使用它，只要將它封裝為[免註冊的 COM 元件](/windows/win32/sbscs/creating-registration-free-com-objects)，並當成內容檔案新增至專案，然後使用 [CoCreateInstanceFromApp](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstancefromapp) 加以具現化即可。 請參閱 [Using Free-COM DLL in Windows Store C++ Project](https://blogs.msdn.microsoft.com/win8devsupport/2013/05/19/using-free-com-dll-in-windows-store-c-project/) (在 Microsoft Store C++ 專案中使用 Free-COM DLL)。
 
 若您有想要移植到 UWP 的現有 COM 程式庫，則可以使用 [Windows 執行階段 C++ 範本庫 (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md) 將其轉換成 Windows 執行階段元件。 WRL 不支援所有的 ATL 與 OLE 功能，因此這類移植是否可行，取決於 COM 程式碼有多麼依存於您的元件所需的那些 COM、ATL 及 OLE 功能。
 
@@ -133,11 +133,11 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
    當定義 `_DLL` 時 (亦即，將專案建立為 DLL 時)，程式碼會定義解析成 `__declspec(dllexport)` 的巨集 `GIRAFFE_API`。
 
-2. 請開啟此 DLL 專案的 [專案屬性]，並將**組態**設定為 [所有組態]。
+2. 請開啟此 DLL 專案的 [專案屬性]  ，並將**組態**設定為 [所有組態]  。
 
-3. 在 [專案屬性] 中，於 [C/C++] > [一般] 索引標籤中，將 [使用 Windows 執行階段延伸模組] 設定為 [是 (/ZW)]。 這樣可以啟用元件擴充功能 (C++/CX)。
+3. 在 [專案屬性]  中，於 [C/C++]   > [一般]  索引標籤中，將 [使用 Windows 執行階段延伸模組]  設定為 [是 (/ZW)]  。 這樣可以啟用元件擴充功能 (C++/CX)。
 
-4. 在方案總管中，選取此專案節點，並開啟捷徑功能表，然後選擇 [卸載專案]。 接著，在卸載的專案節點上開啟捷徑功能表，然後選擇要編輯的專案檔。 找出 `WindowsTargetPlatformVersion` 元素，並取代為下列元素。
+4. 在方案總管  中，選取此專案節點，並開啟捷徑功能表，然後選擇 [卸載專案]  。 接著，在卸載的專案節點上開啟捷徑功能表，然後選擇要編輯的專案檔。 找出 `WindowsTargetPlatformVersion` 元素，並取代為下列元素。
 
     ```xml
     <AppContainerApplication>true</AppContainerApplication>
@@ -147,25 +147,25 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     ```
 
-   關閉此 .vcxproj 檔案，並再次開啟捷徑功能表，然後選擇 [重新載入專案]。
+   關閉此 .vcxproj 檔案，並再次開啟捷徑功能表，然後選擇 [重新載入專案]  。
 
    **方案總管**現在會將此專案識別為通用 Windows 專案。
 
-5. 請確定先行編譯標頭檔的名稱正確。 在 [先行編譯標頭] 區段中，將**先行編譯標頭檔**從 pch.h 變更為 stdafx.h。 如果您不這麼做，您就會看到下列錯誤。
+5. 請確定先行編譯標頭檔的名稱正確。 在 [先行編譯標頭]  區段中，將**先行編譯標頭檔**從 *pch.h* 變更為 *stdafx.h*。 如果您不這麼做，您就會看到下列錯誤。
 
    > 錯誤 C2857：原始程式碼檔案中找不到以 /Ycpch.h 命令列選項指定的 '#include' 陳述式
 
    問題在於通用 Windows 專案針對先行編譯標頭檔使用不同的命名慣例。
 
-6. 建置專案。 您可能會收到一些有關命令列選項不相容的錯誤。 例如，現已淘汰但曾頻繁使用的選項 [啟用最少重建 (/Gm)] 在許多舊版 C++ 專案中是預設設定，但和 `/ZW` 不相容。
+6. 建置專案。 您可能會收到一些有關命令列選項不相容的錯誤。 例如，現已淘汰但曾頻繁使用的選項 [啟用最少重建 (/Gm)]  在許多舊版 C++ 專案中是預設設定，但和 `/ZW` 不相容。
 
    如果您針對通用 Windows 平台編譯，便無法使用某些函式。 您會看到任何相關問題的編譯器錯誤。 請解決這些問題，直到組建沒有錯誤為止。
 
-7. 若要在 UWP 應用程式中以相同的方案使用 DLL，請開啟 UWP 專案節點的捷徑功能表，然後依序選擇 [新增] > [參考]。
+7. 若要在 UWP 應用程式中以相同的方案使用 DLL，請開啟 UWP 專案節點的捷徑功能表，然後依序選擇 [新增]   > [參考]  。
 
-   在 [專案] > [解決方案] 下選取此 DLL 專案旁邊的核取方塊，然後選擇 [確定] 按鈕。
+   在 [專案]   > [解決方案]  下選取此 DLL 專案旁邊的核取方塊，然後選擇 [確定]  按鈕。
 
-8. 在 UWP 應用程式的 pch.h 檔案中包含程式庫的標頭檔。
+8. 在 UWP 應用程式的 *pch.h* 檔案中包含程式庫的標頭檔。
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -193,15 +193,15 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 ### <a name="to-use-a-native-c-static-library-in-a-uwp-project"></a>若要在 UWP 專案中使用原生 C++ 靜態程式庫
 
-1. 在 UWP 專案的專案屬性中，於 [連結器] 區段的 [輸入] 屬性中，新增程式庫的路徑。 例如，針對專案中會將其輸出放在 <方案資料夾>\Debug\MyNativeLibrary\MyNativeLibrary.lib 的程式庫，新增相對路徑 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
+1. 在 UWP 專案的專案屬性中，選擇左窗格中的 [組態屬性]   > [連結器]   > [輸入]  。 在右窗格的 [其他相依性]  屬性中，將路徑新增至程式庫。 例如，針對專案中會將其輸出放在 <方案資料夾>  \Debug\MyNativeLibrary\MyNativeLibrary.lib 的程式庫，新增相對路徑 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
 
-2. 新增 include 陳述式，以參考 UWP 專案中的 pch.h 標頭檔，然後開始將使用該程式庫的程式碼加入。
+2. 新增 include 陳述式，以將標頭檔參考到 *pch.h* 檔案 (若有)，或視需要在任何 .cpp 檔案中參考標頭檔，然後開始新增使用該程式庫的程式碼。
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
    ```
 
-   請不要在方案總管的 [參考] 節點中新增參考。 此機制僅適用於 Windows 執行階段元件。
+   請不要在方案總管  的 [參考]  節點中新增參考。 此機制僅適用於 Windows 執行階段元件。
 
 ##  <a name="BK_WinRTComponent"></a> 將 C++ 程式庫移植到 Windows 執行階段元件
 
@@ -215,13 +215,13 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 3. 在 **Windows 檔案總管**中，找到該專案。 根據預設，Visual Studio 會使用 [文件] 資料夾中的 [Visual Studio 2017\Projects] 資料夾。 找出當中包含您想要移植之程式碼的 C++ 程式庫專案。 複製 C++ 程式庫專案中的原始程式檔 (標頭檔、程式碼檔案及任何其他資源，包括子目錄在內)，然後貼至專案資料夾中，務必要保留相同的資料夾結構。
 
-4. 重新開啟 Windows 執行階段元件專案，並開啟**方案總管**中專案節點的捷徑功能表，然後選擇 [新增] > [現有項目]。
+4. 重新開啟 Windows 執行階段元件專案，並開啟**方案總管**中專案節點的捷徑功能表，然後選擇 [新增]   > [現有項目]  。
 
-5. 從原始專案中選取要新增的所有檔案，然後選擇 [確定]。 必要時，對子資料夾重複上述步驟。
+5. 從原始專案中選取要新增的所有檔案，然後選擇 [確定]  。 必要時，對子資料夾重複上述步驟。
 
-6. 您現在已有重複的節點。 如果您有多個先行編譯標頭檔 (例如 stdafx.h 與 pch.h)，請選擇一個加以保留。 將任何必要的程式碼 (例如 include 陳述式) 複製到您要保留的檔案中。 然後將另一個刪除，並在專案屬性的 [先行編譯標頭檔] 下，確定標頭檔的名稱正確無誤。
+6. 您現在已有重複的節點。 如果您有多個先行編譯標頭檔 (例如 *stdafx.h* 與 *pch.h*)，請選擇一個加以保留。 將任何必要的程式碼 (例如 include 陳述式) 複製到您要保留的檔案中。 然後將另一個刪除，並在專案屬性的 [先行編譯標頭檔]  下，確定標頭檔的名稱正確無誤。
 
-   如果您已變更要做為先行編譯標頭使用的檔案，請確定每個檔案的先行編譯標頭檔選項都正確無誤。 依次選擇每個 .cpp 檔案，開啟其屬性視窗，然後確定全部都設定為 [使用 (/Yu)]，當中只有想要的先行編譯標頭檔設定為 [建立 (/Yc)]。
+   如果您已變更要做為先行編譯標頭使用的檔案，請確定每個檔案的先行編譯標頭檔選項都正確無誤。 依次選擇每個 .cpp 檔案，開啟其屬性視窗，然後確定全部都設定為 [使用 (/Yu)]  ，當中只有想要的先行編譯標頭檔設定為 [建立 (/Yc)]  。
 
 7. 建置專案，並解決任何錯誤。 這些錯誤可能是使用 `/ZW` 選項造成，或由新版 Windows SDK 造成，或者可能反映相依性 (例如程式庫相依的標頭檔)，或新舊專案之間的專案設定差異。
 

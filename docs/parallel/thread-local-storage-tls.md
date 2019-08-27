@@ -1,6 +1,6 @@
 ---
 title: 執行緒區域儲存區
-ms.date: 11/04/2016
+ms.date: 08/09/2019
 helpviewer_keywords:
 - multithreading [C++], Thread Local Storage
 - TLS [C++]
@@ -9,68 +9,68 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e308f7ba23503879f8ebbcacde481cf72055229
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448904"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69510386"
 ---
 # <a name="thread-local-storage-tls"></a>執行緒區域儲存區
 
-執行緒區域儲存區 (Thread Local Storage，TLS) 是一種方法，讓指定之多執行緒處理序中的每個執行緒用來配置位置，以儲存執行緒特定資料。 動態繫結 (runtime) 執行緒專屬的資料透過 TLS API 支援 ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)。  Win32 和 MicrosoftC++編譯器現在支援靜態繫結 （載入時間） 的個別執行緒資料除了現有的 API 實作。
+執行緒區域儲存區 (Thread Local Storage，TLS) 是一種方法，讓指定之多執行緒處理序中的每個執行緒用來配置位置，以儲存執行緒特定資料。 TLS API ([TlsAlloc](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)) 支援動態系結 (執行時間) 執行緒特定的資料。 除了現有的 API C++執行, Win32 和 Microsoft 編譯器現在還支援靜態系結 (載入時間) 每個執行緒的資料。
 
-##  <a name="_core_compiler_implementation_for_tls"></a> TLS 的編譯器實作
+## <a name="_core_compiler_implementation_for_tls"></a>TLS 的編譯器執行
 
-**C + + 11:**`thread_local`儲存類別規範是建議用來指定物件的執行緒區域儲存區和類別成員。 如需詳細資訊，請參閱 <<c0> [ 儲存類別 (C++)](../cpp/storage-classes-cpp.md)。</c0>
+**C + + 11:** `thread_local`儲存類別規範是針對物件和類別成員指定執行緒區域儲存區的建議方式。 如需詳細資訊, 請參閱[儲存C++類別 ()](../cpp/storage-classes-cpp.md)。
 
-視覺化C++也提供 Microsoft 特定屬性[執行緒](../cpp/thread.md)，以擴充的儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
+MSVC 也會提供 Microsoft 專有的屬性 ( [thread](../cpp/thread.md)) 做為擴充儲存類別修飾詞。 使用 **__declspec**關鍵字來宣告**執行緒**變數。 例如，下列程式碼宣告整數執行緒區域變數，並使用值將它初始化：
 
-```
+```C
 __declspec( thread ) int tls_i = 1;
 ```
 
 ## <a name="rules-and-limitations"></a>規則與限制
 
-當您宣告靜態繫結的執行緒區域物件和變數時，必須遵守下列指導方針： 這些指導方針適用於兩者皆可[執行緒](../cpp/thread.md)並且大部分的情況下透過[thread_local](../cpp/storage-classes-cpp.md):
+當您宣告靜態繫結的執行緒區域物件和變數時，必須遵守下列指導方針： 這些指導方針適用于[thread](../cpp/thread.md)和 to [thread_local](../cpp/storage-classes-cpp.md):
 
-- **執行緒**屬性可以套用至類別和資料宣告和定義。 它不可使用於函式宣告或定義。 例如，下列程式碼會產生編譯器錯誤：
+- **Thread**屬性只能套用至類別和資料宣告和定義。 它不能用在函式宣告或定義上。 例如，下列程式碼會產生編譯器錯誤：
 
-    ```
+    ```C
     __declspec( thread )void func();     // This will generate an error.
     ```
 
-- **執行緒**可能只能在使用的資料項目上指定修飾詞**靜態**範圍。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和靜態資料成員的C++類別。 自動資料物件不能以宣告**執行緒**屬性。 下列程式碼會產生編譯器錯誤：
+- **執行緒**修飾詞只能在具有**靜態**範圍的資料項目上指定。 其中包括全域資料物件 (**靜態**和**外部**)、本機靜態物件, 以及類別的C++靜態資料成員。 無法使用**thread**屬性來宣告自動資料物件。 下列程式碼會產生編譯器錯誤：
 
-    ```
+    ```C
     void func1()
     {
         __declspec( thread )int tls_i;            // This will generate an error.
     }
 
-    int func2(__declspec( thread )int tls_i )    // This will generate an error.
+    int func2(__declspec( thread )int tls_i )     // This will generate an error.
     {
         return tls_i;
     }
     ```
 
-- 宣告和定義都必須指定本機物件的執行緒**執行緒**屬性。 例如，下列程式碼會產生錯誤：
+- 執行緒區域物件的宣告和定義都必須指定**thread**屬性。 例如，下列程式碼會產生錯誤：
 
-    ```
+    ```C
     #define Thread  __declspec( thread )
     extern int tls_i;        // This will generate an error, since the
     int __declspec( thread )tls_i;        // declaration and definition differ.
     ```
 
-- **執行緒**屬性不能做為類型修飾詞。 例如，下列程式碼會產生編譯器錯誤：
+- **Thread**屬性不能當做類型修飾詞使用。 例如，下列程式碼會產生編譯器錯誤：
 
-    ```
+    ```C
     char __declspec( thread ) *ch;        // Error
     ```
 
-- 由於宣告的C++物件使用**執行緒**屬性，下列兩個範例在語意上與：
+- 因為允許使用C++ **thread**屬性的物件宣告, 下列兩個範例在語義上是相等的:
 
-    ```
+    ```cpp
     __declspec( thread ) class B
     {
     // Code
@@ -83,28 +83,28 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread ) B BObject;  // OK--BObject is declared thread local.
     ```
 
-- 執行緒區域物件的位址不會被視為常數，而且任何包含這種位址的運算式都不會被視為常數運算式。 在標準 C 中，其效果是禁止使用執行緒區域變數的位址做為物件或指標的初始設定式。 例如，C 編譯器會將下列程式碼標示為錯誤：
+- 執行緒區域物件的位址不會被視為常數, 而且任何牽涉到這類位址的運算式都不會被視為常數運算式。 在標準 C 中, 效果是不允許使用執行緒區域變數的位址做為物件或指標的初始化運算式。 例如，C 編譯器會將下列程式碼標示為錯誤：
 
-    ```
-    __declspec( thread )int tls_i;
+    ```C
+    __declspec( thread ) int tls_i;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-   這項限制不適用於 C++。 因為 C++ 允許所有物件的動態初始化，所以您可使用採用執行緒區域變數位址的運算式來初始化物件。 其完成方式就如同建構執行緒區域物件一樣。 例如，如果稍早所示的程式碼編譯為 C++ 原始程式檔，則不會產生錯誤。 請注意，只要採用執行緒區域變數位址的執行緒仍存在，此位址就有效。
+   這項C++限制不適用於。 因為 C++ 允許所有物件的動態初始化，所以您可使用採用執行緒區域變數位址的運算式來初始化物件。 其做法就如同執行緒區域物件的結構一樣。 例如, 稍早顯示的程式碼在編譯為C++原始程式檔時, 不會產生錯誤。 只有在已取得位址的執行緒仍然存在時, 執行緒區域變數的位址才有效。
 
-- 標準 C 允許利用需要自我參考的運算式來初始化物件或變數，但只限於非靜態範圍的物件。 雖然 C++ 通常允利用需要自我參考的運算式來動態初始化對物件，但此種初始化不適用於執行緒區域物件。 例如: 
+- 標準 C 允許使用牽涉到本身參考的運算式來初始化物件或變數, 但僅適用于非靜態範圍的物件。 雖然C++通常會允許物件的動態初始化, 其中包含包含其本身參考的運算式, 但這種初始化不允許用於執行緒區域物件。 例如：
 
-    ```
+    ```C
     __declspec( thread )int tls_i = tls_i;                // Error in C and C++
     int j = j;                               // OK in C++, error in C
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-   請注意，包含所要初始化物件的 `sizeof` 運算式並不代表其本身的參考，但在 C 和 C++ 中皆已啟用。
+   包含所要初始化之物件的C++運算式不代表本身的參考,而且會同時在C和中`sizeof`啟用。
 
-   C++ 不允許執行緒資料的這類動態初始化，因為執行緒區域儲存區設備未來可能會增強。
+   C++不允許對執行緒資料進行這類動態初始化, 因為執行緒區域儲存設備的未來可能會有增強功能。
 
-- 在 Windows Vista 之前的 Windows 作業系統上`__declspec`(thread) 有一些限制。 如果 DLL 將任何資料或物件宣告為 `__declspec`(thread)，可能會造成保護錯誤 (若以動態方式載入)。 已載入 DLL 之後[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)，它會導致系統失敗，每當程式碼參考`__declspec`(thread) 資料。 因為執行緒的全域變數空間是在執行階段進行配置，所以此空間的大小是以應用程式的需求，再加上以靜態方式連結之所有 DLL 的需求的計算為基礎。 當您使用 `LoadLibrary` 時，您無法擴充此空間以便使用 `__declspec`(thread) 宣告執行緒區域變數。 使用 TLS Api，例如[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)，來配置 TLS，如果可能會使用載入的 DLL 在 DLL 中`LoadLibrary`。
+- 在 windows Vista 之前的 windows 作業系統上`__declspec( thread )` , 有一些限制。 如果 DLL 將任何資料或物件宣告為`__declspec( thread )`, 它可能會在動態載入時造成保護錯誤。 使用[LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)載入 DLL 之後, 每當程式碼參考`__declspec( thread )`資料時, 就會導致系統失敗。 因為執行緒的全域變數空間是在執行階段進行配置，所以此空間的大小是以應用程式的需求，再加上以靜態方式連結之所有 DLL 的需求的計算為基礎。 當您使用`LoadLibrary`時, 您無法擴充此空間, 以允許使用`__declspec( thread )`所宣告的執行緒本機變數。 如果 DLL 可能會載入`LoadLibrary`, 請在您的 DLL 中使用 tls Api (例如[TLSALLOC](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)) 來配置 tls。
 
 ## <a name="see-also"></a>另請參閱
 

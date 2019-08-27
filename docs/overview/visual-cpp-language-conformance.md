@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ 語言一致性表
-ms.date: 05/20/2019
+ms.date: 08/12/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975170"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631650"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -23,7 +23,7 @@ ms.locfileid: "65975170"
 
 ## <a name="compiler-features"></a>編譯器功能
 
-|功能範圍| |
+| | |
 |----|---|
 |__C++03/11 核心語言功能__|__支援__|
 |&nbsp;&nbsp;其他所有項目|VS 2015 <sup>[A](#note_A)</sup>|
@@ -83,10 +83,6 @@ ms.locfileid: "65975170"
 |&nbsp;&nbsp;[P0145R3 調整運算式評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 函式引數的評估順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 using-declaration 的套件延伸模組](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 略過無法辨認的屬性](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-
-
-|功能範圍| |
-|----|---|
 |__C++17 核心語言功能 (缺失報表)__|__支援__|
 |&nbsp;&nbsp;[P0702R1 修正初始設定式清單 ctor 的類別樣板引數推斷](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html) \(英文\)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 放寬結構化繫結的自訂點尋找規則](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html) \(英文\)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -96,15 +92,11 @@ ms.locfileid: "65975170"
 |&nbsp;&nbsp;[P0929R2 檢查抽象類別型別](https://wg21.link/P0929R2)|否|
 |&nbsp;&nbsp;[P1009R2 陣列大小在 new-expressions 中減少](https://wg21.link/P1009R2)|否|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|否|
-|功能範圍| |
-|----|---|
 |__C++20 核心語言功能__|__支援__|
 |&nbsp;&nbsp;[P0704R1 修正針對成員的常數左值 ref 限定指標](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html) \(英文\)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 讓 char16_t/char32_t 字串常值成為 UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 變更 constexpr 內的作用中聯集成員](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept For \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0515R3 三向 (太空船) 比較運算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P1008R1 禁止使用使用者宣告建構函式來彙總](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 允許 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 三向 (太空船) 比較運算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -114,8 +106,7 @@ ms.locfileid: "65975170"
 |&nbsp;&nbsp;[P0641R2 與預設複本建構函式的常數不符](https://wg21.link/P0641R2)|Partial|
 |&nbsp;&nbsp;[P0306R4 新增 \_\_VA_OPT\_\_ 以進行逗號省略和逗號刪除](https://wg21.link/P0306R4) \(英文\)|否|
 |&nbsp;&nbsp;[P0315R4 允許為評估之上下文中的 lambdas](https://wg21.link/P0315R4)|否|
-|&nbsp;&nbsp;[P0409R2 與 lambda-capture \[=，此\]](https://wg21.link/P0409R2)|否|
-|&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf) \(英文\)|否|
+|&nbsp;&nbsp;[P0428R2 針對泛型 Lambda 的熟悉範本語法](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf) \(英文\)|否|
 |&nbsp;&nbsp;[P0479R5 \[\[likely\]\] 與 \[\[unlikely\]\] 屬性](https://wg21.link/P0479R5)|否|
 |&nbsp;&nbsp;[P0542R5 合約](https://wg21.link/P0542R5)|否|
 |&nbsp;&nbsp;[P0614R1 具有初始設定式的範圍型 for-loops](https://wg21.link/P0614R1)|否|
@@ -153,7 +144,7 @@ ms.locfileid: "65975170"
 
 ## <a name="standard-library-features"></a>標準程式庫功能
 
-|功能範圍| |
+| | |
 |---|---|
 |__C++20 標準程式庫功能__|__支援__|
 |&nbsp;&nbsp;[P0809R0 比較未排序的容器](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
@@ -345,7 +336,7 @@ __VS 2017 15.3__：表示 Visual Studio 2017 15.3 版所支援的功能。<br/>
 __VS 2017 15.5__表示 Visual Studio 2017 15.5 版所支援的功能。<br/>
 __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 __VS 2019 16.0__ 表示 Visual Studio 2019 16.0 版 (RTW) 版所支援的功能。<br/>
-__VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。<br/>
+__VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 
 ### <a name="notes"></a>注意
 
@@ -357,7 +348,7 @@ __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。<br/>
 
 <a name="note_C"></a>__C__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 支援 Variadic 巨集，但在前置處理器的行為方面有很多 Bug。 我們正在檢修前置處理器，並且即將以實驗方式在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下遞送這些變更。
 
-<a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，C4984。
+<a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，[C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
 <a name="note_E"></a>__E__ 這是全新的實作，與舊版 `std::experimental` 不相容，符號連結支援、Bug 修正，以及標準必要行為的變更都需要此實作。 目前，包括 \<filesystem>可提供新的 `std::experimental::filesystem` 和之前的 \<，而包括 `std::filesystem`experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d33b67ed17a95b6717878aaca2f61682b1807c15
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159856"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454012"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -26,7 +26,7 @@ ms.locfileid: "62159856"
 ## <a name="remarks"></a>備註
 
 > [!NOTE]
-> 在編譯使用的程式碼 **/clr**，此標頭會遭到封鎖。
+> 在使用 **/clr**編譯的程式碼中, 此標頭會遭到封鎖。
 
 「非同步提供者」會儲存函式呼叫的結果。 「非同步傳回物件」可用來擷取函式呼叫的結果。 「相關非同步狀態」可提供非同步提供者與一或多個非同步傳回物件之間的通訊。
 
@@ -38,9 +38,9 @@ ms.locfileid: "62159856"
 
 範本函式 `async` 及範本類別 `promise` 和 `packaged_task` 是非同步提供者。 範本類別 `future` 和 `shared_future` 則描述非同步傳回物件。
 
-每個範本類別`promise`， `future`，並`shared_future`具有類型的特製化**void**和部分特製化來儲存和擷取值的參考。 這些特製化與主要範本只有在儲存和擷取傳回值的函式簽章及語意上有差異。
+每個樣板`promise`類別、 `future`和`shared_future`都具有類型**void**的特製化, 以及用於以傳址方式儲存和抓取值的部分特製化。 這些特製化與主要範本只有在儲存和擷取傳回值的函式簽章及語意上有差異。
 
-範本類別`future`和`shared_future`永遠不會封鎖在其解構函式，除了在保留回溯相容性的其中一個案例：與所有其他 future，不同的`future`— 或最後一個`shared_future`— 連結至工作`std::async`解構函式區塊，如果尚未完成的工作; 也就是說，它會封鎖如果此執行緒尚未呼叫`.get()`或`.wait()`工作仍在執行中。 已新增下列可用性附註的描述`std::async`草稿標準中: 「 [附註：使用未來的其他程式碼取自 std::async future 移出的區域範圍，如果必須知道未來的解構函式可能會封鎖共用狀態變成就緒。 — 結束附註] 」 在所有其他情況下，`future`和`shared_future`解構函式所需，而且保證絕對不會封鎖。
+範本類別`future`和`shared_future`永遠不會在其析構函數中封鎖, 但在保留為回溯相容性的情況下除外:不同于附加至`future`以開頭`std::async`的工作的所有其他`shared_future`未來, 或最後一個, 如果工作尚未完成, 則此函式會封鎖; 也就是說, 它會封鎖此執行緒是否尚未呼叫`.get()`或`.wait()`而且工作仍在執行中。 下列可用性注意事項已新增至草稿標準`std::async`中的描述: "[注意:如果從 std:: async 取得的未來是在本機範圍外移動, 其他使用未來的程式碼就必須注意, 未來的析構函式可能會封鎖, 讓共用狀態變成「就緒」。在所有其他情況下, 則`future`為`shared_future` 「結束附注」」, 而析構函數是必要的, 而且保證永遠不會封鎖。
 
 ## <a name="members"></a>成員
 
@@ -56,14 +56,14 @@ ms.locfileid: "62159856"
 
 ### <a name="structures"></a>結構
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[is_error_code_enum 結構](../standard-library/is-error-code-enum-structure.md)|指出 `future_errc` 適用於儲存 `error_code` 的特製化。|
 |[uses_allocator 結構](../standard-library/uses-allocator-structure.md)|永遠成立的特製化。|
 
 ### <a name="functions"></a>函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|代表非同步提供者。|
 |[future_category](../standard-library/future-functions.md#future_category)|傳回對 `error_category` 物件的參考，此物件會描述 `future` 物件之相關錯誤的特性。|
@@ -77,8 +77,8 @@ ms.locfileid: "62159856"
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|為 `future_error` 類別所回報的錯誤提供符號名稱。|
 |[future_status](../standard-library/future-enums.md#future_status)|為計時的 wait 函式可傳回的原因提供符號名稱。|
-|[launch](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|
+|[產品](../standard-library/future-enums.md#launch)|代表一種位元遮罩類型，描述範本函式 `async` 可能的模式。|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

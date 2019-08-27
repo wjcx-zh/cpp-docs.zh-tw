@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c35d34c9c51c8ebd6885b1a1cd07c28bcb61d1b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377240"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456755"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
-定義容器範本類別**陣列**以及數個支援的範本。
+定義容器範本類別**陣列**和數個支援的範本。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <array>
-```
+**標頭：** \<array>
+
+**命名空間：** std
+
+> [!NOTE]
+> 陣列 > 程式庫也會`#include <initializer_list>`使用語句。 \<
+
+## <a name="members"></a>成員
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|儲存固定長度的元素序列。|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|包裝陣列元素的類型。|
@@ -33,7 +38,7 @@ ms.locfileid: "62377240"
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|陣列比較，相等|
 |[operator!=](../standard-library/array-operators.md#op_neq)|陣列比較，不相等|
@@ -44,12 +49,12 @@ ms.locfileid: "62377240"
 
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|取得指定的陣列元素。|
 |[swap](../standard-library/array-functions.md#swap)|交換其中一個陣列的內容與另一個陣列的內容。|
 
 ## <a name="see-also"></a>另請參閱
 
-[\<tuple>](../standard-library/tuple.md)<br/>
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[\<tuple>](../standard-library/tuple.md)\
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

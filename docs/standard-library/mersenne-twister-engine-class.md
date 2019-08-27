@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: 9949d1cab5a97b30df0b156289dff2dfbe15d851
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449665"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451867"
 ---
 # <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 類別
 
@@ -29,31 +29,31 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType*<br/>
+*UIntType*\
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*W*<br/>
+*寬*\
 **字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
 
-*N*<br/>
+*位*\
 **狀態大小**。 狀態序列中的元素數 (值)。
 
-*M*<br/>
+*分鐘*\
 **移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
 
-*R*<br/>
+*R*\
 **遮罩位元**。 **前置條件**：`R ≤ W`
 
-*A*<br/>
+*為*\
 **XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
 
-*U*， *S*， *T*， *L*<br/>
+*U*、 *S*、 *T*、 *L*\
 **調和移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
 
-*D*， *B*， *C*<br/>
+*D*、 *B*、 *C*\
 **調和位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
 
-*F*<br/>
+*F*\
 **初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
 
 ## <a name="members"></a>成員
@@ -69,9 +69,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述亂數引擎，會傳回封閉間隔 [ `0`, `2`<sup>W</sup> - `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它會擷取*W*一次從這個大數值，並使用所有位元的位元它旋轉大數值移位和混合位元，使其具有一組新的位元為單位來擷取。 引擎的狀態是最後`N` `W`-位元值，如果使用`operator()`已至少呼叫*N*逾，否則`M` `W`-位元已使用的值，而最後`N - M`種子的值。
+此範本類別描述亂數引擎，會傳回封閉間隔 [ `0`, `2`<sup>W</sup> - `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它會從這個大數值中一次抽取*W*位, 而且當它使用所有的位時, 它會藉由移動並混合位來訣竅大數值, 使其具有一組要從中解壓縮的新位。 `N` `W`如果`N - M` 至少已`M` *呼叫 N*次, 引擎的狀態會是最後一個使用的值, 否則為已使用的位值和的最後一個值。`W` `operator()`種子.
 
-產生器反轉的大數值，它會使用移位值所定義的旋轉一般化的回饋移位暫存器保留*N*並*M*，旋轉值*R*，和條件式 XOR 遮罩*A*。此外，原始移位暫存的位元變碼 （調和） 值所定義的位元編碼矩陣*U*， *D*， *S*， *B*， *T*， *C*，和*L*。
+產生器會訣竅它所保有的大數值, 方法是使用由 shift 值*N*和*M*定義的雙絞線、扭轉值*R*和條件 XOR *a*來保存。此外, 也會根據值*U*、 *D*、 *S*、 *B*、 *T*、 *C*和*L*所定義的位雜亂矩陣, 將原始移位暫存器的位編碼 (調和)。
 
 範本引數 `UIntType` 必須大到足以保留多達 `2`<sup>W</sup> - `1` 的值。 其他範本引數的值必須滿足下列需求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 
@@ -113,4 +113,4 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

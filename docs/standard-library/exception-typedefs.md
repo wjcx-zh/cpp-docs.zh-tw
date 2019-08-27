@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aba17b7bf052b6974bf849f60ff895b8e84a1092
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412640"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501953"
 ---
 # <a name="ltexceptiongt-typedefs"></a>&lt;exception&gt; typedefs
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -31,11 +27,11 @@ typedef unspecified exception_ptr;
 
 用於實作 `exception_ptr` 類型的未指定內部類別。
 
-利用 `exception_ptr` 物件參考目前的例外狀況或使用者指定的例外狀況執行個體。 在 Microsoft 實作中，例外狀況是以 [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) 結構表示。 每個 `exception_ptr` 物件均包含一個例外狀況參考欄位，指向代表該例外狀況的 `EXCEPTION_RECORD` 結構複本。
+利用 `exception_ptr` 物件參考目前的例外狀況或使用者指定的例外狀況執行個體。 在 Microsoft 實作中，例外狀況是以 [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) 結構表示。 每個 `exception_ptr` 物件均包含一個例外狀況參考欄位，指向代表該例外狀況的 `EXCEPTION_RECORD` 結構複本。
 
 當您宣告 `exception_ptr` 變數時，此變數尚未關聯任何例外狀況。 也就是說，其例外狀況參考欄位為 NULL。 這樣的 `exception_ptr` 物件稱為 *null exception_ptr*。
 
-利用 `current_exception` 或 `make_exception_ptr` 函式將例外狀況指派給 `exception_ptr` 物件。 當您將例外狀況指派給 `exception_ptr` 變數時，此變數的例外狀況參考欄位會指向該例外狀況的複本。 如果記憶體空間不足，無法複製該例外狀況，則例外狀況參考欄位會指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 例外狀況的複本。 如果`current_exception`或是`make_exception_ptr`函式無法複製例外狀況，任何其他原因，函式呼叫`terminate`CRT 函式以結束目前的處理序。
+利用 `current_exception` 或 `make_exception_ptr` 函式將例外狀況指派給 `exception_ptr` 物件。 當您將例外狀況指派給 `exception_ptr` 變數時，此變數的例外狀況參考欄位會指向該例外狀況的複本。 如果記憶體空間不足，無法複製該例外狀況，則例外狀況參考欄位會指向 [std::bad_alloc](../standard-library/bad-alloc-class.md) 例外狀況的複本。 `current_exception`如果或`make_exception_ptr`函數因為任何其他原因而無法複製例外狀況`terminate` , 則函式會呼叫 CRT 函式來結束目前的進程。
 
 `exception_ptr` 物件本身並不是指標 (儘管其名稱如此)。 此物件不會遵守指標語意，也不能搭配指標成員存取 (`->`) 或間接取值 (*) 運算子使用。 `exception_ptr` 物件沒有公用資料成員或成員函式。
 
@@ -43,7 +39,7 @@ typedef unspecified exception_ptr;
 
 您可以使用等於 (`==`) 和不等於 (`!=`) 運算子比較兩個 `exception_ptr` 物件。 運算子不會比較代表例外狀況之 `EXCEPTION_RECORD` 結構的二進位值 (位元模式)。 相反地，運算子會比較 `exception_ptr` 物件的例外狀況參考欄位位址。 因此，Null `exception_ptr` 和 Null 值的比較結果是相等。
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a>terminate_handler
 
 此類型描述適合做為 `terminate_handler` 之函式的指標。
 
@@ -59,7 +55,7 @@ typedef void (*terminate_handler)();
 
 如需 `terminate_handler` 的用法範例，請參閱 [set_terminate](../standard-library/exception-functions.md#set_terminate)。
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a>unexpected_handler
 
 此類型描述的函式指標適合作為 `unexpected_handler`。
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>範例
 
 如需 `unexpected_handler` 的用法範例，請參閱 [set_unexpected](../standard-library/exception-functions.md#set_unexpected)。
-
-## <a name="see-also"></a>另請參閱
-
-[\<exception>](../standard-library/exception.md)<br/>

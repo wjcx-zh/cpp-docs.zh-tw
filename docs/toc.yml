@@ -86,6 +86,8 @@
           href: build/cppproperties-schema-reference.md
         - name: Tasks.vs.json 結構描述參考 (C++)
           href: build/tasks-vs-json-schema-reference-cpp.md
+        - name: Launch.vs.json 結構描述參考 (C++)
+          href: build/launch-vs-schema-reference-cpp.md
     - name: CMake 專案
       expanded: false
       items:
@@ -93,6 +95,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: 教學課程：在 Visual Studio 中建立 C++ 跨平台專案
           href: build/get-started-linux-cmake.md
+        - name: CMake 專案中的 Clang/LLVM
+          href: build/clang-support-cmake.md
         - name: 設定 Linux CMake 專案
           href: build/../linux/cmake-linux-project.md
         - name: 自訂 CMake 建置設定
@@ -209,13 +213,13 @@
           items:
             - name: DLL 的類型
               href: build/kinds-of-dlls.md
-            - name: 非 MFC DLL：總覽
+            - name: 非 MFC DLL：概觀
               href: build/non-mfc-dlls-overview.md
             - name: 靜態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-statically-linked-to-mfc.md
             - name: 動態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-dynamically-linked-to-mfc.md
-            - name: MFC 延伸模組 DLL：總覽
+            - name: MFC 延伸模組 DLL：概觀
               href: build/extension-dlls-overview.md
         - name: MFC DLL 常見問題集
           href: build/dll-frequently-asked-questions.md
@@ -403,7 +407,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: 範例專案檔
                   href: build/reference/project-files.md
-            - name: C++ 專案屬性參考
+            - name: C++ 專案屬性頁
               expanded: false
               items:
                 - name: C++ 專案屬性參考
@@ -412,42 +416,28 @@
                   href: build/reference/general-property-page-project.md
                 - name: 一般屬性頁
                   href: build/reference/general-property-page-file.md
+                - name: 進階屬性頁面
+                  href: build/reference/advanced-property-page.md
+                - name: 偵錯屬性頁
+                  href: build/reference/debugging-prop-pages.md
                 - name: VC++ 目錄屬性頁
                   href: build/reference/vcpp-directories-property-page.md
+                - name: C/C++ 屬性頁
+                  href: build/reference/c-cpp-prop-page.md
+                - name: 連結器屬性頁
+                  href: build/reference/linker-property-pages.md
                 - name: 命令列屬性頁
                   href: build/reference/command-line-property-pages.md
                 - name: NMake 屬性頁
                   href: build/reference/nmake-property-page.md
-                - name: 連結器屬性頁
-                  href: build/reference/linker-property-pages.md
                 - name: 資訊清單工具屬性頁
-                  expanded: false
-                  items:
-                    - name: 資訊清單工具屬性頁
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、一般
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、輸入和輸出
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、隔離的 COM
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: <Projectname> 屬性頁對話方塊、組態屬性、資訊清單工具、進階
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: 資源屬性頁
                   href: build/reference/resources-property-pages.md
                 - name: 受控資源屬性頁
                   href: build/reference/managed-resources-property-page.md
                 - name: MIDL 屬性頁
-                  expanded: false
-                  items:
-                    - name: MIDL 屬性頁
-                      href: build/reference/midl-property-pages.md
-                    - name: MIDL 屬性頁：一般
-                      href: build/reference/midl-property-pages-general.md
-                    - name: MIDL 屬性頁：Output
-                      href: build/reference/midl-property-pages-output.md
-                    - name: MIDL 屬性頁：進階
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Web 參考屬性頁
                   href: build/reference/web-references-property-page.md
                 - name: XML 資料產生器工具屬性頁
@@ -457,16 +447,7 @@
                 - name: 自訂建置步驟屬性頁：一般
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: HLSL 屬性頁
-                  expanded: false
-                  items:
-                    - name: HLSL 屬性頁
-                      href: build/reference/hlsl-property-pages.md
-                    - name: HLSL 屬性頁：一般
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: HLSL 屬性頁：進階
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: HLSL 屬性頁：輸出檔案
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: MSVC 編譯器參考
           expanded: false
           items:
@@ -1145,16 +1126,7 @@
                 - name: Visual Studio 中的 NMAKE 專案
                   href: build/reference/creating-a-makefile-project.md
                 - name: 執行 NMAKE
-                  expanded: false
-                  items:
-                    - name: 執行 NMAKE
-                      href: build/reference/running-nmake.md
-                    - name: NMAKE 選項
-                      href: build/reference/nmake-options.md
-                    - name: Tools.ini 和 NMAKE
-                      href: build/reference/tools-ini-and-nmake.md
-                    - name: NMAKE 的結束代碼
-                      href: build/reference/exit-codes-from-nmake.md
+                  href: build/reference/running-nmake.md
                 - name: Makefile 內容
                   expanded: false
                   items:
@@ -1464,7 +1436,7 @@
               items:
                 - name: BSCMAKE 參考
                   href: build/reference/bscmake-reference.md
-                - name: 建置瀏覽資訊檔：總覽
+                - name: 建置瀏覽資訊檔：概觀
                   href: build/reference/building-browse-information-files-overview.md
                 - name: 建置 .Bsc 檔
                   expanded: false
@@ -1608,16 +1580,16 @@
 - name: Windows 桌面開發
   expanded: false
   items:
-    - name: 以 C++ 撰寫的桌面應用程式
-      href: windows/desktop-applications-visual-cpp.md
     - name: 使用 C++ 設計 Windows 應用程式概觀
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: 以 C++ 撰寫的桌面應用程式
+      href: windows/desktop-applications-visual-cpp.md
     - name: 逐步解說：建立標準 C++ 程式
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: 逐步解說：建立 Windows 桌面應用程式
       href: windows/walkthrough-creating-windows-desktop-applications-cpp.md
     - name: Windows 桌面精靈
-      href: windows/win32-application-wizard.md
+      href: windows/windows-desktop-wizard.md
     - name: Active Template Library (ATL)
       href: atl/
     - name: Microsoft Foundation Classes (MFC)
@@ -1637,10 +1609,6 @@
               items:
                 - name: 日期和時間概觀
                   href: atl-mfc-shared/date-and-time.md
-                - name: 日期和時間：自動化支援
-                  href: atl-mfc-shared/date-and-time-automation-support.md
-                - name: 日期和時間：資料庫支援
-                  href: atl-mfc-shared/date-and-time-database-support.md
                 - name: DATE 類型
                   href: atl-mfc-shared/date-type.md
             - name: 字串 (ATL-MFC)
@@ -2796,10 +2764,10 @@
           items:
             - name: 同步處理 (lock 類別)
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: 鎖定
               expanded: false
               items:
-                - name: lock
+                - name: 鎖定
                   href: dotnet/lock.md
                 - name: lock 類別
                   href: dotnet/lock-class.md
@@ -2918,6 +2886,8 @@
 - name: 參考資料
   expanded: false
   items:
+    - name: C/C++ 語言和標準程式庫
+      href: cpp/c-cpp-language-and-standard-libraries.md
     - name: 語言參考
       expanded: false
       items:
@@ -4354,6 +4324,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: 模組
+              expanded: false
+              items:
+                - name: C++ 中的模組概觀
+                  href: cpp/modules-cpp.md
+                - name: 模組、匯入、匯出
+                  href: cpp/import-export-module.md
             - name: 範本
               expanded: false
               items:
@@ -4526,7 +4503,7 @@
                       href: cpp/selectany.md
                     - name: spectre
                       href: cpp/spectre.md
-                    - name: thread
+                    - name: 執行緒
                       href: cpp/thread.md
                     - name: uuid
                       href: cpp/uuid-cpp.md
@@ -6013,7 +5990,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: enum 類別
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: Event - 事件
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: 例外狀況處理
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6202,7 +6179,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: default
+                - name: 預設
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6294,7 +6271,7 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: object
+                - name: 物件 (object)
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md
@@ -6370,7 +6347,7 @@
                   href: windows/attributes/v1-enum.md
                 - name: vararg
                   href: windows/attributes/vararg.md
-                - name: 版本
+                - name: version
                   href: windows/attributes/version-cpp.md
                 - name: vi_progid
                   href: windows/attributes/vi-progid.md
@@ -8409,6 +8386,15 @@
                       href: standard-library/sync-per-thread-class.md
                     - name: sync_shared 類別
                       href: standard-library/sync-shared-class.md
+                - name: <any>
+                  expanded: false
+                  items:
+                    - name: <any>
+                      href: standard-library/any.md
+                    - name: <any> 函式
+                      href: standard-library/any-functions.md
+                    - name: 任何類別 (C++ 標準程式庫)
+                      href: standard-library/any-class.md
                 - name: <array>
                   expanded: false
                   items:
@@ -8534,6 +8520,8 @@
                   href: standard-library/csetjmp.md
                 - name: <csignal>
                   href: standard-library/csignal.md
+                - name: <cstdalign>
+                  href: standard-library/cstdalign.md
                 - name: <cstdarg>
                   href: standard-library/cstdarg.md
                 - name: <cstdbool>
@@ -8552,6 +8540,8 @@
                   href: standard-library/ctgmath.md
                 - name: <ctime>
                   href: standard-library/ctime.md
+                - name: <cuchar>
+                  href: standard-library/cuchar.md
                 - name: <cvt-wbuffer>
                   href: standard-library/cvt-wbuffer.md
                 - name: <cvt-wstring>
@@ -8584,6 +8574,8 @@
                       href: standard-library/bad-exception-class.md
                     - name: Exception 類別
                       href: standard-library/exception-class.md
+                - name: <execution>
+                  href: standard-library/execution.md
                 - name: <filesystem>
                   expanded: false
                   items:
@@ -8997,6 +8989,17 @@
                       href: standard-library/unique-ptr-class.md
                     - name: weak_ptr 類別
                       href: standard-library/weak-ptr-class.md
+                - name: <memory_resource>
+                  expanded: false
+                  items:
+                    - name: <memory_resource>
+                      href: standard-library/memory-resource.md
+                    - name: <memory_resource> 函式
+                      href: standard-library/memory-resource-functions.md
+                    - name: <memory_resource> 運算子
+                      href: standard-library/memory-resource-operators.md
+                    - name: memory_resource 類別
+                      href: standard-library/memory-resource-class.md
                 - name: <mutex>
                   expanded: false
                   items:
@@ -9046,6 +9049,17 @@
                       href: standard-library/numeric.md
                     - name: <numeric> 函式
                       href: standard-library/numeric-functions.md
+                - name: <optional>
+                  expanded: false
+                  items:
+                    - name: <optional>
+                      href: standard-library/optional.md
+                    - name: <optional> 函式
+                      href: standard-library/optional-functions.md
+                    - name: <optional> 運算子
+                      href: standard-library/optional-operators.md
+                    - name: 選擇性類別
+                      href: standard-library/optional-class.md
                 - name: <ostream>
                   expanded: false
                   items:
@@ -9614,6 +9628,17 @@
                       href: standard-library/valarray-class.md
                     - name: valarray<bool> 類別
                       href: standard-library/valarray-bool-class.md
+                - name: <variant>
+                  expanded: false
+                  items:
+                    - name: <variant>
+                      href: standard-library/variant.md
+                    - name: <variant> 函式
+                      href: standard-library/variant-functions.md
+                    - name: <variant> 運算子
+                      href: standard-library/variant-operators.md
+                    - name: 變化類別
+                      href: standard-library/variant-class.md
                 - name: <vector>
                   expanded: false
                   items:
@@ -10495,22 +10520,8 @@
                   items:
                     - name: 使用 C 和 Win32 進行多執行緒處理
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: 多執行緒程式
-                      href: parallel/multithread-programs.md
-                    - name: 多執行緒的程式庫支援
-                      href: parallel/library-support-for-multithreading.md
-                    - name: 多執行緒的 Include 檔
-                      href: parallel/include-files-for-multithreading.md
-                    - name: 執行緒控制的 C 執行階段程式庫函式
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: 多執行緒 C 程式範例
                       href: parallel/sample-multithread-c-program.md
-                    - name: 撰寫多執行緒 Win32 程式
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: 編譯和連結多執行緒程式
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: 避免具有多執行緒程式的問題區域
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: 執行緒本機存放區 (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: 使用 C++ 和 MFC 進行多執行緒處理

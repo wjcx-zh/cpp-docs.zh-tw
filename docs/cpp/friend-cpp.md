@@ -1,6 +1,6 @@
 ---
 title: friend (C++)
-ms.date: 11/19/2018
+ms.date: 07/15/2019
 f1_keywords:
 - friend_cpp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - friend classes [C++]
 - friend keyword [C++]
 ms.assetid: 8fe9ee55-d56f-40cd-9075-d9fb1375aff4
-ms.openlocfilehash: 769720877cc58de530791b268811d7d01adad3e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03b6cb7f856ec59c10f5e410c947f74d17ec4e46
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894410"
 ---
 # <a name="friend-c"></a>friend (C++)
 
@@ -119,7 +119,7 @@ class G
 
 ## <a name="friend-functions"></a>friend 函式
 
-A **friend**函式是不是類別的成員，但可以存取類別的 private 和 protected 成員的函式。 friend 函式並非類別成員，而是擁有特殊存取權限的一般外部函式。 Friend 不在類別的範圍就它們不會呼叫使用成員選取運算子 (**。** 和-**>**) 除非它們是另一個類別的成員。 A **friend**授與存取權的類別所宣告函式。 **Friend**宣告可放在任何類別宣告中。 不會受存取控制關鍵字的影響。
+A **friend**函式是不是類別的成員，但可以存取類別的 private 和 protected 成員的函式。 friend 函式並非類別成員，而是擁有特殊存取權限的一般外部函式。 Friend 不在類別的範圍就它們不會呼叫使用成員選取運算子 ( **。** 和- **>** ) 除非它們是另一個類別的成員。 A **friend**授與存取權的類別所宣告函式。 **Friend**宣告可放在任何類別宣告中。 不會受存取控制關鍵字的影響。
 
 下列範例顯示 `Point` 類別和 friend 函式 `ChangePrivate`。 **Friend**函式有權存取的私用資料成員`Point`物件收到做為參數。
 
@@ -224,7 +224,7 @@ int main() {
 
 除非明確指定，否則夥伴關係不是雙向的。 在上述範例中，`YourClass` 的成員函式無法存取 `YourOtherClass` 的 private 成員。
 
-Managed 型別不能包含任何 friend 函式、friend 類別或 friend 介面。
+Managed 型別 (在C++/CLI) 不能有任何的 friend 函式、 friend 類別或 friend 介面。
 
 夥伴關係不能繼承，也就是說，衍生自 `YourOtherClass` 的類別不能存取 `YourClass` 的 private 成員。 夥伴關係不可轉移，因此，若類別屬於 `YourOtherClass` 的 friend，就無法存取 `YourClass` 的 private 成員。
 
@@ -235,9 +235,7 @@ friend 關聯性的含意
 
 ## <a name="inline-friend-definitions"></a>內嵌 friend 定義
 
-Friend 函式可以在類別宣告內定義。 這些函式為內嵌函式，而且如同成員內嵌函式一般，它們就像是緊接著在已查看所有類別成員之後，類別範圍關閉之前 (類別宣告的結尾) 所定義。
-
-在類別宣告內定義的 friend 函式不會視為在封入類別的範圍內，而是在檔案範圍內。
+Friend 函式可以在類別宣告內定義 （指定的函式主體）。 這些函式為內嵌函式，而且如同成員內嵌函式一般，它們就像是緊接著在已查看所有類別成員之後，類別範圍關閉之前 (類別宣告的結尾) 所定義。 在類別宣告內定義的 Friend 函式會在封入類別的範圍內。
 
 ## <a name="see-also"></a>另請參閱
 

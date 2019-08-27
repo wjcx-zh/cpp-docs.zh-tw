@@ -82,14 +82,14 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: f3e733bced407f96414783612165984c71b63775
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369562"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451660"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants namespace
+# <a name="regexconstants-namespace"></a>regex_constants 命名空間
 
 規則運算式旗標的命名空間。
 
@@ -115,7 +115,7 @@ namespace regex_constants {
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<regex>
+**標頭︰** \<regex>
 
 **命名空間：** std
 
@@ -210,7 +210,7 @@ enum match_flag_type
 
 比對選項包括：
 
-*match_default*<br/>
+`match_default`
 
 `match_not_bol` -- 不會將目標序列中的第一個位置視為行首
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>另請參閱
 
-[\<regex>](../standard-library/regex.md)<br/>
-[regex_error 類別](../standard-library/regex-error-class.md)<br/>
-[\<regex> 函式](../standard-library/regex-functions.md)<br/>
-[regex_iterator 類別](../standard-library/regex-iterator-class.md)<br/>
-[\<regex> 運算子](../standard-library/regex-operators.md)<br/>
-[regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)<br/>
-[regex_traits 類別](../standard-library/regex-traits-class.md)<br/>
-[\<regex> typedefs](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[RegEx_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函式](../standard-library/regex-functions.md)\
+[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[\<RegEx > 運算子](../standard-library/regex-operators.md)\
+[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[\<regex> typedefs](../standard-library/regex-typedefs.md)

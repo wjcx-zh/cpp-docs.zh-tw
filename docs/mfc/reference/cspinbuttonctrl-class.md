@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c167745eed45b7081e62a2c3be225a33e7ee0520
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324398"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502434"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl 類別
 
@@ -59,34 +59,34 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CSpinButtonCtrl::Create](#create)|建立使用微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。|
-|[CSpinButtonCtrl::CreateEx](#createex)|使用指定的 Windows 延伸樣式中建立使用微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。|
-|[CSpinButtonCtrl::GetAccel](#getaccel)|擷取使用微調按鈕控制項的加速資訊。|
-|[CSpinButtonCtrl::GetBase](#getbase)|擷取使用微調按鈕控制項的目前基底。|
-|[CSpinButtonCtrl::GetBuddy](#getbuddy)|擷取目前的協同視窗的指標。|
-|[CSpinButtonCtrl::GetPos](#getpos)|擷取使用微調按鈕控制項的目前位置。|
-|[CSpinButtonCtrl::GetRange](#getrange)|擷取的上限和下限限制 （範圍） 使用微調按鈕控制項。|
-|[CSpinButtonCtrl::SetAccel](#setaccel)|設定使用微調按鈕控制項加速。|
-|[CSpinButtonCtrl::SetBase](#setbase)|設定為使用微調按鈕控制項的基底。|
-|[CSpinButtonCtrl::SetBuddy](#setbuddy)|設定使用微調按鈕控制項的協同視窗。|
+|[CSpinButtonCtrl::Create](#create)|建立微調按鈕控制項, 並將其附加至`CSpinButtonCtrl`物件。|
+|[CSpinButtonCtrl::CreateEx](#createex)|使用指定的 Windows 擴充樣式建立微調按鈕控制項, 並將其附加至`CSpinButtonCtrl`物件。|
+|[CSpinButtonCtrl::GetAccel](#getaccel)|抓取微調按鈕控制項的加速資訊。|
+|[CSpinButtonCtrl::GetBase](#getbase)|抓取微調按鈕控制項的目前基底。|
+|[CSpinButtonCtrl::GetBuddy](#getbuddy)|抓取目前好友視窗的指標。|
+|[CSpinButtonCtrl::GetPos](#getpos)|抓取微調按鈕控制項的目前位置。|
+|[CSpinButtonCtrl::GetRange](#getrange)|抓取微調按鈕控制項的上限和下限 (範圍)。|
+|[CSpinButtonCtrl::SetAccel](#setaccel)|設定微調按鈕控制項的加速。|
+|[CSpinButtonCtrl::SetBase](#setbase)|設定微調按鈕控制項的基底。|
+|[CSpinButtonCtrl::SetBuddy](#setbuddy)|設定微調按鈕控制項的好友視窗。|
 |[CSpinButtonCtrl::SetPos](#setpos)|設定控制項的目前位置。|
-|[CSpinButtonCtrl::SetRange](#setrange)|設定上限與下限 （範圍） 的使用微調按鈕控制項。|
+|[CSpinButtonCtrl::SetRange](#setrange)|設定微調按鈕控制項的上限和下限 (範圍)。|
 
 ## <a name="remarks"></a>備註
 
-「 微調按鈕控制項 」 （也稱為上下按鈕控制項） 是一對箭號按鈕，使用者可以按一下以遞增或遞減值，例如捲動位置或附屬控制項中顯示的數字。 微調按鈕控制項相關聯的值會呼叫其目前的位置。 微調按鈕控制項最常搭配附屬控制項稱為 「 協同視窗 」。
+「微調按鈕控制項」 (也稱為上下按鈕控制項) 是一對箭號按鈕, 使用者可以按一下以遞增或遞減值, 例如捲軸位置或顯示在附屬控制項中的數位。 與微調按鈕控制項相關聯的值稱為其目前位置。 微調按鈕控制項最常搭配附屬控制項使用, 稱為「好友視窗」。
 
-這個控制項 (並因此`CSpinButtonCtrl`類別) 僅適用於 Windows 95/98 和 Windows NT 版 3.51 下執行的程式和更新版本。
+這個控制項 (因此`CSpinButtonCtrl`類別) 僅適用于在 windows 95/98 和 windows NT 3.51 版和更新版本下執行的程式。
 
-給使用者，微調按鈕控制項和協同視窗通常看起來像單一的控制項。 您可以指定的微調按鈕控制項自動定位本身及其協同視窗旁邊，以及它會自動設定為其目前位置的協同視窗的標題。 您可以使用與編輯控制項的使用微調按鈕控制項來提示使用者輸入數字。
+對使用者而言, 微調按鈕控制項和其合作者視窗通常看起來就像單一控制項。 您可以指定微調按鈕控制項自動在其 [好友] 視窗旁邊放置, 並自動將 [好友] 視窗的標題設定為其目前的位置。 您可以使用微調按鈕控制項搭配編輯控制項, 以提示使用者輸入數值。
 
-按一下向上箭頭移往最大值，目前的位置，並按一下向下箭號移到最小值的目前位置。 根據預設，最小值為 100 而上限則為 0。 最小設定是超過最大值設定 （例如，當使用預設設定），按一下向上箭號減少任何時間的位置值，然後按一下向下箭號會遞增。
+按一下向上箭號會將目前的位置移至最大值, 然後按一下向下箭號會將目前的位置向最小。 根據預設, 最小值為 100, 最大值為0。 當最小值設定大於最大值設定時 (例如, 使用預設設定時), 按一下向上鍵會減少位置值, 然後按一下向下箭號就會增加。
 
-微調按鈕控制項而不需要協同視窗函式做為一種簡化的捲軸。 例如，索引標籤控制項有時會顯示微調按鈕控制項，讓使用者捲動至檢視的其他索引標籤。
+不含「合作者視窗」功能的微調按鈕控制項, 做為一種簡化的捲軸。 例如, 索引標籤控制項有時會顯示微調按鈕控制項, 讓使用者可以將其他索引標籤滾動到視野中。
 
-如需有關使用`CSpinButtonCtrl`，請參閱 <<c2> [ 控制項](../../mfc/controls-mfc.md)並[使用 CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md)。
+如需使用`CSpinButtonCtrl`的詳細資訊, 請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CSpinButtonCtrl](../../mfc/using-cspinbuttonctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -102,9 +102,9 @@ class CSpinButtonCtrl : public CWnd
 
 **標頭：** afxcmn.h
 
-##  <a name="create"></a>  CSpinButtonCtrl::Create
+##  <a name="create"></a>CSpinButtonCtrl:: Create
 
-建立使用微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件...
+建立微調按鈕控制項, 並將其附加至`CSpinButtonCtrl`物件。
 
 ```
 virtual BOOL Create(
@@ -117,30 +117,30 @@ virtual BOOL Create(
 ### <a name="parameters"></a>參數
 
 *dwStyle*<br/>
-指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項的樣式的組合。 這些樣式所述[上下按鈕控制項的樣式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
+指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/win32/Controls/up-down-control-styles)中加以描述。
 
 *rect*<br/>
 指定微調按鈕控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構
 
 *pParentWnd*<br/>
-微調按鈕控制項的父視窗，通常的指標`CDialog`。 它必須不是 NULL。
+微調按鈕控制項的父視窗指標, 通常為`CDialog`。 不得為 Null。
 
 *nID*<br/>
 指定微調按鈕控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果初始化成功;否則為 0。
+如果初始化成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-您建構`CSpinButtonCtrl`物件在兩個步驟中第一次，呼叫建構函式，並接著呼叫`Create`，這會建立微調按鈕控制項，並將它附加至`CSpinButtonCtrl`物件。
+您會先`CSpinButtonCtrl`以兩個步驟來建立物件, 呼叫此函式, `Create`然後呼叫, 它會建立微調按鈕控制項, `CSpinButtonCtrl`並將其附加至物件。
 
-若要建立延伸的視窗樣式使用微調按鈕控制項，呼叫[CSpinButtonCtrl::CreateEx](#createex)而不是`Create`。
+若要建立具有延伸視窗樣式的微調按鈕控制項, 請呼叫[CSpinButtonCtrl:: CreateEx](#createex) , 而不是`Create`。
 
-##  <a name="createex"></a>  CSpinButtonCtrl::CreateEx
+##  <a name="createex"></a>CSpinButtonCtrl:: CreateEx
 
-建立控制項 （子視窗），並將它與關聯`CSpinButtonCtrl`物件。
+建立控制項 (子視窗), 並將它與`CSpinButtonCtrl`物件產生關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -154,16 +154,16 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>參數
 
 *dwExStyle*<br/>
-指定正在建立之控制項的延伸的樣式。 如需擴充的 windows 樣式的清單，請參閱 < *dwExStyle*參數[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+指定所要建立之控制項的延伸樣式。 如需擴充 windows 樣式的清單, 請參閱 Windows SDK 中[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)的*dwExStyle*參數。
 
 *dwStyle*<br/>
-指定微調按鈕控制項的樣式。 套用至控制項的任何微調按鈕控制項的樣式的組合。 這些樣式所述[上下按鈕控制項的樣式](/windows/desktop/Controls/up-down-control-styles)Windows SDK 中。
+指定微調按鈕控制項的樣式。 將微調按鈕控制項樣式的任何組合套用至控制項。 這些樣式會在 Windows SDK 中的[上下按鈕控制項樣式](/windows/win32/Controls/up-down-control-styles)中加以描述。
 
 *rect*<br/>
-參考[RECT](/previous-versions/dd162897\(v=vs.85\))結構描述的大小和位置，在中建立工作區座標中的視窗*pParentWnd*。
+[矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考, 描述要建立之視窗的大小和位置, 以*pParentWnd*的用戶端座標表示。
 
 *pParentWnd*<br/>
-是控制項的父視窗的指標。
+做為控制項父系之視窗的指標。
 
 *nID*<br/>
 控制項的子視窗識別碼。
@@ -174,9 +174,9 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx`而非[建立](#create)套用延伸的 Windows 樣式的 Windows 延伸的樣式前置詞 WS_EX_ 所指定。
+使用`CreateEx` , 而不是[Create](#create)來套用擴充的 windows 樣式 (由 Windows 擴充樣式指定于 WS_EX_ 的前面)。
 
-##  <a name="cspinbuttonctrl"></a>  CSpinButtonCtrl::CSpinButtonCtrl
+##  <a name="cspinbuttonctrl"></a>CSpinButtonCtrl:: CSpinButtonCtrl
 
 建構 `CSpinButtonCtrl` 物件。
 
@@ -186,7 +186,7 @@ CSpinButtonCtrl();
 
 ##  <a name="getaccel"></a>  CSpinButtonCtrl::GetAccel
 
-擷取使用微調按鈕控制項的加速資訊。
+抓取微調按鈕控制項的加速資訊。
 
 ```
 UINT GetAccel(
@@ -197,18 +197,18 @@ UINT GetAccel(
 ### <a name="parameters"></a>參數
 
 *nAccel*<br/>
-所指定之陣列中的項目數*pAccel*。
+*PAccel*所指定之陣列中的元素數目。
 
 *pAccel*<br/>
-陣列的指標[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-_udaccel)接收加速資訊的結構。
+接收加速資訊之[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)結構陣列的指標。
 
 ### <a name="return-value"></a>傳回值
 
-擷取的加速器結構數目。
+抓取的快速鍵結構數目。
 
-##  <a name="getbase"></a>  CSpinButtonCtrl::GetBase
+##  <a name="getbase"></a>CSpinButtonCtrl:: GetBase
 
-擷取使用微調按鈕控制項的目前基底。
+抓取微調按鈕控制項的目前基底。
 
 ```
 UINT GetBase() const;
@@ -218,9 +218,9 @@ UINT GetBase() const;
 
 目前的基底值。
 
-##  <a name="getbuddy"></a>  CSpinButtonCtrl::GetBuddy
+##  <a name="getbuddy"></a>CSpinButtonCtrl:: GetBuddy
 
-擷取目前的協同視窗的指標。
+抓取目前好友視窗的指標。
 
 ```
 CWnd* GetBuddy() const;
@@ -228,11 +228,11 @@ CWnd* GetBuddy() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前的協同視窗的指標。
+目前好友視窗的指標。
 
-##  <a name="getpos"></a>  CSpinButtonCtrl::GetPos
+##  <a name="getpos"></a>CSpinButtonCtrl:: GetPos
 
-擷取使用微調按鈕控制項的目前位置。
+抓取微調按鈕控制項的目前位置。
 
 ```
 int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
@@ -241,21 +241,21 @@ int GetPos() const;  int GetPos32(LPBOOL lpbError = NULL) const;
 ### <a name="parameters"></a>參數
 
 *lpbError*<br/>
-布林值，設為零值的指標是已成功擷取或非零發生錯誤。 如果此參數設為 NULL 時，不會報告錯誤。
+布林值的指標, 如果成功抓取值, 則設定為零; 如果發生錯誤, 則為非零。 如果此參數設定為 Null, 則不會報告錯誤。
 
 ### <a name="return-value"></a>傳回值
 
-第一個版本會傳回低序位字組中的 16 位元目前位置。 高序位文字不是零，如果發生錯誤。
+第一個版本會傳回低序位字組中的16位目前位置。 如果發生錯誤, 則高序位單字為非零值。
 
-第二個版本會傳回 32 位元位置。
+第二個版本會傳回32位位置。
 
 ### <a name="remarks"></a>備註
 
-當它處理傳回的值時，控制項就會更新為基礎的協同視窗標題的目前位置。 如果沒有任何協同視窗，或標題指定為無效或超出範圍的值，控制項就會傳回錯誤。
+當它處理傳回的值時, 控制項會根據好友視窗的標題來更新其目前的位置。 如果沒有任何合作者視窗, 或標題指定了無效或超出範圍的值, 控制項就會傳回錯誤。
 
-##  <a name="getrange"></a>  CSpinButtonCtrl::GetRange
+##  <a name="getrange"></a>CSpinButtonCtrl:: GetRange
 
-擷取的上限和下限限制 （範圍） 使用微調按鈕控制項。
+抓取微調按鈕控制項的上限和下限 (範圍)。
 
 ```
 DWORD GetRange() const;
@@ -271,23 +271,23 @@ void GetRange32(
 
 ### <a name="parameters"></a>參數
 
-*lower*<br/>
-接收控制項的下限為整數的參考。
+*零下*<br/>
+參考可接收控制項下限的整數。
 
 *upper*<br/>
-接收控制項的最高上限的整數的參考。
+參考可接收控制項上限的整數。
 
 ### <a name="return-value"></a>傳回值
 
-第一個版本會傳回 32 位元值，包含上限與下限。 低序位文字控制項，上限而高序位文字較低的限制。
+第一個版本會傳回32位值, 其中包含上限和下限。 低序位字組是控制項的上限, 而高序位字則是較低的限制。
 
 ### <a name="remarks"></a>備註
 
-此成員函式`GetRange32`擷取為 32 位元整數的微調按鈕控制項的範圍。
+此成員`GetRange32`函式會將微調按鈕控制項的範圍, 抓取為32位整數。
 
 ##  <a name="setaccel"></a>  CSpinButtonCtrl::SetAccel
 
-設定使用微調按鈕控制項加速。
+設定微調按鈕控制項的加速。
 
 ```
 BOOL SetAccel(
@@ -298,18 +298,18 @@ BOOL SetAccel(
 ### <a name="parameters"></a>參數
 
 *nAccel*<br/>
-數目[UDACCEL](/windows/desktop/api/commctrl/ns-commctrl-_udaccel)所指定的結構*pAccel*。
+*PAccel*所指定的[UDACCEL](/windows/win32/api/commctrl/ns-commctrl-udaccel)結構數目。
 
 *pAccel*<br/>
-UDACCEL 結構，其中包含加速資訊陣列的指標。 項目應該依照遞增順序是根據`nSec`成員。
+UDACCEL 結構陣列的指標, 其中包含加速資訊。 元素應根據`nSec`成員以遞增順序排序。
 
 ### <a name="return-value"></a>傳回值
 
 如果成功則為非零；否則為 0。
 
-##  <a name="setbase"></a>  CSpinButtonCtrl::SetBase
+##  <a name="setbase"></a>CSpinButtonCtrl:: SetBase
 
-設定為使用微調按鈕控制項的基底。
+設定微調按鈕控制項的基底。
 
 ```
 int SetBase(int nBase);
@@ -318,19 +318,19 @@ int SetBase(int nBase);
 ### <a name="parameters"></a>參數
 
 *nBase*<br/>
-新控制項的基底值。 它可以是十進位的 10 或 16 個十六進位。
+控制項的新基底值。 十進位或16的十六進位可以是10。
 
 ### <a name="return-value"></a>傳回值
 
-先前的基底值，如果成功或如果指定了無效的基底的零。
+如果成功, 則為前一個基底值, 如果指定了不正確基底, 則為零。
 
 ### <a name="remarks"></a>備註
 
-基底值會決定是否協同視窗會顯示十進位或十六進位的數字的數字。 十六進位數字都不帶正負號;十進位數字會進行簽署。
+[基底] 值決定 [合作者] 視窗是否顯示十進位或十六進位數位的數位。 十六進位數位一律不帶正負號;十進位數已簽署。
 
-##  <a name="setbuddy"></a>  CSpinButtonCtrl::SetBuddy
+##  <a name="setbuddy"></a>CSpinButtonCtrl:: SetBuddy
 
-設定使用微調按鈕控制項的協同視窗。
+設定微調按鈕控制項的好友視窗。
 
 ```
 CWnd* SetBuddy(CWnd* pWndBuddy);
@@ -339,19 +339,19 @@ CWnd* SetBuddy(CWnd* pWndBuddy);
 ### <a name="parameters"></a>參數
 
 *pWndBuddy*<br/>
-新的協同視窗的指標。
+新的合作者視窗的指標。
 
 ### <a name="return-value"></a>傳回值
 
-先前的協同視窗的指標。
+上一個好友視窗的指標。
 
 ### <a name="remarks"></a>備註
 
-微調控制項幾乎都是與另一個視窗中，例如編輯控制項，會顯示某些內容相關聯。 這個其他視窗稱為 「 夥伴 」 的微調控制項。
+微調控制項幾乎一律會與另一個視窗 (例如編輯控制項) 相關聯, 以顯示某些內容。 這個另一個視窗稱為微調控制項的「好友」。
 
-##  <a name="setpos"></a>  CSpinButtonCtrl::SetPos
+##  <a name="setpos"></a>CSpinButtonCtrl:: SetPos
 
-設定使用微調按鈕控制項的目前位置。
+設定微調按鈕控制項的目前位置。
 
 ```
 int SetPos(int nPos);
@@ -361,19 +361,19 @@ int SetPos32(int nPos);
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-控制項的新位置。 此值必須是在控制項上限與下限所指定的範圍。
+控制項的新位置。 這個值必須在控制項的上限和下限所指定的範圍內。
 
 ### <a name="return-value"></a>傳回值
 
-先前的位置 (16 位元的整數位數`SetPos`32 位元的有效位數`SetPos32`)。
+先前的位置 (的16位`SetPos`有效位數,, 32 位`SetPos32`有效位數)。
 
 ### <a name="remarks"></a>備註
 
-`SetPos32` 設定 32 位元位置。
+`SetPos32`設定32位位置。
 
-##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
+##  <a name="setrange"></a>CSpinButtonCtrl:: SetRange
 
-設定上限與下限 （範圍） 的使用微調按鈕控制項。
+設定微調按鈕控制項的上限和下限 (範圍)。
 
 ```
 void SetRange(
@@ -388,14 +388,14 @@ void SetRange32(
 ### <a name="parameters"></a>參數
 
 *nLower*和*nUpper*<br/>
-上限與下限的控制項。 針對`SetRange`、 未限制可能會大於 UD_MAXVAL 或小於 UD_MINVAL; 此外，兩個限制之間的差異不能超過 UD_MAXVAL。 `SetRange32` 沒有任何限制置於限制;使用任何整數。
+控制項的上限和下限。 若`SetRange`為, 則限制不能大於 UD_MAXVAL 或小於 UD_MINVAL; 此外, 這兩個限制之間的差異不能超過 UD_MAXVAL。 `SetRange32`限制不受限制;使用任何整數。
 
 ### <a name="remarks"></a>備註
 
-此成員函式`SetRange32`設定微調按鈕控制項的 32 位元範圍。
+成員函式`SetRange32`會設定微調按鈕控制項的32位範圍。
 
 > [!NOTE]
->  微調按鈕的預設範圍具有最大值為零 (0) 和最小值為 100。 因為最大值小於最小值，按一下向上箭號會減少的位置，並按一下向下箭號，將可增加它。 使用`CSpinButtonCtrl::SetRange`調整這些值。
+>  微調按鈕的預設範圍會將最大值設定為零 (0), 並將最小值設定為100。 由於最大值小於最小值, 按一下向上箭號將會減少位置, 按一下向下箭號將會增加。 使用`CSpinButtonCtrl::SetRange`來調整這些值。
 
 ## <a name="see-also"></a>另請參閱
 

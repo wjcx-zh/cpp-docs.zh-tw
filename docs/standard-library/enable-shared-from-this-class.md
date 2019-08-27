@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_shared_from_this class
 - enable_shared_from_this
 ms.assetid: 9237603d-22e2-421f-b070-838ac006baf5
-ms.openlocfilehash: 9bf5055aefe505461e81703373ecb042a1f7224a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152a5e0433f2eab5160fbdedde8f18f42f2303e6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413719"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245857"
 ---
 # <a name="enablesharedfromthis-class"></a>enable_shared_from_this 類別
 
@@ -26,6 +26,8 @@ public:
     shared_ptr<Ty>
         shared_from_this();
     shared_ptr<const Ty> shared_from_this() const;
+    weak_ptr<T> weak_from_this() noexcept;
+    weak_ptr<T const> weak_from_this() const noexcept;
 protected:
     enable_shared_from_this();
     enable_shared_from_this(const enable_shared_from_this&);
@@ -36,7 +38,7 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 共用指標所控制的類型。
 
 ## <a name="remarks"></a>備註
@@ -47,13 +49,7 @@ protected:
 
 如需使用方式的範例，請參閱 [enable_shared_from_this::shared_from_this](#shared_from_this)。
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<memory>
-
-**命名空間：** std
-
-## <a name="shared_from_this"></a>  enable_shared_from_this::shared_from_this
+## <a name="shared_from_this"></a> shared_from_this
 
 產生的 `shared_ptr` 會與現有的 `shared_ptr` 擁有者共用執行個體擁有權。
 
@@ -100,7 +96,9 @@ int main()
 sp2->val == 3
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="weak_from_this"></a> weak_from_this
 
-[enable_shared_from_this::shared_from_this](#shared_from_this)<br/>
-[shared_ptr 類別](../standard-library/shared-ptr-class.md)<br/>
+```cpp
+weak_ptr<T> weak_from_this() noexcept;
+weak_ptr<T const> weak_from_this() const noexcept;
+```

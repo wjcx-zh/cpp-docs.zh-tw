@@ -11,46 +11,46 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], object styles
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
-ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 590f0dce6c50ee6d0ca30c4c68e21787563bd686
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241802"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508724"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>自訂工具列控制項的外觀
 
-類別`CToolBarCtrl`提供許多會影響外觀 （和，有時候，行為） 的工具列物件的樣式。 藉由設定修改工具列物件`dwCtrlStyle`的參數`CToolBarCtrl::Create`(或`CToolBar::CreateEx`) 成員函式，當您第一次建立工具列控制項時。
+類別`CToolBarCtrl`提供許多樣式, 會影響 toolbar 物件的外觀 (有時也是行為)。 當您第一次建立 toolbar `dwCtrlStyle`控制項時, `CToolBarCtrl::Create`藉由`CToolBar::CreateEx`設定 (或) 成員函式的參數來修改 toolbar 物件。
 
-「 3D 」 方面的工具列按鈕和按鈕文字的位置，則會影響下列樣式：
+下列樣式會影響工具列按鈕的「3D」層面和按鈕文字的位置:
 
-- **TBSTYLE_FLAT**建立一般的工具列，其中的工具列和按鈕是透明。 按鈕文字會出現在按鈕點陣圖之下。 使用此樣式時，會自動反白顯示游標下的按鈕。
+- **TBSTYLE_FLAT**建立一個平面工具列, 其中工具列和按鈕都是透明的。 按鈕文字會出現在 [按鈕點陣圖] 底下。 使用此樣式時, 游標下方的按鈕會自動反白顯示。
 
-- **TBSTYLE_TRANSPARENT**建立透明的工具列。 在透明的工具列中，工具列是透明，但不是按鈕。 按鈕文字會出現在按鈕點陣圖之下。
+- **TBSTYLE_TRANSPARENT**建立透明工具列。 在透明工具列中, 工具列是透明的, 但按鈕並不是。 按鈕文字會出現在 [按鈕點陣圖] 底下。
 
-- **TBSTYLE_LIST**位置按鈕右邊的按鈕點陣圖的文字。
+- **TBSTYLE_LIST**將按鈕文字放在按鈕點陣圖的右邊。
 
 > [!NOTE]
->  若要防止重新繪製的問題**TBSTYLE_FLAT**並**TBSTYLE_TRANSPARENT**之前工具列物件為可見，就應該設定樣式。
+>  為避免重新繪製問題, 應該先設定**TBSTYLE_FLAT**和**TBSTYLE_TRANSPARENT**樣式, 才能看到工具列物件。
 
-下列樣式會判斷工具列是否允許使用者調整個別的按鈕，在使用拖放功能的工具列物件中的位置，並卸除：
+下列樣式會決定工具列是否允許使用者使用拖放來重新調整工具列物件內的個別按鈕:
 
-- **TBSTYLE_ALTDRAG**可讓使用者在拖曳時按住 alt 鍵來變更工具列按鈕的位置。 如果未指定此樣式，使用者必須按住 SHIFT 同時拖曳的按鈕。
+- **TBSTYLE_ALTDRAG**可讓使用者在按住 ALT 時拖曳工具列按鈕的位置, 藉以變更其位置。 如果未指定此樣式, 則在拖曳按鈕時, 使用者必須按住 SHIFT 鍵。
 
     > [!NOTE]
-    >  **CCS_ADJUSTABLE**必須指定啟用拖曳工具列按鈕的樣式。
+    >  您必須指定**CCS_ADJUSTABLE**樣式, 才能拖曳工具列按鈕。
 
-- **TBSTYLE_REGISTERDROP**產生**TBN_GETOBJECT**通知訊息來要求卸除目標物件，當滑鼠指標移至工具列按鈕。
+- **TBSTYLE_REGISTERDROP**當滑鼠指標超過工具列按鈕時, 產生**TBN_GETOBJECT**通知訊息來要求放置目標物件。
 
-其餘的樣式會影響工具列物件的視覺和非視覺化層面：
+其餘的樣式會影響工具列物件的視覺和非視覺化層面:
 
-- **TBSTYLE_WRAPABLE**會建立一個可以有多行按鈕的工具列。 工具列按鈕可以 「 包裝 」 至下一行太窄無法包含在同一行上的所有按鈕的工具列時。 文繞圖就會發生在區隔和行會界限上。
+- **TBSTYLE_WRAPABLE**建立可具有多行按鈕的工具列。 當工具列變得太窄而無法在同一行包含所有按鈕時, 工具列按鈕可以「換行」到下一行。 換行會發生在分隔和 nongroup 界限上。
 
-- **TBSTYLE_CUSTOMERASE**產生**NM_CUSTOMDRAW**通知訊息處理時**WM_ERASEBKGND**訊息。
+- **TBSTYLE_CUSTOMERASE**會在處理**WM_ERASEBKGND**訊息時產生**NM_CUSTOMDRAW**通知訊息。
 
-- **TBSTYLE_TOOLTIPS**建立應用程式可以使用工具列中顯示按鈕的描述性文字工具提示控制項。
+- **TBSTYLE_TOOLTIPS**建立工具提示控制項, 應用程式可以使用它來顯示工具列中按鈕的描述性文字。
 
-Toolbar 樣式和延伸的樣式的完整清單，請參閱 <<c0> [ 工具列控制項和按鈕樣式](/windows/desktop/Controls/toolbar-control-and-button-styles)並[工具列延伸樣式](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK 中。
+如需工具列樣式和擴充樣式的完整清單, 請參閱[工具列控制項和按鈕樣式](/windows/win32/Controls/toolbar-control-and-button-styles)和[工具列擴充樣式](/windows/win32/Controls/toolbar-extended-styles)(在 Windows SDK 中)。
 
 ## <a name="see-also"></a>另請參閱
 

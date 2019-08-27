@@ -57,15 +57,15 @@ Windows 應用程式專案中可能包含許多預先定義的快速鍵。 其�
 |VK_OEM_1|(Windows)用於美國標準鍵盤 **;:** 金鑰|
 |VK_OEM_102|(Windows)角括號索引鍵或 RT 102-key 鍵盤上的反斜線按鍵|
 |VK_OEM_2|(Windows)用於美國標準鍵盤 **/？** key|
-|VK_OEM_3|(Windows)用於美國標準鍵盤**`~** 金鑰|
+|VK_OEM_3|(Windows)用於美國標準鍵盤 **`~** 金鑰|
 |VK_OEM_4|(Windows)用於美國標準鍵盤 **[{** 金鑰|
-|VK_OEM_5|(Windows)用於美國標準鍵盤**\\ &#124;** 金鑰|
+|VK_OEM_5|(Windows)用於美國標準鍵盤 **\\ &#124;** 金鑰|
 |VK_OEM_6|(Windows)用於美國標準鍵盤 **]}** 金鑰|
 |VK_OEM_7|(Windows)用於美國標準鍵盤 ' 單一-單引號/雙引號 」 按鍵|
 |VK_OEM_COMMA|(Windows)任何國家/地區，如 **，** 金鑰|
-|VK_OEM_MINUS|(Windows)任何國家/地區，如**-** 金鑰|
+|VK_OEM_MINUS|(Windows)任何國家/地區，如 **-** 金鑰|
 |VK_OEM_PERIOD|(Windows)用於任何國家/地區， **。** key|
-|VK_OEM_PLUS|(Windows)任何國家/地區，如**+** 金鑰|
+|VK_OEM_PLUS|(Windows)任何國家/地區，如 **+** 金鑰|
 |VK_PACKET|(Windows)用來傳遞 Unicode 字元，如同它們是按鍵輸入。|
 |VK_RCONTROL|**右 Ctrl**金鑰|
 |VK_RMENU|**右 Menu**金鑰|

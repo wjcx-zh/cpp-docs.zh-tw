@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 27f4f14c9e93091728e256c890dcffee26a43de4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504776"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502992"
 ---
 # <a name="cpalette-class"></a>CPalette 類別
 
@@ -47,37 +47,37 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CPalette::CPalette](#cpalette)|建構`CPalette`物件沒有附加的 Windows 調色盤。 您必須初始化`CPalette`物件與其中一個成員函式初始化才能使用。|
+|[CPalette:: CPalette](#cpalette)|不使用`CPalette`附加的 Windows 調色板來建立物件。 您必須先使用`CPalette`其中一個初始化成員函式來初始化物件, 才能使用它。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CPalette::AnimatePalette](#animatepalette)|取代項目中所識別的邏輯調色盤`CPalette`物件。 應用程式並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。|
-|[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立 半色調調色盤的 裝置內容，並將它附加至`CPalette`物件。|
-|[CPalette::CreatePalette](#createpalette)|建立 Windows 的色板，並將它附加至`CPalette`物件。|
-|[CPalette::FromHandle](#fromhandle)|將指標傳回至`CPalette`物件控制代碼提供給 Windows 調色盤物件時。|
-|[CPalette::GetEntryCount](#getentrycount)|擷取邏輯調色盤中的調色盤項目數目。|
-|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|在最接近的色彩值的邏輯色板中傳回的項目索引。|
-|[CPalette::GetPaletteEntries](#getpaletteentries)|擷取一組邏輯調色盤中的調色盤項目。|
-|[CPalette::ResizePalette](#resizepalette)|變更所指定的邏輯色板的大小`CPalette`物件，以指定的項目數目。|
-|[CPalette::SetPaletteEntries](#setpaletteentries)|設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。|
+|[CPalette::AnimatePalette](#animatepalette)|取代`CPalette`物件所識別之邏輯調色板中的專案。 應用程式不需要更新其工作區, 因為 Windows 會立即將新專案對應到系統元件。|
+|[CPalette::CreateHalftonePalette](#createhalftonepalette)|建立裝置內容的半色調色板, 並將其附加至`CPalette`物件。|
+|[CPalette::CreatePalette](#createpalette)|建立 Windows 調色板, 並將其附加至`CPalette`物件。|
+|[CPalette::FromHandle](#fromhandle)|當指定 Windows 調色板物件`CPalette`的控制碼時, 傳回物件的指標。|
+|[CPalette::GetEntryCount](#getentrycount)|抓取邏輯調色板中的調色板專案數目。|
+|[CPalette::GetNearestPaletteIndex](#getnearestpaletteindex)|傳回邏輯調色板中, 最接近色彩值的專案索引。|
+|[CPalette::GetPaletteEntries](#getpaletteentries)|抓取邏輯調色板中的一系列調色板專案。|
+|[CPalette::ResizePalette](#resizepalette)|將`CPalette`物件所指定的邏輯調色板大小變更為指定的專案數。|
+|[CPalette::SetPaletteEntries](#setpaletteentries)|設定邏輯調色板中某個專案範圍內的 RGB 色彩值和旗標。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CPalette::operator HPALETTE](#operator_hpalette)|傳回 HPALETTE 附加至`CPalette`。|
+|[CPalette:: operator HPALETTE](#operator_hpalette)|傳回附加至的`CPalette`HPALETTE。|
 
 ## <a name="remarks"></a>備註
 
-調色盤提供色彩輸出裝置 （例如顯示裝置） 和應用程式之間的介面。 介面可讓應用程式以充分利用輸出裝置的色彩功能而不會嚴重妨礙其他應用程式所顯示的色彩。 Windows 會使用應用程式的邏輯調色盤 （所需的色彩的清單） 和系統調色盤 （會定義可用的色彩），以判斷所使用的色彩。
+[調色板] 提供應用程式與色彩輸出裝置 (例如顯示裝置) 之間的介面。 介面可讓應用程式充分利用輸出裝置的色彩功能, 而不會嚴重干擾其他應用程式所顯示的色彩。 Windows 會使用應用程式的邏輯調色板 (所需色彩的清單) 和系統調色板 (定義可用的色彩) 來決定所使用的色彩。
 
-A`CPalette`物件提供成員函式物件所操作的調色盤參考。 建構`CPalette`物件，並使用其成員函式，來建立實際的調色盤，圖形裝置介面 (GDI) 物件，並操作其項目和其他屬性。
+`CPalette`物件提供成員函式, 用於操作物件所參考的調色板。 `CPalette`建立物件, 並使用其成員函式來建立實際的色板、圖形裝置介面 (GDI) 物件, 以及操作其專案和其他屬性。
 
-如需有關使用`CPalette`，請參閱 <<c2> [ 圖形物件](../../mfc/graphic-objects.md)。
+如需使用`CPalette`的詳細資訊, 請參閱[繪圖物件](../../mfc/graphic-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -91,9 +91,9 @@ A`CPalette`物件提供成員函式物件所操作的調色盤參考。 建構`C
 
 **標題:** afxwin.h
 
-##  <a name="animatepalette"></a>  CPalette::AnimatePalette
+##  <a name="animatepalette"></a>CPalette:: AnimatePalette
 
-取代附加至邏輯調色盤中的項目`CPalette`物件。
+取代附加至`CPalette`物件之邏輯調色板中的專案。
 
 ```
 void AnimatePalette(
@@ -105,21 +105,21 @@ void AnimatePalette(
 ### <a name="parameters"></a>參數
 
 *nStartIndex*<br/>
-指定要建立動畫的調色盤中的第一個項目。
+指定要製作動畫之調色板中的第一個專案。
 
 *nNumEntries*<br/>
-要建立動畫的調色盤中指定的項目數。
+指定要製作動畫之調色板中的專案數。
 
 *lpPaletteColors*<br/>
-指向陣列的第一個成員[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))結構，以取代所識別的調色盤項目*nStartIndex*並*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))結構陣列的第一個成員, 以取代*nStartIndex*和*nNumEntries*所識別的調色板專案。
 
 ### <a name="remarks"></a>備註
 
-當應用程式呼叫`AnimatePalette`，它並沒有要更新其工作區中，因為 Windows 立即對應到系統調色盤的新項目。
+當應用程式呼叫`AnimatePalette`時, 不需要更新其工作區, 因為 Windows 會立即將新專案對應到系統元件。
 
-`AnimatePalette`函式只會變更 PC_RESERVED 旗標設定在對應的項目`palPaletteEntry`隸屬[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構附加至`CPalette`物件。 LOGPALETTE Windows SDK 中針對此結構的詳細資訊，請參閱。
+此`AnimatePalette`函式只會在附加至`CPalette`物件的[LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette)結構之對應`palPaletteEntry`成員中, 變更具有 PC_RESERVED 旗標的專案。 如需此結構的詳細資訊, 請參閱 Windows SDK 中的 LOGPALETTE。
 
-##  <a name="cpalette"></a>  CPalette::CPalette
+##  <a name="cpalette"></a>CPalette:: CPalette
 
 建構 `CPalette` 物件。
 
@@ -129,11 +129,11 @@ CPalette();
 
 ### <a name="remarks"></a>備註
 
-物件會有任何附加的調色盤，直到您呼叫`CreatePalette`將其中一個。
+物件沒有附加的調色板, 直到您呼叫`CreatePalette`附加一個。
 
-##  <a name="createhalftonepalette"></a>  CPalette::CreateHalftonePalette
+##  <a name="createhalftonepalette"></a>CPalette:: CreateHalftonePalette
 
-建立裝置內容半色調調色盤。
+建立裝置內容的半色調調色板。
 
 ```
 BOOL CreateHalftonePalette(CDC* pDC);
@@ -150,13 +150,13 @@ BOOL CreateHalftonePalette(CDC* pDC);
 
 ### <a name="remarks"></a>備註
 
-當裝置內容的縮放模式設為 半色調，應用程式應該建立半色調調色盤。 傳回邏輯半色調調色盤[CreateHalftonePalette](/windows/desktop/api/wingdi/nf-wingdi-createhalftonepalette)成員函式應該再選取和裝置內容，然後才到實現[CDC::StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[Stretchdibits 做](/windows/desktop/api/wingdi/nf-wingdi-stretchdibits)呼叫函式。
+當裝置內容的 [延展] 模式設定為 [半色調] 時, 應用程式應該建立半色調色板。 接著, 您應該選取[CreateHalftonePalette](/windows/win32/api/wingdi/nf-wingdi-createhalftonepalette)成員函式所傳回的邏輯半色調調色板, 並在呼叫[CDC:: StretchBlt](../../mfc/reference/cdc-class.md#stretchblt)或[StretchDIBits](/windows/win32/api/wingdi/nf-wingdi-stretchdibits)函式之前, 將其實現到裝置內容中。
 
-請參閱 Windows SDK，如需詳細資訊，關於`CreateHalftonePalette`和`StretchDIBits`。
+如需`CreateHalftonePalette`和的詳細資訊, `StretchDIBits`請參閱 Windows SDK。
 
-##  <a name="createpalette"></a>  CPalette::CreatePalette
+##  <a name="createpalette"></a>CPalette:: CreatePalette
 
-初始化`CPalette`藉由建立 Windows 邏輯色板，並附加到物件`CPalette`物件。
+建立 Windows 邏輯色調色板, 並將其附加`CPalette`至物件, 以初始化物件。`CPalette`
 
 ```
 BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
@@ -165,7 +165,7 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 ### <a name="parameters"></a>參數
 
 *lpLogPalette*<br/>
-指向[LOGPALETTE](/windows/desktop/api/wingdi/ns-wingdi-taglogpalette)結構，其中包含邏輯調色盤色彩的相關資訊。
+指向[LOGPALETTE](/windows/win32/api/wingdi/ns-wingdi-logpalette)結構, 其中包含邏輯調色板中色彩的相關資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -173,11 +173,11 @@ BOOL CreatePalette(LPLOGPALETTE lpLogPalette);
 
 ### <a name="remarks"></a>備註
 
-請參閱 Windows SDK，如需詳細資訊，關於`LOGPALETTE`結構。
+如需`LOGPALETTE`結構的詳細資訊, 請參閱 Windows SDK。
 
-##  <a name="fromhandle"></a>  CPalette::FromHandle
+##  <a name="fromhandle"></a>CPalette:: FromHandle
 
-將指標傳回至`CPalette`物件控制代碼提供給 Windows 調色盤物件時。
+當指定 Windows 調色板物件`CPalette`的控制碼時, 傳回物件的指標。
 
 ```
 static CPalette* PASCAL FromHandle(HPALETTE hPalette);
@@ -186,19 +186,19 @@ static CPalette* PASCAL FromHandle(HPALETTE hPalette);
 ### <a name="parameters"></a>參數
 
 *hPalette*<br/>
-Windows GDI 調色盤控制代碼。
+Windows GDI 調色板的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-指標`CPalette`如果成功，否則為 NULL 的物件。
+如果成功, 則`CPalette`為物件的指標; 否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-如果`CPalette`物件尚未附加至 Windows 調色盤，暫存`CPalette`建立物件並將其連結。 此暫存`CPalette`物件是否有效，直到下一次應用程式在其事件迴圈中有閒置的時間，在那所有暫存的圖形物件，會刪除只。 換句話說，暫存物件只在一個視窗訊息的處理期間有效。
+如果物件尚未附加至 Windows 元件, 則會建立並附加暫存`CPalette`物件。 `CPalette` 這個暫存`CPalette`物件只有在下一次應用程式的事件迴圈中有閒置時間時才有效, 此時所有的暫存繪圖物件都會被刪除。 換句話說, 暫存物件只在處理一個視窗訊息期間有效。
 
-##  <a name="getentrycount"></a>  CPalette::GetEntryCount
+##  <a name="getentrycount"></a>CPalette:: GetEntryCount
 
-呼叫此成員函式，來擷取指定的邏輯調色盤中的項目數。
+呼叫這個成員函式可抓取指定之邏輯調色板中的專案數。
 
 ```
 int GetEntryCount();
@@ -206,11 +206,11 @@ int GetEntryCount();
 
 ### <a name="return-value"></a>傳回值
 
-在邏輯調色盤中的項目數。
+邏輯調色板中的專案數。
 
-##  <a name="getnearestpaletteindex"></a>  CPalette::GetNearestPaletteIndex
+##  <a name="getnearestpaletteindex"></a>CPalette:: GetNearestPaletteIndex
 
-在最接近指定的色彩值的邏輯色板中傳回的項目索引。
+傳回邏輯調色板中, 最符合指定之色彩值的專案索引。
 
 ```
 UINT GetNearestPaletteIndex(COLORREF crColor) const;
@@ -223,11 +223,11 @@ UINT GetNearestPaletteIndex(COLORREF crColor) const;
 
 ### <a name="return-value"></a>傳回值
 
-邏輯調色盤中的項目索引。 項目會包含最幾乎符合指定的色彩的色彩。
+邏輯調色板中專案的索引。 專案包含幾乎符合指定之色彩的色彩。
 
-##  <a name="getpaletteentries"></a>  CPalette::GetPaletteEntries
+##  <a name="getpaletteentries"></a>CPalette:: GetPaletteEntries
 
-擷取一組邏輯調色盤中的調色盤項目。
+抓取邏輯調色板中的一系列調色板專案。
 
 ```
 UINT GetPaletteEntries(
@@ -239,21 +239,21 @@ UINT GetPaletteEntries(
 ### <a name="parameters"></a>參數
 
 *nStartIndex*<br/>
-指定要擷取邏輯調色盤中的第一個項目。
+指定要抓取之邏輯調色板中的第一個專案。
 
 *nNumEntries*<br/>
-要擷取邏輯調色盤中指定的項目數。
+指定要抓取之邏輯調色板中的專案數。
 
 *lpPaletteColors*<br/>
-指向陣列[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構的陣列, 以接收調色板專案。 陣列至少必須包含*nNumEntries*所指定的多個資料結構。
 
 ### <a name="return-value"></a>傳回值
 
-擷取邏輯色板; 中的項目數目0，表示失敗的函式。
+從邏輯調色板抓取的專案數;如果函數失敗, 則為0。
 
-##  <a name="operator_hpalette"></a>  CPalette::operator HPALETTE
+##  <a name="operator_hpalette"></a>CPalette:: operator HPALETTE
 
-使用這個運算子來取得附加的 Windows GDI 控制代碼的`CPalette`物件。
+使用這個運算子取得`CPalette`物件附加的 Windows GDI 控制碼。
 
 ```
 operator HPALETTE() const;
@@ -261,17 +261,17 @@ operator HPALETTE() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，Windows GDI 物件的控制代碼所表示`CPalette`物件; 否則為 NULL。
+如果成功, 則為`CPalette`物件所表示之 Windows GDI 物件的控制碼, 否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-這位操作員便轉型運算子，可支援直接使用 HPALETTE 物件。
+這個運算子是一個轉型運算子, 可支援直接使用 HPALETTE 物件。
 
-如需有關如何使用 圖形物件的詳細資訊，請參閱[圖形物件](/windows/desktop/gdi/graphic-objects)Windows SDK 中。
+如需使用繪圖物件的詳細資訊, 請參閱 Windows SDK 中的[繪圖物件](/windows/win32/gdi/graphic-objects)一文。
 
-##  <a name="resizepalette"></a>  CPalette::ResizePalette
+##  <a name="resizepalette"></a>CPalette:: ResizePalette
 
-變更附加至邏輯色板的大小`CPalette`物件所指定項目數*nNumEntries*。
+將附加至`CPalette`物件的邏輯調色板大小變更為*nNumEntries*所指定的專案數。
 
 ```
 BOOL ResizePalette(UINT nNumEntries);
@@ -280,21 +280,21 @@ BOOL ResizePalette(UINT nNumEntries);
 ### <a name="parameters"></a>參數
 
 *nNumEntries*<br/>
-已調整大小之後，請在調色盤中指定的項目數。
+指定在調色板中調整大小後的專案數。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果已成功調整調色盤;否則為 0。
+如果調色板已成功調整大小, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果應用程式呼叫`ResizePalette`以減少大小的調色盤，剩餘的已調整大小的調色盤中的項目不會變更。 如果應用程式呼叫`ResizePalette`放大調色盤，其他的調色盤項目設為黑色 （紅色、 綠色和藍色值均為 0），以及所有其他項目的旗標會設為 0。
+如果應用程式呼叫`ResizePalette`來減少調色板的大小, 則已調整大小之調色板中剩餘的專案會保持不變。 如果應用程式呼叫`ResizePalette`來放大調色板, 其他的調色板專案會設定為黑色 (紅色、綠色和藍色值全都是 0), 而所有其他專案的旗標會設定為0。
 
-如需有關 Windows API `ResizePalette`，請參閱 < [ResizePalette](/windows/desktop/api/wingdi/nf-wingdi-resizepalette) Windows SDK 中。
+如需 Windows API `ResizePalette`的詳細資訊, 請參閱 Windows SDK 中的[ResizePalette](/windows/win32/api/wingdi/nf-wingdi-resizepalette) 。
 
-##  <a name="setpaletteentries"></a>  CPalette::SetPaletteEntries
+##  <a name="setpaletteentries"></a>CPalette:: SetPaletteEntries
 
-設定邏輯調色盤中的項目範圍中的 RGB 色彩值和旗標。
+設定邏輯調色板中某個專案範圍內的 RGB 色彩值和旗標。
 
 ```
 UINT SetPaletteEntries(
@@ -306,23 +306,23 @@ UINT SetPaletteEntries(
 ### <a name="parameters"></a>參數
 
 *nStartIndex*<br/>
-指定要設定的邏輯調色盤中的第一個項目。
+指定要設定之邏輯調色板中的第一個專案。
 
 *nNumEntries*<br/>
-若要設定邏輯調色盤中指定的項目數。
+指定要設定之邏輯調色板中的專案數。
 
 *lpPaletteColors*<br/>
-指向陣列[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構，以接收調色盤項目。 陣列必須包含數至少與所指定的資料結構*nNumEntries*。
+指向[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\))資料結構的陣列, 以接收調色板專案。 陣列至少必須包含*nNumEntries*所指定的多個資料結構。
 
 ### <a name="return-value"></a>傳回值
 
-設定邏輯調色盤; 中的項目數目0，表示失敗的函式。
+邏輯調色板中設定的專案數;如果函數失敗, 則為0。
 
 ### <a name="remarks"></a>備註
 
-當應用程式呼叫時，如果要邏輯的調色盤選取放入裝置內容`SetPaletteEntries`，變更將不會生效，直到應用程式會呼叫[CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)。
+如果在應用程式呼叫`SetPaletteEntries`時, 將邏輯調色板選取至裝置內容, 則在應用程式呼叫[CDC:: RealizePalette](../../mfc/reference/cdc-class.md#realizepalette)之前, 變更將不會生效。
 
-如需詳細資訊，請參閱 < [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) Windows SDK 中。
+如需詳細資訊, 請參閱 Windows SDK 中的[PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) 。
 
 ## <a name="see-also"></a>另請參閱
 

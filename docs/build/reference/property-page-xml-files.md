@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: f23c252604c5b69423b808b3b9f072889e38c816
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837439"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630747"
 ---
 # <a name="property-page-xml-rule-files"></a>屬性頁 XML 規則檔
 
@@ -89,7 +89,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    b. **PageTemplate：** UI 使用此屬性值從 UI 範本集合進行選擇。 "tool" 範本會以標準方格格式呈現屬性。 此屬性的其他內建值還包括 "debugger" 和 "generic"。 請分別參閱 [偵錯] 節點和 [一般] 節點，以了解透過指定這些值所產生的 UI 格式。 "debugger" 頁面範本的 UI 使用下拉式方塊在不同偵錯工具的屬性之間進行切換，而 "generic" 範本將不同的屬性分類全部顯示在一個頁面上，有別於在規則節點下有多個分類子節點。 此屬性只是對 UI 的建議，XML 檔案設計成獨立於 UI。 不同 UI 可能會基於不同目的使用此屬性。
 
-   c.  **SwitchPrefix：** 這是參數的命令列中所使用的前置詞。 值 "/" 會產生看起來像 /ZI、/nologo、/W3 等的參數。
+   c. **SwitchPrefix：** 這是參數的命令列中所使用的前置詞。 值 "/" 會產生看起來像 /ZI、/nologo、/W3 等的參數。
 
    d. **Order：** 這是對潛在 UI 用戶端提出之有關此 Rule 相較於系統中所有其他 Rule 之相對位置的建議。
 
@@ -119,7 +119,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
       </ItemDefinitionGroup>
       ```
 
-      如果已在屬性頁中針對特定檔案 (例如 stdafx.cpp) 設定此值，則屬性值會寫入專案檔中的 stdafx.cpp 項目下，如下所示。 注意如何將組態條件直接附加至中繼資料本身。
+      如果在特定檔案的屬性頁中設定此值 (例如 stdafx.h), 則屬性值會寫入至專案檔中的*stdafx.h*專案底下, 如下所示。 注意如何將組態條件直接附加至中繼資料本身。
 
       ```xml
       <ItemGroup>
@@ -168,7 +168,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    b. **分類：** 這會宣告此屬性所屬分類。 請嘗試在 UI 中的 [輸出檔案] 分類下找到此屬性。
 
-   c.  **Switch：** 當 Rule 代表一項工具時 (例如本例中的編譯器工具)，Rule 的大部分屬性會在建置時作為參數傳遞至工具可執行檔。 此屬性的值會指出要使用的參數常值。 上述屬性指定其參數應該是 **Fo**。 此屬性 (Property) 會與父 Rule 的 **SwitchPrefix** 屬性 (Attribute) 結合，然後傳遞至可執行檔作為 **/Fo"Debug\"** (顯示在屬性頁 UI 的 C/C++ 命令列中)。
+   c. **Switch：** 當 Rule 代表一項工具時 (例如本例中的編譯器工具)，Rule 的大部分屬性會在建置時作為參數傳遞至工具可執行檔。 此屬性的值會指出要使用的參數常值。 上述屬性指定其參數應該是 **Fo**。 此屬性 (Property) 會與父 Rule 的 **SwitchPrefix** 屬性 (Attribute) 結合，然後傳遞至可執行檔作為 **/Fo"Debug\"** (顯示在屬性頁 UI 的 C/C++ 命令列中)。
 
    其他屬性 (Property) 的屬性 (Attribute) 包括：
 

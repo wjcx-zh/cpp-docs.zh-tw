@@ -27,12 +27,12 @@ helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-ms.openlocfilehash: 541f468071e315b205abb8f7b9c865f045c510fe
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: ea5f53fd77545713dfcc6a969f1c172d89f8e460
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220517"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459028"
 ---
 # <a name="chartraits-struct"></a>char_traits 結構
 
@@ -47,12 +47,12 @@ struct char_traits;
 
 ### <a name="parameters"></a>參數
 
-*CharType*<br/>
+*CharType*\
 項目資料類型。
 
 ## <a name="remarks"></a>備註
 
-此範本結構描述類型的不同字元特性`CharType`。 此範本類別[basic_string](../standard-library/basic-string-class.md)以及數個 iostream 範本類別，包括[basic_ios](../standard-library/basic-ios-class.md)，使用此資訊來管理項目型別的`CharType`。 這類項目類型不得要求明確建構或解構。 它必須將預設建構函式、複製建構函式和指派運算子提供給預期的語意。 位元複製必須具有和指派相同的效果。 結構 char_traits 的成員函式都無法擲回例外狀況。
+範本結構描述類型`CharType`的各種字元特性。 樣板類別[basic_string](../standard-library/basic-string-class.md)以及數個 iostream 樣板類別, 包括[basic_ios](../standard-library/basic-ios-class.md), 使用此資訊來操作類型`CharType`的元素。 這類項目類型不得要求明確建構或解構。 它必須將預設建構函式、複製建構函式和指派運算子提供給預期的語意。 位元複製必須具有和指派相同的效果。 結構 char_traits 的成員函式都無法擲回例外狀況。
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -86,7 +86,7 @@ struct char_traits;
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<string>
+**標頭：** \<string>
 
 **命名空間：** std
 
@@ -105,20 +105,20 @@ static char_type *assign(char_type* strTo,
 
 ### <a name="parameters"></a>參數
 
-**_** *CharFrom*指派其值的字元。
+**_** *CharFrom*要指派其值的字元。
 
-*_CharTo*<br/>
+*_CharTo*\
 要指派字元值的元素。
 
-*strTo*<br/>
+*strTo*\
 要將字元值指派給其初始元素的字串或字元陣列。
 
-*_Num*<br/>
+*_Num*\
 要指派值之元素的數目。
 
 ### <a name="return-value"></a>傳回值
 
-第二個成員函式會傳回字串指標其第一個 *_Num*項目已指派的值 *_CharFrom*。
+第二個成員函式會傳回字串的指標, 其第一個 *_Num*元素已被指派 *_CharFrom*的值。
 
 ### <a name="example"></a>範例
 
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>參數
 
-*str1*<br/>
+*str1*\
 要互相比較之兩個字串的第一個字串。
 
-*str2*<br/>
+*str2*\
 要互相比較之兩個字串的第二個字串。
 
-*_Num*<br/>
+*_Num*\
 要比較之字串中的元素數目。
 
 ### <a name="return-value"></a>傳回值
@@ -255,13 +255,13 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*_To*<br/>
+*_To*\
 要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*_From*<br/>
+*_From*\
 要複製之來源字串或字元陣列開頭的元素。
 
-*_Num*<br/>
+*_Num*\
 要複製之元素的數目。
 
 ### <a name="return-value"></a>傳回值
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*<br/>
+*dest*\
 要接收已複製字元序列的目標字串或字元陣列。
 
-*dest_size*<br/>
-大小*dest*。 如果`char_type`已**char**，則此大小是以位元組為單位。 如果`char_type`已**wchar_t**，則此大小是以字組。
+*dest_size*\
+*目標*的大小。 如果`char_type`是**char**, 則此大小是以位元組為單位。 如果`char_type`是**wchar_t**, 則此大小是以單字為依據。
 
-*_From*<br/>
+*_From*\
 要複製的來源字串或字元陣列。
 
-*count*<br/>
+*計數*\
 要複製之元素的數目。
 
 ### <a name="return-value"></a>傳回值
@@ -382,9 +382,9 @@ EOF 字元。
 
 ### <a name="remarks"></a>備註
 
-值，表示檔案結尾 （例如 EOF 或 WEOF）。
+值, 表示檔案結尾 (例如 EOF 或 WEOF)。
 
-C++ 標準指出此值不得對應至有效的 `char_type` 值。 MicrosoftC++編譯器會強制執行這個條件約束的型別**char**，但不適用於型別**wchar_t**。 以下範例即為示範。
+C++ 標準指出此值不得對應至有效的 `char_type` 值。 Microsoft C++編譯器會針對類型**char**強制執行這個條件約束, 但對類型**wchar_t**則不執行。 以下範例即為示範。
 
 ### <a name="example"></a>範例
 
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*<br/>
+*_Ch1*\
 要測試是否相等之兩個字元的第一個字元。
 
-*_Ch2*<br/>
+*_Ch2*\
 要測試是否相等之兩個字元的第二個字元。
 
 ### <a name="return-value"></a>傳回值
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*<br/>
-兩個字元的第一個要測試是否相等為`int_type`s。
+*_Ch1*\
+要測試是否相等`int_type`的兩個字元中的第一個。
 
-*_Ch2*<br/>
+*_Ch2*\
 要測試是否相等之兩個字元的第二個字元 (以 `int_type` 表示)。
 
 ### <a name="return-value"></a>傳回值
@@ -576,13 +576,13 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*str*\
 要在字串中搜尋的第一個字元。
 
-*_Num*<br/>
+*_Num*\
 要在範圍中搜尋的位置數值 (從第一個字元算起)。
 
-*_Ch*<br/>
+*_Ch*\
 要在範圍中搜尋的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -641,7 +641,7 @@ typedef long int_type;
 
 ### <a name="remarks"></a>備註
 
-您必須能夠轉換類型的值類型`CharType`要`int_type`然後回到`CharType`而不需要改變原始值。
+必須能夠在`CharType` `CharType`不改變原始值的情況下, 將`int_type`類型的值轉型為, 然後再轉換回。
 
 ### <a name="example"></a>範例
 
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>參數
 
-*str*<br/>
+*str*\
 要測量其長度的 C 字串。
 
 ### <a name="return-value"></a>傳回值
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>參數
 
-*_Ch1*<br/>
+*_Ch1*\
 要測試何者較小之兩個字元的第一個字元。
 
-*_Ch2*<br/>
+*_Ch2*\
 要測試何者較小之兩個字元的第二個字元。
 
 ### <a name="return-value"></a>傳回值
@@ -763,18 +763,18 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>參數
 
-*_To*<br/>
+*_To*\
 要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*_From*<br/>
+*_From*\
 要複製之來源字串或字元陣列開頭的元素。
 
-*_Num*<br/>
+*_Num*\
 要從來源字串中複製的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
-第一個項目*到 （_t)* 複製到要接收已複製的字元序列之目標字串或字元陣列。
+第一個元素 *_To*複製到目標為的字串或字元陣列, 以接收復制的字元序列。
 
 ### <a name="remarks"></a>備註
 
@@ -840,21 +840,21 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>參數
 
-*dest*<br/>
+*dest*\
 要接收已複製字元序列之目標字串或字元陣列開頭的元素。
 
-*dest_size*<br/>
-大小*dest*。 如果`char_type`已**char**，則這是以位元組為單位。 如果`char_type`已**wchar_t**，則以字組。
+*dest_size*\
+*目標*的大小。 如果`char_type`是**char**, 則這是以位元組為單位。 如果`char_type`是**wchar_t**, 則這會是文字。
 
-*_From*<br/>
+*_From*\
 要複製之來源字串或字元陣列開頭的元素。
 
-*count*<br/>
+*計數*\
 要從來源字串中複製的元素數目。
 
 ### <a name="return-value"></a>傳回值
 
-第一個項目*dest*複製到要接收已複製的字元序列之目標字串或字元陣列。
+第一個元素*目的地*, 複製到目標為的字串或字元陣列, 以接收復制的字元序列。
 
 ### <a name="remarks"></a>備註
 
@@ -916,12 +916,12 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 要測試其是否為 EOF 字元的字元 (以 `int_type` 表示)。
 
 ### <a name="return-value"></a>傳回值
 
-`int_type`字元表示法，如果測試`int_type`的字元不是等於 EOF 字元。
+如果字元的`int_type`不等於 EOF 字元的, 則表示已測試的字元。`int_type`
 
 若字元的 `int_type` 值等於 EOF 的 `int_type` 值，即為 **false**。
 
@@ -1024,14 +1024,14 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 要以 `char_type` 表示的 `int_type` 字元。
 
 ### <a name="return-value"></a>傳回值
 
 對應至 `int_type` 的 `char_type` 字元。
 
-值為 *_Ch*無法表示，因此會產生不明的結果。
+無法表示的 *_Ch*值會產生未指定的結果。
 
 ### <a name="remarks"></a>備註
 
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>參數
 
-*_Ch*<br/>
+*_Ch*\
 要以 `int_type` 表示的 `char_type` 字元。
 
 ### <a name="return-value"></a>傳回值
@@ -1225,4 +1225,4 @@ The recovered char_type of ch2 is equal to the original ch2.
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

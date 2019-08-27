@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348454"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243824"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt; 運算子
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> 運算子 ！ =
 
 測試物件是否不相等。
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要測試是否不相等的物件之一。
 
-*right*<br/>
+*權限*\
 要測試是否不相等的物件之一。
 
-*Ty1*<br/>
+*Ty1*\
 左側共用指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側共用指標所控制的類型。
 
 ### <a name="return-value"></a>傳回值
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="op_eq_eq"></a> 運算子 = =
 
 測試物件是否相等。
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要測試是否相等的其中一個物件。
 
-*right*<br/>
+*權限*\
 要測試是否相等的其中一個物件。
 
-*Ty1*<br/>
+*Ty1*\
 左側共用指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側共用指標所控制的類型。
 
 ### <a name="return-value"></a>傳回值
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> 運算子&gt;=
 
 測試一個物件是否大於或等於第二個物件。
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較的其中一個物件。
 
-*right*<br/>
+*權限*\
 要比較的其中一個物件。
 
-*Ty1*<br/>
+*Ty1*\
 左側共用指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側共用指標所控制的類型。
 
 ### <a name="remarks"></a>備註
 
 這個範本運算子會傳回`left.get() >= right.get()`。
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> 運算子&lt;
 
 測試一個物件是否小於第二個物件。
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較的其中一個物件。
 
-*right*<br/>
+*權限*\
 要比較的其中一個物件。
 
-*Ty1*<br/>
+*Ty1*\
 左側指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側指標所控制的類型。
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> 運算子&lt;=
 
 測試一個物件是否小於或等於第二個物件。
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較的其中一個物件。
 
-*right*<br/>
+*權限*\
 要比較的其中一個物件。
 
-*Ty1*<br/>
+*Ty1*\
 左側共用指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側共用指標所控制的類型。
 
 ### <a name="remarks"></a>備註
 
 這個範本運算子會傳回 `left.get() <= right.get()`
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> 運算子&gt;
 
 測試一個物件是否大於第二個物件。
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>參數
 
-*left*<br/>
+*左邊*\
 要比較的其中一個物件。
 
-*right*<br/>
+*權限*\
 要比較的其中一個物件。
 
-*Ty1*<br/>
+*Ty1*\
 左側共用指標所控制的類型。
 
-*Ty2*<br/>
+*Ty2*\
 右側共用指標所控制的類型。
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> 運算子&lt;&lt;
 
 將共用指標寫入資料流中。
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>參數
 
-*Elem*<br/>
+*Elem*\
 資料流元素的類型。
 
-*Tr*<br/>
+*tr*\
 資料流元素特性的類型。
 
-*Ty*<br/>
+*Ty*\
 共用指標所控制的類型。
 
-*out*<br/>
+*out*\
 輸出資料流。
 
-*sp*<br/>
+*預存程序*\
 共用指標。
 
 ### <a name="remarks"></a>備註
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>另請參閱
-
-[\<memory>](../standard-library/memory.md)<br/>

@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 798e94aed3bbd98108866ce0a1810485bd68699b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246999"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497754"
 ---
 # <a name="catlmodule-class"></a>CAtlModule 類別
 
@@ -44,37 +44,37 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |名稱|描述|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|建構函式。|
-|[CAtlModule::~CAtlModule](#dtor)|解構函式。|
+|[CAtlModule:: ~ CAtlModule](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|覆寫這個方法，以將參數新增至 ATL 登錄元件 （登錄器） 取代對應。|
-|[CAtlModule::AddTermFunc](#addtermfunc)|加入新的函式，此模組結束時呼叫。|
-|[CAtlModule::GetGITPtr](#getgitptr)|傳回全域的介面指標。|
-|[CAtlModule::GetLockCount](#getlockcount)|傳回的鎖定計數。|
-|[CAtlModule::Lock](#lock)|鎖定計數遞增。|
-|[CAtlModule::Term](#term)|釋放所有的資料成員。|
+|[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|覆寫這個方法, 將參數加入至 ATL 登錄元件 (註冊機構) 取代對應。|
+|[CAtlModule::AddTermFunc](#addtermfunc)|新增要在模組終止時呼叫的新函數。|
+|[CAtlModule::GetGITPtr](#getgitptr)|傳回全域介面指標。|
+|[CAtlModule::GetLockCount](#getlockcount)|傳回鎖定計數。|
+|[CAtlModule::Lock](#lock)|遞增鎖定計數。|
+|[CAtlModule::Term](#term)|釋放所有資料成員。|
 |[CAtlModule::Unlock](#unlock)|減量鎖定計數。|
-|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|執行指令碼包含在指定的資源，以註冊或取消登錄的物件。|
-|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|這個方法會呼叫`UpdateRegistryFromResourceD`執行登錄更新。|
-|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|執行指令碼包含在指定的資源，以註冊或取消登錄的物件。 這個方法以靜態方式連結至 ATL 登錄元件。|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|執行包含在指定資源中的腳本, 以註冊或取消註冊物件。|
+|[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|這個方法是由所`UpdateRegistryFromResourceD`呼叫, 用來執行登錄更新。|
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|執行包含在指定資源中的腳本, 以註冊或取消註冊物件。 這個方法會以靜態方式連結至 ATL 登錄元件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
 |[CAtlModule::m_libid](#m_libid)|包含目前模組的 GUID。|
-|[CAtlModule::m_pGIT](#m_pgit)|全域介面資料表指標。|
+|[CAtlModule::m_pGIT](#m_pgit)|全域介面資料表的指標。|
 
 ## <a name="remarks"></a>備註
 
-此類別由[CAtlDllModuleT 類別](../../atl/reference/catldllmodulet-class.md)， [Catldllmodulet 類別](../../atl/reference/catlexemodulet-class.md)，並[CAtlServiceModuleT 類別](../../atl/reference/catlservicemodulet-class.md)為 DLL 的應用程式，EXE 應用程式，提供支援和Windows 服務，分別。
+這個類別是由[CAtlDllModuleT 類別](../../atl/reference/catldllmodulet-class.md)、 [CAtlExeModuleT 類別](../../atl/reference/catlexemodulet-class.md)和[CAtlServiceModuleT 類別](../../atl/reference/catlservicemodulet-class.md)使用, 分別提供 DLL 應用程式、EXE 應用程式和 Windows 服務的支援。
 
-如需有關在 ATL 中的模組的詳細資訊，請參閱[ATL 模組類別](../../atl/atl-module-classes.md)。
+如需 ATL 中模組的詳細資訊, 請參閱[Atl 模組類別](../../atl/atl-module-classes.md)。
 
-這個類別會取代過時[CComModule 類別](../../atl/reference/ccommodule-class.md)用在舊版的 ATL
+這個類別會取代舊版 ATL 中使用的過時[CComModule 類別](../../atl/reference/ccommodule-class.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -84,11 +84,11 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlbase.h
+**標頭:** atlbase.h。h
 
-##  <a name="addcommonrgsreplacements"></a>  CAtlModule::AddCommonRGSReplacements
+##  <a name="addcommonrgsreplacements"></a>CAtlModule::AddCommonRGSReplacements
 
-覆寫這個方法，以將參數新增至 ATL 登錄元件 （登錄器） 取代對應。
+覆寫這個方法, 將參數加入至 ATL 登錄元件 (註冊機構) 取代對應。
 
 ```
 virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw() = 0;
@@ -101,17 +101,17 @@ virtual HRESULT AddCommonRGSReplacements(IRegistrarBase* /* pRegistrar*/) throw(
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-可置換的參數允許註冊機構的用戶端，來指定執行階段資料。 若要這樣做，註冊機構會維護取代對應至其中進入您的指令碼可置換的參數相關聯的值。 在註冊機構會讓這些項目，在執行階段。
+可取代的參數允許註冊機構的用戶端指定執行時間資料。 為此, 註冊機構會維護一個取代對應, 在其中輸入與您的腳本中可取代參數相關聯的值。 註冊機構會在執行時間建立這些專案。
 
-請參閱主題[使用可置換的參數 （登錄器的前置處理器）](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)如需詳細資訊。
+如需詳細資訊, 請參閱[使用可取代的參數 (註冊機構的預處理器)](../../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)主題。
 
-##  <a name="addtermfunc"></a>  CAtlModule::AddTermFunc
+##  <a name="addtermfunc"></a>CAtlModule::AddTermFunc
 
-加入新的函式，此模組結束時呼叫。
+新增要在模組終止時呼叫的新函數。
 
 ```
 HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
@@ -120,16 +120,16 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 ### <a name="parameters"></a>參數
 
 *pFunc*<br/>
-若要新增函式指標。
+要加入之函式的指標。
 
 *dw*<br/>
-使用者定義的資料，傳遞至函式。
+使用者定義的資料, 傳遞至函數。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
-##  <a name="catlmodule"></a>  CAtlModule::CAtlModule
+##  <a name="catlmodule"></a>CAtlModule::CAtlModule
 
 建構函式。
 
@@ -139,9 +139,9 @@ CAtlModule() throw();
 
 ### <a name="remarks"></a>備註
 
-初始化資料成員，並起始模組的執行緒周圍的重要區段。
+初始化資料成員, 並起始模組執行緒周圍的重要區段。
 
-##  <a name="dtor"></a>  CAtlModule:: ~ CAtlModule
+##  <a name="dtor"></a>CAtlModule:: ~ CAtlModule
 
 解構函式。
 
@@ -151,11 +151,11 @@ CAtlModule() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有的資料成員。
+釋放所有資料成員。
 
-##  <a name="getgitptr"></a>  CAtlModule::GetGITPtr
+##  <a name="getgitptr"></a>CAtlModule::GetGITPtr
 
-擷取全域介面資料表的指標。
+抓取全域介面資料表的指標。
 
 ```
 virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
@@ -164,23 +164,23 @@ virtual HRESULT GetGITPtr(IGlobalInterfaceTable** ppGIT) throw();
 ### <a name="parameters"></a>參數
 
 *ppGIT*<br/>
-指標，此變數會接收全域介面資料表的指標。
+變數的指標, 將會接收全域介面資料表的指標。
 
 ### <a name="return-value"></a>傳回值
 
-傳回 S_OK，如果成功或在失敗的錯誤代碼。 如果，則會傳回 E_POINTER *ppGIT*等於 NULL。
+在成功時傳回 S_OK, 否則會傳回錯誤的錯誤碼。 如果*ppGIT*等於 Null, 就會傳回 E_POINTER。
 
 ### <a name="remarks"></a>備註
 
-如果 Global Interface Table 物件不存在，它會建立，而且它的位址儲存在成員變數[CAtlModule::m_pGIT](#m_pgit)。
+如果全域介面資料表物件不存在, 則會建立它, 而且其位址會儲存在成員變數[CAtlModule:: m_pGIT](#m_pgit)中。
 
-在偵錯組建中，判斷提示就會發生錯誤，如果*ppGIT*等於 NULL，或如果無法取得全域介面資料表指標。
+在 debug build 中, 如果*ppGIT*等於 Null, 或是無法取得全域介面資料表指標, 就會發生判斷提示錯誤。
 
-請參閱[IGlobalInterfaceTable](/windows/desktop/api/objidl/nn-objidl-iglobalinterfacetable)全域介面資料表上的資訊。
+如需全域介面資料表的詳細資訊, 請參閱[IGlobalInterfaceTable](/windows/win32/api/objidl/nn-objidl-iglobalinterfacetable) 。
 
-##  <a name="getlockcount"></a>  CAtlModule::GetLockCount
+##  <a name="getlockcount"></a>CAtlModule::GetLockCount
 
-傳回的鎖定計數。
+傳回鎖定計數。
 
 ```
 virtual LONG GetLockCount() throw();
@@ -188,11 +188,11 @@ virtual LONG GetLockCount() throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回的鎖定計數。 此值可能有助於診斷和偵錯。
+傳回鎖定計數。 這個值可能有助於診斷和偵錯工具。
 
-##  <a name="lock"></a>  CAtlModule::Lock
+##  <a name="lock"></a>CAtlModule:: Lock
 
-鎖定計數遞增。
+遞增鎖定計數。
 
 ```
 virtual LONG Lock() throw();
@@ -200,9 +200,9 @@ virtual LONG Lock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-鎖定計數遞增，並傳回更新的值。 此值可能有助於診斷和偵錯。
+遞增鎖定計數, 並傳回更新的值。 這個值可能有助於診斷和偵錯工具。
 
-##  <a name="m_libid"></a>  CAtlModule::m_libid
+##  <a name="m_libid"></a>CAtlModule::m_libid
 
 包含目前模組的 GUID。
 
@@ -210,17 +210,17 @@ virtual LONG Lock() throw();
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
+##  <a name="m_pgit"></a>CAtlModule::m_pGIT
 
-全域介面資料表指標。
+全域介面資料表的指標。
 
 ```
 IGlobalInterfaceTable* m_pGIT;
 ```
 
-##  <a name="term"></a>  CAtlModule::Term
+##  <a name="term"></a>CAtlModule:: Term
 
-釋放所有的資料成員。
+釋放所有資料成員。
 
 ```
 void Term() throw();
@@ -228,9 +228,9 @@ void Term() throw();
 
 ### <a name="remarks"></a>備註
 
-釋放所有的資料成員。 解構函式會呼叫這個方法。
+釋放所有資料成員。 這個方法是由「析構函式」呼叫。
 
-##  <a name="unlock"></a>  CAtlModule::Unlock
+##  <a name="unlock"></a>CAtlModule:: Unlock
 
 減量鎖定計數。
 
@@ -240,11 +240,11 @@ virtual LONG Unlock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-減量鎖定計數，並傳回更新的值。 此值可能有助於診斷和偵錯。
+遞減鎖定計數, 並傳回更新的值。 這個值可能有助於診斷和偵錯工具。
 
-##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD
+##  <a name="updateregistryfromresourced"></a>CAtlModule::UpdateRegistryFromResourceD
 
-執行指令碼包含在指定的資源，以註冊或取消登錄的物件。
+執行包含在指定資源中的腳本, 以註冊或取消註冊物件。
 
 ```
 HRESULT WINAPI UpdateRegistryFromResourceD(
@@ -267,26 +267,26 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 資源識別碼。
 
 *bRegister*<br/>
-如果物件應該註冊;，則為 TRUE。FALSE 否則。
+如果應該註冊物件, 則為 TRUE;否則為 FALSE。
 
 *pMapEntries*<br/>
-儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
+取代對應的指標, 儲存與腳本可取代參數相關聯的值。 ATL 會自動使用% MODULE%。 若要使用其他可取代的參數, 請參閱[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則, 請使用 Null 預設值。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-執行指令碼包含在所指定的資源*lpszRes 或 nResID*。 如果*bRegister*為 TRUE 時，這個方法會註冊在系統登錄中的物件; 否則為從登錄移除物件。
+執行包含在*lpszRes 或 nResID*所指定之資源中的腳本。 如果*bRegister*為 TRUE, 這個方法會在系統登錄中註冊物件;否則, 它會從登錄中移除物件。
 
-若要以靜態方式連結至 ATL 登錄元件 （登錄器），請參閱[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)。
+若要以靜態方式連結至 ATL 登錄元件 (註冊機構), 請參閱[CAtlModule:: UpdateRegistryFromResourceS](#updateregistryfromresources)。
 
-這個方法會呼叫[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)並[IRegistrar::ResourceUnregister](iregistrar-class.md#resourceunregister)。
+這個方法會呼叫[CAtlModule:: UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)和[IRegistrar:: ResourceUnregister](iregistrar-class.md#resourceunregister)。
 
-##  <a name="updateregistryfromresourcedhelper"></a>  CAtlModule::UpdateRegistryFromResourceDHelper
+##  <a name="updateregistryfromresourcedhelper"></a>CAtlModule::UpdateRegistryFromResourceDHelper
 
-這個方法會呼叫`UpdateRegistryFromResourceD`執行登錄更新。
+這個方法是由所`UpdateRegistryFromResourceD`呼叫, 用來執行登錄更新。
 
 ```
 inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
@@ -301,22 +301,22 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 資源名稱。
 
 *bRegister*<br/>
-表示是否應該註冊的物件。
+指出是否應該註冊物件。
 
 *pMapEntries*<br/>
-儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
+取代對應的指標, 儲存與腳本可取代參數相關聯的值。 ATL 會自動使用% MODULE%。 若要使用其他可取代的參數, 請參閱[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則, 請使用 Null 預設值。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-這個方法可實作[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)。
+這個方法會提供[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced)的執行。
 
-##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS
+##  <a name="updateregistryfromresources"></a>CAtlModule::UpdateRegistryFromResourceS
 
-執行指令碼包含在指定的資源，以註冊或取消登錄的物件。 這個方法以靜態方式連結至 ATL 登錄元件。
+執行包含在指定資源中的腳本, 以註冊或取消註冊物件。 這個方法會以靜態方式連結至 ATL 登錄元件。
 
 ```
 HRESULT WINAPI UpdateRegistryFromResourceS(
@@ -339,22 +339,22 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 資源名稱。
 
 *bRegister*<br/>
-表示是否應該註冊資源指令碼。
+指出是否應該註冊資源腳本。
 
 *pMapEntries*<br/>
-儲存指令碼的可置換的參數相關聯的值取代對應指標。 ATL 會自動使用 %模組。 若要使用其他可置換的參數，請參閱[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則，請使用 NULL 預設值。
+取代對應的指標, 儲存與腳本可取代參數相關聯的值。 ATL 會自動使用% MODULE%。 若要使用其他可取代的參數, 請參閱[CAtlModule:: AddCommonRGSReplacements](#addcommonrgsreplacements)。 否則, 請使用 Null 預設值。
 
 ### <a name="return-value"></a>傳回值
 
-會傳回 S_OK，如果成功或失敗的錯誤 HRESULT。
+在成功時傳回 S_OK, 或在失敗時傳回錯誤 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-類似於[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)除了`CAtlModule::UpdateRegistryFromResourceS`建立靜態連結 ATL 登錄元件 （登錄器）。
+類似于[CAtlModule:: UpdateRegistryFromResourceD](#updateregistryfromresourced) , `CAtlModule::UpdateRegistryFromResourceS`但會建立與 ATL 登錄元件 (註冊機構) 的靜態連結。
 
 ## <a name="see-also"></a>另請參閱
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
-[類別概觀](../../atl/atl-class-overview.md)<br/>
+[類別總覽](../../atl/atl-class-overview.md)<br/>
 [模組類別](../../atl/atl-module-classes.md)<br/>
-[登錄元件 （登錄器）](../../atl/atl-registry-component-registrar.md)
+[登錄元件 (登錄器)](../../atl/atl-registry-component-registrar.md)

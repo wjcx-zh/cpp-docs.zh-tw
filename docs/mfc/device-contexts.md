@@ -32,46 +32,46 @@ helpviewer_keywords:
 - drawing [MFC], directly into windows
 - painting and device context
 ms.assetid: d0cd51f1-f778-4c7e-bf50-d738d10433c7
-ms.openlocfilehash: 7893b446c224dd84514ab63dc97cae467792750c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5337e8d8b83a641458a15612803feeec3b6361c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405972"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508665"
 ---
 # <a name="device-contexts"></a>裝置內容
 
-裝置內容是包含相關資訊的繪製屬性的顯示器或印表機等裝置的 Windows 資料結構。 所有的繪製呼叫都會經過封裝 Windows Api，以繪製線條、 圖形和文字的裝置內容物件。 裝置內容允許在 Windows 中的裝置獨立繪圖。 裝置內容可用來繪製到螢幕、 印表機，或中繼檔。
+裝置內容是一種 Windows 資料結構, 其中包含裝置繪製屬性的相關資訊, 例如顯示或印表機。 所有繪圖呼叫都是透過裝置內容物件來進行, 該物件會封裝用於繪製線條、圖形和文字的 Windows Api。 裝置內容允許 Windows 中的裝置獨立繪圖。 裝置內容可以用來繪製到螢幕、印表機或中繼檔。
 
-[CPaintDC](../mfc/reference/cpaintdc-class.md)物件會封裝 Windows，呼叫常見慣用語`BeginPaint`函式，然後繪製在裝置內容中，然後呼叫`EndPaint`函式。 `CPaintDC`建構函式呼叫`BeginPaint`，和解構函式呼叫`EndPaint`。 簡化的程序是建立[CDC](../mfc/reference/cdc-class.md)物件，繪製，然後再終結`CDC`物件。 在架構中，即使此程序大多會自動化。 特別的是，您`OnDraw`函式傳遞`CPaintDC`已經備妥 (透過`OnPrepareDC`)，而只是繪製到其中。 終結由架構和基礎裝置內容就會發行 Windows 中，從呼叫傳回時您`OnDraw`函式。
+[CPaintDC](../mfc/reference/cpaintdc-class.md)物件會封裝常見的 Windows 用法, 呼叫`BeginPaint`函式, 然後在裝置內容中繪製`EndPaint` , 然後呼叫函式。 此`CPaintDC`函式`BeginPaint`會為您呼叫, 而析構`EndPaint`函數會呼叫。 簡化的程式是建立[CDC](../mfc/reference/cdc-class.md)物件、繪製, 然後`CDC`終結物件。 在架構中, 大部分的程式甚至都是自動化的。 特別是, 您`OnDraw`的函式會`CPaintDC`通過已備妥`OnPrepareDC`的 (via), 而您只需要在其中進行繪製。 它會由架構終結, 而基礎裝置內容會在從函式的呼叫`OnDraw`傳回時, 發行至 Windows。
 
-[CClientDC](../mfc/reference/cclientdc-class.md)物件會封裝代表只在視窗工作區的裝置內容的使用。 `CClientDC`建構函式呼叫`GetDC`函式和解構函式呼叫`ReleaseDC`函式。 [CWindowDC](../mfc/reference/cwindowdc-class.md)物件會封裝代表整個視窗中，包括其框架的裝置內容。
+[CClientDC](../mfc/reference/cclientdc-class.md)物件會封裝使用僅代表視窗工作區的裝置內容。 此`CClientDC`函式會`GetDC`呼叫函數, `ReleaseDC`而此析構函數會呼叫函式。 [CWindowDC](../mfc/reference/cwindowdc-class.md)物件會封裝代表整個視窗的裝置內容, 包括其框架。
 
-[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)物件會封裝為 Windows 中繼檔繪製。 相對於`CPaintDC`傳遞給`OnDraw`，您必須在此情況下呼叫[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc)自己。
+[CMetaFileDC](../mfc/reference/cmetafiledc-class.md)物件會將繪圖封裝成 Windows 中繼檔。 與傳遞給`OnDraw`的`CPaintDC`不同, 在此情況下, 您必須自行呼叫[OnPrepareDC](../mfc/reference/cview-class.md#onpreparedc) 。
 
-## <a name="mouse-drawing"></a>滑鼠的繪圖
+## <a name="mouse-drawing"></a>滑鼠繪製
 
-在架構程式中的大部分繪製 —，因此大部分的裝置內容工作 — 都在檢視表的`OnDraw`成員函式。 不過，您仍然可以用於其他用途使用的裝置內容物件。 比方說，若要提供在檢視中的滑鼠移動追蹤意見反應，您需要直接在檢視繪製，而不需等待`OnDraw`呼叫。
+在架構程式中, 大部分的繪圖 (也就是大部分的裝置內容工作) 都是在`OnDraw`此視圖的成員函式中完成。 不過, 您仍然可以將裝置內容物件用於其他用途。 例如, 若要針對視圖中的滑鼠移動提供追蹤意見反應, 您必須直接在視圖中繪製, 而不`OnDraw`需要等候呼叫。
 
-在此情況下，您可以使用[CClientDC](../mfc/reference/cclientdc-class.md)直接在檢視中繪製的裝置內容物件。
+在這種情況下, 您可以使用[CClientDC](../mfc/reference/cclientdc-class.md)裝置內容物件, 直接在視圖中繪製。
 
-### <a name="what-do-you-want-to-know-more-about"></a>您想要深入了解什麼
+### <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
-- [裝置內容 （定義）](/windows/desktop/gdi/device-contexts)
+- [裝置內容 (定義)](/windows/win32/gdi/device-contexts)
 
 - [在檢視中繪圖](../mfc/drawing-in-a-view.md)
 
 - [透過檢視解譯使用者輸入](../mfc/interpreting-user-input-through-a-view.md)
 
-- [線條和曲線](/windows/desktop/gdi/lines-and-curves)
+- [線條和曲線](/windows/win32/gdi/lines-and-curves)
 
-- [填滿的圖案](/windows/desktop/gdi/filled-shapes)
+- [填滿的圖案](/windows/win32/gdi/filled-shapes)
 
-- [字型和文字](/windows/desktop/gdi/fonts-and-text)
+- [字型和文字](/windows/win32/gdi/fonts-and-text)
 
-- [色彩](/windows/desktop/gdi/colors)
+- [色彩](/windows/win32/gdi/colors)
 
-- [座標空間和轉換](/windows/desktop/gdi/coordinate-spaces-and-transformations)
+- [座標空間和轉換](/windows/win32/gdi/coordinate-spaces-and-transformations)
 
 ## <a name="see-also"></a>另請參閱
 

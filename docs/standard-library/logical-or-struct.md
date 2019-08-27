@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_or class
 - logical_or struct
 ms.assetid: ec8143f8-5755-4e7b-8025-507fb6bf6911
-ms.openlocfilehash: d9a4bf5b72a134bf166fe9297aaa41610718aa8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec3637c1d5a2d0d916aec012783cecd37a179468
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413082"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246453"
 ---
 # <a name="logicalor-struct"></a>logical_or 結構
 
@@ -39,12 +39,13 @@ struct logical_or<void>
 
 ### <a name="parameters"></a>參數
 
-*型別*， *T*， *U*支援任何型別`operator||`會指定或推斷類型的運算元。
+*型別*， *T*， *U*\
+支援 `operator||` 的任何類型，其接受指定或推斷類型的運算元。
 
-*左邊*<br/>
+*左邊*\
 邏輯分離運算的左運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*T*。
 
-*右邊*<br/>
+*權限*\
 邏輯分離運算的右運算元。 特製化的樣板採用類型的左值參考引數*型別*。 此特製化的範本會完美地轉送的左值和右值參考引數推斷型別*U*。
 
 ## <a name="return-value"></a>傳回值
@@ -104,23 +105,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 Original deque:
 d1 = ( true true false false true false false )
 Original deque:
 d2 = ( false false false true true true true )
 The deque which is the disjuction of d1 & d2 is:
 d3 = ( true true false true true true true )
-*/
 ```
-
-## <a name="requirements"></a>需求
-
-**標頭：**\<functional>
-
-**命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>

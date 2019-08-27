@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - random header
 ms.assetid: 60afc25c-b162-4811-97c1-1b65398d4c57
-ms.openlocfilehash: 3fd6272ebcb58d48cc943541f32d1195c3fab498
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 5738a1ea5ab950466f347090649e72471edf5608
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450800"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458299"
 ---
 # <a name="ltrandomgt"></a>&lt;random&gt;
 
 定義亂數產生工具，允許建立統一分佈的亂數。
 
-## <a name="syntax"></a>語法
+## <a name="requirements"></a>需求
 
-```cpp
-#include <random>
-```
+**標頭**: \<隨機 >
+
+**命名空間：** std
+
+> [!NOTE]
+> \<Random > 程式庫使用 ' #include < initializer_list > ' 語句。
 
 ## <a name="summary"></a>總結
 
-「亂數產生器」  是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」  (Uniform Random Number Generator，URNG)。 設計成當作 URNG 功能的樣板類別稱為「引擎」  ，如果該類別具有特定一般特性的話 (本文稍後會予以討論)。 一般而言，URNG 可以與「分佈」  合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
+「亂數產生器」是一個物件，可產生一連串的虛擬隨機值。 產生統一分佈於指定範圍之值的產生器是「統一亂數產生器」(Uniform Random Number Generator，URNG)。 設計成當作 URNG 功能的樣板類別稱為「引擎」，如果該類別具有特定一般特性的話 (本文稍後會予以討論)。 一般而言，URNG 可以與「分佈」合併使用，方法是將 URNG 做為引數傳遞至分佈的 `operator()`，以產生由分佈所定義的方式而分佈的值。
 
 這些連結會跳到本文的主要小節：
 
@@ -39,7 +42,7 @@ ms.locfileid: "66450800"
 
 ### <a name="quick-tips"></a>快速提示
 
-以下是一些秘訣，請記住，當使用\<隨機 >:
+以下是使用\<隨機 > 時要記住的一些秘訣:
 
 - 在大部分的用途中，URNG 都會產生必須由分佈所圖形化的原始位元 (需要注意的例外狀況是 [std::shuffle()](../standard-library/algorithm-functions.md#shuffle)，原因是它直接使用 URNG)。
 
@@ -49,7 +52,7 @@ ms.locfileid: "66450800"
 
 - 大部分應用程式的最實用配對是 `mt19937` 引擎搭配 `uniform_int_distribution` (如本文稍後的[程式碼範例](#code)所示)。
 
-有許多選項可選擇從\<隨機 > 標頭，而且其中任何最好使用過時的 C 執行階段函式是`rand()`。 如需何不妥`rand()`以及如何\<隨機 > 解決這些缺點，請參閱[這段影片](https://go.microsoft.com/fwlink/p/?linkid=397615)。
+有許多選項可供您在\<隨機 > 標頭中選擇, 而且其中任何一項都優於過期的 C `rand()`執行時間函式。 如需有關哪些問題`rand()`以及隨機 > 如何\<解決這些缺點的詳細資訊, 請參閱這段[影片](https://go.microsoft.com/fwlink/p/?linkid=397615)。
 
 ## <a name="code"></a> 範例
 
@@ -212,13 +215,13 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 通常會根據這些屬性描述 URNG：
 
-1. **期間長度**:重複產生的數字順序所需數目的反覆項目。 愈長愈好。
+1. **期間長度**:重複產生的數位序列所需的反覆運算次數。 愈長愈好。
 
-2. **效能**:可以產生數字的速度，以及多少記憶體需要。 愈小愈好。
+2. **效能**:可以產生數位的速度, 以及所需的記憶體數量。 愈小愈好。
 
-3. **品質**:多接近真正亂數產生的序列有。 這通常稱為「隨機性」  。
+3. **品質**:產生的序列如何接近真正的亂數。 這通常稱為「隨機性」。
 
-下列各節列出統一亂數產生器 (Urng) 中提供\<隨機 > 標頭。
+下列各節列出\<隨機 > 標頭中提供的統一亂數產生器 (urng)。
 
 ####  <a name="rd"></a> 不具決定性產生器
 
@@ -278,7 +281,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
         43, 6364136223846793005ULL> mt19937_64;
     ```
 
-- `ranlux24` 24 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
+- `ranlux24`24位 RANLUX 引擎 (聖馬丁 Lüscher 和 Fred James, 1994)。
 
     ```cpp
     typedef discard_block_engine<ranlux24_base, 223, 23> ranlux24;
@@ -290,7 +293,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
     typedef subtract_with_carry_engine<unsigned int, 24, 10, 24> ranlux24_base;
     ```
 
-- `ranlux48` 48 位元 RANLUX 引擎 （Martin Lüscher 和 Fred James，1994年）。
+- `ranlux48`48位 RANLUX 引擎 (聖馬丁 Lüscher 和 Fred James, 1994)。
 
     ```cpp
     typedef discard_block_engine<ranlux48_base, 389, 11> ranlux48;
@@ -326,7 +329,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ###  <a name="distributions"></a> 亂數分佈
 
-下列各節列出中提供的分佈\<隨機 > 標頭。 分佈是一個後續處理機制，通常使用 URNG 輸出做為輸入，並透過定義的統計可能性密度函式來散發輸出。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
+下列各節列出\<隨機 > 標頭中提供的散發套件。 分佈是一個後續處理機制，通常使用 URNG 輸出做為輸入，並透過定義的統計可能性密度函式來散發輸出。 如需詳細資訊，請參閱[引擎和分佈](#engdist)一節。
 
 #### <a name="uniform-distributions"></a>統一分佈
 
@@ -342,7 +345,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 |||
 |-|-|
-|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生白努利分佈**bool**值。|
+|[bernoulli_distribution 類別](../standard-library/bernoulli-distribution-class.md)|產生**bool**值的以利的分佈。|
 |[binomial_distribution 類別](../standard-library/binomial-distribution-class.md)|產生整數值的二項式分佈。|
 |[geometric_distribution 類別](../standard-library/geometric-distribution-class.md)|產生整數值的幾何分佈。|
 |[negative_binomial_distribution 類別](../standard-library/negative-binomial-distribution-class.md)|產生整數值的負二項式分佈。|
@@ -355,7 +358,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 |-|-|
 |[cauchy_distribution 類別](../standard-library/cauchy-distribution-class.md)|產生實數 (浮點) 值的柯西分佈。|
 |[chi_squared_distribution 類別](../standard-library/chi-squared-distribution-class.md)|產生實數 (浮點) 值的卡方分佈。|
-|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|會產生 F 分佈進行分佈 （也稱為 Snedecor 的 F 分佈或費雪 Snedecor 分佈） 實數 （浮點） 值。|
+|[fisher_f_distribution 類別](../standard-library/fisher-f-distribution-class.md)|產生實數 (浮點) 值的 F 分佈 (也稱為 Snedecor 的 F 分佈或費雪-Snedecor 分佈)。|
 |[lognormal_distribution 類別](../standard-library/lognormal-distribution-class.md)|產生實數 (浮點) 值的對數常態分佈。|
 |[normal_distribution 類別](../standard-library/normal-distribution-class.md)|產生實數 (浮點) 值的常態 (高斯) 分佈。|
 |[student_t_distribution 類別](../standard-library/student-t-distribution-class.md)|產生實數 (浮點) 值的學生 *t* 分佈。|
@@ -386,7 +389,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="utility-functions"></a>公用程式函式
 
-此區段會列出中提供的一般公用程式函數\<隨機 > 標頭。
+本節列出\<隨機 > 標頭中所提供的一般公用程式函數。
 
 |||
 |-|-|
@@ -394,7 +397,7 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ### <a name="operators"></a>運算子
 
-此區段會列出中提供的運算子\<隨機 > 標頭。
+此區段會列出\<隨機 > 標頭中提供的運算子。
 
 |||
 |-|-|
@@ -405,19 +408,19 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="engdist"></a> 引擎和分佈
 
-下列各節，如需每個範本類別分類中定義的詳細資訊，請參閱\<隨機 >。 這兩個範本類別分類採用類型做為引數，並使用共用範本參數名稱，以描述允許做為實際引數類型的類型屬性，如下所示：
+請參閱下列各節, 以取得隨機 > 中\<所定義的每個範本類別類別目錄的相關資訊。 這兩個範本類別分類採用類型做為引數，並使用共用範本參數名稱，以描述允許做為實際引數類型的類型屬性，如下所示：
 
-- `IntType` 指出**簡短**， **int**，**長**， **long long**， **unsigned short**， **不帶正負號的 int**，**不帶正負號長**，或**unsigned long long**。
+- `IntType`表示**簡短**、 **int**、 **long**、long **long**、不**帶正負**號的簡短、 不**帶正負**號的整數、不帶正負號的長**整數**。
 
-- `UIntType` 指出**unsigned short**，**不帶正負號的 int**， **unsigned long**，或**unsigned long long**。
+- `UIntType`指出不帶正負號的**簡短**、不**帶正負**號的整數、不**帶**正負號的長整數。
 
-- `RealType` 指出**浮點數**， **double**，或**長雙精度**。
+- `RealType`表示**float**、 **double**或**long double**。
 
 ### <a name="engines"></a>引擎
 
 [引擎範本](#eng)和[引擎配接器範本](#engadapt)是其參數會自訂所建立之產生器的範本。
 
-「引擎」  是一種類別或樣板類別，其執行個體 (產生器) 做為統一分佈在最小值與最大值之間的亂數來源。 「引擎配接器」  會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
+「引擎」是一種類別或樣板類別，其執行個體 (產生器) 做為統一分佈在最小值與最大值之間的亂數來源。 「引擎配接器」會採用部分其他亂數引擎所產生的值，並將某種類型的演算法套用至那些值，以傳遞一連串具有不同隨機性屬性的值。
 
 每個引擎和引擎配接器都具有下列成員：
 
@@ -451,15 +454,15 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 - 傳回用於建構產生器之基底引擎的 `const Engine& base()` 屬性函式。
 
-每個引擎都會維護一個「狀態」  ，而狀態會決定後續呼叫 `operator()` 所產生的值序列。 使用 `operator==` 和 `operator!=`，可以比較從相同類型的引擎具現化的兩個產生器的狀態。 如果兩種狀態比較為相等，則會產生相同的值序列。 使用產生器的 `operator<<`，可以將物件的狀態儲存至資料流，且形式為一連串 32 位元不帶正負號值。 狀態在儲存之後並不會變更。 使用 `operator>>`，可以將儲存的狀態讀取至從相同類型的引擎具現化的產生器。
+每個引擎都會維護一個「狀態」，而狀態會決定後續呼叫 `operator()` 所產生的值序列。 使用 `operator==` 和 `operator!=`，可以比較從相同類型的引擎具現化的兩個產生器的狀態。 如果兩種狀態比較為相等，則會產生相同的值序列。 使用產生器的 `operator<<`，可以將物件的狀態儲存至資料流，且形式為一連串 32 位元不帶正負號值。 狀態在儲存之後並不會變更。 使用 `operator>>`，可以將儲存的狀態讀取至從相同類型的引擎具現化的產生器。
 
 ### <a name="distributions"></a>分佈
 
-[「隨機亂數分佈」](#distributions)是一種類別或樣板類別，其執行個體會將取自引擎之統一分佈亂數的資料流，轉換為具有特定分佈之亂數的資料流。 每個分佈都有下列成員：
+          [「隨機亂數分佈」](#distributions)是一種類別或樣板類別，其執行個體會將取自引擎之統一分佈亂數的資料流，轉換為具有特定分佈之亂數的資料流。 每個分佈都有下列成員：
 
 - `typedef` `numeric-type` `result_type` 是分佈的 `operator()` 所傳回的類型。 在具現化時，會將 `numeric-type` 傳遞為範本參數。
 
-- `template <class URNG> result_type operator()(URNG& gen)` 會傳回根據分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及儲存之「分佈的參數」  。
+- `template <class URNG> result_type operator()(URNG& gen)` 會傳回根據分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及儲存之「分佈的參數」。
 
 - `template <class URNG> result_type operator()(URNG& gen, param_type p)` 會傳回按照分佈定義所分佈的值，方法是使用 `gen` 做為統一分佈隨機值的來源，以及參數結構 `p`。
 
@@ -506,4 +509,4 @@ Randomized array: Si C Sc H Na O S Cr K Li Al Ti Cl B Mn He Fe Ne Be Ar V P Ca N
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

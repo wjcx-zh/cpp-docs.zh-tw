@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - stdexcept header
 ms.assetid: 495c10b1-1e60-4514-9f8f-7fda11a2f522
-ms.openlocfilehash: 8a8c99f2651d10d4fc2aff413a06256127f32d7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4028d57a6e8898f85a37d9731e7e8d4cda19a2f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412497"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453725"
 ---
 # <a name="ltstdexceptgt"></a>&lt;stdexcept&gt;
 
@@ -35,7 +35,7 @@ ms.locfileid: "62412497"
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|類別|說明|
 |-|-|
 |[domain_error 類別](../standard-library/domain-error-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告網域錯誤。|
 |[invalid_argument 類別](../standard-library/invalid-argument-class.md)|此類別可做為擲回之所有例外狀況的基底類別，這些例外狀況報告無效的引數。|
@@ -49,5 +49,5 @@ ms.locfileid: "62412497"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

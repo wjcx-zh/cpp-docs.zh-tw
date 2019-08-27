@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_error_code_enum class
 ms.assetid: cee5be2d-7c20-4cec-a352-1ab8b7d32601
-ms.openlocfilehash: d890eb6a1b7c93f9ae5b87018c3bf1d6eeae8abb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4080c62034b224a9553eca2787aa1c2f2cf69ab8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336476"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454636"
 ---
 # <a name="iserrorcodeenum-class"></a>is_error_code_enum 類別
 
@@ -21,7 +21,7 @@ ms.locfileid: "62336476"
 
 ```cpp
 template <_Enum>
-class is_error_code_enum;
+    class is_error_code_enum;
 ```
 
 ## <a name="remarks"></a>備註
@@ -30,13 +30,6 @@ class is_error_code_enum;
 
 允許針對使用者定義的類型將特製化新增到此類型。
 
-## <a name="requirements"></a>需求
-
-**標頭：**\<system_error>
-
-**命名空間：** std
-
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[<system_error>](../standard-library/system-error.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1fc675b1014ab9a099e8310b52b7458f2bff65f
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392653"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916206"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase 類別
 
@@ -49,25 +49,25 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 |名稱|描述|
 |----------|-----------------|
-|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|建構`CInterpolatorBase`物件。|
+|[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|`CInterpolatorBase`結構物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CInterpolatorBase::CreateInstance](#createinstance)|建立的執行個體`CInterpolatorBase`和儲存自訂 interpolator，將會處理事件的指標。|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|取得 interpolator 的相依性。 (覆寫 `CUIAnimationInterpolatorBase::GetDependencies`。)|
-|[CInterpolatorBase::GetDuration](#getduration)|取得 interpolator 的持續時間。 (覆寫 `CUIAnimationInterpolatorBase::GetDuration`。)|
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|取得 interpolator 潛在客戶的最後一個值。 (覆寫 `CUIAnimationInterpolatorBase::GetFinalValue`。)|
-|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|插補在指定的位移值 (會覆寫`CUIAnimationInterpolatorBase::InterpolateValue`。)|
-|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|指定位移處的速度進行插補 (會覆寫`CUIAnimationInterpolatorBase::InterpolateVelocity`。)|
-|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|儲存自訂 interpolator，將會處理事件的指標。|
-|[CInterpolatorBase::SetDuration](#setduration)|設定 interpolator 的持續時間 (會覆寫`CUIAnimationInterpolatorBase::SetDuration`。)|
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|Interpolator 的起始值和速度設定。 (覆寫 `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`。)|
+|[CInterpolatorBase::CreateInstance](#createinstance)|建立的`CInterpolatorBase`實例, 並儲存自訂插即用的指標, 這將會處理事件。|
+|[CInterpolatorBase::GetDependencies](#getdependencies)|取得插即用的相依性。 (覆寫 `CUIAnimationInterpolatorBase::GetDependencies`。)|
+|[CInterpolatorBase::GetDuration](#getduration)|取得插即用的持續時間。 (覆寫 `CUIAnimationInterpolatorBase::GetDuration`。)|
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|取得插轉所潛在的最終值。 (覆寫 `CUIAnimationInterpolatorBase::GetFinalValue`。)|
+|[CInterpolatorBase::InterpolateValue](#interpolatevalue)|在指定的位移 (覆寫`CUIAnimationInterpolatorBase::InterpolateValue`) 上插上值。|
+|[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|在指定的位移 (覆寫`CUIAnimationInterpolatorBase::InterpolateVelocity`) 上插上速度。|
+|[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|儲存自訂插即用的指標, 這將會處理事件。|
+|[CInterpolatorBase::SetDuration](#setduration)|設定插即用的持續時間`CUIAnimationInterpolatorBase::SetDuration`(覆寫)。|
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|設定插即用的初始值和速度。 (覆寫 `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`。)|
 
 ## <a name="remarks"></a>備註
 
-建立並傳遞至這個處理常式`IUIAnimationTransitionFactory::CreateTransition`時`CCustomTransition`物件建立動畫初始化處理程序的一部分 (著手`CAnimationController::AnimateGroup`)。 通常您不需要直接使用這個類別，它只是 routs 所有事件`CCustomInterpolator`-衍生的類別，其指標傳遞至建構函式的`CCustomTransition`。
+當物件是在動畫初始化程式`IUIAnimationTransitionFactory::CreateTransition` (由`CAnimationController::AnimateGroup`啟動) 中建立時, 會建立此處理程式並將其傳遞給。 `CCustomTransition` 通常您不需要直接使用這個類別, 它只會將所有事件 routs 至`CCustomInterpolator`衍生的類別, 其指標會傳遞至`CCustomTransition`的函式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -81,17 +81,17 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 **標頭：** afxanimationcontroller.h
 
-##  <a name="cinterpolatorbase"></a>  CInterpolatorBase::CInterpolatorBase
+##  <a name="cinterpolatorbase"></a>CInterpolatorBase:: CInterpolatorBase
 
-建構 CInterpolatorBase 物件。
+結構 CInterpolatorBase 物件。
 
 ```
 CInterpolatorBase();
 ```
 
-##  <a name="createinstance"></a>  CInterpolatorBase::CreateInstance
+##  <a name="createinstance"></a>CInterpolatorBase:: CreateInstance
 
-建立 CInterpolatorBase 的執行個體，並將事件處理中的自訂 interpolator 的指標。
+建立 CInterpolatorBase 的實例, 並儲存自訂插即用的指標, 這將會處理事件。
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -102,16 +102,16 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>參數
 
 *pInterpolator*<br/>
-自訂 interpolator 指標。
+自訂插即用的指標。
 
 *ppHandler*<br/>
-輸出。 函式傳回時，請包含 CInterpolatorBase 的執行個體的指標。
+輸出. 當函式傳回時, 包含 CInterpolatorBase 實例的指標。
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="getdependencies"></a>  CInterpolatorBase::GetDependencies
+##  <a name="getdependencies"></a>CInterpolatorBase:: GetDependencies
 
-取得 interpolator 的相依性。
+取得插即用的相依性。
 
 ```
 IFACEMETHOD(GetDependencies)(
@@ -123,21 +123,21 @@ IFACEMETHOD(GetDependencies)(
 ### <a name="parameters"></a>參數
 
 *initialValueDependencies*<br/>
-輸出。 層面 interpolator 相依於的初始值會傳遞至 SetInitialValueAndVelocity。
+輸出. 插上的各個層面, 取決於傳遞至 SetInitialValueAndVelocity 的初始值。
 
 *initialVelocityDependencies*<br/>
-輸出。 Interpolator 的初始速度而定的各個層面會傳遞至 SetInitialValueAndVelocity。
+輸出. 插上的各個層面取決於傳遞至 SetInitialValueAndVelocity 的初始速度。
 
 *durationDependencies*<br/>
-輸出。 Interpolator 的持續時間而定的層面會傳遞至 SetDuration。
+輸出. 插上的各個層面取決於傳遞至 SetDuration 的持續時間。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetDependencies 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 GetDependencies 方法傳回 FALSE。
 
-##  <a name="getduration"></a>  CInterpolatorBase::GetDuration
+##  <a name="getduration"></a>CInterpolatorBase:: GetDuration
 
-取得 interpolator 的持續時間。
+取得插即用的持續時間。
 
 ```
 IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
@@ -146,15 +146,15 @@ IFACEMETHOD(GetDuration)(__out UI_ANIMATION_SECONDS* duration);
 ### <a name="parameters"></a>參數
 
 *duration*<br/>
-輸出。 轉換，以秒為單位的持續時間。
+輸出. 轉換的持續時間 (以秒為單位)。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetDuration 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 GetDuration 方法傳回 FALSE。
 
-##  <a name="getfinalvalue"></a>  CInterpolatorBase::GetFinalValue
+##  <a name="getfinalvalue"></a>CInterpolatorBase:: GetFinalValue
 
-取得 interpolator 潛在客戶的最後一個值。
+取得插轉所潛在的最終值。
 
 ```
 IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
@@ -163,59 +163,59 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 ### <a name="parameters"></a>參數
 
 *value*<br/>
-輸出。 在轉換結束變數最終的值。
+輸出. 在轉換結束時的最後一個變數值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE GetFinalValue 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 GetFinalValue 方法傳回 FALSE。
 
-##  <a name="interpolatevalue"></a>  CInterpolatorBase::InterpolateValue
+##  <a name="interpolatevalue"></a>CInterpolatorBase:: InterpolateValue
 
-插補在指定的位移值
+在指定的位移上插補值
 
 ```
 IFACEMETHOD(InterpolateValue)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* value);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* value);
 ```
 
 ### <a name="parameters"></a>參數
 
 *offset*<br/>
-從轉換的開始位移。 位移一律是大於或等於零且小於轉換的持續時間。 如果轉換的時間長度為零，不會呼叫這個方法。
+從轉換開始算起的位移。 位移一律大於或等於零, 而且小於轉換的持續時間。 如果轉換的持續時間為零, 則不會呼叫這個方法。
 
 *value*<br/>
-輸出。 插補的值。
+輸出. 插補值。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE InterpolateValue 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 InterpolateValue 方法傳回 FALSE。
 
-##  <a name="interpolatevelocity"></a>  CInterpolatorBase::InterpolateVelocity
+##  <a name="interpolatevelocity"></a>CInterpolatorBase:: InterpolateVelocity
 
-指定位移處的速度進行插補
+在指定的位移上插補速度
 
 ```
 IFACEMETHOD(InterpolateVelocity)(
-  __in UI_ANIMATION_SECONDS offset,
-  __out DOUBLE* velocity);
+    __in UI_ANIMATION_SECONDS offset,
+    __out DOUBLE* velocity);
 ```
 
 ### <a name="parameters"></a>參數
 
 *offset*<br/>
-從轉換的開始位移。 位移一律是大於或等於零且小於或等於轉換的持續時間。 如果轉換的時間長度為零，不會呼叫這個方法。
+從轉換開始算起的位移。 位移一律大於或等於零, 而且小於或等於轉換的持續時間。 如果轉換的持續時間為零, 則不會呼叫這個方法。
 
 *velocity*<br/>
-輸出。 在位移變數的速度。
+輸出. 變數在位移的速度。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE InterpolateVelocity 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 InterpolateVelocity 方法傳回 FALSE。
 
-##  <a name="setcustominterpolator"></a>  CInterpolatorBase::SetCustomInterpolator
+##  <a name="setcustominterpolator"></a>CInterpolatorBase:: SetCustomInterpolator
 
-儲存自訂 interpolator，將會處理事件的指標。
+儲存自訂插即用的指標, 這將會處理事件。
 
 ```
 void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
@@ -224,11 +224,11 @@ void SetCustomInterpolator(CCustomInterpolator* pInterpolator);
 ### <a name="parameters"></a>參數
 
 *pInterpolator*<br/>
-自訂 interpolator 指標。
+自訂插即用的指標。
 
-##  <a name="setduration"></a>  CInterpolatorBase::SetDuration
+##  <a name="setduration"></a>CInterpolatorBase:: SetDuration
 
-設定 interpolator 的持續時間
+設定插器的持續時間
 
 ```
 IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
@@ -241,29 +241,29 @@ IFACEMETHOD(SetDuration)(__in UI_ANIMATION_SECONDS duration);
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE SetDuration 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 SetDuration 方法傳回 FALSE。
 
-##  <a name="setinitialvalueandvelocity"></a>  CInterpolatorBase::SetInitialValueAndVelocity
+##  <a name="setinitialvalueandvelocity"></a>CInterpolatorBase:: SetInitialValueAndVelocity
 
-Interpolator 的起始值和速度設定。
+設定插即用的初始值和速度。
 
 ```
 IFACEMETHOD(SetInitialValueAndVelocity)(
-  __in DOUBLE initialValue,
-  __in DOUBLE initialVelocity);
+    __in DOUBLE initialValue,
+    __in DOUBLE initialVelocity);
 ```
 
 ### <a name="parameters"></a>參數
 
 *initialValue*<br/>
-在轉換開始變數的值。
+轉換開始時的變數值。
 
 *initialVelocity*<br/>
-在轉換開始變數的速度。
+轉換開始時的變數速度。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 S_OK。 如果未設定 CCustomInterpolator，或自訂實作會傳回 FALSE SetInitialValueAndVelocity 方法，它會傳回 E_FAIL。
+如果方法成功, 它會傳回 S_OK。 如果未設定 CCustomInterpolator, 則會傳回 E_FAIL, 或自訂執行會從 SetInitialValueAndVelocity 方法傳回 FALSE。
 
 ## <a name="see-also"></a>另請參閱
 

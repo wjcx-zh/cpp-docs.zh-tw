@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159388"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454133"
 ---
 # <a name="freelist-class"></a>freelist 類別
 
@@ -37,11 +37,11 @@ class freelist : public Max
 
 ## <a name="remarks"></a>備註
 
-此範本類別會管理記憶體區塊大小的清單*Sz*傳入的 max 類別所決定之清單的最大長度*Max*。
+此範本類別會管理大小為*Sz*的記憶體區塊清單, 其中清單的最大長度是以*最*大值傳遞的最大值來決定。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[freelist](#freelist)|建構類型 `freelist` 的物件。|
 
@@ -54,7 +54,7 @@ class freelist : public Max
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -82,7 +82,7 @@ void *pop();
 
 ### <a name="remarks"></a>備註
 
-如果清單是空的此成員函式會傳回 NULL。 否則，會從清單中移除第一個記憶體區塊。
+如果清單是空的, 此成員函式會傳回 Null。 否則，會從清單中移除第一個記憶體區塊。
 
 ## <a name="push"></a>  freelist::push
 
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果`full`max 類別的函式會傳回**false**，否則`push`函式會傳回**false**。
+如果 max 類別`full`的函式傳回`push` **false**, 則**為 true** , 否則函數會傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-如果`full`max 類別的函式會傳回**假**，此成員函式會將指向的記憶體區塊*ptr*標頭的清單。
+如果 max 類別的函式傳回**false**, 此成員函式會將由 ptr 指向的記憶體區塊加入至清單的開頭。  `full`
 
 ## <a name="see-also"></a>另請參閱
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

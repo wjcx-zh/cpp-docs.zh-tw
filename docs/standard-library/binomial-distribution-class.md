@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::binomial_distribution [C++], param_type
 - std::binomial_distribution [C++], param_type
 ms.assetid: b7c8a26a-da8c-45a5-a3a8-208f7a3609ce
-ms.openlocfilehash: ee61b79848a5649d44cf02384f32ad8e0226feb0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 525e448a130f33df478627f7ae7ca682ff4a556d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451118"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448055"
 ---
 # <a name="binomialdistribution-class"></a>binomial_distribution 類別
 
@@ -71,22 +71,22 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*<br/>
-整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*\
+整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*<br/>
-統一亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*URNG*\
+統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述產生使用者指定之整數的值類型**int**如果未提供，根據二項式分佈離散可能性函式的分佈。 下表提供各個成員的文章連結。
+此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**int**類型, 這是根據二項式分佈離散機率函數來散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
 |[binomial_distribution](#binomial_distribution)|`binomial_distribution::t`|`binomial_distribution::param`|
 |`binomial_distribution::operator()`|`binomial_distribution::p`|[param_type](#param_type)|
 
-屬性成員`t()`並`p()`會傳回目前儲存的分佈參數值*t*並*p*分別。
+屬性成員`t()`和`p()`會分別傳回目前儲存的散發參數值*t*和*p* 。
 
 屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
 
@@ -242,20 +242,20 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*t*<br/>
+*而已*\
 `t` 分佈參數。
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
 **前置條件：** `0 ≤ t` 和 `0.0 ≤ p ≤ 1.0`
 
-第一個建構函式會建構一個物件的預存*p*值具有值*p* ，且預存*t*值保留值*t*。
+第一個函式會建立一個物件, 其儲存的*p*值保留*p*值, 而其儲存的*t*值保留值*t*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
@@ -277,13 +277,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*t*<br/>
+*而已*\
 `t` 分佈參數。
 
-*p*<br/>
+*p&id*\
 `p` 分佈參數。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -294,4 +294,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

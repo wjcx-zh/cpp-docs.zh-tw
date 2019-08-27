@@ -1,5 +1,5 @@
 ---
-title: 分類巨集
+title: 類別宏
 ms.date: 11/04/2016
 f1_keywords:
 - atlcom/ATL::BEGIN_CATEGORY_MAP
@@ -7,27 +7,27 @@ f1_keywords:
 - atlcom/ATL::IMPLEMENTED_CATEGORY
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 411e06cc795827eef356018ba427510fd9eb7c06
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247393"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497846"
 ---
-# <a name="category-macros"></a>分類巨集
+# <a name="category-macros"></a>類別宏
 
-這些巨集會定義分類對應。
+這些宏會定義類別目錄對應。
 
 |||
 |-|-|
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|標記分類對應的開頭。|
-|[END_CATEGORY_MAP](#end_category_map)|標記分類 map 的結尾。|
-|[IMPLEMENTED_CATEGORY](#implemented_category)|表示類別實作的 COM 物件。|
-|[REQUIRED_CATEGORY](#required_category)|表示容器的 COM 物件所需要的類別。|
+|[END_CATEGORY_MAP](#end_category_map)|標示分類對應的結尾。|
+|[IMPLEMENTED_CATEGORY](#implemented_category)|表示由 COM 物件執行的類別。|
+|[REQUIRED_CATEGORY](#required_category)|表示 COM 物件所需的容器類別。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 
@@ -40,28 +40,28 @@ BEGIN_CATEGORY_MAP(theClass)
 ### <a name="parameters"></a>參數
 
 *theClass*<br/>
-[in]包含類別目錄對應的類別名稱。
+在包含分類對應的類別名稱。
 
 ### <a name="remarks"></a>備註
 
-分類對應用來指定哪些元件類別的 COM 類別會實作，而且需要從其容器的分類。
+類別目錄對應用來指定 COM 類別將會執行的元件分類, 以及其容器所需的類別。
 
-新增[IMPLEMENTED_CATEGORY](#implemented_category) COM 類別所實作的每個類別目錄的對應項目。 新增[REQUIRED_CATEGORY](#required_category)類別需要實作其用戶端的每個類別目錄的對應項目。 標記與對應的結尾[END_CATEGORY_MAP](#end_category_map)巨集。
+將[IMPLEMENTED_CATEGORY](#implemented_category)專案新增至 COM 類別所執行之每個類別的對應。 針對每個分類的對應, 將[REQUIRED_CATEGORY](#required_category)專案新增至該類別需要其用戶端執行的每個類別。 使用[END_CATEGORY_MAP](#end_category_map)宏標記對應的結尾。
 
-如果類別都有相關聯註冊模組時在對應中所列的元件類別也會自動註冊[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或是[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto).
+如果類別具有相關聯的[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto), 則在註冊模組時, 會自動註冊對應中所列的元件類別。
 
 > [!NOTE]
->  ATL 登錄元件類別使用標準的元件類別目錄管理員。 如果管理員未存在於系統上，註冊模組時，註冊就會成功，但元件類別將不會註冊為該類別。
+>  ATL 會使用標準元件分類管理員來註冊元件類別目錄。 如果在註冊模組時, 系統上沒有管理員, 註冊就會成功, 但不會為該類別註冊元件類別目錄。
 
-如需有關元件類別的詳細資訊，請參閱[什麼是元件類別，以及它們是如何運作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。
+如需元件類別的詳細資訊, 請參閱[什麼是元件類別, 以及它們](/windows/win32/com/component-categories-and-how-they-work)在 Windows SDK 中的使用方式。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="end_category_map"></a>  END_CATEGORY_MAP
+##  <a name="end_category_map"></a>END_CATEGORY_MAP
 
-標記分類 map 的結尾。
+標示分類對應的結尾。
 
 ```
 END_CATEGORY_MAP()
@@ -69,11 +69,11 @@ END_CATEGORY_MAP()
 
 ### <a name="example"></a>範例
 
-範例，請參閱[BEGIN_CATEGORY_MAP](#begin_category_map)。
+請參閱[BEGIN_CATEGORY_MAP](#begin_category_map)的範例。
 
-##  <a name="implemented_category"></a>  IMPLEMENTED_CATEGORY
+##  <a name="implemented_category"></a>IMPLEMENTED_CATEGORY
 
-將 IMPLEMENTED_CATEGORY 巨集新增至您的元件[分類對應](#begin_category_map)來指定它應該註冊為實作所識別的分類*catID*參數。
+將 IMPLEMENTED_CATEGORY 宏新增至元件的[分類對應](#begin_category_map), 以指定應將其註冊為執行由*catID*參數所識別的類別。
 
 ```
 IMPLEMENTED_CATEGORY(catID)
@@ -82,35 +82,35 @@ IMPLEMENTED_CATEGORY(catID)
 ### <a name="parameters"></a>參數
 
 *catID*<br/>
-[in]CATID 常數或變數會保留已實作的類別目錄的全域唯一識別碼 (GUID)。 地址*catID*會採用，並加入至地圖中。 請參閱下表中選取的內建的分類。
+在CATID 常數或變數, 其中包含實作為分類的全域唯一識別碼 (GUID)。 將會取得*catID*的位址, 並將其新增至對應。 請參閱下表, 以取得存貨類別目錄的選取專案。
 
 ### <a name="remarks"></a>備註
 
-如果類別都有相關聯註冊模組時在對應中所列的元件類別也會自動註冊[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或是[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。
+如果類別具有相關聯的[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)宏, 則在註冊模組時, 會自動註冊對應中所列的元件類別。
 
-用戶端可用來判斷其功能和需求，而不需要建立它的執行個體註冊類別的類別目錄資訊。
+用戶端可以使用針對類別註冊的類別目錄資訊來判斷其功能和需求, 而不需要建立它的實例。
 
-如需有關元件類別的詳細資訊，請參閱[什麼是元件類別，以及它們是如何運作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。
+如需元件類別的詳細資訊, 請參閱[什麼是元件類別, 以及它們](/windows/win32/com/component-categories-and-how-they-work)在 Windows SDK 中的使用方式。
 
-### <a name="a-selection-of-stock-categories"></a>選取的內建類別
+### <a name="a-selection-of-stock-categories"></a>存貨類別目錄的選取範圍
 
-|描述|符號|登錄的 GUID|
+|描述|符號|登錄 GUID|
 |-----------------|------------|-------------------|
-|編寫指令碼的安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|初始化的安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|簡單框架網站內含項目|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|安全的腳本撰寫|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|安全進行初始化|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|簡單的框架網站內含專案|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |簡單資料繫結|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|進階的資料繫結|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |無視窗控制項|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|可感知網際網路功能的物件|請參閱[網際網路注意物件](/windows/desktop/com/internet-aware-objects)Windows SDK 範例清單中。||
+|網際網路感知物件|如需範例清單, 請參閱 Windows SDK 中的[網際網路感知物件](/windows/win32/com/internet-aware-objects)。||
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  REQUIRED_CATEGORY
+##  <a name="required_category"></a>REQUIRED_CATEGORY
 
-將 REQUIRED_CATEGORY 巨集新增至您的元件[分類對應](#begin_category_map)來指定它應該註冊為需要所識別的分類*catID*參數。
+將 REQUIRED_CATEGORY 宏新增至元件的[分類對應](#begin_category_map), 以指定應將其註冊為需要由*catID*參數所識別的類別。
 
 ```
 REQUIRED_CATEGORY( catID )
@@ -119,27 +119,27 @@ REQUIRED_CATEGORY( catID )
 ### <a name="parameters"></a>參數
 
 *catID*<br/>
-[in]CATID 常數或變數會保留所需的分類的全域唯一識別碼 (GUID)。 地址*catID*會採用，並加入至地圖中。 請參閱下表中選取的內建的分類。
+在包含所需分類的全域唯一識別碼 (GUID) 的 CATID 常數或變數。 將會取得*catID*的位址, 並將其新增至對應。 請參閱下表, 以取得存貨類別目錄的選取專案。
 
 ### <a name="remarks"></a>備註
 
-如果類別都有相關聯註冊模組時在對應中所列的元件類別也會自動註冊[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或是[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)巨集。
+如果類別具有相關聯的[OBJECT_ENTRY_AUTO](../../atl/reference/object-map-macros.md#object_entry_auto)或[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](../../atl/reference/object-map-macros.md#object_entry_non_createable_ex_auto)宏, 則在註冊模組時, 會自動註冊對應中所列的元件類別。
 
-用戶端可用來判斷其功能和需求，而不需要建立它的執行個體註冊類別的類別目錄資訊。 例如，控制項可能會需要容器支援資料繫結。 容器可以找出是否有必要查詢該控制項所需的類別的類別目錄管理員裝載控制項的功能。 如果容器不支援必要的功能，它可以拒絕裝載 COM 物件。
+用戶端可以使用針對類別註冊的類別目錄資訊來判斷其功能和需求, 而不需要建立它的實例。 例如, 控制項可能會要求容器支援資料系結。 容器可以藉由查詢類別管理員來查看該控制項所需的類別, 來找出裝載控制項所需的功能。 如果容器不支援必要的功能, 它可能會拒絕裝載 COM 物件。
 
-如需有關元件的類別，包括範例清單，請參閱[什麼是元件類別，以及它們是如何運作](/windows/desktop/com/component-categories-and-how-they-work)Windows SDK 中。
+如需元件類別 (包括範例清單) 的詳細資訊, 請參閱[什麼是元件類別, 以及它們](/windows/win32/com/component-categories-and-how-they-work)在 Windows SDK 中的使用方式。
 
-### <a name="a-selection-of-stock-categories"></a>選取的內建類別
+### <a name="a-selection-of-stock-categories"></a>存貨類別目錄的選取範圍
 
-|描述|符號|登錄的 GUID|
+|說明|符號|登錄 GUID|
 |-----------------|------------|-------------------|
-|編寫指令碼的安全|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
-|初始化的安全|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
-|簡單框架網站內含項目|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
+|安全的腳本撰寫|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
+|安全進行初始化|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
+|簡單的框架網站內含專案|CATID_SimpleFrameControl|{157083E0-2368-11cf-87B9-00AA006C8166}|
 |簡單資料繫結|CATID_PropertyNotifyControl|{157083E1-2368-11cf-87B9-00AA006C8166}|
-|進階的資料繫結|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
+|Advanced Data Binding|CATID_VBDataBound|{157083E2-2368-11cf-87B9-00AA006C8166}|
 |無視窗控制項|CATID_WindowlessObject|{1D06B600-3AE3-11cf-87B9-00AA006C8166}|
-|可感知網際網路功能的物件|請參閱[網際網路注意物件](/windows/desktop/com/internet-aware-objects)Windows SDK 範例清單中。||
+|網際網路感知物件|如需範例清單, 請參閱 Windows SDK 中的[網際網路感知物件](/windows/win32/com/internet-aware-objects)。||
 
 ### <a name="example"></a>範例
 

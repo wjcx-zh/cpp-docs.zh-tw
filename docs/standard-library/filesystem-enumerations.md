@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405127"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457717"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -24,7 +24,7 @@ ms.locfileid: "62405127"
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<experimental/filesystem>
+**標頭：** \<experimental/filesystem>
 
 **命名空間：** std::experimental::filesystem
 
@@ -86,7 +86,7 @@ enum class directory_options {
 
 ## <a name="file_type"></a>  file_type
 
-檔案類型的列舉。 支援的值為 regular、 directory、 not_found 和 unknown。
+檔案類型的列舉。 支援的值為 regular、directory、not_found 和 unknown。
 
 ### <a name="syntax"></a>語法
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名稱|值|描述|
+|名稱|值|說明|
 |----------|-----------|-----------------|
 |`not_found`|-1|代表不存在的檔案。|
 |`none`|0|代表不具有類型屬性的檔案。 (不支援。)|
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|代表 UNIX 系統上的 FIFO 檔案。 (不支援。)|
 |`socket`|7|代表 UNIX 系統上的通訊端。 (不支援。)|
 |`unknown`|8|代表無法判斷狀態的檔案。|
+
+## <a name="perm_options"></a>perm_options
+
+包含值`replace` `add` 、、和`nofollow`。 `remove`
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 
@@ -155,5 +163,5 @@ enum class perms {// names for permissions
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<filesystem>](../standard-library/filesystem.md)

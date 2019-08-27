@@ -10,27 +10,27 @@ helpviewer_keywords:
 - LoadLibrary method
 - explicit linking [C++]
 ms.assetid: b4535d19-6243-4146-a31a-a5cca4c7c9e3
-ms.openlocfilehash: 661d7742fb0fedae45bc063ba3821193d6c5438e
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c7700dd865e320686a2ad8bd036f207b9ecee6ac
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220606"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493214"
 ---
 # <a name="loadlibrary-and-afxloadlibrary"></a>LoadLibrary 和 AfxLoadLibrary
 
-處理呼叫[LoadLibraryExA](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或是[LoadLibraryExW](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexw)(或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)) 明確地連結至 DLL。 如果函式成功，它會指定的 DLL 對應到呼叫處理序的位址空間，並可與其他函式中明確連結的 DLL 中傳回的控制代碼，例如`GetProcAddress`和`FreeLibrary`。
+進程會呼叫[LoadLibraryExA](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexa)或[LoadLibraryExW](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryexw) (或[AfxLoadLibrary](../mfc/reference/application-information-and-management.md#afxloadlibrary)), 以明確連結至 DLL。 如果函式成功, 它會將指定的 DLL 對應到呼叫進程的位址空間, 並將控制碼傳回給可與明確連結中的其他函數搭配使用的 dll (例如`GetProcAddress`和`FreeLibrary`)。
 
-`LoadLibrary` 嘗試使用隱含連結使用的相同搜尋順序找出 DLL。 如果系統找不到 DLL 或進入點函式會傳回 FALSE，`LoadLibrary`會傳回 NULL。 如果呼叫`LoadLibrary`指定已經對應到呼叫的處理序的位址空間的 DLL 模組函式會傳回 DLL 並遞增的控制代碼之參考計數的模組。
+`LoadLibrary`嘗試使用用於隱含連結的相同搜尋順序來找出 DLL。 如果系統找不到 DLL, 或如果進入點函式傳回 FALSE, `LoadLibrary`則會傳回 Null。 如果呼叫`LoadLibrary`指定的 dll 模組已對應到呼叫進程的位址空間, 則函式會傳回 dll 的控制碼, 並遞增模組的參考計數。
 
-如果 DLL 進入點函式，則作業系統會呼叫函式呼叫的執行緒內容中`LoadLibrary`。 如果 DLL 已經連結至處理程序因為前一個呼叫，不會呼叫進入點函式`LoadLibrary`具有任何對應呼叫`FreeLibrary`函式。
+如果 DLL 具有進入點函式, 作業系統就會`LoadLibrary`在呼叫的執行緒內容中呼叫函數。 如果 DLL 已附加至進程, 且先前的呼叫`LoadLibrary`沒有對函式的對應呼叫`FreeLibrary` , 則不會呼叫此進入點函式。
 
-載入 MFC 擴充 Dll 的 MFC 應用程式，我們建議您使用`AfxLoadLibrary`而不是`LoadLibrary`。 `AfxLoadLibrary` 處理執行緒同步處理，才能呼叫`LoadLibrary`。 介面 （函式原型），以`AfxLoadLibrary`等同於`LoadLibrary`。
+對於載入 mfc 延伸 dll 的 mfc 應用程式, 我們建議您使用`AfxLoadLibrary` `LoadLibrary`而不是。 `AfxLoadLibrary`在呼叫`LoadLibrary`之前處理執行緒同步。 的介面 (函數原型) `AfxLoadLibrary`與`LoadLibrary`相同。
 
-如果 Windows 無法載入 DLL，處理序可以嘗試從錯誤復原。 比方說，此程序無法通知錯誤的使用者，並要求使用者指定 dll 的另一個路徑。
+如果 Windows 無法載入 DLL, 進程可能會嘗試從錯誤中復原。 例如, 處理常式可能會通知使用者錯誤, 並要求使用者指定 DLL 的另一個路徑。
 
 > [!IMPORTANT]
-> 請確定指定的任何 Dll 的完整路徑。 載入檔案時，會先搜尋目前的目錄。 如果您不限定檔案的路徑，可能會載入並不是預期的檔案。 若要避免這個問題的另一個方法是使用[/DEPENDENTLOADFLAG](reference/dependentloadflag.md)連結器選項。
+> 請務必指定任何 Dll 的完整路徑。 載入檔案時, 會先搜尋目前目錄。 如果您沒有限定檔案的路徑, 可能會載入不是預期檔案的檔案。 另一個避免這種情況的方法是使用[/DEPENDENTLOADFLAG](reference/dependentloadflag.md)連結器選項。
 
 ## <a name="what-do-you-want-to-do"></a>請您指定選項。
 
@@ -40,7 +40,7 @@ ms.locfileid: "65220606"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您還想知道關於哪些方面的詳細資訊？
 
-- [動態連結程式庫搜尋順序](/windows/desktop/Dlls/dynamic-link-library-search-order)
+- [動態連結程式庫搜尋順序](/windows/win32/Dlls/dynamic-link-library-search-order)
 
 - [FreeLibrary 和 AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)
 
@@ -48,4 +48,4 @@ ms.locfileid: "65220606"
 
 ## <a name="see-also"></a>另請參閱
 
-- [建立 C /C++在 Visual Studio 中的 Dll](dlls-in-visual-cpp.md)
+- [在 Visual Studio 中建立 C++ DLL](dlls-in-visual-cpp.md)

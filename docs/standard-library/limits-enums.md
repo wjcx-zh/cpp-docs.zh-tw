@@ -5,20 +5,16 @@ f1_keywords:
 - limits/std::float_denorm_style
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
-ms.openlocfilehash: 68f0ba605b62f2492f49a2b81030c42dca80bf5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413225"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245361"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt; 列舉
 
-|||
-|-|-|
-|[float_denorm_style](#float_denorm_style)|[float_round_style](#float_round_style)|
-
-## <a name="float_denorm_style"></a>  float_denorm_style 列舉
+## <a name="float_denorm_style"></a> float_denorm_style
 
 此列舉會說明實作可選擇用來代表反正規化浮點值的各種方法 (反正規化浮點值是指太小而無法表示為正規化值的值)：
 
@@ -43,7 +39,7 @@ enum float_denorm_style {
 
 如需可存取此列舉之值的範例，請參閱 [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm)。
 
-## <a name="float_round_style"></a>  float_round_style 列舉
+## <a name="float_round_style"></a> float_round_style
 
 此列舉會說明實作可選擇用來將浮點值捨入為整數值的各種方法。
 
@@ -73,7 +69,3 @@ enum float_round_style {
 ### <a name="example"></a>範例
 
 如需可存取此列舉之值的範例，請參閱 [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style)。
-
-## <a name="see-also"></a>另請參閱
-
-[\<limits>](../standard-library/limits.md)<br/>

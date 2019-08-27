@@ -14,16 +14,16 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 18d6a8517d71cfa9c7e17a45c97f77977ec778f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385137"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449035"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
-宣告對標準資料流的讀取和寫入進行控制的物件。 這通常是您從 C++ 程式中執行輸入和輸出時唯一需要納入的標頭。
+宣告對標準資料流的讀取和寫入進行控制的物件。 這通常是您從C++程式執行輸入和輸出時唯一需要的標頭。
 
 ## <a name="syntax"></a>語法
 
@@ -31,19 +31,22 @@ ms.locfileid: "62385137"
 #include <iostream>
 ```
 
+> [!NOTE]
+> `#include <streambuf>` `#include <istream>` `#include <ostream>` Iostream > 程式庫會`#include <ios>`使用、、和語句。 \<
+
 ## <a name="remarks"></a>備註
 
 這些物件可分為兩個群組：
 
-- [cin](#cin)、[cout](#cout)、[cerr](#cerr) 及 [clog](#clog) 是位元組導向物件，會執行傳統一次一個位元組的傳輸。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)和[堵塞](#clog)是位元組導向的, 會執行傳統的位元組時傳輸。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr) 及 [wclog](#wclog) 是寬字元導向物件，會對程式在內部操作的寬字元進行雙向轉譯。
 
-在您對資料流執行特定作業後 (例如標準輸入)，您無法對相同的資料流執行不同方向的作業。 因此，舉例來說，程式無法對 [cin](#cin) 和 [wcin](#wcin) 進行互換操作。
+當您對資料流程執行某些作業 (例如標準輸入) 時, 您無法在相同的資料流程上執行不同方向的作業。 因此, 程式無法在[cin](#cin)和[wcin](#wcin)上交替運作, 例如。
 
-在此標頭中宣告的所有物件會共用特定屬性 — 您可以假設這些物件是在您所定義的任何靜態物件之前，於包含 \<iostream> 的轉譯單位中建構的。 同樣地，您可以假設這類物件不會在您定義的任何此類靜態物件的解構函式之前終結。 (但輸出資料流會在程式終止期間排清。)因此，在程式啟動之前和程式終止之後，您可以安全地讀取或寫入標準資料流。
+在此標頭中宣告的所有物件都共用什麼嗎屬性, 您可以假設它們是在您定義的任何靜態物件之前, 在包含\<iostream > 的轉譯單位中所建立。 同樣地, 您可以假設在您定義的任何這類靜態物件的析構函數之前, 這些物件不會被終結。 (但輸出資料流會在程式終止期間排清。)因此，在程式啟動之前和程式終止之後，您可以安全地讀取或寫入標準資料流。
 
-但這項保證並非一體適用。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 由於轉譯單位參與靜態建構的順序並不確定，呼叫的函式無法假設在此標頭中宣告的物件已建構。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
+不過, 這種保證並不是通用的。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 所呼叫的函式不會假設轉譯單位參與靜態結構的順序不確定, 已建立在此標頭中宣告的物件。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
 
 ### <a name="global-stream-objects"></a>全域資料流物件
 
@@ -58,7 +61,7 @@ ms.locfileid: "62385137"
 |[wclog](#wclog)|指定 `wclog` 全域資料流。|
 |[wcout](#wcout)|指定 `wcout` 全域資料流。|
 
-###  <a name="cerr"></a>  cerr
+###  <a name="cerr"></a>cerr
 
 `cerr` 物件會控制對與 `stderr` 物件 (在 \<cstdio> 中宣告) 關聯之資料流緩衝區的輸出。
 
@@ -104,7 +107,7 @@ int main( )
 }
 ```
 
-###  <a name="cin"></a>  cin
+###  <a name="cin"></a>cin
 
 指定 `cin` 全域資料流。
 
@@ -122,7 +125,7 @@ extern istream cin;
 
 #### <a name="example"></a>範例
 
-在此範例中，`cin` 會在遇到非數字字元時，在資料流上設定失敗位元。 此程式會清除失敗位元，並從資料流中刪除無效字元以繼續作業。
+在此範例中`cin` , 會在資料流程遇到非數位字元時設定失敗位。 程式會清除失敗位, 並從資料流程中去除不正確字元以繼續。
 
 ```cpp
 // iostream_cin.cpp
@@ -152,11 +155,10 @@ int main()
 ```
 
 ```Output
-
 2
 ```
 
-###  <a name="clog"></a>  clog
+###  <a name="clog"></a>阻塞
 
 指定 `clog` 全域資料流。
 
@@ -176,7 +178,7 @@ extern ostream clog;
 
 如需使用 `clog` 的範例，請參閱 [cerr](#cerr)。
 
-###  <a name="cout"></a>  cout
+###  <a name="cout"></a>cout
 
 指定 `cout` 全域資料流。
 
@@ -196,7 +198,7 @@ extern ostream cout;
 
 如需使用 `cout` 的範例，請參閱 [cerr](#cerr)。
 
-###  <a name="wcerr"></a>  wcerr
+### <a name="wcerr"></a>wcerr
 
 指定 `wcerr` 全域資料流。
 
@@ -216,7 +218,7 @@ extern wostream wcerr;
 
 如需使用 `wcerr` 的範例，請參閱 [cerr](#cerr)。
 
-###  <a name="wcin"></a>  wcin
+### <a name="wcin"></a>wcin
 
 指定 `wcin` 全域資料流。
 
@@ -236,7 +238,7 @@ extern wistream wcin;
 
 如需使用 `wcin` 的範例，請參閱 [cerr](#cerr)。
 
-###  <a name="wclog"></a>  wclog
+### <a name="wclog"></a>wclog
 
 指定 `wclog` 全域資料流。
 
@@ -256,7 +258,7 @@ extern wostream wclog;
 
 如需使用 `wclog` 的範例，請參閱 [cerr](#cerr)。
 
-###  <a name="wcout"></a>  wcout
+### <a name="wcout"></a>wcout
 
 指定 `wcout` 全域資料流。
 
@@ -279,17 +281,16 @@ extern wostream wcout;
 `wcout` 陳述式中的 `CString` 執行個體必須轉換成 `const wchar_t*`，如下列範例所示。
 
 ```
+CString cs("meow");
 
-    CString cs("meow");
-
-    wcout <<(const wchar_t*) cs <<endl;
+wcout <<(const wchar_t*) cs <<endl;
 ```
 
 如需詳細資訊，請參閱[基本 CString 運算](../atl-mfc-shared/basic-cstring-operations.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

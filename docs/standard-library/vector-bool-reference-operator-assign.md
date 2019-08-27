@@ -10,12 +10,12 @@ helpviewer_keywords:
 - = operator, with specific C++ Standard Library objects
 - reference::operator=
 ms.assetid: eed20d81-36b9-40b2-a3b6-340ed0bb4f34
-ms.openlocfilehash: b829a0b6224ca93192f15b088fcb98155bc3963a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 738f86bd6163a827b43d78f29c6e3a7124400fb7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410924"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452154"
 ---
 # <a name="vectorltboolgtreferenceoperator"></a>vector&lt;bool&gt;::reference::operator=
 
@@ -31,10 +31,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
+*再*\
 值會指派給位元的項目參考。
 
-*Val*<br/>
+*初始值*\
 要指派給位元的布林值。
 
 ## <a name="example"></a>範例
@@ -118,5 +118,5 @@ The original value of the 3rd element still stored in a bool: false
 
 ## <a name="see-also"></a>另請參閱
 
-[向量\<bool >:: reference 類別](../standard-library/vector-bool-reference-class.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[vector\<bool>::reference 類別](../standard-library/vector-bool-reference-class.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

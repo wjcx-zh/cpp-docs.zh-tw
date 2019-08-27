@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComCriticalSection class
 ms.assetid: 44e1edd2-90be-4bfe-9739-58e8b419e7d1
-ms.openlocfilehash: f3a4b50f8dd9bc460a209c47497e720529c40e58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4ce32ed4ae04bc3b390af5cf104b8a0af599f8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246640"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497285"
 ---
 # <a name="ccomcriticalsection-class"></a>CComCriticalSection 類別
 
-這個類別提供方法來取得和釋放重要區段物件的擁有權。
+這個類別會提供方法來取得和釋放重要區段物件的擁有權。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +44,7 @@ class CComCriticalSection
 |----------|-----------------|
 |[CComCriticalSection::Init](#init)|建立並初始化重要區段物件。|
 |[CComCriticalSection::Lock](#lock)|取得重要區段物件的擁有權。|
-|[CComCriticalSection::Term](#term)|釋放重要區段物件所使用的系統資源。|
+|[CComCriticalSection::Term](#term)|釋放 critical 區段物件所使用的系統資源。|
 |[CComCriticalSection::Unlock](#unlock)|釋放重要區段物件的擁有權。|
 
 ### <a name="public-data-members"></a>公用資料成員
@@ -55,17 +55,17 @@ class CComCriticalSection
 
 ## <a name="remarks"></a>備註
 
-`CComCriticalSection` 類似於類別[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)，只不過您必須明確地初始化，並釋放重要區段。
+`CComCriticalSection`類似于類別[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md), 不同之處在于您必須明確初始化並釋放重要區段。
 
-一般而言，您可以使用`CComCriticalSection`經由**typedef**名稱[CriticalSection](ccommultithreadmodel-class.md#criticalsection)。 此名稱會參考`CComCriticalSection`時[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)正在使用。
+一般來說, 您會`CComCriticalSection`透過**typedef**名稱[CriticalSection](ccommultithreadmodel-class.md#criticalsection)來使用。 使用[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)時`CComCriticalSection` , 會參考此名稱。
 
-請參閱[CComCritSecLock 類別](../../atl/reference/ccomcritseclock-class.md)有更安全的方法，可使用比呼叫這個類別`Lock`和`Unlock`直接。
+請參閱[CComCritSecLock 類別](../../atl/reference/ccomcritseclock-class.md), 以取得更安全的方式來使用`Lock`此`Unlock`類別, 而不是直接呼叫和。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcore.h
+**標頭:** atlcore。h
 
-##  <a name="ccomcriticalsection"></a>  CComCriticalSection::CComCriticalSection
+##  <a name="ccomcriticalsection"></a>CComCriticalSection::CComCriticalSection
 
 建構函式。
 
@@ -75,11 +75,11 @@ CComCriticalSection() throw();
 
 ### <a name="remarks"></a>備註
 
-設定組[m_sec](#m_sec)為 NULL 的資料成員。
+將[m_sec](#m_sec)資料成員設定為 Null。
 
-##  <a name="init"></a>  CComCriticalSection::Init
+##  <a name="init"></a>CComCriticalSection:: Init
 
-呼叫 Win32 函式[InitializeCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-initializecriticalsection)，這會初始化中包含的重要區段物件[m_sec](#m_sec)資料成員。
+呼叫 Win32 函數[InitializeCriticalSection](/windows/win32/api/synchapi/nf-synchapi-initializecriticalsection), 此函式會初始化[m_sec](#m_sec)資料成員中包含的重要區段物件。
 
 ```
 HRESULT Init() throw();
@@ -87,11 +87,11 @@ HRESULT Init() throw();
 
 ### <a name="return-value"></a>傳回值
 
-成功時，E_OUTOFMEMORY 或 E_FAIL，在失敗時傳回 S_OK。
+會在失敗時傳回 S_OK (如果成功)、E_OUTOFMEMORY 或 E_FAIL。
 
-##  <a name="lock"></a>  CComCriticalSection::Lock
+##  <a name="lock"></a>CComCriticalSection:: Lock
 
-呼叫 Win32 函式[EnterCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-entercriticalsection)，哪一個等候，直到執行緒可以取得所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。
+呼叫 Win32 函式[EnterCriticalSection](/windows/win32/api/synchapi/nf-synchapi-entercriticalsection), 這會等到執行緒可以取得包含在[m_sec](#m_sec)資料成員中之重要區段物件的擁有權。
 
 ```
 HRESULT Lock() throw();
@@ -99,23 +99,23 @@ HRESULT Lock() throw();
 
 ### <a name="return-value"></a>傳回值
 
-成功時，E_OUTOFMEMORY 或 E_FAIL，在失敗時傳回 S_OK。
+會在失敗時傳回 S_OK (如果成功)、E_OUTOFMEMORY 或 E_FAIL。
 
 ### <a name="remarks"></a>備註
 
-重要區段物件必須先呼叫初始化[Init](#init)方法。 當受保護的程式碼完成執行時，必須呼叫執行緒[Unlock](#unlock)釋放重要區段的擁有權。
+必須先使用[Init](#init)方法的呼叫來初始化 critical 區段物件。 當受保護的程式碼完成執行時, 執行緒必須呼叫[解除鎖定](#unlock)以釋放重要區段的擁有權。
 
-##  <a name="m_sec"></a>  CComCriticalSection::m_sec
+##  <a name="m_sec"></a>CComCriticalSection::m_sec
 
-包含所有使用的重要區段物件`CComCriticalSection`方法。
+包含所有`CComCriticalSection`方法所使用的重要區段物件。
 
 ```
 CRITICAL_SECTION m_sec;
 ```
 
-##  <a name="term"></a>  CComCriticalSection::Term
+##  <a name="term"></a>CComCriticalSection:: Term
 
-呼叫 Win32 函式[DeleteCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-deletecriticalsection)，其中包含在重要區段物件所使用的資源全部釋出[m_sec](#m_sec)資料成員。
+呼叫 Win32 函式[DeleteCriticalSection](/windows/win32/api/synchapi/nf-synchapi-deletecriticalsection), 此函式會釋放[m_sec](#m_sec)資料成員中包含的重要區段物件所使用的所有資源。
 
 ```
 HRESULT Term() throw();
@@ -127,11 +127,11 @@ HRESULT Term() throw();
 
 ### <a name="remarks"></a>備註
 
-一次`Term`已呼叫的重要區段不可以用於同步處理。
+呼叫`Term`之後, 重要區段就無法再用於同步處理。
 
-##  <a name="unlock"></a>  CComCriticalSection::Unlock
+##  <a name="unlock"></a>CComCriticalSection:: Unlock
 
-呼叫 Win32 函式[LeaveCriticalSection](/windows/desktop/api/synchapi/nf-synchapi-leavecriticalsection)，這會釋放所含的重要區段物件的擁有權[m_sec](#m_sec)資料成員。
+呼叫 Win32 函式[LeaveCriticalSection](/windows/win32/api/synchapi/nf-synchapi-leavecriticalsection), 這會釋放[m_sec](#m_sec)資料成員中包含的重要區段物件的擁有權。
 
 ```
 HRESULT Unlock() throw();
@@ -143,10 +143,10 @@ HRESULT Unlock() throw();
 
 ### <a name="remarks"></a>備註
 
-若要先取得擁有權，必須呼叫的執行緒[鎖定](#lock)方法。 每次呼叫`Lock`需要對應呼叫`Unlock`釋放重要區段的擁有權。
+若要先取得擁有權, 執行緒必須呼叫[Lock](#lock)方法。 對於的每`Lock`個呼叫都需要相對`Unlock`應的呼叫, 才能釋放重要區段的擁有權。
 
 ## <a name="see-also"></a>另請參閱
 
 [CComFakeCriticalSection 類別](../../atl/reference/ccomfakecriticalsection-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)<br/>
+[類別總覽](../../atl/atl-class-overview.md)<br/>
 [CComCritSecLock 類別](../../atl/reference/ccomcritseclock-class.md)

@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d587f1cfa6ec38dd564da196da8130bffac11302
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373267"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69503143"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC 類別
 
-裝置內容類別衍生自[CDC](../../mfc/reference/cdc-class.md)。
+衍生自[CDC](../../mfc/reference/cdc-class.md)的裝置內容類別。
 
 ## <a name="syntax"></a>語法
 
@@ -35,27 +35,27 @@ class CPaintDC : public CDC
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaintDC::CPaintDC](#cpaintdc)|建構`CPaintDC`連接到指定[CWnd](../../mfc/reference/cwnd-class.md)。|
+|[CPaintDC::CPaintDC](#cpaintdc)|結構連接到指定的[CWnd。](../../mfc/reference/cwnd-class.md) `CPaintDC`|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|包含[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)用來繪製工作區。|
+|[CPaintDC::m_ps](#m_ps)|包含用來繪製工作區的[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct) 。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CPaintDC::m_hWnd](#m_hwnd)|此 HWND`CPaintDC`附加物件。|
+|[CPaintDC::m_hWnd](#m_hwnd)|附加這個`CPaintDC`物件的 HWND。|
 
 ## <a name="remarks"></a>備註
 
-它會執行[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)在建構階段並[CWnd::EndPaint](../../mfc/reference/cwnd-class.md#endpaint)在解構階段。
+它會在結構時間執行[cwnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint) , 並在析構時間執行[Cwnd:: EndPaint](../../mfc/reference/cwnd-class.md#endpaint) 。
 
-A`CPaintDC`回應時，才會使用物件[WM_PAINT](/windows/desktop/gdi/wm-paint)訊息，通常會在您`OnPaint`訊息處理常式成員函式。
+物件只能在回應[WM_PAINT](/windows/win32/gdi/wm-paint)訊息時使用, 通常是在您`OnPaint`的訊息處理常式成員函式中。 `CPaintDC`
 
-如需有關使用`CPaintDC`，請參閱 <<c2> [ 裝置內容](../../mfc/device-contexts.md)。
+如需使用`CPaintDC`的詳細資訊, 請參閱[裝置](../../mfc/device-contexts.md)內容。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -69,9 +69,9 @@ A`CPaintDC`回應時，才會使用物件[WM_PAINT](/windows/desktop/gdi/wm-pain
 
 **標題:** afxwin.h
 
-##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
+##  <a name="cpaintdc"></a>CPaintDC:: CPaintDC
 
-建構`CPaintDC`物件，來繪製，準備應用程式視窗，並將[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)結構[m_ps](#m_ps)成員變數。
+會建立`CPaintDC`物件、準備用於繪製的應用程式視窗, 並將[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)結構儲存在[m_ps](#m_ps)成員變數中。
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -80,19 +80,19 @@ explicit CPaintDC(CWnd* pWnd);
 ### <a name="parameters"></a>參數
 
 *pWnd*<br/>
-指向`CWnd`物件，`CPaintDC`所屬的物件。
+指向`CPaintDC`物件所屬`CWnd`的物件。
 
 ### <a name="remarks"></a>備註
 
-例外狀況 (型別的`CResourceException`) 便會擲回 Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)呼叫就會失敗。 裝置內容可能無法使用，如果 Windows 已有配置所有其可用的裝置內容。 您的應用程式競爭五個一般顯示的可用內容，在 Windows 下一次。
+如果 Windows [GetDC](/windows/win32/api/winuser/nf-winuser-getdc)呼叫失敗`CResourceException`, 則會擲回例外狀況 (屬於類型)。 如果 Windows 已配置所有可用的裝置內容, 則可能無法使用裝置內容。 您的應用程式會在 Windows 下的任何指定時間, 競爭五個通用的顯示內容。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCDocView#97](../../mfc/codesnippet/cpp/cpaintdc-class_1.cpp)]
 
-##  <a name="m_hwnd"></a>  CPaintDC::m_hWnd
+##  <a name="m_hwnd"></a>CPaintDC:: m_hWnd
 
-`HWND`此`CPaintDC`附加物件。
+附加`HWND` 這個`CPaintDC`物件的目標。
 
 ```
 HWND m_hWnd;
@@ -100,7 +100,7 @@ HWND m_hWnd;
 
 ### <a name="remarks"></a>備註
 
-*m_hWnd*是受保護的類型 HWND 的變數。
+*m_hWnd*是 hWnd 類型的受保護變數。
 
 ### <a name="example"></a>範例
 
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` 這類型的公用成員變數[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)。
+`m_ps`是[PAINTSTRUCT](/windows/win32/api/winuser/ns-winuser-paintstruct)類型的公用成員變數。
 
 ```
 PAINTSTRUCT m_ps;
@@ -116,15 +116,15 @@ PAINTSTRUCT m_ps;
 
 ### <a name="remarks"></a>備註
 
-很`PAINTSTRUCT`傳遞至且由填妥[cwnd:: Beginpaint](../../mfc/reference/cwnd-class.md#beginpaint)。
+它是由`PAINTSTRUCT` [CWnd:: BeginPaint](../../mfc/reference/cwnd-class.md#beginpaint)傳遞和填寫的。
 
-`PAINTSTRUCT`包含應用程式用來繪製視窗相關聯的工作區資訊`CPaintDC`物件。
+包含的資訊可讓應用程式用來繪製`CPaintDC`與物件相關聯之視窗的工作區。 `PAINTSTRUCT`
 
-請注意，您可以存取的裝置內容控制代碼，透過`PAINTSTRUCT`。 不過，您可以存取的控制代碼更直接透過`m_hDC`成員變數，`CPaintDC`繼承自 CDC。
+請注意, 您可以透過`PAINTSTRUCT`存取裝置內容控制碼。 不過, 您可以透過`m_hDC` `CPaintDC`繼承自 CDC 的成員變數, 更直接存取控制碼。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CPaintDC::m_hWnd](#m_hwnd)。
+  請參閱[CPaintDC:: m_hWnd](#m_hwnd)的範例。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - threading [MFC], hot keys in CHotKeyCtrl
 - access keys [MFC], hot keys
 ms.assetid: b6021274-1498-483f-bcbf-ba5723547cc8
-ms.openlocfilehash: a54aa878b0160132157879127f8335c951e91785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 49bac6ac357924c26f131bbd8e1092cd74514167
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306364"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69511147"
 ---
 # <a name="thread-specific-hot-keys"></a>執行緒特定的熱鍵
 
-應用程式設定執行緒專用的快速鍵 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)) 利用 Windows`RegisterHotKey`函式。 當使用者按下執行緒特定的熱鍵時，Windows 會張貼[WM_HOTKEY](/windows/desktop/inputdev/wm-hotkey)訊息至特定執行緒之訊息佇列的開頭。 WM_HOTKEY 訊息包含虛擬按鍵碼、 移位狀態和使用者定義的已按下特定快速鍵的識別碼。 如需標準虛擬按鍵碼的清單，請參閱 Winuser.h。 如需有關這個方法的詳細資訊，請參閱 < [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey)。
+應用程式會使用 Windows `RegisterHotKey`函數來設定執行緒特定的熱鍵 ([CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md))。 當使用者按下執行緒特定的熱鍵時, Windows 會將[WM_HOTKEY](/windows/win32/inputdev/wm-hotkey)訊息張貼至特定執行緒訊息佇列的開頭。 WM_HOTKEY 訊息包含已按下之特定熱鍵的虛擬按鍵程式碼、移位狀態和使用者定義的識別碼。 如需標準虛擬按鍵代碼的清單, 請參閱 Winuser。 如需此方法的詳細資訊, 請參閱[RegisterHotKey](/windows/win32/api/winuser/nf-winuser-registerhotkey)。
 
-請注意，移位狀態旗標來呼叫中使用`RegisterHotKey`不是所傳回的相同[GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey)成員函式; 您必須將轉譯這些旗標，然後再呼叫`RegisterHotKey`。
+請注意, 在呼叫`RegisterHotKey`中使用的移位狀態旗標與[GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey)成員函式所傳回的不同, 在呼叫`RegisterHotKey`之前, 您必須先轉譯這些旗標。
 
 ## <a name="see-also"></a>另請參閱
 

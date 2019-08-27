@@ -25,12 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fabd18fb28cb5ea13dfb156ea21e8743c2afd49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347466"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69500275"
 ---
 # <a name="clock"></a>時鐘
 
@@ -44,13 +44,13 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>傳回值
 
-CRT 初始化在開始處理序之後, 經過的時間測量單位**CLOCKS_PER_SEC**每秒的單位。 如果已耗用時間無法使用或已超過可記錄為最大正時間**clock_t 要求**類型，此函式會傳回值`(clock_t)(-1)`。
+從進程開始進行 CRT 初始化以來經過的時間, 以每秒的**CLOCKS_PER_SEC**單位來測量。 如果已耗用的時間無法使用, 或已超過可記錄為**clock_t**類型的最大正面時間, 則函式會傳回`(clock_t)(-1)`值。
 
 ## <a name="remarks"></a>備註
 
-**時鐘**函式會告訴 CRT 初始化程序啟動期間過多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函式。 若要判斷經過的時間，以秒為單位，將分割所傳回的值**時鐘**函式巨集所**CLOCKS_PER_SEC**。
+**Clock**函式會告訴在進程啟動期間, 自 CRT 初始化之後已經過了多少時鐘時間。 請注意，此函式未完全符合將淨 CPU 時間指定為傳回值的 ISO C。 若要取得 CPU 時間，請使用 Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes) 函式。 若要判斷經過的時間 (以秒為單位), 請將**clock**函數所傳回的值除以宏**CLOCKS_PER_SEC**。
 
-有足夠的時間，所傳回的值**時鐘**可能會超過最大正值**clock_t 要求**。 當執行程序更久，所傳回的值**時鐘**總是`(clock_t)(-1)`、 ISO C99 標準 (7.23.2.1) 和 ISO C11 標準 (7.27.2.1) 所指定。 Microsoft 實作**clock_t 要求**作為**長**，32 位元帶正負號的整數，而**CLOCKS_PER_SEC**巨集定義為 1000年。 這可提供最多**時鐘**函式傳回值 2147483.647 秒，或大約 24.8 天。 所傳回的值並不依賴**時鐘**已執行超過這段時間的處理序中。 您可以使用 64 位元[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)多年來的記錄處理序已耗用時間的函式。
+有足夠的時間, 由**clock**傳回的值可能會超過**clock_t**的最大正數值。 當程式執行得更長時, **clock**所傳回的值一律`(clock_t)(-1)`為, 如 iso C99 standard (7.23.2.1) 和 iso C11 standard (7.27.2.1) 所指定。 Microsoft 會將**clock_t**實作為**長時間**、帶正負號的32位整數, 並將**CLOCKS_PER_SEC**巨集定義為1000。 這會提供最大的**時鐘**函數傳回值2147483.647 秒, 或約24.8 天。 請勿依賴**時鐘**在執行超過此時間長度的進程中所傳回的值。 您可以使用64位[時間](time-time32-time64.md)函式或 Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter)函數來記錄處理多年的已耗用時間。
 
 ## <a name="requirements"></a>需求
 

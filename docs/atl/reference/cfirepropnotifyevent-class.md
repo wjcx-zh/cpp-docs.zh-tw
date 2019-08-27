@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CFirePropNotifyEvent class
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
-ms.openlocfilehash: 493bc00708d031f1bf7a4eb74d56e927a9c3f1dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245487"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496944"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent 類別
 
-這個類別提供方法來通知控制項屬性變更有關容器的接收器。
+這個類別會提供方法來通知容器有關控制項屬性變更的接收。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -35,26 +35,26 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|（靜態）通知容器接收已變更的控制項屬性。|
-|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|（靜態）通知控制項屬性即將變更的容器的接收器。|
+|[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|靜止通知容器的接收器, 控制項屬性已變更。|
+|[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|靜止通知容器的接收, 控制項屬性即將變更。|
 
 ## <a name="remarks"></a>備註
 
-`CFirePropNotifyEvent` 有兩種方法，通知控制項屬性已變更，或將變更容器的接收器。
+`CFirePropNotifyEvent`有兩種方法可通知容器的接收, 控制項屬性已變更或即將變更。
 
-如果實作您的控制項類別衍生自`IPropertyNotifySink`，則`CFirePropNotifyEvent`當您呼叫時，會叫用方法`FireOnRequestEdit`或`FireOnChanged`。 如果您的控制項類別不衍生自`IPropertyNotifySink`，這些函式的呼叫會傳回 S_OK。
+如果實作為控制項的類別衍生自, `IPropertyNotifySink`則當`CFirePropNotifyEvent`您呼叫或`FireOnChanged`時, 就`FireOnRequestEdit`會叫用這些方法。 如果您的控制項類別不是衍生`IPropertyNotifySink`自, 則這些函式的呼叫會傳回 S_OK。
 
-如需建立控制項的詳細資訊，請參閱[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)。
+如需建立控制項的詳細資訊, 請參閱[ATL 教學](../../atl/active-template-library-atl-tutorial.md)課程。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlctl.h
+**標頭:** atlctl。h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
-告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性已變更的介面。
+通知所有已連接的[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面 (在物件的每個連接點上), 指定的物件屬性已變更。
 
 ```
 static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
@@ -63,22 +63,22 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>參數
 
 *pUnk*<br/>
-[in]指標`IUnknown`傳送通知的物件。
+在傳送通知之物件的指標。 `IUnknown`
 
 *dispID*<br/>
-[in]已變更之屬性的識別項。
+在已變更之屬性的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此函式是安全地呼叫，即使您的控制項不支援連接點。
+即使您的控制項不支援連接點, 也可以安全地呼叫這個函式。
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
-告知所有已連接[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink) （在每個物件的連接點） 指定的物件屬性即將變更的介面。
+通知所有連接的[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)介面 (在物件的每個連接點上), 指定的物件屬性即將變更。
 
 ```
 static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
@@ -87,19 +87,19 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 ### <a name="parameters"></a>參數
 
 *pUnk*<br/>
-[in]指標`IUnknown`傳送通知的物件。
+在傳送通知之物件的指標。 `IUnknown`
 
 *dispID*<br/>
-[in]若要變更之屬性的識別項。
+在要變更之屬性的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-其中一個標準的 HRESULT 值。
+其中一個標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此函式是安全地呼叫，即使您的控制項不支援連接點。
+即使您的控制項不支援連接點, 也可以安全地呼叫這個函式。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

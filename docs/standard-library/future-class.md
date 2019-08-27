@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::future [C++], wait
 - std::future [C++], wait_for
 - std::future [C++], wait_until
-ms.openlocfilehash: 9ca18e62038d93a50b592868f71223962a22857d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1519fa105f2cd73c1165bb30264828aa987fbd35
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159323"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458447"
 ---
 # <a name="future-class"></a>future 類別
 
@@ -57,7 +57,7 @@ class future;
 |[get](#get)|擷取以相關的非同步狀態儲存的結果。|
 |[share](#share)|將物件轉換為 `shared_future`。|
 |[valid](#valid)|指定物件是否不是空的。|
-|[wait](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
+|[等候](#wait)|封鎖目前的執行緒，直到相關聯的非同步狀態就緒為止。|
 |[wait_for](#wait_for)|封鎖直到相關聯的非同步狀態就緒為止，或直到指定的時間已過為止。|
 |[wait_until](#wait_until)|封鎖直到相關聯的非同步狀態就緒為止，或直到到了指定的時間點為止。|
 
@@ -69,7 +69,7 @@ class future;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<未來 >
+**標頭:** \<未來 >
 
 **命名空間：** std
 
@@ -84,14 +84,14 @@ future(future&& Other) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*其他*<br/>
-`future` 物件。
+*另一方面*\
+          `future` 物件。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會建構沒有任何相關非同步狀態的 `future` 物件。
 
-第二個建構函式建構`future`物件，並將轉移相關聯的非同步狀態，從*其他*。 *其他*不再具有相關聯的非同步狀態。
+第二個函式`future`會建立物件, 並將相關聯的非同步狀態傳送至*另*一個。 *另*一個不再具有相關聯的非同步狀態。
 
 ## <a name="get"></a>  future::get
 
@@ -111,7 +111,7 @@ Ty get();
 
 就部分特製化 `future<Ty&>` 而言，預存值實際上是對傳遞給非同步提供者作為傳回值之物件的參考。
 
-因為沒有預存的值存在特製化`future<void>`，則方法會傳回**void**。
+因為特製化`future<void>`沒有已儲存的值, 所以此方法會傳回**void**。
 
 在其他特製化中，此方法會從預存值中移動其傳回值。 因此，請只呼叫此方法一次。
 
@@ -125,8 +125,8 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="parameters"></a>參數
 
-*右邊*<br/>
-`future` 物件。
+*再*\
+          `future` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -134,7 +134,7 @@ future& operator=(future&& Right) noexcept;
 
 ### <a name="remarks"></a>備註
 
-轉移之後，*右*不再具有相關聯的非同步狀態。
+在傳送之後,*右*不會再有相關聯的非同步狀態。
 
 ## <a name="share"></a>  future::share
 
@@ -158,7 +158,7 @@ bool valid() noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-**true**如果物件有相關聯的非同步狀態; 否則**false**。
+如果物件具有相關聯的非同步狀態, 則為**true** ;否則**為 false**。
 
 ## <a name="wait"></a>  future::wait
 
@@ -183,7 +183,7 @@ future_status wait_for(const chrono::duration<Rep, Period>& Rel_time) const;
 
 ### <a name="parameters"></a>參數
 
-*Rel_time*<br/>
+*Rel_time*\
 [chrono::duration](../standard-library/duration-class.md) 物件，會指定執行緒封鎖的時間間隔上限。
 
 ### <a name="return-value"></a>傳回值
@@ -205,7 +205,7 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ### <a name="parameters"></a>參數
 
-*Abs_time*<br/>
+*Abs_time*\
 [chrono::time_point](../standard-library/time-point-class.md) 物件，會指定可將執行緒解除封鎖的時間。
 
 ### <a name="return-value"></a>傳回值
@@ -218,5 +218,5 @@ future_status wait_until(const chrono::time_point<Clock, Duration>& Abs_time) co
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - access keys [MFC], hot keys
 - global hot keys [MFC]
 ms.assetid: e0b95d14-c571-4c9a-9cd1-e7fc1f0e278d
-ms.openlocfilehash: eedeb0547320c8b421fa72647f51b02f834af300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59918648ea24fd1e2a86ca786de3081cd6cca2df
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219602"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69508558"
 ---
 # <a name="global-hot-keys"></a>全域熱鍵
 
-全域熱鍵是與特定藉視窗相關聯。 它可讓使用者啟動的視窗，從系統的任何部分。 應用程式設定所傳送的特定視窗的全域快速鍵[WM_SETHOTKEY](/windows/desktop/inputdev/wm-sethotkey)至該視窗的訊息。 比方說，如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)物件和`pMainWnd`是指標，要在按下便捷鍵時啟動視窗，您可以使用下列程式碼來建立快速鍵與控制項中所指定的關聯視窗所指的`pMainWnd`。
+全域熱鍵會與特定的 nonchild 視窗相關聯。 它可讓使用者從系統的任何部分啟動視窗。 應用程式會將[WM_SETHOTKEY](/windows/win32/inputdev/wm-sethotkey)訊息傳送至該視窗, 以設定特定視窗的全域熱鍵。 例如, 如果`m_HotKeyCtrl`是[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)物件, 而且`pMainWnd`是按下快速鍵時要啟動之視窗的指標, 您可以使用下列程式碼, 將控制項中指定的熱鍵與所指向的視窗產生關聯`pMainWnd`.
 
 [!code-cpp[NVC_MFCControlLadenDialog#18](../mfc/codesnippet/cpp/global-hot-keys_1.cpp)]
 
-每當使用者按下的全域快速鍵，指定視窗會收到[WM_SYSCOMMAND](/windows/desktop/menurc/wm-syscommand)指定的訊息**SC_HOTKEY**做為命令的類型。 此訊息也會啟用接收視窗。 此訊息不包含任何有關已按下的確切索引鍵，因為使用此方法不允許區別不同的快速鍵可能會附加到相同的視窗。 熱鍵之前會保持有效傳送的應用程式**WM_SETHOTKEY**結束。
+每當使用者按下全域熱鍵時, 指定的視窗就會收到指定**SC_HOTKEY**做為命令類型的[WM_SYSCOMMAND](/windows/win32/menurc/wm-syscommand)訊息。 此訊息也會啟用接收它的視窗。 因為此訊息不包含所按的確切索引鍵上的任何資訊, 所以使用這個方法不允許區別可能附加至相同視窗的不同快速鍵。 熱鍵會一直有效, 直到傳送**WM_SETHOTKEY**的應用程式結束為止。
 
 ## <a name="see-also"></a>另請參閱
 

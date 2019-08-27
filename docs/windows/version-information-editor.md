@@ -23,16 +23,16 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: a17539d0a9fb94c440d65275e9d032182088ae6e
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504491"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513637"
 ---
 # <a name="version-information-editor-c"></a>版本資訊編輯器 (C++)
 
-版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 具有**版本資訊編輯器**，您建立和維護這項資料會儲存在版本資訊資源。 應用程式時，不需要版本資訊資源，但它是有用的地方可以收集並識別應用程式的資訊。 安裝程式 API 也使用版本資訊。
+版本資訊包含公司和產品識別碼、產品版本號碼，以及版權和商標通知。 使用**版本資訊編輯器**, 您可以建立和維護此資料, 這會儲存在版本資訊資源中。 應用程式不需要版本資訊資源, 但這是收集識別應用程式之資訊的實用位置。 安裝程式 API 也使用版本資訊。
 
 > [!NOTE]
 > Windows 標準是只能有一個版本資源，名為 VS_VERSION_INFO。
@@ -40,45 +40,45 @@ ms.locfileid: "66504491"
 版本資訊資源有一個上層區塊以及一或多個下層區塊：頂端是單一固定的資訊區塊，底部是一或多個版本資訊區塊 (適用於其他語言和/或字元集)。 上層區塊有可編輯的數值方塊和可選取的下拉式清單。 下層區塊只有可編輯的文字方塊。
 
 > [!NOTE]
-> 在使用時**版本資訊編輯器**，在許多情況下您可以按一下滑鼠右鍵以顯示資源特定命令的捷徑功能表。 例如，如果您選取指向區塊標頭項目時，快顯功能表會顯示**新增版本區塊資訊**並**刪除版本區塊資訊**命令。
+> 使用**版本資訊編輯器**時, 在許多情況下, 您可以用滑鼠右鍵按一下, 以顯示資源特定命令的快捷方式功能表。 例如, 如果您選取 [當指向區塊標頭專案時], 快捷方式功能表會顯示新的 [**版本區塊資訊**] 和 [**刪除版本區塊資訊**] 命令。
 
 ## <a name="how-to"></a>如何
 
-**版本資訊編輯器**可讓您：
+**版本資訊編輯器**可讓您:
 
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>編輯版本資訊資源內的字串
 
-選擇它，然後再次開始編輯選取的項目一次。 請變更直接在**版本資訊**資料表或在[屬性 視窗](/visualstudio/ide/reference/properties-window)。 您所做的變更會反映在這兩個位置。
+選取一次專案來選擇它, 然後再次開始編輯它。 直接在**版本資訊**資料表或[屬性視窗](/visualstudio/ide/reference/properties-window)中進行變更。 您所做的變更會反映在這兩個位置。
 
-編輯時`FILEFLAGS`中的索引鍵**版本資訊編輯器**，發現無法設定**偵錯**，**私用組建**，或**Special Build**中的屬性**屬性**.rc 檔的視窗：
+在`FILEFLAGS` [**版本資訊編輯器**] 中編輯索引鍵時, 請注意, 您無法在 .rc 檔的 [**屬性**] 視窗中設定 [ **Debug**]、[ **Private build**] 或 [**特殊組建**] 屬性:
 
-   - **版本資訊編輯器**設定**偵錯**屬性`#ifdef`中的資源指令碼中，根據`_DEBUG`組建旗標。
+   - **版本資訊編輯器**會根據`_DEBUG`組建旗標, `#ifdef`在資源腳本中以設定 Debug 屬性。
 
-  - 如果`Private Build`機碼具有**值**中設定**版本資訊**資料表中，對應**私用組建**中的屬性**屬性**  視窗`FILEFLAGS`索引鍵會是 **，則為 True**。 如果**值**是空的則屬性會是**False**。 同樣地， **Special Build**中的索引鍵**版本資訊**資料表的繫結至**Special Build**屬性`FILEFLAGS`索引鍵。
+  - `FILEFLAGS`如果索引鍵在版本資訊資料表中有設定的值,則索引鍵之[屬性]視窗中的對應私用組建屬性將會是True。`Private Build` 如果**Value**是空的, 屬性將會是**False**。 同樣地,**版本資訊**表中的**特殊組建**金鑰會系結至索引`FILEFLAGS`鍵的**特殊組建**屬性。
 
-您可以選取其中一個來排序字串區塊的資訊順序**金鑰**或**值**資料行標題。 這些標題會自動依照選取的順序重新排列資訊。
+您可以選取 [索引**鍵**] 或 [**值**] 資料行標題, 來排序字串區塊的資訊順序。 這些標題會自動依照選取的順序重新排列資訊。
 
-### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>若要加入另一種語言 （新的版本資訊區塊） 的版本資訊
+### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>新增其他語言的版本資訊 (新的版本資訊區塊)
 
 1. 按兩下版本資訊資源，在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中開啟它。
 
-1. 在版本資訊表內按一下滑鼠右鍵，然後選擇 **新的版本資訊區塊**。
+1. 以滑鼠右鍵按一下 [版本資訊] 資料表, 然後選擇 [**新增版本資訊區塊**]。
 
    這個命令會將額外的資訊區塊加入目前的版本資訊資源中，並在 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)中開啟其對應的屬性。
 
-1. 在 [屬性]  視窗中，為新的區塊選擇適當的語言和字元集。
+1. 在 [屬性] 視窗中，為新的區塊選擇適當的語言和字元集。
 
 ### <a name="to-delete-a-version-information-block"></a>刪除版本資訊區塊
 
 1. 按兩下版本資訊資源圖示，在 [資源檢視](how-to-create-a-resource-script-file.md#create-resources)中開啟它。
 
-1. 以滑鼠右鍵按一下您想要刪除選取的區塊標頭**刪除版本資訊區塊**。
+1. 以滑鼠右鍵按一下您想要刪除的區塊標頭, 然後選擇 [**刪除版本資訊區塊**]。
 
-   此命令會刪除選取的標頭，並保留其餘的版本資訊。 您無法復原的動作。
+   此命令會刪除選取的標頭, 並將其餘的版本資訊保留不變。 您無法復原此動作。
 
 ### <a name="to-access-version-information-from-within-your-program"></a>存取程式內的版本資訊
 
-如果您想要存取程式內的版本資訊，請使用 [GetFileVersionInfo](/windows/desktop/api/winver/nf-winver-getfileversioninfoa) 函式和 [VerQueryValue](/windows/desktop/api/winver/nf-winver-verqueryvaluea) 函式。
+如果您想要存取程式內的版本資訊，請使用 [GetFileVersionInfo](/windows/win32/api/winver/nf-winver-getfileversioninfow) 函式和 [VerQueryValue](/windows/win32/api/winver/nf-winver-verqueryvaluew) 函式。
 
 ## <a name="requirements"></a>需求
 
@@ -87,5 +87,5 @@ Win32
 ## <a name="see-also"></a>另請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
-[功能表與其他資源](/windows/desktop/menurc/resources)<br/>
-[版本資訊 (Windows)](/windows/desktop/menurc/version-information)
+[功能表與其他資源](/windows/win32/menurc/resources)<br/>
+[版本資訊 (Windows)](/windows/win32/menurc/version-information)

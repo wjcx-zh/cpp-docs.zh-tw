@@ -22,19 +22,19 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eae6e149cf6f7422d0653c1c15f46985d8d55c8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246045"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496852"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT 類別
 
-這個類別會實作包含在另一個物件的視窗。
+這個類別會執行包含在另一個物件中的視窗。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -46,21 +46,21 @@ class CContainedWindowT : public TBase
 #### <a name="parameters"></a>參數
 
 *TBase*<br/>
-您的新類別的基底類別。 預設的基底類別是`CWindow`。
+新類別的基類。 預設基類是`CWindow`。
 
 *TWinTraits*<br/>
-定義視窗樣式的 traits 類別。 預設為 `CControlWinTraits`。
+定義視窗樣式的特性類別。 預設為 `CControlWinTraits`。
 
 > [!NOTE]
-> [CContainedWindow](ccontainedwindowt-class.md)是的特製化`CContainedWindowT`。 如果您想要變更的基底類別或特性，使用`CContainedWindowT`直接。
+> [CContainedWindow](ccontainedwindowt-class.md)是的特製化`CContainedWindowT`。 如果您想要變更基類或特性, 請直接使用`CContainedWindowT` 。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|建構函式。 資料成員初始化為指定的訊息對應將會處理包含的視窗的訊息。|
+|[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|建構函式。 初始化資料成員, 以指定哪一個訊息對應將處理包含的視窗訊息。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -71,31 +71,31 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::GetCurrentMessage](#getcurrentmessage)|傳回目前訊息。|
 |[CContainedWindowT::RegisterWndSuperclass](#registerwndsuperclass)|註冊包含視窗的視窗類別。|
 |[CContainedWindowT::SubclassWindow](#subclasswindow)|子類別化視窗。|
-|[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|變更的訊息對應用來處理包含的視窗的訊息。|
+|[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|變更要用來處理所包含視窗訊息的訊息對應。|
 |[CContainedWindowT::UnsubclassWindow](#unsubclasswindow)|還原先前子類別化的視窗。|
-|[CContainedWindowT::WindowProc](#windowproc)|（靜態）處理傳送至自主的視窗訊息。|
+|[CContainedWindowT::WindowProc](#windowproc)|靜止處理傳送至包含視窗的訊息。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|識別哪些訊息對應將會處理包含的視窗的訊息。|
-|[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|指定新的視窗類別為基礎的現有視窗類別名稱。|
+|[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|識別哪一個訊息對應會處理包含的視窗訊息。|
+|[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|指定現有的視窗類別名稱, 新的視窗類別將以此為基礎。|
 |[CContainedWindowT::m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|指向視窗類別的原始視窗程序。|
-|[CContainedWindowT::m_pObject](#m_pobject)|指向包含的物件。|
+|[CContainedWindowT::m_pObject](#m_pobject)|指向包含物件。|
 
 ## <a name="remarks"></a>備註
 
-`CContainedWindowT` 實作包含在另一個物件的視窗。 `CContainedWindowT`視窗程序會使用訊息對應中包含的物件，以直接將訊息至適當的處理常式。 在建構時`CContainedWindowT`物件時，您指定應該使用哪一個訊息對應。
+`CContainedWindowT`執行包含在另一個物件中的視窗。 `CContainedWindowT`的視窗程式會在包含物件中使用訊息對應, 將訊息導向適當的處理常式。 在建立`CContainedWindowT`物件時, 您可以指定應該使用的訊息對應。
 
-`CContainedWindowT` 可讓您建立新的視窗由 superclassing 現有視窗類別。 `Create`方法會先註冊視窗類別以現有的類別為基礎，但使用`CContainedWindowT::WindowProc`。 `Create` 接著會建立這個新的視窗類別為基礎的視窗。 每個執行個體`CContainedWindowT`可以超級類別不同的視窗類別。
+`CContainedWindowT`可讓您藉由 superclassing 現有的視窗類別來建立新視窗。 方法會先註冊以現有類別為基礎的視窗類別, 但會使用`CContainedWindowT::WindowProc`。 `Create` `Create`然後根據這個新的視窗類別建立視窗。 的`CContainedWindowT`每個實例都可以類別不同的視窗類別。
 
 `CContainedWindowT` 也支援視窗子類別化。 `SubclassWindow` 方法會將現有視窗附加至 `CContainedWindowT` 物件，並將視窗程序變更至 `CContainedWindowT::WindowProc`。 每個 `CContainedWindowT` 執行個體都可以子類別化為不同的視窗。
 
 > [!NOTE]
->  針對任何給定`CContainedWindowT`物件，呼叫`Create`或`SubclassWindow`。 您不應該叫用的相同物件上的這兩種方法。
+>  針對任何指定`CContainedWindowT`的物件, `Create`呼叫或`SubclassWindow`。 您不應該在相同的物件上叫用這兩種方法。
 
-當您使用**新增控制項依據**選項在 ATL 專案精靈 中，精靈會自動將`CContainedWindowT`實作控制項的類別資料成員。 下列範例會示範如何宣告，包含的視窗：
+當您使用 [ATL 專案嚮導] 中的 [以依據方式**加入控制項**] 選項時, 嚮導`CContainedWindowT`會自動將資料成員加入至執行控制項的類別。 下列範例顯示如何宣告包含的視窗:
 
 [!code-cpp[NVC_ATL_Windowing#38](../../atl/codesnippet/cpp/ccontainedwindowt-class_1.h)]
 
@@ -108,7 +108,7 @@ class CContainedWindowT : public TBase
 |建立控制項|[ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)|
 |在 ATL 中使用視窗|[ATL 視窗類別](../../atl/atl-window-classes.md)|
 |ATL 專案精靈|[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](/windows/desktop/winmsg/windows)和後續 Windows SDK 中的主題|
+|Windows|Windows SDK 中的[Windows](/windows/win32/winmsg/windows)和後續主題|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -118,11 +118,11 @@ class CContainedWindowT : public TBase
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭:** atlwin.h。h
 
-##  <a name="ccontainedwindowt"></a>  CContainedWindowT::CContainedWindowT
+##  <a name="ccontainedwindowt"></a>CContainedWindowT::CContainedWindowT
 
-建構函式會初始化資料成員。
+此函式會初始化資料成員。
 
 ```
 CContainedWindowT(
@@ -139,31 +139,31 @@ CContainedWindowT(
 ### <a name="parameters"></a>參數
 
 *lpszClassName*<br/>
-[in]包含的視窗為基礎的現有視窗類別名稱。
+在包含的視窗將依據的現有視窗類別名稱。
 
 *pObject*<br/>
-[in]宣告訊息對應包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
+在宣告訊息對應之包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
 *dwMsgMapID*<br/>
-[in]識別會被收納的視窗訊息處理的訊息對應。 預設值為 0，指定預設的訊息對應宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
+在識別將處理所包含視窗之訊息的訊息對應。 預設值為 0, 指定使用[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)宣告的預設訊息對應。 若要使用以[ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)宣告的替代訊息對應, `msgMapID`請傳遞。
 
 ### <a name="remarks"></a>備註
 
-如果您想要建立新的視窗，透過[Create](#create)，您必須將現有視窗類別的名稱傳遞給*lpszClassName*參數。 如需範例，請參閱[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)概觀。
+如果您想要透過 [[建立](#create)] 建立新的視窗, 您必須針對*lpszClassName*參數傳遞現有視窗類別的名稱。 如需範例, 請參閱[CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)總覽。
 
-有三個建構函式：
+有三個構造函式:
 
-- 使用三個引數的建構函式是通常會呼叫。
+- 具有三個引數的函式是通常會呼叫的函式。
 
-- 兩個引數的建構函式會使用類別名稱，從`TBase::GetWndClassName`。
+- 具有兩個引數的函式會使用`TBase::GetWndClassName`來自的類別名稱。
 
-- 如果您想要稍後提供的引數，則會使用不含引數的建構函式。 您稍後呼叫時必須提供的視窗類別名稱、 訊息對應物件和訊息對應識別碼`Create`。
+- 如果您想要在稍後提供引數, 則會使用不含引數的函式。 當您稍後呼叫`Create`時, 必須提供視窗類別名稱、訊息對應物件和訊息對應識別碼。
 
-如果您子類別化現有視窗透過[SubclassWindow](#subclasswindow)，則*lpszClassName*將不會使用值; 因此，您可以傳遞 NULL，這個參數。
+如果您透過[subclasswindow 前允許](#subclasswindow)將現有視窗子類別化, 將不會使用*lpszClassName*值;因此, 您可以為此參數傳遞 Null。
 
-##  <a name="create"></a>  CContainedWindowT::Create
+##  <a name="create"></a>CContainedWindowT:: Create
 
-呼叫[RegisterWndSuperclass](#registerwndsuperclass)註冊視窗類別，以現有的類別為基礎，但會使用[CContainedWindowT::WindowProc](#windowproc)。
+呼叫[RegisterWndSuperclass](#registerwndsuperclass)來註冊以現有類別為基礎的視窗類別, 但使用[CContainedWindowT:: WindowProc](#windowproc)。
 
 ```
 HWND Create(
@@ -202,52 +202,52 @@ HWND Create(
 ### <a name="parameters"></a>參數
 
 *lpszClassName*<br/>
-[in]包含的視窗為基礎的現有視窗類別名稱。
+在包含的視窗將依據的現有視窗類別名稱。
 
 *pObject*<br/>
-[in]宣告訊息對應包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
+在宣告訊息對應之包含物件的指標。 這個物件的類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)。
 
 *dwMsgMapID*<br/>
-[in]識別會被收納的視窗訊息處理的訊息對應。 預設值為 0，指定預設的訊息對應宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
+在識別將處理所包含視窗之訊息的訊息對應。 預設值為 0, 指定使用[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)宣告的預設訊息對應。 若要使用以[ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)宣告的替代訊息對應, `msgMapID`請傳遞。
 
 *hWndParent*<br/>
-[in]父系或擁有者的視窗控制代碼。
+在父代或擁有者視窗的控制碼。
 
 *rect*<br/>
-[in]A [RECT](/previous-versions/dd162897\(v=vs.85\))結構，指定視窗的位置。 `RECT`可以傳遞指標或參考。
+在指定視窗位置的[矩形](/previous-versions/dd162897\(v=vs.85\))結構。 `RECT`可以透過指標或傳址方式傳遞。
 
 *szWindowName*<br/>
-[in]指定視窗的名稱。 預設值是 NULL。
+在指定視窗的名稱。 預設值為 Null。
 
 *dwStyle*<br/>
-[in]視窗的樣式。 預設值是 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單，請參閱 < [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK 中。
+在視窗的樣式。 預設值為 WS_CHILD &#124; WS_VISIBLE。 如需可能值的清單, 請參閱 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) 。
 
 *dwExStyle*<br/>
-[in]延伸的視窗樣式。 預設值為 0，這表示沒有延伸的樣式。 如需可能值的清單，請參閱 < [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) Windows SDK 中。
+在擴充的視窗樣式。 預設值為 0, 表示沒有擴充樣式。 如需可能值的清單, 請參閱 Windows SDK 中的[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw) 。
 
 *MenuOrID*<br/>
-[in]子視窗的視窗識別項。 最上層視窗中，視窗的功能表控制代碼。 預設值是**0U**。
+在若為子視窗, 則為視窗識別碼。 如果是最上層視窗, 則為視窗的功能表控制碼。 預設值為 [ **0u**]。
 
 *lpCreateParam*<br/>
-[in]視窗建立資料指標。 如需完整說明，請參閱的最後一個參數的描述[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)。
+在視窗建立資料的指標。 如需完整描述, 請參閱[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)最後一個參數的描述。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，新建立的視窗; 的控制代碼否則為 NULL。
+如果成功, 則為新建立之視窗的控制碼;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-現有的視窗類別名稱會儲存在[m_lpszClassName](#m_lpszclassname)。 `Create` 接著會建立這個新的類別為基礎的視窗。 新建立的視窗會自動附加至`CContainedWindowT`物件。
+現有的視窗類別名稱會儲存在[m_lpszClassName](#m_lpszclassname)中。 `Create`然後根據這個新類別建立視窗。 新建立的視窗會自動附加至`CContainedWindowT`物件。
 
 > [!NOTE]
->  請勿呼叫`Create`如果您已呼叫[SubclassWindow](#subclasswindow)。
+>  如果您已經`Create`呼叫[subclasswindow 前允許](#subclasswindow), 請勿呼叫。
 
 > [!NOTE]
->  如果使用 0 做為值*MenuOrID*參數，它必須指定為 0U （預設值） 以避免編譯器錯誤。
+>  如果將0當做*MenuOrID*參數的值使用, 則必須將其指定為 0u (預設值), 以避免編譯器錯誤。
 
-##  <a name="defwindowproc"></a>  CContainedWindowT::DefWindowProc
+##  <a name="defwindowproc"></a>CContainedWindowT::D efWindowProc
 
-由呼叫[WindowProc](#windowproc)來處理訊息的未處理的訊息對應。
+由[WindowProc](#windowproc)呼叫以處理訊息對應未處理的訊息。
 
 ```
 LRESULT DefWindowProc()
@@ -260,13 +260,13 @@ LRESULT DefWindowProc(
 ### <a name="parameters"></a>參數
 
 *uMsg*<br/>
-[in]傳送至視窗的訊息。
+在傳送至視窗的訊息。
 
 *wParam*<br/>
-[in]其他特定訊息資訊。
+在其他訊息特定資訊。
 
 *lParam*<br/>
-[in]其他特定訊息資訊。
+在其他訊息特定資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -274,9 +274,9 @@ LRESULT DefWindowProc(
 
 ### <a name="remarks"></a>備註
 
-根據預設，`DefWindowProc`呼叫[CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca)要傳送的訊息資訊中指定的視窗程序的 Win32 函式[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+根據預設, `DefWindowProc`會呼叫[CallWindowProc](/windows/win32/api/winuser/nf-winuser-callwindowprocw) Win32 函數, 將訊息資訊傳送至[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中指定的視窗程式。
 
-##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage
+##  <a name="getcurrentmessage"></a>CContainedWindowT::GetCurrentMessage
 
 傳回目前的訊息 (`m_pCurrentMsg`)。
 
@@ -286,11 +286,11 @@ const _ATL_MSG* GetCurrentMessage();
 
 ### <a name="return-value"></a>傳回值
 
-目前的訊息，並封裝在`MSG`結構。
+封裝在`MSG`結構中的目前訊息。
 
-##  <a name="m_dwmsgmapid"></a>  CContainedWindowT::m_dwMsgMapID
+##  <a name="m_dwmsgmapid"></a>CContainedWindowT::m_dwMsgMapID
 
-保留目前正用於包含視窗的訊息對應的識別碼。
+保留目前用於包含視窗之訊息對應的識別碼。
 
 ```
 DWORD m_dwMsgMapID;
@@ -298,15 +298,15 @@ DWORD m_dwMsgMapID;
 
 ### <a name="remarks"></a>備註
 
-此訊息的對應必須宣告中包含的物件。
+此訊息對應必須在包含物件中宣告。
 
-預設訊息對應中，以宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，一定會識別為零。 替代訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，由`msgMapID`。
+預設的訊息對應 (以[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)宣告) 一律會以零來識別。 以[ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)宣告的替代訊息對應, 是由`msgMapID`所識別。
 
-`m_dwMsgMapID` 第一次由建構函式進行初始化，而且可以變更藉由呼叫[SwitchMessageMap](#switchmessagemap)。 如需範例，請參閱[CContainedWindowT 概觀](../../atl/reference/ccontainedwindowt-class.md)。
+`m_dwMsgMapID`會先由函式初始化, 而且可以藉由呼叫[SwitchMessageMap](#switchmessagemap)來變更。 如需範例, 請參閱[CContainedWindowT 總覽](../../atl/reference/ccontainedwindowt-class.md)。
 
 ##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName
 
-指定現有視窗類別名稱。
+指定現有視窗類別的名稱。
 
 ```
 LPTSTR m_lpszClassName;
@@ -314,13 +314,13 @@ LPTSTR m_lpszClassName;
 
 ### <a name="remarks"></a>備註
 
-當您建立的視窗中， [Create](#create)註冊這個現有的類別為基礎，但使用新的視窗類別[CContainedWindowT::WindowProc](#windowproc)。
+當您建立視窗時, [create](#create)會註冊以這個現有類別為基礎的新視窗類別, 但會使用[CContainedWindowT:: WindowProc](#windowproc)。
 
-`m_lpszClassName` 初始化建構函式。 如需範例，請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概觀。
+`m_lpszClassName`由函式初始化。 如需範例, 請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)總覽。
 
 ##  <a name="m_pfnsuperwindowproc"></a>  CContainedWindowT::m_pfnSuperWindowProc
 
-如果包含的視窗子類別化，`m_pfnSuperWindowProc`指向視窗類別的原始視窗程序。
+如果包含的視窗已子類別`m_pfnSuperWindowProc`化, 則會指向 window 類別的原始視窗程式。
 
 ```
 WNDPROC m_pfnSuperWindowProc;
@@ -328,13 +328,13 @@ WNDPROC m_pfnSuperWindowProc;
 
 ### <a name="remarks"></a>備註
 
-如果包含的視窗是超級類別，亦即它會根據視窗類別，以修改現有的類別，`m_pfnSuperWindowProc`指向現有視窗類別的視窗程序。
+如果包含的視窗是 superclass, 表示它是以修改現有類別的視窗類別為基礎, `m_pfnSuperWindowProc`則會指向現有的視窗類別的視窗程式。
 
-[DefWindowProc](#defwindowproc)方法會將訊息資訊傳送至儲存在視窗程序`m_pfnSuperWindowProc`。
+[DefWindowProc](#defwindowproc)方法會將訊息資訊傳送至儲存在中`m_pfnSuperWindowProc`的視窗程式。
 
 ##  <a name="m_pobject"></a>  CContainedWindowT::m_pObject
 
-指向物件，包含`CContainedWindowT`物件。
+指向包含`CContainedWindowT`物件的物件。
 
 ```
 CMessageMap* m_pObject;
@@ -342,13 +342,13 @@ CMessageMap* m_pObject;
 
 ### <a name="remarks"></a>備註
 
-此容器，其類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)，宣告包含視窗所使用的訊息對應。
+此容器 (其類別必須衍生自[CMessageMap](../../atl/reference/cmessagemap-class.md)) 會宣告包含的視窗所使用的訊息對應。
 
-`m_pObject` 初始化建構函式。 如需範例，請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)概觀。
+`m_pObject`由函式初始化。 如需範例, 請參閱[CContainedWindowT](../../atl/reference/ccontainedwindowt-class.md)總覽。
 
-##  <a name="registerwndsuperclass"></a>  CContainedWindowT::RegisterWndSuperclass
+##  <a name="registerwndsuperclass"></a>CContainedWindowT::RegisterWndSuperclass
 
-由呼叫[建立](#create)註冊包含視窗的視窗類別。
+由[Create](#create)呼叫以註冊包含視窗的視窗類別。
 
 ```
 ATOM RegisterWndSuperClass();
@@ -356,15 +356,15 @@ ATOM RegisterWndSuperClass();
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，atom 可唯一識別視窗類別註冊;否則為零。
+如果成功, 則為可唯一識別要註冊之視窗類別的 atom;否則為零。
 
 ### <a name="remarks"></a>備註
 
-此視窗類別以現有的類別為基礎，但會使用[CContainedWindowT::WindowProc](#windowproc)。 現有的視窗類別名稱和視窗程序就會存入[m_lpszClassName](#m_lpszclassname)並[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)分別。
+這個視窗類別是以現有類別為基礎, 但使用[CContainedWindowT:: WindowProc](#windowproc)。 現有視窗類別的名稱和視窗程式會分別儲存在[m_lpszClassName](#m_lpszclassname)和[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。
 
-##  <a name="subclasswindow"></a>  CContainedWindowT::SubclassWindow
+##  <a name="subclasswindow"></a>CContainedWindowT:: Subclasswindow 前允許
 
-視窗所識別的子類別*hWnd*並將它附加至`CContainedWindowT`物件。
+子類別化*hWnd*所識別的視窗, 並將`CContainedWindowT`它附加至物件。
 
 ```
 BOOL SubclassWindow(HWND hWnd);
@@ -373,22 +373,22 @@ BOOL SubclassWindow(HWND hWnd);
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-[in]在子類別化視窗的控制代碼。
+在要子類別化之視窗的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功子類別化視窗;，則為 TRUE。否則為 FALSE。
+如果已成功將視窗子類別化, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-子類別化的視窗現在會使用[CContainedWindowT::WindowProc](#windowproc)。 原始的視窗程序會儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+子類別化視窗現在會使用[CContainedWindowT:: WindowProc](#windowproc)。 原始的視窗程式會儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。
 
 > [!NOTE]
->  請勿呼叫`SubclassWindow`如果您已呼叫[建立](#create)。
+>  如果您已經`SubclassWindow`呼叫[Create](#create), 請勿呼叫。
 
-##  <a name="switchmessagemap"></a>  CContainedWindowT::SwitchMessageMap
+##  <a name="switchmessagemap"></a>CContainedWindowT::SwitchMessageMap
 
-變更的訊息對應將會用來處理包含的視窗的訊息。
+變更將用來處理所包含視窗訊息的訊息對應。
 
 ```
 void SwitchMessageMap(DWORD dwMsgMapID);
@@ -397,17 +397,17 @@ void SwitchMessageMap(DWORD dwMsgMapID);
 ### <a name="parameters"></a>參數
 
 *dwMsgMapID*<br/>
-[in]訊息對應識別項。 若要使用預設的訊息對應，以宣告[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)，傳遞零。 若要使用替代的訊息對應，以宣告[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)，傳遞`msgMapID`。
+在訊息對應識別碼。 若要使用以[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)宣告的預設訊息對應, 請傳遞零。 若要使用以[ALT_MSG_MAP (msgMapID)](message-map-macros-atl.md#alt_msg_map)宣告的替代訊息對應, `msgMapID`請傳遞。
 
 ### <a name="remarks"></a>備註
 
-訊息對應必須包含物件中定義。
+訊息對應必須定義在包含物件中。
 
-您一開始先建構函式中指定的訊息對應識別項。
+您一開始會在此函式中指定訊息對應識別碼。
 
-##  <a name="unsubclasswindow"></a>  CContainedWindowT::UnsubclassWindow
+##  <a name="unsubclasswindow"></a>CContainedWindowT::UnsubclassWindow
 
-中斷連結子類別化的視窗`CContainedWindowT`物件，並會還原原始的視窗程序，儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)。
+從`CContainedWindowT`物件卸離子類別化的視窗, 並還原原始視窗程式, 儲存在[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)中。
 
 ```
 HWND UnsubclassWindow(BOOL bForce = FALSE);
@@ -416,19 +416,19 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 ### <a name="parameters"></a>參數
 
 *bForce*<br/>
-[in]設為 true 會強制要還原原始的視窗程序即使這個視窗程序`CContainedWindowT`物件不是目前作用中。 如果*bForce*設為 FALSE，而且視窗程序這`CContainedWindowT`物件不是目前作用中，將不會還原原始的視窗程序。
+在設定為 TRUE, 即使此`CContainedWindowT`物件的視窗程式目前不在使用中, 也會強制還原原始視窗程式。 如果*bForce*設定為 FALSE, 而且這個`CContainedWindowT`物件的視窗程式目前不在使用中, 則不會還原原始的視窗程式。
 
 ### <a name="return-value"></a>傳回值
 
-先前子類別化視窗的控制代碼。 如果*bForce*設為 FALSE，而且視窗程序這`CContainedWindowT`物件不是目前作用中，會傳回 NULL。
+先前子類別化之視窗的控制碼。 如果*bForce*設定為 FALSE, 而且這個`CContainedWindowT`物件的視窗程式目前不在使用中, 則會傳回 Null。
 
 ### <a name="remarks"></a>備註
 
-只有當您想要還原原始的視窗程序，在終結視窗之前，請使用這個方法。 否則，請[WindowProc](#windowproc)會自動執行這項操作時終結視窗。
+只有當您想要在終結視窗之前還原原始視窗程式時, 才使用這個方法。 否則, [WindowProc](#windowproc)會在視窗損毀時自動執行此動作。
 
-##  <a name="windowproc"></a>  CContainedWindowT::WindowProc
+##  <a name="windowproc"></a>CContainedWindowT:: WindowProc
 
-這個靜態方法實作的視窗程序。
+這個靜態方法會實作為視窗程式。
 
 ```
 static LRESULT CALLBACK WindowProc(
@@ -441,16 +441,16 @@ static LRESULT CALLBACK WindowProc(
 ### <a name="parameters"></a>參數
 
 *hWnd*<br/>
-[in]視窗控制代碼。
+在視窗的控制碼。
 
 *uMsg*<br/>
-[in]傳送至視窗的訊息。
+在傳送至視窗的訊息。
 
 *wParam*<br/>
-[in]其他特定訊息資訊。
+在其他訊息特定資訊。
 
 *lParam*<br/>
-[in]其他特定訊息資訊。
+在其他訊息特定資訊。
 
 ### <a name="return-value"></a>傳回值
 
@@ -458,7 +458,7 @@ static LRESULT CALLBACK WindowProc(
 
 ### <a name="remarks"></a>備註
 
-`WindowProc` 將導向至所識別的訊息對應的訊息[m_dwMsgMapID](#m_dwmsgmapid)。 如果有必要，請`WindowProc`呼叫[DefWindowProc](#defwindowproc)進行額外的訊息處理。
+`WindowProc`將訊息導向[m_dwMsgMapID](#m_dwmsgmapid)所識別的訊息對應。 如有必要`WindowProc` , 會呼叫[DefWindowProc](#defwindowproc)以進行其他訊息處理。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -467,4 +467,4 @@ static LRESULT CALLBACK WindowProc(
 [CMessageMap 類別](../../atl/reference/cmessagemap-class.md)<br/>
 [BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

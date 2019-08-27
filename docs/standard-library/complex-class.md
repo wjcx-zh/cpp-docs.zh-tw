@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 2ebaee81b792f9acc475fe25ac1ef7cc7a78a0de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44d44d48f66c9bdbf03d4e36e752ea3dee5ff9c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376155"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453168"
 ---
 # <a name="complex-class"></a>complex 類別
 
-此範本類別描述可儲存兩個物件的型別`Type`，一個代表複數，而另一個代表虛數部分的實數部分。
+此樣板類別描述一個物件, 它會儲存類型`Type`的兩個物件, 一個代表複數的實數部分, 另一個代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>備註
 
-類別的物件`Type`:
+類別`Type`的物件:
 
 - 具有公用預設建構函式、解構函式、複製建構函式和指派運算子，且這些都具有傳統行為。
 
@@ -38,32 +38,34 @@ class complex
 
 - 可視需要定義算術運算子和數學函式，將其定義為具有傳統行為的浮點類型。
 
-特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 沒有任何類別的物件上作業`Type`可能會擲回例外狀況。
+特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 類別`Type`物件的任何作業都不會擲回例外狀況。
 
-有三個浮點類型具備 complex 範本類別的明確特製化。 在此實作中，任何其他類型的值`Type`類型轉換成**double**進行實際計算，與**double**結果指派回類型的預存物件`Type`。
+有三個浮點類型具備 complex 範本類別的明確特製化。 在此執行中, `Type`任何其他類型的值都會轉換為**double**進行實際計算, 並將**double**結果指派回類型`Type`的預存物件。
+
+## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|||
 |-|-|
 |[complex](#complex)|建構具有指定實數與虛數部分或作為其他一些複數複本的複數。|
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|||
 |-|-|
 |[value_type](#value_type)|類型，表示用來代表複數之實數和虛數部分的資料類型。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="functions"></a>函式
 
-|成員函式|描述|
+|||
 |-|-|
 |[imag](#imag)|擷取複數的虛數部分。|
 |[real](#real)|擷取複數的實數部分。|
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|||
 |-|-|
 |[operator*=](#op_star_eq)|將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|
 |[operator+=](#op_add_eq)|將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。|
@@ -71,13 +73,9 @@ class complex
 |[operator/=](#op_div_eq)|將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|
 |[operator=](#op_eq)|將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。|
 
-## <a name="requirements"></a>需求
 
-**標頭**：\<complex>
 
-**命名空間：** std
-
-## <a name="complex"></a>  complex::complex
+## <a name="complex"></a>複雜化
 
 建構具有指定實數與虛數部分或作為其他一些複數複本的複數。
 
@@ -93,18 +91,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*<br/>
+*_RealVal*\
 用於初始化建構中複數之實數部分的值。
 
-*_ImagVal*<br/>
+*_ImagVal*\
 用於初始化建構中複數之虛數部分的值。
 
-*complexNum*<br/>
+*complexNum*\
 其實數及虛數用於初始化建構中之複數的複數。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會初始化儲存至實數部分 *\_RealVal*並以預存的虛數部分 *\_Imagval*。 第二個建構函式會初始化儲存至實數部分`complexNum.real()`並以預存的虛數部分`complexNum.imag()`。
+第一個函式會將儲存的實數部分初始化至 *\_RealVal* , 並將儲存的虛數部分初始化至 *\_初始化 imagval*。 第二個函式會將儲存的`complexNum.real()`實數部分初始化為, 並`complexNum.imag()`將儲存的虛數部分初始化為。
 
 在此實作中，若轉譯器不支援成員樣板函式，此樣板：
 
@@ -161,7 +159,7 @@ int main( )
 }
 ```
 
-## <a name="imag"></a>  complex::imag
+## <a name="imag"></a>imag
 
 擷取複數的虛數部分。
 
@@ -173,7 +171,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要擷取其虛數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -182,7 +180,7 @@ T imag(const T& right);
 
 ### <a name="remarks"></a>備註
 
-為複數*a + bi*，虛數部分或元件*Im(a + bi) = b*。
+若為複數*a + bi*, 虛數部分或元件為*Im (a + bi) = b*。
 
 ### <a name="example"></a>範例
 
@@ -215,7 +213,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="op_star_eq"></a>  complex::operator*=
+## <a name="op_star_eq"></a>運算子 * =
 
 將目標複數乘以某個因數，該因數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。
 
@@ -230,7 +228,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -300,7 +298,7 @@ int main()
 }
 ```
 
-## <a name="op_add_eq"></a>  complex::operator+=
+## <a name="op_add_eq"></a>運算子 + =
 
 將目標複數加上某個數字，此加數可能是複雜類型，或者是與複數被加數的實數和虛數部分相同的類型。
 
@@ -315,7 +313,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -403,7 +401,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-_eq"></a>  complex::operator-=
+## <a name="operator-_eq"></a>operator-=
 
 將目標複數減去某個數字，此減數可能是複雜類型，或者是與複數被減數的實數和虛數部分相同的類型。
 
@@ -418,10 +416,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 複數，其為目標複數的減數。
 
-*_RealPart*<br/>
+*_RealPart*\
 實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
@@ -511,7 +509,7 @@ The modulus of cl2 is: 5
 The argument of cl2 is: 2.2143 radians, which is 126.87 degrees.
 ```
 
-## <a name="op_div_eq"></a>  complex::operator/=
+## <a name="op_div_eq"></a>operator/=
 
 將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。
 
@@ -526,10 +524,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum*<br/>
+*complexNum*\
 複數，其為目標複數的減數。
 
-*_RealPart*<br/>
+*_RealPart*\
 實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
@@ -615,7 +613,7 @@ The modulus of cl2 is: 0.6
 The argument of cl2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq"></a>  complex::operator=
+## <a name="op_eq"></a>operator =
 
 將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。
 
@@ -628,7 +626,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -693,7 +691,7 @@ The complex number (3, 4) assigned to the complex number cl2 is:
 cl2 = (3,4)
 ```
 
-## <a name="real"></a>  complex::real
+## <a name="real"></a>即時
 
 取得或設定複數的實數部分。
 
@@ -705,7 +703,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*right*<br/>
+*再*\
 要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -714,7 +712,7 @@ T real(const T& right);
 
 ### <a name="remarks"></a>備註
 
-為複數*a + bi*，實數部分或分量為*Re(a + bi) =*。
+若為複數*a + bi*, 實數部分或元件會*重新 (a + bi) = a*。
 
 ### <a name="example"></a>範例
 
@@ -747,7 +745,7 @@ The real part of c1 is c1.real() = 4.
 The imaginary part of c1 is c1.imag() = 3.
 ```
 
-## <a name="value_type"></a>  complex::value_type
+## <a name="value_type"></a> value_type
 
 類型，表示用來代表複數之實數和虛數部分的資料類型。
 
@@ -757,7 +755,7 @@ typedef Type value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 同義類別複雜`Type`樣板參數。
+`value_type`是類別複雜`Type`樣板參數的同義字。
 
 ### <a name="example"></a>範例
 
@@ -786,4 +784,4 @@ of type value_type: c1 = (3,4).
 
 ## <a name="see-also"></a>另請參閱
 
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

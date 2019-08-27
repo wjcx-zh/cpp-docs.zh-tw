@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - mutex/std::defer_lock_t
 ms.assetid: 4c4588eb-ca51-4949-b5d1-8539cc4577ad
-ms.openlocfilehash: ec48b7d7ab7325276682357c78037697cc475857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6ead2b1c0eb1b0e18ed7d8a18afb2e4e843e2eb
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394035"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459747"
 ---
 # <a name="deferlockt-structure"></a>defer_lock_t 結構
 
@@ -23,11 +23,11 @@ struct defer_lock_t;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<mutex >
+**標頭:** \<mutex >
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

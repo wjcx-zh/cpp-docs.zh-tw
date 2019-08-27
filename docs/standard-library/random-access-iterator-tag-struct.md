@@ -7,16 +7,16 @@ helpviewer_keywords:
 - random_access_iterator_tag class
 - random_access_iterator_tag struct
 ms.assetid: 59f5b741-c5b4-459c-ad0a-3b67cddeea23
-ms.openlocfilehash: 81e958750ab13c12e92b61e6971c40f3362ba22d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edbd7ad33b2487060840ec690b363d7b934fec27
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369874"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458312"
 ---
 # <a name="randomaccessiteratortag-struct"></a>random_access_iterator_tag 結構
 
-這個類別提供的傳回型別`iterator_category`表示隨機存取迭代器函式。
+提供代表隨機存取反覆運算器之`iterator_category`函數傳回類型的類別。
 
 ## <a name="syntax"></a>語法
 
@@ -26,9 +26,9 @@ struct random_access_iterator_tag    : public bidirectional_iterator_tag {};
 
 ## <a name="remarks"></a>備註
 
-分類標籤類別會用來當作可供選取演算法的編譯標籤。 範本函式必須尋找其迭代器引數的最明確分類，如此它才能在編譯階段使用最有效率的演算法。 對於 `Iterator` 類型的每個迭代器，必須將 `iterator_traits`< `Iterator`> **::iterator_category** 定義為描述迭代器行為最精確的分類標籤。
+分類標籤類別會用來當作可供選取演算法的編譯標籤。 範本函式必須尋找其迭代器引數的最明確分類，如此它才能在編譯階段使用最有效率的演算法。 對於 `Iterator` 類型的每個迭代器，必須將 `iterator_traits`< `Iterator`>  **::iterator_category** 定義為描述迭代器行為最精確的分類標籤。
 
-型別是相同**迭代器**\< **Iter**> **:: iterator_category**時`Iter`描述可以做為物件隨機存取迭代器。
+當描述可做為隨機存取反覆運算器的物件時`Iter` , 此類型與**iterator** \< **Iter** >  **:: iterator_category**相同。
 
 ## <a name="example"></a>範例
 
@@ -98,12 +98,12 @@ The iterators are not the same.
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<iterator>
+**標頭：** \<iterator>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[bidirectional_iterator_tag 結構](../standard-library/bidirectional-iterator-tag-struct.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[bidirectional_iterator_tag 結構](../standard-library/bidirectional-iterator-tag-struct.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

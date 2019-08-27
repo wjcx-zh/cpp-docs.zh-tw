@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370927"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448164"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -27,10 +27,10 @@ ms.locfileid: "62370927"
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|描述|
+|類型名稱|說明|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|建立從型別`basic_ostream`特製化的**char**並`char_traits`特製化的**char**。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|建立從型別`basic_ostream`特製化的**wchar_t**並`char_traits`特製化的**wchar_t**。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|建立的類型`basic_ostream` , 它是在**char**上特製`char_traits`化, 並在**char**上特製化。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|從`basic_ostream`建立的類型, 它是在**wchar_t**上`char_traits`特製化, 並且在**wchar_t**上特製化。|
 
 ### <a name="manipulators"></a>操作工具
 
@@ -49,13 +49,13 @@ ms.locfileid: "62370927"
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|類別|說明|
 |-|-|
 |[basic_ostream](../standard-library/basic-ostream-class.md)|這個樣板類別所描述的物件，可控制將項目和編碼物件插入資料流緩衝區中。|
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

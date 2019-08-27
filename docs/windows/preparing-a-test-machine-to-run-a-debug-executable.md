@@ -1,15 +1,15 @@
 ---
 title: 準備測試電腦以執行偵錯可執行檔
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: ae751b1632473fa316c7965bc751e91b782a89ea
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448452"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69513675"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>準備測試電腦以執行偵錯可執行檔
 
@@ -25,15 +25,15 @@ ms.locfileid: "65448452"
 - 藉由 \Microsoft Visual Studio \<version\VC\redist\Debug_NonRedist\\ 中的 Program Files 或 Program Files (x86) 目錄所提供的檔案，使用本機部署來將特定 Visual C++ DLL 的偵錯版本安裝在應用程式的安裝目錄中。
 
     > [!NOTE]
-    >  遠端偵錯使用 Visual Studio 2005 或 Visual Studio 2008 在另一部電腦上所建置的應用程式，您必須部署偵錯版本，視覺效果的C++程式庫做為共用的並排顯示組件的 Dll。 您可以使用安裝專案或 Windows Installer 安裝對應的合併模組。
+    >  若要在另一部電腦上使用 Visual Studio 2005 或 Visual Studio 2008 所建立的應用程式進行遠端偵測, 您必須將C++視覺化程式庫 dll 的 debug 版本部署為共用並存元件。 您可以使用安裝專案或 Windows Installer 安裝對應的合併模組。
 
 - 使用 Visual Studio 的 [組態管理員] 對話方塊中的 [部署] 選項，將專案輸出和其他檔案複製至遠端電腦。
 
-安裝 Visual C++ DLL 之後，您就可以從網路共用執行遠端偵錯工具。 如需遠端偵錯的詳細資訊，請參閱[遠端偵錯](/visualstudio/debugger/remote-debugging.md)。
+安裝 Visual C++ DLL 之後，您就可以從網路共用執行遠端偵錯工具。 如需遠端偵錯的詳細資訊，請參閱[遠端偵錯](/visualstudio/debugger/remote-debugging)。
 
 ## <a name="see-also"></a>另請參閱
 
 [Visual C++ 中的部署](deployment-in-visual-cpp.md)<br>
-[Windows Installer 命令列選項](/windows/desktop/Msi/command-line-options)<br>
+[Windows Installer 命令列選項](/windows/win32/Msi/command-line-options)<br>
 [部署範例](deployment-examples.md)<br>
-[Remote Debugging](/visualstudio/debugger/remote-debugging.md)
+[Remote Debugging](/visualstudio/debugger/remote-debugging)

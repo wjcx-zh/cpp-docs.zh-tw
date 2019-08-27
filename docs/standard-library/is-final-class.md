@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346448"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452660"
 ---
 # <a name="isfinal-class"></a>is_final 類別
 
@@ -26,20 +26,20 @@ struct is_final;
 
 ### <a name="parameters"></a>參數
 
-*T*<br/>
+*而已*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*T*標示為類別類型`final`，否則為 false。 如果*T*是類別類型，它必須是完整的型別。
+如果類型*T*是標示`final`的類別類型, 則類型述詞的實例為 true, 否則為 false。 如果*T*是類別類型, 它必須是完整的類型。
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[final 規範](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[final 規範](../cpp/final-specifier.md)

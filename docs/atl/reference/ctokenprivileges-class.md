@@ -18,19 +18,19 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: 8bca3e1d45d0a85d1d4ceac4ffdf7b11091020f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4ecc96ee53d6c688d17afa9957ccbf5060ca3fd
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277301"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69496276"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges 類別
 
-這個類別是包裝函式`TOKEN_PRIVILEGES`結構。
+這個類別是`TOKEN_PRIVILEGES`結構的包裝函式。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -51,41 +51,41 @@ class CTokenPrivileges
 
 |名稱|描述|
 |----------|-----------------|
-|[CTokenPrivileges::Add](#add)|新增一或多個權限，才能`CTokenPrivileges`物件。|
-|[CTokenPrivileges::Delete](#delete)|刪除的權限從`CTokenPrivileges`物件。|
-|[CTokenPrivileges::DeleteAll](#deleteall)|刪除所有的權限從`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetCount](#getcount)|傳回的權限中的項目數目`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|擷取顯示名稱中包含的權限`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetLength](#getlength)|傳回以位元組為單位保留所需的緩衝區大小`TOKEN_PRIVILEGES`結構所表示`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|擷取的本機唯一識別碼 (Luid) 和屬性旗標，從`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|擷取的權限名稱和屬性旗標，從`CTokenPrivileges`物件。|
-|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|將指標傳回至`TOKEN_PRIVILEGES`結構。|
-|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|擷取與指定權限名稱相關聯的屬性。|
+|[CTokenPrivileges::Add](#add)|將一個或多個許可權新增`CTokenPrivileges`至物件。|
+|[CTokenPrivileges::Delete](#delete)|從`CTokenPrivileges`物件中刪除許可權。|
+|[CTokenPrivileges::DeleteAll](#deleteall)|刪除物件的`CTokenPrivileges`擁有權限。|
+|[CTokenPrivileges::GetCount](#getcount)|傳回`CTokenPrivileges`物件中的許可權專案數目。|
+|[CTokenPrivileges::GetDisplayNames](#getdisplaynames)|抓取`CTokenPrivileges`物件中包含之許可權的顯示名稱。|
+|[CTokenPrivileges::GetLength](#getlength)|傳回保留`TOKEN_PRIVILEGES` `CTokenPrivileges`物件所代表之結構所需的緩衝區大小 (以位元組為單位)。|
+|[CTokenPrivileges::GetLuidsAndAttributes](#getluidsandattributes)|從`CTokenPrivileges`物件中抓取本機唯一識別碼 (luid) 和屬性旗標。|
+|[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)|從`CTokenPrivileges`物件中抓取許可權名稱和屬性旗標。|
+|[CTokenPrivileges::GetPTOKEN_PRIVILEGES](#getptoken_privileges)|傳回結構的`TOKEN_PRIVILEGES`指標。|
+|[CTokenPrivileges::LookupPrivilege](#lookupprivilege)|抓取與指定的許可權名稱相關聯的屬性。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CTokenPrivileges::operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|將指標值轉換`TOKEN_PRIVILEGES`結構。|
-|[CTokenPrivileges::operator =](#operator_eq)|指派運算子。|
+|[CTokenPrivileges:: operator const TOKEN_PRIVILEGES *](#operator_const_token_privileges__star)|將值轉換成結構的`TOKEN_PRIVILEGES`指標。|
+|[CTokenPrivileges:: operator =](#operator_eq)|指派運算子。|
 
 ## <a name="remarks"></a>備註
 
-[存取權杖](/windows/desktop/SecAuthZ/access-tokens)是說明處理序或執行緒的安全性內容，並配置給每位使用者登入 Windows 系統的物件。
+[存取權杖](/windows/win32/SecAuthZ/access-tokens)是一種物件, 可描述處理常式或執行緒的安全性內容, 並配置給每位登入 Windows 系統的使用者。
 
-存取權杖用來描述各種不同的安全性權限授與給每位使用者。 權限包含 64 位元數字稱為本機唯一識別碼 ( [LUID](/windows/desktop/api/winnt/ns-winnt-_luid)) 和描述項字串。
+存取權杖是用來描述授與給每個使用者的各種安全性許可權。 許可權包含64位數位, 稱為本機唯一識別碼 ( [LUID](/windows/win32/api/winnt/ns-winnt-luid)) 和描述元字串。
 
-`CTokenPrivileges`類別是包裝函式[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構，並包含 0 或更多權限。 可以新增權限，已刪除或查詢使用提供的類別方法。
+類別是 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 結構的包裝函式, 其中包含0個或更多的許可權。`CTokenPrivileges` 您可以使用提供的類別方法來新增、刪除或查詢許可權。
 
-在 Windows 中的存取控制模型的簡介，請參閱 <<c0> [ 存取控制](/windows/desktop/SecAuthZ/access-control)Windows SDK 中。
+如需 Windows 中的存取控制模型簡介, 請參閱 Windows SDK 中的[存取控制](/windows/win32/SecAuthZ/access-control)。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlsecurity.h
+**標頭:** atlsecurity。h
 
-##  <a name="add"></a>  CTokenPrivileges::Add
+##  <a name="add"></a>CTokenPrivileges:: Add
 
-新增一或多個權限，才能`CTokenPrivileges`存取權杖的物件。
+將一或多個許可權新增`CTokenPrivileges`至存取權杖物件。
 
 ```
 bool Add(LPCTSTR pszPrivilege, bool bEnable) throw(...);
@@ -95,19 +95,19 @@ void Add(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="parameters"></a>參數
 
 *pszPrivilege*<br/>
-以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。
+以 null 結束的字串指標, 指定許可權的名稱, 如 WINNT 中所定義。H 標頭檔。
 
 *bEnable*<br/>
-如果為 true，則會啟用特殊權限。 如果為 false，則會停用的權限。
+若為 true, 則表示已啟用許可權。 如果為 false, 則表示許可權已停用。
 
 *rPrivileges*<br/>
-若要參考[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。 權限和屬性都會複製此結構，並新增至`CTokenPrivileges`物件。
+[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)結構的參考。 許可權和屬性會從此結構複製並新增至`CTokenPrivileges`物件。
 
 ### <a name="return-value"></a>傳回值
 
-這個方法的第一種形式傳回的權限順利新增，false 否則如果為 true。
+如果成功加入許可權, 則此方法的第一個形式會傳回 true, 否則傳回 false。
 
-##  <a name="ctokenprivileges"></a>  CTokenPrivileges::CTokenPrivileges
+##  <a name="ctokenprivileges"></a>CTokenPrivileges::CTokenPrivileges
 
 建構函式。
 
@@ -120,16 +120,16 @@ CTokenPrivileges(const TOKEN_PRIVILEGES& rPrivileges) throw(...);
 ### <a name="parameters"></a>參數
 
 *rhs*<br/>
-`CTokenPrivileges`物件指派給新的物件。
+要`CTokenPrivileges`指派給新物件的物件。
 
 *rPrivileges*<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)若要指派給新的結構`CTokenPrivileges`物件。
+要指派給新`CTokenPrivileges`物件的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 結構。
 
 ### <a name="remarks"></a>備註
 
-`CTokenPrivileges`物件可以選擇性地使用來建立`TOKEN_PRIVILEGES`結構或先前定義`CTokenPrivileges`物件。
+您`CTokenPrivileges`可以選擇性地`TOKEN_PRIVILEGES`使用結構或先前定義`CTokenPrivileges`的物件來建立物件。
 
-##  <a name="dtor"></a>  CTokenPrivileges:: ~ CTokenPrivileges
+##  <a name="dtor"></a>CTokenPrivileges:: ~ CTokenPrivileges
 
 解構函式。
 
@@ -139,11 +139,11 @@ virtual ~CTokenPrivileges() throw();
 
 ### <a name="remarks"></a>備註
 
-解構函式會釋放所有配置的資源。
+此析構函式會釋放所有配置的資源。
 
-##  <a name="delete"></a>  CTokenPrivileges::Delete
+##  <a name="delete"></a>CTokenPrivileges::D 刪除
 
-刪除的權限從`CTokenPrivileges`存取權杖的物件。
+從`CTokenPrivileges`存取權杖物件中刪除許可權。
 
 ```
 bool Delete(LPCTSTR pszPrivilege) throw();
@@ -152,19 +152,19 @@ bool Delete(LPCTSTR pszPrivilege) throw();
 ### <a name="parameters"></a>參數
 
 *pszPrivilege*<br/>
-以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。 例如，這個參數可以指定常數 SE_SECURITY_NAME 或其對應的字串，「 SeSecurityPrivilege。 」
+以 null 結束的字串指標, 指定許可權的名稱, 如 WINNT 中所定義。H 標頭檔。 例如, 此參數可以指定常數 SE_SECURITY_NAME 或其對應的字串 "SeSecurityPrivilege"。
 
 ### <a name="return-value"></a>傳回值
 
-如果權限程式已成功刪除，否則為 false，則傳回 true。
+如果已成功刪除許可權, 則傳回 true, 否則傳回 false。
 
 ### <a name="remarks"></a>備註
 
-此方法相當實用，做為建立受限制的權杖的工具。
+這個方法很適合用來建立受限制的權杖。
 
 ##  <a name="deleteall"></a>  CTokenPrivileges::DeleteAll
 
-刪除所有的權限從`CTokenPrivileges`存取權杖的物件。
+刪除存取權杖物件中`CTokenPrivileges`的擁有權限。
 
 ```
 void DeleteAll() throw();
@@ -172,11 +172,11 @@ void DeleteAll() throw();
 
 ### <a name="remarks"></a>備註
 
-刪除所有的權限包含在`CTokenPrivileges`存取權杖的物件。
+刪除存取權杖物件中包含`CTokenPrivileges`的擁有權限。
 
 ##  <a name="getdisplaynames"></a>  CTokenPrivileges::GetDisplayNames
 
-擷取顯示名稱中包含的權限`CTokenPrivileges`存取權杖的物件。
+抓取`CTokenPrivileges`存取權杖物件中所包含之許可權的顯示名稱。
 
 ```
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
@@ -185,17 +185,17 @@ void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ### <a name="parameters"></a>參數
 
 *pDisplayNames*<br/>
-`CString` 物件陣列的指標。 `CNames` 定義的 typedef: `CTokenPrivileges::CAtlArray<CString>`。
+`CString` 物件陣列的指標。 `CNames`定義為 typedef: `CTokenPrivileges::CAtlArray<CString>`。
 
 ### <a name="remarks"></a>備註
 
-參數`pDisplayNames`陣列的指標`CString`物件將會收到對應中所包含的權限的顯示名稱`CTokenPrivileges`物件。 這個方法會擷取顯示名稱，只會針對 WINNT 定義權限區段中指定的權限。H.
+參數`pDisplayNames`是物件陣列的`CString`指標, 會接收與`CTokenPrivileges`物件中包含之許可權對應的顯示名稱。 這個方法只會針對 WINNT 的 [定義的許可權] 區段中所指定的許可權來抓取顯示名稱。H.
 
-這個方法會擷取可顯示的名稱： 例如，如果 SE_REMOTE_SHUTDOWN_NAME 屬性名稱，可顯示的名稱會是 「 從遠端系統強制關閉 」。 若要取得的系統名稱，請使用[CTokenPrivileges::GetNamesAndAttributes](#getnamesandattributes)。
+這個方法會抓取可顯示的名稱: 例如, 如果屬性名稱是 SE_REMOTE_SHUTDOWN_NAME, 可顯示的名稱是「強制關閉遠端系統」。 若要取得系統名稱, 請使用[CTokenPrivileges:: GetNamesAndAttributes](#getnamesandattributes)。
 
 ##  <a name="getcount"></a>  CTokenPrivileges::GetCount
 
-傳回的權限中的項目數目`CTokenPrivileges`物件。
+傳回`CTokenPrivileges`物件中的許可權專案數目。
 
 ```
 UINT GetCount() const throw();
@@ -203,11 +203,11 @@ UINT GetCount() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回中所包含的權限的`CTokenPrivileges`物件。
+傳回`CTokenPrivileges`物件中包含的許可權數目。
 
-##  <a name="getlength"></a>  CTokenPrivileges::GetLength
+##  <a name="getlength"></a>CTokenPrivileges:: GetLength
 
-傳回的長度`CTokenPrivileges`物件。
+傳回`CTokenPrivileges`物件的長度。
 
 ```
 UINT GetLength() const throw();
@@ -215,11 +215,11 @@ UINT GetLength() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回保留所需的位元組數目`TOKEN_PRIVILEGES`結構所表示`CTokenPrivileges`物件，包括所有包含的權限項目。
+傳回保留`TOKEN_PRIVILEGES` `CTokenPrivileges`物件所代表之結構所需的位元組數目, 包括其中包含的擁有權限專案。
 
-##  <a name="getluidsandattributes"></a>  CTokenPrivileges::GetLuidsAndAttributes
+##  <a name="getluidsandattributes"></a>CTokenPrivileges::GetLuidsAndAttributes
 
-擷取的本機唯一識別碼 (Luid) 和屬性旗標，從`CTokenPrivileges`物件。
+從`CTokenPrivileges`物件中抓取本機唯一識別碼 (luid) 和屬性旗標。
 
 ```
 void GetLuidsAndAttributes(
@@ -230,18 +230,18 @@ void GetLuidsAndAttributes(
 ### <a name="parameters"></a>參數
 
 *pPrivileges*<br/>
-陣列的指標[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)物件。 `CLUIDArray` typedef 定義為`CAtlArray<LUID> CLUIDArray`。
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)物件陣列的指標。 `CLUIDArray`這是定義為`CAtlArray<LUID> CLUIDArray`的 typedef。
 
 *pAttributes*<br/>
-DWORD 物件的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。 `CAttributes` typedef 定義為`CAtlArray <DWORD> CAttributes`。
+DWORD 物件陣列的指標。 如果省略此參數或為 Null, 則不會抓取屬性。 `CAttributes`這是定義為`CAtlArray <DWORD> CAttributes`的 typedef。
 
 ### <a name="remarks"></a>備註
 
-這個方法會列舉中所包含的權限的所有`CTokenPrivileges`存取權杖的物件，並將個別的 Luid 和 （選擇性） 的屬性旗標放入陣列物件。
+這個方法會列舉`CTokenPrivileges`存取權杖物件中包含的擁有權限, 並將個別 luid 和 (選擇性) 的屬性旗標放入陣列物件中。
 
-##  <a name="getnamesandattributes"></a>  CTokenPrivileges::GetNamesAndAttributes
+##  <a name="getnamesandattributes"></a>CTokenPrivileges::GetNamesAndAttributes
 
-擷取的名稱和屬性的旗標從`CTokenPrivileges`物件。
+從`CTokenPrivileges`物件中抓取名稱和屬性旗標。
 
 ```
 void GetNamesAndAttributes(
@@ -252,20 +252,20 @@ void GetNamesAndAttributes(
 ### <a name="parameters"></a>參數
 
 *pNames*<br/>
-陣列的指標`CString`物件。 `CNames` typedef 定義為`CAtlArray <CString> CNames`。
+物件陣列的`CString`指標。 `CNames`這是定義為`CAtlArray <CString> CNames`的 typedef。
 
 *pAttributes*<br/>
-DWORD 物件的陣列指標。 如果這個參數是省略，則為 NULL，不會擷取屬性。 `CAttributes` typedef 定義為`CAtlArray <DWORD> CAttributes`。
+DWORD 物件陣列的指標。 如果省略此參數或為 Null, 則不會抓取屬性。 `CAttributes`這是定義為`CAtlArray <DWORD> CAttributes`的 typedef。
 
 ### <a name="remarks"></a>備註
 
-這個方法會列舉中所包含的權限的所有`CTokenPrivileges`物件，將名稱及 （選擇性） 的屬性旗標放入陣列物件。
+這個方法會列舉`CTokenPrivileges`物件中包含的擁有權限, 並將名稱和 (選擇性) 屬性旗標放入陣列物件中。
 
-這個方法會擷取屬性名稱，而不是可顯示的名稱： 例如，如果 SE_REMOTE_SHUTDOWN_NAME 屬性名稱，系統名稱是"SeRemoteShutdownPrivilege。 」 若要取得可顯示的名稱，請使用方法[CTokenPrivileges::GetDisplayNames](#getdisplaynames)。
+這個方法會抓取屬性名稱, 而不是可顯示的名稱: 例如, 如果屬性名稱是 SE_REMOTE_SHUTDOWN_NAME, 則系統名稱會是 "SeRemoteShutdownPrivilege"。 若要取得可顯示的名稱, 請使用[CTokenPrivileges:: GetDisplayNames](#getdisplaynames)方法。
 
-##  <a name="getptoken_privileges"></a>  CTokenPrivileges::GetPTOKEN_PRIVILEGES
+##  <a name="getptoken_privileges"></a>CTokenPrivileges::GetPTOKEN_PRIVILEGES
 
-將指標傳回至`TOKEN_PRIVILEGES`結構。
+傳回結構的`TOKEN_PRIVILEGES`指標。
 
 ```
 const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
@@ -273,11 +273,11 @@ const TOKEN_PRIVILEGES* GetPTOKEN_PRIVILEGES() const throw(...);
 
 ### <a name="return-value"></a>傳回值
 
-將指標傳回至[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。
+傳回[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)結構的指標。
 
 ##  <a name="lookupprivilege"></a>  CTokenPrivileges::LookupPrivilege
 
-擷取與指定權限名稱相關聯的屬性。
+抓取與指定的許可權名稱相關聯的屬性。
 
 ```
 bool LookupPrivilege(
@@ -288,16 +288,16 @@ bool LookupPrivilege(
 ### <a name="parameters"></a>參數
 
 *pszPrivilege*<br/>
-以 null 終止的字串，指定 WINNT 中所定義的權限，名稱的指標。H 標頭檔。 例如，這個參數可以指定常數 SE_SECURITY_NAME 或其對應的字串，「 SeSecurityPrivilege。 」
+以 null 結束的字串指標, 指定許可權的名稱, 如 WINNT 中所定義。H 標頭檔。 例如, 此參數可以指定常數 SE_SECURITY_NAME 或其對應的字串 "SeSecurityPrivilege"。
 
 *pdwAttributes*<br/>
-此變數會接收屬性的指標。
+接收屬性之變數的指標。
 
 ### <a name="return-value"></a>傳回值
 
-如果屬性可說是已順利擷取，否則為 false，則傳回 true。
+如果成功抓取屬性, 則傳回 true, 否則傳回 false。
 
-##  <a name="operator_eq"></a>  CTokenPrivileges::operator =
+##  <a name="operator_eq"></a>CTokenPrivileges:: operator =
 
 指派運算子。
 
@@ -309,18 +309,18 @@ CTokenPrivileges& operator= (const CTokenPrivileges& rhs) throw(...);
 ### <a name="parameters"></a>參數
 
 *rPrivileges*<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構，以指派給`CTokenPrivileges`物件。
+要指派給`CTokenPrivileges`物件的 [TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges) 結構。
 
 *rhs*<br/>
-`CTokenPrivileges`指派給物件的物件。
+要`CTokenPrivileges`指派給物件的物件。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已更新`CTokenPrivileges`物件。
+傳回已更新`CTokenPrivileges`的物件。
 
-##  <a name="operator_const_token_privileges__star"></a>  CTokenPrivileges::operator const TOKEN_PRIVILEGES \*
+##  <a name="operator_const_token_privileges__star"></a>CTokenPrivileges:: operator const TOKEN_PRIVILEGES\*
 
-將指標值轉換`TOKEN_PRIVILEGES`結構。
+將值轉換成結構的`TOKEN_PRIVILEGES`指標。
 
 ```
 operator const TOKEN_PRIVILEGES *() const throw(...);
@@ -328,13 +328,13 @@ operator const TOKEN_PRIVILEGES *() const throw(...);
 
 ### <a name="remarks"></a>備註
 
-將指標值轉換[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)結構。
+將值轉換成[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)結構的指標。
 
 ## <a name="see-also"></a>另請參閱
 
 [安全性範例](../../overview/visual-cpp-samples.md)<br/>
-[TOKEN_PRIVILEGES](/windows/desktop/api/winnt/ns-winnt-_token_privileges)<br/>
-[LUID](/windows/desktop/api/winnt/ns-winnt-_luid)<br/>
-[LUID_AND_ATTRIBUTES](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes)<br/>
-[類別概觀](../../atl/atl-class-overview.md)<br/>
+[TOKEN_PRIVILEGES](/windows/win32/api/winnt/ns-winnt-token_privileges)<br/>
+[LUID](/windows/win32/api/winnt/ns-winnt-luid)<br/>
+[LUID_AND_ATTRIBUTES](/windows/win32/api/winnt/ns-winnt-luid_and_attributes)<br/>
+[類別總覽](../../atl/atl-class-overview.md)<br/>
 [安全性全域函式](../../atl/reference/security-global-functions.md)

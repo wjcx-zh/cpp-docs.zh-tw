@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_polymorphic class
 - is_polymorphic
 ms.assetid: 4e1704db-d6f9-4154-a100-0ba02a373f20
-ms.openlocfilehash: 8d9846f03db60cdad88fccc04ba520eeb935dc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 662d68d13e076733e9923d0fad7e9272cd01b559
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413576"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455717"
 ---
 # <a name="ispolymorphic-class"></a>is_polymorphic 類別
 
@@ -27,12 +27,12 @@ struct is_polymorphic;
 
 ### <a name="parameters"></a>參數
 
-*Ty*<br/>
+*Ty*\
 要查詢的類型。
 
 ## <a name="remarks"></a>備註
 
-如果型別述詞的執行個體保留 true 的型別*Ty*是類別，宣告或繼承虛擬函式，否則為 false。
+如果類型*Ty*是宣告或繼承虛擬函式的類別, 則類型述詞的實例為 true, 否則為 false。
 
 ## <a name="example"></a>範例
 
@@ -86,11 +86,11 @@ is_polymorphic<throws> == true
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<type_traits>
+**標頭：** \<type_traits>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[is_abstract 類別](../standard-library/is-abstract-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[is_abstract 類別](../standard-library/is-abstract-class.md)

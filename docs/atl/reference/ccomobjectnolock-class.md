@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246296"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497027"
 ---
 # <a name="ccomobjectnolock-class"></a>CComObjectNoLock 類別
 
-這個類別會實作`IUnknown`的非彙總的物件，但是不會遞增模組鎖定計數的建構函式。
+這個類別`IUnknown`會針對非匯總物件進行實作為, 但不會遞增此函式中的模組鎖定計數。
 
 ## <a name="syntax"></a>語法
 
@@ -31,31 +31,31 @@ class CComObjectNoLock : public Base
 
 #### <a name="parameters"></a>參數
 
-*基底*<br/>
-您的類別，衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或是[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)，因為您想要在物件上支援從任何其他介面。
+*群體*<br/>
+衍生自[CComObjectRoot](../../atl/reference/ccomobjectroot-class.md)或[CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)的類別, 以及您想要在物件上支援的任何其他介面。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|建構函式。|
 |[CComObjectNoLock::~CComObjectNoLock](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CComObjectNoLock::AddRef](#addref)|遞增參考計數物件上。|
+|[CComObjectNoLock::AddRef](#addref)|遞增物件上的參考計數。|
 |[CComObjectNoLock::QueryInterface](#queryinterface)|傳回所要求介面的指標。|
-|[CComObjectNoLock::Release](#release)|遞減參考計數物件。|
+|[CComObjectNoLock::Release](#release)|遞減物件上的參考計數。|
 
 ## <a name="remarks"></a>備註
 
-`CComObjectNoLock` 類似於[CComObject](../../atl/reference/ccomobject-class.md) ，因為它會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)非彙總的物件; 不過，`CComObjectNoLock`中建構函式會遞增模組的鎖定計數。
+`CComObjectNoLock`類似于[CComObject](../../atl/reference/ccomobject-class.md) , 因為它會針對非匯總物件執行[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) ;不過, `CComObjectNoLock`不會遞增在此函式中的模組鎖定計數。
 
-使用 ATL`CComObjectNoLock`內部的 class factory。 一般情況下，您不會直接使用這個類別。
+ATL 會`CComObjectNoLock`在內部針對 class factory 使用。 一般來說, 您不會直接使用這個類別。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -65,11 +65,11 @@ class CComObjectNoLock : public Base
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭:** atlcom.h。h
 
 ##  <a name="addref"></a>  CComObjectNoLock::AddRef
 
-遞增參考計數物件上。
+遞增物件上的參考計數。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>傳回值
 
-值，這個值可能有助於診斷或測試。
+可能有助於診斷或測試的值。
 
 ##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
 
-建構函式。 不同於[CComObject](../../atl/reference/ccomobject-class.md)，不會遞增模組鎖定計數。
+建構函式。 不同于[CComObject](../../atl/reference/ccomobject-class.md), 不會遞增模組鎖定計數。
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -90,7 +90,7 @@ CComObjectNoLock(void* = NULL);
 ### <a name="parameters"></a>參數
 
 <em>void\*</em><br/>
-[in]不使用這個未命名的參數。 存在與其他對稱`CComXXXObjectXXX`建構函式。
+在未使用這個未命名的參數。 它存在於與其他`CComXXXObjectXXX`的函式的對稱。
 
 ##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
 
@@ -102,7 +102,7 @@ CComObjectNoLock(void* = NULL);
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
+釋放所有配置的資源, 並呼叫[FinalRelease](ccomobjectrootex-class.md#finalrelease)。
 
 ##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
 
@@ -115,10 +115,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]所要求的介面識別碼。
+在所要求之介面的識別碼。
 
 *ppvObject*<br/>
-[out]所識別之介面指標的指標*iid*。 如果物件不支援這個介面， *ppvObject*設為 NULL。
+脫銷*Iid*所識別之介面指標的指標。 如果物件不支援這個介面, *ppvObject*會設定為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -126,7 +126,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ##  <a name="release"></a>  CComObjectNoLock::Release
 
-遞減參考計數物件。
+遞減物件上的參考計數。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,8 +134,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>傳回值
 
-在偵錯組建`Release`傳回值，這個值可能有助於診斷或測試。 在非偵錯組建中，`Release`一律會傳回 0。
+在 [偵錯工具`Release` ] 組建中, 傳回可能有助於診斷或測試的值。 在非 debug 組建中, `Release`一律會傳回0。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

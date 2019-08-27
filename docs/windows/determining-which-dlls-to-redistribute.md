@@ -1,6 +1,6 @@
 ---
 title: 決定要轉散發哪些 DLL
-ms.date: 03/25/2019
+ms.date: 07/15/2019
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: 4e4b53745c76a8e5b630bdd92633779e84262188
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 82fb582cae129b517a96deb3d4a9572ef8370a9d
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894487"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>決定要轉散發哪些 DLL
 
 當您建置應用程式時，如果該應用程式使用 Visual Studio 所提供的程式庫 DLL，則應用程式使用者的電腦上也必須要有這些 DLL，應用程式才能執行。 因為大部分的使用者可能未安裝 Visual Studio，因此您必須為他們提供這些 Dll。 Visual Studio 可讓這些 DLL 成為您能夠包含在應用程式安裝程式中的「可轉散發檔案」  。
 
-為了使可轉散發 DLL 更容易包含在您的安裝程式中，這些 DLL 會以獨立的「可轉散發套件」  形式提供。 這些是特定架構的可執行檔，使用集中部署將可轉散發檔案安裝在使用者的電腦上。 比方說，vcredist\_x86.exe 安裝 32 位元程式庫適用於 x86 電腦、 vcredist\_x64.exe 安裝 64 位元程式庫適用於 x64 電腦及 vcredist\_ARM.exe 安裝 ARM 電腦的程式庫。 由於 Microsoft 可以使用 Windows Update 服務個別更新這些程式庫，因此建議集中部署。 除了 Visual Studio 安裝中的複本，您也可以下載目前的可轉散發套件。 如需最新版與舊版工具組所支援之最新可轉散發套件的連結，請參閱[最新支援的 Visual C++ 下載](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 您可以在 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=158431)搜尋「Visual C++ 可轉散發套件」，來尋找可轉散發套件的特定舊版。
+為了使可轉散發 DLL 更容易包含在您的安裝程式中，這些 DLL 會以獨立的「可轉散發套件」  形式提供。 這些是特定架構的可執行檔，使用集中部署將可轉散發檔案安裝在使用者的電腦上。 比方說，vcredist\_x86.exe 安裝 32 位元程式庫針對 x86 和 x64 電腦，vcredist\_x64.exe 安裝 64 位元程式庫適用於 x64 電腦及 vcredist\_ARM.exe ARM 的安裝程式庫電腦。 由於 Microsoft 可以使用 Windows Update 服務個別更新這些程式庫，因此建議集中部署。 除了 Visual Studio 安裝中的複本，您也可以下載目前的可轉散發套件。 如需最新版與舊版工具組所支援之最新可轉散發套件的連結，請參閱[最新支援的 Visual C++ 下載](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)。 您可以在 [Microsoft 下載中心](https://go.microsoft.com/fwlink/p/?LinkId=158431)搜尋「Visual C++ 可轉散發套件」，來尋找可轉散發套件的特定舊版。
 
 您要部署之可轉散發套件的主要版本號碼必須符合用來建立應用程式的 Visual Studio 工具組版本，且次要版本必須為相同或更新版本。 Visual Studio 2017 和 Visual Studio 2015 具有相容的工具組版本號碼，這表示 Visual Studio 2017 可轉散發檔案可供使用 2015 版工具組建置的應用程式使用。 雖然它們可能相容，但不支援在透過 2017 版工具組建置的應用程式中使用 2015 版可轉散發檔案。 僅支援使用與您的工具組版本相同或更新的可轉散發套件。
 

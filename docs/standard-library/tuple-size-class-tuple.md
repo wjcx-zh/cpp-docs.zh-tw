@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1a069bcf5385a014438e36983e455ec3761ce727
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278939"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241559"
 ---
 # <a name="tuplesize-class"></a>tuple_size 函式
 
@@ -54,24 +54,28 @@ template <class Tuple>
    struct tuple_size<const volatile Tuple>;
 ```
 
+```cpp
+template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
+```
+
 ### <a name="parameters"></a>參數
 
-*Tuple*<br/>
+*元組*\
 Tuple 的類型。
 
-*Elem*<br/>
+*Elem*\
 陣列元素的類型。
 
-*Size*<br/>
+*大小*\
 陣列的大小。
 
-*T1*<br/>
+*T1*\
 第一個配對成員的類型。
 
-*T2*<br/>
+*T2*\
 第二個配對成員的類型。
 
-*型別*<br/>
+*類型*\
 元組元素的類型。
 
 ## <a name="remarks"></a>備註
@@ -120,9 +124,3 @@ int main()
 **標頭：** \<utility> (用於配對特製化)
 
 **命名空間：** std
-
-## <a name="see-also"></a>另請參閱
-
-[\<tuple>](../standard-library/tuple.md)<br/>
-[tuple](../standard-library/tuple-class.md)<br/>
-[tuple_element 類別](../standard-library/tuple-element-class-tuple.md)<br/>

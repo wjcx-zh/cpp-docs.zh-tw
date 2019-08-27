@@ -1,10 +1,11 @@
 ---
 title: /X (忽略標準 Include 路徑)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316310"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341048"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (忽略標準 Include 路徑)
 
-防止編譯器搜尋 include 檔中的 PATH 和 INCLUDE 環境變數所指定的目錄中。
+防止編譯器在 PATH 和 INCLUDE 環境變數所指定的目錄中搜尋 include 檔案。
 
 ## <a name="syntax"></a>語法
 
@@ -32,17 +33,17 @@ ms.locfileid: "62316310"
 
 ## <a name="remarks"></a>備註
 
-您可以使用這個選項搭配[/I （其他 Include 目錄）](i-additional-include-directories.md) (**/I**`directory`) 選項。
+您可以使用此選項搭配[/i (其他 Include 目錄)](i-additional-include-directories.md) ( **/i** `directory`) 選項。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 按一下 [C/C++]  資料夾。
 
-1. 按一下 **前置處理器**屬性頁。
+1. 按一下 [**預處理器**] 屬性頁。
 
-1. 修改**忽略標準 Include 路徑**屬性。
+1. 修改 [**忽略標準 Include 路徑**] 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
@@ -50,7 +51,7 @@ ms.locfileid: "62316310"
 
 ## <a name="example"></a>範例
 
-在下列命令中，`/X`會告訴編譯器忽略在 PATH 和 INCLUDE 環境變數所指定的位置和`/I`指定目錄中用來尋找 include 檔：
+在下列命令中, `/X`會告知編譯器忽略 PATH 所指定的位置並包含環境變數, 並`/I`指定要在其中尋找 INCLUDE 檔案的目錄:
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C

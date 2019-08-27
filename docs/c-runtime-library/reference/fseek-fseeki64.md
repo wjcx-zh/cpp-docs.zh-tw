@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cfb4bcea4a110cf8a9c9db664c42d6603328cf0
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287582"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376093"
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 
@@ -67,11 +67,11 @@ int _fseeki64(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **fseek**並 **_fseeki64**會傳回 0。 否則，它會傳回非零值。 在無法搜尋的裝置上，傳回的值為未定義。 如果*資料流*為 null 指標，或如果*原點*不是其中一個允許的值，如下所述**fseek**並 **_fseeki64**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
+如果成功, **fseek**和 **_fseeki64**就會傳回0。 否則，它會傳回非零值。 在無法搜尋的裝置上，傳回的值為未定義。 如果*stream*是 null 指標, 或如果*來源*不是以下所述的允許值之一, 則**fseek**和 **_fseeki64**會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**Fseek**並 **_fseeki64**函式之檔案指標 （若有的話） 相關聯的移動*串流*到新的位置是*位移*從位元組*原點*。 資料流的下一個作業會在新位置進行。 在開啟以供更新的資料流中，下一項作業可能是讀取或寫入。 引數*原點*必須是其中一個 STDIO 中定義下列常數。H:
+**Fseek**和 **_fseeki64**函式會將與*資料流程*相關聯的檔案指標 (如果有的話) 移至從*來源* *位移*位元組的新位置。 資料流的下一個作業會在新位置進行。 在開啟以供更新的資料流中，下一項作業可能是讀取或寫入。 引數*原點*必須是下列其中一個常數 (定義于 stdio.h 中)。H
 
 |原始值|意義|
 |-|-|
@@ -79,19 +79,19 @@ int _fseeki64(
 | **SEEK_END** | 檔案結尾。 |
 | **SEEK_SET** | 檔案開頭。 |
 
-您可以使用**fseek**並 **_fseeki64**將指標重新置放任何位置在檔案中。 指標也可以放置在超過檔案結尾的位置。 **fseek**並 **_fseeki64**清除檔案結尾指標，並取消任何之前的效果[ungetc](ungetc-ungetwc.md)對呼叫*串流*。
+您可以使用**fseek**和 **_fseeki64** , 將指標重新放置在檔案中的任何位置。 指標也可以放置在超過檔案結尾的位置。 **fseek**和 **_fseeki64**會清除檔案結尾指標, 並否定任何先前[ungetc](ungetc-ungetwc.md)呼叫對*資料流程*的影響。
 
 檔案因為附加資料而開啟時，目前的檔案位置取決於最後一個 I/O 作業，而不是下一次寫入的位置。 如果開啟以供附加的檔案上尚未發生任何 I/O 作業，該檔案的位置是檔案的開頭。
 
-以文字模式開啟的資料流**fseek**並 **_fseeki64**為有限使用，因為歸位字元復位換行轉譯可能導致**fseek**並 **_fseeki64**產生非預期的結果。 唯一**fseek**並 **_fseeki64**保證可以運作以文字模式開啟的資料流的作業：
+針對在文字模式中開啟的資料流程, **fseek**和 **_fseeki64**的用途有限, 因為換行字元摘要翻譯可能會導致**fseek**和 **_fseeki64**產生非預期的結果。 唯一保證在以文字模式開啟的資料流程上運作的**fseek**和 **_fseeki64**作業如下:
 
 - 相對於任何原點值，位移為 0 的搜尋。
 
-- 搜尋從開頭的位移值的檔案從呼叫傳回[ftell](ftell-ftelli64.md)使用時**fseek**或是[_ftelli64](ftell-ftelli64.md)時使用 **_fseeki64**.
+- 使用 **_fseeki64**時, 使用**fseek**或[_ftelli64](ftell-ftelli64.md)時, 從檔案的開頭開始搜尋, 其中包含從呼叫[ftell](ftell-ftelli64.md)所傳回的位移值。
 
-此外，在文字模式中，Ctrl+Z 會在輸入時被解譯成檔案結尾字元。 在檔案開啟供讀取/寫入時， [fopen](fopen-wfopen.md)和所有相關的常式檢查是否有 CTRL + Z 結尾的檔案，並盡可能移除它。 這是因為使用的組合**fseek**並[ftell](ftell-ftelli64.md)或 **_fseeki64**並[_ftelli64](ftell-ftelli64.md)，結尾的檔案內移動CTRL + Z 可能會造成**fseek**或是 **_fseeki64**檔案結尾附近產生不當行為。
+此外，在文字模式中，Ctrl+Z 會在輸入時被解譯成檔案結尾字元。 在為了讀取/寫入而開啟的檔案中, [fopen](fopen-wfopen.md)和所有相關的常式會檢查檔案結尾是否有 CTRL + Z, 並盡可能加以移除。 這是因為使用**fseek**和[ftell](ftell-ftelli64.md)或 **_fseeki64**和[_ftelli64](ftell-ftelli64.md)的組合, 在以 CTRL + Z 結束的檔案內移動, 可能會導致**fseek**或 **_fseeki64**在接近結尾的地方出現不正確的行為文字檔.
 
-當 CRT 開啟以位元順序標記 (BOM) 開頭的檔案時，檔案指標的位置在 BOM 之後 (也就是在檔案實際內容的開頭)。 如果您必須**fseek**檔案的開頭，使用[ftell](ftell-ftelli64.md)以取得初始位置並**fseek**給它，而不是位置 0。
+當 CRT 開啟以位元順序標記 (BOM) 開頭的檔案時，檔案指標的位置在 BOM 之後 (也就是在檔案實際內容的開頭)。 如果您必須**fseek**至檔案的開頭, 請使用[ftell](ftell-ftelli64.md)來取得初始位置並**fseek**至其位置, 而不是定位0。
 
 此函式於執行期間鎖定其他執行緒，因此為安全執行緒。 如需非鎖定版本，請參閱 [_fseek_nolock、_fseeki64_nolock](fseek-nolock-fseeki64-nolock.md)。
 

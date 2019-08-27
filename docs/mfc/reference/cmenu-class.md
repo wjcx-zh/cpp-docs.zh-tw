@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66504851"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69505514"
 ---
 # <a name="cmenu-class"></a>CMenu 類別
 
@@ -105,73 +105,73 @@ class CMenu : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CMenu::CMenu](#cmenu)|建構 `CMenu` 物件。|
+|[CMenu:: CMenu](#cmenu)|建構 `CMenu` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CMenu::AppendMenu](#appendmenu)|將新的項目附加至這個功能表的尾端。|
-|[CMenu::Attach](#attach)|附加的 Windows 功能表控制代碼`CMenu`物件。|
-|[CMenu::CheckMenuItem](#checkmenuitem)|旁放置核取記號，或從快顯功能表的功能表項目移除核取記號。|
-|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|將功能表項目旁邊的選項按鈕，並從所有其他功能表項目群組中移除的選項按鈕。|
-|[CMenu::CreateMenu](#createmenu)|建立空的功能表，並將它附加至`CMenu`物件。|
-|[CMenu::CreatePopupMenu](#createpopupmenu)|建立空的快顯功能表，並將它附加至`CMenu`物件。|
-|[CMenu::DeleteMenu](#deletemenu)|從功能表中刪除指定的項目。 如果功能表項目具有相關聯的快顯功能表，會終結快顯功能表的控制代碼，並釋放它所使用的記憶體。|
-|[CMenu::DeleteTempMap](#deletetempmap)|刪除暫時`CMenu`所建立的物件`FromHandle`成員函式。|
-|[CMenu::DestroyMenu](#destroymenu)|終結附加到功能表`CMenu`物件，並釋放任何功能表所佔用的記憶體。|
-|[CMenu::Detach](#detach)|中斷連結的 Windows 功能表的控制代碼從`CMenu`物件，並傳回的控制代碼。|
-|[CMenu::DrawItem](#drawitem)|由架構時為主控描繪功能表會變更的視覺外觀的呼叫。|
-|[CMenu::EnableMenuItem](#enablemenuitem)|啟用、 停用，或變暗 （灰色） 的功能表項目。|
-|[CMenu::FromHandle](#fromhandle)|將指標傳回至`CMenu`Windows 功能表控制代碼提供的物件。|
-|[CMenu::GetDefaultItem](#getdefaultitem)|判斷指定的功能表的預設功能表項目。|
-|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|擷取與功能表相關的說明內容識別碼。|
-|[CMenu::GetMenuInfo](#getmenuinfo)|擷取特定的功能表上的資訊。|
-|[CMenu::GetMenuItemCount](#getmenuitemcount)|判斷在快顯畫面或最上層功能表中的項目數。|
-|[CMenu::GetMenuItemID](#getmenuitemid)|取得功能表項目位於指定位置的功能表項目識別項。|
-|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|擷取功能表項目相關的資訊。|
-|[CMenu::GetMenuState](#getmenustate)|快顯功能表中，傳回指定的功能表項目或項目數目的狀態。|
-|[CMenu::GetMenuString](#getmenustring)|擷取指定的功能表項目的標籤。|
-|[CMenu::GetSafeHmenu](#getsafehmenu)|傳回`m_hMenu`由此包裝`CMenu`物件。|
-|[CMenu::GetSubMenu](#getsubmenu)|擷取的快顯功能表的指標。|
-|[CMenu::InsertMenu](#insertmenu)|將新的功能表項目插入位於指定位置，將其他項目移下的功能表。|
-|[CMenu::InsertMenuItem](#insertmenuitem)|在功能表中的指定位置中插入新的功能表項目。|
-|[CMenu::LoadMenu](#loadmenu)|從可執行檔載入功能表資源，並將它附加至`CMenu`物件。|
-|[CMenu::LoadMenuIndirect](#loadmenuindirect)|從功能表中的範本的記憶體載入功能表，並將它附加至`CMenu`物件。|
-|[CMenu::MeasureItem](#measureitem)|由架構呼叫以判斷功能表維度建立主控描繪功能表時。|
-|[CMenu::ModifyMenu](#modifymenu)|變更現有的功能表項目位於指定位置。|
-|[CMenu::RemoveMenu](#removemenu)|從指定的功能表中刪除相關聯的快顯功能表的功能表項目。|
-|[CMenu::SetDefaultItem](#setdefaultitem)|設定指定的功能表的預設功能表項目。|
-|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|設定要與功能表關聯的說明內容識別碼。|
-|[CMenu::SetMenuInfo](#setmenuinfo)|設定特定的功能表上的資訊。|
+|[CMenu::AppendMenu](#appendmenu)|將新專案附加至此功能表的結尾。|
+|[CMenu::Attach](#attach)|將 Windows 功能表控制碼附加至`CMenu`物件。|
+|[CMenu::CheckMenuItem](#checkmenuitem)|在快顯功能表的功能表項目中, 將核取記號放在旁邊或移除核取記號。|
+|[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|在功能表項目旁邊放置一個選項按鈕, 並移除群組中所有其他功能表項目的選項按鈕。|
+|[CMenu::CreateMenu](#createmenu)|建立空的功能表, 並將其附加`CMenu`至物件。|
+|[CMenu::CreatePopupMenu](#createpopupmenu)|建立空的快顯功能表, 並將其附加至`CMenu`物件。|
+|[CMenu::DeleteMenu](#deletemenu)|從功能表中刪除指定的專案。 如果功能表項目具有相關聯的快顯功能表, 會將控制碼損毀到快顯功能表, 並釋放它所使用的記憶體。|
+|[CMenu::DeleteTempMap](#deletetempmap)|刪除成員函`CMenu`式所`FromHandle`建立的任何暫存物件。|
+|[CMenu::DestroyMenu](#destroymenu)|終結附加至`CMenu`物件的功能表, 並釋出功能表所佔用的任何記憶體。|
+|[CMenu::Detach](#detach)|從`CMenu`物件卸離 Windows 功能表控制碼, 並傳回控制碼。|
+|[CMenu::DrawItem](#drawitem)|當主控描繪功能表的視覺外觀變更時由架構呼叫。|
+|[CMenu::EnableMenuItem](#enablemenuitem)|啟用、停用或變暗 (灰色) 功能表項目。|
+|[CMenu:: FromHandle](#fromhandle)|傳回指定 Windows 功能表句`CMenu`柄之物件的指標。|
+|[CMenu::GetDefaultItem](#getdefaultitem)|決定指定功能表上的預設功能表項目。|
+|[CMenu::GetMenuContextHelpId](#getmenucontexthelpid)|抓取與功能表相關聯的說明內容識別碼。|
+|[CMenu::GetMenuInfo](#getmenuinfo)|抓取特定功能表上的資訊。|
+|[CMenu::GetMenuItemCount](#getmenuitemcount)|決定快顯視窗或最上層功能表中的專案數。|
+|[CMenu::GetMenuItemID](#getmenuitemid)|取得位於指定位置之功能表項目的功能表項目識別碼。|
+|[CMenu::GetMenuItemInfo](#getmenuiteminfo)|抓取功能表項目的相關資訊。|
+|[CMenu::GetMenuState](#getmenustate)|傳回指定之功能表項目的狀態, 或快顯功能表中的專案數。|
+|[CMenu::GetMenuString](#getmenustring)|抓取指定功能表項目的標籤。|
+|[CMenu::GetSafeHmenu](#getsafehmenu)|傳回這個`m_hMenu` `CMenu`物件所包裝的。|
+|[CMenu::GetSubMenu](#getsubmenu)|抓取快顯功能表的指標。|
+|[CMenu::InsertMenu](#insertmenu)|在指定的位置插入新的功能表項目, 將其他專案向下移動功能表。|
+|[CMenu::InsertMenuItem](#insertmenuitem)|在功能表中的指定位置插入新的功能表項目。|
+|[CMenu::LoadMenu](#loadmenu)|從可執行檔載入功能表資源, 並將其附加至`CMenu`物件。|
+|[CMenu::LoadMenuIndirect](#loadmenuindirect)|從記憶體中的功能表範本載入功能表, 並將其附加至`CMenu`物件。|
+|[CMenu::MeasureItem](#measureitem)|建立主控描繪功能表時, 由架構呼叫以決定功能表尺寸。|
+|[CMenu::ModifyMenu](#modifymenu)|變更指定位置的現有功能表項目。|
+|[CMenu:: RemoveMenu](#removemenu)|從指定的功能表刪除具有相關聯快顯功能表的功能表項目。|
+|[CMenu::SetDefaultItem](#setdefaultitem)|設定指定功能表的預設功能表項目。|
+|[CMenu::SetMenuContextHelpId](#setmenucontexthelpid)|設定要與功能表相關聯的說明內容識別碼。|
+|[CMenu::SetMenuInfo](#setmenuinfo)|設定特定功能表上的資訊。|
 |[CMenu::SetMenuItemBitmaps](#setmenuitembitmaps)|將指定的核取記號點陣圖與功能表項目產生關聯。|
-|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|變更功能表項目相關的資訊。|
-|[CMenu::TrackPopupMenu](#trackpopupmenu)|會浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。|
-|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|會浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。|
+|[CMenu::SetMenuItemInfo](#setmenuiteminfo)|變更功能表項目的相關資訊。|
+|[CMenu::TrackPopupMenu](#trackpopupmenu)|在指定的位置上顯示浮動快顯功能表, 並追蹤快顯功能表上的專案選擇。|
+|[CMenu::TrackPopupMenuEx](#trackpopupmenuex)|在指定的位置上顯示浮動快顯功能表, 並追蹤快顯功能表上的專案選擇。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CMenu::operator HMENU](#operator_hmenu)|擷取功能表物件的控制代碼。|
-|[CMenu::operator ！ =](#operator_neq)|判斷兩個功能表物件是否不相等。|
-|[CMenu::operator ==](#operator_eq_eq)|判斷兩個功能表物件是否相等。|
+|[CMenu:: operator HMENU](#operator_hmenu)|抓取 menu 物件的控制碼。|
+|[CMenu:: operator! =](#operator_neq)|判斷兩個功能表物件是否不相等。|
+|[CMenu:: operator = =](#operator_eq_eq)|判斷兩個功能表物件是否相等。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CMenu::m_hMenu](#m_hmenu)|指定附加至 [Windows] 功能表的控制代碼`CMenu`物件。|
+|[CMenu::m_hMenu](#m_hmenu)|指定附加至`CMenu`物件之 Windows 功能表的控制碼。|
 
 ## <a name="remarks"></a>備註
 
-它提供成員函式建立、 追蹤、 更新和終結功能表。
+它提供用來建立、追蹤、更新和終結功能表的成員函式。
 
-建立`CMenu`物件上作為本機堆疊框架，然後呼叫`CMenu`的視需要管理的新功能表中的成員函式。 接下來，呼叫[CWnd::SetMenu](../../mfc/reference/cwnd-class.md#setmenu)將功能表設定為視窗中，緊接著呼叫`CMenu`物件的[卸離](#detach)成員函式。 `CWnd::SetMenu`成員函式設定至新功能表的視窗 功能表，會使視窗重繪以反映功能表變更，並也會傳遞至視窗的功能表的擁有權。 在呼叫`Detach`中斷連結從 HMENU`CMenu`物件，因此，當本機`CMenu`變數超出範圍，`CMenu`物件解構函式不會嘗試終結它不再擁有功能表。 功能表本身會自動終結時終結視窗。
+在堆疊框架上將`CMenu`物件建立為本機,然後呼叫的成員函式,視需要操作新的功能表。`CMenu` 接下來, 呼叫[CWnd:: SetMenu](../../mfc/reference/cwnd-class.md#setmenu)將功能表設定為視窗, 後面緊接著呼叫`CMenu`物件的卸[離](#detach)成員函式。 `CWnd::SetMenu`成員函式會將視窗的功能表設定為 [新增] 功能表, 使視窗重新繪製以反映功能表變更, 同時將功能表的擁有權傳遞至視窗。 呼叫會`Detach` `CMenu`從物件卸離 HMENU, 如此一來, 當本機變數超出範圍時, 物件的`CMenu`析構函式不會嘗試摧毀不再擁有的功能表。 `CMenu` 當視窗損毀時, 功能表本身會自動終結。
 
-您可以使用[LoadMenuIndirect](#loadmenuindirect)成員函式來建立範本，以在記憶體中，從功能表，但透過呼叫建立的資源功能表[LoadMenu](#loadmenu)更容易維護和本身的功能表資源可以建立和修改功能表編輯器。
+您可以使用[LoadMenuIndirect](#loadmenuindirect)成員函式, 從記憶體中的範本建立功能表, 但藉由呼叫[LoadMenu](#loadmenu)而從資源建立的功能表更容易維護, 且功能表資源本身可以透過功能表編輯器來建立和修改.
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -183,9 +183,9 @@ class CMenu : public CObject
 
 **標題:** afxwin.h
 
-##  <a name="appendmenu"></a>  CMenu::AppendMenu
+##  <a name="appendmenu"></a>CMenu:: AppendMenu
 
-將新的項目附加至結尾的功能表中。
+將新專案附加至功能表的結尾。
 
 ```
 BOOL AppendMenu(
@@ -202,22 +202,22 @@ BOOL AppendMenu(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-加入至功能表時，請指定新的功能表項目的狀態的相關資訊。 它包含一或多個 「 備註 」 一節中所列的值。
+指定將新功能表項目的狀態加入功能表中時的相關資訊。 其中包含 [備註] 區段中所列的一或多個值。
 
 *nIDNewItem*<br/>
-指定命令識別碼的新功能表項目或者，如果*nFlags*設定為 MF_POPUP，功能表控制代碼 ( `HMENU`) 的快顯功能表。 *NIDNewItem*參數會忽略 （不需要），如果*nFlags*設 MF_SEPARATOR。
+指定新功能表項目的命令識別碼, 或者, 如果*nFlags*設定為 MF_POPUP, 則為快顯功能表的功能表句`HMENU`柄 ()。 如果*nFlags*設為 MF_SEPARATOR, 則會忽略*nIDNewItem*參數 (不需要)。
 
 *lpszNewItem*<br/>
-指定新的功能表項目的內容。 *NFlags*參數用來解譯*lpszNewItem*方式如下：
+指定新功能表項目的內容。 *NFlags*參數是用來以下列方式解讀*lpszNewItem* :
 
-|nFlags|LpszNewItem 的解譯|
+|nFlags|LpszNewItem 的解讀|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|包含應用程式所提供的 32 位元值，應用程式可用來維護功能表項目相關聯的其他資料。 它能處理 WM_MEASUREITEM 和 WM_DRAWITEM 訊息時，應用程式可以使用這個 32 位元值。 值會儲存在`itemData`隨附這些訊息結構的成員。|
-|MF_STRING|包含以 null 終止的字串的指標。 這是預設解譯。|
-|MF_SEPARATOR|*LpszNewItem*參數會被忽略 （不需要）。|
+|MF_OWNERDRAW|包含應用程式提供的32位值, 應用程式可以用來維護與功能表項目相關聯的其他資料。 此32位值可供應用程式在處理 WM_MEASUREITEM 和 WM_DRAWITEM 訊息時使用。 值會儲存在與這些`itemData`訊息一起提供的結構成員中。|
+|MF_STRING|包含以 null 終止之字串的指標。 這是預設的轉譯。|
+|MF_SEPARATOR|已忽略*lpszNewItem*參數 (不需要)。|
 
 *pBmp*<br/>
-指向`CBitmap`用作功能表項目中的物件。
+指向將用`CBitmap`來做為功能表項目的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -225,51 +225,51 @@ BOOL AppendMenu(
 
 ### <a name="remarks"></a>備註
 
-應用程式可以在程式中設定值，指定功能表項目的狀態*nFlags*。 當*nIDNewItem*指定的快顯功能表中，就會附加 [] 功能表的一部分。 如果該功能表時損毀，也會終結附加的功能表。 附加的功能表應該從已中斷連結`CMenu`物件，以避免衝突。 請注意，MF_STRING 和 MF_OWNERDRAW 不是有效的點陣圖版本`AppendMenu`。
+應用程式可以藉由在*nFlags*中設定值來指定功能表項目的狀態。 當*nIDNewItem*指定快顯功能表時, 它會成為附加的功能表的一部分。 如果該功能表已終結, 則附加的功能表也會終結。 附加的功能表應該從`CMenu`物件卸離, 以避免發生衝突。 請注意, MF_STRING 和 MF_OWNERDRAW 對於的點陣圖版本`AppendMenu`而言是不正確。
 
-下列清單將描述可能會在設定的旗標*nFlags*:
+下列清單描述可在*nFlags*中設定的旗標:
 
-- MF_CHECKED 是做為切換 MF_UNCHECKED 放置預設值與核取記號項目旁。 當應用程式會提供核取記號點陣圖 (請參閱[SetMenuItemBitmaps](#setmenuitembitmaps)成員函式)，會顯示"上的核取記號"點陣圖。
+- MF_CHECKED 會做為具有 MF_UNCHECKED 的切換, 以將預設核取記號放置在專案旁邊。 當應用程式提供核取記號點陣圖 (請參閱[SetMenuItemBitmaps](#setmenuitembitmaps)成員函式) 時, 會顯示「核取記號開啟」點陣圖。
 
-- 將做為切換 MF_UNCHECKED 與 MF_CHECKED 移除項目旁的核取記號。 當應用程式會提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式)，會顯示 「 關閉的核取記號"點陣圖。
+- MF_UNCHECKED 會作為具有 MF_CHECKED 的切換, 以移除專案旁的核取記號。 當應用程式提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式) 時, 會顯示「核取記號關閉」點陣圖。
 
-- MF_DISABLED 停用功能表項目，使它無法選取，但不會變暗。
+- MF_DISABLED 會停用功能表項目, 使其無法選取, 但不會變暗。
 
-- MF_ENABLED，使其選取，並將它還原從其呈現暗灰色的狀態，可讓功能表項目。
+- MF_ENABLED 會啟用功能表項目, 讓它可以選取並從其暗灰色狀態還原。
 
-- 無法選取，使其變暗它 MF_GRAYED 會停用功能表項目。
+- MF_GRAYED 會停用功能表項目, 使其無法選取並變暗。
 
-- MF_MENUBARBREAK 置於新行在靜態功能表中，或在新的資料行，在快顯功能表中的項目。 新的快顯功能表欄會隔開垂直分隔線的舊的資料行。
+- MF_MENUBARBREAK 會將專案放在靜態功能表的新行或快顯功能表的新欄中。 新的快顯功能表欄將會與舊的資料行分隔。
 
-- MF_MENUBREAK 置於新行在靜態功能表中，或在新的資料行，在快顯功能表中的項目。 資料行之間，位於沒有分隔線。
+- MF_MENUBREAK 會將專案放在靜態功能表的新行或快顯功能表的新欄中。 不會在資料行之間放置分隔線。
 
-- MF_OWNERDRAW 指定的項目是主控描繪項目。 第一次出現的功能表時，擁有功能表的視窗，就會收到 WM_MEASUREITEM 訊息時，它會擷取的高度和寬度的功能表項目。 WM_DRAWITEM 訊息是傳送時擁有者必須更新的視覺外觀的功能表項目。 此選項不是有效的最上層的功能表項目。
+- MF_OWNERDRAW 指定專案為主控描繪專案。 當第一次顯示功能表時, 擁有功能表的視窗會收到 WM_MEASUREITEM 訊息, 其會抓取功能表項目的高度和寬度。 當擁有者必須更新功能表項目的視覺外觀時, 就會傳送 WM_DRAWITEM 訊息。 最上層功能表項目的這個選項無效。
 
-- MF_POPUP 指定功能表項目具有與其相關聯的快顯功能表。 ID 參數指定要與項目相關聯的快顯功能表的控制代碼。 這用於最上層的快顯功能表或階層式的快顯功能表加入快顯功能表項目。
+- MF_POPUP 指定功能表項目具有與它相關聯的快顯功能表。 ID 參數會指定要與專案相關聯之快顯功能表的控制碼。 這是用來將最上層快顯功能表或階層式快顯功能表加入快顯功能表專案。
 
-- MF_SEPARATOR 繪製水平分隔線。 只有在快顯功能表中使用。 無法呈現暗灰色，停用，或反白顯示這一行。 會忽略其他參數。
+- MF_SEPARATOR 繪製水準分隔線。 只能在快顯功能表中使用。 這一行不可為灰色、已停用或反白顯示。 會忽略其他參數。
 
 - MF_STRING 指定功能表項目是字元字串。
 
-下列群組的每個列出互斥，而且無法一起使用的旗標：
+下列每個群組都會列出互斥的旗標, 而且不能同時使用:
 
-- MF_DISABLED、 MF_ENABLED 和 MF_GRAYED
+- MF_DISABLED、MF_ENABLED 和 MF_GRAYED
 
-- MF_STRING、 MF_OWNERDRAW、 MF_SEPARATOR 和點陣圖版本
+- MF_STRING、MF_OWNERDRAW、MF_SEPARATOR 和 bitmap 版本
 
 - MF_MENUBARBREAK 和 MF_MENUBREAK
 
 - MF_CHECKED 和 MF_UNCHECKED
 
-每當在位於功能表視窗變更時 （不論是否顯示視窗），應用程式應該呼叫[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)。
+每當位於視窗中的功能表變更時 (不論是否顯示視窗), 應用程式應該呼叫[CWnd::D rawmenubar](../../mfc/reference/cwnd-class.md#drawmenubar)。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::CreateMenu](#createmenu)。
+  請參閱[CMenu:: CreateMenu](#createmenu)的範例。
 
-##  <a name="attach"></a>  CMenu::Attach
+##  <a name="attach"></a>CMenu:: Attach
 
-附加至現有的 Windows 功能表`CMenu`物件。
+將現有的 Windows 功能表附加至`CMenu`物件。
 
 ```
 BOOL Attach(HMENU hMenu);
@@ -278,25 +278,25 @@ BOOL Attach(HMENU hMenu);
 ### <a name="parameters"></a>參數
 
 *hMenu*<br/>
-指定 Windows 功能表的控制代碼。
+指定 Windows 功能表的控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果作業成功，為非零否則為 0。
+如果作業成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-應該不會呼叫此函式，如果功能表尚未附加至`CMenu`物件。 功能表控制代碼會儲存在`m_hMenu`資料成員。
+如果已將功能表附加至`CMenu`物件, 則不應呼叫此函式。 功能表控制碼會儲存在`m_hMenu`資料成員中。
 
-如果您想要操作的功能表已經與視窗相關聯，您可以使用[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)函式可取得功能表的控制代碼。
+如果您要操作的功能表已經與某個視窗相關聯, 您可以使用[CWnd:: GetMenu](../../mfc/reference/cwnd-class.md#getmenu)函式來取得功能表的控制碼。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]
 
-##  <a name="checkmenuitem"></a>  CMenu::CheckMenuItem
+##  <a name="checkmenuitem"></a>CMenu:: CheckMenuItem
 
-新增核取記號，或移除功能表項目在快顯功能表中的核取記號。
+在快顯功能表中, 將核取記號新增至功能表項目或從中移除核取記號。
 
 ```
 UINT CheckMenuItem(
@@ -307,36 +307,36 @@ UINT CheckMenuItem(
 ### <a name="parameters"></a>參數
 
 *nIDCheckItem*<br/>
-指定要檢查功能表項目，由*n*。
+指定要檢查的功能表項目 (由*nCheck*決定)。
 
 *nCheck*<br/>
-指定如何檢查功能表項目以及如何判斷在功能表中的項目的位置。 *n*參數可以是 MF_CHECKED 或 MF_UNCHECKED 中的結合 MF_BYPOSITION 或 MF_BYCOMMAND 旗標。 使用位元的 OR 運算子，可以結合這些旗標。 它們具有下列意義：
+指定如何檢查功能表項目, 以及如何判斷專案在功能表中的位置。 *NCheck*參數可以是 MF_CHECKED 或 MF_UNCHECKED 與 MF_BYPOSITION 或 MF_BYCOMMAND 旗標的組合。 這些旗標可以使用位 OR 運算子結合。 它們具有下列意義:
 
-- MF_BYCOMMAND 指定此參數可讓現有的功能表項目的命令識別碼。 這是預設值。
+- MF_BYCOMMAND 指定參數提供現有功能表項目的命令識別碼。 這是預設值。
 
-- MF_BYPOSITION 指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。
+- MF_BYPOSITION 指定參數提供現有功能表項目的位置。 第一個專案位於位置0。
 
-- MF_CHECKED 是做為切換 MF_UNCHECKED 放置預設值與核取記號項目旁。
+- MF_CHECKED 會做為具有 MF_UNCHECKED 的切換, 以將預設核取記號放置在專案旁邊。
 
-- 將做為切換 MF_UNCHECKED 與 MF_CHECKED 移除項目旁的核取記號。
+- MF_UNCHECKED 會作為具有 MF_CHECKED 的切換, 以移除專案旁的核取記號。
 
 ### <a name="return-value"></a>傳回值
 
-項目先前的狀態：MF_CHECKED MF_UNCHECKED 或 0xFFFFFFFF 如果功能表項目不存在。
+專案先前的狀態:MF_CHECKED 或 MF_UNCHECKED, 如果功能表項目不存在, 則為0xFFFFFFFF。
 
 ### <a name="remarks"></a>備註
 
-*NIDCheckItem*參數會指定要修改的項目。
+*NIDCheckItem*參數會指定要修改的專案。
 
-*NIDCheckItem*參數可識別將快顯功能表項目，以及功能表項目。 若要檢查的快顯功能表項目，不需要任何特殊步驟。 您無法選取最上層的功能表項目。 位置必須檢查的快顯功能表項目，因為它沒有與其相關聯的功能表項目識別碼。
+*NIDCheckItem*參數可以識別快顯功能表專案和功能表項目。 不需要執行任何特殊步驟, 就能檢查快顯功能表專案。 無法檢查最上層功能表項目。 快顯功能表專案必須依位置檢查, 因為它沒有相關聯的功能表項目識別碼。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::GetMenuState](#getmenustate)。
+  請參閱[CMenu:: GetMenuState](#getmenustate)的範例。
 
-##  <a name="checkmenuradioitem"></a>  CMenu::CheckMenuRadioItem
+##  <a name="checkmenuradioitem"></a>CMenu:: CheckMenuRadioItem
 
-會檢查指定的功能表項目，並讓選項項目。
+檢查指定的功能表項目, 並使它成為一個選項按鈕。
 
 ```
 BOOL CheckMenuRadioItem(
@@ -349,37 +349,37 @@ BOOL CheckMenuRadioItem(
 ### <a name="parameters"></a>參數
 
 *nIDFirst*<br/>
-指定 (做為 ID 或位移值而定*nFlags*) 選項按鈕群組中的第一個功能表項目。
+指定 (做為識別碼或位移, 視*nFlags*的值而定), 也就是選項按鈕群組中的第一個功能表項目。
 
 *nIDLast*<br/>
-指定 (做為 ID 或位移值而定*nFlags*) 最後一個選項按鈕群組中的功能表項目。
+指定 (做為識別碼或位移, 視*nFlags*的值而定), 也就是選項按鈕群組中的最後一個功能表項目。
 
 *nIDItem*<br/>
-指定 (做為 ID 或位移值而定*nFlags*) 將會檢查使用的選項按鈕群組中的項目。
+指定 (做為識別碼或位移, 視*nFlags*的值而定), 群組中的專案將會以選項按鈕進行檢查。
 
 *nFlags*<br/>
-指定解譯*nIDFirst*， *nIDLast*，並*nIDItem*方式如下：
+以下列方式指定*nIDFirst*、 *nIDLast*和*nIDItem*的轉譯:
 
 |nFlags|解譯|
 |------------|--------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零否則便是 0
+如果成功, 則為非零;否則為0
 
 ### <a name="remarks"></a>備註
 
-在此同時，函式會取消核取相關聯的群組中所有其他功能表項目，並清除這些項目的選項項目型別旗標。 已檢查的項目會顯示使用選項按鈕 （或項目符號） 點陣圖，而不核取記號點陣圖。
+同時, 函式會取消核取相關聯群組中的所有其他功能表項目, 並清除這些專案的 [廣播] 專案類型旗標。 核取的專案是使用選項按鈕 (或專案符號) 點陣圖而非核取記號點陣圖來顯示。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)。
+  請參閱[ON_COMMAND_RANGE](message-map-macros-mfc.md#on_command_range)的範例。
 
-##  <a name="cmenu"></a>  CMenu::CMenu
+##  <a name="cmenu"></a>CMenu:: CMenu
 
-建立空的功能表，並將它附加至`CMenu`物件。
+建立空的功能表, 並將其附加`CMenu`至物件。
 
 ```
 CMenu();
@@ -387,7 +387,7 @@ CMenu();
 
 ### <a name="remarks"></a>備註
 
-直到您呼叫其中一個建立或載入的成員函式，才會建立功能表 `CMenu:`
+在您呼叫其中一個 create 或 load 成員函式之前, 不會建立此功能表`CMenu:`
 
 - [CreateMenu](#createmenu)
 
@@ -399,9 +399,9 @@ CMenu();
 
 - [Attach](#attach)
 
-##  <a name="createmenu"></a>  CMenu::CreateMenu
+##  <a name="createmenu"></a>CMenu:: CreateMenu
 
-會建立一個功能表，並將它附加至`CMenu`物件。
+建立功能表, 並將其附加至`CMenu`物件。
 
 ```
 BOOL CreateMenu();
@@ -409,23 +409,23 @@ BOOL CreateMenu();
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果已成功; 建立功能表否則為 0。
+如果已成功建立功能表, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-功能表是一開始是空的。 可以使用 [新增] 功能表項目`AppendMenu`或`InsertMenu`成員函式。
+此功能表一開始是空的。 您可以使用`AppendMenu`或`InsertMenu`成員函式來新增功能表項目。
 
-如果功能表指派至 視窗，自動終結時終結視窗。
+如果將功能表指派給視窗, 則會在終結視窗時自動終結。
 
-結束之前，應用程式必須釋放系統資源，如果功能表未指派至 視窗相關聯的功能表。 應用程式藉由呼叫釋放功能表[DestroyMenu](#destroymenu)成員函式。
+在結束之前, 如果功能表未指派給視窗, 應用程式必須釋放與功能表相關聯的系統資源。 應用程式會藉由呼叫[DestroyMenu](#destroymenu)成員函式來釋放功能表。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#22](../../mfc/reference/codesnippet/cpp/cmenu-class_2.cpp)]
 
-##  <a name="createpopupmenu"></a>  CMenu::CreatePopupMenu
+##  <a name="createpopupmenu"></a>CMenu:: CreatePopupMenu
 
-建立快顯功能表，並將它附加至`CMenu`物件。
+建立快顯功能表, 並將其附加至`CMenu`物件。
 
 ```
 BOOL CreatePopupMenu();
@@ -433,23 +433,23 @@ BOOL CreatePopupMenu();
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功建立快顯功能表，非零值。否則為 0。
+如果成功建立快顯功能表, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-功能表是一開始是空的。 可以使用 [新增] 功能表項目`AppendMenu`或`InsertMenu`成員函式。 應用程式可以將快顯功能表加入現有的功能表或快顯功能表。 `TrackPopupMenu`可能使用成員函式，這個功能表顯示為浮動的快顯功能表，並追蹤快顯功能表上的選取項目。
+此功能表一開始是空的。 您可以使用`AppendMenu`或`InsertMenu`成員函式來新增功能表項目。 應用程式可以將快顯功能表加入至現有的功能表或快顯功能表。 `TrackPopupMenu`成員函式可以用來將此功能表顯示為浮動快顯功能表, 以及追蹤快顯功能表上的選取專案。
 
-如果功能表指派至 視窗，自動終結時終結視窗。 如果功能表會加入至現有的功能表中，會自動終結時終結該功能表。
+如果將功能表指派給視窗, 則會在終結視窗時自動終結。 如果將功能表加入至現有的功能表, 則會在該功能表終結時自動終結。
 
-結束之前，應用程式必須釋放系統資源，如果功能表未指派至 視窗相關聯的快顯功能表。 應用程式藉由呼叫釋放功能表[DestroyMenu](#destroymenu)成員函式。
+在結束之前, 應用程式必須釋放與快顯功能表相關聯的系統資源 (如果未將功能表指派給視窗)。 應用程式會藉由呼叫[DestroyMenu](#destroymenu)成員函式來釋放功能表。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::CreateMenu](#createmenu)。
+  請參閱[CMenu:: CreateMenu](#createmenu)的範例。
 
-##  <a name="deletemenu"></a>  CMenu::DeleteMenu
+##  <a name="deletemenu"></a>CMenu::D eleteMenu
 
-從功能表中刪除的項目。
+從功能表中刪除專案。
 
 ```
 BOOL DeleteMenu(
@@ -460,15 +460,15 @@ BOOL DeleteMenu(
 ### <a name="parameters"></a>參數
 
 *nPosition*<br/>
-指定的功能表項目會被刪除，由*nFlags*。
+指定要刪除的功能表項目 (由*nFlags*決定)。
 
 *nFlags*<br/>
-用來解譯*只有*方式如下：
+是用來以下列方式解讀*nPosition* :
 
-|nFlags|只有的解譯|
+|nFlags|NPosition 的解讀|
 |------------|---------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -476,17 +476,17 @@ BOOL DeleteMenu(
 
 ### <a name="remarks"></a>備註
 
-如果此功能表項目相關聯的快顯功能表上，`DeleteMenu`終結快顯功能表的控制代碼，並釋放快顯功能表所使用的記憶體。
+如果功能表項目具有相關聯的快顯功能表, 會將`DeleteMenu`控制碼損毀到快顯功能表, 並釋出快顯功能表所使用的記憶體。
 
-每當在位於功能表視窗變更時 （不論是否顯示視窗），應用程式必須呼叫[CWnd::DrawMenuBar](../../mfc/reference/cwnd-class.md#drawmenubar)。
+每當位於視窗中的功能表變更時 (不論是否顯示視窗), 應用程式都必須呼叫[CWnd::D rawmenubar](../../mfc/reference/cwnd-class.md#drawmenubar)。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。
+  請參閱[CWnd:: GetMenu](../../mfc/reference/cwnd-class.md#getmenu)的範例。
 
-##  <a name="deletetempmap"></a>  CMenu::DeleteTempMap
+##  <a name="deletetempmap"></a>CMenu::D eleteTempMap
 
-會自動呼叫`CWinApp`閒置時間處理常式中，刪除任何暫存`CMenu`所建立的物件[FromHandle](#fromhandle)成員函式。
+由`CWinApp`閒置時間處理常式自動呼叫, 會刪除[FromHandle](#fromhandle)成員函式所建立的任何暫存`CMenu`物件。
 
 ```
 static void PASCAL DeleteTempMap();
@@ -494,15 +494,15 @@ static void PASCAL DeleteTempMap();
 
 ### <a name="remarks"></a>備註
 
-`DeleteTempMap` 會附加至暫存的 Windows 功能表物件卸離`CMenu`物件，然後再刪除`CMenu`物件。
+`DeleteTempMap`先卸離附加至暫存`CMenu`物件的 Windows 功能表物件, 然後再`CMenu`刪除物件。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]
 
-##  <a name="destroymenu"></a>  CMenu::DestroyMenu
+##  <a name="destroymenu"></a>CMenu::D estroyMenu
 
-終結的功能表，然後使用任何 Windows 資源。
+損毀功能表和使用的任何 Windows 資源。
 
 ```
 BOOL DestroyMenu();
@@ -510,19 +510,19 @@ BOOL DestroyMenu();
 
 ### <a name="return-value"></a>傳回值
 
-如果功能表損毀;，非零值。否則為 0。
+如果功能表已終結, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-從卸離功能表`CMenu`物件終結之前。 Windows`DestroyMenu`函式會自動呼叫`CMenu`解構函式。
+功能表在終結之前, 會`CMenu`從物件卸離。 系統會`DestroyMenu` `CMenu`在析構函數中自動呼叫 Windows 函式。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::CreateMenu](#createmenu)。
+  請參閱[CMenu:: CreateMenu](#createmenu)的範例。
 
-##  <a name="detach"></a>  CMenu::Detach
+##  <a name="detach"></a>CMenu::D etach
 
-卸離 Windows 功能表`CMenu`物件，並傳回的控制代碼。
+從`CMenu`物件卸離 Windows 功能表, 並傳回控制碼。
 
 ```
 HMENU Detach();
@@ -530,19 +530,19 @@ HMENU Detach();
 
 ### <a name="return-value"></a>傳回值
 
-控制代碼型別的 HMENU，Windows 功能表上，如果成功，否則為 NULL。
+HMENU 類型的控制碼, 如果成功, 則為 Windows 功能表否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-`m_hMenu`資料成員設為 NULL。
+`m_hMenu`資料成員會設定為 Null。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#21](../../mfc/reference/codesnippet/cpp/cmenu-class_1.cpp)]
 
-##  <a name="drawitem"></a>  CMenu::DrawItem
+##  <a name="drawitem"></a>CMenu::D rawItem
 
-由架構時為主控描繪功能表會變更的視覺外觀的呼叫。
+當主控描繪功能表的視覺外觀變更時由架構呼叫。
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -551,23 +551,23 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpDrawItemStruct*<br/>
-指標[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)結構，其中包含的所需的繪圖類型的相關資訊。
+[DRAWITEMSTRUCT](/windows/win32/api/winuser/ns-winuser-drawitemstruct)結構的指標, 其中包含所需繪圖類型的相關資訊。
 
 ### <a name="remarks"></a>備註
 
-`itemAction`隸屬`DRAWITEMSTRUCT`結構會定義要執行的繪圖動作。 覆寫此成員函式，來實作活動，抽獎獲得主控描繪`CMenu`物件。 應用程式應該還原選取的顯示內容中提供所有的圖形裝置介面 (GDI) 物件*lpDrawItemStruct*之前終止此成員函式。
+`DRAWITEMSTRUCT`結構的成員會定義要執行的繪圖動作。 `itemAction` 覆寫這個成員函式, 以執行主控描繪`CMenu`物件的繪圖。 在此成員函式終止之前, 應用程式應該還原針對*lpDrawItemStruct*中提供的顯示內容所選取的所有圖形裝置介面 (GDI) 物件。
 
-請參閱[CWnd::OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem)的說明`DRAWITEMSTRUCT`結構。
+如需`DRAWITEMSTRUCT`結構的說明, 請參閱[CWnd:: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) 。
 
 ### <a name="example"></a>範例
 
-下列程式碼是從 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例：
+下列程式碼來自 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
-##  <a name="enablemenuitem"></a>  CMenu::EnableMenuItem
+##  <a name="enablemenuitem"></a>CMenu:: EnableMenuItem
 
-啟用、 停用，或變暗的功能表項目。
+啟用、停用或變暗功能表項目。
 
 ```
 UINT EnableMenuItem(
@@ -578,40 +578,40 @@ UINT EnableMenuItem(
 ### <a name="parameters"></a>參數
 
 *nIDEnableItem*<br/>
-指定功能表項目，若要啟用，由*nEnable*。 快顯功能表項目，以及標準功能表項目，可以指定此參數。
+指定要啟用的功能表項目 (由*nEnable*決定)。 這個參數可以指定快顯功能表專案和標準功能表項目。
 
 *nEnable*<br/>
-指定要採取的動作。 它可以是 MF_DISABLED、 MF_ENABLED 或 MF_GRAYED，MF_BYCOMMAND 或 MF_BYPOSITION 的組合。 使用位元的 OR 運算子，可以結合這些值。 這些值具有下列意義：
+指定要採取的動作。 它可以是 MF_DISABLED、MF_ENABLED 或 MF_GRAYED 的組合, 以及 MF_BYCOMMAND 或 MF_BYPOSITION。 這些值可以使用位 OR 運算子結合。 這些值具有下列意義:
 
-- MF_BYCOMMAND 指定此參數可讓現有的功能表項目的命令識別碼。 這是預設值。
+- MF_BYCOMMAND 指定參數提供現有功能表項目的命令識別碼。 這是預設值。
 
-- MF_BYPOSITION 指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。
+- MF_BYPOSITION 指定參數提供現有功能表項目的位置。 第一個專案位於位置0。
 
-- MF_DISABLED 停用功能表項目，使它無法選取，但不會變暗。
+- MF_DISABLED 會停用功能表項目, 使其無法選取, 但不會變暗。
 
-- MF_ENABLED，使其選取，並將它還原從其呈現暗灰色的狀態，可讓功能表項目。
+- MF_ENABLED 會啟用功能表項目, 讓它可以選取並從其暗灰色狀態還原。
 
-- 無法選取，使其變暗它 MF_GRAYED 會停用功能表項目。
+- MF_GRAYED 會停用功能表項目, 使其無法選取並變暗。
 
 ### <a name="return-value"></a>傳回值
 
-先前的狀態 （MF_DISABLED、 MF_ENABLED 或 MF_GRAYED） 則為-1 無效。
+先前的狀態 (MF_DISABLED、MF_ENABLED 或 MF_GRAYED) 或-1 (如果無效)。
 
 ### <a name="remarks"></a>備註
 
-[CreateMenu](#createmenu)， [InsertMenu](#insertmenu)， [ModifyMenu](#modifymenu)，以及[LoadMenuIndirect](#loadmenuindirect)成員函式也可以設定狀態 （已啟用，停用，或呈現暗灰色） 的功能表項目。
+[CreateMenu](#createmenu)、 [InsertMenu](#insertmenu)、 [ModifyMenu](#modifymenu)和[LoadMenuIndirect](#loadmenuindirect)成員函式也可以設定功能表項目的狀態 (已啟用、已停用或暗灰色)。
 
-使用 MF_BYPOSITION 值需要應用程式使用正確`CMenu`。 如果`CMenu`的功能表列，則受影響的最上層功能表項目 （功能表列中的項目）。 若要設定的位置快顯畫面或巢狀快顯功能表項目的狀態，應用程式必須指定`CMenu`的快顯功能表。
+使用 MF_BYPOSITION 值時, 應用程式必須使用正確`CMenu`的。 如果使用`CMenu`功能表列的, 則最上層功能表項目 (功能表列中的專案) 會受到影響。 若要依位置設定快捷方式或嵌套快顯功能表中的專案狀態, 應用程式必須指定`CMenu`快顯功能表的。
 
-當應用程式指定 MF_BYCOMMAND 旗標時，Windows 會檢查所有從屬的快顯功能表項目`CMenu`; 因此，除非有重複的功能表項目，使用`CMenu`的功能表列已足夠。
+當應用程式指定 MF_BYCOMMAND 旗標時, Windows 會檢查附屬於的`CMenu`所有快顯功能表專案; 因此, 除非出現重複的功能表項目, 否則`CMenu`使用功能表列的就已足夠。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#25](../../mfc/reference/codesnippet/cpp/cmenu-class_5.cpp)]
 
-##  <a name="fromhandle"></a>  CMenu::FromHandle
+##  <a name="fromhandle"></a>CMenu:: FromHandle
 
-將指標傳回至`CMenu`給功能表中的 Windows 控制代碼的物件。
+傳回`CMenu`物件的指標, 並指定功能表的 Windows 控制碼。
 
 ```
 static CMenu* PASCAL FromHandle(HMENU hMenu);
@@ -620,25 +620,25 @@ static CMenu* PASCAL FromHandle(HMENU hMenu);
 ### <a name="parameters"></a>參數
 
 *hMenu*<br/>
-功能表 Windows 控制代碼。
+功能表的 Windows 控制碼。
 
 ### <a name="return-value"></a>傳回值
 
-指標`CMenu`這可能是暫時性或永久性。
+`CMenu`的指標, 可能是暫時性或永久的。
 
 ### <a name="remarks"></a>備註
 
-如果`CMenu`物件尚未附加至 Windows 功能表物件，暫時`CMenu`建立物件並將其連結。
+如果物件尚未附加至 Windows menu 物件, 則會建立並附加暫存`CMenu`物件。 `CMenu`
 
-此暫存`CMenu`物件只適用於應用程式必須在其事件迴圈，此時會刪除所有暫存物件中的閒置時間的下一次。
+在下`CMenu`一次應用程式的事件迴圈中有閒置時間時, 此暫存物件才有效, 此時所有暫存物件都會遭到刪除。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::CreateMenu](#createmenu)。
+  請參閱[CMenu:: CreateMenu](#createmenu)的範例。
 
-##  <a name="getdefaultitem"></a>  CMenu::GetDefaultItem
+##  <a name="getdefaultitem"></a>CMenu:: GetDefaultItem
 
-判斷指定的功能表的預設功能表項目。
+決定指定功能表上的預設功能表項目。
 
 ```
 UINT GetDefaultItem(
@@ -649,31 +649,31 @@ UINT GetDefaultItem(
 ### <a name="parameters"></a>參數
 
 *gmdiFlags*<br/>
-值，指定函式如何搜尋功能表項目。 這個參數可以是 none、 一個或下值的組合：
+值, 指定函數搜尋功能表項目的方式。 這個參數可以是 none、one 或下列值的組合:
 
 |值|意義|
 |-----------|-------------|
-|GMDI_GOINTOPOPUPS|指定，是否開啟子功能表的其中一個預設項目，函式是在對應的子功能表以遞迴方式搜尋。 如果子功能表會不有任何預設項目，則傳回的值會識別開啟子功能表項目。<br /><br /> 根據預設，函式會傳回第一個預設項目上指定的功能表上，而不論其是否開啟子功能表項目。|
-|GMDI_USEDISABLED|指定函式會傳回預設的項目，即使它已停用。<br /><br /> 根據預設，此函式會略過已停用或灰色項目。|
+|GMDI_GOINTOPOPUPS|指定如果預設專案是開啟子功能表的專案, 則函式會以遞迴方式在對應的子功能表中進行搜尋。 如果子功能表沒有預設專案, 則傳回值會識別開啟子功能表的專案。<br /><br /> 根據預設, 函式會傳回指定功能表上的第一個預設專案, 而不論其是否為開啟子功能表的專案。|
+|GMDI_USEDISABLED|指定函數要傳回預設專案, 即使已停用。<br /><br /> 根據預設, 函式會略過停用或呈現灰色的專案。|
 
 *fByPos*<br/>
-值，指定是否要擷取功能表項目的識別項或其位置。 如果此參數為 FALSE，則會傳回識別碼。 否則，傳回的位置。
+值, 指定是否要取出功能表項目的識別碼或其位置。 如果此參數為 FALSE, 則會傳回識別碼。 否則, 會傳回位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果此函數成功，則傳回的值會是識別碼或功能表項目的位置。 如果函式失敗，傳回的值為-1。
+如果函式成功, 則傳回值是功能表項目的識別碼或位置。 如果函式失敗, 則傳回值為-1。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 函式行為[GetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-getmenudefaultitem)、 Windows SDK 中所述。
+此成員函式會執行 Win32 函數[GetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-getmenudefaultitem)的行為, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="getmenucontexthelpid"></a>  CMenu::GetMenuContextHelpId
+##  <a name="getmenucontexthelpid"></a>CMenu:: GetMenuCoNtextHelpId
 
-擷取識別碼相關聯的內容說明`CMenu`。
+抓取與`CMenu`相關聯的內容說明識別碼。
 
 ```
 DWORD GetMenuContextHelpId() const;
@@ -681,15 +681,15 @@ DWORD GetMenuContextHelpId() const;
 
 ### <a name="return-value"></a>傳回值
 
-與目前關聯識別碼的內容說明`CMenu`如果有的話，否則為零。
+目前與相關聯的內容說明`CMenu`識別碼 (如果有的話); 否則為零。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="getmenuinfo"></a>  CMenu::GetMenuInfo
+##  <a name="getmenuinfo"></a>CMenu:: GetMenuInfo
 
-擷取功能表的資訊。
+抓取功能表的資訊。
 
 ```
 BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
@@ -698,19 +698,19 @@ BOOL GetMenuInfo(LPMENUINFO lpcmi) const;
 ### <a name="parameters"></a>參數
 
 *lpcmi*<br/>
-指標[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)結構包含功能表的資訊。
+包含功能表資訊之[MENUINFO](/windows/win32/api/winuser/ns-winuser-menuinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-值，如果函式成功，傳回的值為非零值;否則，傳回的值為零。
+如果函式成功, 則傳回值為非零;否則, 傳回值為零。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式來擷取功能表的相關資訊。
+呼叫此函式可取得功能表的相關資訊。
 
-##  <a name="getmenuitemcount"></a>  CMenu::GetMenuItemCount
+##  <a name="getmenuitemcount"></a>CMenu:: GetMenuItemCount
 
-判斷在快顯畫面或最上層功能表中的項目數。
+決定快顯視窗或最上層功能表中的專案數。
 
 ```
 UINT GetMenuItemCount() const;
@@ -718,15 +718,15 @@ UINT GetMenuItemCount() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，函式的功能表中的項目數否則為-1。
+如果函式成功, 則為功能表中的專案數;否則為-1。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CWnd::GetMenu](../../mfc/reference/cwnd-class.md#getmenu)。
+  請參閱[CWnd:: GetMenu](../../mfc/reference/cwnd-class.md#getmenu)的範例。
 
-##  <a name="getmenuitemid"></a>  CMenu::GetMenuItemID
+##  <a name="getmenuitemid"></a>CMenu:: GetMenuItemID
 
-取得功能表項目所定義的位置上的功能表項目識別項*nPos*。
+取得功能表項目的功能表項目識別碼, 此專案位於*nPos*所定義的位置。
 
 ```
 UINT GetMenuItemID(int nPos) const;
@@ -735,19 +735,19 @@ UINT GetMenuItemID(int nPos) const;
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定的位置 （以零為起始） 的功能表項目正在擷取其識別碼。
+指定正在抓取其識別碼之功能表項目的位置 (以零為基底)。
 
 ### <a name="return-value"></a>傳回值
 
-指定的項目，如果函式成功快顯功能表中項目識別碼。 如果指定的項目 （而不是快顯功能表中的項目） 的快顯功能表，則傳回的值為-1。 如果*nPos*對應分隔符號功能表項目，傳回的值為 0。
+如果函式成功, 則為快顯功能表中指定專案的專案識別碼。 如果指定的專案是快顯功能表 (而不是快顯功能表中的專案), 則傳回值為-1。 如果*nPos*對應至 [分隔符號] 功能表項目, 則傳回值為0。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="getmenuiteminfo"></a>  CMenu::GetMenuItemInfo
+##  <a name="getmenuiteminfo"></a>CMenu:: GetMenuItemInfo
 
-擷取功能表項目相關的資訊。
+抓取功能表項目的相關資訊。
 
 ```
 BOOL GetMenuItemInfo(
@@ -759,29 +759,29 @@ BOOL GetMenuItemInfo(
 ### <a name="parameters"></a>參數
 
 *uItem*<br/>
-識別項或功能表項目，以取得相關資訊的位置。 此參數的意義取決於值`ByPos`。
+要取得相關資訊之功能表項目的識別碼或位置。 這個參數的意義取決於的值`ByPos`。
 
 *lpMenuItemInfo*<br/>
-指標[MENUITEMINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuiteminfoa)，如下所述，在 Windows SDK 中，包含功能表的相關資訊。
+如 Windows SDK 中所述的[MENUITEMINFO](/windows/win32/api/winuser/ns-winuser-menuiteminfow)指標, 其中包含功能表的相關資訊。
 
 *fByPos*<br/>
-值，指定的意義`nIDItem`。 根據預設，`ByPos`為 FALSE，表示該 uItem 是功能表項目識別項。 如果`ByPos`未設定為 FALSE，指出功能表項目位置。
+指定之意義的`nIDItem`值。 根據預設, `ByPos`為 FALSE, 表示 uItem 是功能表項目識別碼。 如果`ByPos`未設定為 FALSE, 則表示功能表項目位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)、 Windows SDK 中所述。
+如果函式成功, 則傳回值為非零。 如果此函式失敗，則傳回值為零。 若要取得擴充的錯誤資訊, 請使用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), 如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的行為的 Win32 函式[GetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-getmenuiteminfoa)、 Windows SDK 中所述。 請注意，在 MFC 實作`GetMenuItemInfo`，請勿使用功能表的控制代碼。
+此成員函式會實作用 Win32 函式[GetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-getmenuiteminfow)的行為, 如 Windows SDK 中所述。 請注意`GetMenuItemInfo`, 在的 MFC 執行中, 您不會使用功能表的控制碼。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#26](../../mfc/reference/codesnippet/cpp/cmenu-class_6.cpp)]
 
-##  <a name="getmenustate"></a>  CMenu::GetMenuState
+##  <a name="getmenustate"></a>CMenu:: GetMenuState
 
-快顯功能表中，傳回指定的功能表項目或項目數目的狀態。
+傳回指定之功能表項目的狀態, 或快顯功能表中的專案數。
 
 ```
 UINT GetMenuState(
@@ -792,42 +792,42 @@ UINT GetMenuState(
 ### <a name="parameters"></a>參數
 
 *nID*<br/>
-指定功能表項目識別碼，由*nFlags*。
+指定*nFlags*所決定的功能表項目識別碼。
 
 *nFlags*<br/>
-指定的本質*nID*。 它可以是下列值之一：
+指定*nID*的本質。 它可以是下列其中一個值:
 
-- MF_BYCOMMAND 指定此參數可讓現有的功能表項目的命令識別碼。 這是預設值。
+- MF_BYCOMMAND 指定參數提供現有功能表項目的命令識別碼。 這是預設值。
 
-- MF_BYPOSITION 指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。
+- MF_BYPOSITION 指定參數提供現有功能表項目的位置。 第一個專案位於位置0。
 
 ### <a name="return-value"></a>傳回值
 
-值為 0xFFFFFFFF，如果指定的項目不存在。 如果*nId*識別快顯功能表中，高序位位元組包含快顯功能表中的項目數，而低序位位元組會包含相關聯的快顯功能表的功能表旗標。 否則傳回值就是遮罩 （布林值或） 下列清單中的值 (此遮罩描述狀態的功能表項目*nId*識別):
+如果指定的專案不存在, 則值0xFFFFFFFF。 如果*nId*識別快顯功能表, 則高序位位元組包含快顯功能表中的專案數, 而低序位位元組則包含與快顯功能表相關聯的功能表旗標。 否則, 傳回值是下列清單中值的遮罩 (布林值或) (此遮罩描述*nId*識別的功能表項目狀態):
 
-- MF_CHECKED 是做為切換 MF_UNCHECKED 放置預設值與核取記號項目旁。 當應用程式會提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式)，會顯示"上的核取記號"點陣圖。
+- MF_CHECKED 會做為具有 MF_UNCHECKED 的切換, 以將預設核取記號放置在專案旁邊。 當應用程式提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式) 時, 會顯示「核取記號開啟」點陣圖。
 
-- MF_DISABLED 停用功能表項目，使它無法選取，但不會變暗。
+- MF_DISABLED 會停用功能表項目, 使其無法選取, 但不會變暗。
 
-- MF_ENABLED，使其選取，並將它還原從其呈現暗灰色的狀態，可讓功能表項目。 請注意，這個常數的值是 0;使用這個值時，應用程式應該不會針對 0 失敗的測試。
+- MF_ENABLED 會啟用功能表項目, 讓它可以選取並從其暗灰色狀態還原。 請注意, 這個常數的值是 0;使用此值時, 應用程式不應該針對失敗進行測試。
 
-- 無法選取，使其變暗它 MF_GRAYED 會停用功能表項目。
+- MF_GRAYED 會停用功能表項目, 使其無法選取並變暗。
 
-- MF_MENUBARBREAK 置於新行在靜態功能表中，或在新的資料行，在快顯功能表中的項目。 新的快顯功能表欄會隔開垂直分隔線的舊的資料行。
+- MF_MENUBARBREAK 會將專案放在靜態功能表的新行或快顯功能表的新欄中。 新的快顯功能表欄將會與舊的資料行分隔。
 
-- MF_MENUBREAK 置於新行在靜態功能表中，或在新的資料行，在快顯功能表中的項目。 資料行之間，位於沒有分隔線。
+- MF_MENUBREAK 會將專案放在靜態功能表的新行或快顯功能表的新欄中。 不會在資料行之間放置分隔線。
 
-- MF_SEPARATOR 繪製水平分隔線。 只有在快顯功能表中使用。 無法呈現暗灰色，停用，或反白顯示這一行。 會忽略其他參數。
+- MF_SEPARATOR 繪製水準分隔線。 只能在快顯功能表中使用。 這一行不可為灰色、已停用或反白顯示。 會忽略其他參數。
 
-- 將做為切換 MF_UNCHECKED 與 MF_CHECKED 移除項目旁的核取記號。 當應用程式會提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式)，會顯示 「 關閉的核取記號"點陣圖。 請注意，這個常數的值是 0;使用這個值時，應用程式應該不會針對 0 失敗的測試。
+- MF_UNCHECKED 會作為具有 MF_CHECKED 的切換, 以移除專案旁的核取記號。 當應用程式提供核取記號點陣圖 (請參閱`SetMenuItemBitmaps`成員函式) 時, 會顯示「核取記號關閉」點陣圖。 請注意, 這個常數的值是 0;使用此值時, 應用程式不應該針對失敗進行測試。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#27](../../mfc/reference/codesnippet/cpp/cmenu-class_7.cpp)]
 
-##  <a name="getmenustring"></a>  CMenu::GetMenuString
+##  <a name="getmenustring"></a>CMenu:: GetMenuString
 
-將指定的功能表項目的標籤複製到指定的緩衝區中。
+將指定功能表項目的標籤複製到指定的緩衝區。
 
 ```
 int GetMenuString(
@@ -845,40 +845,40 @@ int GetMenuString(
 ### <a name="parameters"></a>參數
 
 *nIDItem*<br/>
-在功能表中，根據的值指定整數識別項的功能表項目或功能表項目的位移*nFlags*。
+指定功能表項目的整數識別碼, 或功能表中功能表項目的位移 (視*nFlags*的值而定)。
 
 *lpString*<br/>
-要接收的標籤緩衝區的指標。
+指向要接收標籤的緩衝區。
 
 *rString*<br/>
-參考`CString`接收複製的功能表字串的物件。
+`CString`物件的參考, 用來接收已複製的功能表字串。
 
 *nMaxCount*<br/>
-指定要複製的標籤的最大長度 （以字元為單位）。 如果標籤是超過中指定的最大*nMaxCount*，額外的字元會被截斷。
+指定要複製之標籤的最大長度 (以字元為單位)。 如果標籤的長度超過*nMaxCount*中指定的最大值, 則會截斷額外的字元。
 
 *nFlags*<br/>
-指定解譯*nIDItem*參數。 它可以是下列值之一：
+指定*nIDItem*參數的轉譯。 它可以是下列其中一個值:
 
-|nFlags|NIDItem 的解譯|
+|nFlags|NIDItem 的解讀|
 |------------|-------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 ### <a name="return-value"></a>傳回值
 
-指定實際的複製到緩衝區，不包括 null 結束字元的字元數。
+指定複製到緩衝區的實際字元數, 不包括 null 結束字元。
 
 ### <a name="remarks"></a>備註
 
-*NMaxCount*參數應該是大於在標籤中，以容納終止字串的 null 字元的字元數的其中一個。
+*NMaxCount*參數應大於標籤中的字元數, 以容納終止字串的 null 字元。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="getsafehmenu"></a>  CMenu::GetSafeHmenu
+##  <a name="getsafehmenu"></a>CMenu:: GetSafeHmenu
 
-傳回由此包裝 HMENU`CMenu`物件或 NULL`CMenu`指標。
+傳回這個`CMenu`物件所包裝的 HMENU 或 Null`CMenu`指標。
 
 ```
 HMENU GetSafeHmenu() const;
@@ -886,11 +886,11 @@ HMENU GetSafeHmenu() const;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::LoadMenu](#loadmenu)。
+  請參閱[CMenu:: LoadMenu](#loadmenu)的範例。
 
-##  <a name="getsubmenu"></a>  CMenu::GetSubMenu
+##  <a name="getsubmenu"></a>CMenu:: GetSubMenu
 
-擷取`CMenu`快顯功能表的物件。
+抓取快捷`CMenu`功能表的物件。
 
 ```
 CMenu* GetSubMenu(int nPos) const;
@@ -899,19 +899,19 @@ CMenu* GetSubMenu(int nPos) const;
 ### <a name="parameters"></a>參數
 
 *nPos*<br/>
-指定包含功能表中的快顯功能表的位置。 位置值開始的第一個功能表項目為 0。 快顯功能表識別碼不能在此函式。
+指定功能表中所包含快顯功能表的位置。 第一個功能表項目的位置值從0開始。 快顯功能表的識別碼不能用在此函式中。
 
 ### <a name="return-value"></a>傳回值
 
-指標`CMenu`物件，其`m_hMenu`成員包含快顯功能表的控制代碼，如果快顯功能表中指定的位置; 否則為 NULL。 如果`CMenu`物件不存在，則會建立一個暫時。 `CMenu`應該不會儲存傳回的指標。
+`CMenu`物件的指標, 其`m_hMenu`成員包含快顯功能表的控制碼, 如果快顯功能表存在於指定的位置, 則為, 否則為 Null。 `CMenu`如果物件不存在, 則會建立一個暫存的物件。 不`CMenu`應儲存傳回的指標。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::TrackPopupMenu](#trackpopupmenu)。
+  請參閱[CMenu:: trackpopupmenu 讓](#trackpopupmenu)的範例。
 
-##  <a name="insertmenu"></a>  CMenu::InsertMenu
+##  <a name="insertmenu"></a>CMenu:: InsertMenu
 
-在所指定的位置插入新的功能表項目*只有*並且向下移的功能表中的其他項目。
+在*nPosition*指定的位置插入新的功能表項目, 並將其他專案向下移動功能表。
 
 ```
 BOOL InsertMenu(
@@ -930,30 +930,30 @@ BOOL InsertMenu(
 ### <a name="parameters"></a>參數
 
 *nPosition*<br/>
-指定功能表項目是插入新的功能表項目之前。 *NFlags*參數可以用來解譯*只有*如下：
+指定要在其中插入新功能表項目的功能表項目。 *NFlags*參數可透過下列方式用來解讀*nPosition* :
 
-|nFlags|只有的解譯|
+|nFlags|NPosition 的解讀|
 |------------|---------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。 如果*只有*為-1，新的功能表項目會附加至功能表的尾端。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。 如果*nPosition*為-1, 則新的功能表項目會附加至功能表的結尾。|
 
 *nFlags*<br/>
-指定如何*只有*解譯，並指定新的功能表項目的狀態的相關資訊加入至功能表時。 如需可設定的旗標的清單，請參閱 < [AppendMenu](#appendmenu)成員函式。 若要指定多個值，請使用位元的 OR 運算子結合了 MF_BYCOMMAND 或 MF_BYPOSITION 旗標。
+指定如何解讀*nPosition* , 並指定將新功能表項目的狀態加入功能表中時的相關資訊。 如需可能設定的旗標清單, 請參閱[AppendMenu](#appendmenu)成員函式。 若要指定一個以上的值, 請使用位 OR 運算子將它們與 MF_BYCOMMAND 或 MF_BYPOSITION 旗標結合。
 
 *nIDNewItem*<br/>
-指定命令識別碼的新功能表項目或者，如果*nFlags*設 MF_POPUP，快顯功能表的功能表控制代碼 (HMENU)。 *NIDNewItem*參數會忽略 （不需要），如果*nFlags*設 MF_SEPARATOR。
+指定新功能表項目的命令識別碼, 如果*nFlags*設定為 MF_POPUP, 則為快顯功能表的功能表控制碼 (HMENU)。 如果*nFlags*設為 MF_SEPARATOR, 則會忽略*nIDNewItem*參數 (不需要)。
 
 *lpszNewItem*<br/>
-指定新的功能表項目的內容。 *nFlags*可用來解譯*lpszNewItem*如下：
+指定新功能表項目的內容。 *nFlags*可透過下列方式用來解讀*lpszNewItem* :
 
-|nFlags|LpszNewItem 的解譯|
+|nFlags|LpszNewItem 的解讀|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|包含應用程式所提供的 32 位元值，應用程式可用來維護功能表項目相關聯的其他資料。 這個 32 位元值是在應用程式可用`itemData`所提供的結構成員[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)並[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)訊息。 功能表項目最初顯示或變更時，會傳送這些訊息。|
-|MF_STRING|包含以 null 終止的字串的長指標。 這是預設解譯。|
-|MF_SEPARATOR|*LpszNewItem*參數會被忽略 （不需要）。|
+|MF_OWNERDRAW|包含應用程式提供的32位值, 應用程式可以用來維護與功能表項目相關聯的其他資料。 這個32位值可供[WM_MEASUREITEM](/windows/win32/Controls/wm-measureitem)和[WM_DRAWITEM](/windows/win32/Controls/wm-drawitem)訊息所提供`itemData`之結構成員中的應用程式使用。 當功能表項目一開始顯示或變更時, 就會傳送這些訊息。|
+|MF_STRING|包含以 null 終止之字串的長指標。 這是預設的轉譯。|
+|MF_SEPARATOR|已忽略*lpszNewItem*參數 (不需要)。|
 
 *pBmp*<br/>
-指向`CBitmap`用作功能表項目中的物件。
+指向將用`CBitmap`來做為功能表項目的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -961,21 +961,21 @@ BOOL InsertMenu(
 
 ### <a name="remarks"></a>備註
 
-應用程式可以在程式中設定值，指定功能表項目的狀態*nFlags*。
+應用程式可以藉由在*nFlags*中設定值來指定功能表項目的狀態。
 
-每當在位於功能表視窗變更時 （不論是否顯示視窗），應用程式應該呼叫`CWnd::DrawMenuBar`。
+每當位於視窗中的功能表變更時 (不論是否顯示視窗), 應用程式應該呼叫`CWnd::DrawMenuBar`。
 
-當*nIDNewItem*指定的快顯功能表中，它會成為在其中插入 功能表的部分。 如果該功能表被終結時，[插入] 功能表也將被終結。 插入的功能表應該從已中斷連結`CMenu`物件，以避免衝突。
+當*nIDNewItem*指定快顯功能表時, 它會成為其插入所在功能表的一部分。 如果該功能表已終結, 則插入的功能表也會終結。 插入的功能表應該從`CMenu`物件卸離, 以避免發生衝突。
 
-如果多個文件介面 (MDI) 子視窗最大化的作用中和的應用程式插入至 MDI 應用程式的功能表中呼叫此函式，並指定 MF_BYPOSITION 旗標，功能表快顯功能表插入遠比保留的一個位置預期的。 這是因為使用中的 MDI 子視窗的 [控制] 功能表會插入至 MDI 框架視窗的功能表列的第一個位置。 若要正確地定位 [] 功能表中，應用程式必須將 1 加入至可使用位置值。 應用程式可用來判斷是否有目前作用中的子視窗會最大化 WM_MDIGETACTIVE 訊息。
+如果使用中的多重文件介面 (MDI) 子視窗最大化, 而且應用程式藉由呼叫此函式並指定 MF_BYPOSITION 旗標, 將快顯功能表插入 MDI 應用程式的功能表中, 則功能表會插入一個位置, 而不會比預期. 發生這種情況的原因是, 現用 MDI 子視窗的 [控制] 功能表會插入至 MDI 框架視窗功能表列的第一個位置。 若要適當地放置功能表, 應用程式必須將1新增至要使用的位置值。 應用程式可以使用 WM_MDIGETACTIVE 訊息來判斷目前作用中的子視窗是否最大化。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#28](../../mfc/reference/codesnippet/cpp/cmenu-class_8.cpp)]
 
-##  <a name="insertmenuitem"></a>  CMenu::InsertMenuItem
+##  <a name="insertmenuitem"></a>CMenu:: InsertMenuItem
 
-在功能表中的指定位置中插入新的功能表項目。
+在功能表中的指定位置插入新的功能表項目。
 
 ```
 BOOL InsertMenuItem(
@@ -987,21 +987,21 @@ BOOL InsertMenuItem(
 ### <a name="parameters"></a>參數
 
 *uItem*<br/>
-請參閱說明*uItem*中[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema) Windows SDK 中。
+請參閱 Windows SDK [InsertMenuItem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw)中的*uItem*說明。
 
 *lpMenuItemInfo*<br/>
-請參閱說明*lpmii*在`InsertMenuItem`Windows SDK 中。
+請參閱 Windows SDK中的`InsertMenuItem` lpmii 說明。
 
 *fByPos*<br/>
-請參閱說明*fByPosition*在`InsertMenuItem`Windows SDK 中。
+請參閱 Windows SDK中的`InsertMenuItem` fByPosition 說明。
 
 ### <a name="remarks"></a>備註
 
-此函式會包裝[InsertMenuItem](/windows/desktop/api/winuser/nf-winuser-insertmenuitema)、 Windows SDK 中所述。
+此函式會包裝[InsertMenuItem](/windows/win32/api/winuser/nf-winuser-insertmenuitemw), 如 Windows SDK 中所述。
 
-##  <a name="loadmenu"></a>  CMenu::LoadMenu
+##  <a name="loadmenu"></a>CMenu:: LoadMenu
 
-從應用程式的可執行檔載入功能表資源，並將它附加至`CMenu`物件。
+從應用程式的可執行檔載入功能表資源, 並將其附加`CMenu`至物件。
 
 ```
 BOOL LoadMenu(LPCTSTR lpszResourceName);
@@ -1011,26 +1011,26 @@ BOOL LoadMenu(UINT nIDResource);
 ### <a name="parameters"></a>參數
 
 *lpszResourceName*<br/>
-指向以 null 終止的字串，包含要載入功能表資源的名稱。
+指向以 null 終止的字串, 其中包含要載入的功能表資源名稱。
 
 *nIDResource*<br/>
-指定要載入功能表資源的功能表識別碼。
+指定要載入之功能表資源的功能表識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功; 載入功能表資源，非零值。否則為 0。
+如果已成功載入功能表資源, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-結束之前，應用程式必須釋放系統資源，如果功能表未指派至 視窗相關聯的功能表。 應用程式藉由呼叫釋放功能表[DestroyMenu](#destroymenu)成員函式。
+在結束之前, 如果功能表未指派給視窗, 應用程式必須釋放與功能表相關聯的系統資源。 應用程式會藉由呼叫[DestroyMenu](#destroymenu)成員函式來釋放功能表。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#29](../../mfc/reference/codesnippet/cpp/cmenu-class_9.cpp)]
 
-##  <a name="loadmenuindirect"></a>  CMenu::LoadMenuIndirect
+##  <a name="loadmenuindirect"></a>CMenu:: LoadMenuIndirect
 
-從功能表中的範本的記憶體載入資源，並將它附加至`CMenu`物件。
+從記憶體中的功能表範本載入資源, 並將它附加至`CMenu`物件。
 
 ```
 BOOL LoadMenuIndirect(const void* lpMenuTemplate);
@@ -1039,31 +1039,31 @@ BOOL LoadMenuIndirect(const void* lpMenuTemplate);
 ### <a name="parameters"></a>參數
 
 *lpMenuTemplate*<br/>
-指向功能表範本 (也就是單一[MENUITEMTEMPLATEHEADER](/windows/desktop/api/winuser/ns-winuser-menuitemtemplateheader)結構以及一或多個集合[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)結構)。 如需有關這些兩個結構的詳細資訊，請參閱 Windows SDK。
+指向功能表範本 (這是單一[MENUITEMTEMPLATEHEADER](/windows/win32/api/winuser/ns-winuser-menuitemtemplateheader)結構和一或多個[MENUITEMTEMPLATE](/windows/win32/api/winuser/ns-winuser-menuitemtemplate)結構的集合)。 如需這兩個結構的詳細資訊, 請參閱 Windows SDK。
 
 ### <a name="return-value"></a>傳回值
 
-如果已成功; 載入功能表資源，非零值。否則為 0。
+如果已成功載入功能表資源, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-功能表範本是後面接著一或多個集合的標頭[MENUITEMTEMPLATE](/windows/desktop/api/winuser/ns-winuser-menuitemtemplate)結構，每個都可能包含一或多個功能表項目和快顯功能表。
+功能表範本是標頭, 後面接著一個或多個[MENUITEMTEMPLATE](/windows/win32/api/winuser/ns-winuser-menuitemtemplate)結構的集合, 其中每一個都可能包含一或多個功能表項目和快顯功能表。
 
-版本號碼應為 0。
+版本號碼應為0。
 
-`mtOption`旗標應包含 MF_END，快顯清單中的最後一個項目和主要的清單中的最後一個項目。 請參閱`AppendMenu`其他旗標的成員函式。 `mtId` MF_POPUP 中指定時，必須從 MENUITEMTEMPLATE 結構省略成員`mtOption`。
+`mtOption`旗標應該包含快顯清單中最後一個專案的 MF_END, 以及主要清單中的最後一個專案。 如需`AppendMenu`其他旗標, 請參閱成員函式。 當`mtId` 中`mtOption`指定了 MF_POPUP 時, 必須從 MENUITEMTEMPLATE 結構中省略該成員。
 
-MENUITEMTEMPLATE 結構必須是不夠大，所配置的空間`mtString`包含功能表項目，以 null 終止字串的名稱。
+配置給 MENUITEMTEMPLATE 結構的空間必須夠大, `mtString`才能將功能表項目的名稱包含為以 null 結束的字串。
 
-結束之前，應用程式必須釋放系統資源，如果功能表未指派至 視窗相關聯的功能表。 應用程式藉由呼叫釋放功能表[DestroyMenu](#destroymenu)成員函式。
+在結束之前, 如果功能表未指派給視窗, 應用程式必須釋放與功能表相關聯的系統資源。 應用程式會藉由呼叫[DestroyMenu](#destroymenu)成員函式來釋放功能表。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#30](../../mfc/reference/codesnippet/cpp/cmenu-class_10.cpp)]
 
-##  <a name="m_hmenu"></a>  CMenu::m_hMenu
+##  <a name="m_hmenu"></a>CMenu:: m_hMenu
 
-指定附加至 [Windows] 功能表的 HMENU 控點`CMenu`物件。
+指定附加至`CMenu`物件之 Windows 功能表的 HMENU 控制碼。
 
 ```
 HMENU m_hMenu;
@@ -1071,11 +1071,11 @@ HMENU m_hMenu;
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::LoadMenu](#loadmenu)。
+  請參閱[CMenu:: LoadMenu](#loadmenu)的範例。
 
-##  <a name="measureitem"></a>  CMenu::MeasureItem
+##  <a name="measureitem"></a>CMenu:: MeasureItem
 
-建立具有主控描繪樣式的功能表時，由架構呼叫。
+建立具有擁有者繪製樣式的功能表時, 由架構呼叫。
 
 ```
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
@@ -1084,23 +1084,23 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>參數
 
 *lpMeasureItemStruct*<br/>
-指標`MEASUREITEMSTRUCT`結構。
+`MEASUREITEMSTRUCT`結構的指標。
 
 ### <a name="remarks"></a>備註
 
-根據預設，此成員函式沒有任何作用。 覆寫此成員函式，並填寫`MEASUREITEMSTRUCT`結構以通知 Windows 的 [] 功能表的維度。
+根據預設, 此成員函式不會執行任何工作。 覆寫這個成員函式並填入`MEASUREITEMSTRUCT`結構, 以通知視窗有功能表的維度。
 
-請參閱[CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)的說明`MEASUREITEMSTRUCT`結構。
+如需`MEASUREITEMSTRUCT`結構的說明, 請參閱[CWnd:: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) 。
 
 ### <a name="example"></a>範例
 
-下列程式碼是從 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例：
+下列程式碼來自 MFC [CTRLTEST](../../overview/visual-cpp-samples.md)範例:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
-##  <a name="modifymenu"></a>  CMenu::ModifyMenu
+##  <a name="modifymenu"></a>CMenu:: ModifyMenu
 
-變更現有的功能表項目所指定的位置*只有*。
+在*nPosition*指定的位置變更現有的功能表項目。
 
 ```
 BOOL ModifyMenu(
@@ -1119,30 +1119,30 @@ BOOL ModifyMenu(
 ### <a name="parameters"></a>參數
 
 *nPosition*<br/>
-指定要變更功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
+指定要變更的功能表項目。 *NFlags*參數可透過下列方式用來解讀*nPosition* :
 
-|nFlags|只有的解譯|
+|nFlags|NPosition 的解讀|
 |------------|---------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 *nFlags*<br/>
-指定如何*只有*解譯，並提供對功能表項目所做變更的相關資訊。 如需可設定的旗標的清單，請參閱 < [AppendMenu](#appendmenu)成員函式。
+指定如何解讀*nPosition* , 並提供對功能表項目所做之變更的相關資訊。 如需可設定的旗標清單, 請參閱[AppendMenu](#appendmenu)成員函式。
 
 *nIDNewItem*<br/>
-指定已修改的功能表項目的其中一個命令識別碼或者，如果*nFlags*設 MF_POPUP，快顯功能表的功能表控制代碼 (HMENU)。 *NIDNewItem*參數會忽略 （不需要），如果*nFlags*設 MF_SEPARATOR。
+指定已修改功能表項目的命令識別碼, 如果*nFlags*設定為 MF_POPUP, 則為快顯功能表的功能表控制碼 (HMENU)。 如果*nFlags*設為 MF_SEPARATOR, 則會忽略*nIDNewItem*參數 (不需要)。
 
 *lpszNewItem*<br/>
-指定新的功能表項目的內容。 *NFlags*參數可以用來解譯*lpszNewItem*如下：
+指定新功能表項目的內容。 *NFlags*參數可透過下列方式用來解讀*lpszNewItem* :
 
-|nFlags|LpszNewItem 的解譯|
+|nFlags|LpszNewItem 的解讀|
 |------------|-----------------------------------|
-|MF_OWNERDRAW|包含應用程式所提供的 32 位元值，應用程式可用來維護功能表項目相關聯的其他資料。 它會處理 MF_MEASUREITEM 和 MF_DRAWITEM 時，可供應用程式這個 32 位元值。|
-|MF_STRING|包含的長指標以 null 終止的字串或`CString`。|
-|MF_SEPARATOR|*LpszNewItem*參數會被忽略 （不需要）。|
+|MF_OWNERDRAW|包含應用程式提供的32位值, 應用程式可以用來維護與功能表項目相關聯的其他資料。 此32位值可供應用程式在處理 MF_MEASUREITEM 和 MF_DRAWITEM 時使用。|
+|MF_STRING|包含以 null 結束之字串或的`CString`長指標。|
+|MF_SEPARATOR|已忽略*lpszNewItem*參數 (不需要)。|
 
 *pBmp*<br/>
-指向`CBitmap`用作功能表項目中的物件。
+指向將用`CBitmap`來做為功能表項目的物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1150,19 +1150,19 @@ BOOL ModifyMenu(
 
 ### <a name="remarks"></a>備註
 
-應用程式設定中的值會指定新的功能表項目狀態*nFlags*。 如果此函式來取代快顯功能表的功能表項目相關聯，則它會終結舊的快顯功能表，並釋放快顯功能表所使用的記憶體。
+應用程式會藉由設定*nFlags*中的值, 來指定功能表項目的新狀態。 如果此函式取代與功能表項目相關聯的快顯功能表, 它會終結舊的快顯功能表, 並釋出快顯功能表所使用的記憶體。
 
-當*nIDNewItem*指定的快顯功能表中，它會成為在其中插入 功能表的部分。 如果該功能表被終結時，[插入] 功能表也將被終結。 插入的功能表應該從已中斷連結`CMenu`物件，以避免衝突。
+當*nIDNewItem*指定快顯功能表時, 它會成為其插入所在功能表的一部分。 如果該功能表已終結, 則插入的功能表也會終結。 插入的功能表應該從`CMenu`物件卸離, 以避免發生衝突。
 
-每當在位於功能表視窗變更時 （不論是否顯示視窗），應用程式應該呼叫`CWnd::DrawMenuBar`。 若要變更現有的功能表項目的屬性，它會更快速地使用`CheckMenuItem`和`EnableMenuItem`成員函式。
+每當位於視窗中的功能表變更時 (不論是否顯示視窗), 應用程式應該呼叫`CWnd::DrawMenuBar`。 若要變更現有功能表項目的屬性, 使用`CheckMenuItem`和`EnableMenuItem`成員函式的速度會更快。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="operator_hmenu"></a>  CMenu::operator HMENU
+##  <a name="operator_hmenu"></a>CMenu:: operator HMENU
 
-若要擷取的控制代碼使用這個運算子`CMenu`物件。
+使用這個運算子來取出`CMenu`物件的控制碼。
 
 ```
 operator HMENU() const;
@@ -1170,15 +1170,15 @@ operator HMENU() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果成功的控制代碼`CMenu`物件; 否則為 NULL。
+如果成功, 則為`CMenu`物件的控制碼, 否則為 Null。
 
 ### <a name="remarks"></a>備註
 
-您可以使用控制代碼來直接呼叫 Windows Api。
+您可以使用控制碼直接呼叫 Windows Api。
 
-##  <a name="operator_neq"></a>  CMenu::operator ！ =
+##  <a name="operator_neq"></a>CMenu:: operator! =
 
-判斷兩個功能表是否以邏輯方式不相等。
+判斷兩個功能表在邏輯上是否不相等。
 
 ```
 BOOL operator!=(const CMenu& menu) const;
@@ -1186,16 +1186,16 @@ BOOL operator!=(const CMenu& menu) const;
 
 ### <a name="parameters"></a>參數
 
-*menu*<br/>
-A`CMenu`進行比較的物件。
+*下拉式功能表*<br/>
+要比較的物件。 `CMenu`
 
 ### <a name="remarks"></a>備註
 
-在左側功能表物件是否不等於右邊的功能表物件的測試。
+測試左側的功能表物件是否不等於右邊的功能表物件。
 
-##  <a name="operator_eq_eq"></a>  CMenu::operator = =
+##  <a name="operator_eq_eq"></a>CMenu:: operator = =
 
-判斷兩個功能表是否在邏輯上相等。
+判斷兩個功能表在邏輯上是否相等。
 
 ```
 BOOL operator==(const CMenu& menu) const;
@@ -1203,16 +1203,16 @@ BOOL operator==(const CMenu& menu) const;
 
 ### <a name="parameters"></a>參數
 
-*menu*<br/>
-A`CMenu`進行比較的物件。
+*下拉式功能表*<br/>
+要比較的物件。 `CMenu`
 
 ### <a name="remarks"></a>備註
 
-如果在左側的功能表物件的測試 （依據 HMENU 值） 等於右邊的功能表物件。
+測試左邊的功能表物件是否等於右邊的 menu 物件 (以 HMENU 值為依據)。
 
-##  <a name="removemenu"></a>  CMenu::RemoveMenu
+##  <a name="removemenu"></a>CMenu:: RemoveMenu
 
-從功能表中刪除相關聯的快顯功能表的功能表項目。
+從功能表中刪除具有相關聯快顯功能表的功能表項目。
 
 ```
 BOOL RemoveMenu(
@@ -1223,15 +1223,15 @@ BOOL RemoveMenu(
 ### <a name="parameters"></a>參數
 
 *nPosition*<br/>
-指定要移除功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
+指定要移除的功能表項目。 *NFlags*參數可透過下列方式用來解讀*nPosition* :
 
-|nFlags|只有的解譯|
+|nFlags|NPosition 的解讀|
 |------------|---------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 *nFlags*<br/>
-指定如何*只有*解譯。
+指定如何解讀*nPosition* 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1239,17 +1239,17 @@ BOOL RemoveMenu(
 
 ### <a name="remarks"></a>備註
 
-它不會終結快顯功能表中的控制代碼以便之後可以重複使用的功能表。 應用程式可能會在之前呼叫這個函式，呼叫`GetSubMenu`成員函式來擷取快顯視窗`CMenu`供重複使用的物件。
+它不會損毀快顯功能表的控制碼, 因此可以重複使用功能表。 在呼叫此函式之前, 應用程式可能`GetSubMenu`會呼叫成員函`CMenu`式來抓取快顯物件, 以供重複使用。
 
-每當在位於功能表視窗變更時 （不論是否顯示視窗），應用程式必須呼叫`CWnd::DrawMenuBar`。
+每當位於視窗中的功能表變更時 (不論是否顯示視窗), 應用程式必須呼叫`CWnd::DrawMenuBar`。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="setdefaultitem"></a>  CMenu::SetDefaultItem
+##  <a name="setdefaultitem"></a>CMenu:: SetDefaultItem
 
-設定指定的功能表的預設功能表項目。
+設定指定功能表的預設功能表項目。
 
 ```
 BOOL SetDefaultItem(
@@ -1260,26 +1260,26 @@ BOOL SetDefaultItem(
 ### <a name="parameters"></a>參數
 
 *uItem*<br/>
-識別項或新的預設功能表項目或-1 表示沒有預設項目位置。 此參數的意義取決於 windows 7 *fByPos*。
+新預設功能表項目的識別碼或位置, 或-1 表示沒有預設專案。 這個參數的意義取決於*fByPos*的值。
 
 *fByPos*<br/>
-值，指定的意義*uItem*。 如果此參數為 FALSE 時， *uItem*是功能表項目識別碼。 否則，它是功能表項目位置。
+指定*uItem*意義的值。 如果此參數為 FALSE, 則*uItem*是功能表項目識別碼。 否則, 它是功能表項目位置。
 
 ### <a name="return-value"></a>傳回值
 
-如果此函數成功，傳回的值為非零值。 如果此函式失敗，則傳回值為零。 若要取得延伸錯誤資訊，請使用 Win32 函式[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)、 Windows SDK 中所述。
+如果函式成功, 則傳回值為非零。 如果此函式失敗，則傳回值為零。 若要取得擴充的錯誤資訊, 請使用 Win32 函數[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror), 如 Windows SDK 中所述。
 
 ### <a name="remarks"></a>備註
 
-此成員函式實作的 Win32 函式行為[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem)、 Windows SDK 中所述。
+此成員函式會執行 Win32 函數[SetMenuDefaultItem](/windows/win32/api/winuser/nf-winuser-setmenudefaultitem)的行為, 如 Windows SDK 中所述。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="setmenucontexthelpid"></a>  CMenu::SetMenuContextHelpId
+##  <a name="setmenucontexthelpid"></a>CMenu:: SetMenuCoNtextHelpId
 
-使用的內容說明識別碼相關聯`CMenu`。
+將內容說明識別碼與`CMenu`建立關聯。
 
 ```
 BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
@@ -1288,21 +1288,21 @@ BOOL SetMenuContextHelpId(DWORD dwContextHelpId);
 ### <a name="parameters"></a>參數
 
 *dwContextHelpId*<br/>
-內容說明識別碼相關聯`CMenu`。
+要與相關聯的`CMenu`內容說明識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功則為非零否則便是 0
+如果成功, 則為非零;否則為0
 
 ### <a name="remarks"></a>備註
 
-在功能表中的所有項目共用這個識別碼，不可能將說明內容識別碼附加至個別的功能表項目。
+功能表中的所有專案都會共用此識別碼, 因此無法將說明內容識別碼附加至個別的功能表項目。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[CMenu::InsertMenu](#insertmenu)。
+  請參閱[CMenu:: InsertMenu](#insertmenu)的範例。
 
-##  <a name="setmenuinfo"></a>  CMenu::SetMenuInfo
+##  <a name="setmenuinfo"></a>CMenu:: SetMenuInfo
 
 設定功能表的資訊。
 
@@ -1313,19 +1313,19 @@ BOOL SetMenuInfo(LPCMENUINFO lpcmi);
 ### <a name="parameters"></a>參數
 
 *lpcmi*<br/>
-指標[MENUINFO](/windows/desktop/api/winuser/ns-winuser-tagmenuinfo)結構包含功能表的資訊。
+包含功能表資訊之[MENUINFO](/windows/win32/api/winuser/ns-winuser-menuinfo)結構的指標。
 
 ### <a name="return-value"></a>傳回值
 
-值，如果函式成功，傳回的值為非零值;否則，傳回的值為零。
+如果函式成功, 則傳回值為非零;否則, 傳回值為零。
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式來設定功能表的特定資訊。
+呼叫此函式可設定功能表的特定資訊。
 
-##  <a name="setmenuitembitmaps"></a>  CMenu::SetMenuItemBitmaps
+##  <a name="setmenuitembitmaps"></a>CMenu:: SetMenuItemBitmaps
 
-關聯的功能表項目中指定的點陣圖。
+將指定的點陣圖與功能表項目產生關聯。
 
 ```
 BOOL SetMenuItemBitmaps(
@@ -1338,21 +1338,21 @@ BOOL SetMenuItemBitmaps(
 ### <a name="parameters"></a>參數
 
 *nPosition*<br/>
-指定要變更功能表項目。 *NFlags*參數可以用來解譯*只有*如下：
+指定要變更的功能表項目。 *NFlags*參數可透過下列方式用來解讀*nPosition* :
 
-|nFlags|只有的解譯|
+|nFlags|NPosition 的解讀|
 |------------|---------------------------------|
-|MF_BYCOMMAND|指定此參數可讓現有的功能表項目的命令識別碼。 如果 MF_BYCOMMAND 和 MF_BYPOSITION 都不設定，這是預設值。|
-|MF_BYPOSITION|指定此參數可讓現有的功能表項目的位置。 第一個項目位於位置 0。|
+|MF_BYCOMMAND|指定參數提供現有功能表項目的命令識別碼。 如果未設定 MF_BYCOMMAND 或 MF_BYPOSITION, 則此為預設值。|
+|MF_BYPOSITION|指定參數提供現有功能表項目的位置。 第一個專案位於位置0。|
 
 *nFlags*<br/>
-指定如何*只有*解譯。
+指定如何解讀*nPosition* 。
 
 *pBmpUnchecked*<br/>
-指定要功能表項目，則不會檢查所使用的點陣圖。
+指定要用於未核取之功能表項目的點陣圖。
 
 *pBmpChecked*<br/>
-指定要檢查功能表項目所使用的點陣圖。
+指定要用於已檢查功能表項目的點陣圖。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1360,13 +1360,13 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="remarks"></a>備註
 
-功能表項目是否已核取或取消核取，則 Windows 會顯示功能表項目旁適當的點陣圖。
+無論是否核取或取消選取功能表項目, Windows 都會在功能表項目旁邊顯示適當的點陣圖。
 
-如果有任一*pBmpUnchecked*或是*pBmpChecked*是 NULL，則 Windows 會顯示功能表項目對應屬性旁邊的任何內容。 如果這兩個參數都是 NULL，Windows 會使用預設核取記號，核取項目，並取消核取項目時，會移除核取記號。
+如果*pBmpUnchecked*或*pBmpChecked*是 Null, 則 Windows 不會在對應屬性的功能表項目旁邊顯示任何內容。 如果兩個參數都是 Null, 則 Windows 會在檢查項目時使用預設的核取記號, 並在取消核取專案時移除核取記號。
 
-功能表終結時，不會終結這些點陣圖;應用程式必須摧毀它們。
+當功能表被終結時, 這些點陣圖並不會損毀;應用程式必須摧毀它們。
 
-Windows`GetMenuCheckMarkDimensions`函式會擷取預設核取記號，用於功能表項目維度。 應用程式會使用這些值來決定適當的大小，此函式所提供的點陣圖。 取得大小，建立您的點陣圖，然後設定它們。
+Windows `GetMenuCheckMarkDimensions`函數會抓取用於功能表項目之預設核取記號的維度。 應用程式會使用這些值來判斷此函式所提供之點陣圖的適當大小。 取得大小、建立您的點陣圖, 然後加以設定。
 
 ### <a name="example"></a>範例
 
@@ -1374,9 +1374,9 @@ Windows`GetMenuCheckMarkDimensions`函式會擷取預設核取記號，用於功
 
 [!code-cpp[NVC_MFCWindowing#33](../../mfc/reference/codesnippet/cpp/cmenu-class_13.cpp)]
 
-##  <a name="setmenuiteminfo"></a>  CMenu::SetMenuItemInfo
+##  <a name="setmenuiteminfo"></a>CMenu:: SetMenuItemInfo
 
-變更功能表項目相關的資訊。
+變更功能表項目的相關資訊。
 
 ```
 BOOL SetMenuItemInfo(
@@ -1388,21 +1388,21 @@ BOOL SetMenuItemInfo(
 ### <a name="parameters"></a>參數
 
 *uItem*<br/>
-請參閱說明*uItem*中[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa) Windows SDK 中。
+請參閱 Windows SDK [SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow)中的*uItem*說明。
 
 *lpMenuItemInfo*<br/>
-請參閱說明*lpmii*在`SetMenuItemInfo`Windows SDK 中。
+請參閱 Windows SDK中的`SetMenuItemInfo` lpmii 說明。
 
 *fByPos*<br/>
-請參閱說明*fByPosition*在`SetMenuItemInfo`Windows SDK 中。
+請參閱 Windows SDK中的`SetMenuItemInfo` fByPosition 說明。
 
 ### <a name="remarks"></a>備註
 
-此函式會包裝[SetMenuItemInfo](/windows/desktop/api/winuser/nf-winuser-setmenuiteminfoa)、 Windows SDK 中所述。
+此函式會包裝[SetMenuItemInfo](/windows/win32/api/winuser/nf-winuser-setmenuiteminfow), 如 Windows SDK 中所述。
 
-##  <a name="trackpopupmenu"></a>  CMenu::TrackPopupMenu
+##  <a name="trackpopupmenu"></a>CMenu:: Trackpopupmenu 讓
 
-會浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。
+在指定的位置上顯示浮動快顯功能表, 並追蹤快顯功能表上的專案選擇。
 
 ```
 BOOL TrackPopupMenu(
@@ -1416,35 +1416,35 @@ BOOL TrackPopupMenu(
 ### <a name="parameters"></a>參數
 
 *nFlags*<br/>
-指定螢幕位置和滑鼠位置的旗標。 請參閱[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)取得一份可用的旗標。
+指定螢幕位置和滑鼠位置旗標。 如需可用旗標的清單, 請參閱[trackpopupmenu 讓](/windows/win32/api/winuser/nf-winuser-trackpopupmenu)。
 
 *x*<br/>
-指定螢幕座標中的快顯功能表的水平位置。 值而定*nFlags*參數，功能表可以是靠左對齊、 靠右對齊或置中相對於此位置。
+指定快顯功能表之螢幕座標中的水準位置。 視*nFlags*參數的值而定, 功能表可以靠左對齊、靠右對齊或置中相對於此位置的中心。
 
 *y*<br/>
-在畫面上，指定功能表的頂端以螢幕座標的垂直位置。
+指定螢幕上功能表頂端螢幕座標的垂直位置。
 
 *pWnd*<br/>
-識別擁有快顯功能表的視窗。 這個參數不能是 NULL，，即使指定 TPM_NONOTIFY 旗標。 此視窗會收到所有的 WM_COMMAND 訊息，從功能表。 在 Windows 3.1 和更新版本的版本，視窗不會收到 WM_COMMAND 訊息，直到`TrackPopupMenu`傳回。 在 Windows 3.0 中，視窗會收到 WM_COMMAND 訊息之前`TrackPopupMenu`傳回。
+識別擁有快顯功能表的視窗。 即使已指定 TPM_NONOTIFY 旗標, 此參數也不可以是 Null。 此視窗會接收來自功能表的所有 WM_COMMAND 訊息。 在 Windows 版本3.1 和更新版本中, 視窗不會接收 WM_COMMAND 訊息`TrackPopupMenu` , 直到傳回為止。 在 Windows 3.0 中, 視窗會在傳回之前`TrackPopupMenu`接收 WM_COMMAND 訊息。
 
 *lpRect*<br/>
 忽略。
 
 ### <a name="return-value"></a>傳回值
 
-這個方法會傳回呼叫的結果[TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu) Windows SDK 中。
+這個方法會傳回 Windows SDK 中呼叫[trackpopupmenu 讓](/windows/win32/api/winuser/nf-winuser-trackpopupmenu)的結果。
 
 ### <a name="remarks"></a>備註
 
-浮動的快顯功能表可以出現在螢幕上的任何位置。
+浮動快顯功能表可能會出現在畫面上的任何位置。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCWindowing#34](../../mfc/reference/codesnippet/cpp/cmenu-class_14.cpp)]
 
-##  <a name="trackpopupmenuex"></a>  CMenu::TrackPopupMenuEx
+##  <a name="trackpopupmenuex"></a>CMenu:: TrackPopupMenuEx
 
-會浮動的快顯功能表顯示在指定的位置，並追蹤的項目在快顯功能表。
+在指定的位置上顯示浮動快顯功能表, 並追蹤快顯功能表上的專案選擇。
 
 ```
 BOOL TrackPopupMenuEx(
@@ -1458,29 +1458,29 @@ BOOL TrackPopupMenuEx(
 ### <a name="parameters"></a>參數
 
 *fuFlags*<br/>
-指定不同的函式，如擴充的功能表。 如需所有值的清單和它們的意義，請參閱[TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。
+指定擴充功能表的各種功能。 如需所有值及其意義的清單, 請參閱[TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)。
 
 *x*<br/>
-指定螢幕座標中的快顯功能表的水平位置。
+指定快顯功能表之螢幕座標中的水準位置。
 
 *y*<br/>
-在畫面上，指定功能表的頂端以螢幕座標的垂直位置。
+指定螢幕上功能表頂端螢幕座標的垂直位置。
 
 *pWnd*<br/>
-視窗擁有快顯功能表，並從 [建立] 功能表中接收訊息的指標。 這個視窗可以是任何視窗，從目前的應用程式，但不能是 NULL。 如果您指定在 TPM_NONOTIFY *fuFlags*參數，此函式不會傳送任何訊息給*pWnd*。 函式必須傳回所指的視窗*pWnd*收到 WM_COMMAND 訊息。
+擁有快顯功能表並從 [已建立] 功能表接收訊息之視窗的指標。 這個視窗可以是目前應用程式的任何視窗, 但不能是 Null。 如果您在*fuFlags*參數中指定 TPM_NONOTIFY, 則函式不會傳送任何訊息至*pWnd*。 函式必須針對*pWnd*所指向的視窗傳回, 以接收 WM_COMMAND 訊息。
 
 *lptpm*<br/>
-指標[產生 TPMPARAMS](/windows/desktop/api/winuser/ns-winuser-tagtpmparams)不應該重疊結構，指定功能表的螢幕區域。 這個參數可以是 NULL。
+[TPMPARAMS](/windows/win32/api/winuser/ns-winuser-tpmparams)結構的指標, 指定功能表不應重迭的螢幕區域。 這個參數可以是 Null。
 
 ### <a name="return-value"></a>傳回值
 
-如果您指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值是使用者選取項目的功能表項目識別碼。 如果使用者取消 [] 功能表中，而不需要進行選擇，或發生錯誤時，傳回的值為 0。
+如果您在*fuFlags*參數中指定 TPM_RETURNCMD, 則傳回值會是使用者選取之專案的功能表項目識別碼。 如果使用者取消功能表而未進行選取, 或發生錯誤, 則傳回值為0。
 
-如果您未指定在 TPM_RETURNCMD *fuFlags*參數，傳回的值會是零，如果函式成功，0 失敗。 若要取得延伸錯誤資訊，請呼叫[GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
+如果您未在*fuFlags*參數中指定 TPM_RETURNCMD, 則如果函式成功, 則傳回值為非零, 如果失敗, 則傳回0。 若要取得延伸錯誤資訊, 請呼叫[GetLastError](/windows/win32/api/errhandlingapi/nf-errhandlingapi-getlasterror)。
 
 ### <a name="remarks"></a>備註
 
-浮動的快顯功能表可以出現在螢幕上的任何位置。 如需有關如何建立快顯功能表時，處理錯誤的詳細資訊，請參閱 < [TrackPopupMenuEx](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)。
+浮動快顯功能表可能會出現在畫面上的任何位置。 如需有關在建立快顯功能表時處理錯誤的詳細資訊, 請參閱[TrackPopupMenuEx](/windows/win32/api/winuser/nf-winuser-trackpopupmenuex)。
 
 ## <a name="see-also"></a>另請參閱
 

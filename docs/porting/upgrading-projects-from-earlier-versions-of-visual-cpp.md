@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 25cf8d451c0efb5234fba5e56b6bfe7ceb7c2c08
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220394"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400820"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>從舊版的 Visual C++ 升級專案
 
@@ -42,7 +42,7 @@ ms.locfileid: "65220394"
 [浮點數的移轉問題](floating-point-migration-issues.md)<br/>
 [在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)<br/>
 [Visual C++ 功能在 Visual Studio 2019 預覽版中已淘汰](features-deprecated-in-visual-studio.md)<br/>
-[建置系統變更](build-system-changes.md)<br/>
+[建置系統變更](build-system-changes.md)
 
 ## <a name="see-also"></a>另請參閱
 

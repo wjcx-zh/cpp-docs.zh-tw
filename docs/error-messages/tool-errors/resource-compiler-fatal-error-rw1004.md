@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1004
 ms.assetid: 89cfcb02-a5d3-4271-be4f-df2ec3f94f3e
-ms.openlocfilehash: 9ed9c314cf916f3853934de20c1b8f8a20a3695e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8ee23393db43637a8694d22ec23a74be78adf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380351"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376344"
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>資源編譯器嚴重錯誤 RW1004
 
-未預期的檔案結尾
+非預期的檔案結尾
 
-此錯誤可能因遺漏換行字元和文字檔案的最後一行的歸位字元。
+這個錯誤可能是因為在文字檔的最後一行遺漏了換行字元和回車符所造成。

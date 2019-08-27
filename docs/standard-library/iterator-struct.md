@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224099"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455612"
 ---
 # <a name="iterator-struct"></a>iterator 結構
 
-空的基底結構，用來確保使用者定義的迭代器類別能夠適當運作與`iterator_trait`s。
+空的基底結構, 用來確保使用者定義的反覆運算器類別可與`iterator_trait`一起正常運作。
 
 ## <a name="syntax"></a>語法
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference` (與範本參數 `Reference` 同義)。
 
-請注意，`value_type`不應該是常數的類型，即使`pointer`指向的物件**const** `Type`且參考指定的物件**const** `Type`。
+請注意`value_type` , `pointer`即使位於**const** `Type`和 reference 物件的點會指定**const** `Type`的物件, 也不應該是常數類型。
 
 ## <a name="example"></a>範例
 
@@ -55,12 +55,12 @@ struct iterator {
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<iterator>
+**標頭：** \<iterator>
 
 **命名空間：** std
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

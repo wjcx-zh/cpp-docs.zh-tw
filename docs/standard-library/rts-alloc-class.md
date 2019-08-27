@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409742"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451130"
 ---
 # <a name="rtsalloc-class"></a>rts_alloc 類別
 
@@ -50,7 +50,7 @@ class rts_alloc
 
 ## <a name="requirements"></a>需求
 
-**標頭︰**\<allocators>
+**標頭︰** \<allocators>
 
 **命名空間：** stdext
 
@@ -66,7 +66,7 @@ void *allocate(std::size_t count);
 
 |參數|描述|
 |---------------|-----------------|
-|*count*|所配置陣列中的元素數。|
+|*計數*|所配置陣列中的元素數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回`caches[_IDX].allocate(count)`，其中索引`_IDX`取決於要求的區塊大小*計數*，或者，如果*計數*是太大，它會傳回`operator new(count)`。 `cache`，代表快取物件。
+此`caches[_IDX].allocate(count)`成員函式會傳回, 其中`_IDX`索引取決於所要求的區塊大小*計數*, 或者, 如果*count*太大, 則會`operator new(count)`傳回。 `cache`，代表快取物件。
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -89,11 +89,11 @@ void deallocate(void* ptr, std::size_t count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*count*|要從儲存空間解除配置的物件數目。|
+|*計數*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
-成員函式呼叫`caches[_IDX].deallocate(ptr, count)`，其中索引`_IDX`取決於要求的區塊大小*計數*，或者，如果*計數*是太大，它會傳回`operator delete(ptr)`。
+此成員函式`caches[_IDX].deallocate(ptr, count)`會呼叫, 其中`_IDX`索引取決於所要求的區塊大小*計數*, 或者, 如果*計數*太大, 則會`operator delete(ptr)`傳回。
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>備註
 
-**真**如果的結果`caches[0].equals(other.caches[0])`，否則**false**。 `caches` 代表快取物件的陣列。
+如果的結果`caches[0].equals(other.caches[0])`, 則為 true, 否則為**false**。 `caches` 代表快取物件的陣列。
 
 ## <a name="see-also"></a>另請參閱
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

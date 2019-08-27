@@ -1,39 +1,39 @@
 ---
 title: 編譯器錯誤 C2065
-ms.date: 09/01/2017
+ms.date: 08/19/2019
 f1_keywords:
 - C2065
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ff418fa332adffa1885ec9ca6d7626000e753609
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 40d1d0744588c4b7911e84f5e57a6b40372b48cf
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447352"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630127"
 ---
 # <a name="compiler-error-c2065"></a>編譯器錯誤 C2065
 
-> '*識別碼*': 未宣告的識別項
+> '*identifier*': 未宣告的識別碼
 
-編譯器找不到識別項的宣告。 有許多可能的原因造成此錯誤。 C2065 的最常見原因是，沒有已宣告的識別項、 識別項的拼字錯誤、 宣告的識別項的位置標頭不會包含在檔案中，或識別項遺漏範圍限定詞，比方說，`cout`而不是`std::cout`. 如需有關中宣告C++，請參閱[宣告和定義 (C++)](../../cpp/declarations-and-definitions-cpp.md)。
+編譯器找不到識別碼的宣告。 此錯誤有許多可能的原因。 最常見的 C2065 原因是識別碼尚未宣告、識別碼拼錯、宣告識別碼的標頭並未包含在檔案中, 或識別碼遺漏範圍限定詞, 例如, `cout`而不是`std::cout`. 如需中C++宣告的詳細資訊, 請參閱宣告[和C++定義 ()](../../cpp/declarations-and-definitions-cpp.md)。
 
-以下是更詳細的一些常見問題和解決方案。
+以下是一些更詳細的常見問題和解決方案。
 
-## <a name="the-identifier-is-undeclared"></a>識別項未宣告
+## <a name="the-identifier-is-undeclared"></a>未宣告識別碼
 
-如果識別碼的變數或函式名稱，您必須宣告它，才能使用。 函式宣告也必須包含其參數型別，才能使用此函式。 如果變數使用宣告`auto`，編譯器必須能夠推斷其初始設定式的類型。
+如果識別碼是變數或函式名稱, 您必須先將它宣告, 才能使用它。 函式宣告也必須包含其參數的類型, 才能使用函數。 如果變數是使用`auto`所宣告, 則編譯器必須能夠從其初始化運算式推斷型別。
 
-如果識別項是類別或結構中的成員或命名空間中宣告，就必須加以限定的類別或結構的名稱，或命名空間名稱，當結構、 類別或命名空間範圍外使用。 命名空間必須帶入範圍反而`using`指示詞，例如`using namespace std;`，或成員名稱必須帶入範圍`using`宣告，例如`using std::string;`。 否則，不合格的名稱被視為目前範圍中宣告的識別項。
+如果識別碼是類別或結構的成員, 或是在命名空間中宣告, 則必須由類別或結構名稱限定, 或命名空間名稱 (當在結構、類別或命名空間範圍之外使用時)。 或者, 命名空間必須`using`由指示詞帶入範圍`using namespace std;`, 例如, 或成員名稱必須由`using`宣告帶入範圍, 例如`using std::string;`。 否則, 不合格的名稱會被視為目前範圍中未宣告的識別碼。
 
-如果識別項的標記是使用者定義型別，例如`class`或`struct`，才可以使用，必須先宣告的標記類型。 例如，宣告`struct SomeStruct { /*...*/ };`之前，您可以將變數宣告必須存在於`SomeStruct myStruct;`程式碼中。
+如果識別碼是使用者自訂類型的標記, `class`例如或`struct`, 則必須先宣告標記的類型, 才能使用它。 例如, 宣告`struct SomeStruct { /*...*/ };`必須存在, 您才能在程式碼中宣告`SomeStruct myStruct;`變數。
 
-類型別名識別項時，必須使用宣告型別`using`宣告或`typedef`才可使用。 例如，您必須宣告`using my_flags = std::ios_base::fmtflags;`您可以使用之前`my_flags`做為類型別名`std::ios_base::fmtflags`。
+如果識別碼是類型別名, 則必須使用`using`宣告或`typedef`使用宣告來宣告類型。 例如, 您必須`using my_flags = std::ios_base::fmtflags;`先宣告, 才能使用`my_flags`做為的`std::ios_base::fmtflags`類型別名。
 
-## <a name="example-misspelled-identifier"></a>範例： 拼字錯誤的識別碼
+## <a name="example-misspelled-identifier"></a>範例: 拼錯的識別碼
 
-識別項名稱的拼字錯誤，或識別項使用錯誤的大寫和小寫字母時，通常就會發生此錯誤。 在宣告中的名稱必須完全符合您所使用的名稱。
+當識別碼名稱拼錯, 或識別碼使用錯誤的大寫和小寫字母時, 通常就會發生此錯誤。 宣告中的名稱必須與您所使用的名稱完全相符。
 
 ```cpp
 // C2065_spell.cpp
@@ -49,11 +49,11 @@ int main() {
 }
 ```
 
-## <a name="example-use-an-unscoped-identifier"></a>範例： 使用不限範圍的識別項
+## <a name="example-use-an-unscoped-identifier"></a>範例: 使用不限範圍的識別碼
 
-如果您的識別項的範圍不正確，就會發生此錯誤。 如果您使用時，您會看到 C2065 `cout`，這是原因。 當C++標準程式庫函式和運算子不會完整限定的命名空間，或不帶`std`目前的範圍內使用的命名空間`using`指示詞，編譯器找不到它們。 若要修正此問題，您必須完整限定的識別項名稱，或指定命名空間與`using`指示詞。
+如果您的識別碼未正確設定範圍, 就會發生此錯誤。 如果您在使用`cout`時看到 C2065, 這就是原因。 當C++標準程式庫函式和運算子不是由命名空間完整限定時, 或您尚未`std`使用`using`指示詞將命名空間帶入目前的範圍時, 編譯器就找不到它們。 若要修正此問題, 您必須完整限定識別碼名稱, 或使用`using`指示詞來指定命名空間。
 
-此範例無法編譯，因為`cout`並`endl`中所定義`std`命名空間：
+這個範例無法編譯, 因為`cout`和`endl`是在命名空間`std`中定義的:
 
 ```cpp
 // C2065_scope.cpp
@@ -69,23 +69,23 @@ int main() {
 }
 ```
 
-在宣告的識別項`class`， `struct`，或`enum class`類型必須也由其封閉範圍名稱所限定，使用該範圍外時。
+在`class`、 `struct`或`enum class`類型內宣告的識別碼, 也必須在您于該範圍之外使用時, 以其封閉範圍的名稱來限定。
 
-## <a name="example-precompiled-header-isnt-first"></a>先行編譯標頭無法第一個範例：
+## <a name="example-precompiled-header-isnt-first"></a>範例: 先行編譯標頭檔不是第一個
 
-如果您將任何前置處理器指示詞，例如，可能會發生此錯誤 #include，#define，或 #pragma 之前, #include 的先行編譯標頭檔。 如果原始程式檔使用的先行編譯標頭檔 (亦即，如果它藉由編譯 **/Yu**編譯器選項) 會忽略之前先行編譯標頭檔的所有前置處理器指示詞。
+如果您在先行編譯標頭檔的 #include 之前放置任何預處理器指示詞 (例如 #include、#define 或 #pragma), 就會發生這個錯誤。 如果您的原始程式檔使用先行編譯標頭檔 (也就是使用 **/yu**編譯器選項來編譯), 則會忽略先行編譯標頭檔之前的所有預處理器指示詞。
 
-此範例無法編譯，因為`cout`並`endl`中所定義\<iostream > 標頭，因為它會包含先行編譯標頭檔會被忽略。 若要建置此範例中，建立所有的三個檔案，然後編譯 stdafx.cpp，然後編譯 C2065_pch.cpp。
+這個範例無法編譯, 因為`cout`和`endl`是定義在\<iostream > 標頭中, 因為它是包含在先行編譯標頭檔之前, 所以會被忽略。 若要建立此範例, 請建立這三個檔案, 然後編譯 stdafx.h, 再編譯 C2065_pch .cpp。
 
 ```cpp
-// stdafx.h
+// pch.h (stdafx.h in Visual Studio 2017 and earlier)
 #include <stdio.h>
 ```
 
 ```cpp
-// stdafx.cpp
+// pch.cpp (stdafx.cpp in Visual Studio 2017 and earlier)
 // Compile by using: cl /EHsc /W4 /c /Ycstdafx.h stdafx.cpp
-#include <stdafx.h>
+#include "pch.h"
 ```
 
 ```cpp
@@ -101,11 +101,11 @@ int main() {
 }
 ```
 
-若要修正此問題，請加入 #include \<iostream > 到先行編譯標頭檔或移動後的先行編譯標頭檔包含在原始程式檔。
+若要修正此問題, 請將\<iostream > 的 #include 新增至先行編譯標頭檔, 或在原始程式檔中包含先行編譯標頭檔之後移動。
 
-## <a name="example-missing-header-file"></a>範例： 遺漏標頭檔
+## <a name="example-missing-header-file"></a>範例: 遺漏標頭檔
 
-您不包含標頭檔宣告的識別項。 請確定檔案，其中包含識別項的宣告包含每個使用它的原始程式檔中。
+您尚未包含宣告識別碼的標頭檔。 請確定包含識別碼宣告的檔案包含在使用它的每個原始程式檔中。
 
 ```cpp
 // C2065_header.cpp
@@ -119,7 +119,7 @@ int main() {
 }
 ```
 
-另一個可能的原因是如果您使用初始設定式清單不含\<initializer_list > 標頭。
+另一個可能的原因是, 您使用的是初始化運算式\<清單, 但不包含 initializer_list > 標頭。
 
 ```cpp
 // C2065_initializer.cpp
@@ -134,11 +134,11 @@ int main() {
 }
 ```
 
-如果您定義，您可能會看到此錯誤在 Windows 桌面應用程式原始程式檔`VC_EXTRALEAN`， `WIN32_LEAN_AND_MEAN`，或`WIN32_EXTRA_LEAN`。 這些前置處理器巨集排除某些標頭檔從 windows.h 和 afxv\_w32.h 以加速編譯。 尋找在 windows.h 和 afxv_w32.h 所排除的最新描述。
+如果您定義`VC_EXTRALEAN`、 `WIN32_LEAN_AND_MEAN`或`WIN32_EXTRA_LEAN`, 您可能會在 Windows 傳統型應用程式來源檔案中看到此錯誤。 這些預處理器宏會從 windows. h 和 afxv\_中排除一些標頭檔, 以加快編譯速度。 查看 windows .h 和 afxv_w32, 以取得排除內容的最新說明。
 
-## <a name="example-missing-closing-quote"></a>範例： 遺漏右引號
+## <a name="example-missing-closing-quote"></a>範例: 遺漏右引號
 
-如果您遺漏右引號字串常數之後，就會發生此錯誤。 這是容易混淆編譯器。 請注意遺漏右引號可能報告的錯誤位置之前的幾行。
+如果您遺漏字串常數後面的右引號, 就會發生這個錯誤。 這是混淆編譯器的簡單方式。 請注意, 遺漏右引號可能是報告錯誤位置之前的幾行。
 
 ```cpp
 // C2065_quote.cpp
@@ -153,9 +153,9 @@ int main() {
 }
 ```
 
-## <a name="example-use-iterator-outside-for-loop-scope"></a>範例： 使用 for 迴圈範圍之外的迭代器
+## <a name="example-use-iterator-outside-for-loop-scope"></a>範例: 在 for 迴圈範圍外使用 iterator
 
-如果您宣告中的迭代器變數，會發生此錯誤`for`迴圈，然後嘗試使用該 iterator 變數的範圍外`for`迴圈。 可讓編譯器[/zc: forscope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)預設編譯器選項。 請參閱[偵錯迭代器支援](../../standard-library/debug-iterator-support.md)如需詳細資訊。
+如果您在`for`迴圈中宣告反覆運算器變數, 然後嘗試在`for`迴圈範圍外使用該反覆運算器變數, 就會發生這個錯誤。 根據預設, 編譯器會啟用[/zc: forScope](../../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。 如需詳細資訊, 請參閱[Debug Iterator 支援](../../standard-library/debug-iterator-support.md)。
 
 ```cpp
 // C2065_iter.cpp
@@ -179,11 +179,11 @@ int main() {
 }
 ```
 
-## <a name="example-preprocessor-removed-declaration"></a>範例： 前置處理器移除的宣告
+## <a name="example-preprocessor-removed-declaration"></a>範例: 預處理器已移除宣告
 
-如果您參考的函式或變數，就不會編譯您的目前組態的有條件地編譯程式碼中，會發生此錯誤。 如果您目前不支援在您的建置環境中的標頭檔中呼叫函式時，這也會發生。 如果特定的變數或函式時才可用在定義特定的前置處理器巨集，，請確定在定義相同的前置處理器巨集時，可以只編譯呼叫這些函式的程式碼。 此問題很容易在 IDE 中，找出的因為如果未定義必要的前置處理器巨集則為目前的組建組態，灰色函式的宣告。
+如果您參考的函式或變數是有條件地編譯的程式碼, 但未針對目前的設定進行編譯, 就會發生這個錯誤。 如果您在您的組建環境中目前不支援的標頭檔中呼叫函式, 也可能會發生這種情況。 如果某些變數或函數只有在定義特定預處理器宏時才可使用, 請確定在定義相同的預處理器宏時, 只能編譯呼叫這些函式的程式碼。 這個問題很容易出現在 IDE 中, 因為如果未針對目前的組建設定定義必要的預處理器宏, 函式的宣告會呈現灰色。
 
-這是當您建置在偵錯，但不是零售的運作方式的程式碼範例：
+這是當您在 Debug (但不是零售) 中建立時, 可運作的程式碼範例:
 
 ```cpp
 // C2065_defined.cpp
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>範例：C++/ CLI 型別推斷失敗
+## <a name="example-ccli-type-deduction-failure"></a>範例：C++/CLI 類型推斷失敗
 
-如果預期的類型引數無法推算所使用的參數，當呼叫泛型函式，可以發生此錯誤。 如需詳細資訊，請參閱 <<c0> [ 泛型函式 (C++/CLI)](../../extensions/generic-functions-cpp-cli.md)。</c0>
+如果無法從使用的參數推算預定的型別引數, 則呼叫泛型函式時, 就會發生這個錯誤。 如需詳細資訊, 請參閱[泛型C++函數 (/cli)](../../extensions/generic-functions-cpp-cli.md)。
 
 ```cpp
 // C2065_b.cpp
@@ -220,9 +220,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>範例：C++/ CLI 屬性參數
+## <a name="example-ccli-attribute-parameters"></a>範例：C++/CLI 屬性參數
 
-也可因為針對 Visual Studio 2005 所進行的編譯器一致性處理而產生這個錯誤： 參數檢查視覺效果C++屬性。
+這項錯誤也會因為針對 Visual Studio 2005: Visual C++屬性的參數檢查所執行的編譯器一致性工作而產生。
 
 ```cpp
 // C2065_attributes.cpp

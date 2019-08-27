@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::ostream_iterator [C++], ostream_type
 - std::ostream_iterator [C++], traits_type
 ms.assetid: 24d842d3-9f45-4bf6-a697-62f5968f5a03
-ms.openlocfilehash: 6a065a100faf5ea40be161e980de2913add917fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cebe127eb985e564289db100fa56b0b979104819
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370982"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447083"
 ---
 # <a name="ostreamiterator-class"></a>ostream_iterator 類別
 
-樣板類別 ostream_iterator 描述輸出迭代器物件寫入輸出資料流，使用擷取後續項目， `operator <<`。
+樣板類別 ostream_iterator 描述輸出反覆運算器物件, 它會使用解壓縮`operator <<`將後續的元素寫入輸出資料流程。
 
 ## <a name="syntax"></a>語法
 
@@ -32,14 +32,14 @@ class ostream_iterator
 
 ### <a name="parameters"></a>參數
 
-*Type*<br/>
+*型*\
 要插入至輸出資料流的物件類型。
 
-*CharType*<br/>
-類型，表示 `ostream_iterator` 的字元類型。 這個引數是選擇性的預設值是**char**。
+*CharType*\
+類型，表示 `ostream_iterator` 的字元類型。 這個引數是選擇性的, 而且預設值為**char**。
 
-*特性*<br/>
-類型，表示 `ostream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>*。
+*共同*\
+類型，表示 `ostream_iterator` 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>* 。
 
 ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_iterator`，演算法可以直接寫入輸出資料流。
 
@@ -59,15 +59,15 @@ ostream_iterator 類別必須符合輸出迭代器的需求。 使用 `ostream_i
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
-|[operator*](#op_star)|取值運算子，用來實作輸出迭代器運算式\* `i`  =  `x`。|
+|[operator*](#op_star)|取值運算子, 用來執行輸出反覆運算器\*運算式 =  `i`。 `x`|
 |[operator++](#op_add_add)|無作用的遞增運算子，傳回 `ostream_iterator`，指向在呼叫作業之前它所定址的相同物件。|
-|[operator=](#op_eq)|指派運算子，用來實作輸出迭代器運算式\* `i`  =  `x`以寫入輸出資料流。|
+|[operator=](#op_eq)|指派運算子, 用來執行輸出反覆運算器\*運算式`i`  =  `x`以寫入輸出資料流程。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<iterator>
+**標頭：** \<iterator>
 
 **命名空間：** std
 
@@ -221,7 +221,7 @@ Elements written to output stream:
 
 ## <a name="op_eq"></a>  ostream_iterator::operator=
 
-指派運算子，用來實作 output_iterator 運算式\* `i`  =  `x`以寫入輸出資料流。
+指派運算子, 用來執行寫入至\*輸出資料流程的 output_iterator 運算式 =  `i`。 `x`
 
 ```cpp
 ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
@@ -229,16 +229,16 @@ ostream_iterator<Type, CharType, Traits>& operator=(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*<br/>
+*初始值*\
 要插入至輸出資料流的 `Type` 類型物件值。
 
 ### <a name="return-value"></a>傳回值
 
-運算子會將*val*與物件相關聯的輸出資料流，後面接著中指定的分隔符號[ostream_iterator 建構函式](#ostream_iterator)（如果有的話），然後傳回的參考`ostream_iterator`.
+運算子會將*val*插入與物件相關聯的輸出資料流程中, 後面接著[ostream_iterator](#ostream_iterator)函式中指定的分隔符號 (如果有的話), 然後傳回的`ostream_iterator`參考。
 
 ### <a name="remarks"></a>備註
 
-輸出迭代器的需求，`ostream_iterator`必須滿足僅要求運算式\* `ii`  =  `t`有效，且本身不涉及運算子或運算子 = 靠自己。 此成員運算子會傳回 `*this`。
+`ostream_iterator`必須滿足之輸出反覆運算器的需求, 只需要運算式 =  \* `ii` `t`有效, 且本身不會顯示任何運算子或 operator =。 此成員運算子會傳回 `*this`。
 
 ### <a name="example"></a>範例
 
@@ -288,17 +288,17 @@ ostream_iterator(
 
 ### <a name="parameters"></a>參數
 
-*_Ostr*<br/>
+*_Ostr*\
 要逐一查看之類型 [ostream_iterator::ostream_type](#ostream_type) 的輸出資料流。
 
-*_Delimiter*<br/>
+*_Delimiter*\
 要插入至輸出資料流值之間的分隔符號。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會使用 `&_Ostr` 初始化輸出資料流指標。 分隔符號字串指標指定為空字串。
 
-第二個建構函式會初始化輸出資料流指標`&_Ostr`和 使用分隔符號字串指標 *（_d)*。
+第二個函式會使用`&_Ostr`初始化輸出資料流程指標, 以及使用 *_Delimiter*的分隔符號字串指標。
 
 ### <a name="example"></a>範例
 
@@ -415,6 +415,6 @@ by intOut are:
 
 ## <a name="see-also"></a>另請參閱
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

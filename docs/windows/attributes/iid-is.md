@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409521"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514665"
 ---
-# <a name="iidis"></a>iid_is
+# <a name="iid_is"></a>iid_is
 
-指定的介面指標所指向的 COM 介面的 IID。
+指定介面指標所指向之 COM 介面的 IID。
 
 ## <a name="syntax"></a>語法
 
@@ -26,11 +26,11 @@ ms.locfileid: "62409521"
 ### <a name="parameters"></a>參數
 
 *expression*<br/>
-介面指標所指向的 C 語言運算式，指定 COM 介面的 IID。
+C 語言運算式, 指定介面指標所指向之 COM 介面的 IID。
 
 ## <a name="remarks"></a>備註
 
-**Iid_is** C++屬性具有相同的功能[iid_is](/windows/desktop/Midl/iid-is) MIDL 屬性。
+**Iid_is** C++屬性具有與[iid_is](/windows/win32/Midl/iid-is) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
@@ -57,10 +57,10 @@ __interface IFireTabCtrl : IDispatch
 
 |||
 |-|-|
-|**適用於**|介面參數，資料成員|
+|**適用於**|介面參數, 資料成員|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

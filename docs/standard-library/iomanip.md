@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404932"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449215"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-包含`iostreams`標準標頭\<iomanip> > 來定義數個操作工具，每個接受單一引數。
+包含標準標頭\<p >, 定義數個操作工具, 每個操作工具都採用單一引數。 `iostreams`
 
 ## <a name="syntax"></a>語法
 
@@ -26,7 +26,7 @@ ms.locfileid: "62404932"
 
 ## <a name="remarks"></a>備註
 
-每個這些操作工具會傳回未指定的型別，稱為`T1`經由`T10`，，多載同時`basic_istream` \< **Elem**， **Tr** >`::`[運算子 >>](../standard-library/istream-operators.md#op_gt_gt)並`basic_ostream` \< **Elem**， **Tr** > `::` [運算子 <<](../standard-library/ostream-operators.md#op_lt_lt)。
+這些操作工具都會傳回未指定的類型 ( `T1`透過`T10`呼叫), 它`basic_istream`會\<多載**Elem**、 **Tr** > `::`[運算子 > >](../standard-library/istream-operators.md#op_gt_gt)和`basic_ostream` **Elem**、 Tr運算子`::`<[<](../standard-library/ostream-operators.md#op_lt_lt)。 \< >
 
 ### <a name="manipulators"></a>操作工具
 
@@ -46,7 +46,7 @@ ms.locfileid: "62404932"
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)<br/>
-[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[iostream 程式設計](../standard-library/iostream-programming.md)<br/>
-[iostream 慣例](../standard-library/iostreams-conventions.md)<br/>
+[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[iostream 程式設計](../standard-library/iostream-programming.md)\
+[iostream 慣例](../standard-library/iostreams-conventions.md)

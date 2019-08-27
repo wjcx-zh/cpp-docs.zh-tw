@@ -1,35 +1,55 @@
 ---
 title: 編譯器警告 (層級 1) C4727
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - C4727
 helpviewer_keywords:
 - C4727
 ms.assetid: 991b0087-3a50-40f5-9cdb-cdc367cd472c
-ms.openlocfilehash: be1a248fc2709706e137b543344966735c19064e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bcc029536d2602d50178d7148332b8371db3c7f
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386430"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630824"
 ---
 # <a name="compiler-warning-level-1-c4727"></a>編譯器警告 (層級 1) C4727
 
-「 PCH 具名 pch_file obj_file_1 和 obj_file_2 中找到的相同時間戳記。  使用第一個 PCH。
+在 obj_file_1 和 obj_file_2 中找到具有相同時間戳記的 PCH 名為 pch_file。  使用第一個 PCH。
 
-編譯與多個編譯單位時，就會發生 C4727 **/Yc**，而且編譯器能夠將所有的.obj 檔案，具有相同的.pch 時間戳記。
+> [!NOTE]
+> 在 Visual Studio 2017 和更早版本中, 預先編譯的標頭預設稱為*stdafx.h* , 而在 Visual Studio 2019 和更新版本中, 預設會將它稱為*pch。*
 
-若要解決，編譯一個來源檔案，並 **/Yc /c** （建立 pch） 時，與其他人使用分開編譯 **/Yu /c** （使用 pch），然後將它們連結在一起。
+使用 **/yc**編譯多個 compilands 時, 以及編譯器能夠標記所有具有相同 .pch 時間戳記的 .obj 檔案時, 就會發生 C4727。
 
-因此，如果您執行下列動作，會產生 C4727︰
+若要解決此問題, 請使用 **/yc/c** (建立 pch) 來編譯一個原始程式檔, 而其他檔案則會與 **/yu/c** (使用 pch) 分開編譯, 然後將它們連結在一起。
 
-**cl /clr /GL a.cpp b.cpp c.cpp /Ycstdafx.h**
+因此, 如果您執行了下列動作, 它會產生 C4727:
 
-您必須執行下列改為：
+::: moniker range="<=vs-2017"
 
-**cl /clr /GL a.cpp /Ycstdafx.h /c**
+**cl/clr/GL a .cpp b .cpp c .cpp/Ycstdafx。h**
 
-**cl /clr /GL b.cpp c.cpp /Yustdafx.h /link a.obj**
+您可以改為執行下列動作:
+
+**cl/clr/GL a .cpp/Ycstdafx.h/c**
+
+**cl/clr/GL b. .cpp c .cpp/Yustdafx.h/link a .obj**
+
+::: moniker-end
+
+::: moniker range=">=vs-2019"
+
+**cl/clr/GL a .cpp b .cpp c .cpp/Ycpch。h**
+
+您可以改為執行下列動作:
+
+**cl/clr/GL a .cpp/Ycpch.h/c**
+
+**cl/clr/GL b. .cpp c .cpp/Yupch.h/link a .obj**
+
+::: moniker-end
+
 
 如需詳細資訊，請參閱
 

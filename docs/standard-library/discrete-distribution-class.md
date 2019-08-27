@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce668ebfdafc4a53bfc71ecf1f2fa76abb1c7532
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413836"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454377"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution 類別
 
@@ -72,8 +72,8 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*<br/>
-整數結果型別，預設值為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType*\
+整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -171,7 +171,7 @@ Distribution for 100 samples:
 
 ## <a name="requirements"></a>需求
 
-**標頭：**\<random>
+**標頭：** \<random>
 
 **命名空間：** std
 
@@ -200,28 +200,28 @@ explicit discrete_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*firstW*<br/>
+*firstW*\
 要建構分佈的清單中的第一個迭代器。
 
-*lastW*<br/>
+*lastW*\
 要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist*<br/>
+*weightlist*\
 要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*計數*\
 分佈範圍中的元素數目。 若 `count==0`，則相當於預設建構函式 (一律產生零)。
 
-*low*<br/>
+*量*\
 分佈範圍中的最低值。
 
-*high*<br/>
+*更*\
 分佈範圍中的最高值。
 
-*weightfunc*<br/>
-表示分佈的可能性函式的物件。 參數和傳回值必須可轉換成**double**。
+*weightfunc*\
+表示分佈的可能性函式的物件。 參數和傳回值都必須可轉換為**double**。
 
-*parm*<br/>
+*parm*\
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -230,12 +230,12 @@ explicit discrete_distribution(const param_type& parm);
 
 如果是具有 *firstW* 和 *lastW* 參數的迭代器範圍建構函式，其會使用加權值來建構分佈物件，這些加權值是取自間隔序列 [*firstW*, *lastW*) 的迭代器。
 
-初始設定式清單建構函式*weightlist*參數建構分佈物件具有來自初始設定式清單的加權*weightlist*。
+具有*weightlist*參數的初始化運算式清單, 會使用初始化運算式清單*weightlist*中的權數來建立散發物件。
 
 如果是具有 *count*、*low*、*high* 和 *weightfunc* 參數的建構函式，其會根據下列規則建構初始化的分佈物件：
 
 - 若 *count* < 1、**n** = 1，而因此相當於預設建構函式，則一律會產生零。
-- 如果 *count* > 0，則 **n** = *count*。 提供**d** = (*高* - *低*) / **n**大於零，使用**d**統一子範圍，每個加權指派如下： `weight[k] = weightfunc(x)`，其中**x** = *低* + **k**  * **d** + **d** / 2，針對**k** = 0，...， **n** -1。
+- 如果 *count* > 0，則 **n** = *count*。 提供**的 d** = (*high*  -  *low*)/ **n**大於零, 使用**d**統一子範圍, 每個加權都會指派如下: `weight[k] = weightfunc(x)`, 其中**x**  =  *low*  +  **k**    d d/2, 針對 k = 0, ..., n-1。 +   * 
 
 如果是具有 `param_type` 參數 *parm* 的建構函式，其會使用 *parm* 作為預存參數結構來建構分佈物件。
 
@@ -268,28 +268,28 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*firstW*<br/>
+*firstW*\
 要建構分佈的清單中的第一個迭代器。
 
-*lastW*<br/>
+*lastW*\
 要建構分佈的清單中的最後一個迭代器 (非內含，因為迭代器針對結尾使用空的項目)。
 
-*weightlist*<br/>
+*weightlist*\
 要建構分佈的 [initializer_list](../cpp/initializers.md)。
 
-*count*<br/>
+*計數*\
 分佈範圍中的元素數目。 若 *count* 為 0，此項目就相當於預設建構函式 (一律產生零)。
 
-*low*<br/>
+*量*\
 分佈範圍中的最低值。
 
-*high*<br/>
+*更*\
 分佈範圍中的最高值。
 
-*weightfunc*<br/>
-表示分佈的可能性函式的物件。 參數和傳回值必須可轉換成**double**。
+*weightfunc*\
+表示分佈的可能性函式的物件。 參數和傳回值都必須可轉換為**double**。
 
-*right*<br/>
+*再*\
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -298,4 +298,4 @@ struct param_type {
 
 ## <a name="see-also"></a>另請參閱
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 17f8082ac0442f65b9195b37da18b04f795d3d66
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7f73e51e02eafe46c279a8f828803912d8cd190a
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448976"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631702"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>針對 UNIX 使用者的 Visual C++ 簡介
 
@@ -57,7 +57,7 @@ Microsoft C++ 編譯器實作標準 C++ 程式設計語言的數個延伸模組�
 
 Microsoft C 和 C++ 編譯器提供對任何 C 或 C++ 程式碼進行先行編譯的選項，包括內嵌程式碼。 您可以使用這項效能功能來編譯穩定的程式碼主體，並將程式碼的編譯狀態儲存在檔案中，然後在後續編譯期間，將先行編譯的程式碼與仍在開發中的程式碼結合。 由於穩定的程式碼不需要重新編譯，因此每個後續編譯的速度會更快。
 
-根據預設，會在 stdafx.h 和 stdafx.cpp 檔案中指定所有先行編譯的程式碼。 除非您取消選取 [先行編譯標頭檔]  選項，否則 [新增專案精靈]  會自動為您建立這些檔案。 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../build/creating-precompiled-header-files.md)。
+根據預設，會在 *pch.h* 與 *pch.cpp* (在 Visual Studio 2017 與較舊版本中則為 *stdafx.h* 與 *stdafx.cpp*) 檔案中指定所有先行編譯的程式碼。 除非您取消選取 [先行編譯標頭檔]  選項，否則 [新增專案精靈]  會自動為您建立這些檔案。 如需先行編譯標頭檔的詳細資訊，請參閱[建立先行編譯標頭檔](../build/creating-precompiled-header-files.md)。
 
 ## <a name="related-sections"></a>相關章節
 

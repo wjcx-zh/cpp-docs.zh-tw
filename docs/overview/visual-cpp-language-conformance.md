@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 15226d41991d5a09d104d2edbfb3dbf2f7432b65
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980534"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631650"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -348,7 +348,7 @@ __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 
 <a name="note_C"></a>__C__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 支援 Variadic 巨集，但在前置處理器的行為方面有很多 Bug。 我們正在檢修前置處理器，並且即將以實驗方式在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下遞送這些變更。
 
-<a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，C4984。
+<a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，[C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
 <a name="note_E"></a>__E__ 這是全新的實作，與舊版 `std::experimental` 不相容，符號連結支援、Bug 修正，以及標準必要行為的變更都需要此實作。 目前，包括 \<filesystem>可提供新的 `std::experimental::filesystem` 和之前的 \<，而包括 `std::filesystem`experimental/filesystem> 只會提供舊的實驗性實作。 實驗性實作將會在程式庫的下一個 ABI 重大版本中「移除」。
 

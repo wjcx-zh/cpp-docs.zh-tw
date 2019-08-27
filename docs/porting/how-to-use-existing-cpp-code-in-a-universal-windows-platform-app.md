@@ -2,12 +2,12 @@
 title: 作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: e587ae88fe8d38a22b351d87ae585efe82acf091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5050a9773eea55549958195efa624743f44ed031
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510380"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630432"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>作法：在通用 Windows 平台應用程式中使用現有的 C++ 程式碼
 
@@ -151,7 +151,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
    **方案總管**現在會將此專案識別為通用 Windows 專案。
 
-5. 請確定先行編譯標頭檔的名稱正確。 在 [先行編譯標頭]  區段中，將**先行編譯標頭檔**從 pch.h 變更為 stdafx.h。 如果您不這麼做，您就會看到下列錯誤。
+5. 請確定先行編譯標頭檔的名稱正確。 在 [先行編譯標頭]  區段中，將**先行編譯標頭檔**從 *pch.h* 變更為 *stdafx.h*。 如果您不這麼做，您就會看到下列錯誤。
 
    > 錯誤 C2857：原始程式碼檔案中找不到以 /Ycpch.h 命令列選項指定的 '#include' 陳述式
 
@@ -165,7 +165,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
    在 [專案]   > [解決方案]  下選取此 DLL 專案旁邊的核取方塊，然後選擇 [確定]  按鈕。
 
-8. 在 UWP 應用程式的 pch.h 檔案中包含程式庫的標頭檔。
+8. 在 UWP 應用程式的 *pch.h* 檔案中包含程式庫的標頭檔。
 
     ```cpp
     #include "..\MyNativeDLL\giraffe.h"
@@ -195,7 +195,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 1. 在 UWP 專案的專案屬性中，選擇左窗格中的 [組態屬性]   > [連結器]   > [輸入]  。 在右窗格的 [其他相依性]  屬性中，將路徑新增至程式庫。 例如，針對專案中會將其輸出放在 <方案資料夾>  \Debug\MyNativeLibrary\MyNativeLibrary.lib 的程式庫，新增相對路徑 `Debug\MyNativeLibrary\MyNativeLibrary.lib`。
 
-2. 新增 include 陳述式，以將標頭檔參考到 pch.h 檔案 (若有)，或視需要在任何 .cpp 檔案中參考標頭檔，然後開始新增使用該程式庫的程式碼。
+2. 新增 include 陳述式，以將標頭檔參考到 *pch.h* 檔案 (若有)，或視需要在任何 .cpp 檔案中參考標頭檔，然後開始新增使用該程式庫的程式碼。
 
    ```cpp
    #include "..\MyNativeLibrary\giraffe.h"
@@ -219,7 +219,7 @@ UWP 應用程式會在受保護的環境中執行，因此不允許執行許多�
 
 5. 從原始專案中選取要新增的所有檔案，然後選擇 [確定]  。 必要時，對子資料夾重複上述步驟。
 
-6. 您現在已有重複的節點。 如果您有多個先行編譯標頭檔 (例如 stdafx.h 與 pch.h)，請選擇一個加以保留。 將任何必要的程式碼 (例如 include 陳述式) 複製到您要保留的檔案中。 然後將另一個刪除，並在專案屬性的 [先行編譯標頭檔]  下，確定標頭檔的名稱正確無誤。
+6. 您現在已有重複的節點。 如果您有多個先行編譯標頭檔 (例如 *stdafx.h* 與 *pch.h*)，請選擇一個加以保留。 將任何必要的程式碼 (例如 include 陳述式) 複製到您要保留的檔案中。 然後將另一個刪除，並在專案屬性的 [先行編譯標頭檔]  下，確定標頭檔的名稱正確無誤。
 
    如果您已變更要做為先行編譯標頭使用的檔案，請確定每個檔案的先行編譯標頭檔選項都正確無誤。 依次選擇每個 .cpp 檔案，開啟其屬性視窗，然後確定全部都設定為 [使用 (/Yu)]  ，當中只有想要的先行編譯標頭檔設定為 [建立 (/Yc)]  。
 

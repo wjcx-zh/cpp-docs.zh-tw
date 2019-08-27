@@ -2,12 +2,12 @@
 title: 移植指南：Spy++
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 206698d35239f416d2f13891044aa54fe502500a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 175f3fbba7e18f625dc3425c236162737689f068
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511668"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69630453"
 ---
 # <a name="porting-guide-spy"></a>移植指南：Spy++
 
@@ -67,7 +67,7 @@ Microsoft 不再支援 Windows XP，因此即使可在 Visual Studio 中將其�
 
 若要解決這個錯誤，請定義 WINVER，並將 [專案屬性]  設定更新為目前要設為目標的 Windows 最低版本。 在[這裡](/windows/win32/WinProg/using-the-windows-headers)尋找各種 Windows 版本之值的表格。
 
-stdafx.h 檔案包含其中一些巨集定義。
+*stdafx.h* 檔案包含其中一些巨集定義。
 
 ```cpp
 #define WINVER       0x0500  // these defines are set so that we get the
@@ -502,7 +502,7 @@ warning C4211: nonstandard extension used: redefined extern to static
 
 ##  <a name="porting_to_unicode"></a> 步驟 11： 從 MBCS 移植到 Unicode
 
-請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器]  區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 stdafx.h 標頭檔或其他常見標頭檔的開頭。
+請注意，在 Windows 世界中，當提到 Unicode，通常是指 UTF-16。 其他作業系統 (例如 Linux) 會使用 UTF-8，但 Windows 通常不會使用。 已在 Visual Studio 2013 和 2015 中取代 MBCS 版的 MFC，但在 Visual Studio 2017 中不再予以取代。 如果使用 Visual Studio 2013 或 2015，則在執行步驟實際將 MBCS 程式碼移植到 UTF-16 Unicode之前，我們可能需要暫時移除 MBCS 已被取代的警告，以便執行其他工作，或將移植延後到方便的時間。 目前程式碼使用 MBCS，而為了繼續使用，我們需要安裝 MFC 的 ANSI/MBCS 版本。 相當大的 MFC 程式庫不是預設 Visual Studio **使用 C++ 的桌面開發**安裝的一部分，因此您必須從安裝程式的選擇性元件中選取它。 請參閱 [MFC MBCS DLL 附加元件](../mfc/mfc-mbcs-dll-add-on.md)。 下載這個程式庫並重新啟動 Visual Studio 之後，即可使用 MFC 的 MBCS 版本進行編譯並與其連結，但若要在使用 Visual Studio 2013 或 2015 時移除 MBCS 的相關警告，您也應該在專案屬性的 [前置處理器]  區段中，將 NO_WARN_MBCS_MFC_DEPRECATION 新增至預先定義的巨集清單，或新增於 *stdafx.h* 標頭檔或其他常見標頭檔的開頭。
 
 現在出現一些連結器錯誤。
 

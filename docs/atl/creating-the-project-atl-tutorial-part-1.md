@@ -3,19 +3,16 @@ title: 建立專案 (ATL 教學課程，第 1 部分)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 9f7f62ec94d5ac6d6076763853aa19297cf310e6
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 5bb4c6edffd13e13a451b203feea9a03461a9318
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630695"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108376"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>建立專案 (ATL 教學課程，第 1 部分)
 
-本教學課程會逐步引導您逐步執行非特性化 ATL 專案, 以建立會顯示多邊形的 ActiveX 物件。 物件包含的選項可讓使用者變更組成多邊形的側邊數目, 以及用來重新整理顯示的程式碼。
-
-> [!NOTE]
-> Visual Studio 的 Express 版本中, 通常不支援 ATL 和 MFC。
+本教學課程會逐步引導您逐步執行非屬性化 ATL 專案, 以建立會顯示多邊形的 ActiveX 物件。 物件包含的選項可讓使用者變更組成多邊形的側邊數目, 以及用來重新整理顯示的程式碼。
 
 > [!NOTE]
 > 本教學課程會建立與多邊形範例相同的原始程式碼。 如果您想要避免手動輸入原始程式碼, 可以從[多邊形範例摘要](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon)下載。 接著, 您可以在進行教學課程時參考多邊形原始程式碼, 或使用它來檢查您自己專案中的錯誤。
@@ -51,7 +48,7 @@ Visual Studio 會產生數個檔案來建立專案。 您可以藉由展開`Poly
 
 ::: moniker range="<=vs-2017"
 
-|檔案|說明|
+|檔案|描述|
 |----------|-----------------|
 |多邊形 .cpp|包含`DllMain`、 `DllCanUnloadNow`、 `DllGetClassObject` 、和`DllUnregisterServer`的執行。 `DllRegisterServer` 也包含物件對應, 也就是專案中的 ATL 物件清單。 這一開始是空白的。|
 |多邊形 .def|此模組定義檔會提供連結器, 其中包含 DLL 所需之匯出的相關資訊。|
@@ -87,7 +84,7 @@ Visual Studio 會產生數個檔案來建立專案。 您可以藉由展開`Poly
 
 1. 按一下 [**連結器**]。 將 [**每個 UserRedirection** ] 選項變更為 **[是]** 。
 
-1. 按一下 [確定 **Deploying Office Solutions**]。
+1. 按一下 [確定]。
 
 在下一個步驟中, 您會將控制項新增至您的專案。
 

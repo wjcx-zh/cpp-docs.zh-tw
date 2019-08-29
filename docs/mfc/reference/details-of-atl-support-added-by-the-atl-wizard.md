@@ -1,32 +1,42 @@
 ---
 title: ATL 精靈加入 ATL 支援的詳細資訊
-ms.date: 11/04/2016
+ms.date: 08/20/2019
 f1_keywords:
 - vc.codewiz.atl.support
 helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: aa66bad0-008f-4886-94c1-2a0a0d04bce4
-ms.openlocfilehash: 2651a83c50b03dfffd1ac0238b6c6d0a61888c88
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 10bafc9bd06ee94398f91d5af478a6e1cd7ca617
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741563"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108446"
 ---
 # <a name="details-of-atl-support-added-by-the-atl-wizard"></a>ATL 精靈加入 ATL 支援的詳細資訊
 
-當您[將 ATL 支援加入至現有的 MFC 可執行檔或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)、 VisualC++便會進行下列修改現有的 MFC 專案 (在此範例中，稱為專案`MFCEXE`):
+::: moniker range=">=vs-2019"
 
-- 會新增兩個新的檔案 （.idl 檔和.rgs 檔案，用來註冊的伺服器）。
+當您[將 ATL 支援新增至現有的 MFC 可執行檔或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)時, Visual Studio 預設會加入名為*framework .h*的頭`#include`檔`#define` , 其中包含和預處理器指示詞, 可讓您在專案中使用 ATL。 不會新增任何其他檔案或類別, 就像舊版的 Visual Studio 中所做的一樣。
 
-- 在主應用程式標頭和實作檔案 （Mfcexe.h 和 Mfcexe.cpp），新的類別 (衍生自`CAtlMFCModule`) 加入。 除了新的類別，程式碼加入至`InitInstance`進行註冊。 程式碼也會加入至`ExitInstance`撤銷類別物件的函式。 在標頭檔中，最後，兩個新標頭檔 （h 和 Mfcexe_i.c） 包含在實作檔案中，宣告並初始化新的 Guid，如`CAtlMFCModule`-衍生的類別。
+::: moniker-end
 
-- 若要正確地註冊伺服器，新的.rgs 檔案的項目會新增至專案的資源檔案。
+::: moniker range="<=vs-2017"
 
-## <a name="notes-for-dll-projects"></a>DLL 專案的相關資訊
+當您[將 ATL 支援加入至現有的 mfc 可執行檔或 DLL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)時, Visual Studio 會對現有的 mfc 專案進行下列修改 (在此範例中`MFCEXE`, 會呼叫專案):
 
-當您將 ATL 支援加入 MFC DLL 專案時，您會看到一些差異。 程式碼加入至`DLLRegisterServer`和`DLLUnregisterServer`註冊和取消註冊 DLL 的函式。 程式碼也會加入至[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)並[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。
+- 新增兩個新檔案 (.idl 檔案和用來註冊伺服器的 .rgs 檔案)。
+
+- 在主要應用程式標頭和執行檔案 (Mfcexe .h 和 Mfcexe) 中, 會加入新的類別 (衍生`CAtlMFCModule`自)。 除了新的類別之外, 也會將程式碼`InitInstance`新增至以進行註冊。 程式碼也會新增至`ExitInstance`函式, 以撤銷類別物件。 在標頭檔中, 最後會有兩個新的標頭檔 (d 和 Mfcexe_i) 包含在執行檔中, 宣告和初始化衍生類別的新 guid `CAtlMFCModule`。
+
+- 為了正確註冊伺服器, 新的 .rgs 檔案的專案會新增至專案的資源檔。
+
+::: moniker-end
+
+## <a name="notes-for-dll-projects"></a>DLL 專案的注意事項
+
+當您將 ATL 支援新增至 MFC DLL 專案時, 您會看到一些差異。 程式碼會新增至`DLLRegisterServer`和`DLLUnregisterServer`函式, 以供註冊及取消註冊 DLL。 程式碼也會新增至[DllCanUnloadNow](../../atl/reference/catldllmodulet-class.md#dllcanunloadnow)和[DllGetClassObject](../../atl/reference/catldllmodulet-class.md#dllgetclassobject)。
 
 ## <a name="see-also"></a>另請參閱
 

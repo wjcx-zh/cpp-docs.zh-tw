@@ -7,37 +7,43 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: fba79db013cd9f4cc62ba5826b53e5fa9b15c83a
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741733"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108407"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>將 ATL 支援加入至 MFC 專案
 
-如果您已經建立 MFC 架構的應用程式，然後您可以新增支援的 Active Template Library (ATL) 中輕鬆執行 MFC 專案精靈] 的 [新增 ATL 支援。
+如果您已經建立以 MFC 為基礎的應用程式, 則可以使用 IDE 輕鬆地加入 Active Template Library (ATL) 的支援。
 
 > [!NOTE]
->  ATL 和 MFC 不正式支援 Visual Studio 的 Express 版本中。
+>  這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 您可以將其他 COM 物件 (包括 ActiveX 控制項) 新增至 MFC 專案, 但這些物件可能無法如預期般運作。
 
-> [!NOTE]
->  這項支援只適用於新增至 MFC 可執行檔或 DLL 專案的簡單 COM 物件。 您可以將其他的 COM 物件 （包括 ActiveX 控制項） 新增至 MFC 專案中，但物件可能無法如預期般運作。
+::: moniker range=">=vs-2019"
 
-### <a name="to-add-atl-support-to-your-mfc-project"></a>若要將 ATL 支援加入至 MFC 專案
+1. 在方案總管中, 以滑鼠右鍵按一下專案節點。
 
-1. 在 [方案總管] 中，以滑鼠右鍵按一下您要將 ATL 支援加入的專案。
+1. 在捷徑功能表上，按一下 [新增]，然後按一下 [新增項目]。
 
-1. 在捷徑功能表上，按一下 [加入]  ，然後按一下 [加入類別]  。
+1. 選擇左窗格中的 [ **atl** ], 然後選擇中間窗格中的 [ **atl 支援**]。
 
-1. 選取 **新增 ATL 支援加入至 MFC 專案**圖示。
+::: moniker-end
 
-    > [!NOTE]
-    >  這個圖示位在 [ATL] 資料夾**分類**窗格。
+::: moniker range="<=vs-2017"
 
-1. 出現提示時，按一下**是**新增 ATL 支援。
+### <a name="to-add-atl-support-to-your-mfc-project"></a>將 ATL 支援新增至 MFC 專案
 
-如需有關如何將 ATL 支援加入變更您的 MFC 專案的程式碼的詳細資訊，請參閱[詳細資料的 ATL 支援加入 ATL 精靈](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+1. 在方案總管中, 以滑鼠右鍵按一下專案節點。
+
+1. 在捷徑功能表上，按一下 [加入]，然後按一下 [加入類別]。
+
+1. 在左窗格中選取 [ **atl** ], 然後選擇中央窗格中的 [**將 atl 支援新增至 MFC 專案**]。
+
+::: moniker-end
+
+如需新增 ATL 支援如何變更您的 MFC 專案程式碼的詳細資訊, 請參閱[Atl Wizard 新增的 Atl 支援詳細資料](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
 
 ## <a name="see-also"></a>另請參閱
 

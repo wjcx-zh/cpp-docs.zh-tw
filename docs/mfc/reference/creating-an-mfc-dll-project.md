@@ -1,6 +1,6 @@
 ---
 title: 建立 MFC DLL 專案
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.mfcdll.project
 helpviewer_keywords:
@@ -9,38 +9,36 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: cd1d7910d95fa7e412f9843da2cec7ae10a38ef6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708229"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108484"
 ---
 # <a name="creating-an-mfc-dll-project"></a>建立 MFC DLL 專案
 
-MFC DLL 是二進位檔案，做為共用程式庫的多個應用程式可以同時使用的函式。 若要建立 MFC DLL 專案的最簡單方式是使用 MFC DLL 精靈。
+MFC DLL 是一個二進位檔案, 可做為多個應用程式可以同時使用之函式的共用程式庫。 建立 MFC DLL 專案最簡單的方式是使用 MFC DLL Wizard。
 
 > [!NOTE]
->  IDE 功能的外觀可能取決於您目前使用中的設定或版本，且可能與不同說明中所述。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
+>  IDE 中的功能外觀可能取決於您的使用中設定或版本, 而且可能與 [說明] 中所描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>若要建立 MFC DLL 專案使用 MFC DLL 精靈
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>使用 MFC DLL Wizard 建立 MFC DLL 專案
 
-1. 請依照下列說明主題中的指示[建立C++主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
+1. 遵循說明主題[建立 MFC 應用程式](creating-an-mfc-application.md)中的指示, 但從可用的範本清單中選擇 [ **Mfc 動態連結程式庫**] 或 [ **mfc DLL** ]。
 
-**附註**中**新增專案**對話方塊中，選取`MFC DLL`圖示以開啟 MFC DLL 精靈的 範本 窗格中。
-
-1. 定義使用的應用程式設定[應用程式設定](../../mfc/reference/application-settings-mfc-dll-wizard.md)頁[MFC DLL 精靈](../../mfc/reference/mfc-dll-wizard.md)。
+1. 使用[MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md)的 [[應用程式設定](../../mfc/reference/application-settings-mfc-dll-wizard.md)] 頁面定義您的應用程式設定。
 
     > [!NOTE]
     >  若要保留精靈的預設值，請略過此步驟。
 
-1. 按一下 [**完成**以關閉精靈，並開啟新的專案中**方案總管] 中**。
+1. 按一下 **[完成**] 以關閉嚮導, 並在**方案總管**中開啟您的新專案。
 
-您的專案建立之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[適用於 Visual Studio 建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+專案一旦建立完成之後，即可檢視在 [方案總管] 內建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[為 Visual Studio C++ 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
 ## <a name="see-also"></a>另請參閱
 
-[C++在 Visual Studio 中的專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
+[Visual Studio 中的 C++ 專案類型](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [使用程式碼精靈新增功能](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [屬性頁](../../build/reference/property-pages-visual-cpp.md)
 

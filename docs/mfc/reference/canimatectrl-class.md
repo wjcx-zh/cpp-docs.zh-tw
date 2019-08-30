@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: adf8302508b81f1ac4f6cce3e3811ea6e3743bd4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 18adead999f26768ae669d3a829b557bf9632a29
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507695"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177442"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl 類別
 
@@ -51,7 +51,7 @@ class CAnimateCtrl : public CWnd
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CAnimateCtrl::Close](#close)|關閉 AVI 剪輯。|
 |[CAnimateCtrl::Create](#create)|建立動畫控制項, 並將其附加至`CAnimateCtrl`物件。|
@@ -332,7 +332,7 @@ BOOL Seek(UINT nTo);
 
 ### <a name="example"></a>範例
 
-  請參閱[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)的範例。
+請參閱[CAnimateCtrl:: CAnimateCtrl](#canimatectrl)的範例。
 
 ##  <a name="stop"></a>CAnimateCtrl:: Stop
 

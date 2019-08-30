@@ -1,30 +1,67 @@
 ---
-title: 資源屬性頁面
-ms.date: 11/04/2016
-f1_keywords:
-- VC.Project.VCResourceCompilerTool.ShowProgress
-- VC.Project.VCResourceCompilerTool.AdditionalIncludeDirectories
-- VC.Project.VCResourceCompilerTool.PreprocessorDefinitions
-- VC.Project.VCResourceCompilerTool.OVERWRITEStandardIncludePath
-- VC.Project.VCResourceCompilerTool.Culture
-- VC.Project.VCResourceCompilerTool.ResourceOutputFileName
-helpviewer_keywords:
-- Resources property pages
+title: 資源
+ms.date: 08/28/2019
+ms.topic: article
 ms.assetid: dade2f6b-c51f-4c33-9023-41956ae4b5f6
-ms.openlocfilehash: 29d34faa83947dd5456a86df37794d115e9f0037
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+f1_keywords:
+- VC.Project.VCResourceCompilerTool.PreprocessorDefinitions
+- VC.Project.VCResourceCompilerTool.UndefineProcessorDefinitions
+- VC.Project.VCResourceCompilerTool.Culture
+- VC.Project.VCResourceCompilerTool.AdditionalIncludeDirectories
+- VC.Project.VCResourceCompilerTool.IgnoreStandardIncludePath
+- VC.Project.VCResourceCompilerTool.ShowProgress
+- VC.Project.VCResourceCompilerTool.SuppressStartupBanner
+- VC.Project.VCResourceCompilerTool.ResourceOutputFileName
+- VC.Project.VCResourceCompilerTool.NullTerminateStrings
+- vc.project.AdditionalOptionsPage
+ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498205"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177349"
 ---
-# <a name="resources-property-pages"></a>資源屬性頁面
+# <a name="resources-property-page"></a>資源屬性頁
 
-如需使用資源編譯器的詳細資訊，請參閱[使用 RC (RC 命令列)](/windows/win32/menurc/using-rc-the-rc-command-line-)。
+針對原生 Windows 桌面程式, 組建會叫用[資源編譯器 (rc)](/windows/win32/menurc/resource-compiler) , 將影像、字串資料表和 *.res*檔案加入至二進位檔。 這個屬性頁中公開的屬性會傳遞給資源編譯器, 而不是C++編譯器或連結器。 如需此處所列屬性及其如何對應至 RC 命令列選項的詳細資訊, 請參閱[使用 rc (Rc 命令列)](/windows/win32/menurc/using-rc-the-rc-command-line-)。 如需如何存取 [**資源**] 屬性頁的詳細資訊, 請參閱[Visual Studio 中的設定C++編譯器和組建屬性](../working-with-project-properties.md)。 若要以程式設計方式存取這些屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。
 
-如需如何存取 [**資源**] 屬性頁的詳細資訊, 請參閱[Visual Studio 中的設定C++編譯器和組建屬性](../working-with-project-properties.md)。
+/Cli 應用程式中C++.net 資源的屬性會在 [[受控資源] 屬性頁](managed-resources-property-page.md)中公開。
 
-若要以程式設計方式存取這些屬性，請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>。
+## <a name="preprocessor-definitions"></a>前置處理器定義
+
+指定資源編譯器的一或多個定義。 (/d [宏])
+
+## <a name="undefine-preprocessor-definitions"></a>取消前置處理器的定義
+
+取消定義符號。 u
+
+## <a name="culture"></a>culture
+
+列出資源中所使用的文化特性 (例如美式英文或義大利文)。 (/l [num])
+
+## <a name="additional-include-directories"></a>其他 Include 目錄
+
+指定一或多個要新增至 include 路徑的目錄;如果有一個以上, 請使用分號分隔符號。 (/I [路徑])
+
+## <a name="ignore-standard-include-paths"></a>忽略標準 Include 路徑
+
+防止資源編譯器在 INCLUDE 環境變數中指定的目錄中搜尋 include 檔案。 /X
+
+## <a name="show-progress"></a>顯示進度
+
+將進度訊息傳送至輸出視窗。 停
+
+## <a name="suppress-startup-banner"></a>隱藏啟動橫幅
+
+隱藏啟動橫幅和資訊訊息 (/nologo) 的顯示
+
+## <a name="resource-file-name"></a>資源檔名稱
+
+指定資源檔的名稱 (/fo [file])
+
+## <a name="null-terminate-strings"></a>Null 終止字串 
+
+將 null 附加至字串資料表中的所有字串。 /n
 
 ## <a name="see-also"></a>另請參閱
 

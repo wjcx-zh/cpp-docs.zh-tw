@@ -1,37 +1,38 @@
 ---
-title: 其他 MSVC 建置工具
-ms.date: 05/06/2019
+title: 其他 MSVC Build 工具
+ms.date: 08/28/2019
 f1_keywords:
 - c.build
 helpviewer_keywords:
 - builds [C++], C/C++ tools
 - tools [C++], build
 ms.assetid: 48d9daf4-6bbf-473a-8ce2-bf2923b69f80
-ms.openlocfilehash: 59c9cb4527de878b06cbb6a7b3abe921e9a60107
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 53c7c2f8c162cd851b4612e75ba14b019d9cbd63
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220214"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177290"
 ---
-# <a name="additional-msvc-build-tools"></a>其他 MSVC 建置工具
+# <a name="additional-msvc-build-tools"></a>其他 MSVC Build 工具
 
-Visual Studio 提供下列的命令列公用程式來檢視或操作組建輸出：
+Visual Studio 提供下列命令列公用程式來查看或操作組建輸出:
 
+- [LIB。EXE](lib-reference.md)是用來建立和管理通用物件檔案格式 (COFF) 物件檔案的程式庫。 它也可以用來建立匯出檔案和匯入程式庫, 以參考匯出的定義。
 
-- [LIB。EXE](lib-reference.md)用來建立及管理通用物件檔案格式 (COFF) 物件檔的程式庫。 它也可以用來建立匯出檔案和程式庫匯入參考匯出的定義。
+- [EDITBIN。EXE](editbin-reference.md)是用來修改 COFF 二進位檔案。
 
-- [EDITBIN。EXE](editbin-reference.md)用來修改 COFF 二進位檔。
-
-- [DUMPBIN。EXE](dumpbin-reference.md)顯示資訊 COFF 二進位檔案 （例如符號資料表）。
+- [DUMPBIN。EXE](dumpbin-reference.md)會顯示關於 COFF 二進位檔案的資訊 (例如符號表)。
 
 - [NMAKE](nmake-reference.md)讀取並執行 makefile。
 
-- [ERRLOOK](value-edit-control.md)，錯誤查詢公用程式會擷取系統錯誤訊息或輸入的值為基礎的模組錯誤訊息。
+- [ERRLOOK](value-edit-control.md), 錯誤查閱公用程式會根據輸入的值, 抓取系統錯誤訊息或模組錯誤訊息。
 
-- [XDCMake](xdcmake-reference.md)。 Toolfor，處理原始程式碼檔案包含文件註解標示的 XML 標記。
+- [XDCMake](xdcmake-reference.md)。 用來處理原始程式碼檔案的工具, 這些檔案包含以 XML 標記標記的檔批註。
 
-- [BSCMAKE。EXE](bscmake-reference.md) （基於回溯相容性提供） 建置瀏覽資訊檔 (.bsc)，其中包含您的程式中的符號 （類別、 函式、 資料、 巨集和類型） 的相關資訊。 您在開發環境內的瀏覽 視窗中檢視這項資訊。 （.bsc 檔可以也是建置在開發環境中）。
+- [BSCMAKE。EXE](bscmake-reference.md) (僅針對回溯相容性而提供) 會建立流覽資訊檔 (.bsc), 其中包含程式中的符號 (類別、函式、資料、宏和類型) 的相關資訊。 您可以在開發環境中的 [流覽] 視窗中, 看到這項資訊。 (.Bsc 檔案也可以建立在開發環境中)。
+
+Windows SDK 也有數個組建工具, 包括[RC。EXE](/windows/win32/menurc/resource-compiler), 編譯器會C++叫用它來編譯原生 Windows 資源, 例如對話方塊、屬性頁、點陣圖、字串資料表等等。
 
 ## <a name="see-also"></a>另請參閱
 

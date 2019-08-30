@@ -1,6 +1,6 @@
 ---
 title: CFtpConnection 類別
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CFtpConnection
 - AFXINET/CFtpConnection
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 977a8c9fc6dd653a59434d29bb72b0fe28900001
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94ee4cb938ee061470282eb2f08a94d83c908805
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506377"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177277"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection 類別
 
@@ -57,7 +57,7 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|將命令直接傳送至 FTP 伺服器。|
 |[CFtpConnection::CreateDirectory](#createdirectory)|在伺服器上建立目錄。|
@@ -171,11 +171,13 @@ CInternetFile* Command(
 包含要傳送至命令的字串指標。
 
 *eResponse*<br/>
-決定是否會有來自於 FTP 伺服器的回應。 可為下列其中一個值：
+指定是否預期來自 FTP 伺服器的回應。 可為下列其中一個值：
 
 - `CmdRespNone`不需要回應。
-
 - `CmdRespRead`預期會有回應。
+- `CmdRespWrite`未使用。
+
+CmdResponseType 是 CFtpConnection 的成員, 定義于*afxinet.h*中。
 
 *dwFlags*<br/>
 一個值，包含控制此函式的旗標。 如需完整清單, 請參閱[FTPCommand](/windows/win32/api/wininet/nf-wininet-ftpcommandw)。

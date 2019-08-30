@@ -1,6 +1,6 @@
 ---
 title: CD2DPointU 類別
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 f1_keywords:
 - CD2DPointU
 - AFXRENDERTARGET/CD2DPointU
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DPointU [MFC], CD2DPointU
 ms.assetid: 04733f96-b6de-4a89-82e3-caad1e8087a9
-ms.openlocfilehash: d66793abbb83015891df348eef8384e5c97baf2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6289d33aa0672d1ee423d91b11527dccfc868da7
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396310"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177172"
 ---
 # <a name="cd2dpointu-class"></a>CD2DPointU 類別
 
@@ -31,13 +31,13 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPointU::CD2DPointU](#cd2dpointu)|多載。 建構`CD2DPointU`從物件`D2D1_POINT_2U`物件。|
+|[CD2DPointU::CD2DPointU](#cd2dpointu)|多載。 從物件`CD2DPointU` `D2D1_POINT_2U`物件中建立。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[CD2DPointU::operator CPoint](#operator_cpoint)|將轉換`CD2DPointU`至`CPoint`物件。|
+|[CD2DPointU:: operator CPoint](#operator_cpoint)|轉換`CD2DPointU` 成`CPoint`物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -47,16 +47,16 @@ class CD2DPointU : public D2D1_POINT_2U;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標頭:** afxrendertarget。h
 
-##  <a name="cd2dpointu"></a>  CD2DPointU::CD2DPointU
+##  <a name="cd2dpointu"></a>CD2DPointU:: CD2DPointU
 
-建構 CD2DPointU 物件從 CPoint 物件。
+從 CPoint 物件中, 建立 CD2DPointU 物件。
 
 ```
 CD2DPointU(const CPoint& pt);
 CD2DPointU(const D2D1_POINT_2U& pt);
-  CD2DPointU(const D2D1_POINT_2U* pt);
+CD2DPointU(const D2D1_POINT_2U* pt);
 CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 ```
 
@@ -69,11 +69,11 @@ CD2DPointU(UINT32 uX = 0, UINT32 uY = 0);
 來源 X
 
 *uY*<br/>
-source Y
+來源 Y
 
-##  <a name="operator_cpoint"></a>  CD2DPointU::operator CPoint
+##  <a name="operator_cpoint"></a>CD2DPointU:: operator CPoint
 
-將 CD2DPointU 轉換 CPoint 物件。
+將 CD2DPointU 轉換為 CPoint 物件。
 
 ```
 operator CPoint();
@@ -81,7 +81,7 @@ operator CPoint();
 
 ### <a name="return-value"></a>傳回值
 
-目前的 D2D 點值。
+D2D point 的目前值。
 
 ## <a name="see-also"></a>另請參閱
 

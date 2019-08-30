@@ -1,6 +1,6 @@
 ---
 title: 了解自訂建置步驟和建置事件
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - builds [C++], events
 - custom build steps [C++], customizing builds
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 93a1c787a863c2c52986a00fdeabbc4d44b0fcce
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 386a12213814e3825ece8a81d61ac251c6793f43
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400456"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177320"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>了解自訂建置步驟和建置事件
 
@@ -38,7 +38,7 @@ ms.locfileid: "67400456"
 
 自訂建置步驟或建置事件的輸出格式也可以增強工具的可用性。 如需詳細資訊，請參閱[格式化自訂建置步驟或建置事件的輸出](formatting-the-output-of-a-custom-build-step-or-build-event.md)。
 
-建置事件和自訂建置步驟會依下列順序與其他建置步驟一起執行：
+針對方案中的每個專案, 組建事件和自訂群組建步驟會依照下列順序和其他組建步驟執行:
 
 1. 建置前事件
 

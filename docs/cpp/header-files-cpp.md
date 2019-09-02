@@ -76,7 +76,7 @@ int main()
 
 當編譯器完成將每個 .cpp 檔編譯成 .obj 檔案的程序後，它會將 .obj 檔案傳遞給連結器。 當連結器合併物件檔案時, 它會剛好找到一個 my_class 定義；它其位於 my_class.cpp 產生的 .obj 檔中，而且編譯成功。
 
-## <a name="include-guards"></a>包含防護
+## <a name="include-guards"></a>Include 防護 (Include guard)
 
 般來說，標頭檔案會有 *include 防護* 或 `#pragma once` 指示詞，以確保它們不會被多次插入單一 .cpp 檔案中。
 

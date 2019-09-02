@@ -4,12 +4,13 @@ title: Visual C++ 文件
 description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789020"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177498"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -341,10 +342,10 @@ ms.locfileid: "65789020"
                 </ul>
             </li>
             <li>
-                <a href="#langlib">語言和程式庫</a>
+                <a href="#langlib">語言與程式庫</a>
                 <ul id="langlib">
                     <li>
-                        <a href="#langlib1">語言和程式庫</a>
+                        <a href="#langlib1">語言與程式庫</a>
                         <ul id="langlib1" class="cardsC">
                             <li>
                                 <a href="/cpp/cpp/c-cpp-language-and-standard-libraries">

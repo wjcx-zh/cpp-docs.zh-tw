@@ -1,6 +1,6 @@
 ---
 title: __stosq
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosq
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - stosq instruction
 - __stosq intrinsic
 ms.assetid: 3ea28297-4369-4c2d-bf0c-91fa539ce209
-ms.openlocfilehash: eacb12f7c02b82607d980281f8d4a0bc1e1d7c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b347d595da4cdbf1fefb6244940e262981671e9
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390343"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219959"
 ---
-# <a name="stosq"></a>__stosq
+# <a name="__stosq"></a>__stosq
 
 **Microsoft 專屬**
 
-產生的存放區的字串指示 (`rep stosq`)。
+產生存放區字串指令 (`rep stosq`)。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __stosb(
-   unsigned __int64* Dest,
+   unsigned __int64* Destination,
    unsigned __int64 Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
-[out]作業的目的地。
+*位置*\
+脫銷作業的目的地。
 
-*Data*<br/>
-[in]要儲存的資料。
+*Data*\
+在要儲存的資料。
 
-*計數*<br/>
-[in]要寫入的 quadwords 區塊的長度。
+*計數*\
+在要寫入的 quadwords 區塊長度。
 
 ## <a name="requirements"></a>需求
 
@@ -48,17 +48,17 @@ void __stosb(
 |---------------|------------------|
 |`__stosq`|AMD64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-結果是 quadword`Data`寫入至區塊`Count`quadwords 中的`Dest`字串。
+結果是將四個*資料*寫入至*目的地*字串中的*Count* quadwords 區塊。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```C
 // stosq.c
 // processor: x64
 #include <stdio.h>
@@ -76,9 +76,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
-
-```
+```Output
 0 ffffffffffff ffffffffffff 0
 ```
 
@@ -86,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

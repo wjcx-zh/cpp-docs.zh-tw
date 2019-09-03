@@ -1,36 +1,36 @@
 ---
 title: __writecr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr8
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-ms.openlocfilehash: 44b009e68f3dd7825bc064e5f9f4ee8d03d7fb4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8df13c15b5cd8a51b77d65ad930a1852809ee30
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389901"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219244"
 ---
-# <a name="writecr8"></a>__writecr8
+# <a name="__writecr8"></a>__writecr8
 
 **Microsoft 專屬**
 
-將值寫入`Data`CR8 註冊。
+將值`Data`寫入 CR8 暫存器。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void writecr8(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Data*<br/>
-[in]要寫入的 CR8 暫存器的值。
+*Data*\
+在要寫入 CR8 暫存器的值。
 
 ## <a name="requirements"></a>需求
 
@@ -38,14 +38,14 @@ void writecr8(
 |---------------|------------------|
 |`__writecr8`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建只適用於核心模式，且此常式僅可作為內建常式使用。
+`__writecr8`內建函式僅適用于核心模式, 而常式僅以內建函式的形式提供。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

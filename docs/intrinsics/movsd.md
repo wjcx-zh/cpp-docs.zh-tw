@@ -1,6 +1,6 @@
 ---
 title: __movsd
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsd
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __movsd intrinsic
 - movsd instruction
 ms.assetid: eb5cccf3-aa76-47f0-b9fc-eeca38fd943f
-ms.openlocfilehash: 950e83f2cd03e92bb5a9f953affe8e7ff479a408
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c43f6bdb731abc281d60fe4bc6ecaec1331b9945
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263174"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221764"
 ---
-# <a name="movsd"></a>__movsd
+# <a name="__movsd"></a>__movsd
 
 **Microsoft 專屬**
 
-產生的移動的字串 (`rep movsd`) 指令。
+產生 Move String (`rep movsd`) 指令。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __movsd(
-   unsigned long* Dest,
+   unsigned long* Destination,
    unsigned long* Source,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
-[out]作業的目的地。
+*位置*\
+脫銷作業的目的地。
 
-*來源*<br/>
-[in]作業的來源。
+*Source*\
+在作業的來源。
 
-*計數*<br/>
-[in]若要複製的雙字組數目。
+*計數*\
+在要複製的雙用字數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,17 +48,17 @@ void __movsd(
 |---------------|------------------|
 |`__movsd`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-結果是第一個`Count`雙字組所指`Source`複製到`Dest`字串。
+結果是會將*來源*所指向的第一個*計數*雙字複製到*目的*字串。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // movsd.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -87,4 +87,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

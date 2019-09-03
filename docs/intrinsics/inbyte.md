@@ -1,6 +1,6 @@
 ---
 title: __inbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbyte
 - __inbyte_cpp
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __inbyte intrinsic
 ms.assetid: 03b61799-2a08-474d-adc4-2cbf7c81a4d5
-ms.openlocfilehash: 20c583b874c2bdb56affc6a90c8464b82c4824f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0036763ed7315a54fbfe6dcc873b46b52f0730c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348974"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222135"
 ---
-# <a name="inbyte"></a>__inbyte
+# <a name="__inbyte"></a>__inbyte
 
 **Microsoft 專屬**
 
-會產生`in`的指示，傳回一個位元組讀取所指定的連接埠`Port`。
+產生指令, 傳回從`Port`指定的埠讀取的單一位元組。 `in`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char __inbyte(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]要讀取的連接埠。
+*移植*\
+在要從中讀取的埠。
 
 ## <a name="return-value"></a>傳回值
 
-從指定的連接埠讀取的位元組。
+從指定的埠讀取的位元組。
 
 ## <a name="requirements"></a>需求
 
@@ -44,7 +44,7 @@ unsigned char __inbyte(
 |---------------|------------------|
 |`__inbyte`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
@@ -54,4 +54,4 @@ unsigned char __inbyte(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

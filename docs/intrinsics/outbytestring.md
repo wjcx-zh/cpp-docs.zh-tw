@@ -1,6 +1,6 @@
 ---
 title: __outbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbytestring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31caf17db5d56efccd6b30200994b1080356b4c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396609"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217166"
 ---
-# <a name="outbytestring"></a>__outbytestring
+# <a name="__outbytestring"></a>__outbytestring
 
 **Microsoft 專屬**
 
-會產生`rep outsb`指示，將傳送第一個`Count`所指向的資料位元組`Buffer`所指定的連接埠`Port`。
+產生指示, 此指令會將所`Count`指向`Buffer`的前幾個位元組傳送至所指定`Port`的埠。 `rep outsb`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __outbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __outbytestring(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]若要將資料傳送至連接埠。
+*移植*\
+在要將資料傳送至其中的通訊埠。
 
-*Buffer*<br/>
-[in]指定的連接埠傳送資料。
+*緩衝區*\
+在要從指定的埠送出的資料。
 
-*計數*<br/>
-[in]資料要傳送的位元組數目。
+*計數*\
+在要傳送的資料位元組數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,7 +48,7 @@ void __outbytestring(
 |---------------|------------------|
 |`__outbytestring`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -58,4 +58,4 @@ void __outbytestring(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: fp_contract
-ms.date: 03/12/2018
+title: fp_contract pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.fp_contract
 - fp_contract_CPP
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, fp_contract
 - fp_contract pragma
 ms.assetid: 15b97338-6680-4287-ba2a-2dccc5b2ccf5
-ms.openlocfilehash: 14c3ac60d4fc0f45fcf0ece6c3f73153e5de4271
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 833d8e7f4b8c9da18901610e52afed619468c5c3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409911"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218558"
 ---
-# <a name="fpcontract"></a>fp_contract
+# <a name="fp_contract-pragma"></a>fp_contract pragma
 
-判斷是否已發生浮點縮減。 浮點縮減是的指示，例如 FMA （Fused-乘號加入），結合了兩個個別浮點運算成單一的指示。 因為而不是每個作業之後的圓弧半徑，處理器可能會捨入一次這兩項作業之後，使用這些指示可能會影響浮點精確度。
+判斷是否發生浮點縮減。 浮點縮減是將兩個不同的浮點運算結合成單一指令的一個指令, 例如 FMA (已融合的乘法-Add)。 使用這些指示可能會影響浮點精確度, 因為在這兩個作業之後, 處理器只能四捨五入一次。
 
 ## <a name="syntax"></a>語法
 
@@ -25,9 +25,9 @@ ms.locfileid: "62409911"
 
 ## <a name="remarks"></a>備註
 
-根據預設， **fp_contract**是**上**。 這會告訴編譯器要儘可能使用浮點縮減的指示。 設定**fp_contract**要**關閉**以保留個別浮點數的指示。
+根據預設, **fp_contract**是**on**。 這會告訴編譯器在可能的情況下使用浮點縮減指令。 將**fp_contract**設定為**off** , 以保留個別的浮點指示。
 
-如需浮點行為的詳細資訊，請參閱[/fp （指定浮點行為）](../build/reference/fp-specify-floating-point-behavior.md)。
+如需浮點行為的詳細資訊, 請參閱[/fp (指定浮點行為)](../build/reference/fp-specify-floating-point-behavior.md)。
 
 其他浮點 pragma 包括：
 
@@ -37,7 +37,7 @@ ms.locfileid: "62409911"
 
 ## <a name="example"></a>範例
 
-這個範例產生的程式碼不使用融合-乘號加入的指令，即使它是位於目標處理器。 如果您註解`#pragma fp_contract (off)`，產生的程式碼可能會使用融合-乘號加入的指令，如果有的話。
+從這個範例產生的程式碼並不會使用已融合的乘法-add 指示, 即使它在目標處理器上可用也一樣。 如果您將標記`#pragma fp_contract (off)`為批註, 則產生的程式碼可能會使用已融合的乘法-add 指示 (如果有的話)。
 
 ```cpp
 // pragma_directive_fp_contract.cpp
@@ -77,4 +77,4 @@ out = 4.587525000000000e+03
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,6 +1,6 @@
 ---
 title: _bittest, _bittest64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittest64
 - _bittest_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37d96cc008d0da018355a2eca63c6c592ab50f12
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349169"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216899"
 ---
-# <a name="bittest-bittest64"></a>_bittest, _bittest64
+# <a name="_bittest-_bittest64"></a>_bittest, _bittest64
 
 **Microsoft 專屬**
 
@@ -26,7 +26,7 @@ ms.locfileid: "62349169"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char _bittest(
    long const *a,
    long b
@@ -39,11 +39,11 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>參數
 
-*a*<br/>
-[in]要檢查的記憶體指標。
+*為*\
+在要檢查之記憶體的指標。
 
-*b*<br/>
-[in]要測試的位元位置。
+*位元組*\
+在要測試的位位置。
 
 ### <a name="return-value"></a>傳回值
 
@@ -53,8 +53,8 @@ unsigned char _bittest64(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_bittest`|x86、 x64、 ARM|\<intrin.h>|
-|`_bittest64`|ARM、 x64|\<intrin.h>|
+|`_bittest`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_bittest64`|ARM64, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>備註
 
@@ -104,4 +104,4 @@ Binary representation:
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

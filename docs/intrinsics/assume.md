@@ -1,6 +1,6 @@
 ---
 title: __assume
-ms.date: 10/09/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __assume
 - _assume
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: 1d84e9306dcd468153f38cc0c3085b43388e1dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264311"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216969"
 ---
-# <a name="assume"></a>__assume
+# <a name="__assume"></a>__assume
 
 **Microsoft 專屬**
 
@@ -23,15 +23,15 @@ ms.locfileid: "62264311"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __assume(
    expression
 )
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*expression*<br/>
+*運算式*\
 假設評估為 true 的任何運算式。
 
 ## <a name="remarks"></a>備註
@@ -45,21 +45,21 @@ __assume(
 
 `__assume` 不是真的內建函式。 它不需要宣告為函式，且不能用在 `#pragma intrinsic` 指示詞中。 雖然不會產生程式碼，但最佳化程式所產生的程式碼會受到影響。
 
-使用`__assume`中[ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)只有當 assert 是無法復原。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
+只有`__assume`在無法復原判斷提示時, 才在[assert](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md)中使用。 請勿在有後續錯誤復原程式碼的 assert 中使用 `__assume`，因為編譯器可能會將錯誤處理程式碼最佳化掉。
 
 `__assume(0)` 陳述式是特殊的情況。 使用 `__assume(0)`，表示無法到達的程式碼路徑。 下列範例示範如何使用 `__assume(0)`，表示無法到達 switch 陳述式的 default case。 這會示範 `__assume(0)` 最常見的用法。
 
-為了與舊版中，相容性 **_assume**同義 **__assume**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)是指定此項目。
+為了與舊版相容, 除非指定了編譯器選項[ \(/za 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能, 否則 **_assume**是 **__assume**的同義字。
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`__assume`|x86、 x64、 ARM|
+|`__assume`|x86、ARM、x64、ARM64|
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // compiler_intrinsics__assume.cpp
 #ifdef DEBUG
 # define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__) )
@@ -97,13 +97,13 @@ int main(int p)
 
 因為編譯器會根據 `__assume` 產生程式碼，如果 `__assume` 陳述式內的運算式在執行階段為 false 時，該程式碼可能無法正確執行。 如果您不確定運算式是否一定會在執行階段為 true，可以使用 `assert` 函式來保護程式碼。
 
-```
+```C
 #define ASSERT(e)    ( ((e) || assert(__FILE__, __LINE__)), __assume(e) )
 ```
 
 不幸的是，這種使用 `assert` 防止編譯器執行 default-case 最佳化，已於本文件稍早所描述。 另一種方法是，可以使用個別的巨集，如下所示。
 
-```
+```C
 #ifdef DEBUG
 # define NODEFAULT   ASSERT(0)
 #else
@@ -118,5 +118,5 @@ int main(int p)
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

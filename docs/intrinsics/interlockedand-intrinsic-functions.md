@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAnd 內建函式
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -56,14 +56,14 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e22b463a5229de4745f71aaa0240374a5c057508
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349458"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217769"
 ---
-# <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
+# <a name="_interlockedand-intrinsic-functions"></a>_InterlockedAnd 內建函式
 
 **Microsoft 專屬**
 
@@ -71,7 +71,7 @@ ms.locfileid: "62349458"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 long _InterlockedAnd(
    long volatile * value,
    long mask
@@ -170,13 +170,13 @@ __int64 _InterlockedAnd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*value*<br/>
-[in、 out]要被結果取代的第一個運算元指標。
+*value*\
+[in、out]第一個運算元的指標, 要由結果取代。
 
-*mask*<br/>
-[in]第二個運算元。
+*遮罩*\
+在第二個運算元。
 
 ## <a name="return-value"></a>傳回值
 
@@ -186,8 +186,9 @@ __int64 _InterlockedAnd64_rel(
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、 x64、 ARM|\<intrin.h>|
-|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
+|`_InterlockedAnd`、`_InterlockedAnd8`、`_InterlockedAnd16`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedAnd64`|ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM、ARM64|\<intrin.h>|
 |`_InterlockedAnd_np`, `_InterlockedAnd8_np`, `_InterlockedAnd16_np`, `_InterlockedAnd64_np`|X64|\<intrin.h>|
 |`_InterlockedAnd_HLEAcquire`, `_InterlockedAnd_HLERelease`, `_InterlockedAnd64_HLEAcquire`, `_InterlockedAnd64_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -195,7 +196,7 @@ __int64 _InterlockedAnd64_rel(
 
 每個函式名稱的數字會指定引數的位元大小。
 
-在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
+在 ARM 和 ARM64 平臺上, 針對取得和`_acq`發行`_rel`語義使用具有和後置詞的內建函式, 例如在重要區段的開頭和結尾。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
 
 搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。
 
@@ -203,7 +204,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // InterlockedAnd.cpp
 // Compile with: /Oi
 #include <stdio.h>
@@ -229,5 +230,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

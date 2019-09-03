@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 07/11/2019
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: 4dcabd6ed0f7fb3f422927815cbdc91f2b4b9d43
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861119"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221317"
 ---
-# <a name="rdtscp"></a>__rdtscp
+# <a name="__rdtscp"></a>__rdtscp
 
 **Microsoft 專屬**
 
-會產生`rdtscp`的指示，將寫入`TSC_AUX[31:0`] 的記憶體，並傳回 64 位元時間戳記計數器 (`TSC)`結果。
+會產生`TSC_AUX[31:0`指令、寫入至記憶體, 並傳回64位時間戳記計數器 (`TSC)` result。 `rdtscp`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned __int64 __rdtscp(
-   unsigned int * Aux
+   unsigned int * AUX
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Aux*<br/>
-[out]將包含特定電腦的暫存器內容的位置指標`TSC_AUX[31:0]`。
+*AUX*\
+脫銷將包含電腦特定`TSC_AUX[31:0]`暫存器內容之位置的指標。
 
 ## <a name="return-value"></a>傳回值
 
-64 位元不帶正負號的整數的滴答計數。
+64位不帶正負號的整數滴答計數。
 
 ## <a name="requirements"></a>需求
 
@@ -44,15 +44,15 @@ unsigned __int64 __rdtscp(
 |---------------|------------------|
 |`__rdtscp`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建函式會產生`rdtscp`指令。 若要判斷此指令的硬體支援，請呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查一些 27 `CPUInfo[3] (EDX)`。 此位元可說是支援的指示，則為 1 和 0。  如果您執行程式碼使用此內建在不支援的硬體上`rdtscp`指令，結果會無法預測。
+內建函式會`rdtscp`產生指令。 `__rdtscp` 若要判斷此指示的硬體支援, 請`__cpuid`使用`InfoType=0x80000001`呼叫內建函式, 並檢查`CPUInfo[3] (EDX)`的位27。 如果支援指令, 則此位為 1, 否則為0。  如果您在不支援`rdtscp`指令的硬體上執行使用內建的程式碼, 結果會是無法預測的。
 
-這個指令會等到所有前面的指示執行，以及所有先前的負載都是全域可見。 不過，它不是序列化的指示。 Intel 和 AMD 手冊，如需詳細資訊，請參閱。
+此指令會等到所有先前的指示都已執行, 而且所有先前的載入都是全域可見的。 不過, 它不是序列化指令。 如需詳細資訊, 請參閱 Intel 和 AMD 手冊。
 
-中值的意義`TSC_AUX[31:0]`取決於作業系統。
+中`TSC_AUX[31:0]`的值意義取決於作業系統。
 
 ## <a name="example"></a>範例
 
@@ -76,8 +76,7 @@ TSC_AUX was 0
 
 **結束 Microsoft 專屬**
 
-
 ## <a name="see-also"></a>另請參閱
 
-[__rdtsc](../intrinsics/rdtsc.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__rdtsc](../intrinsics/rdtsc.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
 title: __readfsbyte、__readfsdword、__readfsqword、__readfsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readfsword
 - __readfsdword
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: f291747d1f46ebdf3ea1f71cd9ab7e074058201d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30040b33fe8c686bc0cda585c525ae2926cdf314
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262728"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222371"
 ---
-# <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
+# <a name="__readfsbyte-__readfsdword-__readfsqword-__readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
 **Microsoft 專屬**
 
-讀取記憶體從相對於 FS 區段開頭的位移所指定的位置。
+從相對於 FS 區段開頭的位移所指定的位置讀取記憶體。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char __readfsbyte(
    unsigned long Offset
 );
@@ -46,14 +46,14 @@ unsigned __int64 __readfsqword(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Offset*<br/>
-[in]從開頭的位移`FS`來讀取。
+*投影*\
+在從開始`FS`讀取的位移。
 
 ## <a name="return-value"></a>傳回值
 
-記憶體中的位元組、 word、 doubleword 或 （如下所呼叫的函式的名稱） 的 quadword 內容位於位置`FS:[Offset]`。
+位在位置`FS:[Offset]`的位元組、字組、雙字或四字的記憶體內容 (如所呼叫的函式名稱所示)。
 
 ## <a name="requirements"></a>需求
 
@@ -64,15 +64,15 @@ unsigned __int64 __readfsqword(
 |`__readfsqword`|x86|
 |`__readfsword`|x86|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-這些常式都僅有內建函式。
+這些常式僅供內建函式使用。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

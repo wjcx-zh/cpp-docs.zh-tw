@@ -1,6 +1,6 @@
 ---
 title: _mm_insert_si64、_mm_inserti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_inserti_si64
 - _mm_insert_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08469ad8049df2a07f0e66d650c1ca3118f8b980
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396674"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221781"
 ---
-# <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64、_mm_inserti_si64
+# <a name="_mm_insert_si64-_mm_inserti_si64"></a>_mm_insert_si64、_mm_inserti_si64
 
 **Microsoft 專屬**
 
-會產生`insertq`指令，以便從其第二個運算元中插入第一個運算元的位元。
+`insertq`產生指示, 將其第二個運算元的位插入其第一個運算元。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __m128i _mm_insert_si64(
    __m128i Source1,
    __m128i Source2
@@ -37,23 +37,23 @@ __m128i _mm_inserti_si64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Source1*<br/>
-[in]128 位元欄位，以在其較低的 64 位元，以將插入的欄位中的輸入資料。
+*Source1.rc*\
+在128位欄位, 其具有較低64位的輸入資料, 將在其中插入欄位。
 
-*Source2*<br/>
-[in]要插入其低的位元的資料與 128 位元欄位。  針對`_mm_insert_si64`，也會包含在其高的位元欄位描述元。
+*Source2*\
+在128位欄位, 含有要插入其低位的資料。  針對`_mm_insert_si64`, 也會包含其高位的欄位描述項。
 
-*長度*<br/>
-[in]整數常數，指定要插入之欄位的長度。
+*長*\
+在整數常數, 指定要插入之欄位的長度。
 
-*Tuple*<br/>
-[in]整數常數，指定將插入資料之欄位的最小顯著性位元的索引。
+*指數*\
+在整數常數, 指定要在其中插入資料之欄位的最小有效位索引。
 
 ## <a name="return-value"></a>傳回值
 
-128 位元欄位，其較低的 64 位元包含原始低 64 個位元`Source1`與指定的位元欄位取代的低位元`Source2`。 傳回值的較高的 64 位元會定義。
+128位欄位, 其較低的64位包含*source1.rc*的原始低64位, 且指定的位欄位已由低位的*Source2*取代。 傳回值的64位上限未定義。
 
 ## <a name="requirements"></a>需求
 
@@ -62,21 +62,21 @@ __m128i _mm_inserti_si64(
 |`_mm_insert_si64`|SSE4a|
 |`_mm_inserti_si64`|SSE4a|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建函式會產生`insertq`插入的位元指令`Source2`到`Source1`。 有內建的這兩個版本： `_mm_inserti_si64`，是即時版本，和`_mm_insert_si64`是非直接。  每個版本從 Source2 擷取為給定長度的位元欄位，並將它插入 Source1。  擷取的位元是 Source2 的最小顯著性位元。  將插入這些位元欄位 Source1 定義長度以及其最小顯著性的位元的索引。  長度和索引的值取自 mod 64，因此解譯為 63 的-1 到 127 之間。 如果 （降低） 的位元索引和 （降低） 的欄位長度的總和大於 64，結果會是未定義。 欄位長度為零的值會解譯為 64。  如果欄位長度和位元索引的這兩個零個、 位元 63:0`Source2`插入至`Source1`。  如果欄位長度為零，但位元索引為非零，則結果為未定義。
+這些內建函式會`insertq`產生指示, 以將*Source2*中的位插入*source1.rc*。 有兩個版本: `_mm_inserti_si64`、是立即版本, 而且`_mm_insert_si64`是非立即的。 每個版本都會從 Source2 中提取指定長度的位欄位, 並將其插入 Source1.rc。  解壓縮的位是最不重要的 Source2 位。  將插入這些位的欄位 Source1.rc 是由長度和最小有效位的索引所定義。  長度和索引的值會採用 mod 64, 因此-1 和127都會被視為63。 如果 (減少) 位索引和 (縮減) 欄位長度的總和大於 64, 則結果會是未定義的。 欄位長度為零的值會解讀為64。 如果欄位長度和位索引皆為零, 則會將*Source2*的 bits 63:0 插入*source1.rc*中。 如果欄位長度為零, 但位索引不是零, 則結果會是未定義的。
 
-_Mm_insert_si64 呼叫，則欄位長度都包含在位元 77:72 Source2 和位元 69:64 中的索引。
+在呼叫 _mm_insert_si64 時, 欄位長度包含在 Source2 的位77:72 和位69:64 的索引中。
 
-如果您呼叫`_mm_inserti_si64`引數時，編譯器無法判斷要當做整數常數，則編譯器會產生程式碼封裝到 XMM 暫存器的這些值，並呼叫`_mm_insert_si64`。
+如果您使用`_mm_inserti_si64`編譯器無法判斷為整數常數的引數呼叫, 編譯器會產生程式碼, 將這些值封裝成 XMM 暫存器並呼叫`_mm_insert_si64`。
 
-若要判斷硬體支援`insertq`指令呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查位元 6 的`CPUInfo[2] (ECX)`。 此位元會經過支援指令，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`insertq`指令，結果會無法預測。
+若要判斷`insertq`指令的硬體支援, 請使用`__cpuid` `InfoType=0x80000001`呼叫內建函式並檢查的`CPUInfo[2] (ECX)`位6。 如果支援指令, 則此位為 1, 否則為0。 如果您在不支援`insertq`指令的硬體上執行使用內建的程式碼, 結果會是無法預測的。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -120,9 +120,9 @@ result3 = 0xfffffffff3210fff
 
 **結束 Microsoft 專屬**
 
-進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
+由 Advanced 微裝置, Inc. 的部分著作權2007著作權所有，並保留一切權利。 已從 Advanced 微裝置, Inc. 的許可權重現
 
 ## <a name="see-also"></a>另請參閱
 
-[_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

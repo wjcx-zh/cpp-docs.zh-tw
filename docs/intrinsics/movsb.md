@@ -1,6 +1,6 @@
 ---
 title: __movsb
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __movsb
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca06fc9114f6e824a690cc4e612c21d705a485cd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263811"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217274"
 ---
-# <a name="movsb"></a>__movsb
+# <a name="__movsb"></a>__movsb
 
 **Microsoft 專屬**
 
-產生的移動的字串 (`rep movsb`) 指令。
+產生 Move String (`rep movsb`) 指令。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __movsb(
    unsigned char* Destination,
    unsigned const char* Source,
@@ -31,16 +31,16 @@ void __movsb(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
-[out]若要複製的目的地的指標。
+*位置*\
+脫銷複製之目的地的指標。
 
-*來源*<br/>
-[in]要複製的來源指標。
+*Source*\
+在複製之來源的指標。
 
-*計數*<br/>
-[in]要複製的位元組數目。
+*計數*\
+在要複製的位元組數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,17 +48,17 @@ void __movsb(
 |---------------|------------------|
 |`__movsb`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-結果是第一個`Count`所指向的位元組`Source`複製到`Destination`字串。
+結果是會將所指向`Count` `Source`的前個位元組複製到`Destination`字串。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // movsb.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ A big black dog. A big black dog.
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

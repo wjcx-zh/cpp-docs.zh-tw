@@ -1,6 +1,6 @@
 ---
 title: __indword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __indword_cpp
 - __indword
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - in instruction
 - __indword intrinsic
 ms.assetid: 1068d686-586e-4e36-b962-d1d7c3315260
-ms.openlocfilehash: 063ebd92682f8011bc6b60eee14c3443bc04c333
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 790b65c8a565124df92b82b7ea17174788086a96
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348922"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222113"
 ---
-# <a name="indword"></a>__indword
+# <a name="__indword"></a>__indword
 
 **Microsoft 專屬**
 
-從指定的連接埠使用讀取資料的一個雙精度浮點數字`in`指令。
+使用`in`指令, 從指定的埠讀取一個雙單字的資料。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned long __indword(
    unsigned short Port
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]要讀取的連接埠。
+*移植*\
+在要從中讀取的埠。
 
 ## <a name="return-value"></a>傳回值
 
-從連接埠，讀取這個字。
+從埠讀取的文字。
 
 ## <a name="requirements"></a>需求
 
@@ -44,7 +44,7 @@ unsigned long __indword(
 |---------------|------------------|
 |`__indword`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -54,4 +54,4 @@ unsigned long __indword(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

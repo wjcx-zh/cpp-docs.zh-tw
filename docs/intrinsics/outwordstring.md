@@ -1,6 +1,6 @@
 ---
 title: __outwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outwordstring
 helpviewer_keywords:
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3cc5b0ae2101c86e3dc899b7924ec2524f0ea6e7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396596"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217115"
 ---
-# <a name="outwordstring"></a>__outwordstring
+# <a name="__outwordstring"></a>__outwordstring
 
 **Microsoft 專屬**
 
-會產生`rep outsw`指示，會傳送`Count`開頭的字`Buffer`出所指定的 I/O 連接埠`Port`。
+產生指令, 其會傳送從*Buffer*開始的計數位組, 以及*埠*所指定的 i/o 埠。 `rep outsw`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __outwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __outwordstring(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]若要將資料傳送至連接埠。
+*移植*\
+在要將資料傳送至其中的通訊埠。
 
-*Buffer*<br/>
-[in]指定的連接埠傳送資料的指標。
+*緩衝區*\
+在要從指定的埠送出之資料的指標。
 
-*計數*<br/>
-[in]要傳送的單字數目。
+*計數*\
+在要傳送的單字數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,7 +48,7 @@ void __outwordstring(
 |---------------|------------------|
 |`__outwordstring`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -58,4 +58,4 @@ void __outwordstring(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

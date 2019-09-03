@@ -1,34 +1,34 @@
 ---
 title: __vmx_off
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_off
 helpviewer_keywords:
 - VMXOFF instruction
 - __vmx_off intrinsic
 ms.assetid: 78a32d46-9291-406c-b982-a550855aff18
-ms.openlocfilehash: 4a01752bd510f9aa8cb159c23e691c9d244145e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 226b5111c2f4f6771ac75d165c80c3e8ae2336af
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390070"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219591"
 ---
-# <a name="vmxoff"></a>__vmx_off
+# <a name="__vmx_off"></a>__vmx_off
 
 **Microsoft 專屬**
 
-停用處理器中的虛擬機器擴充功能 (VMX) 作業。
+停用處理器中的虛擬機器擴充功能 (VMX) 操作。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __vmx_off();
 ```
 
 ## <a name="remarks"></a>備註
 
-`__vmx_off` 函式相當於 `VMXOFF` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+`__vmx_off` 函式相當於 `VMXOFF` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊, 請在[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站搜尋「適用于 IA-32 intel 架構的 Intel 虛擬化技術規格」檔 (檔編號 C97063-002)。
 
 ## <a name="requirements"></a>需求
 
@@ -36,10 +36,10 @@ void __vmx_off();
 |---------------|------------------|
 |`__vmx_off`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

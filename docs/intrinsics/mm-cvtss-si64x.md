@@ -1,41 +1,41 @@
 ---
 title: _mm_cvtss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvtss_si64x
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-ms.openlocfilehash: a3b7ece325d975045046e865e6b090f3f6729558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6079ed7846a35ff16355f0341d63430f9846057f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263330"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217430"
 ---
-# <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
+# <a name="_mm_cvtss_si64x"></a>_mm_cvtss_si64x
 
 **Microsoft 專屬**
 
-會產生擴充的 x64 版本的轉換純量單一精確度浮點數為 64 位元整數 (`cvtss2si`) 指令。
+產生將純量單精確度浮點數轉換為64位整數 (`cvtss2si`) 指令的 x64 擴充版本。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __int64 _mm_cvtss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*value*<br/>
-[in]`__m128`包含浮動點值的結構。
+*value*\
+在包含`__m128`浮點值的結構。
 
 ## <a name="return-value"></a>傳回值
 
-64 位元整數，第一個浮點值轉換成整數的結果。
+64位整數, 這是將第一個浮點值轉換成整數的結果。
 
 ## <a name="requirements"></a>需求
 
@@ -43,17 +43,17 @@ __int64 _mm_cvtss_si64x(
 |---------------|------------------|
 |`_mm_cvtss_si64x`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-結構值的第一個項目會轉換成整數，並傳回。 在 MXCSR 捨入的控制位元用來判斷捨入的行為。 捨入模式的預設值是四捨五入到最接近的小數部分是否為 0.5，捨入為偶數。 因為`__m128`結構表示 XMM 暫存器，此內建函式會採用 XMM 暫存器中的值，並將它寫入至系統記憶體。
+結構值的第一個元素會轉換成整數, 並傳回。 MXCSR 中的進位控制位是用來判斷舍入行為。 預設進位模式會四捨五入為最接近的值, 如果小數部分為 0.5, 則四捨五入為偶數。 `__m128`因為結構代表 xmm 暫存器, 所以內建函式會從 xmm 暫存器取得值, 並將它寫入系統記憶體。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // _mm_cvtss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[__m128d](../cpp/m128d.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__m128d](../cpp/m128d.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

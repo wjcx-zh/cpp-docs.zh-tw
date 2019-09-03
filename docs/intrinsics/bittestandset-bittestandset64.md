@@ -1,6 +1,6 @@
 ---
 title: _bittestandset, _bittestandset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandset_cpp
 - _bittestandset64_cpp
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandset intrinsic
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
-ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d54be5688acfb1e3cfc9d79514c39f665efdd9fd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264175"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216880"
 ---
-# <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
+# <a name="_bittestandset-_bittestandset64"></a>_bittestandset, _bittestandset64
 
 **Microsoft 專屬**
 
-產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元設為 1。
+產生指示來檢查位址`b` `a`的位、傳回其目前值, 並將位設為1。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char _bittestandset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandset64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*a*<br/>
-[in、 out]要檢查的記憶體指標。
+*為*\
+[in、out]要檢查之記憶體的指標。
 
-*b*<br/>
-[in]要測試的位元位置。
+*位元組*\
+在要測試的位位置。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,10 +53,10 @@ unsigned char _bittestandset64(
 
 |內建|架構|
 |---------------|------------------|
-|`_bittestandset`|x86、 x64、 ARM|
-|`_bittestandset64`|X64|
+|`_bittestandset`|x86、ARM、x64、ARM64|
+|`_bittestandset64`|x64、ARM64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -64,7 +64,7 @@ unsigned char _bittestandset64(
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // bittestandset.cpp
 // processor: x86, ARM, x64
 // This example uses several of the _bittest family of intrinsics
@@ -151,4 +151,4 @@ Flags: 0x0
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

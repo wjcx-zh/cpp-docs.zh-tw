@@ -1,6 +1,6 @@
 ---
-title: deprecated (C/C++)
-ms.date: 11/04/2016
+title: deprecated pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.deprecated
 - deprecated_CPP
@@ -8,35 +8,33 @@ helpviewer_keywords:
 - deprecated pragma
 - pragmas, deprecated
 ms.assetid: 9c046f12-7875-499a-8d5d-12f8642fed2d
-ms.openlocfilehash: 262b23e6e4813a5e22bc3f4e7c9a18efb9988a7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e76d1c53cb900c108e2839a9aad17b330143a5d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389290"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222398"
 ---
-# <a name="deprecated-cc"></a>deprecated (C/C++)
+# <a name="deprecated-pragma"></a>deprecated pragma
 
-**已被取代**pragma 可讓您指定的函式、 類型或任何其他識別項可能不再支援未來版本，或無法再使用。
+已**淘汰**的 pragma 可讓您指出未來版本中可能不再支援的函式、類型或任何其他識別碼, 或不應再使用。
 
 > [!NOTE]
-> 如需 C + + 14`[[deprecated]]`屬性，且使用的時機的指引屬性與 Microsoft declspec 或 pragma，請參閱 < [ C++標準屬性](../cpp/attributes.md)屬性。
+> 如需 c + + 14 `[[deprecated]]`屬性的詳細資訊, 以及使用該屬性而非 Microsoft `__declspec(deprecated)`修飾詞或已被**取代**之 pragma 的指引, 請參閱[中C++的屬性](../cpp/attributes.md)。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma deprecated( identifier1 [,identifier2, ...] )
-```
+> **#pragma 已被取代 (** *identifier1* [ **,** *identifier2* ...] **)**
 
 ## <a name="remarks"></a>備註
 
-當編譯器遇到所指定的識別碼**過時**pragma，就會發出編譯器警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。
+當編譯器遇到已被**取代**的 pragma 所指定的識別碼時, 會發出編譯器警告[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)。
 
 您可以取代巨集名稱。 為巨集名稱加上引號，否則會發生巨集展開。
 
-因為**已被取代**pragma 適用於所有的比對識別項，並不會計入帳戶的簽章，它不是最適合的選項即將淘汰的多載函式的特定版本。 任何相符的函式名稱帶入範圍，就會觸發警告。
+因為已**淘汰**的 pragma 適用于所有相符的識別碼, 而且不會將簽章納入考慮, 所以不是淘汰特定版本的多載函式的最佳選項。 帶入範圍中的任何相符函數名稱都會觸發警告。
 
-我們建議使用 C + + 14`[[deprecated]]`屬性，如果可能的話，而不是**已被取代**pragma。 Microsoft 專有[__declspec （deprecated)](../cpp/deprecated-cpp.md)宣告修飾詞也是較好的選擇，在許多情況下，比**已被取代**pragma。 `[[deprecated]]`屬性和`__declspec(deprecated)`修飾詞可讓您指定為特定形式的多載函式已被取代的狀態。 診斷的警告，才會出現在特定的多載函式的參考屬性或修飾詞套用至。
+我們建議您盡可能使用 c + `[[deprecated]]` + 14 屬性, 而不是已被**取代**的 pragma。 在許多情況下, Microsoft 特有的[__declspec (已淘汰)](../cpp/deprecated-cpp.md)宣告修飾詞也是比被**取代**的 pragma 更好的選擇。 `[[deprecated]]`屬性和`__declspec(deprecated)`修飾詞可讓您針對特定形式的多載函式指定已被取代的狀態。 只有當屬性或修飾詞套用至特定多載函式的參考時, 診斷警告才會出現。
 
 ## <a name="example"></a>範例
 
@@ -77,4 +75,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -1,36 +1,36 @@
 ---
 title: __writecr3
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _writecr3
 helpviewer_keywords:
 - _writecr3 intrinsic
 ms.assetid: 959d49fa-69d5-47cf-88d2-7688367fe38f
-ms.openlocfilehash: 88467e4fb39abc9526e47a73f998d630470111a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2472a21fe42f10dbf0918480ef02f7e48109747
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389927"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219285"
 ---
-# <a name="writecr3"></a>__writecr3
+# <a name="__writecr3"></a>__writecr3
 
 **Microsoft 專屬**
 
-將值寫入`Data`CR3 註冊。
+將值`Data`寫入 CR3 暫存器。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void writecr3(
    unsigned __int64 Data
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Data*<br/>
-[in]要寫入的 CR3 暫存器的值。
+*Data*\
+在要寫入 CR3 暫存器的值。
 
 ## <a name="requirements"></a>需求
 
@@ -38,7 +38,7 @@ void writecr3(
 |---------------|------------------|
 |`__writecr3`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -48,4 +48,4 @@ void writecr3(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

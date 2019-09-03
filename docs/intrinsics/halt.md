@@ -1,6 +1,6 @@
 ---
 title: __halt
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __halt
 - __halt_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __halt intrinsic
 - HLT instruction
 ms.assetid: a074f44a-101c-45a5-8a5e-cfd223c34002
-ms.openlocfilehash: dd68c88a13035ca25f89304bcd84267a73978420
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 66f5e05e7673523966ef35ac743fc585930b511c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344443"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222158"
 ---
-# <a name="halt"></a>__halt
+# <a name="__halt"></a>__halt
 
 **Microsoft 專屬**
 
-啟用插斷、 非遮罩式插斷 （nmi） 傳送或重設發生之前，暫止微處理器。
+停止微處理器, 直到啟用的插斷、nonmaskable 插斷 (NMI) 或重設發生為止。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __halt( void );
 ```
 
@@ -33,14 +33,14 @@ void __halt( void );
 |---------------|------------------|
 |`__halt`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-`__halt`函式相當於`HLT`機器指令，且只適用於核心模式。 如需詳細資訊，搜尋文件中，「 Intel 架構軟體開發人員的手動、 磁碟區 2:指令集參考，「 在[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+函式相當`HLT`于機器指令, 而且只能在核心模式中使用。 `__halt` 如需詳細資訊, 請搜尋檔「Intel 架構軟體發展人員手冊, 第2卷:指示集參考, 位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

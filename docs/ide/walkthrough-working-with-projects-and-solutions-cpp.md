@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: ae2830d58bb992a4ff065aa0e53085a490eb90d7
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 6d9ee71e2608c2ed4935e7a5a3c54af45921e5d2
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400944"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108402"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>逐步解說：使用專案和解決方案 (C++)
 
@@ -36,7 +36,7 @@ ms.locfileid: "67400944"
 
 1. 從主功能表，選擇 [檔案]  > [新增]  > [專案]  ，以開啟 [建立新專案]  對話方塊。
 
-1. 在對話方塊頂端，將 [語言]  設定為 **C++** ，將 [平台]  設定為 **Windows**，並將 [專案類型]  設定為**主控台**。 
+1. 在對話方塊頂端，將 [語言]  設定為 **C++** ，將 [平台]  設定為 **Windows**，並將 [專案類型]  設定為**主控台**。
 
 1. 從專案類型的篩選清單中，選擇 [主控台應用程式]  ，然後選擇 [下一步]  。 在下一頁中，輸入 [遊戲]  作為專案的名稱。
 

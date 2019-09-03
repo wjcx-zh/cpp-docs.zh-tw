@@ -1,6 +1,6 @@
 ---
-title: pop_macro
-ms.date: 11/04/2016
+title: pop_macro pragma
+ms.date: 08/29/2019
 f1_keywords:
 - vc-pragma.pop_macro
 - pop_macro_CPP
@@ -8,27 +8,24 @@ helpviewer_keywords:
 - pop_macro pragma
 - pragmas, pop_macro
 ms.assetid: 3b5489d0-69ba-4c66-b572-2748af0f12bb
-ms.openlocfilehash: 0ea7d37332ce50fd1d21acba058da721a23f2097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9e097d139e1df5c9ba09ad9ca99f0cfe6bbbfb3
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180130"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218292"
 ---
-# <a name="popmacro"></a>pop_macro
-設定的值*macro_name*這個巨集的堆疊頂端值的巨集。
+# <a name="pop_macro-pragma"></a>pop_macro pragma
+
+將*宏名稱*宏的值設定為這個宏的堆疊頂端的值。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma pop_macro("
-macro_name
-")
-```
+> **#pragma pop_macro (** "*宏名稱*" **)**
 
 ## <a name="remarks"></a>備註
 
-您必須先發出[push_macro](../preprocessor/push-macro.md) for *macro_name*您可以執行之前**pop_macro**。
+您必須先發出*宏名稱*的[push_macro](../preprocessor/push-macro.md) , 才能執行**pop_macro**。
 
 ## <a name="example"></a>範例
 
@@ -66,4 +63,4 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

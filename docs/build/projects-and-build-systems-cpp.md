@@ -9,12 +9,13 @@ helpviewer_keywords:
 - builds [C++], options
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 672dea77c4165ddcd84d3253525dc8c2d8be3e7c
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.topic: landing-page
+ms.openlocfilehash: b0ca5f28aea30ccf1e66ecd354ab15aae3e2d38a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313180"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216436"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Visual Studio 中C++的 C/專案和組建系統
 
@@ -22,7 +23,7 @@ ms.locfileid: "68313180"
 
 ## <a name="c-compilation"></a>C++編譯
 
-若  要建立C++程式, 您可以從一或多個檔案編譯原始程式碼, 然後將這些檔案連結到可執行檔 (.exe)、動態載入程式庫 (.dll) 或靜態程式庫 (.lib)。 
+若要建立C++程式, 您可以從一或多個檔案編譯原始程式碼, 然後將這些檔案連結到可執行檔 (.exe)、動態載入程式庫 (.dll) 或靜態程式庫 (.lib)。 
 
 基本C++編譯牽涉到三個主要步驟:
 

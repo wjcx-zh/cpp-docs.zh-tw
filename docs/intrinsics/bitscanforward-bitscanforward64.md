@@ -1,6 +1,6 @@
 ---
 title: _BitScanForward, _BitScanForward64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-ms.openlocfilehash: 8b09aeee485611ddd20d51b4c1e36ec98c03c26e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91f43d19259419b78d1910a00a154d2d4f0adfc7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264214"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222225"
 ---
-# <a name="bitscanforward-bitscanforward64"></a>_BitScanForward, _BitScanForward64
+# <a name="_bitscanforward-_bitscanforward64"></a>_BitScanForward, _BitScanForward64
 
 **Microsoft 專屬**
 
@@ -26,7 +26,7 @@ ms.locfileid: "62264214"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char _BitScanForward(
    unsigned long * Index,
    unsigned long Mask
@@ -37,13 +37,13 @@ unsigned char _BitScanForward64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Tuple*<br/>
-[out]會使用找到的第一個設定位元 (1) 的位元位置載入。
+*指數*\
+脫銷已載入第一個設定位 (1) 的位位置。
 
-*遮罩*<br/>
-[in]要搜尋的 32 位元或 64 位元值。
+*遮罩*\
+在要搜尋的32位或64位值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -57,14 +57,14 @@ unsigned char _BitScanForward64(
 
 |內建|架構|
 |---------------|------------------|
-|`_BitScanForward`|x86、 x64、 ARM|
-|`_BitScanForward64`|ARM、 x64|
+|`_BitScanForward`|x86、ARM、x64、ARM64|
+|`_BitScanForward64`|ARM64, x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // BitScanForward.cpp
 // compile with: /EHsc
 #include <iostream>
@@ -93,15 +93,11 @@ int main()
 }
 ```
 
-## <a name="input"></a>輸入
-
-```
+```Input
 12
 ```
 
-## <a name="sample-output"></a>範例輸出
-
-```
+```Output
 Enter a positive integer as the mask:
 Mask: 12 Index: 2
 ```
@@ -110,4 +106,4 @@ Mask: 12 Index: 2
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

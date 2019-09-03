@@ -1,40 +1,41 @@
 ---
 title: __vmx_vmread
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmread
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 409835ac29d6f2e839de62291cc5b142166a465c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390044"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219428"
 ---
-# <a name="vmxvmread"></a>__vmx_vmread
+# <a name="__vmx_vmread"></a>__vmx_vmread
 
 **Microsoft 專屬**
 
-從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位，並將它放在指定的位置。
+從目前的虛擬機器控制結構 (VMCS) 讀取指定的欄位, 並將它放在指定的位置。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char __vmx_vmread(
    size_t Field,
    size_t *FieldValue
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*欄位*|[in]要讀取的 VMCS 欄位。|
-|*FieldValue*|[in]指標的位置來儲存值讀取所指定的 VMCS 欄位`Field`參數。|
+*欄位*\
+在要讀取的 VMCS 欄位。
+
+*FieldValue*\
+在位置的指標, 用來儲存從`Field`參數所指定的 VMCS 欄位讀取的值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -46,7 +47,7 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>備註
 
-`__vmx_vmread` 函式相當於 `VMREAD` 機器指令。 值`Field`參數是 Intel 文件中所述的編碼的欄位索引。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站的 url，然後參閱該文件的附錄 C.
+`__vmx_vmread` 函式相當於 `VMREAD` 機器指令。 `Field`參數的值是 Intel 檔中所述的編碼欄位索引。 如需詳細資訊, 請在[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站搜尋「適用于 IA-32 intel 架構的 Intel 虛擬化技術規格」的附錄 C。
 
 ## <a name="requirements"></a>需求
 
@@ -54,11 +55,11 @@ unsigned char __vmx_vmread(
 |---------------|------------------|
 |`__vmx_vmread`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

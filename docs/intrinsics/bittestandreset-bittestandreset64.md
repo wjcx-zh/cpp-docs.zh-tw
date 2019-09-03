@@ -1,6 +1,6 @@
 ---
 title: _bittestandreset, _bittestandreset64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _bittestandreset64_cpp
 - _bittestandreset
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - _bittestandreset intrinsic
 - _bittestandreset64 intrinsic
 ms.assetid: 8dad63bb-a051-4cd7-a793-3357537dfeaf
-ms.openlocfilehash: 53a9921b856a3bc489d1d8e1cd78a4cfa7493320
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e0c869b926b2f9f3c04fd648f84ef33b8d16fcd
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349143"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216931"
 ---
-# <a name="bittestandreset-bittestandreset64"></a>_bittestandreset, _bittestandreset64
+# <a name="_bittestandreset-_bittestandreset64"></a>_bittestandreset, _bittestandreset64
 
 **Microsoft 專屬**
 
-產生的指令會檢查位址 `b` 的位元 `a`、傳回其目前值，並將位元重設為 0。
+產生指令以檢查位址`b` `a`的位、傳回其目前值, 並將位重設為0。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char _bittestandreset(
    long *a,
    long b
@@ -37,13 +37,13 @@ unsigned char _bittestandreset64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*a*<br/>
-[in、 out]要檢查的記憶體指標。
+*為*\
+[in、out]要檢查之記憶體的指標。
 
-*b*<br/>
-[in]要測試的位元位置。
+*位元組*\
+在要測試的位位置。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,10 +53,10 @@ unsigned char _bittestandreset64(
 
 |內建|架構|
 |---------------|------------------|
-|`_bittestandreset`|x86、 x64、 ARM|
-|`_bittestandreset64`|X64|
+|`_bittestandreset`|x86、ARM、x64、ARM64|
+|`_bittestandreset64`|x64、ARM64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -64,7 +64,7 @@ unsigned char _bittestandreset64(
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // bittestandreset.cpp
 // processor: x86, IPF, x64
 #include <stdio.h>
@@ -103,4 +103,4 @@ The number was negative.
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

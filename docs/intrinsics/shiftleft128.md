@@ -1,19 +1,19 @@
 ---
 title: __shiftleft128
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __shiftleft128
 helpviewer_keywords:
 - __shiftleft128 intrinsic
 ms.assetid: 557b846a-8fb0-469d-91ac-1b1fad80dc2a
-ms.openlocfilehash: 5fcb797694c7a45dc4f2113f3d2ed4a2f578c894
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5da9ac81cedbdd24e10eb438892f88510c32ca24
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390408"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217998"
 ---
-# <a name="shiftleft128"></a>__shiftleft128
+# <a name="__shiftleft128"></a>__shiftleft128
 
 **Microsoft 專屬**
 
@@ -21,7 +21,7 @@ ms.locfileid: "62390408"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned __int64 __shiftleft128(
    unsigned __int64 LowPart,
    unsigned __int64 HighPart,
@@ -29,16 +29,16 @@ unsigned __int64 __shiftleft128(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*LowPart*<br/>
-[in]要移位的 128 位元數量低 64 個位元。
+*LowPart*\
+在要轉移之128位數量的低64位。
 
-*HighPart*<br/>
-[in]要移位的 128 位元數量高 64 個位元。
+*HighPart*\
+在要轉移之128位數量的高64位。
 
-*Shift*<br/>
-[in]要移位的位元數。
+*結*\
+在要移位的位數。
 
 ## <a name="return-value"></a>傳回值
 
@@ -50,15 +50,15 @@ unsigned __int64 __shiftleft128(
 |---------------|------------------|
 |`__shiftleft128`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-`Shift` 值一律為模數 64，使得 (舉例而言) 如果您呼叫 `__shiftleft128(1, 0, 64)`，函式將向左移低部分 `0` 個位元，並傳回 `0` 而非 `1` 的高部分，因為將會預期其他值。
+*移位*值一律為模數 64, 因此, 例如, `__shiftleft128(1, 0, 64)`如果您呼叫, 函`0`式會將剩餘的低部分`0`位向左移位, 而不`1`會傳回的高部分, 否則可能會預期。
 
 ## <a name="example"></a>範例
 
-```
+```C
 // shiftleft128.c
 // processor: IPF, x64
 #include <stdio.h>
@@ -98,5 +98,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[__shiftright128](../intrinsics/shiftright128.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__shiftright128](../intrinsics/shiftright128.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

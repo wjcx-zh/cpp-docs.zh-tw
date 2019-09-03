@@ -1,6 +1,6 @@
 ---
 title: __writefsbyte、__writefsdword、__writefsqword、__writefsword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writefsword
 - __writefsbyte
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __writefsbyte intrinsic
 - writefsword intrinsic
 ms.assetid: 23ac6e8e-bc91-4e90-a4c6-da02993637ad
-ms.openlocfilehash: 6461ef730760298e3159e4ac70dbbdf7bd827092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0cb70986fc75d14f23fb70efe89f48e10fb047e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389784"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219122"
 ---
-# <a name="writefsbyte-writefsdword-writefsqword-writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
+# <a name="__writefsbyte-__writefsdword-__writefsqword-__writefsword"></a>__writefsbyte、__writefsdword、__writefsqword、__writefsword
 
 **Microsoft 專屬**
 
-寫入記憶體相對於 FS 區段開頭的位移所指定的位置。
+將記憶體寫入相對於 FS 區段開頭之位移所指定的位置。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __writefsbyte(
    unsigned long Offset,
    unsigned char Data
@@ -50,13 +50,13 @@ void __writefsqword(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Offset*<br/>
-[in]從要寫入的 FS 開頭的位移。
+*投影*\
+在從 FS 開頭到寫入的位移。
 
-*Data*<br/>
-[in]要寫入的值。
+*Data*\
+在要寫入的值。
 
 ## <a name="requirements"></a>需求
 
@@ -67,15 +67,15 @@ void __writefsqword(
 |`__writefsdword`|x86|
 |`__writefsqword`|x86|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-這些常式都僅有內建函式。
+這些常式僅供內建函式使用。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

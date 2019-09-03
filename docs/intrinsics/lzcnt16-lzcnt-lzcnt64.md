@@ -1,6 +1,6 @@
 ---
 title: __lzcnt16，__lzcnt，__lzcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fcd801717974a230fbd19cc7802d8f6a011774f7
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263369"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221798"
 ---
-# <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16，__lzcnt，__lzcnt64
+# <a name="__lzcnt16-__lzcnt-__lzcnt64"></a>__lzcnt16，__lzcnt，__lzcnt64
 
 **Microsoft 專屬**
 
-計數有前置字元數目的前置零的 16、 32 或 64 位元整數。
+計算16、32或64位整數中前置零的數目。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned short __lzcnt16(
    unsigned short value
 );
@@ -41,36 +41,36 @@ unsigned __int64 __lzcnt64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*value*<br/>
-[in]16-、 32 或 64 位元不帶正負號的整數掃描前置零。
+*value*\
+在要掃描前置零的16、32或64位不帶正負號的整數。
 
 ## <a name="return-value"></a>傳回值
 
-前置零位元中的數字`value`參數。 如果`value`為零，則傳回值是輸入運算元 （16、 32 或 64） 的大小。 如果最高有效位元`value`為 1，傳回的值為零。
+`value`參數中前置字元為零位的數目。 如果`value`為零, 則傳回值為輸入運算元的大小 (16、32或 64)。 如果的最高有效位`value`為 1, 則傳回值為零。
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`__lzcnt16`|AMD:進階的位元操作 (ABM)<br /><br /> Intel:Haswell|
-|`__lzcnt`|AMD:進階的位元操作 (ABM)<br /><br /> Intel:Haswell|
-|`__lzcnt64`|AMD:進階位元操作 (ABM) 在 64 位元模式。<br /><br /> Intel:Haswell|
+|`__lzcnt16`|AMDAdvanced Bit 操作 (ABM)<br /><br /> 迅馳Haswell|
+|`__lzcnt`|AMDAdvanced Bit 操作 (ABM)<br /><br /> 迅馳Haswell|
+|`__lzcnt64`|AMD64位模式中的先進位操作 (ABM)。<br /><br /> 迅馳Haswell|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-每個這些內建函式會產生`lzcnt`指令。  值的大小，`lzcnt`指令會傳回其引數的大小相同。  在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`lzcnt`。
+每個內建函式都會產生`lzcnt`指令。  `lzcnt`指令傳回值的大小與其引數的大小相同。  在32位模式中, 沒有64位的一般用途暫存器, 因此不支援64位`lzcnt` 。
 
-若要判斷硬體支援`lzcnt`指令呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查位元 5 的`CPUInfo[2] (ECX)`。 此位元會經過支援指令，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`lzcnt`指令，結果會無法預測。
+若要判斷`lzcnt`指令的硬體支援, 請以`__cpuid`呼叫內部`InfoType=0x80000001`函數並檢查的`CPUInfo[2] (ECX)`位5。 如果支援指令, 此位會是 1, 否則為0。 如果您在不支援`lzcnt`指令的硬體上執行使用內建的程式碼, 結果會是無法預測的。
 
-不支援的 Intel 處理器上`lzcnt`指令的位元組編碼為執行指令， `bsr` （位元掃描相反）。 如果程式碼可攜性有問題，請考慮使用`_BitScanReverse`內建函式改用。 如需詳細資訊，請參閱 < [_bitscanreverse、_bitscanreverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。
+在不支援`lzcnt`指令的 Intel 處理器上, 指示位元組編碼會當做 (位`bsr`掃描反向) 來執行。 如果程式碼可攜性是個`_BitScanReverse`問題, 請考慮改為使用內建函式。 如需詳細資訊, 請參閱[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // Compile this test with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -107,8 +107,8 @@ __lzcnt(0xffffffff) = 0
 
 **結束 Microsoft 專屬**
 
-本文部分內容是由進階 Micro 裝置，Inc.Copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
+本內容的部分是由 Advanced 微裝置, Inc. 所組成的著作權2007。著作權所有，並保留一切權利。 已從 Advanced 微裝置, Inc. 的許可權重現
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

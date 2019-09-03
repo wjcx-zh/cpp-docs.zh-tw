@@ -1,6 +1,6 @@
 ---
-title: section
-ms.date: 11/04/2016
+title: section pragma
+ms.date: 08/29/2019
 f1_keywords:
 - section_CPP
 - vc-pragma.section
@@ -8,49 +8,47 @@ helpviewer_keywords:
 - pragmas, section
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
-ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47ae2ff2503317e937e2b3a497357afbd5522a64
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179629"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216594"
 ---
-# <a name="section"></a>section
+# <a name="section-pragma"></a>section pragma
 
 在 .obj 檔案中建立區段。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma section( "section-name" [, attributes] )
-```
+> **#pragma 區段 (** "*section-name*" [ **,** *attributes* ] **)**
 
 ## <a name="remarks"></a>備註
 
-意義*區段*並*一節*是本主題中的可互換的。
+本文中的詞彙*區段*和*區段*具有相同的意義。
 
-區段定義之後，其仍適用於編譯的其餘部分。 不過，您必須使用[__declspec （allocate)](../cpp/allocate.md)或執行任何動作將會放在區段。
+區段定義之後，其仍適用於編譯的其餘部分。 不過, 您必須使用[__declspec (allocate)](../cpp/allocate.md), 否則不會在區段中放置任何內容。
 
-*區段名稱*是必要的參數，將會是區段的名稱。 名稱不得與任何標準區段名稱相衝突。 請參閱[/section](../build/reference/section-specify-section-attributes.md)如需建立區段時，應該不會使用您的名稱。
+*區段名稱*是必要的參數, 它會成為區段的名稱。 名稱不得與任何標準區段名稱相衝突。 如需建立區段時不應該使用的名稱清單, 請參閱[/SECTION](../build/reference/section-specify-section-attributes.md) 。
 
-*屬性*是組成一或多個以逗號分隔的屬性，您想要指派給該區段的選擇性參數。 可能*屬性*是：
+*屬性*是選擇性參數, 由一或多個要指派給區段的逗點分隔屬性所組成。 可能的*屬性*為:
 
-|屬性|描述|
+|屬性|說明|
 |-|-|
 |**read**|允許對於資料進行讀取作業。|
 |**write**|允許對於資料進行寫入作業。|
 |**execute**|允許執行程式碼。|
 |**shared**|讓所有載入影像的處理序共用區段。|
-|**nopage**|將區段標記為不可分頁；適用於 Win32 裝置驅動程式。|
-|**nocache**|將區段標記為不可快取；適用於 Win32 裝置驅動程式。|
-|**discard**|將區段標記為可捨棄；適用於 Win32 裝置驅動程式。|
-|**remove**|標記為不駐留記憶體; 區段虛擬裝置驅動程式 (V*x*D) 只。|
+|**nopage**|將區段標記為無法分頁。 適用于 Win32 設備磁碟機。|
+|**nocache**|將區段標記為不可快取。 適用于 Win32 設備磁碟機。|
+|**discard**|將區段標記為可捨棄。 適用于 Win32 設備磁碟機。|
+|**remove**|將區段標記為不常駐記憶體。 僅適用于虛擬裝置磁碟機 (V*x*D)。|
 
-如果您未指定屬性，區段將會具有讀取和寫入屬性。
+如果您未指定任何屬性, 區段就會有**讀取**和**寫入**屬性。
 
 ## <a name="example"></a>範例
 
-在下列範例中，第一個指令會識別區段及其屬性。 由於未以 `j` 宣告整數 `mysec`，因此不會將該整數置於 `__declspec(allocate)`；`j` 會包含在資料區段中。 整數 `i` 屬於 `mysec`，這是其 `__declspec(allocate)` 儲存類別屬性的結果。
+在此範例中, 第一個區段 pragma 會識別區段及其屬性。 整數`j`不會放入`mysec` , 因為它不是使用`__declspec(allocate)`宣告的。 相反地`j` , 會進入 [資料] 區段。 整數 `i` 屬於 `mysec`，這是其 `__declspec(allocate)` 儲存類別屬性的結果。
 
 ```cpp
 // pragma_section.cpp
@@ -65,4 +63,4 @@ int main(){}
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

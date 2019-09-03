@@ -1,16 +1,16 @@
 ---
 title: 預設為關閉的編譯器警告
-ms.date: 05/30/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 1a95153f3cefd2bcfcae6ebb297a7c6b52944f82
-ms.sourcegitcommit: d3829ae0c3db909f96057755a80665f5ea4896ea
+ms.openlocfilehash: a8b203c94d4a5af28837627fda1b8e1631dfb0c0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69550475"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220482"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
@@ -150,15 +150,13 @@ ms.locfileid: "69550475"
 |C5042 (層級 3)|'*function*': 在區塊範圍中的函式宣告不能在 standard C++中指定為 ' inline ';移除 ' inline ' 規範<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 參數指定<sup>15.7</sup> , 編譯器會插入記憶體負載的 Spectre 緩和措施|
 
-<sup>14.1</sup>從 Visual Studio 2015 Update 1 開始可取得此警告。<br/>
-<sup>14.3</sup>從 Visual Studio 2015 Update 3 開始會提供這項警告。<br/>
-<sup>15.3</sup>從 Visual Studio 2017 15.3 版開始會提供此警告。<br/>
-<sup>15.5</sup>從 Visual Studio 2017 15.5 版開始會提供此警告。<br/>
-<sup>15.7</sup>從 Visual Studio 2017 15.7 版開始會提供此警告。<br/>
-<sup>15.8</sup>從 Visual Studio 2017 15.8 版開始會提供此警告。<br/>
-::: moniker range=">= vs-2019"
-<sup>16.0</sup>從 VISUAL STUDIO 2019 RTM 開始可取得此警告。<br/>
-::: moniker-end
+<sup>14.1</sup>從 Visual Studio 2015 Update 1 開始可取得此警告。 \
+<sup>14.3</sup>從 Visual Studio 2015 Update 3 開始可取得此警告。 \
+<sup>15.3</sup>從 Visual Studio 2017 15.3 版開始提供此警告。 \
+<sup>15.5</sup>從 Visual Studio 2017 15.5 版開始提供此警告。 \
+<sup>15.7</sup>從 Visual Studio 2017 15.7 版開始提供此警告。 \
+<sup>15.8</sup>從 Visual Studio 2017 15.8 版開始提供此警告。 \
+<sup>16.0</sup>從 VISUAL STUDIO 2019 RTM 開始可取得此警告。 \
 <sup>永久</sup>除非已設定[/permissive-](../build/reference/permissive-standards-conformance.md)編譯器選項, 否則此警告是關閉的。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>先前版本中的警告預設為關閉

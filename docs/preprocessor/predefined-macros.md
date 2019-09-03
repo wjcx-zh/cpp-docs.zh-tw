@@ -1,5 +1,5 @@
 ---
-title: 預先定義的巨集
+title: 預先定義巨集
 ms.custom: update_every_version
 ms.date: 04/05/2019
 f1_keywords:
@@ -143,24 +143,24 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: bf74bc3b5293cba018c07b6b5c56c85695db7635
-ms.sourcegitcommit: 6cb0670ca7d40e8ec55f162b8ce2847f5ae15f5c
+ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67787360"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222290"
 ---
-# <a name="predefined-macros"></a>預先定義的巨集
+# <a name="predefined-macros"></a>預先定義巨集
 
-Microsoft C /C++編譯器 (MSVC) 預先定義的特定前置處理器巨集，視語言而定 (C 或C++)，編譯目標，並選擇的編譯器選項。
+Microsoft C/C++編譯器 (MSVC) 會根據語言 (C 或C++)、編譯目標和所選擇的編譯器選項, 預先定義特定的預處理器宏。
 
-MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預先定義前置處理器巨集。 實作也支援數個多個 Microsoft 專有前置處理器巨集。 僅適用於特定的建置環境或編譯器選項定義一些巨集。 不過，若已指定為明，巨集會定義整個轉譯單位 **/D**編譯器選項引數。 定義時，巨集是由前置處理器在編譯之前展開指定的值。 預先定義的巨集不接受引數，並不能重新定義。
+MSVC 支援 ANSI/ISO C99 標準和 ISO c + + 14 和 c + + 17 標準所需的預先定義預處理器宏。 此執行也支援數個 Microsoft 專屬的預處理器宏。 某些宏只會針對特定組建環境或編譯器選項來定義。 除非另有注明, 否則宏會定義在整個轉譯單位中, 如同已指定為 **/d**編譯器選項引數一樣。 當定義時, 在編譯之前, 預處理器會將宏擴充為指定的值。 預先定義的宏不接受引數, 也無法重新定義。
 
-## <a name="standard-predefined-identifier"></a>標準預先定義的識別項
+## <a name="standard-predefined-identifier"></a>標準預先定義的識別碼
 
-編譯器支援 ISO C99 和 ISO c++11 標準所指定此預先定義的識別碼。
+編譯器支援 ISO C99 和 ISO c + + 11 所指定的這個預先定義識別碼。
 
-- **&#95;&#95;func&#95; &#95;** 函式本機封入函式不合格及未修飾名稱**靜態 const**陣列**char**。
+- **&#95; func &#95; &#95;** 封入函式的不合格和未名稱, 做為**char**的函數區域**靜態 const**陣列。
 
     ```cpp
     void example(){
@@ -168,39 +168,39 @@ MSVC 支援 ANSI/ISO C99 標準與 ISO C + + 14 和 C + + 17 標準所需的預�
     } // prints "example"
     ```
 
-## <a name="standard-predefined-macros"></a>標準的預先定義巨集
+## <a name="standard-predefined-macros"></a>標準預先定義的宏
 
-編譯器支援下列 ISO C99 和 ISO C + + 17 標準所指定的預先定義巨集。
+編譯器支援 ISO C99 和 ISO c + + 17 標準所指定的這些預先定義宏。
 
-- **&#95;&#95;cplusplus**定義為整數常值，當轉譯單位編譯為C++。 否則，未定義。
+- **&#95;cplusplus &#95;** 當轉譯單位編譯為C++時, 定義為整數常值。 否則為未定義。
 
-- **&#95;&#95;日期&#95;&#95;** 目前的原始程式檔的編譯日期。 日期是固定長度字串常值形式*Mmm dd yyyy*。 月份*Mmm*產生的 C 執行階段程式庫 (CRT) 的縮寫的月份名稱與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 日期的第一個字元*dd*是空格，此值是否小於 10。 一律定義此巨集。
+- **&#95;日期&#95; &#95;** 目前原始檔案的編譯日期。 日期是格式為*Mmm dd yyyy*的常數長度字串常值。 月份名稱*Mmm*與 C 執行時間程式庫 (CRT) [asctime](../c-runtime-library/reference/asctime-wasctime.md)函數所產生的縮寫月份名稱相同。 如果值小於 10, 則日期*dd*的第一個字元是空格。 這個宏一律會定義。
 
-- **&#95;&#95;檔案&#95;&#95;** 目前的原始程式檔的名稱。 **&#95;&#95;檔案&#95;&#95;** 展開字元字串常值。 若要確保顯示檔案的完整路徑，使用[/FC （完整路徑的來源診斷中原始程式碼檔）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 一律定義此巨集。
+- **&#95;檔案&#95; &#95;** 目前來源檔案的名稱。 檔案會展開至字元字串常值。 **&#95; &#95; &#95;** 若要確保顯示檔案的完整路徑, 請使用[/FC (診斷中的原始程式碼檔的完整路徑)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 這個宏一律會定義。
 
-- **&#95;&#95;行&#95;&#95;** 定義為整數的行號，在目前的原始程式檔中。 值 **&#95;&#95;行&#95;&#95;** 巨集可以變更利用`#line`指示詞。 一律定義此巨集。
+- **&#95;行&#95; &#95;** 定義為目前原始程式檔中的整數行號。 您可以使用`#line`指示詞來變更 **&#95; &#95;LINE&#95;** 宏的值。 這個宏一律會定義。
 
-- **&#95;&#95;STDC&#95; &#95;** 定義為 1，只有在編譯為 C 時，如果[/Za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項指定。 否則，未定義。
+- **&#95; STDC &#95; &#95;** 只有在編譯為 C 且指定[/za](../build/reference/za-ze-disable-language-extensions.md)編譯器選項時, 才會定義為1。 否則為未定義。
 
-- **&#95;&#95;STDC&#95;HOSTED&#95; &#95;** 定義為 1，如果實作是*裝載實作*，支援整個必要的標準程式庫。 否則，定義為 0。
+- **&#95;&#95;如果&#95;實&#95;** 作為裝載的*執行*, 則定義為1的 STDC 託管, 其中一個支援整個必要的標準程式庫。 否則, 定義為0。
 
-- **&#95;&#95;STDCPP&#95;執行緒&#95;&#95;** 定義為 1，如果且只有一個程式可以擁有多個執行的執行緒，且編譯為C++。 否則，未定義。
+- **&#95;&#95;只有&#95;在&#95;** 程式可以有一個以上的執行執行緒, 而且編譯為C++時, 才將定義為1的 STDCPP 執行緒。 否則為未定義。
 
-- **&#95;&#95;時間&#95;&#95;** 翻譯的前置處理過的轉譯單位的時間。 時間是字元字串常值形式*hh: mm:* ，傳回由 CRT 的時間與相同[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式。 一律定義此巨集。
+- **&#95;時間&#95; &#95;** 前置處理過的轉譯單位的轉譯時間。 時間是格式為*hh: mm: ss*的字元字串常值, 與 CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)函數所傳回的時間相同。 這個宏一律會定義。
 
-## <a name="microsoft-specific-predefined-macros"></a>Microsoft 專有的預先定義巨集
+## <a name="microsoft-specific-predefined-macros"></a>Microsoft 特有的預先定義宏
 
-MSVC 支援這些額外的預先定義巨集。
+MSVC 支援這些額外預先定義的宏。
 
-- **&#95;&#95;ATOM&#95; &#95;** 定義為 1 時[/favor:ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)編譯器選項設定，且編譯器目標是 x86 或 x64。 否則，未定義。
+- **&#95; ATOM &#95; &#95;** 當[/favor: ATOM](../build/reference/favor-optimize-for-architecture-specifics.md)編譯器選項已設定且編譯器目標為 x86 或 x64 時, 定義為1。 否則為未定義。
 
-- **&#95;&#95;AVX&#95; &#95;** 定義為 1 時[/arch: avx](../build/reference/arch-x86.md)或是[/arch:avx2](../build/reference/arch-x86.md)設定編譯器選項，編譯器目標是 x86 或 x64。 否則，未定義。
+- **&#95; AVX &#95; &#95;** 當[/arch: AVX](../build/reference/arch-x86.md)或[/arch: AVX2](../build/reference/arch-x86.md)編譯器選項已設定, 且編譯器目標為 x86 或 x64 時, 定義為1。 否則為未定義。
 
-- **&#95;&#95;AVX2&#95; &#95;** 定義為 1 時[/arch:avx2](../build/reference/arch-x86.md)編譯器選項設定，且編譯器目標是 x86 或 x64。 否則，未定義。
+- **&#95; AVX2 &#95; &#95;** 當[/arch: AVX2](../build/reference/arch-x86.md)編譯器選項已設定且編譯器目標為 x86 或 x64 時, 定義為1。 否則為未定義。
 
-- **&#95;CHAR&#95;不帶正負號**定義為 1，否則預設值**char**型別是不帶正負號。 定義此值時[/J (預設 char 類型為 unsigned)](../build/reference/j-default-char-type-is-unsigned.md)設定編譯器選項。 否則，未定義。
+- **&#95;如果&#95;** 預設**char**類型不帶正負號, 則會將 CHAR 不帶正負號定義為1。 此值是在設定[/j (預設 Char 類型不帶正負號)](../build/reference/j-default-char-type-is-unsigned.md)編譯器選項時所定義。 否則為未定義。
 
-- **&#95;&#95;CLR&#95;VER**定義為整數常值，表示版本的 Common Language Runtime (CLR) 中用來編譯應用程式。 值以表單編碼`Mmmbbbbb`，其中`M`是執行階段的主要版本`mm`是執行階段的次要版本和`bbbbb`是組建編號。 **&#95;&#95;CLR&#95;VER**如果定義[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項設定。 否則，未定義。
+- **&#95;CLR VER &#95; &#95;** 定義為整數常值, 表示用來編譯應用程式的 Common Language Runtime (CLR) 版本。 此`Mmmbbbbb`值會以形式編碼, 其中`M`是執行時間的主要版本, `mm`是執行時間的次要版本, 而`bbbbb`是組建編號。 **&#95;&#95;如果&#95;** 已設定[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項, 則會定義 CLR VER。 否則為未定義。
 
     ```cpp
     // clr_ver.cpp
@@ -211,11 +211,11 @@ MSVC 支援這些額外的預先定義巨集。
     }
     ```
 
-- **&#95;控制&#95;資料流程&#95;防護**定義為 1 時[/guard: cf （啟用控制流程防護）](../build/reference/guard-enable-control-flow-guard.md)編譯器選項設定。 否則，未定義。
+- **&#95;設定&#95; &#95;**  [/Guard: cf (啟用控制流程防護)](../build/reference/guard-enable-control-flow-guard.md)編譯器選項時, 定義為1的控制流程防護。 否則為未定義。
 
-- **&#95;&#95;計數器&#95;&#95;** 展開以 0 開始的整數常值。 每次已用於原始程式檔，或在包含原始程式檔的標頭的值就會遞增 1。 **&#95;&#95;計數器&#95;&#95;** 當您使用先行編譯標頭時，會記住其狀態。 一律定義此巨集。
+- **&#95;計數器&#95; &#95;** 展開為從0開始的整數常值。 每次在原始程式檔或原始程式檔的內含標頭中使用時, 此值會遞增1。 當您使用先行編譯標頭檔時, **&#95; COUNTER 會記住它的狀態。 &#95; &#95;** 這個宏一律會定義。
 
-  這個範例會使用`__COUNTER__`將唯一識別碼指派給相同類型的三個不同的物件。 `exampleClass`建構函式會接受整數作為參數。 在  `main`，應用程式會宣告三個物件的型別`exampleClass`，並使用`__COUNTER__`做為唯一識別項參數：
+  這個範例會`__COUNTER__`使用, 將唯一識別碼指派給相同類型的三個不同物件。 此`exampleClass`函式會採用整數做為參數。 在`main`中, 應用程式會使用`__COUNTER__`做為`exampleClass`唯一識別碼參數, 宣告類型的三個物件:
 
     ```cpp
     // macro__COUNTER__.cpp
@@ -257,7 +257,7 @@ MSVC 支援這些額外的預先定義巨集。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;cli**定義為整數常值 200406 當編譯為C++並[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項設定。 否則，未定義。 定義時，  **&#95; &#95;cplusplus&#95;cli**適用於整個轉譯單位。
+- **&#95;&#95;當&#95;** 編譯為C++且已設定[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項時, cplusplus cli 會定義為整數常值200406。 否則為未定義。 定義時,  **&#95; &#95;cplusplus&#95;cli**會在整個轉譯單位中生效。
 
     ```cpp
     // cplusplus_cli.cpp
@@ -272,27 +272,27 @@ MSVC 支援這些額外的預先定義巨集。
     }
     ```
 
-- **&#95;&#95;cplusplus&#95;winrt**定義為整數常值 201009 當編譯為C++並[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)編譯器選項設定。 否則，未定義。
+- **&#95;&#95;當&#95;** 編譯為C++且已設定[/ZW (Windows 執行階段編譯)](../build/reference/zw-windows-runtime-compilation.md)編譯器選項時, cplusplus winrt 定義為整數常值201009。 否則為未定義。
 
-- **&#95;CPPRTTI**定義為 1，否則[/GR （啟用執行階段類型資訊）](../build/reference/gr-enable-run-time-type-information.md)設定編譯器選項。 否則，未定義。
+- **&#95;CPPRTTI**如果已設定[/GR (啟用執行時間類型資訊)](../build/reference/gr-enable-run-time-type-information.md)編譯器選項, 則定義為1。 否則為未定義。
 
-- **&#95;CPPUNWIND**定義為 1，如果一或多個[/GX （啟用例外狀況處理）](../build/reference/gx-enable-exception-handling.md)， [/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)，或[/EH （例外狀況處理模型）](../build/reference/eh-exception-handling-model.md)編譯器選項設定。 否則，未定義。
+- **&#95;CPPUNWIND**如果已設定一或多個[/gx (啟用例外狀況處理)](../build/reference/gx-enable-exception-handling.md)、 [/Clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)或[/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)編譯器選項, 則定義為1。 否則為未定義。
 
-- **&#95;偵錯**定義為 1 時， [/LDd](../build/reference/md-mt-ld-use-run-time-library.md)， [/MDd](../build/reference/md-mt-ld-use-run-time-library.md)，或[/MTd](../build/reference/md-mt-ld-use-run-time-library.md)設定編譯器選項。 否則，未定義。
+- **&#95;DEBUG**設定[/LDd](../build/reference/md-mt-ld-use-run-time-library.md)、 [/MDd](../build/reference/md-mt-ld-use-run-time-library.md)或[/MTd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項時, 定義為1。 否則為未定義。
 
-- **&#95;DLL**定義為 1 時， [/MD](../build/reference/md-mt-ld-use-run-time-library.md)或是[/MDd](../build/reference/md-mt-ld-use-run-time-library.md)設定 (Multithreaded DLL) 編譯器選項。 否則，未定義。
+- 設定[/md](../build/reference/md-mt-ld-use-run-time-library.md)或[/MDd](../build/reference/md-mt-ld-use-run-time-library.md) (多執行緒 DLL) 編譯器選項時, 定義為1的 DLL。 **&#95;** 否則為未定義。
 
-- **&#95;&#95;FUNCDNAME&#95; &#95;** 定義為字串常值，其中包含[裝飾名稱](../build/reference/decorated-names.md)封入函式。 只能在函式內定義的巨集。 **&#95; &#95;FUNCDNAME&#95; &#95;** 巨集並未展開，如果您使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或是[/P](../build/reference/p-preprocess-to-a-file.md)編譯器選項。
+- **&#95; FUNCDNAME &#95; &#95;** 定義為字串常值, 其中包含封入函式的[裝飾名稱](../build/reference/decorated-names.md)。 宏只會在函式內定義。 如果 **&#95; &#95;您&#95;** 使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)編譯器選項, 則不會展開 FUNCDNAME 宏。
 
-   這個範例會使用`__FUNCDNAME__`， `__FUNCSIG__`，和`__FUNCTION__`巨集來顯示函式的資訊。
+   這個範例會使用`__FUNCDNAME__`、 `__FUNCSIG__`和`__FUNCTION__`宏來顯示函式資訊。
 
    [!code-cpp[NVC_Predefined_Macros_Examples#1](../preprocessor/codesnippet/CPP/predefined-macros_1.cpp)]
 
-- **&#95;&#95;FUNCSIG&#95; &#95;** 定義為字串常值，其中包含封入函式的簽章。 只能在函式內定義的巨集。 **&#95; &#95;FUNCSIG&#95; &#95;** 巨集並未展開，如果您使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或是[/P](../build/reference/p-preprocess-to-a-file.md)編譯器選項。 當針對 64 位元目標編譯時，呼叫慣例是`__cdecl`預設。 如需使用方式的範例，請參閱`__FUNCDNAME__`巨集。
+- **&#95; FUNCSIG &#95; &#95;** 定義為字串常值, 其中包含封入函式的簽章。 宏只會在函式內定義。 如果 **&#95; &#95;您&#95;** 使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)編譯器選項, 則不會展開 FUNCSIG 宏。 針對64位目標進行編譯時, 預設的呼叫慣例為`__cdecl` 。 如需用法的範例, 請參閱`__FUNCDNAME__`宏。
 
-- **&#95;&#95;函式&#95;&#95;** 定義為字串常值，其中包含封入函式的未裝飾的名稱。 只能在函式內定義的巨集。 **&#95;&#95;函式&#95;&#95;** 巨集並未展開，如果您使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或是[/P](../build/reference/p-preprocess-to-a-file.md)編譯器選項。 如需使用方式的範例，請參閱`__FUNCDNAME__`巨集。
+- 函式 **&#95; &#95; &#95;** 定義為字串常值, 其中包含封入函式的未裝飾名稱稱。 宏只會在函式內定義。 如果 **&#95; &#95;您&#95;** 使用[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)或[/p](../build/reference/p-preprocess-to-a-file.md)編譯器選項, 則不會展開函數宏。 如需用法的範例, 請參閱`__FUNCDNAME__`宏。
 
-- **&#95;整數&#95;MAX&#95;位元**為 64 的整數常值的定義、 非向量的整數類資料類型的大小上限 （以位元為單位）。 一律定義此巨集。
+- **整數&#95;最&#95;大位&#95;** 定義為整數常值 64, 非向量整數類型的大小上限 (以位為單位)。 這個宏一律會定義。
 
    ```cpp
    // integral_max_bits.cpp
@@ -302,71 +302,71 @@ MSVC 支援這些額外的預先定義巨集。
    }
    ```
 
-- **&#95;&#95;INTELLISENSE&#95; &#95;** 定義為 1 時的 IntelliSense 編譯器傳遞 Visual Studio IDE 中。 否則，未定義。 您可以使用這個巨集來保護程式碼 IntelliSense 編譯器並不了解，或使用它來組建和 IntelliSense 編譯器之間切換。 如需詳細資訊，請參閱 < [IntelliSense 速度很慢的疑難排解秘訣](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)。
+- **&#95; INTELLISENSE &#95; &#95;** 在 Visual Studio IDE 中的 IntelliSense 編譯器傳遞期間定義為1。 否則為未定義。 您可以使用這個宏來保護 IntelliSense 編譯器不了解的程式碼, 或使用它來切換組建和 IntelliSense 編譯器。 如需詳細資訊, 請參閱[IntelliSense 緩慢的疑難排解秘訣](https://devblogs.microsoft.com/cppblog/troubleshooting-tips-for-intellisense-slowness/)。
 
-- **&#95;ISO&#95;VOLATILE**定義為 1，否則[/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;** 設定了[/volatile: ISO](../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項, ISO VOLATILE 會定義為1。 否則為未定義。
 
-- **&#95;核心&#95;模式**定義為 1，否則[/kernel （建立核心模式二進位檔）](../build/reference/kernel-create-kernel-mode-binary.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;** 設定了[/Kernel (建立核心模式二進位)](../build/reference/kernel-create-kernel-mode-binary.md)編譯器選項, 則核心模式會定義為1。 否則為未定義。
 
-- **&#95;M&#95;AMD64**定義為常值的整數值的 100 編譯該目標 x64 處理器。 否則，未定義。
+- **&#95;M&#95;AMD64**針對以 x64 處理器為目標的編譯, 定義為整數常值100。 否則為未定義。
 
-- **&#95;M&#95;ARM**定義為 ARM 處理器為目標的編譯次數的整數常值 7。 否則，未定義。
+- **&#95;M&#95;ARM**定義為以 ARM 處理器為目標之編譯的整數常值7。 否則為未定義。
 
-- **&#95;M&#95;ARM&#95;ARMV7VE**定義為 1 時[/arch:armv7ve](../build/reference/arch-arm.md)編譯器選項設定為 ARM 處理器為目標的編譯。 否則，未定義。
+- **&#95;當&#95;針對&#95;** 以 ARM 處理器為目標的編譯設定[/arch: ARMV7VE](../build/reference/arch-arm.md)編譯器選項時, 已將 M ARM ARMV7VE 定義為1。 否則為未定義。
 
-- **&#95;M&#95;ARM&#95;FP**定義為整數常值，指示何種[/arch](../build/reference/arch-arm.md)編譯器選項已被設為 ARM 處理器目標。 否則，未定義。
+- **&#95;M&#95;ARM&#95;FP**定義為整數常值, 表示已針對 ARM 處理器目標設定的[/arch](../build/reference/arch-arm.md)編譯器選項。 否則為未定義。
 
-  - 值，以在範圍內 30-39，如果沒有`/arch`ARM 選項已指定，表示 ARM 的預設架構已設定 (`VFPv3`)。
+  - 如果未`/arch`指定 arm 選項, 則為範圍30-39 中的值, 表示已設定 arm 的預設架構 (`VFPv3`)。
 
-  - 值在範圍 40-49 如果`/arch:VFPv4`設定。
+  - 如果`/arch:VFPv4`已設定, 則為範圍40-49 中的值。
 
-  - 如需詳細資訊，請參閱 < [/arch (ARM)](../build/reference/arch-arm.md)。
+  - 如需詳細資訊, 請參閱[/arch (ARM)](../build/reference/arch-arm.md)。
 
-- **&#95;M&#95;ARM64**定義為 1 以 64 位元 ARM 處理器為目標的編譯。 否則，未定義。
+- **&#95;M&#95;ARM64**定義為 1, 用於以64位 ARM 處理器為目標的編譯。 否則為未定義。
 
-- **&#95;M&#95;CEE**定義為 001 如果任何[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;** 設定了任何[/Clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項, 則會將 M 產生 cee 定義為001。 否則為未定義。
 
-- **&#95;M&#95;CEE&#95;PURE**開始，Visual Studio 2015 中的已被取代。 定義為 001 if [/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)設定編譯器選項。 否則，未定義。
+- **M&#95;產生 CEE&#95;純粹&#95;** 從 Visual Studio 2015 開始淘汰。 如果已設定[/clr: pure](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項, 則定義為001。 否則為未定義。
 
-- **&#95;M&#95;CEE&#95;安全**開始，Visual Studio 2015 中的已被取代。 定義為 001 if [/clr: safe](../build/reference/clr-common-language-runtime-compilation.md)設定編譯器選項。 否則，未定義。
+- **M&#95;產生 CEE&#95;SAFE &#95;** 從 Visual Studio 2015 開始淘汰。 如果已設定[/clr: safe](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項, 則定義為001。 否則為未定義。
 
-- **&#95;M&#95;FP&#95;EXCEPT**定義為 1，否則[/fp： 除了](../build/reference/fp-specify-floating-point-behavior.md)或是[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)設定編譯器選項。 否則，未定義。
+- **&#95;如果&#95;已&#95;** 設定[/fp: EXCEPT](../build/reference/fp-specify-floating-point-behavior.md)或[/Fp: strict](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項, 則除了定義為1以外, M FP 除外。 否則為未定義。
 
-- **&#95;M&#95;FP&#95;快速**定義為 1，否則[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;已&#95;** 設定[/fp: fast](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項, 則會將 M FP FAST 定義為1。 否則為未定義。
 
-- **&#95;M&#95;FP&#95;PRECISE**定義為 1，否則[/fp： 精確](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;已&#95;** 設定[/fp: 精確](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項, 則會將 M FP 精確定義為1。 否則為未定義。
 
-- **&#95;M&#95;FP&#95;STRICT**定義為 1，否則[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;已&#95;** 設定[/fp: strict](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項, 則會將 M FP STRICT 定義為1。 否則為未定義。
 
-- **&#95;M&#95;IX86**定義為整數常值的值 600 編譯該目標 x86 處理器。 X64 或 ARM 編譯目標未定義此巨集。
+- **&#95;M&#95;IX86**定義為以 x86 處理器為目標之編譯的整數常值600。 未針對 x64 或 ARM 編譯目標定義此宏。
 
-- **&#95;M&#95;IX86&#95;FP**定義為整數常值，指出[/arch](../build/reference/arch-arm.md)編譯器選項集，或預設值。 這個巨集一律已定義時的編譯目標為 x86 處理器。 否則，未定義。 定義時，這個值會是：
+- **&#95;M&#95;IX86&#95;FP**定義為整數常值, 表示已設定的[/arch](../build/reference/arch-arm.md)編譯器選項, 或預設值。 當編譯目標是 x86 處理器時, 一律會定義此宏。 否則為未定義。 定義時, 其值為:
 
-  - 0`/arch:IA32`編譯器選項已設定。
+  - 如果已設定`/arch:IA32`編譯器選項, 則為0。
 
-  - 1，否則`/arch:SSE`編譯器選項已設定。
+  - 如果已設定`/arch:SSE`編譯器選項, 則為1。
 
-  - 2 if `/arch:SSE2`， `/arch:AVX`，或`/arch:AVX2`編譯器選項已設定。 這個值是預設值，如果`/arch`未指定編譯器選項。 當`/arch:AVX`未指定，巨集會 **&#95; &#95;AVX&#95; &#95;** 也會定義。 當`/arch:AVX2`指定，則兩者 **&#95; &#95;AVX&#95; &#95;** 並 **&#95; &#95;AVX2&#95; &#95;** 也會定義。
+  - 如果`/arch:SSE2`已設定、 `/arch:AVX`或`/arch:AVX2`編譯器選項, 則為2。 如果未`/arch`指定編譯器選項, 則此值為預設值。 當`/arch:AVX`指定時, 也會定義宏 **&#95; &#95;AVX&#95;** 。 當`/arch:AVX2`指定時, **&#95; &#95; &#95;** 也會定義 AVX 和 **&#95; &#95;AVX2&#95;** 。
 
   - 如需詳細資訊，請參閱 [/arch (x86)](../build/reference/arch-x86.md)。
 
-- **&#95;M&#95;X64**定義為常值的整數值的 100 編譯該目標 x64 處理器。 否則，未定義。
+- **&#95;M&#95;X64**針對以 x64 處理器為目標的編譯, 定義為整數常值100。 否則為未定義。
 
-- **&#95;受控**定義為 1 時， [/clr](../build/reference/clr-common-language-runtime-compilation.md)設定編譯器選項。 否則，未定義。
+- **&#95;受控**設定[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯器選項時, 定義為1。 否則為未定義。
 
-- **&#95;MSC&#95;建置**定義為整數常值，其中包含編譯器的版本號碼的修訂編號項目。 修訂編號是句號分隔版本號碼的第四個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 15.00.20706.01，  **&#95;MSC&#95;建置**巨集判斷值為 1。 一律定義此巨集。
+- **&#95;MSC&#95;組建**定義為整數常值, 其中包含編譯器版本號碼的修訂編號元素。 修訂編號是句號分隔版本號碼的第四個元素。 例如, 如果 Microsoft C/C++編譯器的版本號碼是 15.00.20706.01, 則 **&#95;services.msc&#95;組建**宏會評估為1。 這個宏一律會定義。
 
-- **&#95;MSC&#95;延伸模組**定義為 1，否則在預設[/Ze （啟用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)編譯器選項設定。 否則，未定義。
+- **&#95;如果&#95;** 已設定預設的[/Ze (啟用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)編譯器選項, 則定義為1的 MSC 延伸模組。 否則為未定義。
 
-- **&#95;MSC&#95;完整&#95;VER**定義為整數常值，可以編碼主要，次要和組建的編譯器版本號碼的數字項目。 主要號碼是句號分隔版本號碼的第一個元素、 次要版本號碼是第二個項目，和組建編號是第三個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 15.00.20706.01，  **&#95;MSC&#95;完整&#95;VER**巨集判斷值為 150020706。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
+- **MSC&#95;完整&#95;版&#95;** 定義為整數常值, 用來編碼編譯器版本號碼的主要、次要和組建編號元素。 主要數位是句號分隔版本號碼的第一個元素, 次要編號是第二個元素, 而組建編號是第三個元素。 例如, 如果 MicrosoftC++ C/編譯器的版本號碼是 15.00.20706.01, 則 **&#95;services.msc&#95;FULL&#95;VER**宏會評估為150020706。 在`cl /?`命令列中輸入, 以查看編譯器的版本號碼。 這個宏一律會定義。
 
-- **&#95;MSC&#95;VER**定義為編譯器版本號碼的主要和次要編號項目會將編碼的整數常值。 主要號碼是句號分隔版本號碼的第一個項目和次要版本號碼是第二個項目。 例如，如果版本號碼的 Microsoft C /C++編譯器是 17.00.51106.1，  **&#95;MSC&#95;VER**巨集判斷值為 1700年。 輸入`cl /?`在命令列，以檢視編譯器的版本號碼。 一律定義此巨集。
+- **&#95;SERVICES.MSC&#95;** 版本定義為整數常值, 用來編碼編譯器版本號碼的主要和次要數位元素。 主要數位是句號分隔版本號碼的第一個元素, 次要數位則是第二個元素。 例如, 如果 Microsoft C/C++編譯器的版本號碼是 17.00.51106.1, 則 **&#95;services.msc&#95;VER**宏會評估為1700。 在`cl /?`命令列中輸入, 以查看編譯器的版本號碼。 這個宏一律會定義。
 
    |Visual Studio 版本|**&#95;MSC&#95;VER**|
    |-|-|
    |Visual Studio 6.0|1200|
-   |Visual Studio.NET 2002 (7.0)|1300|
-   |Visual Studio.NET 2003 (7.1)|1310|
+   |Visual Studio .NET 2002 (7.0)|1300|
+   |Visual Studio .NET 2003 (7.1)|1310|
    |Visual Studio 2005 (8.0)|1400|
    |Visual Studio 2008 (9.0)|1500|
    |Visual Studio 2010 (10.0)|1600|
@@ -379,13 +379,13 @@ MSVC 支援這些額外的預先定義巨集。
    |Visual Studio 2017 15.6 版|1913|
    |Visual Studio 2017 15.7 版|1914|
    |Visual Studio 2017 15.8 版|1915|
-   |Visual Studio 2017 版本 15.9|1916|
+   |Visual Studio 2017 15.9 版|1916|
    |Visual Studio 2019 RTW (16.0)|1920|
    |Visual Studio 2019 16.1 版|1921|
-   |Visual Studio 2019 版本 16.2|1922|
+   |Visual Studio 2019 16.2 版|1922|
    |Visual Studio 2019 16.3 版|1923|
 
-   若要測試為編譯器版本或更新指定版本的 Visual Studio 或之後，使用 **>=** 運算子。 使用條件指示詞來比較 **&#95;MSC&#95;VER**針對該已知的版本。 如果您有數個互斥的版本，來比較，訂購的版本號碼的遞減順序比較。 比方說，這段程式碼會檢查發行在 Visual Studio 2017 和更新版本的編譯器。 接下來，它會檢查發行在或之後 Visual Studio 2015 的編譯器。 然後它會檢查適用於 Visual Studio 2015 之前發行的所有編譯器：
+   若要測試為編譯器版本或更新指定版本的 Visual Studio 或之後，使用 **>=** 運算子。 您可以在條件指示詞中使用它, 針對該已知版本比較 **&#95;services.msc&#95;VER** 。 如果您有多個相互獨立的版本要進行比較, 請依照版本號碼的遞減順序來排序您的比較。 例如, 此程式碼會檢查 Visual Studio 2017 和更新版本中所發行的編譯器。 接下來, 它會檢查 Visual Studio 2015 之後或之後發行的編譯器。 然後, 它會檢查 Visual Studio 2015 之前發行的所有編譯器:
 
    ```cpp
    #if _MSC_VER >= 1910
@@ -397,17 +397,17 @@ MSVC 支援這些額外的預先定義巨集。
    #endif
    ```
 
-   如需詳細資訊，請參閱 < [VisualC++編譯器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)microsoftC++小組部落格。
+   如需詳細資訊, 請參閱 Microsoft C++小組 Blog 中的[Visual C++編譯器版本](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/)。
 
-- **&#95;MSVC&#95;LANG**定義為整數常值，指定C++設為目標的編譯器語言標準。 它只有在編譯為程式碼設定C++。 巨集是常值的整數值 201402 L，根據預設，或當[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項指定。 如果巨集設為 201703 L [/std: c + + 17](../build/reference/std-specify-language-standard-version.md)指定編譯器選項。 它設定為更高版本，未指定值時[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)指定選項。 否則，巨集未定義。 **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
+- **&#95;MSVC&#95;LANG**定義為整數常值, 指定編譯器C++的目的語言標準。 它只會在編譯為C++的程式碼中設定。 宏是預設201402L 的整數常值, 或當指定了[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項時。 如果指定了[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)編譯器選項, 宏會設定為201703L。 當指定[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)的選項時, 它會設定為較高、未指定的值。 否則, 宏會是未定義的。 **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
 
-- **&#95;&#95;MSVC&#95;執行階段&#95;會檢查**定義為 1 時的[/RTC](../build/reference/rtc-run-time-error-checks.md)編譯器選項設定。 否則，未定義。
+- **&#95;&#95;當&#95;設定&#95;** 了其中一個[/rtc](../build/reference/rtc-run-time-error-checks.md)編譯器選項時, 會將 MSVC 執行時間檢查定義為1。 否則為未定義。
 
-- **&#95;MT**定義為 1 時， [/MD 或 /MDd](../build/reference/md-mt-ld-use-run-time-library.md) (Multithreaded DLL) 或[/MT 或 /MTd](../build/reference/md-mt-ld-use-run-time-library.md)指定 （多執行緒）。 否則，未定義。
+- **&#95;MT**指定[/md 或/MDd](../build/reference/md-mt-ld-use-run-time-library.md) (多執行緒 DLL) 或[/mt 或/MTd](../build/reference/md-mt-ld-use-run-time-library.md) (多執行緒) 時, 定義為1。 否則為未定義。
 
-- **&#95;原生&#95;WCHAR&#95;T&#95;定義**定義為 1 時[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項設定。 否則，未定義。
+- **&#95;當&#95;設定&#95; &#95;**  [/Zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項時, NATIVE WCHAR T 定義為1。 否則為未定義。
 
-- **&#95;OPENMP**如果定義為整數常值的 200203 [/openmp （啟用 OpenMP 2.0 支援）](../build/reference/openmp-enable-openmp-2-0-support.md)設定編譯器選項。 這個值表示由 MSVC 實作的 OpenMP 規格的日期。 否則，未定義。
+- **&#95;OPENMP**如果已設定[/openmp (啟用 openmp 2.0 支援)](../build/reference/openmp-enable-openmp-2-0-support.md)編譯器選項, 則定義為整數常值200203。 此值代表 MSVC 所實作為 OpenMP 規格的日期。 否則為未定義。
 
    ```cpp
    // _OPENMP_dir.cpp
@@ -418,28 +418,28 @@ MSVC 支援這些額外的預先定義巨集。
    }
    ```
 
-- **&#95;PREFAST&#95;** 定義為 1 時， [/analyze](../build/reference/analyze-code-analysis.md)編譯器選項設定。 否則，未定義。
+- **&#95;PREFAST&#95;** 設定[/analyze](../build/reference/analyze-code-analysis.md)編譯器選項時, 定義為1。 否則為未定義。
 
-- **&#95;&#95;時間戳記&#95;&#95;** 定義為包含的日期和目前的原始程式檔，由 CRT 的縮寫、 固定長度形式的上次修改時間字串常值[asctime](../c-runtime-library/reference/asctime-wasctime.md)函式，例如`Fri 19 Aug 13:32:58 2016`。 一律定義此巨集。
+- **&#95; &#95;時間&#95;戳**定義為字串常值, 其中包含上次修改目前原始程式檔的日期和時間, 其格式為 CRT [asctime](../c-runtime-library/reference/asctime-wasctime.md)函數所傳回的縮寫、常數長度表單, 例如`Fri 19 Aug 13:32:58 2016`。 這個宏一律會定義。
 
-- **&#95;VC&#95;/NODEFAULTLIB**定義為 1 時， [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)編譯器選項設定。 否則，未定義。
+- **&#95;設定&#95;** 了[/zl (省略預設程式庫名稱)](../build/reference/zl-omit-default-library-name.md)編譯器選項時, VC NODEFAULTLIB 定義為1。 否則為未定義。
 
-- **&#95;WCHAR&#95;T&#95;定義**定義為 1 時，預設值[/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項設定。 **&#95;WCHAR&#95;T&#95;定義**巨集已定義，但是沒有任何值，如果`/Zc:wchar_t-`編譯器選項設定，以及**wchar_t**中包含的系統標頭檔中定義您專案。 否則，未定義。
+- **&#95;設定&#95;預設&#95;**  [/zc: wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)編譯器選項時, WCHAR T 定義為1。 **&#95;WCHAR&#95;T&#95;定義**巨集已定義，但是沒有任何值，如果`/Zc:wchar_t-`編譯器選項設定，以及**wchar_t**中包含的系統標頭檔中定義您專案。 否則為未定義。
 
-- **&#95;WIN32**定義為 1 時的編譯目標為 32 位元 ARM，64 位元 ARM x86 或 x64。 否則，未定義。
+- **&#95;WIN32**當編譯目標為32位 ARM、64位 ARM、x86 或 x64 時, 定義為1。 否則為未定義。
 
-- **&#95;WIN64**定義為 1，當編譯目標為 64 位元 ARM 或 x64。 否則，未定義。
+- **&#95;WIN64**當編譯目標為64位 ARM 或 x64 時, 定義為1。 否則為未定義。
 
-- **&#95;WINRT&#95;DLL**定義為 1 時，編譯為C++，同時兩者皆[/ZW （Windows 執行階段編譯）](../build/reference/zw-windows-runtime-compilation.md)並[/LD 或 /LDd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項設定。 否則，未定義。
+- **&#95;&#95;** 在編譯C++為時, WINRT DLL 定義為 1, 同時設定[/ZW (Windows 執行階段編譯)](../build/reference/zw-windows-runtime-compilation.md)和[/ld 或/LDd](../build/reference/md-mt-ld-use-run-time-library.md)編譯器選項。 否則為未定義。
 
-識別 ATL 或 MFC 程式庫版本沒有前置處理器巨集是由編譯器預先定義的。 ATL 和 MFC 程式庫標頭會在內部定義這些版本的巨集。 它們是在之前所需的標頭包含前置處理器指示詞中未定義。
+識別 ATL 或 MFC 程式庫版本的預處理器宏不是由編譯器預先定義的。 ATL 和 MFC 程式庫標頭會在內部定義這些版本宏。 在包含必要標頭之前所做的預處理器指示詞中, 它們是未定義的。
 
-- **&#95;ATL&#95;VER**中定義\<atldef.h > 編碼 ATL 版本號碼的整數常值。
+- **&#95;在&#95;**  atldef 中\<定義的 ATL VER, > 為編碼 ATL 版本號碼的整數常值。
 
-- **&#95;MFC&#95;VER**中定義\<afxver_.h > 編碼 MFC 版本號碼的整數常值。
+- **&#95;在&#95;**  afxver_ 中\<定義的 mfc VER, 會以編碼 MFC 版本號碼的整數常值 >。
 
 ## <a name="see-also"></a>另請參閱
 
 [巨集 (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
-[前置處理器運算子](../preprocessor/preprocessor-operators.md)<br/>
-[前置處理器指示詞](../preprocessor/preprocessor-directives.md)
+[預處理器運算子](../preprocessor/preprocessor-operators.md)<br/>
+[預處理器指示詞](../preprocessor/preprocessor-directives.md)

@@ -1,6 +1,6 @@
 ---
 title: __readmsr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readmsr
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4398b9d42369e3a914dbec1ed2d14cafecf58483
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262771"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222334"
 ---
-# <a name="readmsr"></a>__readmsr
+# <a name="__readmsr"></a>__readmsr
 
 **Microsoft 專屬**
 
-會產生`rdmsr`的指示，它會讀取所指定的模型特定暫存`register`並傳回其值。
+產生指令, 其會讀取所`register`指定的模型特定暫存器, 並傳回其值。 `rdmsr`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __int64 __readmsr(
    int register
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*register*<br/>
-[in]讀取模型特定暫存器。
+*參加*\
+在要讀取的模型特定暫存器。
 
 ## <a name="return-value"></a>傳回值
 
-指定的暫存器中的值。
+指定之暫存器中的值。
 
 ## <a name="requirements"></a>需求
 
@@ -44,16 +44,16 @@ __int64 __readmsr(
 |---------------|------------------|
 |`__readmsr`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此函式只適用於核心模式，且此常式僅可作為內建。
+此函式僅適用于核心模式, 而常式僅以內建函式的形式提供。
 
-如需詳細資訊，請參閱 AMD 文件。
+如需詳細資訊, 請參閱 AMD 檔。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

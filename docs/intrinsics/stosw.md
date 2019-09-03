@@ -1,6 +1,6 @@
 ---
 title: __stosw
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __stosw
 helpviewer_keywords:
@@ -8,39 +8,39 @@ helpviewer_keywords:
 - __stosw intrinsic
 - rep stosw instruction
 ms.assetid: 7620fd1d-dba5-40e3-8e07-01aa68895133
-ms.openlocfilehash: c203973a79c2c3b1094ad8a5351db0999a56bf19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5fd29bbf1aebba115670fc1bc35e0d8cbe29c7ad
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390291"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219922"
 ---
-# <a name="stosw"></a>__stosw
+# <a name="__stosw"></a>__stosw
 
 **Microsoft 專屬**
 
-產生的存放區的字串指示 (`rep stosw`)。
+產生存放區字串指令 (`rep stosw`)。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __stosw(
-   unsigned short* Dest,
+   unsigned short* Destination,
    unsigned short Data,
    size_t Count
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
-[out]作業的目的地。
+*位置*\
+脫銷作業的目的地。
 
-*Data*<br/>
-[in]要儲存的資料。
+*Data*\
+在要儲存的資料。
 
-*計數*<br/>
-[in]要寫入的文字區塊的長度。
+*計數*\
+在要寫入的單字區塊長度。
 
 ## <a name="requirements"></a>需求
 
@@ -48,17 +48,17 @@ void __stosw(
 |---------------|------------------|
 |`__stosw`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-結果是，word`Data`寫入至區塊`Count`特定的文字`Dest`字串。
+結果就是將文字*資料*寫入至*目的*字串中的*Count*個單字區塊。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```C
 // stosw.c
 // processor: x86, x64
 #include <stdio.h>
@@ -84,4 +84,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

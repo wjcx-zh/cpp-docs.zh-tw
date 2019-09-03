@@ -2,12 +2,13 @@
 title: 桌面應用程式 ( C++Visual)
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 355102d9d58a8d93d7fb6935528f8fb8c4b534b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.topic: landing-page
+ms.openlocfilehash: 1d0e725cce42785357232312d21ce37e18d9c73d
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514763"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217009"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式 ( C++Visual)
 
@@ -35,7 +36,7 @@ ms.locfileid: "69514763"
 
 ## <a name="in-this-section"></a>本節內容
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[以 C++ 撰寫的 Windows 傳統型應用程式](console-applications-in-visual-cpp.md)|包含主控台應用程式的相關資訊。 Win32 (或 Win64) 主控台應用程式沒有自己的視窗和訊息迴圈。 這會在主控台視窗中執行，而且輸入和輸出都是透過命令列來處理。|
 |[逐步解說：建立 Windows 傳統型應用程式 (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|建立簡單的 Windows 桌面應用程式。|
@@ -48,7 +49,7 @@ ms.locfileid: "69514763"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[Windows 程式開發](/windows/win32/index)|包含 Windows 應用程式開發介面和 COM 的相關資訊 (部分 Windows 應用程式開發介面和協力廠商 DLL 會實作為 COM 物件)。|
 |[Hilo開發C++ Windows 7 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|說明如何建立豐富型用戶端 Windows 傳統型應用程式，這個應用程式會使用 Windows 動畫和 Direct2D 建立浮動切換式 (Carousel-based) 使用者介面。  本教學課程在 Windows 7 之後尚未更新, 但仍然提供 Win32 程式設計的完整介紹。|

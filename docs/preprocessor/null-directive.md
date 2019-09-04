@@ -1,28 +1,27 @@
 ---
 title: Null 指示詞
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor directives, Null
 - null directive
 - preprocessor directives
 - preprocessor, directives
 ms.assetid: df59990f-b420-43f3-b415-5c25493abeee
-ms.openlocfilehash: ddb8239e6c168a3c20aeb252125e9dde60c7c4bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57aa48577bc08737bdf0fbd9e9a6a387ceeeb97e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326452"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220663"
 ---
 # <a name="null-directive"></a>Null 指示詞
-Null 前置處理器指示詞是一個數字符號 (**#**) 單行。 沒有任何作用。
+
+Null 預處理器指示詞在一行單獨是單一 **#** 數位記號 ()。 沒有任何作用。
 
 ## <a name="syntax"></a>語法
 
-```
-#
-```
+> **#**
 
 ## <a name="see-also"></a>另請參閱
 
-[前置處理器指示詞](../preprocessor/preprocessor-directives.md)
+[預處理器指示詞](../preprocessor/preprocessor-directives.md)

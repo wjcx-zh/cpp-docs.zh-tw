@@ -1,46 +1,44 @@
 ---
-title: execution_character_set
-ms.date: 10/18/2018
+title: execution_character_set pragma
+ms.date: 08/29/2019
 f1_keywords:
 - execution_character_set
 - vc-pragma.execution_character_set
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c2c812f27634f397af91eace7a41c0e71c1eb99
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389576"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70218634"
 ---
-# <a name="executioncharacterset"></a>execution_character_set
+# <a name="execution_character_set-pragma"></a>execution_character_set pragma
 
-指定執行字元集，用於字串和字元常值。 常值標記為 u8 前置詞，就不需要此指示詞。
+指定用於字串和字元常值的執行字元集。 標記`u8`為前置詞的常值不需要這個指示詞。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma execution_character_set("target")
-```
+> **#pragma execution_character_set (** "*target*" **)**
 
 ### <a name="parameters"></a>參數
 
-*目標*<br/>
-指定目標執行字元集。 目前僅支援設定的目標執行為"utf-8"。
+*設定*\
+指定目標執行字元集。 目前唯一支援的目標執行集為 "utf-8"。
 
 ## <a name="remarks"></a>備註
 
-此編譯器指示詞已過時開始在 Visual Studio 2015 Update 2。 我們建議您改用`/execution-charset:utf-8`或是`/utf-8`編譯器選項，以及使用`u8`上窄字元和字串常值包含擴充的字元的前置詞。 如需詳細資訊`u8`前置詞，請參閱 < [String and Character Literals](../cpp/string-and-character-literals-cpp.md)。 如需編譯器選項的詳細資訊，請參閱[（設定執行字元集） 的 /execution-charset](../build/reference/execution-charset-set-execution-character-set.md)並[/utf-8 （將來源和可執行檔字元集為 utf-8）](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)。
+從 Visual Studio 2015 Update 2 開始, 這個編譯器指示詞已經過時。 我們建議您`/execution-charset:utf-8`將或`/utf-8`編譯器`u8`選項搭配使用, 並在包含擴充字元的窄字元和字串常值上使用前置詞。 如需`u8`前置詞的詳細資訊, 請參閱[字串和字元常](../cpp/string-and-character-literals-cpp.md)值。 如需編譯器選項的詳細資訊, 請參閱[/execution-charset (設定執行字元集)](../build/reference/execution-charset-set-execution-character-set.md)和[/Utf-8 (將來源和可執行檔字元集設定為 utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)。
 
-`#pragma execution_character_set("utf-8")`指示詞會指示編譯器在可執行檔中將窄字元和窄字串常值程式碼中編碼為 utf-8。 此輸出編碼方式無關的來源檔案使用的編碼方式。
+`#pragma execution_character_set("utf-8")`指示詞會告知編譯器將原始程式碼中的窄字元和窄字串常值編碼為可執行檔中的 utf-8。 此輸出編碼與所使用的來源檔案編碼無關。
 
-根據預設，編譯器會使用目前的字碼頁為執行字元集編碼窄字元和窄字串。 這表示目前的字碼頁的範圍以外的 Unicode 或 DBCS 字元常值會轉換成預設的取代字元在輸出中。 Unicode 和 DBCS 字元會截斷成其低序位位元組。 這是幾乎肯定不是您預期。 您可以指定 使用 utf-8 編碼方式的原始程式檔中的常值`u8`前置詞。 編譯器會將這些 utf-8 編碼的字串傳遞至輸出不會變更。 使用 u8 前置詞的窄字元常值必須符合一個位元組，或就會截斷輸出。
+根據預設, 編譯器會使用目前的字碼頁做為執行字元集, 將窄字元和窄字串編碼。 這表示在目前字碼頁範圍以外的常值中, Unicode 或 DBCS 字元會轉換成輸出中的預設取代字元。 Unicode 和 DBCS 字元會截斷為其低序位位元組。 這絕對不是您想要的。 您可以使用`u8`前置詞, 為原始程式檔中的常值指定 utf-8 編碼。 編譯器會將這些以 UTF-8 編碼的字串原封不動地傳遞至輸出。 前面加上 u8 的窄字元常值必須符合一個位元組, 否則會在輸出時被截斷。
 
-根據預設，Visual Studio 會使用目前的字碼頁，為用來解譯您的原始程式碼輸出的來源字元集。 在讀取檔案時，Visual Studio 會將它解譯根據目前的字碼頁除非已設定的檔案的字碼頁，或是將位元組順序標記 (BOM) 或 utf-16 字元會偵測到檔案開頭。 因為 utf-8 無法設定為目前的字碼頁，自動偵測遇到不具有 BOM 的 utf-8 編碼的原始程式檔時，Visual Studio 會假設它們被編碼使用目前的字碼頁。 原始程式檔中會超出範圍的指定或自動偵測到可能會導致編譯器警告和錯誤的字碼頁的字元。
+根據預設, Visual Studio 會使用目前的字碼頁做為用來解讀原始程式碼以進行輸出的來源字元集。 當檔案已讀入時, 除非已設定檔案字碼頁, 或在檔案開頭偵測到位元組順序標記 (BOM) 或 UTF-16 字元, 否則 Visual Studio 會根據目前的字碼頁來加以解讀。 因為 UTF-8 無法設定為目前的字碼頁, 所以當自動偵測發現不含 BOM 的以 UTF-8 編碼的來源檔案時, Visual Studio 會假設它們是使用目前的字碼頁進行編碼。 原始程式檔中的字元若超出指定或自動偵測到的字碼頁範圍, 可能會導致編譯器警告和錯誤。
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和\_ \_Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[/execution-charset （設定執行字元集）](../build/reference/execution-charset-set-execution-character-set.md)<br/>
+[Pragma 指示詞和\_ \_pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
+[/execution-charset (設定執行字元集)](../build/reference/execution-charset-set-execution-character-set.md)\
 [/utf-8 (將來源和可執行檔字元集設定為 UTF-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

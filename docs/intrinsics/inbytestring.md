@@ -1,6 +1,6 @@
 ---
 title: __inbytestring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inbytestring
 - __inbytestring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - rep insb instruction
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb6e811c809c6069c47415e87804641f30a3897b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348948"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217807"
 ---
-# <a name="inbytestring"></a>__inbytestring
+# <a name="__inbytestring"></a>__inbytestring
 
 **Microsoft 專屬**
 
-使用指定的連接埠時，讀取資料`rep insb`指令。
+使用`rep insb`指令, 從指定的埠讀取資料。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __inbytestring(
    unsigned short Port,
    unsigned char* Buffer,
@@ -31,16 +31,16 @@ void __inbytestring(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]要讀取的連接埠。
+*移植*\
+在要從中讀取的埠。
 
-*Buffer*<br/>
-[out]從連接埠讀取的資料會寫入此處。
+*緩衝區*\
+脫銷從埠讀取的資料會在此寫入。
 
-*計數*<br/>
-[in]要讀取之資料的位元組數目。
+*計數*\
+在要讀取的資料位元組數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,7 +48,7 @@ void __inbytestring(
 |---------------|------------------|
 |`__inbytestring`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -58,4 +58,4 @@ void __inbytestring(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

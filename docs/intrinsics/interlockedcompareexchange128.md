@@ -1,30 +1,58 @@
 ---
-title: _InterlockedCompareExchange128
-ms.date: 11/04/2016
+title: _InterlockedCompareExchange128 內建函式
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
 - _InterlockedCompareExchange128
+- _InterlockedCompareExchange128_acq
+- _InterlockedCompareExchange128_nf
+- _InterlockedCompareExchange128_np
+- _InterlockedCompareExchange128_rel
 helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 525b0fd77323789eed05c47c944794ff389bfac5
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348766"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217696"
 ---
-# <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
+# <a name="_interlockedcompareexchange128-intrinsic-functions"></a>_InterlockedCompareExchange128 內建函式
 
 **Microsoft 專屬**
 
-執行 128 位元的連鎖的比較和交換。
+執行128位連鎖比較和交換。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char _InterlockedCompareExchange128(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_acq(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_nf(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_np(
+   __int64 volatile * Destination,
+   __int64 ExchangeHigh,
+   __int64 ExchangeLow,
+   __int64 * ComparandResult
+);
+unsigned char _InterlockedCompareExchange128_rel(
    __int64 volatile * Destination,
    __int64 ExchangeHigh,
    __int64 ExchangeLow,
@@ -32,52 +60,58 @@ unsigned char _InterlockedCompareExchange128(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
-[in、 out]目的地，也就是兩個 64 位元整數的陣列的指標視為 128 位元欄位。 目的地資料必須是 16 位元組對齊，以避免了一般性保護錯誤。
+*位置*\
+[in、out]指向目的地的指標, 這是視為128位欄位的 2 64 位整數陣列。 目的地資料必須對齊16位元組, 以避免發生一般保護錯誤。
 
-*ExchangeHigh*<br/>
-[in]64 位元整數，可能會與目的地的較高部份交換。
+*ExchangeHigh*\
+在可能與目的地的最高部分交換的64位整數。
 
-*ExchangeLow*<br/>
-[in]64 位元整數，可能會與目的地的低位部份交換。
+*ExchangeLow*\
+在64位的整數, 可以與目的地的低部分交換。
 
-*ComparandResult*<br/>
-[in、 out]（視為 128 位元欄位） 的兩個 64 位元整數的陣列指標要與目的地比較。  在輸出時，這會覆寫目的地的原始值。
+*ComparandResult*\
+[in、out]要與目的地比較之 2 64 位整數 (視為128位欄位) 陣列的指標。  在輸出時, 會使用目的地的原始值來覆寫這個陣列。
 
 ## <a name="return-value"></a>傳回值
 
-1，表示 128 位元比較元等於原始值的目的地。 `ExchangeHigh` 和`ExchangeLow`覆寫的 128 位元的目的地。
+1, 表示128位比較元等於目的地的原始值。 `ExchangeHigh`和`ExchangeLow`會覆寫128位目的地。
 
-如果比較元不等於目的地的原始值，0。 目的地的值不變，目的地值覆寫的比較元值。
+如果比較元不等於目的地的原始值, 則為0。 目的地的值不變, 而比較元的值會以目的地的值覆寫。
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`_InterlockedCompareExchange128`|X64|
+|`_InterlockedCompareExchange128`|x64、ARM64|
+|`_InterlockedCompareExchange128_acq`、`_InterlockedCompareExchange128_nf`、`_InterlockedCompareExchange128_rel`|ARM64|
+|`_InterlockedCompareExchange128_np`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建函式會產生`cmpxchg16b`指示 (使用`lock`前置詞) 來執行的 128 位元已鎖定的比較和交換。 AMD 64 位元硬體的早期版本不支援這項指示。 若要檢查的硬體支援`cmpxchg16b`指示，請呼叫`__cpuid`內建函式與`InfoType=0x00000001 (standard function 1)`。 位元 13 的`CPUInfo[2]`(ECX) 為 1，指示是否支援。
+內建會`cmpxchg16b`產生指示 (具有`lock`前置詞) 來執行128位鎖定的比較和交換。 `_InterlockedCompareExchange128` 早期版本的 AMD 64 位硬體不支援此指示。 若要檢查`cmpxchg16b`指令的硬體支援, 請使用`__cpuid` `InfoType=0x00000001 (standard function 1)`呼叫內建函式。 如果支援指令`CPUInfo[2]` , 則 (ECX) 的位13為1。
 
 > [!NOTE]
->  值`ComparandResult`一定會覆寫。 在後`lock`指令，此內建函式會立即將複製的初始值`Destination`至`ComparandResult`。 基於這個理由，`ComparandResult`和`Destination`應該指向不同的記憶體位置，以避免非預期的行為。
+> 一律`ComparandResult`會覆寫的值。 在`lock`指令之後, 此內建會立即將的初始值`Destination`複製`ComparandResult`到。 基於這個理由, `ComparandResult`和`Destination`應該指向不同的記憶體位置, 以避免發生非預期的行為。
 
-雖然您可以使用`_InterlockedCompareExchange128`針對低層級執行緒同步處理，您不需要同步處理超過 128 位元，如果您可以使用較小的同步處理函式 (例如其他`_InterlockedCompareExchange`內建函式) 改為。 使用`_InterlockedCompareExchange128`如果您想要在記憶體中的 128 位元值的不可部分完成存取。
+雖然您可以使用`_InterlockedCompareExchange128`進行低層級的執行緒同步處理, 但如果您可以使用較小的同步處理函式 (例如其他`_InterlockedCompareExchange`內建函式), 則不需要在超過128位的情況下進行同步處理。 如果`_InterlockedCompareExchange128`您想要在記憶體中以不可部分完成的方式存取128位值, 請使用。
 
-如果您執行程式碼使用此內建在不支援的硬體上`cmpxchg16b`指令，結果會無法預測。
+如果您在不支援`cmpxchg16b`指令的硬體上執行使用內建的程式碼, 結果會是無法預測的。
 
-此常式是只提供內建函式。
+在 ARM 平台上，搭配取得和釋放語意的 `_acq` 和 `_rel` 字尾使用內建函式，例如在重要區段的開頭和結尾處。 具有`_nf` (「無範圍」) 尾碼的 ARM 內建函式不會做為記憶體屏障。
+
+搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。
+
+此常式僅適用于內建函式。
 
 ## <a name="example"></a>範例
 
-這個範例會使用`_InterlockedCompareExchange128`將兩個 64 位元整數的陣列的高位文字取代其高低字的總和，以及遞增的低位文字。 存取 BigInt.Int 陣列是不可部分完成，但此範例會使用單一執行緒，並忽略鎖定為求簡化。
+這個範例會`_InterlockedCompareExchange128`使用, 將 2 64 位整數陣列的最大字組取代為其最高和最低單字的總和, 並遞增低字。 `BigInt.Int`陣列的存取是不可部分完成的, 但此範例會使用單一線程, 並忽略鎖定以簡化。
 
-```
+```cpp
 // cmpxchg16b.c
 // processor: x64
 // compile with: /EHsc /O2
@@ -125,10 +159,9 @@ BigInt.Int[1] = 34, BigInt.Int[0] = 12
 
 **結束 Microsoft 專屬**
 
-進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
-[_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
+[_InterlockedCompareExchange 內建函式](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)\
 [與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -1,6 +1,6 @@
 ---
 title: __outdword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outdword
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - outdword instruction
 - __outdword intrinsic
 ms.assetid: ed1e4994-a84b-4759-8bf9-cd48fb073f4d
-ms.openlocfilehash: 236c4812f62cb092876b400051248425ee1b13e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce1358e7cef0136ccf7d314038d06d271916e0bc
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263005"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221662"
 ---
-# <a name="outdword"></a>__outdword
+# <a name="__outdword"></a>__outdword
 
 **Microsoft 專屬**
 
-會產生`out`指示傳送 doubleword`Data`出連接埠`Port`。
+產生指示, 以將雙長的*資料*傳送至埠*埠。* `out`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __outdword(
    unsigned short Port,
    unsigned long Data
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]若要將資料傳送至連接埠。
+*移植*\
+在要將資料傳送至其中的通訊埠。
 
-*Data*<br/>
-[in]要傳送 doubleword。
+*Data*\
+在要傳送的雙用字。
 
 ## <a name="requirements"></a>需求
 
@@ -44,7 +44,7 @@ void __outdword(
 |---------------|------------------|
 |`__outdword`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -54,4 +54,4 @@ void __outdword(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

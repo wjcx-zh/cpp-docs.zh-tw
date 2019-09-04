@@ -1,28 +1,28 @@
 ---
 title: __vmx_vmptrst
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmptrst
 helpviewer_keywords:
 - __vmx_vmptrst intrinsic
 - VMPTRST instruction
 ms.assetid: 8dc66e47-03a0-41b0-8e25-c1485f42817a
-ms.openlocfilehash: 5ef02dd4401e0c10a84be008d7cb25841e0359cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e559746be9e2a3fe5e81afa4d290265394db3e36
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389992"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219480"
 ---
-# <a name="vmxvmptrst"></a>__vmx_vmptrst
+# <a name="__vmx_vmptrst"></a>__vmx_vmptrst
 
 **Microsoft 專屬**
 
-儲存目前的虛擬機器控制結構 (VMCS) 在指定的位址指標。
+將目前虛擬機器控制結構 (VMCS) 的指標儲存在指定的位址。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __vmx_vmptrst(
    unsigned __int64 *VmcsPhysicalAddress
 );
@@ -30,14 +30,14 @@ void __vmx_vmptrst(
 
 ### <a name="parameters"></a>參數
 
-*VmcsPhysicalAddress*<br/>
-[in]儲存目前 VMCS 指標位址。
+*VmcsPhysicalAddress*\
+在儲存目前 VMCS 指標的位址。
 
 ## <a name="remarks"></a>備註
 
-VMCS 指標是 64 位元的實體位址。
+VMCS 指標是64位的實體位址。
 
-`__vmx_vmptrst` 函式相當於 `VMPTRST` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+`__vmx_vmptrst` 函式相當於 `VMPTRST` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊, 請在[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站搜尋「適用于 IA-32 intel 架構的 Intel 虛擬化技術規格」檔 (檔編號 C97063-002)。
 
 ## <a name="requirements"></a>需求
 
@@ -45,11 +45,11 @@ VMCS 指標是 64 位元的實體位址。
 |---------------|------------------|
 |`__vmx_vmptrst`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [__vmx_vmptrld](../intrinsics/vmx-vmptrld.md)

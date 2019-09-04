@@ -1,40 +1,38 @@
 ---
-title: tlbid
-ms.date: 10/18/2018
+title: tlbid 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - tlbid
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 364fb224b0f2769cb0933e71d18ff70768189328
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179603"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216529"
 ---
-# <a name="tlbid"></a>tlbid
+# <a name="tlbid-import-attribute"></a>tlbid 匯入屬性
 
-**C++特定**
+**C++特殊**
 
 允許載入主要類型程式庫以外的程式庫。
 
 ## <a name="syntax"></a>語法
 
-```
-tlbid(number)
-```
+> **#import***類型-程式庫-dll***tlbid (** *數位* **)**
 
 ### <a name="parameters"></a>參數
 
-*number*<br/>
-`filename` 中類型程式庫的號碼。
+*項數*\
+型別程式庫 *-dll*中型別程式庫的數目。
 
 ## <a name="remarks"></a>備註
 
-如果多個型別程式庫會建置成單一 DLL，您可以使用載入主要類型程式庫以外的程式庫**tlbid**。
+如果將多個類型程式庫內建于單一 DLL 中, 則可以使用**tlbid**載入主要型別程式庫以外的程式庫。
 
-例如: 
+例如：
 
 ```cpp
 #import <MyResource.dll> tlbid(2)
@@ -50,5 +48,5 @@ LoadTypeLib("MyResource.dll\\2");
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: __incgsbyte、__incgsword、__incgsdword、__incgsqword
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __incgsdword
 - __incgsqword_cpp
@@ -16,22 +16,22 @@ helpviewer_keywords:
 - __incgsqword intrinsic
 - __incgsdword intrinsic
 ms.assetid: 06bfdf4f-7643-4fe0-8455-60ce3068073e
-ms.openlocfilehash: 3b96fbdb343fa40b6615ac7f91f83099a294624c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b4e88b4ccd2cf1d2a3130e3a535de1c9a434320
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264019"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217790"
 ---
-# <a name="incgsbyte-incgsword-incgsdword-incgsqword"></a>__incgsbyte、__incgsword、__incgsdword、__incgsqword
+# <a name="__incgsbyte-__incgsword-__incgsdword-__incgsqword"></a>__incgsbyte、__incgsword、__incgsdword、__incgsqword
 
 **Microsoft 專屬**
 
-相對於開頭的位移所指定的記憶體位置中加入一個值`GS`區段。
+在相對於`GS`區段開頭的位移所指定的記憶體位置, 將一個值加一。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __incgsbyte(
    unsigned long Offset
 );
@@ -46,10 +46,10 @@ void __incgsqword(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*Offset*<br/>
-[in]從開頭的位移`GS`。
+*投影*\
+在從開頭算起`GS`的位移。
 
 ## <a name="requirements"></a>需求
 
@@ -60,15 +60,17 @@ void __incgsqword(
 |`__incgsdword`|X64|
 |`__incgsqword`|X64|
 
+**標頭檔**\<intrin.h. h >
+
 ## <a name="remarks"></a>備註
 
-這些常式僅可作為內建。
+這些常式僅以內建函式的形式提供。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)<br/>
-[__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)<br/>
-[__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[\__addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)\
+[\__readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)\
+[\__writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

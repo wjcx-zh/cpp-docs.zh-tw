@@ -1,6 +1,6 @@
 ---
 title: __cpuid, __cpuidex
-ms.date: 03/22/2018
+ms.date: 09/02/2019
 f1_keywords:
 - __cpuid_cpp
 - __cpuid
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - cpuid instruction
 - cpuid intrinsic
 ms.assetid: f8c344d3-91bf-405f-8622-cb0e337a6bdc
-ms.openlocfilehash: c66a3fe7b923b214c4cf2bd84fc03f535d5f4973
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ab814527c8019dd7d6b1e1eb620af0273f270e06
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449992"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216840"
 ---
-# <a name="cpuid-cpuidex"></a>__cpuid, __cpuidex
+# <a name="__cpuid-__cpuidex"></a>__cpuid, __cpuidex
 
 **Microsoft 專屬**
 
-會產生`cpuid`適用於 x86 和 x64 的指示。 此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。
+產生 x86 `cpuid`和 x64 上可用的指令。 此指令會查詢處理器，以取得受支援功能及 CPU 類型的相關資訊。
 
 ## <a name="syntax"></a>語法
 
-```cpp
+```C
 void __cpuid(
    int cpuInfo[4],
    int function_id
@@ -39,14 +39,14 @@ void __cpuidex(
 
 ### <a name="parameters"></a>參數
 
-[out] *cpuInfo*<br/>
-四個整數的陣列，包含 EAX、EBX、ECX 及 EDX 中傳回之受支援 CPU 功能的相關資訊。
+*cpuInfo*\
+脫銷四個整數的陣列, 其中包含 EAX、EBX、ECX 和 EDX 中針對 CPU 支援功能所傳回的資訊。
 
-[in] *function_id*<br/>
-指定要擷取之資訊的程式碼，在 EAX 中傳遞。
+*function_id*\
+在指定要抓取之資訊 (在 EAX 中傳遞) 的程式碼。
 
-[in] *subfunction_id*<br/>
-指定要擷取之資訊的其他程式碼，在 ECX 中傳遞。
+*subfunction_id*\
+在額外的程式碼, 指定要抓取的資訊 (在 ECX 中傳遞)。
 
 ## <a name="requirements"></a>需求
 
@@ -55,23 +55,23 @@ void __cpuidex(
 |`__cpuid`|x86、x64|
 |`__cpuidex`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建的儲存支援的功能和所傳回的 CPU 資訊`cpuid`中的指示*cpuInfo*，陣列的四個 32 位元整數，填滿了值為 EAX、 EBX、 ECX 和 EDX 暫存器 （在中，順序）。 傳回的資訊的意義會因為做為傳遞的值而定*function_id*參數。 使用的各種值，傳回的資訊*function_id*因處理器而異。
+這個內建函式會將`cpuid`指令所傳回的支援功能和 CPU 資訊儲存在*cpuInfo*中, 這是 4 32 位整數的陣列, 以 EAX、EBX、ECX 和 EDX 暫存器 (依該順序) 的值填入。 根據當做*function_id*參數傳遞的值, 傳回的資訊有不同的意義。 以不同的*function_id*值傳回的資訊與處理器相依。
 
-`__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 `__cpuidex`內建函式設定至 ecx 暫存器的值*subfunction_id*它會產生之前`cpuid`指令。 這可讓您收集處理器的其他資訊。
+`__cpuid` 內建物件會在呼叫 `cpuid` 指令之前，清除 ECX 暫存器。 內建函式會`cpuid`先將 ECX 暫存器的值設定為 subfunction_id, 然後再產生指令。 `__cpuidex` 它可讓您收集有關處理器的其他資訊。
 
-如需有關要使用和 Intel 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`中的指示[Intel 64 和 IA-32 架構軟體開發人員手冊磁碟區 2:指令集參考](https://go.microsoft.com/fwlink/p/?LinkID=510021)並[Intel 架構指令集延伸程式設計參考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 文件使用詞彙 「 分葉 」 和 「 對 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需有關要使用之特定參數及這些內建函式在 intel 處理器上所傳回之值的詳細資訊, 請`cpuid`參閱 intel [64 和 IA-32 架構軟體發展人員手冊中的指示檔磁片區 2:指令集參考](https://go.microsoft.com/fwlink/p/?LinkID=510021)和[Intel 架構指令集延伸程式設計參考](https://go.microsoft.com/fwlink/p/?LinkID=506627)。 Intel 檔會針對在 EAX 和 ECX 中傳遞的*function_id*和*subfunction_id*參數使用「分葉」和「子」詞彙。
 
-如需有關要使用和 AMD 處理器上這些內建函式所傳回的值之特定參數的詳細資訊，請參閱文件`cpuid`AMD64 架構程式設計人員手動磁碟區 3 中的指示：一般用途和系統指令和特定處理器系列的修訂指南中。 如需這些文件和其他資訊的連結，請參閱 AMD[開發人員指南、 手冊與 ISA 文件](https://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 文件使用詞彙 「 函式號碼 」 和 「 子函式號碼 」 *function_id*並*subfunction_id*在 EAX 和 ECX 中傳遞的參數。
+如需 AMD 處理器上要使用之特定參數及這些內建函式所傳回之值的詳細資訊, 請參閱 AMD64 `cpuid`架構程式設計人員手冊第3卷中的指示檔:一般用途和系統指示, 以及特定處理器系列的修訂指南。 如需這些檔和其他資訊的連結, 請參閱《 AMD [Developer guide, 手冊 &AMP; ISA Documents 》](https://go.microsoft.com/fwlink/p/?LinkId=510023)頁面。 AMD 檔會針對在 EAX 和 ECX 中傳遞的*function_id*和*subfunction_id*參數, 使用「函數編號」和「子號碼」詞彙。
 
-當*function_id*引數為 0， *cpuInfo*[0] 會傳回最高可用非擴充*function_id*處理器支援的值。 處理器製造商編碼在*cpuInfo*[1]， *cpuInfo*[2]，並*cpuInfo*[3]。
+當*function_id*引數為0時, *cpuInfo*[0] 會傳回處理器支援的最高可用非延伸*function_id*值。 處理器製造商會以*cpuInfo*[1]、 *cpuInfo*[2] 和*cpuInfo*[3] 編碼。
 
-支援在對特定指令集擴充功能和 CPU 功能以編碼*cpuInfo*更高版本傳回的結果*function_id*值。 如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。
+對特定指令集延伸模組和 CPU 功能的支援會在針對較高*function_id*值傳回的*cpuInfo*結果中進行編碼。 如需詳細資訊，請參閱上述連結的手冊，和下列範例程式碼。
 
-部分處理器支援擴充功能 CPUID 資訊。 如果這支援， *function_id*從 0x80000000 開始的值可能會用來傳回資訊。 若要判斷允許的最大有意義的值，請設定*function_id*為 0x80000000。 最大值*function_id*支援的擴充的功能寫入*cpuInfo*[0]。
+部分處理器支援擴充功能 CPUID 資訊。 當支援時, 可能會使用0x80000000 的*function_id*值來傳回信息。 若要判斷允許的最大有意義值, 請將*function_id*設定為0x80000000。 擴充功能所支援的*function_id*最大值會寫入*cpuInfo*[0]。
 
 ## <a name="example"></a>範例
 
@@ -400,4 +400,4 @@ XSAVE supported
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

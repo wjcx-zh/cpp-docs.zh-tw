@@ -1,6 +1,6 @@
 ---
 title: _InterlockedAdd 內建函式
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedAdd64_acq_cpp
 - _InterlockedAdd64_acq
@@ -26,22 +26,22 @@ helpviewer_keywords:
 - _InterlockedAdd_acq intrinsic
 - _InterlockedAdd64_rel intrinsic
 ms.assetid: 3d319603-ea9c-4fdd-ae61-e52430ccc3b1
-ms.openlocfilehash: 348e936bb05796e36ae45095f25b943076cec464
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c540cfe6abd8ae6dc2933e7fb21e2a331c21ea71
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349513"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217733"
 ---
-# <a name="interlockedadd-intrinsic-functions"></a>_InterlockedAdd 內建函式
+# <a name="_interlockedadd-intrinsic-functions"></a>_InterlockedAdd 內建函式
 
 **Microsoft 專屬**
 
-這些函式執行不可部分完成的相加，這可確保，在作業成功完成時的多個執行緒已對共用變數的存取。
+這些函式會執行不可部分完成的加法, 這可確保當有一個以上的執行緒具有共用變數的存取權時, 作業會順利完成。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 long _InterlockedAdd(
    long volatile * Addend,
    long Value
@@ -76,13 +76,13 @@ __int64 _InterlockedAdd64_rel(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*加數*<br/>
-[in、 out]要加入至; 整數的指標取代為相加的結果。
+*加數*\
+[in、out]要加入至之整數的指標;已由加法的結果取代。
 
-*值*<br/>
-[in]要加入的值。
+*Value*\
+在要加入的值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -92,20 +92,20 @@ __int64 _InterlockedAdd64_rel(
 
 |內建|架構|
 |---------------|------------------|
-|`_InterlockedAdd`|ARM|
-|`_InterlockedAdd_acq`|ARM|
-|`_InterlockedAdd_nf`|ARM|
-|`_InterlockedAdd_rel`|ARM|
-|`_InterlockedAdd64`|ARM|
-|`_InterlockedAdd64_acq`|ARM|
-|`_InterlockedAdd64_nf`|ARM|
-|`_InterlockedAdd64_rel`|ARM|
+|`_InterlockedAdd`|ARM、ARM64|
+|`_InterlockedAdd_acq`|ARM、ARM64|
+|`_InterlockedAdd_nf`|ARM、ARM64|
+|`_InterlockedAdd_rel`|ARM、ARM64|
+|`_InterlockedAdd64`|ARM、ARM64|
+|`_InterlockedAdd64_acq`|ARM、ARM64|
+|`_InterlockedAdd64_nf`|ARM、ARM64|
+|`_InterlockedAdd64_rel`|ARM、ARM64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-這些函式的 `_acq` 或 `_rel` 版本後置字元在取得或發行語意之後執行連鎖相加。 *取得語意*表示，作業的結果所有執行緒和處理器可以看到之前進行任何更新版本的記憶體讀取和寫入。 在進入關鍵區段時，取得非常有用。 *發行語意*強制意謂著所有記憶體讀取和寫入作業的結果會顯示之前本身都看見所有執行緒和處理器。 離開關鍵區段時，發行非常有用。 使用內建`_nf`（「 沒有圍牆 」） 後置詞不會當做記憶體屏障。
+這些函式的 `_acq` 或 `_rel` 版本後置字元在取得或發行語意之後執行連鎖相加。 *取得語義*表示在任何後續的記憶體讀取和寫入之前, 所有線程和處理器都會看到作業的結果。 在進入關鍵區段時，取得非常有用。 *發行語義*表示所有的記憶體讀取和寫入都強制在作業的結果變成可見之前, 讓所有線程和處理器都可以看見。 離開關鍵區段時，發行非常有用。 具有`_nf` (「無範圍」) 尾碼的內建函式不會做為記憶體屏障。
 
 這些常式僅以內建函式的形式供您使用。
 
@@ -171,5 +171,5 @@ Return value: ffff00ffffffff
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

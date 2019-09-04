@@ -1,6 +1,6 @@
 ---
-title: function (C/C++)
-ms.date: 11/04/2016
+title: function pragma
+ms.date: 08/29/2019
 f1_keywords:
 - function_CPP
 - vc-pragma.function
@@ -8,27 +8,26 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f99f3c878789a6c47fdb0d48e0a8690d65fa8062
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409924"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220133"
 ---
-# <a name="function-cc"></a>function (C/C++)
-指定產生 pragma 引數清單中指定的函式呼叫。
+# <a name="function-pragma"></a>function pragma
+
+告知編譯器產生 pragma 引數清單中所指定函式的呼叫, 而不是內嵌它們。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma function( function1 [, function2, ...] )
-```
+> **#pragma 函數 (** *function1* [ **,** *function2* ...] **)**
 
 ## <a name="remarks"></a>備註
 
-如果您使用`intrinsic`pragma （或 /Oi） 來告訴編譯器產生內建函式 （內建函式會產生為內嵌的程式碼中，不是函式呼叫），您可以使用**函式**pragma 明確強制執行函式呼叫。 function pragma 出現後，就會在包含指定內建函式的第一個函式定義生效。 其作用會持續到原始程式檔的結尾，或是的外觀`intrinsic`pragma 指定相同的內建函式。 **函式**pragma 可以用只在函式之外，在全域層級。
+內建函式通常會產生為內嵌程式碼, 而不是函式呼叫。 如果您使用內建[pragma](intrinsic.md)或[/Oi](../build/reference/oi-generate-intrinsic-functions.md)編譯器選項來指示編譯器產生內建函式, 您可以使用**function** pragma 明確強制執行函式呼叫。 一旦出現函式 pragma, 它就會在包含指定內建函式的第一個函式定義生效。 效果會持續到原始程式檔的結尾, 或是指定相同內建函式的`intrinsic` pragma 外觀。 在全域層級上 , 您只能在函式外部使用函式 pragma。
 
-如需具有內建形式的函式清單，請參閱[#pragma 內建](../preprocessor/intrinsic.md)。
+如需具有內建表單的函式清單, 請參閱內建[pragma](intrinsic.md)。
 
 ## <a name="example"></a>範例
 
@@ -84,4 +83,4 @@ str is '!!!!!!!!!!!!!!!'
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

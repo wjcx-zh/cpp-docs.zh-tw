@@ -1,6 +1,6 @@
 ---
 title: _AddressOfReturnAddress
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _AddressOfReturnAddress_cpp
 - _AddressOfReturnAddress
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - _AddressOfReturnAddress intrinsic
 - AddressOfReturnAddress intrinsic
 ms.assetid: c7e10b8c-445e-4236-a602-e2d90200f70a
-ms.openlocfilehash: 79d1e4645c60fb4231a53aaefdcf1fe0f3c876c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d705029c30fdbc117c4c6e96923691e43e072e23
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264799"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221070"
 ---
-# <a name="addressofreturnaddress"></a>_AddressOfReturnAddress
+# <a name="_addressofreturnaddress"></a>_AddressOfReturnAddress
 
 **Microsoft 專屬**
 
-提供保存目前的函式的傳回位址的記憶體位置的位址。 此位址不可能用來存取其他記憶體位置 （例如，函式的引數）。
+提供保留目前函式之傳回位址的記憶體位置位址。 此位址不得用來存取其他記憶體位置 (例如函式的引數)。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void * _AddressOfReturnAddress();
 ```
 
@@ -31,19 +31,19 @@ void * _AddressOfReturnAddress();
 
 |內建|架構|
 |---------------|------------------|
-|`_AddressOfReturnAddress`|x86、x64|
+|`_AddressOfReturnAddress`|x86、x64、ARM、ARM64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-當`_AddressOfReturnAddress`會在編譯的程式[/clr](../build/reference/clr-common-language-runtime-compilation.md)，函式包含`_AddressOfReturnAddress`呼叫會編譯為原生函式。 當函式編譯為 managed 呼叫函式包含`_AddressOfReturnAddress`，`_AddressOfReturnAddress`可能無法如預期般運作。
+在`_AddressOfReturnAddress`以[/clr](../build/reference/clr-common-language-runtime-compilation.md)編譯`_AddressOfReturnAddress`的程式中使用時, 包含呼叫的函式會編譯成原生函式。 當編譯為 managed 呼叫包含`_AddressOfReturnAddress`之函式的函式時, `_AddressOfReturnAddress`可能不會如預期般運作。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // compiler_intrinsics_AddressOfReturnAddress.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -77,5 +77,5 @@ int main() {
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

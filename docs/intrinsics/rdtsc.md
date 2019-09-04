@@ -1,6 +1,6 @@
 ---
 title: __rdtsc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __rdtsc
 helpviewer_keywords:
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - rdtsc instruction
 - Read Time Stamp Counter instruction
 ms.assetid: e31d0e51-c9bb-42ca-bbe9-a81ffe662387
-ms.openlocfilehash: 6f30be3340ae1be237bb2f8a008a8cb60c7351f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 837b68ca6ac63587cd43a7e8828777221c677e3c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396570"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217144"
 ---
-# <a name="rdtsc"></a>__rdtsc
+# <a name="__rdtsc"></a>__rdtsc
 
 **Microsoft 專屬**
 
-會產生`rdtsc`指令，這會傳回處理器時間戳記。 處理器時間戳記記錄自上次重設的時脈週期數。
+`rdtsc`產生指示, 此指令會傳回處理器時間戳記。 處理器時間戳記會記錄自上次重設後的頻率週期數目。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned __int64 __rdtsc();
 ```
 
 ## <a name="return-value"></a>傳回值
 
-64 位元不帶正負號的整數，代表滴答計數。
+代表滴答計數的64位不帶正負號的整數。
 
 ## <a name="requirements"></a>需求
 
@@ -37,17 +37,17 @@ unsigned __int64 __rdtsc();
 |---------------|------------------|
 |`__rdtsc`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此常式是只提供內建函式。
+此常式僅適用于內建函式。
 
-在這一代硬體的 TSC 值的解譯不同於在舊版的 x64。 請參閱硬體手冊，如需詳細資訊。
+在較早的 x64 版本中, 在較新的硬體世代中, TSC 值的解讀方式不同。 如需詳細資訊, 請參閱硬體手冊。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // rdtsc.cpp
 // processor: x86, x64
 #include <stdio.h>
@@ -71,4 +71,4 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

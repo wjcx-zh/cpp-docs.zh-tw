@@ -1,90 +1,90 @@
 ---
 title: 前置處理器文法
-ms.date: 09/04/2018
+ms.date: 08/29/2019
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0916e3cc9bbdb398db693286dacc4517df03557
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179876"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222255"
 ---
 # <a name="preprocessor-grammar"></a>前置處理器文法
 
-*控制列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
+*控制行*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別碼* *token-字串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別碼* **(** &#x2800;identifier&#x200B;<sub>opt</sub> **,** ... **,** *識別碼*&#x200B; <sub> </sub>opt&#x2800; **)** *token-字串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _路徑-規格_ **"** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#include**_路徑-規格_ **\<** **>** \
+&nbsp;&nbsp;&nbsp;&nbsp; **#line***數位順序* **"** _檔案名_ **"** &#x200B; <sub>opt</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef***識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error***token-字串*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
-*constant-expression*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**defined** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;任何其他的常數運算式
+*常數運算式*: \
+&nbsp;&nbsp;&nbsp;&nbsp;**已定義 (** &#x2800;*識別碼*&#x2800; **)** \
+&nbsp;&nbsp;&nbsp;&nbsp;**已定義***識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp;任何其他常數運算式
 
-*條件式*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-parts*<sub>opt</sub> *else-part*<sub>opt</sub> *endif-line*
+*條件*式: \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-part* *elif-元件*<sub>opt</sub>*其他-部分*<sub>opt</sub>*endif-行*
 
-*if-part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
+*if-part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*若為-line* *文字*
 
-*if 程式行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
+*如果-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if***常數運算式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef***識別碼*
 
-*elif 部分*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-line* *text*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif-parts* *elif-line* *text*
+*elif-元件*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-行* *文字*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-元件* *elif-行* *文字*
 
-*elif 列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
+*elif-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#elif** *constant-expression*
 
-*else 部分*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
+*else-part*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*其他-行* *文字*
 
-*其他列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#else**
+*else-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*endif 列*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#endif**
+*endif-line*: \
+&nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-*digit-sequence* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+*數位-序列*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*八進位*\
 &nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
-*digit* : one of<br/>
+*數位*: 其中一個 \
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
 
-*語彙基元字串*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;語彙基元字串
+*token-字串*: \
+&nbsp;&nbsp;&nbsp;&nbsp;標記的字串
 
-*語彙基元*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*關鍵字*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*常數*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*運算子*<br/>
+*token*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*關鍵字*\
+&nbsp;&nbsp;&nbsp;&nbsp;*標識*\
+&nbsp;&nbsp;&nbsp;&nbsp;*常數*\
+&nbsp;&nbsp;&nbsp;&nbsp;*操作*\
 &nbsp;&nbsp;&nbsp;&nbsp;*標點符號*
 
-*filename* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;合法的作業系統檔案名稱
+*檔案名*: \
+&nbsp;&nbsp;&nbsp;&nbsp;合法的作業系統檔案名
 
-*path-spec* :<br/>
+*路徑規格*: \
 &nbsp;&nbsp;&nbsp;&nbsp;合法的檔案路徑
 
-*text* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;文字的任意序列
+*文字*: \
+&nbsp;&nbsp;&nbsp;&nbsp;任何文字順序
 
 > [!NOTE]
-> 要展開中的下列非終端[語彙慣例](../cpp/lexical-conventions.md)一節*C++語言參考*:*常數*， *常數運算式*，*識別項*，*關鍵字*，*運算子*，並*標點符號*。
+> 下列非終端項會在 *C++語言參考*的 [[詞彙慣例](../cpp/lexical-conventions.md)] 區段中展開:*常數*、*常數運算式*、*識別碼*、*關鍵字*、*運算子*和*標點符號*。
 
 ## <a name="see-also"></a>另請參閱
 

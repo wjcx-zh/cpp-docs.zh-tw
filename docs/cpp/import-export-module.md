@@ -10,16 +10,16 @@ helpviewer_keywords:
 - modules [C++], import
 - modules [C++], export
 description: 使用 import 語句來存取指定模組中所定義的類型和函數。
-ms.openlocfilehash: fbb9c45ec816c859edb4df38ad67dc7778247e87
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: ee1d50a76a3304359c0771aa0174968439f5faa4
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537784"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273630"
 ---
 # <a name="module-import-export"></a>模組、匯入、匯出
 
-**模組**、匯**入**和**匯出**關鍵字可在`/experimental:modules` c + + 20 中使用, 而且需要編譯器參數`/std:c++latest`和。 如需詳細資訊, 請參閱[中C++的模組總覽](modules-cpp.md)。
+**模組**、匯**入**和**匯出**關鍵字可在 c + + 20 中使用, 而且需要[/experimental: module](../build/reference/experimental-module.md)編譯器參數和[/std: C + + 最新版本](../build/reference/std-specify-language-standard-version.md)。 如需詳細資訊, 請參閱[中C++的模組總覽](modules-cpp.md)。
 
 ## <a name="module"></a>name
 
@@ -87,4 +87,5 @@ class Baz
 ```
 
 ## <a name="see-also"></a>另請參閱
+
 [中的模組總覽C++](modules-cpp.md)

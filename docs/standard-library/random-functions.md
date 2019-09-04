@@ -1,26 +1,23 @@
 ---
 title: '&lt;random&gt; 函式'
-ms.date: 11/04/2016
+ms.date: 09/04/2019
 f1_keywords:
 - random/std::generate_canonical
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3d94f607fc6b7bdf22d7f573f590b451dbaa718d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273831"
 ---
 # <a name="ltrandomgt-functions"></a>&lt;random&gt; 函式
 
-## <a name="generate_canonical"></a> generate_canonical
+## <a name="generate_canonical"></a>generate_canonical
 
 從隨機序列傳回浮點值。
-
-> [!NOTE]
-> ISO C++ 標準規定此函式應傳回範圍 [`0`, `1`) 中的值。 Visual Studio 尚未與此條件約束相容。 作為在此範圍中產生值的解決辦法，請使用 [uniform_real_distribution](../standard-library/uniform-real-distribution-class.md)。
 
 ```cpp
 template <class RealType, size_t Bits, class Generator>
@@ -32,12 +29,15 @@ RealType generate_canonical(Generator& Gen);
 *RealType*\
 浮點整數類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*位元*\
-亂數產生器。
+*一些*\
+要使用的隨機位數。
 
-*一般*\
-亂數產生器。
+*發電機*\
+亂數產生器類別。
+
+*代*\
+型別產生器的亂數產生器實例的參考。
 
 ### <a name="remarks"></a>備註
 
-範本函式會呼叫`operator()`的*Gen*重複和組件傳回的值，轉換浮點數的值`x`型別的*RealType*直到它已收集了指定的數目尾數中的位元`x`。 指定的數字是較小的一個*位元*（其必須為非零） 和完整的尾數中的位元數目*RealType*。 第一次呼叫會提供最低位位元數。 函式會傳回 `x`。
+範本函式會`operator()`重複呼叫*Gen* , 並將傳回的值封裝為*RealType*類型的`x`浮點值, 直到它在中`x`收集到指定的尾數位數為止。 指定的數位是較小的*位*(不能為零), 而*RealType*中的尾數位則是完整數目。 第一次呼叫會提供最低位位元數。 函式會傳回 `x`。

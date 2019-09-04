@@ -1,6 +1,6 @@
 ---
 title: vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 apiname:
 - _vswprintf_l
 - _vsprintf_l
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - vsprintf function
 - _vstprintf function
 ms.assetid: b8ef1c0d-58f9-4a18-841a-f1a989e1c29b
-ms.openlocfilehash: 8eb73a5149c1127332b9b8e464da02c6d528610e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 57fa0428e8aecf7b728029a0c4cc21f8abc353bf
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499016"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273656"
 ---
 # <a name="vsprintf-_vsprintf_l-vswprintf-_vswprintf_l-__vswprintf_l"></a>vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、__vswprintf_l
 
@@ -120,19 +120,19 @@ int _vswprintf_l(
 
 ### <a name="parameters"></a>參數
 
-*buffer*<br/>
+*緩衝區*\
 輸出的儲存位置。
 
-*計數*<br/>
+*計數*\
 此函式的寬字元串版本中要儲存的最大字元數。
 
-*格式*<br/>
+*編排*\
 格式規格。
 
-*argptr*<br/>
+*argptr*\
 引數清單的指標。
 
-*locale*<br/>
+*語言*\
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
@@ -176,15 +176,16 @@ int _vswprintf_l(
 
 ```C
 // crt_vsprintf.c
-// compile with: /W3
+// compile with: cl /W4 crt_vsprintf.c
 // This program uses vsprintf to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
+#define _CRT_SECURE_NO_WARNINGS
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
     va_list args;
     int     len;
@@ -197,12 +198,14 @@ void test( char * format, ... )
                                 + 1; // terminating '\0'
 
     buffer = (char*)malloc( len * sizeof(char) );
+    if ( 0 != buffer )
+    {
+        vsprintf( buffer, format, args ); // C4996
+        // Note: vsprintf is deprecated; consider using vsprintf_s instead
+        puts( buffer );
 
-    vsprintf( buffer, format, args ); // C4996
-    // Note: vsprintf is deprecated; consider using vsprintf_s instead
-    puts( buffer );
-
-    free( buffer );
+        free( buffer );
+    }
     va_end( args );
 }
 
@@ -220,10 +223,10 @@ This is a string
 
 ## <a name="see-also"></a>另請參閱
 
-[資料流 I/O](../../c-runtime-library/stream-i-o.md)<br/>
-[vprintf 函式](../../c-runtime-library/vprintf-functions.md)<br/>
-[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)<br/>
-[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
-[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[資料流 I/O](../../c-runtime-library/stream-i-o.md)\
+[vprintf 函式](../../c-runtime-library/vprintf-functions.md)\
+[格式規格語法：printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)\
+[fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)\
+[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)\
+[sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)\
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

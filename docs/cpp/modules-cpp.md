@@ -1,18 +1,18 @@
 ---
-title: 中的模組總覽C++
+title: C++ 中的模組概觀
 ms.date: 07/23/2019
 helpviewer_keywords:
 - modules [C++]
 - modules [C++], overview
 description: C + + 20 中的模組提供標頭檔的新式替代方式。
-ms.openlocfilehash: 84683d9c4b0e1a514b17883b89c58488b9879edb
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 17495aa3e295b26fcfa5c489ff6793bb75d13d68
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537804"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273676"
 ---
-# <a name="overview-of-modules-in-c"></a>中的模組總覽C++
+# <a name="overview-of-modules-in-c"></a>C++ 中的模組概觀
 
 C + + 20 引進了*模組*, 這是元件化C++程式庫和程式的現代化解決方案。 模組是一組原始程式碼檔案, 這些檔案會與匯入它們的[轉譯單位](https://wikipedia.org/wiki/Translation_unit_(programming))分開編譯。 模組會消除或大幅減少與使用標頭檔相關的許多問題, 也可能會減少編譯時間。 不會顯示在模組中宣告的宏、預處理器指示詞和非匯出的名稱, 因此不會影響匯入模組之轉譯單元的編譯。 您可以依照任何順序匯入模組, 而不需要考慮宏重新定義。 匯入轉譯單位中的宣告不會參與已匯入之模組中的多載解析或名稱查詢。 在模組編譯一次之後, 結果會儲存在二進位檔案中, 以描述所有匯出的類型、函數和範本。 該檔案的處理速度快于標頭檔, 而且編譯器可以在每次將模組匯入專案的位置重複使用。
 
@@ -20,7 +20,7 @@ C + + 20 引進了*模組*, 這是元件化C++程式庫和程式的現代化解�
 
 ## <a name="enable-modules-in-the-microsoft-c-compiler"></a>在 Microsoft C++編譯器中啟用模組
 
-從 Visual Studio 2019 16.2 版, 模組不會在 Microsoft C++編譯器中完全執行。 您可以使用模組功能來建立單一資料分割模組, 並匯入 Microsoft 所提供的標準程式庫模組。 若要啟用對模組的支援, `/experimental:modules`請`/std:c++latest`使用和進行編譯。 在 Visual Studio 專案中, 以滑鼠右鍵按一下**方案總管**中的專案節點, 然後選擇 [**屬性**]。 將 [ 設定] 下拉式選為 [**所有**設定], 然後選擇 [設定] [**屬性** > ] [**CC++/**  > **語言** > ] [**啟用C++模組]實驗性)** 。
+從 Visual Studio 2019 16.2 版, 模組不會在 Microsoft C++編譯器中完全執行。 您可以使用模組功能來建立單一資料分割模組, 並匯入 Microsoft 所提供的標準程式庫模組。 若要啟用對模組的支援, 請使用[/experimental: module](../build/reference/experimental-module.md)和[/std: c + + 最新版本](../build/reference/std-specify-language-standard-version.md)進行編譯。 在 Visual Studio 專案中, 以滑鼠右鍵按一下**方案總管**中的專案節點, 然後選擇 [**屬性**]。 將 [設定] 下拉式選為 [**所有**設定], 然後選擇 [設定] [**屬性** > ] [**CC++/**  > **語言** > ] [**啟用C++模組]實驗性)** 。
 
 模組和使用它的程式碼必須使用相同的編譯器選項進行編譯。
 
@@ -45,7 +45,7 @@ import std.regex;
 
 ## <a name="basic-example"></a>基本範例
 
-下列範例顯示名為**Foo. ixx**之原始檔中的簡單模組定義。 Visual Studio 中的模組介面檔案需要**ixx**副檔名。 在此範例中, 介面檔案包含函式定義和宣告。 不過, 定義也可以放在一或多個不同的檔案中 (如稍後的範例所示)。 **Export 模組 Foo**語句指出此檔案是稱為`Foo`之模組的主要介面。 `Foo`  上`f()`的 export 修飾詞表示當另一個程式或模組匯入時, 將會顯示此函式。 請注意, 模組會參考命名`Bar`空間。
+下列範例顯示名為**Foo. ixx**之原始檔中的簡單模組定義。 Visual Studio 中的模組介面檔案需要**ixx**副檔名。 在此範例中, 介面檔案包含函式定義和宣告。 不過, 定義也可以放在一或多個不同的檔案中 (如稍後的範例所示)。 **Export 模組 Foo**語句指出此檔案是稱為`Foo`之模組的主要介面。 `Foo` 上`f()`的 export 修飾詞表示當另一個程式或模組匯入時, 將會顯示此函式。 請注意, 模組會參考命名`Bar`空間。
 
 ```cpp
 export module Foo;

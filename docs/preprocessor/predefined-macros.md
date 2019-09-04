@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: ab478cd8ac51b5cb88cec38f80541df8a7be2789
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 15b70b0292f671d99b320c8d23598e68b47adb0d
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70222290"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273824"
 ---
 # <a name="predefined-macros"></a>預先定義巨集
 
@@ -402,6 +402,16 @@ MSVC 支援這些額外預先定義的宏。
 - **&#95;MSVC&#95;LANG**定義為整數常值, 指定編譯器C++的目的語言標準。 它只會在編譯為C++的程式碼中設定。 宏是預設201402L 的整數常值, 或當指定了[/std: c + + 14](../build/reference/std-specify-language-standard-version.md)編譯器選項時。 如果指定了[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)編譯器選項, 宏會設定為201703L。 當指定[/std: c + + 最新](../build/reference/std-specify-language-standard-version.md)的選項時, 它會設定為較高、未指定的值。 否則, 宏會是未定義的。 **&#95;MSVC&#95;LANG**巨集並[/std （指定語言標準版本）](../build/reference/std-specify-language-standard-version.md)編譯器選項會在 Visual Studio 2015 Update 3 開始提供。
 
 - **&#95;&#95;當&#95;設定&#95;** 了其中一個[/rtc](../build/reference/rtc-run-time-error-checks.md)編譯器選項時, 會將 MSVC 執行時間檢查定義為1。 否則為未定義。
+
+- **&#95;當&#95;** 預處理器一致性模式[/experimental: 預](../build/reference/rtc-run-time-error-checks.md)處理器編譯器選項已設定時, MSVC 傳統定義為0。 預設定義為 1, 或在設定[/experimental: 預處理器-](../build/reference/rtc-run-time-error-checks.md)編譯器選項時, 表示正在使用傳統預處理器。 從 Visual Studio 2017 版15.8 開始, 可以使用 **&#95;MSVC&#95;傳統**宏和[/experimental: 預處理器 (啟用預處理器一致性模式)](../build/reference/experimental-preprocessor.md)編譯器選項。
+
+   ```cpp
+   #if defined(_MSVC_TRADITIONAL) && _MSVC_TRADITIONAL
+   // Logic using the traditional preprocessor
+   #else
+   // Logic using cross-platform compatible preprocessor
+   #endif
+   ```
 
 - **&#95;MT**指定[/md 或/MDd](../build/reference/md-mt-ld-use-run-time-library.md) (多執行緒 DLL) 或[/mt 或/MTd](../build/reference/md-mt-ld-use-run-time-library.md) (多執行緒) 時, 定義為1。 否則為未定義。
 

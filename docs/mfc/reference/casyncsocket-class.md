@@ -1,6 +1,6 @@
 ---
 title: CAsyncSocket 類別
-ms.date: 11/04/2016
+ms.date: 09/03/2019
 f1_keywords:
 - CAsyncSocket
 - AFXSOCK/CAsyncSocket
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: ef938796faf8e9b9272a519ed1e51037edc90425
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507520"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273795"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket 類別
 
@@ -95,13 +95,13 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|建構 `CAsyncSocket` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CAsyncSocket::Accept](#accept)|接受通訊端上的連接。|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|要求通訊端的事件通知。|
@@ -337,7 +337,7 @@ BOOL Bind (
 
 ### <a name="return-value"></a>傳回值
 
-如果函式成功, 則為非零;否則, 您可以藉由呼叫[GetLastError](#getlasterror)來抓取特定的錯誤碼。 下列錯誤適用于此成員函式:
+如果函式成功, 則為非零;否則, 您可以藉由呼叫[GetLastError](#getlasterror)來抓取特定的錯誤碼。 下列清單涵蓋一些可能會傳回的錯誤。 如需完整清單, 請參閱[Windows Socket 錯誤碼](/windows/win32/winsock/windows-sockets-error-codes-2)。
 
 - WSANOTINITIALISED 成功的[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit)必須在使用此 API 之前進行。
 

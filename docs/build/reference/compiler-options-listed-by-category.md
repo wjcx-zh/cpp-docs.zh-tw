@@ -1,15 +1,15 @@
 ---
 title: 依分類排列的編譯器選項
-ms.date: 05/06/2019
+ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221753"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273710"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -27,7 +27,7 @@ ms.locfileid: "65221753"
 |[/Oi](oi-generate-intrinsic-functions.md)|產生內建函式。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|偏好小的程式碼。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|偏好快的程式碼。|
-|[/Ox](ox-full-optimization.md)|使用最大最佳化 (/Ob2gity /Gs)。|
+|[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
 |[/Oy](oy-frame-pointer-omission.md)|省略框架指標。 (僅限 x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|產生針對指定之結構或結構範圍進行最佳化的程式碼。|
 
@@ -59,7 +59,7 @@ ms.locfileid: "65221753"
 |[/Gy](gy-enable-function-level-linking.md)|啟用函式階層連結。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 (與 [/RTC1](rtc-run-time-error-checks.md)相同)|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例。 (僅限 x86)|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項是僅適用於 x64 編譯器 （原生和跨編譯）。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器 (原生和跨平臺編譯)。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
@@ -67,7 +67,7 @@ ms.locfileid: "65221753"
 |[/Qpar](qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
-|[/Qspectre](qspectre.md)|啟用 CVE 2017-5753 的對於 Spectre 攻擊的某個類別的緩和措施。|
+|[/Qspectre](qspectre.md)|針對 Spectre 攻擊類別, 啟用 CVE 2017-5753 的緩和措施。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|
 |[/RTC](rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
@@ -85,7 +85,7 @@ ms.locfileid: "65221753"
 |[/Fm](fm-name-mapfile.md)|建立對應檔 (Mapfile)。|
 |[/Fo](fo-object-file-name.md)|建立目的檔。|
 |[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|產生瀏覽器的.sbr 檔的名稱。|
+|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|名稱產生的 .sbr 瀏覽器檔案。|
 
 ## <a name="preprocessor"></a>前置處理器
 
@@ -109,7 +109,7 @@ ms.locfileid: "65221753"
 
 |選項|用途|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期的控制 constexpr 評估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制 constexpr 評估。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在原始程式碼中啟用 [#pragma omp](../../preprocessor/omp.md) 。|
 |[/vd](vd-disable-construction-displacements.md)|抑制或啟用隱藏的 `vtordisp` 類別成員。|
 |[/vmb](vmb-vmg-representation-method.md)|對指向成員的指標使用最佳基底。|
@@ -117,17 +117,17 @@ ms.locfileid: "65221753"
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|宣告多重繼承。|
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|宣告單一繼承。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|宣告虛擬繼承。|
-|[/Z7](z7-zi-zi-debug-information-format.md)|產生 C 7.0 相容的偵錯資訊。|
-|[/Za](za-ze-disable-language-extensions.md)|C89 語言擴充功能會停用。|
+|[/Z7](z7-zi-zi-debug-information-format.md)|產生與 C 7.0 相容的調試資訊。|
+|[/Za](za-ze-disable-language-extensions.md)|停用 C89 語言延伸模組。|
 |[/Zc](zc-conformance.md)|指定 [/Ze](za-ze-disable-language-extensions.md)下的標準行為。|
-|[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用 C89 語言擴充功能。|
-|[/Zf](zf.md)|在平行建置中產生時間改善 PDB。|
+|[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用 C89 語言延伸模組。|
+|[/Zf](zf.md)|改善平行組建中的 PDB 產生時間。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。 (僅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱。|
 |[/Zp](zp-struct-member-alignment.md) *n*|封裝結構成員。|
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
-|[/ZW](zw-windows-runtime-compilation.md)|產生輸出檔案，在 Windows 執行階段上執行。|
+|[/ZW](zw-windows-runtime-compilation.md)|產生要在 Windows 執行階段上執行的輸出檔。|
 
 ## <a name="linking"></a>連結
 
@@ -153,22 +153,22 @@ ms.locfileid: "65221753"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接向 Microsoft 提供內部編譯器錯誤 (ICE) 資訊C++小組。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Microsoft C++小組。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在診斷文字中顯示傳遞給 cl.exe 的原始程式檔完整路徑。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 MSPDBSRV.EXE 序列化的程式資料庫 (PDB) 檔案。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
-|[/JMC](jmc.md)|支援原生C++Just My Code 偵錯。|
+|[/JMC](jmc.md)|支援原C++生 Just My Code 的調試。|
 |[/kernel](kernel-create-kernel-mode-binary.md)|編譯器和連結器將會建立可以在 Windows 核心中執行的二進位檔。|
 |[/MP](mp-build-with-multiple-processes.md)|同時建置多重原始程式檔。|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|隱藏登入程式的啟始資訊。|
 |[/sdl](sdl-enable-additional-security-checks.md)|啟用其他安全性功能及警告。|
 |[/showIncludes](showincludes-list-include-files.md)|在編譯時顯示所有 Include 檔的清單。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|指定 C 原始程式檔。|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是 c。|
+|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|指定所有的來源檔案都是 C。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|指定 C++ 原始程式檔。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有原始程式檔都是C++。|
+|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|指定所有的C++來源檔案。|
 |[/V](v-version-number.md)|已取代。 設定版本字串。|
 |[/w](compiler-option-warning-level.md)|停用所有警告。|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|設定輸出警告層級。|
@@ -180,22 +180,31 @@ ms.locfileid: "65221753"
 |[/wo](compiler-option-warning-level.md)|只顯示指定的警告一次。|
 |[/Wv](compiler-option-warning-level.md)|停用較新版編譯器所引入的警告。|
 |[/WX](compiler-option-warning-level.md)|將警告視為錯誤。|
-|[/Yc](yc-create-precompiled-header-file.md)|建立。PCH 檔案。|
+|[/Yc](yc-create-precompiled-header-file.md)|建立.PCH 檔案。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|在建立偵錯程式庫時插入 PCH 參考。|
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略目前組建中所有其他先行編譯標頭編譯器選項。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
-|[/await](await-enable-coroutine-support.md)|啟用協同程式 （可繼續函式） 擴充功能。|
+|[/await](await-enable-coroutine-support.md)|啟用協同程式 (可繼續函數) 延伸模組。|
 |[/source-charset](source-charset-set-source-character-set.md)|設定來源字元集。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
-|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|設定來源和執行字元集為 utf-8。|
-|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|驗證只有相容字元的 utf-8 檔案。|
+|[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|將來源和執行字元集設定為 UTF-8。|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|僅驗證 UTF-8 檔案是否有相容的字元。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制診斷訊息的格式。|
-|[/permissive-](permissive-standards-conformance.md)|設定標準一致性模式。|
-|[/std](std-specify-language-standard-version.md)|C++標準版本相容性的選取器。|
+|[/permissive-](permissive-standards-conformance.md)|設定標準符合模式。|
+|[/std](std-specify-language-standard-version.md)|C++標準版本相容性選取器。|
 
-## <a name="deprecated-and-removed-compiler-options"></a>已取代及移除的編譯器選項
+## <a name="experimental-options"></a>實驗性選項
+
+實驗性選項可能僅受到特定版本編譯器的支援, 而且在不同的編譯器版本中可能會有不同的行為。 通常, 實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
+
+|選項|用途|
+|------------|-------------|
+|[/experimental: 模組](experimental-module.md)|啟用實驗性模組支援。|
+|[/experimental: 預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
+
+## <a name="deprecated-and-removed-compiler-options"></a>已取代和已移除的編譯器選項
 
 |選項|用途|
 |------------|-------------|
@@ -213,7 +222,7 @@ ms.locfileid: "65221753"
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已取代。 停用 For 迴圈範圍中的一致性。|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
-|[/Zg](zg-generate-function-prototypes.md)|在 Visual Studio 2015 中移除。 產生函式原型。|
+|[/Zg](zg-generate-function-prototypes.md)|已在 Visual Studio 2015 中移除。 產生函式原型。|
 
 ## <a name="see-also"></a>另請參閱
 

@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: 修改屬性和目標而不變更專案檔
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio 專案中的 Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: 在建置階段參考程式庫和元件
           href: build/adding-references-in-visual-cpp-projects.md
         - name: 組織專案輸出檔案
@@ -4100,7 +4102,7 @@
                   href: cpp/binary-operators.md
                 - name: 指派
                   href: cpp/assignment.md
-                - name: 函式呼叫
+                - name: '函式呼叫 '
                   href: cpp/function-call-cpp.md
                 - name: 下標
                   href: cpp/subscripting.md
@@ -4794,7 +4796,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef 指示詞 (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using 指示詞 (C++)'
+                    - name: '#using 指示詞 (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: 前置處理器運算子
                   expanded: false
@@ -4805,7 +4807,7 @@
                       href: preprocessor/stringizing-operator-hash.md
                     - name: '字元化運算子 (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
-                    - name: '語彙基元帶入的運算子 (##)'
+                    - name: '語彙基元帶入運算子 (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
                 - name: 前置處理器巨集 (C/C++)
                   expanded: false
@@ -4829,10 +4831,10 @@
                   href: preprocessor/conventions.md
                 - name: 前置處理器文法
                   href: preprocessor/preprocessor-grammar.md
-            - name: Pragma 指示詞和 __Pragma 關鍵字
+            - name: Pragma 指示詞與 __pragma 關鍵字
               expanded: false
               items:
-                - name: Pragma 指示詞和 __Pragma 關鍵字
+                - name: Pragma 指示詞與 __pragma 關鍵字
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text pragma
                   href: preprocessor/alloc-text.md

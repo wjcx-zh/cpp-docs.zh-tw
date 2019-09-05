@@ -215,13 +215,13 @@
           items:
             - name: DLL 的類型
               href: build/kinds-of-dlls.md
-            - name: 非 MFC DLL：概觀
+            - name: 非 MFC DLL：總覽
               href: build/non-mfc-dlls-overview.md
             - name: 靜態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-statically-linked-to-mfc.md
             - name: 動態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-dynamically-linked-to-mfc.md
-            - name: MFC 延伸模組 DLL：概觀
+            - name: MFC 延伸模組 DLL：總覽
               href: build/extension-dlls-overview.md
         - name: MFC DLL 常見問題集
           href: build/dll-frequently-asked-questions.md
@@ -536,6 +536,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution/charset (設定執行字元集)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (設定堆疊大小)
                       href: build/reference/f-set-stack-size.md
                     - name: 輸出檔案 (/F) 選項
@@ -1438,7 +1442,7 @@
               items:
                 - name: BSCMAKE 參考
                   href: build/reference/bscmake-reference.md
-                - name: 建置瀏覽資訊檔：概觀
+                - name: 建置瀏覽資訊檔：總覽
                   href: build/reference/building-browse-information-files-overview.md
                 - name: 建置 .Bsc 檔
                   expanded: false
@@ -4102,7 +4106,7 @@
                   href: cpp/binary-operators.md
                 - name: 指派
                   href: cpp/assignment.md
-                - name: '函式呼叫 '
+                - name: 函式呼叫
                   href: cpp/function-call-cpp.md
                 - name: 下標
                   href: cpp/subscripting.md

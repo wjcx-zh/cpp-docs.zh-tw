@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 0b41cacba8c279447e1e944cc3214ca1ba607665
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516153"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311725"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Boxing  (C++/CLI 和 C++/CX)
 
@@ -72,7 +72,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 }
 ```
 
-如需詳細資訊，請參閱 [Boxing (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969554.aspx)。
+如需詳細資訊，請參閱 [Boxing (C++/CX)](../cppcx/boxing-c-cx.md)。
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
@@ -80,7 +80,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 boxing 和 unboxing 可讓實值類型被視為物件。 實值類型，包括結構類型和內建類型 (如 int)，可以往返轉換為類型 <xref:System.Object>。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱：
 
 - [如何：明確要求 Boxing](../dotnet/how-to-explicitly-request-boxing.md)
 

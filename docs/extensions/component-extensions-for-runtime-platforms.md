@@ -1,7 +1,7 @@
 ---
 title: 適用於 .NET 與 UWP 的元件擴充功能
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: landing-page
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 76cbb20d108745984490e67b53db39f58e34d327
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516713"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70311758"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>適用於 .NET 與 UWP 的元件擴充功能
 

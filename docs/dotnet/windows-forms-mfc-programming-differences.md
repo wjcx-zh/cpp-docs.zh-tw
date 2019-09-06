@@ -1,58 +1,58 @@
 ---
-title: Windows FORMS-MFC 程式設計的差異
+title: Windows Forms MFC 程式設計差異
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 998485a3384512f57cf35fc264e2321fa0996728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384448"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311659"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Form/MFC 程式設計的差異
 
-中的主題[在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)描述 Windows Form 的 MFC 支援。 如果您不熟悉.NET Framework 或 MFC 程式設計，本主題會提供程式設計的差異，兩者之間的背景資訊。
+在 MFC 中[使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)中的主題會描述 WINDOWS FORMS 的 MFC 支援。 如果您不熟悉 .NET Framework 或 MFC 程式設計，本主題會提供兩者之間的程式設計差異的背景資訊。
 
-Windows Form 是.NET Framework 上建立 Microsoft Windows 應用程式。 此架構提供現代、 物件導向、 可延伸的集合的類別，可讓您用來開發豐富的 Windows 應用程式。 使用 Windows Form，就可以建立豐富型用戶端應用程式，可以存取各種資料來源，並提供資料顯示和使用 Windows Form 控制項的資料編輯功能。
+Windows Forms 是用來在 .NET Framework 上建立 Microsoft Windows 應用程式。 此架構提供了一組現代化、物件導向、可擴充的類別，可讓您開發豐富的 Windows 應用程式。 使用 Windows Forms，您可以建立豐富的用戶端應用程式，以存取各種不同的資料來源，並使用 Windows Forms 控制項來提供資料顯示和資料編輯工具。
 
-不過，如果您習慣使用 MFC 時，您可能用來建立特定類型的尚未明確地支援 Windows Form 中的應用程式。 Windows Forms 應用程式相當於 MFC 對話方塊應用程式。 不過，它們並不提供直接支援單一文件介面 (SDI)、 多重文件介面 (MDI)，其他如 OLE 文件伺服器/容器 ActiveX 文件、 文件/檢視支援的 MFC 應用程式類型的基礎結構和多個最上層介面 (MTI)。 您可以撰寫您自己的邏輯來建立這些應用程式。
+不過，如果您習慣使用 MFC，您可能會用來建立 Windows Forms 中尚未明確支援的特定類型應用程式。 Windows Forms 的應用程式相當於 MFC 對話應用程式。 不過，它們不會提供直接支援其他 MFC 應用程式類型的基礎結構，例如 OLE 檔案伺服器/容器、ActiveX 檔、單一檔介面（SDI）的檔/視圖支援、多重文件介面（MDI），以及多個頂層介面（MTI）。 您可以撰寫自己的邏輯來建立這些應用程式。
 
-如需有關 Windows Form 應用程式的詳細資訊，請參閱 < [Windows Form 簡介](/dotnet/framework/winforms/windows-forms-overview)。
+如需 Windows Forms 應用程式的詳細資訊，請參閱[Windows Forms 簡介](/dotnet/framework/winforms/windows-forms-overview)。
 
-顯示 Windows Form 搭配 MFC 使用的範例應用程式，請參閱[MFC 與 Windows Form 整合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)。
 
-下列的 MFC 檢視或文件與路由功能的命令在 Windows Form 沒有對等項目：
+下列 MFC 視圖或檔和命令路由功能在 Windows Forms 中沒有對等專案：
 
-- 殼層整合
+- Shell 整合
 
-   MFC 會處理文件上按一下滑鼠右鍵並選取這類動詞命令為開啟、 編輯或列印時，會使用殼層的命令列引數與動態資料交換 (DDE) 命令。 Windows Form 任何殼層整合並不會回應 shell 動詞命令。
+   當您以滑鼠右鍵按一下檔，然後選取 [開啟]、[編輯] 或 [列印] 這類動詞時，MFC 會處理 shell 使用的動態資料交換（DDE）命令和命令列引數。 Windows Forms 沒有 shell 整合，而且不會回應 shell 動詞命令。
 
-- 文件範本
+- 檔範本
 
-   在 MFC 中，文件範本會將包含在框架視窗 （在 MDI、 SDI 或 MTI 模式） 中，檢視與您所開啟的文件產生關聯。 Windows Form 有沒有相當於文件範本。
+   在 MFC 中，檔範本會將包含在框架視窗（在 MDI、SDI 或 MTI 模式中）的視圖與您開啟的檔產生關聯。 Windows Forms 不等於檔範本。
 
 - 文件
 
-   MFC 註冊文件檔案類型，並從殼層中開啟文件時處理的文件類型。 Windows Forms 的任何文件支援。
+   MFC 會在從 shell 開啟檔時，註冊檔檔類型並處理檔案類型。 Windows Forms 沒有檔支援。
 
-- 文件狀態
+- 檔狀態
 
-   MFC 會維護文件的變更狀態。 因此，當您關閉應用程式、 關閉的最後一個檢視，其中包含應用程式，或結束 Windows，MFC 會提示您儲存文件。 Windows Form 有沒有對等的支援。
+   MFC 會維護檔的已變更狀態。 因此，當您關閉應用程式時，請關閉包含應用程式的最後一個視圖，或從 Windows 結束，MFC 會提示您儲存檔。 Windows Forms 沒有對等的支援。
 
 - 命令
 
-   MFC 會具有命令的概念。 功能表列、 工具列和快顯功能表所有可以叫用相同的命令，例如剪下和複製。 在 Windows Forms 中，命令會緊密繫結的事件，從特定的 UI 項目 （例如功能表項目）;因此，您必須明確地連結命令的所有事件。 您也可以處理多個事件與 Windows Form 中的單一處理常式。 如需詳細資訊，請參閱 <<c0> [ 連接至 Windows Forms 中的單一事件處理常式的多個事件](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)。
+   MFC 具有命令的概念。 功能表列、工具列和內容功能表都可以叫用相同的命令，例如，剪下和複製。 在 Windows Forms 中，命令會從特定的 UI 元素（例如功能表項目）緊密系結事件;因此，您必須明確地連結所有命令事件。 您也可以在 Windows Forms 中使用單一處理程式來處理多個事件。 如需詳細資訊，請參閱[在 Windows Forms 中將多個事件連接到單一事件處理常式](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)。
 
 - 命令路由
 
-   MFC 命令路由，可讓現用檢視表或文件來處理命令。 因為相同的命令通常會有不同的意義不同的檢視 （例如，複製其行為與以不同的方式比在圖形編輯器中的文字編輯檢視中），命令必須由使用中的檢視。 Windows Form 功能表和工具列有沒有固有的了解使用中的檢視，因為您不能有不同的處理常式，如每種檢視類型您**MenuItem.Click**事件，而不需要撰寫額外的內部程式碼。
+   MFC 命令路由可讓使用中的 view 或 document 來處理命令。 因為相同的命令通常對於不同的視圖具有不同的意義（例如，複製在文字編輯檢視中的行為不同于圖形編輯器），所以必須由現用視圖來處理命令。 因為 Windows Forms 功能表和工具列並不會對使用中的視圖有任何固有的瞭解，所以您的 MenuItem 的每個檢視類型不能有不同的處理常式 **。請按一下**[事件]，而不需要撰寫額外的內部
 
 - 命令更新機制
 
-   MFC 會具有更新機制的命令。 因此，在現用檢視表或文件是負責 UI 項目 （例如，啟用或停用功能表項目、 工具列按鈕和核取狀態） 的狀態。 Windows Form 有沒有對等的命令更新機制。
+   MFC 有一個命令更新機制。 因此，即時檢視或檔會負責 UI 元素的狀態（例如，啟用或停用功能表項目或工具按鈕，以及已核取的狀態）。 Windows Forms 沒有對等的命令更新機制。
 
 ## <a name="see-also"></a>另請參閱
 

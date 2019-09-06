@@ -1,21 +1,24 @@
 ---
 title: ref 類別和 ref 結構 (C++/CLI 和 C++/CX)
-ms.date: 05/16/2019
+ms.date: 05/30/2019
 ms.topic: reference
 f1_keywords:
 - ref class
+- value class
+- ref struct
+- value struct
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: 9c993b134d6d359d0bc756f5e79d2f9cc137c9cf
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
-ms.translationtype: HT
+ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65788779"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311774"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref 類別和 ref 結構 (C++/CLI 和 C++/CX)
 
@@ -84,7 +87,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="remarks"></a>備註
 
-請參閱 [Ref 類別與結構](../cppcx/ref-classes-and-structs-c-cx.md)和[實值類別與結構](https://msdn.microsoft.com/library/windows/apps/hh699861.aspx)。
+請參閱 [Ref 類別與結構](../cppcx/ref-classes-and-structs-c-cx.md)和[實值類別與結構](../cppcx/value-classes-and-structs-c-cx.md)。
 
 ### <a name="parameters"></a>參數
 

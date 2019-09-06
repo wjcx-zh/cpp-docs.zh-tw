@@ -6,22 +6,22 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9c59f28739ab94210c16bd800a48997f3f2282df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df193bae541aecf8416056c2b169f0079539d173
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222867"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311787"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>將 Windows Form 使用者控制項裝載為 MFC 檢視
 
-MFC 會使用 CWinFormsView 類別來裝載 Windows Forms 使用者控制項的 MFC 檢視中。 MFC Windows Form 檢視是 ActiveX 控制項。 使用者控制項裝載為原生檢視的子系，而且佔用的原生檢視整個工作區。
+MFC 會使用 CWinFormsView 類別，在 MFC 視圖中裝載 Windows Forms 的使用者控制項。 MFC Windows Forms views 是 ActiveX 控制項。 使用者控制項會裝載為原生視圖的子系，並佔用原生視圖的整個工作區。
 
-最後的結果類似於所使用的模型[CFormView 類別](../mfc/reference/cformview-class.md)。 這可讓您充分利用 Windows Form 設計工具和執行階段，來建立豐富的以 form 為基礎的檢視。
+最後的結果會與[CFormView 類別](../mfc/reference/cformview-class.md)所使用的模型類似。 這可讓您利用 Windows Forms 的設計工具和執行時間來建立以表單為基礎的豐富視圖。
 
-MFC Windows Form 檢視是 ActiveX 控制項，因為它們並沒有相同`hwnd`為 MFC 檢視。 不能將它們傳遞為指標的也[CView](../mfc/reference/cview-class.md)檢視。 一般情況下，若要使用 Windows Form 檢視，並較不 Win32 依賴使用.NET Framework 方法。
+因為 mfc Windows Forms views 是 ActiveX 控制項，所以它們與 MFC views 並`hwnd`不相同。 此外，它們也無法當做[CView](../mfc/reference/cview-class.md)視圖的指標來傳遞。 一般來說，請使用 .NET Framework 方法來處理 Windows Forms 的 views，並在 Win32 上依賴較少的。
 
-顯示 Windows Form 搭配 MFC 使用的範例應用程式，請參閱[MFC 與 Windows Form 整合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)。
 
 ## <a name="in-this-section"></a>本節內容
 

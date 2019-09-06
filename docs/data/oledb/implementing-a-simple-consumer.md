@@ -1,15 +1,15 @@
 ---
 title: 實作簡單消費者
-ms.date: 05/09/2019
+ms.date: 08/19/2019
 helpviewer_keywords:
 - OLE DB consumers, implementing
 ms.assetid: 13828167-23a4-4e94-8b6c-878262fda464
-ms.openlocfilehash: 67bce55a19a2aaaf3a8cbb62d7db228513e93c91
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2f290f2a17c51682c75fbc09118757e5fd12c4f7
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707538"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311898"
 ---
 # <a name="implementing-a-simple-consumer"></a>實作簡單消費者
 
@@ -42,7 +42,7 @@ Visual Studio 2019 及更新版本中未提供 ATL OLE DB 消費者精靈。 您
     ```cpp
     // MyCons.cpp : Defines the entry point for the console application.
     //
-    #include "stdafx.h"
+    #include "pch.h" // "stdafx.h" in Visual Studio 2017 and earlier
     #include "Products.h"
     ...
     int main(int argc, char* argv[])

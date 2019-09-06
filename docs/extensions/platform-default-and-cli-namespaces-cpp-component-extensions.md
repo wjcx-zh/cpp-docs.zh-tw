@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: a7599e2987d27626e6f5c9d049d9a3bd4509c3ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516513"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311639"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>平台、預設和 CLI 命名空間  (C++/CLI 和 C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "65516513"
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-如需詳細資訊，請參閱[命名空間和類型可視性 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh969551.aspx)。
+如需詳細資訊，請參閱[命名空間和類型可視性 (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md)。
 
 ### <a name="requirements"></a>需求
 

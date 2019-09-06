@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: eb9b3907008147cb21f04aec5f42e4896fa35b3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516473"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "70311899"
 ---
 # <a name="partial--ccli-and-ccx"></a>partial  (C++/CLI 和 C++/CX)
 
@@ -67,7 +67,7 @@ class-key identifier {
 
 泛型：如果完整定義可以是泛型，部分類別也可以是泛型。 但每個部分和完整類別都必須有完全相同的泛型參數，包括型式參數名稱。
 
-如需如何使用 **partial** 關鍵字的詳細資訊，請參閱[部分類別 (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)。
+如需如何使用 **partial** 關鍵字的詳細資訊，請參閱[部分類別 (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)。
 
 ### <a name="requirements"></a>需求
 
@@ -79,4 +79,4 @@ class-key identifier {
 
 ## <a name="see-also"></a>另請參閱
 
-[部分類別 (C++/CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)
+[部分類別 (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

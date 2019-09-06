@@ -1,24 +1,24 @@
 ---
-title: 在例外狀況處理-CLR 之下的行為差異
+title: 例外狀況處理行為的差異-CLR
 ms.date: 11/04/2016
 helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b84c51bc6adbb4fd879aadbca2856887e51fc401
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400574"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311656"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>在 /CLR 之下例外狀況處理行為的差異
 
-[使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)討論 managed 應用程式中處理的例外狀況。 在本主題中會詳細討論例外狀況處理之標準行為差異和一些限制。 如需詳細資訊，請參閱 < [_set_se_translator 函式](../c-runtime-library/reference/set-se-translator.md)。
+[使用 Managed 例外狀況的基本概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)討論 managed 應用程式中的例外狀況處理。 在本主題中會詳細討論例外狀況處理之標準行為差異和一些限制。 如需詳細資訊，請參閱[_Set_se_translator 函數](../c-runtime-library/reference/set-se-translator.md)。
 
-##  <a name="vcconjumpingoutofafinallyblock"></a> 跳出 Finally 區塊
+##  <a name="vcconjumpingoutofafinallyblock"></a>跳出 Finally 區塊
 
-在原生 C /C++程式碼，跳出 __**最後**縱使會產生一則警告允許使用結構化例外狀況處理 (SEH) 的區塊。  底下[/clr](../build/reference/clr-common-language-runtime-compilation.md)，跳出**最後**區塊會產生錯誤：
+在原生 CC++ /程式碼中，允許使用結構化例外狀況處理（SEH）跳出 __**finally**區塊，雖然它會產生警告。  在[/clr](../build/reference/clr-common-language-runtime-compilation.md)底下，跳出**finally**區塊會造成錯誤：
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -31,11 +31,11 @@ int main() {
 }   // C3276
 ```
 
-##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a> 例外狀況篩選條件內引發例外狀況
+##  <a name="vcconraisingexceptionswithinanexceptionfilter"></a>在例外狀況篩選準則中引發例外狀況
 
-當在處理期間引發例外狀況[例外狀況篩選條件](../cpp/writing-an-exception-filter.md)內受管理的程式碼中，例外狀況會遭到攔截，並視為篩選條件傳回 0。
+在 managed 程式碼內的[例外狀況篩選](../cpp/writing-an-exception-filter.md)處理期間引發例外狀況時，會攔截例外狀況，並將它視為篩選準則傳回0。
 
-這是相較於行為，會引發巢狀例外狀況，原生程式碼**Exception_record**欄位中**EXCEPTION_RECORD**結構 (傳回[GetExceptionInformation](/windows/desktop/Debug/getexceptioninformation)) 設定，而**ExceptionFlags**欄位會設定 0x10 位元。 以下範例說明行為中的差異：
+這與引發嵌套例外狀況的機器碼中的行為相反，已設定**EXCEPTION_RECORD**結構中的**ExceptionRecord**欄位（如[GetExceptionInformation](/windows/win32/Debug/getexceptioninformation)所傳回），而**ExceptionFlags**欄位設定0x10 位。 以下範例說明行為中的差異：
 
 ```cpp
 // clr_exception_handling_5.cpp
@@ -95,9 +95,9 @@ Caught a nested exception
 We should execute this handler if compiled to native
 ```
 
-##  <a name="vccondisassociatedrethrows"></a> 取消關聯重新擲回
+##  <a name="vccondisassociatedrethrows"></a>取消關聯重新擲回
 
-**/clr**不支援外部 catch 處理常式 （又稱為取消關聯重新擲回） 例外狀況重新擲回。 這個類型的例外狀況會視為標準 C++ 重新擲回。 若在發生作用中 Managed 例外狀況時遇到取消關聯重新擲回，例外狀況會包裝為 C ++. 例外狀況，然後重新擲回。 此類型的例外狀況可能只會攔截例外狀況的類型為<xref:System.Runtime.InteropServices.SEHException>。
+**/clr**不支援重新擲回 catch 處理常式之外的例外狀況（稱為解除關聯重新擲回）。 這個類型的例外狀況會視為標準 C++ 重新擲回。 若在發生作用中 Managed 例外狀況時遇到取消關聯重新擲回，例外狀況會包裝為 C ++. 例外狀況，然後重新擲回。 此類型的例外狀況只能捕捉為類型<xref:System.Runtime.InteropServices.SEHException>的例外狀況。
 
 下列範例示範 Managed 例外狀況重新擲回為 C ++. 例外狀況：
 
@@ -147,11 +147,11 @@ int main() {
 caught an SEH Exception
 ```
 
-##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外狀況篩選條件和 EXCEPTION_CONTINUE_EXECUTION
+##  <a name="vcconexceptionfiltersandexception_continue_execution"></a>例外狀況篩選準則和 EXCEPTION_CONTINUE_EXECUTION
 
-如果篩選條件在 Managed 應用程式中傳回 `EXCEPTION_CONTINUE_EXECUTION`，則會視為篩選條件已傳回 `EXCEPTION_CONTINUE_SEARCH`。 如需有關這些常數的詳細資訊，請參閱 <<c0> [ 嘗試-try-except 陳述式](../cpp/try-except-statement.md)。
+如果篩選條件在 Managed 應用程式中傳回 `EXCEPTION_CONTINUE_EXECUTION`，則會視為篩選條件已傳回 `EXCEPTION_CONTINUE_SEARCH`。 如需這些常數的詳細資訊，請參閱[try-Except 語句](../cpp/try-except-statement.md)。
 
-下列範例會示範這項差異：
+下列範例示範這項差異：
 
 ```cpp
 // clr_exception_handling_7.cpp
@@ -188,7 +188,7 @@ int main() {
 Counter=-3
 ```
 
-##  <a name="vcconthe_set_se_translatorfunction"></a> _Set_se_translator 函式
+##  <a name="vcconthe_set_se_translatorfunction"></a>_Set_se_translator 函式
 
 由呼叫 `_set_se_translator` 設定的翻譯工具函式，只影響 Unmanaged 程式碼中的攔截。 下列範例示範此限制：
 

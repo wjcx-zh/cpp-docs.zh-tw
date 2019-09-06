@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: 421723ed561e8ed986a64024c4c5d29c9fba6110
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 85e95afa92c8a968865d9a3031e1a309e68ae7d3
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525111"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311897"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>未使用精靈建立消費者
 
@@ -17,7 +17,7 @@ ms.locfileid: "65525111"
 
 若要在不使用 **ATL OLE DB 消費者精靈**的情況下新增 OLE DB 消費者支援：
 
-- 在 pch.h 檔案中，附加下列 `#include` 陳述式：
+- 在您的*pch .h*檔案中，附加下列`#include`語句：
 
     ```cpp
     #include <atlbase.h>

@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - safe_cast keyword [C++]
 ms.assetid: 4fa688bf-a8ec-49bc-a4c5-f48134efa4f7
-ms.openlocfilehash: 199fda710a077998c6b10f101f6ebc15573e675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 42e141caed720aa29cf918a2bdf69d9a2c4203dc
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516633"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311816"
 ---
-# <a name="safecast-ccli-and-ccx"></a>safe_cast (C++/CLI 和 C++/CX)
+# <a name="safe_cast-ccli-and-ccx"></a>safe_cast (C++/CLI 和 C++/CX)
 
 如果成功，**safe_cast** 作業會傳回指定的運算式作為指定的型別，否則會擲回 `InvalidCastException`。
 
@@ -32,7 +32,7 @@ ms.locfileid: "65516633"
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-**safe_cast** 可讓您變更指定運算式的型別。 在您完全預期變數或參數可轉換成特定類型的情況下，您可以在不使用 **try-catch** 區塊的情況下使用 **safe_cast**，在開發期間偵測程式設計錯誤。 如需詳細資訊，請參閱[轉換 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755802.aspx) \(部分機器翻譯\)。
+**safe_cast** 可讓您變更指定運算式的型別。 在您完全預期變數或參數可轉換成特定類型的情況下，您可以在不使用 **try-catch** 區塊的情況下使用 **safe_cast**，在開發期間偵測程式設計錯誤。 如需詳細資訊，請參閱[轉換 (C++/CX)](../cppcx/casting-c-cx.md) \(部分機器翻譯\)。
 
 ### <a name="syntax"></a>語法
 

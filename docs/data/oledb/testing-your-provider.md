@@ -6,22 +6,22 @@ helpviewer_keywords:
 - testing providers
 - OLE DB providers, testing
 ms.assetid: bf824fe4-81af-4ffb-beb3-4fa2928dc450
-ms.openlocfilehash: d7a3adad546834e2bdc80a695f4c3bf2259dc0ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722757b93d3423b02340c382b16e08a31626bc01
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389121"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311939"
 ---
 # <a name="testing-your-provider"></a>測試提供者
 
-您發行的提供者之前，您應該進行下列測試，顯示的順序。 這些測試顯示，大部分的潛在使用者正確的提供者函式。
+在您釋放提供者之前，您應依照指示的循序執行下列測試。 這些測試會顯示提供者對大部分潛在使用者的功能正常。
 
-1. 測試使用的提供者[消費者](../../data/oledb/creating-an-ole-db-consumer.md)使用 OLE DB 消費者範本撰寫的應用程式。 測試取用者應該涵蓋您的提供者 （所有程式碼，您已加入或修改） 的所有功能區域。
+1. 使用以 OLE DB 取用者範本撰寫的取用[者](../../data/oledb/creating-an-ole-db-consumer.md)應用程式來測試提供者。 測試取用者應涵蓋提供者的所有功能區域（您已新增或修改的所有程式碼）。
 
-1. 測試使用與 ADO 撰寫的取用者應用程式的提供者。 大部分的開發人員 （特別是 Microsoft Visual Basic 和 Microsoft C# 開發人員） 會使用 ADO 或 ADO.NET 取用者應用程式。 測試取用者應該涵蓋您的提供者的所有功能區域。 如需 ADO 取用者應用程式的範例，請參閱 < [Microsoft Visual Basic 中的 ADO 程式碼範例](https://msdn.microsoft.com/library/ms807514.aspx)。
+1. 使用以 ADO 撰寫的取用者應用程式來測試提供者。 大部分的開發人員（特別是 Microsoft C# Visual Basic 和 microsoft 開發人員）都會針對取用者應用程式使用 ADO 或 ADO.NET。 測試取用者應涵蓋提供者的所有功能區域。 如需 ADO 取用者應用程式的範例，請參閱[Microsoft Visual Basic 中的 ado 程式碼範例](/previous-versions/ms807514(v=msdn.10))。
 
-1. 執行 OLE DB 一致性測試 （包括 ADO 一致性測試），以顯示您的提供者符合層級 0 的標準，OLE DB 提供者。 (如需層級 0 的說明，搜尋**OLE DB 層級 0 一致性測試**在[OLE DB 程式設計人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)。 這些測試與相關聯的文件會包含具有視覺效果C++Data Access SDK 中。 這些測試也會協助顯示您的提供者執行其他彙總時，也[服務提供者](../../data/oledb/ole-db-resource-pooling-and-services.md)時特別有用，如果您修改或新增屬性。 如需有關一致性測試的詳細資訊，請參閱 Data Access SDK，位於其中一個 Visual Studio Cd 上讀我檔案。
+1. 執行 OLE DB 一致性測試（包括 ADO 一致性測試），以顯示您的提供者符合 OLE DB 提供者的層級0標準。 （如需層級0的說明，請在 OLE DB 程式設計[人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)中搜尋**OLE DB 層級0一致性測試**。 這些測試和相關檔會隨附在資料C++存取 SDK 的 Visual 中。 這些測試也有助於顯示，您的提供者會在由其他[服務提供者](../../data/oledb/ole-db-resource-pooling-and-services.md)匯總時順利執行，而且在您修改或加入屬性時特別有用。 如需有關一致性測試的詳細資訊，請參閱資料存取 SDK 的讀我檔案，此檔案位於其中一個 Visual Studio Cd 上。
 
 ## <a name="see-also"></a>另請參閱
 

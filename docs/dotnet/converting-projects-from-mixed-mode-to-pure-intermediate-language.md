@@ -1,44 +1,44 @@
 ---
 title: 將專案從混合模式轉換為純中繼語言
-ms.date: 11/04/2016
+ms.date: 08/19/2019
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448050"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "70311941"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>將專案從混合模式轉換為純中繼語言
 
-所有 Visual C++ CLR 專案連結到 C 執行階段程式庫預設值。 因此，這些專案分類為混合式應用程式，因為它們結合以 common language runtime （managed 程式碼） 為目標的程式碼的原生程式碼。 在編譯時它們會編譯成中繼語言 (IL)，也稱為 Microsoft intermediate language (MSIL)。
+根據預設C++ ，所有 Visual CLR 專案都會連結到 C 執行時間程式庫。 因此，這些專案會分類為混合模式應用程式，因為它們會將機器碼與以 common language runtime （managed 程式碼）為目標的程式碼結合。 編譯時，它們會編譯成中繼語言（IL），也稱為 Microsoft 中繼語言（MSIL）。
 
 > [!IMPORTANT]
-> 已被取代的 visual Studio 2015 和 Visual Studio 2017 不再支援建立 **/clr: pure**或是 **/clr: safe** CLR 應用程式程式碼。 如果您需要純或安全的組件時，我們建議您將轉譯成 C# 應用程式。
+> Visual Studio 2015 已淘汰，Visual Studio 2017 不再支援為 CLR 應用程式建立 **/clr： pure**或 **/clr： safe**程式碼。 如果您需要純或 safe 元件，建議您將應用程式轉譯為C#。
 
-如果您使用較早版本的 MicrosoftC++支援的編譯器工具組 **/clr: pure**或 **/clr: safe**，您可以使用此程序轉換為純 MSIL 的程式碼：
+如果您使用的是支援 **/clr： pure**或C++ **/Clr： safe**的舊版 Microsoft 編譯器工具組，您可以使用這個程式將程式碼轉換成純 MSIL：
 
-### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>若要將您的混合式應用程式轉換成純中繼語言
+### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>將混合模式應用程式轉換為純中繼語言
 
-1. 移除連結[C 執行階段程式庫](../c-runtime-library/crt-library-features.md)(CRT):
+1. 移除[C 執行時間程式庫](../c-runtime-library/crt-library-features.md)（CRT）的連結：
 
-   1. 在.cpp 檔案中定義您的應用程式的進入點變更的進入點`Main()`。 使用`Main()`指出您的專案不會連結到 CRT。
+   1. 在定義應用程式進入點的 .cpp 檔案中，將進入點變更為`Main()`。 使用`Main()`表示您的專案不會連結至 CRT。
 
-   2. 在 [方案總管] 中，以滑鼠右鍵按一下您的專案，然後選取**屬性**的捷徑功能表，開啟您的應用程式的屬性頁上。
+   2. 在方案總管中，以滑鼠右鍵按一下您的專案，然後選取快捷方式功能表上的 [**屬性**]，以開啟應用程式的屬性頁。
 
-   3. 在**進階**專案屬性頁**連結器**，選取**進入點**，然後輸入**Main**在此欄位中。
+   3. 在**連結器**的 [ **Advanced** project] 屬性頁中，選取**進入點**，然後在此欄位中輸入**Main** 。
 
-   4. 主控台應用程式，在**系統**專案屬性頁**連結器**，選取**子系統**欄位，然後變更為**主控台 （/SUBSYSTEM:CONSOLE)**。
+   4. 針對主控台應用程式，請在**連結器**的 [**系統**專案] 屬性頁中選取 [**子系統**] 欄位，並將其變更為 **[主控台（/SUBSYSTEM：主控台）** ]。
 
       > [!NOTE]
-      > 您沒有設定這個屬性，Windows Forms 應用程式，因為**子系統**欄位設定為**Windows (/ 子系統： WINDOWS)** 預設。
+      > 您不需要為 Windows Forms 應用程式設定此屬性，因為 [**子系統**] 欄位預設會設定為 [ **windows （/SUBSYSTEM： windows）** ]。
 
-   5. 在 stdafx.h 中標記為註解所有`#include`陳述式。 例如，在主控台應用程式：
+   5. 在*stdafx.h*中，將所有語句標記為`#include`批註。 例如，在主控台應用程式中：
 
       ```cpp
       // #include <iostream>
@@ -47,7 +47,7 @@ ms.locfileid: "65448050"
 
        -或-
 
-       例如，在 Windows Forms 應用程式：
+       例如，在 Windows Forms 應用程式中：
 
       ```cpp
       // #include <stdlib.h>
@@ -56,13 +56,13 @@ ms.locfileid: "65448050"
       // #include <tchar.h>
       ```
 
-   6. 針對 Windows Forms 應用程式，在 Form1.cpp，標記為註解`#include`參考 windows.h 陳述式。 例如：
+   6. 針對 Windows Forms 應用程式，在 form1.vb 中，將參考 Windows `#include`的語句標記為批註。 例如：
 
       ```cpp
       // #include <windows.h>
       ```
 
-2. 將下列程式碼新增至 stdafx.h 中：
+2. 將下列程式碼新增至*stdafx.h*：
 
    ```cpp
    #ifndef __FLTUSED__
@@ -71,9 +71,9 @@ ms.locfileid: "65448050"
    #endif
    ```
 
-3. 移除所有的非受控型別：
+3. 移除所有非受控類型：
 
-   只要適當地取代未受管理的類型結構的參考[系統](/dotnet/api/system)命名空間。 下表列出常見 managed 型別：
+   在適當的情況下，將非受控類型取代為[系統](/dotnet/api/system)命名空間中結構的參考。 下表列出常見的 managed 類型：
 
    |結構|描述|
    |---------------|-----------------|
@@ -95,4 +95,4 @@ ms.locfileid: "65448050"
    |[UInt32](/dotnet/api/system.uint32)|表示 32 位元不帶正負號的整數 (Unsigned Integer)。|
    |[UInt64](/dotnet/api/system.uint64)|表示 64 位元不帶正負號的整數 (Unsigned Integer)。|
    |[UIntPtr](/dotnet/api/system.uintptr)|平台專用的類型，用以代表指標或控點。|
-   |[Void](/dotnet/api/system.void)|表示不會傳回值的方法也就是方法具有 void 傳回型別。|
+   |[空位](/dotnet/api/system.void)|表示不會傳回值的方法。也就是說，此方法具有 void 傳回型別。|

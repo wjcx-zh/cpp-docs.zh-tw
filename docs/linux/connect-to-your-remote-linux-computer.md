@@ -1,14 +1,14 @@
 ---
 title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦或 WSL。
-ms.date: 06/19/2019
+ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
-ms.translationtype: HT
+ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
+ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68313417"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383395"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 
@@ -28,11 +28,11 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 設定此遠端連線：
 
-1. 第一次建置專案，或選取 [工具] > [選項]  手動建立新項目，並開啟 [跨平台] > [連線管理員]  節點，然後按一下 [新增]  按鈕。
+1. 第一次建置專案，或選取 [工具] > [選項] 手動建立新項目，並開啟 [跨平台] > [連線管理員] 節點，然後按一下 [新增] 按鈕。
 
    ![連線管理員](media/settings_connectionmanager.png)
 
-   在任一情況下，都會顯示 [Connect to Remote System]\(連線到遠端系統)  視窗。
+   在任一情況下，都會顯示 [Connect to Remote System]\(連線到遠端系統) 視窗。
 
    ![連線到遠端系統](media/connect.png)
 
@@ -58,7 +58,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
     1. 在 Linux 系統上，將金鑰新增至授權金鑰的清單中 (並確認檔案有正確的權限)：`cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
 
-1. 按一下 [連線]  按鈕，嘗試連線到遠端電腦。 
+1. 按一下 [連線] 按鈕，嘗試連線到遠端電腦。 
 
    如果連線成功，Visual Studio 會開始將 IntelliSense 設定為使用遠端標頭。 如需詳細資訊，請參閱[適用於遠端系統標頭的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
@@ -72,13 +72,13 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2019"
 
-   移至 [工具] > [選項] > [跨平台] > [記錄]  來啟用記錄，以協助疑難排解連線問題：
+   移至 [工具] > [選項] > [跨平台] > [記錄] 來啟用記錄，以協助疑難排解連線問題：
 
    ![遠端記錄](media/remote-logging-vs2019.png)
 
    記錄檔包含連線、傳送到遠端電腦 (其文字、結束代碼和執行時間) 的所有命令，以及從 Visual Studio 到殼層的所有輸出。 記錄適用於任何跨平台的 CMake 專案或 Visual Studio 中的 MSBuild 型 Linux 專案。
 
-   您可以設定輸出到檔案或 [輸出] 視窗中的 [跨平台記錄]  窗格。 對於 MSBuild 型 Linux 專案，MSBuild 發出到遠端電腦的命令不會路由傳送至 [輸出視窗]  ，因為它們是跨處理序發出的。 但是，它們會記錄到前置詞為 "msbuild_" 的檔案中。
+   您可以設定輸出到檔案或 [輸出] 視窗中的 [跨平台記錄] 窗格。 對於 MSBuild 型 Linux 專案，MSBuild 發出到遠端電腦的命令不會路由傳送至 [輸出視窗]，因為它們是跨處理序發出的。 但是，它們會記錄到前置詞為 "msbuild_" 的檔案中。
 
    ::: moniker-end
 
@@ -86,7 +86,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range="vs-2017"
 
-在 Visual Studio 2017 中，您可以使用與連線到遠端 Linux 電腦的相同步驟，連線到 WSL，如本文稍早所述。 使用 **localhost** 作為 [主機名稱]  。
+在 Visual Studio 2017 中，您可以使用與連線到遠端 Linux 電腦的相同步驟，連線到 WSL，如本文稍早所述。 使用 **localhost** 作為 [主機名稱]。
 
 ::: moniker-end
 
@@ -109,7 +109,4 @@ sudo apt install g++ gdb make rsync zip
 [設定 Linux 專案](configure-a-linux-project.md)<br />
 [設定 Linux CMake 專案](cmake-linux-project.md)<br />
 [部署、執行及偵錯 Linux 專案](deploy-run-and-debug-your-linux-project.md)<br />
-
-
-
-
+[設定 CMake 偵錯工作階段](../build/configure-cmake-debugging-sessions.md)

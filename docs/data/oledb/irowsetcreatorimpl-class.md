@@ -19,16 +19,16 @@ helpviewer_keywords:
 - IRowsetCreatorImpl class
 - SetSite method
 ms.assetid: 92cc950f-7978-4754-8d9a-defa63867d82
-ms.openlocfilehash: 3dc5cb06b3eb7f01667e4e1ec09dd60f9befae77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c4253d469c510f5e6eb996ed510ef836844899d
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390785"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311637"
 ---
 # <a name="irowsetcreatorimpl-class"></a>IRowsetCreatorImpl 類別
 
-執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`。
+會執行與相同的`IObjectWithSite`功能，但也會啟用`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`OLE DB 屬性。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 ### <a name="parameters"></a>參數
 
 *T*<br/>
-類別衍生自`IRowsetCreator`。
+衍生自`IRowsetCreator`的類別。
 
 ## <a name="requirements"></a>需求
 
@@ -53,15 +53,15 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 |||
 |-|-|
-|[SetSite](#setsite)|設定站台，其中包含資料列集物件。|
+|[SetSite](#setsite)|設定包含資料列集物件的網站。|
 
 ## <a name="remarks"></a>備註
 
-這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 當提供者命令或工作階段物件會建立一個資料列集時，它會呼叫`QueryInterface`尋找資料列集物件上`IObjectWithSite`，並呼叫`SetSite`傳遞資料列集物件的`IUnkown`站介面的介面。
+這個類別繼承自[IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite：： SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 當提供者命令或會話物件建立資料列集時， `QueryInterface`它會在`IObjectWithSite`尋找和呼叫`SetSite`傳遞資料列集物件的`IUnkown`介面做為網站介面的資料列集物件上呼叫。
 
-## <a name="setsite"></a> IRowsetCreatorImpl::SetSite
+## <a name="setsite"></a>IRowsetCreatorImpl：： SetSite
 
-設定站台，其中包含資料列集物件。 如需詳細資訊，請參閱 < [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。
+設定包含資料列集物件的網站。 如需詳細資訊，請參閱[IObjectWithSite：： SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。
 
 ### <a name="syntax"></a>語法
 
@@ -72,17 +72,17 @@ STDMETHOD(SetSite )(IUnknown* pCreator);
 #### <a name="parameters"></a>參數
 
 *pCreator*<br/>
-[in]指標`IUnknown`的站台管理的資料列集物件介面指標。
+在管理資料列集物件之網站介面指標的指標。`IUnknown`
 
 ### <a name="return-value"></a>傳回值
 
-標準的 HRESULT。
+標準 HRESULT。
 
 ### <a name="remarks"></a>備註
 
-颾魤 ㄛ`IRowsetCreatorImpl::SetSite`可讓 OLE DB`DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`屬性。
+此外， `IRowsetCreatorImpl::SetSite`也會啟用 OLE DB `DBPROPCANSCROLLBACKWARDS DBPROPCANFETCHBACKWARDS`的屬性。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 提供者樣板](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[OLE DB 提供者範本](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB 提供者範本架構](../../data/oledb/ole-db-provider-template-architecture.md)

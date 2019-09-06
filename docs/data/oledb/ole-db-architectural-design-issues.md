@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
-ms.openlocfilehash: ef2837ea80c61f074cf567ee1fe61fa2cfa0ae73
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b481d9948d3055247bd284ca794a0fa65905e21b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525310"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311829"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB 架構設計問題
 
@@ -38,7 +38,7 @@ Microsoft 提供數個程式庫來完成此工作：OLE DB 範本庫、OLE DB �
 
 - [Microsoft 說明和支援](https://support.microsoft.com/)
 
-- [Microsoft 資料存取技術文章概觀](https://msdn.microsoft.com/library/ms810811.aspx)
+- [Microsoft 資料存取技術文章概觀](/previous-versions/ms810811(v=msdn.10))
 
 ## <a name="see-also"></a>另請參閱
 

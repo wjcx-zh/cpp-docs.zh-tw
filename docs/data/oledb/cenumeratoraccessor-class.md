@@ -37,16 +37,16 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: e609b346bb4a0c2469c24e20540c646fa869ae26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd698499607a5c4f04ccd01207d78fef9328c079
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230728"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311878"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor 類別
 
-供[CEnumerator](../../data/oledb/cenumerator-class.md)從列舉值的資料列集存取資料。
+由[CEnumerator](../../data/oledb/cenumerator-class.md)用來存取列舉值資料列集的資料。
 
 ## <a name="syntax"></a>語法
 
@@ -64,19 +64,19 @@ class CEnumeratorAccessor
 
 |||
 |-|-|
-|[m_bIsParent](#bisparent)|變數，指出是否列舉值的父列舉值，如果資料列的列舉值。|
-|[m_nType](#ntype)|變數，表示資料列描述資料來源] 或 [列舉值。|
-|[m_szDescription](#szdescription)|列舉值之資料來源的描述。|
-|[m_szName](#szname)|列舉值之資料來源的名稱。|
-|[m_szParseName](#szparsename)|要傳遞至字串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)來取得 moniker，針對資料來源或列舉值。|
+|[m_bIsParent](#bisparent)|變數，指出列舉值是否為父枚舉器（如果資料列是列舉值）。|
+|[m_nType](#ntype)|變數，指出資料列是否描述資料來源或列舉值。|
+|[m_szDescription](#szdescription)|資料來源或列舉值的描述。|
+|[m_szName](#szname)|資料來源或列舉值的名稱。|
+|[m_szParseName](#szparsename)|要傳遞至[IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)以取得資料來源或列舉值之標記的字串。|
 
 ## <a name="remarks"></a>備註
 
-此資料列集是由資料來源並顯示從目前的列舉值的列舉值所組成。
+這個資料列集是由目前列舉值所顯示的資料來源和枚舉器所組成。
 
-## <a name="bisparent"></a> CEnumeratorAccessor::m_bIsParent
+## <a name="bisparent"></a>CEnumeratorAccessor：： m_bIsParent
 
-變數，指出是否列舉值的父列舉值，如果資料列的列舉值。
+變數，指出列舉值是否為父枚舉器（如果資料列是列舉值）。
 
 ### <a name="syntax"></a>語法
 
@@ -86,11 +86,11 @@ VARIANT_BOOL m_bIsParent;
 
 ### <a name="remarks"></a>備註
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="ntype"></a> CEnumeratorAccessor::m_nType
+## <a name="ntype"></a>CEnumeratorAccessor：： m_nType
 
-變數，表示資料列描述資料來源] 或 [列舉值。
+變數，指出資料列是否描述資料來源或列舉值。
 
 ### <a name="syntax"></a>語法
 
@@ -100,11 +100,11 @@ USHORT m_nType;
 
 ### <a name="remarks"></a>備註
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="szdescription"></a> CEnumeratorAccessor::m_szDescription
+## <a name="szdescription"></a>CEnumeratorAccessor：： m_szDescription
 
-列舉值之資料來源的描述。
+資料來源或列舉值的描述。
 
 ### <a name="syntax"></a>語法
 
@@ -114,11 +114,11 @@ WCHAR m_szDescription[129];
 
 ### <a name="remarks"></a>備註
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="szname"></a> CEnumeratorAccessor::m_szName
+## <a name="szname"></a>CEnumeratorAccessor：： m_szName
 
-列舉值之資料來源的名稱。
+資料來源或列舉值的名稱。
 
 ### <a name="syntax"></a>語法
 
@@ -128,11 +128,11 @@ WCHAR m_szName[129];
 
 ### <a name="remarks"></a>備註
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
-## <a name="szparsename"></a> CEnumeratorAccessor::m_szParseName
+## <a name="szparsename"></a>CEnumeratorAccessor：： m_szParseName
 
-要傳遞至字串[IParseDisplayName](/windows/desktop/api/oleidl/nn-oleidl-iparsedisplayname)來取得 moniker，針對資料來源或列舉值。
+要傳遞至[IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname)以取得資料來源或列舉值之標記的字串。
 
 ### <a name="syntax"></a>語法
 
@@ -142,9 +142,9 @@ WCHAR m_szParseName[129];
 
 ### <a name="remarks"></a>備註
 
-請參閱[isourcesrowset:: Getsourcesrowset](/previous-versions/windows/desktop/ms711200(v=vs.85))中*OLE DB 程式設計人員參考*如需詳細資訊。
+如需詳細資訊，請參閱*OLE DB 程式設計人員參考*中的[ISourcesRowset：： GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[OLE DB 消費者樣板](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB 消費者範本](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB 消費者範本參考](../../data/oledb/ole-db-consumer-templates-reference.md)

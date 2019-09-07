@@ -2,16 +2,16 @@
 title: default 命名空間
 ms.date: 12/30/2016
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-ms.openlocfilehash: 60a47c9549ee40b419eb5f4aa84720f8dcd1c366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b67aedc791ed41e93268d9e9f44492781940d55e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389459"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740508"
 ---
 # <a name="default-namespace"></a>default 命名空間
 
-`default`命名空間範圍內建類型所支援的C++/CX。
+命名空間會涵蓋C++/cx。支援的內建類型。 `default`
 
 ## <a name="syntax"></a>語法
 
@@ -52,4 +52,4 @@ namespace default;
 
 ## <a name="see-also"></a>另請參閱
 
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)

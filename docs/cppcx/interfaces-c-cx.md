@@ -2,12 +2,12 @@
 title: 介面 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: 04aaf25817cade47e89f0a06c423b68538d947b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 263feb7b9c8a472a6077236596107bdeff26a5a4
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375778"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740194"
 ---
 # <a name="interfaces-ccx"></a>介面 (C++/CX)
 
@@ -25,7 +25,7 @@ ms.locfileid: "62375778"
 
 - 不允許使用欄位和靜態成員。
 
-- 類型會做為屬性、 方法參數或傳回值只能是 Windows 執行階段型別，這包括基本類型和列舉類別類型。
+- 當做屬性、方法參數或傳回值使用的類型只能是 Windows 執行階段類型;這包括基本類型和列舉類別類型。
 
 ## <a name="declaration-and-usage"></a>宣告和用法
 
@@ -63,9 +63,9 @@ ms.locfileid: "62375778"
 
 ## <a name="generic-interfaces"></a>泛型介面
 
-在C++/CX，`generic`關鍵字用以代表參數化的 Windows 執行階段類型。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段定義一些泛型介面 — 例如， [ivector&lt\<T >](Windows::Foundation::Collections::IVector)— 但它並不支援建立公用使用者定義的泛型介面中的C++/CX。 不過，您可以建立私用泛型介面。
+在C++/cx 中， `generic`關鍵字是用來表示 Windows 執行階段參數化型別。 參數化類型會在中繼資料中發出，以供使用支援類型參數之任何語言撰寫的程式碼使用。 Windows 執行階段會定義一些泛型介面（例如[Windows：： Foundation：： collection：：\<IVector T >](Windows::Foundation::Collections::IVector)），但不支援在/cx。中C++建立公用使用者定義的泛型介面。 不過，您可以建立私用泛型介面。
 
-以下是如何使用 Windows 執行階段類型，來撰寫泛型介面：
+以下是如何使用 Windows 執行階段類型來撰寫泛型介面的方法：
 
 - 您不可以將元件中使用者定義的泛型 `interface class` 發出至其 Windows 中繼資料檔案，因此該類別不可以具有公用存取範圍，且其他 .winmd 檔案中的用戶端程式碼無法實作該類別。 此類別可由相同元件中的非公用 ref 類別實作。 公用 ref 類別可以包含泛型介面類型做為私用成員。
 
@@ -77,7 +77,7 @@ ms.locfileid: "62375778"
 
 - 泛型介面可以接受一或多個前面有 `typename` 或 `class`的泛型類型參數。 不支援非類型參數。
 
-- 類型參數可以是任何的 Windows 執行階段類型。 也就是說，類型參數可以是參考類型、實值類型、介面類別、委派、基礎類型或公用列舉類別。
+- 型別參數可以是任何 Windows 執行階段型別。 也就是說，類型參數可以是參考類型、實值類型、介面類別、委派、基礎類型或公用列舉類別。
 
 - 「 *封閉式泛型介面* 」(Closed Generic Interface) 是繼承自泛型介面，並指定所有類型參數之具象類型引數的介面。 只要可以使用非泛型私用介面的地方，都能使用此介面。
 
@@ -89,14 +89,14 @@ ms.locfileid: "62375778"
 
 - 封閉式泛型介面具有隱含產生的 UUID。 使用者無法指定 UUID。
 
-- 在介面中，對目前介面的所有參考 (包括在方法參數、傳回值或屬性中) 都假設為參考目前的具現化。 例如， *IMyIntf*表示*IMyIntf\<T >*。
+- 在介面中，對目前介面的所有參考 (包括在方法參數、傳回值或屬性中) 都假設為參考目前的具現化。 例如， *IMyIntf*表示 *\<IMyIntf T >* 。
 
 - 當方法參數的類型是類型參數時，該參數或變數的宣告會使用類型參數的名稱而不使用任何指標、原生參考或控制代碼宣告子。 換句話說，您不需撰寫 "T^"。
 
-- 樣板化 ref 類別必須是私用類別。 它們可以實作泛型介面，也可以傳遞樣板參數*T*至泛型引數*T*。樣板化 ref 類別的每個具現化本身都是 ref 類別。
+- 樣板化 ref 類別必須是私用類別。 它們可以實作為泛型介面，並且可以將樣板參數*t*傳遞給泛型引數*t*。樣板化 ref 類別的每個具現化本身都是 ref 類別。
 
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

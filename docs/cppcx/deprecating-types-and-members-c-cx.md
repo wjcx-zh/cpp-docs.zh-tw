@@ -2,19 +2,19 @@
 title: 將類型和成員設為已被取代 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-ms.openlocfilehash: 7f488dfa522c0b48c75150d40584b0946baae806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd880af7e206b4c7338e53615594ec2c65c59fc
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301496"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740505"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>將類型和成員設為已被取代 (C++/CX)
 
-在C++/CX，生產者與取用者使用的 Windows 執行階段型別和成員取代[Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)支援屬性。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
+在C++/cx 中，支援使用已被取代的屬性來[取代](/uwp/api/windows.foundation.metadata.deprecatedattribute)Windows 執行階段類型和生產者和取用者的成員。 如果您使用的 API 已套用這個屬性，您會收到一個編譯時期警告訊息，表示 API 已被取代，此外建議替代的 API 以供使用。 在您的公用類型和方法，可以套用這個屬性並提供自訂訊息。
 
 > [!CAUTION]
-> [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)是只能與 Windows 執行階段類型的屬性。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
+> 已[取代](/uwp/api/windows.foundation.metadata.deprecatedattribute)的屬性僅供 Windows 執行階段類型使用。 如果是 Standard C++ 類別和成員，請使用 [__declspec(deprecated)](../cpp/deprecated-cpp.md)。
 
 ### <a name="example"></a>範例
 
@@ -57,5 +57,5 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

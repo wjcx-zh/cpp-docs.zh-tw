@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cprojl function
 ms.assetid: 32b49623-13bf-4cae-802e-7912d75030fe
 ms.openlocfilehash: f1054172a7b5afde134ce9fa735a7eeda3bddafb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445665"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739855"
 ---
 # <a name="cproj-cprojf-cprojl"></a>cproj、cprojf、cprojl
 
@@ -68,17 +68,17 @@ _Lcomplex cprojl(
 
 ## <a name="return-value"></a>傳回值
 
-投影*z*黎曼球面上。
+黎曼球面球體上的*z*投影。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cproj**採用並傳回 **_Fcomplex**並 **_Lcomplex**值。 在 C 程式中， **cproj**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**cproj**的多載。 在 C 程式中， **cproj**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**cproj**， **cprojf**， **cprojl**|\<complex.h>|\<ccomplex>|
+|**cproj**、 **cprojf**、 **cprojl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

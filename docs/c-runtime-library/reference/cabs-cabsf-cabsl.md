@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
 ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623956"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739884"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -68,17 +68,17 @@ long double cabsl(
 
 ## <a name="return-value"></a>傳回值
 
-數值的絕對值*z*。
+*Z*的絕對值。
 
 ## <a name="remarks"></a>備註
 
-因為 c + + 允許多載，您可以呼叫多載**cabs**採用 **_Fcomplex**或是 **_Lcomplex**值並傳回**float**或**長** **double**值。 在 C 程式中， **cabs**一律採用 **_Dcomplex**值，然後傳回**double**值。
+因為C++允許多載，所以您可以呼叫採用 **_Fcomplex**或 **_Lcomplex**值的**計程車**多載，並傳回**float**或**long** **double**值。 在 C 程式中， **cab**一律會採用 **_Dcomplex**值，並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**cabs**， **cabsf**， **cabsl**|\<complex.h>|\<ccomplex>|
+|**cab**、 **cabsf**、 **cabsl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

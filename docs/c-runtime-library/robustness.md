@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: f41fc019c6a1779362644e29c5518d40690fe9db
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 108b4c9dde08adf1a3c54c810f68be69bf150472
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500677"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70739606"
 ---
 # <a name="robustness"></a>加強性
 
@@ -19,7 +19,7 @@ ms.locfileid: "69500677"
 
 ## <a name="run-time-robustness-functions"></a>執行階段加強性函式
 
-|功能|使用|
+|函數|使用|
 |--------------|---------|
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|若 **new** 運算子無法配置記憶體，則將控制項傳送至您的錯誤處理機制。|
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|以 C++ 類型化例外狀況處理 Win32 例外狀況 (C 結構化例外狀況)。|
@@ -29,4 +29,4 @@ ms.locfileid: "69500677"
 ## <a name="see-also"></a>另請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
-[SetUnhandledExceptionFilter](/win32/api/errhandlingapi/nf-errhandlingapi-setunhandledexceptionfilter)<br/>
+[SetUnhandledExceptionFilter](/windows/win32/api/errhandlingapi/nf-errhandlingapi-setunhandledexceptionfilter)<br/>

@@ -3,11 +3,11 @@ title: 字元測試
 ms.date: 11/04/2016
 ms.assetid: 376ba061-bae3-427e-9569-33fa5949a199
 ms.openlocfilehash: b02d07ca2796e5088c3021f1ae8795ea92761943
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147187"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740091"
 ---
 # <a name="character-testing"></a>字元測試
 
@@ -15,7 +15,7 @@ ms.locfileid: "56147187"
 
 下表將描述這些函式，因為它們會由 Microsoft C 編譯器實作。
 
-|功能|測試項目|
+|函數|測試項目|
 |--------------|---------------|
 |`isalnum`|字元 0-9、A-Z、a-z ASCII 48-57、65-90、97-122|
 |`isalpha`|字元 A-Z、a-z ASCII 65-90、97-122|

@@ -2,16 +2,16 @@
 title: 委派 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 3175bf1c-86d8-4eda-8d8f-c5b6753d8e38
-ms.openlocfilehash: e2158adad288045c9a98889dbe97e834dc93ea71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ab455044b98cdd8c7b13a650f729efc2132797e
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406921"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740273"
 ---
 # <a name="delegates-ccx"></a>委派 (C++/CX)
 
-`delegate`關鍵字用來宣告 Windows 執行階段對等項目中標準函式物件的參考型別C++。 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：
+關鍵字是用來宣告參考型別，這是與 standard C++中的函式物件相等的 Windows 執行階段。 `delegate` 委派宣告類似於函式簽章，會指定其包裝函式必須有的傳回類型和參數類型。 這是使用者定義的委派宣告：
 
 ```cpp
 public delegate void PrimeFoundHandler(int result);
@@ -23,11 +23,11 @@ public delegate void PrimeFoundHandler(int result);
 event PrimeFoundHandler^ primeFoundEvent;
 ```
 
-當宣告透過 Windows 執行階段應用程式二進位介面會公開的委派對用戶端，使用[Windows::Foundation::TypedEventHandler\<，TResult >](/uwp/api/windows.foundation.typedeventhandler)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。
+當宣告將在 Windows 執行階段應用程式二進位介面上公開給用戶端的委派時，請使用[Windows：： Foundation\<：： windows.foundation.typedeventhandler<tsender windows.foundation.typedeventhandler<tsender，TResult >](/uwp/api/windows.foundation.typedeventhandler)。 此委派具有預先定義的 Proxy 與 Stub 二進位檔，使其能夠供 Javascript 用戶端使用。
 
 ## <a name="consuming-delegates"></a>使用委派
 
-當您建立通用 Windows 平台應用程式時，您通常使用做為 Windows 執行階段類別所公開的事件類型的委派。 若要訂閱事件，請指定符合委派簽章的函式 (Lambda)，建立事件的委派類型執行個體。 然後使用 `+=` 運算子，將委派物件傳遞給類別的事件成員。 這就是所謂的訂閱事件。 當類別執行個體「引發」事件時，就會呼叫您的函式，以及任何其他已由您的物件或其他物件加入的處理常式。
+當您建立通用 Windows 平臺應用程式時，通常會使用委派做為 Windows 執行階段類別所公開的事件種類。 若要訂閱事件，請指定符合委派簽章的函式 (Lambda)，建立事件的委派類型執行個體。 然後使用 `+=` 運算子，將委派物件傳遞給類別的事件成員。 這就是所謂的訂閱事件。 當類別執行個體「引發」事件時，就會呼叫您的函式，以及任何其他已由您的物件或其他物件加入的處理常式。
 
 > [!TIP]
 > 當您建立事件處理常式時，Visual Studio 會為您執行許多工作。 例如，如果您在 XAML 標記中指定事件處理常式，工具提示隨即出現。 如果您選擇工具提示，Visual Studio 會自動建立事件處理常式方法，並將此方法關聯至發行類別上的事件。
@@ -43,9 +43,9 @@ event PrimeFoundHandler^ primeFoundEvent;
 [!code-cpp[cx_delegates#121](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#121)]
 
 > [!WARNING]
-> 一般來說，如果是事件處理常式，最好使用具名函式而不是 Lambda，除非您十分小心避免循環參考。 具名函式會依弱式參考擷取 "this" 指標，而 Lambda 則是依強式參考來擷取，並且會建立循環參考。 如需詳細資訊，請參閱 <<c0> [ 弱式參考與中斷循環](../cppcx/weak-references-and-breaking-cycles-c-cx.md)。
+> 一般來說，如果是事件處理常式，最好使用具名函式而不是 Lambda，除非您十分小心避免循環參考。 具名函式會依弱式參考擷取 "this" 指標，而 Lambda 則是依強式參考來擷取，並且會建立循環參考。 如需詳細資訊，請參閱[弱式參考和中斷迴圈](../cppcx/weak-references-and-breaking-cycles-c-cx.md)。
 
-依照慣例，由 Windows 執行階段所定義的事件處理常式委派名稱具有表單 * EventHandler — 例如，RoutedEventHandler、 SizeChangedEventHandler 或 SuspendingEventHandler。 同樣依照慣例，事件處理常式委派會有兩個參數，並傳回 void。 在沒有類型參數的委派中，第一個參數是 [Platform::Object^](../cppcx/platform-object-class.md)類型，它保存對傳送者的參考，傳送者是引發事件的物件。 您必須先轉換回原始類型，才能在事件處理常式方法中使用這個引數。 在具有類型參數的事件處理常式委派中，第一個類型參數指定傳送者的類型，而第二個參數則是 ref 類別的控制代碼，保存事件的相關資訊。 依照慣例，該類別名為\*EventArgs。 例如，RoutedEventHandler 委派具有類型為 RoutedEventArgs^ 的第二個參數，而 DragEventHander 具有類型為 DragEventArgs^ 的第二個參數。
+依照慣例，由 Windows 執行階段定義的事件處理常式委派名稱的格式為 * EventHandler，例如 RoutedEventHandler、SizeChangedEventHandler 或 SuspendingEventHandler。 同樣依照慣例，事件處理常式委派會有兩個參數，並傳回 void。 在沒有類型參數的委派中，第一個參數是 [Platform::Object^](../cppcx/platform-object-class.md)類型，它保存對傳送者的參考，傳送者是引發事件的物件。 您必須先轉換回原始類型，才能在事件處理常式方法中使用這個引數。 在具有類型參數的事件處理常式委派中，第一個類型參數指定傳送者的類型，而第二個參數則是 ref 類別的控制代碼，保存事件的相關資訊。 依照慣例，該類別會命名\*為 EventArgs。 例如，RoutedEventHandler 委派具有類型為 RoutedEventArgs^ 的第二個參數，而 DragEventHander 具有類型為 DragEventArgs^ 的第二個參數。
 
 依照慣例，會將包裝在非同步作業完成時執行之程式碼的委派命名為 *CompletedHandler。 這些委派會定義為類別的屬性，而非事件。 因此，您不是使用 `+=` 運算子訂閱這些委派，而是直接指派委派物件給屬性。
 
@@ -54,7 +54,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 
 ## <a name="creating-custom-delegates"></a>建立自訂委派
 
-您可以定義自己的委派，可定義事件處理常式，或讓消費者將自訂功能傳遞至您的 Windows 執行階段元件。 像其他任何 Windows 執行階段類型，公用委派無法宣告為泛型。
+您可以定義自己的委派，以定義事件處理常式，或讓取用者將自訂功能傳入您的 Windows 執行階段元件。 就像任何其他 Windows 執行階段類型一樣，公用委派也不能宣告為泛型。
 
 ### <a name="declaration"></a>宣告
 
@@ -67,9 +67,9 @@ event PrimeFoundHandler^ primeFoundEvent;
 [!code-cpp[Cx_delegates#112](../cppcx/codesnippet/CPP/delegatesevents/class1.h#112)]
 
 > [!NOTE]
-> 您使用"^"符號參考委派型別時，就如同您使用任何 Windows 執行階段參考類型。
+> 當您參考委派類型時，會使用 "^" 符號，就像使用任何 Windows 執行階段參考型別一樣。
 
-事件宣告一律都有委派類型。 此範例示範典型的委派類型簽章，在 Windows 執行階段：
+事件宣告一律都有委派類型。 這個範例會顯示 Windows 執行階段中的一般委派類型簽章：
 
 [!code-cpp[cx_delegates#122](../cppcx/codesnippet/CPP/delegatesevents/class1.h#122)]
 
@@ -83,7 +83,7 @@ event PrimeFoundHandler^ primeFoundEvent;
 
 [!code-cpp[Cx_delegates#114](../cppcx/codesnippet/CPP/delegatesevents/class1.cpp#114)]
 
-在下一個範例中，用戶端應用程式將自訂委派傳遞至執行中的每個項目對委派的 Windows 執行階段元件中的公用方法`Vector`:
+在下一個範例中，用戶端應用程式會將自訂委派傳遞至 Windows 執行階段元件中的公用方法，以針對中`Vector`的每個專案執行委派：
 
 [!code-cpp[Cx_delegates#118](../cppcx/codesnippet/CPP/clientapp/mainpage.xaml.cpp#118)]
 
@@ -122,7 +122,7 @@ C++/CX 的泛型委派有類似於泛型類別宣告的限制。 它們不能宣
 
 委派就像函式物件，其中包含將在未來執行的程式碼。 如果建立並傳遞委派的程式碼，以及接受並執行委派的函式在相同執行緒上執行，事情就會很簡單。 如果該執行緒是 UI 執行緒，則委派可以直接操作使用者介面物件 (例如 XAML 控制項)。
 
-如果用戶端應用程式載入之執行緒的 apartment 中執行，並提供委派給該元件的 Windows 執行階段元件，則預設委派會叫用直接在 STA 執行緒上。 大部分的 Windows 執行階段元件可以在 STA 或 MTA 中執行。
+如果用戶端應用程式載入線上程單元中執行的 Windows 執行階段元件，並提供委派給該元件，則根據預設，會直接在 STA 執行緒上叫用委派。 大部分的 Windows 執行階段元件都可以在 STA 或 MTA 中執行。
 
 如果執行委派的程式碼在不同的執行緒上執行 (例如，在 concurrency::task 物件的內容中)，則您必須負責同步處理對共用資料的存取。 例如，如果您的委派包含對 Vector 的參考，而某個 XAML 控制項也參考相同 Vector，那麼您必須採取步驟，以避免當委派和 XAML 控制項同時嘗試存取 Vector 時，可能發生的死結或競爭情形。 您也必須注意不讓委派以傳址方式，擷取在叫用委派前可能就超出範圍的區域變數。
 
@@ -133,5 +133,5 @@ C++/CX 的泛型委派有類似於泛型類別宣告的限制。 它們不能宣
 ## <a name="see-also"></a>另請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

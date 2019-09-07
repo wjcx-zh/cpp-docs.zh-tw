@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 5b9b50ba7200439e9ce648c53d52ce37226f61d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384981"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740939"
 ---
 # <a name="value-classes-and-structs-ccx"></a>實值類別與結構 (C++/CX)
 
-A*實值結構*或是*的實值類別*是 Windows 執行階段相容的 POD （「 一般舊資料結構 」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
+*值結構*或實*值類別*是 Windows 執行階段相容的 POD （「純舊資料結構」）。 具有固定的大小，且只包含欄位；不同於 ref 類別，此類別沒有屬性。
 
 下列範例示範如何宣告和初始化實值結構。
 
@@ -52,7 +52,7 @@ A*實值結構*或是*的實值類別*是 Windows 執行階段相容的 POD （�
 
 「 *實值類別* 」(Value Class) 與 `value struct` 類似，差別在於其欄位必須明確指定為公用存取範圍。 其宣告可透過 `value class` 關鍵字來執行。
 
-實值結構或實值類別可以包含基本數值型别、 列舉類別的欄位`Platform::String^`，或[platform:: ibox \<T > ^](../cppcx/platform-ibox-interface.md)其中 T 是數值類型或列舉類別或實值類別或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。
+值結構或實值類別只能包含基本數數值型別、列舉類別、 `Platform::String^`或[Platform：： IBox \<T > ^](../cppcx/platform-ibox-interface.md)的欄位，其中 t 是數數值型別或列舉類別或實值類別或結構。 `IBox<T>^` 欄位可以有 `nullptr`值，這是 C++ 實作「 *可為 Null 的實值類型*」(Nullable Value Type) 這個概念的方式。
 
 包含 `Platform::String^` 或 `IBox<T>^` 類型做為成員的實值類別或實值結構，不具備 `memcpy`功能。
 
@@ -90,7 +90,7 @@ Method2(ref obj);
 
 ## <a name="nullable-value-types"></a>可為 Null 的實值型別
 
-如先前所述，實值類別或實值結構可以具有類型的欄位[platform:: ibox\<T > ^](../cppcx/platform-ibox-interface.md)— 比方說， `IBox<int>^`。 這類欄位可以有 `int` 類型的任何有效數值，也可以有 `nullptr`值。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
+如先前所述，實值類別或實值結構可以具有[Platform：：\<IBox T](../cppcx/platform-ibox-interface.md)類型的欄位 > ^ `IBox<int>^`，例如。 這類欄位可以有 `int` 類型的任何有效數值，也可以有 `nullptr`值。 您可以將可為 null 的欄位當做引數傳遞至其參數宣告為選擇性的方法，或傳遞至實值型別不需要有值的其他地方。
 
 下列範例會示範如何初始化具有可為 Null 之欄位的結構。
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>另請參閱
 
 [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Ref 類別與結構 (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

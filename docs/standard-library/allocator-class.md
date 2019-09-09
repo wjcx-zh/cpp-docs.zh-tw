@@ -63,7 +63,7 @@ class allocator
 
 例如，配置器物件可在私密堆積或共用記憶體中配置儲存體，或是可針對小型或大型物件最佳化。 它也能指定透過其提供的類型定義，透過管理共用記憶體的特殊存取子物件來存取項目，或是執行自動化記憶體回收。 因此，使用配置器物件來配置儲存區的類別，應該使用這些類型來宣告指標和參考物件，如 C++ 標準程式庫中的容器所做的一般。
 
-<strong>(僅限 c + + 98/03)</strong>當您從配置器類別衍生時, 您必須提供[](#rebind)重新系結結構`_Other` , 其 typedef 會參考您新衍生的類別。
+<strong>（僅限 c + + 98/03）</strong>當您從配置器類別衍生時，您必須提供重新系[結結構，](#rebind)其`_Other` typedef 會參考您新衍生的類別。
 
 因此，配置器會定義下列類型：
 
@@ -75,9 +75,9 @@ class allocator
 
 - [const_reference](#const_reference)的行為類似于的 const `Type`參考。
 
-這些`Type`會指定指標和參考必須針對配置的元素採用的格式。 (配置器[::p ointer](#pointer)不一定與所有配置`Type*`器物件相同, 即使它具有類別`allocator`的明顯定義也一樣)。
+這些`Type`會指定指標和參考必須針對配置的元素採用的格式。 （配置器[：:p ointer](#pointer)不一定與所有配置`Type*`器物件相同，即使它具有類別`allocator`的明顯定義也一樣）。
 
-**C + + 11 和更新版本:** 若要在您的配置器中啟用移動作業, 請使用最小配置器介面, 並執行複製程式化、= = 和! = 運算子、配置和解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
+**C + + 11 和更新版本：** 若要在您的配置器中啟用移動作業，請使用最小配置器介面，並執行複製程式化、= = 和！ = 運算子、配置和解除配置。 如需詳細資訊和範例，請參閱[配置器](../standard-library/allocators.md)。
 
 ## <a name="members"></a>成員
 
@@ -99,7 +99,7 @@ class allocator
 |[size_type](#size_type)|不帶正負號的整數類型，可以代表樣板類別 `allocator` 的物件可配置的任何序列的長度。|
 |[value_type](#value_type)|配置器所管理的類型。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -137,7 +137,7 @@ const_pointer address(const_reference val) const;
 
 #### <a name="remarks"></a>備註
 
-成員函式會傳回*val*的位址, 格式為指標必須針對配置的元素採取的方式。
+成員函式會傳回*val*的位址，格式為指標必須針對配置的元素採取的方式。
 
 #### <a name="example"></a>範例
 
@@ -205,7 +205,7 @@ const 指標，可找出要求之前所配置物件的位址，來協助配置�
 
 #### <a name="remarks"></a>備註
 
-成員函式會藉由呼叫 operator new (*count*) 來`Type`配置類型的 count 元素陣列的儲存區。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
+成員函式會藉由呼叫 operator new （*count*）來`Type`配置類型的 count 元素陣列的儲存區。 它會傳回所配置物件的指標。 提示引數可協助部分配置器改善參考區域性；有效的選擇是相同配置器物件稍早所配置但尚未解除配置之物件的位址。 若不要提供提示，請改用 Null 指標引數。
 
 #### <a name="example"></a>範例
 
@@ -468,7 +468,7 @@ template <class _Other>
 
 #### <a name="remarks"></a>備註
 
-第一個成員函式相當於**new** ((`void` \*) `ptr`)**型**別`val`()。
+第一個成員函式相當於**new** （（`void` \*） `ptr`）**型**別`val`（）。
 
 #### <a name="example"></a>範例
 
@@ -537,7 +537,7 @@ void deallocate(pointer ptr, size_type count);
 
 #### <a name="remarks"></a>備註
 
-此成員函式會呼叫`Type` `operator delete(ptr)`, 以釋出類型的計數物件之陣列的儲存空間 (以*ptr*開頭)。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件 **\*這** ，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
+此成員函式會呼叫`Type` `operator delete(ptr)`，以釋出類型的計數物件之陣列的儲存空間（以*ptr*開頭）。 指標*ptr*必須傳回先前呼叫所[配置](#allocate)比較為相等的配置器物件 **\*這** ，配置陣列相同的大小和類型的物件。 `deallocate` 絕不會擲回例外狀況。
 
 #### <a name="example"></a>範例
 
@@ -558,7 +558,7 @@ void destroy(pointer ptr);
 
 #### <a name="remarks"></a>備註
 
-成員函式會藉由呼叫「 析構函數`ptr->`**類型**:: **~ 類型**」, 終結由 ptr 指定的物件。
+成員函式會藉由呼叫「析構函數`ptr->`**類型**：： **~ 類型**」，終結由 ptr 指定的物件。
 
 #### <a name="example"></a>範例
 
@@ -876,7 +876,7 @@ struct rebind { typedef allocator<_Other> other; };
 
 此成員範本類別會定義 other 類型。 其唯一目的是提供類型名稱 **allocator**\<_ **Other**>，但前提是類型名稱 **allocator**\< **Type**>。
 
-例如, 假設有一個類型`al` `A`的配置器物件, 您可以使用運算式來配置`_Other`類型的物件:
+例如，假設有一個類型`al` `A`的配置器物件，您可以使用運算式來配置`_Other`類型的物件：
 
 ```cpp
 A::rebind<Other>::other(al).allocate(1, (Other *)0)

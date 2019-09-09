@@ -1,44 +1,42 @@
 ---
 title: 建立 MFC ActiveX 控制項
-ms.date: 09/12/2018
+ms.date: 08/19/2019
 f1_keywords:
 - vc.appwiz.activex.project
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: d35b788910b0c73a3b6da85faf119958ffbccea0
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708244"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108433"
 ---
 # <a name="creating-an-mfc-activex-control"></a>建立 MFC ActiveX 控制項
 
-ActiveX 控制項程式是功能的設計用來讓父應用程式的特定類型的模組化程式。 例如，您可以建立使用按鈕等控制項在對話方塊中或用於在網頁上的工具列中。
+ActiveX 控制項程式是一種模組化程式，設計用來為父應用程式提供特定類型的功能。 例如，您可以建立控制項，例如在對話方塊中使用的按鈕，或用來在網頁中使用的工具列。
 
 >[!IMPORTANT]
-> ActiveX 是舊版的技術，不應用於新的開發。 如需詳細資訊，請參閱 < [ActiveX 控制項](../activex-controls.md)。
+> ActiveX 是不應該用於新開發的舊版技術。 如需詳細資訊，請參閱[ActiveX 控制項](../activex-controls.md)。
 
-若要建立 MFC ActiveX 控制項的最簡單方式是使用[MFC ActiveX 控制項精靈](../../mfc/reference/mfc-activex-control-wizard.md)。
+建立 MFC ActiveX 控制項最簡單的方式，是使用[MFC Activex 控制項 Wizard](../../mfc/reference/mfc-activex-control-wizard.md)。
 
-### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>若要建立 MFC ActiveX 控制項使用 MFC ActiveX 控制項精靈
+### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>使用 MFC ActiveX 控制項 Wizard 建立 MFC ActiveX 控制項
 
-1. 請依照下列說明主題中的指示[建立C++主控台應用程式專案](../../get-started/tutorial-console-cpp.md)。
+1. 遵循[建立 MFC 應用程式](creating-an-mfc-application.md)說明主題中的指示，但從可用範本的清單中選擇 [ **MFC ActiveX 控制項**]。
 
-1. 在 **新的專案**對話方塊中，選取**MFC ActiveX 控制項**圖示以開啟 MFC ActiveX 控制項精靈的 範本 窗格中。
-
-1. 定義您[應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)，[控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)，並[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)使用 MFC ActiveX 控制項精靈。
+1. 使用 MFC ActiveX 控制項 Wizard 來定義您的[應用程式設定](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)、[控制項名稱](../../mfc/reference/control-names-mfc-activex-control-wizard.md)和[控制設定](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)。
 
     > [!NOTE]
     >  若要保留精靈的預設值，請略過此步驟。
 
-1. 按一下 **完成**以關閉精靈，並在開發環境中開啟新專案。
+1. 按一下 [完成] 以關閉精靈，並在開發環境中開啟新專案。
 
-在建立專案之後，您可以檢視中建立的檔案**方案總管 中**。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[適用於 Visual Studio 建立的檔案類型C++專案](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
+建立專案之後，您可以查看**方案總管**中建立的檔案。 如需精靈建立之專案檔案的詳細資訊，請參閱專案所產生的 ReadMe.txt 檔案。 如需檔案類型的詳細資訊，請參閱[為 Visual Studio C++ 專案建立的檔案類型](../../build/reference/file-types-created-for-visual-cpp-projects.md)。
 
-在建立專案之後，您可以使用程式碼精靈以新增[函式](../../ide/add-member-function-wizard.md)，[變數](../../ide/add-member-variable-wizard.md)，[事件](../../ide/add-event-wizard.md)，[屬性](../../ide/names-add-property-wizard.md)，及[方法](../../ide/add-method-wizard.md)。 如需有關自訂您的 ActiveX 控制項的詳細資訊，請參閱 < [MFC ActiveX 控制項](../../mfc/mfc-activex-controls.md)。
+建立專案之後，您可以使用程式碼嚮導[來新增函](../../ide/add-member-function-wizard.md)式、[變數](../../ide/add-member-variable-wizard.md)、[事件](../../ide/add-event-wizard.md)、[屬性](../../ide/names-add-property-wizard.md)和[方法](../../ide/add-method-wizard.md)。 如需自訂 ActiveX 控制項的詳細資訊，請參閱[MFC Activex 控制項](../../mfc/mfc-activex-controls.md)。
 
 ## <a name="see-also"></a>另請參閱
 

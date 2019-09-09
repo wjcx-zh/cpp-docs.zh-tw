@@ -1,21 +1,21 @@
 ---
-title: propputref (C++ COM 屬性)
+title: propputref （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.propputref
 helpviewer_keywords:
 - propputref attribute
 ms.assetid: 9b0aed74-fdc7-4e59-9117-949bea4f86dd
-ms.openlocfilehash: e471e467c55e0b8a17be96fd1bcb3cd24cfafe06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dc21494886f80890bcfde7f29bb3d6c86b4a51b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407467"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514177"
 ---
 # <a name="propputref"></a>propputref
 
-指定使用參考而非值的屬性設定函式。
+指定使用參考而非值的屬性設定函數。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407467"
 
 ## <a name="remarks"></a>備註
 
-**Propputref** C++屬性具有相同的功能[propputref](/windows/desktop/Midl/propputref) MIDL 屬性。
+**Propputref** C++屬性具有與[propputref](/windows/win32/Midl/propputref) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)範例使用**propputref**。
+如需**propputref**的範例用法，請參閱可系[結的範例](bindable.md)。
 
 ## <a name="requirements"></a>需求
 

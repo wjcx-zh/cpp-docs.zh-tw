@@ -1,17 +1,17 @@
 ---
-title: requestedit (C++ COM 屬性)
+title: requestedit （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.requestedit
 helpviewer_keywords:
 - requestedit attribute
 ms.assetid: b3c24790-3c4a-4646-8722-03d7b51172ee
-ms.openlocfilehash: 30b0c5ec807865280c8e538ea701c3d1a5c4ef9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e90506619d4f13d4e5627f9c06b997d7034b5f49
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407376"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514086"
 ---
 # <a name="requestedit"></a>requestedit
 
@@ -25,11 +25,11 @@ ms.locfileid: "62407376"
 
 ## <a name="remarks"></a>備註
 
-**Requestedit** C++屬性具有相同的功能[requestedit](/windows/desktop/Midl/requestedit) MIDL 屬性。
+**Requestedit** C++屬性具有與[requestedit](/windows/win32/Midl/requestedit) MIDL 屬性相同的功能。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)範例使用**requestedit**。
+如需**requestedit**的範例用法，請參閱可系[結的範例](bindable.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -39,7 +39,7 @@ ms.locfileid: "62407376"
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|None|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

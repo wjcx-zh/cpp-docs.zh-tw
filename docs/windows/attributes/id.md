@@ -1,21 +1,21 @@
 ---
-title: 識別碼 (C++ COM 屬性)
+title: id （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.id
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 5faf08418771deda3086a434cff6b1900a37e36e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409495"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501412"
 ---
 # <a name="id"></a>id
 
-指定*dispid* （屬性或方法，在介面或 dispinterface） 的成員函式的參數。
+指定成員函式的*dispid*參數（屬性或方法，在介面或分配介面中）。
 
 ## <a name="syntax"></a>語法
 
@@ -30,11 +30,11 @@ ms.locfileid: "62409495"
 
 ## <a name="remarks"></a>備註
 
-**識別碼**C++屬性具有相同的功能[識別碼](/windows/desktop/Midl/id)MIDL 屬性。
+**Id** C++屬性的功能與[id](/windows/win32/Midl/id) MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)如需如何使用的範例**識別碼**。
+如需如何使用**id**的[範例，請](bindable.md)參閱可系結的範例。
 
 ## <a name="requirements"></a>需求
 

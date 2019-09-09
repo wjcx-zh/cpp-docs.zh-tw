@@ -1,21 +1,21 @@
 ---
-title: 中 (C++ COM 屬性)
+title: in （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.in
 helpviewer_keywords:
 - in attribute
 ms.assetid: 7b450cc4-4d2e-4910-a195-7487c6b7c373
-ms.openlocfilehash: 06d78552ef2ebb878ed630eb377e6249ba60cad4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e97008d0399764beeca73dbbc5914e4b891df748
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409339"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69514599"
 ---
 # <a name="in-c"></a>in (C++)
 
-指出參數是要呼叫的程序從傳遞至呼叫的程序。
+表示參數會從呼叫程式傳遞至被呼叫的進程。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409339"
 
 ## <a name="remarks"></a>備註
 
-**中**C++屬性具有相同的功能[中](/windows/desktop/Midl/in)MIDL 屬性。
+**In** C++屬性的功能與 MIDL 屬性[中](/windows/win32/Midl/in)的相同。
 
 ## <a name="example"></a>範例
 
-請參閱[可繫結](bindable.md)如需如何使用的範例**在**。
+如需如何**在中**使用的範例[，請參閱](bindable.md)可系結。
 
 ## <a name="requirements"></a>需求
 
@@ -39,7 +39,7 @@ ms.locfileid: "62409339"
 |-|-|
 |**適用於**|介面參數，介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
+|**必要屬性**|無|
 |**無效屬性**|**retval**|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

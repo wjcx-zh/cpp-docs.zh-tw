@@ -639,7 +639,7 @@ virtual void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>備註
 
-*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 引數的變數清單會以 .。。在語法宣告中。
+*PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 引數的變數清單會以 ...在語法宣告中。
 
 此函式會將參數轉換為 VARIANTARG 值, 然後`IDispatch::Invoke`在控制項上叫用方法。 若呼叫 `IDispatch::Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回`IDispatch::Invoke`的狀態碼為`DISP_E_EXCEPTION` `COleDispatchException` , 則此函式會擲回物件, 否則`COleException`會擲回。
 

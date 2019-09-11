@@ -763,7 +763,7 @@ _T("All Image Files"));
 
 參數*strExporter*的格式如下:
 
-file description0&#124; \*. ext0&#124;&#124;filedescription1\*. ext1&#124;.。。檔案描述*n* &#124; \*. ext *n*&#124;&#124;
+file description0&#124; \*. ext0&#124;&#124;filedescription1\*. ext1&#124;...檔案描述*n* &#124; \*. ext *n*&#124;&#124;
 
 其中 '&#124;' 是所指定`chSeparator`的分隔字元。 例如：
 
@@ -854,7 +854,7 @@ _T("All Image Files"));
 
 參數*strImporter*的格式如下:
 
-file description0&#124; \*. ext0&#124;&#124;filedescription1\*. ext1&#124;.。。檔案描述*n* &#124; \*. ext *n*&#124;&#124;
+file description0&#124; \*. ext0&#124;&#124;filedescription1\*. ext1&#124;...檔案描述*n* &#124; \*. ext *n*&#124;&#124;
 
 其中 '&#124;' 是*chSeparator*所指定的分隔字元。 例如：
 

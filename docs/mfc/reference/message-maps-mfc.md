@@ -1,43 +1,43 @@
 ---
 title: 訊息對應 (MFC)
-ms.date: 11/04/2016
+ms.date: 09/07/2019
 helpviewer_keywords:
 - message maps [MFC], MFC
 - Windows messages [MFC], message maps
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: 14c08a008456160fe817f066e5b22b06b9f9fa14
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 4305d9b1db297eebcb189d2fad98b8c634ed1133
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611826"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908045"
 ---
 # <a name="message-maps-mfc"></a>訊息對應 (MFC)
 
-參考的這個區段會列出所有[訊息對應巨集](../../mfc/reference/message-map-macros-mfc.md)和 全部[CWnd](../../mfc/reference/cwnd-class.md)訊息對應項目，以及對應的成員函式原型：
+此參考的這個區段會列出所有[訊息對應宏](../../mfc/reference/message-map-macros-mfc.md)和所有[CWnd](../../mfc/reference/cwnd-class.md)訊息對應專案，以及對應的成員函式原型：
 
-|分類|描述|
+|Category|說明|
 |--------------|-----------------|
-|ON\_命令訊息處理常式|處理`WM_COMMAND`使用者功能表選取項目或功能表便捷鍵所產生的訊息。|
-|[子視窗通知訊息處理常式](../../mfc/reference/child-window-notification-message-handlers.md)|處理從子視窗通知訊息。|
-|[WM_ 訊息處理常式](../../mfc/reference/handlers-for-wm-messages.md)|處理`WM_`訊息，例如`WM_PAINT`。|
+|ON\_命令訊息處理常式|處理`WM_COMMAND`使用者功能表選取專案或功能表存取金鑰所產生的訊息。|
+|[子視窗通知訊息處理常式](../../mfc/reference/child-window-notification-message-handlers.md)|處理來自子視窗的通知訊息。|
+|[WM_ 訊息處理常式](../../mfc/reference/handlers-for-wm-messages.md)|處理`WM_`訊息， `WM_PAINT`例如。|
 |[使用者定義的訊息處理常式](../../mfc/reference/user-defined-handlers.md)|處理使用者定義的訊息。|
 
-(如需術語和這個參考所使用的慣例的說明，請參閱 <<c0> [ 如何使用訊息對應交互參考](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)。)
+（如需此參考中使用之術語和慣例的說明，請參閱[如何使用訊息對應交互參考](../../mfc/reference/how-to-use-the-message-map-cross-reference.md)）。
 
-由於 Windows 是訊息導向的作業系統，大部分的 Windows 環境的程式設計包含訊息處理。 每當按一下按鍵或滑鼠等事件發生時，將訊息傳送至應用程式，然後必須處理事件。
+由於 Windows 是以訊息為導向的作業系統，因此 Windows 環境的大部分程式設計工作都牽涉到訊息處理。 每次發生按鍵或滑鼠按下的事件時，就會傳送一則訊息給應用程式，接著就必須處理該事件。
 
-Microsoft Foundation Class Library 會提供程式設計模型適用於以訊息為基礎的程式設計。 在此模型中，「 訊息對應 」 用來指派哪些函式會處理特定類別的各種訊息。 訊息對應包含一或多個指定的訊息會由哪些函式的巨集。 例如，一個訊息對應，其中包含`ON_COMMAND`巨集可能會看起來像這樣：
+MFC 程式庫提供針對以訊息為基礎之程式設計優化的程式設計模型。 在此模型中，「訊息對應」是用來指定哪些函式會處理特定類別的各種訊息。 訊息對應包含一或多個宏，指定哪些函式會處理哪些訊息。 例如，包含`ON_COMMAND`宏的訊息對應可能看起來像這樣：
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-`ON_COMMAND`巨集用來處理產生的功能表、 按鈕和快速鍵的命令訊息。 [巨集](../../mfc/reference/message-map-macros-mfc.md)可供對應下列：
+`ON_COMMAND`宏是用來處理功能表、按鈕和快速鍵所產生的命令訊息。 [宏](../../mfc/reference/message-map-macros-mfc.md)可用於對應下列各項：
 
 ## <a name="windows-messages"></a>Windows 訊息
 
-- 控制項通知
+- 控制通知
 
 - 使用者定義的訊息
 
@@ -47,20 +47,20 @@ Microsoft Foundation Class Library 會提供程式設計模型適用於以訊息
 
 - 使用者介面更新訊息
 
-## <a name="ranges-of-messages"></a>訊息的範圍
+## <a name="ranges-of-messages"></a>訊息範圍
 
 - 命令
 
-- 更新處理常式的訊息
+- 更新處理常式訊息
 
-- 控制項通知
+- 控制通知
 
-雖然訊息對應巨集是很重要，但您通常不必直接使用它們。 這是因為 [屬性] 視窗時，自動建立訊息對應項目在原始程式檔中您使用它來關聯訊息的訊息處理函式。 每當您想要編輯或新增的訊息對應項目中，您可以使用 [屬性] 視窗。
+雖然訊息對應宏很重要，但您通常不需要直接使用它們。 這是因為當您使用它來建立訊息處理函式與訊息的關聯時，[類別 Wizard](mfc-class-wizard.md)會自動在您的原始程式檔中建立訊息對應專案。 每當您想要編輯或加入訊息對應專案時，都可以使用類別 Wizard。
 
 > [!NOTE]
->  [屬性] 視窗不支援訊息對應範圍。 您必須自行撰寫這些訊息對應項目。
+>  類別 Wizard 不支援訊息對應範圍。 您必須自行撰寫這些訊息對應專案。
 
-不過，訊息對應是 Mfc 程式庫中很重要的一部分。 您應該了解它們的功用，並為其提供文件。
+不過，訊息對應是 MFC 程式庫的重要部分。 您應該瞭解他們的功能，並提供檔給他們。
 
 ## <a name="see-also"></a>另請參閱
 

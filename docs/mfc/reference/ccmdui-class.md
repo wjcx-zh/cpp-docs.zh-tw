@@ -1,6 +1,6 @@
 ---
 title: CCmdUI 類別
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - CCmdUI
 - AFXWIN/CCmdUI
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206381"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907832"
 ---
 # <a name="ccmdui-class"></a>CCmdUI 類別
 
-只有在使用`ON_UPDATE_COMMAND_UI`中的處理常式`CCmdTarget`-衍生的類別。
+只能`ON_UPDATE_COMMAND_UI`在衍生類別的處理常式`CCmdTarget`中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -47,13 +47,13 @@ class CCmdUI
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CCmdUI::ContinueRouting](#continuerouting)|會告知命令路由機制繼續路由處理常式鏈結中向下目前的訊息。|
-|[CCmdUI::Enable](#enable)|啟用或停用此命令的使用者介面項目。|
-|[CCmdUI::SetCheck](#setcheck)|設定核取狀態，此命令的使用者介面項目。|
-|[CCmdUI::SetRadio](#setradio)|例如`SetCheck`成員函式，但會作選項群組。|
-|[CCmdUI::SetText](#settext)|設定使用者介面項目，此命令的文字。|
+|[CCmdUI::ContinueRouting](#continuerouting)|告訴命令路由機制，繼續將目前的訊息路由傳送至處理常式鏈。|
+|[CCmdUI::Enable](#enable)|啟用或停用此命令的使用者介面專案。|
+|[CCmdUI::SetCheck](#setcheck)|設定此命令之使用者介面專案的檢查狀態。|
+|[CCmdUI::SetRadio](#setradio)|`SetCheck`如同成員函式，但會在選項按鈕群組上運作。|
+|[CCmdUI::SetText](#settext)|設定此命令之使用者介面專案的文字。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
@@ -61,31 +61,31 @@ class CCmdUI
 |----------|-----------------|
 |[CCmdUI::m_nID](#m_nid)|使用者介面物件的識別碼。|
 |[CCmdUI::m_nIndex](#m_nindex)|使用者介面物件的索引。|
-|[CCmdUI::m_pMenu](#m_pmenu)|指向由功能表`CCmdUI`物件。|
-|[CCmdUI::m_pOther](#m_pother)|要傳送通知給視窗物件的點。|
-|[CCmdUI::m_pSubMenu](#m_psubmenu)|指向包含所代表的子功能表`CCmdUI`物件。|
+|[CCmdUI::m_pMenu](#m_pmenu)|指向`CCmdUI`物件所代表的功能表。|
+|[CCmdUI::m_pOther](#m_pother)|指向傳送通知的視窗物件。|
+|[CCmdUI::m_pSubMenu](#m_psubmenu)|指向`CCmdUI`物件所代表的包含子功能表。|
 
 ## <a name="remarks"></a>備註
 
-`CCmdUI` 沒有基底類別。
+`CCmdUI`沒有基類。
 
-當您的應用程式的使用者需要提取功能表中，每個功能表項目需要知道是否應該顯示為已啟用或停用。 功能表命令的目標會提供這項資訊藉由實作 ON_UPDATE_COMMAND_UI 處理常式。 針對每個命令的使用者介面物件，在您的應用程式中，使用 [屬性] 視窗來建立訊息對應項目和函式原型，每個處理常式。
+當您應用程式的使用者提取功能表時，每個功能表項目都必須知道它應該顯示為 [已啟用] 或 [已停用]。 功能表命令的目標會藉由執行 ON_UPDATE_COMMAND_UI 處理常式來提供這項資訊。 針對應用程式中的每個命令使用者介面物件，使用 [[類別] [Wizard]](mfc-class-wizard.md)或 [**屬性**] 視窗（在**類別檢視**中），為每個處理常式建立訊息對應專案和函式原型。
 
-當功能表提取時，架構搜尋，並呼叫每個 ON_UPDATE_COMMAND_UI 處理常式時，每個處理常式會呼叫`CCmdUI`成員函式，如`Enable`和`Check`，framework 然後適當地顯示每個功能表項目。
+當功能表向下提取時，架構會搜尋並呼叫每個 ON_UPDATE_COMMAND_UI 處理常式，每個`CCmdUI`處理常式都會呼叫`Enable`和`Check`之類的成員函式，然後架構會適當地顯示每個功能表項目。
 
-功能表項目可以取代與控制列按鈕或其他命令的使用者介面物件，而不需要變更中的程式碼`ON_UPDATE_COMMAND_UI`處理常式。
+功能表項目可以取代為控制列按鈕或其他命令使用者介面物件，而不需要變更`ON_UPDATE_COMMAND_UI`處理常式內的程式碼。
 
-下表摘要說明影響`CCmdUI`的成員函式具有各個命令使用者介面項目。
+下表摘要說明效果`CCmdUI`的成員函式在各種命令使用者介面專案上的功能。
 
-|使用者介面項目|啟用|SetCheck|SetRadio|SetText|
+|使用者介面專案|啟用|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
-|Menu item|啟用或停用|檢查或取消核取|使用點的檢查|設定項目文字|
-|工具列按鈕|啟用或停用|選取、 取消選取，或不確定|與 `SetCheck` 相同|（不適用）|
-|狀態列窗格|讓文字可見或不可見|設定顯或一般框線|與 `SetCheck` 相同|設定窗格中的文字|
-|在一般的按鈕 `CDialogBar`|啟用或停用|檢查或取消核取方塊|與 `SetCheck` 相同|設定按鈕文字|
-|在正常的程式控制 `CDialogBar`|啟用或停用|（不適用）|（不適用）|設定視窗的文字|
+|Menu item|啟用或停用|檢查或取消核取|使用點檢查|設定專案文字|
+|工具列按鈕|啟用或停用|選取、取消選擇或不確定|與 `SetCheck` 相同|（不適用）|
+|狀態列窗格|讓文字變成可見或不可見|設定快顯或一般框線|與 `SetCheck` 相同|設定窗格文字|
+|中的 [一般] 按鈕`CDialogBar`|啟用或停用|[檢查或取消選取] 核取方塊|與 `SetCheck` 相同|設定按鈕文字|
+|中的一般控制項`CDialogBar`|啟用或停用|（不適用）|（不適用）|設定視窗文字|
 
-如需使用這個類別的詳細資訊，請參閱 <<c0> [ 如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)。
+如需使用此類別的詳細資訊，請參閱[如何更新使用者介面物件](../../mfc/how-to-update-user-interface-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -95,9 +95,9 @@ class CCmdUI
 
 **標題:** afxwin.h
 
-##  <a name="continuerouting"></a>  CCmdUI::ContinueRouting
+##  <a name="continuerouting"></a>CCmdUI：： ContinueRouting
 
-呼叫此成員函式，來告訴命令路由機制，以繼續路由處理常式鏈結中向下目前的訊息。
+呼叫此成員函式，以告知命令路由機制繼續將目前的訊息路由傳送至處理常式鏈。
 
 ```
 void ContinueRouting();
@@ -105,11 +105,11 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>備註
 
-這是進階的成員函式，應該會傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用。 如需詳細資訊，請參閱 <<c0> [ 技術的附註 6](../../mfc/tn006-message-maps.md)。
+這是應該與傳回 FALSE 的 ON_COMMAND_EX 處理常式搭配使用的 advanced 成員函式。 如需詳細資訊，請參閱[技術提示 6](../../mfc/tn006-message-maps.md)。
 
 ##  <a name="enable"></a>  CCmdUI::Enable
 
-呼叫此成員函式可啟用或停用此命令的使用者介面項目。
+呼叫這個成員函式，以啟用或停用此命令的使用者介面專案。
 
 ```
 virtual void Enable(BOOL bOn = TRUE);
@@ -118,7 +118,7 @@ virtual void Enable(BOOL bOn = TRUE);
 ### <a name="parameters"></a>參數
 
 *bOn*<br/>
-如果為 true，則在啟用項目，FALSE 來停用它。
+TRUE 表示啟用此專案，FALSE 則會停用它。
 
 ### <a name="example"></a>範例
 
@@ -128,7 +128,7 @@ virtual void Enable(BOOL bOn = TRUE);
 
 ##  <a name="m_nid"></a>  CCmdUI::m_nID
 
-功能表項目、 工具列按鈕或由其他使用者介面物件的識別碼`CCmdUI`物件。
+`CCmdUI`物件所表示之功能表項目、工具列按鈕或其他使用者介面物件的識別碼。
 
 ```
 UINT m_nID;
@@ -136,15 +136,15 @@ UINT m_nID;
 
 ##  <a name="m_nindex"></a>  CCmdUI::m_nIndex
 
-功能表項目、 工具列按鈕或由其他使用者介面物件的索引`CCmdUI`物件。
+由`CCmdUI`物件表示的功能表項目、工具列按鈕或其他使用者介面物件的索引。
 
 ```
 UINT m_nIndex;
 ```
 
-##  <a name="m_pmenu"></a>  CCmdUI::m_pMenu
+##  <a name="m_pmenu"></a>CCmdUI：： m_pMenu
 
-指標 (的`CMenu`型別) 所表示的功能表`CCmdUI`物件。
+`CCmdUI`物件所代表`CMenu`之功能表的指標（類型）。
 
 ```
 CMenu* m_pMenu;
@@ -152,11 +152,11 @@ CMenu* m_pMenu;
 
 ### <a name="remarks"></a>備註
 
-如果不是一個功能表項目，則為 NULL。
+如果專案不是功能表，則為 Null。
 
-##  <a name="m_psubmenu"></a>  CCmdUI::m_pSubMenu
+##  <a name="m_psubmenu"></a>CCmdUI：： m_pSubMenu
 
-指標 (的`CMenu`類型) 來包含所代表的子功能表`CCmdUI`物件。
+`CCmdUI`物件所代表`CMenu`之內含子功能表的指標（類型）。
 
 ```
 CMenu* m_pSubMenu;
@@ -164,11 +164,11 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>備註
 
-如果不是一個功能表項目，則為 NULL。 如果子功能表中的快顯視窗中， *m_nID*包含快顯功能表中的第一個項目識別碼。 如需詳細資訊，請參閱 <<c0> [ 技術提示 21](../../mfc/tn021-command-and-message-routing.md)。
+如果專案不是功能表，則為 Null。 如果子功能表是快顯視窗， *m_nID*會包含快顯功能表中第一個專案的識別碼。 如需詳細資訊，請參閱[技術附注 21](../../mfc/tn021-command-and-message-routing.md)。
 
-##  <a name="m_pother"></a>  CCmdUI::m_pOther
+##  <a name="m_pother"></a>CCmdUI：： m_pOther
 
-指標 (型別`CWnd`) 視窗物件，例如工具或 [狀態] 列中，傳送通知。
+傳送通知的視窗`CWnd`物件（例如工具或狀態列）的指標（類型）。
 
 ```
 CWnd* m_pOther;
@@ -176,11 +176,11 @@ CWnd* m_pOther;
 
 ### <a name="remarks"></a>備註
 
-如果項目是功能表或非 NULL`CWnd`物件。
+如果專案是功能表或非`CWnd`物件，則為 Null。
 
 ##  <a name="setcheck"></a>  CCmdUI::SetCheck
 
-呼叫此成員函式，將此命令的使用者介面項目設定為適當的核取狀態。
+呼叫這個成員函式，將此命令的使用者介面專案設定為適當的檢查狀態。
 
 ```
 virtual void SetCheck(int nCheck = 1);
@@ -189,15 +189,15 @@ virtual void SetCheck(int nCheck = 1);
 ### <a name="parameters"></a>參數
 
 *nCheck*<br/>
-指定設定的核取狀態。 如果取消核取 0，;如果 1，檢查;，和 2，如果設定為不定。
+指定要設定的檢查狀態。 如果為0，則取消選中;如果是1，則會檢查;如果為2，則設定不定。
 
 ### <a name="remarks"></a>備註
 
-此成員函式適用於功能表項目和工具列按鈕。 不定狀態僅適用於工具列按鈕。
+這個成員函式適用于功能表項目和工具列按鈕。 [不定] 狀態只適用于工具列按鈕。
 
-##  <a name="setradio"></a>  CCmdUI::SetRadio
+##  <a name="setradio"></a>CCmdUI：： SetRadio
 
-呼叫此成員函式，將此命令的使用者介面項目設定為適當的核取狀態。
+呼叫這個成員函式，將此命令的使用者介面專案設定為適當的檢查狀態。
 
 ```
 virtual void SetRadio(BOOL bOn = TRUE);
@@ -206,15 +206,15 @@ virtual void SetRadio(BOOL bOn = TRUE);
 ### <a name="parameters"></a>參數
 
 *bOn*<br/>
-TRUE 表示啟用項目;否則為 FALSE。
+TRUE 表示啟用此專案;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-這個成員函式`SetCheck`，只不過它作做為選項群組一部分的使用者介面項目。 取消核取 在群組中的其他項目不會自動除非項目本身維護選項群組行為。
+這個成員函式的`SetCheck`運作方式類似，不同之處在于它會在作為單選群組一部分的使用者介面專案上運作。 取消核取群組中的其他專案並不會自動進行，除非專案本身會維護單選群組的行為。
 
 ##  <a name="settext"></a>  CCmdUI::SetText
 
-呼叫此成員函式設定的使用者介面項目，此命令的文字。
+呼叫這個成員函式可設定此命令之使用者介面專案的文字。
 
 ```
 virtual void SetText(LPCTSTR lpszText);

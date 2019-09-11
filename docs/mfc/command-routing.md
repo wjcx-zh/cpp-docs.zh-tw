@@ -1,6 +1,6 @@
 ---
 title: 命令傳送
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-ms.openlocfilehash: ae9741a66e944b60dc38c1366353e43977e1ee7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d1e1e59c56439c01655a1416df645ccc6922411
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165138"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907625"
 ---
 # <a name="command-routing"></a>命令傳送
 
-處理命令時，您只需負責在命令與其處理函式之間建立訊息對應連接，而這項工作可透過 [屬性] 視窗來完成。 您也必須撰寫大部分的命令處理常式。
+您在使用命令時的責任僅限於在命令與其處理函式之間建立訊息對應連線，這是您使用[MFC 類別 Wizard](reference/mfc-class-wizard.md)的工作。 您也必須撰寫命令處理常式的程式碼。
 
 Windows 訊息通常會傳送至主框架視窗，但命令訊息會接著路由傳送至其他物件。 此架構會將命令路由傳送通過標準順序的命令目標物件，其中一個物件應該會有該命令的處理常式。 每個命令目標物件會檢查其訊息對應，以確認是否可以處理傳入訊息。
 
@@ -29,11 +29,11 @@ Windows 訊息通常會傳送至主框架視窗，但命令訊息會接著路由
 
 1. 至其他命令目標。
 
-成本是您的處理常式會執行命令的回應中此路由機制比較，路由的成本很低。 請記住，只有在使用者與使用者介面物件互動時，此架構才會產生命令。
+相較于您的處理常式回應命令的方式，此路由機制的成本昂貴，路由的成本很低。 請記住，只有在使用者與使用者介面物件互動時，此架構才會產生命令。
 
 ### <a name="_core_standard_command_route"></a> 標準命令路由
 
-|當此類型的物件收到命令時。 。 。|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|
+|當此類型的物件收到命令時。 . .|它會依照下列順序，提供機會給自己及其他命令目標物件來處理命令︰|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
 |MDI 框架視窗 (`CMDIFrameWnd`)|1.使用中 `CMDIChildWnd`<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|
 |文件框架視窗 (`CFrameWnd`、 `CMDIChildWnd`)|1.現用檢視表<br />2.此框架視窗<br />3.應用程式 (`CWinApp` 物件)|

@@ -1,6 +1,6 @@
 ---
 title: 連結器工具錯誤與警告
-ms.date: 04/17/2019
+ms.date: 09/10/2019
 f1_keywords:
 - LNK1100
 - LNK1101
@@ -139,7 +139,54 @@ f1_keywords:
 - LNK1329
 - LNK1330
 - LNK1331
-- LNK1332
+- LNK1333
+- LNK1334
+- LNK1335
+- LNK1336
+- LNK1337
+- LNK1338
+- LNK1339
+- LNK1340
+- LNK1341
+- LNK1342
+- LNK1343
+- LNK1344
+- LNK1345
+- LNK1346
+- LNK1347
+- LNK1348
+- LNK1349
+- LNK1350
+- LNK1351
+- LNK1353
+- LNK1354
+- LNK1355
+- LNK1356
+- LNK1360
+- LNK1361
+- LNK1362
+- LNK1363
+- LNK1364
+- LNK1365
+- LNK1366
+- LNK1367
+- LNK1368
+- LNK1369
+- LNK1370
+- LNK1371
+- LNK1372
+- LNK1373
+- LNK1375
+- LNK1376
+- LNK1377
+- LNK1378
+- LNK1379
+- LNK1380
+- LNK1381
+- LNK1382
+- LNK1383
+- LNK1384
+- LNK1385
 - LNK2002
 - LNK2003
 - LNK2009
@@ -156,7 +203,13 @@ f1_keywords:
 - LNK2035
 - LNK2036
 - LNK2037
-- LNK2039
+- LNK2038
+- LNK2040
+- LNK2041
+- LNK2042
+- LNK2043
+- LNK2044
+- LNK2045
 - LNK4003
 - LNK4012
 - LNK4013
@@ -234,21 +287,46 @@ f1_keywords:
 - LNK4262
 - LNK4263
 - LNK4264
+- LNK4265
+- LNK4266
+- LNK4267
+- LNK4268
+- LNK4269
+- LNK4270
+- LNK4271
+- LNK4272
+- LNK4273
+- LNK4274
+- LNK4275
+- LNK4276
+- LNK4277
+- LNK4278
+- LNK4279
+- LNK4280
+- LNK4281
+- LNK4282
+- LNK4283
+- LNK4284
+- LNK4285
+- LNK4287
+- LNK4288
+- LNK4289
+- LNK4290
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 064f469dc7dd133c6f17f38da1bb9c2eb1907918
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 8e611cd20374c912de8d648f51c97177e0d070f1
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857486"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907839"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>連結器工具錯誤與警告 (LNKxxxx)
 
-連結器工具，連結、 LIB、 DUMPBIN 和 EDITBIN 共用通用的可執行檔，會產生這些錯誤和警告。 這些工具會產生警告的表單 LNK*xxxx*，其中*xxxx*是四位數的數字。
+連結器工具連結、LIB、DUMPBIN 和 EDITBIN 共用會產生這些錯誤和警告的通用可執行檔。 工具會產生格式為 .LNK*xxxx*的警告，其中*xxxx*是四位數的數位。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -307,6 +385,7 @@ ms.locfileid: "64857486"
 [連結器工具錯誤 LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md) \
 [連結器工具錯誤 LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md) \
 [連結器工具錯誤 LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md) \
+[連結器工具錯誤 LNK1352](../../error-messages/tool-errors/linker-tools-error-lnk1352.md) \
 [連結器工具錯誤 LNK1561](../../error-messages/tool-errors/linker-tools-error-lnk1561.md) \
 [連結器工具錯誤 LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md) \
 [連結器工具錯誤 LNK2004](../../error-messages/tool-errors/linker-tools-error-lnk2004.md) \
@@ -379,4 +458,4 @@ ms.locfileid: "64857486"
 
 ## <a name="see-also"></a>另請參閱
 
-[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++編譯器和組建工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)

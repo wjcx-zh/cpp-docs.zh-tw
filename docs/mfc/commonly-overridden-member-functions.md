@@ -1,6 +1,6 @@
 ---
 title: 常被覆寫的成員函式
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 helpviewer_keywords:
 - CDialog class [MFC], members
 - OnInitDialog function
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: 26a1527dbdac4b2a9deb57fb13481f8d2f9cb5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152022"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907694"
 ---
 # <a name="commonly-overridden-member-functions"></a>常被覆寫的成員函式
 
@@ -26,18 +26,18 @@ ms.locfileid: "62152022"
 |成員函式|它的回覆訊息|覆寫的目的|
 |---------------------|----------------------------|-----------------------------|
 |`OnInitDialog`|**WM_INITDIALOG**|初始化對話方塊的控制項。|
-|`OnOK`|**BN_CLICKED**  按鈕**IDOK**|當使用者按一下 [確定] 按鈕時會回應。|
-|`OnCancel`|**BN_CLICKED**  按鈕**IDCANCEL**|當使用者按一下 [取消] 按鈕時會回應。|
+|`OnOK`|按鈕**IDOK**的**BN_CLICKED**|當使用者按一下 [確定] 按鈕時會回應。|
+|`OnCancel`|按鈕**IDCANCEL**的**BN_CLICKED**|當使用者按一下 [取消] 按鈕時會回應。|
 
-`OnInitDialog`、`OnOK` 和 `OnCancel` 是虛擬函式。 若要覆寫它們，您必須宣告覆寫的函式在衍生的對話方塊類別中使用[屬性 視窗](/visualstudio/ide/reference/properties-window)。
+`OnInitDialog`、`OnOK` 和 `OnCancel` 是虛擬函式。 若要覆寫它們，您可以使用[MFC 類別 Wizard](reference/mfc-class-wizard.md)，在衍生的對話方塊類別中宣告覆寫函式。
 
-就在對話方塊顯示之前，會呼叫 `OnInitDialog`。 您必須從您的覆寫呼叫預設的 `OnInitDialog` 處理常式 (通常做為處理常式的第一個動作)。 根據預設，`OnInitDialog`會傳回 **，則為 TRUE**表示焦點應該設定的第一個控制項，在對話方塊中。
+就在對話方塊顯示之前，會呼叫 `OnInitDialog`。 您必須從您的覆寫呼叫預設的 `OnInitDialog` 處理常式 (通常做為處理常式的第一個動作)。 根據預設， `OnInitDialog`會傳回**TRUE** ，表示焦點應該設定為對話方塊中的第一個控制項。
 
 通常會為非強制回應對話方塊 (而不會為強制回應對話方塊) 覆寫 `OnOK`。 如果您為強制回應對話方塊覆寫此處理常式，請從您的覆寫呼叫基底類別版本，以確保會呼叫 `EndDialog`，或者您自行呼叫 `EndDialog`。
 
 通常會為非強制回應對話方塊覆寫 `OnCancel`。
 
-如需有關這些成員函式的詳細資訊，請參閱類別[CDialog](../mfc/reference/cdialog-class.md)中*MFC 參考 》* 並討論[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)。
+如需這些成員函式的詳細資訊，請參閱*MFC 參考*中的類別[CDialog](../mfc/reference/cdialog-class.md)和[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)討論。
 
 ## <a name="see-also"></a>另請參閱
 

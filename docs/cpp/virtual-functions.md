@@ -1,17 +1,17 @@
 ---
 title: 虛擬函式
-ms.date: 11/04/2016
+ms.date: 09/10/2019
 helpviewer_keywords:
 - functions [C++], virtual functions
 - derived classes [C++], virtual functions
 - virtual functions
 ms.assetid: b3e1ed88-2a90-4af8-960a-16f47deb3452
-ms.openlocfilehash: 07dfd8a602dca93c89a078b2eb69e04cf9d4a7a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c482107b5ad1546c64e0b70ef1714cff8a668ab
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393840"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926094"
 ---
 # <a name="virtual-functions"></a>虛擬函式
 
@@ -19,7 +19,7 @@ ms.locfileid: "62393840"
 
 不論呼叫函式時使用的運算式為何，虛擬函式都可確保針對物件呼叫正確的函式。
 
-假設基底類別包含宣告為函式[虛擬](../cpp/virtual-cpp.md)和衍生的類別中定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作
+假設基類包含宣告為[virtual](../cpp/virtual-cpp.md)的函式，且衍生類別定義相同的函式。 針對衍生類別的物件會叫用來自衍生類別的函式 (即使是使用基底類別的指標或參考呼叫)。 下列範例將示範基底類別，它會提供 `PrintBalance` 函式和兩個衍生類別的實作
 
 ```cpp
 // deriv_VirtualFunctions.cpp
@@ -30,6 +30,7 @@ using namespace std;
 class Account {
 public:
    Account( double d ) { _balance = d; }
+   virtual ~Account() {}
    virtual double GetBalance() { return _balance; }
    virtual void PrintBalance() { cerr << "Error. Balance not available for base type." << endl; }
 private:
@@ -50,15 +51,15 @@ public:
 
 int main() {
    // Create objects of type CheckingAccount and SavingsAccount.
-   CheckingAccount *pChecking = new CheckingAccount( 100.00 ) ;
-   SavingsAccount  *pSavings  = new SavingsAccount( 1000.00 );
+   CheckingAccount checking( 100.00 );
+   SavingsAccount  savings( 1000.00 );
 
    // Call PrintBalance using a pointer to Account.
-   Account *pAccount = pChecking;
+   Account *pAccount = &checking;
    pAccount->PrintBalance();
 
    // Call PrintBalance using a pointer to Account.
-   pAccount = pSavings;
+   pAccount = &savings;
    pAccount->PrintBalance();
 }
 ```
@@ -130,8 +131,6 @@ int main() {
 }
 ```
 
-### <a name="output"></a>Output
-
 ```Output
 Derived::NameOf
 Invoked by Base
@@ -141,11 +140,11 @@ Invoked by Derived
 
 請注意，無論 `NameOf` 函式是經由 `Base` 的指標或 `Derived` 的指標叫用，都會呼叫 `Derived` 的函式。 它會呼叫 `Derived` 的函式是因為 `NameOf` 是虛擬函式，而且 `pBase` 和 `pDerived` 都指向 `Derived` 類型的物件。
 
-因為虛擬函式會呼叫只會針對類別類型的物件，您不能宣告為全域或靜態函式**虛擬**。
+因為虛擬函式只會針對類別類型的物件呼叫，所以您無法將全域或靜態函式宣告為**虛擬**。
 
-**虛擬**宣告覆寫於衍生類別中，函式時，就可以使用關鍵字，但並非必要，因為覆寫虛擬函式一律是虛擬。
+在衍生類別中宣告覆寫函式時，可以使用**virtual**關鍵字，但這是不必要的;虛擬函式的覆寫一律是虛擬的。
 
-必須定義基底類別中的虛擬函式，除非它們使用宣告*純規範*。 (如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)。)
+必須定義基類中的虛擬函式，除非它們是使用*純規範*來宣告。 （如需純虛擬函式的詳細資訊，請參閱[抽象類別](../cpp/abstract-classes-cpp.md)）。
 
 使用範圍解析運算子 (`::`) 就可透過明確限定函式名稱的方式隱藏虛擬函式呼叫機制。 請參考先前包含 `Account` 類別的範例。 若要呼叫基底類別中的 `PrintBalance`，請使用下列範例程式碼：
 

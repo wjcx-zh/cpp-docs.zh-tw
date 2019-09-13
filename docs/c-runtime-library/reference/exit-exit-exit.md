@@ -1,6 +1,6 @@
 ---
 title: exit, _Exit, _exit
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _exit
 - exit
@@ -30,19 +30,19 @@ helpviewer_keywords:
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c16f306d745b96d8bc7c223213378140fdae14bb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339347"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927389"
 ---
-# <a name="exit-exit-exit"></a>exit, _Exit, _exit
+# <a name="exit-_exit-_exit"></a>exit, _Exit, _exit
 
-終止呼叫處理序。 **結束**函式會將其終止後清除;**_exit**並 **_Exit**立即予以終止。
+終止呼叫處理序。 **Exit**函式會在清除之後終止它; **_exit**和 **_exit**會立即將其終止。
 
 > [!NOTE]
-> 請勿使用這個方法關閉通用 Windows 平台 (UWP) 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。 如需 Windows 10 應用程式的詳細資訊，請參閱 [Windows 10 app 使用方法指南](https://developer.microsoft.com/windows/apps)。
+> 請勿使用此方法來關閉通用 Windows 平臺（UWP）應用程式，但不包括測試或偵測案例。 根據[Microsoft Store 的原則](/legal/windows/agreements/store-policies)，不允許以程式設計或 UI 方式關閉存放區應用程式。 如需詳細資訊，請參閱[UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。 如需 Windows 10 應用程式的詳細資訊，請參閱 [Windows 10 app 使用方法指南](https://developer.microsoft.com/windows/apps)。
 
 ## <a name="syntax"></a>語法
 
@@ -65,13 +65,13 @@ void _exit(
 
 ## <a name="remarks"></a>備註
 
-**結束**， **_Exit**並 **_exit**函式會終止呼叫處理序。 **結束**函式會呼叫解構函式的執行緒區域物件，然後呼叫 — 後進先出 (LIFO) 順序，會註冊的函式**atexit**和 **_onexit**，並終止處理程序前，然後排清所有檔案緩衝區。 **_Exit**並 **_exit**函式會終止處理程序，而不會終結執行緒區域物件或處理**atexit**或 **_onexit**函式，並不會排清資料流緩衝區。
+**Exit**、 **_Exit**和 **_Exit**函式會結束通話進程。 **Exit**函數會呼叫執行緒區域物件的析構函式，然後以後進先出（LIFO）順序呼叫**atexit**和 **_onexit**所註冊的函式，然後在結束之前清除所有檔案緩衝區流程. **_Exit**和 **_Exit**函式會終止進程，而不會終結執行緒區域物件或處理**atexit**或 **_onexit**函數，而不會排清資料流程緩衝區。
 
-雖然**結束**， **_Exit**並 **_exit**呼叫不會傳回一個值，在值*狀態*開放給主機環境或者，如果有的話，程序結束之後等待呼叫處理序。 一般而言，呼叫端組*狀態*值 0，表示正常結束，或一些其他值，以表示發生錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**和兩個常數之一代表：**EXIT_SUCCESS**，表示值為 0，或**EXIT_FAILURE**，用來表示的值為 1。
+雖然**exit**、 **_Exit**和 **_Exit**呼叫不會傳回值，但在進程結束之後，*狀態*中的值會提供給主機環境或等候呼叫進程（如果有的話）。 一般來說，呼叫者會將*狀態值*設定為0，以表示正常結束，或設為其他值來表示錯誤。 *狀態*值可供作業系統批次命令**ERRORLEVEL**使用，並以兩個常數的其中一個來表示：**EXIT_SUCCESS**，代表0的值或**EXIT_FAILURE**，代表1的值。
 
-**結束**， **_Exit**， **_exit**， **quick_exit**， **_cexit**，以及 **_c_exit**函式的行為，如下所示。
+**Exit**、 **_Exit**、 **_Exit**、 **quick_exit**、 **_cexit**和 **_c_exit**函數的行為如下所示。
 
-|功能|描述|
+|函數|描述|
 |--------------|-----------------|
 |**exit**|執行完整的 C 程式庫終止程序，再終止處理序，然後將所提供的狀態碼提供給主機環境。|
 |**_Exit**|執行基本 C 程式庫終止程序，再終止處理序，然後將所提供的狀態碼提供給主機環境。|
@@ -80,7 +80,7 @@ void _exit(
 |**_cexit**|執行完整的 C 程式庫終止程序，然後傳回給呼叫端。 不會終止處理序。|
 |**_c_exit**|執行基本的 C 程序庫終止程序，然後傳回給呼叫端。 不會終止處理序。|
 
-當您呼叫**結束**， **_Exit**或是 **_exit**函式，在呼叫時存在的任何暫存或自動物件的解構函式不會呼叫。 自動物件是定義在函式的非靜態本機物件。 暫存物件是由編譯器，例如函式呼叫所傳回的值建立的物件。 要終結自動物件，然後再呼叫**結束**， **_Exit**，或 **_exit**、 明確呼叫解構函式物件，如下所示：
+當您呼叫**exit**、 **_Exit**或 **_Exit**函式時，不會呼叫存在於呼叫時的任何暫存或自動物件的析構函數。 自動物件是在函數中定義的非靜態本機物件。 暫存物件是編譯器所建立的物件，例如函式呼叫所傳回的值。 若要在呼叫**exit**、 **_Exit**或 **_Exit**之前終結自動物件，請明確呼叫物件的析構函式，如下所示：
 
 ```cpp
 void last_fn() {}
@@ -91,13 +91,13 @@ void last_fn() {}
 }
 ```
 
-請勿使用**DLL_PROCESS_ATTACH**來呼叫**結束**從**DllMain**。 若要結束**DLLMain**函式中，傳回**FALSE**從**DLL_PROCESS_ATTACH**。
+請勿使用**DLL_PROCESS_ATTACH**來呼叫**DllMain**的**exit** 。 若要結束**DLLMain**函數，請從**DLL_PROCESS_ATTACH**傳回**FALSE** 。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
-|**結束**， **_Exit**， **_exit**|\<process.h> 或 \<stdlib.h>|
+|**exit**、 **_Exit**、 **_Exit**|\<process.h> 或 \<stdlib.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

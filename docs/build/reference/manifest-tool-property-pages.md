@@ -1,6 +1,6 @@
 ---
 title: 資訊清單工具屬性頁
-ms.date: 7/24/2019
+ms.date: 07/24/2019
 ms.topic: article
 f1_keywords:
 - VC.Project.VCManifestTool.SuppressStartupBanner
@@ -24,12 +24,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: c8413a28024361db82ca74858453202393987e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492692"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927683"
 ---
 # <a name="manifest-tool-property-pages"></a>資訊清單工具屬性頁
 
@@ -49,13 +49,13 @@ ms.locfileid: "69492692"
 
 使用 /identity 選項指定識別字串，其中包含 [\<assemblyIdentity> 項目](/visualstudio/deployment/assemblyidentity-element-clickonce-application)的屬性。 識別字串開頭為 `name` 屬性的值，後面接著 *attribute* = *value* 組。 識別字串中的屬性是以逗號分隔。
 
-這是範例身分識別字串:`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+這是範例身分識別字串：`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
 ## <a name="input-and-output-property-page"></a>輸入和輸出屬性頁     
 
 ###  <a name="additional-manifest-files"></a>其他資訊清單檔案
 
-使用 **/manifest** 選項來指定資訊清單工具將處理或合併之其他資訊清單檔的完整路徑。 完整路徑以分號分隔。 (-資訊清單 [manifest1] [manifest2] ...)
+使用 **/manifest** 選項來指定資訊清單工具將處理或合併之其他資訊清單檔的完整路徑。 完整路徑以分號分隔。 （-資訊清單 [manifest1] [manifest2] ...）
 
 ###  <a name="input-resource-manifests"></a>輸入資源資訊清單
 
@@ -71,7 +71,7 @@ ms.locfileid: "69492692"
 
 ###  <a name="output-manifest-file"></a>輸出資訊清單檔
 
-指定輸出資訊清單檔的名稱。 當資訊清單工具只有操作一個資訊清單檔案時，這個屬性為選擇性。 (-out: [file]; # [資源識別碼])
+指定輸出資訊清單檔的名稱。 當資訊清單工具只有操作一個資訊清單檔案時，這個屬性為選擇性。 （-out： [file]; # [資源識別碼]）
 
 ###  <a name="manifest-resource-file"></a>資訊清單資源檔
 
@@ -83,7 +83,7 @@ ms.locfileid: "69492692"
 
 ###  <a name="generate-manifest-from-managedassembly"></a>從 ManagedAssembly 產生資訊清單
 
-從受控組件產生資訊清單。 (-managedassemblyname: [file])
+從受控組件產生資訊清單。 （-managedassemblyname： [file]）
 
 ###  <a name="suppress-dependency-element"></a>隱藏 Dependency 元素
 
@@ -91,7 +91,7 @@ ms.locfileid: "69492692"
 
 ###  <a name="generate-category-tags"></a>產生類別標記
 
-與-managedassembly 搭配使用。 -category 會產生類別標記。 (-category)
+與-managedassembly 搭配使用。 -category 會產生類別標記。 （-category）
 
 ###  <a name="dpi-awareness"></a>DPI 感知
 
@@ -105,29 +105,29 @@ ms.locfileid: "69492692"
 
 ## <a name="isolated-com-property-page"></a>隔離的 COM 屬性頁
 
-如需有關隔離的 COM 的詳細資訊, 請[參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如何:建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
+如需有關隔離的 COM 的詳細資訊，請[參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如何：建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
 
 ###  <a name="type-library-file"></a>類型程式庫檔案
 
-指定要用於 regfree COM 資訊清單支援的類型程式庫。 (-tlb: [檔案])
+指定要用於 regfree COM 資訊清單支援的類型程式庫。 （-tlb： [檔案]）
 
 ###  <a name="registrar-script-file"></a>註冊機構腳本檔案
 
-指定要用於 regfree COM 資訊清單支援的註冊機構腳本檔案。 (-rgs: [檔案])
+指定要用於 regfree COM 資訊清單支援的註冊機構腳本檔案。 （-rgs： [檔案]）
 
 ###  <a name="component-file-name"></a>元件檔名稱
 
-指定從指定的 .tlb 或 .rgs 所建立之元件的檔案名。 (-dll: [檔案])
+指定從指定的 .tlb 或 .rgs 所建立之元件的檔案名。 （-dll： [檔案]）
 
 ###  <a name="replacements-file"></a>取代檔案
 
-指定包含 RGS 檔案中可取代字串值的檔案。 (取代專案: [檔案])
+指定包含 RGS 檔案中可取代字串值的檔案。 （取代專案： [檔案]）
 
 ## <a name="advanced-property-page"></a>Advanced 屬性頁
 
 ###  <a name="update-file-hashes"></a>更新檔案雜湊
 
-計算檔案專案中指定之檔案的雜湊, 並以這個值更新雜湊屬性。 (hashupdate: [路徑])
+計算檔案專案中指定之檔案的雜湊，並以這個值更新雜湊屬性。 （hashupdate： [路徑]）
 
 ###  <a name="update-file-hashes-search-path"></a>更新檔案雜湊搜尋路徑
 

@@ -1,6 +1,6 @@
 ---
 title: 在 MFC 中使用 Windows Form 使用者控制項
-ms.date: 1/08/2018
+ms.date: 01/08/2018
 helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - interoperability [C++], Windows Forms in MFC
@@ -9,32 +9,32 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efabbf84778d925ec1de03f5f4ea0ca09185bd81
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926059"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>在 MFC 中使用 Windows Form 使用者控制項
 
-使用 MFC Windows Form 支援類別，您可以裝載 Windows Form 控制項在 MFC 應用程式內為 ActiveX 控制項，MFC 對話方塊或檢視內。 此外，Windows Form 表單可以裝載成 MFC 對話方塊。
+使用 MFC Windows Forms 支援類別，您可以將 MFC 應用程式內的 Windows Forms 控制項裝載為 MFC 對話方塊或視圖中的 ActiveX 控制項。 此外，Windows Forms 表單也可以裝載為 MFC 對話方塊。
 
 下列各節說明如何：
 
-- 裝載 Windows Form 控制項在 MFC 對話方塊中。
+- 在 MFC 對話方塊中裝載 Windows Forms 控制項。
 
-- Windows Form 使用者控制項裝載為 MFC 檢視。
+- 將 Windows Forms 的使用者控制項裝載為 MFC 視圖。
 
-- 裝載成 MFC 對話方塊的 Windows Form 表單。
-
-> [!NOTE]
-> MFC Windows Form 整合只適用於以動態方式連結 MFC 的專案 (專案所在`_AFXDLL`定義)。
+- 將 Windows Forms 表單裝載為 MFC 對話方塊。
 
 > [!NOTE]
-> 當您建置您的應用程式使用的 DLL （mfcmifc80.dll 的參考） 的 MFC Windows Form 介面的私用 （已修改） 複本時，它將無法安裝在 GAC 中，除非您使用您自己的廠商金鑰來取代 Microsoft 金鑰。 如需有關簽署的組件的詳細資訊，請參閱[組件使用程式設計](/dotnet/framework/app-domains/programming-with-assemblies)並[強式名稱組件 （組件簽署） (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+> Mfc Windows Forms 整合只適用于以 mfc （定義的專案`_AFXDLL` ）動態連結的專案。
 
-如果您的 MFC 應用程式使用 Windows Forms，您需要重新發佈您的應用程式 mfcmifc80.dll 的參考。 如需詳細資訊，請參閱 <<c0> [ 轉散發 MFC 程式庫](../windows/redistributing-the-mfc-library.md)。
+> [!NOTE]
+> 當您使用 MFC Windows Forms 介面 DLL （mfcmifc80）的私用（已修改）複本來建立應用程式時，除非您使用自己的廠商金鑰來取代 Microsoft 金鑰，否則它將無法安裝在 GAC 中。 如需元件簽署的詳細資訊，請參閱[使用元件](/dotnet/framework/app-domains/programming-with-assemblies)進行程式設計和[強式名稱元件（C++元件簽署）（/cli）](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)。
+
+如果您的 MFC 應用程式使用 Windows Forms，您需要使用您的應用程式轉散發 mfcmifc80。 如需詳細資訊，請參閱轉散發[MFC 程式庫](../windows/redistributing-the-mfc-library.md)。
 
 ## <a name="in-this-section"></a>本節內容
 
@@ -74,5 +74,5 @@ ms.locfileid: "62384487"
 
 ## <a name="see-also"></a>另請參閱
 
-[使用者介面項目](../mfc/user-interface-elements-mfc.md)<br/>
+[使用者介面元素](../mfc/user-interface-elements-mfc.md)<br/>
 [表單檢視](../mfc/form-views-mfc.md)

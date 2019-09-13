@@ -1,6 +1,6 @@
 ---
 title: _set_abort_behavior
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,19 +23,19 @@ helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b72a485287684fc85f1e232e89774e07a5e3f42b
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356682"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927482"
 ---
-# <a name="setabortbehavior"></a>_set_abort_behavior
+# <a name="_set_abort_behavior"></a>_set_abort_behavior
 
 指定要在程式異常終止時採取的動作。
 
 > [!NOTE]
-> 請勿使用[中止](abort.md)函式來關閉 Microsoft Store 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
+> 請勿使用[abort](abort.md)函式來關閉 Microsoft Store 應用程式，但不包括測試或偵測案例。 根據[Microsoft Store 的原則](/legal/windows/agreements/store-policies)，不允許以程式設計或 UI 方式關閉存放區應用程式。 如需詳細資訊，請參閱[UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>語法
 
@@ -49,10 +49,10 @@ unsigned int _set_abort_behavior(
 ### <a name="parameters"></a>參數
 
 *flags*<br/>
-新值[中止](abort.md)旗標。
+[Abort](abort.md)旗標的新值。
 
 *mask*<br/>
-遮罩[中止](abort.md)旗標設定的位元。
+要設定之[中止](abort.md)旗標位的遮罩。
 
 ## <a name="return-value"></a>傳回值
 
@@ -60,7 +60,7 @@ unsigned int _set_abort_behavior(
 
 ## <a name="remarks"></a>備註
 
-有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**並 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定是否要在程式異常終止時，列印有用的文字訊息。 此訊息說明應用程式已呼叫[中止](abort.md)函式。 預設行為是列印訊息。 **_CALL_REPORTFAULT**，如果設定，可指定 Watson 損毀傾印產生，並回報的時機[中止](abort.md)呼叫。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
+有兩個[中止](abort.md)旗標： **_WRITE_ABORT_MSG**和 **_CALL_REPORTFAULT**。 **_WRITE_ABORT_MSG**決定當程式異常終止時，是否要列印有用的文字訊息。 訊息指出應用程式已呼叫[abort](abort.md)函數。 預設行為是列印訊息。 如果設定， **_CALL_REPORTFAULT**會指定在呼叫[Abort](abort.md)時產生 Watson 損毀傾印並回報。 根據預設，會在非偵錯組建中啟用損毀傾印報告。
 
 ## <a name="requirements"></a>需求
 

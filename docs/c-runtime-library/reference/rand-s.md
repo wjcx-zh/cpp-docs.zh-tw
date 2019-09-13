@@ -1,6 +1,6 @@
 ---
 title: rand_s
-ms.date: 1/02/2018
+ms.date: 01/02/2018
 apiname:
 - rand_s
 apilocation:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - cryptographically secure random numbers
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 7a2c57713d4b455971f24b64dc124862749e927a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: MT
+ms.openlocfilehash: 2bbefad60d1d54ece0b467fc411ca9b6b7fe498f
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499555"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927443"
 ---
 # <a name="rand_s"></a>rand_s
 
-產生虛擬亂數。 這是更安全的函數[rand](rand.md)版本, 其中包含[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
+產生虛擬亂數。 這是更安全的函數[rand](rand.md)版本，其中包含[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -51,20 +51,20 @@ errno_t rand_s(unsigned int* randomValue);
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為零，否則為錯誤碼。 如果輸入指標_randomValue_是 null 指標, 此函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回**EINVAL** , 並將**Errno**設定為**EINVAL**。 如果函式因為任何其他原因而失敗, 則 *_randomValue_會設定為0。
+如果成功則為零，否則為錯誤碼。 如果輸入指標_randomValue_是 null 指標，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。 如果函式因為任何其他原因而失敗，則 *_randomValue_會設定為0。
 
 ## <a name="remarks"></a>備註
 
-**Rand_s**函數會將0到**UINT_MAX**範圍內的隨機整數寫入輸入指標。 **Rand_s**函數會使用作業系統來產生密碼編譯安全的亂數字。 它不會使用[srand](srand.md)函數所產生的種子, 也不會影響[rand](rand.md)所使用的亂數字序列。
+**Rand_s**函數會將0到**UINT_MAX**範圍內的隨機整數寫入輸入指標。 **Rand_s**函數會使用作業系統來產生密碼編譯安全的亂數字。 它不會使用[srand](srand.md)函數所產生的種子，也不會影響[rand](rand.md)所使用的亂數字序列。
 
-**Rand_s**函數需要在要宣告之函式的包含語句之前定義常數 **_CRT_RAND_S** , 如下列範例所示:
+**Rand_s**函數需要在要宣告之函式的包含語句之前定義常數 **_CRT_RAND_S** ，如下列範例所示：
 
 ```C
 #define _CRT_RAND_S
 #include <stdlib.h>
 ```
 
-**rand_s**取決於[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API, 這僅適用于 Windows XP 和更新版本。
+**rand_s**取決於[RtlGenRandom](/windows/win32/api/ntsecapi/nf-ntsecapi-rtlgenrandom) API，這僅適用于 Windows XP 和更新版本。
 
 ## <a name="requirements"></a>需求
 

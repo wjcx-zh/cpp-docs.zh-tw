@@ -1,6 +1,6 @@
 ---
 title: spectre
-ms.date: 1/23/2018
+ms.date: 01/23/2018
 f1_keywords:
 - spectre_cpp
 - spectre
@@ -8,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword (C++), spectre
 - spectre __declspec keyword
-ms.openlocfilehash: 2377a3c23be1e27bfe4f2df23eb00823635fa05d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40eee25dec867ae3fce7a6b2d4715f0be81bfe76
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267254"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926360"
 ---
 # <a name="spectre"></a>spectre
 
 **Microsoft 專屬**
 
-會告知編譯器不要插入 Spectre 變異 1 推測性執行的屏障指示函式。
+告訴編譯器不要為函式插入 Spectre variant 1 的推測執行屏障指示。
 
 ## <a name="syntax"></a>語法
 
@@ -27,12 +27,12 @@ ms.locfileid: "62267254"
 
 ## <a name="remarks"></a>備註
 
-[/Qspectre](../build/reference/qspectre.md)編譯器選項會導致編譯器插入推測性執行的屏障指示分析指出 Spectre 變異 1 安全性弱點的存在。 發出的特定指示取決於處理器。 雖然這些指示應該擁有對程式碼大小或效能的影響最小，可能是您的程式碼不會受到這項弱點，而且需要最大效能。
+[/Qspectre](../build/reference/qspectre.md)編譯器選項會使編譯器插入推測性執行屏障指示。 它們會插入，其中分析指出有 Spectre variant 1 安全性弱點存在。 所發出的特定指示取決於處理器。 雖然這些指示對程式碼大小或效能應該會有最小的影響，但有時候您的程式碼不會受到弱點的影響，而且需要最大效能。
 
-專家 analysis 可能會判斷函式是安全從 Spectre 變異 1 界限檢查略過缺失。 在此情況下，您可以藉由套用隱藏的函式中的風險降低程式碼產生`__declspec(spectre(nomitigation))`函式宣告。
+專家分析可能會判斷函式不會受到 Spectre 變異1界限檢查略過瑕疵的保護。 在這種情況下，您可以將套用`__declspec(spectre(nomitigation))`至函式宣告，以隱藏函式中的風險降低程式碼產生。
 
 > [!CAUTION]
-> **/Qspectre**推測性執行的屏障指示提供重要的安全性保護，且對效能造成的影響微乎其微。 因此，除了在少數函式的效能為重要考量，以及函式已知為安全的情況以外，建議您不要抑制這些檢查。
+> **/Qspectre**的推測性執行屏障指示提供重要的安全性保護，而且對效能的影響也不明顯。 因此，除了在少數函式的效能為重要考量，以及函式已知為安全的情況以外，建議您不要抑制這些檢查。
 
 ## <a name="example"></a>範例
 

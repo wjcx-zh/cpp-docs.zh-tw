@@ -1,14 +1,14 @@
 ---
 title: C/C++ Project 屬性 (Visual Studio)
-ms.date: 7/18/2019
+ms.date: 07/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
-ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.openlocfilehash: 2f7fe025eb69fc1977713c638eef0742074bd9fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68537562"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927741"
 ---
 # <a name="cc-property-pages"></a>C/C++屬性頁
 
@@ -119,8 +119,8 @@ ms.locfileid: "68537562"
 
 - **Default**
 - **Disabled** -停用內嵌展開, 此功能預設為開啟。
-- **只有 __inline** -在類別宣告內定義的C++成員函式中, 只展開標記為 inline、__inline、__forceinline 或 __inline 或的函數。
-- **任何適合**展開的函式, 會標記為內嵌或 __inline, 以及編譯器選擇的任何其他函數 (展開會在編譯器的判斷中進行, 通常稱為自動內嵌)。
+- **只有 __inline** -在類別宣告內定義的C++成員函式中，只展開標記為 inline、__inline、__forceinline 或 __inline 或的函數。
+- **任何適合**展開的函式，會標記為內嵌或 __inline，以及編譯器選擇的任何其他函數（展開會在編譯器的判斷中進行，通常稱為自動內嵌）。
 
 ### <a name="enable-intrinsic-functions"></a>啟用內建函式
 
@@ -223,7 +223,7 @@ ms.locfileid: "68537562"
 - **多執行緒**-讓您的應用程式使用多執行緒、靜態版本的執行時間程式庫。
 - **多執行緒的 Debug** -定義 _DEBUG 和 _MT。 這個選項也會讓編譯器將程式庫名稱 LIBCMTD.lib 放入 .obj 檔中，使連結器可以使用 LIBCMTD.lib 解析外部符號。
 - **多執行緒 dll** -讓您的應用程式使用多執行緒和 DLL 特定版本的執行時間程式庫。 定義 _MT 和 _DLL，並導致編譯器將程式庫名稱 MSVCRT.lib 放入 .obj 檔。
-- **多執行緒的 DEBUG DLL** -定義 _DEBUG、_MT 和 _DLL, 並讓您的應用程式使用 Debug 多執行緒和 DLL 特定版本的執行時間程式庫。 它也會讓編譯器將程式庫名稱 MSVCRTD.lib 放入 .obj 檔中。
+- **多執行緒的 DEBUG DLL** -定義 _DEBUG、_MT 和 _DLL，並讓您的應用程式使用 Debug 多執行緒和 DLL 特定版本的執行時間程式庫。 它也會讓編譯器將程式庫名稱 MSVCRTD.lib 放入 .obj 檔中。
 
 ### <a name="struct-member-alignment"></a>結構成員對齊
 
@@ -262,7 +262,7 @@ ms.locfileid: "68537562"
 
 ### <a name="enable-parallel-code-generation"></a>啟用平行程式碼產生
 
-允許編譯器在啟用優化時, 為使用 #pragma 迴圈 (hint_parallel\[(n)]) 所識別的迴圈產生平行程式碼。
+允許編譯器在啟用優化時，為使用 #pragma 迴圈（hint_parallel\[（n）]）所識別的迴圈產生平行程式碼。
 
 ### <a name="enable-enhanced-instruction-set"></a>啟用增強的指令集
 
@@ -284,7 +284,7 @@ ms.locfileid: "68537562"
 **做**
 
 - **精確**-預設值。 改善浮點測試是否相等和不相等的一致性。
-- **Strict** -最嚴格的浮點模型。 /fp: strict 會使 fp_contract 關閉, 並將 fenv_access 設為 ON。 /fp: except 是隱含的, 而且可以藉由明確指定/fp: except-來停用。 與/fp: except-,/fp: strict 會強制執行嚴格的浮點語義, 但不考慮例外事件。
+- **Strict** -最嚴格的浮點模型。 /fp： strict 會使 fp_contract 關閉，並將 fenv_access 設為 ON。 /fp: except 是隱含的, 而且可以藉由明確指定/fp: except-來停用。 與/fp: except-,/fp: strict 會強制執行嚴格的浮點語義, 但不考慮例外事件。
 - **Fast** -在大部分案例中建立最快速的程式碼。
 
 ### <a name="enable-floating-point-exceptions"></a>啟用浮點例外狀況
@@ -314,9 +314,9 @@ ms.locfileid: "68537562"
 
 啟用或抑制一致性模式。 設定[/permissive-](permissive-standards-conformance.md)。
 
-### <a name="treat-wchart-as-built-in-type"></a>將 WChar_t 視為內建類型
+### <a name="treat-wchar_t-as-built-in-type"></a>將 WChar_t 視為內建類型
 
-當指定時, wchar_t 類型會變成對應至 __wchar_t 的原生類型, 其方式與 short 對應至 __int16 的方式相同。 [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md)預設為開啟。
+當指定時，wchar_t 類型會變成對應至 __wchar_t 的原生類型，其方式與 short 對應至 __int16 的方式相同。 [/Zc： wchar_t](zc-wchar-t-wchar-t-is-native-type.md)預設為開啟。
 
 ### <a name="force-conformance-in-for-loop-scope"></a>強制 For 迴圈範圍中的一致性
 
@@ -367,7 +367,7 @@ C++模組 TS 和標準程式庫模組的實驗性支援。
 
 ### <a name="precompiled-header-file"></a>先行編譯標頭檔
 
-指定建立或使用先行編譯標頭檔時要使用的標頭檔名稱。 設定[/yc](yc-create-precompiled-header-file.md)、[/yu]] (Yu-使用-file.md)。
+指定建立或使用先行編譯標頭檔時要使用的標頭檔名稱。 設定[/yc](yc-create-precompiled-header-file.md)、[/yu]] （Yu-使用-file.md）。
 
 ### <a name="precompiled-header-output-file"></a>先行編譯標頭檔輸出檔
 
@@ -433,10 +433,10 @@ C++模組 TS 和標準程式庫模組的實驗性支援。
 
 **做**
 
-- **__cdecl** -指定所有函式的 __cdecl 呼叫慣例, C++但成員函式和函式 (標記為 __stdcall 或 __fastcall) 除外。
-- **__fastcall** -指定所有函式的 __fastcall 呼叫慣例, C++但成員函式和函式標記為 __cdecl 或 __stdcall 除外。 所有 __fastcall 函數都必須具有原型。
-- **__stdcall** -針對所有函式指定 __stdcall 呼叫慣例, C++但成員函式和函式除外, 但標記為 __cdecl 或 __fastcall。 所有 __stdcall 函數都必須具有原型。
-- **__vectorcall** -指定所有函式的 __vectorcall 呼叫慣例, C++但成員函式和函式標記為 __cdecl、__fastcall 或 __stdcall。 所有 __vectorcall 函數都必須具有原型。
+- **__cdecl** -指定所有函式的 __cdecl 呼叫慣例， C++但成員函式和函式（標記為 __stdcall 或 __fastcall）除外。
+- **__fastcall** -指定所有函式的 __fastcall 呼叫慣例， C++但成員函式和函式標記為 __cdecl 或 __stdcall 除外。 所有 __fastcall 函數都必須具有原型。
+- **__stdcall** -針對所有函式指定 __stdcall 呼叫慣例， C++但成員函式和函式除外，但標記為 __cdecl 或 __fastcall。 所有 __stdcall 函數都必須具有原型。
+- **__vectorcall** -指定所有函式的 __vectorcall 呼叫慣例， C++但成員函式和函式標記為 __cdecl、__fastcall 或 __stdcall。 所有 __vectorcall 函數都必須具有原型。
 
 ### <a name="compile-as"></a>編譯為
 
@@ -474,14 +474,14 @@ C++模組 TS 和標準程式庫模組的實驗性支援。
 
 ### <a name="internal-compiler-error-reporting"></a>內部編譯器錯誤報表
 
-指定如何向 Microsoft 回報內部工具錯誤。  IDE 中的預設值為 [提示]。  命令列組建的預設值為 queue。 設定 [/errorReport:\[method]] (errorReport-report-內部編譯器-errors.md)。
+指定如何向 Microsoft 回報內部工具錯誤。  IDE 中的預設值為 [提示]。  命令列組建的預設值為 queue。 設定 [/errorReport：\[method]] （errorReport-report-內部編譯器-errors.md）。
 
 **做**
 
 - 不**傳送報告**-內部編譯器錯誤的報告將不會收集或傳送給 Microsoft。
 - **立即提示**-當您收到內部編譯器錯誤時, 提示您傳送報表。
-- **下一次登**入的佇列-將錯誤報表排入佇列。 當您使用系統管理員許可權登入時, 會顯示一個快顯視窗, 並可讓您報告自上次登入後的任何失敗時間 (每隔三天不會提示您傳送失敗的報告一次以上)。 佇列是在命令列編譯應用程式時的預設值。
-- **自動傳送**-自動將內部編譯器錯誤的報告傳送給 Microsoft。 若要啟用此選項, 您必須先同意 Microsoft% 27s 資料收集原則。 第一次在電腦上指定/errorReport: send 時, 編譯器訊息會將您指向包含 Microsoft% 27s 資料收集原則的網站。
+- **下一次登**入的佇列-將錯誤報表排入佇列。 當您使用系統管理員許可權登入時，會顯示一個快顯視窗，並可讓您報告自上次登入後的任何失敗時間（每隔三天不會提示您傳送失敗的報告一次以上）。 佇列是在命令列編譯應用程式時的預設值。
+- **自動傳送**-自動將內部編譯器錯誤的報告傳送給 Microsoft。 若要啟用此選項，您必須先同意 Microsoft% 27s 資料收集原則。 第一次在電腦上指定/errorReport： send 時，編譯器訊息會將您指向包含 Microsoft% 27s 資料收集原則的網站。
 
 ### <a name="treat-specific-warnings-as-errors"></a>將特定警告視為錯誤
 

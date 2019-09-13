@@ -1,42 +1,42 @@
 ---
 title: /DISASM
-ms.date: 1/17/2018
+ms.date: 01/17/2018
 f1_keywords:
 - /disasm
 helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb394b2266470e77c50ce5398aea961c37ac34fb
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272057"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927715"
 ---
 # <a name="disasm"></a>/DISASM
 
-列印 DUMPBIN 輸出中的程式碼區段的反組譯碼。
+在 DUMPBIN 輸出中列印程式碼區段的反組解碼。
 
 ## <a name="syntax"></a>語法
 
-> **/DISASM**{**:**\[**BYTES**|**NOBYTES**]}
+> **/DISASM**{ **：** \[BYTESNOBYTES|]}
 
 ### <a name="arguments"></a>引數
 
 **BYTES**<br/>
-包含指令的位元組以及解譯的 opcode 及引數的反組譯碼輸出中。 這是預設選項。
+包含指令位元組和反組解碼輸出中的解讀碼和引數。 這是預設選項。
 
 **NOBYTES**<br/>
-不在反組譯碼輸出中包含指令的位元組。
+不會在反組解碼輸出中包含指令位元組。
 
 ## <a name="remarks"></a>備註
 
-**/DISASM**選項顯示反組譯程式碼區段的檔案中。 如果它們存在檔案中，它會使用偵錯符號。
+**/DISASM**選項會顯示檔案中程式碼區段的反組解碼。 如果檔案中有，則會使用 debug 符號。
 
-**/DISASM**應該只用在原生、 未受管理的映像上。 Managed 程式碼的對等工具是[ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler)。
+**/DISASM**僅適用于原生、非受控的影像。 Managed 程式碼的對等工具是[ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler)。
 
-只有[/HEADERS](headers.md) DUMPBIN 選項只適用於所產生的檔案上[/GL （整個程式最佳化）](gl-whole-program-optimization.md)編譯器選項。
+只有[/HEADERS](headers.md) DUMPBIN 選項可用於[/gl （整個程式優化）](gl-whole-program-optimization.md)編譯器選項所產生的檔案。
 
 ## <a name="see-also"></a>另請參閱
 

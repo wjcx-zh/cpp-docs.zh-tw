@@ -1,10 +1,10 @@
 ---
 title: _fputchar、_fputwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fputchar
 - _fputwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputtchar
 - _fputwchar
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 39642be871c1c5b5c2deaf35b7c26d19c188b440
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287926"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956940"
 ---
-# <a name="fputchar-fputwchar"></a>_fputchar、_fputwchar
+# <a name="_fputchar-_fputwchar"></a>_fputchar、_fputwchar
 
 將字元寫入至 **stdout**。
 
@@ -62,13 +65,13 @@ wint_t _fputwchar(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回寫入的字元。 針對 **_fputchar**，傳回值為**EOF**表示發生錯誤。 針對 **_fputwchar**，傳回值為**WEOF**表示發生錯誤。 如果 c **NULL**，如中所述，這些函式會產生無效參數例外狀況[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，它們會傳回**EOF** (或**WEOF**)，並設定**errno**至**EINVAL**。
+所有這些函式都會傳回寫入的字元。 若為 **_fputchar**， **EOF**的傳回值表示錯誤。 若為 **_fputwchar**， **WEOF**的傳回值表示錯誤。 如果 c 是**Null**，則這些函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回**EOF** （或**WEOF**），並將**errno**設定為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-兩個函數將單一字元時，寫入*c*要**stdout**並往前推進適當地標記。 **_fputchar**相當於`fputc( stdout )`。 它也相當於**putchar**，但只為函式，而不是函式和巨集來實作。 不同於**fputc**並**putchar**，這些函式與不相容的 ANSI 標準。
+這兩個函式都會將單一字元*c*寫入**stdout** ，並視情況將指標往前移。 **_fputchar**相當於`fputc( stdout )`。 它也相當於**putchar**，但只實作為函式，而不是函式和宏。 不同于**fputc**和**putchar**，這些函數與 ANSI 標準不相容。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -78,12 +81,12 @@ wint_t _fputwchar(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，並**stderr**— 必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,10 +1,10 @@
 ---
 title: _unlink、_wunlink
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _unlink
 - _wunlink
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tunlink
 - _unlink
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 878a1b4aa009bc8528dfac1908ed26c7e3b269ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957383"
 ---
-# <a name="unlink-wunlink"></a>_unlink、_wunlink
+# <a name="_unlink-_wunlink"></a>_unlink、_wunlink
 
 刪除檔案。
 
@@ -61,13 +64,13 @@ int _wunlink(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回 0。 否則，函數會傳回-1 和集**errno**來**EACCES**，表示路徑指定唯讀檔案或目錄，或**ENOENT**，這表示檔案或路徑找不到。
+如果成功，所有這些函式都會傳回 0。 否則，此函式會傳回-1，並將**errno**設定為**EACCES**，這表示路徑指定唯讀檔案或目錄，或**ENOENT**，這表示找不到檔案或路徑。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Unlink**函式會刪除所指定的檔案*filename*。 **_wunlink**是寬字元版本的 **_unlink**; *filename*引數 **_wunlink**是寬字元字串。 除此之外，這些函式的行為相同。
+**_Unlink**函數會刪除*filename*所指定的檔案。 **_wunlink**是寬字元版本的 **_unlink**; **_wunlink**的*filename*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -102,7 +105,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtunlinktxt"></a>輸入︰crt_unlink.txt
+### <a name="input-crt_unlinktxt"></a>輸入︰crt_unlink.txt
 
 ```Input
 This file will be deleted.

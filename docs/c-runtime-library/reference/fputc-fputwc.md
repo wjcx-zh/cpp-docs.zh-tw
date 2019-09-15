@@ -1,10 +1,10 @@
 ---
 title: fputc、fputwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fputc
 - fputwc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fputc
 - fputwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - fputwc function
 - fputc function
 ms.assetid: 5a0a593d-43f4-4fa2-a401-ec4e23de4d2f
-ms.openlocfilehash: fc06c9f2060baae63071339768cef11fc5f34023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d289e54bca53be52d0b308d759f4200eca8599c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288015"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956954"
 ---
 # <a name="fputc-fputwc"></a>fputc、fputwc
 
@@ -62,15 +65,15 @@ wint_t fputwc(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回寫入的字元。 針對**fputc**，傳回值為**EOF**表示發生錯誤。 針對**fputwc**，傳回值為**WEOF**表示發生錯誤。 如果*資料流*是**NULL**，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，它們會傳回**EOF**並設定**errno**來**EINVAL**。
+所有這些函式都會傳回寫入的字元。 若為**fputc**， **EOF**的傳回值表示錯誤。 若為**fputwc**， **WEOF**的傳回值表示錯誤。 如果*stream*為**Null**，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會將單一字元時，寫入*c*位置的檔案中以表示相關聯的檔案位置指標 （如果有定義），並往前推進適當地標記。 若是**fputc**並**fputwc**，與檔案關聯*資料流*。 如果檔案不支援定位要求，或以附加模式予以開啟，則會將字元附加至資料流結尾。
+所有這些函式都會將單一字元*c*寫入檔案，該檔案位於相關聯的檔案位置指標（如已定義）所指出的位置，並視需要將指標往前移。 如果是**fputc**和**fputwc**，檔案就會與*stream*相關聯。 如果檔案不支援定位要求，或以附加模式予以開啟，則會將字元附加至資料流結尾。
 
-如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 **fputc**目前不支援輸出至 UNICODE 資料流。
+如果資料流是以 ANSI 模式開啟，則這兩個函式的行為相同。 **fputc**目前不支援輸出至 UNICODE 資料流程。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 [_fputc_nolock、_fputwc_nolock](fputc-nolock-fputwc-nolock.md)。
 
@@ -78,8 +81,8 @@ wint_t fputwc(
 
 |常式傳回的值|備註|
 |-------------|-------------|
-|**fputc**|相當於**putc**，但只為函式，而不是函式和巨集來實作。|
-|**fputwc**|寬字元版本的**fputc**。 寫入*c*為多位元組字元或寬字元，根據是否*串流*以文字模式還是二進位模式開啟。|
+|**fputc**|相當於**putc**，但只實作為函式，而不是函式和宏。|
+|**fputwc**|**Fputc**的寬字元版本。 根據*資料流程*是以文字模式還是二進位模式開啟，將*c*當做多位元組字元或寬字元寫入。|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -89,12 +92,12 @@ wint_t fputwc(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fputc**|\<stdio.h>|
 |**fputwc**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，並**stderr**— 必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,10 +1,10 @@
 ---
 title: _access_s、_waccess_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _access_s
 - _waccess_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - waccess_s
 - access_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 17d19527323f3e97edecd22ca7c0a0262b1cfbad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335681"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939910"
 ---
-# <a name="accesss-waccesss"></a>_access_s、_waccess_s
+# <a name="_access_s-_waccess_s"></a>_access_s、_waccess_s
 
 決定檔案的讀取/寫入權限。 這是如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之增強安全性的 [_access、_waccess](access-waccess.md) 版本。
 
@@ -68,7 +71,7 @@ errno_t _waccess_s(
 
 |errno 值|條件|
 |-|-|
-`EACCES`|存取遭拒。 檔案的權限設定不允許指定的存取。
+`EACCES`|拒絕存取。 檔案的權限設定不允許指定的存取。
 `ENOENT`|找不到檔案名稱或路徑。
 `EINVAL`|無效的參數。
 
@@ -76,7 +79,7 @@ errno_t _waccess_s(
 
 ## <a name="remarks"></a>備註
 
-當搭配檔案使用時 **_access_s**函式會判斷指定的檔案是否存在，而且可以存取為指定的值所*模式*。 搭配目錄使用時 **_access_s**只判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄具有讀取和寫入存取。
+搭配檔案使用時， **_access_s**函式會判斷指定的檔案是否存在，並可依*模式*值的指定來存取。 搭配目錄使用時， **_access_s**只會判斷指定的目錄是否存在。 在 Windows 2000 和更新版本的作業系統中，所有目錄都有讀取和寫入存取權。
 
 |模式值|檢查檔案|
 |----------------|---------------------|
@@ -85,11 +88,11 @@ errno_t _waccess_s(
 |04|讀取權限。|
 |06|讀取和寫入權限。|
 
-讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個處理序鎖定，它可能無法存取即使 **_access_s**會傳回 0。
+讀取或寫入檔案的權限不足以確保能夠開啟檔案。 例如，如果檔案已由另一個進程鎖定，即使 **_access_s**傳回0，它也可能無法存取。
 
-**_waccess_s**是寬字元版本的 **_access_s**，其中*路徑*引數 **_waccess_s**是寬字元字串。 否則，請 **_waccess_s**並 **_access_s**運作方式完全相同。
+**_waccess_s**是 **_access_s**的寬字元版本，其中 **_waccess_s**的*path*引數是寬字元字串。 否則， **_waccess_s**和 **_access_s**的行為會相同。
 
-這些函式會驗證它們的參數。 如果*路徑*為 NULL 或*模式*未指定有效的模式中，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
+這些函式會驗證它們的參數。 如果*path*為 Null，或*模式*未指定有效的模式，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將 `errno` 設為 `EINVAL`，並傳回 `EINVAL`。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,7 +109,7 @@ errno_t _waccess_s(
 
 ## <a name="example"></a>範例
 
-這個範例會使用 **_access_s**檢查名為 crt_access_s.c 以查看它是否存在以及是否允許寫入的檔案。
+這個範例會使用 **_access_s**來檢查名為 crt_access_s 的檔案，以查看它是否存在，以及是否允許寫入。
 
 ```C
 // crt_access_s.c

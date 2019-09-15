@@ -1,9 +1,9 @@
 ---
 title: _putw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putw
 - putw
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 3fd18c2a8869d6b09703547f50ee6e096bd72395
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358045"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949759"
 ---
-# <a name="putw"></a>_putw
+# <a name="_putw"></a>_putw
 
 將一個整數寫入資料流。
 
@@ -55,13 +58,13 @@ int _putw(
 
 ## <a name="return-value"></a>傳回值
 
-傳回寫入的值。 傳回值**EOF**可能表示發生錯誤。 因為**EOF**也是合法的整數值，使用**ferror**驗證錯誤。 如果*資料流*為 null 指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EOF**。
+傳回寫入的值。 **EOF**的傳回值可能表示發生錯誤。 因為**EOF**也是合法的整數值，所以請使用**ferror**來驗證錯誤。 如果*stream*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Putw**函式會寫入二進位值的型別**int**的目前位置到*資料流。* **_putw**並不會影響的資料流中的項目對齊方式，也不會假設任何特殊對齊方式。 **_putw**是主要是為了與先前的程式庫相容。 可攜性問題時可能發生之 **_putw**因為大小**int**和位元組順序**int**系統而有所不同。
+**_Putw**函數會將**int**類型的二進位值寫入資料流程的目前位置 *。* **_putw**不會影響資料流程中的專案對齊，也不會採用任何特殊對齊方式。 **_putw**主要是為了與先前的程式庫相容。 **_Putw**可能會發生可攜性問題，因為**int**的大小和**int**中的位元組順序在不同的系統之間有所不同。
 
 ## <a name="requirements"></a>需求
 

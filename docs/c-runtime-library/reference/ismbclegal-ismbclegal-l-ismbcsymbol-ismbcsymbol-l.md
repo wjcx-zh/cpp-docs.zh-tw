@@ -1,12 +1,12 @@
 ---
 title: _ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclegal_l
 - _ismbclegal
 - _ismbcsymbol
 - _ismbcsymbol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbcsymbol_l
 - _ismbcsymbol_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 07855ec970b2bf307238982987912f1e91505e96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e040db584725322e98d0a82b28912eea100aff7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286828"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953796"
 ---
-# <a name="ismbclegal-ismbclegall-ismbcsymbol-ismbcsymboll"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
+# <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l
 
 檢查多位元組字元是否為合法或符號字元。
 
@@ -85,18 +88,18 @@ int _ismbcsymbol_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應 **_ismbb**常式的傳回值。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|有效的多位元組|第一個位元組傳回非零值，才*c*是在範圍內 0x81-0x9F 或 0xE0-0xFC，而是內範圍 0x40-0x7E 或 0x80-FC 的第二個位元組。|
-|**_ismbcsymbol**|多位元組的符號|傳回非零值，才在 0x8141< < =*c*< lt;=0x81ac。|
+|**_ismbclegal**|有效的多位元組|只有在*c*的第一個位元組位於 0X81-0X9F 或 0XE0-0xFC 範圍內，而第二個位元組位於 0X40-0x7E 或 0X80-FC 範圍內時，才傳回非零。|
+|**_ismbcsymbol**|多位元組的符號|只有在 0x8141 < =*c*< = 0x81AC 時，才傳回非零。|
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -109,8 +112,8 @@ int _ismbcsymbol_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_ismbclegal**， **_ismbclegal_l**|\<mbstring.h>|
-|**_ismbcsymbol**， **_ismbcsymbol_l**|\<mbstring.h>|
+|**_ismbclegal**、 **_ismbclegal_l**|\<mbstring.h>|
+|**_ismbcsymbol**、 **_ismbcsymbol_l**|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset、_mbsnbset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset
 - _mbsnbset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset
 - mbsnbset_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 7783ff6519147331ae3943f053efe1bae01aee7d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8ba619dba07f102387d70c3bb3a2af729e44b495
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499794"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952158"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset、_mbsnbset_l
 
@@ -82,13 +85,13 @@ unsigned char *_mbsnbset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbset**和 **_mbsnbset_l**函式最多會將*str*的第一個*計數*位元組設定為*c*。 如果*count*大於*str*的長度, 則會使用*str*的長度, 而不是*count*。 如果*c*是多位元組字元, 而且無法完全設定為*count*所指定的最後一個位元組, 則最後一個位元組會以空白字元填補。 **_mbsnbset**和 **_mbsnbset_l**不會在*str*結尾處放置終止的 null。
+**_Mbsnbset**和 **_mbsnbset_l**函式最多會將*str*的第一個*計數*位元組設定為*c*。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。 如果*c*是多位元組字元，而且無法完全設定為*count*所指定的最後一個位元組，則最後一個位元組會以空白字元填補。 **_mbsnbset**和 **_mbsnbset_l**不會在*str*結尾處放置終止的 null。
 
-**_mbsnbset**和 **_mbsnbset_l**與 **_mbsnset**相似, 不同之處在于它會設定*count*個位元組, 而非*c*的*計數*字元。
+**_mbsnbset**和 **_mbsnbset_l**與 **_mbsnset**相似，不同之處在于它會設定*count*個位元組，而非*c*的*計數*字元。
 
-如果*str*為**Null**或*count*為零, 則此函式會產生無效參數例外狀況, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 而函數會傳回**Null**。 此外, 如果*c*不是有效的多位元組字元, **errno**會設為**EINVAL** , 而會改用空格。
+如果*str*為**Null**或*count*為零，則此函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 此外，如果*c*不是有效的多位元組字元， **errno**會設為**EINVAL** ，而會改用空格。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的 **_mbsnbset**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbsnbset_l**版本相同, 不同之處在于它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的 **_mbsnbset**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbsnbset_l**版本相同，不同之處在于它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：此 API 可能會帶來因緩衝區溢位問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 

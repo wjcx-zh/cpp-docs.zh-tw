@@ -1,10 +1,10 @@
 ---
 title: _strtime、_wstrtime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime
 - _strtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime
 - _strtime
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223085"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946565"
 ---
-# <a name="strtime-wstrtime"></a>_strtime、_wstrtime
+# <a name="_strtime-_wstrtime"></a>_strtime、_wstrtime
 
 將時間複製到緩衝區。 這些函式有更安全的版本可供使用，請參閱 [_strtime_s、_wstrtime_s](strtime-s-wstrtime-s.md)。
 
@@ -70,13 +73,13 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>傳回值
 
-傳回產生的字元字串的指標*timestr*。
+傳回產生之字元字串*timestr*的指標。
 
 ## <a name="remarks"></a>備註
 
-**_Strtime**函式會將目前的當地時間複製到所指向的緩衝區*timestr*。 時間格式為**hh: mm:** 其中**hh**是代表小時以 24 小時制標記法中，兩位數**mm**是兩位數表示過去與小時、分鐘**ss**是兩位數表示秒數。 例如，字串**18:23:44**代表 23 分 44 秒下午 6 點 緩衝區長度至少必須是 9 個位元組。
+**_Strtime**函數會將目前的本機時間複製到*timestr*所指向的緩衝區。 時間格式為**hh： mm： ss** ，其中**hh**是以24小時標記法表示小時的兩位數， **mm**是代表該小時過去分鐘數的兩位數，而**ss**是代表秒數的兩位數。 例如，字串**18:23:44**代表23分鐘，過去 6 P.M. 的44秒 緩衝區長度至少必須是 9 個位元組。
 
-**_wstrtime**是寬字元版本的 **_strtime**; 的引數和傳回值 **_wstrtime**是寬字元字串。 除此之外，這些函式的行為相同。 如果*timestr*是**NULL**指標或如果*timestr*的格式不正確、 無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果例外狀況允許繼續執行，則這些函式會傳回**NULL**並設定**errno**來**EINVAL**如果*timestr*已**NULL** ，或設定**errno**要**ERANGE**如果*timestr*格式不正確。
+**_wstrtime**是寬字元版本的 **_strtime**; **_wstrtime**的引數和傳回值是寬字元字串。 除此之外，這些函式的行為相同。 如果*timestr*為**Null**指標，或如果*timestr*格式不正確，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**null** ，並將**Errno**設定為**EINVAL** （*如果* *ERANGE*的格式不正確） **，或將** **errno**設定為**timestr** 。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

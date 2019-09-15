@@ -1,10 +1,10 @@
 ---
 title: _chmod、_wchmod
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _chmod
 - _wchmod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chmod
 - _wchmod
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348467"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939197"
 ---
-# <a name="chmod-wchmod"></a>_chmod、_wchmod
+# <a name="_chmod-_wchmod"></a>_chmod、_wchmod
 
 變更檔案權限設定。
 
@@ -57,23 +60,23 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功變更權限設定，則這些函式會傳回 0。 傳回值為-1 表示失敗。 如果找不到指定的檔案， **errno**設為**ENOENT**; 如果不正確、 此參數**errno**設定為**EINVAL**。
+如果成功變更權限設定，則這些函式會傳回 0。 傳回值-1 表示失敗。 如果找不到指定的檔案， **errno**會設為**ENOENT**;如果參數無效， **errno**會設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Chmod**函式會變更所指定之檔案的權限設定*filename*。 權限設定會控制檔案的讀取和寫入權。 整數運算式*pmode*包含一或兩個下列資訊清單常數，SYS\Stat.h 中所定義。
+**_Chmod**函數會變更*filename*所指定之檔案的許可權設定。 權限設定會控制檔案的讀取和寫入權。 整數運算式*pmode*包含下列其中一個或兩個在 sys\stat.h 所中定義的資訊清單常數。
 
 | *pmode* | 意義 |
 |-|-|
 | **\_S\_IREAD** | 只允許讀取。 |
 | **\_S\_IWRITE** | 允許寫入 (實際上允許讀取和寫入)。 |
-| **\_S\_IREAD** &#124; **\_S\_IWRITE** | 允許讀取和寫入。 |
+| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | 允許讀取和寫入。 |
 
-時指定這兩個常數，它們會結合使用位元 or 運算子 (**\|**)。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此，模式 **_S_IWRITE**並 **_S_IREAD** \| **_S_IWRITE**相等。
+當指定兩個常數時，會使用位 or 運算子（ **\|** ）聯結。 若沒有指定寫入權限，則檔案為唯讀。 請注意，所有檔案皆為可讀取；不可能授與僅限寫入權限。 因此， **_S_IWRITE**和 **_S_IREAD** \| **_S_IWRITE**模式是相等的。
 
-**_wchmod**是寬字元版本的 **_chmod**; *filename*引數 **_wchmod**是寬字元字串。 **_wchmod**並 **_chmod**行為相同。
+**_wchmod**是寬字元版本的 **_chmod**; **_wchmod**的*filename*引數是寬字元字串。 相反地， **_wchmod**和 **_chmod**的行為相同。
 
-這個函式會驗證它的參數。 如果*pmode*不是其中一個資訊清單常數的組合或包含另一組常數，此函式只會忽略這些。 如果*檔名*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回-1。
+這個函式會驗證它的參數。 如果*pmode*不是其中一個資訊清單常數的組合，或包含一組替代的常數，則函式會直接忽略它們。 如果*filename*是**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函式會傳回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

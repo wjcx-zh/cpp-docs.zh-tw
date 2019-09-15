@@ -1,9 +1,9 @@
 ---
 title: _chsize
 ms.date: 03/29/2018
-apiname:
+api_name:
 - _chsize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _chsize
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe07b2261396be491b833ff52186024edd0b919
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340322"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942969"
 ---
-# <a name="chsize"></a>_chsize
+# <a name="_chsize"></a>_chsize
 
 變更檔案大小。 已有更安全的版本可用；請參閱 [_chsize_s](chsize-s.md)。
 
@@ -55,15 +58,15 @@ int _chsize(
 
 ## <a name="return-value"></a>傳回值
 
-**_chsize**傳回值為 0，如果已成功變更檔案大小。 傳回值-1 表示發生錯誤： **errno**設為**EACCES**指定的檔案是唯讀或為指定的檔案鎖定的存取，如果**EBADF**如果描述元無效**ENOSPC**如果沒有空間保留在裝置上，或是**EINVAL**如果*大小*小於零。
+如果成功變更檔案大小， **_chsize**會傳回0值。 傳回值-1 表示錯誤：如果指定的檔案是唯讀的，或指定的檔案已鎖定而無法存取，則會將**errno**設定為**EACCES** ; 如果描述元無效，則為**EBADF** ; 如果裝置上沒有空間，則為**ENOSPC** ，或如果*大小*小於零，則為**EINVAL** 。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Chsize**函式擴充或截斷與相關聯的檔案*fd*所指定的長度*大小*。 檔案必須以允許寫入的模式開啟。 如果擴充檔案，則會附加 Null 字元 ('\0')。 如果檔案遭到截斷，則會遺失從縮短檔案結尾到檔案原始長度的所有資料。
+**_Chsize**函式會將與*fd*相關聯的檔案擴充或截斷到*size*所指定的長度。 檔案必須以允許寫入的模式開啟。 如果擴充檔案，則會附加 Null 字元 ('\0')。 如果檔案遭到截斷，則會遺失從縮短檔案結尾到檔案原始長度的所有資料。
 
-這個函式會驗證它的參數。 如果*大小*小於零或*fd*是不正確的檔案描述項無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
+這個函式會驗證它的參數。 如果*size*小於零或*fd*是不正確的檔案描述項，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="requirements"></a>需求
 

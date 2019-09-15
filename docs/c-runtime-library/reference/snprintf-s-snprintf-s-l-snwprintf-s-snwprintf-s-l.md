@@ -1,12 +1,12 @@
 ---
 title: _snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _snprintf_s
 - _snprintf_s_l
 - _snwprintf_s
 - _snwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _snwprintf_s_l
 - _sntprintf_s_l
@@ -47,14 +50,14 @@ helpviewer_keywords:
 - _snwprintf_s function
 - formatted text [C++]
 ms.assetid: 9336ab86-13e5-4a29-a3cd-074adfee6891
-ms.openlocfilehash: ae298e9143a9ce79efe49c2055299f8d74070999
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b95145a468d382ea63ef4d409c095ec217e42f1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356195"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948022"
 ---
-# <a name="snprintfs-snprintfsl-snwprintfs-snwprintfsl"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
+# <a name="_snprintf_s-_snprintf_s_l-_snwprintf_s-_snwprintf_s_l"></a>_snprintf_s、_snprintf_s_l、_snwprintf_s、_snwprintf_s_l
 
 將格式化資料寫入字串。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [snprintf、_snprintf、_snprintf_l、_snwprintf、_snwprintf_l](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 版本。
 
@@ -113,15 +116,15 @@ int _snwprintf_s(
 輸出的儲存位置。
 
 *sizeOfBuffer*<br/>
-輸出的儲存位置大小。 大小以**位元組**for **_snprintf_s**或大小**字**如 **_snwprintf_s**。
+輸出的儲存位置大小。 **_Snprintf_s**的**大小（以位元組為單位）** 或 **_snwprintf_s**的**單字**大小。
 
-*count*<br/>
+*計數*<br/>
 要儲存的最大字元數，或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -129,26 +132,26 @@ int _snwprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**_snprintf_s**傳回的字元儲存在數*緩衝區*，不計入結束的 null 字元。 **_snwprintf_s**會傳回儲存在寬字元數目*緩衝區*，不計入結束的 null 寬字元。
+**_snprintf_s**會傳回儲存在*緩衝區*中的字元數，而不會計算終止的 null 字元。 **_snwprintf_s**會傳回儲存在*緩衝區*中的寬字元數，而不會計算終止的 null 寬字元。
 
-如果儲存資料和終止 null 所需的儲存體超過*sizeOfBuffer*，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果在無效的參數處理常式之後繼續執行，這些函式會將*緩衝區*為空字串，設定**errno**來**ERANGE**，並傳回-1。
+如果儲存資料和終止 null 所需的儲存空間超過*sizeOfBuffer*，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果在不正確參數處理常式之後繼續執行，這些函式會將*buffer*設定為空字串，將**Errno**設定為**ERANGE**，並傳回-1。
 
-如果*緩衝區*或*格式*會**NULL**指標，或如果*計數*小於或等於零，會叫用無效參數處理常式。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
+如果*buffer*或*format*是**Null**指標，或者*count*小於或等於零，則會叫用不正確參數處理常式。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Snprintf_s**函式格式化並儲存*計數*或較少的字元*緩衝區*並附加終止 null。 每個引數 （如果有的話） 會轉換並根據對應格式規格中的輸出*格式*。 格式會配合**printf**系列的函式; 請參閱[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**_Snprintf_s**函式會將*count*或更少的字元格式化並儲存在*緩衝區*中，並附加終止的 null。 每個引數（如果有的話）都會根據*格式*的對應格式規格進行轉換和輸出。 格式與**printf**函數系列一致;請參閱[格式規格語法： printf 和 wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)函式。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
-如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)，然後 **_snprintf_s**寫入一樣多的字串會放入*緩衝區*同時保留空間終止 null。 如果整個字串 （含終止 null) 可放入*緩衝區*，然後 **_snprintf_s**會傳回寫入字元數目 （不包括結束的 null）; 否則 **_snprintf_s**會傳回-1 表示截斷發生。
+如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)，則 **_snprintf_s**會盡可能寫入字串，使其符合*緩衝區*，同時保留空間給終止的 null。 如果整個字串（具有終止的 null）符合*buffer*，則 **_snprintf_s**會傳回寫入的字元數（不包括結束的 null）;否則， **_snprintf_s**會傳回-1，表示已發生截斷。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-**_snwprintf_s**是寬字元版本的 **_snprintf_s**; 指標引數 **_snwprintf_s**是寬字元字串。 編碼錯誤偵測 **_snwprintf_s**可能會不同於 **_snprintf_s**。 **_snwprintf_s**，例如**swprintf_s**，將輸出寫入字串，而非類型的目的地**檔案**。
+**_snwprintf_s**是寬字元版本的 **_snprintf_s**; **_snwprintf_s**的指標引數是寬字元字串。 **_Snwprintf_s**中的編碼錯誤偵測可能與 **_snprintf_s**中的不同。 **_snwprintf_s**就像**swprintf_s**一樣，會將輸出寫入字串，而不是**FILE**類型的目的地。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -163,8 +166,8 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_snprintf_s**， **_snprintf_s_l**|\<stdio.h>|
-|**_snwprintf_s**， **_snwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**_snprintf_s**、 **_snprintf_s_l**|\<stdio.h>|
+|**_snwprintf_s**、 **_snwprintf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

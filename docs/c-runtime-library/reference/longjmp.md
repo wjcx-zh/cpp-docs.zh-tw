@@ -1,9 +1,9 @@
 ---
 title: longjmp
 ms.date: 08/14/2018
-apiname:
+api_name:
 - longjmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,23 +15,26 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - longjmp
 helpviewer_keywords:
 - restoring stack environment and execution locale
 - longjmp function
 ms.assetid: 0e13670a-5130-45c1-ad69-6862505b7a2f
-ms.openlocfilehash: e5189ff7cb850acd9c9a1280f47fc9a1270f8b68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4527a29475f9e393dc5abf19b866d926bec2ccc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953134"
 ---
 # <a name="longjmp"></a>longjmp
 
-還原堆疊環境和執行地區設定來設定`setjmp`呼叫。
+還原`setjmp`呼叫所設定的堆疊環境和執行地區設定。
 
 ## <a name="syntax"></a>語法
 
@@ -47,35 +50,35 @@ void longjmp(
 *env*<br/>
 儲存環境的變數。
 
-*value*<br/>
+*值*<br/>
 要傳回至 `setjmp` 呼叫的值。
 
 ## <a name="remarks"></a>備註
 
-**Longjmp**函式會還原先前儲存的堆疊環境和執行地區設定*env*由`setjmp`。 `setjmp` 並**longjmp**可用來執行非區域**goto**; 它們通常用來執行控制項傳遞至之前所呼叫常式中的錯誤處理或復原程式碼，而不需使用一般的呼叫和傳回慣例。
+**Longjmp**函數會還原先前儲存在`setjmp` *env*中的堆疊環境和執行地區設定。 `setjmp`和**longjmp**提供一種方法來執行非本機的**goto**;它們通常用來將執行控制傳遞給先前呼叫的常式中的錯誤處理或復原程式碼，而不需要使用正常的呼叫和傳回慣例。
 
-呼叫`setjmp`導致儲存在目前的堆疊環境*env*。 後續呼叫**longjmp**還原已儲存的環境，並將控制權還給緊接在對應的點`setjmp`呼叫。 執行會繼續，就像是 `setjmp` 呼叫剛傳回 *value* 一樣。 接收控制項的常式可存取的所有變數 （暫存器變數） 除外的值包含的值時所擁有**longjmp**呼叫。 無法預測暫存器變數的值。 `setjmp` 所傳回的值必須為非零。 如果傳遞的 *value* 為 0，實際傳回時會以值 1 替代。
+的呼叫`setjmp`會導致目前的堆疊環境儲存在*env*中。 後續的**longjmp**呼叫會還原儲存的環境，並將控制權傳回給緊接在對應`setjmp`呼叫之後的點。 執行會繼續，就像是 `setjmp` 呼叫剛傳回 *value* 一樣。 常式接收控制項可存取的所有變數值（register 變數除外）包含呼叫**longjmp**時所擁有的值。 無法預測暫存器變數的值。 `setjmp` 所傳回的值必須為非零。 如果傳遞的 *value* 為 0，實際傳回時會以值 1 替代。
 
 **Microsoft 專屬**
 
-在 MicrosoftC++在 Windows 中，程式碼**longjmp**例外狀況處理程式碼會使用相同的堆疊回溯語意。 安全地在相同的使用位置C++可能會引發例外狀況。 不過，這種用法可攜性，並不需要注意的一些重要的事項。
+在 Windows C++上的 Microsoft 程式碼中， **longjmp**會使用相同的堆疊回溯語義做為例外狀況處理常式代碼。 可以安全地使用在引發C++例外狀況的相同位置。 不過，這種使用方式並不是可移植的，而且有一些重要的注意事項。
 
-只呼叫**longjmp**呼叫的函式之前`setjmp`傳回; 否則會無法預測結果。
+只在呼叫的`setjmp`函式之前呼叫 longjmp，否則結果會是無法預測的。
 
-使用時，請注意下列限制**longjmp**:
+使用**longjmp**時，請注意下列限制：
 
-- 請勿假設暫存器變數的值將保持不變。 例行性的呼叫中的暫存器變數的值`setjmp`可能不會還原為適當的值之後**longjmp**執行。
+- 請勿假設暫存器變數的值將保持不變。 在執行 longjmp 之後，可能無法將呼叫`setjmp`常式中的 register 變數值還原成適當的值。
 
-- 請勿使用**longjmp**將控制項移出中斷處理常式除非插斷浮點例外狀況所造成。 在此情況下，程式可能會從透過的插斷處理常式傳回**longjmp**如果它第一次重新初始化浮點數學套件藉由呼叫[_fpreset](fpreset.md)。
+- 除非中斷是因浮點例外狀況所造成，否則請不要使用**longjmp**將控制權轉移至中斷處理常式。 在此情況下，如果程式第一次藉由呼叫[_fpreset](fpreset.md)重新初始化浮點數學封裝，則可能會透過**longjmp**從中斷處理常式傳回。
 
-- 請勿使用**longjmp**將控制項從 Windows 程式碼直接或間接叫用的回呼常式。
+- 請勿使用**longjmp** ，從 Windows 程式碼直接或間接叫用的回呼常式傳送控制權。
 
-- 如果程式碼會使用編譯 **/EHs**或 **/EHsc**和 包含的函式**longjmp**呼叫**noexcept**然後本機物件在該堆疊回溯期間，可能解構函式。
+- 如果程式碼是使用 **/ehs**或 **/ehsc**進行編譯，而且包含**longjmp**呼叫的函式是**noexcept** ，則在堆疊回溯期間，可能不會解構該函式中的本機物件。
 
 **結束 Microsoft 專屬**
 
 > [!NOTE]
-> 在可攜式C++程式碼，您不能假設`setjmp`並`longjmp`支援C++物件的語意。 具體而言， `setjmp` / `longjmp`組有未定義行為，如果取代的呼叫`setjmp`並`longjmp`由**攔截**和**擲回**會叫用任何自動物件的任何非 trivial 解構函式。 在C++程式，我們建議您使用C++例外狀況處理機制。
+> 在可C++移植程式碼中， `setjmp`您`longjmp`無法C++假設和支持對象的語義。 具體而言， `setjmp`如果將/ `setjmp` `longjmp`和取代為 catch，而 throw 會針對任何自動物件叫用任何非一般的析構函數，則呼叫組會有未定義的行為。 `longjmp` 在C++ [ C++程式] 中，我們建議您使用例外狀況處理機制。
 
 如需詳細資訊，請參閱[使用 setjmp 和 longjmp](../../cpp/using-setjmp-longjmp.md)。
 

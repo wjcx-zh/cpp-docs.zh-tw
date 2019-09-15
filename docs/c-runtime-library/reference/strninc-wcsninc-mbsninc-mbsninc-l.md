@@ -1,12 +1,12 @@
 ---
 title: _strninc、_wcsninc、_mbsninc、_mbsninc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsninc
 - _mbsninc_l
 - _wcsninc
 - _strninc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strninc
 - wcsninc
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b03ca4c9515bd2c70a1ce2574850e23b3add44c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209711"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947064"
 ---
-# <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
+# <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
 
-使字串指標前進**n**字元。
+將字串指標前移**n**個字元。
 
 > [!IMPORTANT]
-> **_mbsninc**並 **_mbsninc_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsninc**和 **_mbsninc_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -83,7 +86,7 @@ unsigned char *_mbsninc(
 *str*<br/>
 來源字串。
 
-*count*<br/>
+*計數*<br/>
 字串指標要遞增的字元數。
 
 *locale*<br/>
@@ -91,11 +94,11 @@ unsigned char *_mbsninc(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會傳回的指標*str*之後*str*遞增*計數*字元或**NULL**如果所提供指標**NULL**。 如果*計數*大於或等於中的字元數*str*，結果為未定義。
+每一個常式會在*str*以*count*個字元遞增後傳回*str*的指標，如果提供的指標是**null**，則傳回**null** 。 如果*count*大於或等於*str*中的字元數，則結果會是未定義的。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsninc**函式遞增*str*由*計數*多位元組字元。 **_mbsninc**辨識多位元組字元序列，根據[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。
+**_Mbsninc**函數會藉由*計算*多位元組字元來遞增*str* 。 **_mbsninc**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,9 +106,9 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc**並 **_wcsninc**是單一位元組字元字串和寬字元字串版本 **_mbsninc**。 **_wcsninc**並 **_strninc**只供此對應，否則應該不會使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+**_strninc**和 **_wcsninc**是 **_mbsninc**的單一位元組字元字串和寬字元字串版本。 僅針對此對應提供 **_wcsninc**和 **_strninc** ，否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsninc_l**完全相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsninc_l**相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

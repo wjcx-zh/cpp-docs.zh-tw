@@ -1,10 +1,10 @@
 ---
 title: _searchenv、_wsearchenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _searchenv
 - _wsearchenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsearchenv
 - _tsearchenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3139ab87335ba581ef65707602c5da1819ce4a1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356767"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948764"
 ---
-# <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
+# <a name="_searchenv-_wsearchenv"></a>_searchenv、_wsearchenv
 
 使用環境路徑來搜尋檔案。 這些函式已有更安全的版本可供使用，請參閱 [_searchenv_s、_wsearchenv_s](searchenv-s-wsearchenv-s.md)。
 
@@ -88,19 +91,19 @@ void _wsearchenv(
 
 ## <a name="remarks"></a>備註
 
-**_Searchenv**例行搜尋指定的網域中的目標檔案。 *Varname*變數可以是任何環境或使用者定義變數 — 比方說，**路徑**， **LIB**，或**INCLUDE**— 指定目錄路徑的清單。 因為 **_searchenv**區分大小寫， *varname*應該符合環境變數的大小寫。
+**_Searchenv**常式會在指定的網域中搜尋目標檔案。 *Varname*變數可以是指定目錄路徑清單的任何環境或使用者自訂變數（例如**PATH**、 **LIB**或**INCLUDE**）。 由於 **_searchenv**區分大小寫，因此*varname*應符合環境變數的大小寫。
 
-此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，便會在環境變數指定的目錄中尋找。 如果目標檔案已在其中一個這些目錄中，新建立的路徑會複製到*pathname*。 如果*檔名*找不到檔案， *pathname*包含空的 null 結尾字串。
+此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，便會在環境變數指定的目錄中尋找。 如果目標檔案是在其中一個目錄中，新建立的路徑就會複製到*pathname*。 如果找不到*filename*檔案， *pathname*會包含空的以 null 結束的字串。
 
-*Pathname*緩衝區應該至少 **_MAX_PATH**適應建構的路徑名稱的完整長度的字元。 否則，請 **_searchenv**可能會溢位*pathname*緩衝並造成未預期的行為。
+*Pathname*緩衝區的長度至少應為 **_MAX_PATH**個字元，以容納結構化路徑名稱的完整長度。 否則， **_searchenv**可能會溢出*路徑名稱*緩衝區，並造成未預期的行為。
 
-**_wsearchenv**是寬字元版本的 **_searchenv**，和引數 **_wsearchenv**是寬字元字串。 **_wsearchenv**並 **_searchenv**行為相同。
+**_wsearchenv**是 **_searchenv**的寬字元版本，而 **_wsearchenv**的引數是寬字元字串。 相反地， **_wsearchenv**和 **_searchenv**的行為相同。
 
-如果*檔名*為空字串，這些函式會傳回**ENOENT**。
+如果*filename*是空字串，則這些函式會傳回**ENOENT**。
 
-如果*檔名*或是*pathname*是**NULL**指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*filename*或*pathname*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
-如需詳細資訊**errno**和錯誤碼，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
+如需**errno**和錯誤碼的詳細資訊，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
 
 在 C++ 中，這些函式具有多載樣板，可以叫用這些函式的更新、更安全之對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

@@ -1,12 +1,12 @@
 ---
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cscanf_l
 - _cscanf
 - _cwscanf
 - _cwscanf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwscanf
 - cwscanf_l
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335252"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938496"
 ---
-# <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
+# <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 從主控台讀取格式化資料。 這些函式已有更安全的版本可用；請參閱 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
 
@@ -87,7 +90,7 @@ int _cwscanf_l(
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性參數。
 
 *locale*<br/>
@@ -95,15 +98,15 @@ int _cwscanf_l(
 
 ## <a name="return-value"></a>傳回值
 
-已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 傳回值是**EOF**嘗試讀取檔案結尾。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。
+已成功轉換並指派的欄位數目。 此傳回值不包含已讀取但未指派的欄位。 傳回值為**EOF** ，用於嘗試讀取檔案結尾。 當鍵盤輸入在作業系統命令列層級重新導向時，就會發生此情況。 傳回值 0 表示未指派任何欄位。
 
 ## <a name="remarks"></a>備註
 
-**_Cscanf**函式會將資料直接從主控台讀入指定的位置*引數*。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數必須是一種類型，對應至中的類型指定名稱的變數的指標*格式*。 該格式會控制欄位輸入的解譯，而且具有相同的形式和運作方式*格式*參數[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函式。 雖然 **_cscanf**通常會回應輸入的字元，它不是最後一次呼叫時要 **_ungetch**。
+**_Cscanf**函數會將資料直接從主控台讀取到*引數*所指定的位置。 [_getche](getch-getwch.md)函式可用來讀取字元。 每個選擇性參數都必須是變數的指標，其類型會對應至*格式*的類型規範。 格式會控制輸入欄位的轉譯，並具有與[scanf](scanf-scanf-l-wscanf-wscanf-l.md)函式的*格式*參數相同的形式和功能。 雖然 **_cscanf**通常會回應輸入字元，但如果最後一個呼叫是 **_ungetch**，就不會這麼做。
 
-這個函式會驗證它的參數。 如果格式為**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EOF**。
+這個函式會驗證它的參數。 如果 format 為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EOF**。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -116,8 +119,8 @@ int _cwscanf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_cscanf**， **_cscanf_l**|\<conio.h>|
-|**_cwscanf**， **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
+|**_cscanf**、 **_cscanf_l**|\<conio.h>|
+|**_cwscanf**、 **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

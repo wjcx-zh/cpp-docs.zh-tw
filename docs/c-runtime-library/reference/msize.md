@@ -1,9 +1,9 @@
 ---
 title: _msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - msize
 - _msize
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156287"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951440"
 ---
-# <a name="msize"></a>_msize
+# <a name="_msize"></a>_msize
 
 傳回堆積中所配置的記憶體區塊大小。
 
@@ -50,15 +53,15 @@ size_t _msize(
 
 ## <a name="return-value"></a>傳回值
 
-**_msize**傳回做為不帶正負號的整數的大小 （以位元組為單位）。
+**_msize**會傳回不帶正負號整數的大小（以位元組為單位）。
 
 ## <a name="remarks"></a>備註
 
-**_Msize**函式傳回的大小，以位元組為單位的呼叫所配置的記憶體區塊**calloc**， **malloc**，或**realloc**。
+**_Msize**函數會傳回**calloc**、 **malloc**或**realloc**的呼叫所配置的記憶體區塊大小（以位元組為單位）。
 
-當偵錯版本的 C 執行階段程式庫，連結的應用程式時 **_msize**解析[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_msize**會解析為[_msize_dbg](msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證其參數。 如果*memblock*為 null 指標， **_msize**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果已處理的錯誤，則函式會設定**errno**要**EINVAL**並傳回-1。
+這個函式會驗證其參數。 如果*memblock*是 null 指標， **_msize**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
 ## <a name="requirements"></a>需求
 

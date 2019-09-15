@@ -1,10 +1,10 @@
 ---
-title: isfinite _finite、 _finitef
+title: isfinite、_finite、_finitef
 ms.date: 01/31/2019
-apiname:
+api_name:
 - _finite
 - _finitef
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isfinite
 - finite
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-ms.openlocfilehash: d727839521978be66c3dc9ee173ee2ba0a567445
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2cde4d3a57884413f0c48aa299b171334c5f988
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957187"
 ---
-# <a name="isfinite-finite-finitef"></a>isfinite _finite、 _finitef
+# <a name="isfinite-_finite-_finitef"></a>isfinite、_finite、_finitef
 
 判斷指定的浮點數值是否有限。
 
@@ -71,15 +74,15 @@ int _finitef(
 
 ## <a name="return-value"></a>傳回值
 
-`isfinite`巨集和`_finite`並`_finitef`函式會傳回非零值，如果*x*是正常或 subnormal 有限值。 它們會傳回 0，如果引數為無限或 NaN。 C++內嵌樣板函式`isfinite`相同的行為，但會傳回 **，則為 true**或是**false**。
+如果 x 是標準`_finite`或`_finitef`偏低的有限值， 宏和和函數會傳回非零值。`isfinite` 如果引數為無限或 NaN，則會傳回0。 C++內嵌範本`isfinite`函式的行為方式相同，但傳回**true**或**false**。
 
 ## <a name="remarks"></a>備註
 
-`isfinite` 當編譯為 C 和內嵌範本函式做為編譯時是巨集C++。 `_finite`和`_finitef`是 Microsoft 特有的函式。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
+`isfinite`當編譯成 C 時，是一個宏，而當編譯為C++時，是內嵌的範本函式。 `_finite` 和`_finitef`函式是 Microsoft 特有的。 只有在針對 x86、ARM 或 ARM64 平台進行編譯時，才能使用 `_finitef` 函式。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭 (C)|必要的標頭 (C++)|
+|函數|必要的標頭 (C)|必要的標頭 (C++)|
 |--------------|---------------------------|-------------------------------|
 |`_finite`|\<float.h> 或 \<math.h>|\<float.h>、\<math.h>、\<cfloat> 或 \<cmath>|
 |`isfinite`、 `_finitef`|\<math.h>|\<math.h> 或 \<cmath>|

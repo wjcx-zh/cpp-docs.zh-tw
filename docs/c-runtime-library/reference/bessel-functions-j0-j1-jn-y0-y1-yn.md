@@ -1,14 +1,14 @@
 ---
 title: Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _j0
 - _j1
 - _jn
 - _y0
 - _y1
 - _yn
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c.bessel
 - _j0
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341109"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939465"
 ---
-# <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Bessel 函數：_j0、_j1、_jn、_y0、_y1、_yn
 
 計算 0、1 或 n 階的第一類或第二類 Bessel 函數。 這些 Bessel 函式通常用於電磁波理論的數學運算。
 
@@ -84,29 +87,29 @@ Bessel 函數的整數階數。
 
 ## <a name="return-value"></a>傳回值
 
-這些常式都會傳回 Bessel 函數*x*。 如果*x*是負數中 **_y0**， **_y1**，或 **_yn**函式、 例行集**errno** 至**EDOM**，會列印 **（_d)** 錯誤訊息**stderr**，並傳回 **_HUGE_VAL**。 您可以修改錯誤處理使用 **_matherr**。
+這些常式都會傳回*x*的貝賽耳函數。 如果 **_y0**、 **_y1**或 **_yn**函式中的*x*是負數，常式會將**errno**設定為**EDOM**、將 **_DOMAIN**錯誤訊息列印到**stderr**，然後傳回 **_HUGE_VAL**。 您可以使用 **_matherr**來修改錯誤處理。
 
 ## <a name="remarks"></a>備註
 
-**_J0**， **_j1**，並 **_jn**常式傳回 Bessel 函式的第一類： 分別排序 0、 1 和 n。
+**_J0**、 **_j1**和 **_jn**常式會分別傳回第一種的貝賽耳函式：訂單0、1和 n。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
 
-**_Y0**， **_y1**，並 **_yn**常式傳回 Bessel 函式的第二類： 分別排序 0、 1 和 n。
+**_Y0**、 **_y1**和 **_yn**常式會傳回第二種類型的貝賽耳函式：分別是訂單0、1和 n。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|**INVALID**|**_DOMAIN**|
+|± **QNAN**， **IND**|**無效**|**_DOMAIN**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**INVALID**|**_DOMAIN**|
+|&#124;x&#124; < 0。0|**無效**|**_DOMAIN**|
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
+|**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++)、\<math.h> (C、C++)|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

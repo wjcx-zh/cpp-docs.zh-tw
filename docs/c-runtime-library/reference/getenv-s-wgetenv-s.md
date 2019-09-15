@@ -1,10 +1,10 @@
 ---
 title: getenv_s、_wgetenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - getenv_s
 - _wgetenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - getenv_s
 - _tgetenv_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - environment variables
 - tgetenv_s function
 ms.assetid: c3ae1ffe-d4cd-4bae-bcb1-3afa754c613a
-ms.openlocfilehash: eac3c036e2f4f271c7bc2d77c8ae82bec28d3617
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7cbd1feab14ac29c46bb8851ff94a48c67bc6014
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331736"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955045"
 ---
-# <a name="getenvs-wgetenvs"></a>getenv_s、_wgetenv_s
+# <a name="getenv_s-_wgetenv_s"></a>getenv_s、_wgetenv_s
 
 從目前的環境取得值。 這些版本的 [getenv、_wgetenv](getenv-wgetenv.md) 具有安全性增強功能，如 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述。
 
@@ -81,7 +84,7 @@ errno_t _wgetenv_s(
 要儲存環境變數值的緩衝區。
 
 *numberOfElements*<br/>
-大小*緩衝區*。
+*緩衝區*的大小。
 
 *varname*<br/>
 環境變數名稱。
@@ -98,27 +101,27 @@ errno_t _wgetenv_s(
 |any|**NULL**|>0|any|**EINVAL**|
 |any|any|any|**NULL**|**EINVAL**|
 
-任一此種錯誤狀況都會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+任一此種錯誤狀況都會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
-此外，如果緩衝區太小，這些函式會傳回**ERANGE**。 它們不會叫用無效參數處理常式。 寫出所需的緩衝區大小，以*pReturnValue*，並藉此啟用呼叫一次具有較大的緩衝區的函式應用程式。
+此外，如果緩衝區太小，則這些函式會傳回**ERANGE**。 它們不會叫用無效參數處理常式。 它們會在*pReturnValue*中寫出所需的緩衝區大小，因此可讓程式使用較大的緩衝區再次呼叫函式。
 
 ## <a name="remarks"></a>備註
 
-**Getenv_s**函式會搜尋的環境變數清單*varname*。 **getenv_s**不區分大小寫在 Windows 作業系統中。 **getenv_s**並[_putenv_s](putenv-s-wputenv-s.md)使用的全域變數所指向的環境複本 **_environ**本來存取環境。 **getenv_s**運作只能在執行階段程式庫可以存取的資料結構上並不會在環境 「 區段 」 所建立的作業系統處理序。 因此，程式使用*envp*引數[主要](../../cpp/main-program-startup.md)或是[wmain](../../cpp/main-program-startup.md)可能會擷取無效資訊。
+**Getenv_s**函數會搜尋環境變數清單中的*varname*。 **getenv_s**在 Windows 作業系統中不區分大小寫。 **getenv_s**和[_putenv_s](putenv-s-wputenv-s.md)會使用全域變數 **_environ**所指向的環境複本來存取環境。 **getenv_s**只會在執行時間程式庫可存取的資料結構上運作，而不是在作業系統所建立的環境「區段」上操作。 因此，使用[main](../../cpp/main-program-startup.md)或[wmain](../../cpp/main-program-startup.md)的*envp*引數的程式可能會取得不正確資訊。
 
-**_wgetenv_s**是寬字元版本的**getenv_s**; 的引數和傳回值 **_wgetenv_s**是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。
+**_wgetenv_s**是寬字元版本的**getenv_s**; **_wgetenv_s**的引數和傳回值是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。
 
-在 MBCS 程式中 （例如，在 SBCS ASCII 程式中）， **_wenviron**是最初**NULL**因為環境以多位元組字元字串所組成。 然後，在第一次呼叫[_wputenv](putenv-wputenv.md)，或在第一個呼叫 **_wgetenv_s**，如果 (MBCS) 環境已經存在，建立對應的寬字元字串環境，並再指向的 **_wenviron**。
+在 MBCS 程式中（例如，在 SBCS ASCII 程式中）， **_wenviron**一開始是**Null** ，因為此環境由多位元組字元字串所組成。 然後，在第一次呼叫[_wputenv](putenv-wputenv.md)時，或第一次呼叫 **_wgetenv_s**時，如果（MBCS）環境已經存在，則會建立對應的寬字元字串環境，然後再由 **_wenviron**指向。
 
-同樣地，在 Unicode (**_wmain**) 計劃， **_environ**是最初**NULL**因為環境以寬字元字串所組成。 然後，在第一次呼叫[_putenv](putenv-wputenv.md)，或在第一個呼叫**getenv_s**如果 (Unicode) 環境已經存在，建立對應的 MBCS 環境，並接著指向的 **_environ**。
+同樣地，在 Unicode （ **_wmain**）程式中， **_Environ**最初是**Null** ，因為環境是由寬字元字串所組成。 然後，在第一次呼叫[_putenv](putenv-wputenv.md)時，或在第一次呼叫**getenv_s**時，如果（Unicode）環境已經存在，則會建立對應的 MBCS 環境，然後由 **_environ**指向。
 
-當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如，當您呼叫 **_putenv**，呼叫 **_wputenv**也會自動執行，讓這兩個環境字串對應。
+當此環境的兩個複本 (MBCS 和 Unicode) 在此程式中同時存在時，這個執行階段系統必須同時維護兩份複本，造成執行時間較慢。 例如，當您呼叫 **_putenv**時，也會自動執行對 **_wputenv**的呼叫，讓這兩個環境字串對應。
 
 > [!CAUTION]
 > 在罕見情況下，當這個執行階段系統正同時維護此環境的 Unicode 版本和多位元組版本時，這兩個環境版本可能無法完全對應。 這之所以發生，是因為雖然任何唯一的多位元組字元字串會對應到唯一的 Unicode 字串，但從唯一的 Unicode 字串對應到多位元組字元字串並不一定唯一。 如需詳細資訊，請參閱 [_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv_s**並 **_getenv_s**系列的函式不是安全執行緒。 **_getenv_s**可能會傳回字串指標，同時 **_putenv_s**正在修改字串，並因而導致隨機失敗。 確定這些函式的呼叫已同步。
+> 函數的 **_putenv_s**和 **_getenv_s**系列不是安全線程。 當 **_putenv_s**正在修改字串時， **_getenv_s**可能會傳回字串指標，因而導致隨機失敗。 確定這些函式的呼叫已同步。
 
 在 C++ 中，樣板多載簡化了這些函式的使用方式；此多載可自動推斷緩衝區長度，因此不須指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -128,7 +131,7 @@ errno_t _wgetenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tgetenv_s**|**getenv_s**|**getenv_s**|**_wgetenv_s**|
 
-若要檢查或變更的值**TZ**環境變數，使用**getenv_s**， **_putenv**，和 **_tzset**、 視需要而定。 如需詳細資訊**TZ**，請參閱[_tzset](tzset.md)並[_daylight、 _dstbias、 _timezone 和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
+若要檢查或變更**TZ**環境變數的值，請視需要使用**getenv_s**、 **_putenv**和 **_tzset**。 如需**TZ**的詳細資訊，請參閱[_tzset](tzset.md)和[_daylight、_dstbias、_timezone 和 _tzname](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,10 @@
 ---
 title: wctomb、_wctomb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_l
 - wctomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb
 helpviewer_keywords:
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 6902ff925e49d894f70b0d7083b99388d5271d1d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 195105618c75bd2a3a493f169fca4c2d3d4ebd62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500736"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945006"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb、_wctomb_l
 
@@ -64,13 +67,13 @@ int _wctomb_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**wctomb**將寬字元轉換為多位元組字元, 則會傳回寬字元中的位元組數目 (絕不大於**MB_CUR_MAX**)。 如果*wchar*是寬字元的 null 字元 (L ' \ 0 '), **wctomb**會傳回1。 如果目標指標*mbchar*是**Null**, **wctomb**會傳回0。 如果在目前的地區設定中無法進行轉換, **wctomb**會傳回-1, 而**errno**會設定為**EILSEQ**。
+如果**wctomb**將寬字元轉換為多位元組字元，則會傳回寬字元中的位元組數目（絕不大於**MB_CUR_MAX**）。 如果*wchar*是寬字元的 null 字元（L ' \ 0 '）， **wctomb**會傳回1。 如果目標指標*mbchar*是**Null**， **wctomb**會傳回0。 如果在目前的地區設定中無法進行轉換， **wctomb**會傳回-1，而**errno**會設定為**EILSEQ**。
 
 ## <a name="remarks"></a>備註
 
-**Wctomb**函數會將其*wchar*引數轉換為對應的多位元組字元, 並將結果儲存在*mbchar*。 您可以在任何程式的任何點呼叫函式。 **wctomb**會針對任何與地區設定相關的行為使用目前的地區設定; **_wctomb_l**與**wctomb**相同, 不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Wctomb**函數會將其*wchar*引數轉換為對應的多位元組字元，並將結果儲存在*mbchar*。 您可以在任何程式的任何點呼叫函式。 **wctomb**會針對任何與地區設定相關的行為使用目前的地區設定; **_wctomb_l**與**wctomb**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**wctomb**會驗證其參數。 如果*mbchar*為**Null**, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 而函式會傳回-1。
+**wctomb**會驗證其參數。 如果*mbchar*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函式會傳回-1。
 
 ## <a name="requirements"></a>需求
 

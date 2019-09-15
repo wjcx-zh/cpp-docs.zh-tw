@@ -1,9 +1,9 @@
 ---
 title: _set_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_fmode
 - set_fmode
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-ms.openlocfilehash: af83f22ebfaf274b73ca9e891563d3775e28925f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3b811a607184de54bb736bddcc456af53ac089
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356572"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948553"
 ---
-# <a name="setfmode"></a>_set_fmode
+# <a name="_set_fmode"></a>_set_fmode
 
 設定檔案 I/O 作業的預設檔案轉譯模式。
 
@@ -47,17 +50,17 @@ errno_t _set_fmode(
 ### <a name="parameters"></a>參數
 
 *mode*<br/>
-所需的檔案轉譯模式： **_O_TEXT**或是 **_O_BINARY**。
+所需的檔案轉譯模式： **_O_TEXT**或 **_O_BINARY**。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回零；如果失敗，則傳回錯誤碼。 如果*模式*不是 **_O_TEXT**或是 **_O_BINARY**或是 **_O_WTEXT**，無效參數處理常式會叫用，中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果成功，會傳回零；如果失敗，則傳回錯誤碼。 如果*mode*不是 **_O_TEXT**或 **_O_BINARY**或 **_O_WTEXT**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-此函式會設定 [_fmode](../../c-runtime-library/fmode.md) 全域變數。 此變數會指定檔案 I/O 作業的預設檔案轉譯模式 **_open**並 **_pipe**。
+此函式會設定 [_fmode](../../c-runtime-library/fmode.md) 全域變數。 這個變數會指定檔案 i/o 作業 **_open**和 **_pipe**的預設檔案轉譯模式。
 
-**_O_TEXT**並 **_O_BINARY**定義於 Fcntl.h。 **EINVAL** Errno.h 中定義。
+**_O_TEXT**和 **_O_BINARY**定義于 fcntl.h> 中。 **EINVAL**定義于 Errno 中。
 
 ## <a name="requirements"></a>需求
 

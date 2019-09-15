@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy、_mbsnbcpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy
 - _ftcsncpy
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9940146e46990c91a49478a0450d5ff489e51bc5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9b8a5884b646baf582e6bb9868136ffe7c2a24cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499838"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952257"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy、_mbsnbcpy_l
 
@@ -96,11 +99,11 @@ unsigned char * _mbsnbcpy_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbcpy**函數會將*count*個位元組從*strSource*複製到*strDest*。 如果*count*超過*strDest*的大小, 或來源和目的字串重迭, 則 **_mbsnbcpy**的行為是未定義的。
+**_Mbsnbcpy**函數會將*count*個位元組從*strSource*複製到*strDest*。 如果*count*超過*strDest*的大小，或來源和目的字串重迭，則 **_mbsnbcpy**的行為是未定義的。
 
-如果*strSource*或*strDest*是 null 指標, 則此函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回**Null** , 並將**Errno**設為**EINVAL**。
+如果*strSource*或*strDest*是 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的版本則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同，不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定，而具有 **_l**尾碼的版本則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可以用來執行任意的攻擊者程式碼，這會造成非預期的提高權限，並且危害系統。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

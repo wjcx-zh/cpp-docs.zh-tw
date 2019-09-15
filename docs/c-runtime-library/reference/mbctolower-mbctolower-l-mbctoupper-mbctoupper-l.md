@@ -1,12 +1,12 @@
 ---
 title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctolower_l
 - _mbctoupper_l
 - _mbctoupper
 - _mbctolower
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbctoupper_l
 - mbctolower_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b3926ea294fd6fe66b4e6865ac0c7df6d1b596
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156794"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952545"
 ---
-# <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
+# <a name="_mbctolower-_mbctolower_l-_mbctoupper-_mbctoupper_l"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
 測試並轉換多位元組字元的大小寫。
 
@@ -85,20 +88,20 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已轉換的字元*c*、 的話。 否則會傳回字元*c*不變。
+所有這些函式都會傳回轉換的字元*c*（如果可能的話）。 否則，它會傳回未變更的字元*c* 。
 
 ## <a name="remarks"></a>備註
 
-函式會測試字元*c*和的話，請套用下列轉換的其中一個。
+函式會測試字元*c* ，並在可能的情況下套用下列其中一個轉換。
 
 |常式|轉換|
 |--------------|--------------|
-|**_mbctolower**， **_mbctolower_l**|將大寫字元轉換為小寫字元。|
-|**_mbctoupper**， **_mbctoupper_l**|將小寫字元轉換為大寫字元。|
+|**_mbctolower**、 **_mbctolower_l**|將大寫字元轉換為小寫字元。|
+|**_mbctoupper**、 **_mbctoupper_l**|將小寫字元轉換為大寫字元。|
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式，而不需要的版本 **_l**後置詞會針對地區設定相關行為; 使用目前的地區設定的版本 **_l**尾碼是完全相同，不同之處在於它會使用地區設定參數改為傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的版本若沒有 **_l**尾碼，會針對此地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在舊版中， **_mbctolower** odataparameterreader.read **jtolower**，並 **_mbctoupper**呼叫**jtoupper**。 對於新的程式碼，請改用新名稱。
+在先前版本中， **_mbctolower**稱為**jtolower**，而 **_mbctoupper**稱為**jtoupper**。 對於新的程式碼，請改用新名稱。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,8 +116,8 @@ unsigned int _mbctoupper_l(
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**_mbctolower**， **_mbctolower_l**|\<mbstring.h>|
-|**_mbctoupper**， **_mbctoupper_l**|\<mbstring.h>|
+|**_mbctolower**、 **_mbctolower_l**|\<mbstring.h>|
+|**_mbctoupper**、 **_mbctoupper_l**|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

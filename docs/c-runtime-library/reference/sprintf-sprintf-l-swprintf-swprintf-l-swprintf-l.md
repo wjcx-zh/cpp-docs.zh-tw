@@ -1,13 +1,13 @@
 ---
 title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __swprintf_l
 - sprintf
 - _sprintf_l
 - _swprintf_l
 - swprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _stprintf_l
 - __swprintf_l
@@ -46,16 +49,16 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-ms.openlocfilehash: f32b1622539e73ab04c19d6d46ffdbc58b9961d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a306788045fc6fe52da835029d32cfc42c0ed4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354869"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958281"
 ---
-# <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
+# <a name="sprintf-_sprintf_l-swprintf-_swprintf_l-__swprintf_l"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
-將格式化資料寫入字串。 其中一些函式已有更安全的版本可供使用，請參閱 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 安全的版本**swprintf**並 **_swprintf_l**才*計數*參數。
+將格式化資料寫入字串。 其中一些函式已有更安全的版本可供使用，請參閱 [sprintf_s、_sprintf_s_l、swprintf_s、_swprintf_s_l](sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)。 **Swprintf**和 **_swprintf_l**的安全版本不接受*count*參數。
 
 ## <a name="syntax"></a>語法
 
@@ -110,13 +113,13 @@ int _sprintf_l(
 *buffer*<br/>
 輸出的儲存位置
 
-*count*<br/>
+*計數*<br/>
 要儲存在此函式的 Unicode 版本中的字元數上限。
 
 *格式*<br/>
 格式控制字串
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數
 
 *locale*<br/>
@@ -126,20 +129,20 @@ int _sprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入字元數目，則為-1，發生錯誤。 如果*緩衝區*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+寫入的字元數，如果發生錯誤，則為-1。 如果*buffer*或*format*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
-**sprintf**會傳回儲存在位元組數目*緩衝區*，不計入結束的 null 字元。 **swprintf**會傳回儲存在寬字元數目*緩衝區*，不計入結束的 null 寬字元。
+**sprintf**會傳回儲存在*緩衝區*中的位元組數目，而不會計算終止的 null 字元。 **swprintf**會傳回儲存在*緩衝區*中的寬字元數，而不會計算終止的 null 寬字元。
 
 ## <a name="remarks"></a>備註
 
-**Sprintf**函式加以格式化並且儲存一連串字元和值*緩衝區*。 每個*引數*（如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Sprintf**函式會格式化並將一連串的字元和值儲存在*buffer*中。 每個*引數*（如果有的話）都會根據*格式*的對應格式規格進行轉換和輸出。 此格式包含一般字元，與[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*引數具有相同的形式和功能。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 使用**sprintf**，沒有任何方法可以限制寫入的字元數，也就是說，使用程式碼**sprintf**是容易發生緩衝區溢位。 請考慮使用 related 的函數[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，指定要寫入的字元數目上限*緩衝區*，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)判斷大需要的緩衝區。 此外，請確認*格式*不是使用者定義的字串。
+> 使用**sprintf**時，沒有任何方法可限制寫入的字元數，這表示使用**sprintf**的程式碼很容易發生緩衝區溢位。 請考慮使用相關的函式[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)，這會指定要寫入*緩衝區*的最大字元數，或使用[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)來判斷需要的緩衝區大小。 此外，請確定*格式*不是使用者定義的字串。
 
-**swprintf**是寬字元版本的**sprintf**; 指標引數**swprintf**是寬字元字串。 編碼錯誤偵測**swprintf**可能會不同於**sprintf**。 **swprintf**並**fwprintf**運作方式完全相同，不同之處在於**swprintf**字串，而非類型的目的地會將輸出寫入**檔案**，以及**swprintf**需要*計數*參數來指定要寫入的字元數目上限。 使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+**swprintf**是寬字元版本的**sprintf**;**swprintf**的指標引數是寬字元字串。 **Swprintf**中的編碼錯誤偵測可能與**sprintf**中的不同。 **swprintf**和**fwprintf**的行為相同，不同之處在于**swprintf**會將輸出寫入字串，而不是**FILE**類型的目的地，而**swprintf**需要*count*參數來指定最大數目要寫入的字元數。 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-**swprintf**符合 ISO C 標準，而這需要第二個參數，*計數*，型別的**size_t**。 若要強制執行舊的非標準行為，請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未來版本中，可能會移除舊的行為，因此應該變更程式碼，以使用新的一致行為。
+**swprintf**符合 ISO C 標準，其需要類型**size_t**的第二個參數*count*。 若要強制執行舊的非標準行為，請定義 **_CRT_NON_CONFORMING_SWPRINTFS**。 在未來版本中，可能會移除舊的行為，因此應該變更程式碼，以使用新的一致行為。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -154,8 +157,8 @@ int _sprintf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**sprintf**， **_sprintf_l**|\<stdio.h>|
-|**swprintf**， **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**sprintf**、 **_sprintf_l**|\<stdio.h>|
+|**swprintf**、 **_swprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

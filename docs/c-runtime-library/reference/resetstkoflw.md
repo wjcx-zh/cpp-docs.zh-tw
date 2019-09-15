@@ -1,9 +1,9 @@
 ---
 title: _resetstkoflw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _resetstkoflw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-ms.openlocfilehash: fc8a625e767daeb964f838c91f74732c9bd337a4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 55ac25cda5e6c442e96cae025657454747d571d9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499487"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949285"
 ---
 # <a name="_resetstkoflw"></a>_resetstkoflw
 
@@ -50,7 +53,7 @@ int _resetstkoflw( void );
 
 ## <a name="remarks"></a>備註
 
-**_Resetstkoflw**函式會從堆疊溢位條件復原, 允許程式繼續執行, 而不是因為嚴重例外狀況錯誤而失敗。 如果未呼叫 **_resetstkoflw**函式, 則在先前的例外狀況之後不會有任何防護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。
+**_Resetstkoflw**函式會從堆疊溢位條件復原，允許程式繼續執行，而不是因為嚴重例外狀況錯誤而失敗。 如果未呼叫 **_resetstkoflw**函式，則在先前的例外狀況之後不會有任何防護頁面。 下次發生堆疊溢位時，完全沒有任何例外狀況，且處理序會終止而不發出警告。
 
 如果應用程式中的執行緒造成 **EXCEPTION_STACK_OVERFLOW** 例外狀況，執行緒的堆疊便已處於損毀狀態。 這與其他例外狀況，例如 **EXCEPTION_ACCESS_VIOLATION** 或 **EXCEPTION_INT_DIVIDE_BY_ZERO** 相反，它們的堆疊並未損毀。 程式第一次載入時，堆疊會設定為很小的值。 然後堆疊會視需要成長，以符合執行緒的需要。 這樣的實作方法是在目前堆疊結尾處放置具有 PAGE_GUARD 存取的頁面。 如需詳細資訊，請參閱 [Creating Guard Pages](/windows/win32/Memory/creating-guard-pages) (建立防護頁面)。
 
@@ -74,7 +77,7 @@ int _resetstkoflw( void );
 
 請注意，此時，堆疊不再有防護頁面。 下次程式堆疊一直成長到最後時，在該處應該有防護頁面，程式會寫入超過堆疊的結尾，並造成存取違規。
 
-呼叫 **_resetstkoflw** , 以在每次在堆疊溢位例外狀況之後執行復原時, 還原 [保護] 頁面。 此函式可以從 **__except**區塊的主要主體內或在 **__except**區塊之外呼叫。 不過，它的使用時機有一些限制。 永遠不應從下列來源呼叫 **_resetstkoflw** :
+呼叫 **_resetstkoflw** ，以在每次在堆疊溢位例外狀況之後執行復原時，還原 [保護] 頁面。 此函式可以從 **__except**區塊的主要主體內或在 **__except**區塊之外呼叫。 不過，它的使用時機有一些限制。 永遠不應從下列來源呼叫 **_resetstkoflw** ：
 
 - 篩選條件運算式。
 
@@ -88,13 +91,13 @@ int _resetstkoflw( void );
 
 在這些點，堆疊尚無法充分回溯。
 
-堆疊溢位例外狀況會產生為結構化C++例外狀況, 而不是例外狀況, 因此 **_resetstkoflw**在一般**catch**區塊中沒有用處, 因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
+堆疊溢位例外狀況會產生為結構化C++例外狀況，而不是例外狀況，因此 **_resetstkoflw**在一般**catch**區塊中沒有用處，因為它不會攔截堆疊溢位例外狀況。 不過，如果 [_set_se_translator](set-se-translator.md) 用來實作結構化例外狀況轉譯器，擲回 C++ 例外狀況 (如第二個範例中)，堆疊溢位例外狀況會造成 C++ 例外狀況，而可以由 C++ catch 區塊處理。
 
 在從結構化例外狀況翻譯器函式所擲回例外狀況達到的 C++ catch 區塊中呼叫 **_resetstkoflw** 並不安全。 在此情況下，不會釋放堆疊空間，而且一直達到 catch 區塊之外以前都不會重設堆疊指標，即使已經在 catch 區塊之前呼叫任何可破壞物件的解構函式。 在堆疊空間釋放且堆疊指標重設之前，不應該呼叫此函式。 因此，它只應該在結束 catch 區塊之後呼叫。 在 catch 區塊中應該盡可能減少使用堆疊空間，因為如果堆疊溢位發生在 catch 區塊中，而 catch 區塊本身正在嘗試從先前堆疊溢位復原時，這樣的堆疊溢位是無法復原的，並且可能造成程式停止回應，因為 catch 區塊中的溢位會觸發例外狀況，該例外狀況又是由相同的 catch 區塊處理。
 
 在有些情況下 **_resetstkoflw** 可能會失敗，即使是使用於正確的位置，例如在 **__except** 區塊內。 如果即使是在回溯堆疊之後，仍沒有足夠的堆疊空間可執行 **_resetstkoflw** 而不寫入至堆疊的最後一頁，那麼 **_resetstkoflw** 便無法將堆疊的最後一頁重設為防護頁面，並且會傳回 0，表示失敗。 因此，安全地使用此函式應該要包含檢查傳回值，而不是假設堆疊的使用是安全的。
 
-使用 **/clr**編譯應用程式時, 結構化例外狀況處理不會攔截**STATUS_STACK_OVERFLOW**例外狀況 (請參閱[/Clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md))。
+使用 **/clr**編譯應用程式時，結構化例外狀況處理不會攔截**STATUS_STACK_OVERFLOW**例外狀況（請參閱[/Clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)）。
 
 ## <a name="requirements"></a>需求
 
@@ -177,7 +180,7 @@ int main(int ac)
 }
 ```
 
-沒有程式引數的範例輸出:
+沒有程式引數的範例輸出：
 
 ```Output
 loop #1
@@ -212,7 +215,7 @@ resetting stack overflow
 
 ### <a name="description"></a>說明
 
-下列範例顯示在結構化例外狀況轉換成C++例外狀況的程式中, 建議使用 _resetstkoflw。
+下列範例顯示在結構化例外狀況轉換成C++例外狀況的程式中，建議使用 _resetstkoflw。
 
 ### <a name="code"></a>程式碼
 

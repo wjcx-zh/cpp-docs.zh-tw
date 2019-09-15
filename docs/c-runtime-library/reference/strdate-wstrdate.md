@@ -1,10 +1,10 @@
 ---
 title: _strdate、_wstrdate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdate
 - _wstrdate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstrdate
 - wstrdate
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1164db5857643bac649e96493a3d66cdee3b6e2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958216"
 ---
-# <a name="strdate-wstrdate"></a>_strdate、_wstrdate
+# <a name="_strdate-_wstrdate"></a>_strdate、_wstrdate
 
 將目前的系統日期複製到緩衝區。 這些函式已有更安全的版本可用，請參閱 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。
 
@@ -70,17 +73,17 @@ wchar_t *_wstrdate(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回產生的字元字串的指標*datestr*。
+所有這些函式都會傳回所產生之字元字串*datestr*的指標。
 
 ## <a name="remarks"></a>備註
 
 這些函式已有更安全的版本可用，請參閱 [_strdate_s、_wstrdate_s](strdate-s-wstrdate-s.md)。 建議您盡可能使用更安全的函式。
 
-**_Strdate**函式會將目前的系統日期複製到所指向的緩衝區*datestr*格式化**mm**/**dd** / **yy**，其中**mm**是兩位數表示月份， **dd**是兩位數表示日期和**yy**是一年的後兩位數。 例如，字串**12/05/99**代表 1999 年 12 月 5 日。 緩衝區長度至少必須是 9 個位元組。
+**_Strdate**函式會將目前的系統日期複製到*datestr*所指向的緩衝區，格式為**mm** / **dd** / **yy**，其中**mm**是代表月份的兩位數， **dd**這是代表日期的兩個數字， **yy**是年份的最後兩個數字。 例如，字串**12/05/99**代表1999年12月5日。 緩衝區長度至少必須是 9 個位元組。
 
-如果*datestr*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*datestr*為**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
-**_wstrdate**是寬字元版本的 **_strdate**; 的引數和傳回值 **_wstrdate**是寬字元字串。 除此之外，這些函式的行為相同。
+**_wstrdate**是寬字元版本的 **_strdate**; **_wstrdate**的引數和傳回值是寬字元字串。 除此之外，這些函式的行為相同。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

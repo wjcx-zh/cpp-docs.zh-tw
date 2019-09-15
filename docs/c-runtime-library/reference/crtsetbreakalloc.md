@@ -1,9 +1,9 @@
 ---
 title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetBreakAlloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e13c908c1efd1af9196885dee6e3b0f45845946b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942307"
 ---
-# <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
+# <a name="_crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
 在指定的物件配置順序編號設定中斷點 (僅限偵錯版本)。
 
@@ -52,11 +55,11 @@ long _CrtSetBreakAlloc(
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetBreakAlloc**允許應用程式的記憶體配置的特定點中斷並追溯回要求的來源，以執行記憶體遺漏偵測。 此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtSetBreakAlloc**會在前置處理期間移除。
+**_CrtSetBreakAlloc**可讓應用程式在特定的記憶體配置點中斷，並追蹤回要求的來源，以執行記憶體流失偵測。 此函式會在記憶體區塊配置於堆積中時，使用指派給記憶體區塊的循序物件配置順序編號。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtSetBreakAlloc**的呼叫。
 
-物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。 當記憶體區塊的相關資訊由其中一個偵錯傾印函式報告時，此編號會包含在大括號，例如{36}。
+物件配置順序編號會儲存在定義於 Crtdbg.h 中的 **_CrtMemBlockHeader** 結構的 *lRequest* 欄位內。 當其中一個 debug 傾印函式報告記憶體區塊的相關資訊時，這個數位會以大括弧括住， {36}例如。
 
-如需有關如何 **_CrtSetBreakAlloc**可以搭配其他記憶體管理函式，請參閱[追蹤堆積配置要求](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+如需如何搭配其他記憶體管理函式來使用 **_CrtSetBreakAlloc**的詳細資訊，請參閱[追蹤堆積配置要求](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>需求
 

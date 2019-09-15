@@ -1,10 +1,10 @@
 ---
 title: _creat、_wcreat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _creat
 - _wcreat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcreat
 - _wcreat
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d278bffbfdf856956a20b01da4dad2ba00952359
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335304"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938884"
 ---
-# <a name="creat-wcreat"></a>_creat、_wcreat
+# <a name="_creat-_wcreat"></a>_creat、_wcreat
 
-建立新檔案。 **_creat**並 **_wcreat**已被取代; 請使用[_sopen_s、 _wsopen_s](sopen-s-wsopen-s.md)改。
+建立新檔案。 **_creat**和 **_wcreat**已被取代;[請改用 _sopen_s，_wsopen_s](sopen-s-wsopen-s.md) 。
 
 ## <a name="syntax"></a>語法
 
@@ -66,21 +69,21 @@ int _wcreat(
 
 ## <a name="return-value"></a>傳回值
 
-這些函式若成功，則傳回所建立檔案的檔案描述項。 否則，函式會傳回-1，並設定**errno**下表所示。
+這些函式若成功，則傳回所建立檔案的檔案描述項。 否則，函數會傳回-1 並設定**errno** ，如下表所示。
 
-|**errno**設定|描述|
+|**errno**設定|說明|
 |---------------------|-----------------|
-|**EACCES**|*檔名*指定現有的唯讀檔案，或指定的目錄，而非檔案。|
+|**EACCES**|*filename*指定現有的唯讀檔案，或指定目錄而不是檔案。|
 |**EMFILE**|沒有更多檔案描述項可用。|
 |**ENOENT**|找不到指定的檔案。|
 
-如果*檔名*是**NULL**，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
+如果*filename*是**Null**，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Creat**函式會建立新的檔案或開啟並截斷現有。 **_wcreat**是寬字元版本的 **_creat**; *filename*引數 **_wcreat**是寬字元字串。 **_wcreat**並 **_creat**行為相同。
+**_Creat**函數會建立新的檔案，或開啟並截斷現有的檔案。 **_wcreat**是寬字元版本的 **_creat**; **_wcreat**的*filename*引數是寬字元字串。 相反地， **_wcreat**和 **_creat**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -88,7 +91,7 @@ int _wcreat(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-如果指定的檔案*filename*不存在，新的檔案會使用指定的權限設定建立及開啟供寫入。 如果檔案已經存在，而且其權限設定允許寫入 **_creat**截斷至長度為 0，終結先前的內容檔案，並開啟以供寫入。 權限設定中， *pmode*，適用於新建立的檔案。 新檔案會在第一次關閉之後收到指定的權限設定。 整數運算式*pmode*包含一或兩個資訊清單常數 **_S_IWRITE**並 **_S_IREAD**、 SYS\Stat.h 中所定義。 時指定這兩個常數，它們會結合使用位元 or 運算子 ( **&#124;** )。 *Pmode*參數設定為下列值之一。
+如果*filename*指定的檔案不存在，則會使用指定的許可權設定來建立新的檔案，並開啟以供寫入。 如果檔案已經存在，且其許可權設定允許寫入，則 **_creat**會將檔案截斷為長度0，終結先前的內容，並開啟以供寫入。 許可權設定*pmode*僅適用于新建立的檔案。 新檔案會在第一次關閉之後收到指定的權限設定。 整數運算式*pmode*包含其中一個或兩個資訊清單常數 **_S_IWRITE**和 **_S_IREAD**，定義于 sys\stat.h 所中。 當指定兩個常數時，會使用位 or 運算子（ **&#124;** ）聯結。 *Pmode*參數會設定為下列其中一個值。
 
 |值|定義|
 |-----------|----------------|
@@ -96,9 +99,9 @@ int _wcreat(
 |**_S_IREAD**|允許讀取。|
 |**_S_IREAD** &#124; **_S_IWRITE**|允許讀取和寫入。|
 
-若沒有指定寫入權限，則檔案為唯讀。 所有檔案皆為可讀取；不可能授與僅限寫入權限。 模式 **_S_IWRITE**並 **_S_IREAD** | **_S_IWRITE**相同。 使用開啟的檔案 **_creat**永遠都相容性模式中開啟 (請參閱[_sopen](sopen-wsopen.md)) 與 **_SH_DENYNO**。
+若沒有指定寫入權限，則檔案為唯讀。 所有檔案皆為可讀取；不可能授與僅限寫入權限。 然後， **_S_IWRITE**和 **_S_IREAD**  |  **_S_IWRITE**模式就是相等的。 使用 **_creat**開啟的檔案一律會在相容性模式（請參閱[_sopen](sopen-wsopen.md)）中以 **_SH_DENYNO**開啟。
 
-**_creat**到目前的檔案權限遮罩套用*pmode*之前設定的權限 (請參閱[_umask](umask.md))。 **_creat**提供主要目的是為了與先前的程式庫的相容性。 呼叫 **_open**具有 **_O_CREAT**並 **_O_TRUNC**中*oflag*參數相當於 **_creat**，並且適用於新的程式碼。
+**_creat**會在設定許可權之前，將目前的檔案許可權遮罩套用至*pmode* （請參閱[_umask](umask.md)）。 **_creat**的主要目的是為了與先前的程式庫相容。 在*oflag*參數中使用 **_O_CREAT**和 **_O_TRUNC**呼叫 **_open**相當於 **_creat** ，適用于新的程式碼。
 
 ## <a name="requirements"></a>需求
 

@@ -1,12 +1,12 @@
 ---
 title: _vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcprintf_s
 - _vcprintf_s_l
 - _vcwprintf_s
 - _vcwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vcprintf_s
 - vcwprintf_s_l
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - vtcprintf_s function
 - formatted text [C++]
 ms.assetid: 5a46d45a-30db-45df-9850-455cbdac5636
-ms.openlocfilehash: ccd346141db9f4974ee5f9300792260bf2a8ec72
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a6a3e94167adcc614a5de45a314fca25bdc9e1f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499319"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945668"
 ---
 # <a name="_vcprintf_s-_vcprintf_s_l-_vcwprintf_s-_vcwprintf_s_l"></a>_vcprintf_s、_vcprintf_s_l、_vcwprintf_s、_vcwprintf_s_l
 
@@ -97,13 +100,13 @@ int _vcwprintf_s_l(
 
 寫入的字元數，或是當發生輸出錯誤時為負值。
 
-如同這些函式的較不安全版本, 如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外, 與這些函式的不安全版本不同, 如果*格式*未指定有效的格式, 則會產生不正確參數例外狀況。 如果允許繼續執行, 這些函式會傳回錯誤碼, 並將**errno**設定為該錯誤碼。 如果較特定的值不適用, 則會**EINVAL**預設錯誤碼。
+如同這些函式的較不安全版本，如果*format*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外，與這些函式的不安全版本不同，如果*格式*未指定有效的格式，則會產生不正確參數例外狀況。 如果允許繼續執行，這些函式會傳回錯誤碼，並將**errno**設定為該錯誤碼。 如果較特定的值不適用，則會**EINVAL**預設錯誤碼。
 
 ## <a name="remarks"></a>備註
 
 所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf_s**是 **_vcprintf_s**的寬字元版本。 它接受寬字元字串作為引數。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

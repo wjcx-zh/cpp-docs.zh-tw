@@ -1,9 +1,9 @@
 ---
 title: _eof
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _eof
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _eof
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b5c27f1de3369369776dd030df21be05cf20b7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288132"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941970"
 ---
-# <a name="eof"></a>_eof
+# <a name="_eof"></a>_eof
 
 測試檔案結尾 (EOF)。
 
@@ -52,15 +55,15 @@ int _eof(
 
 ## <a name="return-value"></a>傳回值
 
-**_eof**如果目前的位置是檔案結尾或 0 便會傳回 1。 傳回值為-1 表示錯誤;在此情況下，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EBADF**，表示無效的檔案描述項。
+如果目前的位置是檔案結尾，則 **_eof**會傳回1，否則會傳回0。 傳回值-1 表示發生錯誤;在此情況下，會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設定為**EBADF**，這表示不正確檔案描述項。
 
 ## <a name="remarks"></a>備註
 
-**_Eof**函式會判斷是否與相關聯檔案的結尾*fd*已達到。
+**_Eof**函式會判斷是否已達到與*fd*相關聯之檔案的結尾。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_eof**|\<io.h>|\<errno.h>|
 
@@ -106,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crteoftxt"></a>輸入︰crt_eof.txt
+### <a name="input-crt_eoftxt"></a>輸入︰crt_eof.txt
 
 ```Input
 This file contains some text.

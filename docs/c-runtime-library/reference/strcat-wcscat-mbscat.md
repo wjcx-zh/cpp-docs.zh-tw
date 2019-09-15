@@ -1,11 +1,11 @@
 ---
 title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbscat
 - wcscat
 - strcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscat
 - _ftcscat
@@ -40,19 +43,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-ms.openlocfilehash: 629b66a5c9dded3a910919f5e302a97c4f731240
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 973c54c18e941b29526cb3e9b1cadb98f6582c4a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354336"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958267"
 ---
-# <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
+# <a name="strcat-wcscat-_mbscat"></a>strcat、wcscat、_mbscat
 
 附加字串。 這些函式已有更安全的版本可供使用，請參閱 [strcat_s、wcscat_s、_mbscat_s](strcat-s-wcscat-s-mbscat-s.md)。
 
 > [!IMPORTANT]
-> **_mbscat_s**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscat_s**無法在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -96,16 +99,16 @@ unsigned char *_mbscat(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回目的地字串 (*strDestination*)。 未保留表示錯誤的傳回值。
+所有這些函式都會傳回目的地字串（*strDestination*）。 未保留表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**Strcat**函式會將附加*strSource*來*strDestination*並終止於 null 字元產生的字串。 起始字元*strSource*會結束的 null 字元的覆寫*strDestination*。 行為**strcat**是未定義的如果來源和目的字串重疊。
+**Strcat**函數會將*StrSource*附加至*strDestination* ，並以 null 字元終止產生的字串。 *StrSource*的初始字元會覆寫*strDestination*的終止 null 字元。 如果來源和目的字串重迭，則**strcat**的行為是未定義的。
 
 > [!IMPORTANT]
-> 因為**strcat**不會檢查在有足夠的空間*strDestination*附加之前*strSource*，這是緩衝區滿溢的潛在原因。 請考慮改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
+> 因為**strcat**在附加*strSource*之前，不會在*strDestination*中檢查是否有足夠的空間，所以可能會造成緩衝區溢位。 請考慮改用 [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)。
 
-**wcscat**並 **_mbscat**是寬字元和多位元組字元版本的**strcat**。 引數和傳回值**wcscat**是寬字元字串; **_mbscat**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscat**和 **_mbscat**是**strcat**的寬字元和多位元組字元版本。 **Wcscat**的引數和傳回值是寬字元字串; **_mbscat**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

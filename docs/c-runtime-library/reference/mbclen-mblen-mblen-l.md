@@ -1,12 +1,12 @@
 ---
-title: _mbclen、 mblen、 _mblen_l、 _mbclen_l
+title: _mbclen、mblen、_mblen_l、_mbclen_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _mbclen
 - mblen
 - _mblen_l
 - _mbclen_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mblen
 - ftclen
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96775f513b33eb407981480c17cb609dd85383f6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156781"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952568"
 ---
-# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen、 mblen、 _mblen_l、 _mbclen_l
+# <a name="_mbclen-mblen-_mblen_l-_mbclen_l"></a>_mbclen、mblen、_mblen_l、_mbclen_l
 
 取得長度，並判斷多位元組字元的有效性。
 
@@ -82,7 +85,7 @@ int _mblen_l(
 *mbstr*<br/>
 多位元組字元位元組序列的位址。
 
-*count*<br/>
+*計數*<br/>
 要檢查的位元組數目。
 
 *locale*<br/>
@@ -90,15 +93,15 @@ int _mblen_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbclen**傳回 1 或 2，根據多位元組字元*c*為 1 或 2 個位元組長。 不沒有傳回任何錯誤 **_mbclen**。 如果*mbstr*不**NULL**， **mblen**傳回長度，以位元組為單位的多位元組字元。 如果*mbstr*是**NULL**或是指向寬字元的 null 字元**mblen**會傳回 0。 當物件的*mbstr*點不會形成有效的多位元組字元，在第一個*計數*字元， **mblen**會傳回-1。
+**_mbclen**會根據多位元組字元*c*是1或2個位元組長度，傳回1或2。 **_Mbclen**不會傳回任何錯誤。 如果*mbstr*不是**Null**， **mblen**會傳回多位元組字元的長度（以位元組為單位）。 如果*mbstr*為**null** ，或指向寬字元的 null 字元， **mblen**會傳回0。 當*mbstr*指向的物件未在第一個*計數*字元內形成有效的多位元組字元時， **mblen**會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**_Mbclen**函式會傳回長度，以位元組為單位的多位元組字元*c*。 如果*c*未指向隱含呼叫所決定之多位元組字元的前導位元組 **_ismbblead**，結果 **_mbclen**無法預期。
+**_Mbclen**函數會傳回多位元組字元*c*的長度（以位元組為單位）。 如果*c*未指向 **_ismbblead**的隱含呼叫所決定之多位元組字元的前導位元組， **_mbclen**的結果會是無法預測的。
 
-**mblen**傳回長度以位元組為單位*mbstr*如果它是有效的多位元組字元，並判斷多位元組字元的字碼頁相關聯的有效性。 **mblen**會檢查*計數*或更少個位元組內*mbstr*，但不是能超過**MB_CUR_MAX**位元組。
+**mblen**會傳回*mbstr*的長度（以位元組為單位）（如果它是有效的多位元組字元），並判斷與字碼頁相關聯的多位元組字元有效性。 **mblen**會檢查*mbstr*中包含的*計數*或較少的位元組，但不會超過**MB_CUR_MAX**個位元組。
 
-輸出值會受到**LC_CTYPE**地區設定分類設定; 請參閱[setlocale](setlocale-wsetlocale.md)如需詳細資訊。 這些功能，但不包含新版 **_l**尾碼針對此與地區設定相關行為使用目前的地區設定。 **_L**後面加上的版本的行為相同，但是它們使用改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md) 。 這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定。 **_L**尾碼的版本行為相同，但是它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

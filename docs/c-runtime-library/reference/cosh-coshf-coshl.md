@@ -1,11 +1,11 @@
 ---
-title: cosh、 coshf、 coshl
+title: cosh、coshf、coshl
 ms.date: 04/11/2018
-apiname:
+api_name:
 - cosh
 - coshf
 - coshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cosh
 - coshf
@@ -28,16 +31,16 @@ helpviewer_keywords:
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 446988e67ca6e3b4a3839a9336f1ea4e2755c124
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347440"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938988"
 ---
-# <a name="cosh-coshf-coshl"></a>cosh、 coshf、 coshl
+# <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
-計算雙曲餘弦值。
+計算雙曲余弦值。
 
 ## <a name="syntax"></a>語法
 
@@ -59,30 +62,30 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-雙曲線餘弦*x*。
+*X*的雙曲余弦值。
 
-根據預設，如果結果太大而無法在**cosh**， **coshf**，或**coshl**呼叫，則函數會傳回**HUGE_VAL**並設定**errno**要**ERANGE**。
+根據預設，如果**cosh**、 **coshf**或**coshl**呼叫中的結果太大，函式會傳回**HUGE_VAL** ，並將**errno**設定為**ERANGE**。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|none|**_DOMAIN**|
+|± **QNAN**， **IND**|none|**_DOMAIN**|
 |*x* ≥ 7.104760e+002|**INEXACT**+**OVERFLOW**|**OVERFLOW**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**cosh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **cosh**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**cosh**的多載。 在 C 程式中， **cosh**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**coshf**, **cosl**, **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**coshf**、 **cosl**、 **coshl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-請參閱中的範例[sinh、 sinhf、 sinhl](sinh-sinhf-sinhl.md)。
+請參閱[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)中的範例。
 
 ## <a name="see-also"></a>另請參閱
 

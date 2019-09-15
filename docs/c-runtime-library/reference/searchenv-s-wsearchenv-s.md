@@ -1,10 +1,10 @@
 ---
 title: _searchenv_s、_wsearchenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsearchenv_s
 - _searchenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _searchenv_s
 - _wsearchenv_s
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 606215fb7a2cce7929b29e2035f8e03556ca25e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356819"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948793"
 ---
-# <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
+# <a name="_searchenv_s-_wsearchenv_s"></a>_searchenv_s、_wsearchenv_s
 
 使用環境路徑來搜尋檔案。 這些版本的 [_searchenv、_wsearchenv](searchenv-wsearchenv.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -91,33 +94,33 @@ errno_t _wsearchenv_s(
 要儲存此完整路徑的緩衝區。
 
 *numberOfElements*<br/>
-大小*pathname*緩衝區。
+*路徑名稱*緩衝區的大小。
 
 ## <a name="return-value"></a>傳回值
 
 如果成功，就是零，如果失敗，則為錯誤碼。
 
-如果*檔名*為空字串，則傳回值是**ENOENT**。
+如果*filename*是空字串，則傳回值為**ENOENT**。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*filename*|*varname*|*pathname*|*numberOfElements*|傳回值|內容*路徑名稱*|
+|*filename*|*varname*|*pathname*|*numberOfElements*|傳回值|*路徑名稱*的內容|
 |----------------|---------------|----------------|------------------------|------------------|----------------------------|
 |any|any|**NULL**|any|**EINVAL**|N/A|
 |**NULL**|any|any|any|**EINVAL**|未變更|
 |any|any|any|<= 0|**EINVAL**|未變更|
 
-如果發生上述任何錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果發生上述任何錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Searchenv_s**例行搜尋指定的網域中的目標檔案。 *Varname*變數可以是任何環境或使用者定義的變數，例如指定的目錄路徑清單**路徑**， **LIB**，和**INCLUDE**. 因為 **_searchenv_s**區分大小寫， *varname*應該符合環境變數的大小寫。 如果*varname*不的符合處理程序的環境中定義的環境變數的名稱，此函數會傳回零並*pathname*變數不會變更。
+**_Searchenv_s**常式會在指定的網域中搜尋目標檔案。 *Varname*變數可以是指定目錄路徑清單的任何環境或使用者自訂變數，例如**PATH**、 **LIB**和**INCLUDE**。 由於 **_searchenv_s**區分大小寫，因此*varname*應符合環境變數的大小寫。 如果*varname*不符合進程環境中定義的環境變數名稱，此函式會傳回零，而*pathname*變數則不會變更。
 
-此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，接著會在環境變數指定的目錄中尋找。 如果目標檔案已在其中一個這些目錄中，新建立的路徑會複製到*pathname*。 如果*檔名*找不到檔案， *pathname*包含空的 null 結尾字串。
+此常式會先搜尋目前工作目錄中的檔案。 如果找不到此檔案，接著會在環境變數指定的目錄中尋找。 如果目標檔案是在其中一個目錄中，新建立的路徑就會複製到*pathname*。 如果找不到*filename*檔案， *pathname*會包含空的以 null 結束的字串。
 
-*Pathname*緩衝區應該至少 **_MAX_PATH**適應建構的路徑名稱的完整長度的字元。 否則 **_searchenv_s**可能會溢位*pathname*緩衝區導致非預期的行為。
+*Pathname*緩衝區的長度至少應為 **_MAX_PATH**個字元，以容納結構化路徑名稱的完整長度。 否則， **_searchenv_s**可能會溢出*路徑名稱*緩衝區，因而導致非預期的行為。
 
-**_wsearchenv_s**是寬字元版本的 **_searchenv_s**; 的引數 **_wsearchenv_s**是寬字元字串。 **_wsearchenv_s**並 **_searchenv_s**行為相同。
+**_wsearchenv_s**是寬字元版本的 **_searchenv_s**; **_wsearchenv_s**的引數是寬字元字串。 相反地， **_wsearchenv_s**和 **_searchenv_s**的行為相同。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

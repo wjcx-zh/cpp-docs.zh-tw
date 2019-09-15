@@ -1,9 +1,9 @@
 ---
 title: _cwait
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwait
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwait
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-ms.openlocfilehash: f356afc91f794753f12b5b673c609ef03fbaa5ec
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4be342ef528959bae22917bc59eef5a953aa4ae
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499968"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937740"
 ---
 # <a name="_cwait"></a>_cwait
 
@@ -49,34 +52,34 @@ intptr_t _cwait(
 ### <a name="parameters"></a>參數
 
 *termstat*<br/>
-緩衝區的指標, 其中會儲存指定之處理常式的結果碼, 或為**Null**。
+緩衝區的指標，其中會儲存指定之處理常式的結果碼，或為**Null**。
 
 *procHandle*<br/>
-要等候之進程的控制碼 (也就是必須在 **_cwait**之前終止的進程)。
+要等候之進程的控制碼（也就是必須在 **_cwait**之前終止的進程）。
 
 *action*<br/>
-NULL：Windows 作業系統應用程式已忽略;針對其他應用程式: 要在*procHandle*上執行的動作程式碼。
+NULL：Windows 作業系統應用程式已忽略;針對其他應用程式：要在*procHandle*上執行的動作程式碼。
 
 ## <a name="return-value"></a>傳回值
 
-當指定的進程成功完成時, 會傳回指定之進程的控制碼, 並將*termstat*設定為指定之進程所傳回的結果碼。 否則, 會傳回-1, 並設定**errno** , 如下所示。
+當指定的進程成功完成時，會傳回指定之進程的控制碼，並將*termstat*設定為指定之進程所傳回的結果碼。 否則，會傳回-1，並設定**errno** ，如下所示。
 
 |值|描述|
 |-----------|-----------------|
-|**ECHILD**|沒有指定的進程存在、 *procHandle*無效, 或呼叫[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)或[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API 失敗。|
+|**ECHILD**|沒有指定的進程存在、 *procHandle*無效，或呼叫[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)或[WaitForSingleObject](/windows/win32/api/synchapi/nf-synchapi-waitforsingleobject) API 失敗。|
 |**EINVAL**|*動作*無效。|
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Cwait**函數會等待*procHandle*所提供之指定進程的處理序識別碼終止。 傳遞至 **_cwait**的*procHandle*值應該是呼叫建立指定進程的[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函數所傳回的值。 如果處理序識別碼在呼叫 **_cwait**之前終止, **_cwait**會立即傳回。 **_cwait**可以由任何進程用來等候任何其他已知的進程, 也就是有效的控制碼 (*procHandle*) 存在。
+**_Cwait**函數會等待*procHandle*所提供之指定進程的處理序識別碼終止。 傳遞至 **_cwait**的*procHandle*值應該是呼叫建立指定進程的[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)函數所傳回的值。 如果處理序識別碼在呼叫 **_cwait**之前終止， **_cwait**會立即傳回。 **_cwait**可以由任何進程用來等候任何其他已知的進程，也就是有效的控制碼（*procHandle*）存在。
 
-*termstat*會指向緩衝區, 其中會儲存指定之進程的傳回碼。 *Termstat*的值會指出指定的進程是否正常終止, 方法是呼叫 Windows [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API。 如果指定的進程呼叫**exit**或 **_exit**、從**main**傳回, 或到達**main**結尾, 就會在內部呼叫**ExitProcess** 。 如需透過*termstat*傳回之值的詳細資訊, 請參閱[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)。 如果使用*termstat*的**Null**值呼叫 **_cwait** , 則不會儲存指定之進程的傳回碼。
+*termstat*會指向緩衝區，其中會儲存指定之進程的傳回碼。 *Termstat*的值會指出指定的進程是否正常終止，方法是呼叫 Windows [ExitProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitprocess) API。 如果指定的進程呼叫**exit**或 **_exit**、從**main**傳回，或到達**main**結尾，就會在內部呼叫**ExitProcess** 。 如需透過*termstat*傳回之值的詳細資訊，請參閱[GetExitCodeProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getexitcodeprocess)。 如果使用*termstat*的**Null**值呼叫 **_cwait** ，則不會儲存指定之進程的傳回碼。
 
-Windows 作業系統會忽略*action*參數, 因為這些環境中不會實作為父子式關聯性。
+Windows 作業系統會忽略*action*參數，因為這些環境中不會實作為父子式關聯性。
 
-除非*procHandle*是-1 或-2 (對目前進程或執行緒的控制碼), 否則控制碼將會關閉。 因此，在此情況中，請勿使用傳回的處理常式。
+除非*procHandle*是-1 或-2 （對目前進程或執行緒的控制碼），否則控制碼將會關閉。 因此，在此情況中，請勿使用傳回的處理常式。
 
 ## <a name="requirements"></a>需求
 

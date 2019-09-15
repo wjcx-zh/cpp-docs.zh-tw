@@ -1,11 +1,11 @@
 ---
 title: floor、floorf、floorl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - floorf
 - floorl
 - floor
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - floor
 - floorl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333582"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957149"
 ---
 # <a name="floor-floorf-floorl"></a>floor、floorf、floorl
 
@@ -67,23 +70,23 @@ long double floorl(
 
 ## <a name="return-value"></a>傳回值
 
-**Floor**函式會傳回浮點數的值，表示是否小於或等於最大整數*x*。 不會傳回錯誤。
+**Floor**函式會傳回浮點值，代表小於或等於*x*的最大整數。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 
-**floor**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**floor**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此您可以呼叫多載**floor**採用並傳回**float**並**長** **double**值。 在 C 程式中， **floor**一律採用並傳回**double**。
+C++允許多載，因此您可以呼叫採用並傳回**浮點**和**長** **雙精度**值的**floor**多載。 在 C 程式中， **floor**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
-|**floor**， **floorf**， **floorl**|\<math.h>|
+|**floor**、 **floorf**、 **floorl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,14 +1,17 @@
 ---
 title: to 函式
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742529"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944815"
 ---
 # <a name="to-functions"></a>to 函式
 
@@ -45,7 +48,7 @@ ms.locfileid: "57742529"
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|
 |`_tolower`|`_tolower`|將 `c` 轉換為小寫|
-|`towlower`|無|將 `c` 轉換為對應寬字元小寫字母|
+|`towlower`|None|將 `c` 轉換為對應寬字元小寫字母|
 |`toupper`|`toupper`|適用時，將 `c` 轉換為大寫|
 |`_toupper`|`_toupper`|將 `c` 轉換為大寫|
 |`towupper`|無|將 c 轉換為對應寬字元大寫字母|
@@ -64,7 +67,7 @@ ms.locfileid: "57742529"
 
 - 與地區設定無關且更快速的 `tolower` 和 **toupper** 版本。
 
-- 只有在 **isascii(**`c`**)** 且 **isupper(**`c`**)** 或 **islower(**`c`**)** 分別為非零時才能使用。
+- 只有在 **isascii(** `c` **)** 且 **isupper(** `c` **)** 或 **islower(** `c` **)** 分別為非零時才能使用。
 
 - 如果 `c` 不是可進行轉換之適當大小寫的 ASCII 字母，則會有未定義的結果。
 

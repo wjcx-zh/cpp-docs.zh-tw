@@ -1,9 +1,9 @@
 ---
 title: _ecvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _ecvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ecvt_s
 - _ecvt_s
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - numbers, converting
 - converting double numbers
 ms.assetid: d52fb0a6-cb91-423f-80b3-952a8955d914
-ms.openlocfilehash: 0123c618eb5ba614bd8e5b5b3f1f4b0aff539c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c50200d16a5e542c247d1c85f8c104381af4a883
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288243"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70937719"
 ---
-# <a name="ecvts"></a>_ecvt_s
+# <a name="_ecvt_s"></a>_ecvt_s
 
-將轉換**double**數字的字串。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_ecvt](ecvt.md) 版本。
+將**雙精度浮**點數轉換為字串。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_ecvt](ecvt.md) 版本。
 
 ## <a name="syntax"></a>語法
 
@@ -81,30 +84,30 @@ errno_t _ecvt_s(
 
 如果成功，則為零。 如果失敗，傳回的值會是錯誤碼。 錯誤碼於 Errno.h 中定義。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果是下表所列的無效參數，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果是下表所列的無效參數，則此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|傳回值|中的值*緩衝區*|
+|*_Buffer*|*_SizeInBytes*|_Value|_Count|_Dec|_Sign|傳回值|*Buffer*中的值|
 |---------------|--------------------|-------------|-------------|-----------|------------|------------------|-----------------------|
 |**NULL**|any|any|any|any|any|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|<=0|any|any|any|any|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|<=0|any|any|any|any|**EINVAL**|未修改。|
 |any|any|any|any|**NULL**|any|**EINVAL**|未修改。|
 |any|any|any|any|any|**NULL**|**EINVAL**|未修改。|
 
 ## <a name="security-issues"></a>安全性問題
 
-**_ecvt_s**可能會產生存取違規，如果*緩衝區*不是指向有效的記憶體，而且不**NULL**。
+如果*緩衝區*未指向有效的記憶體，而且不是**Null**，則 **_ecvt_s**可能會產生存取違規。
 
 ## <a name="remarks"></a>備註
 
-**_Ecvt_s**函式會將浮點數轉換為字元字串。 *_Value*參數是要轉換的浮點數。 此函式會儲存最多*計數*位數 *_Value*做為字串和結尾處附加 null 字元 ('\0')。 如果在中的位數 *_Value*超過 *_Count*，低位數四捨五入。 如果少於*計數*以零填補數字的字串。
+**_Ecvt_s**函數會將浮點數轉換成字元字串。 *_Value*參數是要轉換的浮點數。 此函式會將 *_Value*的*計數*數位儲存為字串，並附加 null 字元（' \ 0 '）。 如果 *_Value*中的位數超過 *_Count*，則會將低序位數位四捨五入。 如果數位少於*計數*，字串會以零填補。
 
-字串中只能儲存數字。 小數點和的正負號的位置 *_Value*可以取自 *_Dec*並*登 （_s)* 之後呼叫。 *_Dec*參數指向整數值，並提供字串的開頭小數點的位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *登 （_s)* 參數指向表示已轉換的數字的正負號的整數。 如果整數值為 0，則數字為正數。 否則，數字為負數。
+字串中只能儲存數字。 在呼叫之後，可以從 *_Dec*和 *_Sign*取得小數點的位置和 *_Value*的正負號。 *_Dec*參數會指向整數值，以提供相對於字串開頭的小數點位置。 0 或負整數值表示小數點位於第一位數字的左邊。 *_Sign*參數會指向一個整數，表示已轉換數位的正負號。 如果整數值為 0，則數字為正數。 否則，數字為負數。
 
-長度的緩衝區 **_CVTBUFSIZE**就已足夠供任何浮點值。
+長度 **_CVTBUFSIZE**的緩衝區足以滿足任何浮點值。
 
-之間的差異 **_ecvt_s**並 **_fcvt_s**中的解譯 *_Count*參數。 **_ecvt_s**解譯 *_Count*做為輸出字串中的位數總數而 **_fcvt_s**解譯 *_Count*後的位數數字小數點。
+**_Ecvt_s**和 **_fcvt_s**之間的差異在於 *_Count*參數的轉譯。 **_ecvt_s**會將 *_Count*解讀為輸出字串中的總位數，而 **_fcvt_s**會將 *_Count*解讀為小數點後面的位數。
 
 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -112,7 +115,7 @@ errno_t _ecvt_s(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_ecvt_s**|\<stdlib.h>|\<errno.h>|
 

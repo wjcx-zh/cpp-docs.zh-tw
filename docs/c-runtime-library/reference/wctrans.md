@@ -1,9 +1,9 @@
 ---
 title: wctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctrans
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a75de3b699d0eb5ec6117d0f627e6a8ba34dbc62
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188451"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944879"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -50,7 +53,7 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>傳回值
 
-如果**LC_CTYPE**目前的地區設定的類別不會定義名稱符合屬性字串的對應*屬性*，函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
+如果目前地區設定的**LC_CTYPE**分類未定義名稱符合屬性字串*屬性*的對應，此函數會傳回零。 否則，它會傳回適合用為 [towctrans](towctrans.md) 後續呼叫的第二個引數的非零值。
 
 ## <a name="remarks"></a>備註
 
@@ -58,10 +61,10 @@ wctrans_t wctrans(
 
 下列呼叫組合在所有的地區設定中都有一樣的行為，但即使是在 "C" 地區設定中，也有可能定義額外的對應︰
 
-|功能|同於|
+|函數|同於|
 |--------------|-------------|
-|tolower(c)|towctrans (c wctrans("towlower"))|
-|towupper(c)|towctrans (c wctrans("toupper"))|
+|tolower （c）|towctrans （c，wctrans （"towlower"））|
+|towupper （c）|towctrans （c，wctrans （"toupper"））|
 
 ## <a name="requirements"></a>需求
 

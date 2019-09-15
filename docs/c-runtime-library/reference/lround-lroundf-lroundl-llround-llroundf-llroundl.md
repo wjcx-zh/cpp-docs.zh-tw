@@ -1,14 +1,14 @@
 ---
 title: lround、lroundf、lroundl、llround、llroundf、llroundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - llround
 - llroundf
 - llroundl
 - lroundf
 - lround
 - lroundl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lround
 - lroundl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d849e838811abbed83499d6da283148650bab875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285841"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952993"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -89,21 +92,21 @@ long long llroundl(
 
 ## <a name="return-value"></a>傳回值
 
-**Lround**並**llround**函式會傳回最接近**長**或**長****長**到整數*x*。 不論浮點四捨五入模式的設定為何，進行四捨五入時，中間值都會背離零。 不會傳回錯誤。
+**Lround**和**llround**函式會將最接近的**長**整數或**長** **長**整數傳回*x*。 不論浮點四捨五入模式的設定為何，進行四捨五入時，中間值都會背離零。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|none|**_DOMAIN**|
+|± **QNAN**， **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**lround**或**llround**採用並傳回**float**並**長****double**值。 在 C 程式中， **lround**並**llround**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**浮點**和**長** **雙精度**值的**lround**或**llround**多載。 在 C 程式中， **lround**和**llround**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**lround**， **lroundf**， **lroundl**， **llround**， **llroundf**， **llroundl**|\<math.h>|
+|**lround**、 **lroundf**、 **lroundl**、 **llround**、 **llroundf**、 **llroundl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

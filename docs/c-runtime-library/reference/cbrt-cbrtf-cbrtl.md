@@ -1,11 +1,11 @@
 ---
 title: cbrt、cbrtf、cbrtl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - cbrt
 - cbrtf
 - cbrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cbrtl
 - cbrt
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3983c5d3237b1a6cb82887a690919cbf21401ab
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341090"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939296"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -65,21 +68,21 @@ long double cbrtl(
 
 ## <a name="return-value"></a>傳回值
 
-**Cbrt**函式會傳回的立方根*x*。
+**Cbrt**函數會傳回*x*的 cube 根。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|常见 ∞，QNAN IND|none|none|
+|±∞、QNAN、IND|none|none|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**cbrt**採用**float**或**長** **double**類型。 在 C 程式中， **cbrt**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用**float**或**long** **double**類型之**cbrt**的多載。 在 C 程式中， **cbrt**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**cbrt**， **cbrtf**， **cbrtl**|\<math.h>|\<cmath>|
+|**cbrt**、 **cbrtf**、 **cbrtl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,9 +1,9 @@
 ---
 title: _isatty
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isatty
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157470"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954560"
 ---
-# <a name="isatty"></a>_isatty
+# <a name="_isatty"></a>_isatty
 
 判斷檔案描述元是否與字元裝置相關聯。
 
@@ -48,13 +51,13 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>傳回值
 
-**_isatty**傳回非零值，描述元是否與字元裝置相關聯。 否則，請 **_isatty**會傳回 0。
+如果描述元與字元裝置相關聯， **_isatty**會傳回非零值。 否則， **_isatty**會傳回0。
 
 ## <a name="remarks"></a>備註
 
-**_Isatty**函式會判斷是否*fd*與字元裝置 （終端機、 主控台、 印表機或序列連接埠） 相關聯。
+**_Isatty**函數會決定*fd*是否與字元裝置（終端機、主控台、印表機或序列埠）相關聯。
 
-此函式會驗證*fd*參數。 如果*fd*是不正確的檔案指標，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 若要繼續，則函式會傳回 0 並集允許執行**errno**要**EBADF**。
+此函式會驗證*fd*參數。 如果*fd*是錯誤的檔案指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回0，並將**errno**設為**EBADF**。
 
 ## <a name="requirements"></a>需求
 

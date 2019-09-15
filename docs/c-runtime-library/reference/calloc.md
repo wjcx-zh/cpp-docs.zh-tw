@@ -1,9 +1,9 @@
 ---
 title: calloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - calloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - calloc
 helpviewer_keywords:
 - memory allocation, arrays
 - calloc function
 ms.assetid: 17bb79a1-98cf-4096-90cb-1f9365cd6829
-ms.openlocfilehash: 59aa535136cf32ea5dd68b8917ec969eee41e2ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba498b35106f9ff1636bb1bc0764088a434b5b01
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347726"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939333"
 ---
 # <a name="calloc"></a>calloc
 
@@ -52,15 +55,15 @@ void *calloc(
 
 ## <a name="return-value"></a>傳回值
 
-**calloc**傳回指標至配置的空間。 傳回值所指向的儲存空間一定可以適當地對齊任何物件類型之儲存區的保證。 若要取得的指標類型以外的其他**void**，使用類型轉換的傳回值。
+**calloc**會傳回已配置空間的指標。 傳回值所指向的儲存空間一定可以適當地對齊任何物件類型之儲存區的保證。 若要取得**void**以外類型的指標，請在傳回值上使用類型轉換。
 
 ## <a name="remarks"></a>備註
 
-**Calloc**函式會配置儲存空間的陣列*數目*項目，而且每個長度*大小*位元組。 每個元素都會初始化為 0。
+**Calloc**函式會配置*數位*元素陣列的儲存空間，每個長度的*大小*為個位元組。 每個元素都會初始化為 0。
 
-**calloc**設定**errno**要**ENOMEM**如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**，則**calloc**會將**errno**設定為**ENOMEM** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**calloc**呼叫**malloc**使用C++ [_set_new_mode](set-new-mode.md)函式來設定新的處理常式模式。 新的處理常式模式會指出是否在失敗時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會呼叫新的處理常式無法配置記憶體。 您可以覆寫此預設行為，讓，當**calloc**無法配置記憶體， **malloc**呼叫新的處理常式在相同方式來**新**運算子因當它失敗，相同的原因。 若要覆寫預設值，請及早在程式中呼叫
+**calloc**會呼叫**malloc** ，以C++使用[_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**calloc**無法配置記憶體時， **malloc**會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗時一樣。 若要覆寫預設值，請及早在程式中呼叫
 
 ```C
 _set_new_mode(1);
@@ -68,9 +71,9 @@ _set_new_mode(1);
 
 ，或使用 NEWMODE.OBJ 連結 (請參閱[連結選項](../../c-runtime-library/link-options.md))。
 
-當偵錯版本的 C 執行階段程式庫，連結的應用程式時**calloc**解析[_calloc_dbg](calloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **calloc**會解析為[_calloc_dbg](calloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-**calloc**標示`__declspec(noalias)`和`__declspec(restrict)`，這表示保證函式不能修改全域變數，並傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**calloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>需求
 

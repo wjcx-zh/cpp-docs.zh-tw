@@ -1,10 +1,10 @@
 ---
 title: _putenv、_wputenv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putenv
 - _wputenv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tputenv
 - _wputenv
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _tputenv function
 - environment variables, modifying
 ms.assetid: 9ba9b7fd-276e-45df-8420-d70c4204b8bd
-ms.openlocfilehash: 952a4d62f6ceb6b689091ac09f6ca338d0b10864
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe699a476ea1dd09a6ce9922294bce398df16b2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357882"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949887"
 ---
-# <a name="putenv-wputenv"></a>_putenv、_wputenv
+# <a name="_putenv-_wputenv"></a>_putenv、_wputenv
 
 建立、修改或移除環境變數。 這些函式已有更安全的版本可用，請參閱 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md)。
 
@@ -66,11 +69,11 @@ int _wputenv(
 
 ## <a name="return-value"></a>傳回值
 
-傳回 0，如果成功或-1，如果發生錯誤。
+如果成功，則傳回0，如果發生錯誤，則傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**_Putenv**函式加入新的環境變數，或修改現有的環境變數的值。 環境變數會定義處理序所執行的環境 (例如，要與程式連結之程式庫的預設搜尋路徑)。 **_wputenv**是寬字元版本的 **_putenv**; *envstring*引數 **_wputenv**是寬字元字串。
+**_Putenv**函數會加入新的環境變數，或修改現有環境變數的值。 環境變數會定義處理序所執行的環境 (例如，要與程式連結之程式庫的預設搜尋路徑)。 **_wputenv**是寬字元版本的 **_putenv**; **_wputenv**的*envstring*引數是寬字元字串。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -78,16 +81,16 @@ int _wputenv(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tputenv**|**_putenv**|**_putenv**|**_wputenv**|
 
-*Envstring*引數必須是格式的字串指標*varname*=*value_string*，其中*varname*是要加入或修改環境變數的名稱和*value_string*是變數的值。 如果*varname*已經環境的一部分，其值會取代*value_string*; 否則新*varname*變數並將其*value_string*值新增至環境。 您可以從環境移除變數，指定空*value_string*，或換句話說，是藉由只指定*varname*=。
+*Envstring*引數必須是*varname* = *value_string*格式之字串的指標，其中*varname*是要加入或修改之環境變數的名稱，而*value_string*是變數的value. 如果*varname*已是環境的一部分，則其值會取代為*value_string*;否則，新的*varname*變數及其*value_string*值會加入至環境。 您可以藉由指定空的*value_string*，或是只指定*varname*=，從環境中移除變數。
 
-**_putenv**並 **_wputenv**會影響目前的處理序的本機環境，您無法使用它們來修改命令層級環境。 換句話說，這些函式只會在執行階段程式庫可以存取的資料結構上運作，而不會在作業系統為某個處理序所建立的環境區段上運作。 目前處理序終止時，環境會還原為呼叫處理序層級 (在大部分情況下是作業系統層級)。 不過，修改過的環境可以傳遞至所建立的任何新處理序 **_spawn**， **_exec**，或**系統**，以及這些新的處理序會取得由加入任何新項目 **_putenv**並 **_wputenv**。
+**_putenv**和 **_wputenv**只會影響目前進程的本機環境;您無法使用它們來修改命令層級的環境。 換句話說，這些函式只會在執行階段程式庫可以存取的資料結構上運作，而不會在作業系統為某個處理序所建立的環境區段上運作。 目前處理序終止時，環境會還原為呼叫處理序層級 (在大部分情況下是作業系統層級)。 不過，修改過的環境可以傳遞至 **_spawn**、 **_exec**或**system**所建立的任何新進程，而這些新的進程會取得 **_putenv**和 **_wputenv**所新增的任何新專案。
 
-請勿直接變更環境項目： 請改用 **_putenv**或是 **_wputenv**加以變更。 特別是，直接釋出的項目 **_environ []** 全域陣列可能會導致無法處理的無效記憶體。
+請不要直接變更環境專案：改為使用 **_putenv**或 **_wputenv**來加以變更。 特別的是， **_environ []** 全域陣列的直接釋放專案可能會導致定址的記憶體無效。
 
-**getenv**並 **_putenv**使用全域變數 **_environ**存取環境資料表;**_wgetenv**並 **_wputenv**使用 **_wenviron**。 **_putenv**並 **_wputenv**可能會變更的值 **_environ**並 **_wenviron**，因此失效 **_envp**引數**主要**並 **_wenvp**引數**wmain**。 因此，它是安全的作法是使用 **_environ**或是 **_wenviron**存取環境資訊。 如需有關關聯性 **_putenv**並 **_wputenv**全域變數，請參閱[_environ、 _wenviron](../../c-runtime-library/environ-wenviron.md)。
+**getenv**和 **_putenv**會使用全域變數 **_environ**來存取環境資料表; **_wgetenv**和 **_wputenv**會使用 **_wenviron**。 **_putenv**和 **_wputenv**可能會變更 **_environ**和 **_wenviron**的值，因而使 **_envp**引數對**main**和 _wenvp**引數**失效 **。** 因此，使用 **_environ**或 **_wenviron**來存取環境資訊比較安全。 如需 **_putenv**和 **_wputenv**與全域變數之關聯的詳細資訊，請參閱[_environ、_wenviron](../../c-runtime-library/environ-wenviron.md)。
 
 > [!NOTE]
-> **_Putenv**並 **_getenv**系列的函式不是安全執行緒。 **_getenv**可能會傳回字串指標，同時 **_putenv**正在修改字串，因而導致隨機失敗。 確定這些函式的呼叫已同步。
+> 函數的 **_putenv**和 **_getenv**系列不是安全線程。 當 **_putenv**正在修改字串時， **_getenv**可能會傳回字串指標，因而導致隨機失敗。 確定這些函式的呼叫已同步。
 
 ## <a name="requirements"></a>需求
 
@@ -100,7 +103,7 @@ int _wputenv(
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例 **_putenv**，請參閱[getenv、 _wgetenv](getenv-wgetenv.md)。
+如需如何使用 **_putenv**的範例，請參閱[getenv、_wgetenv](getenv-wgetenv.md)。
 
 ## <a name="see-also"></a>另請參閱
 

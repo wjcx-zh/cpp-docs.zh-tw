@@ -1,9 +1,9 @@
 ---
 title: _aligned_msize
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_msize
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_msize
 - aligned_msize
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 922224dc81858076770a36551df26c89940b3282
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341921"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943907"
 ---
-# <a name="alignedmsize"></a>_aligned_msize
+# <a name="_aligned_msize"></a>_aligned_msize
 
 傳回堆積中所配置的記憶體區塊大小。
 
@@ -61,11 +64,11 @@ size_t _msize(
 
 ## <a name="remarks"></a>備註
 
-**_Aligned_msize**函式傳回的大小，以位元組為單位的呼叫所配置的記憶體區塊[_aligned_malloc](aligned-malloc.md)或是[_aligned_realloc](aligned-realloc.md)。 *對齊*並*位移*值必須是傳遞至配置區塊函式的值相同。
+**_Aligned_msize**函數會傳回[_aligned_malloc](aligned-malloc.md)或[_aligned_realloc](aligned-realloc.md)的呼叫所配置的記憶體區塊大小（以位元組為單位）。 *對齊*和*位移*值必須與傳遞給配置區塊之函數的值相同。
 
-當偵錯版本的 C 執行階段程式庫，連結的應用程式時 **_aligned_msize**解析[_aligned_msize_dbg](aligned-msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_aligned_msize**會解析為[_aligned_msize_dbg](aligned-msize-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-這個函式會驗證其參數。 如果*memblock*為 null 指標或*對齊*不是 2 的乘冪 **_msize**叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果已處理的錯誤，則函式會設定**errno**要**EINVAL**並傳回-1。
+這個函式會驗證其參數。 如果*memblock*為 null 指標，或*對齊*不是2的乘冪， **_msize**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
 ## <a name="requirements"></a>需求
 

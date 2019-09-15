@@ -1,9 +1,9 @@
 ---
 title: fesetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fesetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fesetexceptflag
 - fenv/fesetexceptflag
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 9ac79e790f0b1e7a89413a0d4974f6053c95616e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333991"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941082"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -45,7 +48,7 @@ int fesetexceptflag(
 ### <a name="parameters"></a>參數
 
 *pstatus*<br/>
-指標**fexcept_t**物件，其中包含將例外狀況狀態旗標設定為值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
+**Fexcept_t**物件的指標，其中包含要設定例外狀況狀態旗標的值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
 
 *excepts*<br/>
 要設定的浮點例外狀況狀態旗標。
@@ -56,7 +59,7 @@ int fesetexceptflag(
 
 ## <a name="remarks"></a>備註
 
-**Fesetexceptflag**函式設定所指定的浮點例外狀況狀態旗標的狀態*removed*設定中的對應值**fexcept_t**指向的物件*pstatus*。  它不會引發例外狀況。 *Pstatus*指標必須指向有效**fexcept_t**物件或後續行為是未定義。 **Fesetexceptflag**函式支援這些例外狀況巨集值*removed*，其定義於\<fenv.h >:
+**Fesetexceptflag**函數會將*以外*所指定之浮點例外狀況狀態旗標的狀態設定為*pstatus*所指向之**fexcept_t**物件中所設定的對應值。  它不會引發例外狀況。 *Pstatus*指標必須指向有效的**fexcept_t**物件，否則不會定義後續的行為。 **Fesetexceptflag**函式支援*以外*中的這些例外狀況宏值（ \<定義于 fenv.h 中） >：
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -67,13 +70,13 @@ int fesetexceptflag(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Removed*引數可以是零，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 未定義任何其他引數值的效果。
+*以外*引數可以是零、其中一個支援的浮點例外狀況宏，或是兩個或多個宏的位 or。 未定義任何其他引數值的效果。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 

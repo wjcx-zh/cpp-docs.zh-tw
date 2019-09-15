@@ -1,15 +1,18 @@
 ---
-title: _get_fma3_enable、_set_fma3_enable
+title: _get_FMA3_enable、_set_FMA3_enable
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _get_FMA3_enable
 - _set_FMA3_enable
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
@@ -19,16 +22,16 @@ helpviewer_keywords:
 - _get_FMA3_enable
 - _set_FMA3_enable
 ms.assetid: 4c1dc4bc-e86b-451b-9211-5a2ba6c98ee4
-ms.openlocfilehash: 19eabc3b5a11246d5b0056bdafbb169e2a7de9f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e18db90779ed59a6ca6976f69a5993d94d61c6bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332191"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955938"
 ---
-# <a name="getfma3enable-setfma3enable"></a>_get_fma3_enable、_set_fma3_enable
+# <a name="_get_fma3_enable-_set_fma3_enable"></a>_get_FMA3_enable、_set_FMA3_enable
 
-取得或設定旗標，指定是否超越數學的浮點程式庫函式使用 FMA3 指示在編譯程式碼適用於 X64 平台。
+取得或設定旗標，指定超越數學浮點程式庫函式是否使用針對 X64 平臺編譯之程式碼中的 FMA3 指示。
 
 ## <a name="syntax"></a>語法
 
@@ -40,27 +43,27 @@ int _get_FMA3_enable();
 ### <a name="parameters"></a>參數
 
 *flag*<br/>
-設為 1 以啟用 FMA3 超越數學的浮點程式庫函式的實作在 X64 平台，或 0 表示使用不使用 FMA3 指令的實作。
+設定為1可在 X64 平臺上啟用超越 math 浮點程式庫函式的 FMA3 執行，或設為0，以使用不使用 FMA3 指示的執行。
 
 ## <a name="return-value"></a>傳回值
 
-如果啟用 FMA3 超越數學的浮點程式庫函式的實作，則非零值。 否則為零。
+如果已啟用超越 math 浮點程式庫函式的 FMA3 執行，則為非零值。 否則為零。
 
 ## <a name="remarks"></a>備註
 
-使用  **_set_FMA3_enable**啟用或停用使用 fma3 超越數學浮點函式中的 CRT 程式庫中的函式。 傳回值會反映在變更後的實作中使用。 如果 CPU 不支援 FMA3 指示，此函式不能在程式庫中啟用它們，並傳回值為零。 使用 **_get_FMA3_enable**取得媒體櫃的目前狀態。 根據預設，在 X64 平台，CRT 啟始程式碼偵測到 CPU 支援 FMA3 指示，以及啟用或停用文件庫中的 FMA3 實作。
+您可以使用 **_set_FMA3_enable**函式來啟用或停用 CRT 程式庫中超越數學浮點函數的 FMA3 指示。 傳回值會反映在變更之後所使用的執行。 如果 CPU 不支援 FMA3 指令，則此函式無法在程式庫中啟用它們，而且傳回值為零。 使用 **_get_FMA3_enable**來取得程式庫的目前狀態。 根據預設，在 X64 平臺上，CRT 啟動程式碼會偵測 CPU 是否支援 FMA3 指令，並啟用或停用程式庫中的 FMA3 程式。
 
-FMA3 實作會使用不同的演算法，因為有些微的差異計算的結果可能是可預見值，當 FMA3 實作已啟用或停用，或電腦或是不支援 FMA3 之間。 如需詳細資訊，請參閱 <<c0> [ 浮點數的移轉問題](../../porting/floating-point-migration-issues.md)。
+由於 FMA3 的執行會使用不同的演算法，因此當啟用或停用 FMA3 的 FMA3 時，或是在執行或不支援的電腦之間，可能會觀察到計算結果的些許差異。 如需詳細資訊，請參閱[浮點遷移問題](../../porting/floating-point-migration-issues.md)。
 
 ## <a name="requirements"></a>需求
 
-**_Set_FMA3_enable**並 **_get_FMA3_enable**函式只會適用於 X64 版本的 CRT。
+**_Set_FMA3_enable**和 **_get_FMA3_enable**函數僅適用于 CRT 的 X64 版本。
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_set_FMA3_enable**， **_get_FMA3_enable**| C：\<math.h><br />C++: \<cmath> > 或\<math.h> >|
+|**_set_FMA3_enable**、 **_get_FMA3_enable**| C：\<math.h><br />C++： \<h > 或\<math >|
 
-**_Set_FMA3_enable**並 **_get_FMA3_enable**函式是 Microsoft 專有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Set_FMA3_enable**和 **_get_FMA3_enable**函式是 Microsoft 特有的功能。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

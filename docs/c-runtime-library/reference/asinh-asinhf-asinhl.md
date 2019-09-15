@@ -1,11 +1,11 @@
 ---
 title: asinh、asinhf、asinhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinh
 - asinhf
 - asinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asinhf
 - asinhl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4d93f121c0124293a5bdff9041d0adfaab5d83c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341778"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939646"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -58,21 +61,21 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Asinh**函式會傳回的反雙曲正弦函數 （arc 雙曲正弦） *x*。 此函式在浮點網域中有效。 如果*x*為無訊息 NaN、 不確定或無限大，會傳回相同的值。
+**Asinh**函數會傳回*x*的反雙曲正弦（arc 雙曲正弦）。 此函式在浮點網域中有效。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|none|none|
 
 ## <a name="remarks"></a>備註
 
-當您使用C++，您可以呼叫多載**asinh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **asinh**一律採用並傳回**double**。
+當您使用C++時，您可以呼叫採用並傳回**float**或**long** **double**值之**asinh**的多載。 在 C 程式中， **asinh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的 C 標頭|必要的 C++ 標頭|
+|函數|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|--------------|------------------|
-|**asinh**， **asinhf**， **asinhl**|\<math.h>|\<cmath> > 或\<math.h> <|
+|**asinh**、 **asinhf**、 **asinhl**|\<math.h>|\<h > 或\<math <|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

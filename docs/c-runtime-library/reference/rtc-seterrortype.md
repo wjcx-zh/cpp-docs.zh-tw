@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorType
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorType
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c1eff5920931aa3b72bf3dbc6232c371828b16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357131"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948928"
 ---
-# <a name="rtcseterrortype"></a>_RTC_SetErrorType
+# <a name="_rtc_seterrortype"></a>_RTC_SetErrorType
 
 關聯的執行階段錯誤檢查 (RTC) 所偵測到的錯誤與類型。 錯誤處理常式會處理如何輸出指定類型的錯誤。
 
@@ -49,13 +52,13 @@ int _RTC_SetErrorType(
 數字，介於零與 [_RTC_NumErrors](rtc-numerrors.md) 所傳回的值減一之間。
 
 *ErrType*<br/>
-值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 如果您使用 **_CrtDbgReport**為您的錯誤處理常式*ErrType*只能一個中定義的符號[_CrtSetReportMode](crtsetreportmode.md)。 若您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，您可以有可以有和 *errnum*等量的 *ErrType*。
+值，會指派給此 *errnum*。 例如，您可以使用 **_CRT_ERROR**。 如果您使用 **_CrtDbgReport**做為錯誤處理常式， *ErrType*只能是[_CrtSetReportMode](crtsetreportmode.md)中所定義的其中一個符號。 若您有自己的錯誤處理常式 ([_RTC_SetErrorFunc](rtc-seterrorfunc.md))，您可以有可以有和 *errnum*等量的 *ErrType*。
 
-*ErrType* _RTC_ERRTYPE_IGNORE 有特殊的意義 **_CrtSetReportMode**; 已忽略錯誤。
+_RTC_ERRTYPE_IGNORE 的*ErrType*對 **_CrtSetReportMode**具有特殊意義;此錯誤會被忽略。
 
 ## <a name="return-value"></a>傳回值
 
-先前的錯誤類型的值*型別*。
+錯誤類型*類型*的先前值。
 
 ## <a name="remarks"></a>備註
 

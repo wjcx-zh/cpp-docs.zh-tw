@@ -1,10 +1,10 @@
 ---
 title: _putch、_putwch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _putwch
 - _putch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _putch
 - putwch
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: da45744fe56c198cc97228cae8043abbb5436fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e7d7d57f5418e8c15aa02f015d3346298fa0422
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358142"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950038"
 ---
-# <a name="putch-putwch"></a>_putch、_putwch
+# <a name="_putch-_putwch"></a>_putch、_putwch
 
 將字元寫入至主控台。
 
@@ -62,13 +65,13 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則會傳回 *c*。 如果 **_putch**失敗，則會傳回**EOF**; 如果 **_putwch**失敗，則會傳回**WEOF**。
+如果成功，則會傳回 *c*。 如果 **_putch**失敗，則會傳回**EOF**;如果 **_putwch**失敗，則會傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函式書寫的字元*c*直接管理，而不緩衝，到主控台。 在 Windows NT 中，**_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
+這些函式會直接將字元*c*寫入主控台，而不需要緩衝處理。 在 Windows NT 中， **_putwch** 會使用目前的主控台地區設定寫入 Unicode 字元。
 
-具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 < **_putch_nolock**， **_putwch_nolock**。
+具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 如需詳細資訊，請參閱 **_putch_nolock**、 **_putwch_nolock**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

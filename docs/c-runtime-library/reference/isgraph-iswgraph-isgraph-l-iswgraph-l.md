@@ -1,12 +1,12 @@
 ---
 title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isgraph
 - iswgraph
 - _iswgraph_l
 - _isgraph_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _isgraph_l
 - _iswgraph_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88219ca6dc4218fc13f7d7c0b5f2ba399c07d501
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287039"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954869"
 ---
-# <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
+# <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
 判斷整數是否代表圖形字元。
 
@@ -74,11 +77,11 @@ int _iswgraph_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*是可列印字元空白以外的特定表示法。 **isgraph**傳回非零值，如果*c*是空白以外的可列印字元。 **iswgraph**傳回非零值，如果*c*是寬字元空白以外的可列印寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是空格以外的可列印字元的特定標記法，則每個常式都會傳回非零。 如果*c*是空格以外的可列印字元，則**isgraph**會傳回非零值。 如果*c*是寬字元空間以外的可列印寬字元，則**iswgraph**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-有這些函式的版本 **_l**後置詞使用傳入的地區設定而不是目前的地區設定其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本，會使用傳入的地區設定，而不是與地區設定相關行為的目前地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isgraph**並 **_isgraph_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isgraph**和 **_isgraph_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

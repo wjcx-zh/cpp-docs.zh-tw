@@ -1,11 +1,11 @@
 ---
 title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fdim
 - fdimf
 - fdiml
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fdim
 - fdimf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-ms.openlocfilehash: 263635a32b21b01faa84405ab97bd5518f054ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74935f724b678b08e39604d9916c7c5de5925aee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334784"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941292"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -80,9 +83,9 @@ long double fdiml(
 
 ## <a name="return-value"></a>傳回值
 
-傳回之間的正差*x*並*y*:
+傳回*x*和*y*之間的正差：
 
-|傳回值|情節|
+|傳回值|狀況|
 |------------------|--------------|
 |x-y|如果 x > y|
 |0|如果 x <= y|
@@ -93,21 +96,21 @@ long double fdiml(
 |-----------|------------|
 |溢位範圍錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
 |反向溢位範圍錯誤|正確的值 (四捨五入後)|
-|*x*或是*y*是 NaN|NaN|
+|*x*或*y*是 NaN|NaN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**fdim**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fdim**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fdim**的多載。 在 C 程式中， **fdim**一律會採用並傳回**雙精度浮點數**。
 
-除了 NaN 處理，此函式相當於`fmax(x - y, 0)`。
+除了 NaN 處理之外，此函式相當於`fmax(x - y, 0)`。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**fdim**， **fdimf**， **fdiml**|\<math.h>|\<cmath>|
+|**fdim**、 **fdimf**、 **fdiml**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

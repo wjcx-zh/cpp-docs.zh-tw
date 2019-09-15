@@ -1,12 +1,12 @@
 ---
 title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbstrail
 - _ismbslead_l
 - _ismbslead
 - _ismbstrail_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbslead
 - ismbs
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71a5d2a82c01a41f945ef3fa8c7652f846f05103
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287353"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953772"
 ---
-# <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
+# <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
 執行多位元組字元字串前導位元組和後隨位元組的即時線上測試，並判斷指定的子字串指標是否指向前導位元組或後隨位元組。
 
@@ -90,13 +93,13 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbslead**會傳回-1，如果字元是前導位元組和 **_ismbstrail**會傳回-1，如果字元是後隨位元組。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果其中一個引數**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**NULL**並設定**errno**來**EINVAL**。
+如果字元是前導位元組，則 **_ismbslead**會傳回-1; 如果字元是尾位元組， **_ismbstrail**會傳回-1。 如果輸入字串有效，但不是前導位元組或後隨位元組，則這些函式會傳回零。 如果其中一個引數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會傳回**Null** , 並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_ismbslead**並 **_ismbstrail**低於 **_ismbblead**並 **_ismbbtrail**版本因為這些字串內容納入考量。
+**_ismbslead**和 **_ismbstrail**的速度比 **_ismbblead**和 **_ismbbtrail**版本慢，因為它們會將字串內容納入考慮。
 
-有這些函式的版本 **_l**尾碼都相同，不同之處在於其地區設定相關行為使用傳入的地區設定而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

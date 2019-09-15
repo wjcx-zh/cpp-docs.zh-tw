@@ -1,14 +1,14 @@
 ---
 title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcalpha
 - _ismbcalnum
 - _ismbcdigit
 - _ismbcalnum_l
 - _ismbcdigit_l
 - _ismbcalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcdigit
 - ismbcalnum_l
@@ -46,14 +49,14 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f13d1faab2923827707d8749a8783a10cf989b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157278"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953959"
 ---
-# <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
+# <a name="_ismbcalnum-_ismbcalnum_l-_ismbcalpha-_ismbcalpha_l-_ismbcdigit-_ismbcdigit_l"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
 檢查多位元組字元是否為英數字元、英文字元或數字字元。
 
@@ -102,27 +105,27 @@ int _ismbcdigit_l
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應 **_ismbb**常式的傳回值。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|英數字元|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組：請參閱範例 **_ismbcdigit**並 **_ismbcalpha**。|
-|**_ismbcalpha**， **_ismbcalpha_l**|字母順序|傳回非零值，才*c*是代表 ASCII 英文字母的單一位元組：將 0x41 向 < =*c*< lt;=0x5a 或 0x61&lt < =*c*< = 0x7A; 或是片假名字母：0xA6<=*c*<=0xDF.|
-|**_ismbcdigit**， **_ismbcdigit**|數字|傳回非零值，才*c*是 ASCII 數字的單一位元組表示法：0x30<=*c*<=0x39.|
+|**_ismbcalnum**、 **_ismbcalnum_l**|英數字元|只有在*c*是 ASCII 英文字母的單一位元組表示時，才傳回非零：請參閱 **_ismbcdigit**和 **_ismbcAlpha**的範例。|
+|**_ismbcAlpha**、 **_ismbcAlpha_l**|字母順序|只有在*c*是 ASCII 英文字母的單一位元組表示時，才傳回非零：0x41 向 < =*c*< = 0x5A 或 0x61 < =*c*< = 0x7A;或片假名字母：0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**、 **_ismbcdigit**|數字|只有在*c*是 ASCII 數位的單一位元組表示時，才傳回非零：0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_ismbcalnum**， **_ismbcalnum_l**|\<mbstring.h>|
-|**_ismbcalpha**， **_ismbcalpha_l**|\<mbstring.h>|
-|**_ismbcdigit**， **_ismbcdigit_l**|\<mbstring.h>|
+|**_ismbcalnum**、 **_ismbcalnum_l**|\<mbstring.h>|
+|**_ismbcAlpha**、 **_ismbcAlpha_l**|\<mbstring.h>|
+|**_ismbcdigit**、 **_ismbcdigit_l**|\<mbstring.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFuncW
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFuncW
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _RTC_SetErrorFuncW
 - RTC_SetErrorFuncW
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _RTC_SetErrorFuncW function
 - RTC_error_fnW typedef
 ms.assetid: b3e0d71f-1bd3-4c37-9ede-2f638eb3c81a
-ms.openlocfilehash: 03e9f540a215550a698700f28e5722b33b119149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d45e5c857e917ca23b62482c64a06314565226e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357222"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948970"
 ---
-# <a name="rtcseterrorfuncw"></a>_RTC_SetErrorFuncW
+# <a name="_rtc_seterrorfuncw"></a>_RTC_SetErrorFuncW
 
 指定函式做為報告執行階段錯誤檢查 (RTC) 的處理常式。
 
@@ -51,17 +54,17 @@ _RTC_error_fnW _RTC_SetErrorFuncW(
 
 ## <a name="return-value"></a>傳回值
 
-先前定義的錯誤函式;或是**NULL**如果有任何先前定義的函式。
+先前定義的錯誤函式;如果沒有先前定義的函數，則**為 Null** 。
 
 ## <a name="remarks"></a>備註
 
-在新的程式碼，使用 只 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**只包含回溯相容性文件庫中。
+在新程式碼中，只使用 **_RTC_SetErrorFuncW**。 **_RTC_SetErrorFunc**只包含在程式庫中，以提供回溯相容性。
 
-**_RTC_SetErrorFuncW**回呼只適用於其所連結，此元件，但不是全域。
+**_RTC_SetErrorFuncW**回呼只適用于其所連結的元件，但不會全域套用。
 
-請確定您傳遞至的地址 **_RTC_SetErrorFuncW**是有效的錯誤處理函式。
+請確定您傳遞給 **_RTC_SetErrorFuncW**的位址是有效錯誤處理函式的位址。
 
-如果錯誤已指派為-1 的類型使用[_RTC_SetErrorType](rtc-seterrortype.md)，則不會呼叫錯誤處理函式。
+如果使用[_RTC_SetErrorType](rtc-seterrortype.md)指派了-1 類型的錯誤，則不會呼叫錯誤處理函式。
 
 您必須先呼叫任一個執行階段錯誤檢查初始化函式，才能呼叫此函式。 如需詳細資訊，請參閱 [Using Run-Time Checks Without the C Run-Time Library](/visualstudio/debugger/using-run-time-checks-without-the-c-run-time-library)。
 

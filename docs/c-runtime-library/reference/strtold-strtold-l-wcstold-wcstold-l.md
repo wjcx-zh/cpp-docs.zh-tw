@@ -1,12 +1,12 @@
 ---
 title: strtold、_strtold_l、wcstold、_wcstold_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - wcstold
 - strtold
 - _strtold_l
 - _wcstold_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstold_l
 - _wcstold_l
@@ -27,14 +30,14 @@ f1_keywords:
 - _strtold_l
 - wcstold
 ms.assetid: 928c0c9a-bc49-445b-8822-100eb5954115
-ms.openlocfilehash: dcf1eca5b163c8553b43d747d53537ec424a793c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1a8bc385072f110832788447bfa248bc12b3663
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269185"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957703"
 ---
-# <a name="strtold-strtoldl-wcstold-wcstoldl"></a>strtold、_strtold_l、wcstold、_wcstold_l
+# <a name="strtold-_strtold_l-wcstold-_wcstold_l"></a>strtold、_strtold_l、wcstold、_wcstold_l
 
 將字串轉換為長雙精確度浮點數值。
 
@@ -74,15 +77,15 @@ long double wcstold_l(
 
 ## <a name="return-value"></a>傳回值
 
-**strtold**傳回為浮點數的值**長** **double**，但表示法可能造成溢位時，在此情況下，此函數會傳回 + /-**HUGE_VALL**。 正負號**HUGE_VALL**符合無法表示的值的正負號。 **strtold**會傳回 0，如果在執行任何轉換，或反向溢位，就會發生。
+**strtold**會傳回浮點數的值做為**長**的**double**，但標記法會造成溢位（在此情況下，函式會傳回 +/-**HUGE_VALL**）。 **HUGE_VALL**的正負號符合無法表示之值的正負號。 如果無法執行轉換或下溢，則**strtold**會傳回0。
 
-**wcstold**傳回值類似**strtold**。 這兩個函式中， **errno**設為**ERANGE**如果發生溢位或反向溢位，而且無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
+**wcstold**會傳回類似至**strtold**的值。 對於這兩個函式，如果發生溢位或下溢，且叫用不正確參數處理常式（如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述），則**errno**會設定為**ERANGE** 。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個函式會將輸入的字串*strSource*要**長** **double**。 **Strtold**函式停止讀取字串*strSource*它無法辨識為數字一部分的第一個字元。 這可能是終止的 Null 字元。 寬字元版本**strtold**是**wcstold**，其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函式都會將輸入字串*strSource*轉換為**長** **雙精度浮點數**。 **Strtold**函數會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **Strtold**的寬字元版本是**wcstold**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -91,22 +94,22 @@ long double wcstold_l(
 |**_tcstold**|**strtold**|**strtold**|**wcstold**|
 |**_tcstold_l**|**_strtold_l**|**_strtold_l**|**_wcstold_l**|
 
-**LC_NUMERIC**目前的地區設定類別設定會決定在基底字元辨識*strSource*。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 沒有函式 **_l**後置詞使用目前的地區設定，**_strtold_l**並 **_wcstold_l**等於 **_strtold**並 **_wcstold** ，只不過它們改用地區設定的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前地區設定的 [ **LC_NUMERIC** ] 分類設定會決定*strSource*中的基數位符辨識。 如需詳細資訊，請參閱 [setlocale、_wsetlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定; **_strtold_l**和 **_wcstold_l**與 **_strtold**和 **_wcstold**相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向的位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
+如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
 
-**strtold**預期*strSource*指向下列格式的字串：
+**strtold**預期*strSource*會指向下列格式的字串：
 
-[*空白字元*] [*號*] [*位數*] [。*數字*] [{**d** &#124; **D** &#124; **e** &#124; **E**} [*登*]*數字*]
+[*空格*][*sign*][*數位*][.*數位*][{**d** &#124; **d** &#124; **e** &#124; **e**} [*sign*]*數位*]
 
-A*空白字元*可能包含空格和定位字元字元，則會忽略;*登*是加上 (**+**) 或減號 (**-**); 以及*位數*是一或多個十進位數字。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
+空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略;*sign*是加號（ **+** ）或減號（ **-** ）; 而*數位*則是一或多個十進位數。 如果基底字元前沒有任何數字，則在基底字元後至少必須要有一個數字。 小數位數的後面會接著包含簡介字母 (**d**、**D**、**e** 或 **E**) 的指數以及選擇性的帶正負號整數。 如果沒有出現指數部分也沒有出現基底字元，基底字元假設會跟在字串的最後一位數的後面。 不符合此格式的第一個字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strtold**， **_strtold_l**|\<stdlib.h>|
-|**wcstold**， **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|
+|**strtold**、 **_strtold_l**|\<stdlib.h>|
+|**wcstold**、 **_wcstold_l**|\<stdlib.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

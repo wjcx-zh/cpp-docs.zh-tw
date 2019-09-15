@@ -1,12 +1,12 @@
 ---
 title: atoi、_atoi_l、_wtoi、_wtoi_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoi
 - _wtoi_l
 - atoi
 - _atoi_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoi
 - _wtoi
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-ms.openlocfilehash: b6a1f52e6c83f53230c736db3a506aed4b52e434
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d66a219aea1451e745e32f7affbfb59b73ff796
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347843"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943742"
 ---
-# <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
+# <a name="atoi-_atoi_l-_wtoi-_wtoi_l"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
 將字串轉換成整數。
 
@@ -81,21 +84,21 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回**int**值所產生的輸入的字元解譯為數字。 傳回值為 0 **atoi**並 **_wtoi**，如果輸入無法轉換成該類型的值。
+每個函式都會傳回將輸入字元解讀為數字所產生的**int**值。 如果輸入無法轉換成該類型的值， **atoi**和 **_wtoi**的傳回值會是0。
 
-如果溢位具有大型負整數值， **LONG_MIN**會傳回。 **atoi**並 **_wtoi**會傳回**INT_MAX**並**INT_MIN**對這些條件。 在所有超出範圍的情況下， **errno**設為**ERANGE**。 如果傳入的參數是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回 0。
+如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 在這些情況中， **atoi**和 **_Wtoi**會傳回**INT_MAX**和**INT_MIN** 。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字元字串轉換成整數值 (**atoi**並 **_wtoi**)。 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
+這些函式會將字元字串轉換成整數值（**atoi**和 **_wtoi**）。 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
-*Str*引數**atoi**並 **_wtoi**具有下列格式：
+**Atoi**和 **_wtoi**的*str*引數具有下列格式：
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*空格*][*sign*][*數位*]]
 
-A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+） 或減號 （–）; 並*數字*是一個以上的數字。
+空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個數位。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -109,11 +112,11 @@ A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+
 |常式|必要的標頭|
 |--------------|---------------------|
 |**atoi**|\<stdlib.h>|
-|**_atoi_l**， **_wtoi**， **_wtoi_l**|\<stdlib.h> 或 \<wchar.h>|
+|**_atoi_l**、 **_wtoi**、 **_wtoi_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式示範如何儲存為字串的數字可以轉換成數值資料，請使用**atoi**函式。
+此程式會顯示如何使用**atoi**函數，將儲存為字串的數位轉換成數值。
 
 ```C
 // crt_atoi.c

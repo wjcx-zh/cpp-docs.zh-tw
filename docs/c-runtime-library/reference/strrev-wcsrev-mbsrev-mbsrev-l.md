@@ -1,12 +1,12 @@
 ---
 title: _strrev、_wcsrev、_mbsrev、_mbsrev_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsrev
 - _mbsrev
 - _strrev
 - _mbsrev_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strrev
 - _ftcsrev
@@ -47,12 +50,12 @@ helpviewer_keywords:
 - tcsrev function
 - _tcsrev function
 ms.assetid: 87863e89-4fa0-421c-af48-25d8516fe72f
-ms.openlocfilehash: 36cbf78c4645c22209892be77f3bf77e7c93c76b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3a7255d173e369b4269459a0cea4de8e7867c7c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946838"
 ---
 # <a name="_strrev-_wcsrev-_mbsrev-_mbsrev_l"></a>_strrev、_wcsrev、_mbsrev、_mbsrev_l
 
@@ -93,11 +96,11 @@ unsigned char *_mbsrev_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strrev**函數會反轉*str*中字元的順序。 原地保留終止的 Null 字元。 **_wcsrev**和 **_mbsrev**是 **_strrev**的寬字元和多位元組字元版本。 **_Wcsrev**的引數和傳回值是寬字元字串; **_mbsrev**的是多位元組字元字串。 若為 **_mbsrev**, *str*中每個多位元組字元的位元組順序不會變更。 除此之外，這三個函式的行為相同。
+**_Strrev**函數會反轉*str*中字元的順序。 原地保留終止的 Null 字元。 **_wcsrev**和 **_mbsrev**是 **_strrev**的寬字元和多位元組字元版本。 **_Wcsrev**的引數和傳回值是寬字元字串; **_mbsrev**的是多位元組字元字串。 若為 **_mbsrev**， *str*中每個多位元組字元的位元組順序不會變更。 除此之外，這三個函式的行為相同。
 
-**_mbsrev**會驗證其參數。 如果*string1*或*string2*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **_mbsrev**會傳回**Null** , 並將**errno**設定為**EINVAL**。 **_strrev**和 **_wcsrev**不會驗證它們的參數。
+**_mbsrev**會驗證其參數。 如果*string1*或*string2*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbsrev**會傳回**Null** ，並將**errno**設定為**EINVAL**。 **_strrev**和 **_wcsrev**不會驗證它們的參數。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同，不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定，而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

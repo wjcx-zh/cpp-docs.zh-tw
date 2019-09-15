@@ -1,10 +1,10 @@
 ---
 title: asctime、_wasctime
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wasctime
 - asctime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tasctime
 - asctime
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bc2d7a50442d9000eaaebf7a06bf336b3317e4df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ca9bbcbfff3d2bef41443ff1744a1b612727c20
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341804"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939664"
 ---
-# <a name="asctime-wasctime"></a>asctime、_wasctime
+# <a name="asctime-_wasctime"></a>asctime、_wasctime
 
-轉換**tm**時間為字元字串的結構。 這些函式有更安全的版本可用，請參閱 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)。
+將**tm**時間結構轉換成字元字串。 這些函式有更安全的版本可用，請參閱 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -59,33 +62,33 @@ wchar_t *_wasctime(
 
 ## <a name="return-value"></a>傳回值
 
-**asctime**讓指標回到字元字串結果;**_wasctime**寬字元字串結果傳回的指標。 沒有錯誤傳回值。
+**asctime**會傳回字元字串結果的指標; **_wasctime**會傳回寬字元字串結果的指標。 沒有錯誤傳回值。
 
 ## <a name="remarks"></a>備註
 
 這些函式有更安全的版本可用，請參閱 [asctime_s、_wasctime_s](asctime-s-wasctime-s.md)。
 
-**Asctime**函式會轉換為字元字串結構儲存一次。 *Timeptr*值通常取自對**gmtime**或是**localtime**，這兩者都會傳回的指標**tm**結構中所定義的時間。H.
+**Asctime**函數會將儲存為結構的時間轉換為字元字串。 *Timeptr*值通常是從呼叫**gmtime**或**localtime**取得，這兩種方式都會傳回以時間定義的**tm**結構的指標。H.
 
 |timeptr 成員|值|
 |--------------------|-----------|
-|**tm_hour**|午夜 (0-23) 後的小時|
+|**tm_hour**|午夜後的小時（0-23）|
 |**tm_isdst**|若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。 C 執行階段程式庫會在實作日光節約時間 (DST) 的計算時，使用美國的規則。|
-|**tm_mday**|月份的日期 (1-31)|
-|**tm_min**|小時 (0 – 59) 之後的分鐘|
-|**tm_mon**|月份 (0-11;年 1 月 = 0）|
-|**tm_sec**|分鐘 (0-59) 之後的秒數|
-|**tm_wday**|週 (0-6; 中的日星期日 = 0）|
-|**tm_yday**|年 (0 365; 中的日1 年 1 月 = 0)|
+|**tm_mday**|月中的日（1-31）|
+|**tm_min**|小時後的分鐘數（0-59）|
+|**tm_mon**|月份（0-11;1月 = 0）|
+|**tm_sec**|分鐘後的秒數（0-59）|
+|**tm_wday**|周中的日（0-6;星期日 = 0）|
+|**tm_yday**|年中的日（0-365;1月1日 = 0）|
 |**tm_year**|年份 (目前年份減去 1900 年)|
 
 已轉換的字元字串也會根據當地時區設定調整。 如需設定本機時間的資訊，請參閱 [time](time-time32-time64.md)、[_ftime](ftime-ftime32-ftime64.md) 和 [localtime](localtime-localtime32-localtime64.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](tzset.md) 函式。
 
-所產生的字串結果**asctime**包含完全 26 個字元，且具有下列形式`Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 **asctime**使用單一的靜態配置緩衝區來容納傳回的字串。 每次呼叫此函式都會導致先前呼叫結果的終結。
+**Asctime**所產生的字串結果只包含26個字元，且的`Wed Jan 02 02:03:55 1980\n\0`格式為。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 **asctime**會使用以靜態方式配置的單一緩衝區來保存傳回字串。 每次呼叫此函式都會導致先前呼叫結果的終結。
 
-**_wasctime**是寬字元版本的**asctime**。 **_wasctime**並**asctime**行為相同。
+**_wasctime**是**asctime**的寬字元版本。 相反地， **_wasctime**和**asctime**的行為相同。
 
-這些函式會驗證它們的參數。 如果*timeptr*為 null 指標，或如果它包含超出範圍的值時，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回**NULL**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*timeptr*為 null 指標，或包含超出範圍的值，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 
@@ -102,7 +105,7 @@ wchar_t *_wasctime(
 
 ## <a name="example"></a>範例
 
-此程式會將系統時間放在長整數**aclock**，將它轉譯成結構**newtime** ，然後將它轉換成字串形式的輸出，使用**asctime**函式。
+這個程式會將系統時間放在長整數**aclock**中，將它轉譯成結構**newtime** ，然後使用**asctime**函式將它轉換成字串格式以進行輸出。
 
 ```C
 // crt_asctime.c

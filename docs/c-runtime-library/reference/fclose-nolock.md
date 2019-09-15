@@ -1,9 +1,9 @@
 ---
 title: _fclose_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fclose_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose_nolock
 - _fclose_nolock
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - fclose_nolock function
 - _fclose_nolock function
 ms.assetid: b4af4392-5fc8-49bb-9fe2-ca7293d3ce04
-ms.openlocfilehash: 440582bb42a1795721eab17b24be3e0bc3daf80f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e19604f09cdb3ac2a5bfc1635c2b98a8d5218c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334966"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941420"
 ---
-# <a name="fclosenolock"></a>_fclose_nolock
+# <a name="_fclose_nolock"></a>_fclose_nolock
 
 關閉資料流但不鎖定執行緒。
 
@@ -50,15 +53,15 @@ int _fclose_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-**fclose**會傳回 0，如果已成功關閉資料流。 傳回**EOF**表示錯誤。
+如果成功關閉資料流程， **fclose**會傳回0。 傳回**EOF**表示錯誤。
 
 ## <a name="remarks"></a>備註
 
-此函式為非鎖定版本的**fclose**。 完全一致，唯一不同在於不受保護，不能免於其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+此函式是**fclose**的非鎖定版本。 完全一致，唯一不同在於不受保護，不能免於其他執行緒的干擾。 因為它不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這個函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fclose_nolock**|\<stdio.h>|
 

@@ -1,12 +1,12 @@
 ---
 title: ispunct、iswpunct、_ispunct_l、_iswpunct_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ispunct
 - _iswpunct_l
 - iswpunct
 - _ispunct_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswpunct
 - _istpunct
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _iswpunct_l function
 - iswpunct_l function
 ms.assetid: 94403240-85c8-40a4-9c2b-e3e95c729c76
-ms.openlocfilehash: 209f94bb8f9d3338f62b719d4d4b94b152ed5ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54c51c612cf3b491b49d7e141df34ed5b4415520
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286531"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953695"
 ---
-# <a name="ispunct-iswpunct-ispunctl-iswpunctl"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
+# <a name="ispunct-iswpunct-_ispunct_l-_iswpunct_l"></a>ispunct、iswpunct、_ispunct_l、_iswpunct_l
 
 判斷整數是否代表標點符號字元。
 
@@ -73,11 +76,11 @@ int _iswpunct_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*表示特定的標點符號字元。 **ispunct**傳回非零的值不是空格字元或字元，任何可列印字元**isalnum**為非零值。 **iswpunct**傳回非零值的空格寬字元和寬字元，都不是任何可列印寬字元**iswalnum**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是標點符號字元的特定標記法，則每個常式都會傳回非零。 **ispunct**會針對不是空白字元的任何可列印字元，或針對**isalnum**非零值的字元傳回非零值。 **iswpunct**會針對任何不是空白字元寬字元的可列印寬字元，以及**iswalnum**非零的寬字元，傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-測試條件的結果**ispunct**函式取決於**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 不需要這些函式的版本 **_l**後置詞使用目前的地區設定，針對任何地區設定相關行為; 沒有版本 **_l**尾碼都相同，不同之處在於它們使用會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**Ispunct**函式測試條件的結果取決於地區設定的**LC_CTYPE**分類設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**ispunct**並 **_ispunct_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**ispunct**和 **_ispunct_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

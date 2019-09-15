@@ -1,12 +1,12 @@
 ---
 title: vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vfprintf_l
 - vfprintf
 - vfwprintf
 - _vfwprintf_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwprintf
 - _vftprintf
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _vfprintf_l function
 - formatted text [C++]
 ms.assetid: 4443be50-cedf-40b2-b3e2-ff2b3af3b666
-ms.openlocfilehash: 18ba244bceb2deaf5ada78ae85aa8cab7058d51b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e72142f33c042e60ac6c06f6b84aa63b3de67457
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499226"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946637"
 ---
 # <a name="vfprintf-_vfprintf_l-vfwprintf-_vfwprintf_l"></a>vfprintf、_vfprintf_l、vfwprintf、_vfwprintf_l
 
@@ -91,17 +94,17 @@ int _vfwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-**vfprintf**和**vfwprintf**會傳回寫入的字元數, 不包括結束的 null 字元, 或如果發生輸出錯誤, 則傳回負數值。 如果*資料流程*或*格式*為 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
+**vfprintf**和**vfwprintf**會傳回寫入的字元數，不包括結束的 null 字元，或如果發生輸出錯誤，則傳回負數值。 如果*資料流程*或*格式*為 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標, 然後格式化指定的資料, 並將其寫入*資料流程*。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入*資料流程*。
 
-**vfwprintf**是**vfprintf**的寬字元版本;如果資料流程是以 ANSI 模式開啟, 則這兩個函式的行為相同。 **vfprintf**目前不支援輸出至 UNICODE 資料流程。
+**vfwprintf**是**vfprintf**的寬字元版本;如果資料流程是以 ANSI 模式開啟，則這兩個函式的行為相同。 **vfprintf**目前不支援輸出至 UNICODE 資料流程。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

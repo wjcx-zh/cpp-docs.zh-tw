@@ -1,14 +1,14 @@
 ---
 title: strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncpy
 - _strncpy_l
 - _mbsncpy
 - wcsncpy
 - _mbsncpy_l
 - _wcsncpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrncpy
 - strncpy
@@ -62,12 +65,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: fac7e052c5c1d5525946bdbc599404ac56d47f5a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 82e88a48752cb96cca5cb636332fa477aef13d50
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499460"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947215"
 ---
 # <a name="strncpy-_strncpy_l-wcsncpy-_wcsncpy_l-_mbsncpy-_mbsncpy_l"></a>strncpy、_strncpy_l、wcsncpy、_wcsncpy_l、_mbsncpy、_mbsncpy_l
 
@@ -173,16 +176,16 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="remarks"></a>備註
 
-**Strncpy**函數會將*strSource*的初始*計數*字元複製到*strDest* , 並傳回*strDest*。 如果*count*小於或等於*strSource*的長度, 則 null 字元不會自動附加至複製的字串。 如果*count*大於*strSource*的長度, 則會以 null 字元填補目的字串, 最多可達長度*計數*。 如果來源和目的字串重迭, 則**strncpy**的行為是未定義的。
+**Strncpy**函數會將*strSource*的初始*計數*字元複製到*strDest* ，並傳回*strDest*。 如果*count*小於或等於*strSource*的長度，則 null 字元不會自動附加至複製的字串。 如果*count*大於*strSource*的長度，則會以 null 字元填補目的字串，最多可達長度*計數*。 如果來源和目的字串重迭，則**strncpy**的行為是未定義的。
 
 > [!IMPORTANT]
 > **strncpy**不會檢查*strDest*中是否有足夠的空間;這會導致緩衝區溢位的可能原因。 *Count*引數會限制已複製的字元數;這不是*strDest*大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*strDest*或*strSource*是**Null**指標, 或*count*小於或等於零, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會傳回-1, 並將**errno**設為**EINVAL**。
+如果*strDest*或*strSource*是**Null**指標，或*count*小於或等於零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
 **wcsncpy**和 **_mbsncpy**是**strncpy**的寬字元和多位元組字元版本。 **Wcsncpy**和 **_mbsncpy**的引數和傳回值會隨之改變。 除此之外，這六個函式的行為相同。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定, 而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -194,7 +197,7 @@ unsigned char *_mbsncpy_l(
 |**_tcsncpy_l**|**_strncpy_l**|**_mbsnbcpy_l**|**_wcsncpy_l**|
 
 > [!NOTE]
-> **_strncpy_l**和 **_wcsncpy_l**沒有地區設定相依性;它們僅供 **_tcsncpy_l**之用, 不適合直接呼叫。
+> **_strncpy_l**和 **_wcsncpy_l**沒有地區設定相依性;它們僅供 **_tcsncpy_l**之用，不適合直接呼叫。
 
 ## <a name="requirements"></a>需求
 
@@ -208,7 +211,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>範例
 
-下列範例示範如何使用**strncpy** , 以及如何將其誤用以造成程式錯誤和安全性問題。 編譯器會針對**strncpy**的每個呼叫產生警告, 類似**于 crt_strncpy_x86。 c (15): 警告 C4996: ' strncpy ':此函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
+下列範例示範如何使用**strncpy** ，以及如何將其誤用以造成程式錯誤和安全性問題。 編譯器會針對**strncpy**的每個呼叫產生警告，類似**于 crt_strncpy_x86。 c （15）：警告 C4996： ' strncpy '：此函式或變數可能不安全。請考慮改用 strncpy_s。若要停用已被取代的警告，請使用 _CRT_SECURE_NO_WARNINGS。如需詳細資料，請參閱線上說明。**
 
 ```C
 // crt_strncpy_x86.c

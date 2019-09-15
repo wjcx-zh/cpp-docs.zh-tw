@@ -1,12 +1,12 @@
 ---
 title: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcwprintf
 - _vcprintf_l
 - _vcwprintf_l
 - _vcprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vcwprintf_l
 - _vtcprintf
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-ms.openlocfilehash: e5991f903771408a22722dceec3e0c5d84b878e2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2f2aa3dafc730b060e84558dfa03de5328e52893
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499305"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945639"
 ---
 # <a name="_vcprintf-_vcprintf_l-_vcwprintf-_vcwprintf_l"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
@@ -95,13 +98,13 @@ int _vcwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入的字元數，或是當發生輸出錯誤時為負值。 如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 並傳回-1。
+寫入的字元數，或是當發生輸出錯誤時為負值。 如果*format*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回-1。
 
 ## <a name="remarks"></a>備註
 
 所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入主控台。 **_vcwprintf**是 **_vcprintf**的寬字元版本。 它接受寬字元字串作為引數。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

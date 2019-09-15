@@ -1,12 +1,12 @@
 ---
 title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _scprintf_l
 - _scwprintf
 - _scwprintf_l
 - _scprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scprintf
 - _scprintf_l
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d7f682156d37538f6ac152e6d93814877631a5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357066"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948812"
 ---
-# <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
+# <a name="_scprintf-_scprintf_l-_scwprintf-_scwprintf_l"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 
 傳回格式化字串中的字元數。
 
@@ -83,7 +86,7 @@ int _scwprintf_l(
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -93,17 +96,17 @@ int _scwprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回要使用所指定格式化程式碼將字串列印或傳送至檔案或緩衝區時所產生的字元數。 傳回的值不包含終止 Null 字元。 **_scwprintf**執行相同的函式的寬字元。
+傳回要使用所指定格式化程式碼將字串列印或傳送至檔案或緩衝區時所產生的字元數。 傳回的值不包含終止 Null 字元。 **_scwprintf**會針對寬字元執行相同的功能。
 
-如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*format*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個*引數*（如果有的話） 會根據對應格式規格中轉換*格式*。 此格式包含一般字元，與具有相同的形式和運作方式*格式*引數[printf](printf-printf-l-wprintf-wprintf-l.md)。
+每個*引數*（如果有的話）都會根據*格式*的對應格式規格進行轉換。 此格式包含一般字元，與[printf](printf-printf-l-wprintf-wprintf-l.md)的*format*引數具有相同的形式和功能。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -119,8 +122,8 @@ int _scwprintf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_scprintf**， **_scprintf_l**|\<stdio.h>|
-|**_scwprintf**， **_scwprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**_scprintf**、 **_scprintf_l**|\<stdio.h>|
+|**_scwprintf**、 **_scwprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

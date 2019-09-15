@@ -1,14 +1,14 @@
 ---
 title: strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbslen
 - _mbslen_l
 - _mbstrlen
 - wcslen
 - _mbstrlen_l
 - strlen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstrlen
 - wcslen
@@ -49,12 +52,12 @@ helpviewer_keywords:
 - strlen function
 - _mbslen function
 ms.assetid: 16462f2a-1e0f-4eb3-be55-bf1c83f374c2
-ms.openlocfilehash: 7736e1e7889642c41a5e3853ac13221ab22f6d03
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5b1d3f7483ec96cbcda7c72178613d81747c8060
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500917"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947570"
 ---
 # <a name="strlen-wcslen-_mbslen-_mbslen_l-_mbstrlen-_mbstrlen_l"></a>strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l
 
@@ -98,11 +101,11 @@ size_t _mbstrlen_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回*str*中的字元數, 但不包括終端機 null。 不會保留傳回值來指出錯誤, 但 **_mbstrlen**和 **_mbstrlen_l**除外`((size_t)(-1))` , 如果字串包含不正確多位元組字元, 則會傳回。
+所有這些函式都會傳回*str*中的字元數，但不包括終端機 null。 不會保留傳回值來指出錯誤，但 **_mbstrlen**和 **_mbstrlen_l**除外`((size_t)(-1))` ，如果字串包含不正確多位元組字元，則會傳回。
 
 ## <a name="remarks"></a>備註
 
-**strlen**會將字串轉譯為單一位元組字元字串, 因此, 即使字串包含多位元組字元, 其傳回值一律等於位元組數目。 **wcslen**是寬字元版本的**strlen**;**wcslen**的引數是寬字元字串, 且字元的計數是寬 (雙位元組) 字元。 相反地, **wcslen**和**strlen**的行為相同。
+**strlen**會將字串轉譯為單一位元組字元字串，因此，即使字串包含多位元組字元，其傳回值一律等於位元組數目。 **wcslen**是寬字元版本的**strlen**;**wcslen**的引數是寬字元字串，且字元的計數是寬（雙位元組）字元。 相反地， **wcslen**和**strlen**的行為相同。
 
 **安全性提示**這些函式可能會帶來緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
@@ -114,7 +117,7 @@ size_t _mbstrlen_l(
 |**_tcsclen**|**strlen**|**_mbslen**|**wcslen**|
 |**_tcsclen_l**|**strlen**|**_mbslen_l**|**wcslen**|
 
-**_mbslen**和 **_mbslen_l**會傳回多位元組字元字串中的多位元組字元數, 但不會測試多位元組字元的有效性。 **_mbstrlen**和 **_mbstrlen_l**會測試多位元組字元的有效性, 並辨識多位元組字元序列。 如果傳遞至 **_mbstrlen**或 **_mbstrlen_l**的字串包含字碼頁的無效多位元組字元, 則函式會傳回-1, 並將**errno**設定為**EILSEQ**。
+**_mbslen**和 **_mbslen_l**會傳回多位元組字元字串中的多位元組字元數，但不會測試多位元組字元的有效性。 **_mbstrlen**和 **_mbstrlen_l**會測試多位元組字元的有效性，並辨識多位元組字元序列。 如果傳遞至 **_mbstrlen**或 **_mbstrlen_l**的字串包含字碼頁的無效多位元組字元，則函式會傳回-1，並將**errno**設定為**EILSEQ**。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

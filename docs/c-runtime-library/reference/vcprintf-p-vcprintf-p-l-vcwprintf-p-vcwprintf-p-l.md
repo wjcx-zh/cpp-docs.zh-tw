@@ -1,12 +1,12 @@
 ---
 title: _vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vcprintf_p
 - _vcwprintf_p_l
 - _vcprintf_p_l
 - _vcwprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vcwprintf_p
 - vcprintf_p_l
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - _vcwprintf_p_l function
 - _vtcprintf_p function
 ms.assetid: 611024cc-90e7-41db-8e85-145ca95012b1
-ms.openlocfilehash: 4d2346237181299b3497fade37827a3abc5e7749
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a0cfcd5ff6c99ae521d1521c9467288daaf05913
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499358"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945736"
 ---
 # <a name="_vcprintf_p-_vcprintf_p_l-_vcwprintf_p-_vcwprintf_p_l"></a>_vcprintf_p、_vcprintf_p_l、_vcwprintf_p、_vcwprintf_p_l
 
@@ -93,22 +96,22 @@ int _vcwprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入的字元數，或是當發生輸出錯誤時為負值。 如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 並傳回-1。
+寫入的字元數，或是當發生輸出錯誤時為負值。 如果*format*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回-1。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標, 然後使用 **_putch**函數來格式化指定的資料, 並將其寫入主控台。 ( **_vcwprintf_p**會使用 **_putwch** , 而不是 **_putch**。 **_vcwprintf_p**是 **_vcprintf_p**的寬字元版本。 它需要寬字元字串做為引數。)
+所有這些函式都會接受引數清單的指標，然後使用 **_putch**函數來格式化指定的資料，並將其寫入主控台。 （ **_vcwprintf_p**會使用 **_putwch** ，而不是 **_putch**。 **_vcwprintf_p**是 **_vcprintf_p**的寬字元版本。 它需要寬字元字串做為引數。)
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。
 
-每個*引數*(如果有的話) 都會轉換, 並根據*格式*的對應格式規格進行輸出。 格式規格支援位置參數，以便讓您可以指定格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+每個*引數*（如果有的話）都會轉換，並根據*格式*的對應格式規格進行輸出。 格式規格支援位置參數，以便讓您可以指定格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
 在輸出換行字元時，這些函式不會將其轉譯為歸位字元-換行字元 (CR-LF) 組合。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-這些函式會驗證輸入的指標和格式字串。 如果*格式*或*引數*為**Null**, 或如果格式字串包含不正確格式化字元, 則這些函式會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會傳回-1, 並將**errno**設為**EINVAL**。
+這些函式會驗證輸入的指標和格式字串。 如果*格式*或*引數*為**Null**，或如果格式字串包含不正確格式化字元，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -1,10 +1,10 @@
 ---
 title: _fgetchar、_fgetwchar
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fgetchar
 - _fgetwchar
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetwchar
 - _fgettchar
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: c74618fa0be5392062d13618ff73e2ef45bf7c2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333952"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940868"
 ---
-# <a name="fgetchar-fgetwchar"></a>_fgetchar、_fgetwchar
+# <a name="_fgetchar-_fgetwchar"></a>_fgetchar、_fgetwchar
 
-讀取字元，以從**stdin**。
+從**stdin**讀取字元。
 
 ## <a name="syntax"></a>語法
 
@@ -52,13 +55,13 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>傳回值
 
-**\_fgetchar**會傳回做為讀取的字元**int**退貨`EOF`表示錯誤或檔案結尾。 **\_fgetwchar**傳回，作為[wint_t](../../c-runtime-library/standard-types.md)，字元的寬字元對應至讀取的字元，或傳回`WEOF`表示錯誤或檔案結尾。 這兩個函式中，使用**feof**或是**ferror**來區分錯誤與檔案結尾條件。
+fgetchar 會傳回讀取為**int**的字元，或`EOF`傳回表示錯誤或檔案結尾。 **\_** fgetwchar 會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應`WEOF`于讀取或傳回字元的寬字元，以表示錯誤或檔案結尾。 **\_** 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。
 
 ## <a name="remarks"></a>備註
 
-這些函式會讀取單一字元**stdin**。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+這些函式會從**stdin**讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但只為函式，而不是函式和巨集來實作。 **_fgetwchar**是寬字元版本 **_fgetchar**。
+**_fgetchar**相當於`fgetc( stdin )`。 它也相當於**getchar**，但只實作為函式，而不是函式和宏。 **_fgetwchar**是 **_fgetchar**的寬字元版本。
 
 這些函式與 ANSI 標準不相容。
 
@@ -70,12 +73,12 @@ wint_t _fgetwchar( void );
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台與相關聯的標準資料流控制代碼 —**stdin**， **stdout**，並**stderr**— 必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台相關聯的標準資料流程控制碼（**stdin**、 **stdout**和**stderr**）必須先重新導向，C 執行時間函式才能在 UWP 應用程式中使用它們。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -1,9 +1,9 @@
 ---
 title: _get_osfhandle
 ms.date: 05/29/2018
-apiname:
+api_name:
 - _get_osfhandle
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-ms.openlocfilehash: cc3b50e3d3f65bee83b8df83aa0adb5c8694e35a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: 65060689e0a7fc72b67da8fc3bf7ce0af75fd645
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821666"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955776"
 ---
-# <a name="getosfhandle"></a>_get_osfhandle
+# <a name="_get_osfhandle"></a>_get_osfhandle
 
 擷取與指定的檔案描述元相關聯的作業系統檔案控制代碼。
 
@@ -51,16 +54,16 @@ intptr_t _get_osfhandle(
 
 ## <a name="return-value"></a>傳回值
 
-如果傳回的作業系統檔案控制代碼*fd*有效。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，它會傳回**INVALID_HANDLE_VALUE** (-1)。 它也會設定**errno**要**EBADF**，表示無效的檔案控制代碼。 若要避免警告，結果使用做為 Win32 檔案控制代碼時，將它轉換成**處理**型別。
+如果*fd*有效，會傳回作業系統檔案控制代碼。 否則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回**INVALID_HANDLE_VALUE** （-1）。 它也會將**errno**設定為**EBADF**，表示不正確檔案控制代碼。 若要避免在使用結果做為 Win32 檔案控制代碼時出現警告，請將它轉換成**控制碼**類型。
 
 > [!NOTE]
-> 當**stdin**， **stdout**，並**stderr**不的檔案描述元值相關聯的資料流 （例如，在 Windows 應用程式沒有主控台視窗），從傳回這些資料流[_fileno](fileno.md)為特殊值-2。 同樣地，如果您使用 0、 1 或 2 做為檔案描述元參數，而不是呼叫的結果 **_fileno**， **_get_osfhandle**不相關聯的檔案描述元時，也會傳回特殊值-2使用資料流，並不會設定**errno**。 不過，這不是有效的檔案控制代碼值，而且嘗試使用它的後續呼叫可能會失敗。
+> 當**stdin**、 **stdout**和**stderr**未與資料流程相關聯（例如，在沒有主控台視窗的 Windows 應用程式中）時，這些資料流程的檔案描述項值會從[_fileno](fileno.md)傳回為特殊值-2。 同樣地，如果您使用0、1或2做為檔案描述元參數，而不是呼叫 **_fileno**的結果，則 **_get_osfhandle**也會在檔案描述項未與資料流程相關聯，且未設定**errno**時，傳回特殊的值-2。 不過，這不是有效的檔案控制代碼值，而後續嘗試使用它的呼叫可能會失敗。
 
-如需詳細資訊**EBADF**和其他錯誤碼，請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**EBADF**和其他錯誤碼的詳細資訊，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-若要關閉的檔案，來取得其作業系統 (OS) 的檔案控制代碼 **_get_osfhandle**，呼叫[_close](close.md)上的檔案描述元*fd*。 絕不會呼叫**CloseHandle**對此函式的傳回值。 所擁有的基礎 OS 檔案控制代碼*fd*的檔案描述元，且已關閉時[_close](close.md)上呼叫*fd*。 如果檔案描述元擁有者`FILE *`資料流，然後呼叫[fclose](fclose-fcloseall.md)該`FILE *`資料流關閉檔案描述元和基礎 OS 檔案控制代碼。 在此情況下，不要呼叫[_close](close.md)上的檔案描述項。
+若要關閉由 **_get_osfhandle**取得其作業系統（OS）檔案控制代碼的檔案，請在檔案描述器*fd*上呼叫[_close](close.md) 。 絕對不要在此函數的傳回值上呼叫**CloseHandle** 。 基礎作業系統檔案控制代碼是由*fd*檔案描述項所擁有，並在*fd*上呼叫[_close](close.md)時關閉。 如果檔案描述元是由`FILE *`資料流程所擁有，則在該`FILE *`資料流程上呼叫[fclose](fclose-fcloseall.md)會關閉檔案描述項和基礎作業系統檔案控制代碼。 在此情況下，請不要在檔案描述項上呼叫[_close](close.md) 。
 
 ## <a name="requirements"></a>需求
 

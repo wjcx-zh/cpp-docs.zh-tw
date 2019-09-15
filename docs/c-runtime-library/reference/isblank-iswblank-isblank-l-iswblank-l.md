@@ -1,12 +1,12 @@
 ---
 title: isblank、iswblank、_isblank_l、_iswblank_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - isblank
 - _isblank_l
 - iswblank
 - _iswblank_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswblank_l
 - isblank
@@ -27,14 +30,14 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022eba0335facc597f0608d63cfb58e0146e0f23
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287073"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954510"
 ---
-# <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank、iswblank、_isblank_l、_iswblank_l
+# <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
 判斷整數是否代表空白字元。
 
@@ -67,11 +70,11 @@ int _iswblank_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*表示特定的空格或水平定位字元或是其中一個地區設定特定的一組字元，用來分隔一行文字中的文字。 **isblank**傳回非零值，如果*c*為空格字元 (0x20) 或水平索引標籤字元 (0x09)。 測試條件的結果**isblank**函式取決於**LC_CTYPE**類別目錄設定的地區設定; 如需詳細資訊，請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md). 不需要這些函式的版本 **_l**後置詞使用目前的地區設定，針對任何地區設定相關行為; 沒有版本 **_l**尾碼都相同，不同之處在於它們使用會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*c*是特定的空格或水準索引標籤字元的標記法，則每個常式都會傳回非零，或者是用來分隔文字行內之單字的地區設定特定字元集之一。 如果*c*是空白字元（0x20）或水準定位字元（0x09）， **isblank**會傳回非零值。 **Isblank**函式測試條件的結果取決於地區設定的**LC_CTYPE**分類設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-**iswblank**傳回非零值，如果*c*是寬字元對應至標準空格或水平定位字元。
+如果*c*是對應至標準空格或水準定位字元的寬字元，則**iswblank**會傳回非零值。
 
-行為**isblank**並 **_isblank_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isblank**和 **_isblank_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

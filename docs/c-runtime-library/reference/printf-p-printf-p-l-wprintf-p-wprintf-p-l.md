@@ -1,12 +1,12 @@
 ---
 title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_p
 - _wprintf_p
 - _printf_p_l
 - _wprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wprintf_p
 - _wprintf_p
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 555739fbcdd3503461d7b831660a94602f244aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345190"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950271"
 ---
-# <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
+# <a name="_printf_p-_printf_p_l-_wprintf_p-_wprintf_p_l"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
 將格式化的輸出列印至標準輸出資料流，並啟用在格式字串中使用參數的順序規格。
 
@@ -78,7 +81,7 @@ int _wprintf_p_l(
 *格式*<br/>
 控制項格式。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -90,18 +93,18 @@ int _wprintf_p_l(
 
 ## <a name="remarks"></a>備註
 
-**_Printf_p**函式格式化並列印一系列的字元和值寫入標準輸出資料流**stdout**。 如果引數接*格式*字串*格式*字串必須包含決定引數輸出格式的規格 (請參閱[printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p**函式會格式化一系列的字元和值，並將其列印至標準輸出資料流程（ **stdout**）。 如果引數遵循*格式*字串，*格式*字串必須包含決定引數輸出格式的規格（請參閱[printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)）。
 
-之間的差異 **_printf_p**並**printf_s**在於 **_printf_p**支援位置參數，可讓您指定的引數的順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Printf_p**和**printf_s**之間的差異在於 **_printf_p**支援位置參數，這可讓您指定在格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_wprintf_p**是寬字元版本 **_printf_p**; 它們的行為完全相同的資料流以 ANSI 模式開啟。 **_printf_p**目前不支援輸出至 UNICODE 資料流。
+**_wprintf_p**是 **_printf_p**的寬字元版本;如果資料流程是以 ANSI 模式開啟，它們的行為會相同。 **_printf_p**目前不支援輸出至 UNICODE 資料流程。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
 
-如果*格式*或是*引數*會**NULL**，此格式字串包含無效格式化字元，或 **_printf_p**和 **_wprintf_p**函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
+如果*格式*或*引數*為**Null**，或格式字串包含不正確格式化字元，則 **_printf_p**和 **_wprintf_p**函式會叫用不正確參數處理常式，如[參數驗證中所述](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，此函式會傳回-1，並將**errno**設定為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -114,10 +117,10 @@ int _wprintf_p_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_printf_p**， **_printf_p_l**|\<stdio.h>|
-|**_wprintf_p**， **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_printf_p**、 **_printf_p_l**|\<stdio.h>|
+|**_wprintf_p**、 **_wprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

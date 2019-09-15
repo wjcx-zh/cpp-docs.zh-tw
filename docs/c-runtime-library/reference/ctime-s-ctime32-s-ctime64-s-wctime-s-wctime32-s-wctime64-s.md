@@ -1,14 +1,14 @@
 ---
 title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ctime64_s
 - _wctime32_s
 - ctime_s
 - _wctime64_s
 - _ctime32_s
 - _wctime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctime64_s
 - _ctime32_s
@@ -51,14 +54,14 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d983ee4219985c7b213812a69f6f83f49dbf389b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288357"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942014"
 ---
-# <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
+# <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
 將時間值轉換為字串並針對當地時區設定調整。 這些是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [ctime、_ctime64、_wctime、_wctime64](ctime-ctime32-ctime64-wctime-wctime32-wctime64.md) 版本。
 
@@ -123,15 +126,15 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>參數
 
 *buffer*<br/>
-必須足以容納 26 個字元。 字元字串結果指標，或是**NULL**如果：
+必須足以容納 26 個字元。 字元字串結果的指標，如果是，則為**Null** ：
 
-- *sourceTime*代表 1970 年 1 月 1 日午夜 UTC 以前的日期。
+- *sourceTime*代表1970年1月1日午夜之前的日期（UTC）。
 
-- 如果您使用 **_ctime32_s**或是 **_wctime32_s**並*sourceTime*代表以後 23:59:59 2038 年 1 月 18 日 UTC 的日期。
+- 如果您使用 **_ctime32_s**或 **_Wctime32_s** ，而*SourceTime*代表23:59:59 年1月 18 2038 日之後的日期，則為 UTC。
 
-- 如果您使用 **_ctime64_s**或是 **_wctime64_s**並*sourceTime*代表以後 23:59:59，3000 年 12 月 31 日 UTC 的日期。
+- 如果您使用 **_ctime64_s**或 **_Wctime64_s** ，而*SourceTime*代表23:59:59 年12月 3000 31 日（UTC）之後的日期。
 
-- 如果您使用 **_ctime_s**或是 **_wctime_s**，這些函式是以先前的函式的包裝函式。 請參閱＜備註＞一節。
+- 如果您使用 **_ctime_s**或 **_wctime_s**，則這些函式會是先前函式的包裝函數。 請參閱＜備註＞一節。
 
 *numberOfElements*<br/>
 緩衝區的大小。
@@ -145,27 +148,27 @@ errno_t _wctime64_s(
 
 ## <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*numberOfElements*|*sourceTime*|Return|中的值*緩衝區*|
+|*buffer*|*numberOfElements*|*sourceTime*|Return|*Buffer*中的值|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|any|any|**EINVAL**|未修改|
-|不**NULL** （指向有效的記憶體）|0|any|**EINVAL**|未修改|
-|不**NULL**|0< 大小 < 26|any|**EINVAL**|空字串|
-|不**NULL**|>= 26|NULL|**EINVAL**|空字串|
-|不**NULL**|>= 26|< 0|**EINVAL**|空字串|
+|Not **Null** （指向有效的記憶體）|0|any|**EINVAL**|未修改|
+|非**Null**|0< 大小 < 26|any|**EINVAL**|空字串|
+|非**Null**|>= 26|NULL|**EINVAL**|空字串|
+|非**Null**|>= 26|< 0|**EINVAL**|空字串|
 
 ## <a name="remarks"></a>備註
 
-**Ctime_s**函式會轉換為所儲存的時間值[time_t](../../c-runtime-library/standard-types.md)結構轉換為字元字串。 *SourceTime*值通常取自對[時間](time-time32-time64.md)，就會傳回午夜所經過的秒數 (00: 00:00) 1970 年 1 月 1 日國際標準時間 (UTC)。 傳回值字串剛好包含 26 個字元，且具有以下格式：
+**Ctime_s**函數會將儲存為[time_t](../../c-runtime-library/standard-types.md)結構的時間值轉換成字元字串。 *SourceTime*值通常是從呼叫[時間](time-time32-time64.md)取得，這會傳回自00:00:00 年1月1日（1970，國際標準時間（UTC））以來經過的秒數。 傳回值字串剛好包含 26 個字元，且具有以下格式：
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元 ('\n') 和 null 字元 ('\0') 佔用字串的最後兩個位置。
 
-已轉換的字元字串也會根據當地時區設定調整。 請參閱[時間](time-time32-time64.md)， [_ftime](ftime-ftime32-ftime64.md)，並[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函式，如需設定當地時間和[_tzset](tzset.md)如需定義時區環境及全域變數的函式。
+已轉換的字元字串也會根據當地時區設定調整。 如需有關設定當地時間的詳細資訊，請參閱[time](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)和[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)函數，以取得定義時區環境和全域[變數的相關](tzset.md)資訊。
 
-**_wctime32_s**並 **_wctime64_s**是寬字元版本 **_ctime32_s**並 **_ctime64_s**; 傳回指向寬字元字串的指標。 否則，請 **_ctime64_s**， **_wctime32_s**，並 **_wctime64_s**行為會和 **_ctime32_s**。
+**_wctime32_s**和 **_wctime64_s**是 **_ctime32_s**和 **_ctime64_s**的寬字元版本;傳回寬字元字串的指標。 否則， **_ctime64_s**、 **_wctime32_s**和 **_wctime64_s**的行為與 **_ctime32_s**相同。
 
-**ctime_s**是評估為內嵌函數 **_ctime64_s**並**time_t**相當於 **__time64_t**。 如果您要強制編譯器將解譯**time_t**為舊的 32 位元**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 如此一來，這會導致**ctime_s**評估為 **_ctime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**ctime_s**是評估為 **_ctime64_s**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**ctime_s**評估為 **_ctime32_s**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
@@ -181,8 +184,8 @@ errno_t _wctime64_s(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**ctime_s**， **_ctime32_s**， **_ctime64_s**|\<time.h>|
-|**_wctime_s**， **_wctime32_s**， **_wctime64_s**|\<time.h> 或 \<wchar.h>|
+|**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
+|**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

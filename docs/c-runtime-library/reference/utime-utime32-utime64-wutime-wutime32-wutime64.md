@@ -1,14 +1,14 @@
 ---
 title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _utime64
 - _utime
 - _wutime
 - _wutime64
 - _wutime32
 - _utime32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tutime
 - _utime64
@@ -58,14 +61,14 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d55261b59dbf201be9869f3ab9ced2d2cbab5e02
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155442"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945724"
 ---
-# <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
+# <a name="_utime-_utime32-_utime64-_wutime-_wutime32-_wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
 設定檔案修改時間。
 
@@ -103,40 +106,40 @@ int _wutime64(
 *filename*<br/>
 包含路徑或檔名之字串的指標。
 
-*times*<br/>
+*有時候*<br/>
 預存時間值的指標。
 
 ## <a name="return-value"></a>傳回值
 
-如果檔案修改時間變更，則所有這些函式都會傳回 0。 傳回值為-1 表示錯誤。 如果傳遞無效參數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1 及**errno**設為下列值之一：
+如果檔案修改時間變更，則所有這些函式都會傳回 0。 傳回值-1 表示發生錯誤。 如果傳遞無效參數，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，而**errno**會設定為下列其中一個值：
 
 |errno 值|條件|
 |-|-|
 | **EACCES** | 路徑指定目錄或唯讀檔案 |
-| **EINVAL** | 無效*時間*引數 |
+| **EINVAL** | 不正確*時間*引數 |
 | **EMFILE** | 開啟太多檔案 (必須開啟檔案，才能變更其修改時間) |
 | **ENOENT** | 找不到路徑或檔名 |
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果變更日期晚於 1970 年 1 月 1 日午夜，且早於所使用函式的結束日期，則可以變更檔案的日期。 **_utime**並 **_wutime**使用 64 位元時間值，因此結束日期是 23:59:59，3000 年 12 月 31 日 UTC。 如果 **_USE_32BIT_TIME_T**定義結束日期來強制進行舊行為，是 23:59:59 2038 年 1 月 18 日 UTC。 **_utime32**或是 **_wutime32**使用 32 位元時間類型，不論 **_USE_32BIT_TIME_T**已定義，並一律具有較早的結束日期。 **_utime64**或是 **_wutime64**一律使用 64 位元時間類型，因此這些函式一律會支援較新的結束日期。
+如果變更日期晚於 1970 年 1 月 1 日午夜，且早於所使用函式的結束日期，則可以變更檔案的日期。 **_utime**和 **_wutime**使用64位時間值，因此結束日期是23:59:59，12月31日3000，UTC。 如果 **_USE_32BIT_TIME_T**定義為強制執行舊的行為，則結束日期為23:59:59 年1月18日2038，UTC。 無論 **_USE_32BIT_TIME_T**是否已定義， **_utime32**或 **_wutime32**都會使用32位時間類型，而且一律會有較早的結束日期。 **_utime64**或 **_wutime64**一律使用64位時間類型，因此這些函式一律支援較新的結束日期。
 
 ## <a name="remarks"></a>備註
 
-**_Utime**函式會將所指定之檔案的修改時間*filename*。 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更的存取時間和修改時間，以 **_utimbuf**結構。 如果*次數*是**NULL**指標，修改時間設為目前的當地時間。 否則*時間*類型的結構必須指向 **_utimbuf**SYS\UTIME 中定義。H.
+**_Utime**函式會設定*filename*所指定之檔案的修改時間。 處理序必須具有檔案的寫入權，才能變更時間。 在 Windows 作業系統中，您可以變更 **_utimbuf**結構中的存取時間和修改時間。 如果*times*是**Null**指標，修改時間會設定為目前的本地時間。 否則，*時間*必須指向 **_utimbuf**類型的結構，定義于 SYS\UTIME. 中。H.
 
-**_Utimbuf**結構會儲存所使用的檔案存取和修改時間 **_utime**以變更檔案修改日期。 此結構具有下列欄位，也就是這兩個型別**time_t**:
+**_Utimbuf**結構會儲存 **_utime**所使用的檔案存取和修改時間，以變更檔案修改日期。 結構具有下欄欄位，這兩者都是**time_t**類型：
 
 | 欄位 |   |
 |-------|---|
 | **actime** | 檔案存取的時間 |
 | **modtime** | 檔案修改的時間 |
 
-特定版本的 **_utimbuf**結構 (**_utimebuf32**並 **__utimbuf64**) 使用 32 位元和 64 位元版本的時間類型所定義。 這些是用在此函式的 32 位元和 64 位元特定版本。 **_utimbuf**本身預設會使用 64 位元時間類型，除非 **_USE_32BIT_TIME_T**定義。
+特定版本的 **_utimbuf**結構（ **_utimebuf32**和 **__utimbuf64**）會使用32位和64位版本的時間類型來定義。 這些是用在此函式的 32 位元和 64 位元特定版本。 除非已定義 **_USE_32BIT_TIME_T** ，否則 **_utimbuf**本身預設會使用64位時間類型。
 
-**_utime**等同於 **_futime**不同之處在於*filename*引數 **_utime**是檔案名稱或檔案，而不是檔案描述項的路徑開啟檔案。
+**_utime**與 **_futime**相同，不同之處在于 **_utime**的*filename*引數是檔案名或檔案路徑，而不是已開啟檔案的檔案描述項。
 
-**_wutime**是寬字元版本的 **_utime**; *filename*引數 **_wutime**是寬字元字串。 除此之外，這些函式的行為相同。
+**_wutime**是寬字元版本的 **_utime**; **_wutime**的*filename*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -150,7 +153,7 @@ int _wutime64(
 
 |常式傳回的值|必要標頭|選擇性標頭|
 |-------------|----------------------|----------------------|
-|**_utime**， **_utime32**， **_utime64**|\<sys/utime.h>|\<errno.h>|
+|**_utime**、 **_utime32**、 **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_wutime**|\<utime.h> 或 \<wchar.h>|\<errno.h>|
 
@@ -158,7 +161,7 @@ int _wutime64(
 
 ## <a name="example"></a>範例
 
-此程式會使用 **_utime**檔案修改時間設定為目前的時間。
+此程式會使用 **_utime** ，將檔案修改時間設定為目前的時間。
 
 ```C
 // crt_utime.c

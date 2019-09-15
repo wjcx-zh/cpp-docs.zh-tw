@@ -1,14 +1,14 @@
 ---
 title: _strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsset
 - _mbsset
 - _strset_l
 - _strset
 - _wcsset_l
 - _mbsset_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsset
 - _strset_l
@@ -60,12 +63,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 916e65f543e48a9fbfede3ca973698f8b0d07040
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7f8674467c0d02143e6edf1e4e95c6ee3e20c4b5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500828"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946763"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l
 
@@ -123,11 +126,11 @@ unsigned char *_mbsset_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strset**函式會將*str*的所有字元 (結尾的 null 字元除外) 設定為*c*, 轉換成**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的寬字元和多位元組字元版本, 而引數和傳回值的資料類型也會隨之改變。 除此之外，這些函式的行為相同。
+**_Strset**函式會將*str*的所有字元（結尾的 null 字元除外）設定為*c*，轉換成**char**。 **_wcsset**和 **_mbsset_l**是 **_strset**的寬字元和多位元組字元版本，而引數和傳回值的資料類型也會隨之改變。 除此之外，這些函式的行為相同。
 
-**_mbsset**會驗證其參數。 如果*str*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **_mbsset**會傳回**Null** , 並將**errno**設定為**EINVAL**。 **_strset**和 **_wcsset**不會驗證它們的參數。
+**_mbsset**會驗證其參數。 如果*str*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbsset**會傳回**Null** ，並將**errno**設定為**EINVAL**。 **_strset**和 **_wcsset**不會驗證它們的參數。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同, 不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定, 而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些函式的版本完全相同，不同之處在于沒有 **_l**尾碼的函式使用目前的地區設定，而具有 **_l**尾碼的函式則改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!IMPORTANT]
 > 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

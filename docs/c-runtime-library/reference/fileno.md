@@ -1,9 +1,9 @@
 ---
 title: _fileno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _fileno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fileno
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586e390e100f5dc46a49b99c007016cf23ac68f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333764"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957209"
 ---
-# <a name="fileno"></a>_fileno
+# <a name="_fileno"></a>_fileno
 
 取得與資料流相關聯的檔案描述項。
 
@@ -50,20 +53,20 @@ int _fileno(
 
 ## <a name="return-value"></a>傳回值
 
-**_fileno**傳回檔案描述項。 不會傳回錯誤。 如果，則結果為未定義*資料流*未指定開啟的檔案。 如果資料流**NULL**， **_fileno**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 若要繼續，此函數會傳回-1 和集合允許執行**errno**要**EINVAL**。
+**_fileno**會傳回檔案描述項。 不會傳回錯誤。 如果*資料流程*未指定開啟的檔案，則會產生未定義的結果。 如果 stream 為**Null**， **_fileno**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，此函式會傳回 -1，並將 **errno** 設為 **EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 > [!NOTE]
-> 如果**stdout**或是**stderr**無關 （例如，在沒有主控台視窗的 Windows 應用程式） 的輸出資料流，傳回的檔案描述元是-2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。
+> 如果**stdout**或**stderr**未與輸出資料流程相關聯（例如，在沒有主控台視窗的 Windows 應用程式中），則傳回的檔案描述元為-2。 在舊版本中，傳回的檔案描述元是 -1。 此變更可讓應用程式區分這個條件與錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Fileno**常式會傳回目前與相關聯的檔案描述項*串流*。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
+**_Fileno**常式會傳回目前與*資料流程*相關聯的檔案描述項。 此常式可當作函式和巨集來實作。 如需選擇其中一個實作的資訊，請參閱[選擇函式與巨集](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fileno**|\<stdio.h>|
 

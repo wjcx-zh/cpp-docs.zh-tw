@@ -1,9 +1,9 @@
 ---
 title: fpclassify
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fpclassify
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,8 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: HeaderDef
+api_type:
+- HeaderDef
 f1_keywords:
 - fpclassify
 - math/fpclassify
@@ -22,12 +23,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-ms.openlocfilehash: a25897a110d96923a45695d61f923dc7818c7e3a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9b5aa1f7dc20cc920a51c2c36371eb907469875
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287937"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957069"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -60,7 +61,7 @@ int fpclassify(
 
 ## <a name="return-value"></a>傳回值
 
-**fpclassify**傳回整數值，指出引數的浮點類別*x*。 下表顯示可能的值所傳回**fpclassify**，其定義於\<math.h> >。
+**fpclassify**會傳回一個整數值，指出引數*x*的浮點類別。 下表顯示**fpclassify**所傳回的可能值（定義于\<math > 中）。
 
 |值|描述|
 |-----------|-----------------|
@@ -72,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>備註
 
-在 C 中， **fpclassify**是巨集; 在C++， **fpclassify**是使用引數類型的多載函式**float**， **double**，或**長** **double**。 在任一情況下，傳回值取決於引數運算式的有效類型，而非任何中繼呈現。 比方說，一般**雙**或**長** **double**的值可以是無限大、 異常或零值時轉換成**float**。
+在 C 中， **fpclassify**是宏;在C++中， **fpclassify**是使用**float**、 **double**或**long** **double**引數類型的多載函式。 在任一情況下，傳回值取決於引數運算式的有效類型，而非任何中繼呈現。 例如，當轉換成**float**時，一般**double**或**long** **double**值可能會變成無限大、denormal 或零值。
 
 ## <a name="requirements"></a>需求
 
@@ -80,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> 或 \<cmath>|
 
-**Fpclassify**巨集並**fpclassify**函式符合 ISO C99 和 c++11 規格。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Fpclassify**宏和**FPCLASSIFY**函數符合 ISO C99 和 c + + 11 規格。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

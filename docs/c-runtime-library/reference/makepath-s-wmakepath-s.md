@@ -1,10 +1,10 @@
 ---
 title: _makepath_s、_wmakepath_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmakepath_s
 - _makepath_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wmakepath_s
 - makepath_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 3536569fd3e77a353003e1372d5dc4ee6e4ee3fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156924"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952937"
 ---
-# <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
+# <a name="_makepath_s-_wmakepath_s"></a>_makepath_s、_wmakepath_s
 
 從元件建立路徑名稱。 這些是 [_makepath、_wmakepath](makepath-wmakepath.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -90,16 +93,16 @@ errno_t _wmakepath_s(
 以位元組為單位的緩衝區大小。
 
 *drive*<br/>
-包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**冒號自動插入複合路徑中遺失。 如果*磁碟機*是**NULL**或指向空字串，不要的磁碟機代號會出現在複合*路徑*字串。
+包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**會在複合路徑中自動插入冒號（如果遺漏的話）。 如果*drive*是**Null**或指向空字串，複合*路徑*字串中就不會出現任何磁碟機號。
 
 *dir*<br/>
-包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的並正斜線 （/） 或反斜線 (\\)，或是兩者都可能會用於在單一*dir*引數。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**NULL**或指向空字串，沒有目錄路徑會插入複合*路徑*字串。
+包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 尾端斜線是選擇性的，而且可以在單一*dir*引數中使用正斜線（\\/）或反斜線（）或兩者。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何目錄路徑。
 
 *fname*<br/>
-包含基底檔案名稱，但不包含任何副檔名。 如果*fname*是**NULL**或指向空字串，任何檔名會插入複合*路徑*字串。
+包含基底檔案名稱，但不包含任何副檔名。 如果*fname*為**Null**或指向空字串，複合*路徑*字串中就不會插入任何檔案名。
 
 *ext*<br/>
-包含實際副檔名，可包含或不含前置句號 (.)。 **_makepath_s**自動插入句號，如果它不會出現在*ext*。如果*ext*是**NULL**或指向空字串，不含副檔名會插入複合*路徑*字串。
+包含實際副檔名，可包含或不含前置句號 (.)。 如果 **_makepath_s**未出現在*ext*中，則會自動插入句點。如果*ext*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何副檔名。
 
 ## <a name="return-value"></a>傳回值
 
@@ -107,16 +110,16 @@ errno_t _wmakepath_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*path*|*sizeInWords* / *sizeInBytes*|Return|內容*路徑*|
+|*path*|*sizeInWords* / *sizeInBytes*|Return|*路徑*的內容|
 |------------|------------------------------------|------------|------------------------|
 |**NULL**|any|**EINVAL**|未修改|
 |any|<= 0|**EINVAL**|未修改|
 
-如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。 **NULL**允許的參數*磁碟機*， *fname*，和*ext*。如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。
+如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。 參數*drive*、 *fname*和*ext*允許**Null** 。如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。
 
 ## <a name="remarks"></a>備註
 
-**_Makepath_s**函式會從 個別元件，儲存在結果中建立複合路徑字串*路徑*。 *路徑*可能包含磁碟機代號、 目錄路徑、 檔名和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; 的引數 **_wmakepath_s**是寬字元字串。 **_wmakepath_s**並 **_makepath_s**行為相同。
+**_Makepath_s**函數會從個別元件建立複合路徑字串，並將結果儲存在*path*中。 *路徑*可能包含磁碟機號、目錄路徑、檔案名和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; **_wmakepath_s**的引數是寬字元字串。 相反地， **_wmakepath_s**和 **_makepath_s**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -124,9 +127,9 @@ errno_t _wmakepath_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-*路徑*引數必須指向空的緩衝區不夠大，無法容納完整路徑。 複合*路徑*必須是不能大於 **_MAX_PATH**在 Stdlib.h 中定義的常數。
+*Path*引數必須指向夠大的空緩衝區，以容納完整的路徑。 複合*路徑*不能大於 **_MAX_PATH**常數，定義于 stdlib.h> 中。
 
-如果路徑**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 颾魤 ㄛ **errno**設為**EINVAL**。 **NULL**允許所有其他參數的值。
+如果 path 為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外， **errno**會設定為**EINVAL**。 所有其他參數都允許**Null**值。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

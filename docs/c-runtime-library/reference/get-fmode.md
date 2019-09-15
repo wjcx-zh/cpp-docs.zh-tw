@@ -1,9 +1,9 @@
 ---
 title: _get_fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_fmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_fmode
 - _get_fmode
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: dc4740b20ab7283dd8b9f73f458eaba34e582832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287558"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955875"
 ---
-# <a name="getfmode"></a>_get_fmode
+# <a name="_get_fmode"></a>_get_fmode
 
 取得檔案 I/O 作業的預設檔案轉譯模式。
 
@@ -46,15 +49,15 @@ errno_t _get_fmode(
 ### <a name="parameters"></a>參數
 
 *pmode*<br/>
-到目前的預設模式填滿的整數的指標： **_O_TEXT**或是 **_O_BINARY**。
+要以目前預設模式填滿之整數的指標： **_O_TEXT**或 **_O_BINARY**。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pmode*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EINVAL**。
+如果成功，傳回零；如果失敗，則傳回錯誤碼。 如果*pmode*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-函式取得 [_fmode](../../c-runtime-library/fmode.md) 全域變數的值。 這個變數的低層級指定預設檔案轉譯模式，並傳送資料流檔案 I/O 作業，例如 **_open**， **_pipe**， **fopen**，和[freopen](freopen-wfreopen.md)。
+函式取得 [_fmode](../../c-runtime-library/fmode.md) 全域變數的值。 這個變數會指定低層級和資料流程檔案 i/o 作業的預設檔案轉譯模式，例如 **_open**、 **_pipe**、 **fopen**和[freopen](freopen-wfreopen.md)。
 
 ## <a name="requirements"></a>需求
 

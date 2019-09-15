@@ -1,11 +1,11 @@
 ---
 title: ctan、ctanf、ctanl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctan
 - ctanf
 - ctanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctan
 - ctanf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanf function
 - ctanl function
 ms.assetid: d3cbd25c-1e93-4a6d-8154-da42921f7223
-ms.openlocfilehash: 2d4da5a39658e46bc633ae3bd9c8f6f0a01555aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d1275f795ae68777515e833a19f2b90f4fedf93
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288750"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938451"
 ---
 # <a name="ctan-ctanf-ctanl"></a>ctan、ctanf、ctanl
 
@@ -68,22 +71,22 @@ _Lcomplex ctanl(
 
 ## <a name="return-value"></a>傳回值
 
-正切函數*z*。
+*Z*的正切函數。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|常见 ∞，QNAN IND|none|_DOMAIN|
-|常见 ∞ (**tan**， **tanf**)|INVALID|_DOMAIN|
+|±∞、QNAN、IND|none|_DOMAIN|
+|±∞（**tan**， **tanf**）|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**ctan**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **ctan**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**ctan**的多載。 在 C 程式中， **ctan**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ctan**,               **ctanf**, **ctanl**|\<complex.h>|\<ccomplex>|
+|**ctan**、 **ctanf**、 **ctanl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

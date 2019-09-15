@@ -1,9 +1,9 @@
 ---
 title: _recalloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _recalloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _recalloc
 - recalloc
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 3bcc238dcb950a8e30af16efc557e99d933efe92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f06631fe4dd0abcb0b18895ccb04e5b52cda6a2c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357717"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949452"
 ---
-# <a name="recalloc"></a>_recalloc
+# <a name="_recalloc"></a>_recalloc
 
-組合**realloc**並**calloc**。 重新配置記憶體中的陣列，並將其項目初始化為 0。
+**Realloc**和**calloc**的組合。 重新配置記憶體中的陣列，並將其項目初始化為 0。
 
 ## <a name="syntax"></a>語法
 
@@ -57,23 +60,23 @@ void *_recalloc(
 
 ## <a name="return-value"></a>傳回值
 
-**_recalloc**會傳回**void**重新配置後 （且可能有移動） 記憶體區塊的指標。
+**_recalloc**會傳回已重新配置（且可能已移動）記憶體區塊的**void**指標。
 
-如果沒有足夠的可用記憶體將區塊展開為指定大小，原始區塊會保持不變，並**NULL**會傳回。
+如果沒有足夠的可用記憶體可將區塊展開為指定的大小，原始區塊會保留不變，而且會傳回**Null** 。
 
-如果要求的大小為零，則所指向的區塊*memblock*釋放; 傳回值是**NULL**，並*memblock*保持指向已釋放的區塊。
+如果要求的大小為零，則會釋放*memblock*所指向的區塊;傳回值為**Null**，而*memblock*是指向釋放的區塊。
 
-儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得的指標類型以外的其他**void**，使用類型轉換的傳回值。
+儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得**void**以外類型的指標，請在傳回值上使用類型轉換。
 
 ## <a name="remarks"></a>備註
 
-**_Recalloc**函式會變更已配置的記憶體區塊的大小。 *Memblock*引數指向記憶體區塊的開頭。 如果*memblock*是**NULL**， **_recalloc**行為方式與[calloc](calloc.md)並配置的新區塊*數目* * *大小*位元組。 每個元素都會初始化為 0。 如果*memblock*不是**NULL**，它應該是由先前呼叫所傳回的指標**calloc**， [malloc](malloc.md)，或[realloc](realloc.md).
+**_Recalloc**函數會變更已配置記憶體區塊的大小。 *Memblock*引數會指向記憶體區塊的開頭。 如果*memblock*為**Null**， **_recalloc**的行為會與[calloc](calloc.md)相同，並會配置新的*數位* * *大小*位元組區塊。 每個元素都會初始化為 0。 如果*memblock*不是**Null**，它應該是先前對**calloc**、 [malloc](malloc.md)或[realloc](realloc.md)的呼叫所傳回的指標。
 
-因為新區塊可能會在新的記憶體位置，傳回的指標 **_recalloc**不保證是透過傳遞指標*memblock*引數。
+由於新的區塊可以在新的記憶體位置中，因此 **_recalloc**所傳回的指標不一定是透過*memblock*引數傳遞的指標。
 
-**_recalloc**設定**errno**要**ENOMEM**如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果記憶體配置失敗，或所要求的記憶體數量超過 **_HEAP_MAXREQ**，則 **_recalloc**會將**errno**設定為**ENOMEM** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**recalloc**呼叫**realloc**才能使用C++ [_set_new_mode](set-new-mode.md)函式來設定新的處理常式模式。 新的處理常式模式會指出是否在失敗時， **realloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **realloc**不會呼叫新的處理常式無法配置記憶體。 您可以覆寫此預設行為，讓，當 **_recalloc**無法配置記憶體， **realloc**呼叫新的處理常式在相同方式來**新**運算子執行時相同的原因而失敗。 若要覆寫預設值，請及早在程式中呼叫
+**recalloc**會呼叫**realloc** ，以便使用C++ [_set_new_mode](set-new-mode.md)函數來設定新的處理常式模式。 新的處理常式模式指出，在失敗時， **realloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **realloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當 **_recalloc**無法配置記憶體時， **realloc**會呼叫新的處理常式常式，就像**新**的運算子因為相同的原因而失敗。 若要覆寫預設值，請及早在程式中呼叫
 
 ```C
 _set_new_mode(1);
@@ -81,9 +84,9 @@ _set_new_mode(1);
 
 或與 NEWMODE.OBJ 連結。
 
-當偵錯版本的 C 執行階段程式庫，連結的應用程式時 **_recalloc**解析[_recalloc_dbg](recalloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
+當應用程式與 C 執行時間程式庫的 debug 版本連結時， **_recalloc**會解析為[_recalloc_dbg](recalloc-dbg.md)。 如需如何在偵錯程序期間管理堆積的詳細資訊，請參閱 [CRT 偵錯堆積](/visualstudio/debugger/crt-debug-heap-details)。
 
-**_recalloc**標示`__declspec(noalias)`和`__declspec(restrict)`，這表示保證函式不能修改全域變數，並傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**_recalloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
 ## <a name="requirements"></a>需求
 

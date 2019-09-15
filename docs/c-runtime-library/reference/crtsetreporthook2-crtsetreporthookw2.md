@@ -1,10 +1,10 @@
 ---
 title: _CrtSetReportHook2、_CrtSetReportHookW2
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtSetReportHookW2
 - CrtSetReportHook2
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37ec0cea3fb558a5926e6f9c707e0e5033a17222
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335317"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942224"
 ---
-# <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
+# <a name="_crtsetreporthook2-_crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 
 將用戶端定義的報告函式連結到 C 執行階段偵錯報告處理序，以進行安裝或解除安裝 (僅限偵錯版本)。
 
@@ -54,22 +57,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>參數
 
 *mode*<br/>
-要採取的動作： **_CRT_RPTHOOK_INSTALL**或是 **_CRT_RPTHOOK_REMOVE**。
+要採取的動作： **_CRT_RPTHOOK_INSTALL**或 **_CRT_RPTHOOK_REMOVE**。
 
 *pfnNewHook*<br/>
-用來安裝或移除在此函式的窄字元或寬字元版本的報表攔截程序。
+要在此函式的窄字元或寬字元版本中安裝或移除的報表攔截。
 
 ## <a name="return-value"></a>傳回值
 
--1，如果發現錯誤，與**EINVAL**或是**ENOMEM**設定; 否則會傳回的參考計數*pfnNewHook*之後呼叫。
+如果發生錯誤，則為-1，使用**EINVAL**或**ENOMEM**設定;否則，會在呼叫之後傳回*pfnNewHook*的參考計數。
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetReportHook2**並 **_CrtSetReportHookW2**可讓您連結或解除連結函式，而[_CrtSetReportHook](crtsetreporthook.md)只能讓您連結函式。
+**_CrtSetReportHook2**和 **_CrtSetReportHookW2**可讓您對函式進行攔截或解除連結，而[_CrtSetReportHook](crtsetreporthook.md)僅可讓您攔截函式。
 
-**_CrtSetReportHook2**或是 **_CrtSetReportHookW2**應該使用而不是 **_CrtSetReportHook**攔截程序呼叫的 DLL 中進行時和當多個 Dll 可能會載入和設定自己攔截函式。 在此情況下，可依載入 DLL 時的不同順序來卸載 DLL，並可保留攔截函式以指向未卸載的 DLL。 如果攔截函式中還加入了處理序當機的任何偵錯輸出 **_CrtSetReportHook**。
+當攔截呼叫是在 DLL 中進行，而且可能載入多個 Dll，並設定自己的攔截函式時，應該使用 **_CrtSetReportHook2**或 **_CrtSetReportHookW2**而不是 **_CrtSetReportHook** 。 在此情況下，可依載入 DLL 時的不同順序來卸載 DLL，並可保留攔截函式以指向未卸載的 DLL。 如果已使用 **_CrtSetReportHook**新增攔截函式，任何偵錯工具輸出都會損毀進程。
 
-任何攔截函式加 **_CrtSetReportHook**如果沒有加上函式會呼叫 **_CrtSetReportHook2**或是 **_CrtSetReportHookW2**或所有攔截函式加 **_CrtSetReportHook2**並 **_CrtSetReportHookW2**傳回**FALSE**。
+如果沒有以 **_CrtSetReportHook2**或 **_CrtSetReportHookW2**新增的攔截函式，或所有使用 **_CrtSetReportHook2**和 _ 新增的攔截函式，則會呼叫以 **_CrtSetReportHook**新增的任何攔截函式**CrtSetReportHookW2**傳回**FALSE**。
 
 此函式有寬字元版本可用。 報表攔截函式採用的字串類型 (寬或窄字元) 必須符合此函式所使用的版本。 針對此函式的寬字元版本搭配使用的報表攔截程序，使用下列函式原型：
 
@@ -83,10 +86,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-這些函式會驗證它們的參數。 如果*模式*或是**pfnNewNook**是無效的這些函式叫用無效參數處理常式中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。
+這些函式會驗證它們的參數。 如果*mode*或**pfnNewNook**無效，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
 
 > [!NOTE]
-> 如果您的應用程式會使用編譯 **/clr**和報告的函式之後呼叫應用程式結束 main，CLR 將會擲回例外狀況，如果報告的函式呼叫任何 CRT 函式。
+> 如果您的應用程式是使用 **/clr**編譯的，而且在應用程式結束 main 之後呼叫報告函式，則 clr 會在報告函數呼叫任何 CRT 函數時擲回例外狀況（exception）。
 
 ## <a name="requirements"></a>需求
 

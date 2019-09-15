@@ -1,11 +1,11 @@
 ---
-title: _Cbuild、 _FCbuild、 _LCbuild
+title: _Cbuild、_FCbuild、_LCbuild
 ms.date: 03/30/2018
-apiname:
+api_name:
 - _Cbuild
 - _FCbuild
 - _LCbuild
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _Cbuild
 - _FCbuild
@@ -29,16 +32,16 @@ helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0ae50f40f0ca0a926e1eef586c6610a04b6ea7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340462"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943221"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild、 _FCbuild、 _LCbuild
+# <a name="_cbuild-_fcbuild-_lcbuild"></a>_Cbuild、_FCbuild、_LCbuild
 
-建構複數的實數和虛數部分。
+從實數和虛數部分中，建立複數。
 
 ## <a name="syntax"></a>語法
 
@@ -51,26 +54,26 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 ### <a name="parameters"></a>參數
 
 *real*<br/>
-建構中複數的實數部分。
+要建立之複數的實數部分。
 
 *imaginary*<br/>
-建構中複數的虛數部分。
+要建立的複數虛數部分。
 
 ## <a name="return-value"></a>傳回值
 
-A **_Dcomplex**， **_Fcomplex**，或 **_Lcomplex**結構，表示複數 (*實際*，*虛數* \*我) 指定的浮點類型的值。
+**_Dcomplex**、 **_Fcomplex**或 **_Lcomplex**結構，代表指定之浮點類型值的複數（*real*，*虛* \*數 i）。
 
 ## <a name="remarks"></a>備註
 
-**_Cbuild**， **_FCbuild**，並 **_LCbuild**函式簡化建立複雜型別。 使用[creal、 crealf、 creall](creal-crealf-creall.md)並[cimag、 cimagf、 cimagl](cimag-cimagf-cimagl.md)函式來擷取表示複數的實數和虛數部分。
+**_Cbuild**、 **_FCbuild**和 **_LCbuild**函式簡化複雜類型的建立。 使用[creal、crealf、creall](creal-crealf-creall.md)和[cimag、cimagf、cimagl](cimag-cimagf-cimagl.md)函式來抓取所表示複數的實數和虛數部分。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**_Cbuild**， **_FCbuild**， **_LCbuild**|\<complex.h>|\<ccomplex>|
+|**_Cbuild**、 **_FCbuild**、 **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-這些函式是 Microsoft 特定的。 型別 **_Dcomplex**， **_Fcomplex**，並 **_Lcomplex**是 Microsoft 特定對等項目未實作 C99 原生類型**double _Complex**， **float _Complex**，以及**long double _Complex**分別。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+這些是 Microsoft 特有的功能。 **_Dcomplex**、 **_Fcomplex**和 **_Lcomplex**類型分別與未的 C99 原生類型**雙重 _Complex**、 **float _Complex**和**long double _Complex**的對應專案相關。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="see-also"></a>另請參閱
 

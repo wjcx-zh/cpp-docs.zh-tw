@@ -1,9 +1,9 @@
 ---
 title: _calloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _calloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eab17348e473a4f642e784defe4569e0e799299e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340856"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939325"
 ---
-# <a name="callocdbg"></a>_calloc_dbg
+# <a name="_calloc_dbg"></a>_calloc_dbg
 
 使用額外空間為偵錯標頭和覆寫緩衝區配置堆積中的記憶體區塊數目 (僅限偵錯版本)。
 
@@ -54,35 +57,35 @@ void *_calloc_dbg(
 要求的每個記憶體區塊大小 (位元組)。
 
 *blockType*<br/>
-要求的記憶體區塊類型： **_CLIENT_BLOCK**或是 **_NORMAL_BLOCK**。
+要求的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 如需配置區塊類型和其使用方式的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。
 
 *filename*<br/>
-要求配置作業之原始程式檔名稱的指標或**NULL**。
+要求配置作業之原始程式檔的名稱的指標，或為**Null**。
 
 *linenumber*<br/>
-其中要求配置作業的原始程式檔中的行號或**NULL**。
+原始程式檔中的行號，其中要求配置作業，或**為 Null**。
 
-*檔名*並*linenumber*參數時，就只能使用 **_calloc_dbg**已明確呼叫或[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)已定義前置處理器常數。
+只有在已明確呼叫 **_calloc_dbg** ，或已定義[_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)預處理器常數時，才可以使用*filename*和*linenumber*參數。
 
 ## <a name="return-value"></a>傳回值
 
-成功完成時，此函式會傳回最後一個配置的記憶體區塊使用者部分的指標，呼叫新的處理常式函式，或傳回**NULL**。 如需傳回行為的完整描述，請參閱＜備註＞一節。 如需如何使用新的處理常式函式的詳細資訊，請參閱 [calloc](calloc.md) 函式。
+成功完成時，此函式會傳回上次配置記憶體區塊之使用者部分的指標，呼叫新的處理常式函式，或傳回**Null**。 如需傳回行為的完整描述，請參閱＜備註＞一節。 如需如何使用新的處理常式函式的詳細資訊，請參閱 [calloc](calloc.md) 函式。
 
 ## <a name="remarks"></a>備註
 
-**_calloc_dbg**是偵錯版本[calloc](calloc.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_calloc_dbg**的呼叫會降低**calloc**。 兩者**calloc**並 **_calloc_dbg**配置*號碼*基底堆積中的記憶體區塊，但 **_calloc_dbg**提供數個偵錯功能：
+**_calloc_dbg**是[calloc](calloc.md)函數的調試版本。 未定義[_debug](../../c-runtime-library/debug.md)時，每個 **_calloc_dbg**的呼叫都會縮減為**calloc**的呼叫。 **Calloc**和 **_calloc_dbg**都會在基底堆積中配置記憶體區塊，但 **_calloc_dbg**提供*了數個*調試功能：
 
 - 區塊之使用者部分任一端上要測試流失的緩衝區。
 
 - 追蹤特定配置類型的區塊類型參數。
 
-- *檔名*/*linenumber*判斷配置要求來源的資訊。
+- filename/ *linenumber*資訊以判斷配置要求的來源。
 
-**_calloc_dbg**配置比要求稍微多一些的空間與每個記憶體區塊*大小*。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。
+**_calloc_dbg**會配置每個記憶體區塊，其空間會比要求的*大小*稍微多一點。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。
 
-**_calloc_dbg**設定**errno**要**ENOMEM**如果記憶體配置失敗;**EINVAL**會傳回您如果需要的記憶體數量 （包含先前所述的額外負荷） 超過 **_HEAP_MAXREQ**。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果記憶體配置失敗， **_calloc_dbg**會將**Errno**設定為**ENOMEM** ;如果所需的記憶體數量（包括先前所述的額外負荷）超過 **_HEAP_MAXREQ**，則會傳回**EINVAL** 。 如需此錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式與其偵錯版本間之差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 

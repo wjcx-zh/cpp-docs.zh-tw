@@ -1,9 +1,9 @@
 ---
 title: clearerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr function
 ms.assetid: a9711cd4-3335-43d4-a018-87bbac5b3bac
-ms.openlocfilehash: c282a577bb7496f899f18abeac857c08388d12f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fd2f7e7dfcf272e806a887b356418b7555913f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340548"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942942"
 ---
 # <a name="clearerr"></a>clearerr
 
@@ -49,9 +52,9 @@ void clearerr(
 
 ## <a name="remarks"></a>備註
 
-**Clearerr**函式重設錯誤指標和檔案結尾指標*串流*。 不會自動清除錯誤指標;一旦設定指定的資料流的錯誤指標之後，該資料流的作業會繼續傳回錯誤值直到**clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[倒轉](rewind.md)呼叫。
+**Clearerr**函數會重設*資料流程*的錯誤指標和檔案結尾指標。 錯誤指示器不會自動清除;一旦設定了指定資料流程的錯誤指示器之後，該資料流程上的[作業會繼續](rewind.md)傳回錯誤值，直到呼叫**clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或倒轉為止。
 
-如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回。 如需詳細資訊**errno**和錯誤碼，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
+如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回。 如需**errno**和錯誤碼的詳細資訊，請參閱[errno 常數](../../c-runtime-library/errno-constants.md)。
 
 這個函式已有更安全的版本可用；請參閱 [clearerr_s](clearerr-s.md)。
 
@@ -97,7 +100,7 @@ int main( void )
 }
 ```
 
-### <a name="input"></a>輸入
+### <a name="input"></a>Input
 
 ```Input
 n

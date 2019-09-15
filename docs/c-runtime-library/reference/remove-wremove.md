@@ -1,10 +1,10 @@
 ---
 title: remove0、_wremove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wremove
 - remove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - remove
 - _wremove
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ceedcf9d3cc2b26a8d91ca923f81f0ce539b64a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357680"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949427"
 ---
-# <a name="remove-wremove"></a>remove0、_wremove
+# <a name="remove-_wremove"></a>remove0、_wremove
 
 刪除檔案。
 
@@ -59,13 +62,13 @@ int _wremove(
 
 ## <a name="return-value"></a>傳回值
 
-如果已成功刪除檔案，這些函式每個都會傳回 0。 否則，它會傳回-1，並設定**errno**到**EACCES**表示路徑指定唯讀檔案，指定一個目錄，或檔案已開啟，或**ENOENT**若要指出的檔案名稱或路徑未找到。
+如果已成功刪除檔案，這些函式每個都會傳回 0。 否則，它會傳回-1，並將**errno**設定為**EACCES** ，以指出路徑指定唯讀檔案、指定目錄或檔案已開啟，或**ENOENT**以指出找不到檔案名或路徑。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的 **_remove**;*路徑*引數 **_wremove**是寬字元字串。 **_wremove**並**移除 （_r)** 行為相同。 必須先關閉檔案的所有處理常式，才能刪除它。
+**remove** 函式會刪除 *path* 指定的檔案。 **_wremove**是寬字元版本的（ **_** ）; **_wremove**的*path*引數是寬字元字串。 否則， **_wremove**和 **_** 的行為會相同。 必須先關閉檔案的所有處理常式，才能刪除它。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,7 +106,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtremovetxt"></a>輸入︰crt_remove.txt
+### <a name="input-crt_removetxt"></a>輸入︰crt_remove.txt
 
 ```Input
 This file will be deleted.

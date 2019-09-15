@@ -1,10 +1,10 @@
 ---
 title: _execvp、_wexecvp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execvp
 - _wexecvp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execvp
 - wexecvp
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60de62a61c78152cd4a2d8053da41a37a4091424
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941795"
 ---
-# <a name="execvp-wexecvp"></a>_execvp、_wexecvp
+# <a name="_execvp-_wexecvp"></a>_execvp、_wexecvp
 
 載入並執行新的子處理序。
 
@@ -64,7 +67,7 @@ intptr_t _wexecvp(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話，這些函式不會傳回呼叫處理序。 傳回值為-1 表示發生錯誤時，在此情況下**errno**設定全域變數。
+如果成功的話，這些函式不會傳回呼叫處理序。 傳回值-1 表示發生錯誤，在此情況下會設定**errno**全域變數。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -80,13 +83,13 @@ intptr_t _wexecvp(
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會載入並執行新處理序，將指標陣列傳遞至命令列引數，並使用**路徑**環境變數尋找要執行的檔案。
+所有這些函式都會載入並執行新的進程，將指標陣列傳遞至命令列引數，並使用**PATH**環境變數尋找要執行的檔案。
 
-**_Execvp**函式會驗證其參數。 如果*cmdname*為 null 指標，或*argv*為 null 指標，指向空陣列，或如果陣列包含作為第一個引數的空字串，這些函式會叫用無效參數處理常式中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。 未啟動任何處理序。
+**_Execvp**函數會驗證它們的參數。 如果*cmdname*為 null 指標，或*argv*為 null 指標、指向空陣列的指標，或如果陣列包含空字串做為第一個引數，則這些函式會叫用不正確參數處理常式，如[參數驗證中所述](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。 未啟動任何處理序。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_execvp**|\<process.h>|\<errno.h>|
 |**_wexecvp**|\<process.h> 或 \<wchar.h>|\<errno.h>|

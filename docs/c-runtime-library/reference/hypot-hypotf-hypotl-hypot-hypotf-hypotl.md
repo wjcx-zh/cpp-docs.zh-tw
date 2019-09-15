@@ -1,14 +1,14 @@
 ---
 title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _hypotf
 - hypot
 - hypotf
 - _hypot
 - _hypotl
 - hypotl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - hypotf
 - hypotl
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157393"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954784"
 ---
-# <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
+# <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
 計算斜邊。
 
@@ -79,18 +82,18 @@ long double _hypotl(
 
 ### <a name="parameters"></a>參數
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **hypot**會傳回斜邊的; 溢位時，長度**hypot**會傳回 INF （無限大） 和**errno**變數會設為**ERANGE**. 您可以使用 **_matherr**修改錯誤處理。
+如果成功， **hypot**會傳回斜邊的長度;溢位時， **hypot**會傳回 INF （無限大），而**errno**變數會設定為**ERANGE**。 您可以使用 **_matherr**來修改錯誤處理。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Hypot**函式會計算兩個邊的長度直角三角形斜邊的長度*x*並*y* （亦即平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
+**Hypot**函數會計算直角三角形的斜邊長度，指定兩端*x*和*y*的長度（換言之， *x*<sup>2</sup>  +  *y*<sup>2</sup>的平方根）。
 
 具有前置底線的函式版本提供舊版標準的相容性。 其行為與不具有前置底線的版本完全相同。 建議針對新程式碼使用不具有前置底線的版本。
 
@@ -98,7 +101,7 @@ long double _hypotl(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**hypot**， **hypotf**， **hypotl**， **_hypot**， **_hypotf**， **_hypotl**|\<math.h>|
+|**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

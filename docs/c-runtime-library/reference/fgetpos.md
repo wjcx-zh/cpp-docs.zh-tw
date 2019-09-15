@@ -1,9 +1,9 @@
 ---
 title: fgetpos
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetpos
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fgetpos
 helpviewer_keywords:
 - fgetpos function
 - streams, file position indicator
 ms.assetid: bfa05c38-1135-418c-bda1-d41be51acb62
-ms.openlocfilehash: e213c9830ffe6edf04b12a80828f14cc48f77524
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27d25b29f656d1df889e5f83857ca437f609a07a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333926"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940835"
 ---
 # <a name="fgetpos"></a>fgetpos
 
@@ -47,20 +50,20 @@ int fgetpos(
 *stream*<br/>
 目標資料流。
 
-*pos*<br/>
+*採購*<br/>
 位置指標儲存區。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **fgetpos**會傳回 0。 在失敗時，它會傳回非零值，並設定**errno**的下列其中一個資訊清單常數 （定義於 STDIO。H):**EBADF**，這表示指定的資料流不是有效的檔案指標或無法存取，或**EINVAL**，這表示*串流*值或值*pos*是無效的例如，如果不是 null 指標。 如果*資料流*或是*pos*會**NULL**指標，函式會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md).
+如果成功， **fgetpos**會傳回0。 失敗時，它會傳回非零值，並將**errno**設定為下列其中一個資訊清單常數（定義于 stdio.h 中。H）：**EBADF**，這表示指定的資料流程不是有效的檔案指標或無法存取，或是**EINVAL**，這表示*資料流程*值或*pos*的值無效，例如，如果其中一個為 null 指標。 如果*stream*或*pos*是**Null**指標，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>備註
 
-**Fgetpos**函式會取得目前的值*串流*引數的檔案位置指標和它的物件中所指向的存放區*pos*。**Fsetpos**函式稍後可以使用資訊儲存在*pos*重設*串流*次其位置的引數的指標**fgetpos**呼叫。 *Pos*值會以內部格式儲存，並僅適用於**fgetpos**並**fsetpos**。
+**Fgetpos**函式會取得*資料流程*引數之檔案位置指標的目前值，並將它儲存在*pos*所指向的物件中。**Fsetpos**函數稍後可以使用儲存在*pos*中的資訊，將*資料流程*引數的指標重設為呼叫**fgetpos**時的位置。 *Pos*值是以內部格式儲存，而且僅供**fgetpos**和**fsetpos**使用。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fgetpos**|\<stdio.h>|
 
@@ -108,13 +111,13 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetpostxt"></a>輸入：crt_fgetpos.txt
+## <a name="input-crt_fgetpostxt"></a>輸入：crt_fgetpos.txt
 
 ```Input
 fgetpos gets a stream's file-position indicator.
 ```
 
-### <a name="output-crtfgetpostxt"></a>輸出 crt_fgetpos.txt
+### <a name="output-crt_fgetpostxt"></a>輸出 crt_fgetpos.txt
 
 ```Output
 after fgetpos: gets a stream

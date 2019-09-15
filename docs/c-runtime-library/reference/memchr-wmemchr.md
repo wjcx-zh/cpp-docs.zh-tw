@@ -1,10 +1,10 @@
 ---
 title: memchr、wmemchr
 ms.date: 03/31/2019
-apiname:
+api_name:
 - wmemchr
 - memchr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memchr
 - wmemchr
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c951716d623d900f975e9d6f8a1c762a155b1a7a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285257"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951937"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -78,18 +81,18 @@ const wchar_t *wmemchr(
 *C*<br/>
 要尋找的字元。
 
-*count*<br/>
+*計數*<br/>
 要檢查的字元數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的第一個位置的指標*c*中*緩衝區*。 否則會傳回 NULL。
+如果成功，會傳回*buffer*中*c*的第一個位置的指標。 否則會傳回 Null。
 
 ## <a name="remarks"></a>備註
 
-`memchr` 並`wmemchr`尋找第一個出現*c*第一次*計數*字元*緩衝區*。 它會停止時發現*c*或當其已簽入第一個*計數*字元。
+`memchr`並`wmemchr`在*buffer*的第一個*計數*字元中尋找第一個出現的*c* 。 當它找到*c*或檢查第一個*計數*字元時，它就會停止。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 巨集會\_CRT\_CONST\_更正\_多載會定義如果兩個**const**和非-**const**這些函式的版本可供使用。 如果您需要非**const**兩者的行為C++中的多載C++，定義符號\_CONST\_傳回。
+在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 採用**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些\_函\_式\_的\_ **CONST**和非**const**版本都可以使用，則會定義宏 CRT CONST 正確的多載。 如果您需要C++中C++兩個多載的非**const**行為，請定義符號\_const\_RETURN。
 
 ## <a name="requirements"></a>需求
 

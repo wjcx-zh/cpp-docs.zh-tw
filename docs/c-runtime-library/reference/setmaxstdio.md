@@ -1,9 +1,9 @@
 ---
 title: _setmaxstdio
 ms.date: 05/21/2019
-apiname:
+api_name:
 - _setmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setmaxstdio
 - _setmaxstdio
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - setmaxstdio function
 - open files, maximum
 ms.assetid: 9e966875-9ff5-47c4-9b5f-e79e83b70249
-ms.openlocfilehash: 94b768d920ffd86a5bd762f8994244dda67fb15f
-ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
+ms.openlocfilehash: 620213b4df9ea555189a1403b3c9e83b55cad6c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66174818"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948226"
 ---
-# <a name="setmaxstdio"></a>_setmaxstdio
+# <a name="_setmaxstdio"></a>_setmaxstdio
 
 設定在資料流 I/O 層級同時開啟的檔案數目上限。
 
@@ -61,7 +64,7 @@ int _setmaxstdio(
 
 **_setmaxstdio** 函式會變更在資料流層級可同時開啟的檔案數量上限值。
 
-C 執行階段 I/O 現在支援在[低 I/O 層級](../../c-runtime-library/low-level-i-o.md)最多同時開啟 8,192 個檔案。 此層級包含使用 **_open**、**_read** 及 **_write** I/O 函式系列開啟及存取的檔案。 根據預設，最多可在[資料流 I/O 層級](../../c-runtime-library/stream-i-o.md)同時開啟 512 個檔案。 此層級包含使用 **fopen**、 及 **fputc** 函式系列開啟及存取的檔案。 在資料流 I/O 層級開啟 512 個檔案的限制，可透過使用 **_setmaxstdio** 函式將上限增加到最多 8,192。
+C 執行階段 I/O 現在支援在[低 I/O 層級](../../c-runtime-library/low-level-i-o.md)最多同時開啟 8,192 個檔案。 此層級包含使用 **_open**、 **_read** 及 **_write** I/O 函式系列開啟及存取的檔案。 根據預設，最多可在[資料流 I/O 層級](../../c-runtime-library/stream-i-o.md)同時開啟 512 個檔案。 此層級包含使用 **fopen**、 及 **fputc** 函式系列開啟及存取的檔案。 在資料流 I/O 層級開啟 512 個檔案的限制，可透過使用 **_setmaxstdio** 函式將上限增加到最多 8,192。
 
 因為串流 I/O 層級函式 (例如 **fopen**) 是建置在低 I/O 層級函式上，8,192 的上限是透過 C 執行階段程式庫同時開啟檔案的固定數量上限。
 

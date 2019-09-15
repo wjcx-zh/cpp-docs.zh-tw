@@ -1,7 +1,7 @@
 ---
 title: 過時的函式
 ms.date: 01/22/2019
-apiname:
+api_name:
 - _beep
 - _sleep
 - _loaddll
@@ -10,7 +10,7 @@ apiname:
 - is_wctype
 - _getsystime
 - _setsystime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -25,7 +25,10 @@ apilocation:
 - api-ms-win-crt-runtime-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - is_wctype
 - _loaddll
@@ -50,12 +53,12 @@ helpviewer_keywords:
 - _sleep function
 - _seterrormode function
 ms.assetid: 8e14c2d4-1481-4240-8586-47eb43db02b0
-ms.openlocfilehash: ff0e4376c021fcfd46d4631d1598a3826e9f2851
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: da5bd0569e7116bfd45e6112da8231d6fc2c9b44
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500027"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940134"
 ---
 # <a name="obsolete-functions"></a>過時的函式
 
@@ -81,13 +84,13 @@ ms.locfileid: "69500027"
 |-----------------------|-----------------|
 |[_cgets、_cgetws](../c-runtime-library/cgets-cgetws.md)|[_cgets_s、_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|
 |[gets、_getws](../c-runtime-library/gets-getws.md)|[gets_s、_getws_s](../c-runtime-library/reference/gets-s-getws-s.md)|
-|[_get_output_format](../c-runtime-library/get-output-format.md)|None|
+|[_get_output_format](../c-runtime-library/get-output-format.md)|無|
 |[_heapadd](../c-runtime-library/heapadd.md)|None|
-|[_heapset](../c-runtime-library/heapset.md)|None|
-|[inp、inpw](../c-runtime-library/inp-inpw.md)|None|
-|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|None|
-|[outp、outpw](../c-runtime-library/outp-outpw.md)|None|
-|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|None|
+|[_heapset](../c-runtime-library/heapset.md)|無|
+|[inp、inpw](../c-runtime-library/inp-inpw.md)|無|
+|[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)|無|
+|[outp、outpw](../c-runtime-library/outp-outpw.md)|無|
+|[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)|無|
 |[_set_output_format](../c-runtime-library/set-output-format.md)|None|
 
 ## <a name="removed-from-the-crt-in-earlier-versions-of-visual-studio"></a>舊版 Visual Studio 中已從 CRT 移除的函式

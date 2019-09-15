@@ -1,9 +1,9 @@
 ---
 title: __p__fmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __p__fmode
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr120.dll
 - msvcr90.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __p__fmode
 helpviewer_keywords:
 - __p__fmode
 ms.assetid: 1daa1394-81eb-43aa-a71b-4cc6acf3207b
-ms.openlocfilehash: bdb390ef5ae7254c463a3abd66860559cebeeeb9
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: 6f7676fc5c9958be3d0567e6bf22a11367094150
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703047"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939976"
 ---
-# <a name="pfmode"></a>__p__fmode
+# <a name="__p__fmode"></a>__p__fmode
 
 指向 `_fmode` 全域變數會指定檔案 I/O 作業的預設「檔案轉譯模式」。
 

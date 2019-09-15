@@ -1,25 +1,28 @@
 ---
 title: scanf 類型欄位字元
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr90.dll
 - msvcr80.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr120.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scanf
 helpviewer_keywords:
 - scanf function, type field characters
 ms.assetid: 5d546a84-715b-44ca-b1c5-bbe997f9ff62
-ms.openlocfilehash: 10783ffd6b4f343e4dd768a01396878c186503fa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 86b57aff9cba5065c7c8053dc26e63e3c0cae169
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747666"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957837"
 ---
 # <a name="scanf-type-field-characters"></a>scanf 類型欄位字元
 
@@ -33,15 +36,15 @@ ms.locfileid: "57747666"
 |---------------|----------------------------|----------------------|--------------------------------------|
 |`c`|字元。 搭配 `scanf` 函式使用時，會指定單一位元組字元；搭配 `wscanf` 函式使用時，會指定全形字元。 指定 `c` 時，會讀取通常會跳過的空白字元。 若要讀取下一個非空白單一位元組字元，請使用 `%1s`；若要讀取下一個非空白寬字元，請使用 `%1ws`。|搭配 `char` 函式使用時會指向 `scanf` ，搭配 `wchar_t` 函式使用時會指向 `wscanf` 。|必要項。 大小不包含 null 結束字元的空間。|
 |`C`|相反大小字元。 搭配 `scanf` 函式使用時，會指定全形字元；搭配 `wscanf` 函式使用時，會指定單一位元組字元。 指定 `C` 時，會讀取通常會跳過的空白字元。 若要讀取下一個非空白單一位元組字元，請使用 `%1s`；若要讀取下一個非空白寬字元，請使用 `%1ws`。|搭配 `wchar_t` 函式使用時會指向 `scanf` ，搭配 `char` 函式使用時會指向 `wscanf` 。|必要項。 大小引數不包含 null 結束字元的空間。|
-|`d`|十進位整數。|指向 `int`。|否。|
-|`i`|整數。 若輸入的字串開頭為「0x」或「0X」則屬於十六進位，若字串開頭為「0」則屬於八進位，否則為十進位。|指向 `int`。|否。|
-|`o`|八進位整數。|指向 `int`。|否。|
-|`p`|十六進位數字中的指標位址。 已讀取數字的最大數目取決於指標大小 (32 或 64 位元)，而這取決於電腦架構。 "0x" 或 "0X" 視為前置詞。|指向 `void*`。|否。|
-|`u`|不帶正負號的十進位整數。|指向 `unsigned int`。|否。|
-|`x`|十六進位整數。|指向 `int`。|否。|
+|`d`|十進位整數。|指向 `int`。|資料分割|
+|`i`|整數。 若輸入的字串開頭為「0x」或「0X」則屬於十六進位，若字串開頭為「0」則屬於八進位，否則為十進位。|指向 `int`。|資料分割|
+|`o`|八進位整數。|指向 `int`。|資料分割|
+|`p`|十六進位數字中的指標位址。 已讀取數字的最大數目取決於指標大小 (32 或 64 位元)，而這取決於電腦架構。 "0x" 或 "0X" 視為前置詞。|指向 `void*`。|資料分割|
+|`u`|不帶正負號的十進位整數。|指向 `unsigned int`。|資料分割|
+|`x`|十六進位整數。|指向 `int`。|資料分割|
 |`e`, `E`, `f`, `F`, `g`, `G`|浮點值包含選用正負號 (+ 或 -)、一或多個一系列包含小數點的十進位數字，以及後面接著選擇性帶正負號的整數值之選擇性指數 (「e」或「E」)。|指向 `float`。|否。|
-|`a`、 `A`|浮點數值包含一系列一或多個十六進位數字，該類數字包含選擇性小數點，以及後面接著十進位值的指數 ("p" 或 "P")。|指向 `float`。|否。|
-|`n`|沒有從資料流或緩衝區輸入讀取。|指向用來成功儲存字元數的 `int`，它會從資料流或緩衝讀取字元數，直到目前呼叫 `scanf` 函式或 `wscanf` 函式為止。|否。|
+|`a`、 `A`|浮點數值包含一系列一或多個十六進位數字，該類數字包含選擇性小數點，以及後面接著十進位值的指數 ("p" 或 "P")。|指向 `float`。|資料分割|
+|`n`|沒有從資料流或緩衝區輸入讀取。|指向用來成功儲存字元數的 `int`，它會從資料流或緩衝讀取字元數，直到目前呼叫 `scanf` 函式或 `wscanf` 函式為止。|資料分割|
 |`s`|字串，最多至第一個空白字元 (空格、定位字元或新行字元)。 若要讀取未以空白字元分隔的字串，請使用一組方括弧 (`[ ]`)，如 [scanf Width Specification](../c-runtime-library/scanf-width-specification.md)。|搭配 `scanf` 函式使用時，表示單一位元組字元；搭配 `wscanf` 函式使用時，表示全形字元陣列。 在任一情況下，字元陣列必須有足夠大的空間，以便納入輸入欄位以及自動加上之結束的 null 字元。|必要項。 大小包含 null 結束字元的空間。|
 |`S`|相反大小字串，最多至第一個空白字元 (空格、定位字元或新行字元)。 若要讀取未以空白字元分隔的字串，請使用一組方括弧 (`[ ]`)，如 [scanf 寬度規格](../c-runtime-library/scanf-width-specification.md)中所述。|搭配 `scanf` 函式使用時，表示寬字元陣列；搭配 `wscanf` 函式使用時，表示單一位元組字元陣列。 在任一情況下，字元陣列必須有足夠大的空間，以便納入輸入欄位以及自動加上之結束的 null 字元。|必要項。 大小包含 null 結束字元的空間。|
 

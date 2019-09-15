@@ -1,12 +1,12 @@
 ---
-title: strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
+title: strcmp、wcscmp、_mbscmp、_mbscmp_l
 ms.date: 01/22/2019
-apiname:
+api_name:
 - wcscmp
 - _mbscmp
 - _mbscmp_l
 - strcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscmp
 - _mbscmp_l
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4bef0c61122e93bd45bc0d1238030743f1196d9e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354219"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957966"
 ---
-# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp、 wcscmp、 _mbscmp、 _mbscmp_l
+# <a name="strcmp-wcscmp-_mbscmp-_mbscmp_l"></a>strcmp、wcscmp、_mbscmp、_mbscmp_l
 
 比較字串。
 
 > [!IMPORTANT]
-> **_mbscmp**並 **_mbscmp_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscmp**和 **_mbscmp_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -80,7 +83,7 @@ int _mbscmp_l(
 
 ### <a name="parameters"></a>參數
 
-*string1*， *string2*<br/>
+*string1*、 *string2*<br/>
 以 Null 結束的待比較字串。
 
 *locale*<br/>
@@ -88,19 +91,19 @@ int _mbscmp_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式的傳回值表示的序數關聯*string1*要*string2*。
+每個函式的傳回值表示*string1*到*string2*的序數關聯性。
 
 |值|string1 與 string2 的關係|
 |-----------|----------------------------------------|
-|< 0|*string1*是小於*string2*|
-|0|*string1*等同於*string2*|
+|< 0|*string1*小於*string2*|
+|0|*string1*等同于*string2*|
 |> 0|*string1*大於*string2*|
 
-參數驗證錯誤時， **_mbscmp**並 **_mbscmp_l**傳回 **_NLSCMPERROR**，其定義於\<h > 和\<m >。
+在參數驗證錯誤上， **_mbscmp**和 **_mbscmp_l**會傳回 **_NLSCMPERROR**，其定義于\<string. h > 和\<g. >。
 
 ## <a name="remarks"></a>備註
 
-**Strcmp**函式會執行序數比較*string1*並*string2*和傳回值，這個值指出其關聯性。 **wcscmp**並 **_mbscmp**分別是寬字元和多位元組字元版本**strcmp**。 **_mbscmp**辨識多位元組字元序列，根據目前的多位元組字碼頁，並傳回 **_NLSCMPERROR**在發生錯誤。 **_mbscmp_l**具有相同的行為，但會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或是*string2*為 null 指標， **_mbscmp**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行 **_mbscmp**並 **_mbscmp_l**傳回 **_NLSCMPERROR** ，並設定**errno**到**EINVAL**. **strcmp**並**wcscmp**不會驗證其參數。 除此之外，這些函式的行為相同。
+**Strcmp**函數會執行*string1*和*string2*的序數比較，並傳回指出其關聯性的值。 **wcscmp**和 **_mbscmp**分別是寬字元和多位元組字元版本的**strcmp**。 **_mbscmp**會根據目前的多位元組字碼頁來辨識多位元組字元序列，並在發生錯誤時傳回 **_NLSCMPERROR** 。 **_mbscmp_l**具有相同的行為，但會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱[字碼頁](../../c-runtime-library/code-pages.md)。 此外，如果*string1*或*string2*是 null 指標， **_mbscmp**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_mbscmp**和 **_Mbscmp_l**會傳回 **_NLSCMPERROR** ，並將**errno**設定為**EINVAL**。 **strcmp**和**wcscmp**不會驗證它們的參數。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -108,13 +111,13 @@ int _mbscmp_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscmp**|**strcmp**|**_mbscmp**|**wcscmp**|
 
-**Strcmp**函式與差異**strcoll**中的函式**strcmp**比較為序數，且不會受到地區設定。 **strcoll**使用，依辭典編纂順序比較字串**LC_COLLATE**目前地區設定的類別。 如需詳細資訊**LC_COLLATE**分類中，請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)。
+**Strcmp**函數與**strcoll**函數不同之處在于， **strcmp**比較是序數，而且不會受到地區設定的影響。 **strcoll**會使用目前地區設定的**LC_COLLATE**類別目錄來比較字串詞典編纂。 如需**LC_COLLATE**類別的詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md)。
 
 在 "C" 地區設定中，字元集 (ASCII 字元集) 的字元順序與詞典編纂的字元順序相同。 不過，其他地區設定中，字元集的字元順序可能與詞典編纂順序不同。 例如，在某些歐洲的地區設定中，字元集中的字元 'a' (值 0x61) 會在字元 'ä' (值 0xE4) 之前，但以詞典編纂而言，字元 'ä' 是在字元 'a' 之前。
 
-在地區設定中的字元集和詞典編纂字元順序不同，您可以使用**strcoll**而不是**strcmp**為字串的詞典編纂的比較。 或者，您可以使用**strxfrm**原始字串，然後再使用**strcmp**產生的字串。
+在字元集和詞典編纂字元順序不同的地區設定中，您可以使用**strcoll**而不是**strcmp**來比較字串的詞典編纂。 或者，您可以在原始字串上使用**strxfrm** ，然後在產生的字串上使用**strcmp** 。
 
-**Strcmp**函式會區分大小寫。 **\_stricmp**，  **\_wcsicmp**，並 **\_mbsicmp**第一次將它們轉換成其小寫的形式來比較字串。 包含位於 'Z' 之間字元的兩個字串和 'a' ASCII 資料表中 ('['、'\\'，']'，' ^'、 '_' 和 '\`') 比較以不同的方式，根據其大小寫。 例如，兩個字串"ABCDE"和"ABCD ^"比較其中一個方法，如果該比較為小寫 ("abcde">"abcd ^") 以及的其他方式 ("ABCDE"<"ABCD ^") 如果比較為大寫。
+**Strcmp**函數會區分大小寫。 stricmp、 **wcsicmp和\_**  **mbsicmp會先將字串轉換成\_** 小寫形式，來比較它們。 **\_** 包含 ASCII 資料表中 ' Z ' 和 ' a ' 之間字元（' ['、'\\'、'] '、' ^ '、' _ ' 和 '\`'）的兩個字串，會根據其大小寫進行不同的比較。 例如，如果比較為大寫，則兩個字串 "ABCDE" 和 "ABCD ^" 比較一種方法（"ABCDE" > "abcd ^"），另一種方式則是（"ABCDE" < "ABCD ^"）。
 
 ## <a name="requirements"></a>需求
 

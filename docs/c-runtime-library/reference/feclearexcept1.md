@@ -1,9 +1,9 @@
 ---
 title: feclearexcept1
 ms.date: 04/05/2018
-apiname:
+api_name:
 - feclearexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - feclearexcept
 - fenv/feclearexcept
 helpviewer_keywords:
 - feclearexcept function
 ms.assetid: ef419da3-c248-4432-b53c-8e7a475d9533
-ms.openlocfilehash: 3c2f037a5be903fc006debfa7319c483431fdd92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9899d7068a289e7d5f71cb42a8373869d60c3070
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334732"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941263"
 ---
 # <a name="feclearexcept"></a>feclearexcept
 
@@ -48,11 +51,11 @@ int feclearexcept(
 
 ## <a name="return-value"></a>傳回值
 
-傳回零，如果*removed*為零，或如果已順利清除所有指定的例外狀況。 否則，傳回非零值。
+如果*以外*為零，或如果已成功清除所有指定的例外狀況，則傳回零。 否則，傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**Feclearexcept**函式嘗試清除浮點點所指定的例外狀況狀態旗標*removed*。 函式支援這些在 fenv.h 中定義的例外狀況巨集︰
+**Feclearexcept**函數會嘗試清除*以外*所指定的浮點例外狀況狀態旗標。 函式支援這些在 fenv.h 中定義的例外狀況巨集︰
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -63,11 +66,11 @@ int feclearexcept(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALL_EXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Removed*引數可以是零或一或多個受支援例外狀況巨集的位元 OR。 未定義任何其他引數值的結果。
+*以外*引數可以是零，或一或多個受支援例外狀況宏的位 or。 未定義任何其他引數值的結果。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**feclearexcept**|\<fenv.h>|\<cfenv>|
 

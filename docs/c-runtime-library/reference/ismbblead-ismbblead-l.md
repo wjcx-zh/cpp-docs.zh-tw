@@ -1,10 +1,10 @@
 ---
 title: _ismbblead、_ismbblead_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbblead_l
 - _ismbblead
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbblead_l
 - istlead
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0f9ec748a86d5d1413cf4f881234d786c2a2d78
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157207"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954057"
 ---
-# <a name="ismbblead-ismbbleadl"></a>_ismbblead、_ismbblead_l
+# <a name="_ismbblead-_ismbblead_l"></a>_ismbblead、_ismbblead_l
 
 測試字元以判斷是否為多位元組字元的的前導位元組。
 
@@ -65,13 +68,13 @@ int _ismbblead_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回非零值，如果整數*c*是多位元組字元的第一個位元組。
+如果整數*c*是多位元組字元的第一個位元組，則會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-多位元組字元是由一個前導位元組，後面接著一個後置位元組所組成。 前導位元組會以所處指定字元集的特定範圍來識別。 例如，在程式碼頁 932 中，前導位元組介於 0x81-0x9F 和 0xE0-0xFC。
+多位元組字元是由一個前導位元組，後面接著一個後置位元組所組成。 前導位元組會以所處指定字元集的特定範圍來識別。 例如，僅限字碼頁932，前導位元組範圍從 0x81-0x9F 和 0xE0-0xFC。
 
-**_ismbblead**會針對地區設定相關行為使用目前的地區設定。 **_ismbblead_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_ismbblead**會針對與地區設定相關的行為使用目前的地區設定。 **_ismbblead_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

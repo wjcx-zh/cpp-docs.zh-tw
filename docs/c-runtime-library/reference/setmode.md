@@ -1,9 +1,9 @@
 ---
 title: _setmode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _setmode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _setmode
 helpviewer_keywords:
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - files [C++], translation
 - setmode function
 ms.assetid: 996ff7cb-11d1-43f4-9810-f6097182642a
-ms.openlocfilehash: 67cca27ba03a99d7e192d438a98f1bb3a93845ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f14cc9451b93a9077916b8c650645990ba654a3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356382"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948583"
 ---
-# <a name="setmode"></a>_setmode
+# <a name="_setmode"></a>_setmode
 
 設定檔案轉譯模式。
 
@@ -58,23 +61,23 @@ int _setmode (
 
 若成功，會傳回之前的轉譯模式。
 
-如果將無效參數傳遞至此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 若要繼續，此函數會傳回-1 和集合允許執行**errno**設為**EBADF**，表示無效的檔案描述項，或**EINVAL**，表示無效*模式*引數。
+如果將無效參數傳遞至此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，並將**errno**設定為**EBADF**（表示不正確檔案描述項）或**EINVAL**（表示不正確*模式*引數）。
 
 如需有關這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Setmode**函式會設定*模式*所指定之檔案的轉譯模式*fd*。 傳遞 **_O_TEXT**作為*模式*設定文字 （也就，已轉譯） 模式。 歸位換摘要 (CR-LF) 組合會轉譯成單一換行字元上輸入的字元。 換行字元會在輸出中轉譯為 CR-LF 組合。 傳遞 **_O_BINARY**設定二進位 （未轉譯） 模式，以隱藏這些翻譯。
+**_Setmode**函數會將*fd*所提供之檔案的轉譯模式設定為*mode* 。 以*模式*傳遞 **_O_TEXT**會設定文字（也就是已轉譯）模式。 在輸入時，會將換行字元（CR-LF）組合轉譯成單一換行字元。 換行字元會在輸出中轉譯為 CR-LF 組合。 傳遞 **_O_BINARY**會設定二進位（未轉譯）模式，其中會抑制這些翻譯。
 
-您也可以傳遞 **_O_U16TEXT**， **_O_U8TEXT**，或 **_O_WTEXT**啟用 Unicode 模式，如本文件稍後的第二個範例所示。
-
-> [!CAUTION]
-> Unicode 模式為寬列印函式 (例如`wprintf`) 並不支援窄的列印功能。 使用 Unicode 模式資料流上窄列印函式就會觸發判斷提示。
-
-**_setmode**通常用來修改的預設轉譯模式**stdin**並**stdout**，但您可以將其用於任何檔案。 如果您套用 **_setmode**若要針對資料流的檔案描述項，呼叫 **_setmode**才能執行任何輸入或輸出資料流的作業。
+您也可以傳遞 **_O_U16TEXT**、 **_O_U8TEXT**或 **_O_WTEXT**來啟用 Unicode 模式，如本檔稍後的第二個範例所示。
 
 > [!CAUTION]
-> 如果您資料寫入檔案資料流，明確地清除程式碼使用[fflush](fflush.md)使用之前 **_setmode**變更模式。 若您沒有清除代碼，可能會發生未預期的行為。 若您沒有將資料寫入資料流，則不用清除代碼。
+> Unicode 模式適用于寬列印函式（例如） `wprintf`，不支援用於窄的列印功能。 在 Unicode 模式資料流程上使用窄的 print 函數會觸發判斷提示。
+
+**_setmode**通常用來修改**stdin**和**stdout**的預設轉譯模式，但是您可以在任何檔案上使用它。 如果您將 **_setmode**套用至資料流程的檔案描述元，請在資料流程上執行任何輸入或輸出作業之前，先呼叫 **_setmode** 。
+
+> [!CAUTION]
+> 如果您將資料寫入檔案資料流程，請先使用[fflush](fflush.md)明確地清除程式碼，然後再使用 **_setmode**來變更模式。 若您沒有清除代碼，可能會發生未預期的行為。 若您沒有將資料寫入資料流，則不用清除代碼。
 
 ## <a name="requirements"></a>需求
 

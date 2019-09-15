@@ -1,12 +1,12 @@
 ---
 title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cwprintf_l
 - _cprintf_l
 - _cwprintf
 - _cprintf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _cwprintf
 - cwprintf
@@ -45,14 +48,14 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0dfe22312f5a4736a6bc1b7a52e90dfa425a14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335328"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942654"
 ---
-# <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
+# <a name="_cprintf-_cprintf_l-_cwprintf-_cwprintf_l"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
 格式化並列印至主控台。 已有更安全的版本可用；請參閱 [_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l](cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)。
 
@@ -95,13 +98,13 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>備註
 
-這些函式格式化並列印一系列的字元和值到主控台，直接使用 **_putch**函式 (**_putwch** for **_cwprintf**) 來輸出字元. 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法，printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 不同於**fprintf**， **printf**，並**sprintf**函式，都不 **_cprintf**也 **_cwprintf**會將換行字元轉譯為歸位字元傳回換行字元 (CR-LF) 組合時輸出。
+這些函式會使用 **_putch**函式（ **_putwch** for **_cwprintf**）來輸出字元，將一連串的字元和值直接格式化並列印到主控台。 *Argument_list* （如果有的話）中的每個引數都會根據*格式*的對應格式規格進行轉換和輸出。 *Format*引數會使用[printf 和 wprintf 函式的格式規格語法](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 與**fprintf**、 **printf**和**sprintf**函式不同的是， **_cprintf**或 **_cwprintf**都不會在輸出時，將換行字元轉譯為分行符號（CR-LF）組合。
 
-重要的差異在於 **_cwprintf**會顯示在 Windows 中使用時的 Unicode 字元。 不同於 **_cprintf**， **_cwprintf**會使用目前的主控台地區設定。
+重要的差異在於， **_cwprintf**會在 Windows 中使用時顯示 Unicode 字元。 不同于 **_cprintf**， **_cwprintf**會使用目前的主控台地區設定。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。
 
-**_cprintf**驗證*格式*參數。 如果*格式*為 null 指標，函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。
+**_cprintf**會驗證*format*參數。 如果*format*是 null 指標，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，並將**errno**設定為**EINVAL**。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -117,8 +120,8 @@ int _cwprintf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_cprintf**， **_cprintf_l**|\<conio.h>|
-|**_cwprintf**， **_cwprintf_l**|\<conio.h>|
+|**_cprintf**、 **_cprintf_l**|\<conio.h>|
+|**_cwprintf**、 **_cwprintf_l**|\<conio.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

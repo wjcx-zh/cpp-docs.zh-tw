@@ -1,9 +1,9 @@
 ---
 title: _aligned_recalloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_recalloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - aligned_recalloc
 - _aligned_recalloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - aligned_recalloc function
 - _aligned_recalloc function
 ms.assetid: d3da3dcc-79ef-4273-8af5-ac7469420142
-ms.openlocfilehash: ce505c5a389d4ff6aa12a88bfc47fb0a6f026eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef25769a04b27b02ccda16e86451a068ab0a0b84
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335603"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943772"
 ---
-# <a name="alignedrecalloc"></a>_aligned_recalloc
+# <a name="_aligned_recalloc"></a>_aligned_recalloc
 
 變更使用 [_aligned_malloc](aligned-malloc.md) 或 [_aligned_offset_malloc](aligned-offset-malloc.md) 所配置的記憶體區塊大小，並將記憶體初始化為 0。
 
@@ -61,15 +64,15 @@ void * _aligned_recalloc(
 
 ## <a name="return-value"></a>傳回值
 
-**_aligned_recalloc**傳回重新配置後 （且可能有移動） 記憶體區塊的 void 指標。 傳回值是**NULL**如果大小為零，而且緩衝區引數不是**NULL**，或如果沒有足夠的可用記憶體將區塊展開指定的大小。 在第一種情況中，會釋放原始區塊。 在第二種情況中，原始區塊會保留不變。 儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得 Void 類型以外的指標，請對傳回值使用類型轉換。
+**_aligned_recalloc**會傳回已重新配置（且可能已移動）記憶體區塊的 void 指標。 如果大小為零，且緩衝區引數不是**null**，或如果沒有足夠的可用記憶體可將區塊展開為指定的大小，則傳回值會是**Null** 。 在第一種情況中，會釋放原始區塊。 在第二種情況中，原始區塊會保留不變。 儲存空間的傳回值指標，是能夠適當地對齊任何物件類型之儲存區的保證。 若要取得 Void 類型以外的指標，請對傳回值使用類型轉換。
 
 重新配置記憶體並變更區塊的對齊是不對的。
 
 ## <a name="remarks"></a>備註
 
-**_aligned_recalloc**為基礎**malloc**。 如需使用詳細資訊 **_aligned_offset_malloc**，請參閱[malloc](malloc.md)。
+**_aligned_recalloc**是以**malloc**為基礎。 如需使用 **_aligned_offset_malloc**的詳細資訊，請參閱[malloc](malloc.md)。
 
-此函式會將**errno**要**ENOMEM**如果記憶體配置失敗，或者要求的大小大於 **_HEAP_MAXREQ**。 如需詳細資訊**errno**，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_recalloc**會驗證其參數。 如果*對齊*不是乘冪為 2，此函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**NULL**並設定**errno**來**EINVAL**。
+如果記憶體配置失敗，或是要求的大小大於 **_HEAP_MAXREQ**，則此函式會將**Errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_recalloc**會驗證其參數。 如果*對齊*不是2的乘冪，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

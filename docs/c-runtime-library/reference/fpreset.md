@@ -1,9 +1,9 @@
 ---
 title: _fpreset
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _fpreset
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fpreset
 - fpreset
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 842b9c794d04d71f8f6ca97e35fb3cac2f7bb1ec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333231"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957008"
 ---
-# <a name="fpreset"></a>_fpreset
+# <a name="_fpreset"></a>_fpreset
 
 重設浮點套件。
 
@@ -43,13 +46,13 @@ void _fpreset( void );
 
 ## <a name="remarks"></a>備註
 
-**_Fpreset**函式會重新初始化浮點數學套件。 **_fpreset**通常會搭配**訊號**， **system**，或有 **_exec**或是 **_spawn**函式。 如果程式捕捉浮點錯誤信號 (**SIGFPE**) 與**訊號**，它可以安全地復原浮點錯誤，藉由叫用 **_fpreset**和使用**longjmp**。
+**_Fpreset**函數會重新初始化浮點數學封裝。 **_fpreset**通常用於**信號**、**系統**或 **_exec**或 **_spawn**函式。 如果程式使用**信號**來攔截浮點錯誤信號（**SIGFPE**），它可以藉由叫用 **_fpreset**並使用**longjmp**，安全地從浮點錯誤復原。
 
-進行編譯時，此函式已被取代[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)因為 common language runtime 只支援預設的浮點精確度。
+使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯時，此函式已被取代，因為 Common language runtime 只支援預設的浮點精確度。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_fpreset**|\<float.h>|
 

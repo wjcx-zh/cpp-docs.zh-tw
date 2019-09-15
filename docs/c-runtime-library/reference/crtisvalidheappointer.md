@@ -1,9 +1,9 @@
 ---
 title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtIsValidHeapPointer
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8746eb2da90ac5515d92113b977011a4647fe6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339386"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942389"
 ---
-# <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
+# <a name="_crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
 確認指定的指標是在某個 C 執行階段程式庫所配置的堆積中，但呼叫端的 CRT 程式庫不一定需要。 在 Visual Studio 2010 之前的 CRT 版本中，這會確認指定的指標是在本機堆積中 (僅限偵錯版本)。
 
@@ -48,11 +51,11 @@ int _CrtIsValidHeapPointer(
 
 ## <a name="return-value"></a>傳回值
 
-**_CrtIsValidHeapPointer**如果指定的指標是在所有 CRT 程式庫執行個體都共用的堆積，則傳回 TRUE。 在 Visual Studio 2010 之前的 CRT 版本中，這會確認指定的指標是在本機堆積中 (僅限偵錯版本)。 否則，此函式會傳回 FALSE。
+如果指定的指標位於所有 CRT 程式庫實例所共用的堆積中，則 **_CrtIsValidHeapPointer**會傳回 TRUE。 在 Visual Studio 2010 之前的 CRT 版本中，這會確認指定的指標是在本機堆積中 (僅限偵錯版本)。 否則，此函式會傳回 FALSE。
 
 ## <a name="remarks"></a>備註
 
-不建議您使用這個函式。 從 Visual Studio 2010 CRT 程式庫開始，所有 CRT 程式庫都會共用一個 OS 堆積 (「處理序堆積」)。 **_CrtIsValidHeapPointer**函式會報告是否指標配置在 CRT 堆積中，而非它所呼叫端的 CRT 程式庫配置。 例如，請考慮使用 CRT 程式庫的 Visual Studio 2010 版本所配置的區塊。 如果 **_CrtIsValidHeapPointer** Visual Studio 2012 版本的 CRT 程式庫所匯出的函式測試指標，則會傳回 TRUE。 這不再是有用的測試。 在 Visual Studio 2010 之前的 CRT 程式庫版本中，此函式用來確定特定記憶體位址是在本機堆積中。 本機堆積指的是 C 執行階段程式庫的特定執行個體所建立和管理的堆積。 如果動態連結程式庫 (DLL) 包含與執行階段程式庫的靜態連結，則會有執行階段堆積的專屬執行個體，因此有其專屬堆積，而與應用程式的本機堆積無關。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtIsValidHeapPointer**會在前置處理期間移除。
+不建議您使用這個函式。 從 Visual Studio 2010 CRT 程式庫開始，所有 CRT 程式庫都會共用一個 OS 堆積 (「處理序堆積」)。 **_CrtIsValidHeapPointer**函式會報告指標是否配置於 CRT 堆積中，但不是由呼叫端的 CRT 程式庫配置。 例如，請考慮使用 CRT 程式庫的 Visual Studio 2010 版本所配置的區塊。 如果 Visual Studio 2012 版的 CRT 程式庫所匯出的 **_CrtIsValidHeapPointer**函式會測試指標，則會傳回 TRUE。 這不再是有用的測試。 在 Visual Studio 2010 之前的 CRT 程式庫版本中，此函式用來確定特定記憶體位址是在本機堆積中。 本機堆積指的是 C 執行階段程式庫的特定執行個體所建立和管理的堆積。 如果動態連結程式庫 (DLL) 包含與執行階段程式庫的靜態連結，則會有執行階段堆積的專屬執行個體，因此有其專屬堆積，而與應用程式的本機堆積無關。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtIsValidHeapPointer**的呼叫。
 
 因為此函式會傳回 TRUE 或 FALSE，所以可將該函式傳遞至其中一個 [_ASSERT](assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 如果指定的位址不在本機堆積內，則下列範例會造成判斷提示失敗：
 
@@ -60,7 +63,7 @@ int _CrtIsValidHeapPointer(
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-如需有關如何 **_CrtIsValidHeapPointer**可以搭配其他偵錯函式和巨集，請參閱[報告巨集](/visualstudio/debugger/macros-for-reporting)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+如需 **_CrtIsValidHeapPointer**如何搭配其他 debug 函數和宏使用的詳細資訊，請參閱[報告宏](/visualstudio/debugger/macros-for-reporting)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>需求
 

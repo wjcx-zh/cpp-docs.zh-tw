@@ -1,10 +1,10 @@
 ---
 title: _lseek、_lseeki64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lseeki64
 - _lseek
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lseeki64
 - _lseek
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 4d0320b45cb8cd99f1d9f6494b7dcb17bc545a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285922"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952979"
 ---
-# <a name="lseek-lseeki64"></a>_lseek、_lseeki64
+# <a name="_lseek-_lseeki64"></a>_lseek、_lseeki64
 
 將檔案指標移至指定的位置。
 
@@ -68,13 +71,13 @@ __int64 _lseeki64(
 
 ## <a name="return-value"></a>傳回值
 
-**_lseek**傳回位移，以位元組為單位的檔案從一開始的新位置。 **_lseeki64**的位移傳回 64 位元整數。 此函數會傳回-1l 表示錯誤。 如果傳遞的參數無效 (例如檔案描述項不正確)、*origin* 的值無效，或是 *offset* 所指定的位置在檔案開頭之前，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**要**EBADF**並傳回-1l。 在沒有搜尋功能的裝置上 (例如終端機和印表機)，傳回的值未定義。
+**_lseek**會從檔案的開頭傳回新位置的位移（以位元組為單位）。 **_lseeki64**會傳回64位整數中的位移。 函式會傳回-1L 以表示錯誤。 如果傳遞的參數無效 (例如檔案描述項不正確)、*origin* 的值無效，或是 *offset* 所指定的位置在檔案開頭之前，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EBADF** ，並傳回-1L。 在沒有搜尋功能的裝置上 (例如終端機和印表機)，傳回的值未定義。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Lseek**函式將與相關聯的檔案指標移至*fd*到新位置*位移*位元組*原點*。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
+**_Lseek**函式會將與*fd*相關聯的檔案指標移至從來源*位移*位元組的新位置。 對檔案的下一項作業會在新位置進行。 *origin* 引數必須是定義於 Stdio.h 中的下列其中一個常數。
 
 |*原始*值||
 |-|-|
@@ -82,7 +85,7 @@ __int64 _lseeki64(
 | **SEEK_CUR** | 檔案指標的目前位置。 |
 | **SEEK_END** | 檔案結尾。 |
 
-您可以使用 **_lseek**將指標重新置放任何位置在檔案或檔案結尾之外。
+您可以使用 **_lseek** ，將指標重新放置在檔案中的任何位置或超出檔案結尾。
 
 ## <a name="requirements"></a>需求
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlseekcinput"></a>輸入︰crt_lseek.c_input
+### <a name="input-crt_lseekc_input"></a>輸入︰crt_lseek.c_input
 
 ```Input
 Line one.

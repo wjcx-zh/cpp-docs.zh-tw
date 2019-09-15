@@ -1,10 +1,10 @@
 ---
 title: fgetc、fgetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fgetwc
 - fgetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fgettc
 - fgetwc
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92f44c65802f3baed37078574577bf108bbcd09a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334004"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940898"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -59,15 +62,15 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>傳回值
 
-**fgetc**會傳回做為讀取的字元**int**退貨**EOF**表示錯誤或檔案結尾。 **fgetwc**傳回，作為[wint_t](../../c-runtime-library/standard-types.md)，字元的寬字元對應至讀取的字元，或傳回**WEOF**表示錯誤或檔案結尾。 這兩個函式中，使用**feof**或是**ferror**來區分錯誤與檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*資料流*是**NULL**， **fgetc**並**fgetwc**叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL** ，並傳回**EOF**。
+**fgetc**會傳回讀取為**int**的字元，或傳回**EOF**以表示錯誤或檔案結尾。 **fgetwc**會以[wint_t](../../c-runtime-library/standard-types.md)的形式傳回對應至字元讀取或傳回**WEOF**的寬字元，以表示錯誤或檔案結尾。 對於這兩個函式，請使用**feof**或**ferror**來區別錯誤和檔案結尾條件。 如果發生讀取錯誤，表示已設定資料流錯誤指標。 如果*stream*為**Null**，則**fgetc**和**fgetwc**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會從目前位置相關聯的檔案讀取單一字元*資料流*。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
+這些函式中的每一個都會從與*stream*相關聯之檔案的目前位置讀取單一字元。 此函式接著會增加相關聯的檔案指標 (定義時) 以指向下一個字元。 如果資料流位於檔案結尾，則會設定資料流的檔案結尾指標。
 
-**fgetc**相當於**getc**，但只為函式，而不是函式和巨集實作。
+**fgetc**相當於**getc**，但僅實作為函式，而不是函式和宏。
 
-**fgetwc**是寬字元版本**fgetc**; 它會讀取**c**為多位元組字元或寬字元根據*串流*中開啟文字模式還是二進位模式。
+**fgetwc**是**fgetc**的寬字元版本;它會根據以文字模式還是二進位模式開啟*資料流程*，將**c**當做多位元組字元或寬字元來讀取。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。
 
@@ -81,7 +84,7 @@ wint_t fgetwc(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fgetc**|\<stdio.h>|
 |**fgetwc**|\<stdio.h> 或 \<wchar.h>|
@@ -125,7 +128,7 @@ int main( void )
 }
 ```
 
-## <a name="input-crtfgetctxt"></a>輸入：crt_fgetc.txt
+## <a name="input-crt_fgetctxt"></a>輸入：crt_fgetc.txt
 
 ```Input
 Line one.

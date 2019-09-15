@@ -1,10 +1,10 @@
 ---
 title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcpy_s
 - wmemcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 802d75307096e649df15b1864b99699fba92a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285327"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952806"
 ---
-# <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
+# <a name="memcpy_s-wmemcpy_s"></a>memcpy_s、wmemcpy_s
 
 複製緩衝區之間的位元組。 這些是 [memcpy、wmemcpy](memcpy-wmemcpy.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -64,7 +67,7 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 *src*<br/>
 要複製的緩衝區。
 
-*count*<br/>
+*計數*<br/>
 要複製的字元數目。
 
 ## <a name="return-value"></a>傳回值
@@ -73,18 +76,18 @@ memcpy_s 和寬字元 (wchar_t) 的 wmemcpy_s 之目的緩衝區大小 (以位�
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*destSize*|*src*|*count*|傳回值|內容*dest*|
+|*dest*|*destSize*|*src*|*計數*|傳回值|*Dest*的內容|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|未修改|
 |**NULL**|any|any|非零|**EINVAL**|未修改|
-|any|any|**NULL**|非零|**EINVAL**|*dest*歸零|
-|any|< *count*|any|非零|**ERANGE**|*dest*歸零|
+|any|any|**NULL**|非零|**EINVAL**|*dest*已歸零|
+|any|< *計數*|any|非零|**ERANGE**|*dest*已歸零|
 
 ## <a name="remarks"></a>備註
 
-**memcpy_s**複本*計數*位元組*src*來*dest*;**wmemcpy_s**複本*計數*寬字元 （兩個位元組為單位）。 如果來源和目的地重疊，行為**memcpy_s**是未定義。 使用**memmove_s**處理重疊的區域。
+**memcpy_s**會將*計數*位元組從*src*複製到*目的地*;**wmemcpy_s**會複製整個*計數*的寬字元（兩個位元組）。 如果來源和目的地重迭， **memcpy_s**的行為會是未定義的。 使用**memmove_s**來處理重迭的區域。
 
-這些函式會驗證它們的參數。 如果*計數*為非零並*dest*或是*src*為 null 指標，或*destSize*小於*計數*，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EINVAL**或是**ERANGE**並設定**errno**的傳回值。
+這些函式會驗證它們的參數。 如果*count*不是零，而*dest*或*src*是 null 指標，或*destSize*小於*count*，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL**或**ERANGE** ，並將**errno**設定為傳回值。
 
 ## <a name="requirements"></a>需求
 

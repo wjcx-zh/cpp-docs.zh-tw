@@ -1,9 +1,9 @@
 ---
 title: wcrtomb
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcrtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcrtomb
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d2108b90f6884113f0bd974bf7aa634544adf5f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188649"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945227"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -60,7 +63,7 @@ size_t wcrtomb(
 要轉換的寬字元。
 
 *mbstate*<br/>
-指標**mbstate_t**物件。
+**Mbstate_t**物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -68,17 +71,17 @@ size_t wcrtomb(
 
 ## <a name="remarks"></a>備註
 
-**Wcrtomb**函式會轉換寬字元，包含指定的轉換狀態開始*mbstate*，從中包含的值*wchar*，到所表示的地址*mbchar*。 傳回值是表示對應的多位元組字元中，所需的位元組數目，但它不會傳回多個**MB_CUR_MAX**位元組。
+**Wcrtomb**函式會將寬字元（從包含在*mbstate*中的指定轉換狀態開始，從*wchar*中包含的值）轉換成*mbchar*所代表的位址。 傳回值是表示對應的多位元組字元所需的位元組數目，但不會傳回超過**MB_CUR_MAX**個位元組。
 
-如果*mbstate*為 null，內部**mbstate_t**包含的轉換狀態物件*mbchar*用。 如果字元序列*wchar*沒有對應的多位元組字元表示法，則傳回-1 並**errno**設定為**EILSEQ**。
+如果*mbstate*為 null，則會使用包含*mbchar*轉換狀態的內部**mbstate_t**物件。 如果字元順序*wchar*沒有對應的多位元組字元標記法，則會傳回-1，並將**Errno**設定為**EILSEQ**。
 
-**Wcrtomb**函式與不同[wctomb、 _wctomb_l](wctomb-wctomb-l.md)重新。 轉換狀態會儲存在*mbstate*的後續呼叫相同或其他可重新啟動的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，應用程式會使用**wcsrlen**而非**wcsnlen**，如果後續呼叫**wcsrtombs**而不是使用**wcstombs**.
+**Wcrtomb**函式與[wctomb、_wctomb_l](wctomb-wctomb-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。 例如，如果使用了**wcsrtombs**的後續呼叫（而不是**wcstombs**），應用程式會使用**wcsrlen**而非**wcsnlen**。
 
 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-**Wcrtomb**函式是多執行緒的安全，只要在目前的執行緒中的任何函式會呼叫**setlocale**執行此函式時，同時*mbstate*為 null。
+只要目前線程中的函式在執行中且*mbstate*為**null 時，** **wcrtomb**函式就是多執行緒安全。
 
 ## <a name="example"></a>範例
 

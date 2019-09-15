@@ -1,12 +1,12 @@
 ---
 title: abs、labs、llabs、_abs64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - abs
 - _abs64
 - labs
 - llabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stdlib/_abs64
 - math/abs
@@ -36,14 +39,14 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341986"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939936"
 ---
-# <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
+# <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
 計算引數的絕對值。
 
@@ -71,22 +74,22 @@ float abs( float n );   // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Abs**，**實驗室**， **llabs**並 **_abs64**函式會傳回參數的絕對值*n*. 不會傳回錯誤。
+**Abs**、 **labs**、 **llabs**和 **_abs64**函數會傳回參數*n*的絕對值。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**abs**採用並傳回**長**，**長****長**， **浮點數**， **double**，和**長** **double**值。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
+因為C++允許多載，所以您可以呼叫採用並傳回**long**、 **long** **long**、 **float**、 **double**和**long** **double**值之**abs**的多載。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
 
-**Microsoft 專有**:因為可使用任何整數型別表示的負整數範圍，大於可使用該型別表示的正整數範圍，所以無法提供引數給這些無法轉換的函式。 如果引數的絕對值無法傳回的型別，表示**abs**函式會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函式無法用來保證正值。
+**Microsoft 特定**：因為可使用任何整數型別表示的負整數範圍，大於可使用該型別表示的正整數範圍，所以無法提供引數給這些無法轉換的函式。 如果引數的絕對值無法以傳回型別表示， **abs**函數會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函數不能用來保證正數值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|-----------------------|---------------------------|
-|**abs**，**實驗室**， **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
+|**abs**、 **labs**、 **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要使用的多載的版**abs**在C++，您必須包含\<cmath> > 標頭。
+若要在中C++使用多載的\< **abs**版本，您必須包含 h > 標頭。
 
 ## <a name="example"></a>範例
 

@@ -1,14 +1,14 @@
 ---
 title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsncat_s_l
 - wcsncat_s
 - _mbsncat_s_l
 - _mbsncat_s
 - strncat_s
 - _strncat_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strncat_s_l
 - _mbsncat_s_l
@@ -48,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 6651bb6ac405ed51945f021e8d1e19f1db05d5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209892"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947393"
 ---
-# <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
+# <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsncat_s**並 **_mbsncat_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat_s**和 **_mbsncat_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -156,7 +159,7 @@ errno_t _mbsncat_s_l(
 *strSource*<br/>
 以 Null 結束的來源字串。
 
-*count*<br/>
+*計數*<br/>
 要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
@@ -168,17 +171,17 @@ errno_t _mbsncat_s_l(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*strDestination*|*numberOfElements*|*strSource*|傳回值|內容*strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**或未終止的|any|any|**EINVAL**|未修改|
+|**Null**或未結束|any|any|**EINVAL**|未修改|
 |any|any|**NULL**|**EINVAL**|未修改|
 |any|0 或太小|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-這些函式會嘗試附加第一個*D*個字元*strSource*結尾*strDest*，其中*D*是較小的*計數*和長度*strSource*。 如果附加那些*D*字元適合*strDest* (其大小指定為*numberOfElements*) 並仍留出空間給 null 結束字元，則這些字元會附加，開始於原始終止 null 的*strDest*，且新的終止 null 附加，否則*strDest*[0] 設為 null 字元並不正確的參數會叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
+這些函式會嘗試將*strSource*的前*D*個字元附加至*strDest*結尾，其中*D*是*count*的較小者，以及*strSource*的長度。 如果附加這些*D*字元會放入*strDest*中（其大小會指定為*numberOfElements*），而且仍留出空間給 null 結束字元，則會附加這些字元，從原始終止的*null 開始。strDest*，而且會附加新的終止 null;否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-上述段落有一個例外狀況。 如果*計數*是[_TRUNCATE](../../c-runtime-library/truncate.md)然後盡可能*strSource*地調整附加至會盡*strDest*同時仍留出空間，附加終止 null。
+上述段落有一個例外狀況。 如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md) ，那麼*strSource*的大小就會附加到*strDest* ，同時仍留出空間來附加終止的 null。
 
 例如，套用至物件的
 
@@ -188,9 +191,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-表示我們要求**strncat_s**若要將三個字元附加至兩個字元，在緩衝區中五個字元的長度; 這不會留下任何空間給 null 結束字元，因此**strncat_s**零字串並呼叫無效的參數處理常式。
+表示我們要求**strncat_s**將三個字元附加至緩衝區中五個字元長的兩個字元;這不會留下任何空間給 null 結束字元，因此**strncat_s**會零出字串，並呼叫不正確參數處理常式。
 
-如果需要截斷行為，使用 **_TRUNCATE** ，或調整*大小*參數據以：
+如果需要截斷行為，請使用 **_TRUNCATE**或據以調整*大小*參數：
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -204,9 +207,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-如果*strSource*或是*strDest*會**NULL**，或*numberOfElements*為零，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，則函數會傳回**EINVAL**而不需修改其參數。
+如果*strSource*或*strDest*為**Null**，或*numberOfElements*為零，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**EINVAL** ，而不會修改其參數。
 
-**wcsncat_s**並 **_mbsncat_s**是寬字元和多位元組字元版本的**strncat_s**。 字串引數和傳回值**wcsncat_s**是寬字元字串; **_mbsncat_s**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcsncat_s**和 **_mbsncat_s**是**strncat_s**的寬字元和多位元組字元版本。 **Wcsncat_s**的字串引數和傳回值是寬字元字串; **_mbsncat_s**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
@@ -221,7 +224,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**並 **_wcsncat_s_l**沒有任何地區設定相依性; 它們僅供 **_tcsncat_s_l**。
+**_strncat_s_l**和 **_wcsncat_s_l**沒有地區設定相依性;僅供 **_tcsncat_s_l**之用。
 
 ## <a name="requirements"></a>需求
 
@@ -229,7 +232,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|
-|**_mbsncat_s**， **_mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**、 **_mbsncat_s_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

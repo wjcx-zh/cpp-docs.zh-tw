@@ -1,10 +1,10 @@
 ---
 title: _mbsnbset_s、_mbsnbset_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbset_s_l
 - _mbsnbset_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbset_s
 - _mbsnbset_s_l
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54a05d163430aa01f4c12e841a11d1faf5a6c4b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331242"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952113"
 ---
-# <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s、_mbsnbset_s_l
+# <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s、_mbsnbset_s_l
 
-設定第一個**n**個位元組的多位元組字元字串，為指定的字元。 這些是 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+將多位元組字元字串的前**n**個位元組設為指定的字元。 這些是 [_mbsnbset、_mbsnbset_l](mbsnbset-mbsnbset-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
 > 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -88,7 +91,7 @@ errno_t _mbsnbset_s_l(
 *C*<br/>
 單一位元組或多位元組字元的設定。
 
-*count*<br/>
+*計數*<br/>
 要設定的位元組數目。
 
 *locale*<br/>
@@ -100,13 +103,13 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbset_s**並 **_mbsnbset_s_l**函式會將，最多會第一個*計數*位元組*str*到*c*. 如果*計數*大於的長度*str*，長度*str*改用*計數*。 如果*c*是多位元組字元，而且不能完全讀入指定的最後一個位元組的方式來設定*計數*，最後一個位元組會以空白的字元填補。 **_mbsnbset_s**並 **_mbsnbset_s_l**未放置的終止 null 結尾*str*。
+**_Mbsnbset_s**和 **_mbsnbset_s_l**函式最多會將*str*的第一個*計數*位元組設定為*c*。 如果*count*大於*str*的長度，則會使用*str*的長度，而不是*count*。 如果*c*是多位元組字元，而且無法完全設定為依*count*指定的最後一個位元組，則最後一個位元組會以空白字元填補。 **_mbsnbset_s**和 **_mbsnbset_s_l**不會在*str*結尾處放置終止的 null。
 
-**_mbsnbset_s**並 **_mbsnbset_s_l**類似 **_mbsnset**，只不過它們設定*計數*位元組而非*計數*字元*c*。
+**_mbsnbset_s**和 **_mbsnbset_s_l**與 **_mbsnset**相似，不同之處在于它們會設定*count*個位元組，而非*c*的*計數*字元。
 
-如果*str*是**NULL**或*計數*是零，此函式會產生無效參數例外狀況，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**NULL**。 此外，如果*c*不是有效的多位元組字元， **errno**設定為**EINVAL**並改用一個空格。
+如果*str*為**Null**或*count*為零，則此函式會產生無效參數例外狀況，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 此外，如果*c*不是有效的多位元組字元， **errno**會設為**EINVAL** ，而會改用空格。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 **_Mbsnbset_s**此函式版本會針對地區設定相關行為; 使用目前的地區設定 **_mbsnbset_s_l**版本也一樣，不同之處在於它會改為使用地區設定參數的傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函式的 **_mbsnbset_s**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbsnbset_s_l**版本相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 在 C++ 中，樣板多載簡化了這些函式的使用方式；此多載可自動推斷緩衝區長度，因此不須指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

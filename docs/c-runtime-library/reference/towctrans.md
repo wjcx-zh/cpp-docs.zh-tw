@@ -1,9 +1,9 @@
 ---
 title: towctrans
 ms.date: 11/04/2016
-apiname:
+api_name:
 - towctrans
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - towctrans
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d63fc343647cd0f949f282e2a64d4a0636e62bd7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269159"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957431"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -51,11 +54,11 @@ wint_t towctrans(
 
 ## <a name="return-value"></a>傳回值
 
-字元*c*後**towctrans**使用中的轉換規則*分類*。
+**Towctrans**在*類別*中使用轉換規則之後的字元*c*。
 
 ## <a name="remarks"></a>備註
 
-值*分類*必須以稍早的成功呼叫所傳回[wctrans](wctrans.md)。
+先前成功呼叫[wctrans](wctrans.md)時，必須傳回*category*的值。
 
 ## <a name="requirements"></a>需求
 
@@ -67,7 +70,7 @@ wint_t towctrans(
 
 ## <a name="example"></a>範例
 
-請參閱**wctrans**如需範例，會使用**towctrans**。
+如需使用**towctrans**的範例，請參閱**wctrans** 。
 
 ## <a name="see-also"></a>另請參閱
 

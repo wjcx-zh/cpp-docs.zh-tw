@@ -1,9 +1,9 @@
 ---
 title: set_terminate (CRT)
 ms.date: 11/04/2016
-apiname:
+api_name:
 - set_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_terminate
 helpviewer_keywords:
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860789a3f2fda5ef13cadffa2a00dba4fbd2090a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356442"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948359"
 ---
-# <a name="setterminate-crt"></a>set_terminate (CRT)
+# <a name="set_terminate-crt"></a>set_terminate (CRT)
 
-安裝要呼叫的專屬終止常式**終止**。
+安裝要由**terminate**呼叫的專屬終止常式。
 
 ## <a name="syntax"></a>語法
 
@@ -47,24 +50,24 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>傳回值
 
-所註冊之先前函式傳回的指標**set_terminate**以便稍後可以還原先前函式。 如果尚未設定先前函式，傳回的值可能用於還原預設行為。此值可能**NULL**。
+傳回**set_terminate**所註冊之先前函式的指標，以便之後可以還原先前的函式。 如果尚未設定先前的函式，則會使用傳回值來還原預設行為。這個值可以是**Null**。
 
 ## <a name="remarks"></a>備註
 
-**Set_terminate**函式會安裝*termFunction*所呼叫的函式**終止**。 **set_terminate**搭配C++例外狀況處理和擲回例外狀況之前可能在您的程式中的任何時間點呼叫。 **終止**呼叫[中止](abort.md)預設。 您可以變更此預設值，方法是撰寫您自己的終止函式，並呼叫**set_terminate**您作為其引數的函式的名稱。 **終止**呼叫最後一個指定為引數的函式**set_terminate**。 執行任何所需的清除工作之後*termFunction*應該會結束程式。 如果它不會結束 （如果它傳回至呼叫端），[中止](abort.md)呼叫。
+**Set_terminate**函數會將*termFunction*安裝為**終止**所呼叫的函式。 **set_terminate**會與C++例外狀況處理搭配使用，而且可以在擲回例外狀況之前，在程式中的任何時間點呼叫。 依預設，**終止**呼叫會[中止](abort.md)。 您可以變更此預設值，方法是撰寫自己的終止函式，並使用您的函式名稱做為其引數來呼叫**set_terminate** 。 **terminate**會呼叫指定為**set_terminate**引數的最後一個函式。 執行任何所需的清除工作之後， *termFunction*應該會結束程式。 如果未結束（如果它傳回至其呼叫端），則會呼叫[abort](abort.md) 。
 
 在多執行緒環境中，會分別維護每個執行緒的終止函式。 每個新執行緒都需要安裝它自己的終止函式。 因此，每個執行緒都會負責它自己的終止處理。
 
-**Terminate_function** EH 中定義型別。為使用者定義終止函式的指標 H *termFunction*會傳回**void**。 您的自訂函式*termFunction*可以接受任何引數，而且不應該傳回至其呼叫端。 若是如此，請[中止](abort.md)呼叫。 例外狀況不會擲回內在*termFunction*。
+**Terminate_function**類型是在 EH 中定義。H 做為使用者定義終止函式的指標，此*termFunction*會傳回**void**。 您的自訂函式*termFunction*不會接受任何引數，而且不應該傳回至其呼叫端。 如果存在，則會呼叫[abort](abort.md) 。 可能不會從*termFunction*中擲回例外狀況。
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> **Set_terminate**函式僅適用於偵錯工具之外。
+> **Set_terminate**函式僅適用于偵錯工具以外。
 
-沒有單一**set_terminate**處理常式的所有動態連結的 Dll 或 Exe; 即使您呼叫**set_terminate**可能由另一個，取代您的處理常式，或您可能會取代另一個設定的處理常式DLL 或 EXE。
+所有動態連結的 Dll 或 Exe 都有單一的**set_terminate**處理常式;即使您呼叫**set_terminate** ，您的處理常式可能會被另一個取代，或者您可能會取代另一個 DLL 或 EXE 所設定的處理常式。
 
 ## <a name="requirements"></a>需求
 

@@ -1,10 +1,10 @@
 ---
 title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wstrtime_s
 - _strtime_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wstrtime_s
 - strtime_s
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 855c88f22e00cad398f6357b8e35931598041aeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375323"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946571"
 ---
-# <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
+# <a name="_strtime_s-_wstrtime_s"></a>_strtime_s、_wstrtime_s
 
 將目前的時間複製到緩衝區。 這些版本的 [_strtime、_wstrtime](strtime-wstrtime.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -78,24 +81,24 @@ errno_t _wstrtime_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*numberOfElements*|Return|內容*緩衝區*|
+|*buffer*|*numberOfElements*|Return|*緩衝區*的內容|
 |--------------|------------------------|------------|--------------------------|
 |**NULL**|(任何)|**EINVAL**|未修改|
-|不**NULL** （指向有效的緩衝區）|0|**EINVAL**|未修改|
-|不**NULL** （指向有效的緩衝區）|0 < 大小 < 9|**EINVAL**|空字串|
-|不**NULL** （指向有效的緩衝區）|大小 > 9|0|目前的時間格式一如＜備註＞所指定|
+|Not **Null** （指向有效的緩衝區）|0|**EINVAL**|未修改|
+|Not **Null** （指向有效的緩衝區）|0 < 大小 < 9|**EINVAL**|空字串|
+|Not **Null** （指向有效的緩衝區）|大小 > 9|0|目前的時間格式一如＜備註＞所指定|
 
 ## <a name="security-issues"></a>安全性問題
 
-傳入無效的非**NULL**值，如果緩衝區會造成存取違規*numberOfElements*參數大於 9。
+如果*numberOfElements*參數大於9，傳入不正確緩衝區非**Null**值將會造成存取違規。
 
-傳遞的值*numberOfElements*大於緩衝區的實際大小會導致緩衝區溢位。
+傳遞大於實際緩衝區大小之*numberOfElements*的值，會導致緩衝區溢位。
 
 ## <a name="remarks"></a>備註
 
-這些函式提供更安全的版本[_strtime](strtime-wstrtime.md)並[_wstrtime](strtime-wstrtime.md)。 **_Strtime_s**函式會將目前的當地時間複製到所指向的緩衝區*timestr*。 時間格式為**hh: mm:** 其中**hh**是代表小時以 24 小時制標記法中，兩位數**mm**是兩位數表示過去與小時、分鐘**ss**是兩位數表示秒數。 例如，字串**18:23:44**代表 23 分 44 秒下午 6 點 緩衝區必須至少有 9 個位元組長，實際大小由第二個參數指定。
+這些函數提供更安全的[_strtime](strtime-wstrtime.md)和[_wstrtime](strtime-wstrtime.md)版本。 **_Strtime_s**函數會將目前的本機時間複製到*timestr*所指向的緩衝區。 時間格式為**hh： mm： ss** ，其中**hh**是以24小時標記法表示小時的兩位數， **mm**是代表該小時過去分鐘數的兩位數，而**ss**是代表秒數的兩位數。 例如，字串**18:23:44**代表23分鐘，過去 6 P.M. 的44秒 緩衝區必須至少有 9 個位元組長，實際大小由第二個參數指定。
 
-**_wstrtime**是寬字元版本的 **_strtime**; 的引數和傳回值 **_wstrtime**是寬字元字串。 除此之外，這些函式的行為相同。
+**_wstrtime**是寬字元版本的 **_strtime**; **_wstrtime**的引數和傳回值是寬字元字串。 除此之外，這些函式的行為相同。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

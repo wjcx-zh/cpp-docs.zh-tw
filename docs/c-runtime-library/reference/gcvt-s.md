@@ -1,9 +1,9 @@
 ---
 title: _gcvt_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _gcvt_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _gcvt_s
 - gcvt_s
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332290"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956114"
 ---
-# <a name="gcvts"></a>_gcvt_s
+# <a name="_gcvt_s"></a>_gcvt_s
 
 將浮點值轉換為字串。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [_gcvt](gcvt.md) 版本。
 
@@ -65,7 +68,7 @@ errno_t _gcvt_s(
 *sizeInBytes*<br/>
 緩衝區的大小。
 
-*value*<br/>
+*值*<br/>
 要轉換的值。
 
 *digits*<br/>
@@ -77,19 +80,19 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*buffer*|*sizeInBytes*|*value*|*digits*|Return|中的值*緩衝區*|
+|*buffer*|*sizeInBytes*|*值*|*digits*|Return|*Buffer*中的值|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|零|any|any|**EINVAL**|未修改。|
-|不**NULL** （指向有效的記憶體）|any|any|>= *sizeInBytes*|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|零|any|any|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|any|any|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全性問題**
 
-**_gcvt_s**可以產生存取違規，如果*緩衝區*不是指向有效的記憶體，而且不**NULL**。
+如果*緩衝區*未指向有效的記憶體，而且不是**Null**，則 **_gcvt_s**可能會產生存取違規。
 
 ## <a name="remarks"></a>備註
 
-**_Gcvt_s**函式會轉換為浮點*值*（其中包含小數點和可能的正負號位元組） 為字元字串，並將儲存在字串*緩衝區*. *緩衝區*應該大到足以容納轉換的值加上結束的 null 字元，會自動予以附加。 長度的緩衝區 **_CVTBUFSIZE**是足可供任何浮點值。 如果緩衝區大小，為*數字*+ 1，此函式不會覆寫結尾的緩衝區，因此請務必提供足夠的緩衝區，這項作業。 **_gcvt_s**嘗試產生*數字*十進位格式的數字。 如果不行，它會產生*數字*指數 」 格式的數字。 可於轉換中隱藏尾端零。
+**_Gcvt_s**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 長度 **_CVTBUFSIZE**的緩衝區足以滿足任何浮點值。 如果使用的緩衝區大小為*數位*+ 1，則函式不會覆寫緩衝區結尾，因此請務必提供足夠的緩衝區來進行這項作業。 **_gcvt_s**會嘗試以十進位格式來產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可於轉換中隱藏尾端零。
 
 在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

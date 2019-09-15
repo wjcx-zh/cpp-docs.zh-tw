@@ -1,11 +1,11 @@
 ---
 title: carg、cargf、cargl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - carg
 - cargf
 - cargl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - carg
 - cargf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e66b0b3545b3f28a8f7b4ca14c29ffe1e0fc260c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939307"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -68,17 +71,17 @@ long double cargl(
 
 ## <a name="return-value"></a>傳回值
 
-引數 （也稱為階段） *z*。 結果是在間隔 [-π，+ π]。
+*Z*的引數（也稱為階段）。 結果為間隔 [-π，+ π]。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**carg**採用 **_Fcomplex**或是 **_Lcomplex**值，並傳回**float**或是**長** **double**值。 在 C 程式中， **carg**一律採用 **_Dcomplex**值，然後傳回**double**值。
+因為C++允許多載，所以您可以呼叫接受 **_Fcomplex**或 **_Lcomplex**值之**carg**的多載，並傳回**浮點數**或**長** **雙精度**值。 在 C 程式中， **carg**一律會接受 **_Dcomplex**值並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**carg**,               **cargf**, **cargl**|\<complex.h>|\<ccomplex>|
+|**carg**、 **cargf**、 **cargl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

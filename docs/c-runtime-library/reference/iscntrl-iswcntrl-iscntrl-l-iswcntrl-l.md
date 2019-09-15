@@ -1,12 +1,12 @@
 ---
 title: iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iscntrl
 - _iswcntrl_l
 - _iscntrl_l
 - iswcntrl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istcntrl_l
 - _iswcntrl_l
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 302c357c054ad58043b00875d629ae70e5a23e0e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954439"
 ---
-# <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
+# <a name="iscntrl-iswcntrl-_iscntrl_l-_iswcntrl_l"></a>iscntrl、iswcntrl、_iscntrl_l、_iswcntrl_l
 
 判斷整數是否代表控制字元。
 
@@ -75,11 +78,11 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*表示特定的控制字元。 **iscntrl**傳回非零值，如果*c*是控制字元 (0x00-0x1F 或 0x7F)。 **iswcntrl**傳回非零值，如果*c*是控制寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是特定的控制字元標記法，則每個常式都會傳回非零。 如果*c*是控制字元（0X00-0X1F 或0x7f）， **iscntrl**會傳回非零值。 如果*c*是控制寬字元，則**iswcntrl**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-有這些函式的版本 **_l**後置詞使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**iscntrl**並 **_iscntrl_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**iscntrl**和 **_iscntrl_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

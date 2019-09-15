@@ -1,11 +1,11 @@
 ---
 title: fmax、fmaxf、fmaxl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmax
 - fmaxf
 - fmaxl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmax
 - fmaxf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fmaxf function
 - fmaxl function
 ms.assetid: a773ccf7-495e-4a9a-8c6d-dfb53e341e35
-ms.openlocfilehash: 371d53257427f2235048807968c82fec1b8bf699
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27b495e9344ca7e2e3e061b19fee696ce2bdceb2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333427"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957122"
 ---
 # <a name="fmax-fmaxf-fmaxl"></a>fmax、fmaxf、fmaxl
 
@@ -80,7 +83,7 @@ long double fmaxl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的較大*x*或是*y*。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。
+如果成功，會傳回*x*或*y*的較大者。 傳回的值會完全相同，而且不是取決於任何形式的四捨五入。
 
 否則，可能會傳回下列其中一個值：
 
@@ -88,7 +91,7 @@ long double fmaxl(
 |-----------|------------|
 |*x* = NaN|*y*|
 |*y* = NaN|*x*|
-|*x*並*y* = NaN|NaN|
+|*x*和*y* = NaN|NaN|
 
 此函式不會使用 [_matherr](matherr.md) 中所指定的錯誤。
 
@@ -98,9 +101,9 @@ long double fmaxl(
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**fmax**， **fmaxf**， **fmaxl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**fmax**、 **fmaxf**、 **fmaxl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

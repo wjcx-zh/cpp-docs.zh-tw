@@ -1,12 +1,12 @@
 ---
 title: _strdec、_wcsdec、_mbsdec、_mbsdec_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wcsdec
 - _strdec
 - _mbsdec
 - _mbsdec_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strdec
 - mbsdec_l
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - wcsdec function
 - _mbsdec function
 ms.assetid: ae37c223-800f-48a9-ae8e-38c8d20af2dd
-ms.openlocfilehash: a937f8fcd18dd62bb7c63cf60c250cf7986b69b7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ffb2b81f5ce5a251fb931099a1023a441ca4d496
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500911"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958202"
 ---
 # <a name="_strdec-_wcsdec-_mbsdec-_mbsdec_l"></a>_strdec、_wcsdec、_mbsdec、_mbsdec_l
 
@@ -79,25 +82,25 @@ unsigned char *_mbsdec_l(
 ### <a name="parameters"></a>參數
 
 *start*<br/>
-來源字串中任何字元 (或任何多位元組字元的第一個位元組) 的指標 ( **_mbsdec**和 **_mbsdec_l**);*開始*必須在來源字串中的*目前*之前。
+來源字串中任何字元（或任何多位元組字元的第一個位元組）的指標（ **_mbsdec**和 **_mbsdec_l**）;*開始*必須在來源字串中的*目前*之前。
 
 *current*<br/>
-來源字串中任何字元 (或任何多位元組字元的第一個位元組) 的指標 ( **_mbsdec**和 **_mbsdec_l**);*current*必須緊接在來源字串中的*開頭*。
+來源字串中任何字元（或任何多位元組字元的第一個位元組）的指標（ **_mbsdec**和 **_mbsdec_l**）;*current*必須緊接在來源字串中的*開頭*。
 
 *locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsdec**、 **_mbsdec_l**、 **_strdec**和 **_wcsdec**都會傳回緊接在*目前*之前的字元指標。如果*start*的值大於或等於*current*, 則 **_mbsdec**會傳回**Null** 。 **_tcsdec**會對應至這些函式的其中一個, 而其傳回值則取決於對應。
+**_mbsdec**、 **_mbsdec_l**、 **_strdec**和 **_wcsdec**都會傳回緊接在*目前*之前的字元指標。如果*start*的值大於或等於*current*，則 **_mbsdec**會傳回**Null** 。 **_tcsdec**會對應至這些函式的其中一個，而其傳回值則取決於對應。
 
 ## <a name="remarks"></a>備註
 
 **_Mbsdec**和 **_mbsdec_l**函式會將指標傳回至包含*start*之字串中*目前*正前面的多位元組字元的第一個位元組。
 
-輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊, 請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。  **_mbsdec**會根據目前使用中的地區設定辨識多位元組字元序列, 而 **_mbsdec_l**則相同, 不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。  **_mbsdec**會根據目前使用中的地區設定辨識多位元組字元序列，而 **_mbsdec_l**則相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*start*或*current*是**Null**, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回**EINVAL** , 並將**Errno**設定為**EINVAL**。
+如果*start*或*current*是**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
 > [!IMPORTANT]
 > 這些函式可能容易受到緩衝區滿溢的威脅。 緩衝區滿溢可能被當成系統攻擊方式，因為它們可能導致非預期的提高權限。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
@@ -108,7 +111,7 @@ unsigned char *_mbsdec_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsdec**|**_strdec**|**_mbsdec**|**_wcsdec**|
 
-**_strdec**和 **_wcsdec**是 **_mbsdec**和 **_mbsdec_l**的單一位元組字元和寬字元版本。 僅針對此對應提供 **_strdec**和 **_wcsdec** , 否則不應使用。
+**_strdec**和 **_wcsdec**是 **_mbsdec**和 **_mbsdec_l**的單一位元組字元和寬字元版本。 僅針對此對應提供 **_strdec**和 **_wcsdec** ，否則不應使用。
 
 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: _swab
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _swab
 - stdlib/_swab
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _swab
 - stdlib/_swab
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - swab function
 - bytes, swapping
 ms.assetid: 017142f2-050c-4f6a-8b49-6b094f58ec94
-ms.openlocfilehash: 64753383bcb94947e6b413b5f55ac6e2d9c7dbca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0faba55c42023f4d66adae68de6be2c1ab009a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245500"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946281"
 ---
-# <a name="swab"></a>_swab
+# <a name="_swab"></a>_swab
 
 交換位元組。
 
@@ -60,13 +63,13 @@ void _swab(
 
 ## <a name="return-value"></a>傳回值
 
-**Swab**函式不會傳回值。 函式集合**errno**要**EINVAL**如果*src*或*dest*指標為 null 或*n*小於零，且不正確的參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
+**Swab**函數不會傳回值。 函式會將**errno**設定為**EINVAL** （*如果 src*或*dest*指標為 null 或*n*小於零），並叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 如需這個傳回碼及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-如果*n*是奇數， **_swab**函式複製*n*位元組*src*、 交換每一對相鄰的位元組，並將儲存在結果*dest*。 如果*n*是奇數， **_swab**複製並交換的第一個*n*-1 位元組*src*，而不會複製最後一個位元組。 **_Swab**函式通常用來準備要傳輸到使用不同位元組順序的機器的二進位資料。
+如果*n*是偶數，則 **_swab**函數會從*src*複製*n*個位元組，交換每一對連續的位元組，並將結果儲存在*dest*。 如果*n*是奇數，則 **_swab**會複製並交換*src*的前*n*-1 個位元組，而不會複製最後一個位元組。 **_Swab**函數通常用來準備要傳送至使用不同位元組順序之電腦的二進位資料。
 
 ## <a name="requirements"></a>需求
 

@@ -1,11 +1,11 @@
 ---
 title: _strdup、_wcsdup、_mbsdup
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strdup
 - _mbsdup
 - _wcsdup
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsdup
 - mbsdup
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c96e0a8f9f72b811f891217deabe758626b03186
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353881"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958185"
 ---
-# <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
+# <a name="_strdup-_wcsdup-_mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 重複字串。
 
 > [!IMPORTANT]
-> **_mbsdup**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 <<c0> [ 通用 Windows 平台應用程式不支援的 CRT 函式](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)。
+> **_mbsdup**無法在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱[通用 Windows 平臺應用程式中不支援的 CRT](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)函式。
 
 ## <a name="syntax"></a>語法
 
@@ -77,13 +80,13 @@ unsigned char *_mbsdup(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回所複製字串的儲存位置的指標或**NULL**如果無法配置儲存體。
+所有這些函式都會傳回所複製字串之儲存位置的指標，如果無法配置儲存區，則傳回**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_Strdup**函式會呼叫[malloc](malloc.md)複本的配置儲存空間*strSource* ，然後將複製*strSource*至配置的空間。
+**_Strdup**函數會呼叫[Malloc](malloc.md)來配置*strSource*複本的儲存空間，然後將*strSource*複製到已配置的空間。
 
-**_wcsdup**並 **_mbsdup**是寬字元和多位元組字元版本的 **_strdup**。 引數和傳回值 **_wcsdup**是寬字元字串; **_mbsdup**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**_wcsdup**和 **_mbsdup**是 **_strdup**的寬字元和多位元組字元版本。 **_Wcsdup**的引數和傳回值是寬字元字串; **_mbsdup**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -91,9 +94,9 @@ unsigned char *_mbsdup(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-因為 **_strdup**呼叫**malloc**複本的配置儲存空間*strSource*，最好一律以釋放這個記憶體，藉由呼叫[免費](free.md)常式的呼叫所傳回的指標 **_strdup**。
+由於 **_strdup**會呼叫**Malloc**來配置*strSource*複本的儲存空間，因此最好一律在呼叫 **_strdup**所傳回的指標上呼叫[free](free.md)常式來釋放這個記憶體。
 
-如果 **_DEBUG**並 **_CRTDBG_MAP_ALLOC**定義， **_strdup**並 **_wcsdup**會取代藉由呼叫 **_strdup_dbg**並 **_wcsdup_dbg**以便進行偵錯記憶體配置。 如需詳細資訊，請參閱 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
+如果已定義 **_debug**和 **_CRTDBG_MAP_ALLOC** ，則 **_strdup**和 **_wcsdup**會被呼叫 **_strdup_dbg**和 **_wcsdup_dbg**取代，以允許進行記憶體配置的偵測。 如需詳細資訊，請參閱 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)。
 
 ## <a name="requirements"></a>需求
 

@@ -1,14 +1,14 @@
 ---
 title: scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - scalblnl
 - scalbnl
 - scalbnf
 - scalblnf
 - scalbn
 - scalbln
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - scalblnf
 - scalbnl
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - scalbnf function
 - scalblnf function
 ms.assetid: df2f1543-8e39-4af4-a5cf-29307e64807d
-ms.openlocfilehash: 7109340afaa634fc21177380d015c9eace506081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 794d0bdceb13aafb83de85fb29e47a4fa3125cd6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357157"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948906"
 ---
 # <a name="scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl"></a>scalbn、scalbnf、scalbnl、scalbln、scalblnf、scalblnl
 
@@ -102,21 +105,21 @@ long double scalblnl(
 
 ## <a name="return-value"></a>傳回值
 
-**Scalbn**函式會傳回的值*x* \* **FLT_RADIX**<sup>exp</sup>時成功。 發生溢位 (根據的正負號*x*)， **scalbn**會傳回 + /- **HUGE_VAL**; **errno**值設定為**ERANGE**.
+當成功時， **scalbn**函數會傳回*x* \* **FLT_RADIX**<sup>exp</sup>的值。 溢位時（視*x*的正負號而定）， **scalbn**會傳回 +/- **HUGE_VAL**;**errno**值會設定為**ERANGE**。
 
-如需詳細資訊**errno**和可能的錯誤，傳回值，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**errno**和可能的錯誤傳回值的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**FLT_RADIX**定義於\<float.h > 作為原生浮點基數; 在二進位系統中，其值為 2，並**scalbn**相當於[ldexp](ldexp.md)。
+**FLT_RADIX**是在 float \<. > h 中定義成原生浮點基數，在二進位系統上，其值為2，而**scalbn**相當於[ldexp](ldexp.md)。
 
-因為C++允許多載，您可以呼叫多載**scalbn**並**scalbln**採用並傳回**float**或**長****double**型別。 在 C 程式中， **scalbn**一律採用**double**並**int** ，並傳回**double**，和**scalbln**一律採用**雙**並**長**，並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**類型的**scalbn**和**scalbln**多載。 在 C 程式中， **scalbn**一律採用**double**和**int** ，並傳回**double**，而**scalbln**一律採用**double**和**long** ，並傳回**雙精度**浮點數。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**scalbn**， **scalbnf**， **scalbnl**， **scalbln**， **scalblnf**， **scalblnl**|\<math.h>|\<cmath>|
+|**scalbn**、 **scalbnf**、 **scalbnl**、 **scalbln**、 **scalblnf**、 **scalblnl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

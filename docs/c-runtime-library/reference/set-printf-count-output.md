@@ -1,9 +1,9 @@
 ---
 title: _set_printf_count_output
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_printf_count_output
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_printf_count_output
 - _set_printf_count_output
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - set_printf_count_output function
 - _set_printf_count_output function
 ms.assetid: d8259ec5-764e-42d0-9169-72172e95163b
-ms.openlocfilehash: 0d4847d850b39c7c03ea92a98499715b1e6a4913
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d53b4e4c56a69582a4eb517fa1a5c9e10cd7d2f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356520"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948425"
 ---
-# <a name="setprintfcountoutput"></a>_set_printf_count_output
+# <a name="_set_printf_count_output"></a>_set_printf_count_output
 
-啟用或停用的支援 **%n**格式化[printf、 _printf_l、 wprintf、 _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-系列函式。
+啟用或停用[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)系列函式中的 **% n**格式支援。
 
 ## <a name="syntax"></a>語法
 
@@ -46,15 +49,15 @@ int _set_printf_count_output(
 ### <a name="parameters"></a>參數
 
 *enable*<br/>
-非零值，以啟用 **%n**支援，0 以停用 **%n**支援。
+若要啟用 **% n**支援，則為非零值，0表示停用 **% n**支援。
 
 ## <a name="property-valuereturn-value"></a>屬性值/傳回值
 
-狀態 **%n**之前呼叫這個函式支援： 非零 if **%n**支援已啟用，0，如果它已停用。
+在呼叫此函式之前， **% n**支援的狀態：非零，如果已啟用 **% n**支援，則為0（如果已停用）。
 
 ## <a name="remarks"></a>備註
 
-基於安全性原因，對 **%n**格式規範中的預設會停用**printf**和其所有變體。 如果 **%n**中遇到**printf**格式規格中，預設行為是叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 呼叫 **_set_printf_count_output**為非零引數會導致**printf**-系列函式解譯 **%n**中所述[格式規格語法： printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。
+基於安全性的理由，對 **% n**格式規範的支援預設會在**printf**及其所有變數中停用。 如果在**printf**格式規格中遇到 **% n** ，預設行為是叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 使用非零引數呼叫 **_set_printf_count_output**將會導致**printf**系列函式解讀 **% n** ，如[格式規格語法： printf 和 wprintf 函數](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)中所述。
 
 ## <a name="requirements"></a>需求
 

@@ -1,14 +1,14 @@
 ---
 title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsicoll_l
 - _stricoll_l
 - _mbsicoll
 - _wcsicoll_l
 - _wcsicoll
 - _stricoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - stricoll
 - _stricoll
@@ -51,19 +54,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 952d3b25f9c3741313e791c49f88a7d2e79ac60b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353660"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940692"
 ---
-# <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
+# <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
 使用地區設定特定資訊，以比較字串。
 
 > [!IMPORTANT]
-> **_mbsicoll**並 **_mbsicoll_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsicoll**和 **_mbsicoll_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -99,7 +102,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>參數
 
-*string1*， *string2*<br/>
+*string1*、 *string2*<br/>
 以 Null 結束的待比較字串。
 
 *locale*<br/>
@@ -107,24 +110,24 @@ int _mbsicoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回值，指出的關聯性*string1*要*string2*、，如下所示。
+所有這些函式都會傳回一個值，指出*string1*到*string2*的關聯性，如下所示。
 
 |傳回值|string1 與 string2 的關係|
 |------------------|----------------------------------------|
 |< 0|*string1*小於*string2*|
-|0|*string1*等於*string2*|
+|0|*string1*與*string2*相同|
 |> 0|*string1*大於*string2*|
 |**_NLSCMPERROR**|發生錯誤。|
 
-每一種函式都會傳回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，包含\<h > 或\<m >。 **_wcsicoll**可能會失敗，如果有任一*string1*或是*string2*包含的定序順序之網域外部的寬字元碼。 發生錯誤時， **_wcsicoll**可能設定**errno**來**EINVAL**。 若要檢查是否發生錯誤，在呼叫 **_wcsicoll**，將**errno**設為 0，然後再檢查**errno**之後呼叫 **_wcsicoll**。
+所有這些函式都會傳回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，請\<包含 string. h > \<或 g. >。 如果*string1*或*string2*包含定序順序之網域以外的寬字元碼，則 **_wcsicoll**可能會失敗。 發生錯誤時， **_wcsicoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫 **_wcsicoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫 **_wcsicoll**之後檢查**errno** 。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式執行不區分大小寫的比較*string1*並*string2*根據目前使用中的字碼頁。 只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。
+所有這些函式都會根據目前使用中的字碼頁，執行*string1*和*string2*的區分大小寫比較。 只有在字元集順序與目前字碼頁中的字典編纂字元順序不同時，以及字串比較注意這項差異時，才應該使用這些函式。
 
-**_stricmp**有別 **_stricoll**在於 **_stricmp**比較受到**LC_CTYPE**，而 **_stricoll**比較則根據**LC_CTYPE**並**LC_COLLATE**地區設定的類別。 如需詳細資訊**LC_COLLATE**分類中，請參閱[setlocale](setlocale-wsetlocale.md)並[地區設定分類](../../c-runtime-library/locale-categories.md)。 這些功能，但不包含新版 **_l**後置詞使用目前的地區設定; 具有版本 **_l**尾碼都相同，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_stricmp**與 **_stricoll**不同之處在于， **_stricmp**比較會受到**LC_CTYPE**影響，而 **_stricoll**比較是根據**LC_CTYPE**和**LC_COLLATE**類別目錄的語言. 如需**LC_COLLATE**類別的詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)和[地區設定類別](../../c-runtime-library/locale-categories.md)。 這些沒有 **_l**尾碼的函式版本會使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-這些函式全都會驗證它們的參數。 如果有任一*string1*或*string2*會**NULL**無效參數處理常式的指標，會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，則這些函式會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
+這些函式全都會驗證它們的參數。 如果*string1*或*string2*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -136,9 +139,9 @@ int _mbsicoll_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_stricoll**， **_stricoll_l**|\<string.h>|
-|**_wcsicoll**， **_wcsicoll_l**|\<wchar.h>、\<string.h>|
-|**_mbsicoll**， **_mbsicoll_l**|\<mbstring.h>|
+|**_stricoll**、 **_stricoll_l**|\<string.h>|
+|**_wcsicoll**、 **_wcsicoll_l**|\<wchar.h>、\<string.h>|
+|**_mbsicoll**、 **_mbsicoll_l**|\<mbstring.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,11 +1,11 @@
 ---
 title: _inp、_inpw、_inpd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _inp
 - _inpw
 - _inpd
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcr80.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - inpd
 - _inp
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748342"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944986"
 ---
-# <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
+# <a name="_inp-_inpw-_inpd"></a>_inp、_inpw、_inpd
 
 從連接埠輸入一個位元組 (`_inp`)、一個字組 (`_inpw`) 或雙字組 (`_inpd`)。
 

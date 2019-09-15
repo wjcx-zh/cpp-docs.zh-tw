@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcat、_mbsnbcat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcat_l
 - _mbsnbcat
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcat
 - mbsnbcat_l
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - _mbsnbcat function
 - tcsncat function
 ms.assetid: aa0f1d30-0ddd-48d1-88eb-c6884b20fd91
-ms.openlocfilehash: 476909858a8537fb96d56d3230fd48719d5564ed
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 117171ec75ec0dddc3d7447f4110556165343258
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499827"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952351"
 ---
 # <a name="_mbsnbcat-_mbsnbcat_l"></a>_mbsnbcat、_mbsnbcat_l
 
@@ -95,13 +98,13 @@ unsigned char *_mbsnbcat_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbcat**函數最多會將*src*的第一個*計數*位元組附加至*dest*。 如果在*dest*中的 null 字元之前的位元組是前導位元組, 則*src*的初始位元組會覆寫這個前導位元組。 否則, *src*的初始位元組會覆寫*dest*的終止 null 字元。 如果在附加*計數*位元組之前, *src*中出現 null 位元組, 則 **_mbsnbcat**會將所有位元組從*src*附加到 null 字元。 如果*count*大於*src*的長度, 則會使用*src*的長度來取代*計數*。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**_Mbsnbcat**函數最多會將*src*的第一個*計數*位元組附加至*dest*。 如果在*dest*中的 null 字元之前的位元組是前導位元組，則*src*的初始位元組會覆寫這個前導位元組。 否則， *src*的初始位元組會覆寫*dest*的終止 null 字元。 如果在附加*計數*位元組之前， *src*中出現 null 位元組，則 **_mbsnbcat**會將所有位元組從*src*附加到 null 字元。 如果*count*大於*src*的長度，則會使用*src*的長度來取代*計數*。 此產生的字串會以 Null 字元結束。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 函式的 **_mbsnbcat**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbsnbcat_l**版本相同, 不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 函式的 **_mbsnbcat**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbsnbcat_l**版本相同，不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-如果*dest*或*src*是**Null**, 此函式會產生不正確參數錯誤, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤, 此函式會傳回**EINVAL** , 並將**Errno**設定為**EINVAL**。
+如果*dest*或*src*是**Null**，此函式會產生不正確參數錯誤，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

@@ -1,9 +1,9 @@
 ---
 title: __min
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __min
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __min
 - min
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b5cc6517c125f91337ca0d9b12b7a49bd7c1753
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156547"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951728"
 ---
-# <a name="min"></a>__min
+# <a name="__min"></a>__min
 
-傳回較小的兩個值的前置處理器巨集。
+預處理器宏，會傳回兩個值中較小的一個。
 
 ## <a name="syntax"></a>語法
 
@@ -44,8 +47,8 @@ ms.locfileid: "62156547"
 
 ### <a name="parameters"></a>參數
 
-*a*, *b*<br/>
-值的任何型別 **<** 作用於運算子。
+*a*、 *b*<br/>
+運算子所 **<** 處理之任何類型的值。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,9 +56,9 @@ ms.locfileid: "62156547"
 
 ## <a name="remarks"></a>備註
 
-**__Min**巨集比較兩個值，並傳回較小的值。 引數可以是帶正負號或不帶正負號的任何數值資料類型。 引數和傳回值必須屬於相同的資料類型。
+**__Min**宏會比較兩個值，並傳回較小的值。 引數可以是帶正負號或不帶正負號的任何數值資料類型。 引數和傳回值必須屬於相同的資料類型。
 
-傳回引數會評估兩次由巨集。 這可能會導致非預期的結果引數是否會改變其值，其進行評估時，這類運算式`*p++`。
+傳回的引數會透過宏進行兩次評估。 如果引數是在評估時改變其值的運算式（例如`*p++`），這可能會導致非預期的結果。
 
 ## <a name="requirements"></a>需求
 

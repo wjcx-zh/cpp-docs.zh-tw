@@ -1,14 +1,14 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 ms.date: 03/25/2019
-apiname:
+api_name:
 - _mbstok_l
 - _mbstok
 - wcstok
 - _mbstok
 - strtok
 - _wcstok_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbstok
 - strtok
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 13fbc0e305f7ad183db06ec0060b2059b4964fe7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62ed9edc6ec5a7ee60223f1c5e908aa14f421a25
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500786"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957646"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -104,7 +107,7 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回在*strToken*中找到的下一個 token 的指標。 當找不到其他標記時, 函數會傳回**Null** 。 每個呼叫都會藉由將 null 字元取代為傳回標記之後的第一個分隔符號來修改*strToken* 。
+傳回在*strToken*中找到的下一個 token 的指標。 當找不到其他標記時，函數會傳回**Null** 。 每個呼叫都會藉由將 null 字元取代為傳回標記之後的第一個分隔符號來修改*strToken* 。
 
 ## <a name="remarks"></a>備註
 
@@ -113,11 +116,11 @@ unsigned char *_mbstok_l(
 > [!IMPORTANT]
 > 這些函式可能會帶來因緩衝區滿溢問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-在第一次呼叫**strtok**時, 函式會略過前置分隔符號, 並傳回*strToken*中第一個 token 的指標, 並以 null 字元終止標記。 透過一系列對**strtok**的呼叫, 可以將更多的 token 細分掉*strToken*的其餘部分。 **Strtok**的每個呼叫都會在該呼叫傳回的**權杖**之後插入一個 null 字元, 藉此修改*strToken* 。 若要從*strToken*讀取下一個 token, 請使用*strToken*引數的**Null**值呼叫**strtok** 。 **Null** *strToken*引數會導致**Strtok**在已修改的*strToken*中搜尋下一個 token。 *StrDelimit*引數可接受來自下一個呼叫的任何值, 如此一來, 分隔符號集合可能會有所不同。
+在第一次呼叫**strtok**時，函式會略過前置分隔符號，並傳回*strToken*中第一個 token 的指標，並以 null 字元終止標記。 透過一系列對**strtok**的呼叫，可以將更多的 token 細分掉*strToken*的其餘部分。 **Strtok**的每個呼叫都會在該呼叫傳回的**權杖**之後插入一個 null 字元，藉此修改*strToken* 。 若要從*strToken*讀取下一個 token，請使用*strToken*引數的**Null**值呼叫**strtok** 。 **Null** *strToken*引數會導致**Strtok**在已修改的*strToken*中搜尋下一個 token。 *StrDelimit*引數可接受來自下一個呼叫的任何值，如此一來，分隔符號集合可能會有所不同。
 
 輸出值會受到地區設定的**LC_CTYPE**分類設定影響。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。
 
-這些沒有 **_l**尾碼的函式版本, 會針對此與地區設定相關的行為使用目前的地區設定。 具有 **_l**尾碼的版本相同, 不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定。 具有 **_l**尾碼的版本相同，不同之處在于它們會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
 > 每個函式都會使用執行緒區域靜態變數將字串剖析為 Token。 因此，多個執行緒可以同時呼叫這些函式，卻不會有意外作用。 但在單一執行緒內，交錯呼叫這些函式的其中之一，非常有可能產生資料損毀或不正確的結果。 剖析不同的字串時，請先完成一個字串的剖析再開始剖析下一個。 亦請注意，從呼叫另一個函式的迴圈內呼叫這些函式的其中之一時，會有潛在的危險。 如果其他函式在使用這些函式的其中之一時結束，就會導致交錯的呼叫順序，觸發資料損毀。

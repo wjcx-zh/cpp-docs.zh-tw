@@ -1,10 +1,10 @@
 ---
 title: mbtowc、_mbtowc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbtowc
 - _mbtowc_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - api-ms-win-crt-convert-l1-1-0.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbtowc
 helpviewer_keywords:
@@ -26,12 +29,12 @@ helpviewer_keywords:
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-ms.openlocfilehash: 13ac8ad139cc12310663fbd23a21a461cd207236
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 655f5288738d2f2329b50a27381c00cb06e35e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499721"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952001"
 ---
 # <a name="mbtowc-_mbtowc_l"></a>mbtowc、_mbtowc_l
 
@@ -56,7 +59,7 @@ int _mbtowc_l(
 ### <a name="parameters"></a>參數
 
 *wchar*<br/>
-寬字元 ( **wchar_t**類型) 的位址。
+寬字元（ **wchar_t**類型）的位址。
 
 *mbchar*<br/>
 位元組序列 (多位元組字元) 的位址。
@@ -69,11 +72,11 @@ int _mbtowc_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果**mbchar**不是**Null** , 而且*mbchar*所指向的物件形成有效的多位元組字元, 則**mbtowc**會傳回多位元組字元的長度 (以位元組為單位)。 如果*mbchar*為**Null** , 或其所指向的物件是寬字元的 Null 字元 (L ' \ 0 '), 則函式會傳回0。 如果*mbchar*指向的物件未在第一個*計數*字元內形成有效的多位元組字元, 則會傳回-1。
+如果**mbchar**不是**Null** ，而且*mbchar*所指向的物件形成有效的多位元組字元，則**mbtowc**會傳回多位元組字元的長度（以位元組為單位）。 如果*mbchar*為**Null** ，或其所指向的物件是寬字元的 Null 字元（L ' \ 0 '），則函式會傳回0。 如果*mbchar*指向的物件未在第一個*計數*字元內形成有效的多位元組字元，則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-如果*mbchar*不是**Null**, 則**mbtowc**函式會將*mbchar*所指向的*count*或較少位元組轉換成對應的寬字元。 如果*wchar*不是**Null**, **mbtowc**會將產生的寬字元儲存在*wchar* 。 **mbtowc**不會檢查超過**MB_CUR_MAX**個位元組。 **mbtowc**會針對與地區設定相關的行為使用目前的地區設定; **_mbtowc_l**相同, 不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*mbchar*不是**Null**，則**mbtowc**函式會將*mbchar*所指向的*count*或較少位元組轉換成對應的寬字元。 如果*wchar*不是**Null**， **mbtowc**會將產生的寬字元儲存在*wchar* 。 **mbtowc**不會檢查超過**MB_CUR_MAX**個位元組。 **mbtowc**會針對與地區設定相關的行為使用目前的地區設定; **_mbtowc_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

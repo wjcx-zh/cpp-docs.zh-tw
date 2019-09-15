@@ -1,9 +1,9 @@
 ---
 title: _cabs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cabsl
 - _cabs
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e2536fbeed2f466d3795e2ed26e643279e8bc67
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341063"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943416"
 ---
-# <a name="cabs"></a>_cabs
+# <a name="_cabs"></a>_cabs
 
 計算複數的絕對值。
 
@@ -54,11 +57,11 @@ double _cabs(
 
 ## <a name="return-value"></a>傳回值
 
-**_cabs**如果成功，傳回其引數的絕對值。 溢位時， **_cabs**會傳回**HUGE_VAL**並設定**errno**至**ERANGE**。 您可以使用 [_matherr](matherr.md) 變更錯誤處理。
+如果成功， **_cabs**會傳回其引數的絕對值。 溢位時， **_cabs**會傳回**HUGE_VAL** ，並將**errno**設定為**ERANGE**。 您可以使用 [_matherr](matherr.md) 變更錯誤處理。
 
 ## <a name="remarks"></a>備註
 
-**_Cabs**函式會計算數值的複數，其必須是結構類型的絕對值[_complex](../../c-runtime-library/standard-types.md)。 結構*z*是真正的元件所組成*x*及虛數部分*y*。 呼叫 **_cabs**會產生等同於運算式的值`sqrt( z.x * z.x + z.y * z.y )`。
+**_Cabs**函式會計算複數的絕對值，此數值必須是[_complex](../../c-runtime-library/standard-types.md)類型的結構。 結構*z*是由實陣列件*x*和虛陣列件*y*所組成。 呼叫 **_cabs**時，會產生相當於運算式`sqrt( z.x * z.x + z.y * z.y )`的值。
 
 ## <a name="requirements"></a>需求
 

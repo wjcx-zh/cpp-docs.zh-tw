@@ -1,11 +1,11 @@
 ---
 title: cexp、cexpf、cexpl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cexp
 - cexpf
 - cexpl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cexp
 - cexpf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cexpl function
 - cexpf function
 ms.assetid: f27fd5a9-70c7-4957-a7ee-5256d19bd1da
-ms.openlocfilehash: 401dd30b326fcd6caef7cae6f1ecbdc43ed5dd5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dd6c9deddfe93cf044985f93b2129695d0770f0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335454"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943161"
 ---
 # <a name="cexp-cexpf-cexpl"></a>cexp、cexpf、cexpl
 
@@ -61,17 +64,17 @@ _Lcomplex cexp( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-值**電子**的乘冪*z*。
+**E**的值，從*z*的乘冪。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**cexp**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **cexp**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**cexp**的多載。 在 C 程式中， **cexp**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**cexp**， **cexpf**， **cexpl**|\<complex.h>|\<complex.h>|
+|**cexp**、 **cexpf**、 **cexpl**|\<complex.h>|\<complex.h>|
 
 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

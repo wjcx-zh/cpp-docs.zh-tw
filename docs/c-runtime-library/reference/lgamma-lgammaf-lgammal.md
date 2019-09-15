@@ -1,11 +1,11 @@
 ---
 title: lgamma、lgammaf、lgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lgamma
 - lgammaf
 - lgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lgamma
 - lgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157277"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953378"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -61,30 +64,30 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回值的 gamma 函式絕對值的自然對數*x*。
+如果成功，會傳回*x*之 gamma 函式絕對值的自然對數。
 
 |問題|Return|
 |-----------|------------|
 |*x* = NaN|NaN|
 |*x* = ±0|+INFINITY|
-|*x*= negative integer|+INFINITY|
-|±INFINITY|+INFINITY|
+|*x*= 負整數|+INFINITY|
+|±無限大|+INFINITY|
 |極錯誤|+HUGE_VAL、+HUGE_VALF 或 +HUGE_VALL|
-|溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
+|溢位範圍錯誤|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
 
 錯誤依 [_matherr](matherr.md) 中的指定回報。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**lgamma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **lgamma**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**lgamma**的多載。 在 C 程式中， **lgamma**一律會採用並傳回**雙精度浮點數**。
 
-如果 x 為有理數，此函數會傳回的 (x-1) 階乘的對數。
+如果 x 是有理數，此函數會傳回（x-1）階乘的對數。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**lgamma**， **lgammaf**， **lgammal**|\<math.h>|\<cmath>|
+|**lgamma**、 **lgammaf**、 **lgammal**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wmemmove_s
 - memmove_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wmemmove_s
 - memmove_s
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: 28d879a205790d1f132caca1022d0740e317c342
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951786"
 ---
-# <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
+# <a name="memmove_s-wmemmove_s"></a>memmove_s、wmemmove_s
 
 將某個緩衝區移到另一個緩衝區。 這些是 [memmove、wmemmove](memmove-wmemmove.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -64,8 +67,8 @@ errno_t wmemmove_s(
 *src*<br/>
 來源物件。
 
-*count*<br/>
-位元組數 (**memmove_s**) 或字元 (**wmemmove_s**) 複製。
+*計數*<br/>
+要複製的位元組數目（**memmove_s**）或字元數（**wmemmove_s**）。
 
 ## <a name="return-value"></a>傳回值
 
@@ -73,17 +76,17 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*dest*|*numberOfElements*|*src*|傳回值|內容*dest*|
+|*dest*|*numberOfElements*|*src*|傳回值|*Dest*的內容|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|未修改|
 |any|any|**NULL**|**EINVAL**|未修改|
-|any|< *count*|any|**ERANGE**|未修改|
+|any|< *計數*|any|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
-複本*計數*個位元組的字元從*src*來*dest*。 如果來源區域與目的地的某些區域重疊時， **memmove_s**可確保複製重疊區域中的原始來源位元組時，會再遭到覆寫。
+將字元的*計數*位元組從*src*複製到*dest*。 如果來源區域與目的地的某些區域重迭， **memmove_s**會確保重迭區域中的原始來源位元組會在覆寫之前複製。
 
-如果*dest*或者*src*為 null 指標，或如果目的字串太小，這些函式會叫用無效參數處理常式中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) . 如果允許繼續執行，則這些函式會傳回**EINVAL**並設定**errno**來**EINVAL**。
+如果*dest*或*src*是 null 指標，或如果目的字串太小，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

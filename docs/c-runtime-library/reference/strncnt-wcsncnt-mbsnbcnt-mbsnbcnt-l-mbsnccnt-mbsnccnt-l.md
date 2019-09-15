@@ -1,14 +1,14 @@
 ---
 title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcnt_l
 - _mbsnccnt
 - _wcsncnt
 - _strncnt
 - _mbsnccnt_l
 - _mbsnbcnt
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbsnbcnt
 - wcsncnt
@@ -50,19 +53,19 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 456a11ae98fe8fb40c2ef1d6f4e6d86583f4b7b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c00ae3ff845dfbc3daf4a3ea6ce5c34c43e475f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209817"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947303"
 ---
-# <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
+# <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
 傳回指定計次數內的字元或位元組數目。
 
 > [!IMPORTANT]
-> **_mbsnbcnt**， **_mbsnbcnt_l**， **_mbsnccnt**，和 **_mbsnccnt_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnbcnt**、 **_mbsnbcnt_l**、 **_mbsnccnt**和 **_mbsnccnt_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -100,25 +103,25 @@ size_t _mbsnccnt_l(
 *str*<br/>
 要檢查的字串。
 
-*count*<br/>
-字元或檢查的位元組數目*str*。
+*計數*<br/>
+*Str*中要檢查的字元或位元組數。
 
 *locale*<br/>
 要使用的地區設定。
 
 ## <a name="return-value"></a>傳回值
 
-**_mbsnbcnt**並 **_mbsnbcnt_l**傳回找到的位元組數目在第一個*count*的多位元組字元*str*。 **_mbsnccnt**並 **_mbsnccnt_l**傳回找到的字元數目在第一個*count*的位元組*str*。 Null 字元的檢查就碰到*str*已完成，傳回的 null 字元前找到的字元或位元組數目。 如果*str*組成少於*計數*字元或位元組，它們在字串中傳回的字元或位元組數目。 如果*計數*小於零，它們會傳回 0。 在舊版中，這些函式有傳回值的型別**int**而非**size_t**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**會傳回*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnccnt**和 **_mbsnccnt_l**會傳回*str*的第一個位元組*計數*中找到的字元數。 如果在完成*str*檢查之前遇到 null 字元，則會傳回在 null 字元之前找到的位元組或字元數。 如果*str* *包含少於個字元或*個位元組，則會傳回字串中的字元或位元組數。 如果*count*小於零，則會傳回0。 在舊版中，這些函式具有**int**類型的傳回值，而不是**size_t**。
 
-**_strncnt**傳回的字元數，在第一個*計數*個位元組的單一位元組字串*str*。 **_wcsncnt**傳回的字元數，在第一個*計數*寬字元的寬字元字串*str*。
+**_strncnt**會傳回單一位元組字串*str*的第一個*計數*位元組中的字元數。 **_wcsncnt**會傳回寬字元字串*str*的第一個*計數*寬字元中的字元數。
 
 ## <a name="remarks"></a>備註
 
-**_mbsnbcnt**並 **_mbsnbcnt_l**計算找到的位元組數目在第一個*計數*的多位元組字元*str*。 **_mbsnbcnt**並 **_mbsnbcnt_l**取代**mtob**應該用於取代**mtob**。
+**_mbsnbcnt**和 **_mbsnbcnt_l**會計算*str*中多位元組字元的第一個*計數*中找到的位元組數目。 **_mbsnbcnt**和 **_mbsnbcnt_l**會取代**mtob** ，而且應該用來取代**mtob**。
 
-**_mbsnccnt**並 **_mbsnccnt_l**計算找到的字元數目在第一個*count*的位元組*str*。 如果 **_mbsnccnt**並 **_mbsnccnt_l**遇到雙位元組字元的第二個位元組的 null 字元，第一個位元組也視為 null 和未包含在傳回的計數值。 **_mbsnccnt**並 **_mbsnccnt_l**取代**btom**應該用於取代**btom**。
+**_mbsnccnt**和 **_mbsnccnt_l**會計算*str*的第一個位元組*計數*中找到的字元數。 如果 **_mbsnccnt**和 **_mbsnccnt_l**在雙位元組字元的第二個位元組中遇到 null 字元，第一個位元組也會被視為 null，而且不會包含在傳回的 count 值中。 **_mbsnccnt**和 **_mbsnccnt_l**會取代**btom** ，而且應該用來取代**btom**。
 
-如果*str*是**NULL**指標是否*計數*是 0，則這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)， **errno**設定為**EINVAL**，且此函式會傳回 0。
+如果*str*是**Null**指標，或*count*為0，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述， **errno**會設定為**EINVAL**，而函式會傳回0。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 

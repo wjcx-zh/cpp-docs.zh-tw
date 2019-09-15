@@ -1,12 +1,12 @@
 ---
 title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsspnp
 - _wcsspnp
 - _mbsspnp_l
 - _strspnp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsspnp
 - _mbsspnp
@@ -42,19 +45,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: 9a4a0d2f9b9940e181625b129e5ded8bb9644c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af80f4970e5aad4355b0287c901f130809cc4f79
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223127"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946673"
 ---
-# <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
+# <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
 傳回不在另一個指定字串中之指定字串的第一個字元指標。
 
 > [!IMPORTANT]
-> **_mbsspnp**並 **_mbsspnp_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsspnp**和 **_mbsspnp_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -91,13 +94,13 @@ unsigned char *_mbsspnp_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_strspnp**， **_wcsspnp**，以及 **_mbsspnp**傳回的第一個字元的指標*str* ，不屬於字元集中*charset*。 每一種函式都會傳回**NULL**如果*str*包含的字元完全*charset*。 針對所有這些函式，不保留任何表示錯誤的傳回值。
+**_strspnp**、 **_wcsspnp**和 **_mbsspnp**會傳回*str*中不屬於*字元集*中字元集之第一個字元的指標。 如果*str*包含*字元集*中的字元，則每個函數都會傳回**Null** 。 針對所有這些函式，不保留任何表示錯誤的傳回值。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsspnp**函式傳回的第一個字元的多位元組字元的指標*str* ，不屬於組字元*charset*。 **_mbsspnp**辨識多位元組字元序列，根據[多位元組字碼頁](../../c-runtime-library/code-pages.md)目前使用中。 搜尋不包含終止的 Null 字元。
+**_Mbsspnp**函數會傳回多位元組字元的指標，這是*str*中不屬於*字元集*中字元集的第一個字元。 **_mbsspnp**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。 搜尋不包含終止的 Null 字元。
 
-如果有任一*str*或*字元集*為 null 指標，此函式會叫用無效參數處理常式中，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回**NULL**並設定**errno**來**EINVAL**。
+如果*str*或*字元集*是 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -105,9 +108,9 @@ unsigned char *_mbsspnp_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp**並 **_wcsspnp**是單一位元組字元和寬字元版本 **_mbsspnp**。 **_strspnp**並 **_wcsspnp**行為會和 **_mbsspnp**否則只會提供給此對應並不應該用於任何其他原因。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+**_strspnp**和 **_wcsspnp**是 **_mbsspnp**的單一位元組字元和寬字元版本。 **_strspnp**和 **_wcsspnp**的行為與 **_mbsspnp**相同; 否則僅針對此對應提供，而且不應該用於任何其他原因。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsspnp_l**完全相同，只不過它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsspnp_l**相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

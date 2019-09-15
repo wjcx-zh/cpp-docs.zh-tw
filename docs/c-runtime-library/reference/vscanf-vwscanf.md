@@ -1,10 +1,10 @@
 ---
 title: vscanf、vwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vscanf
 - vwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vscanf
 - vwscanf
 - _vtscanf
 ms.assetid: d1df595b-11bc-4682-9441-a92616301e3b
-ms.openlocfilehash: 936dcc34fb0d2ed73919ca59c7419f2090c54e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86e6588f6309989317c4cee7ec398cfa809afe9b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383499"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945439"
 ---
 # <a name="vscanf-vwscanf"></a>vscanf、vwscanf
 
@@ -57,18 +60,18 @@ int vwscanf(
 
 傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。
 
-如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+如果*format*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Vscanf**函式會從標準輸入資料流讀取資料**stdin**並將資料寫入至所指定的位置*arglist*引數清單。 在清單中的每個引數必須是對應至中的類型指定名稱的型別變數指標*格式*。 如果在重疊的字串之間進行複製，則行為是未定義的。
+**Vscanf**函數會從標準輸入資料流程**stdin**中讀取資料，並將資料寫入*arglist*引數清單所提供的位置。 清單中的每個引數都必須是對應于*格式*之類型規範的類型變數的指標。 如果在重疊的字串之間進行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 當您使用**vscanf**讀取字串，一定要指定的寬度 **%s**格式 (例如 **"%32s"** 而不是 **"%s"**);否則，格式不正確的輸入可以造成緩衝區溢位。 或者，您可以使用 [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) 或 [fgets](fgets-fgetws.md)。
+> 當您使用**vscanf**來讀取字串時，請一律指定 **% s**格式的寬度（例如 **"% e64-32s"** ，而不是 **"% s"** ）;否則，格式不正確的輸入可能會造成緩衝區溢位。 或者，您可以使用 [vscanf_s, vwscanf_s](vscanf-s-vwscanf-s.md) 或 [fgets](fgets-fgetws.md)。
 
-**vwscanf**是寬字元版本的**vscanf**;*格式*引數**vwscanf**是寬字元字串。 **vwscanf**並**vscanf**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **vscanf**不支援來自 UNICODE 資料流輸入。
+**vwscanf**是寬字元版本的**vscanf**;**vwscanf**的*格式*引數是寬字元字串。 如果資料流程是以 ANSI 模式開啟，則**vwscanf**和**vscanf**的行為相同。 **vscanf**不支援來自 UNICODE 資料流程的輸入。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -85,7 +88,7 @@ int vwscanf(
 |**vscanf**|\<stdio.h>|
 |**vwscanf**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

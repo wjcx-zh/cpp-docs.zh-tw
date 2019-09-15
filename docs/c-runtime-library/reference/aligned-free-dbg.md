@@ -1,9 +1,9 @@
 ---
 title: _aligned_free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b510d16b6e784202094bb05e6364f7af1b1fff97
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341895"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939911"
 ---
-# <a name="alignedfreedbg"></a>_aligned_free_dbg
+# <a name="_aligned_free_dbg"></a>_aligned_free_dbg
 
 釋放使用 [_aligned_malloc](aligned-malloc.md) 或 [_aligned_offset_malloc](aligned-offset-malloc.md) 所配置的記憶體區塊 (僅限偵錯)。
 
@@ -44,13 +47,13 @@ void _aligned_free_dbg(
 ### <a name="parameters"></a>參數
 
 *memblock*<br/>
-若要傳回的記憶體區塊的指標[_aligned_malloc](aligned-malloc.md)或是[_aligned_offset_malloc](aligned-offset-malloc.md)函式。
+傳回至[_aligned_malloc](aligned-malloc.md)或[_aligned_offset_malloc](aligned-offset-malloc.md)函式之記憶體區塊的指標。
 
 ## <a name="remarks"></a>備註
 
-**_Aligned_free_dbg**函式是偵錯版本[_aligned_free](aligned-free.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_free_dbg**的呼叫會降低`_aligned_free`。 兩者`_aligned_free`和 **_aligned_free_dbg**釋放的記憶體區塊，在基底堆積中，但 **_aligned_free_dbg**適用於偵錯功能： 將釋放的能力會封鎖堆積的連結清單中模擬低記憶體狀況。
+**_Aligned_free_dbg**函數是[_aligned_free](aligned-free.md)函數的 debug 版本。 未定義[_debug](../../c-runtime-library/debug.md)時，會將 **_aligned_free_dbg**的每個呼叫縮減為`_aligned_free`的呼叫。 和`_aligned_free` **_aligned_free_dbg**都會釋放基底堆積中的記憶體區塊，但 **_aligned_free_dbg**會包含偵錯工具功能：將釋放的區塊保留在堆積的連結清單中，以模擬記憶體不足的狀況。
 
-**_aligned_free_dbg**執行有效性檢查所有指定的檔案和區塊位置執行可用的作業之前。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果 _CRTDBG_DELAY_FREE_MEM_DF 位元欄位[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)旗標設定時，已釋放的區塊填入值 0xDD，指派 _FREE_BLOCK 區塊型別，並保留在堆積的連結清單的記憶體區塊。
+在執行免費作業之前， **_aligned_free_dbg**會對所有指定的檔案和區塊位置執行有效性檢查。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果已設定[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)旗標的 _CRTDBG_DELAY_FREE_MEM_DF 位欄位，釋放的區塊會填入值0xDD、指派 _FREE_BLOCK 區塊類型，並保留在堆積的記憶體區塊連結清單中。
 
 若釋放記憶體發生錯誤，會使用來自作業系統且具有失敗性質的資訊設定 `errno`。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

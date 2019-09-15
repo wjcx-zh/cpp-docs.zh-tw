@@ -1,9 +1,9 @@
 ---
 title: clearerr_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clearerr_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clearerr_s
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 03bdc533d3afa265be22ae3567fabe8e78f752a4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342936"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939156"
 ---
-# <a name="clearerrs"></a>clearerr_s
+# <a name="clearerr_s"></a>clearerr_s
 
 重設資料流的錯誤指標。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [clearerr](clearerr.md) 版本。
 
@@ -45,17 +48,17 @@ errno_t clearerr_s(
 ### <a name="parameters"></a>參數
 
 *stream*<br/>
-指標**檔案**結構
+檔案結構**的**指標
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為零**EINVAL**如果*串流*會**NULL**。
+如果成功，則為零;如果*stream*為**Null**，則**EINVAL** 。
 
 ## <a name="remarks"></a>備註
 
-**Clearerr_s**函式重設錯誤指標和檔案結尾指標*串流*。 不會自動清除錯誤指標;一旦設定指定的資料流的錯誤指標之後，該資料流的作業會繼續傳回錯誤值直到**clearerr_s**， **clearerr**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[rewind](rewind.md)呼叫。
+**Clearerr_s**函數會重設*資料流程*的錯誤指標和檔案結尾指標。 錯誤指示器不會自動清除;一旦設定了指定資料流程的錯誤指示器之後，該資料流程上的[作業會繼續](rewind.md)傳回錯誤值，直到呼叫**clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**或倒轉為止。
 
-如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
@@ -107,7 +110,7 @@ int main( void )
 }
 ```
 
-### <a name="input"></a>輸入
+### <a name="input"></a>Input
 
 ```Input
 n

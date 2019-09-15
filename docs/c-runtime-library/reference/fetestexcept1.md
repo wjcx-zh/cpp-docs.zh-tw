@@ -1,9 +1,9 @@
 ---
 title: fetestexcept
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fetestexcept
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fetestexcept
 - fenv/fetestexcept
 helpviewer_keywords:
 - fetestexept function
 ms.assetid: ca4dc43f-5573-440d-bc19-ead7571b13dc
-ms.openlocfilehash: ed75ab0ff13029f6ec10c1aafbcb7f7b23b46fd6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 61a68b4569d52b550da3fad12c077b82bb067fa9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334161"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941004"
 ---
 # <a name="fetestexcept"></a>fetestexcept
 
@@ -52,7 +55,7 @@ int fetestexcept(
 
 ## <a name="remarks"></a>備註
 
-使用 fetestexcept 函式判斷浮點運算引發的例外狀況。 使用*removed*參數來指定要測試的例外狀況狀態旗標。 **Fetestexcept**函式會使用定義在這些例外狀況巨集\<fenv.h > 中*removed*和傳回值：
+使用 fetestexcept 函式判斷浮點運算引發的例外狀況。 使用*以外*參數來指定要測試的例外狀況狀態旗標。 **Fetestexcept**函式會使用*以外*和傳回值\<中的 > fenv.h 中所定義的這些例外狀況宏：
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -63,13 +66,13 @@ int fetestexcept(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-指定*removed*引數可以是 0，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 任何其他的效果*removed*引數的值未定義。
+指定的*以外*引數可以是0、其中一個支援的浮點例外狀況宏，或是兩個或多個宏的位 or。 任何其他*以外*引數值的效果尚未定義。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fetestexcept**|\<fenv.h>|\<cfenv>|
 

@@ -1,9 +1,9 @@
 ---
 title: setbuf
 ms.date: 04/08/2019
-apiname:
+api_name:
 - setbuf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - setbuf
 helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356381"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948270"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -52,9 +55,9 @@ void setbuf(
 
 ## <a name="remarks"></a>備註
 
-**Setbuf**函式會控制緩衝*串流*。 *資料流*引數必須參考沒有讀取或寫入的開啟檔案。 如果*緩衝區*引數是**NULL**，資料流已緩衝。 如果沒有，緩衝區必須指向長度的字元陣列**BUFSIZ**，其中**BUFSIZ**是定義於 STDIO 的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流是未緩衝處理依預設，但您可以使用**setbuf**將緩衝區指派給**stderr**。
+**Setbuf**函數會控制*資料流程*的緩衝處理。 *資料流程*引數必須參考尚未讀取或寫入的開啟檔案。 如果*緩衝區*引數為**Null**，則資料流程未緩衝。 如果不是，緩衝區必須指向長度為**BUFSIZ**的字元陣列，其中**BUFSIZ**是 stdio.h 中所定義的緩衝區大小。H. 使用者指定的緩衝區 (而非指定資料流的預設系統配置緩衝區) 用於 I/O 緩衝處理。 **Stderr**資料流程預設為無緩衝，但是您可以使用**setbuf**將緩衝區指派給**stderr**。
 
-**setbuf**已被取代[setvbuf](setvbuf.md)，這是新的程式碼的慣用的常式。 不同於**setvbuf**， **setbuf**無法報告錯誤。 **setvbuf**也可讓您控制的緩衝模式和緩衝區大小。 **setbuf**存在與現有的程式碼的相容性。
+**setbuf**已由[setvbuf](setvbuf.md)取代，這是新程式碼慣用的常式。 不同于**setvbuf**， **setbuf**無法報告錯誤。 **setvbuf**也可讓您同時控制緩衝處理模式和緩衝區大小。 **setbuf**存在以提供與現有程式碼的相容性。
 
 ## <a name="requirements"></a>需求
 

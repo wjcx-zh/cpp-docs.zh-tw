@@ -1,11 +1,11 @@
 ---
 title: clog、clogf、clogl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog
 - clogf
 - clogl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog
 - clogf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clogf function
 - clogl function
 ms.assetid: 870b9b0b-6618-46f3-bfcf-da595cbd5e18
-ms.openlocfilehash: fcbc9ba7984898d51f7a3d0beb5ef7c8b6d6892c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76ee6e4e81c275c8cbed0f74914521c0b44499bb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340634"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942915"
 ---
 # <a name="clog-clogf-clogl"></a>clog、clogf、clogl
 
@@ -68,7 +71,7 @@ _Lcomplex clogl(
 
 ## <a name="return-value"></a>傳回值
 
-自然對數*z*。 結果是在實數軸，並在間隔中未繫結 [-i π，+ i π] 在虛數軸。
+*Z*的自然對數。 結果會沿著實際軸和在虛數軸的間隔 [-i π，+ i π] 中未系結。
 
 可能的傳回值如下：
 
@@ -82,13 +85,13 @@ _Lcomplex clogl(
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**clog**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **clog**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**阻塞**的多載。 在 C 程式中，**阻塞**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**clog**， **clogf**， **clogl**|\<complex.h>|\<ccomplex>|
+|**堵塞**， **clogf**， **clogl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,10 +1,10 @@
 ---
 title: vfscanf_s、vfwscanf_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfscanf_s
 - vfwscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,20 +15,23 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfscanf_s
 - vfwscanf_s
 - _vftscanf_s
 ms.assetid: 9b0133f0-9a18-4581-b24b-3b72683ad432
-ms.openlocfilehash: 7f2f39ef124220ddee0b42242a9991d63fe5969a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c6f3504c9c12ad5429a1b9649eda351c473671a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364853"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957381"
 ---
-# <a name="vfscanfs-vfwscanfs"></a>vfscanf_s、vfwscanf_s
+# <a name="vfscanf_s-vfwscanf_s"></a>vfscanf_s、vfwscanf_s
 
 從資料流讀取格式化資料。 這些版本的 vfscanf、vfwscanf 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -60,18 +63,18 @@ int vfwscanf_s(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **vfscanf_s**並**vfwscanf_s**。
+所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或在第一次轉換之前到達檔案資料流程的結尾，則傳回值為**vfscanf_s**和**vfwscanf_s**的**EOF** 。
 
-這些函式會驗證它們的參數。 如果*資料流*是無效的檔案指標，或*格式*為 null 指標，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*stream*是不正確檔案指標，或*格式*為 null 指標，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Vfscanf_s**函式會從目前位置讀取資料*串流*所指定的位置*arglist*引數清單 （如果有的話）。 在清單中的每個引數必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf_s**; 請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)的說明*格式*。 **vfwscanf_s**是寬字元版本的**vfscanf_s**; 的格式引數**vfwscanf_s**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **vfscanf_s**目前不支援來自 UNICODE 資料流輸入。
+**Vfscanf_s**函數會將資料從*資料流程*的目前位置讀取到*arglist*引數清單所指定的位置（如果有的話）。 清單中的每個引數都必須是對應于*格式*之類型規範的類型變數的指標。 *format*會控制輸入欄位的轉譯，並具有與**scanf_s**的*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[格式規格欄位： Scanf 和 wscanf 函數](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。 **vfwscanf_s**是寬字元版本的**vfscanf_s**;**vfwscanf_s**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **vfscanf_s**目前不支援來自 UNICODE 資料流程的輸入。
 
-更安全的函式的主要差異 (具有 **_s**後置詞) 和其他版本中會是更安全的函式需要在每個字元的大小**c**， **C**， **s**， **S**，和 **[** 傳遞做為引數，緊接在變數的 [類型] 欄位。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
+更安全的函式（具有 **_s**尾碼）和其他版本之間的主要差異在於，更安全的函式需要每個**c**、 **c**、 **s**、 **s**和 **[** 類型] 欄位的字元大小緊接在變數之後當做引數傳遞。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> 大小參數的類型是**不帶正負號**，而非**size_t**。
+> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -81,7 +84,7 @@ int vfwscanf_s(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**vfscanf_s**|\<stdio.h>|
 |**vfwscanf_s**|\<stdio.h> 或 \<wchar.h>|

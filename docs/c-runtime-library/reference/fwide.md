@@ -1,9 +1,9 @@
 ---
 title: fwide
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwide
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwide
 helpviewer_keywords:
 - fwide function
 ms.assetid: a4641f5b-d74f-4946-95d5-53a64610d28d
-ms.openlocfilehash: d992ebc527744beeb4ef14175e3f10646a77a064
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e986ba5ab28072f4933e555eea32a5893c8df56
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287612"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956213"
 ---
 # <a name="fwide"></a>fwide
 
@@ -43,7 +46,7 @@ int fwide(
 ### <a name="parameters"></a>參數
 
 *stream*<br/>
-指標**檔案**（忽略） 的結構。
+檔案結構**的**指標（已忽略）。
 
 *mode*<br/>
 資料流的新寬度︰寬字元為正值、位元組為負值、零則保留不變。 (這個值會被忽略。)
@@ -58,7 +61,7 @@ int fwide(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fwide**|\<wchar.h>|
 

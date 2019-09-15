@@ -1,12 +1,12 @@
 ---
 title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbclower
 - _ismbclower_l
 - _ismbcupper_l
 - _ismbcupper
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcupper
 - _ismbclower
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a64a0d9be83733fa5482eee84ce6576dd32c221
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157266"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953789"
 ---
-# <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
+# <a name="_ismbclower-_ismbclower_l-_ismbcupper-_ismbcupper_l"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
 檢查多位元組字元是大寫或小寫。
 
@@ -75,20 +78,20 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c*< = 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應 **_ismbb**常式的傳回值。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小寫字母|傳回非零值，才*c*是 ASCII 小寫英文字母的單一位元組表示法：0x61<=*c*<=0x7A.|
-|**_ismbclower_l**|小寫字母|傳回非零值，才*c*是 ASCII 小寫英文字母的單一位元組表示法：0x61<=*c*<=0x7A.|
-|**_ismbcupper**|大寫字母|傳回非零值，才*c*是 ASCII 大寫英文字母的單一位元組表示法：0x41<=*c*<=0x5A.|
-|**_ismbcupper_l**|大寫字母|傳回非零值，才*c*是 ASCII 大寫英文字母的單一位元組表示法：0x41<=*c*<=0x5A.|
+|**_ismbclower**|小寫字母|只有在*c*是 ASCII 小寫英文字母的單一位元組表示時，才傳回非零：0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|小寫字母|只有在*c*是 ASCII 小寫英文字母的單一位元組表示時，才傳回非零：0x61<=*c*<=0x7A.|
+|**_ismbcupper**|大寫字母|只有在*c*是 ASCII 大寫英文字母的單一位元組表示時，才傳回非零：0x41<=*c*<=0x5A.|
+|**_ismbcupper_l**|大寫字母|只有在*c*是 ASCII 大寫英文字母的單一位元組表示時，才傳回非零：0x41<=*c*<=0x5A.|
 
 ## <a name="requirements"></a>需求
 

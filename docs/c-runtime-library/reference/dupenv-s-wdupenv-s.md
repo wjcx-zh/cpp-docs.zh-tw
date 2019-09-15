@@ -1,10 +1,10 @@
 ---
 title: _dupenv_s、_wdupenv_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _dupenv_s
 - _wdupenv_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tdupenv_s
 - _dupenv_s
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f66828e0941c2324d75797cbb1fa77bdfa184205
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288858"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942029"
 ---
-# <a name="dupenvs-wdupenvs"></a>_dupenv_s、_wdupenv_s
+# <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s、_wdupenv_s
 
 從目前的環境取得值。
 
@@ -68,7 +71,7 @@ errno_t _wdupenv_s(
 要儲存變數的值的緩衝區。
 
 *numberOfElements*<br/>
-大小*緩衝區*。
+*緩衝區*的大小。
 
 *varname*<br/>
 環境變數名稱。
@@ -77,26 +80,26 @@ errno_t _wdupenv_s(
 
 若成功，就是零；若失敗，則為錯誤碼。
 
-這些函式會驗證其參數;如果*緩衝區*或是*varname*是**NULL**，如中所述，會叫用無效參數處理常式[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+這些函式會驗證其參數;如果*buffer*或*varname*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
-如果這些函式無法配置足夠的記憶體，它們將*緩衝區*要**NULL**並*numberOfElements*為 0，並傳回**ENOMEM**。
+如果這些函式無法配置足夠的記憶體，則會將*buffer*設定為**Null**並*numberOfElements*為0，然後傳回**ENOMEM**。
 
 ## <a name="remarks"></a>備註
 
-**_Dupenv_s**函式會搜尋的環境變數清單*varname*。 如果找到變數，則 **_dupenv_s**會配置緩衝區，並將變數的值複製到緩衝區。 傳回緩衝區的位址和長度*緩衝區*並*numberOfElements*。 透過配置緩衝區本身 **_dupenv_s**提供更方便的替代方法，來[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)。
+**_Dupenv_s**函數會搜尋環境變數清單中的*varname*。 如果找到變數， **_dupenv_s**會配置緩衝區，並將變數的值複製到緩衝區。 緩衝區的位址和長度會在*buffer*和*numberOfElements*中傳回。 藉由配置緩衝區本身， **_dupenv_s**提供更方便的[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)替代方式。
 
 > [!NOTE]
 > 呼叫程式會負責呼叫 [free](free.md) 以釋放記憶體。
 
-如果找不到變數，然後*緩衝區*設為**NULL**， *numberOfElements*設為 0，並傳回值為 0，因為這種情況下不被視為錯誤條件。
+如果找不到變數，則*buffer*會設定為**Null**， *numberOfElements*會設為0，且傳回值為0，因為這種情況不會被視為錯誤狀況。
 
-如果您不感興趣的緩衝區大小可以傳遞**NULL** for *numberOfElements*。
+如果您對緩衝區的大小不感興趣，您可以針對*numberOfElements*傳遞**Null** 。
 
-**_dupenv_s**不區分大小寫在 Windows 作業系統中。 **_dupenv_s**會使用全域變數所指向的環境複製 **_environ**本來存取環境。 請參閱中的備註[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)的討論 **_environ**。
+**_dupenv_s**在 Windows 作業系統中不區分大小寫。 **_dupenv_s**會使用全域變數 **_environ**所指向的環境複本來存取環境。 如需 **_environ**的討論，請參閱[getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)中的備註。
 
-中的值*緩衝區*是一份該環境變數的值，修改已在環境上的沒有作用。 使用 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 函式修改環境變數的值。
+*Buffer*中的值是環境變數值的複本。修改它對環境不會有任何影響。 使用 [_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 函式修改環境變數的值。
 
-**_wdupenv_s**是寬字元版本的 **_dupenv_s**; 的引數 **_wdupenv_s**是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。 請參閱中的備註[getenv_s、 _wgetenv_s](getenv-s-wgetenv-s.md)如需詳細資訊 **_wenviron**。
+**_wdupenv_s**是寬字元版本的 **_dupenv_s**; **_wdupenv_s**的引數是寬字元字串。 **_Wenviron**全域變數是寬字元版本的 **_environ**。 如需 **_wenviron**的詳細資訊，請參閱[getenv_s、_Wgetenv_s](getenv-s-wgetenv-s.md)中的備註。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -1,9 +1,9 @@
 ---
 title: fwrite
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwrite
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fwrite
 helpviewer_keywords:
 - streams, writing data to
 - fwrite function
 ms.assetid: 7afacf3a-72d7-4a50-ba2e-bea1ab9f4124
-ms.openlocfilehash: f05e39390f3a2d0ad41627f6aed1aecd77b57cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 8149e0f2cbc84c2c28093d86fecd5ff2a9db7aba
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376059"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956187"
 ---
 # <a name="fwrite"></a>fwrite
 
@@ -64,15 +67,15 @@ size_t fwrite(
 
 ## <a name="remarks"></a>備註
 
-**Fwrite**函式會將每  個專案的*大小*上限, 從*緩衝區*寫入輸出*資料流程*。 與*資料流程*相關聯的檔案指標 (如果有的話) 會以實際寫入的位元組數遞增。 如果在文字模式中開啟*資料流程*, 則會將每個換行字元換行一組。 這種取代不會對傳回值產生影響。
+**Fwrite**函式會將每個專案的*大小*上限, 從*緩衝區*寫入輸出*資料流程*。 與*資料流程*相關聯的檔案指標 (如果有的話) 會以實際寫入的位元組數遞增。 如果在文字模式中開啟*資料流程*, 則會將每個換行字元換行一組。 這種取代不會對傳回值產生影響。
 
-在 Unicode 轉譯模式中開啟*資料流程*時 (例如, 如果透過呼叫**fopen**來開啟*資料流程*, 並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數), 或如果模式為使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式-將*緩衝區*解讀為包含的**wchar_t**陣列的指標UTF-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+在 Unicode 轉譯模式中開啟*資料流程*時（例如，如果透過呼叫**fopen**來開啟*資料流程*，並使用包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數），或如果模式為使用 **_setmode**和包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數變更為 Unicode 轉譯模式-將*緩衝區*解讀為包含的**wchar_t**陣列的指標UTF-16 資料。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
-因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本, 請參閱 **_fwrite_nolock**。
+因為此函示會鎖定呼叫執行緒，這是安全執行緒。 如需非鎖定版本，請參閱 **_fwrite_nolock**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fwrite**|\<stdio.h>|
 

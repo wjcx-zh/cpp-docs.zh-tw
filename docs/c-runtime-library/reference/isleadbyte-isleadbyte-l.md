@@ -1,10 +1,10 @@
 ---
 title: isleadbyte、_isleadbyte_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isleadbyte_l
 - isleadbyte
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286914"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954303"
 ---
-# <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
+# <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte、_isleadbyte_l
 
 判斷某個字元是否為多位元組字元的前導位元組。
 
@@ -56,15 +59,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>傳回值
 
-**isleadbyte**如果引數符合測試條件或 0 則會傳回非零值。 在"C"地區設定和單一位元組字元集 (SBCS) 地區設定中， **isleadbyte**一律會傳回 0。
+如果引數符合測試條件， **isleadbyte**會傳回非零值，否則會傳回0。 在 "C" 地區設定和單位元組字元集（SBCS）地區設定中， **isleadbyte**一律會傳回0。
 
 ## <a name="remarks"></a>備註
 
-**Isleadbyte**巨集會傳回非零值，如果其引數是多位元組字元的第一個位元組。 **isleadbyte**會產生有意義的結果的任何整數引數，介於-1 (**EOF**) 來**UCHAR_MAX** (0xFF)，內含。
+如果**isleadbyte**宏的引數是多位元組字元的第一個位元組，則會傳回非零值。 **isleadbyte**會針對任何從-1 （**EOF**）到**UCHAR_MAX** （0xff）（含）的整數引數產生有意義的結果。
 
-預期的引數型別**isleadbyte**是**int**; 如果傳遞的帶正負號的字元，則編譯器可能會將它轉換成整數的正負號擴充，產生無法預期的結果。
+**Isleadbyte**的預期引數類型為**int**。如果傳遞帶正負號的字元，編譯器可能會將它轉換成整數（藉由符號延伸），因而產生無法預期的結果。
 
-使用此函式的版本 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定而不是目前的地區設定針對與其地區設定相關的行為。
+具有 **_l**後置字元的這個函式版本是一樣的，不同之處在于它會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

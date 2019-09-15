@@ -1,12 +1,12 @@
 ---
 title: scanf、_scanf_l、wscanf、_wscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wscanf_l
 - scanf
 - _scanf_l
 - wscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tscanf
 - _scanf_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: 48aa0bb3348a3336de9ee0eb9f9ec0d3e1a2b3cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c3b0f73561dcd41ef1643042baeac7fff0728b4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357118"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948837"
 ---
-# <a name="scanf-scanfl-wscanf-wscanfl"></a>scanf、_scanf_l、wscanf、_wscanf_l
+# <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf、_scanf_l、wscanf、_wscanf_l
 
 從標準輸入資料流讀取格式化資料。 這些函式已有更安全的版本可供使用；請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)。
 
@@ -79,7 +82,7 @@ int _wscanf_l(
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -89,20 +92,20 @@ int _wscanf_l(
 
 這會在成功轉換並指派時傳回欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。
 
-如果*格式*是**NULL**指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+如果*format*是**Null**指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Scanf**函式會從標準輸入資料流讀取資料**stdin**並將資料寫入至所指定的位置*引數*。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Scanf**函數會從標準輸入資料流程**stdin**讀取資料，並將資料寫入至*引數*所指定的位置。 每個*自*變數都必須是類型變數的指標，其對應于*格式*的類型規範。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> 讀取的字串時**scanf**，一定要指定的寬度 **%s**格式 (例如 **"%32s"** 而不是 **"%s"**)，則為格式不正確的輸入很容易造成緩衝區溢位。 或者，請考慮使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
+> 使用**scanf**讀取字串時，請一律指定 **% s**格式的寬度（例如 **"% e64-32s"** ，而不是 **"% s"** ）;否則，格式不正確的輸入可能會容易造成緩衝區溢位。 或者，請考慮使用 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 或 [fgets](fgets-fgetws.md)。
 
-**wscanf**是寬字元版本的**scanf**;*格式*引數**wscanf**是寬字元字串。 **wscanf**並**scanf**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **scanf**目前不支援來自 UNICODE 資料流輸入。
+**wscanf**是寬字元版本的**scanf**;**wscanf**的*格式*引數是寬字元字串。 如果資料流程是以 ANSI 模式開啟，則**wscanf**和**scanf**的行為相同。 **scanf**目前不支援來自 UNICODE 資料流程的輸入。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -117,10 +120,10 @@ int _wscanf_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**scanf**， **_scanf_l**|\<stdio.h>|
-|**wscanf**， **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
+|**scanf**、 **_scanf_l**|\<stdio.h>|
+|**wscanf**、 **_wscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

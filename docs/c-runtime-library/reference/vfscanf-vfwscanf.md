@@ -1,10 +1,10 @@
 ---
 title: vfscanf、vfwscanf
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwscanf
 - vfscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vfwscanf
 - _vftscanf
 - vfscanf
 ms.assetid: c06450ef-03f1-4d24-a8ac-d2dd98847918
-ms.openlocfilehash: 3076f63e05e156a479372adfca9dc707255f9e6a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72591c9fa91855745f45f3f77c88dd0ed5b001a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364775"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945514"
 ---
 # <a name="vfscanf-vfwscanf"></a>vfscanf、vfwscanf
 
@@ -60,15 +63,15 @@ int vfwscanf(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **vfscanf**並**vfwscanf**。
+所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或在第一次轉換之前到達檔案資料流程的結尾，則傳回值為**vfscanf**和**vfwscanf**的**EOF** 。
 
-這些函式會驗證它們的參數。 如果*資料流*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*資料流程*或*格式*為 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Vfscanf**函式會從目前位置讀取資料*串流*所指定的位置*arglist*引數清單。 在清單中的每個引數必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的popis*格式*。
+**Vfscanf**函數會將資料從*資料流程*的目前位置讀取到*arglist*引數清單所指定的位置。 清單中的每個引數都必須是對應于*格式*之類型規範的類型變數的指標。 *format*會控制輸入欄位的轉譯，並具有與**scanf**的*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md) 。
 
-**vfwscanf**是寬字元版本的**vfscanf**; 的格式引數**vfwscanf**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **vfscanf**不支援來自 UNICODE 資料流輸入。
+**vfwscanf**是寬字元版本的**vfscanf**;**vfwscanf**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **vfscanf**不支援來自 UNICODE 資料流程的輸入。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -80,7 +83,7 @@ int vfwscanf(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**vfscanf**|\<stdio.h>|
 |**vfwscanf**|\<stdio.h> 或 \<wchar.h>|

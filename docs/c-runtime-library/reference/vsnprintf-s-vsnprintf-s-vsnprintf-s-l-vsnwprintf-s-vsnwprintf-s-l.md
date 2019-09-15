@@ -1,13 +1,13 @@
 ---
 title: vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsnwprintf_s
 - _vsnwprintf_s_l
 - _vsnprintf_s
 - vsnprintf_s
 - _vsnprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vsnprintf_s
 - _vsntprintf_s
@@ -40,12 +43,12 @@ helpviewer_keywords:
 - _vsnwprintf_s function
 - formatted text [C++]
 ms.assetid: 147ccfce-58c7-4681-a726-ef54ac1c604e
-ms.openlocfilehash: 50e38e3177462f17436727cf26d1e7dade9cb882
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 8c41a09ce35819403b2361dcf5ad53eb93b7a615
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499089"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945281"
 ---
 # <a name="vsnprintf_s-_vsnprintf_s-_vsnprintf_s_l-_vsnwprintf_s-_vsnwprintf_s_l"></a>vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l
 
@@ -113,7 +116,7 @@ int _vsnwprintf_s(
 輸出的儲存位置。
 
 *sizeOfBuffer*<br/>
-輸出的*緩衝區*大小 (以字元計數表示)。
+輸出的*緩衝區*大小（以字元計數表示）。
 
 *計數*<br/>
 要寫入的字元數目上限 (不包括終止的 Null) 或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
@@ -131,11 +134,11 @@ int _vsnwprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**vsnprintf_s**、 **_vsnprintf_s**和 **_vsnwprintf_s**會傳回寫入的字元數, 不包括終止的 null, 或如果發生輸出錯誤, 則傳回負值。 **vsnprintf_s**與 **_vsnprintf_s**相同。 包含**vsnprintf_s**以符合 ANSI 標準。 **_vnsprintf**是為了回溯相容性而保留的。
+**vsnprintf_s**、 **_vsnprintf_s**和 **_vsnwprintf_s**會傳回寫入的字元數，不包括終止的 null，或如果發生輸出錯誤，則傳回負值。 **vsnprintf_s**與 **_vsnprintf_s**相同。 包含**vsnprintf_s**以符合 ANSI 標準。 **_vnsprintf**是為了回溯相容性而保留的。
 
-如果儲存資料和終止 null 所需的儲存空間超過*sizeOfBuffer*, 則會叫用不正確參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述), 除非*count*是[_TRUNCATE](../../c-runtime-library/truncate.md), 在此情況下, 大部分的會寫入符合*緩衝區*的字串, 並傳回-1。 如果在不正確參數處理常式之後繼續執行, 這些函式會將*buffer*設定為空字串, 將**Errno**設定為**ERANGE**, 並傳回-1。
+如果儲存資料和終止 null 所需的儲存空間超過*sizeOfBuffer*，則會叫用不正確參數處理常式（如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述），除非*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)，在此情況下，大部分的會寫入符合*緩衝區*的字串，並傳回-1。 如果在不正確參數處理常式之後繼續執行，這些函式會將*buffer*設定為空字串，將**Errno**設定為**ERANGE**，並傳回-1。
 
-如果*buffer*或*format*是**Null**指標, 或者*count*小於或等於零, 則會叫用不正確參數處理常式。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
+如果*buffer*或*format*是**Null**指標，或者*count*小於或等於零，則會叫用不正確參數處理常式。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
@@ -144,21 +147,21 @@ int _vsnwprintf_s(
 |*緩衝區*為**Null**|-1|**EINVAL**|
 |*格式*為**Null**|-1|**EINVAL**|
 |*計數*< = 0|-1|**EINVAL**|
-|*sizeOfBuffer*太小 (和*Count* ! = **_TRUNCATE**)|-1 (並將*緩衝區*設定為空字串)|**ERANGE**|
+|*sizeOfBuffer*太小（和*Count* ！ = **_TRUNCATE**）|-1 （並將*緩衝區*設定為空字串）|**ERANGE**|
 
 ## <a name="remarks"></a>備註
 
-這些函式中的每一個都接受引數清單的指標, 然後將給定資料的*計數*字元加上最多, 並寫入*緩衝區*所指向的記憶體, 並附加終止的 null。
+這些函式中的每一個都接受引數清單的指標，然後將給定資料的*計數*字元加上最多，並寫入*緩衝區*所指向的記憶體，並附加終止的 null。
 
-如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md), 則這些函式會將字串寫入為符合*緩衝區*大小, 同時保留空間給終止的 null。 如果整個字串 (具有終止的 null) 符合*buffer*, 則這些函式會傳回寫入的字元數 (不包括結束的 null);否則, 這些函式會傳回-1, 表示發生截斷。
+如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md)，則這些函式會將字串寫入為符合*緩衝區*大小，同時保留空間給終止的 null。 如果整個字串（具有終止的 null）符合*buffer*，則這些函式會傳回寫入的字元數（不包括結束的 null）;否則，這些函式會傳回-1，表示發生截斷。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!NOTE]
-> 若要確保終止的 null 有足夠空間, 請確定*計數*嚴格小於緩衝區長度, 或使用 **_TRUNCATE**。
+> 若要確保終止的 null 有足夠空間，請確定*計數*嚴格小於緩衝區長度，或使用 **_TRUNCATE**。
 
 C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

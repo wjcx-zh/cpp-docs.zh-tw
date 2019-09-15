@@ -1,9 +1,9 @@
 ---
 title: mbsinit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - mbsinit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,18 +14,21 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsinit
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3b1eecc252a2bee83997aa6f2f6f47a96d3321a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331541"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952374"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -46,11 +49,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>傳回值
 
-非零*ps*是**NULL**或不在轉換過程。
+如果*ps*是**Null** ，或如果不在轉換中間，則為非零。
 
 ## <a name="remarks"></a>備註
 
-當使用其中一個 ANSI 函式接受**mbstate_t**指標的位址傳遞您**mbstate_t**會傳回緩衝區中的最後一個位元組是否已轉換的相關資訊。
+當使用採用**mbstate_t**指標的其中一個 ANSI 函式時，傳遞**mbstate_t**的位址將會傳回關於緩衝區中最後一個位元組是否已轉換的資訊。
 
 必須安裝適當的字碼頁，才能支援您的多位元組字元。
 

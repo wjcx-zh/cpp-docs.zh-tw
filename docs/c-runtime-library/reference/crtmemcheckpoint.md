@@ -1,9 +1,9 @@
 ---
 title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtMemCheckpoint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: edf91cd8c76fd080326e2e5eeac98f7f81ab90cf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942373"
 ---
-# <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
+# <a name="_crtmemcheckpoint"></a>_CrtMemCheckpoint
 
-取得偵錯堆積的目前狀態，並將儲存在應用程式提供 **_CrtMemState**結構 （僅限偵錯版本）。
+取得 debug 堆積的目前狀態，並將存放區儲存在應用程式提供的 **_CrtMemState**結構中（僅限 debug 版本）。
 
 ## <a name="syntax"></a>語法
 
@@ -45,17 +48,17 @@ void _CrtMemCheckpoint(
 ### <a name="parameters"></a>參數
 
 *state*<br/>
-指標 **_CrtMemState**結構以填入記憶體檢查點。
+要填入記憶體檢查點之 **_CrtMemState**結構的指標。
 
 ## <a name="remarks"></a>備註
 
-**_CrtMemCheckpoint**函式會建立偵錯堆積的目前狀態的快照集，在任何給定的時刻。 其他堆積狀態函式 (例如 [_CrtMemDifference](crtmemdifference.md) ) 可使用此快照協助偵測記憶體流失及其他問題。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtMemState**會在前置處理期間移除。
+**_CrtMemCheckpoint**函式會在任何指定的時間建立調試堆積目前狀態的快照集。 其他堆積狀態函式 (例如 [_CrtMemDifference](crtmemdifference.md) ) 可使用此快照協助偵測記憶體流失及其他問題。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtMemState**的呼叫。
 
-應用程式必須將指標傳遞至先前配置的執行個體 **_CrtMemState**結構，定義在 Crtdbg.h 中*狀態*參數。 如果 **_CrtMemCheckpoint**遇到錯誤，檢查點建立期間，函式會產生 **_CRT_WARN**偵錯報表，描述問題。
+應用程式必須將指標傳遞至先前配置的 **_CrtMemState**結構實例（定義于 crtdbg.h 裡中的*狀態*參數中）。 如果 **_CrtMemCheckpoint**在檢查點建立期間遇到錯誤，函式會產生描述問題的 **_CRT_WARN** debug 報告。
 
-如需堆積狀態函式和 **_CrtMemState**結構，請參閱[Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
+如需堆積狀態函數和 **_CrtMemState**結構的詳細資訊，請參閱[堆積狀態報表](/visualstudio/debugger/crt-debug-heap-details)函式。 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的詳細資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 
-如果*狀態*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)設為**EINVAL** ，函式傳回。
+如果*state*是**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)會設定為**EINVAL** ，而函式會傳回。
 
 ## <a name="requirements"></a>需求
 
@@ -65,7 +68,7 @@ void _CrtMemCheckpoint(
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-**程式庫：** 偵錯的僅限 UCRT 的版本。
+**磁帶**僅限 UCRT 的調試版本。
 
 ## <a name="see-also"></a>另請參閱
 

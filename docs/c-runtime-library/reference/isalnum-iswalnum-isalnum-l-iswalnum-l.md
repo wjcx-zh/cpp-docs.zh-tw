@@ -1,12 +1,12 @@
 ---
 title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _iswalnum_l
 - _isalnum_l
 - iswalnum
 - isalnum
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalnum_l
 - _iswalnum_l
@@ -37,14 +40,14 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: 3aa9adada9ad904221b91e41ac2d843b174677ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 636e43a921c2b859db3a31b3dd658112f4e8e9f4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331645"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954594"
 ---
-# <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
+# <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
 判斷整數是否代表英數字元。
 
@@ -67,11 +70,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*是英數字元的特定表示法。 **isalnum**傳回非零值，如果有任一**isalpha**或**isdigit**非零代表*c*，也就是如果*c*內範圍 A-Z、 a-z 或 0-9。 **iswalnum**傳回非零值，如果有任一**iswalpha**或是**iswdigit**非零代表*c*。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是英數位元的特定標記法，則每個常式都會傳回非零。 如果*c*的**isAlpha**或**isdigit**為非零值，則**isalnum**會傳回非零值，亦即，如果*c*在範圍 a-z、a-z 或 0-9 內。 如果*c*的**iswAlpha**或**iswdigit**為非零值， **iswalnum**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-有這些函式的版本 **_l**後置詞使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isalnum**並 **_isalnum_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isalnum**和 **_isalnum_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

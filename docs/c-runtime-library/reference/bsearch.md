@@ -1,9 +1,9 @@
 ---
 title: bsearch
 ms.date: 11/04/2016
-apiname:
+api_name:
 - bsearch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,19 +16,22 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - bsearch
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: e170ce67d22c0d97825a7eb754546a29daac6d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e44e85d1c6d73a68da2edd099cdeb6156f9759d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347752"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939441"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -65,19 +68,19 @@ void *bsearch(
 
 ## <a name="return-value"></a>傳回值
 
-**bsearch**讓指標回到一段*金鑰*所指陣列中*基底*。 如果*金鑰*找不到，則函數會傳回**NULL**。 如果陣列不是以遞增排序次序，或是包含具有相同索引鍵的重複記錄，則無法預測結果。
+**bsearch**會傳回*基底*所指向陣列中索引*鍵*的出現指標。 如果找不到索引*鍵*，則函數會傳回**Null**。 如果陣列不是以遞增排序次序，或是包含具有相同索引鍵的重複記錄，則無法預測結果。
 
 ## <a name="remarks"></a>備註
 
-**Bsearch**函式會執行二進位搜尋的已排序陣列*數目*項目，每個*寬度*個位元組大小。 *基底*的值是要搜尋之陣列的基底的指標並*金鑰*是要搜尋的值。 *比較*參數是使用者所提供的常式會比較要求的索引鍵的陣列項目，並傳回其中一個指定其關聯性的下列值的指標：
+**Bsearch**函式會對已排序的*數位*元素陣列執行二進位搜尋，每個*寬度*的大小為。 *基底*值是要搜尋之陣列的基底指標，而*key*則是要尋找的值。 *Compare*參數是使用者提供的常式指標，可將所要求的索引鍵與陣列元素進行比較，並傳回下列其中一個指定其關聯性的值：
 
-|傳回值*比較*常式|描述|
+|*比較*常式傳回的值|描述|
 |-----------------------------------------|-----------------|
 |\< 0|索引鍵小於陣列項目。|
 |0|索引鍵等於陣列項目。|
 |> 0|索引鍵大於陣列項目。|
 
-這個函式會驗證它的參數。 如果*比較*，*金鑰*或*號碼*是**NULL**，或如果*基底*是**NULL**並*數字*為非零值，或如果*寬度*為零，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為`EINVAL`和函式會傳回**NULL**。
+這個函式會驗證它的參數。 如果*compare*、 *key*或*number*為**null**，或*base*為**null** ，而*number*為非零，或*Width*為零，則會叫用不正確參數處理常式，如[參數驗證中所述](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行， **errno**會設為`EINVAL` ，且函式會傳回**Null**。
 
 ## <a name="requirements"></a>需求
 

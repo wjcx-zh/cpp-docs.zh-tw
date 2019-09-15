@@ -1,9 +1,9 @@
 ---
 title: _getw
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getw
 helpviewer_keywords:
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157626"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954883"
 ---
-# <a name="getw"></a>_getw
+# <a name="_getw"></a>_getw
 
 從資料流中取得的整數。
 
@@ -49,11 +52,11 @@ int _getw(
 
 ## <a name="return-value"></a>傳回值
 
-**_getw**傳回讀取的整數值。 傳回值**EOF**表示錯誤或檔案結尾。 不過，因為**EOF**值也是合法的整數值，請使用**feof**或是**ferror**來確認檔案結尾或錯誤狀況。 如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**EOF**。
+**_getw**會傳回讀取的整數值。 **EOF**的傳回值表示錯誤或檔案結尾。 不過，因為**EOF**值也是合法的整數值，所以請使用**feof**或**ferror**來驗證檔案結尾或錯誤狀況。 如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EOF**。
 
 ## <a name="remarks"></a>備註
 
-**_Getw**函式會讀取下一個二進位值型別的**int**從相關聯的檔案*串流*並指向遞增相關聯的檔案指標 （如果有的話）下一個未讀取的字元。 **_getw**不會假設資料流中的項目的任何特殊對齊方式。 移植的問題可能會發生 **_getw**因為大小**int**類型和位元組順序**int**類型視系統而有所不同。
+**_Getw**函式會從與*資料流程*相關聯的檔案中讀取**int**類型的下一個二進位值，並遞增相關聯的檔案指標（如果有的話），以指向下一個未讀取的字元。 **_getw**不會假設資料流程中的專案有任何特殊的對齊方式。 使用 **_getw**時可能會發生移植問題，因為**int**類型的大小和**int**類型內的位元組順序在系統之間有所不同。
 
 ## <a name="requirements"></a>需求
 
@@ -98,7 +101,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtgetwtxt"></a>輸入︰crt_getw.txt
+### <a name="input-crt_getwtxt"></a>輸入︰crt_getw.txt
 
 ```Input
 Line one.

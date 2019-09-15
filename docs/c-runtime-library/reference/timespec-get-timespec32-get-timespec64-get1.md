@@ -1,11 +1,11 @@
 ---
-title: timespec_get _timespec32_get _timespec64_get1
+title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - timespec_get
 - _timespec32_get
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: 1591189ff2db78605c334e72ac3be13876afc81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155546"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957624"
 ---
-# <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
+# <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get、_timespec32_get、_timespec64_get
 
 使用第一個引數，依據指定的時間基礎，將間隔設定成指向目前的月曆時間。
 
@@ -71,15 +74,15 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>傳回值
 
-值*基底*如果成功，否則會傳回零。
+如果成功，則為*base*的值，否則會傳回零。
 
 ## <a name="remarks"></a>備註
 
-**Timespec_get**函式中所指向的結構會將目前的時間*time_spec*引數。 所有版本的此結構都具有兩個成員， **tv_sec**並**tv_nsec**。 **Tv_sec**值設定為整數秒數和**tv_nsec**奈秒的整數的數字，四捨五入到系統時鐘的解析度所指定的epoch啟動之後*基底*。
+**Timespec_get**函數會在*time_spec*引數所指向的結構中設定目前的時間。 此結構的所有版本都有兩個成員： **tv_sec**和**tv_nsec**。 **Tv_sec**值會設定為整數秒數，而**tv_nsec**為整數個毫數，從*基底*指定的 epoch 開始，舍入到系統時鐘的解析。
 
 **Microsoft 專屬**
 
-這些函式僅支援**TIME_UTC**作為*基底*值。 這會設定*time_spec*秒及奈自 epoch 啟動，1970 年 1 月 1 日午夜 Coordinated Universal Time (UTC) 之後的數字的值。 在  **struct** **_timespec32**， **tv_sec**是 **__time32_t**值。 在  **struct** **_timespec64**， **tv_sec**是 **__time64_t**值。 在  **struct** **timespec**， **tv_sec**是**time_t**類型，這是 32 位元或 64 位元長度取決於是否前置處理器定義巨集 _USE_32BIT_TIME_T。 **Timespec_get**函式是內嵌函式呼叫 **_timespec32_get**如果已定義 _USE_32BIT_TIME_T; 否則會呼叫 **_timespec64_get**。
+這些函數只支援**TIME_UTC**作為*基底*值。 這會將*time_spec*值設定為自 epoch 啟動之後的秒數和毫微秒數（以1970年1月1日午夜，國際標準時間（UTC）為單位）。 在**結構** **_timespec32**中， **tv_sec**是 **__time32_t**值。 在**結構** **_timespec64**中， **tv_sec**是 **__time64_t**值。 在**結構** **timespec**中， **tv_sec**是**time_t**型別，其長度為32位或64位，視預處理器宏 _USE_32BIT_TIME_T 是否已定義而定。 **Timespec_get**函式是內嵌函數，會在定義 _USE_32BIT_TIME_T 時呼叫 **_timespec32_get** ;否則，它會呼叫 **_timespec64_get**。
 
 **結束 Microsoft 專有**
 
@@ -87,7 +90,7 @@ int _timespec64_get(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**timespec_get**, **_timespec32_get**, **_timespec64_get**|C: \<time.h>，C++： \<ctime> 或 \<time.h>|
+|**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h>，C++： \<ctime> 或 \<time.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

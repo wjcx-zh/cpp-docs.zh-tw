@@ -1,9 +1,9 @@
 ---
 title: __dllonexit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __dllonexit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
@@ -12,20 +12,23 @@ apilocation:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __dllonexit
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 61d63c751dd755bf8a7680c674681e114945814b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739371"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940438"
 ---
-# <a name="dllonexit"></a>__dllonexit
+# <a name="__dllonexit"></a>__dllonexit
 
 登錄要在結束時呼叫的常式。
 

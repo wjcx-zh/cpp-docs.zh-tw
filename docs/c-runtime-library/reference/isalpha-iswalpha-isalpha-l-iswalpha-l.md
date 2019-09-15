@@ -1,12 +1,12 @@
 ---
 title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswalpha
 - _iswalpha_l
 - isalpha
 - _isalpha_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _istalpha
 - _ismbcalpha_l
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a7de0ba1316a6c0155a46eed0564792ee6256f2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157990"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954576"
 ---
-# <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
+# <a name="isalpha-iswalpha-_isalpha_l-_iswalpha_l"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
 判斷整數是否代表字母字元。
 
@@ -78,11 +81,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*表示特定的字母字元。 **isalpha**傳回非零值，如果*c* A-Z 或 a-z 的範圍內。 **iswalpha**為其傳回非零的值，只會針對寬字元[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或是**iswlower**為非零值; 也就是說，對於任何寬字元也就是其中一個實作定義字元集的均**iswcntrl**， **iswdigit**， **iswpunct**，或**iswspace**為非零值。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是字母字元的特定標記法，則每個常式都會傳回非零。 如果*c*在範圍 a-z 或 a-z 內， **isAlpha**會傳回非零值。 只有[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)或**iswlower**為非零的寬字元， **iswAlpha**才會傳回非零值;也就是，針對任何不是**iswcntrl**、 **iswdigit**、 **iswpunct**或**iswspace**皆為非零值的實作為定義集之一的寬字元。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-有這些函式的版本 **_l**後置詞使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isalpha**並 **_isalpha_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isAlpha**和 **_isAlpha_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -1,9 +1,9 @@
 ---
 title: _chdrive
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _chdrive
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - chdrive
 - _chdrive
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 7e36867bb8237c549fd250be88a99244766920ba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3ee292c03c9d31944e0a555c2159d7a5dd2cd0eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500271"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939247"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -57,9 +60,9 @@ int _chdrive(
 
 ## <a name="remarks"></a>備註
 
-如果*磁片磁碟機*不在1到26的範圍內, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **_chdrive**函數會傳回-1, **errno**會設定為**EACCES**, 而 **_doserrno**會設定為**ERROR_INVALID_DRIVE**。
+如果*磁片磁碟機*不在1到26的範圍內，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **_chdrive**函數會傳回-1， **errno**會設定為**EACCES**，而 **_doserrno**會設定為**ERROR_INVALID_DRIVE**。
 
-**_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊, 請參閱[SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)。
+**_chdrive** 函式不是安全執行緒，原因是其取決於本身不是安全執行緒的 **SetCurrentDirectory** 函式。 若要在多執行緒應用程式中安全地使用 **_chdrive**，您必須提供自己的執行緒同步處理。 如需詳細資訊，請參閱[SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory)。
 
 **_chdrive** 函式只會變更目前工作磁碟機； **_chdir** 則會變更目前工作目錄。
 

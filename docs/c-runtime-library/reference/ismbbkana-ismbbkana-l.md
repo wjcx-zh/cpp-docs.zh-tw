@@ -1,10 +1,10 @@
 ---
 title: _ismbbkana、_ismbbkana_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkana_l
 - _ismbbkana
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkana_l
 - ismbbkana_l
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - ismbbkana function
 - ismbbkana_l function
 ms.assetid: 64d4eb4a-205a-40ef-be35-ff9d77fabbaf
-ms.openlocfilehash: 723b914f5df92f20e4982bf6f7f04d1b251606f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ac05940f6ae9d0c0bd3cb2f6ea73fe301557be4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954153"
 ---
-# <a name="ismbbkana-ismbbkanal"></a>_ismbbkana、_ismbbkana_l
+# <a name="_ismbbkana-_ismbbkana_l"></a>_ismbbkana、_ismbbkana_l
 
 測試片假名符號，且為字碼頁 932 專用。
 
@@ -61,7 +64,7 @@ int _ismbbkana_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbbkana**傳回非零值，如果整數*c*是片假名符號或 0，如果不是。 **_ismbbkana**會使用目前的地區設定，如地區設定相關字元的詳細資訊。 **_ismbbkana_l**完全相同，不同之處在於它會使用傳入的地區設定物件。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果整數*c*是片假名符號， **_ismbbkana**會傳回非零值; 如果不是，則傳回0。 **_ismbbkana**會針對地區設定相關的字元資訊使用目前的地區設定。 **_ismbbkana_l**是相同的，不同之處在于它會使用傳入的地區設定物件。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

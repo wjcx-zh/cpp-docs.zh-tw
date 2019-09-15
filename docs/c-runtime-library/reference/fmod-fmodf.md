@@ -1,11 +1,11 @@
 ---
-title: fmod、 fmodf、 fmodl
+title: fmod、fmodf、fmodl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmod
 - fmodf
 - fmodl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmod
 - _fmodl
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: 78677be1a0c9921c35e54d43a00b8956a9d858b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333348"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957072"
 ---
-# <a name="fmod-fmodf-fmodl"></a>fmod、 fmodf、 fmodl
+# <a name="fmod-fmodf-fmodl"></a>fmod、fmodf、fmodl
 
 計算浮點餘數。
 
@@ -67,24 +70,24 @@ long double fmodl(
 
 ### <a name="parameters"></a>參數
 
-*x*， *y*<br/>
+*x*、 *y*<br/>
 浮點值。
 
 ## <a name="return-value"></a>傳回值
 
-**fmod**傳回的浮點餘數*x* / *y*。 如果值*y*是 0.0， **fmod**傳回無訊息 NaN。 如需無訊息 NaN 的表示法**printf**系列，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
+**fmod**會傳回*x*  /  *y*的浮點餘數。 如果*y*的值是0.0，則**fmod**會傳回無訊息 NaN。 如需**printf**系列表示無訊息 NaN 的資訊，請參閱[printf](printf-printf-l-wprintf-wprintf-l.md)。
 
 ## <a name="remarks"></a>備註
 
-**Fmod**函式會計算浮點餘數*f*的*x* / *y*使得*x* = *我* \* *y* + *f*，其中*我*是一個整數， *f*有相同的簽章為*x*，和數值的絕對值*f*數值的絕對值小於*y*。
+**Fmod**函數會計算*x*  /  *y*的浮點餘數*f* ，例如*x*  =  *i* \* *y*  +  *f*，其中*i*是一個整數， *f*具有與*x*相同的正負號，而*f*的絕對值小於*y*的絕對值。
 
-C++允許多載，因此您可以呼叫多載**fmod**採用並傳回**float**並**長** **double**值。 在 C 程式中， **fmod**一律會採用兩個**double**引數並傳回**double**。
+C++允許多載，因此您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**fmod**的多載。 在 C 程式中， **fmod**一律採用兩個**雙**精確度引數，並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
-|**fmod**， **fmodf**， **fmodl**|\<math.h>|
+|**fmod**、 **fmodf**、 **fmodl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

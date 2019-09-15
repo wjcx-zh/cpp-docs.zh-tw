@@ -1,7 +1,7 @@
 ---
 title: _spawn、_wspawn 函式
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr110_clr0400.dll
 - msvcr110.dll
@@ -9,7 +9,10 @@ apilocation:
 - msvcr120.dll
 - msvcr100.dll
 - msvcr90.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _spawn
 - _tspawnlp
@@ -45,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 8ab368378775102b708635b551c046a326adfecb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498899"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957269"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函式
 
@@ -123,7 +126,7 @@ ms.locfileid: "69498899"
 
 `_spawnl`、`_spawnle`、`_spawnlp` 和 `_spawnlpe` 呼叫通常是在預知引數數目時使用。 `arg0` 引數通常是 `cmdname`的指標。 `arg1` 到 `argn` 的引數是形成新引數清單之字元字串的指標。 `argn` 之後必須有一個 **NULL** 指標，以標記引數清單的結尾。
 
-當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。  引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
+當新處理序的引數數目可變時，`_spawnv`、`_spawnve`、`_spawnvp` 和 `_spawnvpe` 呼叫就很實用。 引數的指標會當做陣列 `argv` 傳遞。 引數 `argv`[0] 通常是真實模式中的路徑或受保護模式中程序名稱的指標，而 `argv`[1] 至 `argv`[`n`] 是形成新引數清單之字元字串的指標。 引數 `argv`[`n` +1] 必須是 **NULL** 指標，以標記引數清單的結尾。
 
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境
 

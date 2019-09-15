@@ -1,9 +1,9 @@
 ---
 title: _lfind_s
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lfind_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lfind_s
 - _lfind_s
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 08c04d9d1ca69998d54304c96468298013907179
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69db97dc24b567714bda3e02f5f53ff381ae4911
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286423"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953444"
 ---
-# <a name="lfinds"></a>_lfind_s
+# <a name="_lfind_s"></a>_lfind_s
 
 執行所指定索引鍵的線性搜尋。 這是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強的 [_lfind](lfind.md) 版本。
 
@@ -73,9 +76,9 @@ void *_lfind_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果找到索引鍵，則 **_lfind_s**傳回的項目處之陣列的指標*基底*符合*金鑰*。 如果找不到索引鍵， **_lfind_s**會傳回**NULL**。
+如果找到索引鍵， **_lfind_s**會傳回符合索引*鍵*之*基底*陣列元素的指標。 如果找不到索引鍵， **_lfind_s**會傳回**Null**。
 
-若傳遞了無效的參數到此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行**errno**設為**EINVAL**和函式會傳回**NULL**。
+若傳遞了無效的參數到此函式，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
@@ -88,9 +91,9 @@ void *_lfind_s(
 
 ## <a name="remarks"></a>備註
 
-**_Lfind_s**函式會執行值的線性搜尋*金鑰*陣列中的*號碼*項目，每個*寬度*位元組。 不同於**bsearch_s**， **_lfind_s**不需要排序陣列。 *基底*引數是要搜尋之陣列的基底的指標。 *比較*引數是使用者所提供的常式比較兩個陣列元素，則會傳回值，指定其關聯性的指標。 **_lfind_s**呼叫*比較*在搜尋期間，將例行的一或多次*內容*指標，每次呼叫的兩個陣列元素的指標。 *比較*常式必須比較項目，則傳回非零 （表示項目為不同） 或 0 （表示元素完全相同）。
+**_Lfind_s**函式會在*數位*元素陣列中執行值索引*鍵*的線性搜尋，每個*寬度*為位元組。 不同于**bsearch_s**， **_lfind_s**不需要排序陣列。 *基底*引數是要搜尋之陣列基底的指標。 *Compare*引數是使用者所提供之常式的指標，可比較兩個陣列元素，然後傳回一個指定其關聯性的值。 **_lfind_s**會在搜尋期間呼叫*比較*常式一或多次，並在每次呼叫時將*內容*指標和指標傳遞至兩個陣列元素。 *比較*常式必須比較元素，然後傳回非零（表示專案不同）或0（表示元素完全相同）。
 
-**_lfind_s**大致 **_lfind**除了新增*內容*指標的比較函式的引數和函式的參數清單。 *內容*指標適合用於搜尋的資料結構是物件的一部分並*比較*函式需要存取物件的成員。 *比較*函式可以將 void 指標轉換成適當的物件類型，並存取成員，該物件。 新增*內容*參數，會使 **_lfind_s**更安全，因為可以使用其他的內容，以避免與使用靜態變數以將資料提供給相關聯的重新進入 bug*比較*函式。
+**_lfind_s**類似于 **_lfind** ，但會將*內容*指標加入至比較函式的引數和函式的參數清單。 如果搜尋的資料結構是物件的一部分，而且*compare*函式需要存取物件的成員，則*內容*指標可能會很有用。 *Compare*函數可以將 void 指標轉換成適當的物件類型，並存取該物件的成員。 加入*內容*參數會讓 **_lfind_s**更安全，因為可以使用額外的內容來避免與使用靜態變數相關聯的重新進入 bug，讓資料可供*compare*函數使用。
 
 ## <a name="requirements"></a>需求
 

@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4fbacb170fd1ae1ce92de4a11ea85ff42b3942a0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348870"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939776"
 ---
-# <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
+# <a name="_aligned_offset_malloc_dbg"></a>_aligned_offset_malloc_dbg
 
 在指定的對齊界限上配置記憶體 (僅限偵錯版本)。
 
@@ -57,26 +60,26 @@ void * _aligned_offset_malloc_dbg(
 記憶體配置中要強制對齊的位移。
 
 *filename*<br/>
-要求配置作業之原始程式檔名稱的指標或**NULL**。
+要求配置作業之原始程式檔的名稱的指標，或為**Null**。
 
 *linenumber*<br/>
-其中要求配置作業，原始程式檔中的行號或**NULL**。
+原始程式檔中的行號，其中要求配置作業，或**為 Null**。
 
 ## <a name="return-value"></a>傳回值
 
-已配置的記憶體區塊的指標或**NULL**如果作業失敗。
+已配置之記憶體區塊的指標，如果作業失敗，則為**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_aligned_offset_malloc_dbg**是偵錯版本[_aligned_offset_malloc](aligned-offset-malloc.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_aligned_offset_malloc_dbg**的呼叫會降低 **_aligned_offset_malloc**。 兩者 **_aligned_offset_malloc**並 **_aligned_offset_malloc_dbg**配置基底堆積中中的記憶體區塊，但 **_aligned_offset_malloc_dbg**提供數個偵錯功能： 以測試遺漏，區塊使用者部分任一端使用緩衝區和*檔名*/*linenumber*資訊來判斷的原點配置要求。 追蹤特定配置類型的區塊類型參數不是支援的偵錯功能的對齊的配置。 對齊的配置會顯示為 _NORMAL_BLOCK 區塊型別。
+**_aligned_offset_malloc_dbg**是[_aligned_offset_malloc](aligned-offset-malloc.md)函數的調試版本。 未定義[_debug](../../c-runtime-library/debug.md)時，每個 **_aligned_offset_malloc_dbg**的呼叫都會縮減為 **_aligned_offset_malloc**的呼叫。 **_Aligned_offset_malloc**和 **_aligned_offset_malloc_dbg**都是在基底堆積中配置記憶體區塊，但 **_aligned_offset_malloc_dbg**提供了數個調試功能：在區塊的使用者部分的任一端使用緩衝區，測試流失和*filename* / *linenumber*資訊，以判斷配置要求的來源。 使用區塊類型參數追蹤特定的配置類型，並不是針對對齊配置所支援的偵錯工具功能。 對齊的配置會顯示為 _NORMAL_BLOCK 區塊類型。
 
-**_aligned_offset_malloc_dbg**配置記憶體區塊，使用比要求稍微多一些的空間*大小*。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。
+**_aligned_offset_malloc_dbg**會以比所要求*大小*稍微多一點的空間來配置記憶體區塊。 偵錯堆積管理員會使用額外的空間連結偵錯記憶體區塊，以及為應用程式提供偵錯標頭資訊和覆寫緩衝區。 區塊配置後，區塊的使用者部分會填入值 0xCD，且每個覆寫緩衝區會填入 0xFD。
 
-**_aligned_offset_malloc_dbg**巢狀元素; 需要對齊的情況很有用，例如，如果巢狀類別需要對齊時。
+當嵌套元素需要對齊時， **_aligned_offset_malloc_dbg**會很有用;例如，如果在嵌套類別上需要對齊。
 
-**_aligned_offset_malloc_dbg**為基礎**malloc**; 如需詳細資訊，請參閱[malloc](malloc.md)。
+**_aligned_offset_malloc_dbg**是以**malloc**為基礎;如需詳細資訊，請參閱[malloc](malloc.md)。
 
-此函式會將**errno**要**ENOMEM**如果記憶體配置失敗，或者要求的大小大於 **_HEAP_MAXREQ**。 如需詳細資訊**errno**，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**會驗證其參數。 如果*對齊*不是 2 的冪，或如果*位移*大於或等於*大小*和非零值，這個函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**NULL**並設定**errno**來**EINVAL**。
+如果記憶體配置失敗，或是要求的大小大於 **_HEAP_MAXREQ**，則此函式會將**Errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**會驗證其參數。 如果*對齊*不是2的乘冪，或*offset*大於或等於 size 和非零*值*，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。
 

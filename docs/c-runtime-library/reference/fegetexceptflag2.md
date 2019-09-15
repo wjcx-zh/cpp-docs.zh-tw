@@ -1,9 +1,9 @@
 ---
 title: fegetexceptflag
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fegetexceptflag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,19 +15,22 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fegetexceptflag
 - fenv/fegetexceptflag
 helpviewer_keywords:
 - fegetexceptflag function
 ms.assetid: 2d28f0ca-70c9-4cff-be8b-3d876eacde71
-ms.openlocfilehash: 43259001bd05bb7df9e2e1636c174018dcdaef3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d3bf59b28a464dc163dc027b867e890c3c8797b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334420"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941235"
 ---
 # <a name="fegetexceptflag"></a>fegetexceptflag
 
@@ -45,10 +48,10 @@ int fegetexceptflag(
 ### <a name="parameters"></a>參數
 
 *pstatus*<br/>
-指標**fexcept_t**物件，包含目前的值，指定例外狀況旗標*removed*。
+**Fexcept_t**物件的指標，包含*以外*所指定之例外狀況旗標的目前值。
 
 *excepts*<br/>
-在中儲存的浮點例外狀況旗標*pstatus*。
+要在*pstatus*中儲存的浮點例外狀況旗標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -56,7 +59,7 @@ int fegetexceptflag(
 
 ## <a name="remarks"></a>備註
 
-**Fegetexceptflag**函式會儲存所指定的浮點例外狀況狀態旗標的目前狀態*removed*中**fexcept_t**指向的物件*pstatus*。  *pstatus*必須指向有效**fexcept_t**物件或後續行為是未定義。 **Fegetexceptflag**函式支援這些例外狀況巨集，定義於\<fenv.h >:
+**Fegetexceptflag**函數會將*以外*所指定之浮點例外狀況狀態旗標的目前狀態儲存在*pstatus*所指向的**fexcept_t**物件中。  *pstatus*必須指向有效的**fexcept_t**物件，否則不會定義後續的行為。 **Fegetexceptflag**函數支援在 fenv.h 中定義的\<這些例外狀況宏 >：
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -67,13 +70,13 @@ int fegetexceptflag(
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
 |FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
-*Removed*引數可以是零，其中一個支援的浮點例外狀況巨集，或位元，或是兩個或以上巨集。 未定義任何其他引數值的效果。
+*以外*引數可以是零、其中一個支援的浮點例外狀況宏，或是兩個或多個宏的位 or。 未定義任何其他引數值的效果。
 
 若要使用此函式，您必須在呼叫之前使用 `#pragma fenv_access(on)` 指示詞，以關閉可能會妨礙存取的浮點最佳化作業。 如需詳細資訊，請參閱 [fenv_access](../../preprocessor/fenv-access.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |**fegetexceptflag**|\<fenv.h>|\<cfenv>|
 

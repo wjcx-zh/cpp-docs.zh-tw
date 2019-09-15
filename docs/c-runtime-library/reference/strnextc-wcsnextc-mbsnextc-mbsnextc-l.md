@@ -1,12 +1,12 @@
 ---
 title: _strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strnextc
 - _mbsnextc_l
 - _mbsnextc
 - _wcsnextc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - strnextc
 - tcsnextc
@@ -44,12 +47,12 @@ helpviewer_keywords:
 - mbsnextc_l function
 - wcsnextc function
 ms.assetid: e3086173-9eb5-4540-a23a-5d866bd05340
-ms.openlocfilehash: 8a0075a039e11f81917d605214d3924521851a26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0cf7055c0454971c8fbab85d54d695e3e5cffdec
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500890"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947230"
 ---
 # <a name="_strnextc-_wcsnextc-_mbsnextc-_mbsnextc_l"></a>_strnextc、_wcsnextc、_mbsnextc、_mbsnextc_l
 
@@ -90,9 +93,9 @@ unsigned int _mbsnextc_l(
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnextc**函數會傳回*str*中下一個多位元組字元的整數值, 而不會向前移動字串指標。 **_mbsnextc**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md), 辨識多位元組字元序列。
+**_Mbsnextc**函數會傳回*str*中下一個多位元組字元的整數值，而不會向前移動字串指標。 **_mbsnextc**會根據目前使用中的[多位元組字碼頁](../../c-runtime-library/code-pages.md)，辨識多位元組字元序列。
 
-如果*str*為**Null**, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設為**EINVAL** , 而函數會傳回0。
+如果*str*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回0。
 
 **安全性提示**：此 API 可能會帶來因緩衝區溢位問題所引發的威脅。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
@@ -102,9 +105,9 @@ unsigned int _mbsnextc_l(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnextc**|**_strnextc**|**_mbsnextc**|**_wcsnextc**|
 
-**_strnextc**和 **_wcsnextc**是 **_mbsnextc**的單一位元組字元字串和寬字元字串版本。 **_wcsnextc**會傳回*str*中下一個寬字元的整數值; **_strnextc**會傳回*str*中下一個單一位元組字元的整數值。 僅針對此對應提供 **_strnextc**和 **_wcsnextc** , 否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
+**_strnextc**和 **_wcsnextc**是 **_mbsnextc**的單一位元組字元字串和寬字元字串版本。 **_wcsnextc**會傳回*str*中下一個寬字元的整數值; **_strnextc**會傳回*str*中下一個單一位元組字元的整數值。 僅針對此對應提供 **_strnextc**和 **_wcsnextc** ，否則不應使用。 如需詳細資訊，請參閱[使用泛型文字對應](../../c-runtime-library/using-generic-text-mappings.md)以及[泛型文字對應](../../c-runtime-library/generic-text-mappings.md)。
 
-**_mbsnextc_l**相同, 不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbsnextc_l**相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

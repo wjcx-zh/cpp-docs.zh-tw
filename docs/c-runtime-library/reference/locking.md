@@ -1,9 +1,9 @@
 ---
 title: _locking
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _locking
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _locking
 helpviewer_keywords:
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-ms.openlocfilehash: 90327ed3388d4f18e0f64f92c33112c9ddd800f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4450c511b9d98c31b7e6a777f54f3bd8e0affbb7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157459"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953274"
 ---
-# <a name="locking"></a>_locking
+# <a name="_locking"></a>_locking
 
 鎖定或解除鎖定檔案的位元組。
 
@@ -59,20 +62,20 @@ int _locking(
 
 ## <a name="return-value"></a>傳回值
 
-**_locking**如果成功則傳回 0。 傳回值為-1 表示失敗，在此情況下[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)設為下列值之一。
+如果成功， **_locking**會傳回0。 傳回值-1 表示失敗，在此情況下， [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)會設定為下列其中一個值。
 
 |errno 值|條件|
 |-|-|
 | **EACCES** | 鎖定違規 (檔案已鎖定或解除鎖定)。 |
 | **EBADF** | 檔案描述項無效。 |
-| **EDEADLOCK** | 鎖定違規。 時，傳回 **_LK_LOCK**或是 **_LK_RLCK**指定旗標，並嘗試 10 次之後，無法鎖定檔案。 |
-| **EINVAL** | 無效的引數指定給 **_locking**。 |
+| **EDEADLOCK** | 鎖定違規。 在指定 **_LK_LOCK**或 **_LK_RLCK**旗標，且在嘗試10次後無法鎖定檔案時傳回。 |
+| **EINVAL** | 提供了不正確引數給 **_locking**。 |
 
 如果由於參數不正確而失敗 (例如檔案描述項無效)，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
 ## <a name="remarks"></a>備註
 
-**_Locking**函式鎖定或解除鎖定*nbytes*所指定的檔案位元組*fd*。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
+**_Locking**函式會鎖定或解除鎖定*fd*所指定之檔案的*nbytes*位元組。 鎖定檔案中的位元組可防止其他處理序存取這些位元組。 所有鎖定或解除鎖定都會從檔案指標的目前位置開始，並接著繼續進行 *nbytes* 個位元組。 您可以鎖定超過檔案結尾的位元組。
 
 *mode* 必須是定義於 Locking.h 中的下列其中一個資訊清單常數。
 
@@ -80,11 +83,11 @@ int _locking(
 |-|-|
 | **_LK_LOCK** | 鎖定指定的位元組。 如果無法鎖定位元組，程式會在 1 秒後立即重試。 如果嘗試 10 次之後還是無法鎖定位元組，常數會傳回錯誤。 |
 | **_LK_NBLCK** | 鎖定指定的位元組。 如果無法鎖定位元組，常數會傳回錯誤。 |
-| **_LK_NBRLCK** | 與相同 **_LK_NBLCK**。 |
-| **_LK_RLCK** | 與相同 **_LK_LOCK**。 |
+| **_LK_NBRLCK** | 與 **_LK_NBLCK**相同。 |
+| **_LK_RLCK** | 與 **_LK_LOCK**相同。 |
 | **_LK_UNLCK** | 解除鎖定指定的位元組，這些位元組之前必須已鎖定。 |
 
-可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合併相鄰區域; 如果兩個鎖定的區域相鄰，每個區域必須個別解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
+可鎖定檔案中多個不重疊的區域。 要解除鎖定的區域之前必須已鎖定。 **_locking**不會合並相鄰區域;如果兩個鎖定的區域相鄰，則每個區域都必須分開解除鎖定。 區域只能短暫鎖定，而且必須在關閉檔案或結束程式之前解除鎖定。
 
 ## <a name="requirements"></a>需求
 
@@ -149,7 +152,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtlockingtxt"></a>輸入︰crt_locking.txt
+### <a name="input-crt_lockingtxt"></a>輸入︰crt_locking.txt
 
 ```Input
 The first thirty bytes of this file will be locked.

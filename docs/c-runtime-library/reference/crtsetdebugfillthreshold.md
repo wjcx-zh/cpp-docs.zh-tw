@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-apiname:
+api_name:
 - _CrtSetDebugFillThreshold
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fe7d998a44502709edde33d22c1b1e88cf5ecbee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342961"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942301"
 ---
-# <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
+# <a name="_crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
 擷取或修改控制偵錯函式中緩衝區填入行為的臨界值。
 
@@ -45,7 +48,7 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>參數
 
 *newThreshold*<br/>
-新臨界值以位元組為單位的大小。
+新的閾值大小（以位元組為單位）。
 
 ## <a name="return-value"></a>傳回值
 
@@ -53,9 +56,9 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 ## <a name="remarks"></a>備註
 
-某些安全性增強 CRT 函式的偵錯版本填滿緩衝區傳遞給它們的特殊字元 (0xFE)。 這有助於發現傳遞至函式的大小不正確的情況。 可惜的是，它也會降低效能。 若要改善效能，使用 **_CrtSetDebugFillThreshold**若要停用緩衝區之緩衝區的填入大於*newThreshold*臨界值。 A *newThreshold*值為 0 會停用它的所有緩衝區。
+某些安全性增強 CRT 函式的 debug 版本會以特殊字元（0xFE）填入傳遞給它們的緩衝區。 這有助於發現傳遞至函式的大小不正確的情況。 可惜的是，它也會降低效能。 若要改善效能，請使用 **_CrtSetDebugFillThreshold**來停用大於*newThreshold*臨界值之緩衝區的緩衝區填滿。 *NewThreshold*值為0時，會將它停用於所有緩衝區。
 
-預設臨界值是**SIZE_T_MAX**。
+預設臨界值為**SIZE_T_MAX**。
 
 以下是受影響的函式清單。
 
@@ -101,11 +104,11 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-此函式是 Microsoft 特有。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+此函式是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
-偵錯版本[C 執行階段程式庫](../../c-runtime-library/crt-library-features.md)只。
+僅限[C 執行時間程式庫](../../c-runtime-library/crt-library-features.md)的 Debug 版本。
 
 ## <a name="example"></a>範例
 

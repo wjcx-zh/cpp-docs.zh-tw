@@ -1,9 +1,9 @@
 ---
 title: _get_tzname
 ms.date: 10/22/2018
-apiname:
+api_name:
 - _get_tzname
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_tzname
 - get_tzname
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: c173832efb866eed133a908b5f2b72266fd3798a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f86a4997c328e86597e3bad8a7f7a3a5f5f50b6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332036"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955618"
 ---
-# <a name="gettzname"></a>_get_tzname
+# <a name="_get_tzname"></a>_get_tzname
 
 擷取代表時區名稱或日光節約標準時區名稱 (DST) 的字元字串。
 
@@ -49,18 +52,18 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>參數
 
 *pReturnValue*<br/>
-字串長度*timeZoneName*包括 null 結束字元。
+*TimeZoneName*的字串長度，包括 null 結束字元。
 
 *timeZoneName*<br/>
-根據時區名稱或日光節約標準時區名稱 (DST)，表示的字元字串的地址*index*。
+表示時區名稱或日光節約標準時區名稱（DST）的字元字串位址，視*索引*而定。
 
 *sizeInBytes*<br/>
-大小*timeZoneName*字元字串，以位元組為單位。
+*TimeZoneName*字元字串的大小（以位元組為單位）。
 
 *index*<br/>
 要擷取的兩個時區名稱中，其中一個時區名稱的索引。
 
-|*index*|內容*timeZoneName*|*timeZoneName*預設值|
+|*index*|*TimeZoneName*的內容|*timeZoneName*預設值|
 |-|-|-|
 |0|時區名稱|"PST"|
 |1|日光節約標準時區名稱|"PDT"|
@@ -70,13 +73,13 @@ errno_t _get_tzname(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，否則為**errno**輸入值。
+如果成功，則為零，否則為**errno**類型值。
 
-如果有任一*timeZoneName*是**NULL**，或*sizeInBytes*為零或小於零 （但非兩者皆是），無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果其中一個*timeZoneName*是**Null**，或是*sizeInBytes*是零或小於零（但不是兩者），則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|傳回值|內容*timeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|傳回值|*TimeZoneName*的內容|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |時區名稱的大小|**NULL**|0|0 或 1|0|未修改|
 |時區名稱的大小|any|> 0|0 或 1|0|時區名稱|
@@ -86,11 +89,11 @@ errno_t _get_tzname(
 
 ## <a name="remarks"></a>備註
 
-**_Get_tzname**函式會擷取目前的時區名稱或日光節約標準時區名稱 (DST) 的字元字串表示，轉換的地址*timeZoneName*取決於索引值，以及在字串的大小*pReturnValue*。 如果*timeZoneName*是**NULL**並*sizeInBytes*是為零，才能保留指定的時區字串的大小，並以位元組為單位結束的 null 會傳入*pReturnValue*。 索引值必須是標準時區的 0 或日光節約標準時區; 1任何其他值的*index*有未定的結果。
+**_Get_tzname**函式會根據索引值，將目前時區名稱或日游標準時區名稱（DST）的字元字串表示，捕獲到*timeZoneName*的位址，以及中的字串大小。*pReturnValue*。 如果*timeZoneName*為**Null** ，而*sizeInBytes*為零，則在*pReturnValue*中會傳回用來保存指定時區和終止 Null （以位元組為單位）的字串大小。 標準時區的索引值必須是0或日光節約標準時區的1。*索引*的任何其他值都有未確定的結果。
 
 ## <a name="example"></a>範例
 
-此範例會呼叫 **_get_tzname**若要取得所需的緩衝區大小，以顯示目前日光節約標準時區名稱，會配置該大小的緩衝區，呼叫 **_get_tzname**以載入中的名稱緩衝區，並將它列印至主控台。
+這個範例會呼叫 **_get_tzname**來取得所需的緩衝區大小，以顯示目前的日游標準時區名稱、配置該大小的緩衝區、再次呼叫 **_get_tzname**以載入緩衝區中的名稱，並將它列印到主控台。
 
 ```C
 // crt_get_tzname.c

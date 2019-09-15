@@ -1,9 +1,9 @@
 ---
 title: _controlfp_s
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _controlfp_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - controlfp_s
 - _controlfp_s
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - EM_AMBIGUOUS
 - _controlfp_s function
 ms.assetid: a51fc3f6-ab13-41f0-b227-6bf02d98e987
-ms.openlocfilehash: 0624cbfb4870ca87efebac01a8de682b588a4ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d12c139f305a3c66419a4e27905ac9f73345f4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335372"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942887"
 ---
-# <a name="controlfps"></a>_controlfp_s
+# <a name="_controlfp_s"></a>_controlfp_s
 
 取得和設定浮點控制字組。 這版的 [_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -60,22 +63,22 @@ errno_t _controlfp_s(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，或零**errno**值錯誤碼。
+如果成功，則為零，否則為**errno**值錯誤碼。
 
 ## <a name="remarks"></a>備註
 
-**_Controlfp_s**函式是平台無關且更安全的版本 **_control87**，此 cmdlet 會取得浮點控制字組會儲存在位址*currentControl*並將它設定使用*newControl*。 值中的位元表示浮點控制狀態。 浮點控制狀態可讓程式變更浮點數學套件中的精確度、四捨五入和無限大模式 (視平台而定)。 您也可以使用 **_controlfp_s**來遮罩或取消遮罩浮點例外狀況。
+**_Controlfp_s**函式是與平臺無關且更安全的 **_control87**版本，它會將浮點控制字組取得儲存在*currentControl*中的位址，並使用*newControl*加以設定。 值中的位元表示浮點控制狀態。 浮點控制狀態可讓程式變更浮點數學套件中的精確度、四捨五入和無限大模式 (視平台而定)。 您也可以使用 **_controlfp_s**來遮罩或取消遮罩浮點例外狀況。
 
-如果值*遮罩*等於 0， **_controlfp_s**取得浮點控制字組，並將擷取的值，在*currentControl*。
+如果*mask*的值等於0， **_controlfp_s**會取得浮點控制字組，並將抓取的值儲存在*currentControl*中。
 
-如果*遮罩*是設定組的非零值，控制字組的新值是：設定的任何位元 （也就是等於 1） 中*遮罩*中的對應位元*新*用來更新控制字組。 亦即*fpcntrl* = ((*fpcntrl* & ~*遮罩*) &#124; (*newControl* & *遮罩*)) 其中*fpcntrl*是浮點控制字組。 在此案例中， *currentControl*設後的值在變更完成，而非舊的控制字組位元值。
+如果*mask*不是零，則會設定控制字組的新值：對於在*遮罩*中設定的任何位（即等於1），會使用*new*中的對應位來更新控制字組。 換句話說， *fpcntrl* = （（*fpcntrl* & ~*mask*） &#124; （*newControl*  &  *mask*）），其中*fpcntrl*是浮點控制字組。 在此案例中， *currentControl*會在變更完成後設定為值;這不是舊的控制字組位值。
 
 > [!NOTE]
 > 根據預設，執行階段程式庫會遮罩所有浮點例外狀況。
 
-**_controlfp_s**幾乎等同 **_control87** (x86)、 x64 和 ARM 平台，在 Intel 函式。 如果您的目標 x86、 x64 或 ARM 平台，您可以使用 **_control87**或是 **_controlfp_s**。
+**_controlfp_s**幾乎等同于 Intel （x86）、X64 和 ARM 平臺上的 **_control87**函數。 如果您的目標是 x86、x64 或 ARM 平臺，則可以使用 **_control87**或 **_controlfp_s**。
 
-之間的差異 **_control87**並 **_controlfp_s**是在它們如何處理 denormal 值。 針對 Intel (x86)，x64 和 ARM 平台 **_control87**可以設定和清除 DENORMAL OPERAND 例外狀況遮罩。 **_controlfp_s**不會修改 DENORMAL OPERAND 例外狀況遮罩。 這個範例示範差異：
+**_Control87**和 **_controlfp_s**之間的差異在於它們處理 denormal 值的方式。 針對 Intel （x86）、x64 和 ARM 平臺， **_control87**可以設定並清除 DENORMAL 運算元例外狀況遮罩。 **_controlfp_s**不會修改 DENORMAL 運算元例外狀況遮罩。 這個範例示範差異：
 
 ```C
 _control87( _EM_INVALID, _MCW_EM );
@@ -85,9 +88,9 @@ _controlfp_s( &current_word, _EM_INVALID, _MCW_EM );
 // DENORMAL exception mask remains unchanged.
 ```
 
-可能的值遮罩常數 (*遮罩*) 和新的控制項值 (*newControl*) 下的十六進位值表所示。 使用下面所列的可攜式常數 (**_MCW_EM**， **_EM_INVALID**等等) 作為這些函式的引數，而不是提供十六進位值明確。
+Mask 常數（*mask*）和新控制項值（*newControl*）的可能值會顯示在下列的十六進位值表中。 使用下列可攜的常數（ **_MCW_EM**、 **_EM_INVALID**等）作為這些函式的引數，而不是明確地提供十六進位值。
 
-Intel (x86) 衍生的平台支援硬體中的 DENORMAL 輸入和輸出值。 x86 行為是保留 DENORMAL 值。 在 ARM 平台和 x64 支援 SSE2 的平台可讓 DENORMAL 運算元和結果，以排清，或強制為零。 **_Controlfp_s**， **_controlfp**，並 **_control87**函式提供遮罩來變更此行為。 下列範例示範如何使用此遮罩：
+Intel (x86) 衍生的平台支援硬體中的 DENORMAL 輸入和輸出值。 x86 行為是保留 DENORMAL 值。 具有 SSE2 支援的 ARM 平臺和 x64 平臺可讓 DENORMAL 的運算元和結果排清，或強制為零。 **_Controlfp_s**、 **_controlfp**和 **_control87**函數會提供遮罩來變更此行為。 下列範例示範如何使用此遮罩：
 
 ```C
 unsigned int current_word = 0;
@@ -99,25 +102,25 @@ _controlfp_s(&current_word, _DN_FLUSH, _MCW_DN);
 // and x64 processors with SSE2 support. Ignored on other x86 platforms.
 ```
 
-在 ARM 平台， **_controlfp_s**函式套用至 FPSCR 暫存器。 在 x64 架構，只將 SSE2 控制字組儲存在 MXCSR 暫存器會受到影響。 Intel (x86) 平台上， **_controlfp_s**會影響 x87 和 SSE2，控制字組，如果有的話。 您有兩個控制字組可能彼此不一致 (因為先前呼叫[__control87_2](control87-controlfp-control87-2.md)，例如); 如果兩個控制字組之間不一致 **_controlfp_s**設定**則 EM_AMBIGUOUS**中的旗標*currentControl*。 這警告所傳回的控制字組可能無法精確地呈現這兩個浮點控制字組的狀態。
+在 ARM 平臺上， **_controlfp_s**函數適用于 fpscr 暫存器暫存器。 在 x64 架構上，只有儲存在 MXCSR 暫存器中的 SSE2 控制項字會受到影響。 在 Intel （x86）平臺上， **_controlfp_s**會影響 X87 和 SSE2 （如果有的話）的控制字組。 這兩個控制字組可能會彼此不一致（例如，因為先前的[__control87_2](control87-controlfp-control87-2.md)呼叫）;如果兩個控制字組之間有不一致的情況， **_controlfp_s**會在*CurrentControl*中設定**EM_AMBIGUOUS**旗標。 這警告所傳回的控制字組可能無法精確地呈現這兩個浮點控制字組的狀態。
 
-在 ARM 和 x64 上不支援變更無效模式或浮點精確度的架構。 如果精確度控制遮罩可在 x64 平台，此函式會引發判斷提示和無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。
+在 ARM 和 x64 架構上，不支援變更無限大模式或浮點精確度。 如果在 x64 平臺上使用有效位數控制遮罩，則函式會引發判斷提示，並叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-如果未正確地設定遮罩，則此函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，則此函數會傳回**EINVAL**並設定**errno**來**EINVAL**。
+如果未正確地設定遮罩，則此函式會產生無效參數例外狀況 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行，此函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
-當您使用時，此函式會忽略[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)編譯，因為 common language runtime (CLR) 只支援預設的浮點精確度。
+當您使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)進行編譯時，會忽略此函式，因為 Common language RUNTIME （clr）只支援預設的浮點精確度。
 
 ### <a name="mask-constants-and-values"></a>遮罩常數和值
 
-針對 **_MCW_EM**遮罩，清除設定的例外狀況，以允許硬體例外狀況; 設定它則會隱藏例外狀況。 如果 **_EM_UNDERFLOW**或是 **_EM_OVERFLOW**發生，直到執行下一個浮點指令，會擲回任何硬體例外狀況。 若要產生硬體例外狀況之後立即 **_EM_UNDERFLOW**或是 **_EM_OVERFLOW**，呼叫 FWAIT MASM 指令。
+針對 **_MCW_EM** mask，清除它會設定例外狀況，以允許硬體例外狀況;設定它會隱藏例外狀況。 如果發生 **_EM_UNDERFLOW**或 **_EM_OVERFLOW** ，則在執行下一個浮點指令之前，不會擲回任何硬體例外狀況。 若要在 **_EM_UNDERFLOW**或 **_EM_OVERFLOW**之後立即產生硬體例外狀況，請呼叫 FWAIT MASM 指令。
 
 |遮罩|十六進位值|常數|十六進位值|
 |----------|---------------|--------------|---------------|
-|**_MCW_DN** （異常控制項）|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
-|**_MCW_EM** （插斷例外狀況遮罩）|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
-|**_MCW_IC** （無限大控制項）<br /><br /> （不支援 ARM 或 x64 平台。）|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
-|**_MCW_RC** （四捨五入控制項）|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
-|**_MCW_PC** （精確度控制項）<br /><br /> （不支援 ARM 或 x64 平台。）|0x00030000|**_PC_24** （24 位元）<br /><br /> **_PC_53** （53 位元）<br /><br /> **_PC_64** （64 位元）|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
+|**_MCW_DN**（Denormal 控制項）|0x03000000|**_DN_SAVE**<br /><br /> **_DN_FLUSH**|0x00000000<br /><br /> 0x01000000|
+|**_MCW_EM**（中斷例外狀況遮罩）|0x0008001F|**_EM_INVALID**<br /><br /> **_EM_DENORMAL**<br /><br /> **_EM_ZERODIVIDE**<br /><br /> **_EM_OVERFLOW**<br /><br /> **_EM_UNDERFLOW**<br /><br /> **_EM_INEXACT**|0x00000010<br /><br /> 0x00080000<br /><br /> 0x00000008<br /><br /> 0x00000004<br /><br /> 0x00000002<br /><br /> 0x00000001|
+|**_MCW_IC**（無限大控制項）<br /><br /> （在 ARM 或 x64 平臺上不支援）。|0x00040000|**_IC_AFFINE**<br /><br /> **_IC_PROJECTIVE**|0x00040000<br /><br /> 0x00000000|
+|**_MCW_RC**（進位控制項）|0x00000300|**_RC_CHOP**<br /><br /> **_RC_UP**<br /><br /> **_RC_DOWN**<br /><br /> **_RC_NEAR**|0x00000300<br /><br /> 0x00000200<br /><br /> 0x00000100<br /><br /> 0x00000000|
+|**_MCW_PC**（精確度控制）<br /><br /> （在 ARM 或 x64 平臺上不支援）。|0x00030000|**_PC_24**（24位）<br /><br /> **_PC_53**（53位）<br /><br /> **_PC_64**（64位）|0x00020000<br /><br /> 0x00010000<br /><br /> 0x00000000|
 
 ## <a name="requirements"></a>需求
 

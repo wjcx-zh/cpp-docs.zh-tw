@@ -1,11 +1,11 @@
 ---
 title: strcpy、wcscpy、_mbscpy
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strcpy
 - wcscpy
 - _mbscpy
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbscpy
 - _ftcscpy
@@ -38,19 +41,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-ms.openlocfilehash: fa6c0122f2e62c5b39b3da7b9b7c25aa8974f768
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b54bdc2f930b805df036a1fa5d5b1595ea738b88
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354103"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958255"
 ---
-# <a name="strcpy-wcscpy-mbscpy"></a>strcpy、wcscpy、_mbscpy
+# <a name="strcpy-wcscpy-_mbscpy"></a>strcpy、wcscpy、_mbscpy
 
 複製字串。 這些函式已有更安全的版本可用，請參閱 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
 > [!IMPORTANT]
-> **_mbscpy**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscpy**無法在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -98,12 +101,12 @@ unsigned char *_mbscpy(
 
 ## <a name="remarks"></a>備註
 
-**Strcpy**函式複製*strSource*，包括結束的 null 字元，到所指定的位置*strDestination*。 行為**strcpy**是未定義的如果來源和目的字串重疊。
+**Strcpy**函數會將*strSource*（包括終止的 null 字元）複製到*strDestination*所指定的位置。 如果來源和目的字串重迭，則**strcpy**的行為是未定義的。
 
 > [!IMPORTANT]
-> 因為**strcpy**不會檢查在有足夠的空間*strDestination*複製之前*strSource*，這是緩衝區滿溢的潛在原因。 因此，建議您改用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
+> 因為**strcpy**在複製*strSource*之前，不會在*strDestination*中檢查是否有足夠的空間，所以可能會造成緩衝區溢位。 因此，建議您改用 [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md)。
 
-**wcscpy**並 **_mbscpy**分別是寬字元和多位元組字元版本**strcpy**。 引數和傳回值**wcscpy**是寬字元字串; **_mbscpy**是多位元組字元字串。 除此之外，這三個函式的行為相同。
+**wcscpy**和 **_mbscpy**分別是寬字元和多位元組字元版本的**strcpy**。 **Wcscpy**的引數和傳回值是寬字元字串; **_mbscpy**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
 在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

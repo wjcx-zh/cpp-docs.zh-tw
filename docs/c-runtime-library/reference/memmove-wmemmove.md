@@ -1,10 +1,10 @@
 ---
 title: memmove、wmemmove
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memmove
 - wmemmove
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memmove
 - wmemmove
@@ -25,12 +28,12 @@ helpviewer_keywords:
 - wmemmove function
 - memmove function
 ms.assetid: 3a906114-9cf3-40d7-bd99-ee452004f218
-ms.openlocfilehash: 27811f56f1956bcaaea4ec589f7e6c71afaca380
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bca0badb13dbbc754b6546f62cdd865eacd14fbc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499622"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951779"
 ---
 # <a name="memmove-wmemmove"></a>memmove、wmemmove
 
@@ -60,7 +63,7 @@ wchar_t *wmemmove(
 來源物件。
 
 *計數*<br/>
-要複製的位元組數目 (**memmove**) 或字元數 (**wmemmove**)。
+要複製的位元組數目（**memmove**）或字元數（**wmemmove**）。
 
 ## <a name="return-value"></a>傳回值
 
@@ -68,11 +71,11 @@ wchar_t *wmemmove(
 
 ## <a name="remarks"></a>備註
 
-將*count*個位元組 (**memmove**) 或字元 (**wmemmove**) 從*src*複製到*dest*。 如果來源區域與目的地的某些區域重疊，這兩個函式可確保先複製重疊區域中的原始來源位元組，再進行覆寫。
+將*count*個位元組（**memmove**）或字元（**wmemmove**）從*src*複製到*dest*。 如果來源區域與目的地的某些區域重疊，這兩個函式可確保先複製重疊區域中的原始來源位元組，再進行覆寫。
 
 **安全性提示**：確定目的緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
-只有在包含語句之前定義了常數 **_CRT_SECURE_DEPRECATE_MEMORY** , 才會取代**memmove**和**wmemmove**函式, 如下列範例所示:
+只有在包含語句之前定義了常數 **_CRT_SECURE_DEPRECATE_MEMORY** ，才會取代**memmove**和**wmemmove**函式，如下列範例所示：
 
 ```C
 #define _CRT_SECURE_DEPRECATE_MEMORY

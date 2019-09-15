@@ -1,10 +1,10 @@
 ---
 title: fclose、_fcloseall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fclose
 - _fcloseall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fclose
 - _fcloseall
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 215925fb16f5d51e481ae92cbb45b0270bd5ebd4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334875"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941508"
 ---
-# <a name="fclose-fcloseall"></a>fclose、_fcloseall
+# <a name="fclose-_fcloseall"></a>fclose、_fcloseall
 
-關閉資料流 (**fclose**) 或關閉所有開啟的資料流 (**_fcloseall**)。
+關閉資料流程（**fclose**），或關閉所有開啟的資料流程（ **_fcloseall**）。
 
 ## <a name="syntax"></a>語法
 
@@ -52,23 +55,23 @@ int _fcloseall( void );
 
 ## <a name="return-value"></a>傳回值
 
-**fclose**會傳回 0，如果已成功關閉資料流。 **_fcloseall**傳回關閉的資料流總數。 這兩個函式會傳回**EOF**表示錯誤。
+如果成功關閉資料流程， **fclose**會傳回0。 **_fcloseall**會傳回已關閉的資料流程總數。 這兩個函數都會傳回**EOF**來表示錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Fclose**函式會關閉*串流*。 如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**fclose**設定**errno**來**EINVAL** ，並傳回**EOF**。 建議*資料流*指標一律先勾選之前呼叫這個函式。
+**Fclose**函數會關閉*stream*。 如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **fclose**會將**Errno**設定為**EINVAL** ，並傳回**EOF**。 建議在呼叫此函式之前，一律先檢查*資料流程*指標。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-**_Fcloseall**函式會關閉所有開啟的資料流，但**stdin**， **stdout**， **stderr** (ms-dos 要加， **_stdaux**並 **_stdprn**)。 它也會關閉，並刪除任何建立的暫存檔**tmpfile**。 在這兩個函式中，所有與資料流相關聯的緩衝區都會先排清再關閉。 關閉資料流時，會釋放系統配置的緩衝區。 使用使用者指派的緩衝區**setbuf**並**setvbuf**不會自動釋放。
+**_Fcloseall**函式會關閉所有開啟的資料流程，但**stdin**、 **stdout**、 **stderr** （和 MS-DOS、 **_stdaux**和 **_stdprn**）除外。 它也會關閉並刪除**tmpfile**所建立的任何暫存檔案。 在這兩個函式中，所有與資料流相關聯的緩衝區都會先排清再關閉。 關閉資料流時，會釋放系統配置的緩衝區。 具有**setbuf**和**setvbuf**的使用者所指派的緩衝區不會自動釋放。
 
-**注意：** 這些函式使用時關閉資料流，基礎檔案描述項和作業系統檔案控制代碼 （或通訊端） 會關閉，以及資料流。 因此，如果檔案原開啟為檔案處理或檔案描述項，並會關閉**fclose**，請勿也呼叫 **_close**若要關閉檔案描述項; 請勿呼叫 Win32 函式**CloseHandle**關閉檔案控制代碼。
+**注意：** 當這些函式用來關閉資料流程時，基礎檔案描述項和作業系統檔案控制代碼（或通訊端）會關閉，以及資料流程。 因此，如果檔案原本是以檔案控制代碼或檔案描述項的形式開啟，並使用**fclose**來關閉，則請勿同時呼叫 **_close**來關閉檔案描述項;請勿呼叫 Win32 函數**CloseHandle**來關閉檔案控制代碼。
 
-**fclose**並 **_fcloseall**包含程式碼，以防止其他執行緒的干擾。 如需非鎖定版本的**fclose**，請參閱 **_fclose_nolock**。
+**fclose**和 **_fcloseall**包含的程式碼可防止其他執行緒的干擾。 如需**fclose**的非鎖定版本，請參閱 **_fclose_nolock**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fclose**|\<stdio.h>|
 |**_fcloseall**|\<stdio.h>|

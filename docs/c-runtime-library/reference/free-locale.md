@@ -1,9 +1,9 @@
 ---
 title: _free_locale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_locale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __free_locale
 - free_locale
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 92dc8cd711087e8e797b484d6c7e3c6c3b031b5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31a8e3191c5e370acb00aaf12e21f0c712c51dd1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333036"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956752"
 ---
-# <a name="freelocale"></a>_free_locale
+# <a name="_free_locale"></a>_free_locale
 
 釋放地區設定物件。
 
@@ -52,13 +55,13 @@ void _free_locale(
 
 ## <a name="remarks"></a>備註
 
-**_Free_locale**函數用來釋放呼叫所取得的地區設定物件 **_get_current_locale**或是 **_create_locale**。
+**_Free_locale**函數是用來釋放從呼叫 **_get_current_locale**或 **_create_locale**取得的地區設定物件。
 
-先前的名稱，此函式 **__free_locale** （含兩個前置底線） 已被取代。
+此函式的先前名稱 **__free_locale** （含有兩個前置底線）已被取代。
 
 ## <a name="requirements"></a>需求
 
-|**Routine**|必要的標頭|
+|**常式**|必要的標頭|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 

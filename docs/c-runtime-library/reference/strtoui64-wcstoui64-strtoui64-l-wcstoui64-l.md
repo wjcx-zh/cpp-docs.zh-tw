@@ -1,12 +1,12 @@
 ---
 title: _strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strtoui64
 - _strtoui64_l
 - _wcstoui64
 - _wcstoui64_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wcstoui64_l
 - strtoui64_l
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - strtoui64_l function
 - strtoui64 function
 ms.assetid: 7fcb537e-4554-4ceb-a5b6-bc09244e72ef
-ms.openlocfilehash: dec7debff809f8b3d61856f9be77bc590d845c12
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be7d779bac50d332dde879c9d5b070fd2bf7e7e5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269013"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946430"
 ---
-# <a name="strtoui64-wcstoui64-strtoui64l-wcstoui64l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
+# <a name="_strtoui64-_wcstoui64-_strtoui64_l-_wcstoui64_l"></a>_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l
 
-將字串轉換成不帶正負號 **__int64**值。
+將字串轉換為不帶正負號的 **__int64**值。
 
 ## <a name="syntax"></a>語法
 
@@ -94,19 +97,19 @@ unsigned __int64 _wcstoui64(
 
 ## <a name="return-value"></a>傳回值
 
-**_strtoui64**會傳回代表字串中的值*strSource*，但表示法可能造成溢位，當在此情況下它會傳回 **_UI64_MAX**。 **_strtoui64**會傳回 0，如果可以不執行任何轉換。
+**_strtoui64**會傳回字串*strSource*中所表示的值，但標記法會造成溢位，在這種情況下，它會傳回 **_UI64_MAX**。 如果無法執行轉換， **_strtoui64**會傳回0。
 
-**_UI64_MAX**定義的限制。H.
+**_UI64_MAX**是以限制的方式定義。H.
 
-如果*strSource*是**NULL**或*基底*為非零值且小於 2 或大於 36， **errno**設為**EINVAL**.
+如果*strSource*為**Null** ，或是*基底*為非零且小於2或大於36，則**errno**會設定為**EINVAL**。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Strtoui64**函式會將*strSource*來**不帶正負號** **__int64**。 **_wcstoui64**是寬字元版本的 **_strtoui64**; 其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
+**_Strtoui64**函數會將*strSource*轉換成不**帶正負**號的 **__int64**。 **_wcstoui64**是寬字元版本的 **_strtoui64**;其*strSource*引數是寬字元字串。 否則，這些函式的行為相同。
 
-這兩項功能可讓您停止讀取字串*strSource*它們無法辨識為數字一部分的第一個字元。 這可能是終止的 null 字元，或是它可能會大於或等於第一個數字字元*基底*。
+這兩個函式會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 null 字元，或者它可能是大於或等於*base*的第一個數位字元。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -115,15 +118,15 @@ unsigned __int64 _wcstoui64(
 |**_tcstoui64**|**_strtoui64**|**_strtoui64**|**_wstrtoui64**|
 |**_tcstoui64_l**|**_strtoui64_l**|**_strtoui64_l**|**_wstrtoui64_l**|
 
-目前的地區設定**LC_NUMERIC**類別設定會決定在基底字元辨識*strSource*; 如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 _l 尾碼的函式使用目前的地區設定;**_strtoui64_l**並 **_wcstoui64_l**等於對應的函式，而不需要 **_l**後置詞，只不過它們改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前地區設定的**LC_NUMERIC**類別設定會決定*strSource*中的基數位符辨識;如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 沒有 _l 尾碼的函式會使用目前的地區設定; **_strtoui64_l**和 **_wcstoui64_l**與對應的函式（不含 **_l**尾碼）相同，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
+如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
 
-**_strtoui64**預期*strSource*指向下列格式的字串：
+**_strtoui64**預期*strSource*會指向下列格式的字串：
 
-> [*whitespace*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **X** }]] [*digits*  &#124; *letters*]
+> [*空格*][{ **+** &#124; &#124; &#124; }] [0 [{x}]] [位字母] **-**
 
-A*空白字元*可能包含空格和定位字元字元，都會被忽略。 *數字*是一或多個十進位數字。 *字母*是一或多個字母 'a' 到 'z' （或 'A' 到 'Z'）。 不符合此格式的第一個字元會停止掃描。 如果*基底*是介於 2 到 36，則當成基底的數目。 如果*基底*為 0，所指向的字串起始字元*strSource*用來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*基底*為 0 和掃描的第一個字元是 '0'，假設為八進位整數，且 '8' 或 '9' 字元會停止掃描。
+空白字元*可能是*由空格和定位字元所組成，這些字元會被忽略。 *數位*是一或多個小數位數。 *字母*是一個或多個字母 ' a ' 到 ' z ' （或 ' a ' 到 ' z '）。 不符合此格式的第一個字元會停止掃描。 如果*base*介於2到36之間，則會使用它做為數位的基底。 如果*base*為0，則會使用*strSource*所指向之字串的初始字元來判斷基底。 如果第一個字元為 0，而第二個字元不是 'x' 或 X'，則字串會解譯為八進位整數。 如果第一個字元為 '0'，而第二個字元是 'x' 或 X'，則字串會解譯為十六進位整數。 如果第一個字元為 '1' 到 '9'，則字串會解譯為十進位整數。 字母 'a' 到 'z' (或 'A' 到 'Z') 被指派值 10 到 35，只允許指派值小於 *base* 的字母。 基底範圍外的第一個字元會停止掃描。 例如，如果*base*為0，而第一個掃描的字元是 ' 0 '，則假設為八進位整數，而 ' 8 ' 或 ' 9 ' 字元會停止掃描。
 
 ## <a name="requirements"></a>需求
 

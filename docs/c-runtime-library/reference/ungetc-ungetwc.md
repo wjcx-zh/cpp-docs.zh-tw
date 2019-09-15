@@ -1,10 +1,10 @@
 ---
 title: ungetc、ungetwc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ungetwc
 - ungetc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungettc
 - ungetwc
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3b6c6ed3fe8ff5976afa1da2ed437e25c923b99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155429"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957410"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -62,19 +65,19 @@ wint_t ungetwc(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，所有這些函式都會傳回字元引數*c*。 如果*c*無法回推或如果已經讀取的字元，輸入資料流不變並**ungetc**會傳回**EOF**;**ungetwc**會傳回**WEOF**。 如果*資料流*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**EOF**或**WEOF**會傳回並**errno**設定為**EINVAL**。
+如果成功，所有這些函式都會傳回字元引數*c*。 如果無法將*c*推送回來，或未讀取任何字元，則輸入資料流程不會變更，而且**Ungetc**會傳回**EOF**;**ungetwc**會傳回**WEOF**。 如果*stream*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則會傳回**EOF**或**WEOF** ，並將**errno**設定為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Ungetc**函式會將推入字元*c*回*串流*並清除檔案結尾指標。 資料流必須是開啟可供讀取。 後續讀取作業上*資料流*開頭*c*。 嘗試將推播**EOF**拖曳至資料流使用**ungetc**會被忽略。
+**Ungetc**函式會將字元*c*推送回*資料流程*，並清除檔案結尾指標。 資料流必須是開啟可供讀取。 *資料流程*上的後續讀取作業會從*c*開始。 已忽略使用**ungetc**將**EOF**推送至資料流程的嘗試。
 
-藉由在資料流上放**ungetc**可能會被清除，如果**fflush**， [fseek](fseek-fseeki64.md)， **fsetpos**，或[倒轉](rewind.md)會從資料流讀取字元之前呼叫。 檔案位置指標將具有在回推字元之前它所具有的值。 對應至資料流外部儲存體會保持不變。 在成功**ungetc**針對文字資料流的檔案位置指示器的呼叫是未指定，直到所有回推的字元讀取或捨棄。 在每個成功**ungetc**針對二進位資料流的檔案位置指示器的呼叫會減少; 如果其值為 0 之前呼叫，此值之後為未定義呼叫。
+如果在從資料流程讀取字元之前呼叫**fflush**、 [fseek](fseek-fseeki64.md)、 **fsetpos**[或倒轉，則會](rewind.md)清除放在資料流程上的字元**ungetc** 。 檔案位置指標將具有在回推字元之前它所具有的值。 對應至資料流外部儲存體會保持不變。 針對文字資料流程成功**ungetc**呼叫時，不會指定檔案位置指標，直到讀取或捨棄所有推送的字元為止。 針對二進位資料流程的每個成功**ungetc**呼叫，檔案位置指標會遞減;如果在呼叫之前，其值為0，則在呼叫之後，值會是未定義的。
 
-結果會無法預測如果**ungetc**稱為兩次，而不讀取或兩個呼叫之間的檔案位置的作業。 在呼叫之後**fscanf**，呼叫**ungetc**可能會失敗，除非另一個讀取作業 (例如**getc**) 已執行。 這是因為**fscanf**本身會呼叫**ungetc**。
+如果兩次呼叫之間沒有讀取或檔案定位作業，則會在呼叫**ungetc**時無法預測結果。 呼叫**fscanf**之後，除非已執行另一個讀取作業（例如**getc**），否則對**ungetc**的呼叫可能會失敗。 這是因為**fscanf**本身會呼叫**ungetc**。
 
-**ungetwc**是寬字元版本的**ungetc**。 不過，在每個成功**ungetwc**呼叫針對文字或二進位資料流，檔案位置指標的值是未指定直到所有回推的字元會讀取或捨棄。
+**ungetwc**是**ungetc**的寬字元版本。 不過，針對文字或二進位資料流程的每個成功**ungetwc**呼叫，都會指定檔案位置指標的值，直到讀取或捨棄所有推送的字元為止。
 
 這些函式是安全執行緒，並且會在執行期間鎖定機密資料。 如需非鎖定版本，請參閱 [_ungetc_nolock、_ungetwc_nolock](ungetc-nolock-ungetwc-nolock.md)。
 
@@ -91,7 +94,7 @@ wint_t ungetwc(
 |**ungetc**|\<stdio.h>|
 |**ungetwc**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

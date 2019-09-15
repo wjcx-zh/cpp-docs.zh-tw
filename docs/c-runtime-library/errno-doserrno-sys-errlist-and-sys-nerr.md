@@ -1,11 +1,14 @@
 ---
 title: errno、_doserrno、_sys_errlist 和 _sys_nerr
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _errno
-apilocation:
+api_location:
 - msvcrt.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sys_errlist
 - errno
@@ -21,14 +24,14 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-ms.openlocfilehash: 57d04fe5867c6a969b6aeca40f26b18b5dcd7a61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5b10d98dab41151290d4e44e031f659108b0c73c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750776"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944560"
 ---
-# <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
+# <a name="errno-_doserrno-_sys_errlist-and-_sys_nerr"></a>errno、_doserrno、_sys_errlist 和 _sys_nerr
 
 全域巨集，具有程式執行期間所設定的錯誤碼，以及用於顯示的錯誤碼的字串對應項目。
 
@@ -107,7 +110,7 @@ ms.locfileid: "57750776"
 |全域巨集|必要的標頭|選擇性標頭|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h> 或 \<stdlib.h>、\<cerrno> 或 \<cstdlib> (C++)||
-|`_doserrno`, `_sys_errlist`, `_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`_doserrno`、`_sys_errlist`、`_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
 `_doserrno`、`_sys_errlist` 和 `_sys_nerr` 是 Microsoft 擴充功能。 如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
 

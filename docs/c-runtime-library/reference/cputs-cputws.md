@@ -1,10 +1,10 @@
 ---
 title: _cputs、_cputws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cputws
 - _cputs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cputws
 - _cputs
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340233"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942636"
 ---
-# <a name="cputs-cputws"></a>_cputs、_cputws
+# <a name="_cputs-_cputws"></a>_cputs、_cputws
 
 將字串放入主控台。
 
@@ -62,13 +65,13 @@ int _cputws(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_cputs**會傳回 0。 如果函式失敗，則會傳回非零值。
+如果成功， **_cputs**會傳回0。 如果函式失敗，則會傳回非零值。
 
 ## <a name="remarks"></a>備註
 
-**_Cputs**函式會寫入 null 結束的字串，指向*str*直接到主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
+**_Cputs**函式會將*str*直接指向的以 null 結束的字串寫入主控台。 歸位字元-換行字元 (CR-LF) 組合不會自動附加至字串。
 
-這個函式會驗證其參數。 如果*str*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行**errno**設為**EINVAL** ，則傳回-1。
+這個函式會驗證其參數。 如果*str*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，並傳回-1。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

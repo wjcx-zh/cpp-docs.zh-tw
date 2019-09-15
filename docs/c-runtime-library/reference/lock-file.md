@@ -1,9 +1,9 @@
 ---
 title: _lock_file
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock_file
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _lock_file
 - lock_file
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157431"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953307"
 ---
-# <a name="lockfile"></a>_lock_file
+# <a name="_lock_file"></a>_lock_file
 
-鎖定**檔案**物件，以確定執行緒存取的一致性**檔案**同時物件。
+鎖定檔案**物件，** 以確保同時存取檔案物件的執行緒一致。
 
 ## <a name="syntax"></a>語法
 
@@ -48,7 +51,7 @@ void _lock_file( FILE* file );
 
 ## <a name="remarks"></a>備註
 
-**_Lock_file**函式鎖定**檔案**所指定的物件*檔案*。 基礎檔案未被鎖定 **_lock_file**。 使用 [_unlock_file](unlock-file.md) 解除檔案鎖定。 呼叫 **_lock_file**並 **_unlock_file**執行緒中必須相符。
+**_Lock_file**函式會鎖定*file*所指定的**檔案物件。** **_Lock_file**不會鎖定基礎檔案。 使用 [_unlock_file](unlock-file.md) 解除檔案鎖定。 **_Lock_file**和 **_unlock_file**的呼叫必須線上程中相符。
 
 ## <a name="requirements"></a>需求
 

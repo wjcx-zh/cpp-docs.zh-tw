@@ -1,10 +1,10 @@
 ---
 title: _execv、_wexecv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wexecv
 - _execv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execv
 - _wexecv
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb18603c618342f67bad28ebf0b99bd173ee5293
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339243"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941860"
 ---
-# <a name="execv-wexecv"></a>_execv、_wexecv
+# <a name="_execv-_wexecv"></a>_execv、_wexecv
 
 載入並執行新的子處理序。
 
@@ -64,7 +67,7 @@ intptr_t _wexecv(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話，這些函式不會傳回呼叫處理序。 傳回值為-1 表示發生錯誤時，在此情況下**errno**設定全域變數。
+如果成功的話，這些函式不會傳回呼叫處理序。 傳回值-1 表示發生錯誤，在此情況下會設定**errno**全域變數。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -82,11 +85,11 @@ intptr_t _wexecv(
 
 所有這些函式都會載入並執行新的處理序，並將指標陣列傳遞至命令列引數。
 
-**_Execv**函式會驗證其參數。 如果*cmdname*為 null 指標，或如果*argv*為 null 指標，指向空陣列，或如果陣列包含作為第一個引數的空字串 **_execv**函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。 未啟動任何處理序。
+**_Execv**函數會驗證它們的參數。 如果*cmdname*為 null 指標，或如果*argv*為 null 指標、指向空陣列的指標，或如果陣列包含空字串做為第一個引數，則 **_execv**函式會叫用不正確參數處理常式，如參數中所述[驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。 未啟動任何處理序。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_execv**|\<process.h>|\<errno.h>|
 |**_wexecv**|\<process.h> 或 \<wchar.h>|\<errno.h>|

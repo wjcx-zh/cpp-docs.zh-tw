@@ -1,11 +1,11 @@
 ---
 title: _futime、_futime32、_futime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _futime64
 - _futime32
 - _futime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - futime
 - _futime
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3de638f08882e2aae4743311730afcd888c43a60
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332672"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956238"
 ---
-# <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
+# <a name="_futime-_futime32-_futime64"></a>_futime、_futime32、_futime64
 
 設定已開啟之檔案的修改時間。
 
@@ -70,17 +73,17 @@ int _futime64(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回 0。 發生錯誤時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EBADF**，表示檔案描述項無效，或**EINVAL**，表示無效參數。
+如果成功，則傳回 0。 發生錯誤時，會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，並將**errno**設定為**EBADF**，表示不正確檔案描述項，或**EINVAL**，表示不正確參數。
 
 ## <a name="remarks"></a>備註
 
-**_Futime**常式相關聯的開啟檔案上設定的修改日期和存取時間*fd*。 **_futime**等同於[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)，不同之處在於其引數是開啟的檔案，檔案描述元，而不是檔案或檔案的路徑名稱。 **_Utimbuf**結構包含新修改日期和存取時間的欄位。 這兩個欄位必須包含有效的值。 **_utimbuf32**並 **_utimbuf64**等於 **_utimbuf**分別使用 32 位元和 64 位元時間類型，除非。 **_futime**並 **_utimbuf**使用 64 位元時間類型與 **_futime**完全相同的行為 **_futime64**。 如果您需要強制進行舊行為，定義 **_USE_32BIT_TIME_T**。 如此一來，這會導致 **_futime**相同的行為 **_futime32** ，並造成 **_utimbuf**結構使用 32 位元時間類型，使其相當於 **__utimbuf32**。
+**_Futime**常式會在與*fd*相關聯的開啟檔案上設定修改日期和存取時間。 **_futime**與[_utime](utime-utime32-utime64-wutime-wutime32-wutime64.md)相同，不同之處在于它的引數是已開啟檔案的檔案描述項，而不是檔案的名稱或檔案的路徑。 **_Utimbuf**結構包含新修改日期和存取時間的欄位。 這兩個欄位必須包含有效的值。 **_utimbuf32**和 **_utimbuf64**與 **_utimbuf**相同，不同之處在于分別使用32位和64位時間類型。 **_futime**和 **_utimbuf**使用64位時間類型，而 **_futime**與 **_futime64**的行為相同。 如果您需要強制執行舊的行為，請定義 **_USE_32BIT_TIME_T**。 這麼做會導致 **_futime**與 **_futime32**的行為相同，並使 **_utimbuf**結構使用32位時間類型，使其相當於 **__utimbuf32**。
 
-**_futime64**，它會使用 **__utimbuf64**結構，可以讀取和修改檔案日期至 23:59:59，3000 年 12 月 31 日 UTC; 而呼叫 **_futime32**如果檔案的日期會失敗晚於 23:59:59 2038 年 1 月 18 日 UTC。 1970 年 1 月 1 日午夜是這些函式的日期範圍下限。
+**_futime64**（使用 **__utimbuf64**結構）可以讀取和修改檔案日期到23:59:59 年12月31日3000，UTC;如果檔案的日期晚于2038年1月18日23:59:59，則呼叫 **_futime32**會失敗。 1970 年 1 月 1 日午夜是這些函式的日期範圍下限。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_futime**|\<sys/utime.h>|\<errno.h>|
 |**_futime32**|\<sys/utime.h>|\<errno.h>|
@@ -124,7 +127,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtfutimecinput"></a>輸入︰crt_futime.c_input
+### <a name="input-crt_futimec_input"></a>輸入︰crt_futime.c_input
 
 ```Input
 Arbitrary file contents.

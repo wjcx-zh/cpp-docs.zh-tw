@@ -1,9 +1,9 @@
 ---
 title: _set_doserrno
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_doserrno
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_doserrno
 - set_doserrno
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 98b43c908a7ee48a89158c987fe64420f6639a79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4060992477e5d30dfad0725948cbc719b4d0270
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356638"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948608"
 ---
-# <a name="setdoserrno"></a>_set_doserrno
+# <a name="_set_doserrno"></a>_set_doserrno
 
 設定 [_doserrno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 全域變數的值。
 
@@ -45,7 +48,7 @@ errno_t _set_doserrno( int error_value );
 ### <a name="parameters"></a>參數
 
 *error_value*<br/>
-新值 **_doserrno**。
+**_Doserrno**的新值。
 
 ## <a name="return-value"></a>傳回值
 

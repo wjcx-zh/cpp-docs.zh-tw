@@ -1,12 +1,12 @@
 ---
 title: _vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vscprintf_p_l
 - _vscprintf_p
 - _vscwprintf_p_l
 - _vscwprintf_p
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vscprintf_p
 - _vscprintf_p_l
@@ -41,12 +44,12 @@ helpviewer_keywords:
 - _vsctprintf_p function
 - vscprintf_p_l function
 ms.assetid: 5da920b3-8652-4ee9-b19e-5aac3ace9d03
-ms.openlocfilehash: 74082f0b5ed15b807c626ce08c283724441fc15c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 102ec617e42061e673cd14aea9c96916c907cf58
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499107"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945434"
 ---
 # <a name="_vscprintf_p-_vscprintf_p_l-_vscwprintf_p-_vscwprintf_p_l"></a>_vscprintf_p、_vscprintf_p_l、_vscwprintf_p、_vscwprintf_p_l
 
@@ -90,18 +93,18 @@ int _vscwprintf_p _l(
 
 ## <a name="return-value"></a>傳回值
 
-如果引數清單所指向的字串已列印, 或使用指定的格式化程式碼傳送至檔案或緩衝區, 則 **_vscprintf_p**會傳回所要產生的字元數。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**會針對寬字元執行相同的功能。
+如果引數清單所指向的字串已列印，或使用指定的格式化程式碼傳送至檔案或緩衝區，則 **_vscprintf_p**會傳回所要產生的字元數。 傳回的值不包含終止 Null 字元。 **_vscwprintf_p**會針對寬字元執行相同的功能。
 
 ## <a name="remarks"></a>備註
 
-這些函式與 **_vscprintf**和 **_vscwprintf**不同之處在于, 它們支援指定引數使用順序的能力。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式與 **_vscprintf**和 **_vscwprintf**不同之處在于，它們支援指定引數使用順序的能力。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-如果*format*是 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
+如果*format*是 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設為**EINVAL**。
 
 > [!IMPORTANT]
-> 請確定如果*format*是使用者定義的字串, 它會以 null 終止, 而且具有正確的參數數目和類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 請確定如果*format*是使用者定義的字串，它會以 null 終止，而且具有正確的參數數目和類型。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

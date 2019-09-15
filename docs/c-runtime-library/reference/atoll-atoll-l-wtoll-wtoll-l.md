@@ -1,12 +1,12 @@
 ---
 title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wtoll
 - _atoll_l
 - _wtoll_l
 - atoll
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tstoll_l
 - _wtoll
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 7933b3e25185b5abdbd10c1b3fd616742bb28f92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1b5fca9c3428bce26a8a40cf8271760fa97b10b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341180"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939469"
 ---
-# <a name="atoll-atolll-wtoll-wtolll"></a>atoll、_atoll_l、_wtoll、_wtoll_l
+# <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
 將字串轉換成**長** **長**整數。
 
@@ -73,11 +76,11 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回**長** **長**輸入的字元解譯為數字所產生的值。 傳回值**atoll**為 0，如果輸入無法轉換成該類型的值。
+每個函式會傳回**長** **長**輸入的字元解譯為數字所產生的值。 如果輸入無法轉換成該類型的值，則**atoll**的傳回值為0。
 
-溢位具有大型正整數值，如**atoll**會傳回**LLONG_MAX**，，具有大型負整數值的溢位，則會傳回**LLONG_MIN**。
+對於具有大型正整數值的溢位， **atoll**會傳回**LLONG_MAX**，而對於具有大型負整數值的溢位，則會傳回**LLONG_MIN**。
 
-在所有超出範圍的情況下， **errno**設為**ERANGE**。 如果傳入的參數是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回 0。
+在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
@@ -85,15 +88,15 @@ long long _wtoll_l(
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
-*Str*引數**atoll**具有下列格式：
+**Atoll**的*str*引數具有下列格式：
 
-> [*whitespace*] [*sign*] [*digits*]
+> [*空格*][*sign*][*數位*]
 
-A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+） 或減號 （–）; 並*數字*是一個以上的數字。
+空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個數位。
 
-**_wtoll**等同於**atoll** ，差別在於它採用寬字元字串，做為參數。
+**_wtoll**與**atoll**相同，不同之處在于它會接受寬字元字串做為參數。
 
-有這些函式的版本 **_l**後置詞是不需要它的版本相同，不同之處在於它們使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本與沒有它的版本相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -107,12 +110,12 @@ A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**atoll**， **_atoll_l**|\<stdlib.h>|
-|**_wtoll**， **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
+|**atoll**、 **_atoll_l**|\<stdlib.h>|
+|**_wtoll**、 **_wtoll_l**|\<stdlib.h> 或 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式示範如何使用**atoll**將數字儲存為數值的字串轉換函式。
+此程式示範如何使用**atoll**函數，將儲存為字串的數位轉換為數值。
 
 ```C
 // crt_atoll.c

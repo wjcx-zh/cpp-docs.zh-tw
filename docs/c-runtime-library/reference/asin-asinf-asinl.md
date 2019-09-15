@@ -1,11 +1,11 @@
 ---
 title: asin、asinf、asinl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - asinf
 - asinl
 - asin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - asin
 - asinl
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347960"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943654"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -60,25 +63,25 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Asin**函式會傳回的反正弦值 （反向的 sine 函式） *x*範圍-π/2 到 π/2 弧度。
+**Asin**函數會傳回介於-π/2 到π/2 弧度之間的*x*反正弦值（反正弦函數）。
 
-根據預設，如果*x*小於-1 或大於 1， **asin**傳回不定。
+根據預設，如果*x*小於-1 或大於1，則**asin**會傳回不定的。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± ∞|**INVALID**|**_DOMAIN**|
-|常见**QNAN**， **IND**|none|**_DOMAIN**|
-|&#124;x&#124;>1|**INVALID**|**_DOMAIN**|
+|± ∞|**無效**|**_DOMAIN**|
+|± **QNAN**， **IND**|none|**_DOMAIN**|
+|&#124;x&#124;>1|**無效**|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**asin**與**float**並**長** **double**值。 在 C 程式中， **asin**一律採用並傳回**double**。
+因為C++允許多載，所以您可以使用**float**和**long** **double**值來呼叫**asin**的多載。 在 C 程式中， **asin**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**asin**， **asinf**， **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 ## <a name="example"></a>範例
 

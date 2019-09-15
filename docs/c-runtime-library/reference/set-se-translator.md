@@ -1,9 +1,9 @@
 ---
 title: _set_se_translator
 ms.date: 02/21/2018
-apiname:
+api_name:
 - _set_se_translator
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_se_translator
 - set_se_translator
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - exception handling, changing
 - _set_se_translator function
 ms.assetid: 280842bc-d72a-468b-a565-2d3db893ae0f
-ms.openlocfilehash: 23eb4e9016666567771832cefed686cb9197b02f
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 781deaad091b6aed72350100f7575c566bbae793
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299701"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948387"
 ---
-# <a name="setsetranslator"></a>_set_se_translator
+# <a name="_set_se_translator"></a>_set_se_translator
 
 設定每個執行緒的回呼函式, 以將 Win32 例外狀況 (C 結構C++化例外狀況) 轉譯為具類型的例外狀況。
 
@@ -49,15 +52,15 @@ _se_translator_function _set_se_translator(
 
 ## <a name="return-value"></a>傳回值
 
-傳回 **_set_se_translator**所註冊之先前 translator 函式的指標, 以便之後可以還原先前的函式。 如果未設定先前的函式, 則會使用傳回值來還原預設行為。這個值可以是**nullptr**。
+傳回 **_set_se_translator**所註冊之先前 translator 函式的指標，以便之後可以還原先前的函式。 如果未設定先前的函式, 則會使用傳回值來還原預設行為。這個值可以是**nullptr**。
 
 ## <a name="remarks"></a>備註
 
-**_Set_se_translator**函式提供一種方法來處理 Win32 例外狀況 (C 結構化C++例外狀況), 做為具類型的例外狀況。 若要允許C++ **catch**處理常式處理每個 c 例外狀況, 請先定義可以使用或衍生自的 c 例外狀況包裝函式類別, 將特定類別類型的屬性設為 c 例外狀況。 若要使用這個類別，請安裝內部例外狀況處理機制在每次引發 C 例外狀況時呼叫的自訂 C 例外狀況轉譯器函式。 在您的 translator 函式內, 您可以擲回符合C++的**catch**處理常式可攔截的任何具類型的例外狀況。
+**_Set_se_translator**函式提供一種方法來處理 Win32 例外狀況（C 結構化C++例外狀況），做為具類型的例外狀況。 若要允許C++ **catch**處理常式處理每個 c 例外狀況, 請先定義可以使用或衍生自的 c 例外狀況包裝函式類別, 將特定類別類型的屬性設為 c 例外狀況。 若要使用這個類別，請安裝內部例外狀況處理機制在每次引發 C 例外狀況時呼叫的自訂 C 例外狀況轉譯器函式。 在您的 translator 函式內, 您可以擲回符合C++的**catch**處理常式可攔截的任何具類型的例外狀況。
 
-使用 **_set_se_translator**時, 您必須使用[/eha](../../build/reference/eh-exception-handling-model.md) 。
+使用 **_set_se_translator**時，您必須使用[/eha](../../build/reference/eh-exception-handling-model.md) 。
 
-若要指定自訂轉譯函式, 請使用轉譯函式的名稱做為其引數來呼叫 **_set_se_translator** 。 您撰寫的 translator 函式會針對堆疊上具有**try**區塊的每個函式呼叫呼叫一次。 沒有預設轉譯器函式。
+若要指定自訂轉譯函式，請使用轉譯函式的名稱做為其引數來呼叫 **_set_se_translator** 。 您撰寫的 translator 函式會針對堆疊上具有**try**區塊的每個函式呼叫呼叫一次。 沒有預設轉譯器函式。
 
 您的轉譯器函式只應該擲回 C++ 類型化例外狀況。 因為轉譯器函式的叫用次數與平台有關，所以如果它還執行擲回以外的作業 (例如，寫入記錄檔)，則程式可能無法如預期運作。
 
@@ -69,9 +72,9 @@ _se_translator_function _set_se_translator(
 typedef void (__cdecl *_se_translator_function)(unsigned int, struct _EXCEPTION_POINTERS* );
 ```
 
-若為 **_set_se_translator**, 則會在動態連結至 CRT 時造成影響;進程中的另一個 DLL 可能會呼叫 **_set_se_translator** , 並將您的處理常式取代為其本身。
+若為 **_set_se_translator**，則會在動態連結至 CRT 時造成影響;進程中的另一個 DLL 可能會呼叫 **_set_se_translator** ，並將您的處理常式取代為其本身。
 
-從 managed 程式碼 (以/clr 編譯的程式碼) 使用 **_set_se_translator**或混合原生和 managed 程式碼時, 請注意轉譯器只會影響機器碼中產生的例外狀況。 Managed 程式碼所產生的任何受管理例外狀況 (例如引發 `System::Exception` 時) 不會透過轉譯器函式進行傳遞。 使用 Win32 函式**RaiseException**或系統例外狀況 (例如零除的例外狀況) 所造成的 managed 程式碼中引發的例外狀況, 會透過翻譯工具進行路由傳送。
+從 managed 程式碼（以/clr 編譯的程式碼）使用 **_set_se_translator**或混合原生和 managed 程式碼時，請注意轉譯器只會影響機器碼中產生的例外狀況。 Managed 程式碼所產生的任何受管理例外狀況 (例如引發 `System::Exception` 時) 不會透過轉譯器函式進行傳遞。 使用 Win32 函式**RaiseException**或系統例外狀況 (例如零除的例外狀況) 所造成的 managed 程式碼中引發的例外狀況, 會透過翻譯工具進行路由傳送。
 
 ## <a name="requirements"></a>需求
 
@@ -156,7 +159,7 @@ Caught a __try exception, error c0000094.
 
 ## <a name="example"></a>範例
 
-雖然 **_set_se_translator**所提供的功能無法在 managed 程式碼中使用, 但還是可以在機器碼中使用這個對應, 即使該機器碼在 **/clr**參數下的編譯中, 只要機器碼為使用`#pragma unmanaged`表示。 如果要對應的 managed 程式碼中擲回結構化例外狀況, 則產生和處理例外狀況的程式碼必須標記`#pragma unmanaged`為。 下列程式碼會示範可能用法。 如需詳細資訊，請參閱 [Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+雖然 **_set_se_translator**所提供的功能無法在 managed 程式碼中使用，但還是可以在機器碼中使用這個對應，即使該機器碼在 **/clr**參數下的編譯中，只要機器碼為使用`#pragma unmanaged`表示。 如果要對應的 managed 程式碼中擲回結構化例外狀況, 則產生和處理例外狀況的程式碼必須標記`#pragma unmanaged`為。 下列程式碼會示範可能用法。 如需詳細資訊，請參閱 [Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ```cpp
 // crt_set_se_translator_clr.cpp

@@ -1,10 +1,10 @@
 ---
 title: _mbctombb、_mbctombb_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbctombb_l
 - _mbctombb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbctombb_l
 - _mbctombb
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b449dfae04f875c819f34422b9a0ae92e2b8a7c2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331593"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952533"
 ---
-# <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
+# <a name="_mbctombb-_mbctombb_l"></a>_mbctombb、_mbctombb_l
 
 將雙位元組的多位元組字元轉換成對應之單一位元組的多位元組字元。
 
@@ -64,15 +67,15 @@ unsigned int _mbctombb_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_mbctombb**並 **_mbctombb_l**傳回對應至單一位元組字元*c*; 否則會傳回*c*.
+如果成功， **_mbctombb**和 **_mbctombb_l**會傳回對應至*c*的單一位元組字元。否則會傳回*c*。
 
 ## <a name="remarks"></a>備註
 
-**_Mbctombb**並 **_mbctombb_l**函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應至單一位元組字元範圍 0x20-0x7E 或 0xA1-0xDF 轉換。
+**_Mbctombb**和 **_mbctombb_l**函式會將指定的多位元組字元轉換成對應的單一位元組多位元組字元。 字元必須對應至0x7E 或 0xA1-0xDF 範圍內的單一位元組字元，才能進行轉換。
 
-輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式，而不需要的版本 **_l**後置詞會針對地區設定相關行為; 使用目前的地區設定的版本 **_l**尾碼是完全相同，不同之處在於它會使用傳入的地區設定參數在 改為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 此函式的版本若沒有 **_l**尾碼，會針對此地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在舊版中， **_mbctombb** odataparameterreader.read **zentohan**。 使用 **_mbctombb**改。
+在先前的版本中， **_mbctombb**稱為**zentohan**。 請改用 **_mbctombb** 。
 
 ## <a name="requirements"></a>需求
 

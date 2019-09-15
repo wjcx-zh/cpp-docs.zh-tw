@@ -1,11 +1,11 @@
 ---
 title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - casinh
 - casinhl
 - casinhf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - casinh
 - casinhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6deec85dc980a7bd421de87349f512564912d98c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340673"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943377"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-擷取複數，而且分支的間隔外部的反雙曲正弦值 [-i，+ i] 在虛數軸。
+抓取複數的反雙曲正弦值，其中分支切割會沿著虛數軸的間隔 [-i，+ i] 以外。
 
 ## <a name="syntax"></a>語法
 
@@ -68,17 +71,17 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>傳回值
 
-反雙曲正弦*z*，以弧度為單位。 結果是未繫結，而且實際軸中，並且在間隔 [-i π/2，+ i π/2] 在虛數軸。
+*Z*的反雙曲正弦值，以弧度為單位。 結果會沿著實際軸解除系結，並且在虛數軸的間隔 [-i π/2，+ i π/2] 中。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**casinh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **casinh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**casinh**的多載。 在 C 程式中， **casinh**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**casinh**， **casinhf**， **casinhl**|\<complex.h>|\<ccomplex>|
+|**casinh**、 **casinhf**、 **casinhl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

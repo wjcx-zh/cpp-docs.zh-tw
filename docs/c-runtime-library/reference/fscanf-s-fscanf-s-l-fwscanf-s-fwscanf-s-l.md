@@ -1,12 +1,12 @@
 ---
 title: fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fwscanf_s
 - _fscanf_s_l
 - _fwscanf_s_l
 - fscanf_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fwscanf_s_l
 - _fscanf_s_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: f9c1686d7e42e0e885a65e153ee4e1ff2be01f27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332919"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956551"
 ---
-# <a name="fscanfs-fscanfsl-fwscanfs-fwscanfsl"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
+# <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l
 
 從資料流讀取格式化資料。 這些版本的 [fscanf、_fscanf_l、fwscanf、_fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -86,7 +89,7 @@ int _fwscanf_s_l(
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -94,20 +97,20 @@ int _fwscanf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **fscanf_s**並**fwscanf_s**。
+所有這些函式都會傳回已成功轉換並指派的欄位數，傳回值不包含已讀取但未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或在第一次轉換之前到達檔案資料流程的結尾，則傳回值為**fscanf_s**和**fwscanf_s**的**EOF** 。
 
-這些函式會驗證它們的參數。 如果*資料流*是無效的檔案指標，或*格式*為 null 指標，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*stream*是不正確檔案指標，或*格式*為 null 指標，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Fscanf_s**函式會從目前位置讀取資料*串流*所指定的位置*引數*（如果有的話）。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf_s**; 請參閱[格式規格欄位：scanf 和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)的說明*格式*。  **fwscanf_s**是寬字元版本的**fscanf_s**; 的格式引數**fwscanf_s**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf_s**目前不支援來自 UNICODE 資料流輸入。
+**Fscanf_s**函數會將資料從*資料流程*的目前位置讀取到*引數*所指定的位置（如果有的話）。 每個*自*變數都必須是類型變數的指標，其對應于*格式*的類型規範。 *format*會控制輸入欄位的轉譯，並具有與**scanf_s**的*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[格式規格欄位： Scanf 和 wscanf 函數](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。  **fwscanf_s**是寬字元版本的**fscanf_s**;**fwscanf_s**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf_s**目前不支援來自 UNICODE 資料流程的輸入。
 
-更安全的函式的主要差異 (具有 **_s**後置詞) 和其他版本中會是更安全的函式需要在每個字元的大小**c**， **C**， **s**， **S**，和 **[** 傳遞做為引數，緊接在變數的 [類型] 欄位。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
+更安全的函式（具有 **_s**尾碼）和其他版本之間的主要差異在於，更安全的函式需要每個**c**、 **c**、 **s**、 **s**和 **[** 類型] 欄位的字元大小緊接在變數之後當做引數傳遞。 如需詳細資訊，請參閱 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) 和 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 
 > [!NOTE]
-> 大小參數的類型是**不帶正負號**，而非**size_t**。
+> Size 參數的類型不是不**帶正負**號，而不是**size_t**。
 
-有這些函式的版本 **_l**尾碼都相同，不同之處在於它們使用傳入的地區設定參數，而不是目前執行緒的地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -118,10 +121,10 @@ int _fwscanf_s_l(
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
-|**fscanf_s**， **_fscanf_s_l**|\<stdio.h>|
-|**fwscanf_s**， **_fwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
+|**fscanf_s**、 **_fscanf_s_l**|\<stdio.h>|
+|**fwscanf_s**、 **_fwscanf_s_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -1,11 +1,11 @@
 ---
 title: _outp、_outpw、_outpd
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _outpd
 - _outp
 - _outpw
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr100.dll
 - msvcr120.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _outpw
 - _outpd
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 1a507f4115a48372706590eb61f9e3e77a0e3548
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752060"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944123"
 ---
-# <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
+# <a name="_outp-_outpw-_outpd"></a>_outp、_outpw、_outpd
 
 從連接埠輸出一個位元組 (`_outp`)、一個字組 (`_outpw`) 或雙字組 (`_outpd`)。
 

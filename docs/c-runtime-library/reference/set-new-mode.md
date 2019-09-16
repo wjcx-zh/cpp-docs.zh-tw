@@ -1,9 +1,9 @@
 ---
 title: _set_new_mode
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_mode
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - set_new_mode
 - _set_new_mode
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b248f1c97b1ec334b7441f33862b90473e08993f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356598"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948447"
 ---
-# <a name="setnewmode"></a>_set_new_mode
+# <a name="_set_new_mode"></a>_set_new_mode
 
-設定新處理常式模式**malloc**。
+設定**malloc**的新處理常式模式。
 
 ## <a name="syntax"></a>語法
 
@@ -44,15 +47,15 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>參數
 
 *newhandlermode*<br/>
-新處理常式模式**malloc**; 有效的值是 0 或 1。
+**Malloc**的新處理常式模式;有效值為0或1。
 
 ## <a name="return-value"></a>傳回值
 
-傳回上一個處理常式的模式組**malloc**。 傳回值 1 表示，無法配置記憶體**malloc**之前稱為 「 新的處理常式模式; 傳回值 0 表示不。 如果*newhandlermode*引數不等於 0 或 1，則會傳回-1。
+傳回先前針對**malloc**所設定的處理常式模式。 傳回值1表示在無法配置記憶體時， **malloc**先前呼叫了新的處理常式常式;傳回值為0時，表示它不是。 如果*newhandlermode*引數不等於0或1，則會傳回-1。
 
 ## <a name="remarks"></a>備註
 
-C++ **_set_new_mode** 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式會指出是否在失敗時， **malloc**就是呼叫所設定的新處理常式[_set_new_handler](set-new-handler.md)。 根據預設， **malloc**不會呼叫新的處理常式無法配置記憶體。 您可以覆寫此預設行為，讓，當**malloc**無法配置記憶體， **malloc**呼叫新的處理常式在相同方式來**新**運算子因當它失敗，相同的原因。 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 運算子。 若要覆寫預設值，請及早在程式中呼叫：
+C++ **_set_new_mode** 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫[_set_new_handler](set-new-handler.md)所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式，其方式會與**新**的運算子在因相同原因而失敗時所執行的相同。 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md) 運算子。 若要覆寫預設值，請及早在程式中呼叫：
 
 ```cpp
 _set_new_mode(1);
@@ -60,7 +63,7 @@ _set_new_mode(1);
 
 ，或使用 Newmode.obj 連結 (請參閱[連結選項](../../c-runtime-library/link-options.md))。
 
-這個函式會驗證其參數。 如果*newhandlermode*不是 0 或 1，此函式會在將無效的參數處理常式中，做為叫用的任何項目中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行<strong>_set_new_mode</strong>會傳回-1 並將**errno**到`EINVAL`。
+這個函式會驗證其參數。 如果*newhandlermode*不是0或1，則函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， <strong>_set_new_mode</strong>會傳回-1，並將**errno**設定`EINVAL`為。
 
 ## <a name="requirements"></a>需求
 

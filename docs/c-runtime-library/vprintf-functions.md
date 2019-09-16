@@ -1,26 +1,29 @@
 ---
 title: vprintf 函式
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr110.dll
 - msvcr120.dll
 - msvcr90.dll
 - msvcr100.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vprintf
 helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: eb8a2829540876936f6c57745fb56e7d19f16394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498881"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957227"
 ---
 # <a name="vprintf-functions"></a>vprintf 函式
 
@@ -41,7 +44,7 @@ ms.locfileid: "69498881"
 
 這些函式會設定要輸出到目的地的資料格式，如下所示。
 
-|功能|對應函式|輸出目的地|參數驗證|位置參數支援|
+|函數|對應函式|輸出目的地|參數驗證|位置參數支援|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
 |`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|
 |`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|主控台|檢查是否 Null。|否|

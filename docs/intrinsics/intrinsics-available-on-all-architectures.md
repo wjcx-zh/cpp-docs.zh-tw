@@ -4,20 +4,20 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 6550c97a8d4efae29318d48ed8cab43b85b135f4
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
+ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217530"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71012241"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>所有架構可用的內建函式
 
-Microsoft C/C++編譯器和通用 C 執行時間程式庫 (UCRT) 會將一些內建函式提供給所有架構。
+Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些內建函式提供給所有架構。
 
 ## <a name="compiler-intrinsics"></a>編譯器內建函式
 
-下列內建函式適用于 x86、AMD64、ARM 和 ARM64 架構:
+下列內建函式適用于 x86、AMD64、ARM 和 ARM64 架構：
 
 |內建|標頭|
 |---------------|------------|
@@ -28,11 +28,50 @@ Microsoft C/C++編譯器和通用 C 執行時間程式庫 (UCRT) 會將一些內
 |[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
 |[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
 |[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
-__code_seg |[__debugbreak](../intrinsics/debugbreak.md)| intrin.h. h | |[_disable](../intrinsics/disable.md)| intrin.h. h | |[_ _](../intrinsics/enable.md)| intrin.h. h | |[__fastfail](../intrinsics/fastfail.md)| intrin.h. h | |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)| intrin.h. h | |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)| intrin.h. h | |[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)| intrin.h. h | |[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)| intrin.h. h | |[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)| intrin.h. h | |[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)| intrin.h. h | |[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)| intrin.h. h | |[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)| intrin.h. h | |[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)| intrin.h. h | |[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)| intrin.h. h | |[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)| intrin.h. h | |[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)| intrin.h. h | |[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)| intrin.h. h | |[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)| intrin.h. h | |[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)| intrin.h. h | |[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)| intrin.h. h | |[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)| intrin.h. h | |[__nop](../intrinsics/nop.md)| intrin.h. h | |[_ReadBarrier](../intrinsics/readbarrier.md)| intrin.h. h | |[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)| intrin.h. h | |[_ReturnAddress](../intrinsics/returnaddress.md)| intrin.h. h | |[_rotl16](../intrinsics/rotl8-rotl16.md)| intrin.h. h | |[_rotl8](../intrinsics/rotl8-rotl16.md)| intrin.h. h | |[_rotr16](../intrinsics/rotr8-rotr16.md)| intrin.h. h | |[_rotr8](../intrinsics/rotr8-rotr16.md)| intrin.h. h | |[_WriteBarrier](../intrinsics/writebarrier.md)| intrin.h. h |
+|__code_seg|intrin.h|
+|[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|
+|[_disable](../intrinsics/disable.md)|intrin.h|
+|[_enable](../intrinsics/enable.md)|intrin.h|
+|[__fastfail](../intrinsics/fastfail.md)|intrin.h|
+|[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
+|[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|
+|[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
+|[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
+|[__nop](../intrinsics/nop.md)|intrin.h|
+|[_ReadBarrier](../intrinsics/readbarrier.md)|intrin.h|
+|[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)|intrin.h|
+|[_ReturnAddress](../intrinsics/returnaddress.md)|intrin.h|
+|[_rotl16](../intrinsics/rotl8-rotl16.md)|intrin.h|
+|[_rotl8](../intrinsics/rotl8-rotl16.md)|intrin.h|
+|[_rotr16](../intrinsics/rotr8-rotr16.md)|intrin.h|
+|[_rotr8](../intrinsics/rotr8-rotr16.md)|intrin.h|
+|[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
 ## <a name="ucrt-intrinsics"></a>UCRT 內建函式
 
-下列 UCRT 函數在所有架構上都有內部形式:
+下列 UCRT 函數在所有架構上都有內部形式：
 
 |內建|標頭|
 |---------------|------------|

@@ -101,7 +101,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453362"
 ---
-# <a name="basicstreambuf-class"></a>basic_streambuf 類別
+# <a name="basic_streambuf-class"></a>basic_streambuf 類別
 
 描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。
 
@@ -122,7 +122,7 @@ class basic_streambuf;
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。 類別`basic_streambuf`的物件有助於控制具有類型*Tr*元素的資料流程 (也稱為[char_type](#char_type)), 其字元特性是由類別[char_traits](../standard-library/char-traits-struct.md)(也稱為[traits_type](#traits_type)) 所決定。
+此範本類別描述抽象的基底類別，用以衍生資料流緩衝區，其控制項目如何傳入或傳出資料流的特定表示。 類別`basic_streambuf`的物件有助於控制具有類型*Tr*元素的資料流程（也稱為[char_type](#char_type)），其字元特性是由類別[char_traits](../standard-library/char-traits-struct.md)（也稱為[traits_type](#traits_type)）所決定。
 
 每個資料流緩衝區在概念上會控制兩個獨立的資料流：一個用於擷取 (輸入)，一個用於插入 (輸出)。 不過，特定的表示法可能使這些資料流之一或兩者無法存取。 它通常會維護兩個資料流之間的某種關聯性。 例如，您插入 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> 物件輸出資料流的內容，即是您稍後從其輸入資料流擷取的內容。 當您定位 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 物件的一個資料流時，您會串聯地定位其他資料流。
 
@@ -160,7 +160,7 @@ class basic_streambuf;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[basic_streambuf](#basic_streambuf)|建構類型 `basic_streambuf` 的物件。|
 
@@ -176,7 +176,7 @@ class basic_streambuf;
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[eback](#eback)|受保護的函式，會傳回輸入緩衝區開頭的指標。|
 |[egptr](#egptr)|受保護的函式，會傳回剛好超過輸入緩衝區結尾的指標。|
@@ -297,7 +297,7 @@ char_type *epptr() const;
 
 ## <a name="gbump"></a>  basic_streambuf::gbump
 
-受保護的函式, 會將*計數*加入至輸入緩衝區的下一個指標。
+受保護的函式，會將*計數*加入至輸入緩衝區的下一個指標。
 
 ```cpp
 void gbump(int count);
@@ -385,7 +385,7 @@ streamsize in_avail();
 
 ### <a name="remarks"></a>備註
 
-如果有[讀取位置](../standard-library/basic-streambuf-class.md)可供使用, 此成員函式會傳回[egptr](#egptr)  -  [gptr](#gptr)。 否則會傳回 [showmanyc](#showmanyc)。
+如果有[讀取位置](../standard-library/basic-streambuf-class.md)可供使用，此成員函式會傳回[egptr](#egptr)  -  [gptr](#gptr)。 否則會傳回 [showmanyc](#showmanyc)。
 
 ### <a name="example"></a>範例
 
@@ -457,7 +457,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>備註
 
-*如果\_Meta*與**traits_type:: eof**比較的結果不相等, 受保護的虛擬成員函式會致力於將元素**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 插入輸出中資料流程. 它可以透過下列各種方式來執行：
+*如果\_Meta*與**traits_type：： eof**比較的結果不相等，受保護的虛擬成員函式會致力於將元素**traits_type：：** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)（ *\_Meta*）插入輸出中資料流程. 它可以透過下列各種方式來執行：
 
 - 如果有`write position`可供使用，它可以將元素儲存在寫入位置，並遞增輸出緩衝區的下一個指標。
 
@@ -492,7 +492,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>備註
 
-*如果\_Meta*與**traits_type:: eof**比較, 則要推回的元素實際上是已在資料流程中目前元素之前的專案。 否則, 該元素會由**traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) 取代。 函式可透過下列各種方式來放回項目：
+*如果\_Meta*與**traits_type：： eof**比較，則要推回的元素實際上是已在資料流程中目前元素之前的專案。 否則，該元素會由**traits_type：：** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)（ *\_Meta*）取代。 函式可透過下列各種方式來放回項目：
 
 - 如果有放回位置可供使用，它可以將元素儲存在放回位置，並遞減輸入緩衝區的下一個指標。
 
@@ -514,7 +514,7 @@ char_type *pbase() const;
 
 ## <a name="pbump"></a>  basic_streambuf::pbump
 
-受保護的函式, 會將*計數*加入至輸出緩衝區的下一個指標。
+受保護的函式，會將*計數*加入至輸出緩衝區的下一個指標。
 
 ```cpp
 void pbump(int count);
@@ -655,7 +655,7 @@ int pubsync();
 
 ### <a name="return-value"></a>傳回值
 
-傳回[同步](#sync), 如果失敗, 則傳回-1。
+傳回[同步](#sync)，如果失敗，則傳回-1。
 
 ## <a name="sbumpc"></a>  basic_streambuf::sbumpc
 
@@ -815,7 +815,7 @@ void setg(char_type* _Gbeg,
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-受保護的函式, 會將 *_Pbeg*儲存在輸出緩衝區的結尾指標和 *_Pend*中。
+受保護的函式，會將 *_Pbeg*儲存在輸出緩衝區的結尾指標和 *_Pend*中。
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -867,7 +867,7 @@ int main( )
 
 ## <a name="sgetn"></a>  basic_streambuf::sgetn
 
-解壓縮以*計算*輸入緩衝區中的字元, 並將它們儲存在所提供的緩衝區*ptr*中。
+解壓縮以*計算*輸入緩衝區中的字元，並將它們儲存在所提供的緩衝區*ptr*中。
 
 此方法有賴於呼叫者檢查傳遞的值是否正確，因此可能不安全。
 
@@ -991,7 +991,7 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="remarks"></a>備註
 
-如果 putback 位置可供使用, 且 *_Ch*比較的結果等於儲存在該位置的字元, 則成員函式會遞減輸入緩衝區的下一個指標, 並傳回**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `_Ch`)。 否則會傳回 [pbackfail](#pbackfail)( `_Ch`)。
+如果 putback 位置可供使用，且 *_Ch*比較的結果等於儲存在該位置的字元，則成員函式會遞減輸入緩衝區的下一個指標，並傳回**traits_type：：** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)（ `_Ch`）。 否則會傳回 [pbackfail](#pbackfail)( `_Ch`)。
 
 ### <a name="example"></a>範例
 
@@ -1039,7 +1039,7 @@ int_type sputc(char_type _Ch);
 
 ### <a name="remarks"></a>備註
 
-`_Ch`如果可以使用, 成員函式 會將_Ch儲存在寫入位置,並遞增輸出緩衝區的下一個指標,並傳回traits_type::to_int_type(`write position` )。  [](../standard-library/char-traits-struct.md#to_int_type) 否則會傳回 [overflow](#overflow)( `_Ch`)。
+`_Ch`如果可以使用，成員函式 會將 *_Ch*儲存在寫入位置，並遞增輸出緩衝區的下一個指標，並傳回traits_type：：[to_int_type](../standard-library/char-traits-struct.md#to_int_type)（`write position` ）。 否則會傳回 [overflow](#overflow)( `_Ch`)。
 
 ### <a name="example"></a>範例
 
@@ -1312,7 +1312,7 @@ virtual streamsize xsgetn(
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會從輸入資料流程中解壓縮專案, 就像是重複呼叫[sbumpc](#sbumpc), 然後將它們儲存在陣列中 (從*ptr*開始*計算*)。 它會傳回實際擷取的元素數目。
+受保護的虛擬成員函式會從輸入資料流程中解壓縮專案，就像是重複呼叫[sbumpc](#sbumpc)，然後將它們儲存在陣列中（從*ptr*開始*計算*）。 它會傳回實際擷取的元素數目。
 
 ## <a name="xsputn"></a>  basic_streambuf::xsputn
 
@@ -1336,7 +1336,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會在輸出資料流程中插入多個專案, 如同從*ptr*開始的陣列中重複呼叫[sputc](#sputc)。 在寫入所有*計數*字元之後, 或呼叫`sputc( count)`會`traits::eof()`傳回時, 將字元插入輸出資料流程中就會停止。 它會傳回實際插入的元素數目。
+受保護的虛擬成員函式會在輸出資料流程中插入多個*專案，如同*從*ptr*開始的陣列中重複呼叫[sputc](#sputc)。 在寫入所有*計數*字元之後，或呼叫`sputc( count)`會`traits::eof()`傳回時，將字元插入輸出資料流程中就會停止。 它會傳回實際插入的元素數目。
 
 ## <a name="see-also"></a>另請參閱
 

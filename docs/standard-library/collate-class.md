@@ -51,7 +51,7 @@ class collate : public locale::facet;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[collate](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
 
@@ -116,15 +116,15 @@ const char* _Locname,
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
 - 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \>1：未定義這些值。
 
-此函式會使用**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基底物件。
+此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
 
 ## <a name="compare"></a>  collate::compare
 
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會將位於 [* first1, Last1) * 的順序與序列 (位於 *[first2, last2*)) 進行比較。 它會`operator<`在類型`CharType`的對應元素配對之間套用, 藉以比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會`operator<`在類型`CharType`的對應元素配對之間套用，藉以比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式[](#do_transform)會傳回`first`do_transform `last`(,)。
+此成員函式會傳回`first`[do_transform](#do_transform) `last`（，）。
 
 ### <a name="example"></a>範例
 

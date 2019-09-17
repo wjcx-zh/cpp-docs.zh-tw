@@ -15,16 +15,16 @@ helpviewer_keywords:
 - cache, ATL cached tear-off objects
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
-ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d993a349d38342bda30a83dfdbe25577953799b3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259673"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497542"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject 類別
 
-這個類別會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)撕下介面。
+這個類別會針對卸載介面來實行[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。
 
 ## <a name="syntax"></a>語法
 
@@ -39,41 +39,41 @@ public CComObjectRootEx<contained
 
 #### <a name="parameters"></a>參數
 
-*包含*<br/>
-您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
+*包容*<br/>
+您的卸載類別，衍生自`CComTearOffObjectBase`和您想要卸載的物件所支援的介面。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|建構函式。|
-|[CComCachedTearOffObject::~CComCachedTearOffObject](#dtor)|解構函式。|
+|[CComCachedTearOffObject：： ~ CComCachedTearOffObject](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CComCachedTearOffObject::AddRef](#addref)|參考計數會遞增`CComCachedTearOffObject`物件。|
-|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|呼叫`m_contained::FinalConstruct`（分割類別的方法）。|
-|[CComCachedTearOffObject::FinalRelease](#finalrelease)|呼叫`m_contained::FinalRelease`（分割類別的方法）。|
-|[CComCachedTearOffObject::QueryInterface](#queryinterface)|將指標傳回至`IUnknown`的`CComCachedTearOffObject`物件，或要求的介面，在分割類別 (類別`contained`)。|
-|[CComCachedTearOffObject::Release](#release)|遞減參考計數的`CComCachedTearOffObject`物件，並終結它，如果參考計數為 0。|
+|[CComCachedTearOffObject::AddRef](#addref)|遞增`CComCachedTearOffObject`物件的參考計數。|
+|[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|`m_contained::FinalConstruct`呼叫（脫離類別的方法）。|
+|[CComCachedTearOffObject::FinalRelease](#finalrelease)|`m_contained::FinalRelease`呼叫（脫離類別的方法）。|
+|[CComCachedTearOffObject::QueryInterface](#queryinterface)|傳回`IUnknown` `CComCachedTearOffObject`物件的指標，或傳回您的卸載類別（類別`contained`）上所要求的介面。|
+|[CComCachedTearOffObject::Release](#release)|遞減`CComCachedTearOffObject`物件的參考計數，如果參考計數為0，則會將它終結。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[CComCachedTearOffObject::m_contained](#m_contained)|A`CComContainedObject`物件衍生自您分割的類別 (類別`contained`)。|
+|[CComCachedTearOffObject::m_contained](#m_contained)|衍生`CComContainedObject`自您的卸載類別（類別`contained`）的物件。|
 
 ## <a name="remarks"></a>備註
 
-`CComCachedTearOffObject` 會實作[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)撕下介面。 此類別與不同`CComTearOffObject`在於`CComCachedTearOffObject`都有它自己`IUnknown`個別擁有者物件的`IUnknown`（擁有者是為其分割所建立的物件）。 `CComCachedTearOffObject` 都會維護它自己在參考計數其`IUnknown`和參考計數為零時之後, 可對本身進行刪除。 不過，如果您針對任何其分割的查詢介面，擁有者物件的參考計數`IUnknown`會遞增。
+`CComCachedTearOffObject`針對卸載介面執行[IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) 。 這個類別與`CComTearOffObject`中的`CComCachedTearOffObject`不同，其本身`IUnknown`與擁有者物件的`IUnknown`不同（擁有者是要建立卸載的物件）。 `CComCachedTearOffObject`會在其`IUnknown`上維護自己的參考計數，並在其參考計數為零時刪除其本身。 不過，如果您查詢其任何卸載介面，則擁有者物件`IUnknown`的參考計數會遞增。
 
-如果`CComCachedTearOffObject`物件實作分割已經具現化，和針對同樣地，相同查詢的分割介面`CComCachedTearOffObject`會重複使用物件。 相反地，如果分割介面來實作`CComTearOffObject`擁有者物件，透過再次查詢的另一個`CComTearOffObject`會具現化。
+如果已具現化執行卸載的`CComCachedTearOffObject` 物件，並且重新查詢卸載介面，則會重複使用相同的物件。`CComCachedTearOffObject` 相反地，如果透過擁有者`CComTearOffObject`物件重新查詢由所執行的卸載介面，則會具現化另一個。 `CComTearOffObject`
 
-擁有者類別必須實作`FinalRelease`並呼叫`Release`上的快取`IUnknown`如`CComCachedTearOffObject`，這將會遞減參考計數。 這會導致`CComCachedTearOffObject`的`FinalRelease`呼叫，並刪除分割。
+Owner `FinalRelease`類別必須`Release` 在快`IUnknown`取的上執行並呼叫，這樣會遞減其參考計數。`CComCachedTearOffObject` 這會導致`CComCachedTearOffObject` `FinalRelease`呼叫，並刪除卸載。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -87,11 +87,11 @@ public CComObjectRootEx<contained
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭：** atlcom.h。h
 
-##  <a name="addref"></a>  CComCachedTearOffObject::AddRef
+##  <a name="addref"></a>CComCachedTearOffObject：： AddRef
 
-參考計數遞增`CComCachedTearOffObject`1 的物件。
+將`CComCachedTearOffObject`物件的參考計數遞增1。
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -99,9 +99,9 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>傳回值
 
-值，這個值可能有助於診斷和測試。
+可能有助於診斷和測試的值。
 
-##  <a name="ccomcachedtearoffobject"></a>  CComCachedTearOffObject::CComCachedTearOffObject
+##  <a name="ccomcachedtearoffobject"></a>CComCachedTearOffObject::CComCachedTearOffObject
 
 建構函式。
 
@@ -112,13 +112,13 @@ CComCachedTearOffObject(void* pv);
 ### <a name="parameters"></a>參數
 
 *pv*<br/>
-[in]指標`IUnknown`的`CComCachedTearOffObject`。
+在`IUnknown` 的`CComCachedTearOffObject`指標。
 
 ### <a name="remarks"></a>備註
 
-初始化`CComContainedObject`成員[m_contained](#m_contained)。
+初始化成員 [m_contained](#m_contained)。`CComContainedObject`
 
-##  <a name="dtor"></a>  CComCachedTearOffObject:: ~ CComCachedTearOffObject
+##  <a name="dtor"></a>CComCachedTearOffObject：： ~ CComCachedTearOffObject
 
 解構函式。
 
@@ -128,11 +128,11 @@ CComCachedTearOffObject(void* pv);
 
 ### <a name="remarks"></a>備註
 
-釋放所有配置的資源並呼叫[FinalRelease](#finalrelease)。
+釋放所有配置的資源，並呼叫[FinalRelease](#finalrelease)。
 
-##  <a name="finalconstruct"></a>  CComCachedTearOffObject::FinalConstruct
+##  <a name="finalconstruct"></a>CComCachedTearOffObject::FinalConstruct
 
-呼叫`m_contained::FinalConstruct`來建立`m_contained`，則`CComContainedObject` <  `contained`> 用來存取您的分割類別所實作的介面的物件。
+呼叫`m_contained::FinalConstruct`以建立`m_contained`，這`CComContainedObject`是< 用來存取您的卸載類別所實作為介面`contained`的 > 物件。
 
 ```
 HRESULT FinalConstruct();
@@ -142,17 +142,17 @@ HRESULT FinalConstruct();
 
 標準的 HRESULT 值。
 
-##  <a name="finalrelease"></a>  CComCachedTearOffObject::FinalRelease
+##  <a name="finalrelease"></a>CComCachedTearOffObject::FinalRelease
 
-呼叫`m_contained::FinalRelease`釋放`m_contained`，則`CComContainedObject` <  `contained`> 物件。
+呼叫`m_contained::FinalRelease` free `m_contained`， `CComContainedObject` >物件。<  `contained`
 
 ```
 void FinalRelease();
 ```
 
-##  <a name="m_contained"></a>  CComCachedTearOffObject::m_contained
+##  <a name="m_contained"></a>CComCachedTearOffObject::m_contained
 
-A [CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)物件衍生自您分割的類別。
+衍生自您的卸載類別的[CComContainedObject](../../atl/reference/ccomcontainedobject-class.md)物件。
 
 ```
 CcomContainedObject <contained> m_contained;
@@ -160,14 +160,14 @@ CcomContainedObject <contained> m_contained;
 
 ### <a name="parameters"></a>參數
 
-*包含*<br/>
-[in]您分割的類別，衍生自`CComTearOffObjectBase`和要分割物件以支援的介面。
+*包容*<br/>
+在您的卸載類別，衍生自`CComTearOffObjectBase`和您想要卸載的物件所支援的介面。
 
 ### <a name="remarks"></a>備註
 
-方法`m_contained`繼承用來透過快取分割物件的存取分割中的介面分割類別`QueryInterface`， `FinalConstruct`，和`FinalRelease`。
+這些方法`m_contained`會透過快取的卸載`QueryInterface`物件、 `FinalConstruct`和`FinalRelease`，用來存取您的卸載類別中的卸載介面。
 
-##  <a name="queryinterface"></a>  CComCachedTearOffObject::QueryInterface
+##  <a name="queryinterface"></a>CComCachedTearOffObject：： QueryInterface
 
 擷取所要求介面的指標。
 
@@ -178,10 +178,10 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 ### <a name="parameters"></a>參數
 
 *iid*<br/>
-[in]所要求介面的 GUID。
+在所要求之介面的 GUID。
 
 *ppvObject*<br/>
-[out]所識別之介面指標的指標*iid*，或如果找不到介面則為 NULL。
+脫銷*Iid*所識別之介面指標的指標，如果找不到介面，則為 Null。
 
 ### <a name="return-value"></a>傳回值
 
@@ -189,11 +189,11 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="remarks"></a>備註
 
-要求的介面是否`IUnknown`，將指標傳回至`CComCachedTearOffObject`的自己`IUnknown`並遞增參考計數。 否則，查詢上撕下類別使用的介面[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法繼承自`CComObjectRootEx`。
+如果要求的介面是`IUnknown`，會傳回本身`IUnknown`的指標`CComCachedTearOffObject`，並遞增參考計數。 否則，會使用繼承自`CComObjectRootEx`的[InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)方法，來查詢您的卸載類別上的介面。
 
-##  <a name="release"></a>  CComCachedTearOffObject::Release
+##  <a name="release"></a>CComCachedTearOffObject：： Release
 
-遞減參考計數加 1，如果參考計數為 0，會刪除`CComCachedTearOffObject`物件。
+將參考計數遞減1，如果參考計數為0，則刪除`CComCachedTearOffObject`物件。
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -201,10 +201,10 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>傳回值
 
-在非偵錯組建中，一律會傳回 0。 在偵錯組建中，傳回值，可能有助於診斷或測試。
+在非 debug 組建中，一律會傳回0。 在 [偵錯工具] 組建中，傳回可能有助於診斷或測試的值。
 
 ## <a name="see-also"></a>另請參閱
 
 [CComTearOffObject 類別](../../atl/reference/ccomtearoffobject-class.md)<br/>
 [CComObjectRootEx 類別](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

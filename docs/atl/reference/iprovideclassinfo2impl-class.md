@@ -1,5 +1,5 @@
 ---
-title: IProvideClassInfo2Impl Class
+title: IProvideClassInfo2Impl 類別
 ms.date: 11/04/2016
 f1_keywords:
 - IProvideClassInfo2Impl
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - IProvideClassInfo2 ATL implementation
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
-ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0ff3607002d32b4e21f7fc2199cc5da3662af8b
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276038"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495533"
 ---
-# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl Class
+# <a name="iprovideclassinfo2impl-class"></a>IProvideClassInfo2Impl 類別
 
-這個類別提供的預設實作[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)並[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)方法。
+這個類別會提供[IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)和[iprovideclassinfo2.getguid](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2)方法的預設執行。
 
 ## <a name="syntax"></a>語法
 
@@ -38,13 +38,13 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 #### <a name="parameters"></a>參數
 
 *pcoclsid*<br/>
-Coclass 的識別項的指標。
+Coclass 識別碼的指標。
 
 *psrcid*<br/>
-Coclass' 預設的傳出 dispinterface 的識別碼指標。
+Coclass 的預設外送分配介面識別碼指標。
 
 *plibid*<br/>
-指標，包含介面的相關資訊的類型程式庫的 LIBID。 根據預設，會傳遞伺服器層級類型程式庫。
+類型程式庫之 LIBID 的指標，其中包含介面的相關資訊。 根據預設，會傳遞伺服器層級類型程式庫。
 
 *wMajor*<br/>
 類型程式庫的主要版本。 預設值為 1。
@@ -53,13 +53,13 @@ Coclass' 預設的傳出 dispinterface 的識別碼指標。
 類型程式庫的次要版本。 預設值為 0。
 
 *tihclass*<br/>
-用來管理 coclass 的型別資訊的類別。 預設值為 `CComTypeInfoHolder`。
+用來管理 coclass 類型資訊的類別。 預設值為 `CComTypeInfoHolder`。
 
 ## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|建構函式。|
 
@@ -67,20 +67,20 @@ Coclass' 預設的傳出 dispinterface 的識別碼指標。
 
 |名稱|描述|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|擷取`ITypeInfo`coclass 的型別資訊的指標。|
-|[IProvideClassInfo2Impl::GetGUID](#getguid)|擷取物件的外寄的分配介面的 GUID。|
+|[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|抓取 coclass 類型資訊的指標。`ITypeInfo`|
+|[IProvideClassInfo2Impl::GetGUID](#getguid)|抓取物件之傳出分配介面的 GUID。|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[IProvideClassInfo2Impl::_tih](#_tih)|管理 coclass 的型別資訊。|
+|[IProvideClassInfo2Impl::_tih](#_tih)|管理 coclass 的類型資訊。|
 
 ## <a name="remarks"></a>備註
 
-[IProvideClassInfo2](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo2)介面會擴充[IProvideClassInfo](/windows/desktop/api/ocidl/nn-ocidl-iprovideclassinfo)加`GetGUID`方法。 這個方法可讓用戶端擷取物件的輸出介面 IID，其預設事件集。 類別`IProvideClassInfo2Impl`提供的預設實作`IProvideClassInfo`和`IProvideClassInfo2`方法。
+[Iprovideclassinfo2](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo2).getguid介面會藉 `GetGUID`由新增方法來擴充 [IProvideClassInfo](/windows/win32/api/ocidl/nn-ocidl-iprovideclassinfo)。 這個方法可讓用戶端抓取物件的輸出介面 IID，以取得其預設事件集。 類別`IProvideClassInfo2Impl`提供`IProvideClassInfo`和方法的預設執行。`IProvideClassInfo2`
 
-`IProvideClassInfo2Impl` 包含類型的靜態成員`CComTypeInfoHolder`管理 coclass 的型別資訊。
+`IProvideClassInfo2Impl`包含類型`CComTypeInfoHolder`的靜態成員，它會管理 coclass 的類型資訊。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -90,11 +90,11 @@ Coclass' 預設的傳出 dispinterface 的識別碼指標。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭：** atlcom.h。h
 
-##  <a name="getclassinfo"></a>  IProvideClassInfo2Impl::GetClassInfo
+##  <a name="getclassinfo"></a>IProvideClassInfo2Impl::GetClassInfo
 
-擷取`ITypeInfo`coclass 的型別資訊的指標。
+抓取 coclass 類型資訊的指標。`ITypeInfo`
 
 ```
 STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
@@ -102,11 +102,11 @@ STDMETHOD(GetClassInfo)(ITypeInfo** pptinfo);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IProvideClassInfo::GetClassInfo](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) Windows SDK 中。
+請參閱 Windows SDK 中的[IProvideClassInfo：： GetClassInfo](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo-getclassinfo) 。
 
-##  <a name="getguid"></a>  IProvideClassInfo2Impl::GetGUID
+##  <a name="getguid"></a>IProvideClassInfo2Impl：： GetGUID
 
-擷取物件的外寄的分配介面的 GUID。
+抓取物件之傳出分配介面的 GUID。
 
 ```
 STDMETHOD(GetGUID)(
@@ -116,9 +116,9 @@ STDMETHOD(GetGUID)(
 
 ### <a name="remarks"></a>備註
 
-請參閱[IProvideClassInfo2::GetGUID](/windows/desktop/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) Windows SDK 中。
+請參閱 Windows SDK 中的[iprovideclassinfo2.getguid：： GetGUID](/windows/win32/api/ocidl/nf-ocidl-iprovideclassinfo2-getguid) 。
 
-##  <a name="iprovideclassinfo2impl"></a>  IProvideClassInfo2Impl::IProvideClassInfo2Impl
+##  <a name="iprovideclassinfo2impl"></a>IProvideClassInfo2Impl::IProvideClassInfo2Impl
 
 建構函式。
 
@@ -128,11 +128,11 @@ IProvideClassInfo2Impl();
 
 ### <a name="remarks"></a>備註
 
-呼叫`AddRef`上[_tih](#_tih)成員。 此解構函式會呼叫 `Release`。
+在`AddRef` [_tih](#_tih)成員上呼叫。 此解構函式會呼叫 `Release`。
 
-##  <a name="_tih"></a>  IProvideClassInfo2Impl::_tih
+##  <a name="_tih"></a>IProvideClassInfo2Impl::_tih
 
-這個靜態資料成員是類別範本參數的執行個體*tihclass*，其預設值是`CComTypeInfoHolder`。
+這個靜態資料成員是類別樣板參數*tihclass*的實例，預設為`CComTypeInfoHolder`。
 
 ```
 static  tihclass
@@ -141,8 +141,8 @@ static  tihclass
 
 ### <a name="remarks"></a>備註
 
-`_tih` 管理 coclass 的型別資訊。
+`_tih`管理 coclass 的類型資訊。
 
 ## <a name="see-also"></a>另請參閱
 
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

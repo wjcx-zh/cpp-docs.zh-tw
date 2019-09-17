@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>備註
 
-每個函式都會多載 `operator+`，來串連樣板類別 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 全部有效地`basic_string< CharType, Traits, Allocator>(Left).append(right)`傳回。 如需詳細資訊, 請參閱[append](../standard-library/basic-string-class.md#append)。
+每個函式都會多載 `operator+`，來串連樣板類別 [basic_string 類別](../standard-library/basic-string-class.md)的兩個物件。 全部有效地`basic_string< CharType, Traits, Allocator>(Left).append(right)`傳回。 如需詳細資訊，請參閱[append](../standard-library/basic-string-class.md#append)。
 
 ### <a name="example"></a>範例
 
@@ -804,13 +804,13 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="return-value"></a>傳回值
 
-從 *_Istr*讀取指定字串的值, 並將它傳回*right*。
+從 *_Istr*讀取指定字串的值，並將它傳回*right*。
 
 ### <a name="remarks"></a>備註
 
 除非設定了 `skipws` 旗標，否則運算子會略過開頭的空白字元。 它會讀取後續所有字元，直到下一個字元是空白字元或到達檔案結尾為止。
 
-樣板函式多載**運算子 > >** , 以從資料流程 *_Istr*中解壓縮的專案序列取代*right*所控制的序列。 擷取停止：
+樣板函式多載**運算子 > >** ，以從資料流程 *_Istr*中解壓縮的專案序列取代*right*所控制的序列。 擷取停止：
 
 - 到達檔案結尾時。
 
@@ -820,7 +820,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 - 在函式擷取項目 *ch* 之後 (其 [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) 為 true)，會將字元放回去。
 
-如果函式未解壓縮任何元素, 則[](../standard-library/basic-ios-class.md#setstate)會呼叫`ios_base::failbit`setstate ()。 在任何情況下，它會呼叫 **istr**. **width**(0)，並傳回 \* **this**。
+如果函式未解壓縮任何元素，則會呼叫`ios_base::failbit`[setstate](../standard-library/basic-ios-class.md#setstate)（）。 在任何情況下，它會呼叫 **istr**. **width**(0)，並傳回 \* **this**。
 
 ### <a name="example"></a>範例
 

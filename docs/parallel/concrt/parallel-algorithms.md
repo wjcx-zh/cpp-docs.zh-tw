@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: c2d41ccdb8d70095f00cd18508fdff2b78392696
+ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346344"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69631564"
 ---
 # <a name="parallel-algorithms"></a>平行演算法
 
-平行模式程式庫 (PPL) 提供同時資料集合執行工作的演算法。 這些演算法類似於所提供的C++標準程式庫。
+平行模式程式庫（PPL）提供在資料集合上同時執行工作的演算法。 這些演算法與C++標準程式庫所提供的演算法相似。
 
-平行演算法所組成的並行執行階段中的現有功能。 例如， [concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法會使用[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件，以執行平行迴圈反覆項目。 `parallel_for`提供可用的運算資源的數目以最佳方式運作的演算法的資料分割。
+平行演算法是由並行執行階段中的現有功能所組成。 例如， [concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法會使用[concurrency：： structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件來執行平行迴圈反覆運算。 `parallel_for`演算法資料分割會以最佳方式來運作，並提供可用的計算資源數目。
 
 ##  <a name="top"></a> 章節
 
@@ -31,94 +31,94 @@ ms.locfileid: "64346344"
 
     - [Parallel_reduce 演算法](#parallel_reduce)
 
-    - [例如：執行撰寫對應和歸納以平行方式](#map_reduce_example)
+    - [例如：以平行方式執行對應和縮減](#map_reduce_example)
 
-- [資料分割的運作](#partitions)
+- [分割工作](#partitions)
 
 - [平行排序](#parallel_sorting)
 
     - [選擇排序演算法](#choose_sort)
 
-##  <a name="parallel_for"></a> Parallel_for 演算法
+##  <a name="parallel_for"></a>Parallel_for 演算法
 
-[Concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法以平行方式重複執行相同的工作。 每個工作是由反覆項目值的參數化。 此演算法是很有用，就不會共用該迴圈的反覆項目間的資源迴圈主體。
+[Concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法會重複地平行執行相同的工作。 這些工作都是以反復專案值來參數化。 當您的迴圈主體不會在該迴圈的反復專案之間共用資源時，此演算法會很有用。
 
-`parallel_for`演算法以平行執行的最佳方式分割工作。 它會使用工作竊取演算法和竊取工作負載不平衡時，將這些分割區之間取得平衡的範圍。 當一個迴圈的反覆項目以合作方式封鎖時，執行階段轉散發反覆項目的範圍，顯示指派給其他執行緒或處理器目前的執行緒。 同樣地，當執行緒完成一連串的反覆項目，則執行階段轉散發來自其他執行緒對該執行緒的工作。 `parallel_for`演算法也支援*巢狀平行處理原則*。 當某個平行迴圈包含另一個平行迴圈時，執行階段會協調處理資源之間的迴圈內文，以有效率的方式進行平行執行。
+演算法`parallel_for`會以最佳方式分割工作以進行平行執行。 當工作負載不平衡時，它會使用工作竊取演算法和範圍竊取來平衡這些資料分割。 當一個迴圈反復專案以合作方式封鎖時，執行時間會將指派給目前線程的反復專案範圍，轉散發到其他執行緒或處理器。 同樣地，當執行緒完成某個範圍的反復專案時，執行時間會將其他執行緒的工作轉散發至該執行緒。 演算法也支援嵌套的平行處理原則。 `parallel_for` 當一個平行迴圈包含另一個平行迴圈時，執行時間會以有效率的方式協調迴圈主體之間的處理資源，以進行平行執行。
 
-`parallel_for`演算法有數個多載的版本。 開始值，結束值，並將工作函式 （lambda 運算式、 函式物件或函式指標），則會採用第一個版本。 第二個版本會以開始值、 結束值、 值的步驟中，並將工作函式。 此函式的第一個版本做間距值為 1。 剩餘的版本採取 partitioner 物件，可讓您指定如何`parallel_for`應該分割在執行緒之間的範圍。 一節中的更詳細地說明 partitioner[分割工作](#partitions)本文件中。
+此`parallel_for`演算法有數個多載版本。 第一個版本採用起始值、結束值和工作函式（lambda 運算式、函數物件或函式指標）。 第二個版本採用起始值、結束值、要逐步執行的值，以及工作函數。 此函式的第一個版本會使用1作為步驟值。 其餘的版本會採用「分割區」物件，可讓`parallel_for`您指定如何線上程之間分割範圍。 本檔的[分割工作](#partitions)一節中會更詳細地說明 partitioner。
 
-您可以將許多轉換`for`迴圈，以使用`parallel_for`。 不過，`parallel_for`演算法不同於`for`如下的陳述式：
+您可以轉換許多`for`迴圈來使用`parallel_for`。 不過， `parallel_for`此演算法與`for`語句有下列不同之處：
 
-- `parallel_for`演算法`parallel_for`不會以預先決定的順序執行的工作。
+- `parallel_for` 演算法`parallel_for`不會以預先決定的順序來執行工作。
 
-- `parallel_for`演算法不支援任意的終止條件。 `parallel_for`反覆運算變數的目前值是其中之一時，演算法就會停止小於`last`。
+- `parallel_for`演算法不支援任意終止條件。 當`parallel_for`反覆運算變數目前的值`last`小於時，此演算法就會停止。
 
-- `_Index_type`型別參數必須是整數類資料類型。 此整數類資料類型可以是帶正負號或不帶正負號。
+- `_Index_type`型別參數必須是整數類資料型別。 這個整數型別可以是帶正負號或不帶正負號的。
 
-- 迴圈的反覆項目必須是正向。 `parallel_for`演算法會擲回的例外狀況型別的[std::invalid_argument](../../standard-library/invalid-argument-class.md)如果`_Step`參數設為小於 1。
+- 迴圈反復專案必須是轉寄的。 如果參數小於1， 演算法就會擲回[std：：invalid_argument](../../standard-library/invalid-argument-class.md)類型的例外`parallel_for` `_Step`狀況。
 
-- 例外狀況處理機制`parallel_for`演算法不同於`for`迴圈。 如果平行迴圈主體中同時發生多個例外狀況，執行階段會傳播至呼叫執行緒的例外狀況的其中之一`parallel_for`。 此外，當一個迴圈的反覆項目擲回例外狀況，執行階段不會立即停止整體的迴圈。 相反地，迴圈會置於已取消的狀態和執行階段會捨棄任何尚未開始的工作。 如需有關例外狀況處理和平行演算法的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
+- `parallel_for`演算法的例外狀況處理機制與`for`迴圈的不同。 如果平行迴圈主體同時發生多個例外狀況，執行時間只會將其中一個例外狀況傳播至呼叫`parallel_for`的執行緒。 此外，當一個迴圈反覆運算擲回例外狀況時，執行時間不會立即停止整體迴圈。 相反地，迴圈會放在已取消的狀態，而執行時間會捨棄尚未啟動的任何工作。 如需例外狀況處理和平行演算法的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
-雖然`parallel_for`演算法不支援任意的終止條件，您可以使用取消來停止所有工作。 如需有關取消的詳細資訊，請參閱 < [PPL 中的取消](cancellation-in-the-ppl.md)。
+雖然此`parallel_for`演算法不支援任意終止條件，但您可以使用取消來停止所有工作。 如需取消的詳細資訊，請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。
 
 > [!NOTE]
->  排程的成本，從負載平衡和支援的功能，例如取消作業的結果可能不會克服以平行方式執行迴圈主體的優點，特別是當迴圈主體是相對較小。 在平行迴圈中使用 partitioner，即可減少這項負擔。 如需詳細資訊，請參閱 <<c0> [ 分割工作](#partitions)本文件稍後的。
+>  負載平衡和功能支援（例如取消）所產生的排程成本，可能無法克服平行執行迴圈主體的優點，特別是當迴圈主體相對較小時。 您可以使用平行迴圈中的「分割器」，將此額外負荷降到最低。 如需詳細資訊，請參閱本檔稍後的[分割區工作](#partitions)。
 
 ### <a name="example"></a>範例
 
-下列範例示範的基本結構`parallel_for`演算法。 此範例會列印至主控台的範圍 [1，5]，以平行方式在每個值。
+下列範例顯示`parallel_for`演算法的基本結構。 這個範例會以平行方式，將範圍 [1，5] 中的每個值列印到主控台。
 
 [!code-cpp[concrt-parallel-for-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_1.cpp)]
 
-此範例會產生下列的範例輸出：
+這個範例會產生下列範例輸出：
 
 ```Output
 1 2 4 3 5
 ```
 
-因為`parallel_for`每個項目，以平行方式處理演算法，可能會不同值列印至主控台的順序。
+`parallel_for`因為演算法會平行處理每個專案，所以這些值列印到主控台的順序會有所不同。
 
-如需使用的完整範例`parallel_for`演算法，請參閱[How to:撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
+如需使用`parallel_for`演算法的完整範例，請參閱[如何：撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)。
 
 [[靠上](#top)]
 
-##  <a name="parallel_for_each"></a> Parallel_for_each 演算法
+##  <a name="parallel_for_each"></a>Parallel_for_each 演算法
 
-[Concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法執行的工作反覆執行的容器，例如所提供的C++標準程式庫，以平行方式。 它會使用相同的資料分割邏輯的`parallel_for`演算法使用。
+[Concurrency：:p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法會在反復的容器上執行工作，例如C++標準程式庫所提供的平行處理。 它會使用`parallel_for`演算法所使用的相同分割邏輯。
 
-`parallel_for_each`演算法類似於C++標準程式庫[std:: for_each](../../standard-library/algorithm-functions.md#for_each)演算法，不同之處在於`parallel_for_each`演算法同時執行的工作。 像其他平行演算法，`parallel_for_each`不會以特定順序執行的工作。
+演算法類似C++標準程式庫[std：： for_each](../../standard-library/algorithm-functions.md#for_each)演算法，不同之處在于`parallel_for_each`演算法會同時執行這些工作。 `parallel_for_each` 就像其他平行演算法`parallel_for_each`一樣，並不會依特定循序執行工作。
 
-雖然`parallel_for_each`演算法適用於正向迭代器和隨機存取迭代器，它執行得更好的隨機存取迭代器。
+`parallel_for_each`雖然演算法適用于正向反覆運算器和隨機存取反覆運算器，但它的執行效果優於隨機存取反覆運算器。
 
 ### <a name="example"></a>範例
 
-下列範例示範的基本結構`parallel_for_each`演算法。 此範例會列印到主控台中的每個值[std:: array](../../standard-library/array-class-stl.md)以平行方式的物件。
+下列範例顯示`parallel_for_each`演算法的基本結構。 這個範例會以平行方式將[std：： array](../../standard-library/array-class-stl.md)物件中的每個值列印到主控台。
 
 [!code-cpp[concrt-parallel-for-each-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_2.cpp)]
 
-此範例會產生下列的範例輸出：
+這個範例會產生下列範例輸出：
 
 ```Output
 4 5 1 2 3
 ```
 
-因為`parallel_for_each`每個項目，以平行方式處理演算法，可能會不同值列印至主控台的順序。
+`parallel_for_each`因為演算法會平行處理每個專案，所以這些值列印到主控台的順序會有所不同。
 
-如需使用的完整範例`parallel_for_each`演算法，請參閱[How to:撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
+如需使用`parallel_for_each`演算法的完整範例，請參閱[如何：撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)。
 
 [[靠上](#top)]
 
-##  <a name="parallel_invoke"></a> Parallel_invoke 演算法
+##  <a name="parallel_invoke"></a>Parallel_invoke 演算法
 
-[Concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法以平行方式執行一組工作。 它不會傳回每個工作完成為止。 當您有數個您想要在同一時間執行的獨立工作時，此演算法為有用的。
+[Concurrency：:p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法會平行執行一組工作。 在每個工作完成之前，它不會傳回。 當您有多個想要同時執行的獨立工作時，此演算法會很有用。
 
-`parallel_invoke`演算法會做為其參數一系列的工作函式 （lambda 函式、 函式物件或函式指標）。 `parallel_invoke`演算法會多載需要二至十個參數。 您傳遞給每個函式`parallel_invoke`必須接受零個參數。
+`parallel_invoke`演算法會採用一系列的工作函式（lambda 函式、函式物件或函式指標）做為其參數。 `parallel_invoke`演算法會多載以接受兩個到十個參數。 您傳遞給`parallel_invoke`的每個函式都必須接受零個參數。
 
-像其他平行演算法，`parallel_invoke`不會以特定順序執行的工作。 本主題[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)解釋如何`parallel_invoke`演算法與相關工作和工作群組。
+就像其他平行演算法`parallel_invoke`一樣，並不會依特定循序執行工作。 「工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則」主題`parallel_invoke`會說明演算法與工作和工作組的關聯性。
 
 ### <a name="example"></a>範例
 
-下列範例示範的基本結構`parallel_invoke`演算法。 這個範例會同時呼叫`twice`三個本機變數的函式，並列印到主控台的結果。
+下列範例顯示`parallel_invoke`演算法的基本結構。 這個範例會在三`twice`個區域變數上同時呼叫函式，並將結果列印至主控台。
 
 [!code-cpp[concrt-parallel-invoke-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_3.cpp)]
 
@@ -128,184 +128,184 @@ ms.locfileid: "64346344"
 108 11.2 HelloHello
 ```
 
-如需使用的完整範例`parallel_invoke`演算法，請參閱[How to:使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[How to:使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
+如需使用`parallel_invoke`演算法的完整範例，請[參閱如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)和[如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
 
 [[靠上](#top)]
 
-##  <a name="parallel_transform_reduce"></a> Parallel_transform 和 parallel_reduce 演算法
+##  <a name="parallel_transform_reduce"></a>Parallel_transform 和 parallel_reduce 演算法
 
-[Concurrency:: parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)並[concurrency:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法會平行版本的C++標準程式庫演算法[std::transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)分別。 並行執行階段版本行為類似C++標準程式庫版本不同之處在於的作業順序不會決定，因為它們，以平行方式執行。 當您使用夠大，無法取得效能和延展性好處，從平行處理一組時，請使用這些演算法。
+[Concurrency：:p arallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)和[concurrency：:p arallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)演算法分別C++是標準程式庫演算法[std：： transform](../../standard-library/algorithm-functions.md#transform)和[std：：累加](../../standard-library/numeric-functions.md#accumulate)的平行版本。 並行執行階段版本的行為與C++標準程式庫版本相似，不同之處在于不會判斷作業順序，因為它們會以平行方式執行。 當您使用的集合夠大，可讓您以平行方式處理效能和擴充性優勢時，請使用這些演算法。
 
 > [!IMPORTANT]
->  `parallel_transform`和`parallel_reduce`演算法支援的只有隨機存取，雙向，和正向迭代器，因為這些迭代器會產生穩定的記憶體位址。 此外，這些迭代器都必須產生非`const`左值。
+>  `parallel_transform` 和`parallel_reduce`演算法僅支援隨機存取、雙向和正向反覆運算器，因為這些反覆運算器會產生穩定的記憶體位址。 此外，這些反覆運算器必須產生非`const`左值。
 
-###  <a name="parallel_transform"></a> Parallel_transform 演算法
+###  <a name="parallel_transform"></a>Parallel_transform 演算法
 
 您可以使用`parallel transform`演算法來執行許多資料平行處理作業。 例如，您可以：
 
-- 調整亮度的映像，並執行其他映像處理作業。
+- 調整影像的亮度，並執行其他影像處理作業。
 
-- 加總或需要兩個向量之間的內積，並在向量上執行其他數字的計算。
+- 加總或採用兩個向量之間的點積，並對向量執行其他數值計算。
 
-- 執行 3d 的光跡追蹤，其中每個反覆項目指的是一個必須轉譯的像素。
+- 執行3-d 光線追蹤，其中每個反復專案都會參考一個必須轉譯的圖元。
 
-下列範例示範用來呼叫的基本結構`parallel_transform`演算法。 此範例中變換正負號的每個元素的 std::[向量](../../standard-library/vector-class.md)兩種方式的物件。 第一種方法使用 lambda 運算式。 第二種方式使用[std::negate](../../standard-library/negate-struct.md)，其衍生自[std::unary_function](../../standard-library/unary-function-struct.md)。
+下列範例顯示用來呼叫`parallel_transform`演算法的基本結構。 這個範例會以兩種方式否定 std：：[vector](../../standard-library/vector-class.md)物件的每個元素。 第一種方式是使用 lambda 運算式。 第二種方式使用[std：：否定](../../standard-library/negate-struct.md)，其衍生自[std：： unary_function](../../standard-library/unary-function-struct.md)。
 
 [!code-cpp[concrt-basic-parallel-transform#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_4.cpp)]
 
 > [!WARNING]
->  此範例示範的基本用法`parallel_transform`。 工作函式不會執行大量的工作，因為此範例中不應該大幅提升效能。
+>  這個範例示範的基本用法`parallel_transform`。 由於工作函式不會執行大量的工作，因此在此範例中，不需要大幅增加效能。
 
-`parallel_transform`演算法都有兩個多載。 第一個多載會採用一個輸入的範圍和一元函式。 一元函式可以是 lambda 運算式，會採用一個引數，函式物件或衍生自類型`unary_function`。 第二個多載會採用兩個輸入的範圍和二元函式。 將二元函式可以是 lambda 運算式使用兩個引數，函式物件，或是衍生自類型[std::binary_function](../../standard-library/binary-function-struct.md)。 下列範例會說明這些差異。
+此`parallel_transform`演算法有兩個多載。 第一個多載會採用一個輸入範圍和一元函數。 一元函式可以是採用一個引數、函式物件或衍生自之`unary_function`類型的 lambda 運算式。 第二個多載接受兩個輸入範圍和一個二元函數。 二元函式可以是接受兩個引數的 lambda 運算式、函式物件或衍生自[std：： binary_function](../../standard-library/binary-function-struct.md)的類型。 下列範例說明這些差異。
 
 [!code-cpp[concrt-parallel-transform-vectors#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_5.cpp)]
 
 > [!IMPORTANT]
->  您提供的輸出迭代器`parallel_transform`必須完全重疊的輸入迭代器，或完全不會重疊。 如果部分重疊的輸入和輸出迭代器，此演算法的行為是未指定。
+>  您為的輸出`parallel_transform`提供的反覆運算器必須完全重迭輸入反覆運算器，否則根本不會重迭。 如果輸入和輸出反覆運算器部分重迭，則不會指定此演算法的行為。
 
-###  <a name="parallel_reduce"></a> Parallel_reduce 演算法
+###  <a name="parallel_reduce"></a>Parallel_reduce 演算法
 
-`parallel_reduce`演算法是很有用，當您有一系列符合關聯屬性的作業。 （此演算法不需要具備交換本質）。以下是一些您可以使用執行的作業`parallel_reduce`:
+當`parallel_reduce`您有一系列滿足關聯屬性的作業時，演算法會很有用。 （此演算法不需要交換屬性。）以下是一些您可以使用`parallel_reduce`執行的作業：
 
-- 相乘的矩陣，以產生矩陣中的序列。
+- 將矩陣序列相乘以產生矩陣。
 
-- 向量乘以矩陣，以產生向量的序列。
+- 將向量乘以一系列矩陣以產生向量。
 
-- 計算一系列的字串的長度。
+- 計算字串序列的長度。
 
-- 將項目，例如字串、 清單結合成一個項目中。
+- 將元素清單（例如字串）合併成一個元素。
 
-下列基本範例示範如何使用`parallel_reduce`演算法結合成一個字串序列的字串。 如同範例`parallel_transform`，效能提升不應在此基本範例。
+下列基本範例示範如何使用`parallel_reduce`演算法，將一連串的字串結合成一個字串。 如同的範例`parallel_transform`，在此基本範例中，不需要效能提升。
 
 [!code-cpp[concrt-basic-parallel-reduce#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_6.cpp)]
 
-在許多情況下，您可以將`parallel_reduce`使用的簡略形式`parallel_for_each`搭配使用的演算法[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別。
+在許多情況下，您可以`parallel_reduce`將視為使用`parallel_for_each`演算法的速記與[concurrency：：組合](../../parallel/concrt/reference/combinable-class.md)類別。
 
-###  <a name="map_reduce_example"></a> 範例：執行撰寫對應和歸納以平行方式
+###  <a name="map_reduce_example"></a>實例以平行方式執行對應和縮減
 
-A*地圖*作業函式套用至序列中每個值。 A*減少*作業結合成單一值序列的元素。 您可以使用C++標準程式庫[std:: transform](../../standard-library/algorithm-functions.md#transform)並[std:: accumulate](../../standard-library/numeric-functions.md#accumulate)函式來執行對應和縮減作業。 不過，對於許多的問題，您可以使用`parallel_transform`演算法以平行方式執行 「 對應 」 作業和`parallel_reduce`演算法以平行方式執行縮減作業。
+*對應*作業會將函式套用至序列中的每個值。 「*減少*」作業會將序列的元素結合成一個值。 您可以使用C++標準程式庫[std：： transform](../../standard-library/algorithm-functions.md#transform)和[std：：累積](../../standard-library/numeric-functions.md#accumulate)函數來執行對應和縮減作業。 不過，對於許多問題，您可以使用`parallel_transform`演算法以平行方式執行對應作業`parallel_reduce` ，而演算法會平行執行「縮小」作業。
 
-下列範例會比較循序和平行計算質數的數字的總和所花費的時間。 對應階段轉換非質數值 0，並減少階段總和的值。
+下列範例會比較以順序和平行方式計算質數總和所花費的時間。 [對應] 階段會將非質數值轉換為0，而 [縮減] 階段會加總這些值。
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-如需其他範例，會執行對應，並減少作業以平行方式，請參閱[How to:執行對應和縮減作業以平行方式](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)。
+如需以平行方式執行對應並減少作業的另一個範例[，請參閱如何：以平行](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)方式執行對應和縮減作業。
 
 [[靠上](#top)]
 
-##  <a name="partitions"></a> 資料分割的運作
+##  <a name="partitions"></a>分割工作
 
-若要平行處理資料來源上的作業，必要的步驟是*分割區*成可由多個執行緒並行存取的多個區段的來源。 Partitioner 會指定平行處理演算法應該列印文件的分割，請在執行緒之間的範圍。 如本文件先前所述，PPL 會使用資料分割機制，會建立初始的工作負載，並接著會使用工作竊取演算法及範圍竊取工作負載不平衡時，將這些分割區之間取得平衡的預設值。 例如，一個迴圈的反覆項目完成時的反覆項目範圍，執行階段會轉散發來自其他執行緒對該執行緒的工作。 不過，某些情況下，您可能想要指定不同的資料分割機制，比較適合您的問題。
+若要在資料來源上平行處理作業，重要的步驟是將*來源分割成*多個區段，讓多個執行緒可以同時存取。 「分割區」（partition）會指定平行演算法應該如何分割線程之間的範圍。 如本檔先前所述，PPL 會使用預設的分割機制來建立初始工作負載，然後使用工作竊取演算法和範圍竊取，在工作負載不平衡時平衡這些分割區。 例如，當一個迴圈反覆運算完成某個範圍的反復專案時，執行時間會將其他執行緒的工作轉散發至該執行緒。 不過，在某些情況下，您可能會想要指定更適合您問題的不同分割機制。
 
-`parallel_for`， `parallel_for_each`，並`parallel_transform`演算法提供會採用額外的參數的多載的版本`_Partitioner`。 此參數定義會將工時的 partitioner 型別。 以下是 partitioner，PPL 定義的類型：
+、和演算法會提供採用額外參數`_Partitioner`的多載版本。 `parallel_transform` `parallel_for_each` `parallel_for` 這個參數會定義分割工作的分區類型。 以下是 PPL 定義的 partitioner 類型：
 
 [concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
-將無法編輯固定數目的範圍 （通常是可以用來處理迴圈上的背景工作執行緒的數目）。 此 partitioner 類型類似於`static_partitioner`，但藉由範圍對應至背景工作執行緒的方式，改善快取依存性。 此 partitioner 類型迴圈後執行多次 （例如在迴圈中迴圈中） 相同的資料集和快取中所容納的資料時，可以改善效能。 這個 partitioner 不會完全參與取消。 它也不會使用合作式封鎖的語意，並因此不能搭配有正向的相依性的平行迴圈。
+將工作分割成固定數目的範圍（通常是可在迴圈上運作的背景工作執行緒數目）。 此分割區類型`static_partitioner`類似，但會依將範圍對應至背景工作執行緒的方式來改善快取相似性。 當迴圈在相同的資料集上執行多次（例如迴圈內的迴圈），而且資料適用于快取時，此分割區類型可以改善效能。 此分割分區未完全參與取消。 它也不會使用合作式封鎖的語義，因此無法搭配具有向前相依性的平行迴圈使用。
 
 [concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
-除以運作到初始的數字的範圍 （通常是可以用來處理迴圈上的背景工作執行緒的數目）。 執行階段預設會使用這個型別時您不能呼叫多載採用平行演算法`_Partitioner`參數。 每個範圍可以分割成子範圍，並藉此啟用負載平衡發生。 一組工作完成時，執行階段轉散發其他執行緒對該執行緒的工作子的範圍。 如果您的工作負載不會在其中一個其他類別目錄，或您需要完整的支援取消或合作式封鎖，請使用此 partitioner。
+將工作分成數個初始的範圍（通常是可在迴圈上運作的背景工作執行緒數目）。 當您未呼叫採用`_Partitioner`參數的多載平行演算法時，執行時間預設會使用此類型。 每個範圍都可以劃分成子範圍，因此可進行負載平衡。 當工作範圍完成時，執行時間會將工作的子範圍從其他執行緒轉散發到該執行緒。 如果您的工作負載不屬於其他類別，或您需要完整支援取消或合作式封鎖，請使用此分割程式。
 
 [concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
-將工作分成多個範圍，每個範圍至少要有指定的區塊大小所指定的反覆項目數目。 此 partitioner 類型參與負載平衡;不過，執行階段不會將範圍分成子範圍。 每個背景工作角色，執行階段會檢查是否有取消作業，並執行後負載平衡`_Chunk_size`反覆項目完成。
+將工作分割為範圍，讓每個範圍至少有指定之區塊大小所指定的反覆運算次數。 此分割程式類型會參與負載平衡;不過，執行時間不會將範圍分割成子範圍。 針對每個背景工作，執行時間會檢查取消，並在反覆運算`_Chunk_size`完成之後執行負載平衡。
 
 [concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
-將無法編輯固定數目的範圍 （通常是可以用來處理迴圈上的背景工作執行緒的數目）。 此 partitioner 類型可以改善效能，因為它不會使用工作竊取，因此具有較少額外負荷。 當平行迴圈的每個反覆項目執行的固定攄 擩鶲工作量，且您不需要支援取消或轉送合作式封鎖時，請使用這個 partitioner 型別。
+將工作分割成固定數目的範圍（通常是可在迴圈上運作的背景工作執行緒數目）。 此分割器類型可以改善效能，因為它不會使用工作竊取，因此會有較少的額外負荷。 當平行迴圈的每個反覆項目執行的固定攄 擩鶲工作量，且您不需要支援取消或轉送合作式封鎖時，請使用這個 partitioner 型別。
 
 > [!WARNING]
->  `parallel_for_each`並`parallel_transform`演算法都支援使用隨機存取迭代器的容器 (例如 std::[向量](../../standard-library/vector-class.md)) 的靜態、 簡單且和同質性的 partitioner。 使用雙向且正向迭代器的容器將會產生編譯時期錯誤。 預設 partitioner， `auto_partitioner`，支援所有的三個，這些迭代器類型。
+>  和演算法僅支援使用隨機存取反覆運算器（例如 std：：[vector](../../standard-library/vector-class.md)）進行靜態、簡單和親和性 partitioner 的容器。`parallel_for_each` `parallel_transform` 使用使用雙向和正向反覆運算器的容器會產生編譯時期錯誤。 預設`auto_partitioner`的「分割器」支援這三種 iterator 類型。
 
-一般而言，這些 partitioner 的使用方式相同，除了`affinity_partitioner`。 大部分的 partitioner 類型不會維護狀態，並不會修改執行階段。 因此您可以建立這些 partitioner 物件呼叫位置，如下列範例所示。
+一般而言，這些 partitioner 會以相同的方式使用，但除外`affinity_partitioner`。 大部分的分割器類型都不會維護狀態，而且執行時間不會修改它。 因此，您可以在呼叫位置建立這些分區端物件，如下列範例所示。
 
 [!code-cpp[concrt-static-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_8.cpp)]
 
-不過，您必須傳遞`affinity_partitioner`物件做為非`const`，左值參考，所以此演算法可供未來的迴圈，重複使用的狀態。 下列範例示範基本的應用程式，以平行方式執行相同作業的資料集上多次。 使用`affinity_partitioner`可以改善效能，因為陣列可能會無法放入快取中。
+不過，您必須以`affinity_partitioner` `const`非、左值參考的形式傳遞物件，讓演算法可以儲存狀態，供未來迴圈重複使用。 下列範例顯示的基本應用程式會平行執行相同的資料集作業多次。 使用`affinity_partitioner`可改善效能，因為陣列可能會納入快取中。
 
 [!code-cpp[concrt-affinity-partitioner#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_9.cpp)]
 
 > [!CAUTION]
->  當您修改現有的程式碼相依於要使用的合作式封鎖語意時請特別小心`static_partitioner`或`affinity_partitioner`。 這些 partitioner 類型不要使用負載平衡或範圍竊取，並因此可以變更您的應用程式的行為。
+>  當您修改的現有程式碼依賴合作式封鎖語義來使用`static_partitioner`或`affinity_partitioner`時，請務必小心。 這些分割區類型不會使用負載平衡或範圍竊取，因此可以改變應用程式的行為。
 
-若要判斷是否要在任何給定的案例中使用 partitioner，最好是進行實驗並測量花費在具代表性的負載和電腦設定完成作業的時間。 例如，在只有幾個核心的多核心電腦上，靜態分割可能會帶來顯著的加速效果，但在有較多核心的電腦上，則可能拖慢速度。
+判斷是否要在任何指定的案例中使用分割的最佳方式，就是試驗並測量在具代表性負載和電腦設定下，作業完成所需的時間。 例如，在只有幾個核心的多核心電腦上，靜態分割可能會帶來顯著的加速效果，但在有較多核心的電腦上，則可能拖慢速度。
 
 [[靠上](#top)]
 
-##  <a name="parallel_sorting"></a> 平行排序
+##  <a name="parallel_sorting"></a>平行排序
 
-PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)， [concurrency:: parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)，並[concurrency:: parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 當您有受益於平行排序資料集時，這些排序演算法是很有用。 特別是，以平行方式排序適合當您有大型資料集，或當您使用耗費大量運算資源的比較作業來排序資料。 每個演算法來排序在處的項目。
+PPL 提供三種排序演算法： [concurrency：:p arallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency：:p arallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)和[concurrency：:p arallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)。 當您的資料集可受益于平行排序時，這些排序演算法會很有用。 特別是當您有大型資料集，或使用計算成本高昂的比較作業來排序資料時，平行排序非常有用。 這些演算法中的每個都會就地排序元素。
 
-`parallel_sort`和`parallel_buffered_sort`演算法就是這兩個比較為基礎的演算法。 也就是它們來比較項目值。 `parallel_sort`演算法沒有額外的記憶體需求，且適用於一般用途的排序。 `parallel_buffered_sort`演算法可以執行優於`parallel_sort`，但它需要 o （n） 空間。
+`parallel_sort` 和`parallel_buffered_sort`演算法都是以比較為基礎的演算法。 也就是說，它們會以傳值方式比較元素。 此`parallel_sort`演算法沒有額外的記憶體需求，適用于一般用途的排序。 演算法`parallel_buffered_sort`的執行`parallel_sort`效果優於，但需要 O （N）空間。
 
-`parallel_radixsort`演算法是以雜湊為基礎。 也就是說，它會使用整數索引鍵排序項目。 藉由使用金鑰時，此演算法可以直接計算而不是使用比較項目的目的地。 例如`parallel_buffered_sort`，此演算法需要 o （n） 空間。
+`parallel_radixsort`演算法是以雜湊為基礎。 也就是說，它會使用整數索引鍵來排序元素。 藉由使用索引鍵，此演算法可以直接計算元素的目的地，而不是使用比較。 就`parallel_buffered_sort`像一樣，此演算法需要 O （N）空間。
 
-下表摘要說明三個的平行排序演算法的重要屬性。
+下表摘要說明三種平行排序演算法的重要屬性。
 
-|演算法|描述|排序的機制|排序穩定性|記憶體需求|時間複雜性|迭代器存取|
+|演算法|描述|排序機制|排序穩定性|記憶體需求|時間複雜性|反覆運算器存取|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
-|`parallel_sort`|一般用途比較為基礎的排序。|比較為基礎 （遞增）|不穩定|None|O((N/P)log(N/P) + 2N((P-1)/P))|隨機|
-|`parallel_buffered_sort`|更快一般用途比較為基礎的 sort 需要 o （n） 空間。|比較為基礎 （遞增）|不穩定|需要額外的 o （n） 空間|O((N/P)log(N))|隨機|
-|`parallel_radixsort`|整數索引鍵為基礎的 sort 需要 o （n） 空間。|雜湊式|穩定|需要額外的 o （n） 空間|O(N/P)|隨機|
+|`parallel_sort`|一般用途的比較式排序。|以比較為基礎（遞增）|得|無|O （（N/P） log （N/P） + 2N （（P-1）/P））|隨機|
+|`parallel_buffered_sort`|較快速的一般用途比較式排序，需要 O （N）個空間。|以比較為基礎（遞增）|得|需要額外的 O （N）空間|O （（N/P） log （N））|隨機|
+|`parallel_radixsort`|需要 O （N）空間的整數索引鍵型排序。|以雜湊為基礎|穩定|需要額外的 O （N）空間|O （N/P）|隨機|
 
-下圖更以圖形方式顯示重要的三個的平行排序演算法的屬性。
+下圖顯示三個平行排序演算法的重要屬性，更有圖形化。
 
 ![排序演算法的比較](../../parallel/concrt/media/concrt_parallel_sorting.png "排序演算法的比較")
 
-這些平行排序演算法遵循的規則的取消和例外狀況處理。 如需有關取消和例外狀況處理並行執行階段的詳細資訊，請參閱[取消平行演算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)並[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
+這些平行排序演算法會遵循取消和例外狀況處理的規則。 如需並行執行階段中取消和例外狀況處理的詳細資訊，請參閱[取消平行演算法](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)和[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
 > [!TIP]
->  這些平行排序演算法支援移動語意。 您可以定義的移動指派運算子，以便更有效率地進行交換作業。 如需有關移動語意和移動指派運算子的詳細資訊，請參閱 < [Rvalue 參考宣告子： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，並[移動建構函式和移動指派運算子 (C++)](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您未提供的移動指派運算子或交換函式，排序演算法會使用複製建構函式。
+>  這些平行排序演算法支援 move 語義。 您可以定義移動指派運算子，讓交換作業更有效率地進行。 如需移動語義和移動指派運算子的詳細資訊，請參閱右值參考宣告子[： & &](../../cpp/rvalue-reference-declarator-amp-amp.md)，以及移動函式[和C++移動指派運算子（）](../../cpp/move-constructors-and-move-assignment-operators-cpp.md)。 如果您未提供移動指派運算子或交換函式，則排序演算法會使用複製的「處理」（copy）函數。
 
-下列基本範例示範如何使用`parallel_sort`來排序`vector`的`int`值。 根據預設，`parallel_sort`會使用[std:: less<>](../../standard-library/less-struct.md)來比較值。
+下列基本範例示範如何使用`parallel_sort`來`vector`排序值的`int` 。 根據預設， `parallel_sort`會使用[std：： less](../../standard-library/less-struct.md)來比較值。
 
 [!code-cpp[concrt-basic-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_10.cpp)]
 
-此範例示範如何提供自訂比較函式。 它會使用[std::complex::real](../../standard-library/complex-class.md#real)方法來排序[std:: complex\<雙 >](../../standard-library/complex-double.md)以遞增順序的值。
+這個範例會示範如何提供自訂的比較函數。 它使用[std：： complex：： real](../../standard-library/complex-class.md#real)方法，以遞增順序排序[std：\<： complex double >](../../standard-library/complex-double.md)值。
 
 [!code-cpp[concrt-basic-parallel-sort#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_11.cpp)]
 
-此範例示範如何將雜湊函式，以提供`parallel_radixsort`演算法。 此範例排序 3d 點。 點會根據參考點的距離排序。
+這個範例會示範如何將雜湊函式提供`parallel_radixsort`給演算法。 這個範例會將3-d 點排序。 這些點會根據其與參考點的距離進行排序。
 
 [!code-cpp[concrt-parallel-sort-points#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_12.cpp)]
 
-舉例來說，此範例會使用相對較小的資料集。 您可以增加要試驗較大型資料集的效能改進的向量的初始大小。
+例如，此範例會使用相對較小的資料集。 您可以增加向量的初始大小，以試驗較大型資料集的效能改進。
 
-此範例會使用 lambda 運算式的雜湊函式。 您也可以使用其中一個內建實作的 std::[hash 類別](../../standard-library/hash-class.md)或定義您自己的特製化。 您也可以使用自訂雜湊函式物件，在此範例中所示：
+這個範例會使用 lambda 運算式做為雜湊函式。 您也可以使用 std：：[hash 類別](../../standard-library/hash-class.md)的其中一個內建實作為，或定義您自己的特製化。 您也可以使用自訂雜湊函數物件，如下列範例所示：
 
 [!code-cpp[concrt-parallel-sort-points#2](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_13.cpp)]
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-雜湊函式必須傳回整數型別 ([std::is_integral::value](../../standard-library/is-integral-class.md)必須 **，則為 true**)。 此整數類資料類型必須轉換成輸入`size_t`。
+雜湊函數必須傳回整數類型（[std：： is_integral：： value](../../standard-library/is-integral-class.md)必須為**true**）。 這個整數型別必須可轉換成型`size_t`別。
 
-###  <a name="choose_sort"></a> 選擇排序演算法
+###  <a name="choose_sort"></a>選擇排序演算法
 
-在許多情況下，`parallel_sort`提供的速度和記憶體的效能最佳的平衡。 不過，當您增加您的資料集，可用的處理器數目或您的比較函式的複雜度的大小`parallel_buffered_sort`或`parallel_radixsort`可以較佳。 判斷要在任何給定的案例中使用的排序演算法的最佳方式是進行實驗並測量花費在代表性電腦組態的一般資料進行排序。 當您選擇的排序的策略時，請記住下列指導方針。
+在許多情況下`parallel_sort` ，會提供速度和記憶體效能的最佳平衡。 不過，當您增加資料集的大小時，可用的處理器數目或比較`parallel_buffered_sort`函式的複雜性，或`parallel_radixsort`可以執行得更好。 判斷任何特定案例所要使用之排序演算法的最佳方式，就是試驗並測量在代表電腦設定下排序一般資料所需的時間。 當您選擇排序策略時，請記住下列指導方針。
 
-- 資料集的大小。 本文件中，*小型*資料集包含少於 1,000 名的項目*中型*資料集包含 10,000 與 100,000 項目，和*大型*資料集包含超過 100,000 個項目。
+- 您的資料集大小。 在本檔中，*小型*資料集包含少於1000個元素、*中型*資料集包含10000與100000個元素，而*大型*資料集包含超過100000個元素。
 
-- 您的比較函式或雜湊函式會執行的工作數量。
+- 您的 compare 函數或雜湊函式所執行的工作量。
 
-- 可用的運算資源數量。
+- 可用計算資源的數量。
 
-- 您的資料集的特性。 例如，用於幾乎已排序的資料，但也不是完全未排序的資料，可能會執行一種演算法。
+- 資料集的特性。 例如，如果資料已幾乎排序，而不是完全未排序的資料，則其中一個演算法可能會執行得很好。
 
-- 區塊大小。 選擇性`_Chunk_size`引數會指定當演算法切換從平行序列的排序的實作，它會整體排序細分成較小單元的工作。 例如，如果您要提供 512，此演算法時切換到序列實作的工作單元包含 512 或更少的項目。 序列的實作可以改善整體效能，因為它不是以平行方式處理資料所需的額外負荷。
+- 區塊大小。 選擇性`_Chunk_size`的引數會指定當演算法將整體排序會細分為較小的工作單位時，何時從平行切換為序列排序執行。 例如，如果您提供512，當工作單位包含512或更少的元素時，演算法會切換為序列實作為。 序列執行可以改善整體效能，因為它可排除平行處理資料所需的額外負荷。
 
-它可能不值得進行排序的小型資料集，以平行方式，即使您有大量可用的運算資源，或您的比較函式或雜湊函式會執行相當大量的工作。 您可以使用[ivector&lt](../../standard-library/algorithm-functions.md#sort)函式來排序小型資料集。 (`parallel_sort`並`parallel_buffered_sort`呼叫`sort`當您指定的區塊大小大於資料集; 不過，`parallel_buffered_sort`必須配置 o （n） 空間，這可能需要額外的時間，因為鎖定爭用或記憶體配置。)
+即使您有大量可用的運算資源，或比較函式或雜湊函式會執行相當大量的工作，也可能不值得以平行方式排序小型資料集。 您可以使用[std：： sort](../../standard-library/algorithm-functions.md#sort)函數來排序小型資料集。 （`parallel_sort`當您`sort`指定的區塊大小大於資料集時，就會`parallel_buffered_sort`呼叫，不過，必須配置 O （N）空間，因為鎖定爭用或記憶體配置可能需要額外的時間）。 `parallel_buffered_sort`
 
-如果您必須節省記憶體，或您的記憶體配置器受限於鎖定爭用的情況，使用`parallel_sort`排序中型資料集。 `parallel_sort` 需要任何額外的空間;其他演算法需要 o （n） 空間。
+如果您必須節省記憶體，或您的記憶體配置器受到鎖定爭用的`parallel_sort`限制，請使用來排序中型資料集。 `parallel_sort`不需要額外的空間;其他演算法則需要 O （N）空間。
 
-使用`parallel_buffered_sort`來排序中型資料集，並當您的應用程式符合額外的 o （n） 空間需求。 `parallel_buffered_sort` 當您有大量的運算資源或昂貴的比較函式或雜湊函式時，可以是特別有用。
+用`parallel_buffered_sort`來排序中型資料集，以及當您的應用程式符合額外的 O （N）空間需求時。 `parallel_buffered_sort`當您有大量的運算資源或昂貴的 compare 函數或雜湊函式時，可能會特別有用。
 
-使用`parallel_radixsort`來排序大型資料集，並當您的應用程式符合額外的 o （n） 空間需求。 `parallel_radixsort` 相等比較作業時更耗費資源，或當這兩項作業是相當費時，則可以是特別有用。
+用`parallel_radixsort`來排序大型資料集，以及當您的應用程式符合額外的 O （N）空間需求時。 `parallel_radixsort`當對等比較作業較昂貴，或這兩項作業的成本很高時，可能會特別有用。
 
 > [!CAUTION]
->  實作良好的雜湊函式，您需要知道資料集範圍，而且在資料集中的每個項目轉換成對應的不帶正負號值的方式。 因為雜湊作業適用於不帶正負號的值，請考慮不同的排序策略，如果無法產生不帶正負號的雜湊值。
+>  若要執行良好的雜湊函式，您必須知道資料集範圍，以及資料集中的每個元素如何轉換成對應的不帶正負號值。 因為雜湊運算適用于不帶正負號的值，所以如果無法產生未簽署的雜湊值，請考慮使用不同的排序策略。
 
-下列範例會比較的效能`sort`， `parallel_sort`， `parallel_buffered_sort`，和`parallel_radixsort`針對相同的大量的隨機資料。
+下列範例會`sort`將、 `parallel_sort`、 `parallel_buffered_sort`和`parallel_radixsort`的效能與相同的大量亂數據進行比較。
 
 [!code-cpp[concrt-choosing-parallel-sort#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_15.cpp)]
 
-在此範例中，假設它是在排序期間配置 o （n） 空間可接受，`parallel_radixsort`在此電腦設定此資料集上執行效能最好。
+在此範例中，假設在排序期間可接受配置 O （N）空間， `parallel_radixsort`在此電腦設定上執行此資料集的最佳做法。
 
 [[靠上](#top)]
 
@@ -313,20 +313,20 @@ PPL 提供三種排序演算法： [concurrency:: parallel_sort](reference/concu
 
 |標題|說明|
 |-----------|-----------------|
-|[如何：撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|示範如何使用`parallel_for`演算法來執行矩陣乘法。|
-|[如何：撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|示範如何使用`parallel_for_each`演算法來計算中質數的計數[std:: array](../../standard-library/array-class-stl.md)以平行方式的物件。|
+|[如何：撰寫 parallel_for 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|顯示如何使用`parallel_for`演算法來執行矩陣乘法。|
+|[如何：撰寫 parallel_for_each 迴圈](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|顯示如何使用`parallel_for_each`演算法，以平行方式計算[std：： array](../../standard-library/array-class-stl.md)物件中的質數計數。|
 |[如何：使用 parallel_invoke 撰寫平行排序常式](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|顯示如何使用 `parallel_invoke` 演算法，以改善 bitonic 排序演算法的效能。|
 |[如何：使用 parallel_invoke 執行平行作業](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|顯示如何使用 `parallel_invoke` 演算法，以改善在共用資料來源上執行多個作業的程式效能。|
-|[如何：平行執行對應和簡化運算](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|示範如何使用`parallel_transform`和`parallel_reduce`演算法來執行對應和縮減作業，以計算文字在檔案中的出現次數。|
-|[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|描述 PPL，其提供命令式程式設計模型，可提升延展性和輕鬆使用開發並存應用程式。|
-|[PPL 中的取消](cancellation-in-the-ppl.md)|說明 PPL、 如何取消平行工作，以及如何判斷當取消工作群組中的取消作業的角色。|
-|[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|說明並行執行階段的例外狀況處理的角色。|
+|[如何：平行執行對應和簡化運算](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|示範如何使用`parallel_transform`和`parallel_reduce`演算法來執行對應，並減少計算檔案中文字出現次數的運算。|
+|[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|說明 PPL，其提供命令式程式設計模型，可提升擴充性和方便使用，以開發並行應用程式。|
+|[PPL 中的取消](cancellation-in-the-ppl.md)|說明 PPL 中取消的角色、如何取消平行工作，以及如何判斷取消工作組的時機。|
+|[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|說明並行執行階段中例外狀況處理的角色。|
 
 ## <a name="reference"></a>參考資料
 
 [parallel_for 函式](reference/concurrency-namespace-functions.md#parallel_for)
 
-[parallel_for_each 函式](reference/concurrency-namespace-functions.md#parallel_for_each)
+[parallel_for_each 函數](reference/concurrency-namespace-functions.md#parallel_for_each)
 
 [parallel_invoke 函式](reference/concurrency-namespace-functions.md#parallel_invoke)
 

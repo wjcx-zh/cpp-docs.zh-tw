@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], DoModal
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
-ms.openlocfilehash: c5069bc63d61016e6f3c2f983de23901b9f35814
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 911108f9a231b752790abfdf86d1b4042d30b149
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224432"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504113"
 ---
 # <a name="colelinksdialog-class"></a>COleLinksDialog 類別
 
@@ -41,24 +41,24 @@ class COleLinksDialog : public COleDialog
 
 |名稱|描述|
 |----------|-----------------|
-|[COleLinksDialog::DoModal](#domodal)|會顯示 OLE [編輯連結] 對話方塊。|
+|[COleLinksDialog::DoModal](#domodal)|顯示 [OLE 編輯連結] 對話方塊。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleLinksDialog::m_el](#m_el)|類型的對話方塊行為的 OLEUIEDITLINKS 的結構。|
+|[COleLinksDialog::m_el](#m_el)|OLEUIEDITLINKS 類型的結構，可控制對話方塊的行為。|
 
 ## <a name="remarks"></a>備註
 
-建立類別的物件`COleLinksDialog`當您想要呼叫此對話方塊。 在後`COleLinksDialog`在建構物件，您可以使用[m_el](#m_el)結構初始化的值或在對話方塊中控制項的狀態。 `m_el`結構屬於 OLEUIEDITLINKS 的型別。 如需使用這個對話方塊類別的詳細資訊，請參閱 < [DoModal](#domodal)成員函式。
+當您想要呼叫`COleLinksDialog`此對話方塊時，請建立類別的物件。 在結構化物件之後，您可以使用 [m_el](#m_el) 結構，在對話方塊中初始化控制項的值或`COleLinksDialog`狀態。 `m_el`結構的型別為 OLEUIEDITLINKS。 如需使用此對話方塊類別的詳細資訊，請參閱[DoModal](#domodal)成員函式。
 
 > [!NOTE]
->  應用程式精靈所產生的容器程式碼會使用這個類別。
+>  應用程式精靈產生的容器程式碼會使用這個類別。
 
-如需詳細資訊，請參閱 < [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的結構。
+如需詳細資訊，請參閱 Windows SDK 中的[OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw)結構。
 
-如需有關特定 OLE 對話方塊的詳細資訊，請參閱文章[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。
+如需有關 OLE 特定對話方塊的詳細資訊，請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -78,11 +78,11 @@ class COleLinksDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxodlgs.h
+**標頭：** afxodlgs。h
 
-##  <a name="domodal"></a>  COleLinksDialog::DoModal
+##  <a name="domodal"></a>COleLinksDialog：:D oModal
 
-會顯示 OLE [編輯連結] 對話方塊。
+顯示 [OLE 編輯連結] 對話方塊。
 
 ```
 virtual INT_PTR DoModal();
@@ -90,19 +90,19 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊中的完成狀態。 下列其中一個值：
+對話方塊的完成狀態。 下列其中一個值：
 
-- 如果對話方塊已成功顯示，IDOK。
+- 如果已成功顯示對話方塊，則 IDOK。
 
-- 如果使用者已取消對話方塊，IDCANCEL。
+- 如果使用者取消對話方塊，則 IDCANCEL。
 
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIEditLinks](/windows/desktop/api/oledlg/nf-oledlg-oleuieditlinksa) Windows SDK 中的函式。
+- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫`COleDialog::GetLastError`成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIEditLinks](/windows/win32/api/oledlg/nf-oledlg-oleuieditlinksw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要設定的成員初始化各種不同的對話方塊控制項[m_el](#m_el)結構，這樣才能呼叫`DoModal`，但在建構對話方塊物件之後。
+如果您想要藉由設定[m_el](#m_el)結構的成員來初始化各種對話方塊控制項，您應該在呼叫`DoModal`之前先這麼做，但在構造對話方塊物件之後。
 
-##  <a name="colelinksdialog"></a>  COleLinksDialog::COleLinksDialog
+##  <a name="colelinksdialog"></a>COleLinksDialog::COleLinksDialog
 
 建構 `COleLinksDialog` 物件。
 
@@ -117,24 +117,24 @@ COleLinksDialog (
 ### <a name="parameters"></a>參數
 
 *pDoc*<br/>
-指向包含要編輯連結的 OLE 文件。
+指向包含要編輯之連結的 OLE 檔。
 
 *pView*<br/>
-指向目前的檢視上*pDoc*。
+指向*pDoc*上的目前視圖。
 
 *dwFlags*<br/>
-建立旗標，其中包含 0 或 ELF_SHOWHELP 來指定當顯示對話方塊時，是否會顯示 [說明] 按鈕。
+建立旗標，其中包含0或 ELF_SHOWHELP，以指定顯示對話方塊時是否要顯示 [說明] 按鈕。
 
 *pParentWnd*<br/>
-指向的父系或擁有者的視窗物件 (類型的`CWnd`) 所屬之對話方塊物件。 如果它是 NULL 時，對話方塊中的父視窗設為主要的應用程式視窗。
+指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`（類型為）。 如果它是 Null，則對話方塊的父視窗會設定為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-此函式會建構只`COleLinksDialog`物件。 若要顯示的對話方塊，請呼叫[DoModal](#domodal)函式。
+此函式只會`COleLinksDialog`對物件進行結構。 若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。
 
-##  <a name="m_el"></a>  COleLinksDialog::m_el
+##  <a name="m_el"></a>COleLinksDialog::m_el
 
-型別的 OLEUIEDITLINKS 結構用來控制行為的編輯連結 對話方塊。
+OLEUIEDITLINKS 類型的結構，用來控制 [編輯連結] 對話方塊的行為。
 
 ```
 OLEUIEDITLINKS m_el;
@@ -142,9 +142,9 @@ OLEUIEDITLINKS m_el;
 
 ### <a name="remarks"></a>備註
 
-直接或透過成員函式，則可以修改此結構的成員。
+這個結構的成員可以直接或透過成員函式來修改。
 
-如需詳細資訊，請參閱 < [OLEUIEDITLINKS](/windows/desktop/api/oledlg/ns-oledlg-tagoleuieditlinksa) Windows SDK 中的結構。
+如需詳細資訊，請參閱 Windows SDK 中的[OLEUIEDITLINKS](/windows/win32/api/oledlg/ns-oledlg-oleuieditlinksw)結構。
 
 ## <a name="see-also"></a>另請參閱
 

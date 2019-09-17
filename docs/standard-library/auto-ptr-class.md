@@ -21,7 +21,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68456705"
 ---
-# <a name="autoptr-class"></a>auto_ptr 類別
+# <a name="auto_ptr-class"></a>auto_ptr 類別
 
 以智慧型指標包裝資源，確保當控制離開區塊時，會自動終結該資源。
 
@@ -63,7 +63,7 @@ class auto_ptr {
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述一個智慧型指標 (稱為`auto_ptr`) 至配置的物件。 指標必須是 null, 或指定由**new**所配置的物件。 如果將 `auto_ptr` 的儲存值指派給另一個物件，則會轉移擁有權。 (轉移後，會以 null 指標取代儲存值。)`auto_ptr<Type>` 的解構函式會刪除配置物件。 `auto_ptr<Type>` 可確保當控制離開區塊時 (即使是透過擲回例外狀況)，會自動刪除配置物件。 您不應該建構兩個擁有相同物件的 `auto_ptr<Type>` 物件。
+此範本類別描述一個智慧型指標（稱為`auto_ptr`）至配置的物件。 指標必須是 null，或指定由**new**所配置的物件。 如果將 `auto_ptr` 的儲存值指派給另一個物件，則會轉移擁有權。 (轉移後，會以 null 指標取代儲存值。)`auto_ptr<Type>` 的解構函式會刪除配置物件。 `auto_ptr<Type>` 可確保當控制離開區塊時 (即使是透過擲回例外狀況)，會自動刪除配置物件。 您不應該建構兩個擁有相同物件的 `auto_ptr<Type>` 物件。
 
 您可以將 `auto_ptr<Type>` 物件當做函式呼叫的引數，以傳值方式來傳遞。 `auto_ptr` 不能是任何標準程式庫容器的項目。 您無法透過 C++ 標準程式庫容器可靠地管理一系列的 `auto_ptr<Type>` 物件。
 
@@ -81,7 +81,7 @@ class auto_ptr {
 |-|-|
 |[element_type](#element_type)|此類型是範本參數 `Type`的同義字。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>Functions
 
 |||
 |-|-|
@@ -124,11 +124,11 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 #### <a name="remarks"></a>備註
 
-第一個函式會將`myptr`中的 ptr 儲存至設定物件的已儲存指標。 第二個函式會藉由儲存*right*來傳輸儲存在*右方*之指標的擁有權。 [](#release)在中`myptr`發行。
+第一個函式會將`myptr`中的 ptr 儲存至設定物件的已儲存指標。 第二個函式會藉由儲存*right*來傳輸儲存在*右方*之指標的擁有權。 在中`myptr`[發行](#release)。
 
-第三個函式的行為與第二個相同, 不同`right`之處在于它會儲存。 `ref`. `release`在`myptr`中, `ref`其中是儲存在中`right`的參考。
+第三個函式的行為與第二個相同，不同`right`之處在于它會儲存。 `ref`. `release`在`myptr`中， `ref`其中是儲存在中`right`的參考。
 
-如果的指標`Other`可以隱含地轉換為的`Type`指標, 則範本的函式行為會與第二個函數相同。
+如果的指標`Other`可以隱含地轉換為的`Type`指標，則範本的函式行為會與第二個函數相同。
 
 #### <a name="example"></a>範例
 
@@ -278,11 +278,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 #### <a name="remarks"></a>備註
 
-指派會評估運算式`delete myptr`, 但只有在儲存的指標`myptr`因指派而變更時才會進行。 然後, 它會儲存*right*, 以傳輸*右*儲存的指標擁有權。[](#release)在中`myptr`發行。 此函式會傳回 __\*this__。
+指派會評估運算式`delete myptr`，但只有在儲存的指標`myptr`因指派而變更時才會進行。 然後，它會儲存*right*，以傳輸*右*儲存的指標擁有權。在中`myptr`[發行](#release)。 此函式會傳回 __\*this__。
 
 #### <a name="example"></a>範例
 
-如需使用成員運算子的範例, 請參閱[auto_ptr](#auto_ptr)。
+如需使用成員運算子的範例，請參閱[auto_ptr](#auto_ptr)。
 
 ### <a name="op_star"></a>操作
 
@@ -302,7 +302,7 @@ Type& operator*() const throw();
 
 #### <a name="example"></a>範例
 
-如需如何使用成員函式的範例, 請參閱[auto_ptr](#auto_ptr)。
+如需如何使用成員函式的範例，請參閱[auto_ptr](#auto_ptr)。
 
 ### <a name="op_arrow"></a>操作&gt;
 
@@ -318,11 +318,11 @@ Type * operator->() const throw();
 
 #### <a name="remarks"></a>備註
 
-選取運算子會傳回 [get](#get)`( )`，如此一來，運算式 *ap*-> **member** 的運作方式會與下列運算式相同：(*ap*. **get**( ) )-> **member**，其中 *ap* 是類別 `auto_ptr`\< **Type**> 的物件。 因此, 儲存的指標不得為 null, 而且`Type`必須是`member`具有成員的類別、結構或等位類型。
+選取運算子會傳回 [get](#get)`( )`，如此一來，運算式 *ap*-> **member** 的運作方式會與下列運算式相同：(*ap*. **get**( ) )-> **member**，其中 *ap* 是類別 `auto_ptr`\< **Type**> 的物件。 因此，儲存的指標不得為 null，而且`Type`必須是`member`具有成員的類別、結構或等位類型。
 
 #### <a name="example"></a>範例
 
-如需如何使用成員函式的範例, 請參閱[auto_ptr](#auto_ptr)。
+如需如何使用成員函式的範例，請參閱[auto_ptr](#auto_ptr)。
 
 ### <a name="op_auto_ptr_lt_other_gt"></a>運算子 auto_ptr&lt;其他&gt;
 
@@ -479,7 +479,7 @@ Destructing 00311B88 Value: 6
 
 ### <a name="reset"></a>啟動
 
-此成員函式會評估`delete myptr`運算式, 但只有在儲存的指標`myptr`值因函式呼叫的結果而變更時。 然後會以 `ptr` 取代儲存的指標。
+此成員函式會評估`delete myptr`運算式，但只有在儲存的指標`myptr`值因函式呼叫的結果而變更時。 然後會以 `ptr` 取代儲存的指標。
 
 ```cpp
 void reset(Type* ptr = 0);

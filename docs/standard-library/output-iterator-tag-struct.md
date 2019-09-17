@@ -14,9 +14,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68453024"
 ---
-# <a name="outputiteratortag-struct"></a>output_iterator_tag 結構
+# <a name="output_iterator_tag-struct"></a>output_iterator_tag 結構
 
-類別, 為表示輸出反覆運算器的`iterator_category`函式提供傳回型別。
+類別，為表示輸出反覆運算器的`iterator_category`函式提供傳回型別。
 
 ## <a name="syntax"></a>語法
 
@@ -26,13 +26,13 @@ ms.locfileid: "68453024"
 
 分類標籤類別會用來當作可供選取演算法的編譯標籤。 範本函式必須尋找其迭代器引數的最明確分類，如此它才能在編譯階段使用最有效率的演算法。 對於 `Iterator` 類型的每個迭代器，必須將 `iterator_traits`< `Iterator`>  **::iterator_category** 定義為描述迭代器行為最精確的分類標籤。
 
-當描述可作為輸出反覆運算器的物件`Iter`時, 類型與**iterator** \< **Iter** >  **:: iterator_category**相同。
+當描述可作為輸出反覆運算器的物件`Iter`時，類型與**iterator** \< **Iter** >  **：： iterator_category**相同。
 
 如同其他的迭代器標籤，此標籤並未在迭代器的 `value_type` 或 `difference_type` 上參數化，因為輸出迭代器並不具有 `value_type` 或 `difference_type`。
 
 ## <a name="example"></a>範例
 
-如需如何[](../standard-library/random-access-iterator-tag-struct.md)使用`iterator_tag`的範例, 請參閱[iterator_traits](../standard-library/iterator-traits-struct.md)或 random_access_iterator_tag。
+如需如何使用`iterator_tag`的範例，請參閱[iterator_traits](../standard-library/iterator-traits-struct.md)或 [random_access_iterator_tag](../standard-library/random-access-iterator-tag-struct.md)。
 
 ## <a name="requirements"></a>需求
 

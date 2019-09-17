@@ -21,7 +21,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68459949"
 ---
-# <a name="timeput-class"></a>time_put 類別
+# <a name="time_put-class"></a>time_put 類別
 
 此樣板類別描述可以做為地區設定 facet 的物件，以控制時間值轉換為類型 `CharType` 的序列。
 
@@ -53,14 +53,14 @@ class time_put : public locale::facet;
 
 ### <a name="typedefs"></a>Typedefs
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸出迭代器的類型。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[do_put](#do_put)|虛擬函式，會輸出日期和時間資訊做為 `CharType` 的序列。|
 |[put](#put)|輸出日期和時間資訊做為 `CharType` 的序列。|
@@ -121,7 +121,7 @@ virtual iter_type do_put(
 
 虛擬受保護的成員函`next`式會從類型`tm`的物件\* `_Pt`中儲存的時間值開始產生順序元素。 此函式會傳回迭代器，此迭代器指定在所產生的輸出後下一個要插入元素的位置。
 
-輸出是由所使用`strftime`的相同規則所產生, 以及 *_Pt*的最後一個引數, 以便將一連串的**char**元素產生到陣列中。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案, 方法是使用簡單的一對一對應。 如果 *_Mod*等於零, 有效的格式為 "% F", 其中 F 會由 *_Fmt*取代。 否則, 有效的格式為 "% MF", 其中 M 會由 *_Mod*所取代。
+輸出是由所使用`strftime`的相同規則所產生，以及 *_Pt*的最後一個引數，以便將一連串的**char**元素產生到陣列中。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案，方法是使用簡單的一對一對應。 如果 *_Mod*等於零，有效的格式為 "% F"，其中 F 會由 *_Fmt*取代。 否則，有效的格式為 "% MF"，其中 M 會由 *_Mod*所取代。
 
 ### <a name="example"></a>範例
 
@@ -191,7 +191,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式[](#do_put)會傳回`next`do_put `_Iosbase`(、 `_Pt`、 `_Fmt` `_Fill`、 `_Mod`、、)。 第二個成員函式會將 \* `next` ++ 複製到間隔 [ `first`, `last`) 中的任何元素，而不是百分比 (%)。 對於在間隔 [ `first`, `last`) 後面接著一個字元 *C* 的百分比，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 並跳過 *C*。然而，如果 *C* 是來自集合 EOQ# 的限定詞字元，在間隔 [ `first`, `last`) 後面接著一個字元 `C2`，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 並跳過 `C2`。
+第一個成員函式會傳回`next`[do_put](#do_put) `_Iosbase`（、 `_Pt`、 `_Fmt` `_Fill`、 `_Mod`、、）。 第二個成員函式會將 \* `next` ++ 複製到間隔 [ `first`, `last`) 中的任何元素，而不是百分比 (%)。 對於在間隔 [ `first`, `last`) 後面接著一個字元 *C* 的百分比，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 並跳過 *C*。然而，如果 *C* 是來自集合 EOQ# 的限定詞字元，在間隔 [ `first`, `last`) 後面接著一個字元 `C2`，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 並跳過 `C2`。
 
 ### <a name="example"></a>範例
 
@@ -252,15 +252,15 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
 - 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \>1：未定義這些值。
 
-此函式會使用[locale:: facet](../standard-library/locale-class.md#facet_class)( *_Refs*) 初始化其基底物件。
+此函式會使用[locale：： facet](../standard-library/locale-class.md#facet_class)（ *_Refs*）初始化其基底物件。
 
 ## <a name="see-also"></a>另請參閱
 

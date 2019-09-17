@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: 639a5a98da03307e3edf22deb6d32956c3f73374
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 42e70f9e48339eddb2a5af4fa288400cce01f490
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611754"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502033"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE 控制項的持續性
 
@@ -21,27 +21,27 @@ OLE 控制項的其中一個功能是屬性持續性 (或序列化)，其允許 
 |||
 |-|-|
 |[PX_Blob](#px_blob)|交換儲存二進位大型物件 (BLOB) 資料的控制項屬性。|
-|[PX_Bool](#px_bool)|交換控制項屬性的型別**BOOL**。|
+|[PX_Bool](#px_bool)|交換**BOOL**類型的控制項屬性。|
 |[PX_Color](#px_color)|交換控制項的色彩屬性。|
-|[PX_Currency](#px_currency)|交換控制項屬性的型別**CY**。|
+|[PX_Currency](#px_currency)|交換型別為**CY**的控制項屬性。|
 |[PX_DataPath](#px_datapath)|交換 `CDataPathProperty` 類型的控制項屬性。|
-|[PX_Double](#px_double)|交換控制項屬性的型別**double**。|
+|[PX_Double](#px_double)|交換**double**類型的控制項屬性。|
 |[PX_Font](#px_font)|交換控制項的字型屬性。|
-|[PX_Float](#px_float)|交換控制項屬性的型別**浮點數**。|
+|[PX_Float](#px_float)|交換**float**類型的控制項屬性。|
 |[PX_IUnknown](#px_iunknown)|交換未定義類型的控制項屬性。|
-|[PX_Long](#px_long)|交換控制項屬性的型別**長**。|
+|[PX_Long](#px_long)|交換**long**類型的控制項屬性。|
 |[PX_Picture](#px_picture)|交換控制項的圖片屬性。|
-|[PX_Short](#px_short)|交換控制項屬性的型別**簡短**。|
-|[PX_ULong](#px_ulong)|交換控制項屬性的型別**ULONG**。|
-|[PX_UShort](#px_ushort)|交換控制項屬性的型別**USHORT**。|
+|[PX_Short](#px_short)|交換**short**類型的控制項屬性。|
+|[PX_ULong](#px_ulong)|交換**ULONG**類型的控制項屬性。|
+|[PX_UShort](#px_ushort)|交換型別為**USHORT**的控制項屬性。|
 |[PXstring](#px_string)|交換字元字串控制項屬性。|
 |[PX_VBXFontConvert](#px_vbxfontconvert)|交換 VBX 控制項的字型相關屬性與 OLE 控制項的字型屬性。|
 
-颾魤 ㄛ`AfxOleTypeMatchGuid`全域函式可用來測試 TYPEDESC 與指定的 GUID 之間的相符項目。
+此外， `AfxOleTypeMatchGuid`也提供全域函式來測試 TYPEDESC 與指定 GUID 之間是否相符。
 
 ##  <a name="px_blob"></a>  PX_Blob
 
-呼叫此函式內控制項的`DoPropExchange`序列化或初始化儲存二進位大型物件 (BLOB) 資料屬性的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化儲存二進位大型物件（BLOB）資料的屬性。
 
 ```
 BOOL PX_Blob(
@@ -54,36 +54,36 @@ BOOL PX_Blob(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *hBlob*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *hBlobDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-要讀取或寫入變數所參考的屬性值*hBlob*視需要。 此變數應該一開始呼叫之前初始化為 NULL`PX_Blob`第一次 （一般而言，這可以在控制項的建構函式）。 如果*hBlobDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因而控制項的初始化及序列化程序會失敗，則會使用此值。
+屬性的值將會視需要讀取或寫入*hBlob*所參考的變數。 第一次呼叫`PX_Blob`之前，應該將這個變數初始化為 Null （一般來說，這可以在控制項的函式中完成）。 如果指定*hBlobDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的初始化或序列化程式失敗，則會使用這個值。
 
-控制代碼*hBlob*並*hBlobDefault*記憶體區塊的其中包含下列參考：
+控制碼*hBlob*和*hBlobDefault*指的是記憶體區塊，其中包含下列各項：
 
-- DWORD，其中包含二進位資料，如下所示的長度，以位元組為單位，來立即遵循
+- 包含後面的二進位資料長度（以位元組為單位）的 DWORD，後面緊接著
 
-- 包含實際的二進位資料的記憶體區塊。
+- 包含實際二進位資料的記憶體區塊。
 
-請注意，`PX_Blob`會配置記憶體時，使用 Windows [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc) API，當載入 BLOB 類型屬性。 您必須負責釋放這個記憶體。 因此，您的控制項的解構函式應該呼叫[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) BLOB 類型的任何屬性來釋放控制代碼會增加至您的控制項配置任何記憶體。
+請注意，在載入 BLOB 類型屬性時 ，會使用 Windows[GlobalAlloc](/windows/win32/api/winbase/nf-winbase-globalalloc)API 來配置`PX_Blob`記憶體。 您必須負責釋放這個記憶體。 因此，控制項的析構函式應該在任何 BLOB 類型的屬性控制碼上呼叫[GlobalFree](/windows/win32/api/winbase/nf-winbase-globalfree) ，以釋放配置給您控制項的任何記憶體。
 
 ##  <a name="px_bool"></a>  PX_Bool
 
-呼叫此函式內控制項的`DoPropExchange`来序列化或 BOOL 類型的屬性初始化的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化 BOOL 類型的屬性。
 
 ```
 BOOL PX_Bool(
@@ -101,28 +101,28 @@ BOOL PX_Bool(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *bValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *bDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-要讀取或寫入變數所參考的屬性值*bValue*視需要。 如果*bDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+屬性的值將會視需要讀取或寫入*其中 bvalue system.boolean.true*所參考的變數。 如果指定*bDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_color"></a>  PX_Color
 
-呼叫此函式內控制項的`DoPropExchange`序列化或初始化型別 OLE_COLOR 屬性的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化 OLE_COLOR 類型的屬性。
 
 ```
 BOOL PX_Color(
@@ -140,28 +140,28 @@ BOOL PX_Color(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *clrValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *clrDefault*<br/>
-控制項開發人員所定義的屬性的預設值。
+屬性的預設值，如控制項開發人員所定義。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-要讀取或寫入變數所參考的屬性值*clrValue*視需要。 如果*clrDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+屬性的值將會視需要讀取或寫入*clrValue*所參考的變數。 如果指定*clrDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_currency"></a>  PX_Currency
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**貨幣**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**貨幣**類型的屬性。
 
 ```
 BOOL PX_Currency(
@@ -179,28 +179,28 @@ BOOL PX_Currency(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *cyValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *cyDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-要讀取或寫入變數所參考的屬性值*cyValue*視需要。 如果*cyDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+屬性的值將會視需要讀取或寫入*cyValue*所參考的變數。 如果指定*cyDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_datapath"></a>  PX_DataPath
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化類型的資料路徑屬性的成員函式[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化[CDataPathProperty](../../mfc/reference/cdatapathproperty-class.md)類型的資料路徑屬性。
 
 ```
 BOOL PX_DataPath(
@@ -216,25 +216,25 @@ BOOL PX_DataPath(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *dataPathProperty*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-資料路徑屬性實作非同步控制項屬性。 要讀取或寫入變數所參考的屬性值*dataPathProperty*視需要。
+資料路徑屬性會執行非同步控制項屬性。 屬性的值將會視需要讀取或寫入*dataPathProperty*所參考的變數。
 
 ##  <a name="px_double"></a>  PX_Double
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**double**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**double**類型的屬性。
 
 ```
 BOOL PX_Double(
@@ -252,28 +252,28 @@ BOOL PX_Double(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *doubleValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *doubleDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*doubleValue*視需要。 如果*doubleDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*doubleValue*所參考的變數。 如果指定*doubleDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_font"></a>  PX_Font
 
-呼叫此函式內控制項的`DoPropExchange`来序列化或 type 字型的屬性初始化的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化字型類型的屬性。
 
 ```
 BOOL PX_Font(
@@ -287,31 +287,31 @@ BOOL PX_Font(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *font*<br/>
-參考`CFontHolder`物件，包含字型屬性。
+包含字型屬性之`CFontHolder`物件的參考。
 
 *pFontDesc*<br/>
-指標`FONTDESC`結構，其中包含要初始化的字型屬性，在案例中的預設狀態中使用的值所在*pFontDispAmbient*是 NULL。
+`FONTDESC`結構的指標，其中包含要用來初始化字型屬性之預設狀態的值，在此情況下， *pFontDispAmbient*是 Null。
 
 *pFontDispAmbient*<br/>
-指標`IFontDisp`介面要初始化的字型屬性的預設狀態中使用的字型。
+字型`IFontDisp`介面的指標，用來初始化字型屬性的預設狀態。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入`font`、`CFontHolder`參考，適當的時候。 如果*pFontDesc*並*pFontDispAmbient*指定，它們被用於初始化屬性的預設值，需要時。 如果因為任何原因，控制序列化處理序失敗時，會使用這些值。 一般而言，您傳遞 NULL 做*pFontDesc*和所傳回的環境值`COleControl::AmbientFont`如*pFontDispAmbient*。 請注意，傳回字型物件`COleControl::AmbientFont`必須藉由呼叫釋放`IFontDisp::Release`成員函式。
+在適當的情況下，會讀取或寫入`font`屬性的`CFontHolder`值（參考）。 如果指定*pFontDesc*和*pFontDispAmbient* ，則會在需要時，用來初始化屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，則會使用這些值。 一般來說，您會針對*pFontDesc*傳遞 Null，並`COleControl::AmbientFont`針對*pFontDispAmbient*傳回的環境值。 請注意，所傳回`COleControl::AmbientFont`的字型物件必須由`IFontDisp::Release`成員函式的呼叫來釋放。
 
 ##  <a name="px_float"></a>  PX_Float
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**float**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**float**類型的屬性。
 
 ```
 BOOL PX_Float(
@@ -329,28 +329,28 @@ BOOL PX_Float(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *floatValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *floatDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*floatValue*視需要。 如果*floatDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*floatValue*所參考的變數。 如果指定*floatDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
-##  <a name="px_iunknown"></a>  PX_IUnknown
+##  <a name="px_iunknown"></a>PX_IUnknown
 
-呼叫此函式，在您的控制項`DoPropExchange`成員函式來序列化或初始化物件，而所表示的屬性`IUnknown`-衍生介面。
+在控制項的`DoPropExchange`成員函式中呼叫此函`IUnknown`式，以序列化或初始化具有衍生介面之物件所代表的屬性。
 
 ```
 BOOL PX_IUnknown(
@@ -364,31 +364,31 @@ BOOL PX_IUnknown(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *pUnk*<br/>
-參考變數，包含表示屬性的值物件的介面。
+變數的參考，其中包含代表屬性值之物件的介面。
 
 *iid*<br/>
-指出屬性物件的介面由控制項的介面識別碼。
+介面識別碼，指出控制項所使用的屬性物件介面。
 
 *pUnkDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*pUnk*視需要。 如果*pUnkDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*pUnk*所參考的變數。 如果指定*pUnkDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_long"></a>  PX_Long
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**長**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**long**類型的屬性。
 
 ```
 BOOL PX_Long(
@@ -406,28 +406,28 @@ BOOL PX_Long(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *lValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *lDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*左值*視需要。 如果*lDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*lValue*所參考的變數。 如果指定*lDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_picture"></a>  PX_Picture
 
-呼叫此函式內控制項的`DoPropExchange`序列化或初始化您的控制項圖片屬性的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化控制項的圖片屬性。
 
 ```
 BOOL PX_Picture(
@@ -445,28 +445,28 @@ BOOL PX_Picture(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *pict*<br/>
-若要參考[CPictureHolder](../../mfc/reference/cpictureholder-class.md)儲存屬性的物件 （通常是您的類別成員變數）。
+參考儲存屬性的[CPictureHolder](../../mfc/reference/cpictureholder-class.md)物件（通常是類別的成員變數）。
 
 *pictDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*pict*視需要。 如果*pictDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+屬性的值會在適當的情況下，讀取或寫入*pict*所參考的變數中。 如果指定*pictDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_short"></a>  PX_Short
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**簡短**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**short**類型的屬性。
 
 ```
 BOOL PX_Short(
@@ -484,28 +484,28 @@ BOOL PX_Short(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *sValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *sDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*sValue*視需要。 如果*sDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*sValue*所參考的變數。 如果指定*sDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_ulong"></a>  PX_ULong
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**ULONG**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化**ULONG**類型的屬性。
 
 ```
 BOOL PX_ULong(
@@ -523,28 +523,28 @@ BOOL PX_ULong(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *ulValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *ulDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*ulValue*視需要。 如果*ulDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*ulValue*所參考的變數。 如果指定*ulDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_ushort"></a>  PX_UShort
 
-呼叫此函式，在您的控制項`DoPropExchange`序列化或初始化型別屬性的成員函式**unsigned short**。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化不**帶正負**號之 short 類型的屬性。
 
 ```
 BOOL PX_UShort(
@@ -562,28 +562,28 @@ BOOL PX_UShort(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *usValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *usDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*usValue*視需要。 如果*usDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*usValue*所參考的變數。 如果指定*usDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_string"></a>  PXstring
 
-呼叫此函式內控制項的`DoPropExchange`序列化或初始化的字元字串屬性的成員函式。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，以序列化或初始化字元字串屬性。
 
 ```
 BOOL PXstring(
@@ -601,28 +601,28 @@ BOOL PXstring(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *pszPropName*<br/>
-在交換元素的屬性名稱。
+正在交換的屬性名稱。
 
 *strValue*<br/>
-儲存屬性的變數參考 （通常是您的類別成員變數）。
+參考屬性儲存所在的變數（通常是類別的成員變數）。
 
 *strDefault*<br/>
 屬性的預設值。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-屬性的值是讀取或寫入變數所參考*strValue*視需要。 如果*strDefault*指定，它將用於做為屬性的預設值。 如果因為任何原因，控制序列化處理序失敗時，會使用此值。
+視情況，屬性的值會讀取或寫入*strValue*所參考的變數。 如果指定*strDefault* ，則會使用它做為屬性的預設值。 如果基於任何原因，控制項的序列化程式失敗，就會使用這個值。
 
 ##  <a name="px_vbxfontconvert"></a>  PX_VBXFontConvert
 
-呼叫此函式內控制項的`DoPropExchange`成員函式來初始化轉換 VBX 控制項的字型相關屬性的字型屬性。
+在控制項的`DoPropExchange`成員函式中呼叫此函式，藉由轉換 VBX 控制項的字型相關屬性來初始化字型屬性。
 
 ```
 BOOL PX_VBXFontConvert(
@@ -633,24 +633,24 @@ BOOL PX_VBXFontConvert(
 ### <a name="parameters"></a>參數
 
 *pPX*<br/>
-指標[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件 (通常是當做參數傳遞給`DoPropExchange`)。
+[CPropExchange](../../mfc/reference/cpropexchange-class.md)物件的指標（通常會當做參數傳遞至`DoPropExchange`）。
 
 *font*<br/>
-將包含已轉換的 VBX 與字型相關屬性的 OLE 控制項的字型屬性。
+OLE 控制項的字型屬性，將包含已轉換的 VBX 字型相關屬性。
 
 ### <a name="return-value"></a>傳回值
 
-非零值，如果交換成功;0，如果不成功。
+如果交換成功，則為非零;如果失敗，則為0。
 
 ### <a name="remarks"></a>備註
 
-此函式應僅供 OLE 控制項設計 VBX 控制項來直接取代。 當 Visual Basic 開發環境中，將轉換包含 VBX 控制項使用相對應的取代項目 OLE 控制項的表單時，它會呼叫控制項的`IDataObject::SetData`函式，並傳遞屬性集，其中包含 VBX 控制項的屬性資料。 這項作業，又會導致控制項的`DoPropExchange`要叫用的函式。 `DoPropExchange` 可以呼叫`PX_VBXFontConvert`VBX 控制項的字型相關屬性轉換 (例如，"FontName，「 fontsize 」 設，等) 的對應元件的 OLE 控制項的字型屬性。
+此函式只能由設計為 VBX 控制項直接取代的 OLE 控制項使用。 當 Visual Basic 開發環境將包含 VBX 控制項的表單轉換成使用對應的取代 OLE 控制項時，它會呼叫控制項的`IDataObject::SetData`函式，並傳入包含 VBX 控制項屬性資料的屬性集。 這項作業會接著叫用控制項的`DoPropExchange`函式。 `DoPropExchange`可以呼叫`PX_VBXFontConvert` ，將 VBX 控制項的字型相關屬性（例如，"FontName"、"FontSize" 等）轉換成 OLE 控制項字型屬性的對應元件。
 
-`PX_VBXFontConvert` 應該只呼叫該控制項實際上正在轉換從 VBX 表單應用程式時。 例如: 
+`PX_VBXFontConvert`只有在實際從 VBX 表單應用程式轉換控制項時，才應該呼叫。 例如：
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]
 
 ## <a name="see-also"></a>另請參閱
 
-[巨集和全域](../../mfc/reference/mfc-macros-and-globals.md)
+[宏和全域](../../mfc/reference/mfc-macros-and-globals.md)

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - IPropertyPage2 ATL implementation
 - IPropertyPage2Impl class
 ms.assetid: e89fbe90-203a-47f0-a5de-23616697e1ce
-ms.openlocfilehash: bf76182242f7b76e3a2c18f85b72674e88afa737
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ec6cb2f4fc6931a1bec429068b558bf7ac1906e
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274772"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69495600"
 ---
 # <a name="ipropertypage2impl-class"></a>IPropertyPage2Impl 類別
 
-這個類別會實作`IUnknown`和繼承的預設實作[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)。
+這個類別`IUnknown`會執行並繼承[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)的預設實值。
 
 > [!IMPORTANT]
->  此類別和其成員不能在 Windows 執行階段中執行的應用程式。
+>  這個類別及其成員無法在 Windows 執行階段中執行的應用程式中使用。
 
 ## <a name="syntax"></a>語法
 
@@ -34,25 +34,25 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-您的類別，衍生自`IPropertyPage2Impl`。
+衍生自`IPropertyPage2Impl`的類別。
 
 ## <a name="members"></a>成員
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[IPropertyPage2Impl::EditProperty](#editproperty)|指定屬性的控制項將會接收焦點，啟動 [屬性] 頁面時。 ATL 實作會傳回 E_NOTIMPL。|
+|[IPropertyPage2Impl::EditProperty](#editproperty)|指定當屬性頁啟動時，哪一個屬性控制項將接收焦點。 ATL 執行會傳回 E_NOTIMPL。|
 
 ## <a name="remarks"></a>備註
 
-[IPropertyPage2](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage2)介面會擴充[IPropertyPage](/windows/desktop/api/ocidl/nn-ocidl-ipropertypage)加`EditProperty`方法。 這個方法可讓用戶端中，選取特定的屬性 屬性頁面物件。
+[IPropertyPage2](/windows/win32/api/ocidl/nn-ocidl-ipropertypage2)介面會藉 `EditProperty`由新增方法來擴充 [IPropertyPage](/windows/win32/api/ocidl/nn-ocidl-ipropertypage)。 這個方法可讓用戶端選取屬性頁物件中的特定屬性。
 
-類別`IPropertyPage2Impl`只會傳回 E_NOTIMPL 的`IPropertyPage2::EditProperty`。 不過，它所繼承的預設實作[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)並實作`IUnknown`資訊傳送給傾印裝置在偵錯組建。
+類別`IPropertyPage2Impl`只會傳回的`IPropertyPage2::EditProperty`E_NOTIMPL。 不過，它會繼承[IPropertyPageImpl](../../atl/reference/ipropertypageimpl-class.md)的預設執行，並`IUnknown`在偵錯工具中將資訊傳送至傾印裝置來實現。
 
-當您建立屬性頁時，您的類別通常會衍生自`IPropertyPageImpl`。 若要提供額外的支援`IPropertyPage2`，修改您的類別定義，並覆寫`EditProperty`方法。
+當您建立屬性頁時，您的類別通常是衍生`IPropertyPageImpl`自。 若要提供的額外支援`IPropertyPage2`，請修改您的類別定義， `EditProperty`並覆寫方法。
 
-**相關文章** [ATL 教學課程](../../atl/active-template-library-atl-tutorial.md)，[建立 ATL 專案](../../atl/reference/creating-an-atl-project.md)
+**相關文章**[Atl 教學](../../atl/active-template-library-atl-tutorial.md)課程，[建立 atl 專案](../../atl/reference/creating-an-atl-project.md)
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -64,11 +64,11 @@ class IPropertyPage2Impl : public IPropertyPageImpl<T>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atlctl.h
+**標頭：** atlctl。h
 
-##  <a name="editproperty"></a>  IPropertyPage2Impl::EditProperty
+##  <a name="editproperty"></a>IPropertyPage2Impl::EditProperty
 
-指定屬性的控制項將會接收焦點，啟動 [屬性] 頁面時。
+指定當屬性頁啟動時，哪一個屬性控制項將接收焦點。
 
 ```
 HRESULT EditProperty(DISPID dispID);
@@ -80,10 +80,10 @@ HRESULT EditProperty(DISPID dispID);
 
 ### <a name="remarks"></a>備註
 
-請參閱[IPropertyPage2::EditProperty](/windows/desktop/api/ocidl/nf-ocidl-ipropertypage2-editproperty) Windows SDK 中。
+請參閱 Windows SDK 中的[IPropertyPage2：： EditProperty](/windows/win32/api/ocidl/nf-ocidl-ipropertypage2-editproperty) 。
 
 ## <a name="see-also"></a>另請參閱
 
 [IPerPropertyBrowsingImpl 類別](../../atl/reference/iperpropertybrowsingimpl-class.md)<br/>
 [ISpecifyPropertyPagesImpl 類別](../../atl/reference/ispecifypropertypagesimpl-class.md)<br/>
-[類別概觀](../../atl/atl-class-overview.md)
+[類別總覽](../../atl/atl-class-overview.md)

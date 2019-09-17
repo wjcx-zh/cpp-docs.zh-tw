@@ -8,20 +8,20 @@ helpviewer_keywords:
 - item labels, tree controls
 - item labels
 ms.assetid: fe834107-1a25-4280-aced-774c11565805
-ms.openlocfilehash: c945556ff9236db1ca61b15f1072efdc2f49541f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16bb2bbe63eaf8ea4ce30040589d4a8a4cf4dfd3
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371947"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70741468"
 ---
 # <a name="tree-control-item-labels"></a>樹狀目錄控制項目標籤
 
-您通常會指定項目的標籤的文字時將項目加入至樹狀目錄控制項 ([CTreeCtrl](../mfc/reference/ctreectrl-class.md))。 `InsertItem`成員函式可以傳遞[TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema)結構，定義項目的屬性，包括字串，包含標籤的文字。 `InsertItem` 有數個多載，可以使用各種不同的參數組合來呼叫。
+您通常會在將專案加入至樹狀目錄控制項（[CTreeCtrl](../mfc/reference/ctreectrl-class.md)）時，指定專案標籤的文字。 成員函式可以傳遞定義專案屬性的 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw) 結構，包括包含標籤文字的字串。`InsertItem` `InsertItem`有數個多載，可以使用各種不同的參數組合來呼叫。
 
-樹狀目錄控制項配置記憶體來儲存每個項目;項目標籤的文字會佔用記憶體的重要部分。 如果您的應用程式會維護一份在樹狀結構控制項中的字串，您可以藉由指定減少控制項的記憶體需求**LPSTR_TEXTCALLBACK**中的值*pszText* 的成員`TV_ITEM`或*lpszItem*而不是將實際的字串傳遞至樹狀結構控制項中的參數。 使用**LPSTR_TEXTCALLBACK**會導致從應用程式擷取的項目標籤的文字，每當需要重新繪製的項目樹狀目錄控制項。 若要擷取文字，樹狀目錄控制項會傳送[TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo)通知訊息，其中包含的位址[2&AMP;GT;NMTVDISPINFO&AMP;LT;2](/windows/desktop/api/commctrl/ns-commctrl-tagtvdispinfoa)結構。 您必須藉由設定適當的成員，包含結構的回應。
+樹狀目錄控制項會配置記憶體來儲存每個專案;專案標籤的文字會佔用此記憶體的重要部分。 如果您的應用程式在樹狀目錄控制項中維護字串的複本，您`TV_ITEM`可以藉由在或*lpszItem*的*pszText*成員中指定**LPSTR_TEXTCALLBACK**值，來減少控制項的記憶體需求。參數，而不是將實際字串傳遞至樹狀目錄控制項。 使用**LPSTR_TEXTCALLBACK**會讓樹狀目錄控制項在每次需要重新繪製專案時，從應用程式抓取專案標籤的文字。 若要取出文字，樹狀目錄控制項會傳送[TVN_GETDISPINFO](/windows/win32/Controls/tvn-getdispinfo)通知訊息，其中包含[NMTVDISPINFO](/windows/win32/api/commctrl/ns-commctrl-nmtvdispinfow)結構的位址。 您必須藉由設定內含結構的適當成員來回應。
 
-樹狀目錄控制項中，會使用從建立樹狀結構控制項中的程序的堆積配置的記憶體。 樹狀結構控制項中的項目數目上限為基礎的堆積中可用的記憶體數量。 每個項目會使用 64 個位元組。
+樹狀目錄控制項使用從建立樹狀目錄控制項的進程堆積所配置的記憶體。 樹狀目錄控制項中的專案數目上限是以堆積中可用的記憶體數量為基礎。 每個專案都會使用64個位元組。
 
 ## <a name="see-also"></a>另請參閱
 

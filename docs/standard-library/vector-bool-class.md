@@ -24,7 +24,7 @@ ms.locfileid: "68452261"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; 類別
 
-類別是**bool**類型專案之 vector 的部分特製化。 [](../standard-library/vector-class.md) `vector<bool>` 它具有特殊化所使用之基礎類型的配置器, 它會藉由儲存每位一個**bool**值, 來提供空間優化。
+類別是 **bool** 類型專案之 [vector](../standard-library/vector-class.md) 的部分特製化。`vector<bool>` 它具有特殊化所使用之基礎類型的配置器，它會藉由儲存每位一個**bool**值，來提供空間優化。
 
 ## <a name="syntax"></a>語法
 
@@ -140,7 +140,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*採購*|`vector<bool>` 項目的位置。|
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>備註
 
-如果您使用 _ITERATOR_DEBUG_LEVEL 集進行編譯, 如果您嘗試存取向量界限以外的元素, 就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+如果您使用 _ITERATOR_DEBUG_LEVEL 集進行編譯，如果您嘗試存取向量界限以外的元素，就會發生執行階段錯誤。  如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 

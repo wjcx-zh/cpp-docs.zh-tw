@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleChangeIconDialog [MFC], GetIconicMetafile
 - COleChangeIconDialog [MFC], m_ci
 ms.assetid: 8d6e131b-ddbb-4dff-a432-f239efda8e3d
-ms.openlocfilehash: eb5fe38d7cf4058e8de31da3de39dca906671a85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cbf1137a15a9f86a6377980526e6d188f4d0a69
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396167"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504773"
 ---
 # <a name="colechangeicondialog-class"></a>COleChangeIconDialog 類別
 
@@ -43,25 +43,25 @@ class COleChangeIconDialog : public COleDialog
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|執行在對話方塊中指定的變更。|
-|[COleChangeIconDialog::DoModal](#domodal)|會顯示 OLE 2 變更圖示 對話方塊。|
-|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|取得與這個項目的圖示格式相關聯的中繼檔的控制代碼。|
+|[COleChangeIconDialog::DoChangeIcon](#dochangeicon)|執行對話方塊中所指定的變更。|
+|[COleChangeIconDialog::DoModal](#domodal)|顯示 [OLE 2 變更圖示] 對話方塊。|
+|[COleChangeIconDialog::GetIconicMetafile](#geticonicmetafile)|取得與這個專案的 iconic 表單相關聯之中繼檔的控制碼。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleChangeIconDialog::m_ci](#m_ci)|結構，以控制對話方塊的行為。|
+|[COleChangeIconDialog::m_ci](#m_ci)|結構，控制對話方塊的行為。|
 
 ## <a name="remarks"></a>備註
 
-建立類別的物件`COleChangeIconDialog`當您想要呼叫此對話方塊。 在後`COleChangeIconDialog`在建構物件，您可以使用[m_ci](#m_ci)結構初始化的值或在對話方塊中控制項的狀態。 `m_ci`結構屬於 OLEUICHANGEICON 的型別。 如需使用這個對話方塊類別的詳細資訊，請參閱 < [DoModal](#domodal)成員函式。
+當您想要呼叫`COleChangeIconDialog`此對話方塊時，請建立類別的物件。 在結構化物件之後，您可以使用 [m_ci](#m_ci) 結構，在對話方塊中初始化控制項的值或`COleChangeIconDialog`狀態。 `m_ci`結構的型別為 OLEUICHANGEICON。 如需使用此對話方塊類別的詳細資訊，請參閱[DoModal](#domodal)成員函式。
 
-如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。
+如需詳細資訊，請參閱 Windows SDK 中的[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)結構。
 
-如需有關特定 OLE 對話方塊的詳細資訊，請參閱[對話方塊，在 OLE 中](../../mfc/dialog-boxes-in-ole.md)。
+如需有關 OLE 特定對話方塊的詳細資訊，請參閱[ole 中](../../mfc/dialog-boxes-in-ole.md)的文章對話方塊。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -81,11 +81,11 @@ class COleChangeIconDialog : public COleDialog
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxodlgs.h
+**標頭：** afxodlgs。h
 
-##  <a name="colechangeicondialog"></a>  COleChangeIconDialog::COleChangeIconDialog
+##  <a name="colechangeicondialog"></a>COleChangeIconDialog::COleChangeIconDialog
 
-此函式會建構只`COleChangeIconDialog`物件。
+此函式只會`COleChangeIconDialog`對物件進行結構。
 
 ```
 explicit COleChangeIconDialog(
@@ -97,33 +97,33 @@ explicit COleChangeIconDialog(
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-要轉換之項目的點。
+指向要轉換的專案。
 
 *dwFlags*<br/>
-建立旗標，其中包含任意數目的下列值可讓您結合使用位元的 or 運算子：
+建立旗標，其中包含使用位 or 運算子結合的下列任何數目的值：
 
-- CIF_SELECTCURRENT 指定目前的選項按鈕將會選取一開始時呼叫對話方塊。 這是預設值。
+- CIF_SELECTCURRENT 指定在呼叫對話方塊時，一開始會選取目前的選項按鈕。 這是預設值。
 
-- CIF_SELECTDEFAULT 指定預設選項按鈕將成為最初選取對話方塊中呼叫時。
+- CIF_SELECTDEFAULT 指定在呼叫對話方塊時，一開始會選取 [預設] 選項按鈕。
 
-- CIF_SELECTFROMFILE 指定檔案中的選項按鈕將成為最初選取對話方塊中呼叫時。
+- CIF_SELECTFROMFILE 指定在呼叫對話方塊時，一開始會選取 [從檔案] 選項按鈕。
 
-- CIF_SHOWHELP 指定對話方塊中呼叫時，會顯示 [說明] 按鈕。
+- CIF_SHOWHELP 指定對話方塊被呼叫時，將會顯示 [說明] 按鈕。
 
-- CIF_USEICONEXE 可讓您指定可執行檔中指定，應該擷取圖示`szIconExe`欄位[m_ci](#m_ci)而不是擷取自型別。 這是適用於內嵌或連結至非 OLE 檔案。
+- CIF_USEICONEXE 指定應該從`szIconExe` [m_ci](#m_ci)欄位中指定的可執行檔中解壓縮圖示，而不是從類型抓取。 這適用于內嵌或連結至非 OLE 檔案。
 
 *pParentWnd*<br/>
-指向的父系或擁有者的視窗物件 (類型的`CWnd`) 所屬之對話方塊物件。 如果它是 NULL 時，對話方塊中的父視窗將回到主應用程式視窗。
+指向對話方塊物件所屬的父系或擁有者視窗物件`CWnd`（類型為）。 如果它是 Null，則對話方塊的父視窗將會設定為主應用程式視窗。
 
 ### <a name="remarks"></a>備註
 
-若要顯示的對話方塊，請呼叫[DoModal](#domodal)函式。
+若要顯示對話方塊，請呼叫[DoModal](#domodal)函式。
 
-如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。
+如需詳細資訊，請參閱 Windows SDK 中的[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)結構。
 
-##  <a name="dochangeicon"></a>  COleChangeIconDialog::DoChangeIcon
+##  <a name="dochangeicon"></a>COleChangeIconDialog：:D oChangeIcon
 
-呼叫此函式來變更表示在之後的對話方塊中選取一個項目圖示[DoModal](#domodal)傳回 IDOK。
+呼叫此函式可在[DoModal](#domodal)傳回 IDOK 之後，將代表專案的圖示變更為對話方塊中所選取的元素。
 
 ```
 BOOL DoChangeIcon(COleClientItem* pItem);
@@ -132,15 +132,15 @@ BOOL DoChangeIcon(COleClientItem* pItem);
 ### <a name="parameters"></a>參數
 
 *pItem*<br/>
-指向其圖示已變更的項目。
+指向其圖示正在變更的專案。
 
 ### <a name="return-value"></a>傳回值
 
-如果變更成功則為非零否則為 0。
+如果變更成功，則為非零值;否則為0。
 
-##  <a name="domodal"></a>  COleChangeIconDialog::DoModal
+##  <a name="domodal"></a>COleChangeIconDialog：:D oModal
 
-呼叫此函式可顯示 OLE 變更圖示 對話方塊。
+呼叫此函式以顯示 [OLE 變更圖示] 對話方塊。
 
 ```
 virtual INT_PTR DoModal();
@@ -148,23 +148,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>傳回值
 
-對話方塊中的完成狀態。 下列其中一個值：
+對話方塊的完成狀態。 下列其中一個值：
 
-- 如果對話方塊已成功顯示，IDOK。
+- 如果已成功顯示對話方塊，則 IDOK。
 
-- 如果使用者已取消對話方塊，IDCANCEL。
+- 如果使用者取消對話方塊，則 IDCANCEL。
 
-- IDABORT 發生錯誤。 如果傳回 IDABORT，呼叫`COleDialog::GetLastError`成員函式，以取得有關所發生的錯誤類型的詳細資訊。 如需可能的錯誤的清單，請參閱 < [OleUIChangeIcon](/windows/desktop/api/oledlg/nf-oledlg-oleuichangeicona) Windows SDK 中的函式。
+- 如果發生錯誤，則 IDABORT。 如果傳回 IDABORT，請呼叫`COleDialog::GetLastError`成員函式，以取得所發生錯誤類型的詳細資訊。 如需可能錯誤的清單，請參閱 Windows SDK 中的[OleUIChangeIcon](/windows/win32/api/oledlg/nf-oledlg-oleuichangeiconw)函數。
 
 ### <a name="remarks"></a>備註
 
-如果您想要設定的成員初始化各種不同的對話方塊控制項[m_ci](#m_ci)結構，您應該執行這項操作之前先呼叫`DoModal`，但在建構對話方塊物件之後。
+如果您想要藉由設定[m_ci](#m_ci)結構的成員來初始化各種對話方塊控制項，您應該在呼叫`DoModal`之前執行此動作，但在構造對話方塊物件之後。
 
-如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式來擷取 [設定] 或 [已由使用者輸入] 對話方塊中的資訊。
+如果`DoModal`傳回 IDOK，您可以呼叫其他成員函式，以抓取使用者在對話方塊中輸入的設定或資訊。
 
-##  <a name="geticonicmetafile"></a>  COleChangeIconDialog::GetIconicMetafile
+##  <a name="geticonicmetafile"></a>COleChangeIconDialog::GetIconicMetafile
 
-呼叫此函式可取得包含選取的項目圖示的層面之中繼檔的控制代碼。
+呼叫此函式可取得中繼檔的控制碼，其中包含所選取專案的 iconic 層面。
 
 ```
 HGLOBAL GetIconicMetafile() const;
@@ -172,11 +172,11 @@ HGLOBAL GetIconicMetafile() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果已關閉對話方塊，選擇包含 [新增] 圖示，圖示的層面之中繼檔的控制代碼 **[確定]**; 否則對話方塊顯示之前為它的圖示。
+包含新圖示之 iconic 層面的中繼檔控制碼（如果已選擇 **[確定**] 關閉對話方塊）。否則，顯示對話方塊之前的圖示。
 
-##  <a name="m_ci"></a>  COleChangeIconDialog::m_ci
+##  <a name="m_ci"></a>COleChangeIconDialog::m_ci
 
-類型 OLEUICHANGEICON 結構用來控制 [變更圖示] 對話方塊中的行為。
+OLEUICHANGEICON 類型的結構，用來控制 [變更圖示] 對話方塊的行為。
 
 ```
 OLEUICHANGEICON m_ci;
@@ -184,9 +184,9 @@ OLEUICHANGEICON m_ci;
 
 ### <a name="remarks"></a>備註
 
-直接或透過成員函式，則可以修改此結構的成員。
+這個結構的成員可以直接或透過成員函式來修改。
 
-如需詳細資訊，請參閱 < [OLEUICHANGEICON](/windows/desktop/api/oledlg/ns-oledlg-tagoleuichangeicona) Windows SDK 中的結構。
+如需詳細資訊，請參閱 Windows SDK 中的[OLEUICHANGEICON](/windows/win32/api/oledlg/ns-oledlg-oleuichangeiconw)結構。
 
 ## <a name="see-also"></a>另請參閱
 

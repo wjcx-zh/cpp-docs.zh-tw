@@ -5,20 +5,20 @@ helpviewer_keywords:
 - connection points [C++], examples
 - examples [ATL]
 ms.assetid: a49721b7-f308-43de-8868-f662a94bc81a
-ms.openlocfilehash: 3113637a3f777a56bc0b0994203ce709fbc189d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f33364cee65031c358fb546312f3fe2b7ae854d3
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223338"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491800"
 ---
 # <a name="atl-connection-point-example"></a>ATL 連接點範例
 
-此範例會示範支援的物件[IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink)為外寄的介面：
+這個範例會顯示支援[IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink)作為傳出介面的物件：
 
 [!code-cpp[NVC_ATL_Windowing#84](../atl/codesnippet/cpp/atl-connection-point-example_1.h)]
 
-指定時`IPropertyNotifySink`傳出的介面，您可以使用類別[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)而不是`IConnectionPointImpl`。 例如: 
+當指定`IPropertyNotifySink`作為傳出介面時，您可以使用類別 `IConnectionPointImpl`[IPropertyNotifySinkCP](../atl/reference/ipropertynotifysinkcp-class.md)，而不是。 例如：
 
 [!code-cpp[NVC_ATL_Windowing#85](../atl/codesnippet/cpp/atl-connection-point-example_2.h)]
 

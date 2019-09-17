@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2778
 ms.assetid: b24cb732-2914-42cc-8928-e2d87b393428
-ms.openlocfilehash: 56c316ac971d0bdd1a0ca27ef8d4282acbe24779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 98b5bf0a1315236f3ce96fd4b8c140ce1ab70a9f
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227672"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501041"
 ---
 # <a name="compiler-error-c2778"></a>編譯器錯誤 C2778
 
-__declspec 格式不正確的 GUID
+__declspec （uuid （））中格式不正確的 GUID
 
-不正確的 GUID 提供給[uuid](../../cpp/uuid-cpp.md)擴充的屬性。
+為[uuid](../../cpp/uuid-cpp.md)擴充屬性提供了不正確的 GUID。
 
-GUID 必須是十六進位數字，以下列格式的字串：
+GUID 必須是十六進位數位的字串，其格式如下：
 
 ```
 // C2778a.cpp
@@ -28,9 +28,9 @@ struct __declspec(uuid("00000000-0000-0000-0000-000000000000")) A {};
 struct __declspec(uuid("{00000000-0000-0000-0000-000000000000}")) B{};
 ```
 
-`uuid`擴充的屬性會接受字串辨識[CLSIDFromString](/windows/desktop/api/combaseapi/nf-combaseapi-clsidfromstring)、 使用或不含大括號分隔符號。
+擴充屬性會接受 [CLSIDFromString](/windows/win32/api/combaseapi/nf-combaseapi-clsidfromstring) 所辨識的字串，並包含或不含大括弧分隔符號。`uuid`
 
-下列範例會產生 C2778:
+下列範例會產生 C2778：
 
 ```
 // C2778b.cpp

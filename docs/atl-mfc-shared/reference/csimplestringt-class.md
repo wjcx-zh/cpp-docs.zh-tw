@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252630"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491438"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT 類別
 
@@ -57,13 +57,13 @@ class CSimpleStringT
 ### <a name="parameters"></a>參數
 
 *BaseType*<br/>
-字元類別的型別字串。 可以是下列其中一項：
+字串類別的字元類型。 可以是下列其中一項：
 
-- **char** （適用於 ANSI 字元字串）。
+- **char**（適用于 ANSI 字元字串）。
 
-- **wchar_t** （適用於 Unicode 字元字串）。
+- **wchar_t**（適用于 Unicode 字元字串）。
 
-- TCHAR （適用於 ANSI 和 Unicode 字元字串）。
+- TCHAR （適用于 ANSI 和 Unicode 字元字串）。
 
 ## <a name="members"></a>成員
 
@@ -71,65 +71,65 @@ class CSimpleStringT
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleStringT::PCXSTR](#pcxstr)|常數字串指標。|
+|[CSimpleStringT::PCXSTR](#pcxstr)|常數位串的指標。|
 |[CSimpleStringT::PXSTR](#pxstr)|字串的指標。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[CSimpleStringT::CSimpleStringT](#ctor)|建構`CSimpleStringT`以各種方式的物件。|
+|[CSimpleStringT::CSimpleStringT](#ctor)|以`CSimpleStringT`各種方式來構造物件。|
 |[CSimpleStringT::~CSimpleStringT](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CSimpleStringT::Append](#append)|附加`CSimpleStringT`物件的現有`CSimpleStringT`物件。|
-|[CSimpleStringT::AppendChar](#appendchar)|將字元附加至現有`CSimpleStringT`物件。|
-|[CSimpleStringT::CopyChars](#copychars)|將字元複製到另一個字串。|
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|將字元複製到緩衝區與重疊的另一個字串。|
-|[CSimpleStringT::Empty](#empty)|會強制將長度為零的字串。|
-|[CSimpleStringT::FreeExtra](#freeextra)|釋放先前由字串物件配置任何額外的記憶體。|
-|[CSimpleStringT::GetAllocLength](#getalloclength)|擷取的配置的長度`CSimpleStringT`物件。|
-|[CSimpleStringT::GetAt](#getat)|傳回指定位置處的字元。|
-|[CSimpleStringT::GetBuffer](#getbuffer)|讓指標回到中的字元`CSimpleStringT`。|
-|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|讓指標回到中的字元`CSimpleStringT`、 截斷成指定的長度。|
-|[CSimpleStringT::GetLength](#getlength)|傳回的字元數`CSimpleStringT`物件。|
-|[CSimpleStringT::GetManager](#getmanager)|擷取的記憶體管理員`CSimpleStringT`物件。|
-|[CSimpleStringT::GetString](#getstring)|擷取的字元字串|
-|[CSimpleStringT::IsEmpty](#isempty)|測試是否`CSimpleStringT`物件不包含任何字元。|
-|[CSimpleStringT::LockBuffer](#lockbuffer)|停用參考計數，並保護在緩衝區中的字串。|
-|[CSimpleStringT::Preallocate](#preallocate)|會有特定的記憶體數量配置字元緩衝區。|
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|釋放控制項所傳回的緩衝區`GetBuffer`。|
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|釋放控制項所傳回的緩衝區`GetBuffer`。|
-|[CSimpleStringT::SetAt](#setat)|設定中指定位置的字元。|
-|[CSimpleStringT::SetManager](#setmanager)|設定的記憶體管理員`CSimpleStringT`物件。|
-|[CSimpleStringT::SetString](#setstring)|設定字串`CSimpleStringT`物件。|
-|[CSimpleStringT::StringLength](#stringlength)|指定的字串中傳回字元的數。|
-|[CSimpleStringT::Truncate](#truncate)|會截斷至指定之長度的字串。|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|可讓參考計數，並釋放緩衝區中的字串。|
+|[CSimpleStringT::Append](#append)|將物件附加至現有`CSimpleStringT`的物件。 `CSimpleStringT`|
+|[CSimpleStringT::AppendChar](#appendchar)|將字元附加至現有`CSimpleStringT`的物件。|
+|[CSimpleStringT::CopyChars](#copychars)|將一個或多個字元複製到另一個字串。|
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|將一個或多個字元複製到緩衝區重迭的另一個字串。|
+|[CSimpleStringT::Empty](#empty)|強制字串長度為零。|
+|[CSimpleStringT::FreeExtra](#freeextra)|釋放字串物件先前配置的任何額外記憶體。|
+|[CSimpleStringT::GetAllocLength](#getalloclength)|抓取`CSimpleStringT`物件的配置長度。|
+|[CSimpleStringT::GetAt](#getat)|傳回指定位置的字元。|
+|[CSimpleStringT::GetBuffer](#getbuffer)|傳回中`CSimpleStringT`之字元的指標。|
+|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|傳回中`CSimpleStringT`字元的指標，截斷為指定的長度。|
+|[CSimpleStringT::GetLength](#getlength)|傳回`CSimpleStringT`物件中的字元數。|
+|[CSimpleStringT::GetManager](#getmanager)|抓取`CSimpleStringT`物件的記憶體管理員。|
+|[CSimpleStringT::GetString](#getstring)|抓取字元字串|
+|[CSimpleStringT::IsEmpty](#isempty)|測試`CSimpleStringT`物件是否不包含任何字元。|
+|[CSimpleStringT::LockBuffer](#lockbuffer)|停用參考計數，並保護緩衝區中的字串。|
+|[CSimpleStringT::Preallocate](#preallocate)|配置字元緩衝區的特定記憶體數量。|
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|釋放所傳回`GetBuffer`之緩衝區的控制權。|
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|釋放所傳回`GetBuffer`之緩衝區的控制權。|
+|[CSimpleStringT::SetAt](#setat)|設定指定位置的字元。|
+|[CSimpleStringT::SetManager](#setmanager)|設定`CSimpleStringT`物件的記憶體管理員。|
+|[CSimpleStringT::SetString](#setstring)|設定`CSimpleStringT`物件的字串。|
+|[CSimpleStringT::StringLength](#stringlength)|傳回指定之字串中的字元數。|
+|[CSimpleStringT::Truncate](#truncate)|將字串截斷為指定的長度。|
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|啟用參考計數，並釋放緩衝區中的字串。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接存取儲存在字元`CSimpleStringT`為 C 樣式字串的物件。|
-|[CSimpleStringT::operator\[\]](#operator_at)|傳回指定位置處的字元 — 運算子替代`GetAt`。|
-|[CSimpleStringT::operator +=](#operator_add_eq)|串連至現有的字串結尾的新字串。|
-|[CSimpleStringT::operator =](#operator_eq)|指派新值到`CSimpleStringT`物件。|
+|[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|直接存取以 C 樣式字串`CSimpleStringT`儲存在物件中的字元。|
+|[CSimpleStringT::operator\[\]](#operator_at)|傳回指定位置的字元-的運算子替代`GetAt`。|
+|[CSimpleStringT::operator +=](#operator_add_eq)|將新字串串連至現有字串的結尾。|
+|[CSimpleStringT::operator =](#operator_eq)|將新值指派給`CSimpleStringT`物件。|
 
 ### <a name="remarks"></a>備註
 
-`CSimpleStringT` 支援的視覺效果的各種字串類別的基底類別C++。 它會提供記憶體管理的字串物件，以及基本的緩衝區操作的最小的支援。 對於更進階的字串物件，請參閱[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)。
+`CSimpleStringT`是視覺效果C++支援的各種字串類別的基類。 它針對字串物件和基本緩衝區操作的記憶體管理提供最低的支援。 如需更先進的字串物件，請參閱[CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlsimpstr.h
+**標頭：** atlsimpstr。h
 
 ## <a name="append"></a> CSimpleStringT::Append
 
-附加`CSimpleStringT`物件的現有`CSimpleStringT`物件。
+將物件附加至現有`CSimpleStringT`的物件。 `CSimpleStringT`
 
 ### <a name="syntax"></a>語法
 
@@ -142,17 +142,17 @@ void Append(PCXSTR pszSrc);
 #### <a name="parameters"></a>參數
 
 *strSrc*<br/>
-`CSimpleStringT`来附加的物件。
+要`CSimpleStringT`附加的物件。
 
 *pszSrc*<br/>
-字串，包含要附加的字元指標。
+包含要附加之字元的字串指標。
 
 *nLength*<br/>
 要附加的字元數。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來附加的現有`CSimpleStringT`物件與另一個`CSimpleStringT`物件。
+呼叫這個方法，將現有`CSimpleStringT`的物件附加至另一個`CSimpleStringT`物件。
 
 ### <a name="example"></a>範例
 
@@ -168,7 +168,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 
 ##  <a name="appendchar"></a> CSimpleStringT::AppendChar
 
-將字元附加至現有`CSimpleStringT`物件。
+將字元附加至現有`CSimpleStringT`的物件。
 
 ### <a name="syntax"></a>語法
 
@@ -183,11 +183,11 @@ void AppendChar(XCHAR ch);
 
 ### <a name="remarks"></a>備註
 
-呼叫此函式可將指定的字元附加至結尾的現有`CSimpleStringT`物件。
+呼叫此函式可將指定的字元附加至現有`CSimpleStringT`物件的結尾。
 
 ##  <a name="copychars"></a> CSimpleStringT::CopyChars
 
-將複製的字元或字元`CSimpleStringT`物件。
+將一個或多個字元複製`CSimpleStringT`到物件。
 
 ### <a name="syntax"></a>語法
 
@@ -201,17 +201,17 @@ static void CopyChars(
 #### <a name="parameters"></a>參數
 
 *pchDest*<br/>
-字元字串指標。
+字元字串的指標。
 
 *pchSrc*<br/>
-字串，包含要複製的字元指標。
+包含要複製之字元的字串指標。
 
 *nChars*<br/>
-數目*pchSrc*来複製的字元。
+要複製的*pchSrc*字元數。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來複製的字元*pchSrc*要*pchDest*字串。
+呼叫這個方法，將字元從*pchSrc*複製到*pchDest*字串。
 
 ### <a name="example"></a>範例
 
@@ -227,7 +227,7 @@ _tprintf_s(_T("%s\n"), str);
 
 ##  <a name="copycharsoverlapped"></a>  CSimpleStringT::CopyCharsOverlapped
 
-將複製的字元或字元`CSimpleStringT`物件。
+將一個或多個字元複製`CSimpleStringT`到物件。
 
 ### <a name="syntax"></a>語法
 
@@ -241,21 +241,21 @@ static void CopyCharsOverlapped(
 #### <a name="parameters"></a>參數
 
 *pchDest*<br/>
-字元字串指標。
+字元字串的指標。
 
 *pchSrc*<br/>
-字串，包含要複製的字元指標。
+包含要複製之字元的字串指標。
 
 *nChars*<br/>
-數目*pchSrc*来複製的字元。
+要複製的*pchSrc*字元數。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來複製的字元*pchSrc*要*pchDest*字串。 不同於`CopyChars`，`CopyCharsOverlapped`提供安全的方法，來複製可能會重疊的字元緩衝區。
+呼叫這個方法，將字元從*pchSrc*複製到*pchDest*字串。 不同`CopyChars`于`CopyCharsOverlapped` ，會提供從可能會重迭的字元緩衝區複製的安全方法。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CSimpleStringT::CopyChars](#copychars)，或 原始碼`CSimpleStringT::SetString`（位於 atlsimpstr.h）。
+請參閱[CSimpleStringT：： CopyChars](#copychars)的範例，或的原始程式碼`CSimpleStringT::SetString` （位於 atlsimpstr 中）。
 
 ##  <a name="ctor"></a>  CSimpleStringT::CSimpleStringT
 
@@ -273,27 +273,27 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 #### <a name="parameters"></a>參數
 
 *strSrc*<br/>
-將現有`CSimpleStringT`要複製到這個物件`CSimpleStringT`物件。
+要複製`CSimpleStringT`到這個`CSimpleStringT`物件中的現有物件。
 
 *pchSrc*<br/>
-長度的字元陣列的指標*nLength*，未終止的 null。
+*NLength*長度的字元陣列指標，而不是以 null 結束。
 
 *pszSrc*<br/>
-要複製到這個 null 結尾字串`CSimpleStringT`物件。
+要複製到這個`CSimpleStringT`物件中以 null 結束的字串。
 
 *nLength*<br/>
-中的字元數計數`pch`。
+中`pch`的字元數計數。
 
 *pStringMgr*<br/>
-指向的記憶體管理員的`CSimpleStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CSimpleStringT`，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
+`CSimpleStringT`物件之記憶體管理員的指標。 如需有關`IAtlStringMgr`和的`CSimpleStringT`記憶體管理的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
 
 ### <a name="remarks"></a>備註
 
-建構新`CSimpleStringT`物件。 因為建構函式會將輸入的資料複製到新配置的儲存體，可能會造成記憶體例外狀況。
+建立新`CSimpleStringT`的物件。 因為這些函式會將輸入資料複製到新配置的儲存體，所以可能會產生記憶體例外狀況。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用`CSimpleStringT::CSimpleStringT`使用 ATL **typedef** `CSimpleString`。 `CSimpleString` 是常用的類別樣板特製化`CSimpleStringT`。
+下列範例示範如何使用 ATL `CSimpleStringT::CSimpleStringT` **typedef** `CSimpleString`來使用。 `CSimpleString`是類別`CSimpleStringT`樣板常用的特製化。
 
 ```cpp
 CSimpleString s1(pMgr);
@@ -312,7 +312,7 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 
 ##  <a name="empty"></a>  CSimpleStringT::Empty
 
-使這個`CSimpleStringT`物件為空字串，並釋放與適當的記憶體。
+使此`CSimpleStringT`物件成為空字串，並視需要釋放記憶體。
 
 ### <a name="syntax"></a>語法
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[字串：CString 例外狀況清除](../cstring-exception-cleanup.md)。
+如需詳細資訊， [請參閱字串：CString 例外狀況](../cstring-exception-cleanup.md)清除。
 
 ### <a name="example"></a>範例
 
@@ -335,7 +335,7 @@ ASSERT(s.IsEmpty());
 
 ##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
 
-釋放先前配置的字串，但不再需要任何額外的記憶體。
+釋放先前由字串配置但不再需要的任何額外記憶體。
 
 ### <a name="syntax"></a>語法
 
@@ -345,7 +345,7 @@ void FreeExtra();
 
 ### <a name="remarks"></a>備註
 
-這應該會減少字串物件所耗用的記憶體額外負荷。 方法會重新配置所傳回的實際長度的緩衝區[GetLength](#getlength)。
+這應該會降低 string 物件所耗用的記憶體額外負荷。 方法會將緩衝區重新配置為[GetLength](#getlength)所傳回的確切長度。
 
 ### <a name="example"></a>範例
 
@@ -386,7 +386,7 @@ Alloc length is 15, String length is 15
 
 ##  <a name="getalloclength"></a>  CSimpleStringT::GetAllocLength
 
-擷取的配置的長度`CSimpleStringT`物件。
+抓取`CSimpleStringT`物件的配置長度。
 
 ### <a name="syntax"></a>語法
 
@@ -400,11 +400,11 @@ int GetAllocLength() const throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來判斷這個配置的字元數`CSimpleStringT`物件。 請參閱[FreeExtra](#freeextra)呼叫此函式的範例。
+呼叫這個方法，以判斷配置給此`CSimpleStringT`物件的字元數。 如需呼叫此函式的範例，請參閱[FreeExtra](#freeextra) 。
 
 ##  <a name="getat"></a>  CSimpleStringT::GetAt
 
-傳回一個字元，從`CSimpleStringT`物件。
+從`CSimpleStringT`物件傳回一個字元。
 
 ### <a name="syntax"></a>語法
 
@@ -415,15 +415,15 @@ XCHAR GetAt(int iChar) const;
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
-以零為起始的索引中的字元`CSimpleStringT`物件。 *IChar*參數必須是大於或等於 0，且所傳回的值大於或等於[GetLength](#getlength)。 否則，`GetAt`會產生例外狀況。
+`CSimpleStringT`物件中字元以零為基底的索引。 *IChar*參數必須大於或等於0，且小於[GetLength](#getlength)所傳回的值。 否則， `GetAt`將會產生例外狀況。
 
 ### <a name="return-value"></a>傳回值
 
-`XCHAR` ，包含在字串中指定位置處的字元。
+`XCHAR` ，包含字串中位於指定位置的字元。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法以傳回所指定的一個字元*iChar*。 多載註標 (**[]**) 運算子是的方便別名`GetAt`。 不會產生例外狀況，使用 null 結束字元是可定址`GetAt`。 不過，它就不會計算由`GetLength`，而傳回的值為 0。
+呼叫這個方法，以傳回*iChar*所指定的一個字元。 多載的注標（ **[]** ）運算子是的方便`GetAt`別名。 Null 結束字元可以定址，而不需要使用`GetAt`產生例外狀況。 不過，它不是由`GetLength`計算，而且傳回的值是0。
 
 ### <a name="example"></a>範例
 
@@ -436,7 +436,7 @@ ASSERT(s.GetAt(2) == _T('c'));
 
 ##  <a name="getbuffer"></a>  CSimpleStringT::GetBuffer
 
-傳回的內部字元緩衝區的指標`CSimpleStringT`物件。
+傳回`CSimpleStringT`物件之內部字元緩衝區的指標。
 
 ### <a name="syntax"></a>語法
 
@@ -448,27 +448,27 @@ PXSTR GetBuffer();
 #### <a name="parameters"></a>參數
 
 *nMinBufferLength*<br/>
-字元緩衝區可以容納的字元數目下限。 此值不包含 null 結束字元的空間。
+字元緩衝區可以保存的字元數下限。 這個值不包含 null 結束字元的空間。
 
-如果*nMinBufferLength*大於目前的緩衝區長度`GetBuffer`終結目前的緩衝區，它取代成所要求的大小的緩衝區和重設為零的物件參考計數。 如果您先前已經呼叫[LockBuffer](#lockbuffer)在這個緩衝區中，您會喪失緩衝區鎖定。
+如果*nMinBufferLength*大於目前緩衝區的長度， `GetBuffer`則會終結目前的緩衝區，以所要求大小的緩衝區取代它，並將物件參考計數重設為零。 如果您先前已在此緩衝區上呼叫[LockBuffer](#lockbuffer) ，就會遺失緩衝區鎖定。
 
 ### <a name="return-value"></a>傳回值
 
-`PXSTR`的物件 （以 null 終止） 的字元緩衝區的指標。
+物件的（以 null 終止）字元緩衝區的指標。`PXSTR`
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法以傳回的緩衝區內容`CSimpleStringT`物件。 傳回`PXSTR`不是常數，因此可讓您直接修改`CSimpleStringT`內容。
+呼叫這個方法，以傳回`CSimpleStringT`物件的緩衝區內容。 傳回`PXSTR`的不是常數，因此允許直接`CSimpleStringT`修改內容。
 
-如果您使用所傳回的指標`GetBuffer`若要變更字串內容，您必須呼叫[ReleaseBuffer](#releasebuffer)您可以使用任何其他之前`CSimpleStringT`成員方法。
+如果您使用所傳回`GetBuffer`的指標來變更字串內容，則必須先呼叫[ReleaseBuffer](#releasebuffer) ，然後再使用其他`CSimpleStringT`任何成員方法。
 
-所傳回的地址`GetBuffer`可能不是有效的呼叫之後`ReleaseBuffer`因為額外`CSimpleStringT`作業可能會導致`CSimpleStringT`重新配置的緩衝區。 如果您未變更的長度不重新配置緩衝區`CSimpleStringT`。
+在`GetBuffer` `CSimpleStringT` 呼叫之後`CSimpleStringT` ，所傳回的位址可能不是有效的，因為其他作業可能會導致重新配置緩衝區。`ReleaseBuffer` 如果您未變更的長度`CSimpleStringT`，則不會重新配置緩衝區。
 
-緩衝區記憶體會自動釋放時`CSimpleStringT`物件被終結。
+當`CSimpleStringT`物件終結時，就會自動釋放緩衝區記憶體。
 
-如果您追蹤的字串長度自己，您應該不會附加結束的 null 字元。 不過，您必須指定最終字串長度為當您釋放緩衝區與`ReleaseBuffer`。 如果您不要附加終止 null 字元，您應該傳遞為-1 （預設值） 的長度。 `ReleaseBuffer` 接著會判斷緩衝區的長度。
+如果您自行追蹤字串長度，則不應附加終止的 null 字元。 不過，當您釋放緩衝區`ReleaseBuffer`時，必須指定最後的字串長度。 如果您確實附加結束的 null 字元，則應該傳遞長度為-1 （預設值）。 `ReleaseBuffer`然後決定緩衝區長度。
 
-如果沒有記憶體不足，無法滿足`GetBuffer`要求時，此方法會擲回 CMemoryException *。
+如果記憶體不足，無法滿足`GetBuffer`要求，這個方法會擲回 CMemoryException *。
 
 ### <a name="example"></a>範例
 
@@ -485,7 +485,7 @@ s.ReleaseBuffer();
 
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
 
-傳回的內部字元緩衝區的指標`CSimpleStringT`物件，截斷或增加它的長度，如有必要，必須完全符合指定的長度*nLength*。
+傳回`CSimpleStringT`物件之內部字元緩衝區的指標，如果需要完全符合*nLength*中指定的長度，則會截斷或成長其長度。
 
 ### <a name="syntax"></a>語法
 
@@ -496,31 +496,31 @@ PXSTR GetBufferSetLength(int nLength);
 #### <a name="parameters"></a>參數
 
 *nLength*<br/>
-實際大小`CSimpleStringT`以字元為單位的字元緩衝區。
+`CSimpleStringT`字元緩衝區的確切大小（以字元為單位）。
 
 ### <a name="return-value"></a>傳回值
 
-A`PXSTR`的物件 （以 null 終止） 的字元緩衝區的指標。
+物件`PXSTR`的（以 null 終止）字元緩衝區的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來擷取指定的內部緩衝區的長度`CSimpleStringT`物件。 傳回`PXSTR`指標不是**const** ，因此可讓您直接修改`CSimpleStringT`內容。
+呼叫這個方法，以抓取`CSimpleStringT`物件內部緩衝區的指定長度。 傳回`PXSTR`的指標不是**const** ，因此`CSimpleStringT`允許直接修改內容。
 
-如果您使用所傳回的指標[GetBufferSetLength](#getbuffersetlength)若要變更字串內容，呼叫`ReleaseBuffer`更新的內部狀態`CsimpleStringT`您可以使用任何其他之前`CSimpleStringT`方法。
+如果您使用[GetBufferSetLength](#getbuffersetlength)所傳回的指標來變更字串內容，請在`ReleaseBuffer`使用任何其他`CSimpleStringT`方法`CsimpleStringT`之前，呼叫來更新的內部狀態。
 
-所傳回的地址`GetBufferSetLength`可能不是有效的呼叫之後`ReleaseBuffer`因為額外`CSimpleStringT`作業可能會導致`CSimpleStringT`重新配置的緩衝區。 如果您不要變更長度的緩衝區不重新指派`CSimpleStringT`。
+在`GetBufferSetLength` `CSimpleStringT` 呼叫之後`CSimpleStringT` ，所傳回的位址可能不是有效的，因為其他作業可能會導致重新配置緩衝區。`ReleaseBuffer` 如果您未變更的長度`CSimpleStringT`，則不會重新指派緩衝區。
 
-緩衝區記憶體會自動釋放時`CSimpleStringT`物件被終結。
+當`CSimpleStringT`物件終結時，就會自動釋放緩衝區記憶體。
 
-如果您追蹤的字串長度自行，不會附加結束的 null 字元。 當您釋放緩衝區使用時，您必須指定最終字串長度`ReleaseBuffer`。 如果您不要附加結束的 null 字元，當您呼叫`ReleaseBuffer`，將-1 （預設值） 傳遞至長度`ReleaseBuffer`，和`ReleaseBuffer`將會執行`strlen`来判斷其長度的緩衝區上。
+如果您自行追蹤字串長度，請勿附加終止的 null 字元。 當您使用`ReleaseBuffer`釋放緩衝區時，必須指定最後的字串長度。 如果您在`ReleaseBuffer`呼叫時附加了終止的 null 字元，請將`ReleaseBuffer`長度的傳遞給-1 （預設值） `strlen` ， `ReleaseBuffer`然後在緩衝區上執行，以判斷其長度。
 
-如需有關參考計數的詳細資訊，請參閱下列文章：
+如需參考計數的詳細資訊，請參閱下列文章：
 
-- [管理透過參考計數的物件存留期](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK 中。
+- 透過 Windows SDK 中的[參考計數來管理物件存留期](/windows/win32/com/managing-object-lifetimes-through-reference-counting)。
 
-- [實作參考計數](/windows/desktop/com/implementing-reference-counting)Windows SDK 中。
+- 在 Windows SDK 中[執行參考計數](/windows/win32/com/implementing-reference-counting)。
 
-- [規則管理參考計數](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK 中。
+- 在 Windows SDK 中[管理參考計數的規則](/windows/win32/com/rules-for-managing-reference-counts)。
 
 ### <a name="example"></a>範例
 
@@ -542,7 +542,7 @@ ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 
 ##  <a name="getlength"></a>  CSimpleStringT::GetLength
 
-傳回的字元數`CSimpleStringT`物件。
+傳回`CSimpleStringT`物件中的字元數。
 
 ### <a name="syntax"></a>語法
 
@@ -552,17 +552,17 @@ int GetLength() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-在字串中字元計數。
+字串中的字元計數。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來傳回物件中的字元數。 計數不包括 null 結束字元。
+呼叫這個方法，以傳回物件中的字元數。 此計數不包括 null 結束字元。
 
-針對多位元組字元集 (MBCS)，`GetLength`一個多位元組字元中的每個 8 位元字元; 也就是潛在客戶和後隨位元組會被視為兩個位元組的計數。 請參閱[FreeExtra](#freeextra)呼叫此函式的範例。
+針對多位元組字元集（MBCS）， `GetLength`會計算每8位字元; 也就是說，一個多位元組字元中的潛在客戶和後隨位元組會視為兩個位元組。 如需呼叫此函式的範例，請參閱[FreeExtra](#freeextra) 。
 
 ##  <a name="getmanager"></a>  CSimpleStringT::GetManager
 
-擷取的記憶體管理員`CSimpleStringT`物件。
+抓取`CSimpleStringT`物件的記憶體管理員。
 
 ### <a name="syntax"></a>語法
 
@@ -572,15 +572,15 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-指標，memory manager`CSimpleStringT`物件。
+`CSimpleStringT`物件之記憶體管理員的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來擷取記憶體管理員所使用`CSimpleStringT`物件。 如需有關記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
+呼叫這個方法，以取出`CSimpleStringT`物件所使用的記憶體管理員。 如需記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
 
 ##  <a name="getstring"></a>  CSimpleStringT::GetString
 
-擷取的字元字串。
+抓取字元字串。
 
 ### <a name="syntax"></a>語法
 
@@ -590,14 +590,14 @@ PCXSTR GetString() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-以 null 結束的字元字串指標。
+以 null 結束之字元字串的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來擷取相關聯的字元字串`CSimpleStringT`物件。
+呼叫這個方法，以取出與`CSimpleStringT`物件相關聯的字元字串。
 
 > [!NOTE]
->  傳回`PCXSTR`指標**const** ，且不允許直接修改`CSimpleStringT`內容。
+>  傳回`PCXSTR`的指標是**const** ，不`CSimpleStringT`允許直接修改內容。
 
 ### <a name="example"></a>範例
 
@@ -611,7 +611,7 @@ _tprintf_s(_T("%s"), str.GetString());
 
 ##  <a name="isempty"></a>  CSimpleStringT::IsEmpty
 
-測試`CSimpleStringT`空白條件的物件。
+測試空白條件的物件。`CSimpleStringT`
 
 ### <a name="syntax"></a>語法
 
@@ -621,11 +621,11 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果為 true`CSimpleStringT`物件具有 0 長度，否則為 FALSE。
+如果`CSimpleStringT`物件具有0長度，則傳回 TRUE，否則傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來判斷物件是否包含空字串。
+呼叫這個方法，以判斷物件是否包含空字串。
 
 ### <a name="example"></a>範例
 
@@ -638,7 +638,7 @@ ASSERT(s.IsEmpty());
 
 ##  <a name="lockbuffer"></a>  CSimpleStringT::LockBuffer
 
-停用參考計數，並保護在緩衝區中的字串。
+停用參考計數，並保護緩衝區中的字串。
 
 ### <a name="syntax"></a>語法
 
@@ -648,30 +648,30 @@ PXSTR LockBuffer();
 
 ### <a name="return-value"></a>傳回值
 
-指標`CSimpleStringT`物件或以 null 結束的字串。
+`CSimpleStringT`物件或以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來鎖定緩衝的`CSimpleStringT`物件。 藉由呼叫`LockBuffer`，您可以建立一份字串，如參考計數為-1。 當參考計數值為-1 時，緩衝區中的字串會被視為 「 鎖定 」 的狀態。 處於鎖定狀態時，字串受到兩種方式：
+呼叫這個方法來鎖定`CSimpleStringT`物件的緩衝區。 藉由`LockBuffer`呼叫，您可以建立字串的複本，並以-1 表示參考計數。 當參考計數值為-1 時，緩衝區中的字串會被視為處於「已鎖定」狀態。 處於鎖定狀態時，字串會以兩種方式受到保護：
 
-- 任何其他字串可以在鎖定的字串中，不取得資料的參考，即使該字串指派給已鎖定的字串。
+- 即使該字串已指派給鎖定的字串，其他字串也無法取得鎖定字串中資料的參考。
 
-- 鎖定的字串將會永遠不會參考另一個字串，即使該另一個字串會複製到鎖定的字串。
+- 鎖定的字串絕不會參考另一個字串，即使該其他字串已複製到鎖定的字串也一樣。
 
-鎖定在緩衝區中的字串，可確保字串的緩衝區上的獨佔保留會維持不變。
+藉由鎖定緩衝區中的字串，您可以確保字串在緩衝區上的獨佔保存會保持不變。
 
-您使用完之後`LockBuffer`，呼叫[UnlockBuffer](#unlockbuffer)參考計數重設為 1。
+完成`LockBuffer`之後，請呼叫[UnlockBuffer](#unlockbuffer) ，將參考計數重設為1。
 
 > [!NOTE]
->  如果您呼叫[GetBuffer](#getbuffer)鎖定的緩衝區，並設定`GetBuffer`參數`nMinBufferLength`大於目前的緩衝區的長度，您將會遺失緩衝區鎖定。 這類呼叫`GetBuffer`終結目前的緩衝區，它取代成所要求的大小的緩衝區會參考計數重設為零。
+>  如果您在鎖定的緩衝區上呼叫[GetBuffer](#getbuffer) ，並將`GetBuffer`參數`nMinBufferLength`設定為大於目前緩衝區的長度，則會遺失緩衝區鎖定。 這類呼叫`GetBuffer`會終結目前的緩衝區，以所要求大小的緩衝區取代它，並將參考計數重設為零。
 
-如需有關參考計數的詳細資訊，請參閱下列文章：
+如需參考計數的詳細資訊，請參閱下列文章：
 
-- [管理透過參考計數的物件存留期](/windows/desktop/com/managing-object-lifetimes-through-reference-counting)Windows SDK 中
+- 透過 Windows SDK 中的[參考計數來管理物件存留期](/windows/win32/com/managing-object-lifetimes-through-reference-counting)
 
-- [實作參考計數](/windows/desktop/com/implementing-reference-counting)Windows SDK 中
+- 在 Windows SDK 中[執行參考計數](/windows/win32/com/implementing-reference-counting)
 
-- [規則管理參考計數](/windows/desktop/com/rules-for-managing-reference-counts)Windows SDK 中
+- 在 Windows SDK 中[管理參考計數的規則](/windows/win32/com/rules-for-managing-reference-counts)
 
 ### <a name="example"></a>範例
 
@@ -689,7 +689,7 @@ str.UnlockBuffer();
 
 ##  <a name="operator_at"></a>  CSimpleStringT::operator\[\]
 
-呼叫此函式可存取的字元陣列的單一字元。
+呼叫此函式可存取字元陣列的單一字元。
 
 ### <a name="syntax"></a>語法
 
@@ -700,14 +700,14 @@ XCHAR operator[](int iChar) const;
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
-字串中字元的以零為起始的索引。
+字串中字元以零為基底的索引。
 
 ### <a name="remarks"></a>備註
 
-多載註標 (**[]**) 運算子會傳回以零為起始的索引中所指定的單一字元*iChar*。 這位操作員便能便利替代[GetAt](#getat)成員函式。
+多載的注標（ **[]** ）運算子會傳回*iChar*中以零為基底的索引所指定的單一字元。 這個運算子是[GetAt](#getat)成員函式的方便替代。
 
 > [!NOTE]
->  您可以使用註標 (**[]**) 來取得中的字元值的運算子`CSimpleStringT`，但您無法使用它來變更中的字元值`CSimpleStringT`。
+>  您可以使用注標（ **[]** ）運算子取得中`CSimpleStringT`的字元值，但無法使用它來變更中`CSimpleStringT`的字元值。
 
 ### <a name="example"></a>範例
 
@@ -720,7 +720,7 @@ ASSERT(s[1] == _T('b'));
 
 ## <a name="operator_at"></a>  CSimpleStringT::operator \[\]
 
-呼叫此函式可存取的字元陣列的單一字元。
+呼叫此函式可存取字元陣列的單一字元。
 
 ### <a name="syntax"></a>語法
 
@@ -731,18 +731,18 @@ XCHAR operator[](int iChar) const;
 ### <a name="parameters"></a>參數
 
 *iChar*<br/>
-字串中字元的以零為起始的索引。
+字串中字元以零為基底的索引。
 
 ### <a name="remarks"></a>備註
 
-多載註標 (**[]**) 運算子會傳回以零為起始的索引中所指定的單一字元*iChar*。 這位操作員便能便利替代[GetAt](#getat)成員函式。
+多載的注標（ **[]** ）運算子會傳回*iChar*中以零為基底的索引所指定的單一字元。 這個運算子是[GetAt](#getat)成員函式的方便替代。
 
 > [!NOTE]
->  您可以使用註標 (**[]**) 來取得中的字元值的運算子`CSimpleStringT`，但您無法使用它來變更中的字元值`CSimpleStringT`。
+>  您可以使用注標（ **[]** ）運算子取得中`CSimpleStringT`的字元值，但無法使用它來變更中`CSimpleStringT`的字元值。
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
+##  <a name="operator_add_eq"></a>CSimpleStringT：： operator + =
 
-加入現有的字串結尾的新字串或字元。
+將新的字串或字元加入至現有字串的結尾。
 
 ### <a name="syntax"></a>語法
 
@@ -759,17 +759,17 @@ CSimpleStringT& operator +=(wchar_t ch);
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
-以 null 終止的字串指標。
+以 null 結束之字串的指標。
 
 *strSrc*<br/>
-指向現有的`CSimpleStringT`物件。
+現有`CSimpleStringT`物件的指標。
 
 *ch*<br/>
 要附加的字元。
 
 ### <a name="remarks"></a>備註
 
-運算子會接受另一個`CSimpleStringT`物件或字元。 請注意該記憶體可能會發生例外狀況，每當您使用這個串連運算子，因為可能會配置新的儲存體，字元新增至這個`CSimpleStringT`物件。
+運算子會接受另`CSimpleStringT`一個物件或字元。 請注意，每當您使用這個串連運算子時，可能會發生記憶體例外狀況，因為新的儲存空間`CSimpleStringT`可能會針對加入此物件的字元而配置。
 
 ### <a name="example"></a>範例
 
@@ -782,7 +782,7 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 
 ##  <a name="operator_eq"></a>  CSimpleStringT::operator =
 
-指派新值到`CSimpleStringT`物件。
+將新值指派給`CSimpleStringT`物件。
 
 ### <a name="syntax"></a>語法
 
@@ -794,14 +794,14 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
-以 null 終止的字串指標。
+以 null 結束之字串的指標。
 
 *strSrc*<br/>
-指向現有的`CSimpleStringT`物件。
+現有`CSimpleStringT`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-如果目的地字串 （左側） 已經夠大，無法儲存新的資料，則會不執行任何新的記憶體配置。 請注意該記憶體可能會發生例外狀況，每當您使用指派運算子，因為新的儲存體通常配置來保存所產生的`CSimpleStringT`物件。
+如果目的字串（左側）已經夠大，可以儲存新的資料，則不會執行任何新的記憶體配置。 請注意，當您使用指派運算子時，可能會發生記憶體例外狀況，因為新的儲存體通常`CSimpleStringT`會配置來保存產生的物件。
 
 ### <a name="example"></a>範例
 
@@ -829,7 +829,7 @@ ASSERT(_tcscmp(s1, _T("x")) == 0);
 
 ##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
 
-直接存取儲存在字元`CSimpleStringT`為 C 樣式字串的物件。
+直接存取以 C 樣式字串`CSimpleStringT`儲存在物件中的字元。
 
 ### <a name="syntax"></a>語法
 
@@ -843,7 +843,7 @@ operator PCXSTR() const throw();
 
 ### <a name="remarks"></a>備註
 
-沒有字元會複製;只有指標會傳回。 請謹慎使用這個運算子。 如果您變更`CString`物件取得的字元指標之後，您可能會造成的指標會導致無效的記憶體配置。
+不會複製任何字元;只會傳回指標。 請小心使用此運算子。 如果您在取得`CString`字元指標之後變更物件，則可能會重新配置使指標失效的記憶體。
 
 ### <a name="example"></a>範例
 
@@ -881,7 +881,7 @@ wcout << (PCWSTR)strSports;
 
 ##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
 
-常數字串指標。
+常數位串的指標。
 
 ### <a name="syntax"></a>語法
 
@@ -891,7 +891,7 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 
 ##  <a name="preallocate"></a>  CSimpleStringT::Preallocate
 
-配置一段特定的位元組數`CSimpleStringT`物件。
+配置`CSimpleStringT`物件的特定位元組數量。
 
 ### <a name="syntax"></a>語法
 
@@ -902,13 +902,13 @@ void Preallocate( int nLength);
 #### <a name="parameters"></a>參數
 
 *nLength*<br/>
-實際大小`CSimpleStringT`以字元為單位的字元緩衝區。
+`CSimpleStringT`字元緩衝區的確切大小（以字元為單位）。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來配置的特定緩衝區大小`CSimpleStringT`物件。
+呼叫這個方法來配置`CSimpleStringT`物件的特定緩衝區大小。
 
-`CSimpleStringT` 無法為字元緩衝區配置空間時，會產生 STATUS_NO_MEMORY 例外狀況。 根據預設，記憶體配置由 WIN32 API 函式`HeapAlloc`或`HeapReAlloc`。
+`CSimpleStringT`如果無法為字元緩衝區配置空間，則會產生 STATUS_NO_MEMORY 例外狀況。 根據預設，記憶體配置是由 WIN32 API 函數`HeapAlloc`或`HeapReAlloc`執行。
 
 ### <a name="example"></a>範例
 
@@ -933,7 +933,7 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
 
-版本控制配置的緩衝區[GetBuffer](#getbuffer)。
+釋放[GetBuffer](#getbuffer)所配置之緩衝區的控制權。
 
 ### <a name="syntax"></a>語法
 
@@ -944,11 +944,11 @@ void ReleaseBuffer(int nNewLength = -1);
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
-新的長度，以字元為單位，不計入 null 結束字元的字串。 如果字串為 null 終止，-1 預設值會設定`CSimpleStringT`大小目前字串的長度。
+字串的新長度（以字元為單位），不會計算 null 結束字元。 如果字串為 null 終止，-1 預設值會將`CSimpleStringT`大小設為字串的目前長度。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來重新配置或釋出之緩衝區的字串物件。 如果您知道在緩衝區中的字串是以 null 終止，您可以省略*nNewLength*引數。 如果您的字串不是 null 終止，使用*nNewLength*來指定它的長度。 所傳回的地址[GetBuffer](#getbuffer)無效的呼叫之後`ReleaseBuffer`或任何其他`CSimpleStringT`作業。
+呼叫這個方法來重新配置或釋放字串物件的緩衝區。 如果您知道緩衝區中的字串是以 null 終止，您可以省略*nNewLength*引數。 如果您的字串不是以 null 結束，請使用*nNewLength*來指定其長度。 `CSimpleStringT`  呼叫`ReleaseBuffer`或任何其他作業之後，[GetBuffer](#getbuffer) 傳回的位址無效。
 
 ### <a name="example"></a>範例
 
@@ -974,7 +974,7 @@ ASSERT(s.GetLength() == 3);
 
 ##  <a name="releasebuffersetlength"></a>  CSimpleStringT::ReleaseBufferSetLength
 
-版本控制配置的緩衝區[GetBuffer](#getbuffer)。
+釋放[GetBuffer](#getbuffer)所配置之緩衝區的控制權。
 
 ### <a name="syntax"></a>語法
 
@@ -985,15 +985,15 @@ void ReleaseBufferSetLength(int nNewLength);
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
-正在發行的字串長度
+要釋放的字串長度
 
 ### <a name="remarks"></a>備註
 
-此函式的功能類似於[ReleaseBuffer](#releasebuffer)不同之處在於必須傳遞有效的長度之字串物件。
+此函式的功能類似[ReleaseBuffer](#releasebuffer) ，不同之處在于必須傳遞字串物件的有效長度。
 
 ##  <a name="setat"></a>  CSimpleStringT::SetAt
 
-設定從單一字元`CSimpleStringT`物件。
+從`CSimpleStringT`物件設定單一字元。
 
 ### <a name="syntax"></a>語法
 
@@ -1004,14 +1004,14 @@ void SetAt(int iChar, XCHAR ch);
 #### <a name="parameters"></a>參數
 
 *iChar*<br/>
-以零為起始的索引中的字元`CSimpleStringT`物件。 *IChar*參數必須是大於或等於 0，且所傳回的值大於或等於[GetLength](#getlength)。
+`CSimpleStringT`物件中字元以零為基底的索引。 *IChar*參數必須大於或等於0，且小於[GetLength](#getlength)所傳回的值。
 
 *ch*<br/>
-換行字元。
+新的字元。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來覆寫的字元，位於*iChar*。 這個方法不會放大字串，如果*iChar*超過現有字串的界限。
+呼叫這個方法來覆寫位於*iChar*的字元。 如果*iChar*超過現有字串的範圍，這個方法將不會放大字串。
 
 ### <a name="example"></a>範例
 
@@ -1025,7 +1025,7 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 
 ##  <a name="setmanager"></a>  CSimpleStringT::SetManager
 
-指定的記憶體管理員`CSimpleStringT`物件。
+指定`CSimpleStringT`物件的記憶體管理員。
 
 ### <a name="syntax"></a>語法
 
@@ -1036,11 +1036,11 @@ void SetManager(IAtlStringMgr* pStringMgr);
 #### <a name="parameters"></a>參數
 
 *pStringMgr*<br/>
-新的記憶體管理員指標。
+新記憶體管理員的指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫此方法，以指定新的記憶體管理員所使用`CSimpleStringT`物件。 如需有關記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
+呼叫這個方法，以指定物件所`CSimpleStringT`使用的新記憶體管理員。 如需記憶體管理員和字串物件的詳細資訊，請參閱[記憶體管理和 CStringT](../memory-management-with-cstringt.md)。
 
 ### <a name="example"></a>範例
 
@@ -1053,7 +1053,7 @@ s.SetManager(pCustomMgr);
 
 ##  <a name="setstring"></a>  CSimpleStringT::SetString
 
-設定字串`CSimpleStringT`物件。
+設定`CSimpleStringT`物件的字串。
 
 ### <a name="syntax"></a>語法
 
@@ -1065,22 +1065,22 @@ void SetString(PCXSTR pszSrc);
 #### <a name="parameters"></a>參數
 
 *pszSrc*<br/>
-以 null 終止的字串指標。
+以 null 結束之字串的指標。
 
 *nLength*<br/>
-中的字元數的計數*pszSrc*。
+*PszSrc*中的字元數計數。
 
 ### <a name="remarks"></a>備註
 
-複製字串`CSimpleStringT`物件。 `SetString` 覆寫較舊字串資料緩衝區中。
+將字串複製到`CSimpleStringT`物件中。 `SetString`覆寫緩衝區中較舊的字串資料。
 
-這兩個版本`SetString`檢查是否*pszSrc*是 null 指標，如果是，則擲回 E_INVALIDARG 錯誤。
+這兩個`SetString`版本的會檢查*pszSrc*是否為 null 指標，如果是，則會擲回 E_INVALIDARG 錯誤。
 
-其中一個參數新版`SetString`預期*pszSrc*指向以 null 結束的字串。
+的單一參數版本`SetString`預期*pszSrc*會指向以 null 結束的字串。
 
-兩個參數的版本`SetString`也預期*pszSrc*是以 null 結束的字串。 它會使用*nLength*字串長度為除非先遇到 null 結束字元。
+的雙參數版本`SetString`也需要*pszSrc*為以 null 結束的字串。 除非先遇到 null 結束字元，否則會使用*nLength*做為字串長度。
 
-兩個參數的版本`SetString`也會檢查是否*pszSrc*指向目前緩衝區中的位置`CSimpleStringT`。 在這個特殊的情況下，`SetString`使用記憶體複製函式，因為它會將字串資料複製回到其緩衝區，不會覆寫的字串資料。
+的雙參數版本`SetString`也會檢查*pszSrc*是否指向中目前緩衝區`CSimpleStringT`的位置。 在此特殊情況下`SetString` ，會使用不會覆寫字串資料的記憶體複製函數，因為它會將字串資料複製回其緩衝區。
 
 ### <a name="example"></a>範例
 
@@ -1095,7 +1095,7 @@ ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 
 ##  <a name="stringlength"></a>  CSimpleStringT::StringLength
 
-指定的字串中傳回字元的數。
+傳回指定之字串中的字元數。
 
 ### <a name="syntax"></a>語法
 
@@ -1106,15 +1106,15 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 #### <a name="parameters"></a>參數
 
 *psz*<br/>
-以 null 終止的字串指標。
+以 null 結束之字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
-中的字元數*psz*; 不計入 null 結束字元。
+*Psz*中的字元數;不計算 null 結束字元。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來擷取所指向之字串中字元的數目*psz*。
+呼叫這個方法，以取得*psz*所指向之字串中的字元數。
 
 ### <a name="example"></a>範例
 
@@ -1126,7 +1126,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 
 ##  <a name="truncate"></a>  CSimpleStringT::Truncate
 
-會截斷為新長度的字串。
+將字串截斷為新的長度。
 
 ### <a name="syntax"></a>語法
 
@@ -1137,14 +1137,14 @@ void Truncate(int nNewLength);
 #### <a name="parameters"></a>參數
 
 *nNewLength*<br/>
-新字串的長度。
+字串的新長度。
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來截斷為新長度字串的內容。
+呼叫這個方法，將字串的內容截斷為新的長度。
 
 > [!NOTE]
->  這不會影響配置緩衝區的長度。 若要減少或增加目前的緩衝區，請參閱[FreeExtra](#freeextra)並[Preallocate](#preallocate)。
+>  這不會影響緩衝區的配置長度。 若要減少或增加目前的緩衝區，請參閱[FreeExtra](#freeextra) [和預先](#preallocate)配置。
 
 ### <a name="example"></a>範例
 
@@ -1161,7 +1161,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 
 ##  <a name="unlockbuffer"></a>  CSimpleStringT::UnlockBuffer
 
-解除鎖定的緩衝區`CSimpleStringT`物件。
+解除鎖定`CSimpleStringT`物件的緩衝區。
 
 ### <a name="syntax"></a>語法
 
@@ -1171,11 +1171,11 @@ void UnlockBuffer() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來重設之字串的參考計數為 1。
+呼叫這個方法，將字串的參考計數重設為1。
 
-`CSimpleStringT`解構函式會自動呼叫`UnlockBuffer`以確保呼叫解構函式時，未鎖定緩衝區。 如需這個方法的範例，請參閱 < [LockBuffer](#lockbuffer)。
+函式會自動`UnlockBuffer`呼叫以確保呼叫析構函式時，不會鎖定緩衝區。 `CSimpleStringT` 如需這個方法的範例，請參閱[LockBuffer](#lockbuffer)。
 
-##  <a name="dtor"></a>  CSimpleStringT::~CSimpleStringT
+##  <a name="dtor"></a>CSimpleStringT：： ~ CSimpleStringT
 
 終結 `CSimpleStringT` 物件。
 
@@ -1187,7 +1187,7 @@ void UnlockBuffer() throw();
 
 ### <a name="remarks"></a>備註
 
-呼叫這個方法來終結`CSimpleStringT`物件。
+呼叫這個方法來摧毀`CSimpleStringT`物件。
 
 ## <a name="see-also"></a>另請參閱
 

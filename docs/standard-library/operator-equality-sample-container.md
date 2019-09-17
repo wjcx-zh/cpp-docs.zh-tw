@@ -23,7 +23,7 @@ ms.locfileid: "68460161"
 # <a name="operator-ltsample-containergt"></a>operator== (&lt;sample container&gt;)
 
 > [!NOTE]
-> 本主題位於 Microsoft C++檔中, 做為C++標準程式庫中所使用之容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
+> 本主題位於 Microsoft C++檔中，做為C++標準程式庫中所使用之容器的無作用範例。 如需詳細資訊，請參閱 [C++ 標準程式庫容器](../standard-library/stl-containers.md)。
 
 多載 `operator==` 來比較樣板類別 [Container](../standard-library/sample-container-class.md) 的兩個物件。
 
@@ -38,7 +38,7 @@ bool operator==(
 
 ## <a name="return-value"></a>傳回值
 
-[](../standard-library/container-class-size.md) 傳回大小`, left.` [](../standard-library/container-class-begin.md)開始[結束](../standard-library/container-class-end.md)。 ` == right.size && equal(left.` `left.` `, right.begin)`
+傳回[大小](../standard-library/container-class-size.md)`, left.` [開始](../standard-library/container-class-begin.md)[結束](../standard-library/container-class-end.md)。` == right.size && equal(left.` `left.` `, right.begin)`
 
 ## <a name="see-also"></a>另請參閱
 

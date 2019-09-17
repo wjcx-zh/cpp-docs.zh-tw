@@ -41,7 +41,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452545"
 ---
-# <a name="basicistream-class"></a>basic_istream 類別
+# <a name="basic_istream-class"></a>basic_istream 類別
 
 描述一個物件，該物件可控制如何從具有 `Elem` 類型 (也稱為 [char_type](../standard-library/basic-ios-class.md#char_type)) 之元素的資料流緩衝區擷取元素和編碼物件；其中該類型的字元特性是由 *Tr* 類別 (也稱為 [traits_type](../standard-library/basic-ios-class.md#traits_type)) 所決定。
 
@@ -119,13 +119,13 @@ if (ok)
 setstate(state);
 ```
 
-如果這兩個函[](../standard-library/basic-ios-class.md#setstate)式群組`eofbit`在解壓縮專案時遇到檔案結尾, 則會呼叫 setstate ()。
+如果這兩個函式群組`eofbit`在解壓縮專案時遇到檔案結尾，則會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)（）。
 
 `basic_istream`< `Elem`, *Tr*> 類別的物件會儲存：
 
 - [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, *Tr*> 類別的虛擬公開基底物件`.`
 
-- 上次未格式化輸入作業的提取計數 (在先前`count`的程式碼中呼叫)。
+- 上次未格式化輸入作業的提取計數（在先前`count`的程式碼中呼叫）。
 
 ## <a name="example"></a>範例
 
@@ -158,7 +158,7 @@ setstate(state);
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[operator>>](#op_gt_gt)|呼叫輸入資料流上的函式，或從輸入資料流讀取經格式化的資料。|
 |[operator=](#op_eq)|將位於運算子右側的 `basic_istream` 指派給此物件。 這是一個移動指派，涉及不會留下複本的 `rvalue` 參考。|
@@ -187,7 +187,7 @@ basic_istream(basic_istream&& right);
 [basic_streambuf](../standard-library/basic-streambuf-class.md) 類型的物件。
 
 *_Isstd*\
-如果這是標準資料流程, 則為**true** ;否則**為 false**。
+如果這是標準資料流程，則為**true** ;否則**為 false**。
 
 *再*\
 要複製的 `basic_istream` 物件。
@@ -270,7 +270,7 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 要從 `strbuf` 中讀取的字元數。
 
 *Delim*\
-如果在*count*之前遇到, 則應終止讀取的字元。
+如果在*count*之前遇到，則應終止讀取的字元。
 
 *str*\
 要在其中寫入的字串。
@@ -287,17 +287,17 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 ### <a name="remarks"></a>備註
 
-這些未格式化之輸入函式的第一個函式會盡可能擷取一個元素，就像是傳回 `rdbuf`-> `sbumpc` 一樣。 否則會傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 如果函式未解壓縮任何元素, 則[](../standard-library/basic-ios-class.md#setstate)會呼叫`failbit`setstate ()。
+這些未格式化之輸入函式的第一個函式會盡可能擷取一個元素，就像是傳回 `rdbuf`-> `sbumpc` 一樣。 否則會傳回 **traits_type::** [eof](../standard-library/char-traits-struct.md#eof)。 如果函式未解壓縮任何元素，則會呼叫`failbit`[setstate](../standard-library/basic-ios-class.md#setstate)（）。
 
 第二個函式會以相同方式來擷取 [int_type](../standard-library/basic-ios-class.md#int_type) 元素 `meta`。 如果 `meta` 與 **traits_type::eof** 比較的結果相等，則此函式會呼叫 `setstate`( **failbit**)。 否則，它會將 **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( `meta`) 儲存在 `Ch` 中。 此函式會傳回 **\*this**。
 
 第三個函式會傳回 **get**(_ *Str*, `count`, `widen`('\ **n**'))。
 
-第四個函式會解壓縮到*計數*1 個元素, 並將它們儲存在開頭為 _ *Str*的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存 `char_type`。 為了進行測試，在下列情況下會停止擷取：
+第四個函式會解壓縮到*計數*1 個元素，並將它們儲存在開頭為 _ *Str*的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存 `char_type`。 為了進行測試，在下列情況下會停止擷取：
 
 - 到達檔案結尾時。
 
-- 函式解壓縮了比較等於*Delim*的專案, 在這種情況下, 元素會放回受控制的序列中。
+- 函式解壓縮了比較等於*Delim*的專案，在這種情況下，元素會放回受控制的序列中。
 
 - 函式解壓縮*count* -1 個元素之後。
 
@@ -305,7 +305,7 @@ basic_istream<Elem, Tr>& get(basic_streambuf<Elem, Tr>& strbuf, Elem Delim);
 
 第五個函式會傳回 **get**( **strbuf**, `widen`('\ **n**'))。
 
-第六個`strbuf`函式會解壓縮專案, 並將其插入。 到達檔案結尾時，或是遇到與 _ *Delim* 比較為相等的元素 (不會擷取此元素) 時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果此函式未擷取任何元素，則會呼叫 `setstate`( **failbit**)。 在任何情況下，此函式都會傳回 **\*this**。
+第六個`strbuf`函式會解壓縮專案，並將其插入。 到達檔案結尾時，或是遇到與 _ *Delim* 比較為相等的元素 (不會擷取此元素) 時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果此函式未擷取任何元素，則會呼叫 `setstate`( **failbit**)。 在任何情況下，此函式都會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -353,7 +353,7 @@ basic_istream<Elem, Tr>& getline(
 要從 `strbuf` 中讀取的字元數。
 
 *Delim*\
-如果在*count*之前遇到, 則應終止讀取的字元。
+如果在*count*之前遇到，則應終止讀取的字元。
 
 *str*\
 要在其中寫入的字串。
@@ -366,15 +366,15 @@ basic_istream<Elem, Tr>& getline(
 
 這些未格式化之輸入函式的第一個輸入函式會傳回 **getline**(_ *Str*, `count`, `widen`(' `\`**n**'))。
 
-第二個函式會解壓縮到*計數*1 個元素, 並將它們儲存在開頭為 _ *Str*的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存字串結束字元。 為了進行測試，在下列情況下會停止擷取：
+第二個函式會解壓縮到*計數*1 個元素，並將它們儲存在開頭為 _ *Str*的陣列中。 它一律會在所儲存的任何已擷取元素之後儲存字串結束字元。 為了進行測試，在下列情況下會停止擷取：
 
 - 到達檔案結尾時。
 
-- 在函式將比較等於*Delim*的專案解壓縮之後, 在這種情況下, 不會將元素放回, 也不會附加至受控制的序列。
+- 在函式將比較等於*Delim*的專案解壓縮之後，在這種情況下，不會將元素放回，也不會附加至受控制的序列。
 
 - 函式解壓縮*count* -1 個元素之後。
 
-如果函式未解壓縮任何元素或*計數*為1的元素, 則會`failbit`呼叫[setstate](../standard-library/basic-ios-class.md#setstate)()。 在任何情況下，它都會傳回 **\*this**。
+如果函式未解壓縮任何元素或*計數*為1的元素，則會`failbit`呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（）。 在任何情況下，它都會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -413,7 +413,7 @@ basic_istream<Elem, Tr>& ignore(
 要從目前的讀取位置略過的元素數目。
 
 *Delim*\
-元素, 如果在 count 之前遇到, 會導致`ignore`傳回, 並允許讀取*Delim*之後的所有元素。
+元素，如果在 count 之前遇到，會導致`ignore`傳回，並允許讀取*Delim*之後的所有元素。
 
 ### <a name="return-value"></a>傳回值
 
@@ -421,7 +421,7 @@ basic_istream<Elem, Tr>& ignore(
 
 ### <a name="remarks"></a>備註
 
-未格式化的輸入函式會解壓縮以*計算*元素並予以捨棄。 如果*count*等於**numeric_limits\<int >:: max**, 則會被視為任意大小。 解壓縮會在檔`Ch`尾或元素上停止, 使**traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( `Ch`) 比較等於*Delim* (也就是已解壓縮)。 此函式會傳回 **\*this**。
+未格式化的輸入函式會解壓縮以*計算*元素並予以捨棄。 如果*count*等於**numeric_limits\<int >：： max**，則會被視為任意大小。 解壓縮會在檔`Ch`尾或元素上停止，使**traits_type：：** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)（ `Ch`）比較等於*Delim* （也就是已解壓縮）。 此函式會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -497,7 +497,7 @@ basic_istream& operator>>(
     basic_streambuf<Elem, Tr>* strbuf);
 ```
 
-如果 _ *Strbuf*不是 null 指標, 則會將元素解壓縮, 並將它們插入*Strbuf*中。 到達檔案結尾時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果函式未解壓縮任何元素, 則[](../standard-library/basic-ios-class.md#setstate)會呼叫`failbit`setstate ()。 在任何情況下，此函式都會傳回 **\*this**。
+如果 _ *Strbuf*不是 null 指標，則會將元素解壓縮，並將它們插入*Strbuf*中。 到達檔案結尾時，會停止擷取。 如果插入失敗或擲回例外狀況 (會攔截但不會再次擲回)，也會停止，而不會擷取有問題的元素。 如果函式未解壓縮任何元素，則會呼叫`failbit`[setstate](../standard-library/basic-ios-class.md#setstate)（）。 在任何情況下，此函式都會傳回 **\*this**。
 
 函式：
 
@@ -521,9 +521,9 @@ basic_istream& operator>>(unsigned long long& val);
 basic_istream& operator>>(void *& val);
 ```
 
-會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡 **, InIt**會定義`istreambuf_iterator`為\< **Elem**、 **Tr**>, `val`且類型為**long**、不**帶正負**號的 long 或**void** <strong>\*</strong> (視需要)。
+會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). [get](#get)( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡 **，InIt**會定義`istreambuf_iterator`為\< **Elem**、 **Tr**>， `val`且類型為**long**、不**帶正負**號的 long 或**void** <strong>\*</strong> （視需要）。
 
-如果轉換的值無法表示為的類型`val`, 則函數會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`)。 在任何情況下，此函式都會傳回 **\*this**。
+如果轉換的值無法表示為的類型`val`，則函數會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（`failbit`）。 在任何情況下，此函式都會傳回 **\*this**。
 
 函式：
 
@@ -533,7 +533,7 @@ basic_istream& operator>>(double& val);
 basic_istream& operator>>(long double& val);
 ```
 
-會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡`InIt` , 會定義`istreambuf_iterator`為\< **Elem**、 **Tr**>, `val`並視需要輸入**double**或**long double** 。
+會藉由呼叫 `use_facet`< `num_get`\< **Elem**, **InIt**>( `getloc`). **get**( **InIt**( `rdbuf`), `Init`(0), **\*this**, `getloc`, `val`) 擷取欄位，並將其轉換為數值。 在這裡`InIt` ，會定義`istreambuf_iterator`為\< **Elem**、 **Tr**>， `val`並視需要輸入**double**或**long double** 。
 
 如果無法以 `val` 類型表示已轉換的值，此函式會呼叫 `setstate`( **failbit**)。 在任何情況下，它都會傳回 **\*this**。
 
@@ -660,7 +660,7 @@ basic_istream<Elem, Tr>& putback(
 
 ### <a name="remarks"></a>備註
 
-未[格式化的輸入](../standard-library/basic-istream-class.md)函式會盡可能放回*Ch*, 如同呼叫[rdbuf](../standard-library/basic-ios-class.md#rdbuf) `->` [sputbackc](../standard-library/basic-streambuf-class.md#sputbackc)一樣。 如果 rdbuf 為 null 指標, 或`sputbackc`呼叫傳回**traits_type::** [eof](../standard-library/char-traits-struct.md#eof), 則函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`)。 在任何情況下，它都會傳回 **\*this**。
+未[格式化的輸入](../standard-library/basic-istream-class.md)函式會盡可能放回*Ch*，如同呼叫[rdbuf](../standard-library/basic-ios-class.md#rdbuf) `->` [sputbackc](../standard-library/basic-streambuf-class.md#sputbackc)一樣。 如果 rdbuf 為 null 指標，或`sputbackc`呼叫傳回**traits_type：：** [eof](../standard-library/char-traits-struct.md#eof)，則函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（`badbit`）。 在任何情況下，它都會傳回 **\*this**。
 
 ### <a name="example"></a>範例
 
@@ -712,7 +712,7 @@ basic_istream<Elem, Tr>& read(
 
 ### <a name="remarks"></a>備註
 
-未格式化的輸入函式會解壓縮以*計算*元素, 並將它們儲存在開頭`Str`為 _ 的陣列中。 解壓縮會在檔案結尾停止, 在此情況下, 函數會[](../standard-library/basic-ios-class.md#setstate)呼叫 setstate`failbit`()。 在任何情況下，它都會傳回 `*this`。
+未格式化的輸入函式會解壓縮以*計算*元素，並將它們儲存在開頭`Str`為 _ 的陣列中。 解壓縮會在檔案結尾停止，在此情況下，函數會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)`failbit`（）。 在任何情況下，它都會傳回 `*this`。
 
 ### <a name="example"></a>範例
 
@@ -773,7 +773,7 @@ streamsize readsome(
 
 ### <a name="remarks"></a>備註
 
-這個未格式化的輸入函式會將輸入資料流程中的專案*數*解壓縮, 並將它們儲存在陣列*str*中。
+這個未格式化的輸入函式會將輸入資料流程中的專案*數*解壓縮，並將它們儲存在陣列*str*中。
 
 此函式不會等候輸入。 它會讀取任何可用的資料。
 
@@ -838,7 +838,7 @@ basic_istream<Elem, Tr>& seekg(off_type off, ios_base::seekdir way);
 > [!NOTE]
 > 請勿對文字檔案使用第二個成員函式，因為標準 C++ 不支援在文字檔案中執行相對搜尋。
 
-如果[fail](../standard-library/basic-ios-class.md#fail)為 false, 則第一個成員函  = 式會針對某些`pos` `pos_type`暫存物件`newpos`呼叫 newpos[rdbuf](../standard-library/basic-ios-class.md#rdbuf)  ->  [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)()。 如果`fail`為 false, 則第二個  = 函式會呼叫`off`newpos `way` **rdbuf**  ->  [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(,)。 不論是哪一種情況`off_type`, if () newpos `off_type`= = () (-1) (定位作業會失敗), `istr`函數都會呼叫。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 兩個函式都會傳回 **\*this**。
+如果[fail](../standard-library/basic-ios-class.md#fail)為 false，則第一個成員函  = 式會針對某些`pos` `pos_type`暫存物件`newpos`呼叫 newpos[rdbuf](../standard-library/basic-ios-class.md#rdbuf)  ->  [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)（）。 如果`fail`為 false，則第二個  = 函式會呼叫`off`newpos `way` **rdbuf**  ->  [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)（，）。 不論是哪一種情況`off_type`，if （） newpos `off_type`= = （）（-1）（定位作業會失敗）， `istr`函數都會呼叫。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 兩個函式都會傳回 **\*this**。
 
 如果 [fail](../standard-library/basic-ios-class.md#fail) 為 true，成員函式不會執行任何動作。
 
@@ -867,7 +867,7 @@ int main ( )
 
 此巢狀類別描述一個物件，該物件的宣告會建構格式化和未格式化的輸入函式。
 
-類別 sentry {public: explicit sentry (basic_istream\<Elem, Tr > & _Istr, bool _Noskip = false); operator bool () const;};
+類別 sentry {public： explicit sentry （basic_istream\<Elem，Tr > & _Istr，bool _Noskip = false）; operator bool （） const;};
 
 ### <a name="remarks"></a>備註
 
@@ -877,7 +877,7 @@ int main ( )
 
 - 有效呼叫 [ws](../standard-library/istream-functions.md#ws)( `_Istr`) (如果 `_Istr` [flags](../standard-library/ios-base-class.md#flags) **&** [skipws](../standard-library/ios-functions.md#skipws) 為非零值)
 
-如果在任何這類準備之後，`_Istr` `good`為 false, 則表示函數`_Istr`調用。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 在任何情況下，此建構函式都會將 `_Istr` `good`在`status`中。 稍後的呼叫`operator bool`會傳遞此儲存值。
+如果在任何這類準備之後，`_Istr` `good`為 false，則表示函數`_Istr`調用。 [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`). 在任何情況下，此建構函式都會將 `_Istr` `good`在`status`中。 稍後的呼叫`operator bool`會傳遞此儲存值。
 
 ## <a name="swap"></a>  basic_istream::swap
 
@@ -906,7 +906,7 @@ int sync();
 
 ### <a name="return-value"></a>傳回值
 
-如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 為 null 指標，此函式會傳回 -1。 否則會呼叫 `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果傳回-1, 則函式會[](../standard-library/basic-ios-class.md#setstate)呼叫 setstate`badbit`(), 並傳回-1。 否則，此函式會傳回零。
+如果 [rdbuf](../standard-library/basic-ios-class.md#rdbuf) 為 null 指標，此函式會傳回 -1。 否則會呼叫 `rdbuf` -> [pubsync](../standard-library/basic-streambuf-class.md#pubsync)。 如果傳回-1，則函式會呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)`badbit`（），並傳回-1。 否則，此函式會傳回零。
 
 ## <a name="tellg"></a>  basic_istream::tellg
 
@@ -964,7 +964,7 @@ basic_istream<Elem, Tr>& unget();
 
 ### <a name="remarks"></a>備註
 
-[未格式化的輸入函式](../standard-library/basic-istream-class.md)會盡可能將上一個元素放回資料流，就像是呼叫 `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) 一樣。 如果[rdbuf](../standard-library/basic-ios-class.md#rdbuf)為`sungetc` null 指標, 或呼叫傳回**traits_type::** [eof](../standard-library/basic-ios-class.md#eof), 則函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)(`badbit`)。 在任何情況下，它都會傳回 **\*this**。
+[未格式化的輸入函式](../standard-library/basic-istream-class.md)會盡可能將上一個元素放回資料流，就像是呼叫 `rdbuf` -> [sungetc](../standard-library/basic-streambuf-class.md#sungetc) 一樣。 如果[rdbuf](../standard-library/basic-ios-class.md#rdbuf)為`sungetc` null 指標，或呼叫傳回**traits_type：：** [eof](../standard-library/basic-ios-class.md#eof)，則函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate)（`badbit`）。 在任何情況下，它都會傳回 **\*this**。
 
 如需 `unget` 何以失敗的資訊，請參閱 [basic_streambuf::sungetc](../standard-library/basic-streambuf-class.md#sungetc)。
 

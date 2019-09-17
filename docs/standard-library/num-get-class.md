@@ -21,7 +21,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68457648"
 ---
-# <a name="numget-class"></a>num_get 類別
+# <a name="num_get-class"></a>num_get 類別
 
 樣板類別，描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為數值。
 
@@ -59,7 +59,7 @@ class num_get : public locale::facet;
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[do_get](#do_get)|虛擬函式，呼叫以從字元序列擷取數值或布林值。|
 |[get](#get)|從字元序列擷取數值或布林值。|
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-比對序列`[first, last)`中*第一次*開始的順序元素, 直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功, 它會將此欄位轉換為其對等的值 (類型為**long**), 並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則, 函數會以*val*儲存任何內容, `ios_base::failbit`並`state`在中設定。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。
+比對序列`[first, last)`中*第一次*開始的順序元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long**），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函數會以*val*儲存任何內容， `ios_base::failbit`並`state`在中設定。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。
 
-整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 (每個這類**char**元素都假設為對應至類型`Elem`的對等專案, 方法是使用簡單的一對一對應)。對等的掃描轉換規格是以下列方式決定：
+整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 （每個這類**char**元素都假設為對應至類型`Elem`的對等專案，方法是使用簡單的一對一對應）。對等的掃描轉換規格是以下列方式決定：
 
 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格為 `lo`。
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功, 它會將數值輸入欄位轉換成不**帶正負號 long**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
 
 第五個虛擬的受保護成員函式：
 
@@ -243,7 +243,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lld` 取代 `ld` 轉換規格。 如果成功, 它會將數值輸入欄位轉換成**long long**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `lld` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成**long long**類型的值，並將該值儲存在*val*中。
 
 第六個虛擬的受保護成員函式：
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `llu` 取代 `ld` 轉換規格。 如果成功, 它會將數值輸入欄位轉換為不**帶正負號 long long**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `llu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換為不**帶正負號 long long**類型的值，並將該值儲存在*val*中。
 
 第七個虛擬的受保護成員函式：
 
@@ -297,7 +297,7 @@ virtual iter_type do_get(
 
 行為與第八個相同，不同的是，對等掃描轉換指定名稱是 `Lf`。
 
-第十個虛擬的受保護成員函式:
+第十個虛擬的受保護成員函式：
 
 ```cpp
 virtual iter_type do_get(
@@ -321,7 +321,7 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-行為與第一個相同，不同的是，它會盡力比對出完整、非空白的布林值輸入欄位。 如果成功, 它會將布林輸入欄位轉換為**bool**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會盡力比對出完整、非空白的布林值輸入欄位。 如果成功，它會將布林輸入欄位轉換為**bool**類型的值，並將該值儲存在*val*中。
 
 布林值輸入欄位採用下列兩種形式其中之一。 如果 `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 為 false，它就與整數輸入欄位相同，不同的是，轉換的值必須是 0 (代表 false) 或 1 (代表 true)。 否則，序列必須與 `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (代表 false) 或 `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (代表 true) 相符。
 
@@ -437,13 +437,13 @@ iter_type get(
 
 所有成員函式都會傳回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。
 
-第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功, 它會將此欄位轉換為其對等的值 (類型為**long** ), 並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則, 函式會以*val*的方式儲存`ios_base::failbit`任何內容, 並將設定為 _*狀態*。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況, 如果傳回值等於*last*, 函數`ios_base::eofbit`會在 *_State*中設定。
+第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long** ），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*的方式儲存`ios_base::failbit`任何內容，並將設定為 _*狀態*。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函數`ios_base::eofbit`會在 *_State*中設定。
 
-整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案, 方法是使用簡單的一對一對應。 對等的掃描轉換規格是以下列方式決定：
+整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案，方法是使用簡單的一對一對應。 對等的掃描轉換規格是以下列方式決定：
 
-- 如果 `iosbase`. [旗標](../standard-library/ios-base-class.md#flags) &  oct,`ios_base::basefield` [](../standard-library/ios-functions.md#oct)轉換規格為。`lo`  ==  `ios_base::`
+- 如果 `iosbase`. [旗標](../standard-library/ios-base-class.md#flags) & ，`ios_base::basefield` [oct](../standard-library/ios-functions.md#oct) 轉換規格為`lo`  ==  `ios_base::`。
 
-- 如果**iosbase. flags**  &  **ios_base:: basefield**  ==  `ios_base::` [hex](../standard-library/ios-functions.md#hex), 則轉換規格為`lx`。
+- 如果**iosbase. flags**  &  **ios_base：： basefield**  ==  `ios_base::` [hex](../standard-library/ios-functions.md#hex)，則轉換規格為`lx`。
 
 - 如果 **iosbase.flags** & **ios_base::basefield** == 0，則轉換規格為 `li`。
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功, 它會將數值輸入欄位轉換成不**帶正負號 long**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會以 `lu` 取代 `ld` 轉換規格。 如果成功，它會將數值輸入欄位轉換成不**帶正負號 long**類型的值，並將該值儲存在*val*中。
 
 第三個虛擬的受保護成員函式：
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-的行為與第三個相同, 不同的是, 對等`Lf`掃描轉換規範是。
+的行為與第三個相同，不同的是，對等`Lf`掃描轉換規範是。
 
 第五個虛擬的受保護成員函式：
 
@@ -515,7 +515,7 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的布林值輸入欄位。 如果成功, 它會將布林輸入欄位轉換為**bool**類型的值, 並將該值儲存在*val*中。
+行為與第一個相同，不同的是，它會嘗試比對出完整、非空白的布林值輸入欄位。 如果成功，它會將布林輸入欄位轉換為**bool**類型的值，並將該值儲存在*val*中。
 
 布林值輸入欄位採用下列兩種形式其中之一。 如果 **iosbase**. **flags** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) 為 **false**，它就與整數輸入欄位相同，不同的是，轉換的值必須是 0 (代表 **false**) 或 1 (代表 **true**)。 否則，序列必須符合 **fac**. [falsename](../standard-library/numpunct-class.md#falsename) (代表 **false**) 或 **fac**. [truename](../standard-library/numpunct-class.md#truename) (代表 **true**)。
 
@@ -578,13 +578,13 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
 - 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \>1：未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 

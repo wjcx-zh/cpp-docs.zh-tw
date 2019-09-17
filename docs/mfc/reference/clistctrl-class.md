@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: bd511cf574d0f710134de4768ac27a8be1248e95
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
+ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505621"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70927923"
 ---
 # <a name="clistctrl-class"></a>CListCtrl 類別
 
@@ -553,7 +553,7 @@ BOOL Arrange(UINT nCode);
 ### <a name="parameters"></a>參數
 
 *nCode*<br/>
-指定專案的對齊樣式。 它可以是下列其中一個值：
+指定專案的對齊樣式。 它可以是下列其中一個值:
 
 - LVA_ALIGNLEFT 會沿著視窗的左邊緣對齊專案。
 
@@ -1003,7 +1003,7 @@ BOOL GetBkImage(LVBKIMAGE* plvbkImage) const;
         if (m_myListCtrl.GetBkImage(&bki) && (bki.ulFlags == LVBKIF_SOURCE_NONE))
         {
             m_myListCtrl.SetBkImage(
-                _T("http://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
+                _T("https://www.microsoft.com/library/images/gifs/homepage/microsoft.gif"),
                 TRUE);
         }
 ```
@@ -1362,7 +1362,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -1446,7 +1446,7 @@ BOOL GetGroupRect(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -1784,7 +1784,7 @@ BOOL GetItemIndexRect(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*pItemIndex*|在子專案父項之[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的指標。<br /><br /> 呼叫端負責配置和設定[LVITEMINDEX](/windows/win32/api/commctrl/ns-commctrl-lvitemindex)結構的成員。 此參數不可以是 NULL。|
 |*iColumn*|在控制項中資料行以零為基底的索引。|
@@ -1793,7 +1793,7 @@ BOOL GetItemIndexRect(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -1960,7 +1960,7 @@ BOOL GetItemSpacing(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -2097,7 +2097,7 @@ BOOL GetNextItemIndex(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -2581,7 +2581,7 @@ BOOL HasGroup(int iGroupId) const;
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -3560,7 +3560,7 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -3827,7 +3827,7 @@ BOOL SetItemIndexState(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -4079,7 +4079,7 @@ BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -4100,7 +4100,7 @@ BOOL SetTileViewInfo(PLVTILEVIEWINFO ptvi);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -4199,7 +4199,7 @@ Void 指標。
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE，失敗時傳回 FALSE。
+成功時傳回 TRUE, 失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -4287,7 +4287,7 @@ BOOL SortItemsEx(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 

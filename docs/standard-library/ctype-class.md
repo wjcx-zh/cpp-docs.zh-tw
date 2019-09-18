@@ -65,17 +65,17 @@ class ctype : public ctype_base;
 
 C++ 標準程式庫定義了這個範本類別的兩個明確特製化：
 
-- `ctype<char>`, 這是個別描述其差異的明確特製化。 如需詳細資訊,[請&lt;參閱&gt; ctype char 類別](../standard-library/ctype-char-class.md)。
+- `ctype<char>`，這是個別描述其差異的明確特製化。 如需詳細資訊，[請&lt;參閱&gt; ctype char 類別](../standard-library/ctype-char-class.md)。
 
-- `ctype<wchar_t>`, 這會將元素視為寬字元。
+- `ctype<wchar_t>`，這會將元素視為寬字元。
 
-範本類別`ctype<CharType>`的其他特製化:
+範本類別`ctype<CharType>`的其他特製化：
 
-- 使用運算式   ,將CharType類型的值ch轉換成char`(char)ch`類型的值。
+- 使用運算式 ，將CharType類型的值ch轉換成char`(char)ch`類型的值。
 
-- 使用運算式   ,將Char類型的值byte轉換為CharType`CharType(byte)`類型的值。
+- 使用運算式 ，將Char類型的值byte轉換為CharType`CharType(byte)`類型的值。
 
-所有其他作業會以與明確特製化`ctype<char>`相同的方式, 在 char 值上執行。
+所有其他作業會以與明確特製化`ctype<char>`相同的方式，在 char 值上執行。
 
 ### <a name="constructors"></a>建構函式
 
@@ -94,12 +94,12 @@ C++ 標準程式庫定義了這個範本類別的兩個明確特製化：
 |成員函式|描述|
 |-|-|
 |[do_is](#do_is)|虛擬函式，呼叫以測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|
-|[do_narrow](#do_narrow)|虛擬函式, 呼叫以將地區設定使用`CharType`的類型字元轉換為原生字元集中**char**類型的對應字元。|
+|[do_narrow](#do_narrow)|虛擬函式，呼叫以將地區設定使用`CharType`的類型字元轉換為原生字元集中**char**類型的對應字元。|
 |[do_scan_is](#do_scan_is)|虛擬函式，呼叫以尋找範圍中符合指定之遮罩的第一個字元。|
 |[do_scan_not](#do_scan_not)|虛擬函式，呼叫以尋找範圍中不符合指定之遮罩的第一個字元。|
 |[do_tolower](#do_tolower)|虛擬函式，呼叫以將字元或字元範圍轉換為小寫。|
 |[do_toupper](#do_toupper)|虛擬函式，呼叫以將字元或字元範圍轉換為大寫。|
-|[do_widen](#do_widen)|虛擬函式, 呼叫以將原生字元集中**char**類型的字元轉換為地區設定所使用之`CharType`類型的對應字元。|
+|[do_widen](#do_widen)|虛擬函式，呼叫以將原生字元集中**char**類型的字元轉換為地區設定所使用之`CharType`類型的對應字元。|
 |[is](#is)|測試單一字元是否有特定屬性，或分類範圍中每個字元的屬性並將其儲存在陣列中。|
 |[narrow](#narrow)|將地區設定使用的 `CharType` 類型的字元轉換為原生字元集中 char 類型的對應字元。|
 |[scan_is](#scan_is)|尋找範圍中符合指定之遮罩的第一個字元。|
@@ -145,13 +145,13 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
 - 0物件的存留期是由包含它的地區設定所管理。
 
 - 1:物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \>1：未定義這些值。
 
 無法提供任何直接範例，因為解構函式受到保護。
 
@@ -205,7 +205,7 @@ virtual const CharType *do_is(
 
 ## <a name="do_narrow"></a>  ctype::do_narrow
 
-虛擬函式, 呼叫以將地區設定使用`CharType`的類型字元轉換為原生字元集中**char**類型的對應字元。
+虛擬函式，呼叫以將地區設定使用`CharType`的類型字元轉換為原生字元集中**char**類型的對應字元。
 
 ```cpp
 virtual char do_narrow(
@@ -234,17 +234,17 @@ virtual const CharType* do_narrow(
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*\
-儲存已轉換字元範圍之目的範圍中, **char**類型第一個字元的常數指標。
+儲存已轉換字元範圍之目的範圍中， **char**類型第一個字元的常數指標。
 
 ### <a name="return-value"></a>傳回值
 
-第一個受保護的成員函式會傳回 char 類型的原生字元, 其對應至`CharType`類型的參數字元或*預設值*(如果未定義對應項)。
+第一個受保護的成員函式會傳回 char 類型的原生字元，其對應至`CharType`類型的參數字元或*預設值*（如果未定義對應項）。
 
 第二個受保護的成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本`dest`函`I`式會將`do_narrow`的`first`值`I`([ `default`],) `I`儲存在 [] 中, `last`間隔 [0,  - `first`).
+第二個受保護的成員範本`dest`函`I`式會將`do_narrow`的`first`值`I`（[ `default`]，） `I`儲存在 [] 中， `last`間隔 [0，  - `first`).
 
 ### <a name="example"></a>範例
 
@@ -274,11 +274,11 @@ virtual const CharType *do_scan_is(
 
 ### <a name="return-value"></a>傳回值
 
-範圍中，符合指定遮罩之第一個字元的指標。 如果沒有這類值, 函數會傳回*last*。
+範圍中，符合指定遮罩之第一個字元的指標。 如果沒有這類值，函數會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-Protected 成員函式會傳回範圍 [ `ptr` `first`, `last`) 中的最小指標, [](#do_is)其 do_is `maskVal`( \* , `ptr`) 為 true。
+Protected 成員函式會傳回範圍 [ `ptr` `first`，`last`）中的最小指標，其 [do_is](#do_is) `maskVal`（\*，`ptr`）為 true。
 
 ### <a name="example"></a>範例
 
@@ -308,11 +308,11 @@ virtual const CharType *do_scan_not(
 
 ### <a name="return-value"></a>傳回值
 
-範圍中，不符合指定遮罩之第一個字元的指標。 如果沒有這類值, 函數會傳回*last*。
+範圍中，不符合指定遮罩之第一個字元的指標。 如果沒有這類值，函數會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-Protected 成員函式會傳回範圍 [ `ptr` `first`, `last`) 中的最小指標, [](#do_is)其 do_is `maskVal`( \* , `ptr`) 為 false。
+Protected 成員函式會傳回範圍 [ `ptr` `first`， `last`）中的最小指標，其 [do_is](#do_is) `maskVal`（\*，`ptr`）為 false。
 
 ### <a name="example"></a>範例
 
@@ -343,11 +343,11 @@ virtual const CharType *do_tolower(
 
 ### <a name="return-value"></a>傳回值
 
-第一個受保護的成員函式會傳回參數*ch*的小寫形式。 如果沒有小寫形式存在, 則會傳回*ch*。 第二個受保護的成員函式會傳回*last*。
+第一個受保護的成員函式會傳回參數*ch*的小寫形式。 如果沒有小寫形式存在，則會傳回*ch*。 第二個受保護的成員函式會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函`first`式`I`會`first` `I` `last`  - 將間隔`first` [0,) 中的每個元素 [] 取代為([`do_tolower` `I`]).
+第二個受保護的成員範本函`first`式`I`會`first` `I` `last`  - 將間隔`first` [0，）中的每個元素 [] 取代為（[`do_tolower` `I`]).
 
 ### <a name="example"></a>範例
 
@@ -378,11 +378,11 @@ virtual const CharType *do_toupper(
 
 ### <a name="return-value"></a>傳回值
 
-第一個受保護的成員函式會傳回參數*ch*的大寫形式。 如果沒有大寫形式存在, 則會傳回*ch*。 第二個受保護的成員函式會傳回*last*。
+第一個受保護的成員函式會傳回參數*ch*的大寫形式。 如果沒有大寫形式存在，則會傳回*ch*。 第二個受保護的成員函式會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-第二個受保護的成員範本函`first`式`I`會`first` `I` `last`  - 將間隔`first` [0,) 中的每個元素 [] 取代為([`do_toupper` `I`]).
+第二個受保護的成員範本函`first`式`I`會`first` `I` `last`  - 將間隔`first` [0，）中的每個元素 [] 取代為（[`do_toupper` `I`]).
 
 ### <a name="example"></a>範例
 
@@ -390,7 +390,7 @@ virtual const CharType *do_toupper(
 
 ## <a name="do_widen"></a>  ctype::do_widen
 
-虛擬函式, 呼叫以將原生字元集中**char**類型的字元轉換為地區設定所使用之`CharType`類型的對應字元。
+虛擬函式，呼叫以將原生字元集中**char**類型的字元轉換為地區設定所使用之`CharType`類型的對應字元。
 
 ```cpp
 virtual CharType do_widen(char byte) const;
@@ -404,7 +404,7 @@ virtual const char *do_widen(
 ### <a name="parameters"></a>參數
 
 *byte*\
-要轉換的原生字元集中, **char**類型的字元。
+要轉換的原生字元集中， **char**類型的字元。
 
 *頭*\
 要轉換的字元範圍中，第一個字元的指標。
@@ -461,7 +461,7 @@ const CharType *is(
 
 ### <a name="return-value"></a>傳回值
 
-如果測試的字元具有遮罩值所描述的屬性, 則第一個成員函式會傳回**true** ;如果無法擁有屬性, 則**為 false** 。
+如果測試的字元具有遮罩值所描述的屬性，則第一個成員函式會傳回**true** ;如果無法擁有屬性，則**為 false** 。
 
 第二個成員函式會傳回要分類其屬性的範圍中，最後一個字元的指標。
 
@@ -510,7 +510,7 @@ int main() {
 
 ## <a name="narrow"></a>  ctype::narrow
 
-將地區設定使用`CharType`的類型字元, 轉換為原生字元集中**char**類型的對應字元。
+將地區設定使用`CharType`的類型字元，轉換為原生字元集中**char**類型的對應字元。
 
 ```cpp
 char narrow(CharType ch, char default = '\0') const;
@@ -537,17 +537,17 @@ const CharType* narrow(
 要轉換的字元範圍中，緊接著最後一個字元的指標。
 
 *dest*\
-儲存已轉換字元範圍之目的範圍中, **char**類型第一個字元的常數指標。
+儲存已轉換字元範圍之目的範圍中， **char**類型第一個字元的常數指標。
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回**char**類型的原生字元, 其對應至類型`CharType default`的參數字元 (如果未定義對應項)。
+第一個成員函式會傳回**char**類型的原生字元，其對應至類型`CharType default`的參數字元（如果未定義對應項）。
 
 第二個成員函式會傳回原生字元 (從 `CharType` 類型字元轉換而來) 目的範圍的指標。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式[](#do_narrow)會傳回`ch`do_narrow `default`(,)。 第二個成員函式會`first`傳回`last` [do_narrow](#do_narrow) ( `dest`,, `default`,)。 只有基本來源字元的 `narrow` 下方保證會有唯一的反向影像 `CharType`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**。
+第一個成員函式會傳回`ch`[do_narrow](#do_narrow) `default`（，）。 第二個成員函式會`first`傳回`last` [do_narrow](#do_narrow) （ `dest`，， `default`，）。 只有基本來源字元的 `narrow` 下方保證會有唯一的反向影像 `CharType`。 針對這些基本來源字元，下列非變異值會保留：`narrow` ( [widen](#widen) ( **c** ), 0 ) == **c**。
 
 ### <a name="example"></a>範例
 
@@ -599,11 +599,11 @@ const CharType *scan_is(
 
 ### <a name="return-value"></a>傳回值
 
-範圍中，符合指定遮罩之第一個字元的指標。 如果沒有這類值, 函數會傳回*last*。
+範圍中，符合指定遮罩之第一個字元的指標。 如果沒有這類值，函數會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-此成員函式[](#do_scan_is)會傳回`maskVal`do_scan_is `first`( `last`,,)。
+此成員函式會傳回`maskVal`[do_scan_is](#do_scan_is) `first`（ `last`）。
 
 ### <a name="example"></a>範例
 
@@ -655,11 +655,11 @@ const CharType *scan_not(
 
 ### <a name="return-value"></a>傳回值
 
-範圍中，不符合指定遮罩之第一個字元的指標。 如果沒有這類值, 函數會傳回*last*。
+範圍中，不符合指定遮罩之第一個字元的指標。 如果沒有這類值，函數會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-此成員函式[](#do_scan_not)會傳回`maskVal`do_scan_not `first`( `last`,,)。
+此成員函式會傳回`maskVal`[do_scan_not](#do_scan_not) `first`（ `last`）。
 
 ### <a name="example"></a>範例
 
@@ -710,13 +710,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回參數*ch*的小寫形式。 如果沒有小寫形式存在, 則會傳回*ch*。
+第一個成員函式會傳回參數*ch*的小寫形式。 如果沒有小寫形式存在，則會傳回*ch*。
 
 第二個成員函式會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式[](#do_tolower)會傳回`ch`do_tolower ()。 第二個成員函式會`first`傳回`last` [do_tolower](#do_tolower)(,)。
+第一個成員函式會傳回`ch`[do_tolower](#do_tolower)（）。 第二個成員函式會`first`傳回`last` [do_tolower](#do_tolower)（，）。
 
 ### <a name="example"></a>範例
 
@@ -765,13 +765,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回參數*ch*的大寫形式。 如果沒有大寫形式存在, 則會傳回*ch*。
+第一個成員函式會傳回參數*ch*的大寫形式。 如果沒有大寫形式存在，則會傳回*ch*。
 
 第二個成員函式會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式[](#do_toupper)會傳回`ch`do_toupper ()。 第二個成員函式會傳回 [do_toupper](#do_toupper)( `first`, `last`)。
+第一個成員函式會傳回`ch`[do_toupper](#do_toupper)（）。 第二個成員函式會傳回 [do_toupper](#do_toupper)( `first`, `last`)。
 
 ### <a name="example"></a>範例
 
@@ -829,7 +829,7 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式[](#do_widen)會傳回`byte`do_widen ()。 第二個成員函式會`first`傳回`last` [do_widen](#do_widen)(,, `dest`)。
+第一個成員函式會傳回`byte`[do_widen](#do_widen)（）。 第二個成員函式會`first`傳回`last` [do_widen](#do_widen)（，， `dest`）。
 
 ### <a name="example"></a>範例
 

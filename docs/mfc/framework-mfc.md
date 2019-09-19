@@ -1,6 +1,6 @@
 ---
 title: 架構 (MFC)
-ms.date: 11/04/2016
+ms.date: 09/17/2019
 helpviewer_keywords:
 - encapsulation [MFC], Win32 API
 - MFC, application framework
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d93d2d50bab4b63258a3e0fe4cd2f24c2fcde4f3
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219765"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095791"
 ---
 # <a name="framework-mfc"></a>架構 (MFC)
 
-您會使用 MFC 程式庫架構進行的工作有很大部分是基於一些主要類別和數個 Visual C++ 工具。 某些類別會封裝大部分的 Win32 應用程式開發介面 (API)。 其他類別會封裝應用程式概念 (例如文件、檢視和應用程式本身)。 而其餘的類別則會封裝 OLE 功能、ODBC 和 DAO 資料存取功能。
+您會使用 MFC 程式庫架構進行的工作有很大部分是基於一些主要類別和數個 Visual C++ 工具。 某些類別會封裝大部分的 Win32 應用程式開發介面 (API)。 其他類別會封裝應用程式概念 (例如文件、檢視和應用程式本身)。 而其餘的類別則會封裝 OLE 功能、ODBC 和 DAO 資料存取功能。  （DAO 可透過 Office 2013 支援。 DAO 3.6 是最終版本，並被視為已淘汰。）
 
 例如，視窗的 Win32 概念是由 MFC 類別 `CWnd` 所封裝。 也就是說，一個名為 `CWnd` 的 C++ 類別會封裝或「包裝」代表 Windows 視窗的 `HWND` 控制代碼。 同樣地，類別 `CDialog` 會封裝 Win32 對話方塊。
 
@@ -33,7 +33,7 @@ ms.locfileid: "62219765"
 
 [文件、檢視和架構](../mfc/documents-views-and-the-framework.md)
 
-[精靈和資源編輯器](../mfc/wizards-and-the-resource-editors.md)
+[嚮導和資源編輯器](../mfc/wizards-and-the-resource-editors.md)
 
 ## <a name="in-related-sections"></a>相關章節
 
@@ -43,7 +43,7 @@ ms.locfileid: "62219765"
 
 [CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
 
-[文件範本和文件/檢視建立程序](../mfc/document-templates-and-the-document-view-creation-process.md)
+[檔範本和檔/視圖建立程式](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [訊息處理和對應](../mfc/message-handling-and-mapping.md)
 

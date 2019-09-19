@@ -1,6 +1,6 @@
 ---
-title: TN053:DAO 資料庫類別的自訂 DFX 常式
-ms.date: 11/04/2016
+title: TN053：DAO 資料庫類別的自訂 DFX 常式
+ms.date: 09/17/2019
 helpviewer_keywords:
 - MFC, DAO and
 - database classes [MFC], DAO
@@ -11,42 +11,42 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 262da283f20df1fe7af6aa02785e8c1ceb09dfda
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 949e1a07b2b45b01b08efb368046e0c65b1264e1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611087"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095993"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO 資料庫類別的自訂 DFX 常式
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 資料庫類別的自訂 DFX 常式
 
 > [!NOTE]
->  視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+>  DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 3.6 是最終版本，並被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
-這個技術提示說明 DAO 資料錄欄位交換 (DFX) 機制。 若要協助您了解 DFX 常式中的情況`DFX_Text`函式將會說明在做為範例的詳細資料。 為這個技術提示資訊的其他來源，您可以檢查程式碼為其他個別的 DFX 函式。 您可能不需要自訂 DFX 常式視您可能需要自訂 RFX 常式 （使用 ODBC 資料庫類別使用）。
+本技術提示說明 DAO 記錄欄位交換（DFX）機制。 為了協助您瞭解 DFX 常式中發生什麼狀況，此`DFX_Text`函式將詳細說明為範例。 如需此技術提示的其他資訊來源，您可以檢查其他個別 DFX 函數的程式碼。 您可能不需要經常有自訂的 DFX 常式，因為您可能需要自訂的 RFX 常式（與 ODBC 資料庫類別搭配使用）。
 
-這個技術提示包含：
+此技術注意事項包含：
 
-- DFX 概觀
+- DFX 總覽
 
-- [範例](#_mfcnotes_tn053_examples)使用 DAO 資料錄欄位交換和動態繫結
+- 使用 DAO 記錄欄位交換和動態繫結的[範例](#_mfcnotes_tn053_examples)
 
 - [DFX 的運作方式](#_mfcnotes_tn053_how_dfx_works)
 
-- [您的自訂 DFX 常式的用途](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
+- [您的自訂 DFX 常式執行的工作](#_mfcnotes_tn053_what_your_custom_dfx_routine_does)
 
 - [DFX_Text 的詳細資料](#_mfcnotes_tn053_details_of_dfx_text)
 
-**DFX 概觀**
+**DFX 總覽**
 
-DAO 資料錄欄位交換 (DFX) 機制用來簡化的擷取和更新資料時使用的程序`CDaoRecordset`類別。 此程序已簡化使用的資料成員`CDaoRecordset`類別。 藉由衍生自`CDaoRecordset`，您可以加入代表資料表或查詢中的每個欄位的衍生類別中的資料成員。 這項 「 靜態繫結 」 機制很簡單，但它可能無法針對所有應用程式選擇的資料擷取/更新方法。 DFX 會擷取每個繫結的欄位每次目前資料錄變更時。 如果您正在開發的重視效能的應用程式，不需要變更貨幣時，擷取每個欄位 「 動態繫結 」 透過`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`可能選擇的資料存取方法。
+DAO 記錄欄位交換器制（DFX）是用來在使用`CDaoRecordset`類別時，簡化抓取和更新資料的程式。 此程式會使用`CDaoRecordset`類別的資料成員來簡化。 藉由衍生`CDaoRecordset`自，您可以將資料成員加入至代表資料表或查詢中每個欄位的衍生類別。 這種「靜態系結」機制很簡單，但可能不是所有應用程式的資料提取/更新方法。 每當目前的記錄變更時，DFX 會抓取每個系結的欄位。 如果您正在開發不需要在貨幣變更時提取每個欄位的效能相關應用程式，則透過`CDaoRecordset::GetFieldValue`和`CDaoRecordset::SetFieldValue`的「動態系結」可能是選擇的資料存取方法。
 
 > [!NOTE]
->  DFX 和動態繫結不會互斥，所以可以使用靜態和動態繫結的混合式用法。
+>  DFX 和動態繫結不是互斥的，因此可以使用靜態和動態系結的混合式使用。
 
-## <a name="_mfcnotes_tn053_examples"></a> 範例 1 — 的 DAO 資料錄欄位交換只會使用
+## <a name="_mfcnotes_tn053_examples"></a>範例1—僅使用 DAO 記錄欄位交換
 
-(假設`CDaoRecordset`-衍生的類別`CMySet`尚未開啟)
+（假設`CDaoRecordset`衍生類別`CMySet`已經開啟）
 
 ```
 // Add a new record to the customers table
@@ -59,9 +59,9 @@ myset.m_strCustName = _T("Microsoft");
 myset.Update();
 ```
 
-**只有動態的繫結的範例 2： 使用**
+**範例 2-僅使用動態繫結**
 
-(假設使用`CDaoRecordset`類別， `rs`，並已開啟)
+（假設使用`CDaoRecordset`類別， `rs`且其已開啟）
 
 ```
 // Add a new record to the customers table
@@ -84,9 +84,9 @@ rs.SetFieldValue(_T("Customer_Name"),
 rs.Update();
 ```
 
-**範例 3 — 使用的 DAO 資料錄欄位交換，並動態繫結**
+**範例3：使用 DAO 記錄欄位交換和動態繫結**
 
-(假設使用的瀏覽 employee 資料`CDaoRecordset`-衍生的類別`emp`)
+（假設您使用`CDaoRecordset`衍生類別`emp`來流覽員工資料）
 
 ```
 // Get the employee's data so that it can be displayed
@@ -105,114 +105,113 @@ PopUpEmployeeData(emp.m_strFirstName,
     varPhoto);
 ```
 
-## <a name="_mfcnotes_tn053_how_dfx_works"></a> DFX 的運作方式
+## <a name="_mfcnotes_tn053_how_dfx_works"></a>DFX 的運作方式
 
-DFX 機制的運作方式類似於 MFC ODBC 類別所使用的資料錄欄位交換 (RFX) 機制。 DFX 和 RFX 的原則都相同，但有許多內部的差異。 DFX 函式的設計是，幾乎所有的程式碼由個別的 DFX 常式共用。 在最高等級 DFX 只執行幾件事。
+DFX 機制的運作方式與 MFC ODBC 類別所使用的記錄欄位交換（RFX）機制類似。 DFX 和 RFX 的原則相同，但有許多內部差異。 DFX 函式的設計是為了讓所有程式碼幾乎都是由個別的 DFX 常式所共用。 最高層級的 DFX 只會執行幾項工作。
 
-- DFX 建構 SQL**選取 **子句和 SQL**參數**子句，如有必要。
+- 必要時，DFX 會建立 SQL **SELECT**子句和 sql**參數**子句。
 
-- DFX 建構供 DAO 的繫結結構`GetRows`函式 （稍後詳述）。
+- DFX 會建立 DAO `GetRows`函數所使用的系結結構（稍後會詳細說明）。
 
-- DFX 管理用來偵測已變更的欄位 （如果正在使用雙重緩衝） 的資料緩衝區
+- DFX 會管理用來偵測中途欄位的資料緩衝區（如果正在使用雙重緩衝）
 
-- 管理 DFX **NULL**並**DIRTY**狀態陣列，並更新如有必要設定的值。
+- DFX 會管理**Null**和已**變更狀態陣列，並**在更新時設定值。
 
-機制是核心的 DFX`CDaoRecordset`衍生類別的`DoFieldExchange`函式。 此函式將呼叫分派至適當的作業類型的個別的 DFX 函式。 然後再呼叫`DoFieldExchange`內部的 MFC 函式會將作業類型。 下列清單顯示的各種作業類型和簡短描述。
+DFX 機制的核心是`CDaoRecordset`衍生類別的`DoFieldExchange`函式。 此函式會將呼叫分派至適當運算類型的個別 DFX 函數。 呼叫`DoFieldExchange`內部 MFC 函數之前，請先設定作業類型。 下列清單顯示各種作業類型和簡短描述。
 
-|運算|描述|
+|運算|說明|
 |---------------|-----------------|
-|`AddToParameterList`|組建參數子句|
-|`AddToSelectList`|組建的 SELECT 子句|
-|`BindField`|設定繫結結構|
+|`AddToParameterList`|Build PARAMETERS 子句|
+|`AddToSelectList`|組建 SELECT 子句|
+|`BindField`|設定系結結構|
 |`BindParam`|設定參數值|
-|`Fixup`|設定 NULL 狀態|
-|`AllocCache`|配置已變更的核取的快取|
+|`Fixup`|設定 Null 狀態|
+|`AllocCache`|配置用於中途檢查的快取|
 |`StoreField`|將目前的記錄儲存至快取|
-|`LoadField`|成員值的還原快取|
+|`LoadField`|將快取還原至成員值|
 |`FreeCache`|釋放快取|
-|`SetFieldNull`|設定欄位狀態 & 為 NULL 的值|
-|`MarkForAddNew`|標記已變更的欄位如果不是虛擬 NULL|
-|`MarkForEdit`|標記的欄位已變更如果不符合快取|
-|`SetDirtyField`|將欄位標示為中途的值|
+|`SetFieldNull`|將欄位狀態 & 值設定為 Null|
+|`MarkForAddNew`|如果不是虛擬 Null，則將欄位標示為已變更|
+|`MarkForEdit`|當不符合快取時將欄位標示為已變更|
+|`SetDirtyField`|設定標示為已變更的域值|
 
-在下一步 區段中，每個作業將會說明詳細的`DFX_Text`。
+在下一節中，將會更詳細地`DFX_Text`說明每個作業。
 
-若要了解有關 DAO 資料錄欄位交換程序最重要的功能是它會使用`GetRows`函式的`CDaoRecordset`物件。 DAO`GetRows`函式可在數種方式運作。 這個技術提示將只會簡短說明`GetRows`超出範圍的這個技術提示所顯示的原狀。
+若要瞭解 DAO 記錄欄位交換程式，最重要的功能就是它會使用`GetRows` `CDaoRecordset`物件的功能。 DAO `GetRows`函式可以透過數種方式運作。 本技術提示只會簡短說明`GetRows` ，因為它不在此技術注意事項的範圍內。
+DAO 3.6 是最終版本，並被視為已淘汰。 `GetRows`可以透過數種方式來工作。
 
-DAO`GetRows`能以數種方式。
+- 它可以一次提取多個記錄和多個資料欄位。 這可讓您更快速地存取資料，而複雜的方式是處理大型資料結構和每個欄位的適當位移，以及結構中每筆資料的記錄。 MFC 不會利用這個多重記錄提取機制。
 
-- 它可以擷取多個記錄和多個欄位的資料一次。 這允許更快速的資料存取與複雜的處理大型資料結構和每個欄位的適當位移的資料結構中的每一筆記錄。 MFC 不會利用這個擷取機制的多個記錄。
+- 另一`GetRows`種可行的方法是讓程式設計人員針對一筆資料記錄，指定每個欄位的已抓取資料的系結位址。
 
-- 另一種方式`GetRows`可以工作可讓程式設計人員指定每個欄位的一筆記錄的資料擷取的資料繫結位址。
+- DAO 也會在 [可變長度] 資料行的呼叫端中「回呼」，以便讓呼叫者可以配置記憶體。 第二個功能的優點是將資料的複本數目減至最少，並允許將資料直接儲存到類別的成員（ `CDaoRecordset`衍生類別）。 第二個機制是 MFC 用來系結至衍生類別中`CDaoRecordset`之資料成員的方法。
 
-- DAO 會也 「 回呼 」 呼叫端的可變長度資料行才能允許呼叫端配置的記憶體。 此第二個功能的好處是資料的複本數目降至最低，以及允許的資料直接儲存到類別的成員 (`CDaoRecordset`衍生的類別)。 此第二種機制是 MFC 用來繫結至資料成員中的方法`CDaoRecordset`衍生的類別。
+##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a>您的自訂 DFX 常式執行的工作
 
-##  <a name="_mfcnotes_tn053_what_your_custom_dfx_routine_does"></a> 您的自訂 DFX 常式的用途
+這在此討論中很明顯，在任何 DFX 函式中實作為最重要的作業，都必須能夠設定必要的資料結構， `GetRows`才能成功呼叫。 DFX 函數也必須支援許多其他作業，但不像正確準備進行`GetRows`呼叫一樣重要或複雜。
 
-它是明顯來自必須能夠成功呼叫設定必要的資料結構中任何 DFX 函式實作的最重要作業。 在本討論`GetRows`。 有幾個的 DFX 函式必須也支援其他作業，但不為重要或複雜正確準備`GetRows`呼叫。
+線上檔中會描述 DFX 的使用方式。 基本上，有兩個需求。 首先，必須將成員新增至每`CDaoRecordset`個系結欄位和參數的衍生類別。 遵循此`CDaoRecordset::DoFieldExchange`動作應該會遭到覆寫。 請注意，成員的資料類型很重要。 它應該符合資料庫中欄位的資料，或至少可以轉換成該類型。 例如，資料庫中的數值欄位（例如長整數）一律可以轉換成文字，並系結至`CString`成員，但是資料庫中的文字欄位可能不一定會轉換成數值表示，例如長整數並系結至長整合。er 成員。 DAO 和 Microsoft Jet 資料庫引擎負責轉換（而不是 MFC）。
 
-線上文件中會說明如何使用 DFX。 基本上，有兩個需求。 首先，必須新增成員至`CDaoRecordset`衍生的類別，針對每個繫結的欄位和參數。 遵循此`CDaoRecordset::DoFieldExchange`應該覆寫。 請注意，成員的資料型別是很重要。 它應該符合資料庫中欄位的資料，或至少可轉換成該類型。 例如在資料庫中，例如長整數的數值欄位可以一律轉換成文字並繫結至`CString`成員，但在資料庫中的文字欄位可能不一定會轉換成數值表示法，例如長整數和繫結至完整的整合er 成員。 DAO 和 Microsoft Jet 資料庫引擎負責轉換 （而非 MFC）。
+##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a>DFX_Text 的詳細資料
 
-##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text 的詳細資料
-
-如先前所述，解釋 DFX 是如何運作的最佳方式就是逐步的範例。 因此，透過內部`DFX_Text`應該能順利運作，有助於 DFX 至少有基本認識。
+如先前所述，說明 DFX 運作方式的最佳方式，是透過範例來運作。 基於這個目的，若要進行內部`DFX_Text`作業，應該非常妥善地協助至少提供對 DFX 的基本瞭解。
 
 - `AddToParameterList`
 
-   這項作業會建置 SQL**參數**子句 ("`Parameters <param name>, <param type> ... ;`」) 所需的 Jet。 每個參數是名為，而且型別 （如 RFX 呼叫中指定）。 請參閱函數`CDaoFieldExchange::AppendParamType`函式，以查看個別類型的名稱。 若是`DFX_Text`，使用的類型是**文字**。
+   此操作會建立 Jet所需的 SQL`Parameters <param name>, <param type> ... ;`參數子句（""）。 每個參數的名稱都是和類型（如 RFX 呼叫中所指定）。 若要查看`CDaoFieldExchange::AppendParamType`個別類型的名稱，請參閱函數函式。 在案例`DFX_Text`中，使用的類型是**文字**。
 
 - `AddToSelectList`
 
-   建置 SQL**選取**子句。 這很直接，DFX 呼叫所指定的資料行名稱就是附加 (「`SELECT <column name>, ...`")。
+   建立 SQL **SELECT**子句。 這相當簡單，因為 DFX 呼叫所指定的資料行名稱只會附加（"`SELECT <column name>, ...`"）。
 
 - `BindField`
 
-   最複雜的作業。 如先前所述這是 DAO 繫結結構會由`GetRows`設定。 中的程式碼，您可以看到`DFX_Text`的結構中的資訊類型包括使用的 DAO 類型 (**DAO_CHAR**或是**DAO_WCHAR**是`DFX_Text`)。 此外，使用的繫結的類型也會設定。 在先前章節`GetRows`中所述僅簡單地說，但仍不足以說明 MFC 使用的繫結的類型一律是直接處理繫結 (**DAOBINDING_DIRECT**)。 此外可變長度資料行繫結 (例如`DFX_Text`) 回呼繫結使用，因此 MFC 可以控制 記憶體配置和指定的位址是正確的長度。 這表示是 MFC 也始終會判斷 DAO"where"放置資料，因此直接繫結至成員變數。 繫結結構的其餘部分會填入之類的位址的記憶體配置回呼函式和資料行繫結 （繫結的資料行名稱） 的類型。
+   最複雜的作業。 如先前所述，這是`GetRows`已設定使用之 DAO 系結結構的位置。 您可以從結構中資訊類型的`DFX_Text`程式碼中看出，其中包括使用的 DAO 類型（**DAO_CHAR**或`DFX_Text` **DAO_WCHAR** ，在案例中為）。 此外，也會設定所使用的系結類型。 在先前的章節`GetRows`中，只是簡短說明，但它足以說明 MFC 使用的系結類型一律是直接位址系結（**DAOBINDING_DIRECT**）。 此外，也會使用可變長度的資料行`DFX_Text`系結（例如）回呼系結，讓 MFC 可以控制記憶體配置並指定正確長度的位址。 這表示 MFC 一律可以告訴 DAO 「where」來放置資料，因而允許直接系結至成員變數。 系結結構的其餘部分會以記憶體配置回呼函式的位址以及資料行系結的類型（依資料行名稱系結）填入。
 
 - `BindParam`
 
-   這是簡單的作業呼叫`SetParamValue`參數成員中指定的參數值。
+   這是一個簡單的作業， `SetParamValue`會使用參數成員中指定的參數值來呼叫。
 
 - `Fixup`
 
-   填寫**NULL**每個欄位的狀態。
+   填入每個欄位的**Null**狀態。
 
 - `SetFieldNull`
 
-   這項作業只能標記要為每個欄位狀態**NULL**並將成員變數的值設定為**PSEUDO_NULL**。
+   這項作業只會將每個欄位狀態標示為**Null** ，並將成員變數的值設定為**PSEUDO_Null**。
 
 - `SetDirtyField`
 
-   呼叫`SetFieldValue`每個欄位標示為已變更。
+   針對`SetFieldValue`每個標示為已變更的欄位呼叫。
 
-所有其餘的作業只會處理使用的資料快取。 資料快取是額外的緩衝區，用以簡化某些項目是目前記錄中的資料。 比方說，您可以自動偵測這項 「 中途 」 欄位。 它可以關閉完全或在欄位層級的線上文件所述。 緩衝區的實作會使用對應。 此對應來對應資料的動態配置的複本與 「 繫結 」 欄位的位址 (或`CDaoRecordset`衍生的資料成員)。
+所有剩餘的作業只會處理使用資料快取。 資料快取是目前記錄中資料的額外緩衝區，用來簡化特定專案。 例如，可以自動偵測「已變更」欄位。 如線上檔中所述，您可以完全或在欄位層級關閉它。 緩衝區的執行會利用對應。 這個對應是用來將資料的動態配置複本與「系結」欄位（或衍生的`CDaoRecordset`資料成員）的位址進行比對。
 
 - `AllocCache`
 
-   以動態方式配置的快取的欄位值，並將它加入至地圖。
+   動態配置快取域值，並將其新增至地圖。
 
 - `FreeCache`
 
-   刪除快取的欄位值，並將它從對應移除。
+   刪除快取的域值，並將它從對應中移除。
 
 - `StoreField`
 
-   將目前的欄位值複製到資料快取中。
+   將目前的域值複製到資料快取。
 
 - `LoadField`
 
-   將快取的值複製到欄位成員中。
+   將快取的值複製到欄位成員。
 
 - `MarkForAddNew`
 
-   檢查目前的欄位值是否不**NULL**並將其標示為中途如有必要。
+   檢查目前的域值是否為非**Null** ，並在必要時將其標示為已變更。
 
 - `MarkForEdit`
 
-   比較目前的欄位值與資料快取，並標示為已變更，如有必要。
+   比較目前的域值與資料快取，並視需要將其標示為已變更。
 
 > [!TIP]
-> 建立您的自訂 DFX 常式模型上現有的 DFX 常式，標準的資料類型。
+> 針對標準資料類型，在現有的 DFX 常式上建立自訂 DFX 常式的模型。
 
 ## <a name="see-also"></a>另請參閱
 

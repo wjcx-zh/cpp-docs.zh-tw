@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: 9b76d481bff6e98b915d71634dbf04a83a432736
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 12c919c1c79a3e40a1322f3f73398b90af2fad5f
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907736"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095922"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>範例：透過功能表命令顯示對話方塊
 
@@ -58,7 +58,7 @@ ms.locfileid: "70907736"
 
    ```cpp
    CTestDialog testdlg;
-   testdlg.DoModal();  
+   testdlg.DoModal(); 
    ```
 
 ### <a name="to-display-a-modeless-dialog-box"></a>若要顯示非強制回應對話方塊
@@ -107,7 +107,7 @@ ms.locfileid: "70907736"
       m_pTestDlg = new CTestDialog(this);
       m_pTestDlg->Create(CTestDialog::IDD, this);
    }
-   m_pTestDlg->ShowWindow(SW_SHOW); 
+   m_pTestDlg->ShowWindow(SW_SHOW);
    ```
 
 ## <a name="see-also"></a>另請參閱

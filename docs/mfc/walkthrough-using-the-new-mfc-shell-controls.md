@@ -4,12 +4,12 @@ ms.date: 04/25/2019
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: cf0a6bd230364b48c78c72b8e453e7e641fb2d0e
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e371368d4e588de5f94f6a252c6db291ec851e0a
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907400"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096008"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>逐步解說：使用新的 MFC Shell 控制項
 
@@ -31,14 +31,14 @@ ms.locfileid: "70907400"
 
 1. 從主功能表，選擇 [檔案] > [新增] > [專案]，以開啟 [建立新專案] 對話方塊。
 
-1. 在頂端的 [搜尋] 方塊中，輸入**mfc** ，然後從結果清單中選擇 [ **mfc 應用程式**]。 
+1. 在頂端的 [搜尋] 方塊中，輸入**mfc** ，然後從結果清單中選擇 [ **mfc 應用程式**]。
 
 1. 按一下 [下一步]。 在下一個頁面中，輸入專案的名稱，並視需要指定專案位置。
 
 1. 選擇 [建立] 按鈕以建立專案。
 
    [ **MFC 應用程式精靈]** 顯示之後，請使用下列選項：
- 
+
    1. 選擇左側的 [**應用程式類型**]。 然後選取 [**單一檔**]，然後選取 [**檔/視圖架構支援**]。 在 [**專案樣式**] 底下，選取 [ **Visual Studio**]，然後從 [**視覺化樣式和色彩**] 下拉式清單中選取 [ **Office 2007 （藍色主題）** ]。
 
    1. 在 [**複合檔案支援**] 窗格上，選取 [**無**]。
@@ -59,7 +59,7 @@ ms.locfileid: "70907400"
 
 1. 使用 [ **Mfc 應用程式精靈]** 建立新的 mfc 應用程式。 若要執行嚮導，請在 **[檔案**] 功能表中選取 [**新增**]，然後選取 [**專案**]。 [**新增專案**] 對話方塊隨即顯示。
 
-1. 在 [**新增專案**] 對話方塊中，展開 [**專案類型**] 窗格中的**視覺效果C++** 節點，然後選取 [ **MFC**]。 然後，在 [**範本**] 窗格中，選取 [ **MFC 應用程式**]。 輸入專案的名稱，例如`MFCShellControls` ，然後按一下 **[確定]** 。 
+1. 在 [**新增專案**] 對話方塊中，展開 [**專案類型**] 窗格中的**視覺效果C++** 節點，然後選取 [ **MFC**]。 然後，在 [**範本**] 窗格中，選取 [ **MFC 應用程式**]。 輸入專案的名稱，例如`MFCShellControls` ，然後按一下 **[確定]** 。
 
    [ **MFC 應用程式精靈]** 顯示之後，請使用下列選項：
 

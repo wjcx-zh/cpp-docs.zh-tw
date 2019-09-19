@@ -1,6 +1,6 @@
 ---
-title: TN055:MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
-ms.date: 06/20/2018
+title: TN055：將 MFC ODBC 資料庫類別應用程式遷移至 MFC DAO 類別
+ms.date: 09/17/2019
 helpviewer_keywords:
 - DAO [MFC], migration
 - TN055
@@ -12,23 +12,23 @@ helpviewer_keywords:
 - porting ODBC database applications to DAO
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
-ms.openlocfilehash: 7a1d3436a9b19c40df2a08576d797de49833f14f
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 7107964cc894a0aa45be5de362c9edd166dc0af1
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611229"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095963"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055:MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式遷移至 MFC DAO 類別
 
 > [!NOTE]
-> 視覺效果C++環境和精靈不支援 DAO （雖然 DAO 類別都包含在內，而且您仍然可以使用它們）。 Microsoft 建議您改用[OLE DB 樣板](../data/oledb/ole-db-templates.md)或是[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)針對新的專案。 您只應該使用 DAO，在維護現有的應用程式。
+> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 3.6 是最終版本，並被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
 ## <a name="overview"></a>總覽
 
 在大部分情況下，可能需要將使用 MFC 的 ODBC 資料庫類別的應用程式移轉至 MFC 的 DAO 資料庫類別。 這個技術提示將詳細說明 MFC ODBC 與 DAO 類別之間的大多數差異。 在考慮差異的情況下，如有需要，將應用程式從 ODBC 類別移轉至 MFC 類別應該不困難。
 
-## <a name="why-migrate-from-odbc-to-dao"></a>為什麼要移轉至 DAO 的 從 ODBC
+## <a name="why-migrate-from-odbc-to-dao"></a>為何要從 ODBC 遷移至 DAO
 
 您想要將應用程式從 ODBC 資料庫類別移轉至 DAO 資料庫類別的原因有許多種，但是這項決定不見得簡單或淺顯易懂。 務必記住的是，DAO 所使用的 Microsoft Jet 資料庫引擎可以讀取您擁有其 ODBC 驅動程式的任何 ODBC 資料來源。 雖然使用 ODBC 資料庫類別或直接自行呼叫 ODBC 可能更有效率，不過 Microsoft Jet 資料庫引擎可以讀取 ODBC 資料。
 
@@ -74,12 +74,12 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 ||`DFX_Currency`|
 |`RFX_Single`|`DFX_Single`|
 |`RFX_Double`|`DFX_Double`|
-|`RFX_Date`<sup>1</sup>|`DFX_Date` (`COleDateTime`-基礎)|
+|`RFX_Date`<sup>1</sup>|`DFX_Date`（`COleDateTime`以為基礎）|
 |`RFX_Text`|`DFX_Text`|
 |`RFX_Binary`|`DFX_Binary`|
 |`RFX_LongBinary`|`DFX_LongBinary`|
 
-<sup>1</sup> `RFX_Date`函數會根據`CTime`和`TIMESTAMP_STRUCT`。
+<sup>1</sup> `RFX_Date` `TIMESTAMP_STRUCT`函數是以`CTime`和為基礎。
 
 以下列出功能上的主要變更，這些變更可能會影響您的應用程式，並且需要進行較複雜的名稱變更。
 
@@ -87,9 +87,9 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 
    若使用 ODBC 類別，MFC 需要透過巨集或列舉的類型定義這些選項。
 
-   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 比方說，您可使用**快照集**時指定的型別`CRecordset`ODBC 中，但**DB_OPEN_SNAPSHOT**時指定的型別`CDaoRecordset`。
+   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，當您`CRecordset`在 ODBC 中指定類型時，會使用**快照**集，但是在指定的類型時，則是`CDaoRecordset` **DB_OPEN_SNAPSHOT** 。
 
-- 預設資料錄集類型`CRecordset`已**快照集**時的預設資料錄集類型`CDaoRecordset`會**動態集**（請參閱下方的附註有關 ODBC 類別快照的其他問題）。
+- 的預設記錄集類型`CRecordset`為**snapshot** ，而的`CDaoRecordset`預設記錄集類型為「**動態**集」（請參閱下面的附注，以取得 ODBC 類別快照的其他相關問題）。
 
 - ODBC `CRecordset` 類別可以選擇建立順向資料錄集類型。 在 `CDaoRecordset` 類別中，順向並不是資料錄集類型，而是特定資料錄集類型的屬性 (或選項)。
 
@@ -97,12 +97,12 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 
 - ODBC 類別的異動成員函式是 `CDatabase` 的成員，並且會在資料庫層級執行動作。 在 DAO 類別中，異動成員函式是較高層級類別 (`CDaoWorkspace`) 的成員，因此可能會影響共用同一個工作區 (異動空間) 的多個 `CDaoDatabase` 物件。
 
-- 例外狀況類別已變更。 `CDBExceptions` ODBC 類別中擲回和`CDaoExceptions`在 DAO 類別中。
+- 例外狀況類別已變更。 `CDBExceptions`會在 ODBC 類別和`CDaoExceptions` DAO 類別中擲回。
 
-- `RFX_Date` 會使用`CTime`並`TIMESTAMP_STRUCT`物件，而`DFX_Date`使用`COleDateTime`。 `COleDateTime`幾乎等同`CTime`，但是為依據的 8 位元 OLE**日期**而不是 4 位元組**time_t**因此能夠保存更大範圍的資料。
+- `RFX_Date`使用和物件`TIMESTAMP_STRUCT` ， `DFX_Date`同時使用`COleDateTime`。 `CTime` 幾乎與相同，但是`CTime`是以8個位元組的 OLE**日期**為基礎，而不是4個位元組的 time_t，因此它可以保存更大範圍的資料。 `COleDateTime`
 
    > [!NOTE]
-   > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的文件，以查看快照集 (`STATIC_CURSORS`) 都是唯讀。
+   > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的檔，以查看快照`STATIC_CURSORS`集（）是否為唯讀。
 
 ## <a name="see-also"></a>另請參閱
 

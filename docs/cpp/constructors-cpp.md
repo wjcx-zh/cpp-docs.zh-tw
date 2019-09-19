@@ -1,17 +1,17 @@
 ---
 title: 建構函式 (C++)
-ms.date: 07/02/2019
+ms.date: 09/05/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: a2afa605fe110f7dc84d528330417ef3a1fc47e7
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
+ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926269"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71062034"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -518,47 +518,6 @@ BaseClass1 ctor
 BaseClass2 ctor
 BaseClass3 ctor
 DerivedClass ctor
-```
-
-## <a name="virtual_functions_in_constructors"></a>函式中的虛擬函式
-
-建議您呼叫建構函式中的虛擬函式時要小心。 因為基底類別建構函式一定是在衍生類別建構函式之前叫用，所以在基底建構函式中所呼叫的函式是基底類別版本，而非衍生類別版本。 在下列範例中，建構 `DerivedClass` 會導致 `BaseClass` 的 `print_it()` 實作先執行，然後 `DerivedClass` 建構函式才會導致 `DerivedClass` 的 `print_it()` 實作執行：
-
-```cpp
-#include <iostream>
-using namespace std;
-
-class BaseClass{
-public:
-    BaseClass(){
-        print_it();
-    }
-    virtual void print_it() {
-        cout << "BaseClass print_it" << endl;
-    }
-};
-
-class DerivedClass : public BaseClass {
-public:
-    DerivedClass() {
-        print_it();
-    }
-    virtual void print_it(){
-        cout << "Derived Class print_it" << endl;
-    }
-};
-
-int main() {
-
-    DerivedClass dc;
-}
-```
-
-輸出如下：
-
-```Output
-BaseClass print_it
-Derived Class print_it
 ```
 
 ## <a name="delegating_constructors"></a>委派的函式

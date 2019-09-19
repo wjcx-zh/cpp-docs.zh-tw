@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: cf46c4f388c4607dbb8fb0e7f439603e5964ea03
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907665"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095868"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 
-您可以使用 [[類別] [Wizard]](mfc-class-wizard.md)或 [**屬性**] 視窗的 [**類別視圖**]，將訊息處理常式（處理 Windows 訊息的成員函式）加入至類別，並將視窗訊息對應至訊息處理常式。 您也可以[為任何對話方塊控制項加入事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。 
+您可以使用 [[類別] [Wizard]](mfc-class-wizard.md)或 [**屬性**] 視窗的 [**類別視圖**]，將訊息處理常式（處理 Windows 訊息的成員函式）加入至類別，並將視窗訊息對應至訊息處理常式。 您也可以[為任何對話方塊控制項加入事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
 
 藉由使用 [**類別] [Wizard]** 或 [**屬性**] 視窗（在**類別檢視**中）來定義訊息和事件處理函式，您可以自動更新訊息分派資料表（或訊息對應）和類別標頭檔。
 

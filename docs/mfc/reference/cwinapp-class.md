@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c35cc01b352285402885587f6d0b91e2c2bdd4ae
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741243"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095751"
 ---
 # <a name="cwinapp-class"></a>CWinApp 類別
 
@@ -1036,7 +1036,7 @@ virtual void HtmlHelp(
 指定其他資料。 使用的值取決於*nCmd*參數的值。 預設值`0x000F`為，表示[HH_HELP_CONTEXT](/previous-versions/windows/desktop/htmlhelp/hh-help-context-command)。
 
 *nCmd*<br/>
-指定要求的說明類型。 如需可能值的清單，以及它們如何影響*dwData*參數，請參閱 Windows SDK 的[HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 函式中所述的*uCommand*參數。  
+指定要求的說明類型。 如需可能值的清單，以及它們如何影響*dwData*參數，請參閱 Windows SDK 的[HtmlHelpW](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpw)或[HtmlHelpA](/windows/win32/api/htmlhelp/nf-htmlhelp-htmlhelpa) API 函式中所述的*uCommand*參數。 
 
 ### <a name="remarks"></a>備註
 
@@ -1054,7 +1054,7 @@ virtual BOOL InitInstance();
 
 ### <a name="return-value"></a>傳回值
 
-如果初始化成功，則為非零;否則為0。
+如果初始化成功, 則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 

@@ -39,13 +39,13 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="return-value"></a>傳回值
 
-0
+0\
 作業成功。
 
-sha-1
+1\
 作業失敗，在目前 VMCS的 `VM-instruction error field` 中有擴充狀態。
 
-2
+2\
 作業失敗，無可用的狀態。
 
 ## <a name="remarks"></a>備註

@@ -1,6 +1,7 @@
 ---
-title: 處理中的結構化例外狀況C++
-ms.date: 08/14/2018
+title: 使用 C++ 處理結構化例外狀況
+description: 如何使用C++例外狀況處理模型來處理結構化例外狀況。
+ms.date: 09/19/2019
 helpviewer_keywords:
 - structured exception handling [C++], vs. C++ exception handling
 - structured exception handling [C++], vs. unstructured
@@ -8,24 +9,24 @@ helpviewer_keywords:
 - C++ exception handling [C++], vs. structured exception handling
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
-ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c0e458f576325034d77676d247020adedfa33e5
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154401"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158733"
 ---
-# <a name="handle-structured-exceptions-in-c"></a>處理中的結構化例外狀況C++
+# <a name="handle-structured-exceptions-in-c"></a>使用 C++ 處理結構化例外狀況
 
-C 的主要差異結構化例外狀況處理 (SEH) 和C++例外狀況處理時，C++型別中處理的例外狀況處理模型，而 C 結構化例外狀況處理模型處理例外狀況的一種類型;具體而言，**不帶正負號的 int**。也就是說，C 例外狀況是以不帶正負號的整數值來識別，而 C++ 例外狀況則是以資料類型來識別。 在 C 中引發結構化例外狀況時，每個可能的處理常式會執行篩選條件來檢查 C 例外狀況內容，並決定是否要接受該例外狀況、 將它傳遞給其他處理常式，或忽略它。 C++ 中擲回例外狀況時，它可能是任何類型。
+C 結構化例外狀況處理（SEH）和C++例外狀況處理之間的主要差異C++在於，例外狀況處理模型會處理類型，而 C 結構化例外狀況處理模型則會處理某種類型的例外狀況;具體而言，不**帶正負**號的整數。也就是說，C 例外狀況是以不帶正負號的整數值來識別，而 C++ 例外狀況則是以資料類型來識別。 當 C 中引發了結構化例外狀況時，每個可能的處理常式都會執行一個篩選準則，檢查 C 例外狀況內容並判斷是否接受例外狀況、將它傳遞給其他處理常式，或予以忽略。 C++ 中擲回例外狀況時，它可能是任何類型。
 
-第二個差異是，C 結構化例外狀況處理模型指*非同步*，因為發生一般控制流程的次要例外狀況。 C++例外狀況處理機制已完全*同步*，這表示發生只有當在擲回例外狀況。
+第二個差異是 C 結構化例外狀況處理模型稱為*非同步*，因為例外狀況是在一般控制流程的次要處發生。 C++例外狀況處理機制是完全*同步*的，這表示例外狀況只會在擲回時才會發生。
 
-當您使用[/EHs 或 /EHsc](../build/reference/eh-exception-handling-model.md)編譯器選項，[否]C++例外狀況處理常式處理結構化例外狀況。 只有處理這些例外狀況 **__catch**結構化例外狀況處理常式或 **__finally**結構化終止處理常式。 如需資訊，請參閱[Structured Exception Handling (C /C++)](structured-exception-handling-c-cpp.md)。
+當您使用[/ehs 或/ehsc](../build/reference/eh-exception-handling-model.md)編譯器選項時，沒有C++任何例外狀況處理常式會處理結構化例外狀況。 這些例外狀況只會由 **__except**結構化例外狀況處理常式或 **__finally**結構化終止處理常式來處理。 如需相關資訊，請參閱[結構化例外C++狀況處理（C/）](structured-exception-handling-c-cpp.md)。
 
-底下[/EHa](../build/reference/eh-exception-handling-model.md)編譯器選項中引發 C 例外狀況，如果C++程式，它可以處理結構化例外狀況處理常式有其相關聯的篩選，或由C++**攔截**處理常式，兩者以動態方式是較接近例外狀況內容。 例如，下列C++程式引發 C 例外狀況C++**試**內容：
+在[/eha](../build/reference/eh-exception-handling-model.md)編譯器選項底下，如果C++程式中引發 C 例外狀況，它可以由結構化例外狀況處理常式與其相關聯的篩選或C++ **catch**處理常式處理，以動態方式接近例外狀況內容. 例如，此範例C++程式會在C++ **try**內容中引發 C 例外狀況：
 
-## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>範例-攔截 C 例外狀況，在C++的 catch 區塊
+## <a name="example---catch-a-c-exception-in-a-c-catch-block"></a>範例-攔截C++ catch 區塊中的 C 例外狀況
 
 ```cpp
 // exceptions_Exception_Handling_Differences.cpp
@@ -62,9 +63,9 @@ Caught a C exception.
 
 ## <a name="c-exception-wrapper-classes"></a>C 例外狀況包裝函式類別
 
-在如上所示的簡單範例，可以攔截 C 例外狀況只能由省略符號 (**...**)**攔截**處理常式。 與該例外狀況類型或特性相關的資訊，都不會傳遞至處理常式。 雖然這個方法的運作方式，在某些情況下您可能想要定義兩個例外狀況處理模型之間的轉換，使每個 C 例外狀況相關聯的特定類別。 若要這樣做，您可以定義 C 例外狀況「包裝函式」類別，使用或衍生自這個類別即可將特定類別類型的屬性設為 C 例外狀況。 如此一來，每個 C 例外狀況可以分開處理由特定C++**攔截**處理常式，而不是全部都放在單一處理常式。
+在上述的簡單範例中，C 例外狀況只能由省略號（...）捕捉 **。** **catch**處理常式。 與該例外狀況類型或特性相關的資訊，都不會傳遞至處理常式。 雖然這個方法可行，但在某些情況下，您可能會想要在兩個例外狀況處理模型之間定義轉換，讓每個 C 例外狀況都與特定的類別相關聯。 若要轉換一個，您可以定義 C 例外狀況「包裝函式」類別，這可以用或衍生自，以便將特定類別類型的屬性設為 C 例外狀況。 如此一來，每個 C 例外狀況都可以由特定C++的**catch**處理常式分別處理，而不是在單一處理程式中進行。
 
-您的包裝函式類別包含的介面可能會包括一些決定例外狀況值的成員函式，而且這些成員函式會存取 C 例外狀況模型所提供的延伸例外狀況內容資訊。 您也可以在定義的預設建構函式和接受的建構函式**不帶正負號的 int** （以提供之基礎 C 例外狀況表示） 的引數，以及位元複製建構函式。 以下是 C 例外狀況包裝函式類別的實作：
+您的包裝函式類別包含的介面可能會包括一些決定例外狀況值的成員函式，而且這些成員函式會存取 C 例外狀況模型所提供的延伸例外狀況內容資訊。 您可能也會想要定義預設的函式，以及接受不**帶正負號 int**引數的函式（以提供基礎 C 例外狀況標記法）和位複製的函式。 以下是 C 例外狀況包裝函式類別的可能執行：
 
 ```cpp
 // exceptions_Exception_Handling_Differences2.cpp
@@ -83,11 +84,11 @@ public:
 };
 ```
 
-若要使用這個類別，安裝自訂 C 例外狀況轉譯函式所呼叫的處理機制在每次擲回 C 例外狀況的內部例外狀況。 在您的轉譯函式，您可以擲回任何類型的例外狀況 (或許`SE_Exception`類型或類別類型衍生自`SE_Exception`)，就可以攔截適當的比對C++**攔截**處理常式。 轉譯函式可以單純傳回，表示並未處理例外狀況。 如果轉譯函式自行引發 C 例外狀況[終止](../c-runtime-library/reference/terminate-crt.md)呼叫。
+若要使用這個類別，請在每次擲回 C 例外狀況時，安裝內部例外狀況處理機制所呼叫的自訂 C 例外狀況轉譯函式。 在您的轉譯函式內，您可以擲回任何具`SE_Exception`類型的例外狀況（可能是類型`SE_Exception`或衍生自的類別類型），以便C++由適當的相符 catch 處理常式**攔截**。 轉譯函數可以改為傳回，這表示它未處理例外狀況。 如果轉譯函數本身引發 C 例外狀況，則會呼叫[terminate](../c-runtime-library/reference/terminate-crt.md) 。
 
-若要指定自訂轉譯函式，呼叫[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)函式的轉譯函式作為其單一引數名稱。 您撰寫的轉譯函式會呼叫一次有在堆疊上的每個函式引動過程**嘗試**區塊。 沒有預設轉譯函式;如果您未指定藉由呼叫其中一個 **_set_se_translator**，省略符號可能只會攔截 C 例外狀況**攔截**處理常式。
+若要指定自訂轉譯函式，請呼叫[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)函式，並將您的轉譯函式名稱當做其單一引數。 您撰寫的轉譯函式會針對堆疊上具有**try**區塊的每個函式呼叫呼叫一次。 沒有預設的轉譯函數;如果您未藉由呼叫 **_set_se_translator**來指定它，則 C 例外狀況只能由省略號 catch 處理常式**攔截**。
 
-## <a name="example---use-a-custom-translation-function"></a>範例-使用自訂轉譯函式
+## <a name="example---use-a-custom-translation-function"></a>範例-使用自訂翻譯函數
 
 例如，下列程式碼會安裝自訂轉譯函式，然後引發由 `SE_Exception` 類別包裝的 C 例外狀況：
 
@@ -145,4 +146,4 @@ nSE = 0xc0000094
 
 ## <a name="see-also"></a>另請參閱
 
-[混合 C （結構化） 和C++例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)
+[混合 C （結構化） C++和例外狀況](../cpp/mixing-c-structured-and-cpp-exceptions.md)

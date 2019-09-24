@@ -1,45 +1,29 @@
 ---
 title: 編譯器警告 (層級 4) C4510
-ms.date: 11/04/2016
+description: 編譯器警告 C4510 描述和解決方案。
+ms.date: 09/22/2019
 f1_keywords:
 - C4510
 helpviewer_keywords:
 - C4510
 ms.assetid: fd28d1d4-ad27-4dad-94c0-9dba46c93180
-ms.openlocfilehash: 80183e9f7ef17cbc37592f36eb8db1df2be94827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05a6d0fe42d8247d3328506d8772b2fa77b5703c
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221085"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71230378"
 ---
 # <a name="compiler-warning-level-4-c4510"></a>編譯器警告 (層級 4) C4510
 
-'class': 無法產生預設建構函式
+> '*class*'：無法產生預設的構造函式
 
-編譯器無法產生指定類別的預設建構函式，並沒有使用者定義的建構函式所建立。 您無法建立此類型的物件。
+編譯器無法針對指定的類別產生預設的函式，因為沒有任何使用者定義的函數。 無法建立此類型的物件。
 
-有幾種情況會使編譯器產生預設建構函式，包括：
+有幾種情況會讓編譯器無法產生預設的程式，包括：
 
-- Const 資料成員。
+- **Const**資料成員。
 
-- 資料成員的參考。
+- 參考的資料成員。
 
-您要建立之類別的初始化這些成員的使用者定義的預設建構函式。
-
-下列範例會產生 C4510:
-
-```
-// C4510.cpp
-// compile with: /W4
-struct A {
-   const int i;
-   int &j;
-   A& operator=( const A& ); // C4510 expected
-   // uncomment the following line to resolve this C4510
-   // A(int ii, int &jj) : i(ii), j(jj) {}
-};   // C4510
-
-int main() {
-}
-```
+若要修正此問題，請為初始化這些成員的類別建立使用者定義的預設函式。

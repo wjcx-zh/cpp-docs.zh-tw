@@ -151,10 +151,10 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
 ms.openlocfilehash: 20b3bafcdbaf02b0f7e40f0092d7f6661855114d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69505165"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl 類別
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|重新繪製屬性方格控制項和其屬性。|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|由屬性方格控制項呼叫以排序屬性。|
@@ -434,7 +434,7 @@ virtual int CompareProps(
 
 ### <a name="return-value"></a>傳回值
 
-|傳回值|說明|
+|傳回值|描述|
 |------------------|-----------------|
 |< 0|*PProp1*參數的名稱小於*pProp2*參數的名稱。|
 |0|*PProp1*參數的名稱等於*pProp2*參數的名稱。|
@@ -508,7 +508,7 @@ BOOL DeleteProperty(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -1074,7 +1074,7 @@ CMFCPropertyGridProperty* HitTest(
 
 這個方法會設定*pnArea*參數所指向的變數值。 下表列出可能的值和對應的區域。
 
-|值|區域|
+|值|區域圖|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|屬性展開框控制項。|
 |`ClickArea::ClickName`|屬性名稱|
@@ -1351,7 +1351,7 @@ virtual int OnDrawProperty(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 

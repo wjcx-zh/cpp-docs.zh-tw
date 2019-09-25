@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
 ms.openlocfilehash: 5e485c22bcc4bf35f61226d84345102052689f89
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69504526"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl 類別
@@ -47,7 +47,7 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
 |[CNetAddressCtrl::Create](#create)|使用指定的樣式建立網路位址控制項，並將它附加至`CNetAddressCtrl`目前的物件。|
 |[CNetAddressCtrl::CreateEx](#createex)|使用指定的擴充樣式建立網路位址控制項，並將它附加至`CNetAddressCtrl`目前的物件。|
@@ -133,7 +133,7 @@ virtual BOOL Create(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ##  <a name="createex"></a>  CNetAddressCtrl::CreateEx
 
@@ -150,7 +150,7 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*dwExStyle*|在要套用至控制項之擴充樣式的位元組合（或）。 如需詳細資訊，請參閱[CreateWindowEx](/windows/win32/api/winuser/nf-winuser-createwindowexw)函數的*dwExStyle*參數。|
 |*dwStyle*|在要套用至控制項之樣式的位元組合（OR）。 如需詳細資訊，請參閱[編輯樣式](../../mfc/reference/styles-used-by-mfc.md#edit-styles)。|
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 
 ### <a name="return-value"></a>傳回值
 
-如果此方法成功，則為 TRUE;否則為 FALSE。
+如果此方法成功, 則為 TRUE;否則為 FALSE。
 
 ##  <a name="displayerrortip"></a>CNetAddressCtrl：:D isplayErrorTip
 
@@ -231,7 +231,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*dwAddrMask*|在旗標的位元組合（OR），指定網路位址控制可支援的網址類別型。 如需詳細資訊，請參閱[NET_STRING](/windows/win32/shell/net-string)。|
 

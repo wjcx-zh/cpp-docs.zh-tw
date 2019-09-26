@@ -1,14 +1,14 @@
 ---
 title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
-ms.topic: landing-page
+ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a92676d198ed9ddffeae9a834ebd358c2c58e90
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 7b99f6429f620b56aec5adbc4b8f15d89cc54264
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740836"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274663"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -19,7 +19,7 @@ Windows 執行階段 C++ 範本庫 (WRL) 是提供低階方式撰寫和使用 Wi
 >
 > 透過C++/WinRT，您可以使用任何符合標準的 c + + 17 編譯器來取用和撰寫 Windows 執行階段 api。 C++/WinRT 通常會執行得更好，而且會產生比 Windows 執行階段的任何其他語言選項更小的二進位檔。 我們將繼續支援 C++/CX 和 WRL，但強烈建議讓新的應用程式使用 C++/WinRT。 如需詳細資訊，請參閱 [C++/WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)。
 
-## <a name="benefits"></a>權益
+## <a name="benefits"></a>優點
 
 Windows 執行階段C++範本庫可讓您更輕鬆地執行和取用元件物件模型（COM）元件。 它提供了維護技術（例如參考計數）來管理物件的存留期，以及測試 HRESULT 值來判斷作業是否成功或失敗。 若要成功使用 Windows 執行階段C++的範本庫，您必須仔細遵循這些規則和技術。
 

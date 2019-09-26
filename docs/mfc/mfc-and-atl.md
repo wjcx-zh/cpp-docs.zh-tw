@@ -2,13 +2,13 @@
 title: MFC 和 ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.topic: landing-page
-ms.openlocfilehash: 3eba0731c01fe232334efb4a2ff7df7179747b3e
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 87f4a9deb40d7c35498f5cbd66efb6bd976547c2
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218751"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274658"
 ---
 # <a name="mfc-and-atl"></a>MFC 和 ATL
 
@@ -18,7 +18,7 @@ Microsoft Foundation Classes (MFC) 透過 Win32 提供 C++ 物件導向包裝函
 
 在 Visual Studio 2015 中，Visual C++ 是選用元件，而 MFC 和 ATL 元件是 Visual C++ 底下的選用子元件。 如果您第一次安裝 Visual Studio 時未選取這些元件，當您第一次嘗試建立或開啟 MFC 或 ATL 專案時，系統會提示您安裝這些元件。
 
-在 Visual Studio 2017 和更新版本中, MFC 和 ATL 是在 Visual Studio 安裝程式程式中**使用C++** 工作負載的桌面開發下的選擇性子元件。 您可以安裝不含 MFC 的 ATL 支援, 或結合 MFC 和 ATL 支援 (MFC 相依于 ATL)。 如需工作負載和元件的詳細資訊, 請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+在 Visual Studio 2017 和更新版本中，MFC 和 ATL 是在 Visual Studio 安裝程式程式中**使用C++** 工作負載的桌面開發下的選擇性子元件。 您可以安裝不含 MFC 的 ATL 支援，或結合 MFC 和 ATL 支援（MFC 相依于 ATL）。 如需工作負載和元件的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
 ## <a name="related-articles"></a>相關文章
 

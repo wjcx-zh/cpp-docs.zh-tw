@@ -2,13 +2,13 @@
 title: Visual C++ 移植和升級指南
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.topic: landing-page
-ms.openlocfilehash: eed1f3d6ba66aa77561d610530f820b09cf439df
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 55bfb9a1ad23a0e4a3efa7f0a9361523c6c9754d
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216366"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274682"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++ 移植和升級指南
 
@@ -74,7 +74,7 @@ Visual Studio 中的建置系統和專案檔格式，已從 Visual Studio 2008 �
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|討論如何使用在舊版 Visual Studio 中建立的專案。|
 |[Visual Studio 中 C++ 編譯器中的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|現行 Visual Studio 版本中 IDE 和工具的變更|

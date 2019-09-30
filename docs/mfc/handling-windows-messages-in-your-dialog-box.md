@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows messages [MFC], handling
 - message handling [MFC], in dialog boxes
 ms.assetid: 4af0c9cb-09da-4b15-97df-a1cfb89def79
-ms.openlocfilehash: 5aff70010f3a84dceb88d22ee5e109cbf37abb5b
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 371d82072d569014e0d38b13fe6419c6fe7b8bc3
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907696"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685867"
 ---
 # <a name="handling-windows-messages-in-your-dialog-box"></a>處理對話方塊的 Windows 訊息
 
@@ -21,4 +21,4 @@ ms.locfileid: "70907696"
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)

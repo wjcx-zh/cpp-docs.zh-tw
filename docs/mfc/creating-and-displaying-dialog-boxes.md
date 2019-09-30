@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], displaying
 ms.assetid: 1c5219ee-8b46-44bc-9708-83705d4f248b
-ms.openlocfilehash: e0b7ff31576b345ac2911e62a6e10469845eecba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d23e4d2c9249ce248eb8092963036f2ba5cacac
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175026"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685743"
 ---
 # <a name="creating-and-displaying-dialog-boxes"></a>建立和顯示對話方塊
 
@@ -23,11 +23,11 @@ ms.locfileid: "62175026"
 
 |對話方塊類型|建立方式|
 |-----------------|----------------------|
-|[非強制回應](../mfc/creating-modeless-dialog-boxes.md)|建構 `CDialog`，然後呼叫 `Create` 成員函式。|
-|[Modal](../mfc/creating-modal-dialog-boxes.md)|建構 `CDialog`，然後呼叫 `DoModal` 成員函式。|
+|[獨佔](../mfc/creating-modeless-dialog-boxes.md)|建構 `CDialog`，然後呼叫 `Create` 成員函式。|
+|[強制回應](../mfc/creating-modal-dialog-boxes.md)|建構 `CDialog`，然後呼叫 `DoModal` 成員函式。|
 
-您可以如果您想，建立您的對話方塊中，從[記憶體內部對話方塊範本](../mfc/using-a-dialog-template-in-memory.md)您所建構，而不是從對話方塊範本資源。 這是進階主題。
+如有需要，您可以從已建立的[記憶體中對話方塊範本](../mfc/using-a-dialog-template-in-memory.md)，而不是從對話方塊範本資源建立對話方塊。 這是進階主題。
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)

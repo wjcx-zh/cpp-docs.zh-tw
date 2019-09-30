@@ -3,12 +3,12 @@ title: 依字母順序排列的編譯器選項
 ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 90c7ee5637a5d1e0f9d48c0f128364ee0df73dab
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273639"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685327"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -21,7 +21,7 @@ ms.locfileid: "70273639"
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
 |[/analyze](analyze-code-analysis.md)|啟用程式碼分析|
 |[/arch](arch-minimum-cpu-architecture.md)|為程式碼產生指定架構。|
-|[/await](await-enable-coroutine-support.md)|啟用協同程式 (可繼續函數) 延伸模組。|
+|[/await](await-enable-coroutine-support.md)|啟用協同程式（可繼續函數）延伸模組。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在前置處理過程中保留註解。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
@@ -34,12 +34,12 @@ ms.locfileid: "70273639"
 |[/E](e-preprocess-to-stdout.md)|複製前置處理器輸出至標準輸出。|
 |[/EH](eh-exception-handling-model.md)|指定例外狀況處理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|複製前置處理器輸出至標準輸出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Microsoft C++小組。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤（ICE）資訊給 Microsoft C++小組。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
-|[/experimental: 模組](experimental-module.md)|啟用實驗性模組支援。|
-|[/experimental: 預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
+|[/experimental：模組](experimental-module.md)|啟用實驗性模組支援。|
+|[/experimental：預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|產生針對特定 x64 架構優化的程式碼, 或適用于 AMD64 和延伸記憶體64技術 (EM64T) 架構中的微架構細節。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|產生針對特定 x64 架構優化的程式碼，或適用于 AMD64 和延伸記憶體64技術（EM64T）架構中的微架構細節。|
 |[/FA](fa-fa-listing-file.md)|建立清單檔。|
 |[/Fa](fa-fa-listing-file.md)|設定清單檔名稱。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|顯示在診斷測試中傳遞給 cl.exe 的原始程式檔完整路徑。|
@@ -77,7 +77,7 @@ ms.locfileid: "70273639"
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例 (僅適用於 x86)。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器 (原生和跨平臺編譯)。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器（原生和跨平臺編譯）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立熱可修補映射。|
 |[/I](i-additional-include-directories.md)|搜尋包含檔的目錄。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
@@ -99,7 +99,7 @@ ms.locfileid: "70273639"
 |[/Od](od-disable-debug.md)|停用最佳化。|
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|產生內建函式。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|[`#pragma omp`](../../preprocessor/omp.md)在原始程式碼中啟用指示詞。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|在原始程式碼中啟用[`#pragma omp`](../../preprocessor/omp.md)指示詞。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|偏好小的程式碼。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|偏好快的程式碼。|
 |[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
@@ -153,10 +153,11 @@ ms.locfileid: "70273639"
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|產生與 C 7.0 相容的調試資訊。|
 |[/Za](za-ze-disable-language-extensions.md)|停用語言擴充功能。|
-|[/Zc](zc-conformance.md)|指定[/ze](za-ze-disable-language-extensions.md)下的標準行為。[/Za、/ze (停用語言擴充功能)](za-ze-disable-language-extensions.md)|
+|[/Zc](zc-conformance.md)|指定[/ze](za-ze-disable-language-extensions.md)下的標準行為。[/Za、/ze （停用語言擴充功能）](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
 |[/Zf](zf.md)|改善平行組建中的 PDB 產生時間。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual Studio 2015 中移除。 產生函式原型。|
+|[/ZH](zh.md)|針對 debug 資訊中的總和檢查碼指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱 (僅適用於 x86)。|

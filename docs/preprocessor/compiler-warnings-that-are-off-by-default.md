@@ -5,16 +5,16 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: d497886b22c7a90ab7cda47e46dc13daf297b192
-ms.sourcegitcommit: b4572ffcc71e6bdb0ca23221f9476cfaf4528406
+ms.openlocfilehash: ac6ad3b5bbe5f3a738dc0019a43ff08a17cf27ca
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314466"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685719"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>預設為關閉的編譯器警告
 
-編譯器支援預設會關閉的警告，因為大部分的開發人員都找不到它們很有用。 在某些情況下，他們會警告有關樣式的選擇，或較舊程式碼中常見的慣用語。 其他警告則是關於使用語言的 Microsoft 擴充功能。 在其他情況下，它們表示程式設計人員通常會做出不正確的假設，這可能會導致未預期或未定義的行為。 若已啟用，這些警告可能會在程式庫標頭中出現多次。 C 執行時間程式庫和C++標準程式庫的目的，只是在警告層級[/W4](../build/reference/compiler-option-warning-level.md)時，才會發出任何警告。
+編譯器支援預設會關閉的警告，因為大部分的開發人員都找不到它們很有用。 在某些情況下，他們會警告有關樣式的選擇，或較舊程式碼中常見的慣用語。 其他警告則是關於使用語言的 Microsoft 擴充功能。 某些警告表示程式設計人員通常會做出不正確的假設，這可能會導致非預期或未定義的行為。 如果所有這些警告都已啟用，其中有些可能會在程式庫標頭中出現多次。 C 執行時間程式庫和C++標準程式庫的目的，只是在警告層級[/W4](../build/reference/compiler-option-warning-level.md)時，才會發出任何警告。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>啟用預設為關閉的警告
 
@@ -89,7 +89,7 @@ ms.locfileid: "71314466"
 |C4587 （層級1）|'*anonymous_structure*'：行為變更：不再隱含呼叫此函式|
 |C4588 （層級1）|'*anonymous_structure*'：行為變更：不再隱含呼叫析構函式|
 |[C4596](../error-messages/compiler-warnings/c4596.md)（層級4）|'*identifier*'：成員宣告<sup>14.3</sup> <sup>永久</sup>中有不合法的限定名稱|
-|C4598 （層級1和層級3）|' #include "*標頭*" '：先行編譯頭*檔中的標頭編號不*符合位於該位置<sup>14.3</sup>的目前編譯|
+|C4598 （層級1和層級3）|' #include "*標頭*" '：在先行編譯頭*檔中的*標頭編號不符合目前的編譯位置<sup>14.3</sup>|
 |至 c4599 （層級3）|'*選項* *路徑*': 命令列引數數目*號碼*不符合預先編譯的標頭<sup>14.3</sup>|
 |C4605 （層級1）|在目前的命令列上指定了 '/d*宏*'，但在建立先行編譯標頭檔時未指定|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md)（層級3）|'*union_member*' 已由初始化運算式清單 '*union_member*'<sup>永久</sup>中的另一個聯集成員所初始化|
@@ -108,7 +108,7 @@ ms.locfileid: "71314466"
 |[C4692](../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)（層級1）|'*function*'：非私用成員的簽章包含元件私用原生類型 '*native_type*'|
 |[C4710](../error-messages/compiler-warnings/compiler-warning-level-4-c4710.md)（層級4）|'*function*'：未內嵌函式|
 |[C4738](../error-messages/compiler-warnings/compiler-warning-level-3-c4738.md)（層級3）|在記憶體中儲存 32 位元浮點結果，可能會損失效能|
-|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|「*運算式*」的變動性存取受限於/volatile：\<iso&#124;ms > 設定; 請考慮使用 __iso_volatile_load/store 內建函式|
+|[C4746](../error-messages/compiler-warnings/compiler-warning-c4746.md)|「*運算式*」的變動性存取受限於/volatile： \<iso&#124;ms > 設定;考慮使用 __iso_volatile_load/store 內建函式|
 |C4749 （層級4）|有條件地支援： offsetof 套用至非標準版面配置類型 '*type*'|
 |C4767 （層級4）|區段名稱 '*symbol*' 長度超過8個字元，且連結器將截斷|
 |C4768 （層級3）|忽略連結規格前的 __declspec 屬性|
@@ -142,15 +142,22 @@ ms.locfileid: "71314466"
 |C5029 （層級4）|使用非標準的擴充：中C++的對齊屬性僅適用于變數、資料成員和標記類型|
 |C5031 （層級4）|#pragma 警告（pop）：可能不相符，彈出的警告狀態已推送至不同的檔案<sup>14.1</sup>|
 |C5032 （層級4）|偵測到 #pragma 警告（push），但沒有對應的 #pragma 警告（pop） <sup>14.1</sup>|
-|C5034|使用內建的 '*內部*' 會導致函式函式*編譯為來賓*程式碼<sup>15.3</sup>|
-|C5035|使用功能「*功能*」會使函式函式*編譯為來賓*程式碼<sup>15.3</sup>|
+|C5034|使用內建的 '*內部*' 會使函*式函數名稱*編譯為來賓代碼<sup>15.3</sup>|
+|C5035|使用功能「*功能*」會使函*式函式名稱*編譯為來賓代碼<sup>15.3</sup>|
 |C5036 （層級1）|以/hybrid： x86arm64 '*type1*' 編譯為 '*type2*' <sup>15.3</sup>時的 varargs 函式指標轉換|
 |[C5038](../error-messages/compiler-warnings/c5038.md)（層級4）|資料成員 '*member1*' 將會在資料成員 '*member2*' <sup>15.3</sup>之後初始化|
 |C5039 （層級4）|'*function*'：可能擲回函式的指標或參考，而該函式會傳遞至-EHc 底下的 extern C 函數。 如果此函式擲回例外狀況，則可能會發生未定義的行為。 <sup>15.5</sup>|
 |C5042 （層級3）|'*function*'：在區塊範圍中的函式宣告不能在 standard C++中指定為 ' inline ';移除 ' inline ' 規範<sup>15.5</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|如果/Qspectre 參數指定<sup>15.7</sup> ，編譯器會插入記憶體負載的 Spectre 緩和措施|
 
-<sup>14.1</sup>從 Visual Studio 2015 Update 1 開始可取得此警告。\\<sup>14.3</sup>從 Visual Studio 2015 Update 3 開始會提供這項警告。\\<sup>15.3</sup>從 Visual Studio 2017 15.3 版開始會提供此警告。\\<sup>15.5</sup>從 Visual Studio 2017 15.5 版開始會提供此警告。\\<sup>15.7</sup>從 Visual Studio 2017 15.7 版開始會提供此警告。\\<sup>15.8</sup>從 Visual Studio 2017 15.8 版開始會提供此警告。\\<sup>16.0</sup>從 VISUAL STUDIO 2019 RTM 開始可取得此警告。\\<sup>永久</sup>除非已設定[/permissive-](../build/reference/permissive-standards-conformance.md)編譯器選項，否則此警告是關閉的。
+<sup>14.1</sup>從 Visual Studio 2015 Update 1 開始可取得此警告。 <br/>
+<sup>14.3</sup>從 Visual Studio 2015 Update 3 開始會提供這項警告。 <br/>
+<sup>15.3</sup>從 Visual Studio 2017 15.3 版開始會提供此警告。 <br/>
+<sup>15.5</sup>從 Visual Studio 2017 15.5 版開始會提供此警告。 <br/>
+<sup>15.7</sup>從 Visual Studio 2017 15.7 版開始會提供此警告。 <br/>
+<sup>15.8</sup>從 Visual Studio 2017 15.8 版開始會提供此警告。 <br/>
+<sup>16.0</sup>從 VISUAL STUDIO 2019 RTM 開始可取得此警告。 <br/>
+<sup>永久</sup>除非已設定[/permissive-](../build/reference/permissive-standards-conformance.md)編譯器選項，否則此警告是關閉的。
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>先前版本中的警告預設為關閉
 

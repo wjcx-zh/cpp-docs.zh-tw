@@ -4,12 +4,12 @@ ms.date: 08/08/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: bfc9bb17100a3ee5c662062963c71ee532487239
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273710"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685191"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -59,7 +59,7 @@ ms.locfileid: "70273710"
 |[/Gy](gy-enable-function-level-linking.md)|啟用函式階層連結。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 (與 [/RTC1](rtc-run-time-error-checks.md)相同)|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|使用 `__stdcall` 呼叫慣例。 (僅限 x86)|
-|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器 (原生和跨平臺編譯)。|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|在函式進入時，強制暫存器中所傳遞的參數寫入至堆疊上的位置。 這個編譯器選項只適用于 x64 編譯器（原生和跨平臺編譯）。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|建立可線上修補的影像。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
@@ -67,7 +67,7 @@ ms.locfileid: "70273710"
 |[/Qpar](qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
-|[/Qspectre](qspectre.md)|針對 Spectre 攻擊類別, 啟用 CVE 2017-5753 的緩和措施。|
+|[/Qspectre](qspectre.md)|針對 Spectre 攻擊類別，啟用 CVE 2017-5753 的緩和措施。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|
 |[/RTC](rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
@@ -122,6 +122,7 @@ ms.locfileid: "70273710"
 |[/Zc](zc-conformance.md)|指定 [/Ze](za-ze-disable-language-extensions.md)下的標準行為。|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用 C89 語言延伸模組。|
 |[/Zf](zf.md)|改善平行組建中的 PDB 產生時間。|
+|[/ZH](zh.md)|針對 debug 資訊中的總和檢查碼指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。 (僅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
 |[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱。|
@@ -153,7 +154,7 @@ ms.locfileid: "70273710"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤 (ICE) 資訊給 Microsoft C++小組。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤（ICE）資訊給 Microsoft C++小組。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在診斷文字中顯示傳遞給 cl.exe 的原始程式檔完整路徑。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 MSPDBSRV.EXE 序列化的程式資料庫 (PDB) 檔案。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
@@ -186,7 +187,7 @@ ms.locfileid: "70273710"
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
 |[/Y-](y-ignore-precompiled-header-options.md)|忽略目前組建中所有其他先行編譯標頭編譯器選項。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|指定先行編譯標頭的記憶體配置上限。|
-|[/await](await-enable-coroutine-support.md)|啟用協同程式 (可繼續函數) 延伸模組。|
+|[/await](await-enable-coroutine-support.md)|啟用協同程式（可繼續函數）延伸模組。|
 |[/source-charset](source-charset-set-source-character-set.md)|設定來源字元集。|
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|將來源和執行字元集設定為 UTF-8。|
@@ -197,12 +198,12 @@ ms.locfileid: "70273710"
 
 ## <a name="experimental-options"></a>實驗性選項
 
-實驗性選項可能僅受到特定版本編譯器的支援, 而且在不同的編譯器版本中可能會有不同的行為。 通常, 實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
+實驗性選項可能僅受到特定版本編譯器的支援，而且在不同的編譯器版本中可能會有不同的行為。 通常，實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
 
 |選項|用途|
 |------------|-------------|
-|[/experimental: 模組](experimental-module.md)|啟用實驗性模組支援。|
-|[/experimental: 預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
+|[/experimental：模組](experimental-module.md)|啟用實驗性模組支援。|
+|[/experimental：預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>已取代和已移除的編譯器選項
 

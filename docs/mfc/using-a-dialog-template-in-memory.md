@@ -7,17 +7,17 @@ helpviewer_keywords:
 - dialog templates [MFC], in memory
 - MFC dialog boxes [MFC], dialog templates
 ms.assetid: edb443bb-e614-4f77-8a3b-74d93871e9bd
-ms.openlocfilehash: de694f6561dfe1423c7758ae572ccf6be1c8fd17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7250ea628f371cac16e0a34e81d8bab0828db73e
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180553"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685025"
 ---
 # <a name="using-a-dialog-template-in-memory"></a>使用記憶體中的對話方塊範本
 
-而不是使用所提供的方法[ 對話方塊建立資料表](../mfc/creating-a-dialog-class-with-code-wizards.md)，您可以從對話方塊範本，在記憶體中間接建立對話方塊中的其中一種。 如需詳細資訊，請參閱類別[CDialog](../mfc/reference/cdialog-class.md)中*MFC 參考 》*。
+除了使用[對話方塊建立表](../mfc/creating-a-dialog-class-with-code-wizards.md)中提供的方法之外，您還可以從記憶體中的對話方塊範本間接建立這種對話方塊。 如需詳細資訊，請參閱*MFC 參考*中的類別[CDialog](../mfc/reference/cdialog-class.md) 。
 
 ## <a name="see-also"></a>另請參閱
 
-[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)

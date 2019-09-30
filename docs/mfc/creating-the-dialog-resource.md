@@ -9,16 +9,16 @@ helpviewer_keywords:
 - resources [MFC], creating dialog boxes
 - MFC dialog boxes [MFC], dialog resource
 ms.assetid: 0b83bd33-14d3-4611-8129-fccdae18053e
-ms.openlocfilehash: d0df76c506d4e6f2267e3a7628825e7b47a56c8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e6c81a0f4bd6983c2a76baf6148941a4fa21d
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242324"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685634"
 ---
 # <a name="creating-the-dialog-resource"></a>建立對話方塊資源
 
-設計[ 對話方塊中](../mfc/dialog-boxes.md)並且建立對話方塊資源，則使用[對話方塊編輯器](../windows/dialog-editor.md)。 在對話方塊編輯器中，您可以：
+若要設計[對話方塊](../mfc/dialog-boxes.md)並建立對話方塊資源，您可以使用[對話方塊編輯器](../windows/dialog-editor.md)。 在對話方塊編輯器中，您可以：
 
 - 調整您的對話方塊出現時的大小和位置。
 
@@ -28,11 +28,11 @@ ms.locfileid: "62242324"
 
 - 模擬對話方塊在程式中的外觀和行為以測試您的對話方塊。 在測試模式中，您可以在文字方塊中輸入文字、按一下按鈕等方式，來操作對話方塊的控制項。
 
-當您完成時，您的對話方塊範本資源會儲存在應用程式的資源指令碼檔案中。 必要時您可以稍後再進行編輯。 如需如何建立和編輯對話方塊資源的完整說明，請參閱 <<c0> [ 對話方塊編輯器](../windows/dialog-editor.md)主題。 這項技術也用來建立的對話方塊範本資源[CFormView](../mfc/reference/cformview-class.md)並[CRecordView](../mfc/reference/crecordview-class.md)類別。
+當您完成時，您的對話方塊範本資源會儲存在應用程式的資源指令碼檔案中。 必要時您可以稍後再進行編輯。 如需如何建立和編輯對話方塊資源的完整說明，請參閱[對話方塊編輯器](../windows/dialog-editor.md)主題。 這項技術也用來建立[CFormView](../mfc/reference/cformview-class.md)和[CRecordView](../mfc/reference/crecordview-class.md)類別的對話方塊範本資源。
 
-對話方塊的外觀適合您，當建立對話方塊類別，並對應其訊息，如所述[使用程式碼精靈建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)。
+當對話方塊的外觀適合您時，請建立對話方塊類別並對應其訊息，如[使用程式碼嚮導建立對話方塊類別](../mfc/creating-a-dialog-class-with-code-wizards.md)中所述。
 
 ## <a name="see-also"></a>另請參閱
 
 [對話方塊](../mfc/dialog-boxes.md)<br/>
-[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)
+[在 MFC 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)

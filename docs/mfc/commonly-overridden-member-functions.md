@@ -10,12 +10,12 @@ helpviewer_keywords:
 - OnOK function
 - MFC dialog boxes [MFC], overriding member functions
 ms.assetid: 78eb566c-e361-4c86-8db5-c7e2791b249a
-ms.openlocfilehash: f63dd6079b96181305f3207d4a1ef823df8d8ba4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 51a647bb50415af71d6d148d3139f906f503ee2a
+ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907694"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71685814"
 ---
 # <a name="commonly-overridden-member-functions"></a>常被覆寫的成員函式
 
@@ -37,7 +37,7 @@ ms.locfileid: "70907694"
 
 通常會為非強制回應對話方塊覆寫 `OnCancel`。
 
-如需這些成員函式的詳細資訊，請參閱*MFC 參考*中的類別[CDialog](../mfc/reference/cdialog-class.md)和[對話方塊的生命週期](../mfc/life-cycle-of-a-dialog-box.md)討論。
+如需這些成員函式的詳細資訊，請參閱*Mfc 參考*中的類別[CDIALOG](../mfc/reference/cdialog-class.md)和在[mfc 中使用對話方塊](../mfc/life-cycle-of-a-dialog-box.md)的討論。
 
 ## <a name="see-also"></a>另請參閱
 

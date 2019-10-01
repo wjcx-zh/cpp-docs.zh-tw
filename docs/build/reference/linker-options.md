@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 23cd1c3ce767cf8046e3439432db795f032dc370
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
+ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685581"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712694"
 ---
 # <a name="linker-options"></a>連結器選項
 
@@ -88,7 +88,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md)|告知編譯器應用程式支援比 2 GB 更大的位址。|
 |[/LIBPATH](libpath-additional-libpath.md)|指定要在環境程式庫路徑之前搜尋的路徑。|
 |[/LINKREPRO](linkrepro.md)|指定在中產生連結重現成品的路徑。|
-|[/LINKREPROTARGET](linkreprotarget.md)|只有在產生指定的目標時，才會產生連結重現。|
+|[/LINKREPROTARGET](linkreprotarget.md)|只有在產生指定的目標時，才會產生連結重現。<sup>16.1</sup>|
 |[/LTCG](ltcg-link-time-code-generation.md)|指定連結時產生程式碼。|
 |[/MACHINE](machine-specify-target-platform.md)|指定目標平台。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|建立並存資訊清單檔，並選擇性地將其內嵌於二進位檔中。|
@@ -137,7 +137,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/WINMDDELAYSIGN](winmddelaysign-partially-sign-a-winmd.md)|透過將公開金鑰置於 Windows 執行階段中繼資料 (.winmd) 檔中，來部分地簽署 winmd 檔。|
 |[/WX](wx-treat-linker-warnings-as-errors.md)|將連結器警告視為錯誤。|
 
-如需詳細資訊，請參閱 [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)。
+<sup>16.1</sup>從 Visual Studio 2019 16.1 版開始提供此選項。
 
 ## <a name="see-also"></a>另請參閱
 

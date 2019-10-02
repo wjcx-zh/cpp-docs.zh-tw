@@ -23,8 +23,8 @@ ms.locfileid: "70216273"
 
 ## <a name="syntax"></a>語法
 
-> **#define***識別碼* *token-字串*<sub>opt</sub>\
-> **#define***識別碼* **(** *identifier*<sub>opt</sub> **,** ... **,** *識別碼*<sub>opt</sub> **)** *token-字串*<sub>opt</sub>
+> **#define** *識別碼* *token-字串*<sub>opt</sub>\
+> **#define** *識別碼* **(** *identifier*<sub>opt</sub> **,** ... **,** *識別碼*<sub>opt</sub> **)** *token-字串*<sub>opt</sub>
 
 ## <a name="remarks"></a>備註
 

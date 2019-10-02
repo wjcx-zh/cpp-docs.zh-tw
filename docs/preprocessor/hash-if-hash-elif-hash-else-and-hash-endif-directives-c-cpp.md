@@ -41,9 +41,9 @@ ms.locfileid: "70220348"
 &nbsp;&nbsp;&nbsp;&nbsp;*if-line text*
 
 *如果-line* : \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if***常數運算式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***識別碼*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef***識別碼*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *常數運算式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *識別碼*
 
 *elif-元件*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行文字*\
@@ -100,7 +100,7 @@ ms.locfileid: "70220348"
 **定義**的預處理器運算子可以在特殊常數運算式中使用, 如下列語法所示:
 
 > **已定義 (** *識別碼* **)** \
-> **已定義***識別碼*
+> **已定義** *識別碼*
 
 如果目前已定義*識別碼*, 這個常數運算式就會被視為 true (非零)。 否則，條件為 false (0)。 定義成空白文字的識別項會被視為已定義。 **定義**的運算子可以用在 **#if**和 **#elif**指示詞中, 但其他地方則不適用。
 

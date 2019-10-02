@@ -21,7 +21,7 @@ ms.locfileid: "70216117"
 
 ## <a name="syntax"></a>語法
 
-> **#error***token-字串*
+> **#error** *token-字串*
 
 ## <a name="remarks"></a>備註
 

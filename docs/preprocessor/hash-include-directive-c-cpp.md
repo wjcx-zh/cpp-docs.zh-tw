@@ -22,7 +22,7 @@ ms.locfileid: "70220256"
 ## <a name="syntax"></a>語法
 
 > **#include**「*路徑規格*」 \
-> **#include***路徑-規格* \<>
+> **#include** *路徑-規格* \<>
 
 ## <a name="remarks"></a>備註
 

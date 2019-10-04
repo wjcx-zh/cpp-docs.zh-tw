@@ -4,12 +4,12 @@ description: 本教學課程會示範如何在以 Linux 和 Windows 為目標的
 author: mikeblome
 ms.topic: tutorial
 ms.date: 03/05/2019
-ms.openlocfilehash: f184cc2ce3eaf3adcc936bd723019956b5b23dc9
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: cd01d5e389bda46fbb05d297ece8e68ef2265725
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220853"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960731"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教學課程：在 Visual Studio 中建立 C++ 跨平台專案 
 
@@ -30,10 +30,10 @@ Visual Studio C 和 C++ 開發不再僅限於 Windows。 本教學課程會示�
     - 首先，您必須[安裝 Visual Studio](https://visualstudio.microsoft.com/vs/)。 接下來，確認已安裝**使用 C++ 的桌面開發**和**使用 C++ 的 Linux 程式開發工作負載**。 此最小安裝只有 3 GB，視您的下載速度而定，安裝不應該超過 10 分鐘。
 - 設定 Linux 電腦執行跨平台 C++ 開發
     - Visual Studio 不需要任何特定的 Linux 發行版本。 此作業系統可在實體機器、VM、雲端或適用於 Linux 的 Windows 子系統 (WSL) 執行。 不過，本教學課程需要有圖形化的環境，所以不建議 WSL，因為它主要是針對命令列作業。
-    - Visual Studio 在 Linux 電腦需要的工具包括：C++ 編譯器、GDB、SSH 和 ZIP。 在 Debian 型的系統上，您可以安裝這些相依性，如下所示。
+    - Visual Studio 在 Linux 電腦需要的工具包括：C++編譯器、GDB、ssh、rsync 和 zip。 在 Debian 型的系統上，您可以安裝這些相依性，如下所示。
     
     ```cmd
-        sudo apt install -y openssh-server build-essential gdb zip
+        sudo apt install -y openssh-server build-essential gdb rsync zip
     ```
     - Visual Studio 需要 Linux 電腦具有啓用伺服器模式的最新版 CMake (至少 3.8)。 Microsoft 會產生 CMake 的通用組建，您可以安裝在任何的 Linux 發行版本。 建議您使用此組建，以確保您擁有最新的功能。 您可以在 GitHub 的 [Microsoft CMake 存放庫分支](https://github.com/Microsoft/CMake/releases)中取得 CMake 二進位檔。 請前往該頁面，將符合您系統架構的版本下載至 Linux 電腦，然後將它標記為可執行檔：
     
@@ -95,7 +95,21 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 3. 展開 CMake 目標檢視中的節點，查看其原始程式碼檔案，無論這些檔案是否可能位於磁碟上。
 
-## <a name="set-a-breakpoint-build-and-run"></a>設定中斷點、建置並執行
+## <a name="add-an-explicit-windows-x64-debug-configuration"></a>新增明確的 Windows x64 偵錯組態
+
+Visual Studio 會建立 Windows 的預設**x64-Debug**設定。 組態是 Visual Studio 了解將為 CMake 使用何種平台目標的方法。 預設組態不會呈現在磁碟上。 當您明確新增組態時，Visual Studio 會建立稱為 CMakeSettings.json 的檔案，填入您指定的所有組態設定。 
+
+1. 按一下工具列的 [組態] 下拉式清單，然後選取 [管理組態]，以新增新組態。
+
+    ![管理組態下拉式清單](media/cmake-bullet3-manage-configurations.png)
+
+    這會開啟 [ [CMake 設定編輯器](customize-cmake-settings.md)]。 選取編輯器左側的綠色加號，以加入新的設定。 [將組態新增至 CMakeSettings] 對話方塊隨即出現。
+
+    ![[將組態新增至 CMakeSettings] 對話方塊](media/cmake-bullet3-add-configuration-x64-debug.png)
+
+    此對話方塊會顯示所有隨附於 Visual Studio 的組態，以及您可能建立的任何自訂組態。 如果您想要繼續使用**x64-Debug**設定，這應該是您新增的第一個設定。 選取 [x64 偵錯]，然後按一下 [選取]。 這會建立具有**x64-Debug**設定的 CMakeSettings 檔案，並將設定儲存至磁片。 您可以直接在 CMakeSettings.json 中變更 name 參數，使用您喜歡的任何組態名稱。
+
+## <a name="set-a-breakpoint-build-and-run-on-windows"></a>在 Windows 上設定中斷點、組建和執行 
 
 在此步驟中，我們會偵錯示範 Bullet Physics 程式庫的範例程式。
   
@@ -121,23 +135,9 @@ git clone https://github.com/bulletphysics/bullet3.git
 
 6. 將滑鼠移至應用程式視窗中，然後按一下按鈕觸發中斷點。 這會回到 Visual Studio 前景，編輯器顯示暫停執行的那一行。 您可以檢查應用程式變數、物件、執行緒和記憶體。 您可以互動方式逐步執行程式碼。 您可以按一下 [繼續] 讓應用程式繼續及正常結束，或使用 [停止] 按鈕在 Visual Studio 內停止執行。
 
-## <a name="add-an-explicit-windows-x64-debug-configuration"></a>新增明確的 Windows x64 偵錯組態
-
-到目前為止，您一直在使用預設的 Windows **x64 偵錯**組態。 組態是 Visual Studio 了解將為 CMake 使用何種平台目標的方法。 預設組態不會呈現在磁碟上。 當您明確新增組態時，Visual Studio 會建立稱為 CMakeSettings.json 的檔案，填入您指定的所有組態設定。 
-
-1. 按一下工具列的 [組態] 下拉式清單，然後選取 [管理組態]，以新增新組態。
-
-    ![管理組態下拉式清單](media/cmake-bullet3-manage-configurations.png)
-
-    [將組態新增至 CMakeSettings] 對話方塊隨即出現。
-
-    ![[將組態新增至 CMakeSettings] 對話方塊](media/cmake-bullet3-add-configuration-x64-debug.png)
-
-    此對話方塊會顯示所有隨附於 Visual Studio 的組態，以及您可能建立的任何自訂組態。 如果您想要繼續使用預設的 **x64 偵錯**組態，這應該是您新增的第一個組態。 藉由新增該組態，您可以在 Windows 和 Linux 組態之間來回切換。 選取 [x64 偵錯]，然後按一下 [選取]。 這會建立具有 **x64 偵錯**組態的 CMakeSettings.json 檔案，並切換 Visual Studio 以使用該組態，而不是使用預設組態。 您會看到 [組態] 下拉式清單的名稱中不再顯示「(預設)」。 您可以直接在 CMakeSettings.json 中變更 name 參數，使用您喜歡的任何組態名稱。
-
 ##  <a name="add-a-linux-configuration-and-connect-to-the-remote-machine"></a>新增 Linux 組態並連線到遠端電腦
 
-1. 現在新增 Linux 組態。 以滑鼠右鍵按一下 [方案總管] 檢視中的 CMakeSettings.json 檔案，然後選取 [新增組態]。 您會看到和以前一樣的 [新增組態至 CMakeSettings] 對話方塊。 這次選取 [Linux 偵錯]，然後儲存 CMakeSettings.json 檔案。 
+1. 現在新增 Linux 組態。 以滑鼠右鍵按一下 [方案總管] 檢視中的 CMakeSettings.json 檔案，然後選取 [新增組態]。 您會看到和以前一樣的 [新增組態至 CMakeSettings] 對話方塊。 選取 [ **Linux-** 在此時間進行 Debug]，然後儲存 CMakeSettings 檔案（ctrl + s）。 
 2. 現在，在 [組態] 下拉式清單中選取 [Linux 偵錯]。
 
     ![啟動具有 [X64 偵錯] 與 [Linux 偵錯] 選項的組態下拉式清單](media/cmake-bullet3-linux-configuration-item.png)
@@ -148,7 +148,7 @@ git clone https://github.com/bulletphysics/bullet3.git
 
     如已新增遠端連線，您可以巡覽至 [工具] > [選項] > [跨平台] > [連線管理員] 來開啟此視窗。
  
-3. 提供您的 Linux 電腦連線資訊，然後按一下 [連線]。 Visual Studio 會將該電腦新增為 CMakeSettings.json，作為您的 [Linux 偵錯] 預設。 它也會下拉您遠端電腦的標頭，以便取得使用該電腦時的特定 IntelliSense。 現在 Visual Studio 會將您的檔案傳送至遠端電腦，然後在那裡產生 CMake 快取；完成後，Visual Studio 會設定為在該遠端 Linux 電腦使用相同的來源基底。 這些步驟需要一些時間，時間長短取決於網路速度和遠端電腦的功率。 當 CMake 的輸出視窗中顯示「目標資訊擷取完成」訊息時，您就知道這項作業已完成。
+3. 提供 [連接資訊到您的 Linux 電腦] （連線至您的 computer.md]，**然後按一下 [** 連線。 Visual Studio 會將該機器新增至 CMakeSettings，做為**Linux-Debug**的預設連接。 它也會從您的遠端電腦拉出標頭，讓您取得[該遠端連線特定的 IntelliSense](https://docs.microsoft.com/en-us/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 現在 Visual Studio 會將您的檔案傳送至遠端電腦，並在遠端系統上產生 CMake 快取。 這些步驟需要一些時間，時間長短取決於網路速度和遠端電腦的功率。 當 CMake 的輸出視窗中顯示「目標資訊擷取完成」訊息時，您就知道這項作業已完成。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上設定中斷點、建置並執行
 

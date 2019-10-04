@@ -3,12 +3,12 @@ title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦或 WSL。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 75d8b3db64d9b1f3562d6730685b7c29fe4982f4
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
+ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383395"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71925563"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 
@@ -38,7 +38,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 1. 輸入下列資訊：
 
-   | 進入 | 說明
+   | 進入 | 描述
    | ----- | ---
    | **主機名稱**           | 目標裝置的名稱或 IP 位址
    | **連接埠**                | 正在執行 SSH 服務的連接埠，一般是 22
@@ -94,11 +94,12 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 使用[適用於 Linux 的 Windows 子系統 (WSL)](https://docs.microsoft.com/windows/wsl/about) 時對使用 C++ 的 Visual Studio 2019 16.1 版新增原生支援。  這表示您不再需要新增遠端連線，也不需要設定 SSH，就可在自己的本機 WSL 安裝上進行建置及偵錯。 您可於此處找到[如何安裝 WSL](https://docs.microsoft.com/windows/wsl/install-win10)的詳細資料。
 
-若要將 WSL 安裝設定為使用 Visual Studio，您需要安裝下列工具：gcc、gdb、make、rsync 和 zip。 您可以在搭配此命令使用 apt 的發行版上安裝它們： 
+若要將 WSL 安裝設定為使用 Visual Studio 您需要安裝下列工具： gcc 或 clang、gdb、make、rsync 和 zip。 您可以在使用 apt 的散發版本上安裝它們，方法是使用此命令，這也會安裝 g + + 編譯器： 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
+如需詳細資訊，請參閱[下載、安裝和設定 Linux 工作負載](download-install-and-setup-the-linux-development-workload.md)。
 
 若要設定 WSL 的專案，請參閱[設定 Linux 專案](configure-a-linux-project.md)或[設定 Linux CMake 專案](cmake-linux-project.md)，端視您所擁有的專案類型而定。 為了遵循逐步指示來透過 WSL 建立簡單的主控台應用程式，請閱讀這篇簡介部落格文章：[C++ with Visual Studio 2019 and the Windows Subsystem for Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/)。
 

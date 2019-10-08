@@ -1,16 +1,16 @@
 ---
 title: C++ 一致性改善
-ms.date: 09/25/2019
+ms.date: 10/04/2019
 description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言標準邁進。
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 02cf57666c3bffd1adabb912f042f22b71e8d8f5
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: d313a9a1f9f2bc1aa091935658ca1214f929c048
+ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816360"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71998881"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -132,7 +132,7 @@ int main()
 }
 ```
 
-若要避免此錯誤，請移除**constexpr**辨識符號，否則請將一致性模式變更`/std:c++17`為。
+若要避免此錯誤，請移除**constexpr**辨識符號，否則請將一致性模式變更為 `/std:c++17`。
 
 ### <a name="stdcreate_directory-failure-codes"></a>`std::create_directory` 失敗碼
 
@@ -338,7 +338,7 @@ std::equal(std::begin(a), std::end(a), std::begin(b), std::end(b));
 
 ### <a name="effect-of-defining-spaceship-operator-on--and-"></a>定義太空船運算子的效果 = = 和！ =
 
-除非 **<=>** 太空船運算子標記為`= default` （[P1185R2](https://wg21.link/p1185r2)），否則太空船運算子（）單獨 **==** 定義將不會再重寫牽涉到或 **！ =** 的運算式。 下列範例會在 Visual Studio 2019 RTW 和16.1 版中進行編譯，但會在 Visual Studio 2019 版本16.2 中產生 C2678：
+除非太空船運算子標示為 `= default` （[P1185R2](https://wg21.link/p1185r2)），否則太空船運算子（ **<=>** ）的定義不會再重寫包含 **==** 或 **！ =** 的運算式。 下列範例會在 Visual Studio 2019 RTW 和16.1 版中進行編譯，但會在 Visual Studio 2019 版本16.2 中產生 C2678：
 
 ```cpp
 #include <compare>
@@ -379,20 +379,20 @@ bool neq(const S& lhs, const S& rhs) {
 
 ### <a name="standard-library-improvements"></a>標準程式庫改良功能
 
-- \<具有固定`to_chars()` /科學精確度的 charconv >。 （目前已針對16.4 規劃一般精確度）。
-- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)：\<不可部分完成的\<float >、不可部分\<完成的 double >、不可部分完成的 double >
+- @no__t 0charconv > `to_chars()`，具有固定/科學精確度。 （目前已針對16.4 規劃一般精確度）。
+- [P0020R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)：不可部分完成的 @ no__t-1float >、不可部分完成的 @ no__t-2double >、不可部分完成的 @ no__t-3long double >
 - [P0463R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)： endian
 - [P0482R6](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0482r6.html)：Char8_t 的程式庫支援
 - [P0600R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)： [\[nodiscard]] （適用于 STL，第1部分）
 - [P0653R2](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)： to_address （）
-- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf)： \<版本 >
+- [P0754R2](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0754r2.pdf)： \<version >
 - [P0771R1](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0771r1.pdf)： std：： function 的 move 函數的 noexcept
 
 ## <a name="improvements_163"></a>Visual Studio 2019 16.3 版中的一致性改善
 
 ### <a name="stream-extraction-operators-for-char-removed"></a>已移除 char * 的資料流程提取運算子
 
-連結至字元的資料流程提取運算子已移除，並由一系列字元的抽取運算子取代（每個[P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)）。 WG21 會將已移除的多載視為不安全。 在[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)模式中，下列範例現在*會產生 C2679：二元 ' > > '：找不到接受 ' char\*' 類型之右手運算元的運算子（或沒有可接受的轉換）* ：
+連結至字元的資料流程提取運算子已移除，並由一系列字元的抽取運算子取代（每個[P0487R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0487r1.html)）。 WG21 會將已移除的多載視為不安全。 在[/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)模式中，下列範例現在*會產生 C2679：二元 ' > > '：找不到接受 ' char @ no__t-2 ' 類型之右運算元的運算子（或是沒有可接受的轉換）* ：
 
 ```cpp
    char x[42];
@@ -414,7 +414,7 @@ std::cin >> x;
 
 ### <a name="constructors-as-type-names-disallowed"></a>不允許型別名稱的函式
 
-當函式名稱在類別樣板特製化的別名後面出現于限定名稱時，不會再將其視為已插入的類別名稱。 這之前允許使用「函式」做為型別名稱來宣告其他實體。 下列範例現在會產生*C3646：' TotalDuration '：未知的覆*寫規範：
+當函式名稱在類別樣板特製化的別名後面出現于限定名稱時，不會再將其視為已插入的類別名稱。 這之前允許使用「函式」做為型別名稱來宣告其他實體。 下列範例現在會產生 @no__t 0C3646：' TotalDuration '：未知的覆寫規範 @ no__t-0：
 
 ```cpp
 #include <chrono>
@@ -425,7 +425,7 @@ class Foo {
 
 ```
 
-若要避免此錯誤， `TotalDuration`請宣告，如下所示：
+若要避免此錯誤，請宣告 `TotalDuration`，如下所示：
 
 ```cpp
 #include <chrono>
@@ -455,7 +455,11 @@ void g()
 extern "C" void f(int, int, int, BOOL){}
 ```
 
-若要避免上述範例中的錯誤，請在`f`這兩個宣告中一致使用**Bool**而不是**bool** 。
+若要避免上述範例中的錯誤，請在兩個 `f` 宣告中一致使用**bool**而不是**bool** 。
+
+### <a name="standard-library-improvements"></a>標準程式庫改良功能
+
+非標準標頭 \<stdexcpt. h > 和 @no__t 1typeinfo. h > 已移除。 包含它們的程式碼應該會分別包含標準標頭 \<exception > 和 @no__t 1typeinfo >。
 
 ## <a name="update_160"></a>Visual Studio 2019 中的 Bug 修正和行為變更
 
@@ -474,7 +478,7 @@ constexpr void f() {
 
 ### <a name="correct-diagnostics-for-basic_string-range-constructor"></a>basic_string 範圍建構函式的正確診斷
 
-在 Visual Studio 2019 中，`basic_string` 範圍建構函式不再使用 `static_cast` 隱藏編譯器診斷。 下列程式碼會在 Visual Studio 2017 中編譯而不發出`wchar_t`警告，但在初始化`out`時，可能會遺失到**char**的資料：
+在 Visual Studio 2019 中，`basic_string` 範圍建構函式不再使用 `static_cast` 隱藏編譯器診斷。 下列程式碼會在 Visual Studio 2017 中編譯而不發出警告，但在初始化 `out` 時，可能會遺失從 `wchar_t` 到**char**的資料：
 
 ```cpp
 std::wstring ws = /* … */;
@@ -578,7 +582,7 @@ void example()
 
 ### <a name="function-template-bodies-containing-constexpr-if-statements"></a>如果陳述式
 
-樣板函式主體，其中包含**if constexpr**語句是否已啟用一些[/permissive-](../build/reference/permissive-standards-conformance.md)剖析相關的檢查。 例如，在 Visual Studio 2017 中，下列程式碼*會產生 C7510：' Type '：只有在未設定 **/permissive-** 選項時，才使用相依型*別名稱的前面必須加上 ' typename '。 在 Visual Studio 2019 中，即使已設定 **/permissive-** 選項，相同的程式碼也會引發錯誤：
+樣板函式主體，其中包含**if constexpr**語句是否已啟用一些[/permissive-](../build/reference/permissive-standards-conformance.md)剖析相關的檢查。 例如，在 Visual Studio 2017 中，下列程式碼會產生 @no__t 0C7510：' Type '：只有在未設定 **/permissive-** 選項時，才使用相依型別名稱的前置詞必須加上 ' typename ' *。 在 Visual Studio 2019 中，即使已設定 **/permissive-** 選項，相同的程式碼也會引發錯誤：
 
 ```cpp
 template <typename T>
@@ -609,11 +613,11 @@ int main()
 }
 ```
 
-若要避免此錯誤，請將**typename**關鍵字新增至的`a`宣告`typename T::Type a;`：。
+若要避免此錯誤，請將**typename**關鍵字新增至 `a`： `typename T::Type a;` 的宣告中。
 
 ### <a name="inline-assembly-code-isnt-supported-in-a-lambda-expression"></a>Lambda 運算式不支援內嵌組譯碼
 
-Microsoft C++小組最近發現在 lambda 中使用內嵌組合語言的安全性問題，可能會在執行時間導致`ebp` （傳回位址暫存器）損毀。 惡意攻擊者可能利用這種情況。 鑒於問題的本質，即只有 x86 支援內嵌組譯工具，以及內嵌組譯工具與編譯器的其餘部分互動不佳的事實，這個問題最安全的解決方法是 Lambda 運算式內不允許有內嵌組譯工具。
+Microsoft C++小組最近發現在 lambda 中使用內嵌組譯工具的安全性問題，可能會在執行時間導致 `ebp` （傳回位址暫存器）損毀。 惡意攻擊者可能利用這種情況。 鑒於問題的本質，即只有 x86 支援內嵌組譯工具，以及內嵌組譯工具與編譯器的其餘部分互動不佳的事實，這個問題最安全的解決方法是 Lambda 運算式內不允許有內嵌組譯工具。
 
 我們所見唯一會在 Lambda 運算式內使用內嵌組譯工具的實際情況，是擷取傳回位址。 在此案例中，您可以擷取所有平台的寄件地址，只要使用編譯器內建 `_ReturnAddress()` 即可。
 
@@ -722,7 +726,7 @@ int main()
 
 - 過去，某些已傳遞給並行程式庫的時間值會溢位，例如 `condition_variable::wait_for(seconds::max())`。 現已修正，溢位過去似乎會以隨機的 29 日循環變更行為 (當基礎 Win32 API 接受的 uint32_t 毫秒溢位時)。
 
-- <ctime> 標頭現在除了全域命名空間外，還可在命名空間中 `std` 正確宣告 `timespec` 與 `timespec_get`。
+- @No__t 0ctime > 標頭現在會正確宣告命名空間 `std` 中的 `timespec` 和 `timespec_get`，以及在全域命名空間中宣告這些專案。
 
 ### <a name="various-fixes-for-containers"></a>容器的各種修正
 
@@ -866,9 +870,9 @@ Lambda 運算式現在可用於常數運算式。 如需詳細資訊，請參閱
 
 Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在平行及非同步作業中叫用 Lambda 的案例，特別是在較新的電腦架構上。 如需詳細資訊，請參閱 [Lambda 透過值將 \*this 擷取為 \[=,\*this\]](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0018r3.html) \(英文\)。
 
-### <a name="removing-operator-for-bool"></a>針對`operator++` **bool**移除
+### <a name="removing-operator-for-bool"></a>移除**bool**的 `operator++`
 
-`operator++`**bool**類型已不再支援。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
+`operator++` 已不再支援**bool**類型。 如需詳細資訊，請參閱[移除已取代的 operator++ (bool)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0002r1.html) \(英文\)。
 
 ### <a name="removing-deprecated-register-keyword"></a>移除已淘汰的**register**關鍵字
 
@@ -1116,7 +1120,7 @@ void sample(A<0> *p)
 
 [P0682R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0682r1.html) 將新的基礎字串轉換函式從 P0067R5 移至新標頭 \<charconv>，並進行了其他改善，包括將錯誤處理函式改為使用 `std::errc` 而非 `std::error_code`。
 
-### <a name="c17-constexpr-for-char_traits-partial"></a>C + + 17： `char_traits` constexpr （部分）
+### <a name="c17-constexpr-for-char_traits-partial"></a>C + + 17： @no__t 的**constexpr** -1 （部分）
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html) \(英文\) 對 `std::traits_type` 成員函式 `length`、`compare` 及 `find` 進行變更，讓常數運算式中可使用 `std::string_view`。 (在 Visual Studio 2017 15.6 版中，僅支援 Clang/LLVM。 在 15.7 版 Preview 2 中，也幾乎完全支援 CIXX。)
 
@@ -1268,7 +1272,7 @@ constexpr bool f(const array<1> &arr)
 }
 ```
 
-若要更正錯誤`array::size()` ，請將函式宣告為**constexpr** ，或從`f`移除**constexpr**辨識符號。
+若要更正錯誤，請將 `array::size()` 函式宣告為**constexpr** ，或從 `f` 中移除**constexpr**辨識符號。
 
 ### <a name="class-types-passed-to-variadic-functions"></a>傳遞給 variadic 函式的類別類型
 
@@ -1337,7 +1341,7 @@ struct S
 int i = (const S)0; // error C2440
 ```
 
-若要更正錯誤，請`operator int()`將宣告為**const**。
+若要更正錯誤，請將 `operator int()` 宣告為**const**。
 
 ### <a name="access-checking-on-qualified-names-in-templates"></a>範本中限定名稱的存取檢查
 
@@ -1495,7 +1499,7 @@ void g()
 }
 ```
 
-若要修正錯誤，請`i`將宣告為**int**。
+若要修正錯誤，請將 `i` 宣告為**int**。
 
 ### <a name="pre-condition-checks-for-type-traits"></a>類型特性的先決條件檢查
 
@@ -2105,7 +2109,7 @@ extern constexpr int x = 10;
 error LNK2005: "int const x" already defined
 ```
 
-如果標頭檔包含宣告為**extern constexpr**的變數，則需要將其標示`__declspec(selectany)`為正確結合其重複宣告：
+如果標頭檔包含宣告為**extern constexpr**的變數，則必須將它標記為 `__declspec(selectany)`，才能正確地結合其重複宣告：
 
 ```cpp
 extern constexpr __declspec(selectany) int x = 10;
@@ -2153,7 +2157,7 @@ static_assert(std::is_convertible<D *, B *>::value, "fail");
 
 ### <a name="noexcept_removal"></a>動態例外狀況規格移除和**noexcept**
 
-在 c + + `throw()` 17 中，是**noexcept**的`throw(<type list>)`別名`throw(...)` ，並已移除，而某些類型可能包含**noexcept**。 此變更會導致符合 C++14 或更早版本之程式碼的來源相容性。 在一般情況下，您可以使用 **/zc： noexceptTypes-** switch 來還原為 c + + 14 版的**noexcept** 。 它可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。
+在 c + + 17 中，`throw()` 是**noexcept**的別名，`throw(<type list>)`，而 `throw(...)` 則會移除，而某些類型可能包含**noexcept**。 此變更會導致符合 C++14 或更早版本之程式碼的來源相容性。 在一般情況下，您可以使用 **/zc： noexceptTypes-** switch 來還原為 c + + 14 版的**noexcept** 。 它可讓您更新原始程式碼以符合 C++17，而不需要同時重寫所有 `throw()` 程式碼。
 
 編譯器現在也會診斷 C++17 模式宣告中或使用 [/permissive-](../build/reference/permissive-standards-conformance.md) 的更多不相符例外狀況規格，並發出新的警告 C5043。
 
@@ -2632,7 +2636,7 @@ struct X : Base<T>
 };
 ```
 
-若要修正錯誤，請將**範本**關鍵字新增至`Base<T>::example<int>();`語句，如下列範例所示：
+若要修正錯誤，請將**template**關鍵字新增至 `Base<T>::example<int>();` 語句，如下列範例所示：
 
 ```cpp
 template<typename T> struct Base
@@ -2832,7 +2836,7 @@ note: failure was caused by call of undefined function or one not declared 'cons
 note: see usage of 'g'.
 ```
 
-若要避免此錯誤，請從函式的明確具現化`f()`移除 constexpr 辨識符號。
+若要避免此錯誤，請從函式的明確具現化 `f()` 移除**constexpr**辨識符號。
 
 ::: moniker-end
 

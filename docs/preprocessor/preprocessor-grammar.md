@@ -16,18 +16,18 @@ ms.locfileid: "70222255"
 # <a name="preprocessor-grammar"></a>前置處理器文法
 
 *控制行*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別碼* *token-字串*<sub>opt</sub>\
-&nbsp;&nbsp;&nbsp;&nbsp; **#define***識別碼* **(** &#x2800;identifier&#x200B;<sub>opt</sub> **,** ... **,** *識別碼*&#x200B; <sub> </sub>opt&#x2800; **)** *token-字串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別碼* *token-字串*<sub>opt</sub>\
+&nbsp;&nbsp;&nbsp;&nbsp; **#define** *識別碼* **(** &#x2800;identifier&#x200B;<sub>opt</sub> **,** ... **,** *識別碼*&#x200B; <sub> </sub>opt&#x2800; **)** *token-字串*<sub>opt</sub>\
 &nbsp;&nbsp;&nbsp;&nbsp; **#include** **"** _路徑-規格_ **"** \
 &nbsp;&nbsp;&nbsp;&nbsp; **#include**_路徑-規格_ **\<** **>** \
-&nbsp;&nbsp;&nbsp;&nbsp; **#line***數位順序* **"** _檔案名_ **"** &#x200B; <sub>opt</sub>  \
-&nbsp;&nbsp;&nbsp;&nbsp; **#undef***識別碼*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#error***token-字串*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#line** *數位順序* **"** _檔案名_ **"** &#x200B; <sub>opt</sub>  \
+&nbsp;&nbsp;&nbsp;&nbsp; **#undef** *識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#error** *token-字串*\
 &nbsp;&nbsp;&nbsp;&nbsp; **#pragma** *token-string*
 
 *常數運算式*: \
 &nbsp;&nbsp;&nbsp;&nbsp;**已定義 (** &#x2800;*識別碼*&#x2800; **)** \
-&nbsp;&nbsp;&nbsp;&nbsp;**已定義***識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp;**已定義** *識別碼*\
 &nbsp;&nbsp;&nbsp;&nbsp;任何其他常數運算式
 
 *條件*式: \
@@ -37,9 +37,9 @@ ms.locfileid: "70222255"
 &nbsp;&nbsp;&nbsp;&nbsp;*若為-line* *文字*
 
 *如果-line*: \
-&nbsp;&nbsp;&nbsp;&nbsp; **#if***常數運算式*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef***識別碼*\
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef***識別碼*
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *常數運算式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *識別碼*
 
 *elif-元件*: \
 &nbsp;&nbsp;&nbsp;&nbsp;*elif-行* *文字*\

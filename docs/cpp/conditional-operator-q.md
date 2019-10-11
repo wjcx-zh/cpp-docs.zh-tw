@@ -1,5 +1,5 @@
 ---
-title: '條件運算子:？ :'
+title: 條件運算子： &quest;：
 ms.date: 11/04/2016
 f1_keywords:
 - '?:'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - conditional operators [C++]
 - '? : operator'
 ms.assetid: 88643ee8-7100-4f86-880a-705ec22b6271
-ms.openlocfilehash: 8744ca8546d48e9283cc0dfa9d80babf5076f8b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a66b82682f90345518a2d520945e3aff1f78f89
+ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399144"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72276815"
 ---
-# <a name="conditional-operator--"></a>條件運算子:？ :
+# <a name="conditional-operator-quest-"></a>條件運算子： &quest;：
 
 ## <a name="syntax"></a>語法
 
@@ -25,13 +25,13 @@ expression ? expression : expression
 
 ## <a name="remarks"></a>備註
 
-條件運算子 (**？:**) 是三元運算子 （它會採用三個運算元）。 條件運算子運作方式如下：
+條件運算子（ **？：** ）是一種三元運算子（它會採用三個運算元）。 條件運算子運作方式如下：
 
-- 第一個運算元會隱含轉換成**bool**。 接著會對它進行評估，並且完成所有副作用，再繼續執行。
+- 第一個運算元會隱含地轉換為**bool**。 接著會對它進行評估，並且完成所有副作用，再繼續執行。
 
-- 如果第一個運算元評估為 **，則為 true** (1)，會評估第二個運算元。
+- 如果第一個運算元評估為**true** （1），則會評估第二個運算元。
 
-- 如果第一個運算元評估為**false** (0)，會評估第三個運算元。
+- 如果第一個運算元評估為**false** （0），則會評估第三個運算元。
 
 條件運算子的結果會是所評估運算元 (也就是第二個或第三個運算元) 的結果。 在條件運算式中，只會評估後兩個運算元的其中一個。
 
@@ -39,7 +39,7 @@ expression ? expression : expression
 
 - 如果這兩個運算元屬於相同類型，則結果為該類型。
 
-- 如果兩個運算元都是算術或列舉類型，一般算術轉換 (涵蓋[標準轉換](standard-conversions.md)) 會執行，以將它們轉換成一般類型。
+- 如果兩個運算元都是算術或列舉類型，則會執行一般算術轉換（涵蓋在[標準轉換](standard-conversions.md)中），將它們轉換成一般類型。
 
 - 如果這兩個運算元都是指標類型，或者其中一個是指標類型，另一個是判斷值為 0 的常數運算式，則會進行指標轉換，將它們轉換成一般類型。
 

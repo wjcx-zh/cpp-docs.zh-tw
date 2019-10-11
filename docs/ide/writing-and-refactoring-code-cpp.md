@@ -3,13 +3,13 @@ title: 在 Visual Studio 中編輯及重構 C++ 程式碼
 description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化、巡覽、了解及重構程式碼。
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.topic: landing-page
-ms.openlocfilehash: 255576bfc4a7eb78a660e5bfb05b0a97a7eb4c34
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70221461"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274781"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中編輯及重構 C++ 程式碼
 
@@ -60,7 +60,7 @@ IntelliCode 是 AI 輔助的 IntelliSense。 它會將最有可能的候選項�
 上述螢幕擷取畫面顯示下拉式清單底下的數個按鈕。 這些可讓 IntelliSense 篩選取得不同類型的結果：
 
 - 變數和常數
-- Functions
+- 函式
 - 型別
 - 巨集
 - 列舉

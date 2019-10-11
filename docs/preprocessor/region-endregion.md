@@ -25,8 +25,8 @@ ms.locfileid: "70222373"
 
 ## <a name="syntax"></a>語法
 
-> **#pragma 區域***名稱*\
-> **#pragma endregion***批註*
+> **#pragma 區域** *名稱*\
+> **#pragma endregion** *批註*
 
 ### <a name="parameters"></a>參數
 

@@ -26,7 +26,7 @@ Pragma 指示詞會指定電腦或作業系統特定的編譯器功能。 **__Pr
 
 ## <a name="syntax"></a>語法
 
-> **#pragma***token-字串*\
+> **#pragma** *token-字串*\
 > **__pragma (** *token-字串* **)**
 
 ## <a name="remarks"></a>備註

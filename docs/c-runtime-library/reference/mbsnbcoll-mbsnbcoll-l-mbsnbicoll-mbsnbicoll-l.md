@@ -107,7 +107,7 @@ int _mbsnbicoll_l(
 |0|*string1*子字串與*string2*子字串相同。|
 |> 0|大於*string2*子字串的*string1*子字串。|
 
-如果*string1*或*string2*是**Null** ，或*count*大於**INT_MAX**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。 若要使用 **_NLSCMPERROR**，請包含字串 .H 或 g.。
+如果*string1*或*string2*是**Null** ，或*count*大於**INT_MAX**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。 若要使用 **_NLSCMPERROR**，請包含字串 .H 或 g。
 
 ## <a name="remarks"></a>備註
 

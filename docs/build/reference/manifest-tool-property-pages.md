@@ -105,7 +105,7 @@ ms.locfileid: "70927683"
 
 ## <a name="isolated-com-property-page"></a>隔離的 COM 屬性頁
 
-如需有關隔離的 COM 的詳細資訊，請[參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如何：建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
+如需有關隔離的 COM 的詳細資訊，請 參閱[隔離的應用程式](/windows/win32/SbsCs/isolated-applications)和如[何：建立隔離的應用程式以使用](../how-to-build-isolated-applications-to-consume-com-components.md)COM 元件。
 
 ###  <a name="type-library-file"></a>類型程式庫檔案
 

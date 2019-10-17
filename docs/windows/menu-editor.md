@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: f2a5f1ac63007bf44dc331e2104c6e9e5cac23da
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
+ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514821"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72444981"
 ---
 # <a name="menu-editor-c"></a>功能表編輯器（C++）
 
@@ -59,11 +59,11 @@ ms.locfileid: "69514821"
 
 ### <a name="to-create-a-standard-menu"></a>建立標準功能表
 
-1. 移至功能表**視圖** > **資源檢視**，並在**功能表**標題上按一下滑鼠右鍵。 依序選擇 [**新增資源**]、[**功能表**]。
+1. 移至功能表**視圖** > **其他 Windows** > **資源檢視**，然後在**功能表**標題上按一下滑鼠右鍵。 依序選擇 [**新增資源**]、[**功能表**]。
 
 1. 在功能表列上選取 [**新增專案**] 方塊（此處包含 [*類型*] 的矩形）。
 
-   ![功能表編輯器中的 [新增專案]] 方塊(../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   ![功能表編輯器中的 [新增專案] 方塊](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
    [**新增專案**] 方塊
 
 1. 輸入新功能表的*名稱，例如*[檔案]。
@@ -72,7 +72,7 @@ ms.locfileid: "69514821"
 
    一旦在功能表列上指定了新的功能表名稱，[新增項目] 方塊就會右移 (讓您加入另一個功能表)，並在第一個功能表底下開啟另一個 [新增項目] 方塊，讓您加入功能表命令。
 
-   ![展開的 [新增專案]] 方塊(../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   ![展開的 [新增專案] 方塊](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
    輸入功能表名稱後已移動焦點的 [**新增專案**] 方塊
 
    > [!NOTE]
@@ -104,7 +104,7 @@ ms.locfileid: "69514821"
    > 您輸入的文字會出現在**功能表編輯器**和 [[屬性] 視窗](/visualstudio/ide/reference/properties-window)的 [**標題**] 方塊中。 您可以在任一位置編輯新功能表的屬性。
 
    > [!TIP]
-   > 您可以定義可讓使用者選取功能表命令的助憶鍵 (熱鍵)。 在字母前面輸入`&`連字號（），將它指定為助憶鍵。 使用者可以輸入該字母來選取功能表命令。
+   > 您可以定義可讓使用者選取功能表命令的助憶鍵 (熱鍵)。 在字母前面輸入連字號（`&`），將它指定為助憶鍵。 使用者可以輸入該字母來選取功能表命令。
 
 1. 在 [**屬性**] 視窗中，選取適用的功能表命令屬性。 如需詳細資訊，請參閱[功能表命令屬性](../windows/menu-command-properties.md)。
 
@@ -194,10 +194,10 @@ ms.locfileid: "69514821"
 
 Win32
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資源編輯器](../windows/resource-editors.md)<br/>
 [功能表命令](../windows/menu-command-properties.md)<br/>
 [使用者介面物件和命令識別碼](../mfc/user-interface-objects-and-command-ids.md)<br/>
-[功能表](../mfc/menus-mfc.md)<br/>
-[功能表](/windows/win32/menurc/menus)
+[Menus](../mfc/menus-mfc.md)<br/>
+[Menus](/windows/win32/menurc/menus)

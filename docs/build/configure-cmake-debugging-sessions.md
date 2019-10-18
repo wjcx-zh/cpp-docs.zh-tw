@@ -3,24 +3,28 @@ title: 在 Visual Studio 中設定 CMake 偵錯工作階段
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41f53c0c3ea46a8a1aa11215968aaee6c13c2dea
+ms.sourcegitcommit: e33126222c418daf977533ea9e2819d99e0d7b8d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195505"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72534113"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>設定 CMake 偵錯工作階段
 
 [一般] 工具列的 [啟動項目] 下拉式清單中會顯示所有可執行的 CMake 目標。 若要啟動偵錯工作階段，只要選取其中一個目標並啟動偵錯工具即可。
 
-![CMake 啟動項目下拉式清單](media/cmake-startup-item-dropdown.png "CMake 啟動項目下拉式清單")
+![CMake 啟始專案下拉式清單](media/cmake-startup-item-dropdown.png "CMake 啟始專案下拉式清單")
 
-您也可以從 [CMake] 功能表啟動偵錯工作階段。
+您也可以從方案總管啟動 debug 會話。 首先，切換至 [**方案總管**] 視窗中的 [ **CMake 目標**]。
+
+![CMake 目標視圖按鈕](media/cmake-targets-view.png  "CMake 目標 View 功能表項目")
+
+然後，在任何可執行檔上按一下滑鼠右鍵，然後選取 [ **debug** ] 或 [ **Debug and 啟動設定**]。 [ **Debug** ] 會根據您的使用中設定，自動開始對選取的目標進行偵錯工具。 [**偵錯工具和啟動設定**] 會開啟 [*啟動檔案與 json*檔案]，並為選取的目標加入新的 [debug] 設定。
 
 ## <a name="customize-debugger-settings"></a>自訂偵錯工具設定
 
-若要自訂您專案中任何可執行 CMake 目標的偵錯工具設定，請以滑鼠右鍵按一下特定 CMakeLists.txt 檔案，然後選取 [偵錯並啟動設定]。 (或選取中的目標**目標檢視**中**方案總管 中**。)當您在子功能表中選取 CMake 目標時，檔名**launch.vs.json**建立。 此檔案會預先填入您已選取之 CMake 目標的相關資訊，並可讓您指定其他參數，例如程式引數或偵錯工具類型。 若要參考中的任何索引鍵**CMakeSettings.json**檔案中前, 加上與其`cmake.`中**launch.vs.json**。 下列範例顯示簡單**launch.vs.json**提取的值中的檔案`remoteCopySources`中的索引鍵**CMakeSettings.json**目前選取的組態檔：
+若要自訂您專案中任何可執行 CMake 目標的偵錯工具設定，請以滑鼠右鍵按一下特定 CMakeLists.txt 檔案，然後選取 [偵錯並啟動設定]。 （或在**方案總管**中選取 [目標]**視圖**中的目標）。當您在子功能表中選取 CMake 目標時，會建立名為 [**啟動. vs. json** ] 的檔案。 此檔案會預先填入您已選取之 CMake 目標的相關資訊，並可讓您指定其他參數，例如程式引數或偵錯工具類型。 若要參考**CMakeSettings json**檔案中的任何索引鍵，請在其前面加上**啟動. 與 json**中的 `cmake.`。 下列範例顯示簡單的**啟動檔案與 json**檔案，該檔案會針對目前選取的設定，提取**CMakeSettings**中 `remoteCopySources` 機碼的值：
 
 ```json
 {
@@ -38,11 +42,11 @@ ms.locfileid: "62195505"
 }
 ```
 
-當您儲存**launch.vs.json**檔案中，會建立一個項目**啟動項目**下拉式清單中，使用新的名稱。 藉由編輯**launch.vs.json**檔案中，您可以建立許多偵錯組態，因為喜歡的任意數目的 CMake 目標。
+一旦您儲存了**vs json**檔案，就會在 [**啟動專案**] 下拉式清單中建立具有新名稱的專案。 藉由編輯**啟動檔案與 json**檔案，您可以針對任意數量的 CMake 目標，建立您想要的多個偵錯工具設定。
 
 ## <a name="support-for-cmakesettings-variables"></a>CMakeSettings 變數支援
 
- **Launch.vs.json**支援中宣告的變數**CMakeSettings.json** （如下所示） 和適用於目前選取的組態。 它也具有名為索引鍵`currentDir`，可設定的本機專案的啟動應用程式目前的目錄：
+ [**啟動]： [vs. json** ] 支援在**CMakeSettings**中宣告的變數（如下所示），並適用于目前選取的設定。 它也有一個名為 `currentDir` 的索引鍵，它會為本機專案設定啟動應用程式的目前目錄：
 
 ```json
 {
@@ -60,13 +64,13 @@ ms.locfileid: "62195505"
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
 
-'Cwd' 的索引鍵設定的遠端專案的啟動應用程式目前的目錄。 預設值為 '${debugInfo.defaultWorkingDirectory}' 而它評估成 
+金鑰 ' cwd ' 會為遠端專案設定啟動應用程式的目前目錄。 預設值為 ' $ {debugInfo. System.defaultworkingdirectory} '，其評估為 
 
 ```cmd
 /var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [CMake Projects in Visual Studio](cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>

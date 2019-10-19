@@ -1,15 +1,15 @@
 ---
 title: Visual Studio 2015 和 Visual Studio 2019 之間的 C++ 二進位相容性
-ms.date: 05/03/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 052874eb9273ee9a9ce1695ffdadedd9911673e1
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 6365ded349ad08a167b76ca9f6ab43e6e7752987
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449044"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587894"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2019"></a>Visual Studio 2015 和 Visual Studio 2019 之間的 C++ 二進位相容性
 
@@ -21,6 +21,19 @@ ms.locfileid: "65449044"
 
 當您混合以 MSVC 工具組不同支援版本所建置的二進位檔時，您應用程式執行所在的 Visual C++ 可轉散發套件不能比用來建置應用程式之任何工具組版本或它使用的任何程式庫舊。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="upgrade-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>將 Microsoft Visual C++可轉散發套件從 Visual Studio 2015 或2017升級至 Visual Studio 2019
 
-[Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)
+因為我們已保留二進位相容性，並保持主要版本（14）與適用于 Visual Studio C++ 2015、2017和2019的 visual 可轉散發套件相同，所以任何時候C++都只能安裝一個版本的 visual 可轉散發套件。 較新的版本將會覆寫已安裝的舊版。 如果您有來自 Visual Studio C++ 2015 或2017的 Visual 可轉散發套件，然後再安裝2019，則2019版本將會覆寫較舊的版本。 因為我們確保最新版本將會有所有最新的功能和 bug 修正，包括安全性修正，所以我們一律建議您升級至最新的可用版本。
+
+同樣地，我們不允許在已有較新版本C++的電腦上安裝舊版的 Visual 可轉散發套件。 在已經有C++ 2019 的電腦上，從 Visual Studio 2015 或2017安裝 Visual 可轉散發套件時，將會導致安裝失敗。 此錯誤看起來會像這樣：
+
+```
+*0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.*.
+```
+
+這是設計的錯誤。 我們建議您保留最新的安裝。
+
+## <a name="see-also"></a>請參閱
+
+* [Visual C++ 變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)
+* [支援的最新C++視覺可轉散發套件下載](https://support.microsoft.com/en-us/help/2977003/the-latest-supported-visual-c-downloads) 

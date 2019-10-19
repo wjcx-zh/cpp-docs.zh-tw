@@ -1,18 +1,18 @@
 ---
 title: Platform::ArrayReference 類別
-ms.date: 12/30/2016
+ms.date: 10/16/2019
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ArrayReference::ArrayReference
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7e587902f1c99b294ed79255397aeffccee26b5
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161567"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587915"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference 類別
 
@@ -24,17 +24,17 @@ ms.locfileid: "62161567"
 class ArrayReference
 ```
 
-### <a name="members"></a>成員
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
-|[ArrayReference::ArrayReference](#ctor)|初始化 `ArrayReference` 類別的新執行個體。|
+|[ArrayReference：： ArrayReference](#ctor)|初始化 `ArrayReference` 類別的新執行個體。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
 |[ArrayReference::operator() 運算子](#operator-call)|將這個 `ArrayReference` 轉換成 `Platform::Array<T>^*`。|
 |[ArrayReference::operator= 運算子](#operator-assign)|將另一個 `ArrayReference` 的內容指派給這個執行個體。|
@@ -43,7 +43,7 @@ class ArrayReference
 
 ### <a name="remarks"></a>備註
 
-使用 `ArrayReference` 填滿 C-style 陣列時，可避免先複製到 `Platform::Array` 變數然後複製到 C-style 陣列時所牽涉到的額外複製作業。 當您使用 `ArrayReference`時，只會有一項複製作業。 如需程式碼範例，請參閱 < [Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
+使用 `ArrayReference` 填滿 C-style 陣列時，可避免先複製到 `Platform::Array` 變數然後複製到 C-style 陣列時所牽涉到的額外複製作業。 當您使用 `ArrayReference`時，只會有一項複製作業。 如需程式碼範例，請參閱[Array 和 WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)。
 
 ### <a name="requirements"></a>需求
 
@@ -55,9 +55,9 @@ class ArrayReference
 
 **標頭：** vccorlib.h
 
-## <a name="ctor"></a>  Arrayreference:: Arrayreference 建構函式
+## <a name="ctor"></a>ArrayReference：： ArrayReference 函式
 
-初始化的新執行個體[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)類別。
+初始化[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)類別的新實例。
 
 ### <a name="syntax"></a>語法
 
@@ -79,9 +79,9 @@ ArrayReference(ArrayReference&& otherArg)
 
 ### <a name="remarks"></a>備註
 
-## <a name="operator-assign"></a>  Arrayreference:: Operator = 運算子
+## <a name="operator-assign"></a>ArrayReference：： operator = 運算子
 
-將指定的物件指派給目前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)使用移動語意的物件。
+使用 move 語義，將指定的物件指派給目前的[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)物件。
 
 ### <a name="syntax"></a>語法
 
@@ -102,9 +102,9 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 `Platform::ArrayReference` 是標準 C++ 類別樣板，而不是 ref 類別。
 
-## <a name="operator-call"></a>  Arrayreference 運算子
+## <a name="operator-call"></a>ArrayReference：： operator （）運算子
 
-將目前[platform:: arrayreference](../cppcx/platform-arrayreference-class.md)物件傳回給[platform:: array](../cppcx/platform-array-class.md)類別。
+將目前的[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)物件轉換回[Platform：： Array](../cppcx/platform-array-class.md)類別。
 
 ### <a name="syntax"></a>語法
 
@@ -118,8 +118,8 @@ Array<TArg>^ operator ();
 
 ### <a name="remarks"></a>備註
 
-[Platform:: arrayreference](../cppcx/platform-arrayreference-class.md)並[platform:: array](../cppcx/platform-array-class.md)標準C++類別樣板，不是 ref 類別。
+[Platform：： ArrayReference](../cppcx/platform-arrayreference-class.md)是標準C++類別範本，而[platform：： Array](../cppcx/platform-array-class.md)是 ref 類別。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [平台命名空間](../cppcx/platform-namespace-c-cx.md)

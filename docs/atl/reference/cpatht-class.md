@@ -50,10 +50,10 @@ helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
 ms.openlocfilehash: ba1c831d772deef34449d17adc2c8e7a6f90eaef
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69496623"
 ---
 # <a name="cpatht-class"></a>CPathT 類別
@@ -75,49 +75,49 @@ class CPathT
 *StringType*<br/>
 要用於路徑的 ATL/MFC 字串類別（請參閱[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)）。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
-|[CPathT::PCXSTR](#pcxstr)|常數位串類型。|
-|[CPathT::PXSTR](#pxstr)|字串類型。|
+|[CPathT：:P CXSTR](#pcxstr)|常數位串類型。|
+|[CPathT：:P XSTR](#pxstr)|字串類型。|
 |[CPathT::XCHAR](#xchar)|字元類型。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
 |[CPathT::CPathT](#cpatht)|路徑的構造函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
 |[CPathT::AddBackslash](#addbackslash)|呼叫這個方法，在字串結尾加上反斜線，以建立路徑的正確語法。|
 |[CPathT::AddExtension](#addextension)|呼叫這個方法，將副檔名新增至路徑。|
-|[CPathT::Append](#append)|呼叫這個方法，將字串附加至目前的路徑。|
-|[CPathT::BuildRoot](#buildroot)|呼叫此方法，以從指定的磁片磁碟機編號建立根路徑。|
-|[CPathT::Canonicalize](#canonicalize)|呼叫這個方法，將路徑轉換成標準格式。|
-|[CPathT::Combine](#combine)|呼叫這個方法，將代表目錄名稱的字串，以及代表檔案路徑名稱的字串串連成一個路徑。|
+|[CPathT：： Append](#append)|呼叫這個方法，將字串附加至目前的路徑。|
+|[CPathT：： BuildRoot](#buildroot)|呼叫此方法，以從指定的磁片磁碟機編號建立根路徑。|
+|[CPathT：：正常化](#canonicalize)|呼叫這個方法，將路徑轉換成標準格式。|
+|[CPathT：：組合](#combine)|呼叫這個方法，將代表目錄名稱的字串，以及代表檔案路徑名稱的字串串連成一個路徑。|
 |[CPathT::CommonPrefix](#commonprefix)|呼叫這個方法，以判斷指定的路徑是否與目前的路徑共用一般前置詞。|
 |[CPathT::CompactPath](#compactpath)|呼叫這個方法，藉由以省略號取代路徑元件，以截斷檔案路徑以符合指定的圖元寬度。|
 |[CPathT::CompactPathEx](#compactpathex)|呼叫這個方法來截斷檔案路徑，使其符合指定的字元數，方法是以省略號取代路徑元件。|
-|[CPathT::FileExists](#fileexists)|呼叫這個方法，以檢查此路徑名稱的檔案是否存在。|
+|[CPathT：： FileExists](#fileexists)|呼叫這個方法，以檢查此路徑名稱的檔案是否存在。|
 |[CPathT::FindExtension](#findextension)|呼叫這個方法，以在路徑中尋找副檔名的位置。|
 |[CPathT::FindFileName](#findfilename)|呼叫這個方法，以尋找路徑中檔案名的位置。|
 |[CPathT::GetDriveNumber](#getdrivenumber)|呼叫此方法，以在路徑 ' A ' 到 ' Z ' 的範圍內搜尋磁碟機號，並傳回對應的磁片磁碟機編號。|
 |[CPathT::GetExtension](#getextension)|呼叫這個方法，以從路徑取得副檔名。|
 |[CPathT::IsDirectory](#isdirectory)|呼叫這個方法，以檢查路徑是否為有效的目錄。|
-|[CPathT::IsFileSpec](#isfilespec)|呼叫這個方法，以搜尋路徑是否有任何路徑分隔字元（例如，'： ' 或 '\\'）。 如果沒有任何路徑分隔字元存在，則會將路徑視為檔案規格路徑。|
+|[CPathT::IsFileSpec](#isfilespec)|呼叫這個方法，以搜尋路徑是否有任何路徑分隔字元（例如 '： ' 或 ' \\ '）。 如果沒有任何路徑分隔字元存在，則會將路徑視為檔案規格路徑。|
 |[CPathT::IsPrefix](#isprefix)|呼叫這個方法，以判斷路徑是否包含*pszPrefix*所傳遞之類型的有效前置詞。|
 |[CPathT::IsRelative](#isrelative)|呼叫這個方法，以判斷路徑是否為相對路徑。|
 |[CPathT::IsRoot](#isroot)|呼叫這個方法，以判斷路徑是否為目錄根目錄。|
 |[CPathT::IsSameRoot](#issameroot)|呼叫這個方法，以判斷另一個路徑是否有具有目前路徑的通用根元件。|
 |[CPathT::IsUNC](#isunc)|呼叫這個方法，以判斷路徑是否為伺服器和共用的有效 UNC （通用命名慣例）路徑。|
 |[CPathT::IsUNCServer](#isuncserver)|呼叫這個方法，以判斷路徑是否僅適用于伺服器的有效 UNC （通用命名慣例）路徑。|
-|[CPathT::IsUNCServerShare](#isuncservershare)|呼叫這個方法，以判斷路徑是否為有效的 UNC （通用命名慣例）共用路徑， \\ \ *伺服器*\ *共用*。|
+|[CPathT::IsUNCServerShare](#isuncservershare)|呼叫這個方法，以判斷路徑是否為有效的 UNC （通用命名慣例）共用路徑，\\ \ *伺服器*\ *共用*。|
 |[CPathT::MakePretty](#makepretty)|呼叫此方法可將路徑轉換成所有小寫字元，讓路徑具有一致的外觀。|
 |[CPathT::MatchSpec](#matchspec)|呼叫這個方法來搜尋包含萬用字元比對類型之字串的路徑。|
 |[CPathT::QuoteSpaces](#quotespaces)|呼叫這個方法，以引號括住路徑（如果它包含任何空格）。|
@@ -135,7 +135,7 @@ class CPathT
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
 |[CPathT：： operator const StringType &](#operator_const_stringtype_amp)|這個運算子可讓物件的處理方式與字串相同。|
 |[CPathT：： operator CPathT：:P CXSTR](#operator_cpatht__pcxstr)|這個運算子可讓物件的處理方式與字串相同。|
@@ -144,13 +144,13 @@ class CPathT
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|名稱|描述|
+|[屬性]|描述|
 |----------|-----------------|
 |[CPathT::m_strPath](#m_strpath)|路徑。|
 
 ## <a name="remarks"></a>備註
 
-`CPath`、 `CPathA`和`CPathW`是定義為的`CPathT`具現化，如下所示：
+`CPath`、`CPathA` 和 `CPathW` 是定義的 `CPathT` 具現化，如下所示：
 
 `typedef CPathT< CString > CPath;`
 
@@ -189,7 +189,7 @@ BOOL AddExtension(PCXSTR pszExtension);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -210,13 +210,13 @@ BOOL Append(PCXSTR pszMore);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[pathappend 式](/windows/win32/api/shlwapi/nf-shlwapi-pathappendw)。
 
-##  <a name="buildroot"></a>  CPathT::BuildRoot
+##  <a name="buildroot"></a>CPathT：： BuildRoot
 
 呼叫此方法，以從指定的磁片磁碟機編號建立根路徑。
 
@@ -265,7 +265,7 @@ void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 
 如需詳細資訊，請參閱[pathcombine 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcombinew)。
 
-##  <a name="commonprefix"></a>  CPathT::CommonPrefix
+##  <a name="commonprefix"></a>CPathT::CommonPrefix
 
 呼叫這個方法，以判斷指定的路徑是否與目前的路徑共用一般前置詞。
 
@@ -284,9 +284,9 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>備註
 
-前置詞是下列其中一種類型："C：\\ \\"，"."，".."，"。\\\\". 如需詳細資訊，請參閱[pathcommonprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
+前置詞是下列其中一種類型： "C： \\ \\"，"."，"..."，"。\\ \\」。 如需詳細資訊，請參閱[pathcommonprefix 式](/windows/win32/api/shlwapi/nf-shlwapi-pathcommonprefixw)。
 
-##  <a name="compactpath"></a>  CPathT::CompactPath
+##  <a name="compactpath"></a>CPathT::CompactPath
 
 呼叫這個方法，藉由以省略號取代路徑元件，以截斷檔案路徑以符合指定的圖元寬度。
 
@@ -304,7 +304,7 @@ BOOL CompactPath(HDC hDC, UINT nWidth);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -328,7 +328,7 @@ BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -444,9 +444,9 @@ BOOL IsDirectory() const;
 
 如需詳細資訊，請參閱[pathisdirectory 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisdirectoryw)。
 
-##  <a name="isfilespec"></a>  CPathT::IsFileSpec
+##  <a name="isfilespec"></a>CPathT::IsFileSpec
 
-呼叫這個方法，以搜尋路徑是否有任何路徑分隔字元（例如，'： ' 或 '\\'）。 如果沒有任何路徑分隔字元存在，則會將路徑視為檔案規格路徑。
+呼叫這個方法，以搜尋路徑是否有任何路徑分隔字元（例如 '： ' 或 ' \\ '）。 如果沒有任何路徑分隔字元存在，則會將路徑視為檔案規格路徑。
 
 ```
 BOOL IsFileSpec() const;
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>參數
 
 *pszPrefix*<br/>
-要搜尋的前置詞。 前置詞是下列其中一種類型："C：\\ \\"，"."，".."，"。\\\\".
+要搜尋的前置詞。 前置詞是下列其中一種類型： "C： \\ \\"，"."，"..."，"。\\ \\」。
 
 ### <a name="return-value"></a>傳回值
 
@@ -568,7 +568,7 @@ BOOL IsUNCServer() const;
 
 ##  <a name="isuncservershare"></a>CPathT::IsUNCServerShare
 
-呼叫這個方法，以判斷路徑是否為有效的 UNC （通用命名慣例）共用路徑， \\ \ *伺服器*\ *共用*。
+呼叫這個方法，以判斷路徑是否為有效的 UNC （通用命名慣例）共用路徑，\\ \ *伺服器*\ *共用*。
 
 ```
 BOOL IsUNCServerShare() const;
@@ -576,13 +576,13 @@ BOOL IsUNCServerShare() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果路徑\\是*伺服器*共用格式\ ，則傳回 TRUE，否則傳回 FALSE。\ 
+如果路徑的格式為 \\ \ *server* \ *共用*，則傳回 TRUE，否則傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[pathisuncservershare 式](/windows/win32/api/shlwapi/nf-shlwapi-pathisuncserversharew)。
 
-##  <a name="m_strpath"></a>  CPathT::m_strPath
+##  <a name="m_strpath"></a>CPathT::m_strPath
 
 路徑。
 
@@ -592,7 +592,7 @@ StringType m_strPath;
 
 ### <a name="remarks"></a>備註
 
-`StringType`是的範本參數`CPathT`。
+`StringType` 是要 `CPathT` 的範本參數。
 
 ##  <a name="makepretty"></a>CPathT::MakePretty
 
@@ -648,7 +648,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 
 傳回已更新的路徑。
 
-##  <a name="operator_const_stringtype_amp"></a>CPathT：： operator const StringType&amp;
+##  <a name="operator_const_stringtype_amp"></a>CPathT：： operator const StringType &amp;
 
 這個運算子可讓物件的處理方式與字串相同。
 
@@ -672,7 +672,7 @@ operator PCXSTR() const throw();
 
 傳回字串，代表這個物件所管理的目前路徑。
 
-##  <a name="operator_stringtype_amp"></a>CPathT：： operator StringType&amp;
+##  <a name="operator_stringtype_amp"></a>CPathT：： operator StringType &amp;
 
 這個運算子可讓物件的處理方式與字串相同。
 
@@ -694,7 +694,7 @@ typedef StringType::PCXSTR PCXSTR;
 
 ### <a name="remarks"></a>備註
 
-`StringType`是的範本參數`CPathT`。
+`StringType` 是要 `CPathT` 的範本參數。
 
 ##  <a name="pxstr"></a>CPathT：:P XSTR
 
@@ -706,7 +706,7 @@ typedef StringType::PXSTR PXSTR;
 
 ### <a name="remarks"></a>備註
 
-`StringType`是的範本參數`CPathT`。
+`StringType` 是要 `CPathT` 的範本參數。
 
 ##  <a name="quotespaces"></a>CPathT::QuoteSpaces
 
@@ -748,13 +748,13 @@ BOOL RelativePathTo(
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[pathrelativepathto 式](/windows/win32/api/shlwapi/nf-shlwapi-pathrelativepathtow)。
 
-##  <a name="removeargs"></a>  CPathT::RemoveArgs
+##  <a name="removeargs"></a>CPathT::RemoveArgs
 
 呼叫這個方法，從路徑移除任何命令列引數。
 
@@ -802,7 +802,7 @@ void RemoveExtension();
 
 如需詳細資訊，請參閱[pathremoveextension 式](/windows/win32/api/shlwapi/nf-shlwapi-pathremoveextensionw)。
 
-##  <a name="removefilespec"></a>  CPathT::RemoveFileSpec
+##  <a name="removefilespec"></a>CPathT::RemoveFileSpec
 
 呼叫這個方法，從路徑移除尾端的檔案名和反斜線（如果有的話）。
 
@@ -812,7 +812,7 @@ BOOL RemoveFileSpec();
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -833,7 +833,7 @@ BOOL RenameExtension(PCXSTR pszExtension);
 
 ### <a name="return-value"></a>傳回值
 
-成功時傳回 TRUE, 失敗時傳回 FALSE。
+成功時傳回 TRUE，失敗時傳回 FALSE。
 
 ### <a name="remarks"></a>備註
 
@@ -855,7 +855,7 @@ int SkipRoot() const;
 
 如需詳細資訊，請參閱[pathskiproot 式](/windows/win32/api/shlwapi/nf-shlwapi-pathskiprootw)。
 
-##  <a name="strippath"></a>  CPathT::StripPath
+##  <a name="strippath"></a>CPathT::StripPath
 
 呼叫這個方法，以移除完整路徑和檔案名的路徑部分。
 
@@ -867,7 +867,7 @@ void StripPath();
 
 如需詳細資訊，請參閱[pathstrippath 式](/windows/win32/api/shlwapi/nf-shlwapi-pathstrippathw)。
 
-##  <a name="striptoroot"></a>  CPathT::StripToRoot
+##  <a name="striptoroot"></a>CPathT::StripToRoot
 
 呼叫此方法可移除路徑的所有部分，但不包括根資訊。
 
@@ -905,9 +905,9 @@ typedef StringType::XCHAR XCHAR;
 
 ### <a name="remarks"></a>備註
 
-`StringType`是的範本參數`CPathT`。
+`StringType` 是要 `CPathT` 的範本參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別](../../atl/reference/atl-classes.md)<br/>
 [CStringT 類別](../../atl-mfc-shared/reference/cstringt-class.md)

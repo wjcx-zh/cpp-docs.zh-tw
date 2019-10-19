@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: c26b72f7c675a4130f38c515cf71ecc290328ccc
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "69498611"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
@@ -33,19 +33,19 @@ ms.locfileid: "69498611"
 
 下列語法描述**try-catch**語句：
 
-> **\_\_次**<br/>
+> **\_ \_try**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;受防護程式碼<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//受防護程式碼<br/>
 > }<br/>
-> **\_\_一點**<br/>
+> **\_ \_finally**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;終止程式碼<br/>
+> &nbsp; &nbsp; &nbsp; &nbsp;//終止代碼<br/>
 > }
 
 ## <a name="grammar"></a>文法
 
 *try-finally-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_請嘗試** *複合陳述式* **\_\_最後** *複合陳述式*
+&nbsp; &nbsp; &nbsp; &nbsp; **\_ \_try** *複合陳述式* **\_ 0finally** *複合陳述式*
 
 **Try finally**語句是 C 和C++語言的 Microsoft 擴充功能，可讓目標應用程式在執行程式碼區塊中斷時，保證執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 在有多個位置的常式中，針對可能會導致常式提前傳回的錯誤進行檢查時， **try-catch**語句特別有用。
 
@@ -66,15 +66,15 @@ Control 會透過簡單的連續執行（流經）來達到 **__try**的語句�
 
 如果 **__try**區塊中發生例外狀況，作業系統必須找出例外狀況的處理常式，否則程式將會失敗。 如果找到處理程式，則會執行任何和所有 **__finally**區塊，並在處理常式中繼續執行。
 
-例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果在函式 D 中引發例外狀況，並在中處理，則在系統回溯堆疊時，會依此順序呼叫終止處理常式：D、C、B。
+例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果例外狀況在函式 D 中引發，並在函式 A 中處理，則會在系統回溯堆疊時，依此順序呼叫終止處理常式：D、C、B。
 
-![&#45;]終止(../cpp/media/vc38cx1.gif "處理&#45;程式執行的")終止處理常式執行順序順序 <br/>
+![終止&#45;處理常式執行的順序](../cpp/media/vc38cx1.gif "終止&#45;處理常式執行的順序") <br/>
 終止處理常式的執行順序
 
 > [!NOTE]
 > Try-finally 的行為與支援使用**finally**的其他語言不同，例如C#。  單一 **__try**可能有 **__finally**和 **__except**的（但不能兩者）。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
 
-為了與舊版相容， **_try**、 **_finally**和 **_leave**是 **__try**、 **__finally**和 **__leave**的同義字，除非編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)已指定。
+為了與舊版相容， **_try**、 **_finally**和 **_leave**是 **__try**、 **__finally**和 **__leave**的同義字，除非編譯器選項[/za \(Disable 語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md)為特定.
 
 ## <a name="the-__leave-keyword"></a>__leave 關鍵字
 
@@ -92,7 +92,7 @@ Control 會透過簡單的連續執行（流經）來達到 **__try**的語句�
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
 [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>

@@ -1,23 +1,23 @@
 ---
 title: 建構函式 (C++)
-ms.date: 09/05/2019
+ms.date: 10/17/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 0e2e3536c8eb0a5b111ff18e43044783ea684f1f
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062034"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587933"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
 若要自訂類別成員的初始化方式，或在建立類別的物件時叫用函式，請*定義一個程式*。 建構函式的名稱與類別的名稱相同，但沒有傳回值。 您可以視需要定義任意數目的多載的函式，以各種方式自訂初始化。 一般而言，這些函式具有公用存取範圍，因此類別定義或繼承階層外的程式碼可以建立類別的物件。 但是，您也可以將函式宣告為**受保護**或**私**用。
 
-您可以選擇性地採用成員 init 清單。 這是初始化類別成員的更有效率方式，而不是在函式主體中指派值。 下列範例顯示具有三個`Box`多載的函式的類別。 最後兩個使用成員 init 清單：
+您可以選擇性地採用成員 init 清單。 這是初始化類別成員的更有效率方式，而不是在函式主體中指派值。 下列範例顯示具有三個多載的函式 `Box` 的類別。 最後兩個使用成員 init 清單：
 
 ```cpp
 class Box {
@@ -64,11 +64,11 @@ int main()
 
 - 可以宣告為**inline**、 [explicit](#explicit_constructors)、 **friend**或[constexpr](#constexpr_constructors)。
 - 函式可以初始化已宣告為**const**、 **volatile**或**const volatile**的物件。 此物件會在完成之後變成**const** 。
-- 若要在執行檔中定義函式，請為它提供與任何其他成員函式相同`Box::Box(){...}`的限定名稱：。
+- 若要在執行檔中定義函式，請為它提供與任何其他成員函式相同的限定名稱： `Box::Box(){...}`。
 
 ## <a name="member_init_list"></a>成員初始化運算式清單
 
-函式可以選擇性地擁有成員初始化運算式清單，它會在執行此函式主體之前，先將類別成員初始化。 （請注意，成員初始化運算式清單與[std：：\<initializer_list T >](../standard-library/initializer-list-class.md)類型的*初始化運算式清單*不同。）
+函式可以選擇性地擁有成員初始化運算式清單，它會在執行此函式主體之前，先將類別成員初始化。 （請注意，成員初始化運算式清單與類型[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)的*初始化運算式清單*不同。）
 
 建議使用成員初始化運算式清單，而不是在此函式的主體中指派值，因為它會直接初始化成員。 在下列範例中，成員初始化運算式清單是由冒號後面的所有**識別碼（引數）** 運算式所組成：
 
@@ -78,7 +78,7 @@ int main()
     {}
 ```
 
-識別碼必須參考類別成員;它會以引數的值進行初始化。 引數可以是其中一個函式參數、函式呼叫或[std：： initializer_list\<T >](../standard-library/initializer-list-class.md)。
+識別碼必須參考類別成員;它會以引數的值進行初始化。 引數可以是其中一個函式參數、函式呼叫或[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)。
 
 在成員初始化運算式清單中，必須初始化**const**成員和參考型別的成員。
 
@@ -206,13 +206,13 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 
 ## <a name="move_constructors"></a>移動構造函式
 
-*移動*函式是特殊的成員函式，可將現有物件資料的擁有權移至新的變數，而不需要複製原始資料。 它會採用右值參考做為其第一個參數，而且任何其他參數都必須有預設值。 移動的函式在傳遞大型物件時，可以大幅提高程式的效率。 移動函式會採用右值參考做為其第一個參數。 任何其他參數都必須有預設值。
+*移動*函式是特殊的成員函式，可將現有物件資料的擁有權移至新的變數，而不需要複製原始資料。 它會採用右值參考做為其第一個參數，而且任何其他參數都必須有預設值。 移動的函式在傳遞大型物件時，可以大幅提高程式的效率。
 
 ```cpp
 Box(Box&& other);
 ```
 
-在某些情況下，編譯器會選擇移動函式，而該物件會由相同類型的另一個物件初始化，而該物件即將終結，不再需要它資源。 下列範例示範當多載解析選取移動函式時的一種情況。 變數 *方塊* 傳回 get_Box() 是 *xvalue* （即將過期的值） 也就是即將超出範圍。 為提供此範例的動機，讓我們為 Box 指定一個代表其內容的大型字串向量。 移動函式不會複製向量和其字串，而是將它從過期的值 "box" 中「竊取」，使向量現在屬於新的物件。 對的呼叫`std::move`全都是必要的， `vector`因為和`string`類別都會執行自己的移動函式。
+在某些情況下，編譯器會選擇移動函式，而該物件會由另一個要終結且不再需要其資源的相同類型物件進行初始化。 下列範例示範當多載解析選取移動函式時的一種情況。 在呼叫 `get_Box()` 的函式中，傳回的值是*xvalue* （到期值）。 它不會指派給任何變數，因此即將超出範圍。 為提供此範例的動機，讓我們為 Box 指定一個代表其內容的大型字串向量。 移動函式不會複製向量和其字串，而是將它從過期的值 "box" 中「竊取」，使向量現在屬於新的物件。 @No__t_0 的呼叫都是必要的，因為 `vector` 和 `string` 類別都會執行自己的移動函式。
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ public:
 
 ## <a name="init_list_constructors"></a>初始化運算式清單的構造函式
 
-如果函式接受[std：：\<initializer_list T\> ](../standard-library/initializer-list-class.md)做為其參數，而且任何其他參數都有預設引數，則會在透過 direct 具現化類別時，在多載解析中選取該函式。初始. 您可以使用 initializer_list 來初始化任何可以接受它的成員。 例如，假設 Box 類別（先前所示）具有`std::vector<string>`成員。 `m_contents` 您可以提供如下所示的函式：
+如果處理常式採用[std：： initializer_list \<T \>](../standard-library/initializer-list-class.md)做為其參數，而且任何其他參數都有預設引數，則當類別透過 direct 具現化時，會在多載解析中選取該函式。初始. 您可以使用 initializer_list 來初始化任何可以接受它的成員。 例如，假設 Box 類別（先前所示）具有 `std::vector<string>` 成員 `m_contents`。 您可以提供如下所示的函式：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -435,7 +435,7 @@ Contained3 ctor
 DerivedContainer ctor
 ```
 
-衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 基類的函式會以衍生的順序呼叫`ClassA` ，例如，如果衍生自`ClassB` `ClassC`衍生自的， `ClassB`則會先呼叫此`ClassC`函式，然後再呼叫函式，然後`ClassA`函數。
+衍生類別建構函式一定會呼叫基底類別建構函式，因此，它可以依賴完全建構的基底類別，才進行任何額外的工作。 基類的函式會以衍生的順序呼叫，例如，如果 `ClassA` 衍生自從 `ClassC` 衍生的 `ClassB`，則會先呼叫 `ClassC` 的函式，然後再呼叫 `ClassB` 的函式，然後 `ClassA` 的函數。
 
 如果基底類別沒有預設建構函式，您必須在衍生類別建構函式中提供基底類別建構函式參數：
 
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 15.7 版和更新版本**： **/Std： c + + 17**模式中的**using**語句會從基類帶入所有的函式，但具有衍生類別中之函式的相同簽章。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 15.7 版中的增強功能](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 15.7 版和更新**版本： **/Std： c + + 17**模式中的**using**語句會從基類帶入所有的函式，但具有衍生類別中之函數的相同簽章。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 15.7 版中的增強功能](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 

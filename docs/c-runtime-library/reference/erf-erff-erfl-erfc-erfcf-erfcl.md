@@ -40,10 +40,10 @@ helpviewer_keywords:
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
 ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70937611"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
@@ -98,7 +98,7 @@ long double erfcl(
 
 **Erf**函數會計算*x*的高斯錯誤函式，其定義為：
 
-![X 的錯誤]函式(media/crt_erf_formula.PNG "X 的錯誤")函式
+![X 的錯誤函式](media/crt_erf_formula.PNG "x 的誤差函式")
 
 互補高斯 error 函式定義為 erf （x）。 **Erf**函數會傳回範圍-1.0 到1.0 的值。 不會傳回錯誤。 **Erfc**函數會傳回0到2範圍內的值。 如果*x*對**erfc**而言太大， **Errno**變數會設定為**ERANGE**。
 
@@ -106,12 +106,12 @@ long double erfcl(
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|功能|必要的標頭|
 |--------------|---------------------|
 |**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

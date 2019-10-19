@@ -3,10 +3,10 @@ title: 動態版面配置
 ms.date: 09/09/2019
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 1b0d035d3c551fd309d515ccb8b22159218c1b0a
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
+ms.lasthandoff: 10/18/2019
 ms.locfileid: "70907554"
 ---
 # <a name="dynamic-layout"></a>動態版面配置
@@ -17,13 +17,13 @@ ms.locfileid: "70907554"
 
 當使用者調整對話方塊時，對話方塊中的控制項可以調整大小，或以 X 和 Y 方向移動。 在使用者調整對話方塊大小時，控制項大小或位置的變更即稱為動態配置。 例如，下列是調整大小之前的對話方塊：
 
-重新重設![大小之前的對話方塊。]重新重設(../mfc/media/mfcdynamiclayout4.png "大小之前的對話方塊。")
+![重新調整大小之前的對話方塊。](../mfc/media/mfcdynamiclayout4.png "調整大小之前的對話方塊。")
 
 調整大小之後，清單方塊區域會加大以顯示更多的項目，按鈕則會隨右下角移動：
 
-重設![大小之後的對話方塊。]重設(../mfc/media/mfcdynamiclayout5.png "大小之後的對話方塊。")
+![調整大小之後的對話方塊。](../mfc/media/mfcdynamiclayout5.png "調整大小之後的對話方塊。")
 
-您可以在 IDE 的資源編輯器中指定每個控制項的詳細資料，以控制動態配置，也可以藉由存取`CMFCDynamicLayout`特定控制項的物件並設定屬性，以程式設計方式來執行此動作。
+您可以在 IDE 的資源編輯器中指定每個控制項的詳細資料，以控制動態配置，也可以藉由存取特定控制項的 `CMFCDynamicLayout` 物件並設定屬性，以程式設計方式來執行此動作。
 
 ### <a name="setting-dynamic-layout-properties-in-the-resource-editor"></a>在資源編輯器中設定動態配置屬性
 
@@ -39,11 +39,11 @@ ms.locfileid: "70907554"
 
 1. 如果您想要控制項（例如按鈕）為固定大小，並留在右下方，如同 [**確定]** 或 [**取消**] 按鈕的常見情況，請將**大小調整類型**設定為 [**無**]，並將**移動類型**設定為 [**兩者**]。 針對 [**移動類型**] 下的 [**移動 X** ] 和 [**移動 Y** ] 值，設定 [100%]，讓控制項從右下角保持固定的距離。
 
-   ![動態版面]配置(../mfc/media/mfcdynamiclayout1.png "動態版面")配置
+   ![動態版面配置](../mfc/media/mfcdynamiclayout1.png "動態版面配置")
 
 1. 假設您也有想要在對話方塊展開時加以展開的控制項。 一般而言，使用者可能會展開對話方塊，以展開多行編輯方塊，增加文字區域的大小，或者可能會展開清單控制項以查看詳細資料。 在此情況下，請將**大小調整類型**設定為 [兩者]，並將 [**移動類型**] 設為 [無]。 然後，將 [重設**大小 X** ] 和 [**調整 Y 值大小**] 設定為100。
 
-   ![動態版面配置設定](../mfc/media/mfcdynamiclayout2.png "動態版面配置設定")
+   ![動態版面配置設定](../mfc/media/mfcdynamiclayout2.png "動態配置設定")
 
 1. 實驗其他可能對您的控制項有意義的值。 例如，具有單行文字方塊的對話方塊可能會將重設**大小的類型**設定為 [**水準**]。
 
@@ -55,13 +55,13 @@ ms.locfileid: "70907554"
 
 1. 在對話方塊類別的實作程式碼中，尋找或建立一個您要為對話指定動態配置的位置。 例如，您可能會想要在對話方塊中加入 `AdjustLayout` 這樣的方法，並從需要變更配置的位置呼叫它。 您可能會先從建構函式呼叫它，或在變更對話方塊後呼叫。
 
-1. 針對對話方塊，呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，這是`CWnd`類別的方法。 `GetDynamicLayout` 傳回 `CMFCDynamicLayout` 物件的指標。
+1. 針對對話方塊，請呼叫[GetDynamicLayout](../mfc/reference/cwnd-class.md#getdynamiclayout)，這是 `CWnd` 類別的方法。 `GetDynamicLayout` 傳回 `CMFCDynamicLayout` 物件的指標。
 
     ```cpp
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. 針對您要加入動態行為的第一個控制項，請在動態配置類別上使用靜態方法來建立[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)結構，以編碼控制項的調整方式。 若要這麼做，請先選擇適當的靜態方法：[CMFCDynamicLayout：： MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout：： MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout：： MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)或[CMFCDynamicLayout：： MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)。 傳入移動之水平和/或垂直層面的百分比。 這些靜態方法全都會傳回新建立的 MoveSettings 物件，可讓您指定控制項的移動行為。
+1. 針對您要加入動態行為的第一個控制項，請在動態配置類別上使用靜態方法來建立[MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)結構，以編碼控制項的調整方式。 若要這麼做，請先選擇適當的靜態方法： [CMFCDynamicLayout：： MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout：： MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout：： MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)或[CMFCDynamicLayout：： MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical). 傳入移動之水平和/或垂直層面的百分比。 這些靜態方法全都會傳回新建立的 MoveSettings 物件，可讓您指定控制項的移動行為。
 
    請記住，100 表示移動的量與對話方塊變更大小的量剛好相等，這會使控制項的邊緣與新框線保持固定距離。
 
@@ -141,7 +141,7 @@ ms.locfileid: "70907554"
     END
     ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [CMFCDynamicLayout 類別](../mfc/reference/cmfcdynamiclayout-class.md)<br/>
 [控制項類別](../mfc/control-classes.md)<br/>

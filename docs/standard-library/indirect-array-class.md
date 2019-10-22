@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - indirect_array class
 ms.assetid: 10e1eaea-ba5a-405c-a25e-7bdd3eee7fc7
-ms.openlocfilehash: 5db5f2ce60038267b70ae8e77d9dd929d972af6a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6be0c5153cbc94d09b414fc9e14fa498c7a4cfa7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456333"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687925"
 ---
-# <a name="indirectarray-class"></a>indirect_array 類別
+# <a name="indirect_array-class"></a>indirect_array 類別
 
-對於指定父代 valarray 索引子集而定義的子集陣列，可藉由提供這些子集之間的作業，支援 valarray 子集物件的內部、輔助的範本類別。
+內部的輔助類別樣板，藉由指定父 valarray 的索引子集，在定義的子集陣列之間提供作業，藉此支援屬於 valarray 子集的物件。
 
 ## <a name="syntax"></a>語法
 
 ## <a name="remarks"></a>備註
 
-類別`va`描述的物件會儲存[valarray](../standard-library/valarray-class.md)  **\<> 類型**之物件的參考, 以及類別`valarray<size_t>`的物件`xa` , 其中描述要從中選取的元素序列。`valarray<Type>`物件。
+類別會描述一個物件，它會儲存 `va` 類別[valarray](../standard-library/valarray-class.md) **\<Type >** 的物件參考，以及類別 `valarray<size_t>` 的物件 `xa`，其中描述要從 `valarray<Type>` 物件選取的專案序列。
 
-您只能藉`indirect_array<Type>`由撰寫表單`va[xa]`的運算式來建立物件。 類別 indirect_array 的成員函式的行為就像是針對定義的`valarray<Type>`對應函式簽章, 但只有所選項目的順序會受到影響。
+您只能藉由撰寫 `va[xa]` 格式的運算式來建立 `indirect_array<Type>` 物件。 類別 indirect_array 的成員函式的行為就像是針對 `valarray<Type>` 定義的對應函式簽章，但只有所選項目的順序會受到影響。
 
-順序是由 xa 所組成 **。** [大小](../standard-library/valarray-class.md#size)元素, 其中元素`I`會成為中`va`的索引`I` **xa**[]。
+順序是由 xa 所組成 **。** [大小](../standard-library/valarray-class.md#size)元素，其中元素 `I` 會變成 `va` 內的索引**xa**[`I`]。
 
 ## <a name="example"></a>範例：
 
@@ -77,8 +77,8 @@ The modified operand valarray is:  (0 -1 10 -1 10 -1 10 -1 8 -1).
 
 **標頭：** \<valarray>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

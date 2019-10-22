@@ -108,16 +108,16 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 056b7e47c474c64bf357523e2995ef49d456a9cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e269028ff28b00586fd8d8dcef728f11037dfbc8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449177"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687895"
 ---
-# <a name="iosbase-class"></a>ios_base 類別
+# <a name="ios_base-class"></a>ios_base 類別
 
-此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。 (範本類別 [basic_ios](../standard-library/basic-ios-class.md) 描述通用且與範本參數相依的項目)。
+此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。 （類別樣板[basic_ios](../standard-library/basic-ios-class.md)會描述什麼是通用的，而且相依于範本參數）。
 
 Ios_base 類別的物件會儲存格式設定資訊，包括：
 
@@ -129,13 +129,13 @@ Ios_base 類別的物件會儲存格式設定資訊，包括：
 
 - 類型為**int**之物件中的顯示有效位數。
 
-- 類型`locale`物件中的地區設定物件。
+- @No__t_0 類型之物件中的地區設定物件。
 
-- 兩個可延伸的陣列, 具有**long**類型和**void**指標的元素。
+- 兩個可延伸的陣列，具有**long**類型和**void**指標的元素。
 
 ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#iostate) 類型的物件中，以及儲存一個回呼堆疊。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>建構函式
 
@@ -143,7 +143,7 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 |-|-|
 |[ios_base](#ios_base)|建構 `ios_base` 物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -170,7 +170,7 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 |[basefield](#fmtflags)|一個以 `dec` &#124; `hex` &#124; `oct` 方式定義的位元遮罩。|
 |[beg](#seekdir)|指定相對於序列開頭的搜尋。|
 |[binary](#openmode)|指定檔案應該以二進位資料流讀取，而不是文字資料流。|
-|[boolalpha](#fmtflags)|指定將**bool**類型的物件插入或解壓縮為名稱 (例如**true**和**false**), 而不是數值。|
+|[boolalpha](#fmtflags)|指定將**bool**類型的物件插入或解壓縮為名稱（例如**true**和**false**），而不是數值。|
 |[cur](#seekdir)|指定相對於序列中目前位置的搜尋。|
 |[dec](#fmtflags)|指定以十進位格式插入或擷取整數值。|
 |[end](#seekdir)|指定相對於序列結尾的搜尋。|
@@ -199,7 +199,7 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 
 |||
 |-|-|
-|[failure](#failure)|成員類別會作為範本類別 [basic_ios](../standard-library/basic-ios-class.md) 中成員函式 [clear](../standard-library/basic-ios-class.md#clear) 所擲回之所有例外狀況的基底類別。|
+|[failure](#failure)|成員類別可做為類別樣板[basic_ios](../standard-library/basic-ios-class.md)[中的](../standard-library/basic-ios-class.md#clear)成員函式所擲回之所有例外狀況的基類（base class）。|
 |[flags](#flags)|設定或傳回目前的旗標設定。|
 |[getloc](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|變更地區設定。|
@@ -224,7 +224,7 @@ ios_base 類別的物件會一併將資料流狀態資訊儲存在 [iostate](#io
 
 **標頭：** \<ios>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="event"></a>發生
 
@@ -241,11 +241,11 @@ enum event {
 
 此類型為列舉類型，描述可以儲存回呼事件的物件，此事件是用來作為以 [register_callback](#register_callback) 註冊之函式的引數。 不同的事件值如下：
 
-- `copyfmt_event`, 用來識別在[copyfmt](../standard-library/basic-ios-class.md#copyfmt)呼叫結尾附近發生的回呼, 剛好是在複製例外狀況[遮罩](../standard-library/ios-base-class.md)之前。
+- `copyfmt_event`，在複製[例外狀況遮罩](../standard-library/ios-base-class.md)之前，識別發生在[copyfmt](../standard-library/basic-ios-class.md#copyfmt)呼叫結尾附近的回呼。
 
-- `erase_event`識別的呼叫開頭發生的回呼[copyfmt](../standard-library/basic-ios-class.md#copyfmt)，或呼叫的解構函式的開頭 **\*這**。
+- `erase_event`，以識別在呼叫[copyfmt](../standard-library/basic-ios-class.md#copyfmt)開始時，或在 **\*this**的函式呼叫開始時所發生的回呼。
 
-- `imbue_event`, 用來識別在呼叫[imbue](#imbue)結束時所發生的回呼, 剛好在函式傳回之前。
+- `imbue_event`，在函式傳回之前，識別發生在[imbue](#imbue)呼叫結尾處的回呼。
 
 ### <a name="example"></a>範例
 
@@ -264,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>參數
 
-*_E*\
+*_E* \
 [事件](#event)。
 
-*_Base*\
+*_Base* \
 在其中呼叫事件的資料流。
 
-*_I*\
+*_I* \
 使用者定義的數字。
 
 ### <a name="remarks"></a>備註
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>參數
 
-*fmtfl*\
+*fmtfl* \
 新的 `fmtflags` 設定。
 
 ### <a name="return-value"></a>傳回值
@@ -355,7 +355,7 @@ fmtflags flags(fmtflags fmtfl);
 
 如需旗標的清單，請參閱 [ios_base::fmtflags](#fmtflags)。
 
-第一個成員函式會傳回已儲存的格式旗標。 第二個成員函式會將*fmtfl*儲存為格式旗標, 並傳回其先前儲存的值。
+第一個成員函式會傳回已儲存的格式旗標。 第二個成員函式會將*fmtfl*儲存為格式旗標，並傳回其先前儲存的值。
 
 ### <a name="example"></a>範例
 
@@ -429,7 +429,7 @@ public:
 
 - `right`，藉由插入填滿字元到所產生欄位的開頭，來視需要填補欄位寬度 (靠右對齊)。
 
-- `boolalpha`, 將**bool**類型的物件插入或解壓縮為名稱 (例如**true**和**false**), 而不是數值。
+- `boolalpha`，將**bool**類型的物件插入或解壓縮為名稱（例如**true**和**false**），而不是數值。
 
 - `fixed`，以固定點格式插入浮點數值 (沒有指數欄位)。
 
@@ -465,7 +465,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>傳回值
 
-已儲存的地區設定物件。
+預存的地區設定物件。
 
 ### <a name="example"></a>範例
 
@@ -495,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>參數
 
-*_Loc*\
+*_Loc* \
 新的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -504,7 +504,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將 *_Loc*儲存在地區設定物件中, 然後報告`imbue_event`回呼事件和。 它會傳回先前儲存的值。
+此成員函式會將 *_Loc*儲存在地區設定物件中，然後報告回呼事件並 `imbue_event`。 它會傳回先前儲存的值。
 
 ### <a name="example"></a>範例
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>備註
 
-(受保護的) 建構函式不會執行任何動作。 稍後對 **basic_ios::** [init](../standard-library/basic-ios-class.md#init) 的呼叫必須先將物件初始化，之後才能將它安全地終結。 因此，ios_base 類別的唯一安全用法就是當作範本類別 [basic_ios](../standard-library/basic-ios-class.md) 的基底類別。
+(受保護的) 建構函式不會執行任何動作。 稍後對 **basic_ios::** [init](../standard-library/basic-ios-class.md#init) 的呼叫必須先將物件初始化，之後才能將它安全地終結。 因此，類別 ios_base 的唯一安全用法是做為類別樣板[basic_ios](../standard-library/basic-ios-class.md)的基類。
 
 ## <a name="iostate"></a>iostate
 
@@ -560,7 +560,7 @@ public:
 
 - `failbit`：記錄從資料流擷取有效欄位時的失敗。
 
-此外, 有用的值是`goodbit`, 其中未設定任何先前提及的位 (`goodbit`保證為零)。
+此外，也會 `goodbit` 有用的值，其中未設定任何先前提及的位（`goodbit` 保證為零）。
 
 ## <a name="iword"></a>iword
 
@@ -572,14 +572,14 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>參數
 
-*idx*\
+*idx* \
 要以 `iword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
 
 此成員函式會傳回具有**long**類型專案之可擴充陣列的元素*idx*參考。 所有元素都實際存在，且一開始儲存的值為零。 在下一次呼叫物件的 `iword` 之後、在呼叫 **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) 來更改物件之後，或在終結物件之後，傳回的參考便無效。
 
-如果*idx*是負數, 或專案的唯一儲存區無法使用, 則此函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** , 並傳回可能不是唯一的參考。
+如果*idx*是負數，或專案的唯一儲存區無法使用，則此函式會呼叫[setstate](../standard-library/basic-ios-class.md#setstate) **（badbit）** ，並傳回可能不是唯一的參考。
 
 若要取得唯一索引以在 `ios_base` 類型的所有物件上使用，請呼叫 [xalloc](#xalloc)。
 
@@ -607,17 +607,17 @@ public:
 
 此類型為 `bitmask type`，描述可以儲存數個 iostreams 物件之開啟模式的物件。 不同的旗標值 (項目) 為：
 
-- `app`, 在每次插入之前, 搜尋資料流程的結尾。
+- `app`，以在每次插入之前搜尋資料流程結尾。
 
-- `ate`, 在第一次建立控制物件時, 搜尋資料流程的結尾。
+- `ate`，以在第一次建立控制物件時，搜尋資料流程的結尾。
 
-- `binary`, 將檔案讀取為二進位資料流程, 而不是文字資料流程。
+- `binary`，將檔案讀取為二進位資料流程，而不是文字資料流程。
 
-- `in`, 允許從資料流程進行解壓縮。
+- `in`，允許從資料流程進行解壓縮。
 
-- `out`, 允許插入資料流程。
+- `out`，允許插入資料流程。
 
-- `trunc`, 在建立控制項的控制物件時, 刪除現有檔案的內容。
+- `trunc`，在建立控制項的控制物件時，刪除現有檔案的內容。
 
 ### <a name="example"></a>範例
 
@@ -647,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 `ios_base` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -671,12 +671,12 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>參數
 
-*_Prec*\
+*_Prec* \
 要顯示的有效位數，或是固定標記法中的小數點後位數。
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回已儲存的[顯示整數位數](../standard-library/ios-base-class.md)。 第二個成員函式會將 *_Prec*儲存在顯示有效位數中, 並傳回其先前儲存的值。
+第一個成員函式會傳回已儲存的[顯示整數位數](../standard-library/ios-base-class.md)。 第二個成員函式會將 *_Prec*儲存在顯示有效位數中，並傳回其先前儲存的值。
 
 ### <a name="remarks"></a>備註
 
@@ -716,7 +716,7 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>參數
 
-*_Idx*\
+*_Idx* \
 要以 `pword` 形式儲存之值的索引。
 
 ### <a name="remarks"></a>備註
@@ -742,15 +742,15 @@ void register_callback(
 
 ### <a name="parameters"></a>參數
 
-*pfn*\
+*pfn* \
 回呼函式的指標。
 
-*idx*\
+*idx* \
 使用者定義的數字。
 
 ### <a name="remarks"></a>備註
 
-成員函式會將配對`{pfn, idx}`推送至預存的回呼堆疊[回呼堆疊](../standard-library/ios-base-class.md)。 當報告回呼事件**ev**時, 運算式`(*pfn)(ev, *this, idx)`就會依登錄的反向順序呼叫函數。
+成員函式會將配對 `{pfn, idx}` 推送至預存的回呼堆疊[回呼堆疊](../standard-library/ios-base-class.md)。 當報告回呼事件**ev**時，運算式會以反向順序呼叫函式 `(*pfn)(ev, *this, idx)`。
 
 ### <a name="example"></a>範例
 
@@ -858,13 +858,13 @@ namespace std {
 
 ### <a name="remarks"></a>備註
 
-型別是一種列舉型別, 描述可以儲存搜尋模式的物件, 而此模式會當做數個 iostream 類別之成員函式的引數來使用。 不同的旗標值為：
+型別是一種列舉型別，描述可以儲存搜尋模式的物件，而此模式會當做數個 iostream 類別之成員函式的引數來使用。 不同的旗標值為：
 
-- `beg`, 用來搜尋 (改變目前的讀取或寫入位置), 相對於序列開頭 (陣列、資料流程或檔案)。
+- `beg`，用來搜尋（改變目前的讀取或寫入位置），相對於序列開頭（陣列、資料流程或檔案）。
 
-- `cur`, 表示相對於序列內目前位置的搜尋。
+- `cur`，以相對於序列內的目前位置進行搜尋。
 
-- `end`, 表示相對於序列結尾的搜尋。
+- `end`，表示相對於序列結尾的搜尋。
 
 ### <a name="example"></a>範例
 
@@ -904,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>參數
 
-*_Mask*\
+*_Mask* \
 要開啟的旗標。
 
-*_Unset*\
+*_Unset* \
 要關閉的旗標。
 
 ### <a name="return-value"></a>傳回值
@@ -916,7 +916,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會實際呼叫[旗標](#flags)(  *\_遮罩* &#124;  *\_旗標*) (設定選取的位), 然後傳回先前的格式旗標。 第二個成員函式`flags(_Mask & fmtfl, flags & ~_Mask)`會實際呼叫 (以遮罩取代選取的位), 然後傳回先前的格式旗標。
+第一個成員函式會有效地呼叫[旗標](#flags)（ *\_Mask* &#124; *\_Flags*）（設定選取的位），然後傳回先前的格式旗標。 第二個成員函式會有效地呼叫 `flags(_Mask & fmtfl, flags & ~_Mask)` （在遮罩底下取代選取的位），然後傳回先前的格式旗標。
 
 ### <a name="example"></a>範例
 
@@ -954,8 +954,8 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>參數
 
-*_Sync*\
-所有資料流程是否與`stdio`同步。
+*_Sync* \
+所有資料流程是否與 `stdio` 同步。
 
 ### <a name="return-value"></a>傳回值
 
@@ -963,7 +963,7 @@ static bool sync_with_stdio(
 
 ### <a name="remarks"></a>備註
 
-靜態成員函式會儲存`stdio`一開始**為 true**的同步旗標。 若**為 true**, 此旗標可確保在[iostreams](../standard-library/iostreams-conventions.md)函式和C++標準程式庫中定義的函式之間, 正確地同步處理相同檔案上的作業。 否則, 可能無法保證同步處理, 但可能會改善效能。 函式會將 *_Sync*儲存`stdio`在同步旗標中, 並傳回其先前儲存的值。 您只能在對標準資料流程執行任何作業之前, 可靠地呼叫它。
+靜態成員函式會儲存 `stdio` 同步旗標，其一開始為**true**。 若**為 true**，此旗標可確保在[iostreams](../standard-library/iostreams-conventions.md)函式和C++標準程式庫中定義的函式之間，正確地同步處理相同檔案上的作業。 否則，可能無法保證同步處理，但可能會改善效能。 函式會將 *_Sync*儲存在 `stdio` 同步旗標中，並傳回其先前儲存的值。 您只能在對標準資料流程執行任何作業之前，可靠地呼叫它。
 
 ## <a name="unsetf"></a>unsetf
 
@@ -977,16 +977,16 @@ void unsetf(
 
 ### <a name="parameters"></a>參數
 
-*_Mask*\
+*_Mask* \
 您想要關閉的旗標。
 
 ### <a name="remarks"></a>備註
 
-成員函式會有效地呼叫`~`[旗標](#flags)( *_Mask* **& 旗標**) (清除選取的位)。
+成員函式會有效地呼叫[旗標](#flags)（`~` *_Mask* **& 旗標**）（清除選取的位）。
 
 ### <a name="example"></a>範例
 
-如需使用`unsetf`的範例, 請參閱[ios_base:: setf](#setf) 。
+如需使用 `unsetf` 的範例，請參閱[ios_base：： setf](#setf) 。
 
 ## <a name="width"></a>寬度
 
@@ -1001,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>參數
 
-*_Wide*\
+*_Wide* \
 所需的輸出資料流大小。
 
 ### <a name="return-value"></a>傳回值
@@ -1010,7 +1010,7 @@ streamsize width(
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回儲存的欄位寬度。 第二個成員函式會將 *_Wide*儲存在欄位寬度中, 並傳回其先前儲存的值。
+第一個成員函式會傳回儲存的欄位寬度。 第二個成員函式會將 *_Wide*儲存在欄位寬度中，並傳回其先前儲存的值。
 
 ### <a name="example"></a>範例
 
@@ -1043,11 +1043,11 @@ static int xalloc( );
 
 ### <a name="return-value"></a>傳回值
 
-靜態成員函式會傳回預存的靜態值, 這會在每次呼叫時遞增。
+靜態成員函式會傳回預存的靜態值，這會在每次呼叫時遞增。
 
 ### <a name="remarks"></a>備註
 
-呼叫成員函式[iword](#iword)或[pword](#pword)時, 您可以使用傳回值做為唯一的索引引數。
+呼叫成員函式[iword](#iword)或[pword](#pword)時，您可以使用傳回值做為唯一的索引引數。
 
 ### <a name="example"></a>範例
 
@@ -1079,7 +1079,7 @@ int main( )
 testing
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
-ms.openlocfilehash: f5b448fbf158cf9e9cfb8331c6ec7a228859fffc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3c1824eb22ed97e65e0556bc63b374f705f5c591
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447580"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689441"
 ---
-# <a name="linearcongruentialengine-class"></a>linear_congruential_engine 類別
+# <a name="linear_congruential_engine-class"></a>linear_congruential_engine 類別
 
 依線性同餘演算法產生隨機序列。
 
@@ -45,19 +45,19 @@ class linear_congruential_engine{
 
 ### <a name="parameters"></a>參數
 
-*UIntType*\
+*UIntType* \
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*為*\
-**乘數**。 **前置條件**:請參閱備註一節。
+*@No__t_1*
+**乘數**。 **前置條件**：請參閱＜備註＞一節。
 
-*C*\
-**遞增**。 **前置條件**:請參閱備註一節。
+*C* \
+**遞增**。 **前置條件**：請參閱＜備註＞一節。
 
-*分鐘*\
-**模數**。 **前置條件**:請參閱備註。
+*M* \
+**模數**。 **前置條件**：請參閱備註。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -70,13 +70,13 @@ class linear_congruential_engine{
 
 ## <a name="remarks"></a>備註
 
-`linear_congruential_engine` 範本類別是最簡單的產生器引擎，但不具有最快或最高的品質。 和此引擎相較之下較為改進的是 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
+@No__t_0 類別範本是最簡單的產生器引擎，但不是最快或最高的品質。 和此引擎相較之下較為改進的是 [substract_with_carry_engine](../standard-library/subtract-with-carry-engine-class.md)。 但這些引擎都不像 [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) 一樣快，且具有高品質的結果。
 
 此引擎使用週期關聯 ( *period*) `x(i) = (A * x(i-1) + C) mod M` 來產生使用者指定之不帶正負號的整數類型值。
 
-如果*M*為零, 則用於此模數運算的值為`numeric_limits<result_type>::max() + 1`。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。
+如果*M*為零，則會 `numeric_limits<result_type>::max() + 1` 用於此模數作業的值。 引擎的狀態會是上次傳回的值；若沒有對 `operator()` 執行任何呼叫，則引擎的狀態是初始值。
 
-如果*M*不是零, 則範本引數*A*和*C*的值必須小於*M*。
+如果*M*不是零，則範本引數*A*和*C*的值必須小於*M*。
 
 雖然您可以直接從此引擎建構產生器，但您也可以使用下列其中一個預先定義的 typedef。
 
@@ -86,7 +86,7 @@ class linear_congruential_engine{
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;
 ```
 
-`minstd_rand`：升級的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。
+`minstd_rand`：更新的最低標準引擎 `minstd_rand0` (Park、Miller 及 Stockmeyer，1993 年)。
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_rand;
@@ -98,8 +98,8 @@ typedef linear_congruential_engine<unsigned int, 48271, 0, 2147483647> minstd_ra
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

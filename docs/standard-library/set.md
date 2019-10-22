@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fed6219c483bdade0132d5faae8b6597bcc5d732
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450516"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686464"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
-定義容器範本類別 set 和 multiset，以及其支援的範本。
+定義容器類別樣板集和多集和其支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** \<set>
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> Set > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0set > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -52,7 +52,7 @@ ms.locfileid: "68450516"
 |[set 類別](../standard-library/set-class.md)|用於在集合中儲存和擷取資料，集合中包含的項目值是唯一的，而且這些項目值做為索引鍵值，據此自動排序資料。|
 |[multiset 類別](../standard-library/multiset-class.md)|用於在集合中儲存和擷取資料，集合中包含的項目值不須是唯一的，而且這些項目值做為索引鍵值，據此自動排序資料。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

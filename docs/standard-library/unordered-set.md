@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 71acab214d891c6139f21685e9368399b99e1657
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454679"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688794"
 ---
-# <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
+# <a name="ltunordered_setgt"></a>&lt;unordered_set&gt;
 
-定義容器樣板類別 [unordered_multiset](../standard-library/unordered-multiset-class.md) 和 [unordered_set](../standard-library/unordered-set-class.md) 以及其支援的範本。
+定義容器類別範本[unordered_multiset](../standard-library/unordered-multiset-class.md)和[unordered_set](../standard-library/unordered-set-class.md)及其支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<unordered_set>
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> Unordered_set > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0unordered_set > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>類別
 
@@ -46,7 +46,7 @@ ms.locfileid: "68454679"
 |[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|測試運算子左邊的 unordered_set 物件是否等於右邊的 unordered_set 物件。|
 |[swap](../standard-library/unordered-set-functions.md#swap)|交換兩個集合。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [unordered_map 類別](../standard-library/unordered-map-class.md)\
 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)

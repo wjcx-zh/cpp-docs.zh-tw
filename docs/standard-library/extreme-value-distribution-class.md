@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457765"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688072"
 ---
-# <a name="extremevaluedistribution-class"></a>extreme_value_distribution 類別
+# <a name="extreme_value_distribution-class"></a>extreme_value_distribution 類別
 
 產生極值分佈。
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述產生使用者指定之浮點類型值的分佈, 或如果沒有提供, 則為**double**類型, 這是根據最大值分佈所散發。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之浮點類型值的分佈，或如果沒有提供，則為**double**類型，這是根據最大值分佈所散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -179,7 +179,7 @@ Distribution for 10 samples:
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
 
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*a_value*\
+*a_value* \
 `a` 分佈參數。
 
-*b_value*\
+*b_value* \
 `b` 分佈參數。
 
-*parm*\
+*parm* \
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*a_value*\
+*a_value* \
 `a` 分佈參數。
 
-*b_value*\
+*b_value* \
 `b` 分佈參數。
 
-*再*\
+*right* \
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -242,6 +242,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-ms.openlocfilehash: ba6a4152b8d37f5b0186f9d05c6ba850e8c2e54c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1f85367b9ae527c9387d085acc1496bfbbf7cc9e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454025"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688030"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -23,29 +23,29 @@ ms.locfileid: "68454025"
 #include <fstream>
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
-|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|在`basic_filebuf` **char**樣板參數上特製化的類型。|
-|[fstream](../standard-library/fstream-typedefs.md#fstream)|在`basic_fstream` **char**樣板參數上特製化的類型。|
-|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|在`basic_ifstream` **char**樣板參數上特製化的類型。|
-|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|在`basic_ofstream` **char**樣板參數上特製化的類型。|
-|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|在`basic_fstream` **wchar_t**範本參數上特製化的類型。|
-|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|在`basic_ifstream` **wchar_t**範本參數上特製化的類型。|
-|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|在`basic_ofstream` **wchar_t**範本參數上特製化的類型。|
-|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|在`basic_filebuf` **wchar_t**範本參數上特製化的類型。|
+|[filebuf](../standard-library/fstream-typedefs.md#filebuf)|類型 `basic_filebuf` 在**char**樣板參數上特製化。|
+|[fstream](../standard-library/fstream-typedefs.md#fstream)|類型 `basic_fstream` 在**char**樣板參數上特製化。|
+|[ifstream](../standard-library/fstream-typedefs.md#ifstream)|類型 `basic_ifstream` 在**char**樣板參數上特製化。|
+|[ofstream](../standard-library/fstream-typedefs.md#ofstream)|類型 `basic_ofstream` 在**char**樣板參數上特製化。|
+|[wfstream](../standard-library/fstream-typedefs.md#wfstream)|類型 `basic_fstream` 在**wchar_t**樣板參數上特製化。|
+|[wifstream](../standard-library/fstream-typedefs.md#wifstream)|類型 `basic_ifstream` 在**wchar_t**樣板參數上特製化。|
+|[wofstream](../standard-library/fstream-typedefs.md#wofstream)|類型 `basic_ofstream` 在**wchar_t**樣板參數上特製化。|
+|[wfilebuf](../standard-library/fstream-typedefs.md#wfilebuf)|類型 `basic_filebuf` 在**wchar_t**樣板參數上特製化。|
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|執行個體|描述|
 |-|-|
-|[basic_filebuf](../standard-library/basic-filebuf-class.md)|範本類別描述資料流緩衝區，其控制類型 `Elem` 的項目 (其字元特性由類別 `Tr` 所決定)，與外部檔案中儲存的項目序列之間的往來傳輸。|
-|[basic_fstream](../standard-library/basic-fstream-class.md)|此樣板類別所描述的物件, 可控制如何使用類別[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, `Elem` **Tr**> 的資料流程緩衝區來插入和解壓縮專案和編碼物件, 其型別為的元素字元特性是由類別`Tr`所決定。|
-|[basic_ifstream](../standard-library/basic-ifstream-class.md)|此樣板類別所描述的物件, 可控制從[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> 類別的資料流程緩衝區中的專案和編碼物件的提取, 其中`Elem`包含類型的元素, 其字元特性是由類別`Tr`所決定。|
-|[basic_ofstream](../standard-library/basic-ofstream-class.md)|此樣板類別所描述的物件, 可控制如何將元素和編碼物件插入至[basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**> 類別的資料流程緩衝區, 其中包含`Elem`類型的元素, 其字元特性為是由類別`Tr`所決定。|
+|[basic_filebuf](../standard-library/basic-filebuf-class.md)|類別樣板描述一個資料流程緩衝區，可控制 `Elem` 類型的專案傳輸，其字元特性是由類別所 `Tr`，以及儲存在外部檔案中的專案序列所決定。|
+|[basic_fstream](../standard-library/basic-fstream-class.md)|類別樣板描述的物件可控制如何使用 **> \<** [basic_filebuf](../standard-library/basic-filebuf-class.md)類別的資料流程緩衝區來插入和解壓縮專案和編碼物件，以及`Elem` 類型的元素，其字元特性取決於類別 `Tr`。|
+|[basic_ifstream](../standard-library/basic-ifstream-class.md)|類別樣板描述一個物件，它會從 > \< [basic_filebuf](../standard-library/basic-filebuf-class.md)類別**的資料流程緩衝區**中控制專案和編碼物件**的提取**，並將其字元特性設為類型 `Elem` 的元素由類別 `Tr` 決定。|
+|[basic_ofstream](../standard-library/basic-ofstream-class.md)|類別樣板描述的物件可控制如何將元素和編碼物件插入 > \< [basic_filebuf](../standard-library/basic-filebuf-class.md)類別的**資料流程緩衝區中**，並以類型 `Elem` 的元素（其字元特性已決定）由類別 `Tr`。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

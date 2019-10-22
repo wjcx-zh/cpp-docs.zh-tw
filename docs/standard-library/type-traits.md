@@ -7,16 +7,16 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: 703038ed435de36d60fcf97aa5100197602e7130
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a0d7f57d13b4387dd5ba39048adf65d9ec7ca3f5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455040"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684417"
 ---
-# <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
+# <a name="lttype_traitsgt"></a>&lt;type_traits&gt;
 
-定義編譯時間常數的範本, 這些常數會提供其類型引數之屬性的相關資訊, 或產生轉換的類型。
+定義編譯時間常數的範本，這些常數會提供其類型引數之屬性的相關資訊，或產生轉換的類型。
 
 ## <a name="syntax"></a>語法
 
@@ -26,22 +26,22 @@ ms.locfileid: "68455040"
 
 ## <a name="remarks"></a>備註
 
-Type_traits > 中\<的類別和範本是用來在編譯時期支援型別推斷、分類和轉換。 它們也可用來偵測與類型相關的錯誤, 並協助您優化您的一般程式碼。 一元型別特性描述型別的屬性, 二進位型別特性描述型別之間的關聯性, 而轉換特性則會修改類型的屬性。
+@No__t_0type_traits > 中的類別和範本是用來在編譯時期支援型別推斷、分類和轉換。 它們也可用來偵測與類型相關的錯誤，並協助您優化您的一般程式碼。 一元型別特性描述型別的屬性，二進位型別特性描述型別之間的關聯性，而轉換特性則會修改類型的屬性。
 
-Helper 類別`integral_constant`及其`true_type`範本特製化, 並`false_type`形成類型述詞的基類。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞*為 true*時, 它會直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)公開衍生。 當類型述詞*保留 false*時, 它會直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)公開衍生。
+Helper 類別 `integral_constant` 及其樣板特製化 `true_type` 而且 `false_type` 會形成型別述詞的基類。 「類型述詞」是採用一或兩個類型引數的範本。 當類型述詞*為 true*時，它會直接或間接從[true_type](../standard-library/type-traits-typedefs.md#true_type)公開衍生。 當類型述詞*保留 false*時，它會直接或間接從[false_type](../standard-library/type-traits-typedefs.md#false_type)公開衍生。
 
 *類型修飾詞*或*轉換特性*是採用一或多個範本引數的範本，且具有一個成員 `type`，這是已修改類型的同義字。
 
 ### <a name="alias-templates"></a>別名範本
 
-為了簡化型別特性運算式, `typename some_trait<T>::type`會提供的[別名範本](../cpp/aliases-and-typedefs-cpp.md), 其中*some_trait*是範本類別名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
+為了簡化型別特性運算式，會提供 `typename some_trait<T>::type` 的[別名範本](../cpp/aliases-and-typedefs-cpp.md)，其中*some_trait*是類別樣板名稱。 例如，[add_const](../standard-library/add-const-class.md) 具有其類型 `add_const_t` 的別名範本，定義為：
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-這些是為`type`成員提供的別名:
+這些是為 `type` 成員提供的別名：
 
 ||||
 |-|-|-|
@@ -109,14 +109,14 @@ Helper 類別和 typedef
 |[is_empty](../standard-library/is-empty-class.md)|測試類型是否為空的類別。|
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|測試類型是否為多型類別。|
 |[is_abstract](../standard-library/is-abstract-class.md)|測試類型是否有抽象類別。|
-|[is_final](../standard-library/is-final-class.md)|測試類型是否是標示為 `final` 的類別類型。|
+|[is_final](../standard-library/is-final-class.md)|測試類型是否為標示 `final` 的類別類型。|
 |[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|測試類型是否為有正負號整數。|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|測試類型是否為無正負號整數。|
 |[is_constructible](../standard-library/is-constructible-class.md)|測試類型是否可使用指定的引數類型建構。|
 |[is_default_constructible](../standard-library/type-traits-functions.md#is_default_constructible)|測試類型是否有預設建構函式。|
 |[is_copy_constructible](../standard-library/type-traits-functions.md#is_copy_constructible)|測試類型是否有複製建構函式。|
-|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|測試類型是否具有移動建構函式。|
+|[is_move_constructible](../standard-library/type-traits-functions.md#is_move_constructible)|測試類型是否有移動建構函式。|
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|測試第一個類型是否可以指派第二個類型的值。|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|測試類型是否可指派類型的常數參考值。|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|測試類型是否可指派類型的右值參考。|
@@ -144,9 +144,9 @@ Helper 類別和 typedef
 |`has_virtual_destructor`|測試類型是否有虛擬解構函式。|
 |`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫的類型。<br/> 已在 c + + 17 中新增。 |
-| [is_invocable_r](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫的類型, 並將結果轉換成指定的類型。<br/> 已在 c + + 17 中新增。 |
-| [is_nothrow_invocable](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫的類型, 而且已知不會擲回例外狀況。<br/> 已在 c + + 17 中新增。 |
-| [is_nothrow_invocable_r](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫型別, 而且已知不會擲回例外狀況, 而且結果會轉換成指定的型別。<br/> 已在 c + + 17 中新增。 |
+| [is_invocable_r](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫的類型，並將結果轉換成指定的類型。<br/> 已在 c + + 17 中新增。 |
+| [is_nothrow_invocable](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫的類型，而且已知不會擲回例外狀況。<br/> 已在 c + + 17 中新增。 |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | 測試是否可以使用指定的引數類型叫用可呼叫型別，而且已知不會擲回例外狀況，而且結果會轉換成指定的型別。<br/> 已在 c + + 17 中新增。 |
 
 類型屬性的查詢
 
@@ -212,10 +212,10 @@ Helper 類別和 typedef
 |[aligned_union](../standard-library/aligned-union-class.md)|使用非簡單式建構函式或解構函式為對齊的聯集配置未初始化的記憶體。|
 |[common_type](../standard-library/common-type-class.md)|產生參數封裝之所有類型的一般類型。|
 |[conditional](../standard-library/conditional-class.md)|如果條件為 true，則產生第一個指定的類型，反之則產生第二個指定的類型。|
-|[decay](../standard-library/decay-class.md)|產生由值傳遞的類型。 建立非參考、非常數或非暫時性的類型，或建立類型的指標。|
+|[decay](../standard-library/decay-class.md)|由值來傳遞時，會產生類型。 建立非參考、非常數或非暫時性的類型，或建立類型的指標。|
 |[enable_if](../standard-library/enable-if-class.md)|如果條件為 true，則產生指定的類型，反之則不產生類型。|
 |[invoke_result](invoke-result-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>已在 c + + 17 中新增。 |
-|[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>已在 c + + 14 中新增, 在 c + + 17 中被取代 |
+|[result_of](../standard-library/result-of-class.md)|決定採用指定引數類型之可呼叫類型的傳回類型。 <br/>已在 c + + 14 中新增，在 c + + 17 中被取代 |
 |[underlying_type](../standard-library/underlying-type-class.md)|產生列舉類型的基礎整數類型。|
 
 邏輯運算子特性
@@ -226,6 +226,6 @@ Helper 類別和 typedef
 |[分離](../standard-library/disjunction-class.md)||
 |[取](../standard-library/negation-class.md)||
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<functional>](../standard-library/functional.md)

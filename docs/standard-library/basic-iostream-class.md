@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 190c9aa23493cea67bae44be93fd3fdbdecc4447
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460091"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689999"
 ---
-# <a name="basiciostream-class"></a>basic_iostream 類別
+# <a name="basic_iostream-class"></a>basic_iostream 類別
 
 可執行輸入和輸出的資料流類別。
 
@@ -35,11 +35,11 @@ public:
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述透過其基底類別 [basic_ostream](../standard-library/basic-ostream-class.md)< `Elem`, `Tr`> 控制插入的物件，和透過其基底類別 [basic_istream](../standard-library/basic-istream-class.md)< `Elem`, `Tr`> 擷取的物件。 兩個物件共用通用的虛擬基底類別 [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>。 它們也會以 `Elem` 類型的項目 (其字元特性由類別 `Tr` 決定) 管理通用的資料流緩衝區。 此建構函式會藉由 `basic_istream`( **strbuf**) 和 `basic_ostream`( **strbuf**) 初始化其基底類別。
+類別樣板描述一個物件，它會透過其基類[basic_ostream](../standard-library/basic-ostream-class.md) <  `Elem`、`Tr` > 和提取，透過其基類[basic_istream](../standard-library/basic-istream-class.md) <  `Elem`，`Tr` > 來控制插入。 兩個物件共用通用的虛擬基底類別 [basic_ios](../standard-library/basic-ios-class.md)< `Elem`, `Tr`>。 它們也會以 `Elem` 類型的項目 (其字元特性由類別 `Tr` 決定) 管理通用的資料流緩衝區。 此建構函式會藉由 `basic_istream`( **strbuf**) 和 `basic_ostream`( **strbuf**) 初始化其基底類別。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[basic_iostream](#basic_iostream)|建立 `basic_iostream` 物件。|
 
@@ -59,7 +59,7 @@ public:
 
 **標頭︰** \<istream>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="basic_iostream"></a>  basic_iostream::basic_iostream
 
@@ -75,17 +75,17 @@ basic_iostream();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*\
+*strbuf* \
 現有的 `basic_streambuf` 物件。
 
-*再*\
+*right* \
 現有的 `basic_iostream` 物件，用來建構新的 `basic_iostream`。
 
 ### <a name="remarks"></a>備註
 
 第一個建構函式會藉由 `basic_istream(strbuf)` 和 `basic_ostream(strbuf)` 初始化基底物件。
 
-第二個函式會藉由呼叫`move(right)`來初始化基底物件。
+第二個函式會藉由呼叫 `move(right)` 來初始化基底物件。
 
 ## <a name="op_eq"></a>  basic_iostream::operator=
 
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要指派之來源 `basic_iostream` 物件的 `rvalue` 參考。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會呼叫`swap(right)`。
+成員運算子會呼叫 `swap(right)`。
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,14 +114,14 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要交換的 `basic_iostream` 物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式`swap(right)`會呼叫。
+此成員函式會呼叫 `swap(right)`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\

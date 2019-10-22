@@ -137,16 +137,16 @@ helpviewer_keywords:
 - std::unordered_multimap::size
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
-ms.openlocfilehash: d278da5538e100b4b97320c8e1e4c9c4ad6c34ff
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f19e6c1a4befa3e1b5ddd46e607b8cf894f29ba6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454741"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684115"
 ---
-# <a name="unorderedmultimap-class"></a>unordered_multimap 類別
+# <a name="unordered_multimap-class"></a>unordered_multimap 類別
 
-此樣板類別描述控制不同長度的 `std::pair<const Key, Ty>` 類型項目序列的物件。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目儲存兩個物件：排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
+類別樣板描述的物件可控制 `std::pair<const Key, Ty>` 類型之元素的變動長度序列。 序列由雜湊函式弱式排序，將序列分割為子序列的已排序集合，稱為 Bucket。 在每個 Bucket 中，比較函式判斷是否有任何一對項目具有對等順序。 每個項目儲存兩個物件：排序鍵和值。 序列表示允許以一些作業查閱、插入和移除任意項目，這些作業可以獨立於序列中的項目數目 (常數時間)，至少當所有 Bucket 長度大約相等時。 在最壞的情況下，當所有項目都在一個 Bucket 時，作業數目與序列中的項目數目成正比 (線性時間)。 此外，插入項目不會使任何迭代器無效，移除項目則僅會使指向被移除項目的迭代器無效。
 
 ## <a name="syntax"></a>語法
 
@@ -161,7 +161,7 @@ class unordered_multimap;
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*Key*|索引鍵類型。|
 |*Ty*|對應的類型。|
@@ -169,9 +169,9 @@ class unordered_multimap;
 |*Pred*|相等比較函式物件類型。|
 |*配置*|配置器類別。|
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
-|類型定義|說明|
+|類型定義|描述|
 |-|-|
 |[allocator_type](#allocator_type)|管理儲存體的配置器類型。|
 |[const_iterator](#const_iterator)|用於受控制序列的常數迭代器類型。|
@@ -188,18 +188,18 @@ class unordered_multimap;
 |[pointer](#pointer)|項目的指標類型。|
 |[reference](#reference)|項目的參考類型。|
 |[size_type](#size_type)|兩個項目之間不帶正負號距離的類型。|
-|[value_type](#value_type)|元素的類型。|
+|[value_type](#value_type)|元素類型。|
 
 |成員函式|描述|
 |-|-|
 |[begin](#begin)|指定受控制序列的開頭。|
-|[bucket](#bucket)|取得索引鍵值的值區數目。|
+|[位址](#bucket)|取得索引鍵值的值區數目。|
 |[bucket_count](#bucket_count)|取得 Bucket 的數目。|
 |[bucket_size](#bucket_size)|取得 Bucket 大小。|
 |[cbegin](#cbegin)|指定受控制序列的開頭。|
 |[cend](#cend)|指定受控制序列的結尾。|
 |[clear](#clear)|移除所有項目。|
-|[計數](#count)|尋找符合指定索引鍵的項目數目。|
+|[count](#count)|尋找符合指定索引鍵的項目數目。|
 |[emplace](#emplace)|加入就地建構的項目。|
 |[emplace_hint](#emplace_hint)|加入就地建構的項目，含提示。|
 |[empty](#empty)|測試項目是否不存在。|
@@ -226,19 +226,19 @@ class unordered_multimap;
 
 ## <a name="remarks"></a>備註
 
-物件會排列它所控制之序列的順序，方式是呼叫兩個預存物件，一個是 [unordered_multimap::key_equal](#key_equal) 類型的比較函式物件，一個是 [unordered_multimap::hasher](#hasher) 類型的雜湊函式物件。 您可以透過呼叫成員函式 [unordered_multimap::key_eq](#key_eq)`()` 存取第一個預存物件；透過呼叫成員函式 [unordered_multimap::hash_function](#hash)`()` 存取第二個預存物件。 具體來說，只有在兩個引數值具有對等順序，對於 `X` 類型的所有值 `Y` 和 `Key`，呼叫 `key_eq()(X, Y)` 才會傳回 true，呼叫 `hash_function()(keyval)` 會產生 `size_t` 類型值的分佈。 不同於樣板類別 [unordered_map 類別](../standard-library/unordered-map-class.md)，樣板類別 `unordered_multimap` 的物件並不保證 `key_eq()(X, Y)` 針對受控制序列的任何兩個元素永遠是 false。 (索引鍵不需要是唯一的)。
+物件會排列它所控制之序列的順序，方式是呼叫兩個預存物件，一個是 [unordered_multimap::key_equal](#key_equal) 類型的比較函式物件，一個是 [unordered_multimap::hasher](#hasher) 類型的雜湊函式物件。 您可以透過呼叫成員函式 [unordered_multimap::key_eq](#key_eq)`()` 存取第一個預存物件；透過呼叫成員函式 [unordered_multimap::hash_function](#hash)`()` 存取第二個預存物件。 具體來說，只有在兩個引數值具有對等順序，對於 `X` 類型的所有值 `Y` 和 `Key`，呼叫 `key_eq()(X, Y)` 才會傳回 true，呼叫 `hash_function()(keyval)` 會產生 `size_t` 類型值的分佈。 不同于類別樣板[Unordered_map 類別](../standard-library/unordered-map-class.md)，`unordered_multimap` 類型的物件不會確保針對受控制序列的任何兩個元素，`key_eq()(X, Y)` 一律為 false。 (索引鍵不需要是唯一的)。
 
 物件也會儲存最大載入因數，指定每個 Bucket 所需的項目平均數目上限。 如果插入元素會使 [unordered_multimap::load_factor](#load_factor)`()` 超出最大的載入因數，容器會增加值區的數目並視需要重建雜湊資料表。
 
 受控制序列中實際的項目順序取決於雜湊函式、比較函式、插入順序、最大載入因數和 Bucket 目前數目。 一般來說，您無法預測受控制序列中的項目順序。 不過，您永遠可以確保，有對等順序的任何項目子集在受控制序列中為相鄰。
 
-物件會透過 [unordered_multimap::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須具有和 `allocator` 樣板類別物件相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
+物件會透過 [unordered_multimap::allocator_type](#allocator_type) 類型的預存配置器物件，配置並釋放它所控制之序列的儲存體。 這種配置器物件必須與 `allocator` 類型的物件具有相同的外部介面。 請注意，如果已指定容器物件，儲存的配置器物件不會複製。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** \<unordered_map>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="allocator_type"></a>  unordered_multimap::allocator_type
 
@@ -250,7 +250,7 @@ typedef Alloc allocator_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Alloc`的同義字。
+這個類型與樣板參數 `Alloc`同義。
 
 ### <a name="example"></a>範例
 
@@ -296,11 +296,11 @@ const_local_iterator begin(size_type nbucket) const;
 
 |參數|描述|
 |-|-|
-|*nbucket*|Bucket 編號。|
+|*nbucket*|值區數目。|
 
 ### <a name="remarks"></a>備註
 
-最前面兩個成員函式傳回的正向迭代器，指向序列的第一個項目 (或在空序列結尾以外的位置)。 最後兩個成員函式會傳回正向反覆運算器, 指向值區*nbucket*的第一個元素 (或空值區結尾以外的位置)。
+最前面兩個成員函式傳回的正向迭代器，指向序列的第一個項目 (或在空序列結尾以外的位置)。 最後兩個成員函式會傳回正向反覆運算器，指向值區*nbucket*的第一個元素（或空值區結尾以外的位置）。
 
 ### <a name="example"></a>範例
 
@@ -356,7 +356,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*\
+*keyval* \
 要對應的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -498,8 +498,8 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>參數
 
-*nbucket*\
-Bucket 編號。
+*nbucket* \
+值區數目。
 
 ### <a name="remarks"></a>備註
 
@@ -546,7 +546,7 @@ bucket_size(7) == 1
 
 ## <a name="cbegin"></a>  unordered_multimap::cbegin
 
-傳回**常數**反覆運算器, 定址範圍中的第一個元素。
+傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -554,13 +554,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**正向存取反覆運算器, 指向範圍的第一個元素, 或指向空白範圍結尾 (空白範圍`cbegin() == cend()`) 之外的位置。
+**常數**正向存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -572,7 +572,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  unordered_multimap::cend
 
-傳回**常數**反覆運算器, 定址範圍中最後一個元素之後的位置。
+傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -586,7 +586,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`end()`和`cend()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -858,7 +858,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*\
+*keyval* \
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -964,7 +964,7 @@ begin()-end() == -3
 
 ## <a name="emplace"></a>  unordered_multimap::emplace
 
-將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。
+將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。
 
 ```cpp
 template <class... Args>
@@ -983,7 +983,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="remarks"></a>備註
 
-此函式不會使容器元素的參考無效，但是可能會使容器的所有迭代器無效。
+此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。
 
 元素的 [value_type](../standard-library/map-class.md#value_type) 是一個配對，因此元素的值將會是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
@@ -993,7 +993,7 @@ iterator emplace(Args&&... args);
 
 ## <a name="emplace_hint"></a>  unordered_multimap::emplace_hint
 
-將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。
+將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。
 
 ```cpp
 template <class... Args>
@@ -1004,10 +1004,10 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*引數*|轉送以建構插入 unordered 之元素的引數。|
-|*where*|有關要從何處開始搜尋正確插入點的提示。|
+|*where*|一個有關要從哪裡開始搜尋正確插入點的提示。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -1108,7 +1108,7 @@ const_local_iterator end(size_type nbucket) const;
 
 |參數|描述|
 |-|-|
-|*nbucket*|Bucket 編號。|
+|*nbucket*|值區數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -1174,12 +1174,12 @@ std::pair<const_iterator, const_iterator>
 
 ### <a name="parameters"></a>參數
 
-*keyval*\
+*keyval* \
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回一組`X`反覆運算器`[X.first, X.second)` , 使其只分隔受控制序列中具有*keyval*之對等順序的元素。 如果沒有這類項目存在，則兩個迭代器皆為 `end()`。
+此成員函式會傳回一組反覆運算器，`X` 因此 `[X.first, X.second)` 只分隔受控制序列中具有*keyval*之對等順序的元素。 如果沒有這類項目存在，則兩個迭代器皆為 `end()`。
 
 ### <a name="example"></a>範例
 
@@ -1249,21 +1249,21 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*希望*\
+*Where* \
 要移除之項目的位置。
 
-*頭*\
+*第一個*\
 要移除之第一個項目的位置。
 
-*次*\
+*上次*\
 緊接在要移除之最後一個項目後面的位置。
 
-*擊鍵*\
+*金鑰*\
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-在前兩個成員函式中，會傳回雙向迭代器，其中指定任何移除的元素之外剩餘的第一個元素，或者如果沒有此類元素，則傳回 map 結尾的元素。
+針對前兩個成員函式，會傳回雙向迭代器，其中指定任何移除之元素後剩餘的第一個元素，或如果沒有這類元素，則傳回 map 結尾的元素。
 
 在第三個成員函式中，傳回已從 unordered_multimap 移除的元素數。
 
@@ -1281,7 +1281,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>參數
 
-*keyval*\
+*keyval* \
 要搜尋的索引鍵值。
 
 ### <a name="remarks"></a>備註
@@ -1417,7 +1417,7 @@ typedef Hash hasher;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Hash`的同義字。
+這個類型與樣板參數 `Hash`同義。
 
 ### <a name="example"></a>範例
 
@@ -1485,11 +1485,11 @@ IList);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*初始值*|要插入至 unordered_multimap 的元素值。|
 |*Where*|要開始搜尋正確的插入點的地方。|
-|*ValTy*|範本參數, 指定 unordered_multimap 可用於建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型, 並將*Val*當做引數完美轉送。|
+|*ValTy*|範本參數，指定 unordered_multimap 可用於建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型，並將*Val*當做引數完美轉送。|
 |*頭*|要複製之第一個元素的位置。|
 |*次*|要複製之最一個元素後方的位置。|
 |*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
@@ -1505,11 +1505,11 @@ IList);
 
 此函式不會使指標或參考無效，但是可能會使容器的所有迭代器無效。
 
-在只插入一個元素的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
+在只插入一個項目的期間，若擲出例外狀況，但沒有發生在容器的雜湊函式中，則不會修改容器的狀態。 若雜湊函式中擲回例外狀況，則結果為未定義。 在插入多個元素期間，若擲出例外狀況，則容器會處於未指定但有效的狀態。
 
 容器的 [value_type](../standard-library/map-class.md#value_type) 是屬於容器的 typedef，而就 map 而言，`map<K, V>::value_type` 是 `pair<const K, V>`。 元素的值是已排序的配對，其中第一個元件等於索引鍵值，而第二個元件等於元素的資料值。
 
-範圍成員函式 (5) 會將專案值的序列插入對應至每個專案的 unordered_multimap, 而該專案是由範圍`[First, Last)`中的反覆運算器所定址, 因此,*最後*不會插入。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
+範圍成員函式（5）會將專案值的序列插入 unordered_multimap 中，而這些專案會對應至 `[First, Last)` 範圍中的反覆運算器所定址的每個元素。因此，不會插入*最後一個*。 容器成員函式 `end()` 是指容器中最後一個元素後方的位置；例如，陳述式 `m.insert(v.begin(), v.end());` 會將 `v` 的所有元素插入至 `m`。
 
 初始設定式清單成員函式 (6) 使用 [initializer_list](../standard-library/initializer-list.md) 將元素複製到 unordered_multimap。
 
@@ -1527,7 +1527,7 @@ typedef T0 iterator;
 
 ### <a name="remarks"></a>備註
 
-此類型說明可作為受控制序列之正向迭代器的物件。 在此將其說明為實作定義類型 `T0`的同義字。
+此類型說明可作為受控制序列之正向迭代器的物件。 在此將其描述為已定義實作之 `T0`類型的同義字。
 
 ### <a name="example"></a>範例
 
@@ -1610,7 +1610,7 @@ typedef Pred key_equal;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Pred`的同義字。
+這個類型與樣板參數 `Pred`同義。
 
 ### <a name="example"></a>範例
 
@@ -1650,7 +1650,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Key`的同義字。
+這個類型與樣板參數 `Key`同義。
 
 ### <a name="example"></a>範例
 
@@ -1821,7 +1821,7 @@ typedef Ty mapped_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Ty`的同義字。
+這個類型與樣板參數 `Ty`同義。
 
 ### <a name="example"></a>範例
 
@@ -1964,7 +1964,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>參數
 
-*在內*\
+*因素*\
 新的最大載入因數。
 
 ### <a name="remarks"></a>備註
@@ -2055,7 +2055,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回物件可以控制之最長序列的長度。
+成員函式會傳回物件可以控制的最長序列的長度。
 
 ### <a name="example"></a>範例
 
@@ -2098,7 +2098,7 @@ unordered_multimap& operator=(unordered_multimap&& right);
 
 ### <a name="remarks"></a>備註
 
-清除 unordered_multimap 中的任何現有專案之後, `operator=`會將*右邊*的內容複寫或移至 unordered_multimap。
+清除 unordered_multimap 中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移動到 unordered_multimap 中。
 
 ### <a name="example"></a>範例
 
@@ -2239,12 +2239,12 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>參數
 
-*nbuckets*\
+*nbuckets* \
 要求的值區數目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將值區數目改變為至少*nbuckets* , 並視需要重建雜湊資料表。
+此成員函式會將值區數目改變為至少*nbuckets* ，並視需要重建雜湊資料表。
 
 ### <a name="example"></a>範例
 
@@ -2420,12 +2420,12 @@ void swap(unordered_multimap& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要交換的容器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會在和*right*之間`*this`交換受控制的序列。 如果是 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。
+成員函式會在 `*this` 和*右方*之間交換受控制的序列。 如果是 [unordered_multimap::get_allocator](#get_allocator)`() == right.get_allocator()`，它會以常數時間來執行，只會在結果是複製類型 `Tr` 預存特性物件時擲回例外狀況，並且不會使指定此兩個受控制序列中元素的任何參考、指標或迭代器失效。 否則，它會執行多個元素指派，和與兩個受控制序列中元素數目成正比的建構函式呼叫。
 
 ### <a name="example"></a>範例
 
@@ -2536,7 +2536,7 @@ unordered_multimap(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*InputIterator*|迭代器類型。|
 |*Al*|要儲存的配置器物件。|
@@ -2550,15 +2550,15 @@ unordered_multimap(
 
 第一個函式會指定由*右*所控制的序列複本。 第二個建構函式會指定空白的受控制序列。 第三個建構函式。 藉由*向右*移動來指定序列的複本。 第四、第五、第六、第七和第八個建構函式為成員使用 initializer_list。 第九個建構函式會插入項目值序列 `[First, Last)`。
 
-所有建構函式也會初始化數個儲存值。 若為複製的函式, 則會從*右方*取得值。 否則就是：
+所有建構函式也會初始化數個儲存值。 若為複製的函式，則會從*右方*取得值。 否則就是：
 
-值區的最小數目是引數*Bucket_count*(如果有的話)。否則, 它會在此處描述為實值`N0`的預設值。
+值區的最小數目是引數*Bucket_count*（如果有的話）。否則，它是此處所述的預設值，做為 `N0` 的執行定義值。
 
-雜湊函式物件是引數*雜湊*(如果有的話)。否則為`Hash()`。
+雜湊函式物件是引數*雜湊*（如果有的話）。否則會 `Hash()`。
 
-比較函式物件是引數*Comp*(如果有的話)。否則為`Pred()`。
+比較函式物件是引數*Comp*（如果有的話）。否則會 `Pred()`。
 
-配置器物件是引數*Al*(如果有的話)。否則, 它會`Alloc()`是。
+配置器物件是引數*Al*（如果有的話）。否則，它會 `Alloc()`。
 
 ### <a name="example"></a>範例
 
@@ -2685,7 +2685,7 @@ int main()
 
 ## <a name="value_type"></a>  unordered_multimap::value_type
 
-元素的類型。
+元素類型。
 
 ```cpp
 typedef std::pair<const Key, Ty> value_type;
@@ -2738,7 +2738,7 @@ int main()
 [d, 4] [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [容器](../cpp/containers-modern-cpp.md)\

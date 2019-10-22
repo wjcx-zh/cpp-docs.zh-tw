@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b839126b7b5541c3a9dd033fcbbc8221bde7c22
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448136"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689464"
 ---
-# <a name="istreambufiterator-class"></a>istreambuf_iterator 類別
+# <a name="istreambuf_iterator-class"></a>istreambuf_iterator 類別
 
-範本類別 istreambuf_iterator 描述一個輸入迭代器物件，此物件會從輸入資料流緩衝區擷取字元元素，其中會透過它所儲存的物件 (屬於 `basic_streambuf`\< **CharType**, **Traits** 的 pointer 類型) 來存取該緩衝區。
+[類別樣板] istreambuf_iterator 描述輸入反覆運算器物件，它會從輸入資料流程緩衝區（其所儲存的物件）中抽取字元元素，而這些專案的類型指標為 `basic_streambuf` \< **CharType**，**特性**>.
 
 ## <a name="syntax"></a>語法
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 類型，表示 istreambuf_iterator 的字元類型。
 
-*共同*\
+*特性*\
 類型，表示 istreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>* 。
 
 ## <a name="remarks"></a>備註
@@ -57,7 +57,7 @@ istreambuf_iterator 類別必須符合輸入迭代器的需求。
 |-|-|
 |[istreambuf_iterator](#istreambuf_iterator)|建構 `istreambuf_iterator`，初始化以從輸入資料流讀取字元。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -75,7 +75,7 @@ istreambuf_iterator 類別必須符合輸入迭代器的需求。
 
 ### <a name="operators"></a>運算子
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[operator*](#op_star)|取值運算子傳回資料流的下一個字元。|
 |[operator++](#op_add_add)|從輸入資料流傳回下一個字元，或在遞增之前複製物件並傳回複本。|
@@ -85,7 +85,7 @@ istreambuf_iterator 類別必須符合輸入迭代器的需求。
 
 **標頭：** \<iterator>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  istreambuf_iterator::char_type
 
@@ -97,7 +97,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 *CharType* 同義。
+此類型與範本參數 *CharType* 同義。
 
 ### <a name="example"></a>範例
 
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要檢查其相等性的迭代器。
 
 ### <a name="return-value"></a>傳回值
@@ -151,7 +151,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>備註
 
-範圍是由`istreambuf_iterator`定義為目前位置和資料流程結尾反覆運算器, 但由於所有非資料流程反覆運算器都是`equal`成員函式的對應項, 因此無法使用`istreambuf_iterator`來定義任何子範圍。 `==` 和 `!=` 運算子的語意相同。
+範圍是由 `istreambuf_iterator` 定義為目前的位置和資料流程結尾的反覆運算器，但由於所有非結束資料流程反覆運算器在 `equal` 成員函式下都是相等的，因此您無法使用 `istreambuf_iterator`s 來定義任何子範圍。 `==` 和 `!=` 運算子的語意相同。
 
 ### <a name="example"></a>範例
 
@@ -191,7 +191,7 @@ typedef typename traits_type::int_type int_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與 `Traits::int_type`同義。
+此類型是 `Traits::int_type`的同義字。
 
 ### <a name="example"></a>範例
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*\
+*strbuf* \
 要附加 `istreambuf_iterator` 的輸入資料流緩衝區。
 
-*_Istr*\
+*_Istr* \
 要附加 `istreambuf_iterator` 的輸入資料流。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會使用*strbuf*初始化輸入資料流程緩衝區指標。 第二個函式會使用 *_Istr*來初始化輸入資料流程緩衝區指標。 `rdbuf`, 最後會嘗試解壓縮並儲存類型`CharType`的物件。
+第一個函式會使用*strbuf*初始化輸入資料流程緩衝區指標。 第二個函式會使用 *_Istr*來初始化輸入資料流程緩衝區指標。 `rdbuf`，最後會嘗試將類型的物件解壓縮並儲存 `CharType`。
 
 ### <a name="example"></a>範例
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>備註
 
-第一個運算子最後會嘗試從相關聯的輸入資料流程解壓縮`CharType`並儲存類型的物件。 第二個運算子會複製物件、遞增物件，然後傳回複本。
+第一個運算子最後會嘗試從相關聯的輸入資料流程中，將 `CharType` 類型的物件解壓縮並儲存。 第二個運算子會複製物件、遞增物件，然後傳回複本。
 
 ### <a name="example"></a>範例
 
@@ -439,7 +439,7 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [iterator 結構](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\

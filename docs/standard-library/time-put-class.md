@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c0ae501693a8abffc72a23be9c427f31bad65b6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459949"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685425"
 ---
 # <a name="time_put-class"></a>time_put 類別
 
-此樣板類別描述可以做為地區設定 facet 的物件，以控制時間值轉換為類型 `CharType` 的序列。
+類別樣板描述可以做為地區設定 facet 的物件，以控制時間值轉換為 `CharType` 類型的序列。
 
 ## <a name="syntax"></a>語法
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 用於程式內部字元編碼的類型。
 
-*OutputIterator*\
+*OutputIterator* \
 時間 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -47,11 +47,11 @@ class time_put : public locale::facet;
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[time_put](#time_put)|`time_put` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -69,7 +69,7 @@ class time_put : public locale::facet;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  time_put::char_type
 
@@ -81,7 +81,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `CharType`的同義字。
+這個類型與樣板參數 `CharType`同義。
 
 ## <a name="do_put"></a>  time_put::do_put
 
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*下一個*\
+*下一步*\
 輸出迭代器，其中的字元序列代表插入的日期與時間。
 
-*_Iosbase*\
+*_Iosbase* \
 未使用。
 
-*_Pt*\
+*_Pt* \
 輸出的日期和時間資訊。
 
-*_Fmt*\
+*_Fmt* \
 輸出的格式。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*\
+*_Mod* \
 格式修飾詞。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>傳回值
@@ -119,13 +119,13 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>備註
 
-虛擬受保護的成員函`next`式會從類型`tm`的物件\* `_Pt`中儲存的時間值開始產生順序元素。 此函式會傳回迭代器，此迭代器指定在所產生的輸出後下一個要插入元素的位置。
+虛擬的受保護成員函式會產生從 `next` 開始的順序元素，從 \* `_Pt` 的物件中儲存的時間值，類型 `tm`。 此函式會傳回迭代器，此迭代器指定在所產生的輸出後下一個要插入元素的位置。
 
-輸出是由所使用`strftime`的相同規則所產生，以及 *_Pt*的最後一個引數，以便將一連串的**char**元素產生到陣列中。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案，方法是使用簡單的一對一對應。 如果 *_Mod*等於零，有效的格式為 "% F"，其中 F 會由 *_Fmt*取代。 否則，有效的格式為 "% MF"，其中 M 會由 *_Mod*所取代。
+輸出是由 `strftime` 所使用的相同規則所產生，並具有 *_Pt*的最後一個引數，以便將一連串的**char**元素產生到陣列中。 每個這類**char**元素都假設為對應至類型的對等元素，`CharType` 由一個簡單的一對一對應所組成。 如果 *_Mod*等於零，有效的格式為 "% F"，其中 F 會由 *_Fmt*取代。 否則，有效的格式為 "% MF"，其中 M 會由 *_Mod*所取代。
 
 ### <a name="example"></a>範例
 
-請參閱 [put](#put) 的範例，其會呼叫 `do_put`。
+請參閱 [put](#put) 的範例，它會呼叫 `do_put`。
 
 ## <a name="iter_type"></a>  time_put::iter_type
 
@@ -137,7 +137,7 @@ typedef OutputIterator iter_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `OutputIterator`的同義字。
+這個類型與樣板參數 `OutputIterator`同義。
 
 ## <a name="put"></a>  time_put::put
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>參數
 
-*下一個*\
+*下一步*\
 輸出迭代器，其中的字元序列代表插入的日期與時間。
 
-*_Iosbase*\
+*_Iosbase* \
 未使用。
 
-*_Fill*\
-用於間距的類型`CharType`字元。
+*_Fill* \
+@No__t_0 用於間距的類型字元。
 
-*_Pt*\
+*_Pt* \
 輸出的日期和時間資訊。
 
-*_Fmt*\
+*_Fmt* \
 輸出的格式。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*_Mod*\
+*_Mod* \
 格式修飾詞。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*頭*\
+*第一個*\
 輸出的格化式字串開頭。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
-*次*\
+*上次*\
 輸出的格化式字串結尾。 如需有效值，請參閱 [strftime、wcsftime、_strftime_l、_wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)。
 
 ### <a name="return-value"></a>傳回值
@@ -191,7 +191,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會傳回`next`[do_put](#do_put) `_Iosbase`（、 `_Pt`、 `_Fmt` `_Fill`、 `_Mod`、、）。 第二個成員函式會將 \* `next` ++ 複製到間隔 [ `first`, `last`) 中的任何元素，而不是百分比 (%)。 對於在間隔 [ `first`, `last`) 後面接著一個字元 *C* 的百分比，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) 並跳過 *C*。然而，如果 *C* 是來自集合 EOQ# 的限定詞字元，在間隔 [ `first`, `last`) 後面接著一個字元 `C2`，函式會改為評估 `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) 並跳過 `C2`。
+第一個成員函式會傳回[do_put](#do_put)（`next`、`_Iosbase`、`_Fill`、`_Pt`、`_Fmt`、`_Mod`）。 第二個成員函式會將 \* `next` ++ 複製到間隔 [ `first`, `last`) 中的任何元素，而不是百分比 (%)。 若為百分比，後面接著間隔 [`first`，`last`）中的字元*C* ，函數會改為評估 `next`  =  `do_put` （`next`、`_Iosbase`、`_Fill`、`_Pt`、 *C*、0）並略過*C*。不過，如果*C*是來自 set EOQ # 的限定詞字元，後面接著間隔 [4，5）中的字元 3，函式會改為評估 6 7 8 （9，0、1、2、3、 *C*）和略過 5。
 
 ### <a name="example"></a>範例
 
@@ -247,22 +247,22 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
 *_Refs*參數的可能值和其重要性如下：
 
-- 0物件的存留期是由包含它的地區設定所管理。
+- 0：物件的存留期由包含該物件的地區設定來管理。
 
-- 1:物件的存留期必須以手動方式管理。
+- 1：物件的存留期必須以手動方式管理。
 
-- \>1：未定義這些值。
+- \> 1：未定義這些值。
 
 此函式會使用[locale：： facet](../standard-library/locale-class.md#facet_class)（ *_Refs*）初始化其基底物件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [time_base 類別](../standard-library/time-base-class.md)\

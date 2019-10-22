@@ -38,14 +38,14 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: cbc1a9eb9432a454ca5dc04205b9d0c7b631a430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456438"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690097"
 ---
-# <a name="allocatorbase-class"></a>allocator_base 類別
+# <a name="allocator_base-class"></a>allocator_base 類別
 
 定義從同步處理篩選條件建立使用者定義的配置器時所需的基底類別和一般功能。
 
@@ -58,9 +58,9 @@ class allocator_base
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*型別*|配置器所配置的元素類型。|
+|*Type*|配置器所配置的元素類型。|
 |*保持*|配置器的同步處理原則，即 [sync_none 類別](../standard-library/sync-none-class.md)、[sync_per_container 類別](../standard-library/sync-per-container-class.md)、[sync_per_thread 類別](../standard-library/sync-per-thread-class.md)或 [sync_shared 類別](../standard-library/sync-shared-class.md)。|
 
 ### <a name="constructors"></a>建構函式
@@ -69,21 +69,21 @@ class allocator_base
 |-|-|
 |[allocator_base](#allocator_base)|建構類型 `allocator_base` 的物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[const_pointer](#const_pointer)|一種類型，可提供配置器管理之物件類型的常數指標。|
 |[const_reference](#const_reference)|一種類型，可提供配置器管理之物件類型的常數參考。|
 |[difference_type](#difference_type)|帶正負號整數類型，可以表示配置器所管理的物件類型的指標值之間的差異。|
 |[pointer](#pointer)|一種類型，可提供配置器管理之物件類型的指標。|
 |[reference](#reference)|一種類型，可提供配置器管理之物件類型的參考。|
-|[size_type](#size_type)|不帶正負號的整數類型，可以代表樣板類別 `allocator_base` 的物件可配置的任何序列的長度。|
+|[size_type](#size_type)|不帶正負號的整數類型，可以表示 `allocator_base` 類型之物件可以配置的任何序列的長度。|
 |[value_type](#value_type)|配置器所管理的類型。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[_Charalloc](#charalloc)|為**char**類型的陣列配置儲存體。|
 |[_Chardealloc](#chardealloc)|釋放包含**char**類型元素之陣列的儲存體。|
@@ -110,9 +110,9 @@ char *_Charalloc(size_type count);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*計數*|所配置陣列中的元素數。|
+|*count*|陣列中要配置的項目數。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -135,7 +135,7 @@ void _Chardealloc(void* ptr, size_type count);
 |參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
-|*計數*|要從儲存空間解除配置的物件數目。|
+|*count*|要從儲存空間解除配置的物件數目。|
 
 ### <a name="remarks"></a>備註
 
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>參數
 
-*初始值*\
+*val* \
 搜尋其位址之物件的 const 或 nonconst 值。
 
 ### <a name="return-value"></a>傳回值
@@ -177,9 +177,9 @@ pointer allocate(size_type _Nx);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
-|*_Nx*|所配置陣列中的元素數。|
+|*_Nx*|陣列中要配置的項目數。|
 |*_Hint*|這個參數已忽略。|
 
 ### <a name="return-value"></a>傳回值
@@ -203,7 +203,7 @@ allocator_base(const allocator_base<Other, Sync>& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*right*|要複製的配置器物件。|
 
@@ -237,7 +237,7 @@ void construct(pointer ptr, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*ptr*|要建構物件之位置的指標。|
 |*val*|用來初始化所建構物件的值。|
@@ -256,7 +256,7 @@ void deallocate(pointer ptr, size_type _Nx);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*ptr*|要從儲存體解除配置之第一個物件的指標。|
 |*_Nx*|要從儲存空間解除配置的物件數目。|
@@ -275,7 +275,7 @@ void destroy(pointer ptr);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*ptr*|指定要終結之物件位址的指標。|
 
@@ -325,7 +325,7 @@ typedef Type& reference;
 
 ## <a name="size_type"></a> allocator_base::size_type
 
-不帶正負號的整數類型，可以代表樣板類別 `allocator_base` 的物件可配置的任何序列的長度。
+不帶正負號的整數類型，可以表示 `allocator_base` 類型之物件可以配置的任何序列的長度。
 
 ```cpp
 typedef std::size_t size_type;
@@ -339,6 +339,6 @@ typedef std::size_t size_type;
 typedef Type value_type;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<allocators>](../standard-library/allocators-header.md)

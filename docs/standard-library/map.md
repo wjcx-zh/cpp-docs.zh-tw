@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 3c3c7fc34e75772c10ba39ecc51f6d2ac59d7ad5
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2e861d2250585fbcdf3e1ef63d92f18185fc7f1c
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456297"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687782"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
-定義容器樣板類別對應和多重對應，以及其支援的樣板。
+定義容器類別樣板對應和 multimap，以及其支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** \<map>
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> Map > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0map > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -53,7 +53,7 @@ ms.locfileid: "68456297"
 |[map 類別](../standard-library/map-class.md)|用於儲存及擷取集合中的資料，集合中的每個項目都有用來自動排序資料的唯一索引鍵。|
 |[multimap 類別](../standard-library/multimap-class.md)|用於儲存及擷取集合中的資料，集合中的每個項目都有用來自動排序資料的索引鍵，而且這些索引鍵不需要具有唯一的值。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

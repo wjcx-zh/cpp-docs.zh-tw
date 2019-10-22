@@ -77,12 +77,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 4d33240edc326b03b0ef184ac14e233a90acd5f4
-ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
+ms.openlocfilehash: 2aceb96fcda49df8a1fd40a1bd8011170dccd8ef
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68821323"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687719"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 函式
 
@@ -111,13 +111,13 @@ const T* addressof(
 
 ### <a name="return-value"></a>傳回值
 
-*值*所參考之物件或函數的實際位址, 即使`operator&()`有多載存在。
+*值*所參考之物件或函式的實際位址，即使有多載的 `operator&()` 存在也一樣。
 
 ### <a name="remarks"></a>備註
 
 ## <a name="align"></a>對齊
 
-根據指定的對齊規格, 將指定大小的儲存空間納入給定儲存體的第一個可能位址。
+根據指定的對齊規格，將指定大小的儲存空間納入給定儲存體的第一個可能位址。
 
 ```cpp
 void* align(
@@ -133,24 +133,24 @@ void* align(
 *對齊*\
 嘗試的對齊界限。
 
-*容量*\
+*大小*\
 對齊儲存體的大小 (位元組)。
 
-*指標*\
-要使用的可用連續儲存集區的開始位址。 這個參數也是輸出參數, 如果對齊成功, 則設定為包含新的起始位址。 如果`align()`不成功, 則不會修改這個參數。
+*ptr* \
+要使用的可用連續儲存集區的開始位址。 這個參數也是輸出參數，如果對齊成功，則設定為包含新的起始位址。 如果 `align()` 不成功，則不會修改此參數。
 
-*space*\
+*空間*\
 `align()` 可用來建立對齊儲存體的總空間。 這個參數也是輸出參數，在對齊儲存體和任何關聯的額外負荷減去之後，會包含儲存緩衝區中剩下的調整空間。
 
-如果`align()`不成功, 則不會修改這個參數。
+如果 `align()` 不成功，則不會修改此參數。
 
 ### <a name="return-value"></a>傳回值
 
-如果要求的對齊緩衝區無法放入可用空間中, 則為 null 指標;否則為*ptr*的新值。
+如果要求的對齊緩衝區無法放入可用空間中，則為 null 指標;否則為*ptr*的新值。
 
 ### <a name="remarks"></a>備註
 
-修改過*的 ptr*和*空間*參數可讓您`align()`在相同的緩衝區上重複呼叫, 可能會有不同的*對齊*和*大小*值。 下列程式碼片段示範`align()` 的一個用法。
+修改過的*ptr*和*空間*參數可讓您在相同的緩衝區上重複呼叫 `align()`，可能會有不同的*對齊*和*大小*值。 下列程式碼片段示範`align()` 的一個用法。
 
 ```cpp
 #include <type_traits> // std::alignment_of()
@@ -177,7 +177,7 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 
 ## <a name="allocate_shared"></a>allocate_shared
 
-使用指定的配置器, 針對指定的類型, 建立已配置和所構造物件的[shared_ptr](shared-ptr-class.md) 。 傳回 `shared_ptr`。
+使用指定的配置器，針對指定的類型，建立已配置和所構造物件的[shared_ptr](shared-ptr-class.md) 。 傳回 `shared_ptr`。
 
 ```cpp
 template <class T, class Allocator, class... Args>
@@ -188,15 +188,15 @@ shared_ptr<T> allocate_shared(
 
 ### <a name="parameters"></a>參數
 
-*配置*\
+配置 \
 用來建立物件的配置器。
 
-*引數*\
+*args* \
 成為物件的零個或多個引數。
 
 ### <a name="remarks"></a>備註
 
-函式會建立物件`shared_ptr<T>`, `T(args...)`這是由配置所配置和建立的指標。
+函式會建立物件 `shared_ptr<T>`，`T(args...)` 由*配置所配置*和建立的指標。
 
 ## <a name="atomic_compare_exchange_strong"></a>atomic_compare_exchange_strong
 
@@ -321,18 +321,18 @@ shared_ptr<T> const_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 傳回之共用指標所控制的類型。
 
-*另一方面*\
+*其他*\
 引數共用指標所控制的類型。
 
-*行距*\
+*sp* \
 引數共用指標。
 
 ### <a name="remarks"></a>備註
 
-如果`shared_ptr<T>` `shared_ptr` 傳回`const_cast<T*>(sp.get())` null 指標, 則範本函式會傳回空的物件, 否則會傳回擁有*sp*所擁有之資源的物件。 運算式 `const_cast<T*>(sp.get())` 必須有效。
+如果 `const_cast<T*>(sp.get())` 傳回 null 指標，則範本函式會傳回空的 `shared_ptr` 物件。否則，它會傳回擁有*sp*所擁有之資源的 `shared_ptr<T>` 物件。 運算式 `const_cast<T*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -371,15 +371,15 @@ void declare_no_pointers(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*ptr* \
 已不再包含可追蹤指標的第一個位元位址。
 
-*容量*\
+*大小*\
 從不包含可追蹤指標的*ptr*開始的區塊大小。
 
 ### <a name="remarks"></a>備註
 
-函式會通知任何垃圾收集行程, 範圍`[ ptr, ptr + size)`中的位址已不再包含可追蹤的指標。 (除非能夠連線, 否則任何指向已配置之儲存體的指標都不得取值)。
+函式會通知任何垃圾收集行程，範圍中的位址 `[ ptr, ptr + size)` 不再包含可追蹤的指標。 （除非能夠連線，否則任何指向已配置之儲存體的指標都不得取值）。
 
 ## <a name="declare_reachable"></a>declare_reachable
 
@@ -392,12 +392,12 @@ void declare_reachable(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*ptr* \
 指向可存取、已配置之有效儲存區域的指標。
 
 ### <a name="remarks"></a>備註
 
-如果*ptr*不是 null, 此函式會通知任何垃圾收集行程現在可以觸達*ptr* , 也就是說, 它會指向有效的已配置儲存體。
+如果*ptr*不是 null，此函式會通知任何垃圾收集行程現在可以觸達*ptr* ，也就是說，它會指向有效的已配置儲存體。
 
 ## <a name="default_delete"></a>default_delete
 
@@ -417,15 +417,15 @@ struct default_delete
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*ptr* \
 要刪除的物件指標。
 
-*另一方面*\
+*其他*\
 要刪除的陣列項目類型。
 
 ### <a name="remarks"></a>備註
 
-此樣板類別所描述的刪除者會刪除以**operator new**配置的純量物件, 適合搭配樣板`unique_ptr`類別使用。 它也具有明確的特製化 `default_delete<T[]>`。
+類別樣板描述的刪除者會刪除以**operator new**配置的純量物件，適合搭配類別樣板 `unique_ptr` 使用。 它也具有明確的特製化 `default_delete<T[]>`。
 
 ## <a name="destroy_at"></a>destroy_at
 
@@ -446,7 +446,7 @@ void destroy(
     ForwardIterator last);
 ```
 
-與相同:
+與相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -462,7 +462,7 @@ ForwardIterator destroy_n(
     Size count);
 ```
 
-與相同:
+與相同：
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -486,18 +486,18 @@ shared_ptr<T> dynamic_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 傳回之共用指標所控制的類型。
 
-*另一方面*\
+*其他*\
 引數共用指標所控制的類型。
 
-*行距*\
+*sp* \
 引數共用指標。
 
 ### <a name="remarks"></a>備註
 
-如果`shared_ptr<T>` `shared_ptr` 傳回`dynamic_cast<T*>(sp.get())` null 指標, 則範本函式會傳回空的物件, 否則會傳回擁有*sp*所擁有之資源的物件。 運算式 `dynamic_cast<T*>(sp.get())` 必須有效。
+如果 `dynamic_cast<T*>(sp.get())` 傳回 null 指標，則範本函式會傳回空的 `shared_ptr` 物件。否則，它會傳回擁有*sp*所擁有之資源的 `shared_ptr<T>` 物件。 運算式 `dynamic_cast<T*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -550,15 +550,15 @@ Deleter* get_deleter(
 *刪除者*\
 刪除者的類型。
 
-*而已*\
+*T* \
 共用指標所控制的類型。
 
-*行距*\
+*sp* \
 共用指標。
 
 ### <a name="remarks"></a>備註
 
-此範本函式會傳回屬於`shared_ptr`物件*sp*之*刪除者*類型的刪除者指標。 如果*sp*沒有刪除者, 或其刪除者不是*刪除者*型別, 則此函式會傳回0。
+此範本函式會傳回屬於 `shared_ptr` 物件*sp*之*刪除者*類型的刪除者指標。 如果*sp*沒有刪除者，或其刪除者不是*刪除者*型別，則此函式會傳回0。
 
 ### <a name="example"></a>範例
 
@@ -618,7 +618,7 @@ pointer_safety get_pointer_safety() noexcept;
 
 ## <a name="get_temporary_buffer"></a>get_temporary_buffer
 
-為專案序列 (不超過指定數目的專案) 配置暫存儲存體。
+為專案序列（不超過指定數目的專案）配置暫存儲存體。
 
 ```cpp
 template <class T>
@@ -676,7 +676,7 @@ could store is given by: resultPair.second = 9.
 
 ## <a name="make_shared"></a>make_shared
 
-建立並傳回[shared_ptr](shared-ptr-class.md) , 其指向使用預設配置器從零或多個引數所建立的已設定物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。
+建立並傳回[shared_ptr](shared-ptr-class.md) ，其指向使用預設配置器從零或多個引數所建立的已設定物件。 配置並建構指定類別的物件和 `shared_ptr` 來管理共用的物件擁有權，並傳回 `shared_ptr`。
 
 ```cpp
 template <class T, class... Args>
@@ -686,7 +686,7 @@ shared_ptr<T> make_shared(
 
 ### <a name="parameters"></a>參數
 
-*引數*\
+*args* \
 零或多個建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="remarks"></a>備註
@@ -698,9 +698,9 @@ auto sp = std::shared_ptr<Example>(new Example(argument));
 auto msp = std::make_shared<Example>(argument);
 ```
 
-但是，第一個陳述式會產生兩個配置，而若 `shared_ptr` 物件配置成功之後，`Example` 配置失敗，則未命名的 `Example` 物件會遭到洩露。 使用 `make_shared` 的陳述式比較簡單，因為這樣只會使用一個函式呼叫。 這樣會更有效率，因為程式庫可以讓物件和智慧型指標進行單一配置。 此函式的速度會更快, 而且會導致記憶體分散較少, 且在一個配置中沒有可能發生例外狀況, 而不是另一個配置。 改善參考物件的程式碼位置，並更新智慧型指標中的參考計數，便能夠提升效能。
+但是，第一個陳述式會產生兩個配置，而若 `shared_ptr` 物件配置成功之後，`Example` 配置失敗，則未命名的 `Example` 物件會遭到洩露。 使用 `make_shared` 的陳述式比較簡單，因為這樣只會使用一個函式呼叫。 這樣會更有效率，因為程式庫可以讓物件和智慧型指標進行單一配置。 此函式的速度會更快，而且會導致記憶體分散較少，且在一個配置中沒有可能發生例外狀況，而不是另一個配置。 改善參考物件的程式碼位置，並更新智慧型指標中的參考計數，便能夠提升效能。
 
-如果您不需要物件的共用存取權, 請考慮使用[make_unique](memory-functions.md#make_unique) 。 如果您需要為物件指定自訂的配置器，請使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果您的`make_shared`物件需要自訂刪除者, 您就無法使用, 因為沒有任何方法可將刪除者當做引數傳遞。
+如果您不需要物件的共用存取權，請考慮使用[make_unique](memory-functions.md#make_unique) 。 如果您需要為物件指定自訂的配置器，請使用 [allocate_shared](memory-functions.md#allocate_shared)。 如果您的物件需要自訂刪除者，您就無法使用 `make_shared`，因為沒有任何方法可將刪除者當做引數傳遞。
 
 下列範例示範如何透過叫用特定的建構函式多載來建立共用的類型指標。
 
@@ -791,30 +791,30 @@ template <class T, class... Args>
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 `unique_ptr` 指向的物件類型。
 
-*引數*\
+*Args* \
 *Args*所指定之參數的類型。
 
-*引數*\
+*args* \
 要傳遞給*T 型別*物件之函式的引數。
 
-*要素*\
+*元素*\
 類型*T*的元素陣列。
 
-*容量*\
+*大小*\
 在新陣列中要為其配置空間的元素數目。
 
 ### <a name="remarks"></a>備註
 
-第一個多載用於單一物件。 針對陣列叫用第二個多載。 第三個多載可防止您在類型引數 (make_unique\<T [N] >) 中指定陣列大小; 目前的標準並不支援這個結構。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 最好的選擇是使用[std:: vector](vector-class.md), 而不是使用這個多載。
+第一個多載用於單一物件。 針對陣列叫用第二個多載。 第三個多載可防止您在類型引數中指定陣列大小（make_unique \<T [N] >）;目前的標準不支援此結構。 當您使用 `make_unique` 來建立陣列的 `unique_ptr`，必須將陣列元素個別初始化。 最好的選擇是使用[std：： vector](vector-class.md)，而不是使用這個多載。
 
 為了例外狀況安全，`make_unique` 實作很謹慎，因此建議您使用 `make_unique`，而不是直接呼叫 `unique_ptr` 建構函式。
 
 ### <a name="example"></a>範例
 
-下列範例示範如何使用 `make_unique`。 如需更多範例，請參閱[如何：建立和使用 unique_ptr 實例](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
+下列範例示範如何使用 `make_unique`。 如需更多範例，請參閱[如何：建立和使用 unique_ptr 執行個體](../cpp/how-to-create-and-use-unique-ptr-instances.md)。
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -822,7 +822,7 @@ template <class T, class... Args>
 
 ## <a name="owner_less"></a>owner_less
 
-允許按擁有權混合比較共用指標和弱式指標。 如果左側參數是在成員`owner_before`函式的 right 參數之前排序, 則傳回 true。
+允許按擁有權混合比較共用指標和弱式指標。 如果左側參數是在成員函式 `owner_before` 的 right 參數之前排序，則傳回**true** 。
 
 ```cpp
 template <class T>
@@ -885,19 +885,19 @@ template<> struct owner_less<void>
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 共用指標或弱式指標。
 
-*再*\
+*right* \
 共用指標或弱式指標。
 
 ### <a name="remarks"></a>備註
 
-這些範本類型會將其所有成員運算子都定義成傳回 `left.owner_before(right)`。
+類別樣板會將其所有成員運算子定義為傳回 `left.owner_before(right)`。
 
 ## <a name="reinterpret_pointer_cast"></a>reinterpret_pointer_cast
 
-使用轉換, `shared_ptr`從現有的共用指標建立新的。
+使用轉換，從現有的共用指標建立新的 `shared_ptr`。
 
 ```cpp
 template<class T, class U>
@@ -911,12 +911,12 @@ shared_ptr<T> reinterpret_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
-的`shared_ptr<U>`參考。
+*ptr* \
+@No__t_0 的參考。
 
 ### <a name="remarks"></a>備註
 
-如果*ptr*是空的, 新`shared_ptr`的也會是空的, 否則會與*ptr*共用擁有權。 新的共用指標是評估`reinterpret_cast<Y*>(ptr.get())`的結果, 其中`Y`是`typename std::shared_ptr<T>::element_type`。 如果`reinterpret_cast<T*>((U*)nullptr)`的格式不正確, 則行為是未定義的。
+如果*ptr*是空的，新的 `shared_ptr` 也是空的，否則會與*ptr*共用擁有權。 新的共用指標是評估 `reinterpret_cast<Y*>(ptr.get())` 的結果，其中 `Y` 為 `typename std::shared_ptr<T>::element_type`。 如果 `reinterpret_cast<T*>((U*)nullptr)` 的格式不正確，則此行為未定義。
 
 接受左值參考的樣板函式是 c + + 17 的新功能。 採用右值參考的範本函式是 c + + 20 的新功能。
 
@@ -993,18 +993,18 @@ shared_ptr<T> static_pointer_cast(
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 傳回之共用指標所控制的類型。
 
-*另一方面*\
+*其他*\
 引數共用指標所控制的類型。
 
-*行距*\
+*sp* \
 引數共用指標。
 
 ### <a name="remarks"></a>備註
 
-如果*sp* `shared_ptr`是空的物件`shared_ptr` , 此範本函式會傳回空的物件; 否則`shared_ptr<T>`會傳回擁有*sp*所擁有之資源的物件。 運算式 `static_cast<T*>(sp.get())` 必須有效。
+如果*sp*是空的 `shared_ptr` 物件，則範本函式會傳回空的 `shared_ptr` 物件。否則，它會傳回擁有*sp*所擁有之資源的 `shared_ptr<T>` 物件。 運算式 `static_cast<T*>(sp.get())` 必須有效。
 
 ### <a name="example"></a>範例
 
@@ -1065,16 +1065,16 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 引數指標所控制的類型。
 
 *刪除者*\
 唯一指標類型的刪除者。
 
-*左面*\
+*左方*\
 左邊的指標。
 
-*再*\
+*right* \
 右指標。
 
 ### <a name="remarks"></a>備註
@@ -1138,15 +1138,15 @@ void undeclare_no_pointers(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*ptr* \
 先前使用[declare_no_pointers](#declare_no_pointers)標記之記憶體位址的指標。
 
-*容量*\
-記憶體範圍中的位元組數目。 這個值必須等於`declare_no_pointers`呼叫中所使用的數位。
+*大小*\
+記憶體範圍中的位元組數目。 這個值必須等於 `declare_no_pointers` 呼叫中所使用的數位。
 
 ### <a name="remarks"></a>備註
 
-函式會通知任何垃圾收集行程, 位址`[ptr, ptr + size)`範圍現在可能包含可追蹤的指標。
+函式會通知任何垃圾收集行程，`[ptr, ptr + size)` 的位址範圍現在可能包含可追蹤的指標。
 
 ## <a name="undeclare_reachable"></a>undeclare_reachable
 
@@ -1160,12 +1160,12 @@ T *undeclare_reachable(
 
 ### <a name="parameters"></a>參數
 
-*指標*\
+*ptr* \
 先前使用[declare_reachable](#declare_reachable)標記之記憶體位址的指標。
 
 ### <a name="remarks"></a>備註
 
-如果*ptr*不是**nullptr**, 此函式會通知任何垃圾收集行程, 指出*ptr*已無法再連線。 它會傳回與*ptr*比較的安全衍生指標。
+如果*ptr*不是**nullptr**，此函式會通知任何垃圾收集行程，指出*ptr*已無法再連線。 它會傳回與*ptr*比較的安全衍生指標。
 
 ## <a name="uninitialized_copy"></a>uninitialized_copy
 
@@ -1188,21 +1188,21 @@ ForwardIterator uninitialized_copy(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，為來源範圍中的第一個項目定址。
 
-*次*\
+*上次*\
 輸入迭代器，為來源範圍中的最後一個項目定址。
 
-*dest*\
+*目的地*\
 正向迭代器，為目的範圍中的第一個項目定址。
 
 ### <a name="return-value"></a>傳回值
 
-正向反覆運算器, 定址目的範圍以外的第一個位置, 除非來源範圍是空的。
+正向反覆運算器，定址目的範圍以外的第一個位置，除非來源範圍是空的。
 
 ### <a name="remarks"></a>備註
 
@@ -1308,25 +1308,25 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，參考要複製的物件。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定複製物件的次數。
 
-*dest*\
+*目的地*\
 正向迭代器，參考放置新複本的位置。
 
 ### <a name="return-value"></a>傳回值
 
-正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的, 則反覆運算器會*先*定址。
+正向迭代器，定址目的之外的第一個位置。 如果來源範圍是空的，則反覆運算器會*先*定址。
 
 ### <a name="remarks"></a>備註
 
-此範本函式會有效地執行下列程式碼:
+此範本函式會有效地執行下列程式碼：
 
 ```cpp
     for (; 0 < count; --count)
@@ -1341,7 +1341,7 @@ ForwardIterator uninitialized_copy_n(
 
 ## <a name="uninitialized_default_construct"></a>uninitialized_default_construct
 
-預設會`value_type`在指定的範圍內, 構造反覆運算器的物件。
+預設會在指定的範圍內，將反覆運算器的物件 `value_type` 結構。
 
 ```cpp
 template <class ForwardIterator>
@@ -1358,18 +1358,18 @@ void uninitialized_default_construct(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-反覆運算器, 定址要建立之範圍中的第一個元素。
+*第一個*\
+反覆運算器，定址要建立之範圍中的第一個元素。
 
-*次*\
-反覆運算器, 定址範圍中最後一個元素之後的一個專案。
+*上次*\
+反覆運算器，定址範圍中最後一個元素之後的一個專案。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -1377,15 +1377,15 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type;
 ```
 
-如果擲回例外狀況, 則會以未指定的順序終結先前的結構化物件。
+如果擲回例外狀況，則會以未指定的順序終結先前的結構化物件。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
 這些函式是 c + + 17 的新功能。
 
 ## <a name="uninitialized_default_construct_n"></a>uninitialized_default_construct_n
 
-預設會從指定的位置開始, 建立反覆運算器`value_type`的指定數目物件。
+預設會從指定的位置開始，建立反覆運算器 `value_type` 的指定數目物件。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1402,22 +1402,22 @@ ForwardIterator uninitialized_default_construct_n(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-反覆運算器, 定址目的範圍中要建立的第一個元素。
+*第一個*\
+反覆運算器，定址目的範圍中要建立的第一個元素。
 
 *計數*\
 要建立之目的範圍中的元素計數。
 
 ### <a name="return-value"></a>傳回值
 
-正向反覆運算器, 定址目的範圍以外的第一個位置, 除非來源範圍是空的。
+正向反覆運算器，定址目的範圍以外的第一個位置，除非來源範圍是空的。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; count>0; (void)++first, --count)
@@ -1426,9 +1426,9 @@ for (; count>0; (void)++first, --count)
 return first;
 ```
 
-如果擲回例外狀況, 則會以未指定的順序終結先前的結構化物件。
+如果擲回例外狀況，則會以未指定的順序終結先前的結構化物件。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
 這些函式是 c + + 17 的新功能。
 
@@ -1453,14 +1453,14 @@ void uninitialized_fill(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-正向反覆運算器, 定址目的範圍中要初始化的第一個元素。
+*第一個*\
+正向反覆運算器，定址目的範圍中要初始化的第一個元素。
 
-*次*\
-正向反覆運算器, 定址目的範圍中要初始化的最後一個元素。
+*上次*\
+正向反覆運算器，定址目的範圍中要初始化的最後一個元素。
 
 *value*\
 用來初始化目的範圍的值。
@@ -1541,11 +1541,11 @@ ForwardIterator uninitialized_fill_n(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-正向反覆運算器, 定址目的範圍中要初始化的第一個元素。
+*第一個*\
+正向反覆運算器，定址目的範圍中要初始化的第一個元素。
 
 *計數*\
 要初始化的元素數目。
@@ -1623,21 +1623,21 @@ ForwardIterator uninitialized_move(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-輸入反覆運算器, 定址要移動之來源範圍中的第一個元素。
+*第一個*\
+輸入反覆運算器，定址要移動之來源範圍中的第一個元素。
 
-*次*\
-輸入反覆運算器, 定址要移動之來源範圍中最後一個元素之後的一個。
+*上次*\
+輸入反覆運算器，定址要移動之來源範圍中最後一個元素之後的一個。
 
-*dest*\
+*目的地*\
 目的範圍的開頭。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; first != last; (void)++dest, ++first)
@@ -1646,9 +1646,9 @@ for (; first != last; (void)++dest, ++first)
 return dest;
 ```
 
-如果擲回例外狀況, 則來源範圍中的某些物件可能會保留為有效但未指定的狀態。 先前的結構化物件會以未指定的順序終結。
+如果擲回例外狀況，則來源範圍中的某些物件可能會保留為有效但未指定的狀態。 先前的結構化物件會以未指定的順序終結。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
 這些函式是 c + + 17 的新功能。
 
@@ -1673,21 +1673,21 @@ pair<InputIterator, ForwardIterator> uninitialized_move_n(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-輸入反覆運算器, 定址要移動之來源範圍中的第一個元素。
+*第一個*\
+輸入反覆運算器，定址要移動之來源範圍中的第一個元素。
 
 *計數*\
 要移動之來源範圍中的元素計數。
 
-*dest*\
+*目的地*\
 目的範圍的開頭。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; count > 0; ++dest, (void) ++first, --count)
@@ -1696,15 +1696,15 @@ for (; count > 0; ++dest, (void) ++first, --count)
 return {first, dest};
 ```
 
-如果擲回例外狀況, 則來源範圍中的某些物件可能會保留為有效但未指定的狀態。 先前的結構化物件會以未指定的順序終結。
+如果擲回例外狀況，則來源範圍中的某些物件可能會保留為有效但未指定的狀態。 先前的結構化物件會以未指定的順序終結。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
 這些函式是 c + + 17 的新功能。
 
 ## <a name="uninitialized_value_construct"></a>uninitialized_value_construct
 
-在指定的範圍內, `value_type`依據值初始化來結構化反覆運算器的物件。
+在指定的範圍內，以值初始化來建立反覆運算器 `value_type` 的物件。
 
 ```cpp
 template <class ForwardIterator>
@@ -1721,18 +1721,18 @@ void uninitialized_value_construct(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-反覆運算器, 定址範圍中的第一個專案至值結構。
+*第一個*\
+反覆運算器，定址範圍中的第一個專案至值結構。
 
-*次*\
-反覆運算器, 定址範圍到值結構中最後一個元素之後的一個。
+*上次*\
+反覆運算器，定址範圍到值結構中最後一個元素之後的一個。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; first != last; ++first)
@@ -1740,17 +1740,17 @@ for (; first != last; ++first)
         typename iterator_traits<ForwardIterator>::value_type();
 ```
 
-如果擲回例外狀況, 則會以未指定的順序終結先前的結構化物件。
+如果擲回例外狀況，則會以未指定的順序終結先前的結構化物件。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
-如果發生記憶體配置失敗, `std::bad_alloc`則會擲回例外狀況。
+如果發生記憶體配置失敗，則會擲回 `std::bad_alloc` 例外狀況。
 
 這些函式是 c + + 17 的新功能。
 
 ## <a name="uninitialized_value_construct_n"></a>uninitialized_value_construct_n
 
-從指定的位置開始, `value_type`依據值初始化來建立指定數目的反覆運算器物件。
+從指定的位置開始，依據值初始化，來構造反覆運算器 `value_type` 的指定數目物件。
 
 ```cpp
 template <class ForwardIterator, class Size>
@@ -1767,18 +1767,18 @@ ForwardIterator uninitialized_value_construct_n(
 
 ### <a name="parameters"></a>參數
 
-*策略*\
+*原則*\
 要使用的執行原則。
 
-*頭*\
-反覆運算器, 定址目的範圍中要建立的第一個元素。
+*第一個*\
+反覆運算器，定址目的範圍中要建立的第一個元素。
 
 *計數*\
 要建立之目的範圍中的元素計數。
 
 ### <a name="remarks"></a>備註
 
-沒有執行原則的版本實際上與相同:
+沒有執行原則的版本實際上與相同：
 
 ```cpp
 for (; count > 0; (void)++first, --count)
@@ -1787,23 +1787,23 @@ for (; count > 0; (void)++first, --count)
 return first;
 ```
 
-如果擲回例外狀況, 則會以未指定的順序終結先前的結構化物件。
+如果擲回例外狀況，則會以未指定的順序終結先前的結構化物件。
 
-具有執行原則的版本具有相同的結果, 但會根據指定的*原則*執行。
+具有執行原則的版本具有相同的結果，但會根據指定的*原則*執行。
 
-如果發生記憶體配置失敗, `std::bad_alloc`則會擲回例外狀況。
+如果發生記憶體配置失敗，則會擲回 `std::bad_alloc` 例外狀況。
 
 這些函式是 c + + 17 的新功能。
 
 ## <a name="uses_allocator_v"></a>uses_allocator_v
 
-Helper 變數範本, 用來存取`uses_allocator`範本的值。
+用來存取 `uses_allocator` 範本值的 helper 變數範本。
 
 ```cpp
 template <class T, class Alloc>
 inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<memory>](memory.md)

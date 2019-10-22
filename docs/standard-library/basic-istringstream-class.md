@@ -14,14 +14,14 @@ helpviewer_keywords:
 - std::basic_istringstream [C++], str
 - std::basic_istringstream [C++], swap
 ms.assetid: 1d5bb4b5-793d-4833-98e5-14676c451915
-ms.openlocfilehash: 685195b13960c325076f1a38461394ada374d4b1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b88411316ae247499100a044a0a2dfb3c53bc84f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452539"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689988"
 ---
-# <a name="basicistringstream-class"></a>basic_istringstream 類別
+# <a name="basic_istringstream-class"></a>basic_istringstream 類別
 
 描述一個物件，該物件可控制如何從 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的資料流緩衝區擷取元素和編碼物件。
 
@@ -34,18 +34,18 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*配置*\
+配置 \
 配置器類別。
 
-*Elem*\
+*Elem* \
 字串之基本項目的類型。
 
-*Tr*\
+*Tr* \
 字元特性是在字串的基本項目上特製化。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述一個物件, 它會從[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`> 類別的資料流程緩衝區中, 控制專案和編碼物件的提取, 以及*Elem*類型的元素。其字元特性取決於類別*Tr*, 而且其元素是由類別配置的配置器所配置。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
+類別樣板描述一個物件，它會從[basic_stringbuf](../standard-library/basic-stringbuf-class.md)類別的資料流程緩衝區中控制專案和編碼物件的提取，並將類型為*Elem*的元素（其字元為） < **Elem**， **Tr**，`Alloc` >。特性取決於類別*Tr*，而且其元素是由類別配置的配置器所配置 *。* 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
 
 ### <a name="constructors"></a>建構函式
 
@@ -53,11 +53,11 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 |-|-|
 |[basic_istringstream](#basic_istringstream)|建構類型 `basic_istringstream` 的物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
-|[allocator_type](#allocator_type)|此類型是範本參數 `Alloc`的同義字。|
+|[allocator_type](#allocator_type)|這個類型與樣板參數 `Alloc`同義。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -77,11 +77,11 @@ class basic_istringstream : public basic_istream<Elem, Tr>
 
 **標頭︰** \<sstream>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="allocator_type"></a>  basic_istringstream::allocator_type
 
-此類型是範本參數 `Alloc`的同義字。
+這個類型與樣板參數 `Alloc`同義。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -105,22 +105,22 @@ basic_istringstream(
 
 ### <a name="parameters"></a>參數
 
-*_Mode*\
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*str*\
+*str* \
 `basic_string` 類型的物件。
 
-*再*\
+*right* \
 `basic_istringstream` 物件的右值參考。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會藉由呼叫[basic_istream](../standard-library/basic-istream-class.md)(`sb`) 來初始化基類`sb` , 其中是[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  `Elem`、 `Tr` `Alloc`> 類別的預存物件. 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) 初始化 `sb`。
+第一個函式會藉由呼叫[basic_istream](../standard-library/basic-istream-class.md)（`sb`）來初始化基類，其中 `sb` 是[basic_stringbuf](../standard-library/basic-stringbuf-class.md)類別的預存物件 <  `Elem`、`Tr`、`Alloc` >。 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `_Mode` &#124; `ios_base::in`) 初始化 `sb`。
 
 第二個建構函式會藉由呼叫 `basic_istream(sb)` 初始化基底類別。 它也會藉由呼叫 `basic_stringbuf`< `Elem`, `Tr`, `Alloc`>( `str`, `_Mode` &#124; `ios_base::in`) 初始化 `sb`。
 
-第三個函式會使用*right*的內容初始化物件, 並將其視為右值參考。
+第三個函式會使用*right*的內容初始化物件，並將其視為右值參考。
 
 ## <a name="op_eq"></a>  basic_istringstream::operator=
 
@@ -132,16 +132,16 @@ basic_istringstream& operator=(basic_istringstream&& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 `basic_istringstream` 物件的右值參考。
 
 ### <a name="remarks"></a>備註
 
-成員運算子會以*right*的內容取代物件的內容, 並將其視為右值參考移動指派。
+成員運算子會以*right*的內容取代物件的內容，並將其視為右值參考移動指派。
 
 ## <a name="rdbuf"></a>  basic_istringstream::rdbuf
 
-`pointer`將類型之儲存資料流程緩衝區的位址傳回[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`>。
+傳回[basic_stringbuf](../standard-library/basic-stringbuf-class.md) < **Elem**， **Tr**，`Alloc` > 之類型 `pointer` 儲存資料流程緩衝區的位址。
 
 ```cpp
 basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
@@ -149,7 +149,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>傳回值
 
-`pointer`要 basic_stringbuf 之類型的已儲存資料流程緩衝區的位址 < **Elem**、 **Tr** `Alloc`>。
+類型的已儲存資料流程緩衝區的位址，`pointer` 要 basic_stringbuf < **Elem**、 **Tr**`Alloc` >。
 
 ### <a name="example"></a>範例
 
@@ -168,7 +168,7 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-*_Newstr*\
+*_Newstr* \
 新字串。
 
 ### <a name="return-value"></a>傳回值
@@ -181,7 +181,7 @@ void str(
 
 ### <a name="example"></a>範例
 
-如需使用`str`的範例, 請參閱[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 。
+如需使用 `str` 的範例，請參閱[basic_stringbuf：： str](../standard-library/basic-stringbuf-class.md#str) 。
 
 ## <a name="swap"></a>  basic_istringstream::swap
 
@@ -193,7 +193,7 @@ void swap(basic_istringstream& right);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*right*|`basic_istringstream` 物件的 `lvalue` 參考。|
 
@@ -201,7 +201,7 @@ void swap(basic_istringstream& right);
 
 此成員函式會交換這個物件的值和*right*的值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\

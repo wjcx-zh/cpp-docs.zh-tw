@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_ref_t class
 ms.assetid: 7d6742f6-19ba-4523-b3c8-0e5b8f11464f
-ms.openlocfilehash: 88ab2c436b3dd3b5a289124e73b6f1b5d21f96a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 238d6147b2afa5ca3e143bc57aa4892e17d2c869
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243858"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687748"
 ---
-# <a name="memfun1reft-class"></a>mem_fun1_ref_t 類別
+# <a name="mem_fun1_ref_t-class"></a>mem_fun1_ref_t 類別
 
-配接器類別，可讓`non_const`接受單一引數時，當作二元函式物件以參考引數初始化呼叫成員函式。 在 C + + 11 中，在 c++17 中移除已被取代。
+介面卡類別，允許在使用參考引數初始化時，接受單一引數的 `non_const` 成員函式，當做二元函式物件來呼叫。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
 ## <a name="syntax"></a>語法
 
@@ -33,14 +33,14 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ### <a name="parameters"></a>參數
 
-*_Pm*\
+*_Pm* \
 要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*左邊*\
-物件， *_Pm*上呼叫成員函式。
+*左方*\
+呼叫 *_Pm*成員函式的物件。
 
-*權限*\
-提供給引數 *_Pm*。
+*right* \
+要提供給 *_Pm*的引數。
 
 ## <a name="return-value"></a>傳回值
 
@@ -48,7 +48,7 @@ class mem_fun1_ref_t : public binary_function<Type, Arg, Result> {
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一份 *_Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會定義其成員函式`operator()`做為傳回 (**左**。\*`_Pm`) (**右**)。
+類別樣板會儲存 *_Pm*的複本，這必須是私用成員物件中 `Type` 類別之成員函式的指標。 它會將其成員函式 `operator()` 定義為傳回（**left**. \* `_Pm`）（**right**）。
 
 ## <a name="example"></a>範例
 

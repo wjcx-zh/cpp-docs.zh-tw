@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_byname class
 ms.assetid: a5cec021-a1f8-425f-8757-08e6f064b604
-ms.openlocfilehash: 0b0f33781cc9f1f54661a44a5434c94316432a45
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: dcaaff45fb33155710f788af4ceb657eff97464e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457888"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689739"
 ---
-# <a name="ctypebyname-class"></a>ctype_byname 類別
+# <a name="ctype_byname-class"></a>ctype_byname 類別
 
-衍生的範本類別，其描述的物件可以作為特定地區設定的 ctype Facet，以啟用字元分類、大小寫字元轉換，以及原生字元集和地區設定所指定字元集之間的轉換。
+衍生類別範本描述的物件可以做為給定地區設定的 ctype facet，以啟用字元分類，並在大小寫和原生和地區設定指定字元集之間轉換字元。
 
 ## <a name="syntax"></a>語法
 
@@ -46,8 +46,8 @@ protected:
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

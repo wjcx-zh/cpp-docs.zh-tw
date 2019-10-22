@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 0b8ca5744418860cc6b4868dda9174ae2eb68a98
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957119"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685897"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
-定義容器範本類別 `basic_string` 和各種支援的範本。
+定義容器類別範本 `basic_string` 和各種支援的範本。
 
 如需 `basic_string` 的詳細資訊，請參閱 [basic_string Class](../standard-library/basic-string-class.md)。
 
@@ -32,16 +32,16 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 - 以 Null 結束的字元陣列，通常稱為 C 字串。
 
-- 類型`basic_string`為的範本類別物件, 可處理所有類似**char**的範本引數。
+- 類型為 `basic_string` 的類別樣板物件，可處理所有類似**char**的範本引數。
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|一種類型, 描述範本類別`basic_string`的特製化, 其中包含 `string`char 類型的元素做為。|
-|[wstring](../standard-library/string-typedefs.md#wstring)|一種類型, 描述範本類別`basic_string`的特製化, 其專案的類型為 `wstring`wchar_t 的元素為。|
-|[u16string](../standard-library/string-typedefs.md#u16string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char16_t` 的特製化。|
-|[u32string](../standard-library/string-typedefs.md#u32string)|類型，根據類型 `basic_string` 的元素，描述範本類別 `char32_t` 的特製化。|
+|[string](../standard-library/string-typedefs.md#string)|一種類型，描述類別樣板的特製化，`basic_string` 以**char**類型的元素做為 `string`。|
+|[wstring](../standard-library/string-typedefs.md#wstring)|一種類型，描述類別樣板的特製化，`basic_string` 以**wchar_t**的元素做為 `wstring`。|
+|[u16string](../standard-library/string-typedefs.md#u16string)|一種類型，描述類別樣板的特製化，`basic_string` 以 `char16_t` 類型的元素為基礎。|
+|[u32string](../standard-library/string-typedefs.md#u32string)|一種類型，描述類別樣板的特製化，`basic_string` 以 `char32_t` 類型的元素為基礎。|
 
 ### <a name="operators"></a>運算子
 
@@ -81,10 +81,10 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|執行個體|描述|
 |-|-|
-|[basic_string 類別](../standard-library/basic-string-class.md)|範本類別，描述可以儲存一連串任意類似字元之物件的物件。|
-|[char_traits 結構](../standard-library/char-traits-struct.md)|範本類別，描述與 CharType 類型的字元相關聯的屬性。|
+|[basic_string 類別](../standard-library/basic-string-class.md)|類別樣板，描述可以儲存任意類似字元之物件序列的物件。|
+|[char_traits 結構](../standard-library/char-traits-struct.md)|類別範本，描述與 CharType 類型的字元相關聯的屬性。|
 
 ### <a name="specializations"></a>特製化
 
@@ -99,9 +99,9 @@ C++ 語言和 C++ 標準程式庫支援兩種字串類型：
 
 - **標頭：** \<string>
 
-- **命名空間：** std
+- **命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

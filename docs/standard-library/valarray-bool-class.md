@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - valarray<bool> class
 ms.assetid: fc0e7121-4758-4ea5-86c3-f04448f04acf
-ms.openlocfilehash: b597bbe5327eb95c8c2be1016a2a036ed7ef2baa
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c0fc15920018104147b6fd7ea39ab04bbc8862ad
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452286"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688748"
 ---
 # <a name="valarrayltboolgt-class"></a>valarray&lt;bool&gt; 類別
 
-樣板類別的特殊版本**valarray\<類型 >** 到**bool**類型的元素。
+類別樣板的特製化版本**valarray \<Type >** 為**bool**類型的元素。
 
 ## <a name="syntax"></a>語法
 
@@ -75,9 +75,9 @@ valarray<bool>: ( 0 0 1 0 1 0 1 0 1 0 ).
 
 **標頭：** \<valarray>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [valarray 類別](../standard-library/valarray-class.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

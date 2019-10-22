@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7418c0316f98f633d229b3bb544bd34d2ac0fb07
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457876"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688094"
 ---
-# <a name="exponentialdistribution-class"></a>exponential_distribution 類別
+# <a name="exponential_distribution-class"></a>exponential_distribution 類別
 
 產生指數分佈。
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**double**類型, 根據指數分佈來散發。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之整數類型值的分佈，或如果沒有提供，則為**double**類型，根據指數分佈來散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -86,7 +86,7 @@ public:
 
 屬性成員函式 `param()` 會設定或傳回 `param_type` 預存的分佈參數套件。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 如需指數分佈的詳細資訊，請參閱 Wolfram MathWorld 文章 [Exponential Distribution](https://go.microsoft.com/fwlink/p/?linkid=401098) (指數分佈)。
 
@@ -169,7 +169,7 @@ Distribution for 10 samples:
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="exponential_distribution"></a>  exponential_distribution::exponential_distribution
 
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*lambda*\
+*lambda* \
 `lambda` 分佈參數。
 
-*parm*\
+*parm* \
 用於建構分佈的參數封裝。
 
 ### <a name="remarks"></a>備註
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*lambda*\
+*lambda* \
 `lambda` 分佈參數。
 
-*再*\
+*right* \
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -225,6 +225,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

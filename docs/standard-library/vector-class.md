@@ -86,16 +86,16 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 887f41d4dc3eac728b70ac653964903957d78930
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5afcaddeb4b7a87b3f8845ce51752c6a77b12862
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454562"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688722"
 ---
 # <a name="vector-class"></a>vector 類別
 
-C++ 標準程式庫 vector 類別是序列容器的範本類別，以線性排列方式排列指定類型的項目，並允許快速隨機存取任何項目。 當隨機存取效能很重要時，這應該要當成慣用的序列容器。
+C++標準程式庫向量類別是序列容器的類別樣板，會以線性相片順序排列指定類型的專案，並允許快速隨機存取任何元素。 當隨機存取效能很重要時，這應該要當成慣用的序列容器。
 
 ## <a name="syntax"></a>語法
 
@@ -106,10 +106,10 @@ class vector
 
 ### <a name="parameters"></a>參數
 
-*型*\
+*類型*\
 要儲存在向量中的項目資料類型
 
-*配置器*\
+配置*器 \*
 代表預存配置器物件的類型，封裝有關向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<Type>`。
 
 ## <a name="remarks"></a>備註
@@ -118,11 +118,11 @@ class vector
 
 當成員函式必須將向量物件中包含的序列增加到超過其目前的儲存容量時，就會發生向量重新配置。 其他的插入和清除可能會改變序列中的各種儲存空間位址。 在這些情況下，指向改變之序列位置的迭代器或參考會變成無效。 如果沒有發生重新配置，只有插入/刪除點之前的迭代器和參考仍有效。
 
-[vector\<bool> 類別](../standard-library/vector-bool-class.md)是 bool 類型項目之範本類別向量的完整特製化，並提供適用於特製化所使用之基礎類型的配置器。
+[Vector \<bool > 類別](../standard-library/vector-bool-class.md)是 bool 類型專案的類別樣板向量的完整特製化，以及特製化所使用之基礎類型的配置器。
 
 [vector\<bool> reference 類別](../standard-library/vector-bool-class.md#reference_class)是巢狀類別，其物件可提供 vector\<bool> 物件中的項目 (單一位元) 參考。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>建構函式
 
@@ -130,7 +130,7 @@ class vector
 |-|-|
 |[vector](#vector)|建構特定大小、具有特定值項目或具有特定 `allocator` 的向量，或將向量建構為其他一些向量的複本。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -198,7 +198,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-`allocator_type` 與樣板參數 `Allocator` 同義。
+`allocator_type` 與範本參數 `Allocator` 同義。
 
 ### <a name="example"></a>範例
 
@@ -218,19 +218,19 @@ void assign(InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 項目範圍中要複製的第一個項目位置。
 
-*次*\
+*上次*\
 項目範圍之外要複製的第一個項目位置。
 
 *計數*\
 插入向量的項目複本數目。
 
-*初始值*\
+*Val* \
 插入向量之項目的值。
 
-*IList*\
+*IList* \
 包含要插入之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
@@ -296,12 +296,12 @@ const_reference at(size_type _Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*_Pos*\
+*_Pos* \
 向量中要參考之項目的註標或位置編號。
 
 ### <a name="return-value"></a>傳回值
 
-引數中加上註標的項目參考。 如果`_Off`大於向量的大小, `at`則會擲回例外狀況。
+引數中加上註標的項目參考。 如果 `_Off` 大於向量的大小，`at` 就會擲回例外狀況。
 
 ### <a name="remarks"></a>備註
 
@@ -486,9 +486,9 @@ The length of storage allocated is 1.
 The length of storage allocated is now 2.
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
-傳回**常數**反覆運算器, 定址範圍中的第一個元素。
+傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -496,13 +496,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器, 指向範圍的第一個元素, 或指向空白範圍結尾 (空白範圍`cbegin() == cend()`) 之外的位置。
+**常數**隨機存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -514,7 +514,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>cend
 
-傳回**常數**反覆運算器, 定址範圍中最後一個元素之後的位置。
+傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -522,13 +522,13 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-**常數**隨機存取反覆運算器, 指向超出範圍的結尾。
+**常數**隨機存取反覆運算器，指向超出範圍的結尾。
 
 ### <a name="remarks"></a>備註
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`end()`和`cend()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -889,10 +889,10 @@ iterator emplace(
 
 ### <a name="parameters"></a>參數
 
-*_Where*\
+*_Where* \
 第一個項目插入[向量](../standard-library/vector-class.md)中的位置。
 
-*初始值*\
+*val* \
 插入 `vector` 的項目值。
 
 ### <a name="return-value"></a>傳回值
@@ -956,7 +956,7 @@ void emplace_back(Types&&... _Args);
 
 ### <a name="parameters"></a>參數
 
-*_Args*\
+*_Args* \
 建構函式引數。 函式會根據所提供的引數推斷要叫用的建構函式多載。
 
 ### <a name="example"></a>範例
@@ -1029,7 +1029,7 @@ const_iterator end() const;
 
 ### <a name="remarks"></a>備註
 
-如果將的傳回值`end`指派給類型`const_iterator`的變數, 則無法修改 vector 物件。 如果將的傳回值`end`指派給類型`iterator`的變數, 則可以修改 vector 物件。
+如果 `end` 的傳回值指派給 `const_iterator` 類型的變數，則無法修改 vector 物件。 如果 `end` 的傳回值指派給 `iterator` 類型的變數，則可以修改 vector 物件。
 
 ### <a name="example"></a>範例
 
@@ -1072,13 +1072,13 @@ iterator erase(
 
 ### <a name="parameters"></a>參數
 
-*_Where*\
+*_Where* \
 要從向量中移除之項目的位置。
 
-*頭*\
+*第一個*\
 從向量中移除之第一個項目的位置。
 
-*次*\
+*上次*\
 從向量中移除的最後一個項目之後的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1176,7 +1176,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 傳回一份用來建構向量的配置器物件複本。
 
@@ -1190,7 +1190,7 @@ Allocator get_allocator() const;
 
 ### <a name="remarks"></a>備註
 
-供 vector 類別用於指定類別如何管理儲存的配置器。 C++ 標準程式庫容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
+供 vector 類別用於指定類別如何管理儲存的配置器。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
 
 ### <a name="example"></a>範例
 
@@ -1242,19 +1242,19 @@ void insert(
 
 ### <a name="parameters"></a>參數
 
-*_Where*\
+*_Where* \
 第一個項目插入向量中的位置。
 
-*初始值*\
+*val* \
 插入向量之項目的值。
 
 *計數*\
 插入向量的項目數。
 
-*頭*\
+*第一個*\
 要複製的元素範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 超出要複製之元素範圍的第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1263,7 +1263,7 @@ void insert(
 
 ### <a name="remarks"></a>備註
 
-作為前置條件, *first*和*last*不得為向量中的反覆運算器, 或行為未定義。 任何插入作業都可能高度耗費資源，請參閱 [vector 類別](../standard-library/vector-class.md)中有關 `vector` 效能的討論。
+作為前置條件， *first*和*last*不得為向量中的反覆運算器，或行為未定義。 任何插入作業都可能高度耗費資源，請參閱 [vector 類別](../standard-library/vector-class.md)中有關 `vector` 效能的討論。
 
 ### <a name="example"></a>範例
 
@@ -1388,7 +1388,7 @@ const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>參數
 
-*採購*\
+*Pos* \
 vector 項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1434,12 +1434,12 @@ vector& operator=(vector&& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 複製到 `vector` 的[向量](../standard-library/vector-class.md)。
 
 ### <a name="remarks"></a>備註
 
-清除中的任何現有專案之後`vector`, `operator=`會將的`vector`內容複寫或移到中。
+清除 `vector` 中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `vector`。
 
 ### <a name="example"></a>範例
 
@@ -1492,7 +1492,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-類型 **pointer** 可用來修改項目的值。
+**pointer** 類型可用來修改項目的值。
 
 ### <a name="example"></a>範例
 
@@ -1548,7 +1548,7 @@ void push_back(T&& Val);
 
 ### <a name="parameters"></a>參數
 
-*初始值*\
+*Val* \
 要指派給加入到向量結尾之元素的值。
 
 ### <a name="example"></a>範例
@@ -1755,15 +1755,15 @@ void resize(size_type Newsize, Type Val);
 
 ### <a name="parameters"></a>參數
 
-*Newsize*\
+*Newsize* \
 向量的新大小。
 
-*初始值*\
+*Val* \
 如果新的大小大於原始大小，則已將新元素的初始化值加入至向量。 如果省略此值，則新的物件會使用其預設建構函式。
 
 ### <a name="remarks"></a>備註
 
-如果容器的大小小於所要求的大小, *Newsize*會將元素加入至向量, 直到達到要求的大小為止。 如果容器的大小大於所要求的大小, 則會刪除最接近容器結尾的元素, 直到容器達到大小*Newsize*為止。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
+如果容器的大小小於所要求的大小， *Newsize*會將元素加入至向量，直到達到要求的大小為止。 如果容器的大小大於所要求的大小，則會刪除最接近容器結尾的元素，直到容器達到大小*Newsize*為止。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
 
 [size](#size) 會反映向量的目前大小。
 
@@ -1889,7 +1889,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="shrink_to_fit"></a> shrink_to_fit
+## <a name="shrink_to_fit"></a>shrink_to_fit
 
 捨棄多餘的容量。
 
@@ -1997,10 +1997,10 @@ friend void swap(
 
 ### <a name="parameters"></a>參數
 
-*再*\
-提供要交換之元素的向量, 或其專案要與所*遺留*之向量交換的向量。
+*right* \
+提供要交換之元素的向量，或其專案要與所*遺留*之向量交換的向量。
 
-*左面*\
+*左方*\
 其專案要與向量*右方*的向量交換的向量。
 
 ### <a name="example"></a>範例
@@ -2042,7 +2042,7 @@ The number of elements in v1 = 2
 The number of elements in v2 = 3
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 代表儲存在向量中之資料類型的類型。
 
@@ -2052,7 +2052,7 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 與樣板參數 `Type` 同義。
+`value_type` 與範本參數 `Type` 同義。
 
 ### <a name="example"></a>範例
 
@@ -2098,36 +2098,36 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>參數
 
-*Al*\
+*Al* \
 搭配這個物件使用的配置器類別。 [get_allocator](#get_allocator) 會傳回物件的配置器類別。
 
 *計數*\
 已建構向量中的項目數。
 
-*初始值*\
+*Val* \
 已建構向量中的項目值。
 
-*再*\
+*Right* \
 已建構向量為其複本的向量。
 
-*頭*\
+*第一個*\
 項目範圍中要複製的第一個項目位置。
 
-*次*\
+*上次*\
 項目範圍之外要複製的第一個項目位置。
 
-*IList*\
+*IList* \
 initializer_list，包含欲複製的項目。
 
 ### <a name="remarks"></a>備註
 
-所有的函式都會儲存配置器物件 (*Al*) 並初始化向量。
+所有的函式都會儲存配置器物件（*Al*）並初始化向量。
 
-前兩個建構函式會指定空的初始向量。 第二個會明確地指定要使用的配置器類型 (*Al*)。
+前兩個建構函式會指定空的初始向量。 第二個會明確地指定要使用的配置器類型（*Al*）。
 
-第三個函式會針對類別`Type`的預設值, 指定元素的指定數目 (*計數*) 重複。
+第三個函式會指定類別 `Type` 之預設值專案的指定數目（*計數*）重複。
 
-第四個和第五個函式會指定值*Val*的 (*Count*) 元素重複。
+第四個和第五個函式會指定值*Val*的（*Count*）元素重複。
 
 第六個函式會指定向量*許可權*的複本。
 
@@ -2232,7 +2232,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

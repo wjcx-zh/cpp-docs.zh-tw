@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - iosfwd header
 ms.assetid: 964442eb-17f1-43ef-a0e0-c5bb77f9c187
-ms.openlocfilehash: e66c3e869f01775512419c877cd52c7f0e0fa2c4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8d257a57100615e592f6ebd62b5c91c6c59df408
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449076"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687873"
 ---
 # <a name="ltiosfwdgt"></a>&lt;iosfwd&gt;
 
-宣告對在所有 iostream 中使用之數個範本類別的向前參考。 所有這類範本類別都是在其他標準標頭中定義。 只有當您需要此標頭的其中一個宣告但不需要其定義時，才需要明確包含此標頭。
+宣告 iostreams 中使用的數個類別樣板的向前參考。 所有這類類別範本都是在其他標準標頭中定義。 只有當您需要此標頭的其中一個宣告但不需要其定義時，才需要明確包含此標頭。
 
 ## <a name="syntax"></a>語法
 
@@ -23,7 +23,7 @@ ms.locfileid: "68449076"
 #include <iosfwd>
 ```
 
-## <a name="typedefs"></a>Typedefs
+## <a name="typedefs"></a>Typedef
 
 ```cpp
 typedef T1 streamoff;
@@ -62,7 +62,7 @@ typedef basic_fstream<wchar_t, char_traits<wchar_t>> wfstream;
 };
 ```
 
-## <a name="forward-declarationstemplate-classes"></a>向前宣告/範本類別
+## <a name="forward-declarations-and-class-templates"></a>向前宣告和類別範本
 
 ```cpp
 template <class _Statetype>
@@ -126,7 +126,7 @@ template <class Elem, class Tr = char_traits<Elem>>
 class basic_fstream;
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

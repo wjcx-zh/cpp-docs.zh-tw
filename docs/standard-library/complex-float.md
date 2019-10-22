@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-ms.openlocfilehash: bfe0e9dcb0bf8f8b74487404998e06d233097a39
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 7b49e63302ad0c26f393fdfd9dd443c77455a643
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453107"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688247"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
-描述一個物件, 它會儲存類型為**float**之物件的已排序對, 第一個代表複數的實數部分, 而第二個代表虛數部分。
+描述一個物件，它會儲存類型為**float**之物件的已排序對，第一個代表複數的實數部分，而第二個代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -35,20 +35,20 @@ constexpr complex(
 
 constexpr complex(
     const complex<long double>& complexNum);
-// rest same as template class complex
+// rest same as class template complex
 };
 ```
 
 ### <a name="parameters"></a>參數
 
-*_RealVal*\
+*_RealVal* \
 要建構之複數實數部分的 **float** 類型值。
 
-*_ImagVal*\
+*_ImagVal* \
 要建構之複數虛數部分的 **float** 類型值。
 
-*complexNum*\
-**Double**類型或類型**長 double**的複數, 其實際和虛數部分用來初始化所建立之**float**類型的複數。
+*complexNum* \
+**Double**類型或類型**長 double**的複數，其實際和虛數部分用來初始化所建立之**float**類型的複數。
 
 ## <a name="return-value"></a>傳回值
 
@@ -56,9 +56,9 @@ constexpr complex(
 
 ## <a name="remarks"></a>備註
 
-**float** 類型 complex 類別的 complex 範本類別明確特製化，其與範本類別的差異只在於所定義的建構函式。 允許從**float**到**double**的轉換是隱含的, 但從**float**到**long double**的較不安全轉換必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
+對**float**類型的複雜類別而言，類別樣板的明確特製化，不同于它所定義之函式中的類別樣板。 允許從**float**到**double**的轉換是隱含的，但從**float**到**long double**的較不安全轉換必須是**明確**的。 在**明確**使用的情況下，就無法利用指派語法將類型轉換初始化。
 
-如需 `complex` 範本類別的詳細資訊，請參閱 [complex 類別](../standard-library/complex-class.md)。 如需範本類別 `complex` 的成員清單，請參閱
+如需類別範本 `complex` 的詳細資訊，請參閱[Complex 類別](../standard-library/complex-class.md)。 如需類別範本的成員清單 `complex`，請參閱。
 
 ## <a name="example"></a>範例
 
@@ -120,9 +120,9 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **標頭**：\<complex>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [complex 類別](../standard-library/complex-class.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

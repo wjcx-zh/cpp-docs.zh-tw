@@ -9,14 +9,14 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 2b2051b0c854151cff9b439f5ec0a951c25a6387
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447633"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689524"
 ---
-# <a name="invokeresult-class"></a>invoke_result 類別
+# <a name="invoke_result-class"></a>invoke_result 類別
 
 判斷在編譯時期接受指定引數類型之可呼叫類型的傳回類型。 已在 c + + 17 中新增。
 
@@ -33,23 +33,23 @@ template<lass Callable, class... Args>
 
 ### <a name="parameters"></a>參數
 
-*多次*\
+可呼叫*的 \*
 要查詢的可呼叫類型。
 
-*引數*\
+*Args* \
 要查詢之可呼叫類型的引數清單類型。
 
 ## <a name="remarks"></a>備註
 
-使用此範本在編譯時期判斷可呼叫(*Args*...) 的結果類型, 其中可呼叫的和*args*中的所有類型都是任何完整的類型、未知系結的陣列, 或可能是 cv `void`限定的。 樣板`type`類別的成員會在使用 arguments 引數來叫用時, 將可呼叫的傳回類型命名為。只有在使用 arguments 引數來叫用時, 才會定義成員...`type`在未計算的內容中。 否則, 樣板類別沒有成員`type`, 可讓您在編譯時期針對一組特定的引數類型進行 SFINAE 測試。
+使用此範本在編譯時期判斷可呼叫（*Args*... *）的結果*類型 *，其中可呼叫的和* *args*中的所有類型都是任何完整的類型、未知系結的陣列，或可能是 cv 限定的 `void`。 類別樣板的 `type` 成員會在使用*arguments 自*變數來叫*用時，* 將可呼叫的傳回類型命名為。只有在*使用 arguments 自*變數來叫用時，*才會定義*`type` 成員 .。。在未計算的內容中。 否則，類別樣板沒有成員 `type`，這可讓您在編譯時期針對一組特定的引數類型進行 SFINAE 測試。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** \<type_traits>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [<type_traits>](../standard-library/type-traits.md)\
-[invoke](functional-functions.md#invoke)
+[啟動](functional-functions.md#invoke)

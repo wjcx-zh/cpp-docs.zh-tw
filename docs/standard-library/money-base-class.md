@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c614832b0cbb1cc23e42ecb3a939ccf1334a5cea
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455572"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689317"
 ---
-# <a name="moneybase-class"></a>money_base 類別
+# <a name="money_base-class"></a>money_base 類別
 
-此類別描述範本類別 [moneypunct](../standard-library/moneypunct-class.md) 之所有特製化通用的列舉和結構。
+類別描述列舉，以及類別樣板[moneypunct](../standard-library/moneypunct-class.md)之所有特製化通用的結構。
 
 ## <a name="syntax"></a>語法
 
@@ -28,24 +28,24 @@ struct pattern
 
 ## <a name="remarks"></a>備註
 
-列舉`part`會描述結構模式中 [陣列] 欄位的元素中可能的值。 的值`part`為:
+列舉 `part` 描述結構模式中 [陣列] 欄位的元素中可能的值。 @No__t_0 的值如下：
 
-- `none`符合零或多個空格, 或不產生任何內容。
+- `none` 比對零或多個空格，或不產生任何內容。
 
-- `sign`若要比對或產生正號或負號。
+- `sign` 符合或產生正號或負號。
 
-- `space`表示比對零個或多個空格或產生空格。
+- `space`，以符合零或多個空格或產生空格。
 
-- `symbol`符合或產生貨幣符號。
+- `symbol` 以符合或產生貨幣符號。
 
-- `value`以符合或產生貨幣值。
+- `value` 以符合或產生貨幣值。
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

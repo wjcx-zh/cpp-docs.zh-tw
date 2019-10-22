@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: 8eb497e6a4380affd0f13f41c7b55990c562b7d3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453650"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689433"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
-定義容器範本類別 list，以及數個支援的範本。
+定義容器類別範本清單和數個支援的範本。
 
 ## <a name="syntax"></a>語法
 
@@ -25,9 +25,9 @@ ms.locfileid: "68453650"
 ```
 
 > [!NOTE]
-> 清單 > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0list > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -50,9 +50,9 @@ ms.locfileid: "68453650"
 
 |||
 |-|-|
-|[list 類別](../standard-library/list-class.md)|序列容器的範本類別，以線性排列維護其元素，並允許有效率地在序列內的任何位置進行插入與刪除。|
+|[list 類別](../standard-library/list-class.md)|序列容器的類別樣板，以線性相片順序維護其元素，並允許在序列內的任何位置進行有效率的插入和刪除。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

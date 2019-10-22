@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf16 class
 ms.assetid: a9897f98-f84d-4db6-90ad-858b2727570c
-ms.openlocfilehash: ca66a3273567a8d30a982211a6e977c129b00f5f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a84ca6da22825ca3fa7ab43e43a574fb05caa1a8
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459715"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689830"
 ---
-# <a name="codecvtutf16"></a>codecvt_utf16
+# <a name="codecvt_utf16"></a>codecvt_utf16
 
 代表[地區設定](../standard-library/locale-class.md) Facet，其可在 UCS-2 或 UCS-4 編碼的寬字元以及 UTF-16LE 或 UTF-16BE 編碼的位元組資料流之間進行轉換。
 
@@ -24,23 +24,23 @@ class codecvt_utf16 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>參數
 
-*Elem*\
+*Elem* \
 寬字元項目類型。
 
-*Maxcode*\
+*Maxcode* \
 地區設定 Facet 的最大字元數。
 
-*下*\
+*模式*\
 地區設定 Facet 的設定資訊。
 
 ## <a name="remarks"></a>備註
 
-此範本類別可在 UCS-2 或 UCS-4 編碼的寬字元以及 UTF-16LE (若為位元組由小到大模式) 或 UTF-16BE 編碼的位元組資料流之間進行轉換。
+這個類別樣板會轉換編碼為 UCS-2 或 UCS-4 的寬字元，以及編碼為 UTF-16LE 的位元組資料流程，如果模式 & little_endian，則為，否則為 UTF-UTF-16BE。
 
 位元組資料流應寫入二進位檔案中；如果寫入文字檔案中，則可能會損毀。
 
 ## <a name="requirements"></a>需求
 
-標頭\<: codecvt >
+標頭： \<codecvt >
 
-命名空間: std
+命名空間： std

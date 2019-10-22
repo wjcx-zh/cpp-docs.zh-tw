@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447434"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685837"
 ---
-# <a name="submatch-class"></a>sub_match 類別
+# <a name="sub_match-class"></a>sub_match 類別
 
 描述子相符項目。
 
@@ -41,28 +41,28 @@ class sub_match
 
 ## <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 子相符項目的迭代器類型。
 
 ## <a name="remarks"></a>備註
 
-此範本類別所描述的物件，會指定與 [regex_match](../standard-library/regex-functions.md#regex_match) 或 [regex_search](../standard-library/regex-functions.md#regex_search)呼叫中的擷取群組相符的字元序列。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。
+類別樣板描述一個物件，它會指定在呼叫[RegEx_match](../standard-library/regex-functions.md#regex_match)或[RegEx_search](../standard-library/regex-functions.md#regex_search)時，符合 capture 群組的字元序列。 類型為 [match_results 類別](../standard-library/match-results-class.md)的物件會保存這些物件的陣列，每個陣列分別代表用於搜尋之規則運算式中的一個擷取群組。
 
 如果擷取群組與物件的資料成員不符，則 `matched` 為 false，且兩個迭代器 `first` 和 `second` (繼承自基底 `std::pair`) 相等。 如果擷取群組相符，則 `matched` 為 true，迭代器 `first` 會指向目標序列中符合擷取群組的第一個字元，而 `second` 會指向目標序列中符合擷取群組之最後一個字元後的一個位置。 請注意，如果零長度與成員相符，則 `matched` 為零，且兩個迭代器相等，並且都會指向相符項目的位置。
 
-當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如：
+當擷取群組只包含一個判斷提示，或包含一個允許重複零的重複項目時，可能會發生零長度相符的情況。 例如:
 
 "^" 與目標序列 "a" 相符；對應至擷取群組 0 的 `sub_match` 物件會保存同時指向序列中第一個字元的兩個迭代器。
 
 "b(a*)b" 與目標序列 "bb" 相符；對應至擷取群組 1 的 `sub_match` 物件會保存同時指向序列中第二個字元的兩個迭代器。
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[difference_type](#difference_type)|迭代器差值的類型。|
 |[iterator](#iterator)|迭代器的類型。|
-|[value_type](#value_type)|元素的類型。|
+|[value_type](#value_type)|元素類型。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -77,7 +77,7 @@ class sub_match
 
 |運算子|描述|
 |-|-|
-|[operator basic_string<value_type>](#op_basic_string_lt_value_type_gt)|將子相符項目轉換成字串。|
+|[operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|將子相符項目轉換成字串。|
 
 ## <a name="example"></a>範例
 
@@ -135,7 +135,7 @@ compare(sub) == 0
 
 **標頭︰** \<regex>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="compare"></a>  sub_match::compare
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要比較子相符項目。
 
-*str*\
+*str* \
 要比較的字串。
 
-*指標*\
+*ptr* \
 要比較的以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
@@ -180,7 +180,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是 `iterator_traits<BidIt>::difference_type`的同義字。
+此 typedef 是 `iterator_traits<BidIt>::difference_type` 的同義字。
 
 ## <a name="iterator"></a>  sub_match::iterator
 
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>備註
 
-只有當與 `*this`關聯的 capture 群組是正則運算式比對的一部分時, 成員才會保留 true。
+只有當與 `*this` 相關聯的 capture 群組是正則運算式比對的一部分時，成員才會保留**true** 。
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -228,7 +228,7 @@ operator basic_string<value_type>() const;
 
 ### <a name="remarks"></a>備註
 
-此成員運算子會傳回 `str()`。
+成員運算子會傳回 `str()`。
 
 ## <a name="str"></a>  sub_match::str
 
@@ -240,11 +240,11 @@ basic_string<value_type> str() const;
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `basic_string<value_type>(first, second)`。
+此成員函式會傳回 `basic_string<value_type>(first, second)`。
 
 ## <a name="value_type"></a>  sub_match::value_type
 
-元素的類型。
+元素類型。
 
 ```cpp
 typedef typename iterator_traits<BidIt>::value_type value_type;
@@ -252,9 +252,9 @@ typedef typename iterator_traits<BidIt>::value_type value_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是 `iterator_traits<BidIt>::value_type`的同義字。
+此 typedef 是 `iterator_traits<BidIt>::value_type` 的同義字。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<regex>](../standard-library/regex.md)\
 [sub_match](../standard-library/sub-match-class.md)

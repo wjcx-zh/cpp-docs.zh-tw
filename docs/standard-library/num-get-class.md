@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 67aef1ce52b6717ce6d6381429982cf660aa5e20
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5c6fec7002541b519d7cf7d043eed3e5c932bcb9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457648"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689223"
 ---
 # <a name="num_get-class"></a>num_get 類別
 
-樣板類別，描述可以做為地區設定 facet 的物件，以控制類型 `CharType` 的序列轉換為數值。
+類別樣板，描述可以做為地區設定 facet 的物件，以控制 `CharType` 為數值之類型序列的轉換。
 
 ## <a name="syntax"></a>語法
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 程式內用於編碼地區設定字元的類型。
 
-*InputIterator*\
+*InputIterator* \
 數值 get 函式從中讀取其輸入的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -50,16 +50,16 @@ class num_get : public locale::facet;
 |-|-|
 |[num_get](#num_get)|用來從序列擷取數值之 `num_get` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸入迭代器的類型。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[do_get](#do_get)|虛擬函式，呼叫以從字元序列擷取數值或布林值。|
 |[get](#get)|從字元序列擷取數值或布林值。|
@@ -68,7 +68,7 @@ class num_get : public locale::facet;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  num_get::char_type
 
@@ -80,7 +80,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型與範本參數 **CharType** 同義。
 
 ## <a name="do_get"></a>  num_get::do_get
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要從中讀取數字的字元範圍開頭。
 
-*次*\
+*上次*\
 要從中讀取數字的字元範圍結尾。
 
-*_Iosbase*\
+*_Iosbase* \
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*_State*\
+*_State* \
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*初始值*\
+*val* \
 已讀取的值。
 
 ### <a name="return-value"></a>傳回值
@@ -199,9 +199,9 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-比對序列`[first, last)`中*第一次*開始的順序元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long**），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函數會以*val*儲存任何內容， `ios_base::failbit`並`state`在中設定。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。
+比對序列中*第一次*開始的順序元素 `[first, last)`，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long**），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*儲存任何內容，並在 `state` 中設定 `ios_base::failbit`。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是上述哪一種情況，如果傳回值等於 `last`，函式就會在 `state` 中設定 `ios_base::eofbit`。
 
-整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 （每個這類**char**元素都假設為對應至類型`Elem`的對等專案，方法是使用簡單的一對一對應）。對等的掃描轉換規格是以下列方式決定：
+整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 （每個這類**char**元素都假設為對應至類型的對等專案，`Elem` 是簡單、一對一的對應）。對等掃描轉換規格的判斷方式如下：
 
 如果 `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct)，則轉換規格為 `lo`。
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要從中讀取數字的字元範圍開頭。
 
-*次*\
+*上次*\
 要從中讀取數字的字元範圍結尾。
 
-*_Iosbase*\
+*_Iosbase* \
 旗標供轉換使用的 [ios_base](../standard-library/ios-base-class.md)。
 
-*_State*\
+*_State* \
 失敗時會新增 failbit (請參閱 [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) 的狀態。
 
-*初始值*\
+*val* \
 已讀取的值。
 
 ### <a name="return-value"></a>傳回值
@@ -437,13 +437,13 @@ iter_type get(
 
 所有成員函式都會傳回 [do_get](#do_get)( `first`, `last`, `_Iosbase`, `_State`, `val`)。
 
-第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long** ），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*的方式儲存`ios_base::failbit`任何內容，並將設定為 _*狀態*。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函數`ios_base::eofbit`會在 *_State*中設定。
+第一個虛擬的受保護成員函式會嘗試比對序列 [ `first`, `last`) 中從 first 開始的一系列元素，直到它辨識出完整、非空白的整數輸入欄位為止。 如果成功，它會將此欄位轉換為其對等的值（類型為**long** ），並將結果儲存為*val*。 它會傳回迭代器，此迭代器指定數字輸入欄位後的第一個元素。 否則，函式會以*val*儲存任何內容，並將 `ios_base::failbit` 設定為 _*狀態*。 它會傳回迭代器，此迭代器指定有效整數輸入欄位之任何前置詞後的第一個元素。 不論是哪一種情況，如果傳回值等於*last*，函式會在 *_State*中設定 `ios_base::eofbit`。
 
-整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 每個這類**char**元素都假設為對應至類型`CharType`的對等專案，方法是使用簡單的一對一對應。 對等的掃描轉換規格是以下列方式決定：
+整數輸入欄位是由掃描函式用來比對和轉換一系列**char**元素的相同規則所轉換。 每個這類**char**元素都假設為對應至類型的對等元素，`CharType` 由一個簡單的一對一對應所組成。 對等的掃描轉換規格是以下列方式決定：
 
-- 如果 `iosbase`. [旗標](../standard-library/ios-base-class.md#flags) & ，`ios_base::basefield` [oct](../standard-library/ios-functions.md#oct) 轉換規格為`lo`  ==  `ios_base::`。
+- 如果 `iosbase`. [旗標](../standard-library/ios-base-class.md#flags) &  `ios_base::basefield`  ==  `ios_base::`[oct](../standard-library/ios-functions.md#oct)，轉換規格為 `lo`。
 
-- 如果**iosbase. flags**  &  **ios_base：： basefield**  ==  `ios_base::` [hex](../standard-library/ios-functions.md#hex)，則轉換規格為`lx`。
+- 如果**iosbase**  & **ios_base：： basefield**  ==  `ios_base::`[hex](../standard-library/ios-functions.md#hex)，則轉換規格會 `lx`。
 
 - 如果 **iosbase.flags** & **ios_base::basefield** == 0，則轉換規格為 `li`。
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-的行為與第三個相同，不同的是，對等`Lf`掃描轉換規範是。
+的行為與第三個相同，不同之處在于對等掃描轉換規範 `Lf`。
 
 第五個虛擬的受保護成員函式：
 
@@ -561,7 +561,7 @@ typedef InputIterator iter_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `InputIterator`的同義字。
+這個類型與樣板參數 `InputIterator`同義。
 
 ## <a name="num_get"></a>  num_get::num_get
 
@@ -573,24 +573,24 @@ explicit num_get(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
 *_Refs*參數的可能值和其重要性如下：
 
-- 0物件的存留期是由包含它的地區設定所管理。
+- 0：物件的存留期由包含該物件的地區設定來管理。
 
-- 1:物件的存留期必須以手動方式管理。
+- 1：物件的存留期必須以手動方式管理。
 
-- \>1：未定義這些值。
+- \> 1：未定義這些值。
 
-無法提供任何直接範例，因為解構函式受到保護。
+由於解構函式會受到保護，因此沒有直接的範例。
 
 建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [facet 類別](../standard-library/locale-class.md#facet_class)\

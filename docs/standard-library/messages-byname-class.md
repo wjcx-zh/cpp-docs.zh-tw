@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 56d8931cb404d9c0f3f5113f8b2ca0f1158209f2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451812"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689335"
 ---
-# <a name="messagesbyname-class"></a>messages_byname 類別
+# <a name="messages_byname-class"></a>messages_byname 類別
 
-衍生的範本類別，描述可作為特定地區設定訊息 facet 的物件，可用來擷取當地語系化訊息。
+衍生類別範本描述可以做為給定地區設定之訊息 facet 的物件，以啟用當地語系化訊息的抓取。
 
 ## <a name="syntax"></a>語法
 
@@ -39,10 +39,10 @@ protected:
 
 ### <a name="parameters"></a>參數
 
-*_Locname*\
+*_Locname* \
 具名地區設定。
 
-*_Refs*\
+*_Refs* \
 初始參考計數。
 
 ## <a name="remarks"></a>備註
@@ -53,8 +53,8 @@ protected:
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

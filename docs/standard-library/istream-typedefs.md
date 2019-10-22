@@ -7,12 +7,12 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 864854fa2697a76c2f3476bcb050d5f5d084dc9d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458753"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689483"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt; typedef
 
@@ -23,7 +23,7 @@ ms.locfileid: "68458753"
 
 ## <a name="iostream"></a>  iostream
 
-在`basic_iostream` **char**上特製化的類型。
+類型 `basic_iostream` 在**char**上特製化。
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -31,11 +31,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別[basic_iostream](../standard-library/basic-iostream-class.md)同義, 專門用於具有預設字元特性之**char**類型的元素。
+此類型是類別樣板[basic_iostream](../standard-library/basic-iostream-class.md)的同義字，專門用於具有預設字元特性之**char**類型的元素。
 
 ## <a name="istream"></a>  istream
 
-在`basic_istream` **char**上特製化的類型。
+類型 `basic_istream` 在**char**上特製化。
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -43,11 +43,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本類別[basic_istream](../standard-library/basic-istream-class.md)同義, 專門用於具有預設字元特性之**char**類型的元素。
+此類型是類別樣板[basic_istream](../standard-library/basic-istream-class.md)的同義字，專門用於具有預設字元特性之**char**類型的元素。
 
 ## <a name="wiostream"></a>  wiostream
 
-在`basic_iostream` **wchar_t**上特製化的類型。
+@No__t_0 在**wchar_t**上特製化的類型。
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -55,11 +55,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板類別[basic_iostream](../standard-library/basic-iostream-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
+此類型是類別樣板[basic_iostream](../standard-library/basic-iostream-class.md)的同義字，專門用於具有預設字元特性之**wchar_t**類型的元素。
 
 ## <a name="wistream"></a>  wistream
 
-在`basic_istream` **wchar_t**上特製化的類型。
+@No__t_0 在**wchar_t**上特製化的類型。
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -67,8 +67,8 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板類別[basic_istream](../standard-library/basic-istream-class.md)同義, 專門用於具有預設字元特性之**wchar_t**類型的元素。
+此類型是類別樣板[basic_istream](../standard-library/basic-istream-class.md)的同義字，專門用於具有預設字元特性之**wchar_t**類型的元素。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<istream>](../standard-library/istream.md)

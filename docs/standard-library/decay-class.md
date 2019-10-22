@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - decay class
 ms.assetid: 96baa2fd-c8e0-49af-be91-ba375ba7f9dc
-ms.openlocfilehash: 73b9e2d8ef9a14830c13ee3f6566137bb51e939d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3b22dfecb1162ce67a0d648197465115acb044ba
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450633"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688120"
 ---
 # <a name="decay-class"></a>decay 類別
 
@@ -29,12 +29,12 @@ using decay_t = typename decay<T>::type;
 
 ### <a name="parameters"></a>參數
 
-*而已*\
+*T* \
 要修改的類型。
 
 ## <a name="remarks"></a>備註
 
-您可使用 decay 範本產生類型，如同將類型作為引數由值來傳遞一樣。 範本類別成員 typedef `type` 類型所儲存的修改類型，是在下列階段定義：
+您可使用 decay 範本產生類型，如同將類型作為引數由值來傳遞一樣。 類別樣板成員 typedef `type` 包含在下列階段中定義的修改型別：
 
 - 類型 `U` 定義為 `remove_reference<T>::type`。
 
@@ -48,8 +48,8 @@ using decay_t = typename decay<T>::type;
 
 **標頭：** \<type_traits>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [<type_traits>](../standard-library/type-traits.md)

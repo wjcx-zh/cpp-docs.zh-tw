@@ -12,14 +12,14 @@ helpviewer_keywords:
 - std::basic_stringstream [C++], rdbuf
 - std::basic_stringstream [C++], str
 ms.assetid: 49629814-ca37-45c5-931b-4ff894e6ebd2
-ms.openlocfilehash: 9278b6ce0fa23fa875f1af57ea15719111439372
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9b87b60cf790a2ca032eb805095f277324178
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447800"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688414"
 ---
-# <a name="basicstringstream-class"></a>basic_stringstream 類別
+# <a name="basic_stringstream-class"></a>basic_stringstream 類別
 
 描述一個物件，該物件可控制如何使用 [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< **Elem**, **Tr**, `Alloc`> 類別的資料流緩衝區來插入及擷取元素和編碼物件。
 
@@ -32,30 +32,30 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 ### <a name="parameters"></a>參數
 
-*配置*\
+配置 \
 配置器類別。
 
-*Elem*\
+*Elem* \
 字串之基本項目的類型。
 
-*Tr*\
+*Tr* \
 字元特性是在字串的基本項目上特製化。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別所描述的物件可控制如何使用[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`> 類別的資料流程緩衝區來插入和解壓縮專案和編碼物件, 並以類型為的元素`Elem`, 其字元特性是由類別`Tr`所決定, 且其元素是由類別`Alloc`的配置器所配置。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
+類別樣板描述的物件可控制如何使用 <  [basic_stringbuf](../standard-library/basic-stringbuf-class.md)類別的資料流程緩衝區來插入和解壓縮專案和編碼的物件，而 **`Alloc` >，** 其中的元素類型為 `Elem`，其字元特性是由類別 `Tr`，而其元素是由類別 `Alloc` 的配置器所配置。 這個物件會儲存 basic_stringbuf< **Elem**, **Tr**, `Alloc`> 類別的物件。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[basic_stringstream](#basic_stringstream)|建構類型 `basic_stringstream` 的物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
-|[allocator_type](#allocator_type)|此類型是範本參數 `Alloc`的同義字。|
+|[allocator_type](#allocator_type)|這個類型與樣板參數 `Alloc`同義。|
 
 ### <a name="member-functions"></a>成員函式
 
@@ -68,11 +68,11 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 
 **標頭︰** \<sstream>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="allocator_type"></a>  basic_stringstream::allocator_type
 
-此類型是範本參數 `Alloc`的同義字。
+這個類型與樣板參數 `Alloc`同義。
 
 ```cpp
 typedef Alloc allocator_type;
@@ -90,17 +90,17 @@ explicit basic_stringstream(const basic_string<Elem, Tr, Alloc>& str, ios_base::
 
 ### <a name="parameters"></a>參數
 
-*_Mode*\
+*_Mode* \
 [ios_base::openmode](../standard-library/ios-base-class.md#openmode) 中的其中一個列舉。
 
-*str*\
+*str* \
 `basic_string` 類型的物件。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會藉由呼叫[basic_iostream](../standard-library/basic-iostream-class.md)( **sb**) 來初始化基類`sb` , 其中是[basic_stringbuf](../standard-library/basic-stringbuf-class.md) <  **Elem**, **Tr**, `Alloc`> 類別的預存物件。 它也會`sb`藉由呼叫 basic_stringbuf < **Elem**、 **Tr** `Alloc`> ( `_Mode`) 來初始化。
+第一個函式會藉由呼叫[basic_iostream](../standard-library/basic-iostream-class.md)（ **sb**）來初始化基類，其中 `sb` 是[basic_stringbuf](../standard-library/basic-stringbuf-class.md)類別的預存物件 < **Elem**、 **Tr**`Alloc` >。 它也會藉由呼叫 basic_stringbuf < **Elem**、 **Tr**`Alloc` > （`_Mode`）來初始化 `sb`。
 
-第二個建構函式會藉由呼叫 basic_iostream( **sb**) 初始化基底類別。 它也會`sb`藉由呼叫 basic_stringbuf < **Elem**、 **Tr** `Alloc`> (_ *Str*, `_Mode`) 來初始化。
+第二個建構函式會藉由呼叫 basic_iostream( **sb**) 初始化基底類別。 它也會藉由呼叫 basic_stringbuf < **Elem**、 **Tr**、`Alloc` > （_ *Str*、`_Mode`）來初始化 `sb`。
 
 ## <a name="rdbuf"></a>  basic_stringstream::rdbuf
 
@@ -112,7 +112,7 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ### <a name="return-value"></a>傳回值
 
-`pointer`要 basic_stringbuf 之類型的已儲存資料流程緩衝區的位址 < **Elem**、 **Tr** `Alloc`>。
+類型的已儲存資料流程緩衝區的位址，`pointer` 要 basic_stringbuf < **Elem**、 **Tr**`Alloc` >。
 
 ### <a name="example"></a>範例
 
@@ -131,7 +131,7 @@ void str(
 
 ### <a name="parameters"></a>參數
 
-*_Newstr*\
+*_Newstr* \
 新字串。
 
 ### <a name="return-value"></a>傳回值
@@ -144,9 +144,9 @@ void str(
 
 ### <a name="example"></a>範例
 
-如需使用`str`的範例, 請參閱[basic_stringbuf:: str](../standard-library/basic-stringbuf-class.md#str) 。
+如需使用 `str` 的範例，請參閱[basic_stringbuf：： str](../standard-library/basic-stringbuf-class.md#str) 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\

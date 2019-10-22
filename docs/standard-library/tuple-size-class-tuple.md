@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_size
 ms.assetid: 73852fc5-eb68-41f1-8379-465cedc2314a
-ms.openlocfilehash: 1c03c02dde3178a257a83720ff437f7981f5f7ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 361545bee020d6c3624d1d45743abcb9c2b4ac85
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241559"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688860"
 ---
-# <a name="tuplesize-class"></a>tuple_size 函式
+# <a name="tuple_size-class"></a>tuple_size 函式
 
 報告 `tuple` 包含的元素數目。
 
@@ -63,26 +63,26 @@ template <class T> inline constexpr size_t tuple_size_v = tuple_size<T>::value;
 *元組*\
 Tuple 的類型。
 
-*Elem*\
+*Elem* \
 陣列元素的類型。
 
 *大小*\
 陣列的大小。
 
-*T1*\
+*T1* \
 第一個配對成員的類型。
 
-*T2*\
+*T2* \
 第二個配對成員的類型。
 
-*類型*\
+*型別*\
 元組元素的類型。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別具有成員`value`也就是整數常數運算式的值是 tuple 型別程度*Tuple*。
+類別樣板具有成員 `value`，這是整數常數運算式，其值為元組類型*元組*的範圍。
 
-陣列的樣板特製化有一個成員`value`也就是整數常數運算式的值是*大小*，這是陣列的大小。
+陣列的樣板特製化具有成員 `value`，這是整數常數運算式，其值為*大小*，也就是陣列的大小。
 
 配對的樣板特製化有一個成員 `value`，其是值為 2 的整數常數運算式。
 
@@ -123,4 +123,4 @@ int main()
 
 **標頭：** \<utility> (用於配對特製化)
 
-**命名空間：** std
+**命名空間:** std

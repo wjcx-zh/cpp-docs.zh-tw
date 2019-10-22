@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: c506a6a2e1e2c0610f8a6129d2bfb42f762e998a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458613"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689815"
 ---
 # <a name="collate-class"></a>collate 類別
 
-樣板類別，描述可做為地區設定 facet 的物件，以控制字串內的字元順序和群組、字串比較，以及字串雜湊。
+類別樣板，描述可以做為地區設定 facet 的物件，以控制字元串中的字元順序和群組、兩者之間的比較，以及字串的雜湊。
 
 ## <a name="syntax"></a>語法
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
@@ -55,7 +55,7 @@ class collate : public locale::facet;
 |-|-|
 |[collate](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -77,7 +77,7 @@ class collate : public locale::facet;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  collate::char_type
 
@@ -89,7 +89,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `CharType`的同義字。
+這個類型與樣板參數 `CharType`同義。
 
 ## <a name="collate"></a>  collate::collate
 
@@ -108,21 +108,21 @@ const char* _Locname,
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*\
+*_Locname* \
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
 *_Refs*參數的可能值和其重要性如下：
 
-- 0物件的存留期是由包含它的地區設定所管理。
+- 0：物件的存留期由包含該物件的地區設定來管理。
 
-- 1:物件的存留期必須以手動方式管理。
+- 1：物件的存留期必須以手動方式管理。
 
-- \>1：未定義這些值。
+- \> 1：未定義這些值。
 
 此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
 
@@ -139,21 +139,21 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*\
+*first1* \
 要比較之第一個序列中第一個元素的指標。
 
-*last1*\
+*last1* \
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*\
+*first2* \
 要比較之第二個序列中第一個元素的指標。
 
-*last2*\
+*last2* \
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回下列值：
+成員函式會傳回：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -205,21 +205,21 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1*\
+*first1* \
 要比較之第一個序列中第一個元素的指標。
 
-*last1*\
+*last1* \
 要比較之第一個序列中最後一個元素的指標。
 
-*first2*\
+*first2* \
 要比較之第二個序列中第一個元素的指標。
 
-*last2*\
+*last2* \
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回下列值：
+成員函式會傳回：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會`operator<`在類型`CharType`的對應元素配對之間套用，藉以比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會在 `CharType` 類型的對應元素配對之間套用 `operator<`，藉此比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要決定其序列值之第一個字元的指標。
 
-*次*\
+*上次*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要轉換之序列中第一個字元的指標。
 
-*次*\
+*上次*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要決定其序列值之第一個字元的指標。
 
-*次*\
+*上次*\
 要決定其序列值之最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其物件可儲存來源序列的複本。
+此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存來源序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要轉換之序列中第一個字元的指標。
 
-*次*\
+*上次*\
 要轉換之序列中最後一個字元的指標。
 
 ### <a name="return-value"></a>傳回值
@@ -383,7 +383,7 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回`first`[do_transform](#do_transform) `last`（，）。
+此成員函式會傳回[do_transform](#do_transform)（`first`，`last`）。
 
 ### <a name="example"></a>範例
 
@@ -427,7 +427,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

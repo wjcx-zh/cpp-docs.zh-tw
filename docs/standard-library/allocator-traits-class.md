@@ -40,16 +40,16 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.openlocfilehash: 795fd17c2c5b3c7fa92e62088b8f2fd126094df9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 470b3086b4bdfa776558122eda9e496fa6c4bcdc
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245895"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72690067"
 ---
-# <a name="allocatortraits-class"></a>allocator_traits 類別
+# <a name="allocator_traits-class"></a>allocator_traits 類別
 
-此範本類別所描述的物件補充說明「配置器類型」  。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。
+類別範本描述補充配置器*類型*的物件。 配置器類型是任何類型，可描述用來管理所配置儲存空間的配置器物件。 具體來說，針對任何配置器類型 `Alloc`，您可以使用 `allocator_traits<Alloc>` 來判斷啟用配置器之容器所需的所有資訊。 如需詳細資訊，請參閱預設 [allocator 類別](../standard-library/allocator-class.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -58,9 +58,9 @@ template <class Alloc>
     class allocator_traits;
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -89,7 +89,7 @@ template <class Alloc>
 |[max_size](#max_size)|靜態方法，使用指定的配置器來決定可配置的物件數目上限。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|靜態方法，可在指定的配置器上呼叫 `select_on_container_copy_construction`。|
 
-### <a name="allocate"></a> 配置
+### <a name="allocate"></a>定位
 
 靜態方法，使用指定的配置器參數來配置記憶體。
 
@@ -102,7 +102,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
 *計數*\
@@ -119,7 +119,7 @@ static pointer allocate(Alloc& al, size_type count,
 
 如果該運算式的格式良好，則第二個方法會傳回 `al.allocate(count, hint)`；否則會傳回 `al.allocate(count)`。
 
-### <a name="construct"></a> 建構
+### <a name="construct"></a>建構
 
 靜態方法，使用指定的配置器來建構物件。
 
@@ -130,20 +130,20 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
-*ptr*\
+*ptr* \
 要建構物件之位置的指標。
 
-*引數*\
+*args* \
 傳遞給物件建構函式的引數清單。
 
 #### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則靜態成員函式會呼叫 `al.construct(ptr, args...)`；否則會評估 `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`。
 
-### <a name="deallocate"></a> 解除配置
+### <a name="deallocate"></a>解除配置
 
 靜態方法，使用指定的配置器來解除配置指定數目的物件。
 
@@ -155,10 +155,10 @@ static void deallocate(Alloc al,
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
-*ptr*\
+*ptr* \
 要解除配置之物件的起始位置指標。
 
 *計數*\
@@ -170,7 +170,7 @@ static void deallocate(Alloc al,
 
 這個方法不會擲回任何項目。
 
-### <a name="destroy"></a> 損毀
+### <a name="destroy"></a>予以
 
 靜態方法，使用指定的配置器在物件上呼叫解構函式，而不解除配置其記憶體。
 
@@ -181,17 +181,17 @@ template <class Uty>
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
-*ptr*\
+*ptr* \
 物件位置的指標。
 
 #### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則此方法會呼叫 `al.destroy(ptr)`；否則會評估 `ptr->~Uty()`。
 
-### <a name="max_size"></a> max_size
+### <a name="max_size"></a>max_size
 
 靜態方法，使用指定的配置器來決定可配置的物件數目上限。
 
@@ -201,14 +201,14 @@ static size_type max_size(const Alloc& al);
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
 #### <a name="remarks"></a>備註
 
 如果該運算式的格式良好，則此方法會傳回 `al.max_size()`；否則會傳回 `numeric_limits<size_type>::max()`。
 
-### <a name="select_on_container_copy_construction"></a> select_on_container_copy_construction
+### <a name="select_on_container_copy_construction"></a>select_on_container_copy_construction
 
 靜態方法，可在指定的配置器上呼叫 `select_on_container_copy_construction`。
 
@@ -218,12 +218,12 @@ static Alloc select_on_container_copy_construction(const Alloc& al);
 
 #### <a name="parameters"></a>參數
 
-*Al*\
+*al* \
 配置器物件。
 
 #### <a name="return-value"></a>傳回值
 
-這個方法會傳回`al.select_on_container_copy_construction()`，如果該型別格式良好，否則傳回*al*。
+如果該類型的格式正確，這個方法會傳回 `al.select_on_container_copy_construction()`。否則會傳回*al*。
 
 #### <a name="remarks"></a>備註
 

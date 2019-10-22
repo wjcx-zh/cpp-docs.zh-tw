@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-ms.openlocfilehash: 47c9d2281973cb57288bfdcf865926fb6dd9ed0e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c687bc870e4d78cfe9174eb04ea09c34d6a9c955
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460202"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687661"
 ---
-# <a name="moneypunctbyname-class"></a>moneypunct_byname 類別
+# <a name="moneypunct_byname-class"></a>moneypunct_byname 類別
 
-衍生的範本類別，描述可作為特定地區設定 `moneypunct` facet 的物件，可用來將貨幣輸入欄位或貨幣輸出欄位格式化。
+衍生類別範本，描述可做為給定地區設定之 `moneypunct` facet 的物件，啟用 [貨幣輸入欄位] 或 [貨幣輸出] 欄位的格式。
 
 ## <a name="syntax"></a>語法
 
@@ -46,8 +46,8 @@ protected:
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

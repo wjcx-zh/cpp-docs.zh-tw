@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3838e215ffac42ec6902ab6a9837f638153cf184
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448164"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689158"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
-定義樣板類別 [basic_ostream](../standard-library/basic-ostream-class.md)，這會調解 iostream 的插入作業。 這個標頭也會定義幾個相關的操作工具。 (通常會由另一個 iostreams 標頭為您包含這個標頭。 您很少需要直接包含這個標頭。)
+定義類別樣板[basic_ostream](../standard-library/basic-ostream-class.md)，以調節 iostreams 的插入。 這個標頭也會定義幾個相關的操作工具。 (通常會由另一個 iostreams 標頭為您包含這個標頭。 您很少需要直接包含這個標頭。)
 
 ## <a name="syntax"></a>語法
 
@@ -25,12 +25,12 @@ ms.locfileid: "68448164"
 #include <ostream>
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|建立的類型`basic_ostream` , 它是在**char**上特製`char_traits`化, 並在**char**上特製化。|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|從`basic_ostream`建立的類型, 它是在**wchar_t**上`char_traits`特製化, 並且在**wchar_t**上特製化。|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|根據 char 上特製化的 `basic_ostream` 建立型別 **，並 `char_traits`** 在**char**上特製化。|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|根據 wchar_t 上特製化的 `basic_ostream` 建立型別 **，並 `char_traits`** 在**wchar_t**上特製化。|
 
 ### <a name="manipulators"></a>操作工具
 
@@ -49,11 +49,11 @@ ms.locfileid: "68448164"
 
 ### <a name="classes"></a>類別
 
-|類別|說明|
+|執行個體|描述|
 |-|-|
-|[basic_ostream](../standard-library/basic-ostream-class.md)|這個樣板類別所描述的物件，可控制將項目和編碼物件插入資料流緩衝區中。|
+|[basic_ostream](../standard-library/basic-ostream-class.md)|類別樣板描述一個物件，可控制將專案和編碼物件插入資料流程緩衝區。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

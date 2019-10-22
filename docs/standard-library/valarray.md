@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: c18b72017e4999e377bf8575f624f8fdda5b0caf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed90273fe293ae2e08c3c91762c12c42bb368c16
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448344"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688768"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
-定義範本類別 valarray 和許多支援的範本類別和函式。
+定義類別樣板 valarray 和許多支援的類別範本和函式。
 
 ## <a name="requirements"></a>需求
 
 **標頭：** \<valarray>
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> \<Valarray > 程式庫使用 ' #include < initializer_list > ' 語句。
+> @No__t_0valarray > 程式庫使用 ' #include < initializer_list > ' 語句。
 
 ## <a name="remarks"></a>備註
 
-這些範本類別和函式為了改善效能，可允許不尋常的範圍。 具體而言, 任何傳回類型`valarray<T1>`的函式都可能會傳回其他類型 T2 的物件。 在此情況下, 接受類型`valarray<T2>`的一或多個引數的任何函式都必須具有接受這些引數任意組合的多載, 而且每個函式都會取代為 T2 類型的引數。
+這些類別樣板和函式在改善效能方面，允許不尋常的緯度。 具體而言，傳回類型 `valarray<T1>` 的任何函式都可能會傳回其他類型 T2 的物件。 在此情況下，接受 `valarray<T2>` 類型的一或多個引數的任何函式都必須具有接受這些引數任意組合的多載，而且每個函式都會取代為 T2 類型的引數。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>函式
 
@@ -84,20 +84,20 @@ ms.locfileid: "68448344"
 |||
 |-|-|
 |[gslice 類別](../standard-library/gslice-class.md)|valarray 的一個公用程式類別，用來定義 valarray 的多維度切割。|
-|[gslice_array 類別](../standard-library/gslice-array-class.md)|可藉由提供 valarray 之一般切割所定義的子集陣列之間的作業，支援一般切割物件的內部、輔助的範本類別。|
-|[indirect_array 類別](../standard-library/indirect-array-class.md)|對於指定父代 valarray 索引子集而定義的子集陣列，可藉由提供這些子集之間的作業，支援 valarray 子集物件的內部、輔助的範本類別。|
-|[mask_array 類別](../standard-library/mask-array-class.md)|可藉由提供子集之間的作業，以布林運算式指定，並支援父代 valarray 子集物件的內部、輔助的範本類別。|
+|[gslice_array 類別](../standard-library/gslice-array-class.md)|內部的輔助類別樣板，透過在 valarray 的一般配量所定義的子集陣列之間提供作業，以支援一般配量物件。|
+|[indirect_array 類別](../standard-library/indirect-array-class.md)|內部的輔助類別樣板，藉由指定父 valarray 的索引子集，在定義的子集陣列之間提供作業，藉此支援屬於 valarray 子集的物件。|
+|[mask_array 類別](../standard-library/mask-array-class.md)|一種內部的輔助類別樣板，支援以布林運算式指定之父 valarray 子集的物件，方法是提供子集陣列之間的作業。|
 |[slice 類別](../standard-library/slice-class.md)|valarray 的一個公用程式類別，用來定義 valarray 的一維、類似向量的子集。|
-|[slice_array 類別](../standard-library/slice-array-class.md)|可藉由提供 valarray 之切割所定義的子集陣列之間的作業，支援切割物件的內部、輔助的範本類別。|
-|[valarray 類別](../standard-library/valarray-class.md)|此樣板類別所描述的物件可控制一系列類型`Type`的專案, 這些專案會儲存為數組, 並專為執行高速的數學運算而設計, 並針對計算效能優化。|
+|[slice_array 類別](../standard-library/slice-array-class.md)|內部的輔助類別樣板，藉由在 valarray 的配量所定義的子集陣列之間提供作業，以支援配量物件。|
+|[valarray 類別](../standard-library/valarray-class.md)|類別樣板描述一個物件，它會控制一系列 `Type` 類型的專案，這些專案會儲存為數組，並針對執行高速的數學運算而設計，並針對計算效能優化。|
 
 ### <a name="specializations"></a>特製化
 
 |||
 |-|-|
-|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|樣板類別的特殊版本 valarray\<**類型**> 到**bool**類型的元素。|
+|[valarray\<bool> 類別](../standard-library/valarray-bool-class.md)|類別樣板的特製化版本會 valarray \<**類型**> 到**bool**類型的元素。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

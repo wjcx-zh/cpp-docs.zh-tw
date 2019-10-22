@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5263612a26b2bcb606ad712a2a8e0a521ce9437a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244552"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688199"
 ---
-# <a name="constmemfunt-class"></a>const_mem_fun_t 類別
+# <a name="const_mem_fun_t-class"></a>const_mem_fun_t 類別
 
-配接器類別，這個類別允許不接受引數的常數成員函式在使用參考引數初始化時，可當做一元函式物件來呼叫。 在 C + + 11 中，在 c++17 中移除已被取代。
+配接器類別，這個類別允許不接受引數的常數成員函式在使用參考引數初始化時，可當做一元函式物件來呼叫。 在 c + + 11 中已被取代，在 c + + 17 中移除
 
 ## <a name="syntax"></a>語法
 
@@ -30,11 +30,11 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>參數
 
-*Pm*\
+*Pm* \
 要轉換成函式物件之 `Type` 類別的成員函式指標。
 
-*Pleft*\
-物件， *Pm*上呼叫成員函式。
+*Pleft* \
+呼叫*Pm*成員函式的物件。
 
 ## <a name="return-value"></a>傳回值
 
@@ -42,7 +42,7 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一份*Pm*，它必須是類別的成員函式的指標`Type`，私用成員物件中。 它會定義其成員函式`operator()`做為傳回 (`Pleft` -> \* `Pm`) （) **const**。
+類別樣板會儲存*Pm*的複本，這必須是私用成員物件中，`Type` 類別之成員函式的指標。 它會將其成員函式 `operator()` 定義為傳回（`Pleft` -> \* `Pm`）（） **const**。
 
 ## <a name="example"></a>範例
 

@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - std::tuple_element
 ms.assetid: 4c51a6c1-ce81-462f-8c6c-291d69f2b77c
-ms.openlocfilehash: 0836ed683b398981e95e401a73ded6367c7ab472
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 21efed39fdaabe0f95f83e9dc5cdfcc508a147c5
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241811"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684454"
 ---
-# <a name="tupleelement-class"></a>tuple_element 類別
+# <a name="tuple_element-class"></a>tuple_element 類別
 
 包裝 `tuple` 項目。 特製化包裝 `array` 項目和 `pair` 項目。
 
@@ -62,29 +62,29 @@ template <class T1, class T2>
 *元組*\
 Tuple 的類型。
 
-*Elem*\
+*Elem* \
 陣列元素的類型。
 
 *大小*\
 陣列的大小。
 
-*T1*\
-配對中第一個項目型別。
+*T1* \
+配對中第一個元素的類型。
 
-*T2*\
+*T2* \
 配對中第二個元素的類型。
 
 ## <a name="remarks"></a>備註
 
-此範本類別`tuple_element`具有巢狀的 typedef`type`也就是在索引類型的同義字*Index* tuple 型別*Tuple*。
+類別樣板 `tuple_element` 有一個嵌套的 typedef `type`，這是元組類型*元組*之索引*索引*類型的同義字。
 
 typedef `tuple_element_t` 是 `tuple_element<Index, Tuple>::type` 的方便別名。
 
-陣列的樣板類別特製化會提供介面給 `array`，當做 `Size` 元素的 tuple，其中每一個都有相同的類型。 每個特製化有巢狀的 typedef`type`也就是類型的同義字*Index*項目`array`，包含保留的任何 const volatile 限定性條件。
+陣列的類別樣板特製化會將 `array` 的介面提供為 `Size` 專案的元組，而每個元素都有相同的類型。 每個特製化都有一個嵌套的 typedef `type`，這是 `array` 之*Index*元素類型的同義字，其中保留了任何 const volatile 的限定。
 
 `pair` 類型的樣板特製化都提供單一成員 typedef，`type`，也就是在配對中指定位置的元素類型同義字，保留了任何 const 及/或 volatile 限定性條件。 typedef `tuple_element_t` 是 `tuple_element<N, pair<T1, T2>>::type` 的方便別名。
 
-使用[取得函式&lt;公用程式&gt;](../standard-library/utility-functions.md#get)傳回在指定的位置，或指定型別的項目。
+使用 get 函式[&lt;utility &gt;](../standard-library/utility-functions.md#get) ，傳回指定位置或指定類型的元素。
 
 ## <a name="example"></a>範例
 
@@ -178,6 +178,6 @@ int main() {
 
 **標頭：** \<array> (用於陣列特製化)
 
-**標頭：** \<公用程式 > （用於配對特製化）
+**標頭：** \<utility > （適用于配對特殊化）
 
-**命名空間：** std
+**命名空間:** std

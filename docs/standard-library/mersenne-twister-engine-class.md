@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - mersenne_twister_engine class
 ms.assetid: 7ee968fa-a1cc-450f-890f-7305de062685
-ms.openlocfilehash: ed5380e36e71d7366d2b4b84528bbd35b87cc775
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 79613c76b3ea6dc15643e83a15d5bd6d90b60c6a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451867"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687694"
 ---
-# <a name="mersennetwisterengine-class"></a>mersenne_twister_engine 類別
+# <a name="mersenne_twister_engine-class"></a>mersenne_twister_engine 類別
 
 根據梅森旋轉演算法，產生高品質隨機整數序列。
 
@@ -29,34 +29,34 @@ class mersenne_twister_engine;
 
 ### <a name="parameters"></a>參數
 
-*UIntType*\
+*UIntType* \
 不帶正負號的整數結果類型。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
-*寬*\
-**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件**：`2u < W ≤ numeric_limits<UIntType>::digits`
+*W* \
+**字組大小**。 狀態序列的每個字組大小 (位元)。 **前置條件：** `2u < W ≤ numeric_limits<UIntType>::digits`
 
-*位*\
+*N* \
 **狀態大小**。 狀態序列中的元素數 (值)。
 
-*分鐘*\
-**移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件**：`0 < M ≤ N`
+*M* \
+**移位大小**。 要在每個旋轉期間跳過的元素數。 **前置條件：** `0 < M ≤ N`
 
 *R*\
-**遮罩位元**。 **前置條件**：`R ≤ W`
+**遮罩位元**。 **前置條件：** `R ≤ W`
 
-*為*\
-**XOR 遮罩**。 **前置條件**：`A ≤ (1u<<W) - 1u`
+*@No__t_1*
+**XOR 遮罩**。 **前置條件：** `A ≤ (1u<<W) - 1u`
 
-*U*、 *S*、 *T*、 *L*\
+*U*、 *S*、 *T*、 *L* \
 **調和移位參數**。 用做編碼 (調和) 期間的移位值。 前置條件：`U,S,T,L ≤ W`
 
-*D*、 *B*、 *C*\
+*D*、 *B*、 *C* \
 **調和位元遮罩參數**。 用做編碼 (調和) 期間的位元遮罩值。 前置條件：`D,B,C ≤ (1u<<W) - 1u`
 
-*F*\
+*F* \
 **初始化乘數**。 用於協助初始化序列。 前置條件：`F ≤ (1u<<W) - 1u`
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ||||
 |-|-|-|
@@ -69,9 +69,9 @@ class mersenne_twister_engine;
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述亂數引擎，會傳回封閉間隔 [ `0`, `2`<sup>W</sup> - `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它會從這個大數值中一次抽取*W*位, 而且當它使用所有的位時, 它會藉由移動並混合位來訣竅大數值, 使其具有一組要從中解壓縮的新位。 `N` `W`如果`N - M` 至少已`M` *呼叫 N*次, 引擎的狀態會是最後一個使用的值, 否則為已使用的位值和的最後一個值。`W` `operator()`種子.
+此類別樣板描述亂數字引擎，並傳回封閉間隔 [`0`，`2`<sup>W</sup>  -  `1`] 的值。 它會保留具有 `W * (N - 1) + R` 位元的大整數值。 它會從這個大數值中一次抽取*W*位，而且當它使用所有的位時，它會藉由移動並混合位來訣竅大數值，使其具有一組要從中解壓縮的新位。 如果 `operator()` 至少已呼叫*N*次，引擎的狀態就是最後一個 `N` `W` 位值，否則為已使用的 `M` `W` 位值和種子的最後一個 `N - M` 值。
 
-產生器會訣竅它所保有的大數值, 方法是使用由 shift 值*N*和*M*定義的雙絞線、扭轉值*R*和條件 XOR *a*來保存。此外, 也會根據值*U*、 *D*、 *S*、 *B*、 *T*、 *C*和*L*所定義的位雜亂矩陣, 將原始移位暫存器的位編碼 (調和)。
+產生器會訣竅它所保有的大數值，方法是使用由 shift 值*N*和*M*定義的雙絞線、扭轉值*R*和條件 XOR *a*來保存。此外，也會根據值*U*、 *D*、 *S*、 *B*、 *T*、 *C*和*L*所定義的位雜亂矩陣，將原始移位暫存器的位編碼（調和）。
 
 範本引數 `UIntType` 必須大到足以保留多達 `2`<sup>W</sup> - `1` 的值。 其他範本引數的值必須滿足下列需求：`2u < W, 0 < M, M ≤ N, R ≤ W, U ≤ W, S ≤ W, T ≤ W, L ≤ W, W ≤ numeric_limits<UIntType>::digits, A ≤ (1u<<W) - 1u, B ≤ (1u<<W) - 1u, C ≤ (1u<<W) - 1u, D ≤ (1u<<W) - 1u, and F ≤ (1u<<W) - 1u`。
 
@@ -109,8 +109,8 @@ typedef mersenne_twister_engine<unsigned long long, 64, 312, 156,
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

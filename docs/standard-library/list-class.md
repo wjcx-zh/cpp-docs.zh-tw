@@ -98,16 +98,16 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-ms.openlocfilehash: c38c6823f48d61cf616f7b91a96dfcc040d666ed
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246489"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687831"
 ---
 # <a name="list-class"></a>list 類別
 
-「C++ 標準程式庫」list 類別是序列容器的範本類別，這些容器是以線性排列方式維護其元素，可讓在序列內任何位置進行的插入和刪除都相當有效率。 此序列會儲存為雙向連結的元素清單，每一個都包含某種 *Type* 類型的成員。
+C++標準程式庫清單類別是序列容器的類別範本，會以線性相片順序維護其元素，並允許在序列內的任何位置有效率地插入和刪除。 此序列會儲存為雙向連結的元素清單，每一個都包含某種 *Type* 類型的成員。
 
 ## <a name="syntax"></a>語法
 
@@ -118,11 +118,11 @@ class list
 
 ### <a name="parameters"></a>參數
 
-*型別*\
+*類型*\
 要存放在清單中的元素資料類型。
 
-*配置器*\
-代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數為選擇性，而且預設值是**allocator**\<*類型*>。
+配置*器 \*
+代表預存配置器物件的類型，封裝有關清單之記憶體配置和解除配置的詳細資訊。 這個引數是選擇性的，而且預設值是 \<*類型* **> 的配置**器。
 
 ## <a name="remarks"></a>備註
 
@@ -132,9 +132,9 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 
 當成員函式必須插入或清除清單的元素時，就會發生清單重新配置。 在所有這種情況下，只有指向受控制序列的清除部份的迭代器或參考會變成無效。
 
-包括「C++ 標準程式庫」標準標頭 \<list> 以定義[容器](../standard-library/stl-containers.md)範本類別清單和數個支援範本。
+包含C++標準程式庫標準標頭 \<list >，以定義[容器](../standard-library/stl-containers.md)類別範本清單和數個支援範本。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>建構函式
 
@@ -142,13 +142,13 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 |-|-|
 |[list](#list)|建構特定大小的清單，或具有特定值之元素的清單，或具有特定 `allocator` 的清單，或是做為其他清單的複本。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示清單物件的 `allocator` 類別。|
 |[const_iterator](#const_iterator)|一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。|
-|[const_pointer](#const_pointer)|此類型提供的指標**const**清單中的項目。|
+|[const_pointer](#const_pointer)|一種類型，提供清單中**const**元素的指標。|
 |[const_reference](#const_reference)|一種類型，提供對儲存在清單中以供讀取和執行 **const** 運算之 **const** 元素的參考。|
 |[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。|
 |[difference_type](#difference_type)|類型，提供兩個指出相同清單內之元素的迭代器間的差異。|
@@ -208,7 +208,7 @@ list 成員函式 [merge](#merge)、[reverse](#reverse)、[unique](#unique)、[r
 
 **標頭**：\<list>
 
-## <a name="allocator_type"></a> allocator_type
+## <a name="allocator_type"></a>allocator_type
 
 類型，表示清單物件的配置器類別。
 
@@ -218,13 +218,13 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-`allocator_type` 範本參數同義*Allocator*。
+`allocator_type` 是*範本參數配置*器的同義字。
 
 ### <a name="example"></a>範例
 
 請參閱 [get_allocator](#get_allocator) 的範例。
 
-## <a name="assign"></a> 指派
+## <a name="assign"></a>值賦
 
 清除清單上的項目，並複製一組新的項目至目標清單。
 
@@ -247,16 +247,16 @@ void assign(
 *第一個*\
 複製來源的引數清單中，項目範圍的第一個項目的位置。
 
-*最後一個*\
+*上次*\
 複製來源的引數清單中，項目範圍之外第一個項目的位置。
 
 *計數*\
 插入清單中項目的複本數目。
 
-*val*\
+*Val* \
 插入清單中之項目的值。
 
-*IList*\
+*IList* \
 initializer_list，包含要插入之項目。
 
 ### <a name="remarks"></a>備註
@@ -313,7 +313,7 @@ int main()
 c1 = 10 20 30c1 = 50 60c1 = 4 4 4 4 4 4 4c1 = 10 20 30 40
 ```
 
-## <a name="back"></a> 上一步
+## <a name="back"></a>返回
 
 傳回清單的最後一個元素的參考。
 
@@ -363,7 +363,7 @@ The last integer of c1 is 11
 The next-to-last integer of c1 is 10
 ```
 
-## <a name="begin"></a> 開始
+## <a name="begin"></a>起點
 
 傳回迭代器，其定址清單中的第一個元素。
 
@@ -379,7 +379,7 @@ iterator begin();
 
 ### <a name="remarks"></a>備註
 
-如果傳回值`begin`指派給`const_iterator`，無法修改 list 物件中的項目。 如果傳回值`begin`指派給`iterator`，可以修改 list 物件中的項目。
+如果 `begin` 的傳回值指派給 `const_iterator`，則無法修改清單物件中的元素。 如果 `begin` 的傳回值指派給 `iterator`，則可以修改清單物件中的元素。
 
 ### <a name="example"></a>範例
 
@@ -416,9 +416,9 @@ The first element of c1 is 1
 The first element of c1 is now 20
 ```
 
-## <a name="cbegin"></a> cbegin
+## <a name="cbegin"></a>cbegin
 
-傳回**const**迭代器，定址範圍中的第一個元素。
+傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -426,13 +426,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-A **const**雙向存取迭代器指向第一個項目範圍或只是空白範圍結尾之外的位置 (空白範圍， `cbegin() == cend()`)。
+**Const**雙向存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`begin()`和`cbegin()`。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -442,7 +442,7 @@ auto i2 = Container.cbegin();
 // i2 is Container<T>::const_iterator
 ```
 
-## <a name="cend"></a> cend
+## <a name="cend"></a>cend
 
 傳回 `const` 迭代器，為範圍中最後一個項目之外的位置定址。
 
@@ -458,7 +458,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請考慮`Container`的可修改 (非**const**) 的任何一種支援的容器`end()`和`cend()`。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -470,7 +470,7 @@ auto i2 = Container.cend();
 
 `cend` 所傳回的值不應該取值。
 
-## <a name="clear"></a> 清除
+## <a name="clear"></a>明確
 
 清除清單的所有元素。
 
@@ -505,7 +505,7 @@ The size of the list is initially 3
 The size of list after clearing is 0
 ```
 
-## <a name="const_iterator"></a> const_iterator
+## <a name="const_iterator"></a>const_iterator
 
 一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。
 
@@ -521,9 +521,9 @@ typedef implementation-defined const_iterator;
 
 請參閱 [back](#back) 的範例。
 
-## <a name="const_pointer"></a> const_pointer
+## <a name="const_pointer"></a>const_pointer
 
-提供的指標**const**清單中的項目。
+提供清單中**const**元素的指標。
 
 ```cpp
 typedef typename Allocator::const_pointer const_pointer;
@@ -535,7 +535,7 @@ typedef typename Allocator::const_pointer const_pointer;
 
 在大部分情況下，應該使用 [iterator](#iterator) 存取 list 物件中的元素。
 
-## <a name="const_reference"></a> const_reference
+## <a name="const_reference"></a>const_reference
 
 一種類型，提供對儲存在清單中以供讀取和執行 **const** 運算之 **const** 元素的參考。
 
@@ -579,7 +579,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="const_reverse_iterator"></a> const_reverse_iterator
+## <a name="const_reverse_iterator"></a>const_reverse_iterator
 
 一種類型，提供可讀取清單中任何 **const** 元素的雙向迭代器。
 
@@ -595,7 +595,7 @@ typedef std::reverse_iterator<const_iterator> const_reverse_iterator;
 
 請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="crbegin"></a> crbegin
+## <a name="crbegin"></a>crbegin
 
 傳回 const 迭代器，其定址反轉清單中的第一個元素。
 
@@ -639,7 +639,7 @@ int main( )
 The last element in the list is 30.
 ```
 
-## <a name="crend"></a> crend
+## <a name="crend"></a>crend
 
 傳回 const 迭代器，其定址反轉清單中最後一個元素的下一個位置。
 
@@ -690,7 +690,7 @@ int main( )
 The first element in the list is: 10
 ```
 
-## <a name="difference_type"></a> difference_type
+## <a name="difference_type"></a>difference_type
 
 帶正負號的整數類型，可以用來表示範圍 (介於迭代器所指的元素) 中清單的元素數。
 
@@ -747,7 +747,7 @@ The number '20' is in c1 collection 2 times.
 The number '30' is in c1 collection 3 times.
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a>emplace
 
 將就地建構的元素插入清單的指定位置。
 
@@ -757,10 +757,10 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*其中*\
+*Where* \
 目標 [list](../standard-library/list-class.md) 中第一個元素的插入位置。
 
-*val*\
+*val* \
 加入至 `list` 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -791,7 +791,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_back"></a> emplace_back
+## <a name="emplace_back"></a>emplace_back
 
 將就地建構的元素加入至清單的結尾。
 
@@ -801,7 +801,7 @@ void emplace_back(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*val* \
 新增到 [list](../standard-library/list-class.md) 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -832,7 +832,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="emplace_front"></a> emplace_front
+## <a name="emplace_front"></a>emplace_front
 
 將就地建構的元素加入至清單的開頭。
 
@@ -842,7 +842,7 @@ void emplace_front(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*val* \
 新增到 [list](../standard-library/list-class.md) 開頭的元素。
 
 ### <a name="remarks"></a>備註
@@ -873,7 +873,7 @@ int main( )
 Moved first element: a
 ```
 
-## <a name="empty"></a> 空白
+## <a name="empty"></a>空
 
 測試清單是否為空的。
 
@@ -910,7 +910,7 @@ int main( )
 The list is not empty.
 ```
 
-## <a name="end"></a> 結束
+## <a name="end"></a>成品
 
 傳回迭代器，其定址清單中最後一個元素的後接位置。
 
@@ -925,7 +925,7 @@ iterator end();
 
 ### <a name="remarks"></a>備註
 
-`end` 用來測試是否迭代器已到達其清單的結尾。
+`end` 可用來測試反覆運算器是否已到達其清單的結尾。
 
 ### <a name="example"></a>範例
 
@@ -970,7 +970,7 @@ The new next-to-last integer of c1 is 400
 The list is now: 10 400 30
 ```
 
-## <a name="erase"></a> 清除
+## <a name="erase"></a>抹
 
 從清單中的指定位置移除元素或某個元素範圍。
 
@@ -981,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>參數
 
-*其中*\
+*Where* \
 要從清單中移除之元素項目的位置。
 
 *第一個*\
 從清單中移除的第一個元素的位置。
 
-*最後一個*\
+*上次*\
 從清單中移除的最後一個元素之後的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1045,7 +1045,7 @@ After erasing the first element, the list becomes: 20 30 40 50
 After erasing all elements but the first, the list becomes:  20
 ```
 
-## <a name="front"></a> 前端
+## <a name="front"></a>前端
 
 傳回清單中第一個元素的參考。
 
@@ -1092,7 +1092,7 @@ The first integer of c1 is 10
 The first integer of c1 is 11
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 傳回用來建構清單的配置器物件複本。
 
@@ -1106,7 +1106,7 @@ Allocator get_allocator() const;
 
 ### <a name="remarks"></a>備註
 
-list 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
+list 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
 
 ### <a name="example"></a>範例
 
@@ -1132,7 +1132,7 @@ int main( )
 }
 ```
 
-## <a name="insert"></a> 插入
+## <a name="insert"></a>插入
 
 將某個元素或一些元素或某個元素範圍，插入清單的指定位置。
 
@@ -1149,10 +1149,10 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>參數
 
-*其中*\
+*Where* \
 目標 list 中第一個元素插入的位置。
 
-*val*\
+*Val* \
 插入清單中之項目的值。
 
 *計數*\
@@ -1161,7 +1161,7 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 *第一個*\
 要複製之引數清單的元素範圍中，第一個元素的位置。
 
-*最後一個*\
+*上次*\
 要複製之引數清單的元素範圍中，最後一個元素之後的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1238,7 +1238,7 @@ int main()
 }
 ```
 
-## <a name="iterator"></a> 迭代器
+## <a name="iterator"></a>定位
 
 類型，提供可以讀取或修改清單中之任何元素的雙向迭代器。
 
@@ -1248,13 +1248,13 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>備註
 
-型別`iterator`可用來修改元素的值。
+類型 `iterator` 可用來修改元素的值。
 
 ### <a name="example"></a>範例
 
 請參閱 [begin](#begin) 的範例。
 
-## <a name="list"></a> 清單
+## <a name="list"></a>名單
 
 建構特定大小的清單，或具有特定值之元素的清單，或具有特定配置器的清單，或是做為其他一些清單的所有或部分複本。
 
@@ -1278,42 +1278,42 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>參數
 
-*Al*\
+*Al* \
 搭配這個物件使用的配置器類別。
 
 *計數*\
 建構的清單中元素的數目。
 
-*val*\
+*Val* \
 list 中元素的值。
 
-*權限*\
+*Right* \
 list，其中有要複製的建構的 list。
 
 *第一個*\
 要複製的元素範圍中第一個元素的位置。
 
-*最後一個*\
+*上次*\
 超出要複製之元素範圍的第一個元素的位置。
 
-*IList*\
+*IList* \
 包含要複製之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
-所有建構函式會儲存配置器物件 (*Al*) 並初始化 list。
+所有的函式都會儲存配置器物件（*Al*）並初始化清單。
 
 [get_allocator](#get_allocator) 會傳回一份用來建構清單的配置器物件複本。
 
-前兩個建構函式指定空的初始 list，第二個指定的配置器類型 (*Al*) 使用。
+前兩個函式會指定空的初始清單，第二個則指定要使用的配置器類型（*Al*）。
 
-第三個建構函式會指定重複指定數字 (*計數*) 類別的預設值的項目`Type`。
+第三個函式會指定類別 `Type` 之預設值專案的指定數目（*計數*）重複。
 
-第四個和第五個建構函式指定的重複 (*計數*) 值之項目的*Val*。
+第四個和第五個函式會指定值*Val*的（*Count*）元素重複。
 
-第六個建構函式會指定一份清單*右*。
+第六個函式會指定清單*許可權*的複本。
 
-第七個建構函式會移動清單*右*。
+第七個函數會將清單*右移*。
 
 第八個建構函式使用 initializer_list 來指定元素。
 
@@ -1412,7 +1412,7 @@ int main()
 c1 = 0 0 0c2 = 2 2 2 2 2c3 = 1 1 1c4 = 2 2 2 2 2c5 = 2 2c6 = 2 2 2c7 = 2 2 2c8 = 1 2 3 4
 ```
 
-## <a name="max_size"></a> max_size
+## <a name="max_size"></a>max_size
 
 傳回清單的最大長度。
 
@@ -1443,7 +1443,7 @@ int main( )
 }
 ```
 
-## <a name="merge"></a> 合併式
+## <a name="merge"></a>merge
 
 從引數清單中移除元素，並將其插入目標清單中，然後以遞增順序或其他指定的順序，排序新合併的元素集合。
 
@@ -1456,17 +1456,17 @@ void merge(list<Type, Allocator>& right, Traits comp);
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*right* \
 要與目標清單合併的引數清單。
 
-*Comp*\
+*comp* \
 比較運算子，用來排序目標清單的元素。
 
 ### <a name="remarks"></a>備註
 
-引數清單*右*會與目標清單合併。
+引數清單*right*會與目標清單合併。
 
-引數和目標清單必須以相同的比較關聯排序，而結果序列會依此排序。 第一個成員函式的預設排序為遞增的順序。 第二個成員函式會施加使用者指定的比較作業*comp*類別的`Traits`。
+引數和目標清單必須以相同的比較關聯排序，而結果序列會依此排序。 第一個成員函式的預設排序為遞增的順序。 第二個成員函式會強加使用者指定的 `Traits`*類別的比較*作業。
 
 ### <a name="example"></a>範例
 
@@ -1527,7 +1527,7 @@ c3 = 5 1
 After merging c3 with c2 according to the '>' comparison relation: c2 = 6 5 4 3 2 1
 ```
 
-## <a name="op_eq"></a> 運算子 =
+## <a name="op_eq"></a>operator =
 
 用另一個清單複本取代清單的元素。
 
@@ -1538,12 +1538,12 @@ list& operator=(list&& right);
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*right* \
 要複製到 `list` 中的 [list](../standard-library/list-class.md)。
 
 ### <a name="remarks"></a>備註
 
-在清除任何現有的項目，在之後`list`，運算子會複製或移動的內容*右*到`list`。
+清除 `list` 中的任何現有專案之後，運算子會將*右邊*的內容複寫或移至 `list`。
 
 ### <a name="example"></a>範例
 
@@ -1586,7 +1586,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a> 指標
+## <a name="pointer"></a>滑鼠
 
 提供指向清單中項目的指標。
 
@@ -1596,11 +1596,11 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-型別`pointer`可用來修改元素的值。
+類型 `pointer` 可用來修改元素的值。
 
 在大部分情況下，應該使用 [iterator](#iterator) 存取 list 物件中的元素。
 
-## <a name="pop_back"></a> pop_back
+## <a name="pop_back"></a>pop_back
 
 刪除清單結尾的項目。
 
@@ -1642,7 +1642,7 @@ The last element is: 2
 After deleting the element at the end of the list, the last element is: 1
 ```
 
-## <a name="pop_front"></a> pop_front
+## <a name="pop_front"></a>pop_front
 
 刪除清單開頭的元素。
 
@@ -1684,7 +1684,7 @@ The second element is: 2
 After deleting the element at the beginning of the list, the first element is: 2
 ```
 
-## <a name="push_back"></a> push_back
+## <a name="push_back"></a>push_back
 
 將元素加入至清單的結尾。
 
@@ -1694,7 +1694,7 @@ void push_back(void push_back(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*val* \
 加入至 list 結尾的元素。
 
 ### <a name="remarks"></a>備註
@@ -1738,7 +1738,7 @@ New last element: 2
 Moved first element: a
 ```
 
-## <a name="push_front"></a> push_front
+## <a name="push_front"></a>push_front
 
 將元素加入至清單的開頭。
 
@@ -1749,7 +1749,7 @@ void push_front(Type&& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*val* \
 加入至清單的開頭的元素。
 
 ### <a name="remarks"></a>備註
@@ -1793,7 +1793,7 @@ New first element: 2
 Moved first element: a
 ```
 
-## <a name="rbegin"></a> rbegin
+## <a name="rbegin"></a>rbegin
 
 傳回迭代器，為反轉清單中的第一個項目定址。
 
@@ -1864,7 +1864,7 @@ The reversed list is: 30 20 10
 The last element in the list is now 40.
 ```
 
-## <a name="reference"></a> 參考
+## <a name="reference"></a>證明
 
 類型，提供儲存在清單中之元素的參考。
 
@@ -1900,7 +1900,7 @@ The first element is 10
 The second element is 20
 ```
 
-## <a name="remove"></a> 移除
+## <a name="remove"></a>取消
 
 清除清單中符合指定之值的項目。
 
@@ -1910,7 +1910,7 @@ void remove(const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*val*\
+*val* \
 值，由項目持有時，會導致項目從清單移除。
 
 ### <a name="remarks"></a>備註
@@ -1957,7 +1957,7 @@ The initial list is c1 = 5 100 5 200 5 300
 After removing elements with value 5, the list becomes c2 = 100 200 300
 ```
 
-## <a name="remove_if"></a> remove_if
+## <a name="remove_if"></a>remove_if
 
 從清單中清除符合指定述詞的元素。
 
@@ -1968,7 +1968,7 @@ void remove_if(Predicate pred)
 
 ### <a name="parameters"></a>參數
 
-*預測*\
+*pred* \
 一元述詞，如果元素符合此述詞，就會從清單中刪除該元素。
 
 ### <a name="example"></a>範例
@@ -2022,7 +2022,7 @@ The initial list is c1 = 3 4 5 6 7 8
 After removing the odd elements, the list becomes c2 = 4 6 8
 ```
 
-## <a name="rend"></a> rend
+## <a name="rend"></a>rend
 
 傳回迭代器，定址對象是反轉 list 中最後一個元素後面的位置。
 
@@ -2108,7 +2108,7 @@ The reversed list is: 30 20 10
 The modified reversed list is: 30 20 40
 ```
 
-## <a name="resize"></a> 調整大小
+## <a name="resize"></a>調整
 
 指定清單的新大小。
 
@@ -2119,17 +2119,17 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>參數
 
-*_Newsize*\
+*_Newsize* \
 清單的新大小。
 
-*val*\
-如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，就會為新元素指派類別的預設值。
+*val* \
+如果新大小大於原始大小，便是要新增到清單中之新元素的值。 如果省略此值，則為新元素的類別指定預設值。
 
 ### <a name="remarks"></a>備註
 
-如果清單的大小小於所要求的大小 *_Newsize*，直到達到所要求的大小，將會新增到清單的項目。
+如果清單的大小小於所要求的大小， *_Newsize*會將專案加入至清單中，直到達到所要求的大小為止。
 
-如果清單的大小大於所要求的大小，會刪除最接近清單結尾的項目，直到清單達到的大小 *_Newsize*。
+如果清單的大小大於所要求的大小，則會刪除最接近清單結尾的元素，直到清單達到 *_Newsize*的大小為止。
 
 如果清單現在的大小與所要求的大小相同，則不會採取任何動作。
 
@@ -2175,7 +2175,7 @@ The reduced size of c1 is: 2
 The value of the last element is now 20
 ```
 
-## <a name="reverse"></a> 反向
+## <a name="reverse"></a>反向
 
 反轉項目在清單中出現的順序。
 
@@ -2219,7 +2219,7 @@ c1 = 10 20 30
 Reversed c1 = 30 20 10
 ```
 
-## <a name="reverse_iterator"></a> reverse_iterator
+## <a name="reverse_iterator"></a>reverse_iterator
 
 類型，提供可以讀取或修改反轉清單中之元素的雙向迭代器。
 
@@ -2235,7 +2235,7 @@ typedef std::reverse_iterator<iterator> reverse_iterator;
 
 請參閱 [rbegin](#rbegin) 的範例。
 
-## <a name="size"></a> 大小
+## <a name="size"></a>容量
 
 傳回清單中項目的數目。
 
@@ -2276,7 +2276,7 @@ List length is 1.
 List length is now 2.
 ```
 
-## <a name="size_type"></a> size_type
+## <a name="size_type"></a>size_type
 
 計算清單中元素數目的類型。
 
@@ -2288,7 +2288,7 @@ typedef typename Allocator::size_type size_type;
 
 請參閱 [size](#size) 的範例。
 
-## <a name="sort"></a> 排序
+## <a name="sort"></a>方式
 
 將清單的項目以遞增順序或以其他使用者指定的順序排序。
 
@@ -2301,14 +2301,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>參數
 
-*Comp*\
+*comp* \
 用來排序連續元素的比較運算子。
 
 ### <a name="remarks"></a>備註
 
 第一個成員函數預設會以遞增順序放置元素。
 
-排序的項目，根據使用者指定的比較運算，成員範本函式*comp*類別的`Traits`。
+成員範本函式會根據使用者指定的類別 *`Traits` 的比較*作業來排序元素。
 
 ### <a name="example"></a>範例
 
@@ -2353,7 +2353,7 @@ After sorting c1 = 10 20 30
 After sorting with 'greater than' operation, c1 = 30 20 10
 ```
 
-## <a name="splice"></a> splice
+## <a name="splice"></a>splice
 
 從來源清單移除項目，並將項目插入至目的地清單。
 
@@ -2373,30 +2373,30 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>參數
 
-*其中*\
+*Where* \
 目的地清單中的位置 (要在此位置之前插入)。
 
 *Source*\
 要插入至目的地清單的來源清單。
 
-*Iter*\
+*Iter* \
 要從來源清單插入的項目。
 
 *第一個*\
 要從來源清單插入的範圍中的第一個項目。
 
-*最後一個*\
+*上次*\
 要從來源清單插入的範圍中的最後一個項目，這之後的第一個位置。
 
 ### <a name="remarks"></a>備註
 
-第一對成員函式的來源清單中的所有項目插入至目的地清單所參考的位置之前*其中*和從來源清單移除所有項目。 (`&Source`不得等於`this`。)
+第一對成員函式會將來源清單中的所有專案插入目的地清單中，並在*Where*和從來源清單中移除所有元素之前。 （`&Source` 不能等於 `this`。）
 
-第二對成員函式插入所參考的項目*Iter*所參考之目的地清單中的位置之前*何處*並移除*Iter*從來源清單。 (若 `Where == Iter || Where == ++Iter`，則不會產生任何變更)。
+第二對成員函式會將*Iter*所參考的*元素，插入*到目的地清單中的位置，並從來源清單中移除*Iter* 。 (若 `Where == Iter || Where == ++Iter`，則不會產生任何變更)。
 
-第三對成員函式插入所指定之範圍 [ `First`， `Last`) 所參考之目的地清單中的項目之前*其中*和從來源清單中移除該範圍的項目。 (如果`&Source == this`，範圍`[First, Last)`不能包含所指向的項目*其中*。)
+第三對成員函式會將 [`First`，`Last`）指定的範圍，插入目的地清單中的專案之前，*其中*和會從來源清單中移除該範圍的元素。 （如果 `&Source == this`，`[First, Last)` 範圍不能包含在*其中*所指向的元素）。
 
-如果範圍接合插入 `N` 個元素，而且 `&Source != this`，則會將類別為 [iterator](../standard-library/forward-list-class.md#iterator) 的物件遞增 `N` 次。
+如果範圍接合插入 `N` 個元素，而且 `&Source != this`，則會將 [iterator](../standard-library/forward-list-class.md#iterator) 類別的物件遞增 `N` 次。
 
 在所有情況中，迭代器、指標或關於接合的項目的參考都會保持有效，並會傳送至目的地容器。
 
@@ -2476,7 +2476,7 @@ int main()
 Beginning state of lists:c1 = 2 elements: (10) (11)c2 = 3 elements: (20) (21) (22)c3 = 2 elements: (30) (31)c4 = 4 elements: (40) (41) (42) (43)After splicing c1 into c2:c1 = 0 elements:c2 = 5 elements: (20) (10) (11) (21) (22)After splicing the first element of c3 into c2:c3 = 1 elements: (31)c2 = 6 elements: (20) (10) (11) (30) (21) (22)After splicing a range of c4 into c2:c4 = 2 elements: (40) (43)c2 = 8 elements: (20) (10) (11) (30) (41) (42) (21) (22)
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a>調換
 
 交換兩個清單的項目。
 
@@ -2487,11 +2487,11 @@ friend void swap(list<Type, Allocator>& left, list<Type, Allocator>& right)
 
 ### <a name="parameters"></a>參數
 
-*權限*\
-提供要交換之元素的清單或其項目要交換與清單的清單*左*。
+*right* \
+提供要交換之元素的清單，或其專案要與*左邊*的清單交換的清單。
 
-*左邊*\
-清單，其項目是利用清單來交換*右*。
+*左方*\
+其專案要與清單*右邊*的專案交換的清單。
 
 ### <a name="example"></a>範例
 
@@ -2541,7 +2541,7 @@ After swapping with c2, list c1 is: 10 20
 After swapping with c3, list c1 is: 100
 ```
 
-## <a name="unique"></a> 唯一
+## <a name="unique"></a>唯一
 
 從清單移除相鄰的重複元素，或移除符合其他某些二元述詞的相鄰元素。
 
@@ -2554,7 +2554,7 @@ void unique(BinaryPredicate pred);
 
 ### <a name="parameters"></a>參數
 
-*預測*\
+*pred* \
 供二元述詞用來比較連續元素。
 
 ### <a name="remarks"></a>備註
@@ -2563,7 +2563,7 @@ void unique(BinaryPredicate pred);
 
 第一個成員函式會移除比較為等於其前一元素的每個元素。
 
-第二個成員函式會移除符合述詞函式的每個項目*pred*相較於其前一個項目。 您可以使用任何二元函式宣告的物件中\<功能 > 引數的標頭*pred*或建立您自己。
+第二個成員函式會移除符合述詞函式*pred*的每個專案（相較于其前面的元素）。 您可以使用 \<functional > 標頭中所宣告的任何二元函式物件來*pred*引數，也可以建立您自己的函數。
 
 ### <a name="example"></a>範例
 
@@ -2614,7 +2614,7 @@ After removing successive duplicate elements, c2 = -10 10 20 -10
 After removing successive unequal elements, c3 = -10 -10
 ```
 
-## <a name="value_type"></a> value_type
+## <a name="value_type"></a>value_type
 
 類型，表示儲存在清單中的資料類型。
 

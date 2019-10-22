@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: 2a7ce9a8593b0dd93b1c3cfe58f2d87fe10ea997
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 2d9f0bedd9e541e65f04ac20375f16f41413cf03
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240538"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72684439"
 ---
-# <a name="unarynegate-class"></a>unary_negate 類別
+# <a name="unary_negate-class"></a>unary_negate 類別
 
-提供一個成員函式的樣板類別，這個成員函式可將指定一元函式的傳回值變成負值。 支持的 C + + 17 中已被取代[not_fn](functional-functions.md#not_fn)。
+提供成員函式的類別樣板，該函式會將指定之一元函數的傳回值否定。 已在 c + + 17 中取代為[not_fn](functional-functions.md#not_fn)。
 
 ## <a name="syntax"></a>語法
 
@@ -31,10 +31,10 @@ class unary_negate
 
 ### <a name="parameters"></a>參數
 
-*函式*\
+*Func* \
 要變為負值的一元函式。
 
-*左邊*\
+*左方*\
 要變為負值之一元函式的運算元。
 
 ## <a name="return-value"></a>傳回值
@@ -43,7 +43,7 @@ class unary_negate
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存一元函式物件的複本 *\_Func*。 它會定義其成員函式`operator()`做為傳回`!_Func(left)`。
+類別範本會將一元函式物件的複本儲存 *\_Func*。 它會將其成員函式 `operator()` 定義為傳回 `!_Func(left)`。
 
 `unary_negate` 的建構函式很少會直接使用。 Helper 函式 [not1](../standard-library/functional-functions.md#not1) 提供宣告和使用 **unary_negator** 配接器述詞的更簡易方式。
 

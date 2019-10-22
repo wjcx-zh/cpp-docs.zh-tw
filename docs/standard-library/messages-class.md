@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-ms.openlocfilehash: f417c33d5502f8e5bd247936c8a0f93007239924
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449931"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687691"
 ---
 # <a name="messages-class"></a>messages 類別
 
-此樣板類別描述可以做為地區設定 facet 的物件，以便從特定地區設定的國際化訊息目錄擷取當地語系化訊息。
+類別樣板描述可以做為地區設定 facet 的物件，以便從特定地區設定的國際化訊息目錄中取出當地語系化的訊息。
 
 目前，雖然實作 messages 類別，但沒有訊息。
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
@@ -59,7 +59,7 @@ class messages : public messages_base;
 |-|-|
 |[messages](#messages)|訊息 facet 建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -81,7 +81,7 @@ class messages : public messages_base;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  messages::char_type
 
@@ -93,7 +93,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型與範本參數 **CharType** 同義。
 
 ## <a name="close"></a>  messages::close
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*\
+*_Catval* \
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
@@ -122,12 +122,12 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>參數
 
-*_Catval*\
+*_Catval* \
 要關閉的目錄。
 
 ### <a name="remarks"></a>備註
 
-Protected 成員函式會關閉訊息目錄 *_Catval*, 這必須由先前的[do_open](#do_open)呼叫所開啟。
+Protected 成員函式會關閉訊息目錄 *_Catval*，這必須由先前的[do_open](#do_open)呼叫所開啟。
 
 *_Catval* 必須是從先前開啟且尚未關閉的目錄取得。
 
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*\
+*_Catval* \
 識別值，指定所要搜尋的訊息目錄。
 
-*設置*\
+*_ _* @No__t_1
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message*\
+*_Message* \
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*\
+*_Dfault* \
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -167,7 +167,7 @@ virtual string_type do_get(
 
 ### <a name="remarks"></a>備註
 
-受保護的成員函式會嘗試從訊息目錄 *_Catval*取得訊息序列。 在此情況下, 它可能會使用 *_ _* 、 *_Message*和 *_Dfault* 。
+受保護的成員函式會嘗試從訊息目錄 *_Catval*取得訊息序列。 在此情況下，它可能會使用 *_ _* 、 *_Message*和 *_Dfault* 。
 
 ### <a name="example"></a>範例
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*\
+*_Catname* \
 所要搜尋之目錄的名稱。
 
-*_Loc*\
+*_Loc* \
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>參數
 
-*_Catval*\
+*_Catval* \
 識別值，指定所要搜尋的訊息目錄。
 
-*設置*\
+*_ _* @No__t_1
 第一個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Message*\
+*_Message* \
 第二個識別的項目，用來找出訊息目錄中的訊息。
 
-*_Dfault*\
+*_Dfault* \
 失敗時要傳回的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -254,23 +254,23 @@ protected: messages(
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname*\
+*_Locname* \
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
-- 0物件的存留期是由包含它的地區設定所管理。
+- 0：物件的存留期由包含該物件的地區設定來管理。
 
-- 1:物件的存留期必須以手動方式管理。
+- 1：物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \> 1：未定義這些值。
 
-無法提供任何直接範例，因為解構函式受到保護。
+由於解構函式會受到保護，因此沒有直接的範例。
 
 建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
 
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>參數
 
-*_Catname*\
+*_Catname* \
 所要搜尋之目錄的名稱。
 
-*_Loc*\
+*_Loc* \
 要在目錄中搜尋的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -310,9 +310,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其中此類別的物件可儲存訊息序列的複本。
+此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存訊息序列的複本。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [messages_base 類別](../standard-library/messages-base-class.md)\

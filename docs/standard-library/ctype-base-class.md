@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fac75d90c4e40a22e8ceae974c3f49c3d50a1d3
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449352"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688198"
 ---
-# <a name="ctypebase-class"></a>ctype_base 類別
+# <a name="ctype_base-class"></a>ctype_base 類別
 
-此類別可作為 [ctype](../standard-library/ctype-class.md) 範本類別 Facet 的基底類別。 ctype 類別的基底類別，用來定義用於個別字元或在整個範圍內字元分類或測試的列舉類型。
+類別會作為類別樣板[ctype](../standard-library/ctype-class.md)facet 的基類。 ctype 類別的基底類別，用來定義用於個別字元或在整個範圍內字元分類或測試的列舉類型。
 
 ## <a name="syntax"></a>語法
 
@@ -69,14 +69,14 @@ struct ctype_base : public locale::facet
 
 - **graph** (函式 [isgraph](../standard-library/locale-functions.md#isgraph))
 
-您可以搭配使用 OR 與這些常數來描述分類的組合。 特別是, **alnum** = = ( **Alpha** &#124; **數位**\)和**graph** \= \= \(  alnum &#124; **punct**) 一律為 true。
+您可以搭配使用 OR 與這些常數來描述分類的組合。 特別是， **alnum** = **= （** &#124;英**數位**\) 和**graph** \= \= \( **alnum** &#124; **punct**）一律為 true。
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

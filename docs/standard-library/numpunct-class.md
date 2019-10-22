@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: c23f23172894ce0b5adcbff1d2db58c78caf7a03
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454190"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689213"
 ---
 # <a name="numpunct-class"></a>numpunct 類別
 
-樣板類別，描述可以做為區域 facet 的物件，以描述用來表示數值和布林運算式格式和標點符號資訊之 `CharType` 類型的序列。
+類別樣板，描述可以做為本機 facet 的物件，以描述用來表示數值和布林運算式格式和標點符號相關資訊 `CharType` 類型的序列。
 
 ## <a name="syntax"></a>語法
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
@@ -63,7 +63,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -76,7 +76,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|
 |[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|
-|[do_falsename](#do_falsename)|受保護的虛擬成員函式, 呼叫以傳回字串, 做為**false**值的文字表示。|
+|[do_falsename](#do_falsename)|受保護的虛擬成員函式，呼叫以傳回字串，做為**false**值的文字表示。|
 |[do_grouping](#do_grouping)|受保護的虛擬成員函式，呼叫以傳回決定如何將數字群組在小數點左側的地區設定特定規則。|
 |[do_thousands_sep](#do_thousands_sep)|受保護的虛擬成員函式，呼叫以傳回要做為千位分隔符號的地區設定特定項目。|
 |[do_truename](#do_truename)|受保護的虛擬成員函式，呼叫以傳回要當做 **true** 值的文字表示的字串。|
@@ -89,7 +89,7 @@ class numpunct : public locale::facet;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  numpunct::char_type
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱[群組](#grouping)的範例, 其中會呼叫`grouping`虛擬成員函式。
+請參閱[群組](#grouping)的範例，其中 `grouping` 會呼叫虛擬成員函式。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -216,7 +216,7 @@ virtual CharType do_thousands_sep() const;
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會傳回類型`CharType`的地區設定特定元素, 以做為任何小數點左邊的群組分隔符號使用。
+受保護的虛擬成員函式會傳回 `CharType` 類型的地區設定特定元素，以做為任何小數點左邊的群組分隔符號。
 
 ### <a name="example"></a>範例
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>傳回值
 
-字串, 包含要做為`CharType`值**false**之文字表示的序列。
+字串，其中包含用來做為值**false**之文字表示的 `CharType`s 序列。
 
 ### <a name="remarks"></a>備註
 
@@ -345,22 +345,22 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
-- 0物件的存留期是由包含它的地區設定所管理。
+- 0：物件的存留期由包含該物件的地區設定來管理。
 
-- 1:物件的存留期必須以手動方式管理。
+- 1：物件的存留期必須以手動方式管理。
 
-- \>1:未定義這些值。
+- \> 1：未定義這些值。
 
-無法提供任何直接範例，因為解構函式受到保護。
+由於解構函式會受到保護，因此沒有直接的範例。
 
-此函式會使用**locale::** [facet](../standard-library/locale-class.md#facet_class)(`_Refs`) 初始化其基底物件。
+此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
 
 ## <a name="string_type"></a>  numpunct::string_type
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 [basic_string](../standard-library/basic-string-class.md) 樣板類別的特製化，其物件可儲存標點符號序列的複本。
+此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存標點符號序列的複本。
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 
@@ -466,7 +466,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [facet 類別](../standard-library/locale-class.md#facet_class)\

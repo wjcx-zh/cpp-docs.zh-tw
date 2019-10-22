@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - allocators header
 ms.assetid: 4393a607-4df8-4278-bbb2-c8ec52e60b83
-ms.openlocfilehash: 5de872080bc02f4654f53d94928b5e44dbc36816
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 3619f3810f167fef291ad3def4a2b94f9a6b9b1a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453688"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688484"
 ---
 # <a name="ltallocatorsgt"></a>&lt;allocators&gt;
 
@@ -33,7 +33,7 @@ C++ 標準程式庫中的節點容器 (std::list、std::set、std::multiset、st
 
 與非節點的容器 (例如 C++ 標準程式庫容器 std::vector、std::deque 和 std::basic_string) 搭配使用時，配置器範本將會正確運作，但可能無法透過預設配置器來提供任何效能改善。
 
-配置器是一種範本類別，其所描述的物件管理物件和所指定類型物件陣列的儲存空間配置和釋放。 配置器物件是供 C++ 標準程式庫中的數個容器範本類別使用。
+配置器是一個類別樣板，其中描述的物件會管理物件的儲存空間配置和釋放，以及所指定類型之物件的陣列。 C++標準程式庫中的數個容器類別範本會使用配置器物件。
 
 配置器是此類型的所有範本︰
 
@@ -42,7 +42,7 @@ template<class Type>
 class allocator;
 ```
 
-其中，範本引數 `Type` 是配置器執行個體所管理的類型。 C++ 標準程式庫會提供定義於 [\<memory>](../standard-library/memory.md)的預設配置器範本類別 [allocator](../standard-library/allocator-class.md)。 \<allocators> 標頭提供下列配置器︰
+其中，範本引數 `Type` 是配置器執行個體所管理的類型。 標準程式庫提供預設配置[器、類別範本配置](../standard-library/allocator-class.md)器，其定義于[\<memory >](../standard-library/memory.md)中。 C++ \<allocators> 標頭提供下列配置器︰
 
 - [allocator_newdel](../standard-library/allocator-newdel-class.md)
 
@@ -77,7 +77,7 @@ std::list<int, alloc<int> > _List1;
 
 _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](../standard-library/sync-per-thread-class.md)同步處理篩選。
 
-區塊配置器是快取或篩選。 快取是接受 std::size_t 類型之一個引數的範本類別。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須使用**new**運算子來取得記憶體, 但不需要對每個區塊進行個別的 operator **new**呼叫。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
+區塊配置器是快取或篩選。 快取是一個類別樣板，其接受 std：： size_t 類型的一個引數。 它會定義區塊配置器，以配置和解除配置單一大小的記憶體區塊。 它必須使用**new**運算子來取得記憶體，但不需要對每個區塊進行個別的 operator **new**呼叫。 例如，它會從較大的區塊進行子配置，或快取已解除配置的區塊以進行後續重新配置。
 
 如果編譯器無法編譯重新繫結在具現化範本時所使用的 std::size_t 引數值，則不一定是傳遞給快取成員函式配置和解除配置的 _Sz 引數值。
 
@@ -121,7 +121,7 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](..
 
 |巨集|描述|
 |-|-|
-|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|產生配置器範本類別。|
+|[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)|產生配置器類別範本。|
 |[CACHE_CHUNKLIST](../standard-library/allocators-functions.md#cache_chunklist)|產生 `stdext::allocators::cache_chunklist<sizeof(Type)>`。|
 |[CACHE_FREELIST](../standard-library/allocators-functions.md#cache_freelist)|產生 `stdext::allocators::cache_freelist<sizeof(Type), max>`。|
 |[CACHE_SUBALLOC](../standard-library/allocators-functions.md#cache_suballoc)|產生 `stdext::allocators::cache_suballoc<sizeof(Type)>`。|
@@ -136,12 +136,12 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](..
 
 ### <a name="classes"></a>類別
 
-|類別|描述|
+|執行個體|描述|
 |-|-|
 |[allocator_base](../standard-library/allocator-base-class.md)|定義從同步處理篩選條件建立使用者定義的配置器時所需的基底類別和一般功能。|
 |[allocator_chunklist](../standard-library/allocator-chunklist-class.md)|描述物件，該物件使用 [cache_chunklist](../standard-library/cache-chunklist-class.md) 類型的快取來管理物件的儲存空間配置和釋放。|
 |[allocator_fixed_size](../standard-library/allocator-fixed-size-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_fixed_size](../standard-library/max-fixed-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|
-|[allocator_newdel](../standard-library/allocator-newdel-class.md)|執行配置器, 它會使用**operator delete**來解除配置記憶體區塊, 並使用**new 運算子**來配置記憶體區塊。|
+|[allocator_newdel](../standard-library/allocator-newdel-class.md)|執行配置器，它會使用**operator delete**來解除配置記憶體區塊，並使用**new 運算子**來配置記憶體區塊。|
 |[allocator_suballoc](../standard-library/allocator-suballoc-class.md)|描述物件，該物件使用 [cache_suballoc](../standard-library/cache-suballoc-class.md) 類型的快取來管理 `Type`類型之物件的儲存空間配置和釋放。|
 |[allocator_unbounded](../standard-library/allocator-unbounded-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_unbounded](../standard-library/max-unbounded-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|
 |[allocator_variable_size](../standard-library/allocator-variable-size-class.md)|描述物件，該物件搭配使用 [cache_freelist](../standard-library/cache-freelist-class.md) 類型的快取與 [max_variable_size](../standard-library/max-variable-size-class.md) 所管理的長度，來管理 `Type` 類型之物件的儲存空間配置和釋放。|
@@ -153,7 +153,7 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](..
 |[max_none](../standard-library/max-none-class.md)|描述 max 類別物件，其可將 [freelist](../standard-library/freelist-class.md) 物件限制為零 (最大長度)。|
 |[max_unbounded](../standard-library/max-unbounded-class.md)|描述 max 類別物件，其不會限制 [freelist](../standard-library/freelist-class.md) 物件的最大長度。|
 |[max_variable_size](../standard-library/max-variable-size-class.md)|描述 max 類別物件，其可將 [freelist](../standard-library/freelist-class.md) 物件限制為與已配置記憶體區塊數目成正比的最大長度。|
-|[rts_alloc](../standard-library/rts-alloc-class.md)|rts_alloc 範本類別描述一個[篩選](../standard-library/allocators-header.md)，其可保留快取執行個體的陣列，並判斷在執行階段 (而不是編譯時期) 配置和解除配置時所使用的執行個體。|
+|[rts_alloc](../standard-library/rts-alloc-class.md)|Rts_alloc 類別樣板描述的[篩選準則](../standard-library/allocators-header.md)會保存快取實例的陣列，並決定在執行時間（而不是編譯時期）配置和解除配置時所使用的實例。|
 |[sync_none](../standard-library/sync-none-class.md)|描述未提供任何同步處理的同步處理篩選。|
 |[sync_per_container](../standard-library/sync-per-container-class.md)|描述可為每個配置器物件提供不同快取物件的同步處理篩選。|
 |[sync_per_thread](../standard-library/sync-per-thread-class.md)|描述可為每個執行緒提供不同快取物件的同步處理篩選。|
@@ -165,6 +165,6 @@ _Lst1 會配置具有 `allocator_chunklist` 的節點以及 [sync_per_thread](..
 
 **命名空間：** stdext
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

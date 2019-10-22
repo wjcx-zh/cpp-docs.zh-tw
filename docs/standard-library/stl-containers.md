@@ -2,15 +2,15 @@
 title: C++ 標準程式庫容器
 ms.date: 11/04/2016
 helpviewer_keywords:
-- C++ Standard Library, template class containers
+- C++ Standard Library, class template containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449601"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686096"
 ---
 # <a name="c-standard-library-containers"></a>C++ 標準程式庫容器
 
@@ -121,7 +121,7 @@ int main()
 
 map、multimap、set 和 multiset 中的下列成員函式已多載來支援異質查閱：
 
-1. find
+1. 尋找
 
 1. count
 
@@ -155,7 +155,7 @@ map、multimap、set 和 multiset 中的下列成員函式已多載來支援異�
 
 ## <a name="accessing-container-elements"></a>存取容器項目
 
-容器項目是透過使用迭代器進行存取。 如需詳細資訊，請參閱 [Iterator](../standard-library/iterators.md)。
+容器項目是透過使用迭代器進行存取。 如需詳細資訊，請參閱[迭代器](../standard-library/iterators.md)。
 
 > [!NOTE]
 > 您也可以使用[範圍架構的 for 迴圈](../cpp/range-based-for-statement-cpp.md)來逐一執行 C++ 標準程式庫集合。
@@ -166,9 +166,9 @@ map、multimap、set 和 multiset 中的下列成員函式已多載來支援異�
 
 ### <a name="comparing-dissimilar-containers-c14"></a>比較不同的容器 (C++14)
 
-在 c + + 14 和更新版本中, 您可以使用兩個完整範圍的其中一個`std::equal`、 `std::mismatch`或`std::is_permutation`函數多載, 來比較不同的容器和/或不同的元素類型。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。
+在 c + + 14 和更新版本中，您可以使用兩個完整範圍的其中一個 `std::equal`、`std::mismatch` 或 `std::is_permutation` 函數多載，來比較不同的容器和/或不同的元素類型。 這些多載可讓您比較具有不同長度的容器。 這些多載比較不容易發生使用者錯誤並已最佳化，以在比較不同長度的容器時的常數時間傳回 false。 因此，我們建議您使用這些多載，除非 (1) 您有非常清楚的理由不要使用，或 (2) 您使用未受益於雙重範圍最佳化的 [std::list](../standard-library/list-class.md) 容器。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [容器](../cpp/containers-modern-cpp.md)\
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)\

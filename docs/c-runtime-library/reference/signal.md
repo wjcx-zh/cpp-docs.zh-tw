@@ -53,7 +53,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ## <a name="return-value"></a>傳回值
 
-**信號**會傳回與指定信號相關聯的先前函數值。 例如，如果**SIG_IGN***先前的值*，則傳回值也會是**SIG_IGN**。 **SIG_ERR**的傳回值表示發生錯誤;在此情況下， **errno**會設定為**EINVAL**。
+**信號**會傳回與指定信號相關聯的先前函數值。 例如，如果**SIG_IGN** *先前的值*，則傳回值也會是**SIG_IGN**。 **SIG_ERR**的傳回值表示發生錯誤;在此情況下， **errno**會設定為**EINVAL**。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 

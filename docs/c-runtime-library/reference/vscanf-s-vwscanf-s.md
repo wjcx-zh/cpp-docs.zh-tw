@@ -73,7 +73,7 @@ int vwscanf_s(
 緩衝區大小包含結束的 null。 您可以使用寬度規格欄位，以確保在讀取的 Token 可納入緩衝區。 如果沒有使用寬度規格欄位，則讀取的語彙基元太大而無法納入緩衝區中，並且不會寫入該緩衝區。
 
 > [!NOTE]
-> Size 參數的類型不是不**帶正負***號*，而不是**size_t**。
+> Size 參數的類型不是不**帶正負** *號*，而不是**size_t**。
 
 如需詳細資訊，請參閱 [scanf 寬度規格](../../c-runtime-library/scanf-width-specification.md)。
 

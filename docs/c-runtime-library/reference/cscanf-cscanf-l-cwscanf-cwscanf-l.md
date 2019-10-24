@@ -1,6 +1,6 @@
 ---
 title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
-ms.date: 11/04/2016
+ms.date: 10/21/2019
 api_name:
 - _cscanf_l
 - _cscanf
@@ -48,16 +48,19 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: ee4c380d3e470fa6e3d12066d3bf34918acf1bea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938496"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778305"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
 從主控台讀取格式化資料。 這些函式已有更安全的版本可用；請參閱 [_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md)。
+
+> [!NOTE] 
+> 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列的函式已宣告為**內嵌**，並已移至 `<stdio.h>` 和 `<conio.h>` 標頭。 如果您要遷移較舊的程式碼，您可能會看到與這些函式的連接有*LNK2019* 。 如需詳細資訊，請參閱[視覺效果C++變更歷程記錄 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
 
 > [!IMPORTANT]
 > 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -122,7 +125,7 @@ int _cwscanf_l(
 |**_cscanf**、 **_cscanf_l**|\<conio.h>|
 |**_cwscanf**、 **_cwscanf_l**|\<conio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -161,7 +164,7 @@ Enter three integers: 1 2 3
 You entered 3 2 1
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>

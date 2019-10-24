@@ -3,26 +3,26 @@ title: 桌面應用程式（ C++Visual）
 ms.date: 07/28/2019
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
 ms.topic: overview
-ms.openlocfilehash: 91fcc596a4c30e3fa74043c846eda6f06b666f2c
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 98909097cf791d55f5971a89643839e07b0c60d1
+ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274729"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72778511"
 ---
 # <a name="desktop-applications-visual-c"></a>桌面應用程式（ C++Visual）
 
-中C++的*桌面應用程式*是一種原生應用程式，可以存取一組完整的 Windows api，並在視窗或系統主控台中執行。 中的C++桌面應用程式可以透過 windows 10 在 windows xp 上執行（雖然 windows xp 已不再受到正式支援，而且有許多自 then 之後引進的 windows api）。 
+中C++的*桌面應用程式*是一種原生應用程式，可以存取一組完整的 Windows api，並在視窗或系統主控台中執行。 中的C++桌面應用程式可以透過 windows 10 在 windows xp 上執行（雖然 windows xp 已不再受到正式支援，而且有許多自 then 之後引進的 windows api）。
 
-桌面應用程式與通用 Windows 平臺（UWP）應用程式不同，它可以在執行 Windows 10 的電腦上，也可在 XBox、Windows Phone、Surface Hub 和其他裝置上執行。 如需桌上型電腦與UWP 應用程式，請參閱[選擇您的技術](/windows/win32/choose-your-technology)。
+桌面應用程式與通用 Windows 平臺（UWP）應用程式不同，它可以在執行 Windows 10 的電腦上，也可在 XBox、Windows Phone、Surface Hub 和其他裝置上執行。 如需有關桌面與 UWP 應用程式的詳細資訊，請參閱[選擇您的技術](/windows/win32/choose-your-technology)。
 
-### <a name="desktop-bridge"></a>桌面橋接器
+## <a name="desktop-bridge"></a>桌面橋接器
 
 在 Windows 10 中，您可以將現有的桌面應用程式或 COM 物件封裝為 UWP 應用程式，並新增 UWP 功能（例如觸控），或從新式 Windows API 集合呼叫 Api。 您也可以在 Visual Studio 中將 UWP 應用程式新增至桌面解決方案，並將其封裝在單一套件中，然後使用 Windows Api 在兩者之間進行通訊。
 
 在 Visual Studio 2017 15.4 版和更新版本中，您可以建立 Windows 應用程式套件專案，以大幅簡化封裝現有桌面應用程式的工作。 有一些限制適用于您的桌面應用程式所使用的登錄呼叫或 Api，但在許多情況下，您可以建立替代的程式碼路徑，以在應用程式套件中執行時達到類似的功能。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
-### <a name="terminology"></a>用語
+## <a name="terminology"></a>用語
 
 - *Win32*應用程式是中C++的 Windows 桌面應用程式，可以利用原生[Windows C Api 和/或 COM Api](/windows/win32/apiindex/windows-api-list) CRT 和標準程式庫 api，以及協力廠商程式庫。 在視窗中執行的 Win32 應用程式需要開發人員在 Windows 程式函式內明確地處理 Windows 訊息。 無論名稱是什麼，Win32 應用程式都可以編譯為32位（x86）或64位（x64）二進位檔。 在 Visual Studio IDE 中，x86 和 Win32 這兩者都是同義。
 
@@ -51,10 +51,10 @@ ms.locfileid: "71274729"
 
 |標題|描述|
 |-----------|-----------------|
-|[Windows 程式開發](/windows/win32/index)|包含 Windows 應用程式開發介面和 COM 的相關資訊 (部分 Windows 應用程式開發介面和協力廠商 DLL 會實作為 COM 物件)。|
-|[Hilo開發C++ Windows 7 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|說明如何建立豐富型用戶端 Windows 傳統型應用程式，這個應用程式會使用 Windows 動畫和 Direct2D 建立浮動切換式 (Carousel-based) 使用者介面。  本教學課程在 Windows 7 之後尚未更新，但仍然提供 Win32 程式設計的完整介紹。|
+|[Windows 開發](/windows/win32/index)|包含 Windows 應用程式開發介面和 COM 的相關資訊 (部分 Windows 應用程式開發介面和協力廠商 DLL 會實作為 COM 物件)。|
+|[Hilo：開發適用於 Windows 7 的 C++ 應用程式](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|說明如何建立豐富型用戶端 Windows 傳統型應用程式，這個應用程式會使用 Windows 動畫和 Direct2D 建立浮動切換式 (Carousel-based) 使用者介面。  本教學課程在 Windows 7 之後尚未更新，但仍然提供 Win32 程式設計的完整介紹。|
 |[使用 C++ 進行 Windows 程式設計的概觀](overview-of-windows-programming-in-cpp.md)|說明中C++Windows 桌面程式設計的主要功能。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)

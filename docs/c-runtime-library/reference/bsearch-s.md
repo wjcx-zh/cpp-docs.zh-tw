@@ -1,6 +1,6 @@
 ---
 title: bsearch_s
-ms.date: 11/04/2016
+ms.date: 10/22/2019
 api_name:
 - bsearch_s
 api_location:
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: 9bcd18add216bb0fc2f203183d82e37ede65dba5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943476"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811152"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-對已排序陣列執行二進位搜尋。 這是具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [bsearch](bsearch.md) 版本。
+對已排序陣列執行二進位搜尋。 此函式是具有 CRT 中的[安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述之安全性增強功能的[bsearch](bsearch.md)版本。
 
 ## <a name="syntax"></a>語法
 
@@ -52,39 +52,39 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>參數
 
-*key*<br/>
-要搜尋的物件。
+*金鑰*\
+要搜尋之索引鍵的指標。
 
-*base*<br/>
-搜尋資料的基底指標。
+*base*\
+搜尋資料基底的指標。
 
-*number*<br/>
+\*數目*
 項目數。
 
-*width*<br/>
+*寬度*\
 項目的寬度。
 
-*compare*<br/>
+*比較*\
 比較兩個項目的回呼函式。 第一個引數是*內容*指標。 第二個引數是搜尋索引*鍵*的指標。 第三個引數是要與索引*鍵*比較之陣列元素的指標。
 
-*context*<br/>
+*內容*\
 可以在比較函式中存取的物件指標。
 
 ## <a name="return-value"></a>傳回值
 
 **bsearch_s**會傳回*基底*所指向陣列中索引*鍵*的出現指標。 如果找不到索引*鍵*，則函數會傳回**Null**。 如果陣列不是以遞增排序次序，或是包含具有相同索引鍵的重複記錄，則無法預測結果。
 
-若傳遞了無效的參數到此函式，則會叫用無效參數處理常式，如 [Parameter Validation](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果將不正確參數傳遞至函式，它會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**Null**。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ### <a name="error-conditions"></a>錯誤狀況
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*number*|*width*|**errno**|
-|**NULL**|any|any|any|any|**EINVAL**|
-|any|**NULL**|any|!= 0|any|**EINVAL**|
-|any|any|any|any|= 0|**EINVAL**|
-|any|any|**NULL**|an|any|**EINVAL**|
+|*key*|*base*|*compare*|*項數*|*width*|**errno**|
+|**NULL**|任何|任何|任何|任何|**EINVAL**|
+|任何|**NULL**|任何|!= 0|任何|**EINVAL**|
+|任何|任何|任何|任何|= 0|**EINVAL**|
+|任何|任何|**NULL**|一個|任何|**EINVAL**|
 
 ## <a name="remarks"></a>備註
 
@@ -104,7 +104,7 @@ void *bsearch_s(
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> 和 \<search.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -192,9 +192,9 @@ cat cow dog goat horse human pig rat
 cat found at 002F0F04
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[搜尋和排序](../../c-runtime-library/searching-and-sorting.md)<br/>
-[_lfind](lfind.md)<br/>
-[_lsearch](lsearch.md)<br/>
-[qsort](qsort.md)<br/>
+[搜尋和排序](../../c-runtime-library/searching-and-sorting.md)\
+[_lfind](lfind.md)\
+[_lsearch](lsearch.md)\
+[qsort](qsort.md)

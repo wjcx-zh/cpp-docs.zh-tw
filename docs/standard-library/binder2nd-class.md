@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: 46c8bb2ae450b3ef56f2729717fb9b5563a7c139
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 297f91dd9283b9f004247d2d1814b30a17e7ffa2
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689941"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890098"
 ---
 # <a name="binder2nd-class"></a>binder2nd 類別
 
@@ -28,7 +28,7 @@ class binder2nd
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder2nd(
-        const Operation& Func,
+        const Operation& func,
         const typename Operation::second_argument_type& right);
 
     result_type operator()(const argument_type& left) const;
@@ -38,7 +38,7 @@ class binder2nd
 
 ### <a name="parameters"></a>參數
 
-*Func* \
+*func*\
 要轉換為一元函式物件的二元函式物件。
 
 *right* \
@@ -53,9 +53,9 @@ class binder2nd
 
 ## <a name="remarks"></a>備註
 
-類別樣板會在 `op` 中儲存二元函式物件 _ *Func*的複本，並在 `value` 中儲存一份*許可權*複本。 它會將其成員函式 `operator()` 定義為傳回**op**（`left`， **value**）。
+類別樣板會將二元函式物件*func*的複本儲存在 `op`中，而 *`value`中的*複本。 它會將其成員函式 `operator()` 定義為傳回 `op(left, value)`。
 
-如果 `Func` 是 `Operation` 類型的物件，而 c 是常數，則[bind2nd](../standard-library/functional-functions.md#bind2nd) （`Func`，`c`）相當於 `binder2nd` 類別的函式 **`binder2nd` \< 作業 > （** `Func`，0），而且更方便。
+如果*func*是 `Operation` 類型的物件，而 c 是常數，則[bind2nd](../standard-library/functional-functions.md#bind2nd)`(func, c)` 相當於 `binder2nd` 類別的函式 `binder2nd<Operation>(func, c)`，而且更方便。
 
 ## <a name="example"></a>範例
 

@@ -79,12 +79,12 @@ helpviewer_keywords:
 - std::forward_list::splice_after
 - std::forward_list::swap
 - std::forward_list::unique
-ms.openlocfilehash: f1015e53e137b9001bd90233c281345d474bc03f
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: e13242aa41cc99cdd01a6f16b607ef568195d659
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689693"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890195"
 ---
 # <a name="forward_list-class"></a>forward_list 類別
 
@@ -108,7 +108,7 @@ class forward_list
 
 ## <a name="remarks"></a>備註
 
-@No__t_0 物件會透過以配置器[類別](../standard-library/allocator-class.md)（通常稱為 `std::allocator)`）為基礎的預存*物件，配置*並釋放它所控制之序列的儲存體。 如需詳細資訊，請參閱[配置器](../standard-library/allocators.md)。 配置器物件必須與 `allocator` 類型的物件具有相同的外部介面。
+`forward_list` 物件會透過以配置器[類別](../standard-library/allocator-class.md)（通常稱為 `std::allocator)`）為基礎的預存*物件，配置*並釋放它所控制之序列的儲存體。 如需詳細資訊，請參閱[配置器](../standard-library/allocators.md)。 配置器物件必須與 `allocator` 類型的物件具有相同的外部介面。
 
 > [!NOTE]
 > 如果已指派容器物件，就不會複製預存配置器物件。
@@ -678,7 +678,7 @@ template <class Predicate>
 
 ### <a name="remarks"></a>備註
 
-`forward_list::merge` 會從 `forward_list` `right` 移除元素，並將它們插入這個 `forward_list`。 如下所述，兩個序列必須由相同的述詞來排序。 結合後的序列也會根據該比較函式物件來排序。
+`forward_list::merge` 會從 `forward_list` `right`移除元素，並將它們插入這個 `forward_list`。 如下所述，兩個序列必須由相同的述詞來排序。 結合後的序列也會根據該比較函式物件來排序。
 
 如果迭代器 `Pi` 和`Pj` 有指定 `i` 和 `j` 位置的元素，則每當 `i < j`，第一個成員函式會強加 `!(*Pj < *Pi)` 的順序 （元素會依照 `ascending` 順序排序）。第二個成員函式會在 `i < j` 時，強加 `! comp(*Pj, *Pi)` 順序。
 
@@ -810,7 +810,7 @@ void resize(size_type _Newsize, const Type& val);
 
 ### <a name="parameters"></a>參數
 
-*_Newsize* \
+*_Newsize*\
 重新調整過大小之轉送清單中的元素數。
 
 *val* \
@@ -1044,4 +1044,4 @@ typedef typename Allocator::value_type value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與範本參數 _ `Ty` 同義。
+這個類型與樣板參數 `Type`同義。

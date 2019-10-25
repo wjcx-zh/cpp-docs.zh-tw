@@ -299,7 +299,7 @@ ms.locfileid: "69631590"
 
    您可以在 [**平行堆疊**] 視窗的豐富資料提示方塊中，檢查 [ **gpu 執行緒**] 視窗中可用的 gpu 執行緒屬性。 若要這麼做，請將滑鼠指標停留在**sum_kernel_tiled**的堆疊框架上。 下圖顯示資料提示。
 
-   [![平行堆疊] 視窗的資料提示][(../../parallel/amp/media/campe.png "平行堆疊] 視窗的資料提示") <br/>
+   ![平行堆疊 視窗的資料提示](../../parallel/amp/media/campe.png "平行堆疊 視窗的資料提示") <br/>
    GPU 執行緒資料提示
 
    如需 [**平行堆疊**] 視窗的詳細資訊，請參閱[使用平行堆疊視窗](/visualstudio/debugger/using-the-parallel-stacks-window)。

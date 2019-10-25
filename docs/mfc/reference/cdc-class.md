@@ -3242,7 +3242,7 @@ static CBrush* PASCAL GetHalftoneBrush();
 
 「半色調筆刷」會顯示色彩為前景和背景色彩的圖元，以建立遞色圖樣。 以下是半色調筆刷所建立之遞色圖樣的範例。
 
-遞色![筆刷筆觸的詳細資料]遞色(../../mfc/reference/media/vc318s1.gif "筆刷筆觸的詳細資料")
+![筆刷筆觸的詳細資料](../../mfc/reference/media/vc318s1.gif "筆刷筆觸的詳細資料")
 
 ##  <a name="getkerningpairs"></a>  CDC::GetKerningPairs
 

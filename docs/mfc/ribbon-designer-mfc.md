@@ -71,7 +71,7 @@ ms.locfileid: "70907814"
 
 下圖顯示功能區設計工具中的不同元件。
 
-![MFC 功能區設計]工具(../mfc/media/ribbon_designer.png "MFC 功能區設計")工具
+![MFC 功能區設計](../mfc/media/ribbon_designer.png "MFC 功能區設計")
 
 - **工具箱**包含可以拖曳至設計工具介面的控制項。
 

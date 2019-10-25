@@ -44,7 +44,7 @@ ms.locfileid: "69513830"
 
    這個動作會變更專案巨集的值，包括標頭檔和程式庫檔案的路徑。 若要查看變更的內容，請在 [**專案屬性**] 對話方塊的 [**視覺C++目錄**] 區段中，選擇其中一個屬性（例如**Include 目錄**），選擇開啟下拉式清單\<，然後選擇 [編輯 >]。 [Include 目錄] 對話方塊隨即出現。
 
-   [![包含目錄] 對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
+   ![包含目錄 對話方塊](../windows/media/retargetingwindowssdk4.PNG "RetargetingWindowsSDK4")
 
    選擇 [**宏 > >** ] 按鈕，然後將宏清單向下卷到 [Windows SDK 宏]，以查看所有新的值。
 

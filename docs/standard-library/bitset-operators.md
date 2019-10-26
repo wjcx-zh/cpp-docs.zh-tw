@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243326"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890136"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 運算子
 
@@ -35,15 +35,15 @@ operator&(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `AND` 結合。
 
-*權限*\
+*right* \
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `AND` 結合。
 
 ### <a name="return-value"></a>傳回值
 
-Bitset，其項目是執行的結果`AND`的對應項目上的作業*左*並*右*。
+Bitset，其元素是對*left*和*right*的對應元素執行 `AND` 運算的結果。
 
 ### <a name="example"></a>範例
 
@@ -73,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> 運算子&lt;&lt;
+## <a name="op_lt_lt"></a>運算子&lt;&lt;
 
 將位元序列的文字表示插入輸出資料流。
 
@@ -86,18 +86,18 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*right* \
 要當做字串插入輸出資料流之 **bitset\<N>** 類型的物件。
 
 ### <a name="return-value"></a>傳回值
 
-位元序列中的文字表示法`ostr`。
+`ostr`中位序列的文字表示。
 
 ### <a name="remarks"></a>備註
 
-範本函式多載`operator<<`，允許 bitset，寫出，而不先將它轉換成字串。 樣板函式有效地執行：
+範本函式會 `operator<<`多載，允許寫出 bitset，而不先將它轉換成字串。 樣板函式有效地執行：
 
-**ostr** << _*右*。 [to_string](bitset-class.md) <**CharType**，**特性**， **allocator**\<**CharType**>> （)
+`ostr << right.`[to_string](bitset-class.md)`<CharType, Traits, allocator<CharType>>()`
 
 ### <a name="example"></a>範例
 
@@ -130,36 +130,34 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> 運算子&gt;&gt;
+## <a name="op_gt_gt"></a>運算子&gt;&gt;
 
 將位元字元的字串讀入 bitset。
 
 ```
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
-    basic_istream<CharType, Traits>&
-_Istr,
-    bitset<N>&
-    right);
+    basic_istream<CharType, Traits>& i_str,
+    bitset<N>& right);
 ```
 
 ### <a name="parameters"></a>參數
 
-*_Istr*\
+*i_str*\
 在輸入資料流中輸入以插入 bitset 的字串。
 
-*權限*\
+*right* \
 要從輸入資料流接收位元的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
-範本函式會傳回字串 *_Istr*。
+此範本函式會傳回字串*i_str*。
 
 ### <a name="remarks"></a>備註
 
-範本函式多載`operator>>`來儲存在 bitset _*右*值 bitset (`str`)，其中`str`是類型的物件[basic_string](basic-string-class.md)  < **Chartype>** ，**特性**，**配置器**\< **CharType**>>  **&** 取自 *_Istr*。
+樣板函式會多載 `operator>>` 以將值 `bitset(str)`儲存在 bitset*右側*，其中 `str` 是[basic_string](basic-string-class.md)類型的物件`< CharType, Traits, allocator< CharType > >&` 從*i_str*中解壓縮。
 
-此範本函式擷取項目 *_Istr*並將其插入 bitset，直到：
+此範本函式會從*i_str*中解壓縮專案，並將它們插入至 bitset，直到：
 
 - 已從輸入資料流中擷取所有位元元素並將其儲存在 bitset 中。
 
@@ -216,7 +214,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a> 運算子 ^
+## <a name="op_xor"></a>運算子 ^
 
 在兩個 bitset 之間執行位元 `EXCLUSIVE-OR`。
 
@@ -230,15 +228,15 @@ operator^(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
-*權限*\
+*right* \
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
 ### <a name="return-value"></a>傳回值
 
-Bitset，其項目是執行的結果`EXCLUSIVE-OR`的對應項目上的作業*左*並*右*。
+Bitset，其元素是對*left*和*right*的對應元素執行 `EXCLUSIVE-OR` 運算的結果。
 
 ### <a name="example"></a>範例
 
@@ -268,7 +266,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a> 運算子&#124;
+## <a name="op_or"></a>操作&#124;
 
 在兩個 bitset 之間執行位元 `OR`。
 
@@ -282,15 +280,15 @@ operator|(
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `OR` 結合。
 
-*權限*\
+*right* \
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `OR` 結合。
 
 ### <a name="return-value"></a>傳回值
 
-Bitset，其項目是執行的結果`OR`的對應項目上的作業*左*並*右*。
+Bitset，其元素是對*left*和*right*的對應元素執行 `OR` 運算的結果。
 
 ### <a name="example"></a>範例
 

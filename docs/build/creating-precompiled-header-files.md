@@ -1,22 +1,22 @@
 ---
 title: 先行編譯標頭檔
-ms.date: 08/19/2019
+ms.date: 10/24/2019
 helpviewer_keywords:
 - precompiled header files, creating
 - PCH files, creating
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 273d8cf996c2717339dd20dcbc7512f9c62afa8d
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
+ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69630498"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72920102"
 ---
 # <a name="precompiled-header-files"></a>先行編譯標頭檔
 
-當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如標準程式庫標頭`<vector>`）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。 
+當您在 Visual Studio 中建立新專案時，會將名為*pch*的先行*編譯標頭檔*新增至專案。 （在 Visual Studio 2017 和更早版本中，檔案稱為*stdafx.h*）。檔案的目的是加速組建程式。 所有穩定的標頭檔（例如，如 `<vector>`的標準程式庫標頭）都應該包含在此處。 只有在已修改先行編譯標頭檔或其中包含的任何檔案時，才會進行編譯。 如果您只在專案原始程式碼中進行變更，則組建會略過先行編譯標頭檔的編譯。 
 
 先行編譯標頭的編譯器選項為[/y](reference/y-precompiled-headers.md)。 在專案屬性頁中，選項位於 [設定**屬性] > [C/C++ > 先行編譯頭**檔]。 您可以選擇不使用先行編譯的標頭，而且可以指定標頭檔名稱以及輸出檔案的名稱和路徑。 
 
@@ -87,7 +87,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 ### <a name="pragma-consistency"></a>Pragma 一致性
 
-在建立 PCH 檔案期間處理的 pragma，通常會影響後續使用 PCH 檔案的檔案。 `comment` 和`message` pragma 不會影響編譯的其餘部分。
+在建立 PCH 檔案期間處理的 pragma，通常會影響後續使用 PCH 檔案的檔案。 `comment` 和 `message` pragma 不會影響編譯的其餘部分。
 
 這些 pragma 只會影響 PCH 檔案中的程式碼;它們不會影響後續使用 PCH 檔案的程式碼：
 
@@ -116,13 +116,13 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 下表列出使用先行編譯標頭檔時，可能會觸發不一致警告的編譯器選項：
 
-|選項|名稱|規則|
+|選項|[屬性]|規則|
 |------------|----------|----------|
 |/D|定義常數和宏|在建立先行編譯標頭檔和目前編譯的編譯之間必須是相同的。 未檢查已定義常數的狀態，但如果您的檔案相依于已變更常數的值，則可能會發生無法預期的結果。|
 |/E 或/EP|將預處理器輸出複製到標準輸出|先行編譯標頭檔無法與/E 或/EP 選項搭配使用。|
 |/Fr 或/FR|產生 Microsoft 來源瀏覽器資訊|若要讓/Fr 和/FR 選項有效使用/Yu 選項，則在建立先行編譯標頭檔時，它們也必須已生效。 使用先行編譯標頭的後續編譯也會產生來源瀏覽器資訊。 瀏覽器資訊會放在單一 .sbr 檔案中，並以與 CodeView 資訊相同的方式參考其他檔案。 您無法覆寫來源瀏覽器資訊的位置。|
 |/GA、/GD、/GE、/Gw 或/GW|Windows 通訊協定選項|在建立先行編譯標頭檔和目前編譯的編譯之間必須是相同的。 如果這些選項不同，則會產生警告訊息。|
-|/ZI|產生完整的調試資訊|如果在建立先行編譯標頭檔時此選項作用中，則使用先行編譯的後續編譯可以使用該偵錯工具資訊。 如果在建立先行編譯標頭檔時，/Zi 不會生效，則使用先行編譯的後續編譯和/Zi 選項會觸發警告。 偵錯工具資訊會放在目前的物件檔案中，而且在先行編譯標頭檔中定義的區域符號無法供偵錯工具使用。|
+|/Zi|產生完整的調試資訊|如果在建立先行編譯標頭檔時此選項作用中，則使用先行編譯的後續編譯可以使用該偵錯工具資訊。 如果在建立先行編譯標頭檔時，/Zi 不會生效，則使用先行編譯的後續編譯和/Zi 選項會觸發警告。 偵錯工具資訊會放在目前的物件檔案中，而且在先行編譯標頭檔中定義的區域符號無法供偵錯工具使用。|
 
 > [!NOTE]
 >  先行編譯標頭檔僅供 C 和C++原始程式檔使用。
@@ -139,7 +139,7 @@ PCH 檔案不包含建立時已生效之 include 路徑的相關資訊。 當您
 
 此圖使用三個圖表裝置來顯示組建程式的流程。 命名的矩形代表每個檔案或宏;這三個宏代表一或多個檔案。 陰影區域代表每個編譯或連結動作。 箭號顯示在編譯或連結程式期間結合的檔案和宏。
 
-![使用先行編譯標頭檔的 Makefile 結構](media/vc30ow1.gif "使用先行編譯標頭檔的 Makefile 結構") <br/>
+![使用先行編譯標頭檔的 makefile 結構](media/vc30ow1.gif "使用先行編譯標頭檔的 makefile 結構") <br/>
 使用先行編譯標頭檔的 Makefile 結構
 
 從圖表頂端開始，STABLEHDRS 和 BOUNDRY 都是 NMAKE 宏，其中列出不可能需要重新編譯的檔案。 這些檔案是由命令字串所編譯
@@ -179,9 +179,9 @@ UNSTABLEHDRS = unstable.h
 CLFLAGS = /c /W3
 # List all linker options common to both debug and final
 # versions of your code here:
-LINKFLAGS = /NOD /ONERROR:NOEXE
+LINKFLAGS = /nologo
 !IF "$(DEBUG)" == "1"
-CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi /f
+CLFLAGS   = /D_DEBUG $(CLFLAGS) /Od /Zi
 LINKFLAGS = $(LINKFLAGS) /COD
 LIBS      = slibce
 !ELSE
@@ -257,7 +257,7 @@ void savetime( void );
 //
 #ifndef __UNSTABLE_H
 #define __UNSTABLE_H
-#include<iostream.h>
+#include<iostream>
 void notstable( void );
 #endif // __UNSTABLE_H
 ```
@@ -270,6 +270,7 @@ void notstable( void );
 #include"another.h"
 #include"stable.h"
 #include"unstable.h"
+using namespace std;
 // The following code represents code that is deemed stable and
 // not likely to change. The associated interface code is
 // precompiled. In this example, the header files STABLE.H and
@@ -305,7 +306,7 @@ int main( void )
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](reference/c-cpp-building-reference.md)<br/>
 [MSVC 編譯器選項](reference/compiler-options.md)

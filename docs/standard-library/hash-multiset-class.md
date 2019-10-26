@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_multiset::upper_bound
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
-ms.openlocfilehash: 6b3a57d110f2416f5539399ed087e0acbb156991
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689590"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72890076"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset 類別
 
@@ -113,7 +113,7 @@ class hash_multiset
 要存放在 hash_multiset 中的項目資料類型。
 
 *特性*\
-包含兩個函式物件的類型，其中一個是二元述詞，可將兩個專案值做為排序關鍵字進行比較，以判斷其相對順序和雜湊函式，其為專案的一元述詞對應索引鍵值為不帶正負號`size_t` 類型的整數。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key> >`。
+包含兩個函式物件的類型，其中一個是二元述詞，可將兩個專案值做為排序關鍵字進行比較，以判斷其相對順序和雜湊函式，其為專案的一元述詞對應索引鍵值為不帶正負號`size_t`類型的整數。 這個引數是選用引數，且預設值是 `hash_compare<Key, less<Key> >`。
 
 配置*器 \*
 代表預存配置器物件的類型，封裝有關 hash_multiset 之記憶體配置和解除配置的詳細資訊。 這個引數是選用引數，且預設值是 `allocator<Key>`。
@@ -138,7 +138,7 @@ hash_multiset 是：
 
 當關聯值與其索引鍵的條件由應用程式滿足時，hash_multiset 應該是首選的關聯容器。 hash_multiset 的項目可以是多重，並當做自己的排序鍵，因此索引鍵不是唯一的。 例如，這種結構的模型是文字的已排序清單，其中文字可以出現多次。 如果不允許文字的多個項目，則 hash_set 是適當的容器結構。 如果唯一定義做為值附加至唯一關鍵字清單，則 hash_map 是包含這個資料的適當結構。 如果定義不是唯一的，則 hash_multimap 是首選容器。
 
-hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 `hash_compare<Key, less<Key> >` 類別的物件相同。 具體而言，針對 `Key` 類型的所有值索引*鍵*，呼叫 `Trait(Key)` 會產生 `size_t` 類型值的分佈。
+hash_multiset 會藉由呼叫 [value_compare](#value_compare) 類型的預存雜湊特性物件，排序它所控制的序列。 藉由呼叫成員函式 [key_comp](#key_comp)，即可存取這個預存物件。 這類函式物件的行為必須與 `hash_compare<Key, less<Key> >`類別的物件相同。 具體而言，針對 `Key`類型的所有值索引*鍵*，呼叫 `Trait(Key)` 會產生 `size_t`類型值的分佈。
 
 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 x 和 y 以及傳回值 true 或 false 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x*, *y*) 和 *f*( *y*, *x*) 皆為 false 時即相等，則施加於 hash_multiset 的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
@@ -157,10 +157,10 @@ hash_multiset 類別提供的迭代器是雙向迭代器，但類別成員函式
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|類型，表示 `allocator` 物件的 `hash_multiset` 類別。|
-|[const_iterator](#const_iterator)|一種類型，提供可讀取 `hash_multiset` 中**const**元素的雙向反覆運算器。|
-|[const_pointer](#const_pointer)|一種類型，提供 `hash_multiset` 中**const**元素的指標。|
+|[const_iterator](#const_iterator)|一種類型，提供可讀取 `hash_multiset`中**const**元素的雙向反覆運算器。|
+|[const_pointer](#const_pointer)|一種類型，提供 `hash_multiset`中**const**元素的指標。|
 |[const_reference](#const_reference)|一種類型，提供儲存在 `hash_multiset` 中以供讀取和執行**const**運算之**const**元素的參考。|
-|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取 `hash_multiset` 中任何**const**元素的雙向反覆運算器。|
+|[const_reverse_iterator](#const_reverse_iterator)|一種類型，提供可讀取 `hash_multiset`中任何**const**元素的雙向反覆運算器。|
 |[difference_type](#difference_type)|提供為相同 `hash_multiset` 中項目定址之兩個迭代器間差異的帶正負號的整數類型。|
 |[iterator](#iterator)|類型，其提供可讀取或修改 `hash_multiset` 中任何項目的雙向迭代器。|
 |[key_compare](#key_compare)|類型，提供可以比較兩個排序鍵的函式物件，以判斷兩個項目在 `hash_multiset` 中的相對順序。|
@@ -839,16 +839,17 @@ After the emplace insertion, hms3 contains a.
 ```cpp
 template <class ValTy>
 iterator insert(
-    const_iterator _Where,
+    const_iterator where,
     ValTy&& val);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*val*|要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
-|*_Where*|要開始搜尋正確的插入點的地方。 （如果插入點緊接在 *_Where*後面，則會在分攤的常數時間中進行插入，而不是對數時間）。|
+*val* \
+要插入到 [hash_multiset](../standard-library/hash-multiset-class.md) 中之元素的值，除非 `hash_multiset` 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。
+
+*where* \
+要開始搜尋正確的插入點的地方。 （如果插入點*緊接在後面*，則會在分攤的常數時間（而不是對數時間）中進行插入。
 
 ### <a name="return-value"></a>傳回值
 
@@ -856,7 +857,7 @@ iterator insert(
 
 ### <a name="remarks"></a>備註
 
-如果插入點緊接在 *_Where*之後，則會在分攤的常數時間（而不是對數時間）中進行插入。
+如果插入點緊接在*where*後面，則會在分攤的常數時間（而不是對數時間）中進行插入。
 
 ### <a name="example"></a>範例
 
@@ -1018,7 +1019,7 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。
 
-若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。
+若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。
 
 ### <a name="example"></a>範例
 
@@ -1091,7 +1092,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 從指定的位置移除 hash_multiset 中的項目或項目範圍，或移除符合指定索引鍵的項目。
 
 ```cpp
-iterator erase(iterator _Where);
+iterator erase(iterator where);
 
 iterator erase(iterator first, iterator last);
 
@@ -1100,7 +1101,7 @@ size_type erase(const key_type& key);
 
 ### <a name="parameters"></a>參數
 
-*_Where* \
+*where* \
 要從 hash_multiset 移除項目的位置。
 
 *第一個*\
@@ -1392,33 +1393,42 @@ hash_multiset(
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp);
 
 template <class InputIterator>
 hash_multiset(
-    InputIterator First,
-    InputIterator Last,
+    InputIterator first,
+    InputIterator last,
     const Traits& Comp,
     const Allocator& Al);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*Al*|要用於此 `hash_multiset` 物件的儲存體配置器類別，預設為 `Allocator`。|
-|*背光*|類型為 `const Traits` 並用來排序 `hash_multiset` 中元素的比較函式，預設為 `hash_compare`。|
-|*右邊*|要從中複製所建構之 `hash_multiset` 的 `hash_multiset`。|
-|*頭*|要複製的元素範圍中第一個元素的位置。|
-|*次*|超出要複製之元素範圍的第一個元素的位置。|
-|*IList*|包含要複製之項目的 initializer_list。|
+*Al* \
+要用於此 `hash_multiset` 物件的儲存體配置器類別，預設為 `Allocator`。
+
+*Comp* \
+類型為 `const Traits` 並用來排序 `hash_multiset` 中元素的比較函式，預設為 `hash_compare`。
+
+*Right* \
+要從中複製所建構之 `hash_multiset` 的 `hash_multiset`。
+
+*第一個*\
+要複製的元素範圍中第一個元素的位置。
+
+*上次*\
+超出要複製之元素範圍的第一個元素的位置。
+
+*IList* \
+包含要複製之項目的 initializer_list。
 
 ### <a name="remarks"></a>備註
 
@@ -1434,7 +1444,7 @@ hash_multiset(
 
 第五、第六及第七個建構函式會使用 initializer_list。
 
-最後三個建構函式會複製 `hash_multiset` 的範圍 [ `First`, `Last`)，其中會以越來越明確的方式指定類別 Compare 的比較函式及配置器的類型。
+最後三個建構函式會複製 `hash_multiset` 的範圍 [ `first`, `last`)，其中會以越來越明確的方式指定類別 Compare 的比較函式及配置器的類型。
 
 雜湊集合容器中元素的實際順序取決於雜湊函式、排序函式及雜湊表目前的大小，而通常無法像僅由排序函式決定的 set 容器一樣可供預測。
 
@@ -1447,46 +1457,53 @@ hash_multiset(
 
 ```cpp
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    iterator Where,
+    iterator where,
     const Type& Al);
 
 void insert(
     initializer_list<Type> IList);
 
 iterator insert(
-    const Type& Val);
+    const Type& value);
 
 iterator insert(
-    Iterator Where,
-    const Type& Val);
+    Iterator where,
+    const Type& value);
 
 template <class InputIterator>
 void insert(
-    InputIterator First,
-    InputIterator Last);
+    InputIterator first,
+    InputIterator last);
 
 template <class ValTy>
 iterator insert(
-    ValTy&& Val);
+    ValTy&& value);
 
 template <class ValTy>
 iterator insert(
-    const_iterator Where,
-    ValTy&& Val);
+    const_iterator where,
+    ValTy&& value);
 ```
 
 ### <a name="parameters"></a>參數
 
-|參數|描述|
-|-|-|
-|*初始值*|要插入到 hash_multiset 中之元素的值，除非 hash_multiset 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。|
-|*Where*|要開始搜尋正確的插入點的地方。 (如果插入點緊接在 `_Where` 之後，便可以分攤的常數時間 (而不是對數時間) 進行插入)。|
-|*頭*|要從 hash_multiset 複製之第一個元素的位置。|
-|*次*|緊接在要從 hash_multiset 複製之最後一個元素後面的位置。|
-|*IList*|包含要複製之元素的 initializer_list。|
+*value*\
+要插入到 hash_multiset 中之元素的值，除非 hash_multiset 已經包含該元素，或更廣泛地說，即索引鍵以同等方式排序的元素。
+
+*where* \
+要開始搜尋正確的插入點的地方。 （如果插入點*緊接在後面*，則會在分攤的常數時間（而不是對數時間）中進行插入。
+
+*第一個*\
+要從 hash_multiset 複製之第一個元素的位置。
+
+*上次*\
+緊接在要從 hash_multiset 複製之最後一個元素後面的位置。
+
+*IList* \
+包含要複製之元素的 initializer_list。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1494,11 +1511,11 @@ iterator insert(
 
 接下來的三個成員函式會使用 initializer_list。
 
-第三個成員函式會將元素值的序列插入到與每個元素對應的 hash_multiset 中，而這些元素是由指定 hash_multiset 之範圍 [ `First`, `Last`) 中的迭代器所定址。
+第三個成員函式會將元素值的序列插入到與每個元素對應的 hash_multiset 中，而這些元素是由指定 hash_multiset 之範圍 [ `first`, `last`) 中的迭代器所定址。
 
 ### <a name="remarks"></a>備註
 
-插入的提示版本可能會在分攤的常數時間內進行插入，而不是對數時間，如果插入點緊接在*Where*的後面。
+插入的提示版本可能會在分攤的常數時間內進行插入，而不是對數時間，如果插入點緊接在*where*的後面。
 
 ## <a name="iterator"></a>  hash_multiset::iterator
 
@@ -1540,7 +1557,7 @@ key_compare key_comp() const;
 
 預存物件會定義成員函式：
 
-**bool operator**( **const Key&** *_xVal,* **const Key&** _ `yVal`);
+`bool operator<(const Key& _xVal, const Key& _yVal);`
 
 如果 `_xVal` 在前面且在排序次序中不等於 `_yVal`，此函式就會傳回 **true**。
 
@@ -1767,7 +1784,7 @@ hash_multiset& operator=(hash_multiset&& right);
 
 ### <a name="remarks"></a>備註
 
-清除 `hash_multiset` 中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `hash_multiset`。
+清除 `hash_multiset`中的任何現有專案之後，`operator=` 會將*右側*的內容複寫或移至 `hash_multiset`。
 
 ### <a name="example"></a>範例
 

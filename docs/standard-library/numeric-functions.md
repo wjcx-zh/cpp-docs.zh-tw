@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
+ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246727"
+ms.lasthandoff: 10/24/2019
+ms.locfileid: "72889959"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
-## <a name="accumulate"></a> 累積
+## <a name="accumulate"></a>大量
 
 藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。
 
@@ -52,10 +52,10 @@ Type accumulate(
 *第一個*\
 輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的第一個元素。
 
-*最後一個*\
+*上次*\
 輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的最後一個元素，這是在反覆累積中實際包含的最終元素的後面一個位置。
 
-*val*\
+*val* \
 每個元素會根據指定的二進位運算，依次與其相加或合併的初始值。
 
 *binary_op*\
@@ -63,11 +63,11 @@ Type accumulate(
 
 ### <a name="return-value"></a>傳回值
 
-總和*val*並指定範圍的第一個樣板函式，或為第二個的範本函式，套用指定，而非加總作業，以執行二進位運算的結果中的所有項目 (*PartialResult， \*Iter*)，其中*PartialResult*是先前的應用程式的作業結果和`Iter`是迭代器，指向範圍中的項目。
+在第一個樣板函式的指定範圍中， *val*和所有專案的總和，或第二個樣板函式中，將指定的二進位運算（而不是 sum 運算）套用至（*PartialResult，\*Iter 的結果*），其中*PartialResult*是作業先前應用程式的結果，而 `Iter` 是指向範圍中元素的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-初始值可確保會有妥善定義的結果時的範圍是空的在此情況下*val*會傳回。 二進位運算不需要是關聯或交替運算。 結果會初始化為初始值*val* ，然後*結果* =  `binary_op` (*結果*， <strong>\*</strong>`Iter`) 透過範圍經過反覆計算其中`Iter`是迭代器，指向範圍內的連續項目。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保當範圍是空的時，會有一個妥善定義的結果，在此情況下會傳回*val* 。 二進位運算不需要是關聯或交換的。 結果會初始化為初始值*val* ，然後*結果* = `binary_op` （*result*， <strong>\*</strong>`Iter`）會反復地透過範圍計算，其中 `Iter` 是指向後續的反覆運算器範圍中的元素。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 
@@ -168,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a> adjacent_difference
+## <a name="adjacent_difference"></a>adjacent_difference
 
 計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。
 
@@ -208,7 +208,7 @@ ForwardIterator2 adjacent_difference(
 *第一個*\
 輸入迭代器，為輸入範圍中的第一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。
 
-*最後一個*\
+*上次*\
 輸入迭代器，為輸入範圍中的最後一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。
 
 *結果*\
@@ -219,17 +219,17 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，定址目的範圍結尾： `result` + (`last` - `first`)。
+輸出反覆運算器，用於定址目的範圍的結尾： `result` + （`last` - `first`）。
 
 ### <a name="remarks"></a>備註
 
-輸出迭代器 _*結果*允許為相同的迭代器做為輸入的迭代器 * 第一，* 以便`adjacent_difference`s 可以就地計算。
+輸出反覆運算器*結果*允許與輸入反覆運算器的*第一個*反覆運算器相同，因此可以就地計算 `adjacent_difference` 值。
 
-值的順序  1，  2  3，在輸入範圍中，第一個範本函式會儲存後續`partial_difference`s  1  2-  1、a3-  2，目的範圍中的。
+針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的 *`partial_difference` 值（1，* *a*2- *a*1，a3- *a*2）儲存在目的範圍中。
 
-值的順序  1，  2  3，在輸入範圍中，第二個樣板函式會儲存後續`partial_difference`s  1，  2 `binary_op`  1  3 `binary_op`  2，目的範圍中的。
+針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第二個樣板函式會在目的地中儲存連續*的 `partial_difference` 值 1* *、a 2 `binary_op`* *1、* *a*3 `binary_op` *a*2格或.
 
-二進位運算`binary_op`不一定要關聯或交替，因為套用的作業順序指定。
+二進位運算 `binary_op` 不需要是關聯或交換，因為已指定套用的作業順序。
 
 ### <a name="example"></a>範例
 
@@ -292,7 +292,7 @@ int main( )
 }
 ```
 
-## <a name="exclusive_scan"></a> exclusive_scan
+## <a name="exclusive_scan"></a>exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T>
@@ -316,14 +316,14 @@ ForwardIterator2 result,
 T init, BinaryOperation binary_op);
 ```
 
-## <a name="gcd"></a> gcd
+## <a name="gcd"></a>gcd
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
-## <a name="inclusive_scan"></a> inclusive_scan
+## <a name="inclusive_scan"></a>inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator>
@@ -355,7 +355,7 @@ ForwardIterator2 result,
 BinaryOperation binary_op, T init);
 ```
 
-## <a name="inner_product"></a> inner_product
+## <a name="inner_product"></a>inner_product
 
 計算兩個範圍的元素乘積總和並將它加到指定的初始值，或計算一般化程序的結果，其中總和及乘積二進位運算會由其他指定的二進位運算取代。
 
@@ -379,16 +379,16 @@ Type inner_product(
 
 ### <a name="parameters"></a>參數
 
-*first1*\
+*first1* \
 輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的第一個元素。
 
-*last1*\
+*last1* \
 輸入迭代器，定址對象是要計算出與第二個範圍之內乘積或一般化內乘積的第一個範圍中的最後一個元素。
 
-*first2*\
+*first2* \
 輸入迭代器，定址對象是要計算出與第一個範圍之內乘積或一般化內乘積的第二個範圍中的第一個元素。
 
-*val*\
+*val* \
 範圍之間的內乘積或一般化內乘積要與其相加的初始值。
 
 *binary_op1*\
@@ -401,19 +401,19 @@ Type inner_product(
 
 第一個成員函式會傳回元素乘積的總和，然後為它加上指定的初始值。 因此，針對 *a*i 和 *b*i 值，它會傳回：
 
-`val` + (  1 \* *b*1) + (  2 \* *b*2) + (  n \* *b*n)
+`val` + （*a*1 \* *b*1） + （*a*2 \* *b*2） + ... + （*a*n \* *b*n）
 
-藉由反覆取代*val*具有`val`+ (  我\* *b*我)。
+藉由使用 `val` + （*a*i \* *b*i）反復取代*val* 。
 
 第二個成員函式會傳回：
 
-`val` *binary_op1* (  1 *binary_op2* *b*1) *binary_op1* (  2 *binary_op2* *b*2) *binary_op1* ...*binary_op1* (  n *binary_op2* *b*n)
+`val` *binary_op1* （*a*1 *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*a*n *binary_op2* *b*n）
 
-藉由反覆取代*val*具有`val` *binary_op1* (  我*binary_op2* *b*i)。
+藉由使用 `val` *binary_op1* （*a*i *binary_op2* *b*i）反復取代*val* 。
 
 ### <a name="remarks"></a>備註
 
-初始值可確保會有妥善定義的結果時的範圍是空的在此情況下*val*會傳回。 二進位運算不需要是關聯或交替運算。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保當範圍是空的時，會有一個妥善定義的結果，在此情況下會傳回*val* 。 二進位運算不需要是關聯或交換的。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 
@@ -505,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a> iota
+## <a name="iota"></a>iota
 
-儲存開始值，從第一個項目，並填入該值的後續增量 (` value++`) 在每個間隔中的項目`[first,  last)`。
+儲存起始值，從第一個元素開始，並在間隔 `[first,  last)`的每個元素中填入該值的後續遞增（` value++`）。
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -519,11 +519,11 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *第一個*\
 輸入迭代器，定址對象是要填入的範圍中的第一個元素。
 
-*最後一個*\
+*上次*\
 輸入迭代器，定址對象是要填入的範圍中的最後一個元素。
 
 *value*\
-要儲存在第一個項目，並進行後續增量的更新版本的項目開始的值。
+要儲存在第一個專案中的起始值，以及後續遞增的元素。
 
 ### <a name="example"></a>範例
 
@@ -567,14 +567,14 @@ int main(void)
 }
 ```
 
-## <a name="lcm"></a> lcm
+## <a name="lcm"></a>lcm
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> lcm(M m, N n);
 ```
 
-## <a name="partial_sum"></a> partial_sum
+## <a name="partial_sum"></a>partial_sum
 
 計算在輸入範圍中從第一個元素到第 *i* 個元素的一系列總和，然後將每個這類總和的結果儲存在目的範圍的第 *i* 個元素中，或計算一般化程序的結果，其中總和運算會由另一個指定的二進位運算取代。
 
@@ -598,7 +598,7 @@ OutputIterator partial_sum(
 *第一個*\
 輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的第一個項目。
 
-*最後一個*\
+*上次*\
 輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的最後一個項目，這是在反覆累積中實際包含的最終項目之外的一個位置。
 
 *結果*\
@@ -609,17 +609,17 @@ OutputIterator partial_sum(
 
 ### <a name="return-value"></a>傳回值
 
-輸出迭代器，定址目的範圍結尾： `result` + (`last` - `first`)，
+輸出反覆運算器，用於定址目的範圍的結尾： `result` + （`last` - `first`），
 
 ### <a name="remarks"></a>備註
 
-輸出迭代器*結果*允許為相同的迭代器做為輸入的迭代器*第一個*，因此部分總和可以就地計算。
+輸出反覆運算器*結果*允許與輸入反覆運算器的*第一個*反覆運算器相同，因此可以就地計算部分總和。
 
-值序列  1，  2  3，在輸入範圍中，第一個範本函式會儲存在目的範圍中的後續部分總和其中*我*個項目由所提供 (((  1 +  2） +  3)  我)。
+針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的部分總和儲存在目的範圍中，其中*i*個元素是由（（ *（（）（（* ）（（）（（）（（ *） + a 2）* + *a*3） *a*i）。
 
-值序列  1，  2  3，在輸入範圍中，第二個範本函式會儲存在目的範圍內，第 i 個項目所在的後續部分總和指定由 (((  1 `binary_op`  2) `binary_op`  3)  我)。
+針對輸入範圍中的*1、* *a*2、 *a*3 值序列，第二個樣板函式會將後續的部分總和儲存在目的範圍中，其中第 i 個元素是由（（（*a*1 `binary_op` *a*2） *`binary_op`* 3） *a*i）。
 
-二進位運算*binary_op*不一定要關聯或交替，因為套用的作業順序指定。
+二元運算*binary_op*不需要是關聯或交換，因為已指定作業的順序。
 
 ### <a name="example"></a>範例
 
@@ -681,7 +681,7 @@ int main( )
 }
 ```
 
-## <a name="reduce"></a> 減少
+## <a name="reduce"></a>減少
 
 ```cpp
 template<class InputIterator>
@@ -705,7 +705,7 @@ ForwardIterator first, ForwardIterator last, T init,
 BinaryOperation binary_op);
 ```
 
-## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator, class T,
@@ -726,7 +726,7 @@ BinaryOperation binary_op,
 UnaryOperation unary_op);
 ```
 
-## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
 ```cpp
 template<class InputIterator, class OutputIterator,
@@ -761,7 +761,7 @@ UnaryOperation unary_op,
 T init);
 ```
 
-## <a name="transform_reduce"></a> transform_reduce
+## <a name="transform_reduce"></a>transform_reduce
 
 ```cpp
 template<class InputIterator1, class InputIterator2, class T>

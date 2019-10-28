@@ -136,7 +136,7 @@ int _mbsncoll_l(
 |0|*string1*與*string2*相同。|
 |> 0|*string1*大於*string2*。|
 
-所有這些函式都會傳回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，請包含字串 .H 或 g.。 如果*string1*或*string2*包含定序順序之網域以外的寬字元碼，則 **_wcsncoll**可能會失敗。 發生錯誤時， **_wcsncoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫 **_wcsncoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫 **_wcsncoll**之後檢查**errno** 。
+所有這些函式都會傳回 **_NLSCMPERROR**。 若要使用 **_NLSCMPERROR**，請包含字串 .H 或 g。 如果*string1*或*string2*包含定序順序之網域以外的寬字元碼，則 **_wcsncoll**可能會失敗。 發生錯誤時， **_wcsncoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫 **_wcsncoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫 **_wcsncoll**之後檢查**errno** 。
 
 ## <a name="remarks"></a>備註
 

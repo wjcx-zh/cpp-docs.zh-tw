@@ -110,7 +110,7 @@ int _mbscoll_l(
 |0|*string1*與*string2*相同|
 |> 0|*string1*大於*string2*|
 
-這些函式每一個都會在發生錯誤時傳回 **_NLSCMPERROR** 。 若要使用 **_NLSCMPERROR**，請包含其中一個字串。H 或 G.。H. 如果*string1*或*string2*是**Null** ，或包含定序順序之網域以外的寬字元碼，則**wcscoll**可能會失敗。 發生錯誤時， **wcscoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫**wcscoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫**wcscoll**之後檢查**errno** 。
+這些函式每一個都會在發生錯誤時傳回 **_NLSCMPERROR** 。 若要使用 **_NLSCMPERROR**，請包含其中一個字串。H 或 G.H。 如果*string1*或*string2*是**Null** ，或包含定序順序之網域以外的寬字元碼，則**wcscoll**可能會失敗。 發生錯誤時， **wcscoll**可能會將**Errno**設定為**EINVAL**。 若要在呼叫**wcscoll**時檢查是否發生錯誤，請將**errno**設定為0，然後在呼叫**wcscoll**之後檢查**errno** 。
 
 ## <a name="remarks"></a>備註
 

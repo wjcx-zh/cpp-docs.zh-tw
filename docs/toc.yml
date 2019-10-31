@@ -1157,34 +1157,7 @@
                     - name: 範例 Makefile
                       href: build/reference/sample-makefile.md
                 - name: 描述區塊
-                  expanded: false
-                  items:
-                    - name: 描述區塊
-                      href: build/reference/description-blocks.md
-                    - name: 目標
-                      expanded: false
-                      items:
-                        - name: 目標
-                          href: build/reference/targets.md
-                        - name: 虛擬目標
-                          href: build/reference/pseudotargets.md
-                        - name: 多個目標
-                          href: build/reference/multiple-targets.md
-                        - name: 累計相依性
-                          href: build/reference/cumulative-dependencies.md
-                        - name: 多個描述區塊中的目標
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: 相依性的副作用
-                          href: build/reference/dependency-side-effects.md
-                    - name: 相依性
-                      expanded: false
-                      items:
-                        - name: 相依性
-                          href: build/reference/dependents.md
-                        - name: 推斷相依
-                          href: build/reference/inferred-dependents.md
-                        - name: 相依的搜尋路徑
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Makefile 中的命令
                   expanded: false
                   items:
@@ -1410,6 +1383,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA

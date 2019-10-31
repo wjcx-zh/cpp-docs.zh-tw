@@ -1,23 +1,25 @@
 ---
 title: DUMPBIN 選項
-ms.date: 11/04/2016
+ms.date: 10/24/2019
 f1_keywords:
 - dumpbin
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81c66f1971294531a2904a0b681819476bcc1eb2
+ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272737"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73144552"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN 選項
 
-選項選項規範組成，這是一個破折號 （-） 或斜線 （/），後面加上選項的名稱。 選項名稱不能被縮寫。 某些選項會指定引數，在冒號 （:） 之後。 內的選項規格允許沒有空格或定位字元。 使用一個或多個空間索引標籤來分隔命令列上的選項規格。 選項名稱和其關鍵字或檔名引數不區分大小寫。 大部分的選項會套用至所有的二進位檔案;幾個適用於特定類型的檔案。 根據預設，DUMPBIN 會將資訊傳送到標準輸出。 使用[/out](out-dumpbin.md)將輸出傳送至檔案的選項。
+選項包含*選項規範*，也就是破折號（`-`）或正斜線（`/`），後面接著選項的名稱。 選項名稱不可以是縮寫。 有些選項會採用冒號（`:`）後面指定的引數。 選項規格中不允許有空格或索引標籤。 在命令列上使用一或多個空格或索引標籤來分隔選項規格。 選項名稱及其關鍵字或檔案名引數不區分大小寫。 大部分的選項都適用于所有二進位檔案，但少數只適用于特定類型的檔案。 根據預設，DUMPBIN 會將資訊傳送至標準輸出。 使用[/out](out-dumpbin.md)選項，將輸出傳送至檔案。
 
-DUMPBIN 具有下列選項：
+## <a name="options-list"></a>選項清單
+
+DUMPBIN 有下列選項：
 
 - [/ALL](all.md)
 
@@ -29,9 +31,9 @@ DUMPBIN 具有下列選項：
 
 - [/DIRECTIVES](directives.md)
 
-- [/DISASM](disasm.md)
+- [/DISASM\[： {BYTES\|NOBYTES}\]](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
+- [/ERRORREPORT： {NONE |提示 |佇列 |郵件](errorreport-dumpbin-exe.md)
 
 - [/EXPORTS](dash-exports.md)
 
@@ -39,27 +41,29 @@ DUMPBIN 具有下列選項：
 
 - [/HEADERS](headers.md)
 
-- [/IMPORTS](imports-dumpbin.md)
+- [/IMPORTS\[： filename\]](imports-dumpbin.md)
 
 - [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](linkermember.md)
+- [/LINKERMEMBER\[： {1 | 2}\]](linkermember.md)
 
 - [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](out-dumpbin.md)
+- [/NOPDB](nopdb.md)
+
+- [/OUT： filename](out-dumpbin.md)
 
 - [/PDATA](pdata.md)
 
-- [/PDBPATH](pdbpath.md)
+- [/PDBPATH\[： VERBOSE\]](pdbpath.md)
 
-- [/RANGE](range.md)
+- [/RANGEE： vaMin\[、vaMax\]](range.md)
 
-- [/RAWDATA](rawdata.md)
+- [/RAWDATA\[： {NONE\|1\|2\|4\|8}\[，#\]\]](rawdata.md)
 
 - [/RELOCATIONS](relocations.md)
 
-- [/SECTION](section-dumpbin.md)
+- [/SECTION：名稱](section-dumpbin.md)
 
 - [/SUMMARY](summary.md)
 
@@ -67,7 +71,10 @@ DUMPBIN 具有下列選項：
 
 - [/TLS](tls.md)
 
-## <a name="see-also"></a>另請參閱
+若要列出 DUMPBIN 在命令列上支援的選項，請使用 **/？** 件.
 
-[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
+## <a name="see-also"></a>請參閱
+
+[其他 MSVC build 工具](c-cpp-build-tools.md)\
+[DUMPBIN 命令列](dumpbin-command-line.md)\
 [DUMPBIN 參考](dumpbin-reference.md)

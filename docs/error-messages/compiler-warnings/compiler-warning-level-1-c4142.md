@@ -1,33 +1,33 @@
 ---
-title: 編譯器警告 （層級 1） C4142
+title: 編譯器警告（層級1） C4142
 ms.date: 11/04/2016
 f1_keywords:
 - C4142
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: 762f52c9f051a660cce68d424e02fc45422376e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 97b13ad65335df435d071c106f577aefca7e072d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302276"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625000"
 ---
-# <a name="compiler-warning-level-1-c4142"></a>編譯器警告 （層級 1） C4142
+# <a name="compiler-warning-level-1-c4142"></a>編譯器警告（層級1） C4142
 
-良性的類型重複定義
+類型的良性重新定義
 
-類型已重新定義已不會影響產生的程式碼的方式。
+類型會以對產生的程式碼沒有任何影響的方式重新定義。
 
 您可以檢查下列可能的原因來進行修正：
 
-- 在衍生類別的成員函式具有不同傳回的型別對應的成員函式的基底類別。
+- 衍生類別的成員函式具有不同于基類之對應成員函式的傳回型別。
 
-- 使用定義的型別`typedef`命令會重新定義，使用不同的語法。
+- 以 `typedef` 命令定義的類型會使用不同的語法重新定義。
 
-下列範例會產生 C4142:
+下列範例會產生 C4142：
 
-```
+```c
 // C4142.c
 // compile with: /W1
 float X2;

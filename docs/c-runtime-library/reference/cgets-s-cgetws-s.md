@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: 2039fc32cecb768c3c3fbc239446abedeb48f188
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2acefcf907ca9b908fa7f439b6e245a5e103d8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939269"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624774"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s、_cgetws_s
 
@@ -91,17 +91,19 @@ errno_t _cgetws_s(
 
 |*buffer*|*numberOfElements*|*pSizeRead*|Return|*緩衝區*的內容|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**NULL**|any|any|**EINVAL**|N/A|
-|非**Null**|零|any|**EINVAL**|未修改|
-|非**Null**|any|**NULL**|**EINVAL**|零長度字串|
+|**NULL**|任何|任何|**EINVAL**|N/A|
+|非**Null**|零|任何|**EINVAL**|未修改|
+|非**Null**|任何|**NULL**|**EINVAL**|零長度字串|
 
 ## <a name="remarks"></a>備註
 
-**_cgets_s**和 **_cgetws_s**會從主控台讀取字串，並將字串（包含 null 結束字元）複製到*緩衝區*。 **_cgetws_s**是函數的寬字元版本;除了字元大小以外，這兩個函式的行為完全相同。 要讀取的字串大小上限會以*numberOfElements*參數的形式傳入。 這個大小應該包含結束的 null 之額外字元。 讀取的實際字元數目會放在*pSizeRead*中。
+**_cgets_s**和 **_cgetws_s**從主控台讀取字串，並將字串（包含 null 結束字元）複製到*緩衝區*。 **_cgetws_s**是函式的寬字元版本;除了字元大小以外，這兩個函式的行為完全相同。 要讀取的字串大小上限會以*numberOfElements*參數的形式傳入。 這個大小應該包含結束的 null 之額外字元。 讀取的實際字元數目會放在*pSizeRead*中。
 
 如果在作業期間或在驗證參數時發生錯誤，則會叫用無效的參數處理常式 (如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述)。 如果允許繼續執行， **errno**會設為**EINVAL** ，並會傳回**EINVAL** 。
 
-在 C++ 中，樣板多載簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，樣板多載簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以自動將較舊且較不安全的函式取代成其較新且較安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
+
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -116,9 +118,9 @@ errno_t _cgetws_s(
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [主控台和連接埠 I/O ](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](getch-getwch.md)<br/>

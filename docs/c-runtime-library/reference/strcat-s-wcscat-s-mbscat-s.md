@@ -38,19 +38,19 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: 4449ec788b33a541a04a46d972f56f792797a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957985"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625785"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s、wcscat_s、_mbscat_s、_mbscat_s_l
 
 附加字串。 這些版本的 [strcat、wcscat、_mbscat](strcat-wcscat-mbscat.md) 具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbscat_s**和 **_mbscat_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbscat_s**和 **_mbscat_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -121,13 +121,13 @@ errno_t _mbscat_s_l(
 
 |*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**或未結束|any|any|**EINVAL**|未修改|
-|any|any|**NULL**|**EINVAL**|*strDestination*[0] 設定為0|
-|any|0 或太小|any|**ERANGE**|*strDestination*[0] 設定為0|
+|**Null**或未結束|任何|任何|**EINVAL**|未修改|
+|任何|任何|**NULL**|**EINVAL**|*strDestination*[0] 設定為0|
+|任何|0 或太小|任何|**ERANGE**|*strDestination*[0] 設定為0|
 
 ## <a name="remarks"></a>備註
 
-**Strcat_s**函數會將*StrSource*附加至*strDestination* ，並以 null 字元終止產生的字串。 *StrSource*的初始字元會覆寫*strDestination*的終止 null 字元。 如果來源和目的字串重迭，則**strcat_s**的行為是未定義的。
+**Strcat_s**函式會將*StrSource*附加至*strDestination* ，並使用 null 字元來終止產生的字串。 *StrSource*的初始字元會覆寫*strDestination*的終止 null 字元。 如果來源和目的字串重迭，則不會定義**strcat_s**的行為。
 
 請注意，第二個參數是緩衝區的總大小，而非剩餘大小︰
 
@@ -144,9 +144,9 @@ strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 
 具有 **_l**尾碼的函式版本具有相同的行為，但會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -162,13 +162,13 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**wcscat_s**|\<string.h> 或 \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [strcpy_s、wcscpy_s、_mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) 中的程式碼範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>

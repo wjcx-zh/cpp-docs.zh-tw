@@ -61,19 +61,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 7d959a1b8856fda6abc17c77e0c0f8c0679883a7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a962a333af2a7f5c75d1ce2eb3fb5ce797a5d7f2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946783"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626126"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s、_strset_s_l、_wcsset_s、_wcsset_s_l、_mbsset_s、_mbsset_s_l
 
 將字串字元設定為字元。 這些版本的 [_strset、_strset_l、_wcsset、_wcsset_l、_mbsset、_mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsset_s**和 **_mbsset_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsset_s**和 **_mbsset_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -121,7 +121,7 @@ errno_t _mbsset_s_l(
 *numberOfElements*<br/>
 *Str*緩衝區的大小。
 
-*C*<br/>
+*c*<br/>
 字元設定。
 
 *locale*<br/>
@@ -135,11 +135,11 @@ errno_t _mbsset_s_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strset_s**函數會將*str*的所有字元設定為*c* （轉換成**char**），但結尾的 null 字元除外。 **_wcsset_s**和 **_mbsset_s**是 **_strset_s**的寬字元和多位元組字元版本。 引數和傳回值的資料類型會隨之改變。 除此之外，這些函式的行為相同。
+**_Strset_s**函式會將*str*的所有字元設定為*c* （轉換成**char**），但結尾的 null 字元除外。 **_wcsset_s**和 **_mbsset_s**是 **_strset_s**的寬字元和多位元組字元版本。 引數和傳回值的資料類型會隨之改變。 除此之外，這些函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -156,9 +156,9 @@ errno_t _mbsset_s_l(
 |**_strset_s_l**|\<tchar.h>|
 |**_wcsset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsset_s_l**|\<tchar.h>|
-|**_mbsset_s**、 **_mbsset_s_l**|\<mbstring.h>|
+|**_mbsset_s**， **_mbsset_s_l**|\<mbstring.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -182,7 +182,7 @@ Before: Fill the string with something.
 After:  *******************************
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

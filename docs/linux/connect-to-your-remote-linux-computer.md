@@ -3,12 +3,12 @@ title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++ 專案內連線至遠端 Linux 電腦或 WSL。
 ms.date: 09/04/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 2f4e6311493f2b29ba6911ec1b76225b6c7abe6d
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 3d91faa7aa83c86e8c2f3544ee61c16f75f8c346
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925563"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626792"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 
@@ -79,6 +79,20 @@ Visual Studio 2017 及更新版本支援 Linux。
    記錄檔包含連線、傳送到遠端電腦 (其文字、結束代碼和執行時間) 的所有命令，以及從 Visual Studio 到殼層的所有輸出。 記錄適用於任何跨平台的 CMake 專案或 Visual Studio 中的 MSBuild 型 Linux 專案。
 
    您可以設定輸出到檔案或 [輸出] 視窗中的 [跨平台記錄] 窗格。 對於 MSBuild 型 Linux 專案，MSBuild 發出到遠端電腦的命令不會路由傳送至 [輸出視窗]，因為它們是跨處理序發出的。 但是，它們會記錄到前置詞為 "msbuild_" 的檔案中。
+   
+## <a name="tcp-port-forwarding"></a>TCP 埠轉送
+
+Visual Studio 的 Linux 支援相依于 TCP 埠轉送。 如果遠端系統上的 TCP 埠轉送已停用， **Rsync**和**gdbserver**會受到影響。 
+
+以 MSBuild 為基礎的 Linux 專案和 CMake 專案會使用 Rsync，將[標頭從您的遠端系統複製到 Windows，以用於 IntelliSense](configure-a-linux-project.md#remote_intellisense)。 如果您無法啟用 TCP 埠轉送，則可以透過 工具 > 選項，停用自動下載遠端標頭 > 跨平臺 > 連線管理員 > 遠端標頭 IntelliSense 管理員。 如果您嘗試連線的遠端系統未啟用 TCP 埠轉送，則當 IntelliSense 的下載遠端標頭開始時，您會看到下列錯誤。
+
+![標頭錯誤](media/port-forwarding-headers-error.png)
+
+Visual Studio 的 CMake 支援也會使用 Rsync，將來源檔案複製到遠端系統。 如果您無法啟用 TCP 埠轉送，則可以使用 sftp 做為遠端複製來源方法。 Sftp 通常會比 rsync 慢，但不會相依于 TCP 埠轉送。 您可以使用 [ [CMake 設定編輯器](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)] 中的 [remoteCopySourcesMethod] 屬性來管理遠端複製來源方法。 如果您的遠端系統上已停用 TCP 埠轉送，則第一次叫用 rsync 時，您會在 [CMake 輸出] 視窗中看到錯誤。
+
+![Rsync 錯誤](media/port-forwarding-copy-error.png)
+
+Gdbserver 可用於在內嵌裝置上進行偵錯工具。 如果您無法啟用 TCP 埠轉送，則必須在所有遠端偵錯程式案例中使用 gdb。 在遠端系統上的專案進行調試時，預設會使用 Gdb。 
 
    ::: moniker-end
 
@@ -105,7 +119,7 @@ sudo apt install g++ gdb make rsync zip
 
 ::: moniker-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [設定 Linux 專案](configure-a-linux-project.md)<br />
 [設定 Linux CMake 專案](cmake-linux-project.md)<br />

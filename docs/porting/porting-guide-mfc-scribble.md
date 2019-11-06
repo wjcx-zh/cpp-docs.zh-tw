@@ -1,13 +1,13 @@
 ---
 title: 移植指南：MFC Scribble
-ms.date: 11/19/2018
+ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: e808f67b1479653add27a54ddf91f6578c046734
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511541"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627218"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植指南：MFC Scribble
 
@@ -19,19 +19,19 @@ Visual Studio 的每個版本都可能引入不相容的問題，而使得將程
 
 MFC Scribble 是已知隨附於許多不同 Visual C++ 版本的範例。 它是簡單的繪圖應用程式，可繪製 MFC 的一些基本功能。 目前可用的版本有許多種，包括 Managed 程式碼和機器碼版本。 針對這個範例，我們找到使用 Visual Studio 2005 機器碼撰寫的舊版 Scribble，並在 Visual Studio 2017 中加以開啟。
 
-嘗試升級之前，請確定您已安裝 Windows 桌面版工作負載。 開啟 Visual Studio 安裝程式 (vs_installer.exe)。 開啟安裝程式的一種方法是選擇 [檔案]   > [新增專案]  ，然後捲動至已安裝的範本清單底部，直到您看到 [開啟 Visual Studio 安裝程式]  。 開啟安裝程式之後，將會看到所有可用的工作負載。 如果未選取 **Windows Desktop** 工作負載的方塊，請加以選取，然後按一下視窗底部的 [修改]  按鈕。
+嘗試升級之前，請確定您已安裝 Windows 桌面版工作負載。 開啟 Visual Studio 安裝程式 (vs_installer.exe)。 開啟安裝程式的一種方法是選擇 [檔案] > [新增專案]，然後捲動至已安裝的範本清單底部，直到您看到 [開啟 Visual Studio 安裝程式]。 開啟安裝程式之後，將會看到所有可用的工作負載。 如果未選取 **Windows Desktop** 工作負載的方塊，請加以選取，然後按一下視窗底部的 [修改] 按鈕。
 
 接下來，備份整個方案和其所有內容。
 
-最後，我們需要決定升級的特定方法。 針對長時間未升級的較複雜方案和專案，您應該考慮一次升級一個 Visual Studio 版本。 如此一來，您可以縮小哪個版本的 Visual Studio 會引發問題。 針對簡單的專案，您可以先嘗試在最新版 Visual Studio 中開啟專案，並讓精靈轉換專案。 如果不行，您可以在擁有適當版本 Visual Studio 的存取權時，嘗試一次升級一個版本。
+最後，在最新版本的 Visual Studio 中開啟方案，並允許嚮導轉換專案。 
 
 請注意，您也可以在命令列執行 devenv 並使用 `/Upgrade` 選項，而不使用精靈來升級專案。 請參閱 [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe)。 這對自動化大量專案的升級程序會很有幫助。
 
 ### <a name="step-1-converting-the-project-file"></a>步驟 1： 轉換專案檔
 
-當您在 Visual Studio 2017 中開啟舊專案檔時，Visual Studio 會詢問您是否要將專案檔轉換成最新版本，我們已選擇接受。 接著會出現下列對話方塊：
+當您在 Visual Studio 中開啟舊專案檔時，Visual Studio 提供，將專案檔轉換成我們接受的最新版本。 接著會出現下列對話方塊：
 
-![檢閱專案和解決方案變更](../porting/media/scribbleprojectupgrade.PNG "檢閱專案和解決方案變更")
+![審查專案和方案變更](../porting/media/scribbleprojectupgrade.PNG "檢閱專案和方案變更")
 
 出現錯誤，通知我們 Itanium 目標無法使用，因此將不會進行轉換。
 
@@ -49,9 +49,9 @@ Visual Studio 接著會顯示移轉報告，列出舊專案檔的所有問題。
 
 ### <a name="step-2-getting-it-to-build"></a>步驟 2： 建置專案
 
-建置前，我們會先檢查平台工具組，以了解專案系統正在使用的編譯器版本。 在專案屬性對話方塊中，於 [組態屬性]  的 [一般]  分類中，查看 [平台工具組]  屬性。 該屬性包含 Visual Studio 的版本和平台工具版本號碼，在本例中為 v141，代表 Visual Studio 2017 版本的工具。 當您轉換原本使用 Visual Studio 2010、2012、2013 或 2015 編譯的專案時，工具組不會自動更新為 Visual Studio 2017 工具組。
+建置前，我們會先檢查平台工具組，以了解專案系統正在使用的編譯器版本。 在專案屬性對話方塊中，於 [組態屬性] 的 [一般] 分類中，查看 [平台工具組] 屬性。 該屬性包含 Visual Studio 的版本和平台工具版本號碼，在本例中為 v141，代表 Visual Studio 2017 版本的工具。 當您轉換原本使用 Visual Studio 2010、2012、2013或2015編譯的專案時，工具組不會自動更新為最新的工具組。
 
-若要切換為 Unicode，請開啟專案的屬性，並選擇 [組態屬性]  下的 [一般]  區段，然後尋找 [字元集]  屬性。 將這個屬性從 [使用多位元組字元集]  變更為 [使用 Unicode 字元集]  。 這項變更的影響是目前已定義 _UNICODE 和 UNICODE 巨集，但未定義 _MBCS；您可以在屬性對話方塊之 [C/C++]  分類的 [命令列]  屬性中進行確認。
+若要切換為 Unicode，請開啟專案的屬性，並選擇 [組態屬性] 下的 [一般] 區段，然後尋找 [字元集] 屬性。 將這個屬性從 [使用多位元組字元集] 變更為 [使用 Unicode 字元集]。 這項變更的影響是目前已定義 _UNICODE 和 UNICODE 巨集，但未定義 _MBCS；您可以在屬性對話方塊之 [C/C++] 分類的 [命令列] 屬性中進行確認。
 
 ```Output
 /GS /analyze- /W4 /Zc:wchar_t /Zi /Gm- /Od /Fd".\Debug\vc141.pdb" /Zc:inline /fp:precise /D "_AFXDLL" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_UNICODE" /D "UNICODE" /errorReport:prompt /WX /Zc:forScope /Gd /Oy- /MDd /Fa".\Debug\" /EHsc /nologo /Fo".\Debug\" /Fp".\Debug\Scribble.pch" /diagnostics:classic
@@ -85,7 +85,7 @@ _WIN32_WINNT not defined. Defaulting to _WIN32_WINNT_MAXVER (see WinSDKVer.h)
 
 Scribble 是小型且簡單的 Windows 桌面應用程式，並不難轉換。 許多小型、簡單的應用程式也同樣容易轉換至新版。  至於較複雜的應用程式 (具有更多行程式碼、可能不及最新工程標準的舊版程式碼、多個專案和程式庫、自訂建置步驟)，或複雜的指令碼式自動化組建，則需要更多時間進行升級。 請繼續進行[下一個範例](../porting/porting-guide-com-spy.md)：一個稱為 COM Spy 的 ATL/COM 應用程式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [移植和升級：範例和案例研究](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [下一個範例：COM Spy](../porting/porting-guide-com-spy.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wasctime_s function
 - asctime_s function
 ms.assetid: 17ad9b2b-a459-465d-976a-42822897688a
-ms.openlocfilehash: 0a40dad34d607bb52b062fc2cec163dfc8b62219
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1cd2a15db0a27dedd88b9abf24b98d338515c949
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943662"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624790"
 ---
 # <a name="asctime_s-_wasctime_s"></a>asctime_s、_wasctime_s
 
@@ -95,7 +95,7 @@ errno_t _wasctime_s(
 |非**Null**|>= 26|無效的時間結構或超出時間元件值的範圍|**EINVAL**|空字串|
 
 > [!NOTE]
-> **Wasctime_s**的錯誤狀況類似于**asctime_s** ，但大小限制是以單字來測量。
+> **Wasctime_s**的錯誤情況類似**asctime_s** ，但大小限制是以單字來測量的例外狀況。
 
 ## <a name="remarks"></a>備註
 
@@ -115,9 +115,11 @@ errno_t _wasctime_s(
 
 已轉換的字元字串也會根據本機時區設定調整。 如需設定本機時間的資訊，請參閱 [time、_time32、_time64](time-time32-time64.md)、[_ftime、_ftime32、_ftime64](ftime-ftime32-ftime64.md) 及 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md) 函式；如需定義時區環境及全域變數的資訊，請參閱 [_tzset](tzset.md) 函式。
 
-**Asctime_s**所產生的字串結果只包含26個字元，且的`Wed Jan 02 02:03:55 1980\n\0`格式為。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果較少，則會傳回錯誤碼**EINVAL**。
+**Asctime_s**所產生的字串結果只包含26個字元，且格式為 `Wed Jan 02 02:03:55 1980\n\0`。 使用 24 小時制。 所有欄位都具有固定寬度。 新行字元和 Null 字元佔用字串的最後兩個位置。 當作第二個參數傳入的值至少應有這麼大。 如果較少，則會傳回錯誤碼**EINVAL**。
 
-**_wasctime_s**是**asctime_s**的寬字元版本。 相反地， **_wasctime_s**和**asctime_s**的行為相同。
+**_wasctime_s**是寬字元版本的**asctime_s**。 相反地， **_wasctime_s**和**asctime_s**的行為相同。
+
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mapping"></a>一般文字常式對應
 
@@ -125,7 +127,7 @@ errno_t _wasctime_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tasctime_s**|**asctime_s**|**asctime_s**|**_wasctime_s**|
 
-在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -142,7 +144,7 @@ errno_t _wasctime_s(
 
 ## <a name="example"></a>範例
 
-這個程式會將系統時間放在長整數**aclock**中，將它轉譯成結構**newtime** ，然後使用**asctime_s**函式將它轉換成字串格式以進行輸出。
+這個程式會將系統時間放在長整數**aclock**中，將它轉譯成結構**newtime** ，然後使用**asctime_s**函式，將它轉換成字串格式以進行輸出。
 
 ```C
 // crt_asctime_s.c
@@ -176,7 +178,7 @@ int main( void )
 Current date and time: Wed May 14 15:30:17 2003
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [時間管理](../../c-runtime-library/time-management.md)<br/>
 [_ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s](ctime-s-ctime32-s-ctime64-s-wctime-s-wctime32-s-wctime64-s.md)<br/>

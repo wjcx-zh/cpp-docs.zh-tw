@@ -2,12 +2,12 @@
 title: 一般屬性 (Linux C++ 專案) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 56c800a9-3df9-4196-87b2-81adb00e4767
-ms.openlocfilehash: ce3683f11d80c253195b751b5eed364fbc04b68a
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: c17a5e0214e6365d604a80bd4b3891858f0f9186
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821277"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626819"
 ---
 # <a name="general-properties-linux-c"></a>一般屬性 (Linux C++)
 
@@ -19,7 +19,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker range=">=vs-2017"
 
-屬性 | 說明 | 選擇
+屬性 | 描述 | 選擇
 --- | ---| ---
 輸出目錄 | 指定輸出檔案目錄的相對路徑；可包含環境變數。
 中繼目錄 | 指定中繼檔案目錄的相對路徑；可包含環境變數。
@@ -35,4 +35,3 @@ Visual Studio 2017 及更新版本支援 Linux。
 STL 的使用 | 指定要用於這個組態的 C++ 標準程式庫。 | **共用 GNU 標準 C++ 程式庫**<br>**靜態 GNU 標準 C++ 程式庫 (-static)**<br>
 
 ::: moniker-end
-

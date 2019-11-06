@@ -1,24 +1,24 @@
 ---
-title: 修正程式庫內部項目上的相依性
+title: 修正程式庫內部C++專案的相依性
 ms.date: 05/24/2017
 helpviewer_keywords:
 - library internals in an upgraded Visual Studio C++ project
 - _Hash_seq in an upgraded Visual Studio C++ project
 ms.assetid: 493e0452-6ecb-4edc-ae20-b6fce2d7d3c5
-ms.openlocfilehash: af395ea6f8c8e6a88bd2b003f0eee948bde8b6a9
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5486cd65a34e3ef69f3b2e948ba0ad020e68b326
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65449098"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627005"
 ---
-# <a name="fix-your-dependencies-on-library-internals"></a>修正程式庫內部項目上的相依性
+# <a name="fix-your-dependencies-on-c-library-internals"></a>修正程式庫內部C++專案的相依性
 
 Microsoft 已在許多 Visual Studio 版本中，發佈標準程式庫、大部分 C 執行階段程式庫，以及其他 Microsoft 程式庫的原始程式碼。 旨在協助您了解程式庫行為和偵錯程式碼。 發佈程式庫原始程式碼的副作用之一，是會公開某些內部值、資料結構和函式，即使它們不是程式庫介面的一部分。 它們的名稱開頭通常是兩個底線或底線後面接著一個大寫字母，C++ 標準保留要實作的名稱。 這些值、結構和函式是實作詳細資料，會隨著程式庫與時進化而變更，因此強烈建議您不要對其建立任何相依性。 如果這樣做，當您嘗試將程式碼移轉至新版程式庫時，就可能發生程式碼不可攜帶和其他問題。
 
 多數情況下，Visual Studio 各版本的新功能或重大變更文件，不會提及程式庫內部項目的變更。 畢竟，您本來就不應該受到這些實作細節所影響。 只不過，有時候在程式庫內看到程式碼，想要使用的誘惑實在太大。 本主題討論您可能依存的 CRT 或標準程式庫內部項目相依性，以及如何更新程式碼以移除這些相依性，以便更容易攜帶或遷移至新版的程式庫。
 
-## <a name="hashseq"></a>_Hash_seq
+## <a name="_hash_seq"></a>_Hash_seq
 
 最近幾版的標準程式庫中，都可見到內部雜湊函式 `std::_Hash_seq(const unsigned char *, size_t)`，用來對某些字串類型實作 `std::hash`。 此函式在字元序列上實作了 [FNV-1a 雜湊]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)。
 
@@ -74,8 +74,8 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [將程式碼升級至通用 CRT](upgrade-your-code-to-the-universal-crt.md)

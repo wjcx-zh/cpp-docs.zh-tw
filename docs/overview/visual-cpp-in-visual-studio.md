@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552367"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626221"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -36,7 +36,7 @@ Visual Studio 2015、2017 與 2019 可並存安裝。 您可以使用 Visual Stu
 [Visual Studio 中的 C++ 一致性改善](cpp-conformance-improvements.md)<br/>
 了解 Visual Studio 中的 C++ 一致性改進。
 
-[Visual C++ 語言一致性](visual-cpp-language-conformance.md)<br/>
+[Microsoft C++語言一致性資料表](visual-cpp-language-conformance.md)<br/>
 MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 
 [Visual C++ 變更歷程記錄 2003 - 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
@@ -175,7 +175,7 @@ Microsoft [C++ 小組部落格](https://devblogs.microsoft.com/cppblog/)<br/>
 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)<br/>
 了解如何取得協助、提報 Bug，以及提供有關 Visual Studio 的建議。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [C 語言參考](../c-language/c-language-reference.md)
 - [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

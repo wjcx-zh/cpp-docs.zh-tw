@@ -1,6 +1,6 @@
 ---
 title: Visual Studio 專案 - C++
-ms.date: 12/12/2018
+ms.date: 10/25/2019
 helpviewer_keywords:
 - ATL projects, creating
 - Visual Studio C++ projects, creating
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Visual Studio C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 30d3b13ba4d392cdc5d1c7c611b61066503647a2
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: d6bfefdaa3dfc67f861cf116718f89c0e9766e47
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837056"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624470"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio 專案 - C++
 
-*Visual Studio 專案*是以 MSBuild 建置系統為基礎的專案。 MSBuild 是 Visual Studio 的原生建置系統，而此建置系統通常也最適合用於 UWP 應用程式和使用 MFC 或 ATL 程式庫、COM 元件和其他 Windows 特定程式的桌面應用程式。 MSBuild 會與 Visual Studio 緊密整合，但您也可以從命令列使用它。 
+*Visual Studio 專案*是以 MSBuild 建置系統為基礎的專案。 MSBuild 是 Visual Studio 的原生組建系統，通常是用於 Windows 特定程式的最佳組建系統。 MSBuild 會與 Visual Studio 緊密整合，但您也可以從命令列使用它。 針對跨平臺專案或使用開放原始碼程式庫的專案，我們建議在 Visual Studio 2017 和更新版本的 Visual Studio 中使用[CMake 專案](cmake-projects-in-visual-studio.md)。 如需從舊版 Visual Studio 升級 MSBuild 專案的詳細資訊，請參閱[Microsoft C++移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)。
 
 ## <a name="create-a-project"></a>建立專案
 
@@ -67,7 +67,7 @@ ms.locfileid: "65837056"
 
 在錯誤清單中，您可以對醒目標示的錯誤按 **F1**，以移至其文件主題。
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 [在 Visual Studio 中設定 C ++ 編譯器和組建屬性](working-with-project-properties.md)<br/>
 如何使用屬性頁和屬性工作表來指定專案設定。
@@ -84,6 +84,7 @@ ms.locfileid: "65837056"
 [從現有程式碼建立專案](how-to-create-a-cpp-project-from-existing-code.md)<br/>
 如何從來源檔案的鬆散式集合建立新的 Visual Studio 專案。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [專案和建置系統](projects-and-build-systems-cpp.md)<br>
+[Microsoft C++移植和升級指南](../porting/visual-cpp-porting-and-upgrading-guide.md)

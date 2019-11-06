@@ -42,12 +42,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: f8d461566f748ce5af3d4b2aab443b5966c27dd7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 74caba0398fdb5cdd0f9c80270a42d2903200a5d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958155"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625815"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s、_strerror_s、_wcserror_s、__wcserror_s
 
@@ -120,12 +120,12 @@ errno_t __wcserror_s(
 
 |*buffer*|*numberOfElements*|*strErrMsg*|*緩衝區*的內容|
 |--------------|------------------------|-----------------|--------------------------|
-|**NULL**|any|any|N/A|
-|any|0|any|未修改|
+|**NULL**|任何|任何|N/A|
+|任何|0|任何|未修改|
 
 ## <a name="remarks"></a>備註
 
-**Strerror_s**函數會將*errnum*對應至錯誤訊息字串，並傳回*buffer*中的字串。 **_strerror_s**不會採用錯誤號碼;它會使用**errno**的目前值來判斷適當的訊息。 **Strerror_s**或 **_strerror_s**都不會實際列印訊息：為此，您必須呼叫輸出函數，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
+**Strerror_s**函式會將*errnum*對應至錯誤訊息字串，並傳回*buffer*中的字串。 **_strerror_s**不會採用錯誤號碼;它會使用**errno**的目前值來判斷適當的訊息。 **Strerror_s**或 **_strerror_s**實際上都不會列印訊息：為此，您必須呼叫輸出函數，例如[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)：
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
@@ -139,17 +139,17 @@ if (( _access( "datafile",2 )) == -1 )
 
 如果錯誤訊息的長度超過*numberOfElements* -1，這些函式會將其截斷。 *Buffer*中產生的字串一律會以 null 結束。
 
-**_Strerror_s**的實際錯誤號碼會儲存在變數[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **_strerror_s**會使用**errno**值做為變數 **_sys_errlist**的索引，來存取適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值定義為 **_sys_errlist**陣列中元素的最大數目。 若要產生精確的結果，請在程式庫常式傳回但發生錯誤時立即呼叫 **_strerror_s** 。 否則，後續呼叫**strerror_s**或 **_strerror_s**可能會覆寫**errno**值。
+**_Strerror_s**的實際錯誤號碼會儲存在變數[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)中。 系統錯誤訊息是透過變數 [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 來存取，這是依錯誤號碼排序的訊息陣列。 **_strerror_s**使用**errno**值做為變數 **_sys_errlist**的索引，來存取適當的錯誤訊息。 變數[_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)的值會定義為 **_sys_errlist**陣列中元素的最大數目。 若要產生精確的結果，請在程式庫常式傳回時立即呼叫 **_strerror_s**並傳回錯誤。 否則， **strerror_s**或 **_strerror_s**的後續呼叫可能會覆寫**errno**值。
 
-**_wcserror_s**和 **__wcserror_s**分別是寬字元版本的**strerror_s**和 **_strerror_s**。
+**_wcserror_s**和 **__wcserror_s**分別是**strerror_s**和 **_strerror_s**的寬字元版本。
 
 這些函式會驗證它們的參數。 如果 buffer 為**Null** ，或 size 參數為0，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。
 
-**_strerror_s**、 **_wcserror_s**和 **__wcserror_s**不是 ANSI 定義的一部分，而是 Microsoft 的延伸模組。 請勿在需要可攜性的情況下使用它們;針對 ANSI 相容性，請改用**strerror_s** 。
+**_strerror_s**、 **_wcserror_s**和 **__wcserror_s**不是 ANSI 定義的一部分，而是 Microsoft 的延伸模組。 請勿在需要可攜性的情況下使用它們;若為 ANSI 相容性，請改用**strerror_s** 。
 
-在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -161,16 +161,16 @@ if (( _access( "datafile",2 )) == -1 )
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strerror_s**、 **_strerror_s**|\<string.h>|
-|**_wcserror_s**、 **__wcserror_s**|\<string.h> 或 \<wchar.h>|
+|**strerror_s**， **_strerror_s**|\<string.h>|
+|**_wcserror_s**， **__wcserror_s**|\<string.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [perror](perror-wperror.md) 的範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [clearerr](clearerr.md)<br/>

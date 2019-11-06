@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4d3f72ddf7675ea7ad73022dc55a60fdc74d4390
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363527"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623622"
 ---
 # <a name="compiler-warning-c4484"></a>編譯器警告 C4484
 
-'override_function': 符合基底 ref 類別方法 'base_class_function'，但未標示 'virtual'、 'new' override';'new' （和非 'virtual'） 會假設
+' override_function '：符合基底 ref 類別方法 ' base_class_function '，但未標記為 ' virtual '、' new ' 或 ' override ';假設為 ' new ' （而非 ' virtual '）
 
-進行編譯時 **/clr**，編譯器不會隱含地覆寫基底類別函式，這表示函式會取得 vtable 中的新位置。 若要解決，請明確指定函式是否覆寫。
+以 **/clr**進行編譯時，編譯器不會隱含覆寫基類函式，這表示函數會在 vtable 中取得新的位置。 若要解決此問題，請明確指定函數是否為覆寫。
 
 如需詳細資訊，請參閱:
 
@@ -27,13 +27,13 @@ ms.locfileid: "62363527"
 
 - [new (vtable 中的新位置)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
-C4484 一律發出為錯誤。 使用[警告](../../preprocessor/warning.md)隱藏 C4484 pragma。
+C4484 一律會發出為錯誤。 請使用[warning](../../preprocessor/warning.md) pragma 來隱藏 C4484。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4484。
 
-```
+```cpp
 // C4484.cpp
 // compile with: /clr
 ref struct A {

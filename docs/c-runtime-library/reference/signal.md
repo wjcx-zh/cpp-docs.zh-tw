@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 04869412272725108911f13857585e650ad20ab9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948091"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625858"
 ---
 # <a name="signal"></a>signal
 
@@ -53,7 +53,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ## <a name="return-value"></a>傳回值
 
-**信號**會傳回與指定信號相關聯的先前函數值。 例如，如果**SIG_IGN** *先前的值*，則傳回值也會是**SIG_IGN**。 **SIG_ERR**的傳回值表示發生錯誤;在此情況下， **errno**會設定為**EINVAL**。
+**信號**會傳回與指定信號相關聯的先前函數值。 例如，如果已**SIG_IGN** *func*的先前值，則傳回值也會**SIG_IGN**。 **SIG_ERR**的傳回值表示發生錯誤;在此情況下， **errno**會設定為**EINVAL**。
 
 如需傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
@@ -77,7 +77,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 > [!NOTE]
 > 任何 Win32 應用程式都不支援**SIGINT** 。 發生 CTRL+C 插斷時，Win32 作業系統會產生新的執行緒來專門處理該插斷。 這會讓單一執行緒應用程式 (例如 UNIX 中的應用程式) 成為多執行緒，並造成未預期的行為。
 
-*Func*引數是您所撰寫之信號處理常式的位址，或其中一個預先定義的常數**SIG_DFL**或**SIG_IGN**，它們也會定義為「信號」。H. 如果*func*是函式，它會安裝為指定信號的信號處理常式。 信號處理常式的原型需要類型為**int**的一個正式引數（ *sig*）。當發生中斷時，作業系統會透過*sig*提供實際的引數;引數是產生中斷的信號。 因此，您可以在訊號處理常式中使用上表所列出的六個資訊清單常數，來決定發生何種插斷並採取適當動作。 例如，您可以呼叫**信號**兩次，將相同的處理常式指派給兩個不同的信號，然後測試處理常式中的*sig*引數，以根據收到的信號採取不同的動作。
+*Func*引數是您所撰寫之信號處理常式的位址，或其中一個預先定義的常數**SIG_DFL**或**SIG_IGN**，這也會在 [信號] 中定義。H. 如果*func*是函式，它會安裝為指定信號的信號處理常式。 信號處理常式的原型需要類型為**int**的一個正式引數（ *sig*）。當發生中斷時，作業系統會透過*sig*提供實際的引數;引數是產生中斷的信號。 因此，您可以在訊號處理常式中使用上表所列出的六個資訊清單常數，來決定發生何種插斷並採取適當動作。 例如，您可以呼叫**信號**兩次，將相同的處理常式指派給兩個不同的信號，然後測試處理常式中的*sig*引數，以根據收到的信號採取不同的動作。
 
 如果您測試的是浮點例外狀況（**SIGFPE**）， *func*會指向接受選擇性第二個引數的函式，而這是在 FLOAT 中定義的數個資訊清單常數之一。H，格式為**FPE_xxx**。 當**SIGFPE**信號發生時，您可以測試第二個引數的值來判斷浮點例外狀況的類型，然後採取適當的動作。 此引數和其可能值是 Microsoft 延伸模組。
 
@@ -85,7 +85,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 如果傳回訊號處理常式，則呼叫處理序會緊接在收到插斷訊號之後繼續執行。 這不論訊號或作業模式的類型為何都適用。
 
-在執行指定的函式之前， *func*的值會設定為**SIG_DFL**。 下一個中斷信號會如**SIG_DFL**所述處理，除非呼叫**信號**另有指定。 您可以使用這項功能來重設所呼叫函式中的訊號。
+在執行指定的函式之前， *func*的值會設定為**SIG_DFL**。 下一個中斷信號的處理方式如**SIG_DFL**所述，除非呼叫**信號**另有指定。 您可以使用這項功能來重設所呼叫函式中的訊號。
 
 因為插斷時通常會以非同步方式呼叫訊號處理常式，所以執行階段作業未完成且處於未知狀態時，訊號處理常式函式可能會取得控制權。 下列清單摘要說明決定可在訊號處理常式中使用之函式的限制。
 
@@ -93,7 +93,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 - 請勿呼叫堆積常式或任何使用堆積常式的常式（例如， **malloc**、 **_strdup**或 **_putenv**）。 如需詳細資訊，請參閱 [malloc](malloc.md)。
 
-- 請勿使用任何會產生系統呼叫的函數（例如， **_getcwd**或**time**）。
+- 請勿使用任何會產生系統呼叫的函數（例如， **_getcwd**或**時間**）。
 
 - 除非中斷是因浮點例外狀況（也就是**SIGFPE**的*sig* ）所造成，否則請勿使用**longjmp** 。 在此情況下，請先使用 **_fpreset**的呼叫來重新初始化浮點封裝。
 
@@ -115,7 +115,7 @@ volatile double d = 0.0f;
 |-------------|---------------------|
 |**signal**|\<signal.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -127,7 +127,6 @@ volatile double d = 0.0f;
 // Use signal to attach a signal handler to the abort routine
 #include <stdlib.h>
 #include <signal.h>
-#include <tchar.h>
 
 void SignalHandler(int signal)
 {
@@ -149,12 +148,19 @@ int main()
 }
 ```
 
+輸出取決於所使用的執行階段版本、應用程式是否為主控台或 Windows 應用程式，以及 Windows 登錄設定。 對於主控台應用程式，可能會將類似下列的訊息傳送至 stderr：
+
 ```Output
-This application has requested the Runtime to terminate it in an unusual way.
-Please contact the application's support team for more information.
+Debug Error!
+
+Program: c:\Projects\crt_signal\Debug\crt_signal.exe
+
+R6010
+
+- abort() has been called
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>

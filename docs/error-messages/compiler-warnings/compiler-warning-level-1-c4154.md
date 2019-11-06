@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 （層級 1） C4154
+title: 編譯器警告（層級1） C4154
 ms.date: 11/04/2016
 f1_keywords:
 - C4154
 helpviewer_keywords:
 - C4154
 ms.assetid: 4511afeb-e893-4cc6-83b6-4c7a0477f76b
-ms.openlocfilehash: 5d2d6316838e8f3ef4acdf60494a0450a5efbdbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f0d56f6ae4b4ca92bc330d72176266e3196ea6a
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324554"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625016"
 ---
-# <a name="compiler-warning-level-1-c4154"></a>編譯器警告 （層級 1） C4154
+# <a name="compiler-warning-level-1-c4154"></a>編譯器警告（層級1） C4154
 
-刪除陣列運算式;轉換成指標
+刪除陣列運算式;轉換為提供的指標
 
-您無法使用`delete`上陣列中，因此編譯器會將陣列轉換為指標。
+您無法在陣列上使用 `delete`，因此編譯器會將陣列轉換成指標。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // C4154.cpp
 // compile with: /c /W1
 int main() {

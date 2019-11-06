@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: 7ecb6fe105d8a976979f91d38c9e536b10989310
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956114"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625040"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -82,21 +82,21 @@ errno_t _gcvt_s(
 
 |*buffer*|*sizeInBytes*|*值*|*digits*|Return|*Buffer*中的值|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|any|any|any|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|零|any|any|**EINVAL**|未修改。|
-|Not **Null** （指向有效的記憶體）|any|any|>= *sizeInBytes*|**EINVAL**|未修改。|
+|**NULL**|任何|任何|任何|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|零|任何|任何|**EINVAL**|未修改。|
+|Not **Null** （指向有效的記憶體）|任何|任何|>= *sizeInBytes*|**EINVAL**|未修改。|
 
 **安全性問題**
 
-如果*緩衝區*未指向有效的記憶體，而且不是**Null**，則 **_gcvt_s**可能會產生存取違規。
+如果*緩衝區*未指向有效的記憶體，而且不是**Null**， **_gcvt_s**可能會產生存取違規。
 
 ## <a name="remarks"></a>備註
 
-**_Gcvt_s**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 長度 **_CVTBUFSIZE**的緩衝區足以滿足任何浮點值。 如果使用的緩衝區大小為*數位*+ 1，則函式不會覆寫緩衝區結尾，因此請務必提供足夠的緩衝區來進行這項作業。 **_gcvt_s**會嘗試以十進位格式來產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可於轉換中隱藏尾端零。
+**_Gcvt_s**函式會將浮點*值*轉換為字元字串（其中包括小數點和可能的正負號位元組），並將字串儲存在*buffer*中。 *緩衝區*應該夠大，足以容納轉換的值加上會自動附加的終止 null 字元。 長度 **_CVTBUFSIZE**的緩衝區足以滿足任何浮點值。 如果使用的緩衝區大小為*數位*+ 1，則函式不會覆寫緩衝區結尾，因此請務必提供足夠的緩衝區來進行這項作業。 **_gcvt_s**嘗試以十進位格式產生*位數*數位。 如果無法這麼做，則會產生指數格式的*數位*。 可於轉換中隱藏尾端零。
 
-在 C++ 中，這個函式的使用已由範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用這個函式已為範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-此函式的偵錯版本會先用 0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+此函式的 debug 版本會先使用0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -104,7 +104,7 @@ errno_t _gcvt_s(
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -137,7 +137,7 @@ int main()
 Converted value: 1.2
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

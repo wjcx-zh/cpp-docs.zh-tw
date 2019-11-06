@@ -1,5 +1,5 @@
 ---
-title: _itoa_s、_itow_s 函式
+title: _itoa_s，_itow_s 函式
 ms.date: 03/21/2018
 api_name:
 - _itoa_s
@@ -79,16 +79,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: 204abd65981371a970623879ec94ff77db6728b2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953548"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625073"
 ---
-# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
+# <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s、_ltoa_s、_ultoa_s、_i64toa_s、_ui64toa_s、_itow_s、_ltow_s、_ultow_s、_i64tow_s、_ui64tow_s
 
-將整數轉換成字串。 這些是具有 CRT 中的[安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述之安全性增強功能的[_itoa、_itow](itoa-itow.md)函式版本。
+將整數轉換成字串。 這些是 _itoa 的版本[，_itow](itoa-itow.md)的函式具有[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -155,10 +155,10 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 |value|buffer|大小|radix|Return|
 |-----------|------------|----------------------|-----------|------------|
-|any|**NULL**|any|any|**EINVAL**|
-|any|any|<=0|any|**EINVAL**|
-|any|any|<= 需要的結果字串長度|any|**EINVAL**|
-|any|any|any|*基數*< 2 或*基數*> 36|**EINVAL**|
+|任何|**NULL**|任何|任何|**EINVAL**|
+|任何|任何|<=0|任何|**EINVAL**|
+|任何|任何|<= 需要的結果字串長度|任何|**EINVAL**|
+|任何|任何|任何|*基數*< 2 或*基數*> 36|**EINVAL**|
 
 ### <a name="security-issues"></a>安全性問題
 
@@ -168,9 +168,9 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 除了參數和傳回值之外， **_itoa_s**和 **_itow_s**函數系列與對應的較不安全 **_itoa**和 **_itow**版本具有相同的行為。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的 debug 程式庫版本會先以0xFD 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 CRT 包含方便的宏，可定義針對數個通用基底，轉換每個整數類型的最長可能值（包括 null 結束字元和正負號字元）所需的緩衝區大小。 如需相關資訊，請參閱[最大轉換計數宏](itoa-itow.md#maximum-conversion-count-macros)。
 
@@ -191,11 +191,11 @@ CRT 包含方便的宏，可定義針對數個通用基底，轉換每個整數�
 |**_itoa_s**、 **_ltoa_s**、 **_ultoa_s**、 **_i64toa_s**、 **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**、 **_ltow_s**、 **_ultow_s**、 **_i64tow_s**、 **_ui64tow_s**|\<stdlib.h> 或 \<wchar.h>|
 
-這些是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+這些是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-這個範例會示範幾個整數轉換函數的使用。 請注意， [_countof](countof-macro.md)宏僅適用于判斷編譯器可看見陣列宣告時的緩衝區大小，而不適用於已一旦產生蛻變至指標的參數。
+這個範例會示範幾個整數轉換函數的使用。 請注意， [_countof](countof-macro.md)宏僅適用于判斷編譯器可以看見陣列宣告時的緩衝區大小，而不是一旦產生蛻變至指標的參數。
 
 ```C
 // crt_itoa_s.c
@@ -263,7 +263,7 @@ base 3: 11112220022122120101211020120210210211220 (41 chars)
 base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 chars)
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa、_itow 函式](itoa-itow.md)<br/>
+[_itoa，_itow 函式](itoa-itow.md)<br/>

@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 （層級 1） C4129
+title: 編譯器警告（層級1） C4129
 ms.date: 11/04/2016
 f1_keywords:
 - C4129
 helpviewer_keywords:
 - C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-ms.openlocfilehash: dc4f4c4c1feeba543ce0baa71e1ee5dfd81fdcae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3108c60c18276e8e4797c7cfde1b66535dbaaa
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310944"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627427"
 ---
-# <a name="compiler-warning-level-1-c4129"></a>編譯器警告 （層級 1） C4129
+# <a name="compiler-warning-level-1-c4129"></a>編譯器警告（層級1） C4129
 
-'character': 無法辨識的字元逸出序列
+' character '：無法辨識的字元 escape 序列
 
-`character`反斜線 (\\) 中的字元或字串常數無法辨識為有效的逸出序列。 反斜線會略過，而且不會列印。 反斜線後面的字元會列印。
+字元或字串常數中的反斜線（\\）後面的 `character` 無法辨識為有效的逸出序列。 反斜線會被忽略，而且不會列印。 反斜線後面的字元會列印出來。
 
-若要列印單一反斜線，請指定 雙反斜線 (\\\\)。
+若要列印單一反斜線，請指定雙反斜線（\\\\）。
 
-C++標準 2.13.2 討論逸出序列。
+2\.13.2 C++一節中的標準會討論 escape 序列。
 
-下列範例會產生 C4129:
+下列範例會產生 C4129：
 
-```
+```cpp
 // C4129.cpp
 // compile with: /W1
 int main() {

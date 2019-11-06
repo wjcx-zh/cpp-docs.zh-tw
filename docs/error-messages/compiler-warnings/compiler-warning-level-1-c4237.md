@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4237
+title: 編譯器警告（層級1） C4237
 ms.date: 11/04/2016
 f1_keywords:
 - C4237
 helpviewer_keywords:
 - C4237
 ms.assetid: f2e86c4b-80d8-460e-9429-83c5f3f5d7ca
-ms.openlocfilehash: c68e84daa2ca1aa023123203bb851e92758f9e40
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e53c4632f8bfc9764f6ab1e124582bda273d945e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447688"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624896"
 ---
-# <a name="compiler-warning-level-1-c4237"></a>編譯器警告 (層級 1) C4237
+# <a name="compiler-warning-level-1-c4237"></a>編譯器警告（層級1） C4237
 
-'keyword' 關鍵字尚不支援，但保留供日後使用
+尚未支援 ' 關鍵字 ' 關鍵字，但保留供日後使用
 
-中的關鍵字C++中 Microsoft 不會實作規格C++編譯器，但關鍵字不提供為使用者定義的符號。
+C++規格中的關鍵字不會在 Microsoft C++編譯器中執行，但關鍵字無法當做使用者定義的符號使用。
 
-下列範例會產生 C4237:
+下列範例會產生 C4237：
 
-```
+```cpp
 // C4237.cpp
 // compile with: /W1 /c
 int export;   // C4237

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-ms.openlocfilehash: 7efd7c8e5ce7314e6fe719073685377f4b325fbd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7bd85734e71120a214d652048c02c176728474b2
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952937"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624362"
 ---
 # <a name="_makepath_s-_wmakepath_s"></a>_makepath_s、_wmakepath_s
 
@@ -92,17 +92,17 @@ errno_t _wmakepath_s(
 *sizeInBytes*<br/>
 以位元組為單位的緩衝區大小。
 
-*drive*<br/>
-包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**會在複合路徑中自動插入冒號（如果遺漏的話）。 如果*drive*是**Null**或指向空字串，複合*路徑*字串中就不會出現任何磁碟機號。
+*硬碟磁碟機*<br/>
+包含對應至所需磁碟機的代號 (A、B 等) 及選擇性後置冒號。 **_makepath_s**在複合路徑中自動插入冒號（如果遺漏的話）。 如果*drive*是**Null**或指向空字串，複合*路徑*字串中就不會出現任何磁碟機號。
 
 *dir*<br/>
-包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 尾端斜線是選擇性的，而且可以在單一*dir*引數中使用正斜線（\\/）或反斜線（）或兩者。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何目錄路徑。
+包含目錄路徑，但不包含磁碟機指示項或實際檔案名稱。 結尾的斜線是選擇性的，而且正斜線（/）或反斜線（\\）或兩者都可能用於單一*dir*引數中。 如果未指定後置斜線 (/ 或\\)，則會自動插入。 如果*dir*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何目錄路徑。
 
 *fname*<br/>
 包含基底檔案名稱，但不包含任何副檔名。 如果*fname*為**Null**或指向空字串，複合*路徑*字串中就不會插入任何檔案名。
 
-*ext*<br/>
-包含實際副檔名，可包含或不含前置句號 (.)。 如果 **_makepath_s**未出現在*ext*中，則會自動插入句點。如果*ext*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何副檔名。
+*分機*<br/>
+包含實際副檔名，可包含或不含前置句號 (.)。 如果未出現在*ext*中， **_makepath_s**會自動插入句號。如果*ext*是**Null**或指向空字串，複合*路徑*字串中就不會插入任何副檔名。
 
 ## <a name="return-value"></a>傳回值
 
@@ -112,14 +112,14 @@ errno_t _wmakepath_s(
 
 |*path*|*sizeInWords* / *sizeInBytes*|Return|*路徑*的內容|
 |------------|------------------------------------|------------|------------------------|
-|**NULL**|any|**EINVAL**|未修改|
-|any|<= 0|**EINVAL**|未修改|
+|**NULL**|任何|**EINVAL**|未修改|
+|任何|<= 0|**EINVAL**|未修改|
 
-如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。 參數*drive*、 *fname*和*ext*允許**Null** 。如需這些參數為 null 指標或空字串時之行為的資訊，請參閱＜備註＞一節。
+如果發生上述任何一種錯誤狀況，則這些函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設為**EINVAL** ，而函數會傳回**EINVAL**。 參數*drive*、 *fname*和*ext*允許**Null** 。如需這些參數為 null 指標或空字串時之行為的詳細資訊，請參閱備註一節。
 
 ## <a name="remarks"></a>備註
 
-**_Makepath_s**函數會從個別元件建立複合路徑字串，並將結果儲存在*path*中。 *路徑*可能包含磁碟機號、目錄路徑、檔案名和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; **_wmakepath_s**的引數是寬字元字串。 相反地， **_wmakepath_s**和 **_makepath_s**的行為相同。
+**_Makepath_s**函式會從個別元件建立複合路徑字串，並將結果儲存在*path*中。 *路徑*可能包含磁碟機號、目錄路徑、檔案名和副檔名。 **_wmakepath_s**是寬字元版本的 **_makepath_s**; **_wmakepath_s**的引數是寬字元字串。 相反地， **_wmakepath_s**和 **_makepath_s**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,13 +127,13 @@ errno_t _wmakepath_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-*Path*引數必須指向夠大的空緩衝區，以容納完整的路徑。 複合*路徑*不能大於 **_MAX_PATH**常數，定義于 stdlib.h> 中。
+*Path*引數必須指向夠大的空緩衝區，以容納完整的路徑。 複合*路徑*不能大於 stdlib.h> 中定義的 **_MAX_PATH**常數。
 
 如果 path 為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 此外， **errno**會設定為**EINVAL**。 所有其他參數都允許**Null**值。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -142,7 +142,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -194,7 +194,7 @@ Path extracted with _splitpath_s:
    Ext: .c
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [檔案處理](../../c-runtime-library/file-handling.md)<br/>
 [_fullpath、_wfullpath](fullpath-wfullpath.md)<br/>

@@ -1,17 +1,18 @@
 ---
 title: 逐步解說：建立傳統 Windows 桌面應用程式C++（）
+description: 如何使用 Visual Studio、 C++和 WIN32 API 建立最小的傳統 Windows 桌面應用程式
 ms.custom: get-started-article
-ms.date: 10/21/2019
+ms.date: 11/03/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: 080c4cd9612058a0a54f19e5d0f4b8add4a03bce
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 6f219a0c199971b563b1c0ff291f2f5d12803023
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778541"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627471"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>逐步解說：建立傳統 Windows 桌面應用程式C++（）
 
@@ -76,9 +77,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![將 DesktopApp 專案命名為](../build/media/desktop-app-new-project-name-153.png "將 DesktopApp 專案命名為")
 
-1. 在 [ **Windows 桌面專案**] 對話方塊的 [**應用程式類型**] 底下，選取 **[Windows 應用程式（.exe）** ]。 在 [其他選項]下，選取 [空專案]。 選擇 [**確定]** 以建立專案。
-
-   ![在 Windows 桌面專案 Wizard 中建立 DesktopApp](../build/media/desktop-app-new-project-wizard-153.png "在 Windows 桌面專案 Wizard 中建立 DesktopApp")
+1. 在 [ **Windows 桌面專案**] 對話方塊的 [**應用程式類型**] 底下，選取 **[Windows 應用程式（.exe）** ]。 在 [其他選項]下，選取 [空專案]。 請確定未選取先行**編譯頭**檔。 選擇 [**確定]** 以建立專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下**DesktopApp**專案，選擇 [**加入**]，然後選擇 [**新增專案**]。
 
@@ -108,9 +107,7 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
 
    ![在 Win32 應用程式中建立 DesktopApp 總覽](../build/media/desktop-app-win32-wizard-overview-150.png "在 Win32 應用程式中建立 DesktopApp 總覽")
 
-1. 在 [**應用程式設定**] 頁面的 [**應用程式類型**] 底下，選取 [ **Windows 應用程式**]。 在 [其他選項]下，選取 [空專案]。 選擇 **[完成]** 以建立專案。
-
-   ![在 Win32 應用程式的 [設定] 中建立 DesktopApp](../build/media/desktop-app-win32-wizard-settings-150.png "在 Win32 應用程式的 [設定] 中建立 DesktopApp")
+1. 在 [**應用程式設定**] 頁面的 [**應用程式類型**] 底下，選取 [ **Windows 應用程式**]。 在 **其他選項** 底下，取消核取 先行**編譯頭**檔，然後選取 **空白** 選擇 **[完成]** 以建立專案。
 
 1. 在**方案總管**中，以滑鼠右鍵按一下 DesktopApp 專案，選擇 [**加入**]，然後選擇 [**新增專案**]。
 
@@ -144,9 +141,9 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
    如需此函式之參數和傳回值的相關資訊，請參閱[WinMain 進入點](/windows/win32/api/winbase/nf-winbase-winmain)。
 
    > [!NOTE]
-   > 這些額外的單字，例如 `CALLBACK` 或 `HINSTANCE`，或 `_In_`？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏來抽象化一些類型的詳細資料，以及平臺特定的程式碼，例如呼叫慣例、 **__declspec**宣告和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [[快速](/visualstudio/ide/using-intellisense#quick-info)諮詢] 功能來查看這些 typedef 和巨集定義的內容。 將滑鼠暫留在感對的單字上，或選取它，然後按**ctrl** +**K**， **ctrl** +**I** ，即可取得包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用*SAL 注釋*，以協助您攔截程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 注釋減少 CC++ /程式碼](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)缺失。
+   > 這些額外的單字，例如 `CALLBACK`或 `HINSTANCE`，或 `_In_`？ 傳統的 Windows API 會廣泛地使用 typedef 和預處理器宏來抽象化一些類型的詳細資料，以及平臺特定的程式碼，例如呼叫慣例、 **__declspec**宣告和編譯器 pragma。 在 Visual Studio 中，您可以使用 IntelliSense [[快速](/visualstudio/ide/using-intellisense#quick-info)諮詢] 功能來查看這些 typedef 和巨集定義的內容。 將滑鼠暫留在感對的單字上，或選取它，然後按**ctrl** +**K**， **ctrl** +**I** ，即可取得包含定義的小型快顯視窗。 如需詳細資訊，請參閱[使用 IntelliSense](/visualstudio/ide/using-intellisense)。 參數和傳回類型通常會使用*SAL 注釋*，以協助您攔截程式設計錯誤。 如需詳細資訊，請參閱[使用 SAL 注釋減少 CC++ /程式碼](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)缺失。
 
-1. Windows 桌面程式需要 &lt;windows .h >。 &lt;tchar. h > 會定義 `TCHAR` 宏，如果您的專案中已定義 UNICODE 符號，則最後會解析為**wchar_t** ，否則會解析成**char**。  如果您一直使用 UNICODE 建立，則不需要 TCHAR，而且可以直接使用**wchar_t** 。
+1. Windows 桌面程式需要 &lt;windows .h >。 &lt;tchar > 定義 `TCHAR` 宏，這會在專案中定義 UNICODE 符號時，最後解析成**wchar_t** ，否則會解析成**char**。  如果您一直使用 UNICODE 建立，則不需要 TCHAR，而且可以直接使用**wchar_t** 。
 
    ```cpp
    #include <windows.h>
@@ -391,9 +388,9 @@ Windows API （也稱為 WIN32 API、Windows 桌面 API 和 Windows Classic API�
    }
    ```
 
-   程式碼中的 `HDC` 是裝置內容的控制碼，這是 Windows 用來讓您的應用程式與圖形子系統進行通訊的資料結構。 @No__t_0 和 `EndPaint` 函式可讓您的應用程式行為良好的公民，而不會使用超出所需時間的裝置內容。 這些函數可協助讓圖形子系統供其他應用程式使用。
+   程式碼中的 `HDC` 是裝置內容的控制碼，這是 Windows 用來讓您的應用程式與圖形子系統進行通訊的資料結構。 `BeginPaint` 和 `EndPaint` 函式可讓您的應用程式行為良好的公民，而不會使用超出所需時間的裝置內容。 這些函數可協助讓圖形子系統供其他應用程式使用。
 
-1. 應用程式通常會處理許多其他訊息。 例如，在第一次建立視窗時[WM_CREATE](/windows/win32/winmsg/wm-create) ，而當視窗關閉時，則會[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
+1. 應用程式通常會處理許多其他訊息。 例如，在第一次建立視窗時[WM_CREATE](/windows/win32/winmsg/wm-create) ，並在視窗關閉時[WM_DESTROY](/windows/win32/winmsg/wm-destroy) 。 下列程式碼會顯示基本但完整的 `WndProc` 函式。
 
    ```cpp
    LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)

@@ -6,7 +6,6 @@ f1_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -31,7 +30,6 @@ helpviewer_keywords:
 - C1036
 - C1041
 - C1048
-- C1049
 - C1063
 - C1069
 - C1101
@@ -52,16 +50,16 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 5ffa1a2633877c8a16eb424f1ddc100bfd6142b8
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 395d7403ef4fe04b671a84a61d320b27ad8ad1c7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857384"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626562"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>編譯器嚴重錯誤 C999 至 C1999
 
-文件的本節文章說明 Microsoft C 所產生的錯誤訊息的子集 /C++編譯器。
+本檔的這一節中的文章將說明 Microsoft C/C++編譯器所產生的錯誤訊息子集。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -78,7 +76,7 @@ ms.locfileid: "64857384"
 |[嚴重錯誤 C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|無法辨認 '*option*' 中的旗標 '*string*'|
 |[嚴重錯誤 C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|沒有指定輸入檔案|
 |[嚴重錯誤 C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|編譯器限制: 巨集巢狀結構太深，請簡化|
-|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘記新增 ' #include \<*檔案*>' 到您的來源？|
+|[嚴重錯誤 C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|尋找先行編譯的標頭時出現非預期的檔案結尾。 您是否忘了將 ' *#include \<檔案*> ' 新增至您的來源？|
 |[嚴重錯誤 C1012](fatal-error-c1012.md)|無對應的括號: 遺漏 '*character*"|
 |[嚴重錯誤 C1013](fatal-error-c1013.md)|編譯器限制: 左括號太多，請簡化運算式或分為數個陳述式|
 |[嚴重錯誤 C1014](fatal-error-c1014.md)|Include 檔太多: 深度 = *number*|
@@ -102,9 +100,9 @@ ms.locfileid: "64857384"
 |[嚴重錯誤 C1046](../../error-messages/compiler-errors-1/fatal-error-c1046.md)|編譯器限制: *structure* 巢狀結構太深|
 |[嚴重錯誤 C1047](fatal-error-c1047.md)|物件或程式庫檔案 '*file*' 使用比其他物件更舊的編譯器建立而成，請重建舊物件和程式庫|
 |嚴重錯誤 C1048|'*option*' 中有未知的選項 '*string*'|
-|嚴重錯誤 C1049|無效的數值引數*value*'|
+|[嚴重錯誤 C1049](fatal-error-c1049.md)|無效的數值引數*value*'|
 |[嚴重錯誤 C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|程式資料庫檔案 '*file*' 的格式已過時，請刪除它並重新編譯|
-|[嚴重錯誤 C1052](fatal-error-c1052.md)|程式資料庫檔案 '*filename*'，所產生連結器使用 /debug: fastlink; 編譯器無法更新這類 PDB 檔案; 請將它刪除或使用 /Fd 指定其他 PDB 檔案名稱|
+|[嚴重錯誤 C1052](fatal-error-c1052.md)|程式資料庫檔案 '*filename*' 是由連結器使用/debug： fastlink 所產生;編譯器無法更新這類 PDB 檔案;請將其刪除，或使用/Fd 來指定不同的 PDB 檔案名|
 |[嚴重錯誤 C1053](fatal-error-c1053.md)|'*function*': 函式太大，無法編譯|
 |[嚴重錯誤 C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|編譯器限制: 初始設定式巢狀結構太深，請簡化|
 |[嚴重錯誤 C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|編譯器限制: 索引鍵不足|
@@ -114,7 +112,7 @@ ms.locfileid: "64857384"
 |嚴重錯誤 C1063|編譯器限制: 編譯器堆疊溢位|
 |[嚴重錯誤 C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|編譯器限制: 語彙基元於內部緩衝區溢位，請縮短名稱|
 |[嚴重錯誤 C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|編譯器限制: 標記不足|
-|[嚴重錯誤 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|編譯器限制：已超過類型記錄的大小的 64k 限制|
+|[嚴重錯誤 C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|編譯器限制: 已超過類型記錄的 64K 大小限制|
 |[嚴重錯誤 C1068](fatal-error-c1068.md)|無法開啟檔案 '*file*'|
 |嚴重錯誤 C1069|無法讀取編譯器命令列|
 |[嚴重錯誤 C1070](fatal-error-c1070.md)|檔案 '*file*' 中 #if/#endif 的組合不相符|
@@ -124,7 +122,7 @@ ms.locfileid: "64857384"
 |[嚴重錯誤 C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|檔案結尾的左 *token* 不相符|
 |[嚴重錯誤 C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|編譯器限制: 已達到內部堆積上限; 請改用 /Zm 指定更高的上限|
 |[嚴重錯誤 C1077](fatal-error-c1077.md)|編譯器限制: 不能有超過 *number* 個的命令列選項|
-|[嚴重錯誤 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|編譯器限制：超過 PCH 檔案大小上限|
+|[嚴重錯誤 C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|編譯器限制: 超過 PCH 檔案大小上限|
 |[嚴重錯誤 C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|編譯器限制: 命令列選項超過 *number* 個字元的限制|
 |[嚴重錯誤 C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': 檔名太長|
 |[嚴重錯誤 C1082](fatal-error-c1082.md)|無法關閉 *type* 檔案: '*file*': *message*|
@@ -155,7 +153,7 @@ ms.locfileid: "64857384"
 |嚴重錯誤 C1111|太多範本/泛型參數|
 |嚴重錯誤 C1112|編譯器限制: `'number`' 的巨集引數太多，僅允許 *number* 個|
 |[嚴重錯誤 C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using 不能用於 '*file*'|
-|嚴重錯誤 C1114|'*檔案*':WinRT 不支援 #using managed 組件|
+|嚴重錯誤 C1114|'*file*': WinRT 不支援 Managed 組件的 #using|
 |[嚴重錯誤 C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' 呼叫 GetProcAddress 失敗|
 |[嚴重錯誤 C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|呼叫 CryptoAPI 失敗，請重新安裝 Visual Studio 或作業系統|
 |[嚴重錯誤 C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動配置超過 *size*|
@@ -186,7 +184,7 @@ ms.locfileid: "64857384"
 |[嚴重錯誤 C1308](../../error-messages/compiler-errors-1/fatal-error-c1308.md)|*file*: 不支援連結組件|
 |[嚴重錯誤 C1309](../../error-messages/compiler-errors-1/fatal-error-c1309.md)|C2.DLL 與 pgodb*ver*.DLL 的版本不符|
 |[嚴重錯誤 C1310](fatal-error-c1310.md)|特性指引最佳化不適用於 OpenMP|
-|[嚴重錯誤 1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|COFF 格式無法以靜態方式初始化 '*symbol*' (位址為 *number* 個位元組)|
+|[嚴重錯誤1311](../../error-messages/compiler-errors-1/fatal-error-c1311.md)|COFF 格式無法以靜態方式初始化 '*symbol*' (位址為 *number* 個位元組)|
 |[嚴重錯誤 C1312](fatal-error-c1312.md)|函式中的條件式分支太多。  請簡化或重整原始程式碼。|
 |[嚴重錯誤 C1313](../../error-messages/compiler-errors-1/fatal-error-c1313.md)|編譯器限制: *type* 區塊的巢狀結構深度不能超過 *number* 層，請簡化程式碼。|
 |[嚴重錯誤 C1350](../../error-messages/compiler-errors-1/fatal-error-c1350.md)|載入 dll '*file*' 時發生錯誤: 找不到 dll|
@@ -215,6 +213,6 @@ ms.locfileid: "64857384"
 |[嚴重錯誤 C1904](fatal-error-c1904.md)|錯誤的提供者互動: '*file*'|
 |[嚴重錯誤 C1905](../../error-messages/compiler-errors-1/fatal-error-c1905.md)|前端和後端不相容 (必須指向相同處理器)。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[C /C++編譯器及建置工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)
+[C/C++編譯器和組建工具錯誤和警告](../compiler-errors-1/c-cpp-build-errors.md)

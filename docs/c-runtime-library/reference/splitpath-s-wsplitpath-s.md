@@ -34,12 +34,12 @@ helpviewer_keywords:
 - path names
 - wsplitpath_s function
 ms.assetid: 30fff3e2-cd00-4eb6-b5a2-65db79cb688b
-ms.openlocfilehash: f97c07ed01ae629fe3eb61346c6c0fcd8fa803f0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8eeb6a0f43827578c5d5ba900c35a3ac30f4ae7c
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958058"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625832"
 ---
 # <a name="_splitpath_s-_wsplitpath_s"></a>_splitpath_s、_wsplitpath_s
 
@@ -93,14 +93,14 @@ errno_t _wsplitpath_s(
 *path*<br/>
 完整路徑。
 
-*drive*<br/>
+*硬碟磁碟機*<br/>
 磁碟機號，後面接著冒號（ **：** ）。 如果您不需要磁碟機號，您可以為此參數傳遞**Null** 。
 
 *driveNumberOfElements*<br/>
 *磁片磁碟機*緩衝區的大小，以單一位元組或寬字元為單位。 如果*drive*是**Null**，這個值必須是0。
 
 *dir*<br/>
-目錄路徑，包括結尾斜線。 可以使用正 **/** 斜線（）、 **\\** 反斜線（）或兩者。 如果您不需要目錄路徑，您可以為此參數傳遞**Null** 。
+目錄路徑，包括結尾斜線。 可以使用正斜線（ **/** ）、反斜線（ **\\** ）或兩者。 如果您不需要目錄路徑，您可以為此參數傳遞**Null** 。
 
 *dirNumberOfElements*<br/>
 *目錄*緩衝區的大小，以單一位元組或寬字元為單位。 如果*dir*是**Null**，這個值必須是0。
@@ -111,7 +111,7 @@ errno_t _wsplitpath_s(
 *nameNumberOfElements*<br/>
 *Fname*緩衝區的大小，以單一位元組或寬字元為單位。 如果*fname*為**Null**，則這個值必須是0。
 
-*ext*<br/>
+*分機*<br/>
 副檔名，包括前置句點（ **.** ）。如果您不需要副檔名，則可以傳遞此參數的**Null** 。
 
 *extNumberOfElements*<br/>
@@ -135,13 +135,13 @@ errno_t _wsplitpath_s(
 |*ext*為**Null**， *extNumberOfElements*為非零|**EINVAL**|
 |*ext*為非**Null**， *extNumberOfElements*為零|**EINVAL**|
 
-如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回**EINVAL**。
+如果發生上述任何狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
 如果有任何緩衝區太短而無法保存結果，這些函式會將所有緩衝區清除為空字串、將**errno**設定為**ERANGE**，並傳回**ERANGE**。
 
 ## <a name="remarks"></a>備註
 
-**_Splitpath_s**函式會將路徑分割成四個元件。 **_splitpath_s**會自動將多位元組字元字串引數處理為適當，並根據目前使用中的多位元組字碼頁來辨識多位元組字元序列。 **_wsplitpath_s**是寬字元版本的 **_splitpath_s**; **_wsplitpath_s**的引數是寬字元字串。 否則，這些函式的行為相同。
+**_Splitpath_s**函式會將路徑分割成四個元件。 **_splitpath_s**會根據目前使用中的多位元組字碼頁，自動將多位元組字元字串引數處理為適當的，並辨識多位元組字元序列。 **_wsplitpath_s**是寬字元版本的 **_splitpath_s**; **_wsplitpath_s**的引數是寬字元字串。 否則，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -153,18 +153,18 @@ errno_t _wsplitpath_s(
 
 下表列出資訊清單常數的值。
 
-|名稱|值|
+|[屬性]|值|
 |----------|-----------|
 |_MAX_DRIVE|3|
 |_MAX_DIR|256|
 |_MAX_FNAME|256|
 |_MAX_EXT|256|
 
-如果完整路徑未包含元件（例如檔案名），則 **_splitpath_s**會將空字串指派給對應的緩衝區。
+如果完整路徑未包含元件（例如檔案名）， **_splitpath_s**會將空字串指派給對應的緩衝區。
 
-在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -173,13 +173,13 @@ errno_t _wsplitpath_s(
 |**_splitpath_s**|\<stdlib.h>|
 |**_wsplitpath_s**|\<stdlib.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
 請參閱 [_makepath_s、_wmakepath_s](makepath-s-wmakepath-s.md) 的範例。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [檔案處理](../../c-runtime-library/file-handling.md)<br/>
 [_splitpath、_wsplitpath](splitpath-wsplitpath.md)<br/>

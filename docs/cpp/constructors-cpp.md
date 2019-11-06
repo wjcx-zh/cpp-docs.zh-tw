@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 799be6cfd4b14061ba61586f361dd884ad59224c
-ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
+ms.openlocfilehash: 8fa7f02f8537f60b71ff21a476589cab9fcf595b
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72587933"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625079"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -68,7 +68,7 @@ int main()
 
 ## <a name="member_init_list"></a>成員初始化運算式清單
 
-函式可以選擇性地擁有成員初始化運算式清單，它會在執行此函式主體之前，先將類別成員初始化。 （請注意，成員初始化運算式清單與類型[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)的*初始化運算式清單*不同。）
+函式可以選擇性地擁有成員初始化運算式清單，它會在執行此函式主體之前，先將類別成員初始化。 （請注意，成員初始化運算式清單與[std：： initializer_list\<t >](../standard-library/initializer-list-class.md)類型的*初始化運算式清單*不同。）
 
 建議使用成員初始化運算式清單，而不是在此函式的主體中指派值，因為它會直接初始化成員。 在下列範例中，成員初始化運算式清單是由冒號後面的所有**識別碼（引數）** 運算式所組成：
 
@@ -78,7 +78,7 @@ int main()
     {}
 ```
 
-識別碼必須參考類別成員;它會以引數的值進行初始化。 引數可以是其中一個函式參數、函式呼叫或[std：： initializer_list \<T >](../standard-library/initializer-list-class.md)。
+識別碼必須參考類別成員;它會以引數的值進行初始化。 引數可以是其中一個函式參數、函式呼叫或[std：： initializer_list\<t >](../standard-library/initializer-list-class.md)。
 
 在成員初始化運算式清單中，必須初始化**const**成員和參考型別的成員。
 
@@ -212,7 +212,7 @@ Box boxes[3]{ { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 Box(Box&& other);
 ```
 
-在某些情況下，編譯器會選擇移動函式，而該物件會由另一個要終結且不再需要其資源的相同類型物件進行初始化。 下列範例示範當多載解析選取移動函式時的一種情況。 在呼叫 `get_Box()` 的函式中，傳回的值是*xvalue* （到期值）。 它不會指派給任何變數，因此即將超出範圍。 為提供此範例的動機，讓我們為 Box 指定一個代表其內容的大型字串向量。 移動函式不會複製向量和其字串，而是將它從過期的值 "box" 中「竊取」，使向量現在屬於新的物件。 @No__t_0 的呼叫都是必要的，因為 `vector` 和 `string` 類別都會執行自己的移動函式。
+在某些情況下，編譯器會選擇移動函式，而該物件會由另一個要終結且不再需要其資源的相同類型物件進行初始化。 下列範例示範當多載解析選取移動函式時的一種情況。 在呼叫 `get_Box()`的函式中，傳回的值是*xvalue* （到期值）。 它不會指派給任何變數，因此即將超出範圍。 為提供此範例的動機，讓我們為 Box 指定一個代表其內容的大型字串向量。 移動函式不會複製向量和其字串，而是將它從過期的值 "box" 中「竊取」，使向量現在屬於新的物件。 `std::move` 的呼叫都是必要的，因為 `vector` 和 `string` 類別都會執行自己的移動函式。
 
 ```cpp
 #include <iostream>
@@ -318,7 +318,7 @@ public:
 
 ## <a name="init_list_constructors"></a>初始化運算式清單的構造函式
 
-如果處理常式採用[std：： initializer_list \<T \>](../standard-library/initializer-list-class.md)做為其參數，而且任何其他參數都有預設引數，則當類別透過 direct 具現化時，會在多載解析中選取該函式。初始. 您可以使用 initializer_list 來初始化任何可以接受它的成員。 例如，假設 Box 類別（先前所示）具有 `std::vector<string>` 成員 `m_contents`。 您可以提供如下所示的函式：
+如果處理常式採用[std：： initializer_list\<t\>](../standard-library/initializer-list-class.md)作為其參數，而且任何其他參數都有預設引數，則當類別透過 direct 具現化時，會在多載解析中選取該函式。初始. 您可以使用 initializer_list，初始化任何可以接受它的成員。 例如，假設 Box 類別（先前所示）具有 `std::vector<string>` 成員 `m_contents`。 您可以提供如下所示的函式：
 
 ```cpp
     Box(initializer_list<string> list, int w = 0, int h = 0, int l = 0)
@@ -597,7 +597,7 @@ Derived d4 calls: Base()*/
 
 ::: moniker range=">=vs-2017"
 
-**Visual Studio 2017 15.7 版和更新**版本： **/Std： c + + 17**模式中的**using**語句會從基類帶入所有的函式，但具有衍生類別中之函數的相同簽章。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 15.7 版中的增強功能](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
+**Visual Studio 2017 15.7 版和更新**版本： **/std： c + + 17**模式中的**using**語句會從基類帶入所有的函式，但具有衍生類別中之函數的相同簽章。 一般而言，衍生類別未宣告新的資料成員或建構函式時，最好使用繼承建構函式。 另請參閱[Visual Studio 2017 15.7 版中的增強功能](https://docs.microsoft.com/cpp/overview/cpp-conformance-improvements?view=vs-2017#improvements_157)。
 
 ::: moniker-end
 

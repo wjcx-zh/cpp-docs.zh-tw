@@ -1,12 +1,21 @@
 ---
 title: '&lt;numeric&gt; 函式'
-ms.date: 11/04/2016
+description: 描述C++標準程式庫中 &lt;數值&gt;標頭所提供的函式範本。
+ms.date: 10/30/2019
 f1_keywords:
 - numeric/std::accumulate
 - numeric/std::adjacent_difference
+- numeric/std::exclusive_scan
+- numeric/std::gcd
+- numeric/std::inclusive_scan
 - numeric/std::inner_product
 - numeric/std::iota
+- numeric/std::lcm
 - numeric/std::partial_sum
+- numeric/std::reduce
+- numeric/std::transform_exclusive_scan
+- numeric/std::transform_inclusive_scan
+- numeric/std::transform_reduce
 ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
@@ -22,52 +31,55 @@ helpviewer_keywords:
 - std::transform_exclusive_scan [C++]
 - std::transform_inclusive_scan [C++]
 - std::transform_reduce [C++]
-ms.openlocfilehash: ab1e2942cbcfe568dd4c280c059fe0768493794c
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 88a97a3d110c684090b78570077927e32541eed7
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889959"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627452"
 ---
 # <a name="ltnumericgt-functions"></a>&lt;numeric&gt; 函式
 
 ## <a name="accumulate"></a>大量
 
-藉由計算連續的部分總和來計算指定範圍內所有元素 (包括某個初始值) 的總和，或是計算連續部分結果 (同樣是使用指定的二進位運算而非加總來計算出) 的結果。
+藉由計算連續的部分總和，來計算指定範圍中所有專案的總和，包括一些初始值。 或者，會計算指定二進位運算的後續部分結果的結果。
 
 ```cpp
 template <class InputIterator, class Type>
-Type accumulate(InputIterator first, InputIterator last, Type val);
+Type accumulate(
+    InputIterator first,
+    InputIterator last,
+    Type init);
 
 template <class InputIterator, class Type, class BinaryOperation>
 Type accumulate(
     InputIterator first,
     InputIterator last,
-    Type val,
+    Type init,
     BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>參數
 
 *第一個*\
-輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的第一個元素。
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
 
 *上次*\
-輸入迭代器，定址對象是要根據指定的二進位運算加總或合併之範圍中的最後一個元素，這是在反覆累積中實際包含的最終元素的後面一個位置。
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
 
-*val* \
-每個元素會根據指定的二進位運算，依次與其相加或合併的初始值。
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
 
 *binary_op*\
-要套用至指定範圍內每個元素的二進位運算，以及其先前套用的結果。
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
 
 ### <a name="return-value"></a>傳回值
 
-在第一個樣板函式的指定範圍中， *val*和所有專案的總和，或第二個樣板函式中，將指定的二進位運算（而不是 sum 運算）套用至（*PartialResult，\*Iter 的結果*），其中*PartialResult*是作業先前應用程式的結果，而 `Iter` 是指向範圍中元素的反覆運算器。
+*Init*和第一個樣板函式之指定範圍中的所有專案的總和，或針對第二個樣板函式，將二元運算*binary_op*的結果（而不是 sum 運算）套用至（* PartialResult， *in_iter*），其中*PartialResult*是作業先前應用程式的結果，而*in_iter*是指向範圍中下一個元素的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-初始值可確保當範圍是空的時，會有一個妥善定義的結果，在此情況下會傳回*val* 。 二進位運算不需要是關聯或交換的。 結果會初始化為初始值*val* ，然後*結果* = `binary_op` （*result*， <strong>\*</strong>`Iter`）會反復地透過範圍計算，其中 `Iter` 是指向後續的反覆運算器範圍中的元素。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保當範圍是空的時，有一個妥善定義的結果，在此情況下會傳回*init* 。 二進位運算不需要是關聯或交換的。 結果會初始化為初始值*init* ，然後*結果* = *binary_op*（*result*， *in_iter*）會反復地透過範圍計算，其中*in_iter*是指向每個的反覆運算器範圍中的後續元素。 範圍必須是有效的，而複雜度則是具有範圍大小的線性。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 
@@ -170,7 +182,7 @@ The vector of partial products is:
 
 ## <a name="adjacent_difference"></a>adjacent_difference
 
-計算在輸入範圍中每個項目及其前置項之間的後續差異並將結果輸出至目的範圍，或計算一般化程序的結果，其中由另一個指定的二進位運算取代差異作業。
+計算輸入範圍中每個專案及其前置項之間的後續差異。 將結果輸出至目的範圍。 或者，會計算一般化程式的結果，其中差異作業會由另一個指定的二進位運算取代。
 
 ```cpp
 template <class InputIterator, class OutIterator>
@@ -205,6 +217,9 @@ ForwardIterator2 adjacent_difference(
 
 ### <a name="parameters"></a>參數
 
+*exec*\
+執行原則。
+
 *第一個*\
 輸入迭代器，為輸入範圍中的第一個項目定址，該範圍中的項目與其各自的前置項要有差異，或一對值要由另一個指定的二進位運算作業。
 
@@ -215,7 +230,7 @@ ForwardIterator2 adjacent_difference(
 輸出迭代器，定址在目的範圍中的第一個項目，該範圍中要存放一系列差異或指定作業的結果。
 
 *binary_op*\
-要套用在一般化作業中的二進位運算，取代差異程序的減法運算。
+要套用在一般化作業中的二進位運算，取代差異程式中減法的運算。
 
 ### <a name="return-value"></a>傳回值
 
@@ -225,11 +240,11 @@ ForwardIterator2 adjacent_difference(
 
 輸出反覆運算器*結果*允許與輸入反覆運算器的*第一個*反覆運算器相同，因此可以就地計算 `adjacent_difference` 值。
 
-針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的 *`partial_difference` 值（1，* *a*2- *a*1，a3- *a*2）儲存在目的範圍中。
+針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的 *`adjacent_difference` 值（1，* *a*2- *a*1，a3- *a*2）儲存在目的範圍中。
 
-針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第二個樣板函式會在目的地中儲存連續*的 `partial_difference` 值 1* *、a 2 `binary_op`* *1、* *a*3 `binary_op` *a*2格或.
+針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第二個樣板函式會將連續的 `adjacent_difference` 值儲存*為*1、 *a*2 *binary_op* *1、* 3 *binary_op* *a*2、in目的範圍。
 
-二進位運算 `binary_op` 不需要是關聯或交換，因為已指定套用的作業順序。
+二進位運算*binary_op*不需要是關聯或交換，因為已指定套用的作業順序。
 
 ### <a name="example"></a>範例
 
@@ -294,66 +309,160 @@ int main( )
 
 ## <a name="exclusive_scan"></a>exclusive_scan
 
+指定初始值，藉由在範圍上使用 `std::plus<>()` 或指定的二元運算子，來計算獨佔前置詞總和運算。 將結果寫入從指定目的地開始的範圍。 *排除前置*詞總和*表示第 n*個輸入專案未包含在第*n*個總和中。 包含執行原則引數的多載會根據指定的原則執行。
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init);
-template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
-OutputIterator exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init, BinaryOperation binary_op);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init);
-template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation>
-ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init, BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class Type>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init);
+
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation>
+OutputIterator exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation>
+ForwardIterator2 exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op);
 ```
 
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+### <a name="return-value"></a>傳回值
+
+輸出反覆運算器，用於定址目的範圍的結尾：*結果*+ （*最後*一個 * - ）* 。
+
 ## <a name="gcd"></a>gcd
+
+計算整數 m 和 n 的最大公除數。
 
 ```cpp
 template <class M, class N>
 constexpr common_type_t<M,N> gcd(M m, N n);
 ```
 
+### <a name="parameters"></a>參數
+
+*m*、 *n*\
+整數類資料類型的值。
+
+### <a name="return-value"></a>傳回值
+
+傳回*m*和*n*絕對值的最大公除數，如果*m*和*n*皆為零，則傳回零。 如果*m*或*n*的絕對值無法以 `common_type_t<M,N>`類型的值表示，則結果會是未定義的。
+
 ## <a name="inclusive_scan"></a>inclusive_scan
+
+指定初始值，藉由在範圍上使用 `std::plus<>()` 或指定的二元運算子，來計算內含前置詞總和運算。 將結果寫入從指定目的地開始的範圍。 *內含前置*詞總和表示第*n 個*輸入元素包含在第*n*個總和中。 包含執行原則引數的多載會根據指定的原則執行。
 
 ```cpp
 template<class InputIterator, class OutputIterator>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result);
+
 template<class InputIterator, class OutputIterator, class BinaryOperation>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op);
-template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
-OutputIterator inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op, T init);
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class Type>
+OutputIterator inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    Type init);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
 class BinaryOperation>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op);
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class T>
-ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op, T init);
+class BinaryOperation, class Type>
+ForwardIterator2 inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+### <a name="return-value"></a>傳回值
+
+輸出反覆運算器，用於定址目的範圍的結尾：*結果*+ （*最後*一個 * - ）* 。
 
 ## <a name="inner_product"></a>inner_product
 
@@ -365,16 +474,16 @@ Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val);
+    Type             init);
 
 template <class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
 Type inner_product(
     InputIterator1   first1,
     InputIterator1   last1,
     InputIterator2   first2,
-    Type             val,
-    BinaryOperation1  binary_op1,
-    BinaryOperation2  binary_op2);
+    Type             init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
 ```
 
 ### <a name="parameters"></a>參數
@@ -388,7 +497,7 @@ Type inner_product(
 *first2* \
 輸入迭代器，定址對象是要計算出與第一個範圍之內乘積或一般化內乘積的第二個範圍中的第一個元素。
 
-*val* \
+*init*\
 範圍之間的內乘積或一般化內乘積要與其相加的初始值。
 
 *binary_op1*\
@@ -401,19 +510,19 @@ Type inner_product(
 
 第一個成員函式會傳回元素乘積的總和，然後為它加上指定的初始值。 因此，針對 *a*i 和 *b*i 值，它會傳回：
 
-`val` + （*a*1 \* *b*1） + （*a*2 \* *b*2） + ... + （*a*n \* *b*n）
+*init* + （*a*1 \* *b*1） + （*a*2 \* *b*2） + ... + （*a*n \* *b*n）
 
-藉由使用 `val` + （*a*i \* *b*i）反復取代*val* 。
+藉由反復將*init*取代為*init* + （*a*i \* *b*i）。
 
 第二個成員函式會傳回：
 
-`val` *binary_op1* （*a*1 *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*a*n *binary_op2* *b*n）
+*init* *binary_op1* （*1* *binary_op2* *b*1） *binary_op1* （*a*2 *binary_op2* *b*2） *binary_op1* .。。*binary_op1* （*n* *binary_op2* *b*n）
 
-藉由使用 `val` *binary_op1* （*a*i *binary_op2* *b*i）反復取代*val* 。
+藉由反復地以*init*取代*init* *binary_op1* （*a*i *binary_op2* *b*i）。
 
 ### <a name="remarks"></a>備註
 
-初始值可確保當範圍是空的時，會有一個妥善定義的結果，在此情況下會傳回*val* 。 二進位運算不需要是關聯或交換的。 範圍必須有效，且複雜度與範圍的大小具有線性關係。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
+初始值可確保當範圍是空的時，有一個妥善定義的結果。 在此情況下，會傳回*init* 。 二進位運算不需要是關聯或交換的。 範圍必須是有效的，而複雜度則是具有範圍大小的線性。 二元運算子的傳回類型必須可轉換成 **Type**，才能確保可在反覆運算時結束。
 
 ### <a name="example"></a>範例
 
@@ -507,7 +616,7 @@ int main()
 
 ## <a name="iota"></a>iota
 
-儲存起始值，從第一個元素開始，並在間隔 `[first,  last)`的每個元素中填入該值的後續遞增（` value++`）。
+儲存起始值，從第一個元素開始，並在間隔 `[first,  last)`的每個元素中填入該值的後續遞增（`value++`）。
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -576,7 +685,7 @@ constexpr common_type_t<M,N> lcm(M m, N n);
 
 ## <a name="partial_sum"></a>partial_sum
 
-計算在輸入範圍中從第一個元素到第 *i* 個元素的一系列總和，然後將每個這類總和的結果儲存在目的範圍的第 *i* 個元素中，或計算一般化程序的結果，其中總和運算會由另一個指定的二進位運算取代。
+在輸入範圍中，計算從第一個專案到第*n*個元素的一系列總和，並將每個這類總和的結果儲存在目的範圍的第*n*個元素中。 或者，會計算一般化程式的結果，其中總和運算會由另一個指定的二進位運算取代。
 
 ```cpp
 template <class InputIterator, class OutIt>
@@ -602,24 +711,24 @@ OutputIterator partial_sum(
 輸入迭代器，定址範圍中要部分加總或根據指定的二進位運算合併的最後一個項目，這是在反覆累積中實際包含的最終項目之外的一個位置。
 
 *結果*\
-輸出迭代器，定址在目的範圍中的第一個項目，該範圍中要存放一系列部分總和或指定作業的結果。
+輸出反覆運算器，定址目的範圍的第一個專案，用來儲存部分總和的數列，或指定之二進位運算的後續結果。
 
 *binary_op*\
-要套用在一般化作業中的二進位運算，取代部分總和程序的總和運算。
+要套用在一般化作業中的二進位運算，取代部分總和程式中總和的運算。
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器，用於定址目的範圍的結尾： `result` + （`last` - `first`），
+輸出反覆運算器，用於定址目的範圍的結尾：*結果*+ （*最後*一個 * - ）* 。
 
 ### <a name="remarks"></a>備註
 
 輸出反覆運算器*結果*允許與輸入反覆運算器的*第一個*反覆運算器相同，因此可以就地計算部分總和。
 
-針對輸入範圍*中的 1*、 *a*2、 *a*3 值序列，第一個樣板函式會將後續的部分總和儲存在目的範圍中，其中*i*個元素是由（（ *（（）（（* ）（（）（（）（（ *） + a 2）* + *a*3） *a*i）。
+如果是值的序列 *，則為*1， *a*2，.。。*在輸入*範圍中的 x，第一個樣板函式會將後續的部分總和儲存在目的範圍中。 第*n* *個元素*是由（1 + *a*2 + *a*3 + ... + *a*n）所提供。
 
-針對輸入範圍中的*1、* *a*2、 *a*3 值序列，第二個樣板函式會將後續的部分總和儲存在目的範圍中，其中第 i 個元素是由（（（*a*1 `binary_op` *a*2） *`binary_op`* 3） *a*i）。
+在輸入範圍中，第二個樣板函式會將後續的部分結果儲存在目的範圍中，以*取得一系列的值為*1、 *a*2、 *a*3。 第*n*個元素是由（（.。。（（*a*1 *binary_op* *a*2） *binary_op* *3）* *binary_op* ...）*binary_op* *n）* 。
 
-二元運算*binary_op*不需要是關聯或交換，因為已指定作業的順序。
+二進位運算*binary_op*不需要是關聯或交換，因為已指定套用的作業順序。
 
 ### <a name="example"></a>範例
 
@@ -683,123 +792,276 @@ int main( )
 
 ## <a name="reduce"></a>減少
 
+藉由以任意且可能的排列順序計算總和，來減少指定範圍中的所有專案，可能包括某個初始值。 或者，藉由計算指定二進位運算的結果來減少。 包含執行原則引數的多載會根據指定的原則執行。
+
 ```cpp
 template<class InputIterator>
-typename iterator_traits<InputIterator>::value_type
-reduce(InputIterator first, InputIterator last);
-template<class InputIterator, class T>
-T reduce(InputIterator first, InputIterator last, T init);
-template<class InputIterator, class T, class BinaryOperation>
-T reduce(InputIterator first, InputIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<InputIterator>::value_type reduce(
+    InputIterator first,
+    InputIterator last);
+
+template<class InputIterator, class Type>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init);
+
+template<class InputIterator, class Type, class BinaryOperation>
+Type reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op);
+
 template<class ExecutionPolicy, class ForwardIterator>
-typename iterator_traits<ForwardIterator>::value_type
-reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last);
-template<class ExecutionPolicy, class ForwardIterator, class T>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init);
-template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
-T reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last, T init,
-BinaryOperation binary_op);
+typename iterator_traits<ForwardIterator>::value_type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation>
+Type reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op);
 ```
+
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+### <a name="return-value"></a>傳回值
+
+套用*binary_op*或 `std::plus<>()` 至指定範圍中的所有專案（* PartialResult， *in_iter*）的結果，其中*PartialResult*是先前的作業應用程式的結果 *，而* *in_iter*這是指向範圍中某個元素的反覆運算器。 在未指定*init*的多載中，使用的*init*值相當於 `typename iterator_traits<InputIterator>::value_type{}`。
+
+### <a name="remarks"></a>備註
+
+`reduce` 行為不具決定性，除非*binary_op*是關聯和交換的。 如果*binary_op*修改任何專案，或使間隔中的任何反覆運算器 \[*first*， *last*] （含）失效，則行為是未定義的。
 
 ## <a name="transform_exclusive_scan"></a>transform_exclusive_scan
 
+使用指定的一元運算子來轉換範圍的專案，然後在指定初始值的範圍內，使用 `std::plus<>()` 或指定的二元運算子，來計算獨佔前置詞總和運算。 將結果寫入從指定目的地開始的範圍。 *排除前置*詞總和*表示第 n*個輸入專案未包含在第*n*個總和中。 包含執行原則引數的多載會根據指定的原則執行。 可能會以任意循序執行總和。
+
 ```cpp
-template<class InputIterator, class OutputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-T init,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator, class Type, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+*unary_op*\
+要套用至指定範圍中每個元素的一元運算。
 
 ## <a name="transform_inclusive_scan"></a>transform_inclusive_scan
 
+使用指定的一元運算子來轉換範圍的專案，然後在指定初始值的範圍內，使用 `std::plus<>()` 或指定的二元運算子，來計算內含前置詞總和運算。 將結果寫入從指定目的地開始的範圍。 *內含前置*詞總和表示第*n 個*輸入元素包含在第*n*個總和中。 包含執行原則引數的多載會根據指定的原則執行。 可能會以任意循序執行總和。
+
 ```cpp
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class InputIterator, class OutputIterator,
-class BinaryOperation, class UnaryOperation, class T>
-OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
-OutputIterator result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2,
-class BinaryOperation, class UnaryOperation, class T>
-ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
-ForwardIterator1 first, ForwardIterator1 last,
-ForwardIterator2 result,
-BinaryOperation binary_op,
-UnaryOperation unary_op,
-T init);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class InputIterator, class OutputIterator, class BinaryOperation, class UnaryOperation, class Type>
+OutputIterator transform_inclusive_scan(
+    InputIterator first,
+    InputIterator last,
+    OutputIterator result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class BinaryOperation, class UnaryOperation, class Type>
+ForwardIterator2 transform_inclusive_scan(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op,
+    Type init);
 ```
+
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+*unary_op*\
+要套用至指定範圍中每個元素的一元運算。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
 
 ## <a name="transform_reduce"></a>transform_reduce
 
+轉換某個範圍的專案，然後套用仿函數，以任意順序縮小已轉換的元素。 實際上，`transform` 後面接著 `reduce`。
+
 ```cpp
-template<class InputIterator1, class InputIterator2, class T>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init);
-template<class InputIterator1, class InputIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(InputIterator1 first1, InputIterator1 last1,
-InputIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class InputIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(InputIterator first, InputIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init);
-template<class ExecutionPolicy,
-class ForwardIterator1, class ForwardIterator2, class T,
-class BinaryOperation1, class BinaryOperation2>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator1 first1, ForwardIterator1 last1,
-ForwardIterator2 first2,
-T init,
-BinaryOperation1 binary_op1,
-BinaryOperation2 binary_op2);
-template<class ExecutionPolicy,
-class ForwardIterator, class T,
-class BinaryOperation, class UnaryOperation>
-T transform_reduce(ExecutionPolicy&& exec, 
-ForwardIterator first, ForwardIterator last,
-T init,
-BinaryOperation binary_op, UnaryOperation unary_op);
+template<class InputIterator1, class InputIterator2, class Type>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init);
+
+template<class InputIterator1, class InputIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    InputIterator1 first1,
+    InputIterator1 last1,
+    InputIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class InputIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    InputIterator first,
+    InputIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class Type, class BinaryOperation1, class BinaryOperation2>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1,
+    ForwardIterator1 last1,
+    ForwardIterator2 first2,
+    Type init,
+    BinaryOperation1 binary_op1,
+    BinaryOperation2 binary_op2);
+
+template<class ExecutionPolicy, class ForwardIterator, class Type, class BinaryOperation, class UnaryOperation>
+Type transform_reduce(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Type init,
+    BinaryOperation binary_op,
+    UnaryOperation unary_op);
 ```
+
+### <a name="parameters"></a>參數
+
+*exec*\
+執行原則。
+
+*第一個*\
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op*來加總或結合。
+
+*first1* \
+輸入反覆運算器，用於定址範圍中的第一個元素，以使用*binary_op1*來加總或結合。
+
+*上次*\
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*last1* \
+輸入反覆運算器，用於定址範圍中的最後一個專案（使用*binary_op1*），這是在反復累積中實際包含的最後一個專案之外的一個位置。
+
+*結果*\
+輸出反覆運算器，用於定址目的範圍的第一個專案，其中的總和或指定作業的結果將會儲存在其中。
+
+*init*\
+第一個值，每個專案會接著使用*binary_op*來加入或合併。
+
+*binary_op*\
+要套用至指定範圍內的每個專案和其先前應用程式結果的二進位運算。
+
+*unary_op*\
+要套用至指定範圍中每個元素的一元運算。
+
+### <a name="return-value"></a>傳回值
+
+轉換後的結果會降低。

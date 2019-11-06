@@ -63,19 +63,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: 70009f1d7d0230b37c6a59da20996842f976d02f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947581"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625793"
 ---
 # <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 
 使用目前的地區設定或傳入的地區設定物件，將字串轉換成小寫。 這些版本的 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbslwr_s**和 **_mbslwr_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbslwr_s**和 **_mbslwr_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -155,13 +155,13 @@ errno_t _wcslwr_s_l(
 
 ## <a name="remarks"></a>備註
 
-**_Strlwr_s**函式會就地將*str*中的任何大寫字母轉換成小寫字母。 **_mbslwr_s**是 **_strlwr_s**的多位元組字元版本。 **_wcslwr_s**是 **_strlwr_s**的寬字元版本。
+**_Strlwr_s**函式會就地將*str*中的任何大寫字母轉換成小寫字母。 **_mbslwr_s**是 **_strlwr_s**的多位元組字元版本。 **_wcslwr_s**是寬字元版本的 **_strlwr_s**。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -174,11 +174,11 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_strlwr_s**、 **_strlwr_s_l**|\<string.h>|
-|**_mbslwr_s**、 **_mbslwr_s_l**|\<mbstring.h>|
-|**_wcslwr_s**、 **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
+|**_strlwr_s**， **_strlwr_s_l**|\<string.h>|
+|**_mbslwr_s**， **_mbslwr_s_l**|\<mbstring.h>|
+|**_wcslwr_s**， **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -218,7 +218,7 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

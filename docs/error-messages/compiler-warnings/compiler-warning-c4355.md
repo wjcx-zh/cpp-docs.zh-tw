@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4355
 ms.assetid: b819ecab-8a07-42d7-8fa4-1180d51626c0
-ms.openlocfilehash: 6b74c8dd5ce9860cb218d21790f12ba05e9be22f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1f5e5be2606a03ec5e9ecd0c571f94c25f82494
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151821"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73623753"
 ---
 # <a name="compiler-warning-c4355"></a>編譯器警告 C4355
 
 'this' : 在基底成員初始設定式清單中使用
 
-**這**指標為非靜態成員函式內才有效。 它不能在初始設定式清單之基底類別。
+**This**指標只在非靜態成員函式內有效。 它不能用在基類的初始化運算式清單中。
 
-前受到呼叫的基底類別建構函式和類別成員建構函式**這**建構函式。 作用中，您已將指標傳送至另一個建構函式未建構的物件。 如果這些其他建構函式會存取任何成員，或呼叫此成員函式，則結果會是未定義。 您不應該使用**這**指標，直到完成所有的建構。
+基類的函式和類別成員的函式會在**此**函式之前呼叫。 實際上，您已將未建構物件的指標傳遞至另一個函式。 如果這些其他的函式會在這個上存取任何成員或呼叫成員函式，則結果會是未定義的。 您不應該使用**this**指標，直到所有結構都完成為止。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-下列範例會產生 C4355:
+下列範例會產生 C4355：
 
-```
+```cpp
 // C4355.cpp
 // compile with: /w14355 /c
 #include <tchar.h>

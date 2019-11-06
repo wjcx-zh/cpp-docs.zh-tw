@@ -1,39 +1,39 @@
 ---
-title: 編譯器警告 （層級 1） C4005
+title: 編譯器警告（層級1） C4005
 ms.date: 11/04/2016
 f1_keywords:
 - C4005
 helpviewer_keywords:
 - C4005
 ms.assetid: 7f2dc79a-9fcb-4d5b-be61-120d9cb487ad
-ms.openlocfilehash: 76aab2160bd5f7918771dcf63b7297a869da751e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71b23ec719198d15a99b4fcfd50db8b151e03226
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187335"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627362"
 ---
-# <a name="compiler-warning-level-1-c4005"></a>編譯器警告 （層級 1） C4005
+# <a name="compiler-warning-level-1-c4005"></a>編譯器警告（層級1） C4005
 
-'identifier': 巨集重複定義
+' identifier '：宏重新定義
 
-巨集識別項定義了兩次。 編譯器會使用第二個巨集定義。
+宏識別碼定義了兩次。 編譯器會使用第二個巨集定義。
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>透過檢查下列可能原因進行修正
 
-1. 在命令列上，以及程式碼中定義的巨集`#define`指示詞。
+1. 使用 `#define` 指示詞，在命令列和程式碼中定義宏。
 
-1. 從包含檔案匯入的巨集。
+1. 從 include 檔案匯入的宏。
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>使用下列可能的解決方式來進行修正
 
 1. 請移除其中一個定義。
 
-1. 使用[#undef](../../preprocessor/hash-undef-directive-c-cpp.md)指示詞，第二個定義之前。
+1. 在第二個定義之前，請使用[#undef](../../preprocessor/hash-undef-directive-c-cpp.md)指示詞。
 
-下列範例會產生 C4005:
+下列範例會產生 C4005：
 
-```
+```cpp
 // C4005.cpp
 // compile with: /W1 /EHsc
 #include <iostream>

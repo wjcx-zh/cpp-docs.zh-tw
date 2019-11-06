@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 1） C4096
+title: 編譯器警告（層級1） C4096
 ms.date: 11/04/2016
 f1_keywords:
 - C4096
 helpviewer_keywords:
 - C4096
 ms.assetid: abf3cca2-2f21-45d8-b025-6b513b00681e
-ms.openlocfilehash: 287465e9a3f5681f459f0823a4409b0906309a55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f526b26eda4c02825d225aa007c6029cc4b03dd
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280452"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627069"
 ---
-# <a name="compiler-warning-level-1-c4096"></a>編譯器警告 （層級 1） C4096
+# <a name="compiler-warning-level-1-c4096"></a>編譯器警告（層級1） C4096
 
-'a': 介面不是 COM 介面;將不會發出到 IDL
+' a '：介面不是 COM 介面;將不會發出至 IDL
 
-您可能想為 COM 介面的介面定義未定義為 COM 介面，並因此將不會被發出到 IDL 檔案。
+您可能想要做為 COM 介面的介面定義未定義為 COM 介面，因此不會發出至 IDL 檔案。
 
-請參閱[介面屬性](../../windows/attributes/interface-attributes.md)的屬性清單，表示介面的 COM 介面。
+如需指出介面為 COM 介面的清單屬性，請參閱[介面屬性](../../windows/attributes/interface-attributes.md)。
 
-下列範例會產生 C4096:
+下列範例會產生 C4096：
 
-```
+```cpp
 // C4096.cpp
 // compile with: /W1 /LD
 #include "windows.h"

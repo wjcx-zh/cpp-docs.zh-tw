@@ -1,14 +1,14 @@
 ---
 title: 在 Visual Studio 中建立及設定 Linux CMake 專案
 description: 如何在 Visual Studio 中建立、設定、編輯和編譯 Linux CMake 專案
-ms.date: 06/12/2019
+ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 5c3a2b212240217fe6d6053188dd466376010391
-ms.sourcegitcommit: a42d3b0408f02138dcd6fabcb98d50b0cb159191
+ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383419"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625955"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>建立及設定 Linux CMake 專案
 
@@ -25,13 +25,13 @@ Visual Studio 2017 及更新版本支援 Linux。
 1. 在 Visual Studio 中選取 [檔案] > [新增專案]，或按 **Ctrl+Shift+N**。
 1. 將 [語言] 設定為 [C++]，並搜尋 "CMake"。 接著，選擇 [下一步]。 輸入**名稱**和**位置**，然後選擇 [建立]。
 
-Visual Studio 會建立最小的 CMakeLists.txt 檔案，其中只包含可執行檔和名稱，以及所需的最低 CMake 版本。 不過，您可以依需要手動編輯此檔案；Visual Studio 將永遠不會覆寫您的變更。 您可以指定 CMake 命令列引數和環境變數，方法是，以滑鼠右鍵按一下 [方案總管] 中的 CMakeLists.txt 檔案，然後選擇 [專案的 CMake 設定]。 若要指定用於偵錯的選項，以滑鼠右鍵按一下專案節點，然後選擇 [偵錯並啟動設定]。
+Visual Studio 會建立最小的 CMakeLists.txt 檔案，其中只包含可執行檔和名稱，以及所需的最低 CMake 版本。 不過，您可以依需要手動編輯此檔案；Visual Studio 將永遠不會覆寫您的變更。 您可以在**方案總管**中，以滑鼠右鍵按一下根 remote monitoring.h cmakelists.txt .txt 檔案，然後選擇 [**專案的 CMake 設定**]，以指定 CMake 命令列引數和環境變數。 若要指定用於偵錯的選項，以滑鼠右鍵按一下專案節點，然後選擇 [偵錯並啟動設定]。
 
 ::: moniker-end
 
-當您開啟包含現有 CMake 專案的資料夾時，Visual Studio 會使用 CMake 產生的中繼資料來設定 IntelliSense 並自動建置。 本機組態和偵錯設定會儲存在 JSON 檔案中，可選擇性地與其他使用 Visual Studio 的人員共用。 
+當您開啟包含現有 CMake 專案的資料夾時，Visual Studio 會使用 CMake 快取中的變數來自動設定 IntelliSense 和組建。 本機組態和偵錯設定會儲存在 JSON 檔案中，可選擇性地與其他使用 Visual Studio 的人員共用。
 
-Visual Studio 不會修改 CMakeLists.txt 檔案，因此可讓其他正在使用相同專案的人員繼續使用任何他們已在使用的工具。 當您編輯 CMakeLists.txt，或在某些情況下編輯 CMakeSettings.json 時，Visual Studio 會重新產生快取。 但是，如果您要使用 [現有的快取] 設定，則 Visual Studio 不會修改快取。
+Visual Studio 不會修改 CMakeLists.txt 檔案，因此可讓其他正在使用相同專案的人員繼續使用任何他們已在使用的工具。 當您將編輯儲存至 Remote monitoring.h cmakelists.txt 或在某些情況下 CMakeSettings json 時，Visual Studio 會重新產生快取。 但是，如果您要使用 [現有的快取] 設定，則 Visual Studio 不會修改快取。
 
 如需有關 Visual Studio 中 CMake 支援的一般資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。 請先閱讀該文，再於此處繼續。
 
@@ -133,7 +133,7 @@ CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMak
 
 若要在 Visual Studio 2019 變更預設 CMake 設定，請從主要工具列開啟 [組態] 下拉式清單，然後選擇 [管理組態]。 
 
-![CMake 管理組態](../build/media/vs2019-cmake-manage-configurations.png "CMake 組態下拉式清單")
+![CMake 管理設定](../build/media/vs2019-cmake-manage-configurations.png "CMake 組態下拉式清單")
 
 這會開啟 [CMake 設定編輯器]，您可用來編輯根專案資料夾中的 `CMakeSettings.json` 檔案。 您也可以直接在編輯器中按一下 [編輯 JSON] 按鈕，開啟該檔案。 如需詳細資訊，請參閱[自訂 CMake 設定](../build/customize-cmake-settings.md)。
 
@@ -223,7 +223,7 @@ CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMak
 
 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用專案屬性](../build/working-with-project-properties.md)<br/>
 [CMake Projects in Visual Studio](../build/cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>

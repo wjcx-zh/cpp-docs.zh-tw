@@ -66,11 +66,11 @@ int maxValue;                // Not recommended! maxValue contains
 |輸入|大小|註解|
 |----------|----------|-------------|
 |int|4 個位元組|整數值的預設選項。|
-|雙線|8 個位元組|浮點值的預設選項。|
+|double|8 個位元組|浮點值的預設選項。|
 |bool|1 個位元組|表示可以是 true 或 false 的值。|
 |char|1 個位元組|使用較舊 C-Style 字串或 std::string 物件中永遠不需要轉換成 UNICODE 之的 ASCII 字元。|
 |wchar_t|2 個位元組|表示可能以 UNICODE 格式 (在 Windows 上為 UTF-16，而其他作業系統可能不同) 編碼的「寬」字元值。 這是用於 `std::wstring` 類型字串的字元類型。|
-|不帶正負號的 &nbsp;char|1 個位元組|C++ 沒有內建 `byte` 類型。  使用 unsigned char 表示位元組值。|
+|unsigned&nbsp;char|1 個位元組|C++ 沒有內建 `byte` 類型。  使用 unsigned char 表示位元組值。|
 |unsigned int|4 個位元組|位元旗標的預設選項。|
 |long long|8 個位元組|表示極大的整數值。|
 

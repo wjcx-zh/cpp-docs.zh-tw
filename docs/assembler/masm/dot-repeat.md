@@ -1,21 +1,21 @@
 ---
 title: .REPEAT
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .REPEAT
 helpviewer_keywords:
 - .REPEAT directive
 ms.assetid: cb8ad8c6-587b-42f9-a0ad-b5316a24918c
-ms.openlocfilehash: ac136bba4c349c84f81248bed12570c02e91577b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0533397c60c83f22b10c84ec72aa6eb65a71e4c0
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203992"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703562"
 ---
-# <a name="repeat"></a>.REPEAT
+# <a name="repeat-32-bit-masm"></a>.重複（32位 MASM）
 
-會產生重複的區塊執行的程式碼*陳述式*直到`condition`變成 true。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)，而成為，則為 true，當 CX 是零，可能會替換為[。直到](../../assembler/masm/dot-until.md)。 `condition`是選擇性的 with **。UNTILCXZ**。
+產生會重複執行*語句*區塊的程式碼，直到 `condition` 變成 true 為止。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)，如果 CX 為零，則可替代[。直到](../../assembler/masm/dot-until.md)。 `condition` 在中是選擇性的 **.UNTILCXZ**。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
@@ -23,6 +23,6 @@ ms.locfileid: "62203992"
 > 陳述式<br/>
 > .UNTIL 條件
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)<br/>

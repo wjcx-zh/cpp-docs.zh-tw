@@ -1,26 +1,26 @@
 ---
 title: .SEQ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .SEQ
 helpviewer_keywords:
 - .SEQ directive
 ms.assetid: 1f8bca31-e29d-4537-b9ca-f8463af75281
-ms.openlocfilehash: 790c7ee8eec300447caef96a8754ffc592422516
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19bf9ec671322a091bea53083efb870d5948277b
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178653"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703877"
 ---
-# <a name="seq"></a>.SEQ
+# <a name="seq-32-bit-masm"></a>.SEQ （32位 MASM）
 
-依序排列區段 （預設順序）。
+依序排序區段（預設順序）。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
 > .SEQ
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)<br/>

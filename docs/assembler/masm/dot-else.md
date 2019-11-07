@@ -1,19 +1,19 @@
 ---
 title: .ELSE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ELSE
 helpviewer_keywords:
 - .ELSE directive
 ms.assetid: ebfec69d-7107-47d1-9cb3-87c99cc8dff7
-ms.openlocfilehash: 0ecc23a3b9a8c7140c7bcd2daedf1cd73afbc430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8143511be63031f5639e6f6014a82ef14fb0db9
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185340"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703120"
 ---
-# <a name="else"></a>.ELSE
+# <a name="else-32-bit-masm"></a>.ELSE （32位 MASM）
 
 ## <a name="syntax"></a>語法
 
@@ -21,8 +21,8 @@ ms.locfileid: "62185340"
 
 ## <a name="remarks"></a>備註
 
-請參閱[。如果](../../assembler/masm/dot-if.md)。
+（僅限 32-bit MASM）。請參閱[。如果](../../assembler/masm/dot-if.md)為。 
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)<br/>

@@ -51,19 +51,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-ms.openlocfilehash: 2a3c8d7019c271b2673e85e124d50139d34866c6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7b76f20516cbf20530f20d3f5b6d1978cfeaaef4
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70947393"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626175"
 ---
 # <a name="strncat_s-_strncat_s_l-wcsncat_s-_wcsncat_s_l-_mbsncat_s-_mbsncat_s_l"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
 將字元附加至字串。 這些版本的 [strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsncat_s**和 **_mbsncat_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsncat_s**和 **_mbsncat_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -151,7 +151,7 @@ errno_t _mbsncat_s_l(
 ### <a name="parameters"></a>參數
 
 *strDest*<br/>
-以 Null 終止的目的地字串。
+以 Null 終止的目的字串。
 
 *numberOfElements*<br/>
 目的緩衝區大小。
@@ -159,7 +159,7 @@ errno_t _mbsncat_s_l(
 *strSource*<br/>
 以 Null 結束的來源字串。
 
-*計數*<br/>
+*count*<br/>
 要附加的字元數或 [_TRUNCATE](../../c-runtime-library/truncate.md)。
 
 *locale*<br/>
@@ -173,15 +173,15 @@ errno_t _mbsncat_s_l(
 
 |*strDestination*|*numberOfElements*|*strSource*|傳回值|*StrDestination*的內容|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null**或未結束|any|any|**EINVAL**|未修改|
-|any|any|**NULL**|**EINVAL**|未修改|
-|any|0 或太小|any|**ERANGE**|未修改|
+|**Null**或未結束|任何|任何|**EINVAL**|未修改|
+|任何|任何|**NULL**|**EINVAL**|未修改|
+|任何|0 或太小|任何|**ERANGE**|未修改|
 
 ## <a name="remarks"></a>備註
 
 這些函式會嘗試將*strSource*的前*D*個字元附加至*strDest*結尾，其中*D*是*count*的較小者，以及*strSource*的長度。 如果附加這些*D*字元會放入*strDest*中（其大小會指定為*numberOfElements*），而且仍留出空間給 null 結束字元，則會附加這些字元，從原始終止的*null 開始。strDest*，而且會附加新的終止 null;否則， *strDest*[0] 會設定為 null 字元，且會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。
 
-上述段落有一個例外狀況。 如果*count*是[_TRUNCATE](../../c-runtime-library/truncate.md) ，那麼*strSource*的大小就會附加到*strDest* ，同時仍留出空間來附加終止的 null。
+上述段落有一個例外狀況。 如果[_TRUNCATE](../../c-runtime-library/truncate.md) *count* ，則會將符合的大部分*strSource*附加至*strDest* ，同時仍留出空間來附加終止的 null。
 
 例如，套用至物件的
 
@@ -191,7 +191,7 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-表示我們要求**strncat_s**將三個字元附加至緩衝區中五個字元長的兩個字元;這不會留下任何空間給 null 結束字元，因此**strncat_s**會零出字串，並呼叫不正確參數處理常式。
+表示我們會要求**strncat_s**將三個字元附加至緩衝區中五個字元長的兩個字元;這不會留下任何空間給 null 結束字元，因此**strncat_s**零出字串，並呼叫不正確參數處理常式。
 
 如果需要截斷行為，請使用 **_TRUNCATE**或據以調整*大小*參數：
 
@@ -213,9 +213,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -224,7 +224,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**和 **_wcsncat_s_l**沒有地區設定相依性;僅供 **_tcsncat_s_l**之用。
+**_strncat_s_l**和 **_wcsncat_s_l**沒有地區設定相依性;僅針對 **_tcsncat_s_l**提供。
 
 ## <a name="requirements"></a>需求
 
@@ -232,9 +232,9 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> 或 \<wchar.h>|
-|**_mbsncat_s**、 **_mbsncat_s_l**|\<mbstring.h>|
+|**_mbsncat_s**， **_mbsncat_s_l**|\<mbstring.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -373,7 +373,7 @@ Invalid parameter handler invoked: (L"Buffer is too small" && 0)
     new contents of dest: ''
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

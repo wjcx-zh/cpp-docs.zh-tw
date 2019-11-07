@@ -58,19 +58,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: 3542d2272282a9c3f6b2aed8cc443bef85dfe883
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946995"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626139"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
 將字串字元初始化為指定的字元。 這些版本的 [_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbsnset_s**和 **_mbsnset_s_l**不能在 Windows 執行階段中執行的應用程式中使用。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbsnset_s**和 **_mbsnset_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -124,10 +124,10 @@ errno_t _mbsnset_s_l(
 *numberOfElements*<br/>
 *Str*緩衝區的大小。
 
-*C*<br/>
+*c*<br/>
 字元設定。
 
-*計數*<br/>
+*count*<br/>
 要設定的字元數。
 
 *locale*<br/>
@@ -143,11 +143,11 @@ errno_t _mbsnset_s_l(
 
 這些函數最多可將*str*的第一個*計數*字元設定為*c*。 如果*count*大於*str*的大小，則會使用*str*的大小，而不是*count*。 如果*count*大於*numberOfElements* ，而且這兩個參數都大於*str*的大小，就會發生錯誤。
 
-**_wcsnset_s**和 **_mbsnset_s**是 **_strnset_s**的寬字元和多位元組字元版本。 **_Wcsnset_s**的字串引數是寬字元字串;這是 **_mbsnset_s**的 amultibyte 字元字串。 除此之外，這三個函式的行為相同。
+**_wcsnset_s**和 **_mbsnset_s**是 **_strnset_s**的寬字元和多位元組字元版本。 **_Wcsnset_s**的字串引數是寬字元字串; **_mbsnset_s**為 amultibyte 字元字串。 除此之外，這三個函式的行為相同。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -164,9 +164,9 @@ errno_t _mbsnset_s_l(
 |**_strnset_s_l**|\<tchar.h>|
 |**_wcsnset_s**|\<string.h> 或 \<wchar.h>|
 |**_wcsnset_s_l**|\<tchar.h>|
-|**_mbsnset_s**、 **_mbsnset_s_l**|\<mbstring.h>|
+|**_mbsnset_s**， **_mbsnset_s_l**|\<mbstring.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -190,7 +190,7 @@ Before: This is a test
 After:  **** is a test
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

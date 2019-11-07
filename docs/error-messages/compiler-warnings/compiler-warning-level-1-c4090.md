@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 （層級 1） C4090
+title: 編譯器警告（層級1） C4090
 ms.date: 11/04/2016
 f1_keywords:
 - C4090
 helpviewer_keywords:
 - C4090
 ms.assetid: baad469d-23d4-45aa-ad9c-305b32d61e9a
-ms.openlocfilehash: b47d0bfbb6eab24fbe811d3e4f79b6bd86b3bb11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88ed48e9bf7057c55ee4004ca1bb1eb18cd4be51
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406466"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626157"
 ---
-# <a name="compiler-warning-level-1-c4090"></a>編譯器警告 （層級 1） C4090
+# <a name="compiler-warning-level-1-c4090"></a>編譯器警告（層級1） C4090
 
-'operation': 不同的 'modifier' 限定詞
+' operation '：不同的 ' 修飾詞 ' 限定詞
 
-使用指定的修飾詞，所以無法由編譯器不需要偵測正在修改定義作業所使用的變數。 運算式會編譯而不需修改。
+作業中使用的變數是使用指定的修飾詞所定義，以防止編譯器進行修改，而不會偵測到它。 運算式是在不修改的情況下編譯。
 
-指標時，可能造成這項警告**const**或是`volatile`項目指派給未宣告為指向指標**const**或`volatile`。
+當**const**或 `volatile` 專案的指標指派給未宣告為指向**const**或 `volatile`的指標時，可能會產生這個警告。
 
-C 程式會發出這個警告。 在C++程式，則編譯器會發出錯誤：[C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
+C 程式會發出此警告。 在C++程式中，編譯器會發出錯誤： [C2440](../../error-messages/compiler-errors-1/compiler-error-c2440.md)。
 
-下列範例會產生 C4090:
+下列範例會產生 C4090：
 
-```
+```c
 // C4090.c
 // compile with: /W1
 int *volatile *p;

@@ -1,21 +1,21 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: b341cfaec35c08f5ac16447890c85570e9c9c0df
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934096"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73703584"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>.MODEL （32位 MASM）
 
-將程式記憶體模型初始化。
+將程式記憶體模型初始化。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
@@ -45,7 +45,7 @@ ms.locfileid: "65934096"
 |參數|32 位元值|16 位元值 (支援較早的 16 位元開發)|
 |---------------|--------------------|----------------------------------------------------------------|
 |*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`、 `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
+|*langtype*|`C`、 `STDCALL`|`C`、 `BASIC`、 `FORTRAN`、 `PASCAL`、 `SYSCALL`、 `STDCALL`|
 |*stackoption*|未使用|`NEARSTACK`、 `FARSTACK`|
 
 ## <a name="code"></a>程式碼
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)<br/>

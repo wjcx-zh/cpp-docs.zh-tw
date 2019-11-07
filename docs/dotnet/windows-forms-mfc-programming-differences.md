@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC [C++], Windows Forms support
 - Windows Forms [C++], compared to MFC
 ms.assetid: f3bfcf45-cfd4-45a4-8cde-5f4dbb18ee51
-ms.openlocfilehash: 165c72b4f91073947d3914ae773e277cce192564
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 52de36217a5ab47eddcbe1abd6617860dcb910b8
+ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311659"
+ms.lasthandoff: 11/06/2019
+ms.locfileid: "73704179"
 ---
 # <a name="windows-formsmfc-programming-differences"></a>Windows Form/MFC 程式設計的差異
 
@@ -22,7 +22,7 @@ Windows Forms 是用來在 .NET Framework 上建立 Microsoft Windows 應用程�
 
 如需 Windows Forms 應用程式的詳細資訊，請參閱[Windows Forms 簡介](/dotnet/framework/winforms/windows-forms-overview)。
 
-如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/en-us/download/details.aspx?id=2113)。
 
 下列 MFC 視圖或檔和命令路由功能在 Windows Forms 中沒有對等專案：
 
@@ -54,6 +54,6 @@ Windows Forms 是用來在 .NET Framework 上建立 Microsoft Windows 應用程�
 
    MFC 有一個命令更新機制。 因此，即時檢視或檔會負責 UI 元素的狀態（例如，啟用或停用功能表項目或工具按鈕，以及已核取的狀態）。 Windows Forms 沒有對等的命令更新機制。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [在 MFC 中使用 Windows Forms 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)

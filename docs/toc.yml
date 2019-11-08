@@ -1940,7 +1940,7 @@
               href: cppcx/value-classes-and-structs-c-cx.md
             - name: 部分類別
               href: cppcx/partial-classes-c-cx.md
-            - name: properties
+            - name: 屬性
               href: cppcx/properties-c-cx.md
             - name: 集合
               href: cppcx/collections-c-cx.md
@@ -1954,7 +1954,7 @@
               href: cppcx/delegates-c-cx.md
             - name: 例外狀況
               href: cppcx/exceptions-c-cx.md
-            - name: 活動
+            - name: 事件
               href: cppcx/events-c-cx.md
             - name: 轉型
               href: cppcx/casting-c-cx.md
@@ -2766,10 +2766,10 @@
           items:
             - name: 同步處理 (lock 類別)
               href: dotnet/synchronization-lock-class.md
-            - name: lock
+            - name: 鎖定
               expanded: false
               items:
-                - name: lock
+                - name: 鎖定
                   href: dotnet/lock.md
                 - name: lock 類別
                   href: dotnet/lock-class.md
@@ -2893,7 +2893,7 @@
     - name: 語言參考
       expanded: false
       items:
-        - name: Languages
+        - name: 語言
           href: overview/languages-cpp.md
         - name: C 語言參考
           expanded: false
@@ -3706,7 +3706,7 @@
                   href: cpp/overview-of-file-translation.md
                 - name: 字元集
                   href: cpp/character-sets.md
-                - name: 權杖
+                - name: 語彙基元
                   href: cpp/tokens-cpp.md
                 - name: 註解
                   href: cpp/comments-cpp.md
@@ -3755,7 +3755,7 @@
                       href: cpp/using-declaration.md
                     - name: 解決不明確的宣告
                       href: cpp/resolving-ambiguous-declarations-cpp.md
-                    - name: 儲存體類別
+                    - name: 儲存類別
                       href: cpp/storage-classes-cpp.md
                     - name: const
                       href: cpp/const-cpp.md
@@ -3763,13 +3763,13 @@
                       href: cpp/constexpr-cpp.md
                     - name: volatile
                       href: cpp/volatile-cpp.md
-                    - name: 自動
+                    - name: auto
                       href: cpp/auto-cpp.md
                     - name: decltype
                       href: cpp/decltype-cpp.md
                     - name: 屬性
                       href: cpp/attributes.md
-                - name: 影響範圍
+                - name: 範圍
                   href: cpp/scope-visual-cpp.md
                 - name: 標頭檔
                   href: cpp/header-files-cpp.md
@@ -3847,7 +3847,7 @@
                   href: cpp/nullptr.md
                 - name: void
                   href: cpp/void-cpp.md
-                - name: 布林
+                - name: bool
                   href: cpp/bool-cpp.md
                 - name: false
                   href: cpp/false-cpp.md
@@ -3903,7 +3903,7 @@
                   href: cpp/cast-operator-parens.md
                 - name: '逗號運算子：,'
                   href: cpp/comma-operator.md
-                - name: 條件運算子：? ：
+                - name: '條件運算子：? :'
                   href: cpp/conditional-operator-q.md
                 - name: delete 運算子
                   href: cpp/delete-operator-cpp.md
@@ -4067,10 +4067,10 @@
               href: cpp/enumerations-cpp.md
             - name: 等位
               href: cpp/unions.md
-            - name: Functions
+            - name: 函式
               expanded: false
               items:
-                - name: Functions
+                - name: 函式
                   href: cpp/functions-cpp.md
                 - name: 具有變數引數清單的函式
                   href: cpp/functions-with-variable-argument-lists-cpp.md
@@ -4113,7 +4113,7 @@
               items:
                 - name: 類別和結構
                   href: cpp/classes-and-structs-cpp.md
-                - name: class
+                - name: Class - 類別
                   href: cpp/class-cpp.md
                 - name: struct
                   href: cpp/struct-cpp.md
@@ -4126,11 +4126,11 @@
                       href: cpp/member-access-control-cpp.md
                     - name: friend
                       href: cpp/friend-cpp.md
-                    - name: 私用
+                    - name: private
                       href: cpp/private-cpp.md
                     - name: protected
                       href: cpp/protected-cpp.md
-                    - name: 公開
+                    - name: public
                       href: cpp/public-cpp.md
                 - name: 在沒有建構函式的情況下初始化類別和結構
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
@@ -4229,10 +4229,10 @@
                   href: cpp/indirection-on-array-types.md
                 - name: C++ 陣列的排序
                   href: cpp/ordering-of-cpp-arrays.md
-            - name: 參考
+            - name: reference
               expanded: false
               items:
-                - name: 參考
+                - name: reference
                   href: cpp/references-cpp.md
                 - name: 左值參考宣告子：&
                   href: cpp/lvalue-reference-declarator-amp.md
@@ -4714,6 +4714,8 @@
               items:
                 - name: 前置處理器
                   href: preprocessor/preprocessor.md
+                - name: 實驗性前置處理器概觀
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: 轉譯階段
                   href: preprocessor/phases-of-translation.md
                 - name: 前置處理器指示詞
@@ -5992,7 +5994,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: enum 類別
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: 事件
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: 例外狀況處理
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6043,7 +6045,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: 字串
+            - name: String
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6157,13 +6159,13 @@
                   href: windows/attributes/bindable.md
                 - name: call_as
                   href: windows/attributes/call-as.md
-                - name: 案例
+                - name: case
                   href: windows/attributes/case-cpp.md
                 - name: coclass
                   href: windows/attributes/coclass.md
                 - name: com_interface_entry
                   href: windows/attributes/com-interface-entry-cpp.md
-                - name: control
+                - name: 控制項
                   href: windows/attributes/control.md
                 - name: cpp_quote
                   href: windows/attributes/cpp-quote.md
@@ -6181,7 +6183,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: 預設值
+                - name: 預設
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6235,13 +6237,13 @@
                   href: windows/attributes/implements-cpp.md
                 - name: implements_category
                   href: windows/attributes/implements-category.md
-                - name: 入口
+                - name: import
                   href: windows/attributes/import.md
                 - name: importidl
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: 了嗎
+                - name: 中的
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6257,7 +6259,7 @@
                   href: windows/attributes/library-block.md
                 - name: licensed
                   href: windows/attributes/licensed.md
-                - name: local
+                - name: 本機
                   href: windows/attributes/local-cpp.md
                 - name: max_is
                   href: windows/attributes/max-is.md
@@ -6273,13 +6275,13 @@
                   href: windows/attributes/noncreatable.md
                 - name: nonextensible
                   href: windows/attributes/nonextensible.md
-                - name: 物件
+                - name: 物件 (object)
                   href: windows/attributes/object-cpp.md
                 - name: odl
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: 選用
+                - name: 選擇性
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6321,7 +6323,7 @@
                   href: windows/attributes/satype.md
                 - name: size_is
                   href: windows/attributes/size-is.md
-                - name: source
+                - name: 來源
                   href: windows/attributes/source-cpp.md
                 - name: 字串
                   href: windows/attributes/string-cpp.md
@@ -6478,7 +6480,7 @@
                   items:
                     - name: 國際化
                       href: c-runtime-library/internationalization.md
-                    - name: Locale
+                    - name: 地區設定
                       href: c-runtime-library/locale.md
                     - name: 字碼頁
                       href: c-runtime-library/code-pages.md
@@ -7320,7 +7322,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: 任意
+                - name: free
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7754,7 +7756,7 @@
                   href: c-runtime-library/reference/nextafter-functions.md
                 - name: norm、normf、norml
                   href: c-runtime-library/reference/norm-normf-norml1.md
-                - name: 否
+                - name: not
                   href: c-runtime-library/reference/not.md
                 - name: not_eq
                   href: c-runtime-library/reference/not-eq.md
@@ -7832,7 +7834,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: read
+                - name: 讀取
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8308,7 +8310,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: write
+                - name: 寫入
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -10506,7 +10508,7 @@
                       href: parallel/openmp/reference/openmp-directives.md
                     - name: 子句
                       href: parallel/openmp/reference/openmp-clauses.md
-                    - name: Functions
+                    - name: 函式
                       href: parallel/openmp/reference/openmp-functions.md
                     - name: 環境變數
                       href: parallel/openmp/reference/openmp-environment-variables.md
@@ -11053,7 +11055,7 @@
                       href: data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md
                 - name: 動態集
                   href: data/odbc/dynaset.md
-                - name: 快照
+                - name: 快照集
                   href: data/odbc/snapshot.md
                 - name: 資料錄欄位交換 (RFX)
                   expanded: false

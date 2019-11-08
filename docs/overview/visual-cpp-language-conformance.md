@@ -1,16 +1,16 @@
 ---
 title: Microsoft C++ 語言一致性表
-ms.date: 08/12/2019
+ms.date: 10/31/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 17ed76551102653e2f05e9731834f4787198db49
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: e3e86acb81120af1b663b56681ff0f8c41036b5a
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631650"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754068"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Microsoft C++ 語言一致性表
 
@@ -98,7 +98,7 @@ ms.locfileid: "69631650"
 |&nbsp;&nbsp;[P1330R0 變更 constexpr 內的作用中聯集成員](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0972R0 noexcept For \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0329R4 指定的初始化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf) \(英文\)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0409R2 允許 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0409R2 與 lambda-capture \[=，此\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0515R3 三向 (太空船) 比較運算子 <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0941R2 功能測試巨集](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 禁止使用使用者宣告建構函式來彙總](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
@@ -172,7 +172,7 @@ ms.locfileid: "69631650"
 |&nbsp;&nbsp;[P0463R1 位元組順序](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html) \(英文\)|否|
 |&nbsp;&nbsp;[P0475R1 分段建構的保證複製省略](https://wg21.link/P0475R1)|否|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|否|
-|&nbsp;&nbsp;[P0482R6 char8_t：UTF-8 字元與字串的型別](https://wg21.link/P0482R6)|否|
+|&nbsp;&nbsp;[P0482R6 char8_t： utf-8 字元和字串的類型](https://wg21.link/P0482R6)|否|
 |&nbsp;&nbsp;[P0487R1 修正運算子>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|否|
 |&nbsp;&nbsp;[P0528R3 具有填補位元的不可部分完成 Compare-And-Exchange](https://wg21.link/P0528R3)|否|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2()、ceil2()、floor2()、log2p1()](https://wg21.link/P0556R3)|否|
@@ -326,7 +326,7 @@ ms.locfileid: "69631650"
 ### <a name="supported-values"></a>支援的值
 
 __否__：表示尚未實作。<br/>
-「部分」  表示實作不完整。 如需詳細資料，請參閱＜附註＞一節。<br/>
+「部分」表示實作不完整。 如需詳細資料，請參閱＜附註＞一節。<br/>
 __VS 2010__：表示 Visual Studio 2010 所支援的功能。<br/>
 __VS 2013__：表示 Visual Studio 2013 所支援的功能。<br/>
 __VS 2015__ 表示 Visual Studio 2015 RTW 所支援的功能。<br/>
@@ -338,7 +338,7 @@ __VS 2017 15.7__ 表示 Visual Studio 2017 15.7 版所支援的功能。<br/>
 __VS 2019 16.0__ 表示 Visual Studio 2019 16.0 版 (RTW) 版所支援的功能。<br/>
 __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 
-### <a name="notes"></a>注意
+### <a name="notes"></a>備註
 
 <a name="note_A"></a>__A__ 在 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 模式中，動態例外狀況規格保持未實作，而 `throw()` 仍被視為 `__declspec(nothrow)` 的同義字。 在 C++17 中，P0003R5 移除了大部分的動態例外狀況規格，並保留一個殘留項目：`throw()` 將會被淘汰，而且必須作為 `noexcept` 的同義字。 在 [/std:c++17](../build/reference/std-specify-language-standard-version.md) 模式中，MSVC 現在藉由賦與 `throw()` 與 `noexcept` 相同的行為 (也就是透過終止強制執行) 來符合標準。
 
@@ -346,7 +346,7 @@ __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 
 <a name="note_B"></a>__B__ 在 Visual Studio 2017 15.7 版的 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下支援。 如需詳細資訊，請參閱 [MSVC 推出兩階段名稱查閱支援](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)。
 
-<a name="note_C"></a>__C__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 支援 Variadic 巨集，但在前置處理器的行為方面有很多 Bug。 我們正在檢修前置處理器，並且即將以實驗方式在 [/permissive-](../build/reference/permissive-standards-conformance.md) 模式下遞送這些變更。
+<a name="note_C"></a>__C__ 編譯器的 C99 前置處理器規則支援在 Visual Studio 2017 中仍未完善。 我們會檢修預處理器，並開始使用[/experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數，在 Visual Studio 2017 版本15.8 中傳送這些變更。
 
 <a name="note_D"></a>__D__ 於 [/std:c++14](../build/reference/std-specify-language-standard-version.md) 底下受到支援，並具有可隱藏的警告，[C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md)。
 
@@ -367,14 +367,14 @@ __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 <a name="note_rem"></a>__rem__ 當指定 [/std:c++17](../build/reference/std-specify-language-standard-version.md) (或 [/std:c++latest](../build/reference/std-specify-language-standard-version.md)) 編譯器選項時，將會移除這些功能。 您可以使用下列巨集重新啟用這些功能以清除轉換到新語言模式：`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS` 與 `_HAS_UNEXPECTED`。
 
 <a name="note_charconv"></a>__charconv__ `from_chars()` 與 `to_chars()` 可用於整數。 浮點數 `from_chars()` 與浮點數 `to_chars()` 的時間表如下所示：
-- VS 2017 15.7：整數 `from_chars()` 與 `to_chars()`。
-- VS 2017 15.8：浮點數 `from_chars()`。
-- VS 2017 15.9：浮點數 `to_chars()` 多載最短的小數點。
-- VS 2019 16.0：浮點數 `to_chars()` 多載最短的十六進位與精確十六進位：
-- VS 2019 16.2：浮點數 `to_chars()` 多載精確固定與精確科學。
-- 尚未實作：浮點數 `to_chars()` 多載精確一般。 
+- VS 2017 15.7：整數 `from_chars()` 和 `to_chars()`。
+- VS 2017 15.8：浮點 `from_chars()`。
+- VS 2017 15.9：最短十進位數的浮點 `to_chars()` 多載。
+- VS 2019 16.0：浮點 `to_chars()` 多載，適用于最短的十六進位和有效位數十六進位。
+- VS 2019 16.2：精確度固定和精確度科學的浮點 `to_chars()` 多載。
+- 尚未實行：精確度一般的浮點 `to_chars()` 多載。 
 
-<a name ="note_parallel"></a> __parallel__ C++17 的的平行演算法程式庫已完成。 這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們實作的中央內部標頭 (yvals_core.h) 包含下列「平行演算法注意事項」：C++ 允許實作在呼叫序列演算法時實作平行演算法。  這項實作會平行處理數個常見的演算法呼叫，但並非全部。
+<a name ="note_parallel"></a> __parallel__ C++17 的的平行演算法程式庫已完成。 這並不表示每個演算法都會在每種情況下進行平行處理；最重要的演算法已進行平行處理，因此即使演算法未進行平行處理，也會提供執行原則的簽章。 我們的實作為中央內部標頭（yvals_core .h）包含下列「平行演算法附注」： C++允許執行實作為呼叫序列演算法的平行演算法。  這項實作會平行處理數個常見的演算法呼叫，但並非全部。
 
 下列演算法已平行處理：
 
@@ -391,7 +391,7 @@ __VS 2019 16.1__ 表示 Visual Studio 2019 16.1 版版所支援的功能。
 - 尚未評估；平行處理也許會在未來版本中實作，而且可能有幫助：
   - `copy_if`、`includes`、`inplace_merge`、`lexicographical_compare`、`max_element`、`merge`、`min_element`、`minmax_element`、`nth_element`、`partition_copy`、`remove_copy`、`remove_copy_if`、`replace_copy`、`replace_copy_if`、`set_symmetric_difference`、`set_union`、`stable_partition`、`unique`、`unique_copy`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>

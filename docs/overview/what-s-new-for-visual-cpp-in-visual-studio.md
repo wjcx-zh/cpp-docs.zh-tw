@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 4b9f393f133fea41e1fbffa88abe225f9b05a9ec
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
+ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626358"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73754130"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -256,6 +256,10 @@ Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編�
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
 Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱[宣佈： MSVC 符合C++標準](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和[Microsoft C++語言一致性](../visual-cpp-language-conformance.md)。
+
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 15.8 版
+
+[/Experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數會啟用新的實驗性 MSVC 預處理器，最後會與所有適用的C++ C 和標準一致。 如需詳細資訊，請參閱[MSVC 實驗性預處理器總覽](../preprocessor/preprocessor-experimental-overview.md)。
 
 ### <a name="new-compiler-options"></a>新的編譯器選項
 

@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: ad0fd856fc15ce9f787ba620463480bfe3e59d47
-ms.sourcegitcommit: b85e1db6b7d4919852ac6843a086ba311ae97d40
+ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
+ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71925413"
+ms.lasthandoff: 11/11/2019
+ms.locfileid: "73912900"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -36,7 +36,7 @@ Visual Studio 2017 及更新版本支援 Linux 專案。
 
    ![Windows 搜尋方塊](media/visual-studio-installer-search.png)
 
-2. 在 [應用程式] 結果下方尋找該安裝程式，然後按兩下。 安裝程式開啟後，選擇 [修改]，然後按一下 [工作負載]標籤。向下捲動至 [其他工具組]，然後選取 [使用 C++ 進行 Linux 開發] 工作負載。
+2. 在 [應用程式] 結果下方尋找該安裝程式，然後按兩下。 當安裝程式開啟時，選擇 [**修改**]，然後按一下 [**工作負載**] 索引標籤。向下流覽至**其他工具**組，然後選取 [使用工作負載 **C++進行 Linux 開發**]。
 
    ![適用於 Linux 開發的 Visual C++ 工作負載](media/linuxworkload.png)
 
@@ -48,7 +48,7 @@ Visual Studio 2017 及更新版本支援 Linux 專案。
 
 如果您還沒有 Linux 機器，您可以在 Azure 上建立 Linux 虛擬機器。 如需詳細資訊，請參閱[快速入門：在 Azure 入口網站中建立 Linux 虛擬機器](/azure/virtual-machines/linux/quick-create-portal)。
 
-在 Windows 10 上，您可以在適用於 Linux 的 Windows 子系統 (WSL) 上安裝最愛的 Linux 發行版本，並以其為目標。 如需詳細資訊，請參閱 [Windows 10 版適用於 Linux 的 Windows 子系統安裝指南](/windows/wsl/install-win10)。 WSL 是一個方便的主控台環境，但不建議用於圖形化應用程式。 
+在 Windows 10 上，您可以在適用於 Linux 的 Windows 子系統 (WSL) 上安裝最愛的 Linux 發行版本，並以其為目標。 如需詳細資訊，請參閱 [Windows 10 版適用於 Linux 的 Windows 子系統安裝指南](/windows/wsl/install-win10)。 如果您無法存取 Windows Store，您可以[手動下載 WSL 散發版本套件](/windows/wsl/install-manual)。 WSL 是一個方便的主控台環境，但不建議用於圖形化應用程式。 
 
 ::: moniker-end
 
@@ -80,7 +80,7 @@ Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上�
 
 ::: moniker range="vs-2019" 
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安裝程式：WSL 上的 Ubuntu
+## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安裝程式： WSL 上的 Ubuntu
 
 當您以 WSL 為目標時，不需要新增遠端連線，也不需要設定 SSH，就可以建置及偵錯。 使用 Visual Studio 自動同步處理 Linux 標頭以獲取 Intellisense 支援時，需要 **zip** 和 **rsync**。 如果還沒有這些必要的應用程式，您可以依下列方式進行安裝：
 
@@ -160,7 +160,7 @@ Visual Studio 2017 及更新版本有提供 Linux C++ 開發的支援。
 
 ## <a name="next-steps"></a>後續步驟
 
-您現在已準備好建立或開啟 Linux 專案，並將它設定為在目標系統上執行。 如需詳細資訊，請參閱：
+您現在已準備好建立或開啟 Linux 專案，並將它設定為在目標系統上執行。 如需詳細資訊，請參閱:
 
 - [建立新的 Linux 專案](create-a-new-linux-project.md)
 - [設定 Linux CMake 專案](cmake-linux-project.md)

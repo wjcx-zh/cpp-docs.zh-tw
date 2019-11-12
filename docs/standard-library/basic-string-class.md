@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6983baacd9cc40d916f2e1e6213dde1f92e23ea3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: c77c09394bb8997168d8a6756da69e9545dad0a2
+ms.sourcegitcommit: 4a0a108aa6f042576a777feb6dcb310dc0bb9230
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689958"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73842320"
 ---
 # <a name="basic_string-class"></a>basic_string 類別
 
@@ -334,7 +334,7 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="remarks"></a>備註
 
-您可以使用[運算子 + =](#op_add_eq)或成員函式 `append` 或[push_back](#push_back)，將字元附加至字串。 `operator+=` 會附加單一引數值，而多引數 `append` 成員函式則允許指定字串的特定部分來進行新增。
+您可以使用[運算子 + =](#op_add_eq)將字元附加至字串，或 `append` 或[push_back](#push_back)成員函式。 `operator+=` 會附加單一引數值，而多引數 `append` 成員函式則允許指定字串的特定部分來進行新增。
 
 ### <a name="example"></a>範例
 
@@ -894,7 +894,7 @@ const value_type *c_str() const;
 
 ### <a name="remarks"></a>備註
 
-屬於類別樣板 basic_string\<char > 的類型字串物件不一定是 null 終止。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 從**const char** <strong>\*</strong>自動轉換成字串，但是 string 類別不提供從 C 樣式字串自動轉換成**basic_string\<char >** 類型的物件。
+屬於類別樣板之 string 類型的物件 basic_string\<char > 不一定是 null 終止。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串的一部分。 從**const char** <strong>\*</strong>自動轉換成字串，但是 string 類別不提供從 C 樣式字串自動轉換成類型**basic_string\<char >** 的物件。
 
 由於傳回的 C 樣式字串具有有限的存留期，而且屬字串類別所擁有，因此不應該加以修改，這樣做可能會使字串指標失效或遭到刪除。
 
@@ -1658,23 +1658,26 @@ The copied characters array2 is: World
 
 ## <a name="data"></a>  basic_string::data
 
-將字串的內容轉換成字元的陣列。
+將字串的內容轉換成以 null 結束的字元陣列。
 
 ```cpp
-const value_type *data() const;
+const value_type *data() const noexcept;
+value_type *data() noexcept;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-包含字串內容之陣列的第一個元素指標；若為空陣列，則為無法取值的非 null 指標。
+包含字串內容之以 null 結束之陣列的第一個元素的指標。 若為空字串，指標會指向等於 `value_type()`的單一 null 字元。
 
 ### <a name="remarks"></a>備註
 
-屬於類別樣板 basic_string \<char > 的類型字串物件不一定是 null 終止。 `data` 的傳回型別不是有效的 C 字串，因為不會附加 null 字元。 Null 字元 ' \0 ' 會用作 C 字串中的特殊字元來標記字串結尾，但在字串類型的物件中則沒有任何特殊意義，而且可與任何其他字元一樣當做字串物件的一部分。
+`data` 點在 `[data(), data() + size()]`的有效範圍中傳回的指標。 範圍中的每個元素都會對應至字串中的目前資料。 亦即，針對範圍中的每個有效位移*n* ，`data() + n == addressof(operator[](n))`。
 
-從**const char** <strong>\*</strong>自動轉換成字串，但是 string 類別不提供從 C 樣式字串自動轉換成**basic_string \<char >** 類型的物件。
+如果您修改 `data`的**const**多載所傳回之字串的內容，則行為是未定義的。 如果終端機 null 字元變更為任何其他值，您也會取得未定義的行為。 如果將字串的非 const 參考傳遞給標準程式庫函式，傳回的指標可能會無效。 呼叫非 const 成員函式也可以使其失效。 對成員的呼叫 `at`、`back`、`begin`、`end`、`front`、`rbegin`、`rend`和 `operator[]` 不會使指標失效。 
 
-由於傳回的字串具有有限的存留期，而且屬類別字串所擁有，因此不應該加以修改，這樣做可能會使字串指標失效或遭到刪除。
+在 c + + 11 之前，`data` 不保證傳回的字串以 null 結束。 自 c + + 11 之後，`data` 和 `c_str` 都會傳回以 null 結束的字串，而且實際上是相同的。
+
+非 const 多載是 c + + 17 的新功能。 若要使用它，請指定 **/std： c + + 17**或 **/std： c + + 最新**的編譯器選項。
 
 ### <a name="example"></a>範例
 
@@ -3307,7 +3310,7 @@ static const size_type npos = -1;
 
 ### <a name="remarks"></a>備註
 
-若要檢查傳回值的 `npos` 值，除非傳回值的類型是[size_type](#size_type) ，而不是**int**或不**帶正負**號，否則可能無法使用。
+若要檢查傳回值的 `npos` 值，除非傳回值的類型[size_type](#size_type) ，而不是**int**或不**帶正負**號，否則可能無法使用。
 
 ### <a name="example"></a>範例
 

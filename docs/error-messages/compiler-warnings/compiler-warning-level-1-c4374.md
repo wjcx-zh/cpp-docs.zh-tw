@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4374
+title: 編譯器警告（層級1） C4374
 ms.date: 11/04/2016
 f1_keywords:
 - C4374
 helpviewer_keywords:
 - C4374
 ms.assetid: 4ac9aaec-d815-4b6e-825f-fa872092dd3b
-ms.openlocfilehash: 5cf18a3dcd94f59ce1ae8feb675f251bea5715a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 31a43467020e3d90a2f02c667f7cdb6177b4d833
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302237"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966444"
 ---
-# <a name="compiler-warning-level-1-c4374"></a>編譯器警告 (層級 1) C4374
+# <a name="compiler-warning-level-1-c4374"></a>編譯器警告（層級1） C4374
 
-'function1': 非虛擬方法 'function2' 將不會實作介面方法
+' function1 '：介面方法不會由非虛擬方法 ' function2 ' 執行
 
-編譯器預期找到[虛擬](../../cpp/virtual-specifier.md)方法定義上的關鍵字。
+編譯器預期會在方法定義上尋找[虛擬](../../cpp/virtual-specifier.md)關鍵字。
 
-下列範例會產生 C4374:
+下列範例會產生 C4374：
 
-```
+```cpp
 // C4374.cpp
 // compile with: /clr /W1 /c /WX
 public interface class I {

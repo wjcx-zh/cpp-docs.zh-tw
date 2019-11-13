@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4346
+title: 編譯器警告（層級1） C4346
 ms.date: 11/04/2016
 f1_keywords:
 - C4346
 helpviewer_keywords:
 - C4346
 ms.assetid: 68ee562d-cca9-4a2a-9a1b-14ad1a1e7396
-ms.openlocfilehash: 53381ca6e33321001299ce27bce550c5b2b8f59e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa71565824355ff4b3658fd9de22c09d6db6dc33
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187214"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966554"
 ---
-# <a name="compiler-warning-level-1-c4346"></a>編譯器警告 (層級 1) C4346
+# <a name="compiler-warning-level-1-c4346"></a>編譯器警告（層級1） C4346
 
-'name': 相依名稱不是類型
+' name '：相依名稱不是類型
 
-[Typename](../../cpp/typename.md)相依名稱視為類型時，則需要關鍵字。 在 視覺效果的所有版本的運作方式相同的程式碼的C++，新增`typename`宣告。
+如果要將相依名稱視為型別，則需要[typename](../../cpp/typename.md)關鍵字。 對於在所有版本的 Visual C++中都相同的程式碼，請將 `typename` 加入至宣告。
 
-下列範例會產生 C4346:
+下列範例會產生 C4346：
 
-```
+```cpp
 // C4346.cpp
 // compile with: /WX /LD
 template<class T>
@@ -32,9 +32,9 @@ struct C {
 };
 ```
 
-下列範例顯示的其他範例所在**typename**則需要關鍵字：
+下列範例顯示需要**typename**關鍵字的其他範例：
 
-```
+```cpp
 // C4346b.cpp
 // compile with: /LD /W1
 template<class T>
@@ -53,9 +53,9 @@ struct M : public L<typename T::Type, T::Value>
 };
 ```
 
-而這，
+這就是
 
-```
+```cpp
 // C4346c.cpp
 // compile with: /LD /WX
 struct Y {

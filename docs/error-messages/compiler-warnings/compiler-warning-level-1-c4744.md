@@ -1,34 +1,34 @@
 ---
-title: 編譯器警告 (層級 1) C4744
+title: 編譯器警告（層級1） C4744
 ms.date: 11/04/2016
 f1_keywords:
 - C4744
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 2118a32af8b99d35c1e1a6691561391ec5d2b8cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6954ae7966edf200249bb5d10f0dfb011bcef22
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385416"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051552"
 ---
-# <a name="compiler-warning-level-1-c4744"></a>編譯器警告 (層級 1) C4744
+# <a name="compiler-warning-level-1-c4744"></a>編譯器警告（層級1） C4744
 
-'var' 具有 'file1' 和 'file2' 中的不同類型: 'type1' 和 'type2'
+' file1 ' 和 ' file2 ' 中的 ' var ' 類型不同： ' type1 ' 和 ' type2 '
 
-在兩個檔案中定義或參考的外部變數會有不同類型，這些檔案中。  若要解決，讓型別定義相同，或是變更其中一個檔案中的變數名稱。
+在兩個檔案中參考或定義的外部變數在這些檔案中具有不同的類型。  若要解決此問題，請將類型定義設為相同，或變更其中一個檔案中的變數名稱。
 
-檔案以 /gl 編譯時，才會發出 C4744  如需詳細資訊，請參閱 [/GL (整個程式最佳化)](../../build/reference/gl-whole-program-optimization.md)。
+只有在使用/GL. 編譯檔案時，才會發出 C4744  如需詳細資訊，請參閱 [/GL (整個程式最佳化)](../../build/reference/gl-whole-program-optimization.md)。
 
 > [!NOTE]
->  C4744 通常會發生在 C 中 (沒有C++) 檔案，因為在C++變數的名稱裝飾型別資訊。  範例 （如下所示） 時做為編譯C++，您會收到連結器錯誤 LNK2019。
+>  C4744 通常會發生在 C （ C++非）檔案中， C++因為在變數名稱中，會以類型資訊裝飾。  當範例（下方）編譯為C++時，您會收到連結器錯誤 LNK2019。
 
 ## <a name="example"></a>範例
 
-此範例包含的第一個定義。
+這個範例包含第一個定義。
 
-```
+```c
 // C4744.c
 // compile with: /c /GL
 int global;
@@ -38,7 +38,7 @@ int global;
 
 下列範例會產生 C4744。
 
-```
+```c
 // C4744b.c
 // compile with: C4744.c /GL /W1
 // C4744 expected

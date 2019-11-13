@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4925
 ms.assetid: a4b206c0-016a-4f28-873a-bb8bb41bad50
-ms.openlocfilehash: cb7b416fe15380dc914bd57152e8a0ce3618ee85
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88eb09bdde1fa8dc50fa601cf7ae200d2851ac03
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393502"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052297"
 ---
 # <a name="compiler-warning-level-1-c4925"></a>編譯器警告 (層級 1) C4925
 
@@ -23,7 +23,7 @@ ms.locfileid: "62393502"
 
 下列範例會產生 C4925：
 
-```
+```cpp
 // C4925.cpp
 // compile with: /LD /W1
 #define _ATL_ATTRIBUTES 1

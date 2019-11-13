@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4930
+title: 編譯器警告（層級1） C4930
 ms.date: 11/04/2016
 f1_keywords:
 - C4930
 helpviewer_keywords:
 - C4930
 ms.assetid: 89a206c9-c536-4186-8e81-1cde3e7f4f5b
-ms.openlocfilehash: 15cd1ed61c747e2c9168b9fc0fee03dca8403a24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21cc6364692eb2f3b1d56b03d175df1f2ad7ee8
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242782"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050262"
 ---
-# <a name="compiler-warning-level-1-c4930"></a>編譯器警告 (層級 1) C4930
+# <a name="compiler-warning-level-1-c4930"></a>編譯器警告（層級1） C4930
 
-'原型': 未呼叫原型函式 （是變數定義？）
+' 原型 '：未呼叫原型函式（預期是變數定義嗎？）
 
-編譯器偵測到未使用的函式原型。 如果原型的目的是為變數宣告中，移除 開啟/關閉括號。
+編譯器偵測到未使用的函數原型。 如果原型是做為變數宣告，請移除左/右括弧。
 
-下列範例會產生 C4930:
+下列範例會產生 C4930：
 
-```
+```cpp
 // C4930.cpp
 // compile with: /W1
 class Lock {
@@ -39,11 +39,11 @@ int main() {
 }
 ```
 
-當編譯器無法分辨函式原型宣告和函式呼叫時，也會發生 C4930。
+當編譯器無法區別函式原型宣告與函式呼叫時，也可能會發生 C4930。
 
-下列範例會產生 C4930:
+下列範例會產生 C4930：
 
-```
+```cpp
 // C4930b.cpp
 // compile with: /EHsc /W1
 
@@ -112,4 +112,4 @@ int main()
 }
 ```
 
-在上述範例中，採用零引數之方法的結果做為引數傳遞給未命名的本機類別變數的建構函式。 呼叫可以被明確命名的本機變數或方法呼叫的物件執行個體，以及適當的成員指標運算子前面加上執行的。
+在上述範例中，接受零引數之方法的結果會當做引數傳遞至未命名的區域類別變數的函式。 藉由命名區域變數，或在方法呼叫前面加上物件實例，以及適當的成員指標運算子，可以對呼叫進行歧義。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4191
 ms.assetid: 576d3bc6-95b7-448a-af31-5d798452df09
-ms.openlocfilehash: 72a485811647911207b6d048c686acdadd142b65
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd0d7dc57c8d3c94a52f72b536657bb3ea1c6b3a
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402251"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051873"
 ---
 # <a name="compiler-warning-level-3-c4191"></a>編譯器警告 (層級 3) C4191
 
@@ -27,7 +27,7 @@ ms.locfileid: "62402251"
 
 - 區隔引數清單的長度 (在 `__cdecl`，只有從較長的清單轉換成較短的清單，即使較短的是 varargs)。
 
-- 資料指標 (而非**void**<strong>\*</strong>) 別名違反函式的指標。
+- 對函式的指標進行別名的資料指標（不是**void** <strong>\*</strong>）。
 
 - 會在 `reinterpret_cast`產生錯誤或警告的任何其他類型差異。
 
@@ -37,7 +37,7 @@ ms.locfileid: "62402251"
 
 下列範例會產生 C4191：
 
-```
+```cpp
 // C4191.cpp
 // compile with: /W3 /clr
 #pragma warning(default: 4191)

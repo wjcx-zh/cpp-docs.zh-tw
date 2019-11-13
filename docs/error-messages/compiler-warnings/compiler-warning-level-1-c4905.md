@@ -1,23 +1,23 @@
 ---
-title: 編譯器警告 (層級 1) C4905
+title: 編譯器警告（層級1） C4905
 ms.date: 11/04/2016
 f1_keywords:
 - C4905
 helpviewer_keywords:
 - C4905
 ms.assetid: 40240bf4-b14e-4c22-aeb2-52f2851532f6
-ms.openlocfilehash: c1d201eb7d3eee322a1aa1e598eeb24928e361a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0086a3b312895d86f2e76bdbbd348f90654ba8e2
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380652"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051222"
 ---
-# <a name="compiler-warning-level-1-c4905"></a>編譯器警告 (層級 1) C4905
+# <a name="compiler-warning-level-1-c4905"></a>編譯器警告（層級1） C4905
 
 寬字串常值轉換成 'LPSTR'
 
-編譯器偵測到不安全的轉換。 轉換未成功，但您應該使用的轉換常式。
+編譯器偵測到不安全的轉換。 轉換已成功，但您應該使用轉換常式。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
@@ -25,7 +25,7 @@ ms.locfileid: "62380652"
 
 下列範例會產生 C4905。
 
-```
+```cpp
 // C4905.cpp
 // compile with: /W1
 #pragma warning(default : 4905)

@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4715
+title: 編譯器警告（層級1） C4715
 ms.date: 11/04/2016
 f1_keywords:
 - C4715
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: f165ea3b54b78e2f8fae995815e309d55101244e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 268a26f5de1bb7f757a8e7cba6d3f5e6ddff882e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406323"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052483"
 ---
-# <a name="compiler-warning-level-1-c4715"></a>編譯器警告 (層級 1) C4715
+# <a name="compiler-warning-level-1-c4715"></a>編譯器警告（層級1） C4715
 
-'function': 不是所有控制路徑都傳回值
+' function '：並非所有的控制路徑都會傳回值
 
-指定的函式可能不可以傳回值。
+指定的函式可能不會傳回值。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // C4715a.cpp
 // compile with: /W1 /LD
 int func1( int i )
@@ -31,9 +31,9 @@ int func1( int i )
 }
 ```
 
-若要避免這個警告，請修改程式碼，使所有路徑都指派給函式的傳回值：
+若要避免這個警告，請修改程式碼，讓所有路徑指派一個傳回值給函數：
 
-```
+```cpp
 // C4715b.cpp
 // compile with: /LD
 int func1( int i )
@@ -43,9 +43,9 @@ int func1( int i )
 }
 ```
 
-它是您的程式碼，可能包含呼叫的函式從未返回，如下列範例所示：
+您的程式碼可能會包含永遠不會傳回之函式的呼叫，如下列範例所示：
 
-```
+```cpp
 // C4715c.cpp
 // compile with: /W1 /LD
 void fatal()
@@ -62,4 +62,4 @@ int glue()
 }
 ```
 
-此程式碼也會產生警告，因為編譯器不知道，`fatal`永遠不會傳回。 若要避免這段程式碼產生錯誤訊息，宣告`fatal`使用[__declspec （noreturn)](../../cpp/noreturn.md)。
+這段程式碼也會產生警告，因為編譯器不知道 `fatal` 絕對不會傳回。 若要避免此程式碼產生錯誤訊息，請使用[__declspec （noreturn）](../../cpp/noreturn.md)宣告 `fatal`。

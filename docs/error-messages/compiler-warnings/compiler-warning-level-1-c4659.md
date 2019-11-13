@@ -1,25 +1,25 @@
 ---
-title: 編譯器警告 (層級 1) C4659
+title: 編譯器警告（層級1） C4659
 ms.date: 11/04/2016
 f1_keywords:
 - C4659
 helpviewer_keywords:
 - C4659
 ms.assetid: e29ba8db-7917-43f6-8e34-868b752279ae
-ms.openlocfilehash: 2aef25e922d8f38ac7103b1b12ccb31c282f0403
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27023e6886638be63db1e1fb654c0caa70769a56
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374647"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052536"
 ---
-# <a name="compiler-warning-level-1-c4659"></a>編譯器警告 (層級 1) C4659
+# <a name="compiler-warning-level-1-c4659"></a>編譯器警告（層級1） C4659
 
-\#pragma 'pragma': 使用保留的區段 'segment' 有未定義的行為，請使用 #pragma 註解 (linker，...)
+\#pragma ' pragma '：使用保留區段 ' 區段 ' 有未定義的行為，請使用 #pragma 批註（連結器，...）
 
-.Drectve 選項用來傳遞選項給連結器。 改為使用 pragma[註解](../../preprocessor/comment-c-cpp.md)傳遞連結器選項。
+Drectve 選項是用來將選項傳遞給連結器。 請改用 pragma [comment](../../preprocessor/comment-c-cpp.md)來傳遞連結器選項。
 
-```
+```cpp
 // C4659.cpp
 // compile with: /W1 /LD
 #pragma code_seg(".drectve")   // C4659

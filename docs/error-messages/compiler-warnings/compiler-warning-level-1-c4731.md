@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4731
+title: 編譯器警告（層級1） C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: af091d1d35fff955afcc5af3da48b80416e79f36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385429"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052420"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>編譯器警告 (層級 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>編譯器警告（層級1） C4731
 
-'pointer': 框架指標暫存器的 「 註冊 」 修改內嵌組譯碼
+' 指標 '：內嵌組解碼程式碼修改了框架指標暫存器 ' register '
 
-已修改框架指標暫存器。 您必須儲存並還原暫存器，在您內嵌組件區塊或框架的變數 （區域變數或參數，根據修改的暫存器），或您的程式碼可能無法正常運作。
+已修改框架指標暫存器。 您必須在內嵌組解碼區塊或框架變數（本機或參數，視已修改的暫存器）中儲存和還原暫存器，否則您的程式碼可能無法正常運作。
 
-下列範例會產生 C4731:
+下列範例會產生 C4731：
 
-```
+```cpp
 // C4731.cpp
 // compile with: /W1 /LD
 // processor: x86
@@ -39,4 +39,4 @@ void bad(int p) {
 }
 ```
 
-EBP （FPO 不允許） 框架指標，而且正在修改。 當`p`稍後參考，它參考相對於`EBP`。 但`EBP`已被覆寫的程式碼，因此程式將無法正常運作，甚至可能會發生錯誤。
+EBP 是框架指標（不允許 FPO），而且正在進行修改。 當稍後參考 `p` 時，就會參考相對於 `EBP`的。 但是 `EBP` 已被程式碼覆寫，因此程式將無法正常運作，甚至可能發生錯誤。

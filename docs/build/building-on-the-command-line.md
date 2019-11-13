@@ -2,7 +2,7 @@
 title: 從命令列C++使用 Microsoft 工具組
 description: 在 Visual Studio IDE 外部從命令列使用 MicrosoftC++ 編譯器工具鏈 (MSVC)。
 ms.custom: conceptual
-ms.date: 10/22/2019
+ms.date: 11/12/2019
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -10,16 +10,20 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: 7aa8673b7bb29591c7cf1c26b96b48261db9fee4
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811154"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051485"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>從命令列C++使用 Microsoft 工具組
 
-您可以使用 Visual Studio 中包含的工具，在命令列上建置 C 和 C++ 應用程式。 Microsoft C++ （MSVC）編譯器工具組也可以從[Visual Studio 下載](https://visualstudio.microsoft.com/downloads/) 頁面下載為獨立套件。 它是 Visual Studio 封裝的**組建工具**的一部分。 您可以選擇只下載C++開發所需的工具。
+您可以使用 Visual Studio 中包含的工具，在命令列上建置 C 和 C++ 應用程式。 Microsoft C++ （MSVC）編譯器工具組也可下載為不包含 Visual Studio IDE 的獨立套件。
+
+## <a name="download-and-install-the-tools"></a>下載並安裝工具
+
+如果您已安裝 Visual Studio 和C++工作負載，則會有所有的命令列工具。 如需有關如何安裝C++和 Visual Studio 的詳細資訊，請參閱[在 Visual Studio 中安裝C++支援](vscpp-step-0-installation.md)。 如果您只想要命令列工具組，請下載[Visual Studio 的組建工具](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)。 當您執行下載的可執行檔時，它會更新並執行 Visual Studio 安裝程式。 若只要安裝C++開發所需的工具，請選取 [  **C++組建工具**] 工作負載。 您可以選取要包含在**安裝詳細資料**底下的選用程式庫和工具組。 若要使用 Visual Studio 2015 或2017工具組來建立程式碼，請選取選擇性的 MSVC v140 或 MSVC v141 build tools。 當您滿意所做的選擇之後，請選擇 [**安裝**]。
 
 ## <a name="how-to-use-the-command-line-tools"></a>如何使用命令列工具
 
@@ -152,18 +156,18 @@ ms.locfileid: "72811154"
 
 請使用 **-vcvars_ver = 14.2 yyyyy**來指定特定版本的 Visual Studio 2019 編譯器工具組。
 
-使用 **-vcvars_ver = v14.16**指定最新版本的 Visual Studio 2017 編譯器工具組。
+使用 **-vcvars_ver = v14.16**來指定最新版的 Visual Studio 2017 編譯器工具組。
 
 ::: moniker-end
 ::: moniker range="= vs-2017"
 
-使用 **-vcvars_ver = v14.16**指定最新版本的 Visual Studio 2017 編譯器工具組。
+使用 **-vcvars_ver = v14.16**來指定最新版的 Visual Studio 2017 編譯器工具組。
 
-請使用 **-vcvars_ver = 14.1 x yyyyy**來指定特定版本的 Visual Studio 2017 編譯器工具組。
+使用 **-vcvars_ver = 14.1 yyyyy**指定特定版本的 Visual Studio 2017 編譯器工具組。
 
 ::: moniker-end
 
-請使用 **-vcvars_ver = 14.0**來指定 Visual Studio 2015 編譯器工具組。
+使用 **-vcvars_ver = 14.0**來指定 Visual Studio 2015 編譯器工具組。
 
 #### <a name="vcvarsall"></a>在現有的命令提示字元視窗中設定組建環境
 

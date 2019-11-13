@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 (層級 1) C4490
+title: 編譯器警告（層級1） C4490
 ms.date: 11/04/2016
 f1_keywords:
 - C4490
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161091"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966185"
 ---
-# <a name="compiler-warning-level-1-c4490"></a>編譯器警告 (層級 1) C4490
+# <a name="compiler-warning-level-1-c4490"></a>編譯器警告（層級1） C4490
 
-'override': 覆寫規範; 的用法不正確'function' 不符合基底 ref 類別方法
+' override '：覆寫規範的使用不正確;' function ' 與基底 ref 類別方法不符
 
-覆寫規範的使用方式錯誤。 比方說，您不覆寫介面函式，您可以實作它。
+不正確地使用了覆寫規範。 例如，您不會覆寫介面函式，而是執行它。
 
-如需詳細資訊，請參閱 <<c0> [ 覆寫規範](../../extensions/override-specifiers-cpp-component-extensions.md)。
+如需詳細資訊，請參閱覆[寫](../../extensions/override-specifiers-cpp-component-extensions.md)規範。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4490。
 
-```
+```cpp
 // C4490.cpp
 // compile with: /clr /c /W1
 

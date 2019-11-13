@@ -1,23 +1,23 @@
 ---
-title: 編譯器警告 (層級 1) C4532
+title: 編譯器警告（層級1） C4532
 ms.date: 11/04/2016
 f1_keywords:
 - C4532
 helpviewer_keywords:
 - C4532
 ms.assetid: 4e2a286a-d233-4106-9f65-29be1a94ca02
-ms.openlocfilehash: bcadf31eda079ebb8ea7a496efe4c945e16b1ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b47eb192bc01e6fe2c6c9423ed2c672f16c6818f
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160753"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966245"
 ---
-# <a name="compiler-warning-level-1-c4532"></a>編譯器警告 (層級 1) C4532
+# <a name="compiler-warning-level-1-c4532"></a>編譯器警告（層級1） C4532
 
-'continue': 跳出 __finally/finally 區塊未定義在終止處理期間的行為
+[繼續]：跳出 __finally/finally 組塊在終止處理期間有未定義的行為
 
-編譯器在遇到其中一個下列關鍵字：
+編譯器遇到下列其中一個關鍵字：
 
 - [continue](../../cpp/continue-statement-cpp.md)
 
@@ -25,15 +25,15 @@ ms.locfileid: "62160753"
 
 - [goto](../../cpp/goto-statement-cpp.md)
 
-造成共跳[__finally](../../cpp/try-finally-statement.md)或是[最後](../../dotnet/finally.md)異常終止期間的區塊。
+導致在異常終止期間跳出[__finally](../../cpp/try-finally-statement.md)或[finally](../../dotnet/finally.md)區塊。
 
-如果發生例外狀況，而在堆疊回溯終止處理常式執行期間 (`__finally`或 finally 區塊)，和您的程式碼跳出`__finally`前封鎖`__finally`區塊結束，行為是未定義。 控制項不會傳回回溯程式碼，因此可能不正確處理例外狀況。
+如果發生例外狀況，而且堆疊在執行終止處理常式（`__finally` 或 finally 區塊）期間已被展開，而您的程式碼在 `__finally` 區塊結束之前跳出 `__finally` 區塊，則行為是未定義的。 控制項可能不會回到回溯程式碼，因此例外狀況可能無法正確處理。
 
-如果您必須跳出 **__finally**封鎖，請先檢查異常終止。
+如果您必須跳出 **__finally**區塊，請先檢查是否有異常終止。
 
-下列範例會產生 C4532;只是標記為註解跳躍陳述式，若要解決這些警告。
+下列範例會產生 C4532;只要將跳躍語句標記為批註即可解決警告。
 
-```
+```cpp
 // C4532.cpp
 // compile with: /W1
 // C4532 expected

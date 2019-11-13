@@ -6,18 +6,18 @@ helpviewer_keywords:
 - hosting Windows Forms control [C++]
 - Windows Forms [C++], MFC support
 ms.assetid: 9f66ee52-b7cb-4ffd-8306-392a5da990d8
-ms.openlocfilehash: 1a688870f4700e8e3b935245f2c9243f8d5aa823
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 8925b86a5920df6a53a2625b782cf41e1a7fe32c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704095"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964961"
 ---
 # <a name="hosting-a-windows-form-user-control-in-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載至 MFC 對話方塊中
 
 MFC 會將 Windows Forms 控制項裝載為特殊類型的 ActiveX 控制項，並使用 ActiveX 介面和 <xref:System.Windows.Forms.Control> 類別的屬性和方法與控制項進行通訊。 建議您使用 .NET Framework 的屬性和方法來操作控制項。
 
-如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/en-us/download/details.aspx?id=2113)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/download/details.aspx?id=2113)。
 
 > [!NOTE]
 >  在目前的版本中，`CDialogBar` 物件無法裝載 Windows Forms 控制項。

@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 (層級 1) C4566
+title: 編譯器警告（層級1） C4566
 ms.date: 11/04/2016
 f1_keywords:
 - C4566
 helpviewer_keywords:
 - C4566
 ms.assetid: 65f40730-e86f-447c-b37b-16caadcfe311
-ms.openlocfilehash: c864feb2478e9f99ad6e4c0087dcef72b55de601
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6a62b399aa32ec6caf2e5a9ee6d4c5836601ba4
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397259"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965964"
 ---
-# <a name="compiler-warning-level-1-c4566"></a>編譯器警告 (層級 1) C4566
+# <a name="compiler-warning-level-1-c4566"></a>編譯器警告（層級1） C4566
 
-表示通用字元名稱 'char' 字元無法在目前的字碼頁 （頁面）
+以通用字元名稱 ' char ' 表示的字元，無法在目前的字碼頁中表示（頁面）
 
-並非每個 Unicode 字元可以表示您目前的 ANSI 字碼頁中。
+並非每個 Unicode 字元都可以在您目前的 ANSI 字碼頁中表示。
 
-窄字串 （單一位元組字元） 會轉換成多位元組字元中，而不是寬字串 （雙位元組字元）。
+窄字串（一個位元組字元）會轉換成多位元組字元，而寬字元串（雙位元組字元）則不會。
 
-下列範例會產生 C4566:
+下列範例會產生 C4566：
 
-```
+```cpp
 // C4566.cpp
 // compile with: /W1
 int main() {

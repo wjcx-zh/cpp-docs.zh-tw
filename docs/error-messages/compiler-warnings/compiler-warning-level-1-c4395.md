@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4395
+title: 編譯器警告（層級1） C4395
 ms.date: 11/04/2016
 f1_keywords:
 - C4395
 helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
-ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 074e00ff2ae44986127f629da6ef38f9f5df7212
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182401"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964877"
 ---
-# <a name="compiler-warning-level-1-c4395"></a>編譯器警告 (層級 1) C4395
+# <a name="compiler-warning-level-1-c4395"></a>編譯器警告（層級1） C4395
 
-'function': initonly 資料成員 'member' 的複本將會叫用成員函式
+' function '：成員函式將會在 initonly 資料成員 ' member ' 的複本上叫用
 
-成員函式上呼叫[initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)資料成員。  C4395 會發出警告， **initonly**資料成員無法修改由函式。
+已在[initonly （C++/cli）](../../dotnet/initonly-cpp-cli.md)資料成員上呼叫成員函式。  C4395 會警告，函數無法修改**initonly**資料成員。
 
-下列範例會產生 C4395:
+下列範例會產生 C4395：
 
-```
+```cpp
 // C4395.cpp
 // compile with: /W1 /clr
 public value class V {

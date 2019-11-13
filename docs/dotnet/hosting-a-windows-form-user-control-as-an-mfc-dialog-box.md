@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 1351f0b2aa4ebc288469231a27c691237b52b1c1
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 7fc2aad1e0a550fb8f22b311518ae9fb16c076a5
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704132"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964943"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>將 Windows Form 使用者控制項裝載成 MFC 對話方塊
 
@@ -19,7 +19,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
 `CWinFormsDialog` 用來裝載使用者控制項的程式，與在[MFC 對話方塊中裝載 Windows Form 使用者控制項](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)中所述的程式相同。 不過，`CWinFormsDialog` 會管理使用者控制項的初始化和裝載，使其不必以手動方式進行程式設計。
 
-如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/en-us/download/details.aspx?id=2113)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/download/details.aspx?id=2113)。
 
 ### <a name="to-create-the-mfc-host-application"></a>建立 MFC 主應用程式
 

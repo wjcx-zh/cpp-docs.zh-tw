@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms controls [C++], hosting as an MFC view
 - hosting Windows Forms control [C++]
 ms.assetid: 43c02ab4-1366-434c-a980-0b19326d6ea0
-ms.openlocfilehash: 9eb157ecbc738e1d7a1c3022d5f156fb590e8f04
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: bf91730f98685935d50ee0076739b436e8d9da60
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704121"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73964938"
 ---
 # <a name="hosting-a-windows-forms-user-control-as-an-mfc-view"></a>將 Windows Form 使用者控制項裝載為 MFC 檢視
 
@@ -21,7 +21,7 @@ MFC 會使用 CWinFormsView 類別，在 MFC 視圖中裝載 Windows Forms 的�
 
 因為 MFC Windows Forms views 是 ActiveX 控制項，所以沒有與 MFC views 相同的 `hwnd`。 此外，它們也無法當做[CView](../mfc/reference/cview-class.md)視圖的指標來傳遞。 一般來說，請使用 .NET Framework 方法來處理 Windows Forms 的 views，並在 Win32 上依賴較少的。
 
-如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/en-us/download/details.aspx?id=2113)。
+如需顯示與 MFC 搭配使用之 Windows Forms 的範例應用程式，請參閱[mfc 和 Windows Forms 整合](https://www.microsoft.com/download/details.aspx?id=2113)。
 
 ## <a name="in-this-section"></a>本章節內容
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: faca2e7213ab0ad0c9b1a1a0fd6a7274094853f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b38299bc39ce282769e40e915847b2220ec28ca
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362215"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965613"
 ---
 # <a name="redistributing-the-mfc-library"></a>轉散發 MFC 程式庫
 
@@ -19,13 +19,13 @@ ms.locfileid: "62362215"
 > [!NOTE]
 >  Visual Studio 2015 RTM 的可轉散發檔案目錄中已省略 mfc140.dll 檔案。 您可以改為使用 Windows\system32 和 Windows\syswow64 目錄中 Visual Studio 2015 所安裝的版本。
 
-因為所有的 MFC DLL 會使用 C 執行階段程式庫 (CRT) 的共用版本，您可能也需要轉散發 CRT。 Visual Studio 2015 所隨附的 MFC 版本會使用通用 CRT 程式庫，該程式庫是作為 Windows 10 的一部分散發。 若要執行使用 Visual Studio 2015 在舊版 Windows 上建置的 MFC 應用程式，您必須轉散發通用 CRT。 如需如何轉散發通用 CRT 作為作業系統元件或使用本機部署轉散發通用 CRT 的資訊，請參閱 [Introducing the Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/) (通用 CRT 簡介)。 若要在支援的 Windows 版本中下載通用 CRT 以進行中央部署，請參閱 [Windows 10 Universal C Runtime](https://www.microsoft.com/en-us/download/details.aspx?id=48234) (Windows 10 通用 C 執行階段)。 Windows SDK 中提供用於本機部署的 ucrtbase.dll 可轉散發架構特定版本。 根據預設，Visual Studio 會將這些版本安裝在 C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\ 的架構特定子目錄中。
+因為所有的 MFC DLL 會使用 C 執行階段程式庫 (CRT) 的共用版本，您可能也需要轉散發 CRT。 Visual Studio 2015 所隨附的 MFC 版本會使用通用 CRT 程式庫，該程式庫是作為 Windows 10 的一部分散發。 若要執行使用 Visual Studio 2015 在舊版 Windows 上建置的 MFC 應用程式，您必須轉散發通用 CRT。 如需如何轉散發通用 CRT 作為作業系統元件或使用本機部署轉散發通用 CRT 的資訊，請參閱 [Introducing the Universal CRT](https://devblogs.microsoft.com/cppblog/introducing-the-universal-crt/) (通用 CRT 簡介)。 若要在支援的 Windows 版本上下載適用于集中部署的通用 CRT，請參閱[windows 10 通用 C 運行](https://www.microsoft.com/download/details.aspx?id=48234)時間。 Windows SDK 中提供用於本機部署的 ucrtbase.dll 可轉散發架構特定版本。 根據預設，Visual Studio 會將這些版本安裝在 C:\Program Files (x86)\Windows Kits\10\Redist\ucrt\DLLs\ 的架構特定子目錄中。
 
 如果應用程式是使用舊版 MFC 程式庫所建置，您必須從可轉散發檔案目錄中轉散發相應的 CRT DLL。 例如，如果 MFC 應用程式是使用 Visual Studio 2013 (vc120) 工具組所建置，您必須轉散發 msvcr120.dll。 您也需要轉散發相應的 mfc`<version>`u.dll 或 mfc`<version>`.dll。
 
 如果您以靜態方式將應用程式連結至 MFC (亦即，如果在 [屬性頁] 對話方塊的 [一般] 索引標籤上指定 [在靜態程式庫中使用 MFC])，您不需要轉散發 MFC DLL。 不過，雖然靜態連結可能適用於應用程式的測試和內部部署，但還是建議您不要使用它來轉散發 MFC。 如需部署 Visual C++ 程式庫之建議策略的詳細資訊，請參閱[選擇部署方法](choosing-a-deployment-method.md)。
 
-如果應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，[類別](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 類別](../mfc/reference/chtmleditview-class.md))，建議您同時安裝最新版本的 Microsoft Internet Explorer，讓目標電腦具有最新的通用控制項檔案。 (最低需要有 Internet Explorer 4.0。)如何安裝 Internet Explorer 元件的相關資訊可在以下取得：「文章 185375：如何建立 Internet Explorer 的單一 EXE 安裝」(位於 Microsoft 支援服務網站)。
+如果應用程式會使用實作 WebBrowser 控制項的 MFC 類別 (例如，[類別](../mfc/reference/chtmlview-class.md)或 [CHtmlEditView 類別](../mfc/reference/chtmleditview-class.md))，建議您同時安裝最新版本的 Microsoft Internet Explorer，讓目標電腦具有最新的通用控制項檔案。 （至少需要 Internet Explorer 4.0）。如需有關如何安裝 Internet Explorer 元件的資訊，請參閱 Microsoft 支援服務網站上的「文章185375：如何建立 Internet Explorer 的單一 EXE 安裝」。
 
 如果應用程式會使用 MFC 資料庫類別 (例如，[CRecordset 類別](../mfc/reference/crecordset-class.md)和 [CRecordView 類別](../mfc/reference/crecordview-class.md))，您必須轉散發 ODBC 和應用程式所使用的任何 ODBC 驅動程式。
 
@@ -45,6 +45,6 @@ ms.locfileid: "62362215"
 
 您可以藉由部署應用程式本機資料夾中的 MFC DLL，來轉散發 MFC 當地語系化 DLL。 如需如何轉散發 Visual C++ 程式庫的詳細資訊，請參閱[轉散發 Visual C++ 檔案](redistributing-visual-cpp-files.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [轉散發 Visual C++ 檔案](redistributing-visual-cpp-files.md)

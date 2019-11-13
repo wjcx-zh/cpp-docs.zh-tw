@@ -1,25 +1,25 @@
 ---
-title: 編譯器警告 (層級 1) C4405
+title: 編譯器警告（層級1） C4405
 ms.date: 11/04/2016
 f1_keywords:
 - C4405
 helpviewer_keywords:
 - C4405
 ms.assetid: 155c64d6-58ae-4455-b61f-ccd711c5da96
-ms.openlocfilehash: e85bdc995fe16f91e2e9c734dacc65ca0b7b622d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 182f9ff061fd2a8ebe5ea0046545412fca5f646a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182375"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73965579"
 ---
-# <a name="compiler-warning-level-1-c4405"></a>編譯器警告 (層級 1) C4405
+# <a name="compiler-warning-level-1-c4405"></a>編譯器警告（層級1） C4405
 
-'identifier': 識別項是保留的字
+' identifier '：識別碼是保留字
 
-內嵌組譯碼的保留字做為變數的名稱。 這可能會造成無法預期的結果。 若要修正這個警告，避免保留字為內嵌組譯碼命名的變數。 下列範例會產生 C4405:
+保留給內嵌組解碼的字會當做變數名稱使用。 這可能會導致無法預期的結果。 若要修正這個警告，請避免使用保留給內嵌組解碼的字組來命名變數。 下列範例會產生 C4405：
 
-```
+```cpp
 // C4405.cpp
 // compile with: /W1
 // processor: x86

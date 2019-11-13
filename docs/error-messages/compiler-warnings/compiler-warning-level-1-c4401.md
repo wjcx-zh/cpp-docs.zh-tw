@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4401
+title: 編譯器警告（層級1） C4401
 ms.date: 11/04/2016
 f1_keywords:
 - C4401
 helpviewer_keywords:
 - C4401
 ms.assetid: 2e7ca136-f144-4b40-b847-82976e8643fc
-ms.openlocfilehash: c7e6cf8a52288d895b74481678dc91fee387a6a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 242c854339608c88d139c898d81d142c52f90134
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280421"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966307"
 ---
-# <a name="compiler-warning-level-1-c4401"></a>編譯器警告 (層級 1) C4401
+# <a name="compiler-warning-level-1-c4401"></a>編譯器警告（層級1） C4401
 
-'位元欄位': 成員是位元欄位
+' bit '：成員是位欄位
 
-內嵌組譯程式碼會嘗試存取的位元欄位成員。 內嵌組譯碼無法存取位元欄位成員，所以會使用位元欄位成員之前的最後一個封裝界限。
+內嵌組解碼程式碼嘗試存取位欄位成員。 內嵌組解碼無法存取位欄位成員，因此使用位欄位成員之前的最後一個封裝界限。
 
-若要避免這個警告，請在內嵌組譯碼中進行參考之前，先轉換位元欄位，以適當的型別。 下列範例會產生 C4401:
+若要避免這個警告，請先將位欄位轉換成適當的類型，然後再于內嵌組解碼程式碼中進行參考。 下列範例會產生 C4401：
 
-```
+```cpp
 // C4401.cpp
 // compile with: /W1
 // processor: x86

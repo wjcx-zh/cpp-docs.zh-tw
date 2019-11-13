@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 (層級 1) C4441
+title: 編譯器警告（層級1） C4441
 ms.date: 11/04/2016
 f1_keywords:
 - C4441
 helpviewer_keywords:
 - C4441
 ms.assetid: 7fc540a5-e41f-47cf-aa37-b2b699c2685e
-ms.openlocfilehash: 45d7a6af09677c1e63dab5ffcc55c35d8203b40b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f45288e1e52d157e5c135a45c0801a909fccfbc
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408234"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966029"
 ---
-# <a name="compiler-warning-level-1-c4441"></a>編譯器警告 (層級 1) C4441
+# <a name="compiler-warning-level-1-c4441"></a>編譯器警告（層級1） C4441
 
-呼叫慣例 'cc1' 忽略;改用 ' cc2'
+已忽略 ' cc1 ' 的呼叫慣例;改為使用 ' cc2 '
 
-在 受管理的使用者定義型別和全域函式的泛型成員函式必須使用[__clrcall](../../cpp/clrcall.md)呼叫慣例。  使用編譯器`__clrcall`。
+Managed 使用者定義型別和全域函數泛型中的成員函式必須使用[__clrcall](../../cpp/clrcall.md)呼叫慣例。  編譯器使用 `__clrcall`。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4441。
 
-```
+```cpp
 // C4441.cpp
 // compile with: /clr /W1 /c
 generic <class ItemType>

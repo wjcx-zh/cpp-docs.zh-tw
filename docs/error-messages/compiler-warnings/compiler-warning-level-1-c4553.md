@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4553
+title: 編譯器警告（層級1） C4553
 ms.date: 11/04/2016
 f1_keywords:
 - C4553
 helpviewer_keywords:
 - C4553
 ms.assetid: d8aacbe0-3cb5-4367-a6e5-fd7e28f0ff9d
-ms.openlocfilehash: 7a299d4a99818699e9be31e7d15d9e589de05c15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2d5e52e565878011b2439792c721eeb57cdd20a
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410339"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966332"
 ---
-# <a name="compiler-warning-level-1-c4553"></a>編譯器警告 (層級 1) C4553
+# <a name="compiler-warning-level-1-c4553"></a>編譯器警告（層級1） C4553
 
-'operator': 運算子沒有任何作用中;您是否想 'operator'？
+' operator '：運算子沒有作用;您想要 ' operator ' 嗎？
 
-如果運算式陳述式會有一個運算子，而沒有副作用，與運算式的上方，就可能發生錯誤。
+如果運算式語句的運算子沒有任何副作用做為運算式的頂端，可能就會發生錯誤。
 
-下列範例會產生 C4553:
+下列範例會產生 C4553：
 
-```
+```cpp
 // C4553.cpp
 // compile with: /W1
 int func()

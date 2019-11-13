@@ -3,12 +3,12 @@ title: 在 Visual Studio 中安裝 C++ Linux 工作負載
 description: 描述如何在 Visual Studio 中下載、安裝和設定 Linux 工作負載。
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 68e347a4f90fc15f9d3846c82c3392213e1bd7bc
-ms.sourcegitcommit: eb254b4462a58d219376ff501bf768bd1adc07ae
+ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/11/2019
-ms.locfileid: "73912900"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966203"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>下載、安裝和設定 Linux 工作負載
 
@@ -48,29 +48,31 @@ Visual Studio 2017 及更新版本支援 Linux 專案。
 
 如果您還沒有 Linux 機器，您可以在 Azure 上建立 Linux 虛擬機器。 如需詳細資訊，請參閱[快速入門：在 Azure 入口網站中建立 Linux 虛擬機器](/azure/virtual-machines/linux/quick-create-portal)。
 
-在 Windows 10 上，您可以在適用於 Linux 的 Windows 子系統 (WSL) 上安裝最愛的 Linux 發行版本，並以其為目標。 如需詳細資訊，請參閱 [Windows 10 版適用於 Linux 的 Windows 子系統安裝指南](/windows/wsl/install-win10)。 如果您無法存取 Windows Store，您可以[手動下載 WSL 散發版本套件](/windows/wsl/install-manual)。 WSL 是一個方便的主控台環境，但不建議用於圖形化應用程式。 
+在 Windows 10 上，您可以在適用於 Linux 的 Windows 子系統 (WSL) 上安裝最愛的 Linux 發行版本，並以其為目標。 如需詳細資訊，請參閱 [Windows 10 版適用於 Linux 的 Windows 子系統安裝指南](/windows/wsl/install-win10)。 如果您無法存取 Windows Store，您可以[手動下載 WSL 散發版本套件](/windows/wsl/install-manual)。 WSL 是一個方便的主控台環境，但不建議用於圖形化應用程式。
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上安裝下列相依性： 
-- **編譯器**Visual Studio 2019 具有 GCC 和[Clang](https://docs.microsoft.com/en-us/cpp/build/clang-support-cmake?view=vs-2019)的現成支援。 
-- **gdb** Visual Studio 會在 linux 系統上自動啟動 gdb，並使用 Visual Studio 偵錯工具的前端，在 linux 上提供完全精確的偵錯工具體驗。 
+Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上安裝下列相依性：
+
+- **編譯器**Visual Studio 2019 具有 GCC 和[Clang](/cpp/build/clang-support-cmake?view=vs-2019)的現成支援。
+- **gdb** Visual Studio 會在 linux 系統上自動啟動 gdb，並使用 Visual Studio 偵錯工具的前端，在 linux 上提供完全精確的偵錯工具體驗。
 - **rsync**和**zip** -包含 rsync 和 zip 可讓 Visual Studio 將標頭檔從 Linux 系統解壓縮至 Windows filesystem，供 IntelliSense 使用。
 - **安排**
 - **openssh-伺服器**（僅限遠端 linux 系統）-Visual Studio 透過安全的 SSH 連線連接到遠端 linux 系統。
 - **CMake** （僅限 CMake 專案）-您可以安裝 Microsoft 的[靜態連結 CMake 二進位檔（適用于 Linux](https://github.com/microsoft/CMake/releases)）。
 
-下列命令假設您使用的是 g + +，而不是 clang。 
+下列命令假設您使用的是 g + +，而不是 clang。
 
 ::: moniker-end
 
 ::: moniker range="vs-2017"
 
-Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上安裝下列相依性： 
+Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上安裝下列相依性：
+
 - **gcc** -Visual Studio 2017 具有 gcc 的現成支援。
-- **gdb** Visual Studio 會在 linux 系統上自動啟動 gdb，並使用 Visual Studio 偵錯工具的前端，在 linux 上提供完全精確的偵錯工具體驗。 
+- **gdb** Visual Studio 會在 linux 系統上自動啟動 gdb，並使用 Visual Studio 偵錯工具的前端，在 linux 上提供完全精確的偵錯工具體驗。
 - **rsync**和**zip** -包含 rsync 和 zip 可讓 Visual Studio 將標頭檔從 Linux 系統解壓縮至 Windows Filesystem，以用於 IntelliSense。
 - **安排**
 - **openssh-伺服器**-Visual Studio 透過安全的 SSH 連線連接到遠端 Linux 系統。
@@ -78,7 +80,7 @@ Visual Studio 中的 Linux 專案需要在您的遠端 Linux 系統或 WSL 上�
 
 ::: moniker-end
 
-::: moniker range="vs-2019" 
+::: moniker range="vs-2019"
 
 ## <a name="linux-setup-ubuntu-on-wsl"></a>Linux 安裝程式： WSL 上的 Ubuntu
 

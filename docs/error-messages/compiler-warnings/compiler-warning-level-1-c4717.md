@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4717
+title: 編譯器警告（層級1） C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0cf9aef8f68ca5972fd3d7886cd8061b88d043ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221137"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051351"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>編譯器警告 (層級 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>編譯器警告（層級1） C4717
 
-'function': 在所有控制路徑上的遞迴，函式會導致執行階段堆疊溢位
+' function '：在所有控制路徑上遞迴，函式會造成執行時間堆疊溢位
 
-透過函式的每個路徑包含函式的呼叫。 因為沒有任何方法可以結束而不需本身的第一次呼叫函式以遞迴方式，就會永遠不會結束函式。
+透過函式的每個路徑都包含對函數的呼叫。 因為沒有任何方法可以結束函式，而不需要先以遞迴方式呼叫它本身，所以函式永遠不會結束。
 
-下列範例會產生 C4717:
+下列範例會產生 C4717：
 
-```
+```cpp
 // C4717.cpp
 // compile with: /W1 /c
 // C4717 expected

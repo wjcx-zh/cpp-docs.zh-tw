@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在命令列C++上編譯原生程式
+title: 逐步解說：在命令列上編譯原生 C++ 程式
 description: 從命令提示C++字元使用 Microsoft 編譯器。
 ms.custom: conceptual
 ms.date: 04/23/2019
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: 36017b28ab91478da2515cd7c8588a998013171d
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960707"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051517"
 ---
-# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列C++上編譯原生程式
+# <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 
 Visual Studio 包含命令列C++編譯器，可讓您用來建立從基本主控台應用程式到通用 Windows 平臺應用程式、桌面應用程式、設備磁碟機和 .net 元件的所有專案。
 
-在本逐步解說中，您會使用文字編輯器來建立基本的 " C++ Hello，World" 樣式的程式，然後在命令列上進行編譯。 如果您想要嘗試 Visual Studio IDE，而不是使用命令列，請參閱 [Walkthrough：使用專案和方案（C++） ](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) 或[使用 Visual Studio IDE 進行C++桌面開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
+在本逐步解說中，您會使用文字編輯器來建立基本的 " C++ Hello，World" 樣式的程式，然後在命令列上進行編譯。 如果您想要嘗試 Visual Studio IDE，而不是使用命令列，請參閱[逐步解說：使用專案和方案（C++）](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)或[使用 Visual Studio IDE 進行桌面C++程式開發](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)。
 
 在此逐步解說中，您可以使用自己的 Visual C++ 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 Visual C++ 程式碼範例。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>Prerequisites
 
 若要完成此逐步解說，您必須安裝 Visual Studio 和選用的**桌面開發C++** 工作負載，或是 Visual Studio 的命令列組建工具。
 
 Visual Studio 是功能強大的整合式開發環境（IDE），可支援許多語言和平臺的完整功能編輯器、資源管理員、偵錯工具和編譯器。 如需有關如何下載及安裝 Visual Studio （包括免費 Visual Studio Community 版本）以及包含 C/C++開發支援的詳細資訊，請參閱[在C++ Visual Studio 中安裝支援](vscpp-step-0-installation.md)。
 
-Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令列編譯器、工具和程式庫。 這適用于組建實驗室或教室練習，並以相對快速的方式進行安裝。 若只要安裝命令列工具，請在 [ [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/)] 頁面上尋找 Visual Studio 的組建工具。
+Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令列編譯器、工具和程式庫。 這適用于組建實驗室或教室練習，並以相對快速的方式進行安裝。 若只要安裝命令列工具，請在 [ [Visual Studio 下載](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019)] 頁面上尋找 Visual Studio 的組建工具。
 
 在您可以在命令列上C++建立 C 或程式之前，您必須先確認工具已安裝，而且您可以從命令列存取它們。 視覺C++效果具有命令列環境的複雜需求，以尋找所使用的工具、標頭和程式庫。 **您不能在C++一般命令提示字元視窗中使用視覺效果，** 而不需要做一些準備工作。 幸好，Visual C++會安裝快捷方式，讓您啟動開發人員命令提示字元，並針對命令列組建設定環境。 可惜的是，開發人員命令提示字元快捷方式及其所在位置的名稱，在幾乎每個版本的C++ Visual 和不同的 Windows 版本中都不同。 您的第一個逐步解說工作是尋找要使用的正確一個。
 
@@ -45,7 +45,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令
 
    您也可以使用 Windows 搜尋函式來搜尋「開發人員命令提示字元」，並選擇哪一個符合您安裝的 Visual Studio 版本。 使用快捷方式來開啟 [命令提示字元] 視窗。
 
-1. 接下來，確認已正確C++設定 Visual developer 命令提示字元。 在 [命令提示字元] 視窗中，輸入 `cl`，並確認輸出看起來像這樣：
+1. 接下來，確認已正確C++設定 Visual developer 命令提示字元。 在 [命令提示字元] 視窗中，輸入 `cl` 並確認輸出看起來像這樣：
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -58,16 +58,16 @@ Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令
    根據視覺效果C++的版本和任何安裝的更新，可能會有目前目錄或版本號碼的差異。 如果上述輸出與您看到的類似，您就可以在命令列建立 C 或C++程式。
 
    > [!NOTE]
-   > 如果您收到錯誤，例如「' cl ' 無法辨識為內部或外部命令、可執行檔程式或批次檔」、「錯誤 C1034 或錯誤 LNK1104，當您執行**cl**命令時，可能是因為您未使用開發人員命令提示字元，或是發生問題安裝您的視覺效果C++。 您必須先修正此問題，才能繼續。
+   > 如果您收到錯誤，例如「' cl ' 無法辨識為內部或外部命令、可執行檔程式或批次檔」、「錯誤 C1034，或當您執行**cl**命令時發生錯誤 LNK1104，則可能是您未使用開發人員命令提示字元，或是您的視覺效果C++安裝錯誤。 您必須先修正此問題，才能繼續。
 
-   如果您找不到開發人員命令提示字元快捷方式，或是當您輸入 `cl` 時收到錯誤訊息，則您C++的視覺效果安裝可能會發生問題。 請嘗試在 Visual Studio C++中重新安裝視覺效果元件，或重新C++安裝 Microsoft Visual Build Tools。 請不要進入下一節，直到這種情況生效。 如需安裝和疑難排解視覺效果C++的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
+   如果您找不到開發人員命令提示字元快捷方式，或是在您輸入 `cl`時收到錯誤訊息，則您C++的視覺效果安裝可能會發生問題。 請嘗試在 Visual Studio C++中重新安裝視覺效果元件，或重新C++安裝 Microsoft Visual Build Tools。 請不要進入下一節，直到這種情況生效。 如需安裝和疑難排解視覺效果C++的詳細資訊，請參閱[安裝 Visual Studio](/visualstudio/install/install-visual-studio)。
 
    > [!NOTE]
-   > 視電腦上的 Windows 版本和系統安全性設定而定，您可能必須以滑鼠右鍵按一下開啟 [開發人員命令提示字元] 快捷方式的快捷方式功能表，然後選擇 [以**系統管理員身分執行**]，才能成功建立並執行遵循此逐步解說所建立的程式。
+   > 視電腦上的 Windows 版本和系統安全性設定而定，您可能必須以滑鼠右鍵按一下開啟 [開發人員命令提示字元] 快捷方式的快捷方式功能表，然後選擇 [以**系統管理員身分執行**]，成功建立並執行您依照本逐步解說所建立的程式。
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>建立視覺效果C++原始程式檔並在命令列上進行編譯
 
-1. 在 [開發人員命令提示字元] 視窗中，輸入 `md c:\hello` 來建立目錄，然後輸入 `cd c:\hello` 以變更至該目錄。 此目錄是您在其中建立來源檔案和已編譯器的位置。
+1. 在 [開發人員命令提示字元] 視窗中，輸入 `md c:\hello` 來建立目錄，然後輸入 `cd c:\hello` 變更為該目錄。 此目錄是您在其中建立來源檔案和已編譯器的位置。
 
 1. 在 [命令提示字元] 視窗中輸入 `notepad hello.cpp`。
 
@@ -109,7 +109,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令
 
    您的電腦上的日期和其他詳細資料會有所不同。 如果您沒有看到您的原始程式碼檔案，請確定您已變更為您所建立的 c:\hello 目錄，然後在 [記事本] 中，確定您已將原始程式檔儲存在此目錄中。 此外，也請確定您已儲存具有 .cpp 副檔名的原始程式碼，而不是 .txt 副檔名。
 
-1. 在開發人員命令提示字元中，輸入 `cl /EHsc hello.cpp`，以編譯您的程式。
+1. 在開發人員命令提示字元中，輸入 `cl /EHsc hello.cpp` 以編譯您的程式。
 
    cl.exe 編譯器會產生內含編譯後之程式碼的 .obj 檔案，然後執行連結器，以建立名為 basic.exe 的可執行程式。 此名稱會出現在編譯器所顯示輸出資訊行中。 編譯器的輸出看起來應該像這樣：
 
@@ -170,7 +170,7 @@ C 和語言C++類似，但並不相同。 MSVC 編譯器會使用一個簡單的
 
 MSVC 編譯器包含與 ISO C99 標準相容但不符合嚴格規範的 C 執行時間程式庫（CRT）。 在大部分情況下，可攜的程式碼會如預期般編譯並執行。 視覺C++效果不支援 ISO C11 中的部分 CRT 變更。 MSVC 編譯器會取代某些程式庫函式和 POSIX 函數名稱。 支援函數，但慣用的名稱已變更。 如需詳細資訊，請參閱 CRT 和[編譯器警告（層級3） C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)[中的安全性功能](../c-runtime-library/security-features-in-the-crt.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [專案和建置系統](projects-and-build-systems-cpp.md)<br/>

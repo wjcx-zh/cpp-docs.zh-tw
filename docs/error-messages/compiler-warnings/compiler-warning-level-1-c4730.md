@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4730
 ms.assetid: 11303e3f-162b-4b19-970a-479686123a68
-ms.openlocfilehash: 4da60194deaeac3c79f8c3e9be3bd87d91bc7ca2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cdd6018afd26b09f7a4555ff8d0431c3364f09e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386352"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051331"
 ---
 # <a name="compiler-warning-level-1-c4730"></a>編譯器警告 (層級 1) C4730
 
-'main': 混合 _m64 和浮點運算式可能會導致不正確的程式碼
+' main '：混合 _m64 和浮點運算式可能會導致不正確的程式碼
 
-函式使用[__m64](../../cpp/m64.md)並**float**/**double**型別。 因為 MMX 和浮點數暫存器共用相同的實體暫存器空間 （不能同時使用），使用`__m64`並**浮點數**/**double**中相同的型別函式可能會導致資料損毀，可能會造成例外狀況。
+函式會使用[__m64](../../cpp/m64.md)和**float**/**double**類型。 由於 MMX 和浮點暫存器會共用相同的實體暫存器空間（無法同時使用），因此在相同的函式中使用 `__m64` 和**float**/**double**類型可能會導致資料損毀，可能會造成例外狀況。
 
-若要安全地使用`__m64`型別和浮點類型相同的函式中，使用其中一種類型的每個指示應以 **_m_empty （)** （供 MMX 使用) 或 **_m_femms （)** （供 3DNow ！)內建函式。
+若要安全地在相同的函式中使用 `__m64` 類型和浮點類型，每個使用其中一個類型的指令都應該以 **_m_empty （）** （適用于 MMX）或 **_m_femms （）** （適用于3DNow！）內建函式來分隔。
 
-下列範例會產生 C4730:
+下列範例會產生 C4730：
 
-```
+```cpp
 // C4730.cpp
 // compile with: /W1
 // processor: x86

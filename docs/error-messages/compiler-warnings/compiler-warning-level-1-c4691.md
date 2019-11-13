@@ -1,33 +1,33 @@
 ---
-title: 編譯器警告 (層級 1) C4691
+title: 編譯器警告（層級1） C4691
 ms.date: 11/04/2016
 f1_keywords:
 - C4691
 helpviewer_keywords:
 - C4691
 ms.assetid: 722133d9-87f6-46c1-9e86-9825453d6999
-ms.openlocfilehash: c194e19c8766b67eb7deef32e7228564cda5f1e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6124171bb5f257dac1dd972f7943d001fb54c9ca
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406375"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051364"
 ---
-# <a name="compiler-warning-level-1-c4691"></a>編譯器警告 (層級 1) C4691
+# <a name="compiler-warning-level-1-c4691"></a>編譯器警告（層級1） C4691
 
-'type': 未參考組件 'file'，改用目前的轉譯單位中定義的型別中，必須參考型別
+' type '：參考的類型必須在未參考的元件 ' file ' 中，但目前的轉譯單位中所定義的類型已改為使用
 
-未參考包含原始型別定義的中繼資料檔案，且編譯器使用本機的型別定義。
+未參考包含原始類型定義的中繼資料檔案，而且編譯器會使用區欄位型別定義。
 
-在您重建的情況下*檔案*，可以忽略 C4691，或使用 pragma 關閉[警告](../../preprocessor/warning.md)。  也就是說，如果您要建置的檔案是編譯器會找不到型別定義預期的檔案同名，您可以忽略 C4691。
+如果您*要重建檔案*，可以忽略或關閉 C4691，並使用 pragma [warning](../../preprocessor/warning.md)。  也就是說，如果您要建立的檔案與編譯器預期用來尋找類型定義的檔案相同，您可以忽略 C4691。
 
-不過，如果編譯器會使用不是來自相同的組件中繼資料; 中所參考的定義可能會發生未預期的行為不只是可以類型的名稱，還可以將組件的 CLR 型別是型別。  也就是來自組件 z.dll 的型別 Z 是不同於從組件 y.dll 類型 Z。
+不過，如果編譯器使用的定義不是中繼資料中所參考的相同元件，則可能會發生非預期的行為;CLR 型別不只會以類型的名稱，也會由元件來輸入。  也就是，從元件 z 的類型 Z 與元件 y .dll 的類型 Z 不同。
 
 ## <a name="example"></a>範例
 
-此範例包含原始型別定義。
+這個範例包含原始型別定義。
 
-```
+```cpp
 // C4691_a.cpp
 // compile with: /clr /LD /W1
 public ref class Original_Type {};
@@ -35,9 +35,9 @@ public ref class Original_Type {};
 
 ## <a name="example"></a>範例
 
-此範例會參考 C4691_a.dll 和宣告類型 Original_Type 的欄位。
+這個範例會參考 C4691_a .dll，並宣告 Original_Type 類型的欄位。
 
-```
+```cpp
 // C4691_b.cpp
 // compile with: /clr /LD
 #using "C4691_a.dll"
@@ -49,11 +49,11 @@ public:
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4691。  請注意此範例包含 Original_Type xml 定義，且未參考 C4691a.dll。
+下列範例會產生 C4691。  請注意，此範例包含 Original_Type 的定義，而且不會參考 C4691a。
 
-若要解決，參考包含原始型別定義的中繼資料檔案，並移除區域宣告和定義。
+若要解決此問題，請參考包含原始類型定義的中繼資料檔案，並移除本機宣告和定義。
 
-```
+```cpp
 // C4691_c.cpp
 // compile with: /clr /LD /W1
 // C4691 expected

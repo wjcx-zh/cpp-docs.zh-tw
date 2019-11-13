@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 2) C4756
+title: 編譯器警告（層級2） C4756
 ms.date: 11/04/2016
 f1_keywords:
 - C4756
 helpviewer_keywords:
 - C4756
 ms.assetid: 5a16df83-6b82-4619-83bd-319af4ef1d1d
-ms.openlocfilehash: 0e4e0d5e227795a45eb22e3fcb17bdfa600d69e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 640eb77273fdbda0b12bbf2c2a326e970951cbda
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402420"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051995"
 ---
-# <a name="compiler-warning-level-2-c4756"></a>編譯器警告 (層級 2) C4756
+# <a name="compiler-warning-level-2-c4756"></a>編譯器警告（層級2） C4756
 
-在常數算術中溢位
+常數算術中溢位
 
-編譯器會產生在編譯期間進行常數算術時例外狀況。
+編譯器在編譯期間進行常數算術時，產生了例外狀況。
 
-下列範例會產生 C4756:
+下列範例會產生 C4756：
 
-```
+```cpp
 // C4756.cpp
 // compile with: /W2 /Od
 int main()

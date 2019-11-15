@@ -1,15 +1,15 @@
 ---
 title: Microsoft C++移植和升級指南
 description: 將 Microsoft C++程式碼升級至最新版本的 Visual Studio。
-ms.date: 10/29/2019
+ms.date: 11/05/2019
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
 ms.topic: overview
-ms.openlocfilehash: d67c2665574242a46d697f6e9f24321556146958
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 04c3950d637c01031e78d0d95e13232143ceb232
+ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625687"
+ms.lasthandoff: 11/15/2019
+ms.locfileid: "74119497"
 ---
 # <a name="microsoft-c-porting-and-upgrading-guide"></a>Microsoft C++移植和升級指南
 
@@ -25,7 +25,7 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具組�
 
 - 相同的程式碼執行速度會更快，因為編譯器優化已改善。
 
-- 現代化C++功能和程式設計實務消除了許多常見的 bug 原因，而且更容易維護較舊的 C 樣式慣用語。
+- 現代化C++功能和程式設計實務消除了許多常見的錯誤原因，並產生比舊版 C 樣式慣用語更容易維護的程式碼。
 
 - 由於編譯器和連結器的效能改進，組建時間會大幅加快。
 
@@ -48,6 +48,7 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具組�
 |標題|描述|
 |-----------|-----------------|
 |[升級C++舊版 Visual Studio 的專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|如何將您的程式碼基底升級至 Visual Studio 2019 和編譯器的適用于 v142。|
+|[用於升級C++程式碼的 IDE 工具](ide-tools-for-upgrading-code.md)|有助於升級程式的實用 IDE 功能。|
 |[C++2015與2019之間的二進位相容性](binary-compat-2015-2017.md)|從適用于 v142 專案依來源使用 v140 程式庫。|
 |[在 Visual Studio 中使用原生多目標來建置舊專案](use-native-multi-targeting.md)|搭配舊版編譯器和程式庫使用 Visual Studio 2019。|
 |[Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)|Microsoft C++程式庫中的所有變更清單，以及從 Visual Studio 2003 到2015的組建工具，可能需要在您的程式碼中進行變更。|

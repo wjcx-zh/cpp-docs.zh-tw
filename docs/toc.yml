@@ -2848,6 +2848,8 @@
           href: porting/porting-third-party-libraries.md
         - name: 移植資料應用程式
           href: data/data-access-programming-mfc-atl.md
+    - name: 用來升級 C++ 程式碼的 IDE 工具
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Visual C++ 變更歷程記錄 2003 - 2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 從 2003 到 2015 的 Visual C++ 新功能

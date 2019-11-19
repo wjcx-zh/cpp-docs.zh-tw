@@ -4,12 +4,12 @@ ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 93f53bf90bd8defaa4559e52c00cfcd6269edee4
-ms.sourcegitcommit: 499dfcb5622c4cd1b6afaf23b9de5b09b7751579
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71012241"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163478"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>所有架構可用的內建函式
 
@@ -19,7 +19,7 @@ Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些�
 
 下列內建函式適用于 x86、AMD64、ARM 和 ARM64 架構：
 
-|內建|標頭|
+|內建|頁首|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -73,7 +73,7 @@ Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些�
 
 下列 UCRT 函數在所有架構上都有內部形式：
 
-|內建|標頭|
+|內建|頁首|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -104,7 +104,7 @@ Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些�
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[總管](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -160,8 +160,9 @@ Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些�
 |[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
 |[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ARM 內建](../intrinsics/arm-intrinsics.md)<br/>
-[x86 內建清單](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[ARM 內建函式](../intrinsics/arm-intrinsics.md)\
+[ARM64 內建函式](../intrinsics/arm64-intrinsics.md)\
+[x86 內建函式清單](../intrinsics/x86-intrinsics-list.md)\
+[x64 （amd64）內建函式清單](../intrinsics/x64-amd64-intrinsics-list.md)

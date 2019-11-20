@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 (層級 3) C4557
+title: Compiler Warning (level 3) C4557
 ms.date: 11/04/2016
 f1_keywords:
 - C4557
 helpviewer_keywords:
 - C4557
 ms.assetid: 7d9db716-03b2-4ee5-9b09-ba8aa5aa7e4c
-ms.openlocfilehash: 5b236559708759cb30487ef9a8fde92cc42889c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22ee456c5f79434c5e3b8a79b4c174aa3cdb3c7a
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401809"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188944"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>編譯器警告 (層級 3) C4557
+# <a name="compiler-warning-level-3-c4557"></a>Compiler Warning (level 3) C4557
 
 '__assume' 包含有效的 'effect'
 
-傳遞給的值[__assume](../../intrinsics/assume.md) statement2 修改。
+The value passed to an [__assume](../../intrinsics/assume.md) statement2 was modified.
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-下列範例會產生 C4557:
+The following sample generates C4557:
 
-```
+```cpp
 // C4557.cpp
 // compile with: /W3
 #pragma warning(default : 4557)

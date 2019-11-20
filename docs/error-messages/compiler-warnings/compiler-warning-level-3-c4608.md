@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4608
 ms.assetid: 8b8f5f28-8ce9-457e-9d3d-a8c0efce9b6a
-ms.openlocfilehash: 4f1bef80b8cddccc036a5151bb4cc4ac01483a36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3599209043b877a60fbd7796959b8c9b76e1fb86
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401757"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188974"
 ---
 # <a name="compiler-warning-level-3-c4608"></a>編譯器警告 (層級 3) C4608
 
@@ -21,7 +21,7 @@ ms.locfileid: "62401757"
 
 下列範例會產生 C4608：
 
-```
+```cpp
 // C4608.cpp
 // compile with: /W3 /c
 class X {

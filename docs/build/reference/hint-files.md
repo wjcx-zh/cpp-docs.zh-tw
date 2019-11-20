@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: af28dac17c57c8c0699950cc1fdb542642c01722
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707105"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189011"
 ---
 # <a name="hint-files"></a>提示檔案
 
@@ -36,8 +36,8 @@ C++ 瀏覽資料庫剖析器為模糊剖析器，可在短時間內剖析大量�
 
 > [!IMPORTANT]
 > 若您修改或新增提示檔案，則必須採取額外的步驟才能讓變更生效：
-> - 在 Visual Studio 2017 15.6 版以前的版本中：刪除所有變更之解決方案中的 .sdf 檔案及 (或) VC.db 檔案。
-> - 在 Visual Studio 2017 15.6 到 15.9 版中：新增提示檔案後，關閉再重新開啟解決方案。
+> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
+> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
 
 ## <a name="scenario"></a>情節
 
@@ -92,13 +92,13 @@ void Function() NOEXCEPT
 
 - 您可使用快速動作建立包含醒目提示巨集的提示檔案，如果有現有的提示檔案，也可將巨集新增到該提示檔案。
 
-![醒目提示的巨集。](media/hint-squiggle-and-actions.png "提示波浪線及快速動作")
+![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
 
 在執行其中一個快速動作後，剖析器就會重新剖析提示檔案所影響的檔案。
 
 根據預設，會將問題巨集醒目提示為建議。 醒目提示可變更為更顯眼的樣式，例如紅色或綠色波浪線。 使用 [工具] > [選項] > [文字編輯器] > [C/C++] > [檢視] 下 [程式碼波浪線] 區段中的 [已跳過瀏覽區域中的巨集] 選項。
 
-![[已跳過瀏覽區域中的巨集] 選項。](media/skipped-regions-squiggle-option.png "已跳過區域波浪線選項。")
+![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>顯示瀏覽資料庫錯誤
 
@@ -166,7 +166,7 @@ void Function() NOEXCEPT
 
 ### <a name="hint-file-directories"></a>提示檔案目錄
 
-![一般和專案專屬提示檔案目錄。](media/hintfile.png "HintFile")
+![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>目錄和提示檔案內容
 
@@ -242,7 +242,7 @@ void Function() NOEXCEPT
 
 - `A2` 目錄中的 `#undef` 提示已移除 `Debug` 目錄提示檔案中的 `OBRACE` 和 `CBRACE` 提示。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>

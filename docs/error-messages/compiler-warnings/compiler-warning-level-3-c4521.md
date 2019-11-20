@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 (層級 3) C4521
+title: Compiler Warning (level 3) C4521
 ms.date: 11/04/2016
 f1_keywords:
 - C4521
 helpviewer_keywords:
 - C4521
 ms.assetid: 057d770c-ebcf-44cd-b943-1b1bb1ceaa8c
-ms.openlocfilehash: 887526810f7e65280adcde422ef871a67ccdde1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 362fd3c14037fa62ab73c928a45eaf7808de66bc
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401913"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189366"
 ---
-# <a name="compiler-warning-level-3-c4521"></a>編譯器警告 (層級 3) C4521
+# <a name="compiler-warning-level-3-c4521"></a>Compiler Warning (level 3) C4521
 
-'class': 多個複本指定建構函式
+'class' : multiple copy constructors specified
 
-此類別具有單一類型的多個複製建構函式。 這個警告僅供參考;建構函式是可在程式中呼叫。
+The class has multiple copy constructors of a single type. This warning is informational; the constructors are callable in your program.
 
-使用[警告](../../preprocessor/warning.md)可隱藏這個警告的 pragma。
+Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4521。
+The following sample generates C4521.
 
-```
+```cpp
 // C4521.cpp
 // compile with: /EHsc /W3
 #include <iostream>

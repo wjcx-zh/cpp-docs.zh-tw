@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 (層級 3) C4522
+title: Compiler Warning (level 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84f4785c670c4cc5c167c18b9f15c2417b61df34
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401900"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188961"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>編譯器警告 (層級 3) C4522
+# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
 
-'class': 多個指定的指派運算子
+'class' : multiple assignment operators specified
 
-此類別具有單一類型的多個指派運算子。 這個警告僅供參考;建構函式是可在程式中呼叫。
+The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
 
-使用[警告](../../preprocessor/warning.md)可隱藏這個警告的 pragma。
+Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4522。
+The following sample generates C4522.
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>

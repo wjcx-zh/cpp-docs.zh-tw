@@ -1,40 +1,44 @@
 ---
-title: C++Visual Studio 2015、2017和2019之間的二進位相容性
-description: 描述二進位相容性在 Visual Studio 2015 C++ 、2017和2019中的編譯檔之間的運作方式。 一個 Microsoft Visual C++可轉散發套件適用于這三個版本。
-ms.date: 11/11/2019
+title: C++ binary compatibility 2015-2019
+description: Describes how binary compatibility works between compiled C++ files in Visual Studio 2015, 2017, and 2019. One Microsoft Visual C++ Redistributable package works for all three versions.
+ms.date: 11/18/2019
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-ms.openlocfilehash: 118ad0a32d5dc8c344967f9a67f2d5b05aa806c0
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: b729cdcc4a494e60ec58314fe23b02c1816e8412
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965561"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74188781"
 ---
-# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++Visual Studio 2015、2017和2019之間的二進位相容性
+# <a name="c-binary-compatibility-between-visual-studio-2015-2017-and-2019"></a>C++ binary compatibility between Visual Studio 2015, 2017, and 2019
 
-Visual Studio 2013 和C++較早版本中的 Microsoft （MSVC）編譯器工具組不保證版本之間的二進位相容性。 您無法連結化物件檔案、靜態程式庫、動態連結程式庫，以及由不同版本所建立的可執行檔。 Abi、物件格式和執行時間程式庫不相容。
+The Microsoft C++ (MSVC) compiler toolsets in Visual Studio 2013 and earlier don't guarantee binary compatibility across versions. You can't link object files, static libraries, dynamic libraries, and executables built by different versions. The ABIs, object formats, and runtime libraries are incompatible.
 
-我們已在 Visual Studio 2015、2017和2019中變更此行為。 這些編譯器的任何版本所編譯的執行時間程式庫和應用程式都是二進位相容的。 它會反映在C++工具組的主要編號中，這是所有三個版本的14個。 （工具組版本是 v140，適用于 Visual Studio 2015、v141 （2017）和適用于 v142 （2019）。 假設您有 Visual Studio 2015 建立的協力廠商程式庫。 您仍然可以在 Visual Studio 2017 或2019所建立的應用程式中使用它們。 不需要使用相符的工具組重新編譯。 最新版的 Microsoft Visual C++可轉散發套件（可轉散發套件）適用于所有版本。
+We've changed this behavior in Visual Studio 2015, 2017, and 2019. The runtime libraries and apps compiled by any of these versions of the compiler are binary-compatible. It's reflected in the C++ toolset major number, which is 14 for all three versions. (The toolset version is v140 for Visual Studio 2015, v141 for 2017, and v142 for 2019). Say you have third-party libraries built by Visual Studio 2015. You can still use them in an application built by Visual Studio 2017 or 2019. There's no need to recompile with a matching toolset. The latest version of the Microsoft Visual C++ Redistributable package (the Redistributable) works for all of them.
 
-此規則的例外狀況如下：使用 `/GL` 編譯器參數編譯的靜態程式庫或物件檔案，在不同版本之間*不*會進行二進位相容。
+There are three important restrictions on binary compatibility:
 
-您的應用程式所使用的可轉散發套件具有重要的二進位相容性限制。 當您混合使用不同支援的工具組版本所建立的二進位檔時，適用此功能。 可轉散發版本至少必須與任何應用程式元件所使用的最新工具組一樣新。
+- You can mix binaries built by different versions of the toolset. However, you must use a toolset at least as recent as the most recent binary to link your app. Here's an example: you can link an app compiled using the 2017 toolset to a static library compiled using 2019, if they're linked using the 2019 toolset.
 
-## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>將 Microsoft Visual C++可轉散發套件從 Visual Studio 2015 或2017升級至 Visual Studio 2019
+- The Redistributable your app uses has a similar binary-compatibility restriction. When you mix binaries built by different supported versions of the toolset, the Redistributable version must be at least as new as the latest toolset used by any app component.
 
-我們已將 Microsoft Visual C++可轉散發套件的主要版本號碼，保留為 Visual Studio 2015、2017和2019。 這表示一次只能安裝一個可轉散發套件的實例。 較新的版本會覆寫已安裝的任何舊版本。 例如，一個應用程式可能會從 Visual Studio 2015 安裝可轉散發套件。 然後，另一個應用程式會從 Visual Studio 2019 安裝可轉散發套件。 2019版本會覆寫較舊的版本，但因為它們是二進位相容，所以先前的應用程式仍然可以正常運作。 我們確保最新版本的可轉散發套件具有所有最新的功能、安全性更新和 bug 修正。 這就是為什麼我們一律建議您升級至最新的可用版本。
+- Static libraries or object files compiled using the [/GL (Whole program optimization)](../build/reference/gl-whole-program-optimization.md) compiler switch *aren't* binary-compatible across versions. All object files and libraries compiled using `/GL` must use exactly the same toolset for the compile and the final link.
 
-同樣地，當已安裝較新版本時，您無法安裝較舊的可轉散發套件。 如果您嘗試，安裝程式會報告錯誤。 如果您在已有2019版本的電腦上安裝2015或2017可轉散發套件，您會看到類似下面的錯誤：
+## <a name="upgrade-the-microsoft-visual-c-redistributable-from-visual-studio-2015-or-2017-to-visual-studio-2019"></a>Upgrade the Microsoft Visual C++ Redistributable from Visual Studio 2015 or 2017 to Visual Studio 2019
+
+We've kept the Microsoft Visual C++ Redistributable major version number the same for Visual Studio 2015, 2017, and 2019. That means only one instance of the Redistributable can be installed at a time. A newer version overwrites any older version that's already installed. For example, one app may install the Redistributable from Visual Studio 2015. Then, another app installs the Redistributable from Visual Studio 2019. The 2019 version overwrites the older version, but because they're binary-compatible, the earlier app still works fine. We make sure the latest version of the Redistributable has all the newest features, security updates, and bug fixes. That's why we always recommend you upgrade to the latest available version.
+
+Similarly, you can't install an older Redistributable when a newer version is already installed. The installer reports an error if you try. You'll see an error like this if you install the 2015 or 2017 Redistributable on a machine that already has the 2019 version:
 
 ```Output
 0x80070666 - Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.
 ```
 
-這是設計的錯誤。 我們建議您保留最新版本的安裝。 請確定您的安裝程式可以無訊息地從這個錯誤復原。
+This error is by design. We recommend you keep the newest version installed. Make sure your installer can recover from this error silently.
 
 ## <a name="see-also"></a>請參閱
 
-[視覺C++效果變更歷程記錄](../porting/visual-cpp-change-history-2003-2015.md)\
-[支援的最新C++視覺可轉散發套件下載](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+[Visual C++ change history](../porting/visual-cpp-change-history-2003-2015.md)\
+[The latest supported Visual C++ Redistributable downloads](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)

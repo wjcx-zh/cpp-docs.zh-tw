@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 (層級 3) C4641
+title: Compiler Warning (level 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
 helpviewer_keywords:
 - C4641
 ms.assetid: 28fe5c3e-6039-42da-9100-1312b5b15aea
-ms.openlocfilehash: 9357088106a45026eae543f8627ea59988e73995
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a930490f7b53fbbb31abb0f621cf972295d2ea6
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401666"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189431"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>編譯器警告 (層級 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
 
 XML 文件註解有模稜兩可的交互參考
 
-編譯器無法明確地解析的參考。 若要解決這個警告，指定參數所需的資訊，讓參考模稜兩可。
+The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
 
 如需詳細資訊，請參閱 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4641。
+The following sample generates C4641.
 
-```
+```cpp
 // C4641.cpp
 // compile with: /W3 /doc /clr /c
 

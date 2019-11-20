@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4637
 ms.assetid: 5fd347c1-2de9-408f-9136-1bf1ff273622
-ms.openlocfilehash: 80c55494a391922453f2d89ae26ee5f47dc433b1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e712429ad52ccb990f81e1a4d3bd65a525558692
+ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401692"
+ms.lasthandoff: 11/19/2019
+ms.locfileid: "74189112"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>編譯器警告 (層級 3) C4637
 
-XML 文件註解目標：\<包含 > 捨棄的標籤。  原因
+XML document comment target: \<include> tag discarded.  原因
 
-語法[\<包括 >](../../build/reference/include-visual-cpp.md)標記不正確。
+The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
 
 下列範例會產生 C4637：
 
-```
+```cpp
 // C4637.cpp
 // compile with: /clr /doc /LD /W3
 using namespace System;

@@ -1,32 +1,32 @@
 ---
-title: 錯誤和例外狀況處理 (現代 C++)
-ms.date: 05/07/2019
+title: Modern C++ best practices for exceptions and error handling
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: bb27a92347b327e22afc4f6bb2fb248c12290cae
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 85a8bf0f64681387cbee63f273fda5ce93ab7ad5
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222140"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245872"
 ---
-# <a name="errors-and-exception-handling-modern-c"></a>錯誤和例外狀況處理 (現代 C++)
+# <a name="modern-c-best-practices-for-exceptions-and-error-handling"></a>Modern C++ best practices for exceptions and error handling
 
-在現代化C++，在大部分情況下，報告和處理邏輯錯誤和執行階段錯誤的慣用的方法是使用例外狀況。 堆疊可能包含數個函式呼叫之間偵測到錯誤的函式和函式具有要知道如何處理它的內容時，這是特別有用。 例外狀況會提供正式、 明確定義方法的程式碼來偵測錯誤的呼叫堆疊資訊傳遞出去。
+In modern C++, in most scenarios, the preferred way to report and handle both logic errors and runtime errors is to use exceptions. This is especially true when the stack might contain several function calls between the function that detects the error and the function that has the context to know how to handle it. Exceptions provide a formal, well-defined way for code that detects errors to pass the information up the call stack.
 
-程式錯誤通常分為兩類： 邏輯錯誤所造成程式設計錯誤，例如，「 索引超出範圍 」 錯誤，而執行階段錯誤，例如所控制的程式設計師而言，「 網路服務無法使用 」發生錯誤。 傳回值，表示錯誤碼或狀態碼為特定的函式，或設定全域變數，以查看每個函式呼叫後選擇性擷取呼叫端在 c-style 程式設計和 COM 中，管理錯誤報告是否發生錯誤。 例如，COM 程式設計使用來傳達給呼叫者，錯誤的 HRESULT 傳回值，而 Win32 API 有 GetLastError 函式來擷取最後一個呼叫堆疊報告的錯誤。 在這兩種情況下，它是可辨識的程式碼，並適當地回應，讓呼叫端。 如果呼叫端未明確處理的錯誤程式碼，程式可能會損毀，而不發出警告，或繼續執行正確的資料和產生不正確的結果。
+Program errors are generally divided into two categories: logic errors that are caused by programming mistakes, for example, an "index out of range" error, and runtime errors that are beyond the control of programmer, for example, a "network service unavailable" error. In C-style programming and in COM, error reporting is managed either by returning a value that represents an error code or a status code for a particular function, or by setting a global variable that the caller may optionally retrieve after every function call to see whether errors were reported. For example, COM programming uses the HRESULT return value to communicate errors to the caller, and the Win32 API has the GetLastError function to retrieve the last error that was reported by the call stack. In both of these cases, it's up to the caller to recognize the code and respond to it appropriately. If the caller doesn't explicitly handle the error code, the program might crash without warning, or continue to execute with bad data and produce incorrect results.
 
-例外狀況會優先使用現代化的C++，原因如下：
+Exceptions are preferred in modern C++ for the following reasons:
 
-- 例外狀況會強制呼叫程式碼辨識錯誤狀況，並處理。 未處理例外狀況停止程式執行。
+- An exception forces calling code to recognize an error condition and handle it. Unhandled exceptions stop program execution.
 
-- 例外狀況跳至可以處理錯誤的呼叫堆疊中的點。 中繼函式可以讓例外狀況傳播。 它們沒有協調與其他層級。
+- An exception jumps to the point in the call stack that can handle the error. Intermediate functions can let the exception propagate. They do not have to coordinate with other layers.
 
-- 例外狀況堆疊回溯機制會終結根據妥善定義的規則的範圍內的所有物件之後擲回例外狀況。
+- The exception stack-unwinding mechanism destroys all objects in scope according to well-defined rules after an exception is thrown.
 
-- 例外狀況可讓您偵測到錯誤的程式碼和處理錯誤的程式碼之間清楚的分隔。
+- An exception enables a clean separation between the code that detects the error and the code that handles the error.
 
-下列簡化的範例顯示擲回和攔截的例外狀況所需的語法C++。
+The following simplified example shows the necessary syntax for throwing and catching exceptions in C++.
 
 ```cpp
 
@@ -60,47 +60,46 @@ int main()
 }
 ```
 
-中的例外狀況C++這類語言中的類似C#和 Java。 中**嘗試**例外狀況是如果封鎖*擲回*會*攔截*之第一個相關聯**攔截**其類型符合該區塊例外狀況。 換句話說，執行會從跳**擲回**陳述式來**攔截**陳述式。 如果找不到任何可用的 catch 區塊，`std::terminate`叫用並結束程式。 在C++，可能會擲回任何類型;不過，我們建議您擲回直接或間接衍生自類型`std::exception`。 在上一個範例中，例外狀況型別[invalid_argument](../standard-library/invalid-argument-class.md)中的標準程式庫中定義[ \<stdexcept> >](../standard-library/stdexcept.md)標頭檔。 C++不提供，而且不需要**最後**區塊以確保如果發生例外狀況時釋放所有資源。 「 資源擷取是初始化 (RAII) 慣用語，其使用智慧型指標，提供必要的功能資源清除。 如需詳細資訊，請參閱[如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。 如需C++堆疊回溯機制，請參閱[例外狀況和堆疊回溯](../cpp/exceptions-and-stack-unwinding-in-cpp.md)。
+Exceptions in C++ resemble those in languages such as C# and Java. In the **try** block, if an exception is *thrown* it will be *caught* by the first associated **catch** block whose type matches that of the exception. In other words, execution jumps from the **throw** statement to the **catch** statement. If no usable catch block is found, `std::terminate` is invoked and the program exits. In C++, any type may be thrown; however, we recommend that you throw a type that derives directly or indirectly from `std::exception`. In the previous example, the exception type, [invalid_argument](../standard-library/invalid-argument-class.md), is defined in the standard library in the [\<stdexcept>](../standard-library/stdexcept.md) header file. C++ does not provide, and does not require, a **finally** block to make sure that all resources are released if an exception is thrown. The resource acquisition is initialization (RAII) idiom, which uses smart pointers, provides the required functionality for resource cleanup. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md). For information about the C++ stack-unwinding mechanism, see [Exceptions and Stack Unwinding](exceptions-and-stack-unwinding-in-cpp.md).
 
-## <a name="basic-guidelines"></a>基本的指導方針
+## <a name="basic-guidelines"></a>Basic guidelines
 
-強固的錯誤處理是一項挑戰，以任何程式設計語言。 例外狀況提供支援適當錯誤處理的幾項功能，但它們不能為您來執行所有工作。 若要實現例外狀況機制的優點，例外狀況納入考量，當您設計您的程式碼。
+Robust error handling is challenging in any programming language. Although exceptions provide several features that support good error handling, they can't do all the work for you. To realize the benefits of the exception mechanism, keep exceptions in mind as you design your code.
 
-- 使用判斷提示檢查有應該永遠不會發生的錯誤。 您可以使用例外狀況，檢查有可能發生的錯誤，例如，輸入驗證參數的公用函式中的錯誤。 如需詳細資訊，請參閱下一節**例外狀況與。判斷提示**。
+- Use asserts to check for errors that should never occur. Use exceptions to check for errors that might occur, for example, errors in input validation on parameters of public functions. For more information, see the section titled **Exceptions vs. Assertions**.
 
-- 當處理錯誤的程式碼可能會從偵測到錯誤的程式碼分隔一或多個中間函式呼叫時，請使用例外狀況。 請考慮是否要改用錯誤碼重要效能迴圈中時處理錯誤的程式碼會偵測到它的程式碼緊密結合。
+- Use exceptions when the code that handles the error might be separated from the code that detects the error by one or more intervening function calls. Consider whether to use error codes instead in performance-critical loops when code that handles the error is tightly-coupled to the code that detects it.
 
-- 針對每個函式可能擲回或傳播例外狀況，提供三個例外狀況保證之一： 強式保證、 基本保證或 nothrow (noexcept) 保證。 如需詳細資訊，請參閱[如何：例外狀況安全的設計](../cpp/how-to-design-for-exception-safety.md)。
+- For every function that might throw or propagate an exception, provide one of the three exception guarantees: the strong guarantee, the basic guarantee, or the nothrow (noexcept) guarantee. For more information, see [How to: Design for Exception Safety](how-to-design-for-exception-safety.md).
 
-- 值，所擲回例外狀況，攔截它們的參考。 不會攔截您無法處理。
+- Throw exceptions by value, catch them by reference. Don’t catch what you can't handle.
 
-- 不要使用例外狀況規格在 c++11 中已被取代。 如需詳細資訊，請參閱下一節**例外狀況規格和 noexcept**。
+- Don't use exception specifications, which are deprecated in C++11. For more information, see the section titled **Exception specifications and noexcept**.
 
-- 套用時，請使用標準程式庫例外狀況類型。 衍生自訂例外狀況類型從[exception 類別](../standard-library/exception-class.md)階層。
+- Use standard library exception types when they apply. Derive custom exception types from the [exception Class](../standard-library/exception-class.md) hierarchy.
 
-- 不允許例外狀況從解構函式逸出或記憶體解除配置函式。
+- Don't allow exceptions to escape from destructors or memory-deallocation functions.
 
-## <a name="exceptions-and-performance"></a>例外狀況和效能
+## <a name="exceptions-and-performance"></a>Exceptions and performance
 
-例外狀況機制有極小的效能成本在擲回任何例外狀況。 如果擲回例外狀況，成本，堆疊周遊和回溯是大概相當於在函式呼叫成本。 其他資料結構，才能追蹤之後的呼叫堆疊**嘗試**進入區塊時，以及其他指示，才能在擲回例外狀況時回溯堆疊。 不過，在大部分情況下，在效能和記憶體耗用量成本並不重要。 例外狀況對效能的不利的影響很可能是重大只在記憶體非常受限的系統，或在效能關鍵執行迴圈錯誤很可能會定期執行，而處理它的程式碼緊密結合的程式碼報告它。 在任何情況下，就無法知道例外狀況的實際成本，而不需要程式碼剖析和測量。 即使在這些極少數的情況下時成本很重要，您可以衡量其根據增加的正確性、 更容易維護性，以及其他設計完善的例外狀況原則所提供的優點。
+The exception mechanism has a very minimal performance cost if no exception is thrown. If an exception is thrown, the cost of the stack traversal and unwinding is roughly comparable to the cost of a function call. Additional data structures are required to track the call stack after a **try** block is entered, and additional instructions are required to unwind the stack if an exception is thrown. However, in most scenarios, the cost in performance and memory footprint is not significant. The adverse effect of exceptions on performance is likely to be significant only on very memory-constrained systems, or in performance-critical loops where an error is likely to occur regularly and the code to handle it is tightly coupled to the code that reports it. In any case, it's impossible to know the actual cost of exceptions without profiling and measuring. Even in those rare cases when the cost is significant, you can weigh it against the increased correctness, easier maintainability, and other advantages that are provided by a well-designed exception policy.
 
-## <a name="exceptions-vs-assertions"></a>例外狀況與判斷提示的比較
+## <a name="exceptions-vs-assertions"></a>Exceptions vs. assertions
 
-例外狀況和判斷提示會在程式中偵測到執行階段錯誤的兩個不同機制。 使用判斷提示，不應為 true，如果您的程式碼是正確的開發期間，測試條件。 沒有任何點在處理這類錯誤就使用例外狀況，因為此錯誤表示在程式碼中的項目，必須加以修正，並不代表程式必須在執行階段從復原的條件。 判斷提示會停止執行的陳述式，因此您可以檢查偵錯工具; 中的程式狀態例外狀況會繼續執行，從第一個適當的 catch 處理常式。 使用例外狀況檢查可能發生在執行階段中，即使您的程式碼是正確的比方說，「 找不到檔案 」 或 「 記憶體不足。 」 的錯誤狀況 您可能想要復原這些情況中，即使復原只是將訊息輸出至記錄檔，並結束程式。 使用例外狀況，一律檢查公用函式的引數。 即使您的函式是無錯誤，您可能沒有使用者可能會傳遞給它的引數的完整控制權。
+Exceptions and asserts are two distinct mechanisms for detecting run-time errors in a program. Use asserts to test for conditions during development that should never be true if all your code is correct. There is no point in handling such an error by using an exception because the error indicates that something in the code has to be fixed, and doesn't represent a condition that the program has to recover from at run time. An assert stops execution at the statement so that you can inspect the program state in the debugger; an exception continues execution from the first appropriate catch handler. Use exceptions to check error conditions that might occur at run time even if your code is correct, for example, "file not found" or "out of memory." You might want to recover from these conditions, even if the recovery just outputs a message to a log and ends the program. Always check arguments to public functions by using exceptions. Even if your function is error-free, you might not have complete control over arguments that a user might pass to it.
 
-## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++與 Windows SEH 例外狀況的例外狀況
+## <a name="c-exceptions-versus-windows-seh-exceptions"></a>C++ exceptions versus Windows SEH exceptions
 
-這兩個 C 和C++程式可以使用結構化例外狀況處理 (SEH) 機制，在 Windows 作業系統中的。 SEH 的概念類似C++例外狀況，但會使用該 SEH **__try**， **__except**，和 **__finally**而不是建構**試一次**並**攔截**。 在 MicrosoftC++編譯器 (MSVC)，C++例外狀況針對 SEH 來實作。 不過，當您撰寫C++程式碼，請使用C++例外狀況語法。
+Both C and C++ programs can use the structured exception handling (SEH) mechanism in the Windows operating system. The concepts in SEH resemble those in C++ exceptions, except that SEH uses the **__try**, **__except**, and **__finally** constructs instead of **try** and **catch**. In the Microsoft C++ compiler (MSVC), C++ exceptions are implemented for SEH. However, when you write C++ code, use the C++ exception syntax.
 
-如需 SEH 的詳細資訊，請參閱[Structured Exception Handling (C /C++)](../cpp/structured-exception-handling-c-cpp.md)。
+For more information about SEH, see [Structured Exception Handling (C/C++)](structured-exception-handling-c-cpp.md).
 
-## <a name="exception-specifications-and-noexcept"></a>例外狀況規格和 noexcept
+## <a name="exception-specifications-and-noexcept"></a>Exception specifications and noexcept
 
-例外狀況規格中導入C++來指定函式可能擲回的例外狀況。 不過，例外狀況規格經證實實務上，有問題，而在 c++11 草稿標準中已被取代。 我們建議您不要使用例外狀況規格，除了`throw()`，表示函式可讓任何例外狀況逸出。 如果您必須使用類型的例外狀況規格`throw(`*型別*`)`，注意 MSVC 偏離標準所規定的方式。 如需詳細資訊，請參閱 <<c0> [ 例外狀況規格 (throw)](../cpp/exception-specifications-throw-cpp.md)。 `noexcept`規範 C + + 11 中導入做為慣用的替代方案`throw()`。
+Exception specifications were introduced in C++ as a way to specify the exceptions that a function might throw. However, exception specifications proved problematic in practice, and are deprecated in the C++11 draft standard. We recommend that you do not use exception specifications except for `throw()`, which indicates that the function allows no exceptions to escape. If you must use exception specifications of the type `throw(`*type*`)`, be aware that MSVC departs from the standard in certain ways. For more information, see [Exception Specifications (throw)](exception-specifications-throw-cpp.md). The `noexcept` specifier is introduced in C++11 as the preferred alternative to `throw()`.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[如何：例外狀況和非例外狀況程式碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
-[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[如何：例外狀況和非例外狀況代碼之間的介面](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

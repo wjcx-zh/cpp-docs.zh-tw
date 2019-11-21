@@ -1,23 +1,23 @@
 ---
-title: 作法：建立及使用 shared_ptr 執行個體
+title: 'How to: Create and use shared_ptr instances'
 ms.custom: how-to
-ms.date: 05/22/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: d0ee1a5e8c5d26e8e0bec060ffe3d5fea30ce0fa
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: 9820e4cd2d1b981d82760fc1cea4e07c85792177
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866141"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245835"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>HOW TO：建立及使用 shared_ptr 執行個體
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
 
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。
 
 下圖顯示幾個指向一個記憶體位置的 `shared_ptr` 執行個體。
 
-![共用指標圖表](../cpp/media/shared_ptr.png "共用指標圖表")
+![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
 
 ## <a name="example-setup"></a>範例設定
 
@@ -74,25 +74,25 @@ int main()
 
 在任何可能的情況下，請在初次建立記憶體資源時使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函式來建立 `shared_ptr`。 `make_shared` 是無例外狀況之虞。 它會使用相同的呼叫來配置控制區塊的記憶體及資源，減少建構的額外負荷。 若您不使用 `make_shared`，便必須使用明確的 `new` 運算式來建立物件，才能將物件傳遞至 `shared_ptr` 建構函式。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
 
-[!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
+[!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
 ## <a name="example-2"></a>範例 2
 
 下列範例顯示如何宣告和初始化 `shared_ptr` 執行個體，其具有已被另一個 `shared_ptr` 配置之物件的共用擁有權。 假設 `sp2` 是已初始化的 `shared_ptr`。
 
-[!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
+[!code-cpp[stl_smart_pointers#2](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
 ## <a name="example-3"></a>範例 3
 
 當您在 C++ 標準程式庫容器內使用會複製元素的演算法時，`shared_ptr` 也相當實用。 您可以包裝 `shared_ptr` 中的項目，然後將它複製到能夠辨識只有需要時才有效 (不再需要時則無效) 之基礎記憶體的其他容器中。 下列範例顯示如何在向量中的 `remove_copy_if` 執行個體上運用 `shared_ptr` 演算法。
 
-[!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
+[!code-cpp[stl_smart_pointers#4](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
 ## <a name="example-4"></a>範例 4
 
 您可以使用 `dynamic_pointer_cast`、`static_pointer_cast` 和 `const_pointer_cast` 轉換 `shared_ptr`。 這些函式類似 `dynamic_cast`、`static_cast` 和 `const_cast` 運算子。 下列範例顯示如何測試在基底類別的 `shared_ptr` 向量中每個項目的衍生類型，然後複製項目並顯示其相關資訊。
 
-[!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
+[!code-cpp[stl_smart_pointers#5](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
 ## <a name="example-5"></a>範例 5
 
@@ -114,8 +114,8 @@ int main()
 
 以下範例顯示 `shared_ptr` 如何多載各種比較運算子，以啟用 `shared_ptr` 執行個體所擁有之記憶體的指標比較。
 
-[!code-cpp[stl_smart_pointers#3](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
+[!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)
+[智慧型指標 (現代 C++)](smart-pointers-modern-cpp.md)

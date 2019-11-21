@@ -1,25 +1,25 @@
 ---
-title: 作法：建立和使用 weak_ptr 實例
+title: 'How to: Create and use weak_ptr instances'
 ms.custom: how-to
-ms.date: 09/18/2019
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
-ms.openlocfilehash: e5d1b13d894a617ca514e26f14fde3f514540d34
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: 32e8d64fdb6449f1d40aec4161bfda54987ca66a
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127172"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245594"
 ---
-# <a name="how-to-create-and-use-weak_ptr-instances"></a>作法：建立和使用 weak_ptr 實例
+# <a name="how-to-create-and-use-weak_ptr-instances"></a>How to: Create and use weak_ptr instances
 
-有時候，物件必須儲存一種方法來存取的基礎物件`shared_ptr` ，而不會導致參考計數遞增。 一般而言，當您在實例之間`shared_ptr`有迴圈參考時，就會發生這種情況。
+Sometimes an object must store a way to access the underlying object of a [shared_ptr](../standard-library/shared-ptr-class.md) without causing the reference count to be incremented. Typically, this situation occurs when you have cyclic references between `shared_ptr` instances.
 
-最佳的設計是避免在每次可以時共用指標的擁有權。 不過，如果您必須擁有實例的共用`shared_ptr`擁有權，請避免其間的迴圈參考。 當迴圈參考無法避免，或甚至是基於某些原因而偏好`weak_ptr`時，請使用來為一或多個擁有者提供`shared_ptr`另一個的弱式參考。 藉由使用`weak_ptr`，您可以`shared_ptr`建立聯結至現有相關實例集的，但僅限於基礎記憶體資源仍然有效時。 `weak_ptr`本身不會參與參考計數，因此無法防止參考計數到達零。 不過，您可以使用`weak_ptr`來嘗試取得其初始化所在的新複本。 `shared_ptr` 如果已刪除記憶體，則`weak_ptr`的 bool `false`運算子會傳回。 如果記憶體仍然有效，新的共用指標會遞增參考計數，並保證只要`shared_ptr`變數留在範圍內，記憶體就會是有效的。
+The best design is to avoid shared ownership of pointers whenever you can. However, if you must have shared ownership of `shared_ptr` instances, avoid cyclic references between them. When cyclic references are unavoidable, or even preferable for some reason, use [weak_ptr](../standard-library/weak-ptr-class.md) to give one or more of the owners a weak reference to another `shared_ptr`. By using a `weak_ptr`, you can create a `shared_ptr` that joins to an existing set of related instances, but only if the underlying memory resource is still valid. A `weak_ptr` itself does not participate in the reference counting, and therefore, it cannot prevent the reference count from going to zero. However, you can use a `weak_ptr` to try to obtain a new copy of the `shared_ptr` with which it was initialized. If the memory has already been deleted, the `weak_ptr`'s bool operator returns `false`. If the memory is still valid, the new shared pointer increments the reference count and guarantees that the memory will be valid as long as the `shared_ptr` variable stays in scope.
 
 ## <a name="example"></a>範例
 
-下列`weak_ptr`程式碼範例示範用來確保適當刪除具有迴圈相依性之物件的案例。 當您檢查範例時，假設它只是在考慮替代方案之後才建立的。 `Controller`物件代表電腦進程的某些層面，並獨立運作。 每個控制站都必須能夠隨時查詢其他控制器的狀態，而且每個控制器都包含此用途的`vector<weak_ptr<Controller>>`私用。 每個向量都包含迴圈參考，因此`weak_ptr`會使用實例， `shared_ptr`而不是。
+The following code example shows a case where `weak_ptr` is used to ensure proper deletion of objects that have circular dependencies. As you examine the example, assume that it was created only after alternative solutions were considered. The `Controller` objects represent some aspect of a machine process, and they operate independently. Each controller must be able to query the status of the other controllers at any time, and each one contains a private `vector<weak_ptr<Controller>>` for this purpose. Each vector contains a circular reference, and therefore, `weak_ptr` instances are used instead of `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#222](../cpp/codesnippet/CPP/how-to-create-and-use-weak-ptr-instances_1.cpp)]
 
@@ -82,8 +82,8 @@ Destroying Controller4
 Press any key
 ```
 
-在實驗中，將向量`others`修改為`vector<shared_ptr<Controller>>`，然後在輸出中，請注意，當傳回時`TestRun` ，不會叫用任何析構函數。
+As an experiment, modify the vector `others` to be a `vector<shared_ptr<Controller>>`, and then in the output, notice that no destructors are invoked when `TestRun` returns.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [智慧型指標 (現代 C++)](../cpp/smart-pointers-modern-cpp.md)

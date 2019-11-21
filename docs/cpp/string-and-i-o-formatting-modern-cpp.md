@@ -1,19 +1,19 @@
 ---
 title: 字串和 I/O 格式化 (現代 C++)
-description: 在現代化的格式化字串可用的 I/O 選項C++。
+description: Choices for formatted string I/O available in modern C++.
 ms.date: 05/30/2019
 ms.topic: conceptual
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-ms.openlocfilehash: e22c745798109a2dbef82297c45256593823f806
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: facb0b62cc1e92ed09a9ba729d766e5db7404282
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450496"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245095"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>字串和 I/O 格式化 (現代 C++)
 
-C++[ \<iostream >](../standard-library/iostream.md)類別、 函數和運算子支援格式化的字串 I/O。 例如，下列程式碼示範如何設定`cout`格式化輸出以十六進位表示的整數。 首先，它會將儲存之後，重設目前的狀態傳遞給格式狀態一次，因為`cout`，它會保持這種方式直到變更為止。 它不會直接套用以一行程式碼。
+C++ [\<iostream>](../standard-library/iostream.md) classes, functions, and operators support formatted string I/O. For example, the following code shows how to set `cout` to format an integer to output in hexadecimal. First, it saves the current state to reset it afterwards, because once format state is passed to `cout`, it stays that way until changed. It doesn't just apply to the one line of code.
 
 ```cpp
 #include <iostream>
@@ -39,23 +39,23 @@ int main()
 }
 ```
 
-這個方法的型別安全和擴充性，但也很複雜而詳細。
+This approach is type-safe and extensible, but it's also complex and verbose.
 
-## <a name="alternative-format-options"></a>替代格式選項
+## <a name="alternative-format-options"></a>Alternative format options
 
-或者，您可以使用`Boost.Format`提升從C++程式庫，即使它是非標準。 您可以下載任何 Boost 程式庫，從[Boost](https://www.boost.org/)網站。
+As an alternative, you can use `Boost.Format` from the Boost C++ libraries, even though it’s nonstandard. You can download any Boost library from the [Boost](https://www.boost.org/) website.
 
-一些優點`Boost.Format`是：
+Some advantages of `Boost.Format` are:
 
-- 安全：類型安全，並擲回例外狀況的錯誤，比方說，太少或太多的項目規格。
+- Safe: Type-safe, and throws an exception for errors, for example, the specification of too few or too many items.
 
-- 可延伸：適用於串流處理任何類型。
+- Extensible: Works for any type that can be streamed.
 
-- 方便：標準 Posix 和類似的格式字串。
+- Convenient: Standard Posix and similar format strings.
 
-雖然`Boost.Format`建基於C++ [ \<iostream >](../standard-library/iostream-programming.md)功能，也就是安全且可擴充，它們不是效能最佳化。 當您需要效能最佳化時，請考慮使用 C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)並[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)，這是快速且容易使用。 不過，它們不是可延伸或安全性弱點。 （安全版本存在，但它們會造成些微的效能損失。 如需詳細資訊，請參閱 < [printf_s、 _printf_s_l、 wprintf_s、 _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)並[sprintf_s、 _sprintf_s_l、 swprintf_s、 _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md))。
+Although `Boost.Format` is built on C++ [\<iostream>](../standard-library/iostream-programming.md) facilities, which are safe and extensible, they aren't performance-optimized. When you require performance optimization, consider C [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md) and [sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md), which are fast and easy to use. However, they aren't extensible or safe from vulnerabilities. (Safe versions exist, but they incur a slight performance penalty. For more information, see [printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) and [sprintf_s, _sprintf_s_l, swprintf_s, _swprintf_s_l](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)).
 
-下列程式碼會示範部分提升格式化功能。
+The following code demonstrates some of the Boost formatting features.
 
 ```cpp
     string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
@@ -67,9 +67,9 @@ int main()
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
 [\<iostream>](../standard-library/iostream.md)<br/>

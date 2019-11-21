@@ -1,49 +1,49 @@
 ---
 title: const 和 volatile 指標
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 helpviewer_keywords:
 - volatile keyword [C++], and pointers
 - pointers, and const
 - pointers, and volatile
 - const keyword [C++], volatile pointers
 ms.assetid: 0c92dc6c-400e-4342-b345-63ddfe649d7e
-ms.openlocfilehash: c869adbbdc8a5a17d315e64e5ac15545e0c46e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0aafde9070275abcb270710e2d4a7a8d9806267
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399118"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246634"
 ---
 # <a name="const-and-volatile-pointers"></a>const 和 volatile 指標
 
-[Const](../cpp/const-cpp.md)並[volatile](../cpp/volatile-cpp.md)關鍵字會改變指標的處理方式。 **Const**關鍵字會指定在初始設定之後，無法修改指標; 指標防止之後修改。
+The [const](const-cpp.md) and [volatile](volatile-cpp.md) keywords change how pointers are treated. The **const** keyword specifies that the pointer cannot be modified after initialization; the pointer is protected from modification thereafter.
 
-**Volatile**關鍵字可讓您指定的使用者應用程式以外的動作可以修改後面的名稱與相關聯的值。 因此， **volatile**關鍵字會宣告可以存取多個處理程序或全域資料區域與中斷服務常式進行通訊的共用記憶體中的物件非常有用。
+The **volatile** keyword specifies that the value associated with the name that follows can be modified by actions other than those in the user application. Therefore, the **volatile** keyword is useful for declaring objects in shared memory that can be accessed by multiple processes or global data areas used for communication with interrupt service routines.
 
-當名稱宣告為**volatile**，編譯器會重新載入記憶體中的值每次程式所存取時。 這將可大幅減少進行最佳化的次數。 不過，當物件的狀態可能遭到意外變更時，它仍是確保可預測程式效能的唯一方式。
+When a name is declared as **volatile**, the compiler reloads the value from memory each time it is accessed by the program. 這將可大幅減少進行最佳化的次數。 不過，當物件的狀態可能遭到意外變更時，它仍是確保可預測程式效能的唯一方式。
 
-若要宣告為指標所指向的物件**const**或**volatile**，使用格式進行宣告：
+To declare the object pointed to by the pointer as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 const char *cpch;
 volatile char *vpch;
 ```
 
-若要宣告指標的值 — 也就是在指標中儲存的實際位址，作為**const**或**volatile**，使用格式進行宣告：
+To declare the value of the pointer — that is, the actual address stored in the pointer — as **const** or **volatile**, use a declaration of the form:
 
 ```cpp
 char * const pchc;
 char * volatile pchv;
 ```
 
-C++語言可避免允許修改物件的指派或指標宣告為**const**。 這類指派會移除用來宣告物件或指標的資訊，因此違反了原始宣告的用意。 請考慮下列宣告：
+The C++ language prevents assignments that would allow modification of an object or pointer declared as **const**. 這類指派會移除用來宣告物件或指標的資訊，因此違反了原始宣告的用意。 請考慮下列宣告：
 
 ```cpp
 const char cch = 'A';
 char ch = 'B';
 ```
 
-對於上述宣告中的兩個物件 (`cch`，型別的**const char**，以及`ch`，型別的**char)**，下列宣告/初始化是有效：
+Given the preceding declarations of two objects (`cch`, of type **const char**, and `ch`, of type **char)** , the following declaration/initializations are valid:
 
 ```cpp
 const char *pch1 = &cch;
@@ -61,7 +61,7 @@ char *pch2 = &cch;   // Error
 char *const pch3 = &cch;   // Error
 ```
 
-`pch2` 的宣告會宣告一項指標，但是常數物件可能會透過該指標而遭到修改，因此不允許此宣告。 Deklarace`pch3`指定指標是常數，不是物件，宣告不允許基於相同原因`pch2`宣告不允許。
+`pch2` 的宣告會宣告一項指標，但是常數物件可能會透過該指標而遭到修改，因此不允許此宣告。 The declaration of `pch3` specifies that the pointer is constant, not the object; the declaration is disallowed for the same reason the `pch2` declaration is disallowed.
 
 下列八個指派顯示透過指標進行的指派，以及變更上述宣告的指標值；現在，我們可以假設透過 `pch1` 進行 `pch8` 的初始化是正確的。
 
@@ -76,20 +76,20 @@ pch3 = &ch;   // Error: pointer declared const
 pch4 = &ch;   // Error: pointer declared const
 ```
 
-指標宣告為**volatile**，或為混合**const**並**volatile**，必須遵守相同的規則。
+Pointers declared as **volatile**, or as a mixture of **const** and **volatile**, obey the same rules.
 
-指標**const**物件通常用在函式宣告，如下所示：
+Pointers to **const** objects are often used in function declarations as follows:
 
 ```cpp
 errno_t strcpy_s( char *strDestination, size_t numberOfElements, const char *strSource );
 ```
 
-前面的陳述式會宣告函式[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)，其中三個引數的兩個屬於型別指標**char**。 因為引數傳址方式傳遞，而且不值，則可允許函式修改`strDestination`並`strSource`如果`strSource`不是宣告為**const**。 Deklarace`strSource`做為**const**可確保呼叫端`strSource`呼叫的函式無法變更。
+The preceding statement declares a function, [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md), where two of the three arguments are of type pointer to **char**. Because the arguments are passed by reference and not by value, the function would be free to modify both `strDestination` and `strSource` if `strSource` were not declared as **const**. The declaration of `strSource` as **const** assures the caller that `strSource` cannot be changed by the called function.
 
 > [!NOTE]
-> 因為沒有標準轉換轉換*typename* <strong>\*</strong>來**const** *typename*  <strong>\*</strong>，它是合法的類型引數傳遞`char *`要[strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)。 不過，並非反之亦然;移除存在的任何隱含的轉換**const**從物件或指標的屬性。
+> Because there is a standard conversion from *typename* <strong>\*</strong> to **const** *typename* <strong>\*</strong>, it is legal to pass an argument of type `char *` to [strcpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md). However, the reverse is not true; no implicit conversion exists to remove the **const** attribute from an object or pointer.
 
-A **const**給定類型的指標可以指派給相同類型的指標。 不過，指標的不是**const**無法指派給**const**指標。 下列程式碼顯示正確和不正確的指派：
+A **const** pointer of a given type can be assigned to a pointer of the same type. However, a pointer that is not **const** cannot be assigned to a **const** pointer. 下列程式碼顯示正確和不正確的指派：
 
 ```cpp
 // const_pointer.cpp
@@ -124,6 +124,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[Pointers](../cpp/pointers-cpp.md)
+[Pointers](pointers-cpp.md)
+[Raw pointers](raw-pointers.md)

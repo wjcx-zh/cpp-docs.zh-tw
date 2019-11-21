@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hardware exceptions [C++]
 - low level errors
 ms.assetid: 06ac6f01-a8cf-4426-bb12-1688315ae1cd
-ms.openlocfilehash: 17775f3b2ee6dfa235c93d0bf0e3335b464aaa69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b74f47cd86d94b50ab9213b3e517c2b08db696
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153667"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246555"
 ---
 # <a name="hardware-exceptions"></a>硬體例外狀況
 
@@ -27,7 +27,7 @@ Windows 會將不同的處理器硬體錯誤對應到本節中的例外狀況代
 |--------------------|------------------------|
 |STATUS_ACCESS_VIOLATION|讀取或寫入無法存取的記憶體位置。|
 |STATUS_BREAKPOINT|遇到硬體定義的中斷點，只能由偵錯工具使用。|
-|STATUS_DATATYPE_MISALIGNMENT|在未正確對齊的位址讀取或寫入資料，例如，16 位元的實體必須在 2 個位元組的界限上對齊。 (不適用於 Intel 80*x*x86 處理器。)|
+|STATUS_DATATYPE_MISALIGNMENT|在未正確對齊的位址讀取或寫入資料，例如，16 位元的實體必須在 2 個位元組的界限上對齊。 (Not applicable to Intel 80*x*86 processors.)|
 |STATUS_FLOAT_DIVIDE_BY_ZERO|除以 0.0 的浮點類型。|
 |STATUS_FLOAT_OVERFLOW|超出浮點類型的最大正數。|
 |STATUS_FLOAT_UNDERFLOW|超出浮點類型的最小負數範圍。|
@@ -38,9 +38,9 @@ Windows 會將不同的處理器硬體錯誤對應到本節中的例外狀況代
 |STATUS_INTEGER_OVERFLOW|嘗試進行超過整數範圍的作業。|
 |STATUS_SINGLE_STEP|在單一步驟模式中執行一個指令，只能由偵錯工具使用。|
 
-上表中列出的許多例外狀況主要是要由偵錯工具、作業系統，或其他低階程式碼處理。 除了整數和浮點數的錯誤之外，您的程式碼不應該處理這些錯誤。 因此，您通常應該使用例外狀況處理篩選條件來忽略例外狀況 (運算結果為 0)。 否則，您可以透過適當的回應來防止低階機制執行。 您可以不過，採取適當的預防措施，防止藉由這些低階錯誤，可能會影響[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)。
+上表中列出的許多例外狀況主要是要由偵錯工具、作業系統，或其他低階程式碼處理。 除了整數和浮點數的錯誤之外，您的程式碼不應該處理這些錯誤。 因此，您通常應該使用例外狀況處理篩選條件來忽略例外狀況 (運算結果為 0)。 否則，您可以透過適當的回應來防止低階機制執行。 You can, however, take appropriate precautions against the potential effect of these low-level errors by [writing termination handlers](../cpp/writing-a-termination-handler.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[撰寫例外狀況處理常式](../cpp/writing-an-exception-handler.md)<br/>
+[Writing an exception handler](../cpp/writing-an-exception-handler.md)<br/>
 [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

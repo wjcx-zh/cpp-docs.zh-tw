@@ -3,24 +3,24 @@ title: 演算法 (現代 C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 6f758d3c-a7c7-4a50-92bb-97b2f6d4ab27
-ms.openlocfilehash: b972e575c982ae2523ec560a6237eac76ceaf834
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9ed3b364f3fab880273c19c99bbbc7425545aec2
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345181"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246648"
 ---
 # <a name="algorithms-modern-c"></a>演算法 (現代 C++)
 
-調整和受控的C++進行程式設計，我們建議您使用中的演算法[C++標準程式庫](../standard-library/cpp-standard-library-reference.md)。 以下是一些重要的範例：
+For modern C++ programming, we recommend that you use the algorithms in the [C++ Standard Library](../standard-library/cpp-standard-library-reference.md). Here are some important examples:
 
-- **for_each**，這是預設周遊演算法。 (而且**轉換**不是非原地語意。)
+- **for_each**, which is the default traversal algorithm. (Also **transform** for not-in-place semantics.)
 
-- **find_if**，這是預設搜尋演算法。
+- **find_if**, which is the default search algorithm.
 
-- **排序**， **lower_bound**，和其他預設排序及搜尋演算法。
+- **sort**, **lower_bound**, and the other default sorting and searching algorithms.
 
-若要寫入比較子，請使用嚴格 **<** 並用*具名 lambda*盡可能。
+To write a comparator, use strict **<** and use *named lambdas* when you can.
 
 ```cpp
 auto comp = [](const widget& w1, const widget& w2)
@@ -31,11 +31,11 @@ sort( v.begin(), v.end(), comp );
 auto i = lower_bound( v.begin(), v.end(), comp );
 ```
 
-## <a name="loops"></a>迴圈
+## <a name="loops"></a>Loops
 
-可能的話，請使用範圍型**針對**迴圈或演算法呼叫或兩者，而不是手寫的迴圈。 **複製**，**轉換**， **count_if**， **remove_if**，和其他類似項目會比手寫迴圈更好的因為其意圖很明顯，而且它們讓您更輕鬆地撰寫無 bug 的程式碼。 此外，許多C++標準程式庫演算法有實作最佳化，因此更有效率。
+When possible, use range-based **for** loops or algorithm calls, or both, instead of hand-written loops. **copy**, **transform**, **count_if**, **remove_if**, and others like them are much better than handwritten loops because their intent is obvious and they make it easier to write bug-free code. Also, many C++ Standard Library algorithms have implementation optimizations that make them more efficient.
 
-而不是舊C++如下所示：
+Instead of old C++ like this:
 
 ```cpp
 for ( auto i = strings.begin(); i != strings.end(); ++i ) {
@@ -49,7 +49,7 @@ for ( ; i != v.end(); ++i ) {
 }
 ```
 
-使用現代化C++如下所示：
+Use modern C++ like this:
 
 ```cpp
 for_each( begin(strings), end(strings), [](string& s) {
@@ -59,22 +59,22 @@ for_each( begin(strings), end(strings), [](string& s) {
 auto i = find_if( begin(v), end(v),  [=](int i) { return i > x && i < y; } );
 ```
 
-### <a name="range-based-for-loops"></a>範圍架構的 for 迴圈
+### <a name="range-based-for-loops"></a>Range-based for loops
 
-以範圍為基礎**for**迴圈不是 C + + 11 語言功能，C++標準程式庫演算法。 但是，有必要需迴圈在此討論中的提及。 範圍架構**for**迴圈是的延伸模組**的**關鍵字並提供便利且有效率的方式，來逐一查看值範圍的迴圈重複寫入。 C++標準程式庫容器、 字串和陣列是現成可供範圍架構**針對**迴圈。 若要啟用您的使用者定義型別，這個新的反覆項目語法，加入下列支援：
+The range-based **for** loop is a C++11 language feature, not a C++ Standard Library algorithm. But it deserves mention in this discussion about loops. Range-based **for** loops are an extension of the **for** keyword and provide a convenient and efficient way to write loops that iterate over a range of values. C++ Standard Library containers, strings, and arrays are ready-made for range-based **for** loops. To enable this new iteration syntax for your user-defined type, add the following support:
 
-- A`begin`方法會傳回迭代器至結構開頭和`end`傳回迭代器至結構結尾的方法。
+- A `begin` method that returns an iterator to the beginning of the structure and an `end` method that returns an iterator to the end of the structure.
 
-- 在這些方法的迭代器的支援：**運算子**<strong>\*</strong>，**運算子 ！ =**，並**operator + +** （前置版本）。
+- Support in the iterator for these methods: **operator**<strong>\*</strong>, **operator!=** , and **operator++** (prefix version).
 
-這些方法可以是成員或獨立函式。
+These methods can be either members or stand-alone functions.
 
-## <a name="random-numbers"></a>隨機數字
+## <a name="random-numbers"></a>Random Numbers
 
-大家，舊的 CRT`rand()`函式有很多缺陷，有已長時間的討論中C++社群。 新式C++，您不必處理這些缺點，也不必發明自己統一分佈亂數產生器 — 因為快速且輕鬆地建立這些工具都可以在C++標準程式庫，如中所示[\<隨機 >](../standard-library/random.md)。
+It's no secret that the old CRT `rand()` function has many flaws, which have been discussed at length in the C++ community. In modern C++, you don't have to deal with those shortcomings—nor do you have to invent your own uniformly distributed random number generator—because the tools for quickly and easily creating them are available in the C++ Standard Library, as shown in [\<random>](../standard-library/random.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>

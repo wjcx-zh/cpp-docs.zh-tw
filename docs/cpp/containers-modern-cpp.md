@@ -2,12 +2,12 @@
 title: 容器 (現代 C++)
 ms.date: 11/12/2019
 ms.topic: conceptual
-ms.openlocfilehash: 41b9d560ce827cee5c90467184ef5b2b729e0639
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 7ac2f30c2e7ab91a5f25125ccd07ad84c0116d9c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74188907"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245897"
 ---
 # <a name="containers-modern-c"></a>容器 (現代 C++)
 
@@ -40,6 +40,6 @@ For more information about containers, see [C++ Standard Library Containers](../
 
 ## <a name="see-also"></a>請參閱
 
-[歡迎回到 C++ (現代 C++)](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
+[Welcome back to C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)

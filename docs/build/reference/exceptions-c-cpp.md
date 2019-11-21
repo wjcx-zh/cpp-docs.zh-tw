@@ -1,6 +1,6 @@
 ---
-title: 例外狀況 (C/C++)
-ms.date: 11/04/2016
+title: DLL loading exception codes (C/C++)
+ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
 - vcppException
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 360acba73278902cc40d10fd975011488742a7a2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f557fe736f45f8c3f5411d076a0be18f1d1b670e
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492923"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74243857"
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 
-當發生失敗時, 可能會引發兩個例外狀況代碼:
+Two exception codes can be raised when failures are encountered:
 
-- **LoadLibrary**失敗
+- For a **LoadLibrary** failure
 
-- 若為**GetProcAddress**失敗
+- For a **GetProcAddress** failure
 
-以下是例外狀況資訊:
+Here is the exception information:
 
 ```
 //
@@ -37,12 +37,12 @@ ms.locfileid: "69492923"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-擲回的例外狀況代碼是標準的 VcppException (ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND) 和 VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) 值。 例外狀況會將指標傳遞至 LPDWORD 值中的**DelayLoadInfo**結構, 而**GetExceptionInformation**會在[EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record)結構的 ExceptionInformation [0] 欄位中加以抓取。
+The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
 
-此外, 如果在 grAttrs 欄位中設定了不正確的位, 就會擲回例外狀況 ERROR_INVALID_PARAMETER。 這個例外狀況適用于所有意圖和用途, 嚴重。
+Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
 
-如需詳細資訊, 請參閱[結構和常數定義](structure-and-constant-definitions.md)。
+See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [錯誤處理和通知](error-handling-and-notification.md)

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: cb4be000c3c41862d5b4df766d21ae1cddeb6838
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243987"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245199"
 ---
 # <a name="void-c"></a>void (C++)
 
-做為函式的傳回型別，當**void**關鍵字會指定函式不會傳回值。 用於函式參數清單時，void 指定函式不接受參數。 當用於指標的宣告，void 指定指標是「通用的」。
+When used as a function return type, the **void** keyword specifies that the function does not return a value. When used for a function's parameter list, **void** specifies that the function takes no parameters. When used in the declaration of a pointer, **void** specifies that the pointer is "universal."
 
-如果指標的類型是`void *`，指標可以指向任何不以宣告的變數**const**或是**volatile**關鍵字。 除非它轉換為其他類型，否則 void 指標無法取值。 Void 指標可以轉換成任何其他類型的資料指標。
+If a pointer's type is **void\*** , the pointer can point to any variable that is not declared with the **const** or **volatile** keyword. A **void\*** pointer cannot be dereferenced unless it is cast to another type. A **void\*** pointer can be converted into any other type of data pointer.
 
-Void 指標可以指向函式，但是不能指向 C++ 的類別成員。
+A **void** pointer can point to a function, but not to a class member in C++.
 
-您不能宣告 void 類型的變數。
+You cannot declare a variable of type **void**.
 
 ## <a name="example"></a>範例
 
@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [基本類型](../cpp/fundamental-types-cpp.md)

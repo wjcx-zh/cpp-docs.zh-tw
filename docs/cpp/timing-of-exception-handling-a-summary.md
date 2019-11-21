@@ -1,5 +1,5 @@
 ---
-title: 例外狀況處理的時機：摘要
+title: 'Timing of exception handling: A summary'
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -11,19 +11,19 @@ helpviewer_keywords:
 - handlers [C++], order of exception
 - structured exception handling [C++], timing
 ms.assetid: 5d1da546-73fd-4673-aa1a-7ac0f776c420
-ms.openlocfilehash: 7b52252454e27d622e412f490360a025dfc97838
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 870606c3661df3654581760214e48ef2bdfb1987
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221901"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246339"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>例外狀況處理的時機：摘要
+# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
 
-不論如何執行終止處理常式 **__try**陳述式區塊。 原因包括跳出 **__try**區塊中，`longjmp`將控制權轉移以外的區塊，以及回溯堆疊因為例外狀況處理的陳述式。
+A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
 
 > [!NOTE]
->  MicrosoftC++編譯器支援兩種形式`setjmp`並`longjmp`陳述式。 快速版本會略過終止處理，但是會更有效率。 若要使用此版本，包含檔案\<setjmp.h >。 另一個版本支援終止處理，如先前段落中所述。 若要使用此版本，包含檔案\<setjmpex.h >。 快速版本的效能提升取決於硬體組態。
+>  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. 快速版本會略過終止處理，但是會更有效率。 To use this version, include the file \<setjmp.h>. 另一個版本支援終止處理，如先前段落中所述。 To use this version, include the file \<setjmpex.h>. 快速版本的效能提升取決於硬體組態。
 
 作業系統會先依適當的順序執行所有終止處理常式，型執行其他程式碼，包括例外狀況處理常式的主體。
 
@@ -35,7 +35,7 @@ ms.locfileid: "65221901"
 
 1. 如果這個篩選條件會傳遞控制權 (傳回 0)，處理序會繼續執行，直到找到不會傳遞控制權的篩選條件。
 
-1. 如果此篩選會傳回-1，其中已引發例外狀況，而不會終止，也將會繼續執行。
+1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
 
 1. 如果篩選條件傳回 1，則會發生下列事件：
 
@@ -47,7 +47,7 @@ ms.locfileid: "65221901"
 
    - 控制權會傳遞給這個例外狀況處理常式結尾後方的程式碼。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
+[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
 [結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -1,27 +1,27 @@
 ---
-title: HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
+title: 如何：攔截 MSIL 擲回之機器碼的例外狀況
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exceptions, catching
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: 95ce7a2afabc34ea78376b12da61f419dab4af34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3afa29d8c9bee1c1f1cc2fd1869d108c08a249b
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379036"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246683"
 ---
-# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>HOW TO：從 MSIL 擲回的原生程式碼中攔截例外狀況
+# <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
 
-在原生程式碼，您可以攔截原生C++從 MSIL 的例外狀況。  您可以攔截與 CLR 例外狀況`__try`和`__except`。
+In native code, you can catch native C++ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.
 
-如需詳細資訊，請參閱 < [Structured Exception Handling (C /C++)](../cpp/structured-exception-handling-c-cpp.md)並[C++例外狀況處理](../cpp/cpp-exception-handling.md)。
+For more information, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md) and [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
 
 ## <a name="example"></a>範例
 
-下列範例會定義具有兩個函式，其中一個原生的例外狀況，則會擲回，另一個會擲回例外狀況 MSIL 的模組。
+The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.
 
 ```
 // catch_MSIL_in_native.cpp
@@ -37,7 +37,7 @@ void Test2() {
 
 ## <a name="example"></a>範例
 
-下列範例會定義模組攔截原生和 MSIL 的例外狀況。
+The following sample defines a module that catches a native and MSIL exception.
 
 ```
 // catch_MSIL_in_native_2.cpp
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

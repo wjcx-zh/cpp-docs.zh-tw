@@ -1115,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: 失敗攔截
                       href: build/reference/failure-hooks.md
-                    - name: 例外狀況 (C/C++)
+                    - name: DLL 載入例外狀況代碼 (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: 傾印延遲載入的匯入
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -3652,51 +3652,18 @@
               items:
                 - name: 歡迎回到 C++ (新式 C++)
                   href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 型別系統 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 型別系統 (新式 C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: 實值型別 (新式 C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: 類型轉換和類型安全 (新式 C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
                 - name: 統一初始化和委派建構函式
                   href: cpp/uniform-initialization-and-delegating-constructors.md
                 - name: 物件存留期和資源管理 (新式 C++)
                   href: cpp/object-lifetime-and-resource-management-modern-cpp.md
                 - name: 物件擁有資源 (RAII)
                   href: cpp/objects-own-resources-raii.md
-                - name: 智慧型指標 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 智慧型指標 (新式 C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: 作法：建立和使用 unique_ptr 執行個體
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 作法：建立和使用 shared_ptr 執行個體
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 作法：建立和使用 weak_ptr 執行個體
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: 編譯時間封裝的 Pimpl (新式 C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
                 - name: 容器 (現代 C++)
                   href: cpp/containers-modern-cpp.md
                 - name: 演算法 (現代 C++)
                   href: cpp/algorithms-modern-cpp.md
                 - name: 字串和 I/O 格式化 (新式 C++)
                   href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: 錯誤和例外狀況處理 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 錯誤和例外狀況處理 (新式 C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 作法：例外狀況安全的設計
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 作法：例外狀況和非例外狀況程式碼之間的介面
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
                 - name: ABI 界限上的可攜性 (新式 C++)
                   href: cpp/portability-at-abi-boundaries-modern-cpp.md
             - name: 語彙慣例
@@ -3737,6 +3704,8 @@
                 - name: 宣告和定義
                   expanded: false
                   items:
+                    - name: C++ 類型系統
+                      href: cpp/cpp-type-system-modern-cpp.md
                     - name: 宣告和定義
                       href: cpp/declarations-and-definitions-cpp.md
                     - name: 宣告子概觀
@@ -3880,6 +3849,8 @@
                       href: cpp/floating-limits.md
                 - name: 標準轉換
                   href: cpp/standard-conversions.md
+                - name: 類型轉換與類型安全
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
             - name: 內建運算子、優先順序和關聯性
               expanded: false
               items:
@@ -4134,7 +4105,7 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: 在沒有建構函式的情況下初始化類別和結構
+                - name: 大括弧初始化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
                 - name: 建構函式
                   expanded: false
@@ -4145,6 +4116,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: 移動建構函式和移動指派運算子
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: 委派建構函式
+                      href: cpp/delegating-constructors.md
                 - name: 解構函式
                   href: cpp/destructors-cpp.md
                 - name: 成員函式概觀
@@ -4189,6 +4162,8 @@
                   href: cpp/special-member-functions.md
                 - name: 靜態成員
                   href: cpp/static-members-cpp.md
+                - name: 用為實值型別的 C++ 類別
+                  href: cpp/value-types-modern-cpp.md
                 - name: 使用者定義類型轉換
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: 可變動的資料成員
@@ -4236,41 +4211,56 @@
               items:
                 - name: 指標
                   href: cpp/pointers-cpp.md
+                - name: 原始指標
+                  href: cpp/raw-pointers.md
                 - name: const 和 volatile 指標
                   href: cpp/const-and-volatile-pointers.md
                 - name: new 和 delete 運算子
                   href: cpp/new-and-delete-operators.md
+                - name: 智慧指標
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: 作法：建立和使用 unique_ptr 執行個體
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: 作法：建立和使用 shared_ptr 執行個體
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: 作法：建立和使用 weak_ptr 執行個體
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: 編譯時間封裝的 Pimpl
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: C++ 中的例外狀況處理
               expanded: false
               items:
                 - name: C++ 中的例外狀況處理
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: 例外狀況處理
+                - name: 新型 C++ 的最佳做法
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: 如何設計例外狀況的安全
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 如何連結例外狀況與非例外狀況代碼
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: try、throw 和 catch 陳述式
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Catch 區塊的評估方式
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: 例外狀況與堆疊回溯
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: 例外狀況規格 (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: 未處理的 C++ 例外狀況
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: 混合 C (結構化) 和 C++ 例外狀況
                   expanded: false
                   items:
-                    - name: 例外狀況處理
-                      href: cpp/cpp-exception-handling.md
-                    - name: try、throw 和 catch 陳述式
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Catch 區塊的評估方式
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: C++ 中的例外狀況和堆疊回溯
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: 例外狀況規格 (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: 未處理的 C++ 例外狀況
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: 混合 C (結構化) 和 C++ 例外狀況
-                      expanded: false
-                      items:
-                        - name: 混合 C (結構化) 和 C++ 例外狀況
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: 使用 setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: 使用 C++ 處理結構化例外狀況
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: 使用 setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: 使用 C++ 處理結構化例外狀況
+                      href: cpp/exception-handling-differences.md
                 - name: 結構化例外狀況處理 (SEH) (C/C++)
                   expanded: false
                   items:

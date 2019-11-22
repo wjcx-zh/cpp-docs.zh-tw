@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: c1936e51630c78de3e7b9dc8a5c7d141ea01ad4b
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: eff4f1a22512b597b5479dbcaabcc9d5fc93c940
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444872"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303204"
 ---
 # <a name="x64-exception-handling"></a>x64 例外狀況處理
 
@@ -76,7 +76,7 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
    |-|-|
    |`UNW_FLAG_EHANDLER`| 函式具有例外狀況處理常式，應該在尋找需要檢查例外狀況的函數時呼叫。|
    |`UNW_FLAG_UHANDLER`| 函式具有終止處理常式，應在回溯例外狀況時呼叫。|
-   |`UNW_FLAG_CHAININFO`| 這個回溯資訊結構不是程式的主要複本。 相反地，連鎖回溯資訊專案是先前 RUNTIME_FUNCTION 專案的內容。 如需相關資訊，請參閱連結的回溯[資訊結構](#chained-unwind-info-structures)。 如果設定此旗標，則必須清除 UNW_FLAG_EHANDLER 和 UNW_FLAG_UHANDLER 旗標。 此外，[框架暫存器] 和 [固定堆疊配置] 欄位必須具有與主要回溯資訊中相同的值。|
+   |`UNW_FLAG_CHAININFO`| 這個回溯資訊結構不是程式的主要複本。 相反地，連鎖回溯資訊專案是先前 RUNTIME_FUNCTION 專案的內容。 如需相關資訊，請參閱連結的回溯[資訊結構](#chained-unwind-info-structures)。 如果已設定此旗標，則必須清除 [UNW_FLAG_EHANDLER] 和 [UNW_FLAG_UHANDLER] 旗標。 此外，[框架暫存器] 和 [固定堆疊配置] 欄位必須具有與主要回溯資訊中相同的值。|
 
 - **初構的大小**
 
@@ -84,23 +84,23 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
 
 - **回溯代碼的計數**
 
-   回溯代碼陣列中的位置數目。 有些回溯程式碼（例如，UWOP_SAVE_NONVOL）在陣列中需要一個以上的位置。
+   回溯代碼陣列中的位置數目。 某些回溯程式碼（例如 UWOP_SAVE_NONVOL）在陣列中需要一個以上的位置。
 
 - **畫面格暫存器**
 
-   如果是非零值，則此函式會使用框架指標（FP），而此欄位是用來做為框架指標的非靜態暫存器編號，並針對 UNWIND_CODE 節點的 [作業資訊] 欄位使用相同的編碼方式。
+   如果是非零值，則函式會使用框架指標（FP），而此欄位是用來做為框架指標的非靜態暫存器編號，使用 UNWIND_CODE 節點的 [作業資訊] 欄位的相同編碼方式。
 
 - **畫面格暫存器位移（已縮放）**
 
-   如果 [畫面格暫存器] 欄位為非零值，此欄位就是在建立時套用至 FP 暫存器的 RSP 的縮放位移。 實際的 FP 暫存器已設定為 RSP + 16 \* 此數位，允許從0到240的位移。 此位移允許將 FP 暫存器指向動態堆疊框架的本機堆疊配置中間，透過較短的指示來提供更好的程式碼密度。 （也就是，其他指示可以使用8位帶正負號的位移形式）。
+   如果 [畫面格暫存器] 欄位為非零值，此欄位就是在建立時套用至 FP 暫存器的 RSP 的縮放位移。 實際的 FP 暫存器會設定為 RSP + 16 \* 此數位，允許從0到240的位移。 此位移允許將 FP 暫存器指向動態堆疊框架的本機堆疊配置中間，透過較短的指示來提供更好的程式碼密度。 （也就是，其他指示可以使用8位帶正負號的位移形式）。
 
 - **回溯代碼陣列**
 
-   專案的陣列，說明初構在非靜態暫存器和 RSP 上的效果。 如需個別專案的意義，請參閱 UNWIND_CODE 上的一節。 基於對齊目的，此陣列一律會有偶數的專案，而最終的專案可能未使用。 在這種情況下，陣列的長度比 [回溯程式碼計數] 欄位所表示的長。
+   專案的陣列，說明初構在非靜態暫存器和 RSP 上的效果。 如需個別專案的意義，請參閱 UNWIND_CODE 的一節。 基於對齊目的，此陣列一律會有偶數的專案，而最終的專案可能未使用。 在這種情況下，陣列的長度比 [回溯程式碼計數] 欄位所表示的長。
 
 - **例外狀況處理常式的位址**
 
-   如果旗標 UNW_FLAG_CHAININFO 為 clear，而且已設定其中一個旗標 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER，則為函式的語言特定例外狀況或終止處理常式的影像相對指標。
+   如果旗標 UNW_FLAG_CHAININFO 是明確的，且已設定其中一個旗標 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER，則為函式的語言特定例外狀況或終止處理常式的影像相對指標。
 
 - **語言特定處理常式資料**
 
@@ -108,7 +108,7 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
 
 - **連鎖回溯資訊**
 
-   如果已設定旗標 UNW_FLAG_CHAININFO，則 UNWIND_INFO 結構會以三個 UWORDs 結尾。  這些 UWORDs 代表連鎖回溯功能的 RUNTIME_FUNCTION 資訊。
+   如果設定了旗標 UNW_FLAG_CHAININFO，則 UNWIND_INFO 結構會以三個 UWORDs 結束。  這些 UWORDs 代表連鎖回溯功能的 RUNTIME_FUNCTION 資訊。
 
 ### <a name="struct-unwind_code"></a>struct UNWIND_CODE
 
@@ -128,17 +128,17 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
 
 #### <a name="unwind-operation-code"></a>回溯操作程式碼
 
-注意：某些作業程式碼需要本機堆疊框架中值的不帶正負號位移。 這個位移來自開始，也就是固定堆疊配置的最低位址。 如果 UNWIND_INFO 中的 [畫面格暫存器] 欄位為零，則此位移是來自 RSP。 如果 [框架暫存器] 欄位為非零值，則此位移是從建立 FP 暫存器時的 .RSP 所在位置開始。 它等於 FP 暫存器減去 FP 暫存器位移（16 \* 在 UNWIND_INFO 中調整的框架暫存器位移）。 如果使用 FP 暫存器，則任何採用位移的回溯程式碼都必須在初構中建立 FP 暫存器之後才使用。
+注意：某些作業程式碼需要本機堆疊框架中值的不帶正負號位移。 這個位移來自開始，也就是固定堆疊配置的最低位址。 如果 UNWIND_INFO 中的 [框架暫存器] 欄位為零，則此位移是來自 RSP。 如果 [框架暫存器] 欄位為非零值，則此位移是從建立 FP 暫存器時的 .RSP 所在位置開始。 它等於 FP 暫存器減去 FP 暫存器位移（16 \* UNWIND_INFO 中縮放的框架暫存器位移）。 如果使用 FP 暫存器，則任何採用位移的回溯程式碼都必須在初構中建立 FP 暫存器之後才使用。
 
-對於 `UWOP_SAVE_XMM128` 和 `UWOP_SAVE_XMM128_FAR` 以外的所有 opcode 而言，位移一律是8的倍數，因為所有相關的堆疊值都會儲存在8位元組的界限上（堆疊本身一律會對齊16位元組）。 對於接受短位移的作業程式碼（小於512K），此程式碼之節點中的最後 USHORT 會將位移除以8。 對於採用長位移的作業程式碼（512K < = offset < 4 GB），此程式碼的最後兩個 USHORT 節點會保存位移（以位元組為單位的格式）。
+對於 `UWOP_SAVE_XMM128` 和 `UWOP_SAVE_XMM128_FAR`以外的所有 opcode 而言，位移一律是8的倍數，因為所有相關的堆疊值都會儲存在8位元組的界限上（堆疊本身一律會對齊16位元組）。 對於接受短位移的作業程式碼（小於512K），此程式碼之節點中的最後 USHORT 會將位移除以8。 對於採用長位移的作業程式碼（512K < = offset < 4 GB），此程式碼的最後兩個 USHORT 節點會保存位移（以位元組為單位的格式）。
 
-對於作業碼 `UWOP_SAVE_XMM128` 和 `UWOP_SAVE_XMM128_FAR`，位移一律是16的倍數，因為所有128位 XMM 作業都必須發生在16位元組對齊的記憶體上。 因此，調整因數16會用於 `UWOP_SAVE_XMM128`，允許小於1百萬的位移。
+對於 `UWOP_SAVE_XMM128` 和 `UWOP_SAVE_XMM128_FAR`的 opcode 而言，位移一律是16的倍數，因為所有128位 XMM 作業都必須發生在16位元組對齊的記憶體上。 因此，調整因數16會用於 `UWOP_SAVE_XMM128`，允許小於1百萬的位移。
 
 回溯操作程式碼是下列其中一個值：
 
-- `UWOP_PUSH_NONVOL` （0）1節點
+- `UWOP_PUSH_NONVOL` （0）1個節點
 
-  推送非靜態整數暫存器，將 RSP 遞減8。 作業資訊是註冊的編號。 由於 epilogs 的條件約束，`UWOP_PUSH_NONVOL` 回溯程式碼必須先出現在初構中，並相對地，在回溯程式碼陣列中的最後一個。 這個相對順序會套用至 `UWOP_PUSH_MACHFRAME` 以外的所有其他回溯代碼。
+  推送非靜態整數暫存器，將 RSP 遞減8。 作業資訊是註冊的編號。 由於 epilogs 的條件約束，`UWOP_PUSH_NONVOL` 回溯程式碼必須先出現在初構中，並在回溯程式碼陣列中相對應的最後一個。 此相對順序適用于除了 `UWOP_PUSH_MACHFRAME`以外的所有其他回溯代碼。
 
 - `UWOP_ALLOC_LARGE` （1）2或3個節點
 
@@ -158,7 +158,7 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
 
 - `UWOP_SET_FPREG` （3）1個節點
 
-  將 [暫存器] 設定為目前 RSP 的某個位移，以建立框架指標暫存器。 位移等於 UNWIND_INFO 中的 [畫面格暫存器位移（縮放）] 欄位 \* 16，允許從0到240的位移。 使用位移允許建立指向固定堆疊配置中間的框架指標，藉由允許更多存取權使用簡短的指令表單來協助程式碼密度。 [作業資訊] 欄位是保留的，不應使用。
+  將 [暫存器] 設定為目前 RSP 的某個位移，以建立框架指標暫存器。 位移等於 UNWIND_INFO \* 16 中的 [畫面格暫存器位移（縮放）] 欄位，允許從0到240的位移。 使用位移允許建立指向固定堆疊配置中間的框架指標，藉由允許更多存取權使用簡短的指令表單來協助程式碼密度。 [作業資訊] 欄位是保留的，不應使用。
 
 - `UWOP_SAVE_NONVOL` （4）2個節點
 
@@ -199,7 +199,7 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
   |.RSP + 8|裂縫|
   |RSP|錯誤碼|
 
-  這個回溯程式碼一律會出現在虛擬初構中，這實際上不會執行，而是會出現在中斷常式的實際進入點之前，而且只存在於提供一個位置來模擬機器框架的推送。 `UWOP_PUSH_MACHFRAME` 會記錄模擬，這表示電腦已在概念上完成此操作：
+  這個回溯程式碼一律會出現在虛擬初構中，這實際上不會執行，而是會出現在中斷常式的實際進入點之前，而且只存在於提供一個位置來模擬機器框架的推送。 `UWOP_PUSH_MACHFRAME` 記錄模擬，這表示電腦已在概念上完成此操作：
 
   1. Pop RIP 將位址從堆疊頂端傳回到*Temp*
   
@@ -235,7 +235,7 @@ UNWIND_INFO 結構必須在記憶體中對齊 DWORD。 以下是每個欄位所�
 
 ### <a name="chained-unwind-info-structures"></a>連結的回溯資訊結構
 
-如果已設定 UNW_FLAG_CHAININFO 旗標，則回溯資訊結構是次要的，而共用的例外狀況處理常式/連結資訊位址欄位則包含主要回溯資訊。 這個範例程式碼會抓取主要回溯資訊，假設 `unwindInfo` 是已設定 UNW_FLAG_CHAININFO 旗標的結構。
+如果已設定 UNW_FLAG_CHAININFO 旗標，則回溯資訊結構是次要的，而 [共用例外狀況-處理常式/連結資訊位址] 欄位包含主要回溯資訊。 這個範例程式碼會抓取主要回溯資訊，假設 `unwindInfo` 是已設定 UNW_FLAG_CHAININFO 旗標的結構。
 
 ```cpp
 PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode[( unwindInfo->CountOfCodes + 1 ) & ~1]);
@@ -245,13 +245,13 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
 
 您也可以使用連鎖資訊來分組 volatile 暫存器儲存。 編譯器可能會延遲儲存一些 volatile 暫存器，直到它位於函式進入初構之外。 您可以在群組程式碼之前讓函式部分的主要回溯資訊進行記錄，然後以非零的初構大小設定連結資訊，其中連鎖資訊中的回溯程式碼會反映非靜態暫存器的儲存。 在此情況下，回溯程式碼就是 UWOP_SAVE_NONVOL 的所有實例。 不支援使用推送來儲存非靜態暫存器，或使用額外的固定堆疊配置來修改 .RSP 暫存器的群組。
 
-具有 UNW_FLAG_CHAININFO 集的 UNWIND_INFO 專案可以包含 RUNTIME_FUNCTION 專案，其 UNWIND_INFO 專案也已設定 UNW_FLAG_CHAININFO，有時也稱為*多個縮減換行*。 最後，連鎖的回溯資訊指標會到達已清除 UNW_FLAG_CHAININFO 的 UNWIND_INFO 專案。 此專案是主要的 UNWIND_INFO 專案，指向實際的程式進入點。
+具有 UNW_FLAG_CHAININFO 集的 UNWIND_INFO 專案可以包含 UNWIND_INFO 專案也有 UNW_FLAG_CHAININFO 設定的 RUNTIME_FUNCTION 專案，有時也稱為*多個壓縮包裝*。 最後，連結的回溯資訊指標會到達已 UNW_FLAG_CHAININFO 清除的 UNWIND_INFO 專案。 這個專案是主要 UNWIND_INFO 專案，指向實際的程式進入點。
 
 ## <a name="unwind-procedure"></a>回溯程式
 
 回溯程式碼陣列會依遞減順序排序。 發生例外狀況時，作業系統會將完整的內容儲存在內容記錄中。 接著會叫用例外狀況分派邏輯，這會重複執行這些步驟來尋找例外狀況處理常式：
 
-1. 使用儲存在內容記錄中的目前 RIP 來搜尋 RUNTIME_FUNCTION 資料表專案，以描述連結的 UNWIND_INFO 專案的目前函式（或函數部分）。
+1. 使用儲存在內容記錄中的目前 RIP，來搜尋描述連結 UNWIND_INFO 專案之目前函式（或函數部分）的 RUNTIME_FUNCTION 資料表專案。
 
 1. 如果找不到函式資料表專案，則它會在分葉函式中，而 RSP 會直接定址傳回指標。 [.RSP] 的傳回指標儲存在更新的內容中，模擬的 RSP 會遞增8，而步驟1則重複。
 
@@ -261,19 +261,19 @@ PRUNTIME_FUNCTION primaryUwindInfo = (PRUNTIME_FUNCTION)&(unwindInfo->UnwindCode
 
    - 案例 b）如果 RIP 位於序言內部，則 control 尚未進入函式，此函式不能有與這個例外狀況相關聯的例外狀況處理常式，而且必須復原初構的效果，以計算呼叫端函式的內容。 如果從函式開始到 RIP 的距離小於或等於回溯資訊中編碼的初構大小，RIP 就會在初構中。 針對第一個專案的回溯程式碼陣列（位移小於或等於函數 start 中的 RIP 位移）向前掃描，然後復原回溯程式碼陣列中所有剩餘專案的效果，就會展開初構的效果。 然後重複執行步驟1。
 
-   - 案例 c）如果 RIP 不在初構或終解中，而且函式具有例外狀況處理常式（已設定 UNW_FLAG_EHANDLER），則會呼叫語言特定的處理常式。 處理常式會掃描其資料，並適當地呼叫篩選函數。 語言特定處理常式會傳回已處理的例外狀況，或是繼續進行搜尋。 它也可以直接起始回溯。
+   - 案例 c）如果 RIP 不在初構或終解中，而且函式具有例外狀況處理常式（UNW_FLAG_EHANDLER 已設定），則會呼叫語言特定的處理常式。 處理常式會掃描其資料，並適當地呼叫篩選函數。 語言特定處理常式會傳回已處理的例外狀況，或是繼續進行搜尋。 它也可以直接起始回溯。
 
 1. 如果語言特定處理常式傳回已處理的狀態，則會繼續使用原始內容記錄來執行。
 
 1. 如果沒有任何語言特定的處理常式，或處理常式傳回「繼續搜尋」狀態，則必須將內容記錄展開至呼叫端的狀態。 其做法是處理所有回溯程式碼陣列元素，並復原每個專案的效果。 然後重複執行步驟1。
 
-涉及連鎖的回溯資訊時，仍會遵循這些基本步驟。 唯一的差別在於，當您將回溯程式碼陣列回溯來回溯初構的效果時，一旦到達陣列結尾之後，它就會連結到父回溯資訊，而整個回溯程式碼陣列就會進行逐步解說。 此連結會繼續進行，直到到達沒有 UNW_CHAINED_INFO 旗標的回溯資訊，然後再完成回溯程式碼陣列的流覽。
+涉及連鎖的回溯資訊時，仍會遵循這些基本步驟。 唯一的差別在於，當您將回溯程式碼陣列回溯來回溯初構的效果時，一旦到達陣列結尾之後，它就會連結到父回溯資訊，而整個回溯程式碼陣列就會進行逐步解說。 此連結會繼續進行，直到到達沒有 UNW_CHAINED_INFO 旗標的回溯資訊，然後再完成其回溯程式碼陣列的流覽。
 
 最小的回溯資料集為8個位元組。 這代表的函式只會配置128個位元組的堆疊（或更少），而且可能會儲存一個非靜態暫存器。 它也是不含回溯程式碼之零長度初構的連鎖回溯資訊結構大小。
 
 ## <a name="language-specific-handler"></a>語言特定處理常式
 
-每當設定了旗標 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 時，UNWIND_INFO 中就會有語言特定處理常式的相對位址。 如上一節所述，特定語言的處理常式會在搜尋例外狀況處理常式或回溯的過程中呼叫。 它具有下列原型：
+每當設定旗標 UNW_FLAG_EHANDLER 或 UNW_FLAG_UHANDLER 時，UNWIND_INFO 中就會有語言特定處理常式的相對位址。 如上一節所述，特定語言的處理常式會在搜尋例外狀況處理常式或回溯的過程中呼叫。 它具有下列原型：
 
 ```cpp
 typedef EXCEPTION_DISPOSITION (*PEXCEPTION_ROUTINE) (
@@ -305,11 +305,11 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc**是此函式內的 RIP 值。 這個值可以是例外狀況位址，或是控制項離開建立函數的位址。 此 RIP 用來判斷控制項是否在此函式內的部分受防護結構中，例如，`__try` @ no__t-2 @ no__t-3 或 `__try` @ no__t-5 @ no__t-6 的 @no__t 0 區塊。
+**ControlPc**是此函式內的 RIP 值。 這個值可以是例外狀況位址，或是控制項離開建立函數的位址。 RIP 用來判斷控制項是否在此函式內的部分受防護結構中，例如，`__try`/的 `__try` 區塊 `__except` 或 `__try`/`__finally`。
 
 **Imagebase 設定**是包含此函式之模組的映射基底（載入位址），要加入函數專案和回溯資訊中用來記錄相對位址的32位位移。
 
-**FunctionEntry**會提供 RUNTIME_FUNCTION 函式專案的指標，其中包含此函式的「函數」和「回溯資訊」影像基底相對位址。
+**FunctionEntry**會提供 RUNTIME_FUNCTION 函式專案的指標，其中包含此函數的「函數」和「回溯資訊」影像基底相對位址。
 
 **EstablisherFrame**是此函式之固定堆疊配置的基底位址。
 
@@ -332,10 +332,10 @@ typedef struct _DISPATCHER_CONTEXT {
 |處理器框架 \[：*ehandler*]|讓 MASM 在. pdata 和回溯資訊中，為函式的結構化例外狀況處理回溯行為產生函數表專案。  如果*ehandler*存在，則會在 .xdata 中輸入此程式作為語言特定的處理常式。<br /><br /> 使用 FRAME 屬性時，其後面必須接著。ENDPROLOG 指示詞。  如果函式是分葉函式（如函式[類型](../build/stack-usage.md#function-types)中所定義），則不需要 FRAME 屬性，這是這些虛擬作業的其餘部分。|
 |.PUSHREG *register*|使用序言中目前的位移，為指定的暫存器編號產生 UWOP_PUSH_NONVOL 回溯程式碼專案。<br /><br /> 請只將它與非靜態整數暫存器搭配使用。  對於 volatile 暫存器的推送，請使用。ALLOCSTACK 8，改為|
 |.SETFRAME *register*， *offset*|使用指定的暫存器和位移，填入 [框架暫存器] 欄位和回溯資訊中的位移。 位移必須是16的倍數，且小於或等於240。 這個指示詞也會使用目前的序言位移，為指定的暫存器產生 UWOP_SET_FPREG 回溯程式碼專案。|
-|.ALLOCSTACK*大小*|針對序言中目前位移的指定大小，產生 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE。<br /><br /> *大小*運算元必須是8的倍數。|
+|.ALLOCSTACK*大小*|產生序言中目前位移之指定大小的 UWOP_ALLOC_SMALL 或 UWOP_ALLOC_LARGE。<br /><br /> *大小*運算元必須是8的倍數。|
 |.SAVEREG *register*， *offset*|使用目前的序言位移，為指定的暫存器和位移產生 UWOP_SAVE_NONVOL 或 UWOP_SAVE_NONVOL_FAR 回溯程式碼專案。 MASM 會選擇最有效率的編碼方式。<br /><br /> *offset*必須是正數，而是8的倍數。 *offset*是相對於程式框架的基底，通常是在 RSP 中，或者，如果使用框架指標，則是未縮放的框架指標。|
-|.SAVEXMM128 *register*， *offset*|使用目前的序言位移，為指定的 XMM 暫存器和位移產生 UWOP_SAVE_XMM128 或 UWOP_SAVE_XMM128_FAR 回溯程式碼專案。 MASM 會選擇最有效率的編碼方式。<br /><br /> *offset*必須是正數，而倍數則是16。  *offset*是相對於程式框架的基底，通常是在 RSP 中，或者，如果使用框架指標，則是未縮放的框架指標。|
-|.SYSTEM.WINDOWS.THREADING.DISPATCHER.PUSHFRAME \[*代碼*]|產生 UWOP_PUSH_MACHFRAME 回溯程式碼專案。 如果指定了選擇性的程式*代碼*，則回溯程式碼專案會被賦予1的修飾詞。 否則修飾詞為0。|
+|.SAVEXMM128 *register*， *offset*|使用目前的序言位移，為指定的 XMM 暫存器產生 UWOP_SAVE_XMM128 或 UWOP_SAVE_XMM128_FAR 回溯程式碼專案，以及位移。 MASM 會選擇最有效率的編碼方式。<br /><br /> *offset*必須是正數，而倍數則是16。  *offset*是相對於程式框架的基底，通常是在 RSP 中，或者，如果使用框架指標，則是未縮放的框架指標。|
+|.SYSTEM.WINDOWS.THREADING.DISPATCHER.PUSHFRAME \[程式*代碼*]|產生 UWOP_PUSH_MACHFRAME 回溯程式碼專案。 如果指定了選擇性的程式*代碼*，則回溯程式碼專案會被賦予1的修飾詞。 否則修飾詞為0。|
 |.ENDPROLOG|發出序言宣告結尾的信號。  必須發生在函式的前255個位元組。|
 
 以下是範例函式初構，其中大部分的 opcode 都能正確使用：
@@ -361,8 +361,8 @@ sample PROC FRAME
 
 ; you can modify the stack pointer outside of the prologue (similar to alloca)
 ; because we have a frame pointer.
-; if we didn’t have a frame pointer, this would be illegal
-; if we didn’t make this modification,
+; if we didn't have a frame pointer, this would be illegal
+; if we didn't make this modification,
 ; there would be no need for a frame pointer
 
     sub rsp, 060h
@@ -372,14 +372,14 @@ sample PROC FRAME
     mov rax, 0
     mov rax, [rax] ; AV!
 
-; restore the registers that weren’t saved with a push
-; this isn’t part of the official epilog, as described in section 2.5
+; restore the registers that weren't saved with a push
+; this isn't part of the official epilog, as described in section 2.5
 
     movdqa xmm7, [rbp]
     mov rsi, [rbp+018h]
     mov rdi, [rbp-010h]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     lea rsp, [rbp+020h] ; deallocate both fixed and dynamic portions of the frame
     pop rbp
@@ -400,7 +400,7 @@ sample ENDP
 |push_reg *reg*|將靜態暫存器*reg*推送至堆疊上，併發出適當的回溯資訊。 （. pushreg reg）|
 |rex_push_reg *reg*|使用2個位元組的推送，將非靜態暫存器儲存在堆疊上，併發出適當的回溯資訊（. pushreg reg）。  如果 push 是函式中的第一個指令，請使用此宏，以確保函式為熱可修補。|
 |save_xmm128 *reg*， *loc*|將非靜態 XMM 暫存器*reg*儲存在 .rsp 位移*loc*的堆疊上，併發出適當的回溯資訊（. savexmm128 reg，loc）|
-|set_frame *reg*， *offset*|將畫面格暫存器*reg*設定為 RSP + *offset* （使用 `mov` 或 `lea`），併發出適當的回溯資訊（. set_frame reg，offset）|
+|set_frame *reg*， *offset*|將畫面格暫存器*reg*設定為 RSP + *offset* （使用 `mov`或 `lea`），併發出適當的回溯資訊（. set_frame reg，offset）|
 |push_eflags|使用 `pushfq` 指令推送 eflags，併發出適當的回溯資訊（. alloc_stack 8）|
 
 以下是搭配適當使用宏的範例函數初構：
@@ -423,7 +423,7 @@ sample2 PROC FRAME
     mov rsi, sampleFrame.SavedRsi[rsp]
     mov rdi, sampleFrame.SavedRdi[rsp]
 
-; Here’s the official epilog
+; Here's the official epilog
 
     add rsp, (sizeof sampleFrame)
     ret

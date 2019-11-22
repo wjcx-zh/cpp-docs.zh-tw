@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Time symbol'
 ms.assetid: a9712e51-be60-4ac4-a497-54a1aa0a1acd
-ms.openlocfilehash: 36de4c0ee131231372bd004d8aec5691b6620adf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0731e2c1be191dc5d7717166db5af4f43fa7733
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179170"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301887"
 ---
-# <a name="time"></a>@Time
+# <a name="time"></a>\@時間
 
-24 小時制 hh: mm： 格式 （文字巨集） 的系統時間。
+系統時間，採用24小時 hh： mm： ss 格式（文字宏）。
 
 ## <a name="syntax"></a>語法
 
-> @Time
+> **\@時間**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

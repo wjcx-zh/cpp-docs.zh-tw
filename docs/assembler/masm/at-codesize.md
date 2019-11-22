@@ -1,26 +1,26 @@
 ---
 title: '@CodeSize'
-ms.date: 08/30/2018
+ms.date: 11/21/2019
 f1_keywords:
 - '@CodeSize'
 helpviewer_keywords:
 - '@CodeSize symbol'
 ms.assetid: 6e18d99f-9999-41fe-9330-b80de8f735d5
-ms.openlocfilehash: 36befca435c6aedcad442711caaa8a884cc52394
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 586b2921e708542c38dede240c5ebaed83590fab
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166681"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302911"
 ---
-# <a name="codesize"></a>@CodeSize
+# <a name="codesize"></a>\@CodeSize
 
-0 代表**微小**，**小型**， **COMPACT**，以及**一般**模型，以及 1**媒體**， **大型**，並**超大型**（等同於數字） 的模型。
+0適用于**小型**、**小型**、**精簡**和**平面**模型，而1適用于**中**、**大型**和**大型模型（** 數值等同）。
 
 ## <a name="syntax"></a>語法
 
-> @CodeSize
+> **\@CodeSize**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

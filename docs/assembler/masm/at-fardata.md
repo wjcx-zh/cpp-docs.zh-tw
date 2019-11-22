@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@fardata symbol'
 ms.assetid: b1e096b3-54fc-44ef-bbe6-0c6d5f5d206d
-ms.openlocfilehash: 32accbf29779378c610ae375ff7faba858833c55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5a659c0592103ac5c52729c09d37cbe94d3bad2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179025"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302611"
 ---
-# <a name="fardata"></a>@fardata
+# <a name="fardata"></a>\@fardata
 
-所定義的區段名稱[。FARDATA](../../assembler/masm/dot-fardata.md)指示詞 （文字巨集）。
+所定義之區段的名稱[。FARDATA](../../assembler/masm/dot-fardata.md)指示詞（文字宏）。
 
 ## <a name="syntax"></a>語法
 
-> @fardata
+> **\@fardata**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

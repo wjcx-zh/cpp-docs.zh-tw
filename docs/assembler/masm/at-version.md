@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Version symbol'
 ms.assetid: d7005811-de5c-4f8f-96e9-0e50d7ebca90
-ms.openlocfilehash: 3ad5b73f14bf158b47a802169ca26ade2ea54c59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e086064e8b294214b71974809c5b35fa2f736157
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178817"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301874"
 ---
-# <a name="version"></a>@Version
+# <a name="version"></a>\@版本
 
-615 MASM 6.15 （文字巨集） 中。
+在命令列中，以單一數位（文字宏）報告之 MASM 的主要和次要版本。 例如，MASM 版本14.23.28107.0 會產生 "1423"。
 
 ## <a name="syntax"></a>語法
 
-> @Version
+> **\@版本**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

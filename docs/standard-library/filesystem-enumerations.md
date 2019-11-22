@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: dfbcf65462f0bb7bc6ca44f43507efa7b753e7bc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457717"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303504"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列舉
 
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>值
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |`none`|預設行為︰忽略目錄的符號連結。 權限遭拒是一種錯誤。|
 |`follow_directory_symlink`|將目錄的符號連結視為實際的目錄。|
 
 ## <a name="file_type"></a>  file_type
 
-檔案類型的列舉。 支援的值為 regular、directory、not_found 和 unknown。
+檔案類型的列舉。 支援的值為 [一般]、[目錄]、[not_found] 和 [未知]。
 
 ### <a name="syntax"></a>語法
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|名稱|值|說明|
+|Name|值|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|代表不存在的檔案。|
 |`none`|0|代表不具有類型屬性的檔案。 (不支援。)|
@@ -122,7 +122,7 @@ enum class file_type {
 
 ## <a name="perm_options"></a>perm_options
 
-包含值`replace` `add` 、、和`nofollow`。 `remove`
+包含 `replace`、`add`、`remove`和 `nofollow`的值。
 
 ```cpp
 enum class perm_options;
@@ -130,7 +130,7 @@ enum class perm_options;
 
 ## <a name="perms"></a>  perms
 
-檔案權限的旗標。 支援的值基本上為 "readonly" 和 all。 對於唯讀檔案，未設定任何 *_write 位元。 否則會設定 `all` 位元 (0x0777)。
+檔案權限的旗標。 支援的值基本上是 "readonly" 和 all。 對於唯讀檔案，未設定任何 *_write 位元。 否則會設定 `all` 位元 (0x0777)。
 
 ### <a name="syntax"></a>語法
 
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

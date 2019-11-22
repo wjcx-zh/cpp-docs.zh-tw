@@ -8,24 +8,24 @@ helpviewer_keywords:
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-ms.openlocfilehash: f3e9ea2ebf3eb0ce04fde0339aaf0243686248a9
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: a3e0f837bc13c022bec91bfff6e38c1513abaf16
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096033"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302970"
 ---
 # <a name="view-classes-windows"></a>檢視類別 (Windows)
 
-`CView`其衍生類別是代表框架視窗工作區的子視窗。 Views 顯示資料並接受檔的輸入。
+`CView` 及其衍生類別都是子視窗，代表框架視窗的工作區。 Views 顯示資料並接受檔的輸入。
 
 View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物件。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-檔資料之應用程式特定視圖的基類。 Views 會顯示資料並接受使用者輸入，以編輯或選取資料。 從`CView`衍生您的 view 類別或類別。
+檔資料之應用程式特定視圖的基類。 Views 會顯示資料並接受使用者輸入，以編輯或選取資料。 從 `CView`衍生您的 view 類別或類別。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-具有滾動功能之視圖的基類。 從`CScrollView`衍生您的 view 類別，以自動滾動。
+具有滾動功能之視圖的基類。 從 `CScrollView` 衍生您的 view 類別，以進行自動滾動。
 
 ## <a name="form-and-record-views"></a>表單和記錄視圖
 
@@ -34,13 +34,13 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 記錄視圖是從表單檢視衍生而來。 除了對話方塊範本，它們也有資料庫的連接。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-一個捲軸，其版面配置定義于對話方塊範本中。 從`CFormView`衍生類別，以根據對話方塊範本來執行使用者介面。
+一個捲軸，其版面配置定義于對話方塊範本中。 從 `CFormView` 衍生類別，以根據對話方塊範本來執行使用者介面。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-提供直接連接到資料存取物件（DAO）記錄集物件的表單檢視。 就像所有表單檢視`CDaoRecordView`一樣，是以對話方塊範本為基礎。 DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 3.6 是最終版本，並被視為已淘汰。
+提供直接連接到資料存取物件（DAO）記錄集物件的表單檢視。 就像所有表單檢視一樣，`CDaoRecordView` 是以對話方塊範本為基礎。 DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-提供直接連接到開放式資料庫連接（ODBC）記錄集物件的表單檢視。 就像所有表單檢視`CRecordView`一樣，是以對話方塊範本為基礎。
+提供直接連接到開放式資料庫連接（ODBC）記錄集物件的表單檢視。 就像所有表單檢視一樣，`CRecordView` 是以對話方塊範本為基礎。
 
 [CHtmlEditView](../mfc/reference/chtmleditview-class.md)<br/>
 提供 WebBrowser HTML 編輯平臺功能的表單檢視。
@@ -66,7 +66,7 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 
 ## <a name="related-classes"></a>相關類別
 
-`CSplitterWnd`可讓您在單一框架視窗內擁有多個視圖。 `CPrintDialog`和`CPrintInfo`支援 views 的列印和預覽列印功能。 `CRichEditDoc`和`CRichEditCntrItem`會與`CRichEditView`搭配使用，以執行 OLE 容器功能。
+`CSplitterWnd` 可讓您在單一框架視窗內擁有多個視圖。 `CPrintDialog` 和 `CPrintInfo` 支援 views 的 [列印] 和 [預覽列印] 功能。 `CRichEditDoc` 和 `CRichEditCntrItem` 會與 `CRichEditView` 搭配使用，以執行 OLE 容器功能。
 
 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)<br/>
 使用者可以分割成多個窗格的視窗。 這些窗格可以根據使用者或固定大小來進行調整。
@@ -75,14 +75,14 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 提供用來列印檔案的標準對話方塊。
 
 [CPrintInfo](../mfc/reference/cprintinfo-structure.md)<br/>
-結構，包含列印或預覽列印工作的相關資訊。 `CView`用於列印架構。
+結構，包含列印或預覽列印工作的相關資訊。 由 `CView`的列印架構所使用。
 
 [CRichEditDoc](../mfc/reference/cricheditdoc-class.md)<br/>
-維護中`CRichEditView`的 OLE 用戶端專案清單。
+維護 `CRichEditView`中的 OLE 用戶端專案清單。
 
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
-提供用戶端對儲存在中`CRichEditView`之 OLE 專案的存取權。
+提供 `CRichEditView`中儲存之 OLE 專案的用戶端存取。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別總覽](../mfc/class-library-overview.md)

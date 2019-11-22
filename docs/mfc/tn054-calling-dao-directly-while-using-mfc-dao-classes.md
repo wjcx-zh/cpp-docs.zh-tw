@@ -11,19 +11,19 @@ helpviewer_keywords:
 - TN054
 - DAO (Data Access Objects), and MFC
 ms.assetid: f7de7d85-8d6c-4426-aa05-2e617c0da957
-ms.openlocfilehash: cef9852f762a64579e11fe4b0d8606bfc9d36709
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 0eb9daf156f51ecb4eb1e6fdc721b34878a43351
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71095968"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303427"
 ---
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：在使用 MFC DAO 類別時直接呼叫 DAO
 
 > [!NOTE]
-> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 3.6 是最終版本，並被視為已淘汰。視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
+> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-templates.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
 
-使用 MFC DAO 資料庫類別時，可能有一些情況需要直接使用 DAO。 通常不會發生這種情況，但 MFC 已提供一些 helper 機制，可在結合 MFC 類別與直接 DAO 呼叫的使用時，簡化直接 DAO 呼叫的過程。 對 MFC 管理的 DAO 物件的方法進行直接的 DAO 呼叫，應該只需要幾行程式碼。 如果您需要建立並使用*不*受 MFC 管理的 DAO 物件，您必須在物件上實際呼叫`Release`來執行更多工作。 本技術提示說明當您可能想要直接呼叫 DAO 時，MFC 協助程式可以做什麼來説明您，以及如何使用 DAO OLE 介面。 最後，此附注提供一些範例函式，示範如何直接呼叫 dao 安全性功能的 DAO。
+使用 MFC DAO 資料庫類別時，可能有一些情況需要直接使用 DAO。 通常不會發生這種情況，但 MFC 已提供一些 helper 機制，可在結合 MFC 類別與直接 DAO 呼叫的使用時，簡化直接 DAO 呼叫的過程。 對 MFC 管理的 DAO 物件的方法進行直接的 DAO 呼叫，應該只需要幾行程式碼。 如果您需要建立並使用*不*受 MFC 管理的 DAO 物件，您必須實際呼叫物件上的 `Release`，以執行更多工作。 本技術提示說明當您可能想要直接呼叫 DAO 時，MFC 協助程式可以做什麼來説明您，以及如何使用 DAO OLE 介面。 最後，此附注提供一些範例函式，示範如何直接呼叫 dao 安全性功能的 DAO。
 
 ## <a name="when-to-make-direct-dao-calls"></a>進行直接 DAO 呼叫的時機
 
@@ -31,7 +31,7 @@ ms.locfileid: "71095968"
 
 ## <a name="a-brief-overview-of-dao-and-mfcs-implementation"></a>簡單介紹 DAO 和 MFC 的執行
 
-MFC 的「DAO 包裝」可讓您更輕鬆地使用 DAO，方法是處理許多細節，讓您不必擔心這一點。 這包括初始化 OLE、建立和管理 DAO 物件（特別是集合物件）、錯誤檢查，以及提供強型別、較簡單的介面（無**VARIANT**或`BSTR`引數）。 您可以直接進行 DAO 呼叫，並繼續利用這些功能。 您的所有程式碼都必須`Release`針對直接 DAO 呼叫所建立的任何物件進行呼叫，而*不*會修改 MFC 可能會在內部依賴的任何介面指標。 例如，除非您瞭解*所有*內部的後果，否則請勿`CDaoRecordset`修改已開啟物件的*m_pDAORecordset*成員。 不過，您可以使用*m_pDAORecordset*介面直接呼叫 DAO 來取得 Fields 集合。 在此情況下，將不會修改*m_pDAORecordset*成員。 當您完成物件時`Release` ，您只需要在 Fields 集合物件上呼叫。
+MFC 的「DAO 包裝」可讓您更輕鬆地使用 DAO，方法是處理許多細節，讓您不必擔心這一點。 這包括初始化 OLE、建立和管理 DAO 物件（特別是集合物件）、錯誤檢查，以及提供強型別、較簡單的介面（不是**VARIANT**或 `BSTR` 引數）。 您可以直接進行 DAO 呼叫，並繼續利用這些功能。 您的所有程式碼都必須針對直接 DAO 呼叫所建立的任何物件呼叫 `Release`，而*不*會修改 MFC 可能會在內部依賴的任何介面指標。 例如，除非您瞭解*所有*內部的後果，否則請勿修改開放式 `CDaoRecordset` 物件的*m_pDAORecordset*成員。 不過，您可以使用*m_pDAORecordset*介面直接呼叫 DAO 來取得 Fields 集合。 在此情況下，將不會修改*m_pDAORecordset*成員。 當您完成物件時，您只需要在 Fields 集合物件上呼叫 `Release`。
 
 ## <a name="description-of-helpers-to-make-dao-calls-easier"></a>協助簡化 DAO 呼叫的協助程式描述
 
@@ -41,38 +41,40 @@ MFC 的「DAO 包裝」可讓您更輕鬆地使用 DAO，方法是處理許多�
 
 DAO 物件階層中每個物件的 OLE 介面是在標頭檔 DBDAOINT 中定義。H，可以在 \Program Files\Microsoft Visual Studio .NET 2003 \ VC7\include 目錄中找到。 這些介面提供的方法可讓您操作整個 DAO 階層。
 
-針對 DAO 介面中的許多方法，您將需要操作`BSTR`物件（在 OLE automation 中使用長度前置的字串）。 物件通常會封裝在 VARIANT 資料類型內。 `BSTR` MFC 類別`COleVariant`本身是繼承自**VARIANT**資料類型。 根據您為 ansi 或 unicode 建立專案而定，DAO 介面會傳回 ansi 或 unicode `BSTR`。 V_BSTR 和 V_BSTRT 這兩個宏適用于確保 DAO 介面取得`BSTR`預期類型的。
+針對 DAO 介面中的許多方法，您必須操作 `BSTR` 物件（在 OLE automation 中使用長度首碼的字串）。 `BSTR` 物件通常會封裝在**VARIANT**資料類型內。 MFC 類別 `COleVariant` 本身會繼承自**VARIANT**資料類型。 根據您建立的是 ANSI 或 Unicode 專案，DAO 介面會傳回 ANSI 或 Unicode `BSTR`s。 V_BSTR 和 V_BSTRT 這兩個宏有助於確保 DAO 介面取得預期類型的 `BSTR`。
 
-V_BSTR 將會解壓縮的*bstrVal*成員`COleVariant`。 當您需要將的內容`COleVariant`傳遞至 DAO 介面的方法時，通常會使用這個宏。 下列程式碼片段會顯示利用 V_BSTR 宏的兩個 DAO DAOUser 介面方法的宣告和實際用法：
+V_BSTR 將會解壓縮 `COleVariant`的*bstrVal*成員。 當您需要將 `COleVariant` 的內容傳遞至 DAO 介面的方法時，通常會使用這個宏。 下列程式碼片段會顯示使用 V_BSTR 宏的兩個 DAO DAOUser 介面方法的宣告和實際用法：
 
 ```cpp
 COleVariant varOldName;
 COleVariant varNewName(_T("NewUser"), VT_BSTRT);
 
-// Code to assign pUser to a valid value omitted DAO 3.6 is the final version and it is considered obsolete.User *pUser = NULL;
+// Code to assign pUser to a valid value omitted DAOUser *pUser = NULL;
 
 // These method declarations were taken from DBDAOINT.H
 // STDMETHOD(get_Name) (THIS_ BSTR FAR* pbstr) PURE;
 // STDMETHOD(put_Name) (THIS_ BSTR bstr) PURE;
-DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->get_Name(&V_BSTR (&varOldName))); DAO 3.6 is the final version and it is considered obsolete._CHECK(pUser->put_Name(V_BSTR (&varNewName)));
+DAO_CHECK(pUser->get_Name(&V_BSTR (&varOldName)));
+DAO_CHECK(pUser->put_Name(V_BSTR (&varNewName)));
 ```
 
-請注意， `VT_BSTRT`在上述的函`COleVariant`式中指定的引數， `COleVariant`如果您`BSTR`要建立應用程式的 ansi 版本和 unicode 版本的 unicode `BSTR` ，則可確保在中將會有 ansi您的應用程式。 這就是 DAO 預期的功能。
+請注意，在上述的 `COleVariant` 函式中指定的 `VT_BSTRT` 引數，如果您要建立應用程式的 ANSI 版本和 unicode 版本的應用程式 Unicode `BSTR`，則會確保 `COleVariant` 中會有 ANSI `BSTR`。 這就是 DAO 預期的功能。
 
-另一個宏 V_BSTRT 會根據組建類型（ANSI 或 Unicode） ，解壓縮的`COleVariant` ANSI 或 Unicode bstrVal 成員。 下列程式碼示範如何將`BSTR`值`COleVariant`從解壓縮至`CString`：
+另一個宏 V_BSTRT 會根據組建類型（ANSI 或 Unicode），將 `COleVariant` 的 ANSI 或 Unicode *bstrVal*成員解壓縮。 下列程式碼示範如何將 `COleVariant` 中的 `BSTR` 值解壓縮至 `CString`中：
 
 ```cpp
 COleVariant varName(_T("MyName"), VT_BSTRT);
 CString str = V_BSTRT(&varName);
 ```
 
-V_BSTRT 宏和其他用來開啟儲存在中`COleVariant`之類型的技術，都是在 DAOVIEW 範例中示範。 具體而言，這項轉譯是在`CCrack::strVARIANT`方法中執行。 在可能的情況下，這個方法會將的`COleVariant`值轉譯成的`CString`實例。
+DAOVIEW 範例中會示範 V_BSTRT 宏以及其他用來開啟儲存于 `COleVariant`中之類型的技術。 具體而言，這項轉譯是在 `CCrack::strVARIANT` 方法中執行。 在可能的情況下，這個方法會將 `COleVariant` 的值轉譯成 `CString`的實例。
 
 ## <a name="simple-example-of-a-direct-call-to-dao"></a>直接呼叫 DAO 的簡單範例
 
-當需要重新整理基礎 DAO 集合物件時，可能會發生這種情況。 一般來說，這不是必要的，但這是必要的簡單程式。 在有多個使用者建立新 tabledefs 的使用者環境中操作時，可能需要重新整理集合的範例。 在此情況下，您的 tabledefs 集合可能會過時。 若要重新整理集合，您只需要呼叫`Refresh`特定集合物件的方法，並檢查是否有錯誤：
+當需要重新整理基礎 DAO 集合物件時，可能會發生這種情況。 一般來說，這不是必要的，但這是必要的簡單程式。 在有多個使用者建立新 tabledefs 的使用者環境中操作時，可能需要重新整理集合的範例。 在此情況下，您的 tabledefs 集合可能會過時。 若要重新整理集合，您只需要呼叫特定集合物件的 `Refresh` 方法，並檢查是否有錯誤：
 
-```cpp DAO 3.6 is the final version and it is considered obsolete._CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
+```cpp
+DAO_CHECK(pMyDaoDatabase->m_pDAOTableDefs->Refresh());
 ```
 
 請注意，目前所有的 DAO 集合物件介面都是 MFC DAO 資料庫類別未記載的執行詳細資料。
@@ -276,7 +278,7 @@ void SetDBPassword(LPCTSTR pDB,
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@data symbol'
 ms.assetid: d3e99fb0-4c9e-40a8-9e2d-15de3b01a2fe
-ms.openlocfilehash: 456a1f1e53fbcba47d1ef33a1fa89b0d4fdc6a37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50c8128697ab9d488be013bed10d6875ce8bd33a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166863"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302728"
 ---
-# <a name="data"></a>@data
+# <a name="data"></a>\@資料
 
-預設資料群組的名稱。 以外的所有模型評估 DGROUP**一般**。 評估為**平面**下方**一般**記憶體模型 （文字巨集）。
+預設資料群組的名稱。 針對**一般以外的所有模型，評估**為 DGROUP。 **在一般記憶體模型**（文字宏）底下評估為**平面**。
 
 ## <a name="syntax"></a>語法
 
-> @data
+> **\@資料**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

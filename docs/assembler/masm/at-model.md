@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: 806c631a18044b98af77ad55ec44a434b2617d34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09e5663a8c3bfe0f2ce0a94bcb4006f2dd654cc2
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180293"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301908"
 ---
-# <a name="model"></a>@Model
+# <a name="model"></a>\@模型
 
-1 代表**微小**模型、 2**小型**模型、 3 **COMPACT**模型，就會有 4 個**媒體**模型，為 5**大型**模型，6**超大型**模型，以及 7**一般**模型 （等同於數字）。
+1代表**小型** **模型，** 第2個用於**精簡**模型，第4個用於**中等**模型，5個用於**大型**模型，6個**用於大模型，** 7 個用於**平面**模型（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> @Model
+> **\@模型**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

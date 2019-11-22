@@ -9,24 +9,24 @@ helpviewer_keywords:
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-ms.openlocfilehash: c6c1272d41eb7a01ec5a7ee10fadb4ab21547ce7
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: fda4e968a4761fcf1e2245964bd5dca3f41a82ad
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096048"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74302977"
 ---
 # <a name="view-classes-architecture"></a>檢視類別 (架構)
 
-`CView`其衍生類別是代表框架視窗工作區的子視窗。 Views 顯示資料並接受檔的輸入。
+`CView` 及其衍生類別都是子視窗，代表框架視窗的工作區。 Views 顯示資料並接受檔的輸入。
 
 View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物件。
 
 [CView](../mfc/reference/cview-class.md)<br/>
-檔資料之應用程式特定視圖的基類。 Views 會顯示資料並接受使用者輸入，以編輯或選取資料。 從衍生您的`CView`view 類別。
+檔資料之應用程式特定視圖的基類。 Views 會顯示資料並接受使用者輸入，以編輯或選取資料。 從 `CView`衍生您的 view 類別。
 
 [CScrollView](../mfc/reference/cscrollview-class.md)<br/>
-具有滾動功能之視圖的基類。 從`CScrollView`衍生您的 view 類別，以自動滾動。
+具有滾動功能之視圖的基類。 從 `CScrollView` 衍生您的 view 類別，以進行自動滾動。
 
 ## <a name="form-and-record-views"></a>表單和記錄視圖
 
@@ -35,10 +35,10 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 記錄視圖是從表單檢視衍生而來。 除了對話方塊範本，它們也有資料庫的連接。
 
 [CFormView](../mfc/reference/cformview-class.md)<br/>
-一個捲軸，其版面配置定義于對話方塊範本中。 從`CFormView`衍生類別，以根據對話方塊範本來執行使用者介面。
+一個捲軸，其版面配置定義于對話方塊範本中。 從 `CFormView` 衍生類別，以根據對話方塊範本來執行使用者介面。
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
-提供直接連接到資料存取物件（DAO）記錄集物件的表單檢視。 就像所有表單檢視`CDaoRecordView`一樣，是以對話方塊範本為基礎。 DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 3.6 是最終版本，並被視為已淘汰。
+提供直接連接到資料存取物件（DAO）記錄集物件的表單檢視。 就像所有表單檢視一樣，`CDaoRecordView` 是以對話方塊範本為基礎。 DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。
 
 [CHtmlView](../mfc/reference/chtmlview-class.md)<br/>
 支援在應用程式內進行網頁流覽的控制項。 控制項支援 MFC 中的動態 HTML。
@@ -47,7 +47,7 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 提供表單檢視的 MFC OLE DB 支援。
 
 [CRecordView](../mfc/reference/crecordview-class.md)<br/>
-提供直接連接到開放式資料庫連接（ODBC）記錄集物件的表單檢視。 就像所有表單檢視`CRecordView`一樣，是以對話方塊範本為基礎。
+提供直接連接到開放式資料庫連接（ODBC）記錄集物件的表單檢視。 就像所有表單檢視一樣，`CRecordView` 是以對話方塊範本為基礎。
 
 ## <a name="control-views"></a>控制項視圖
 
@@ -68,6 +68,6 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 樹狀目錄控制項的視圖（請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md)）。 樹狀目錄控制項會以類似于 [檔案瀏覽器] 左窗格的方式，顯示在階層中排列的圖示和字串。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別總覽](../mfc/class-library-overview.md)

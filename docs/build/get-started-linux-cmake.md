@@ -4,12 +4,12 @@ description: 如何在以 Linux 和 Windows 為目標的 Visual Studio C++中，
 author: mikeblome
 ms.topic: tutorial
 ms.date: 11/08/2019
-ms.openlocfilehash: 05f120335180d27e84a99819ee97c233dd1b39a7
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965094"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303249"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教學課程： C++在 Visual Studio 中建立跨平臺專案
 
@@ -24,7 +24,7 @@ Visual Studio C 和 C++ 開發不再僅限於 Windows。 本教學課程說明�
 > * 新增 Linux 電腦的連線
 > * 在 Linux 上建置和偵錯同一目標
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>先決條件
 
 * 設定 Visual Studio 執行跨平台 C++ 開發
   * 首先，[安裝 Visual Studio](https://visualstudio.microsoft.com/vs/)並選擇使用 **C++工作負載**進行的 **C++桌面開發**和 Linux 開發。 這種最小安裝僅限 3 GB。 視您的下載速度而定，安裝應該不會超過10分鐘。
@@ -155,7 +155,7 @@ Visual Studio 會建立 Windows 的預設**x64-Debug**設定。 組態是 Visual
 
    如果您已新增遠端連線，您可以流覽至 [工具] [ **> 選項] [> 跨平臺 > 連線管理員**] 來開啟此視窗。
 
-1. 提供[連接資訊給您的 Linux 電腦](/cpp/linux/connect-to-your-remote-linux-computer.md)，然後選擇 [連線 **]** 。 Visual Studio 會將該機器新增至 CMakeSettings，做為**Linux-Debug**的預設連接。 它也會從您的遠端電腦拉出標頭，讓您取得[該遠端連線特定的 IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 接下來，Visual Studio 將您的檔案傳送至遠端電腦，並在遠端系統上產生 CMake 快取。 這些步驟可能需要一些時間，視您的網路速度和遠端電腦的能力而定。 當 [CMake 輸出] 視窗中出現「目標資訊解壓縮完成」訊息時，您會知道它已完成。
+1. 提供[連接資訊給您的 Linux 電腦](/cpp/linux/connect-to-your-remote-linux-computer)，然後選擇 [連線 **]** 。 Visual Studio 會將該機器新增至 CMakeSettings，做為**Linux-Debug**的預設連接。 它也會從您的遠端電腦拉出標頭，讓您取得[該遠端連線特定的 IntelliSense](/cpp/linux/configure-a-linux-project?view=vs-2019#remote_intellisense)。 接下來，Visual Studio 將您的檔案傳送至遠端電腦，並在遠端系統上產生 CMake 快取。 這些步驟可能需要一些時間，視您的網路速度和遠端電腦的能力而定。 當 [CMake 輸出] 視窗中出現「目標資訊解壓縮完成」訊息時，您會知道它已完成。
 
 ## <a name="set-a-breakpoint-build-and-run-on-linux"></a>在 Linux 上設定中斷點、組建和執行
 

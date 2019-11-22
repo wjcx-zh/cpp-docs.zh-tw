@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: e0daabf3d236eb7038f22c54ea76d616baf613a0
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 9f1fa862a30a83cbda049fc63bac6c33a101587b
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096005"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74305376"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX 控制項：進階主題
 
@@ -43,7 +43,7 @@ ms.locfileid: "71096005"
 如需 MFC 資料庫類別的一般總覽，請參閱[Mfc 資料庫類別（DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文同時介紹 MFC ODBC 類別和 MFC DAO 類別，並將您導向到其中一項的更多詳細資料。
 
 > [!NOTE]
->   DAO 受到 Office 2013 的支援。 DAO 3.6 是最終版本，並被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
+> DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-programming.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>執行參數化屬性
 
@@ -67,7 +67,7 @@ ms.locfileid: "71096005"
 
 1. 從快捷方式功能表按一下 [**新增**]，然後按一下 [**加入屬性**]。
 
-1. 在 [**屬性名稱**] 方塊中`Array`，輸入。
+1. 在 [**屬性名稱**] 方塊中，輸入 `Array`。
 
 1. 在 [**屬性類型**] 方塊中，選取 [ **short**]。
 
@@ -79,7 +79,7 @@ ms.locfileid: "71096005"
 
 10. 新增名為*column*的第二個參數（類型*short*）。
 
-11. 按一下 [ **完成**]。
+11. 按一下 [完成]。
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>新增屬性 Wizard 所做的變更
 
@@ -89,13 +89,13 @@ ms.locfileid: "71096005"
 
 [!code-cpp[NVC_MFC_AxUI#35](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_2.h)]
 
-此程式碼會宣告兩`GetArray`個`SetArray`名為的函式，並允許使用者在存取屬性時要求特定的資料列和資料行。
+此程式碼會宣告兩個稱為 `GetArray` 和 `SetArray` 的函式，可讓使用者在存取屬性時要求特定的資料列和資料行。
 
 此外，[新增屬性] Wizard 會將下列幾行新增至控制項類別實（中的 [控制] 分派對應）。CPP）檔案：
 
 [!code-cpp[NVC_MFC_AxUI#36](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_3.cpp)]
 
-最後， `GetArray`和`SetArray`函式的實作用會加入至的結尾。CPP 檔案。 在大部分的情況下，您將修改 Get 函式以傳回屬性的值。 Set 函式通常會包含應在屬性變更之前或之後執行的程式碼。
+最後，`GetArray` 和 `SetArray` 函式的實作用會加入至的結尾。CPP 檔案。 在大部分的情況下，您將修改 Get 函式以傳回屬性的值。 Set 函式通常會包含應在屬性變更之前或之後執行的程式碼。
 
 若要讓這個屬性很有用，您可以在控制項類別中宣告**short**類型的二維陣列成員變數，以儲存參數化屬性的值。 接著，您可以修改 Get 函式，以傳回儲存在適當資料列和資料行的值（如參數所指示），並修改 Set 函數來更新資料列和資料行參數所參考的值。
 
@@ -103,11 +103,11 @@ ms.locfileid: "71096005"
 
 如果控制項中發生錯誤狀況，您可能需要向控制項容器報告錯誤。 有兩種方法可以報告錯誤，視發生錯誤的情況而定。 如果錯誤發生在屬性的 Get 或 Set 函式內，或在 OLE Automation 方法的執行中，則控制項應呼叫[COleControl：： ThrowError](../mfc/reference/colecontrol-class.md#throwerror)，以向控制項使用者表示發生錯誤。 如果錯誤發生在任何其他時間，控制項應呼叫[COleControl：： FireError](../mfc/reference/colecontrol-class.md#fireerror)，這會引發 stock 錯誤事件。
 
-若要指出發生的錯誤類型，控制項必須將錯誤碼傳遞至`ThrowError`或。 `FireError` 錯誤碼是具有32位值的 OLE 狀態碼。 可能的話，請從 OLECTL 中定義的一組標準代碼來選擇錯誤碼。H 標頭檔。 下表摘要說明這些代碼。
+若要指出發生的錯誤類型，控制項必須將錯誤碼傳遞給 `ThrowError` 或 `FireError`。 錯誤碼是具有32位值的 OLE 狀態碼。 可能的話，請從 OLECTL 中定義的一組標準代碼來選擇錯誤碼。H 標頭檔。 下表摘要說明這些代碼。
 
 ### <a name="activex-control-error-codes"></a>ActiveX 控制項錯誤碼
 
-|Error|說明|
+|錯誤|描述|
 |-----------|-----------------|
 |CTL_E_ILLEGALFUNCTIONCALL|不合法的函式呼叫|
 |CTL_E_OVERFLOW|溢位|
@@ -132,7 +132,7 @@ ms.locfileid: "71096005"
 |CTL_E_PATHFILEACCESSERROR|路徑/檔案存取錯誤|
 |CTL_E_PATHNOTFOUND|找不到路徑|
 |CTL_E_INVALIDPATTERNSTRING|無效的模式字串|
-|CTL_E_INVALIDUSEOFNULL|不正確使用 Null|
+|CTL_E_INVALIDUSEOFNull|不正確使用 Null|
 |CTL_E_INVALIDFILEFORMAT|不正確檔案格式|
 |CTL_E_INVALIDPROPERTYVALUE|不正確屬性值|
 |CTL_E_INVALIDPROPERTYARRAYINDEX|不正確屬性陣列索引|
@@ -160,7 +160,7 @@ ms.locfileid: "71096005"
 
 在某些情況下，您可能會想要以特殊方式處理特定的按鍵組合;例如，在多行文字方塊控制項中按下 ENTER 鍵時插入新行，或在按下方向索引鍵識別碼時，于編輯控制項群組之間移動。
 
-如果您的 ActiveX 控制項的基類為`COleControl`，您可以覆寫[CWnd：:P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)來處理訊息，然後容器才會處理它們。 使用這項技術時，如果您在的`PreTranslateMessage`覆寫中處理訊息，一律會傳回 TRUE。
+如果您的 ActiveX 控制項的基類是 `COleControl`的，您可以覆寫[CWnd：:P retranslatemessage](../mfc/reference/cwnd-class.md#pretranslatemessage)來處理訊息，然後容器才會處理它們。 使用這項技術時，如果您在 `PreTranslateMessage`的覆寫中處理訊息，一律會傳回**TRUE** 。
 
 下列程式碼範例示範處理與方向索引鍵相關之任何訊息的可能方式。
 
@@ -176,10 +176,10 @@ ms.locfileid: "71096005"
 
      -或-
 
-- 將區域變數和子類別宣告為對話方塊專案。 插入類似下列的程式碼（`CMyCtrl`這是包裝函式類別，IDC_MYCTRL1 是控制項的識別碼）：
+- 將區域變數和子類別宣告為對話方塊專案。 插入類似下列的程式碼（`CMyCtrl` 是包裝函式類別，IDC_MYCTRL1 是控制項的識別碼）：
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)

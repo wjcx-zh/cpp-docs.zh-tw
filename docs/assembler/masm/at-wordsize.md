@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@WordSize symbol'
 ms.assetid: a4fb3bf1-4f87-4306-ad4d-27d999ce2b3a
-ms.openlocfilehash: b1ce903f4a37707a8563b4f1f0b3e62eaa91a787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 288ccb7e9e72e7f6b692d8ce172b4170fae1ff1a
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185967"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301957"
 ---
-# <a name="wordsize"></a>@WordSize
+# <a name="wordsize"></a>\@WordSize
 
-兩個 16 位元的區段或四個 32 位元區段 （等同於數字）。
+兩個用於16位區段，或四個用於32位區段（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> @WordSize
+> **\@WordSize**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

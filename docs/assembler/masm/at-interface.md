@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Interface symbol'
 ms.assetid: 266ecba9-9e96-4086-8ee4-a3d0161b6e29
-ms.openlocfilehash: 4c9ab7bc70315f725de410b7f47803cc22cb8acc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae07df9c72633034c481b27270b08488d1355322
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178999"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301935"
 ---
-# <a name="interface"></a>@Interface
+# <a name="interface"></a>\@介面
 
-（等同於數字） 的語言參數的相關資訊。
+語言參數的相關資訊（數值等同）。
 
 ## <a name="syntax"></a>語法
 
-> @Interface
+> **\@介面**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

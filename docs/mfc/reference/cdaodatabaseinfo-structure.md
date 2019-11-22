@@ -7,17 +7,16 @@ helpviewer_keywords:
 - CDaoDatabaseInfo structure [MFC]
 - DAO (Data Access Objects), Databases collection
 ms.assetid: 68e9e0da-8382-4fc6-8115-1b1519392ddb
-ms.openlocfilehash: 46d8056ee4ab478b65f3ef0bd59d88bd3af9b28c
-ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
+ms.openlocfilehash: 60972aa3ecaef4d38c9a0d0ecc70477796aa37aa
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096150"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74304260"
 ---
 # <a name="cdaodatabaseinfo-structure"></a>CDaoDatabaseInfo 結構
 
-`CDaoDatabaseInfo`結構包含針對資料存取物件（DAO）定義之資料庫物件的相關資訊。
-DAO 3.6 是最終版本，並被視為已淘汰。
+`CDaoDatabaseInfo` 結構包含針對資料存取物件（DAO）定義之資料庫物件的相關資訊。 DAO 3.6 是最後的版本，被視為已淘汰。
 
 ## <a name="syntax"></a>語法
 
@@ -51,41 +50,41 @@ struct CDaoDatabaseInfo
 *m_lCollatingOrder*<br/>
 指定文字中的排序次序順序，以進行字串比較或排序。 可能的值包括：
 
-- `dbSortGeneral`使用一般（英文、法文、德文、葡萄牙文、義大利文和新式西班牙文）排序次序。
+- `dbSortGeneral` 使用一般（英文、法文、德文、葡萄牙文、義大利文和新式西班牙文）排序次序。
 
-- `dbSortArabic`使用阿拉伯文排序次序。
+- `dbSortArabic` 使用阿拉伯文排序次序。
 
-- `dbSortCyrillic`使用俄文排序次序。
+- `dbSortCyrillic` 使用俄文排序次序。
 
-- `dbSortCzech`使用捷克文排序次序。
+- `dbSortCzech` 使用捷克文排序次序。
 
-- `dbSortDutch`使用荷蘭文排序次序。
+- `dbSortDutch` 使用荷蘭文排序次序。
 
-- `dbSortGreek`使用希臘文排序次序。
+- `dbSortGreek` 使用希臘文排序次序。
 
-- `dbSortHebrew`使用希伯來文排序次序。
+- `dbSortHebrew` 使用希伯來文排序次序。
 
-- `dbSortHungarian`使用匈牙利文排序次序。
+- `dbSortHungarian` 使用匈牙利文排序次序。
 
-- `dbSortIcelandic`使用冰島排序次序。
+- `dbSortIcelandic` 使用冰島排序次序。
 
-- `dbSortNorwdan`使用挪威或丹麥文排序次序。
+- `dbSortNorwdan` 使用挪威文或丹麥文排序次序。
 
-- `dbSortPDXIntl`使用 Paradox 國際排序次序。
+- `dbSortPDXIntl` 使用 Paradox 國際排序次序。
 
-- `dbSortPDXNor`使用 Paradox 的 [挪威] 或 [丹麥文] 排序次序。
+- `dbSortPDXNor` 使用 Paradox 挪威或丹麥文排序次序。
 
-- `dbSortPDXSwe`使用 Paradox 瑞典文或芬蘭文排序次序。
+- `dbSortPDXSwe` 使用 Paradox 瑞典文或芬蘭文排序次序。
 
-- `dbSortPolish`使用波蘭文排序次序。
+- `dbSortPolish` 使用波蘭文排序次序。
 
-- `dbSortSpanish`使用西班牙文排序次序。
+- `dbSortSpanish` 使用西班牙文排序次序。
 
-- `dbSortSwedFin`使用瑞典文或芬蘭文排序次序。
+- `dbSortSwedFin` 使用瑞典文或芬蘭文排序次序。
 
-- `dbSortTurkish`使用土耳其文排序次序。
+- `dbSortTurkish` 使用土耳其文排序次序。
 
-- `dbSortUndefined`排序次序未定義或不明。
+- `dbSortUndefined` 排序次序未定義或不明。
 
 如需詳細資訊，請參閱 DAO 說明中的「自訂資料存取的 Windows 登錄設定」主題。
 
@@ -99,13 +98,13 @@ struct CDaoDatabaseInfo
 
 資料庫是一個 DAO 物件，其基礎為[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)類別的 MFC 物件。 主要、次要和以上的參考會指出[CDaoWorkspace：： oomads.getdatabaseinfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式傳回信息的方式。
 
-[CDaoWorkspace：： oomads.getdatabaseinfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式所取出的資訊會儲存在`CDaoDatabaseInfo`結構中。 在其資料庫集合中儲存資料庫物件之`GetDatabaseInfo` 物件的呼叫。`CDaoWorkspace` `CDaoDatabaseInfo`也會定義`Dump` debug 組建中的成員函式。 您可以使用`Dump`來傾印`CDaoDatabaseInfo`物件的內容。
+[CDaoWorkspace：： oomads.getdatabaseinfo](../../mfc/reference/cdaoworkspace-class.md#getdatabaseinfo)成員函式所取出的資訊會儲存在 `CDaoDatabaseInfo` 結構中。 針對在其資料庫集合中儲存資料庫物件的 `CDaoWorkspace` 物件呼叫 `GetDatabaseInfo`。 `CDaoDatabaseInfo` 也會在 debug build 中定義 `Dump` 成員函式。 您可以使用 `Dump` 來傾印 `CDaoDatabaseInfo` 物件的內容。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxdao。h
+**Header:** afxdao.h
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoWorkspace 類別](../../mfc/reference/cdaoworkspace-class.md)<br/>

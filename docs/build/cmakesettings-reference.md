@@ -4,12 +4,12 @@ ms.date: 10/31/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 6f8301c07f87feee80191f5db14fea5b16f02863
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2233c0767fb7fac2fe496e744750f380e1c3b698
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624418"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303240"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
@@ -34,7 +34,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `addressSDanitizerEnabled`：如果 `true` 使用 Address Sanitizer （實驗性在 Windows 上）來編譯器。 在 Linux 上，請使用-fno-rtti-省略框架指標和編譯器優化層級-Os 或-Oo 進行編譯，以獲得最佳結果。
 - `addressSanitizerRuntimeFlags`：透過 ASAN_OPTIONS 環境變數傳遞至 AddressSanitizer 的執行時間旗標。 格式：-1 = 值：標誌 2 = value2。
 - `buildCommandArgs`：指定在 --build -- 之後傳遞到 CMake 的原生組建參數。 例如，在使用 Ninja 產生器時傳遞 -v 會強制 Ninja 輸出命令列。 如需有關 Ninja 命令的詳細資訊，請參閱 [Ninja 命令列引數](#ninja)。
-- `buildRoot`：指定目錄，CMake 會在此產生所選產生器的組建指令碼。  對應至 **-DCMAKE_BINARY_DIR** 參數並指定 CMake 快取的建立位置。 如果資料夾不存在，則會建立資料夾。 支援的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`和 `${env.VARIABLE}`。
+- `buildRoot`：指定目錄，CMake 會在此產生所選產生器的組建指令碼。  對應至 **-DCMAKE_BINARY_DIR** 參數，並指定 CMake 快取的建立位置。 如果資料夾不存在，則會建立資料夾。 支援的宏包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`和 `${env.VARIABLE}`。
 - `cacheGenerationCommand`：指定命令列工具和引數，例如*gencache* ，以產生快取。 當使用者明確要求重新產生，或修改 Remote monitoring.h cmakelists.txt 或 CMakeSettings 檔案時，會從指定環境中的 shell 執行命令。
 - `cacheRoot`：指定 CMake 快取的路徑。 此目錄應包含現有 CMakeCache.txt 檔案。
 - `clangTidyChecks`：以逗號分隔的 warnigns 清單，將會傳遞給 clang-整齊;允許使用萬用字元，而 '-' 前置詞將會移除檢查。
@@ -71,9 +71,9 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 由於 Ninja 是專為加快建置速度 (而不是彈性和功能) 所設計，因此預設會設定此產生器。 不過，有些 CMake 專案可能無法使用 Ninja 正確地建置。 如果發生這種情況，您可以指示 CMake 改為產生 Visual Studio 專案。
 
-若要在 Visual Studio 2017 中指定 Visual Studio 產生器，請從主功能表中選擇 [CMake] 來開啟。 **變更 CMake 設定**。 刪除 “Ninja” 並鍵入 “V”。 這會啟用 IntelliSense，讓您選擇想要的產生器。
+若要在 Visual Studio 2017 中指定 Visual Studio 產生器，請從主功能表中選擇 [CMake] 來開啟。 **變更 CMake 設定**。 刪除 "Ninja" 並輸入 "V"。 這會啟用 IntelliSense，讓您選擇想要的產生器。
 
-若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下**方案總管**中的*remote monitoring.h cmakelists.txt* ，然後選擇 [**專案] 的 [CMake 設定**] > [ **Show Advanced settings** ] > **CMake產生器。**
+若要在 Visual Studio 2019 中指定 Visual Studio 產生器，請以滑鼠右鍵按一下**方案總管**中的*remote monitoring.h cmakelists.txt* ，然後選擇 [專案]**的 [CMake 設定**] > [ **Show Advanced settings** ] > **CMake**產生器。
 
 當使用中的組態指定 Visual Studio 產生器時，根據預設，會使用 `-m -v:minimal` 引數叫用 MSBuild.exe。 若要在*CMakeSettings*中自訂群組建，您可以透過 `buildCommandArgs` 屬性來指定要傳遞至組建系統的其他[MSBuild 命令列引數](../build/reference/msbuild-visual-cpp-overview.md)：
 
@@ -256,7 +256,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "msvc_x64" ],
-      // Since this configuration doesn’t modify BuildDir, it inherits
+      // Since this configuration doesn't modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
     }

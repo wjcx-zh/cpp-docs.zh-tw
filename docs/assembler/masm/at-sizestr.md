@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@SizeStr symbol'
 ms.assetid: 91fa439a-7df1-4dd9-a0c7-82bae2eb68c9
-ms.openlocfilehash: f2aab8c43dbb326d380a36faa3ad6558ef7feb30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c53c74739b137205102922b8e0f266252687d641
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178921"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74301962"
 ---
-# <a name="sizestr"></a>@SizeStr
+# <a name="sizestr"></a>\@SizeStr
 
-巨集函式會傳回指定字串的長度。 傳回的整數。
+傳回指定字串長度的宏函數。 傳回整數。
 
 ## <a name="syntax"></a>語法
 
-> @SizeStr（字串）
+> **\@SizeStr （** *字串* **）**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](../../assembler/masm/symbols-reference.md)

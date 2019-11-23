@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - INCLUDELIB directive
 ms.assetid: 5455d004-8202-4b57-93f3-9aa66f133a2d
-ms.openlocfilehash: 12b629029c6ef250c288021232c23f82dcdd00a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef8a6e91ca8c5ca77b64b4668bf08087299701e0
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202826"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397334"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-通知目前的模組應該與連結，連結器*libraryname*。
+Informs the linker that the current module should be linked with *libraryname*.
 
 ## <a name="syntax"></a>語法
 
-> INCLUDELIB libraryname
+> **INCLUDELIB** *libraryname*
 
 ## <a name="remarks"></a>備註
 
-*Libraryname*必須括在括弧中，如果它包含一個反斜線，分號，大於-符號，小於-不是符號、 單引號或雙引號。
+The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: b05376a6a9814c029696423be8f6ccba1a3237f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b3788473a6e5704574f180a2dde28abcee0a772
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203174"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397661"
 ---
 # <a name="end-masm"></a>END (MASM)
 
-模組結束標記，以及 （選擇性） 若要設定的程式進入點*地址*。
+Marks the end of a module and, optionally, sets the program entry point to *address*.
 
 ## <a name="syntax"></a>語法
 
-> 結束 [[address]]
+> **END** ⟦*address*⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

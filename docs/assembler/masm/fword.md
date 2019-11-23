@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - FWORD directive
 ms.assetid: 8fd33d12-d49d-4e2a-80ac-0f55792e99be
-ms.openlocfilehash: 85ea61b4d2d08e183663d4c0d1e15f998b49d3c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fd1c35ce5787b0fc0fa3ecb2cb5cb48050e28b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185528"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397500"
 ---
 # <a name="fword"></a>FWORD
 
-配置並選擇性地針對每個初始化 6 個位元組的儲存體`initializer`。
+Allocates and optionally initializes 6 bytes of storage for each *initializer*.
 
 ## <a name="syntax"></a>語法
 
-> [[name]]FWORD 初始設定式 [[，初始設定式]]...
+> ⟦*name*⟧ **FWORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>備註
 
-也可用來當做型別規範的類型是合法的任何位置。
+Also can be used as a type specifier anywhere a type is legal.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
-[DF](../../assembler/masm/df.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DF](../../assembler/masm/df.md)

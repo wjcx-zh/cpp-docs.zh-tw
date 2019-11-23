@@ -23,7 +23,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 
 下表列出 LINK.exe 的選項。 如需 LINK 的詳細資訊，請參閱：
 
-- [編譯器控制的 LINK 選項](compiler-controlled-link-options.md)
+- [Compiler-Controlled LINK Options](compiler-controlled-link-options.md)
 
 - [LINK 輸入檔](link-input-files.md)
 
@@ -37,7 +37,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 
 ## <a name="linker-options-listed-alphabetically"></a>依字母順序列出連結器選項
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[@](at-specify-a-linker-response-file.md)|指定回應檔。|
 |[/ALIGN](align-section-alignment.md)|指定每一個區段的對齊情況。|
@@ -92,7 +92,7 @@ LINK.exe 會連結通用物件檔案格式 (COFF) 物件檔案及程式庫，以
 |[/LTCG](ltcg-link-time-code-generation.md)|指定連結時產生程式碼。|
 |[/MACHINE](machine-specify-target-platform.md)|指定目標平台。|
 |[/MANIFEST](manifest-create-side-by-side-assembly-manifest.md)|建立並存資訊清單檔，並選擇性地將其內嵌於二進位檔中。|
-|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定資訊清單檔中的 @no__t 0dependentAssembly > 區段。|
+|[/MANIFESTDEPENDENCY](manifestdependency-specify-manifest-dependencies.md)|指定資訊清單檔中的 \<dependentAssembly > 區段。|
 |[/MANIFESTFILE](manifestfile-name-manifest-file.md)|變更資訊清單檔的預設名稱。|
 |[/MANIFESTINPUT](manifestinput-specify-manifest-input.md)|指定連結器的資訊清單輸入檔，以在二進位檔中處理並內嵌於二進位檔中。 您可以多次使用此選項，以指定多個資訊清單輸入檔。|
 |[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)|指定使用者帳戶控制 (UAC) 資訊是否內嵌於程式資訊清單中。|

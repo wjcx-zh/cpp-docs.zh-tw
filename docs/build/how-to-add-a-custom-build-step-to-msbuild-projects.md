@@ -19,9 +19,9 @@ ms.locfileid: "72444912"
 
 若要在組建目標的順序中指定自訂群組建步驟的位置，請在專案檔中使用其中一個或兩個 `CustomBuildAfterTargets` 和 `CustomBuildBeforeTargets` XML 元素。 例如，您可以指定自訂群組建步驟在連結工具目標和資訊清單工具目標之前執行。 實際的可用目標集取決於您的特定組建。
 
-指定 `CustomBuildBeforeTargets` 元素，以便在執行特定目標之前，先執行自訂群組建步驟、執行特定目標 @no__t 的第1個元素，或兩個專案，以執行兩個相鄰目標的步驟。 如果未指定任何專案，則您的自訂群組建工具會在其預設位置（位於**連結**目標之後）執行。
+指定要在特定目標執行之前執行自訂群組建步驟的 `CustomBuildBeforeTargets` 專案、在特定目標執行後執行步驟的 `CustomBuildAfterTargets` 專案，或這兩個元素，以執行兩個相鄰目標之間的步驟。 如果未指定任何專案，則您的自訂群組建工具會在其預設位置（位於**連結**目標之後）執行。
 
-自訂群組建步驟和自訂群組建工具會共用 `CustomBuildBeforeTargets` 和 `CustomBuildAfterTargets` XML 元素中指定的資訊。 因此，請只在專案檔中指定這些目標一次。
+自訂群組建步驟和自訂群組建工具會共用在 `CustomBuildBeforeTargets` 中指定的資訊，以及 `CustomBuildAfterTargets` XML 元素。 因此，請只在專案檔中指定這些目標一次。
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>若要定義自訂群組建步驟所執行的內容
 
@@ -48,7 +48,7 @@ ms.locfileid: "72444912"
     </PropertyGroup>
     ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [逐步解說：使用 MSBuild 建立C++專案](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [如何：在 MSBuild 專案中使用建置事件](how-to-use-build-events-in-msbuild-projects.md)<br/>

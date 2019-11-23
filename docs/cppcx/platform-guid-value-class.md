@@ -24,9 +24,9 @@ ms.locfileid: "71816584"
 public value struct Guid
 ```
 
-### <a name="members"></a>成員
+### <a name="members"></a>Members
 
-`Platform::Guid` 具有衍生自[platform：： Object 類別](../cppcx/platform-object-class.md)的 `Equals()`、`GetHashCode()` 和 @no__t 3 方法，以及衍生自[Platform：： Type 類別](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 也具有下列成員。
+`Platform::Guid` 具有衍生自[platform：： Object 類別](../cppcx/platform-object-class.md)的 `Equals()`、`GetHashCode()`和 `ToString()` 方法，以及衍生自[Platform：： Type 類別](../cppcx/platform-type-class.md)的 `GetTypeCode()` 方法。 `Platform::Guid` 也具有下列成員。
 
 |成員|描述|
 |------------|-----------------|
@@ -46,7 +46,7 @@ public value struct Guid
 
 **最低支援伺服器：** Windows Server 2012
 
-**命名空間：** 平台
+**命名空間：** Platform
 
 **中繼資料：** platform.winmd
 
@@ -82,43 +82,43 @@ Guid(
 ### <a name="parameters"></a>參數
 
 *a*<br/>
-@No__t-0 的前4個位元組。
+`GUID`的前4個位元組。
 
 *b*<br/>
-@No__t-0 的後2個位元組。
+`GUID`的後2個位元組。
 
 *C*<br/>
-@No__t-0 的後2個位元組。
+`GUID`的後2個位元組。
 
 *d*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *e*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *f*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *g*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *h*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *i*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
-*j*<br/>
-@No__t-0 的下一個位元組。
+*韓文*<br/>
+`GUID`的下一個位元組。
 
 *k*<br/>
-@No__t-0 的下一個位元組。
+`GUID`的下一個位元組。
 
 *m*<br/>
-@No__t-0，格式為[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
+中的 `GUID`，其格式為[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
 
 *n*<br/>
-@No__t-0 的剩餘8個位元組。
+`GUID`剩餘的8個位元組。
 
 ## <a name="operator-equality"></a>Guid：： operator = = 運算子
 
@@ -140,7 +140,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 @no__t 0 的實例相等，則為 True。
+如果兩個 `Platform::Guid` 實例相等，則為 True。
 
 ### <a name="remarks"></a>備註
 
@@ -148,7 +148,7 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 
 ## <a name="operator-inequality"></a>Guid：： operator！ = 運算子
 
-比較兩個 `Platform::Guid` 個實例是否不相等。
+比較兩個 `Platform::Guid` 實例是否不相等。
 
 ### <a name="syntax"></a>語法
 
@@ -166,11 +166,11 @@ static bool Platform::Guid::operator!=(Platform::Guid guid1, Platform::Guid guid
 
 ### <a name="return-value"></a>傳回值
 
-如果兩個 @no__t 0 的實例不相等，則為 True。
+如果兩個 `Platform::Guid` 實例不相等，則為 True。
 
-## <a name="operator-less"></a>Guid：： operator @ no__t-1 運算子
+## <a name="operator-less"></a>Guid：： operator&lt; 運算子
 
-比較兩個 `Platform::Guid` 個實例以進行排序。
+比較兩個 `Platform::Guid` 實例以進行排序。
 
 ### <a name="syntax"></a>語法
 
@@ -190,11 +190,11 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 如果*guid1*在*guid2*之前排序，則為 True。 排序會在將每個 `Platform::Guid` 視為 4 32 位不帶正負號值的陣列之後詞典編纂。 這不是 SQL Server 或 .NET Framework 所使用的順序，也不是依字串表示以字典順序排序。
 
-提供這個運算子的目的，是為了讓C++標準程式庫可以更輕鬆地取用 @no__t 0 的物件。
+提供這個運算子的目的，是為了讓C++標準程式庫可以更輕鬆地使用 `Guid` 物件。
 
 ## <a name="operator-call"></a>Guid：： operator （）運算子
 
-隱含地將 `Platform::Guid` 轉換成[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
+隱含地將 `Platform::Guid` 轉換為[GUID 結構](/previous-versions/cc317743(v%3dmsdn.10))。
 
 ### <a name="syntax"></a>語法
 

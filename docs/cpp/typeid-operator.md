@@ -24,7 +24,7 @@ typeid(expression)
 
 **Typeid**運算子允許在執行時間決定物件的型別。
 
-**Typeid**的結果為 `const type_info&`。 值是 `type_info` 物件的參考，表示*運算式*的*類型識別碼*或類型，視所使用的**typeid**格式而定。 如需詳細資訊，請參閱[Type_info 類別](../cpp/type-info-class.md)。
+**Typeid**的結果是 `const type_info&`。 此值是 `type_info` 物件的參考，代表*類型識別碼*或*運算式*的類型（視使用的**typeid**格式而定）。 如需詳細資訊，請參閱[Type_info 類別](../cpp/type-info-class.md)。
 
 **Typeid**運算子無法與 managed 類型（抽象宣告子或實例）搭配使用。 如需取得指定類型之 <xref:System.Type> 的詳細資訊，請參閱[typeid](../extensions/typeid-cpp-component-extensions.md)。
 
@@ -34,9 +34,9 @@ typeid(expression)
 
 - 以 `*` 取值的指標
 
-- 下標指標（`[ ]`）。 （以多型類型的指標來使用注標並不安全）。
+- 一個下標指標（`[ ]`）。 （以多型類型的指標來使用注標並不安全）。
 
-如果*運算式*指向基類型別，但物件實際上是衍生自該基類的型別，則衍生類別的 @no__t 1 參考就是結果。 *運算式*必須指向多型類型（具有虛擬函式的類別）。 否則，結果會是*運算式*中所參考之靜態類別的 `type_info`。 此外，必須對指標進行取值，讓使用的物件是它所指向的物件。 若未對指標取值，則結果會是指標的 `type_info`，而不是其所指向的內容。 例如:
+如果*運算式*指向基類型別，但物件實際上是衍生自該基類的型別，則衍生類別的 `type_info` 參考就是結果。 *運算式*必須指向多型類型（具有虛擬函式的類別）。 否則，結果會是*運算式*中所參考靜態類別的 `type_info`。 此外，必須對指標進行取值，讓使用的物件是它所指向的物件。 若未對指標進行取值，則結果會是指標的 `type_info`，而不是其所指向的內容。 例如：
 
 ```cpp
 // expre_typeid_Operator.cpp
@@ -63,9 +63,9 @@ int main() {
 }
 ```
 
-如果*運算式*正在取值指標，且該指標的值為零，則**typeid**會擲回[bad_typeid 例外](../cpp/bad-typeid-exception.md)狀況。 如果指標未指向有效的物件，則會擲回 @no__t 0 的例外狀況。 這表示嘗試分析觸發錯誤的 RTTI，是因為物件是不正確。 （例如，它是錯誤指標，或程式碼未使用[/GR](../build/reference/gr-enable-run-time-type-information.md)進行編譯）。
+如果*運算式*正在取值指標，且該指標的值為零，則**typeid**會擲回[bad_typeid 例外](../cpp/bad-typeid-exception.md)狀況。 如果指標未指向有效的物件，則會擲回 `__non_rtti_object` 例外狀況。 這表示嘗試分析觸發錯誤的 RTTI，是因為物件是不正確。 （例如，它是錯誤指標，或程式碼未使用[/GR](../build/reference/gr-enable-run-time-type-information.md)進行編譯）。
 
-如果*運算式*不是指標，而不是物件之基類的參考，則結果會是代表*運算式*靜態類型的 @no__t 1 參考。 運算式的*靜態類型*會參考在編譯時期已知的運算式類型。 評估運算式的靜態類型時，會忽略執行語意。 此外，在判斷運算式的靜態類型時，會盡可能忽略參考：
+如果*運算式*不是指標，而不是物件之基類的參考，則結果會是代表*運算式*靜態類型的 `type_info` 參考。 運算式的*靜態類型*會參考在編譯時期已知的運算式類型。 評估運算式的靜態類型時，會忽略執行語意。 此外，在判斷運算式的靜態類型時，會盡可能忽略參考：
 
 ```cpp
 // expre_typeid_Operator_2.cpp

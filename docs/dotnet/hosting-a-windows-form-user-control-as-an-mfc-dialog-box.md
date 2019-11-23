@@ -35,7 +35,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
    在**方案總管**中，以滑鼠右鍵按一下**MFC03**專案節點，然後選擇 [**屬性**]。 [**屬性頁**] 對話方塊隨即出現。
 
-   在 [**屬性頁**] 對話方塊的 [設定**屬性**] 樹狀結構控制項中，選取 [**一般**]，然後在 [**專案預設值**] 區段中，將 [**通用語言執行時間支援**] 設定為 [ **common language runtime 支援] （/clr）** 。 按一下 [確定]。
+   在 [**屬性頁**] 對話方塊的 [設定**屬性**] 樹狀結構控制項中，選取 [**一般**]，然後在 [**專案預設值**] 區段中，將 [ **Common Language Runtime 支援**] 設定為 [ **common language runtime 支援（/clr）** ]。 按一下 [確定]。
 
 1. 加入 .NET 控制項的參考。
 
@@ -134,7 +134,7 @@ MFC 提供樣板類別[CWinFormsDialog](../mfc/reference/cwinformsdialog-class.m
 
 1. 建置並執行專案。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [在 MFC 中使用 Windows Form 使用者控制項](../dotnet/using-a-windows-form-user-control-in-mfc.md)<xref:System.Windows.Forms.UserControl?displayProperty=fullName>
 

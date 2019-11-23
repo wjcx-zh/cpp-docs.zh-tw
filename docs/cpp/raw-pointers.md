@@ -1,6 +1,6 @@
 ---
-title: Raw pointers (C++)
-description: How to use raw pointers in C++
+title: 原始指標（C++）
+description: 如何在中使用原始指標C++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
@@ -11,11 +11,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74250657"
 ---
-# <a name="raw-pointers-c"></a>Raw pointers (C++)
+# <a name="raw-pointers-c"></a>原始指標（C++）
 
-A pointer is a type of variable that stores the address of an object in memory and is used to access that object. A *raw pointer* is a pointer whose lifetime is not controlled by an encapsulating object such as a [smart pointer](smart-pointers-modern-cpp.md). A raw pointer can be assigned the address of another non-pointer variable, or it can be assigned a value of [nullptr](nullptr.md). A pointer that has not been assigned a value contains random data.
+指標是一種變數類型，可將物件的位址儲存在記憶體中，並用來存取該物件。 *原始指標*是一種指標，其存留期不是由封裝物件（例如[智慧型指標](smart-pointers-modern-cpp.md)）所控制。 原始指標可以被指派另一個非指標變數的位址，或者可以指派值[nullptr](nullptr.md)。 尚未指派值的指標包含亂數據。
 
-A pointer can also be *dereferenced* to retrieve the value of the object that it points at. The *member access operator* provides access to an object's members.
+指標也*可以被取值*，以抓取它所指向之物件的值。 *成員存取運算子*可讓您存取物件的成員。
 
 ```cpp
     int* p = nullptr; // declare pointer and initialize it
@@ -26,7 +26,7 @@ A pointer can also be *dereferenced* to retrieve the value of the object that it
 
 ```
 
-A pointer can point to a typed object or to **void**. When a program allocates a new object on the [heap](https://wikipedia.org/wiki/Heap) in memory, it receives the address of that object in the form of a pointer. Such pointers are called *owning pointers*; an owning pointer (or a copy of it) must be used to explicitly delete the heap-allocated object when it is no longer needed. Failure to delete the memory results in a *memory leak* and renders that memory location unavailable to any other program on the machine. For more information, see [new and delete operators](new-and-delete-operators.md).
+指標可以指向具類型的物件或**void**。 當程式在記憶體中的[堆積](https://wikipedia.org/wiki/Heap)上配置新的物件時，它會以指標的形式接收該物件的位址。 這類指標稱為「*擁有指標*」;當不再需要堆積配置的物件時，必須使用擁有指標（或其複本）明確地刪除該物件。 無法刪除記憶體會導致*記憶體*流失，並將該記憶體位置轉譯為電腦上的任何其他程式無法使用。 如需詳細資訊，請參閱[new 和 delete 運算子](new-and-delete-operators.md)。
 
 ```cpp
 
@@ -35,7 +35,7 @@ A pointer can point to a typed object or to **void**. When a program allocates a
     delete mc; // delete object (please don't forget!)
 ```
 
-A pointer (if it isn't declared as **const**) can be incremented or decremented so that it points to a new location in memory. This is called *pointer arithmetic* and is used in C-style programming to iterate over elements in arrays or other data structures. A **const** pointer can't be made to point to a different memory location, and in that sense is very similar to a [reference](references-cpp.md). For more information, see [const and volatile pointers](const-and-volatile-pointers.md).
+指標（如果未宣告為**const**）可以遞增或遞減，使其指向記憶體中的新位置。 這稱為*指標算術*，用於 C 樣式的程式設計中，以反復查看陣列或其他資料結構中的元素。 **Const**指標無法指向不同的記憶體位置，而且在這個意義上與[參考](references-cpp.md)非常類似。 如需詳細資訊，請參閱[const 和 volatile 指標](const-and-volatile-pointers.md)。
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +49,13 @@ A pointer (if it isn't declared as **const**) can be incremented or decremented 
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-On 64-bit operating systems, a pointer has a size of 64 bits; a system's pointer size determines how much addressable memory it can have. All copies of a pointer point to the same memory location. Pointers (along with references) are used extensively in C++ to pass larger objects to and from functions because it is usually far more efficient to copy an object's 64-bit address than to copy an entire object. When defining a function, specify pointer parameters as **const** unless you intend for the function to modify the object. In general, **const** references are the preferred way to pass objects to functions unless the value of the object can possibly be **nullptr**.
+在64位作業系統上，指標的大小為64位;系統的指標大小會決定它可以有多少可定址的記憶體。 指標的所有複本都會指向相同的記憶體位置。 指標（連同參考）廣泛用於，以便在C++函式之間傳遞更大的物件，因為複製物件的64位位址通常會比複製整個物件更有效率。 定義函式時，除非您想要讓函數修改物件，否則請將指標參數指定為**const** 。 一般來說，除非物件的值可能是**nullptr**，否則**常數**參考是將物件傳遞至函式的慣用方式。
 
-[Pointers to functions](#pointers_to_functions) enable functions to be passed to other functions and are used for "callbacks" in C-style programming. Modern C++ uses [lambda expressions](lambda-expressions-in-cpp.md) for this purpose.
+函式的[指標](#pointers_to_functions)可讓函數傳遞至其他函數，並用於 C 樣式程式設計中的「回呼」。 基於C++此目的，新式使用[lambda 運算式](lambda-expressions-in-cpp.md)。
 
-## <a name="initialization-and-member-access"></a>Initialization and member access
+## <a name="initialization-and-member-access"></a>初始化和成員存取
 
-The following example shows how to declare a raw pointer and initialize it with an object allocated on the heap, and then how to use it. It also shows a few of the dangers associated with raw pointers. (Remember, this is C-style programming and not modern C++!)
+下列範例示範如何宣告原始指標，並使用在堆積上配置的物件加以初始化，以及如何使用它。 它也會顯示一些與原始指標相關聯的危險。 （請記住，這是 C 樣式的程式設計， C++而不是新式！）
 
 ```cpp
 #include <iostream>
@@ -133,14 +133,14 @@ int main()
 }
 ```
 
-## <a name="pointer-arithmetic-and-arrays"></a>Pointer arithmetic and arrays
+## <a name="pointer-arithmetic-and-arrays"></a>指標算術和陣列
 
-Pointers and arrays are closely related. When an array is passed by-value to a function, it is passed as a pointer to the first element. The following example demonstrates the following important properties of pointers and arrays:
+指標與陣列密切相關。 當陣列以傳值方式傳遞至函式時，會將它當做第一個元素的指標傳遞。 下列範例示範指標和陣列的下列重要屬性：
 
-- the `sizeof` operator returns the total size in bytes of an array
-- to determine the number of elements, divide total bytes by the size of one element
-- when an array is passed to a function, it *decays* to a pointer type
-- the `sizeof` operator when applied to a pointer returns the pointer size, 4 bytes on x86 or 8 bytes on x64
+- `sizeof` 運算子會傳回陣列的總大小（以位元組為單位）
+- 若要判斷元素的數目，請將總位元組除以一個元素的大小
+- 將陣列傳遞至函式時，會*decays*至指標類型
+- 套用至指標時的 `sizeof` 運算子會傳回指標大小、x86 上的4個位元組或 x64 上的8位元組
 
 ```cpp
 #include <iostream>
@@ -166,9 +166,9 @@ int main()
 }
 ```
 
-Certain arithmetic operations can be performed on non-const pointers to make them point to a new memory location. A pointer can be incremented and decremented using the **++** , **+=** , **-=** and **--** operators. This technique can be used in arrays and is especially useful in buffers of untyped data. A **void\*** increments by the size of a **char** (1 byte). A typed pointer increments by size of the type it points to.
+某些算數運算可以在非 const 指標上執行，使其指向新的記憶體位置。 您可以使用 **++** 、 **+=** 、 **-=** 和 **--** 運算子來遞增和遞減指標。 這項技術可用於陣列中，特別適用于不具類型的資料緩衝區。 **Void\*** 以**char** （1位元組）的大小遞增。 具類型的指標會依其所指向之類型的大小遞增。
 
-The following example demonstrates how pointer arithmetic can be used to access individual pixels in a bitmap on Windows. Note the use of **new** and **delete**, and the dereference operator. 
+下列範例會示範如何使用指標算術來存取 Windows 點陣圖中的個別圖元。 請注意**new**和**delete**和取值運算子的用法。 
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +233,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>void* pointers
+## <a name="void-pointers"></a>void * 指標
 
-A pointer to **void** simply points to a raw memory location. Sometimes it is necessary to use **void\*** pointers, for example when passing between C++ code and C functions. 
+**Void**的指標只會指向原始記憶體位置。 有時候，必須使用**void\*** 指標，例如，在程式碼和 C C++函式之間傳遞時。 
 
-When a typed pointer is cast to a void pointer, the contents of the memory location are not changed, but the type information is lost, so that you can't perform increment or decrement operations. A memory location can be cast, for example, from MyClass* to void* and back again to MyClass*. Such operations are inherently error-prone and require great care to avoid errors. Modern C++ discourages the use of void pointers unless absolutely necessary.
+當具類型的指標轉換成 void 指標時，記憶體位置的內容不會變更，但類型資訊會遺失，因此您無法執行遞增或遞減作業。 記憶體位置可以轉型，例如，從 MyClass * 到 void *，再轉換成 MyClass *。 這類作業原本就很容易發生錯誤，而且需要非常小心地避免錯誤。 除非C++絕對必要，新式不鼓勵使用 void 指標。
 
 ```cpp
 
@@ -290,11 +290,11 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a> Pointers to functions
+## <a name="pointers_to_functions"></a>函式的指標
 
-In C-style programming, function pointers are used primarily to pass functions to other functions. In this scenario, the caller can customize the behavior of a function without modifying it. In modern C++, [lambda expressions](lambda-expressions-in-cpp.md) provide the same capability with greater type safety and other advantages.
+在 C 樣式程式設計中，函式指標主要是用來將函式傳遞給其他函數。 在此案例中，呼叫端可以自訂函式的行為，而不需要修改函式。 在現代C++的中， [lambda 運算式](lambda-expressions-in-cpp.md)提供的功能具有更高的型別安全和其他優點。
 
-A function pointer declaration specifies the signature that the pointed-to function must have:
+函式指標宣告會指定所指向函數必須具有的簽章：
 
 ```cpp
 // Declare pointer to any function that...
@@ -310,7 +310,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-The following example shows a function `combine` that takes as a parameter any function that accepts a `std::string` and returns a `std::string`. Depending on the function that is passed to `combine` it will either prepend or append a string.
+下列範例顯示的函式 `combine` 會接受 `std::string` 的任何函式，並傳回 `std::string`。 視傳遞至 `combine` 的函式而定，它會在前面加上或附加字串。
 
 ```cpp
 #include <iostream>
@@ -342,9 +342,9 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Smart pointers](smart-pointers-modern-cpp.md)
-[Indirection Operator: *](indirection-operator-star.md)<br/>
+[智慧型指標](smart-pointers-modern-cpp.md)
+[間接取值運算子： *](indirection-operator-star.md)<br/>
 [傳址運算子：&](address-of-operator-amp.md)</br>
-[Welcome back to C++](welcome-back-to-cpp-modern-cpp.md)
+[歡迎回到C++](welcome-back-to-cpp-modern-cpp.md)

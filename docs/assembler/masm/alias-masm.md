@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: ab00092f410d34119e876db4562e6d0709743d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274ac451005015b2693d8674673af574ec781bdc
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166486"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399297"
 ---
 # <a name="alias-masm"></a>ALIAS (MASM)
 
-**別名**指示詞會建立函式的替代名稱。  這可讓您建立函式的多個名稱，或建立可讓連結器 (LINK.exe) 將舊的函式對應至新的函式的程式庫。
+The **ALIAS** directive creates an alternate name for a function.  This lets you create multiple names for a function, or create libraries that allow the linker (LINK.exe) to map an old function to a new function.
 
 ## <a name="syntax"></a>語法
 
-> 別名\<*別名*> = \<*實際名稱*>
+> **ALIAS \<** _alias_ **> = \<** _actual-name_ **>**
 
 #### <a name="parameters"></a>參數
 
-*actual-name*<br/>
-函式或程序的實際名稱。  角括號是必要的。
+*actual-name*\
+The actual name of the function or procedure.  The angle brackets are required.
 
-*alias*<br/>
-其他名稱或別名名稱。  角括號是必要的。
+*alias*\
+The alternate or alias name.  The angle brackets are required.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

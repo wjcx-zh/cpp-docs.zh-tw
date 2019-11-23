@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - WORD directive
 ms.assetid: 36f7ac49-480d-4d67-8967-3a62acb8f4df
-ms.openlocfilehash: a707c1623c6aaab854790dccd444e854687b30ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6adae9f04130e3b7bd03d7af9e1ae96855d19f8b
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216945"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74392825"
 ---
 # <a name="word"></a>WORD
 
-配置並選擇性地針對每個初始化儲存體的一個字詞，（2 個位元組） `initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>語法
 
-> [[*名稱*]] WORD*初始設定式*[[，*初始設定式*]]...
+> ⟦*name*⟧ **WORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
-[SWORD](../../assembler/masm/sword.md)<br/>
-[DW](../../assembler/masm/dw.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)\
+[SWORD](../../assembler/masm/sword.md)\
+[DW](../../assembler/masm/dw.md)

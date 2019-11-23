@@ -1,5 +1,5 @@
 ---
-title: 點運算子
+title: operator dot
 ms.date: 08/30/2018
 f1_keywords:
 - operator .
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - operator .
 - . operator
 ms.assetid: 468ea0c8-5b08-47be-991b-38abacb77611
-ms.openlocfilehash: 75eccec0c65cba093d84e9d71107247e5b697287
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28fe852c7fbba4995905b2d9a42cc02c1d46eb00
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177197"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397020"
 ---
 # <a name="operator-"></a>運算子 .
 
-第一個運算子會傳回*運算式*再加上位移*欄位*其結構或等位內。 第二個運算子傳回值所指向的位置*註冊*再加上位移*欄位*其結構或等位內。
+The first operator returns *expression* plus the offset of *field* within its structure or union. The second operator returns value at the location pointed to by *register* plus the offset of *field* within its structure or union.
 
 ## <a name="syntax"></a>語法
 
-> *運算式* __。__ *欄位* \[ __。__ *field*] ...
+> *expression* __.__ *field*⟦ __.__ *field* ...⟧
 >
-> __\[__*register*__]__ __.__ *欄位* \[ __。__ *field*] ...
+> **\[** _register_ **]** __.__ *field*⟦ __.__ *field* ...⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

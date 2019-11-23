@@ -1,5 +1,5 @@
 ---
-title: 運算子&lt;（MASM 執行階段）
+title: operator &lt; (MASM Run Time)
 ms.date: 08/30/2018
 f1_keywords:
 - operator <
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - operator <
 - < operator, comparing specific objects
 ms.assetid: 1d5fc8f1-a62f-4a3d-824d-619c6f421a04
-ms.openlocfilehash: 8fa8c5c165259696560ac3904ab5123d89356bf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 214f503e3d0296efbe99675c967a5a8c8ca079c8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177055"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396811"
 ---
-# <a name="operator-lt-masm-run-time"></a>運算子&lt;（MASM 執行階段）
+# <a name="operator-lt-masm-run-time"></a>operator &lt; (MASM Run Time)
 
-為小於。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，並在執行階段，不是在組件階段評估。
+Is less than. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
 
 ## <a name="syntax"></a>語法
 
-> expression1 < expression2
+> *expression1* **<** *expression2*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

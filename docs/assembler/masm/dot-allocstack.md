@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9d86371503992d1bebe738fb6e6773581b10e3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185649"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398635"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-會產生**UWOP_ALLOC_SMALL**或是**UWOP_ALLOC_LARGE**與序言中的目前位移的指定大小。
+Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
 
 ## <a name="syntax"></a>語法
 
-> .ALLOCSTACK 大小
+> **.ALLOCSTACK** *size*
 
 ## <a name="remarks"></a>備註
 
-MASM 會選擇最有效率的編碼方式，就指定大小。
+MASM will choose the most efficient encoding for a given size.
 
-.ALLOCSTACK 允許 ml64.exe 使用者指定框架的函式的回溯時，而且只允許在序言，始[PROC](../../assembler/masm/proc.md)框架宣告[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼路徑。它們只會產生`.xdata`和`.pdata`。 .ALLOCSTACK 之前應該加實際實作要回溯動作的指示。 它是個不錯的做法，包裝的回溯程式指示詞和它們以確保協議要在巨集中的回溯程式碼。
+**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
 
-`size`運算元必須是 8 的倍數。
+The *size* operand must be a multiple of 8.
 
-如需詳細資訊，請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
 
 ## <a name="sample"></a>範例
 
-下列範例示範如何指定回溯/例外狀況處理常式：
+The following sample shows how to specify an unwind/exception handler:
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,6 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

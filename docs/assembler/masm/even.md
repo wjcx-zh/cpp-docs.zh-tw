@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - EVEN directive
 ms.assetid: 68938ba4-8cb9-44d4-914e-9f9fee6bcbf4
-ms.openlocfilehash: 060c62a82c03f3de76b310d12360928bdf60e7e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a8f94add9ff0bfeb25ab89ee01890c1b0020f56
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185037"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397587"
 ---
 # <a name="even"></a>EVEN
 
-對齊下一步 變數或甚至是位元組上的指示。
+Aligns the next variable or instruction on an even byte.
 
 ## <a name="syntax"></a>語法
 
-> EVEN
+> **EVEN**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

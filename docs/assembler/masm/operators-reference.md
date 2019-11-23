@@ -1,93 +1,93 @@
 ---
-title: MASM 運算子參考
+title: MASM Operators reference
 ms.date: 08/30/2018
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210810"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395205"
 ---
-# <a name="masm-operators-reference"></a>MASM 運算子參考
+# <a name="masm-operators-reference"></a>MASM Operators reference
 
-## <a name="arithmetic"></a>算術運算
+## <a name="arithmetic"></a>Arithmetic
 
 ||||
 |-|-|-|
-|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[-（減法或否定）](operator-subtract-2.md)|
-|[.（欄位）](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93;（索引）](operator-brackets.md)|
-|[MOD （餘數）](operator-mod.md)|||
+|[* (multiply)](operator-multiply.md)|[+ (add)](operator-add.md)|[- (subtract or negate)](operator-subtract-2.md)|
+|[. (field)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93; (index)](operator-brackets.md)|
+|[MOD (remainder)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>控制流程
 
 ||||
 |-|-|-|
-|[\! (執行階段邏輯 not)](operator-logical-not-masm-run-time.md)|[\!= （不等於執行階段）](operator-not-equal-masm.md)|[&#124;&#124;(邏輯的執行階段或)](operator-logical-or.md)|
-|[& & (邏輯的執行階段和)](operator-logical-and-masm-run-time.md)|[< (執行階段小於)](operator-less-than-masm-run-time.md)|[\<= （小於或等於執行階段）](operator-less-or-equal-masm-run-time.md)|
-|[= = （等於執行階段）](operator-equal-masm-run-time.md)|[> （大於執行階段）](operator-greater-than-masm-run-time.md)|[> = （大於或等於執行階段）](operator-greater-or-equal-masm-run-time.md)|
-|[& (位元執行階段和)](operator-bitwise-and.md)|||
-|[CARRY？（執行階段所包含的測試）](operator-carry-q.md)|[OVERFLOW？（執行階段發生溢位測試）](operator-overflow-q.md)|[同位嗎？（執行階段同位檢查測試）](operator-parity-q.md)|
-|[登入嗎？（執行階段的符號檢驗）](operator-sign-q.md)|[零嗎？（執行階段零測試）](operator-zero-q.md)||
+|[\! (runtime logical not)](operator-logical-not-masm-run-time.md)|[\!= (runtime not equal)](operator-not-equal-masm.md)|[&#124;&#124; (runtime logical or)](operator-logical-or.md)|
+|[&& (runtime logical and)](operator-logical-and-masm-run-time.md)|[< (runtime less than)](operator-less-than-masm-run-time.md)|[\<= (runtime less or equal)](operator-less-or-equal-masm-run-time.md)|
+|[== (runtime equal)](operator-equal-masm-run-time.md)|[> (runtime greater than)](operator-greater-than-masm-run-time.md)|[>= (runtime greater or equal)](operator-greater-or-equal-masm-run-time.md)|
+|[& (runtime bitwise and)](operator-bitwise-and.md)|||
+|[CARRY? (runtime carry test)](operator-carry-q.md)|[OVERFLOW? (runtime overflow test)](operator-overflow-q.md)|[PARITY? (runtime parity test)](operator-parity-q.md)|
+|[SIGN? (runtime sign test)](operator-sign-q.md)|[ZERO? (runtime zero test)](operator-zero-q.md)||
 
-## <a name="logical-and-shift"></a>邏輯和 shift 鍵
+## <a name="logical-and-shift"></a>Logical and Shift
 
 ||||
 |-|-|-|
-|[和 (位元和)](operator-and.md)|[不 (位元 not)](operator-not.md)|[OR (位元或)](operator-or.md)|
-|[SHL （shift 位元向左）](operator-shl.md)|[SHR （右移位位元）](operator-shr.md)|[XOR (位元互斥或)](operator-xor.md)|
+|[AND (bitwise and)](operator-and.md)|[NOT (bitwise not)](operator-not.md)|[OR (bitwise or)](operator-or.md)|
+|[SHL (shift bits left)](operator-shl.md)|[SHR (shift bits right)](operator-shr.md)|[XOR (bitwise exclusive or)](operator-xor.md)|
 
 ## <a name="macro"></a>巨集
 
 ||||
 |-|-|-|
-|[\! （字元常值）](operator-logical-not-masm.md)|[%（視為文字）](operator-percent.md)||
-|[;;（視為註解）](operator-semicolons.md)|[&lt; &gt; （將視為一個常值）](operator-literal.md)|[& & （取代參數值）](operator-logical-and-masm.md)|
+|[\! (character literal)](operator-logical-not-masm.md)|[% (treat as text)](operator-percent.md)||
+|[;; (treat as comment)](operator-semicolons.md)|[&lt; &gt; (treat as one literal)](operator-literal.md)|[& & (substitute parameter value)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>其他
 
 ||||
 |-|-|-|
-|['' （視為字串）](operator-single-quote.md)|[""（視為字串）](operator-double-quote.md)||
-|: （本機標籤定義)|:: （註冊區段和位移)|:: （全域標籤定義)|
-|[;（視為註解）](operator-semicolon.md)|[DUP （重複宣告）](operator-dup.md)||
+|[' ' (treat as string)](operator-single-quote.md)|[" " (treat as string)](operator-double-quote.md)||
+|: (local label definition)|:: (register segment and offset)|:: (global label definition)|
+|[; (treat as comment)](operator-semicolon.md)|[DUP (repeat declaration)](operator-dup.md)||
 
 ## <a name="record"></a>資料錄
 
 |||
 |-|-|
-|[遮罩 （取得記錄或欄位的位元遮罩）](operator-mask.md)|[寬度 （取得記錄或欄位的寬度）](operator-width.md)|
+|[MASK (get record or field bitmask)](operator-mask.md)|[WIDTH (get record or field width)](operator-width.md)|
 
 ## <a name="relational"></a>關聯性
 
 ||||
 |-|-|-|
-|[EQ （等於）](operator-eq.md)|[GE （大於或等於）](operator-ge.md)|[GT （大於）](operator-gt.md)|
-|[LE （小於或等於）](operator-le.md)|[LT （小於）](operator-lt.md)|[NE （不等於）](operator-ne.md)|
+|[EQ (equal)](operator-eq.md)|[GE (greater or equal)](operator-ge.md)|[GT (greater than)](operator-gt.md)|
+|[LE (less or equal)](operator-le.md)|[LT (less than)](operator-lt.md)|[NE (not equal)](operator-ne.md)|
 
-## <a name="segment"></a>區段
+## <a name="segment"></a>Segment
 
 |||
 |-|-|
-|[: （區段覆寫)](operator-colon.md)|:: （註冊區段和位移)|
-|[IMAGEREL （映像的相對位移）](operator-imagerel.md)|[LROFFSET （載入器會解析位移）](operator-lroffset.md)|
-|[位移 （區段的相對位移）](operator-offset.md)|[SECTIONREL （區段的相對位移）](operator-sectionrel.md)|
-|[SEG （get 區段）](operator-seg.md)||
+|[: (segment override)](operator-colon.md)|:: (register segment and offset)|
+|[IMAGEREL (image relative offset)](operator-imagerel.md)|[LROFFSET (loader resolved offset)](operator-lroffset.md)|
+|[OFFSET (segment relative offset)](operator-offset.md)|[SECTIONREL (section relative offset)](operator-sectionrel.md)|
+|[SEG (get segment)](operator-seg.md)||
 
-## <a name="type"></a>類型
+## <a name="type"></a>輸入
 
 ||||
 |-|-|-|
-|[高 （高 8 位元的最低的 16 位元）](operator-high.md)|[HIGH32 （高 32 位元的 64 位元）](operator-high32.md)|[HIGHWORD （高 16 位元最低的 32 位元）](operator-highword.md)|
-|[長度 （數字陣列中的項目）](operator-length.md)|[LENGTHOF （數字陣列中的項目）](operator-lengthof.md)|[LOW （低 8 位元）](operator-low.md)|
-|[LOW32 （低 32 位元）](operator-low32.md)|[LOWWORD （低 16 位元）](operator-lowword.md)|[OPATTR （取得引數類型資訊）](operator-opattr.md)|
-|[PTR （指標或做為類型）](operator-ptr.md)|[SHORT （mark 簡短標籤型別）](operator-short.md)|[大小 （類型或變數的大小）](operator-size.md)|
-|[SIZEOF （類型或變數的大小）](operator-sizeof.md)|[這個 （目前的位置）](operator-this.md)|[型別 （get 運算式型別）](operator-type.md)|
-|[.型別 （取得引數類型資訊）](operator-dot-type.md)|||
+|[HIGH (high 8 bits of lowest 16 bits)](operator-high.md)|[HIGH32 (high 32 bits of 64 bits)](operator-high32.md)|[HIGHWORD (high 16 bits of lowest 32 bits)](operator-highword.md)|
+|[LENGTH (number of elements in array)](operator-length.md)|[LENGTHOF (number of elements in array)](operator-lengthof.md)|[LOW (low 8 bits)](operator-low.md)|
+|[LOW32 (low 32 bits)](operator-low32.md)|[LOWWORD (low 16 bits)](operator-lowword.md)|[OPATTR (get argument type info)](operator-opattr.md)|
+|[PTR (pointer to or as type)](operator-ptr.md)|[SHORT (mark short label type)](operator-short.md)|[SIZE (size of type or variable)](operator-size.md)|
+|[SIZEOF (size of type or variable)](operator-sizeof.md)|[THIS (current location)](operator-this.md)|[TYPE (get expression type)](operator-type.md)|
+|[.TYPE (get argument type info)](operator-dot-type.md)|||
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)<br/>

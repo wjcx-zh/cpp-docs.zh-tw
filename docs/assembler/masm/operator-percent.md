@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator %
 - '% operator'
 ms.assetid: 7f07018e-b664-4655-aa93-9854eb271bbb
-ms.openlocfilehash: de759c3ac788c5c9c4037a3665c07f8a07a205f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a887ea0766ec2b1272e618fff2c49889c02732
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176573"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396504"
 ---
 # <a name="operator-"></a>運算子 %
 
-會將值*運算式*巨集引數為文字。
+Treats the value of *expression* in a macro argument as text.
 
 ## <a name="syntax"></a>語法
 
-> % *expression*
+> **%** *expression*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

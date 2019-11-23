@@ -6,53 +6,53 @@ f1_keywords:
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210517"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394761"
 ---
 # <a name="proto"></a>PROTO
 
-原型的函式或程序。 您可以呼叫此函式原型 PROTO 指示詞所使用[INVOKE](invoke.md)指示詞。
+Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
 
 ## <a name="syntax"></a>語法
 
-> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
+> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
 
 ### <a name="parameters"></a>參數
 
-*label*<br/>
-原型的函式的名稱。
+*label*\
+The name of the prototyped function.
 
-*distance*<br/>
-（選擇性）16 位元記憶體中模型中使用覆寫預設值，並指出**NEAR**或是**FAR**呼叫。
+*distance*\
+(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
 
-*langtype*<br/>
-（選擇性）設定程序和公用符號的呼叫和命名慣例。 支援的慣例如下：
+*language-type*\
+(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
 
-- 32 位元**一般**模型：**C**， **STDCALL**
+- 32-bit **FLAT** model: **C**, **STDCALL**
 
-- 16 位元的模型：**C**， **BASIC**， **FORTRAN**， **PASCAL 命名法**， **SYSCALL**， **STDCALL**
+- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
 
-*parameter*<br/>
-函式參數的選擇性名稱。
+*parameter*\
+The optional name for a function parameter.
 
-*tag*<br/>
-函式參數的型別。
+*tag*\
+The type of a function parameter.
 
-*參數*並*標記*參數可能會出現許多次，一次的每個傳遞的引數。
+The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
 
 ## <a name="example"></a>範例
 
-這個範例會示範**PROTO**名為函式宣告`addup3`使用**NEAR**呼叫程序呼叫，並使用的 16 位元模型預設值會覆寫**C**呼叫慣例的 stack 參數和傳回值。 它會採用兩個引數， **WORD**並**VARARG**。
+This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)<br/>
-[.模型參考](dot-model.md)<br/>
+[Directives Reference](directives-reference.md)\
+[.MODEL Reference](dot-model.md)

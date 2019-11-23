@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860d538a2f461db1d5fd6bb24d078f644af2156f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202865"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397235"
 ---
 # <a name="macro"></a>MACRO
 
-呼叫的巨集區塊會將標示*名稱*，並建立*參數*巨集呼叫時，傳遞引數的預留位置。
+Marks a macro block called *name* and establishes *parameter* placeholders for arguments passed when the macro is called.
 
 ## <a name="syntax"></a>語法
 
-> *name* MACRO [[*parameter* [[:REQ | :=*default* | :VARARG]] ]] ...<br/>
-> *statements*<br/>
-> ENDM [[*值*]]
+> *name*  **MACRO** ⟦*parameter* ⟦ **:REQ** | :=*default* |  **:VARARG**⟧ ...⟧\
+> *statements*\
+> **ENDM** ⟦*value*⟧
 
 ## <a name="remarks"></a>備註
 
-巨集函式會傳回*值*呼叫的陳述式。
+A macro function returns *value* to the calling statement.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

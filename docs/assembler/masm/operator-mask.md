@@ -8,21 +8,21 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 6acd6596613e32186385568cc68b3eb498176b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ce068350ef21ce3fd03003c19ae4f2bf313c986
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199961"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396646"
 ---
 # <a name="operator-mask"></a>運算子 MASK
 
-傳回位元遮罩中的位元*recordfieldname*或是*記錄*設定且已清除其他所有的位元。
+Returns a bit mask in which the bits in *recordfieldname* or *record* are set and all other bits are cleared.
 
 ## <a name="syntax"></a>語法
 
-> 遮罩 {recordfieldname | 記錄}
+> **MASK** {*recordfieldname* | *record*}
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

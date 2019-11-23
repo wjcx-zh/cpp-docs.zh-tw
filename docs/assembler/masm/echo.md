@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-ms.openlocfilehash: 46a7f77fae035b0fdc846c80f0415337d2bef07b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a06d6528301b4e946595fa7ad66cec5cac03ce7d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203277"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397721"
 ---
 # <a name="echo"></a>ECHO
 
-顯示*訊息*到標準輸出裝置 （依預設，螢幕）。
+Displays *message* to the standard output device (by default, the screen).
 
 ## <a name="syntax"></a>語法
 
-> ECHO*訊息*
+> **ECHO** *message*
 
 ## <a name="remarks"></a>備註
 
-與相同[%out](../../assembler/masm/percent-out.md)。
+Same as [%OUT](../../assembler/masm/percent-out.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

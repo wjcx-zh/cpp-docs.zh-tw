@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PURGE directive
 ms.assetid: 1e7ec2bf-f123-4ff9-97de-28b512ade2f9
-ms.openlocfilehash: 84d948e08acb0e716adc00f5790f032bec3645b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c31164245ac1e42c13f5bbf3c25387ffb0cf933
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210544"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395776"
 ---
 # <a name="purge"></a>PURGE
 
-從記憶體中刪除指定的巨集。
+Deletes the specified macros from memory.
 
 ## <a name="syntax"></a>語法
 
-> 清除 macroname [[，巨集名稱]]...
+> **PURGE** *macroname* ⟦ __,__ *macroname* ...⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

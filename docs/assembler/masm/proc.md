@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d1e44fcc4adbbe012b2f31fe9c6c27511bafff1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210530"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395033"
 ---
 # <a name="proc"></a>PROC
 
-標記開始和結束呼叫的程序區塊*標籤*。 區塊中的陳述式可以呼叫具有**呼叫**指示或[INVOKE](../../assembler/masm/invoke.md)指示詞。
+Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
 
 ## <a name="syntax"></a>語法
 
-> *標籤*程序 [[*距離*]] [[*langtype*]] [[*可視性*]] [[\<*prologuearg*>]] [[會使用*reglist*]] [[，*參數*[[:*標記*]]]...<br/>
-> [[畫面格 [[:*ehandler 位址*]]]]<br/>
-> *statements*<br/>
-> *標籤*ENDP
+> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
+> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
+> *statements*\
+> *label* **ENDP**
 
 ## <a name="remarks"></a>備註
 
-[[畫面格 [[:*ehandler 位址*]]]] 時才有效 ml64.exe，並造成 MASM.pdata 中產生的函式的資料表項目，並回溯.xdata 中的資訊的函式的結構化例外狀況處理回溯行為。
+⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
 
-當**框架**屬性時，它必須接著[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。
+When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
 
-請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)如需有關使用 ml64.exe。
+See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
 
 ## <a name="example"></a>範例
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-上述的程式碼會發出下列函式表，並回溯資訊：
+The above code will emit the following function table and unwind information:
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

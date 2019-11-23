@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@SubStr symbol'
 ms.assetid: f4b8fc6e-14a0-46fe-8c27-6b3347a08504
-ms.openlocfilehash: 3daff591dd1f3030628fe97b15998c6c365c9e92
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 1ef706452318e99babc85dbc1547c67cc465e5c8
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74301985"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398920"
 ---
 # <a name="substr"></a>\@SubStr
 
-從*位置*開始傳回子字串的宏函式。
+A macro function that returns a substring starting at *position*.
 
 ## <a name="syntax"></a>語法
 
-> **\@SubStr （** *字串* __，__ *位置*⟦ __，__ *長度*⟧ **）**
+> **\@SubStr(** *string* __,__ *position* ⟦ __,__ *length*⟧ **)**
 
 ## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - arithmetic operators [C++], multiplication
 - operators [MASM], multiplication
 ms.assetid: 6a66521c-664f-41c3-8a77-5a948df1e9ad
-ms.openlocfilehash: 8d115d41e9d24cc036fd641669c0f11baa31b756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78e11a075351f91b9fe47e9c2be72ffa4d557075
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199798"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396622"
 ---
 # <a name="operator-"></a>運算子 *
 
-傳回*expression1*時間*expression2*。
+Returns *expression1* times *expression2*.
 
 ## <a name="syntax"></a>語法
 
-> expression1 * expression2
+> *expression1* __\*__ *expression2*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

@@ -8,23 +8,23 @@ helpviewer_keywords:
 - PTR operator
 - operator PTR
 ms.assetid: df280f36-ca06-4578-b99d-0aa139b2b969
-ms.openlocfilehash: 87aa8ff044318d778f823827c451c0ad3332e279
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1f59985d4a11dd4ffd65c8ef1086826ade6ea3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199922"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396497"
 ---
 # <a name="operator-ptr"></a>運算子 PTR
 
-第一個運算子會強制*運算式*被視為具有指定*型別*。 第二個運算子指定的指標*型別*。
+The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
 
 ## <a name="syntax"></a>語法
 
-> *型別*PTR*運算式*
+> *type* **PTR** *expression*
 >
-> \[*距離*] PTR*類型*
+> \[*distance*] **PTR** *type*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

@@ -8,25 +8,25 @@ helpviewer_keywords:
 - SECTIONREL operator
 - operator SECTIONREL
 ms.assetid: db033a9d-b029-48dd-a010-d19e3a9d1af2
-ms.openlocfilehash: 6908d8a0d21e601217b0dea34ae1f2f7f01dd1ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac8f99758541d975a1a2e505a6a7fcf3482a4432
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176339"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396490"
 ---
 # <a name="operator-sectionrel"></a>運算子 SECTIONREL
 
-傳回運算式相對於包含最終的可執行檔中的目標區段的區段相對位移。
+Returns the section relative offset of expression relative to the section containing the target in the final executable.
 
 ## <a name="syntax"></a>語法
 
-> SECTIONREL 運算式
+> **SECTIONREL** *expression*
 
 ## <a name="remarks"></a>備註
 
-可以只使用 COFF 物件發出 SECTIONREL。
+**SECTIONREL** is available only with COFF object emission.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

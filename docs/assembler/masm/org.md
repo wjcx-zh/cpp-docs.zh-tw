@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - ORG directive
 ms.assetid: ab654827-99dd-4018-b27e-f29a7bb392eb
-ms.openlocfilehash: 37fd96e3f4044025597dbf90374b7e59576be063
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1ee45442c561ebb429f3aff9227a373c97a975da
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210678"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395589"
 ---
 # <a name="org"></a>ORG
 
-設定位置的計數器來*運算式*。
+Sets the location counter to *expression*.
 
 ## <a name="syntax"></a>語法
 
-> 組織*運算式*
+> **ORG** *expression*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

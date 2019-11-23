@@ -19,7 +19,7 @@ ms.locfileid: "71998662"
 
 ## <a name="remarks"></a>備註
 
-若要初始化定義為 `volatile`、非 `const` 或不是整數類型的 @no__t 0 資料成員，請使用成員定義語句。 它們無法在宣告中初始化。
+若要初始化定義為 `volatile`、非`const`或不是整數類型的 `static` 資料成員，請使用成員定義語句。 它們無法在宣告中初始化。
 
 ## <a name="example"></a>範例
 

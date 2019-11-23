@@ -24,7 +24,7 @@ ms.locfileid: "71816230"
 **/arch:AVX**<br/>
 啟用 Intel Advanced Vector Extensions 指令的使用。
 
-**/arch:AVX2**<br/>
+**/arch： AVX2**<br/>
 啟用 Intel Advanced Vector Extensions 2 指令的使用。
 
 **/arch： AVX512**<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "71816230"
 
 每個 **/arch**選項也可能會啟用與該選項相關聯的其他非向量指示的使用。 例如，當指定了 **/arch： AVX2**時，會使用特定的 BMI 指令。
 
-指定 **/arch： AVX**、 **/arch： AVX2**或 **/arch： AVX512**編譯器選項時，會定義 `__AVX__` 預處理器符號。 指定 **/arch： AVX2**或 **/arch： AVX512**編譯器選項時，會定義 `__AVX2__` 預處理器符號。 當指定 **/arch： AVX512**編譯器選項時，會定義 `__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 @no__t 4 預處理器符號。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**選項是在 Visual Studio 2013 Update 2，版本12.0.34567.1 中引進。 有限的 **/arch 支援： AVX512**已在 Visual Studio 2017 中新增，並在 Visual Studio 2019 中展開。
+指定 **/arch： AVX**、 **/arch： AVX2**或 **/arch： AVX512**編譯器選項時，會定義 `__AVX__` 預處理器符號。 指定 **/arch： AVX2**或 **/arch： AVX512**編譯器選項時，會定義 `__AVX2__` 的預處理器符號。 指定 **/arch： AVX512**編譯器選項時，會定義 `__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 `__AVX512VL__` 預處理器符號。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**選項是在 Visual Studio 2013 Update 2，版本12.0.34567.1 中引進。 有限的 **/arch 支援： AVX512**已在 Visual Studio 2017 中新增，並在 Visual Studio 2019 中展開。
 
 ### <a name="to-set-the-archavx-archavx2-or-archavx512-compiler-option-in-visual-studio"></a>若要在 Visual Studio 中設定/arch： AVX、/arch： AVX2 或/arch： AVX512 編譯器選項
 
@@ -62,7 +62,7 @@ ms.locfileid: "71816230"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。
+- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
 ## <a name="see-also"></a>另請參閱
 

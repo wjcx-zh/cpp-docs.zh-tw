@@ -24,7 +24,7 @@ ms.locfileid: "72444895"
 
 ## <a name="syntax"></a>語法
 
-> **/analyze**[-] [ **： WX-** ] [ **： log** *filename*] [ **： quiet**] [ **： stacksize** *number*] [ **： max_paths** *number*] [ **： only**] [ **：規則***集規則*] [ **:p lugin***外掛程式-dll*]
+> **/analyze**[-] [ **： WX-** ] [ **： log** *filename*] [ **： quiet**] [ **： stacksize** *number*] [ **： max_paths** *number*] [ **： only**] [ **：規則***集規則*] [ **:p lugin** *外掛程式-dll*]
 
 ## <a name="arguments"></a>引數
 
@@ -43,7 +43,7 @@ ms.locfileid: "72444895"
 **/analyze： stacksize** *number*\
 與此選項搭配使用的*number*參數會指定產生警告[C6262](/visualstudio/code-quality/c6262)之堆疊框架的大小（以位元組為單位）。 *數位*前面的空格是選擇性的。 如果未指定此參數，預設會16KB 堆疊框架大小。
 
-**/analyze： max_paths** *number*\
+**/analyze： max_paths** *號碼*\
 與此選項搭配使用的*number*參數會指定要分析的程式碼路徑數目上限。 如果未指定此參數，則預設值為256。 較大的值會導致更完整的檢查，但是分析可能需要較長的時間。
 
 **/analyze：僅**\
@@ -54,7 +54,7 @@ ms.locfileid: "72444895"
 
 Visual Studio 隨附的規則集可在 *%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets*中找到。
 
-下列範例自訂規則集會指示規則引擎檢查是否有 C6001 和 C26494。 您可以將此檔案放在任何位置，只要它具有 @no__t 0 的副檔名，並在引數中提供完整路徑。
+下列範例自訂規則集會指示規則引擎檢查是否有 C6001 和 C26494。 您可以將此檔案放在任何位置，只要它具有 `.ruleset` 副檔名，並在引數中提供完整路徑。
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -106,7 +106,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 [設定**屬性**]  >  [程式**代碼分析** > **一般**] 屬性頁。
+1. 選取 [設定**屬性**] > [程式**代碼分析** > **一般**] 屬性頁。
 
 1. 修改一或多個程式**代碼分析**屬性。
 
@@ -114,7 +114,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 1. 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)\
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用工作和 XML HTTP 要求進行連接
+title: 逐步解說：使用工作和 XML HTTP 要求連線
 ms.date: 04/25/2019
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 09/25/2019
 ms.locfileid: "69512144"
 ---
-# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求進行連接
+# <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>逐步解說：使用工作和 XML HTTP 要求連線
 
 這個範例示範如何使用[IXMLHTTPRequest2](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2)和[IXMLHTTPRequest2Callback](/windows/win32/api/msxml6/nn-msxml6-ixmlhttprequest2callback)介面搭配工作，將 HTTP GET 和 POST 要求傳送至通用 Windows 平臺（UWP）應用程式中的 web 服務。 將 `IXMLHTTPRequest2` 與工作結合之後，您就可以撰寫程式碼來撰寫其他工作。 例如，您可以使用下載工作做為工作鏈結的一部分。 當工作取消時，下載工作也可以回應。
 
@@ -24,10 +24,10 @@ ms.locfileid: "69512144"
 
 本文件會先說明如何建立 `HttpRequest` 及其支援的類別。 接著，它會示範如何從使用C++和 XAML 的 UWP 應用程式使用這個類別。
 
-如需使用`IXMLHTTPRequest2`但不使用工作的範例，請參閱[快速入門：使用 XML HTTP 要求（IXMLHTTPRequest2）](/previous-versions/windows/apps/hh770550\(v=win.10\))進行連接。
+如需使用 `IXMLHTTPRequest2` 但不使用工作的範例，請參閱[快速入門：使用 XML HTTP 要求連接（IXMLHTTPRequest2）](/previous-versions/windows/apps/hh770550\(v=win.10\))。
 
 > [!TIP]
->  `IXMLHTTPRequest2`和`IXMLHTTPRequest2Callback`是我們建議在 UWP 應用程式中使用的介面。 您也可以調整這個範例，讓它能夠用於傳統型應用程式。
+>  `IXMLHTTPRequest2` 和 `IXMLHTTPRequest2Callback` 是我們建議在 UWP 應用程式中使用的介面。 您也可以調整這個範例，讓它能夠用於傳統型應用程式。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -39,13 +39,13 @@ UWP 支援在 Visual Studio 2017 和更新版本中是選擇性的。 若要安�
 
 `GetAsync` 類別的 `PostAsync` 和 `HttpRequest` 方法可讓您分別啟動 HTTP GET 和 POST 作業。 這些方法會使用 `HttpRequestStringCallback` 類別讀取字串形式的伺服器回應。 `SendAsync` 和 `ReadAsync` 方法可讓您將大型內容區塊串流在一起。 這些方法都會傳回[concurrency：： task](../../parallel/concrt/reference/task-class.md)來表示作業。 `GetAsync` 和 `PostAsync` 方法會產生 `task<std::wstring>` 值，而 `wstring` 組件則表示伺服器的回應。 `SendAsync` 和 `ReadAsync` 方法會產生 `task<void>` 值，這些工作會在傳送及讀取作業完成時完成。
 
-因為介面會以非同步方式運作，所以這個範例會使用[concurrency：： task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)建立在回呼物件完成或取消下載作業之後完成的工作。 `IXMLHTTPRequest2` `HttpRequest` 類別會從這個工作建立工作為主的接續，以設定最終結果。 `HttpRequest` 類別會使用工作為主的接續，確保前一項工作產生錯誤或取消時，接續工作仍會執行。 如需以工作為基礎之接續的詳細資訊，請參閱工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則
+因為 `IXMLHTTPRequest2` 介面會以非同步方式執行，所以這個範例會使用[concurrency：： task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)建立在回呼物件完成或取消下載作業之後完成的工作。 `HttpRequest` 類別會從這個工作建立工作為主的接續，以設定最終結果。 `HttpRequest` 類別會使用工作為主的接續，確保前一項工作產生錯誤或取消時，接續工作仍會執行。 如需以工作為基礎之接續的詳細資訊，請參閱工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則
 
-為了支援取消，`HttpRequest`、`HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 類別會使用取消語彙基元。 和類別會使用[concurrency：： cancellation_token：： register_callback](reference/cancellation-token-class.md#register_callback)方法，讓工作完成事件能夠回應取消作業。 `HttpRequestStringCallback` `HttpRequestBuffersCallback` 這個取消收回呼會中止下載。 如需取消的詳細資訊，請參閱[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。
+為了支援取消，`HttpRequest`、`HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 類別會使用取消語彙基元。 `HttpRequestBuffersCallback` 和 `HttpRequestStringCallback` 類別會使用[concurrency：： cancellation_token：： register_callback](reference/cancellation-token-class.md#register_callback)方法，讓工作完成事件能夠回應取消作業。 這個取消收回呼會中止下載。 如需取消的詳細資訊，請參閱[取消](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)。
 
 #### <a name="to-define-the-httprequest-class"></a>若要定義 HttpRequest 類別
 
-1. 從主功能表中 **，選擇 [**  > 檔案] [**新增** > ] [**專案**]。 
+1. 從主功能表中 **，選擇 [** 檔案] > [**新增** > **專案**]。 
 
 1. 使用 [ C++ **空白應用程式（通用 Windows）** ] 範本來建立空白的 XAML 應用程式專案。 這個範例會將專案命名為 `UsingIXMLHTTPRequest2`。
 
@@ -65,7 +65,7 @@ UWP 支援在 Visual Studio 2017 和更新版本中是選擇性的。 若要安�
 
 ## <a name="using-the-httprequest-class-in-a-uwp-app"></a>在 UWP 應用程式中使用 HttpRequest 類別
 
-本節示範如何在 UWP 應用程式`HttpRequest`中使用類別。 應用程式提供了定義 URL 資源的輸入方塊、執行 GET 和 POST 作業的按鈕命令，以及取消目前作業的按鈕命令。
+本節示範如何在 UWP 應用程式中使用 `HttpRequest` 類別。 應用程式提供了定義 URL 資源的輸入方塊、執行 GET 和 POST 作業的按鈕命令，以及取消目前作業的按鈕命令。
 
 #### <a name="to-use-the-httprequest-class"></a>若要使用 HttpRequest 類別
 
@@ -94,17 +94,17 @@ UWP 支援在 Visual Studio 2017 和更新版本中是選擇性的。 若要安�
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
    > [!TIP]
-   > 如果您的應用程式不需要支援取消，請將[concurrency：： cancellation_token：： none](reference/cancellation-token-class.md#none)傳遞`HttpRequest::GetAsync`至`HttpRequest::PostAsync`和方法。
+   > 如果您的應用程式不需要支援取消，請將[concurrency：： cancellation_token：： none](reference/cancellation-token-class.md#none)傳遞給 `HttpRequest::GetAsync` 和 `HttpRequest::PostAsync` 方法。
 
 1. 在 MainPage.xaml.cpp 中實作 `MainPage::ProcessHttpRequest` 方法。
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-8. 在專案屬性的 [**連結器**]底下，輸入`shcore.lib` ， `msxml6.lib`指定和。
+8. 在 [專案屬性] 的 [**連結器**] 底下，**輸入**，指定 `shcore.lib` 和 `msxml6.lib`。
 
 執行的應用程式如下：
 
-![正在執行的 Windows 執行階段應用程式](../../parallel/concrt/media/concrt_usingixhr2.png "正在執行的 Windows 執行階段應用程式")
+執行中的![Windows 執行階段應用程式]正在執行(../../parallel/concrt/media/concrt_usingixhr2.png "的 Windows 執行階段應用程式")
 
 ## <a name="next-steps"></a>後續步驟
 
@@ -116,6 +116,6 @@ UWP 支援在 Visual Studio 2017 和更新版本中是選擇性的。 若要安�
 [PPL 中的取消](cancellation-in-the-ppl.md)<br/>
 [中的非同步程式設計C++](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)<br/>
 [在 C++ for UWP 應用程式中建立非同步作業](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)<br/>
-[快速入門：使用 XML HTTP 要求（IXMLHTTPRequest2）](/previous-versions/windows/apps/hh770550\(v=win.10\)) 
-工作類別連接[（並行執行階段）](../../parallel/concrt/reference/task-class.md)<br/>
+[快速入門：使用 XML HTTP 要求（IXMLHTTPRequest2）連接](/previous-versions/windows/apps/hh770550\(v=win.10\))
+工作[類別（並行執行階段）](../../parallel/concrt/reference/task-class.md)<br/>
 [task_completion_event 類別](../../parallel/concrt/reference/task-completion-event-class.md)

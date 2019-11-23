@@ -111,7 +111,7 @@ cl : Command line error D8003 : missing source filename
 
 - **針對最新編譯器版本。** 如果可能的話，重現應該使用最新版本工具組的最新更新。 或者，使用下次更新的最新發行前版本或下一個主要版本。 在新版本中，通常已修正舊版工具組中所發現的問題。 只有在例外狀況下，修正程式才會往回移植到較舊的版本。
 
-- **針對其他編譯器檢查** (如果相關)。 涉及可攜式 C++ 程式碼的報表應該確認其他編譯器行為 (可能的話)。 C++ Standard 最終會判斷程式正確性，而且沒有編譯器是完美的。 不過，當 Clang 和 GCC 接受沒有診斷的程式碼而 MSVC 不接受時，您可能會在我們的編譯器中發現一個 Bug。 (其他可能性包含 Unix 和 Windows 行為的差異，或不同層級的 C++ Standard 實作等等)。當所有編譯器都拒絕您的程式碼時，則您的程式碼可能不正確。 查看不同的錯誤訊息可以協助您自行診斷問題。
+- **針對其他編譯器檢查** (如果相關)。 涉及可攜式 C++ 程式碼的報表應該確認其他編譯器行為 (可能的話)。 C++ Standard 最終會判斷程式正確性，而且沒有編譯器是完美的。 不過，當 Clang 和 GCC 接受沒有診斷的程式碼而 MSVC 不接受時，您可能會在我們的編譯器中發現一個 Bug。 （其他可能性包括 Unix 和 Windows 行為的差異，或不同層級C++的標準執行等等）。當所有編譯器都拒絕您的程式碼時，可能是您的程式碼不正確。 查看不同的錯誤訊息可以協助您自行診斷問題。
 
    您可以在 ISO C++ 網站的[線上 C++ 編譯器](https://isocpp.org/blog/2013/01/online-c-compilers)中，或 GitHub 上這個策劃的[線上 C++ 編譯器清單](https://arnemertz.github.io/online-compilers/)，尋找線上編譯器清單來測試您的程式碼。 某些特定範例包含 [Wandbox](https://wandbox.org/)、[編譯器總管](https://godbolt.org/)和 [Coliru](https://coliru.stacked-crooked.com/)。
 
@@ -151,7 +151,7 @@ INTERNAL COMPILER ERROR in 'd:\o\dev\otools\bin\x64\cl.exe'
 
 後端損毀是在編譯器的程式碼產生階段期間發生。 通常，編譯器會發出[嚴重錯誤 C1001](../error-messages/compiler-errors-1/fatal-error-c1001.md)，而且它可能不會參考與問題相關聯的原始程式碼檔和行號。 它通常會提及檔案編譯器 \\utc\\src\\p2\\main.c，但是您可以忽略這個詳細資料。
 
-針對這種損毀，如果您要使用由 cl.exe 的 **/GL** 命令列引數所啟用的連結時產生程式碼 (LTCG)，請提供[連結重現](#link-repros)。 否則，請改成提供[前置處理過的重現](#preprocessed-repros)。
+針對這種損毀，如果您要使用由 cl.exe 的 [/GL](#link-repros) 命令列引數所啟用的連結時產生程式碼 (LTCG)，請提供**連結重現**。 否則，請改成提供[前置處理過的重現](#preprocessed-repros)。
 
 以下是未使用 LTCG 這種後端損毀的範例編譯器輸出。 如果您的編譯器輸出看起來如下所示，則應該提供[前置處理過的重現](#preprocessed-repros)。
 
@@ -221,7 +221,7 @@ CONTEXT:
 
 產生錯誤的程式碼十分罕見。 當編譯器錯誤地產生不正確的程式碼讓您的應用程式在執行階段損毀時會發生這個情況。 但是，它應該產生正確的程式碼，或在編譯時期偵測問題。 如果您認為所發現的問題會導致產生錯誤的程式碼，請使用與[後端 (程式碼產生) 損毀](#backend-code-generation-crash)相同的方式來處理報表。
 
-針對這種損毀，如果您要使用 cl.exe 的 **/GL** 命令列引數，請提供[連結重現](#link-repros)。 否則，請提供[前置處理過的重現](#preprocessed-repros)。
+針對這種損毀，如果您要使用 cl.exe 的 [/GL](#link-repros) 命令列引數，請提供**連結重現**。 否則，請提供[前置處理過的重現](#preprocessed-repros)。
 
 ## <a name="how-to-generate-a-repro"></a>如何產生重現
 
@@ -318,9 +318,9 @@ CONTEXT:
 
 ### <a name="link-repros"></a>連結重現
 
-*連結重現*是由**連結 @ no__t-2repro**環境變數所指定的連結器產生的目錄內容，或做為[/LINKREPRO](../build/reference/linkrepro.md)連結器選項的引數。 它包含的組建成品可以統一示範在連結時發生的問題。 例如涉及連結時產生程式碼 (LTCG) 的後端損毀或是連結器損毀。 這些組建成品是連結器輸入所需的構件，因此可以重現問題。 藉由使用此環境變數，可以輕鬆地建立連結重現。 它可啟用連結器的內建重現產生功能。
+*連結重現*是由連結器產生的目錄內容， **\_重現**環境變數所指定，或做為[/LINKREPRO](../build/reference/linkrepro.md)連結器選項的引數。 它包含的組建成品可以統一示範在連結時發生的問題。 例如涉及連結時產生程式碼 (LTCG) 的後端損毀或是連結器損毀。 這些組建成品是連結器輸入所需的構件，因此可以重現問題。 藉由使用此環境變數，可以輕鬆地建立連結重現。 它可啟用連結器的內建重現產生功能。
 
-#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>若要使用 link_repro 環境變數產生連結重現
+#### <a name="to-generate-a-link-repro-using-the-link_repro-environment-variable"></a>使用 link_repro 環境變數產生連結重現
 
 1. 擷取用來建置重現的命令列引數，如[回報命令列內容](#to-report-the-contents-of-the-command-line)中所述。
 
@@ -330,7 +330,7 @@ CONTEXT:
 
 1. 輸入**mkdir linkrepro**以建立名為*linkrepro*的目錄，以進行連結重現。 您可以使用不同的名稱來捕捉另一個連結重現。
 
-1. 輸入 **set link\_repro=linkrepro** 命令，以便將 **link\_repro** 環境變數設為您所建立的目錄。 如果您的組建是從不同的目錄執行，通常是更複雜的專案，請將**link @ no__t-1repro**改為連結重現目錄的完整路徑。
+1. 輸入 **set link\_repro=linkrepro** 命令，以便將 **link\_repro** 環境變數設為您所建立的目錄。 如果您的組建是從不同的目錄執行，通常是較複雜專案的情況，請將**連結\_重現**，改為連結重現目錄的完整路徑。
 
 1. 若要在 Visual Studio 中建置重現專案，請在開發人員命令提示字元主控台視窗中輸入 **devenv** 命令。 這確保 Visual Studio 可以看到 **link\_repro** 環境變數的值。 若要在命令列中建置專案，請使用上面擷取的命令列引數來複製重現組建。
 
@@ -342,13 +342,13 @@ CONTEXT:
 
 最後，將整個 linkrepro 目錄壓縮成 .zip 檔案或類似檔案來封裝重現，並將它附加至您的報表。
 
-**/LINKREPRO**連結器選項與**link @ no__t-2repro**環境變數具有相同的效果。 您可以使用[/LINKREPROTARGET](../build/reference/linkreprotarget.md)選項來指定要針對產生的連結重現進行篩選的名稱。 若要使用 **/LINKREPROTARGET**，您也必須指定 **/out**連結器選項。
+**/LINKREPRO**連結器選項與**連結\_重現**環境變數的效果相同。 您可以使用[/LINKREPROTARGET](../build/reference/linkreprotarget.md)選項來指定要針對產生的連結重現進行篩選的名稱。 若要使用 **/LINKREPROTARGET**，您也必須指定 **/out**連結器選項。
 
 #### <a name="to-generate-a-link-repro-using-the-linkrepro-option"></a>若要使用/LINKREPRO 選項產生連結重現
 
 1. 建立目錄來保存連結重現。 我們會參考您建立為_目錄路徑_的完整目錄路徑。 如果路徑包含空格，請以雙引號括住。
 
-1. 將 **/LINKREPRO：** _directory-path_命令新增至連結器命令列。 在 Visual Studio 中，開啟專案的 [**屬性頁**] 對話方塊。 選取 設定**屬性**  > **連結器** > **命令列** 屬性頁。 然後，在 [**其他選項**] 方塊中，輸入 **/LINKREPRO：** _directory-path_選項。 選取 [確定] 儲存您的變更。
+1. 將 **/LINKREPRO：** _directory-path_命令新增至連結器命令列。 在 Visual Studio 中，開啟專案的 [**屬性頁**] 對話方塊。 選取 [設定**屬性**] > **連結器** > [**命令列**] 屬性頁。 然後，在 [**其他選項**] 方塊中，輸入 **/LINKREPRO：** _directory-path_選項。 選取 [確定] 儲存您的變更。
 
 1. 建置重現專案，並確認發生預期的問題。
 
@@ -356,7 +356,7 @@ CONTEXT:
 
 ### <a name="other-repros"></a>其他重現
 
-如果您無法將問題減少為單一原始程式檔或前置處理過的重現，而且問題不需要連結重現，我們可以調查 IDE 專案。 所有如何建立良好重現的指引仍然適用：程式碼應該最少且獨立。 我們的最新工具中應該會發生問題，而且如果相關，則問題應該不會出現在其他編譯器中。
+如果您無法將問題減少為單一原始程式檔或前置處理過的重現，而且問題不需要連結重現，我們可以調查 IDE 專案。 有關如何建立良好重現的所有指引仍適用：程式碼應該是最小且獨立的。 我們的最新工具中應該會發生問題，而且如果相關，則問題應該不會出現在其他編譯器中。
 
 將重現建立為最少 IDE 專案，然後將整個目錄結構壓縮成 .zip 檔案或類似檔案以進行封裝，並將其附加至報表。
 

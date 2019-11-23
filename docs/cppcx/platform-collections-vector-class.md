@@ -57,7 +57,7 @@ Vector 物件中包含的元素型別。
 
 1. 公用 ref 類別^
 
-1. value struct
+1. 實值結構
 
 1. 公用列舉類別
 
@@ -65,38 +65,38 @@ Vector 物件中包含的元素型別。
 
 如果您嘗試在公用傳回值或參數中使用**向量**類型，則會引發編譯器錯誤則 c3986。 您可以將參數或傳回值類型變更為 [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)來修正錯誤。 如需詳細資訊，請參閱 [集合 (C++/CX)](../cppcx/collections-c-cx.md)。
 
-### <a name="members"></a>成員
+### <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[Vector::Vector](#ctor)|初始化 Vector 類別的新執行個體。|
+|[Vector：： Vector](#ctor)|初始化 Vector 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[Vector::Append](#append)|在目前 Vector 的最後一個項目之後插入指定的項目。|
-|[Vector::Clear](#clear)|刪除目前 Vector 的所有項目。|
-|[Vector::First](#first)|傳回迭代器，指定 Vector 中的第一個項目。|
-|[Vector::GetAt](#getat)|擷取由指定之索引所識別的目前 Vector 項目。|
-|[Vector::GetMany](#getmany)|從目前 Vector 中，由指定的索引處開始，擷取一連串項目。|
-|[Vector::GetView](#getview)|傳回 Vector 的唯讀檢視，也就是 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
-|[Vector::IndexOf](#indexof)|在目前 Vector 中搜尋指定的項目，如果找到，則傳回項目的索引。|
-|[Vector::InsertAt](#insertat)|將指定的項目插入至目前 Vector 中，指定之索引所識別項目的後面。|
-|[Vector::ReplaceAll](#replaceall)|刪除目前 Vector 中的元素，然後從指定的陣列插入元素。|
-|[Vector::RemoveAt](#removeat)|從目前向量中刪除指定索引所識別的元素。|
-|[Vector::RemoveAtEnd](#removeatend)|刪除目前 Vector 結尾處的項目。|
-|[Vector::SetAt](#setat)|在目前 Vector 中，將指定的值指派給由指定的索引所識別的元素。|
-|[Vector::Size](#size)|傳回目前 Vector 物件中的項目數。|
+|[Vector：： Append](#append)|在目前 Vector 的最後一個項目之後插入指定的項目。|
+|[Vector：： Clear](#clear)|刪除目前 Vector 的所有項目。|
+|[Vector：： First](#first)|傳回迭代器，指定 Vector 中的第一個項目。|
+|[Vector：： GetAt](#getat)|擷取由指定之索引所識別的目前 Vector 項目。|
+|[Vector：： GetMany](#getmany)|從目前 Vector 中，由指定的索引處開始，擷取一連串項目。|
+|[Vector：： GetView](#getview)|傳回 Vector 的唯讀檢視，也就是 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
+|[Vector：： IndexOf](#indexof)|在目前 Vector 中搜尋指定的項目，如果找到，則傳回項目的索引。|
+|[Vector：： InsertAt](#insertat)|將指定的項目插入至目前 Vector 中，指定之索引所識別項目的後面。|
+|[Vector：：型全部型](#replaceall)|刪除目前 Vector 中的元素，然後從指定的陣列插入元素。|
+|[Vector：： RemoveAt](#removeat)|從目前向量中刪除指定索引所識別的元素。|
+|[Vector：： RemoveAtEnd](#removeatend)|刪除目前 Vector 結尾處的項目。|
+|[Vector：： SetAt](#setat)|在目前 Vector 中，將指定的值指派給由指定的索引所識別的元素。|
+|[Vector：： Size](#size)|傳回目前 Vector 物件中的項目數。|
 
-### <a name="events"></a>Events
+### <a name="events"></a>事件
 
 |||
 |-|-|
-|Name|描述|
-|事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler @ no__t-1T > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector 變更時發生。|
+|名稱|描述|
+|事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector 變更時發生。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -149,7 +149,7 @@ virtual Windows::Foundation::Collections::IIterator <T>^ First();
 
 ### <a name="remarks"></a>備註
 
-若要保留 First （）所傳回的反覆運算器，有一個方便的方式，就是將傳回值指派給使用**auto**類型推斷關鍵字所宣告的變數。 例如： `auto x = myVector->First();` 。 此迭代器知道集合的長度。
+若要保留 First （）所傳回的反覆運算器，有一個方便的方式，就是將傳回值指派給使用**auto**類型推斷關鍵字所宣告的變數。 例如，`auto x = myVector->First();`。 此迭代器知道集合的長度。
 
 當您需要一組要傳遞至 STL 函式的反覆運算器時，請使用[Windows：： Foundation：： collection：： begin](../cppcx/begin-function.md)和[Windows：： foundation：： collection：： end](../cppcx/end-function.md)函數的 free 函式。
 
@@ -198,7 +198,7 @@ virtual unsigned int GetMany(
 
 ### <a name="remarks"></a>備註
 
-此函式並非直接供用戶端程式碼使用。 它會在內部用於[to_vector](../cppcx/to-vector-function.md)函式，以有效率地將 Platform：： vector 實例轉換為 std：： vector 實例。
+此函式並非直接供用戶端程式碼使用。 它會在[to_vector](../cppcx/to-vector-function.md)函式內部使用，以有效率地將 Platform：： vector 實例轉換為 std：： vector 實例。
 
 ## <a name="getview"></a>Vector：： GetView 方法
 
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>參數
 
-*value*<br/>
+*值*<br/>
 要尋找的項目。
 
 *index*<br/>
@@ -257,7 +257,7 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*item*<br/>
+*專案*<br/>
 *索引*所指定的專案之後，要插入向量的專案。 *專案*的類型是由*T* typename 所定義。
 
 ## <a name="removeat"></a>Vector：： RemoveAt 方法
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*item*<br/>
+*專案*<br/>
 要指派給指定項目的值。 *專案*的類型是由*T* typename 所定義。
 
 ## <a name="size"></a>Vector：： Size 方法
@@ -363,7 +363,7 @@ Vector(std::initializer_list<T> il);
 *arr*<br/>
 將用來初始化 Vector 的[Platform：： Array](../cppcx/platform-array-class.md) 。
 
-*InIt*<br/>
+*初始*<br/>
 用來初始化目前 Vector 的物件集合類型。
 
 *il*<br/>
@@ -375,7 +375,7 @@ Vector(std::initializer_list<T> il);
 *size*<br/>
 Vector 中的項目數。
 
-*value*<br/>
+*值*<br/>
 用來初始化目前 Vector 中各個項目的值。
 
 *v*<br/>
@@ -384,7 +384,7 @@ Vector 中的項目數。
 *ptr*<br/>
 用來初始化目前 Vector 之 `std::vector` 的指標。
 
-*first*<br/>
+*頭*<br/>
 用來初始化目前 Vector 之物件序列中的第一個項目。 *第一個*類型是透過*完美轉送*的方式傳遞。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
 *次*<br/>

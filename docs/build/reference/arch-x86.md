@@ -21,19 +21,19 @@ ms.locfileid: "71816322"
 
 ## <a name="arguments"></a>引數
 
-**/arch:IA32**<br/>
+**/arch： IA32**<br/>
 指定沒有增強的指令，同時指定用於浮點數計算的 x87。
 
-**/arch:SSE**<br/>
+**/arch： SSE**<br/>
 啟用 SSE 指令的使用。
 
-**/arch:SSE2**<br/>
+**/arch： SSE2**<br/>
 啟用 SSE2 指令的使用。 這是在 x86 平臺上的預設指示（如果未指定 **/arch**選項）。
 
 **/arch:AVX**<br/>
 啟用 Intel Advanced Vector Extensions 指令的使用。
 
-**/arch:AVX2**<br/>
+**/arch： AVX2**<br/>
 啟用 Intel Advanced Vector Extensions 2 指令的使用。
 
 **/arch： AVX512**<br/>
@@ -89,7 +89,7 @@ int convert_double_to_int(double x) {
 }
 ```
 
-@No__t-0，`__AVX__`，`__AVX2__`，`__AVX512F__`，`__AVX512CD__`，`__AVX512BW__`，`__AVX512DQ__`，@no__t 7 宏表示使用了哪一個（如果有的話） **/arch**編譯器選項。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**選項和 @no__t 1 宏是在 Visual Studio 2013 Update 2，版本12.0.34567.1 中引進。 有限的 **/arch 支援： AVX512**已在 Visual Studio 2017 中新增，並在 Visual Studio 2019 中展開。
+`_M_IX86_FP`、`__AVX__`、`__AVX2__`、`__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 `__AVX512VL__` 宏會指出使用了哪個 **/arch**編譯器選項（如果有的話）。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**選項和 `__AVX2__` 宏是在 Visual Studio 2013 Update 2，版本12.0.34567.1 中引進。 有限的 **/arch 支援： AVX512**已在 Visual Studio 2017 中新增，並在 Visual Studio 2019 中展開。
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>若要在 Visual Studio 中為 AVX、AVX2、AVX512、IA32、SSE 或 SSE2 設定此編譯器選項
 
@@ -103,7 +103,7 @@ int convert_double_to_int(double x) {
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。
+- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
 ## <a name="see-also"></a>另請參閱
 

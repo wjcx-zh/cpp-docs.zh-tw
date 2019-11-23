@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - .LIST directive
 ms.assetid: f7e134de-6039-4343-b921-f70aea5e1c96
-ms.openlocfilehash: c4a43ad0edec6bf85b55e09e799d64cc8d4308fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74034b82a109c12836189b657cceffbfeaab4a6
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185170"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398182"
 ---
 # <a name="list"></a>.LIST
 
-啟動陳述式的清單。
+Starts listing of statements.
 
 ## <a name="syntax"></a>語法
 
-> .LIST
+> **.LIST**
 
 ## <a name="remarks"></a>備註
 
 這是預設值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

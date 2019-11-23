@@ -6,62 +6,62 @@ f1_keywords:
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: f37be47b92a71e20821cd1e40f8cf1350dfedaff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210371"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74393732"
 ---
 # <a name="segment"></a>SEGMENT
 
-定義呼叫的程式區段*名稱*區段屬性
+Defines a program segment called *name* having segment attributes
 
 ## <a name="syntax"></a>語法
 
-> *name* SEGMENT [[READONLY]] [[*align*]] [[*combine*]] [[*use*]] [[*characteristics*]] ALIAS(*string*) [['*class*']]<br/>
-> *statements*<br/>
-> *名稱*結束
+> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
+> *statements*\
+> *name* **ENDS**
 
 #### <a name="parameters"></a>參數
 
 *align*<br/>
-可從中選取區段的起始位址的記憶體位址範圍。 對齊類型可以是下列其中一項動作：
+The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
 
-|對齊類型|起始位址|
+|Align Type|Starting Address|
 |----------------|----------------------|
-|**BYTE**|下一個可用的位元組位址。|
-|**WORD**|下一個可用的字位址 （每個字的 2 個位元組）。|
-|**DWORD**|下一個可用的雙精度浮點數字位址 （每個雙字組 4 個位元組）。|
-|**PARA**|下一個可用的段落位址 （每個段落的 16 位元組）。|
-|**PAGE**|下一個可用的頁面位址 （每一頁的 256 個位元組）。|
-|**ALIGN**(*n*)|下一個可用*n*個位元組的位址。 如需詳細資訊，請參閱 < 備註 > 一節。|
+|**BYTE**|Next available byte address.|
+|**WORD**|Next available word address (2 bytes per word).|
+|**DWORD**|Next available double word address (4 bytes per double word).|
+|**PARA**|Next available paragraph address (16 bytes per paragraph).|
+|**PAGE**|Next available page address (256 bytes per page).|
+|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
 
-如果未指定此參數，**並行**預設會使用。
+If this parameter is not specified, **PARA** is used by default.
 
-*combine*<br/>
-**公用**，**堆疊**，**常見**，**記憶體**，**在**<em>位址</em>， **私用**
+*combine*\
+**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
 
-*use*<br/>
-**USE16**， **USE32**，**一般**
+*use*\
+**USE16**, **USE32**, **FLAT**
 
-*characteristics*<br/>
-**INFO**，**閱讀**，**撰寫**， **EXECUTE**，**共用**， **NOPAGE**， **NOCACHE**，和**捨棄**
+*characteristics*\
+**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
 
-這些只支援 COFF，並對應至 COFF 區段的特性相似的名稱 (例如**共用**對應至 IMAGE_SCN_MEM_SHARED)。 讀取設定 IMAGE_SCN_MEM_READ 旗標。 過時的唯讀旗標會造成要清除 IMG_SCN_MEM_WRITE 旗標的區段。 如果有的話*特性*設定，不會使用預設的特性，而且只有程式設計師指定旗標作用中。
+These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
 
-`ALIAS(` *字串* `)`<br/>
-這個字串做為發出 COFF 物件中的區段名稱。  建立多個區段具有相同的外部名稱，具有相異的 MASM 區段名稱。
+_string_\
+This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
 
-不支援使用 **/omf**。
+Not supported with **/omf**.
 
-*class*<br/>
-指定應該如何組合和排列組合的檔案中的區段。 典型值為， `'DATA'`， `'CODE'`，`'CONST'`和 `'STACK'`
+*class*\
+Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
 
 ## <a name="remarks"></a>備註
 
-針對`ALIGN(n)`， *n*可以是任何 2 的乘冪從 1 到 8192; 不支援 **/omf**。
+For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

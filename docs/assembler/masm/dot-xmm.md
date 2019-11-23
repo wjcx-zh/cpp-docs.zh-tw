@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .XMM directive
 ms.assetid: db3062b6-8b2f-469b-aa02-df6571eab3ba
-ms.openlocfilehash: 9d22d0de98dfb72dc301dfca276175df00b0498f
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 58207ba2f119969f00614cd2dba70e2dc2da718c
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704027"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397778"
 ---
-# <a name="xmm-32-bit-masm"></a>.XMM （32位 MASM）
+# <a name="xmm-32-bit-masm"></a>.XMM (32-bit MASM)
 
-啟用網際網路串流 SIMD 擴充功能指示的元件。 （僅限 32-bit MASM）。
+Enables assembly of Internet Streaming SIMD Extension instructions. (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .XMM
+> **.XMM**
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

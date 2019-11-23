@@ -8,21 +8,21 @@ helpviewer_keywords:
 - operator SHR
 - SHR operator
 ms.assetid: f7b401bd-e3b3-495e-b83d-b6b9cde0a30d
-ms.openlocfilehash: fe8baeaaf00db4971fcdc2b5179c3bdc67c85e86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9c71e84ab93193755ba38d36b57b1368c0ed8fd
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176378"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74396153"
 ---
 # <a name="operator-shr"></a>運算子 SHR
 
-移位的位元的結果會傳回*運算式*右*計數*的位元數字。
+Returns the result of shifting the bits of *expression* right *count* number of bits.
 
 ## <a name="syntax"></a>語法
 
-> 運算式 SHR 計數
+> *expression* **SHR** *count*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[Operators reference](operators-reference.md)

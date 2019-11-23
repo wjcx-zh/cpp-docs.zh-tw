@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - ENDM directive
 ms.assetid: 697ea303-1e47-4ee9-9e67-77b83c3fe35a
-ms.openlocfilehash: 709892c5b60864eafcb4a351c0d775e81597333a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2bdbe8eb22340a1952b33e5951a374da0ab87fb
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186188"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397656"
 ---
 # <a name="endm"></a>ENDM
 
-結束巨集或重複的區塊。
+Terminates a macro or repeat block.
 
 ## <a name="syntax"></a>語法
 
-> ENDM
+> **ENDM**
 
 ## <a name="remarks"></a>備註
 
-請參閱[巨集](../../assembler/masm/macro.md)，[如](../../assembler/masm/for-masm.md)， [FORC](../../assembler/masm/forc.md)，[重複](../../assembler/masm/repeat.md)，或**雖然**。
+See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

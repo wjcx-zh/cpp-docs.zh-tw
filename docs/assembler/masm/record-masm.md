@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - RECORD directive
 ms.assetid: c83db394-0fe3-468f-813f-13302cdc862d
-ms.openlocfilehash: 6464445975a84968dab79cfafc9c948337c9e5ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac11321ecd9610210fe776db83c3db49749d991a
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217128"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394604"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 
-宣告記錄類型，其中包含指定的欄位。 *fieldname*名稱 欄位中，*寬度*指定位元為單位的數目並*運算式*提供其初始值。
+Declares a record type consisting of the specified fields. *fieldname* names the field, *width* specifies the number of bits, and *expression* gives its initial value.
 
 ## <a name="syntax"></a>語法
 
-> *recordname*記錄*fieldname*:*寬度*[[=*運算式*]] [[， *fieldname*:*寬度*[[=*運算式*]]]]...
+> *recordname* **RECORD** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ...⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](../../assembler/masm/directives-reference.md)

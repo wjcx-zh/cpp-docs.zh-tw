@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: b08f1953aaf6b77925f38739c5ad79cec283617e
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: e4692e38cbbdda4ad09bdfa248c9bc386c27dd3d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703050"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398587"
 ---
-# <a name="break-32-bit-masm"></a>.BREAK （32位 MASM）
+# <a name="break-32-bit-masm"></a>.BREAK (32-bit MASM)
 
-產生程式碼以終止[。WHILE](../../assembler/masm/dot-while.md)或[。](../../assembler/masm/dot-repeat.md)If*條件*為 TRUE 時，重複 block。 （僅限 32-bit MASM）。
+Generates code to terminate a [.WHILE](../../assembler/masm/dot-while.md) or [.REPEAT](../../assembler/masm/dot-repeat.md) block if *condition* is true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .BREAK [[。IF 條件]]
+> **.BREAK** ⟦ **.IF** *condition*⟧
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-ms.openlocfilehash: d8eebd31092602c4ca6dead7493b08e225dd7658
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4900741bbe70ad9d97f694e2e4db200edee6a4a1
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178856"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398778"
 ---
 # <a name="df"></a>DF
 
-配置並選擇性地針對每個初始化 6 個位元組的儲存體`initializer`。 `DF` 是的同義字[FWORD](../../assembler/masm/fword.md)。
+Allocates and optionally initializes 6 bytes of storage for each *initializer*. **DF** is a synonym of [FWORD](../../assembler/masm/fword.md).
 
 ## <a name="syntax"></a>語法
 
-> [[name]]DF 初始設定式 [[，初始設定式]]...
+> ⟦*name*⟧ **DF** *initializer* ⟦ __,__ *initializer* ...⟧
 
 ## <a name="remarks"></a>備註
 
-也可用來當做型別規範的類型是合法的任何位置。
+Also can be used as a type specifier anywhere a type is legal.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

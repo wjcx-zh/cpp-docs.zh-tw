@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - '@fardata symbol'
 ms.assetid: b1e096b3-54fc-44ef-bbe6-0c6d5f5d206d
-ms.openlocfilehash: c5a659c0592103ac5c52729c09d37cbe94d3bad2
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0baf79493db318b69e346084963cb605a1738bed
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302611"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74399061"
 ---
 # <a name="fardata"></a>\@fardata
 
-所定義之區段的名稱[。FARDATA](../../assembler/masm/dot-fardata.md)指示詞（文字宏）。
+The name of the segment defined by the [.FARDATA](../../assembler/masm/dot-fardata.md) directive (text macro).
 
 ## <a name="syntax"></a>語法
 
@@ -23,4 +23,4 @@ ms.locfileid: "74302611"
 
 ## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)
+[Symbols reference](symbols-reference.md)

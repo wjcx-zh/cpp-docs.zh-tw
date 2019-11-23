@@ -6,22 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - Page directive
 ms.assetid: 6654c094-c1f7-4d10-8d9d-902ddd1ac27e
-ms.openlocfilehash: 0295cd05412045049944f118a42e0cd7a8c0e268
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40e2bf0f35e80a8e2dc04f2095c3e56048988e28
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210599"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395121"
 ---
 # <a name="page"></a>PAGE
 
-第一個指示詞設定線條*長度*和字元*寬度*的程式清單。 如果不提供任何引數，會產生一個分頁符號。 第二個指示詞遞增區段數目，並且將頁碼重設為 1。
+The first directive sets line *length* and character *width* of the program listing. If no arguments are given, generates a page break. The second directive increments the section number and resets the page number to 1.
 
 ## <a name="syntax"></a>語法
 
-> 頁面 [[*長度*]] [[，*寬度*]]<br/><br/>
-> 頁面 +
+> **PAGE** ⟦*length*⟧⟦ __,__ *width*⟧
 
-## <a name="see-also"></a>另請參閱
+> **PAGE +**
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+## <a name="see-also"></a>請參閱
+
+[Directives reference](../../assembler/masm/directives-reference.md)

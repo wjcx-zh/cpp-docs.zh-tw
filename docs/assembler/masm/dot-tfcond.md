@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .TFCOND directive
 ms.assetid: e3c0fe44-bf68-4397-bf31-61995c69c4c2
-ms.openlocfilehash: 614919200647d0f97392c9d226dc42d43e8a8fb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd735fcf53939edfde77230d54bb52d8c5e74f8f
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178263"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397877"
 ---
 # <a name="tfcond"></a>.TFCOND
 
-切換為 false 的條件式區塊清單。
+Toggles listing of false conditional blocks.
 
 ## <a name="syntax"></a>語法
 
-> .TFCOND
+> **.TFCOND**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

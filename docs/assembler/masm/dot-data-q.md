@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .DATA? directive
 ms.assetid: f454f8d7-e23b-458c-a2c4-8441f1afdc82
-ms.openlocfilehash: 93dcc302ec0a5d5e79ae6389e592e7dc2eb6c373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e70a18af9e932b4aad587df576e49f820881595
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204605"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398520"
 ---
 # <a name="data"></a>.DATA?
 
-當搭配[。模型](../../assembler/masm/dot-model.md)，啟動幾近的資料區段，如未初始化的資料 (區段名稱 _BSS)。
+When used with [.MODEL](../../assembler/masm/dot-model.md), starts a near data segment for uninitialized data (segment name _BSS).
 
 ## <a name="syntax"></a>語法
 
-> .DATA?
+> **.DATA?**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

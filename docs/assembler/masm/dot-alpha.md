@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .ALPHA directive
 ms.assetid: 3f9d1386-6367-4cd7-a37f-2cd1cd46f2d7
-ms.openlocfilehash: c1bcd330633a3f784f62ef2534b653d842f5ac5f
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: b8af6309c00d1dfbbc33d9b672f90617fbec3867
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73702919"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398609"
 ---
-# <a name="alpha-32-bit-masm"></a>.ALPHA （32位 MASM）
+# <a name="alpha-32-bit-masm"></a>.ALPHA (32-bit MASM)
 
-依字母順序排序區段。 （僅限 32-bit MASM）。
+Orders segments alphabetically. (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .ALPHA
+> **.ALPHA**
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

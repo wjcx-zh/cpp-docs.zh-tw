@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .STACK directive
 ms.assetid: 70019463-5d4f-41b6-8464-023a8ac2466f
-ms.openlocfilehash: 78c089c771e8e5a8c82905578ec2377246a44a0e
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: aabb2fc1267277aded4802fc8e1992f6a5c78ced
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703526"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397899"
 ---
-# <a name="stack-32-bit-masm"></a>.堆疊（32位 MASM）
+# <a name="stack-32-bit-masm"></a>.STACK (32-bit MASM)
 
-與搭配使用時[。MODEL](../../assembler/masm/dot-model.md)，定義堆疊區段（含有區段名稱堆疊）。 選擇性的 `size` 會指定堆疊的位元組數目（預設值1024）。 `.STACK` 指示詞會自動關閉堆疊語句。 （僅限 32-bit MASM）。
+When used with [.MODEL](../../assembler/masm/dot-model.md), defines a stack segment (with segment name **STACK**). The optional *size* specifies the number of bytes for the stack (default 1,024). The **.STACK** directive automatically closes the stack statement. (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .堆疊 [[大小]]
+> **.STACK** ⟦*size*⟧
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

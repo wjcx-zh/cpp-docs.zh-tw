@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - SDWORD directive
 ms.assetid: 12663144-2426-4b4e-aabd-dbe0b04321d0
-ms.openlocfilehash: cd4653078d54e9ab735a0472cedc4dc87b6fabee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11637b014a74fab8fdf75be7d6cddf662b9fb016
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210345"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74394139"
 ---
 # <a name="sdword"></a>SDWORD
 
-配置並選擇性地針對每個初始化帶正負號的雙字組 （4 個位元組） 的儲存體`initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+Allocates and optionally initializes a signed double word (4 bytes) of storage for each *initializer*. Also can be used as a type specifier anywhere a type is legal.
 
 ## <a name="syntax"></a>語法
 
-> 名稱 SDWORD 初始設定式 [[，初始設定式]]...
+> *name* **SDWORD** *initializer* ⟦ __,__ *initializer* ...⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
-[DWORD](../../assembler/masm/dword.md)<br/>
-[DD](../../assembler/masm/dd.md)<br/>
+[Directives Reference](../../assembler/masm/directives-reference.md)\
+[DWORD](../../assembler/masm/dword.md)\
+[DD](../../assembler/masm/dd.md)

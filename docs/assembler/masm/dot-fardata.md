@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: f25e5db4c5f17a5644db7fceea28eec29209e688
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 3a92bec747019cec1b14d3615ae5fb5a795fdc9d
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73703810"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398260"
 ---
-# <a name="fardata-32-bit-masm"></a>.FARDATA （32-位 MASM）
+# <a name="fardata-32-bit-masm"></a>.FARDATA (32-bit MASM)
 
-與搭配使用時[。模型](../../assembler/masm/dot-model.md)，針對已初始化的資料（區段名稱 FAR_DATA 或*名稱*）啟動最多的資料區段。 （僅限 32-bit MASM）。
+When used with [.MODEL](../../assembler/masm/dot-model.md), starts a far data segment for initialized data (segment name FAR_DATA or *name*). (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .FARDATA [[名稱]]
+> **.FARDATA** ⟦*name*⟧
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

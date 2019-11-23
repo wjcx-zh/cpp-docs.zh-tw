@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PUSHCONTEXT directive
 ms.assetid: 18e528ee-df6c-4ce6-8823-b35b40f757fd
-ms.openlocfilehash: b657b6519fd9e4cbd367eaefc984fd959618c57d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d042ad50fef6d9834b35b66c88b3f83ec4995d4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217240"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74395723"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-儲存目前的部分或全部`context`： 區段註冊假設基數值、 清單和 cref 旗標或處理器/副處理器的值。 `context`可以是**ASSUMES**， `RADIX`，**列出**， **CPU**，或**所有**。
+Saves part or all of the current *context*: segment register assumes, radix value, listing and cref flags, or processor/coprocessor values. The *context* can be **ASSUMES**, **RADIX**, **LISTING**, **CPU**, or **ALL**.
 
 ## <a name="syntax"></a>語法
 
-> PUSHCONTEXT 內容
+> **PUSHCONTEXT** *context*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

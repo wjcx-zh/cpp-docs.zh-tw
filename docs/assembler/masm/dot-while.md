@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - .WHILE directive
 ms.assetid: 7c5e78ae-1bfd-4dcf-aa4c-ba940bcf7793
-ms.openlocfilehash: 70a2405d28c3f7a40187d8b431a0f823cca55c6f
-ms.sourcegitcommit: 45f1d889df633f0f7e4a8e813b46fa73c9858b81
+ms.openlocfilehash: 32bb48bbf83f16d9604861f2cea71f9680b87de3
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73704216"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397833"
 ---
-# <a name="while-32-bit-masm"></a>.WHILE （32-bit MASM）
+# <a name="while-32-bit-masm"></a>.WHILE (32-bit MASM)
 
-當 `condition` 保持為 true 時，產生執行 `statements` 區塊的程式碼。 （僅限 32-bit MASM）。
+Generates code that executes the block of *statements* while *condition* remains true. (32-bit MASM only.)
 
 ## <a name="syntax"></a>語法
 
-> .WHILE 條件<br/>
-> 陳述式<br/>
-> .ENDW
+> **.WHILE** *condition*\
+> *statements*\
+> **.ENDW**
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

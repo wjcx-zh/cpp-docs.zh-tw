@@ -6,39 +6,39 @@ f1_keywords:
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 063689087b6114f9a2d544ef0b459bf594da3cc4
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179103"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398818"
 ---
 # <a name="comm"></a>COMM
 
-使用中指定的屬性建立微乎其微變數*定義*。
+Creates a communal variable with the attributes specified in *definition*.
 
 ## <a name="syntax"></a>語法
 
-> **COMM** *定義*[，*定義*]...
+> **COMM** *definition* ⟦ __,__ *definition* ...⟧
 
 ## <a name="remarks"></a>備註
 
-微乎其微變數所配置之連結器，因此無法初始化。 這表示您不能依賴這類變數的順序的位置。
+Communal variables are allocated by the linker, and can't be initialized. This means that you can't depend on the location or sequence of such variables.
 
-每個*定義*具有下列格式：
+Each *definition* has the following form:
 
-[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
+⟦*langtype*⟧ ⟦⦃**NEAR** &#124; **FAR**⦄⟧ _label_ **:** _type_⟦ **:** _count_⟧
 
-選擇性*langtype*設定後面的名稱的命名慣例。 它會覆寫所指定的任何語言 **。模型**指示詞。 選擇性**NEAR**或是**FAR**覆寫目前的記憶體模型。 *標籤*是變數的名稱。 *型別*可以是任何類型規範 ([位元組](../../assembler/masm/byte-masm.md)， [WORD](../../assembler/masm/word.md)等等) 或指定的位元組數目的整數。 選擇性*計數*宣告的資料物件中指定的元素數目的預設值是 1。
+The optional *langtype* sets the naming conventions for the name that follows. It overrides any language specified by the **.MODEL** directive. The optional **NEAR** or **FAR** override the current memory model. The *label* is the name of the variable. The *type* can be any type specifier ([BYTE](../../assembler/masm/byte-masm.md), [WORD](../../assembler/masm/word.md), and so on) or an integer specifying the number of bytes. The optional *count* specifies the number of elements in the declared data object; the default is one.
 
 ## <a name="example"></a>範例
 
-這個範例會建立陣列的 512 位元組的項目：
+This example creates an array of 512 BYTE elements:
 
 ```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[指示詞參考](../../assembler/masm/directives-reference.md)

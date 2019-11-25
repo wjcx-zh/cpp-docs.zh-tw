@@ -3648,24 +3648,7 @@
             - name: C++ 語言參考
               href: cpp/cpp-language-reference.md
             - name: 歡迎回到 C++ (新式 C++)
-              expanded: false
-              items:
-                - name: 歡迎回到 C++ (新式 C++)
-                  href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 統一初始化和委派建構函式
-                  href: cpp/uniform-initialization-and-delegating-constructors.md
-                - name: 物件存留期和資源管理 (新式 C++)
-                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
-                - name: 物件擁有資源 (RAII)
-                  href: cpp/objects-own-resources-raii.md
-                - name: 容器 (現代 C++)
-                  href: cpp/containers-modern-cpp.md
-                - name: 演算法 (現代 C++)
-                  href: cpp/algorithms-modern-cpp.md
-                - name: 字串和 I/O 格式化 (新式 C++)
-                  href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: ABI 界限上的可攜性 (新式 C++)
-                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
+              href: cpp/welcome-back-to-cpp-modern-cpp.md
             - name: 語彙慣例
               expanded: false
               items:
@@ -3807,46 +3790,55 @@
                   href: cpp/alignof-and-alignas-cpp.md
                 - name: Trivial、標準配置和 POD 類型
                   href: cpp/trivial-standard-layout-and-pod-types.md
-            - name: 基本類型
-              expanded: false
-              items:
-                - name: 基本類型
-                  href: cpp/fundamental-types-cpp.md
-                - name: 資料類型範圍
-                  href: cpp/data-type-ranges.md
-                - name: nullptr
-                  href: cpp/nullptr.md
-                - name: void
-                  href: cpp/void-cpp.md
-                - name: bool
-                  href: cpp/bool-cpp.md
-                - name: false
-                  href: cpp/false-cpp.md
-                - name: true
-                  href: cpp/true-cpp.md
-                - name: char、wchar_t、char16_t、char32_t
-                  href: cpp/char-wchar-t-char16-t-char32-t.md
-                - name: __int8、__int16、__int32、__int64
-                  href: cpp/int8-int16-int32-int64.md
-                - name: __m64
-                  href: cpp/m64.md
-                - name: __m128
-                  href: cpp/m128.md
-                - name: __m128d
-                  href: cpp/m128d.md
-                - name: __m128i
-                  href: cpp/m128i.md
-                - name: __ptr32、__ptr64
-                  href: cpp/ptr32-ptr64.md
-                - name: 數值限制
+                - name: 型別系統
                   expanded: false
                   items:
-                    - name: 數值限制
-                      href: cpp/numerical-limits-cpp.md
-                    - name: 整數限制
-                      href: cpp/integer-limits.md
-                    - name: 浮點數限制
-                      href: cpp/floating-limits.md
+                    - name: 型別系統
+                      href: cpp/cpp-type-system-modern-cpp.md
+                    - name: 值類型
+                      href: cpp/value-types-modern-cpp.md
+                    - name: 類型轉換與類型安全
+                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                    - name: 基本類型
+                      expanded: false
+                      items:
+                        - name: 基本類型
+                          href: cpp/fundamental-types-cpp.md
+                        - name: 資料類型範圍
+                          href: cpp/data-type-ranges.md
+                        - name: nullptr
+                          href: cpp/nullptr.md
+                        - name: void
+                          href: cpp/void-cpp.md
+                        - name: bool
+                          href: cpp/bool-cpp.md
+                        - name: false
+                          href: cpp/false-cpp.md
+                        - name: true
+                          href: cpp/true-cpp.md
+                        - name: char、wchar_t、char16_t、char32_t
+                          href: cpp/char-wchar-t-char16-t-char32-t.md
+                        - name: __int8、__int16、__int32、__int64
+                          href: cpp/int8-int16-int32-int64.md
+                        - name: __m64
+                          href: cpp/m64.md
+                        - name: __m128
+                          href: cpp/m128.md
+                        - name: __m128d
+                          href: cpp/m128d.md
+                        - name: __m128i
+                          href: cpp/m128i.md
+                        - name: __ptr32、__ptr64
+                          href: cpp/ptr32-ptr64.md
+                        - name: 數值限制
+                          expanded: false
+                          items:
+                            - name: 數值限制
+                              href: cpp/numerical-limits-cpp.md
+                            - name: 整數限制
+                              href: cpp/integer-limits.md
+                            - name: 浮點數限制
+                              href: cpp/floating-limits.md
                 - name: 標準轉換
                   href: cpp/standard-conversions.md
                 - name: 類型轉換與類型安全
@@ -4107,6 +4099,12 @@
                       href: cpp/public-cpp.md
                 - name: 大括弧初始化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
+                - name: 物件存留期及資源管理 (RAII)
+                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
+                - name: 適用於編譯時間封裝的 Pimpl 慣用語
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+                - name: 在 ABI 界限的可攜性
+                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
                 - name: 建構函式
                   expanded: false
                   items:
@@ -9790,6 +9788,8 @@
               items:
                 - name: iostream 程式設計
                   href: standard-library/iostream-programming.md
+                - name: 字串及 I/O 格式化
+                  href: text/string-and-i-o-formatting-modern-cpp.md
                 - name: 什麼是資料流
                   expanded: false
                   items:

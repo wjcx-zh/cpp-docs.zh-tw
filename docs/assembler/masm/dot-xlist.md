@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - .XLIST directive
 ms.assetid: e90f04f4-82d0-4f6c-9568-7b3bca5060fb
-ms.openlocfilehash: efa2b9aaecf2df67709f82fa05622ed600d15e00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf8a13d1e470a72b3d5e854410f104232f550217
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203490"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397813"
 ---
 # <a name="xlist"></a>.XLIST
 
-請參閱[。NOLIST](../../assembler/masm/dot-nolist.md)。
+See [.NOLIST](../../assembler/masm/dot-nolist.md).
 
 ## <a name="syntax"></a>語法
 
-> .XLIST
+> **.XLIST**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

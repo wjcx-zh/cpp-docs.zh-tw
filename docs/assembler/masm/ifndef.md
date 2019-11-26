@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - IFNDEF directive
 ms.assetid: 8c93efc4-9375-45b6-8583-95f0c92f2a3a
-ms.openlocfilehash: 6312b012ca49633da44272825e09aa9d9b0320f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a1e364cb9af6e4b1a35ef52bc24a2888acac1e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202813"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397361"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-授與組件，如果*名稱*尚未定義。
+Grants assembly if *name* has not been defined.
 
 ## <a name="syntax"></a>語法
 
-> IFNDEF 名稱
+> **IFNDEF** *name*
 
 ## <a name="remarks"></a>備註
 
-請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
+See [IF](../../assembler/masm/if-masm.md) for complete syntax.
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

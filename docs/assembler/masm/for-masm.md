@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 5e365ee45396d581f0580e078496aeb2ecab165a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75e27948a523cb23c42df6f7691d54c3170c656e
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184918"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74397516"
 ---
 # <a name="for-masm"></a>FOR (MASM)
 
-標記會為每一次重複的區塊*引數*，與目前*引數*取代*參數*上每個重複作業。
+Marks a block that will be repeated once for each *argument*, with the current *argument* replacing *parameter* on each repetition.
 
 ## <a name="syntax"></a>語法
 
-> 針對*參數*[[: REQ |: =*預設*]]， \<*引數*[[，*引數*]] ><br/>
-> *statements*<br/>
-> ENDM
+> **FOR** *parameter* ⟦ **:REQ** |  __:=__ *default*⟧ **, \<** _argument_ ⟦ __,__ *argument* ...⟧ **>** \
+> *statements*\
+> **ENDM**
 
 ## <a name="remarks"></a>備註
 
-與相同[IRP](../../assembler/masm/irp.md)。
+Same as [IRP](../../assembler/masm/irp.md).
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[Directives reference](directives-reference.md)

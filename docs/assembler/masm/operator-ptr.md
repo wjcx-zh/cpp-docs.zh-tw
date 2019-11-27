@@ -17,14 +17,14 @@ ms.locfileid: "74396497"
 ---
 # <a name="operator-ptr"></a>運算子 PTR
 
-The first operator forces the *expression* to be treated as having the specified *type*. The second operator specifies a pointer to *type*.
+第一個運算子會強制將*運算式*視為具有指定的*型*別。 第二個運算子會指定*類型*的指標。
 
 ## <a name="syntax"></a>語法
 
-> *type* **PTR** *expression*
+> *類型* **PTR** *運算式*
 >
-> \[*distance*] **PTR** *type*
+> \[*距離*] **PTR** *類型*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

@@ -33,7 +33,7 @@ extern "C" {        // functions using explicit "this"
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [歡迎回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>

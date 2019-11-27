@@ -35,4 +35,4 @@ public ref class Test {};
 
 請注意，這個範例的輸出顯示： **結束標記 'member' 與起始標籤 'summary' 不對稱。**
 
-The problem with this sample is that the end tag for \<summary> is poorly formed, and the compiler does not recognize it as the \<summary> end tag.  The \<member> tag is embedded in the .xdc file by the compiler in every /doc compilation.  So, the problem here is that the end tag \</member>, does not match the previous start tag that the compiler processed (\<summary>.
+這個範例的問題是，\<摘要 > 的結束標記格式不正確，而且編譯器無法將它辨識為 \<摘要 > 結束標記。  \<成員 > 標記是由編譯器在每個/doc 編譯中內嵌于 .xdc 檔案中。  因此，此處的問題在於，\</member > 的結束標記不符合編譯器處理的上一個開始標記（\<摘要 >。

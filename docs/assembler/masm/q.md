@@ -1,5 +1,5 @@
 ---
-title: '? (MASM)'
+title: '? 風格'
 ms.date: 08/30/2018
 f1_keywords:
 - '?'
@@ -15,12 +15,12 @@ ms.locfileid: "74394648"
 ---
 # <a name=""></a>?
 
-In data declarations, a value that the assembler allocates but does not initialize.
+在資料宣告中，組合器配置但不會初始化的值。
 
 ## <a name="syntax"></a>語法
 
 > **?**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

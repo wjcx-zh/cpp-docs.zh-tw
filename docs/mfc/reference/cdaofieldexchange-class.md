@@ -37,14 +37,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|如果目前的作業適用于要更新之欄位的類型，則傳回非零。|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|指定記錄集資料成員（資料行或參數）的類型，這是由所有後續呼叫 DFX 函數所表示，直到下一次呼叫 `SetFieldType`為止。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoFieldExchange：： m_nOperation](#m_noperation)|目前對記錄集之 `DoFieldExchange` 成員函式的呼叫所執行的 DFX 作業。|
 |[CDaoFieldExchange：： m_prs](#m_prs)|執行 DFX 作業之記錄集的指標。|
@@ -75,7 +75,7 @@ class CDaoFieldExchange
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="isvalidoperation"></a>CDaoFieldExchange::IsValidOperation
 
@@ -157,7 +157,7 @@ void SetFieldType(UINT nFieldType);
 
 一般而言，與欄位資料成員或參數資料成員相關聯的每個 DFX 函式呼叫群組，前面必須加上 `SetFieldType`的呼叫。 每個 `SetFieldType` 呼叫的*nFieldType*參數會識別依照 `SetFieldType` 呼叫的 DFX 函式呼叫所代表的資料成員類型。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CDaoRecordset 類別](../../mfc/reference/cdaorecordset-class.md)

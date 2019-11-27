@@ -34,13 +34,13 @@ auto declarator initializer;
 
 我們建議您在大部分情況下使用**auto**關鍵字，除非您真的想要轉換，因為它提供下列優點：
 
-- **穩固性：** 如果運算式的類型變更 (這包括函式傳回類型變更時)，它就會運作。
+- **穩定性：** 如果運算式的型別已變更，這會包含函式傳回型別變更時的情況，這只是有效的。
 
-- **效能：** 可保證不會進行任何轉換。
+- **效能：** 您保證不會進行任何轉換。
 
-- **可用性：** 您不需要擔心類型名稱拼字困難和錯字。
+- **可用性：** 您不必擔心型別名稱的拼寫問題和打字錯誤。
 
-- **效率：** 您的程式碼可能較具效率。
+- **效率：** 您的編碼可能更有效率。
 
 您可能不想要使用**auto**的轉換案例：
 
@@ -50,7 +50,7 @@ auto declarator initializer;
 
 若要使用**auto**關鍵字，請使用它來取代類型來宣告變數，並指定初始化運算式。 此外，您可以使用規範和宣告子（例如**const**、 **volatile**、指標（`*`）、參考（`&`）和右值參考（`&&`）來修改**auto**關鍵字。 編譯器會評估初始化運算式，然後使用該資訊來推斷變數類型。
 
-初始化運算式可以是指派（等號語法）、直接初始化（函式樣式語法）、[運算子 new](new-operator-cpp.md)運算式，或初始化運算式可以是[範圍架構 forC++語句（）](../cpp/range-based-for-statement-cpp.md)語句中的*範圍*宣告參數。 如需詳細資訊，請參閱[初始設定式](../cpp/initializers.md)和本文件後面的程式碼範例。
+初始化運算式可以是指派（等號語法）、直接初始化（函式樣式語法）、[運算子 new](new-operator-cpp.md)運算式，或初始化運算式可以是[範圍架構 forC++語句（）](../cpp/range-based-for-statement-cpp.md)語句中的*範圍*宣告參數。 如需詳細資訊，請參閱此檔稍後的[初始化運算式](../cpp/initializers.md)和程式碼範例。
 
 **Auto**關鍵字是類型的預留位置，但它本身不是類型。 因此， **auto**關鍵字不能用於轉換或運算子（例如[sizeof](../cpp/sizeof-operator.md)和（適用于C++/cli） [typeid](../extensions/typeid-cpp-component-extensions.md)）中。
 
@@ -58,7 +58,7 @@ auto declarator initializer;
 
 **Auto**關鍵字是宣告具有複雜類型之變數的簡單方式。 例如，您可以使用**auto**宣告變數，其中初始化運算式牽涉到範本、函式的指標或成員的指標。
 
-您也可以使用**auto**來宣告和初始化 lambda 運算式的變數。 您無法自行宣告變數類型，因為只有編譯器才知道 Lambda 運算式的類型。 如需詳細資訊，請參閱 [Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)。
+您也可以使用**auto**來宣告和初始化 lambda 運算式的變數。 您無法自行宣告變數類型，因為只有編譯器才知道 Lambda 運算式的類型。 如需詳細資訊，請參閱[Lambda 運算式的範例](../cpp/examples-of-lambda-expressions.md)。
 
 ## <a name="trailing-return-types"></a>尾端傳回型別
 
@@ -128,12 +128,12 @@ int main()
 |[C3530](../error-messages/compiler-errors-2/compiler-error-c3530.md)|**Auto**關鍵字無法與任何其他類型規範結合。|
 |[C3531](../error-messages/compiler-errors-2/compiler-error-c3531.md)|使用**auto**關鍵字宣告的符號必須有初始化運算式。|
 |[C3532](../error-messages/compiler-errors-2/compiler-error-c3532.md)|您不正確地使用**auto**關鍵字來宣告類型。 例如，您已宣告方法傳回類型或陣列。|
-|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)、[C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不可以使用**auto**關鍵字來宣告。|
+|[C3533](../error-messages/compiler-errors-2/compiler-error-c3533.md)、 [C3539](../error-messages/compiler-errors-2/compiler-error-c3539.md)|參數或樣板引數不可以使用**auto**關鍵字來宣告。|
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|無法使用**auto**關鍵字來宣告方法或範本參數。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|符號無法在初始化之前使用。 實際上，這表示不能使用變數來初始化它自己。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|您不能轉換為使用**auto**關鍵字宣告的類型。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣告子清單中使用**auto**關鍵字宣告的所有符號，都必須解析成相同的類型。 如需詳細資訊，請參閱宣告[和定義](declarations-and-definitions-cpp.md)。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、[C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)運算子不能套用至使用**auto**關鍵字所宣告的符號。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)和[typeid](../extensions/typeid-cpp-component-extensions.md)運算子不能套用至使用**auto**關鍵字所宣告的符號。|
 
 ## <a name="examples"></a>範例
 
@@ -219,7 +219,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [auto 關鍵字](../cpp/auto-keyword.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>

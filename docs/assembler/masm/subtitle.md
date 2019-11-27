@@ -15,12 +15,12 @@ ms.locfileid: "74393462"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
-Defines the listing subtitle. Same as [SUBTTL](../../assembler/masm/subttl.md).
+定義清單子標題。 與[SUBTTL](../../assembler/masm/subttl.md)相同。
 
 ## <a name="syntax"></a>語法
 
-> **SUBTITLE** *text*
+> 子**標題***文字*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

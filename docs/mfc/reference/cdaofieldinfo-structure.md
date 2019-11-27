@@ -80,7 +80,7 @@ struct CDaoFieldInfo
 *m_lSize*<br/>
 值，指出 DAO 欄位物件的大小上限（以位元組為單位），其中包含文字或包含文字或數值之欄位物件的固定大小。 如需詳細資訊，請參閱 DAO 說明中的「大小屬性」主題。 大小可以是下列其中一個值：
 
-|輸入|大小 (位元組)|描述|
+|類型|[大小 (位元組)]|描述|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 個位元組|是/否（與 True/False 相同）|
 |`dbByte`|1|位元組|
@@ -154,9 +154,9 @@ DAO 欄位物件的預設值。 建立新記錄時，會自動輸入 DefaultValu
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef：： Issomapper.getfieldinfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>

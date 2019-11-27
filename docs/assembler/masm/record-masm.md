@@ -15,12 +15,12 @@ ms.locfileid: "74394604"
 ---
 # <a name="record-masm"></a>RECORD (MASM)
 
-Declares a record type consisting of the specified fields. *fieldname* names the field, *width* specifies the number of bits, and *expression* gives its initial value.
+宣告包含指定欄位的記錄類型。 *fieldname*會將欄位命名為， *width*會指定位的數目，而*expression*會提供其初始值。
 
 ## <a name="syntax"></a>語法
 
-> *recordname* **RECORD** *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ⟦ __,__ *fieldname* __:__ *width* ⟦ __=__ *expression*⟧ ...⟧
+> *recordname* **記錄** *fieldname* __：__ *width* ⟦ __=__ *expression*⟧⟦ __，__ *fieldname* __：__ *width* ⟦ __=__ *expression*⟧ .。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

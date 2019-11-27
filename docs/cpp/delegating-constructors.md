@@ -1,6 +1,6 @@
 ---
-title: Delegating constructors (C++)
-description: Use delegating constructors in C++ to invoke other constructors and reduce code repetition.
+title: 委派的函C++式（）
+description: 在中使用委派C++的函式來叫用其他的函式，並減少程式碼重複。
 ms.date: 11/19/2019
 ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
 ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
@@ -11,7 +11,7 @@ ms.locfileid: "74250671"
 ---
 # <a name="delegating-constructors"></a>委派建構函式
 
-Many classes have multiple constructors that do similar things—for example, validate parameters:
+許多類別都有多個執行類似專案的函式，例如，驗證參數：
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-You could reduce the repetitive code by adding a function that does all of the validation, but the code for `class_c` would be easier to understand and maintain if one constructor could delegate some of the work to another one. To add delegating constructors, use the `constructor (. . .) : constructor (. . .)` syntax:
+您可以藉由新增可執行所有驗證的函式來減少重複的程式碼，但是 `class_c` 的程式碼會更容易瞭解和維護，如果一個函式可以將一些工作委派給另一個函式。 若要加入委派的函式，請使用 `constructor (. . .) : constructor (. . .)` 語法：
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-As you step through the previous example, notice that the constructor `class_c(int, int, int)` first calls the constructor `class_c(int, int)`, which in turn calls `class_c(int)`. Each of the constructors performs only the work that is not performed by the other constructors.
+當您逐步執行前一個範例時，請注意，此函式 `class_c(int, int, int)` 會先呼叫 `class_c(int, int)`的函式，而該函式會接著呼叫 `class_c(int)`。 每個函式都只會執行其他函式未執行的工作。
 
-The first constructor that's called initializes the object so that all of its members are initialized at that point. You can’t do member initialization in a constructor that delegates to another constructor, as shown here:
+第一個呼叫的函式會初始化物件，使其所有成員都在該點初始化。 您無法在委派給另一個函式的函式中執行成員初始化，如下所示：
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-The next example shows the use of non-static data-member initializers. Notice that if a constructor also initializes a given data member, the member initializer is overridden:
+下一個範例示範如何使用非靜態資料成員初始化運算式。 請注意，如果某個函數也初始化了指定的資料成員，則會覆寫成員初始化運算式：
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-The constructor delegation syntax doesn't prevent the accidental creation of constructor recursion—Constructor1 calls Constructor2 which calls Constructor1—and no errors are thrown until there is a stack overflow. It's your responsibility to avoid cycles.
+「函式委派」語法不會防止意外建立的「函式遞迴」（Constructor1 會呼叫呼叫 Constructor1 的 Constructor2），而且不會擲回任何錯誤，直到發生堆疊溢位為止。 您必須負責避免迴圈。
 
 ```cpp
 class class_f{

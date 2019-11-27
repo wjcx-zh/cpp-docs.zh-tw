@@ -18,19 +18,19 @@ ms.locfileid: "74246640"
 ---
 # <a name="cleaning-up-resources"></a>清除資源
 
-在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 It is possible that the **__try** statement block was interrupted before all resources were allocated, so that not all resources were opened.
+在終止處理常式執行期間，您可能不知道在呼叫終止處理常式之前實際配置了哪些資源。 **__Try**語句區塊可能會在配置所有資源之前中斷，因此不會開啟所有資源。
 
 因此，為了安全起見，您應該先檢查哪些資源已實際開啟，再繼續進行終止處理的清除作業。 建議的程序是：
 
 1. 將控制代碼初始化為 NULL。
 
-1. In the **__try** statement block, allocate resources. 資源一配置，控制代碼就會設定為正值。
+1. 在 **__try**語句區塊中，配置資源。 資源一配置，控制代碼就會設定為正值。
 
-1. In the **__finally** statement block, release each resource whose corresponding handle or flag variable is nonzero or not NULL.
+1. 在 **__finally**語句區塊中，釋放對應的控制碼或旗標變數為非零或非 Null 的每個資源。
 
 ## <a name="example"></a>範例
 
-For example, the following code uses a termination handler to close three files and a memory block that were allocated in the **__try** statement block. 在清除資源之前，程式碼會先檢查資源是否已配置。
+例如，下列程式碼會使用終止處理常式關閉三個檔案，以及在 **__try**語句區塊中配置的記憶體區塊。 在清除資源之前，程式碼會先檢查資源是否已配置。
 
 ```cpp
 // exceptions_Cleaning_up_Resources.cpp
@@ -70,7 +70,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

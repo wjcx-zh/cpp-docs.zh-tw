@@ -37,7 +37,7 @@ ms.locfileid: "74305497"
 
 **除了**[**精確**] 也設定為 [**開啟**] 時，[只能] 設定為 [**開啟**]。
 
-**push**\
+**推送**\
 將目前的**float_control**設定推送至內部編譯器堆疊。
 
 **pop**\
@@ -129,7 +129,7 @@ int main( ) {
 Pass
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)\
 [fenv_access](../preprocessor/fenv-access.md)\

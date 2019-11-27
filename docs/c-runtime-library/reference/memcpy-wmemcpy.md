@@ -73,7 +73,7 @@ wchar_t *wmemcpy(
 **memcpy**會將*計數*位元組從*src*複製到*目的地*;**wmemcpy**會複製整個*計數*的寬字元（兩個位元組）。 如果來源和目的地重迭， **memcpy**的行為會是未定義的。 使用**memmove**來處理重迭的區域。
 
 > [!IMPORTANT]
-> 確定目的地緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱[避免緩衝區滿溢](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> 確定目的地緩衝區與來源緩衝區是相同大小，或大於來源緩衝區。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 > [!IMPORTANT]
 > 因為有太多緩衝區溢位，因而導致潛在的安全性漏洞，所以已追蹤到不當的**memcpy**使用方式，所以安全性開發週期（SDL）會在「禁止」的功能中列出此功能。  您可能會發現有些 VC + + 程式庫類別會繼續使用**memcpy**。  此外，您可能會發現 VC + + 編譯器優化工具有時會發出對**memcpy**的呼叫。  Visual C++ 產品開發是依據 SDL 程序，因此已仔細評估過此禁用函式的使用方式。  程式庫使用它時，已仔細檢查過呼叫，以確定這些呼叫不會容許緩衝區滿溢。  在編譯器的情況下，有時會將某些程式碼模式辨識為與**memcpy**的模式相同，因此會以函式的呼叫取代。  在這種情況下，使用**memcpy**並不會比原本的指示更安全：它們只是為了呼叫效能微調的**memcpy**函數而優化。  就像使用「安全的」 CRT 函式並不保證安全性一樣（它們只是讓它變得不安全），使用「禁止」的函式並不保證危險（它們只需要更進一步的審查以確保安全性）。
@@ -107,7 +107,7 @@ wchar_t *wmemcpy(
 
 如需如何使用**memcpy**的範例，請參閱[memmove](memmove-wmemmove.md) 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [緩衝區操作](../../c-runtime-library/buffer-manipulation.md)<br/>
 [_memccpy](memccpy.md)<br/>

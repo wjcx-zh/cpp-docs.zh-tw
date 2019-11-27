@@ -11,19 +11,19 @@ ms.locfileid: "74246560"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ 中的例外狀況和堆疊回溯
 
-在 C++ 例外狀況機制中，控制項是從 throw 陳述式移動到可以處理擲回類型的第一個 catch 陳述式。 When the catch statement is reached, all of the automatic variables that are in scope between the throw and catch statements are destroyed in a process that is known as *stack unwinding*. 堆疊回溯中的執行方式如下：
+在 C++ 例外狀況機制中，控制項是從 throw 陳述式移動到可以處理擲回類型的第一個 catch 陳述式。 當到達 catch 語句時，會在稱為*堆疊*回溯的進程中，終結 throw 和 catch 語句之間範圍內的所有自動變數。 堆疊回溯中的執行方式如下：
 
-1. Control reaches the **try** statement by normal sequential execution. The guarded section in the **try** block is executed.
+1. Control 會透過正常的循序執行來到達**try**語句。 **Try**區塊中的保護區段會執行。
 
-1. If no exception is thrown during execution of the guarded section, the **catch** clauses that follow the **try** block are not executed. Execution continues at the statement after the last **catch** clause that follows the associated **try** block.
+1. 如果在執行保護區段期間未擲回任何例外狀況，則不會執行緊接在**try**區塊後面的**catch**子句。 執行會繼續在相關聯**try**區塊後面的最後一個**catch**子句之後的語句中。
 
-1. If an exception is thrown during execution of the guarded section or in any routine that the guarded section calls either directly or indirectly, an exception object is created from the object that is created by the **throw** operand. (This implies that a copy constructor may be involved.) At this point, the compiler looks for a **catch** clause in a higher execution context that can handle an exception of the type that is thrown, or for a **catch** handler that can handle any type of exception. The **catch** handlers are examined in order of their appearance after the **try** block. If no appropriate handler is found, the next dynamically enclosing **try** block is examined. This process continues until the outermost enclosing **try** block is examined.
+1. 如果在執行受保護區段期間，或在受保護區段直接或間接呼叫的任何常式中擲回例外狀況，則會從**throw**運算元所建立的物件建立例外狀況物件。 （這表示可能會牽涉到複製的構造函式）。此時，編譯器會在較高的執行內容中尋找**catch**子句，以處理所擲回之類型的例外狀況，或可處理任何例外狀況類型的**catch**處理常式。 **Catch**處理常式會依其在**try**區塊之後的外觀順序進行檢查。 如果找不到適當的處理常式，則會檢查下一個動態封閉的**try**區塊。 此程式會繼續進行，直到檢查最外層的**try**區塊為止。
 
 1. 如果仍然找不到相符的處理常式，或是回溯過程中、處理常式取得控制之前發生例外狀況，則會呼叫預先定義的執行階段函式 `terminate`。 如果在擲回例外狀況後但回溯開始之前發生例外狀況，則會呼叫 `terminate`。
 
-1. If a matching **catch** handler is found, and it catches by value, its formal parameter is initialized by copying the exception object. 如果它是以傳址方式攔截，則會初始化參數以參考例外狀況物件。 在型式參數初始化之後，回溯堆疊的處理序才會開始。 This involves the destruction of all automatic objects that were fully constructed—but not yet destructed—between the beginning of the **try** block that is associated with the **catch** handler and the throw site of the exception. 解構會依照建構的反向順序進行。 The **catch** handler is executed and the program resumes execution after the last handler—that is, at the first statement or construct that is not a **catch** handler. Control can only enter a **catch** handler through a thrown exception, never through a **goto** statement or a **case** label in a **switch** statement.
+1. 如果找到相符的**catch**處理常式，而且它是以傳值方式捕捉，其型式參數就會藉由複製例外狀況物件來初始化。 如果它是以傳址方式攔截，則會初始化參數以參考例外狀況物件。 在型式參數初始化之後，回溯堆疊的處理序才會開始。 這牽涉到所有自動物件（但尚未解構）在與**catch**處理常式相關聯之**try**區塊的開頭，以及例外狀況的擲回網站之間的銷毀。 解構會依照建構的反向順序進行。 **Catch**處理常式會執行，而且程式會在最後一個處理常式（也就是不是**catch**處理常式的第一個語句或結構）之後繼續執行。 控制項只能透過擲回的例外狀況來輸入**catch**處理常式，絕不透過**goto**語句或**switch**語句中的**case**標籤。
 
-## <a name="stack-unwinding-example"></a>Stack unwinding example
+## <a name="stack-unwinding-example"></a>堆疊回溯範例
 
 下列範例將示範堆疊如何在擲回例外狀況時回溯。 在執行緒上的執行會從 `C` 中的 throw 陳述式跳至 `main` 中的 catch 陳述式，然後一路回溯每個函式。 請注意 `Dummy` 物件建立的順序，以及物件超出範圍後終結的順序。 另請注意，除了包含 catch 陳述式的 `main` 之外，其他函式都不會完成。 函式 `A` 絕不會從其對 `B()` 的呼叫傳回，而且 `B` 絕不會從其對 `C()` 的呼叫傳回。 如果您取消 `Dummy` 指標定義和對應 delete 陳述式的註解，然後執行程式，請注意指標絕不會刪除。 這就說明函式未提供例外狀況保證時，可能發生的狀況。 如需詳細資訊，請參閱＜如何：例外狀況的設計＞。 如果您註解 catch 陳述式，就可以觀察程式因為未處理的例外狀況結束時，會發生什麼情況。
 

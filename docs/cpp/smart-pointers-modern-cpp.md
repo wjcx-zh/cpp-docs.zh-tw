@@ -12,7 +12,7 @@ ms.locfileid: "74303361"
 ---
 # <a name="smart-pointers-modern-c"></a>智慧型指標 (新式 C++)
 
-在現代 C++ 程式設計中，標準程式庫包含「*智慧型指標*」(Smart Pointer)，使用它可確保程式免於流失記憶體及資源，且無例外狀況之虞。
+在新式C++程式設計中，標準程式庫包含*智慧型指標*，可用來協助確保程式不會有記憶體和資源流失，而且是例外狀況安全的。
 
 ## <a name="uses-for-smart-pointers"></a>智慧型指標的用途
 
@@ -114,7 +114,7 @@ C++ 智慧型指標慣用語與在 C# 等語言中建立物件的情形類似：
 [CAutoPtrList 類別](../atl/reference/cautoptrlist-class.md)<br/>
 將方法封裝以操作 `CAutoPtr` 節點清單的類別。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指標](pointers-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>

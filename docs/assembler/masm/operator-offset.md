@@ -17,12 +17,12 @@ ms.locfileid: "74396581"
 ---
 # <a name="operator-offset"></a>運算子 OFFSET
 
-Returns the offset into the relevant segment of *expression*.
+將位移傳回到*運算式*的相關區段。
 
 ## <a name="syntax"></a>語法
 
-> **OFFSET** *expression*
+> **位移***運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

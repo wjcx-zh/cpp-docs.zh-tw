@@ -15,13 +15,13 @@ ms.locfileid: "74246683"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
 
-In native code, you can catch native C++ exception from MSIL.  You can catch CLR exceptions with `__try` and `__except`.
+在機器碼中，您可以從 MSIL C++攔截原生例外狀況。  您可以使用 `__try` 和 `__except`攔截 CLR 例外狀況。
 
-For more information, see [Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md) and [Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md).
+如需詳細資訊，請參閱[結構化例外狀況C++處理（C/）](../cpp/structured-exception-handling-c-cpp.md)和[例外狀況和錯誤處理的現代化C++最佳作法](../cpp/errors-and-exception-handling-modern-cpp.md)。
 
 ## <a name="example"></a>範例
 
-The following sample defines a module with two functions, one that throws a native exception, and another that throws an MSIL exception.
+下列範例會定義具有兩個函式的模組，其中一個會擲回原生例外狀況，另一個則擲回 MSIL 例外狀況。
 
 ```
 // catch_MSIL_in_native.cpp
@@ -37,7 +37,7 @@ void Test2() {
 
 ## <a name="example"></a>範例
 
-The following sample defines a module that catches a native and MSIL exception.
+下列範例會定義可攔截原生和 MSIL 例外狀況的模組。
 
 ```
 // catch_MSIL_in_native_2.cpp
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

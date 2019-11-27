@@ -1,5 +1,5 @@
 ---
-title: DLL loading exception codes (C/C++)
+title: DLL 載入例外狀況代碼（CC++/）
 ms.date: 11/19/2019
 f1_keywords:
 - ERROR_MOD_NOT_FOUND
@@ -21,13 +21,13 @@ ms.locfileid: "74243857"
 ---
 # <a name="exceptions-cc"></a>例外狀況 (C/C++)
 
-Two exception codes can be raised when failures are encountered:
+當發生失敗時，可能會引發兩個例外狀況代碼：
 
-- For a **LoadLibrary** failure
+- **LoadLibrary**失敗
 
-- For a **GetProcAddress** failure
+- 若為**GetProcAddress**失敗
 
-Here is the exception information:
+以下是例外狀況資訊：
 
 ```
 //
@@ -37,12 +37,12 @@ Here is the exception information:
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-The exception codes thrown are the standard VcppException(ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) and VcppException(ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND) values. The exception passes a pointer to a **DelayLoadInfo** structure in the LPDWORD value that can be retrieved by **GetExceptionInformation** in the [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record) structure, ExceptionInformation[0] field.
+擲回的例外狀況代碼是標準 VcppException （ERROR_SEVERITY_ERROR、ERROR_MOD_NOT_FOUND）和 VcppException （ERROR_SEVERITY_ERROR、ERROR_PROC_NOT_FOUND）值。 例外狀況會將指標傳遞至 LPDWORD 值中的**DelayLoadInfo**結構，而**GetExceptionInformation**會在 [ [EXCEPTION_RECORD](/windows/win32/api/winnt/ns-winnt-exception_record)結構，ExceptionInformation [0]] 欄位中加以抓取。
 
-Additionally, if the incorrect bits are set in the grAttrs field, the exception ERROR_INVALID_PARAMETER is thrown. This exception is, for all intents and purposes, fatal.
+此外，如果在 grAttrs 欄位中設定了不正確的位，就會擲回例外狀況 ERROR_INVALID_PARAMETER。 這個例外狀況適用于所有意圖和用途，嚴重。
 
-See [Structure and Constant Definitions](structure-and-constant-definitions.md) for more information.
+如需詳細資訊，請參閱[結構和常數定義](structure-and-constant-definitions.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [錯誤處理和通知](error-handling-and-notification.md)

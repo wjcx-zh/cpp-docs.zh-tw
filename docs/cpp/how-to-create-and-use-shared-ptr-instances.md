@@ -1,5 +1,5 @@
 ---
-title: 'How to: Create and use shared_ptr instances'
+title: 如何：建立和使用 shared_ptr 實例
 ms.custom: how-to
 ms.date: 11/19/2019
 ms.topic: conceptual
@@ -11,13 +11,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74245835"
 ---
-# <a name="how-to-create-and-use-shared_ptr-instances"></a>How to: Create and Use shared_ptr instances
+# <a name="how-to-create-and-use-shared_ptr-instances"></a>如何：建立和使用 shared_ptr 實例
 
 `shared_ptr` 類型是 C++ 標準程式庫中的一種智慧型指標，是為有一個以上的擁有者可能必須管理物件在記憶體中的存留期之情節而設計。 在您初始化 `shared_ptr` 之後，您可以函式引數中的值予以複製、傳送以及指派至其他 `shared_ptr` 執行個體。 所有執行個體都會指向相同的物件，並共用對一個每當新的 `shared_ptr` 加入、超出範圍或重設時會遞增和遞減參考計數的「控制區塊」的存取。 當參考計數達到零時，控制區塊會刪除記憶體資源和自己本身。
 
 下圖顯示幾個指向一個記憶體位置的 `shared_ptr` 執行個體。
 
-![Shared pointer diagram](media/shared_ptr.png "Shared pointer diagram")
+![共用的指標圖表](media/shared_ptr.png "共用的指標圖表")
 
 ## <a name="example-setup"></a>範例設定
 
@@ -72,7 +72,7 @@ int main()
 
 ## <a name="example-1"></a>範例 1
 
-在任何可能的情況下，請在初次建立記憶體資源時使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函式來建立 `shared_ptr`。 `make_shared` 是無例外狀況之虞。 它會使用相同的呼叫來配置控制區塊的記憶體及資源，減少建構的額外負荷。 若您不使用 `make_shared`，便必須使用明確的 `new` 運算式來建立物件，才能將物件傳遞至 `shared_ptr` 建構函式。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
+在任何可能的情況下，請在初次建立記憶體資源時使用 [make_shared](../standard-library/memory-functions.md#make_shared) 函式來建立 `shared_ptr`。 `make_shared` 是例外狀況安全的。 它會使用相同的呼叫來配置控制區塊的記憶體及資源，減少建構的額外負荷。 若您不使用 `make_shared`，便必須使用明確的 `new` 運算式來建立物件，才能將物件傳遞至 `shared_ptr` 建構函式。 下列範例顯示各種宣告和初始化 `shared_ptr` 及新物件的方式。
 
 [!code-cpp[stl_smart_pointers#1](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
@@ -116,6 +116,6 @@ int main()
 
 [!code-cpp[stl_smart_pointers#3](codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_6.cpp)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [智慧型指標 (現代 C++)](smart-pointers-modern-cpp.md)

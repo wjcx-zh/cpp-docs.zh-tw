@@ -15,23 +15,23 @@ ms.locfileid: "74397923"
 ---
 # <a name="setframe"></a>.SETFRAME
 
-Fills in the frame register field and offset in the unwind information using the specified register (*reg*) and offset (*offset*). The offset must be a multiple of 16 and less than or equal to 240. This directive also generates a `UWOP_SET_FPREG` unwind code entry for the specified register using the current prologue offset.
+使用指定的暫存器（*reg*）和位移（*位移*），填入 [框架暫存器] 欄位，以及回溯資訊中的位移。 位移必須是16的倍數，且小於或等於240。 這個指示詞也會使用目前的序言位移，為指定的暫存器產生 `UWOP_SET_FPREG` 回溯程式碼專案。
 
 ## <a name="syntax"></a>語法
 
-> **.SETFRAME** *reg*, *offset*
+> **.SETFRAME** *reg*， *offset*
 
 ## <a name="remarks"></a>備註
 
-**.SETFRAME** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.SETFRAME** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.SETFRAME**可讓 ml64 使用者指定框架函式回溯的方式，而且只能在序言中使用，這會從[PROC](../../assembler/masm/proc.md)框架宣告延伸至[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼;它們只會產生 `.xdata` 和 `.pdata`。 **.SETFRAME**的前面應該會有實際執行要展開之動作的指示。 最好的做法是將回溯指示詞和它們要在宏中回溯的程式碼包裝起來，以確保合約。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+如需詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
 ## <a name="sample"></a>範例
 
 ### <a name="description"></a>描述
 
-The following sample shows how to use a frame pointer:
+下列範例顯示如何使用框架指標：
 
 ### <a name="code"></a>程式碼
 
@@ -62,6 +62,6 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: Substitution operator (MASM)
+title: 替代運算子（MASM）
 ms.date: 08/30/2018
 f1_keywords:
 - operator &&
@@ -14,14 +14,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396778"
 ---
-# <a name="substitution-operator-masm"></a>Substitution operator (MASM)
+# <a name="substitution-operator-masm"></a>替代運算子（MASM）
 
-Replaces *parameter* with its corresponding argument value.
+將*參數*取代為其對應的引數值。
 
 ## <a name="syntax"></a>語法
 
-> __&__ *parameter* __&__
+> __&__ *參數* __&__
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

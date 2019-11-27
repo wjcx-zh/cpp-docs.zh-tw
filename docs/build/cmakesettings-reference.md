@@ -25,7 +25,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 您可以在 IDE 中新增或移除設定，然後直接在 JSON 檔案中編輯它們，或使用 [ **CMake 設定編輯器**] （Visual Studio 2019 和更新版本）。 您可以在 IDE 中輕鬆地切換設定，以產生各種專案檔案。 如需詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 組建設定](customize-cmake-settings.md)。
 
-## <a name="configurations"></a>組態
+## <a name="configurations"></a>設定
 
 `configurations` 陣列包含 CMake 專案的所有設定。 如需預先定義設定的詳細資訊，請參閱[CMake 預先](cmake-predefined-configuration-reference.md)定義的設定參考。 您可以將任何數目的預先定義或自訂設定新增至檔案。 
 
@@ -44,7 +44,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `configurationType`：針對所選產生器指定組建類型組態。 可能是下列其中之一：
 
   - 偵錯
-  - 版本
+  - 發行
   - MinSizeRel
   - RelWithDebInfo
   
@@ -84,7 +84,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `configurationType`：針對所選產生器指定組建類型組態。 可能是下列其中之一：
 
   - 偵錯
-  - 版本
+  - 發行
   - MinSizeRel
   - RelWithDebInfo
  
@@ -132,7 +132,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `remoteCMakeListsRoot`：指定遠端電腦上包含 CMake 專案的目錄。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteBuildRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的組建指令碼。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteInstallRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的安裝目標。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`，其中 `VARIABLE` 是已在系統、使用者或工作階段層級定義的環境變數。
-- `remoteCopySources`：指定 Visual Studio 是否應該將來源檔案複製到遠端電腦的 `boolean`。 預設值為 true。 如果自行管理檔案同步處理，請設定為 false。
+- `remoteCopySources`：指定 Visual Studio 是否應該將來源檔案複製到遠端電腦的 `boolean`。 預設為 true。 如果自行管理檔案同步處理，請設定為 false。
 - `remoteCopyBuildOutput`：指定是否要從遠端系統複製組建輸出的 `boolean`。
 - `rsyncCommandArgs`：指定一組傳遞給 rsync 的額外命令列選項。
 - `remoteCopySourcesExclusionList`：指定複製來源檔案時要排除的路徑清單的 `array`：路徑可以是檔案/目錄的名稱，或是複製之根目錄的相對路徑。 萬用字元 \\\"*\\\" 和 \\\"?\\\" 可以用於 Glob 模式比對。

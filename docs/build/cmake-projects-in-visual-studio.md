@@ -299,7 +299,7 @@ Visual Studio 使用名為*CMakeSettings*的檔案來儲存 Cmake 的環境變�
 ::: moniker-end
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [教學課程： C++在 Visual Studio 中建立跨平臺專案](get-started-linux-cmake.md)<br/>
 [設定 Linux CMake 專案](../linux/cmake-linux-project.md)<br/>

@@ -259,7 +259,7 @@ MSVC 支援 ANSI/ISO C99 標準和 ISO c + + 14 和 c + + 17 標準所需的預�
 
 - `__DATE__` 目前原始檔案的編譯日期。 日期是格式為*Mmm dd yyyy*的常數長度字串常值。 月份名稱*Mmm*與 C 執行時間程式庫（CRT） [asctime](../c-runtime-library/reference/asctime-wasctime.md)函數所產生的縮寫月份名稱相同。 如果值小於10，則日期*dd*的第一個字元是空格。 這個宏一律會定義。
 
-- `__FILE__` 目前來源檔案的名稱。 `__FILE__` 會展開至字元字串常值。 若要確保顯示檔案的完整路徑，請使用 [/FC (診斷中的原始程式碼檔之完整路徑)](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 這個宏一律會定義。
+- `__FILE__` 目前來源檔案的名稱。 `__FILE__` 會展開至字元字串常值。 若要確保顯示檔案的完整路徑，請使用[/FC （診斷中的原始程式碼檔的完整路徑）](../build/reference/fc-full-path-of-source-code-file-in-diagnostics.md)。 這個宏一律會定義。
 
 - `__LINE__` 定義為目前原始程式檔中的整數行號。 `__LINE__` 宏的值可以使用 `#line` 指示詞來變更。 這個宏一律會定義。
 
@@ -439,7 +439,7 @@ MSVC 支援這些額外預先定義的宏。
 
   - 如果已設定 `/arch:SSE` 編譯器選項，則為1。
 
-  - 如果已設定 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`或 `/arch:AVX512` 編譯器選項，則為2。 如果未指定 `/arch` 編譯器選項，則此值為預設值。 當指定 `/arch:AVX` 時，也會定義巨集 `__AVX__`。 當指定 `/arch:AVX2` 時，同時也會定義 `__AVX__` 和 `__AVX2__`。 當指定 `/arch:AVX512` 時，也會定義 `__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__` 和 `__AVX512VL__`。
+  - 如果已設定 `/arch:SSE2`、`/arch:AVX`、`/arch:AVX2`或 `/arch:AVX512` 編譯器選項，則為2。 如果未指定 `/arch` 編譯器選項，則此值為預設值。 當指定 `/arch:AVX` 時，也會定義宏 `__AVX__`。 當指定 `/arch:AVX2` 時，同時也會定義 `__AVX__` 和 `__AVX2__`。 當指定 `/arch:AVX512` 時，也會定義 `__AVX__`、`__AVX2__`、`__AVX512BW__`、`__AVX512CD__`、`__AVX512DQ__`、`__AVX512F__` 和 `__AVX512VL__`。
 
   - 如需詳細資訊，請參閱 [/arch (x86)](../build/reference/arch-x86.md)。
 
@@ -541,7 +541,7 @@ MSVC 支援這些額外預先定義的宏。
 
 - `_MFC_VER` 在 \<afxver_. h > 中定義為編碼 MFC 版本號碼的整數常值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [巨集 (C/C++)](../preprocessor/macros-c-cpp.md)<br/>
 [預處理器運算子](../preprocessor/preprocessor-operators.md)<br/>

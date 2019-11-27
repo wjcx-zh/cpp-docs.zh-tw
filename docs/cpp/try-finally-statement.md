@@ -29,72 +29,72 @@ ms.locfileid: "74246295"
 ---
 # <a name="try-finally-statement"></a>try-finally 陳述式
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-The following syntax describes the **try-finally** statement:
+下列語法描述**try-catch**語句：
 
-> **\_\_try**<br/>
+> **\_\_試用**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// guarded code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//受防護程式碼<br/>
 > }<br/>
-> **\_\_finally**<br/>
+> **\_\_最後**<br/>
 > {<br/>
-> &nbsp;&nbsp;&nbsp;&nbsp;// termination code<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;//終止代碼<br/>
 > }
 
 ## <a name="grammar"></a>文法
 
 *try-finally-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **\_\_try** *compound-statement* **\_\_finally** *compound-statement*
+&nbsp;&nbsp;&nbsp;&nbsp; **\_\_嘗試***複合陳述式* **\_\_finally** *複合陳述式*
 
-The **try-finally** statement is a Microsoft extension to the C and C++ languages that enables target applications to guarantee execution of cleanup code when execution of a block of code is interrupted. 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 The **try-finally** statement is especially useful for routines that have several places where a check is made for an error that could cause premature return from the routine.
+**Try finally**語句是 C 和C++語言的 Microsoft 擴充功能，可讓目標應用程式在執行程式碼區塊中斷時，保證執行清除程式碼。 清除包含如取消配置記憶體、關閉檔案和釋放檔案控制代碼等工作。 在有多個位置的常式中，針對可能會導致常式提前傳回的錯誤進行檢查時， **try-catch**語句特別有用。
 
-For related information and a code sample, see [try-except Statement](../cpp/try-except-statement.md). For more information on structured exception handling in general, see [Structured Exception Handling](../cpp/structured-exception-handling-c-cpp.md). For more information on handling exceptions in managed applications with C++/CLI, see [Exception Handling under /clr](../extensions/exception-handling-cpp-component-extensions.md).
+如需相關資訊和程式碼範例，請參閱[try-Except 語句](../cpp/try-except-statement.md)。 如需一般結構化例外狀況處理的詳細資訊，請參閱[結構化例外狀況處理](../cpp/structured-exception-handling-c-cpp.md)。 如需使用C++/cli 處理 managed 應用程式例外狀況的詳細資訊，請參閱[/Clr 下的例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)。
 
 > [!NOTE]
-> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 For C++ programs, it is recommended that you use the C++ exception-handling mechanism ([try, catch, and throw](../cpp/try-throw-and-catch-statements-cpp.md) statements).
+> 結構化例外狀況處理可搭配 Win32 處理 C 和 C++ 原始程式檔。 不過，它不是專為 C++ 所設計。 使用 C++ 例外狀況處理可確保您的程式碼更具可移植性。 此外，C++ 例外狀況處理更有彈性，因為它可以處理任何類型的例外狀況。 對於C++程式，建議您使用C++例外狀況處理機制（[try、catch 和 throw](../cpp/try-throw-and-catch-statements-cpp.md)語句）。
 
-The compound statement after the **__try** clause is the guarded section. The compound statement after the **__finally** clause is the termination handler. 處理常式會指定一組當保護區段結束時執行的動作，不管保護的區段是因例外狀況 (異常終止) 而結束，或是依標準的執行順序 (正常終止) 而結束。
+**__Try**子句後面的複合陳述式是受保護的區段。 **__Finally**子句後面的複合陳述式是終止處理常式。 處理常式會指定一組當保護區段結束時執行的動作，不管保護的區段是因例外狀況 (異常終止) 而結束，或是依標準的執行順序 (正常終止) 而結束。
 
-Control reaches a **__try** statement by simple sequential execution (fall through). When control enters the **__try**, its associated handler becomes active. 如果控制流程到達 try 區塊的結尾，執行程序如下所示：
+Control 會透過簡單的連續執行（流經）來達到 **__try**的語句。 當控制項進入 **__try**時，其相關聯的處理常式會變成作用中狀態。 如果控制流程到達 try 區塊的結尾，執行程序如下所示：
 
 1. 已叫用終止處理常式。
 
-1. When the termination handler completes, execution continues after the **__finally** statement. Regardless of how the guarded section ends (for example, via a **goto** out of the guarded body or a **return** statement), the termination handler is executed *before* the flow of control moves out of the guarded section.
+1. 當終止處理常式完成時，會在 **__finally**語句之後繼續執行。 無論保護區段的結束方式為何（例如，**透過從受**保護的主體或**return**語句的跳出），終止處理常式會在控制流程移出保護區段*之前*執行。
 
-   A **__finally** statement does not block searching for an appropriate exception handler.
+   **__Finally**語句不會封鎖搜尋適當的例外狀況處理常式。
 
-If an exception occurs in the **__try** block, the operating system must find a handler for the exception or the program will fail. If a handler is found, any and all **__finally** blocks are executed and execution resumes in the handler.
+如果 **__try**區塊中發生例外狀況，作業系統必須找出例外狀況的處理常式，否則程式將會失敗。 如果找到處理程式，則會執行任何和所有 **__finally**區塊，並在處理常式中繼續執行。
 
 例如，假設有一系列的函式呼叫連結了函式 A 與函式 D，如下圖所示。 每個函式都具有一個終止處理常式。 如果例外狀況在函式 D 中引發，並在函式 A 中處理，則會在系統回溯堆疊時，依此順序呼叫終止處理常式：D、C、B。
 
-![Order of termination&#45;handler execution](../cpp/media/vc38cx1.gif "Order of termination&#45;handler execution") <br/>
+![終止&#45;處理常式執行的順序](../cpp/media/vc38cx1.gif "終止&#45;處理常式執行的順序") <br/>
 終止處理常式的執行順序
 
 > [!NOTE]
-> The behavior of try-finally is different from some other languages that support the use of **finally**, such as C#.  A single **__try** may have either, but not both, of **__finally** and **__except**.  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
+> Try-finally 的行為與支援使用**finally**的其他語言不同，例如C#。  單一 **__try**可能會有（但不是兩者）的 **__finally**和 **__except**。  如果要同時使用兩個，外層的 try-except 陳述式必須以引號括住內部 try-finally 陳述式。  指定的規則在每個區塊執行時也不同。
 
-For compatibility with previous versions, **_try**, **_finally**, and **_leave** are synonyms for **__try**, **__finally**, and **__leave** unless compiler option [/Za \(Disable language extensions)](../build/reference/za-ze-disable-language-extensions.md) is specified.
+為了與舊版相容，除非指定了編譯器選項[/za __Finally 停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_try**、 **_finally**和 **_leave**都是 **__try**、 **__leave**和 **\(** 的同義字。
 
 ## <a name="the-__leave-keyword"></a>__leave 關鍵字
 
-The **__leave** keyword is valid only within the guarded section of a **try-finally** statement, and its effect is to jump to the end of the guarded section. 然後從終止處理常式中的第一個陳述式繼續執行。
+**__Leave**關鍵字僅適用于**try-catch**語句的保護區段，其作用是跳至受保護區段的結尾。 然後從終止處理常式中的第一個陳述式繼續執行。
 
-A **goto** statement can also jump out of the guarded section, but it degrades performance because it invokes stack unwinding. The **__leave** statement is more efficient because it does not cause stack unwinding.
+**Goto**語句也可以跳出保護的區段，但它會降低效能，因為它會叫用堆疊回溯。 **__Leave**語句會更有效率，因為它不會導致堆疊回溯。
 
 ## <a name="abnormal-termination"></a>異常終止
 
-Exiting a **try-finally** statement using the [longjmp](../c-runtime-library/reference/longjmp.md) run-time function is considered abnormal termination. It is illegal to jump into a **__try** statement, but legal to jump out of one. All **__finally** statements that are active between the point of departure (normal termination of the **__try** block) and the destination (the **__except** block that handles the exception) must be run. 這稱為區域回溯。
+使用[longjmp](../c-runtime-library/reference/longjmp.md)執行時間函式來結束**try-catch**語句，會被視為異常終止。 跳到 **__try**語句是不合法的，但從一開始就是合法的。 在出發點（ **__try**區塊的正常終止）和目的地（處理例外狀況的 **__except**區塊）之間作用的所有 **__finally**語句都必須執行。 這稱為區域回溯。
 
-If a **try** block is prematurely terminated for any reason, including a jump out of the block, the system executes the associated **finally** block as a part of the process of unwinding the stack. In such cases, the [AbnormalTermination](/windows/win32/Debug/abnormaltermination) function returns **true** if called from within the **finally** block; otherwise, it returns **false**.
+如果**try**區塊因任何原因而提前終止，包括跳出區塊，則系統會在回溯堆疊的過程中執行相關聯的**finally**區塊。 在這種情況下，如果是從**finally**區塊內呼叫， [AbnormalTermination](/windows/win32/Debug/abnormaltermination)函式會傳回**true** ;否則，它會傳回**false**。
 
-The termination handler is not called if a process is killed in the middle of executing a **try-finally** statement.
+如果進程在執行**try-catch**語句的過程中終止，則不會呼叫終止處理常式。
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
+[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[Termination-Handler Syntax](/windows/win32/Debug/termination-handler-syntax)
+[終止-處理常式語法](/windows/win32/Debug/termination-handler-syntax)

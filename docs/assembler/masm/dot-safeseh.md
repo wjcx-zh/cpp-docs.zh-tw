@@ -15,21 +15,21 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397990"
 ---
-# <a name="safeseh-32-bit-masm"></a>.SAFESEH (32-bit MASM)
+# <a name="safeseh-32-bit-masm"></a>.SAFESEH （32-bit MASM）
 
-Registers a function as a structured exception handler. (32-bit MASM only.)
+將函數註冊為結構化例外狀況處理常式。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.SAFESEH** *identifier*
+> **.SAFESEH** *識別碼*
 
 ## <a name="remarks"></a>備註
 
-*identifier* must be the ID for a locally defined [PROC](../../assembler/masm/proc.md) or [EXTRN](../../assembler/masm/extrn.md) PROC. A [LABEL](../../assembler/masm/label-masm.md) is not allowed. The .SAFESEH directive requires the [/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe command-line option.
+*識別碼*必須是本機定義的[進程](../../assembler/masm/proc.md)或[EXTRN](../../assembler/masm/extrn.md)程式的 ID。 不允許使用[標籤](../../assembler/masm/label-masm.md)。 該.SAFESEH 指示詞需要[/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml 命令列選項。
 
-For more information about structured exception handlers, see [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md).
+如需結構化例外狀況處理常式的詳細資訊，請參閱[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)。
 
-For example, to register a safe exception handler, create a new MASM file (as follows), assemble with /safeseh, and add it to the linked objects.
+例如，若要註冊安全的例外狀況處理常式，請建立新的 MASM 檔案（如下所示）、使用/safeseh 組合，然後將它加入至連結的物件。
 
 ```asm
 .386
@@ -39,6 +39,6 @@ MyHandler   proto
 end
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

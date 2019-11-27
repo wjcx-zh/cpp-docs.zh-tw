@@ -15,12 +15,12 @@ ms.locfileid: "74395036"
 ---
 # <a name="popcontext"></a>POPCONTEXT
 
-Restores part or all of the current *context* (saved by the [PUSHCONTEXT](../../assembler/masm/pushcontext.md) directive). The *context* can be **ASSUMES**, **RADIX**, **LISTING**, **CPU**, or **ALL**.
+還原部分或全部的目前*內容*（由[PUSHCONTEXT](../../assembler/masm/pushcontext.md)指示詞儲存）。 *內容*可以是「**假設**」、「**基數**」、「**清單**」、「 **CPU**」或「**全部**」。
 
 ## <a name="syntax"></a>語法
 
-> **POPCONTEXT** *context*
+> **POPCONTEXT** *內容*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

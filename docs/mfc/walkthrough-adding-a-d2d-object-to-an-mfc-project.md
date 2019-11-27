@@ -30,7 +30,7 @@ ms.locfileid: "74304300"
 
 [!INCLUDE[note_settings_general](../mfc/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 若要完成此逐步解說，您必須在**使用C++** 工作負載的桌面開發和適用于**x86 C++和 x64 的選用 Visual MFC**元件中安裝 Visual Studio。
 
@@ -155,6 +155,6 @@ ms.locfileid: "74304300"
 
 建置並執行應用程式。 當您調整視窗大小時，它應該會有變更的漸層矩形。 "Hello World!" 應該顯示在矩形的中央。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [逐步解說](../mfc/walkthroughs-mfc.md)

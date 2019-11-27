@@ -15,13 +15,13 @@ ms.locfileid: "74393150"
 ---
 # <a name="tbyte"></a>TBYTE
 
-Allocates and optionally initializes 10 bytes of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+配置並選擇性地為每個初始化*運算式*初始化10個位元組的儲存區。 也可以當做類型為合法的任何位置的類型規範使用。
 
 ## <a name="syntax"></a>語法
 
-> ⟦*name*⟧ **TBYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*名稱*⟧ **TBYTE** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+指示詞[參考](../../assembler/masm/directives-reference.md)\
 [DT](../../assembler/masm/dt.md)

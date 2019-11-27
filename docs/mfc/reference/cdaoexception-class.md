@@ -39,20 +39,20 @@ class CDaoException : public CException
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|建構 `CDaoException` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoException::GetErrorCount](#geterrorcount)|傳回資料庫引擎的錯誤集合中的錯誤數目。|
 |[CDaoException：： GetErrorInfo](#geterrorinfo)|傳回錯誤集合中特定錯誤物件的相關錯誤資訊。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoException：： m_nAfxDaoError](#m_nafxdaoerror)|包含 MFC DAO 類別中任何錯誤的擴充錯誤碼。|
 |[CDaoException：： m_pErrorInfo](#m_perrorinfo)|[CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md)物件的指標，其中包含一個 DAO 錯誤物件的相關資訊。|
@@ -83,7 +83,7 @@ class CDaoException : public CException
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="cdaoexception"></a>CDaoException::CDaoException
 
@@ -191,9 +191,9 @@ void GetErrorInfo(int nIndex);
 
 此物件包含下列資訊：
 
-|CDaoErrorInfo 成員|內容|意義|
+|CDaoErrorInfo 成員|資訊|意義|
 |--------------------------|-----------------|-------------|
-|`m_lErrorCode`|錯誤碼|DAO 錯誤碼|
+|`m_lErrorCode`|錯誤 碼|DAO 錯誤碼|
 |`m_strSource`|來源|原先產生錯誤之物件或應用程式的名稱|
 |`m_strDescription`|描述|與錯誤相關聯的描述性字串|
 |`m_strHelpFile`|說明檔|Windows 說明檔的路徑，使用者可以在其中取得問題的相關資訊|
@@ -211,7 +211,7 @@ void GetErrorInfo(int nIndex);
 
 如需 SCODE 的詳細資訊，請參閱 Windows SDK 中的[OLE 錯誤碼](/windows/win32/com/structure-of-com-error-codes)的主題結構。 SCODE 資料類型會對應至 HRESULT 資料類型。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CException 類別](../../mfc/reference/cexception-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>

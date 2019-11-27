@@ -1,5 +1,5 @@
 ---
-title: 運算子 ! (MASM)
+title: 運算子 ! 風格
 ms.date: 08/30/2018
 f1_keywords:
 - operator !
@@ -15,14 +15,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396746"
 ---
-# <a name="operator--masm"></a>運算子 ! (MASM)
+# <a name="operator--masm"></a>運算子 ! 風格
 
-Treats *character* as a literal character rather than as an operator or symbol.
+將*字元*視為常值字元，而不是運算子或符號。
 
 ## <a name="syntax"></a>語法
 
-> **!** *character*
+> **!** *字母*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

@@ -17,7 +17,7 @@ ms.locfileid: "74245947"
 ---
 # <a name="bad_cast-exception"></a>bad_cast 例外狀況
 
-The **bad_cast** exception is thrown by the **dynamic_cast** operator as the result of a failed cast to a reference type.
+**Dynamic_cast**運算子會擲回**bad_cast**例外狀況，這是轉換成參考型別失敗的結果。
 
 ## <a name="syntax"></a>語法
 
@@ -28,13 +28,13 @@ catch (bad_cast)
 
 ## <a name="remarks"></a>備註
 
-The interface for **bad_cast** is:
+**Bad_cast**的介面為：
 
 ```cpp
 class bad_cast : public exception
 ```
 
-The following code contains an example of a failed **dynamic_cast** that throws the **bad_cast** exception.
+下列程式碼包含會擲回**bad_cast**例外狀況之失敗**dynamic_cast**的範例。
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -65,14 +65,14 @@ int main() {
 }
 ```
 
-The exception is thrown because the object being cast (a Shape) isn't derived from the specified cast type (Circle). 若要避免例外狀況，請將這些宣告加入至 `main`：
+會擲回例外狀況，因為轉換的物件（圖形）不是從指定的轉換類型（圓形）衍生而來。 若要避免例外狀況，請將這些宣告加入至 `main`：
 
 ```cpp
 Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Then reverse the sense of the cast in the **try** block as follows:
+然後，在**try**區塊中反轉轉換的意義，如下所示：
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -88,17 +88,17 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 ### <a name="functions"></a>函式
 
-|功能|描述|
+|函數|描述|
 |-|-|
-|[what](#what)|TBD|
+|[我](#what)|TBD|
 
 ### <a name="operators"></a>運算子
 
 |運算子|描述|
 |-|-|
-|[operator=](#op_eq)|An assignment operator that assigns one `bad_cast` object to another.|
+|[operator=](#op_eq)|指派運算子，可將一個 `bad_cast` 物件指派給另一個。|
 
-## <a name="bad_cast"></a> bad_cast
+## <a name="bad_cast"></a>bad_cast
 
 `bad_cast` 類型物件的建構函式。
 
@@ -107,22 +107,22 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a> operator=
+## <a name="op_eq"></a>operator =
 
-An assignment operator that assigns one `bad_cast` object to another.
+指派運算子，可將一個 `bad_cast` 物件指派給另一個。
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a> what
+## <a name="what"></a>我
 
 ```cpp
 const char* what() const noexcept override;
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)\
+[Dynamic_cast 運算子](../cpp/dynamic-cast-operator.md)\
 [關鍵字](../cpp/keywords-cpp.md)\
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++狀況和錯誤處理的現代化最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)

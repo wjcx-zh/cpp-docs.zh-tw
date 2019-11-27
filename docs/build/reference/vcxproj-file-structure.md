@@ -290,7 +290,7 @@ Visual Studio IDE 的專案檔必須如上所述排序。 例如，當您定義�
 
 若要建立您自己的屬性工作表，請複製 VCTargets 資料夾中的其中一個 .props 檔案，並配合您的目的進行修改。 若是 Visual Studio 2019 Enterprise Edition，預設 VCTargets 路徑為 `%ProgramFiles%\Microsoft Visual Studio\2019\Enterprise\Common7\IDE\VC\VCTargets`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)<br/>
 [屬性頁面 XML 檔案](property-page-xml-files.md)

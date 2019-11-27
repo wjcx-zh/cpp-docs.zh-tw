@@ -68,6 +68,6 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 [CTreeView](../mfc/reference/ctreeview-class.md)<br/>
 包含 Windows 樹狀目錄控制項的視圖（請參閱[CTreeCtrl](../mfc/reference/ctreectrl-class.md)）。 樹狀目錄控制項會以類似于 [檔案瀏覽器] 左窗格的方式，顯示在階層中排列的圖示和字串。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別總覽](../mfc/class-library-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Timing of exception handling: A summary'
+title: 例外狀況處理的時機：摘要
 ms.date: 05/07/2019
 helpviewer_keywords:
 - sequence [C++]
@@ -18,12 +18,12 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246339"
 ---
-# <a name="timing-of-exception-handling-a-summary"></a>Timing of exception handling: A summary
+# <a name="timing-of-exception-handling-a-summary"></a>例外狀況處理的時機：摘要
 
-A termination handler is executed no matter how the **__try** statement block is terminated. Causes include jumping out of the **__try** block, a `longjmp` statement that transfers control out of the block, and unwinding the stack due to exception handling.
+無論 **__try**語句區塊的終止方式為何，都會執行終止處理常式。 原因包括跳出 **__try**區塊、將控制權轉移到區塊的 `longjmp` 語句，以及由於例外狀況處理而回溯堆疊。
 
 > [!NOTE]
->  The Microsoft C++ compiler supports two forms of the `setjmp` and `longjmp` statements. 快速版本會略過終止處理，但是會更有效率。 To use this version, include the file \<setjmp.h>. 另一個版本支援終止處理，如先前段落中所述。 To use this version, include the file \<setjmpex.h>. 快速版本的效能提升取決於硬體組態。
+>  Microsoft C++編譯器支援兩種形式的 `setjmp` 和 `longjmp` 語句。 快速版本會略過終止處理，但是會更有效率。 若要使用這個版本，請將檔案包含 \<的 setjmp. h >。 另一個版本支援終止處理，如先前段落中所述。 若要使用這個版本，請將檔案包含 \<setjmpex.h >。 快速版本的效能提升取決於硬體組態。
 
 作業系統會先依適當的順序執行所有終止處理常式，型執行其他程式碼，包括例外狀況處理常式的主體。
 
@@ -35,7 +35,7 @@ A termination handler is executed no matter how the **__try** statement block is
 
 1. 如果這個篩選條件會傳遞控制權 (傳回 0)，處理序會繼續執行，直到找到不會傳遞控制權的篩選條件。
 
-1. If this filter returns -1, execution continues where the exception was raised, and no termination takes place.
+1. 如果此篩選傳回-1，則會在引發例外狀況的位置繼續執行，而且不會發生終止。
 
 1. 如果篩選條件傳回 1，則會發生下列事件：
 
@@ -47,7 +47,7 @@ A termination handler is executed no matter how the **__try** statement block is
 
    - 控制權會傳遞給這個例外狀況處理常式結尾後方的程式碼。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Writing a termination handler](../cpp/writing-a-termination-handler.md)<br/>
-[結構化例外狀況處理 (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[撰寫終止處理常式](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

@@ -17,18 +17,18 @@ ms.locfileid: "74396892"
 ---
 # <a name="operator-imagerel"></a>運算子 IMAGEREL
 
-Returns the image relative offset of *expression*.
+傳回*運算式*的影像相對位移。
 
 ## <a name="syntax"></a>語法
 
-> **IMAGEREL** *expression*
+> **IMAGEREL** *運算式*
 
 ## <a name="remarks"></a>備註
 
-The resulting value is often referred to as an RVA or Relative Virtual Address.
+產生的值通常稱為「RVA」或「相對虛擬位址」。
 
-IMAGEREL is available only with COFF object emission.
+IMAGEREL 僅適用于發出的 COFF 物件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

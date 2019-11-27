@@ -55,9 +55,9 @@ MFC 不會在類別中封裝 DAO 參數物件。 基本 MFC `CDaoQueryDef` 物�
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoQueryDef 類別](../../mfc/reference/cdaoquerydef-class.md)

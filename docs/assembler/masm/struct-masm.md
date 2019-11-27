@@ -15,13 +15,13 @@ ms.locfileid: "74393574"
 ---
 # <a name="struct-masm"></a>STRUCT (MASM)
 
-Declares a structure type having the specified *field-declarations*. Each field must be a valid data definition. Same as [STRUC](../../assembler/masm/struc.md).
+宣告具有指定*欄位*宣告的結構類型。 每個欄位都必須是有效的資料定義。 與[STRUC](../../assembler/masm/struc.md)相同。
 
 ## <a name="syntax"></a>語法
 
-> *name* **STRUCT** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧ *field-declarations*\
-> *name* **ENDS**
+> *name* **結構**⟦*對齊*⟧⟦ __，__ 非**唯一**的⟧*欄位*宣告\
+> *名稱***結束**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

@@ -39,6 +39,6 @@ ms.locfileid: "74541026"
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](directives-reference.md)

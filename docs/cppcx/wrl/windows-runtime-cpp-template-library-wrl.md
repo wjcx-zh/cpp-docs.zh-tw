@@ -109,17 +109,17 @@ Windows 執行階段C++範本庫提供代表一些基本概念的類型。 下�
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](comptr-class.md) 是 *智慧型指標* 類型，表示由範本參數指定之介面。 使用 `ComPtr` 來宣告變數，以存取從介面衍生之物件的成員。 `ComPtr` 會自動維護基礎介面指標的參考計數，並在參考計數到達零時釋放介面。
+[ComPtr](comptr-class.md) 是 *智慧型指標* 類型，表示由範本參數指定之介面。 使用 `ComPtr` 來宣告變數，以存取從介面衍生之物件的成員。 `ComPtr` 自動維護基礎介面指標的參考計數，並在參考計數歸零時釋放介面。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
 [RuntimeClass](runtimeclass-class.md) 表示繼承一組指定之介面的具現化類別。 `RuntimeClass` 物件可以提供一或多個 Windows 執行階段 COM 介面的支援組合，或元件的弱式參考。
 
-### <a name="module"></a>模組
+### <a name="module"></a>Module
 
 [Module](module-class.md) 表示相關物件的集合。 `Module` 物件管理 Class Factory 和註冊，前者會建立物件，後者讓其他應用程式使用物件。
 
-### <a name="callback"></a>回撥
+### <a name="callback"></a>回呼
 
 [Callback](callback-function-wrl.md) 函式建立成員函式是事件處理常式的物件 (回呼方法)。 使用 `Callback` 函式撰寫非同步作業。
 
@@ -133,7 +133,7 @@ Windows 執行階段C++範本庫提供代表一些基本概念的類型。 下�
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](ftmbase-class.md) 代表無限制執行緒封送處理器物件。 `FtmBase` 建立全域介面表（GIT），並協助管理封送處理和 proxy 物件。
+[FtmBase](ftmbase-class.md) 代表無限制執行緒封送處理器物件。 `FtmBase` 建立全域介面表 (GIT)，並協助管理封送處理和 Proxy 物件。
 
 ### <a name="weakref"></a>WeakRef
 

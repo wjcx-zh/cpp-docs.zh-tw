@@ -140,7 +140,7 @@ class array;
 |成員函式|描述|
 |-|-|
 |[array](#array)|建構陣列物件。|
-|[assign](#assign)|(Obsolete. Use `fill`.) Replaces all elements.|
+|[assign](#assign)|過時. 使用 `fill`）。取代所有元素。|
 |[at](#at)|存取指定位置的項目。|
 |[back](#back)|存取最後一個項目。|
 |[begin](#begin)|指定受控制序列的開頭。|
@@ -162,11 +162,11 @@ class array;
 |運算子|描述|
 |-|-|
 |[array::operator=](#op_eq)|取代受控制的序列。|
-|[array::operator\[\]](#op_at)|存取指定位置的項目。|
+|[array：： operator\[\]](#op_at)|存取指定位置的項目。|
 
 ## <a name="remarks"></a>備註
 
-該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如，套用至物件的
+該類型具有預設建構函式 `array()` 與預設指派運算子 `operator=`，且可滿足 `aggregate` 的需求。 因此，`array<Ty, N>` 類型的物件可以使用彙總初始設定式加以初始化。 例如：
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -255,12 +255,12 @@ constexpr const_reference at(size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*off*\
+*關閉*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
-The member functions return a reference to the element of the controlled sequence at position *off*. 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
+成員函式會在位置*off*傳回受控制序列之元素的參考。 如果該位置無效，函式就會擲回類別 `out_of_range` 的物件。
 
 ### <a name="example"></a>範例
 
@@ -381,7 +381,7 @@ int main()
 
 ## <a name="cbegin"></a> array::cbegin
 
-Returns a **const** iterator that addresses the first element in the range.
+傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const noexcept;
@@ -389,13 +389,13 @@ const_iterator cbegin() const noexcept;
 
 ### <a name="return-value"></a>傳回值
 
-A **const** random-access iterator that points at the first element of the range, or the location just beyond the end of an empty range (for an empty range, `cbegin() == cend()`).
+**常數**隨機存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `begin()` and `cbegin()`.
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -407,7 +407,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a> array::cend
 
-Returns a **const** iterator that addresses the location just beyond the last element in a range.
+傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const noexcept;
@@ -421,7 +421,7 @@ const_iterator cend() const noexcept;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 In the example, consider `Container` to be a modifiable (non- **const**) container of any kind that supports `end()` and `cend()`.
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如以下範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1037,7 +1037,7 @@ constexpr size_type max_size() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `N`。
+成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 
@@ -1082,14 +1082,14 @@ constexpr const_reference operator[](size_type off) const;
 
 ### <a name="parameters"></a>參數
 
-*off*\
+*關閉*\
 要存取的項目的位置。
 
 ### <a name="remarks"></a>備註
 
-The member functions return a reference to the element of the controlled sequence at position *off*. 如果位置不正確，就不會定義行為。
+成員函式會在位置*off*傳回受控制序列之元素的參考。 如果位置不正確，就不會定義行為。
 
-There is also a non-member [get](array-functions.md#get) function available to get a reference to an element of an **array**.
+還有一個非成員[get](array-functions.md#get)函式可供取得**陣列**元素的參考。
 
 ### <a name="example"></a>範例
 
@@ -1138,7 +1138,7 @@ array<Value> operator=(array<Value> right);
 
 ### <a name="remarks"></a>備註
 
-The member operator assigns each element of *right* to the corresponding element of the controlled sequence, then returns `*this`. You use it to replace the controlled sequence with a copy of the controlled sequence in *right*.
+成員運算子會*將的每個元素*指派給受控制序列的對應元素，然後傳回 `*this`。 您可以使用它，將受控制序列取代為*右邊*的受控制序列複本。
 
 ### <a name="example"></a>範例
 
@@ -1410,7 +1410,7 @@ constexpr size_type size() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回 `N`。
+成員函式會傳回 `N`。
 
 ### <a name="example"></a>範例
 
@@ -1502,9 +1502,9 @@ void swap(array& right);
 
 ### <a name="remarks"></a>備註
 
-The member function swaps the controlled sequences between `*this` and *right*. 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
+成員函式會在 `*this` 和*右方*之間交換受控制的序列。 它會執行多個元素指派，以及與 `N` 成正比的建構函式呼叫。
 
-There is also a non-member [swap](array-functions.md#swap) function available to swap two **array** instances.
+另外還有一個非成員[交換](array-functions.md#swap)函式，可用來交換兩個**陣列**實例。
 
 ### <a name="example"></a>範例
 
@@ -1600,6 +1600,6 @@ int main()
 0 1 2 3
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<array>](../standard-library/array.md)

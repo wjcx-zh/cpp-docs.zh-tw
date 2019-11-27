@@ -15,12 +15,12 @@ ms.locfileid: "74399254"
 ---
 # <a name=""></a>\@\@：
 
-Defines a code label recognizable only between *label1* and *label2*, where *label1* is either start of code or the previous `@@:` label, and *label2* is either end of code or the next `@@:` label. See [\@B](../../assembler/masm/at-b.md) and [\@F](../../assembler/masm/at-f.md).
+定義只能在*label1*和*label2*之間辨識的程式碼標籤，其中*label1*是程式碼的開頭或前一個 `@@:` 標籤，而*label2*則是程式碼的結尾或下一個 `@@:` 的標籤。 請參閱[\@B](../../assembler/masm/at-b.md)和[\@F](../../assembler/masm/at-f.md)。
 
 ## <a name="syntax"></a>語法
 
-> **\@\@:**
+> **\@\@：**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

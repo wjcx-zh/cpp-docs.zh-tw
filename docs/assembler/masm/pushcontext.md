@@ -15,12 +15,12 @@ ms.locfileid: "74395723"
 ---
 # <a name="pushcontext"></a>PUSHCONTEXT
 
-Saves part or all of the current *context*: segment register assumes, radix value, listing and cref flags, or processor/coprocessor values. The *context* can be **ASSUMES**, **RADIX**, **LISTING**, **CPU**, or **ALL**.
+儲存部分或全部的目前*內容*：區段暫存器假設、基數值、清單和 cref 旗標，或處理器/副處理器值。 *內容*可以是「**假設**」、「**基數**」、「**清單**」、「 **CPU**」或「**全部**」。
 
 ## <a name="syntax"></a>語法
 
-> **PUSHCONTEXT** *context*
+> **PUSHCONTEXT** *內容*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

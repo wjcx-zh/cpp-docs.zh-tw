@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>值
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |`none`|預設行為︰忽略目錄的符號連結。 權限遭拒是一種錯誤。|
 |`follow_directory_symlink`|將目錄的符號連結視為實際的目錄。|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>值
 
-|Name|值|描述|
+|名稱|值|描述|
 |----------|-----------|-----------------|
 |`not_found`|-1|代表不存在的檔案。|
 |`none`|0|代表不具有類型屬性的檔案。 (不支援。)|
@@ -161,7 +161,7 @@ enum class perms {// names for permissions
 };
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [\<filesystem>](../standard-library/filesystem.md)

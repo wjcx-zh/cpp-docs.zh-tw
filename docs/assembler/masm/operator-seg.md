@@ -17,12 +17,12 @@ ms.locfileid: "74396467"
 ---
 # <a name="operator-seg"></a>運算子 SEG
 
-Returns the segment of *expression*.
+傳回*運算式*的區段。
 
 ## <a name="syntax"></a>語法
 
-> **SEG** *expression*
+> **SEG** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

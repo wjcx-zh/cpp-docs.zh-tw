@@ -13,16 +13,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397833"
 ---
-# <a name="while-32-bit-masm"></a>.WHILE (32-bit MASM)
+# <a name="while-32-bit-masm"></a>.WHILE （32-bit MASM）
 
-Generates code that executes the block of *statements* while *condition* remains true. (32-bit MASM only.)
+產生執行*語句*區塊的程式碼，而*條件*則維持為 true。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.WHILE** *condition*\
-> *statements*\
+> **.WHILE** *條件*\
+> *語句*\
 > **.ENDW**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

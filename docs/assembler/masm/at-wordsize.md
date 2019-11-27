@@ -15,12 +15,12 @@ ms.locfileid: "74398871"
 ---
 # <a name="wordsize"></a>\@WordSize
 
-Two for a 16-bit segment or four for a 32-bit segment (numeric equate).
+兩個用於16位區段，或四個用於32位區段（數值等於）。
 
 ## <a name="syntax"></a>語法
 
 > **\@WordSize**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

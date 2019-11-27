@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|建立工作區物件。 之後，請呼叫 `Create` 或 `Open`。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoWorkspace：： Append](#append)|將新建立的工作區附加至資料庫引擎的工作區集合。|
 |[CDaoWorkspace：： BeginTrans](#begintrans)|開始新的交易，其適用于工作區中開啟的所有資料庫。|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoWorkspace：： m_pDAOWorkspace](#m_pdaoworkspace)|指向基礎 DAO 工作區物件。|
 
@@ -165,7 +165,7 @@ MFC 不會在 DAO 中執行使用者和群組集合，用於安全性控制。 �
 
 藉由關閉具有[Close](#close)成員函式的工作區來結束工作區會話。 `Close` 關閉先前尚未關閉的任何資料庫，並回復任何未認可的交易。
 
-## <a name="transactions"></a>異動
+## <a name="transactions"></a>交易
 
 DAO 會管理工作區層級的交易;因此，在具有多個開啟資料庫的工作區上，交易會套用至所有資料庫。 例如，如果兩個資料庫有未認可的更新，而且您呼叫[CommitTrans](#committrans)，則會認可所有的更新。 如果您想要將交易限制為單一資料庫，您需要有個別的工作區物件。
 
@@ -191,7 +191,7 @@ DAO 會管理工作區層級的交易;因此，在具有多個開啟資料庫的
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="append"></a>CDaoWorkspace：： Append
 
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>參數
 
-*nAction*<br/>
+*N 動作*<br/>
 在閒置處理期間所要採取的動作。 目前唯一有效的動作是 `dbFreeLocks`。
 
 ### <a name="remarks"></a>備註
@@ -888,7 +888,7 @@ static void PASCAL SetLoginTimeout(short nSeconds);
 
 如需相關資訊，請參閱 DAO 說明中的「LoginTimeout 屬性」主題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>

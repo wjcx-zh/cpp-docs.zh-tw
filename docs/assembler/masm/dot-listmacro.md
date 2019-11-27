@@ -15,7 +15,7 @@ ms.locfileid: "74398153"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-Starts listing of macro expansion statements that generate code or data.
+開始列出產生程式碼或資料的宏展開語句。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Starts listing of macro expansion statements that generate code or data.
 
 ## <a name="remarks"></a>備註
 
-這是預設值。 Same as [.XALL](../../assembler/masm/dot-xall.md).
+這是預設值。 與相同[.XALL](../../assembler/masm/dot-xall.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

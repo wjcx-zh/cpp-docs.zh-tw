@@ -13,34 +13,34 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398249"
 ---
-# <a name="fpo-32-bit-masm"></a>.FPO (32-bit MASM)
+# <a name="fpo-32-bit-masm"></a>.FPO （32位 MASM）
 
-The **.FPO** directive controls the emission of debug records to the .debug$F segment or section. (32-bit MASM only.)
+**。FPO**指示詞會控制將 debug 記錄發出至 debug $ F 區段或區段。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.FPO** (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*, *cbFrame*)
+> **.FPO** （*cdwLocals*、 *cdwParams*、 *cbProlog*、 *cbRegs*、 *fUseBP*、 *cbFrame*）
 
 ### <a name="parameters"></a>參數
 
 *cdwLocals*\
-Number of local variables, an unsigned 32 bit value.
+本機變數的數目，不帶正負號的32位值。
 
 *cdwParams*\
-Size of the parameters in DWORDS, an unsigned 16 bit value.
+DWORD 中的參數大小，不帶正負號的16位值。
 
 *cbProlog*\
-Number of bytes in the function prolog code, an unsigned 8 bit value.
+函數初構程式碼中的位元組數目，不帶正負號的8位值。
 
 *cbRegs*\
-Number registers saved.
+已儲存的數位暫存器。
 
 *fUseBP*\
-Indicates whether the EBP register has been allocated. either 0 or 1.
+指出是否已配置 EBP 暫存器。 為0或1。
 
 *cbFrame*\
-Indicates the frame type.  See [FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) for more information.
+表示框架類型。  如需詳細資訊，請參閱[FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

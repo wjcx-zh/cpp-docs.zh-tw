@@ -15,16 +15,16 @@ ms.locfileid: "74397558"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+定義一或多*個名為 type 類型的外部*變數、標籤或*符號。*
 
 ## <a name="syntax"></a>語法
 
-> **EXTERN** ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* ⟦ __(__ *altid* __)__ ⟧ __:__ *type* ...⟧
+> **EXTERN** ⟦*language type*⟧ *name* ⟦ __（__ *altid* __）__ ⟧ __：__ *type* ⟦ __，__ ⟦*language-type*⟧ *name* ⟦ __（__ *altid* __）__ ⟧ __：__ *type* .。。⟧
 
 ## <a name="remarks"></a>備註
 
-The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Same as [EXTRN](../../assembler/masm/extrn.md).
+*類型*可以是[ABS](../../assembler/masm/operator-abs.md)，其會將*名稱*當做常數來匯入。 與[EXTRN](../../assembler/masm/extrn.md)相同。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

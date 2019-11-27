@@ -15,12 +15,12 @@ ms.locfileid: "74398351"
 ---
 # <a name="erre"></a>.ERRE
 
-Generates an error if *expression* is false (0).
+如果*expression*為 false （0），則會產生錯誤。
 
 ## <a name="syntax"></a>語法
 
-> **.ERRE** *expression* ⟦ __,__ *message*⟧
+> **..Erre** *expression* ⟦ __，__ *message*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

@@ -16,12 +16,12 @@ ms.locfileid: "74396177"
 ---
 # <a name="operator-short"></a>運算子 SHORT
 
-Sets the type of *label* to short. All jumps to *label* must be short (within the range -128 to +127 bytes from the jump instruction to *label*).
+將*標籤*的類型設定為 short。 所有跳到*標籤*都必須是簡短的（範圍介於-128 到 + 127 位元組之間，從跳躍指示到*標籤*）。
 
 ## <a name="syntax"></a>語法
 
-> **SHORT** *label*
+> **簡短***標籤*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

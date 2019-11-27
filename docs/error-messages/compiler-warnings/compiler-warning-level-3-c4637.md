@@ -15,9 +15,9 @@ ms.locfileid: "74189112"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>編譯器警告 (層級 3) C4637
 
-XML document comment target: \<include> tag discarded.  原因
+XML 檔批註目標： \<包含已捨棄 > 標記。  reason
 
-The syntax of an [\<include>](../../build/reference/include-visual-cpp.md) tag was not correct.
+\<的語法[包含 >](../../build/reference/include-visual-cpp.md)標記不正確。
 
 下列範例會產生 C4637：
 

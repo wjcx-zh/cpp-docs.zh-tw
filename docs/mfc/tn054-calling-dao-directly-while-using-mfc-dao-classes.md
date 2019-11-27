@@ -21,7 +21,7 @@ ms.locfileid: "74303427"
 # <a name="tn054-calling-dao-directly-while-using-mfc-dao-classes"></a>TN054：在使用 MFC DAO 類別時直接呼叫 DAO
 
 > [!NOTE]
-> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-templates.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
+> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
 使用 MFC DAO 資料庫類別時，可能有一些情況需要直接使用 DAO。 通常不會發生這種情況，但 MFC 已提供一些 helper 機制，可在結合 MFC 類別與直接 DAO 呼叫的使用時，簡化直接 DAO 呼叫的過程。 對 MFC 管理的 DAO 物件的方法進行直接的 DAO 呼叫，應該只需要幾行程式碼。 如果您需要建立並使用*不*受 MFC 管理的 DAO 物件，您必須實際呼叫物件上的 `Release`，以執行更多工作。 本技術提示說明當您可能想要直接呼叫 DAO 時，MFC 協助程式可以做什麼來説明您，以及如何使用 DAO OLE 介面。 最後，此附注提供一些範例函式，示範如何直接呼叫 dao 安全性功能的 DAO。
 
@@ -278,7 +278,7 @@ void SetDBPassword(LPCTSTR pDB,
 }
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)

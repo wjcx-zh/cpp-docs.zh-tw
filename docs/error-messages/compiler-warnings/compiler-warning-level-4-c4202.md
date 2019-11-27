@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4202
 ms.assetid: 253293aa-97a3-4878-a2e8-c6cc9e20b1cb
-ms.openlocfilehash: c66e2243ee5eca55105de27c9824ee8ced338500
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d5e7dd45b58f1231c39565bfd74c5895096a8b7
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401263"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541637"
 ---
 # <a name="compiler-warning-level-4-c4202"></a>編譯器警告 (層級 4) C4202
 
-使用非標準擴充: '...': 不合法的名稱清單中的原型參數
+使用非標準的擴充： ' ... '：名稱清單中的原型參數不合法
 
-舊樣式函式定義包含變數引數。 這些定義產生 ANSI 相容性錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+舊樣式函式定義包含變數引數。 這些定義會在 ANSI 相容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下產生錯誤。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // C4202.c
 // compile with: /W4
 void func( a, b, ...)   // C4202

@@ -1,5 +1,5 @@
 ---
-title: operator &#39; &#39;
+title: 運算子&#39;&#39;
 ms.date: 08/30/2018
 f1_keywords:
 - operator ' '
@@ -15,14 +15,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74395842"
 ---
-# <a name="operator-39-39"></a>operator &#39; &#39;
+# <a name="operator-39-39"></a>運算子&#39;&#39;
 
-Treats '*text*' as a string.
+將 '*text*' 視為字串。
 
 ## <a name="syntax"></a>語法
 
 > __'__ *text* __'__
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

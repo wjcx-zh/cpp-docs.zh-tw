@@ -15,12 +15,12 @@ ms.locfileid: "74398024"
 ---
 # <a name="radix"></a>.RADIX
 
-Sets the default radix, in the range 2 to 16, to the value of *expression*.
+將預設基數（範圍介於2到16）設為*expression*的值。
 
 ## <a name="syntax"></a>語法
 
-> **.RADIX** *expression*
+> **.基數***運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

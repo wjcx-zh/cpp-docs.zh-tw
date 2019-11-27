@@ -58,9 +58,9 @@ MFC 不會將 DAO 錯誤物件封裝在類別中。 相反地， [CDaoException]
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoException 類別](../../mfc/reference/cdaoexception-class.md)

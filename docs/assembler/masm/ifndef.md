@@ -15,16 +15,16 @@ ms.locfileid: "74397361"
 ---
 # <a name="ifndef"></a>IFNDEF
 
-Grants assembly if *name* has not been defined.
+如果尚未定義*名稱*，則授與元件。
 
 ## <a name="syntax"></a>語法
 
-> **IFNDEF** *name*
+> **IFNDEF** *名稱*
 
 ## <a name="remarks"></a>備註
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+如需完整語法[，請參閱](../../assembler/masm/if-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

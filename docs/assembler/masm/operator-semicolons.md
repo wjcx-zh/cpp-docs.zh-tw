@@ -17,12 +17,12 @@ ms.locfileid: "74396452"
 ---
 # <a name="operator-"></a>運算子 ;;
 
-Treats *text* as a comment in a macro that appears only in the macro definition. The listing does not show *text* where the macro is expanded.
+將*文字*視為僅出現在巨集定義中的宏批註。 此清單不會顯示擴充宏的*文字*。
 
 ## <a name="syntax"></a>語法
 
-> **;;** *text*
+> **;;** *文字*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

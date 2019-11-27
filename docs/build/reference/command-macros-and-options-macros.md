@@ -43,6 +43,6 @@ ms.locfileid: "74303173"
 |C++ 編譯器|**CXX**|cl|**CXXFLAGS**|
 |資源編譯器|**RC**|rc|**RFLAGS**|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [特殊的 NMAKE 巨集](special-nmake-macros.md)

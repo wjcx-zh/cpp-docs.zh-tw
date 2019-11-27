@@ -67,7 +67,7 @@ int main()
     // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [歡迎回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>

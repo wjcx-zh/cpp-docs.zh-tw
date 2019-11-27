@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399134"
 ---
-# <a name="date"></a>\@Date
+# <a name="date"></a>\@日期
 
-The system date in the format mm/dd/yy (text macro).
+以 mm/dd/yy （text 宏）格式的系統日期。
 
 ## <a name="syntax"></a>語法
 
-> **\@Date**
+> **\@日期**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

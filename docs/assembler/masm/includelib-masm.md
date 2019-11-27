@@ -15,7 +15,7 @@ ms.locfileid: "74397334"
 ---
 # <a name="includelib-masm"></a>INCLUDELIB (MASM)
 
-Informs the linker that the current module should be linked with *libraryname*.
+通知連結器，目前模組應與*libraryname*連結。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Informs the linker that the current module should be linked with *libraryname*.
 
 ## <a name="remarks"></a>備註
 
-The *libraryname* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+如果*libraryname*包含反斜線、分號、大於符號、小於符號、單引號或雙引號，則必須以角括弧括住。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -1,5 +1,5 @@
 ---
-title: operator &quot; &quot;
+title: 運算子 &quot; &quot;
 ms.date: 08/30/2018
 f1_keywords:
 - '&#34; &#34;'
@@ -15,14 +15,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397028"
 ---
-# <a name="operator-quot-quot"></a>operator &quot; &quot;
+# <a name="operator-quot-quot"></a>運算子 &quot; &quot;
 
-Treats "*text*" as a string.
+將 "*text*" 視為字串。
 
 ## <a name="syntax"></a>語法
 
-> __"__ *text* __"__
+> 「*文字* 」
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4204
 ms.assetid: 298d2880-6737-448e-b711-15572d540200
-ms.openlocfilehash: e16cb9fb59ee6ec24bb9b68dad1be9432d9eee3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ecbe8bddd3f868070470555e79608ac1ecce380a
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401237"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541664"
 ---
 # <a name="compiler-warning-level-4-c4204"></a>編譯器警告 (層級 4) C4204
 
-使用非標準擴充： 非常數的彙總初始設定式
+使用非標準的擴充：非常數匯總初始化運算式
 
-使用 Microsoft 擴充功能 (/Ze)，您可以初始化彙總類型 （陣列、 結構、 等位和類別），且不是常數的值。
+使用 Microsoft extensions （/Ze）時，您可以使用非常數的值來初始化匯總類型（陣列、結構、等位和類別）。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // C4204.c
 // compile with: /W4
 int func1()
@@ -40,4 +40,4 @@ int main()
 }
 ```
 
-這類初始化是 ANSI 相容性無效 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+這類初始化在 ANSI 相容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下無效。

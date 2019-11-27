@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398927"
 ---
-# <a name="stack"></a>\@stack
+# <a name="stack"></a>\@堆疊
 
-DGROUP for near stacks or STACK for far stacks (text macro).
+近乎堆疊的 DGROUP 或最接近堆疊的堆疊（文字宏）。
 
 ## <a name="syntax"></a>語法
 
-> **\@stack**
+> **\@堆疊**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

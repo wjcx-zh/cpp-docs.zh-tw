@@ -1,5 +1,5 @@
 ---
-title: IF1 and IF2
+title: IF1 和 IF2
 ms.date: 11/21/2019
 f1_keywords:
 - IF2
@@ -15,11 +15,11 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397452"
 ---
-# <a name="if1-and-if2"></a>IF1 and IF2
+# <a name="if1-and-if2"></a>IF1 和 IF2
 
-**IF1** block is evaluated on first assembly pass.
+**IF1**區塊會在第一次元件傳遞時評估。
 
-**IF2** block is evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+如果**OPTION： SETIF2**為**TRUE**，則會在每個元件階段評估**IF2**區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -29,20 +29,20 @@ ms.locfileid: "74397452"
 
 ## <a name="remarks"></a>備註
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+如需完整語法[，請參閱](../../assembler/masm/if-masm.md)。
 
-Unlike version 5.1, MASM 6.1 and above do most of its work on its first pass, then performs as many subsequent passes as necessary. In contrast, MASM 5.1 always assembles in two source passes. As a result, you may need to revise or delete some pass-dependent constructs under MASM 6.1 and above.
+不同于5.1 版，MASM 6.1 和更新版本會在第一次傳遞時執行大部分的工作，然後視需要執行多個後續的傳遞。 相反地，MASM 5.1 一律會在兩個來源階段中組合。 因此，您可能需要修改或刪除 MASM 6.1 和更新版本下的部分傳遞相依結構。
 
-### <a name="two-pass-directives"></a>Two-Pass Directives
+### <a name="two-pass-directives"></a>兩階段指示詞
 
-To assure compatibility, MASM 6.1 and above support 5.1 directives referring to two passes. These include **.ERR1**, **.ERR2**, **IF1**, **IF2**, **ELSEIF1**, and **ELSEIF2**. For second-pass constructs, you must specify [OPTION SETIF2](option-masm.md). Without **OPTION SETIF2**, the **IF2** and **.ERR2** directives cause an error:
+為了確保相容性，MASM 6.1 和更新版本支援參考兩個階段的5.1 指示詞。 其中包括 **。ERR1**， **.ERR2**、 **IF1**、 **IF2**、 **ELSEIF1**和**ELSEIF2**。 針對第二階段的結構，您必須指定[選項 SETIF2](option-masm.md)。 如果沒有**OPTION SETIF2**，則**IF2**和 **.ERR2**指示詞會造成錯誤：
 
 ```output
 .ERR2 not allowed : single-pass assembler
 ```
 
-MASM 6.1 and above handle first-pass constructs differently. It treats the **.ERR1** directive as **.ERR**, and the **IF1** directive as **IF**.
+MASM 6.1 和更新版本會以不同方式處理第一階段的結構。 它會將視為 **。ERR1**指示詞為 **。ERR**和**IF1**指示**詞，如同。**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

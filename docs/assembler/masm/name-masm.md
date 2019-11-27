@@ -15,12 +15,12 @@ ms.locfileid: "74397153"
 ---
 # <a name="name-masm"></a>NAME (MASM)
 
-忽略。
+忽略：
 
 ## <a name="syntax"></a>語法
 
-> **NAME**
+> **檔案名**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

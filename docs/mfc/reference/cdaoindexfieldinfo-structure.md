@@ -48,9 +48,9 @@ struct CDaoIndexFieldInfo
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [結構、樣式、回呼和訊息對應](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CDaoTableDef：： GetIndexInfo](../../mfc/reference/cdaotabledef-class.md#getindexinfo)<br/>

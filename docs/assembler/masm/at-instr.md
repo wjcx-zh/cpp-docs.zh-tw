@@ -15,12 +15,12 @@ ms.locfileid: "74399028"
 ---
 # <a name="instr"></a>\@InStr
 
-Macro function that finds the first occurrence of *string2* in *string1*, beginning at *position* within *string1*. If *position* does not appear, search begins at start of *string1*. Returns a position integer or 0 if *string2* is not found.
+從*string1*中的*位置*開始，在*string1*中尋找第一個出現的*string2*的宏函式。 如果*位置*沒有出現，搜尋就會從*string1*開頭開始。 傳回位置整數，如果找不到*string2* ，則傳回0。
 
 ## <a name="syntax"></a>語法
 
-> **\@InStr(** ⟦*position*⟧ __,__ *string1* __,__ *string2* **)**
+> **\@InStr （** ⟦*position*⟧ __，__ *string1* __，__ *string2* **）**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399102"
 ---
-# <a name="fardata"></a>\@fardata?
+# <a name="fardata"></a>\@fardata？
 
-The name of the segment defined by the [.FARDATA?](../../assembler/masm/dot-fardata-q.md) directive (text macro).
+所定義之區段的名稱[。FARDATA？](../../assembler/masm/dot-fardata-q.md)指示詞（文字宏）。
 
 ## <a name="syntax"></a>語法
 
-> **\@fardata?**
+> **\@fardata？**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

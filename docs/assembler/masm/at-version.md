@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398883"
 ---
-# <a name="version"></a>\@Version
+# <a name="version"></a>\@版本
 
-The major and minor version of MASM reported at the command line, as a single number (text macro). For example, MASM version 14.23.28107.0 produces "1423".
+在命令列中，以單一數位（文字宏）報告之 MASM 的主要和次要版本。 例如，MASM 版本14.23.28107.0 會產生 "1423"。
 
 ## <a name="syntax"></a>語法
 
-> **\@Version**
+> **\@版本**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

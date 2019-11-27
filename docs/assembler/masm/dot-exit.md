@@ -13,9 +13,9 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398288"
 ---
-# <a name="exit-32-bit-masm"></a>.EXIT (32-bit MASM)
+# <a name="exit-32-bit-masm"></a>.EXIT （32-位 MASM）
 
-Generates termination code. (32-bit MASM only.)
+產生終止程式碼。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Generates termination code. (32-bit MASM only.)
 
 ## <a name="remarks"></a>備註
 
-Returns optional *expression* to shell.
+傳回 shell 的選擇性*運算式*。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74399125"
 ---
 # <a name="environ"></a>\@Environ
 
-Value of environment variable *envvar* (macro function).
+環境變數*envvar* （宏函數）的值。
 
 ## <a name="syntax"></a>語法
 
-> **\@Environ(** *envvar* **)**
+> **\@Environ （** *envvar* **）**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

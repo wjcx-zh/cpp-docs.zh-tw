@@ -15,12 +15,12 @@ ms.locfileid: "74397803"
 ---
 # <a name="xcref"></a>.XCREF
 
-See [.NOCREF](../../assembler/masm/dot-nocref.md).
+請參閱[.NOCREF](../../assembler/masm/dot-nocref.md)。
 
 ## <a name="syntax"></a>語法
 
 > **.XCREF**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

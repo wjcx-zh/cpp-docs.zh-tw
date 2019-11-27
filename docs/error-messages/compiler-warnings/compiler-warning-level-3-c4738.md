@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (Level 3) C4738
+title: 編譯器警告 (層級 3) C4738
 ms.date: 11/04/2016
 f1_keywords:
 - C4738
@@ -13,21 +13,21 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189401"
 ---
-# <a name="compiler-warning-level-3-c4738"></a>Compiler Warning (Level 3) C4738
+# <a name="compiler-warning-level-3-c4738"></a>編譯器警告 (層級 3) C4738
 
 在記憶體中儲存 32 位元浮點結果，可能會損失效能
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 會警告，指派、轉換、傳遞的引數或其他作業的結果可能需要四捨五入，或操作已用盡暫存器，而且需要使用記憶體（溢出）。 這可能會導致效能降低。
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+若要解決此警告並避免四捨五入，請使用[/fp： fast](../../build/reference/fp-specify-floating-point-behavior.md)進行編譯，或使用 `double` 而不是 `float`。
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+若要解決此警告並避免暫存器用盡，請變更計算的順序，並修改內嵌的使用
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
 ## <a name="example"></a>範例
 
-The following sample generates C4738:
+下列範例會產生 C4738：
 
 ```cpp
 // C4738.cpp

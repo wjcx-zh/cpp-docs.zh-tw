@@ -21,8 +21,8 @@ ms.locfileid: "74398219"
 
 ## <a name="remarks"></a>備註
 
-See [.LISTMACROALL](../../assembler/masm/dot-listmacroall.md).
+請參閱[.LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

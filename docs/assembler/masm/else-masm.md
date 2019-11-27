@@ -15,16 +15,16 @@ ms.locfileid: "74397712"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
-Marks the beginning of an alternate block within a conditional block.
+在條件式區塊內標記替代區塊的開頭。
 
 ## <a name="syntax"></a>語法
 
-> **ELSE**
+> **東西**
 
 ## <a name="remarks"></a>備註
 
-See [IF](../../assembler/masm/if-masm.md).
+查看[IF](../../assembler/masm/if-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74398936"
 ---
 # <a name="sizestr"></a>\@SizeStr
 
-A macro function that returns the length of the given string. Returns an integer.
+傳回指定字串長度的宏函數。 傳回整數。
 
 ## <a name="syntax"></a>語法
 
-> **\@SizeStr(** *string* **)**
+> **\@SizeStr （** *字串* **）**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

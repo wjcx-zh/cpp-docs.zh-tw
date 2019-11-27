@@ -15,17 +15,17 @@ ms.locfileid: "74397500"
 ---
 # <a name="fword"></a>FWORD
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*.
+配置並選擇性地為每個*初始化運算式*初始化6個位元組的儲存區。
 
 ## <a name="syntax"></a>語法
 
-> ⟦*name*⟧ **FWORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*名稱*⟧ **FWORD** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-Also can be used as a type specifier anywhere a type is legal.
+也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+指示詞[參考](../../assembler/masm/directives-reference.md)\
 [DF](../../assembler/masm/df.md)

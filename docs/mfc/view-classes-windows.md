@@ -83,6 +83,6 @@ View 類別是與檔類別和框架視窗類別相關聯，並使用檔範本物
 [CRichEditCntrItem](../mfc/reference/cricheditcntritem-class.md)<br/>
 提供 `CRichEditView`中儲存之 OLE 專案的用戶端存取。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別總覽](../mfc/class-library-overview.md)

@@ -21,8 +21,8 @@ ms.locfileid: "74398194"
 
 ## <a name="remarks"></a>備註
 
-See [.LISTIF](../../assembler/masm/dot-listif.md).
+請參閱[.LISTIF](../../assembler/masm/dot-listif.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

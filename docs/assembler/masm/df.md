@@ -15,16 +15,16 @@ ms.locfileid: "74398778"
 ---
 # <a name="df"></a>DF
 
-Allocates and optionally initializes 6 bytes of storage for each *initializer*. **DF** is a synonym of [FWORD](../../assembler/masm/fword.md).
+配置並選擇性地為每個*初始化運算式*初始化6個位元組的儲存區。 **DF**是[FWORD](../../assembler/masm/fword.md)的同義字。
 
 ## <a name="syntax"></a>語法
 
-> ⟦*name*⟧ **DF** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*名稱*⟧ **DF** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-Also can be used as a type specifier anywhere a type is legal.
+也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

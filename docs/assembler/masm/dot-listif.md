@@ -15,7 +15,7 @@ ms.locfileid: "74398164"
 ---
 # <a name="listif"></a>.LISTIF
 
-Starts listing of statements in false conditional blocks.
+開始列出 false 條件式區塊中的語句。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Starts listing of statements in false conditional blocks.
 
 ## <a name="remarks"></a>備註
 
-Same as [.LFCOND](../../assembler/masm/dot-lfcond.md).
+與相同[.LFCOND](../../assembler/masm/dot-lfcond.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

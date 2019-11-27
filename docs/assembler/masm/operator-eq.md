@@ -17,12 +17,12 @@ ms.locfileid: "74397000"
 ---
 # <a name="operator-eq"></a>運算子 EQ
 
-Returns true (-1) if *expression1* equals *expression2*, or returns false (0) if it does not.
+如果*運算式*1 等於*運算式*2，則傳回 true （-1），如果不是，則傳回 false （0）。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **EQ** *expression2*
+> *運算式* 2-2*運算式*2
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

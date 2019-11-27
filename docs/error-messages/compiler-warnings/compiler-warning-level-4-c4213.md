@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4213
 ms.assetid: 59fc3f61-ebd2-499e-99d7-f57bec11eda1
-ms.openlocfilehash: 8a3697b3bf63ac2a7a1e4e4bd0bf3a626c6bd631
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 318b228a1af17543062943a336ccccd06bc6ae46
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401146"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541817"
 ---
 # <a name="compiler-warning-level-4-c4213"></a>編譯器警告 (層級 4) C4213
 
-使用非標準擴充： 轉換值 （l-value）
+使用非標準的擴充：左值上的轉換
 
-您可以使用預設的 Microsoft 擴充功能 (/Ze) 中，轉換在指派陳述式左邊。
+使用預設的 Microsoft 擴充功能（/Ze）時，您可以在指派語句的左側使用轉換。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // C4213.c
 // compile with: /W4
 void *a;
@@ -37,4 +37,4 @@ int main()
 }
 ```
 
-這類轉換是 ANSI 相容性無效 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+這類轉換在 ANSI 相容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下是不正確。

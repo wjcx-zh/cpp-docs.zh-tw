@@ -15,7 +15,7 @@ ms.locfileid: "74398063"
 ---
 # <a name="nolistmacro"></a>.NOLISTMACRO
 
-Suppresses listing of macro expansions.
+隱藏宏擴充清單。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Suppresses listing of macro expansions.
 
 ## <a name="remarks"></a>備註
 
-Same as [.SALL](../../assembler/masm/dot-sall.md).
+與相同[.SALL](../../assembler/masm/dot-sall.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

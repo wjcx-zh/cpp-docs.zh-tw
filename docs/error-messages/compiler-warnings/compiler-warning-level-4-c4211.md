@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4211
 ms.assetid: 3eea3455-6faa-4cdb-8730-73db7026bd1f
-ms.openlocfilehash: 6d61191c4a7ed950d979158ccdfa3a390439b019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6387f58430098e49e7add25e8915bf6b181634e9
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401133"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541835"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>編譯器警告 (層級 4) C4211
 
-使用非標準擴充： extern 重新定義為靜態
+使用非標準的擴充：已將 extern 重新定義為靜態
 
-使用預設的 Microsoft 擴充功能 (/Ze) 中，您可以重新定義`extern`識別碼作為**靜態**。
+使用預設的 Microsoft 擴充功能（/Ze）時，您可以將 `extern` 識別碼重新定義為**靜態**。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // C4211.c
 // compile with: /W4
 extern int i;
@@ -32,4 +32,4 @@ int main()
 }
 ```
 
-這類重新定義是 ANSI 相容性無效 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+在 ANSI 相容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）下，這類重新定義無效。

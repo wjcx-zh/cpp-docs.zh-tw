@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398675"
 ---
-# <a name="486p-32-bit-masm"></a>.486P (32-bit MASM)
+# <a name="486p-32-bit-masm"></a>. .486P （32-bit MASM）
 
-Enables assembly of all instructions (including privileged) for the 80486 processor. (32-bit MASM only.)
+啟用80486處理器的所有指令（包括特殊許可權）的元件。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
 > **.486P**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

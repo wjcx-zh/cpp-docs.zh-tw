@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4522
+title: 編譯器警告 (層級 3) C4522
 ms.date: 11/04/2016
 f1_keywords:
 - C4522
@@ -13,17 +13,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188961"
 ---
-# <a name="compiler-warning-level-3-c4522"></a>Compiler Warning (level 3) C4522
+# <a name="compiler-warning-level-3-c4522"></a>編譯器警告 (層級 3) C4522
 
-'class' : multiple assignment operators specified
+' class '：指定了多個指派運算子
 
-The class has multiple assignment operators of a single type. This warning is informational; the constructors are callable in your program.
+類別具有單一類型的多個指派運算子。 此警告僅供參考。在您的程式中可以呼叫這些函式。
 
-Use the [warning](../../preprocessor/warning.md) pragma to suppress this warning.
+請使用[warning](../../preprocessor/warning.md) pragma 來隱藏這個警告。
 
 ## <a name="example"></a>範例
 
-The following sample generates C4522.
+下列範例會產生 C4522。
 
 ```cpp
 // C4522.cpp

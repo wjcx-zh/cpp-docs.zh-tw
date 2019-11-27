@@ -15,53 +15,53 @@ ms.locfileid: "74393732"
 ---
 # <a name="segment"></a>SEGMENT
 
-Defines a program segment called *name* having segment attributes
+定義名為*name*且含有區段屬性的程式區段
 
 ## <a name="syntax"></a>語法
 
-> *name* **SEGMENT** ⟦**READONLY**⟧ ⟦*align*⟧ ⟦*combine*⟧ ⟦*use*⟧ ⟦*characteristics*⟧ **ALIAS(** _string_ **)** ⟦ __'__ *class* __'__ ⟧\
-> *statements*\
-> *name* **ENDS**
+> *名稱***區段**⟦**READONLY**⟧⟦*align*⟧⟦*結合*⟧⟦*use*⟧⟦*特性*⟧ **ALIAS （** _string_ **）** ⟦ __'__ *class* __'__ ⟧ \
+> *語句*\
+> *名稱***結束**
 
 #### <a name="parameters"></a>參數
 
 *align*<br/>
-The range of memory addresses from which a starting address for the segment can be selected. The alignment type can be any one of the following:
+可從中選取區段之起始位址的記憶體位址範圍。 對齊類型可以是下列任何一項：
 
-|Align Type|Starting Address|
+|對齊類型|起始位址|
 |----------------|----------------------|
-|**BYTE**|Next available byte address.|
-|**WORD**|Next available word address (2 bytes per word).|
-|**DWORD**|Next available double word address (4 bytes per double word).|
-|**PARA**|Next available paragraph address (16 bytes per paragraph).|
-|**PAGE**|Next available page address (256 bytes per page).|
-|**ALIGN**(*n*)|Next available *n*th byte address. See Remarks section for more information.|
+|**BYTE**|下一個可用的位元組位址。|
+|**WORD**|下一個可用的文字位址（每個字2個位元組）。|
+|**DWORD**|下一個可用的雙字組位址（每個雙單字4個位元組）。|
+|**並行**|下一個可用的段落位址（每個段落16個位元組）。|
+|**PAGE**|下一個可用的頁面位址（每頁256個位元組）。|
+|**對齊**（*n*）|下一個可用的第*n*個位元組位址。 如需詳細資訊，請參閱備註一節。|
 
-If this parameter is not specified, **PARA** is used by default.
+如果未指定此參數，則預設會使用 [**段落**]。
 
-*combine*\
-**PUBLIC**, **STACK**, **COMMON**, **MEMORY**, **AT**<em>address</em>, **PRIVATE**
+*結合*\
+**公用**，**堆疊**，**一般**，**記憶體**，<em>位址</em>，**私**用
 
-*use*\
-**USE16**, **USE32**, **FLAT**
+*使用*\
+**USE16**、 **USE32**、**平直**
 
-*characteristics*\
-**INFO**, **READ**, **WRITE**, **EXECUTE**, **SHARED**, **NOPAGE**, **NOCACHE**, and **DISCARD**
+*特性*\
+**INFO**、 **READ**、 **WRITE**、 **EXECUTE**、 **SHARED**、 **NOPAGE**、 **NOCACHE**和**捨棄**
 
-These are supported for COFF only and correspond to the COFF section characteristics of similar name (for example, **SHARED** corresponds to IMAGE_SCN_MEM_SHARED). READ sets the IMAGE_SCN_MEM_READ flag. The obsolete READONLY flag caused the section to clear the IMG_SCN_MEM_WRITE flag. If any *characteristics* are set, the default characteristics are not used and only the programmer-specified flags are in effect.
+這些僅支援 COFF，並對應至類似名稱的 COFF 區段特性（例如， **SHARED**對應至 IMAGE_SCN_MEM_SHARED）。 [讀取] 會設定 IMAGE_SCN_MEM_READ 旗標。 過時的 READONLY 旗標會導致區段清除 IMG_SCN_MEM_WRITE 旗標。 如果設定了任何*特性*，則不會使用預設特性，而且只有程式設計人員指定的旗標才會生效。
 
 _string_\
-This string is used as the section name in the emitted COFF object.  Creates multiple sections with the same external name, with distinct MASM segment names.
+這個字串會當做發出的 COFF 物件中的區段名稱使用。  使用不同的 MASM 區段名稱，建立具有相同外部名稱的多個區段。
 
-Not supported with **/omf**.
+不支援 **/omf**。
 
 *class*\
-Designates how segments should be combined and ordered in the assembled file. Typical values are, `'DATA'`, `'CODE'`, `'CONST'` and `'STACK'`
+指定如何在組合的檔案中合併和排序區段。 一般的值為、`'DATA'`、`'CODE'`、`'CONST'` 和 `'STACK'`
 
 ## <a name="remarks"></a>備註
 
-For `ALIGN(n)`, *n* may be any power of 2 from 1 to 8192; not supported with **/omf**.
+針對 `ALIGN(n)`， *n*可能是從1到8192的2乘冪;不支援 **/omf**。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398649"
 ---
-# <a name="586p-32-bit-masm"></a>.586P (32-bit MASM)
+# <a name="586p-32-bit-masm"></a>. .586P （32-bit MASM）
 
-Enables assembly of all instructions (including privileged) for the Pentium processor. (32-bit MASM only.)
+啟用 Pentium 處理器的所有指令（包括特殊許可權）的元件。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
 > **.586P**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

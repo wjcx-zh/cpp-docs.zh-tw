@@ -1,5 +1,5 @@
 ---
-title: REPEAT
+title: 重複
 ms.date: 08/30/2018
 f1_keywords:
 - REPEAT
@@ -13,16 +13,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74394321"
 ---
-# <a name="repeat"></a>REPEAT
+# <a name="repeat"></a>重複
 
-Marks a block that is to be repeated *expression* times. Same as [REPT](../../assembler/masm/rept.md).
+標示要重複*運算式*時間的區塊。 與[REPT](../../assembler/masm/rept.md)相同。
 
 ## <a name="syntax"></a>語法
 
-> **REPEAT** *expression*\
-> *statements*\
+> **重複***運算式*\
+> *語句*\
 > **ENDM**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,44 +15,44 @@ ms.locfileid: "74394761"
 ---
 # <a name="proto"></a>PROTO
 
-Prototypes a function or procedure. You can call the function prototyped by the PROTO directive by using the [INVOKE](invoke.md) directive.
+原型函數或程式。 您可以使用[INVOKE](invoke.md)指示詞，透過 PROTO 指示詞呼叫函數原型。
 
 ## <a name="syntax"></a>語法
 
-> *label* **PROTO** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦ __,__ ⟦*parameter*⟧ __:__ *tag* ...⟧
+> *標籤* **PROTO** ⟦*距離*⟧ *⟦ language-類型*⟧⟦ __，__ ⟦*參數*⟧ __：__ *標記*.。。⟧
 
 ### <a name="parameters"></a>參數
 
-*label*\
-The name of the prototyped function.
+*標籤*\
+原型函式的名稱。
 
-*distance*\
-(Optional) Used in 16-bit memory models to override the default and indicate **NEAR** or **FAR** calls.
+*距離*\
+選擇性在16位記憶體模型中用來覆寫預設值，並指出**接近**或**遠**的呼叫。
 
-*language-type*\
-(Optional) Sets the calling and naming convention for procedures and public symbols. Supported conventions are:
+*語言類型*\
+選擇性設定程式和公用符號的呼叫和命名慣例。 支援的慣例如下：
 
-- 32-bit **FLAT** model: **C**, **STDCALL**
+- 32位**平面**模型： **C**、 **STDCALL**
 
-- 16-bit models: **C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**
+- 16位模型： **C**、**基本**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**
 
-*parameter*\
-The optional name for a function parameter.
+*參數*\
+函數參數的選擇性名稱。
 
-*tag*\
-The type of a function parameter.
+*標記*\
+函數參數的類型。
 
-The *parameter* and *tag* parameters may appear multiple times, once for each passed argument.
+*參數*和*標記*參數可能會多次出現，每個傳遞的引數一次。
 
 ## <a name="example"></a>範例
 
-This sample shows a **PROTO** declaration for a function named `addup3` that uses a **NEAR** call to override the 16-bit model default for procedure calls, and uses the **C** calling convention for stack parameters and return values. It takes two arguments, a **WORD** and a **VARARG**.
+這個範例會顯示名為 `addup3` 之函式的**PROTO**宣告，此函式會使用**接近**呼叫來覆寫程序呼叫的16位模型預設值，並使用堆疊參數和傳回值的**C**呼叫慣例。 它接受兩個引數：一個**單字**和一個**VARARG**。
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives Reference](directives-reference.md)\
-[.MODEL Reference](dot-model.md)
+指示詞[參考](directives-reference.md)\
+[.模型參考](dot-model.md)

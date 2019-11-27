@@ -15,18 +15,18 @@ ms.locfileid: "74397247"
 ---
 # <a name="local-masm"></a>LOCAL (MASM)
 
-In the first directive, within a macro, **LOCAL** defines labels that are unique to each instance of the macro.
+在宏內的第一個指示詞中， **LOCAL**會定義每個宏實例特有的標籤。
 
 ## <a name="syntax"></a>語法
 
-> **LOCAL** *localname* ⟦, *localname* ...⟧
+> **本機** *localname* ⟦， *localname* .。。⟧
 >
-> **LOCAL** *label* ⟦ __\[__ *count* __]__ ⟧ ⟦ __:__ *type*⟧ ⟦ __,__ *label* ⟦ __\[__ *count* __]__ ⟧ ⟦*type*⟧ ...⟧
+> **本機***標籤*⟦ __\[__ *計數* __]__ ⟧ __⟦：__ *類型*⟧⟦ __，__ *標籤*⟦ __\[__ *計數* __]__ ⟧⟦*類型*⟧ .。。⟧
 
 ## <a name="remarks"></a>備註
 
-In the second directive, within a procedure definition (**PROC**), **LOCAL** creates stack-based variables that exist for the duration of the procedure. The *label* may be a simple variable or an array containing *count* elements.
+在第二個指示詞中，在程序定義（**PROC**）內， **LOCAL**會建立在程式期間存在的堆疊型變數。 *標籤*可以是簡單變數或包含*計數*元素的陣列。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4220
 ms.assetid: aba18868-825f-4763-9af6-3296406a80e4
-ms.openlocfilehash: 177fb01ba4181f72740724d107fe08e6680ed492
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 781626e20f787bf582605ebd2d4943a7d5f2aa0c
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401107"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541911"
 ---
 # <a name="compiler-warning-level-4-c4220"></a>編譯器警告 (層級 4) C4220
 
 varargs 符合剩餘的參數
 
-在預設的 Microsoft 擴充功能 (/Ze) 中，函式的指標會比對類似，但變數、 引數的函式的指標。
+在預設的 Microsoft 擴充功能（/Ze）底下，函式的指標會與具有類似但變數之引數的函式指標相符。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // C4220.c
 // compile with: /W4
 
@@ -34,4 +34,4 @@ int main()
 }
 ```
 
-這類指標不符合 ANSI 相容性 ([/Za](../../build/reference/za-ze-disable-language-extensions.md))。
+這類指標與 ANSI 相容性（[/za](../../build/reference/za-ze-disable-language-extensions.md)）不相符。

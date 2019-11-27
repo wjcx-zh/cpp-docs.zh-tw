@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74399218"
 ---
-# <a name="code"></a>\@code
+# <a name="code"></a>\@程式碼
 
-The name of the code segment (text macro).
+程式碼片段的名稱（文字宏）。
 
 ## <a name="syntax"></a>語法
 
-> **\@code**
+> **\@程式碼**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

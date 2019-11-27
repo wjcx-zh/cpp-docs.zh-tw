@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398973"
 ---
-# <a name="line"></a>\@Line
+# <a name="line"></a>\@行
 
-The source line number in the current file (numeric equate).
+目前檔案中的原始程式列號（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> **\@Line**
+> **\@行**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

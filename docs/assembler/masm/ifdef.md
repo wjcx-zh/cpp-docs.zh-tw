@@ -15,16 +15,16 @@ ms.locfileid: "74397425"
 ---
 # <a name="ifdef"></a>IFDEF
 
-Grants assembly if *name* is a previously defined label, variable, or symbol.
+如果*name*是先前定義的標籤、變數或符號，則授與元件。
 
 ## <a name="syntax"></a>語法
 
-> **IFDEF** *name*
+> **IFDEF** *名稱*
 
 ## <a name="remarks"></a>備註
 
-See [IF](../../assembler/masm/if-masm.md) for complete syntax.
+如需完整語法[，請參閱](../../assembler/masm/if-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

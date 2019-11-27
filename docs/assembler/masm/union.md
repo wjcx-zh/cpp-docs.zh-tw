@@ -15,14 +15,14 @@ ms.locfileid: "74392984"
 ---
 # <a name="union"></a>UNION
 
-Declares a union of one or more data types. The *field-declarations* must be valid data definitions. Omit the [ENDS](../../assembler/masm/ends-masm.md) *name* label on nested **UNION** definitions.
+宣告一或多個資料類型的聯集。 *欄位*宣告必須是有效的資料定義。 省略嵌套聯**集**定義上的[結束](../../assembler/masm/ends-masm.md)*名稱*標籤。
 
 ## <a name="syntax"></a>語法
 
-> *name* **UNION** ⟦*alignment*⟧ ⟦ __,__ **NONUNIQUE**⟧\
-> *field-declarations*\
-> ⟦*name*⟧ **ENDS**
+> *名稱聯***集**⟦*對齊*⟧⟦ __，__ 非**唯一**⟧ \
+> *欄位*宣告\
+> ⟦*名稱*⟧**結束**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

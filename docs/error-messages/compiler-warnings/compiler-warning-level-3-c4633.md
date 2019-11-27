@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4633
+title: 編譯器警告 (層級 3) C4633
 ms.date: 11/04/2016
 f1_keywords:
 - C4633
@@ -13,13 +13,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189159"
 ---
-# <a name="compiler-warning-level-3-c4633"></a>Compiler Warning (level 3) C4633
+# <a name="compiler-warning-level-3-c4633"></a>編譯器警告 (層級 3) C4633
 
-XML document comment target: error:  reason
+XML 檔批註目標：錯誤：原因
 
-A name passed to the [\<param>](../../build/reference/param-visual-cpp.md) tag was not found by the compiler.
+編譯器找不到傳遞給[\<param >](../../build/reference/param-visual-cpp.md)標記的名稱。
 
-The following sample generates C4633:
+下列範例會產生 C4633：
 
 ```cpp
 // C4633.cpp

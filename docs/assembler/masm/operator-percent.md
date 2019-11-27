@@ -17,12 +17,12 @@ ms.locfileid: "74396504"
 ---
 # <a name="operator-"></a>運算子 %
 
-Treats the value of *expression* in a macro argument as text.
+將宏引數中的*expression*值視為文字。
 
 ## <a name="syntax"></a>語法
 
-> **%** *expression*
+> **%** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4256
 ms.assetid: a755a32e-895a-4837-a2b5-4ea06b736798
-ms.openlocfilehash: 3e8a3ab1b11c719730016e6a0cd248770cd89af8
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e087e3cd36ab85d6f3f6b5cfed1b55cac66ea142
+ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447769"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74541689"
 ---
 # <a name="compiler-warning-level-4-c4256"></a>編譯器警告 (層級 4) C4256
 
-'function': 具有虛擬基底類別建構函式有 '...';呼叫可能不相容於舊版的視覺效果C++
+' function '：具有虛擬基底之類別的函式具有 ' ... ';呼叫可能與較舊版本的視覺效果不相容C++
 
 可能的不相容。
 
-請參考下列程式碼範例。 如果定義的建構函式 S2::S2 (int i，...) 所使用的 Microsoft 版本編譯C++之前版本 7，但下列範例中的編譯器編譯使用目前的版本，適用於 S3 建構函式的呼叫就無法正確運作因為特殊案例的呼叫慣例改變。 如果兩個都是以 Visual C++ 6.0 編譯的，呼叫也不會正常運作，除非沒有傳遞省略符號參數。
+請考慮下列程式碼範例。 如果在第7版之前使用 Microsoft C++編譯器的版本編譯了「函式 S2：： S2 （int，...）」的定義，但使用目前的版本來編譯下列範例，則對 S3 的「處理常式」呼叫將無法正確運作，因為特殊案例的呼叫慣例變更。 如果兩個都是以 Visual C++ 6.0 編譯的，呼叫也不會正常運作，除非沒有傳遞省略符號參數。
 
 若要修正這個警告，
 
-1. 請勿使用建構函式中的省略符號。
+1. 請勿在函數中使用省略號。
 
-1. 請確定專案中的所有元件都建置與目前的版本 （包括任何可能定義或參考此類別的程式庫），然後停用警告 using[警告](../../preprocessor/warning.md)pragma。
+1. 請確定專案中的所有元件都是以目前的版本（包括任何可能定義或參考此類別的程式庫）建立，然後使用[warning](../../preprocessor/warning.md) pragma 來停用此警告。
 
-下列範例會產生 C4256:
+下列範例會產生 C4256：
 
-```
+```cpp
 // C4256.cpp
 // compile with: /W4
 // #pragma warning(disable : 4256)

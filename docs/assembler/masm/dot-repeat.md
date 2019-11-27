@@ -13,16 +13,16 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397999"
 ---
-# <a name="repeat-32-bit-masm"></a>.REPEAT (32-bit MASM)
+# <a name="repeat-32-bit-masm"></a>.重複（32位 MASM）
 
-Generates code that repeats execution of the block of *statements* until *condition* becomes true. [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md), which becomes true when CX is zero, may be substituted for [.UNTIL](../../assembler/masm/dot-until.md). The *condition* is optional with **.UNTILCXZ**. (32-bit MASM only.)
+產生會重複執行*語句*區塊的程式碼，直到*條件*變成 true 為止。 [.UNTILCXZ](../../assembler/masm/dot-untilcxz.md)，如果 CX 為零，則可替代[。直到](../../assembler/masm/dot-until.md)。 *條件*是選擇性的 **.UNTILCXZ**。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.REPEAT**\
-> *statements*\
-> **.UNTIL** *condition*
+> **.重複**\
+> *語句*\
+> **.UNTIL** *條件*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

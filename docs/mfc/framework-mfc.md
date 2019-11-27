@@ -35,7 +35,7 @@ ms.locfileid: "74303407"
 
 [嚮導和資源編輯器](../mfc/wizards-and-the-resource-editors.md)
 
-## <a name="in-related-sections"></a>相關章節
+## <a name="in-related-sections"></a>相關章節內容
 
 [在架構上建置](../mfc/building-on-the-framework.md)
 
@@ -43,12 +43,12 @@ ms.locfileid: "74303407"
 
 [CWinApp：應用程式類別](../mfc/cwinapp-the-application-class.md)
 
-[文件範本和文件/檢視建立流程](../mfc/document-templates-and-the-document-view-creation-process.md)
+[檔範本和檔/視圖建立程式](../mfc/document-templates-and-the-document-view-creation-process.md)
 
 [訊息處理和對應](../mfc/message-handling-and-mapping.md)
 
 [視窗物件](../mfc/window-objects.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用類別來編寫 Windows 應用程式](../mfc/using-the-classes-to-write-applications-for-windows.md)

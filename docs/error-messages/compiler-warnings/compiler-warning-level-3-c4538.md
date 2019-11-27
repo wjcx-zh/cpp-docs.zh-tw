@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4538
+title: 編譯器警告 (層級 3) C4538
 ms.date: 11/04/2016
 f1_keywords:
 - C4538
@@ -13,13 +13,13 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188953"
 ---
-# <a name="compiler-warning-level-3-c4538"></a>Compiler Warning (level 3) C4538
+# <a name="compiler-warning-level-3-c4538"></a>編譯器警告 (層級 3) C4538
 
-'type' : const/volatile qualifiers on this type are not supported
+' type '：不支援此類型的 const/volatile 限定詞
 
-A qualifier keyword was applied to an array incorrectly. 如需詳細資訊，請參閱 [陣列](../../extensions/arrays-cpp-component-extensions.md)。
+限定詞關鍵字已正確套用至陣列。 如需詳細資訊，請參閱 [陣列](../../extensions/arrays-cpp-component-extensions.md)。
 
-The following sample generates C4538:
+下列範例會產生 C4538：
 
 ```cpp
 // C4538.cpp

@@ -13,40 +13,40 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398103"
 ---
-# <a name="model-32-bit-masm"></a>.MODEL (32-bit MASM)
+# <a name="model-32-bit-masm"></a>.MODEL （32位 MASM）
 
-將程式記憶體模型初始化。 (32-bit MASM only.)
+將程式記憶體模型初始化。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.MODEL** *memory-model* ⟦ __,__ *language-type*⟧ ⟦ __,__ *stack-option*⟧
+> **.模型***記憶體-模型*⟦ __，__ *語言類型*⟧⟦ __，__ *堆疊選項*⟧
 
 ### <a name="parameters"></a>參數
 
-*memory-model*\
+*記憶體模型*\
 決定程式碼大小與資料點的必要參數。
 
-*language-type*\
+*語言類型*\
 為程序及公用符號設定呼叫及命名慣例的選擇性參數。
 
-*stack-option*\
+*堆疊選項*\
 選擇性參數。
 
-*stack-option* is not used if *memory-model* is **FLAT**.
+如果*記憶體模型*是**平面**的，則不會使用*堆疊選項*。
 
-Specifying **NEARSTACK** groups the stack segment into a single physical segment (**DGROUP**) along with data. The stack segment register (**SS**) is assumed to hold the same address as the data segment register (**DS**). **FARSTACK** does not group the stack with **DGROUP**; thus **SS** does not equal **DS**.
+指定**NEARSTACK**會將堆疊區段與資料一起分組到單一實體區段（**DGROUP**）。 堆疊區段暫存器（**SS**）會假設為與資料區段暫存器（**DS**）保持相同的位址。 **FARSTACK**不會使用**DGROUP**將堆疊分組;因此， **SS**不等於**DS**。
 
 ## <a name="remarks"></a>備註
 
-**.MODEL** is not used in [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+**.MODEL**不會用於[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
 下表列出了以 16 位元和 32 位元平台為目標時，各個參數可能的值：
 
 |參數|32 位元值|16 位元值 (支援較早的 16 位元開發)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memory-model*|**FLAT**|**TINY**, **SMALL**, **COMPACT**, **MEDIUM**, **LARGE**, **HUGE**, **FLAT**|
-|*language-type*|**C**, **STDCALL**|**C**, **BASIC**, **FORTRAN**, **PASCAL**, **SYSCALL**, **STDCALL**|
-|*stack-option*|未使用|**NEARSTACK**, **FARSTACK**|
+|*記憶體模型*|**還是**|小規模、**小型**、**精簡**、**中型**、**大型**、**龐大**、**平面**|
+|*語言類型*|**C**、 **STDCALL**|**C**、**基本**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**|
+|*堆疊-選項*|未使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>程式碼
 
@@ -86,6 +86,6 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

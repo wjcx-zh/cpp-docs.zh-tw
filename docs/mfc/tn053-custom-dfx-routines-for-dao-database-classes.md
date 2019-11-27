@@ -21,7 +21,7 @@ ms.locfileid: "74303441"
 # <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053：DAO 資料庫類別的自訂 DFX 常式
 
 > [!NOTE]
->  DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-templates.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
+>  DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
 本技術提示說明 DAO 記錄欄位交換（DFX）機制。 為了協助您瞭解 DFX 常式中發生什麼情況，`DFX_Text` 函式將詳細說明為範例。 如需此技術提示的其他資訊來源，您可以檢查其他個別 DFX 函數的程式碼。 您可能不需要經常有自訂的 DFX 常式，因為您可能需要自訂的 RFX 常式（與 ODBC 資料庫類別搭配使用）。
 
@@ -213,7 +213,7 @@ DAO `GetRows` 可以透過數種方式來工作。
 > [!TIP]
 > 針對標準資料類型，在現有的 DFX 常式上建立自訂 DFX 常式的模型。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)

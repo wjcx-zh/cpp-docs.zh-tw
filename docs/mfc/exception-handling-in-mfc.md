@@ -42,71 +42,71 @@ ms.locfileid: "74246736"
 ---
 # <a name="exception-handling-in-mfc"></a>MFC 中的例外狀況處理
 
-This article explains the exception-handling mechanisms available in MFC. Two mechanisms are available:
+本文說明 MFC 中可用的例外狀況處理機制。 有兩種機制可供使用：
 
-- C++ exceptions, available in MFC version 3.0 and later
+- C++MFC 版本3.0 和更新版本中可用的例外狀況
 
-- The MFC exception macros, available in MFC versions 1.0 and later
+- Mfc 例外狀況宏（可在 MFC 版本1.0 和更新版本中取得）
 
-If you're writing a new application using MFC, you should use the C++ mechanism. You can use the macro-based mechanism if your existing application already uses that mechanism extensively.
+如果您要使用 MFC 撰寫新的應用程式，您應該使用C++此機制。 如果您現有的應用程式已廣泛使用該機制，您可以使用以宏為基礎的機制。
 
-You can readily convert existing code to use C++ exceptions instead of the MFC exception macros. Advantages of converting your code and guidelines for doing so are described in the article [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md).
+您可以輕鬆地轉換現有的程式C++代碼，以使用例外狀況，而不是 MFC 例外狀況宏。 轉換程式碼和方針以進行這項作業的優點，請參閱[例外狀況：從 MFC 例外狀況宏轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)一文。
 
-If you have already developed an application using the MFC exception macros, you can continue using these macros in your existing code, while using C++ exceptions in your new code. The article [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) gives guidelines for doing so.
+如果您已經使用 MFC 例外狀況宏開發應用程式，您可以繼續在現有的程式碼中使用這些宏，同時C++在新的程式碼中使用例外狀況。 發行[項例外狀況：版本3.0 中例外狀況宏的變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)提供執行此作業的指導方針。
 
 > [!NOTE]
->  To enable C++ exception handling in your code, select Enable C++ Exceptions on the Code Generation page in the C/C++ folder of the project's [Property Pages](../build/reference/property-pages-visual-cpp.md) dialog box, or use the [/EHsc](../build/reference/eh-exception-handling-model.md) compiler option.
+>  若要C++在程式碼中啟用例外狀況處理C++ ，請在專案 [[屬性頁](../build/reference/property-pages-visual-cpp.md)] 對話方塊的C++ [C/資料夾] 中，選取 [程式碼產生] 頁面上的 [啟用例外狀況]，或使用[/ehsc](../build/reference/eh-exception-handling-model.md)編譯器選項。
 
-This article covers the following topics:
+本文涵蓋下列主題：
 
-- [When to use exceptions](#_core_when_to_use_exceptions)
+- [使用例外狀況的時機](#_core_when_to_use_exceptions)
 
-- [MFC exception support](#_core_mfc_exception_support)
+- [MFC 例外狀況支援](#_core_mfc_exception_support)
 
-- [Further reading about exceptions](#_core_further_reading_about_exceptions)
+- [進一步閱讀例外狀況](#_core_further_reading_about_exceptions)
 
-##  <a name="_core_when_to_use_exceptions"></a> When to Use Exceptions
+##  <a name="_core_when_to_use_exceptions"></a>使用例外狀況的時機
 
-Three categories of outcomes can occur when a function is called during program execution: normal execution, erroneous execution, or abnormal execution. Each category is described below.
+在程式執行期間呼叫函式時，可能會發生三種類別的結果：一般執行、錯誤執行或異常執行。 以下說明每個類別。
 
-- Normal execution
+- 正常執行
 
-   The function may execute normally and return. Some functions return a result code to the caller, which indicates the outcome of the function. The possible result codes are strictly defined for the function and represent the range of possible outcomes of the function. The result code can indicate success or failure or can even indicate a particular type of failure that is within the normal range of expectations. For example, a file-status function can return a code that indicates that the file does not exist. Note that the term "error code" is not used because a result code represents one of many expected outcomes.
+   函式可能會正常執行並傳回。 有些函式會將結果碼傳回給呼叫端，以指出函數的結果。 函式會嚴格定義可能的結果碼，並代表函數的可能結果範圍。 結果程式碼可能表示成功或失敗，或甚至會指出在正常範圍內的特定失敗類型。 例如，檔案狀態函式可以傳回表示檔案不存在的程式碼。 請注意，「錯誤碼」一詞不會使用，因為結果程式碼代表許多預期結果的其中一個。
 
-- Erroneous execution
+- 錯誤的執行
 
-   The caller makes some mistake in passing arguments to the function or calls the function in an inappropriate context. This situation causes an error, and it should be detected by an assertion during program development. (For more information on assertions, see [C/C++ Assertions](/visualstudio/debugger/c-cpp-assertions).)
+   呼叫端在將引數傳遞給函式或在不適當的內容中呼叫函數時，會犯一些錯誤。 這種情況會導致錯誤，而且應該在程式開發期間偵測到判斷提示。 （如需判斷提示的詳細資訊，請參閱[C/C++判斷](/visualstudio/debugger/c-cpp-assertions)提示）。
 
-- Abnormal execution
+- 異常執行
 
-   Abnormal execution includes situations where conditions outside the program's control, such as low memory or I/O errors, are influencing the outcome of the function. Abnormal situations should be handled by catching and throwing exceptions.
+   異常執行包含程式控制項外的條件（例如低記憶體或 i/o 錯誤）會影響函數的結果。 異常情況應該藉由攔截和擲回例外狀況來處理。
 
-Using exceptions is especially appropriate for abnormal execution.
+使用例外狀況特別適合用來執行異常。
 
-##  <a name="_core_mfc_exception_support"></a> MFC Exception Support
+##  <a name="_core_mfc_exception_support"></a>MFC 例外狀況支援
 
-Whether you use the C++ exceptions directly or use the MFC exception macros, you will use [CException Class](../mfc/reference/cexception-class.md) or `CException`-derived objects that may be thrown by the framework or by your application.
+不論您是直接C++使用例外狀況，還是使用 MFC 例外狀況宏，您將會使用[CException 類別](../mfc/reference/cexception-class.md)或可能由架構或應用程式擲回的 `CException`衍生物件。
 
-The following table shows the predefined exceptions provided by MFC.
+下表顯示 MFC 所提供的預先定義例外狀況。
 
 |Exception 類別|意義|
 |---------------------|-------------|
-|[CMemoryException 類別](../mfc/reference/cmemoryexception-class.md)|Out-of-memory|
-|[CFileException 類別](../mfc/reference/cfileexception-class.md)|File exception|
-|[CArchiveException 類別](../mfc/reference/carchiveexception-class.md)|Archive/Serialization exception|
-|[CNotSupportedException 類別](../mfc/reference/cnotsupportedexception-class.md)|Response to request for unsupported service|
-|[CResourceException 類別](../mfc/reference/cresourceexception-class.md)|Windows resource allocation exception|
-|[CDaoException 類別](../mfc/reference/cdaoexception-class.md)|Database exceptions (DAO classes)|
-|[CDBException 類別](../mfc/reference/cdbexception-class.md)|Database exceptions (ODBC classes)|
+|[CMemoryException 類別](../mfc/reference/cmemoryexception-class.md)|記憶體不足|
+|[CFileException 類別](../mfc/reference/cfileexception-class.md)|檔案例外狀況|
+|[CArchiveException 類別](../mfc/reference/carchiveexception-class.md)|封存/序列化例外狀況|
+|[CNotSupportedException 類別](../mfc/reference/cnotsupportedexception-class.md)|針對不支援之服務的要求回應|
+|[CResourceException 類別](../mfc/reference/cresourceexception-class.md)|Windows 資源配置例外狀況|
+|[CDaoException 類別](../mfc/reference/cdaoexception-class.md)|資料庫例外狀況（DAO 類別）|
+|[CDBException 類別](../mfc/reference/cdbexception-class.md)|資料庫例外狀況（ODBC 類別）|
 |[COleException 類別](../mfc/reference/coleexception-class.md)|OLE 例外狀況|
-|[COleDispatchException 類別](../mfc/reference/coledispatchexception-class.md)|Dispatch (automation) exceptions|
-|[CUserException 類別](../mfc/reference/cuserexception-class.md)|Exception that alerts the user with a message box, then throws a generic [CException Class](../mfc/reference/cexception-class.md)|
+|[COleDispatchException 類別](../mfc/reference/coledispatchexception-class.md)|分派（自動化）例外狀況|
+|[CUserException 類別](../mfc/reference/cuserexception-class.md)|例外狀況，會使用訊息方塊來警示使用者，然後擲回泛型[CException 類別](../mfc/reference/cexception-class.md)|
 
-從 3.0 版開始，MFC 使用了 C++ 例外狀況，但是仍支援舊有的例外狀況處理巨集，其形式類似 C++ 例外狀況。 雖然不建議新的程式設計使用這些巨集，但是仍然支援它們以提供回溯相容性。 在已經使用巨集的程式中，您也可以使用 C++ 例外狀況而不受限制。 During preprocessing, the macros evaluate to the exception handling keywords defined in the MSVC implementation of the C++ language as of Visual C++ version 2.0. 在您開始使用 C++ 例外狀況時，可以保留現有的例外狀況巨集。 For information on mixing macros and C++ exception handling and on converting old code to use the new mechanism, see the articles [Exceptions: Using MFC Macros and C++ Exceptions](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md) and [Exceptions: Converting from MFC Exception Macros](../mfc/exceptions-converting-from-mfc-exception-macros.md). 如果您仍然使用舊版的 MFC 例外狀況巨集，它們會判斷值為 C++ 例外狀況關鍵字。 See [Exceptions: Changes to Exception Macros in Version 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md). MFC does not directly support Windows NT structured exception handlers (SEH), as discussed in [Structured Exception Handling](/windows/win32/debug/structured-exception-handling).
+從 3.0 版開始，MFC 使用了 C++ 例外狀況，但是仍支援舊有的例外狀況處理巨集，其形式類似 C++ 例外狀況。 雖然不建議新的程式設計使用這些巨集，但是仍然支援它們以提供回溯相容性。 在已經使用巨集的程式中，您也可以使用 C++ 例外狀況而不受限制。 在前置處理期間，宏會評估為 Visual C++ C++ 2.0 版的 MSVC 執行語言所定義的例外狀況處理關鍵字。 在您開始使用 C++ 例外狀況時，可以保留現有的例外狀況巨集。 如需混合宏和C++例外狀況處理，以及轉換舊程式碼以使用新機制的詳細資訊，請參閱例外狀況[：使用C++ mfc 宏和例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)狀況和[例外狀況：從 MFC 例外狀況宏轉換](../mfc/exceptions-converting-from-mfc-exception-macros.md)。 如果您仍然使用舊版的 MFC 例外狀況巨集，它們會判斷值為 C++ 例外狀況關鍵字。 請參閱[例外狀況：版本3.0 中例外狀況宏的變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)。 MFC 不直接支援 Windows NT 結構化例外狀況處理常式（SEH），如[結構化例外狀況處理](/windows/win32/debug/structured-exception-handling)中所述。
 
-##  <a name="_core_further_reading_about_exceptions"></a> Further Reading About Exceptions
+##  <a name="_core_further_reading_about_exceptions"></a>進一步閱讀例外狀況
 
-The following articles explain using the MFC library for exception handing:
+下列文章說明如何使用 MFC 程式庫進行例外狀況處理：
 
 - [例外狀況：攔截及刪除例外狀況](../mfc/exceptions-catching-and-deleting-exceptions.md)
 
@@ -120,7 +120,7 @@ The following articles explain using the MFC library for exception handing:
 
 - [例外狀況：OLE 例外狀況](../mfc/exceptions-ole-exceptions.md)
 
-The following articles compare the MFC exception macros with the C++ exception keywords and explain how you can adapt your code:
+下列文章會比較 MFC 例外狀況宏與C++例外狀況關鍵字，並說明如何調整您的程式碼：
 
 - [例外狀況：3.0 版例外狀況巨集的變更](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md)
 
@@ -128,7 +128,7 @@ The following articles compare the MFC exception macros with the C++ exception k
 
 - [例外狀況：使用 MFC 巨集和 C++ 例外狀況](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[How Do I: Create my Own Custom Exception Classes](https://go.microsoft.com/fwlink/p/?linkid=128045)
+[例外C++狀況和錯誤處理的現代化最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
+[如何：建立自己的自訂例外狀況類別](https://go.microsoft.com/fwlink/p/?linkid=128045)

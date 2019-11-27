@@ -15,12 +15,12 @@ ms.locfileid: "74394215"
 ---
 # <a name="rept"></a>REPT
 
-See [REPEAT](../../assembler/masm/repeat.md).
+請參閱[重複](../../assembler/masm/repeat.md)。
 
 ## <a name="syntax"></a>語法
 
 > **REPT**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,7 +15,7 @@ ms.locfileid: "74398028"
 ---
 # <a name="pushreg"></a>.PUSHREG
 
-Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register number using the current offset in the prologue.
+使用序言中目前的位移，為指定的暫存器編號產生 `UWOP_PUSH_NONVOL` 回溯程式碼專案。
 
 ## <a name="syntax"></a>語法
 
@@ -23,15 +23,15 @@ Generates a `UWOP_PUSH_NONVOL` unwind code entry for the specified register numb
 
 ## <a name="remarks"></a>備註
 
-**.PUSHREG** allows ml64.exe users to specify how a frame function unwinds, and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) **FRAME** declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.PUSHREG** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.PUSHREG**可讓 ml64 使用者指定框架函式回溯的方式，而且只能在序言中使用，這會從[PROC](../../assembler/masm/proc.md) **框架**宣告延伸至[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼;它們只會產生 `.xdata` 和 `.pdata`。 **.PUSHREG**的前面應該會有實際執行要展開之動作的指示。 最好的做法是將回溯指示詞和它們要在宏中回溯的程式碼包裝起來，以確保合約。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+如需詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
 ## <a name="sample"></a>範例
 
 ### <a name="description"></a>描述
 
-The following sample shows how to push non-volatile registers.
+下列範例示範如何推送非 volatile 暫存器。
 
 ### <a name="code"></a>程式碼
 
@@ -55,6 +55,6 @@ _text ENDS
 END
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

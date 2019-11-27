@@ -15,22 +15,22 @@ ms.locfileid: "74395033"
 ---
 # <a name="proc"></a>PROC
 
-Marks start and end of a procedure block called *label*. The statements in the block can be called with the **CALL** instruction or [INVOKE](../../assembler/masm/invoke.md) directive.
+標記名為*label*的程式區塊的開始和結束。 您可以使用**CALL**指令或[INVOKE](../../assembler/masm/invoke.md)指示詞來呼叫區塊中的語句。
 
 ## <a name="syntax"></a>語法
 
-> *label* **PROC** ⟦*distance*⟧ ⟦*language-type*⟧ ⟦*visibility*⟧ ⟦ __\<__ *prologuearg* __>__ ⟧ ⟦**USES** *reglist*⟧ ⟦ __,__ *parameter* ⟦ __:__ *tag*⟧ ...⟧\
-> ⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧\
-> *statements*\
-> *label* **ENDP**
+> *標籤* **PROC** ⟦*距離*⟧⟦*language-類型*⟧⟦*可見度*⟧ __⟦\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *參數*⟦ __：__ *tag*⟧ .。。⟧\
+> ⟦**框架**⟦ __：__ *ehandler-address*⟧⟧ \
+> *語句*\
+> *標籤* **ENDP**
 
 ## <a name="remarks"></a>備註
 
-⟦**FRAME** ⟦ __:__ *ehandler-address*⟧ ⟧ is only valid with ml64.exe, and causes MASM to generate a function table entry in .pdata and unwind information in .xdata for a function's structured exception handling unwind behavior.
+⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧只適用于 ml64，並使 MASM 在中產生函數資料表專案。 pdata 中的 .xdata 和回溯資訊會處理回溯行為。
 
-When the **FRAME** attribute is used, it must be followed by an [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive.
+使用**FRAME**屬性時，其後面必須接著[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。
 
-See [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md) for more information on using ml64.exe.
+如需使用 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>範例
 
@@ -54,7 +54,7 @@ _text ENDS
 END
 ```
 
-The above code will emit the following function table and unwind information:
+上述程式碼會發出下列函數資料表和回溯資訊：
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +77,6 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

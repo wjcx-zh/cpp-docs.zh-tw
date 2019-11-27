@@ -17,12 +17,12 @@ ms.locfileid: "74396647"
 ---
 # <a name="operator-mod"></a>運算子 MOD
 
-Returns the integer value of the remainder (modulo) when dividing *expression1* by *expression2*.
+傳回以*運算式*2 除以*運算式*時，餘數（模數）的整數值。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **MOD** *expression2*
+> *運算式*2- **MOD** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

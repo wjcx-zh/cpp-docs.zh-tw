@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397478"
 ---
-# <a name="group-32-bit-masm"></a>GROUP (32-bit MASM)
+# <a name="group-32-bit-masm"></a>GROUP （32位 MASM）
 
-Add the specified *segments* to the group called *name*. (32-bit MASM only.)
+將指定的*區段*新增至名為*name*的群組。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> *name* **GROUP** *segment* ⟦ __,__ *segment* ...⟧
+> *名稱***群組***區段*⟦ __，__ *區段*.。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

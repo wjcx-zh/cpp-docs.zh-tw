@@ -21,8 +21,8 @@ ms.locfileid: "74397552"
 
 ## <a name="remarks"></a>備註
 
-See [EXTERN](../../assembler/masm/extern-masm.md).
+請參閱[EXTERN](../../assembler/masm/extern-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

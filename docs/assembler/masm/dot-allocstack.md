@@ -15,25 +15,25 @@ ms.locfileid: "74398635"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-Generates a **UWOP_ALLOC_SMALL** or a **UWOP_ALLOC_LARGE** with the specified size for the current offset in the prologue.
+產生序言中目前位移之指定大小的**UWOP_ALLOC_SMALL**或**UWOP_ALLOC_LARGE** 。
 
 ## <a name="syntax"></a>語法
 
-> **.ALLOCSTACK** *size*
+> **.ALLOCSTACK** *大小*
 
 ## <a name="remarks"></a>備註
 
-MASM will choose the most efficient encoding for a given size.
+MASM 會針對指定的大小選擇最有效率的編碼方式。
 
-**.ALLOCSTACK** allows ml64.exe users to specify how a frame function unwinds and is only allowed within the prologue, which extends from the [PROC](../../assembler/masm/proc.md) FRAME declaration to the [.ENDPROLOG](../../assembler/masm/dot-endprolog.md) directive. These directives do not generate code; they only generate `.xdata` and `.pdata`. **.ALLOCSTACK** should be preceded by instructions that actually implement the actions to be unwound. It is a good practice to wrap both the unwind directives and the code they are meant to unwind in a macro to ensure agreement.
+**.ALLOCSTACK**可讓 ml64 使用者指定框架函式回溯的方式，而且只允許在序言中使用，這會從[PROC](../../assembler/masm/proc.md)框架宣告延伸至[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼;它們只會產生 `.xdata` 和 `.pdata`。 **.ALLOCSTACK**的前面應該會有實際執行要展開之動作的指示。 最好的做法是將回溯指示詞和它們要在宏中回溯的程式碼包裝起來，以確保合約。
 
-The *size* operand must be a multiple of 8.
+*大小*運算元必須是8的倍數。
 
-For more information, see [MASM for x64 (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md).
+如需詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
 
 ## <a name="sample"></a>範例
 
-The following sample shows how to specify an unwind/exception handler:
+下列範例顯示如何指定回溯/例外狀況處理常式：
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,6 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

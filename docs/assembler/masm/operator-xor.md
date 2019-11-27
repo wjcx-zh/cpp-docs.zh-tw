@@ -17,12 +17,12 @@ ms.locfileid: "74395316"
 ---
 # <a name="operator-xor"></a>運算子 XOR
 
-Returns the result of a bitwise **XOR** operation for *expression1* and *expression2*.
+針對*運算式*2 和*運算式*2 傳回位**XOR**運算的結果。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **XOR** *expression2*
+> *運算式*2- **XOR** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

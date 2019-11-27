@@ -17,12 +17,12 @@ ms.locfileid: "74397048"
 ---
 # <a name="operator-type"></a>運算子 .TYPE
 
-See [OPATTR](../../assembler/masm/operator-opattr.md).
+請參閱[OPATTR](../../assembler/masm/operator-opattr.md)。
 
 ## <a name="syntax"></a>語法
 
-> **.TYPE** *expression*
+> **.類型***運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

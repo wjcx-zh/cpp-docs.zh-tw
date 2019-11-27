@@ -16,12 +16,12 @@ ms.locfileid: "74397158"
 ---
 # <a name="operator-abs"></a>運算子 ABS
 
-See the [EXTERNDEF](../../assembler/masm/externdef.md) directive.
+請參閱[EXTERNDEF](../../assembler/masm/externdef.md)指示詞。
 
 ## <a name="syntax"></a>語法
 
 > **ABS**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

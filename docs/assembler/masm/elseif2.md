@@ -15,7 +15,7 @@ ms.locfileid: "74397686"
 ---
 # <a name="elseif2"></a>ELSEIF2
 
-[ELSEIF](../../assembler/masm/elseif-masm.md) block evaluated on every assembly pass if **OPTION:SETIF2** is **TRUE**.
+如果**選項： SETIF2**為**TRUE**，則會在每個元件階段評估[ELSEIF](../../assembler/masm/elseif-masm.md)區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ ms.locfileid: "74397686"
 
 ## <a name="remarks"></a>備註
 
-For more information about 2-pass behavior in MASM 5.1 vs MASM 6.1, see [IF1 and IF2](if2.md).
+如需 MASM 5.1 與 MASM 6.1 之2階段行為的詳細資訊，請參閱[IF1 和 IF2](if2.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -17,7 +17,7 @@ ms.locfileid: "74246056"
 ---
 # <a name="unhandled-c-exceptions"></a>未處理的 C++ 例外狀況
 
-If a matching handler (or ellipsis **catch** handler) cannot be found for the current exception, the predefined `terminate` run-time function is called. (You can also explicitly call `terminate` in any of your handlers.) The default action of `terminate` is to call `abort`. 如果您希望 `terminate` 在結束應用程式之前呼叫程式中的其他函式，請使用做為單一引數呼叫的函式名稱來呼叫 `set_terminate` 函式。 您可以隨時在程式中呼叫 `set_terminate`。 The `terminate` routine always calls the last function given as an argument to `set_terminate`.
+如果找不到目前例外狀況的相符處理常式（或省略**catch**處理常式），則會呼叫預先定義的 `terminate` 執行時間函式。 （您也可以在任何處理程式中明確地呼叫 `terminate`）。`terminate` 的預設動作是呼叫 `abort`。 如果您希望 `terminate` 在結束應用程式之前呼叫程式中的其他函式，請使用做為單一引數呼叫的函式名稱來呼叫 `set_terminate` 函式。 您可以隨時在程式中呼叫 `set_terminate`。 `terminate` 常式一律會呼叫指定為引數的最後一個函式，以 `set_terminate`。
 
 ## <a name="example"></a>範例
 
@@ -46,7 +46,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 term_func was called by terminate.
@@ -54,6 +54,6 @@ term_func was called by terminate.
 
 `term_func` 函式應該終止程式或目前的執行緒，最好是透過呼叫 `exit` 的方式進行。 如果未如預期進行而傳回至呼叫端，則會呼叫 `abort`。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++狀況和錯誤處理的現代化最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)

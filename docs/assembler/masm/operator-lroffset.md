@@ -17,12 +17,12 @@ ms.locfileid: "74396686"
 ---
 # <a name="operator-lroffset"></a>運算子 LROFFSET
 
-Returns the offset of *expression*. Same as **OFFSET**, but it generates a loader resolved offset, which allows Windows to relocate code segments.
+傳回*運算式*的位移。 與**offset**相同，但它會產生載入器已解決的位移，讓 Windows 能夠重新放置程式碼區段。
 
 ## <a name="syntax"></a>語法
 
-> **LROFFSET** *expression*
+> **LROFFSET** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

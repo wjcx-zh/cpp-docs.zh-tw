@@ -28,6 +28,6 @@ ms.locfileid: "74303150"
 |**MAKEDIR**|叫用 NMAKE 時的目前的目錄。|
 |**MAKEFLAGS**|目前作用中的選項。 使用做為 `/$(MAKEFLAGS)`。 不包含 **/f**選項。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [特殊的 NMAKE 宏](special-nmake-macros.md)

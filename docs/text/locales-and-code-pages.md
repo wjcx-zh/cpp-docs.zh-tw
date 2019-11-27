@@ -24,25 +24,25 @@ ms.locfileid: "74474078"
 ---
 # <a name="locales-and-code-pages"></a>地區設定和字碼頁
 
-A locale ID reflects the local conventions and language for a particular geographical region. 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 For example, Canada has two languages: English and French. Thus, Canada has two distinct locales: Canadian-English and Canadian-French. 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。
+地區設定識別碼會反映特定地理區域的本機慣例和語言。 一種指定語言可以在一個以上的國家/地區使用，例如巴西和葡萄牙都說葡萄牙語。 反過來說，一個國家/地區可能有一種以上的官方語言。 例如，加拿大有兩種語言：英文和法文。 因此，加拿大有兩種不同的地區設定：加拿大-英文和加拿大法文。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。
 
-語言決定文字和日期格式的轉換，而國家/地區決定當地慣例。 Every language has a unique mapping, represented by code pages, which includes characters other than those in the alphabet (such as punctuation marks and numbers). A code page is a character set and is related to the language. As such, a [locale](../c-runtime-library/locale.md) is a unique combination of language, country/region, and code page. The locale and code page setting can be changed at run time by calling the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) function.
+語言決定文字和日期格式的轉換，而國家/地區決定當地慣例。 每種語言都有唯一的對應，由字碼頁表示，其中包含字母以外的字元（例如標點符號和數位）。 字碼頁是字元集，而且與語言相關。 因此，[地區](../c-runtime-library/locale.md)設定是語言、國家/地區和字碼頁的唯一組合。 您可以藉由呼叫[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)函數，在執行時間變更地區設定和字碼頁設定。
 
-Different languages might use different code pages. For example, the ANSI code page 1252 is used for English and most European languages, and the ANSI code page 932 is used for Japanese Kanji. Virtually all code pages share the ASCII character set for the lowest 128 characters (0x00 to 0x7F).
+不同的語言可能會使用不同的字碼頁。 例如，ANSI 字碼頁1252用於英文和大多數歐洲語言，而 ANSI 字碼頁932則用於日文漢字。 幾乎所有的字碼頁都會共用最低128個字元的 ASCII 字元集（0x00 到0x7F）。
 
-Any single-byte code page can be represented in a table (with 256 entries) as a mapping of byte values to characters (including numbers and punctuation marks), or glyphs. Any multibyte code page can also be represented as a very large table (with 64K entries) of double-byte values to characters. In practice, however, it is usually represented as a table for the first 256 (single-byte) characters and as ranges for the double-byte values.
+任何單一位元組字碼頁都可以在資料表（包含256個專案）中表示為位元組值與字元（包括數位和標點符號）或圖像的對應。 任何多位元組字碼頁也可以用一個非常大型的資料表（含64K 的專案）表示為字元的雙位元組值。 不過，在實務上，它通常會表示為第一個256（單一位元組）字元的資料表，以及雙位元組值的範圍。
 
 如需字碼頁的詳細資訊，請參閱 [Code Pages](../c-runtime-library/code-pages.md)。
 
-The C run-time library has two types of internal code pages: locale and multibyte. You can change the current code page during program execution (see the documentation for the [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) and [_setmbcp](../c-runtime-library/reference/setmbcp.md) functions). Also, the run-time library might obtain and use the value of the operating system code page, which is constant for the duration of the program's execution.
+C 執行時間程式庫有兩種類型的內部字碼頁：地區設定和多位元組。 您可以在程式執行期間變更目前的字碼頁（請參閱[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)和[_setmbcp](../c-runtime-library/reference/setmbcp.md)功能的檔）。 此外，執行時間程式庫可能會取得並使用作業系統字碼頁的值，這在程式執行期間是固定的。
 
-When the locale code page changes, the behavior of the locale-dependent set of functions changes to that dictated by the chosen code page. By default, all locale-dependent functions begin execution with a locale code page unique to the "C" locale. You can change the internal locale code page (as well as other locale-specific properties) by calling the `setlocale` function. A call to `setlocale`(LC_ALL, "") sets the locale to that indicated by the operating system user locale.
+當地區設定字碼頁變更時，與地區設定相關之函式的行為會變更為所選字碼頁所決定的功能。 根據預設，所有與地區設定相關的函式都會開始執行，並使用 "C" 地區設定唯一的地區設定字碼頁。 您可以藉由呼叫 `setlocale` 函式來變更內部地區設定字碼頁（以及其他地區設定特定的屬性）。 `setlocale`（LC_ALL，""）的呼叫會將地區設定設為作業系統使用者地區設定所指出的地區設定。
 
-Similarly, when the multibyte code page changes, the behavior of the multibyte functions changes to that dictated by the chosen code page. By default, all multibyte functions begin execution with a multibyte code page corresponding to the operating system's default code page. You can change the internal multibyte code page by calling the `_setmbcp` function.
+同樣地，當多位元組字碼頁變更時，多位元組函式的行為會變更為所選字碼頁所規定的行為。 根據預設，所有多位元組函式都會開始執行，並使用與作業系統的預設字碼頁對應的多位元組字碼頁。 您可以藉由呼叫 `_setmbcp` 函式來變更內部多位元組字碼頁。
 
-The C run-time function `setlocale` sets, changes, or queries some or all of the current program's locale information. The [_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) routine is a wide-character version of `setlocale`; the arguments and return values of `_wsetlocale` are wide-character strings.
+C 執行時間函數 `setlocale` 設定、變更或查詢部分或所有目前程式的地區設定資訊。 [_Wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)常式是寬字元版本的 `setlocale`;`_wsetlocale` 的引數和傳回值是寬字元字串。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Unicode 和 MBCS](../text/unicode-and-mbcs.md)<br/>
 [字元集可移植性的優點](../text/benefits-of-character-set-portability.md)

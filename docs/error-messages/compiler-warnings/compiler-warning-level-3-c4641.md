@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4641
+title: 編譯器警告 (層級 3) C4641
 ms.date: 11/04/2016
 f1_keywords:
 - C4641
@@ -13,17 +13,17 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74189431"
 ---
-# <a name="compiler-warning-level-3-c4641"></a>Compiler Warning (level 3) C4641
+# <a name="compiler-warning-level-3-c4641"></a>編譯器警告 (層級 3) C4641
 
 XML 文件註解有模稜兩可的交互參考
 
-The compiler was unable to unambiguously resolve a reference. To resolve this warning, specify the parameter information necessary to make the reference unambiguous.
+編譯器無法明確解析參考。 若要解決此警告，請指定明確參考所需的參數資訊。
 
 如需詳細資訊，請參閱 [XML Documentation](../../build/reference/xml-documentation-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 
-The following sample generates C4641.
+下列範例會產生 C4641。
 
 ```cpp
 // C4641.cpp

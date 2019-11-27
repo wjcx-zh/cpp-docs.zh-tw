@@ -17,12 +17,12 @@ ms.locfileid: "74396665"
 ---
 # <a name="operator-lt"></a>運算子 LT
 
-Returns true (-1) if *expression1* is less than *expression2*, or returns false (0) if it is not.
+如果*運算式*1 小於*運算式*2，則傳回 true （-1），如果不是，則傳回 false （0）。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **LT** *expression2*
+> *運算式*2 **LT** *運算式*2
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

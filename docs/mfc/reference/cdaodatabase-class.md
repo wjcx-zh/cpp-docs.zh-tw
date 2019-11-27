@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoDatabase：： CDaoDatabase](#cdaodatabase)|建構 `CDaoDatabase` 物件。 呼叫 `Open` 以將物件連接到資料庫。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoDatabase：： CanTransact](#cantransact)|如果資料庫支援交易，則傳回非零。|
 |[CDaoDatabase：： CanUpdate](#canupdate)|如果 `CDaoDatabase` 物件是可更新的（非唯讀），則傳回非零。|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CDaoDatabase：： m_pDAODatabase](#m_pdaodatabase)|基礎 DAO 資料庫物件的指標。|
 |[CDaoDatabase：： m_pWorkspace](#m_pworkspace)|[CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md)物件的指標，其中包含資料庫並定義其交易空間。|
@@ -136,7 +136,7 @@ class CDaoDatabase : public CObject
 
 其中任何一項技術會將 DAO 資料庫物件附加至工作區的資料庫集合，並開啟與資料的連接。 當您接著建立[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)、 [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)或[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)物件來操作已連接的資料庫時，請傳遞這些物件的函式給您 `CDaoDatabase` 物件的指標。 當您使用連接完成時，請呼叫[Close](#close)成員函式，並終結 `CDaoDatabase` 物件。 `Close` 關閉先前尚未關閉的任何記錄集。
 
-## <a name="transactions"></a>異動
+## <a name="transactions"></a>交易
 
 資料庫交易處理是在工作區層級提供的，請參閱[BeginTrans](../../mfc/reference/cdaoworkspace-class.md#begintrans)、 [CommitTrans](../../mfc/reference/cdaoworkspace-class.md#committrans)和 class `CDaoWorkspace`的[Rollback](../../mfc/reference/cdaoworkspace-class.md#rollback)成員函式。
 
@@ -159,7 +159,7 @@ class CDaoDatabase : public CObject
 
 ## <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="cantransact"></a>CDaoDatabase：： CanTransact
 
@@ -890,7 +890,7 @@ void SetQueryTimeout(short nSeconds);
 
 如需相關資訊，請參閱 DAO 說明中的「QueryTimeout 屬性」主題。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CObject 類別](../../mfc/reference/cobject-class.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>

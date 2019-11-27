@@ -15,14 +15,14 @@ ms.locfileid: "74392816"
 ---
 # <a name="while-masm"></a>WHILE (MASM)
 
-Repeats assembly of block *statements* as long as *expression* remains true.
+只要*expression*維持為 true，就會重複區塊*語句*的元件。
 
 ## <a name="syntax"></a>語法
 
-> **WHILE** *expression*\
-> *statements*\
+> **WHILE** *運算式*\
+> *語句*\
 > **ENDM**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

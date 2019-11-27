@@ -55,14 +55,14 @@ DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.
 封裝二進位大型物件（BLOB）（例如點陣圖）之儲存體的控制碼。 `CLongBinary` 物件是用來管理儲存在資料庫資料表中的大型資料物件。
 
 [COleCurrency](../mfc/reference/colecurrency-class.md)<br/>
-OLE Automation 類型 **CURRENCY** 的包裝函式，定點算術類型，在小數點前有 15 位數，之後有 4 位數。
+OLE automation 型別**貨幣**的包裝函式、固定點算術型別，小數點前15位數和後4位數。
 
 [COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)<br/>
-OLE Automation 類型 **DATE**的包裝函式。 表示日期和時間值。
+OLE automation 類型**DATE**的包裝函式。 表示日期和時間值。
 
 [COleVariant](../mfc/reference/colevariant-class.md)<br/>
-OLE Automation 類型 **VARIANT** 的包裝函式。 **VARIANT** 中的資料可以許多種格式儲存。
+OLE automation 類型**VARIANT**的包裝函式。 **VARIANT**s 中的資料可以用許多格式儲存。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別總覽](../mfc/class-library-overview.md)

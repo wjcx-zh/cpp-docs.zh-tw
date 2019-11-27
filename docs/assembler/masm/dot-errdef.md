@@ -15,12 +15,12 @@ ms.locfileid: "74398384"
 ---
 # <a name="errdef"></a>.ERRDEF
 
-Generates an error if *name* is a previously defined label, variable, or symbol.
+如果*name*是先前定義的標籤、變數或符號，則會產生錯誤。
 
 ## <a name="syntax"></a>語法
 
-> **.ERRDEF** *name* ⟦ __,__ *message*⟧
+> **..Errdef** *name* ⟦ __，__ *message*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

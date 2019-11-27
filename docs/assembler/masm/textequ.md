@@ -15,12 +15,12 @@ ms.locfileid: "74393176"
 ---
 # <a name="textequ"></a>TEXTEQU
 
-Assigns *textitem* to *name*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+將*textitem*指派給*名稱*。 *Textitem*可以是常值字串、前面加上 `%`的常數，或宏函數所傳回的字串。
 
 ## <a name="syntax"></a>語法
 
 > *name* **TEXTEQU** ⟦*textitem*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

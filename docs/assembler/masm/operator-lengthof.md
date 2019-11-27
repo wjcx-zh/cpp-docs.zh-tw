@@ -17,12 +17,12 @@ ms.locfileid: "74396832"
 ---
 # <a name="operator-lengthof"></a>運算子 LENGTHOF
 
-Returns the number of data objects in *variable*.
+傳回*變數*中的資料物件數目。
 
 ## <a name="syntax"></a>語法
 
-> **LENGTHOF** *variable*
+> **LENGTHOF** *變數*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

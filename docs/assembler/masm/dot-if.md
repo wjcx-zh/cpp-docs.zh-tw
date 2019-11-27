@@ -13,24 +13,24 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398229"
 ---
-# <a name="if-32-bit-masm"></a>.IF (32-bit MASM)
+# <a name="if-32-bit-masm"></a>.IF （32-bit MASM）
 
-Generates code that tests *condition1* (for example, AX > 7) and executes the *statements* if that condition is true. (32-bit MASM only.)
+產生測試*condition1*的程式碼（例如，AX > 7），並在該條件為 true 時執行*語句*。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> **.IF** *condition1*\
-> *statements*\
-> ⟦ **.ELSEIF** *condition2*\
-> *statements*⟧\
-> ⟦ **.ELSE**\
-> *statements*⟧\
+> **.如果** *condition1*\
+> *語句*\
+> ⟦ **。ELSEIF** *condition2*\
+> *語句*⟧ \
+> ⟦ **。否則**\
+> *語句*⟧ \
 > **.ENDIF**
 
 ## <a name="remarks"></a>備註
 
-If a [.ELSE](../../assembler/masm/dot-else.md) follows, its statements are executed if the original condition was false. Note that the conditions are evaluated at run time.
+如果為，則為[。否則](../../assembler/masm/dot-else.md)，如果原始條件為 false，則會執行它的語句。 請注意，在執行時間會評估條件。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

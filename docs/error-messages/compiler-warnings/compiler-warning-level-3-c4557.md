@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4557
+title: 編譯器警告 (層級 3) C4557
 ms.date: 11/04/2016
 f1_keywords:
 - C4557
@@ -13,15 +13,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188944"
 ---
-# <a name="compiler-warning-level-3-c4557"></a>Compiler Warning (level 3) C4557
+# <a name="compiler-warning-level-3-c4557"></a>編譯器警告 (層級 3) C4557
 
 '__assume' 包含有效的 'effect'
 
-The value passed to an [__assume](../../intrinsics/assume.md) statement2 was modified.
+已修改傳遞至[__assume](../../intrinsics/assume.md) statement2 的值。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-The following sample generates C4557:
+下列範例會產生 C4557：
 
 ```cpp
 // C4557.cpp

@@ -36,10 +36,10 @@ C++ 瀏覽資料庫剖析器為模糊剖析器，可在短時間內剖析大量�
 
 > [!IMPORTANT]
 > 若您修改或新增提示檔案，則必須採取額外的步驟才能讓變更生效：
-> - In versions before Visual Studio 2017 version 15.6: Delete the .sdf file and/or VC.db file in the solution for all changes.
-> - In Visual Studio 2017 version 15.6 and later: Close and reopen the solution after adding new hint files.
+> - 在 Visual Studio 2017 15.6 版之前的版本中：刪除方案中的 .sdf 檔案和（或） VC 檔案，以進行所有變更。
+> - 在 Visual Studio 2017 15.6 版和更新版本中：新增提示檔案之後，請關閉並重新開啟方案。
 
-## <a name="scenario"></a>情節
+## <a name="scenario"></a>案例
 
 ```cpp
 #define NOEXCEPT noexcept
@@ -92,13 +92,13 @@ void Function() NOEXCEPT
 
 - 您可使用快速動作建立包含醒目提示巨集的提示檔案，如果有現有的提示檔案，也可將巨集新增到該提示檔案。
 
-![Highlighted Macro.](media/hint-squiggle-and-actions.png "Hint squiggle and Quick Actions")
+![反白顯示的宏。](media/hint-squiggle-and-actions.png "提示波浪線和快速動作")
 
 在執行其中一個快速動作後，剖析器就會重新剖析提示檔案所影響的檔案。
 
-根據預設，會將問題巨集醒目提示為建議。 醒目提示可變更為更顯眼的樣式，例如紅色或綠色波浪線。 使用 [工具] > [選項] > [文字編輯器] > [C/C++] > [檢視] 下 [程式碼波浪線] 區段中的 [已跳過瀏覽區域中的巨集] 選項。
+根據預設，會將問題巨集醒目提示為建議。 醒目提示可變更為更顯眼的樣式，例如紅色或綠色波浪線。 使用 [工具] **[選項]** [文字編輯器] > [C/C++] > [檢視] >  **下 [程式碼波浪線]**  >  區段中的 [已跳過瀏覽區域中的巨集] 選項。
 
-![Macros in Skipped Browsing Regions Option.](media/skipped-regions-squiggle-option.png "Skipped regions squiggle option.")
+![[略過流覽區域中的宏] 選項。](media/skipped-regions-squiggle-option.png "略過的區域波浪線選項。")
 
 ## <a name="display-browsing-database-errors"></a>顯示瀏覽資料庫錯誤
 
@@ -156,7 +156,7 @@ void Function() NOEXCEPT
 |`@>`|提示檔案特定的 *replacement-string*，表示一組對應項目的結尾。|
 |`#undef` *hint-name*|刪除現有提示的前置處理器指示詞。 提示的名稱是由 *hint-name* 識別項提供。|
 |`//` *comment*|單行註解。|
-|`/*` *comment* `*/`|多行註解。|
+|`/*` *註解* `*/`|多行註解。|
 
 ## <a name="example"></a>範例
 
@@ -166,7 +166,7 @@ void Function() NOEXCEPT
 
 ### <a name="hint-file-directories"></a>提示檔案目錄
 
-![Common and project&#45;specific hint file directories.](media/hintfile.png "HintFile")
+![一般和專案&#45;特有的提示檔案目錄。](media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>目錄和提示檔案內容
 
@@ -236,13 +236,13 @@ void Function() NOEXCEPT
 
 - 有效提示來自於 `vcpackages`、`Debug`、`A1` 和 `A2` 目錄。
 
-- `Debug` 提示檔案中的 **#undef** 指示詞已移除 `vcpackages` 目錄提示檔案中的 `#define _In_` 提示。
+- **提示檔案中的**#undef`Debug` 指示詞已移除 `#define _In_` 目錄提示檔案中的 `vcpackages` 提示。
 
 - `A1` 目錄中的提示檔案會重新定義 `START_NAMESPACE`。
 
-- `A2` 目錄中的 `#undef` 提示已移除 `Debug` 目錄提示檔案中的 `OBRACE` 和 `CBRACE` 提示。
+- `#undef` 目錄中的 `A2` 提示已移除 `OBRACE` 目錄提示檔案中的 `CBRACE` 和 `Debug` 提示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [為 Visual Studio C++ 專案建立的檔案類型](file-types-created-for-visual-cpp-projects.md)<br>
 [#define 指示詞 (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>

@@ -15,12 +15,12 @@ ms.locfileid: "74398762"
 ---
 # <a name=""></a>$
 
-The current value of the location counter.
+Location 計數器的目前值。
 
 ## <a name="syntax"></a>語法
 
 > **$**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [符號參考](../../assembler/masm/symbols-reference.md)

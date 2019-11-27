@@ -16,12 +16,12 @@ ms.locfileid: "74397062"
 ---
 # <a name="operator-"></a>運算子 :
 
-Overrides the default segment of *expression* with *segment*. The *segment* can be a segment register, group name, segment name, or segment expression. The *expression* must be a constant.
+以*區段*覆寫*運算式*的預設區段。 *區段*可以是區段暫存器、組名、區段名稱或區段運算式。 *運算式*必須是常數。
 
 ## <a name="syntax"></a>語法
 
-> *segment* **:** *expression*
+> *區段* **：** *運算式*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

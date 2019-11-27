@@ -15,7 +15,7 @@ ms.locfileid: "74397656"
 ---
 # <a name="endm"></a>ENDM
 
-Terminates a macro or repeat block.
+終止宏或重複區塊。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Terminates a macro or repeat block.
 
 ## <a name="remarks"></a>備註
 
-See [MACRO](../../assembler/masm/macro.md), [FOR](../../assembler/masm/for-masm.md), [FORC](../../assembler/masm/forc.md), [REPEAT](../../assembler/masm/repeat.md), or [WHILE](while-masm.md).
+請參閱[宏](../../assembler/masm/macro.md)、 [FOR](../../assembler/masm/for-masm.md)、 [FORC](../../assembler/masm/forc.md)、 [REPEAT](../../assembler/masm/repeat.md)或[WHILE](while-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

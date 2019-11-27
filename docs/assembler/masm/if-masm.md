@@ -15,22 +15,22 @@ ms.locfileid: "74397456"
 ---
 # <a name="if-masm"></a>IF (MASM)
 
-Grants assembly of *ifstatements* if *expression1* is true (nonzero) or *elseifstatements* if *expression1* is false (0) and *expression2* is true.
+如果*運算式*1 為 true （非零） *，則授*與*ifstatements*的元件，如果值為 false （0），則為*elseifstatements* ，而*運算式*為 true。
 
 ## <a name="syntax"></a>語法
 
-> **IF** *expression1*\
-> *if-statements*\
-> ⟦**ELSEIF** *expression2*\
-> *elseif-statements*⟧\
+> **IF** *運算式*\
+> *if 語句*\
+> ⟦**ELSEIF** *運算式*2\
+> *elseif 語句*⟧ \
 > ⟦**ELSE**\
-> *else-statements*⟧\
+> *else 語句*⟧ \
 > **ENDIF**
 
 ## <a name="remarks"></a>備註
 
-The following directives may be substituted for [ELSEIF](../../assembler/masm/elseif-masm.md): **ELSEIFB**, **ELSEIFDEF**, **ELSEIFDIF**, **ELSEIFDIFI**, **ELSEIFE**, **ELSEIFIDN**, **ELSEIFIDNI**, **ELSEIFNB**, and **ELSEIFNDEF**. Optionally, assembles *else-statements* if the previous expression is false. Note that the expressions are evaluated at assembly time.
+下列指示詞可能會取代為[ELSEIF](../../assembler/masm/elseif-masm.md)： **ELSEIFB**、 **ELSEIFDEF**、 **ELSEIFDIF**、 **ELSEIFDIFI**、 **ELSEIFE**、 **ELSEIFIDN**、 **ELSEIFIDNI**、 **ELSEIFNB**和**ELSEIFNDEF**。 （選擇性）如果上一個運算式為 false，則會組合*else 語句*。 請注意，運算式會在元件時間評估。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

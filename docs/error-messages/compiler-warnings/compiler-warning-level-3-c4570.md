@@ -1,5 +1,5 @@
 ---
-title: Compiler Warning (level 3) C4570
+title: 編譯器警告 (層級 3) C4570
 ms.date: 11/04/2016
 f1_keywords:
 - C4570
@@ -13,15 +13,15 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/19/2019
 ms.locfileid: "74188882"
 ---
-# <a name="compiler-warning-level-3-c4570"></a>Compiler Warning (level 3) C4570
+# <a name="compiler-warning-level-3-c4570"></a>編譯器警告 (層級 3) C4570
 
-'type' : is not explicitly declared as abstract but has abstract functions
+' type '：未明確宣告為抽象，但有抽象函數
 
-A type that contains [abstract](../../extensions/abstract-cpp-component-extensions.md) functions should itself be marked as abstract.
+包含[抽象](../../extensions/abstract-cpp-component-extensions.md)函數的類型本身應該標記為抽象。
 
 ## <a name="example"></a>範例
 
-The following sample generates C4570.
+下列範例會產生 C4570。
 
 ```cpp
 // C4570.cpp

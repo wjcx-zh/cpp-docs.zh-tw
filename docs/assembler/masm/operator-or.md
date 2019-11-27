@@ -17,12 +17,12 @@ ms.locfileid: "74396543"
 ---
 # <a name="operator-or"></a>運算子 OR
 
-Returns the result of a bitwise OR operation for *expression1* and *expression2*.
+傳回*運算式*2 和*運算式*的位 or 運算結果。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **OR** *expression2*
+> *運算式*2**或***運算式*2
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

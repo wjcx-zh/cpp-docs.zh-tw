@@ -15,7 +15,7 @@ ms.locfileid: "74398439"
 ---
 # <a name="elseif-masm"></a>ELSEIF (MASM)
 
-Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm/if-masm.md) into one statement.
+將[ELSE](../../assembler/masm/else-masm.md)和[IF](../../assembler/masm/if-masm.md)結合成一個語句。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Combines [ELSE](../../assembler/masm/else-masm.md) and [IF](../../assembler/masm
 
 ## <a name="remarks"></a>備註
 
-See [IF](../../assembler/masm/if-masm.md).
+查看[IF](../../assembler/masm/if-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

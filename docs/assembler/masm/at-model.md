@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398948"
 ---
-# <a name="model"></a>\@Model
+# <a name="model"></a>\@模型
 
-1 for **TINY** model, 2 for **SMALL** model, 3 for **COMPACT** model, 4 for **MEDIUM** model, 5 for **LARGE** model, 6 for **HUGE** model, and 7 for **FLAT** model (numeric equate).
+1代表**小型** **模型，** 第2個用於**精簡**模型，第4個用於**中等**模型，5個用於**大型**模型，6個**用於大模型，** 7 個用於**平面**模型（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> **\@Model**
+> **\@模型**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

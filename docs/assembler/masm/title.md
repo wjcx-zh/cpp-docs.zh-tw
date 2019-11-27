@@ -15,12 +15,12 @@ ms.locfileid: "74393198"
 ---
 # <a name="title"></a>TITLE
 
-Defines the program listing title.
+定義程式清單標題。
 
 ## <a name="syntax"></a>語法
 
-> **TITLE** *text*
+> **標題***文字*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,14 +15,14 @@ ms.locfileid: "74398831"
 ---
 # <a name="comment-masm"></a>COMMENT (MASM)
 
-Treats all *text* between or on the same line as the delimiters as a comment.
+將或兩者之間的所有*文字*，視為批註的分隔符號。
 
 ## <a name="syntax"></a>語法
 
-> **COMMENT** *delimiter* ⟦*text*⟧\
-> ⟦*text*⟧\
-> ⟦*text*⟧ *delimiter* ⟦*text*⟧
+> **批註***分隔符號*⟦*文字*⟧ \
+> ⟦*文字*⟧ \
+> ⟦*文字*⟧*分隔符號*⟦*文字*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+指示詞[參考](../../assembler/masm/directives-reference.md)\

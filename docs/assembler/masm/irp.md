@@ -21,8 +21,8 @@ ms.locfileid: "74397284"
 
 ## <a name="remarks"></a>備註
 
-See [FOR](../../assembler/masm/for-masm.md).
+請參閱[的](../../assembler/masm/for-masm.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

@@ -15,18 +15,18 @@ ms.locfileid: "74398868"
 ---
 # <a name="byte-masm"></a>BYTE (MASM)
 
-Allocates and optionally initializes a byte of storage for each *initializer*.
+配置並選擇性地為每個初始化*運算式*初始化一個位元組的儲存區。
 
 ## <a name="syntax"></a>語法
 
-> ⟦*name*⟧ **BYTE** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*名稱*⟧ **BYTE** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-Can also be used as a type specifier anywhere a type is legal.
+也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives Reference](../../assembler/masm/directives-reference.md)\
+指示詞[參考](../../assembler/masm/directives-reference.md)\
 [DB](../../assembler/masm/db.md)\
 [SBYTE](../../assembler/masm/sbyte-masm.md)

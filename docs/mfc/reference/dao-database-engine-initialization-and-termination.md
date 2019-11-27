@@ -65,6 +65,6 @@ void AfxDaoTerm();
 
   **標頭**afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宏和全域](../../mfc/reference/mfc-macros-and-globals.md)

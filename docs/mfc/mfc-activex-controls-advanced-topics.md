@@ -43,7 +43,7 @@ ms.locfileid: "74305376"
 如需 MFC 資料庫類別的一般總覽，請參閱[Mfc 資料庫類別（DAO 和 ODBC）](../data/mfc-database-classes-odbc-and-dao.md)。 本文同時介紹 MFC ODBC 類別和 MFC DAO 類別，並將您導向到其中一項的更多詳細資料。
 
 > [!NOTE]
-> DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-programming.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
+> DAO 受到 Office 2013 的支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-programming.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
 ##  <a name="_core_implementing_a_parameterized_property"></a>執行參數化屬性
 
@@ -79,7 +79,7 @@ ms.locfileid: "74305376"
 
 10. 新增名為*column*的第二個參數（類型*short*）。
 
-11. 按一下 [完成]。
+11. 按一下 **[完成]** 。
 
 ### <a name="changes-made-by-the-add-property-wizard"></a>新增屬性 Wizard 所做的變更
 
@@ -180,6 +180,6 @@ ms.locfileid: "74305376"
 
    [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MFC ActiveX 控制項](../mfc/mfc-activex-controls.md)

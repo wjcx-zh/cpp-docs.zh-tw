@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74397946"
 ---
-# <a name="seq-32-bit-masm"></a>.SEQ (32-bit MASM)
+# <a name="seq-32-bit-masm"></a>.SEQ （32位 MASM）
 
-Orders segments sequentially (the default order). (32-bit MASM only.)
+依序排序區段（預設順序）。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
 > **.SEQ**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

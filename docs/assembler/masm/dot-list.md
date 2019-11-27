@@ -15,7 +15,7 @@ ms.locfileid: "74398182"
 ---
 # <a name="list"></a>.LIST
 
-Starts listing of statements.
+開始列出語句。
 
 ## <a name="syntax"></a>語法
 
@@ -25,6 +25,6 @@ Starts listing of statements.
 
 這是預設值。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

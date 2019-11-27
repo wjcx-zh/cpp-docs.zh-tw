@@ -1,5 +1,5 @@
 ---
-title: '&period;ERRIDN, &period;ERRIDNI'
+title: '&period;.ERRIDN，&period;ERRIDNI'
 ms.date: 05/23/2019
 f1_keywords:
 - .ERRIDN
@@ -15,19 +15,19 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398348"
 ---
-# <a name="perioderridn-perioderridni"></a>&period;ERRIDN, &period;ERRIDNI
+# <a name="perioderridn-perioderridni"></a>&period;.ERRIDN，&period;ERRIDNI
 
-Generates an error if the text items are identical.
+如果文字專案相同，會產生錯誤。
 
 ## <a name="syntax"></a>語法
 
-> **.ERRIDN** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧\
-> **.ERRIDNI** *textitem1* __,__ *textitem2* ⟦ __,__ *message*⟧
+> **..Erridn** *textitem1* __，__ *textitem2* ⟦ __，__ *message*⟧ \
+> **.ERRIDNI** *textitem1* __，__ *textitem2* ⟦ __，__ *message*⟧
 
 ## <a name="remarks"></a>備註
 
-If **&period;ERRIDNI** is given, the comparison is case insensitive.
+如果指定 **&period;ERRIDNI** ，則比較不區分大小寫。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

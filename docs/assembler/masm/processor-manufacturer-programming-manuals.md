@@ -11,20 +11,20 @@ ms.locfileid: "74394827"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>處理器製造商程式設計手冊
 
-This article provides links to websites that may contain programming information about processors that are not manufactured, sold, or supported by Microsoft. Microsoft does not own or control the websites or the content on them.
+本文提供的網站連結，可能包含不是由 Microsoft 製造、銷售或支援之處理器的程式設計資訊。 Microsoft 不會擁有或控制網站或其上的內容。
 
-## <a name="processor-manufacturer-websites"></a>Processor manufacturer websites
+## <a name="processor-manufacturer-websites"></a>處理器製造商網站
 
-- [AMD Developer Guides, Manuals & ISA Documents](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 開發人員指南，手冊 & ISA 檔](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Intel 64 和 IA-32 架構軟體開發人員手冊](https://software.intel.com/articles/intel-sdm)
 
-- [Introduction to Intel Advanced Vector Extensions](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Intel Advanced Vector Extensions 簡介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>備註
 
-Neither Visual Studio nor the Microsoft Macro Assembler support all processors.
+Visual Studio 或 Microsoft 巨集群組合器都不支援所有處理器。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Microsoft Macro Assembler reference](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft 巨集組譯參考](../../assembler/masm/microsoft-macro-assembler-reference.md)

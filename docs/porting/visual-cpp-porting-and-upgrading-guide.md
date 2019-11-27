@@ -58,7 +58,7 @@ Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 中的工具組�
 |[針對 UNIX 使用者的 Visual C++ 簡介](introduction-to-visual-cpp-for-unix-users.md)|提供資訊給剛開始使用 Visual C++，並想更有效率使用它的 UNIX 使用者。|
 |[在 Windows 上執行 Linux 程式](porting-from-unix-to-win32.md)|討論將 UNIX 應用程式移轉至 Windows 的選擇。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 中的 C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 [Visual Studio 中 C++ 編譯器中的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>

@@ -15,7 +15,7 @@ ms.locfileid: "74398116"
 ---
 # <a name="listmacroall"></a>.LISTMACROALL
 
-Starts listing of all statements in macros.
+開始列出宏中的所有語句。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,8 @@ Starts listing of all statements in macros.
 
 ## <a name="remarks"></a>備註
 
-Same as [.LALL](../../assembler/masm/dot-lall.md).
+與相同[.LALL](../../assembler/masm/dot-lall.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

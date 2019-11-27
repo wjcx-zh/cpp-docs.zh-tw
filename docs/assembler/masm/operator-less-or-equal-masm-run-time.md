@@ -1,5 +1,5 @@
 ---
-title: operator &lt;= (MASM Run Time)
+title: 運算子 &lt;= （MASM 執行時間）
 ms.date: 08/30/2018
 f1_keywords:
 - operator <=
@@ -14,14 +14,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74396816"
 ---
-# <a name="operator-lt-masm-run-time"></a>operator &lt;= (MASM Run Time)
+# <a name="operator-lt-masm-run-time"></a>運算子 &lt;= （MASM 執行時間）
 
-Is less than or equal to. Used only within [.IF](../../assembler/masm/dot-if.md), [.WHILE](../../assembler/masm/dot-while.md), or [.REPEAT](../../assembler/masm/dot-repeat.md) blocks and evaluated at run time, not at assembly time.
+小於或等於。 只能在中使用[。如果](../../assembler/masm/dot-if.md)為，則為[。WHILE](../../assembler/masm/dot-while.md)、或[。重複](../../assembler/masm/dot-repeat.md)區塊，並在執行時間進行評估，而不是在元件時間。
 
 ## <a name="syntax"></a>語法
 
 > *expression1* **<=** *expression2*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

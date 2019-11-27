@@ -15,21 +15,21 @@ ms.locfileid: "74399278"
 ---
 # <a name="align-masm"></a>ALIGN (MASM)
 
-The **ALIGN** directive aligns the next data element or instruction on an address that is a multiple of its parameter. The parameter must be a power of 2 (for example, 1, 2, 4, and so on) that is less than or equal to the segment alignment.
+**ALIGN**指示詞會將下一個資料元素或指示對齊其參數的倍數的位址。 參數必須是小於或等於區段對齊的2（例如，1、2、4等等）的乘冪。
 
 ## <a name="syntax"></a>語法
 
-> **ALIGN** ⟦*number*⟧
+> **對齊**⟦*數位*⟧
 
 ## <a name="remarks"></a>備註
 
-The **ALIGN** directive allows you to specify the beginning offset of a data element or an instruction. Aligned data can improve performance, at the expense of wasted space between data elements. Large performance improvements can be seen when data accesses are on boundaries that fit within cache lines. Accesses on natural boundaries for native types means less time spent in internal hardware realignment microcode.
+**ALIGN**指示詞可讓您指定資料元素或指令的開始位移。 對齊的資料可以改善效能，代價是在資料元素之間浪費空間。 當資料存取位於符合快取行的界限時，可能會出現大量效能改進。 針對原生類型的自然界限存取，表示在內部硬體校準微碼中花費的時間較少。
 
-The need for aligned instructions is rare on modern processors that use a flat addressing model, but may be required for jump targets in older code for other addressing models.
+在使用一般定址模型的新式處理器上，不太需要對齊的指示，但可能需要在較舊的程式碼中針對其他定址模型進行跳躍目標。
 
-When data is aligned, the skipped space is padded with zeroes. When instructions are aligned, the skipped space is filled with appropriately-sized NOP instructions.
+當資料對齊時，略過的空間會以零填補。 當指示對齊時，略過的空間會填入適當大小的 NOP 指示。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[EVEN](even.md)\
-[Directives reference](directives-reference.md)
+[甚至](even.md)\
+[指示詞參考](directives-reference.md)

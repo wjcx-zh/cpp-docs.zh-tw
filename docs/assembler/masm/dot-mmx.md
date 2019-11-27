@@ -13,14 +13,14 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398137"
 ---
-# <a name="mmx-32-bit-masm"></a>.MMX (32-bit MASM)
+# <a name="mmx-32-bit-masm"></a>.MMX （32位 MASM）
 
-Enables assembly of MMX or single-instruction, multiple data (SIMD) instructions. (32-bit MASM only.)
+啟用 MMX 或單一指令、多個資料（SIMD）指令的元件。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
 > **.MMX**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

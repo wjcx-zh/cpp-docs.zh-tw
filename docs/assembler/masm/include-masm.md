@@ -15,16 +15,16 @@ ms.locfileid: "74397339"
 ---
 # <a name="include-masm"></a>INCLUDE (MASM)
 
-Inserts source code from the source file given by *filename* into the current source file during assembly.
+在元件期間，從*檔案名*指定的原始程式檔中，將原始程式碼插入目前的來源檔案。
 
 ## <a name="syntax"></a>語法
 
-> **INCLUDE** *filename*
+> **包含***檔案名*
 
 ## <a name="remarks"></a>備註
 
-The *filename* must be enclosed in angle brackets if it includes a backslash, semicolon, greater-than symbol, less-than symbol, single quotation mark, or double quotation mark.
+*檔案名*必須以角括弧括住，如果它包含反斜線、分號、大於符號、小於符號、單引號或雙引號。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

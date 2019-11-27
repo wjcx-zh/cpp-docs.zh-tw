@@ -15,12 +15,12 @@ ms.locfileid: "74394614"
 ---
 # <a name="real8"></a>REAL8
 
-Allocates and optionally initializes a double-precision (8-byte) floating-point number for each *initializer*.
+配置並選擇性地為每個*初始化運算式*初始化雙精確度（8位元組）浮點數。
 
 ## <a name="syntax"></a>語法
 
-> *name* **REAL8** *initializer* ⟦ __,__ *initializer* ...⟧
+> *name* **REAL8** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

@@ -17,12 +17,12 @@ ms.locfileid: "74397103"
 ---
 # <a name="operator-and"></a>運算子 AND
 
-Returns the result of a bitwise AND operation for *expression1* and *expression2*.
+傳回*運算式*2 和*運算式*的位 and 運算的結果。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* **AND** *expression2*
+> *運算式*2**和***運算式*2
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [運算子參考](../../assembler/masm/operators-reference.md)

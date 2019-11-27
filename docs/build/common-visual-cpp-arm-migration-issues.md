@@ -98,6 +98,6 @@ MSVC 編譯器支援兩種不同的 `volatile` 儲存限定詞解讀，您可以
 
 在 x86 和 x64 架構上，預設值為 **/volatile： ms** ，因為已使用 MSVC 為這些架構建立的大部分軟體都依賴它們。 當您編譯 x86 和 x64 程式時，您可以指定 **/volatile： iso**參數來協助避免不必要的依賴傳統 volatile 語義，並提升可攜性。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [針對 ARM 處理器設定 Visual C++](configuring-programs-for-arm-processors-visual-cpp.md)

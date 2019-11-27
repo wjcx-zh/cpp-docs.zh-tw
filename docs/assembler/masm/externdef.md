@@ -15,16 +15,16 @@ ms.locfileid: "74397533"
 ---
 # <a name="externdef"></a>EXTERNDEF
 
-Defines one or more external variables, labels, or symbols called *name* whose type is *type*.
+定義一或多*個名為 type 類型的外部*變數、標籤或*符號。*
 
 ## <a name="syntax"></a>語法
 
-> **EXTERNDEF** ⟦*language-type*⟧ *name* __:__ *type* ⟦ __,__ ⟦*language-type*⟧ *name* __:__ *type* ...⟧
+> **EXTERNDEF** ⟦*language-類型*⟧*名稱* __：__ *類型*⟦ __，__ ⟦*語言類型*⟧*名稱* __：__ *類型*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-If *name* is defined in the module, it is treated as [PUBLIC](../../assembler/masm/public-masm.md). If *name* is referenced in the module, it is treated as [EXTERN](../../assembler/masm/extern-masm.md). If *name* is not referenced, it is ignored. The *type* can be [ABS](../../assembler/masm/operator-abs.md), which imports *name* as a constant. Normally used in include files.
+如果*名稱*是在模組中定義，則會被視為[公用](../../assembler/masm/public-masm.md)。 如果在模組中參考*名稱*，則會將它視為[EXTERN](../../assembler/masm/extern-masm.md)。 如果未參考*name* ，則會忽略它。 *類型*可以是[ABS](../../assembler/masm/operator-abs.md)，其會將*名稱*當做常數來匯入。 通常用於 include 檔案中。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

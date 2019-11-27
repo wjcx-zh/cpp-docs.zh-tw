@@ -24,7 +24,7 @@ Visual Studio C 和 C++ 開發不再僅限於 Windows。 本教學課程說明�
 > * 新增 Linux 電腦的連線
 > * 在 Linux 上建置和偵錯同一目標
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 * 設定 Visual Studio 執行跨平台 C++ 開發
   * 首先，[安裝 Visual Studio](https://visualstudio.microsoft.com/vs/)並選擇使用 **C++工作負載**進行的 **C++桌面開發**和 Linux 開發。 這種最小安裝僅限 3 GB。 視您的下載速度而定，安裝應該不會超過10分鐘。

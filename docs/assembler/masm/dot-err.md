@@ -15,12 +15,12 @@ ms.locfileid: "74398402"
 ---
 # <a name="err"></a>**.ERR**
 
-Generates an error.
+會產生錯誤。
 
 ## <a name="syntax"></a>語法
 
 > **.ERR** ⟦*message*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

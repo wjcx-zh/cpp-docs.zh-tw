@@ -17,12 +17,12 @@ ms.locfileid: "74395827"
 ---
 # <a name="operator-size"></a>運算子 SIZE
 
-Returns the number of bytes in *variable* allocated by the first initializer.
+傳回第一個初始化運算式所配置之*變數*中的位元組數目。
 
 ## <a name="syntax"></a>語法
 
-> **SIZE** *variable*
+> **大小***變數*
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

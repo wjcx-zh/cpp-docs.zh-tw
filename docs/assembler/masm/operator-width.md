@@ -17,12 +17,12 @@ ms.locfileid: "74395321"
 ---
 # <a name="operator-width"></a>運算子 WIDTH
 
-Returns the width in bits of the current *recordfieldname* or *record*.
+傳回目前*recordfieldname*或*記錄*的寬度（以位為單位）。
 
 ## <a name="syntax"></a>語法
 
-> **WIDTH** {*recordfieldname* | *record*}
+> **寬度**{*recordfieldname* | *記錄*}
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Operators reference](operators-reference.md)
+[運算子參考](operators-reference.md)

@@ -15,12 +15,12 @@ ms.locfileid: "74393513"
 ---
 # <a name="substr"></a>SUBSTR
 
-Returns a substring of *textitem*, starting at *position*. The *textitem* can be a literal string, a constant preceded by a `%`, or the string returned by a macro function.
+從*位置*開始，傳回*textitem*的子字串。 *Textitem*可以是常值字串、前面加上 `%`的常數，或宏函數所傳回的字串。
 
 ## <a name="syntax"></a>語法
 
-> *name* **SUBSTR** *textitem* __,__ *position* ⟦ __,__ *length*⟧
+> *名稱* **SUBSTR** *textitem* __，__ *位置*⟦ __，__ *長度*⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

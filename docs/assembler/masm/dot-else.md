@@ -13,7 +13,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74398501"
 ---
-# <a name="else-32-bit-masm"></a>.ELSE (32-bit MASM)
+# <a name="else-32-bit-masm"></a>.ELSE （32位 MASM）
 
 ## <a name="syntax"></a>語法
 
@@ -21,8 +21,8 @@ ms.locfileid: "74398501"
 
 ## <a name="remarks"></a>備註
 
-(32-bit MASM only.) See [.IF](../../assembler/masm/dot-if.md).
+（僅限 32-bit MASM）。請參閱[。如果](../../assembler/masm/dot-if.md)為。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

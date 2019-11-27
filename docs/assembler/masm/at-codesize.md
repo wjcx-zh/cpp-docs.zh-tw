@@ -15,12 +15,12 @@ ms.locfileid: "74399196"
 ---
 # <a name="codesize"></a>\@CodeSize
 
-0 for **TINY**, **SMALL**, **COMPACT**, and **FLAT** models, and 1 for **MEDIUM**, **LARGE**, and **HUGE** models (numeric equate).
+0適用于**小型**、**小型**、**精簡**和**平面**模型，而1適用于**中**、**大型**和**大型模型（** 數值等同）。
 
 ## <a name="syntax"></a>語法
 
 > **\@CodeSize**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Symbols reference](symbols-reference.md)
+[符號參考](symbols-reference.md)

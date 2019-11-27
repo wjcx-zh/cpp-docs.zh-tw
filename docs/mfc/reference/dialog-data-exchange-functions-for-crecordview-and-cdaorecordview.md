@@ -96,7 +96,7 @@ void AFXAPI DDX_FieldCBIndex(
 
 ### <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="ddx_fieldcbstring"></a>  DDX_FieldCBString
 
@@ -525,7 +525,7 @@ void AFXAPI DDX_FieldSlider(
 
 ### <a name="requirements"></a>需求
 
-**Header:** afxdao.h
+**標頭：** afxdao。h
 
 ##  <a name="ddx_fieldtext"></a>DDX_FieldText
 
@@ -673,6 +673,6 @@ void AFXAPI DDX_FieldText(
 
   **標頭**afxdao。h
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宏和全域](mfc-macros-and-globals.md)

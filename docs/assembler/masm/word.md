@@ -15,14 +15,14 @@ ms.locfileid: "74392825"
 ---
 # <a name="word"></a>WORD
 
-Allocates and optionally initializes a word (2 bytes) of storage for each *initializer*. Can also be used as a type specifier anywhere a type is legal.
+配置並選擇性地為每個初始化*運算式*初始化一個字組（2個位元組）。 也可以當做類型為合法的任何位置的類型規範使用。
 
 ## <a name="syntax"></a>語法
 
-> ⟦*name*⟧ **WORD** *initializer* ⟦ __,__ *initializer* ...⟧
+> ⟦*名稱*⟧ **WORD** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)\
-[SWORD](../../assembler/masm/sword.md)\
+指示詞[參考](../../assembler/masm/directives-reference.md)\
+[寶劍](../../assembler/masm/sword.md)\
 [DW](../../assembler/masm/dw.md)

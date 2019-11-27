@@ -15,12 +15,12 @@ ms.locfileid: "74393483"
 ---
 # <a name="subttl"></a>SUBTTL
 
-See [SUBTITLE](../../assembler/masm/subtitle.md).
+請參閱[副標題](../../assembler/masm/subtitle.md)。
 
 ## <a name="syntax"></a>語法
 
 > **SUBTTL**
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](directives-reference.md)
+[指示詞參考](directives-reference.md)

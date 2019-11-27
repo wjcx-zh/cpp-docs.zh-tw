@@ -15,12 +15,12 @@ ms.locfileid: "74394744"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
-Makes each variable, label, or absolute symbol specified as *name* available to all other modules in the program.
+讓程式中的所有其他模組都可以使用指定為*名稱*的每個變數、標籤或絕對符號。
 
 ## <a name="syntax"></a>語法
 
-> **PUBLIC** ⟦language-type⟧ *name* ⟦ __,__ ⟦language-type⟧ *name* ...⟧
+> **PUBLIC** ⟦ language-type ⟧ *name* ⟦ __，__ ⟦ language-type ⟧ *name* .。。⟧
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Directives reference](../../assembler/masm/directives-reference.md)
+[指示詞參考](../../assembler/masm/directives-reference.md)

@@ -89,7 +89,7 @@ void functionUsingWidget() {
 
 的設計C++可確保物件在超出範圍時終結。 也就是說，它們會被終結，因為區塊會以相反的結構順序結束。 在物件終結時，它的基底和成員會以特殊的順序終結。 在全域範圍的任何區塊外宣告的物件，可能會導致問題。 如果全域物件的函式擲回例外狀況，可能會很難以進行 debug。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [歡迎回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>

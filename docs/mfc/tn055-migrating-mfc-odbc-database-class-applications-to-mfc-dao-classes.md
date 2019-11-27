@@ -22,7 +22,7 @@ ms.locfileid: "74305370"
 # <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055：將 MFC ODBC 資料庫類別應用程式移轉至 MFC DAO 類別
 
 > [!NOTE]
-> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用 [OLE DB 樣板](../data/oledb/ole-db-templates.md)或是 [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)。 您應該只在維護現有的應用程式時使用 DAO。
+> DAO 會與 Access 資料庫搭配使用，並透過 Office 2013 支援。 DAO 3.6 是最後的版本，被視為已淘汰。 視覺C++環境和嚮導不支援 dao （雖然包含 dao 類別，但您仍然可以使用它們）。 Microsoft 建議您針對新專案使用[OLE DB 範本](../data/oledb/ole-db-templates.md)或[ODBC 和 MFC](../data/odbc/odbc-and-mfc.md) 。 您應該只在維護現有的應用程式時使用 DAO。
 
 ## <a name="overview"></a>概觀
 
@@ -87,9 +87,9 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
 
    若使用 ODBC 類別，MFC 需要透過巨集或列舉的類型定義這些選項。
 
-   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，當您在 ODBC 中指定 **的類型時，會使用**snapshot`CRecordset`，但指定 **的類型時，則會使用**DB_OPEN_SNAPSHOT`CDaoRecordset`。
+   若使用 DAO 類別，DAO 會在標頭檔 (DBDAOINT.H) 中提供這些選項的定義。 因此，資料錄集類型是 `CRecordset` 的列舉成員，不過在 DAO 中則是常數。 例如，當您在 ODBC 中指定 `CRecordset` 的類型， **DB_OPEN_SNAPSHOT**但在指定 `CDaoRecordset`的類型時，會使用**快照**集。
 
-- `CRecordset` 的預設資料錄集類型是 **snapshot**，而 `CDaoRecordset` 的預設資料錄集類型是 **dynaset** (請參閱下面的＜注意事項＞中，有關 ODBC 類別快照的其他問題)。
+- `CRecordset` 的預設記錄集類型為**snapshot** ，而 `CDaoRecordset` 的預設記錄集類型為**動態**集（請參閱下面的附注，以取得 ODBC 類別快照的其他相關問題）。
 
 - ODBC `CRecordset` 類別可以選擇建立順向資料錄集類型。 在 `CDaoRecordset` 類別中，順向並不是資料錄集類型，而是特定資料錄集類型的屬性 (或選項)。
 
@@ -104,7 +104,7 @@ DAO 類別包含較多物件和一組內容更豐富的方法，不過，本節�
    > [!NOTE]
    > DAO (`CDaoRecordset`) 快照是唯讀的，而 ODBC (`CRecordset`) 快照可能可以根據 ODBC 資料指標程式庫的驅動程式和用途更新。 如果您使用的是資料指標程式庫，`CRecordset` 快照就可以更新。 如果您使用的是 Desktop Driver Pack 3.0 中任何不含 ODBC 資料指標程式庫的 Microsoft 驅動程式，則 `CRecordset` 快照是唯讀的。 如果您使用其他驅動程式，請檢查驅動程式的檔，以查看快照集（`STATIC_CURSORS`）是否為唯讀。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)

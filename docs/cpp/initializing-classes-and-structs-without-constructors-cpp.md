@@ -1,6 +1,6 @@
 ---
-title: Brace initialization for classes, structs, and unions
-description: Use brace initialization with any C++ class, struct or union
+title: 類別、結構和等位的括弧初始化
+description: 對任何C++類別、結構或等位使用括弧初始化
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
 ms.openlocfilehash: 41ff38bc4bcc9ebca913b5e66b5ac2f395044222
@@ -10,7 +10,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246507"
 ---
-# <a name="brace-initialization"></a>Brace initialization
+# <a name="brace-initialization"></a>大括弧初始化
 
 您不一定需要定義類別的建構函式，尤其是相當簡單的類別。 使用者可以使用統一初始化來初始化類別或結構的物件 (如下列範例所示)：
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Note that when a class or struct has no constructor, you provide the list elements in the order that the members are declared in the class. If the class has a constructor, provide the elements in the order of the parameters. If a type has a default constructor, either implicitly or explicitly declared, you can use default brace initialization (with empty braces). For example, the following class may be initialized by using both default and non-default brace initialization:
+請注意，當類別或結構沒有任何函式時，您會以類別中宣告成員的順序提供清單元素。 如果類別有一個函式，請以參數的順序提供元素。 如果類型具有隱含或明確宣告的預設的處理常式，您可以使用預設的大括弧初始化（含空的大括弧）。 例如，您可以使用預設和非預設的大括弧初始化來初始化下列類別：
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-If a class has non-default constructors, the order in which class members appear in the brace initializer is the order in which the corresponding parameters appear in the constructor, not the order in which the members are declared (as with `class_a` in the previous example). Otherwise, if the type has no declared constructor, the order in which the members appear in the brace initializer is the same as the order in which they are declared; in this case, you can initialize as many of the public members as you wish, but you cannot skip any member. The following example shows the order that's used in brace initialization when there is no declared constructor:
+如果類別具有非預設的處理常式，則類別成員在大括弧初始化運算式中出現的順序，就是對應參數出現在函式中的順序，而不是宣告成員的順序（如同上一個範例中的 `class_a`）。 否則，如果類型沒有宣告的函式，成員在大括弧初始化運算式中出現的順序會與宣告的順序相同。在此情況下，您可以視需要初始化多個公用成員，但不能略過任何成員。 下列範例顯示沒有宣告的函式時，在大括弧初始化中使用的順序：
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-If the default constructor is explicitly declared but marked as deleted, default brace initialization cannot be used:
+如果預設的函式已明確宣告，但標示為已刪除，則無法使用預設的大括弧初始化：
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-You can use brace initialization anywhere you would typically do initialization—for example, as a function parameter or a return value, or with the **new** keyword:
+您可以在一般執行初始化的任何地方使用括弧初始化，例如，做為函式參數或傳回值，或使用**new**關鍵字：
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,18 +136,18 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-## <a name="initializer_list-constructors"></a>initializer_list constructors
+## <a name="initializer_list-constructors"></a>initializer_list 的構造函式
 
-The [initializer_list Class](../standard-library/initializer-list-class.md) represents a list of objects of a specified type that can be used in a constructor, and in other contexts. You can construct an initializer_list by using brace initialization:
+[Initializer_list 類別](../standard-library/initializer-list-class.md)代表指定類型的物件清單，可用於函數和其他內容中。 您可以使用大括弧初始化來建立 initializer_list：
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  To use this class, you must include the [\<initializer_list>](../standard-library/initializer-list.md) header.
+>  若要使用這個類別，您必須包含[\<initializer_list >](../standard-library/initializer-list.md)標頭。
 
-An `initializer_list` can be copied. In this case, the members of the new list are references to the members of the original list:
+可以複製 `initializer_list`。 在此情況下，新清單的成員會參考原始清單的成員：
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -156,7 +156,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-The standard library container classes, and also `string`, `wstring`, and `regex`, have `initializer_list` constructors. The following examples show how to do brace initialization with these constructors:
+標準程式庫容器類別，同時 `string`、`wstring`和 `regex`都具有 `initializer_list` 的函式。 下列範例示範如何使用這些函式進行括弧初始化：
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };
@@ -166,7 +166,7 @@ regex rgx{'x', 'y', 'z'};
 ```
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別和結構](../cpp/classes-and-structs-cpp.md)<br/>
 [建構函式](../cpp/constructors-cpp.md)

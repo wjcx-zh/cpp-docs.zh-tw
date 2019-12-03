@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4460
 ms.assetid: c97ac1c9-598d-479e-bfff-c993690c4f3d
-ms.openlocfilehash: a42562a2c35bb56de4ce7147e199f4db2dddb684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f394af9dc0362035b9361981fdca077a3a915d5
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400808"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74682925"
 ---
 # <a name="compiler-warning-level-4-c4460"></a>編譯器警告 (層級 4) C4460
 
@@ -23,7 +23,7 @@ WinRT 或 CLR 運算子 'operator'，具有以傳址方式傳遞的參數。 Win
 
 下列範例會產生 C4460，並示範如何修正此問題。
 
-```
+```cpp
 // C4460.cpp
 // compile with: /W4 /clr
 #include <stdio.h>

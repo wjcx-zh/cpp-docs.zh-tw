@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4512
 ms.assetid: afb68995-684a-4be5-a73a-38d7a16dc030
-ms.openlocfilehash: c5e84fe1d0e558e689e48fba8df112861f81acec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3b8f11b55cf6ef2df601c125a1b6629aa0554da
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220986"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683188"
 ---
 # <a name="compiler-warning-level-4-c4512"></a>編譯器警告 (層級 4) C4512
 
@@ -29,15 +29,15 @@ ms.locfileid: "62220986"
 
 - 明確地定義類別的指派運算子。
 
-- 移除**const**或參考運算子，從資料中的項目類別。
+- 從類別中的資料項目移除**const**或 reference 運算子。
 
-- 使用 #pragma[警告](../../preprocessor/warning.md)陳述式來隱藏警告。
+- 請使用 #pragma [warning](../../preprocessor/warning.md)語句來隱藏警告。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4512。
 
-```
+```cpp
 // C4512.cpp
 // compile with: /EHsc /W4
 // processor: x86

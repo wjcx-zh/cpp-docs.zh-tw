@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4564
 ms.assetid: 555b301b-313e-4262-9f81-eb878674be60
-ms.openlocfilehash: 1948bdec5367fa7943f5a0de4338fd4ecd6c6581
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5db6bf366c86a716be33539feb0085ac03a9647
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220503"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683168"
 ---
 # <a name="compiler-warning-level-4-c4564"></a>編譯器警告 (層級 4) C4564
 
-方法 'method' 的類別 'class' 定義不支援的預設參數 'parameter'
+類別 ' class ' 的方法 ' method ' 定義了不支援的預設參數 ' parameter '
 
-編譯器偵測到具有一或多個參數具有預設值的方法。 叫用方法時，將忽略參數的預設值明確指定這些參數的值。 如果您未明確指定這些參數的值C++編譯器會產生錯誤。
+編譯器偵測到具有一或多個參數的方法，其具有預設值。 叫用方法時，將會忽略參數的預設值;明確指定這些參數的值。 如果您未明確指定這些參數的值， C++編譯器會產生錯誤。
 
-使用 Visual Basic 建立下列.dll 的情況下，指定允許預設參數方法引數：
+假設下列使用 Visual Basic 建立的 .dll，它允許方法引數上的預設參數：
 
-```
+```vb
 ' C4564.vb
 ' compile with: vbc /t:library C4564.vb
 Public class TestClass
@@ -31,9 +31,9 @@ Public class TestClass
 End class
 ```
 
-與下列C++使用 Visual Basic 中，以建立此.dll 檔的範例
+下列C++範例會使用以 Visual Basic 建立的 .dll，
 
-```
+```cpp
 // C4564.cpp
 // compile with: /clr /W4 /WX
 #using <C4564.dll>

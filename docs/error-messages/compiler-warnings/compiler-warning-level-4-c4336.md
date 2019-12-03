@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4336
 ms.assetid: 93f199dd-d6dd-42c0-82d8-c12d101a7235
-ms.openlocfilehash: 4946b932fa897dab057e430f16c781e2d06bebd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33c4a25618c1afcf93704b161483bc4c0a6e16a0
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400847"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683312"
 ---
 # <a name="compiler-warning-level-4-c4336"></a>編譯器警告 (層級 4) C4336
 
-匯入交互參考的類型程式庫 'type_lib1'，匯入 'type_lib2' 之前
+匯入 ' type_lib2 ' 之前，請先匯入交叉參考的類型程式庫 ' type_lib1 '
 
-使用所參考的型別程式庫[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞。 不過，類型程式庫包含未參考與另一個型別程式庫的參考`#import`。 編譯器找不到此其他的.tlb 檔案。
+已使用[#import](../../preprocessor/hash-import-directive-cpp.md)指示詞參考類型程式庫。 不過，類型程式庫包含另一個未使用 `#import`參考的類型程式庫參考。 編譯器發現這個其他 .tlb 檔案。
 
-從下列兩個檔案 （編譯 midl.exe） 建立的磁碟上的指定兩個型別程式庫：
+從下列兩個檔案（以 midl 編譯）所建立的磁片上，指定了兩個類型程式庫：
 
 ```
 // c4336a.idl
@@ -50,9 +50,9 @@ library C4336bLib
 };
 ```
 
-下列範例會產生 C4336:
+下列範例會產生 C4336：
 
-```
+```cpp
 // C4336.cpp
 // compile with: /W4 /LD
 // #import "C4336a.tlb"

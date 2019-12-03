@@ -1,95 +1,93 @@
 ---
-title: 編譯器警告 （層級 3） C4996
-ms.date: 11/17/2017
+title: 編譯器警告（層級3） C4996
+description: 說明為什麼會發生編譯器警告 C4996，並說明該怎麼做。
+ms.date: 11/25/2019
 f1_keywords:
 - C4996
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401497"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683333"
 ---
-# <a name="compiler-warning-level-3-c4996"></a>編譯器警告 （層級 3） C4996
+# <a name="compiler-warning-level-3-c4996"></a>編譯器警告（層級3） C4996
 
-編譯器遇到已被取代的宣告。 **這項警告一律是審慎的文件庫或包含的標頭檔，您不應該使用已被取代的符號而不需要瞭解後果，否則作者提供的訊息。** 實際的警告訊息是已被取代的修飾詞或屬性宣告中的站台所指定。
+您的程式碼會使用標示為已被*取代*的函式、類別成員、變數或 typedef。 藉由使用[__declspec （已淘汰）](../../cpp/deprecated-cpp.md)修飾詞或 c + + 14 [\[\[已取代的\]\]](../../cpp/attributes.md)屬性來取代符號。 實際的 C4996 警告訊息是由宣告的 `deprecated` 修飾詞或屬性所指定。
 
-這些是一些常見的 C4996 訊息，產生的 C 執行階段程式庫和標準程式庫，但不是詳盡的清單。 遵循下列連結，或閱讀的方式來修正此問題，或關閉的警告。
-
-- [此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與C++標準的名稱： *new_name*。如需詳細資料，請參閱線上說明。](#posix-function-names)
-
-- [此函式或變數可能不安全。請考慮使用*safe_version*改。若要停用已被取代，請使用\_CRT\_SECURE\_NO\_警告。如需詳細資料，請參閱線上說明。](#unsafe-crt-library-functions)
-
-- ['std::*function_name*::\_未核取\_迭代器::\_Deprecate' 呼叫 std::*function_name* 使用參數的可能不安全-此呼叫須呼叫端檢查通過的值正確。若要停用這項警告，請使用 - D_SCL_SECURE_NO_WARNINGS。如何使用視覺效果，請參閱文件C++' Checked Iterators'](#unsafe-standard-library-functions)
-
-- [此函式或變數已被較新的文件庫或作業系統功能取代。請考慮使用*new_item*改。如需詳細資料，請參閱線上說明。](#obsolete-crt-functions-and-variables)
-
-## <a name="cause"></a>原因
-
-當編譯器遇到函式或變數標示為，就會發生 C4996[過時](../../cpp/deprecated-cpp.md)利用`__declspec(deprecated)`修飾詞，或當您嘗試存取函式、 類別成員或具有 C + + 14 的 typedef [ \[\[過時\]\] ](../../cpp/attributes.md)屬性。 您可以使用`__declspec(deprecated)`修飾詞或`[[deprecated]]`屬性自行在您的程式庫或標頭檔，以警告您有關已被取代的函式、 變數、 成員或 typedef 的用戶端。
+> [!IMPORTANT]
+> 從宣告符號的標頭檔作者中，此警告一律是刻意出現的訊息。 請勿使用已被取代的符號，而不需要瞭解結果。
 
 ## <a name="remarks"></a>備註
 
-許多函式、 成員函式、 樣板函式和在 Visual Studio 中的程式庫中的全域變數會標示*已被取代*。 這些函式會被取代，因為它們可能會有不同的慣用的名稱、 可能不安全或有更安全的變體，或可能已經過時。 許多已被取代的訊息，包括建議的取代已被取代的函式或全域變數。
+Visual Studio 程式庫中的許多函數、成員函式、範本函式和全域變數已被*取代*。 有些（例如 Posix 函數）已被取代，因為它們有不同的慣用名稱。 某些 C 執行時間程式庫函式已被取代，因為它們是不安全的，而且具有更安全的變體。 其他則已淘汰，因為它們已過時。 淘汰訊息通常會包含已被取代的函式或全域變數的建議替代功能。
 
-若要修正此問題，我們通常建議您變更程式碼以改用建議的更安全的或更新函式和全域變數。 如果您需要使用現有的函式或變數，可攜性的原因，警告可以關閉。
+## <a name="turn-off-the-warning"></a>關閉警告
 
-### <a name="to-turn-the-warning-off-without-fixing-the-issue"></a>將警告關閉，而不需要修正問題
+若要修正 C4996 問題，我們通常建議您變更程式碼。 請改用建議的函數和全域變數。 如果您因為可攜性的緣故，而需要使用現有的函式或變數，您可以關閉警告。
 
-您可以藉由關閉特定一行程式碼的警告[警告](../../preprocessor/warning.md)pragma， `#pragma warning(suppress : 4996)`。 您也可以關閉警告檔案內使用警告 pragma， `#pragma warning(disable : 4996)`。
+若要關閉特定程式程式碼的警告，請使用[warning](../../preprocessor/warning.md) pragma，`#pragma warning(suppress : 4996)`。
 
-您可以關閉警告全域命令列組建中使用 **/wd4996**命令列選項。
+若要關閉檔案中的警告，請使用 warning pragma，`#pragma warning(disable : 4996)`。
 
-若要關閉 Visual Studio IDE 中的整個專案的警告：
+若要在命令列組建中全域關閉警告，請使用[/wd4996](../../build/reference/compiler-option-warning-level.md)命令列選項。
 
-- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
-- 選取 **組態屬性**， **C /C++**，**進階**頁面。
-- 編輯**停用特定警告**屬性，即可加入`4996`。 選擇**確定**以套用變更。
+若要關閉 Visual Studio IDE 中整個專案的警告：
 
-您也可以使用前置處理器巨集關閉某些特定的類別之程式庫中使用的取代警告。 以下將說明這些巨集。
+1. 開啟專案的 [**屬性頁**] 對話方塊。 如需如何使用 [屬性頁] 對話方塊的詳細資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
 
-若要在 Visual Studio 中定義前置處理器巨集：
+1.  > [ **C/C++**  > **Advanced** ] 頁面中選取 [設定**屬性**]。
 
-- 開啟**屬性頁**為您的專案 對話方塊。 如需如何使用 [屬性頁] 對話方塊的資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
-- 依序展開**組態屬性 > C /C++ > 前置處理器**。
-- 在 **前置處理器定義**屬性新增巨集名稱。 選擇 [確定]  加以儲存，然後重建您的專案。
+1. 編輯 [**停用特定警告**] 屬性以新增 `4996`。 選擇 **[確定]** 以套用變更。
 
-若要定義巨集只能在特定的原始程式檔中，加入一行例如`#define EXAMPLE_MACRO_NAME`之前任一行，其中包含的標頭檔。
+您也可以使用預處理器宏，關閉程式庫中使用的某些特定類別的取代警告。 下列是這些宏的說明。
 
-## <a name="specific-c4996-messages"></a>C4996 的特定訊息
+若要在 Visual Studio 中定義預處理器宏：
 
-以下是一些常見的 C4996 警告和錯誤的來源。
+1. 開啟專案的 [**屬性頁**] 對話方塊。 如需如何使用 [屬性頁] 對話方塊的詳細資訊，請參閱[屬性頁](../../build/reference/property-pages-visual-cpp.md)。
 
-### <a name="posix-function-names"></a>POSIX 函式名稱
+1. 展開 [設定**屬性] >C++ C/> 預處理器**。
 
-**此項目的 POSIX 名稱已被取代。相反地，使用 ISO C 與C++標準的名稱：** *new_name*。 **請參閱線上說明，如需詳細資訊。**
+1. 在 [**預處理器定義**] 屬性中，加入宏名稱。 選擇 [確定] 加以儲存，然後重建您的專案。
 
-Microsoft 已重新命名以依照 C99 與 c++03 規則實作所定義的全域函式名稱的 CRT 中的某些 POSIX 函式。 只有原始 POSIX 名稱已被取代，函式本身。 在大多數情況下，POSIX 函式名稱前會加上底線來表示符合標準的名稱。 編譯器會發出取代警告，原始的函式名稱，並建議慣用的名稱。
+若只要在特定的原始程式檔中定義宏，請在包含標頭檔的任何一行前面加入一行，例如 `#define EXAMPLE_MACRO_NAME`。
 
-若要修正此問題，我們通常建議您變更程式碼以改用建議的函式名稱。 不過，更新的名稱是 Microsoft 特定的。 如果您需要使用現有的函式名稱的可攜性的理由，您可以關閉這些警告。 POSIX 函式仍在原來的名稱下的文件庫中。
+以下是一些 C4996 警告和錯誤的常見來源：
 
-若要關閉這些函式已被取代警告，請定義前置處理器巨集 **\_CRT\_NONSTDC\_無\_警告**。 您可以定義此巨集，在命令列加上選項`/D_CRT_NONSTDC_NO_WARNINGS`。
+## <a name="posix-function-names"></a>POSIX 函數名稱
 
-### <a name="unsafe-crt-library-functions"></a>不安全的 CRT 程式庫函式
+**此專案的 POSIX 名稱已被取代。相反地，請使用 ISO C C++和符合標準的名稱：** *新名稱*。 **如需詳細資訊，請參閱線上說明。**
 
-**此函式或變數可能不安全。請考慮使用** *safe_version* **改。若要停用已被取代，請使用\_CRT\_SECURE\_NO\_警告。如需詳細資料，請參閱線上說明。**
+Microsoft 已將 CRT 中的某些 POSIX 函式重新命名為符合實作為定義之全域函式名稱的 C99 和 c + + 03 規則。 只有名稱已被取代，而不是函式本身。 在大部分情況下，會將前置底線新增至 POSIX 函數名稱，以建立符合標準的名稱。 編譯器會發出原始函式名稱的取代警告，並建議慣用名稱。
 
-Microsoft 已取代某些 CRT 與C++標準程式庫函式和全域變數，以更安全的版本。 在大部分情況下，取消核取的讀取或寫入存取權可能會導致嚴重的安全性問題的緩衝區，可讓已被取代的函式。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。
+若要修正此問題，我們通常建議您變更程式碼，改為使用建議的函數名稱。 不過，更新的名稱是 Microsoft 專有的。 如果您因為可攜性的緣故，而需要使用現有的函式名稱，可以關閉這些警告。 在程式庫中，POSIX 函式仍會在其原始名稱底下提供。
 
-若要修正此問題，我們建議您使用函式或變數*safe_version*改。 如果您已經確認它並不適用緩衝區覆寫，或 overread 出現在您的程式碼，而且您無法變更的程式碼可攜性的理由，您可以關閉此警告。
+若要關閉這些函式的取代警告，請定義預處理器宏 **\_CRT\_NONSTDC\_不\_警告**。 您可以在命令列中包含選項 `/D_CRT_NONSTDC_NO_WARNINGS`來定義此宏。
 
-若要關閉 CRT 中這些函式已被取代警告，請定義 **\_CRT\_SECURE\_無\_警告**。 若要關閉已被取代的全域變數的相關警告，請定義 **\_CRT\_SECURE\_無\_警告\_GLOBALS**。 如需有關這些已被取代的函式和全域變數的詳細資訊，請參閱 < [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)和[安全程式庫：C++標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)。
+## <a name="unsafe-crt-library-functions"></a>Unsafe CRT 程式庫函式
 
-### <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式
+**這個函數或變數可能不安全。請考慮**改用*安全版本* **。若要停用取代，請使用 \_CRT\_安全\_不\_的警告。 如需詳細資訊，請參閱線上說明。**
 
-__' std::__*function_name*__::\_未核取\_迭代器::\_Deprecate' 呼叫 std::__*function_name* **使用參數的可能不安全-此呼叫須由呼叫端檢查通過的值是否正確。若要停用這個警告，請使用 -D\_SCL\_SECURE\_NO\_警告。如何使用視覺效果，請參閱文件C++' Checked Iterators'**
+Microsoft 已淘汰部分 CRT C++和標準程式庫函式和 globals，因為有更安全的版本可供使用。 大部分被取代的函式允許對緩衝區進行未檢查的讀取或寫入存取。 其誤用可能會導致嚴重的安全性問題。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。
 
-這個警告會出現在偵錯組建因為某些C++標準程式庫範本函式不會檢查參數的正確性。 在大部分情況下，這是因為沒有足夠的資訊可供函式，以檢查容器範圍中，或可能不正確地使用迭代器，與函式。 這項警告有助於您識別這些函式會使用，因為它們可能是嚴重的安全性漏洞，在程式中的來源。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md)。
+若要修正此問題，建議您改用函數或變數*安全版本*。 有時候，基於可攜性或回溯相容性的理由，您不能這麼做。 請仔細確認您的程式碼中不可能發生緩衝區覆寫或 overread。 然後，您可以關閉警告。
 
-比方說，這個警告會出現在偵錯模式如果您傳遞的項目指標`std::copy`而不是純文字的陣列。 若要修正此問題，請使用適當宣告的陣列，讓程式庫可以檢查陣列範圍，並執行界限檢查。
+若要關閉 CRT 中這些函式的取代警告，請定義 **\_crt\_安全\_不\_的警告**。
+
+若要關閉有關已被取代之全域變數的警告，請定義 **\_CRT\_安全\_不會\_GLOBALS 的\_警告**。
+
+如需這些已被取代函式和 globals 的詳細資訊，請參閱 CRT 和[安全連結C++庫：標準程式庫](../../standard-library/safe-libraries-cpp-standard-library.md)[中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)。
+
+## <a name="unsafe-standard-library-functions"></a>不安全的標準程式庫函式
+
+__' std：：__ *function_name* __：：\_未核取\_iterator：：\_取代 ' 呼叫 std：：__ *function_name* **，其參數可能不安全-此呼叫會依賴呼叫端檢查傳遞的值是否正確。若要停用這個警告，請使用-D\_SCL\_安全\_沒有\_警告。請參閱如何使用視覺C++效果「已檢查的反覆運算器」的檔**
+
+此警告會出現在偵錯工具組建C++中，因為某些標準程式庫範本函式不會檢查參數是否正確。 這通常是因為沒有足夠的資訊可供函式用來檢查容器界限。 或，因為此函式可能會不正確地使用反覆運算器。 此警告可協助您識別這些函式，因為這些函式可能是您程式中嚴重安全性漏洞的來源。 如需詳細資訊，請參閱[已檢查的反覆運算](../../standard-library/checked-iterators.md)器。
+
+例如，如果您將專案指標傳遞給 `std::copy`，而不是純文字陣列，則此警告會在 Debug 模式中出現。 若要修正此問題，請使用適當宣告的陣列，讓程式庫可以檢查陣列範圍，並執行界限檢查。
 
 ```cpp
 // C4996_copyarray.cpp
@@ -104,7 +102,7 @@ void example(char const * const src) {
 }
 ```
 
-數個標準程式庫演算法已更新為 C + + 14 中有 「 雙重範圍 」 版本。 如果您使用雙重範圍版本時，第二個範圍會提供必要的繫結檢查：
+已更新數個標準程式庫演算法，使其具有 c + + 14 中的「雙重範圍」版本。 如果您使用雙重範圍版本，第二個範圍會提供必要的界限檢查：
 
 ```cpp
 // C4996_containers.cpp
@@ -125,7 +123,7 @@ bool example(
 }
 ```
 
-此範例示範數個標準程式庫可用來檢查迭代器使用方式的更多方式，當未核取的使用方式可能會造成危險：
+這個範例會示範數個使用標準程式庫來檢查反覆運算器使用方式的方法，以及未核取的使用方式可能有危險的情況：
 
 ```cpp
 // C4996_standard.cpp
@@ -210,11 +208,11 @@ int main()
 }
 ```
 
-如果您已經確認您的程式碼不能有緩衝區滿溢會觸發這個警告的標準程式庫函式中的錯誤，您可能想要關閉此警告。 若要關閉這些函式的警告，請定義 **\_SCL\_SECURE\_無\_警告**。
+如果您已確認您的程式碼不能有緩衝區溢位錯誤，可以關閉此警告。 若要關閉這些函式的警告，請定義 **\_SCL\_安全\_不\_警告**。
 
-### <a name="checked-iterators-enabled"></a>啟用已檢查的迭代器
+## <a name="checked-iterators-enabled"></a>已啟用已檢查的反覆運算器
 
-如果您不要使用已檢查的迭代器，進行編譯時，也會發生 C4996`_ITERATOR_DEBUG_LEVEL`定義為 1 或 2。 它會設定為 2，根據預設，偵錯模式組建，並為零售組建的 0。 如需詳細資訊，請參閱 [Checked Iterators](../../standard-library/checked-iterators.md) 。
+當 `_ITERATOR_DEBUG_LEVEL` 定義為1或2時，如果您未使用已檢查的反覆運算器，也可能會發生 C4996。 根據預設，它會設定為2的「偵測模式組建」，而「零售組建」則設為0。 如需詳細資訊，請參閱[已檢查的反覆運算](../../standard-library/checked-iterators.md)器。
 
 ```cpp
 // C4996_checked.cpp
@@ -236,29 +234,29 @@ int main() {
 }
 ```
 
-### <a name="unsafe-mfc-or-atl-code"></a>不安全的 MFC 或 ATL 程式碼
+## <a name="unsafe-mfc-or-atl-code"></a>不安全的 MFC 或 ATL 程式碼
 
-如果您使用 MFC 或 ATL 函式已被取代，基於安全性理由，也可能會發生 C4996。
+如果您基於安全考慮使用已被取代的 MFC 或 ATL 函式，則可能會發生 C4996。
 
-若要修正此問題，我們強烈建議您變更您的程式碼，改為使用更新的函式。
+若要修正此問題，我們強烈建議您改為變更程式碼，改為使用更新過的功能。
 
-如需如何隱藏這些警告的詳細資訊，請參閱[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)。
+如需如何隱藏這些警告的相關資訊，請參閱[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)。
 
-### <a name="obsolete-crt-functions-and-variables"></a>已淘汰的 CRT 函式和變數
+## <a name="obsolete-crt-functions-and-variables"></a>過時的 CRT 函式和變數
 
-**此函式或變數已被較新的文件庫或作業系統功能取代。請考慮使用** *new_item* **改。如需詳細資料，請參閱線上說明。**
+**這個函數或變數已被較新的程式庫或作業系統功能取代。請考慮改為使用** *new_item* **。如需詳細資訊，請參閱線上說明。**
 
 某些程式庫函式與全域變數因為過時而被取代。 這些函式及變數可能會從後續版本的程式庫中移除。 編譯器會為這些函式發出已被取代的警告，並建議所應使用的函式。
 
-若要修正此問題，我們建議您變更程式碼以使用建議的函式或變數。
+若要修正此問題，建議您變更您的程式碼，以使用建議的函式或變數。
 
-若要關閉這些項目已被取代警告，請定義 **\_CRT\_過時\_無\_警告**。 如需詳細資訊，請參閱文件中所列之已被取代的函式或變數。
+若要關閉這些專案的取代警告，請定義 **\_CRT\_過時\_不\_警告**。 如需詳細資訊，請參閱文件中所列之已被取代的函式或變數。
 
-### <a name="marshalling-errors-in-clr-code"></a>CLR 程式碼中的封送處理錯誤
+## <a name="marshaling-errors-in-clr-code"></a>CLR 程式碼中的封送處理錯誤
 
-當您使用 CLR 封送處理程式庫時，也可能會發生 C4996。 在此情況下，C4996 是錯誤而非警告。 當您使用時，就會發生此錯誤[marshal_as](../../dotnet/marshal-as.md)需要兩個資料類型之間轉換[marshal_context 類別](../../dotnet/marshal-context-class.md)。 封送處理程式庫不支援轉換時，您也可以收到此錯誤。 如需封送處理程式庫的詳細資訊，請參閱 [Overview of Marshaling in C++](../../dotnet/overview-of-marshaling-in-cpp.md)。
+當您使用 CLR 封送處理程式庫時，也會發生 C4996。 在此情況下，C4996 會是錯誤，而非警告。 當您使用[marshal_as](../../dotnet/marshal-as.md)在需要[marshal_coNtext 類別](../../dotnet/marshal-context-class.md)的兩個資料類型之間進行轉換時，就會發生此錯誤。 當封送處理程式庫不支援轉換時，您也可能會收到這個錯誤。 如需封送處理程式庫的詳細資訊，請參閱[中C++的封送處理總覽](../../dotnet/overview-of-marshaling-in-cpp.md)。
 
-因為封送處理程式庫需要內容，才能從轉換這個範例會產生 C4996`System::String`至`const char *`。
+這個範例會產生 C4996，因為封送處理程式庫需要內容從 `System::String` 轉換成 `const char *`。
 
 ```cpp
 // C4996_Marshal.cpp
@@ -279,9 +277,9 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>範例：使用者已被取代的函式
+## <a name="example-user-defined-deprecated-function"></a>範例：使用者定義的已被取代函數
 
-警告的呼叫端，當您不再建議使用的特定函式時，您可以在自己的程式碼中使用已被取代的屬性。 在此範例中，使用函數的程式行及列上已被取代的函式宣告，會產生 C4996。
+當您不再建議使用特定函式時，可以在自己的程式碼中使用已被取代的屬性來警告呼叫端。 在此範例中，會在兩個位置產生 C4996：一個用於宣告已被取代函式的行，另一個用於使用函式的行。
 
 ```cpp
 // C4996.cpp
@@ -294,7 +292,8 @@ void func1(void) {
    printf_s("\nIn func1");
 }
 
-__declspec(deprecated) void func1(int) {
+[[deprecated]]
+void func1(int) {
    printf_s("\nIn func2");
 }
 

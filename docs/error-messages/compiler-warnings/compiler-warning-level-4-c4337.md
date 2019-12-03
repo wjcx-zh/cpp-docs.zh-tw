@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C4337
 ms.assetid: 70bc72d9-aac5-45cd-abd3-ebe42a05897b
-ms.openlocfilehash: 2bfa5f9b30fa0325df1c3655ded53ab0525449c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f86d03e30e2776a8dae4cf56032c45d0022ca01d
+ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400834"
+ms.lasthandoff: 12/02/2019
+ms.locfileid: "74683302"
 ---
 # <a name="compiler-warning-level-4-c4337"></a>編譯器警告 (層級 4) C4337
 
-自動匯入交互參考的型別程式庫 'typelib1' 中 'typelib2'
+已自動匯入 ' typelib2 ' 中的交互參考類型程式庫 ' typelib1 '
 
-Auto_search 屬性[#import 指示詞](../../preprocessor/hash-import-directive-cpp.md)造成隱含匯入類型程式庫。
+[#Import](../../preprocessor/hash-import-directive-cpp.md)指示詞的 auto_search 屬性會造成隱含地匯入類型程式庫。
 
-從下列兩個檔案 （編譯 midl.exe） 建立的磁碟上的指定兩個型別程式庫：
+從下列兩個檔案（以 midl 編譯）所建立的磁片上，指定了兩個類型程式庫：
 
 ```
 // C4337a.idl
@@ -38,7 +38,7 @@ library C4337aLib
 };
 ```
 
-然後第二個.idl 檔案
+然後是第二個 .idl 檔案，
 
 ```
 // C4337b.idl
@@ -58,9 +58,9 @@ library C4337bLib
 };
 ```
 
-下列範例會產生 C4337:
+下列範例會產生 C4337：
 
-```
+```cpp
 // C4337.cpp
 // compile with: /W4 /LD
 #import "c4337b.tlb" auto_search   // C4337

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccfc723a9d62b794fa657e399bd94549448490
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400080"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755287"
 ---
 # <a name="compiler-error-c3804"></a>編譯器錯誤 C3804
 
-'property_accessor': 存取子方法的屬性必須是靜態或所有非靜態
+' property_accessor '：屬性的存取子方法必須是全部都是靜態或所有非靜態的
 
-存取子函式定義時的重要屬性，可以是靜態或執行個體，但非兩者。
+定義非一般的屬性時，存取子函數可以是靜態或實例，但不能同時是兩者。
 
 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md) 。
 
@@ -25,7 +25,7 @@ ms.locfileid: "62400080"
 
 下列範例會產生 C3804。
 
-```
+```cpp
 // C3804.cpp
 // compile with: /c /clr
 ref struct A {

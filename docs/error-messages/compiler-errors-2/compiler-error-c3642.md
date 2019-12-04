@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3642
 ms.assetid: 429790c2-9614-4d85-b31c-687c8d8f83ff
-ms.openlocfilehash: d524c49075c400caa345dd26ed681734ea0cfb94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c3f9f05bf04c9a1c20fff7910836e7b50468a8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385612"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742453"
 ---
 # <a name="compiler-error-c3642"></a>編譯器錯誤 C3642
 
-' return_type/args ': 無法以 __clrcall 呼叫慣例，原生程式碼呼叫的函式
+' return_type/args '：無法從機器碼呼叫具有 __clrcall 呼叫慣例的函式
 
-標記為函式[__clrcall](../../cpp/clrcall.md)無法呼叫原生 (unmanaged) 程式碼的呼叫慣例。
+以[__clrcall](../../cpp/clrcall.md)呼叫慣例標記的函式，無法從原生（非受控）程式碼呼叫。
 
-*return_type/引數*是函式的名稱，或是類型`__clrcall`您嘗試呼叫的函式。  您透過函式指標呼叫時，會使用型別。
+*return_type/args*是函式的名稱，或是您嘗試呼叫之 `__clrcall` 函式的類型。  當您透過函式指標呼叫時，會使用類型。
 
-若要從原生的內容中呼叫 managed 函式，您可以新增的 「 包裝函式 」 函式會呼叫`__clrcall`函式。 或者，您可以使用 CLR 封送處理機制;請參閱[How to:函式指標使用 PInvoke 封送處理](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)如需詳細資訊。
+若要從原生內容呼叫 managed 函式，您可以加入將呼叫 `__clrcall` 函式的「包裝函式」函式。 或者，您可以使用 CLR 封送處理機制;如需詳細資訊，請參閱[如何：使用 PInvoke 封送](../../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)處理函式指標。
 
-下列範例會產生 C3642:
+下列範例會產生 C3642：
 
-```
+```cpp
 // C3642.cpp
 // compile with: /clr
 using namespace System;

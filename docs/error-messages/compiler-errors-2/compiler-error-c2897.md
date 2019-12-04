@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2897
 ms.assetid: a88349e2-823f-42a0-8660-0653b677afa4
-ms.openlocfilehash: 264ad52a10c6cf19d1105561f1140cf2d3e2f8e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1433faade0a41ad8b63a3b40cb5d02f724bde658
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378839"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760770"
 ---
 # <a name="compiler-error-c2897"></a>編譯器錯誤 C2897
 
-解構函式/完成項不可為函式樣板
+析構函數/完成項不能是函式樣板
 
-解構函式或完成項無法多載，因此不允許宣告解構函式做為範本 （這會定義一組的解構函式）。
+無法多載析構函數或完成項，因此不允許將析構函式宣告為範本（這會定義一組析構函數）。
 
-下列範例會產生 C2897:
+下列範例會產生 C2897：
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2897。
 
-```
+```cpp
 // C2897.cpp
 // compile with: /c
 class X {
@@ -38,7 +38,7 @@ public:
 
 下列範例會產生 C2897。
 
-```
+```cpp
 // C2897_b.cpp
 // compile with: /c /clr
 ref struct R2 {

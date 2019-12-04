@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2486
 ms.assetid: 436da349-6461-4e32-bfca-4f3e620108e2
-ms.openlocfilehash: 8d745c03530f331da83b45c765a2cb4bb7d76d8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75705bd8ecc850839e22fccbed1abf08687b3823
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364346"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743506"
 ---
 # <a name="compiler-error-c2486"></a>編譯器錯誤 C2486
 
-' __LOCAL_SIZE' 只能在具有 'naked' 屬性的函式
+' __LOCAL_SIZE ' 只允許用於具有 ' naked ' 屬性的函式
 
-在內嵌組件的函數名稱`__LOCAL_SIZE`會保留供函式宣告[naked](../../cpp/naked-cpp.md)屬性。
+在內嵌組解碼函式中，`__LOCAL_SIZE` 的名稱會保留給使用[naked](../../cpp/naked-cpp.md)屬性所宣告的函式。
 
-下列範例會產生 C2486:
+下列範例會產生 C2486：
 
-```
+```cpp
 // C2486.cpp
 // processor: x86
 void __declspec(naked) f1() {

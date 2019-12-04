@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2655
 ms.assetid: beaefa6e-51b3-4df9-9150-960f3fbf40e0
-ms.openlocfilehash: 094dabb5ad07796194ae391000ca1e9025602d93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbef9f00145c84a5c562915da966f2a49995c3ba
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161182"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756106"
 ---
 # <a name="compiler-error-c2655"></a>編譯器錯誤 C2655
 
-'identifier': 目前範圍中不合法的宣告或定義
+' identifier '：在目前的範圍中定義或重新宣告不合法
 
-識別項可以只在全域範圍內重新宣告。
+只能在全域範圍內重新宣告識別碼。
 
-下列範例會產生 C2655:
+下列範例會產生 C2655：
 
-```
+```cpp
 // C2655.cpp
 class A {};
 class B {

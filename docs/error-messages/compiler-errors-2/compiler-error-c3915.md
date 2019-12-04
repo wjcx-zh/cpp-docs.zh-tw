@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3915
 ms.assetid: 2b0a5e5f-3aec-4a4b-9157-233031817084
-ms.openlocfilehash: 85654e266c3157ab145e7ac7aab454a0d4f6c102
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fdcd3b7989d9030249133e6dc1d277aa1a9f44
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406440"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756275"
 ---
 # <a name="compiler-error-c3915"></a>編譯器錯誤 C3915
 
-'type' 中有任何預設索引屬性 （類別索引子）
+' type ' 沒有預設的索引屬性（類別索引子）
 
-類型沒有預設值，索引的屬性。
+型別沒有預設的索引屬性。
 
 如需詳細資訊，請參閱 [property](../../extensions/property-cpp-component-extensions.md)。
 
@@ -25,7 +25,7 @@ ms.locfileid: "62406440"
 
 下列範例會產生 C3915。
 
-```
+```cpp
 // C3915.cpp
 // compile with: /clr
 ref class X {
@@ -48,11 +48,11 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您嘗試使用預設索引子，其定義與所在的相同編譯，也會發生 C3915 <xref:System.Reflection.DefaultMemberAttribute>。
+如果您嘗試在以 <xref:System.Reflection.DefaultMemberAttribute>定義的相同編譯模組中使用預設索引子，也可能會發生 C3915。
 
 下列範例會產生 C3915。
 
-```
+```cpp
 // C3915_b.cpp
 // compile with: /clr
 using namespace System;

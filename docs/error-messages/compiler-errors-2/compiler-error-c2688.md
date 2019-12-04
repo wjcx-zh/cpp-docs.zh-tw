@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2688
 ms.assetid: 168c9e9d-8f65-4664-af86-db71d3e6ee46
-ms.openlocfilehash: 5355abc603726eb1bacb7a22fa1095bf2d81c538
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc871467e1e3fb23edc6231c3adb182f5e26c0d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266279"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760240"
 ---
 # <a name="compiler-error-c2688"></a>編譯器錯誤 C2688
 
-'C2::fgrv': covariant 應傳回具有多個或不支援 varargs 函式的虛擬繼承
+' C2：： fgrv '： varargs 函數不支援具有多個或虛擬繼承的協變數傳回
 
-在視覺效果不支援 covariant 傳回型別C++函式時包含變數引數。
+當函式包含可變引數時C++ ，Visual 不支援協建傳回類型。
 
-若要解決這個錯誤，請定義您的函式，使它們不使用變數引數或讓傳回的值相同的所有虛擬函式。
+若要解決這個錯誤，請定義您的函式，使其不使用變數引數，或讓所有虛擬函式的傳回值都相同。
 
-下列範例會產生 C2688:
+下列範例會產生 C2688：
 
-```
+```cpp
 // C2688.cpp
 struct G1 {};
 struct G2 {};

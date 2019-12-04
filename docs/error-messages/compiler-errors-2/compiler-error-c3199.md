@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3199
 ms.assetid: e7a478d3-115a-40a3-991b-c7454fd2e28e
-ms.openlocfilehash: 934e980149ad893e6799b0ab119a148fc5652fdc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f0ca98dc44a78adde378a0f80078ae30c590e11
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402784"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738813"
 ---
 # <a name="compiler-error-c3199"></a>編譯器錯誤 C3199
 
-無效的浮點 pragma 使用方式： 非精確模式不支援例外狀況
+使用浮點 pragma 無效：非精確模式不支援例外狀況
 
-[Float_control](../../preprocessor/float-control.md) pragma 用來指定浮點例外狀況模型下的[/fp](../../build/reference/fp-specify-floating-point-behavior.md)以外的設定 **/fp： 精確**。
+[Float_control](../../preprocessor/float-control.md) pragma 是用來指定[/fp 設定底下的浮點](../../build/reference/fp-specify-floating-point-behavior.md)例外狀況模型，而不是 **/fp：精確**。
 
-下列範例會產生 C3199:
+下列範例會產生 C3199：
 
-```
+```cpp
 // C3199.cpp
 // compile with: /fp:fast
 #pragma float_control(except, on)   // C3199

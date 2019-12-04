@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3246
 ms.assetid: ad85224a-e540-479b-a5eb-a3bc3964c30b
-ms.openlocfilehash: eb5ba268508922daf00adb49cf611c038db76343
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9396b3bc5eea5d15366fc94ffa308d78754c31e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173193"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754390"
 ---
 # <a name="compiler-error-c3246"></a>編譯器錯誤 C3246
 
@@ -21,7 +21,7 @@ ms.locfileid: "62173193"
 
 下列範例會產生 C3246：
 
-```
+```cpp
 // C3246_2.cpp
 // compile with: /clr /LD
 ref class X sealed {};

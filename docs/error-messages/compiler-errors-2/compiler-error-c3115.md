@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3115
 ms.assetid: 51726145-9782-4ec9-84b9-286f366d9cbd
-ms.openlocfilehash: e334836986548d4f854dd9a5760bd8315b769d03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c03361f08ffd54396d307ed8c075a327c576d49b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404087"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760735"
 ---
 # <a name="compiler-error-c3115"></a>編譯器錯誤 C3115
 
-'attribute': 'construct' 上不允許此屬性
+' attribute '：不允許在 ' 結構 ' 上使用這個屬性
 
-已套用到未預期的建構函式。  請參閱[屬性的用法](../../windows/attributes/attributes-by-usage.md)如需詳細資訊。
+屬性已套用至非預期的結構。  如需詳細資訊，請參閱[使用屬性](../../windows/attributes/attributes-by-usage.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3115。
 
-```
+```cpp
 // C3115.cpp
 // compile with: /c
 #include <unknwn.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2689
 ms.assetid: b5216fba-524d-4194-9168-26e9dc5210ce
-ms.openlocfilehash: fb9a45f775da582daa0fbe421f29b6e469a91197
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3b35d8f68087c9f10d7f2a5d219800fc7a9084a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266006"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760215"
 ---
 # <a name="compiler-error-c2689"></a>編譯器錯誤 C2689
 
-'function': 無法在本機的類別內定義的 friend 函式
+' function '：無法在區域類別內定義 friend 函式
 
-您可以宣告，但不是在本機的類別中定義 friend 函式。
+您可以宣告但不能在區域類別中定義 friend 函式。
 
-下列範例會產生 C2689:
+下列範例會產生 C2689：
 
-```
+```cpp
 // C2689.cpp
 // compile with: /c
 void g() {

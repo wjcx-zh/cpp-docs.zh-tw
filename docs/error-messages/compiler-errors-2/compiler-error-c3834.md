@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3834
 ms.assetid: 059e0dc4-300b-4e74-b6c2-41a57831fe2a
-ms.openlocfilehash: 9f2bb96beaac8ede75863084c8ebf8345c940f53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dac75ca5bea868823eba8e344fb4ec043fae1ad
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327505"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741530"
 ---
 # <a name="compiler-error-c3834"></a>編譯器錯誤 C3834
 
-明確轉換成 pin 的指標; 不合法改為使用固定的區域變數
+不合法的明確轉換為固定指標;請改用釘選的本機變數
 
-不允許明確轉換至固定的指標。
+不允許明確轉換為釘選的指標。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3834。
 
-```
+```cpp
 // C3834.cpp
 // compile with: /clr
 int main() {

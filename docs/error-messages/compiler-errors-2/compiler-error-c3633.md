@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3633
 ms.assetid: 7d65babf-2191-4d67-a69f-f5c4c2ddf946
-ms.openlocfilehash: 2d96a0e4f5f0b34c76f41058316c7f158f1a939d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f44c94cbb3c945406835816d8fc6ed7c39480eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742622"
 ---
 # <a name="compiler-error-c3633"></a>編譯器錯誤 C3633
 
-無法為受管理的 'type' 的成員定義 'member'
+無法將 ' member ' 定義為受控 ' type ' 的成員
 
-CLR 參考類別資料成員不可為非 POD + + 類型。  您可以只具現化 CLR 型別中的 POD 原生型別。  比方說，是 POD 類型不能包含複製建構函式或指派運算子。
+CLR 參考類別資料成員不可為非 POD C++類型。  您只能具現化 CLR 型別中的 POD 原生型別。  例如，POD 類型不能包含複製的函式或指派運算子。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3633。
 
-```
+```cpp
 // C3633.cpp
 // compile with: /clr /c
 #pragma warning( disable : 4368 )

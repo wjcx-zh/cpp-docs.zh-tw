@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2785
 ms.assetid: d8d13360-0d00-4815-8475-b49c7f0dc0f3
-ms.openlocfilehash: fcf2bbb01f2aac668ff52884a6ccfb36c66aa89d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6aff2e5c96e3c79fc748d8a95779d6a08647ab03
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395374"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739619"
 ---
 # <a name="compiler-error-c2785"></a>編譯器錯誤 C2785
 
-'declaration1' 和 'declaration2' 的傳回類型不同
+' 宣告 1> ' 和 ' 宣告 2> ' 有不同的傳回類型
 
-函式樣板的特製化的傳回型別不同於主要函式樣板的傳回型別。
+函式樣板特製化的傳回型別與主要函式範本的傳回型別不同。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 請檢查所有樣板的特製化函式的一致性。
+1. 檢查函式範本的所有特製化是否一致。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2785:
+下列範例會產生 C2785：
 
-```
+```cpp
 // C2785.cpp
 // compile with: /c
 template<class T> void f(T);

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bded618c481e59f60c5528510c757dec7226acc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187902"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759993"
 ---
 # <a name="compiler-error-c2348"></a>編譯器錯誤 C2348
 
-'type name': 不是 c-style 彙總，無法在內嵌 IDL 中匯出
+' type name '：不是 C 樣式的匯總，無法在內嵌的 IDL 中匯出
 
-要放置`struct`.idl 檔案中[匯出](../../windows/export.md)屬性，`struct`必須只包含資料。
+若要將 `struct` 放在含有[export](../../windows/export.md)屬性的 .idl 檔案中，`struct` 必須只包含資料。
 
-下列範例會產生 C2348:
+下列範例會產生 C2348：
 
-```
+```cpp
 // C2348.cpp
 // C2348 error expected
 [ module(name="SimpleMidlTest") ];

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2355
 ms.assetid: 0a947881-d61f-4f98-8409-32140f39500b
-ms.openlocfilehash: 80871a73a7c3b4ad04b475539015f85d21ae88b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e44501f7df05a8b277cd52107ff35c4c4d30578f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302640"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759941"
 ---
 # <a name="compiler-error-c2355"></a>編譯器錯誤 C2355
 
@@ -23,7 +23,7 @@ ms.locfileid: "62302640"
 
 下列範例會產生 C2355，並示範如何修正此問題：
 
-```
+```cpp
 // C2355.cpp
 // compile with: /c
 class MyClass {};

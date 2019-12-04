@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3072
 ms.assetid: cdd5cb6b-c478-4698-adfa-c40188d34a18
-ms.openlocfilehash: 2b76fa91d739e9cc89251aaf56aa9b196e62a68d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8fe0802a7529551fce1c0b7242c867db52d8842
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406726"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756756"
 ---
 # <a name="compiler-error-c3072"></a>編譯器錯誤 C3072
 
-運算子 'operator' 無法套用至 ref 類別的執行個體
+無法將運算子 ' operator ' 套用至 ref 類別的實例
 
-使用一元 '`operator` ' 運算子，將 ref 類別的執行個體轉換為控制代碼類型
+使用一元 '`operator` ' 運算子將 ref 類別的實例轉換為控制碼類型
 
-CLR 型別需要 CLR 運算子，not 原生 （或標準） 的運算子。  如需詳細資訊，請參閱 <<c0> [ 追蹤參考運算子](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
+CLR 類型需要 CLR 運算子，而不是原生（或標準）運算子。  如需詳細資訊，請參閱[追蹤參考運算子](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3072。
 
-```
+```cpp
 // C3072.cpp
 // compile with: /clr
 ref class R {};

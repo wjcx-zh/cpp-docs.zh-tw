@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
-ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29812563ef1d4d7f6612ea2516f2f6327e90e1b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161000"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760435"
 ---
 # <a name="compiler-error-c2707"></a>編譯器錯誤 C2707
 
-'identifier': 內建函式不正確的內容
+' identifier '：內建函式的錯誤內容
 
-結構化例外狀況處理的內建函式是在特定內容中無效：
+結構化例外狀況處理內建函式在特定內容中無效：
 
-- `_exception_code()` 外部例外狀況篩選條件或`__except`區塊
+- 在例外狀況篩選準則外 `_exception_code()` 或 `__except` 區塊
 
-- `_exception_info()` 外部例外狀況篩選條件
+- 在例外狀況篩選之外 `_exception_info()`
 
-- `_abnormal_termination()` 外部`__finally`區塊
+- 在 `__finally` 區塊外 `_abnormal_termination()`
 
-若要解決此錯誤，請確定例外狀況處理內建函式會放在適當的內容。
+若要解決此錯誤，請務必將例外狀況處理內建函式放在適當的內容中。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2707。
 
-```
+```cpp
 // C2707.cpp
 #include <windows.h>
 #include <stdio.h>

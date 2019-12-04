@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3530
 ms.assetid: 21be81ce-b699-4c74-81bc-80a0c34d2d5a
-ms.openlocfilehash: dd4368faaf323a75116128ec3a47666260436fce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3766eaa83457ba6cffaf8b1599983a065772911c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397415"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750139"
 ---
 # <a name="compiler-error-c3530"></a>編譯器錯誤 C3530
 
-'auto' 無法與任何其他類型規範結合
+' auto ' 無法與任何其他類型規範結合
 
-類型規範搭配`auto`關鍵字。
+類型規範會與 `auto` 關鍵字搭配使用。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 請勿使用型別規範中使用的變數宣告`auto`關鍵字。
+1. 請勿在使用 `auto` 關鍵字的變數宣告中使用類型規範。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3530，因為變數`x`同時與宣告`auto`關鍵字和類型`int`，因為此範例會使用編譯 **/zc: auto**。
+下列範例會產生 C3530，因為變數 `x` 是以 `auto` 關鍵字和類型 `int`來宣告，而且因為此範例是使用 **/zc： auto**所編譯。
 
-```
+```cpp
 // C3530.cpp
 // Compile with /Zc:auto
 int main()
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto 關鍵字](../../cpp/auto-keyword.md)

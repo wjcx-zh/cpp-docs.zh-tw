@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3270
 ms.assetid: 70e6e76b-7415-48f5-a61e-2ed50caf08e4
-ms.openlocfilehash: 91656ee893f2ad7b3f0c53cb157cd9faf129e4c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 52c4f8d320d3b6ac66e702d03346af0f84b664e1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366039"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754000"
 ---
 # <a name="compiler-error-c3270"></a>編譯器錯誤 C3270
 
 'field': FieldOffset 屬性只可以使用在 StructLayout(Explicit) 的內容中，在此情況下為必要項目
 
-欄位標記為**FieldOffset**，這只允許當**structlayout （explicit)** 作用中。
+欄位已標記為**FieldOffset**，只有在**StructLayout （Explicit）** 有效時才允許使用。
 
 下列範例會產生 C3270：
 
-```
+```cpp
 // C3270_2.cpp
 // compile with: /clr /c
 using namespace System::Runtime::InteropServices;

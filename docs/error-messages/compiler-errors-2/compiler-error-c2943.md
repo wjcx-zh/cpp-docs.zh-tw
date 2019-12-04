@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2943
 ms.assetid: ede6565e-d892-44c0-8eee-c69545f3be2e
-ms.openlocfilehash: 53340611ef92aac7c9bed30f364fed424fdfe140
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac704c06ac0e455cccdb2b035d0947ae9ec04bd5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366273"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755391"
 ---
 # <a name="compiler-error-c2943"></a>編譯器錯誤 C2943
 
@@ -21,7 +21,7 @@ ms.locfileid: "62366273"
 
 下列範例會產生 C2943：
 
-```
+```cpp
 // C2943.cpp
 // compile with: /c
 template<class T>

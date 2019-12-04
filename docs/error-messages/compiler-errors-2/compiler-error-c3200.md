@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3200
 ms.assetid: 44bb5e77-f0ec-421c-a732-b9ee7c0a3529
-ms.openlocfilehash: 7eb0c00f4f4c5c59766bf305acfef89e12a6cfb1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f6b514231bcda18404e891e0acbe457c8f95146
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402771"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738774"
 ---
 # <a name="compiler-error-c3200"></a>編譯器錯誤 C3200
 
-'template': 樣板參數 'parameter' 的無效樣板引數必須是類別樣板
+' template '：範本參數 ' parameter ' 的樣板引數無效，應為類別樣板
 
-您可以傳遞無效的引數至類別樣板。 類別樣板必須做為參數的範本。 在下列範例中，呼叫`Y<int, int> aY`會產生 C3200。 第一個參數必須是範本，例如`Y<X, int> aY`。
+您將不正確引數傳遞至類別樣板。 類別範本需要範本作為參數。 在下列範例中，呼叫 `Y<int, int> aY` 將會產生 C3200。 第一個參數必須是範本，例如 `Y<X, int> aY`。
 
-```
+```cpp
 // C3200.cpp
 template<typename T>
 class X

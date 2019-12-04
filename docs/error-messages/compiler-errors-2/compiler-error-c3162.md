@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3162
 ms.assetid: 0d4c4a24-1456-4191-b7d8-c38cb7b17c32
-ms.openlocfilehash: f522a2de77e03a7c5f8f8dc774d62744417344fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95cd2c4af614906da7ba2d1c4c5dd488059f970a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174285"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761799"
 ---
 # <a name="compiler-error-c3162"></a>編譯器錯誤 C3162
 
-'type': 具有解構函式的參考型別不能做為靜態資料成員 'member' 的類型
+' type '：具有析構函式的參考型別不能當做靜態資料成員 ' member ' 的類型使用
 
-Common language runtime 無法知道何時要執行的使用者定義解構函式，此類別亦包含靜態成員函式時。
+當類別同時包含靜態成員函式時，common language runtime 無法得知何時執行使用者定義的函數。
 
-除非明確地刪除物件，將永遠不會執行解構函式。
+除非明確刪除物件，否則永遠不會執行「析構函式」。
 
 如需詳細資訊，請參閱：
 
@@ -31,7 +31,7 @@ Common language runtime 無法知道何時要執行的使用者定義解構函�
 
 下列範例會產生 C3162。
 
-```
+```cpp
 // C3162.cpp
 // compile with: /clr /c
 ref struct A {

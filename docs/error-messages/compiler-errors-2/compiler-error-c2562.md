@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2562
 ms.assetid: 2c41e511-9952-4b98-9976-6b1523613e1b
-ms.openlocfilehash: c665c4ed82fefaf0ee724defb8c205f86fc06dd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78536fdc0c2a6a6e9c4842fdea6423037496b30b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228880"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755547"
 ---
 # <a name="compiler-error-c2562"></a>編譯器錯誤 C2562
 
-'identifier': 'void' 函式會傳回值
+' identifier '： ' void ' 函式傳回值
 
-此函式宣告為`void`但傳回的值。
+函式會宣告為 `void`，但會傳回值。
 
-此錯誤可能被因不正確的函式原型。
+此錯誤可能是由不正確的函數原型所造成。
 
-如果您指定的傳回型別函式宣告中，可能會修正此錯誤。
+如果您在函式宣告中指定傳回型別，就可以修正這個錯誤。
 
-下列範例會產生 C2562:
+下列範例會產生 C2562：
 
-```
+```cpp
 // C2562.cpp
 // compile with: /c
 void testfunc() {

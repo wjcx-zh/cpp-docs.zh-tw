@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - C2346
 ms.assetid: 246145be-5645-4cd6-867c-e3bc39e33dca
-ms.openlocfilehash: a6d75ca671e22203cb40ca18de21606834eeefa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fc2aeac02ecc3f29406c2288051ca6cd9d3a4923
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188087"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760006"
 ---
 # <a name="compiler-error-c2346"></a>編譯器錯誤 C2346
 
-'function' 無法編譯為原生： 原因
+' function ' 無法編譯為原生：原因
 
-編譯器無法編譯為 MSIL 函式。
+編譯器無法將函式編譯為 MSIL。
 
-如需詳細資訊，請參閱 < [managed、 unmanaged](../../preprocessor/managed-unmanaged.md)並[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。
+如需詳細資訊，請參閱[managed、非受控](../../preprocessor/managed-unmanaged.md)和[/Clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 無法編譯為 MSIL 的函式中移除的程式碼。
+1. 移除無法編譯為 MSIL 的函式中的程式碼。
 
-1. 其中一個不會編譯的模組 **/clr**，或將標記為使用非受控 pragma unmanaged 函式。
+1. 請不要使用 **/clr**編譯模組，或將函式標記為非受控 pragma。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2346。
 
-```
+```cpp
 // C2346.cpp
 // processor: x86
 // compile with: /clr

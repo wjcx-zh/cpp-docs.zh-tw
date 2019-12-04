@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3277
 ms.assetid: 8ac5f476-e30c-4879-92c6-f03cdbd74045
-ms.openlocfilehash: e49de69354d00babf8c6fa609e92153e88bf64c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30dea992ae2c59ddc932395de40e9b15f30b6a20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382108"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753805"
 ---
 # <a name="compiler-error-c3277"></a>編譯器錯誤 C3277
 
-無法在受管理的 'type' 定義非受控的列舉 'enum'
+無法在受控的 ' type ' 內部定義非受控列舉 ' enum '
 
-列舉型別在 managed 型別定義不正確。
+在 managed 類型中定義了不正確的列舉。
 
-下列範例會產生 C3277:
+下列範例會產生 C3277：
 
-```
+```cpp
 // C3277a.cpp
 // compile with: /clr
 ref class A

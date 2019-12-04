@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3116
 ms.assetid: 597463e1-a5cc-4ed3-a917-eae9a61d3312
-ms.openlocfilehash: 3f587bc677d64bda0fb5eea0b7ebc8d5761a2e75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0c8e7cab936171f89b33c90b4134a97c40b2c81
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741179"
 ---
 # <a name="compiler-error-c3116"></a>編譯器錯誤 C3116
 
-'儲存體 specifier': 介面方法的無效儲存類別
+' storage 規範 '：介面方法的儲存類別無效
 
-您可以使用`typedef`， `register`，或`static`為介面方法的儲存體類別。 在介面成員上不允許這些儲存體類別。
+您使用 `typedef`、`register`或 `static` 做為介面方法的儲存類別。 介面成員上不允許這些儲存類別。
 
-下列範例會產生 C3116:
+下列範例會產生 C3116：
 
-```
+```cpp
 // C3116.cpp
 __interface ImyInterface
 {

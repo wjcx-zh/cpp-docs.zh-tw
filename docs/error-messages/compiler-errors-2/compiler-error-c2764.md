@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2764
 ms.assetid: 3754f5af-e094-4425-be20-d0c9a9b5baec
-ms.openlocfilehash: ba16431fc71a0e594b77dcc6dab62ed6c49c9137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d318742a367487f3688717046a6a798c2add87a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257487"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759837"
 ---
 # <a name="compiler-error-c2764"></a>編譯器錯誤 C2764
 
-'param': 沒有使用或無法推算 'specialization' 的部分特製化中的範本參數
+' param '：樣板參數未在部分特製化「特製化」中使用或 deducible
 
-樣板參數不用於部分特製化。 這可讓部分特製化無法使用因為無法推算樣板參數。
+樣板參數不會在部分特製化中使用。 這使得部分特製化無法使用，因為無法推算樣板參數。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2764:
+下列範例會產生 C2764：
 
-```
+```cpp
 // C2764.cpp
 #include <stdio.h>
 template <class T1, class T2>

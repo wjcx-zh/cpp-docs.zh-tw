@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2660
 ms.assetid: 2e01a1db-4f00-4df6-a04d-cb6f70a6922b
-ms.openlocfilehash: 3f236f18faa92df660ed677df293373fe9f0800c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: febeb75cbde6738bd9079b7bd86f88c521c29e40
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360368"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756054"
 ---
 # <a name="compiler-error-c2660"></a>編譯器錯誤 C2660
 
-'function': 函式不接受數字的參數
+' function '：函數不接受數位參數
 
-函式會呼叫具有參數數目不正確。
+呼叫函式時所使用的參數數目不正確。
 
-如果您不小心呼叫 Windows API 函式，而不是相同名稱的 MFC 成員函式，會發生 「 C2660。 若要解決此問題：
+如果您不小心呼叫 Windows API 函式，而不是使用相同名稱的 MFC 成員函式，則會發生 C2660。 若要解決此問題：
 
 - 調整函式呼叫，以符合成員函式呼叫的格式。
 
-- 使用範圍解析運算子 (`::`) 告訴編譯器来搜尋的全域命名空間中的函數名稱。
+- 使用範圍解析運算子（`::`）來指示編譯器在全域命名空間中搜尋函數名稱。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 「 C2660。
+下列範例會產生 C2660。
 
-```
+```cpp
 // C2660.cpp
 void func( int, int ) {}
 
@@ -41,9 +41,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您嘗試直接呼叫 Dispose 方法的 managed 型別，也會發生 「 C2660。 如需詳細資訊，請參閱 <<c0> [ 解構函式和完成項](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)。 下列範例會產生 「 C2660。
+如果您嘗試直接呼叫 managed 類型的 Dispose 方法，也可能會發生 C2660。 如需詳細資訊，請參閱[析構函數和](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)完成項。 下列範例會產生 C2660。
 
-```
+```cpp
 // C2660_a.cpp
 // compile with: /clr
 using namespace System;
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果在衍生的類別會隱藏函式，會發生 「 C2660。
+如果衍生類別隱藏函式，就會發生 C2660。
 
-```
+```cpp
 // C2660b.cpp
 // C2660 expected
 #include <stdio.h>
@@ -94,9 +94,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您叫用的索引的屬性不正確，可能會發生 「 C2660。
+如果您不正確地叫用索引屬性，可能會發生 C2660。
 
-```
+```cpp
 // C2660c.cpp
 // compile with: /clr
 ref class X {
@@ -119,9 +119,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您叫用的索引的屬性不正確，可能會發生 「 C2660。
+如果您不正確地叫用索引屬性，可能會發生 C2660。
 
-```
+```cpp
 // C2660d.cpp
 // compile with: /clr
 ref class A{
@@ -142,9 +142,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-如果您在範本類別中，定義新的運算子，但在此新的運算子會建立的物件，其類型為封入類型以外，可能會發生 「 C2660。
+如果您在樣板類別中定義新的運算子，但新運算子所建立的物件類型不是封入類型，則可能會發生 C2660。
 
-```
+```cpp
 // C2660e.cpp
 // compile with: /c
 #include <malloc.h>

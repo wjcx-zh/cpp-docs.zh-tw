@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2679
 ms.assetid: 1a5f9d00-9190-4aa6-bc72-949f68ec136f
-ms.openlocfilehash: de5613c306eb12bc11d45e868f502ca04d0a62e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b9238493e7925f2786df2acb7ecad80eb6ca2eb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386820"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760318"
 ---
 # <a name="compiler-error-c2679"></a>編譯器錯誤 C2679
 
-二元 'operator': 找不到運算子後者會採用右方運算元類型 'type' （或沒有可接受的轉換）
+二元 ' operator '：找不到可接受類型 ' type ' 右運算元的運算子（或是沒有可接受的轉換）
 
 若要使用運算子，您必須針對指定類型進行多載，或針對已定義運算子的類型定義轉換。
 
-下列範例會產生 C2679:
+下列範例會產生 C2679：
 
-```
+```cpp
 // C2679.cpp
 class C {
 public:

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2628
 ms.assetid: 19a25e77-d5be-4107-88d5-0745b6281f98
-ms.openlocfilehash: 90df41ba8ae85e57e40848f8b50f4c1df7c7b541
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4198d6ff0552f5280904ed1fea5e185df1a9c804
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222919"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754715"
 ---
 # <a name="compiler-error-c2628"></a>編譯器錯誤 C2628
 
-'type1' 後面接著 'type2' 是不合法 (是否忘記 ';'？)
+' type1 ' 後面接著 ' type2 ' 不合法（您是否忘記了 '; '？）
 
-分號可能會遺失。
+可能遺漏分號。
 
-下列範例會產生 C2628:
+下列範例會產生 C2628：
 
-```
+```cpp
 // C2628.cpp
 class CMyClass {}
 int main(){}   // C2628 error
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C2628b.cpp
 class CMyClass {};
 int main(){}

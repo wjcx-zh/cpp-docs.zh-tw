@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3499
 ms.assetid: 6717de5c-ae0f-4024-bdf2-b5598009e7b6
-ms.openlocfilehash: 381e665745f79f6156350f66e412f0580a06f6fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e50aaeac4a9f02cf3e67c25a08afdc2df0f1c62f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381016"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738007"
 ---
 # <a name="compiler-error-c3499"></a>編譯器錯誤 C3499
 
@@ -19,7 +19,7 @@ ms.locfileid: "62381016"
 
 當 Lambda 運算式指定 `void` 為傳回類型卻傳回值時；或 Lambda 運算式包含一個以上的陳述式並傳回值，卻未指定其傳回類型時，編譯器會產生此錯誤。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 不要從 Lambda 運算式傳回值，或者，
 
@@ -31,7 +31,7 @@ ms.locfileid: "62381016"
 
 下列範例會產生 C3499，因為 Lambda 運算式的主體包含多個陳述式並傳回值，但 Lambda 運算式未指定傳回類型：
 
-```
+```cpp
 // C3499a.cpp
 
 int main()
@@ -44,7 +44,7 @@ int main()
 
 下列範例顯示 C3499 的兩種可能解決方式。 第一個解決方式是提供 Lambda 運算式的傳回類型。 第二個解決方式是將組成 Lambda 運算式主體的多個陳述式合併為單一陳述式。
 
-```
+```cpp
 // C3499b.cpp
 
 int main()
@@ -60,6 +60,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

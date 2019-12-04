@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C2632
 ms.assetid: b15a6b1b-42d2-4e1b-8660-e6bfde61052d
-ms.openlocfilehash: b92d44bcfd04d4de7b39c5bdab5ee146d9b6693b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f69d43bf50f5f13957e49d1e9ffa798a3db5a7b3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257630"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754689"
 ---
 # <a name="compiler-error-c2632"></a>編譯器錯誤 C2632
 
-'type1' 後面接著 'type2' 是不合法
+' type1 ' 後面接著 ' type2 ' 是不合法的
 
-如果遺漏之間兩個型別規範中的程式碼，就可能造成此錯誤。
+如果兩個類型規範之間的程式碼遺失，可能會導致此錯誤。
 
-下列範例會產生 C2632:
+下列範例會產生 C2632：
 
-```
+```cpp
 // C2632.cpp
 int float i;   // C2632
 ```
 
-也可因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而產生這個錯誤。 `bool` 現在是適當的型別。 在舊版中，`bool`的 typedef，以及您可以建立具有該名稱的識別碼。
+針對 Visual Studio .NET 2003 所做的編譯器一致性工作，也可能會產生此錯誤。 `bool` 現在是正確的類型。 在舊版中，`bool` 是 typedef，而您可以使用該名稱建立識別碼。
 
-下列範例會產生 C2632:
+下列範例會產生 C2632：
 
-```
+```cpp
 // C2632_2.cpp
 // compile with: /LD
 void f(int bool);   // C2632
 ```
 
-若要解決這個錯誤，以便的程式碼是在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效C++，重新命名識別項。
+若要解決此錯誤，讓程式碼在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++中都有效，請重新命名識別碼。

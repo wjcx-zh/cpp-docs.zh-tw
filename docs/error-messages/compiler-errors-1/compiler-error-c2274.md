@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2274
 ms.assetid: 8e874903-f499-45ef-8291-f821eee4cc1c
-ms.openlocfilehash: f2fcb75098f18ad113ba68959035b37d9cddd6e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd807dedb6c300860611d07212b8fc8952a90a65
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388852"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758667"
 ---
 # <a name="compiler-error-c2274"></a>編譯器錯誤 C2274
 
-'type': 當做的右邊不合法 '。 ' 運算子
+' type '： '. ' 運算子的右邊不合法
 
-類型會顯示為成員存取 （.） 運算子的右運算元。
+類型會顯示為成員存取（.）運算子的右運算元。
 
-此錯誤可能被因嘗試存取使用者定義型別轉換。 使用關鍵字`operator`之間的週期和`type`。
+這個錯誤可能是因為嘗試存取使用者定義的型別轉換所造成。 在期間和 `type`之間使用關鍵字 `operator`。
 
 下列範例會產生 C2286：
 
-```
+```cpp
 // C2274.cpp
 struct MyClass {
    operator int() {

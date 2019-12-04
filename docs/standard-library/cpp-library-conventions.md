@@ -11,12 +11,12 @@ helpviewer_keywords:
 - coding conventions, C++ Standard Library
 - naming conventions [C++], C++ library
 ms.assetid: bf41b79a-2d53-4f46-8d05-779358335146
-ms.openlocfilehash: 8747ef490c0997b1fa3fd5186618b7189fa00970
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d92636a7ed63e09396ff68749560cde9d1f8639c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450688"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755703"
 ---
 # <a name="c-library-conventions"></a>C++ 程式庫慣例
 
@@ -24,7 +24,7 @@ C++ 程式庫遵循的慣例大致與標準 C 程式庫相同，再加上幾個�
 
 在 C++ 程式庫中，實作宣告其類型和函式的方式具有特定層次：
 
-- 標準 C 程式庫中的函式名稱可能會有 extern #"C++" 或 extern "C" 連結。 包含適當的標準 C 標頭，而不是宣告程式庫的實體內嵌。
+- Standard C 程式庫中的函式名稱可能會有 externC++"" 或 Extern "C" 連結。 包含適當的標準 C 標頭，而不是宣告程式庫的實體內嵌。
 
 - 在程式庫類別中，成員函式名稱可能具有本文件所列以外的其他函式簽章。 您可以確定此處所述的函式呼叫具有預期的行為，但是卻無法確實採用程式庫成員函式的位址， 因為類型可能跟您所預期的不同。
 
@@ -48,7 +48,7 @@ C++ 程式庫遵循的慣例大致與標準 C 程式庫相同，再加上幾個�
 
 - 程式庫提供的函式 (包括可取代函式的預設版本) 最多可以擲回任何例外狀況規格中所列的這些例外狀況。 程式庫所提供的任何解構函式都不能擲回例外狀況。 標準 C 程式庫中的函式可能會傳播例外狀況 (例如當 `qsort` 呼叫會擲回例外狀況的比較函式時)，但卻不會擲回例外狀況。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫概觀](../standard-library/cpp-standard-library-overview.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

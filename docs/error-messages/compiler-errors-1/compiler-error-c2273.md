@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2273
 ms.assetid: 3c682c66-97bf-4a23-a22c-d9a26a92bf95
-ms.openlocfilehash: f2ed5c49a9f8243fd5c9c302caf2876493c26bc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cd46f7a8a0762fcae2bdec15b9b4be6384adb25
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388939"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758680"
 ---
 # <a name="compiler-error-c2273"></a>編譯器錯誤 C2273
 
-'type': 當做 '->' 運算子的右邊不合法
+' type '：不合法的 as '-> ' 運算子的右側
 
-類型會顯示為的右運算元`->`運算子。
+類型會顯示為 `->` 運算子的右運算元。
 
-此錯誤可能被因嘗試存取使用者定義型別轉換。 使用關鍵字`operator`之間]-> [和`type`。
+這個錯誤可能是因為嘗試存取使用者定義的型別轉換所造成。 在-> 和 `type`之間使用關鍵字 `operator`。
 
-下列範例會產生 C2273:
+下列範例會產生 C2273：
 
-```
+```cpp
 // C2273.cpp
 struct MyClass {
    operator int() {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2678
 ms.assetid: 1f0a4e26-b429-44f5-9f94-cb66441220c8
-ms.openlocfilehash: 9055210401e14eeb9fdb88266870ac8fe5cbd496
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 390752d5d34685afc8b5fc5401fd75585bb48dd0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395387"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760331"
 ---
 # <a name="compiler-error-c2678"></a>編譯器錯誤 C2678
 
@@ -25,7 +25,7 @@ ms.locfileid: "62395387"
 
 下列範例會產生 C2678，並示範如何修正此問題：
 
-```
+```cpp
 // C2678a.cpp
 // Compile by using: cl /EHsc /W4 C2678a.cpp
 struct Combo {
@@ -53,7 +53,7 @@ int main() {
 
 下列範例會產生 C2678，並示範如何修正此問題。
 
-```
+```cpp
 // C2678.cpp
 // compile with: /clr /c
 struct S { int _a; };

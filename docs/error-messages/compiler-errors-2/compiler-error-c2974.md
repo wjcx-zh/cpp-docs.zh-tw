@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2974
 ms.assetid: 1b444260-f2bf-48d7-ab1e-35573d8c4a0e
-ms.openlocfilehash: 2fa0fae07435f3ab63398b7b3f02f9c662e7b436
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb66a4f1edb40c107a094fea4e1ab61d74f0c7ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256565"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757653"
 ---
 # <a name="compiler-error-c2974"></a>編譯器錯誤 C2974
 
-無效的類型引數 'number'，預期的類型
+類型引數 ' number ' 無效，必須是類型
 
-泛型或樣板引數不符合泛型或樣板宣告。 型別應該會出現在角括號內。 檢查泛型或樣板定義，以找出正確的型別。
+泛型或樣板引數不符合泛型或樣板宣告。 類型應該會出現在角括弧內。 請檢查一般或範本定義，以尋找正確的類型。
 
-下列範例會產生 C2974:
+下列範例會產生 C2974：
 
-```
+```cpp
 // C2974.cpp
 // C2974 expected
 template <class T>
@@ -40,9 +40,9 @@ int main() {
 }
 ```
 
-使用泛型時，也會發生 C2974:
+使用泛型時，也會發生 C2974：
 
-```
+```cpp
 // C2974b.cpp
 // compile with: /clr
 // C2974 expected

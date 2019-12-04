@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3612
 ms.assetid: aa6e3a2b-4afa-481c-98c1-1b6d1f82f869
-ms.openlocfilehash: ab18381d3f263e3207662e1667ac5c835983412f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 499c31b0c02bd72695cd6118612609a70316f0ae
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344497"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755742"
 ---
 # <a name="compiler-error-c3612"></a>編譯器錯誤 C3612
 
-'type': 密封的類別不能為抽象
+' type '：密封的類別不能是抽象的
 
-使用所定義的型別`value`密封格式，根據預設，和類別是抽象的除非它會實作其基底的所有方法。 密封的抽象類別都可以是基底類別，也可以它具現化。
+根據預設，使用 `value` 所定義的類型會密封，而類別則是抽象的，除非它會執行其基底的所有方法。 密封的抽象類別不能是基類，也不能具現化。
 
-如需詳細資訊，請參閱 <<c0> [ 類別和結構](../../extensions/classes-and-structs-cpp-component-extensions.md)。
+如需詳細資訊，請參閱[類別與結構](../../extensions/classes-and-structs-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3612:
+下列範例會產生 C3612：
 
-```
+```cpp
 // C3612.cpp
 // compile with: /clr /c
 value struct V: public System::ICloneable {};   // C3612

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2743
 ms.assetid: 644cd444-21d2-471d-a176-f5f52c5a0b73
-ms.openlocfilehash: 03cd7c13e093be5073b3df7e7cf29dda870bc47a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d679ce0df0d43772a6c32aa8e00869ac1a4a082b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759642"
 ---
 # <a name="compiler-error-c2743"></a>編譯器錯誤 C2743
 
-'type': 無法攔截具有 __clrcall 解構函式或複製建構函式的原生型別
+' type '：無法使用 __clrcall 的析構函式或複製模式來攔截原生類型
 
-模組編譯 **/clr**嘗試攔截例外狀況的原生類型和類型的解構函式或複製建構函式會使用其中`__clrcall`呼叫慣例。
+以 **/clr**編譯的模組嘗試攔截原生類型的例外狀況，而此類型的析構函數或複製偵測器使用 `__clrcall` 呼叫慣例。
 
-編譯時 **/clr**，例外狀況處理會預期要有成員函式是原生型別[__cdecl](../../cpp/cdecl.md)而非[__clrcall](../../cpp/clrcall.md)。 搭配使用的成員函式的原生型別`__clrcall`無法攔截在編譯的模組中，呼叫慣例 **/clr**。
+以 **/clr**編譯時，例外狀況處理會預期原生類型中的成員函式會[__cdecl](../../cpp/cdecl.md) ，而不是[__clrcall](../../cpp/clrcall.md)。 具有使用 `__clrcall` 呼叫慣例之成員函式的原生類型，無法在使用 **/clr**編譯的模組中攔截。
 
 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。
 
@@ -27,7 +27,7 @@ ms.locfileid: "62228926"
 
 下列範例會產生 C2743。
 
-```
+```cpp
 // C2743.cpp
 // compile with: /clr
 public struct S {

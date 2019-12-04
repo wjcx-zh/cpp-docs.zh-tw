@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3852
 ms.assetid: 194e5c5e-0dfb-414e-86db-791c11eb610c
-ms.openlocfilehash: 4ad7718f4efbeb3b0bc481755fd239615ab796cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f264333d802967d0350caa8ab4ba4925ffe019af
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380925"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754871"
 ---
 # <a name="compiler-error-c3852"></a>編譯器錯誤 C3852
 
-'member' 具有類型 'type': 彙總初始化無法初始化這個成員
+' member ' 具有類型 ' type '：匯總初始化無法初始化這個成員
 
-您嘗試彙總的初始化過程中將無法在彙總初始化期間接收的預設值初始化的資料成員的預設初始化。
+嘗試將預設初始化做為匯總初始化的一部分，指派給無法在匯總初始化中接收預設初始化的資料成員。
 
-下列範例會產生 C3852:
+下列範例會產生 C3852：
 
-```
+```cpp
 // C3852.cpp
 struct S
 {

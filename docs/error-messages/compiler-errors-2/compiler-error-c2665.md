@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2665
 ms.assetid: a7f99b61-2eae-4f2b-ba75-ea68fd1e8312
-ms.openlocfilehash: 63817c4181edb942f43f41c24fb10278d14f397e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95ca5ea846f9cd45bdb1e9706ae377589d37a285
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386885"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756015"
 ---
 # <a name="compiler-error-c2665"></a>編譯器錯誤 C2665
 
-'function': 沒有任何數字 1 多載可以轉換參數數字 2，從類型 'type'
+' function '：無數位多載可以從類型 ' type ' 轉換參數數位2
 
-多載函式的參數無法轉換為要求的類型。  可能的解決方式：
+多載函式的參數無法轉換成所需的類型。  可能的解決方式：
 
 - 提供轉換運算子。
 
@@ -27,7 +27,7 @@ ms.locfileid: "62386885"
 
 下列範例會產生 C2665。
 
-```
+```cpp
 // C2665.cpp
 void func(short, char*){}
 void func(char*, char*){}

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2862
 ms.assetid: c04d8499-b799-48a1-9fb4-7902a0b0ac8e
-ms.openlocfilehash: a3e2dba20c5283d87b6e98c2f8c9aba83c2d3cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd14f310a00202dce73f091dee46a4605858b698
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227685"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755079"
 ---
 # <a name="compiler-error-c2862"></a>編譯器錯誤 C2862
 
-'interface': 介面只可以有 public 成員
+「介面」：介面只能有公用成員
 
-受保護，並可存取私用成員只能從其他成員函式。 這類成員是在介面中，沒有用，因為它可能會提供實作它的任何成員。
+受保護和私用成員只能從其他成員函式存取。 這類成員不會在介面中使用，因為它可能不會提供其任何成員的實作為。
 
-下列範例會產生 C2862:
+下列範例會產生 C2862：
 
-```
+```cpp
 // C2862.cpp
 // compile with: /c
 #include <unknwn.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3509
 ms.assetid: cc2db39a-2f98-4e40-b803-496e585494e6
-ms.openlocfilehash: e5e3c48581b5225bf1cf6777c9891c458034e11f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91bbdf67b49e5722491f562b5eced2c5af10837
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753740"
 ---
 # <a name="compiler-error-c3509"></a>編譯器錯誤 C3509
 
-'type': 無效的 Automation 傳回類型;當參數標示為 'retval'，傳回的型別必須是 'void'、 'HRESULT' 或 'SCODE'
+' type '：不正確 Automation 傳回類型;當參數標示為 ' retval ' 時，傳回類型必須是 ' void '、' HRESULT ' 或 ' SCODE '
 
-中的 COM 介面的方法必須傳回 void 或的 HRESULT。
+COM 介面中的方法必須傳回 void 或 HRESULT。
 
-下列範例會產生 C3509:
+下列範例會產生 C3509：
 
-```
+```cpp
 // C3509.cpp
 #define _ATL_DEBUG_QI
 

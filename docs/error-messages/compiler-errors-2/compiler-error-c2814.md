@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2814
 ms.assetid: 7d165136-a08b-4497-a76d-60a21bb19404
-ms.openlocfilehash: 6562e8a0968f83a0e7e968b538b4d94dc1047fa5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cc22afa29160ce50d658a4a8d4b2a56e5145527
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329552"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750854"
 ---
 # <a name="compiler-error-c2814"></a>編譯器錯誤 C2814
 
@@ -21,7 +21,7 @@ ms.locfileid: "62329552"
 
 原生類型不可以巢狀方式置於 CLR 或 WinRT 類型中。 下列範例會產生 C2814，並示範如何修正此問題。
 
-```
+```cpp
 // C2814.cpp
 // compile with: /clr /c
 ref class A {

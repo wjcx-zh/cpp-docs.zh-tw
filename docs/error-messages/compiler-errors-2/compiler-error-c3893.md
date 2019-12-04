@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3893
 ms.assetid: 90d52eae-6ef2-4db1-b7ad-92f9e8b140fb
-ms.openlocfilehash: 45a140d3fd5f510ee2434950ca3c4b47c0756d75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20c17eaa6555b5511ecbc930eacdb2ec92475b23
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385494"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749499"
 ---
 # <a name="compiler-error-c3893"></a>編譯器錯誤 C3893
 
-'var': initonly 資料成員的左值使用只允許出現在類別 'type_name' 的執行個體建構函式
+' var '： initonly 資料成員的左值使用只允許用於類別 ' type_name ' 的實例構造函式
 
-靜態[initonly](../../dotnet/initonly-cpp-cli.md)資料成員只能有靜態建構函式中取得其位址。
+靜態[initonly](../../dotnet/initonly-cpp-cli.md)資料成員只能在靜態的函式中取得其位址。
 
-執行個體 （非靜態） initonly 資料成員只能在執行個體 （非靜態） 建構函式中取得其位址。
+實例（非靜態） initonly 資料成員只能在實例（非靜態）的函式中取得其位址。
 
-下列範例會產生 C3893:
+下列範例會產生 C3893：
 
-```
+```cpp
 // C3893.cpp
 // compile with: /clr
 ref struct Y1 {

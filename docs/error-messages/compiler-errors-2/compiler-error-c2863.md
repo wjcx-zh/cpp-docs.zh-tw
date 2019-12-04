@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2863
 ms.assetid: 32561d67-a795-486b-b3b6-4b90a1acb176
-ms.openlocfilehash: c0ee0e2932ef0ce739e14fd29ddde31f7d665f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 127db2f3e7d334b684502587f9b330959063234e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227466"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755066"
 ---
 # <a name="compiler-error-c2863"></a>編譯器錯誤 C2863
 
-'interface': 介面不可以有 friend
+「介面」：介面不能有朋友
 
-不允許宣告之介面上的朋友。
+不允許在介面上宣告 friend。
 
-下列範例會產生 C2863:
+下列範例會產生 C2863：
 
-```
+```cpp
 // C2863.cpp
 // compile with: /c
 #include <unknwn.h>

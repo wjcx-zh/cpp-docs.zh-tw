@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3253
 ms.assetid: da40be26-0f78-4730-8727-ad11cddf8869
-ms.openlocfilehash: 5d161dfab8dff48a1ddd5a8a5036c0bb4d5549aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c895def372fd74f077725479112873020264371f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173245"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754260"
 ---
 # <a name="compiler-error-c3253"></a>編譯器錯誤 C3253
 
-'function': 明確覆寫發生錯誤
+' function '：明確覆寫時發生錯誤
 
-明確覆寫指定不正確。 例如，您無法指定覆寫，您也指定為 pure 的實作。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+明確的覆寫指定不正確。 例如，您無法為您也指定為 pure 的覆寫指定執行。 如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下列範例會產生 C3253:
+下列範例會產生 C3253：
 
-```
+```cpp
 // C3253.cpp
 // compile with: /clr
 public interface struct I {

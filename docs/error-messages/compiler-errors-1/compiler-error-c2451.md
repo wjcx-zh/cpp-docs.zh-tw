@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2451
 ms.assetid: a64c93a5-ab8d-4d39-ae57-9ee7ef803036
-ms.openlocfilehash: bd69861b42e14ae30b4d57658719e7a2ce3617ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c42f9349323b08a86b0f8bb9ff79e8f0da6ed77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208781"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744117"
 ---
 # <a name="compiler-error-c2451"></a>編譯器錯誤 C2451
 
-條件運算式 'type' 是類型的不合法
+類型 ' type ' 的條件運算式不合法
 
-條件運算式會評估為整數型別。
+條件運算式會評估為整數類型。
 
-下列範例會產生 C2451:
+下列範例會產生 C2451：
 
-```
+```cpp
 // C2451.cpp
 class B {};
 

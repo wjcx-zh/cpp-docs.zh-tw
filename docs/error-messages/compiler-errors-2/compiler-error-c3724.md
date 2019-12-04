@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3724
 ms.assetid: cab8aba7-14fc-406f-8cc6-32744c8f31c1
-ms.openlocfilehash: 126317d78785b14f5ef613ec0c83d3e50b825d60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b107137652c4efde43fdfe9c991240767eb5ced7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328155"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752973"
 ---
 # <a name="compiler-error-c3724"></a>編譯器錯誤 C3724
 
-必須 #include \<windows.h > 若要使用多執行緒模式使用事件
+必須 #include \<的 windows >，才能使用多執行緒處理事件
 
-如果您使用，則需要 windows.h 檔案多執行緒模式使用事件。 若要修正這個錯誤，請新增`#include <windows.h>`接收者所定義的事件來源和事件中檔案的頂端。
+如果您使用多執行緒處理事件，則需要 windows .h 檔案。 若要修正此錯誤，請將 `#include <windows.h>` 新增至檔案頂端，其中定義了事件來源和事件接收器。
 
-```
+```cpp
 // C3724.cpp
 // uncomment the following line to resolve
 // #include <windows.h>

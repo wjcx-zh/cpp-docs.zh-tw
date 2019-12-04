@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3483
 ms.assetid: 18b3a2c5-dfc9-4661-9653-08a5798474cf
-ms.openlocfilehash: acbe89b5183d0991fb8d4a571a9595d6f6bafc6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d6c1467575e7fae7d5e4862f36e733a68210f8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381344"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74743090"
 ---
 # <a name="compiler-error-c3483"></a>編譯器錯誤 C3483
 
@@ -19,7 +19,7 @@ ms.locfileid: "62381344"
 
 您已多次傳遞相同的變數給 Lambda 運算式的擷取清單。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 請從擷取清單移除變數的所有其他執行個體。
 
@@ -27,7 +27,7 @@ ms.locfileid: "62381344"
 
 下列範例會產生 C3483，因為 `n` 變數多次出現在 Lambda 運算式的擷取清單中：
 
-```
+```cpp
 // C3483.cpp
 
 int main()
@@ -37,6 +37,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

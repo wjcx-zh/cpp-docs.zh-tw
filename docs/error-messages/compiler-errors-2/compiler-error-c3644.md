@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3644
 ms.assetid: 2e3f6c41-3ec5-4a01-82bc-f11b61ebe68e
-ms.openlocfilehash: 6d147d6a5955208bbca1ccf9a2f2bcfe3f485b4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b89ecc1e370edfb4d1365b3c7a7c42b29d5f1c6c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385617"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757848"
 ---
 # <a name="compiler-error-c3644"></a>編譯器錯誤 C3644
 
-'function': 無法編譯產生 managed 程式碼的函式
+' function '：無法編譯函數來產生 managed 程式碼
 
-函式中的某些關鍵字將導致編譯成原生函式。
+函式中有一些關鍵字會導致函式編譯為原生。
 
-下列範例會產生 C3644:
+下列範例會產生 C3644：
 
-```
+```cpp
 // C3644.cpp
 // compile with: /clr
 // processor: x86

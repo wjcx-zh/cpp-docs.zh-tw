@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3533
 ms.assetid: a68b1ba5-466e-4190-a1a4-505ccfe548b7
-ms.openlocfilehash: 7a567e4396999f98d9e9740db0acf951c443d525
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce95bba417e9be3603f15376a0fd65a48f951a2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397376"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755638"
 ---
 # <a name="compiler-error-c3533"></a>編譯器錯誤 C3533
 
-'type': 參數名稱不可包含 'auto' 的類型
+' type '：參數不能有包含 ' auto ' 的類型
 
-方法或樣板參數不能以宣告`auto`關鍵字如果預設值[/zc: auto](../../build/reference/zc-auto-deduce-variable-type.md)編譯器選項處於作用中。
+如果預設的[/zc： auto](../../build/reference/zc-auto-deduce-variable-type.md)編譯器選項生效，則無法使用 `auto` 關鍵字來宣告方法或範本參數。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 移除`auto`從參數宣告的關鍵字。
+1. 請從參數宣告中移除 `auto` 關鍵字。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3533，因為它會宣告的函式參數`auto`關鍵字，它會使用編譯 **/zc: auto**。
+下列範例會產生 C3533，因為它會宣告具有 `auto` 關鍵字的函式參數，並使用 **/zc： auto**進行編譯。
 
-```
+```cpp
 // C3533a.cpp
 // Compile with /Zc:auto
 void f(auto j) {} // C3533
@@ -35,15 +35,15 @@ void f(auto j) {} // C3533
 
 ## <a name="example"></a>範例
 
-下列範例會產生以 C + + 14 模式 C3533 因為它會宣告與樣板參數`auto`關鍵字，它會使用編譯 **/zc: auto**。（在 c++17 中，這是有效的定義，具有單一的非類型範本參數的類型推算的類別範本。）
+下列範例會在 c + + 14 模式中產生 C3533，因為它會宣告具有 `auto` 關鍵字的樣板參數，並使用 **/zc： auto**進行編譯。（在 c + + 17 中，這是具有推斷類型的單一非類型樣板參數之類別樣板的有效定義）。
 
-```
+```cpp
 // C3533b.cpp
 // Compile with /Zc:auto
 template<auto T> class C {}; // C3533
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto 關鍵字](../../cpp/auto-keyword.md)<br/>
 [/Zc:auto (推算變數類型)](../../build/reference/zc-auto-deduce-variable-type.md)

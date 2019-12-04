@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
-ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78a42b264129ee365e664b1242c8aa58dd1244bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758472"
 ---
 # <a name="compiler-error-c3919"></a>編譯器錯誤 C3919
 
-'event_method': 函式必須有類型 'type'
+' event_method '：函式必須有類型 ' type '
 
-事件存取子方法宣告不正確。
+事件存取子方法未正確宣告。
 
-如需有關事件的詳細資訊，請參閱[事件](../../extensions/event-cpp-component-extensions.md)。
+如需事件的詳細資訊，請參閱[事件](../../extensions/event-cpp-component-extensions.md)。
 
-下列範例會產生 C3919:
+下列範例會產生 C3919：
 
-```
+```cpp
 // C3919.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3203
 ms.assetid: 6356770e-22c1-434c-91fe-f60b0aa23b91
-ms.openlocfilehash: c55160c855a6188a616f957acee43e409b751b62
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 1d0ed5ec717efecb9fbea4a9451836c0471522b6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447806"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738709"
 ---
 # <a name="compiler-error-c3203"></a>編譯器錯誤 C3203
 
@@ -19,9 +19,9 @@ ms.locfileid: "65447806"
 
 傳遞至類別樣板或泛型的引數無效。 類別樣板或泛型預期將類型做為參數。
 
-針對 Visual Studio 2005 所進行的編譯器一致性工作可能會導致此錯誤： 非特製化的類別樣板不能做為基底類別清單中的樣板引數。 若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。
+這項錯誤可能會因為針對 Visual Studio 2005 而完成的編譯器一致性工作而產生：無法使用非特製化類別範本作為基類清單中的樣板引數。 若要解決 C3203，必須在將它做為基底類別清單中的樣板參數時，將樣板類型參數明確加入至樣板類別名稱。
 
-```
+```cpp
 // C3203.cpp
 template< typename T >
 struct X {
@@ -42,7 +42,7 @@ int main() {
 
 下列範例會產生 C3203，並示範如何修正此問題：
 
-```
+```cpp
 // C3203_b.cpp
 // compile with: /c
 template <class T>
@@ -67,7 +67,7 @@ typedef C3<S1<int> > MyC12;
 
 使用泛型時，也會發生 C3203：
 
-```
+```cpp
 // C3203_c.cpp
 // compile with: /clr /c
 generic <class T>

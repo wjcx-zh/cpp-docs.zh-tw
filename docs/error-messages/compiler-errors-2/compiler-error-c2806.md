@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2806
 ms.assetid: 7c9ff1f4-1590-4c47-991d-b1075a173b48
-ms.openlocfilehash: 1d37f5d1c6e253c01ae8a3b7640fb3ee4cf12534
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be991d26cb822221051316f3557b23a2b82e732d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281963"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760617"
 ---
 # <a name="compiler-error-c2806"></a>編譯器錯誤 C2806
 
-'operator operator' 具有太多的型式參數
+' operator operator ' 的型式參數太多
 
-多載的運算子的參數太多。
+多載運算子有太多參數。
 
-下列範例會產生 C2806:
+下列範例會產生 C2806：
 
-```
+```cpp
 // C2806.cpp
 // compile with: /c
 class X {

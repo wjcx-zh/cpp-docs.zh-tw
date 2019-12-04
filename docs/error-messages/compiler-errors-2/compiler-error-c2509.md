@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2509
 ms.assetid: 339c1fcd-ec4a-456c-9f18-a9b24d9921af
-ms.openlocfilehash: 21ca3bdcb156aaa654ae3d5d0c1c467a97129dcc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0322c1d6f80f26b81ac0e93b944a2f3277026ce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165004"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746808"
 ---
 # <a name="compiler-error-c2509"></a>編譯器錯誤 C2509
 
-'identifier': 'class' 中未宣告的成員函式
+' identifier '：成員函式未在 ' class ' 中宣告
 
-中指定的類別未宣告的函式。
+未在指定的類別中宣告函式。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2509。
 
-```
+```cpp
 // C2509.cpp
 // compile with: /c
 struct A {

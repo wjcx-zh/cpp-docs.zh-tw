@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3899
 ms.assetid: 14e07e4a-f7a7-4309-baaa-649d69e12e23
-ms.openlocfilehash: 26860ba0e8fd92f491ee389147605ba82cecf25c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 022bc1a37f7d9cfdb2c206592dd303a9c3c95080
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376025"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749109"
 ---
 # <a name="compiler-error-c3899"></a>編譯器錯誤 C3899
 
-'var': initonly 資料成員的左值使用不允許直接放在類別 'class' 中的平行區域內
+' var '：不允許直接在類別 ' class ' 的平列區域內使用 initonly 資料成員的左值
 
-[Initonly (C++/CLI)](../../dotnet/initonly-cpp-cli.md)不能在建構函式中的該部分內初始化資料成員[平行](../../parallel/openmp/reference/parallel.md)區域。  這是因為編譯器會內部的重新配置，該程式碼，使它不再有效的建構函式的一部分。
+[Initonly （C++/cli）](../../dotnet/initonly-cpp-cli.md)資料成員無法在[平行](../../parallel/openmp/reference/parallel.md)區域中的函式的該部分內初始化。  這是因為編譯器會執行該程式碼的內部重新配置，因此它實際上不再是此函式的一部分。
 
-若要解決，請初始化建構函式，但在平行區域以外的 initonly 資料成員。
+若要解決此問題，請在函式中初始化 initonly 資料成員，但在平列區域之外。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3899。
 
-```
+```cpp
 // C3899.cpp
 // compile with: /clr /openmp
 #include <omp.h>

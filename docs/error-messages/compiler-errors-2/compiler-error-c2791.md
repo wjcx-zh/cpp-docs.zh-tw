@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2791
 ms.assetid: 938ad1fb-75d9-4ce2-ad92-83d6249005b5
-ms.openlocfilehash: 66a111ea6fe2ca5acfbc473d19da62d9de67372a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d589094f117135474d1a8788867d2d571bbb5f5d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360160"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739541"
 ---
 # <a name="compiler-error-c2791"></a>編譯器錯誤 C2791
 
-不合法使用 'super': 'class' 沒有任何基底類別
+' super ' 的使用不合法： ' class ' 沒有任何基類
 
-關鍵字[super](../../cpp/super.md)並沒有任何基底類別的類別的成員函式的內容中使用。
+在沒有任何基類的類別的成員函式內容中，使用了關鍵字[super](../../cpp/super.md) 。
 
-下列範例會產生 C2791:
+下列範例會產生 C2791：
 
-```
+```cpp
 // C2791.cpp
 struct D {
    void mf() {

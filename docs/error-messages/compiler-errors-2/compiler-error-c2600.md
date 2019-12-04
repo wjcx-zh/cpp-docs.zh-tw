@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2600
 ms.assetid: cce11943-ea01-4bee-a7b0-b67d24ec6493
-ms.openlocfilehash: 4d9e94790c3f4b2fa0aaf36894f0b12c7134a9ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2d95460cadf03f9152599ef47ae703030326dd1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215662"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740737"
 ---
 # <a name="compiler-error-c2600"></a>編譯器錯誤 C2600
 
@@ -23,7 +23,7 @@ ms.locfileid: "62215662"
 
 下列範例會產生 C2600：
 
-```
+```cpp
 // C2600.cpp
 // compile with: /c
 class C {};

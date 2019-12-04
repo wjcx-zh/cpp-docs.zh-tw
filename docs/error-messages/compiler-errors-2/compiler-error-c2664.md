@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93bdac489dea0356ce3da3298cd8ed6bcb6f623c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360316"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756002"
 ---
 # <a name="compiler-error-c2664"></a>編譯器錯誤 C2664
 
@@ -31,13 +31,13 @@ ms.locfileid: "62360316"
 
 如果類別將成員隱藏在它的基底類別其中一個之內，也可能會產生 C2664。
 
-如需詳細資訊，請參閱[如何：將 system:: string 轉換為 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
+如需詳細資訊，請參閱[如何：將 System：： String 轉換成 wchar_t * 或 char\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2664，並示範如何修正此問題。
 
-```
+```cpp
 // C2664.cpp
 // C2664
 struct A {
@@ -61,7 +61,7 @@ int main() {
 
 此範例也會產生 C2664，並示範如何修正此問題。
 
-```
+```cpp
 // C2664b.cpp
 // C2664 expected
 struct A {
@@ -80,7 +80,7 @@ int main() {
 
 下一個範例將使用字串常值呼叫 `Test` 來示範 C2664，並示範如何修正此問題。 因為參數是 `szString` 參考，所以必須經由適當的建構函式來建立物件。 產生的結果是一個無法被用來初始化參考的暫存物件。
 
-```
+```cpp
 // C2664c.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -121,7 +121,7 @@ int main() {
 
 編譯器會強制執行套用 `const` 的 C++ 標準需求。 此範例會產生 C2664：
 
-```
+```cpp
 // C2664d.cpp
 // C2664 expected
 #include <windows.h>
@@ -146,7 +146,7 @@ int main()
 
 以下是一個會產生 C2664 的比較複雜狀況，包含其修正指示：
 
-```
+```cpp
 // C2664e.cpp
 // compile with: /EHsc
 // C2664 expected
@@ -189,9 +189,9 @@ int main( ) {
 
 ## <a name="example"></a>範例
 
-列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。 如需詳細資訊，請參閱 <<c0> [ 列舉類別](../../extensions/enum-class-cpp-component-extensions.md)。 下列範例會產生 C2664，並示範如何修正此問題。
+列舉變數未轉換為其基礎類型，而得以滿足函式呼叫。 如需詳細資訊，請參閱[enum class](../../extensions/enum-class-cpp-component-extensions.md)。 下列範例會產生 C2664，並示範如何修正此問題。
 
-```
+```cpp
 // C2664f.cpp
 // compile with: /clr
 using namespace System;
@@ -232,13 +232,13 @@ library myproj1 {
 }
 ```
 
-從 Visual C++ 6.0 將程式碼移植到以後版本時，也會使用 `wchar_t` 引發 C2664。 在 Visual C++ 6.0 (含) 以前版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此可隱含轉換為該類型。 在 Visual C++ 6.0 之後，`wchar_t` 是它本身的內建類型，如同 C++ 標準中所指定，而且不再能夠隱含轉換為 `unsigned short`。 請參閱[/zc: wchar_t （wchar_t 是原生型別）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+從 Visual C++ 6.0 將程式碼移植到以後版本時，也會使用 `wchar_t` 引發 C2664。 在 Visual C++ 6.0 (含) 以前版本中，`wchar_t` 是 `typedef` 的 `unsigned short`，因此可隱含轉換為該類型。 在 Visual C++ 6.0 之後，`wchar_t` 是它本身的內建類型，如同 C++ 標準中所指定，而且不再能夠隱含轉換為 `unsigned short`。 請參閱[/zc： wchar_t （Wchar_t 是原生類型）](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2664，並示範如何修正此問題。
 
-```
+```cpp
 // C2664h.cpp
 #import "C2664g.tlb"
 using namespace myproj1;
@@ -260,7 +260,7 @@ int main() {
 
 如果編譯器無法減少樣板引數，也會造成 C2664。
 
-```
+```cpp
 // C2664i.cpp
 #include <stdio.h>
 template <class T, int iType=0>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2914
 ms.assetid: fc6a0592-f53e-4f5a-88cb-780bbed4acf2
-ms.openlocfilehash: 2500736f799032aea71173931139404b4406a16a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed9e31d7d1de069ee708f8f482d26b37bc16833
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384344"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761054"
 ---
 # <a name="compiler-error-c2914"></a>編譯器錯誤 C2914
 
-'identifier': 無法推算類型引數，因為函式引數模稜兩可
+' identifier '：無法推算類型引數，因為函數引數不明確
 
-編譯器無法判斷哪一個多載函式來使用泛型或樣板引數。
+編譯器無法判斷要用於泛型或樣板引數的多載函數。
 
-下列範例會產生 C2914:
+下列範例會產生 C2914：
 
-```
+```cpp
 // C2914.cpp
 // compile with: /c
 void f(int);
@@ -32,9 +32,9 @@ void h() { g(f); }   // C2914
 // void h() { g<int>(f); }
 ```
 
-使用泛型時，也會發生 C2914。  下列範例會產生 C2914:
+使用泛型時，也會發生 C2914。  下列範例會產生 C2914：
 
-```
+```cpp
 // C2914b.cpp
 // compile with: /clr /c
 void f(int);

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea8ee926bb5c1bc7482e53ed48a310c870774d1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338437"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761466"
 ---
 # <a name="compiler-error-c3868"></a>編譯器錯誤 C3868
 
-'type': 泛型參數 'parameter' 的條件約束與宣告不同
+' type '：泛型參數 ' parameter ' 的條件約束與宣告上的限制式不同
 
-多個宣告都必須有相同的泛型條件約束。  如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
+多個宣告必須具有相同的泛型條件約束。  如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3868。
 
-```
+```cpp
 // C3868.cpp
 // compile with: /clr /c
 interface struct I1;

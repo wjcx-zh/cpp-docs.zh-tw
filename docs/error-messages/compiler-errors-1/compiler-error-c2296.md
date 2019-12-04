@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2296
 ms.assetid: 47d270f4-13ce-4c16-81e2-7d67c6c4a540
-ms.openlocfilehash: ab9c9450b6e906a47a66f6c28c42ca016c98381b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 020f046648488ca67923b7035acaa6c79ce495e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182674"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759070"
 ---
 # <a name="compiler-error-c2296"></a>編譯器錯誤 C2296
 
-'operator': 不正確的左的運算元
+' operator '：左運算元不正確
 
-搭配使用的左的運算元`operator`無效。
+與 `operator` 搭配使用的左運算元無效。
 
-例如，編譯器可能會看到在宣告您想要的函式呼叫。
+例如，編譯器可能會在您預期函式呼叫的位置看到宣告。
 
-下列範例會產生 C2296:
+下列範例會產生 C2296：
 
-```
+```cpp
 // C2296.cpp
 struct MyStruct {
    struct Help {

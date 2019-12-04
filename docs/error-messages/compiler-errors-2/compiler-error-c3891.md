@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3891
 ms.assetid: 6e1a9458-97f5-4580-bc0f-aa97a1bfd20d
-ms.openlocfilehash: 74b8802a165ab3265cc0f1c6a0b33b31d3db401d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b5ef8b837033a149455c040f748f479aa3f424d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62281556"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736395"
 ---
 # <a name="compiler-error-c3891"></a>編譯器錯誤 C3891
 
-'var': 常值資料成員不能做為左值
+' var '：常值資料成員不能用來做為左值
 
-A[常值](../../extensions/literal-cpp-component-extensions.md)變數是常數，而且無法變更其值，在初始化之後，在宣告中。
+[常](../../extensions/literal-cpp-component-extensions.md)值變數是 const，而且在宣告中初始化之後，其值不能變更。
 
-下列範例會產生 C3891:
+下列範例會產生 C3891：
 
-```
+```cpp
 // C3891.cpp
 // compile with: /clr
 ref struct Y1 {

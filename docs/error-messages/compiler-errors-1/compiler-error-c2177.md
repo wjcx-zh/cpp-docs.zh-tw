@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2177
 ms.assetid: 2a39a880-cddb-4d3e-a572-645a14c4c478
-ms.openlocfilehash: 9beb8454804401f8b39f9976fe62faf6e2659537
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b48118c854fa2ec77e93c5b7becd334bfe29849
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174584"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737240"
 ---
 # <a name="compiler-error-c2177"></a>編譯器錯誤 C2177
 
@@ -21,7 +21,7 @@ ms.locfileid: "62174584"
 
 下列範例會產生 C2177：
 
-```
+```cpp
 // C2177.cpp
 int main() {
    int a=18446744073709551616;   // C2177

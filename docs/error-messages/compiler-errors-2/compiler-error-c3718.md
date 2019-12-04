@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3718
 ms.assetid: 346b5205-c44d-49d3-b66a-96417d3d6986
-ms.openlocfilehash: 765791499370836f7c99ea7af69cb34bcf1e21fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0bcf784f5b522d05585d63a3b38a2befb5aa191
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328248"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753194"
 ---
 # <a name="compiler-error-c3718"></a>編譯器錯誤 C3718
 
-只接收類別成員函式的內容中呼叫 'event'
+只能在接收類別的成員函式內容中呼叫 ' event '
 
-`event`只可從接收的類別呼叫。
+只能從接收類別呼叫 `event`。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3718:
+下列範例會產生 C3718：
 
-```
+```cpp
 // C3718.cpp
 #define _ATL_ATTRIBUTES 1
 #include "atlbase.h"

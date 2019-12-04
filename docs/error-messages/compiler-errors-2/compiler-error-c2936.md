@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2936
 ms.assetid: 5d1ba0fc-0c78-4a37-a83b-1ef8527763be
-ms.openlocfilehash: 547690302661656cc5368f5969432de68ac91e3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d73f45440cf373368b70a11a7779f43587e73aca
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302952"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754650"
 ---
 # <a name="compiler-error-c2936"></a>編譯器錯誤 C2936
 
@@ -23,7 +23,7 @@ ms.locfileid: "62302952"
 
 下列範例會產生 C2936：
 
-```
+```cpp
 // C2936.cpp
 // compile with: /c
 template<class T> struct TC { };
@@ -36,7 +36,7 @@ int TC2;
 
 使用泛型時，也會發生 C2936：
 
-```
+```cpp
 // C2936b.cpp
 // compile with: /clr /c
 generic<class T>

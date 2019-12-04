@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3395
 ms.assetid: 26a9ebc9-ed97-47ce-b436-19aa2bcf6e50
-ms.openlocfilehash: 2e5234abcbe46e17035fd0b16e9816c879d86cfe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eaf63b42a6c44153a55d8aeb70f4f1174a5c895c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243046"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737539"
 ---
 # <a name="compiler-error-c3395"></a>編譯器錯誤 C3395
 
-'function': __declspec （dllexport） 無法套用至的函式\__clrcall 呼叫慣例
+' function '： __declspec （dllexport）無法套用至具有 \__clrcall 呼叫慣例的函式
 
-`__declspec(dllexport)` 並[__clrcall](../../cpp/clrcall.md)不相容。  如需詳細資訊，請參閱 < [dllexport、 dllimport](../../cpp/dllexport-dllimport.md)。
+`__declspec(dllexport)` 和[__clrcall](../../cpp/clrcall.md)不相容。  如需詳細資訊，請參閱 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)。
 
-下列範例會產生 C3395:
+下列範例會產生 C3395：
 
-```
+```cpp
 // C3395.cpp
 // compile with: /clr /c
 

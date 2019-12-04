@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2824
 ms.assetid: 5bd865f7-e0af-404e-80fe-e2b798b44a59
-ms.openlocfilehash: 226fc078312a214c561e80064474ee237245c0f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee012d7244079fd881210eb969f4844a2c6e85d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406934"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750633"
 ---
 # <a name="compiler-error-c2824"></a>編譯器錯誤 C2824
 
-必須是 'operator new' 的傳回類型 ' void *'
+' operator new ' 的傳回類型必須是 ' void * '
 
-使用非為基礎的指標，多載的運算子`new`必須傳回`void *`。
+使用非基底指標時，運算子 `new` 的多載必須傳回 `void *`。
 
-下列範例會產生 C2824:
+下列範例會產生 C2824：
 
-```
+```cpp
 // C2824.cpp
 // compile with: /c
 class   A {

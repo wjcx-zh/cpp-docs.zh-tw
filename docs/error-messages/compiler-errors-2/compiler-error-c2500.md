@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2500
 ms.assetid: 6bff8161-dc9a-48ca-91f1-fd2eefdbbc93
-ms.openlocfilehash: a5753fc99efcdb1064a21981c62faaba84d44189
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 152546fce8f3ee63f8b95595bff052f18cd4ebda
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165582"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746964"
 ---
 # <a name="compiler-error-c2500"></a>編譯器錯誤 C2500
 
-'identifier1': 已直接基底類別 'identifier2'。
+' identifier1 '： ' identifier2 ' 已經是直接基類
 
-類別或結構會出現在清單中的基底類別的一次以上。
+類別或結構在基類清單中出現一次以上。
 
-直接基底可以是其中一個基底清單中所述。 間接基底是其中一個基底清單中的類別的基底類別。
+「直接基底」是基底清單中所述的一個。 間接基底是基底清單中其中一個類別的基類。
 
-類別不能指定直接基底類別為一次以上。 類別可用來當做間接基底類別一次以上。
+無法將類別指定為直接基類多次。 類別可以做為間接基類多次使用。
 
-下列範例會產生 C2500:
+下列範例會產生 C2500：
 
-```
+```cpp
 // C2500.cpp
 // compile with: /c
 class A {};

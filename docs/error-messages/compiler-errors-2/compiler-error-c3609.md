@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3609
 ms.assetid: 801e7f79-4ac6-4f8f-955f-703cdf095d00
-ms.openlocfilehash: 27eba3df800c42cc53a7031e958a675c84255440
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1d3078614ff6818dd4185b3bd5ed2f49413db16f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344517"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755950"
 ---
 # <a name="compiler-error-c3609"></a>編譯器錯誤 C3609
 
 'member'：密封或最終函式必須為虛擬
 
-[密封](../../extensions/sealed-cpp-component-extensions.md)並[最終](../../cpp/final-specifier.md)關鍵字只允許在標記為類別、 結構或成員函式`virtual`。
+只有標記為 `virtual`的類別、結構或成員函式才允許[sealed](../../extensions/sealed-cpp-component-extensions.md)和[final](../../cpp/final-specifier.md)關鍵字。
 
 下列範例會產生 C3609：
 
-```
+```cpp
 // C3609.cpp
 // compile with: /clr /c
 ref class C {

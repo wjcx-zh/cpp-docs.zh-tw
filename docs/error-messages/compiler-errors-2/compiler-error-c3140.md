@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3140
 ms.assetid: 122f8943-fac3-4db8-a3a8-2c5d19233de6
-ms.openlocfilehash: e7dde3eb27c018502225ea3bc45e4bee7c699379
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc1e1828583b3ac8342c12a62e6ba4c1694b5824
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374959"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760565"
 ---
 # <a name="compiler-error-c3140"></a>編譯器錯誤 C3140
 
-在相同編譯單位中不可有多個 'module' 屬性
+相同的編譯單位中不能有多個 ' module ' 屬性
 
-[模組](../../windows/module-cpp.md)屬性只能定義一次每個專案。
+每個專案只能定義一個[模組](../../windows/module-cpp.md)屬性一次。
 
-下列範例會產生 C3140:
+下列範例會產生 C3140：
 
-```
+```cpp
 // C3140.cpp
 // compile with: /c
 [emitidl];

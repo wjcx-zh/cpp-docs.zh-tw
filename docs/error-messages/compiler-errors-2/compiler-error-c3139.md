@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3139
 ms.assetid: 95c92263-10ac-4ff3-b385-6312dd92adbc
-ms.openlocfilehash: f224be74a94e0e769e7c26bc99b4790d69f6b65b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 274f3cdb3425a8a0e1e282ca6e9ca79f70077233
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375518"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761247"
 ---
 # <a name="compiler-error-c3139"></a>編譯器錯誤 C3139
 
-'struct': 無法匯出 UDT 沒有成員
+' struct '：無法匯出沒有成員的 UDT
 
-您嘗試將套用[匯出](../../windows/export.md)屬性設定為空的 UDT （使用者定義型別）。 例如: 
+您嘗試將[export](../../windows/export.md)屬性套用至空的 UDT （使用者定義型別）。 例如：
 
-```
+```cpp
 // C3139.cpp
 #include "unknwn.h"
 [emitidl];

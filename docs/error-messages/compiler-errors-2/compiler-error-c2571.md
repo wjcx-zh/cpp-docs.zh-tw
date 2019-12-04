@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2571
 ms.assetid: c6522616-dee9-4d7d-9bf8-30a7e1deaadf
-ms.openlocfilehash: d7d4898e5f0b55c50a4c18cef053cc150394d7e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bd87f0732e1a632b8c86cc57fab1a0f104b2c77
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755495"
 ---
 # <a name="compiler-error-c2571"></a>編譯器錯誤 C2571
 
-'function': 虛擬函式不能在等位 'union'
+' function '：虛擬函式不能在聯集 ' union ' 中
 
-等位宣告具有虛擬函式。 您可以宣告只能在類別或結構中的虛擬函式。  可能的解決方式：
+Union 是以虛擬函數宣告。 您只能在類別或結構中宣告虛擬函式。  可能的解決方式：
 
-1. 將類別或結構的聯集。
+1. 將聯集變更為類別或結構。
 
-1. 讓非虛擬函式。
+1. 將函式設為非虛擬。
 
-下列範例會產生 C2571:
+下列範例會產生 C2571：
 
-```
+```cpp
 // C2571.cpp
 // compile with: /c
 union A {

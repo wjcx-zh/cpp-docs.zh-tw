@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3713
 ms.assetid: 75c6b9b6-955b-49bd-9bc8-ced88b496a1f
-ms.openlocfilehash: 8c8c3b5e6016c7f4af471a163463c91d478fea91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d78d1fb3028e8618035c1c6f7bb3eb0f65409dd2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328376"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753350"
 ---
 # <a name="compiler-error-c3713"></a>編譯器錯誤 C3713
 
-'method': 事件處理常式方法必須有相同的函式參數做為來源 'method'
+' method '：事件處理常式方法必須具有與來源 ' method ' 相同的函數參數
 
-您定義未使用相同的參數做為來源的事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法的來源事件方法的相同參數。
+您定義的事件處理常式方法，未使用與來源事件方法相同的參數。 若要修正這個錯誤，請為事件處理常式方法提供與來源事件方法相同的參數。
 
-下列範例會產生 C3713:
+下列範例會產生 C3713：
 
-```
+```cpp
 // C3713.cpp
 // compile with: /c
 [event_source(native)]

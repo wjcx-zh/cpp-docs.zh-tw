@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3507
 ms.assetid: 75f89767-f6f9-40f6-9820-81a49e09abdf
-ms.openlocfilehash: 731e84955192688a87c020b2b65a80ab5671cad6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 848536e0808d7d6a82ef387e0ca9c64b68ad0007
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363930"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753792"
 ---
 # <a name="compiler-error-c3507"></a>編譯器錯誤 C3507
 
-ProgID 可以有超過 39 個字元 'id';也不包含任何標點符號，除了 '。 ';也不是數字開頭
+ProgID 不能超過39個字元的 ' id ';除了 '. ' 以外，也不包含任何標點符號;也不是以數位開頭
 
-[Progid](../../windows/progid.md)屬性有一些限制可能的值。
+[Progid](../../windows/progid.md)屬性對於可接受的值有限制。
 
-下列範例會產生 C3507:
+下列範例會產生 C3507：
 
-```
+```cpp
 // C3507.cpp
 [module(name="x")];
 [

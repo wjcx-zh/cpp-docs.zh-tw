@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2657
 ms.assetid: f7cf29a9-684a-4605-9469-ecfee9ba4b03
-ms.openlocfilehash: 4e2816092b3c0c210ae2c544e9bf9a823a9c5d18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e060c2b9a38866a898a3c5ada9e595464050877e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360433"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756093"
 ---
 # <a name="compiler-error-c2657"></a>編譯器錯誤 C2657
 
-' 類別:: *' 陳述式的開頭找到 （您是否忘記指定類型？）
+在語句開頭找到 ' class：:* ' （您是否忘了指定類型？）
 
-行開頭的指標對成員識別項。
+行開頭為成員指標識別碼。
 
-此錯誤可能被因成員指標的宣告中遺漏類型規範。
+這個錯誤可能是因為成員指標的宣告中遺漏型別規範所造成。
 
-下列範例會產生 C2657:
+下列範例會產生 C2657：
 
-```
+```cpp
 // C2657.cpp
 class C {};
 int main() {

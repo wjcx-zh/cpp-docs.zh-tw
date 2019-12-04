@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2057
 ms.assetid: 038a99d6-1f5a-42fa-8449-03b4ff11ee0b
-ms.openlocfilehash: 6c8b171a878a8f370a024fa7374be6925695bd4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37dbc2f6ae0614215f0a3de20baa601b48db9450
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408702"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742440"
 ---
 # <a name="compiler-error-c2057"></a>編譯器錯誤 C2057
 
@@ -25,7 +25,7 @@ ms.locfileid: "62408702"
 
 下列範例會產生 C2057，並顯示如何修正此問題：
 
-```
+```cpp
 // C2057.cpp
 int i;
 int b[i];   // C2057 - value of i is unknown at compile time

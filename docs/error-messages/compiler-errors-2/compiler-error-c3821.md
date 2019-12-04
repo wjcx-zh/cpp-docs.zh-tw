@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25023277258d33ab77bde18f6cdfabc862f50a63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384227"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741738"
 ---
 # <a name="compiler-error-c3821"></a>編譯器錯誤 C3821
 
-'function': managed 的類型或函式不能用於 unmanaged 函式
+' function '： managed 類型或函數不能用在非受控函式中
 
-具有內嵌組譯碼的函式或[setjmp](../../c-runtime-library/reference/setjmp.md)不能包含實值型別或 managed 的類別。 若要修正這個錯誤，請移除內嵌組譯碼和`setjmp`或移除受管理的物件。
+具有內嵌元件或[setjmp](../../c-runtime-library/reference/setjmp.md)的函式不能包含實數值型別或 managed 類別。 若要修正這個錯誤，請移除內嵌元件，並 `setjmp` 或移除受管理的物件。
 
-如果您嘗試使用 vararg 函式中的自動儲存體，也會發生 C3821。  如需詳細資訊，請參閱[變數引數清單 （...）(C++/CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)並[C++堆疊語意，讓您參考型別](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
+如果您嘗試在 vararg 函式中使用自動儲存，也可能會發生 C3821。  如需詳細資訊，請參閱[Variable 引數清單（...）C++（/cli）](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)和[ C++參考型別的堆疊語義](../../dotnet/cpp-stack-semantics-for-reference-types.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3821。
 
-```
+```cpp
 // C3821a.cpp
 // compile with: /clr /c
 public ref struct R {};
@@ -38,7 +38,7 @@ void test1(...) {
 
 下列範例會產生 C3821。
 
-```
+```cpp
 // C3821b.cpp
 // compile with: /clr
 // processor: /x86

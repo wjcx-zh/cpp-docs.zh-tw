@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2635
 ms.assetid: 9deca2a8-2d61-42eb-9783-6578132ee3fb
-ms.openlocfilehash: 0c31bcc4062aec1d939c801f9b5ee420f2f4fcb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90bc30460cb578d1ed2812e40907a361eeb3b039
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367846"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748420"
 ---
 # <a name="compiler-error-c2635"></a>編譯器錯誤 C2635
 
-無法轉換 'identifier1 *' 至' identifier2\*'; 會隱含轉換，從虛擬基底類別
+無法將 ' identifier1 * ' 轉換成 ' identifier2\*';隱含從虛擬基類的轉換
 
-轉換需要轉換從`virtual`基底類別衍生的類別，這不允許。
+轉換需要從 `virtual` 基類轉換成衍生類別，這是不允許的。
 
-下列範例會產生 C2635:
+下列範例會產生 C2635：
 
-```
+```cpp
 // C2635.cpp
 class B {};
 class D : virtual public B {};

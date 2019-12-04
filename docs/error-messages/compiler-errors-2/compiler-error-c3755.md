@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3755
 ms.assetid: 9317b55e-a52e-4b87-b915-5a208d6eda38
-ms.openlocfilehash: 5d1260138bfdbc318817c336077eef326b62f8b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0150693ae84b45dc62c11cfdc59369eb25a819cd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386625"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757276"
 ---
 # <a name="compiler-error-c3755"></a>編譯器錯誤 C3755
 
-'delegate': 不可定義委派
+' delegate '：委派可能未定義
 
-A[委派 (C++元件擴充功能)](../../extensions/delegate-cpp-component-extensions.md)可以宣告但未定義。
+[委派（C++元件延伸模組）](../../extensions/delegate-cpp-component-extensions.md)可以宣告但不能定義。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3755。
 
-```
+```cpp
 // C3755.cpp
 // compile with: /clr /c
 delegate void MyDel() {};   // C3755
@@ -31,9 +31,9 @@ delegate void MyDel() {};   // C3755
 
 ## <a name="example"></a>範例
 
-如果您嘗試建立委派的範本，也會發生 C3755。 下列範例會產生 C3755。
+如果您嘗試建立委派範本，也可能會發生 C3755。 下列範例會產生 C3755。
 
-```
+```cpp
 // C3755_b.cpp
 // compile with: /clr /c
 ref struct R {

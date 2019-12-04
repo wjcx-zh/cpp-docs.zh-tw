@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: f00de0ce491d517da11f251b89ccb9a7ae66b77d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447278"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755911"
 ---
 # <a name="compiler-error-c2146"></a>編譯器錯誤 C2146
 
-語法錯誤： 遺漏 'token' 識別項 'identifier' 之前
+語法錯誤：識別碼 ' identifier ' 之前遺漏 ' token '
 
-編譯器預期`token`找到`identifier`改。  可能的原因：
+編譯器必須 `token`，並改為找到 `identifier`。  可能的原因:
 
-1. 拼字檢查或大小寫錯誤。
+1. 拼寫或大小寫錯誤。
 
-1. 在識別項的宣告中遺漏類型規範。
+1. 識別碼的宣告中遺漏類型規範。
 
-此錯誤可能被因印刷錯誤。 錯誤[C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)通常前面出現此錯誤。
+此錯誤可能是因為印刷錯誤所造成。 錯誤[C2065](../../error-messages/compiler-errors-1/compiler-error-c2065.md)通常會在此錯誤之前。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2146。
 
-```
+```cpp
 // C2146.cpp
 class CDeclaredClass {};
 
@@ -46,11 +46,11 @@ int main() {
 
 ## <a name="example"></a>範例
 
-也可因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而產生這個錯誤： 遺漏`typename`關鍵字。
+針對 Visual Studio .NET 2003 所做的編譯器一致性工作，也會產生此錯誤：遺漏 `typename` 關鍵字。
 
-下列範例是在 Visual Studio.NET 2002年中編譯，但在 Visual Studio.NET 2003年中將會失敗：
+下列範例會在 Visual Studio .NET 2002 中進行編譯，但在 Visual Studio .NET 2003 中將會失敗：
 
-```
+```cpp
 // C2146b.cpp
 // compile with: /c
 template <typename T>
@@ -71,13 +71,13 @@ typename X<T>::Y func() { }
 
 ## <a name="example"></a>範例
 
-您也會看到此錯誤，因為針對 Visual Studio.NET 2003年所進行的編譯器一致性處理而： 明確特製化不會再找出從主要範本的範本參數。
+您也會看到此錯誤的結果，是針對 Visual Studio .NET 2003 進行的編譯器一致性工作：明確特製化不再從主要範本尋找範本參數。
 
-使用`T`從主要範本中不允許明確的特製化。 在 Visual Studio.NET 2003年和 Visual Studio.NET 中是有效的程式碼，取代明確特製化的型別在特製化的範本參數的所有執行個體。
+明確特製化中不允許使用來自主要範本的 `T`。 若要讓程式碼在 Visual Studio .NET 2003 和 Visual Studio .NET 中有效，請將特製化中樣板參數的所有實例取代為明確特殊化的類型。
 
-下列範例是在 Visual Studio.NET 中編譯，但在 Visual Studio.NET 2003年中將會失敗：
+下列範例會在 Visual Studio .NET 中編譯，但在 Visual Studio .NET 2003 中會失敗：
 
-```
+```cpp
 // C2146_c.cpp
 // compile with: /c
 template <class T>

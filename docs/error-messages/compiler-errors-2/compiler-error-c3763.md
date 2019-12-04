@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3763
 ms.assetid: 58b1f079-cd1d-46e0-9431-ea18210106b7
-ms.openlocfilehash: e7dc73334cedda27b82f79b1d2b7a8fc38a8098d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db0f709bceca82d8d3af2c3220fb61d98c1ba8e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400262"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757250"
 ---
 # <a name="compiler-error-c3763"></a>編譯器錯誤 C3763
 
-'type': 'retval' 和 'out' 只能出現在資料指標類型
+' type '： ' retval ' 和 ' out ' 只能出現在資料指標類型上
 
-[放大](../../windows/out-cpp.md)或是[retval](../../windows/retval.md)屬性只可以出現在類型指標的參數。 請移除屬性或型別指標的參數。
+[Out](../../windows/out-cpp.md)或[retval](../../windows/retval.md)屬性只能出現在類型指標的參數上。 請移除屬性，或建立類型指標的參數。
 
-下列範例會產生 C3763:
+下列範例會產生 C3763：
 
-```
+```cpp
 // C3763.cpp
 #define _ATL_ATTRIBUTES 1
 #include <atlbase.h>

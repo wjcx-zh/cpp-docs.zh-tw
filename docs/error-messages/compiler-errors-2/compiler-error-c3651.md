@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
-ms.openlocfilehash: 6e773201e3bc9a4edb1ee77f1ddcd555e0ae0c0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9468b1e9193bfa52ed133f6fdfa398e02e40c4ef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388679"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756314"
 ---
 # <a name="compiler-error-c3651"></a>編譯器錯誤 C3651
 
-'member': 不能當成明確覆寫使用，必須是基底類別的成員
+' member '：不能當做明確覆寫使用，必須是基類的成員
 
-指定明確覆寫，但遭到覆寫的函式的類型，不是基底型別。
+已指定明確的覆寫，但正在覆寫的函式是在不是基底類型的類型中。
 
-如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下列範例會產生 C3651:
+下列範例會產生 C3651：
 
-```
+```cpp
 // C3651.cpp
 // compile with: /clr /c
 ref class C {

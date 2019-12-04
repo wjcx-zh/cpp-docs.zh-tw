@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C3747
 ms.assetid: a9a4be67-5d9c-4dcc-9ae9-baae46cbecde
-ms.openlocfilehash: 860a990e35b0d51dfc1316a11a2d2512eb40c273
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 761bb44f5097d998fd885fdb1c5caacf90db3642
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226792"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761864"
 ---
 # <a name="compiler-error-c3747"></a>編譯器錯誤 C3747
 
-遺漏預設型別參數： 參數的參數
+遺漏預設類型參數：參數參數
 
-具有預設值的泛型或樣板參數後面不能在參數清單中沒有預設值的參數。
+具有預設值的泛型或樣板參數不能依照沒有預設值的參數，在參數清單中遵循。
 
-下列範例會產生 C3747:
+下列範例會產生 C3747：
 
-```
+```cpp
 // C3747.cpp
 template <class T1 = int, class T2>   // C3747
 struct MyStruct {};
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C3747b.cpp
 // compile with: /c
 template <class T1, class T2 = int>

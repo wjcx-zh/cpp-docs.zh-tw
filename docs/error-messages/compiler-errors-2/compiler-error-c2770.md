@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2770
 ms.assetid: 100001b5-80b0-4971-8ff6-9023f443c926
-ms.openlocfilehash: 9397b52838f61449f0475a31d5bb4077dad7f587
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f6c82823dc619982ff148a83e2cc3316b42cfab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257397"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759772"
 ---
 # <a name="compiler-error-c2770"></a>編譯器錯誤 C2770
 
-'template' 的無效的明確 template_or_generic 引數
+' template ' 的明確 template_or_generic 引數無效
 
-使用明確樣板或泛型引數的函式範本候選項目會導致不允許函式型別。
+具有明確範本或泛型引數的函式樣板候選項目會產生不允許的函數類型。
 
-下列範例會產生 C2770:
+下列範例會產生 C2770：
 
-```
+```cpp
 // C2770.cpp
 #include <stdio.h>
 template <class T>

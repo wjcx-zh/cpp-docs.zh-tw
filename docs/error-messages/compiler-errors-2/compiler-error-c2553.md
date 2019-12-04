@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2553
 ms.assetid: 64bc1e9a-627f-4ce9-b7bc-dc911bdb9180
-ms.openlocfilehash: 11cb2b83d958f0c59d05034a716a022f00b326ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa3e97d576e994878ab5b080363c4c09b79f42ed
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353184"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756782"
 ---
 # <a name="compiler-error-c2553"></a>編譯器錯誤 C2553
 
-'base_function': 覆寫虛擬函式傳回型別不同於 'override_function'
+' base_function '：覆寫虛擬函式傳回類型與 ' override_function ' 不同
 
-在衍生類別中的函式嘗試覆寫虛擬函式在基底類別中，但在衍生的類別函式沒有相同的傳回類型的基底類別函式。  覆寫函式簽章必須符合要覆寫的函式的簽章。
+衍生類別中的函式嘗試覆寫基類中的虛擬函式，但衍生的類別函式沒有與基類函數相同的傳回類型。  覆寫函式簽章必須符合所要覆寫之函數的簽章。
 
-下列範例會產生 C2553:
+下列範例會產生 C2553：
 
-```
+```cpp
 // C2553.cpp
 // compile with: /clr /c
 ref struct C {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2815
 ms.assetid: d0256fd6-0721-4c99-b03c-52d96e77a613
-ms.openlocfilehash: ab6708e7ae0a56bd71adebad4fb42d6ea9abe116
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 579fc94f3b16056b5f26dd0b9ea16b5fc36fda22
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175403"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750711"
 ---
 # <a name="compiler-error-c2815"></a>編譯器錯誤 C2815
 
-'operator delete': 第一型式參數必須是 ' void *'，但使用 'param'
+' operator delete '：第一個型式參數必須是 ' void * '，但使用了 ' param '
 
-任何使用者定義[delete 運算子](../../standard-library/new-operators.md#op_delete)函式必須接受類型的第一個型式參數`void *`。
+任何使用者定義的[運算子 delete](../../standard-library/new-operators.md#op_delete)函數都必須採用類型 `void *`的第一個型式參數。
 
-下列範例會產生 C2815:
+下列範例會產生 C2815：
 
-```
+```cpp
 // C2815.cpp
 // compile with: /c
 class CMyClass {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2275
 ms.assetid: c1eafa71-48de-46e0-82f3-b575538ef205
-ms.openlocfilehash: debf8779014badab69ffca13f3795f7e004b292a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e929adaf90c32cd489975057791a2866b6ba3e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182778"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759733"
 ---
 # <a name="compiler-error-c2275"></a>編譯器錯誤 C2275
 
-'identifier': 不合法使用這個型別做為運算式
+' identifier '：使用此類型做為運算式的方式不合法
 
-運算式會使用`->`運算子搭配`typedef`識別項。
+運算式會使用 `->` 運算子搭配 `typedef` 識別碼。
 
-下列範例會產生 C2275:
+下列範例會產生 C2275：
 
-```
+```cpp
 // C2275.cpp
 typedef struct S {
     int mem;

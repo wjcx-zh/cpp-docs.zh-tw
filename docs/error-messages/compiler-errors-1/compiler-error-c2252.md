@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2252
 ms.assetid: fee74ab9-1997-4615-82fe-e6d1fe3aacd9
-ms.openlocfilehash: 9f24e6dfeb6544e5a6173fd844e3fe8b9ae8698e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1fe64292ce6463b3b628367ef0052208e74b24d3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758875"
 ---
 # <a name="compiler-error-c2252"></a>編譯器錯誤 C2252
 
-無法明確具現化目前的領域中的範本
+無法在目前的範圍中明確具現化範本
 
-編譯器偵測到範本的明確具現化的問題。  比方說，您無法明確具現化樣板函式中。
+編譯器偵測到明確具現化範本的問題。  例如，您無法在函式中明確具現化範本。
 
-下列範例會產生 C2252:
+下列範例會產生 C2252：
 
-```
+```cpp
 // C2252.cpp
 class A {
 public:

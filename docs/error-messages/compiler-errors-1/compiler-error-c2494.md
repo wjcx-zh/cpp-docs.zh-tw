@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2494
 ms.assetid: 5dfd07ab-351d-49c9-b54e-f0a104776ab8
-ms.openlocfilehash: 0a8be1dd5ce8d906bc4d0b1ce72295a57f68b6cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e46eff4ec2b1afdb309b3c4db89c9283e2fc8971
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361642"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757029"
 ---
 # <a name="compiler-error-c2494"></a>編譯器錯誤 C2494
 
-'keyword' 不能從篩選條件運算式內呼叫或 __finally/finally 區塊
+無法從篩選運算式或 __finally/finally 區塊中呼叫 ' 關鍵字 '
 
-您無法使用`keyword`在`__finally`或 finally 區塊。
+您不能在 `__finally` 或 finally 區塊中使用 `keyword`。
 
-下列範例會產生 C2494:
+下列範例會產生 C2494：
 
-```
+```cpp
 // C2494.cpp
 #include <malloc.h>
 
@@ -35,9 +35,9 @@ int main() {
 }
 ```
 
-使用時，也可能發生 C2494 **/clr**。
+使用 **/clr**時也可能會發生 C2494。
 
-```
+```cpp
 // C2494b.cpp
 // compile with: /clr
 #include <malloc.h>

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3741
 ms.assetid: ed311315-cc32-49c9-97fa-01b293d81526
-ms.openlocfilehash: d207c87c7b3f75ac939c155da127720562973160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2be5c0a4f85448f41f865bdde79d56998fbcf16a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376005"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752596"
 ---
 # <a name="compiler-error-c3741"></a>編譯器錯誤 C3741
 
-'class': 必須為 coclass 當 event_receiver 的 'layout_dependent' 參數 = true
+' class '：當 event_receiver = true 的 ' layout_dependent ' 參數時，必須是 coclass
 
-當`layout_dependent=true`for [event_receiver](../../windows/event-receiver.md)類別，則此類別也必須[coclass](../../windows/coclass.md)屬性。
+當 `layout_dependent=true` [event_receiver](../../windows/event-receiver.md)類別時，類別也必須有[coclass](../../windows/coclass.md)屬性。
 
 下列範例會產生 C3741
 
-```
+```cpp
 // C3741.cpp
 // compile with: /c
 // C3741 expected

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2392
 ms.assetid: 98ced473-6383-46ed-b79c-21857d65dcb2
-ms.openlocfilehash: 5977d9bf41d55ef6db8409e0187153fdbf91149e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15fa4a19cdd791ddb3636f30a636cc084bdc4a5f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393593"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745001"
 ---
 # <a name="compiler-error-c2392"></a>編譯器錯誤 C2392
 
-'method1': covariant 傳回類型不支援在 managed 或 WinRTtypes，否則 'method2' 將會被覆寫
+' method1 '： managed 或 WinRTtypes 中不支援協變數傳回類型，否則將會覆寫 ' method2 '
 
-Covariant 傳回型別時，不允許的 Windows 執行階段成員函式，或使用編譯[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項。
+當 Windows 執行階段成員函式，或使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項進行編譯時，不允許使用協變數傳回類型。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2392，並示範如何修正此問題。
 
-```
+```cpp
 // C2392.cpp
 // compile with: /clr
 public ref struct B {

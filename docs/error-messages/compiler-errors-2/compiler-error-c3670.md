@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b52f58f47027d88d9b0e150ebd2bf4588161553
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214942"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758121"
 ---
 # <a name="compiler-error-c3670"></a>編譯器錯誤 C3670
 
-'override': 無法覆寫無法存取的基底類別方法 'method'
+' override '：無法覆寫無法存取的基類方法 ' method '
 
-覆寫，才能進行其存取層級提供衍生類型中的函式。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+覆寫只會發生在其存取層級使其在衍生類型中可供使用的函數。 如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下列範例會產生 C3670:
+下列範例會產生 C3670：
 
-```
+```cpp
 // C3670.cpp
 // compile with: /clr /c
 public ref class C {

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2001
 ms.assetid: 0c3a7821-d8e5-4398-ab5a-4116d46e8dda
-ms.openlocfilehash: 03b54fe2373063c8c0f9905da93822928392998d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bf9bd322812764b2f63493d4b22b58d853a25fa
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209019"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756834"
 ---
 # <a name="compiler-error-c2001"></a>編譯器錯誤 C2001
 
-常數中的新行
+常數中的分行符號
 
-字串常數，無法繼續第二行，除非您執行下列作業：
+除非您執行下列動作，否則字串常數不能繼續在第二行：
 
-- 結尾加上反斜線的第一行。
+- 以反斜線結尾的第一行。
 
-- 關閉第一列中利用雙引號字串並在下一行的字串以開啟另一個雙引號。
+- 使用雙引號關閉第一行中的字串，然後在下一行以另一個雙引號開啟字串。
 
-結束 \n 的第一行是不夠的。
+以 \n 結尾的第一行並不足夠。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2001:
+下列範例會產生 C2001：
 
-```
+```cpp
 // C2001.cpp
 // C2001 expected
 #include <stdio.h>
@@ -45,9 +45,9 @@ int main()
 
 ## <a name="example"></a>範例
 
-行接續字元之後的下一行的開頭的空格會包含在字串常數。 沒有任何範例如上所示在字串常數內嵌新行字元。 您可以將內嵌新行字元，如下所示：
+在字串常數中包含行接續字元之後，下一行開頭的空格。 以上所示的範例都不會將分行符號內嵌至字串常數。 您可以內嵌分行符號，如下所示：
 
-```
+```cpp
 // C2001b.cpp
 #include <stdio.h>
 

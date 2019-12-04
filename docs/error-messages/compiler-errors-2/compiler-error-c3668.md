@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3668
 ms.assetid: 53a96698-bde4-4447-95b5-b5108291f60c
-ms.openlocfilehash: 770294eb58c09024ddfb4269357b77de7b7ea7d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e949a1251fcbebfd9e8fe47caf190e81b8b9f99
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215056"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758160"
 ---
 # <a name="compiler-error-c3668"></a>編譯器錯誤 C3668
 
-'method': 具有覆寫規範 'override' 方法不會覆寫任何基底類別方法
+' method '：具有覆寫規範 ' override ' 的方法並未覆寫任何基類方法
 
-函式，嘗試覆寫函式不存在。
+函數嘗試覆寫不存在的函式。
 
-如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3668。
 
-```
+```cpp
 // C3668.cpp
 // compile with: /c
 __interface I {

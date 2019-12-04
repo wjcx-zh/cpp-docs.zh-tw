@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2178
 ms.assetid: 79a14158-17f3-4221-bd06-9d675c49cef4
-ms.openlocfilehash: cd153bb5b331872bfe35b046d41612998bd0eff7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85cac4919c048c30a3ed1ff5573a3c14b77da0bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386001"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737188"
 ---
 # <a name="compiler-error-c2178"></a>編譯器錯誤 C2178
 
-'*識別碼*'不可以宣告使用'*規範*' 規範
+'*identifier*' 不能以 '*規範*' 規範宣告
 
-A`mutable`規範使用在宣告中，但在此內容中不允許規範。
+宣告中使用了 `mutable` 規範，但此內容中不允許指定規范。
 
-`mutable`規範可以只會套用至類別資料成員的名稱，但不可套用至宣告的名稱`const`或`static`，但不可套用至參考的成員。
+`mutable` 規範只能套用至類別資料成員的名稱，而且不能套用至宣告 `const` 或 `static`的名稱，而且也不能套用至參考成員。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何 C2178 可能會發生，以及如何修正此問題。
+下列範例會顯示 C2178 的發生方式，以及如何修正此問題。
 
-```
+```cpp
 // C2178.cpp
 // compile with: cl /c /W4 C2178.cpp
 

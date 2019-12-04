@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C1191
 ms.assetid: 2888c6c4-b4e6-449e-8ee0-7917f31086df
-ms.openlocfilehash: 89af73699120ee4d8af3cda746727d758ef6d22c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c6756dec29138af534278742d99c2f77109b1cc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228875"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747289"
 ---
 # <a name="fatal-error-c1191"></a>嚴重錯誤 C1191
 
-'dll' 只可在全域範圍匯入
+只能在全域範圍匯入 ' dll '
 
-將 mscorlib.dll 匯入使用 /clr 程式設計的程式指令不能出現在命名空間或函式，但必須出現在全域範圍。
+將 mscorlib.dll 匯入到使用/clr 程式設計之程式的指示不能出現在命名空間或函式中，但必須出現在全域範圍中。
 
-下列範例會產生 C1191:
+下列範例會產生 C1191：
 
-```
+```cpp
 // C1191.cpp
 // compile with: /clr
 namespace sample {
@@ -29,9 +29,9 @@ namespace sample {
 }
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C1191b.cpp
 // compile with: /clr /c
 #using <mscorlib.dll>

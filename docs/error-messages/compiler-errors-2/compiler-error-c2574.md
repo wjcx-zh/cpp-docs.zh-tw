@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2574
 ms.assetid: 3e1c5c18-ee8b-4dbb-bfc0-d3b8991af71b
-ms.openlocfilehash: 764ff36441c563edd538c41be5c23c12f80e2537
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0959d875065f7548706b07b032798a68bb4639b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300803"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755469"
 ---
 # <a name="compiler-error-c2574"></a>編譯器錯誤 C2574
 
-'解構函式': 不能宣告為 static
+' 析構函式 '：不可以宣告為 static
 
-解構函式或建構函式都不可以宣告`static`。
+`static`不能宣告析構函數和構造函式。
 
-下列範例會產生 C2574:
+下列範例會產生 C2574：
 
-```
+```cpp
 // C2574.cpp
 // compile with: /c
 class A {

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 148433f0d959985eb5a874f588f8cbf9d377e8b7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222462"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735953"
 ---
 # <a name="compiler-error-c3299"></a>編譯器錯誤 C3299
 
@@ -21,13 +21,13 @@ ms.locfileid: "62222462"
 
 將會繼承您正在覆寫的泛型函式上的條件約束子句。
 
-如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。</c0>
+如需詳細資訊，請參閱[泛型型別參數的限制式 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3299：
 
-```
+```cpp
 // C3299.cpp
 // compile with: /clr /c
 public ref struct R {

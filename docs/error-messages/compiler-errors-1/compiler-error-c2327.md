@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2327
 ms.assetid: 95278c95-d1f9-4487-ad27-53311f5e8112
-ms.openlocfilehash: abc9aa92c41947a2536e53108c1fb646792a8202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36222b8469f5a51254c6a6172e20384ebafc89ab
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300845"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74747770"
 ---
 # <a name="compiler-error-c2327"></a>編譯器錯誤 C2327
 
-'symbol': 不是型別名稱、 靜態或列舉值
+' symbol '：不是類型名稱、靜態或列舉值
 
-巢狀類別中的程式碼嘗試存取不是型別名稱、 靜態成員或列舉值的封入類別的成員。
+嵌套類別內的程式碼會嘗試存取不是型別名稱、靜態成員或列舉值之封入類別的成員。
 
-進行編譯時 **/clr**，造成 C2327 的常見原因是具有相同名稱的屬性類型的屬性。
+使用 **/clr**進行編譯時，C2327 的常見原因是與屬性類型具有相同名稱的屬性。
 
-下列範例會產生 C2327:
+下列範例會產生 C2327：
 
-```
+```cpp
 // C2327.cpp
 int x;
 class enclose {
@@ -40,9 +40,9 @@ public:
 };
 ```
 
-如果型別名稱隱藏的成員名稱，也會發生 C2327:
+如果類型的名稱是由成員的名稱所隱藏，也可能會發生 C2327：
 
-```
+```cpp
 // C2327b.cpp
 class X {};
 
@@ -54,9 +54,9 @@ class S {
 };
 ```
 
-在此情況下，您要完整指定的資料類型的參數，也可以引發 C2327:
+在這種情況下，C2327 也會引發，而您必須完整指定參數的資料類型：
 
-```
+```cpp
 // C2327c.cpp
 // compile with: /c
 struct A {};
@@ -69,9 +69,9 @@ struct B {
 };
 ```
 
-下列範例會產生 C2327:
+下列範例會產生 C2327：
 
-```
+```cpp
 // C2327d.cpp
 // compile with: /clr /c
 using namespace System;
@@ -103,9 +103,9 @@ namespace NA {
 }
 ```
 
-下列範例會示範 C2327，當屬性具有相同名稱的屬性類型：
+下列範例會顯示內容與屬性類型具有相同名稱時的 C2327：
 
-```
+```cpp
 // C2327f.cpp
 // compile with: /clr /c
 public value class Address {};

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2652
 ms.assetid: 6e3d1a90-a989-4088-8afd-dc82f6a2d66f
-ms.openlocfilehash: 9c9772052b690ad87de1d408c06478d82d48e724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cedee3f1e3289aaf0ea38d75b6c812b61f891435
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282107"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756119"
 ---
 # <a name="compiler-error-c2652"></a>編譯器錯誤 C2652
 
-'identifier': 不合法的複製建構函式： 第一個參數不得為 'identifier'
+' identifier '：不合法的複製函數：第一個參數不得為 ' identifier '
 
-中的複製建構函式的第一個參數具有相同的類別、 結構或等位為其定義的型別。 第一個參數可以是參考型別，但不是類型本身。
+複製函式中的第一個參數與定義它的類別、結構或聯集具有相同的類型。 第一個參數可以是類型的參考，而不是類型本身。
 
-下列範例會產生 C2651:
+下列範例會產生 C2651：
 
-```
+```cpp
 // C2652.cpp
 // compile with: /c
 class A {

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 7e3f52b2b69058549cb8aa3e14d2a4b4048fc4e4
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447195"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756847"
 ---
 # <a name="compiler-error-c3867"></a>編譯器錯誤 C3867
 
-'func': 函式呼叫遺漏引數清單;使用 '& l o c k' 建立成員的指標
+' func '：函式呼叫遺漏引數清單;使用 ' & func ' 建立成員的指標
 
 您嘗試取得成員函式的位址，而未使用其類別名稱和傳址運算子來限定成員函式。
 
-這項錯誤也可能因為針對 Visual Studio 2005 所進行的編譯器一致性處理而產生： 增強的指標對成員一致性。 Visual Studio 2005 之前編譯的程式碼現在會產生 C3867。
+這項錯誤也會因為針對 Visual Studio 2005 而完成的編譯器一致性工作所產生：增強的成員一致性。 在 Visual Studio 2005 之前編譯的程式碼現在會產生 C3867。
 
 ## <a name="example"></a>範例
 
@@ -27,7 +27,7 @@ ms.locfileid: "65447195"
 
 下列範例會產生 C3867，並示範如何修正此問題。
 
-```
+```cpp
 // C3867_1.cpp
 // compile with: /c
 struct Base {
@@ -49,7 +49,7 @@ void Derived::Bar() {
 
 下列範例會產生 C3867，並示範如何修正此問題。
 
-```
+```cpp
 // C3867_2.cpp
 #include<stdio.h>
 
@@ -81,7 +81,7 @@ int main() {
 
 下列範例會產生 C3867，並示範如何修正此問題。
 
-```
+```cpp
 // C3867_3.cpp
 class X {
 public:
@@ -100,7 +100,7 @@ int main() {
 
 下列範例會產生 C3867。
 
-```
+```cpp
 // C3867_4.cpp
 // compile with: /c
 class A {
@@ -124,7 +124,7 @@ public:
 
 下列範例會產生 C3867。
 
-```
+```cpp
 // C3867_5.cpp
 // compile with: /EHsc
 #include <iostream>

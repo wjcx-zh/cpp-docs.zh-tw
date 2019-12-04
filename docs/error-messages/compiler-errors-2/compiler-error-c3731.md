@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3731
 ms.assetid: 45f89fcd-464c-4bc8-8a42-edcb5416d26c
-ms.openlocfilehash: 5acc33869648f83cd44bc557128c685f521ddf88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9acf80eec0d36db64fa070d691533e7085754ac0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328064"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74752947"
 ---
 # <a name="compiler-error-c3731"></a>編譯器錯誤 C3731
 
-'function1' 不相容的事件和處理常式 'function2';事件來源和事件處理常式必須是相同的型別
+不相容的事件 ' function1 ' 和處理常式 ' function2 ';事件來源和事件處理常式必須是相同的類型
 
-事件來源和事件接收者必須有相同的類型 (例如 `native` 類型對 `com` 類型)。 若要修正這個錯誤，讓事件來源和事件處理常式比對的類型。
+事件來源和事件接收者必須有相同的類型 (例如 `native` 類型對 `com` 類型)。 若要修正這個錯誤，請讓事件來源的類型和事件處理常式相符。
 
-下列範例會產生 C3731:
+下列範例會產生 C3731：
 
-```
+```cpp
 // C3731.cpp
 // compile with: /clr
 #using <mscorlib.dll>

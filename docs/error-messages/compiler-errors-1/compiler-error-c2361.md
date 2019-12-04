@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2361
 ms.assetid: efbdaeb9-891c-4f7d-97da-89088a8413f3
-ms.openlocfilehash: ca03a42cbf746a1ef32d9c79c23de637f05b56fc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 747b85b57bee9e53f13a978254798a1dc268ef85
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364359"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759889"
 ---
 # <a name="compiler-error-c2361"></a>編譯器錯誤 C2361
 
-'identifier' 的初始化會被 'default' 標籤略過
+' identifier ' 的初始化已由 ' default ' 標籤略過
 
-初始化`identifier`中就可以略過`switch`陳述式。 除非宣告括在區塊中，您不能跳過的初始設定式的宣告。 (結尾除非它被宣告區塊內，變數是範圍內`switch`陳述式。)
+可以在 `switch` 語句中略過 `identifier` 的初始化。 除非宣告包含在區塊中，否則您無法跳過具有初始化運算式的宣告。 （除非在區塊內宣告，否則變數會在範圍內，直到 `switch` 語句結束為止）。
 
-下列範例會產生 C2361:
+下列範例會產生 C2361：
 
-```
+```cpp
 // C2361.cpp
 void func( void ) {
    int x;
@@ -35,9 +35,9 @@ void func( void ) {
 }
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C2361b.cpp
 // compile with: /c
 void func( void ) {

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3894
 ms.assetid: 6d5ac903-1dea-431d-8e3a-cebca4342983
-ms.openlocfilehash: 4d935e140d89cb5c3714450597677a7a02a245e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c08a7eca473a4ae043879b49266efec6b8afe7b1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385481"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74749434"
 ---
 # <a name="compiler-error-c3894"></a>編譯器錯誤 C3894
 
-'var': initonly 靜態資料成員的左值使用只允許在類別 'class' 的類別建構函式
+' var '： initonly 靜態資料成員的左值使用只允許用於類別 ' class ' 的類別函式
 
-靜態[initonly](../../dotnet/initonly-cpp-cli.md)資料成員只可用來當做左值在其宣告，或在靜態建構函式中的點。
+靜態[initonly](../../dotnet/initonly-cpp-cli.md)資料成員只能在宣告的點或靜態的函式中當做左值使用。
 
-執行個體 （非靜態） initonly 資料成員只可用來當做左值在其宣告，或執行個體 （非靜態） 建構函式中的點。
+實例（非靜態） initonly 資料成員只能用來做為宣告點的左值，或在實例（非靜態）的構造函式中。
 
-下列範例會產生 C3894:
+下列範例會產生 C3894：
 
-```
+```cpp
 // C3894.cpp
 // compile with: /clr
 ref struct Y1 {

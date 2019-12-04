@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3865
 ms.assetid: 9bc62bb0-4fb8-4856-a5cf-c7cb4029a596
-ms.openlocfilehash: 846657d3598e268d78ff3c39f2bfc901756ad370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960c795fe934433e4e3cf79e4c01c49d00205b9b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302016"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761487"
 ---
 # <a name="compiler-error-c3865"></a>編譯器錯誤 C3865
 
-'calling_convention': 僅適用於原生成員函式
+' calling_convention '：只能用在原生成員函式上
 
-其中一個是全域函式的函式或的受管理的成員函式上使用的呼叫慣例。 呼叫慣例僅適用於原生的 （未受管理） 成員函式。
+呼叫慣例是在全域函式或 managed 成員函式的函式上使用。 呼叫慣例只能用在原生（非受控）成員函式上。
 
-如需詳細資訊，請參閱 <<c0> [ 呼叫慣例](../../cpp/calling-conventions.md)。
+如需詳細資訊，請參閱[呼叫慣例](../../cpp/calling-conventions.md)。
 
-下列範例會產生 C3865:
+下列範例會產生 C3865：
 
-```
+```cpp
 // C3865.cpp
 // compile with: /clr
 // processor: x86

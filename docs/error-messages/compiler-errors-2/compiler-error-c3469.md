@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3469
 ms.assetid: e23b0e5c-c704-4e67-a868-bf02c2055d85
-ms.openlocfilehash: 1e935fb90c93d6f301226f3e9029c04929f179ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 546de5a65f6e4c2fd370ba781d01945df2bbfce5
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397428"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760539"
 ---
 # <a name="compiler-error-c3469"></a>編譯器錯誤 C3469
 
@@ -19,13 +19,13 @@ ms.locfileid: "62397428"
 
 您無法對泛型類別使用類型轉送。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>
+如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會建立元件。
 
-```
+```cpp
 // C3469.cpp
 // compile with: /clr /LD
 generic<typename T>
@@ -38,7 +38,7 @@ public ref class GR2 {};
 
 下列範例會產生 C3466。
 
-```
+```cpp
 // C3469_b.cpp
 // compile with: /clr /c
 #using "C3469.dll"

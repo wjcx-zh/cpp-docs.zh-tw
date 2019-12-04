@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2630
 ms.assetid: 7a655a9c-bab4-495b-97a3-a3f34cf5369a
-ms.openlocfilehash: db4108961c940afe3333dc726a97a8ce6ae639a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5636b17573cd89c5a32e328aa3800d71136b84fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222719"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754702"
 ---
 # <a name="compiler-error-c2630"></a>編譯器錯誤 C2630
 
-在應有的逗號分隔的清單中找到 ' symbol'
+在應該是以逗號分隔的清單中找到 ' symbol '
 
-符號會出現在內容中需要逗號。
+符號會出現在需要逗號的內容中。
 
-下列範例會產生 C2630:
+下列範例會產生 C2630：
 
-```
+```cpp
 // C2630.cpp
 // compile with: /c
 struct D {

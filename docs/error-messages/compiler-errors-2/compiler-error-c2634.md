@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2634
 ms.assetid: 58c8f2db-ac95-4a81-9355-ef3cfb0ba7b3
-ms.openlocfilehash: 99b6ce006d91c36d6bcd58e607d2bc8946ee6e55
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae53dc8f33920c84bed152cdd7d7bf34e01f165a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360394"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759447"
 ---
 # <a name="compiler-error-c2634"></a>編譯器錯誤 C2634
 
-' & class::member': 參考成員的指標不合法
+' & 類別：： member '：參考成員的指標不合法
 
-宣告參考成員的指標。
+參考成員的指標已宣告。
 
-下列範例會產生 C2634:
+下列範例會產生 C2634：
 
-```
+```cpp
 // C2634.cpp
 int mem;
 struct S {

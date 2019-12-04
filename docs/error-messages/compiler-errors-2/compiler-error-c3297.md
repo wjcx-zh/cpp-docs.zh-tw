@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3297
 ms.assetid: 2a718b4c-6cdb-4418-92c0-fc3a259431c4
-ms.openlocfilehash: e4661119680dff34dfaa43fb9ce71bf97150a8bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6fed01b0dcf50a657b6eb457ab8e546d0648beec
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222488"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760086"
 ---
 # <a name="compiler-error-c3297"></a>編譯器錯誤 C3297
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222488"
 
 值類別已密封。 如果條件約束是值類別，它絕對不會衍生其他的條件約束。
 
-如需詳細資訊，請參閱 <<c0> [ 泛型類型參數的條件約束 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。</c0>
+如需詳細資訊，請參閱[泛型型別參數的限制式 (C++/CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3297。
 
-```
+```cpp
 // C3297.cpp
 // compile with: /clr /c
 generic<class T, class U>

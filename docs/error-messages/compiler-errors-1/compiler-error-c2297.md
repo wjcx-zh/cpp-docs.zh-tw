@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2297
 ms.assetid: 65849fe5-17e1-4b7e-b50c-f508b05ddaa4
-ms.openlocfilehash: f2b1fb0590b8fd72b0365185b245d7b16566d11d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f07d522f7594d78df566b6a4be47ad0dadd4b3d
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182713"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759083"
 ---
 # <a name="compiler-error-c2297"></a>編譯器錯誤 C2297
 
-'operator': 不正確的右運算元
+' operator '：右運算元不正確
 
-搭配使用的右運算元`operator`無效。
+搭配 `operator` 使用的右運算元無效。
 
-例如，編譯器可能會看到在宣告您想要的函式呼叫。
+例如，編譯器可能會在您預期函式呼叫的位置看到宣告。
 
-下列範例會產生 C2297:
+下列範例會產生 C2297：
 
-```
+```cpp
 // C2297.cpp
 struct MyStruct {
    struct Help {

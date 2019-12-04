@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
-ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcbacf6ad3f3eda1b1f7448f60278bddfc30f4e6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222328"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756574"
 ---
 # <a name="compiler-error-c3464"></a>編譯器錯誤 C3464
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222328"
 
 類型轉送未作用於巢狀類型上。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>
+如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會建立元件。
 
-```
+```cpp
 // C3464.cpp
 // compile with: /LD /clr
 public ref class R {
@@ -38,7 +38,7 @@ public:
 
 下列範例會產生 C3464。
 
-```
+```cpp
 // C3464_b.cpp
 // compile with: /clr /c
 #using "C3464.dll"

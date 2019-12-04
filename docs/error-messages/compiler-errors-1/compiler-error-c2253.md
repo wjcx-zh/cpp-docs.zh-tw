@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2253
 ms.assetid: bd6445ae-b2c1-4669-9657-a8f4acf80b16
-ms.openlocfilehash: 847c37c6ae5edf14205d3d46ca624a572c8d6b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89acfd8a03dc0ee2dc25e14e0b3a63ab25151cc6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397554"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758849"
 ---
 # <a name="compiler-error-c2253"></a>編譯器錯誤 C2253
 
-'function': 純規範或抽象覆寫規範只適用於虛擬函式
+' function '：純規範或抽象覆寫規範只允許用於虛擬函式
 
-非虛擬函式指定為純`virtual`。
+非虛擬函數會指定為純 `virtual`。
 
-下列範例會產生 C2253:
+下列範例會產生 C2253：
 
-```
+```cpp
 // C2253.cpp
 // compile with: /c
 class A {
@@ -31,9 +31,9 @@ public:
 };
 ```
 
-下列範例會產生 C2253:
+下列範例會產生 C2253：
 
-```
+```cpp
 // C2253_2.cpp
 // compile with: /clr /c
 ref struct A {

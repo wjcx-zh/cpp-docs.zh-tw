@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3149
 ms.assetid: cf6e2616-2f06-46da-8a8a-d449cb481c51
-ms.openlocfilehash: 8238dcec821256dad8101cd7ad59b2d85882c218
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 263eb03b7a9f45458f8d8b586adc6f1cfc5805be
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345516"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745976"
 ---
 # <a name="compiler-error-c3149"></a>編譯器錯誤 C3149
 
-'type': 無法使用這個類型沒有最上層的 'char'
+' type '：無法在沒有最上層 ' char ' 的情況下使用此類型
 
-未正確指定的宣告。
+未正確指定宣告。
 
-比方說，您可能已定義在全域範圍的 CLR 型別，並嘗試建立類型的變數定義的一部分。 因為不允許 CLR 類型的全域變數，編譯器會產生 C3149。
+例如，您可能已在全域範圍中定義 CLR 類型，並嘗試建立該類型的變數做為定義的一部分。 因為不允許 CLR 類型的全域變數，所以編譯器會產生 C3149。
 
-若要解決這個錯誤，宣告式函式或類型定義內的 CLR 類型的變數。
+若要解決這個錯誤，請在函式或類型定義內宣告 CLR 類型的變數。
 
-下列範例會產生 C3149:
+下列範例會產生 C3149：
 
-```
+```cpp
 // C3149.cpp
 // compile with: /clr
 using namespace System;
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-下列範例會產生 C3149:
+下列範例會產生 C3149：
 
-```
+```cpp
 // C3149b.cpp
 // compile with: /clr /c
 delegate int MyDelegate(const int, int);

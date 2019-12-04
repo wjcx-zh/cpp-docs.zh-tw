@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2243
 ms.assetid: b90065bb-d251-4ba9-8b4c-280ee13fa9c0
-ms.openlocfilehash: ded5a3d459e4b5d1412998aadbaa385864f505a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a62b1c12b94735d0383697bf7a92d12d64b21f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388854"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757796"
 ---
 # <a name="compiler-error-c2243"></a>編譯器錯誤 C2243
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388854"
 
 下列範例會產生 C2243：
 
-```
+```cpp
 // C2243.cpp
 // compile with: /c
 class B {};

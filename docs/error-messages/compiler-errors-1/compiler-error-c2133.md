@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2133
 ms.assetid: 8942f9e8-9818-468f-97db-09dbd124fcae
-ms.openlocfilehash: 68672ae76024d3d09d738d997c485a3205c7dd2a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b51b556ea576e02b85a5c2ee5032909af39c7b2f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397571"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758433"
 ---
 # <a name="compiler-error-c2133"></a>編譯器錯誤 C2133
 
-'identifier': 未知的大小
+' identifier '：未知的大小
 
-可變大小的陣列宣告為類別、 結構、 等位或列舉的成員。 /Za (ANSI C) 選項不允許成員可變大小的陣列。
+可變大小陣列會宣告為類別、結構、等位或列舉的成員。 /Za （ANSI C）選項不允許可變大小成員陣列。
 
-下列範例會產生 C2133:
+下列範例會產生 C2133：
 
-```
+```cpp
 // C2133.cpp
 // compile with: /Za
 struct X {
@@ -29,9 +29,9 @@ struct X {
 };
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C2133b.cpp
 // compile with: /c
 struct X {

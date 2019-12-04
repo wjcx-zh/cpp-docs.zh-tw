@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3190
 ms.assetid: 7c701afa-85a7-4f7a-8881-0662436ac244
-ms.openlocfilehash: 1f30026d8f853aedc863bef4ecfa32b0bd3262b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbdd54ad0e87557b62d42c8ef5651122d9ebc205
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382355"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761604"
 ---
 # <a name="compiler-error-c3190"></a>編譯器錯誤 C3190
 
-'具現化' 提供的範本引數不是 'type' 的任何成員函式的明確具現化
+具有所提供樣板引數的「具現化」不是任何「類型」成員函式的明確具現化
 
-編譯器偵測到的試圖讓明確的函式具現化;不過，提供的型別引數不符合任何可能的函式。
+編譯器偵測到嘗試進行明確的函數具現化;不過，提供的型別引數不符合任何可能的函數。
 
-下列範例會產生 C3190:
+下列範例會產生 C3190：
 
-```
+```cpp
 // C3190.cpp
 // compile with: /LD
 template<class T>

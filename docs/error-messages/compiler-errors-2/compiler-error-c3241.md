@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3241
 ms.assetid: 2ca14879-bba0-4a23-b22a-72cfff92d6a4
-ms.openlocfilehash: 6eab22a8627b817b7a31e4bd34aad86d1f274615
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a618a9c538558d2aa4b995cbc9071bb8e94a5bc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173492"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754572"
 ---
 # <a name="compiler-error-c3241"></a>編譯器錯誤 C3241
 
-'method': 此方法不由 'interface' 引入
+' method '：這個方法不是由 ' interface ' 引進
 
-當您明確覆寫函式時，函式簽章必須完全符合您正在覆寫的函式的宣告。
+當您明確覆寫函式時，函數簽章必須完全符合您要覆寫之函式的宣告。
 
-下列範例會產生 C3241:
+下列範例會產生 C3241：
 
-```
+```cpp
 // C3241.cpp
 #pragma warning(disable:4199)
 

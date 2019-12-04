@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3662
 ms.assetid: 61bd3e41-a86b-42c0-be89-d992d3906ff1
-ms.openlocfilehash: 28d8df02d63fc1b16a392a2df83524cd616d5ab3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48fe8bd4a6872ff214d185ac77553debab78ab20
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400301"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758186"
 ---
 # <a name="compiler-error-c3662"></a>編譯器錯誤 C3662
 
@@ -19,13 +19,13 @@ ms.locfileid: "62400301"
 
 不允許在原生類型的成員上使用覆寫規範。
 
-如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3662。
 
-```
+```cpp
 // C3662.cpp
 // compile with: /clr /c
 struct S {

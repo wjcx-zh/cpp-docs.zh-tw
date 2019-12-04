@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C3068
 ms.assetid: 613e3447-b4a8-4268-a661-297bed63ccdf
-ms.openlocfilehash: 4790c9caafd28722f3631104cfe5cfc762cf6426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e20333a4fc18219f7f2514f3aefe73b81f284a6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406882"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759486"
 ---
 # <a name="compiler-error-c3068"></a>編譯器錯誤 C3068
 
-'function': 'naked' 函式不能包含會需要物件回溯如果C++發生例外狀況
+' function '： ' naked ' 函式不能包含在發生C++例外狀況時必須回溯的物件
 
-編譯器無法執行上的堆疊回溯[naked](../../cpp/naked-cpp.md)擲回例外狀況，因為暫存物件建立函式中的函式和C++例外狀況處理 ([/EHsc](../../build/reference/eh-exception-handling-model.md)) 是指定此項目。
+編譯器無法在擲回例外狀況的[naked](../../cpp/naked-cpp.md)函數上執行堆疊回溯，因為已在函式中建立暫存物件，而且C++已指定例外狀況處理（[/ehsc](../../build/reference/eh-exception-handling-model.md)）。
 
-若要解決這個錯誤，執行至少下列其中一：
+若要解決此錯誤，請至少執行下列其中一項動作：
 
-- 未使用 /EHsc 編譯。
+- 不使用/EHsc. 進行編譯
 
-- 請勿將標示為函式`naked`。
+- 請勿將函數標示為 `naked`。
 
-- 請勿在函式建立暫存物件。
+- 請勿在函數中建立暫存物件。
 
-如果函式會建立暫存物件在堆疊上，如果函式會擲回的例外狀況，而且C++例外狀況處理功能啟用後，編譯器將會清除堆疊在擲回例外狀況。
+如果函式在堆疊上建立暫存物件，且函式擲回例外狀況，而且如果C++已啟用例外狀況處理，則編譯器會在擲回例外狀況時清除堆疊。
 
-當發生例外狀況時，編譯器產生的程式碼，呼叫的初構和終解但不會出現在 naked 函式時，會執行函式。
+當擲回例外狀況時，會針對函式執行編譯器產生的程式碼（稱為初構和終解，而不存在於 naked 函數中）。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C3068:
+下列範例會產生 C3068：
 
-```
+```cpp
 // C3068.cpp
 // compile with: /EHsc
 // processor: x86

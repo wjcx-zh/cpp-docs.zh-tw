@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: fefd523ca3b9a3406afc307150322f9d431aa730
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360334"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760448"
 ---
 # <a name="compiler-error-c2662"></a>編譯器錯誤 C2662
 
-'function': 無法將轉換的 'this' 指標從 'type1' 到 'type2'
+' function '：無法將 ' this ' 指標從 ' type1 ' 轉換為 ' type2 '
 
-編譯器無法將轉換`this`指標`type1`至`type2`。
+編譯器無法將 `this` 指標從 `type1` 轉換成 `type2`。
 
-此錯誤可能因叫用非`const`成員函式`const`物件。  可能的解決方式：
+這個錯誤可能是因為在 `const` 物件上叫用非`const` 的成員函式所造成。  可能的解決方式：
 
-- 移除`const`從物件宣告。
+- 從物件宣告中移除 `const`。
 
-- 新增`const`成員函式。
+- 將 `const` 加入至成員函式。
 
-下列範例會產生 C2662:
+下列範例會產生 C2662：
 
-```
+```cpp
 // C2662.cpp
 class C {
 public:
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-進行編譯時 **/clr**，您無法在呼叫函式`const`或`volatile`限定 managed 型別。 您無法宣告 managed 類別的常數成員函式，因此您不能 const 的受管理物件上呼叫方法。
+使用 **/clr**進行編譯時，您無法在 `const` 或 `volatile` 合格的 managed 類型上呼叫函數。 您不能宣告 managed 類別的 const 成員函式，因此您無法在 const managed 物件上呼叫方法。
 
-```
+```cpp
 // C2662_b.cpp
 // compile with: /c /clr
 ref struct M {
@@ -67,9 +67,9 @@ ref struct N {
 };
 ```
 
-下列範例會產生 C2662:
+下列範例會產生 C2662：
 
-```
+```cpp
 // C2662_c.cpp
 // compile with: /c
 // C2662 expected

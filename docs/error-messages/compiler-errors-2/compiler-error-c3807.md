@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3807
 ms.assetid: 7e2b0aab-8c61-4e71-b9c1-fcaeb6a1b5ea
-ms.openlocfilehash: b5599914666af95a29667acc1ad4ad35eef7608f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4b33782c0a1e5abb811210c9e7a28da7040c805
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391929"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755261"
 ---
 # <a name="compiler-error-c3807"></a>編譯器錯誤 C3807
 
-'type': 具有 ComImport 屬性的類別不可衍生自 'type2'，允許只介面實作
+' type '：具有 ComImport 屬性的類別無法衍生自 ' type2 '，只允許介面實作為
 
-衍生自類型<xref:System.Runtime.InteropServices.ComImportAttribute>只能實作一個介面。
+衍生自 <xref:System.Runtime.InteropServices.ComImportAttribute> 的類型只能執行介面。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3807。
 
-```
+```cpp
 // C3807.cpp
 // compile with: /clr /c
 ref struct S {};

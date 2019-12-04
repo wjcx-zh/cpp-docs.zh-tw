@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2680
 ms.assetid: d6f7129e-dd17-4661-b680-18d6b925b1cc
-ms.openlocfilehash: 7a0f58ae16baee00a86038c633f996a7d27a1019
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37535c9ffbafd0d312646d5f3cfdb0c4411bc790
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386807"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760305"
 ---
 # <a name="compiler-error-c2680"></a>編譯器錯誤 C2680
 
-'type': 無效的目標型別名稱
+' type '：名稱的目標型別無效
 
-轉換成類型的指標或參考不被嘗試轉型運算子。 [Dynamic_cast](../../cpp/dynamic-cast-operator.md)運算子可以用僅適用於指標或參考。
+轉換運算子嘗試轉換成不是指標或參考的類型。 [Dynamic_cast](../../cpp/dynamic-cast-operator.md)運算子只能用於指標或參考。
 
-下列範例會產生 C2680:
+下列範例會產生 C2680：
 
-```
+```cpp
 // C2680.cpp
 // compile with: /c
 class A { virtual void f(); };
@@ -34,9 +34,9 @@ void g(B b) {
 }
 ```
 
-未定義目標時，也會發生 C2680:
+當目標未定義時，也可能會發生 C2680：
 
-```
+```cpp
 // C2680b.cpp
 // compile with: /clr /c
 // C2680 expected

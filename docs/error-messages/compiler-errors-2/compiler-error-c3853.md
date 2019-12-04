@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3853
 ms.assetid: 5b71805d-52b4-44ec-80ae-37c68d876f6a
-ms.openlocfilehash: c2282196d045ffd88696149f7d22d4ed7f9603ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef6a57b7528a07756a5a9034482bf99ed3f8cc87
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265473"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754858"
 ---
 # <a name="compiler-error-c3853"></a>編譯器錯誤 C3853
 
-'=': 重新初始化參考或指派透過函式參考是不合法
+' = '：透過參考功能重新初始化參考或指派是不合法的
 
-無法指派給透過函式的參考，因為函式都不是左值。
+無法透過函式指派給參考，因為函式不是左值。
 
-下列範例會產生 C3853:
+下列範例會產生 C3853：
 
-```
+```cpp
 // C3853.cpp
 // compile with: /EHsc
 #include <iostream>

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C3104
 ms.assetid: b5648d47-e5d3-4b45-a3c0-f46e04eae731
-ms.openlocfilehash: fee023809246634f2f3da266a718e45861eae76e
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: b92a6eade137a1d319ec286afa08f8477ff029d8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447842"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755852"
 ---
 # <a name="compiler-error-c3104"></a>編譯器錯誤 C3104
 
 不合法的屬性引數
 
-您已指定無效的引數的屬性。
+您為屬性指定了不正確引數。
 
-請參閱[屬性參數類型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)如需詳細資訊。
+如需詳細資訊，請參閱[屬性參數類型](../../extensions/attribute-parameter-types-cpp-component-extensions.md)。
 
-針對 Visual Studio 2005 所進行的編譯器一致性工作可能會導致此錯誤： 當受管理的陣列傳遞至自訂屬性，陣列的類型不會再推算自彙總初始設定清單。 編譯器現在會要求您指定的陣列，以及初始設定式清單的型別。
+這項錯誤可能是由於針對 Visual Studio 2005 所做的編譯器一致性工作而產生的結果：將 managed 陣列傳遞至自訂屬性時，陣列的類型已不再從匯總初始化清單推斷。 編譯器現在會要求您指定陣列的類型以及初始化運算式清單。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3104。
 
-```
+```cpp
 // C3104a.cpp
 // compile with: /clr /c
 using namespace System;
@@ -48,7 +48,7 @@ ref struct AStruct{};
 
 下列範例會產生 C3104。
 
-```
+```cpp
 // C3104b.cpp
 // compile with: /clr /c
 // C3104 expected

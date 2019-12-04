@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3020
 ms.assetid: f625c7a3-afaa-4bd8-9c1b-51891b832f36
-ms.openlocfilehash: 0e2d8e70dcc9b23c56a321487cd4b933a1086387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b066e813203f10b902e49a62af97a9a041874752
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386677"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742115"
 ---
 # <a name="compiler-error-c3020"></a>編譯器錯誤 C3020
 
-'var': OpenMP 'for' 迴圈的索引變數不能修改在迴圈主體中
+' var '： OpenMP ' for ' 迴圈的索引變數無法在迴圈主體中修改
 
-OpenMP`for`迴圈可能不會修改的本文中的索引 （迴圈計數器）`for`迴圈。
+OpenMP `for` 迴圈可能無法修改 `for` 迴圈主體中的索引（迴圈計數器）。
 
-下列範例會產生 C3020:
+下列範例會產生 C3020：
 
-```
+```cpp
 // C3020.cpp
 // compile with: /openmp
 int main() {
@@ -38,11 +38,11 @@ int main() {
 }
 ```
 
-以宣告的變數[lastprivate](../../parallel/openmp/reference/lastprivate.md)不能用做平行化迴圈內的索引。
+使用[lastprivate](../../parallel/openmp/reference/lastprivate.md)宣告的變數不能當做平行處理迴圈內的索引使用。
 
-下列範例會針對第二個 lastprivate 提供 C3020，因為該 lastprivate 會觸發寫入 idx_a 中最外層的迴圈。 第一個 lastprivate 不會發生錯誤，因為該 lastprivate 觸發 idx_a 之外最外層寫入 for 迴圈 （技術上來說，在結尾的最後一個反覆項目）。 下列範例會產生 C3020。
+下列範例會為第二個 lastprivate 提供 C3020，因為該 lastprivate 會在最外層的 for 迴圈中觸發對 idx_a 的寫入。 第一個 lastprivate 不會產生錯誤，因為該 lastprivate 會觸發最外層 for 迴圈外 idx_a 的寫入（技術上，最後一個反復專案的結尾）。 下列範例會產生 C3020。
 
-```
+```cpp
 // C3020b.cpp
 // compile with: /openmp /c
 float a[100][100];
@@ -61,7 +61,7 @@ void test(int first, int last)
 
 下列範例示範可能的解決方式：
 
-```
+```cpp
 // C3020c.cpp
 // compile with: /openmp /c
 float a[100][100];

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2229
 ms.assetid: 933c7cf2-a463-4e74-b0b4-59dedad987fb
-ms.openlocfilehash: 998067e9af178c1898c3443c4e84da965c22fa81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d974c4f0630a592daad956448bf21cea21efb7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301730"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759265"
 ---
 # <a name="compiler-error-c2229"></a>編譯器錯誤 C2229
 
-類型 'identifier' 有不合法的大小為零的陣列
+類型 ' identifier ' 有不合法大小的陣列
 
-結構或位元欄位成員包含不是最後一個成員的大小為零的陣列。
+結構或位欄位的成員包含大小為零的陣列，而不是最後一個成員。
 
-因為您可以為零大小的陣列做為結構的最後一個成員，您必須指定其大小，當您配置結構。
+因為您可以將零大小的陣列做為結構的最後一個成員，所以您必須在配置結構時指定其大小。
 
-如果為零大小的陣列不是結構的最後一個成員，編譯器就無法計算其餘欄位的位移。
+如果大小為零的陣列不是結構的最後一個成員，則編譯器無法計算其餘欄位的位移。
 
-下列範例會產生 C2229:
+下列範例會產生 C2229：
 
-```
+```cpp
 // C2229.cpp
 struct S {
    int a[0];  // C2229  zero-sized array

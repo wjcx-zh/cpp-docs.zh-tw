@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3488
 ms.assetid: 0a6fcd76-dd3b-48d7-abb3-22eccda96034
-ms.openlocfilehash: ed3cccb77a40ab646c9a6375cf4c182de62aa478
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b69ed4ac8b7e706096d107e9dfaa4447ca1bc79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381095"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74738423"
 ---
 # <a name="compiler-error-c3488"></a>編譯器錯誤 C3488
 
@@ -19,7 +19,7 @@ ms.locfileid: "62381095"
 
 當您指定 Lambda 運算式的預設擷取模式是透過傳址方式時，無法透過傳址方式將變數傳遞給該運算式的 Capture 子句。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 不要將變數明確地傳遞給 Capture 子句，或
 
@@ -33,7 +33,7 @@ ms.locfileid: "62381095"
 
 下列範例會產生 C3488，因為變數 `n` 的參考出現在其預設模式是透過傳址方式之 Lambda 運算式的 Capture 子句：
 
-```
+```cpp
 // C3488a.cpp
 
 int main()
@@ -47,7 +47,7 @@ int main()
 
 下列範例顯示 C3488 的四種可能解決方式：
 
-```
+```cpp
 // C3488b.cpp
 
 int main()
@@ -72,6 +72,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

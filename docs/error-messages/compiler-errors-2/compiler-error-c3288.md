@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a7b87fdbd2e15906ebc0c669f0b9a74ebf97f0b3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300618"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760175"
 ---
 # <a name="compiler-error-c3288"></a>編譯器錯誤 C3288
 
-'type': 不合法取值 （dereference) 的控制代碼類型
+' type '：控制碼類型的取消參考不合法
 
-編譯器偵測到不合法取值的控制代碼類型。 您可以控制代碼類型取值 （dereference），並將它指派給參考。 如需詳細資訊，請參閱 <<c0> [ 追蹤參考運算子](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
+編譯器偵測到控制碼類型的非法取值。 您可以對控制碼型別進行取值，並將它指派給參考。 如需詳細資訊，請參閱[追蹤參考運算子](../../extensions/tracking-reference-operator-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3288。
 
-```
+```cpp
 // C3288.cpp
 // compile with: /clr
 ref class R {};

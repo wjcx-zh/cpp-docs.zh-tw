@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2533
 ms.assetid: 5b335652-076c-4824-87c8-a741f64a3ce0
-ms.openlocfilehash: 00cb13d1999b00dfcaa5a2bc7bfb3b8eb16af5f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b111448e7e9d8260a5101d05996a670013936894
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386976"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746405"
 ---
 # <a name="compiler-error-c2533"></a>編譯器錯誤 C2533
 
@@ -23,7 +23,7 @@ ms.locfileid: "62386976"
 
 下列範例會產生 C2533，並示範如何修正此問題：
 
-```
+```cpp
 // C2533.cpp
 // compile with: /c
 class X {

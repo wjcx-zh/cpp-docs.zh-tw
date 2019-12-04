@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3459
 ms.assetid: 3d290a20-d313-4c07-9bd8-c5c159cb169f
-ms.openlocfilehash: aaad9610ffec3efc73b1ff5650472689a2d2e82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe21414fcadef13b7af3acf4f8e1635fb12802e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363735"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756639"
 ---
 # <a name="compiler-error-c3459"></a>編譯器錯誤 C3459
 
@@ -19,13 +19,13 @@ ms.locfileid: "62363735"
 
 設計成套用至類別索引子屬性 (property) 的屬性 (attribute) 的使用方式錯誤。
 
-如需詳細資訊，請參閱[如何：使用中的屬性C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
+如需詳細資訊，請參閱[如何：在/cli C++中使用屬性](../../dotnet/how-to-use-properties-in-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3459。
 
-```
+```cpp
 // C3459.cpp
 // compile with: /clr /c
 public ref class MyString {

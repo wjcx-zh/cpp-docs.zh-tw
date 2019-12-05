@@ -1,25 +1,25 @@
 ---
 title: ML 非嚴重錯誤 A2078
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2078
 helpviewer_keywords:
 - A2078
 ms.assetid: 42ac48fd-ac7f-4e74-a11e-20181d443faf
-ms.openlocfilehash: 92383d0a4b560241bf9534cc15b3fec4f067fe72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bb5293eb9e8d3ed626d1d8511884702ee77a676
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203116"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74855845"
 ---
 # <a name="ml-nonfatal-error-a2078"></a>ML 非嚴重錯誤 A2078
 
-**指示不允許 FAR 間接定址**
+**指令不允許太多間接定址**
 
-條件式跳躍或迴圈無法取得記憶體運算元。 它必須指定相對位址或標籤。
+條件式跳躍或迴圈無法接受記憶體運算元。 必須提供相對位址或標籤。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>

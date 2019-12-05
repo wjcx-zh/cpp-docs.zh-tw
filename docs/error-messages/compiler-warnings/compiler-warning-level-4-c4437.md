@@ -1,17 +1,21 @@
 ---
 title: 編譯器警告 (層級 4) C4437
 ms.date: 11/04/2016
+f1_keywords:
+- C4437
+helpviewer_keywords:
+- C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 9ff52ae6d10f7d4ba429bbf3457a2a6b969998d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6cd50d5c4d79b82c135ab4e84ec390dee9e906ef
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391461"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810650"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>編譯器警告 (層級 4) C4437
 
-從虛擬基底 'class1' 到 'class2' 的 dynamic_cast 無法使用/vd2 某些內容編譯會失敗，或在定義 'class2' #pragma vtordisp(2)
+在某些使用/vd2 編譯的內容中，從虛擬基底 ' class1 ' 到 ' class2 ' 的 dynamic_cast 可能會失敗，或定義具有 #pragma vtordisp （2）效果的 ' class2 '
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
@@ -23,13 +27,13 @@ ms.locfileid: "62391461"
 
 - 衍生類別沒有虛擬基底的 `vtordisp` 欄位。
 
-- 在建構函式或解構函式的衍生類別中，找不到轉換或某些類別進一步繼承自衍生類別 （否則編譯器警告將發出 C4436）。
+- 在衍生類別的函式或析構函數中找不到轉換，或從衍生類別進一步繼承的某個類別（否則會發出編譯器警告 C4436）。
 
-警告表示`dynamic_cast`當它在部分建構的物件上操作時，即可能不執行。  封入函式呼叫建構函式或解構函式之類別的繼承警告中指名的衍生的類別時，就會發生這種情況。  如果警告中指名的衍生的類別絕不是進一步衍生，或封入函式不會呼叫物件建構或解構期間，您可以忽略此警告。
+此警告表示，如果 `dynamic_cast` 在部分結構化的物件上操作，則可能無法正確執行。  當從繼承在警告中命名的衍生類別之類別的函式或析構函數中呼叫封入函數時，就會發生這種情況。  如果警告中所命名的衍生類別永遠不會進一步衍生，或在物件結構或損毀期間未呼叫封入函式，則可以忽略此警告。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4437，並示範從遺漏程式碼產生問題`vtordisp`欄位。
+下列範例會產生 C4437，並示範從遺漏的 `vtordisp` 欄位引發的程式碼產生問題。
 
 ```cpp
 // C4437.cpp
@@ -77,7 +81,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [dynamic_cast 運算子](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>

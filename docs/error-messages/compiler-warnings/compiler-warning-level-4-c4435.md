@@ -1,17 +1,21 @@
 ---
 title: 編譯器警告 (層級 4) C4435
 ms.date: 11/04/2016
+f1_keywords:
+- C4435
+helpviewer_keywords:
+- C4435
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ff545d3de3ef173cdbfd99d7714890e8631ce7a
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391474"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810669"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>編譯器警告 (層級 4) C4435
 
-' class1':/ Vd2 底下的物件配置將因虛擬基底 'class2' 而變更
+'class1' : /vd2 底下的物件配置將因虛擬基底 'class2' 而變更
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
@@ -35,7 +39,7 @@ class B : public virtual A  // C4435
 {};
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
 [/vd (停用建構替代)](../../build/reference/vd-disable-construction-displacements.md)

@@ -1,27 +1,27 @@
 ---
 title: ML 非嚴重錯誤 A2219
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - A2219
 helpviewer_keywords:
 - A2219
 ms.assetid: 5ebc2f40-e47e-4f8e-b7b9-960b9cfc9f6d
-ms.openlocfilehash: 61fa6bc6d630f1e8a8ac84492b60690c9545fb3e
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: cf2be5db2aa9c21597c199a6840f4aaa50e0a681
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197673"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74854585"
 ---
 # <a name="ml-nonfatal-error-a2219"></a>ML 非嚴重錯誤 A2219
 
-> 中的位移不正確對齊回溯程式碼
+> 回溯程式碼中的位移不正確對齊
 
 ## <a name="remarks"></a>備註
 
-運算元[ &period;ALLOCSTACK](../../assembler/masm/dot-allocstack.md)並[ &period;SAVEREG](../../assembler/masm/dot-savereg.md)必須是 8 的倍數。  運算元[ &period;SAVEXMM128](../../assembler/masm/dot-savexmm128.md)並[ &period;SETFRAME](../../assembler/masm/dot-setframe.md)必須是 16 的倍數。
+[&period;ALLOCSTACK](../../assembler/masm/dot-allocstack.md)和[&period;SAVEREG](../../assembler/masm/dot-savereg.md)的運算元必須是8的倍數。  [&period;SAVEXMM128](../../assembler/masm/dot-savexmm128.md)和[&period;SETFRAME](../../assembler/masm/dot-setframe.md)的運算元必須是16的倍數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)

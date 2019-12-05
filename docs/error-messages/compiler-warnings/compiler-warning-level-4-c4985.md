@@ -1,15 +1,17 @@
 ---
 title: 編譯器警告 (層級 4) C4985
 ms.date: 11/04/2016
+f1_keywords:
+- C4985
 helpviewer_keywords:
 - C4985
 ms.assetid: 832f001c-afe7-403d-a8b4-02334724c79e
-ms.openlocfilehash: 73abb166910cc421f042d22d67efc122e416bceb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75feda6fb2c88b663aa6ade0efdfffc7def1568f
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280187"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810730"
 ---
 # <a name="compiler-warning-level-4-c4985"></a>編譯器警告 (層級 4) C4985
 
@@ -21,10 +23,10 @@ SAL 提供一組註釋，可讓您用來描述某個函式如何使用其參數�
 
 請注意，除非專案已指定 [/analyze](../../build/reference/analyze-code-analysis.md) 旗標，否則 SAL 巨集不會展開。 當您指定 **/analyze**時，編譯器可能會擲回 C4985，即使出現的警告或錯誤都含有 **/analyze**亦然。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 1. 對方法的定義及其所有宣告使用相同的 SAL 註釋。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [SAL 註釋](../../c-runtime-library/sal-annotations.md)

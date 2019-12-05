@@ -1,19 +1,23 @@
 ---
 title: 編譯器警告 C4746
 ms.date: 11/04/2016
+f1_keywords:
+- C4746
+helpviewer_keywords:
+- C4746
 ms.assetid: 5e79ab46-6031-499a-a986-716c866b6c0e
-ms.openlocfilehash: 1b79eed2134b8c6310e508e56b3388c6f38fe4b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e761deb1b8c1b00e025f49775a845d07985fd2c
+ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311102"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74810576"
 ---
 # <a name="compiler-warning-c4746"></a>編譯器警告 C4746
 
-暫時性存取的 '\<運算式 >' 受限於 /volatile: [iso&#124;ms] 設定，請考慮使用 __iso_volatile_load/store 內建函式。
+'\<運算式 > ' 的變動性存取受限於/volatile： [iso&#124;ms] 設定;請考慮使用 __iso_volatile_load/store 內建函式。
 
-每當 volatile 變數直接存取時就會發出 C4746。 它要協助開發人員識別受目前指定的特定暫時性模型的程式碼位置 (這可以透過控制[/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項)。 特別是，當使用 /volatile:ms 時，有助於尋找編譯器產生的硬體記憶體屏障。
+每當 volatile 變數直接存取時就會發出 C4746。 其目的是協助開發人員識別受目前指定的特定暫時性模型（可以使用[/volatile](../../build/reference/volatile-volatile-keyword-interpretation.md)編譯器選項來控制）所影響的程式碼位置。 特別是，當使用 /volatile:ms 時，有助於尋找編譯器產生的硬體記憶體屏障。
 
 __iso_volatile_load/store 內建可用來明確存取揮發性記憶體，而不受暫時性模型影響。 使用這些內建函式不會觸發 C4746。
 

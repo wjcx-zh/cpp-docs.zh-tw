@@ -1,6 +1,7 @@
 ---
-title: '/Zc: twophase-（停用兩階段名稱查閱）'
-ms.date: 03/06/2018
+title: /Zc:twoPhase- (停用兩階段名稱查閱)
+description: 說明在指定/permissive-時，/Zc： twoPhase-停用兩階段名稱查閱的方式。
+ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
@@ -9,78 +10,101 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315794"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856952"
 ---
-# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc: twophase-（停用兩階段名稱查閱）
+# <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (停用兩階段名稱查閱)
 
-當 **/zc: twophase-** 指定選項時，編譯器會剖析並類別樣板和函式樣板會具現化相同的方式不合格 Visual Studio 2017 15.3 版之前的 Visual Studio 的版本。
+在 **/permissive-** 下， C++ **/zc： twoPhase-** 選項會指示編譯器使用原始、不符合規範的 Microsoft 編譯器行為來剖析及具現化類別樣板和函式樣板。
 
 ## <a name="syntax"></a>語法
 
-> **/Zc:twoPhase-**
+> **/Zc： twoPhase-**
 
 ## <a name="remarks"></a>備註
 
-在 Visual Studio 2017 版本 15.3 和更新版本中，依預設，編譯器會使用兩階段名稱查閱的範本名稱解析。 如果 **/zc: twophase-** 指定，則編譯器會還原成其先前不合格類別樣板和函式範本名稱解析和替代的行為。
+Visual Studio 2017 15.3 版和更新版本：在[/permissive-](permissive-standards-conformance.md)底下，編譯器會針對範本名稱解析使用兩階段名稱查閱。 如果您也指定 **/zc： twoPhase-** ，則編譯器會還原為先前不符合規範的類別範本，以及函式樣板名稱解析和替代行為。 未指定 **/permissive-** 時，不符合標準的行為是預設值。
 
-**/Zc: twophase-** 選項，以啟用不合格的行為不由預設設定。 [/Permissive--](permissive-standards-conformance.md)選項會隱含地設定符合的兩階段查閱編譯器行為，但可以使用覆寫 **/zc: twophase-**。
+版本10.0.15063.0 （建立者更新或 RS2）和較早版本中的 Windows SDK 標頭檔不會在一致性模式下執行。 **/Zc： twoPhase-** 當您使用 **/permissive-** 時，必須編譯這些 SDK 版本的程式碼。 從版本10.0.15254.0 （秋季建立者更新或 RS3）開始的 Windows SDK 版本會在一致性模式中正常運作。 它們不需要 **/zc： twoPhase-** 選項。
 
-在 一致性模式，無法正常運作 （Creators Update 或 Redstone 2） 的 10.0.15063.0 版及之前版本的 Windows SDK 標頭檔。 您必須使用 **/zc: twophase-** 編譯的 SDK 版本的程式碼，當您使用 Visual Studio 2017 版本 15.3 和更新版本。 在 一致性模式中正確運作版 10.0.15254.0 （Redstone 3 或 Fall Creators Update） 開始的 Windows SDK 版本，而且不需要 **/zc: twophase-** 選項。
+使用 **/zc： twoPhase-** 如果您的程式碼需要舊的行為才能正確編譯。 強烈考慮更新您的程式碼以符合標準。
 
-使用 **/zc: twophase-** 如果您的程式碼需要舊版行為，才能正確編譯。 慎重考慮更新您的程式碼，以符合標準。
+### <a name="compiler-behavior-under-zctwophase-"></a>/Zc： twoPhase 下的編譯器行為
 
-### <a name="compiler-behavior-under-zctwophase-"></a>/Zc: twophase-下的編譯器行為
+根據預設，或在 Visual Studio 2017 15.3 版和更新版本中，當您同時指定 **/permissive-** 和 **/zc： twoPhase-** 時，編譯器會使用此行為：
 
-在 Visual Studio 2017 15.3 版中之前, 的編譯器版本及何時 **/zc: twophase-** 指定，則編譯器會使用這種行為：
-
-- 它會剖析樣板宣告、 類別標頭和基底類別清單。 範本主體都擷取成語彙基元資料流。 會剖析任何函式主體，初始設定式、 預設引數或 noexcept 引數。 類別樣板是虛擬執行個體化，驗證中類別樣板的宣告正確的暫時性類型。 此類別範本，請考慮：
+- 它只會剖析範本宣告、類別標頭和基類清單。 範本主體會以權杖資料流程的形式加以捕捉。 不會剖析任何函數主體、初始化運算式、預設引數或 noexcept 引數。 類別樣板在暫時類型上是虛擬具現化，用來驗證類別樣板中的宣告是否正確。 請考慮此類別範本：
 
    ```cpp
    template <typename T> class Derived : public Base<T> { ... }
    ```
 
-   樣板宣告中， `template <typename T`>，類別標頭`class Derived`，和基底類別清單`public Base<T>`剖析，但範本主體都會被擷取成語彙基元資料流。
+   範本宣告、`template <typename T>`、類別標頭 `class Derived`和基類清單 `public Base<T>` 會進行剖析，但會將範本主體當做標記資料流程來加以捕捉。
 
-- 剖析函式樣板時，編譯器會剖析函式簽章。 永遠不會剖析函式主體。 相反地，它會擷取為語彙基元資料流。
+- 剖析函式樣板時，編譯器只會分析函數簽章。 永遠不會剖析函式主體。 相反地，它會以權杖資料流程的形式加以捕捉。
 
-如此一來，如果範本主體有語法錯誤，而且永遠不會具現化的範本，會永遠不會診斷錯誤。
+因此，如果範本主體有語法錯誤，但範本永遠不會具現化，則編譯器不會診斷錯誤。
 
-此行為的另一個的效果是多載解析。 因為在具現化的站台擴充語彙基元資料流的方式，未顯示在樣板宣告的符號可能會顯示在具現化時，參與多載解析。 這可能會導致變更行為沒有出現，範本已定義時，與標準的程式碼為基礎的範本。
+這個行為的另一個效果是多載解析。 發生非標準行為的原因，是因為在具現化的網站上展開標記資料流程的方式。 在具現化時，可能會顯示在範本宣告中看不到的符號。 這表示它們可以參與多載解析。 您可以根據在範本定義上看不到的程式碼，找到範本變更行為，這與標準相反。
 
 例如，請參考這個程式碼：
 
 ```cpp
+// zctwophase.cpp
+// To test options, compile by using
+// cl /EHsc /nologo /W4 zctwophase.cpp
+// cl /EHsc /nologo /W4 /permissive- zctwophase.cpp
+// cl /EHsc /nologo /W4 /permissive- /Zc:twoPhase- zctwophase.cpp
+
 #include <cstdio>
 
-void func(void*) { std::puts("The call resolves to void*") ;}
+void func(long) { std::puts("Standard two-phase") ;}
 
 template<typename T> void g(T x)
 {
     func(0);
 }
 
-void func(int) { std::puts("The call resolves to int"); }
+void func(int) { std::puts("Microsoft one-phase"); }
 
 int main()
 {
-    g(3.14);
+    g(6174);
 }
 ```
 
-下編譯時 **/zc: twophase-**，此程式會列印"呼叫解析為 int"。 在 一致性模式下 **/permissive--**，此程式會列印"呼叫解析成 void *，"因為第二個多載的`func`不可見，當編譯器遇到範本。
+當您搭配 **/zc： twoPhase-** 編譯器選項使用 [預設模式]、[一致性模式] 和 [一致性模式] 時，以下是輸出：
 
-*相依名稱*，取決於樣板參數，必須也是在不同的查閱行為 **/zc: twophase-**。 在合規性模式中，相依名稱不會在範本的定義繫結。 相反地，這些名稱會尋找範本具現化時。 與相依的函數名稱的函式呼叫，會顯示在範本的定義，與上述中呼叫的函式集是繫結的名稱。 從引數相依查閱的其他多載會加入範本定義的點和樣板具現化所在的點。 兩階段查閱的兩個階段時之非相依名稱的查詢範本定義及對應的相依名稱的樣板具現化時。 底下 **/zc: twophase-**，編譯器不會執行引數相依查閱分別從一般的非限定的查閱 （也就是它不會執行兩階段查閱），所以多載解析的結果可能不同。
+```cmd
+C:\Temp>cl /EHsc /nologo /W4 zctwophase.cpp && zctwophase
+zctwophase.cpp
+Microsoft one-phase
 
-以下是另一個範例：
+C:\Temp>cl /EHsc /nologo /W4 /permissive- zctwophase.cpp && zctwophase
+zctwophase.cpp
+Standard two-phase
+
+C:\Temp>cl /EHsc /nologo /W4 /permissive- /Zc:twoPhase- zctwophase.cpp && zctwophase
+zctwophase.cpp
+Microsoft one-phase
+```
+
+在 **/permissive-** 下以一致性模式編譯時，此程式會列印 "`Standard two-phase`"，因為當編譯器到達範本時，不會顯示 `func` 的第二個多載。 如果您新增 **/zc： twoPhase-** ，程式會列印「`Microsoft one-phase`」。 輸出與您未指定 **/permissive-** 時相同。
+
+*相依名稱*是取決於範本參數的名稱。 這些名稱的查閱行為在 **/zc： twoPhase-** 之下也不同。 在一致性模式中，相依名稱不會在範本定義的位置系結。 相反地，編譯器會在具現化範本時尋找它們。 針對具有相依函式名稱的函式呼叫，會將名稱系結至範本定義中的呼叫位置所顯示的函式。 引數相依查閱的其他多載會在範本定義的位置，以及樣板具現化的點加入。
+
+兩階段查閱包含兩個部分：在範本定義期間查閱非相依名稱，以及在範本具現化期間查閱相依名稱。 在 **/zc： twoPhase-** 底下，編譯器不會與不合格的查閱分開執行與引數相依的查閱。 也就是說，它不會執行兩階段查閱，因此多載解析的結果可能會不同。
+
+以下是另一個範例︰
 
 ```cpp
 // zctwophase1.cpp
-// Compile by using
+// To test options, compile by using
+// cl /EHsc /W4 zctwophase1.cpp
 // cl /EHsc /W4 /permissive- zctwophase1.cpp
 // cl /EHsc /W4 /permissive- /Zc:twoPhase- zctwophase1.cpp
 
@@ -106,35 +130,42 @@ int main() {
 }
 ```
 
-當編譯而不需要 **/zc: twophase-**，這會列印
-
-```Output
-func(long)
-NS::func(NS::S)
-```
-
-編譯時 **/zc: twophase-**，這會列印
+編譯而不 **/permissive-** 時，此程式碼會列印：
 
 ```Output
 func(int)
 NS::func(NS::S)
 ```
 
-合規性模式下 **/permissive--**，呼叫`tfunc(1729)`解析`void func(long)`多載，不`void func(int)`多載下 **/zc: twophase-**，因為使用資格不符`func(int)`宣告範本的定義之後，然後透過引數相依查閱找不到。 但是`void func(S)`因此會新增至呼叫設定的多載，並未參與引數相依查閱，`tfunc(s)`即使其宣告的範本函式之後。
+以 **/permissive-** （但不含 **/zc： twoPhase**）進行編譯時，此程式碼會列印：
 
-### <a name="update-your-code-for-two-phase-conformance"></a>更新您的程式碼的兩階段交易一致性
+```Output
+func(long)
+NS::func(NS::S)
+```
 
-舊版編譯器不需要關鍵字`template`並`typename`everywhereC++標準需要它們。 這些關鍵字在某些位置才能釐清如何編譯器時，應該查閱的第一個階段期間剖析相依名稱。 例如: 
+以 **/permissive-** 和 **/zc： twoPhase**進行編譯時，此程式碼會列印：
+
+```Output
+func(int)
+NS::func(NS::S)
+```
+
+在 [ **/permissive-** ] 下的 [一致性] 模式中，呼叫 `tfunc(1729)` 會解析為 `void func(long)` 多載。 它不會解析為 `void func(int)` 多載，如 **/zc： twoPhase-** 。 這是因為不合格的 `func(int)` 會在範本定義之後宣告，而且不會透過與引數相依的查閱找到。 但是 `void func(S)` 會參與引數相依的查閱，因此它會加入至呼叫 `tfunc(s)`的多載集，即使它是在樣板函式之後宣告也一樣。
+
+### <a name="update-your-code-for-two-phase-conformance"></a>更新程式碼以符合兩個階段的一致性
+
+較舊版本的編譯器不需要關鍵字 `template`，而是在標準C++所需的任何位置 `typename`。 某些位置需要這些關鍵字，以區別編譯器在查閱的第一個階段中，應如何剖析相依名稱。 例如：
 
 `T::Foo<a || b>(c);`
 
-合格的編譯器剖析`Foo`的範圍中的變數`T`，這表示此程式碼是邏輯-或使用運算式`T::foo < a`為左運算元和`b > (c)`為右運算元。 如果您想要使用`Foo`做為函式範本中，您必須指出這是範本，藉由新增`template`關鍵字：
+符合規範的編譯器會將 `Foo` 剖析為 `T`範圍中的變數，這表示此程式碼是一個邏輯 or 運算式，其 `T::foo < a` 為左運算元，而 `b > (c)` 為右運算元。 如果您想要使用 `Foo` 做為函式範本，則必須藉由新增 `template` 關鍵字來表示它是範本：
 
 `T::template Foo<a || b>(c);`
 
-在 Visual Studio 2017 15.3 版中之前, 的版本及何時 **/zc: twophase-** 指定時，編譯器可讓此程式碼，而不需要`template`關鍵字並將它解譯為使用引數函式樣板呼叫`a || b`，因為它會剖析範本，以非常有限的方式。 上述程式碼不是完全剖析中的第一個階段。 在第二個階段中，沒有足夠的內容，得知`T::Foo`是範本，而不是變數，所以編譯器不會強制使用關鍵字。
+在版本 Visual Studio 2017 15.3 版和更新版本中，當指定 **/permissive-** 和 **/zc： twoPhase**時，編譯器會允許此程式碼，而不會有 `template` 關鍵字。 它會以 `a || b`的引數，將程式碼解讀為函式樣板的呼叫，因為它只會以有限的方式剖析範本。 在第一個階段中，不會剖析上述程式碼。 在第二個階段中，有足夠的內容可分辨 `T::Foo` 是範本，而不是變數，因此編譯器不會強制使用關鍵字。
 
-此行為也會顯示藉由消除關鍵字`typename`之前的函式範本主體、 初始設定式、 預設引數和 noexcept 引數中的名稱。 例如: 
+您也可以在函式樣板主體、初始化運算式、預設引數和 noexcept 引數中的名稱前面排除關鍵字 `typename`，以查看此行為。 例如：
 
 ```cpp
 template<typename T>
@@ -144,9 +175,9 @@ typename T::TYPE func(typename T::TYPE*)
 }
 ```
 
-如果您未使用關鍵字`typename`下，在函式主體中，編譯這個程式碼 **/zc: twophase-**，而不是會在 **/permissive--**。 `typename`關鍵字，才能指出`TYPE`相依。 因為主體都不會在剖析 **/zc: twophase-**，編譯器不需要關鍵字。 在  **/permissive--** 一致性模式，而不需要的程式碼`typename`關鍵字會產生錯誤。 若要將您的程式碼移轉至 Visual Studio 2017 15.3 版和以上版本之後，插入`typename`是缺少的關鍵字。
+如果您未在函式主體中使用關鍵字 `typename`，此程式碼會在 **/Permissive-/zc： twoPhase-** 下編譯，但不會在 **/permissive-** 單獨進行。 需要 `typename` 關鍵字，才能指出 `TYPE` 相依。 因為不會在 **/zc： twoPhase-** 下剖析本文，所以編譯器不需要關鍵字。 在 **/permissive-** 一致性模式中，沒有 `typename` 關鍵字的程式碼會產生錯誤。 若要將您的程式碼遷移至 Visual Studio 2017 15.3 版和更高版本中的一致性，請插入遺漏的 `typename` 關鍵字。
 
-同樣地，請考慮此程式碼範例：
+同樣地，請考慮下列程式碼範例：
 
 ```cpp
 template<typename T>
@@ -156,18 +187,18 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 }
 ```
 
-底下 **/zc: twophase-** ，而在舊版的編譯器中，編譯器只需要`template`第 2 行上的關鍵字。 根據預設，和合規性模式中，編譯器現在也需要`template`關鍵字的行 4 表示`T::X<T>`是範本。 尋找遺漏此關鍵字的程式碼，並提供它，讓您符合標準的程式碼。
+在 **/Permissive-/zc： twoPhase-** 和舊版編譯器中，編譯器只需要第2行上的 `template` 關鍵字。 在一致性模式中，編譯器現在也需要第4行上的 `template` 關鍵字，以指出 `T::X<T>` 是範本。 尋找遺漏此關鍵字的程式碼，並提供它以讓您的程式碼符合標準。
 
-如需一致性問題的詳細資訊，請參閱[ C++ Visual Studio 中的一致性改善](../../overview/cpp-conformance-improvements.md)並[非標準行為](../../cpp/nonstandard-behavior.md)。
+如需一致性問題的詳細資訊，請參閱[ C++ Visual Studio](../../overview/cpp-conformance-improvements.md)和[非標準行為](../../cpp/nonstandard-behavior.md)中的一致性改進。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
+1. 選取 [組態屬性] > [C/C++] > [命令列] 屬性頁。
 
-1. 修改**其他選項**屬性，以包括 **/zc: twophase-** ，然後選擇**確定**。
+1. 修改 [**其他選項**] 屬性以包含 **/zc： twoPhase** ，然後選擇 **[確定]** 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[/Zc (一致性)](zc-conformance.md)<br/>
+[/Zc (一致性)](zc-conformance.md)

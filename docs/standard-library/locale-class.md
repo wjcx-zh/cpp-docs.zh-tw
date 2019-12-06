@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a11f5bf7e8c280da3ba2cae82cf355a3b28c0577
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890162"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898833"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -108,7 +108,7 @@ messages<char>
 messages<wchar_t>
 ```
 
-(最後分類為 Posix 所需，但 C Standard 不需要。)
+（最後一個分類是 POSIX 所需，但不是 C 標準）。
 
 其中一些預先定義的 facet 會由 `iostream` 類別使用，以控制與文字序列之間的數值轉換。
 
@@ -120,7 +120,7 @@ locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-
 static locale empty();
 ```
 
-建構沒有 facet 的地區設定物件。 它也是透明的地區設定。 如果範本函式[has_facet](../standard-library/locale-functions.md#has_facet)和[use_facet](../standard-library/locale-functions.md#use_facet)在透明地區設定中找不到要求的 facet，則會先查閱全域地區設定，如果是透明的，則為傳統地區設定。 因此，您可以撰寫：
+建構沒有 facet 的地區設定物件。 它也是透明的地區設定。 如果範本函式[has_facet](../standard-library/locale-functions.md#has_facet) ，且[use_facet](../standard-library/locale-functions.md#use_facet)在透明地區設定中找不到要求的 facet，則會先查閱全域地區設定，如果是透明的，則是傳統的地區設定。 因此，您可以撰寫：
 
 ```cpp
 cout.imbue(locale::empty());
@@ -150,9 +150,9 @@ cout.imbue(loc);
 |-|-|
 |[category](#category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[combine](#combine)|將指定之地區設定的 facet 插入至目標地區設定。|
 |[name](#name)|傳回儲存的地區設定名稱。|
@@ -175,7 +175,7 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>類別
 
-|執行個體|描述|
+|類別|描述|
 |-|-|
 |[facet](#facet_class)|做為所有地區設定 facet 之基底類別的類別。|
 |[`id`](#id_class)|此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。|
@@ -216,7 +216,7 @@ static const int none = 0;
 
 - `time`，對應于 C 類別 LC_TIME
 
-- `messages`，對應至 Posix 類別 LC_MESSAGES
+- `messages`，對應至 POSIX 類別目錄 LC_MESSAGES
 
 另外兩個有用的值如下：
 
@@ -224,7 +224,7 @@ static const int none = 0;
 
 - `all`，對應至所有類別的 C 聯集 LC_ALL
 
-您可以使用 `OR` 與這些常數來表示任意類別群組，如同 `monetary` &#124;`time`。
+您可以使用 `OR` 與這些常數來表示任意類別群組，如同 `monetary` &#124; `time`。
 
 ## <a name="classic"></a>  locale::classic
 
@@ -297,7 +297,7 @@ locale combine(const locale& source_locale) const;
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式會傳回地區設定物件，以取代中的，或將其加入至*source_locale*中所列的此 facet `Facet` **\*** 。
+此成員函式會傳回地區設定物件，以取代中的，或將其加入至 **\*此**facet `Facet` 列于*source_locale*中。
 
 ### <a name="example"></a>範例
 
@@ -458,19 +458,19 @@ locale(const locale& from_locale, const Facet* new_facet);
 
 `locale(const locale& from_locale, const locale& Other, category new_category);`
 
-取代*其他*對應于類別 c 的 facet，其中 c & *new_category*為非零值。
+取代*其他*與 C & *new_category*為非零的類別 c 對應的 facet。
 
 `locale(const locale& from_locale, const char* locale_name, category new_category);`
 
 `locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-取代為 `locale(locale_name, all)` 對應至類別*replace_category*的 facet，其中 `replace_category & new_category` 為非零值。
+取代為對應于分類*replace_category* （`replace_category & new_category` 為非零）的 `locale(locale_name, all)` facet。
 
 `template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-如果*new_facet*不是 null 指標，則會在 facet *new_facet*中取代（或新增至） *from_locale* 。
+如果*new_facet*不是 null 指標，則會在 facet *new_facet*中取代（或將加入至） *from_locale* 。
 
-如果 locale name *locale_name*是 null 指標或無效，則函數會擲回[runtime_error](../standard-library/runtime-error-class.md)。
+如果地區設定名稱*locale_name*是 null 指標或無效，則函數會擲回[runtime_error](../standard-library/runtime-error-class.md)。
 
 ### <a name="example"></a>範例
 
@@ -569,7 +569,7 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 其中一個要測試是否不相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -636,7 +636,7 @@ bool operator()(
 *左方*\
 左字串。
 
-*right* \
+*right*\
 右字串。
 
 ### <a name="return-value"></a>傳回值
@@ -702,7 +702,7 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 其中一個要測試是否相等的地區設定。
 
 ### <a name="return-value"></a>傳回值

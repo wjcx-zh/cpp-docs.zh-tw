@@ -41,12 +41,12 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: 0e11c11b468ff6e058ccf5c75b000396e0473bfa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 34f92bedfa9606c90196f2e3a5e47dc341b23aea
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747633"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898750"
 ---
 # <a name="errno-constants"></a>errno 常數
 
@@ -66,18 +66,18 @@ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義�
 
 支援的 **errno** 值如下：
 
-|常數|說明|
+|常數|描述|
 |-|-|
 |**ECHILD**|沒有繁衍的處理序。|
 |**EAGAIN**|沒有額外的處理序。 建立新處理序的嘗試已失敗，因為已經沒有更多的處理序位置，或是沒有足夠的記憶體，或是已達到最大巢狀層次。|
 |**E2BIG**|引數清單太長。|
 |**EACCES**|權限遭拒。 檔案的權限設定不允許指定的存取。 此錯誤顯示嘗試存取檔案 (或在某些情況下為存取目錄) 的方式不符合檔案的屬性。<br/><br/>例如，在嘗試讀取未開啟的檔案、開啟現有唯讀檔案以進行寫入，或是開啟目錄而非檔案時，便可能會發生該錯誤。 在 MS-DOS 作業系統 3.0 版或更新版本之下，**EACCES** 也可能表示鎖定或共用違規。<br/><br/>在嘗試對檔案或目錄進行重新命名，或是移除現有目錄時，也可能會發生該錯誤。|
-|**EBADF**|檔案編號錯誤。 可能的原因有二：1) 指定的檔案描述元不是有效的值，或不是開啟的檔案。 2) 嘗試寫入以唯讀存取方式開啟的檔案或裝置。|
+|**EBADF**|檔案編號錯誤。 有兩個可能的原因：1) 指定的檔案描述項不是有效的值，或未參考開啟檔案。 2) 嘗試寫入以唯讀存取方式開啟的檔案或裝置。|
 |**EDEADLOCK**|會發生資源死結。 數學函式的引數沒有位於函式的定義域中。|
 |**EDOM**|數學引數。|
 |**EEXIST**|檔案存在。 嘗試建立已存在的檔案。 例如，在 **_open** 呼叫中指定 **_O_CREAT** 和 **_O_EXCL** 旗標，但是命名的檔案已經存在。|
 |**EILSEQ**|不合法的位元組序列 (例如在 MBCS 字串中)。|
-|**EINVAL**|無效引數。 為函式的其中一個引數提供無效的值。 例如，在放置檔案指標 (透過呼叫 **fseek**) 時，為原點所提供的值是位於檔案的開頭之前。|
+|**EINVAL**|無效的引數。 為函式的其中一個引數提供無效的值。 例如，在放置檔案指標 (透過呼叫 **fseek**) 時，為原點所提供的值是位於檔案的開頭之前。|
 |**EMFILE**|開啟太多檔案。 沒有更多檔案描述項可用，因此已無法開啟更多檔案。|
 |**ENOENT**|無此檔案或目錄。 指定的檔案或目錄不存在或找不到。 在指定的檔案不存在，或是路徑的某個元件並沒有指定現有目錄的情況下，便可能會出現此訊息。|
 |**ENOEXEC**|Exec 格式錯誤。 嘗試執行不可執行或是具有無效可執行檔格式的檔案。|
@@ -87,7 +87,7 @@ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義�
 |**EXDEV**|跨裝置連結。 嘗試將檔案移至不同的裝置 (使用 **rename** 函式)。|
 |**STRUNCATE**|字串複製或串連導致截斷的字串。 請參閱 [_TRUNCATE](../c-runtime-library/truncate.md)。
 
-下列值支援與 Posix 之間的相容性。 它們在非 Posix 系統上為必要值。
+以下是支援與 POSIX 相容的值。 它們在非 POSIX 系統上是必要值。
 
 ```C
 #define E2BIG /* argument list too long */
@@ -171,6 +171,6 @@ ERRNO.H 包含 **errno** 值的定義。 不過，ERRNO.H 中所提供的定義�
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [全域常數](../c-runtime-library/global-constants.md)

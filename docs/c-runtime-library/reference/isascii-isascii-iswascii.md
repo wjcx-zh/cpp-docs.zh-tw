@@ -37,12 +37,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: ee20711628d5c2135b4ee1c37b87cb77f3610695
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954562"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857784"
 ---
 # <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -63,7 +63,7 @@ int iswascii(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 ## <a name="return-value"></a>傳回值
@@ -86,12 +86,12 @@ int iswascii(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**isascii**、 **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
+|**isascii**， **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h>、\<ctype.h>，或 \<wchar.h><br /><br /> C++：\<cwctype>、\<cctype >、\<wctype.h>、\<ctype.h> 或 \<wchar.h>|
 
-**Isascii**、 **__isascii**和**iswascii**函式是 Microsoft 特有的功能。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Isascii**、 **__isascii**和**iswascii**函式是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

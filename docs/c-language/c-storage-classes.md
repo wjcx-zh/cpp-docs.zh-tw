@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 77aefe41fecf003218343710ef090eebf99446a8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151789"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857108"
 ---
 # <a name="c-storage-classes"></a>C 儲存類別
 
@@ -32,7 +32,7 @@ C 提供了下列儲存類別指定名稱：
 &nbsp;&nbsp;&nbsp;&nbsp;**靜態**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**外部**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *extended-decl-modifier-seq* **)** /\* Microsoft 專有 \*/
+&nbsp;&nbsp;&nbsp;&nbsp; **__declspec （** *擴充-extended-decl-modifier-seq-修飾詞-seq* **）**  /\* Microsoft 特定 \*/
 
 除了 `__declspec` 之外，您只能在宣告的 *declaration-specifier* 中使用一個 *storage-class-specifier*。 如果未指定儲存類別，則區塊內的宣告會建立自動物件。
 
@@ -50,6 +50,6 @@ C 提供了下列儲存類別指定名稱：
 
 [外部層級宣告的儲存類別指定名稱](../c-language/storage-class-specifiers-for-external-level-declarations.md)和[內部層級宣告的儲存類別指定名稱](../c-language/storage-class-specifiers-for-internal-level-declarations.md)將描述各種宣告中的 *storage-class-specifier* 終端項，並且說明變數中省略 *storage-class-specifier* 時的預設行為。 [具有函式宣告的儲存類別指定名稱](../c-language/storage-class-specifiers-with-function-declarations.md)將討論搭配函式使用的儲存類別指定名稱。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和類型](../c-language/declarations-and-types.md)

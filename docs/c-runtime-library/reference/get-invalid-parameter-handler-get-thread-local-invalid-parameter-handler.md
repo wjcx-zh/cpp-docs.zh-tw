@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 534590fed77fe06149db892d98ba0e555297ac7c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 572d21696d38c47fe0f67d68af5eb249aeb94319
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955824"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857798"
 ---
 # <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
@@ -73,11 +73,11 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**、 **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
+|**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
-**_Get_invalid_parameter_handler**和 **_get_thread_local_invalid_parameter_handler**函式是 Microsoft 特有的功能。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Get_invalid_parameter_handler**和 **_get_thread_local_invalid_parameter_handler**函式為 Microsoft 特有的功能。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
 [CRT 函式的安全性增強版本](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - try-catch keyword [C++], termination handlers
 - C++ exception handling, exception handlers
 ms.assetid: dd3b647d-c269-43a8-aab9-ad1458712976
-ms.openlocfilehash: 942a7e48e4315454476bfe93c68169f461b006b2
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 3282f98f48f7e416857ef2f766563ab6038ca41a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245121"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857264"
 ---
 # <a name="structured-exception-handling-cc"></a>Structured Exception Handling (C/C++)
 
@@ -138,11 +138,11 @@ Destroying TestClass!
 Executing SEH __except block
 ```
 
-如需詳細資訊，請參閱 [/EH (Exception Handling Model)](../build/reference/eh-exception-handling-model.md)。
+如需詳細資訊，請參閱 [/EH (例外狀況處理模型)](../build/reference/eh-exception-handling-model.md)。
 
-**END Microsoft 特定的**
+**結束 Microsoft 專有**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../cpp/exception-handling-in-visual-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>

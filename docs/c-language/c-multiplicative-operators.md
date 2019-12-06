@@ -11,22 +11,22 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e06ef25c14f8073d2b8753b57c9593af7bb6c69f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147747"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857121"
 ---
 # <a name="c-multiplicative-operators"></a>C 乘法類運算子
 
-乘法類運算子會執行乘法 (<strong>\*</strong>)、除法 (**/**) 和餘數 (**%**) 運算。
+乘法類運算子會執行乘法 (<strong>\*</strong>)、除法 ( **/** ) 和餘數 ( **%** ) 運算。
 
 ## <a name="syntax"></a>語法
 
 *multiplicative-expression*: &nbsp;&nbsp;&nbsp;&nbsp;*cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* <strong>\*</strong> *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **/** *cast-expression* &nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression* **%** *cast-expression*
 
-餘數運算子 (**%**) 的運算元必須為整數。 乘法 (<strong>\*</strong>) 和除法 (**/**) 運算子可以接受整數類資料類型或浮點數類型運算元，運算元的類型可以不同。
+餘數運算子 ( **%** ) 的運算元必須為整數。 乘法 (<strong>\*</strong>) 和除法 ( **/** ) 運算子可以接受整數類資料類型或浮點數類型運算元，運算元的類型可以不同。
 
 乘法類運算子會對運算元執行一般算術轉換。 結果的類型是轉換後的運算元類型。
 
@@ -38,16 +38,14 @@ C 乘法類運算子描述如下：
 |運算子|描述|
 |--------------|-----------------|
 |<strong>\*</strong>|乘法運算子會使它的兩個運算元相乘。|
-|**/**|除法運算子會使第一個運算元除以第二個運算元。 如果兩個整數運算元相除且結果不是整數，則會根據下列規則截斷：<br/><br/>- 根據 ANSI C 標準，除以 0 的結果是未定義。 Microsoft C 編譯器會在編譯時期或執行階段產生錯誤。<br/><br/>- 如果兩個運算元都是正數或不帶正負號，結果會截斷小數點以下的小數部分。<br/><br/>- 如果任一個運算元為負數，運算的結果為小於或等於代數商的最大整數或是大於或等於代數商的最小整數，是由實作所定義。 (請參閱下面的＜Microsoft 專有＞一節)。|
-|**%**|第一個運算元除以第二個時，餘數運算子的結果就是餘數。 當除法不精確時，結果會以下列規則決定：<br/><br/>- 如果右運算元為零，則結果會是未定義。<br/><br/>- 如果兩個運算元都是正數或不帶正負號，則結果為正數。<br/><br/>- 如果任一個運算元為負數且結果不精確，則結果為實作所定義。 (請參閱下面的＜Microsoft 專有＞一節)。|
+|**/**|除法運算子會使第一個運算元除以第二個運算元。 如果兩個整數運算元相除且結果不是整數，則會根據下列規則截斷：<br/><br/>- 根據 ANSI C 標準，除以 0 的結果是未定義。 Microsoft C 編譯器會在編譯時期或執行階段產生錯誤。<br/><br/>- 如果兩個運算元都是正數或不帶正負號，結果會截斷小數點以下的小數部分。<br/><br/>- 如果任一個運算元為負數，運算的結果為小於或等於代數商的最大整數或是大於或等於代數商的最小整數，是由實作所定義。 （請參閱下面的 Microsoft 專有章節）。|
+|**%**|第一個運算元除以第二個時，餘數運算子的結果就是餘數。 當除法不精確時，結果會以下列規則決定：<br/><br/>- 如果右運算元為零，則結果會是未定義。<br/><br/>- 如果兩個運算元都是正數或不帶正負號，則結果為正數。<br/><br/>- 如果任一個運算元為負數且結果不精確，則結果為實作所定義。 （請參閱下面的 Microsoft 專有章節）。|
 
-**Microsoft 專屬**
+### <a name="microsoft-specific"></a>Microsoft 專有
 
 在任一個運算元為負數的除法中，攔截的方向為小數點以下的小數部分。
 
 如果具有餘數運算子的除法中任一項運算為負數，則結果的正負號會與被除數 (運算式中的第一個運算元) 相同。
-
-**結束 Microsoft 專屬**
 
 ## <a name="examples"></a>範例
 
@@ -91,6 +89,6 @@ n = i % j;
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [乘法類運算子和模數運算子](../cpp/multiplicative-operators-and-the-modulus-operator.md)

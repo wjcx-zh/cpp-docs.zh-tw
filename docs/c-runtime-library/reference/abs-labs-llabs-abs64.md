@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: bf5b4be654a3bd48b3e0d43ac97ce02b348942bc
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939936"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857849"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs、labs、llabs、_abs64
 
@@ -80,7 +80,7 @@ float abs( float n );   // C++ only
 
 因為C++允許多載，所以您可以呼叫採用並傳回**long**、 **long** **long**、 **float**、 **double**和**long** **double**值之**abs**的多載。 這些多載是在 \<cmath> 標頭中定義。 在 C 程式中， **abs**一律採用並傳回**int**。
 
-**Microsoft 特定**：因為可使用任何整數型別表示的負整數範圍，大於可使用該型別表示的正整數範圍，所以無法提供引數給這些無法轉換的函式。 如果引數的絕對值無法以傳回型別表示， **abs**函數會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函數不能用來保證正數值。
+**Microsoft 特有**：因為可以使用任何整數類型來表示的負整數範圍，大於可以使用該類型表示之正整數的範圍，所以可以將引數提供給無法轉換的這些函式。 如果引數的絕對值無法以傳回型別表示， **abs**函數會傳回未變更的引數值。 具體來說，`abs(INT_MIN)` 會傳回 `INT_MIN`，`labs(LONG_MIN)` 會傳回 `LONG_MIN`，`llabs(LLONG_MIN)` 會傳回 `LLONG_MIN`，且 `_abs64(_I64_MIN)` 會傳回 `_I64_MIN`。 這表示**abs**函數不能用來保證正數值。
 
 ## <a name="requirements"></a>需求
 
@@ -89,7 +89,7 @@ float abs( float n );   // C++ only
 |**abs**、 **labs**、 **llabs**|\<math.h> 或 \<stdlib.h>|\<cmath>、\<cstdlib>、\<stdlib.h> 或 \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> 或 \<stdlib.h>|
 
-若要在中C++使用多載的\< **abs**版本，您必須包含 h > 標頭。
+若要在中C++使用**abs**的多載版本，您必須包含 \<h > 標頭。
 
 ## <a name="example"></a>範例
 
@@ -148,7 +148,7 @@ llabs(LLONG_MIN) returns -9223372036854775808
 _abs64(_I64_MIN) returns 0x8000000000000000
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../../c-runtime-library/data-conversion.md)<br/>
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

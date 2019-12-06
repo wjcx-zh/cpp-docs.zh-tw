@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: afd85321ee443359f17850384b06b854dfe89985
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688237"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857966"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -38,13 +38,13 @@ complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal* \
+*_RealVal*\
 要建構之複數實數部分的 **long double** 類型值。
 
-*_ImagVal* \
+*_ImagVal*\
 要建立之複數虛數部分的**long double**類型值。
 
-*complexNum* \
+*complexNum*\
 **Double**類型或**float**類型的複數，其實際和虛數部分是用來初始化所建立之**long double**類型的複數。
 
 ## <a name="return-value"></a>傳回值
@@ -57,7 +57,7 @@ complex(
 
 如需類別範本 `complex` 及其成員的詳細資訊，請參閱[Complex 類別](../standard-library/complex-class.md)。
 
-**Microsoft 特定**： **long double**和**double**類型具有相同的標記法，但為不同的類型。 如需詳細資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
+**Microsoft 專有**： **long double**和**double**類型具有相同的標記法，但為不同的類型。 如需詳細資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
 
 ## <a name="example"></a>範例
 

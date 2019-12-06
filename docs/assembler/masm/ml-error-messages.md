@@ -1,18 +1,18 @@
 ---
 title: ML 錯誤訊息
 ms.date: 08/30/2018
-ms.topic: error-reference
+ms.custom: error-reference
 f1_keywords:
 - vc.errors.ml
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
-ms.openlocfilehash: b9238591ae025c4af258d8b5feda6e05c8bd291b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 2db928d22219d33f89396bb29530680d4b3c8dba
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397186"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856939"
 ---
 # <a name="ml-error-messages"></a>ML 錯誤訊息
 
@@ -42,12 +42,12 @@ MASM 元件所產生的錯誤訊息可分為三個類別：
 *Error_type*\
 嚴重錯誤、錯誤或警告。
 
-程式*代碼*\
+*代碼*\
 唯一的5或6位數的錯誤碼。
 
 *Message_text*\
 錯誤狀況的簡短和一般描述。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft 巨集組譯參考](../../assembler/masm/microsoft-macro-assembler-reference.md)

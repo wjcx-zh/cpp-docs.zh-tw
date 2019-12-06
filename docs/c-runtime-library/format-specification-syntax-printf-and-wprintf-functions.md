@@ -9,12 +9,12 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: e4def787dc5792921298999eb643ff56dd2c9f3d
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778383"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857862"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
@@ -46,12 +46,12 @@ ms.locfileid: "72778383"
 
 *type* 轉換規範字元指定要將對應的引數解譯成字元、字串、指標、整數還是浮點數。 *type* 字元是唯一必要的轉換規格欄位，且會在任何選擇性的欄位之後出現。
 
-遵循格式字串的引數會根據對應的 *type* 字元和選擇性的 [size](#size) 前置詞解譯。 字元類型 `char` 和 `wchar_t` 的轉換可使用 **c** 或 **C** 來指定，而單一位元組、多位元組或寬字元字串可使用 **s** 或 **S** 來指定，視使用何種格式化函式而定。 使用 **c** 和 **s** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `char` 和 `char*`，或是由 `wprintf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`。 使用 **C** 和 **S** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`，或是由 `wprintf` 系列函式解譯為 `char` 和 `char*`。 這是 Microsoft 專有的行為。
+遵循格式字串的引數會根據對應的 *type* 字元和選擇性的 [size](#size) 前置詞解譯。 字元類型 `char` 和 `wchar_t` 的轉換可使用 **c** 或 **C** 來指定，而單一位元組、多位元組或寬字元字串可使用 **s** 或 **S** 來指定，視使用何種格式化函式而定。 使用 **c** 和 **s** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `char` 和 `char*`，或是由 `wprintf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`。 使用 **C** 和 **S** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`，或是由 `wprintf` 系列函式解譯為 `char` 和 `char*`。 這是 Microsoft 特有的行為。
 
-@No__t_0、`int`、`long`、`long long` 和其 `unsigned` 變體等整數類型，都是使用**d**、 **i**、 **o**、 **u**、 **x**和**x**所指定。浮點類型（例如 1、2 和 3）**是使用、** **a**、 **e**、 **e**、 **f**、 **f**、 **g**和**g**來指定。根據預設，除非由*大小*前置詞修改，否則會將整數引數強制轉型為 3 型別，並將浮點引數強制轉成 4。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
+`short`、`int`、`long`、`long long`和其 `unsigned` 變體等整數類型，都是使用**d**、 **i**、 **o**、 **u**、 **x**和**x**所指定。浮點類型（例如 `float`、`double`和 `long double`）**是使用、** **a**、 **e**、 **e**、 **f**、 **f**、 **g**和**g**來指定。根據預設，除非由*大小*前置詞修改，否則會將整數引數強制轉型為 `int` 型別，並將浮點引數強制轉成 `double`。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
 
 > [!NOTE]
-> **Microsoft 特定**：**Z** 類型字元以及與 `printf` 和 `wprintf` 函式搭配使用時的 **c**、**C**、**s** 及 **S** 類型字元的行為，是 Microsoft 延伸模組。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
+> **Microsoft 特定：** **Z**類型字元和**c**、 **c**、 **s**及**s**類型字元在與 `printf` 和 `wprintf` 函式搭配使用時的行為，都是 Microsoft 擴充功能。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>類型欄位字元
 
@@ -81,7 +81,7 @@ ms.locfileid: "72778383"
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
 
-|值|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |infinity|`inf`|
 |無訊息 NaN|`nan`|
@@ -92,7 +92,7 @@ ms.locfileid: "72778383"
 
 在 Visual Studio 2015 之前，CRT 對無限大、不確定及 NAN 值的輸出使用不同的非標準格式︰
 
-|值|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |+ 無限大|`1.#INF`*隨機數字*|
 |- infinity|`-1.#INF`*隨機數字*|
@@ -160,7 +160,7 @@ ms.locfileid: "72778383"
 
 ### <a name="how-precision-values-affect-type"></a>精確度值如何影響類型
 
-|輸入|意義|Default|
+|類型|意義|Default|
 |----------|-------------|-------------|
 |**a**、**A**|指定小數點之後位數的精確度。|預設精確度為 13。 如果精確度為 0，除非使用 **#** 旗標，否則不會列印小數點。|
 |**c**、**C**|精確度無效果。|列印字元。|
@@ -204,7 +204,7 @@ ms.locfileid: "72778383"
 **hc** 或 **hC** 類型規範，與 `printf` 函式中的 **c** 和 `wprintf` 函式中的 **C** 同義)。 **lc**、**lC**、**wc** 或 **wC** 類型規範，與 `printf` 函式中的 **C** 和 `wprintf` 函式中的 **c** 同義。 **hs** 或 **hS** 類型規範，與 `printf` 函式中的 **s** 和 `wprintf` 函式中的 **S** 同義)。 **ls**、**lS**、**ws** 或 **wS** 類型規範，與 `printf` 函式中的 **S** 和 `wprintf` 函式中的 **s** 同義)。
 
 > [!NOTE]
-> **Microsoft 特定**：**I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
+> **Microsoft 特定：** **I** （大寫 I）、 **I32**、 **I64**和**w**引數大小的修飾詞前置詞是 Microsoft 擴充功能，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
 ## <a name="see-also"></a>請參閱
 

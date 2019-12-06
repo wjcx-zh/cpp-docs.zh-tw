@@ -7,22 +7,22 @@ helpviewer_keywords:
 - noinline __declspec keyword
 - __declspec keyword [C++], noinline
 ms.assetid: f259d55b-dec7-4bde-8cf9-14521e4fdc42
-ms.openlocfilehash: e155726ad1f2f3f6f0501d3aebf7fa14e620d6bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e424846c46dd50852b62008c4f1f38827da849c
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377396"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857407"
 ---
 # <a name="noinline"></a>noinline
 
-## <a name="microsoft-specific"></a>Microsoft 特定的
+**Microsoft 專屬**
 
-**__declspec （noinline)** 會告知編譯器永遠不要內嵌特定成員函式 （在類別中的函式）。
+**__declspec （noinline）** 會告知編譯器永遠不會內嵌特定的成員函式（類別中的函式）。
 
 如果函式不大，而且對程式碼的效能不重要，建議不要內嵌函式。 也就是，如果函式不大且可能不常被呼叫，例如處理錯誤條件的函式。
 
-請記住，如果函式標示**noinline**，呼叫的函式會較小，因此，本身為編譯器的內嵌的候選項目。
+請記住，如果函式標記為**noinline**，呼叫函式將會較小，因此本身是編譯器內嵌的候選項。
 
 ```cpp
 class X {
@@ -34,7 +34,7 @@ class X {
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [__declspec](../cpp/declspec.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>

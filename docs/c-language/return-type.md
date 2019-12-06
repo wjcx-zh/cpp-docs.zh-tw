@@ -10,12 +10,12 @@ helpviewer_keywords:
 - return keyword [C++], function return types
 - functions [C++], return types
 ms.assetid: 3e5b8a97-b341-48c5-8be8-8986980ef586
-ms.openlocfilehash: 3f781e59672764dc518f3c6fad61d4021720362a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: fe9280f434dd6267b03764df2ee663c494f007d8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148136"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857030"
 ---
 # <a name="return-type"></a>傳回型別
 
@@ -26,7 +26,7 @@ ms.locfileid: "56148136"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 是 Microsoft 專有 \*/
+/\**屬性-seq*是 Microsoft 特定 \*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -38,10 +38,10 @@ ms.locfileid: "56148136"
 &nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int8** /\* Microsoft 專有 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int16** /\* Microsoft 專有 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int32** /\* Microsoft 專有 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__int64** /\* Microsoft 專有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* Microsoft 特定 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
@@ -97,6 +97,6 @@ char *smallstr( char s1[], char s2[] )
 
 您不需要在呼叫函式之前使用 `int` 傳回類型宣告函式，不過建議您使用原型，如此才能夠檢查引數和傳回值的類型是否正確。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 函式定義](../c-language/c-function-definitions.md)

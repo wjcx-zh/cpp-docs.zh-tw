@@ -1,5 +1,5 @@
 ---
-title: 成員的指標
+title: 成員指標
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, pointers
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: a15e519be14d9a05cb30a8c9282baccc87a5f35e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14b5c12715d1c4c27d9ef8e262170acb2f85e526
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267685"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857342"
 ---
-# <a name="pointers-to-members"></a>成員的指標
+# <a name="pointers-to-members"></a>成員指標
 
 成員指標宣告是特殊的指標宣告。  函式是使用下列序列宣告：
 
@@ -28,21 +28,21 @@ ms.locfileid: "62267685"
 
    - 選擇性的儲存類別規範。
 
-   - 選擇性**const**及/或**volatile**規範。
+   - 選擇性的**const**和（或） **volatile**規範。
 
    - 類型指定名稱：類型的名稱。  這是指向成員的類型，而不是類別的類型。
 
 1. 宣告子：
 
-   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱 < [Microsoft 專有的修飾詞](../cpp/microsoft-specific-modifiers.md)。
+   - 選擇性的 Microsoft 專有修飾詞。 如需詳細資訊，請參閱[Microsoft 專有的](../cpp/microsoft-specific-modifiers.md)修飾詞。
 
    - 包含指向成員之類別的限定名稱。
 
-   - __::__ 運算子。
+   - __：：__ 運算子。
 
    - __\*__ 運算子。
 
-   - 選擇性**const**及/或**volatile**規範。
+   - 選擇性的**const**和（或） **volatile**規範。
 
    - 為成員指標命名的識別項。
 
@@ -54,7 +54,7 @@ ms.locfileid: "62267685"
 
    - 類別的限定名稱。
 
-   - __::__ 運算子。
+   - __：：__ 運算子。
 
    - 適當類型類別之非靜態成員的名稱
 
@@ -82,7 +82,7 @@ int main()
 }
 ```
 
-在上述範例中，`pwCaption`類別的任何成員的指標`Window`具有類型`char*`。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
+在上述範例中，`pwCaption` 是具有類型 `char*`之類別 `Window` 的任何成員的指標。 `pwCaption` 的類型是 `char * Window::* `。 下一個程式碼片段會宣告 `SetCaption` 和 `GetCaption` 成員函式的指標。
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -104,9 +104,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-之間的差異 **。**<strong>\*</strong>並**->** <strong>\*</strong>運算子 （成員指標運算子） 在於 **。**<strong>\*</strong>運算子會選取指定物件或物件參考，而**->** <strong>\*</strong>運算子選取透過指標的成員。 (如需有關這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)。)
+之間的差異 **。** <strong>\*</strong>和 **->** <strong>\*</strong>運算子（成員指標運算子）為 **。** <strong>\*</strong>運算子會選取指定物件或物件參考的成員，而 **->** <strong>\*</strong>運算子會透過指標選取成員。 （如需這些運算子的詳細資訊，請參閱[具有成員指標運算子的運算式](../cpp/pointer-to-member-operators-dot-star-and-star.md)）。
 
-成員指標運算子的結果是成員的型別 — 在此情況下， `char *`。
+成員指標運算子的結果是成員的類型，在此案例中為 `char *`。
 
 下一個程式碼片段會使用成員指標叫用 `GetCaption` 和 `SetCaption` 成員函式：
 
@@ -127,13 +127,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>成員指標的限制
 
-靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為只有一個執行個體的靜態成員存在指定的類別，一般的地址的所有物件 (**&**) 和取值 （dereference） (<strong>\*</strong>) 運算子可用。
+靜態成員的位址不是成員的指標。 它是某一個靜態成員執行個體的一般指標。 因為指定類別的所有物件都只有一個靜態成員的實例，所以可以使用一般的位址（ **&** ）和取值（<strong>\*</strong>）運算子。
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>成員指標和虛擬函式
 
 透過成員指標函式叫用虛擬函式的運作方式就像直接呼叫函式，正確的函式會在 v-table 中查閱及叫用。
 
-就如以往一般，虛擬函式運作的關鍵在於透過基底類別的指標叫用  (如需有關虛擬函式的詳細資訊，請參閱[虛擬函式](../cpp/virtual-functions.md)。)
+就如以往一般，虛擬函式運作的關鍵在於透過基底類別的指標叫用 （如需虛擬函式的詳細資訊，請參閱[虛擬](../cpp/virtual-functions.md)函式）。
 
 下列程式碼將示範如何透過成員指標函式叫用虛擬函式：
 

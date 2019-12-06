@@ -1,18 +1,18 @@
 ---
 title: /NOPDB
 description: /NOPDB 選項會讓 DUMPBIN 無法載入及搜尋 PDB 檔案中的符號資訊。
-ms.date: 10/29/2019
+ms.date: 12/04/2019
 f1_keywords:
 - /NOPDB
 helpviewer_keywords:
 - /NOPDB dumpbin option
 - /NOPDB
-ms.openlocfilehash: 3b745049517888d13de245d4e29be3985c122ada
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: 7b0c01e59b52bcec6ddf09416dd6aac9999527a6
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73145732"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856965"
 ---
 # <a name="nopdb"></a>/NOPDB
 
@@ -24,7 +24,7 @@ ms.locfileid: "73145732"
 
 ## <a name="remarks"></a>備註
 
-根據預設，DUMPBIN 會嘗試載入其目標物件檔案、程式庫或可執行檔的 PDB 檔案。 DUMPBIN 會使用這項資訊來比對位址與符號名稱。 如果 PDB 檔案很大，或必須從遠端伺服器載入，則此程式可能會很耗時。 **/NOPDB**選項會告訴 DUMPBIN 略過此步驟。 它只會列印物件檔案、程式庫或可執行檔中可用的位址和符號資訊。
+根據預設，DUMPBIN 會嘗試載入其目標可執行檔的 PDB 檔案。 DUMPBIN 會使用這項資訊來比對位址與符號名稱。 如果 PDB 檔案很大，或必須從遠端伺服器載入，則此程式可能會很耗時。 **/NOPDB**選項會告訴 DUMPBIN 略過此步驟。 它只會列印可執行檔中可用的位址和符號資訊。
 
 ### <a name="to-set-the-nopdb-linker-option-in-visual-studio"></a>若要在 Visual Studio 中設定/NOPDB 連結器選項
 

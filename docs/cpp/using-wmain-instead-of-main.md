@@ -7,29 +7,29 @@ helpviewer_keywords:
 - main function, vs. wmain
 - wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
-ms.openlocfilehash: 8cdc986d1582d2b26f137e3147ce78bc83e9daca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f47d7219a54b197ec59f109cf08879774b48e6f7
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257961"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857212"
 ---
 # <a name="using-wmain-instead-of-main"></a>使用 wmain 取代 main
 
-## <a name="microsoft-specific"></a>Microsoft 特定的
+**Microsoft 專屬**
 
-在 Unicode 程式設計模型中，您可以定義的寬字元版本`main`函式。 使用**wmain**而不是`main`如果您想要撰寫遵守 Unicode 規格的可攜式程式碼。
+在 Unicode 程式設計模型中，您可以定義寬字元版本的 `main` 函數。 如果您想要撰寫符合 Unicode 規格的可移植程式碼，請使用**wmain** ，而不是 `main`。
 
-宣告型式參數**wmain**使用類似的格式來`main`。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 *Argv*並*envp*參數**wmain**屬於類型`wchar_t*`。
+您可以使用類似的格式 `main`，將正式參數宣告為**wmain** 。 然後您可以傳遞寬字元引數以及 (選擇性的) 一個指向程式的寬字元環境指標。 **Wmain**的*argv*和*envp*參數是 `wchar_t*`的類型。
 
-如果您的程式使用`main`函式，建立多位元組字元環境在程式啟動的作業系統。 只在需要時，會建立環境的寬字元複本 (如藉由呼叫[_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)或是[_wputenv](../c-runtime-library/reference/putenv-wputenv.md)函式)。 在第一次呼叫 `_wputenv` 時，或在第一次呼叫 `_wgetenv` 時，如果 MBCS 環境已經存在，則會建立對應的寬字元字串環境，然後再由 `_wenviron` 全域變數 (是 `_environ` 全域變數的寬字元版本) 指向該變數。 此時會同時存在兩個環境 (MBCS 和 Unicode) 的複本，並由作業系統在整個程式存留期裡進行維護。
+如果您的程式使用 `main` 函式，則在程式啟動時，作業系統會建立多位元組字元環境。 只有在需要時（例如，藉由呼叫[_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)或[_wputenv](../c-runtime-library/reference/putenv-wputenv.md)函式），才會建立環境的寬字元複本。 在第一次呼叫 `_wputenv` 時，或在第一次呼叫 `_wgetenv` 時，如果 MBCS 環境已經存在，則會建立對應的寬字元字串環境，然後再由 `_wenviron` 全域變數 (是 `_environ` 全域變數的寬字元版本) 指向該變數。 此時會同時存在兩個環境 (MBCS 和 Unicode) 的複本，並由作業系統在整個程式存留期裡進行維護。
 
-同樣地，如果您的程式使用**wmain**函式的第一個呼叫建立 MBCS (ASCII) 環境時`_putenv`或`getenv`，並藉由指向`_environ`全域變數。
+同樣地，如果您的程式使用**wmain**函式，則會在第一次呼叫 `_putenv` 或 `getenv`時建立 MBCS （ASCII）環境，並由 `_environ` 全域變數指向。
 
-如需有關 MBCS 環境的詳細資訊，請參閱 <<c0> [ 單一位元組和多位元組字元集](../c-runtime-library/single-byte-and-multibyte-character-sets.md)在*執行階段程式庫參考。*
+如需 MBCS 環境的詳細資訊，請參閱《*執行時間程式庫參考*》中的[單一位元組和多位元組字元集](../c-runtime-library/single-byte-and-multibyte-character-sets.md)。
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[主要：程式啟動](../cpp/main-program-startup.md)
+[main：程式啟動](../cpp/main-program-startup.md)

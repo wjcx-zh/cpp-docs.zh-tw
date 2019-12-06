@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _fpclass function
 - _fpclassf function
 ms.assetid: 2774872d-3543-446f-bc72-db85f8b95a6b
-ms.openlocfilehash: 2e561cff956ca51707834bf869a1c114f0c99a3e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db95453a44f6a55d4bf98638351dcda4bd8377c9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957034"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857836"
 ---
 # <a name="_fpclass-_fpclassf"></a>_fpclass、_fpclassf
 
@@ -65,7 +65,7 @@ int _fpclassf(
 
 **_Fpclass**和 **_fpclassf**函式會傳回整數值，指出引數*x*的浮點分類。 分類可能會有 \<float.h> 中所定義的下列其中一個值。
 
-|值|描述|
+|{2&gt;值&lt;2}|描述|
 |-----------|-----------------|
 |**_FPCLASS_SNAN**|訊號 NaN|
 |**_FPCLASS_QNAN**|無訊息 NaN|
@@ -80,17 +80,17 @@ int _fpclassf(
 
 ## <a name="remarks"></a>備註
 
-**_Fpclass**和 **_fpclassf**函式是 Microsoft 特有的功能。 它們與 [fpclassify](fpclassify.md) 類似，但傳回引數的更多詳細資訊。 只有在針對 x64 平臺進行編譯時，才可以使用 **_fpclassf**函數。
+**_Fpclass**和 **_fpclassf**函式為 Microsoft 特有的功能。 它們與 [fpclassify](fpclassify.md) 類似，但傳回引數的更多詳細資訊。 只有在針對 x64 平臺進行編譯時，才能使用 **_fpclassf**函數。
 
 ## <a name="requirements"></a>需求
 
-|函數|必要的標頭|
+|功能|必要的標頭|
 |--------------|---------------------|
-|**_fpclass**、 **_fpclassf**|\<float.h>|
+|**_fpclass**， **_fpclassf**|\<float.h>|
 
 如需相容性和一致性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>
 [isnan、_isnan、_isnanf](isnan-isnan-isnanf.md)<br/>

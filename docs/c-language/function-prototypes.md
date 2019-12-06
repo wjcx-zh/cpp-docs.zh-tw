@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C], return types
 - prototypes [C++], function
 ms.assetid: d152f8e6-971e-432c-93ca-5a91400653c2
-ms.openlocfilehash: 2c75db3e1550927af57054a2cc1561d9df1567a4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 9c42ce5b23e6f755dafd57bdb5a5f79cf1adb4ec
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148800"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857082"
 ---
 # <a name="function-prototypes"></a>函式原型
 
@@ -24,7 +24,7 @@ ms.locfileid: "56148800"
 *宣告*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
 
-/\* *attribute-seq*<sub>opt</sub> 是 Microsoft 專有 \*/
+/\**屬性-seq*<sub>opt</sub>是 Microsoft 特定 \*/
 
 *declaration-specifiers*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -43,14 +43,14 @@ ms.locfileid: "56148800"
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 過時樣式宣告子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* 新樣式宣告子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
 
 原型的形式與函式定義的相同，但右括號後面加上分號即可終止原型，因此沒有主體。 在任何情況下，傳回類型必須與在函式定義中指定的傳回類型一致。
 
 函式原型有下列重要用途：
 
-- 它們會建立傳回 **int** 以外之類型的函式的傳回類型。雖然傳回 **int** 值的函式不需要原型，仍建議使用原型。
+- 它們會針對傳回**int**以外之類型的函式建立傳回型別。雖然傳回**int**值的函式不需要原型，但建議使用原型。
 
 - 如果沒有完整的原型，就會執行標準轉換，但不會嘗試根據參數數目檢查引數的類型或數目。
 
@@ -85,6 +85,6 @@ void func1( struct S * );
 
 在 **/Ze** 下，仍然會在全域範圍輸入該標記。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式](../c-language/functions-c.md)

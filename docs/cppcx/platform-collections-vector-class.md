@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Vector 類別
-ms.date: 10/01/2019
+ms.date: 12/04/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: a70856be04a63cad1c700cb3cc52711dde410265
-ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
+ms.openlocfilehash: b7774c2cdab7b9abcb3ebac1453779055eacf897
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816570"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857888"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector 類別
 
@@ -49,7 +49,7 @@ Vector 物件中包含的元素型別。
 
 ### <a name="remarks"></a>備註
 
-可使用的型別如下：
+可使用的類型如下：
 
 1. 整數
 
@@ -69,13 +69,13 @@ Vector 物件中包含的元素型別。
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[Vector：： Vector](#ctor)|初始化 Vector 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[Vector：： Append](#append)|在目前 Vector 的最後一個項目之後插入指定的項目。|
 |[Vector：： Clear](#clear)|刪除目前 Vector 的所有項目。|
@@ -84,18 +84,18 @@ Vector 物件中包含的元素型別。
 |[Vector：： GetMany](#getmany)|從目前 Vector 中，由指定的索引處開始，擷取一連串項目。|
 |[Vector：： GetView](#getview)|傳回 Vector 的唯讀檢視，也就是 [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)。|
 |[Vector：： IndexOf](#indexof)|在目前 Vector 中搜尋指定的項目，如果找到，則傳回項目的索引。|
-|[Vector：： InsertAt](#insertat)|將指定的項目插入至目前 Vector 中，指定之索引所識別項目的後面。|
+|[Vector：： InsertAt](#insertat)|將指定的專案插入目前向量的指定索引所識別的元素。|
 |[Vector：：型全部型](#replaceall)|刪除目前 Vector 中的元素，然後從指定的陣列插入元素。|
 |[Vector：： RemoveAt](#removeat)|從目前向量中刪除指定索引所識別的元素。|
 |[Vector：： RemoveAtEnd](#removeatend)|刪除目前 Vector 結尾處的項目。|
 |[Vector：： SetAt](#setat)|在目前 Vector 中，將指定的值指派給由指定的索引所識別的元素。|
 |[Vector：： Size](#size)|傳回目前 Vector 物件中的項目數。|
 
-### <a name="events"></a>事件
+### <a name="events"></a>「事件」
 
 |||
 |-|-|
-|名稱|描述|
+|Name|描述|
 |事件[Windows：： Foundation：： Collection：： VectorChangedEventHandler\<t > ^ VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Vector 變更時發生。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
@@ -244,7 +244,7 @@ IndexOf 使用 std::find_if 尋找項目。 因此，自訂元素類型應多載
 
 ##  <a name="insertat"></a>Vector：： InsertAt 方法
 
-將指定的項目插入至目前 Vector 中，指定之索引所識別項目的後面。
+將指定的專案插入目前向量的指定索引所識別的元素。
 
 ### <a name="syntax"></a>語法
 
@@ -257,8 +257,8 @@ virtual void InsertAt(unsigned int index, T item)
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*專案*<br/>
-*索引*所指定的專案之後，要插入向量的專案。 *專案*的類型是由*T* typename 所定義。
+*item*<br/>
+要插入向量的專案，該元素是由*index*所指定。 *專案*的類型是由*T* typename 所定義。
 
 ## <a name="removeat"></a>Vector：： RemoveAt 方法
 
@@ -315,7 +315,7 @@ virtual void SetAt(unsigned int index, T item);
 *index*<br/>
 以零起始、不帶正負號的整數，在 Vector 物件中指定特別項目。
 
-*專案*<br/>
+*item*<br/>
 要指派給指定項目的值。 *專案*的類型是由*T* typename 所定義。
 
 ## <a name="size"></a>Vector：： Size 方法
@@ -384,13 +384,13 @@ Vector 中的項目數。
 *ptr*<br/>
 用來初始化目前 Vector 之 `std::vector` 的指標。
 
-*頭*<br/>
+*first*<br/>
 用來初始化目前 Vector 之物件序列中的第一個項目。 *第一個*類型是透過*完美轉送*的方式傳遞。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-*次*<br/>
+*last*<br/>
 用來初始化目前 Vector 之物件序列中的最後一個項目。 *最後一*種方式是透過*完美轉送*來傳遞。 如需詳細資訊，請參閱[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [集合 (C++/CX)](collections-c-cx.md)<br/>
 [Platform 命名空間](platform-namespace-c-cx.md)<br/>

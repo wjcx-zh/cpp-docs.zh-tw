@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 5cf56375df417ac68b3e03d00f2bd7770ee571e8
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147681"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857134"
 ---
 # <a name="c-function-definitions"></a>C 函式定義
 
@@ -36,7 +36,7 @@ ms.locfileid: "56147681"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 是 Microsoft 專有 \*/
+/\**屬性-seq*是 Microsoft 特定 \*/
 
 原型參數為：
 
@@ -53,8 +53,8 @@ ms.locfileid: "56147681"
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 過時樣式宣告子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新樣式宣告子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
 
 定義中的參數清單會使用此語法：
 
@@ -79,7 +79,7 @@ ms.locfileid: "56147681"
 函式主體的語法為：
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 唯一可以修改函式宣告的儲存類別指定名稱是 **struct** 與 **static**。 **extern** 指定名稱表示可從其他檔案參考該函式；也就是說，會將該函式名稱匯出至連結器。 **static** 指定名稱表示不可從其他檔案參考該函式；亦即，連結器不會匯出名稱。 如果函式定義中不會出現儲存類別，就會假設 **extern**。 在任何情況下，從定義點到檔案結尾都會顯示該函式。
 
@@ -93,6 +93,6 @@ ms.locfileid: "56147681"
 
 [函式屬性](../c-language/function-attributes.md)、[儲存類別](../c-language/storage-class.md)、[傳回類型](../c-language/return-type.md)、[參數](../c-language/parameters.md)和[函式主體](../c-language/function-body.md)等節會詳細說明函式定義的元件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [函式](../c-language/functions-c.md)

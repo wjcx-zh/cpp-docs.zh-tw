@@ -10,29 +10,26 @@ helpviewer_keywords:
 - based pointers
 - pointers, based
 ms.assetid: 1e5f2e96-c52e-4738-8e14-87278681205e
-ms.openlocfilehash: 0a0435aa89e4cf744a5bc3c6dc72a715ed55f954
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 393fe8f8d12266650740942d0605152b6548d146
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498794"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857693"
 ---
 # <a name="based-pointers-c"></a>Based 指標 (C++)
 
-**Microsoft 專屬**
-
-**__Based**關鍵字可讓您根據指標 (從現有指標位移的指標) 來宣告指標。
+**__Based**關鍵字可讓您根據指標（從現有指標位移的指標）來宣告指標。 **__Based**關鍵字是 Microsoft 特定的。
 
 ## <a name="syntax"></a>語法
 
 ```
-
 type __based( base ) declarator
 ```
 
 ## <a name="remarks"></a>備註
 
-以指標位址為基礎的指標是在32位或64位編譯中有效的 **__based**關鍵字的唯一形式。 對於 Microsoft 32 位元 C/C++ 編譯器，基底指標是來自 32 位元指標基底的 32 位元位移。 在 64 位元環境中保留了一個類似的限制，其中基底指標是來自 64 位元基底的 64 位元位移。
+以指標位址為基礎的指標是 **__based**關鍵字在32位或64位編譯中有效的唯一形式。 對於 Microsoft 32 位元 C/C++ 編譯器，基底指標是來自 32 位元指標基底的 32 位元位移。 在 64 位元環境中保留了一個類似的限制，其中基底指標是來自 64 位元基底的 64 位元位移。
 
 以指標為基礎之指標的其中一項用途，就是包含指標的持續性識別項。 以指標為基礎的指標所組成的連結清單可以儲存至磁碟，然後以仍然有效的指標重新載入至記憶體中的另一個位置。 例如：
 
@@ -53,7 +50,7 @@ struct llist_t {
 
 對基底指標取值時，該基底必須透過宣告明確指定或以隱含方式得知。
 
-為了與舊版相容, 除非指定了編譯器選項[ \(/za 停用語言擴充](../build/reference/za-ze-disable-language-extensions.md)功能, 否則 **_based**會是 **__based**的同義字。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_based**是 **__based**的同義字。
 
 ## <a name="example"></a>範例
 
@@ -92,7 +89,7 @@ int main() {
 11
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
 [alloc_text](../preprocessor/alloc-text.md)

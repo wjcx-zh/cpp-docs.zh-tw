@@ -8,24 +8,24 @@ f1_keywords:
 helpviewer_keywords:
 - __unaligned keyword [C++]
 ms.assetid: 0cd83aad-1840-47e3-ad33-59bfcbe6375b
-ms.openlocfilehash: 8eb1b93aa55601125600b6c69d9bff3d9ca43aa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1090a0f3345f749a2afbd80566a9af7b9ea32d53
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244112"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857251"
 ---
-# <a name="unaligned"></a>__unaligned
+# <a name="__unaligned"></a>__unaligned
 
-**Microsoft 專有**。 當您宣告的指標 **__unaligned**修飾詞，編譯器會假設指標位址未對齊的資料。 因此，適當的平台程式碼會產生以處理未對齊的讀取和寫入透過指標。
+**Microsoft 特有**。 當您使用 **__unaligned**修飾詞宣告指標時，編譯器會假設指標會定址未對齊的資料。 因此，會產生平臺適當的程式碼，以透過指標來處理未對齊的讀取和寫入。
 
 ## <a name="remarks"></a>備註
 
-此修飾詞描述指標所定址的資料的對齊方式指標本身會假設為對齊。
+這個修飾詞會描述指標所定址之資料的對齊方式。指標本身會假設為對齊。
 
-省略 **__unaligned**關鍵字會因平台和環境而異。 無法適當地標記資料可能會導致問題的硬體故障，舉凡效能的負面影響。 **__Unaligned**修飾詞不是適用於 x86 平台。
+**__Unaligned**關鍵字的必要條件會因平臺和環境而異。 若未適當地標記資料，可能會導致問題，範圍從效能損失到硬體錯誤。 **__Unaligned**修飾詞對 x86 平臺無效。
 
-為了與舊版中，相容性 **_unaligned**同義 **__unaligned**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_unaligned**是 **__unaligned**的同義字。
 
 如需對齊的詳細資訊，請參閱：
 
@@ -39,6 +39,6 @@ ms.locfileid: "62244112"
 
 - [結構對齊範例](../build/x64-software-conventions.md#examples-of-structure-alignment)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)

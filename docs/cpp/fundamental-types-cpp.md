@@ -43,12 +43,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: 99c30eeb942eb3ab57518cc63ce353cfeff0bec9
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: daa2ad2680a9d7d0239a70ed37ec1d90a3d96d97
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810551"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857537"
 ---
 # <a name="fundamental-types--c"></a>基本類型 (C++)
 
@@ -77,7 +77,7 @@ C++ 中的基本類型分為三類：整數、浮點和 void。 整數類資料�
 ||**long long**|大於不帶正負號的**長**整數。<br /><br /> **Long** long 類型的物件可以宣告為**帶正負**號的 long long 或不**帶正負**號的長長格式。 「**帶正負**號的長長時間」是**長**時間的同義字。|
 ||**wchar_t**， **__wchar_t**|**Wchar_t**類型的變數會指定寬字元或多位元組字元類型。 根據預設， **wchar_t**是原生類型，但是您可以使用[/zc： wchar_t](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) ，讓**wchar_t**不**帶正負號簡短**的 typedef。 **__Wchar_t**類型是原生**Wchar_t**類型的 Microsoft 特定同義字。<br /><br /> 在字元或字串常數之前使用 L 前置詞，指定寬字元類型。|
 |浮點數|**float**|**Float**類型是最小的浮點類型。|
-||**double**|**Double**類型是大於或等於**float**類型，但短于或等於**long double**類型大小的浮點類型。<br /><br /> Microsoft 特定： **long double**和**double**的表示方式完全相同。 不過， **long double**和**double**是不同的類型。|
+||**double**|**Double**類型是大於或等於**float**類型，但短于或等於**long double**類型大小的浮點類型。<br /><br /> Microsoft 專有： **long double**和**double**的表示方式完全相同。 不過， **long double**和**double**是不同的類型。|
 ||**long double**|**Long double**類型是大於或等於**double**類型的浮點類型。|
 
 **Microsoft 專屬**

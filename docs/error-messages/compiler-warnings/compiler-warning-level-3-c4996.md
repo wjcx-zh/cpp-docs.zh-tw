@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: 9d5b8cc3e3ce6445e021163df5301a38aab2c514
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: 98662dc0b5439c1f8857e4f2ad259793a4d03e41
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683333"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898768"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>編譯器警告（層級3） C4996
 
@@ -23,7 +23,7 @@ ms.locfileid: "74683333"
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 程式庫中的許多函數、成員函式、範本函式和全域變數已被*取代*。 有些（例如 Posix 函數）已被取代，因為它們有不同的慣用名稱。 某些 C 執行時間程式庫函式已被取代，因為它們是不安全的，而且具有更安全的變體。 其他則已淘汰，因為它們已過時。 淘汰訊息通常會包含已被取代的函式或全域變數的建議替代功能。
+Visual Studio 程式庫中的許多函數、成員函式、範本函式和全域變數已被*取代*。 有些（例如 POSIX 和 Microsoft 特有的函式）已被取代，因為它們現在有不同的慣用名稱。 某些 C 執行時間程式庫函式已被取代，因為它們是不安全的，而且具有更安全的變體。 其他則已淘汰，因為它們已過時。 淘汰訊息通常會包含已被取代的函式或全域變數的建議替代功能。
 
 ## <a name="turn-off-the-warning"></a>關閉警告
 
@@ -61,9 +61,9 @@ Visual Studio 程式庫中的許多函數、成員函式、範本函式和全域
 
 **此專案的 POSIX 名稱已被取代。相反地，請使用 ISO C C++和符合標準的名稱：** *新名稱*。 **如需詳細資訊，請參閱線上說明。**
 
-Microsoft 已將 CRT 中的某些 POSIX 函式重新命名為符合實作為定義之全域函式名稱的 C99 和 c + + 03 規則。 只有名稱已被取代，而不是函式本身。 在大部分情況下，會將前置底線新增至 POSIX 函數名稱，以建立符合標準的名稱。 編譯器會發出原始函式名稱的取代警告，並建議慣用名稱。
+Microsoft 已將 CRT 中的某些 POSIX 和 Microsoft 特定程式庫函式重新命名，以符合保留和全域執行定義名稱的 C99 和 c + + 03 條件約束。 *只有名稱已被取代，而不是*函式本身。 在大部分情況下，函式名稱中會加上前置底線來建立符合的名稱。 編譯器會發出原始函式名稱的取代警告，並建議慣用名稱。
 
-若要修正此問題，我們通常建議您變更程式碼，改為使用建議的函數名稱。 不過，更新的名稱是 Microsoft 專有的。 如果您因為可攜性的緣故，而需要使用現有的函式名稱，可以關閉這些警告。 在程式庫中，POSIX 函式仍會在其原始名稱底下提供。
+若要修正此問題，我們通常建議您變更程式碼，改為使用建議的函數名稱。 不過，更新的名稱是 Microsoft 專有的。 如果您因為可攜性的緣故，而需要使用現有的函式名稱，可以關閉這些警告。 函式仍可在程式庫中的原始名稱下使用。
 
 若要關閉這些函式的取代警告，請定義預處理器宏 **\_CRT\_NONSTDC\_不\_警告**。 您可以在命令列中包含選項 `/D_CRT_NONSTDC_NO_WARNINGS`來定義此宏。
 

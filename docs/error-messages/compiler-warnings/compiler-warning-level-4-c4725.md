@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4725
 ms.assetid: effa0335-71c3-4b3b-8618-da4b9b46a95d
-ms.openlocfilehash: 9da830133bbca2abcd5fa77339e698b35dae32f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c86d1a5351adf5ba29752613f2301a11fb1b93ce
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325425"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989517"
 ---
 # <a name="compiler-warning-level-4-c4725"></a>編譯器警告 (層級 4) C4725
 
@@ -21,7 +21,7 @@ ms.locfileid: "62325425"
 
 下列範例會產生 C4725：
 
-```
+```cpp
 // C4725.cpp
 // compile with: /W4
 // processor: x86

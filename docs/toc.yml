@@ -6370,6 +6370,8 @@
                   expanded: false
                   items:
                     - name: 檔案和資料流
+                      href: c-runtime-library/files-and-streams.md
+                    - name: 文字和二進位資料流
                       href: c-runtime-library/text-and-binary-streams.md
                     - name: 位元組和寬資料流
                       href: c-runtime-library/byte-and-wide-streams.md

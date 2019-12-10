@@ -6,12 +6,12 @@ helpviewer_keywords:
 - catching exceptions, thrown from MSIL
 - MSIL, catching exceptions in native code
 ms.assetid: c15afd2b-8505-43bf-8a4a-f1d41532a124
-ms.openlocfilehash: c3afa29d8c9bee1c1f1cc2fd1869d108c08a249b
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 23adb573a62e93933c487f611c05aed4c08494ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246683"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988275"
 ---
 # <a name="how-to-catch-exceptions-in-native-code-thrown-from-msil"></a>如何：攔截 MSIL 擲回之機器碼的例外狀況
 
@@ -23,7 +23,7 @@ ms.locfileid: "74246683"
 
 下列範例會定義具有兩個函式的模組，其中一個會擲回原生例外狀況，另一個則擲回 MSIL 例外狀況。
 
-```
+```cpp
 // catch_MSIL_in_native.cpp
 // compile with: /clr /c
 void Test() {
@@ -39,7 +39,7 @@ void Test2() {
 
 下列範例會定義可攔截原生和 MSIL 例外狀況的模組。
 
-```
+```cpp
 // catch_MSIL_in_native_2.cpp
 // compile with: /clr catch_MSIL_in_native.obj
 #include <iostream>
@@ -77,6 +77,6 @@ error
 caught an exception
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

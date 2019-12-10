@@ -1,23 +1,23 @@
 ---
-title: HOW TO：明確要求 Boxing
+title: 如何：明確要求 Boxing
 ms.date: 11/04/2016
 helpviewer_keywords:
 - boxing, explicitly requesting
 ms.assetid: 1359e6e5-162d-4f5d-9b6a-1690d93df3ee
-ms.openlocfilehash: c27330e4e7699b6f0e9d6c612c2befe884a69b4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 721a57219c7216cb57f497011da1733c9e3eb7f2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387275"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988497"
 ---
-# <a name="how-to-explicitly-request-boxing"></a>HOW TO：明確要求 Boxing
+# <a name="how-to-explicitly-request-boxing"></a>如何：明確要求 Boxing
 
-您可以將變數指派給類型的變數，以明確要求 boxing `Object`。
+您可以藉由將變數指派給 `Object`類型的變數，明確地要求裝箱。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // vcmcppv2_explicit_boxing3.cpp
 // compile with: /clr
 using namespace System;
@@ -45,6 +45,6 @@ f(Object^ o)
 f(Object^ o)
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Boxing](../extensions/boxing-cpp-component-extensions.md)

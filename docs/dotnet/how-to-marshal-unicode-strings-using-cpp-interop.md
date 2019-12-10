@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理 Unicode 字串使用C++Interop
+title: 如何：使用 C++ Interop 封送處理 Unicode 字串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f666e52b604e4713f02cb14744ac12a0407366a3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400548"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988169"
 ---
-# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>HOW TO：封送處理 Unicode 字串使用C++Interop
+# <a name="how-to-marshal-unicode-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 Unicode 字串
 
-本主題將示範一個 facet 視覺效果的C++互通性。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
+本主題示範視覺化C++互通性的一個 facet。 如需詳細資訊，請參閱[使用C++ Interop （隱含 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
-本主題示範了如何 Unicode 字串可以傳遞從 managed 至 unmanaged 函式，反之亦然。 與其他字串類型的交互操作，請參閱下列主題：
+本主題示範如何將 Unicode 字串從 managed 傳遞至非受控函式，反之亦然。 如需與其他字串類型互通，請參閱下列主題：
 
 - [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -30,9 +30,9 @@ ms.locfileid: "62400548"
 
 ## <a name="example"></a>範例
 
-若要從受管理的 unmanaged 函式傳遞 Unicode 字串，您可以使用 PtrToStringChars 函式 （Vcclr.h 中宣告） 中儲存的 managed 的字串的記憶體存取。 因為這個位址會傳遞至原生函式中，務必具有釘選記憶體[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)若要防止遭到重新配置的字串資料，應該記憶體回收週期發生時unmanaged 函式會執行。
+若要將 Unicode 字串從 managed 傳遞至非受控函式，PtrToStringChars 函數（在 Vcclr 中宣告）可以用來存取儲存 managed 字串的記憶體。 因為此位址會傳遞至原生函式，所以將記憶體釘選在[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)以防止字串資料被重新放置時，應該會在非受控函式執行時進行垃圾收集迴圈，這是很重要的。
 
-```
+```cpp
 // MarshalUnicode1.cpp
 // compile with: /clr
 #include <iostream>
@@ -63,9 +63,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範資料封送處理，才能存取 unmanaged 的函式呼叫 managed 函式的 Unicode 字串。 受管理的函式，在接收原生的 Unicode 字串，將它轉換成 managed 的字串，使用<xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A>方法。
+下列範例示範在非受控函式所呼叫的 managed 函數中存取 Unicode 字串所需的資料封送處理。 Managed 函式在接收原生 Unicode 字串時，會使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> 方法，將它轉換成 managed 字串。
 
-```
+```cpp
 // MarshalUnicode2.cpp
 // compile with: /clr
 #include <iostream>
@@ -95,6 +95,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

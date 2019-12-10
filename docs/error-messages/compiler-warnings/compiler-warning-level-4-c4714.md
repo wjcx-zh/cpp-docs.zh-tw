@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C4714
 ms.assetid: 22c7fd0c-899d-4e9b-95f3-725b2c49fb46
-ms.openlocfilehash: ed94e5b716a697ec96d7fecac75433823c9a67e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ea4212eaddf14546827728b31299063021a959f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395179"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989644"
 ---
 # <a name="compiler-warning-level-4-c4714"></a>編譯器警告 (層級 4) C4714
 
-函式 'function' 標記為 __forceinline 無法內嵌
+函式 ' function ' 標記為 __forceinline 不是內嵌的
 
-內嵌展開，我們選取了指定的函式，但編譯器未進行內嵌。
+已選取指定的函式來進行內嵌展開，但編譯器未執行內嵌功能。
 
-雖然`__forceinline`會比對編譯器指出更強`__inline`、 內嵌仍然會由編譯器決定，會執行，但沒有啟發學習法會用來判斷受惠於內嵌此函式。
+雖然 `__forceinline` 比 `__inline`更強的指示，但仍會以編譯器的判斷來執行內嵌，但不會使用啟發學習法來判斷內嵌此函式的優點。
 
-在某些情況下，編譯器不會內嵌特定函式機械的原因。 例如，編譯器不會內嵌：
+在某些情況下，編譯器不會針對機械原因內嵌特定函式。 例如，編譯器不會內嵌：
 
-- 如果這會導致混合這兩種 SEH 的函式和C++EH。
+- 函式，如果它會導致同時混用 SEH C++和 EH，則為函數。
 
-- 複製具有某些函式會建構-GX/EHs//eha 時，傳值方式傳遞的物件。
+- 當-GX/EHs/EHa 為 on 時，某些具有複製結構化物件的函式會以傳值方式傳遞。
 
-- -GX/EHs//eha 時，無法回溯物件傳回值的函式。
+- 當-GX/EHs/EHa 為 on 時，函數會以傳值方式傳回 unwindable 物件。
 
-- 內嵌組譯碼不含-Og/Ox/O1/O2 編譯時使用的函式。
+- 不使用-Og/Ox/O1/O2 編譯時，具有內嵌組解碼的函式。
 
-- 具有變數引數清單的函式。
+- 具有可變引數清單的函式。
 
-- 具有的函式**嘗試**(C++例外狀況處理) 陳述式。
+- 具有**try** （C++例外狀況處理）語句的函式。
 
-下列範例會產生 C4714:
+下列範例會產生 C4714：
 
-```
+```cpp
 // C4714.cpp
 // compile with: /Ob1 /GX /W4
 __forceinline void func1()

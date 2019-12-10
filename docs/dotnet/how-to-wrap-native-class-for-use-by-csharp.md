@@ -1,25 +1,25 @@
 ---
-title: HOW TO：包裝原生類別以便讓使用C#
+title: 作法：包裝原生類別以便讓 C# 使用
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - native code [C++], Visual C# and
 - classes [C++], Visual C# and
 ms.assetid: 988819ae-cc6a-4453-8ff5-be369210d962
-ms.openlocfilehash: e58530577fdcc87f4ca168b6976a848cba29b372
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65a1b11578565e08f0be7aa04f96d3da4cbfbf7a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387119"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988129"
 ---
-# <a name="how-to-wrap-native-class-for-use-by-c"></a>HOW TO：包裝原生類別以便讓使用C#
+# <a name="how-to-wrap-native-class-for-use-by-c"></a>作法：包裝原生類別以便讓 C# 使用
 
-這個範例示範如何包裝原生C++類別，因此它可供撰寫的程式碼C#，或其他.NET 語言。
+這個範例示範如何包裝原生C++類別，使其可供以C#或其他 .net 語言撰寫的程式碼使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // wrap_native_class_for_mgd_consumption.cpp
 // compile with: /clr /LD
 #include <windows.h>
@@ -67,6 +67,6 @@ private:
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

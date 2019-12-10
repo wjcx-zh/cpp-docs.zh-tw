@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷影像是否為原生或 CLR
+title: 如何：判斷影像是否為原生或 CLR
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,24 +8,24 @@ helpviewer_keywords:
 - /clr compiler option [C++], detecting use in compilation
 - common language runtime, /clr compiler option
 ms.assetid: 5a854822-6172-4b22-b236-320165412568
-ms.openlocfilehash: 541581e0f172c8ce2601e2e476ccd03a49757f80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5149440e172b764278c5ee816827c2d13e2b4c0e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387340"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988503"
 ---
-# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>HOW TO：判斷影像是否為原生或 CLR
+# <a name="how-to-determine-if-an-image-is-native-or-clr"></a>如何：判斷影像是否為原生或 CLR
 
-其中一種方式來判斷是否已建置映像，common language runtime 是使用**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。
+判斷是否已為 common language runtime 建立影像的一種方式是使用**dumpbin**[/CLRHEADER](../build/reference/clrheader.md)。
 
-您也以程式設計的方式可以檢查是否為通用語言執行平台建置映像。 如需詳細資訊，請參閱[如何：偵測 /clr 編譯](../dotnet/how-to-detect-clr-compilation.md)。
+您也可以透過程式設計方式檢查是否已為 common language runtime 建立影像。 如需詳細資訊，請參閱[如何：偵測/Clr 編譯](../dotnet/how-to-detect-clr-compilation.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會判斷是否要在通用語言執行平台上執行建置映像。
+下列範例會判斷是否已建立影像，以在 common language runtime 上執行。
 
-```
+```cpp
 // detect_image_type.cpp
 // compile with: /clr
 using namespace System;
@@ -81,6 +81,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

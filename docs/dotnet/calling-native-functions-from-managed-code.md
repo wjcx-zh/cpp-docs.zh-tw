@@ -9,33 +9,33 @@ helpviewer_keywords:
 - calling native functions from managed code
 - interop [C++], calling native functions from managed code
 ms.assetid: 982cef18-20d9-42b4-8242-a77fa65f2e36
-ms.openlocfilehash: 285bfabbd5935df303a39ada11c388713ae24f34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50f40cc147daaa26a7fa4e607f0d4dd42cf22d61
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209187"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988663"
 ---
 # <a name="calling-native-functions-from-managed-code"></a>從 Managed 程式碼呼叫原生函式
 
-Common language runtime 提供平台叫用服務或 PInvoke，可讓 managed 程式碼呼叫原生動態連結程式庫 (Dll) 中的 C 樣式函式。 相同封送處理的資料會用於 COM 互通性與執行階段以及"It Just Works"（IJW) 機制。
+Common Language Runtime 提供了平台引動服務 (Platform Invocation Services，PInvoke)，可讓 Managed 程式碼呼叫原生動態連結程式庫 (DLL) 中的 C-Style 函式。 所使用的資料封送處理，與 COM 和執行階段的互通性以及 "It Just Works" (IJW) 機制所使用的相同。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
 - [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-此章節中的範例僅說明如何`PInvoke`可用。 `PInvoke` 可以簡化自訂的資料封送處理，因為您提供封送處理資訊而非撰寫程序的封送處理程式碼的屬性中以宣告方式。
+本章節中的範例僅說明如何使用 `PInvoke`。 因為您會在屬性 (Attribute) 中以宣告方式提供封送處理資訊，而非撰寫程序性封送處理程式碼，因此 `PInvoke` 可以簡化自訂的資料封送處理。
 
 > [!NOTE]
->  封送處理的程式庫會提供資料以最佳化方式的原生和 managed 環境之間封送處理的替代方式。 請參閱[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)如需有關封送處理程式庫。 封送處理程式庫是使用僅限資料，而非用於函式。
+>  封送處理程式庫所提供的替代方式，能夠以最佳化的方式在原生及 Managed 環境之間封送處理資料。 如需封送處理程式庫的詳細資訊，請參閱[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)。 封送處理程式庫僅供資料使用，而不能由函式使用。
 
 ## <a name="pinvoke-and-the-dllimport-attribute"></a>PInvoke 和 DllImport 屬性
 
-下列範例示範使用`PInvoke`視覺效果中C++程式。 原生函式 puts 定義於 msvcrt.dll。 DllImport 屬性用於宣告 puts。
+下列範例會示範在 Visual C++ 程式中使用 `PInvoke`。 原生函式 puts 定義於 msvcrt.dll。 DllImport 屬性會用來宣告 puts。
 
-```
+```cpp
 // platform_invocation_services.cpp
 // compile with: /clr
 using namespace System;
@@ -50,9 +50,9 @@ int main() {
 }
 ```
 
-下列範例相當於先前的範例中，但使用 IJW。
+下列範例的作用與上一個範例相同，但使用 IJW。
 
-```
+```cpp
 // platform_invocation_services_2.cpp
 // compile with: /clr
 using namespace System;
@@ -71,31 +71,31 @@ int main() {
 
 ### <a name="advantages-of-ijw"></a>IJW 的優點
 
-- 不需要撰寫`DLLImport`屬性宣告的程式使用的 unmanaged api。 只包含標頭檔和匯入程式庫的連結。
+- 不需為程式所使用的 Unmanaged API 撰寫 `DLLImport` 屬性宣告。 只要包含標頭檔和並與匯入程式庫連結即可。
 
-- IJW 機制會稍微快 （例如，IJW stub 不需要檢查是否要固定或複製資料項目，因為該作業由開發人員明確執行）。
+- IJW 機制會更快一點 (例如，IJW Stub 不需要檢查是否要固定或複製資料項目，因為該作業是由開發人員明確執行)。
 
-- 它清楚說明效能問題。 在此情況下，會從 Unicode 字串轉譯成 ANSI 字串，而且您的事實會有附帶的記憶體配置和解除配置。 在此情況下，開發人員撰寫程式碼使用 IJW 會了解，呼叫`_putws`並使用`PtrToStringChars`會得到較佳的效能。
+- 它清楚說明效能問題。 在這個案例中，事實上您必須從 Unicode 字串轉譯成 ANSI 字串，並有附帶的記憶體配置和解除配置。 使用 IJW 撰寫程式碼的開發人員應該了解，呼叫 `_putws` 並使用 `PtrToStringChars` 會得到較佳效能。
 
-- 如果您呼叫許多 unmanaged 的 Api 使用相同的資料封送處理它一次，並傳遞封送處理的複製就會是比重新封送處理每次更有效率。
+- 如果您使用相同資料來呼叫許多 Unmanaged API，請進行一次封送處理，然後傳遞封送處理過的複本，這樣比起每次重新封送處理會更有效率。
 
 ### <a name="disadvantages-of-ijw"></a>IJW 的缺點
 
-- 封送處理必須明確指定在程式碼，而不是由屬性 （這通常會有適當的預設值）。
+- 封送處理必須在程式碼中明確指定，而不是由屬性指定 (通常都會有適當的預設值)。
 
-- 封送處理程式碼是以內嵌，其所在的應用程式邏輯流程中較具侵入性。
+- 封送處理程式碼是內嵌，在應用程式邏輯流程中較具侵入性。
 
-- 由於明確封送處理 Api 會傳回`IntPtr`32 位元到 64 位元可攜性的類型，您必須使用額外`ToPointer`呼叫。
+- 由於明確封送處理 API 會對 32 位元至 64 位元可攜性傳回 `IntPtr` 類型，因此您必須使用額外的 `ToPointer` 呼叫。
 
-所公開的特定方法C++是更有效率且明確的方法，但代價是額外的複雜度。
+C++ 所公開的特定方法是更有效率且明確的方法，但其代價是額外的複雜度。
 
-如果應用程式會使用主要 unmanaged 的資料類型，或如果它呼叫 unmanaged 的 Api 多於.NET Framework Api 時，我們建議您將使用 IJW 功能。 若要在多半為 managed 應用程式中呼叫偶爾 unmanaged 的 API，選擇是更為合適。
+如果應用程式主要使用 Unmanaged 資料類型，或是呼叫 Unmanaged API 多於 .NET Framework API，我們便會建議您使用 IJW 功能。 若要在多半為 Managed 的應用程式中偶爾呼叫 Unmanaged API，此選擇更為合適。
 
-## <a name="pinvoke-with-windows-apis"></a>PInvoke 與 Windows Api
+## <a name="pinvoke-with-windows-apis"></a>PInvoke 與 Windows API
 
-PInvoke 是方便您在 Windows 中呼叫函式。
+PInvoke 對於呼叫 Windows 中的函式來說非常方便。
 
-在此範例中，視覺效果C++程式交互操作的 MessageBox 函式，是 Win32 API 的一部分。
+在這個範例中，Visual C++ 程式會與 Win32 API 中的 MessageBox 函式互相操作。
 
 ```cpp
 // platform_invocation_services_4.cpp
@@ -113,28 +113,28 @@ int main() {
 }
 ```
 
-輸出是訊息方塊具有標題為 PInvoke Test 且包含文字 Hello World ！。
+輸出是標題為 PInvoke Test 的訊息方塊，並含有 Hello World! 文字。
 
-PInvoke 也會使用封送處理的資訊來查詢 DLL 中的函式。 在 user32.dll 中沒有其實沒有 MessageBox 函式，但 CharSet = charset:: Ansi 允許 PInvoke 使用 MessageBoxA，ANSI 版本，而不是 MessageBoxW，也就是 Unicode 版本。 一般情況下，我們建議您使用的 unmanaged Api 的 Unicode 版本，因為這樣會免除從原生 Unicode 格式的額外負荷的轉譯.NET Framework 的 string 物件為 ANSI。
+PInvoke 也會使用封送處理資訊來查詢 DLL 中的函式。 在 user32.dll 中，其實沒有 MessageBox 函式，但 CharSet=CharSet::Ansi 允許 PInvoke 使用 MessageBoxA (ANSI 版本)，而不是 MessageBoxW (Unicode 版本)。 一般而言，我們建議您使用 Unicode 版本的 Unmanaged API，因為這樣會免除從 .NET Framework 原生 Unicode 格式字串物件轉譯成 ANSI 的額外負荷。
 
 ## <a name="when-not-to-use-pinvoke"></a>不使用 PInvoke 的時機
 
-使用 PInvoke 不適用於 Dll 中的所有 c-style 函式。 例如，假設那里 mylib.dll 中的函式 MakeSpecial 宣告，如下所示：
+DLL 中的所有 C-Style 函式並不適合使用 PInvoke。 例如，假設在 mylib.dll 中有函式 MakeSpecial 宣告如下：
 
 `char * MakeSpecial(char * pszString);`
 
-如果我們使用視覺效果中的 PInvokeC++應用程式中，我們可能會撰寫類似下列內容：
+如果我們在 Visual C++ 應用程式中使用 PInvoke，可能會撰寫與下列類似的程式碼：
 
 ```cpp
 [DllImport("mylib")]
 extern "C" String * MakeSpecial([MarshalAs(UnmanagedType::LPStr)] String ^);
 ```
 
-困難之處在於，我們無法刪除 MakeSpecial 所傳回之 unmanaged 字串的記憶體。 其他透過 PInvoke 所呼叫的函式會傳回不需要由使用者解除配置的內部緩衝區的指標。 在此情況下，使用 IJW 功能是理所當然的選擇。
+其困難之處在於，我們無法刪除 MakeSpecial 所傳回之 Unmanaged 字串的記憶體。 其他透過 PInvoke 所呼叫的函式會傳回內部緩衝區的指標，該緩衝區不需要由使用者解除配置。 在這個案例中，使用 IJW 功能是顯而易見的選項。
 
 ## <a name="limitations-of-pinvoke"></a>PInvoke 的限制
 
-您無法從先前做為參數的原生函式來傳回完全相同的指標。 如果原生函式會傳回它被封送處理的指標，由 PInvoke，可能會發生記憶體損毀和例外狀況。
+從原生函式中，無法傳回先前做為參數的完全相同指標。 如果原生函式傳回已經由 PInvoke 封送處理過的指標，可能會發生記憶體損毀和例外狀況。
 
 ```cpp
 __declspec(dllexport)
@@ -143,9 +143,9 @@ char* fstringA(char* param) {
 }
 ```
 
-下列範例會顯示這個問題，並輸出即使程式看起來提供正確的輸出，來自已經釋放的記憶體。
+下列範例中會顯示這個問題，雖然程式看起來提供正確輸出，但輸出其實是來自已經釋放的記憶體。
 
-```
+```cpp
 // platform_invocation_services_5.cpp
 // compile with: /clr /c
 using namespace System;
@@ -168,13 +168,13 @@ int main() {
 
 ## <a name="marshaling-arguments"></a>封送處理引數
 
-具有`PInvoke`，沒有封送處理之間需要管理和C++具有相同格式的原生基本類型。 例如，沒有封送處理是必要 Int32 與 int 之間，或 Double 與 double 之間。
+使用 `PInvoke` 時，具有相同格式的 Managed 和 C++ 原生基本類型 (Primitive Type) 之間不需要封送處理。 例如，Int32 與 int 之間，或 Double 與 double 之間不需要封送處理。
 
-不過，您必須封送處理類型，並沒有相同的格式。 這包括 char、 string 和 struct 類型。 下表顯示各種類型封送處理器所使用的對應：
+不過，您必須對沒有相同格式的類型進行封送處理。 這包括 char、string 和 struct 類型。 下表會顯示封送處理器針對各種類型所使用的對應。
 
-|wtypes.h|Visual C++|視覺化C++以 /clr|Common Language Runtime|
+|wtypes.h|Visual C++|Visual C++ 含 /clr|Common Language Runtime|
 |--------------|------------------|-----------------------------|-----------------------------|
-|HANDLE|Void \*|Void \*|IntPtr、 UIntPtr|
+|HANDLE|void \*|void \*|IntPtr、UIntPtr|
 |BYTE|unsigned char|unsigned char|Byte|
 |SHORT|short|short|Int16|
 |WORD|unsigned short|unsigned short|UInt16|
@@ -185,22 +185,22 @@ int main() {
 |DWORD|unsigned long|unsigned long|UInt32|
 |ULONG|unsigned long|unsigned long|UInt32|
 |CHAR|char|char|Char|
-|LPCSTR|Char \*|字串 ^ [in]，StringBuilder ^ [在中，out]|字串 ^ [in]，StringBuilder ^ [在中，out]|
-|LPCSTR|const char \*|字串 ^|String|
-|LPWSTR|wchar_t \*|字串 ^ [in]，StringBuilder ^ [在中，out]|字串 ^ [in]，StringBuilder ^ [在中，out]|
-|LPCWSTR|const wchar_t \*|字串 ^|String|
-|FLOAT|float|float|Single|
-|DOUBLE|double|double|Double|
+|LPCSTR|char \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCSTR|const char \*|String ^|String|
+|LPWSTR|wchar_t \*|String ^ [in], StringBuilder ^ [in, out]|String ^ [in], StringBuilder ^ [in, out]|
+|LPCWSTR|const wchar_t \*|String ^|String|
+|FLOAT|浮動|浮動|Single|
+|DOUBLE|雙線|雙線|雙精度浮點數|
 
-封送處理器會自動釘選它的位址傳遞至 unmanaged 函式在執行階段堆積上配置的記憶體。 釘選可防止記憶體回收行程在壓縮期間移動的記憶體配置的區塊。
+如果記憶體位址傳遞至 Unmanaged 函式，封送處理器會自動將記憶體固定在執行階段堆積上。 固定可防止記憶體回收行程在壓縮期間移動記憶體的配置區塊。
 
-在本主題稍早所示的範例中，DllImport 的 CharSet 參數指定了解受管理的字串應該封送處理;在此情況下，它們應封送處理原生端的 ANSI 字串。
+在本主題前面的範例中，DllImport 的 CharSet 參數指定 Managed 字串的封送處理方式。在這個案例中，它們應封送處理成原生端的 ANSI 字串。
 
-您可以使用 MarshalAs 屬性指定原生函式個別引數封送處理的資訊。 有數種選擇來封送處理字串\*引數：BStr、 ANSIBStr、 TBStr、 LPStr、 LPWStr 和 LPTStr。 預設值為 LPStr。
+您可以使用 MarshalAs 屬性指定原生函式個別引數的封送處理資訊。 有數個選項可將字串封送處理 \* 引數： BStr、ANSIBStr、TBStr、LPStr、LPWStr 和 LPTStr。 預設值為 LPStr。
 
-在此範例中，字串會封送處理為雙位元組 Unicode 字元字串 LPWStr。 輸出是 Hello World 的第一個字母 ！ 因為封送處理字串的第二個位元組是 null，而且 puts 會將此視為字串結尾標記。
+在這個範例中，字串會封送處理成雙位元組 Unicode 字元字串 LPWStr。 輸出是 Hello World 的第一個字母！ 由於封送處理字串的第二個位元組是 null，因此會將它解釋為字串結束記號。
 
-```
+```cpp
 // platform_invocation_services_3.cpp
 // compile with: /clr
 using namespace System;
@@ -215,16 +215,16 @@ int main() {
 }
 ```
 
-MarshalAs 屬性位於 System::Runtime::InteropServices 命名空間。 屬性可以搭配其他資料類型，例如陣列。
+MarshalAs 屬性位於 System::Runtime::InteropServices 命名空間中。 此屬性可以和其他資料類型 (例如陣列) 一起使用。
 
-如本主題稍早所述，封送處理程式庫會提供全新最佳化方法的封送處理原生和 managed 環境之間的資料。 如需詳細資訊，請參閱 < [Overview of Marshaling 中C++ ](../dotnet/overview-of-marshaling-in-cpp.md)。
+如本主題先前所述，封送處理程式庫提供在原生及 Managed 環境之間封送處理資料的全新最佳化方法。 如需詳細資訊，請參閱[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)。
 
 ## <a name="performance-considerations"></a>效能考量
 
-PInvoke 的額外負荷介於 10 到 30 之間 x86 每次呼叫的指示。 除了這個固定成本，封送處理會建立額外負荷。 在 managed 和 unmanaged 程式碼中有相同表示的 blittable 類型之間沒有任何封送處理的成本。 比方說，是 int 和 Int32 之間轉譯任何成本。
+PInvoke 的每呼叫額外負荷介於 10 和 30 x86 個指令之間。 除了這個固定成本，封送處理會產生更多額外負荷。 對於 Managed 和 Unmanaged 程式碼有相同表示的 Blittable 類型間，沒有封送處理成本。 例如，在 int 和 Int32 之間轉譯，沒有任何成本。
 
-為了達到最佳效能，有較少越好，而不是封送處理較少的資料，每次呼叫的多個呼叫，最多資料封送處理的 PInvoke 呼叫。
+如需達成較佳效能，請少量執行封送處理了大量資料的 PInvoke 呼叫，而非大量執行在每次呼叫中封送處理較少資料的呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [原生和 .NET 互通性](../dotnet/native-and-dotnet-interoperability.md)

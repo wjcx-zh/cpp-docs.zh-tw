@@ -1,31 +1,31 @@
 ---
-title: HOW TO：在-clr 編譯中使用原生類型
+title: 如何：在-clr 編譯中使用原生類型
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b506c3d825c4c26236a4ac3fc9682067a011315a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387197"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988430"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>HOW TO：在 /clr 編譯中使用原生類型
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>如何：在 /clr 編譯中使用原生類型
 
-您可以定義中的原生型別 **/clr**編譯和任何使用組件中該原生類型無效。 不過，原生型別將無法供使用，從參考的中繼資料。
+您可以在 **/clr**編譯中定義原生類型，而且該原生類型從元件內的任何使用都是有效的。 不過，原生類型將無法從參考的中繼資料中使用。
 
-每個組件必須包含會使用每個原生類型的定義。
+每個元件都必須包含所要使用之每個原生類型的定義。
 
 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../build/reference/clr-common-language-runtime-compilation.md)。
 
 ## <a name="example"></a>範例
 
-此範例會建立定義，並使用原生類型的元件。
+這個範例會建立元件，以定義並使用原生類型。
 
-```
+```cpp
 // use_native_type_in_clr.cpp
 // compile with: /clr /LD
 public struct NativeClass {
@@ -42,9 +42,9 @@ public ref struct ManagedClass {
 
 ## <a name="example"></a>範例
 
-這個範例會定義的用戶端所使用的元件。 請注意它是存取原生類型中，發生錯誤，除非它在編譯模組中定義。
+這個範例會定義使用此元件的用戶端。 請注意，存取原生類型是錯誤的，除非在編譯模組中定義它。
 
-```
+```cpp
 // use_native_type_in_clr_2.cpp
 // compile with: /clr
 #using "use_native_type_in_clr.dll"
@@ -61,6 +61,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

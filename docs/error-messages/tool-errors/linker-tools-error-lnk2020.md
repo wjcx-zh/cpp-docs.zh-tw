@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2020
 ms.assetid: 4dd017d0-5e83-471b-ac8a-538ac1ed6870
-ms.openlocfilehash: 7290a90dfd92d84c4632e7f9dd38d36eccd4ac27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6be2548e277af08f1069a70b26cd761db835bc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386326"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988770"
 ---
 # <a name="linker-tools-error-lnk2020"></a>連結器工具錯誤 LNK2020
 
-無法解析的語彙基元 'token'
+無法解析的標記 ' token '
 
-類似於發生未定義的外部錯誤，不同之處在於會透過中繼資料的參考。 在中繼資料，就必須定義所有函式和資料。
+類似于未定義的外部錯誤，不同之處在于參考是透過中繼資料。 在中繼資料中，必須定義所有函數和資料。
 
-若要解決：
+解決方式：
 
-- 定義遺漏的函式或資料，或
+- 定義遺失的函數或資料，或
 
-- 包含的物件檔案或遺漏的函式或資料已定義所在的程式庫。
+- 包含已定義遺失函數或資料的物件檔案或程式庫。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 LNK2020。
 
-```
+```cpp
 // LNK2020.cpp
 // compile with: /clr /LD
 ref struct A {
@@ -46,11 +46,11 @@ ref struct B {
 
 ## <a name="example"></a>範例
 
-如果您建立 managed 的範本類型的變數，但請勿也產生型別，也會發生 LNK2020。
+如果您建立 managed 範本類型的變數，但也不具現化類型，也會發生 LNK2020。
 
 下列範例會產生 LNK2020。
 
-```
+```cpp
 // LNK2020_b.cpp
 // compile with: /clr
 

@@ -1,10 +1,13 @@
 ---
-title: _outp、_outpw、_outpd
-ms.date: 11/04/2016
+title: outp、outpw、_outp、_outpw、_outpd
+description: 描述 Microsoft C 執行時間程式庫（CRT）的已淘汰和已移除 outp、outpw、_outp、_outpw 和 _outpd 功能。
+ms.date: 12/09/2019
 api_name:
 - _outpd
 - _outp
 - _outpw
+- outp
+- outpw
 api_location:
 - msvcrt.dll
 - msvcr100.dll
@@ -21,6 +24,8 @@ f1_keywords:
 - _outpw
 - _outpd
 - _outp
+- outp
+- outpw
 - outpd
 helpviewer_keywords:
 - outpw function
@@ -36,46 +41,44 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: d1e7028ae833e1358ce3199b7e7079535c84d135
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944123"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988380"
 ---
-# <a name="_outp-_outpw-_outpd"></a>_outp、_outpw、_outpd
+# <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp、outpw、_outp、_outpw、_outpd
 
-從連接埠輸出一個位元組 (`_outp`)、一個字組 (`_outpw`) 或雙字組 (`_outpd`)。
-
-> [!IMPORTANT]
->  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。
+輸出、在埠、位元組（`outp`、`_outp`）、單字（`outpw`、`_outpw`）或雙字組（`_outpd`）。
 
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
-```
-
-      int _outp(
-unsigned short port,
-int databyte
+```cpp
+int _outp(
+   unsigned short port,
+   int databyte
 );
 unsigned short _outpw(
-unsigned short port,
-unsigned short dataword
+   unsigned short port,
+   unsigned short dataword
 );
 unsigned long _outpd(
-unsigned short port,
-unsigned long dataword
+   unsigned short port,
+   unsigned long dataword
 );
 ```
 
-#### <a name="parameters"></a>參數
-*連接埠*<br/>
-連接埠號碼。
+### <a name="parameters"></a>參數
 
-*databyte, dataword*<br/>
+*埠*\
+連接埠編號。
+
+*databyte、dataword*\
 輸出值。
 
 ## <a name="return-value"></a>傳回值
@@ -88,6 +91,8 @@ unsigned long dataword
 
 由於這些函式直接寫入 I/O 連接埠，因此無法用於使用者程式碼。 如需如何使用這些作業系統中之 I/O 連接埠的資訊，請前往 MSDN 搜尋 "Serial Communications in Win32"。
 
+`outp` 和 `outpw` 名稱是 `_outp` 和 `_outpw` 函式的舊名稱、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -96,13 +101,13 @@ unsigned long dataword
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
 所有版本的 [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[主控台和連接埠 I/O ](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)
+[主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md)\
+[sct.inp、inpw、_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

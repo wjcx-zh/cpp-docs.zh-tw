@@ -1,5 +1,5 @@
 ---
-title: 'HOW TO：:: Guid 和 _GUID 之間轉換'
+title: 如何：在 System::Guid 和 _GUID 之間轉換
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: e74a95eea1018916dcdef6b133ef1f0ab0533f96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0150053157d2694788cd50bf64097805a8eda88
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379060"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988262"
 ---
-# <a name="how-to-convert-between-systemguid-and-guid"></a>HOW TO：:: Guid 和 _GUID 之間轉換
+# <a name="how-to-convert-between-systemguid-and-_guid"></a>如何：在 System::Guid 和 _GUID 之間轉換
 
-下列程式碼範例示範如何之間轉換<xref:System.Guid>和`_GUID`。
+下列程式碼範例示範如何在 <xref:System.Guid> 和 `_GUID`之間進行轉換。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // convert_guids.cpp
 // compile with: /clr
 #include <windows.h>
@@ -65,6 +65,6 @@ int main() {
 11111111-2222-3333-4455-555555555555
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

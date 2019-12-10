@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以原生類型宣告控制代碼
+title: 如何：以原生類型宣告控制代碼
 ms.custom: get-started-article
 ms.date: 11/04/2016
 f1_keywords:
@@ -9,26 +9,26 @@ helpviewer_keywords:
 - gcroot keyword [C++]
 - types [C++], declaring handles in
 ms.assetid: b8c0eead-17e5-4003-b21f-b673f997d79f
-ms.openlocfilehash: f5d6d31be9f3c10e1a56639ccf20663ce59d7941
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11dbc196a89a224afe02312fbe4dff99d8467f4c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387405"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988244"
 ---
-# <a name="how-to-declare-handles-in-native-types"></a>HOW TO：以原生類型宣告控制代碼
+# <a name="how-to-declare-handles-in-native-types"></a>如何：以原生類型宣告控制代碼
 
-您無法宣告原生類型中的控制代碼型別。 vcclr.h 提供型別安全包裝函式樣板`gcroot`參考的 CLR 物件，從C++堆積。 此範本可讓您在原生類型中嵌入虛擬控制代碼，並將它視為基礎型別。 在大部分情況下，您可以使用`gcroot`物件做為內嵌的型別，而不需要任何轉換。 不過，透過[針對每個，在](../dotnet/for-each-in.md)，您必須使用`static_cast`擷取基礎受管理的參考。
+您不能在原生類型中宣告控制碼類型。 vcclr 提供型別安全的包裝函式範本，`gcroot` 從C++堆積參考 CLR 物件。 此範本可讓您將虛擬控制碼內嵌在原生類型中，並將它視為基礎類型。 在大部分的情況下，您可以使用 `gcroot` 物件做為內嵌類型，而不需要任何轉換。 不過，[針對每個，在中](../dotnet/for-each-in.md)，您必須使用 `static_cast` 來取得基礎的 managed 參考。
 
-`gcroot`範本實作到記憶體回收堆積中使用的實值類別 System::Runtime::InteropServices::GCHandle，提供 「 handles 」 功能。 請注意，本身的控點無法回收，並釋放時不再使用中的解構函式中`gcroot`類別 （此解構函式無法呼叫手動）。 如果您具現化`gcroot`物件上原生堆積中，您必須呼叫刪除該資源上。
+`gcroot` 範本是使用實值類別 System：： Runtime：： System.runtime.interopservices.outattribute：： GCHandle 的功能來實作為，它會在垃圾收集堆積中提供「控制碼」。 請注意，控制碼本身不會進行垃圾收集，並且會在 `gcroot` 類別中的析構函式不再使用時釋放（此析構函式無法以手動方式呼叫）。 如果您在原生堆積上具現化 `gcroot` 物件，您必須在該資源上呼叫 delete。
 
-執行階段會維持控制代碼所參考的 CLR 物件之間的關聯。 當 CLR 物件會隨之移動記憶體回收堆積時，控制代碼會傳回物件的新位址。 變數不必先將它指派給釘選`gcroot`範本。
+執行時間會維護控制碼和 CLR 物件之間的關聯，它會參考它。 當 CLR 物件與垃圾收集堆積一起移動時，控制碼會傳回物件的新位址。 變數在指派給 `gcroot` 範本之前，不需要固定。
 
 ## <a name="example"></a>範例
 
-此範例示範如何建立`gcroot`原生堆疊上的物件。
+這個範例會示範如何在原生堆疊上建立 `gcroot` 物件。
 
-```
+```cpp
 // mcpp_gcroot.cpp
 // compile with: /clr
 #include <vcclr.h>
@@ -53,9 +53,9 @@ hello
 
 ## <a name="example"></a>範例
 
-此範例示範如何建立`gcroot`原生堆積上的物件。
+這個範例會示範如何在原生堆積上建立 `gcroot` 物件。
 
-```
+```cpp
 // mcpp_gcroot_2.cpp
 // compile with: /clr
 // compile with: /clr
@@ -83,9 +83,9 @@ hello
 
 ## <a name="example"></a>範例
 
-此範例示範如何使用`gcroot`保留在原生類型中的實值型別 （不是參考型別） 的參考，藉由使用`gcroot`boxed 型別上。
+這個範例會示範如何使用 `gcroot` 來保存原生類型中的實數值型別（不是參考型別）的參考，方法是使用已裝箱類型上的 `gcroot`。
 
-```
+```cpp
 // mcpp_gcroot_3.cpp
 // compile with: /clr
 #include < vcclr.h >
@@ -113,6 +113,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

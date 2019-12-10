@@ -1,25 +1,25 @@
 ---
-title: HOW TO：保存參考實值型別的原生型別
+title: 如何：以原生類型存放實值類型的參考
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - value type reference in native type
 - reference to value type in native type
 ms.assetid: 1eabf8be-7d4f-4339-9027-48d5c4244483
-ms.openlocfilehash: 3b1dfdc5a519bf51f16b7afbc25d49dc38b8f076
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b71701c771f6f49bae172284e23dd9eba2aeded
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324957"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988485"
 ---
-# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>HOW TO：保存參考實值型別的原生型別
+# <a name="how-to-hold-reference-to-value-type-in-native-type"></a>如何：以原生類型存放實值類型的參考
 
-使用`gcroot`上要在原生類型存放實值類型的參考的 boxed 型別。
+使用已裝箱類型上的 `gcroot` 來保存原生類型中實值型別的參考。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // reference_to_value_in_native.cpp
 // compile with: /clr
 #using <mscorlib.dll>
@@ -49,6 +49,6 @@ int main() {
 String in V: Hello
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

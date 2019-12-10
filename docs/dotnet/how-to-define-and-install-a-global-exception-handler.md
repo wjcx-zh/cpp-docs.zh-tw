@@ -1,25 +1,25 @@
 ---
-title: HOW TO：定義與安裝全域例外狀況處理常式
+title: 如何：定義與安裝全域例外狀況處理常式
 ms.date: 11/04/2016
 helpviewer_keywords:
 - handlers, global
 ms.assetid: dd88a812-3bc7-4ce8-8283-4b674c246534
-ms.openlocfilehash: d1b8452d19172bf16817c36032189accfd855539
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 27666702a548c0c71b7e25597a1927520968b124
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387392"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988308"
 ---
-# <a name="how-to-define-and-install-a-global-exception-handler"></a>HOW TO：定義與安裝全域例外狀況處理常式
+# <a name="how-to-define-and-install-a-global-exception-handler"></a>如何：定義與安裝全域例外狀況處理常式
 
-下列程式碼範例示範如何處理的例外狀況可以擷取。 範例表單包含一個按鈕，按下時，會執行為 null 的參考，導致系統擲回例外狀況。 這項功能代表典型程式碼失敗。 Main 函式會安裝整個應用程式的例外狀況處理常式會攔截產生的例外狀況。
+下列程式碼範例會示範如何捕捉未處理的例外狀況。 範例表單包含一個按鈕，當按下時，會執行 null 參考，導致擲回例外狀況。 這種功能代表一般的程式碼失敗。 主要函式所安裝的整個應用程式例外狀況處理常式會攔截產生的例外狀況。
 
-這可以藉由繫結的委派<xref:System.Windows.Forms.Application.ThreadException>事件。 在此情況下，後續的例外狀況則會傳送至`App::OnUnhandled`方法。
+這是藉由將委派系結至 <xref:System.Windows.Forms.Application.ThreadException> 事件來完成。 在此情況下，後續的例外狀況就會傳送至 `App::OnUnhandled` 方法。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // global_exception_handler.cpp
 // compile with: /clr
 #using <system.dll>
@@ -71,6 +71,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [例外狀況處理](../extensions/exception-handling-cpp-component-extensions.md)

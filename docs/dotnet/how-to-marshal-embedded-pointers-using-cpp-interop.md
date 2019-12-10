@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理內嵌指標使用C++Interop
+title: 如何：使用 C++ Interop 封送處理內嵌指標
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 972d7a9c09100c35cb0bf527efbd0884c909c46d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345732"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988181"
 ---
-# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>HOW TO：封送處理內嵌指標使用C++Interop
+# <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>如何：使用 C++ Interop 封送處理內嵌指標
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例會示範如何呼叫會採用結構，包含指標的 unmanaged 函式，從 managed 函式。 Managed 函式會建立結構的執行個體，並使用新的關鍵字將內嵌的指標初始化 (而非[ref new 和 gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)關鍵字)。 這會配置原生堆積上的記憶體，因為沒有需要 pin 要隱藏記憶體回收的陣列。 不過，您必須明確地以避免記憶體流失刪除記憶體。
+下列範例示範如何從 managed 函式呼叫接受包含指標之結構的非受控函式。 Managed 函式會建立結構的實例，並使用 new 關鍵字（而不是[ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)關鍵字）初始化內嵌指標。 因為這會在原生堆積上配置記憶體，所以不需要釘選陣列來抑制垃圾收集。 不過，必須明確刪除記憶體，以避免記憶體流失。
 
-```
+```cpp
 // marshal_embedded_pointer.cpp
 // compile with: /clr
 #include <iostream>
@@ -91,6 +91,6 @@ array[8] = 97.754975
 array[9] = 27.370446
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

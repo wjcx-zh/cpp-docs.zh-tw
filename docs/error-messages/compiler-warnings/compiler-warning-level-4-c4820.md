@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4820
 ms.assetid: 17aa29f4-c287-49b8-bc43-8ed82ffed5ea
-ms.openlocfilehash: adf8b365bc39acc1ce729e89260f8385ecb6c048
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac97a943e6a8178e930d93a097071b0e3da09773
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280395"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989059"
 ---
 # <a name="compiler-warning-level-4-c4820"></a>編譯器警告 (層級 4) C4820
 
 在成員建構 'member_name' 之後加入 'bytes' 位元組填補
 
-型別和項目的順序會造成編譯器將填補加入至結構結尾。 請參閱[對齊](../../cpp/align-cpp.md)如需有關在結構中的邊框距離。
+專案的類型和順序會導致編譯器在結構的結尾加上填補。 如需有關在結構中填補的詳細資訊，請參閱[align](../../cpp/align-cpp.md) 。
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-下列範例會產生 C4820:
+下列範例會產生 C4820：
 
-```
+```cpp
 // C4820.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4820)

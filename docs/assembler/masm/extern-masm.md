@@ -1,17 +1,17 @@
 ---
 title: EXTERN (MASM)
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - extern
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: fc66338d90b54ecb12ef3ab1aa56214fb445cb13
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 38ea50e75f2a8e19a7a99860f691904053b6739a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397558"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987849"
 ---
 # <a name="extern-masm"></a>EXTERN (MASM)
 
@@ -23,8 +23,10 @@ ms.locfileid: "74397558"
 
 ## <a name="remarks"></a>備註
 
+*Language 類型*引數只在32位 MASM 中有效。
+
 *類型*可以是[ABS](../../assembler/masm/operator-abs.md)，其會將*名稱*當做常數來匯入。 與[EXTRN](../../assembler/masm/extrn.md)相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

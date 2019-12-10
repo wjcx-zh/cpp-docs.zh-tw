@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
-ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bb7a30382bc586f4d324d47ef6e6757fac83f5ae
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384526"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988385"
 ---
 # <a name="user-defined-conversions-ccli"></a>使用者定義轉換 (C++/CLI)
 
-當其中一個轉換中的型別參考或實值型別或參考類型的執行個體時，本節會討論使用者定義轉換 (UDC)。
+當轉換中的其中一個類型是實數值型別或參考型別的參考或實例時，本節將討論使用者定義的轉換（UDC）。
 
 ## <a name="implicit-and-explicit-conversions"></a>隱含和明確轉換
 
-使用者定義的轉換可以是隱含或明確。  UDC 應該隱含如果轉換不會導致資訊遺失。 否則不應定義明確的 UDC。
+使用者定義的轉換可以是隱含或明確的。  如果轉換不會導致資訊遺失，則 UDC 應該是隱含的。 否則，應該定義明確的 UDC。
 
-原生類別的建構函式可用來參考或實值類型轉換為原生類別。
+原生類別的函式可以用來將參考或實值型別轉換成原生類別。
 
-如需有關轉換的詳細資訊，請參閱 < [Boxing](../extensions/boxing-cpp-component-extensions.md)並[標準轉換](../cpp/standard-conversions.md)。
+如需轉換的詳細資訊，請參閱[裝箱](../extensions/boxing-cpp-component-extensions.md)和[標準轉換](../cpp/standard-conversions.md)。
 
-```
+```cpp
 // mcpp_User_Defined_Conversions.cpp
 // compile with: /clr
 #include "stdio.h"
@@ -69,7 +69,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 in N::N
@@ -78,25 +78,25 @@ in N::N
 
 ## <a name="convert-from-operators"></a>轉換來源運算子
 
-轉換來源運算子會從其他類別的物件建立定義運算子之類別的物件。
+Convert-from 運算子會建立類別的物件，其中運算子是從其他類別的物件所定義。
 
-標準C++不支援轉換來源運算子;標準C++使用建構函式針對此目的。 不過，使用 CLR 型別，視覺效果時C++提供呼叫轉換來源運算子的語法支援。
+標準C++不支援 convert from 運算子;標準C++針對此用途使用了函數。 不過，使用 CLR 型別時， C++視覺效果會提供呼叫 convert from 運算子的語法支援。
 
-為了與其他符合 CLS 相容語言交互操作，您可能想將特定類別的每個使用者定義一元 （unary） 建構函式包裝對應的轉換來源運算子。
+若要與其他符合 CLS 標準的語言互通，您可能想要使用對應的 convert from 運算子，來包裝指定類別的每個使用者定義一元函式。
 
-轉換來源運算子：
+從運算子轉換：
 
-- 應該定義為靜態函式。
+- 應定義為靜態函式。
 
-- 可以是 （適用於不會遺失有效位數，例如簡短-int 的轉換） 明確或隱含時可能會遺失有效位數。
+- 當可能會遺失有效位數時，可以是隱含的（適用于不會遺失有效位數的轉換，例如 short to int）或 explicit。
 
-- 應該會傳回包含類別的物件。
+- 應傳回包含類別的物件。
 
-- 必須有唯一的參數類型為"from"類型。
+- 應將 "from" 類型當做唯一的參數類型。
 
-下列範例示範隱含和明確的 「 轉換來源 」、 使用者定義轉換 (UDC) 運算子。
+下列範例顯示隱含和明確的「轉換自」、使用者定義的轉換（UDC）運算子。
 
-```
+```cpp
 // clr_udc_convert_from.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -133,7 +133,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 in operator
@@ -142,11 +142,11 @@ in constructor
 1
 ```
 
-## <a name="convert-to-operators"></a>轉換目標運算子
+## <a name="convert-to-operators"></a>轉換成運算子
 
-轉換目標運算子將某個其他物件定義運算子之類別物件的轉換。 下列範例會示範隱含的轉換目標，使用者定義轉換運算子：
+轉換成運算子會將定義運算子的類別之物件轉換為其他物件。 下列範例顯示隱含的轉換成使用者定義的轉換運算子：
 
-```
+```cpp
 // clr_udc_convert_to.cpp
 // compile with: /clr
 using namespace System;
@@ -168,15 +168,15 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 10
 ```
 
-外顯使用者定義轉換目標轉換運算子是適用於可能會遺失資料，以某種方式的轉換。 要叫用明確的轉換目標運算子，就必須使用轉型。
+明確使用者定義的轉換轉換運算子適用于可能會以某種方式遺失資料的轉換。 若要叫用明確的轉換成運算子，則必須使用 cast。
 
-```
+```cpp
 // clr_udc_convert_to_2.cpp
 // compile with: /clr
 value struct MyDouble {
@@ -197,18 +197,18 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 10.3
 10
 ```
 
-## <a name="to-convert-generic-classes"></a>若要轉換泛型類別
+## <a name="to-convert-generic-classes"></a>轉換泛型類別
 
-您可以將泛型類別轉換成 t。
+您可以將泛型類別轉換成 T。
 
-```
+```cpp
 // clr_udc_generics.cpp
 // compile with: /clr
 generic<class T>
@@ -232,15 +232,15 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 True
 ```
 
-轉換建構函式會採用型別，並使用它來建立物件。  轉換建構函式呼叫; 直接初始化轉換 （cast） 不會叫用轉換建構函式。 根據預設，轉換建構函式是明確的 CLR 型別。
+轉換的函式會採用類型，並使用它來建立物件。  轉換的函式只會使用直接初始化來呼叫;轉換不會叫用轉換的函式。 根據預設，轉換為 CLR 類型的函式是明確的。
 
-```
+```cpp
 // clr_udc_converting_constructors.cpp
 // compile with: /clr
 public ref struct R {
@@ -267,14 +267,14 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 5
 R
 ```
 
-在此程式碼範例中，隱含的靜態轉換函式的作用與明確的轉換建構函式相同的工作。
+在此程式碼範例中，隱含靜態轉換函式的作用與明確轉換的程式相同。
 
 ```
 public value struct V {
@@ -310,7 +310,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 13
@@ -319,6 +319,6 @@ int main() {
 2000
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

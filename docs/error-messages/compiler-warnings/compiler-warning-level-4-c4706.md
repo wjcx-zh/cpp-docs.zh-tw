@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4706
 ms.assetid: 89cd3f4f-812c-4a4b-9426-65a5a6d1b99c
-ms.openlocfilehash: e57470fcd8e7b014084b094c9ca5e39f0a86d85e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff8794dcf29539b492f53bfdf6f0810988c0f72
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395218"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989914"
 ---
 # <a name="compiler-warning-level-4-c4706"></a>編譯器警告 (層級 4) C4706
 
-條件運算式中使用指派運算子
+條件運算式中的指派
 
-條件運算式中的測試值已指派的結果。
+條件運算式中的測試值是指派的結果。
 
-指派有可用於另一個運算式，包括測試運算式的合法值 （值指派的左邊）。
+指派具有值（指派左邊的值），可在另一個運算式中以法律方式使用，包括測試運算式。
 
-下列範例會產生 C4706:
+下列範例會產生 C4706：
 
-```
+```cpp
 // C4706a.cpp
 // compile with: /W4
 int main()
@@ -35,9 +35,9 @@ int main()
 }
 ```
 
-即使您按兩下測試條件前後的括號，就會發生此警告：
+即使您在測試條件前後加上括弧，還是會發生警告：
 
-```
+```cpp
 // C4706b.cpp
 // compile with: /W4
 int main()
@@ -49,9 +49,9 @@ int main()
 }
 ```
 
-如果您想来測試關聯，而不進行指派，請使用`==`運算子。 例如下, 面這行測試是否與 b 相等：
+如果您想要測試關聯性，而不是進行指派，請使用 `==` 運算子。 例如，下列程式程式碼會測試 a 和 b 是否相等：
 
-```
+```cpp
 // C4706c.cpp
 // compile with: /W4
 int main()
@@ -63,9 +63,9 @@ int main()
 }
 ```
 
-如果您想要讓您的測試值指派的結果，測試以確保 指派為非零，或不是 null。 例如，下列程式碼將不會產生這個警告：
+如果您想要將測試值設為指派的結果，請進行測試以確保指派不是零或不是 null。 例如，下列程式碼不會產生這個警告：
 
-```
+```cpp
 // C4706d.cpp
 // compile with: /W4
 int main()

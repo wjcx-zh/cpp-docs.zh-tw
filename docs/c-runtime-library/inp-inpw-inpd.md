@@ -1,7 +1,10 @@
 ---
-title: _inp、_inpw、_inpd
-ms.date: 11/04/2016
+title: sct.inp、_inp、inpw、_inpw、_inpd
+description: 描述 Microsoft C 執行時間程式庫（CRT）的已淘汰和已移除 sct.inp、_inp、inpw、_inpw 和 _inpd 功能。
+ms.date: 12/09/2019
 api_name:
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -18,7 +21,8 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- inpd
+- inp
+- inpw
 - _inp
 - _inpw
 - _inpd
@@ -32,26 +36,24 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 4668002fdf709e3e425ac379f136e228250896d4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 48e0e58d2886c5a8bb90a86c81cb785d364666e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944986"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988708"
 ---
-# <a name="_inp-_inpw-_inpd"></a>_inp、_inpw、_inpd
+# <a name="inp-_inp-inpw-_inpw-_inpd"></a>sct.inp、_inp、inpw、_inpw、_inpd
 
-從連接埠輸入一個位元組 (`_inp`)、一個字組 (`_inpw`) 或雙字組 (`_inpd`)。
-
-> [!IMPORTANT]
->  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。
+輸入、埠、位元組（`inp`、`_inp`）、單字（`inpw`、`_inpw`）或雙字組（`_inpd`）。
 
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。  
+> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 int _inp(
    unsigned short port
 );
@@ -63,9 +65,9 @@ unsigned long _inpd(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
+*埠*\
 I/O 連接埠號碼。
 
 ## <a name="return-value"></a>傳回值
@@ -78,6 +80,8 @@ I/O 連接埠號碼。
 
 由於這些函式直接從 I/O 連接埠讀取，因此無法用於使用者程式碼。
 
+`inp` 和 `inpw` 名稱是 `_inp` 和 `_inpw` 函式的舊名稱、已被取代的名稱。 如需詳細資訊，請參閱[POSIX 函數名稱](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
+
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
@@ -86,13 +90,13 @@ I/O 連接埠號碼。
 |`_inpw`|\<conio.h>|
 |`_inpd`|\<conio.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
 所有版本的 [C 執行階段程式庫](../c-runtime-library/crt-library-features.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[主控台和連接埠 I/O ](../c-runtime-library/console-and-port-i-o.md)<br/>
-[_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)
+[主控台和連接埠 I/O](../c-runtime-library/console-and-port-i-o.md)\
+[outp、outpw、_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)

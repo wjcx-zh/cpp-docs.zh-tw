@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4709
 ms.assetid: 8abfdd45-8c70-4c27-b0fb-ca0c3f0fccf9
-ms.openlocfilehash: acc74f55a423f1cd18d385cd4dfbec7dfa01c422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4dd06baf9da3ae454bf87747bdafb2639d817fef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395205"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74989871"
 ---
 # <a name="compiler-warning-level-4-c4709"></a>編譯器警告 (層級 4) C4709
 
 陣列索引運算式中的逗號運算子
 
-在陣列索引運算式中逗號時，編譯器會使用最後一個逗號後面的值。
+當陣列索引運算式中出現逗號時，編譯器會使用最後一個逗號之後的值。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4709:
+下列範例會產生 C4709：
 
-```
+```cpp
 // C4709.cpp
 // compile with: /W4
 #include <stdio.h>

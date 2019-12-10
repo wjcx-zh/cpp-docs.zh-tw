@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理結構使用C++Interop
+title: 如何：使用 C++ Interop 封送處理結構
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: c2080200-f983-4d6e-a557-cd870f060a54
-ms.openlocfilehash: 93aeabc3fe984bee8a9281281320d61dccd182bf
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: a77745c9a60c9759f8b3b2df91bcbc4cb507533b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345704"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988176"
 ---
-# <a name="how-to-marshal-structures-using-c-interop"></a>HOW TO：封送處理結構使用C++Interop
+# <a name="how-to-marshal-structures-using-c-interop"></a>如何：使用 C++ Interop 封送處理結構
 
-本主題將示範一個 facet 視覺效果的C++互通性。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
+本主題示範視覺化C++互通性的一個 facet。 如需詳細資訊，請參閱[使用C++ Interop （隱含 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例會示範將傳遞結構從 managed 至 unmanaged 函式，值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[How to:封送處理內嵌指標使用C++Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
+下列範例示範如何將結構從 managed 傳遞至非受控函式，方法是透過值和傳址方式。 因為此範例中的結構只包含簡單的內建資料類型（請參閱全選[和非全像的類型](/dotnet/framework/interop/blittable-and-non-blittable-types)），所以不需要特殊的封送處理。 若要封送處理非類型的結構（例如包含指標的結構），請參閱[如何：使用C++ Interop 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
 
-```
+```cpp
 // PassStruct1.cpp
 // compile with: /clr
 
@@ -82,9 +82,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範傳遞結構從 unmanaged，受管理的函式值和傳址。 因為此範例中的結構包含只是簡單、 內建資料型別 (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，沒有特殊的封送處理為必要。 若要封送處理非 blittable 結構，例如那些包含指標，請參閱[How to:封送處理內嵌指標使用C++Interop](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
+下列範例示範如何將結構從非受控函式傳遞至 managed 函數，方法是以傳值和傳址方式。 因為此範例中的結構只包含簡單的內建資料類型（請參閱全選[和非全像的類型](/dotnet/framework/interop/blittable-and-non-blittable-types)），所以不需要進行任何特殊的封送處理。 若要封送處理非類型的結構（例如包含指標的結構），請參閱[如何：使用C++ Interop 封送處理內嵌指標](../dotnet/how-to-marshal-embedded-pointers-using-cpp-interop.md)。
 
-```
+```cpp
 // PassStruct2.cpp
 // compile with: /clr
 #include <stdio.h>
@@ -147,6 +147,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

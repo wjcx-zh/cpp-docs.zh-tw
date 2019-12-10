@@ -1,42 +1,42 @@
 ---
-title: HOW TO：擴充封送處理程式庫
+title: 如何：擴充封送處理程式庫
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387301"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988493"
 ---
-# <a name="how-to-extend-the-marshaling-library"></a>HOW TO：擴充封送處理程式庫
+# <a name="how-to-extend-the-marshaling-library"></a>如何：擴充封送處理程式庫
 
-本主題說明如何擴充封送處理程式庫，以提供更多資料型別之間的轉換。 使用者可以擴充程式庫目前不支援任何資料轉換的封送處理程式庫。
+本主題說明如何擴充封送處理程式庫，以提供資料類型之間的更多轉換。 使用者可以針對程式庫目前不支援的任何資料轉換擴充封送處理程式庫。
 
-您可以擴充封送處理程式庫中有兩種-包含或不含[marshal_context 類別](../dotnet/marshal-context-class.md)。 檢閱[Overview of Marshaling 中C++](../dotnet/overview-of-marshaling-in-cpp.md)主題，以判斷新的轉換是否需要內容。
+您可以使用兩種方式之一擴充封送處理程式庫-不論是否有[Marshal_coNtext 類別](../dotnet/marshal-context-class.md)。 請參閱主題[中C++的封送處理總覽](../dotnet/overview-of-marshaling-in-cpp.md)，以判斷新轉換是否需要內容。
 
-在這兩種情況下，您可以先建立新的封送處理轉換的檔案。 這麼一來保留標準的封送處理程式庫檔案的完整性。 如果您想要移植至另一部電腦或另一個程式的專案，您必須複製新的封送處理檔案和其餘的專案。 如此一來，在收到專案的使用者保證收到新的轉換，並不會修改任何程式庫檔案。
+在這兩種情況下，您會先建立檔案以進行新的封送處理轉換。 若要保留標準封送處理程式庫檔案的完整性，請這麼做。 如果您想要將專案移植到另一部電腦或另一位程式設計人員，您必須將新的封送處理檔案連同專案的其餘部分一起複製。 如此一來，接收專案的使用者將保證會收到新的轉換，而且不需要修改任何程式庫檔案。
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>若要擴充的轉換不需要內容來封送處理程式庫
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-does-not-require-a-context"></a>若要使用不需要內容的轉換來擴充封送處理程式庫
 
-1. 建立檔案以儲存新的封送處理函數，例如 MyMarshal.h。
+1. 建立檔案來儲存新的封送處理函數，例如 MyMarshal。
 
-1. 包含一或多個封送處理程式庫檔案：
+1. 包含一個或多個封送處理程式庫檔案：
 
-   - marshal.h 針對基底類型。
+   - 基底類型的封送處理. h。
 
-   - marshal_windows.h windows 資料類型。
+   - 適用于 windows 資料類型的 marshal_windows .h。
 
-   - marshal_cppstd.h，如C++標準程式庫的資料類型。
+   - 適用于標準連結C++庫資料類型的 marshal_cppstd .h。
 
-   - marshal_atl.h ATL 資料類型。
+   - 適用于 ATL 資料類型的 marshal_atl .h。
 
-1. 使用這些步驟的結尾的程式碼撰寫的轉換函式。 在此程式碼中，若要將轉換成的型別，FROM 的類型轉換，和`from`是要轉換的參數。
+1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要轉換的來源型別，`from` 是要轉換的參數。
 
-1. 以要轉換的程式碼取代有關轉換邏輯的註解`from`參數插入到的物件類型，並傳回已轉換的物件。
+1. 以程式碼取代轉換邏輯的批註，將 `from` 參數轉換成的物件，以輸入並傳回已轉換的物件。
 
 ```
 namespace msclr {
@@ -49,29 +49,29 @@ namespace msclr {
 }
 ```
 
-### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>若要擴充的轉換需要內容來封送處理程式庫
+### <a name="to-extend-the-marshaling-library-with-a-conversion-that-requires-a-context"></a>若要使用需要內容的轉換來擴充封送處理程式庫
 
-1. 建立檔案以儲存新的封送處理函數，例如 MyMarshal.h
+1. 建立檔案來儲存新的封送處理函數，例如 MyMarshal。
 
-1. 包含一或多個封送處理程式庫檔案：
+1. 包含一個或多個封送處理程式庫檔案：
 
-   - marshal.h 針對基底類型。
+   - 基底類型的封送處理. h。
 
-   - marshal_windows.h windows 資料類型。
+   - 適用于 windows 資料類型的 marshal_windows .h。
 
-   - marshal_cppstd.h，如C++標準程式庫的資料類型。
+   - 適用于標準連結C++庫資料類型的 marshal_cppstd .h。
 
-   - marshal_atl.h ATL 資料類型。
+   - 適用于 ATL 資料類型的 marshal_atl .h。
 
-1. 使用這些步驟的結尾的程式碼撰寫的轉換函式。 在此程式碼中，若要將轉換成的型別，FROM 的類型轉換，`toObject`是用來儲存結果、 指標和`fromObject`是要轉換的參數。
+1. 在這些步驟的結尾使用程式碼，以撰寫轉換函式。 在此程式碼中，TO 是要轉換成的型別，FROM 是要轉換的目標型別，`toObject` 是要用來儲存結果的指標，而 `fromObject` 則是要轉換的參數。
 
-1. 關於初始化程式碼，以初始化註解取代`toPtr`適當的空值。 例如，如果它是指標，將它設定為`NULL`。
+1. 以程式碼取代初始化的相關批註，將 `toPtr` 初始化為適當的空白值。 例如，如果它是指標，請將它設定為 `NULL`。
 
-1. 以要轉換的程式碼取代有關轉換邏輯的註解`from`參數的物件插入*TO*型別。 此轉換的物件會儲存在`toPtr`。
+1. 以程式碼取代轉換邏輯的批註，將 `from` 參數轉換成的物件 *，以*輸入。 這個已轉換的物件將會儲存在 `toPtr`中。
 
-1. 取代設定的相關註解`toObject`程式碼，以設定`toObject`已轉換的物件。
+1. 將設定 `toObject` 的批註取代為程式碼，以將 `toObject` 設定為已轉換的物件。
 
-1. 清除程式碼，以釋放所配置任何記憶體的原生資源的相關註解取代`toPtr`。 如果`toPtr`使用配置的記憶體`new`，使用`delete`釋放的記憶體。
+1. 以程式碼取代清除原生資源的相關批註，以釋放 `toPtr`所配置的記憶體。 如果 `toPtr` 使用 `new`配置記憶體，請使用 `delete` 來釋放記憶體。
 
 ```
 namespace msclr {
@@ -104,9 +104,9 @@ namespace msclr {
 
 ## <a name="example"></a>範例
 
-下列範例會擴充封送處理程式庫，不需要內容的轉換。 在此範例中，程式碼會將員工資訊至 managed 的資料類型轉換從原生資料型別。
+下列範例會使用不需要內容的轉換來擴充封送處理程式庫。 在此範例中，程式碼會將員工資訊從原生資料類型轉換成 managed 資料類型。
 
-```
+```cpp
 // MyMarshalNoContext.cpp
 // compile with: /clr
 #include <msclr/marshal.h>
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-在上述範例中，`marshal_as`函式傳回的控制代碼轉換的資料。 這麼做是為了防止建立另一份資料。 直接傳回變數會有不必要的效能成本與其相關聯。
+在上述範例中，`marshal_as` 函式會傳回已轉換資料的控制碼。 這麼做是為了防止建立額外的資料複本。 直接傳回變數會有與其相關聯的不必要效能成本。
 
 ```Output
 Managed name: Jeff Smith
@@ -166,9 +166,9 @@ Managed zip code: 98111
 
 ## <a name="example"></a>範例
 
-下列範例會轉換成原生資料類型從受管理的資料類型的員工資訊。 這個轉換所需的封送處理的內容。
+下列範例會將員工資訊從 managed 資料類型轉換成原生資料類型。 這種轉換需要封送處理內容。
 
-```
+```cpp
 // MyMarshalContext.cpp
 // compile with: /clr
 #include <stdlib.h>
@@ -266,6 +266,6 @@ Native address: 123 Main Street
 Native zip code: 98111
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 中封送處理的概觀](../dotnet/overview-of-marshaling-in-cpp.md)

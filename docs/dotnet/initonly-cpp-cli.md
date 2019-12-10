@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - initonly attribute [C++]
 ms.assetid: f745d7fa-dc08-46f1-9b97-0977be58a008
-ms.openlocfilehash: cdfc278225ce4ab418dfaaf41fb413d088ad77df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 970800968733a285929c3bfa42594360203e573a
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188404"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988477"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
 
-**initonly**是內容相關性的關鍵字，指出該變數的指派可能會發生只當做相同類別中的靜態建構函式中宣告的一部分。
+**initonly**是一個內容相關的關鍵字，表示變數指派只可以做為宣告的一部分或在相同類別的靜態函式中發生。
 
 下列範例顯示如何使用 `initionly`：
 
-```
+```cpp
 // mcpp_initonly.cpp
 // compile with: /clr /c
 ref struct Y1 {
@@ -36,6 +36,6 @@ ref struct Y1 {
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)

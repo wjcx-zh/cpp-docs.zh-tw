@@ -1,25 +1,25 @@
 ---
-title: HOW TO：使用中的事件C++/CLI
+title: 如何：在 C++/CLI 中使用事件
 ms.date: 11/04/2016
 helpviewer_keywords:
 - events [C++], accessing in interfaces
 ms.assetid: fbf452dc-2dd7-4322-adc0-656512d654d1
-ms.openlocfilehash: 6b4ecbba5651341965d2cf4df5b5ad2ead7f9f26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbaffaa42b5cfaf60c41694653651ce0bb0fc199
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387171"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988415"
 ---
-# <a name="how-to-use-events-in-ccli"></a>HOW TO：使用中的事件C++/CLI
+# <a name="how-to-use-events-in-ccli"></a>如何：在 C++/CLI 中使用事件
 
-本文說明如何使用宣告的事件並叫用該事件中，函式的介面和實作介面的類別和事件處理常式。
+本文說明如何使用宣告事件的介面，以及用來叫用該事件的函式，以及用來執行介面的類別和事件處理常式。
 
 ## <a name="interface-events"></a>介面事件
 
-下列程式碼範例會新增事件處理常式、 叫用事件，而導致事件處理常式，將其名稱寫入主控台:，然後移除事件處理常式。
+下列程式碼範例會加入事件處理常式，叫用事件，這會導致事件處理常式將其名稱寫入主控台，然後移除事件處理常式。
 
-```
+```cpp
 // mcppv2_events2.cpp
 // compile with: /clr
 using namespace System;
@@ -65,7 +65,7 @@ int main () {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 EventReceiver::Handler
@@ -73,9 +73,9 @@ EventReceiver::Handler
 
 ## <a name="custom-accessor-methods"></a>自訂存取子方法
 
-下列範例示範如何定義事件的行為，以及引發事件時新增或移除處理常式。
+下列範例示範如何在新增或移除處理常式時，以及引發事件時，定義事件的行為。
 
-```
+```cpp
 // mcppv2_events6.cpp
 // compile with: /clr
 using namespace System;
@@ -156,18 +156,18 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 In event handler H1
 In event handler H2 with args 1 and 2.2
 ```
 
-## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>覆寫預設存取權加入、 移除及引發存取子
+## <a name="override-default-access-on-add-remove-and-raise-accessors"></a>覆寫 add、remove 和 raise 存取子上的預設存取
 
-此範例示範如何覆寫 add、 remove 和 raise 事件的方法上的預設存取：
+這個範例會示範如何覆寫 add、remove 和 raise 事件方法上的預設存取：
 
-```
+```cpp
 // mcppv2_events3.cpp
 // compile with: /clr
 public delegate void f(int);
@@ -215,7 +215,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 17
@@ -223,9 +223,9 @@ int main() {
 
 ## <a name="multiple-event-handlers"></a>多個事件處理常式
 
-事件接收器或任何其他用戶端程式碼，可以將一或多個處理常式加入至事件。
+事件接收器或任何其他用戶端程式代碼，可以將一個或多個處理常式加入至事件。
 
-```
+```cpp
 // mcppv2_events4.cpp
 // compile with: /clr
 using namespace System;
@@ -292,7 +292,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 Click(x=7,y=3.14159)
@@ -302,9 +302,9 @@ DblClickAgain(s=System.Char[])
 
 ## <a name="static-events"></a>靜態事件
 
-下列範例示範如何定義和使用靜態事件。
+下列範例顯示如何定義和使用靜態事件。
 
-```
+```cpp
 // mcppv2_events7.cpp
 // compile with: /clr
 using namespace System;
@@ -381,7 +381,7 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 In event handler H1
@@ -390,11 +390,11 @@ In event handler H1
 In event handler H2 with args 22 and 22.22
 ```
 
-## <a name="virtual-events"></a>虛擬活動
+## <a name="virtual-events"></a>虛擬事件
 
-這個範例會在介面和類別中實作 managed 虛擬事件：
+這個範例會在介面和類別中，執行虛擬的 managed 事件：
 
-```
+```cpp
 // mcppv2_events5.cpp
 // compile with: /clr
 using namespace System;
@@ -469,16 +469,16 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 In handler H1
 In handler H2 with args 1 and 2.2
 ```
 
-簡單事件不能指定來覆寫或隱藏基底類別事件。  您必須定義所有事件的存取子函式，並接著指定`new`或`override`上每個存取子函式的關鍵字。
+不能指定簡單事件來覆寫或隱藏基類事件。  您必須定義所有事件的存取子函式，然後在每個存取子函式上指定 `new` 或 `override` 關鍵字。
 
-```
+```cpp
 // mcppv2_events5_a.cpp
 // compile with: /clr /c
 delegate void Del();
@@ -510,9 +510,9 @@ ref struct C : B {
 
 ## <a name="abstract-events"></a>抽象事件
 
-下列範例示範如何實作抽象事件。
+下列範例顯示如何執行抽象事件。
 
-```
+```cpp
 // mcppv2_events10.cpp
 // compile with: /clr /W1
 using namespace System;
@@ -586,18 +586,18 @@ int main () {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 hi
 hello from Event2
 ```
 
-## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引發在不同的組件中定義的事件
+## <a name="raising-events-that-are-defined-in-a-different-assembly"></a>引發在不同元件中定義的事件
 
-可以定義一組件中，並由另一個組件的事件和事件處理常式。
+事件和事件處理常式可以在一個元件中定義，並由另一個元件使用。
 
-```
+```cpp
 // mcppv2_events8.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -613,9 +613,9 @@ public:
 };
 ```
 
-此用戶端程式碼會取用事件：
+此用戶端程式代碼會使用事件：
 
-```
+```cpp
 // mcppv2_events9.cpp
 // compile with: /clr
 #using "mcppv2_events8.dll"
@@ -640,13 +640,13 @@ int main() {
 }
 ```
 
-**輸出**
+**Output**
 
 ```Output
 hello
 hello
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [event](../extensions/event-cpp-component-extensions.md)

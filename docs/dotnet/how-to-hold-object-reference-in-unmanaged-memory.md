@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Unmanaged 記憶體中存放物件參考
+title: 如何：在 Unmanaged 記憶體中存放物件參考
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - references, to objects in native functions
 - gcroot keyword [C++], object reference in native function
 ms.assetid: a61eb8ce-3982-477d-8d3d-2173fd57166d
-ms.openlocfilehash: 0d8dc341d1fe2c61eba098abec9258a2c6dade79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f2471e36d7551cab9edb68d7babeb1419e8e20c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387288"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988206"
 ---
-# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>HOW TO：在 Unmanaged 記憶體中存放物件參考
+# <a name="how-to-hold-object-reference-in-unmanaged-memory"></a>如何：在 Unmanaged 記憶體中存放物件參考
 
-您可以使用 gcroot.h，包裝<xref:System.Runtime.InteropServices.GCHandle>，以在 unmanaged 記憶體中保留 CLR 物件參考。 或者，您可以使用`GCHandle`直接。
+您可以使用可包裝 <xref:System.Runtime.InteropServices.GCHandle>的 gcroot .h，將 CLR 物件參考保存在非受控記憶體中。 或者，您也可以直接使用 `GCHandle`。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // hold_object_reference.cpp
 // compile with: /clr
 #include "gcroot.h"
@@ -57,9 +57,9 @@ StringWrapper::x == ManagedString
 
 ## <a name="example"></a>範例
 
-`GCHandle` 可讓您保留在 unmanaged 記憶體中的受管理的物件參考的方法。  您使用<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>方法用來建立 managed 物件的不透明控制代碼和<xref:System.Runtime.InteropServices.GCHandle.Free%2A>釋放它。 此外，<xref:System.Runtime.InteropServices.GCHandle.Target%2A>方法可讓您取得上一步是從 managed 程式碼中的控制代碼的物件參考。
+`GCHandle` 提供您在非受控記憶體中保存 managed 物件參考的方法。  您可以使用 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 方法來建立 managed 物件的不透明控制碼，並 <xref:System.Runtime.InteropServices.GCHandle.Free%2A> 釋放它。 此外，<xref:System.Runtime.InteropServices.GCHandle.Target%2A> 方法也可讓您從 managed 程式碼中的控制碼取得物件參考。
 
-```
+```cpp
 // hold_object_reference_2.cpp
 // compile with: /clr
 using namespace System;
@@ -94,6 +94,6 @@ int main() {
 StringWrapper::m_handle == ManagedString
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

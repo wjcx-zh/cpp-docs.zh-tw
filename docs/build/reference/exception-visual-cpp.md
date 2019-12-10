@@ -1,5 +1,5 @@
 ---
-title: '&lt;例外狀況 > (C++文件註解)'
+title: '&lt;例外狀況 >C++ （檔批註）'
 ms.date: 11/04/2016
 f1_keywords:
 - exception
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: 327c1bc27f4ae71aa214e09f375f963dad5b33d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ddfe647fa2db55b3ca606265011896a66398a8a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292961"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988302"
 ---
 # <a name="ltexceptiongt"></a>&lt;exception&gt;
 
@@ -39,13 +39,13 @@ ms.locfileid: "62292961"
 
 ## <a name="remarks"></a>備註
 
-編譯搭配 [/doc](doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 編譯，可處理檔案的文件註解。
 
-MSVC 編譯器會嘗試解決一個通過文件註解 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
+MSVC 編譯器會嘗試透過檔批註來解析一次中的 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // xml_exception_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_exception_tag.dll
@@ -67,6 +67,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [XML 文件](xml-documentation-visual-cpp.md)

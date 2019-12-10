@@ -1,5 +1,5 @@
 ---
-title: '&lt;請參閱 > (C++文件註解)'
+title: '&lt;參閱 > （C++檔批註）'
 ms.date: 11/04/2016
 f1_keywords:
 - <see>
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <see> C++ XML tag
 - see C++ XML tag
 ms.assetid: 20ef66f4-b278-45cf-8613-63919edf5720
-ms.openlocfilehash: be99d3ac156c587888a7c56997d82531cf86ccec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8693646fa37648d1b20c791d99d159f2c81b8ec1
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318897"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988626"
 ---
 # <a name="ltseegt"></a>&lt;see&gt;
 
@@ -34,17 +34,17 @@ ms.locfileid: "62318897"
 
 ## <a name="remarks"></a>備註
 
-編譯搭配 [/doc](doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 編譯，可處理檔案的文件註解。
 
 如需使用 \<see> 的範例，請參閱 [\<summary>](summary-visual-cpp.md)。
 
-MSVC 編譯器會嘗試解決一個通過文件註解 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
+MSVC 編譯器會嘗試透過檔批註來解析一次中的 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 
 下列範例示範如何建立泛型型別的 cref 參考，如此一來，編譯器就會解析參考。
 
-```
+```cpp
 // xml_see_cref_example.cpp
 // compile with: /LD /clr /doc
 // the following cref shows how to specify the reference, such that,
@@ -69,6 +69,6 @@ generic<class T>
 ref class C {};
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [XML 文件](xml-documentation-visual-cpp.md)

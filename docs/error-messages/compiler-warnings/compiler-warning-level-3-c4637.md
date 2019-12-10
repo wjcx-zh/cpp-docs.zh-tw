@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4637
 ms.assetid: 5fd347c1-2de9-408f-9136-1bf1ff273622
-ms.openlocfilehash: e712429ad52ccb990f81e1a4d3bd65a525558692
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: 28362e186f2cb841f4abb67175984bcd8b4f0cf7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189112"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991784"
 ---
 # <a name="compiler-warning-level-3-c4637"></a>編譯器警告 (層級 3) C4637
 

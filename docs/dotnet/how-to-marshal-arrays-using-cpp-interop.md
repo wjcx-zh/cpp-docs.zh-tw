@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理陣列使用C++Interop
+title: 如何：使用 C++ Interop 封送處理陣列
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fddb8b4fa645d6fee3597d098fc67a3006603b9f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324918"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988196"
 ---
-# <a name="how-to-marshal-arrays-using-c-interop"></a>HOW TO：封送處理陣列使用C++Interop
+# <a name="how-to-marshal-arrays-using-c-interop"></a>如何：使用 C++ Interop 封送處理陣列
 
-本主題將示範一個 facet 視覺效果的C++互通性。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
+本主題示範視覺化C++互通性的一個 facet。 如需詳細資訊，請參閱[使用C++ Interop （隱含 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將 managed 的陣列傳遞至 unmanaged 函式。 受管理的函式會使用[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)來抑制回收陣列呼叫 unmanaged 函式之前。 藉由提供使用 pin 指標的 unmanaged 函式，GC 堆積，您可以避免建立陣列的複本的額外負荷。 若要示範 unmanaged 函式會存取 GC 堆積記憶體，它會修改陣列的內容與所做的變更會反映當 managed 函式會繼續控制。
+下列範例示範如何將 managed 陣列傳遞至非受控函式。 Managed 函式會在呼叫非受控函式之前，使用[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)來隱藏陣列的垃圾收集。 藉由提供非受控函式並將釘選的指標放入 GC 堆積中，可以避免建立陣列複本的額外負荷。 為了示範非受控函式正在存取 GC 堆積記憶體，它會修改陣列的內容，而這些變更會在 managed 函式繼續控制時反映出來。
 
-```
+```cpp
 // PassArray1.cpp
 // compile with: /clr
 #ifndef _CRT_RAND_S
@@ -83,9 +83,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將未受管理的陣列傳遞至 managed 函式。 Managed 函式會存取陣列的記憶體直接 （而不是建立 managed 的陣列，並複製的陣列內容），可讓 managed 函式所做變更才能重新取得控制項時，會反映在 unmanaged 函式。
+下列範例示範如何將非受控陣列傳遞至 managed 函式。 Managed 函式會直接存取陣列記憶體（相對於建立 managed 陣列和複製陣列內容），這可讓 managed 函式所做的變更在重新取得控制項時反映在非受控函式中。
 
-```
+```cpp
 // PassArray2.cpp
 // compile with: /clr
 #include <iostream>
@@ -129,6 +129,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

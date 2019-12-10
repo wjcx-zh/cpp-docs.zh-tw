@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 Unmanaged 的資源載入至位元組陣列
+title: 如何：將 Unmanaged 資源載入至位元組陣列
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - unmanaged resources, loading into Byte array
 - native resources
 ms.assetid: cdada6cd-6d42-437a-a90f-44a0b18d6a93
-ms.openlocfilehash: 641bdf4429bca35800e3fbbbb7622f2651bb3fee
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 425def1cd0557298985148d7bb9f74da489643e8
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344962"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988202"
 ---
-# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>HOW TO：將 Unmanaged 的資源載入至位元組陣列
+# <a name="how-to-load-unmanaged-resources-into-a-byte-array"></a>如何：將 Unmanaged 資源載入至位元組陣列
 
-本主題將討論數種方式可以載入到非受控的資源<xref:System.Byte>陣列。
+本主題討論將非受控資源載入 <xref:System.Byte> 陣列的幾種方式。
 
 ## <a name="example"></a>範例
 
-如果您知道您的 unmanaged 資源的大小，您可以預先配置 CLR 陣列，並再將資源載入至使用 CLR 陣列的陣列區塊的指標陣列。
+如果您知道非受控資源的大小，您可以預先配置 CLR 陣列，然後使用 CLR 陣列的陣列區塊指標，將資源載入至陣列。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array.cpp
 // compile with: /clr
 using namespace System;
@@ -56,9 +56,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-此範例示範如何將資料從 unmanaged 的記憶體區塊複製到 managed 陣列。
+這個範例會示範如何將資料從非受控記憶體區塊複製到 managed 陣列。
 
-```
+```cpp
 // load_unmanaged_resources_into_Byte_array_2.cpp
 // compile with: /clr
 using namespace System;
@@ -75,6 +75,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

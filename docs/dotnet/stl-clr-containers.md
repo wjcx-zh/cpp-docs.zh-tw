@@ -6,22 +6,22 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfdbbeb735f98f77046790e21c19dd2d21b9d5c6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384591"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988114"
 ---
 # <a name="stlclr-containers"></a>STL/CLR 容器
 
-STL/CLR 程式庫包含的容器，類似於位於C++標準程式庫，但它執行的.NET framework 的 managed 環境中。 它不會保持在最新的實際C++標準程式庫和維護舊版支援。
+STL/CLR 程式庫是由類似于C++標準程式庫中的容器所組成，但它會在 .NET Framework 的受管理環境中執行。 它不會與實際C++的標準程式庫保持在最新狀態，並且會針對舊版支援加以維護。
 
-本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 在適當的原生之間的差異C++標準程式庫和 STL/CLR 所述。
+本文件提供了 STL/CLR 容器的概觀，例如容器項目的需求、您可以插入容器的項目類型，以及容器中項目的擁有權問題。 在適當的情況下，會C++提及原生標準程式庫和 STL/CLR 之間的差異。
 
 ## <a name="requirements-for-container-elements"></a>容器項目的需求
 
-插入至 STL/CLR 容器的所有項目必須遵守某些方針。 如需詳細資訊，請參閱 < [STL/CLR 容器項目的需求](../dotnet/requirements-for-stl-clr-container-elements.md)。
+插入 STL/CLR 容器中的所有元素都必須遵守特定的指導方針。 如需詳細資訊，請參閱[STL/CLR 容器元素的需求](../dotnet/requirements-for-stl-clr-container-elements.md)。
 
 ## <a name="valid-container-elements"></a>有效的容器項目
 
@@ -37,13 +37,13 @@ STL/CLR 容器可保留兩種類型之一的項目：
 
 ### <a name="handles-to-reference-types"></a>參考類型的控制代碼
 
-您可以將參考類型的控制代碼插入至 STL/CLR 容器。 C++ 中以 CLR 為目標的控制代碼與原生 C++ 的指標類似。 如需詳細資訊，請參閱 <<c0> [ 物件控制代碼運算子 (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
+您可以將參考類型的控制代碼插入至 STL/CLR 容器。 C++ 中以 CLR 為目標的控制代碼與原生 C++ 的指標類似。 如需詳細資訊，請參閱[Handle To Object Operator （^）](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)。
 
 #### <a name="example"></a>範例
 
-下列範例示範如何將 Employee 物件的控制代碼[cliext:: set](../dotnet/set-stl-clr.md)。
+下列範例顯示如何將 Employee 物件的控制碼插入至[cliext：： set](../dotnet/set-stl-clr.md)。
 
-```
+```cpp
 // cliext_container_valid_reference_handle.cpp
 // compile with: /clr
 
@@ -138,7 +138,7 @@ int main()
 
 下列範例說明如何將 Employee 物件插入至 `cliext::set` 內。
 
-```
+```cpp
 // cliext_container_valid_reference.cpp
 // compile with: /clr
 
@@ -227,7 +227,7 @@ int main()
 
 ### <a name="unboxed-value-types"></a>Unboxed 實值類型
 
-您也可以將 Unboxed 實值類型插入至 STL/CLR 容器。 Unboxed 實的值型別是實值型別尚未*boxed*成參考型別。
+您也可以將 Unboxed 實值類型插入至 STL/CLR 容器。 未裝箱的實值型別是尚未*封裝*成引用型別的實值型別。
 
 實值類型項目可以是其中一個標準實值類型 (例如 `int`)，也可以是使用者定義的實值類型 (例如 `value class`)。 如需詳細資訊，請參閱[類別和結構](../extensions/classes-and-structs-cpp-component-extensions.md)
 
@@ -235,7 +235,7 @@ int main()
 
 下列範例會修改第一個範例，將 Employee 類別改為實值類型。 接著再將這個實值類型插入至 `cliext::set`，如第一個範例中所示。
 
-```
+```cpp
 // cliext_container_valid_valuetype.cpp
 // compile with: /clr
 
@@ -296,7 +296,7 @@ int main()
 }
 ```
 
-如果您嘗試插入到容器中的實值類型的控制代碼[編譯器錯誤 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md)產生。
+如果您嘗試將實數值型別的控制碼插入容器中，就會產生[編譯器錯誤 C3225](../error-messages/compiler-errors-2/compiler-error-c3225.md) 。
 
 ### <a name="performance-and-memory-implications"></a>效能和記憶體含意
 
@@ -310,6 +310,6 @@ STL/CLR 中的容器會處理實值語意。 每當您將項目插入至容器�
 
 當您呼叫控制代碼物件的容器之清除或清理方法時，不會從記憶體釋放控制代碼所參考的物件。 您必須明確地刪除該物件，或者 (因為這些物件位於 Managed 堆積中) 在決定不再使用物件時允許記憶體回收行程釋放記憶體。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

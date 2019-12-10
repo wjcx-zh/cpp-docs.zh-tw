@@ -1,5 +1,5 @@
 ---
-title: '&lt;值 > (C++文件註解)'
+title: '&lt;值 > （C++檔批註）'
 ms.date: 11/04/2016
 f1_keywords:
 - value
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - value C++ XML tag
 - <value> C++ XML tag
 ms.assetid: 0ba0a0d5-bcd7-4862-a169-83f2721ad80e
-ms.openlocfilehash: c0863b41791254992d16d373328ff6c8a5d6f94f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de84d1faca59a6c8e4f82fba3605cbd54a05bd2e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317025"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988589"
 ---
-# <a name="ltvaluegt"></a>&lt;value&gt;
+# <a name="ltvaluegt"></a>&lt;值&gt;
 
 \<value> 標記可讓您描述屬性和屬性存取子方法。 請注意，當您在 Visual Studio 整合式開發環境中使用程式碼精靈新增屬性時，會新增新屬性的 [\<summary>](summary-visual-cpp.md) 標記。 您接著應該手動新增 \<value> 標記，來描述屬性所代表的值。
 
@@ -32,11 +32,11 @@ ms.locfileid: "62317025"
 
 ## <a name="remarks"></a>備註
 
-編譯搭配 [/doc](doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 編譯，可處理檔案的文件註解。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // xml_value_tag.cpp
 // compile with: /LD /clr /doc
 // post-build command: xdcmake xml_value_tag.dll
@@ -58,6 +58,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [XML 文件](xml-documentation-visual-cpp.md)

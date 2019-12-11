@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: b7344d9cb685e0212748d7835e19f398f14979e7
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393732"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988009"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -39,10 +39,10 @@ ms.locfileid: "74393732"
 
 如果未指定此參數，則預設會使用 [**段落**]。
 
-*結合*\
+*合併*（僅限32位 MASM） \
 **公用**，**堆疊**，**一般**，**記憶體**，<em>位址</em>，**私**用
 
-*使用*\
+*使用*（僅限32位 MASM） \
 **USE16**、 **USE32**、**平直**
 
 *特性*\
@@ -62,6 +62,6 @@ _string_\
 
 針對 `ALIGN(n)`， *n*可能是從1到8192的2乘冪;不支援 **/omf**。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](directives-reference.md)

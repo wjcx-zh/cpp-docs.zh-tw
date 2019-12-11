@@ -1,17 +1,17 @@
 ---
 title: PUBLIC (MASM)
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - public
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: ec76b88134d2d9e4cfc3f18abf78f43007ef3806
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: d02aa6a2894c0d3b251b8cbf32efeef57cff409d
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394744"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988029"
 ---
 # <a name="public-masm"></a>PUBLIC (MASM)
 
@@ -19,8 +19,12 @@ ms.locfileid: "74394744"
 
 ## <a name="syntax"></a>語法
 
-> **PUBLIC** ⟦ language-type ⟧ *name* ⟦ __，__ ⟦ language-type ⟧ *name* .。。⟧
+> **PUBLIC** ⟦*language-type*⟧ *name* ⟦ __，__ ⟦*language-type*⟧ *name* .。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="remarks"></a>備註
+
+*Language 類型*引數只在32位 MASM 中有效。
+
+## <a name="see-also"></a>請參閱
 
 [指示詞參考](../../assembler/masm/directives-reference.md)

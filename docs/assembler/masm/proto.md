@@ -1,17 +1,17 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 24ec2a9abc6c8b76fc81f6d412019296c53160f4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 9df66b6c89498a2cc1a1864a668b7addfbaf593c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394761"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74987866"
 ---
 # <a name="proto"></a>PROTO
 
@@ -26,10 +26,10 @@ ms.locfileid: "74394761"
 *標籤*\
 原型函式的名稱。
 
-*距離*\
+*距離*（僅限32位 MASM）。\
 選擇性在16位記憶體模型中用來覆寫預設值，並指出**接近**或**遠**的呼叫。
 
-*語言類型*\
+*語言類型*（僅限32位 MASM）。\
 選擇性設定程式和公用符號的呼叫和命名慣例。 支援的慣例如下：
 
 - 32位**平面**模型： **C**、 **STDCALL**
@@ -52,7 +52,7 @@ ms.locfileid: "74394761"
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 指示詞[參考](directives-reference.md)\
 [.模型參考](dot-model.md)

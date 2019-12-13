@@ -1,133 +1,217 @@
 ---
-title: 歡迎回到 C++ (現代 C++)
-ms.date: 11/04/2016
+title: 歡迎回到 C++ (新式 C++)
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 1f59395001722244cb407ef07ed8a301f08df85b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624765"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303332"
 ---
-# <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (現代 C++)
+# <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (新式 C++)
 
-C++ 是世界上最廣泛使用的程式語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 這種語言較其他語言更具彈性，因為您可以用它來建立各種應用程式，從好玩刺激的遊戲到高效能科學軟體、裝置驅動程式、內嵌程式和 Windows 用戶端應用程式，一應俱全。 20 多年來，C++ 已經用來解決這類和許多其他的問題。 您可能不知道的是，有越來越多的 C++ 程式設計人員已經捲藏過時的 C-Style 程式設計舊衣，換上了現代 C++ 的新裝。
+過去25年來， C++是世界上最廣泛使用的程式設計語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 語言比其他語言更有彈性，因為它可讓您存取低層級的硬體功能，以最大化速度並將記憶體需求降到最低。 您可以用它來建立各種應用程式（從遊戲到高效能的科學軟體、設備磁碟機、內嵌程式、程式庫和編譯器，適用于其他程式設計語言、Windows 用戶端應用程式，以及其他更多功能）。
 
-C++ 的其中一個原始需求是與 C 語言的回溯相容性。 從那時起，C++ 就幾經更迭，逐漸發展成形；先是具有類別的 C，繼而有原始的 C++ 語言規格，然後加入許多後續的增強功能。 由於這樣的傳承，C++ 通常稱為多典範程式語言。 在 C++ 中，您可以單純地進行程序式 C-Style 程式設計，包括可能獲致絕佳效能的原始指標、陣列、null 結尾字元字串、自訂資料結構及其他功能，但也可能孳生 Bug 和複雜性。  由於 C-Style 程式設計充滿這類的危險，C++ 其中一個建置目標就是讓程式為類型安全，而且更容易撰寫、擴充和維護。 C++ 在初期接受物件導向程式設計之類的程式設計典範。 多年來，已有許多功能跟隨多方測試的結構與演算法標準程式庫一起加入這個語言的陣容。 也就是這些新增功能造就了現代 C++ 樣式。
+C++ 的其中一個原始需求是與 C 語言的回溯相容性。 因此C++ ，一律允許 C 樣式的程式設計使用原始指標、陣列、以 null 結束的字元字串、自訂資料結構，以及其他可能會使效能變得更好的功能，但也可能會產生錯誤和複雜度。 的演進C++具有強調的功能，可大幅減少使用 C 樣式慣用語的需求。 當您需要時，會有舊版的 C 程式設計工具，但使用C++現代化程式碼時，您應該會需要較少且較少的功能。 現代化C++的程式碼更簡單、更安全、更簡潔，而且速度也跟以往一樣快。
 
-現代 C++ 著重於：
+下列各節提供現代化C++主要功能的總覽。 除非另有說明，否則此處所列的功能會在 c + + 11 和更新版本中提供。 在 Microsoft C++編譯器中，您可以設定[/std](../build/reference/std-specify-language-standard-version.md)編譯器選項，以指定要用於專案的標準版本。
 
-- 堆疊式範圍，而不是堆積或靜態全域範圍。
+## <a name="raii-and-smart-pointers"></a>RAII 和智慧型指標
 
-- 自動類型推斷，而不是明確類型名稱。
-
-- 智慧型指標，而不是原始指標。
-
-- `std::string` 和 `std::wstring` 類型（請參閱[\<字串 >](../standard-library/string.md)），而不是原始的 `char[]` 陣列。
-
-- 標準程式庫容器，例如 `vector`、`list`和 `map`，而不是原始陣列或自訂容器。 [ C++ ](../standard-library/cpp-standard-library-header-files.md) 請參閱[\<向量 >](../standard-library/vector.md)、 [\<清單 >](../standard-library/list.md)和[\<地圖 >](../standard-library/map.md)。
-
-- C++標準程式庫[演算法](../standard-library/algorithm.md)，而不是手動撰寫程式碼。
-
-- 例外狀況，用來報告和處理錯誤狀況。
-
-- 使用C++標準程式庫 `std::atomic<>` 的無鎖定執行緒間通訊（請參閱\<不可部分完成[>](../standard-library/atomic.md)），而不是其他執行緒間的通訊機制。
-
-- 內嵌[lambda 函數](../cpp/lambda-expressions-in-cpp.md)，而不是個別實作為小型函式。
-
-- 以範圍為基礎的 for 迴圈，用來撰寫更強大的迴圈C++ ，以使用陣列、標準程式庫容器和 Windows 執行階段集合，其格式為 `for ( for-range-declaration : expression )`。 這是核心語言支援的一部分。 如需詳細資訊，請參閱[以範圍為基礎C++的 for 語句（）](../cpp/range-based-for-statement-cpp.md)。
-
-C++ 語言本身也有所演變。 比較下列程式碼片段。 這是顯示 C++ 過去一般狀況的程式碼片段：
-
-```cpp
-#include <vector>
-
-void f()
-{
-    // Assume circle and shape are user-defined types
-    circle* p = new circle( 42 );
-    vector<shape*> v = load_shapes();
-
-    for( vector<circle*>::iterator i = v.begin(); i != v.end(); ++i ) {
-        if( *i && **i == *p )
-            cout << **i << " is a match\n";
-    }
-
-    // CAUTION: If v's pointers own the objects, then you
-    // must delete them all before v goes out of scope.
-    // If v's pointers do not own the objects, and you delete
-    // them here, any code that tries to dereference copies
-    // of the pointers will cause null pointer exceptions.
-    for( vector<circle*>::iterator i = v.begin();
-            i != v.end(); ++i ) {
-        delete *i; // not exception safe
-    }
-
-    // Don't forget to delete this, too.
-    delete p;
-} // end f()
-```
-
-在現代 C++ 中達成相同狀況的做法如下：
+C 樣式程式設計中的其中一個主要錯誤類別是*記憶體*流失，因為無法針對以**new**所配置的記憶體呼叫**delete** 。 現代化C++強調資源取得的原則*是初始化*，這表示任何資源（堆積記憶體、檔案控制代碼、通訊端等等）都應該由物件所*擁有*，該物件會在其方法中建立或接收新配置的資源，並在其析構函式中予以刪除。 藉由遵循 RAII 的準則，您可以保證當擁有物件超出範圍時，所有資源都會正確地傳回作業系統。 為了支援輕鬆採用 RAII 原則C++ ，標準程式庫提供三種智慧型指標類型： [std：： unique_ptr](../standard-library/unique-ptr-class.md)、 [std：： shared_ptr](../standard-library/shared-ptr-class.md)和[std：： weak_ptr](../standard-library/weak-ptr-class.md)。 智慧型指標會處理所擁有之記憶體的配置和刪除。 下列範例顯示具有陣列成員的類別，該成員會在 `make_unique()`的呼叫中，于堆積上配置。 **New**和**delete**的呼叫是由 `unique_ptr` 類別所封裝。 當 `widget` 物件超出範圍時，將會叫用 unique_ptr 的析構函式，而且它會釋放為數組配置的記憶體。  
 
 ```cpp
 #include <memory>
+class widget
+{
+private:
+    std::unique_ptr<int> data;
+public:
+    widget(const int size) { data = std::make_unique<int>(size); }
+    void do_something() {}
+};
+
+void functionUsingWidget() {
+    widget w(1000000);   // lifetime automatically tied to enclosing scope
+                // constructs w, including the w.data gadget member
+    // ...
+    w.do_something();
+    // ...
+} // automatic destruction and deallocation for w and w.data
+
+```
+
+請盡可能在配置堆積記憶體時使用智慧型指標。 如果您必須明確使用 new 和 delete 運算子，請遵循 RAII 的原則。 如需詳細資訊，請參閱[物件存留期和資源管理（RAII）](object-lifetime-and-resource-management-modern-cpp.md)。
+
+## <a name="stdstring-and-stdstring_view"></a>std：： string 和 std：： string_view
+
+C 樣式字串是 bug 的另一個主要來源。 藉由使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，您可以消除與 C 樣式字串相關聯的幾乎所有錯誤，並取得成員函式的優點來進行搜尋、附加、前置處理等等。 這兩者都是高度優化的速度。 將字串傳遞至只需要唯讀存取的函式時，您可以使用[std：： string_view](../standard-library/basic-string-view-class.md) ，以獲得更高的效能優勢。
+
+## <a name="stdvector-and-other-standard-library-containers"></a>std：： vector 和其他標準程式庫容器
+
+標準程式庫容器全都遵循 RAII 的原則，提供反覆運算器以進行專案的安全遍歷，針對效能進行高度優化，並已徹底測試正確性。 盡可能使用這些容器，即可消除自訂資料結構中可能引進的 bug 或效率不佳的可能性。 根據預設，會在中 C++ 使用[向量](../standard-library/vector-class.md)做為慣用的順序容器。 這相當於 .NET 語言中的 `List<T>`。
+
+```cpp
+vector<string> apples;
+apples.push_back("Granny Smith");
+```
+
+使用[map](../standard-library/map-class.md) （而非 `unordered_map`）做為預設的關聯容器。 針對退化和多重案例使用[set](../standard-library/set-class.md)、 [multimap](../standard-library/multimap-class.md)和[多重](../standard-library/multiset-class.md)集。
+
+```cpp
+map<string, string> apple_color;
+// ...
+apple_color["Granny Smith"] = "Green";
+```
+
+當需要效能優化時，請考慮使用：
+
+- 內嵌時的[陣列](../standard-library/array-class-stl.md)類型很重要，例如，做為類別成員。
+
+- 未排序的關聯容器，例如[unordered_map](../standard-library/unordered-map-class.md)。 這些專案具有較低的每個元素額外負荷和持續時間查詢，但可能難以正確且有效率地使用。
+
+- 已排序 `vector`。 如需詳細資訊，請參閱[演算法](../cpp/algorithms-modern-cpp.md)。
+
+請勿使用 C 樣式陣列。 對於需要直接存取資料的舊版 Api，請改用存取子方法，例如 `f(vec.data(), vec.size());`。 如需容器的詳細資訊，請參閱[ C++標準程式庫容器](../standard-library/stl-containers.md)。
+
+## <a name="standard-library-algorithms"></a>標準程式庫演算法
+
+在假設您需要為您的程式撰寫自訂演算法之前，請先參閱C++標準程式庫[演算法](../standard-library/algorithm.md)。 標準程式庫包含許多常見作業（例如搜尋、排序、篩選和隨機化）的不斷成長演算法。 數學程式庫很廣泛。 從 c + + 17 開始，提供了許多演算法的平行版本。
+
+以下是一些重要的範例：
+
+- **for_each**，預設的遍歷演算法（以及以範圍為基礎的 for 迴圈）。 
+
+- **轉換**，適用于不就地修改的容器元素
+
+- **find_if**，預設搜尋演算法。
+
+- **排序**、 **lower_bound**和其他預設排序和搜尋演算法。
+
+若要撰寫比較子，請使用 strict **<** ，並在可以時使用*已命名的 lambda* 。
+
+```cpp
+auto comp = [](const widget& w1, const widget& w2)
+     { return w1.weight() < w2.weight(); }
+
+sort( v.begin(), v.end(), comp );
+
+auto i = lower_bound( v.begin(), v.end(), comp );
+```
+
+## <a name="auto-instead-of-explicit-type-names"></a>auto，而不是明確類型名稱
+
+C + + 11 引進了[自動](auto-cpp.md)關鍵字，可用於變數、函式和樣板宣告。 [**自動**] 會告知編譯器推算物件的類型，因此您不需要明確地輸入它。 當推算的型別是嵌套範本時， **auto**特別有用：
+
+```cpp
+map<int,list<string>>::iterator i = m.begin(); // C-style
+auto i = m.begin(); // modern C++
+```
+
+## <a name="range-based-for-loops"></a>以範圍為基礎的 for 迴圈
+
+在陣列和容器上進行 C 樣式的反復專案很容易就能編制錯誤的索引，而且也很繁瑣。 若要消除這些錯誤，並讓您的程式碼更容易閱讀，請使用以範圍為基礎的 for 迴圈搭配標準程式庫容器和原始陣列。 如需詳細資訊，請參閱[以範圍為基礎的 for 語句](../cpp/range-based-for-statement-cpp.md)。
+
+```cpp
+#include <iostream>
 #include <vector>
 
-void f()
+int main()
 {
-    // ...
-    auto p = make_shared<circle>( 42 );
-    vector<shared_ptr<shape>> v = load_shapes();
+    std::vector<int> v {1,2,3};
 
-    for( auto& s : v )
+    // C-style
+    for(int i = 0; i < v.size(); ++i)
     {
-        if( s && *s == *p )
-        {
-            cout << *s << " is a match\n";
-        }
+        std::cout << v[i];
+    }
+
+    // Modern C++:
+    for(auto& num : v)
+    {
+        std::cout << num;
     }
 }
 ```
 
-在現代 C++ 中，因為可以改用智慧型指標，就不需要使用 new/delete 或明確例外狀況處理。 當您使用**自動**類型推算和[lambda](../cpp/lambda-expressions-in-cpp.md)函式時，您可以更快速地撰寫程式碼、將其加強，並更進一步瞭解。 而以範圍為基礎**的 for**迴圈則是更簡潔、更容易使用，而且較不容易發生非預期的錯誤，而不像 C 樣式**for**迴圈。 您可以使用未定案程式碼搭配最少的程式行來撰寫應用程式。 您可以使該程式碼成為記憶體安全和例外狀況安全，而且沒有要處理的配置/解除配置或錯誤碼。
+## <a name="constexpr-expressions-instead-of-macros"></a>constexpr 運算式，而非宏
 
-現代 C++ 結合了兩種多型：編譯時間 (透過樣板) 和執行階段 (透過繼承和虛擬化)。 您可以混合使用這兩種多型來產生良好效果。 C++標準程式庫範本 `shared_ptr` 使用內部虛擬方法來完成其明顯輕鬆的類型抹除。 但是當範本是較佳選擇時，請勿對多型過度使用虛擬。 樣板有可觀的強大功能。
+C 和C++中的宏是在編譯之前由預處理器處理的標記。 在編譯檔案之前，宏標記的每個實例都會被其定義的值或運算式取代。 宏通常用於 C 樣式的程式設計中，以定義編譯時間常數值。 不過，宏很容易出錯，而且很容易進行調試。 在現代化C++的情況下，您應該偏好使用適用于編譯時間常數的[constexpr](constexpr-cpp.md)變數：
 
-如果您是從其他語言改換過來使用 C++，特別是從類型多半為參考類型、少有實值類型的 Managed 語言過來，請記得 C++ 類別預設是實值類型。 但是您可以將這些類別指定為參考類型，啟用支援物件導向程式設計的多型行為。 有用的觀點：實值類型與記憶體及配置控制較有關聯，參考類型則多偏向支援多型的基底類別及虛擬函式。 根據預設，實值類型是可複製的，每個類型都具有複製建構函式和複製指派運算子。 當您指定參考類型時，請將類別設定為不可複製 (停用複製建構函式和複製指派運算子)，並使用支援多型的虛擬解構函式。 實值類型也是與內容有關，當您複製這些內容時，會取得兩個可分別修改的獨立值。 但是參考類型則與識別有關 (屬於哪種物件)，因此有時稱為多型類型。
+```cpp
+#define SIZE 10 / C-style
+constexpr int size = 10; // modern C++
+```
 
-C++ 正在復活，因為功能強大再度成為王道。 當程式設計人員產能很重要時，像 Java 和 C# 這樣的語言很適用，但是當功能與效能變得至關重要時，這些語言就顯得有所局限。 就高效率和功能而論，尤其是在硬體資源有限的裝置上，所有語言都比不上現代 C++。
+### <a name="uniform-initialization"></a>統一初始化
 
-不僅語言現代，連開發工具也是。 Visual Studio 讓開發週期的所有部分都穩定且有效率。 這包含 Application Lifecycle Management (ALM) 工具、IDE 增強功能 (例如 IntelliSense)、工具易用的機制 (例如 XAML) 以及建置、偵錯等許多其他工具。
+在新式C++中，您可以針對任何類型使用括弧初始化。 初始化陣列、向量或其他容器時，這種形式的初始化特別方便。 在下列範例中，`v2` 會以 `S`的3個實例進行初始化。 `v3` 會使用3個 `S` 實例進行初始化，其本身會使用大括弧進行初始化。 編譯器會根據宣告的 `v3`類型，來推斷每個元素的類型。
 
-本文件中的這篇文章針對撰寫現代 C++ 程式所需的最重要功能及技術，提供了高階方針和最佳作法。
+```cpp
+#include <vector>
 
-- [C++類型系統](../cpp/cpp-type-system-modern-cpp.md)
+struct S
+{
+    std::string name;
+    float num;
+    S(std::string s, float f) : name(s), num(f) {}
+};
 
-- [統一初始設定和委派建構函式](../cpp/uniform-initialization-and-delegating-constructors.md)
+int main()
+{
+    // C-style initialization
+    std::vector<S> v;
+    S s1("Norah", 2.7);
+    S s2("Frank", 3.5);
+    S s3("Jeri", 85.9);
 
-- [物件存留期和資源管理](../cpp/object-lifetime-and-resource-management-modern-cpp.md)
+    v.push_back(s1);
+    v.push_back(s2);
+    v.push_back(s3);
 
-- [物件擁有資源 (RAII)](../cpp/objects-own-resources-raii.md)
+    // Modern C++:
+    std::vector<S> v2 {s1, s2, s3};
 
-- [智慧型指標](../cpp/smart-pointers-modern-cpp.md)
+    // or...
+    std::vector<S> v3{ {"Norah", 2.7}, {"Frank", 3.5}, {"Jeri", 85.9} };
 
-- [編譯時間封裝的 Pimpl](../cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md)
+}
+```
 
-- [容器](../cpp/containers-modern-cpp.md)
+如需詳細資訊，請參閱[括弧初始化](initializing-classes-and-structs-without-constructors-cpp.md)。
 
-- [演算法](../cpp/algorithms-modern-cpp.md)
+## <a name="move-semantics"></a>移動語義
 
-- [字串和 i/o 格式（新式C++）](../cpp/string-and-i-o-formatting-modern-cpp.md)
+新式C++提供了*移動語義*，讓您可以排除不必要的記憶體複本，而在某些情況下，舊版語言無法避免。 *移動*作業會將資源的擁有權從一個物件轉移到下一個，而不需要建立複本。 當實作為擁有資源（例如堆積記憶體、檔案控制代碼等等）的類別時，您可以為它定義*移動*程式和*移動的指派運算子*。 在不需要複製的情況下，編譯器會在多載解析期間選擇這些特殊成員。 標準程式庫容器類型會在物件上叫用移動的函式（如果有定義的話）。 如需詳細資訊，請參閱[移動函數和移動指派C++運算子（）](move-constructors-and-move-assignment-operators-cpp.md)。
 
-- [錯誤和例外狀況處理](../cpp/errors-and-exception-handling-modern-cpp.md)
+## <a name="lambda-expressions"></a>Lambda 運算式
 
-- [ABI 界限的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)
+在 C 樣式程式設計中，函式可以透過函式*指標*傳遞至另一個函數。 函式指標不容易維護和瞭解，因為它們所參考的函式可能會在原始程式碼中的其他位置定義，而遠離其叫用的時間點。 此外，它們不是型別安全。 新式C++提供函式物件、覆寫[（）](function-call-operator-parens.md)運算子的類別，讓它們可以像函式一樣呼叫。 建立函式物件最方便的方式是使用內嵌[lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 下列範例示範如何使用 lambda 運算式來傳遞函式物件，`for_each` 函式會在向量的每個元素上叫用：
 
-如需詳細資訊，請參閱 Stack Overflow 文章，[其中C++慣用語在 c + + 11 中已被取代](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11)。
+```cpp
+    std::vector<int> v {1,2,3,4,5};
+    int x = 2;
+    int y = 4;
+    auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
+```
 
-## <a name="see-also"></a>請參閱
+Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「函式，該函式會接受 `int` 類型的單一引數，並傳回布林值，指出運算式是否為 true。 請注意，來自周圍內容的 `x` 和 `y` 變數可以在 lambda 中使用。 `[=]` 指定以傳值方式來*捕獲*這些變數;換句話說，lambda 運算式有自己的這些值複本。
+
+## <a name="exceptions"></a>例外狀況
+
+一般的規則是，現代化C++的例外狀況，而不是錯誤碼，做為報告和處理錯誤情況的最佳方式。 如需詳細資訊，請參閱[例外狀況和錯誤處理的新式C++最佳作法](errors-and-exception-handling-modern-cpp.md)。
+
+## <a name="stdatomic"></a>std：：不可部分完成
+
+針對執行緒C++間的通訊機制，請使用標準程式庫[std：：](../standard-library/atomic-structure.md)不可部分完成結構和相關類型。
+
+## <a name="stdvariant-c17"></a>std：： variant （c + + 17）
+
+等位通常用於 C 樣式的程式設計中，藉由讓不同類型的成員佔用相同的記憶體位置來節省記憶體。 不過，等位不是型別安全，而且很容易發生程式設計錯誤。 C + + 17 引進了[std：： variant](../standard-library/variant-class.md)類別，做為等位的更強大且安全的替代方式。 [Std：：造訪](../standard-library/variant-functions.md#visit)函式可以用型別安全的方式，用來存取 `variant` 型別的成員。
+
+## <a name="see-also"></a>另請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)<br/>

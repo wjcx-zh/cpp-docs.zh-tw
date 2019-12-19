@@ -1,5 +1,5 @@
 ---
-title: Mixing C (structured) and C++ exceptions
+title: 混合 C （結構化） C++和例外狀況
 ms.date: 08/14/2018
 helpviewer_keywords:
 - exceptions [C++], mixed C and C++
@@ -15,32 +15,32 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 11/20/2019
 ms.locfileid: "74246453"
 ---
-# <a name="mixing-c-structured-and-c-exceptions"></a>Mixing C (structured) and C++ exceptions
+# <a name="mixing-c-structured-and-c-exceptions"></a>混合 C （結構化） C++和例外狀況
 
-If you want to write portable code, the use of structured exception handling (SEH) in a C++ program isn't recommended. However, you may sometimes want to compile using [/EHa](../build/reference/eh-exception-handling-model.md) and mix structured exceptions and C++ source code, and need some facility for handling both kinds of exceptions. Because a structured exception handler has no concept of objects or typed exceptions, it can't handle exceptions thrown by C++ code. However, C++ **catch** handlers can handle structured exceptions. C++ exception handling syntax (**try**, **throw**, **catch**) isn't accepted by the C compiler, but structured exception handling syntax ( **__try**, **__except**, **__finally**) is supported by the C++ compiler.
+如果您想要撰寫可移植的C++程式碼，則不建議在程式中使用結構化例外狀況處理（SEH）。 不過，您有時可能會想要使用[/eha](../build/reference/eh-exception-handling-model.md)和混合結構化例外C++狀況和原始程式碼進行編譯，而且需要一些功能來處理這兩種例外狀況。 由於結構化例外狀況處理常式沒有物件或具類型例外狀況的概念，因此無法處理C++程式碼擲回的例外狀況。 不過， C++ **catch**處理常式可以處理結構化例外狀況。 C++C 編譯器不接受例外狀況處理語法（**try**、 **throw**、 **catch**），但C++編譯器支援結構化例外狀況處理語法（ **__try**、 **__except**、 **__finally**）。
 
-See [_set_se_translator](../c-runtime-library/reference/set-se-translator.md) for information on how to handle structured exceptions as C++ exceptions.
+如 C++需如何將結構化例外狀況當做例外狀況處理的詳細資訊，請參閱 [_set_se_translator](../c-runtime-library/reference/set-se-translator.md)。
 
-If you mix structured and C++ exceptions, be aware of these potential issues:
+如果您混用結構C++化和例外狀況，請注意下列潛在問題：
 
 - C++ 例外狀況和結構化例外狀況無法在同一個函式中混用。
 
-- Termination handlers ( **__finally** blocks) are always executed, even during unwinding after an exception is thrown.
+- 終止處理常式（ **__finally**區塊）一律會執行，即使在擲回例外狀況之後回溯期間也一樣。
 
-- C++ exception handling can catch and preserve unwind semantics in all modules compiled with the [/EH](../build/reference/eh-exception-handling-model.md) compiler options, which enable unwind semantics.
+- C++例外狀況處理可以在所有以[/EH](../build/reference/eh-exception-handling-model.md)編譯器選項編譯的模組中攔截並保留回溯語義，這會啟用回溯語義。
 
-- 在某些情況下，可能不會針對所有物件呼叫解構函式的函式。 For example, if a structured exception occurs while attempting to make a function call through an uninitialized function pointer, and that function takes as parameters objects that were constructed before the call, the destructors of those objects are not called during stack unwind.
+- 在某些情況下，可能不會針對所有物件呼叫解構函式的函式。 例如，如果在嘗試透過未初始化的函式指標進行函式呼叫時發生結構化例外狀況，而且該函式採用在呼叫之前所建立的參數物件，則不會呼叫這些物件的析構函式堆疊回溯期間。
 
-## <a name="next-steps"></a>後續步驟
+## <a name="next-steps"></a>接下來的步驟
 
-- [Using setjmp or longjmp in C++ programs](../cpp/using-setjmp-longjmp.md)
+- [在程式中C++使用 setjmp 或 longjmp](../cpp/using-setjmp-longjmp.md)
 
-  See more information on the use of `setjmp` and `longjmp` in C++ programs.
+  查看在程式中C++使用 `setjmp` 和 `longjmp` 的詳細資訊。
 
 - [使用 C++ 處理結構化例外狀況](../cpp/exception-handling-differences.md)
 
-  See examples of the ways you can use C++ to handle structured exceptions.
+  請參閱您可以用C++來處理結構化例外狀況之方式的範例。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[Modern C++ best practices for exceptions and error handling](../cpp/errors-and-exception-handling-modern-cpp.md)
+[例外C++狀況和錯誤處理的現代化最佳做法](../cpp/errors-and-exception-handling-modern-cpp.md)

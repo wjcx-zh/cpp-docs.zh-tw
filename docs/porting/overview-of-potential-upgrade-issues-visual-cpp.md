@@ -2,12 +2,12 @@
 title: 潛在升級問題概觀 (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 10c2de547611cf7b1b47de2b1ec05dcf419c6225
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69511549"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627244"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>潛在升級問題概觀 (Visual C++)
 
@@ -33,7 +33,7 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 
 如果您的目的檔包含具有 C++ 連結的外部符號，則該目的檔可能未正確地連結到以不同主要工具組版本所產生的目的檔。 有許多可能的結果︰連結可能完全失敗 (例如，如果名稱裝飾已變更的話)。 連結可能成功，但執行階段可能無法運作 (例如，如果型別版面配置已變更的話)。 或者在許多情況下，可能剛好能夠運作且未發生任何錯誤。 另請注意，雖然 C++ ABI 不穩定，但是 COM 所需的 C ABI 和 C++ ABI 子集則十分穩定。
 
-若您連結到匯入程式庫，在執行階段即會使用會保留 ABI 相容性的 Visual Studio 可轉散發程式庫之任一新版。 例如，如果您的應用程式使用 Visual Studio 2015 Update 3 工具組進行編譯及連結，則可以使用任一 Visual Studio 2017 或 Visual Studio 2019 的可轉散發套件，因為 2015、2017 與 2019 的程式庫有保留二進位的回溯相容性。 反向操作則不行：您所使用可轉散發套件版本不可早於用於建置您程式碼的工具組，即使它們有相容的 ABI 也不行。
+若您連結到匯入程式庫，在執行階段即會使用會保留 ABI 相容性的 Visual Studio 可轉散發程式庫之任一新版。 例如，如果您的應用程式使用 Visual Studio 2015 Update 3 工具組進行編譯及連結，則可以使用任一 Visual Studio 2017 或 Visual Studio 2019 的可轉散發套件，因為 2015、2017 與 2019 的程式庫有保留二進位的回溯相容性。 相反地，您無法將可轉散發套件用於舊版工具組，而不是用來建立程式碼，即使它們有相容的 ABI 也是如此。
 
 ### <a name="libraries"></a>程式庫
 
@@ -68,7 +68,7 @@ C++ 沒有穩定的應用程式二進位介面 (ABI)。 但 Visual Studio 會為
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019：無法解析的外部符號
+### <a name="lnk2019-unresolved-external"></a>LNK2019：無法解析的外部
 
 針對無法解析的符號，您可能需要修復專案設定。
 
@@ -88,20 +88,20 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t 是原生類型)
 
-(在 Microsoft Visual C++ 6.0 和更舊版本中，**wchar_t** 並未實作為內建類型，而是在 wchar.h 中宣告為 unsigned short 的 typedef。)C++ 標準要求 **wchar_t** 必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+（在 Microsoft Visual C++ 6.0 和更早版本中， **wchar_t**不會實作為內建型別，而是在 wchar 中宣告為不帶正負號簡短的 typedef）。C++標準要求**wchar_t**必須是內建類型。 使用 typedef 版本可能會造成可攜性問題。 如果您從舊版 Visual Studio 升級，並且因程式碼嘗試以隱含方式將 **wchar_t** 轉換成 **unsigned short**而遇到編譯器錯誤 C2664，建議您變更程式碼來修正錯誤，而不是設定 `/Zc:wchar_t-`。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>使用連結器選項 /NODEFAULTLIB、/ENTRY 和 /NOENTRY 升級
 
-`/NODEFAULTLIB` 連結器選項 (或「略過所有預設程式庫」連結器屬性) 會告訴連結器不要在預設程式庫 (例如 CRT) 中自動連結。 這表示每個程式庫都必須個別列為輸入。 此程式庫清單提供於 [專案屬性]  對話方塊之 [連結器]  區段的 [其他相依性]  屬性中。
+`/NODEFAULTLIB` 連結器選項 (或「略過所有預設程式庫」連結器屬性) 會告訴連結器不要在預設程式庫 (例如 CRT) 中自動連結。 這表示每個程式庫都必須個別列為輸入。 此程式庫清單提供於 [專案屬性] 對話方塊之 [連結器] 區段的 [其他相依性] 屬性中。
 
-因為部分預設程式庫的名稱已變更，所以升級時，使用此選項的專案會出現問題。 因為每個程式庫都必須列在 [其他相依性]  屬性中或連結器命令列上，所以您必須更新程式庫清單以使用所有目前名稱。
+因為部分預設程式庫的名稱已變更，所以升級時，使用此選項的專案會出現問題。 因為每個程式庫都必須列在 [其他相依性] 屬性中或連結器命令列上，所以您必須更新程式庫清單以使用所有目前名稱。
 
 下表顯示從 Visual Studio 2015 開始其內容經變更的程式庫。 若要升級，您需要將第二個資料行中新程式庫名稱新增到第一個資料行中的程式庫。 其中部分程式庫是匯入程式庫，但應該不會有任何影響。
 
 |||
 |-|-|
 |如果您是使用︰|您需要使用這些程式庫：|
-|LIBCMT.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
+|libcmt.lib|libcmt.lib、libucrt.lib、libvcruntime.lib|
 |libcmtd.lib|libcmtd.lib、libucrtd.lib、libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib、ucrt.lib、vcruntime.lib|
 |msvcrtd.lib|msvcrtd.lib、ucrtd.lib、vcruntimed.lib|
@@ -126,7 +126,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 您可以按下 **F12** (**移至定義**)，來查看有疑義的類型在何處定義。
 
-這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面]  對話方塊中，開啟 [C/C++]   > [進階]  頁面，然後將 [顯示 Include 檔]  設為 [是]  。 然後重建您的專案，並查看輸出視窗中的 `#include` 清單。 每個標頭都會縮排在包含它的標頭下方。
+這裡的 [/showIncludes](../build/reference/showincludes-list-include-files.md) 編譯器選項十分有用。 在專案的 [屬性頁面] 對話方塊中，開啟 [C/C++] > [進階] 頁面，然後將 [顯示 Include 檔] 設為 [是]。 然後重建您的專案，並查看輸出視窗中的 `#include` 清單。 每個標頭都會縮排在包含它的標頭下方。
 
 ## <a name="errors-involving-crt-functions"></a>涉及 CRT 函式的錯誤
 
@@ -134,7 +134,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 如果錯誤涉及 CRT 函式，請搜尋 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md) 或 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)，以查看這些文章是否包含任何其他資訊。 如果錯誤是「LNK2019 無法解析的外部」，請確定尚未移除函式。 否則，如果您確定函式仍然存在，而且呼叫程式碼正確，請確認您的專案是否使用 `/NODEFAULTLIB`。 如果是的話，則您需要更新程式庫清單，讓專案使用新的通用 (UCRT) 程式庫。 如需詳細資訊，請參閱上方的＜程式庫和相依性＞一節。
 
-如果錯誤涉及 `printf` 或 `scanf`，請確定您未私自定義兩者其一不含 stdio.h。 若是如此，請移除私人定義或 legacy\_stdio\_definitions.lib 的連結。 您可於 [組態屬性]   > [連結器]   > [輸入]  下的 [屬性頁]  對話方塊中，於 [其他相依性]  屬性中設定此程式庫。 如果您連結到 Windows SDK 8.1 或較舊版，則請新增 legacy\_stdio\_definitions.lib。
+如果錯誤涉及 `printf` 或 `scanf`，請確定您未私自定義兩者其一不含 stdio.h。 若是如此，請移除私人定義或 legacy\_stdio\_definitions.lib 的連結。 您可於 [組態屬性] **[連結器]**  >  **[輸入]**  >  下的 [屬性頁] 對話方塊中，於 [其他相依性] 屬性中設定此程式庫。 如果您連結到 Windows SDK 8.1 或較舊版，則請新增 legacy\_stdio\_definitions.lib。
 
 如果錯誤涉及格式字串引數，則原因可能是編譯器在強制執行標準方面較為嚴格。 如需詳細資訊，請參閱變更歷程記錄。 因為這裡的任何錯誤都可能代表安全性風險，所以請密切注意它們。
 
@@ -150,7 +150,7 @@ C++ 標準現在指定從不帶正負號到帶正負號整數值的轉換視為�
 
 ## <a name="warnings-to-use-secure-crt-functions"></a>使用安全 CRT 函式的警告
 
-多年來，已引進安全版本的 C 執行階段函式。 雖然舊的不安全版本仍然可用，但是建議將程式碼變更成使用安全版本。 編譯器會發出使用不安全版本的警告。 您可以選擇停用或忽略這些警告。 若要停用解決方案中所有專案的警告，請開啟 [檢視]   > [屬性管理員]  ，並選取您要停用此警告的所有專案，然後以滑鼠右鍵按一下選取的項目，再選擇 [屬性]  。 在 [組態屬性]   > [C/C++]   > [進階]  下的 [屬性頁]  對話方塊中，選取 [停用特定警告]  。 按一下下拉式箭頭，然後按一下 [編輯]  。 在文字方塊中輸入 4996 (請不要包括 'C' 前置詞)。如需詳細資訊，請參閱[移植以使用安全的 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
+多年來，已引進安全版本的 C 執行階段函式。 雖然舊的不安全版本仍然可用，但是建議將程式碼變更成使用安全版本。 編譯器會發出使用不安全版本的警告。 您可以選擇停用或忽略這些警告。 若要停用解決方案中所有專案的警告，請開啟 [檢視] > [屬性管理員]，並選取您要停用此警告的所有專案，然後以滑鼠右鍵按一下選取的項目，再選擇 [屬性]。 在 [組態屬性] **[C/C++]**  >  **[進階]**  >  下的 [屬性頁] 對話方塊中，選取 [停用特定警告]。 按一下下拉式箭頭，然後按一下 [編輯]。 在文字方塊中輸入 4996 （請勿包含 ' C ' 前置詞）。如需詳細資訊，請參閱[移植以使用安全的 CRT](porting-guide-spy-increment.md#porting_to_secure_crt)。
 
 ## <a name="errors-due-to-changes-in-windows-apis-or-obsolete-sdks"></a>因 Windows API 或已淘汰 SDK 中的變更而造成的錯誤
 
@@ -170,7 +170,7 @@ ATL 和 MFC 是相當穩定的 API，但偶而會進行變更。 如需詳細資
 
 ### <a name="lnk-2005-_dllmain12-already-defined-in-msvcrtdlib"></a>LNK 2005 _DllMain@12 已定義於 MSVCRTD.lib 中
 
-MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC 程式庫之間的順序問題。 必須先連結 MFC，才能提供 new 和 delete 運算子。 若要修正錯誤，請使用 `/NODEFAULTLIB` 參數來忽略這些預設程式庫：MSVCRTD.lib 與 mfcs140d.lib。 然後將這些相同的程式庫新增為其他相依性。
+MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC 程式庫之間的順序問題。 必須先連結 MFC，才能提供 new 和 delete 運算子。 若要修正錯誤，請使用 `/NODEFAULTLIB` 參數來忽略這些預設程式庫︰MSVCRTD.lib 和 mfcs140d.lib。 然後將這些相同的程式庫新增為其他相依性。
 
 ## <a name="32-vs-64-bit"></a>32 與 64 位元
 
@@ -180,11 +180,11 @@ MFC 應用程式中可能會發生此錯誤。 這指出 CRT 程式庫與 MFC �
 
 ## <a name="unicode-vs-mbcsascii"></a>Unicode 與 MBCS/ASCII
 
-標準化 Unicode 之前，許多程式都是使用多位元組字元集 (MBCS) 代表 ASCII 字元集中未包含的字元。 在舊的 MFC 專案中，MBCS 是預設設定，在您升級這類程式時，將會看到建議改為使用 Unicode 的警告。 如果您決定轉換成 Unicode 不符合開發成本，則可以選擇停用或忽略警告。 若要在解決方案中的所有專案停用此項目，請開啟 [檢視]   > [屬性管理員]  ，並選取您要停用此警告的所有專案，然後以滑鼠右鍵按一下選取的項目，再選擇 [屬性]  。 在 [屬性頁]  對話方塊中，選取 [組態屬性]   > [C/C++]   > [進階]  。 在 [停用特定警告]  屬性中，開啟下拉式箭頭並選擇 [編輯]  。 在文字方塊中輸入 4996 (請不要包括 'C' 前置詞)。選擇 [確定]  儲存屬性，然後選擇 [確定]  儲存變更。
+標準化 Unicode 之前，許多程式都是使用多位元組字元集 (MBCS) 代表 ASCII 字元集中未包含的字元。 在舊的 MFC 專案中，MBCS 是預設設定，在您升級這類程式時，將會看到建議改為使用 Unicode 的警告。 如果您決定轉換成 Unicode 不符合開發成本，則可以選擇停用或忽略警告。 若要在解決方案中的所有專案停用此項目，請開啟 [檢視] > [屬性管理員]，並選取您要停用此警告的所有專案，然後以滑鼠右鍵按一下選取的項目，再選擇 [屬性]。 在 [屬性頁] 對話方塊中，選取 [組態屬性] > [C/C++] > [進階]。 在 [停用特定警告] 屬性中，開啟下拉式箭頭並選擇 [編輯]。 在文字方塊中輸入 4996 （請勿包含 ' C ' 前置詞）。選擇 **[確定]** 以儲存屬性，然後選擇 **[確定]** 以儲存變更。
 
-如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與Unicode 的一般資訊，請參閱 [Visual C++ 中的文字和字串](../text/text-and-strings-in-visual-cpp.md)和[國際化](../c-runtime-library/internationalization.md)。
+如需詳細資訊，請參閱[從 MBCS 移植到 Unicode](porting-guide-spy-increment.md#porting_to_unicode)。 如需 MBCS 與 Unicode 的一般資訊，請參閱[視覺效果 C++ 和[國際化](../c-runtime-library/internationalization.md)中的文字和字串](../text/text-and-strings-in-visual-cpp.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

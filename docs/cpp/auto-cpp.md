@@ -1,22 +1,25 @@
 ---
 title: auto （C++）
-ms.date: 11/04/2016
+ms.date: 12/10/2019
 f1_keywords:
 - auto_CPP
 - auto
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: 8af2aceb2964a5ec3adcbb0b0accab0b051ff48c
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 0991c836d1ade663be3e1b734ec4745796b91abd
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303389"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301648"
 ---
 # <a name="auto-c"></a>auto （C++）
 
 從所宣告變數的初始化運算式，來推斷其類型。
+
+> [!NOTE]
+> C++標準會針對此關鍵字定義原始和修訂的意義。 在 Visual Studio 2010 之前， **auto**關鍵字會在*自動*儲存類別中宣告變數;也就是具有本機存留期的變數。 從 Visual Studio 2010 開始， **auto**關鍵字會宣告一個變數，其類型是從其宣告中的初始化運算式推算而來。 [/Zc： auto&#91; &#93; ](../build/reference/zc-auto-deduce-variable-type.md)編譯器選項控制**auto**關鍵字的意義。
 
 ## <a name="syntax"></a>語法
 
@@ -219,7 +222,7 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto 關鍵字](../cpp/auto-keyword.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)<br/>

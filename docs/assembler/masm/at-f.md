@@ -1,26 +1,27 @@
 ---
 title: '@F'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@F'
 helpviewer_keywords:
 - '@F symbol'
 ms.assetid: fa717dc8-e5a4-420d-ad3c-cb64ed258a60
-ms.openlocfilehash: 82195c216552302f4f0a2a237ce95440249e9854
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 80f75fe9b191db48fd68e7c926b94cb0b9126d20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74399103"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315897"
 ---
 # <a name="f"></a>\@F
 
-下一個[\@\@：](../../assembler/masm/at-at.md)標籤的位置。
+下一個[\@\@：](at-at.md)標籤的位置。
 
 ## <a name="syntax"></a>語法
 
 > **\@F**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](symbols-reference.md)
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: MMWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - MMWORD
 helpviewer_keywords:
 - MMWORD directive
 ms.assetid: b4c5a104-9078-4fb4-afc3-d1e63abe562a
-ms.openlocfilehash: d4378c1435df09f249fe7f55dabd4bd0f43f6100
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fd3b9f40b7ff9fa4dae570e0ed906c13a9456424
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397167"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311919"
 ---
 # <a name="mmword"></a>MMWORD
 
@@ -38,3 +38,7 @@ ms.locfileid: "74397167"
 ```asm
     movq     mm0, mmword ptr [ebx]
 ```
+
+## <a name="see-also"></a>請參閱
+
+[MASM BNF 文法](masm-bnf-grammar.md)

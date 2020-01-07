@@ -1,58 +1,53 @@
 ---
 title: 儲存類別 (C++)
-ms.date: 11/04/2016
+description: 在C++中，static、extern 和 thread_local 關鍵字會指定變數或函數的存留期、連結和記憶體位置。
+ms.date: 12/11/2019
 f1_keywords:
 - thread_local_cpp
-- external_cpp
+- extern_cpp
 - static_cpp
 - register_cpp
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 92435b2bab670dd366f26c981443e98e4a4e3c29
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221993"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301310"
 ---
-# <a name="storage-classes-c"></a>儲存類別 (C++)
+# <a name="storage-classes"></a>儲存類別
 
-A*儲存類別*的內容中C++變數宣告為類型規範，可控管物件的存留期、 連結和記憶體位置。 指定的物件只能有一個儲存類別。 區塊內定義的變數會具有自動儲存區，除非另有指定使用**extern**，**靜態**，或`thread_local`規範。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。
+變數宣告內容中的*儲存類別*是一種類型規範，可控制物件的存留期、連結和記憶體位置。 C++ 指定的物件只能有一個儲存類別。 除非使用**extern**、 **static**或**thread_local**規範來指定，否則區塊內定義的變數會具有自動儲存區。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。 當執行進入區塊時，系統會自動為它們配置記憶體，並在結束區塊時解除配置。
 
 **備註**
 
-1. [可變](../cpp/mutable-data-members-cpp.md)關鍵字可視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
+1. 可以將[可變](../cpp/mutable-data-members-cpp.md)關鍵字視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
-1. **Visual Studio 2010 及更新版本：** **自動**關鍵字不再是C++儲存類別規範，而**註冊**關鍵字已被取代。 **Visual Studio 2017 15.7 版及更新版本：** (適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字會從移除C++語言。
+1. **Visual Studio 2010 和更新版本：** **Auto**關鍵字不再是C++儲存類別規範，而且**register**關鍵字已被取代。 **Visual Studio 2017 15.7 版和更新版本：** （適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**關鍵字已從C++語言中移除。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="in-this-section"></a>本節內容：
+## <a name="static"></a>靜止
 
-- [static](#static)
-- [extern](#extern)
-- [thread_local](#thread_local)
+**Static**關鍵字可以用來宣告全域範圍、命名空間範圍和類別範圍的變數和函式。 靜態變數也可以在區域範圍內進行宣告。
 
-## <a name="static"></a> static
+靜態持續期間是指，物件或變數會在程式啟動時配置，並在程式結束時解除配置。 外部連結是指，變數名稱在變數宣告所在的檔案外部可見。 相反地，內部連結是指，名稱在變數宣告所在的檔案外部不可見。 根據預設，全域命名空間中所定義的物件或變數具有靜態持續期間和外部連結。 在下列情況下，可以使用**static**關鍵字。
 
-**靜態**關鍵字可以用來宣告變數和函式，在全域範圍、 命名空間範圍和類別範圍。 靜態變數也可以在區域範圍內進行宣告。
+1. 當您在檔案範圍（全域和/或命名空間範圍）宣告變數或函式時， **static**關鍵字會指定變數或函數具有內部連結。 當您宣告變數時，變數會擁有靜態持續期間，且編譯器會將其初始化為 0 (除非您指定其他值)。
 
-靜態持續期間是指，物件或變數會在程式啟動時配置，並在程式結束時解除配置。 外部連結是指，變數名稱在變數宣告所在的檔案外部可見。 相反地，內部連結是指，名稱在變數宣告所在的檔案外部不可見。 根據預設，全域命名空間中所定義的物件或變數具有靜態持續期間和外部連結。 **靜態**關鍵字可用於下列情況。
+1. 當您在函式中宣告變數時， **static**關鍵字會指定變數在呼叫該函式之間保留其狀態。
 
-1. 當您宣告變數或函式在檔案範圍 (全域和/或命名空間範圍)，則**靜態**關鍵字指定變數或函式具有內部連結。 當您宣告變數時，變數會擁有靜態持續期間，且編譯器會將其初始化為 0 (除非您指定其他值)。
+1. 當您在類別宣告中宣告資料成員時， **static**關鍵字會指定該成員的一個複本由類別的所有實例共用。 靜態資料成員必須以檔案範圍定義。 您宣告為**const static**的整數資料成員可以有初始化運算式。
 
-1. 當您宣告函式中的變數**靜態**關鍵字指定變數會保留其對該函式的呼叫之間的狀態。
+1. 當您在類別宣告中宣告成員函式時， **static**關鍵字會指定該函式是由類別的所有實例共用。 因為函式沒有隱含的**this**指標，所以靜態成員函數無法存取實例成員。 若要存取執行個體成員，請使用本身為執行個體指標或參考的參數宣告函式。
 
-1. 當您宣告在類別宣告中，資料成員**靜態**關鍵字可讓您指定之成員的一個複本會共用類別的所有執行個體。 靜態資料成員必須以檔案範圍定義。 您將宣告為整數類資料的資料成員**const 靜態**可以有初始設定式。
+1. 您無法將等位的成員宣告為靜態。 不過，全域宣告的匿名等位必須明確宣告為**static**。
 
-1. 當您宣告在類別宣告中，成員函式**靜態**關鍵字可讓您指定的函式會共用類別的所有執行個體。 靜態成員函式無法存取執行個體成員，因為函式沒有隱含**這**指標。 若要存取執行個體成員，請使用本身為執行個體指標或參考的參數宣告函式。
-
-1. 您無法將等位的成員宣告為靜態。 不過，必須明確宣告全域宣告的匿名等位**靜態**。
-
-此範例示範如何宣告的變數**靜態**函式中會保留其對該函式的呼叫之間的狀態。
+這個範例示範在函式中宣告為**static**的變數如何保留其在呼叫該函式之間的狀態。
 
 ```cpp
 // static1.cpp
@@ -81,7 +76,7 @@ nStatic is 6
 nStatic is 10
 ```
 
-此範例示範如何使用**靜態**類別中。
+這個範例示範如何在類別中使用**靜態**。
 
 ```cpp
 // static2.cpp
@@ -127,7 +122,7 @@ int main() {
 3
 ```
 
-此範例示範宣告的區域變數**靜態**的成員函式。 靜態變數可供整個程式使用，而類型的所有執行個體會共用靜態變數的相同複本。
+這個範例會顯示成員函式中宣告為**static**的區域變數。 靜態變數可供整個程式使用，而類型的所有執行個體會共用靜態變數的相同複本。
 
 ```cpp
 // static3.cpp
@@ -159,34 +154,15 @@ var != value
 var == value
 ```
 
-從 C++11 開始，保證靜態區域變數初始化為執行緒安全。 這項功能有時稱為*magic 靜態變數*。 不過，在多執行緒應用程式中，必須同步處理所有後續指派。 安全執行緒靜態初始設定 」 功能可以使用已停用[/zc: threadsafeinit](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)旗標，以避免相依於 CRT。
+從 C++11 開始，保證靜態區域變數初始化為執行緒安全。 這項功能有時稱為*魔術靜態*。 不過，在多執行緒應用程式中，必須同步處理所有後續指派。 使用[/zc： threadSafeInit-](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md)旗標可停用安全線程靜態初始化功能，以避免依賴 CRT。
 
-## <a name="extern"></a> extern
+## <a name="extern"></a>extern
 
-物件和變數宣告為**extern**宣告定義於另一個轉譯單位中，或為具有外部連結封閉範圍中的物件。
+宣告為**extern**的物件和變數會宣告在另一個轉譯單位或封閉範圍中定義為具有外部連結的物件。 如需詳細資訊，請參閱[extern](extern-cpp.md)和[轉譯單位和連結](program-and-linkage-cpp.md)。
 
-Deklarace **const**變數**extern**儲存類別會強制該變數具有外部連結。 初始**extern const**允許定義轉譯單位中的變數。 若在定義轉譯單位以外的轉譯單位中初始化，會產生未定義的結果。 如需詳細資訊，請參閱[使用 extern 指定連結](../cpp/using-extern-to-specify-linkage.md)
+## <a name="thread_local"></a>thread_local （c + + 11）
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)編譯器選項可讓編譯器套用[外部連結](../c-language/external-linkage.md)變數宣告可透過`extern constexpr`。 在舊版的 Visual Studio，並依預設或如果 **/Zc:externConstexpr-** 指定時，Visual Studio 會套用到的內部連結**constexpr**變數，即使**extern**使用關鍵字。 **/Zc: externconstexpr**選項是從 Visual Studio 2017 Update 15.6 中推出。 和預設為關閉。 /Permissive-option 不會啟用 /zc: externconstexpr。
-
-下列程式碼示範兩個**extern**宣告`DefinedElsewhere`（這是指不同的轉譯單位中定義的名稱） 和`DefinedHere`（參考封閉範圍中定義的名稱）：
-
-```cpp
-// external.cpp
-// DefinedElsewhere is defined in another translation unit
-extern int DefinedElsewhere;
-int main() {
-   int DefinedHere;
-   {
-      // refers to DefinedHere in the enclosing scope
-      extern int DefinedHere;
-   }
-}
-```
-
-## <a name="thread_local"></a> thread_local (C + + 11)
-
-如果變數是使用 `thread_local` 規範所宣告，則只有在建立它的執行緒上才能進行存取。 變數會在建立執行緒時建立，並在終結執行緒時終結。 每個執行緒都有它自己的變數複本。 在 Windows 中，`thread_local`相當於 Microsoft 專有[__declspec (thread)](../cpp/thread.md)屬性。
+使用**thread_local**指定名稱宣告的變數，只能在建立它的執行緒上存取。 變數會在建立執行緒時建立，並在終結執行緒時終結。 每個執行緒都有它自己的變數複本。 在 Windows 上， **thread_local**的功能等同于 Microsoft 專有的[__declspec （thread）](../cpp/thread.md)屬性。
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -205,29 +181,29 @@ void DoSomething()
 }
 ```
 
-注意事項`thread_local`規範：
+**Thread_local**規範的注意事項：
 
-- 以動態方式初始化的執行緒區域變數 Dll 中可能無法正確初始化所有的呼叫執行緒上。 如需詳細資訊，請參閱[執行緒](thread.md)。
+- Dll 中的動態初始化執行緒區域變數可能無法在所有呼叫執行緒上正確初始化。 如需詳細資訊，請參閱[執行緒](thread.md)。
 
-- `thread_local`規範也可以結合**靜態**或是**extern**。
+- **Thread_local**規範可以與**static**或**extern**結合。
 
-- 您可以套用`thread_local`至資料宣告和定義;`thread_local`不能在函式宣告或定義。
+- 您只能將**thread_local**套用至資料宣告和定義;**thread_local**不能用在函式宣告或定義上。
 
-- 您只能在具有靜態儲存持續時間的資料項目上指定 `thread_local`。 這包括全域資料物件 (兩者**靜態**並**extern**)、 區域靜態物件和類別的靜態資料成員。 宣告的任何區域變數`thread_local`是以隱含方式靜態，如果沒有其他的儲存體類別會提供; 換句話說，在區塊範圍`thread_local`相當於`thread_local static`。
+- 您只能在具有靜態儲存期的資料項目上指定**thread_local** 。 這包括全域資料物件（**靜態**和**外部**）、本機靜態物件，以及類別的靜態資料成員。 如果未提供其他儲存類別，則任何宣告**thread_local**的區域變數都會隱含為靜態。換句話說，在區塊範圍**thread_local**相當於 `thread_local static`。
 
-- 不論是在相同的檔案還是不同的檔案進行宣告和定義，您都必須指定執行緒區域物件之宣告和定義的 `thread_local`。
+- 不論是在相同的檔案還是不同的檔案中進行宣告和定義，都必須同時為執行緒區域物件的宣告和定義指定**thread_local** 。
 
-在 Windows 中，`thread_local`相當於[__declspec （thread)](../cpp/thread.md)不同之處在於 **__declspec （thread)** 可以套用至類型定義，並在 C 程式碼中有效。 只要可能，都請使用 `thread_local`，因為它是 C++ 標準的一部分，因此更具可攜性。
+在 Windows 上， **thread_local**的功能等同于[__declspec （thread）](../cpp/thread.md) ，不同之處在于 **__declspec （thread）** 可以套用至類型定義，而且在 C 程式碼中有效。 盡可能使用**thread_local** ，因為它是C++標準的一部分，因此更具可攜性。
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>參加
 
-**Visual Studio 2017 版本 15.3 和更新版本**(適用於[/std: c + + 17](../build/reference/std-specify-language-standard-version.md)):**註冊**關鍵字不再是支援的存放裝置類別。 關鍵字是仍保留供日後使用標準的。
+**Visual Studio 2017 15.3 和更新版本**（適用于[/std： c + + 17](../build/reference/std-specify-language-standard-version.md)）： **register**關鍵字不再是支援的儲存類別。 關鍵字仍然保留在標準中，供日後使用。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="example-automatic-vs-static-initialization"></a>範例： 自動格式設定與靜態初始設定
+## <a name="example-automatic-vs-static-initialization"></a>範例：自動與靜態初始化
 
 區域自動物件或變數會在每次控制流程到達其定義時初始化。 區域靜態物件或變數會在控制流程第一次到達其定義時初始化。
 
@@ -300,16 +276,16 @@ Destroying: Auto I1
 Destroying: Static I3
 ```
 
-此範例示範如何及何時物件`I1`， `I2`，和`I3`會初始化，而且損毀時。
+這個範例示範如何和何時初始化物件 `I1`、`I2`和 `I3`，以及何時終結它們。
 
-有幾點要注意關於此計畫：
+關於此程式，有幾點需要注意：
 
 - 首先，`I1` 和 `I2` 會在控制流程離開其定義所在的區塊時自動終結。
 
-- 其次，在 C++ 中，不需要在區塊開頭宣告物件或變數。 再者，只有在控制流程到達其定義時，這些物件才會初始化  (這類定義的範例包括 `I2` 和 `I3`)。輸出中會顯示它們初始化的確切時間。
+- 其次，在 C++ 中，不需要在區塊開頭宣告物件或變數。 再者，只有在控制流程到達其定義時，這些物件才會初始化 （`I2` 和 `I3` 是這類定義的範例）。輸出會顯示其初始化的確切時間。
 
 - 最後，靜態區域變數 (例如 `I3`) 會在程式執行期間保留其值，不過會在程式終止時終結。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [宣告和定義](../cpp/declarations-and-definitions-cpp.md)

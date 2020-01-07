@@ -1,19 +1,19 @@
 ---
 title: SBYTE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - sbyte
 helpviewer_keywords:
 - SBYTE directive
 ms.assetid: ae9323cc-4ed5-45fa-9cd6-c241868e4cfd
-ms.openlocfilehash: 3a06f35d3a3c32ab9229b7a399552301b2219412
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e80a695364ccbaa6d0bea99a3a219b7a97067ae7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74394176"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318484"
 ---
-# <a name="sbyte-masm"></a>SBYTE (MASM)
+# <a name="sbyte"></a>SBYTE
 
 配置並選擇性地為每個*初始化運算式*初始化帶正負號的儲存區。 也可以當做類型為合法的任何位置的類型規範使用。
 
@@ -21,8 +21,9 @@ ms.locfileid: "74394176"
 
 > *命名*  **SBYTE** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-指示詞[參考](../../assembler/masm/directives-reference.md)\
-[BYTE](../../assembler/masm/byte-masm.md)\
-[DB](../../assembler/masm/db.md)
+指示詞[參考](directives-reference.md)\
+[BYTE](byte-masm.md)\
+[DB](db.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

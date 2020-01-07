@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - complex<long double> function
 ms.assetid: 37591991-b385-46e9-b727-d534dbc10432
-ms.openlocfilehash: 978be97484a259d7ae8f3fd24fecf07d50c4c844
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5de4fc2305ef2ac6e523dcb02782455245b99429
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857966"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302337"
 ---
 # <a name="complexltlong-doublegt"></a>complex&lt;long double&gt;
 
@@ -57,7 +57,7 @@ complex(
 
 如需類別範本 `complex` 及其成員的詳細資訊，請參閱[Complex 類別](../standard-library/complex-class.md)。
 
-**Microsoft 專有**： **long double**和**double**類型具有相同的標記法，但為不同的類型。 如需詳細資訊，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
+**Microsoft 專有**： **long double**和**double**類型具有相同的標記法，但為不同的類型。 如需詳細資訊，請參閱[內建類型](../cpp/fundamental-types-cpp.md)。
 
 ## <a name="example"></a>範例
 
@@ -119,7 +119,7 @@ arg( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 
 **標頭**：\<complex>
 
-**命名空間:** std
+**命名空間：** std
 
 ## <a name="see-also"></a>請參閱
 

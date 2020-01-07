@@ -1,18 +1,18 @@
 ---
 title: ML 非嚴重錯誤 A2034
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.custom: error-reference
 f1_keywords:
 - A2034
 helpviewer_keywords:
 - A2034
 ms.assetid: 6438970c-0aee-4f14-a058-5fe47d0ee216
-ms.openlocfilehash: 578a839b319b10dff7f89d6fafdf556315a4f850
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: c27c7d1b62afca760454c39552bfd1fd36857e08
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856684"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317054"
 ---
 # <a name="ml-nonfatal-error-a2034"></a>ML 非嚴重錯誤 A2034
 
@@ -24,16 +24,16 @@ ms.locfileid: "74856684"
 
 - 標籤定義
 
-- [這個](../../assembler/masm/operator-this.md)運算子
+- [這個](operator-this.md)運算子
 
-- [$](../../assembler/masm/dollar.md)運算子
+- [$](dollar.md)運算子
 
 - 程序定義
 
-- [ALIGN](../../assembler/masm/align-masm.md)指示詞
+- [ALIGN](align-masm.md)指示詞
 
-- [組織](../../assembler/masm/org.md)指示詞
+- [組織](org.md)指示詞
 
 ## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

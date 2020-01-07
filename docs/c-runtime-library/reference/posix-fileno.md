@@ -1,6 +1,6 @@
 ---
 title: fileno
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - fileno
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - fileno function
 ms.assetid: 8f33e1e0-0dc8-4311-b690-ec6e577a64b5
-ms.openlocfilehash: 684544223b20ea84949707a6ace09b09e7530833
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 798334e4139209be50c665d112f502f60909ed0f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950761"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301167"
 ---
 # <a name="fileno"></a>fileno
 
-此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_fileno](fileno.md)。
+Microsoft 所實行的 POSIX 函數名稱 `fileno` 是[_fileno](fileno.md)函式的已被取代別名。 根據預設，它會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它不會遵循執行特定名稱的標準 C 規則。 不過，仍支援函數。
+
+我們建議您改用[_fileno](fileno.md) 。 或者，您可以繼續使用此函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。

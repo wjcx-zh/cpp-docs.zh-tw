@@ -1,15 +1,15 @@
 ---
 title: Visual Studio 中 C++ 組建系統的開啟資料夾支援
-ms.date: 10/21/2019
+ms.date: 12/02/2019
 helpviewer_keywords:
 - Open Folder Projects in Visual Studio
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 0eed40430050655f8fd9bdc83144adc7aa8c32e7
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 8342060e7286c1089312874199bf341ec36bed62
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778331"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556683"
 ---
 # <a name="open-folder-support-for-c-build-systems-in-visual-studio"></a>Visual Studio 中 C++ 組建系統的開啟資料夾支援
 
@@ -39,15 +39,15 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
 
 ## <a name="configure-code-navigation-with-cpppropertiesjson"></a>使用 CppProperties 設定程式碼導覽
 
-若要讓 IntelliSense 和流覽行為（例如 [**移至定義**] 正常運作），Visual Studio 需要知道您所使用的編譯器、系統標頭的所在位置，以及任何其他 include 檔案（如果它們不是直接位於您已開啟的資料夾（工作區資料夾）。 若要指定設定，您可以從主工具列的下拉式清單中選擇 [**管理**設定]：
+若要讓 IntelliSense 和流覽行為（例如 [**移至定義**] 正常運作），Visual Studio 需要知道您所使用的編譯器、系統標頭的所在位置，以及任何其他 include 檔案（如果它們不是直接在您開啟的資料夾中（工作區資料夾））。 若要指定設定，您可以從主工具列的下拉式清單中選擇 [**管理**設定]：
 
 ![[管理設定] 下拉式清單](media/manage-configurations-dropdown.png)
 
-目前，Visual Studio 提供四個預設設定，全都適用于C++ Microsoft 編譯器：
+Visual Studio 提供下列預設設定：
 
 ![預設組態](media/default-configurations.png)
 
-例如，如果您選擇 [ **x64-Debug**]，Visual Studio 會在根專案資料夾中建立名為*CppProperties*的檔案，並將其填入，如下所示：
+例如，如果您選擇 [ **x64-Debug**]，Visual Studio 會在根專案資料夾中建立名為*CppProperties*的檔案：
 
 ```json
 {
@@ -73,19 +73,18 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
 }
 ```
 
-此設定會「繼承」 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是 `INCLUDE` 的，而您可以在這裡使用 `${env.INCLUDE}` 宏來參考它。 [@No__t_0] 屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 @No__t_0 屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 @No__t_0 屬性會在遇到條件式編譯區塊時，提供 IntelliSense 的提示。 @No__t_0 屬性會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
+此設定會繼承 Visual Studio [x64 開發人員命令提示字元](building-on-the-command-line.md)的環境變數。 其中一個變數是 `INCLUDE` 的，而您可以在這裡使用 `${env.INCLUDE}` 宏來參考它。 [`includePath`] 屬性會告訴 Visual Studio 在何處尋找 IntelliSense 所需的所有來源。 在此情況下，它會指出「查詢 INCLUDE 環境變數所指定的所有目錄，以及目前工作資料夾樹狀結構中的所有目錄」。 `name` 屬性是將出現在下拉式清單中的名稱，而且可以是任何您喜歡的專案。 `defines` 屬性會在遇到條件式編譯區塊時，提供 IntelliSense 的提示。 `intelliSenseMode` 屬性會根據編譯器類型提供一些額外的提示。 有數個選項可供 MSVC、GCC 和 Clang 使用。
 
 > [!NOTE]
 > 如果 Visual Studio 似乎忽略*CppProperties*中的設定，請嘗試將例外狀況新增至 *.gitignore*檔案，如下所示： `!/CppProperties.json`。
 
-## <a name="example-configuration-for-gcc"></a>GCC 的範例設定
+## <a name="default-configuration-for-mingw-w64"></a>MinGW 的預設設定-w64
 
-如果您使用 Microsoft C++以外的編譯器，就必須在*CppProperties*中建立自訂設定和環境。 下列範例顯示一個完整的*CppProperties json*檔案，其中包含在 MSYS2 安裝中使用 GCC 的單一自訂設定：
+如果您新增 MinGW-W64 設定，JSON 會如下所示：
 
 ```json
 {
-  "configurations": [
-   {
+  {
       "inheritEnvironments": [
         "mingw_64"
       ],
@@ -100,22 +99,19 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
           "MINGW64_ROOT": "C:\\msys64\\mingw64",
           "BIN_ROOT": "${env.MINGW64_ROOT}\\bin",
           "FLAVOR": "x86_64-w64-mingw32",
-          "TOOLSET_VERSION": "8.3.0",
-          "PATH": "${env.MINGW64_ROOT}\\bin;${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
+          "TOOLSET_VERSION": "9.1.0",
+          "PATH": "${env.BIN_ROOT};${env.MINGW64_ROOT}\\..\\usr\\local\\bin;${env.MINGW64_ROOT}\\..\\usr\\bin;${env.MINGW64_ROOT}\\..\\bin;${env.PATH}",
           "INCLUDE": "${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION};${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\tr1;${env.MINGW64_ROOT}\\include\\c++\\${env.TOOLSET_VERSION}\\${env.FLAVOR}",
           "environment": "mingw_64"
         }
       ]
-   }
+    }
 }
 ```
 
-請注意 `environments` 區塊。 它會定義行為類似環境變數的屬性，而且不僅可在*CppProperties*檔案中使用，還會在其他設定檔工作中 *。 vs.* json 和*啟動。與 json*。 @No__t_0 設定會繼承 `mingw_w64` 環境，並使用其 `INCLUDE` 屬性來指定 `includePath` 的值。 您可以視需要將其他路徑新增至此陣列屬性。
+請注意 `environments` 區塊。 它會定義行為類似環境變數的屬性，而且不僅可在*CppProperties*檔案中使用，還會在其他設定檔工作中 *。 vs.* json 和*啟動。與 json*。 `Mingw64` 設定會繼承 `mingw_w64` 環境，並使用其 `INCLUDE` 屬性來指定 `includePath`的值。 您可以視需要將其他路徑新增至此陣列屬性。
 
-> [!WARNING]
-> 目前有一個已知問題，其中 `environments` 中指定的 `INCLUDE` 值未正確地傳遞至 `includePath` 屬性。 您可以藉由將完整的常值 include 路徑加入至 `includePath` 陣列，來解決此問題。
-
-@No__t_0 屬性會設定為適用于 GCC 的值。 如需所有這些屬性的詳細資訊，請參閱[CppProperties 架構參考](cppproperties-schema-reference.md)。
+`intelliSenseMode` 屬性會設定為適用于 GCC 的值。 如需所有這些屬性的詳細資訊，請參閱[CppProperties 架構參考](cppproperties-schema-reference.md)。
 
 當所有專案都正常運作時，您會在將滑鼠停留在類型上時，看到來自 GCC 標頭的 IntelliSense：
 
@@ -123,7 +119,7 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
 
 ## <a name="enable-intellisense-diagnostics"></a>啟用 IntelliSense 診斷
 
-如果您看不到預期的 IntelliSense，可以移至 [**工具**] [ > **選項**] [ > **文字編輯器**]  >  [ **C++ C/**  > **Advanced** ] 和 [**啟用記錄**] 來進行疑難排解為**true**。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
+如果您看不到預期的 IntelliSense，可以移至 [**工具**] [ > **選項**] [ > **文字編輯器**] > [  **C++ C/**  > **Advanced** ]，並將 [**啟用記錄**] 設定為 [ **true**] 進行疑難排解。 若要開始，請嘗試將**記錄層級**設定為5，並將**篩選準則記錄**到8。
 
 ![診斷記錄](media/diagnostic-logging.png)
 
@@ -158,9 +154,9 @@ CMake 會在 Visual Studio IDE 中整合成C++桌面工作負載的元件。 CMa
 
 ```
 
-JSON 檔案會放在 *. vs*子資料夾中，如果您按一下**方案總管**頂端的 [**顯示所有**檔案] 按鈕，就會看到此檔案。 您可以用滑鼠右鍵按一下**方案總管**中的根節點，然後選擇 [**建立 hello**]，來執行這項工作。 當工作完成時，您應該會在**方案總管**中看到新的檔案*hello .exe* 。
+JSON 檔案會放在 *. vs*子資料夾中。 若要查看該資料夾，請按一下**方案總管**頂端的 [**顯示所有**檔案] 按鈕。 您可以用滑鼠右鍵按一下**方案總管**中的根節點，然後選擇 [**建立 hello**]，來執行這項工作。 當工作完成時，您應該會在**方案總管**中看到新的檔案*hello .exe* 。
 
-您可以定義許多類型的工作。 下列範例顯示定義單一工作的工作 *. vs. json*檔案。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 @No__t_0 屬性會參考 COMSPEC 環境變數，以識別主控台的路徑（Windows 上的*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
+您可以定義許多類型的工作。 下列範例顯示定義單一工作的工作 *. vs. json*檔案。 `taskLabel` 定義出現在操作功能表中的名稱。 `appliesTo` 定義可執行該命令的檔案。 `command` 屬性會參考 COMSPEC 環境變數，以識別主控台的路徑（Windows 上的*cmd.exe* ）。 您也可以參考 CppProperties.json 或 CMakeSettings.json 中宣告的環境變數。 `args` 屬性指定要叫用的命令列。 `${file}` 巨集會在 [方案總管] 中擷取選取的檔案。 下列範例會顯示目前所選 .cpp 檔案的檔名。
 
 ```json
 {
@@ -183,7 +179,7 @@ JSON 檔案會放在 *. vs*子資料夾中，如果您按一下**方案總管**�
 
 ### <a name="configure-debugging-parameters-with-launchvsjson"></a>使用 launch.vs.json 設定偵錯參數
 
-若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟現有的*啟動檔案與 json*檔案，如果不存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw-w64 專案的偵錯工具，我們選擇**CC++ /啟動 for MinGGW/Cygwin （gdb）** 。 這會建立使用*gdb*的啟動設定，並對預設值有一些已接受的猜測。 其中一個預設值為 `MINGW_PREFIX`。 您可以替代常值路徑（如下所示），也可以在*CppProperties*中定義 `MINGW_PREFIX` 屬性：
+若要自訂程式的命令列引數和偵錯工具指令，請在**方案總管**中的可執行檔上按一下滑鼠右鍵，然後選取 [ **Debug and 啟動設定**]。 這會開啟現有的*啟動檔案與 json*檔案，如果不存在，則會建立具有一組最小啟動設定的新檔案。 首先，您可以選擇要設定哪種類型的 debug 會話。 針對 MinGw-w64 專案的偵錯工具，我們選擇**CC++ /啟動 for MinGw/Cygwin （gdb）** 。 這會建立使用*gdb*的啟動設定，並對預設值有一些已接受的猜測。 其中一個預設值為 `MINGW_PREFIX`。 您可以替代常值路徑（如下所示），也可以在*CppProperties*中定義 `MINGW_PREFIX` 屬性：
 
 ```json
 {

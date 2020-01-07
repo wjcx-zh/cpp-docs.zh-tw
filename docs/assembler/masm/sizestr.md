@@ -1,17 +1,17 @@
 ---
 title: SIZESTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SIZESTR
 helpviewer_keywords:
 - SIZESTR directive
 ms.assetid: 8fe88b2e-8a44-4787-9015-030dfb6ea70e
-ms.openlocfilehash: 44260cc22bdbbb092533926634db03187f6f4507
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e3664bb5d416d25d4804c4d956c446dec670103e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74393696"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318445"
 ---
 # <a name="sizestr"></a>SIZESTR
 
@@ -21,6 +21,7 @@ ms.locfileid: "74393696"
 
 > *名稱* **SIZESTR** *textitem*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

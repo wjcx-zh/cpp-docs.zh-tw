@@ -3,12 +3,12 @@ title: 歡迎回到 C++ (新式 C++)
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 2739da77fbfa973ca716abc6d8fa4920b81095d9
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303332"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301739"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (新式 C++)
 
@@ -47,7 +47,7 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std：： string 和 std：： string_view
 
-C 樣式字串是 bug 的另一個主要來源。 藉由使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，您可以消除與 C 樣式字串相關聯的幾乎所有錯誤，並取得成員函式的優點來進行搜尋、附加、前置處理等等。 這兩者都是高度優化的速度。 將字串傳遞至只需要唯讀存取的函式時，您可以使用[std：： string_view](../standard-library/basic-string-view-class.md) ，以獲得更高的效能優勢。
+C 樣式字串是 bug 的另一個主要來源。 藉由使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，您可以消除與 C 樣式字串相關聯的幾乎所有錯誤，並取得成員函式的優點來進行搜尋、附加、前置處理等等。 這兩者都是高度優化的速度。 將字串傳遞至只需要唯讀存取的函式時，在 c + + 17 中，您可以使用[std：： string_view](../standard-library/basic-string-view-class.md)以獲得更高的效能優勢。
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std：： vector 和其他標準程式庫容器
 
@@ -211,7 +211,7 @@ Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「函�
 
 等位通常用於 C 樣式的程式設計中，藉由讓不同類型的成員佔用相同的記憶體位置來節省記憶體。 不過，等位不是型別安全，而且很容易發生程式設計錯誤。 C + + 17 引進了[std：： variant](../standard-library/variant-class.md)類別，做為等位的更強大且安全的替代方式。 [Std：：造訪](../standard-library/variant-functions.md#visit)函式可以用型別安全的方式，用來存取 `variant` 型別的成員。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)<br/>

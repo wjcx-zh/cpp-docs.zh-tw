@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: bfc114a6e71c0eb0ae70005c2657871b6c9e9692
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398103"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317626"
 ---
 # <a name="model-32-bit-masm"></a>.MODEL （32位 MASM）
 
@@ -38,7 +38,7 @@ ms.locfileid: "74398103"
 
 ## <a name="remarks"></a>備註
 
-**.MODEL**不會用於[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+**.MODEL**不會用於[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md)。
 
 下表列出了以 16 位元和 32 位元平台為目標時，各個參數可能的值：
 
@@ -86,6 +86,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

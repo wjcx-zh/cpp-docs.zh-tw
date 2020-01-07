@@ -8,12 +8,12 @@ helpviewer_keywords:
 - functions [C++], void
 - pointers, void
 ms.assetid: d203edba-38e6-4056-8b89-011437351057
-ms.openlocfilehash: 7d01d5b50cb347736bbd2a42fb76811bdfdb546c
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 8a2c74e9ace77e38587209a0ad6fdc03b07cc3ad
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245199"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301752"
 ---
 # <a name="void-c"></a>void (C++)
 
@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)<br/>
-[基本類型](../cpp/fundamental-types-cpp.md)
+[內建類型](../cpp/fundamental-types-cpp.md)

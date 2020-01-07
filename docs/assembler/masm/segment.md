@@ -1,17 +1,17 @@
 ---
 title: SEGMENT
-ms.date: 12/06/2019
+ms.date: 12/16/2019
 f1_keywords:
 - SEGMENT
 helpviewer_keywords:
 - SEGMENT directive
 ms.assetid: e6f68367-6714-4f06-a79c-edfa88014430
-ms.openlocfilehash: 933e4e42b4b0f9cc979a3e67805d017f723472ef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 569604bfd6ed11039ce5492223b8d5f986ceea7a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988009"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318458"
 ---
 # <a name="segment"></a>SEGMENT
 
@@ -25,7 +25,7 @@ ms.locfileid: "74988009"
 
 #### <a name="parameters"></a>參數
 
-*align*<br/>
+*對齊*\
 可從中選取區段之起始位址的記憶體位址範圍。 對齊類型可以是下列任何一項：
 
 |對齊類型|起始位址|
@@ -64,4 +64,5 @@ _string_\
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

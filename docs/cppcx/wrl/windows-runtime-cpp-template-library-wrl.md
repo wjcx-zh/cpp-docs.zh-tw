@@ -3,12 +3,12 @@ title: Windows Runtime C++ Template Library (WRL)
 ms.date: 11/04/2016
 ms.topic: overview
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
-ms.openlocfilehash: 7a7b37a32ebaa0bb6ad71c8f710300256589388d
-ms.sourcegitcommit: 3ee06ec53153cf21910fc8cfef78a4f25f9633f3
+ms.openlocfilehash: 41b8b45f89e94b8de2ddcb9c87bfd72122db8e1a
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/26/2019
-ms.locfileid: "74541196"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676934"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows Runtime C++ Template Library (WRL)
 
@@ -147,5 +147,5 @@ Windows 執行階段C++範本庫提供代表一些基本概念的類型。 下�
 |-|-|
 |[依類別分類的主要 Api](key-wrl-apis-by-category.md)|反白顯示主要C++ Windows 執行階段範本程式庫類型、函式和宏。|
 |[參考資料](wrl-reference.md)|包含 Windows 執行階段C++範本程式庫的參考資訊。|
-|[快速參考C++/cx）](../../cppcx/quick-reference-c-cx.md)|簡要描述支援C++Windows 執行階段的/cx 功能。|
+|[快速參考 (C++/CX)](../../cppcx/quick-reference-c-cx.md)|簡要描述支援C++Windows 執行階段的/cx 功能。|
 |[在視覺效果中使用 Windows 執行階段元件C++](/windows/uwp/winrt-components/walkthrough-creating-a-basic-windows-runtime-component-in-cpp-and-calling-it-from-javascript-or-csharp)|示範如何使用C++/cx 來建立基本 Windows 執行階段元件。|

@@ -1,22 +1,27 @@
 ---
-title: 對齊方式 (C++ 宣告)
+title: 對齊方式
 description: 新式C++中如何指定資料對齊方式。
-ms.date: 09/19/2019
+ms.date: 12/11/2019
+f1_keywords:
+- alignas_cpp
+- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 67debc00343b8bee4184e020c9269011e2fcebc9
-ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
+ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71158742"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301661"
 ---
-# <a name="alignment-c-declarations"></a>對齊方式 (C++ 宣告)
+# <a name="alignment"></a>對齊方式
 
-C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會將類別和結構成員對齊其大小值： `bool` `char`在1個位元組的界限上`short` 、在2個位元組`int` `long`的界限上、 `float` 、和4個位元組的界限上，以及`long long`8 `double`位元組界限`long double`上的、和。 在大部分的情況下，您永遠不需要擔心對齊，因為預設的對齊方式已經是最佳的。 不過，在某些情況下，您可以藉由指定資料結構的自訂對齊，來達到顯著的效能改進或節省記憶體。 在 Visual Studio 2015 之前，您可以使用 Microsoft 特有的`__alignof`關鍵字`declspec(alignas)` ，並指定大於預設值的對齊方式。 從 Visual Studio 2015 開始，您應該使用 c + + 11 標準關鍵字[alignof 和 alignas](../cpp/alignof-and-alignas-cpp.md) ，以取得最大的程式碼可攜性。 新關鍵字的行為與 Microsoft 專屬的擴充功能相同。 這些延伸模組的檔也適用于新的關鍵字。 如需詳細資訊，請參閱[__Alignof 運算子](../cpp/alignof-operator.md)和[align](../cpp/align-cpp.md)。 C++標準不會指定在界限小於目標平臺的編譯器預設值時，進行對齊的封裝行為，因此您仍然需要在該情況下使用 Microsoft #pragma[套件](../preprocessor/pack.md)。
+C++ 的其中一項低階功能可指定記憶體中物件的精確對齊方式，以充份利用特定的硬體架構。 根據預設，編譯器會將類別和結構成員對齊其大小值：在1個位元組的界限上 `bool` 和 `char`、在2個位元組的界限上 `short`、`int`、`long`和4位元組界限上的 `float`，以及8位元組界限上 `long long`、`double`和 `long double`。 
+
+在大部分的情況下，您永遠不需要擔心對齊，因為預設的對齊方式已經是最佳的。 不過，在某些情況下，您可以藉由指定資料結構的自訂對齊，來達到顯著的效能改進或節省記憶體。 在 Visual Studio 2015 之前，您可以使用 Microsoft 專有關鍵詞 `__alignof` 和 `declspec(alignas)` 指定大於預設值的對齊方式。 從 Visual Studio 2015 開始，您應該使用 c + + 11 標準關鍵字**alignof**和**alignas** ，以取得最大的程式碼可攜性。 新關鍵字的行為與 Microsoft 專屬的擴充功能相同。 這些延伸模組的檔也適用于新的關鍵字。 如需詳細資訊，請參閱[__Alignof 運算子](../cpp/alignof-operator.md)和[align](../cpp/align-cpp.md)。 C++標準不會指定在界限小於目標平臺的編譯器預設值時，進行對齊的封裝行為，因此您仍然需要在該情況下使用 Microsoft #pragma[套件](../preprocessor/pack.md)。
 
 針對具有自訂對齊的資料結構，使用[aligned_storage 類別](../standard-library/aligned-storage-class.md)來進行記憶體配置。 [Aligned_union 類別](../standard-library/aligned-union-class.md)是用來指定具有非一般程式或析構函式之等位的對齊方式。
 
-## <a name="about-alignment"></a>關於對齊方式
+## <a name="alignment-and-memory-addresses"></a>對齊和記憶體位址
 
 對齊是記憶體位址的屬性，以數字位址取 2 乘冪的模數來表示。 例如，位址0x0001103F 模數4是3。 該位址會被視為對齊 4n + 3，其中4表示所選的2乘冪。 位址的對齊方式取決於所選的2乘冪。 相同位址取 8 的模數為 7。 如果位址的對齊方式為 Xn+0，則稱為對齊 X。
 
@@ -26,9 +31,9 @@ Cpu 會執行指示，以處理儲存在記憶體中的資料。 資料會以其
 
 編譯器嘗試以防止資料對齊的方式進行資料分配。
 
-針對簡單的資料類型，編譯器指派的位址會是以位元組為單位之資料類型大小的倍數。 例如，編譯器會將位址指派給類型`long`的變數，這是4的倍數，將位址的底部2位設定為零。
+針對簡單的資料類型，編譯器指派的位址會是以位元組為單位之資料類型大小的倍數。 例如，編譯器會將位址指派給類型為 `long` 的變數，這是4的倍數，將位址的下2位設定為零。
 
-編譯器也會以自然對齊結構的每個元素的方式來填補結構。 請考慮下列`struct x_`程式碼範例中的結構：
+編譯器也會以自然對齊結構的每個元素的方式來填補結構。 請考慮下列程式碼範例中的結構 `struct x_`：
 
 ```cpp
 struct x_
@@ -57,17 +62,17 @@ struct x_
 } bar[3];
 ```
 
-`sizeof(struct x_)`這兩個宣告都會傳回12個位元組。
+這兩個宣告都會以12個位元組的形式傳回 `sizeof(struct x_)`。
 
 第二個宣告包含兩個填補項目：
 
-1. `char _pad0[3]`將`int b`成員對齊4位元組界限。
+1. `char _pad0[3]`，將 `int b` 成員對齊4位元組界限。
 
-1. `char _pad1[1]`將結構`struct _x bar[3];`的陣列元素對齊四個位元組的界限。
+1. `char _pad1[1]`，使結構的陣列元素 `struct _x bar[3];` 在四個位元組的界限上。
 
-填補會`bar[3]`以允許自然存取的方式來對齊的元素。
+填補會以允許自然存取的方式對齊 `bar[3]` 的元素。
 
-下列程式碼範例顯示`bar[3]`陣列版面配置：
+下列程式碼範例顯示 `bar[3]` 陣列配置：
 
 ```Output
 adr offset   element
@@ -94,6 +99,33 @@ adr offset   element
 0x0023   char _pad1[1];
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="alignof-and-alignas"></a>alignof 和 alignas
+
+**Alignas**類型規範是可移植的標準C++方法，可指定自訂變數和使用者定義類型的對齊方式。 **Alignof**運算子同樣是可移植的標準方式，以取得指定類型或變數的對齊方式。
+
+## <a name="example"></a>範例
+
+您可以在類別、結構或等位或個別成員上使用**alignas** 。 當遇到多個**alignas**指定名稱時，編譯器會選擇最嚴格的一個（具有最大值的）。
+
+```cpp
+// alignas_alignof.cpp
+// compile with: cl /EHsc alignas_alignof.cpp
+#include <iostream>
+
+struct alignas(16) Bar
+{
+    int i;       // 4 bytes
+    int n;      // 4 bytes
+    alignas(4) char arr[3];
+    short s;          // 2 bytes
+};
+
+int main()
+{
+    std::cout << alignof(Bar) << std::endl; // output: 16
+}
+```
+
+## <a name="see-also"></a>請參閱
 
 [資料結構對齊](https://en.wikipedia.org/wiki/Data_structure_alignment)

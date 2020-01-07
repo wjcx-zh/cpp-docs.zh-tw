@@ -1,17 +1,17 @@
 ---
 title: 建構函式 (C++)
-ms.date: 11/19/2019
+ms.date: 12/27/2019
 helpviewer_keywords:
 - constructors [C++]
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 6cdf6241542c3f93484097c65015181a91647d49
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246610"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546389"
 ---
 # <a name="constructors-c"></a>建構函式 (C++)
 
@@ -478,6 +478,52 @@ int main(){
 
 1. 如果建構函式為非委派，所有完全建構的基底類別物件和成員都會終結。 不過，因為物件本身未完全建構，所以不會執行解構函式。
 
+## <a name="extended_aggregate"></a>衍生的函數和擴充的匯總初始化
+
+如果基類的函式不是公用的，但衍生類別可存取，則在 Visual Studio 2017 和更新版本中的 **/std： c + + 17**模式下，您將無法使用空的大括弧來初始化衍生類型的物件。
+
+下列範例顯示 C++14 一致性行為：
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {};
+
+Derived d1; // OK. No aggregate init involved.
+Derived d2 {}; // OK in C++14: Calls Derived::Derived()
+               // which can call Base ctor.
+```
+
+在 C++17 中，`Derived` 已視作彙總類型。 因此，透過私用預設建構函式將 `Base` 初始化會直接包含在擴充彙總初始化規則的過程。 `Base` 私用建構函式在先前會透過 `Derived` 建構函式呼叫，而成功的因素是 friend 宣告所致。
+
+下列範例顯示在 **/std： c + + 17**模式中 Visual Studio 2017 和更新版本中的 c + + 17 行為：
+
+```cpp
+struct Derived;
+
+struct Base {
+    friend struct Derived;
+private:
+    Base() {}
+};
+
+struct Derived : Base {
+    Derived() {} // add user-defined constructor
+                 // to call with {} initialization
+};
+
+Derived d1; // OK. No aggregate init involved.
+
+Derived d2 {}; // error C2248: 'Base::Base': cannot access
+               // private member declared in class 'Base'
+```
+
 ### <a name="constructors-for-classes-that-have-multiple-inheritance"></a>具有多重繼承之類別的構造函式
 
 如果類別從多個基底類別衍生，基底類別建構函式是依照其列在衍生類別宣告中的順序進行叫用：
@@ -652,6 +698,6 @@ int main(){
 - [移動構造函式和移動指派運算子](move-constructors-and-move-assignment-operators-cpp.md)
 - [委派的函式](delegating-constructors.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別和結構](classes-and-structs-cpp.md)

@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: f4bef0ef4f3cad0411f6da54ce5e2d8883913754
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940353"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300297"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec、_wexec 函式
 
@@ -76,7 +76,7 @@ ms.locfileid: "70940353"
 
 函式名稱結尾的字母決定了變化。
 
-|_exec 函式後置字元|說明|
+|_exec 函式後置字元|描述|
 |----------------------------|-----------------|
 |`e`|`envp`，環境設定的指標陣列，會傳遞至新執行緒。|
 |`l`|命令列引數會分別傳遞至 `_exec` 函式。 一般而言用於已預先知道新處理序的參數數目時。|
@@ -118,7 +118,7 @@ ms.locfileid: "70940353"
 
 當新處理序的參數數目為變數時，`_execv`、`_execve`、`_execvp` 和 `_execvpe` 呼叫就很實用。 參數的指標會作為陣列 `argv` 進行傳遞。 參數 `argv`[0] 通常是 `cmdname` 的指標。 參數 `argv`[1] 到 `argv`[`n`] 會指向形成新參數清單的字元字串。 參數 `argv`[`n`+1] 必須是 **NULL** 指標，以標記參數清單的結尾。
 
-執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意，`value` 沒有以雙引號括住)。`envp` 陣列的最後一個項目應為 **NULL**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
+執行 `_exec` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_execl`、`_execlp`、`_execv` 和 `_execvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 `_execle`、`_execlpe`、`_execve` 和 `_execvpe` 呼叫可透過 `envp` 參數傳遞環境設定的清單，來改變新處理序的環境。 `envp` 是字元指標的陣列，其中每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 （請注意，`value` 不會以雙引號括住）。`envp` 陣列的最後一個元素應該是**Null**。 當 `envp` 本身是 **NULL** 時，新處理序會繼承呼叫處理序的環境設定。
 
 使用其中一個 `_exec` 函式執行的程式會一律載入至記憶體中，正如同程式的 .exe 檔案標頭中的最大配置欄位是設為 0xFFFFH 的預設值。
 
@@ -126,7 +126,7 @@ ms.locfileid: "70940353"
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_args.c
 // Illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -157,7 +157,7 @@ char **envp )       // Array of environment variable strings
 
 執行下列程式以執行 Crt_args.exe：
 
-```
+```c
 // crt_exec.c
 // Illustrates the different versions of exec, including
 //      _execl          _execle          _execlp          _execlpe
@@ -236,7 +236,7 @@ int main( int ac, char* av[] )
 
 **標頭：** process.h
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [流程控制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

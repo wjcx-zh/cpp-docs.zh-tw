@@ -5,12 +5,12 @@ description: Visual Studio 的 Microsoft C++ 正在向完全符合 C++20 語言�
 ms.technology: cpp-language
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 06fa060b674e51a3352a9a928bccdbfa6c63aae4
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: de31c2e61f0a10c785d610d3227a659c59b56d38
+ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74858031"
+ms.lasthandoff: 12/30/2019
+ms.locfileid: "75546428"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Visual Studio 中的 C++ 一致性改善
 
@@ -1131,11 +1131,11 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在
 
 ### `not_fn()`
 
-[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 已取代 `not1` 和 `not2`。
+[P0005R4](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html) `not_fn` 取代 `not1` 和 `not2`。
 
 ### <a name="rewording-enable_shared_from_this"></a>重寫 `enable_shared_from_this`
 
-[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` 已新增於 C++11。 此 C++17 標準會更新規格，以更妥善處理某些極端的案例。 [14]
+[P0033R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html) `enable_shared_from_this` 已在 c + + 11 中新增。 此 C++17 標準會更新規格，以更妥善處理某些極端的案例。 [14]
 
 ### <a name="splicing-maps-and-sets"></a>接合地圖與集合
 
@@ -1151,7 +1151,7 @@ Lambda 運算式中的 `*this` 物件現已可以值擷取。 此變更可用在
 
 ### <a name="fixes-for-not_fn"></a>`not_fn()` 的修正
 
-[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html) `std::not_fn` 的新寫法支援在用於包裝函式引動過程時傳播值類別。
+[P0358R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)`std::not_fn` 的新寫法支援在用於包裝函式引動過程時傳播值類別。
 
 ### <a name="shared_ptrt-shared_ptrtn"></a>`shared_ptr<T[]>`、 `shared_ptr<T[N]>`
 
@@ -1241,13 +1241,11 @@ B b(42L); // now calls B(int)
 
 [P0017R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)
 
-若基底類別的建構函式為非公開，但可由衍生類別存取，則在 Visual Studio 15.7 版的 **/std:c++17** 模式下，您將不必使用空括號就能將衍生類型的物件初始化。
-
+如果基類的函式不是公用的，但衍生類別可存取，則在 Visual Studio 2017 版本15.7 中的 **/std： c + + 17**模式下，您就無法再使用空的大括弧來初始化衍生類型的物件。
 下列範例顯示 C++14 一致性行為：
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
@@ -1255,32 +1253,26 @@ private:
 };
 
 struct Derived : Base {};
-
 Derived d1; // OK. No aggregate init involved.
 Derived d2 {}; // OK in C++14: Calls Derived::Derived()
                // which can call Base ctor.
 ```
 
 在 C++17 中，`Derived` 已視作彙總類型。 因此，透過私用預設建構函式將 `Base` 初始化會直接包含在擴充彙總初始化規則的過程。 `Base` 私用建構函式在先前會透過 `Derived` 建構函式呼叫，而成功的因素是 friend 宣告所致。
-
 下列範例顯示 **/std:c++17** 模式中，Visual Studio 15.7 內的 C++17 行為：
 
 ```cpp
 struct Derived;
-
 struct Base {
     friend struct Derived;
 private:
     Base() {}
 };
-
 struct Derived : Base {
     Derived() {} // add user-defined constructor
                  // to call with {} initialization
 };
-
 Derived d1; // OK. No aggregate init involved.
-
 Derived d2 {}; // error C2248: 'Base::Base': cannot access
                // private member declared in class 'Base'
 ```
@@ -1928,7 +1920,7 @@ __declspec(noinline) extern "C" HRESULT __stdcall //C4768
 extern "C" __declspec(noinline) HRESULT __stdcall
 ```
 
-此警告在 15.3 中預設為關閉 (但在 15.5 中預設為開啟)，且只影響以 **/Wall** **/WX** 編譯的程式碼。
+在15.3 中，此警告預設為關閉，但在15.5 中預設為開啟，而且只會影響使用 **/Wall** **/wx**編譯的程式碼。
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>**decltype**和呼叫已刪除的析構函數
 
@@ -2179,7 +2171,7 @@ warning C4843: 'void (__cdecl &)(void)': An exception handler of reference to ar
 catch (int (*)[1]) {}
 ```
 
-### <a name="tr1"></a>`std::tr1` 命名空間已淘汰
+### <a name="tr1"></a>`std::tr1` 命名空間已被取代
 
 非標準 `std::tr1` 命名空間在 C++14 和 C++17 模式中現在皆標記為已淘汰。 在 Visual Studio 2017 15.5 版中，下列程式碼會引發 C4996：
 

@@ -1,21 +1,21 @@
 ---
 title: DF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DF
 helpviewer_keywords:
 - DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-ms.openlocfilehash: 4900741bbe70ad9d97f694e2e4db200edee6a4a1
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fb2d81312f2508dafe1975a1b6b55303f93e5f20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398778"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314844"
 ---
 # <a name="df"></a>DF
 
-配置並選擇性地為每個*初始化運算式*初始化6個位元組的儲存區。 **DF**是[FWORD](../../assembler/masm/fword.md)的同義字。
+配置並選擇性地為每個*初始化運算式*初始化6個位元組的儲存區。 **DF**是[FWORD](fword.md)的同義字。
 
 ## <a name="syntax"></a>語法
 
@@ -25,6 +25,7 @@ ms.locfileid: "74398778"
 
 也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -6,20 +6,20 @@ ms.author: mblome
 ms.date: 05/16/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 58f8a9b8223dc54bf083ebbac97528f88890777c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
-ms.translationtype: HT
+ms.openlocfilehash: ce28d42fd3452a5e8195f3ced6bbbb06430b1d14
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837012"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676947"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：A C++ package manager for Windows, Linux and MacOS (適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員)
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
 
 vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 的相容性測試。 截至 2018 年 5 月為止，Windows 目錄中有超過 900 個程式庫，而 Linux/MacOS 目錄中有超過 350 個程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
 
 ## <a name="simple-yet-flexible"></a>簡單卻有彈性
 
-您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以隨意自訂私人複製品。 例如，您可指定與公用目錄中所找到之程式庫不同的程式庫或不同版程式庫。 一部電腦上可以有多個 vcpkg 複製品，每個複製品產生自訂程式庫集及 (或) 編譯參數等等。每個複製品都是完全獨立的環境，並具有只會在其本身階層執行的專屬 vcpkg.exe 複本。 vcpkg 未新增至任何環境變數，和 Windows 登錄或 Visual Studio 沒有相依性。
+您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以隨意自訂私人複製品。 例如，您可指定與公用目錄中所找到之程式庫不同的程式庫或不同版程式庫。 您可以在單一電腦上有多個 vcpkg 的複本，每一個都產生一組自訂的程式庫和/或編譯參數等等。每個複製都是獨立的環境，其自有的 vcpkg 複本只會在自己的階層上運作。 vcpkg 未新增至任何環境變數，和 Windows 登錄或 Visual Studio 沒有相依性。
 
 ## <a name="sources-not-binaries"></a>不是二進位檔的來源
 
@@ -27,7 +27,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 如果您使用連接埠集合中的私人程式庫建立 vcpkg 複製品，您可以新增連接埠下載預先建置的二進位檔和標頭，並撰寫 portfile.cmake 檔案，只將這些檔案複製到想要的位置。
 
-[1] *注意：部分專屬程式庫無法取得來源。在這些案例中，Vcpkg 會下載相容的預先建置二進位檔。*
+[1]*注意：對於某些專屬程式庫，無法使用來源。在這些情況下，Vcpkg 會下載相容的預建二進位檔。*
 
 ## <a name="installation"></a>安裝
 
@@ -119,7 +119,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 1. 建立新的 vcpkg 複製品
 1. 修改程式庫的連接埠檔案以取得您需要的版本
-1. 執行 **vcpkg install \<library>**。
+1. 執行 **vcpkg install \<library>** 。
 1. 使用 **vcpkg integrate project** 依每個專案建立參考該程式庫的 NuGet 套件。
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>與 Visual Studio Code 整合 (Linux/MacOS)
@@ -182,7 +182,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="uninstall-vcpkg"></a>將 vcpkg 解除安裝
 
-只要刪除目錄即完成。
+只要刪除 vcpkg 目錄即可。 刪除此目錄會卸載 vcpkg 散發，以及 vcpkg 已安裝的所有程式庫。
 
 ## <a name="send-feedback-about-vcpkg"></a>傳送 vcpkg 的相關意見反應
 
@@ -206,7 +206,7 @@ vcpkg 執行個體的內容如下：
 
 ## <a name="command-line-reference"></a>命令列參考
 
-|命令|說明|
+|命令|描述|
 |---------|---------|
 |**vcpkg search [pat]**|搜尋可安裝的套件|
 |**vcpkg install \<pkg>...**|安裝套件|
@@ -228,7 +228,7 @@ vcpkg 執行個體的內容如下：
 
 ### <a name="options"></a>選項
 
-|選項|說明|
+|選項|描述|
 |---------|---------|
 |**--triplet \<t>**|指定目標架構 triplet。 (預設：`%VCPKG_DEFAULT_TRIPLET%`，另請參閱 **vcpkg help triplet**)|
 |**--vcpkg-root \<path>**|指定 vcpkg 根目錄 (預設：`%VCPKG_ROOT%`)|

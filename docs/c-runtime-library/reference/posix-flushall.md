@@ -1,6 +1,6 @@
 ---
 title: flushall
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - flushall
 api_location:
@@ -23,13 +23,15 @@ f1_keywords:
 helpviewer_keywords:
 - flushall function
 ms.assetid: 481429ae-3980-4233-9495-a3ee56e7c838
-ms.openlocfilehash: f601929ddbce2a1beeaab13a6d564e4c8966c22d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 68e09a02bdf098bdefe61779293864a3fa68a70f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950746"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301128"
 ---
 # <a name="flushall"></a>flushall
 
-此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_flushall](flushall.md)。
+Microsoft 特有的函式名稱 `flushall` 是[_flushall](flushall.md)函數的已被取代別名。 根據預設，它會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它不會遵循執行特定名稱的標準 C 規則。 不過，仍支援函數。
+
+我們建議您改用[_flushall](flushall.md) 。 或者，您可以繼續使用此函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。

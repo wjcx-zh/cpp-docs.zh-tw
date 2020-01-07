@@ -3,22 +3,20 @@ title: using 宣告
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using declaration
-- declaring namespaces, unqualified names in namespaces
 - declarations [C++], using-declaration
 - namespaces [C++], unqualified names in
 - using keyword [C++]
-- declarations [C++], namespaces
 ms.assetid: 4184e2b1-3adc-408e-b5f3-0b3f8b554723
-ms.openlocfilehash: 46d8b1e13b55988efd40643482ffd6123034ccb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a158094141307acb507d5f3e873c600e89135ad7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403343"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301271"
 ---
 # <a name="using-declaration"></a>using 宣告
 
-Using 宣告引入的名稱，在其中的宣告式區域至使用宣告會出現。
+**Using**宣告會將名稱引入宣告式區域，其中會顯示 using 聲明。
 
 ## <a name="syntax"></a>語法
 
@@ -29,19 +27,19 @@ using declarator-list ;
 
 ### <a name="parameters"></a>參數
 
-*巢狀名稱規範*一連串的命名空間、 類別或列舉型別名稱和範圍解析運算子 （:），終止的範圍解析運算子。 單一的範圍解析運算子可用來從全域命名空間引入名稱使用。 關鍵字**typename**是選擇性的可用來解析相依時引入從基底類別的類別樣板的名稱。
+*嵌套名稱-規範*命名空間、類別或列舉名稱的序列，以及範圍解析運算子（：:)，由範圍解析運算子終止。 單一範圍解析運算子可用來引入全域命名空間中的名稱。 關鍵字**typename**是選擇性的，而且可以在從基類引入類別樣板時用來解析相依名稱。
 
-*非限定識別碼*不合格的識別碼的運算式，可能是識別項、 多載的運算子名稱、 使用者定義常值運算子或轉換函式名稱、 類別解構函式名稱或範本的名稱和引數清單。
+不*合格-識別碼*不合格的識別碼運算式，可能是識別碼、多載的運算子名稱、使用者定義的常值運算子或轉換函式名稱、類別的析構函數名稱，或範本名稱和引數清單。
 
-*宣告子清單*逗號分隔的清單的 [**typename**]*巢狀名稱規範* *非限定識別碼*宣告子，選擇性地藉由遵循省略符號。
+宣告子 *-list*以逗號分隔的 [**typename**]*嵌套名稱-規範* *-id*宣告子清單，後面接著選擇性的省略號。
 
 ## <a name="remarks"></a>備註
 
-Using 宣告導入了實體的同義字的非限定的名稱宣告其他位置。 它可讓特定的命名空間，而不用明確限定性條件，在出現的宣告區域中的單一名稱。 這是相對於[using 指示詞](../cpp/namespaces-cpp.md#using_directives)，可讓*所有*無限制使用的命名空間中的名稱。 **使用**關鍵字也可用於[輸入別名](../cpp/aliases-and-typedefs-cpp.md)。
+Using 宣告導入了不合格的名稱，做為在其他地方宣告之實體的同義字。 它允許在其出現的宣告區域中，使用特定命名空間的單一名稱，而不需要明確限定。 這與[using](../cpp/namespaces-cpp.md#using_directives)指示詞相反，它允許命名空間中的*所有*名稱都可以使用，而不需要限定。 **Using**關鍵字也用於[類型別名](../cpp/aliases-and-typedefs-cpp.md)。
 
 ## <a name="example"></a>範例
 
-A 可以使用 using 宣告類別定義中。
+Using 宣告可以在類別定義中使用。
 
 ```cpp
 // using_declaration1.cpp
@@ -87,7 +85,7 @@ In B::g()
 
 ## <a name="example"></a>範例
 
-當用來宣告的成員，使用宣告必須參考的基底類別成員。
+當用來宣告成員時，using 宣告必須參考基類的成員。
 
 ```cpp
 // using_declaration2.cpp
@@ -127,7 +125,7 @@ In B::f()
 
 ## <a name="example"></a>範例
 
-使用 using 宣告的成員宣告可以參考使用明確限定性條件。 `::`前置詞是指全域命名空間。
+使用 using 宣告宣告的成員可以使用明確限定性來參考。 `::` 的前置詞是指全域命名空間。
 
 ```cpp
 // using_declaration3.cpp
@@ -167,9 +165,9 @@ In A::g
 
 ## <a name="example"></a>範例
 
-使用時進行宣告，宣告所建立的同義字只是指在使用有效的定義宣告。 定義在使用之後新增到命名空間宣告不是有效的同義字。
+進行 using 宣告時，宣告所建立的同義字只會參考在 using 宣告中有效的定義。 在 using 宣告之後加入命名空間的定義，不是有效的同義字。
 
-定義的名稱**使用**宣告為其原始名稱的別名。 它不會影響類型、 連結或原始宣告的其他屬性。
+**Using**宣告所定義的名稱是其原始名稱的別名。 它不會影響原始宣告的類型、連結或其他屬性。
 
 ```cpp
 // post_declaration_namespace_additions.cpp
@@ -196,7 +194,7 @@ void b() {
 
 ## <a name="example"></a>範例
 
-對於在命名空間，如果一組本機宣告的函式並使用宣告來宣告的區域會提供一個名稱，它們必須全部參考相同的實體，或它們必須全部參考函式。
+相對於命名空間中的函式，如果在宣告式區域中提供了一組針對單一名稱的區域宣告和 using 宣告，則它們必須全都參考相同的實體，或全部都必須參考函式。
 
 ```cpp
 // functions_in_namespaces1.cpp
@@ -215,11 +213,11 @@ void g() {
 }
 ```
 
-在上述範例`using B::i`陳述式會導致第二個`int i`宣告於`g()`函式。 `using B::f`陳述式沒有與衝突`f(char)`函式，因為所導入的函式名稱`B::f`有不同的參數類型。
+在上述範例中，`using B::i` 語句會導致在 `g()` 函數中宣告第二個 `int i`。 `using B::f` 語句不會與 `f(char)` 函數衝突，因為 `B::f` 引進的函數名稱具有不同的參數類型。
 
 ## <a name="example"></a>範例
 
-區域函式宣告不能有和由 using 宣告引入的函式名稱和類型相同。 例如：
+區域函式宣告的名稱和類型不能與使用宣告所引進的函式相同。 例如：
 
 ```cpp
 // functions_in_namespaces2.cpp
@@ -246,7 +244,7 @@ void h() {
 
 ## <a name="example"></a>範例
 
-對於繼承中，使用時宣告引入名稱從基底類別衍生的類別範圍內，在衍生的類別覆寫虛擬成員函式中具有相同的名稱和引數類型的基底類別的成員函式。
+就繼承而言，當 using 宣告從基類引入衍生類別範圍的名稱時，衍生類別中的成員函式會覆寫基類中具有相同名稱和引數類型的虛擬成員函式。
 
 ```cpp
 // using_declaration_inheritance1.cpp
@@ -304,9 +302,9 @@ In D::g(char)
 
 ## <a name="example"></a>範例
 
-所有的執行個體名稱中使用所述的宣告必須是可存取。 特別是，如果在衍生的類別可讓您使用 using 宣告，以存取基底類別的成員名稱的成員必須可存取。 如果名稱就是多載的成員函式，則所有函式必須是可存取。
+使用宣告中提及之名稱的所有實例都必須可以存取。 特別是，如果衍生類別使用 using 宣告來存取基類的成員，則必須能夠存取該成員名稱。 如果是多載成員函式的名稱，則所有名為的函數都必須是可存取的。
 
-如需協助工具成員的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。
+如需成員存取範圍的詳細資訊，請參閱[成員存取控制](../cpp/member-access-control-cpp.md)。
 
 ```cpp
 // using_declaration_inheritance2.cpp
@@ -327,7 +325,7 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [命名空間](../cpp/namespaces-cpp.md)<br/>
 [關鍵字](../cpp/keywords-cpp.md)

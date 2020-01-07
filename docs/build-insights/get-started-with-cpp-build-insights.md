@@ -1,5 +1,5 @@
 ---
-title: 開始使用C++ Build Insights
+title: 開始使用 C++ 組建見解
 description: 如何使用 build Insights 中的組建階段效能分析工具C++的高階總覽。
 ms.date: 11/03/2019
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9c31d317cd7b9c6465362e3e532db2128303f602
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 862bfae3bdb27812306dcd356aecab812ea5181c
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73633102"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298736"
 ---
-# <a name="get-started-with-c-build-insights"></a>開始使用C++ Build Insights
+# <a name="get-started-with-c-build-insights"></a>開始使用 C++ 組建見解
 
 ::: moniker range="<=vs-2017"
 
@@ -39,7 +39,9 @@ WPA 是 Windows 評定及部署套件（ADK）中提供的追蹤檢視器。 這
 
 ### <a name="to-download-and-install-wpa"></a>下載並安裝 WPA
 
-1. 流覽至 Windows ADK Insider Preview[下載頁面](https://www.microsoft.com/software-download/windowsinsiderpreviewADK)。
+注意：安裝 Windows Performance Analyzer 需要 Windows 8 或更新版本。
+
+1. 流覽至 Windows ADK Insider Preview[下載頁面](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)。
 
 1. 下載 Windows ADK Insider preview。 這是磁片映射。
 
@@ -103,7 +105,7 @@ WPA 是 Windows 評定及部署套件（ADK）中提供的追蹤檢視器。 這
 
 - Build 總管
 - 檔案
-- 功能
+- 函數
 
 如果您看不到這些視圖，請仔細檢查 WPA 已正確設定，如[步驟 1](#configuration-steps)所述。 您可以將視圖拖曳至右邊的空白分析視窗，以查看組建資料，如下所示：
 

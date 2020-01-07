@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: c4a8b33c2233dc0c680ddbe5063ab6fe25a729b0
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957269"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301700"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn、_wspawn 函式
 
@@ -68,7 +68,7 @@ ms.locfileid: "70957269"
 
 函式名稱結尾的字母決定了變化。
 
-|字母|變異|
+|Letter|變異|
 |-|-|
 | `e`  | `envp`，環境設定的指標陣列，會傳遞至新處理序。  |
 | `l`  | 命令列引數會分別傳遞至 `_spawn` 函式。 當預先知道新處理序的參數數目時，通常會使用此尾碼。  |
@@ -130,7 +130,7 @@ ms.locfileid: "70957269"
 
 ## <a name="environment-of-the-spawned-process"></a>繁衍處理序的環境
 
-執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 (請注意，`value` 沒有以雙引號括住)。`envp` 陣列的最後一個項目應為 **NULL**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
+執行 `_spawn` 呼叫之後，已經開啟的檔案仍會在新處理序中保持開啟。 在 `_spawnl`、`_spawnlp`、`_spawnv` 和 `_spawnvp` 呼叫中，新處理序會繼承呼叫處理序的環境。 您可以使用 `_spawnle`、`_spawnlpe`、`_spawnve` 和 `_spawnvpe` 呼叫透過 `envp` 引數傳遞環境設定的清單，來改變新處理序的環境。 引數 `envp` 是字元指標的陣列，其每個項目 (最後一個項目除外) 都會指向定義環境變數的以 Null 終止的字串。 此類字串通常具有此種格式：`NAME`=`value`，其中 `NAME` 是環境變數的名稱，而 `value` 是設定變數的字串值。 （請注意，`value` 不會以雙引號括住）。`envp` 陣列的最後一個元素應該是**Null**。 當 `envp` 本身是 **NULL** 時，繁衍的處理序會繼承父代處理序的環境設定。
 
 `_spawn` 函式可以將開啟的檔案的所有資訊，包括轉譯模式在內，傳遞至新的處理序。 這項資訊會透過環境中的 `C_FILE_INFO` 項目以真實模式傳遞。 啟始程式碼通常會處理此項目，再從環境中刪除它。 不過，如果 `_spawn` 函式產生非 C 程序，此項目會保留在環境中。 列印環境會在此項目的定義字串中顯示圖形字元，因為環境資訊以真實模式的二進位格式傳遞。 它對正常作業應該沒有任何其他影響。 在受保護的模式中，環境資訊會以文字格式傳遞，因此不包含任何圖形字元。
 
@@ -148,7 +148,7 @@ ms.locfileid: "70957269"
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_spawn.c
 // This program accepts a number in the range
 // 1-8 from the command line. Based on the number it receives,
@@ -229,7 +229,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [流程控制和環境控制](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

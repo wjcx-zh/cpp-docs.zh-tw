@@ -23,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: f7a898d70e506ed4707ea718faa0ed618682c2c7
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944815"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301687"
 ---
 # <a name="to-functions"></a>to 函式
 
@@ -43,7 +43,7 @@ ms.locfileid: "70944815"
 
 **to** 函式和巨集轉換如下。
 
-|常式傳回的值|巨集|說明|
+|常式傳回的值|巨集|描述|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|
@@ -51,7 +51,7 @@ ms.locfileid: "70944815"
 |`towlower`|None|將 `c` 轉換為對應寬字元小寫字母|
 |`toupper`|`toupper`|適用時，將 `c` 轉換為大寫|
 |`_toupper`|`_toupper`|將 `c` 轉換為大寫|
-|`towupper`|無|將 c 轉換為對應寬字元大寫字母|
+|`towupper`|None|將 c 轉換為對應寬字元大寫字母|
 
 若要使用同時定義為巨集之函式版本的 **to** 常式，請使用 `#undef` 指示詞來移除巨集定義，或不包括 CTYPE.H。 如果您使用 /Za 編譯器選項，編譯器會使用函式版本的 `toupper` 或 `tolower`。 `toupper` 和 `tolower` 函式的宣告是在 STDLIB.H 中。
 
@@ -79,7 +79,7 @@ ms.locfileid: "70944815"
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also
@@ -115,7 +115,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../c-runtime-library/data-conversion.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>

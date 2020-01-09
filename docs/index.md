@@ -2,15 +2,13 @@
 layout: HubPage
 title: Visual C++ 文件
 description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
-author: mikeblome
-ms.author: mblome
 ms.topic: hub-page
-ms.openlocfilehash: 204571952b7da922ddaac29949568cac3e69d616
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177498"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793792"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -342,10 +340,10 @@ ms.locfileid: "70177498"
                 </ul>
             </li>
             <li>
-                <a href="#langlib">語言與程式庫</a>
+                <a href="#langlib">語言和程式庫</a>
                 <ul id="langlib">
                     <li>
-                        <a href="#langlib1">語言與程式庫</a>
+                        <a href="#langlib1">語言和程式庫</a>
                         <ul id="langlib1" class="cardsC">
                             <li>
                                 <a href="/cpp/cpp/c-cpp-language-and-standard-libraries">

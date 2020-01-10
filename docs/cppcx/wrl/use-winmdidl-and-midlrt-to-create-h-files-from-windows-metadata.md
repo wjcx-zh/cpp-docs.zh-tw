@@ -1,16 +1,16 @@
 ---
-title: HOW TO：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
+title: 如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 8288fc11fd53fdef423a57d0faefbaa7c06326aa
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500422"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791666"
 ---
-# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>HOW TO：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
+# <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>如何：使用 winmdidl.exe 和 midlrt.exe 根據 Windows 中繼資料建立 .h 檔案
 
 Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段元件之間的 COM 層級互動。 Winmdidl.exe 會輸入包含 Windows 執行階段元件之中繼資料的 .winmd 檔案，並輸出 IDL 檔案。 Midlrt.exe 會將該 IDL 檔案轉換成 C++ 程式碼可以取用的標頭檔。 這兩個工具都是在命令列上執行。
 
@@ -18,13 +18,13 @@ Winmdidl.exe 和 midlrt.exe 啟用原生 C++ 程式碼與 Windows 執行階段�
 
 - 建立自訂的 IDL 和標頭檔，讓使用 Windows 執行階段範本程式庫 (WRL) 所撰寫的 C++ 應用程式可以使用自訂的 Windows 執行階段元件。
 
-- 為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊, 請參閱[Windows 執行階段元件中的自訂事件和事件存取](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)子。
+- 為 Windows 執行階段元件中的使用者定義的事件類型，產生 Proxy 和虛設常式檔案。 如需詳細資訊，請參閱[Windows 執行階段元件中的自訂事件和事件存取](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)子。
 
-這些工具僅適用於剖析自訂的 .winmd 檔案。 已為您產生 Windows 作業系統元件的 .idl 和 .h 檔案。 根據預設, 在 Windows 8.1 中, 它們位於 \Program Files (x86) \Windows Kits\8.1\Include\winrt\\中。
+這些工具僅適用於剖析自訂的 .winmd 檔案。 已為您產生 Windows 作業系統元件的 .idl 和 .h 檔案。 根據預設，在 Windows 8.1 中，它們位於 \Program Files （x86） \Windows Kits\8.1\Include\winrt\\中。
 
 ## <a name="location-of-the-tools"></a>工具的位置
 
-根據預設, [Windows 8.1] 中的 [winmdidl] 和 [midlrt.exe] 都位於 C:\Program Files (x86) \Windows\\Kits\8.1 中。 工具的版本也可在 \bin\x86\ 和 \bin\x64\ 資料夾中取得。
+根據預設，在 [Windows 8.1 中，winmdidl 和 midlrt.exe 位於 C:\Program Files （x86） \Windows Kits\8.1\\。 工具的版本也可在 \bin\x86\ 和 \bin\x64\ 資料夾中取得。
 
 ## <a name="winmdidl-command-line-arguments"></a>Winmdidl 命令列引數
 
@@ -41,10 +41,10 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 **/time**<br/>
 在主控台輸出中顯示總執行時間。
 
-**/outdir:** <em>dir</em><br/>
-指定輸出目錄。 如果路徑包含空格，請使用引號。 預設的輸出目錄 *\<磁碟機 >* : \Users\\ *\<使用者名稱 >* \AppData\Local\VirtualStore\Program 檔案 (x86) \Microsoft VisualStudio 12.0\\。
+**/outdir：** <em>dir</em><br/>
+指定輸出目錄。 如果路徑包含空格，請使用引號。 預設輸出目錄是 *\<磁片磁碟機 >* ： \Users\\ *\<使用者名稱 >* \AppData\Local\VirtualStore\Program Files （x86） \Microsoft Visual Studio 12.0\\。
 
-**/banner:** 檔案<br/>
+**/banner：** <em>file</em><br/>
 指定包含要在預設著作權訊息前面加上自訂文字，以及在產生的 .idl 檔案頂端加上 winmdidl 版本號碼的檔案。 如果路徑包含空格，請使用引號。
 
 **/utf8**<br/>
@@ -65,14 +65,14 @@ Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:fi
 
 下一個範例顯示 winmdidl 的主控台畫面，指出作業已成功。
 
-**正在產生\\c:\users\giraffe\documents \Test_for_winmdidl.idl**
+**產生 c:\users\giraffe\documents\\\ Test_for_winmdidl .idl**
 
-接下來，midlrt 在產生的 IDL 檔案上執行。 請注意, **metadata_dir**引數是在 .idl 檔案的名稱之後指定。 \WinMetadata\ 的路徑是必要的，它是 windows.winmd 的位置。
+接下來，midlrt 在產生的 IDL 檔案上執行。 請注意， **metadata_dir**引數是在 .idl 檔案的名稱之後指定。 \WinMetadata\ 的路徑是必要的，它是 windows.winmd 的位置。
 
-`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\mblome\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
+`C:\Program Files (x86)\Microsoft Visual Studio 12.0> midlrt "c:\users\username\documents\test_for_winmdidl.idl" /metadata_dir "C:\Windows\System32\WinMetadata"`
 
 ## <a name="remarks"></a>備註
 
 winmdidl 作業的輸出檔案與輸入檔案具有相同的名稱，但具有 .idl 副檔名。
 
-如果您正在開發將從 WRL 存取的 Windows 執行階段元件，您可以指定 winmdidl.exe 和 midlrt.exe 做為建置後步驟執行，以便在每個建置中產生 .idl 和 .h 檔案。 如需範例, 請參閱[在 Windows 執行階段元件中引發事件](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)。
+如果您正在開發將從 WRL 存取的 Windows 執行階段元件，您可以指定 winmdidl.exe 和 midlrt.exe 做為建置後步驟執行，以便在每個建置中產生 .idl 和 .h 檔案。 如需範例，請參閱[在 Windows 執行階段元件中引發事件](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)。

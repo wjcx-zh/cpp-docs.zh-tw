@@ -3,14 +3,12 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bde8b8e17c3186d22493f099a5f7d1b5a2646a67
-ms.sourcegitcommit: 2362d15b5eb18d27773c3f7522da3d0eed9e2571
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73754130"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793967"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
@@ -312,7 +310,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (15.0 版)
 
-- 次要 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 診斷的改善。 字串機制中的 IDL 檢查若出錯，現在將會回報導致該錯誤的特定行為。 例如，您會看見「無法為字串迭代器取值，因為它超出範圍 (例如結尾迭代器)」，而不是「無法為字串迭代器取值」。
+- 次要 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 診斷改善。 字串機制中的 IDL 檢查若出錯，現在將會回報導致該錯誤的特定行為。 例如，您會看見「無法為字串迭代器取值，因為它超出範圍 (例如結尾迭代器)」，而不是「無法為字串迭代器取值」。
 - 修正了 `std::promise` 移動指派運算子原本可能造成程式碼永久封鎖的問題。
 - 修正了 `atomic<T*>` 隱含轉換為 `T*` 這項編譯器錯誤。
 - `pointer_traits<Ptr>` 現在會正確偵測 `Ptr::rebind<U>`。

@@ -5,14 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: ea047aca90b03179c0a39cb653e0b9bc08306c64
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626221"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793783"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 

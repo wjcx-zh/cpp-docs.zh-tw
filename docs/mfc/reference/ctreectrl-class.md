@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 830c3b39e08252029933addde7d31ab84819b336
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: eda7a2430aa13bb8d30649d796d9f72f900b9097
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502362"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676973"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -179,103 +179,103 @@ ms.locfileid: "69502362"
 class CTreeCtrl : public CWnd
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CTreeCtrl::CTreeCtrl](#ctreectrl)|建構 `CTreeCtrl` 物件。|
+|[CTreeCtrl：： CTreeCtrl](#ctreectrl)|建構 `CTreeCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|Name|描述|
 |----------|-----------------|
-|[CTreeCtrl::Create](#create)|建立樹狀檢視控制項，並將其附加至`CTreeCtrl`物件。|
-|[CTreeCtrl::CreateDragImage](#createdragimage)|建立指定之樹狀檢視專案的拖曳點陣圖。|
-|[CTreeCtrl::CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的樹狀目錄控制項，並將其`CTreeCtrl`附加至物件。|
-|[CTreeCtrl::DeleteAllItems](#deleteallitems)|刪除樹狀檢視控制項中的所有專案。|
-|[CTreeCtrl::DeleteItem](#deleteitem)|刪除樹狀檢視控制項中的新專案。|
-|[CTreeCtrl::EditLabel](#editlabel)|就地編輯指定的樹狀檢視專案。|
-|[CTreeCtrl::EndEditLabelNow](#endeditlabelnow)|取消目前樹狀檢視控制項中樹狀檢視專案的標籤上的編輯作業。|
-|[CTreeCtrl::EnsureVisible](#ensurevisible)|確保樹狀檢視專案顯示在其樹狀檢視控制項中。|
-|[CTreeCtrl::Expand](#expand)|展開或折迭指定之樹狀檢視專案的子專案。|
-|[CTreeCtrl::GetBkColor](#getbkcolor)|抓取控制項目前的背景色彩。|
-|[CTreeCtrl::GetCheck](#getcheck)|抓取樹狀目錄控制項專案的檢查狀態。|
-|[CTreeCtrl::GetChildItem](#getchilditem)|抓取指定之樹狀檢視專案的子系。|
-|[CTreeCtrl::GetCount](#getcount)|抓取與樹狀檢視控制項相關聯的樹狀目錄專案數目。|
-|[CTreeCtrl::GetDropHilightItem](#getdrophilightitem)|抓取拖放作業的目標。|
-|[CTreeCtrl::GetEditControl](#geteditcontrol)|抓取編輯控制項的控制碼，用來編輯指定的樹狀檢視專案。|
-|[CTreeCtrl::GetExtendedStyle](#getextendedstyle)|抓取目前樹狀檢視控制項使用的延伸樣式。|
-|[CTreeCtrl::GetFirstVisibleItem](#getfirstvisibleitem)|抓取指定之樹狀檢視專案的第一個可見專案。|
-|[CTreeCtrl::GetImageList](#getimagelist)|抓取與樹狀檢視控制項相關聯之影像清單的控制碼。|
-|[CTreeCtrl::GetIndent](#getindent)|從父代抓取樹狀檢視專案的位移（以圖元為單位）。|
-|[CTreeCtrl::GetInsertMarkColor](#getinsertmarkcolor)|抓取用來繪製樹狀檢視之插入標記的色彩。|
-|[CTreeCtrl::GetItem](#getitem)|抓取指定之樹狀檢視專案的屬性。|
-|[CTreeCtrl::GetItemData](#getitemdata)|傳回與專案相關聯之32位應用程式的特定值。|
-|[CTreeCtrl::GetItemExpandedImageIndex](#getitemexpandedimageindex)|抓取目前樹狀檢視控制項的指定專案處於擴充狀態時，所要顯示的影像索引。|
-|[CTreeCtrl::GetItemHeight](#getitemheight)|抓取樹狀檢視專案的目前高度。|
-|[CTreeCtrl::GetItemImage](#getitemimage)|抓取與專案相關聯的影像。|
-|[CTreeCtrl::GetItemPartRect](#getitempartrect)|抓取目前樹狀檢視控制項中指定專案之指定部分的周框。|
-|[CTreeCtrl::GetItemRect](#getitemrect)|抓取樹狀檢視專案的周框。|
-|[CTreeCtrl::GetItemState](#getitemstate)|傳回專案的狀態。|
-|[CTreeCtrl::GetItemStateEx](#getitemstateex)|抓取目前樹狀檢視控制項中指定專案的擴充狀態。|
-|[CTreeCtrl::GetItemText](#getitemtext)|傳回專案的文字。|
-|[CTreeCtrl::GetLastVisibleItem](#getlastvisibleitem)|抓取目前樹狀檢視控制項中的最後一個展開專案。|
-|[CTreeCtrl::GetLineColor](#getlinecolor)|抓取樹狀檢視控制項的目前線條色彩。|
-|[CTreeCtrl::GetNextItem](#getnextitem)|抓取符合指定之關聯性的下一個樹狀檢視專案。|
-|[CTreeCtrl::GetNextSiblingItem](#getnextsiblingitem)|抓取指定之樹狀檢視專案的下一個兄弟。|
-|[CTreeCtrl::GetNextVisibleItem](#getnextvisibleitem)|抓取指定之樹狀檢視專案的下一個可見專案。|
-|[CTreeCtrl::GetParentItem](#getparentitem)|抓取指定之樹狀檢視專案的父系。|
-|[CTreeCtrl::GetPrevSiblingItem](#getprevsiblingitem)|抓取指定之樹狀檢視專案的上一個同級。|
-|[CTreeCtrl::GetPrevVisibleItem](#getprevvisibleitem)|抓取指定之樹狀檢視專案的先前可見專案。|
-|[CTreeCtrl::GetRootItem](#getrootitem)|抓取指定之樹狀檢視專案的根目錄。|
-|[CTreeCtrl::GetScrollTime](#getscrolltime)|抓取樹狀檢視控制項的最大滾動時間。|
-|[CTreeCtrl::GetSelectedCount](#getselectedcount)|抓取目前樹狀檢視控制項中選取專案的數目。|
-|[CTreeCtrl::GetSelectedItem](#getselecteditem)|抓取目前選取的樹狀檢視專案。|
-|[CTreeCtrl::GetTextColor](#gettextcolor)|抓取控制項目前的文字色彩。|
-|[CTreeCtrl::GetToolTips](#gettooltips)|抓取樹狀檢視控制項所使用之子工具提示控制項的控制碼。|
-|[CTreeCtrl::GetVisibleCount](#getvisiblecount)|抓取與樹狀檢視控制項相關聯之可見樹狀目錄專案的數目。|
-|[CTreeCtrl::HitTest](#hittest)|傳回與`CTreeCtrl`物件相關之資料指標的目前位置。|
-|[CTreeCtrl::InsertItem](#insertitem)|在樹狀檢視控制項中插入新專案。|
-|[CTreeCtrl::ItemHasChildren](#itemhaschildren)|如果指定的專案有子專案，則傳回非零。|
-|[CTreeCtrl::MapAccIdToItem](#mapaccidtoitem)|將指定的存取範圍識別碼對應至目前樹狀檢視控制項中樹狀檢視專案的控制碼。|
-|[CTreeCtrl::MapItemToAccID](#mapitemtoaccid)|將指定的控制碼對應至目前樹狀檢視控制項中的樹狀檢視專案，以提供存取範圍識別碼。|
-|[CTreeCtrl::Select](#select)|選取、滾動到視圖，或重新繪製指定的樹狀檢視專案。|
-|[CTreeCtrl::SelectDropTarget](#selectdroptarget)|重新繪製樹狀目錄專案作為拖放作業的目標。|
-|[CTreeCtrl::SelectItem](#selectitem)|選取指定的樹狀檢視專案。|
-|[CTreeCtrl::SelectSetFirstVisible](#selectsetfirstvisible)|選取指定的樹狀檢視專案作為第一個可見專案。|
-|[CTreeCtrl::SetAutoscrollInfo](#setautoscrollinfo)|設定目前樹狀檢視控制項的 autoscroll 速率。|
-|[CTreeCtrl::SetBkColor](#setbkcolor)|設定控制項的背景色彩。|
-|[CTreeCtrl::SetCheck](#setcheck)|設定樹狀目錄控制項專案的檢查狀態。|
-|[CTreeCtrl::SetExtendedStyle](#setextendedstyle)|設定目前樹狀檢視控制項的延伸樣式。|
-|[CTreeCtrl::SetImageList](#setimagelist)|設定與樹狀檢視控制項相關聯之影像清單的控制碼。|
-|[CTreeCtrl::SetIndent](#setindent)|設定樹狀檢視專案從其父系的位移（以圖元為單位）。|
-|[CTreeCtrl::SetInsertMark](#setinsertmark)|設定樹狀檢視控制項中的插入標記。|
-|[CTreeCtrl::SetInsertMarkColor](#setinsertmarkcolor)|設定用來繪製樹狀檢視之插入標記的色彩。|
-|[CTreeCtrl::SetItem](#setitem)|設定指定之樹狀檢視專案的屬性。|
-|[CTreeCtrl::SetItemData](#setitemdata)|設定與專案相關聯的32位應用程式特定值。|
-|[CTreeCtrl::SetItemExpandedImageIndex](#setitemexpandedimageindex)|設定當目前樹狀檢視控制項的指定專案處於擴充狀態時，所要顯示的影像索引。|
-|[CTreeCtrl::SetItemHeight](#setitemheight)|設定樹狀檢視專案的高度。|
-|[CTreeCtrl::SetItemImage](#setitemimage)|將影像與專案產生關聯。|
-|[CTreeCtrl::SetItemState](#setitemstate)|設定專案的狀態。|
-|[CTreeCtrl::SetItemStateEx](#setitemstateex)|設定目前樹狀檢視控制項中指定專案的擴充狀態。|
-|[CTreeCtrl::SetItemText](#setitemtext)|設定專案的文字。|
-|[CTreeCtrl::SetLineColor](#setlinecolor)|設定樹狀檢視控制項的目前線條色彩。|
-|[CTreeCtrl::SetScrollTime](#setscrolltime)|設定樹狀檢視控制項的最大滾動時間。|
-|[CTreeCtrl::SetTextColor](#settextcolor)|設定控制項的文字色彩。|
-|[CTreeCtrl::SetToolTips](#settooltips)|設定樹狀檢視控制項的子工具提示控制項。|
-|[CTreeCtrl::ShowInfoTip](#showinfotip)|顯示目前樹狀檢視控制項中指定專案的提示。|
-|[CTreeCtrl::SortChildren](#sortchildren)|排序給定父專案的子系。|
-|[CTreeCtrl::SortChildrenCB](#sortchildrencb)|使用應用程式定義的排序函數，排序指定之父專案的子系。|
+|[CTreeCtrl：： Create](#create)|建立樹狀檢視控制項，並將它附加至 `CTreeCtrl` 物件。|
+|[CTreeCtrl：： CreateDragImage](#createdragimage)|建立指定之樹狀檢視專案的拖曳點陣圖。|
+|[CTreeCtrl：： CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的樹狀目錄控制項，並將它附加至 `CTreeCtrl` 物件。|
+|[CTreeCtrl：:D eleteAllItems](#deleteallitems)|刪除樹狀檢視控制項中的所有專案。|
+|[CTreeCtrl：:D eleteItem](#deleteitem)|刪除樹狀檢視控制項中的新專案。|
+|[CTreeCtrl：： EditLabel](#editlabel)|就地編輯指定的樹狀檢視專案。|
+|[CTreeCtrl：： EndEditLabelNow](#endeditlabelnow)|取消目前樹狀檢視控制項中樹狀檢視專案的標籤上的編輯作業。|
+|[CTreeCtrl：： EnsureVisible](#ensurevisible)|確保樹狀檢視專案顯示在其樹狀檢視控制項中。|
+|[CTreeCtrl：： Expand](#expand)|展開或折迭指定之樹狀檢視專案的子專案。|
+|[CTreeCtrl：： GetBkColor](#getbkcolor)|抓取控制項目前的背景色彩。|
+|[CTreeCtrl：： GetCheck](#getcheck)|抓取樹狀目錄控制項專案的檢查狀態。|
+|[CTreeCtrl：： GetChildItem](#getchilditem)|抓取指定之樹狀檢視專案的子系。|
+|[CTreeCtrl：： GetCount](#getcount)|抓取與樹狀檢視控制項相關聯的樹狀目錄專案數目。|
+|[CTreeCtrl：： GetDropHilightItem](#getdrophilightitem)|抓取拖放作業的目標。|
+|[CTreeCtrl：： GetEditControl](#geteditcontrol)|抓取編輯控制項的控制碼，用來編輯指定的樹狀檢視專案。|
+|[CTreeCtrl：： GetExtendedStyle](#getextendedstyle)|抓取目前樹狀檢視控制項使用的延伸樣式。|
+|[CTreeCtrl：： GetFirstVisibleItem](#getfirstvisibleitem)|抓取指定之樹狀檢視專案的第一個可見專案。|
+|[CTreeCtrl：： GetImageList](#getimagelist)|抓取與樹狀檢視控制項相關聯之影像清單的控制碼。|
+|[CTreeCtrl：： Setindent](#getindent)|從父代抓取樹狀檢視專案的位移（以圖元為單位）。|
+|[CTreeCtrl：： GetInsertMarkColor](#getinsertmarkcolor)|抓取用來繪製樹狀檢視之插入標記的色彩。|
+|[CTreeCtrl：： GetItem](#getitem)|抓取指定之樹狀檢視專案的屬性。|
+|[CTreeCtrl：： GetItemData](#getitemdata)|傳回與專案相關聯的應用程式特定值。|
+|[CTreeCtrl：： GetItemExpandedImageIndex](#getitemexpandedimageindex)|抓取目前樹狀檢視控制項的指定專案處於擴充狀態時，所要顯示的影像索引。|
+|[CTreeCtrl：： GetItemHeight](#getitemheight)|抓取樹狀檢視專案的目前高度。|
+|[CTreeCtrl：： GetItemImage](#getitemimage)|抓取與專案相關聯的影像。|
+|[CTreeCtrl：： GetItemPartRect](#getitempartrect)|抓取目前樹狀檢視控制項中指定專案之指定部分的周框。|
+|[CTreeCtrl：： GetItemRect](#getitemrect)|抓取樹狀檢視專案的周框。|
+|[CTreeCtrl：： GetItemState](#getitemstate)|傳回專案的狀態。|
+|[CTreeCtrl：： GetItemStateEx](#getitemstateex)|抓取目前樹狀檢視控制項中指定專案的擴充狀態。|
+|[CTreeCtrl：： GetItemText](#getitemtext)|傳回專案的文字。|
+|[CTreeCtrl：： GetLastVisibleItem](#getlastvisibleitem)|抓取目前樹狀檢視控制項中的最後一個展開專案。|
+|[CTreeCtrl：： GetLineColor](#getlinecolor)|抓取樹狀檢視控制項的目前線條色彩。|
+|[CTreeCtrl：： GetNextItem](#getnextitem)|抓取符合指定之關聯性的下一個樹狀檢視專案。|
+|[CTreeCtrl：： GetNextSiblingItem](#getnextsiblingitem)|抓取指定之樹狀檢視專案的下一個兄弟。|
+|[CTreeCtrl：： GetNextVisibleItem](#getnextvisibleitem)|抓取指定之樹狀檢視專案的下一個可見專案。|
+|[CTreeCtrl：： GetParentItem](#getparentitem)|抓取指定之樹狀檢視專案的父系。|
+|[CTreeCtrl：： GetPrevSiblingItem](#getprevsiblingitem)|抓取指定之樹狀檢視專案的上一個同級。|
+|[CTreeCtrl：： GetPrevVisibleItem](#getprevvisibleitem)|抓取指定之樹狀檢視專案的先前可見專案。|
+|[CTreeCtrl：： GetRootItem](#getrootitem)|抓取指定之樹狀檢視專案的根目錄。|
+|[CTreeCtrl：： GetScrollTime](#getscrolltime)|抓取樹狀檢視控制項的最大滾動時間。|
+|[CTreeCtrl：： GetSelectedCount](#getselectedcount)|抓取目前樹狀檢視控制項中選取專案的數目。|
+|[CTreeCtrl：： GetSelectedItem](#getselecteditem)|抓取目前選取的樹狀檢視專案。|
+|[CTreeCtrl：： GetTextColor](#gettextcolor)|抓取控制項目前的文字色彩。|
+|[CTreeCtrl：： GetToolTips](#gettooltips)|抓取樹狀檢視控制項所使用之子工具提示控制項的控制碼。|
+|[CTreeCtrl：： GetVisibleCount](#getvisiblecount)|抓取與樹狀檢視控制項相關聯之可見樹狀目錄專案的數目。|
+|[CTreeCtrl：： HitTest](#hittest)|傳回與 `CTreeCtrl` 物件相關之資料指標的目前位置。|
+|[CTreeCtrl：： InsertItem](#insertitem)|在樹狀檢視控制項中插入新專案。|
+|[CTreeCtrl：： ItemHasChildren](#itemhaschildren)|如果指定的專案有子專案，則傳回非零。|
+|[CTreeCtrl：： MapAccIdToItem](#mapaccidtoitem)|將指定的存取範圍識別碼對應至目前樹狀檢視控制項中樹狀檢視專案的控制碼。|
+|[CTreeCtrl：： MapItemToAccID](#mapitemtoaccid)|將指定的控制碼對應至目前樹狀檢視控制項中的樹狀檢視專案，以提供存取範圍識別碼。|
+|[CTreeCtrl：： Select](#select)|選取、滾動到視圖，或重新繪製指定的樹狀檢視專案。|
+|[CTreeCtrl：： SelectDropTarget](#selectdroptarget)|重新繪製樹狀目錄專案作為拖放作業的目標。|
+|[CTreeCtrl：： SelectItem](#selectitem)|選取指定的樹狀檢視專案。|
+|[CTreeCtrl：： SelectSetFirstVisible](#selectsetfirstvisible)|選取指定的樹狀檢視專案作為第一個可見專案。|
+|[CTreeCtrl：： SetAutoscrollInfo](#setautoscrollinfo)|設定目前樹狀檢視控制項的 autoscroll 速率。|
+|[CTreeCtrl：： SetBkColor](#setbkcolor)|設定控制項的背景色彩。|
+|[CTreeCtrl：： SetCheck](#setcheck)|設定樹狀目錄控制項專案的檢查狀態。|
+|[CTreeCtrl：： SetExtendedStyle](#setextendedstyle)|設定目前樹狀檢視控制項的延伸樣式。|
+|[CTreeCtrl：： SetImageList](#setimagelist)|設定與樹狀檢視控制項相關聯之影像清單的控制碼。|
+|[CTreeCtrl：： SetIndent](#setindent)|設定樹狀檢視專案從其父系的位移（以圖元為單位）。|
+|[CTreeCtrl：： SetInsertMark](#setinsertmark)|設定樹狀檢視控制項中的插入標記。|
+|[CTreeCtrl：： SetInsertMarkColor](#setinsertmarkcolor)|設定用來繪製樹狀檢視之插入標記的色彩。|
+|[CTreeCtrl：： SetItem](#setitem)|設定指定之樹狀檢視專案的屬性。|
+|[CTreeCtrl：： SetItemData](#setitemdata)|設定與專案相關聯的應用程式特定值。|
+|[CTreeCtrl：： SetItemExpandedImageIndex](#setitemexpandedimageindex)|設定當目前樹狀檢視控制項的指定專案處於擴充狀態時，所要顯示的影像索引。|
+|[CTreeCtrl：： SetItemHeight](#setitemheight)|設定樹狀檢視專案的高度。|
+|[CTreeCtrl：： SetItemImage](#setitemimage)|將影像與專案產生關聯。|
+|[CTreeCtrl：： SetItemState](#setitemstate)|設定專案的狀態。|
+|[CTreeCtrl：： SetItemStateEx](#setitemstateex)|設定目前樹狀檢視控制項中指定專案的擴充狀態。|
+|[CTreeCtrl：： SetItemText](#setitemtext)|設定專案的文字。|
+|[CTreeCtrl：： SetLineColor](#setlinecolor)|設定樹狀檢視控制項的目前線條色彩。|
+|[CTreeCtrl：： SetScrollTime](#setscrolltime)|設定樹狀檢視控制項的最大滾動時間。|
+|[CTreeCtrl：： SetTextColor](#settextcolor)|設定控制項的文字色彩。|
+|[CTreeCtrl：： SetToolTips](#settooltips)|設定樹狀檢視控制項的子工具提示控制項。|
+|[CTreeCtrl：： ShowInfoTip](#showinfotip)|顯示目前樹狀檢視控制項中指定專案的提示。|
+|[CTreeCtrl：： SortChildren](#sortchildren)|排序給定父專案的子系。|
+|[CTreeCtrl：： SortChildrenCB](#sortchildrencb)|使用應用程式定義的排序函數，排序指定之父專案的子系。|
 
 ## <a name="remarks"></a>備註
 
 「樹狀檢視控制項」是一個視窗，它會顯示專案的階層式清單，例如檔中的標題、索引中的專案，或磁片上的檔案和目錄。 每個項目都包含標籤和選擇性點陣圖影像，因此，每個項目都可以擁有與自己相關的子項目清單。 使用者可以按一下項目以展開和摺疊子項目的關聯清單。
 
-這個控制項（因此`CTreeCtrl`類別）僅適用于在 windows 98 和 windows NT 4 版和更新版本下執行的程式。
+這個控制項（因此 `CTreeCtrl` 類別）僅適用于在 Windows 98 和 Windows NT 4 版和更新版本下執行的程式。
 
-如需有關使用`CTreeCtrl`的詳細資訊，請參閱：
+如需使用 `CTreeCtrl`的詳細資訊，請參閱：
 
 - [控制項](../../mfc/controls-mfc.md)
 
@@ -283,7 +283,7 @@ class CTreeCtrl : public CWnd
 
 - Windows SDK 中的[樹狀檢視控制項參考](/windows/win32/Controls/tree-view-control-reference)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -318,7 +318,7 @@ virtual BOOL Create(
 指定樹狀檢視控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。
 
 *pParentWnd*<br/>
-指定樹狀檢視控制項的父視窗，通常是`CDialog`。 不得為 Null。
+指定樹狀檢視控制項的父視窗，通常是 `CDialog`。 它不得為 NULL。
 
 *nID*<br/>
 指定樹狀檢視控制項的識別碼。
@@ -329,9 +329,9 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>備註
 
-如果您想要建立樹狀目錄控制項做為其他視窗的子視窗，請使用`Create`成員函式。 如果您使用`Create`建立樹狀目錄控制項，除了其他樹狀檢視樣式以外，您還必須傳遞它 WS_VISIBLE。
+如果您想要建立樹狀目錄控制項做為其他視窗的子視窗，請使用 `Create` 成員函式。 如果您使用 `Create`建立樹狀目錄控制項，除了其他樹狀檢視樣式以外，您還必須將其傳遞 WS_VISIBLE。
 
-您可以使用`CTreeCtrl`兩個步驟來建立。 首先呼叫此函式，然後`Create`呼叫，它會建立樹狀檢視控制項並將其附加`CTreeCtrl`至物件。
+您可以使用兩個步驟來建立 `CTreeCtrl`。 首先呼叫此函式，然後呼叫 `Create`，這會建立樹狀檢視控制項並將其附加至 `CTreeCtrl` 物件。
 
 若要建立具有延伸視窗樣式的樹狀目錄控制項，請呼叫[CreateEx](#createex)，而不是`Create`。
 
@@ -341,7 +341,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CTreeCtrl：： CreateEx
 
-呼叫這個函式以建立控制項（子視窗），並將它與`CTreeCtrl`物件產生關聯。
+呼叫此函式以建立控制項（子視窗），並將它與 `CTreeCtrl` 物件建立關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -375,7 +375,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx` ，而不是[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
+使用 `CreateEx` 而非[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
 
 ##  <a name="createdragimage"></a>CTreeCtrl：： CreateDragImage
 
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 當拖曳專案時，應用程式會使用影像清單功能來顯示影像。
 
-物件`CImageList`是永久的，而且您必須在完成時將它刪除。 例如：
+`CImageList` 物件是永久的，您必須在完成時將它刪除。 例如：
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
@@ -462,7 +462,7 @@ CEdit* EditLabel(HTREEITEM hItem);
 
 ### <a name="return-value"></a>傳回值
 
-如果成功，則為用來`CEdit`編輯專案文字之物件的指標; 否則為 Null。
+如果成功，則為用來編輯專案文字之 `CEdit` 物件的指標;否則為 Null。
 
 ### <a name="remarks"></a>備註
 
@@ -492,7 +492,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_ENDEDITLABELNOW](/windows/win32/Controls/tvm-endeditlabelnow)訊息，如 Windows SDK 所述。
 
 ##  <a name="ensurevisible"></a>CTreeCtrl：： EnsureVisible
 
@@ -543,7 +543,7 @@ BOOL Expand(
 
 - TVE_EXPAND 會展開清單。
 
-- TVE_TOGGLE 會折迭目前已展開的清單，如果目前已折迭，則會將它展開。
+- TVE_TOGGLE 折迭清單（如果目前已展開）或將它展開（如果目前已折迭）。
 
 ### <a name="return-value"></a>傳回值
 
@@ -555,7 +555,7 @@ BOOL Expand(
 
 ##  <a name="getbkcolor"></a>CTreeCtrl：： GetBkColor
 
-此成員函式會執行 Win32 message [TVM_GETBKCOLOR](/windows/win32/Controls/tvm-getbkcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETBKCOLOR](/windows/win32/Controls/tvm-getbkcolor)Win32 訊息的行為。
 
 ```
 COLORREF GetBkColor() const;
@@ -563,7 +563,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="return-value"></a>傳回值
 
-COLORRE光圈值，表示控制項目前的視窗背景色彩。 如果此值為-1，則控制項會使用系統視窗色彩。 在此情況下，您可以`::GetSysColor(COLOR_WINDOW)`使用來取得控制項目前使用的系統色彩。
+COLORRE光圈值，表示控制項目前的視窗背景色彩。 如果此值為-1，則控制項會使用系統視窗色彩。 在這種情況下，您可以使用 `::GetSysColor(COLOR_WINDOW)` 來取得控制項目前使用的系統色彩。
 
 ### <a name="example"></a>範例
 
@@ -673,7 +673,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_GETEXTENDEDSTYLE](/windows/win32/Controls/tvm-getextendedstyle)訊息，如 Windows SDK 所述。
 
 ##  <a name="getfirstvisibleitem"></a>CTreeCtrl：： GetFirstVisibleItem
 
@@ -740,7 +740,7 @@ UINT GetIndent() const;
 
 ##  <a name="getinsertmarkcolor"></a>CTreeCtrl：： GetInsertMarkColor
 
-此成員函式會執行 Win32 message [TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETINSERTMARKCOLOR](/windows/win32/Controls/tvm-getinsertmarkcolor)Win32 訊息的行為。
 
 ```
 COLORREF GetInsertMarkColor() const;
@@ -777,7 +777,7 @@ BOOL GetItem(TVITEM* pItem) const;
 
 ##  <a name="getitemdata"></a>CTreeCtrl：： GetItemData
 
-呼叫此函式可取得與指定專案相關聯的32位應用程式特定值。
+呼叫此函式可取得與指定專案相關聯的應用程式特定值。
 
 ```
 DWORD_PTR GetItemData(HTREEITEM hItem) const;
@@ -790,7 +790,7 @@ DWORD_PTR GetItemData(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>傳回值
 
-與*hItem*所指定之專案相關聯的32位應用程式特定值。
+與*hItem*所指定的專案相關聯的指標大小應用程式特定值。
 
 ### <a name="example"></a>範例
 
@@ -816,11 +816,11 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)訊息，如 Windows SDK 中所述。 該訊息會傳回描述樹狀檢視控制項專案的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構，然後這個方法`iExpandedImage`會從該結構抓取成員。
+這個方法會傳送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)訊息，如 Windows SDK 所述。 該訊息會傳回描述樹狀檢視控制項專案的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構，然後這個方法會從該結構抓取 `iExpandedImage` 成員。
 
 ##  <a name="getitemheight"></a>CTreeCtrl：： GetItemHeight
 
-此成員函式會執行 Win32 message [TVM_GETITEMHEIGHT](/windows/win32/Controls/tvm-getitemheight)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETITEMHEIGHT](/windows/win32/Controls/tvm-getitemheight)Win32 訊息的行為。
 
 ```
 SHORT GetItemHeight() const;
@@ -883,7 +883,7 @@ BOOL GetItemPartRect(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*hItem*|在樹狀檢視控制項專案的控制碼。|
 |*nPart*|在元件的識別碼。 必須設定為 TVGIPR_BUTTON。|
@@ -897,11 +897,11 @@ BOOL GetItemPartRect(
 
 每個樹狀目錄控制項專案都是由圖形矩形所限制。 只要按下該矩形中的某個點，就會*叫用此專案。* 這個方法會傳回最大的矩形，因此當按下矩形中的某個點時，就會叫用*hItem*參數所識別的專案。
 
-這個方法會傳送 TVM_GETITEMPARTRECT 訊息，如 Windows SDK 中所述。 如需詳細資訊，請參閱[TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect)宏。
+這個方法會傳送 TVM_GETITEMPARTRECT 訊息，如 Windows SDK 所述。 如需詳細資訊，請參閱[TreeView_GetItemPartRect](/windows/win32/api/commctrl/nf-commctrl-treeview_getitempartrect)宏。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -983,13 +983,13 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>傳回值
 
-專案的擴充狀態。 如需詳細資訊，請`uStateEx`參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的成員。
+專案的擴充狀態。 如需詳細資訊，請參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的 `uStateEx` 成員。
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)訊息，如 Windows SDK 中所述。 該訊息會傳回描述樹狀檢視控制項專案的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構，而這個方法`uStateEx`會從該結構抓取成員。
+這個方法會傳送[TVM_GETITEM](/windows/win32/Controls/tvm-getitem)訊息，如 Windows SDK 所述。 該訊息會傳回描述樹狀檢視控制項專案的[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構，而這個方法會從該結構抓取 `uStateEx` 成員。
 
-##  <a name="getitemtext"></a>  CTreeCtrl::GetItemText
+##  <a name="getitemtext"></a>CTreeCtrl：： GetItemText
 
 傳回*hItem*所指定之專案的文字。
 
@@ -1004,7 +1004,7 @@ CString GetItemText(HTREEITEM hItem) const;
 
 ### <a name="return-value"></a>傳回值
 
-`CString`物件，其中包含專案的文字。
+包含專案文字的 `CString` 物件。
 
 ### <a name="example"></a>範例
 
@@ -1024,11 +1024,11 @@ HTREEITEM GetLastVisibleItem() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem)訊息，如 Windows SDK 中所述。 如需詳細資訊，請參閱該訊息的*旗*標參數中的 TVGN_LASTVISIBLE 旗標。
+這個方法會傳送[TVM_GETNEXTITEM](/windows/win32/Controls/tvm-getnextitem)訊息，如 Windows SDK 所述。 如需詳細資訊，請參閱該訊息的*旗*標參數中的 TVGN_LASTVISIBLE 旗標。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數的其中一個或多個。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數的其中一個或多個。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1040,7 +1040,7 @@ HTREEITEM GetLastVisibleItem() const;
 
 ##  <a name="getlinecolor"></a>CTreeCtrl：： GetLineColor
 
-此成員函式會執行 win32 message [TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETLINECOLOR](/windows/win32/Controls/tvm-getlinecolor)Win32 訊息的行為。
 
 ```
 COLORREF GetLineColor() const;
@@ -1104,7 +1104,7 @@ HTREEITEM GetNextItem(
 
 ### <a name="example"></a>範例
 
-如需在迴圈中`GetNextItem`使用的範例，請參閱[CTreeCtrl：:D eleteitem](#deleteitem)。
+如需在迴圈中使用 `GetNextItem` 的範例，請參閱[CTreeCtrl：:D eleteitem](#deleteitem)。
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
@@ -1247,7 +1247,7 @@ UINT GetScrollTime() const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 win32 message [TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETSCROLLTIME](/windows/win32/Controls/tvm-getscrolltime)Win32 訊息的行為。
 
 ##  <a name="getselectedcount"></a>CTreeCtrl：： GetSelectedCount
 
@@ -1263,7 +1263,7 @@ UINT GetSelectedCount();
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_GETSELECTEDCOUNT](/windows/win32/Controls/tvm-getselectedcount)訊息，如 Windows SDK 所述。
 
 ##  <a name="getselecteditem"></a>CTreeCtrl：： GetSelectedItem
 
@@ -1283,7 +1283,7 @@ HTREEITEM GetSelectedItem() const;
 
 ##  <a name="gettextcolor"></a>CTreeCtrl：： GetTextColor
 
-此成員函式會執行 Win32 message [TVM_GETTEXTCOLOR](/windows/win32/Controls/tvm-gettextcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETTEXTCOLOR](/windows/win32/Controls/tvm-gettextcolor)Win32 訊息的行為。
 
 ```
 COLORREF GetTextColor() const;
@@ -1299,7 +1299,7 @@ COLORREF GetTextColor() const;
 
 ##  <a name="gettooltips"></a>CTreeCtrl：： GetToolTips
 
-此成員函式會執行 Win32 message [TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_GETTOOLTIPS](/windows/win32/Controls/tvm-gettooltips)Win32 訊息的行為。
 
 ```
 CToolTipCtrl* GetToolTips() const;
@@ -1311,7 +1311,7 @@ CToolTipCtrl* GetToolTips() const;
 
 ### <a name="remarks"></a>備註
 
-的 MFC 執行`GetToolTips` `CToolTipCtrl`會傳回物件，此物件是由樹狀結構控制項所使用，而不是工具提示控制項的控制碼。
+的 MFC 執行 `GetToolTips` 會傳回樹狀目錄控制項所使用的 `CToolTipCtrl` 物件，而不是工具提示控制項的控制碼。
 
 ### <a name="example"></a>範例
 
@@ -1351,7 +1351,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 要測試之點的用戶端座標。
 
 *pFlags*<br/>
-整數的指標，接收點擊測試結果的相關資訊。 它可以是 [備註] 區段中的`flags`成員底下所列出的一或多個值。
+整數的指標，接收點擊測試結果的相關資訊。 它可以是 [備註] 區段中 [`flags`] 成員底下列出的一或多個值。
 
 *pHitTestInfo*<br/>
 [TVHITTESTINFO](/windows/win32/api/commctrl/ns-commctrl-tvhittestinfo)結構的位址，其中包含要進行點擊測試的位置，並接收點擊測試結果的相關資訊。
@@ -1366,7 +1366,7 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 
 |||
 |-|-|
-|值|意義|
+|{2&gt;值&lt;2}|意義|
 |TVHT_ABOVE|在工作區上方。|
 |TVHT_BELOW|在工作區底下。|
 |TVHT_NOWHERE|在工作區中，但在最後一個專案之下。|
@@ -1419,10 +1419,10 @@ HTREEITEM InsertItem(
 ### <a name="parameters"></a>參數
 
 *lpInsertStruct*<br/>
-的指標`TVINSERTSTRUCT` ，指定要插入之樹狀檢視專案的屬性。
+`TVINSERTSTRUCT` 的指標，指定要插入之樹狀檢視專案的屬性。
 
 *nMask*<br/>
-指定要設定之屬性的整數。 請參閱`TVITEM` Windows SDK 中的結構。
+指定要設定之屬性的整數。 請參閱 Windows SDK 中的 `TVITEM` 結構。
 
 *lpszItem*<br/>
 包含專案文字之字串的位址。
@@ -1437,10 +1437,10 @@ HTREEITEM InsertItem(
 指定專案狀態的值。 如需適當狀態的清單，請參閱 Windows SDK 中的樹狀檢視控制項專案狀態。
 
 *nStateMask*<br/>
-指定要設定的狀態。 請參閱`TVITEM` Windows SDK 中的結構。
+指定要設定的狀態。 請參閱 Windows SDK 中的 `TVITEM` 結構。
 
 *lParam*<br/>
-與專案相關聯的32位應用程式特定值。
+與專案相關聯的指標大小應用程式特定值。
 
 *hParent*<br/>
 插入專案之父系的控制碼。
@@ -1501,17 +1501,17 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="return-value"></a>傳回值
 
-對應至 uAccId 參數之樹狀檢視專案（ `HTREEITEM`）的控制碼。 如需詳細資訊，請參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的*hItem*成員。
+對應至*uAccId*參數之樹狀檢視專案（`HTREEITEM`）的控制碼。 如需詳細資訊，請參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的*hItem*成員。
 
 ### <a name="remarks"></a>備註
 
-協助工具輔助是協助殘障人士使用電腦的應用程式。 `IAccessible`介面會使用存取範圍識別碼，在視窗中唯一指定元素。 如需有關協助工具識別碼的詳細資訊，請在[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)搜尋「關於 Active Accessibility 支援」主題。
+協助工具輔助是協助殘障人士使用電腦的應用程式。 `IAccessible` 介面會使用存取範圍識別碼，以唯一的方式指定視窗中的元素。 如需有關協助工具識別碼的詳細資訊，請在[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)搜尋「關於 Active Accessibility 支援」主題。
 
-這個方法會傳送[TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_MAPACCIDTOHTREEITEM](/windows/win32/Controls/tvm-mapaccidtohtreeitem)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1541,13 +1541,13 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>備註
 
-協助工具輔助是協助殘障人士使用電腦的應用程式。 `IAccessible`介面會使用存取範圍識別碼，在視窗中唯一指定元素。 如需有關協助工具識別碼的詳細資訊，請在[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)搜尋「關於 Active Accessibility 支援」主題。
+協助工具輔助是協助殘障人士使用電腦的應用程式。 `IAccessible` 介面會使用存取範圍識別碼，以唯一的方式指定視窗中的元素。 如需有關協助工具識別碼的詳細資訊，請在[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)搜尋「關於 Active Accessibility 支援」主題。
 
-這個方法會傳送[TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_MAPHTREEITEMTOACCID](/windows/win32/Controls/tvm-maphtreeitemtoaccid)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1575,9 +1575,9 @@ BOOL Select(
 *nCode*<br/>
 要採取的動作類型。 這個參數可以是下列其中一個值：
 
-- TVGN_CARET 會將選取範圍設定為指定的專案。
+- TVGN_CARET 將選取範圍設定為指定的專案。
 
-- TVGN_DROPHILITE 會以用來表示拖放作業目標的樣式來重新繪製指定的專案。
+- TVGN_DROPHILITE 會在用來表示拖放作業目標的樣式中，重新繪製指定的專案。
 
 - TVGN_FIRSTVISIBLE 會垂直捲動樹狀檢視，讓指定的專案是第一個可見的專案。
 
@@ -1587,13 +1587,13 @@ BOOL Select(
 
 ### <a name="remarks"></a>備註
 
-如果*nCode*包含 TVGN_CARET 值，父視窗會收到 TVN_SELCHANGING 和 TVN_SELCHANGED 通知訊息。 此外，如果指定的專案是折迭父專案的子系，則會展開父系的子專案清單，以顯示指定的專案。 在此情況下，父視窗會接收 TVN_ITEMEXPANDING 和 TVN_ITEMEXPANDED 通知訊息。
+如果*nCode*包含 TVGN_CARET 的值，父視窗會收到 TVN_SELCHANGING 並 TVN_SELCHANGED 通知訊息。 此外，如果指定的專案是折迭父專案的子系，則會展開父系的子專案清單，以顯示指定的專案。 在此情況下，父視窗會接收 TVN_ITEMEXPANDING 並 TVN_ITEMEXPANDED 通知訊息。
 
 ### <a name="example"></a>範例
 
   請參閱[CTreeCtrl：： HitTest](#hittest)的範例。
 
-##  <a name="selectdroptarget"></a>  CTreeCtrl::SelectDropTarget
+##  <a name="selectdroptarget"></a>CTreeCtrl：： SelectDropTarget
 
 呼叫此函式可重繪用來表示拖放作業目標的樣式專案。
 
@@ -1658,13 +1658,13 @@ BOOL SelectSetFirstVisible(HTREEITEM hItem);
 
 ### <a name="remarks"></a>備註
 
-函式會使用 TVM_SELECTITEM 和 TVGN_FIRSTVISIBLE 訊息參數將訊息傳送至視窗。
+函式會使用 TVM_SELECTITEM 和 TVGN_FIRSTVISIBLE 訊息參數，將訊息傳送至視窗。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CTreeCtrl#28](../../mfc/reference/codesnippet/cpp/ctreectrl-class_32.cpp)]
 
-##  <a name="setautoscrollinfo"></a>  CTreeCtrl::SetAutoscrollInfo
+##  <a name="setautoscrollinfo"></a>CTreeCtrl：： SetAutoscrollInfo
 
 設定目前樹狀檢視控制項的 autoscroll 速率。
 
@@ -1687,13 +1687,13 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="remarks"></a>備註
 
-Autoscroll 參數是用來將目前看不到的專案向外流覽。 樹狀檢視控制項必須具有 TVS_EX_AUTOHSCROLL 擴充樣式，如[樹狀檢視控制項延伸樣式](/windows/win32/Controls/tree-view-control-window-extended-styles)中所述。
+Autoscroll 參數是用來將目前看不到的專案向外流覽。 樹狀檢視控制項必須具有 [TVS_EX_AUTOHSCROLL] 延伸樣式，如[樹狀檢視控制項延伸樣式](/windows/win32/Controls/tree-view-control-window-extended-styles)中所述。
 
-這個方法會傳送[TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_SETAUTOSCROLLINFO](/windows/win32/Controls/tvm-setautoscrollinfo)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1705,7 +1705,7 @@ Autoscroll 參數是用來將目前看不到的專案向外流覽。 樹狀檢�
 
 ##  <a name="setbkcolor"></a>CTreeCtrl：： SetBkColor
 
-此成員函式會執行 Win32 message [TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETBKCOLOR](/windows/win32/Controls/tvm-setbkcolor)Win32 訊息的行為。
 
 ```
 COLORREF SetBkColor(COLORREF clr);
@@ -1739,8 +1739,8 @@ BOOL SetCheck(
 *hItem*<br/>
 要接收檢查狀態變更的 HTREEITEM。
 
-*fCheck*<br/>
-指出是否要檢查或取消選取樹狀目錄控制項專案。 根據預設， `SetCheck`會設定要檢查的專案。
+*來*<br/>
+指出是否要檢查或取消選取樹狀目錄控制項專案。 根據預設，`SetCheck` 會設定要檢查的專案。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1756,7 +1756,7 @@ BOOL SetCheck(
 
 ### <a name="example"></a>範例
 
-若要使用核取方塊，請在填入樹狀目錄控制項之前，先設定 TVS_CHECKBOXES。
+若要使用核取方塊，請在填入樹狀目錄控制項之前設定 TVS_CHECKBOXES。
 
 [!code-cpp[NVC_MFC_CTreeCtrl#30](../../mfc/reference/codesnippet/cpp/ctreectrl-class_35.cpp)]
 
@@ -1785,11 +1785,11 @@ DWORD SetExtendedStyle(
 
 這個方法會清除*dwExMask*參數中指定的樣式，然後設定*dwExStyles*參數中指定的樣式。 只有對應到*dwExMask*中之位的擴充樣式會變更。
 
-這個方法會傳送[TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_SETEXTENDEDSTYLE](/windows/win32/Controls/tvm-setextendedstyle)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -1817,9 +1817,9 @@ CImageList* SetImageList(
 *nImageListType*<br/>
 要設定之影像清單的類型。 影像清單可以是下列其中一個值：
 
-- TVSIL_NORMAL 會設定標準影像清單，其中包含樹狀檢視專案的選取和 nonselected 影像。 您必須將此狀態用於重迭影像。
+- TVSIL_NORMAL 設定標準影像清單，其中包含樹狀檢視專案的已選取和 nonselected 影像。 您必須將此狀態用於重迭影像。
 
-- TVSIL_STATE 會設定狀態影像清單，其中包含處於使用者定義狀態之樹狀檢視專案的影像。
+- TVSIL_STATE 設定狀態影像清單，其中包含處於使用者定義狀態之樹狀檢視專案的影像。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1848,7 +1848,7 @@ void SetIndent(UINT nIndent);
 
 ##  <a name="setinsertmark"></a>CTreeCtrl：： SetInsertMark
 
-此成員函式會執行 Win32 message [TVM_SETINSERTMARK](/windows/win32/Controls/tvm-setinsertmark)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETINSERTMARK](/windows/win32/Controls/tvm-setinsertmark)Win32 訊息的行為。
 
 ```
 BOOL SetInsertMark(
@@ -1874,7 +1874,7 @@ HTREEITEM，指定將放置插入標記的專案。 如果這個引數為 Null�
 
 ##  <a name="setinsertmarkcolor"></a>CTreeCtrl：： SetInsertMarkColor
 
-此成員函式會執行 Win32 message [TVM_SETINSERTMARKCOLOR](/windows/win32/Controls/tvm-setinsertmarkcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETINSERTMARKCOLOR](/windows/win32/Controls/tvm-setinsertmarkcolor)Win32 訊息的行為。
 
 ```
 COLORREF SetInsertMarkColor(COLORREF clrNew);
@@ -1917,28 +1917,28 @@ BOOL SetItem(
 [TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)結構的指標，其中包含新的專案屬性，如 Windows SDK 中所述。
 
 *hItem*<br/>
-要設定其屬性之專案的控制碼。 請參閱 Windows SDK 中`TVITEM`結構的成員。`hItem`
+要設定其屬性之專案的控制碼。 請參閱 Windows SDK 中 `TVITEM` 結構的 `hItem` 成員。
 
 *nMask*<br/>
-指定要設定之屬性的整數。 請參閱`TVITEM`結構的成員。`mask`
+指定要設定之屬性的整數。 請參閱 `TVITEM` 結構的 `mask` 成員。
 
 *lpszItem*<br/>
 包含專案文字之字串的位址。
 
 *nImage*<br/>
-樹狀檢視控制項的影像清單中，專案影像的索引。 請參閱`TVITEM`結構的成員。`iImage`
+樹狀檢視控制項的影像清單中，專案影像的索引。 請參閱 `TVITEM` 結構的 `iImage` 成員。
 
 *nSelectedImage*<br/>
-樹狀檢視控制項的影像清單中，專案所選取影像的索引。 請參閱`TVITEM`結構的成員。`iSelectedImage`
+樹狀檢視控制項的影像清單中，專案所選取影像的索引。 請參閱 `TVITEM` 結構的 `iSelectedImage` 成員。
 
 *nState*<br/>
-指定專案狀態的值。 請參閱`TVITEM`結構的成員。`State`
+指定專案狀態的值。 請參閱 `TVITEM` 結構的 `State` 成員。
 
 *nStateMask*<br/>
-指定要設定的狀態。 請參閱`TVITEM`結構的成員。`stateMask`
+指定要設定的狀態。 請參閱 `TVITEM` 結構的 `stateMask` 成員。
 
 *lParam*<br/>
-與專案相關聯的32位應用程式特定值。
+與專案相關聯的指標大小應用程式特定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1946,9 +1946,9 @@ BOOL SetItem(
 
 ### <a name="remarks"></a>備註
 
-在結構中`hItem` ，成員會識別專案，而`mask`成員會指定要設定的屬性。 `TVITEM`
+在 `TVITEM` 結構中，`hItem` 成員會識別專案，而 `mask` 成員會指定要設定的屬性。
 
-`pszText` `cchTextMax`如果成員或 nMask 參數指定 TVIF_TEXT 值，則成員或 lpszItem 就是以 null 結束的字串位址，而該成員會被忽略。 `mask` 如果`mask` （或*nMask*）指定 TVIF_STATE 值，則`stateMask`成員或*nStateMask* `state`參數會指定要變更的專案狀態，而 member 或*nState*參數會包含的值。這些狀態。
+如果 `mask` 成員或*nMask*參數指定 TVIF_TEXT 值，`pszText` 成員或*lpszItem*就是以 null 終止之字串的位址，而 `cchTextMax` 成員會被忽略。 如果 `mask` （或*nMask*）指定 TVIF_STATE 值，`stateMask` 成員或*nStateMask*參數會指定要變更的專案狀態，而 `state` member 或*nState*參數會包含這些狀態的值。
 
 ### <a name="example"></a>範例
 
@@ -1956,7 +1956,7 @@ BOOL SetItem(
 
 ##  <a name="setitemdata"></a>CTreeCtrl：： SetItemData
 
-呼叫此函式可設定與指定專案相關聯的32位應用程式特定值。
+呼叫此函式可設定與指定專案相關聯的應用程式特定值。
 
 ```
 BOOL SetItemData(
@@ -1970,7 +1970,7 @@ BOOL SetItemData(
 要抓取其資料之專案的控制碼。
 
 *dwData*<br/>
-與*hItem*所指定之專案相關聯的32位應用程式特定值。
+與*hItem*所指定的專案相關聯的指標大小應用程式特定值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1992,7 +1992,7 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*hItem*|在樹狀檢視控制項專案的控制碼。|
 |*iExpandedImage*|在當指定的專案處於擴充狀態時，所要顯示之影像的索引。|
@@ -2003,11 +2003,11 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)訊息，如 Windows SDK 中所述。 這個方法會將*iExpandedImage*參數指派給`iExpandedImage` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的成員，然後在訊息中使用該結構。
+這個方法會傳送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)訊息，如 Windows SDK 所述。 這個方法會將*iExpandedImage*參數指派給[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的 `iExpandedImage` 成員，然後在訊息中使用該結構。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -2019,7 +2019,7 @@ BOOL SetItemExpandedImageIndex(
 
 ##  <a name="setitemheight"></a>CTreeCtrl：： SetItemHeight
 
-此成員函式會執行 Win32 message [TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETITEMHEIGHT](/windows/win32/Controls/tvm-setitemheight)Win32 訊息的行為。
 
 ```
 SHORT SetItemHeight(SHORT cyHeight);
@@ -2125,7 +2125,7 @@ BOOL SetItemStateEx(
 |參數|描述|
 |---------------|-----------------|
 |*hItem*|在樹狀檢視控制項專案的控制碼。|
-|*uStateEx*|在專案的擴充狀態。 如需詳細資訊，請`uStateEx`參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的成員。|
+|*uStateEx*|在專案的擴充狀態。 如需詳細資訊，請參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的 `uStateEx` 成員。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -2133,11 +2133,11 @@ BOOL SetItemStateEx(
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)訊息，如 Windows SDK 中所述。 這個方法會將*uStateEx*參數指派給`uStateEx` [TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的成員，然後在訊息中使用該結構。
+這個方法會傳送[TVM_SETITEM](/windows/win32/Controls/tvm-setitem)訊息，如 Windows SDK 所述。 這個方法會將*uStateEx*參數指派給[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的 `uStateEx` 成員，然後在訊息中使用該結構。
 
 ### <a name="example"></a>範例
 
-下列程式碼範例會定義用來`m_treeCtrl`存取目前樹狀檢視控制項的變數。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
+下列程式碼範例會定義用來存取目前樹狀檢視控制項的變數 `m_treeCtrl`。 此程式碼範例也會定義不帶正負號的整數和數個 HTREEITEM 變數。 下一個範例會使用這些變數。
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#1](../../mfc/reference/codesnippet/cpp/ctreectrl-class_17.h)]
 
@@ -2147,7 +2147,7 @@ BOOL SetItemStateEx(
 
 [!code-cpp[NVC_MFC_CTreeCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctreectrl-class_41.cpp)]
 
-##  <a name="setitemtext"></a>  CTreeCtrl::SetItemText
+##  <a name="setitemtext"></a>CTreeCtrl：： SetItemText
 
 設定*hItem*所指定之專案的文字。
 
@@ -2192,7 +2192,7 @@ COLORREF SetLineColor(COLORREF clrNew = CLR_DEFAULT);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 win32 message [TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETLINECOLOR](/windows/win32/Controls/tvm-setlinecolor)Win32 訊息的行為。
 
 ### <a name="example"></a>範例
 
@@ -2217,11 +2217,11 @@ UINT SetScrollTime(UINT uScrollTime);
 
 ### <a name="remarks"></a>備註
 
-此成員函式會執行 win32 message [TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETSCROLLTIME](/windows/win32/Controls/tvm-setscrolltime)Win32 訊息的行為。
 
 ##  <a name="settextcolor"></a>CTreeCtrl：： SetTextColor
 
-此成員函式會執行 Win32 message [TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETTEXTCOLOR](/windows/win32/Controls/tvm-settextcolor)Win32 訊息的行為。
 
 ```
 COLORREF SetTextColor(COLORREF clr);
@@ -2242,7 +2242,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ##  <a name="settooltips"></a>CTreeCtrl：： SetToolTips
 
-此成員函式會執行 Win32 message [TVM_SETTOOLTIPS](/windows/win32/Controls/tvm-settooltips)的行為，如 Windows SDK 中所述。
+此成員函式會依照 Windows SDK 中的說明，實作用[TVM_SETTOOLTIPS](/windows/win32/Controls/tvm-settooltips)Win32 訊息的行為。
 
 ```
 CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
@@ -2259,7 +2259,7 @@ CToolTipCtrl* SetToolTips(CToolTipCtrl* pWndTip);
 
 ### <a name="remarks"></a>備註
 
-若要使用工具提示，請在建立`CTreeCtrl`物件時指出 TVS_NOTOOLTIPS 樣式。
+若要使用工具提示，請在建立 `CTreeCtrl` 物件時指出 TVS_NOTOOLTIPS 樣式。
 
 ### <a name="example"></a>範例
 
@@ -2277,13 +2277,13 @@ void ShowInfoTip(HTREEITEM hItem);
 
 |參數|描述|
 |---------------|-----------------|
-|*hItem*|在控制項中樹狀檢視專案的控制碼。 如需詳細資訊，請`hItem`參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的成員。|
+|*hItem*|在控制項中樹狀檢視專案的控制碼。 如需詳細資訊，請參閱[TVITEMEX](/windows/win32/api/commctrl/ns-commctrl-tvitemexw)結構的 `hItem` 成員。|
 
 ### <a name="remarks"></a>備註
 
 如需工具提示與提示之間差異的詳細資訊，請搜尋[Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322)的「工具提示與提示」主題。
 
-這個方法會傳送[TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip)訊息，如 Windows SDK 中所述。
+這個方法會傳送[TVM_SHOWINFOTIP](/windows/win32/Controls/tvm-showinfotip)訊息，如 Windows SDK 所述。
 
 ##  <a name="sortchildren"></a>CTreeCtrl：： SortChildren
 
@@ -2304,7 +2304,7 @@ BOOL SortChildren(HTREEITEM hItem);
 
 ### <a name="remarks"></a>備註
 
-`SortChildren`不會遞迴通過樹狀結構;只有*hItem*的直屬子系會進行排序。
+`SortChildren` 不會透過樹狀結構遞迴;只有*hItem*的直屬子系會進行排序。
 
 ### <a name="example"></a>範例
 
@@ -2329,9 +2329,9 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ### <a name="remarks"></a>備註
 
-如果第一個專案應該在`lpfnCompare`第二個專案的前面，則此結構的比較函式必須傳回負值，如果第一個專案應該在第二個專案後面，則為正值; 如果兩個專案相等，則為零。
+如果第一個專案應該在第二個專案的前面，則此結構的比較函數（`lpfnCompare`）必須傳回負值，如果第一個專案應該在第二個專案之後，則為正值，如果兩個專案相等，則為零。
 
-*LParam1*和*lParam2*參數會`lParam`對應到兩個要比較的專案之[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)結構的成員。 *LParamSort*參數會對應至`lParam` `TV_SORTCB`結構的成員。
+*LParam1*和*lParam2*參數會對應到兩個要比較的專案之[TVITEM](/windows/win32/api/commctrl/ns-commctrl-tvitemw)結構的 `lParam` 成員。 *LParamSort*參數會對應至 `TV_SORTCB` 結構的 `lParam` 成員。
 
 ### <a name="example"></a>範例
 
@@ -2339,7 +2339,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 [!code-cpp[NVC_MFC_CTreeCtrl#39](../../mfc/reference/codesnippet/cpp/ctreectrl-class_47.cpp)]
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [MFC 範例 CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd 類別](../../mfc/reference/cwnd-class.md)<br/>

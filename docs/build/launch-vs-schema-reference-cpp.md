@@ -1,97 +1,97 @@
 ---
-title: 啟動。與 json 架構參考 (C++) 的比較
+title: 啟動。與 json 架構參考（C++）的比較
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 362a329289107f74cca2f20af62c8a28b4192575
-ms.sourcegitcommit: ace42fa67e704d56d03c03745b0b17d2a5afeba4
+ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
+ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69978456"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75556639"
 ---
-# <a name="launchvsjson-schema-reference-c"></a>啟動。與 json 架構參考 (C++) 的比較
+# <a name="launchvsjson-schema-reference-c"></a>啟動。與 json 架構參考（C++）的比較
 
-使用啟動檔案與*json*檔案來設定調試參數。 以建立檔案。 在**方案總管**中, 以滑鼠右鍵按一下可執行檔, 然後選擇 [**偵錯工具和啟動設定**]。 選擇最符合您專案的選項, 然後使用下列屬性來視需要修改設定:
+使用啟動檔案與*json*檔案來設定調試參數。 以建立檔案。 在**方案總管**中，以滑鼠右鍵按一下可執行檔，然後選擇 [**偵錯工具和啟動設定**]。 選擇最符合您專案的選項，然後使用下列屬性來視需要修改設定：
 
 ## <a name="default-properties"></a>預設屬性
 
 ||||
 |-|-|-|
-|**Property**|**型別**|**描述**|
-|`name`|字串|在 [調試目標] 下拉式清單中指定專案的名稱。|
-|`type`|字串|指定專案是否為 dll 或 .exe (預設為 .exe)|
-|`project`|字串|指定專案檔的相對路徑。|
-|`projectTarget`|字串|指定在建立`project`時所叫用的選擇性目標。 這`projectTarget`必須已經存在, 而且符合 [**調試目標**] 下拉式清單中的名稱。|
-|`debugType`|字串|根據程式碼的類型 (原生、managed 或混合) 指定偵錯工具模式。 除非已設定此參數, 否則會自動偵測這種情況。 允許的值: 「原生」、「受控」、「混合」。|
-|`inheritEnvironments`|array|指定一組繼承自多個來源的環境變數。 您可以在檔案中定義一些變數, 例如 CMakeSettings 或 CppProperties, 並讓它們可供 debug 內容使用|
-|`args`|array|指定傳遞至已啟動程式的命令列引數。|
-|`currentDir`|字串|指定組建目標的完整目錄路徑。 除非已設定此參數, 否則會自動偵測這種情況。|
-|`noDebug`|boolean|指定是否要對啟動的程式進行 debug。 如果未指定, 此參數的`false`預設值為。|
-|`stopOnEntry`|boolean|指定是否要在進程啟動時立即中斷, 並附加偵錯工具。 這個參數的預設值是`false`。|
-|`remoteMachine`|字串|指定啟動程式的遠端電腦名稱稱。|
-|`env`|array| 指定自訂環境變數的索引鍵/值清單。 env: {"myEnv": "myVal"}。|
-|`portName`|字串|指定附加至執行中進程時的埠名稱。|
-|`buildConfigurations`|array| 索引鍵/值組, 指定要套用設定之組建模式的名稱。 例如, `Debug`或`Release` , 以及要根據選取的組建模式使用的設定。
+|**Property**|**Type**|**描述**|
+|`name`|string|在 [調試目標] 下拉式清單中指定專案的名稱。|
+|`type`|string|指定專案是否為 dll 或 .exe （預設為 .exe）|
+|`project`|string|指定專案檔的相對路徑。|
+|`projectTarget`|string|指定建立 `project`時所叫用的選擇性目標。 這個 `projectTarget` 必須已經存在，而且符合 [ **Debug Target** ] 下拉式清單中的名稱。|
+|`debugType`|string|根據程式碼的類型（原生、managed 或混合）指定偵錯工具模式。 除非已設定此參數，否則會自動偵測這種情況。 允許的值：「原生」、「受控」、「混合」。|
+|`inheritEnvironments`|陣列。|指定一組繼承自多個來源的環境變數。 您可以在檔案中定義一些變數，例如*CMakeSettings*或*CppProperties* ，並讓它們可供 debug 內容使用。  **Visual Studio 16.4：** ：使用 `env.VARIABLE_NAME` 語法，以每個目標為基礎來指定環境變數。 若要取消設定變數，請將它設為 "null"。|
+|`args`|陣列。|指定傳遞至已啟動程式的命令列引數。|
+|`currentDir`|string|指定組建目標的完整目錄路徑。 除非已設定此參數，否則會自動偵測這種情況。|
+|`noDebug`|boolean|指定是否要對啟動的程式進行 debug。 如果未指定，此參數的預設值為 `false`。|
+|`stopOnEntry`|boolean|指定是否要在進程啟動時立即中斷，並附加偵錯工具。 此參數的預設值為 `false`。|
+|`remoteMachine`|string|指定啟動程式的遠端電腦名稱稱。|
+|`env`|陣列。| 指定自訂環境變數的索引鍵/值清單。 env： {"myEnv"： "myVal"}。|
+|`portName`|string|指定附加至執行中進程時的埠名稱。|
+|`buildConfigurations`|陣列。| 索引鍵/值組，指定要套用設定之組建模式的名稱。 例如，`Debug` 或 `Release`，以及要根據選取的組建模式使用的設定。
 
 ## <a name="c-linux-properties"></a>C++Linux 屬性
 
 ||||
 |-|-|-|
-|**Property**|**型別**|**描述**|
-|`program`|字串|遠端電腦上程式可執行檔的完整路徑。 使用 CMake 時, 可以使用`${debugInfo.fullTargetPath}`宏做為此欄位的值。|
-|`processId`|integer|要附加偵錯工具的選擇性處理序識別碼。|
-|`sourceFileMap`|物件 (object)|傳遞至 debug engine 的選擇性來源檔案對應。 格式: `{ "\<Compiler source location>": "\<Editor source location>" }`或`{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`。 範例: `{ "/home/user/foo": "C:\\foo" }`或`{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`。 請參閱[原始檔對應選項](#source_file_map_options)。|
-|`additionalProperties`|字串|其中一個 sourceFileMapOptions。 (請參閱下方。)|
-|`MIMode`|字串|表示 MIDebugEngine 將連接的已啟用 MI 主控台偵錯工具類型。 允許的值為 "gdb"、"lldb"。|
-|`args`|array|傳遞至程式的命令列引數。|
-|`environment`|array|要新增至程式環境的環境變數。 範例: [{"name": "squid", "value": "蛤蜊"}]。|
-|`targetArchitecture`|字串|調試的架構。 除非已設定此參數, 否則會自動偵測這種情況。 允許的值為 x86、arm、arm64、mips、x64、amd64、x86_64。|
-|`visualizerFile`|字串|要在進行此進程的偵錯工具時使用的 natvis 檔案。 此選項與 GDB 整齊的列印不相容。 若使用此設定, 請參閱 "showDisplayString"。|
-|`showDisplayString`|boolean|當指定 visualizerFile 時, showDisplayString 將會啟用顯示字串。 開啟此選項會導致在進行調試過程時效能變慢。|
-|`remoteMachineName`|字串|裝載 gdb 和程式來進行 debug 的遠端 Linux 電腦。 使用連線管理員新增新的 Linux 電腦。 使用 CMake 時, 可以使用`${debugInfo.remoteMachineName}`宏做為此欄位的值。|
-|`cwd`|字串|遠端電腦上目標的工作目錄。 使用 CMake 時, 可以使用`${debugInfo.defaultWorkingDirectory}`宏做為此欄位的值。 除非在*remote monitoring.h cmakelists.txt .txt*檔案中覆寫, 否則預設值為遠端工作區根目錄。|
-|`miDebuggerPath`|字串|已啟用 MI 的偵錯工具 (例如 gdb) 的路徑。 若未指定, 則會先搜尋路徑, 以取得偵錯工具。|
-|`miDebuggerServerAddress`|字串|要連接之已啟用 MI 的偵錯工具伺服器的網路位址。 範例: localhost: 1234。|
-|`setupCommands`|array|要執行的一或多個 GDB/LLDB 命令, 以便設定基礎偵錯工具。 範例：`"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`。 請參閱[啟動安裝程式命令](#launch_setup_commands)。|
-|`customLaunchSetupCommands`|array|如果有提供, 這會取代用來以一些其他命令啟動目標的預設命令。 例如, 這可以是「-目標-附加」, 以便附加至目標進程。 空的命令清單會將啟動命令取代為任何內容, 如果偵錯工具是以命令列選項的形式提供啟動選項, 這會很有用。 範例：`"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`。|
-|`launchCompleteCommand`|字串|要在偵錯工具完整設定後執行的命令, 以讓目標進程執行。 允許的值為 "exec-run"、"exec-continue"、"None"。 預設值為 "exec-run"。|
-|`debugServerPath`|字串|要啟動之 debug server 的選擇性完整路徑。 預設值為 null。|
-|`debugServerArgs`|字串|選擇性的 debug server args。 預設值為 null。|
-|`filterStderr`|boolean|搜尋 stderr 資料流程以取得伺服器啟動的模式, 並將 stderr 記錄到 debug 輸出。 預設值為 `false`。|
-|`coreDumpPath`|字串|指定程式之核心傾印檔案的選擇性完整路徑。 預設值為 null。|
-externalConsole|boolean|若為 true, 則會為偵錯工具啟動主控台。 如果`false`為, 則不會啟動任何主控台。 預設值為 `false`。 注意：在某些情況下, 會忽略此選項的技術因素。|
-|`pipeTransport`|字串|出現時, 這會指示偵錯工具使用另一個可執行檔作為管道連接到遠端電腦, 以在 Visual Studio 與已啟用 MI 的偵錯工具 (例如 gdb) 之間轉送標準輸入/輸出。 允許的值: 一或多個[管道傳輸選項](#pipe_transport_options)。|
+|**Property**|**Type**|**描述**|
+|`program`|string|遠端電腦上程式可執行檔的完整路徑。 使用 CMake 時，可以使用宏 `${debugInfo.fullTargetPath}` 做為此欄位的值。|
+|`processId`|整數|要附加偵錯工具的選擇性處理序識別碼。|
+|`sourceFileMap`|物件|傳遞至 debug engine 的選擇性來源檔案對應。 格式： `{ "\<Compiler source location>": "\<Editor source location>" }` 或 `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`。 範例：`{ "/home/user/foo": "C:\\foo" }` 或 `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`。 請參閱[原始檔對應選項](#source_file_map_options)。|
+|`additionalProperties`|string|其中一個 sourceFileMapOptions。 (請參閱下方。)|
+|`MIMode`|string|表示 MIDebugEngine 將連接的已啟用 MI 主控台偵錯工具類型。 允許的值為 "gdb"、"lldb"。|
+|`args`|陣列。|傳遞至程式的命令列引數。|
+|`environment`|陣列。|要新增至程式環境的環境變數。 範例： [{"name"： "squid"，"value"： "蛤蜊"}]。|
+|`targetArchitecture`|string|調試的架構。 除非已設定此參數，否則會自動偵測這種情況。 允許的值為 x86、arm、arm64、mips、x64、amd64 x86_64。|
+|`visualizerFile`|string|要在進行此進程的偵錯工具時使用的 natvis 檔案。 此選項與 GDB 整齊的列印不相容。 若使用此設定，請參閱 "showDisplayString"。|
+|`showDisplayString`|boolean|當指定 visualizerFile 時，showDisplayString 將會啟用顯示字串。 開啟此選項會導致在進行調試過程時效能變慢。|
+|`remoteMachineName`|string|裝載 gdb 和程式來進行 debug 的遠端 Linux 電腦。 使用連線管理員新增新的 Linux 電腦。 使用 CMake 時，可以使用宏 `${debugInfo.remoteMachineName}` 做為此欄位的值。|
+|`cwd`|string|遠端電腦上目標的工作目錄。 使用 CMake 時，可以使用宏 `${debugInfo.defaultWorkingDirectory}` 做為此欄位的值。 除非在*remote monitoring.h cmakelists.txt .txt*檔案中覆寫，否則預設值為遠端工作區根目錄。|
+|`miDebuggerPath`|string|已啟用 MI 的偵錯工具（例如 gdb）的路徑。 若未指定，則會先搜尋路徑，以取得偵錯工具。|
+|`miDebuggerServerAddress`|string|要連接之已啟用 MI 的偵錯工具伺服器的網路位址。 範例： localhost：1234。|
+|`setupCommands`|陣列。|要執行的一或多個 GDB/LLDB 命令，以便設定基礎偵錯工具。 範例：`"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`。 請參閱[啟動安裝程式命令](#launch_setup_commands)。|
+|`customLaunchSetupCommands`|陣列。|如果有提供，這會取代用來以一些其他命令啟動目標的預設命令。 例如，這可以是「-目標-附加」，以便附加至目標進程。 空的命令清單會將啟動命令取代為任何內容，如果偵錯工具是以命令列選項的形式提供啟動選項，這會很有用。 範例：`"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`。|
+|`launchCompleteCommand`|string|要在偵錯工具完整設定後執行的命令，以讓目標進程執行。 允許的值為 "exec-run"、"exec-continue"、"None"。 預設值為 "exec-run"。|
+|`debugServerPath`|string|要啟動之 debug server 的選擇性完整路徑。 預設值為 null。|
+|`debugServerArgs`|string|選擇性的 debug server args。 預設值為 null。|
+|`filterStderr`|boolean|搜尋 stderr 資料流程以取得伺服器啟動的模式，並將 stderr 記錄到 debug 輸出。 預設值為 `false`。|
+|`coreDumpPath`|string|指定程式之核心傾印檔案的選擇性完整路徑。 預設值為 null。|
+externalConsole|boolean|若為 true，則會為偵錯工具啟動主控台。 如果 `false`，則不會啟動主控台。 預設值為 `false`。 注意：在某些情況下，會忽略此選項的技術原因。|
+|`pipeTransport`|string|出現時，這會指示偵錯工具使用另一個可執行檔作為管道連接到遠端電腦，以在 Visual Studio 與已啟用 MI 的偵錯工具（例如 gdb）之間轉送標準輸入/輸出。 允許的值：一或多個[管道傳輸選項](#pipe_transport_options)。|
 
 
 ## <a name="launch_setup_commands"></a>啟動安裝程式命令
 
-與`setupCommands`屬性搭配使用:
+與 `setupCommands` 屬性搭配使用：
 
 ||||
 |-|-|-|
-|`text`|字串|要執行的偵錯工具命令。|
-|`description`|字串|命令的選擇性描述。|
-|`ignoreFailures`|boolean|若為 true, 則應該忽略命令的失敗。 預設值為 `false`。|
+|`text`|string|要執行的偵錯工具命令。|
+|`description`|string|命令的選擇性描述。|
+|`ignoreFailures`|boolean|若為 true，則應該忽略命令的失敗。 預設值為 `false`。|
 
 ## <a name = "pipe_transport_options"></a>管道傳輸選項
 
-與`pipeTransport`屬性搭配使用:
+與 `pipeTransport` 屬性搭配使用：
 
 ||||
 |-|-|-|
-|`pipeCwd`|字串|管道程式之工作目錄的完整路徑。|
-|`pipeProgram`|字串|要執行的完整管道命令。|
-|`pipeArgs`|array|傳遞至管道程式以設定連接的命令列引數。|
-|`debuggerPath`|字串|目的電腦上偵錯工具的完整路徑, 例如/usr/bin/gdb。|
-|`pipeEnv`|物件 (object)|傳遞至管道程式的環境變數。|
-|`quoteArgs`|boolean|如果個別引數包含字元 (例如空格或索引標籤), 是否應該加上引號？ 如果`false`為, 偵錯工具命令就不會再自動加上引號。 預設為 `true`。|
+|`pipeCwd`|string|管道程式之工作目錄的完整路徑。|
+|`pipeProgram`|string|要執行的完整管道命令。|
+|`pipeArgs`|陣列。|傳遞至管道程式以設定連接的命令列引數。|
+|`debuggerPath`|string|目的電腦上偵錯工具的完整路徑，例如/usr/bin/gdb。|
+|`pipeEnv`|物件|傳遞至管道程式的環境變數。|
+|`quoteArgs`|boolean|如果個別引數包含字元（例如空格或索引標籤），是否應該加上引號？ 如果 `false`，偵錯工具命令就不會再自動加上引號。 預設為 `true`。|
 
 ## <a name="source_file_map_options"></a>來源檔案對應選項
 
-`sourceFileMap`搭配屬性使用:
+搭配 `sourceFileMap` 屬性使用：
 
 ||||
 |-|-|-|
-|`editorPath`|字串|要尋找之編輯器的原始程式碼位置。|
-|`useForBreakpoints`|boolean|設定中斷點時, 應該使用此來源對應。 如果`false`為, 則只會使用 filename 和行號來設定中斷點。 如果`true`為, 則只有在使用此來源對應時, 才會使用檔案的完整路徑和行號來設定中斷點。 否則, 只會在設定中斷點時使用檔案名和行號。 預設為 `true`。|
+|`editorPath`|string|要尋找之編輯器的原始程式碼位置。|
+|`useForBreakpoints`|boolean|設定中斷點時，應該使用此來源對應。 如果 `false`，則只會使用 filename 和行號來設定中斷點。 如果 `true`，只有在使用此來源對應時，才會使用檔案的完整路徑和行號來設定中斷點。 否則，只會在設定中斷點時使用檔案名和行號。 預設為 `true`。|

@@ -1,6 +1,6 @@
 ---
 title: y0、y1、yn
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - y1
 - yn
@@ -29,13 +29,15 @@ helpviewer_keywords:
 - y1 function
 - yn function
 ms.assetid: e14215f3-53d4-4ae8-816e-4c1ec2019316
-ms.openlocfilehash: 3a5aef282d6ec774b7d20135b759f5d98733cd69
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ade2978d9a052b481c8250933257cfa33493860f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957768"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301713"
 ---
 # <a name="y0-y1-yn"></a>y0、y1、yn
 
-這些 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [Bessel 函式：_j0、_j1、_jn、_y0、_y1、_yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)。
+Microsoft 所實行的 POSIX 函數名稱 `y0`、`y1`和 `yn` 都是[_y0、_y1 和 _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md)函式已被取代的別名。 根據預設，它們會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它們不會遵循執行特定名稱的標準 C 規則。 不過，仍然支援函數。
+
+我們建議您改用[_y0、_y1 和 _yn](bessel-functions-j0-j1-jn-y0-y1-yn.md) 。 或者，您可以繼續使用這些函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。

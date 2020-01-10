@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e68a7fc9814ba1ca07095e036e88fb5917220086
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987928"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318666"
 ---
 # <a name="proc"></a>PROC
 
-標記名為*label*的程式區塊的開始和結束。 您可以使用**CALL**指令或[INVOKE](../../assembler/masm/invoke.md)指示詞來呼叫區塊中的語句。
+標記名為*label*的程式區塊的開始和結束。 您可以使用**CALL**指令或[INVOKE](invoke.md)指示詞來呼叫區塊中的語句。
 
 ## <a name="syntax"></a>語法
 
-> *標籤* **PROC** ⟦*距離*⟧⟦*language-類型*⟧⟦*可見度*⟧ __⟦\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *參數*⟦ __：__ *tag*⟧ .。。⟧\
+> *標籤* **PROC** ⟦*距離*⟧ *⟦ language-類型*⟧⟦ **PUBLIC** | **私**用 | **EXPORT** ⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *parameter* ⟦ __：__ *tag*⟧ .。。⟧\
 > ⟦**框架**⟦ __：__ *ehandler-address*⟧⟧ \
 > *語句*\
 > *標籤* **ENDP**
@@ -30,9 +30,9 @@ ms.locfileid: "74987928"
 
 ⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧只適用于 ml64，並使 MASM 在中產生函數資料表專案。 pdata 中的 .xdata 和回溯資訊會處理回溯行為。
 
-使用**FRAME**屬性時，其後面必須接著[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。
+使用**FRAME**屬性時，其後面必須接著[。ENDPROLOG](dot-endprolog.md)指示詞。
 
-如需使用 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md) 。
+如需使用 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>範例
 
@@ -81,4 +81,5 @@ Dumping Unwind Information for file ex2.exe
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

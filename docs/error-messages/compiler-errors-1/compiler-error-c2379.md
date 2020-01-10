@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2379
 ms.assetid: 37dc3015-a4af-4341-bbf3-da6150df7e51
-ms.openlocfilehash: 1b3256efb6c0ff8236ba80a9ac681780f34fa8dd
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f096791a6120023e079b93452a4b35c669db2139
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345642"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302103"
 ---
 # <a name="compiler-error-c2379"></a>編譯器錯誤 C2379
 
-型式參數數目有不同的類型，當升級
+正式參數編號在升級時有不同的類型
 
-指定參數的型別不相容，透過預設的升級後，先前的宣告中的類型。 這是 ANSI C 中的錯誤 ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 和具有 Microsoft 擴充功能的警告 (**/Ze**)。
+指定參數的類型與先前宣告中類型的預設升級不相容。 這是 ANSI C （[/za](../../build/reference/za-ze-disable-language-extensions.md)）中的錯誤，以及 Microsoft extensions （ **/ze**）的警告。
 
-下列範例會產生 C2379:
+下列範例會產生 C2379：
 
-```
+```c
 // C2379.c
 // compile with: /Za
 void func();

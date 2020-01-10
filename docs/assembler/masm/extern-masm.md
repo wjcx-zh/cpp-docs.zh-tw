@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - EXTERN directive
 ms.assetid: 667d703d-3aaf-4139-a586-29bc5dab1aff
-ms.openlocfilehash: 38ea50e75f2a8e19a7a99860f691904053b6739a
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 681c4091a3c54a781bed4b01b235dfeb04f552c6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74987849"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318094"
 ---
-# <a name="extern-masm"></a>EXTERN (MASM)
+# <a name="extern"></a>EXTERN
 
 定義一或多*個名為 type 類型的外部*變數、標籤或*符號。*
 
@@ -25,8 +25,9 @@ ms.locfileid: "74987849"
 
 *Language 類型*引數只在32位 MASM 中有效。
 
-*類型*可以是[ABS](../../assembler/masm/operator-abs.md)，其會將*名稱*當做常數來匯入。 與[EXTRN](../../assembler/masm/extrn.md)相同。
+*類型*可以是[ABS](operator-abs.md)，其會將*名稱*當做常數來匯入。 與[EXTRN](extrn.md)相同。
 
 ## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: 適用於 x64 的 MASM (ml64.exe)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - ml64
 - ml64.exe
 - masm for x64
 ms.assetid: 89059103-f372-4968-80ea-0c7f90bb9c91
-ms.openlocfilehash: 68f5a14b092109a647e7a81ed6c3fef148a5571b
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5e324414a0d4d7e74bb28d54c1d858ef6fb9793c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397230"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312738"
 ---
 # <a name="masm-for-x64-ml64exe"></a>適用於 x64 的 MASM (ml64.exe)
 
@@ -19,7 +19,7 @@ Visual Studio 同時包含32位和64位裝載版本的 Microsoft 組合器（MAS
 
 若要使用 MASM 在命令列上建立 x64 目標的程式碼，您必須針對 x64 目標使用開發人員命令提示字元，以設定所需的路徑和其他環境變數。 如需如何啟動開發人員命令提示字元的詳細資訊，請參閱在[命令列上建立 C/C++程式碼](../../build/building-on-the-command-line.md)。
 
-如需 ml64 命令列選項的詳細資訊，請參閱[ML 和 Ml64 命令列參考](../../assembler/masm/ml-and-ml64-command-line-reference.md)。
+如需 ml64 命令列選項的詳細資訊，請參閱[ML 和 Ml64 命令列參考](ml-and-ml64-command-line-reference.md)。
 
 X64 或 ARM 目標不支援內嵌組譯工具或使用 ASM 關鍵字。 若要將使用內嵌組譯工具的 x86 程式碼移植到 x64 或 ARM，您可以C++將程式碼轉換成、使用編譯器內建函式或建立組合語言原始程式檔。 Microsoft C++編譯器支援內建函式，可讓您在盡可能接近跨平臺的情況下，使用特殊功能的指令，例如，許可權、位掃描/測試、連鎖等等。 如需可用內建函式的詳細資訊，請參閱[編譯器內建函式](../../intrinsics/compiler-intrinsics.md)。
 
@@ -43,21 +43,21 @@ Visual Studio 專案系統支援在您C++的專案中使用 MASM 建立的組合
 
 您可以在以 x64 為目標的組合語言原始程式碼中，使用下列 ml64 特有的指示詞：
 
-- [.ALLOCSTACK](../../assembler/masm/dot-allocstack.md)
+- [.ALLOCSTACK](dot-allocstack.md)
 
-- [.ENDPROLOG](../../assembler/masm/dot-endprolog.md)
+- [.ENDPROLOG](dot-endprolog.md)
 
-- [.PUSHFRAME](../../assembler/masm/dot-pushframe.md)
+- [.PUSHFRAME](dot-pushframe.md)
 
-- [.PUSHREG](../../assembler/masm/dot-pushreg.md)
+- [.PUSHREG](dot-pushreg.md)
 
-- [.SAVEREG](../../assembler/masm/dot-savereg.md)
+- [.SAVEREG](dot-savereg.md)
 
-- [.SAVEXMM128](../../assembler/masm/dot-savexmm128.md)
+- [.SAVEXMM128](dot-savexmm128.md)
 
-- [.SETFRAME](../../assembler/masm/dot-setframe.md)
+- [.SETFRAME](dot-setframe.md)
 
-此外， [PROC](../../assembler/masm/proc.md)指示詞已更新，可與 ml64 搭配使用。
+此外， [PROC](proc.md)指示詞已更新，可與 ml64 搭配使用。
 
 ## <a name="32-bit-address-mode-address-size-override"></a>32位位址模式（位址大小覆寫）
 
@@ -80,6 +80,6 @@ mov eax, DWORD PTR [rcx*2+r10d]
 mov eax, DWORD PTR [ecx*2+r10+0100h]
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)

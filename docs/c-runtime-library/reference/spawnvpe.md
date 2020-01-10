@@ -1,6 +1,6 @@
 ---
 title: spawnvpe
-ms.date: 11/04/2016
+ms.date: 12/16/2019
 api_name:
 - spawnvpe
 api_location:
@@ -23,16 +23,18 @@ f1_keywords:
 helpviewer_keywords:
 - spawnvpe function
 ms.assetid: be16bf98-5059-4c33-be00-7524142a017e
-ms.openlocfilehash: ca64afbaf07fab880ecaa7b629d253e9876a6f65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7166ddc2f3116ef5d2560486bd69c8525cfbdc42
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958067"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300621"
 ---
 # <a name="spawnvpe"></a>spawnvpe
 
-此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_spawnvpe](spawnvpe-wspawnvpe.md)。
+Microsoft 特有的函式名稱 `spawnvpe` 是[_spawnvpe](spawnvpe-wspawnvpe.md)函數的已被取代別名。 根據預設，它會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它不會遵循執行特定名稱的標準 C 規則。 不過，仍支援函數。
+
+我們建議您改用[_spawnvpe](spawnvpe-wspawnvpe.md) 。 或者，您可以繼續使用此函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。

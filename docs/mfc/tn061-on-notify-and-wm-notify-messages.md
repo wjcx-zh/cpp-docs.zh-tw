@@ -1,9 +1,6 @@
 ---
-title: TN061:ON_NOTIFY 和 WM_NOTIFY 訊息
+title: TN061：ON_NOTIFY 和 WM_NOTIFY 訊息
 ms.date: 06/28/2018
-f1_keywords:
-- ON_NOTIFY
-- WM_NOTIFY
 helpviewer_keywords:
 - ON_NOTIFY_EX message [MFC]
 - TN061
@@ -13,35 +10,35 @@ helpviewer_keywords:
 - notification messages
 - WM_NOTIFY message
 ms.assetid: 04a96dde-7049-41df-9954-ad7bb5587caf
-ms.openlocfilehash: 74eb39a855da3ff3e6da7f14a76bf0804919826d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa1efb628ee45be3dfaee320cf64c4b2cbb91f04
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399573"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302233"
 ---
-# <a name="tn061-onnotify-and-wmnotify-messages"></a>TN061:ON_NOTIFY 和 WM_NOTIFY 訊息
+# <a name="tn061-on_notify-and-wm_notify-messages"></a>TN061：ON_NOTIFY 和 WM_NOTIFY 訊息
 
 > [!NOTE]
 > 下列技術提示自其納入線上文件以來，未曾更新。 因此，有些程序和主題可能已過期或不正確。 如需最新資訊，建議您在線上文件索引中搜尋相關的主題。
 
-這個技術提示提供新的 WM_NOTIFY 訊息的背景資訊，並說明建議 （且最常見） 的方式來處理 MFC 應用程式中的 WM_NOTIFY 訊息。
+本技術提示提供新 WM_NOTIFY 訊息的背景資訊，並說明在 MFC 應用程式中處理 WM_NOTIFY 訊息的建議（和最常見）方式。
 
-**Windows 中的通知訊息 3.x**
+**Windows 3.x 中的通知訊息**
 
-在 Windows 3.x 中，將訊息傳送至父代，控制項通知的事件，例如滑鼠點按，其父代變更內容選取範圍，以及控制項背景繪製。 簡單的通知會傳送特殊的 WM_COMMAND 訊息，以通知程式碼 （例如 BN_CLICKED)，並控制封裝的識別碼*wParam*並在控制項的控制代碼*lParam*。 請注意，因為*wParam*並*lParam*已滿時，沒有任何方法，傳遞任何額外的資料，這些訊息可以是簡單的通知。 比方說，在 BN_CLICKED 通知中，沒有任何方法可將資訊傳送滑鼠游標的位置時所按的按鈕。
+在 Windows 3.x 中，控制項會通知其父系的事件，例如滑鼠點按、內容和選取專案中的變更，以及藉由將訊息傳送至父系來控制背景繪製。 簡單通知會以特殊的 WM_COMMAND 訊息的形式傳送，並將通知碼（例如 BN_CLICKED）和控制項識別碼封裝成*wParam* ，以及*lParam*中的控制項控制碼。 請注意，由於*wParam*和*lParam*已滿，因此無法傳遞任何額外的資料，這些訊息只能是簡單的通知。 比方說，在 BN_CLICKED 通知中，當按下按鈕時，無法傳送滑鼠游標位置的相關資訊。
 
-當控制項在 Windows 3.x 需要傳送通知訊息，其中包含額外的資料時，它們會使用各種不同的特殊用途的訊息，包括 WM_CTLCOLOR、 WM_VSCROLL、 時傳遞 WM_HSCROLL、 WM_DRAWITEM、 WM_MEASUREITEM、 WM_COMPAREITEM、 WM_DELETEITEM、 WM_CHARTOITEM、 WM_VKEYTOITEM，等等。 這些訊息可以反映至控制項傳送它們。 如需詳細資訊，請參閱[TN062:訊息反映的 Windows 控制項](../mfc/tn062-message-reflection-for-windows-controls.md)。
+當 Windows 3.x 中的控制項需要傳送包含額外資料的通知訊息時，會使用各種特殊用途的訊息，包括 WM_CTLCOLOR、WM_VSCROLL、WM_HSCROLL、WM_DRAWITEM、WM_MEASUREITEM、WM_COMPAREITEM、WM_DELETEITEM、WM_CHARTOITEM、WM_VKEYTOITEM 等等。 這些訊息可以反映回傳送給他們的控制項。 如需詳細資訊，請參閱[TN062： Windows 控制項的訊息反映](../mfc/tn062-message-reflection-for-windows-controls.md)。
 
-**在 Win32 中的通知訊息**
+**Win32 中的通知訊息**
 
-對於存在於 Windows 3.1 的控制項，Win32 API，請使用在 Windows 中的通知訊息所使用的大部分 3.x。 不過，Win32 也將提供一些精密而複雜的控制項所支援的 Windows 3.x。 通常，這些控制項需要傳送其通知訊息的其他資料。 而不是加入新**WM_** <strong>\*</strong>針對每個新的通知，需要其他資料，Win32 API 的設計人員選擇要新增一個訊息，可以傳遞任何的 WM_NOTIFY 訊息標準化的方式中的其他資料的數量。
+對於存在於 Windows 3.1 中的控制項，WIN32 API 會使用 Windows 3.x 中使用的大部分通知訊息。 不過，Win32 也會在 Windows 3.x 中加入許多複雜的複雜控制項。 這些控制項經常需要傳送額外的資料及其通知訊息。 WIN32 API 的設計人員選擇只新增一則訊息（WM_NOTIFY），而不是為每個需要額外資料的新通知加入新的**WM_** <strong>\*</strong>訊息，而是以標準化的方式來傳遞任何數量的額外資料。
 
-WM_NOTIFY 訊息包含傳送訊息之控制項的 ID *wParam*以及中的結構的指標*lParam*。 此結構是**NMHDR**結構或某些較大的結構，其**NMHDR**做為其第一個成員的結構。 請注意，既然**NMHDR**成員是第一次，此結構的指標可以當做指標**NMHDR**或較大的結構取決於您對它所做的轉換的指標。
+WM_NOTIFY 訊息包含在*wParam*中傳送訊息之控制項的識別碼，以及*lParam*中結構的指標。 這個結構可能是**NMHDR**結構或一些較大的結構，其具有**NMHDR**結構做為其第一個成員。 請注意，由於**NMHDR**成員是第一個，因此此結構的指標可以做為**NMHDR**的指標，或作為較大結構的指標（視您轉換的方式而定）。
 
-在大部分情況下，指標會指向較大的結構，您必須將它轉換時使用它。 在只有幾個通知中，例如常見的通知 (名稱開頭**NM_**) 和工具提示控制項的 TTN_SHOW 和 TTN_POP 通知即**NMHDR**實際使用的結構。
+在大部分的情況下，指標會指向較大的結構，而且您必須在使用它時將它轉換。 在只有幾個通知中，例如一般通知（其名稱開頭為**NM_** ）和工具提示控制項的 TTN_SHOW 和 TTN_POP 通知，都是實際使用的**NMHDR**結構。
 
-**NMHDR**結構或初始成員包含的控制代碼和傳送訊息和通知程式碼 （例如 TTN_SHOW) 之控制項的 ID。 格式**NMHDR**結構如下所示：
+**NMHDR**結構或初始成員包含傳送訊息之控制項的控制碼和識別碼，以及通知碼（例如 TTN_SHOW）。 **NMHDR**結構的格式如下所示：
 
 ```cpp
 typedef struct tagNMHDR {
@@ -51,9 +48,9 @@ typedef struct tagNMHDR {
 } NMHDR;
 ```
 
-對於 TTN_SHOW 訊息，**程式碼**成員會設定為 TTN_SHOW。
+若為 TTN_SHOW 訊息，程式**代碼**成員會設定為 TTN_SHOW。
 
-大部分的通知會將指標傳遞至較大的結構，其中包含**NMHDR**做為其第一個成員的結構。 比方說，請考慮在清單檢視控制項 LVN_KEYDOWN 通知訊息時，清單檢視控制項中按下按鍵會傳送所使用的結構。 指標會指向**LV_KEYDOWN**結構，其定義如下所示：
+大部分的通知會將指標傳遞至較大的結構，其中包含**NMHDR**結構做為其第一個成員。 比方說，請考慮清單視圖控制項的 LVN_KEYDOWN 通知訊息所使用的結構，當按下清單視圖控制項中的按鍵時，就會傳送此訊息。 指標會指向**LV_KEYDOWN**結構，如下所示：
 
 ```cpp
 typedef struct tagLV_KEYDOWN {
@@ -63,30 +60,30 @@ typedef struct tagLV_KEYDOWN {
 } LV_KEYDOWN;
 ```
 
-請注意，既然**NMHDR**成員是第一次在此結構中，您要傳遞的通知訊息中的指標可以轉換成指標**NMHDR**的指標或**LV_KEYDOWN**.
+請注意，由於**NMHDR**成員是在此結構中的第一個，因此您在通知訊息中傳遞的指標可以轉換成**NMHDR**的指標或**LV_KEYDOWN**的指標。
 
-**所有新的 Windows 控制項通用的通知**
+**所有新 Windows 控制項的通用通知**
 
-有些通知通用於所有新的 Windows 控制項。 這些通知傳遞的指標**NMHDR**結構。
+有些通知通用於所有的新 Windows 控制項。 這些通知會將指標傳遞至**NMHDR**結構。
 
-|通知程式碼|因為傳送給|
+|通知碼|傳送原因|
 |-----------------------|------------------|
-|NM_CLICK|使用者已按下滑鼠左的按鈕控制項中|
-|NM_DBLCLK|控制項中的使用者按兩下的滑鼠左鍵|
-|NM_RCLICK|使用者已按下滑鼠右按鈕控制項中|
-|NM_RDBLCLK|控制項中的使用者按兩下的滑鼠右鍵|
-|NM_RETURN|使用者控制項擁有輸入焦點且按下 ENTER 鍵|
-|NM_SETFOCUS|控制項具有輸入的焦點|
-|NM_KILLFOCUS|控制項已遺失輸入的焦點|
-|NM_OUTOFMEMORY|控制項無法完成作業，因為沒有足夠的記憶體可供使用|
+|NM_CLICK|使用者已在控制項中按下滑鼠左鍵|
+|NM_DBLCLK|使用者在控制項中按兩下滑鼠左鍵|
+|NM_RCLICK|使用者在控制項中按一下滑鼠右鍵|
+|NM_RDBLCLK|使用者按兩下控制項中的滑鼠右鍵|
+|NM_RETURN|當控制項具有輸入焦點時，使用者已按下 ENTER 鍵|
+|NM_SETFOCUS|控制項已獲得輸入焦點|
+|NM_KILLFOCUS|控制項已失去輸入焦點|
+|NM_OUTOFMEMORY|控制項無法完成作業，因為沒有足夠的記憶體可用|
 
-##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a> ON_NOTIFY:處理 MFC 應用程式中的 WM_NOTIFY 訊息
+##  <a name="_mfcnotes_on_notify.3a_.handling_wm_notify_messages_in_mfc_applications"></a>ON_NOTIFY：在 MFC 應用程式中處理 WM_NOTIFY 訊息
 
-此函式`CWnd::OnNotify`處理通知訊息。 其預設實作會檢查通知處理常式呼叫的訊息對應。 一般情況下，您不會覆寫`OnNotify`。 相反地，您會提供處理常式函式，並將該處理常式的訊息對應項目新增至訊息對應的主控視窗的類別。
+函數 `CWnd::OnNotify` 處理通知訊息。 其預設的實作為檢查訊息對應，以取得要呼叫的通知處理常式。 一般來說，您不會覆寫 `OnNotify`。 相反地，您會提供處理函式，並將該處理常式的訊息對應專案新增至您擁有者視窗類別的訊息對應。
 
-ClassWizard，透過 ClassWizard 屬性工作表中，可以建立 ON_NOTIFY 訊息對應項目，並提供您的基本架構的處理常式函式。 如需有關使用 ClassWizard 更加容易的詳細資訊，請參閱[將訊息對應至函式](../mfc/reference/mapping-messages-to-functions.md)。
+透過 ClassWizard 屬性工作表 ClassWizard，可以建立 ON_NOTIFY 訊息對應專案，並為您提供基本架構處理常式函式。 如需使用 ClassWizard 來簡化此作業的詳細資訊，請參閱將[訊息對應至](../mfc/reference/mapping-messages-to-functions.md)函式。
 
-ON_NOTIFY 訊息對應巨集的語法如下：
+ON_NOTIFY 訊息對應宏具有下列語法：
 
 ```cpp
 ON_NOTIFY(wNotifyCode, id, memberFxn)
@@ -95,15 +92,15 @@ ON_NOTIFY(wNotifyCode, id, memberFxn)
 其中的參數：
 
 *wNotifyCode*<br/>
-通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
+要處理之通知訊息的程式碼，例如 LVN_KEYDOWN。
 
 *id*<br/>
-傳送通知之控制項的子系識別碼。
+傳送通知之控制項的子識別碼。
 
 *memberFxn*<br/>
-此通知會傳送時要呼叫此成員函式。
+傳送此通知時所要呼叫的成員函式。
 
-您的成員函式必須具有下列原型宣告：
+您的成員函式必須以下列原型宣告：
 
 ```cpp
 afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
@@ -112,20 +109,20 @@ afx_msg void memberFxn(NMHDR* pNotifyStruct, LRESULT* result);
 其中的參數：
 
 *pNotifyStruct*<br/>
-上一節中所述的通知結構指標。
+通知結構的指標，如上一節中所述。
 
 *result*<br/>
-指標的結果碼，您會將傳回之前。
+要在傳回之前設定之結果碼的指標。
 
 ## <a name="example"></a>範例
 
-若要指定您想要此成員函式`OnKeydownList1`來處理從 LVN_KEYDOWN 訊息`CListCtrl`其識別碼是`IDC_LIST1`，您會將下列新增至您的訊息對應使用 ClassWizard:
+若要指定成員函式 `OnKeydownList1` 從識別碼為 `IDC_LIST1`的 `CListCtrl` 處理 LVN_KEYDOWN 訊息，您可以使用 ClassWizard 將下列內容新增至您的訊息對應：
 
 ```cpp
 ON_NOTIFY(LVN_KEYDOWN, IDC_LIST1, OnKeydownList1)
 ```
 
-在上述範例中，ClassWizard 所提供的函式是：
+在上述範例中，ClassWizard 所提供的函式為：
 
 ```cpp
 void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
@@ -139,17 +136,17 @@ void CMessageReflectionDlg::OnKeydownList1(NMHDR* pNMHDR, LRESULT* pResult)
 }
 ```
 
-請注意 ClassWizard 會自動提供適當類型的指標。 您可以透過存取通知的結構*pNMHDR*或是*pLVKeyDow*。
+請注意，ClassWizard 會自動提供適當類型的指標。 您可以透過*pNMHDR*或*pLVKeyDow*存取通知結構。
 
-##  <a name="_mfcnotes_on_notify_range"></a> ON_NOTIFY_RANGE
+##  <a name="_mfcnotes_on_notify_range"></a>ON_NOTIFY_RANGE
 
-如果您需要處理相同的 WM_NOTIFY 訊息的一組控制項，您可以使用 ON_NOTIFY_RANGE，而不是 ON_NOTIFY。 比方說，您可能會有一組您要執行的特定通知訊息的相同動作的按鈕。
+如果您需要為一組控制項處理相同的 WM_NOTIFY 訊息，您可以使用 ON_NOTIFY_RANGE 而不是 ON_NOTIFY。 例如，您可能會有一組按鈕，讓您針對特定的通知訊息執行相同的動作。
 
-當您使用 ON_NOTIFY_RANGE 時，您會指定要為其指定開始和結束範圍的子系識別碼來處理通知訊息的子系識別碼的連續範圍。
+當您使用 ON_NOTIFY_RANGE 時，您可以指定範圍的開始和結束子識別碼，藉以指定要處理通知訊息的連續子識別碼範圍。
 
-ClassWizard 不會處理 ON_NOTIFY_RANGE;若要使用它，您需要自行編輯您的訊息對應。
+ClassWizard 不會處理 ON_NOTIFY_RANGE;若要使用它，您必須自行編輯訊息對應。
 
-訊息對應項目和 ON_NOTIFY_RANGE 函式原型如下所示：
+ON_NOTIFY_RANGE 的訊息對應專案和函數原型如下所示：
 
 ```cpp
 ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
@@ -158,18 +155,18 @@ ON_NOTIFY_RANGE(wNotifyCode, id, idLast, memberFxn)
 其中的參數：
 
 *wNotifyCode*<br/>
-通知訊息以進行處理，例如 LVN_KEYDOWN 程式碼。
+要處理之通知訊息的程式碼，例如 LVN_KEYDOWN。
 
 *id*<br/>
-連續範圍的識別項中的第一個識別項。
+連續識別碼範圍中的第一個識別碼。
 
 *idLast*<br/>
-在連續的識別項的範圍中最後一個識別項。
+連續識別碼範圍中的最後一個識別碼。
 
 *memberFxn*<br/>
-此通知會傳送時要呼叫此成員函式。
+傳送此通知時所要呼叫的成員函式。
 
-您的成員函式必須具有下列原型宣告：
+您的成員函式必須以下列原型宣告：
 
 ```cpp
 afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
@@ -178,38 +175,38 @@ afx_msg void memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 其中的參數：
 
 *id*<br/>
-傳送通知之控制項的子系識別碼。
+傳送通知之控制項的子識別碼。
 
 *pNotifyStruct*<br/>
-若要通知的結構，如上面所述的指標。
+通知結構的指標，如上所述。
 
 *result*<br/>
-指標的結果碼，您會將傳回之前。
+要在傳回之前設定之結果碼的指標。
 
-##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a> ON_NOTIFY_EX, ON_NOTIFY_EX_RANGE
+##  <a name="_mfcnotes_tn061_on_notify_ex.2c_.on_notify_ex_range"></a>ON_NOTIFY_EX，ON_NOTIFY_EX_RANGE
 
-如果您想在通知中路由傳送至處理訊息的多個物件，則您可以使用 ON_NOTIFY_EX （或 ON_NOTIFY_EX_RANGE），而不是 ON_NOTIFY （或 ON_NOTIFY_RANGE）。 唯一的差別**EX**版本與一般版本是針對呼叫成員函式**EX**版本會傳回**BOOL** ，指出是否訊息處理應該繼續執行。 傳回**FALSE**從此函式可讓您處理在多個物件相同的訊息。
+如果您想要通知路由中有多個物件來處理訊息，您可以使用 ON_NOTIFY_EX （或 ON_NOTIFY_EX_RANGE），而不是 ON_NOTIFY （或 ON_NOTIFY_RANGE）。 **Ex**版本和一般版本的唯一差異在於，針對**ex**版本呼叫的成員函式會傳回**布林**值，指出是否應該繼續處理訊息。 從這個函式傳回**FALSE** ，可讓您在一個以上的物件中處理相同的訊息。
 
-ON_NOTIFY_EX 或 ON_NOTIFY_EX_RANGE; 將不會處理 ClassWizard如果您想要使用其中之一時，您需要自行編輯訊息對應。
+ClassWizard 不會處理 ON_NOTIFY_EX 或 ON_NOTIFY_EX_RANGE;如果您想要使用其中一種，您必須自行編輯訊息對應。
 
-訊息對應項目和 ON_NOTIFY_EX 和 ON_NOTIFY_EX_RANGE 函式原型如下所示。 參數的意義都與非相同**EX**版本。
+ON_NOTIFY_EX 和 ON_NOTIFY_EX_RANGE 的訊息對應專案和函數原型如下所示。 參數的意義與非**EX**版本相同。
 
 ```cpp
 ON_NOTIFY_EX(nCode, id, memberFxn)
 ON_NOTIFY_EX_RANGE(wNotifyCode, id, idLast, memberFxn)
 ```
 
-這兩個以上的原型是一樣的：
+上述兩種情況的原型都相同：
 
 ```cpp
 afx_msg BOOL memberFxn(UINT id, NMHDR* pNotifyStruct, LRESULT* result);
 ```
 
-在這兩種情況下，*識別碼*保留傳送通知之控制項的子系識別碼。
+在這兩種情況下，*識別碼*會保存傳送通知之控制項的子識別碼。
 
-您的函式必須傳回**真**如果已完全處理通知訊息或**FALSE**如果中的命令路由的其他物件應該有機會處理訊息。
+如果通知訊息已完整處理，您的函式必須傳回**TRUE** ，如果命令路由中的其他物件應該有處理訊息的機會，則傳回**FALSE** 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依編號顯示的技術提示](../mfc/technical-notes-by-number.md)<br/>
 [依分類區分的技術提示](../mfc/technical-notes-by-category.md)

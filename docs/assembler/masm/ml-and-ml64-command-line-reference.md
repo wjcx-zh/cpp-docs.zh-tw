@@ -1,6 +1,6 @@
 ---
 title: ML 和 ML64 命令列參考
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,18 +54,18 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 470cad1be6fe314fde89ee144a8935664ead5953
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397201"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317158"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令列參考
 
 組合並連結一或多個元件語言原始程式檔。 命令列選項會區分大小寫。
 
-如需 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+如需 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -80,7 +80,7 @@ ms.locfileid: "74397201"
 
 |選項|動作|
 |------------|------------|
-|**/AT**|啟用小型記憶體模型支援。 針對違反 .com 格式檔案需求的程式碼結構啟用錯誤訊息。 請注意，這不等於[。模型](../../assembler/masm/dot-model.md)**小型**指示詞。<br /><br /> 無法在 ml64 中使用。|
+|**/AT**|啟用小型記憶體模型支援。 針對違反 .com 格式檔案需求的程式碼結構啟用錯誤訊息。 請注意，這不等於[。模型](dot-model.md)**小型**指示詞。<br /><br /> 無法在 ml64 中使用。|
 |**/Bl** *filename*|選取替代連結器。|
 |**/c**|僅限組合。 未連結。|
 |**/coff**|產生物件模組的通用物件檔案格式（COFF）類型。 通常是 Win32 元件語言開發所需的。<br /><br /> 無法在 ml64 中使用。|
@@ -107,13 +107,13 @@ ms.locfileid: "74397201"
 |**/nologo**|隱藏成功元件的訊息。|
 |**/omf**|產生物件模組檔案格式（OMF）類型的物件模組。  **/omf**意指 **/c**;ML 不支援連結 OMF 物件。<br /><br /> 無法在 ml64 中使用。|
 |**/Sa**|開啟所有可用資訊的清單。|
-|**/safeseh**|將物件標記為不包含任何例外狀況處理常式，或包含所有以宣告的例外狀況處理常式[。SAFESEH](../../assembler/masm/dot-safeseh.md)。<br /><br /> 無法在 ml64 中使用。|
+|**/safeseh**|將物件標記為不包含任何例外狀況處理常式，或包含所有以宣告的例外狀況處理常式[。SAFESEH](dot-safeseh.md)。<br /><br /> 無法在 ml64 中使用。|
 |**/Sf**|將第一個傳遞清單新增至列出檔案。|
-|**/Sl** *寬度*|設定以每行字元數為單位的來源清單行寬。 範圍是60到255或0。 預設值為0。 與[頁面](../../assembler/masm/page.md)寬度相同。|
+|**/Sl** *寬度*|設定以每行字元數為單位的來源清單行寬。 範圍是60到255或0。 預設值為 0。 與[頁面](page.md)寬度相同。|
 |**/Sn**|產生清單時關閉符號表。|
-|**/Sp** *長度*|以每頁的行數設定來源清單的分頁長度。 範圍為10到255或0。 預設值為0。 與[頁面](../../assembler/masm/page.md)長度相同。|
-|**/Ss** *文字*|指定來源清單的文字。 與子[標題](../../assembler/masm/subtitle.md)文字相同。|
-|**/St** *文字*|指定來源清單的標題。 與[標題](../../assembler/masm/title.md)文字相同。|
+|**/Sp** *長度*|以每頁的行數設定來源清單的分頁長度。 範圍為10到255或0。 預設值為 0。 與[頁面](page.md)長度相同。|
+|**/Ss** *文字*|指定來源清單的文字。 與子[標題](subtitle.md)文字相同。|
+|**/St** *文字*|指定來源清單的標題。 與[標題](title.md)文字相同。|
 |**/Sx**|開啟清單中的 false 條件。|
 |**/Ta** *filename*|組合的來源檔案，其名稱結尾不是 .asm 副檔名。|
 |**/w**|與 **/W0/WX**相同。|
@@ -129,7 +129,7 @@ ms.locfileid: "74397201"
 |**/?**|顯示 ML 命令列語法的摘要。|
 
 *檔案名*\
-檔案的名稱。
+檔案的檔名。
 
 *linkoptions*\
 連結選項。  如需詳細資訊，請參閱[連結器選項](../../build/reference/linker-options.md)。
@@ -148,7 +148,7 @@ ML 和 ML64 的某些命令列選項是位置相關性。 例如，因為 ML 和
 |ML|指定預設的命令列選項。|
 |.TMP|指定暫存檔案的路徑。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)\
-[Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[ML 錯誤訊息](ml-error-messages.md)\
+[Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)

@@ -1,6 +1,6 @@
 ---
 title: IFIDN、IFIDNI
-ms.date: 05/23/2019
+ms.date: 12/17/2019
 f1_keywords:
 - IFIDN
 - IFIDNI
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IFIDN directive
 - IFIDNI directive
 ms.assetid: 957893b1-1a30-4ffd-96f2-6663604a5058
-ms.openlocfilehash: ed2f52a803128801760e38ff0111f90f5d582006
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 086198b377defbaa7ff336fa5a565a2b44af25e2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397383"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317223"
 ---
 # <a name="ifidn-ifidni"></a>IFIDN、IFIDNI
 
@@ -26,8 +26,9 @@ ms.locfileid: "74397383"
 
 ## <a name="remarks"></a>備註
 
-如果指定**IFIDNI** ，則比較不區分大小寫。 如需完整語法[，請參閱](../../assembler/masm/if-masm.md)。
+如果指定**IFIDNI** ，則比較不區分大小寫。 如需完整語法[，請參閱](if-masm.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

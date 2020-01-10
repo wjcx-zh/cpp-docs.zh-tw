@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3007
 ms.assetid: e415ef42-bdc9-4f32-8198-5e25b289a089
-ms.openlocfilehash: 551fb458ee02e29ae54aeb3382b2016da731808a
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 9b80cc556887bf04efa3d98a31ccfd7ed1a2e4d7
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345583"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302272"
 ---
 # <a name="compiler-error-c3007"></a>編譯器錯誤 C3007
 
@@ -21,7 +21,7 @@ OpenMP 指示詞具有引數，但指示詞不接受引數。
 
 下列範例會產生 C3007：
 
-```
+```c
 // C3007.c
 // compile with: /openmp
 int main()

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 650c69be17c9271c343360edbb90f093841a1047
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ec08be4941f81abed55420884b34dc817caf3f13
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398249"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317730"
 ---
 # <a name="fpo-32-bit-masm"></a>.FPO （32位 MASM）
 
@@ -41,6 +41,7 @@ DWORD 中的參數大小，不帶正負號的16位值。
 *cbFrame*\
 表示框架類型。  如需詳細資訊，請參閱[FPO_DATA](/windows/win32/api/winnt/ns-winnt-fpo_data) 。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,17 +1,17 @@
 ---
 title: '@Version'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Version'
 helpviewer_keywords:
 - '@Version symbol'
 ms.assetid: d7005811-de5c-4f8f-96e9-0e50d7ebca90
-ms.openlocfilehash: f98ce829aaf423e1d515f32a0fa9800c304bb4ad
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: dcb2b2fee7688f08a94dcf70e47f0b239c4c2d68
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398883"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315247"
 ---
 # <a name="version"></a>\@版本
 
@@ -19,8 +19,9 @@ ms.locfileid: "74398883"
 
 ## <a name="syntax"></a>語法
 
-> **\@版本**
+> **\@Version**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](symbols-reference.md)
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

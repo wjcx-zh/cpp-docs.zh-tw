@@ -8,12 +8,12 @@ helpviewer_keywords:
 - .ERRIDN directive
 - .ERRIDNI directive
 ms.assetid: 89507db3-7d40-4a5e-a378-24d30feda9d1
-ms.openlocfilehash: a83015e8cd1354732bd8427bcb865ac241a6caed
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 036431d3b40fae8a7f9cbd0502dd46ba1fb4dcbe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398348"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313466"
 ---
 # <a name="perioderridn-perioderridni"></a>&period;.ERRIDN，&period;ERRIDNI
 
@@ -28,6 +28,7 @@ ms.locfileid: "74398348"
 
 如果指定 **&period;ERRIDNI** ，則比較不區分大小寫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

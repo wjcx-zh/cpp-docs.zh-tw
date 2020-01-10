@@ -33,16 +33,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
-ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 415dc9bd89346d9b5bddb2cdc52e10276646aa1f
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224203"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75302116"
 ---
-# <a name="concurrentvector-class"></a>concurrent_vector 類別
+# <a name="concurrent_vector-class"></a>concurrent_vector 類別
 
-`concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+`concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。 在這裡，並行安全表示指標或反覆運算器一律有效。 不保證專案初始化或特定的遍歷順序。
 
 ## <a name="syntax"></a>語法
 
@@ -56,79 +56,79 @@ private details::_Concurrent_vector_base_v4;
 #### <a name="parameters"></a>參數
 
 *T*<br/>
-要儲存在向量中之項目的資料型別。
+要儲存在向量中之元素的資料類型。
 
 *_Ax*<br/>
-代表預存配置器物件，封裝有關配置和解除配置之記憶體的並行向量的詳細資訊的型別。 這個引數是選擇性的，而且預設值是 `allocator<T>`。
+代表預存配置器物件的類型，該物件會封裝並行向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<T>`。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|`allocator_type`|代表並行向量的配置器類別的類型。|
-|`const_iterator`|一種類型，提供隨機存取迭代器可讀取`const`並行向量中的項目。|
-|`const_pointer`|類型，提供一個指向`const`並行向量中的項目。|
-|`const_reference`|提供的參考型別`const`項目儲存在並行向量中供讀取和執行`const`作業。|
-|`const_reverse_iterator`|一種類型，提供隨機存取迭代器可以讀取任何`const`並行向量的元素。|
-|`difference_type`|提供並行向量中的兩個項目之間的帶正負號的距離的類型。|
-|`iterator`|類型，提供可以讀取並行向量的任何元素的隨機存取迭代器。 修改使用迭代器的項目不是並行安全。|
-|`pointer`|類型，提供並行向量中項目的指標。|
-|`reference`|類型，提供儲存在並行向量中項目的參考。|
-|`reverse_iterator`|類型，提供可以讀取反轉的並行向量的任何元素的隨機存取迭代器。 修改使用迭代器的項目不是並行安全。|
-|`size_type`|計算並行向量中的項目數的類型。|
-|`value_type`|代表並行向量中儲存的資料類型的類型。|
+|`allocator_type`|類型，表示並行向量的配置器類別。|
+|`const_iterator`|一種類型，提供可讀取並行向量中之 `const` 元素的隨機存取反覆運算器。|
+|`const_pointer`|一種類型，提供並行向量中 `const` 元素的指標。|
+|`const_reference`|一種類型，提供儲存在並行向量中以供讀取和執行 `const` 作業之 `const` 專案的參考。|
+|`const_reverse_iterator`|一種類型，提供可讀取並行向量中任何 `const` 元素的隨機存取反覆運算器。|
+|`difference_type`|一種類型，提供並行向量中兩個元素之間的帶正負號距離。|
+|`iterator`|一種類型，提供可讀取並行向量中任何元素的隨機存取反覆運算器。 使用 iterator 來修改元素並不是並行安全的。|
+|`pointer`|一種類型，提供並行向量中專案的指標。|
+|`reference`|一種類型，提供儲存在並行向量中之元素的參考。|
+|`reverse_iterator`|一種類型，提供可讀取反轉並行向量中任何元素的隨機存取反覆運算器。 使用 iterator 來修改元素並不是並行安全的。|
+|`size_type`|一種類型，可計算並行向量中的元素數目。|
+|`value_type`|類型，表示儲存在並行向量中的資料類型。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[concurrent_vector](#ctor)|多載。 建構並行向量。|
-|[~ concurrent_vector 解構函式](#dtor)|清除所有項目，並終結此並行向量。|
+|[concurrent_vector](#ctor)|多載。 構造並行向量。|
+|[~ concurrent_vector 的析構函式](#dtor)|清除所有元素並終結這個並行向量。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[assign](#assign)|多載。 清除並行向量的元素，並可能是指派給它`_N`份`_Item`，指定迭代器範圍的值或 [ `_Begin`， `_End`)。 這個方法不是並行安全。|
-|[at](#at)|多載。 提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。|
-|[back](#back)|多載。 傳回的參考或`const`參考到最後一個並行向量中的項目。 如果並行向量是空的則傳回的值會是未定義。 這個方法是並行安全的。|
-|[begin](#begin)|多載。 傳回迭代器的型別`iterator`或`const_iterator`並行向量的開頭。 這個方法是並行安全的。|
-|[capacity](#capacity)|傳回的並行向量可以成長而不必配置更多記憶體的大小上限。 這個方法是並行安全的。|
-|[cbegin](#cbegin)|傳回迭代器的型別`const_iterator`並行向量的開頭。 這個方法是並行安全的。|
-|[cend](#cend)|傳回迭代器的型別`const_iterator`並行向量的結尾。 這個方法是並行安全的。|
-|[clear](#clear)|清除並行向量中的所有項目。 這個方法不是並行安全。|
-|[crbegin](#crbegin)|傳回迭代器的型別`const_reverse_iterator`並行向量的開頭。 這個方法是並行安全的。|
-|[crend](#crend)|傳回迭代器的型別`const_reverse_iterator`並行向量的結尾。 這個方法是並行安全的。|
-|[empty](#empty)|測試如果並行向量是空的時呼叫這個方法。 這個方法是並行安全的。|
-|[end](#end)|多載。 傳回迭代器的型別`iterator`或`const_iterator`並行向量的結尾。 這個方法是並行安全的。|
-|[front](#front)|多載。 傳回的參考或`const`並行向量中第一個元素的參考。 如果並行向量是空的則傳回的值會是未定義。 這個方法是並行安全的。|
-|[get_allocator](#get_allocator)|傳回一份用來建構並行向量的配置器。 這個方法是並行安全的。|
-|[grow_by](#grow_by)|多載。 增加這個並行向量`_Delta`項目。 這個方法是並行安全的。|
-|[grow_to_at_least](#grow_to_at_least)|這個並行向量會成長到其中至少有`_N`項目。 這個方法是並行安全的。|
-|[max_size](#max_size)|傳回並行向量可以保存項目的數目上限。 這個方法是並行安全的。|
-|[push_back](#push_back)|多載。 將指定的項目附加至並行向量的結尾。 這個方法是並行安全的。|
-|[rbegin](#rbegin)|多載。 傳回迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的開頭。 這個方法是並行安全的。|
-|[rend](#rend)|多載。 傳回迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的結尾。 這個方法是並行安全的。|
-|[reserve](#reserve)|會配置足夠的空間可以成長到大小的並行向量`_N`而不必配置更多記憶體的更新版本。 這個方法不是並行安全。|
-|[resize](#resize)|多載。 並行向量的大小變更為所要求的大小、 刪除或加入必要的項目。 這個方法不是並行安全。|
-|[shrink_to_fit](#shrink_to_fit)|會壓縮要減少片段，並讓記憶體使用量最佳化的並行向量的內部表示法。 這個方法不是並行安全。|
-|[size](#size)|並行向量中傳回的項目數。 這個方法是並行安全的。|
-|[swap](#swap)|交換兩個的並行向量的內容。 這個方法不是並行安全。|
+|[assign](#assign)|多載。 清除並行向量的元素，並將其指派給 `_N` `_Item`的複本，或反覆運算器範圍 [`_Begin`，`_End`）所指定的值。 這個方法不是並行安全的。|
+|[at](#at)|多載。 提供在並行向量中指定索引處之專案的存取權。 這個方法是讀取作業的並行安全，而且在成長向量時，只要您確定 `_Index` 的值小於並行向量的大小即可。|
+|[back](#back)|多載。 傳回對並行向量中最後一個元素的參考或 `const` 參考。 如果並行向量是空的，則傳回值為未定義。 這個方法是並行安全的。|
+|[begin](#begin)|多載。 傳回類型 `iterator` 或 `const_iterator` 到並行向量開頭的反覆運算器。 這個方法是並行安全的。|
+|[capacity](#capacity)|傳回並行向量可成長的最大大小，而不需要配置更多記憶體。 這個方法是並行安全的。|
+|[cbegin](#cbegin)|傳回 `const_iterator` 至並行向量開頭之類型的反覆運算器。 這個方法是並行安全的。|
+|[cend](#cend)|傳回類型的反覆運算器，`const_iterator` 至並行向量的結尾。 這個方法是並行安全的。|
+|[clear](#clear)|清除並行向量中的所有元素。 這個方法不是並行安全的。|
+|[crbegin](#crbegin)|傳回 `const_reverse_iterator` 至並行向量開頭之類型的反覆運算器。 這個方法是並行安全的。|
+|[crend](#crend)|傳回類型的反覆運算器，`const_reverse_iterator` 至並行向量的結尾。 這個方法是並行安全的。|
+|[empty](#empty)|測試呼叫這個方法時，並行向量是否為空白。 這個方法是並行安全的。|
+|[end](#end)|多載。 傳回 `iterator` 或 `const_iterator` 到並行向量結尾的反覆運算器類型。 這個方法是並行安全的。|
+|[front](#front)|多載。 傳回對並行向量中第一個元素的參考或 `const` 參考。 如果並行向量是空的，則傳回值為未定義。 這個方法是並行安全的。|
+|[get_allocator](#get_allocator)|傳回用來建立並行向量的配置器複本。 這個方法是並行安全的。|
+|[grow_by](#grow_by)|多載。 藉由 `_Delta` 元素來成長此並行向量。 這個方法是並行安全的。|
+|[grow_to_at_least](#grow_to_at_least)|會成長此並行向量，直到至少有 `_N` 元素為止。 這個方法是並行安全的。|
+|[max_size](#max_size)|傳回並行向量可以保存的元素數目上限。 這個方法是並行安全的。|
+|[push_back](#push_back)|多載。 將指定的專案附加至並行向量的結尾。 這個方法是並行安全的。|
+|[rbegin](#rbegin)|多載。 傳回類型 `reverse_iterator` 或 `const_reverse_iterator` 到並行向量開頭的反覆運算器。 這個方法是並行安全的。|
+|[rend](#rend)|多載。 傳回 `reverse_iterator` 或 `const_reverse_iterator` 到並行向量結尾的反覆運算器類型。 這個方法是並行安全的。|
+|[reserve](#reserve)|配置足夠的空間來將並行向量成長到 `_N` 大小，而不需要在稍後配置更多記憶體。 這個方法不是並行安全的。|
+|[resize](#resize)|多載。 將並行向量的大小變更為所要求的大小，並視需要刪除或加入元素。 這個方法不是並行安全的。|
+|[shrink_to_fit](#shrink_to_fit)|壓縮並行向量的內部標記法，以減少分散程度並優化記憶體使用量。 這個方法不是並行安全的。|
+|[size](#size)|傳回並行向量中的元素數目。 這個方法是並行安全的。|
+|[swap](#swap)|交換兩個並行向量的內容。 這個方法不是並行安全的。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[operator\[\]](#operator_at)|多載。 提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。|
-|[operator=](#operator_eq)|多載。 將另一個內容指派`concurrent_vector`如下的物件。 這個方法不是並行安全。|
+|[operator\[\]](#operator_at)|多載。 提供在並行向量中指定索引處之專案的存取權。 這個方法是讀取作業的並行安全，而且在成長向量時，只要您確定 `_Index` 的值小於並行向量的大小即可。|
+|[operator=](#operator_eq)|多載。 將另一個 `concurrent_vector` 物件的內容指派給這一個。 這個方法不是並行安全的。|
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊`concurrent_vector`類別，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如需 `concurrent_vector` 類別的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `_Concurrent_vector_base_v4`
 
@@ -138,13 +138,13 @@ private details::_Concurrent_vector_base_v4;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concurrent_vector.h
+**標頭：** concurrent_vector。h
 
 **命名空間：** concurrency
 
-##  <a name="assign"></a> 指派
+##  <a name="assign"></a>值賦
 
-清除並行向量的元素，並可能是指派給它`_N`份`_Item`，指定迭代器範圍的值或 [ `_Begin`， `_End`)。 這個方法不是並行安全。
+清除並行向量的元素，並將其指派給 `_N` `_Item`的複本，或反覆運算器範圍 [`_Begin`，`_End`）所指定的值。 這個方法不是並行安全的。
 
 ```
 void assign(
@@ -159,27 +159,27 @@ void assign(_InputIterator _Begin,
 ### <a name="parameters"></a>參數
 
 *_InputIterator*<br/>
-指定的迭代器類型。
+指定之反覆運算器的類型。
 
 *_N*<br/>
-若要複製至並行向量的項目數目。
+要複製到並行向量中的專案數。
 
 *_Item*<br/>
-用來填滿並行向量的值參考。
+參考用來填滿並行向量的值。
 
 *_Begin*<br/>
-來源範圍的第一個項目的迭代器。
+來源範圍中第一個元素的反覆運算器。
 
 *_End*<br/>
-迭代器，其中一個來源範圍的最後一個元素。
+在來源範圍的最後一個元素之後的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-`assign` 不是並行安全。 您必須確定，沒有其他執行緒會叫用方法上的並行向量時呼叫這個方法。
+`assign` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行向量上叫用方法。
 
-##  <a name="at"></a> 在
+##  <a name="at"></a>在
 
-提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。
+提供在並行向量中指定索引處之專案的存取權。 這個方法是讀取作業的並行安全，而且在成長向量時，只要您確定 `_Index` 的值小於並行向量的大小即可。
 
 ```
 reference at(size_type _Index);
@@ -190,21 +190,21 @@ const_reference at(size_type _Index) const;
 ### <a name="parameters"></a>參數
 
 *_Index*<br/>
-要擷取之項目的索引。
+要抓取之元素的索引。
 
 ### <a name="return-value"></a>傳回值
 
-指定索引處項目的參考。
+指定索引處之專案的參考。
 
 ### <a name="remarks"></a>備註
 
-函式的版本`at`會傳回非`const`參考不能用來從不同執行緒同時寫入項目。 不同的同步處理物件應該用來同步處理並行讀取和寫入作業的相同資料的項目中。
+傳回非 `const` 參考的函式 `at` 版本不能用來從不同執行緒同時寫入專案。 您應該使用不同的同步處理物件，將並行讀取和寫入作業同步至相同的資料元素。
 
-方法會擲回`out_of_range`如果`_Index`大於或等於並行向量的大小和`range_error`如果索引是中斷的向量部分。 如需如何向量可以而損毀的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如果 `_Index` 大於或等於並行向量的大小，方法會擲回 `out_of_range`，如果索引是用於向量的已中斷部分，則會擲回 `range_error`。 如需向量可能如何中斷的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-##  <a name="back"></a> back
+##  <a name="back"></a>返回
 
-傳回的參考或`const`參考到最後一個並行向量中的項目。 如果並行向量是空的則傳回的值會是未定義。 這個方法是並行安全的。
+傳回對並行向量中最後一個元素的參考或 `const` 參考。 如果並行向量是空的，則傳回值為未定義。 這個方法是並行安全的。
 
 ```
 reference back();
@@ -214,11 +214,11 @@ const_reference back() const;
 
 ### <a name="return-value"></a>傳回值
 
-參考或`const`參考到最後一個並行向量中的項目。
+並行向量中最後一個元素的參考或 `const` 參考。
 
-##  <a name="begin"></a> begin
+##  <a name="begin"></a>起點
 
-傳回迭代器的型別`iterator`或`const_iterator`並行向量的開頭。 這個方法是並行安全的。
+傳回類型 `iterator` 或 `const_iterator` 到並行向量開頭的反覆運算器。 這個方法是並行安全的。
 
 ```
 iterator begin();
@@ -228,11 +228,11 @@ const_iterator begin() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`iterator`或`const_iterator`並行向量的開頭。
+`iterator` 或 `const_iterator` 至並行向量開頭的類型反覆運算器。
 
-##  <a name="capacity"></a> 容量
+##  <a name="capacity"></a>存儲
 
-傳回的並行向量可以成長而不必配置更多記憶體的大小上限。 這個方法是並行安全的。
+傳回並行向量可成長的最大大小，而不需要配置更多記憶體。 這個方法是並行安全的。
 
 ```
 size_type capacity() const;
@@ -244,11 +244,11 @@ size_type capacity() const;
 
 ### <a name="remarks"></a>備註
 
-不同於C++標準程式庫`vector`，則`concurrent_vector`物件不會移動現有的項目，如果它會配置更多的記憶體。
+不同于C++標準程式庫 `vector`，`concurrent_vector` 物件會在配置更多記憶體時，不會移動現有的元素。
 
-##  <a name="cbegin"></a> cbegin
+##  <a name="cbegin"></a>cbegin
 
-傳回迭代器的型別`const_iterator`並行向量的開頭。 這個方法是並行安全的。
+傳回 `const_iterator` 至並行向量開頭之類型的反覆運算器。 這個方法是並行安全的。
 
 ```
 const_iterator cbegin() const;
@@ -256,11 +256,11 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`const_iterator`並行向量的開頭。
+`const_iterator` 至並行向量開頭之類型的反覆運算器。
 
-##  <a name="cend"></a> cend
+##  <a name="cend"></a>cend
 
-傳回迭代器的型別`const_iterator`並行向量的結尾。 這個方法是並行安全的。
+傳回類型的反覆運算器，`const_iterator` 至並行向量的結尾。 這個方法是並行安全的。
 
 ```
 const_iterator cend() const;
@@ -268,11 +268,11 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`const_iterator`並行向量的結尾。
+類型的反覆運算器，`const_iterator` 至並行向量的結尾。
 
-##  <a name="clear"></a> 清除
+##  <a name="clear"></a>明確
 
-清除並行向量中的所有項目。 這個方法不是並行安全。
+清除並行向量中的所有元素。 這個方法不是並行安全的。
 
 ```
 void clear();
@@ -280,11 +280,11 @@ void clear();
 
 ### <a name="remarks"></a>備註
 
-`clear` 不是並行安全。 您必須確定，沒有其他執行緒會叫用方法上的並行向量時呼叫這個方法。 `clear` 不會釋放內部陣列。 若要釋出內部的陣列，請呼叫函數`shrink_to_fit`之後`clear`。
+`clear` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行向量上叫用方法。 `clear` 不會釋放內部陣列。 若要釋放內部陣列，請在 `clear`之後 `shrink_to_fit` 呼叫函式。
 
-##  <a name="ctor"></a> concurrent_vector
+##  <a name="ctor"></a>concurrent_vector
 
-建構並行向量。
+構造並行向量。
 
 ```
 explicit concurrent_vector(
@@ -334,7 +334,7 @@ concurrent_vector(_InputIterator _Begin,
 `concurrent_vector` 物件的初始容量。
 
 *_Item*<br/>
-建構的物件中的項目值。
+已建立之物件中的元素值。
 
 *_Begin*<br/>
 項目範圍中要複製的第一個項目位置。
@@ -344,31 +344,31 @@ concurrent_vector(_InputIterator _Begin,
 
 ### <a name="remarks"></a>備註
 
-所有建構函式會儲存配置器物件`_Al`並初始化向量。
+所有的函式都會儲存配置器物件 `_Al` 並初始化向量。
 
-第一個建構函式指定空的初始向量，並明確指定的配置器類型。 若要使用。
+第一個函式會指定空的初始向量，並明確指定配置器類型。 要使用的。
 
-第二個和第三個建構函式會指定並行向量的複本`_Vector`。
+第二個和第三個函式會指定並行向量 `_Vector`的複本。
 
 第四個建構函式會指定移動並行向量 `_Vector`。
 
-第五個建構函式會指定重複指定數字 ( `_N`) 類別的預設值的項目`T`。
+第五個函式會指定類別 `T`之預設值專案的指定數目（`_N`）重複。
 
-第六個建構函式會指定重複 ( `_N`) 值之項目的`_Item`。
+第六個函式會指定值 `_Item`的（`_N`）元素重複。
 
-最後一個建構函式指定值，提供迭代器範圍 [ `_Begin`， `_End`)。
+最後一個函式會指定反覆運算器範圍 [`_Begin`，`_End`）所提供的值。
 
-##  <a name="dtor"></a> ~concurrent_vector
+##  <a name="dtor"></a>~ concurrent_vector
 
-清除所有項目，並終結此並行向量。
+清除所有元素並終結這個並行向量。
 
 ```
 ~concurrent_vector();
 ```
 
-##  <a name="crbegin"></a> crbegin
+##  <a name="crbegin"></a>crbegin
 
-傳回迭代器的型別`const_reverse_iterator`並行向量的開頭。 這個方法是並行安全的。
+傳回 `const_reverse_iterator` 至並行向量開頭之類型的反覆運算器。 這個方法是並行安全的。
 
 ```
 const_reverse_iterator crbegin() const;
@@ -376,11 +376,11 @@ const_reverse_iterator crbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`const_reverse_iterator`並行向量的開頭。
+`const_reverse_iterator` 至並行向量開頭之類型的反覆運算器。
 
-##  <a name="crend"></a> crend
+##  <a name="crend"></a>crend
 
-傳回迭代器的型別`const_reverse_iterator`並行向量的結尾。 這個方法是並行安全的。
+傳回類型的反覆運算器，`const_reverse_iterator` 至並行向量的結尾。 這個方法是並行安全的。
 
 ```
 const_reverse_iterator crend() const;
@@ -388,11 +388,11 @@ const_reverse_iterator crend() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`const_reverse_iterator`並行向量的結尾。
+類型的反覆運算器，`const_reverse_iterator` 至並行向量的結尾。
 
-##  <a name="empty"></a> empty
+##  <a name="empty"></a>空
 
-測試如果並行向量是空的時呼叫這個方法。 這個方法是並行安全的。
+測試呼叫這個方法時，並行向量是否為空白。 這個方法是並行安全的。
 
 ```
 bool empty() const;
@@ -400,11 +400,11 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果向量是空的呼叫函式，此時**false**否則。
+如果在呼叫函數時，向量是空的，**則為 true** ，否則為**false** 。
 
-##  <a name="end"></a> 結束
+##  <a name="end"></a>成品
 
-傳回迭代器的型別`iterator`或`const_iterator`並行向量的結尾。 這個方法是並行安全的。
+傳回 `iterator` 或 `const_iterator` 到並行向量結尾的反覆運算器類型。 這個方法是並行安全的。
 
 ```
 iterator end();
@@ -414,11 +414,11 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`iterator`或`const_iterator`並行向量的結尾。
+`iterator` 或 `const_iterator` 至並行向量結尾的類型反覆運算器。
 
-##  <a name="front"></a> 前端
+##  <a name="front"></a>前端
 
-傳回的參考或`const`並行向量中第一個元素的參考。 如果並行向量是空的則傳回的值會是未定義。 這個方法是並行安全的。
+傳回對並行向量中第一個元素的參考或 `const` 參考。 如果並行向量是空的，則傳回值為未定義。 這個方法是並行安全的。
 
 ```
 reference front();
@@ -428,11 +428,11 @@ const_reference front() const;
 
 ### <a name="return-value"></a>傳回值
 
-參考或`const`並行向量中第一個元素的參考。
+並行向量中第一個元素的參考或 `const` 參考。
 
-##  <a name="get_allocator"></a> get_allocator
+##  <a name="get_allocator"></a>get_allocator
 
-傳回一份用來建構並行向量的配置器。 這個方法是並行安全的。
+傳回用來建立並行向量的配置器複本。 這個方法是並行安全的。
 
 ```
 allocator_type get_allocator() const;
@@ -440,11 +440,11 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>傳回值
 
-一份用來建構的配置器`concurrent_vector`物件。
+用來建立 `concurrent_vector` 物件的配置器複本。
 
-##  <a name="grow_by"></a> grow_by
+##  <a name="grow_by"></a>grow_by
 
-增加這個並行向量`_Delta`項目。 這個方法是並行安全的。
+藉由 `_Delta` 元素來成長此並行向量。 這個方法是並行安全的。
 
 ```
 iterator grow_by(
@@ -461,19 +461,19 @@ iterator grow_by(
 要附加至物件的元素數目。
 
 *_Item*<br/>
-要初始化的新元素的值。
+用來初始化新元素的值。
 
 ### <a name="return-value"></a>傳回值
 
-附加至第一個項目的迭代器。
+附加至第一個專案的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-如果`_Item`未指定，新的項目，則預設會建構。
+如果未指定 `_Item`，就會將新的專案結構化。
 
-##  <a name="grow_to_at_least"></a> grow_to_at_least
+##  <a name="grow_to_at_least"></a>grow_to_at_least
 
-這個並行向量會成長到其中至少有`_N`項目。 這個方法是並行安全的。
+會成長此並行向量，直到至少有 `_N` 元素為止。 這個方法是並行安全的。
 
 ```
 iterator grow_to_at_least(size_type _N);
@@ -482,15 +482,15 @@ iterator grow_to_at_least(size_type _N);
 ### <a name="parameters"></a>參數
 
 *_N*<br/>
-新的最小大小為`concurrent_vector`物件。
+`concurrent_vector` 物件的新大小下限。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，指向開頭附加的序列，或索引處的項目`_N`如果不附加任何項目。
+指向附加序列開頭的反覆運算器; 如果未附加任何元素，則為位於索引 `_N` 的專案。
 
-##  <a name="max_size"></a> max_size
+##  <a name="max_size"></a>max_size
 
-傳回並行向量可以保存項目的數目上限。 這個方法是並行安全的。
+傳回並行向量可以保存的元素數目上限。 這個方法是並行安全的。
 
 ```
 size_type max_size() const;
@@ -498,11 +498,11 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>傳回值
 
-最大項目數`concurrent_vector`物件可以保存。
+`concurrent_vector` 物件可以保存的元素數目上限。
 
-##  <a name="operator_eq"></a> 運算子 =
+##  <a name="operator_eq"></a>operator =
 
-將另一個內容指派`concurrent_vector`如下的物件。 這個方法不是並行安全。
+將另一個 `concurrent_vector` 物件的內容指派給這一個。 這個方法不是並行安全的。
 
 ```
 concurrent_vector& operator= (
@@ -526,11 +526,11 @@ concurrent_vector& operator= (
 
 ### <a name="return-value"></a>傳回值
 
-此參考`concurrent_vector`物件。
+這個 `concurrent_vector` 物件的參考。
 
-##  <a name="operator_at"></a> operator[]
+##  <a name="operator_at"></a>operator []
 
-提供存取並行向量中的指定索引處的項目。 這個方法是並行安全的讀取作業，以及同時成長，只要確定之值的向量，`_Index`小於並行向量的大小。
+提供在並行向量中指定索引處之專案的存取權。 這個方法是讀取作業的並行安全，而且在成長向量時，只要您確定 `_Index` 的值小於並行向量的大小即可。
 
 ```
 reference operator[](size_type _index);
@@ -541,21 +541,21 @@ const_reference operator[](size_type _index) const;
 ### <a name="parameters"></a>參數
 
 *_Index*<br/>
-要擷取之項目的索引。
+要抓取之元素的索引。
 
 ### <a name="return-value"></a>傳回值
 
-指定索引處項目的參考。
+指定索引處之專案的參考。
 
 ### <a name="remarks"></a>備註
 
-新版`operator []`會傳回非`const`參考不能用來從不同執行緒同時寫入項目。 不同的同步處理物件應該用來同步處理並行讀取和寫入作業的相同資料的項目中。
+傳回非 `const` 參考的 `operator []` 版本不能用來從不同執行緒同時寫入專案。 您應該使用不同的同步處理物件，將並行讀取和寫入作業同步至相同的資料元素。
 
-任何界限檢查，確保執行`_Index`是至並行向量的有效索引。
+不會執行界限檢查，以確保 `_Index` 是並行向量的有效索引。
 
-##  <a name="push_back"></a> push_back
+##  <a name="push_back"></a>push_back
 
-將指定的項目附加至並行向量的結尾。 這個方法是並行安全的。
+將指定的專案附加至並行向量的結尾。 這個方法是並行安全的。
 
 ```
 iterator push_back(const_reference _Item);
@@ -570,11 +570,11 @@ iterator push_back(T&& _Item);
 
 ### <a name="return-value"></a>傳回值
 
-附加至項目的迭代器。
+附加至專案的反覆運算器。
 
-##  <a name="rbegin"></a> rbegin
+##  <a name="rbegin"></a>rbegin
 
-傳回迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的開頭。 這個方法是並行安全的。
+傳回類型 `reverse_iterator` 或 `const_reverse_iterator` 到並行向量開頭的反覆運算器。 這個方法是並行安全的。
 
 ```
 reverse_iterator rbegin();
@@ -584,11 +584,11 @@ const_reverse_iterator rbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的開頭。
+`reverse_iterator` 或 `const_reverse_iterator` 至並行向量開頭的類型反覆運算器。
 
-##  <a name="rend"></a> rend
+##  <a name="rend"></a>rend
 
-傳回迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的結尾。 這個方法是並行安全的。
+傳回 `reverse_iterator` 或 `const_reverse_iterator` 到並行向量結尾的反覆運算器類型。 這個方法是並行安全的。
 
 ```
 reverse_iterator rend();
@@ -598,11 +598,11 @@ const_reverse_iterator rend() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器的型別`reverse_iterator`或`const_reverse_iterator`並行向量的結尾。
+`reverse_iterator` 或 `const_reverse_iterator` 至並行向量結尾的類型反覆運算器。
 
-##  <a name="reserve"></a> 保留
+##  <a name="reserve"></a>留成
 
-會配置足夠的空間可以成長到大小的並行向量`_N`而不必配置更多記憶體的更新版本。 這個方法不是並行安全。
+配置足夠的空間來將並行向量成長到 `_N` 大小，而不需要在稍後配置更多記憶體。 這個方法不是並行安全的。
 
 ```
 void reserve(size_type _N);
@@ -611,15 +611,15 @@ void reserve(size_type _N);
 ### <a name="parameters"></a>參數
 
 *_N*<br/>
-要保留空間的元素數目。
+要為其保留空間的元素數目。
 
 ### <a name="remarks"></a>備註
 
-`reserve` 不是並行安全。 您必須確定，沒有其他執行緒會叫用方法上的並行向量時呼叫這個方法。 在方法傳回後的並行向量的容量可能大於所要求的保留。
+`reserve` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行向量上叫用方法。 在方法傳回之後，並行向量的容量可能會大於所要求的保留區。
 
-##  <a name="resize"></a> 調整大小
+##  <a name="resize"></a>調整
 
-並行向量的大小變更為所要求的大小、 刪除或加入必要的項目。 這個方法不是並行安全。
+將並行向量的大小變更為所要求的大小，並視需要刪除或加入元素。 這個方法不是並行安全的。
 
 ```
 void resize(
@@ -636,17 +636,17 @@ void resize(
 並行向量的新大小。
 
 *val*<br/>
-如果新的大小大於原始大小，則會將新項目的值加入至向量。 如果省略此值，新的物件會指定其類型的預設值。
+如果新的大小大於原始大小，則會將新項目的值加入至向量。 如果省略此值，則會為新物件指派其類型的預設值。
 
 ### <a name="remarks"></a>備註
 
-如果容器的大小小於所要求的大小，項目會加入至向量，直到達到所要求的大小。 如果容器的大小大於所要求的大小，會刪除最接近容器結尾的項目，除非容器達到大小`_N`。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
+如果容器的大小小於所要求的大小，則會將元素加入至向量，直到達到所要求的大小為止。 如果容器的大小大於所要求的大小，則會刪除最接近容器結尾的元素，直到容器達到 `_N`的大小為止。 如果容器現在的大小與所要求的大小相同，則不會採取任何動作。
 
-`resize` 不是並行安全。 您必須確定，沒有其他執行緒會叫用方法上的並行向量時呼叫這個方法。
+`resize` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行向量上叫用方法。
 
-##  <a name="shrink_to_fit"></a> shrink_to_fit
+##  <a name="shrink_to_fit"></a>shrink_to_fit
 
-會壓縮要減少片段，並讓記憶體使用量最佳化的並行向量的內部表示法。 這個方法不是並行安全。
+壓縮並行向量的內部標記法，以減少分散程度並優化記憶體使用量。 這個方法不是並行安全的。
 
 ```
 void shrink_to_fit();
@@ -654,11 +654,11 @@ void shrink_to_fit();
 
 ### <a name="remarks"></a>備註
 
-這個方法會在內部重新配置記憶體移動項目，讓所有迭代器失效。 `shrink_to_fit` 不是並行安全。 您必須確定，沒有其他執行緒會叫用方法上的並行向量時呼叫此函式。
+這個方法會在內部重新配置記憶體移動元素，使所有反覆運算器失效。 `shrink_to_fit` 不是並行保護。 當您呼叫此函式時，您必須確定沒有任何其他執行緒在並行向量上叫用方法。
 
-##  <a name="size"></a> 大小
+##  <a name="size"></a>容量
 
-並行向量中傳回的項目數。 這個方法是並行安全的。
+傳回並行向量中的元素數目。 這個方法是並行安全的。
 
 ```
 size_type size() const;
@@ -666,15 +666,15 @@ size_type size() const;
 
 ### <a name="return-value"></a>傳回值
 
-在此的項目數`concurrent_vector`物件。
+這個 `concurrent_vector` 物件中的元素數目。
 
 ### <a name="remarks"></a>備註
 
-在傳回的大小一定會包含所有的項目所呼叫函式附加`push_back`，或成長之前叫用這個方法已完成的作業。 不過，它也可能包含項目的已配置但仍在並行呼叫的任何成長方法建構。
+傳回的大小保證會包含透過呼叫函式所附加的所有專案 `push_back`，或在叫用此方法之前已完成的擴大作業。 不過，它也可能包含透過並行呼叫任何成長方法所配置但仍在進行中的元素。
 
-##  <a name="swap"></a> swap
+##  <a name="swap"></a>調換
 
-交換兩個的並行向量的內容。 這個方法不是並行安全。
+交換兩個並行向量的內容。 這個方法不是並行安全的。
 
 ```
 void swap(concurrent_vector& _Vector);
@@ -683,9 +683,9 @@ void swap(concurrent_vector& _Vector);
 ### <a name="parameters"></a>參數
 
 *_Vector*<br/>
-`concurrent_vector`来交換內容的物件。
+要交換內容的 `concurrent_vector` 物件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)

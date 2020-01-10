@@ -1,37 +1,62 @@
 ---
-title: 宣告和定義 (C++)
-ms.date: 11/04/2016
+title: 宣告和定義（C++）
+ms.date: 12/12/2019
 ms.assetid: 678f1424-e12f-45e0-a957-8169e5fef6cb
-ms.openlocfilehash: 1e76f636a6efd652ac629ad2f97f0b09f6171f9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d52294b635e05f42a4c48620214a90cad609f575
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399066"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301544"
 ---
-# <a name="declarations-and-definitions-c"></a>宣告和定義 (C++)
+# <a name="declarations-and-definitions-c"></a>宣告和定義（C++）
 
-宣告會引入名稱在程式中，例如變數、 命名空間、 函式和類別的名稱。 宣告也會指定類型資訊，以及所宣告物件的其他特性。 名稱必須先宣告才能使用；在 C++ 中，名稱的宣告位置可決定編譯器是否可以看到它。 您不能參考函式或宣告稍後編譯單位; 中的類別您可以使用*向前宣告*來克服這項限制。
+程式C++是由各種實體組成，例如變數、函式、類型和命名空間。 這些實體中的每個*都必須先行宣告才能使用*。 宣告會指定實體的唯一名稱，以及其類型和其他特性的相關資訊。 在C++宣告名稱的點，是編譯器可看見的位置點。 您不能參考在編譯單位稍後的某個時間點所宣告的函式或類別。 變數應該在使用的點之前，盡可能地宣告為接近。
 
-定義會指定該名稱哪些程式碼或資料描述。 編譯器需要有定義，才能針對所宣告的項目配置儲存空間。
+下列範例顯示一些宣告：
 
-## <a name="declarations"></a>宣告
+```cpp
+#include <string>
 
-宣告會將一個或多個名稱引入程式。 宣告在程式中可能會出現一次以上。 因此，您可以為每個編譯單位宣告類別、結構、列舉類型和其他使用者定義類型。 多重宣告的條件約束是，所有宣告必須相同。 宣告也可當做定義，但宣告如有下列情況則除外：
+void f(); // forward declaration
 
-1. 為函式原型 (沒有函式主體的函式宣告)。
+int main()
+{
+    const double pi = 3.14; //OK
+    int i = f(2); //OK. f is forward-declared
+    std::string str; // OK std::string is declared in <string> header
+    C obj; // error! C not yet declared.
+    j = 0; // error! No type specified.
+    auto k = 0; // OK. type inferred as int by compiler.
+}
 
-1. 包含**extern**規範，但沒有初始設定式 （物件和變數） 或函式主體 （函式）。 這表示此定義不一定會位於目前的轉譯單位中，並提供外部連結的名稱。
+int f(int i)
+{
+    return i + 42;
+}
 
-1. 為類別宣告內的靜態資料成員。
+namespace N {
+   class C{/*...*/};
+}
+```
 
-   由於靜態類別資料成員是由類別中所有物件共用的不連續變數，因此必須在類別宣告之外定義及初始化。 (如需類別以及類別成員的詳細資訊，請參閱[類別](../cpp/classes-and-structs-cpp.md)。)
+在第5行上，會宣告 `main` 函式。 在第7行上，會宣告並*初始化*名為 `pi` 的**const**變數。 在第8行上，會使用函式 `f`所產生的值來宣告和初始化整數 `i`。 因為第3行的*向前*宣告，所以編譯器可以看到名稱 `f`。 
 
-1. 為不含下列定義的類別名稱宣告，例如 `class T;`。
+在第9行中，已宣告名為 `obj` 類型為 `C` 的變數。 不過，此宣告會引發錯誤，因為 `C` 在程式中稍後才會宣告，而且不會向前宣告。 若要修正錯誤，您可以在 `main` 之前移動 `C` 的整個*定義*，或為它新增正向宣告。 這種行為與其他語言（例如C#）不同，其中的函式和類別可以在來源檔案中的宣告點之前使用。 
 
-1. 已**typedef**陳述式。
+在第10行中，會宣告名為 `str` 類型為 `std::string` 的變數。 `std::string` 的名稱是可見的，因為它是在 `string`[標頭檔](header-files-cpp.md)中引進，而該檔案會合並到第1行的原始程式檔中。 `std` 是宣告 `string` 類別的命名空間。
 
-宣告也可做為定義的範例如下：
+在第11行中，因為尚未宣告名稱 `j`，所以會引發錯誤。 宣告必須提供類型，與其他語言（例如 javaScript）不同。 在第12行中，會使用 `auto` 關鍵字，這會指示編譯器根據其初始化的值來推斷 `k` 的類型。 在此情況下，編譯器會為該類型選擇 `int`。  
+
+## <a name="declaration-scope"></a>宣告範圍
+
+宣告引進的名稱在宣告發生的*範圍*內是有效的。 在上述範例中，`main` 函式內宣告的變數是*區域變數*。 您可以在*全域範圍*外，宣告名為 `i` 的另一個變數，而且它會是完全不同的實體。 不過，這類名稱的重複可能會導致程式設計人員混淆和錯誤，應予以避免。 在第21行中，類別 `C` 是在命名空間 `N`的範圍中宣告。 使用命名空間有助於避免*名稱衝突*。 大部分C++的標準程式庫名稱都是在 `std` 命名空間內宣告。 如需範圍規則如何與宣告互動的詳細資訊，請參閱[範圍](../cpp/scope-visual-cpp.md)。
+
+## <a name="definitions"></a>定義
+
+某些實體（包括函式、類別、列舉和常數變數）除了要宣告外，還必須定義。 *定義*會在程式中稍後使用實體時，為編譯器提供產生機器碼所需的所有資訊。 在上述範例中，第3行包含函式 `f` 的宣告，但函數的*定義*是在第15到18行提供。 在第21行上，會宣告和定義類別 `C` （雖然定義的類別不會執行任何動作）。 常數變數必須在其宣告所在的相同語句中，以其他單字指派值的方式定義。 內建類型的宣告（例如 `int`）是自動定義的，因為編譯器知道要為它配置多少空間。
+
+下列範例會顯示也是定義的宣告：
 
 ```cpp
 // Declare and define int variables i and j.
@@ -45,48 +70,43 @@ enum suits { Spades = 1, Clubs, Hearts, Diamonds };
 class CheckBox : public Control
 {
 public:
-            Boolean IsChecked();
+    Boolean IsChecked();
     virtual int     ChangeState() = 0;
 };
 ```
 
-某些不是定義的宣告如下：
+以下是一些不是定義的宣告：
 
 ```cpp
 extern int i;
 char *strchr( const char *Str, const char Target );
 ```
 
-名稱會視為在緊接著它的宣告子之後、但是在它的 (選擇性) 初始設定式之前宣告  如需詳細資訊，請參閱 <<c0> [ 點](../cpp/point-of-declaration-in-cpp.md)。
+## <a name="typedefs-and-using-statements"></a>Typedef 和 using 語句
 
-宣告會發生在*範圍*。 範圍可控制項所宣告的名稱可見性，以及所定義的物件持續時間 (若有的話)。 如需有關範圍規則如何與宣告互動的詳細資訊，請參閱 <<c0> [ 範圍](../cpp/scope-visual-cpp.md)。
+在舊版的C++中， [typedef](aliases-and-typedefs-cpp.md)關鍵字是用來宣告新名稱，這是另一個名稱的*別名*。 例如，類型 `std::string` 是 `std::basic_string<char>`的另一個名稱。 程式設計人員為何要使用 typedef 名稱，而不是實際名稱，這應該很明顯。 在新式C++中， [using](aliases-and-typedefs-cpp.md)關鍵字慣用於 typedef，但概念相同：已宣告並定義實體的新名稱。
 
-物件宣告也是定義除非它包含**extern**中所述的儲存類別規範[儲存類別](storage-classes-cpp.md)。 函式宣告也是定義，除非其為原型。 原型是不含定義函式主體的函式標頭。 物件的定義會促使儲存體配置，並為該物件進行適當的初始化。
+## <a name="static-class-members"></a>靜態類別成員
 
-## <a name="definitions"></a>定義
+因為靜態類別資料成員是由類別的所有物件共用的離散變數，所以必須在類別定義之外定義和初始化。 （如需詳細資訊，請參閱[類別](../cpp/classes-and-structs-cpp.md)）。
 
-定義為物件或變數、函式、類別或列舉程式的唯一規格。 由於定義必須是唯一的，因此程式中只能包含一個特定程式項目的定義。 宣告和定義之間可以有多對一的對應關係。 在兩種情況下可以宣告但未定義程式項目：
+## <a name="extern-declarations"></a>extern 宣告
 
-1. 已宣告但永遠不會使用函式呼叫或使用接受函式位址的運算式參考的函式。
+一個C++程式可能包含一個以上的[編譯單位](header-files-cpp.md)。 若要宣告在不同編譯單位中定義的實體，請使用[extern](extern-cpp.md)關鍵字。 宣告中的資訊足以用於編譯器，但如果在連結步驟中找不到實體的定義，則連結器會引發錯誤。
 
-1. 只有在不知道其定義時才使用的類別。 不過，該類別必須進行宣告。 下列程式碼說明此情況：
+## <a name="in-this-section"></a>本節內容
 
-    ```cpp
-    // definitions.cpp
-    class WindowCounter;   // Forward declaration; no definition
+[儲存類別](storage-classes-cpp.md)<br/>
+[const](const-cpp.md)<br/>
+[constexpr](constexpr-cpp.md)<br/>
+[extern](extern-cpp.md)<br/>
+[初始設定式](initializers.md)<br/>
+[別名和 typedef](aliases-and-typedefs-cpp.md)<br/>
+[using 宣告](using-declaration.md)<br/>
+[volatile](volatile-cpp.md)<br/>
+[decltype](decltype-cpp.md)<br/>
+[中的屬性C++](attributes.md)<br/>
 
-    class Window
-    {
-       // Definition of WindowCounter not required
-       static WindowCounter windowCounter;
-    };
-
-    int main()
-    {
-    }
-    ```
-
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [基本概念](../cpp/basic-concepts-cpp.md)<br/>
-[宣告點](../cpp/point-of-declaration-in-cpp.md)

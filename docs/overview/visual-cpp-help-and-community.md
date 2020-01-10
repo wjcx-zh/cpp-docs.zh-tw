@@ -3,14 +3,12 @@ title: Visual C++ 說明和社群
 ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: a897f3b6154368c7381f1cac8e51ed5acfac5d32
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708172"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791689"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ 說明和社群
 
@@ -18,13 +16,13 @@ ms.locfileid: "65708172"
 
 ## <a name="samples"></a>範例
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[開發人員程式碼範例](https://code.msdn.microsoft.com/)|包含 Microsoft 和社群投稿的可下載範例程式碼。|
 
 ## <a name="product-documentation"></a>產品文件
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
 |[Visual Studio 中的 C++](visual-cpp-in-visual-studio.md)|包含有關 Visual C++ 的參考及概念文件。 MSDN Library 的一部分。|
 |[Windows 開發人員中心](https://developer.microsoft.com/windows/)|包含如何使用 C++ 和其他語言開發 Windows 10 應用程式的資訊。 Windows 開發人員中心的一部分，C++ 內容位於 [文件] > [語言參考] 節點下。|
@@ -39,9 +37,9 @@ ms.locfileid: "65708172"
 
 ## <a name="related-articles"></a>相關文章
 
-|標題|說明|
+|標題|描述|
 |-----------|-----------------|
-|[Visual C++ Team 部落格](https://blogs.msdn.microsoft.com/vcblog/)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
+|[Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/) (Visual C++ 小組部落格)|包含 Visual C++ 產品小組專家發表的各種主題的文章。|
 |[Channel 9](https://channel9.msdn.com/)|包含訪談和演講影片。 請使用 Channel 9 首頁上的 [搜尋] 方塊尋找 C++ 內容。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|包含有關 Visual Studio 和相關開發工具的文章及新聞。|
 |[MSDN 論壇](https://social.msdn.microsoft.com/Forums/home?category=visualc)與[開發人員社群](https://developercommunity.visualstudio.com)|官方 Microsoft 論壇，您可以在這裡提出 C++ 相關問題，並 從 Microsoft 與社群專家處獲得解答。|

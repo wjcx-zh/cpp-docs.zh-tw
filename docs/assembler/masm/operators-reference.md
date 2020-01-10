@@ -1,16 +1,16 @@
 ---
 title: MASM 運算子參考
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), operators reference
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
-ms.openlocfilehash: 5295307ad668b76e5ff39882ce2613f2042f914a
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: c0059ab1b0204b79e040d18bd5aa88145775ebcd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74395205"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318757"
 ---
 # <a name="masm-operators-reference"></a>MASM 運算子參考
 
@@ -68,7 +68,7 @@ ms.locfileid: "74395205"
 |[EQ （等於）](operator-eq.md)|[GE （大於或等於）](operator-ge.md)|[GT （大於）](operator-gt.md)|
 |[LE （小於或等於）](operator-le.md)|[LT （小於）](operator-lt.md)|[NE （不等於）](operator-ne.md)|
 
-## <a name="segment"></a>片斷
+## <a name="segment"></a>區隔
 
 |||
 |-|-|
@@ -88,6 +88,7 @@ ms.locfileid: "74395205"
 |[SIZEOF （類型或變數的大小）](operator-sizeof.md)|[這個（目前的位置）](operator-this.md)|[類型（取得運算式類型）](operator-type.md)|
 |[.類型（取得引數類型資訊）](operator-dot-type.md)|||
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)<br/>
+[Microsoft 巨集組譯參考](microsoft-macro-assembler-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

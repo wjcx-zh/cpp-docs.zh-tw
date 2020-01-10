@@ -8,12 +8,12 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b23e7e6310ba4ed968e2eac8e6d07d81ee4e79ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151945"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299113"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto 和標記陳述式 (C)
 
@@ -26,10 +26,10 @@ ms.locfileid: "56151945"
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
 
 *jump-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***識別碼* **;**
 
 *labeled-statement*：<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別碼*  **:**  *陳述式*
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier* **：** *語句*
 
 陳述式標籤只對 `goto` 陳述式有意義，在任何其他內容中，加上標籤的陳述式都會執行，而不考慮標籤。
 
@@ -39,7 +39,7 @@ ms.locfileid: "56151945"
 
 這個範例將示範 `goto` 陳述式：
 
-```
+```c
 // goto.c
 #include <stdio.h>
 
@@ -67,6 +67,6 @@ int main()
 
 在這個範例中，當 `goto` 等於 5 時，`stop` 陳述式會將控制項傳送至標記 `i` 的點。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [陳述式](../c-language/statements-c.md)

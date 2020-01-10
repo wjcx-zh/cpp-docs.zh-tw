@@ -20,12 +20,12 @@ helpviewer_keywords:
 - find function
 - _wfind function
 ms.assetid: 2bc2f8ef-44e4-4271-b3e8-666d36fde828
-ms.openlocfilehash: ecc01362bdc14af32df5093ad1ac1ee606026d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 331d43f3e3a88786f8dac0a6f609f988beea9dbb
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940371"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300300"
 ---
 # <a name="filename-search-functions"></a>檔案名稱搜尋函式
 
@@ -67,7 +67,7 @@ ms.locfileid: "70940371"
 您可以指定目標屬性 (例如 `_A_RDONLY`) 以限制搜尋作業。 這些屬性會在 `attrib` 結構的 `_finddata_t` 欄位內傳回，而且可以有下列值 (定義於 IO.h)。 使用者不應依賴這些僅適用於 `attrib` 欄位的值。
 
 `_A_ARCH`<br/>
-封存。 每當 **BACKUP** 命令變更或清除檔案時即設定。 值：0x20。
+保存： 每當 **BACKUP** 命令變更或清除檔案時即設定。 值：0x20。
 
 `_A_HIDDEN`<br/>
 隱藏的檔案。 除非您使用 **/AH** 選項，否則使用 DIR 命令時並不常見。 傳回有關一般檔案或具有此屬性之檔案的資訊。 值：0x02。
@@ -98,17 +98,17 @@ ms.locfileid: "70940371"
 
 |結構|時間類型|檔案大小類型|
 |---------------|---------------|--------------------|
-|`_finddata_t`, `_wfinddata_t`|`__time64_t`|`_fsize_t`|
-|`_finddata32_t`, `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
-|`__finddata64_t`, `__wfinddata64_t`|`__time64_t`|`__int64`|
-|`_finddata32i64_t`, `_wfinddata32i64_t`|`__time32_t`|`__int64`|
-|`_finddata64i32_t`, `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
+|`_finddata_t`、 `_wfinddata_t`|`__time64_t`|`_fsize_t`|
+|`_finddata32_t`、 `_wfinddata32_t`|`__time32_t`|`_fsize_t`|
+|`__finddata64_t`、 `__wfinddata64_t`|`__time64_t`|`__int64`|
+|`_finddata32i64_t`、 `_wfinddata32i64_t`|`__time32_t`|`__int64`|
+|`_finddata64i32_t`、 `_wfinddata64i32_t`|`__time64_t`|`_fsize_t`|
 
 `_fsize_t` 是 `unsigned long` (32 位元) 的 `typedef`。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_find.c
 // This program uses the 32-bit _find functions to print
 // a list of all files (and their attributes) with a .C extension
@@ -156,6 +156,6 @@ N   N   N   Y   blah.c       Wed Feb 13 09:21:42 2002       1715
 N   N   N   Y   test.c       Wed Feb 06 14:30:44 2002        312
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [系統呼叫](../c-runtime-library/system-calls.md)

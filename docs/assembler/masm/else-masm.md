@@ -1,17 +1,17 @@
 ---
 title: ELSE (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - else
 helpviewer_keywords:
 - ELSE directive
 ms.assetid: c43af707-4567-4489-97ca-f14982d84e88
-ms.openlocfilehash: de162bfda80f659dc477d7cbb003a36de60c2328
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: e7098cb5be7f39458410e48507a4aea675974724
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397712"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318146"
 ---
 # <a name="else-masm"></a>ELSE (MASM)
 
@@ -19,12 +19,13 @@ ms.locfileid: "74397712"
 
 ## <a name="syntax"></a>語法
 
-> **東西**
+> **ELSE**
 
 ## <a name="remarks"></a>備註
 
-查看[IF](../../assembler/masm/if-masm.md)。
+查看[IF](if-masm.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

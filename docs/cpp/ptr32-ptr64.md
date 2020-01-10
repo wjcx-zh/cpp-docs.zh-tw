@@ -16,18 +16,18 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 0e979ed51f9c34700cef75113018c23e69a304f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244459"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301323"
 ---
-# <a name="ptr32-ptr64"></a>__ptr32、__ptr64
+# <a name="__ptr32-__ptr64"></a>__ptr32、__ptr64
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
-**__ptr32**代表原生指標在 32 位元系統上，雖然 **__ptr64**代表 64 位元系統上的原生指標。
+**__ptr32**代表32位系統上的原生指標，而 **__ptr64**代表64位系統上的原生指標。
 
 下列範例將示範如何宣告每一個這些類型的指標：
 
@@ -36,16 +36,16 @@ int * __ptr32 p32;
 int * __ptr64 p64;
 ```
 
-在 32 位元系統上，指標使用的宣告 **__ptr64**截斷為 32 位元指標。 在 64 位元系統上，指標使用的宣告 **__ptr32**會強制轉型為 64 位元指標。
+在32位系統上，使用 **__ptr64**宣告的指標會被截斷為32位指標。 在64位系統上，使用 **__ptr32**宣告的指標會強制轉型為64位指標。
 
 > [!NOTE]
-> 您無法使用 **__ptr32**或是 **__ptr64**進行編譯時 **/clr: pure**。 否則，會產生編譯器錯誤 C2472。 **/Clr: pure**並 **/clr: safe**編譯器選項是在 Visual Studio 2015 中已被取代，而且不支援的 Visual Studio 2017 中。
+> 使用 **/clr： pure**進行編譯時，您無法使用 **__ptr32**或 **__ptr64** 。 否則，將會產生編譯器錯誤 C2472。 **/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，在 Visual Studio 2017 中不支援。
 
-為了與舊版中，相容性 **_ptr32**並 **_ptr64**同義 **__ptr32**並 **__ptr64**除非編譯器選項[/Za\(停用語言擴充功能)](../build/reference/za-ze-disable-language-extensions.md)指定。
+為了與舊版相容，除非指定了編譯器選項[/za \(停用語言擴充功能）](../build/reference/za-ze-disable-language-extensions.md) ，否則 **_ptr32**和 **_ptr64**就是 **__ptr32**和 **__ptr64**的同義字。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何宣告和配置與指標 **__ptr32**並 **__ptr64**關鍵字。
+下列範例顯示如何使用 **__ptr32**和 **__ptr64**關鍵字來宣告和配置指標。
 
 ```cpp
 #include <cstdlib>
@@ -73,8 +73,8 @@ int main()
 64
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[基本類型](../cpp/fundamental-types-cpp.md)
+[內建類型](../cpp/fundamental-types-cpp.md)

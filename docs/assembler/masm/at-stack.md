@@ -1,17 +1,17 @@
 ---
 title: '@stack'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@stack'
 helpviewer_keywords:
 - '@stack symbol'
 ms.assetid: 4f656d9f-c3d4-4e19-9d97-bdee01b41861
-ms.openlocfilehash: 4ed40ac17d4bb073808b8dbb93db79d18df66399
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 517ab7202d62196ccec4bf62a2e97a8336c9b077
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398927"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315429"
 ---
 # <a name="stack"></a>\@堆疊
 
@@ -21,6 +21,7 @@ ms.locfileid: "74398927"
 
 > **\@堆疊**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](symbols-reference.md)
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

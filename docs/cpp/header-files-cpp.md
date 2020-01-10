@@ -1,16 +1,16 @@
 ﻿---
-title: 標頭檔 (C++)
-ms.date: 04/20/2018
+title: 標頭檔（C++）
+ms.date: 12/11/2019
 helpviewer_keywords:
 - header files [C++]
-ms.openlocfilehash: 98d37944f8c037f3ba25d80c7d35b3560ad11d40
-ms.sourcegitcommit: db1ed91fa7451ade91c3fb76bc7a2b857f8a5eef
+ms.openlocfilehash: ca5036ee53372f44e53b5a6452d4ab220fc3977d
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68980478"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301479"
 ---
-# <a name="header-files-c"></a>標頭檔 (C++)
+# <a name="header-files-c"></a>標頭檔（C++）
 
 程式元素的名稱 (例如變數、函式、類別等等) 必須先宣告才能使用。 例如，若未先宣告 'x'，不能寫 `x = 42`。
 
@@ -22,6 +22,9 @@ x = 42; // use x
 「宣告」會告訴編譯器元素到底是 **int**、**double**、**函數**、**類別**還是其他東西。  此外，每個名稱都必須先在每個 .cpp 檔案 (直接或間接) 中宣告後才能使用。 當您編譯程式時，每個 .cpp 檔案皆會單獨編譯成一個編譯單元。 編譯器不知道其他編譯單位中所宣告的名稱。 這表示若您定義類別、函數或全域變數，必須在每個使用該元素的額外 .cpp 檔中提供該元素的宣告。 所有檔案中的每個宣告都必須完全相同。 當連結器嘗試將所有編譯單元合併成單一程式時，稍微不一致的宣告，都會引致錯誤或非預期的行為。
 
 為了使潛在錯誤降到最低，C++ 採納了使用*標頭檔*包含宣告的慣例。 您會先在標頭檔宣告，然後在每個 .cpp 檔案或其他需要該宣告的標頭檔中使用 #include 指示詞。 #include 指示詞會在編譯前，將標頭檔的複本直接插入每個 .cpp 檔案。
+
+> [!NOTE]
+> 在 Visual Studio 2019 中，c + + 20*模組*功能是針對標頭檔的改進和最終取代而引進的。 如需詳細資訊，請參閱[中C++的模組總覽](modules-cpp.md)。
 
 ## <a name="example"></a>範例
 
@@ -40,7 +43,7 @@ namespace N
 }
 ```
 
-接著，建立實作檔案 (通常具有 .cpp 或類似的副檔名)。 我們會將此檔案稱為 my_class.cpp，並提供成員宣告的定義。 我們為 `my_class.h` 檔案新增 `#include` 指示詞，以便在 .cpp 檔案中的此處插入 my_class 宣告，而且我們包括 `<iostream>` 以提取 `std::cout` 的宣告。 請注意，當標頭檔與來源檔存在於相同目錄時，會使用引號；而角括弧則用於標準程式庫標頭。 此外，許多標準程式庫標頭不會有 .h 或其他任何檔案副檔名。
+接著，建立實作檔案 (通常具有 .cpp 或類似的副檔名)。 我們會將此檔案稱為 my_class.cpp，並提供成員宣告的定義。 我們為 `my_class.h` 檔案新增 `#include` 指示詞，以便在 .cpp 檔案中的此處插入 my_class 宣告，而且我們包括 `<iostream>` 以提取 `std::cout` 的宣告。 請注意，引號會用於與原始程式檔位於相同目錄中的標頭檔，而角括弧則用於標準程式庫標頭。 此外，許多標準程式庫標頭不會有 .h 或其他任何檔案副檔名。
 
 在實作檔案中，我們可以選用 **using** 陳述式以避免需要使用 "N::" 或 "std::" 限定提及的每個 "my_class" 或 "cout"。  不要在標頭檔中放入 **using** 陳述式！
 

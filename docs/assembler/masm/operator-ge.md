@@ -1,6 +1,6 @@
 ---
 title: 運算子 GE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - GE
 - operator GE
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GE operator
 - operator GE
 ms.assetid: 28804311-174d-42d0-9ce1-2187b81bc844
-ms.openlocfilehash: 45bd137ab5833d11691261eaaa370daccdc08ed4
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: ed4c2c8268902c51a8a3d8e467d3ecaa0c137db7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396961"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311581"
 ---
 # <a name="operator-ge"></a>運算子 GE
 
@@ -23,6 +23,7 @@ ms.locfileid: "74396961"
 
 > *運算式*2- **GE** *運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](operators-reference.md)
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

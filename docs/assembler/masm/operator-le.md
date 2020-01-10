@@ -1,6 +1,6 @@
 ---
 title: 運算子 LE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - LE
 - operator LE
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LE operator
 - operator LE
 ms.assetid: 3192e7ac-7577-47bd-ae3e-2cdebcc4e568
-ms.openlocfilehash: 59f4e3117b3fe19e4902fc9a321dc08af0da70d8
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: a5632db77a0a97521f828f720b2530e71accbe7e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74396855"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75311503"
 ---
 # <a name="operator-le"></a>運算子 LE
 
@@ -23,6 +23,7 @@ ms.locfileid: "74396855"
 
 > *運算式*2 **LE** *運算式*2
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](operators-reference.md)
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

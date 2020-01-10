@@ -3,12 +3,12 @@ title: C++ 類型系統
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 1f12f7505438dc995aaf8a045fd903488e9ff092
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 5755c7818182c5e26c5b3df6407fbe259bfdbcf3
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246608"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301570"
 ---
 # <a name="c-type-system"></a>C++ 類型系統
 
@@ -24,9 +24,7 @@ ms.locfileid: "74246608"
 
 ## <a name="specifying-variable-and-function-types"></a>指定變數和函式類型
 
-C++是*強型別*語言，而且也是*靜態類型*;每個物件都有類型，而且該類型永遠不會變更（不會與靜態資料物件混淆）。
-**當您**在程式碼中宣告變數時，您必須明確指定其類型，或使用**auto**關鍵字指示編譯器從初始化運算式推算類型。
-**當您**在程式碼中宣告函式時，您必須指定每個引數的類型和其傳回值，如果函式未傳回任何值，則為**void** 。 例外情況是在您使用函式樣板，可允許任意類型的引數。
+C++是*強型別*語言，而且也是*靜態類型*;每個物件都有類型，而且該類型永遠不會變更（不會與靜態資料物件混淆）。 當您在程式碼中宣告變數時，您必須明確指定其類型，或使用**auto**關鍵字指示編譯器從初始化運算式推算類型。 當您在程式碼中宣告函式時，您必須指定每個引數的類型和其傳回值，如果函式未傳回任何值，則為**void** 。 例外情況是在您使用函式樣板，可允許任意類型的引數。
 
 在您初次宣告變數之後，就不能再變更其類型。 不過，您可以將變數值或函式的傳回值複製到另一個不同類型的變數。 這類作業稱為「*類型轉換*」，有時是必要的，但也是資料遺失或 incorrectness 的潛在來源。
 
@@ -55,7 +53,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 有別於某些程式語言，C++ 並沒有可衍生出所有其他類型的通用基底類型。 此語言包含許多*基本類型*，也稱為*內建類型*。 這包括**int**、 **double**、 **long**、 **bool**等數數值型別，以及分別為 ASCII 和 UNICODE 字元的**char**和**wchar_t**類型。 大部分的基本類型（ **bool**、 **double**、 **wchar_t**和相關類型除外）都有不帶正負號的版本，可修改變數可以儲存的值範圍。 例如， **int**會儲存32位帶正負號的整數，可以代表從-2147483648 到2147483647的值。 不**帶正負**號的 int 也會儲存為32位，可以儲存0到4294967295的值。 每個案例中的可能值總數都相同；只有範圍不同。
 
-基本類型是由編譯器辨識，其內建規則會控制可對這些類型執行哪些作業，以及如何轉換成其他基本類型。 如需內建類型及其大小和數值限制的完整清單，請參閱[基本類型](../cpp/fundamental-types-cpp.md)。
+基本類型是由編譯器辨識，其內建規則會控制可對這些類型執行哪些作業，以及如何轉換成其他基本類型。 如需內建類型及其大小和數值限制的完整清單，請參閱[內建類型](../cpp/fundamental-types-cpp.md)。
 
 下圖顯示內建類型的相對大小：
 
@@ -66,7 +64,7 @@ int maxValue;                // Not recommended! maxValue contains
 |類型|大小|註解|
 |----------|----------|-------------|
 |int|4 個位元組|整數值的預設選項。|
-|double|8 個位元組|浮點值的預設選項。|
+|雙線|8 個位元組|浮點值的預設選項。|
 |bool|1 個位元組|表示可以是 true 或 false 的值。|
 |char|1 個位元組|使用較舊 C-Style 字串或 std::string 物件中永遠不需要轉換成 UNICODE 之的 ASCII 字元。|
 |wchar_t|2 個位元組|表示可能以 UNICODE 格式 (在 Windows 上為 UTF-16，而其他作業系統可能不同) 編碼的「寬」字元值。 這是用於 `std::wstring` 類型字串的字元類型。|
@@ -157,7 +155,7 @@ void someFunction() {
 
 在 C 和 C++ 的傳統 Win32 程式設計中，大部分函式會使用 Windows 專有的 typedef 和 #define 巨集 (定義於 `windef.h`) 來指定參數和傳回值的類型。 這些 Windows 資料類型大多是指定給 C/C++內建類型的特殊名稱（別名）。 如需這些 typedef 和預處理器定義的完整清單，請參閱[Windows 資料類型](/windows/win32/WinProg/windows-data-types)。 這些 Typedef (例如 HRESULT 和 LCID) 很有用而且是描述性的。 其他如 INT，並無特殊意義，只是基本 C++ 類型的別名而已。 其他 Windows 資料類型有從 C 程式設計和 16 位元處理器時代保留下來的名稱，在現代硬體或作業系統上並無用處或意義。 Windows 執行階段程式庫也有相關聯的特殊資料類型，列為[Windows 執行階段基底資料類型](/windows/win32/WinRT/base-data-types)。 在現代 C++ 中，一般的方針就是，除非 Windows 類型傳達有關如何解譯值的額外涵義，否則優先使用 C++ 基本類型。
 
-## <a name="more-information"></a>詳細資訊
+## <a name="more-information"></a>更多資訊
 
 如需 C++ 類型系統的詳細資訊，請參閱下列主題：
 
@@ -166,7 +164,7 @@ void someFunction() {
 |[實值型別](../cpp/value-types-modern-cpp.md)|描述實*數值型別*，以及與使用方式相關的問題。|
 |[類型轉換和型別安全](../cpp/type-conversions-and-type-safety-modern-cpp.md)|描述一般類型轉換問題並顯示如何避免這些問題。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [歡迎回到C++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [C++ 語言參考](../cpp/cpp-language-reference.md)<br/>

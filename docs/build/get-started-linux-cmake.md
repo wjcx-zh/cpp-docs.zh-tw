@@ -1,15 +1,14 @@
 ---
 title: 在 Visual Studio 中建立 C++ 跨平台專案
 description: 如何在以 Linux 和 Windows 為目標的 Visual Studio C++中，設定、編譯和偵測開放原始碼 CMake 專案。
-author: mikeblome
 ms.topic: tutorial
-ms.date: 11/08/2019
-ms.openlocfilehash: 269c9e88133a492f66df7c7f81ab35424aff125d
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.date: 01/08/2020
+ms.openlocfilehash: 83d71d3078e892a51aef159b225fecec2b581f20
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303249"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75791759"
 ---
 # <a name="tutorial-create-c-cross-platform-projects-in-visual-studio"></a>教學課程： C++在 Visual Studio 中建立跨平臺專案
 
@@ -24,7 +23,7 @@ Visual Studio C 和 C++ 開發不再僅限於 Windows。 本教學課程說明�
 > * 新增 Linux 電腦的連線
 > * 在 Linux 上建置和偵錯同一目標
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 * 設定 Visual Studio 執行跨平台 C++ 開發
   * 首先，[安裝 Visual Studio](https://visualstudio.microsoft.com/vs/)並選擇使用 **C++工作負載**進行的 **C++桌面開發**和 Linux 開發。 這種最小安裝僅限 3 GB。 視您的下載速度而定，安裝應該不會超過10分鐘。
@@ -44,10 +43,10 @@ Visual Studio C 和 C++ 開發不再僅限於 Windows。 本教學課程說明�
     chmod +x cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh
     ```
 
-  * 您會看到執行指令碼的選項 `-–help`。 建議您使用 [`–prefix`] 選項指定 [在 **/usr/local**路徑中安裝]，因為這是 Visual Studio 尋找 CMake 的預設位置。 下列範例示範 Linux-x86_64 指令碼。 如果您使用不同的目標平臺，請視需要加以變更。
+  * 您會看到執行指令碼的選項 `-–help`。 建議您使用 `–prefix` 選項指定在 **/usr**路徑中安裝，因為 **/usr/bin**是 Visual Studio 尋找 CMake 的預設位置。 下列範例示範 Linux-x86_64 指令碼。 如果您使用不同的目標平臺，請視需要加以變更。
 
     ```cmd
-    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr/local
+    sudo ./cmake-3.11.18033000-MSVC_2-Linux-x86_64.sh --skip-license --prefix=/usr
     ```
 
 * 安裝在 Windows 電腦上的 Git For Windows。

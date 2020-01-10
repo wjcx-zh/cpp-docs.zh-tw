@@ -8,12 +8,12 @@ helpviewer_keywords:
 - SAFESEH directive
 - .SAFESEH directive
 ms.assetid: 6eaac8c4-c46f-47ae-8a66-f5cfeb267e43
-ms.openlocfilehash: df9798800da293e5e0b4f545a8442380b7ff9408
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: 5953ad6bdf1d9d1b0070ce83dd1d764799b7440a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74397990"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317561"
 ---
 # <a name="safeseh-32-bit-masm"></a>.SAFESEH （32-bit MASM）
 
@@ -25,7 +25,7 @@ ms.locfileid: "74397990"
 
 ## <a name="remarks"></a>備註
 
-*識別碼*必須是本機定義的[進程](../../assembler/masm/proc.md)或[EXTRN](../../assembler/masm/extrn.md)程式的 ID。 不允許使用[標籤](../../assembler/masm/label-masm.md)。 該.SAFESEH 指示詞需要[/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml 命令列選項。
+*識別碼*必須是本機定義的[進程](proc.md)或[EXTRN](extrn.md)程式的 ID。 不允許使用[標籤](label-masm.md)。 該.SAFESEH 指示詞需要[/safeseh](ml-and-ml64-command-line-reference.md) ml 命令列選項。
 
 如需結構化例外狀況處理常式的詳細資訊，請參閱[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)。
 
@@ -39,6 +39,7 @@ MyHandler   proto
 end
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

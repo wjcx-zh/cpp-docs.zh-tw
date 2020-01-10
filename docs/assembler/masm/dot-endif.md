@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: bc09f72b272435b542ac7f6390a6b7ccf4d887c3
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: bcd8b5b2423abf982f999548a50208dfe8e83f6e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398474"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313817"
 ---
 # <a name="endif-32-bit-masm"></a>.ENDIF （32-bit MASM）
 
@@ -21,8 +21,9 @@ ms.locfileid: "74398474"
 
 ## <a name="remarks"></a>備註
 
-（僅限 32-bit MASM）。請參閱[。如果](../../assembler/masm/dot-if.md)為。
+（僅限 32-bit MASM）。請參閱[。如果](dot-if.md)為。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

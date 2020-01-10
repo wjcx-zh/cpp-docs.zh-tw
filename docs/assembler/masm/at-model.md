@@ -1,17 +1,17 @@
 ---
 title: '@Model'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Model'
 helpviewer_keywords:
 - '@Model symbol'
 ms.assetid: a67c04ac-6ba7-458c-8138-0346e5b85eb6
-ms.openlocfilehash: d62026b02f476a19defc9ae6c8e9c83500bfe067
-ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
+ms.openlocfilehash: fc72293d2379b9f9e692f87dd3b11ac92fabbae1
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74398948"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315520"
 ---
 # <a name="model"></a>\@模型
 
@@ -23,4 +23,5 @@ ms.locfileid: "74398948"
 
 ## <a name="see-also"></a>另請參閱
 
-[符號參考](symbols-reference.md)
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

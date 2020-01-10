@@ -1,52 +1,52 @@
 ---
 title: .MODEL
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .MODEL
 helpviewer_keywords:
 - .MODEL directive
 ms.assetid: 057f00df-1515-4c55-852a-d936c8a34b53
-ms.openlocfilehash: c409bf10a2f863c380cda6b4822583ffb3787da6
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
-ms.translationtype: HT
+ms.openlocfilehash: 92f14a352e5c177d767232eed36a7e705fd155ce
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934096"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317626"
 ---
-# <a name="model"></a>.MODEL
+# <a name="model-32-bit-masm"></a>.MODEL （32位 MASM）
 
-將程式記憶體模型初始化。
+將程式記憶體模型初始化。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .MODEL memorymodel [[, langtype]] [[, stackoption]]
+> **.模型***記憶體-模型*⟦ __，__ *語言類型*⟧⟦ __，__ *堆疊選項*⟧
 
 ### <a name="parameters"></a>參數
 
-*memorymodel*<br/>
+*記憶體模型*\
 決定程式碼大小與資料點的必要參數。
 
-*langtype*<br/>
+*語言類型*\
 為程序及公用符號設定呼叫及命名慣例的選擇性參數。
 
-*stackoption*<br/>
+*堆疊選項*\
 選擇性參數。
 
-若 *memorymodel* 為 `FLAT`，就不會使用 *stackoption*。
+如果*記憶體模型*是**平面**的，則不會使用*堆疊選項*。
 
-指定 `NEARSTACK` 會將堆疊區段與資料一併分成單一實體區段 (`DGROUP`)。 系統會假設堆疊區段暫存器 (`SS`) 擁有與資料區段暫存器 (`DS`) 相同的位址。 `FARSTACK` 不會以 `DGROUP` 為堆疊分組；因此 `SS` 不等於 `DS`。
+指定**NEARSTACK**會將堆疊區段與資料一起分組到單一實體區段（**DGROUP**）。 堆疊區段暫存器（**SS**）會假設為與資料區段暫存器（**DS**）保持相同的位址。 **FARSTACK**不會使用**DGROUP**將堆疊分組;因此， **SS**不等於**DS**。
 
 ## <a name="remarks"></a>備註
 
-.`MODEL` 不會用於 [x64 的 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+**.MODEL**不會用於[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md)。
 
 下表列出了以 16 位元和 32 位元平台為目標時，各個參數可能的值：
 
 |參數|32 位元值|16 位元值 (支援較早的 16 位元開發)|
 |---------------|--------------------|----------------------------------------------------------------|
-|*memorymodel*|`FLAT`|`TINY`, `SMALL`, `COMPACT`, `MEDIUM`, `LARGE`, `HUGE`, `FLAT`|
-|*langtype*|`C`、 `STDCALL`|`C`, `BASIC`, `FORTRAN`, `PASCAL`, `SYSCALL`, `STDCALL`|
-|*stackoption*|未使用|`NEARSTACK`、 `FARSTACK`|
+|*記憶體模型*|**還是**|小規模、**小型**、**精簡**、**中型**、**大型**、**龐大**、**平面**|
+|*語言類型*|**C**、 **STDCALL**|**C**、**基本**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**|
+|*堆疊-選項*|未使用|**NEARSTACK**、 **FARSTACK**|
 
 ## <a name="code"></a>程式碼
 
@@ -86,6 +86,7 @@ fxn ENDP
 end
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

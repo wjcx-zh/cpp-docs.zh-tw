@@ -1,6 +1,6 @@
 ---
 title: _InterlockedDecrement 內建函式
-ms.date: 12/17/2018
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: 43bf7a9b788c176490ec3fe08e370708eaf000ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f6b256ff1551eea4d0b362e78c9780fce29a8513
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509400"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857914"
 ---
 # <a name="_interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement 內建函式
 
@@ -59,7 +59,7 @@ ms.locfileid: "69509400"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 long _InterlockedDecrement(
    long * lpAddend
 );
@@ -98,9 +98,9 @@ __int64 _InterlockedDecrement64_nf(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*lpAddend*<br/>
+*lpAddend*\
 [in、out]要遞減之變數的指標。
 
 ## <a name="return-value"></a>傳回值
@@ -111,10 +111,11 @@ __int64 _InterlockedDecrement64_nf(
 
 |內建|架構|
 |---------------|------------------|
-|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、ARM、x64|
-|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
+|`_InterlockedDecrement`、 `_InterlockedDecrement16`|x86、ARM、x64、ARM64|
+|`_InterlockedDecrement64`|ARM、x64、ARM64|
+|`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM、ARM64|
 
-**標頭檔**\<intrin.h. h >
+**標頭檔**\<intrin.h >
 
 ## <a name="remarks"></a>備註
 
@@ -122,9 +123,9 @@ __int64 _InterlockedDecrement64_nf(
 
 `_InterlockedDecrement` 函式在 32 位元整數值上操作，而 `_InterlockedDecrement16` 是在 16 位元整數值上操作，`_InterlockedDecrement64` 在 64 位元整數值上操作。
 
-在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 搭配 `_nf` (「無範圍」) 字尾的內建函式，不會當做記憶體屏障。
+在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` （「無範圍」）尾碼的內建函式不會做為記憶體屏障。
 
-`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊, 請參閱[align](../cpp/align-cpp.md)。
+`lpAddend` 參數所指向的變數必須對齊 32 位元界限；否則，這個函式會在多處理器 x86 系統與任何非 x86 系統上失敗。 如需詳細資訊，請參閱[align](../cpp/align-cpp.md)。
 
 這些常式僅以內建函式的形式供您使用。
 
@@ -196,8 +197,10 @@ void __cdecl SimpleThread(void* pParam) {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+**結束 Microsoft 專屬**
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
-[關鍵字](../cpp/keywords-cpp.md)<br/>
+## <a name="see-also"></a>請參閱
+
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
+[關鍵字](../cpp/keywords-cpp.md)\
 [與 x86 編譯器衝突](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

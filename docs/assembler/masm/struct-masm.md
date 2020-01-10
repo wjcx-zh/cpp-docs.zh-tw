@@ -1,28 +1,32 @@
 ---
 title: STRUCT (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - struct
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: b64e6adbabe847600147dbd773328aadf4225cb2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 054a834b7d97ca7df01ab510fde21de22f2acf3d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210277"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318419"
 ---
-# <a name="struct-masm"></a>STRUCT (MASM)
+# <a name="struct"></a>STRUCT
 
-宣告具有指定的結構類型*欄位宣告*。 每個欄位必須是有效的資料定義。 與相同[STRUC](../../assembler/masm/struc.md)。
+宣告具有指定*欄位*宣告的結構類型。 每個欄位都必須是有效的資料定義。 與[STRUC](struc.md)相同。
 
 ## <a name="syntax"></a>語法
 
-> *名稱*結構 [[*對齊*]] [[，非唯一]]<br/>
-> *field-declarations*<br/>
-> *名稱*結束
+> *name* **結構**⟦*對齊*⟧⟦ __，__ 非**唯一**的⟧*欄位*宣告\
+> *名稱***結束**
 
-## <a name="see-also"></a>另請參閱
+## <a name="remarks"></a>備註
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+開頭和結尾語句中的*name*引數必須相同。 
+
+## <a name="see-also"></a>請參閱
+
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

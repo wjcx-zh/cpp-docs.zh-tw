@@ -1,10 +1,10 @@
 ---
 title: wctomb_s、_wctomb_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wctomb_s_l
 - wctomb_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
@@ -29,12 +32,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 1eaa6f0b81daaa7d8c7626398fe30b45ead979c3
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498920"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957898"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s、_wctomb_s_l
 
@@ -87,15 +90,15 @@ errno_t _wctomb_s_l(
 |any|>**INT_MAX**|**EINVAL**|未修改|
 |any|太小|**EINVAL**|未修改|
 
-如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **wctomb**會傳回**EINVAL** , 並將**errno**設定為**EINVAL**。
+如果發生上述任何一種錯誤狀況，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **wctomb**會傳回**EINVAL** ，並將**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Wctomb_s**函數會將其*wchar*引數轉換為對應的多位元組字元, 並將結果儲存在*mbchar*。 您可以在任何程式的任何點呼叫函式。
+**Wctomb_s**函數會將其*wchar*引數轉換為對應的多位元組字元，並將結果儲存在*mbchar*。 您可以在任何程式的任何點呼叫函式。
 
-如果**wctomb_s**將寬字元轉換成多位元組字元, 則會將寬字元中的位元組數目 (絕不大於**MB_CUR_MAX**) 放入*pRetValue*所指向的整數。 如果*wchar*是寬字元的 null 字元 (L ' \ 0 '), **Wctomb_s**會將*pRetValue*填入1。 如果目標指標*mbchar*是**Null**, **wctomb_s**會將0放在*pRetValue*中。 如果在目前的地區設定中無法進行轉換, **wctomb_s**會將-1 放在*pRetValue*中。
+如果**wctomb_s**將寬字元轉換成多位元組字元，則會將寬字元中的位元組數目（絕不大於**MB_CUR_MAX**）放入*pRetValue*所指向的整數。 如果*wchar*是寬字元的 null 字元（L ' \ 0 '）， **Wctomb_s**會將*pRetValue*填入1。 如果目標指標*mbchar*是**Null**， **wctomb_s**會將0放在*pRetValue*中。 如果在目前的地區設定中無法進行轉換， **wctomb_s**會將-1 放在*pRetValue*中。
 
-**wctomb_s**會針對與地區設定相關的資訊, 使用目前的地區設定; **_wctomb_s_l**相同, 不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**wctomb_s**會針對與地區設定相關的資訊，使用目前的地區設定; **_wctomb_s_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

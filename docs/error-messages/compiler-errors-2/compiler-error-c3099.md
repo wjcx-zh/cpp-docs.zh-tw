@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: 0f3eac1c232ef159d220a347d6b6dc3aed2fdd9a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f508c47c678d86f8f95303861b42f8a70daa57
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324775"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750048"
 ---
 # <a name="compiler-error-c3099"></a>編譯器錯誤 C3099
 
 'keyword': 對 Managed 屬性使用 [System::AttributeUsageAttribute]；對 WinRT 屬性使用 [Windows::Foundation::Metadata::AttributeUsageAttribute]
 
-使用<xref:System.AttributeUsageAttribute>來宣告 **/clr**屬性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 宣告 Windows 執行階段屬性。
+使用 <xref:System.AttributeUsageAttribute> 宣告 **/clr**屬性。 使用 `Windows::Foundation::Metadata::AttributeUsageAttribute` 宣告 Windows 執行階段屬性。
 
-如需 /CLR 屬性的詳細資訊，請參閱 < [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。 支援 Windows 執行階段中的屬性，請參閱[Windows.Foundation.Metadata 命名空間](/uwp/api/windows.foundation.metadata)
+如需/CLR 屬性的詳細資訊，請參閱[使用者定義屬性](../../extensions/user-defined-attributes-cpp-component-extensions.md)。 如需 Windows 執行階段中支援的屬性，請參閱[Windows. Foundation. Metadata 命名空間](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3099，並示範如何修正此問題。
 
-```
+```cpp
 // C3099.cpp
 // compile with: /clr /c
 using namespace System;

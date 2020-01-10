@@ -1,14 +1,14 @@
 ---
 title: _strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _strlwr_s_l
 - _mbslwr_s_l
 - _mbslwr_s
 - _wcslwr_s
 - _strlwr_s
 - _wcslwr_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -21,7 +21,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _strlwr_s_l
 - _strlwr_s
@@ -60,19 +63,19 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5790cf6c36faa0669fd12d6875b7e7488e819b12
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210049"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73625793"
 ---
-# <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
+# <a name="_strlwr_s-_strlwr_s_l-_mbslwr_s-_mbslwr_s_l-_wcslwr_s-_wcslwr_s_l"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 
 使用目前的地區設定或傳入的地區設定物件，將字串轉換成小寫。 這些版本的 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
-> **_mbslwr_s**並 **_mbslwr_s_l**不能在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> **_mbslwr_s**和 **_mbslwr_s_l**無法用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -148,17 +151,17 @@ errno_t _wcslwr_s_l(
 
 如果成功，則傳回零；如果失敗，則傳回非零的錯誤碼。
 
-這些函式會驗證它們的參數。 如果*str*不是有效的 null 結尾字串，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回**EINVAL**並設定**errno**來**EINVAL**。 如果*numberOfElements*小於字串的長度，函數也會傳回**EINVAL**並設定**errno**至**EINVAL**。
+這些函式會驗證它們的參數。 如果*str*不是有效的以 null 終止的字串，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回**EINVAL** ，並將**Errno**設定為**EINVAL**。 如果*numberOfElements*小於字串的長度，函數也會傳回**EINVAL** ，並將**errno**設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Strlwr_s**函式轉換，就地的情況下，任何大寫字母*str*成小寫。 **_mbslwr_s**是多位元組字元版本的 **_strlwr_s**。 **_wcslwr_s**是寬字元版本的 **_strlwr_s**。
+**_Strlwr_s**函式會就地將*str*中的任何大寫字母轉換成小寫字母。 **_mbslwr_s**是 **_strlwr_s**的多位元組字元版本。 **_wcslwr_s**是寬字元版本的 **_strlwr_s**。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -175,7 +178,7 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_mbslwr_s**， **_mbslwr_s_l**|\<mbstring.h>|
 |**_wcslwr_s**， **_wcslwr_s_l**|\<string.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -215,7 +218,7 @@ Lower: the string to end all strings!
 Upper: THE STRING TO END ALL STRINGS!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

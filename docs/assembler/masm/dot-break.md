@@ -1,26 +1,27 @@
 ---
 title: .BREAK
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .BREAK
 helpviewer_keywords:
 - .BREAK directive
 ms.assetid: 4f55dfce-ff41-4a68-9423-b0077dfc9206
-ms.openlocfilehash: ebf5bc74eb8e639d97762b64a15d3049b898160b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3096aaf827eecb4e297e5a1d04f5e982294053de
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185489"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314129"
 ---
-# <a name="break"></a>.BREAK
+# <a name="break-32-bit-masm"></a>.BREAK （32位 MASM）
 
-產生程式碼以終止[。雖然](../../assembler/masm/dot-while.md)或[。重複](../../assembler/masm/dot-repeat.md)封鎖*條件*為 true。
+產生程式碼以終止[。WHILE](dot-while.md)或[。](dot-repeat.md)If*條件*為 TRUE 時，重複 block。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .中斷 [[。IF 條件]]
+> **.中斷**⟦ **。IF** *條件*⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

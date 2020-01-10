@@ -1,78 +1,64 @@
 ---
-title: 可用的所有架構內建
-ms.date: 04/11/2018
+title: 所有架構可用的內建函式
+ms.date: 09/02/2019
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0293daacd717b3ae85b993729090fe363f7e0b9b
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396661"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163478"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>可用的所有架構內建
+# <a name="intrinsics-available-on-all-architectures"></a>所有架構可用的內建函式
 
-Microsoft C /C++編譯器和通用的 C 執行階段程式庫 (UCRT) 提供一些內建函式在所有架構上。
+Microsoft C/C++編譯器和通用 C 執行時間程式庫（UCRT）會將一些內建函式提供給所有架構。
 
 ## <a name="compiler-intrinsics"></a>編譯器內建函式
 
-x86、AMD64 和 ARM 架構可以使用下列內建函式：
+下列內建函式適用于 x86、AMD64、ARM 和 ARM64 架構：
 
-|內建|標頭|
+|內建|頁首|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
-|[_BitScanForward64](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
 |[_BitScanReverse](../intrinsics/bitscanreverse-bitscanreverse64.md)|intrin.h|
-|[_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)|intrin.h|
 |[_bittest](../intrinsics/bittest-bittest64.md)|intrin.h|
-|[_bittest64](../intrinsics/bittest-bittest64.md)|intrin.h|
 |[_bittestandcomplement](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
-|[_bittestandcomplement64](../intrinsics/bittestandcomplement-bittestandcomplement64.md)|intrin.h|
 |[_bittestandreset](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
-|[_bittestandreset64](../intrinsics/bittestandreset-bittestandreset64.md)|intrin.h|
 |[_bittestandset](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
-|[_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)|intrin.h|
+|__code_seg|intrin.h|
 |[__debugbreak](../intrinsics/debugbreak.md)|intrin.h|
 |[_disable](../intrinsics/disable.md)|intrin.h|
 |[_enable](../intrinsics/enable.md)|intrin.h|
 |[__fastfail](../intrinsics/fastfail.md)|intrin.h|
 |[_InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_InterlockedAnd16](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
-|[_InterlockedAnd64](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_InterlockedAnd8](../intrinsics/interlockedand-intrinsic-functions.md)|intrin.h|
 |[_interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)|intrin.h|
 |[_interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange16](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
-|[_InterlockedCompareExchange64](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchange8](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedCompareExchangePointer](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)|intrin.h|
+|[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedDecrement16](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
-|[_InterlockedDecrement64](../intrinsics/interlockeddecrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange16](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
-|[_InterlockedExchange64](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchange8](../intrinsics/interlockedexchange-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd16](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
-|[_InterlockedExchangeAdd64](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangeAdd8](../intrinsics/interlockedexchangeadd-intrinsic-functions.md)|intrin.h|
 |[_InterlockedExchangePointer](../intrinsics/interlockedexchangepointer-intrinsic-functions.md)|intrin.h|
 |[_InterlockedIncrement](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedIncrement16](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
-|[_InterlockedIncrement64](../intrinsics/interlockedincrement-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr16](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
-|[_InterlockedOr64](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedOr8](../intrinsics/interlockedor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor16](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
-|[_InterlockedXor64](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
 |[_InterlockedXor8](../intrinsics/interlockedxor-intrinsic-functions.md)|intrin.h|
-|[_mul128](../intrinsics/mul128.md)|intrin.h|
-|[__mulh](../intrinsics/mulh.md)|intrin.h|
 |[__nop](../intrinsics/nop.md)|intrin.h|
 |[_ReadBarrier](../intrinsics/readbarrier.md)|intrin.h|
 |[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)|intrin.h|
@@ -81,17 +67,13 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 |[_rotl8](../intrinsics/rotl8-rotl16.md)|intrin.h|
 |[_rotr16](../intrinsics/rotr8-rotr16.md)|intrin.h|
 |[_rotr8](../intrinsics/rotr8-rotr16.md)|intrin.h|
-|[__shiftleft128](../intrinsics/shiftleft128.md)|intrin.h|
-|[__shiftright128](../intrinsics/shiftright128.md)|intrin.h|
-|[_umul128](../intrinsics/umul128.md)|intrin.h|
-|[__umulh](../intrinsics/umulh.md)|intrin.h|
 |[_WriteBarrier](../intrinsics/writebarrier.md)|intrin.h|
 
 ## <a name="ucrt-intrinsics"></a>UCRT 內建函式
 
-下列的 UCRT 函式會在所有架構上具有內建形式：
+下列 UCRT 函數在所有架構上都有內部形式：
 
-|內建|標頭|
+|內建|頁首|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -122,7 +104,7 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[expl](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[總管](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|
@@ -138,7 +120,7 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 |[log10f](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[log10l](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[logf](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
-|[logl](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
+|[記錄](../c-runtime-library/reference/log-logf-log10-log10f.md)|math.h|
 |[_lrotl](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[_lrotr](../c-runtime-library/reference/lrotl-lrotr.md)|stdlib.h|
 |[memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md)|string.h|
@@ -178,8 +160,9 @@ x86、AMD64 和 ARM 架構可以使用下列內建函式：
 |[wcslen](../c-runtime-library/reference/strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)|string.h|
 |[_wcsset](../c-runtime-library/reference/strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)|string.h|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ARM 內建](../intrinsics/arm-intrinsics.md)<br/>
-[x86 內建清單](../intrinsics/x86-intrinsics-list.md)<br/>
-[x64 (amd64) 內建清單](../intrinsics/x64-amd64-intrinsics-list.md)<br/>
+[ARM 內建函式](../intrinsics/arm-intrinsics.md)\
+[ARM64 內建函式](../intrinsics/arm64-intrinsics.md)\
+[x86 內建函式清單](../intrinsics/x86-intrinsics-list.md)\
+[x64 （amd64）內建函式清單](../intrinsics/x64-amd64-intrinsics-list.md)

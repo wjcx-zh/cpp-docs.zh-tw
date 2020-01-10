@@ -8,30 +8,30 @@ helpviewer_keywords:
 - parsing, command-line arguments
 - startup code, parsing command-line arguments
 ms.assetid: ffce8037-2811-45c4-8db4-1ed787859c80
-ms.openlocfilehash: da8a21ac9ff7ce4fd6bde4d2d1e50d8f30806b78
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ace6d1b8295d0901ef22f3c354b32ad17e296e87
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151204"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299087"
 ---
 # <a name="parsing-c-command-line-arguments"></a>剖析 C 命令列引數
 
-**Microsoft 專屬**
+**Microsoft 特定的**
 
 Microsoft C 啟動程式碼在解譯作業系統命令列所指定的引數時會使用下列規則：
 
 - 引數會以空白或定位鍵的泛空白字元 (White Space) 進行分隔。
 
-- 用雙引號括住的字串會被解譯成單一引數，不論其內是否包含空白字元。 有引號的字串可以內嵌到引數中。 請注意，插入號 (**^**) 不會被辨識為逸出字元或分隔符號。
+- 用雙引號括住的字串會被解譯成單一引數，不論其內是否包含空白字元。 有引號的字串可以內嵌到引數中。 請注意，插入號 ( **^** ) 不會被辨識為逸出字元或分隔符號。
 
-- 前面有反斜線 (**\\"**) 的雙引號會解譯為常值雙引號 (**"**)。
+- 前面有反斜線 ( **\\"** ) 的雙引號會解譯為常值雙引號 ( **"** )。
 
 - 反斜線會逐字解譯，除非後面緊接著雙引號。
 
-- 如果雙引號前面有偶數數目的反斜線，則會將每一對反斜線 (**\\\\**) 的其中一個反斜線 (**\\**) 放到 `argv` 陣列中，並將雙引號 (**"**) 解譯為字串分隔符號。
+- 如果雙引號前面有偶數數目的反斜線，則會將每一對反斜線 ( **\\\\** ) 的其中一個反斜線 ( **\\** ) 放到 `argv` 陣列中，並將雙引號 ( **"** ) 解譯為字串分隔符號。
 
-- 如果雙引號前面有奇數數目的反斜線，則會將每一對反斜線 (**\\\\**) 的其中一個反斜線 (**\\**) 放到 `argv` 陣列中，並且將雙引號解譯為剩餘反斜線的逸出序列，導致在 `argv` 中加入常值雙引號 (**"**)。
+- 如果雙引號前面有奇數數目的反斜線，則會將每一對反斜線 ( **\\\\** ) 的其中一個反斜線 ( **\\** ) 放到 `argv` 陣列中，並且將雙引號解譯為剩餘反斜線的逸出序列，導致在 `argv` 中加入常值雙引號 ( **"** )。
 
 這個清單示範數個命令列引數範例傳遞至 `argv` 的解譯結果，以說明上述規則。 第二、三和四欄所列的輸出取自清單之後的 ARGS.C 程式。
 
@@ -47,7 +47,7 @@ Microsoft C 啟動程式碼在解譯作業系統命令列所指定的引數時�
 
 ### <a name="code"></a>程式碼
 
-```
+```c
 // Parsing_C_Commandline_args.c
 // ARGS.C illustrates the following variables used for accessing
 // command-line arguments and environment variables:
@@ -95,8 +95,8 @@ Environment variables:
   WINDIR=c:\nt
 ```
 
-**結束 Microsoft 專屬**
+**END Microsoft 特定的**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [main 函式和程式執行](../c-language/main-function-and-program-execution.md)

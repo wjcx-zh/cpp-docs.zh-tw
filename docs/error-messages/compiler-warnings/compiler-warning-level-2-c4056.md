@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 2） C4056
+title: 編譯器警告（層級2） C4056
 ms.date: 11/04/2016
 f1_keywords:
 - C4056
 helpviewer_keywords:
 - C4056
 ms.assetid: a3c3a9b8-ec30-452d-96cb-3694adcce789
-ms.openlocfilehash: 59c66f2f7dcbd1e20463df613b1b7deae6a1c349
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20e7c2693c14c0ea05cc6f07f8dad4ce76c1ef5e
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349863"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052198"
 ---
-# <a name="compiler-warning-level-2-c4056"></a>編譯器警告 （層級 2） C4056
+# <a name="compiler-warning-level-2-c4056"></a>編譯器警告（層級2） C4056
 
-在浮點常數算術中溢位
+浮點常數算術中溢位
 
-浮點常數算術會產生超過允許的最大值的結果。
+浮點常數算術會產生超過最大可允許值的結果。
 
-這個警告可能因常數的算術運算期間執行的編譯器最佳化。 如果它就會消失時關閉最佳化，您可以放心忽略此警告 ([/Od](../../build/reference/od-disable-debug.md))。
+這項警告可能是在常數算術期間執行編譯器優化所造成。 如果您關閉優化（[/od](../../build/reference/od-disable-debug.md)），可以放心地忽略此警告。
 
-下列範例會產生 C4056:
+下列範例會產生 C4056：
 
-```
+```cpp
 // C4056.cpp
 // compile with: /W2 /LD
 #pragma warning (default : 4056)

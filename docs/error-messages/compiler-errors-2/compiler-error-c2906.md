@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2906
 ms.assetid: 30f652f1-6af6-4a2f-a69e-a1a4876cc8c6
-ms.openlocfilehash: 621b31cf362c1dcc740390cf9e405b7da3f05da8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf21c4f14948d56fe781226e5aaf1b479059cb55
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378514"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748693"
 ---
 # <a name="compiler-error-c2906"></a>編譯器錯誤 C2906
 
-'specialization': 明確特製化必須有 'template<>'
+' 特製化 '：明確特製化需要 ' template < > '
 
-您必須使用新語法的樣板的明確特製化。
+您必須使用新的語法來進行範本的明確特製化。
 
-下列範例會產生 C2906:
+下列範例會產生 C2906：
 
-```
+```cpp
 // C2906.cpp
 // compile with: /c
 template<class T> class X{};   // primary template

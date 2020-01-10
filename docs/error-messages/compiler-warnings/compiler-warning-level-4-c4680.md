@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4680
 ms.assetid: 6e043f4c-c601-4b77-8130-920cff1d912e
-ms.openlocfilehash: 9130fa2665452b85c5ec83eef0b3d1d618c995a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21ea9bf54a493a72dc24c607812eaed69f9ef71b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226865"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990466"
 ---
 # <a name="compiler-warning-level-4-c4680"></a>編譯器警告 (層級 4) C4680
 
-'class': coclass 不指定的預設介面。
+' class '： coclass 未指定預設介面
 
-A[預設](../../windows/default-cpp.md)類別已標記為未指定介面[coclass](../../windows/coclass.md)屬性。 為了讓才能發揮作用的物件，它必須實作的介面。
+未對標記了[coclass](../../windows/coclass.md)屬性的類別指定[預設](../../windows/default-cpp.md)介面。 為了讓物件有用，它必須執行介面。
 
-下列範例會產生 C4680:
+下列範例會產生 C4680：
 
-```
+```cpp
 // C4680.cpp
 // compile with: /W4
 #include <windows.h>

@@ -1,9 +1,9 @@
 ---
 title: _CrtSetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CrtSetAllocHook
 - CrtSetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtSetAllocHook function
 - CrtSetAllocHook function
 ms.assetid: 405df37b-2fd1-42c8-83bc-90887f17f29d
-ms.openlocfilehash: cfa466ec4bce6034c15a627ccab4ee4bb0ef8f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303f682b54abc5e44cb7fdd4c89012dd9913288b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347398"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938489"
 ---
-# <a name="crtsetallochook"></a>_CrtSetAllocHook
+# <a name="_crtsetallochook"></a>_CrtSetAllocHook
 
 將用戶端定義的配置函式連結到 C 執行階段偵錯記憶體配置處理序，以進行安裝 (僅限偵錯版本)。
 
@@ -48,13 +51,13 @@ _CRT_ALLOC_HOOK _CrtSetAllocHook(
 
 ## <a name="return-value"></a>傳回值
 
-傳回先前定義的配置攔截函式，或是**NULL**如果*allocHook*會**NULL**。
+傳回先前定義的配置攔截函式，如果*allocHook*為**null**，則傳回**null** 。
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetAllocHook**可讓應用程式將自己的配置函式連結到 C 執行階段偵錯程式庫記憶體配置處理序。 因此，每次呼叫偵錯配置函式以配置、重新配置或釋放記憶體區塊，都會觸發對應用程式攔截函式的呼叫。 **_CrtSetAllocHook**應用程式提供簡單的方法來測試應用程式如何處理記憶體不足的情況下，檢查配置模式，以及記錄配置資訊以供稍後的機會的能力分析。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtSetAllocHook**會在前置處理期間移除。
+**_CrtSetAllocHook**可讓應用程式將自己的配置函式連結到 C 執行時間的 debug 程式庫記憶體配置進程。 因此，每次呼叫偵錯配置函式以配置、重新配置或釋放記憶體區塊，都會觸發對應用程式攔截函式的呼叫。 **_CrtSetAllocHook**提供一個簡單的方法，讓您測試應用程式如何處理記憶體不足的情況、檢查配置模式的能力，以及記錄配置資訊以供稍後分析的機會。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtSetAllocHook**的呼叫。
 
-**_CrtSetAllocHook**函式會安裝新的用戶端定義配置函式中指定*allocHook*並傳回先前定義的攔截函式。 下列範例示範用戶端定義的配置攔截程序應如何設計原型：
+**_CrtSetAllocHook**函數會安裝*allocHook*中指定的新用戶端定義配置函式，並傳回先前定義的攔截函數。 下列範例示範用戶端定義的配置攔截程序應如何設計原型：
 
 ```C
 int YourAllocHook( int allocType, void *userData, size_t size,
@@ -62,20 +65,20 @@ int YourAllocHook( int allocType, void *userData, size_t size,
                    const unsigned char *filename, int lineNumber);
 ```
 
-**AllocType**引數指定的配置作業類型 (**_HOOK_ALLOC**， **_HOOK_REALLOC**，以及 **_HOOK_FREE**)，觸發配置攔截函式的呼叫。 當觸發的配置類型是 **_HOOK_FREE**， *userData*是即將要釋放的記憶體區塊的使用者資料區段的指標。 不過，當觸發的配置類型是 **_HOOK_ALLOC**或是 **_HOOK_REALLOC**， *userData*是**NULL**因為記憶體區塊具有尚未配置。
+**AllocType**引數會指定觸發呼叫配置攔截函式的配置作業類型（ **_HOOK_ALLOC**、 **_HOOK_REALLOC**和 **_HOOK_FREE**）。 當觸發的配置類型是 **_HOOK_FREE**時， *userData*是記憶體區塊的使用者資料區段的指標，即將釋放出來。 不過，當觸發的配置類型是 **_HOOK_ALLOC**或 **_HOOK_REALLOC**時， *userData*是**Null** ，因為尚未配置記憶體區塊。
 
-*大小*指定的記憶體大小區塊以位元組為單位*blockType*指出的記憶體區塊類型*requestNumber*是物件配置順序編號，記憶體區塊中，而且，如果的話*檔名*並**lineNumber**指定原始程式檔名和行號何處起始觸發之配置作業。
+*size*指定記憶體區塊的大小（以位元組為單位）， *blockType*表示記憶體區塊的類型， *requestNumber*是記憶體區塊的物件配置順序編號，如果可用的話， *filename*和**lineNumber**指定起始觸發配置作業的來原始檔案名和行號。
 
-攔截函式完成處理之後，必須傳回布林值，以指示主要 C 執行階段配置處理序如何繼續執行。 當攔截函式想要的主要配置處理序，以做為繼續執行，如果從未呼叫攔截函式，則攔截函式應傳回 **，則為 TRUE**。 這會導致執行原始觸發的配置作業。 攔截函式可以利用這項實作來收集和儲存配置資訊以供稍後分析，而不會干擾目前的配置作業或偵錯堆積的狀態。
+攔截函式完成處理之後，必須傳回布林值，以指示主要 C 執行階段配置處理序如何繼續執行。 當攔截函式想要讓主要配置進程繼續執行，如同從未呼叫過攔截函式一樣，攔截函式應該會傳回**TRUE**。 這會導致執行原始觸發的配置作業。 攔截函式可以利用這項實作來收集和儲存配置資訊以供稍後分析，而不會干擾目前的配置作業或偵錯堆積的狀態。
 
-當攔截函式想要以方式繼續執行，如果呼叫觸發之配置作業，而且它失敗，則攔截函式應傳回主要配置處理序**FALSE**。 攔截函式可以利用這項實作來模擬各種不同的記憶體情況，並偵錯堆積狀態以測試應用程式如何處理每種情況。
+當攔截函式想要讓主要配置進程繼續執行，如同呼叫觸發配置作業且失敗時，攔截函式應該會傳回**FALSE**。 攔截函式可以利用這項實作來模擬各種不同的記憶體情況，並偵錯堆積狀態以測試應用程式如何處理每種情況。
 
-若要清除攔截函式，傳遞**NULL**要 **_CrtSetAllocHook**。
+若要清除攔截函式，請將**Null**傳遞給 **_CrtSetAllocHook**。
 
-如需有關如何 **_CrtSetAllocHook**可以搭配其他記憶體管理函式或如何撰寫您自己的用戶端定義攔截函式，請參閱[偵錯攔截函式撰寫](/visualstudio/debugger/debug-hook-function-writing)。
+如需如何搭配其他記憶體管理函式使用 **_CrtSetAllocHook** ，或如何撰寫您自己的用戶端定義攔截函數的詳細資訊，請參閱[Debug 攔截函數寫入](/visualstudio/debugger/debug-hook-function-writing)。
 
 > [!NOTE]
-> **_CrtSetAllocHook**下，不支援 **/clr: pure**。 **/Clr: pure**並 **/clr: safe**編譯器選項是 Visual Studio 2015 中已被取代，以及在 Visual Studio 2017 中移除。
+> **/Clr： pure**下不支援 **_CrtSetAllocHook** 。 **/Clr： pure**和 **/clr： safe**編譯器選項在 Visual Studio 2015 中已被取代，並已在 Visual Studio 2017 中移除。
 
 ## <a name="requirements"></a>需求
 
@@ -91,7 +94,7 @@ int YourAllocHook( int allocType, void *userData, size_t size,
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例 **_CrtSetAllocHook**，請參閱[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
+如需如何使用 **_CrtSetAllocHook**的範例，請參閱[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,6 +1,6 @@
 ---
-title: conform
-ms.date: 11/04/2016
+title: conform pragma
+ms.date: 08/29/2019
 f1_keywords:
 - conform_CPP
 - vc-pragma.conform
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 816ff85bb19f549c6ea072073bd89fcd503545f2
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366755"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220494"
 ---
-# <a name="conform"></a>conform
-**C++特定**
+# <a name="conform-pragma"></a>conform pragma
 
-指定的執行階段行為[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。
+**C++特殊**
+
+指定[/zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項的執行時間行為。
 
 ## <a name="syntax"></a>語法
 
-> **#pragma conform(** *name* [**, show** ] [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
+> **#pragma 符合 (** *name* [ **, show** ] [ **,** { **on**  |  **off** }] [[ **,** { **push**  |  **pop** }] [ **,** *identifier* [ **,** { **on** **off}** ]  | ] ] **)**
 
 ### <a name="parameters"></a>參數
 
-*name*<br/>
-指定要修改的編譯器選項名稱。 唯一有效*名稱*是`forScope`。
+*檔案名*\
+指定要修改的編譯器選項名稱。 唯一有效的*名稱*是`forScope`。
 
-**show**<br/>
-（選擇性）導致目前的設定*名稱*（true 或 false），在編譯期間透過警告訊息顯示。 例如， `#pragma conform(forScope, show)` 。
+**出現**\
+選擇性導致在編譯期間以警告訊息來顯示*名稱*(true 或 false) 的目前設定。 例如： `#pragma conform(forScope, show)` 。
 
-**在 **，**關閉**<br/>
-（選擇性）設定*名稱*要**上**讓[/zc: forscope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。 預設值是**關閉**。
+**開啟**、**關閉**\
+選擇性將 [*名稱*] 設定為**on 時**, 會啟用[/zc: forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md)編譯器選項。 預設值為**off**。
 
-**push**<br/>
-（選擇性）將推入的目前值*名稱*至內部編譯器堆疊。 如果您指定*識別碼*，您可以指定**上**或是**關閉**值*名稱*推送至堆疊。 例如， `#pragma conform(forScope, push, myname, on)` 。
+**式**\
+選擇性將*名稱*的目前值推送至內部編譯器堆疊。 如果您指定 [*識別碼*], 您可以指定 [開啟] 或 [**關閉**] 值, 以將其推送到堆疊**上**。 例如： `#pragma conform(forScope, push, myname, on)` 。
 
-**pop**<br/>
-（選擇性）設定的值*名稱*頂端的內部編譯器堆疊，然後從堆疊中推出的值。 如果指定的識別項，但**pop**，將會推出堆疊，直到它找到的記錄*識別項*，這也會從; 的目前值*名稱*中在堆疊上的下一筆記錄會變成的新值*名稱*。 如果您指定**pop**具有*識別項*不在堆疊上，記錄**pop**會被忽略。
+**提示**\
+選擇性將 [*名稱*] 的值設定為內部編譯器堆疊頂端的值, 然後彈出堆疊。 如果指定了識別碼與**pop**, 堆疊就會快顯回來, 直到找到具有*識別碼*的記錄 (也會將它快顯) 為止。堆疊上下一筆記錄中的 [*名稱*] 目前值會變成 [*名稱*] 的新值。 如果您指定的**pop** *識別碼*不在堆疊的記錄中, 則會忽略**pop** 。
 
-*identifier*<br/>
-（選擇性）可以是隨附**推播**或是**pop**命令。 如果*識別碼*使用時，則**上**或是**關閉**規範也可以使用。
+*標識*\
+選擇性可以包含在**push**或**pop**命令中。 如果使用了*identifier* , 則也可以使用**on**或**off**規範。
 
 ## <a name="example"></a>範例
 
@@ -65,4 +66,4 @@ int main() {}
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

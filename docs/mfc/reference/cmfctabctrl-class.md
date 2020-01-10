@@ -1,6 +1,6 @@
 ---
 title: CMFCTabCtrl Class
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 442860b1751591c5763a768f9bd9b6ba59f33fa5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 74f5c6e0471682a6b96e82cb2f80cc53155866ca
+ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69504878"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70108493"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -846,7 +846,7 @@ BOOL ModifyTabStyle(Style style);
 
 *Style*參數的值可以是下列`CMFCTabCtrl::Style`其中一個列舉。
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
 |STYLE_3D|顯示有圓角的三維矩形索引標籤。|
 |STYLE_3D_ONENOTE|顯示3d 索引標籤, 其中有一個垂直邊和一個傾斜邊, 而且有圓角。|
@@ -970,7 +970,7 @@ virtual BOOL SetActiveTab(int iTab);
 
 ### <a name="remarks"></a>備註
 
-這個方法不會將 AFX_WM_CHANGE_ACTIVE_TAB 通知傳送至索引標籤控制項的父視窗。
+這會將`AFX_WM_CHANGE_ACTIVE_TAB`通知傳送至父視窗和 [索引標籤] 控制項的父系框架。
 
 方法會自動呼叫[CMFCTabCtrl:: HideActiveWindowHorzScrollBar](#hideactivewindowhorzscrollbar)方法, 以防止螢幕閃爍。 `SetActiveTab`
 

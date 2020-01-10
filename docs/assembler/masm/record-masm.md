@@ -1,26 +1,27 @@
 ---
 title: RECORD (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - RECORD
 helpviewer_keywords:
 - RECORD directive
 ms.assetid: c83db394-0fe3-468f-813f-13302cdc862d
-ms.openlocfilehash: 6464445975a84968dab79cfafc9c948337c9e5ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9cbf2c487ab3dd3026b57f7b058a0dd852bed41
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217128"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318510"
 ---
-# <a name="record-masm"></a>RECORD (MASM)
+# <a name="record"></a>RECORD
 
-宣告記錄類型，其中包含指定的欄位。 *fieldname*名稱 欄位中，*寬度*指定位元為單位的數目並*運算式*提供其初始值。
+宣告包含指定欄位的記錄類型。 *fieldname*會將欄位命名為， *width*會指定位的數目，而*expression*會提供其初始值。
 
 ## <a name="syntax"></a>語法
 
-> *recordname*記錄*fieldname*:*寬度*[[=*運算式*]] [[， *fieldname*:*寬度*[[=*運算式*]]]]...
+> *recordname* **記錄** *fieldname* __：__ *width* ⟦ __=__ *expression*⟧⟦ __，__ *fieldname* __：__ *width* ⟦ __=__ *expression*⟧ .。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

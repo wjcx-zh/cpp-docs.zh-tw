@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: aca5cc90566fb1fa602b96568d4cda9dd5ab26b9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68241828"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688869"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>參數
 
-*TN*\
+*TN* \
 第 N 個 tuple 項目類型。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述可儲存 n 名的物件型別的`T1`， `T2`，...，`TN`分別，其中`0 <= N <= Nmax`。 元組執行個體的範圍`tuple<T1, T2, ..., TN>`是數字`N`樣板引數。 樣板引數的索引`Ti`，而且該類型之對應預存值`i - 1`。 因此，我們數字中的類型從 1 到 N 這份文件，而對應的索引值的範圍是從 0 to N – 1。
+類別範本會描述一個物件，其會分別儲存類型為 `T1`、`T2`、...、`TN` 的 N 個物件，其中 `0 <= N <= Nmax`。 元組實例 `tuple<T1, T2, ..., TN>` 的範圍是其範本引數的 `N` 數目。 範本引數的索引 `Ti` 和該類型的對應預存值 `i - 1`。 因此，雖然我們在此檔中將類型從1到 N，但對應的索引值的範圍是從0到 N-1。
 
 ## <a name="example"></a>範例
 
@@ -116,7 +116,7 @@ The tuples in the vector are
 ( 3, 0.033, three ).
 ```
 
-## <a name="op_eq"></a> 運算子 =
+## <a name="op_eq"></a>operator =
 
 指派 `tuple` 物件。
 
@@ -140,12 +140,12 @@ template <class U1, class U2>
 *取消*\
 第 N 個複製的元組項目類型。
 
-*權限*\
+*right* \
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 
-前兩個成員運算子將指派的項目*右*的對應項目至`*this`。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
+前兩個成員運算子會將*右邊*的元素指派給 `*this` 的對應元素。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
 
 其餘的成員運算子都類似上述的運算子，但具有[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -198,7 +198,7 @@ int main()
 x 4
 ```
 
-## <a name="tuple_swap"></a> 交換
+## <a name="tuple_swap"></a>調換
 
 交換兩個 tuple 的元素。
 
@@ -209,17 +209,17 @@ template <class... Types>
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
-其項目要與 tuple 交換的 tuple*右*。
+*左方*\
+其專案要與元組*許可權*交換的元組。
 
-*權限*\
-其項目要與 tuple 交換的 tuple*左*。
+*right* \
+元組，其專案要與*剩餘*的元組交換。
 
 ### <a name="remarks"></a>備註
 
 此函式會執行 `left.swap(right)`。
 
-## <a name="tuple"></a> 元組
+## <a name="tuple"></a>構成
 
 建構 `tuple` 物件。
 
@@ -249,7 +249,7 @@ template <class U1, class U2>
 *取消*\
 第 N 個複製的元組項目類型。
 
-*權限*\
+*right* \
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
@@ -258,7 +258,7 @@ template <class U1, class U2>
 
 第二個建構函式會建構其項目複製建構自引數 `P1`、`P2`、...、`PN` 的物件，其中每個 `Pi` 會初始化索引 `i - 1` 處的項目。
 
-第三個和第四個建構函式會建構其項目是複製建構自的對應項目物件*右*。
+第三個和第四個函式會建立物件，其專案是從*右邊*的對應元素所構成。
 
 第五個建構函式會建構其索引 0 處的項目複製建構自 `right.first`，而其索引 1 處的項目複製建構自 `right.second` 的物件。
 

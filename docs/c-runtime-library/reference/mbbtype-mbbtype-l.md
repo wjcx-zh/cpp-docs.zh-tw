@@ -1,10 +1,10 @@
 ---
 title: _mbbtype、_mbbtype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbbtype
 - _mbbtype_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbbtype_l
 - mbbtype
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba4311921a0924d3f447feb1929a81ae1d816604
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156885"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952728"
 ---
-# <a name="mbbtype-mbbtypel"></a>_mbbtype、_mbbtype_l
+# <a name="_mbbtype-_mbbtype_l"></a>_mbbtype、_mbbtype_l
 
 根據上一個位元組傳回位元組類型。
 
@@ -69,23 +72,23 @@ int _mbbtype_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_mbbtype**傳回字串中的位元組類型。 這項決策是內容相關性，所指定的值所*型別*，以提供控制項測試條件。 *型別*是一個位元組的字串中的型別。 下表中的資訊清單常數定義於 Mbctype.h。
+**_mbbtype**會傳回字串中的位元組類型。 這項決定是由*類型*的值所指定，以提供控制項測試條件，這是內容相關的。 *類型*是字串中前一個位元組的類型。 下表中的資訊清單常數定義於 Mbctype.h。
 
-|值*類型*|**_mbbtype**測試|傳回值|*C*|
+|*類型*的值|**_mbbtype**測試|傳回值|*C*|
 |---------------------|--------------------------|------------------|---------|
-|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_SINGLE** (0)|單一位元組 (0x20-0x7E、 0xA1-0xDF)|
-|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_LEAD** (1)|多位元組字元的前導位元組 (0x81-0x9F、 0xE0-0xFC)|
-|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_ILLEGAL**<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E 和 0xA1-0xDF、 介於 0x81-0x9F、 0xE0-0xFC|
-|1|有效的後隨位元組|**_MBC_TRAIL** (2)|結尾的多位元組字元位元組 (0x40-0x7E、 0x80-0xFC)|
-|1|有效的後隨位元組|**_MBC_ILLEGAL**<br /><br /> ( -1)|無效的字元 (任何值除了 0x20-0x7E 和 0xA1-0xDF、 介於 0x81-0x9F、 0xE0-0xFC|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_SINGLE** (0)|單一位元組（0x20-0x7E，0xA1-0xDF）|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_LEAD**SHA-1|多位元組字元的前導位元組（0x81-0x9F、0xE0-0xFC）|
+|1 以外的任何值|有效的單一位元組或前導位元|**_MBC_ILLEGAL**<br /><br /> ( -1)|不正確字元（除了 0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC 以外的任何值|
+|1|有效的後隨位元組|**_MBC_TRAIL**2|多位元組字元的尾端位元組（0x40-0x7E、0x80-0xFC）|
+|1|有效的後隨位元組|**_MBC_ILLEGAL**<br /><br /> ( -1)|不正確字元（除了 0x20-0x7E、0xA1-0xDF、0x81-0x9F、0xE0-0xFC 以外的任何值|
 
 ## <a name="remarks"></a>備註
 
-**_Mbbtype**函式會判斷多位元組字元的位元組類型。 如果值*型別*為 1 以外的任何值 **_mbbtype**測試多位元組字元的有效單一位元組或前導位元組。 如果值*型別*為 1，這 **_mbbtype**針對多位元組字元的有效的後隨位元組進行測試。
+**_Mbbtype**函數會判斷多位元組字元中的位元組類型。 如果*類型*的值是1以外的任何值， **_mbbtype**會測試多位元組字元的有效單一位元組或前導位元組。 如果*類型*的值為1，則 **_mbbtype**會測試多位元組字元的有效後隨位元組。
 
-輸出值的設定會影響**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 **_Mbbtype**此函式版本會針對地區設定相關行為; 使用目前的地區設定 **_mbbtype_l**版本也一樣，只不過它會改用傳入的地區設定參數. 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的**LC_CTYPE**分類設定影響;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 此函式的 **_mbbtype**版本會針對此與地區設定相關的行為使用目前的地區設定; **_mbbtype_l**版本相同，不同之處在于它會改用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在舊版中， **_mbbtype**名為**chkctype**。 對於新的程式碼，使用 **_mbbtype**改。
+在舊版中， **_mbbtype**的名稱為**chkctype**。 針對新的程式碼，請改用 **_mbbtype** 。
 
 ## <a name="requirements"></a>需求
 

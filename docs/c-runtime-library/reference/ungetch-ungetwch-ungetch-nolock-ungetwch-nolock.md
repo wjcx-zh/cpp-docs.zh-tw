@@ -1,12 +1,12 @@
 ---
 title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ungetch_nolock
 - ungetwch
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268867"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945913"
 ---
-# <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
+# <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
 推送回讀取自主控台的最後一個字元。
 
@@ -82,11 +85,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>傳回值
 
-這兩個函式會傳回字元*c*如果成功。 如果沒有發生錯誤時， **_ungetch**會傳回值**EOF**並 **_ungetwch**傳回**WEOF**。
+如果成功，這兩個函數都會傳回*c*字元。 如果發生錯誤， **_ungetch**會傳回**EOF**的值，而 **_ungetwch**會傳回**WEOF**。
 
 ## <a name="remarks"></a>備註
 
-這些函式推播字元*c*回到主控台中，造成*c*要讀取的下一個字元 **_getch**或是 **_getche** （或 **_getwch**或是 **_getwche**)。 **_ungetch**並 **_ungetwch**如果它們會在下次讀取之前多次呼叫失敗。 *c*可能不到引數**EOF** (或**WEOF**)。
+這些函式會將字元*c*推送回到主控台，使*c*成為 **_getch**或 **_getche** （或 **_getwch**或 **_getwche**）所讀取的下一個字元。 如果 **_ungetch**和 **_ungetwch**在下一次讀取之前被呼叫多次，就會失敗。 *C*引數不可以是**EOF** （或**WEOF**）。
 
 具有 **_nolock** 後置字元的版本與其相同，不同之處在於不受保護，不能免於其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
@@ -101,8 +104,8 @@ wint_t _ungetwch_nolock(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_ungetch**， **_ungetch_nolock**|\<conio.h>|
-|**_ungetwch**， **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
+|**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
+|**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

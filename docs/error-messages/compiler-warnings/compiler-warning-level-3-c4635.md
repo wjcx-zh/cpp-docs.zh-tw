@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4635
 ms.assetid: b2ba90de-c093-4a76-8076-b65878467574
-ms.openlocfilehash: 21873a883b19924ce3ef41511d65f8ae640875f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd3bf6c1b14c6dae8e2fa95a54e2d4fbc4f295c5
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401718"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991846"
 ---
 # <a name="compiler-warning-level-3-c4635"></a>編譯器警告 (層級 3) C4635
 
@@ -21,7 +21,7 @@ XML 文件註解目標: XML 格式錯誤: 原因
 
 下列範例會產生 C4635：
 
-```
+```cpp
 // C4635.cpp
 // compile with: /doc /clr /W3 /c
 /// <summary>
@@ -33,6 +33,6 @@ XML 文件註解目標: XML 格式錯誤: 原因
 public ref class Test {};
 ```
 
-請注意，此範例的輸出顯示：**結束標記 'member' 與起始標籤 'summary' 不相符。**
+請注意，這個範例的輸出顯示： **結束標記 'member' 與起始標籤 'summary' 不對稱。**
 
-此範例的問題是結束標記\<摘要 > 格式不正確，而且編譯器無法辨認為\<摘要 > 結束標記。  \<成員 > 標記內嵌於.xdc 檔案中的每個 /doc 編譯中的編譯器。  因此，此處的問題在於結束標記\</member >，不符合先前的開始標記編譯器處理 (\<摘要 >。
+這個範例的問題是，\<摘要 > 的結束標記格式不正確，而且編譯器無法將它辨識為 \<摘要 > 結束標記。  \<成員 > 標記是由編譯器在每個/doc 編譯中內嵌于 .xdc 檔案中。  因此，此處的問題在於，\</member > 的結束標記不符合編譯器處理的上一個開始標記（\<摘要 >。

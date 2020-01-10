@@ -1,9 +1,9 @@
 ---
 title: rand
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - rand
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rand
 helpviewer_keywords:
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-ms.openlocfilehash: 868c6239ac1b86dfc9ac72cc8cc83d1ba3002b4a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6042ab917083cf4131c16012b84afbbe43a7d834
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357768"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949546"
 ---
 # <a name="rand"></a>rand
 
-使用已知且完全可重現的演算法，以產生亂數。 此函式程式設計更安全版本可用;請參閱[rand_s](rand-s.md)。 所產生的數字**rand**是不安全的密碼編譯。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)中所宣告的函式或C++中的標準程式庫[\<隨機 >](../../standard-library/random.md)。
+使用已知且完全可重現的演算法，產生偽虛擬數位。 此函式有更具程式設計的安全版本可供使用;請參閱[rand_s](rand-s.md)。 **Rand**所產生的數位不會以密碼編譯方式保護。 如需更多密碼編譯安全的亂數字產生，請使用[rand_s](rand-s.md)或C++在標準程式庫中以[ \<隨機 >](../../standard-library/random.md)宣告的函式。
 
 ## <a name="syntax"></a>語法
 
@@ -45,13 +48,13 @@ int rand( void );
 
 ## <a name="return-value"></a>傳回值
 
-**rand**傳回虛擬亂數，如上所述。 不會傳回錯誤。
+**rand**會傳回亂數字，如上所述。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-**Rand**函式會傳回虛擬隨機整數的範圍介於 0 到**RAND_MAX** (32767)。 使用[srand](srand.md)函式，來植入亂數產生器，然後再呼叫**rand**。
+**Rand**函數會傳回0到**RAND_MAX** （32767）範圍內的隨機整數。 呼叫**rand**之前，請先使用[srand](srand.md)函數來植入亂數產生器。
 
-**Rand**函式會產生熟知的順序，並不適合做為密碼編譯的函式。 多個密碼編譯安全的亂數產生，請使用[rand_s](rand-s.md)中所宣告的函式或C++中的標準程式庫[\<隨機 >](../../standard-library/random.md)。 如需何不妥**rand**以及如何\<隨機 > 解決這些缺點，請參閱這段影片中標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)。
+**Rand**函式會產生知名的順序，而不適合當做密碼編譯功能使用。 如需更多密碼編譯安全的亂數字產生，請使用[rand_s](rand-s.md)或C++在標準程式庫中以[ \<隨機 >](../../standard-library/random.md)宣告的函式。 如需**rand**問題的相關資訊，以及隨機\<> 如何解決這些缺點，請參閱這段標題為[rand 視為有害](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)的影片。
 
 ## <a name="requirements"></a>需求
 

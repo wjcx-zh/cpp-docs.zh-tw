@@ -1,29 +1,30 @@
 ---
 title: 啟用和停用提供者的服務
-ms.date: 10/29/2018
+ms.date: 07/30/2019
 helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: d91f08accf1a8be69f63d6bbcaa4c620d68c1077
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a74f8a8b099a30cf25007547e8059c77728435f9
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175435"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "70311812"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>啟用和停用提供者的服務
 
-個別的 OLE DB 服務可以啟用或停用存取單一提供者的所有應用程式的預設值。 這是藉由新增提供者的 CLSID 下 OLEDB_SERVICES 登錄項目使用 DWORD 值，指定要啟用或停用的服務下, 表所示。
+所有存取單一提供者的應用程式，預設都可以啟用或停用個別 OLE DB 服務。 這是藉由在提供者的 CLSID 底下新增 OLEDB_SERVICES 登錄專案來完成，其中包含指定要啟用或停用服務的 DWORD 值，如下表所示。
 
-|預設啟用的服務|關鍵字的值|
+|預設服務已啟用|DWORD 值|
 |------------------------------|-------------------|
-|所有服務 （預設值）|0xffffffff|
-|集區以外的所有與自動編列|0xfffffffe|
-|用戶端資料指標的全部項目|0xfffffffb|
-|以外所有集區，自動編列和用戶端資料指標|0xfffffff0|
+|除了用戶端資料指標和共用以外的所有服務|0xfffffffa|
+|用戶端資料指標以外的所有服務|0xfffffffb|
+|共用和自動登記以外的所有服務|0xfffffffc|
+|共用以外的所有服務|0xfffffffe|
+|所有服務（預設值）|0xffffffff|
 |沒有服務|0x00000000|
-|沒有彙總，所有服務已停用|\<遺漏金鑰 >|
+|沒有匯總，已停用所有服務|沒有 OLEDB_Services 登錄專案|
 
 ## <a name="see-also"></a>另請參閱
 

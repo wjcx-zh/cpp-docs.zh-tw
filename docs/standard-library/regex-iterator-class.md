@@ -16,14 +16,14 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-ms.openlocfilehash: ccf806a7918100c58e04ab403f3a8b895e8dc256
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: fb609df2bf52873dac3cddaa6b12f82ea1b53237
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451564"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689080"
 ---
-# <a name="regexiterator-class"></a>regex_iterator 類別
+# <a name="regex_iterator-class"></a>regex_iterator 類別
 
 相符項目的迭代器類別。
 
@@ -38,18 +38,18 @@ class regex_iterator
 
 ## <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 子相符項目的迭代器類型。
 
-*Elem*\
+*Elem* \
 要符合之項目的類型。
 
-*RXtraits*\
+*RXtraits* \
 項目的 Traits 類別。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述常數正向迭代器物件。 它會將其規則運算式物件 `match_results<BidIt>` 重複套用至迭代器範圍 `*pregex` 所定義的字元序列，藉以擷取 `[begin, end)`類型的物件。
+類別範本會描述常數正向反覆運算器物件。 它會將其規則運算式物件 `match_results<BidIt>` 重複套用至迭代器範圍 `*pregex` 所定義的字元序列，藉以擷取 `[begin, end)`類型的物件。
 
 ### <a name="constructors"></a>建構函式
 
@@ -57,7 +57,7 @@ class regex_iterator
 |-|-|
 |[regex_iterator](#regex_iterator)|建構迭代器。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -65,7 +65,7 @@ class regex_iterator
 |[iterator_category](#iterator_category)|迭代器分類的類型。|
 |[pointer](#pointer)|要比對的指標類型。|
 |[reference](#reference)|對應的參考類型。|
-|[regex_type](#regex_type)|要比對的規則運算式類型。|
+|[RegEx_type](#regex_type)|要比對的規則運算式類型。|
 |[value_type](#value_type)|相符項目的類型。|
 
 ### <a name="operators"></a>運算子
@@ -82,7 +82,7 @@ class regex_iterator
 
 **標頭︰** \<regex>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="examples"></a>範例
 
@@ -147,7 +147,7 @@ typedef std::ptrdiff_t difference_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `std::ptrdiff_t` 的同義字。
+此類型是 `std::ptrdiff_t`的同義字。
 
 ## <a name="iterator_category"></a>  regex_iterator::iterator_category
 
@@ -159,7 +159,7 @@ typedef std::forward_iterator_tag iterator_category;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `std::forward_iterator_tag` 的同義字。
+此類型是 `std::forward_iterator_tag`的同義字。
 
 ## <a name="op_neq"></a>  regex_iterator::operator!=
 
@@ -171,12 +171,12 @@ bool operator!=(const regex_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
-成員函式會傳回 `!(*this == right)`。
+此成員函式會傳回 `!(*this == right)`。
 
 ## <a name="op_star"></a>  regex_iterator::operator*
 
@@ -215,12 +215,12 @@ bool operator==(const regex_iterator& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要比較的迭代器。
 
 ### <a name="remarks"></a>備註
 
-`*this`如果和*right*都是序列結尾`begin == right.begin`反覆運算`pregex == right.pregex`器, 或如果兩者都不是序列結尾反覆運算器和、 `end == right.end`、和`flags == right.flags`, 則成員函式會傳回 true。 否則會傳回 false。
+如果 `*this` 和*right*都是序列結尾反覆運算器，或如果兩者都不是序列結束項和 `begin == right.begin`、`end == right.end`、`pregex == right.pregex` 和 `flags == right.flags`，則成員函式會傳回 true。 否則會傳回 false。
 
 ## <a name="op_arrow"></a>  regex_iterator::operator-&gt;
 
@@ -244,7 +244,7 @@ typedef match_results<BidIt> *pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `match_results<BidIt>*`同義，其中 `BidIt` 是範本參數。
+此類型與 `match_results<BidIt>*`同義，其中 `BidIt` 是樣板參數。
 
 ## <a name="reference"></a>  regex_iterator::reference
 
@@ -256,7 +256,7 @@ typedef match_results<BidIt>& reference;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `match_results<BidIt>&`同義，其中 `BidIt` 是範本參數。
+此類型與 `match_results<BidIt>&`同義，其中 `BidIt` 是樣板參數。
 
 ## <a name="regex_iterator"></a>  regex_iterator::regex_iterator
 
@@ -273,21 +273,21 @@ regex_iterator(BidIt first,
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要比對的序列開頭。
 
-*次*\
+*上次*\
 要比對的序列結尾。
 
 *重新*\
 比對的規則運算式。
 
-*f*\
+*f* \
 比對的旗標。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建構結束序列 (end-of-sequence) 迭代器。 第二個函式會使用`begin` *first* `end` 、預存值 (*最後一個* `pregex` )、儲存`flags`的值`&re`和儲存的值 (含*f*) 來初始化預存值。 然後呼叫 `regex_search(begin, end, match, *pregex, flags)`。 如果搜尋失敗，此運算子便會將物件設定為結束序列迭代器。
+第一個建構函式會建構結束序列 (end-of-sequence) 迭代器。 第二個處理函式會初始化預存值，`begin`*第一個*，儲存的值 `end`*最後一個*，儲存的值 `pregex` `&re`，而儲存的值 `flags` 使用*f*。 然後呼叫 `regex_search(begin, end, match, *pregex, flags)`。 如果搜尋失敗，此運算子便會將物件設定為結束序列迭代器。
 
 ## <a name="regex_type"></a>  regex_iterator::regex_type
 
@@ -299,7 +299,7 @@ typedef basic_regex<Elem, RXtraits> regex_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是 `basic_regex<Elem, RXtraits>`的同義字。
+此 typedef 是 `basic_regex<Elem, RXtraits>` 的同義字。
 
 ## <a name="value_type"></a>  regex_iterator::value_type
 
@@ -311,16 +311,16 @@ typedef match_results<BidIt> value_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與 `match_results<BidIt>`同義，其中 `BidIt` 是範本參數。
+此類型與 `match_results<BidIt>`同義，其中 `BidIt` 是樣板參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<regex>](../standard-library/regex.md)\
-[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
-[RegEx_error 類別](../standard-library/regex-error-class.md)\
-[\<RegEx > 函式](../standard-library/regex-functions.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[Regex_constants 類別](../standard-library/regex-constants-class.md)\
+[Regex_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函數](../standard-library/regex-functions.md)\
+[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
 [\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 類別](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

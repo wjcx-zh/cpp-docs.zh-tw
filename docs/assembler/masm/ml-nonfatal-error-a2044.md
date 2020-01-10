@@ -1,25 +1,25 @@
 ---
 title: ML 非嚴重錯誤 A2044
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2044
 helpviewer_keywords:
 - A2044
 ms.assetid: 7cf144ac-408c-4e35-9a15-38656a4e87cd
-ms.openlocfilehash: 2c0d3f0f145acc80079f2263723ad42da89105eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4635520916a8bc6d18d7cb44735b6ececbd8d437
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177431"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317002"
 ---
 # <a name="ml-nonfatal-error-a2044"></a>ML 非嚴重錯誤 A2044
 
-**檔案中的字元無效**
+**檔案中有不正確字元**
 
-原始程式檔包含註解、 字串以外的字元或常值，無法辨識為操作員或其他合法的字元。
+來源檔案包含批註、字串或常值以外的字元，但無法辨識為操作員或其他合法字元。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

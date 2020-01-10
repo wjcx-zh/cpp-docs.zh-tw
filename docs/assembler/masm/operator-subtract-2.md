@@ -1,6 +1,6 @@
 ---
-title: 運算子-
-ms.date: 08/30/2018
+title: 運算子 -
+ms.date: 12/17/2019
 f1_keywords:
 - operator -
 helpviewer_keywords:
@@ -9,23 +9,24 @@ helpviewer_keywords:
 - operators [MASM], subtraction
 - arithmetic operators [C++], subtraction
 ms.assetid: 474607cb-e48d-4c91-bef6-91ff0971d5cf
-ms.openlocfilehash: 4046123a43e8bf0fe6831a7d51820501830e8dc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d8556e0f95be1988dac4dc011259ed5b81876ba
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176313"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318835"
 ---
-# <a name="operator--"></a>運算子-
+# <a name="operator--"></a>運算子 -
 
-傳回*expression1*減去*expression2*。 第二個運算子會反轉的正負號*運算式*。
+傳回*運算式*2 *-2*：//。 第二個運算子會反轉*運算式*的正負號。
 
 ## <a name="syntax"></a>語法
 
-> *expression1* - *expression2*
+> *運算式*2 **-** *運算式*2
 >
-> -*expression*
+> __-__ *運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

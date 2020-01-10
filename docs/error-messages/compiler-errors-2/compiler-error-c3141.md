@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3141
 ms.assetid: b4fd65c3-50cc-46cd-8de0-6a6d24cb9cda
-ms.openlocfilehash: e19de95b5b2c967d71a4b06aca431df8ffe9dc14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 71f5a69bf96098b41bc2eb3945e1360955870657
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374933"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746184"
 ---
 # <a name="compiler-error-c3141"></a>編譯器錯誤 C3141
 
-'interface_name': 介面只支援公用繼承
+' interface_name '：介面僅支援公用繼承
 
-介面定義[介面 （或 __interface）](../../cpp/interface.md)關鍵字僅支援公用繼承。
+使用[介面（或 __interface）](../../cpp/interface.md)關鍵字定義的介面僅支援公用繼承。
 
-下列範例會產生 C3141:
+下列範例會產生 C3141：
 
-```
+```cpp
 // C3141.cpp
 __interface IBase {};
 __interface IDerived1 : protected IBase {};  // C3141

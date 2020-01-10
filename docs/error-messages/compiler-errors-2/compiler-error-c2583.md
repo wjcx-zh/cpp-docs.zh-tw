@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2583
 ms.assetid: b1c952dc-872c-47e4-9fc8-4dd72bcee6f9
-ms.openlocfilehash: b78b9dd69b701e1a66646234d4603973657e90c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0154d1d9a57d0faa795e639640eb6cb42e7c7cb
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74748641"
 ---
 # <a name="compiler-error-c2583"></a>編譯器錯誤 C2583
 
-'identifier': 'const/volatile' 'this' 指標不合法的建構函式/解構函式
+' identifier '： ' const/volatile ' ' this ' 指標對函式/析構函數而言是不合法的
 
-宣告建構函式或解構函式`const`或`volatile`。 這是不允許的。
+`const` 或 `volatile`宣告了一個函式或析構函數。 但這種作法並不合法。
 
-下列範例會產生 C2583:
+下列範例會產生 C2583：
 
-```
+```cpp
 // C2583.cpp
 // compile with: /c
 class A {

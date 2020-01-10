@@ -1,30 +1,31 @@
 ---
 title: DF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - DF
 helpviewer_keywords:
 - DF directive
 ms.assetid: b5587c29-3da9-4c46-aa3a-1ec42d6fa703
-ms.openlocfilehash: d8eebd31092602c4ca6dead7493b08e225dd7658
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb2d81312f2508dafe1975a1b6b55303f93e5f20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178856"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314844"
 ---
 # <a name="df"></a>DF
 
-配置並選擇性地針對每個初始化 6 個位元組的儲存體`initializer`。 `DF` 是的同義字[FWORD](../../assembler/masm/fword.md)。
+配置並選擇性地為每個*初始化運算式*初始化6個位元組的儲存區。 **DF**是[FWORD](fword.md)的同義字。
 
 ## <a name="syntax"></a>語法
 
-> [[name]]DF 初始設定式 [[，初始設定式]]...
+> ⟦*名稱*⟧ **DF** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-也可用來當做型別規範的類型是合法的任何位置。
+也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

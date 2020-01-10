@@ -23,14 +23,14 @@ helpviewer_keywords:
 - std::geometric_distribution [C++], param_type
 - std::geometric_distribution [C++], param_type
 ms.assetid: 38f933af-3b49-492e-9d26-b6b272a60013
-ms.openlocfilehash: ead6382e61066a72f97eacea91bba5b38aa00677
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 66af7aba99d1510b6d4416543e54890a9e891f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453926"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688012"
 ---
-# <a name="geometricdistribution-class"></a>geometric_distribution 類別
+# <a name="geometric_distribution-class"></a>geometric_distribution 類別
 
 產生幾何分佈。
 
@@ -66,15 +66,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*IntType*\
-整數結果類型, 預設為**int**。如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*IntType* \
+整數結果類型，預設為**int**。如需可能的類型，請參閱[\<random >](../standard-library/random.md)。
 
-*URNG*\
+*URNG* \
 統一的亂數產生器引擎。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範例類別描述使用幾何分佈產生使用者指定之整數類型的值。 下表提供各個成員的文章連結。
+類別樣板描述使用幾何分佈產生使用者指定之整數類型值的分佈。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -91,7 +91,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 如需有關卡方分佈的詳細資訊，請參閱 Wolfram MathWorld 文章[卡方分佈 (英文)](https://go.microsoft.com/fwlink/p/?linkid=400529)。
 
@@ -207,7 +207,7 @@ Distribution for 100 samples:
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="geometric_distribution"></a>  geometric_distribution::geometric_distribution
 
@@ -220,10 +220,10 @@ explicit geometric_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*p* \
 `p` 分佈參數。
 
-*parm*\
+*parm* \
 用於建構分佈的參數結構。
 
 ### <a name="remarks"></a>備註
@@ -251,10 +251,10 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*p&id*\
+*p* \
 `p` 分佈參數。
 
-*再*\
+*right* \
 要與此項目比較的 `param_type` 執行個體。
 
 ### <a name="remarks"></a>備註
@@ -263,6 +263,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

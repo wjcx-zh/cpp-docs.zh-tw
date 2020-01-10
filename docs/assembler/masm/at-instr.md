@@ -1,26 +1,27 @@
 ---
 title: '@InStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@InStr'
 helpviewer_keywords:
 - '@InStr symbol'
 ms.assetid: 980d5b9f-2b88-4306-8955-df6cd2133e68
-ms.openlocfilehash: ed1bda10d7797a2c1bba43a4824a331d196def4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e790204ee6344031018fe79510ff9e064bef3b4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179012"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315754"
 ---
-# <a name="instr"></a>@InStr
+# <a name="instr"></a>\@InStr
 
-尋找第一個出現的巨集函式*string2*中*string1*，開始位置在*位置*內*string1*。 如果*位置*未出現，在開頭開始搜尋*string1*。 傳回的位置的整數或 0，如果*string2*找不到。
+從*string1*中的*位置*開始，在*string1*中尋找第一個出現的*string2*的宏函式。 如果*位置*沒有出現，搜尋就會從*string1*開頭開始。 傳回位置整數，如果找不到*string2* ，則傳回0。
 
 ## <a name="syntax"></a>語法
 
-> @InStr( [[position]], string1, string2 )
+> **\@InStr （** ⟦*position*⟧ __，__ *string1* __，__ *string2* **）**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

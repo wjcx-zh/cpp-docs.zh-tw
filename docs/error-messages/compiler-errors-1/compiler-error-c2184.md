@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2184
 ms.assetid: 80fc8bff-7d76-4bde-94d2-01d84bb6824a
-ms.openlocfilehash: 146035134cc159b9e4271ce10c94f196098581b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c644bead9148c2019817b72f06587c36f3179c1
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385832"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758446"
 ---
 # <a name="compiler-error-c2184"></a>編譯器錯誤 C2184
 
@@ -21,7 +21,7 @@ ms.locfileid: "62385832"
 
 下列範例會產生 C2184：
 
-```
+```cpp
 // C2184.cpp
 void f() {
    int * p;
@@ -30,9 +30,9 @@ void f() {
 }
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C2184b.cpp
 // compile with: /c
 void f() {

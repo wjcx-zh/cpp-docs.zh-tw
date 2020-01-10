@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1301
 ms.assetid: 760da428-7182-4b25-b20a-de90d4b9a9cd
-ms.openlocfilehash: 6a82d7756f1460c56d87a3d7b1360c140de19827
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe64eecfbc9fed57c3748afd5804b76d6e4284a4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160603"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990933"
 ---
 # <a name="linker-tools-error-lnk1301"></a>連結器工具錯誤 LNK1301
 
-找不到，/LTCG:parameter 與不相容的 LTCG clr 模組
+找到 LTCG clr 模組，與/LTCG：參數不相容
 
-以 /clr 和 /GL 編譯的模組已傳遞給連結器，以及其中一個特性指引最佳化 (PGO) 參數 /LTCG。
+以/clr 和/GL 編譯的模組已與/LTCG. 的其中一個特性指引優化（PGO）參數一起傳遞至連結器
 
-/Clr 模組不支援特性指引最佳化。
+/Clr 模組不支援特性指引優化。
 
-如需詳細資訊，請參閱:
+如需詳細資訊，請參閱＜＞。
 
 - [/GL (整個程式最佳化)](../../build/reference/gl-whole-program-optimization.md)
 
@@ -31,15 +31,15 @@ ms.locfileid: "62160603"
 
 - [特性指引最佳化](../../build/profile-guided-optimizations.md)
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 不使用 /clr 編譯，或沒有與 /LTCG 的 PGO 參數的其中一個連結。
+1. 請勿使用/clr 進行編譯，或不要以/LTCG. 的其中一個 PGO 參數連結
 
 ## <a name="example"></a>範例
 
-下列範例會產生 LNK1301:
+下列範例會產生 LNK1301：
 
-```
+```cpp
 // LNK1301.cpp
 // compile with: /clr /GL /link /LTCG:PGI LNK1301.obj
 // LNK1301 expected

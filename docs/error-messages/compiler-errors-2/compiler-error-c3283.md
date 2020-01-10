@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3283
 ms.assetid: c51d912c-cde3-4928-904e-26734c8954ce
-ms.openlocfilehash: 593b04b8593e261aa1980ada7693300b52a869c5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1aa7a0744c2eca2101931ba9ef0ad6ee212d5a7
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62381575"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757562"
 ---
 # <a name="compiler-error-c3283"></a>編譯器錯誤 C3283
 
@@ -21,7 +21,7 @@ CLR [介面](../../extensions/interface-class-cpp-component-extensions.md) 不�
 
 下列範例會產生 C3283：
 
-```
+```cpp
 // C3283.cpp
 // compile with: /clr
 interface class I {
@@ -29,9 +29,9 @@ interface class I {
 };
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C3283b.cpp
 // compile with: /clr /c
 interface class I {

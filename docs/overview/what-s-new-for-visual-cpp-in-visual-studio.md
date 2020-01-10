@@ -3,20 +3,18 @@ title: Visual Studio 中 C++ 的新功能
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
-ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
-ms.translationtype: HT
+ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67552349"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793967"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Visual Studio 中 C++ 的新功能
 
 ::: moniker range=">=vs-2019"
 
-Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已修正編譯器和工具中的許多錯誤 (Bug) 與問題。 其中多是客戶透過 [傳送意見反應]  底下的 [回報問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) 和 [提供建議](https://developercommunity.visualstudio.com/spaces/62/index.html) 選項提交而來。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 2019 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)。 如需有關 Visual Studio 2017 中 C++ 新功能的資訊，請參閱 [Visual Studio 2017 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已修正編譯器和工具中的許多錯誤 (Bug) 與問題。 其中多是客戶透過 [傳送意見反應] 底下的 [回報問題](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) 和 [提供建議](https://developercommunity.visualstudio.com/spaces/62/index.html) 選項提交而來。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請瀏覽 [Visual Studio 2019 的新功能](/visualstudio/ide/whats-new-visual-studio-2019)。 如需有關 Visual Studio 2017 中 C++ 新功能的資訊，請參閱 [Visual Studio 2017 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
 ## <a name="c-compiler"></a>C++ 編譯器
 
@@ -76,7 +74,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 - 已修正 `std::hash` 中的效能迴歸，這是我們在實作 `std::hash<std::filesystem::path>` 時所引進的功能。
 
-- 標準程式庫現在會在數個地方使用解構函式來達到正確性，而非使用 Catch 區塊。 此變更會讓我們獲得更好的偵錯工具互動：您在受影響的位置透過標準程式庫擲回的例外狀況現在會顯示為從其原始擲回網站擲回，而非我們的重新擲回。 並非所有標準程式庫 Catch 區塊都遭到消除；我們預期 Catch 區塊數目在之後發行 MSVC 時將會減少。
+- 標準程式庫現在會在數個地方使用解構函式來達到正確性，而非使用 Catch 區塊。 這項變更會導致偵錯工具互動更佳：您透過受影響位置中的標準程式庫擲回的例外狀況，現在會顯示為從其原始擲回網站（而不是我們的重新引發 並非所有標準程式庫 Catch 區塊都遭到消除；我們預期 Catch 區塊數目在之後發行 MSVC 時將會減少。
 
 - `std::bitset` 中由 noexcept 函式內的條件式擲回導致的次佳 codegen 已透過鑽研出擲回路徑而修正。
 
@@ -94,7 +92,7 @@ Visual Studio 2019 有多個 Microsoft C++ 環境的更新與修正。 我們已
 
 ### <a name="live-share-c-support"></a>支援 Live Share C++
 
-[Live Share](/visualstudio/liveshare/) 現已支援 C++，可讓開發人員使用 Visual Studio 或 Visual Studio Code 即時共同作業。 如需詳細資訊，請參閱 [Announcing Live Share for C++:Real-Time Sharing and Collaboration](https://devblogs.microsoft.com/cppblog/cppliveshare/) (宣佈推出適用於 C++ 的 Live Share：即時共用與共同作業)
+[Live Share](/visualstudio/liveshare/) 現已支援 C++，可讓開發人員使用 Visual Studio 或 Visual Studio Code 即時共同作業。 如需詳細資訊，請參閱[宣佈C++Live Share：即時共用和](https://devblogs.microsoft.com/cppblog/cppliveshare/)共同作業
 
 ### <a name="intellicode-for-c"></a>適用於 C++ 的 IntelliCode
 
@@ -104,7 +102,7 @@ IntelliCode 是一款選擇性延伸模組，其可使用本身密集的訓練�
 
 ### <a name="template-intellisense"></a>範本 IntelliSense
 
-**範本列**現在使用**瞄孔 Window** UI 來取代強制回應視窗、支援巢狀範本，並會將任何預設引數預先填入**瞄孔視窗**中。 如需詳細資訊，請參閱 [Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 的範本 IntelliSense 改善)。 **範本列**中的 [最近使用]  下拉式清單，可讓您在前一組範例引數之間快速切換。
+**範本列**現在使用**瞄孔 Window** UI 來取代強制回應視窗、支援巢狀範本，並會將任何預設引數預先填入**瞄孔視窗**中。 如需詳細資訊，請參閱 [Template IntelliSense Improvements for Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/template-intellisense-improvements-for-visual-studio-2019-preview-2/) (Visual Studio 2019 Preview 2 的範本 IntelliSense 改善)。 **範本列**中的 [最近使用] 下拉式清單，可讓您在前一組範例引數之間快速切換。
 
 ### <a name="new-start-window-experience"></a>新的啟動視窗體驗
 
@@ -134,13 +132,13 @@ Visual Studio 2019 包含的下列功能可協助您更輕鬆且更直覺地撰�
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 16.1 版
 
-快速諮詢工具提示現在會遵守您編輯器的語意色彩標示。 它也有新的**線上搜尋**連結，此連結可用來搜尋線上文件以深入了解動態顯示程式碼建構。 針對具有紅色波浪線的程式碼，由 Quick Info 提供的連結連結將會在線上搜尋錯誤。 這樣您就不需要在您的瀏覽器中重新輸入訊息。 如需詳細資訊，請參閱 [Visual Studio 2019 中的 Quick Info 改善：色彩標示與線上搜尋](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)。
+快速諮詢工具提示現在會遵守您編輯器的語意色彩標示。 它也有新的**線上搜尋**連結，此連結可用來搜尋線上文件以深入了解動態顯示程式碼建構。 針對具有紅色波浪線的程式碼，由 Quick Info 提供的連結連結將會在線上搜尋錯誤。 這樣您就不需要在您的瀏覽器中重新輸入訊息。 如需詳細資訊，請參閱[Visual Studio 2019：顏色標示和線上搜尋中的快速資訊改進](https://devblogs.microsoft.com/cppblog/quick-info-improvements-in-visual-studio-2019-colorization-and-search-online/)。
 
 ### <a name="intellicode-available-in-c-workload"></a>IntelliCode 可在 C++ 工作負載中找到
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 16.1 版
 
-IntelliCode 現在是以「使用 C++ 的桌面開發」  工作負載中的選擇性元件形式提供。 如需詳細資訊，請參閱[改良了C++ IntelliCode 現在隨附於 Visual Studio 2019](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/)。
+IntelliCode 現在是以「使用 C++ 的桌面開發」 工作負載中的選擇性元件形式提供。 如需詳細資訊，請參閱[改良了C++ IntelliCode 現在隨附於 Visual Studio 2019](https://devblogs.microsoft.com/cppblog/improved-c-intellicode-now-ships-with-visual-studio-2019/)。
 
 ## <a name="cmake-support"></a>CMake 支援
 
@@ -162,11 +160,11 @@ IntelliCode 現在是以「使用 C++ 的桌面開發」  工作負載中的選�
 
 - 靜態分析警告現在可在背景處理，以及在 CMake 專案的編輯器中顯示。
 
-- 為 CMake 專案新增了更清楚的建置及設定「開始」和「結束」訊息，及 Visual Studio 建置進度 UI 的支援。 此外，[工具] > [選項]  中現在有 CMake 詳細資訊設定，可用來自訂輸出視窗中的 CMake 組建詳細等級及設定訊息。
+- 為 CMake 專案新增了更清楚的建置及設定「開始」和「結束」訊息，及 Visual Studio 建置進度 UI 的支援。 此外，[工具] > [選項] 中現在有 CMake 詳細資訊設定，可用來自訂輸出視窗中的 CMake 組建詳細等級及設定訊息。
 
 - CMakeSettings.json 中現在支援 `cmakeToolchain` 設定，不必手動修改 CMake 命令列就能指定工具鏈。
 
-- 新增 [全部建置]  功能表捷徑 **Ctrl+Shift+B**。
+- 新增 [全部建置] 功能表捷徑 **Ctrl+Shift+B**。
 
 ##### <a name="visual-studio-2019-version-161"></a>Visual Studio 2019 16.1 版
 
@@ -182,13 +180,13 @@ IntelliCode 現在是以「使用 C++ 的桌面開發」  工作負載中的選�
 
 ## <a name="incredibuild-integration"></a>IncrediBuild 整合
 
-IncrediBuild 現在是以「使用 C++ 的桌面開發」  工作負載中的選擇性元件形式提供。 IncrediBuild 建置監視器已完全整合在 Visual Studio IDE 中。 如需詳細資訊，請參閱[使用 IncrediBuild 的建置監視器與 Visual Studio 2019 來視覺化您的建置](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/) \(英文 \)。
+IncrediBuild 現在是以「使用 C++ 的桌面開發」 工作負載中的選擇性元件形式提供。 IncrediBuild 建置監視器已完全整合在 Visual Studio IDE 中。 如需詳細資訊，請參閱[使用 IncrediBuild 的建置監視器與 Visual Studio 2019 來視覺化您的建置](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/) \(英文 \)。
 
 ## <a name="debugging"></a>偵錯
 
 - 針對在 Windows 上執行的 C++ 應用程式，PDB 檔案現在會在個別的 64 位元處理序上載入。 此變更已解決由於偵錯工具在針對包含大量模組與 PDB 檔案的應用程式進行偵錯時耗盡記憶體而導致的各種當機問題。
 
-- 搜尋已在 [監看式]  、[自動變數]  與 [區域變數]  視窗中啟用。
+- 搜尋已在 [監看式]、[自動變數] 與 [區域變數] 視窗中啟用。
 
 ## <a name="windows-desktop-development-with-c"></a>使用 C++ 進行 Windows 桌面開發
 
@@ -241,7 +239,7 @@ C++ Android 體驗現在預設為 Android SDK 25 與 Android NDK 16b。
 
 ::: moniker range="=vs-2017"
 
-Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編譯器和工具中超過 250 個 Bug 及回報問題，其中多是客戶透過 [傳送意見反應]  底下的[回報問題和提供建議](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017)選項提交而來。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請參閱 [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 如需有關 Visual Studio 2019 中 C++ 新功能的資訊，請參閱 [Visual Studio 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
+Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編譯器和工具中超過 250 個 Bug 及回報問題，其中多是客戶透過 [傳送意見反應] 底下的[回報問題和提供建議](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017)選項提交而來。 感謝您回報 Bug！ 如需有關所有 Visual Studio 新功能的詳細資訊，請參閱 [Visual Studio 2017 的新功能](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017)。 如需有關 Visual Studio 2019 中 C++ 新功能的資訊，請參閱 [Visual Studio 中 C++ 的新功能](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019)。 如需有關 Visual Studio 2015 和更舊版本中 C++ 新功能的資訊，請參閱[從 2003 到 2015 的 Visual C++ 新功能](/cpp/porting/visual-cpp-what-s-new-2003-through-2015)。
 
 ## <a name="c-compiler"></a>C++ 編譯器
 
@@ -255,21 +253,25 @@ Visual Studio 2017 有多個 C++ 環境的更新與修正。 我們已修正編�
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
-Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱[Announcing:MSVC Conforms to the C++ Standard](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/) (公告：MSVC 符合 C++ 標準) 與 [ C++ 語言一致性](../visual-cpp-language-conformance.md)。
+Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 如需詳細資訊，請參閱[宣佈： MSVC 符合C++標準](https://devblogs.microsoft.com/cppblog/announcing-msvc-conforms-to-the-c-standard/)和[Microsoft C++語言一致性](../visual-cpp-language-conformance.md)。
+
+##### <a name="visual-studio-2017-version-158"></a>Visual Studio 2017 15.8 版
+
+[/Experimental：預處理器](../build/reference/experimental-preprocessor.md)編譯器參數會啟用新的實驗性 MSVC 預處理器，最後會與所有適用的C++ C 和標準一致。 如需詳細資訊，請參閱[MSVC 實驗性預處理器總覽](../preprocessor/preprocessor-experimental-overview.md)。
 
 ### <a name="new-compiler-options"></a>新的編譯器選項
 
-- [/permissive-](../build/reference/permissive-standards-conformance.md)：啟用所有嚴格的標準一致性編譯器選項，並停用大部分 Microsoft 專屬的編譯器延伸模組 (但 `__declspec(dllimport)` 即為不包含在內的例子)。 在 Visual Studio 2017 15.5 版中，此選項預設為開啟。  **/permissive-** 一致性模式包含對兩階段名稱查詢的支援。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements.md)。
+- [/permissive-](../build/reference/permissive-standards-conformance.md)︰啟用所有嚴格的標準一致性編譯器選項，並停用大部分 Microsoft 專用的編譯器延伸模組 (但 `__declspec(dllimport)` 即為不包含在內的例子)。 在 Visual Studio 2017 15.5 版中，此選項預設為開啟。  **/permissive-** 一致性模式包含對兩階段名稱查詢的支援。 如需詳細資訊，請參閱 [Visual Studio 2017 中的 C++ 一致性改善](cpp-conformance-improvements.md)。
 
-- [/diagnostics](../build/reference/diagnostics-compiler-diagnostic-options.md)：能夠在發現診斷錯誤或警告的程式碼行下，顯示行號、行號及資料行，或行號和資料行及插入號。
+- [/diagnostics](../build/reference/diagnostics-compiler-diagnostic-options.md)：能夠在發現錯誤或警告的位置，顯示行號、行號和欄位，或行號和欄位及程式碼下的插入點。
 
-- [/debug:fastlink](../build/reference/debug-generate-debug-info.md)：啟用最多 30% 更快的累加連結時間 (與Visual Studio 2015)，方法是不要將所有偵錯資訊複製到 PDB 檔案。 PDB 檔案改為指向用來建立可執行檔之物件和程式庫檔案的偵錯資訊。 請參閱 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (在 VS "15" 中使用 /Debug:fastlink 加快 C++ 組建循環) 和 [Recommendations to speed C++ builds in Visual Studio](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/) (在 Visual Studio 中加速 C++ 建置的建議)。
+- [/debug： fastlink](../build/reference/debug-generate-debug-info.md)：藉由不將所有的偵錯工具資訊複製到 PDB 檔案，讓累加連結時間更快（相對於 Visual Studio 2015）達到30%。 PDB 檔案改為指向用來建立可執行檔之物件和程式庫檔案的偵錯資訊。 請參閱 [Faster C++ build cycle in VS "15" with /Debug:fastlink](https://devblogs.microsoft.com/cppblog/faster-c-build-cycle-in-vs-15-with-debugfastlink/) (在 VS "15" 中使用 /Debug:fastlink 加快 C++ 組建循環) 和 [Recommendations to speed C++ builds in Visual Studio](https://devblogs.microsoft.com/cppblog/recommendations-to-speed-c-builds-in-visual-studio/) (在 Visual Studio 中加速 C++ 建置的建議)。
 
 - Visual Studio 2017 允許在使用 [/await](../build/reference/await-enable-coroutine-support.md) 時，搭配 [/sdl](../build/reference/sdl-enable-additional-security-checks.md)。 我們移除了協同程式的 [/RTC](../build/reference/rtc-run-time-error-checks.md) 限制。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
-- [/std:c++14 and /std:c++latest](../build/reference/std-specify-language-standard-version.md)：這些編譯器選項可讓您在專案中加入特定版本的 ISO C++ 程式設計語言。 大多數新草稿標準功能都在 **/std:c++latest** 選項的防護範圍內。
+- [/std： c + + 14 和/std： c + + 最新](../build/reference/std-specify-language-standard-version.md)：這些編譯器選項可讓您在專案中加入特定C++版本的 ISO 程式設計語言。 大多數新草稿標準功能都在 **/std:c++latest** 選項的防護範圍內。
 
 - [/std:c++17](../build/reference/std-specify-language-standard-version.md) 可讓編譯器實作 C++17 功能集。 此選項會對 C++ 標準中，在 C++17 之後推出但屬於進行中草稿及瑕疵更新版本的變更或新增功能，停用編譯器及標準程式庫支援。 若要啟用這些功能，請使用 **/std:c++latest**。
 
@@ -277,11 +279,11 @@ Visual Studio 15.7 版中的 MSVC 編譯器工具組現在符合 C++ 標準。 �
 
 此版本為最佳化、程式碼產生、工具組版本控制，以及診斷方面帶來多項改善。 其中幾項值得注意的改善內容包括：
 
-- 迴圈程式碼產生的改進事項：支援常數整數除法的自動向量化，更容易識別 memset 模式。
-- 程式碼安全性的改進事項：發出緩衝區溢位編譯器診斷已獲改善，而 [/guard:cf](../build/reference/guard-enable-control-flow-guard.md) 現已可防護產生跳躍表的 switch 陳述式。
-- 版本設定：現在每次更新 Visual C++ 工具組時，都一律會更新內建前置處理器巨集 **\_MSC\_VER** 的值。 如需詳細資訊，請參閱 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) (Visual C++ 編譯器版本)。
-- 新的工具組版面配置︰編譯器和相關建置工具，在開發電腦上具有新的位置及目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Visual Studio 2017 中的編譯器工具版面配置](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/) \(英文\)。
-- 診斷的改進事項：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/) (VS "15" Preview 5 中的 C++ 編譯器診斷改善)。
+- 改善重複的程式碼產生：支援常數整數除法的自動向量化，更容易識別 memset 模式。
+- 改善的程式碼安全性：緩衝區溢位編譯器診斷的發出已獲得改善，而 [/guard:cf](../build/reference/guard-enable-control-flow-guard.md) 現在會防護可產生跳躍表的 switch 陳述式。
+- 版本設定：現在每次 Visual C++ 工具組更新時，都一律會更新內建前置處理器巨集 **\_MSC\_VER** 的值。 如需詳細資訊，請參閱 [Visual C++ Compiler Version](https://devblogs.microsoft.com/cppblog/visual-c-compiler-version/) (Visual C++ 編譯器版本)。
+- 新的工具組版面配置︰編譯器和相關建置工具在開發電腦上具有新的位置和目錄結構。 新的版面配置可並存安裝多個版本的編譯器。 如需詳細資訊，請參閱 [Visual Studio 2017 中的編譯器工具版面配置](https://devblogs.microsoft.com/cppblog/compiler-tools-layout-in-visual-studio-15/) \(英文\)。
+- 改善的診斷：輸出視窗現在會顯示發生錯誤的資料行。 如需詳細資訊，請參閱 [C++ compiler diagnostics improvements in VS "15" Preview 5](https://devblogs.microsoft.com/cppblog/c-compiler-diagnostics-improvements-in-vs-15-rc/) (VS "15" Preview 5 中的 C++ 編譯器診斷改善)。
 - 現已移除使用協同程式時的實驗性關鍵字 **yield** (於 **/await** 選項下提供)。 您應該更新程式碼以改用 `co_yield`。 如需詳細資訊，請參閱 [`yield` 關鍵字在 VS 2017 中變成`co_yield`](https://devblogs.microsoft.com/cppblog/yield-keyword-to-become-co_yield-in-vs-2017/) \(英文\)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
@@ -308,7 +310,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 
 ##### <a name="visual-studio-2017-rtm-version-150"></a>Visual Studio 2017 RTM (15.0 版)
 
-- 次要 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 診斷的改善。 字串機制中的 IDL 檢查若出錯，現在將會回報導致該錯誤的特定行為。 例如，您會看見「無法為字串迭代器取值，因為它超出範圍 (例如結尾迭代器)」，而不是「無法為字串迭代器取值」。
+- 次要 `basic_string` `_ITERATOR_DEBUG_LEVEL != 0` 診斷改善。 字串機制中的 IDL 檢查若出錯，現在將會回報導致該錯誤的特定行為。 例如，您會看見「無法為字串迭代器取值，因為它超出範圍 (例如結尾迭代器)」，而不是「無法為字串迭代器取值」。
 - 修正了 `std::promise` 移動指派運算子原本可能造成程式碼永久封鎖的問題。
 - 修正了 `atomic<T*>` 隱含轉換為 `T*` 這項編譯器錯誤。
 - `pointer_traits<Ptr>` 現在會正確偵測 `Ptr::rebind<U>`。
@@ -360,11 +362,11 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - 新增了 \<optional\>、\<variant\>、`shared_ptr::weak_type` 和 \<cstdalign\>。
 - 讓 `min(initializer_list)`、`max(initializer_list)` 和 `minmax(initializer_list)`，及 `min_element()`、`max_element()` 和 `minmax_element()` 中可使用 C++ 14 `constexpr`。
 
-如需詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)。
+如需詳細資訊，請參閱[Microsoft C++語言一致性表格](../visual-cpp-language-conformance.md)。
 
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
-- 已實作數個額外的 C++17 功能。 如需詳細資訊，請參閱 [Visual C++ 語言一致性](cpp-conformance-improvements.md#improvements_153)。
+- 已實作數個額外的 C++17 功能。 如需詳細資訊，請參閱[Microsoft C++語言一致性表格](cpp-conformance-improvements.md#improvements_153)。
 - 已實作 P0602R0「Variant 和 Optional 應隨意地散佈 Copy/Move」。
 - 標準程式庫現已正式容許透過 [/GR-](../build/reference/gr-enable-run-time-type-information.md) 選項停用動態 RTTI。 `dynamic_pointer_cast()` 和 `rethrow_if_nested()` 原本就都需要 `dynamic_cast`，因此標準程式庫現已將其標示為 **/GR-** 下的 `=delete`。
 - 即使已透過 **/GR-** 停用動態 RTTI，「靜態 RTTI」(形式為 `typeid(SomeType)`) 仍可使用，並能提供數個標準程式庫元件。 標準程式庫現在也支援停用此功能，方法是透過 **/D\_HAS\_STATIC\_RTTI=0**。 此旗標也會停用 `std::function` 的 `std::any`、`target()` 和 `target_type()` 成員函式，及 `std::shared_ptr` 和 `std::weak_ptr` 的 `get_deleter()` friend 成員函式。
@@ -422,7 +424,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 - `constexpr char_traits`
 - 標準程式庫的推算指南
 
-如需詳細資訊，請參閱 [Visual C++ 語言一致性](../visual-cpp-language-conformance.md)。
+如需詳細資訊，請參閱[Microsoft C++語言一致性表格](../visual-cpp-language-conformance.md)。
 
 ### <a name="performance-and-throughput-fixes"></a>效能和輸送量修正
 
@@ -475,7 +477,7 @@ Microsoft C++ 編譯器支援 Intel 的 AVX-512，包括將 AVX-512 的新功能
 
 ### <a name="open-source-library-support"></a>開放原始碼程式庫支援
 
-**Vcpkg** 是一種開放原始碼命令列工具，可大幅簡化在 Visual Studio 中取得和建置開放原始碼 C++ 靜態程式庫和 DLLS 的程序。 如需詳細資訊，請參閱 [vcpkg：適用於 C++ 的套件管理員](../build/vcpkg.md)。
+**Vcpkg** 是一種開放原始碼命令列工具，可大幅簡化在 Visual Studio 中取得和建置開放原始碼 C++ 靜態程式庫和 DLLS 的程序。 如需詳細資訊，請參閱 [vcpkg：C++ 的套件管理員](../build/vcpkg.md)。
 
 ### <a name="cpprest-sdk-290"></a>CPPRest SDK 2.9.0
 
@@ -503,9 +505,9 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 ##### <a name="visual-studio-2017-version-153"></a>Visual Studio 2017 15.3 版
 
 - 已重寫數個專案和程式碼精靈的簽章對話方塊樣式。
-- [加入類別]  現在會直接啟動 [加入類別精靈]。 之前在這裡的所有其他項目，現在會在 [新增] > [新增項目]  下提供。
-- Win32 專案現在在 [新增專案]  對話方塊的 [Windows Desktop]  類別下。
-- **Windows 主控台**和**傳統型應用程式**範本現在會建立專案，而不顯示精靈。 相同類別下有新的 [Windows Desktop 精靈]  ，其顯示的選項與舊版 [Win32 主控台應用程式精靈]  相同。
+- [加入類別] 現在會直接啟動 [加入類別精靈]。 之前在這裡的所有其他項目，現在會在 [新增] > [新增項目] 下提供。
+- Win32 專案現在在 [新增專案] 對話方塊的 [Windows Desktop] 類別下。
+- **Windows 主控台**和**傳統型應用程式**範本現在會建立專案，而不顯示精靈。 相同類別下有新的 [Windows Desktop 精靈]，其顯示的選項與舊版 [Win32 主控台應用程式精靈] 相同。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
@@ -513,16 +515,16 @@ CPPRestSDK 是適用於 C++ 的跨平台 Web API，已更新成 2.9.0 版。 如
 
 |||
 |-|-|
-|功能|效能改善|
+|特殊功能|效能改善|
 |重新命名|5.3 倍|
 |變更簽章 |4.5 倍|
 |尋找所有參考|4.7 倍|
 
-C++ 現在支援以 Ctrl+按一下 [移至定義]  ，如此可輕鬆使用滑鼠瀏覽至定義。 Productivity Power Tools 套件的 Structure Visualizer 現在預設也會隨附於產品。
+C++ 現在支援以 Ctrl+按一下 [移至定義]，如此可輕鬆使用滑鼠瀏覽至定義。 Productivity Power Tools 套件的 Structure Visualizer 現在預設也會隨附於產品。
 
 ## <a name="intellisense"></a>IntelliSense
 
-- 現在預設使用新的 SQLite 型資料庫引擎。 這會加速 [移至定義]  和 [尋找所有參考]  這類的資料庫作業，並會大幅改善初始解決方案剖析階段。 該設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階]  (原位於 ...[C/C++] | [實驗性] 下)。
+- 現在預設使用新的 SQLite 型資料庫引擎。 這會加速 [移至定義] 和 [尋找所有參考] 這類的資料庫作業，並會大幅改善初始解決方案剖析階段。 該設定已移至 [工具] > [選項] > [文字編輯器] > [C/C++] > [進階] (原位於 ...[C/C++] | [實驗性] 下)。
 
 - 我們已對未使用先行編譯標頭檔的專案及檔案提升 IntelliSense 效能，將會為目前檔案中的標頭建立自動先行編譯標頭檔。
 
@@ -530,16 +532,16 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]  ，如此可輕鬆使用滑�
 
   ![錯誤清單](media/ErrorList1.png "錯誤清單")
 
-  ![篩選出的錯誤清單](media/ErrorList2.png "篩選出的錯誤清單")
+  ![錯誤清單篩選](media/ErrorList2.png "篩選出的錯誤清單")
 
 - 新增了依種類篩選成員清單項目的功能。
 
   ![成員清單篩選](media/mlfiltering.png "成員清單篩選")
 
 - 新增了實驗性的預測性 IntelliSense 功能，提供成員清單中出現項目的內容相關篩選。 如需詳細資訊，請參閱 [C++ IntelliSense 改善 - 預測性 IntelliSense 和篩選](https://devblogs.microsoft.com/cppblog/c-intellisense-improvements-predictive-intellisense-filtering/) \(英文\)。
-- [尋找所有參考]  (Shift+F12) 現可協助您輕鬆搜索，即使在複雜的程式碼基底亦然。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要從變數讀取或寫入變數的相關資訊。
-- [點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [展開範圍]  和 [展開優先順序]  也已從實驗性功能改為進階功能。
-- 根據預設，現已可使用實驗性重構功能 [變更簽章]  和 [擷取函式]  。
+- [尋找所有參考] (Shift+F12) 現可協助您輕鬆搜索，即使在複雜的程式碼基底亦然。 它提供進階分組、篩選、排序、在結果內搜尋和顏色標示 (適用於某些語言)，因此您可以清楚了解您的參考。 針對 C++，新的 UI 包含要從變數讀取或寫入變數的相關資訊。
+- [點改為箭號] IntelliSense 功能已從實驗性改為進階，現在預設為啟用。 編輯器功能 [展開範圍] 和 [展開優先順序] 也已從實驗性功能改為進階功能。
+- 根據預設，現已可使用實驗性重構功能 [變更簽章] 和 [擷取函式]。
 - 已新增 C++ 專案實驗性的 [加快專案載入] 功能。 C++ 專案會在您下次開啟時更快載入，之後將以*更快*速度載入！
 - 其中有部分功能通用於其他語言，部分功能則是 C++ 的特定功能。 如需有關這些新功能的詳細資訊，請參閱[宣布 Visual Studio "15" Preview 5](https://devblogs.microsoft.com/visualstudio/announcing-visual-studio-15-preview-5/)。
 
@@ -549,7 +551,7 @@ C++ 現在支援以 Ctrl+按一下 [移至定義]  ，如此可輕鬆使用滑�
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>使用開啟資料夾的非 MSBuild 專案
 
-Visual Studio 2017 推出了 [開啟資料夾]  功能，讓您可在包含原始程式碼的資料夾中撰寫程式碼、建置和偵錯，而不需建立任何解決方案或專案。 現在，即使您的專案不是 MSBuild 專案，這可讓開始使用 Visual Studio 更為簡單。 透過 [開啟資料夾]  ，您就能使用 Visual Studio 已為 MSBuild 專案提供的強大程式碼理解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
+Visual Studio 2017 推出了 [開啟資料夾] 功能，讓您可在包含原始程式碼的資料夾中撰寫程式碼、建置和偵錯，而不需建立任何解決方案或專案。 現在，即使您的專案不是 MSBuild 專案，這可讓開始使用 Visual Studio 更為簡單。 透過 [開啟資料夾]，您就能使用 Visual Studio 已為 MSBuild 專案提供的強大程式碼理解、編輯、建置和偵錯功能。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
 - [開啟資料夾] 體驗的改良。 您可以透過這些 .json 檔案自訂體驗：
   - CppProperties.json，用以自訂 IntelliSense 及瀏覽體驗。
@@ -564,7 +566,7 @@ Visual Studio 2017 推出了 [開啟資料夾]  功能，讓您可在包含原�
 
 ## <a name="cmake-support-via-open-folder"></a>透過開啟資料夾的 CMake 支援
 
-Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。 使用 [開啟資料夾]  開啟 CMake 專案會自動為 C++ 編輯、建置和偵錯設定環境。
+Visual Studio 2017 支援使用 CMake 專案，而不需要轉換為 MSBuild 專案檔 (.vcxproj)。 如需詳細資訊，請參閱 [Visual Studio 中的 CMake 專案](../build/cmake-projects-in-visual-studio.md)。 使用 [開啟資料夾] 開啟 CMake 專案會自動為 C++ 編輯、建置和偵錯設定環境。
 
 - 無須在根資料夾中建立 CppProperties.json 檔案，C++ IntelliSense 即可運作。 此外，我們新增了下拉式清單，可讓使用者輕易地切換 CMake 和 CppProperties.json 檔案所提供的設定。
 
@@ -605,7 +607,7 @@ Visual Studio Build Tools (先前以獨立產品形式提供) 現在以工作負
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
 - Linux 工作負載已新增對 **rsync** 的支援，當成 **sftp** 的替代方案，以將檔案同步至遠端 Linux 電腦。
-- 新增以 ARM 為目標的交互編譯支援。 若要在安裝中啟用這項支援，請選擇 [使用 C++ 進行 Linux 開發]  工作負載，並選取 [內嵌和 IoT 開發]  的選項。 此選項會將 ARM GCC 交互編譯工具和 Make 新增至您的安裝。 如需詳細資訊，請參閱 [ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/) (Visual Studio 中的 ARM GCC 交互編譯)。
+- 新增以 ARM 為目標的交互編譯支援。 若要在安裝中啟用這項支援，請選擇 [使用 C++ 進行 Linux 開發] 工作負載，並選取 [內嵌和 IoT 開發] 的選項。 此選項會將 ARM GCC 交互編譯工具和 Make 新增至您的安裝。 如需詳細資訊，請參閱 [ARM GCC Cross Compilation in Visual Studio](https://devblogs.microsoft.com/cppblog/arm-gcc-cross-compilation-in-visual-studio/) (Visual Studio 中的 ARM GCC 交互編譯)。
 - 新增對 CMake 的支援。 您現在可以使用現有的 CMake 程式碼基底，而不必將它轉換成 Visual Studio 專案。 如需詳細資訊，請參閱[設定 Linux CMake 專案](../linux/cmake-linux-project.md)。
 - 新增對執行遠端工作的支援。 這項功能可讓您在 Visual Studio 的 連線管理員中定義的遠端系統上執行任何命令。 遠端工作也會提供將檔案複製到遠端系統的功能。
 如需詳細資訊，請參閱[設定 Linux CMake 專案](../linux/cmake-linux-project.md)。
@@ -629,13 +631,13 @@ C++ 以通用 Windows app 工作負載的選用元件形式提供。  升級 C++
 
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>通用 Windows 平台 (UWP) 上 C++ 的新選項
 
-您現在可使用新選項撰寫和封裝適用於通用 Windows 平台及 Microsoft Store 的 C++ 應用程式：您可以由側載的方式，透過 Microsoft Store 或您現有的通道，使用傳統型橋接器基礎結構來封裝現有的傳統型應用程式或 COM 物件以進行部署。 Windows 10 中的新功能可讓您以各種方式將 UWP 功能新增至傳統型應用程式。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
+您現在可使用新選項，為通用 Windows 平台及 Microsoft Store 撰寫和封裝 C++ 應用程式：您可以使用傳統型橋接器基礎結構來封裝現有的傳統型應用程式或 COM 物件，以透過 Microsoft Store 部署，或透過現有通道以側載的方式部署。 Windows 10 中的新功能可讓您以各種方式將 UWP 功能新增至傳統型應用程式。 如需詳細資訊，請參閱[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-新增了 [Windows 應用程式封裝專案]  專案範本，可大幅簡化使用傳統型橋接器封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台]  底下。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
+新增了 [Windows 應用程式封裝專案] 專案範本，可大幅簡化使用傳統型橋接器封裝傳統型應用程式的工作。 該範本位於 [檔案] | [開新檔案] | [專案] | [已安裝] | [Visual C++] | [通用 Windows 平台] 底下。 如需詳細資訊，請參閱[使用 Visual Studio 封裝應用程式 (傳統型橋接器)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)。
 
-撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準規範的 C++ 編譯器來編寫和使用 Windows 執行階段 API。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱 [C++/WinRT：適用於 Windows 執行階段的新型 C++](https://moderncpp.com/) \(英文\)。
+撰寫新的程式碼時，您現在可以使用 C++/WinRT，它是一種標準 C++ 語言推演，適用於僅在標頭檔中實作的 Windows 執行階段。 它可讓您使用任何符合標準規範的 C++ 編譯器來編寫和使用 Windows 執行階段 API。 C++/WinRT 設計成將現代 Windows API 的第一級存取提供給 C++ 開發人員。 如需詳細資訊，請參閱[ C++/WinRT C++ ：現代化，適用于 Windows 執行階段](https://moderncpp.com/)。
 
 自 Windows SDK Insider Preview 的組建 17025 起，C++/WinRT 會隨附於 Windows SDK。 如需詳細資訊，請參閱 [C++/WinRT is now included the Windows SDK](https://devblogs.microsoft.com/cppblog/cppwinrt-is-now-included-the-windows-sdk/) (C++/WinRT 現在隨附於 Windows SDK)。
 
@@ -645,7 +647,7 @@ Visual Studio 2017 隨附的 Clang/C2 工具組，現已支援 **/bigobj** 參�
 
 ## <a name="c-code-analysis"></a>C++ 程式碼分析
 
-用於強制 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) 的 C++ Core Checkers 現已隨 Visual Studio 散發。 只要在專案屬性頁中的 [程式碼分析延伸模組]  頁面中啟用檢查程式，就能在您執行程式碼分析時包含延伸模組。 如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
+用於強制 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines) 的 C++ Core Checkers 現已隨 Visual Studio 散發。 只要在專案屬性頁中的 [程式碼分析延伸模組] 頁面中啟用檢查程式，就能在您執行程式碼分析時包含延伸模組。 如需詳細資訊，請參閱[使用 C++ 核心指南檢查工具](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)。
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck 屬性頁面")
 
@@ -672,14 +674,14 @@ Visual Studio 2017 隨附的 Clang/C2 工具組，現已支援 **/bigobj** 參�
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 15.5 版
 
-Google Test Adapter 和 Boost.Test Adapter 現在是 [使用 C++ 進行桌面開發]  工作負載的元件，並與 [測試清單編輯器]  整合。 新增對 Cmake 專案的 CTest 支援 (使用 [開啟資料夾])，但尚未與 [測試總管]  完全整合。 如需詳細資訊，請參閱[撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)。
+Google Test Adapter 和 Boost.Test Adapter 現在是 [使用 C++ 進行桌面開發] 工作負載的元件，並與 [測試清單編輯器] 整合。 新增對 Cmake 專案的 CTest 支援 (使用 [開啟資料夾])，但尚未與 [測試總管] 完全整合。 如需詳細資訊，請參閱[撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)。
 
 ##### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 15.6 版
 
 - 新增對 Boost.Test 動態程式庫支援的支援。
 - 現在可以在 IDE 中使用 Boost.Test 項目範本。
 
-如需詳細資訊，請參閱 [Boost.Test Unit Testing:Dynamic Library support and New Item Template](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Boost.Test 單元測試：動態程式庫支援及新的項目範本)。
+如需詳細資訊，請參閱 [Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://devblogs.microsoft.com/cppblog/boost-test-unit-testing-dynamic-library-support-and-new-item-template/) (Boost.Test 單元測試：動態程式庫支援與新項目範本)。
 
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 15.7 版
 
@@ -689,41 +691,41 @@ Google Test Adapter 和 Boost.Test Adapter 現在是 [使用 C++ 進行桌面開
 
 Visual Studio 圖形診斷是一組工具，用來記錄並分析 Direct3D 應用程式中的轉譯和效能問題。 圖形診斷功能可以與在 Windows 電腦、Windows 裝置模擬器或遠端電腦或裝置上本機執行的應用程式搭配使用。
 
-- **頂點和幾何著色器的輸入與輸出：** 檢視頂點和幾何著色器之輸入和輸出的能力，一直是其中一項最常被要求的功能，現在於工具中也予以支援。 只要在 [管線階段] 檢視中選取 VS 或 GS 階段，即可開始檢查其在下表中的輸入和輸出。
+- **頂點和幾何著色器的輸入 & 輸出：** 查看頂點著色器和幾何著色器之輸入和輸出的能力，已經是其中一個最常要求的功能，而且現在已可在工具中予以支援。 只要在 [管線階段] 檢視中選取 VS 或 GS 階段，即可開始檢查其在下表中的輸入和輸出。
 
   ![著色器的輸入/輸出](media/io-shaders.png)
 
-- **物件表中的搜尋和篩選：** 提供快速輕鬆的方式找到您所要找的資源。
+- **在物件表格中搜尋和篩選︰** 提供快速且輕鬆的方式來尋找所尋找的資源。
 
   ![搜尋](media/search.png)
 
-- **資源歷程記錄：** 這個新檢視提供簡化的方式，來查看在轉譯所擷取畫面格期間使用之資源的完整修改歷程記錄。 若要叫用任何資源的歷程記錄，只需要按一下任何資源超連結旁邊的時鐘圖示。
+- **資源歷程記錄：** 這個新檢視提供簡化的方式，來查看在轉譯所擷取畫面格期間使用之資源的整個修改歷程記錄。 若要叫用任何資源的歷程記錄，只需要按一下任何資源超連結旁邊的時鐘圖示。
 
   ![資源歷程記錄](media/resource-history.png)
 
-  這會顯示新的 [資源歷程記錄]  工具視窗，當中會填入資源的變更歷程記錄。
+  這會顯示新的 [資源歷程記錄] 工具視窗，當中會填入資源的變更歷程記錄。
 
   ![資源歷程記錄變更](media/resource-history-change.png)
 
-  如果啟用完整呼叫堆疊擷取來擷取您的畫面格 ([圖形診斷]  下的 [Visual Studio] > [工具] > [選項]  )，則可以在 Visual Studio 專案內快速推算和檢查每個變更事件的內容。
+  如果啟用完整呼叫堆疊擷取來擷取您的畫面格 ([圖形診斷] 下的 [Visual Studio] > [工具] > [選項])，則可以在 Visual Studio 專案內快速推算和檢查每個變更事件的內容。
 
-- **API 統計資料︰** 檢視畫面格中 API 使用量的約略摘要。 這在探索根本不了解所進行的呼叫或太常進行的呼叫時很有用。 透過 [Visual Studio 圖形分析器] 中的 [檢視] > [API 統計資料]  可以存取此視窗。
+- **API 統計資料︰** 檢視畫面格中 API 使用方式的高階摘要。 這在探索根本不了解所進行的呼叫或太常進行的呼叫時很有用。 透過 [Visual Studio 圖形分析器] 中的 [檢視] > [API 統計資料] 可以存取此視窗。
 
   ![API 統計資料](media/api-stats.png)
 
-- **記憶體統計資料：** 檢視驅動程式針對您在畫面格中建立之資源所配置的記憶體數量。 您可透過 [Visual Studio 圖形分析器]  中的 [檢視] > [記憶體統計資料]  存取此視窗。 以滑鼠右鍵按一下並選擇 [全部複製]  可將資料複製到 CSV 檔案，以透過試算表檢視。
+- **記憶體統計資料︰** 檢視驅動程式針對您在畫面格中建立之資源所配置的記憶體數量。 您可透過 [Visual Studio 圖形分析器] 中的 [檢視] > [記憶體統計資料] 存取此視窗。 以滑鼠右鍵按一下並選擇 [全部複製] 可將資料複製到 CSV 檔案，以透過試算表檢視。
 
   ![記憶體統計資料](media/memory-stats.png)
 
-- **畫面格驗證：** 新的錯誤和警告清單提供簡單的方法，可根據 Direct3D 偵錯層所偵測到的潛在問題，來瀏覽事件清單。 按一下 [Visual Studio 圖形分析器] 中的 [檢視] > [畫面格驗證]  開啟此視窗。 然後按一下 [執行驗證]  開始分析。 根據畫面格的複雜性而定，這可能需要幾分鐘的時間才能完成。
+- **畫面格驗證：** 新的錯誤和警告清單提供簡單的方法，以根據 Direct3D 偵錯層所偵測到的潛在問題來巡覽事件清單。 按一下 [Visual Studio 圖形分析器] 中的 [檢視] > [畫面格驗證] 開啟此視窗。 然後按一下 [執行驗證] 開始分析。 根據畫面格的複雜性而定，這可能需要幾分鐘的時間才能完成。
 
   ![畫面格驗證](media/frame-validation.png)
 
-- **D3D12 的畫面格分析：** 透過畫面格分析使用導向式「假設」實驗，來分析繪製呼叫效能。 切換至 [畫面格分析] 索引標籤，然後執行分析以檢視報表。 如需詳細資料，請觀看 [GoingNative 25：Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) (Visual Studio 圖形畫面格分析) 影片。
+- **D3D12 的畫面格分析：** 使用畫面格分析，利用「假設」的指示來分析繪製呼叫效能。 切換至 [畫面格分析] 索引標籤，然後執行分析以檢視報表。 如需詳細資訊，請觀看 [GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool) (GoingNative 25：Visual Studio 圖形畫面格分析) 視訊。
 
   ![畫面格分析](media/frame-analysis.png)
 
-- **GPU 使用量的改善事項：** 使用 GPU 檢視或 Windows Performance Analyzer (WPA) 工具開啟可透過 Visual Studio GPU 使用量分析工具所採取的追蹤，以進行更詳細的分析。 如果您已安裝 Windows 效能工具組，則在工作階段概觀的右下方會有兩個超連結：一個用於 WPA，另一個則用於 GPU 檢視。
+- **GPU 使用量改善：** 您可以透過使用 GPU View 或 Windows Performance Analyzer （WPA）工具的 Visual Studio GPU 使用量分析工具來取得開啟追蹤，以取得更詳細的分析。 如果您已安裝 Windows 效能工具組，則在工作階段概觀的右下方會有兩個超連結：一個用於 WPA，另一個則用於 GPU 檢視。
 
   ![GPU 使用量](media/gpu-usage.png)
 

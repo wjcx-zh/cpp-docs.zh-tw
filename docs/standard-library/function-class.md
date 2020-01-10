@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 432b61c7bc5b7f0e6f82e5bfeca7758c70785774
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243798"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689642"
 ---
 # <a name="function-class"></a>function 類別
 
@@ -79,15 +79,15 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*Fty*\
+*Fty* \
 要包裝的函式類型。
 
-*Ax*\
+*Ax* \
 配置器函數。
 
 ## <a name="remarks"></a>備註
 
-此範本類別是一種呼叫包裝函式，其呼叫簽章為 `Ret(T1, T2, ..., TN)`。 在統一包裝函式中，您可以使用此項目來括住各種可呼叫的物件。
+類別樣板是呼叫的包裝函式，其呼叫簽章為 `Ret(T1, T2, ..., TN)`。 在統一包裝函式中，您可以使用此項目來括住各種可呼叫的物件。
 
 有些成員函式會採用運算元來命名所需的目標物件。 您可以透過數種方法指定這類運算元：
 
@@ -103,7 +103,7 @@ public:
 
 空的 `function` 物件不會保留可呼叫物件或可呼叫物件的參考。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="constructors"></a>建構函式
 
@@ -111,7 +111,7 @@ public:
 |-|-|
 |[function](#function)|可建構空的包裝函式，或儲存含固定簽章的任意類型可呼叫物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -130,11 +130,11 @@ public:
 
 |||
 |-|-|
-|[未指定的運算子](#op_unspecified)|測試預存的可呼叫物件是否存在。|
+|[未指定運算子](#op_unspecified)|測試預存的可呼叫物件是否存在。|
 |[operator()](#op_call)|呼叫可呼叫物件。|
 |[operator=](#op_eq)|取代預存的可呼叫物件。|
 
-## <a name="assign"></a> 指派
+## <a name="assign"></a>值賦
 
 會將可呼叫物件指派給此函式物件。
 
@@ -152,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*_Func*\
+*_Func* \
 可呼叫的物件。
 
-*_Fnref*\
+*_Fnref* \
 參考包裝函式，其中包含可呼叫物件。
 
-*Ax*\
+*Ax* \
 配置器物件。
 
 ### <a name="remarks"></a>備註
 
-每個成員函式皆會將 `*this` 所保留的 `callable object` 取代為以 `operand` 傳遞的可呼叫物件。 兩者皆會配置的配置器物件的儲存體*Ax*。
+每個成員函式皆會將 `*this` 所保留的 `callable object` 取代為以 `operand` 傳遞的可呼叫物件。 兩者都使用配置器物件*Ax*來配置存放裝置。
 
-## <a name="function"></a> 函式
+## <a name="function"></a>函數
 
 可建構空的包裝函式，或儲存含固定簽章的任意類型可呼叫物件。
 
@@ -190,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*right* \
 要複製的函式物件。
 
-*Fx*\
+*Fx* \
 可呼叫物件的類型。
 
-*_Func*\
+*_Func* \
 要包裝的可呼叫物件。
 
-*配置*\
+配置 \
 配置器類型。
 
-*Ax*\
+*Ax* \
 配置器。
 
-*_Fnref*\
+*_Fnref* \
 要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
@@ -282,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a> 未指定的運算子
+## <a name="op_unspecified"></a>未指定運算子
 
 測試預存的可呼叫物件是否存在。
 
@@ -292,7 +292,7 @@ operator unspecified();
 
 ### <a name="remarks"></a>備註
 
-此運算子會傳回值，轉換成**bool**只有當物件不是空的則為 true 值。 您可以使用它來測試物件是否是空的。
+只有當物件不是空的時，運算子才會傳回可轉換成**bool**的值。 您可以使用它來測試物件是否是空的。
 
 ### <a name="example"></a>範例
 
@@ -324,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a> operator()
+## <a name="op_call"></a>operator （）
 
 呼叫可呼叫物件。
 
@@ -337,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>參數
 
-*TN*\
+*TN* \
 第 N 個呼叫引數類型。
 
-*TN*\
+*tN* \
 第 N 個呼叫引數。
 
 ### <a name="remarks"></a>備註
@@ -375,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a> 運算子 =
+## <a name="op_eq"></a>operator =
 
 取代預存的可呼叫物件。
 
@@ -390,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>參數
 
-*npc*\
+*npc* \
 null 指標常數。
 
-*權限*\
+*right* \
 要複製的函式物件。
 
-*fn*\
+*fn* \
 要包裝的可呼叫物件。
 
-*fnref*\
+*fnref* \
 要包裝的可呼叫物件參考。
 
 ### <a name="remarks"></a>備註
@@ -457,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a> result_type
+## <a name="result_type"></a>result_type
 
 為預存的可呼叫物件的傳回類型。
 
@@ -499,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a> 交換
+## <a name="swap"></a>調換
 
 交換兩個可呼叫物件。
 
@@ -509,12 +509,12 @@ void swap(function& right);
 
 ### <a name="parameters"></a>參數
 
-*權限*\
+*right* \
 要交換的函式物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會交換目標物件之間`*this`並*右*。 它會在固定時間執行但不會擲回任何例外狀況。
+成員函式會在 `*this` 和*right*之間交換目標物件。 它會在固定時間執行但不會擲回任何例外狀況。
 
 ### <a name="example"></a>範例
 
@@ -558,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a> 目標
+## <a name="target"></a>設定
 
 測試預存的可呼叫物件是否如指定般為可呼叫。
 
@@ -571,14 +571,14 @@ template <class Fty2>
 
 ### <a name="parameters"></a>參數
 
-*Fty2*\
+*Fty2* \
 要測試的目標可呼叫物件類型。
 
 ### <a name="remarks"></a>備註
 
-型別*Fty2*必須是可呼叫的引數型別`T1, T2, ..., TN`和傳回型別`Ret`。 如果 `target_type() == typeid(Fty2)`，成員範本函式會傳回目標物件的位址；否則會傳回 0。
+類型*Fty2*必須可以呼叫引數類型 `T1, T2, ..., TN` 和傳回類型 `Ret`。 如果 `target_type() == typeid(Fty2)`，成員範本函式會傳回目標物件的位址；否則會傳回 0。
 
-型別*Fty2*為可呼叫的引數型別`T1, T2, ..., TN`和傳回型別`Ret`if、 for 左值`fn, t1, t2, ..., tN`型別的`Fty2, T1, T2, ..., TN`分別`INVOKE(fn, t1, t2, ..., tN)`而言是否格式正確而且，如果`Ret`不是**void**，則會轉換至`Ret`。
+類型*Fty2*可用於引數類型 `T1, T2, ..., TN` 和傳回類型 `Ret` 如果分別 `Fty2, T1, T2, ..., TN` 的左值 `fn, t1, t2, ..., tN` 類型，`INVOKE(fn, t1, t2, ..., tN)` 的格式正確，且如果 `Ret` 不是**void**，則可轉換成 `Ret`。
 
 ### <a name="example"></a>範例
 
@@ -619,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a> target_type
+## <a name="target_type"></a>target_type
 
 取得可呼叫物件的類型資訊。
 

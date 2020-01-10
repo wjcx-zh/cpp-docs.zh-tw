@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4365
 ms.assetid: af4b4191-bdfd-4dbb-8229-3ba4405df257
-ms.openlocfilehash: 3f9f6df9f72608f0c1197e0602c3f54548f8efcb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9be67c8148b85167d10cd53318f5ef3b41b1340
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403996"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990928"
 ---
 # <a name="compiler-warning-level-4-c4365"></a>編譯器警告 (層級 4) C4365
 
-'action': 從 'type_1' 轉換成 'type_2'，signed/unsigned 不相符
+' action '：從 ' type_1 ' 轉換為 ' type_2 '，已簽署/不帶正負號的不相符
 
 例如，您嘗試將不帶正負號的值轉換成帶正負號的值。
 
@@ -25,7 +25,7 @@ C4365 預設為關閉。  如需詳細資訊，請參閱 [Compiler Warnings That
 
 下列範例會產生 C4365。
 
-```
+```cpp
 // C4365.cpp
 // compile with: /W4
 #pragma warning(default:4365)

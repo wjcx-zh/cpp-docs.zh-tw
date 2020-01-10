@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68452512"
 ---
-# <a name="basicofstream-class"></a>basic_ofstream 類別
+# <a name="basic_ofstream-class"></a>basic_ofstream 類別
 
 描述一個物件，該物件可控制如何將元素和編碼物件插入具有 `Elem` 類型元素之 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 類別的資料流緩衝區；其中該類型的字元特性是由 `Tr` 類別所決定。
 
@@ -44,7 +44,7 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ## <a name="remarks"></a>備註
 
-當的**wchar_t**特製化`basic_ofstream`寫入檔案時, 如果檔案是在文字模式中開啟, 就會寫入 MBCS 序列。 此內部表示法將使用 `wchar_t` 字元的緩衝區。
+當的**wchar_t**特製化`basic_ofstream`寫入檔案時，如果檔案是在文字模式中開啟，就會寫入 MBCS 序列。 此內部表示法將使用 `wchar_t` 字元的緩衝區。
 
 此物件會儲存 `basic_filebuf`< `Elem`, `Tr`> 類別的物件。
 
@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[close](#close)|關閉檔案。|
 |[is_open](#is_open)|判斷檔案是否為開啟。|
@@ -135,11 +135,11 @@ basic_ofstream(
 
 ### <a name="remarks"></a>備註
 
-第一個函式會藉由呼叫[basic_ostream](../standard-library/basic-ostream-class.md)(`sb`) 來初始化基類`sb` , 其中是[basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`類別的預存`Tr`物件, >。 它也會藉由呼叫 `basic_filebuf`< `Elem`, `Tr`> 初始化 `sb`。
+第一個函式會藉由呼叫[basic_ostream](../standard-library/basic-ostream-class.md)（`sb`）來初始化基類`sb` ，其中是[basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`類別的預存`Tr`物件，>。 它也會藉由呼叫 `basic_filebuf`< `Elem`, `Tr`> 初始化 `sb`。
 
-第二個和第三個建構函式會藉由呼叫 `basic_ostream`( **sb**) 初始化基底類別。 它也會`sb`藉由`basic_filebuf` < 呼叫`Elem`、 >`Tr`和來初始化。 `sb` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果後面一個函式傳回 null 指標, 則此函[](../standard-library/basic-ios-class.md#setstate)式會`failbit`呼叫 setstate ()。
+第二個和第三個建構函式會藉由呼叫 `basic_ostream`( **sb**) 初始化基底類別。 它也會`sb`藉由`basic_filebuf` < 呼叫`Elem`、 >`Tr`和來初始化。 `sb` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`)。 如果後面一個函式傳回 null 指標，則此函式會`failbit`呼叫 [setstate](../standard-library/basic-ios-class.md#setstate)（）。
 
-第四個建構函式是複製函式。 它會以*right*的內容初始化物件, 並將其視為右值參考。
+第四個建構函式是複製函式。 它會以*right*的內容初始化物件，並將其視為右值參考。
 
 ### <a name="example"></a>範例
 
@@ -254,11 +254,11 @@ void open(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; `ios_base::out`)。 如果該函式傳回 null 指標, 則函式[](../standard-library/basic-ios-class.md#setstate)會呼叫`failbit`setstate ()。
+此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; `ios_base::out`)。 如果該函式傳回 null 指標，則函式會呼叫`failbit`[setstate](../standard-library/basic-ios-class.md#setstate) （）。
 
 ### <a name="example"></a>範例
 
-如需使用`open`的範例, 請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
+如需使用`open`的範例，請參閱[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -279,7 +279,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會使用*right*的內容來取代物件的內容, 並將其視為右值參考。
+成員運算子會使用*right*的內容來取代物件的內容，並將其視為右值參考。
 
 ## <a name="rdbuf"></a>  basic_ofstream::rdbuf
 

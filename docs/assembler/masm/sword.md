@@ -1,27 +1,28 @@
 ---
 title: SWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - SWORD
 helpviewer_keywords:
 - SWORD directive
 ms.assetid: 99228a2a-4ed1-4343-a317-e59302620a55
-ms.openlocfilehash: 6209cab0de471a673d97daaeb9de42f9a1f6e2df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc34061a14b41220252bbb75537d2ccefa601afe
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210036"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318393"
 ---
 # <a name="sword"></a>SWORD
 
-配置並選擇性地針對每個初始化帶正負號的一個字詞，（2 個位元組） 儲存體`initializer`。 也可用來當做型別規範的類型是合法的任何位置。
+配置並選擇性地為每個初始化*運算式*初始化儲存區的已簽署字組（2個位元組）。 也可以當做類型為合法的任何位置的類型規範使用。
 
 ## <a name="syntax"></a>語法
 
-> 名稱劍初始設定式 [[，初始設定式]]...
+> *name* **寶劍***初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
-[WORD](../../assembler/masm/word.md)<br/>
+指示詞[參考](directives-reference.md)\
+[WORD](word.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,12 +1,12 @@
 ---
 title: printf、_printf_l、wprintf、_wprintf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _printf_l
 - wprintf
 - _wprintf_l
 - printf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - printf
 - _tprintf
@@ -38,14 +41,14 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 1f3d439c12fa803bfe1af31a9a45d777b2e1caa2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232489"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950197"
 ---
-# <a name="printf-printfl-wprintf-wprintfl"></a>printf、_printf_l、wprintf、_wprintf_l
+# <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf、_printf_l、wprintf、_wprintf_l
 
 將格式化輸出列印至標準輸出資料流。 這些函式已有更安全的版本可用，請參閱 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)。
 
@@ -77,7 +80,7 @@ int _wprintf_l(
 *格式*<br/>
 控制項格式。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -85,17 +88,17 @@ int _wprintf_l(
 
 ## <a name="return-value"></a>傳回值
 
-傳回列印的字元數；如果發生錯誤，則為負值。 如果*格式*是**NULL**，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1 和集執行**errno**要**EINVAL**。 如果**EOF** (0xFFFF) 中遇到*引數*，此函數會傳回-1。
+傳回列印的字元數；如果發生錯誤，則為負值。 如果*format*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，並將**errno**設定為**EINVAL**。 如果在*引數*中遇到**EOF** （0xffff），此函式會傳回-1。
 
-如需**errno**和錯誤碼，請參閱[_doserrno、 errno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如需**errno**和錯誤碼的詳細資訊，請參閱[_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Printf**函式格式化並列印一系列的字元和值寫入標準輸出資料流**stdout**。 如果引數接*格式*字串*格式*字串必須包含決定引數輸出格式的規格。 **printf**並[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)運作方式完全相同，不同之處在於**printf**將輸出寫入到**stdout** ，而不是類型的目的地**檔案**.
+**Printf**函式會格式化，並將一連串的字元和值列印至標準輸出資料流程（ **stdout**）。 如果引數遵循*格式*字串，*格式*字串必須包含決定引數輸出格式的規格。 **printf**和[fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md)的行為相同，不同之處在于**printf**會將輸出寫入至**stdout** ，而不是**FILE**類型的目的地。
 
-**wprintf**是寬字元版本的**printf**;*格式*是寬字元字串。 **wprintf**並**printf**運作方式完全相同，如果資料流以 ANSI 模式開啟。 **printf**目前不支援輸出至 UNICODE 資料流。
+**wprintf**是**printf**的寬字元版本;*format*是寬字元字串。 如果資料流程是以 ANSI 模式開啟， **wprintf**和**printf**的行為會相同。 **printf**目前不支援輸出至 UNICODE 資料流程。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -103,7 +106,7 @@ int _wprintf_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 
-*格式*引數包含一般字元、 逸出序列，以及 (如果引數接*格式*) 格式規格。 一般字元和逸出序列會複製到**stdout**依其出現的順序。 例如，下面這行：
+*Format*引數是由一般字元、escape 序列和（如果引數遵循*格式*）格式規格所組成。 一般字元和 escape 序列會依照其外觀的順序複製到**stdout** 。 例如，下面這行：
 
 ```C
 printf("Line one\n\t\tLine two\n");
@@ -116,7 +119,7 @@ Line one
         Line two
 ```
 
-[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一定會開始以百分比符號 (**%**) 和左讀到右。 當**printf**遇到第一個格式規格 （如果有的話），它會將轉換後的第一個引數的值*格式*並據此將其輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
+[格式規格](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)一律以百分比符號（ **%** ）開頭，並由左至右讀取。 當**printf**遇到第一個格式規格（如果有的話）時，它會將第一個引數的值轉換成*格式*，並據以輸出。 第二個格式規格會轉換及輸出第二個引數，依此類推。 如果引數的數目大於格式規格的數目，則會略過額外的引數。 如果提供給所有格式規格的引數不足，則結果為未定義。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。
@@ -132,10 +135,10 @@ Line one
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**printf**， **_printf_l**|\<stdio.h>|
-|**wprintf**， **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
+|**printf**、 **_printf_l**|\<stdio.h>|
+|**wprintf**、 **_wprintf_l**|\<stdio.h> 或 \<wchar.h>|
 
-通用 Windows 平台 (UWP) 應用程式中不支援主控台。 主控台中，相關聯的標準資料流控制代碼**stdin**， **stdout**，並**stderr**，必須重新導向，C 執行階段函式才能使用它們在 UWP 應用程式. 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+通用 Windows 平臺 (UWP) 應用程式中不支援主控台。 與主控台、 **stdin**、 **stdout**和**stderr**相關聯的標準資料流程控制碼必須重新導向, C 執行時間函式才能在 UWP 應用程式中使用它們。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 

@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252572"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69491633"
 ---
 # <a name="cstringt-class"></a>CStringT 類別
 
@@ -103,32 +103,32 @@ class CStringT :
 #### <a name="parameters"></a>參數
 
 *BaseType*<br/>
-字元類別的型別字串。 可以是下列其中一項：
+字串類別的字元類型。 可以是下列其中一項：
 
-- **char** （適用於 ANSI 字元字串）。
+- **char**（適用于 ANSI 字元字串）。
 
-- **wchar_t** （適用於 Unicode 字元字串）。
+- **wchar_t**（適用于 Unicode 字元字串）。
 
-- TCHAR （適用於 ANSI 和 Unicode 字元字串）。
+- TCHAR （適用于 ANSI 和 Unicode 字元字串）。
 
 *StringTraits*<br/>
-判斷字串類別是否需要 C 執行階段 (CRT) 程式庫支援和字串資源位於何處。 可以是下列其中一項：
+判斷 string 類別是否需要 C 執行時間（CRT）程式庫支援，以及字串資源所在的位置。 可以是下列其中一項：
 
-- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitATL < wchar_t**&#124; **char** &#124; &#124; TCHAR、ChTraitsCRT < wchar_t char TCHAR > > &#124;
 
-   類別需要 CRT 支援並搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
+   類別需要 CRT 支援，並在所指定`m_hInstResource`的模組（應用程式的模組類別的成員）中搜尋資源字串。
 
-- **StrTraitATL< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitATL < wchar_t**&#124; **char** &#124; &#124; TCHAR、ChTraitsOS < wchar_t char TCHAR > > &#124;
 
-   類別不需要 CRT 支援及搜尋所指定的模組中的資源字串`m_hInstResource`（應用程式的模組類別的成員）。
+   類別不需要 CRT 支援，而且會在所指定`m_hInstResource`的模組（應用程式的模組類別的成員）中搜尋資源字串。
 
-- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT< wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitMFC < wchar_t**&#124; **char** &#124; &#124; TCHAR、ChTraitsCRT < wchar_t char TCHAR > > &#124;
 
-   類別需要 CRT 支援和搜尋的資源字串使用標準的 MFC 搜尋演算法。
+   類別需要 CRT 支援，並使用標準 MFC 搜尋演算法來搜尋資源字串。
 
-- **StrTraitMFC< wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS< wchar_t** &#124; **char** &#124; **TCHAR > >**
+- **StrTraitMFC < wchar_t**&#124; **char** &#124; &#124; TCHAR、ChTraitsOS < wchar_t char TCHAR > > &#124;
 
-   CRT 支援並使用標準的 MFC 搜尋演算法的資源字串搜尋，不需要的類別。
+   類別不需要 CRT 支援，而且會使用標準 MFC 搜尋演算法來搜尋資源字串。
 
 ## <a name="members"></a>成員
 
@@ -136,132 +136,132 @@ class CStringT :
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringT::CStringT](#cstringt)|建構`CStringT`以各種方式的物件。|
+|[CStringT::CStringT](#cstringt)|以各種方式來構造物件。`CStringT`|
 |[CStringT::~CStringT](#_dtorcstringt)|終結 `CStringT` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CStringT::AllocSysString](#allocsysstring)|配置從 BSTR`CStringT`資料。|
-|[CStringT::AnsiToOem](#ansitooem)|可讓 OEM 字元集的 ANSI 字元集的就地轉換。|
-|[CStringT::AppendFormat](#appendformat)|將格式化的資料附加至現有`CStringT`物件。|
-|[CStringT::Collate](#collate)|比較兩個字串 （區分大小寫，會使用地區設定特有的資訊）。|
-|[CStringT::CollateNoCase](#collatenocase)|比較兩個字串 （不區分大小寫，會使用地區設定特有的資訊）。|
-|[CStringT::Compare](#compare)|比較兩個字串 （區分大小寫）。|
-|[CStringT::CompareNoCase](#comparenocase)|比較兩個字串 （不區分大小寫）。|
-|[CStringT::Delete](#delete)|從字串中刪除的字元。|
-|[CStringT::Find](#find)|尋找的字元或在較大的字串內的子字串。|
-|[CStringT::FindOneOf](#findoneof)|尋找從一組的第一個相符的字元。|
-|[CStringT::Format](#format)|格式字串做為`sprintf`沒有。|
+|[CStringT::AllocSysString](#allocsysstring)|從`CStringT`資料配置 BSTR。|
+|[CStringT::AnsiToOem](#ansitooem)|進行從 ANSI 字元集到 OEM 字元集的就地轉換。|
+|[CStringT::AppendFormat](#appendformat)|將格式化的資料附加至`CStringT`現有的物件。|
+|[CStringT::Collate](#collate)|比較兩個字串（區分大小寫，使用地區設定特定的資訊）。|
+|[CStringT::CollateNoCase](#collatenocase)|比較兩個字串（不區分大小寫，使用地區設定特定的資訊）。|
+|[CStringT::Compare](#compare)|比較兩個字串（區分大小寫）。|
+|[CStringT::CompareNoCase](#comparenocase)|比較兩個字串（不區分大小寫）。|
+|[CStringT::Delete](#delete)|從字串中刪除一個或多個字元。|
+|[CStringT::Find](#find)|尋找較大字串中的字元或子字串。|
+|[CStringT::FindOneOf](#findoneof)|從集合中尋找第一個相符的字元。|
+|[CStringT::Format](#format)|將字串格式化為`sprintf` 。|
 |[CStringT::FormatMessage](#formatmessage)|格式化訊息字串。|
-|[CStringT::FormatMessageV](#formatmessagev)|格式化的訊息字串，使用變數引數清單。|
-|[CStringT::FormatV](#formatv)|格式化使用的引數的變數清單的字串。|
-|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|設定指定的環境變數的值的字串。|
-|[CStringT::Insert](#insert)|插入字串中指定索引的單一字元或子字串。|
-|[CStringT::Left](#left)|擷取字串的左側的部分。|
-|[CStringT::LoadString](#loadstring)|載入現有`CStringT`從 Windows 資源的物件。|
-|[CStringT::MakeLower](#makelower)|將轉換為小寫字元這個字串中的所有字元。|
-|[CStringT::MakeReverse](#makereverse)|反轉的字串。|
-|[CStringT::MakeUpper](#makeupper)|將轉換成大寫字元這個字串中的所有字元。|
-|[CStringT::Mid](#mid)|擷取字串的中間部分。|
-|[CStringT::OemToAnsi](#oemtoansi)|讓就地轉換，從 ANSI 字元集的 OEM 字元集。|
-|[CStringT::Remove](#remove)|移除表示從字串的字元。|
-|[CStringT::Replace](#replace)|取代指示使用其他字元的字元。|
-|[CStringT::ReverseFind](#reversefind)|尋找可更大的字串，內的字元從結尾開始。|
-|[CStringT::Right](#right)|擷取字串的右邊部分。|
-|[CStringT::SetSysString](#setsysstring)|設定現有 BSTR 物件，包含來自`CStringT`物件。|
-|[CStringT::SpanExcluding](#spanexcluding)|從字串中，不在所識別的字元集中的第一個字元開始擷取字元`pszCharSet`。|
-|[CStringT::SpanIncluding](#spanincluding)|擷取子字串，其中包含集合中的字元。|
-|[CStringT::Tokenize](#tokenize)|擷取語彙基元的字串中指定目標。|
-|[CStringT::Trim](#trim)|修剪所有開頭和尾端空白字元的字串。|
-|[CStringT::TrimLeft](#trimleft)|從字串開頭空白字元的修剪。|
-|[CStringT::TrimRight](#trimright)|修剪尾端空格字元字串。|
+|[CStringT::FormatMessageV](#formatmessagev)|使用可變引數清單來格式化訊息字串。|
+|[CStringT::FormatV](#formatv)|使用引數的可變清單來格式化字串。|
+|[CStringT::GetEnvironmentVariable](#getenvironmentvariable)|將字串設定為所指定環境變數的值。|
+|[CStringT::Insert](#insert)|在字串中的指定索引處插入單一字元或子字串。|
+|[CStringT::Left](#left)|解壓縮字串的左邊部分。|
+|[CStringT::LoadString](#loadstring)|從 Windows 資源`CStringT`載入現有的物件。|
+|[CStringT::MakeLower](#makelower)|將此字串中的所有字元轉換成小寫字元。|
+|[CStringT::MakeReverse](#makereverse)|反轉字串。|
+|[CStringT::MakeUpper](#makeupper)|將此字串中的所有字元轉換成大寫字元。|
+|[CStringT::Mid](#mid)|解壓縮字串的中間部分。|
+|[CStringT::OemToAnsi](#oemtoansi)|進行從 OEM 字元集到 ANSI 字元集的就地轉換。|
+|[CStringT::Remove](#remove)|從字串中移除指定的字元。|
+|[CStringT::Replace](#replace)|以其他字元取代指定的字元。|
+|[CStringT::ReverseFind](#reversefind)|尋找較大字串中的字元;從結尾開始。|
+|[CStringT::Right](#right)|解壓縮字串的右側部分。|
+|[CStringT::SetSysString](#setsysstring)|使用來自`CStringT`物件的資料來設定現有的 BSTR 物件。|
+|[CStringT::SpanExcluding](#spanexcluding)|從字串中，以第一個字元開頭，而不是由所識別`pszCharSet`的字元集中的字元。|
+|[CStringT::SpanIncluding](#spanincluding)|解壓縮只包含集合中之字元的子字串。|
+|[CStringT::Tokenize](#tokenize)|在目標字串中解壓縮指定的標記。|
+|[CStringT::Trim](#trim)|從字串中修剪所有開頭和尾端空白字元。|
+|[CStringT::TrimLeft](#trimleft)|修剪字串中開頭的空白字元。|
+|[CStringT::TrimRight](#trimright)|修剪字串中的尾端空白字元。|
 
 ### <a name="operators"></a>運算子
 
 |||
 |-|-|
-|[CStringT::operator =](#operator_eq)|指派新值到`CStringT`物件。|
-|[CStringT::operator +](#operator_add)|串連兩個字串或字元和字串。|
-|[CStringT::operator +=](#operator_add_eq)|串連至現有的字串結尾的新字串。|
-|[CStringT::operator ==](#operator_eq_eq)|判斷兩個字串是否以邏輯方式相等。|
-|[CStringT::operator !=](#operator_neq)|判斷兩個字串是否以邏輯方式不相等。|
-|[CStringT::operator &lt;](#operator_lt)|判斷運算子左邊的字串是否小於右邊的字串。|
-|[CStringT::operator &gt;](#operator_gt)|判斷運算子左邊的字串是否大於右邊的字串。|
-|[CStringT::operator &lt;=](#operator_lt_eq)|決定是否運算子左邊的字串是否小於或等於右邊的字串。|
-|[CStringT::operator &gt;=](#operator_gt_eq)|決定是否運算子左邊的字串是大於或等於右邊的字串。|
+|[CStringT::operator =](#operator_eq)|將新值指派給`CStringT`物件。|
+|[CStringT：： operator +](#operator_add)|串連兩個字串或一個字元和一個字串。|
+|[CStringT：： operator + =](#operator_add_eq)|將新字串串連至現有字串的結尾。|
+|[CStringT::operator ==](#operator_eq_eq)|判斷兩個字串是否在邏輯上相等。|
+|[CStringT::operator !=](#operator_neq)|判斷兩個字串在邏輯上是否不相等。|
+|[CStringT：： operator&lt;](#operator_lt)|判斷運算子左邊的字串是否小於右邊的字串。（& i）|
+|[CStringT：： operator&gt;](#operator_gt)|判斷運算子左邊的字串是否大於右邊的字串。（& i）|
+|[CStringT：： operator&lt;=](#operator_lt_eq)|判斷運算子左邊的字串是否小於或等於右邊的字串。（& i）|
+|[CStringT：： operator&gt;=](#operator_gt_eq)|判斷運算子左邊的字串是否大於或等於右邊的字串。（& i）|
 
 ## <a name="remarks"></a>備註
 
-`CStringT` 繼承自[CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)。 進階的功能，例如字元操作、 排序和搜尋，由`CStringT`。
+`CStringT`繼承自[CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)。 先進的功能，例如字元操作、排序和搜尋，都是由`CStringT`所執行。
 
 > [!NOTE]
-> `CStringT` 物件是能夠擲回例外狀況。 發生這種情況時`CStringT`物件執行記憶體不足，因為任何原因。
+> `CStringT`物件可以擲回例外狀況。 當`CStringT`物件因為任何原因而用盡記憶體時，就會發生這種情況。
 
-A`CStringT`物件包含一連串可變長度的字元。 `CStringT` 提供函式和運算子類似的基本語法。 串連和比較運算子，以及簡化的記憶體管理，讓`CStringT`比一般字元陣列的物件。
-
-> [!NOTE]
->  雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
-
-使用不同的組合`BaseType`並`StringTraits`參數，`CStringT`物件可以在下列類型中，也就是傳入已預先定義的 ATL 程式庫。
-
-如果使用 ATL 應用程式中：
-
-`CString``CStringA`，和`CStringW`從 MFC DLL (MFC90 匯出。DLL)，絕不會從使用者 Dll。 這為了防止`CStringT`從 multiply 所定義。
+`CStringT`物件是由可變長度的字元序列所組成。 `CStringT`使用類似于基本的語法來提供函式和運算子。 串連和比較運算子加上簡化的記憶體管理，讓`CStringT`物件比一般字元陣列更容易使用。
 
 > [!NOTE]
->  如果您的程式碼會包含連結器錯誤中所述的因應措施[使用 CStringT 匯出字串類別](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md)，您應該移除該程式碼。 不再需要。
+>  雖然您可以建立`CStringT`包含內嵌 null 字元的實例，但我們還是建議您不要這麼做。 在包含內嵌 null 字元`CStringT`的物件上呼叫方法和運算子可能會產生非預期的結果。
 
-下列字串所提供的類型以 MFC 為基礎的應用程式中：
+藉由使用不同的`BaseType`和`StringTraits`參數組合， `CStringT`物件可以包含下列類型，這些型別已由 ATL 程式庫預先定義。
+
+如果在 ATL 應用程式中使用：
+
+`CString`、 `CStringA`和`CStringW`是從 MFC DLL （MFC90）匯出。DLL），而不是來自使用者 Dll。 這麼做是為了避免`CStringT`定義過多次。
+
+> [!NOTE]
+>  如果您的程式碼包含[使用 CStringT 匯出字串類別](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md)中所述連結器錯誤的因應措施，您應該移除該程式碼。 不再需要它。
+
+下列字串類型可在以 MFC 為基礎的應用程式中使用：
 
 |CStringT 類型|宣告|
 |-------------------|-----------------|
-|`CStringA`|ANSI 字元輸入具有 CRT 支援的字串。|
-|`CStringW`|Unicode 字元輸入具有 CRT 支援的字串。|
-|`CString`|ANSI 和 Unicode 字元類型具有 CRT 支援。|
+|`CStringA`|具有 CRT 支援的 ANSI 字元類型字串。|
+|`CStringW`|具有 CRT 支援的 Unicode 字元類型字串。|
+|`CString`|包含 CRT 支援的 ANSI 和 Unicode 字元類型。|
 
-下列字串所提供的類型在專案中定義 ATL_CSTRING_NO_CRT 位置：
-
-|CStringT 類型|宣告|
-|-------------------|-----------------|
-|`CAtlStringA`|ANSI 字元輸入不具有 CRT 支援的字串。|
-|`CAtlStringW`|Unicode 字元輸入不具有 CRT 支援的字串。|
-|`CAtlString`|ANSI 和 Unicode 字元類型不具有 CRT 支援。|
-
-下列字串所提供的類型在專案中未定義 ATL_CSTRING_NO_CRT 其中：
+下列字串類型可在定義 ATL_CSTRING_NO_CRT 的專案中使用：
 
 |CStringT 類型|宣告|
 |-------------------|-----------------|
-|`CAtlStringA`|ANSI 字元輸入具有 CRT 支援的字串。|
-|`CAtlStringW`|Unicode 字元輸入具有 CRT 支援的字串。|
-|`CAtlString`|ANSI 和 Unicode 字元類型具有 CRT 支援。|
+|`CAtlStringA`|不含 CRT 支援的 ANSI 字元類型字串。|
+|`CAtlStringW`|不含 CRT 支援的 Unicode 字元類型字串。|
+|`CAtlString`|不含 CRT 支援的 ANSI 和 Unicode 字元類型。|
 
-`CString` 物件也具有下列特性：
+下列字串類型適用于未定義 ATL_CSTRING_NO_CRT 的專案：
 
-- `CStringT` 物件可以成長的串連作業的結果。
+|CStringT 類型|宣告|
+|-------------------|-----------------|
+|`CAtlStringA`|具有 CRT 支援的 ANSI 字元類型字串。|
+|`CAtlStringW`|具有 CRT 支援的 Unicode 字元類型字串。|
+|`CAtlString`|包含 CRT 支援的 ANSI 和 Unicode 字元類型。|
 
-- `CStringT` 物件可讓您遵循"的值語意。" 把`CStringT`物件做為實際的字串，而非字串的指標。
+`CString`物件也具有下列特性：
 
-- 您可以自由地使用替代`CStringT`物件`PCXSTR`函式引數。
+- `CStringT`物件可能會因串連作業而成長。
 
-- 字串緩衝區的自訂記憶體管理。 如需詳細資訊，請參閱 <<c0> [ 記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+- `CStringT`物件會遵循「值的語義」。 將`CStringT`物件視為實際的字串，而不是字串的指標。
+
+- 您可以自由地`CStringT`替代函數`PCXSTR`引數的物件。
+
+- 字串緩衝區的自訂記憶體管理。 如需詳細資訊，請參閱[記憶體管理和 CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 ## <a name="cstringt-predefined-types"></a>CStringT 預先定義的類型
 
-因為`CStringT`會使用樣板引數來定義字元類型 (任一[wchar_t](../../c-runtime-library/standard-types.md)或是[char](../../c-runtime-library/standard-types.md)) 支援，方法參數類型可以是複雜有時。 若要簡化此問題，一組預先定義的型別定義及使用整個`CStringT`類別。 下表列出各種類型：
+因為`CStringT`使用樣板引數來定義支援的字元類型（ [wchar_t](../../c-runtime-library/standard-types.md)或[char](../../c-runtime-library/standard-types.md)），所以方法參數類型有時可能會很複雜。 為了簡化這個問題，會定義一組預先定義的類型，並在`CStringT`整個類別中使用。 下表列出各種類型：
 
-|名稱|描述|
+|名稱|說明|
 |----------|-----------------|
-|`XCHAR`|單一字元 (任一**wchar_t**或是**char**) 與相同的字元類型`CStringT`物件。|
-|`YCHAR`|單一字元 (任一**wchar_t**或是**char**) 與相反的字元類型`CStringT`物件。|
-|`PXSTR`|字元字串的指標 (任一**wchar_t**或是**char**) 與相同的字元類型`CStringT`物件。|
-|`PYSTR`|字元字串的指標 (任一**wchar_t**或是**char**) 與相反的字元類型`CStringT`物件。|
-|`PCXSTR`|指標**const**字元字串 (任一**wchar_t**或是**char**) 與相同的字元類型`CStringT`物件。|
-|`PCYSTR`|指標**const**字元字串 (任一**wchar_t**或是**char**) 與相反的字元類型`CStringT`物件。|
+|`XCHAR`|與`CStringT`物件具有相同字元類型的單一字元（ **wchar_t**或**char**）。|
+|`YCHAR`|與`CStringT`物件相反的字元類型的單一字元（ **wchar_t**或**char**）。|
+|`PXSTR`|字元字串（ **wchar_t**或**char**）的指標，與`CStringT`物件具有相同的字元類型。|
+|`PYSTR`|字元字串（ **wchar_t**或**char**）的指標，其字元`CStringT`類型與物件相反。|
+|`PCXSTR`|與物件`CStringT`具有相同字元類型之**const**字元字串（ **wchar_t**或**char**）的指標。|
+|`PCYSTR`|以 相反的字元類型做為物件之const字元字串（wchar_t或char）的`CStringT`指標。|
 
 > [!NOTE]
->  先前使用未記載之的方法的程式碼`CString`(例如`AssignCopy`) 必須使用下列的記錄的方法的程式碼以取代`CStringT`(例如`GetBuffer`或`ReleaseBuffer`)。 這些方法繼承自`CSimpleStringT`。
+>  先前`CString`使用未記載的方法（ `AssignCopy`例如）的程式碼，必須以使用下列檔之`CStringT` `GetBuffer`方法（例如或`ReleaseBuffer`）的程式碼取代。 這些方法是從`CSimpleStringT`繼承而來。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -273,12 +273,12 @@ A`CStringT`物件包含一連串可變長度的字元。 `CStringT` 提供函式
 
 |標頭|用於|
 |------------|-------------|
-|cstringt.h|僅限 MFC 字串物件|
+|cstringt.h|僅限 MFC 的字串物件|
 |atlstr.h|非 MFC 字串物件|
 
 ##  <a name="allocsysstring"></a>  CStringT::AllocSysString
 
-配置類型為 BSTR 的 Automation 相容字串，並將複製的內容`CStringT`物件，包括結束的 null 字元。
+配置類型 BSTR 的 Automation 相容字串，並將`CStringT`物件的內容複寫到其中，包括終止的 null 字元。
 
 ```
 BSTR AllocSysString() const;
@@ -290,11 +290,11 @@ BSTR AllocSysString() const;
 
 ### <a name="remarks"></a>備註
 
-在 MFC 程式中， [CMemoryException 類別](../../mfc/reference/cmemoryexception-class.md)如果存在記憶體不足，就會擲回。 在 ATL 程式中， [CAtlException](../../atl/reference/catlexception-class.md)就會擲回。 此函式通常用於自動化傳回的字串。
+在 MFC 程式中，如果有足夠的記憶體，就會擲回[CMemoryException 類別](../../mfc/reference/cmemoryexception-class.md)。 在 ATL 程式中，會擲回[CAtlException](../../atl/reference/catlexception-class.md) 。 此函數通常用來傳回自動化的字串。
 
-通常，如果這個字串會傳遞給 COM 函式做為 [in] 參數，則這需要呼叫者釋放字串。 做法是使用[SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)、 Windows SDK 中所述。 如需詳細資訊，請參閱 < [Allocating 和釋放記憶體的 BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
+通常，如果將這個字串當做 [in] 參數傳遞至 COM 函式，則需要呼叫者釋放字串。 這可以使用[SysFreeString](/windows/win32/api/oleauto/nf-oleauto-sysfreestring)來完成，如 Windows SDK 中所述。 如需詳細資訊，請參閱為[BSTR 配置和釋放記憶體](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)。
 
-如需有關在 Windows 中的 OLE 配置函式的詳細資訊，請參閱[SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK 中。
+如需 Windows 中 OLE 配置函式的詳細資訊，請參閱 Windows SDK 中的[SysAllocString](/windows/win32/api/oleauto/nf-oleauto-sysallocstring) 。
 
 ### <a name="example"></a>範例
 
@@ -302,9 +302,9 @@ BSTR AllocSysString() const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#105](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_1.cpp)]
 
-##  <a name="ansitooem"></a>  CStringT::AnsiToOem
+##  <a name="ansitooem"></a>CStringT：： AnsiToOem
 
-在此的所有字元都轉換`CStringT`OEM 字元集 ANSI 字元集中的物件。
+將這個`CStringT`物件中的所有字元，從 ANSI 字元集轉換成 OEM 字元集。
 
 ```
 void AnsiToOem();
@@ -312,7 +312,7 @@ void AnsiToOem();
 
 ### <a name="remarks"></a>備註
 
-無法使用，如果已定義 _UNICODE 函式。
+如果已定義 _UNICODE，則無法使用函數。
 
 ### <a name="example"></a>範例
 
@@ -320,7 +320,7 @@ void AnsiToOem();
 
 ##  <a name="appendformat"></a>  CStringT::AppendFormat
 
-將格式化的資料附加至現有`CStringT`物件。
+將格式化的資料附加至`CStringT`現有的物件。
 
 ```
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
@@ -330,17 +330,17 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ### <a name="parameters"></a>參數
 
 *pszFormat*<br/>
-格式控制字串。
+格式控制字元串。
 
 *nFormatID*<br/>
-包含格式控制字串的字串資源識別碼。
+包含格式控制字元串的字串資源識別碼。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
 
-此函式格式化，並將一系列的字元和值附加`CStringT`。 每個選擇性引數 （如果有的話） 會轉換並根據對應格式規格中附加*pszFormat*或從所識別的字串資源*nFormatID*。
+此函式會格式化，並在中`CStringT`附加一系列的字元和值。 每個選擇性引數（如果有的話）都會根據*pszFormat*中的對應格式規格，或從*nFormatID*所識別的字串資源進行轉換和附加。
 
 ### <a name="example"></a>範例
 
@@ -348,7 +348,7 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ##  <a name="collate"></a>  CStringT::Collate
 
-比較使用泛型文字函式的兩個字串`_tcscoll`。
+使用泛型文字函數`_tcscoll`比較兩個字串。
 
 ```
 int Collate(PCXSTR psz) const throw();
@@ -357,19 +357,19 @@ int Collate(PCXSTR psz) const throw();
 ### <a name="parameters"></a>參數
 
 *psz*<br/>
-其他用於字串比較。
+另一個用於比較的字串。
 
 ### <a name="return-value"></a>傳回值
 
-是零，如果相同的字串，< 0，表示這個`CStringT`物件是小於*psz*，或 > 0，表示此`CStringT`物件是否大於*psz*。
+如果字串完全相同，則為零; 如果這個`CStringT`物件小於*psz*，則 < 0，如果這個`CStringT`物件大於*psz*，則為 0 >。
 
 ### <a name="remarks"></a>備註
 
-泛型文字函式`_tcscoll`，其定義於 TCHAR。H，對應至其中一個`strcoll`， `wcscoll`，或`_mbscoll`，取決於編譯時期定義的字元集。 每個函式會執行區分大小寫比較根據字碼頁的字串目前使用中。 如需詳細資訊，請參閱 < [strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
+在 TCHAR 中定義的`_tcscoll`泛型文字函數。H 會對應至`strcoll`、 `wcscoll`或`_mbscoll`，視編譯時期所定義的字元集而定。 每個函式都會根據目前使用中的字碼頁，執行字串的區分大小寫比較。 如需詳細資訊，請參閱[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
 
 ##  <a name="collatenocase"></a>  CStringT::CollateNoCase
 
-比較使用泛型文字函式的兩個字串`_tcscoll`。
+使用泛型文字函數`_tcscoll`比較兩個字串。
 
 ```
 int CollateNoCase(PCXSTR psz) const throw();
@@ -378,15 +378,15 @@ int CollateNoCase(PCXSTR psz) const throw();
 ### <a name="parameters"></a>參數
 
 *psz*<br/>
-其他用於字串比較。
+另一個用於比較的字串。
 
 ### <a name="return-value"></a>傳回值
 
-零的字串是否相同 （忽略大小寫），< 0，表示這個`CStringT`物件是小於*psz* （忽略大小寫），或 > 0，表示此`CStringT`物件是否大於*psz* （忽略大小寫）。
+如果字串相同（忽略大小寫），則為零; 如果這個`CStringT`物件小於*psz* （忽略大小寫） >，則 < 0; 如果`CStringT`這個物件大於*psz* （忽略大小寫），則為0。
 
 ### <a name="remarks"></a>備註
 
-泛型文字函式`_tcscoll`，其定義於 TCHAR。H，對應至其中一個`stricoll`， `wcsicoll`，或`_mbsicoll`，取決於編譯時期定義的字元集。 每個函式會執行不區分大小寫比較的字串，根據目前使用中的字碼頁。 如需詳細資訊，請參閱 < [strcoll、 wcscoll、 _mbscoll、 _strcoll_l、 _wcscoll_l、 _mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
+在 TCHAR 中定義的`_tcscoll`泛型文字函數。H 會對應至`stricoll`、 `wcsicoll`或`_mbsicoll`，視編譯時期所定義的字元集而定。 每個函式都會根據目前使用中的字碼頁，執行字串的不區分大小寫比較。 如需詳細資訊，請參閱[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)。
 
 ### <a name="example"></a>範例
 
@@ -394,7 +394,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ##  <a name="compare"></a>  CStringT::Compare
 
-比較兩個字串 （區分大小寫）。
+比較兩個字串（區分大小寫）。
 
 ```
 int Compare(PCXSTR psz) const;
@@ -403,17 +403,17 @@ int Compare(PCXSTR psz) const;
 ### <a name="parameters"></a>參數
 
 *psz*<br/>
-其他用於字串比較。
+另一個用於比較的字串。
 
 ### <a name="return-value"></a>傳回值
 
-是零，如果相同的字串，< 0，表示這個`CStringT`物件是小於*psz*，或 > 0，表示此`CStringT`物件是否大於*psz*。
+如果字串完全相同，則為零; 如果這個`CStringT`物件小於*psz*，則 < 0，如果這個`CStringT`物件大於*psz*，則為 0 >。
 
 ### <a name="remarks"></a>備註
 
-泛型文字函式`_tcscmp`，其定義於 TCHAR。H，對應至其中一個`strcmp`， `wcscmp`，或`_mbscmp`，取決於編譯時期定義的字元集。 每個函式執行字串區分大小寫的比較，並不會受到地區設定。 如需詳細資訊，請參閱 < [strcmp、 wcscmp、 _mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)。
+在 TCHAR 中定義的`_tcscmp`泛型文字函數。H 會對應至`strcmp`、 `wcscmp`或`_mbscmp`，視編譯時期所定義的字元集而定。 每個函式會執行區分大小寫的字串比較，而且不會受到地區設定的影響。 如需詳細資訊，請參閱[strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)。
 
-如果字串包含內嵌的 null 值，以供比較用字串視為將在第一個內嵌的 null 字元處截斷。
+如果字串包含內嵌的 null，則在進行比較時，會將字串視為第一個內嵌 null 字元的截斷。
 
 ### <a name="example"></a>範例
 
@@ -423,7 +423,7 @@ int Compare(PCXSTR psz) const;
 
 ##  <a name="comparenocase"></a>  CStringT::CompareNoCase
 
-比較兩個字串 （不區分大小寫）。
+比較兩個字串（不區分大小寫）。
 
 ```
 int CompareNoCase(PCXSTR psz) const throw();
@@ -432,21 +432,21 @@ int CompareNoCase(PCXSTR psz) const throw();
 ### <a name="parameters"></a>參數
 
 *psz*<br/>
-其他用於字串比較。
+另一個用於比較的字串。
 
 ### <a name="return-value"></a>傳回值
 
-如果字串完全相同則為零 （忽略大小寫） < 0，表示這個`CStringT`物件是小於*psz* （忽略大小寫），或 > 0，如果此`CStringT`物件是否大於*psz* （忽略大小寫）。
+如果字串相同（忽略大小寫），則為零; 如果這個`CStringT`物件小於*psz* （忽略大小寫） >，則 < 0; 如果`CStringT`這個物件大於*psz* （忽略大小寫），則為0。
 
 ### <a name="remarks"></a>備註
 
-泛型文字函式`_tcsicmp`，其定義於 TCHAR。H，對應至其中一個`_stricmp`，`_wcsicmp`或`_mbsicmp`，取決於編譯時期定義的字元集。 每個函式會執行不區分大小寫的字串比較。 比較取決於地區設定，但不是 LC_COLLATE LC_CTYPE 層面。 如需詳細資訊，請參閱 < [_stricmp、 _wcsicmp、 _mbsicmp、 _stricmp_l、 _wcsicmp_l、 _mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。
+在 TCHAR 中定義的`_tcsicmp`泛型文字函數。H，會對應到`_stricmp` `_wcsicmp`或`_mbsicmp`，視編譯時期所定義的字元集而定。 每個函數都會執行字串的不區分大小寫比較。 比較取決於地區設定的 LC_CTYPE 層面，但不是 LC_COLLATE。 如需詳細資訊，請參閱[_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#111](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_6.cpp)]
 
-##  <a name="cstringt"></a>  CStringT::CStringT
+##  <a name="cstringt"></a>CStringT：： CStringT
 
 建構 `CStringT` 物件。
 
@@ -526,71 +526,71 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 ### <a name="parameters"></a>參數
 
 *pch*<br/>
-長度的字元陣列的指標*nLength*，不以 null 終止。
+長度為*nLength*之字元陣列的指標，不是以 null 結束。
 
 *nLength*<br/>
-中的字元數的計數*pch*。
+*Pch*中的字元數計數。
 
 *ch*<br/>
 單一字元。
 
 *pszSrc*<br/>
-要複製到這個 null 結尾字串`CStringT`物件。
+要複製到這個`CStringT`物件中以 null 結束的字串。
 
 *pStringMgr*<br/>
-指標，memory manager`CStringT`物件。 如需詳細資訊`IAtlStringMgr`和 記憶體管理`CStringT`，請參閱[使用 CStringT 管理記憶體](../../atl-mfc-shared/memory-management-with-cstringt.md)。
+`CStringT`物件之記憶體管理員的指標。 如需`IAtlStringMgr`和之記憶體管理的`CStringT`詳細資訊，請參閱[使用 CStringT 的記憶體管理](../../atl-mfc-shared/memory-management-with-cstringt.md)。
 
 *strSrc*<br/>
-將現有`CStringT`要複製到這個物件`CStringT`物件。 如需詳細資訊`CThisString`和`CThisSimpleString`，請參閱 < 備註 > 一節。
+要複製`CStringT`到這個`CStringT`物件中的現有物件。 如需`CThisString`和`CThisSimpleString`的詳細資訊，請參閱備註一節。
 
 *varSrc*<br/>
-要複製到此變數物件`CStringT`物件。
+要複製到這個`CStringT`物件的 variant 物件。
 
 *BaseType*<br/>
-字元類別的型別字串。 可以是下列其中一項：
+字串類別的字元類型。 可以是下列其中一項：
 
-**char** （適用於 ANSI 字元字串）。
+**char**（適用于 ANSI 字元字串）。
 
-**wchar_t** （適用於 Unicode 字元字串）。
+**wchar_t**（適用于 Unicode 字元字串）。
 
-TCHAR （適用於 ANSI 和 Unicode 字元字串）。
+TCHAR （適用于 ANSI 和 Unicode 字元字串）。
 
 *bMFCDLL*<br/>
-布林值，指定專案是否 MFC DLL (TRUE) 與否 (FALSE)。
+布林值，指定專案是否為 MFC DLL （TRUE）或不是（FALSE）。
 
 *SystemString*<br/>
-必須是`System::String`，並必須以 /clr 編譯專案。
+必須是`System::String`，而且必須使用/clr 來編譯專案。
 
 *pString*<br/>
-控制代碼`CStringT`物件。
+`CStringT`物件的控制碼。
 
 ### <a name="remarks"></a>備註
 
-因為建構函式會將輸入的資料複製到新配置的儲存體，您應該注意可能會造成例外狀況，該記憶體。 請注意，部分這些建構函式做為轉換函式。 這可讓您取代，比方說，LPTSTR 其中`CStringT`預期物件。
+因為此函式會將輸入資料複製到新配置的儲存體，所以您應該注意記憶體例外狀況可能會產生。 請注意，其中有些函式會作為轉換函式。 例如，這可讓您以預期的`CStringT`物件取代 LPTSTR。
 
-- `CStringT`( `LPCSTR` `lpsz` ):建構 Unicode`CStringT`從 ANSI 字串。 您也可以使用這個建構函式來載入字串資源，如下列範例所示。
+- `CStringT`( `LPCSTR` `lpsz` ):從 ANSI 字串`CStringT`構造 Unicode。 您也可以使用此函數來載入字串資源，如下列範例所示。
 
-- `CStringT(` `LPCWSTR` `lpsz` ):建構`CStringT`從 Unicode 字串。
+- `CStringT(``LPCWSTR` `lpsz` ):`CStringT`從 Unicode 字串構造。
 
-- `CStringT`( `const unsigned char*` `psz` ):可讓您建構`CStringT`的指標**unsigned char**。
-
-> [!NOTE]
->  定義 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 巨集，若要關閉 ANSI 和 Unicode 字串之間的隱含的字串轉換。 巨集排除編譯建構函式支援轉換。
-
-請注意， *strSrc*參數可以是`CStringT`或`CThisSimpleString`物件。 針對`CStringT`，使用其預設值具現化的其中一個 (`CString`， `CStringA`，或`CStringW`)，如`CThisSimpleString`，使用**這**指標。 `CThisSimpleString` 宣告的執行個體[CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)，這是較小的字串類別具有較低的內建的功能比`CStringT`類別。
-
-多載運算子`CSimpleStringT<>&()`建構`CStringT`物件從`CSimpleStringT`宣告。
+- `CStringT`( `const unsigned char*` `psz` ):可讓您`CStringT`從不**帶正負號 char**的指標來建立。
 
 > [!NOTE]
->  雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
+>  定義 _CSTRING_DISABLE_NARROW_WIDE_CONVERSION 宏，以關閉 ANSI 和 Unicode 字串之間的隱含字串轉換。 宏會從支援轉換的編譯函數中排除。
+
+請注意， *strSrc*參數可以`CStringT`是或`CThisSimpleString`物件。 針對`CStringT`，請使用其中一個預設的具`CString`現`CStringA`化（ `CStringW`、或） `CThisSimpleString`; 若是，請使用**this**指標。 `CThisSimpleString`宣告[CSimpleStringT 類別](../../atl-mfc-shared/reference/csimplestringt-class.md)的實例，這是較小的字串類別，其內建功能比`CStringT`類別少。
+
+多載運算子`CSimpleStringT<>&()`會從`CStringT`宣告中`CSimpleStringT`建立物件。
+
+> [!NOTE]
+>  雖然您可以建立`CStringT`包含內嵌 null 字元的實例，但我們還是建議您不要這麼做。 在包含內嵌 null 字元`CStringT`的物件上呼叫方法和運算子可能會產生非預期的結果。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
+##  <a name="_dtorcstringt"></a>CStringT：： ~ CStringT
 
-終結`CStringT`物件。
+`CStringT`終結物件。
 
 ```
 ~CStringT() throw();
@@ -598,11 +598,11 @@ TCHAR （適用於 ANSI 和 Unicode 字元字串）。
 
 ### <a name="remarks"></a>備註
 
-終結`CStringT`物件。
+`CStringT`終結物件。
 
 ##  <a name="delete"></a>  CStringT::Delete
 
-刪除字元從字串開頭的指定索引處的字元。
+從指定索引處的字元開始，刪除字串中的一個或多個字元。
 
 ```
 int Delete(int iIndex, int nCount = 1);
@@ -611,18 +611,18 @@ int Delete(int iIndex, int nCount = 1);
 ### <a name="parameters"></a>參數
 
 *iIndex*<br/>
-以零為起始的索引中的第一個字元`CStringT`若要刪除的物件。
+要刪除的`CStringT`物件中第一個字元之以零為基底的索引。
 
 *nCount*<br/>
 要移除的字元數。
 
 ### <a name="return-value"></a>傳回值
 
-變更字串的長度。
+已變更之字串的長度。
 
 ### <a name="remarks"></a>備註
 
-如果*nCount*很長的字串，字串的其餘部分將會移除。
+如果*nCount*的長度超過字串，則會移除字串的其餘部分。
 
 ### <a name="example"></a>範例
 
@@ -635,9 +635,9 @@ After: Soccer best,
     but hockey is quicker!
 ```
 
-##  <a name="find"></a>  CStringT::Find
+##  <a name="find"></a>CStringT：： Find
 
-此字串中搜尋的字元或子字串的第一個相符項目。
+在這個字串中搜尋字元或子字串的第一個相符項。
 
 ```
 int Find(PCXSTR pszSub, int iStart=0) const throw();
@@ -650,26 +650,26 @@ int Find(XCHAR ch, int iStart=0) const throw();
 要搜尋的子字串。
 
 *iStart*<br/>
-中要開始，搜尋的字串或 0 表示從頭開始的字元索引。
+字串中要開始搜尋的字元索引，或0表示從開頭開始。
 
 *ch*<br/>
 要搜尋的單一字元。
 
 ### <a name="return-value"></a>傳回值
 
-在此第一個字元的以零起始的索引`CStringT`符合要求的子字串或字元的物件; 如果子字串或字元找不到為-1。
+這個`CStringT`物件中符合所要求之子字串的第一個字元之以零為基底的索引，如果找不到子字串或字元，則為-1。
 
 ### <a name="remarks"></a>備註
 
-此函式多載之後可接受這兩個單一字元 (類似於執行階段函式`strchr`) 和字串 (類似於`strstr`)。
+函式會多載以接受單一字元（類似于執行時間`strchr`函式）和字串（ `strstr`類似于）。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#114](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_9.cpp)]
 
-##  <a name="findoneof"></a>  CStringT::FindOneOf
+##  <a name="findoneof"></a>CStringT：： FindOneOf
 
-此比對中包含任何字元的第一個字元字串中搜尋*pszCharSet*。
+在這個字串中搜尋符合*pszCharSet*中包含之任何字元的第一個字元。
 
 ```
 int FindOneOf(PCXSTR pszCharSet) const throw();
@@ -678,15 +678,15 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 ### <a name="parameters"></a>參數
 
 *pszCharSet*<br/>
-字串，包含用於比對的字元。
+包含要比對之字元的字串。
 
 ### <a name="return-value"></a>傳回值
 
-也是這個字串中的第一個字元之以零起始的索引*pszCharSet*; 如果沒有相符的-1。
+這個字串中，第一個字元的以零為基底的索引，也是*pszCharSet*;如果沒有相符項，則為-1。
 
 ### <a name="remarks"></a>備註
 
-找到的任何字元第一次出現*pszCharSet*。
+尋找*pszCharSet*中第一次出現的任何字元。
 
 ### <a name="example"></a>範例
 
@@ -694,7 +694,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ##  <a name="format"></a>  CStringT::Format
 
-格式化資料寫入`CStringT`的相同方式來[sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)資料格式化成 C 樣式字元陣列。
+以 [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) 將資料格式化`CStringT`成 C 樣式字元陣列的方式，將格式化的資料寫入。
 
 ```
 void __cdecl Format(UINT nFormatID, [, argument]...);
@@ -704,19 +704,19 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ### <a name="parameters"></a>參數
 
 *nFormatID*<br/>
-包含格式控制字串的字串資源識別碼。
+包含格式控制字元串的字串資源識別碼。
 
 *pszFormat*<br/>
-格式控制字串。
+格式控制字元串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
 
-此函式加以格式化並且儲存一連串字元和值`CStringT`。 每個選擇性引數 （如果有的話） 會轉換並根據對應格式規格中的輸出*pszFormat*或從所識別的字串資源*nFormatID*。
+此函式會將一系列的字元和值格式化並`CStringT`儲存在中。 每個選擇性引數（如果有的話）都會根據*pszFormat*中的對應格式規格，或*nFormatID*所識別的字串資源，進行轉換和輸出。
 
-如果字串物件本身會提供做為參數，將會失敗的呼叫`Format`。 例如，下列程式碼會造成無法預期的結果：
+如果字串物件本身當做參數提供給`Format`，呼叫將會失敗。 例如，下列程式碼會導致無法預期的結果：
 
 [!code-cpp[NVC_ATLMFC_Utilities#116](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_11.cpp)]
 
@@ -738,22 +738,22 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ### <a name="parameters"></a>參數
 
 *nFormatID*<br/>
-包含未格式化的訊息文字的字串資源識別碼。
+包含未格式化郵件內文的字串資源識別碼。
 
 *pszFormat*<br/>
-指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串是類似於執行階段函式*printf*-樣式格式字串，但它可讓您插入以任意順序的參數。
+指向格式控制字元串。 系統會針對插入進行掃描，並據此進行格式化。 格式字串類似于執行時間函式*printf*樣式格式字串，但它允許以任意順序插入參數。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 ### <a name="remarks"></a>備註
 
-此函式需要訊息定義做為輸入。 取決於訊息定義*pszFormat*或從所識別的字串資源*nFormatID*。 函式的格式化的訊息文字複製到`CStringT`物件，處理任何內嵌插入序列，如果要求。
+函數需要訊息定義做為輸入。 訊息定義取決於*pszFormat*或*nFormatID*所識別的字串資源。 函式會將格式化郵件內文複製到`CStringT`物件，並在要求時處理任何內嵌插入序列。
 
 > [!NOTE]
-> `FormatMessage` 嘗試配置系統記憶體的新格式的字串。 如果此嘗試失敗時，會自動擲回記憶體例外狀況。
+> `FormatMessage`嘗試為新格式化的字串配置系統記憶體。 如果此嘗試失敗，就會自動擲回記憶體例外狀況。
 
-每次插入必須有對應的參數下列*pszFormat*或是*nFormatID*參數。 訊息文字，在數個逸出序列支援動態格式化的訊息。 如需詳細資訊，請參閱 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函式。
+每個插入都必須在*pszFormat*或*nFormatID*參數後面有對應的參數。 在郵件內文中，有數個逸出序列支援動態格式化訊息。 如需詳細資訊，請參閱 Windows SDK 中的 Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage)函數。
 
 ### <a name="example"></a>範例
 
@@ -761,7 +761,7 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ##  <a name="formatmessagev"></a>  CStringT::FormatMessageV
 
-格式化的訊息字串，使用變數引數清單。
+使用可變引數清單來格式化訊息字串。
 
 ```
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
@@ -770,23 +770,23 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ### <a name="parameters"></a>參數
 
 *pszFormat*<br/>
-指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串會與執行階段函式類似`printf`-樣式格式字串，但它可讓您插入以任意順序的參數。
+指向格式控制字元串。 系統會針對插入進行掃描，並據此進行格式化。 格式字串類似于執行時間`printf`函式樣式格式字串，但它允許以任意順序插入參數。
 
 *pArgList*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
 
-此函式需要訊息定義做為輸入，取決於*pszFormat*。 函式會將格式化的訊息文字和引數的變數清單複製`CStringT`物件，處理任何內嵌插入序列，如果要求。
+函數需要訊息定義做為輸入，並由*pszFormat*決定。 函式會將格式化的郵件內文和引數的可變清單複製`CStringT`到物件，並在要求時處理任何內嵌的插入序列。
 
 > [!NOTE]
-> `FormatMessageV` 呼叫[CStringT::FormatMessage](#formatmessage)，它會嘗試為新格式的字串配置系統記憶體。 如果此嘗試失敗時，會自動擲回記憶體例外狀況。
+> `FormatMessageV`呼叫[CStringT：： FormatMessage](#formatmessage)，它會嘗試為新格式化的字串配置系統記憶體。 如果此嘗試失敗，就會自動擲回記憶體例外狀況。
 
-如需詳細資訊，請參閱 Windows [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) Windows SDK 中的函式。
+如需詳細資訊，請參閱 Windows SDK 中的 Windows [FormatMessage](/windows/win32/api/winbase/nf-winbase-formatmessage)函數。
 
 ##  <a name="formatv"></a>  CStringT::FormatV
 
-格式化的訊息字串，使用變數引數清單。
+使用可變引數清單來格式化訊息字串。
 
 ```
 void FormatV(PCXSTR pszFormat, va_list args);
@@ -795,14 +795,14 @@ void FormatV(PCXSTR pszFormat, va_list args);
 ### <a name="parameters"></a>參數
 
 *pszFormat*<br/>
-指向格式控制字串。 它會掃描有插入並據以格式化。 格式字串會與執行階段函式類似`printf`-樣式格式字串，但它可讓您插入以任意順序的參數。
+指向格式控制字元串。 系統會針對插入進行掃描，並據此進行格式化。 格式字串類似于執行時間`printf`函式樣式格式字串，但它允許以任意順序插入參數。
 
-*args*<br/>
+*引數*<br/>
 引數清單的指標。
 
 ### <a name="remarks"></a>備註
 
-寫入格式化的字串和引數的變數清單`CStringT`在相同的字串方式`vsprintf_s`資料格式化成 C 樣式字元陣列。
+以將資料格式化成 C 樣式字元陣列的相同`CStringT` `vsprintf_s`方式，將格式化字串和引數清單寫入字串。
 
 ### <a name="example"></a>範例
 
@@ -810,9 +810,9 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 [!code-cpp[NVC_ATLMFC_Utilities#120](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_15.cpp)]
 
-##  <a name="getenvironmentvariable"></a>  CStringT::GetEnvironmentVariable
+##  <a name="getenvironmentvariable"></a>CStringT：： GetEnvironmentVariable
 
-設定指定的環境變數的值的字串。
+將字串設定為所指定環境變數的值。
 
 ```
 BOOL GetEnvironmentVariable(PCXSTR pszVar);
@@ -821,7 +821,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 ### <a name="parameters"></a>參數
 
 *pszVar*<br/>
-以 null 終止的字串，指定環境變數的指標。
+指定環境變數之以 null 終止之字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -829,7 +829,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="remarks"></a>備註
 
-擷取呼叫處理序的環境區塊中指定變數的值。 值會以 null 終止的字元字串的形式。
+從呼叫進程的環境區塊，抓取指定變數的值。 值的格式為以 null 結束的字元字串。
 
 ### <a name="example"></a>範例
 
@@ -837,7 +837,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ##  <a name="insert"></a>  CStringT::Insert
 
-插入字串中指定索引的單一字元或子字串。
+在字串中的指定索引處插入單一字元或子字串。
 
 ```
 int Insert(int iIndex, PCXSTR psz);
@@ -847,21 +847,21 @@ int Insert(int iIndex, XCHAR ch);
 ### <a name="parameters"></a>參數
 
 *iIndex*<br/>
-在其前插入會發生的字元索引。
+要在其中進行插入的字元索引。
 
 *psz*<br/>
-要插入的子字串指標。
+要插入之子字串的指標。
 
 *ch*<br/>
 要插入的字元。
 
 ### <a name="return-value"></a>傳回值
 
-變更字串的長度。
+已變更之字串的長度。
 
 ### <a name="remarks"></a>備註
 
-*IIndex*參數可識別將會移至騰出空間給字元或子字串的第一個字元。 如果*nIndex*為零，整個字串之前進行插入。 如果*nIndex*高於字串的長度，函式會串連存在的字串，並透過下列方式，提供新的資料*ch*或是*psz*。
+*IIndex*參數會識別要移動以騰出空間給字元或子字串的第一個字元。 如果*nIndex*為零，則插入會在整個字串之前進行。 如果*nIndex*大於字串的長度，函式會串連目前的字串，以及*ch*或*psz*所提供的新資料。
 
 ### <a name="example"></a>範例
 
@@ -869,7 +869,7 @@ int Insert(int iIndex, XCHAR ch);
 
 ##  <a name="left"></a>  CStringT::Left
 
-擷取最左邊*nCount*從這個字元`CStringT`物件，並傳回所擷取子字串的複本。
+從這個`CStringT`物件解壓縮最左邊的*nCount*字元，並傳回已解壓縮之子字串的複本。
 
 ```
 CStringT Left(int nCount) const;
@@ -886,9 +886,9 @@ CStringT Left(int nCount) const;
 
 ### <a name="remarks"></a>備註
 
-如果*nCount*超過字串長度，則會擷取整個字串。 `Left` 類似於 Basic `Left` 函式。
+如果*nCount*超過字串長度，則會解壓縮整個字串。 `Left` 類似於 Basic `Left` 函式。
 
-多位元組字元集 (MBCS)，如*nCount*每個 8 位元序列視為一個字元，以便*nCount*傳回的兩倍的多位元組字元數。
+針對多位元組字元集（MBCS）， *nCount*會將每個8位序列視為一個字元，讓*nCount*傳回多位元組字元數乘以二。
 
 ### <a name="example"></a>範例
 
@@ -896,7 +896,7 @@ CStringT Left(int nCount) const;
 
 ##  <a name="loadstring"></a>  CStringT::LoadString
 
-讀取所識別的 Windows 字串資源*nID*，到現有`CStringT`物件。
+將由*nID*識別的 Windows 字串資源讀入現有`CStringT`的物件中。
 
 ```
 BOOL LoadString(HINSTANCE hInstance, UINT nID, WORD wLanguageID);
@@ -907,29 +907,29 @@ BOOL LoadString(UINT nID);
 ### <a name="parameters"></a>參數
 
 *hInstance*<br/>
-模組的執行個體控制代碼。
+模組實例的控制碼。
 
 *nID*<br/>
-Windows 字串資源 id。
+Windows 字串資源識別碼。
 
 *wLanguageID*<br/>
 字串資源的語言。
 
 ### <a name="return-value"></a>傳回值
 
-如果資源的載入作業成功則為非零否則為 0。
+如果資源載入成功，則為非零;否則為0。
 
 ### <a name="remarks"></a>備註
 
-載入字串資源 (*nID*) 指定的模組中 (*hInstance*) 使用指定的語言 (*wLanguage*)。
+使用指定的語言（*wLanguage*），從指定的模組（*hInstance*）載入字串資源（*nID*）。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#124](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_19.cpp)]
 
-##  <a name="makelower"></a>  CStringT::MakeLower
+##  <a name="makelower"></a>CStringT：： MakeLower
 
-將轉換`CStringT`為小寫字串物件。
+`CStringT`將物件轉換成小寫字串。
 
 ```
 CStringT& MakeLower();
@@ -943,9 +943,9 @@ CStringT& MakeLower();
 
 [!code-cpp[NVC_ATLMFC_Utilities#125](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_20.cpp)]
 
-##  <a name="makereverse"></a>  CStringT::MakeReverse
+##  <a name="makereverse"></a>CStringT：： MakeReverse
 
-反轉順序中的字元`CStringT`物件。
+反轉`CStringT`物件中的字元順序。
 
 ```
 CStringT& MakeReverse();
@@ -953,7 +953,7 @@ CStringT& MakeReverse();
 
 ### <a name="return-value"></a>傳回值
 
-所產生的可反轉的字串。
+產生的反轉字串。
 
 ### <a name="example"></a>範例
 
@@ -961,7 +961,7 @@ CStringT& MakeReverse();
 
 ##  <a name="makeupper"></a>  CStringT::MakeUpper
 
-將轉換`CStringT`大寫的字串物件。
+`CStringT`將物件轉換為大寫字串。
 
 ```
 CStringT& MakeUpper();
@@ -979,7 +979,7 @@ CStringT& MakeUpper();
 
 ##  <a name="mid"></a>  CStringT::Mid
 
-擷取子字串的長度*nCount*從這個字元`CStringT`物件，起點為位置*iFirst* （以零為起始）。
+從位置*iFirst* （以零為基底`CStringT` ）開始，從這個物件中解壓縮長度*nCount*字元的子字串。
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
@@ -989,20 +989,20 @@ CStringT Mid(int iFirst) const;
 ### <a name="parameters"></a>參數
 
 *iFirst*<br/>
-在此第一個字元的以零起始的索引`CStringT`是指要包含在所擷取子字串中的物件。
+這個`CStringT`物件中要包含在解壓縮的子字串中，第一個字元之以零為起始的索引。
 
 *nCount*<br/>
-要從 `CStringT` 這個物件擷取的字元數。 如果未提供這個參數，會擷取字串的其餘部分。
+要從 `CStringT` 這個物件擷取的字元數。 如果未提供此參數，則會解壓縮字串的其餘部分。
 
 ### <a name="return-value"></a>傳回值
 
-`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`可能是空的物件。
+`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`的物件可能是空的。
 
 ### <a name="remarks"></a>備註
 
-函式會傳回所擷取子字串的複本。 `Mid` （但不包含索引在 Basic 中的以一為基），則會是類似於基本 Mid 函式。
+函式會傳回已解壓縮之子字串的複本。 `Mid`類似于基本的 Mid 函數（Basic 中的索引是以一為基礎）。
 
-多位元組字元集 (MBCS)，如*nCount*指的是其中一個多位元組字元會被視為兩個字元中每個 8 位元字元; 也就是潛在客戶和後隨位元組。
+針對多位元組字元集（MBCS）， *nCount*會參考每個8位字元;也就是說，一個多位元組字元中的潛在客戶和後隨位元組會視為兩個字元。
 
 ### <a name="example"></a>範例
 
@@ -1010,7 +1010,7 @@ CStringT Mid(int iFirst) const;
 
 ##  <a name="oemtoansi"></a>  CStringT::OemToAnsi
 
-在此的所有字元都轉換`CStringT`物件從 ANSI 字元集的 OEM 字元集。
+將這個`CStringT`物件中的所有字元，從 OEM 字元集轉換成 ANSI 字元集。
 
 ```
 void OemToAnsi();
@@ -1018,15 +1018,15 @@ void OemToAnsi();
 
 ### <a name="remarks"></a>備註
 
-如果已定義 _UNICODE，此函式沒有。
+如果已定義 _UNICODE，則無法使用此函數。
 
 ### <a name="example"></a>範例
 
-範例，請參閱[CStringT::AnsiToOem](#ansitooem)。
+請參閱[CStringT：： AnsiToOem](#ansitooem)的範例。
 
-##  <a name="operator_eq"></a>  CStringT::operator =
+##  <a name="operator_eq"></a>CStringT：： operator =
 
-指派新值的字串。
+將新值指派給字串。
 
 ```
 CStringT& operator=(const CStringT& strSrc);
@@ -1045,38 +1045,38 @@ CStringT& operator=(const VARIANT& var);
 ### <a name="parameters"></a>參數
 
 *strSrc*<br/>
-A`CStringT`来指派給此字串。
+要`CStringT`指派給這個字串的。
 
 *str*<br/>
 對 `CThisSimpleString` 物件的參考。
 
 *bMFCDLL*<br/>
-布林值，指定專案是否 MFC DLL。
+布林值，指定專案是否為 MFC DLL。
 
 *BaseType*<br/>
-字串的基底類型。
+字串基底類型。
 
 *var*<br/>
-若要指派給這個字串的 variant 物件。
+要指派給這個字串的 variant 物件。
 
 *ch*<br/>
-若要指派給字串為 ANSI 或 Unicode 字元。
+要指派給字串的 ANSI 或 Unicode 字元。
 
 *pszSrc*<br/>
-正在指派原始字串的指標。
+要指派之原始字串的指標。
 
 ### <a name="remarks"></a>備註
 
-指派運算子接受另一個`CStringT`物件、 字元指標或單一字元。 您應該注意可能會發生例外狀況，每當您使用這個運算子，因為新的儲存體可配置的記憶體。
+指派運算子會接受另`CStringT`一個物件、字元指標或單一字元。 請注意，每當您使用此運算子時，都會發生記憶體例外狀況，因為可以配置新的儲存空間。
 
-如需`CThisSimpleString`，請參閱 < 備註 > 一節[CStringT::CStringT](#cstringt)。
+如需的`CThisSimpleString`詳細資訊，請參閱[CStringT：： CStringT](#cstringt)的「備註」一節。
 
 > [!NOTE]
-> 雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
+> 雖然您可以建立`CStringT`包含內嵌 null 字元的實例，但我們還是建議您不要這麼做。 在包含內嵌 null 字元`CStringT`的物件上呼叫方法和運算子可能會產生非預期的結果。
 
-##  <a name="operator_add"></a>  CStringT::operator +
+##  <a name="operator_add"></a>CStringT：： operator +
 
-串連兩個字串或字元和字串。
+串連兩個字串或一個字元和一個字串。
 
 ```
 friend CStringT operator+(const CStringT& str1, const CStringT& str2);
@@ -1091,37 +1091,37 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ### <a name="parameters"></a>參數
 
 *ch1*<br/>
-要串連的字串為 ANSI 或 Unicode 字元。
+要與字串串連的 ANSI 或 Unicode 字元。
 
 *ch2*<br/>
-要串連的字串為 ANSI 或 Unicode 字元。
+要與字串串連的 ANSI 或 Unicode 字元。
 
 *str1*<br/>
-A`CStringT`來串連字串或字元。
+要`CStringT`與字串或字串連的。
 
 *str2*<br/>
-A`CStringT`來串連字串或字元。
+要`CStringT`與字串或字串連的。
 
 *psz1*<br/>
-以 null 終止的字串串連為字串或字元指標。
+要與字串或字串連之以 null 結束的字串指標。
 
 *psz2*<br/>
-要串連的字串或字元字串的指標。
+要與字串或字串連之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-有七個多載形式的`CStringT::operator+`函式。 第一個版本會串連兩個現有`CStringT`物件。 下一步 的兩個串連`CStringT`物件和 null 結尾字串。 下一步 的兩個串連`CStringT`物件和一個 ANSI 字元。 這兩個串連`CStringT`物件及 Unicode 字元。
+`CStringT::operator+`函數有七種多載形式。 第一個版本會串連兩`CStringT`個現有的物件。 接下來的兩個`CStringT`會串連物件和以 null 結束的字串。 接下來的兩個`CStringT`會串連物件和 ANSI 字元。 最後兩個會串連`CStringT`一個物件和一個 Unicode 字元。
 
 > [!NOTE]
->  雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
+>  雖然您可以建立`CStringT`包含內嵌 null 字元的實例，但我們還是建議您不要這麼做。 在包含內嵌 null 字元`CStringT`的物件上呼叫方法和運算子可能會產生非預期的結果。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]
 
-##  <a name="operator_add_eq"></a>  CStringT::operator + =
+##  <a name="operator_add_eq"></a>CStringT：： operator + =
 
-串連到字串結尾的字元。
+將字串連到字串的結尾。
 
 ```
 CStringT& operator+=(const CThisSimpleString& str);
@@ -1145,39 +1145,39 @@ CStringT& operator+=(const VARIANT& var);
 對 `CThisSimpleString` 物件的參考。
 
 *bMFCDLL*<br/>
-布林值，指定專案是否 MFC DLL。
+布林值，指定專案是否為 MFC DLL。
 
 *BaseType*<br/>
-字串的基底類型。
+字串基底類型。
 
 *var*<br/>
-要串連到此字串變數物件。
+要串連到這個字串的 variant 物件。
 
 *ch*<br/>
-要串連的字串為 ANSI 或 Unicode 字元。
+要與字串串連的 ANSI 或 Unicode 字元。
 
 *pszSrc*<br/>
-要串連的原始字串指標。
+要串連之原始字串的指標。
 
 *strSrc*<br/>
-A`CStringT`来串連到此字串。
+要`CStringT`串連到這個字串的。
 
 ### <a name="remarks"></a>備註
 
-運算子會接受另一個`CStringT`物件、 字元指標或單一字元。 您應該注意可能會發生例外狀況，每當您使用這個串連運算子，因為新的儲存體可配置的字元新增至這個記憶體`CStringT`物件。
+運算子會接受另`CStringT`一個物件、字元指標或單一字元。 您應該注意，每當您使用這個串連運算子時，就會發生記憶體例外狀況，因為新的儲存空間可以配置`CStringT`給加入此物件的字元。
 
-如需`CThisSimpleString`，請參閱 < 備註 > 一節[CStringT::CStringT](#cstringt)。
+如需的`CThisSimpleString`詳細資訊，請參閱[CStringT：： CStringT](#cstringt)的「備註」一節。
 
 > [!NOTE]
->  雖然您可以建立`CStringT`執行個體包含內嵌 null 字元時，我們建議您不要它。 在呼叫方法和運算子`CStringT`含有內嵌的 null 字元的物件可能會產生非預期的結果。
+>  雖然您可以建立`CStringT`包含內嵌 null 字元的實例，但我們還是建議您不要這麼做。 在包含內嵌 null 字元`CStringT`的物件上呼叫方法和運算子可能會產生非預期的結果。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CStringT::operator ==
+##  <a name="operator_eq_eq"></a>CStringT：： operator = =
 
-判斷兩個字串是否以邏輯方式相同。
+判斷兩個字串是否在邏輯上相等。
 
 ```
 friend bool operator==(const CStringT& str1, const CStringT& str2) throw();
@@ -1192,34 +1192,34 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="parameters"></a>參數
 
 *ch1*<br/>
-比較為 ANSI 或 Unicode 字元。
+用於比較的 ANSI 或 Unicode 字元。
 
 *ch2*<br/>
-比較為 ANSI 或 Unicode 字元。
+用於比較的 ANSI 或 Unicode 字元。
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 *psz2*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-測試是否字串或左邊的字元相等的字串或字元，在右側，且會傳回 TRUE 或 FALSE 據此。
+測試左邊的字串或字元是否等於右邊的字串或字元，並據以傳回 TRUE 或 FALSE。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>  CStringT::operator !=
+##  <a name="operator_neq"></a>CStringT：： operator！ =
 
-判斷兩個字串是否以邏輯方式不相等。
+判斷兩個字串是否邏輯上不相等。
 
 ```
 friend bool operator!=(const CStringT& str1, const CStringT& str2) throw();
@@ -1234,34 +1234,34 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 ### <a name="parameters"></a>參數
 
 *ch1*<br/>
-要串連的字串為 ANSI 或 Unicode 字元。
+要與字串串連的 ANSI 或 Unicode 字元。
 
 *ch2*<br/>
-要串連的字串為 ANSI 或 Unicode 字元。
+要與字串串連的 ANSI 或 Unicode 字元。
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 *psz2*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-如果不相等的字串或字元右邊的字串或左邊的字元是，測試。
+測試左邊的字串或字元是否不等於右邊的字串或字元。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#143](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_27.cpp)]
 
-##  <a name="operator_lt"></a>  CStringT::operator &lt;
+##  <a name="operator_lt"></a>CStringT：： operator&lt;
 
-判斷運算子左邊的字串是否小於右邊的字串。
+判斷運算子左邊的字串是否小於右邊的字串。（& i）
 
 ```
 friend bool operator<(const CStringT& str1, const CStringT& str2) throw();
@@ -1272,20 +1272,20 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 *psz2*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-詞彙編篡之間的比較，直到逐字元的字串：
+字串與字元之間的字典比較，直到：
 
 - 發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。
 
@@ -1297,9 +1297,9 @@ A`CStringT`進行比較。
 
 [!code-cpp[NVC_ATLMFC_Utilities#144](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_28.cpp)]
 
-##  <a name="operator_gt"></a>  CStringT::operator &gt;
+##  <a name="operator_gt"></a>CStringT：： operator&gt;
 
-判斷運算子左邊的字串是否大於右邊的字串。
+判斷運算子左邊的字串是否大於右邊的字串。（& i）
 
 ```
 friend bool operator>(const CStringT& str1, const CStringT& str2) throw();
@@ -1310,20 +1310,20 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 *psz2*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-詞彙編篡之間的比較，直到逐字元的字串：
+字串與字元之間的字典比較，直到：
 
 - 發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。
 
@@ -1335,9 +1335,9 @@ A`CStringT`進行比較。
 
 [!code-cpp[NVC_ATLMFC_Utilities#145](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_29.cpp)]
 
-##  <a name="operator_lt_eq"></a>  CStringT::operator &lt;=
+##  <a name="operator_lt_eq"></a>CStringT：： operator&lt;=
 
-判斷運算子左邊的字串是否小於或等於右邊的字串。
+判斷運算子左邊的字串，是否小於或等於右邊的字串的位置。
 
 ```
 friend bool operator<=(const CStringT& str1, const CStringT& str2) throw();
@@ -1348,20 +1348,20 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 *psz2*<br/>
-以 null 終止的字串比較的指標。
+要進行比較之以 null 終止之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-詞彙編篡之間的比較，直到逐字元的字串：
+字串與字元之間的字典比較，直到：
 
 - 發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。
 
@@ -1373,9 +1373,9 @@ A`CStringT`進行比較。
 
 [!code-cpp[NVC_ATLMFC_Utilities#146](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_30.cpp)]
 
-##  <a name="operator_gt_eq"></a>  CStringT::operator &gt;=
+##  <a name="operator_gt_eq"></a>CStringT：： operator&gt;=
 
-判斷運算子左邊的字串是否大於或等於右邊的字串。
+判斷運算子左邊的字串是否大於或等於右邊的字串。（& i）
 
 ```
 friend bool operator>=(const CStringT& str1, const CStringT& str2) throw();
@@ -1386,20 +1386,20 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 ### <a name="parameters"></a>參數
 
 *str1*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *str2*<br/>
-A`CStringT`進行比較。
+`CStringT`用於比較的。
 
 *psz1*<br/>
-要比較的字串指標。
+要比較之字串的指標。
 
 *psz2*<br/>
-要比較的字串指標。
+要比較之字串的指標。
 
 ### <a name="remarks"></a>備註
 
-詞彙編篡之間的比較，直到逐字元的字串：
+字串與字元之間的字典比較，直到：
 
 - 發現兩個對應的字元不相等，並將其比較的結果做為字串間比較的結果。
 
@@ -1413,7 +1413,7 @@ A`CStringT`進行比較。
 
 ##  <a name="remove"></a>  CStringT::Remove
 
-從字串中移除指定之字元的所有執行個體。
+從字串中移除指定之字元的所有實例。
 
 ```
 int Remove(XCHAR chRemove);
@@ -1426,7 +1426,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="return-value"></a>傳回值
 
-從字串中移除的字元計數。 如果字串不會變更，則為零。
+從字串中移除的字元計數。 如果未變更字串，則為零。
 
 ### <a name="remarks"></a>備註
 
@@ -1438,7 +1438,7 @@ int Remove(XCHAR chRemove);
 
 ##  <a name="replace"></a>  CStringT::Replace
 
-有兩個版本`Replace`。第一個版本會使用另一個子字串取代子字串的一或多個副本。 這兩個的子字串是 null 結束。 第二個版本會使用另一個字元取代之字元的一個或多個複本。 這兩個版本處理字元資料儲存在`CStringT`。
+有兩個版本`Replace`。第一個版本會使用另一個子字串來取代子字串的一個或多個複本。 這兩個子字串都是以 null 結束。 第二個版本會使用另一個字元來取代一個或多個字元的複本。 這兩個版本都是針對儲存在`CStringT`中的字元資料進行操作。
 
 ```
 int Replace(PCXSTR pszOld, PCXSTR pszNew);
@@ -1448,45 +1448,45 @@ int Replace(XCHAR chOld, XCHAR chNew);
 ### <a name="parameters"></a>參數
 
 *pszOld*<br/>
-以 null 終止的字串來取代指標*pszNew*。
+要由*pszNew*取代之以 null 終止之字串的指標。
 
 *pszNew*<br/>
-指向以 null 結束的字串，它會取代*pszOld*。
+以 null 結束的字串指標，取代*pszOld*。
 
 *chOld*<br/>
-要被取代的字元*chNew*。
+要由*chNew*取代的字元。
 
 *chNew*<br/>
-字元取代*chOld*。
+取代*chOld*的字元。
 
 ### <a name="return-value"></a>傳回值
 
-如果字串不會變更，則會傳回已取代的字元或子字串或為零的執行個體數目。
+傳回字元或子字串的已取代實例數目，如果字串未變更，則傳回零。
 
 ### <a name="remarks"></a>備註
 
-`Replace` 可以變更字串的長度，因為*pszNew*並*pszOld*不必是相同的長度，和舊的子字串的多個複本可以變更為新的。 函式會執行區分大小寫的相符項目。
+`Replace`可以變更字串長度，因為*pszNew*和*pszOld*不一定要有相同的長度，而且舊的子字串有數個複本可以變更為新的。 函式會執行區分大小寫的比對。
 
-範例`CStringT`執行個體`CString`， `CStringA`，和`CStringW`。
+實例的`CStringT`範例包括`CString`、 `CStringA`和。`CStringW`
 
-針對`CStringA`，`Replace`適用於 ANSI 或多位元組 (MBCS) 字元。 針對`CStringW`，`Replace`搭配寬字元。
+若`CStringA`為`Replace` ，則使用 ANSI 或多位元組（MBCS）字元。 針對`CStringW` ，`Replace`適用于寬字元。
 
-針對`CString`，字元資料類型根據在編譯時期，是否會定義下表中的常數。
+若`CString`為，則會在編譯時期選取字元資料類型，這是根據下表中的常數是否已定義而定。
 
 |定義的常數|字元資料類型|
 |----------------------|-------------------------|
 |_UNICODE|寬字元|
 |_MBCS|多位元組字元|
-|既不|單一位元組字元|
+|屬於|單一位元組字元|
 |兩者|未定義|
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#200](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_33.cpp)]
 
-##  <a name="reversefind"></a>  CStringT::ReverseFind
+##  <a name="reversefind"></a>CStringT：： ReverseFind
 
-搜尋此`CStringT`字元的最後一個相符項目物件。
+在此`CStringT`物件中搜尋字元的最後一個相符項。
 
 ```
 int ReverseFind(XCHAR ch) const throw();
@@ -1499,11 +1499,11 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="return-value"></a>傳回值
 
-在此最後一個字元的以零起始的索引`CStringT`符合要求的字元，則為-1，如果找不到該字元的物件。
+這個`CStringT`物件中，與所要求的字元相符之最後一個字元的以零為起始的索引，如果找不到該字元，則為-1。
 
 ### <a name="remarks"></a>備註
 
-函式是與執行階段函式類似`strrchr`。
+函數與執行時間函數`strrchr`類似。
 
 ### <a name="example"></a>範例
 
@@ -1511,7 +1511,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ##  <a name="right"></a>  CStringT::Right
 
-擷取最後一個 (也就是最右邊) *nCount*從這個字元`CStringT`物件，並傳回所擷取子字串的複本。
+從這個`CStringT`物件中解壓縮最後一個（也就是最右邊的） *nCount*字元，並傳回已解壓縮之子字串的複本。
 
 ```
 CStringT Right(int nCount) const;
@@ -1524,13 +1524,13 @@ CStringT Right(int nCount) const;
 
 ### <a name="return-value"></a>傳回值
 
-`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`物件可以是空白。
+`CStringT` 物件，該物件中包含所指定字元範圍的複本。 請注意，傳回`CStringT`的物件可以是空的。
 
 ### <a name="remarks"></a>備註
 
-如果*nCount*超過字串長度，則會擷取整個字串。 `Right` 類似於 Basic`Right`函式 （但不包含索引在 Basic 中的以零為起始）。
+如果*nCount*超過字串長度，則會解壓縮整個字串。 `Right`類似于基本`Right`函數（basic 中的索引是以零為基底）。
 
-多位元組字元集 (MBCS)，如*nCount*指的是其中一個多位元組字元會被視為兩個字元中每個 8 位元字元; 也就是潛在客戶和後隨位元組。
+針對多位元組字元集（MBCS）， *nCount*會參考每個8位字元;也就是說，一個多位元組字元中的潛在客戶和後隨位元組會視為兩個字元。
 
 ### <a name="example"></a>範例
 
@@ -1538,7 +1538,7 @@ CStringT Right(int nCount) const;
 
 ##  <a name="setsysstring"></a>  CStringT::SetSysString
 
-重新配置所指的 BSTR *pbstr* ，並將複製的內容`CStringT`物件，包括 NULL 字元。
+重新配置*pbstr*所指向的 BSTR，並將`CStringT`物件的內容複寫到其中，包括 Null 字元。
 
 ```
 BSTR SetSysString(BSTR* pbstr) const;
@@ -1547,7 +1547,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 ### <a name="parameters"></a>參數
 
 *pbstr*<br/>
-字元字串指標。
+字元字串的指標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1555,17 +1555,17 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="remarks"></a>備註
 
-視內容而定`CStringT`物件、 值所參考的 BSTR *pbstr*可以變更。 此函式會擲回`CMemoryException`如果存在記憶體不足。
+根據`CStringT`物件的內容， *pbstr*所參考的 BSTR 值可能會變更。 如果沒有足夠的`CMemoryException`記憶體存在，函式會擲回。
 
-此函式通常用來變更自動化的傳址方式傳遞的字串值。
+此函式通常用來變更以傳址方式傳遞的字串值以進行自動化。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#132](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_36.cpp)]
 
-##  <a name="spanexcluding"></a>  CStringT::SpanExcluding
+##  <a name="spanexcluding"></a>CStringT：： SpanExcluding
 
-擷取字元從字串開頭的第一個字元，不在所識別的字元集*pszCharSet*。
+從字串中，以第一個字元開頭，而不是*pszCharSet*所識別的字元集合中的字元。
 
 ```
 CStringT SpanExcluding(PCXSTR pszCharSet) const;
@@ -1574,23 +1574,23 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ### <a name="parameters"></a>參數
 
 *pszCharSet*<br/>
-字串會解譯為一組字元。
+轉譯成一組字元的字串。
 
 ### <a name="return-value"></a>傳回值
 
-子字串，其中包含不在字串中的字元*pszCharSet*、 在字串中的第一個字元為開頭和結尾，同時也是在字串中找到的第一個字元*pszCharSet*(也就從字串中並啟動但不包括字串中所找到的第一個字元的第一個字元開始*pszCharSet*)。 如果它會傳回整個字串中的字元*pszCharSet*字串中找到。
+包含字串中不是*pszCharSet*之字元的子字串，從字串中的第一個字元開始，並以字串中找到的第一個*字元（也*就是從第一個字串中的字元，但不包括在字串中找到的第一個字元*pszCharSet*）。 如果在字串中找不到*pszCharSet*中的任何字元，則會傳回整個字串。
 
 ### <a name="remarks"></a>備註
 
-`SpanExcluding` 擷取並傳回前面第一個字元的所有字元*pszCharSet* (亦即，從字元*pszCharSet*和下列字串中的所有字元都不都是傳回）。 如果從任何字元*pszCharSet*中的字串，然後找到`SpanExcluding`傳回整個字串。
+`SpanExcluding`從*pszCharSet*中，解壓縮並傳回字元第一次出現之前的所有字元（換句話說， *pszCharSet*中的字元和字串後面的所有字元都不會傳回）。 如果在字串中找不到*pszCharSet*中的任何字元`SpanExcluding` ，則會傳回整個字串。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#133](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_37.cpp)]
 
-##  <a name="spanincluding"></a>  CStringT::SpanIncluding
+##  <a name="spanincluding"></a>CStringT：： SpanIncluding
 
-從開頭所識別的字元集中的第一個字元的字串擷取字元*pszCharSet*。
+從字串中的第一個字元開始，以*pszCharSet*所識別的字元集合中的字元來解壓縮。
 
 ```
 CStringT SpanIncluding(PCXSTR pszCharSet) const;
@@ -1599,23 +1599,23 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ### <a name="parameters"></a>參數
 
 *pszCharSet*<br/>
-字串會解譯為一組字元。
+轉譯成一組字元的字串。
 
 ### <a name="return-value"></a>傳回值
 
-子字串，其中包含在字串中的字元*pszCharSet*、 從字串中的第一個字元開始和結束時不在字串中找到字元*pszCharSet*。 `SpanIncluding` 如果字串中的第一個字元不是指定集合中，則傳回空的子字串。
+子字串，其中包含字串中的字元（ *pszCharSet*中），從字串中的第一個字元開始，並在字串中找到不在*pszCharSet*的字元時結束。 `SpanIncluding`如果字串中的第一個字元不在指定的集合中，則會傳回空的子字串。
 
 ### <a name="remarks"></a>備註
 
-如果字串的第一個字元不是字元集，然後`SpanIncluding`傳回空字串。 否則，它會傳回集合中的連續字元序列。
+如果字串的第一個字元不在字元集中，則`SpanIncluding`會傳回空字串。 否則，它會傳回集合中連續的字元序列。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATLMFC_Utilities#134](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_38.cpp)]
 
-##  <a name="tokenize"></a>  CStringT::Tokenize
+##  <a name="tokenize"></a>CStringT：： Token 化
 
-在 目標字串中尋找下一個語彙基元
+尋找目標字串中的下一個 token
 
 ```
 CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
@@ -1624,20 +1624,20 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ### <a name="parameters"></a>參數
 
 *pszTokens*<br/>
-字串，包含 token 分隔符號。 這些分隔符號的順序並不重要。
+包含標記分隔符號的字串。 這些分隔符號的順序並不重要。
 
 *iStart*<br/>
-若要開始搜尋之以零起始的索引。
+要開始搜尋的以零起始的索引。
 
 ### <a name="return-value"></a>傳回值
 
-A`CStringT`物件，包含目前語彙基元的值。
+`CStringT`物件，包含目前的 token 值。
 
 ### <a name="remarks"></a>備註
 
-`Tokenize`函式會尋找目標字串中的下一個語彙基元。 中的字元集*pszTokens*指定可能的分隔符號，要找的權杖。 在每次呼叫`Tokenize`函式開始*iStart*中，會略過前導分隔符號，並傳回`CStringT`物件，包含目前的語彙基元，這是個字元，直到下一步 的分隔符號字元的字串。 值*iStart*更新為下列結尾的分隔符號字元，則為-1，如果已到達字串結尾的位置。 多個 token 可以中斷超出目標字串的其餘部分所呼叫的一系列`Tokenize`，並使用*iStart*來追蹤要讀取下一個語彙基元的字串中的位置。 當沒有多個語彙基元函式會傳回空字串和*iStart*會設為-1。
+`Tokenize`函式會尋找目標字串中的下一個 token。 *PszTokens*中的一組字元會指定要尋找之標記的可能分隔符號。 函式的每`Tokenize`個呼叫都會從*iStart*開始，略過前置分隔符號`CStringT` ，並傳回包含目前標記的物件，也就是字元的字串，直到下一個分隔符號為止。 *IStart*的值會更新為結尾分隔符號後面的位置，如果已到達字串的結尾，則為-1。 透過一系列的呼叫`Tokenize`，可以將更多的 token 從目標字串的其餘部分中斷，使用*iStart*追蹤字串中下一個權杖的讀取位置。 當沒有其他權杖時，此函式會傳回空字串，而且*iStart*會設定為-1。
 
-與 CRT 不同語彙基元化函式，例如[strtok_s、 _strtok_s_l、 wcstok_s、 _wcstok_s_l、 _mbstok_s、 _mbstok_s_l](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)，`Tokenize`不會修改目標字串。
+不同于 CRT token 化函數（例如[strtok_s、_strtok_s_l、wcstok_s、_wcstok_s_l、_mbstok_s](../../c-runtime-library/reference/strtok-s-strtok-s-l-wcstok-s-wcstok-s-l-mbstok-s-mbstok-s-l.md)、_mbstok_s_l `Tokenize` ），不會修改目標字串。
 
 ### <a name="example"></a>範例
 
@@ -1653,9 +1653,9 @@ Resulting Token: Second
 Resulting Token: Third
 ```
 
-##  <a name="trim"></a>  CStringT::Trim
+##  <a name="trim"></a>CStringT：： Trim
 
-會修剪前置和後置字元的字串。
+修剪字串的開頭和尾端字元。
 
 ```
 CStringT& Trim(XCHAR chTarget);
@@ -1669,21 +1669,21 @@ CStringT& Trim();
 要修剪的目標字元。
 
 *pszTargets*<br/>
-字串，包含要修剪的目標字元指標。 所有前置和後端中出現的字元*pszTarget*會刪減`CStringT`物件。
+字串的指標，其中包含要修剪的目標字元。 *PszTarget*中所有開頭和結尾的字元都會從`CStringT`物件中修剪。
 
 ### <a name="return-value"></a>傳回值
 
-傳回已修剪的字串。
+傳回修剪過的字串。
 
 ### <a name="remarks"></a>備註
 
-移除所有開頭和尾端出現下列其中一項：
+移除下列其中一項的所有開頭和結尾專案：
 
-- 所指定的字元*chTarget*。
+- *ChTarget*所指定的字元。
 
-- 在所指定的字串中找到的所有字元*pszTargets*。
+- 在*pszTargets*所指定的字串中找到的所有字元。
 
-- 空白字元。
+- 空白字元.
 
 ### <a name="example"></a>範例
 
@@ -1700,7 +1700,7 @@ After : "Soccer is best, but liquor is quicker"
 
 ##  <a name="trimleft"></a>  CStringT::TrimLeft
 
-會修剪前置字元字串。
+修剪字串中的前置字元。
 
 ```
 CStringT& TrimLeft(XCHAR chTarget);
@@ -1714,21 +1714,21 @@ CStringT& TrimLeft();
 要修剪的目標字元。
 
 *pszTargets*<br/>
-字串，包含要修剪的目標字元指標。 所有開頭指定項目中的字元*pszTarget*會刪減`CStringT`物件。
+字串的指標，其中包含要修剪的目標字元。 *PszTarget*中所有開頭出現的字元都會從`CStringT`物件中修剪。
 
 ### <a name="return-value"></a>傳回值
 
-產生已修剪的字串。
+產生的修剪字串。
 
 ### <a name="remarks"></a>備註
 
-移除所有開頭和尾端出現下列其中一項：
+移除下列其中一項的所有開頭和結尾專案：
 
-- 所指定的字元*chTarget*。
+- *ChTarget*所指定的字元。
 
-- 在所指定的字串中找到的所有字元*pszTargets*。
+- 在*pszTargets*所指定的字串中找到的所有字元。
 
-- 空白字元。
+- 空白字元.
 
 ### <a name="example"></a>範例
 
@@ -1736,7 +1736,7 @@ CStringT& TrimLeft();
 
 ##  <a name="trimright"></a>  CStringT::TrimRight
 
-會修剪尾端字元的字串。
+修剪字串中的尾端字元。
 
 ```
 CStringT& TrimRight(XCHAR chTarget);
@@ -1750,27 +1750,27 @@ CStringT& TrimRight();
 要修剪的目標字元。
 
 *pszTargets*<br/>
-字串，包含要修剪的目標字元指標。 所有後端中出現的字元*pszTarget*會刪減`CStringT`物件。
+字串的指標，其中包含要修剪的目標字元。 *PszTarget*中所有尾端出現的字元都會從`CStringT`物件中修剪。
 
 ### <a name="return-value"></a>傳回值
 
-傳回`CStringT`物件，其中包含已修剪的字串。
+傳回包含修剪後之字串的物件。`CStringT`
 
 ### <a name="remarks"></a>備註
 
-移除尾端的下列其中一項目：
+移除下列其中一項的尾端出現專案：
 
-- 所指定的字元*chTarget*。
+- *ChTarget*所指定的字元。
 
-- 在所指定的字串中找到的所有字元*pszTargets*。
+- 在*pszTargets*所指定的字串中找到的所有字元。
 
-- 空白字元。
+- 空白字元.
 
-`CStringT& TrimRight(XCHAR chTarget)`版本接受一個字元的參數，並從結尾中移除該字元的所有副本`CStringT`字串資料。 它會從字串的結尾開始，並正面朝運作。 它會停止時找到不同的字元，或當`CSTringT`用盡字元資料。
+版本接受一個字元參數，並從`CStringT`字串資料的結尾移除該字元的所有複本。 `CStringT& TrimRight(XCHAR chTarget)` 它會從字串的結尾開始，一直往前邁進。 當它找到不同的字元或字元資料用盡`CSTringT`時，就會停止。
 
-`CStringT& TrimRight(PCXSTR pszTargets)`版本接受 null 終止的字串，包含要搜尋所有不同的字元。 它會移除這些字元的所有副本`CStringT`物件。 它會從字串的結尾，然後循序漸進地正面。 當它找到的字元; 不在目標字串中，或停止`CStringT`用盡字元資料。 它不會嘗試比對結尾的子字串的整個目標字串`CStringT`。
+`CStringT& TrimRight(PCXSTR pszTargets)`版本會接受以 null 終止的字串，其中包含要搜尋的所有不同字元。 它會移除`CStringT`物件中這些字元的所有複本。 它會從字串的結尾開始，一直往前邁進。 當它找到不在目標字串中的字元，或當字元資料用盡時`CStringT` ，就會停止。 它不會嘗試比對整個目標字串與結尾`CStringT`的子字串。
 
-`CStringT& TrimRight()`版本不需要參數。 它會修剪尾端任何尾端空白字元`CStringT`字串。 換行符號、 空格或定位點，可以是空白的字元。
+`CStringT& TrimRight()`版本不需要任何參數。 它會修剪`CStringT`字串結尾的任何尾端空白字元。 空白字元可以是分行符號、空格或索引標籤。
 
 -
 

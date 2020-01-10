@@ -1,41 +1,41 @@
 ---
 title: __segmentlimit
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __segmentlimit
 helpviewer_keywords:
 - __segmentlimit intrinsic
 - lsl instruction
 ms.assetid: d0bc3630-90cb-4185-8667-686fd41e23d4
-ms.openlocfilehash: 650a847be3270782dc441d0e68c2c80d910e9d1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9239d8de8ce2065d09ee7975301a2cb41832ba89
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390382"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217988"
 ---
-# <a name="segmentlimit"></a>__segmentlimit
+# <a name="__segmentlimit"></a>__segmentlimit
 
 **Microsoft 專屬**
 
-會產生`lsl`（負載區段上限） 的指示。
+`lsl`產生 (載入區段限制) 指令。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned long __segmentlimit(
    unsigned long a
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*a*<br/>
-[in]常數，指定的區段選取器。
+*為*\
+在常數, 指定區段選取器。
 
 ## <a name="return-value"></a>傳回值
 
-區段的限制所指定的區段選取器`a`，前提是選取器是在目前的權限層級的有效且可見。
+如果選取器有效, 而且在目前許可權層級可見, 則為所指定之區段選取器的區段限制。
 
 ## <a name="requirements"></a>需求
 
@@ -43,17 +43,17 @@ unsigned long __segmentlimit(
 |---------------|------------------|
 |`__segmentlimit`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-如果無法擷取區段上限，此指示將會失敗。 在失敗時，此指示清除 ZF 旗標，並傳回值會是未定義。
+如果無法抓取區段限制, 此指令將會失敗。 失敗時, 此指令會清除 ZF 旗標, 且傳回值為未定義。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 #include <stdio.h>
 
 #ifdef _M_IX86
@@ -109,4 +109,4 @@ sl was changed
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

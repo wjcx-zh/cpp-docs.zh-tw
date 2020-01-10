@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C4571
 ms.assetid: 07aa17bd-b15c-4266-824c-57cc445e8edd
-ms.openlocfilehash: 92164bf297a44871897b6c6150eb54f8c5ccf3cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a8f2093e90f8a681d171e19e2b8a066546f8684
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220451"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990666"
 ---
 # <a name="compiler-warning-level-4-c4571"></a>編譯器警告 (層級 4) C4571
 
-告知性： catch 語意變更自 Visual C++ 7.1;不再攔截結構化例外狀況 (SEH)
+資訊： catch （...）自 Visual C++ 7.1 後已變更的語法;已不再攔截結構化例外狀況（SEH）
 
-進行編譯時，將會產生每個 catch 區塊的 C4571 **/EHs**。
+使用 **/ehs**編譯時，會針對每個 catch （...）區塊產生 C4571。
 
-進行編譯時 **/EHs**，catch 區塊不會攔截結構化的例外狀況 （除以零或 null 指標，例如）; 在 catch 區塊只會攔截明確-擲回C++例外狀況。  如需詳細資訊，請參閱[例外狀況處理](../../cpp/exception-handling-in-visual-cpp.md)。
+使用 **/ehs**進行編譯時，catch （...）區塊不會攔截結構化例外狀況（例如零除、null 指標）;catch （...）區塊只會攔截明確擲回的C++例外狀況。  如需詳細資訊，請參閱[例外狀況處理](../../cpp/exception-handling-in-visual-cpp.md)。
 
-此警告預設為關閉。  開啟這個警告在您使用編譯時，確保 **/EHs** catch （...） 區塊不想要攔截結構化例外狀況。  如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
+此警告預設為關閉。  開啟此警告以確保當您使用 **/ehs**編譯時，您的 catch （...）區塊不想要攔截結構化例外狀況。  如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-您可以在下列方面，來解決 C4571
+您可以利用下列其中一種方式來解析 C4571，
 
-- 使用編譯 **/EHa**若您仍想您的 catch 區塊來攔截結構化例外狀況。
+- 如果您仍然想要 catch （...）區塊來攔截結構化例外狀況，請使用 **/eha**進行編譯。
 
-- 如果不想讓您的 catch 區塊來攔截結構化例外狀況，但您仍想要使用 catch 區塊，請不要啟用 C4571。  您仍然可以攔截使用結構化例外狀況處理關鍵字的結構化例外狀況 (**__try**， **__except**，並 **__finally**)。  但是請記住，當編譯 **/EHs**解構函式只時將會呼叫C++例外狀況是，未發生時擲回 SEH 例外狀況。
+- 如果您不想讓 catch （...）區塊攔截結構化例外狀況，但仍想要使用 catch （...）區塊，請不要啟用 C4571。  您仍然可以使用結構化例外狀況處理關鍵字（ **__try**、 **__except**和 **__finally**）來攔截結構化例外狀況。  但請記住，編譯的C++ /ehs 析構函數只會在擲回例外狀況時呼叫，而不是在發生 SEH 例外狀況時呼叫。
 
-- 取代特定的 catch 區塊中的 catch 區塊C++例外狀況，並選擇性地將結構化的例外處理周圍C++例外狀況處理 (**__try**， **__except**，和 **__finally**)。  請參閱[Structured Exception Handling (C /C++)](../../cpp/structured-exception-handling-c-cpp.md)如需詳細資訊。
+- 將 catch （...）區塊C++取代為特定例外狀況的 catch 區塊，並選擇性地在C++例外狀況處理（ **__try**、 **__except**和 **__finally**）上加入結構化例外狀況處理。  如需詳細資訊，請參閱[結構化例外狀況C++處理（C/）](../../cpp/structured-exception-handling-c-cpp.md) 。
 
-請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md)如需詳細資訊。
+如需詳細資訊，請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md) 。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4571。
 
-```
+```cpp
 // C4571.cpp
 // compile with: /EHs /W4 /c
 #pragma warning(default : 4571)

@@ -1,30 +1,31 @@
 ---
 title: .LISTALL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTALL
 helpviewer_keywords:
 - .LISTALL directive
 ms.assetid: fccb5117-542d-4ae3-869b-40cc2ab55ecb
-ms.openlocfilehash: 611370c3d599946e9ec50b53662bab4438dc5c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb167e348d2aea7bbbc7595ee16198caa23312ba
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178523"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313453"
 ---
 # <a name="listall"></a>.LISTALL
 
-啟動所有的陳述式的清單。
+開始列出所有語句。
 
 ## <a name="syntax"></a>語法
 
-> .LISTALL
+> **.LISTALL**
 
 ## <a name="remarks"></a>備註
 
-對等的組合[。清單](../../assembler/masm/dot-list.md)， [。LISTIF](../../assembler/masm/dot-listif.md)，和[。LISTMACROALL](../../assembler/masm/dot-listmacroall.md)。
+相當於的組合[。LIST](dot-list.md)、 [.LISTIF](dot-listif.md)、和[.LISTMACROALL](dot-listmacroall.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

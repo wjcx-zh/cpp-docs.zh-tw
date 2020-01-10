@@ -1,14 +1,14 @@
 ---
 title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strncat
 - _strncat_l
 - _mbsncat
 - _mbsncat_l
 - wcsncat
 - wcsncat_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -22,7 +22,10 @@ apilocation:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcsncat_l
 - _wcsncat_l
@@ -58,12 +61,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 2165ab1c379c89be658341b154f2d5823b2add0b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f27c2cb9b59d789e34da19b531a20d13475e62ee
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499443"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947359"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
@@ -143,10 +146,10 @@ unsigned char *_mbsncat_l(
 
 ## <a name="remarks"></a>備註
 
-**Strncat**函數最多可將*strSource*的第一個*計數*字元附加至*strDest*。 *StrSource*的初始字元會覆寫*strDest*的終止 null 字元。 如果在附加*計數*字元之前, *strSource*中出現 null 字元, **strncat**會將所有字元從*strSource*附加到 null 字元。 如果*count*大於*strSource*的長度, 則會使用*strSource*的長度來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
+**Strncat**函數最多可將*strSource*的第一個*計數*字元附加至*strDest*。 *StrSource*的初始字元會覆寫*strDest*的終止 null 字元。 如果在附加*計數*字元之前， *strSource*中出現 null 字元， **strncat**會將所有字元從*strSource*附加到 null 字元。 如果*count*大於*strSource*的長度，則會使用*strSource*的長度來取代*計數*。 在所有案例中，產生的字串都終止於 Null 字元。 如果在重疊的字串之間執行複製，則行為是未定義的。
 
 > [!IMPORTANT]
-> **strncat**不會檢查*strDest*中是否有足夠的空間;因此可能造成緩衝區溢位。 請記住, *count*會限制附加的字元數;這不是*strDest*大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
+> **strncat**不會檢查*strDest*中是否有足夠的空間;因此可能造成緩衝區溢位。 請記住， *count*會限制附加的字元數;這不是*strDest*大小的限制。 請參閱下列範例。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。
 
 **wcsncat**和 **_mbsncat**是**strncat**的寬字元和多位元組字元版本。 **Wcsncat**的字串引數和傳回值是寬字元字串; **_mbsncat**的是多位元組字元字串。 除此之外，這三個函式的行為相同。
 
@@ -162,7 +165,7 @@ unsigned char *_mbsncat_l(
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l**和 **_wcsncat_l**沒有地區設定相依性, 因此不應該直接呼叫。 其提供供 **_tcsncat_l**內部使用。
+> **_strncat_l**和 **_wcsncat_l**沒有地區設定相依性，因此不應該直接呼叫。 其提供供 **_tcsncat_l**內部使用。
 
 ## <a name="requirements"></a>需求
 
@@ -222,7 +225,7 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-請注意, **BadAppend**造成緩衝區溢位。
+請注意， **BadAppend**造成緩衝區溢位。
 
 ## <a name="see-also"></a>另請參閱
 

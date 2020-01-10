@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2093
 ms.assetid: 17529a70-9169-46b5-9fc6-57a5ce224e6a
-ms.openlocfilehash: d57b452e63f7bf76051ef6a23c5f8f6ba81aed1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52fcd69e631f1ca24664cde06478ae33ca2a37f2
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511146"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301947"
 ---
 # <a name="compiler-error-c2093"></a>編譯器錯誤 C2093
 
-'variable1': 不可以使用 自動變數的 '變數 2' 的位址初始化
+' variable1 '：無法使用自動變數 ' variable2 ' 的位址初始化
 
-進行編譯時[/Za](../../build/reference/za-ze-disable-language-extensions.md)，程式會嘗試自動變數的位址做為初始設定式。
+使用[/za](../../build/reference/za-ze-disable-language-extensions.md)進行編譯時，程式會嘗試使用自動變數的位址當做初始化運算式。
 
-下列範例會產生 C2093:
+下列範例會產生 C2093：
 
-```
+```c
 // C2093.c
 // compile with: /Za /c
 void func() {

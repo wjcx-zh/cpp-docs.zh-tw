@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2514
 ms.assetid: 4b7085e5-6714-4261-80b7-bc72e64ab3e8
-ms.openlocfilehash: aef9df0718d013378f88c1a34d08d1b1e05e214c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0153ec9d48225d153221f2192761da4023fab96
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243753"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746509"
 ---
 # <a name="compiler-error-c2514"></a>編譯器錯誤 C2514
 
-'class': 類別有沒有建構函式
+' class '：類別沒有任何函數
 
-類別、 結構或等位有沒有符合用來具現化之參數的參數清單的建構函式。
+類別、結構或等位沒有具有符合用來具現化參數之參數清單的任何函式。
 
-它可以具現化之前，就必須完全宣告類別。
+類別必須完全宣告，才可以具現化。
 
-下列範例會產生 C2514:
+下列範例會產生 C2514：
 
-```
+```cpp
 // C2514.cpp
 // compile with: /c
 class f;

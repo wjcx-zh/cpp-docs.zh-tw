@@ -41,7 +41,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68458964"
 ---
-# <a name="directoryentry-class"></a>directory_entry 類別
+# <a name="directory_entry-class"></a>directory_entry 類別
 
 描述 `*X` 所傳回的物件，其中 *X* 是 [directory_iterator](../standard-library/directory-iterator-class.md) 或 [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)。
 
@@ -65,7 +65,7 @@ class directory_entry;
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|描述|
+|成員函式|說明|
 |-|-|
 |[assign](#assign)|此成員函式會將`mypath`pval 指派給`mystat`、 *stat*至和`mysymstat` *symstat* 。|
 |[path](#path)|成員函式會傳回 `mypath`。|
@@ -75,7 +75,7 @@ class directory_entry;
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[operator!=](#op_neq)|用另一個清單複本取代清單的元素。|
 |[operator=](#op_as)|預設成員指派運算子會如預期般運作。|
@@ -88,13 +88,13 @@ class directory_entry;
 
 ## <a name="requirements"></a>需求
 
-**標頭:** \<實驗性/檔案系統&gt;
+**標頭：** \<實驗性/檔案系統&gt;
 
 **命名空間：** std::experimental::filesystem
 
 ## <a name="assign"></a>值賦
 
-此成員函式會將`mypath`pval 指派給`mystat`、 *stat_arg*至, `mysymstat`並將*symstat_arg*指派給。
+此成員函式會將`mypath`pval 指派給`mystat`、 *stat_arg*至， `mysymstat`並將*symstat_arg*指派給。
 
 ```cpp
 void assign(const std::experimental::filesystem::path& pval,
@@ -137,7 +137,7 @@ explicit directory_entry(const std::experimental::filesystem::path& pval,
 *symstat_arg*\
 儲存檔案名稱的符號連結狀態。
 
-## <a name="op_neq"></a>operator! =
+## <a name="op_neq"></a>operator！ =
 
 成員函式會傳回 `!(*this == right)`。
 
@@ -162,7 +162,7 @@ directory_entry& operator=(directory_entry&&) noexcept = default;
 ### <a name="parameters"></a>參數
 
 *再*\
-要[](../standard-library/directory-entry-class.md)複製到`directory_entry`中的 directory_entry。
+要複製到`directory_entry`中的 [directory_entry](../standard-library/directory-entry-class.md)。
 
 ## <a name="op_eq"></a>operator = =
 
@@ -269,11 +269,11 @@ void replace_filename(
 
 ## <a name="status"></a>狀態
 
-這兩個成員`mystat`函式會傳回第一次變更, 如下所示:
+這兩個成員`mystat`函式會傳回第一次變更，如下所示：
 
-1. 如果`status_known(mystat)`這樣做, 則不執行任何動作。
+1. 如果`status_known(mystat)`這樣做，則不執行任何動作。
 
-1. 否則, 則`!status_known(mysymstat) && !is_symlink(mysymstat)`為`mystat = mysymstat`, 否則為。
+1. 否則，則`!status_known(mysymstat) && !is_symlink(mysymstat)`為`mystat = mysymstat`，否則為。
 
 ```cpp
 file_status status() const;
@@ -287,7 +287,7 @@ file_status status(error_code& ec) const noexcept;
 
 ## <a name="symlink_status"></a>symlink_status
 
-這兩個成員`mysymstat`函式會傳回第一次變更, 如下所示:如果`status_known(mysymstat)`這樣做, 則不執行任何動作。 否則為 `mysymstat = symlink_status(mypval)`。
+這兩個成員`mysymstat`函式會傳回第一次變更，如下所示：如果`status_known(mysymstat)`這樣做，則不執行任何動作。 否則為 `mysymstat = symlink_status(mypval)`。
 
 ```cpp
 file_status symlink_status() const;

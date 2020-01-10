@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 (層級 1) C4929
+title: 編譯器警告（層級1） C4929
 ms.date: 11/04/2016
 f1_keywords:
 - C4929
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: 07081f2b8e305e20eb1725d3d76a6d77638caa7e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393398"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052264"
 ---
-# <a name="compiler-warning-level-1-c4929"></a>編譯器警告 (層級 1) C4929
+# <a name="compiler-warning-level-1-c4929"></a>編譯器警告（層級1） C4929
 
-'file': 類型程式庫包含一個等位中;忽略 'embedded_idl' 限定詞
+' file '：類型程式庫包含 union;忽略 ' embedded_idl ' 限定詞
 
-Embedded_idl 屬性[#import](../../preprocessor/hash-import-directive-cpp.md)無法套用至類型程式庫因為等位型別程式庫中。 若要解決這個警告，請勿使用 embedded_idl。
+無法將[#import](../../preprocessor/hash-import-directive-cpp.md)的 embedded_idl 屬性套用至類型程式庫，因為類型程式庫中有聯集。 若要解決這個警告，請不要使用 embedded_idl。
 
 ## <a name="example"></a>範例
 
 下列範例會定義元件。
 
-```
+```cpp
 // C4929a.cpp
 // compile with: /LD /link /TLBOUT:C4929a.tlb
 #include <objbase.h>
@@ -57,7 +57,7 @@ struct C : I {
 
 下列範例會產生 C4929。
 
-```
+```cpp
 // C4929b.cpp
 // compile with: /c /W1
 #import "C4929a.tlb" embedded_idl   // C4929

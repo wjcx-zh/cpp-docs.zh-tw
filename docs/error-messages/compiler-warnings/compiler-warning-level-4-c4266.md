@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4266
 ms.assetid: 90ec5f5b-3451-4c16-bb1b-c30a626bdaa0
-ms.openlocfilehash: c0bfe2c03b1c1e310a341e97013ae1516457f300
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeca693e03751245d9b031d6f64751f0372bbb69
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400938"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991352"
 ---
 # <a name="compiler-warning-level-4-c4266"></a>編譯器警告 (層級 4) C4266
 
-'function': 沒有覆寫的基底 'type'; 虛擬成員函式函式已隱藏
+' function '：基底 ' type ' 的虛擬成員函式沒有可用的覆寫;函式已隱藏
 
-在衍生的類別未覆寫虛擬函式的所有多載。
+衍生類別未覆寫虛擬函式的所有多載。
 
 此警告預設為關閉。  如需詳細資訊，請參閱 [預設為關閉的編譯器警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 。
 
-下列範例會產生 C4266:
+下列範例會產生 C4266：
 
-```
+```cpp
 // C4266.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)
@@ -38,9 +38,9 @@ class LocalBinding : private Engine {
 };   // C4266
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C4266b.cpp
 // compile with: /W4 /c
 #pragma warning (default : 4266)

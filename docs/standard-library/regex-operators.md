@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460126"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689079"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt; 運算子
 
@@ -25,7 +25,7 @@ ms.locfileid: "68460126"
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a>  operator!=
 
 不同物件的不等於比較。
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
 
-每個範本運算子都會將其引數轉換成字串類型, 而且只有在*left*的轉換值比*right*的轉換值小時, 才會傳回 true。
+每個範本運算子都會將其引數轉換成字串類型，而且只有在*left*的轉換值比*right*的轉換值小時，才會傳回 true。
 
 ### <a name="example"></a>範例
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a>  運算子&lt;&lt;
 
 在資料流中插入 sub_match。
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>參數
 
-*Elem*\
+*Elem* \
 元素類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*等於*\
+*os* \
 輸出資料流。
 
-*再*\
+*right* \
 要插入的物件。
 
 ### <a name="remarks"></a>備註
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a>  運算子&lt;=
 
 不同物件的小於或等於比較。
 
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -486,11 +486,11 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 當範本運算子將其引數轉換為字串類型之後，它會使用下列第一個適用的轉換：
 
-類型為特製化範本類別 `match_results` 或 `sub_match` 的引數是透過呼叫 `str` 成員函式轉換而來；
+其類型為類別樣板特製化的引數 `match_results` 或 `sub_match` 會藉由呼叫 `str` 成員函式進行轉換;
 
-類型為特製化範本類型 `basic_string` 的引數會保持不變；
+其類型為特製化類別樣板 `basic_string` 的引數不變;
 
-所有其他引數類型都是透過將引數值傳遞至建構函式以對範本類型 `basic_string` 進行適當特製化來轉換。
+所有其他引數類型都是藉由將引數值傳遞至函式來進行轉換，以進行類別樣板 `basic_string` 的適當特製化。
 
 ### <a name="example"></a>範例
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a>  運算子&gt;
 
 不同物件的大於比較。
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a>  運算子&gt;=
 
 不同物件的大於或等於比較。
 
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>參數
 
-*BidIt*\
+*BidIt* \
 迭代器類型。
 
-*IOtraits*\
+*IOtraits* \
 字串特性類別。
 
-*配置*\
+配置 \
 配置器類別。
 
-*左面*\
+*左方*\
 要比較的左側物件。
 
-*再*\
+*right* \
 要比較的右側物件。
 
 ### <a name="remarks"></a>備註
@@ -771,13 +771,13 @@ sub >= "aab" == false
 sub >= 'a' == true
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<regex>](../standard-library/regex.md)\
-[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
-[RegEx_error 類別](../standard-library/regex-error-class.md)\
-[\<RegEx > 函式](../standard-library/regex-functions.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[RegEx_traits 類別](../standard-library/regex-traits-class.md)\
+[Regex_constants 類別](../standard-library/regex-constants-class.md)\
+[Regex_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函數](../standard-library/regex-functions.md)\
+[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
+[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[Regex_traits 類別](../standard-library/regex-traits-class.md)\
 [\<regex> typedefs](../standard-library/regex-typedefs.md)

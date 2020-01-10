@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3707
 ms.assetid: ac63a5dd-7a4b-48d2-9f2a-be9cb090134c
-ms.openlocfilehash: 8a1525539c84ea427815a03057bb6d2f9213fec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6faf035c0f4f68b10b187c56bea4cafc776998cf
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328519"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757952"
 ---
 # <a name="compiler-error-c3707"></a>編譯器錯誤 C3707
 
-'function': dispinterface 方法必須有 dispid
+' function '：分配介面方法必須有 dispid
 
-如果您使用`dispinterface`方法中，您必須將它指派`dispid`。 若要修正這個錯誤，請指派`dispid`要`dispinterface`方法，例如，取消註解`id`在下列範例中的方法上的屬性。 如需詳細資訊，請參閱屬性[dispinterface](../../windows/dispinterface.md)並[識別碼](../../windows/id.md)。
+如果您使用 `dispinterface` 方法，則必須將 `dispid`指派給它。 若要修正這個錯誤，請將 `dispid` 指派給 `dispinterface` 方法，例如，藉由在下列範例中的方法上取消批註 `id` 屬性。 如需詳細資訊，請參閱屬性分配[介面](../../windows/dispinterface.md)和[識別碼](../../windows/id.md)。
 
-下列範例會產生 C3707:
+下列範例會產生 C3707：
 
-```
+```cpp
 // C3707.cpp
 #include <atlbase.h>
 #include <atlcom.h>

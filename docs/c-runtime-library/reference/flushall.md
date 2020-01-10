@@ -1,9 +1,9 @@
 ---
 title: _flushall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _flushall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _flushall
 helpviewer_keywords:
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dce7412ccc19d4870494851d366c059ff01de16a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333530"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957144"
 ---
-# <a name="flushall"></a>_flushall
+# <a name="_flushall"></a>_flushall
 
 清除所有資料流；清除所有緩衝區。
 
@@ -43,21 +46,21 @@ int _flushall( void );
 
 ## <a name="return-value"></a>傳回值
 
-**_flushall**傳回開啟的資料流 （輸入和輸出） 的數目。 不會傳回錯誤。
+**_flushall**會傳回開啟的資料流程數目（輸入和輸出）。 不會傳回錯誤。
 
 ## <a name="remarks"></a>備註
 
-根據預設， **_flushall**函式會寫入適當的檔案與開啟輸出資料流相關聯的所有緩衝區的內容。 會清除與開啟之輸入資料流相關聯的所有緩衝區中的目前內容 (這些緩衝區通常是由作業系統所維護，以判斷將資料自動寫入至磁碟的最佳時機︰緩衝區已滿時、關閉資料流時，或程式正常結束而未關閉資料流時)。
+根據預設， **_flushall**函式會將與開啟的輸出資料流程相關聯之所有緩衝區的內容寫入適當的檔案。 會清除與開啟之輸入資料流相關聯的所有緩衝區中的目前內容 (這些緩衝區通常是由作業系統所維護，以判斷將資料自動寫入至磁碟的最佳時機︰緩衝區已滿時、關閉資料流時，或程式正常結束而未關閉資料流時)。
 
-如果呼叫 **_flushall**，新的資料從輸入檔讀取到緩衝區。 所有資料流保持開啟狀態之後呼叫 **_flushall**。
+如果讀取會在呼叫 **_flushall**之後，則會從輸入檔案將新資料讀取到緩衝區。 所有資料流程在呼叫 **_flushall**之後都會保持開啟狀態。
 
-執行階段程式庫的認可到磁碟功能可讓您確保將重大資料直接寫入至磁碟，而不是作業系統緩衝區。 不需要重新撰寫現有程式，即可連結程式的物件檔案與 Commode.obj 來啟用這項功能。在產生的可執行檔中，呼叫 **_flushall**寫入磁碟中的所有緩衝區的內容。 只有 **_flushall**並[fflush](fflush.md)會受到 Commode.obj 影響。
+執行階段程式庫的認可到磁碟功能可讓您確保將重大資料直接寫入至磁碟，而不是作業系統緩衝區。 不需要重新撰寫現有程式，即可連結程式的物件檔案與 Commode.obj 來啟用這項功能。在產生的可執行檔中，對 **_flushall**的呼叫會將所有緩衝區的內容寫入磁片。 只有 **_flushall**和[Fflush](fflush.md)會受到 commode.obj 的影響。
 
 如需控制認可到磁碟功能的資訊，請參閱[資料流 I/O](../../c-runtime-library/stream-i-o.md)、[fopen](fopen-wfopen.md) 和 [_fdopen](fdopen-wfdopen.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_flushall**|\<stdio.h>|
 

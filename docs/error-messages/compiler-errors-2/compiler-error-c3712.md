@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3712
 ms.assetid: 65b1fcaf-be89-4c55-9e40-25ec03457253
-ms.openlocfilehash: 0b84f4562dcc0dd5dcc3ecb647316772efab6b38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 51772f22f83cff5c602bd2310d7913c0d317ba66
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328402"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753363"
 ---
 # <a name="compiler-error-c3712"></a>編譯器錯誤 C3712
 
-'method': 事件處理常式方法必須傳回相同的型別，做為來源 'method'
+' method '：事件處理常式方法必須傳回與來源 ' method ' 相同的類型
 
-您定義事件處理常式方法不會傳回來源事件方法相同的型別。 若要修正這個錯誤，請提供事件處理常式方法相同的來源事件方法的傳回類型。
+您定義的事件處理常式方法，未傳回與來源事件方法相同的類型。 若要修正這個錯誤，請提供事件處理常式方法與來源事件方法的傳回型別相同。
 
-下列範例會產生 C3712:
+下列範例會產生 C3712：
 
-```
+```cpp
 // C3712.cpp
 // compile with: /c
 [event_source(native)]

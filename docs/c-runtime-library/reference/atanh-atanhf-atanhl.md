@@ -1,11 +1,11 @@
 ---
 title: atanh、atanhf、atanhl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - atanhl
 - atanhf
 - atanh
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - atanhl
 - atanhf
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 539d015d5691f62f990faf650ab738f60066a2a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341284"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939589"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -58,22 +61,22 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Atanh**函式會傳回的反雙曲正切函數 （arc 雙曲正切） *x*。 如果*x*大於 1 或小於-1， **errno**設定為**EDOM**且結果為無訊息 NaN。 如果*x*是等於 1 或-1，正或負的無限值傳回，分別並**errno**設定為**ERANGE**。
+**Atanh**函式會傳回*x*的反雙曲正切函數（arc 雙曲正切）。 如果*x*大於1或小於-1， **errno**會設為**EDOM** ，且結果為無訊息 NaN。 如果*x*等於1或-1，則會分別傳回正或負無限大，而且**errno**會設定為**ERANGE**。
 
-|輸入|SEH 例外狀況|**Matherr**例外狀況|
+|Input|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|none|
+|± QNAN，IND|none|none|
 |*X* ≥ 1; *x* ≤ -1|none|none|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**atanh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **atanh**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**atanh**的多載。 在 C 程式中， **atanh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**atanh**， **atanhf**， **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**atanh**、 **atanhf**、 **atanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

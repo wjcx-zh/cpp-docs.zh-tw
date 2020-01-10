@@ -1,11 +1,11 @@
 ---
 title: _ftime、_ftime32、_ftime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ftime64
 - _ftime
 - _ftime32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftime32
 - _ftime
@@ -35,14 +38,14 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-ms.openlocfilehash: 26178f8e559bddd3dafb7fa21edb822874244e93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8cc46a0a5470892e0bdfdcb0918c2757cdaf4c7
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332712"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956339"
 ---
-# <a name="ftime-ftime32-ftime64"></a>_ftime、_ftime32、_ftime64
+# <a name="_ftime-_ftime32-_ftime64"></a>_ftime、_ftime32、_ftime64
 
 取得目前時間。 這些函式有更安全的版本可供使用，請參閱 [_ftime_s、_ftime32_s、_ftime64_s](ftime-s-ftime32-s-ftime64-s.md)。
 
@@ -57,28 +60,28 @@ void _ftime64( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>參數
 
 *timeptr*<br/>
-指標 **_timeb**， **__timeb32**，或 **__timeb64**結構。
+**_Timeb**、 **__timeb32**或 **__timeb64**結構的指標。
 
 ## <a name="remarks"></a>備註
 
-**_Ftime**函式取得目前的當地時間，並將它儲存在結構中所指*timeptr*。 **_Timeb**， **__timeb32**，並 **__timeb64**中所定義的結構\<sys\\timeb.h >。 它們包含下表中所列出的四個欄位。
+**_Ftime**函式會取得目前的當地時間，並將它儲存在*timeptr*所指向的結構中。 **_Timeb**、 **__timeb32**和 **__timeb64**結構定義于 sys \< \\timeb. h > 中。 它們包含下表中所列出的四個欄位。
 
 |欄位|描述|
 |-|-|
 |**dstflag**|若日光節約時間目前於本地時區已生效，則為非零。 (如需如何判斷日光節約時間的說明，請參閱 [_tzset](tzset.md)。)|
 |**millitm**|秒數的分數，以毫秒為單位。|
 |**time**|自國際標準時間 (UTC) 1970 年 1 月 1 日午夜 (00:00:00) 以來的時間，以秒為單位。|
-|**timezone**|UTC 和當地時間之間的時差，向西推進，以分鐘為單位。 值**時區**會設定全域變數的值從 **_timezone** (請參閱 **_tzset**)。|
+|**timezone**|UTC 和當地時間之間的時差，向西推進，以分鐘為單位。 [**時區**] 的值是從全域變數 **_timezone**的值設定的（請參閱 **_tzset**）。|
 
-**_Ftime64**函式，以使用 **__timeb64**結構，可讓檔案建立日期最高表示為 23:59:59，3000 年 12 月 31 日 UTC; 而 **_ftime32**僅代表到 23:59:59 2038 年 1 月 18 日 UTC 的日期。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
+使用 **__timeb64**結構的 **_ftime64**函式可讓檔案建立日期以23:59:59 年12月31日3000，UTC 表示。雖然 **_ftime32**只代表日期到23:59:59 年1月 18 2038 日，UTC。 1970 年 1 月 1 日午夜是所有這些函式的日期範圍下限。
 
-**_Ftime**函式相當於 **_ftime64**，並 **_timeb**包含 64 位元時間，除非 **_USE_32BIT_TIME_T**定義，在這種情況下的舊的行為就會生效;**_ftime**會使用 32 位元時間並 **_timeb**包含 32 位元時間。
+**_Ftime**函數相當於 **_ftime64**，而 **_timeb**包含64位時間，除非已定義 **_USE_32BIT_TIME_T** ，在此情況下，舊的行為會生效; **_ftime**使用32位時間，而 **_timeb**包含32位時間。
 
-**_ftime**會驗證其參數。 如果傳遞 null 做為指標*timeptr*，函式會叫用無效參數處理常式，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會設定**errno**要**EINVAL**。
+**_ftime**會驗證其參數。 如果將 null 指標傳遞為*timeptr*，則函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**_ftime**|\<sys/types.h> 和 \<sys/timeb.h>|
 |**_ftime32**|\<sys/types.h> 和 \<sys/timeb.h>|

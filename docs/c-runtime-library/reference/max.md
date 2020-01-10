@@ -1,9 +1,9 @@
 ---
 title: __max
 ms.date: 04/05/2018
-apiname:
+api_name:
 - __max
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - max
 - __max
@@ -23,16 +26,16 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156860"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952742"
 ---
-# <a name="max"></a>__max
+# <a name="__max"></a>__max
 
-傳回兩個值的較大的前置處理器巨集。
+預處理器宏，它會傳回兩個值中較大的一個。
 
 ## <a name="syntax"></a>語法
 
@@ -42,18 +45,18 @@ ms.locfileid: "62156860"
 
 ### <a name="parameters"></a>參數
 
-*a*, *b*<br/>
+*a*、 *b*<br/>
 要比較之任何數字類型的值。
 
 ## <a name="return-value"></a>傳回值
 
-**__max**傳回其引數的較大。
+**__max**會傳回其引數中較大的一個。
 
 ## <a name="remarks"></a>備註
 
-**__Max**巨集比較兩個值，並傳回較大的值。 引數可以是帶正負號或不帶正負號的任何數值資料類型。 引數和傳回值必須屬於相同的資料類型。
+**__Max**宏比較兩個值，並傳回較大的值。 引數可以是帶正負號或不帶正負號的任何數值資料類型。 引數和傳回值必須屬於相同的資料類型。
 
-傳回引數會評估兩次由巨集。 這可能會導致非預期的結果引數是否會改變其值，其進行評估時，這類運算式`*p++`。
+傳回的引數會透過宏進行兩次評估。 如果引數是在評估時改變其值的運算式（例如`*p++`），這可能會導致非預期的結果。
 
 ## <a name="requirements"></a>需求
 

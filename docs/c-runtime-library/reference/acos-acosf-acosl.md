@@ -1,11 +1,11 @@
 ---
 title: acos、acosf、acosl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acosf
 - acos
 - acosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acos
 - acosl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335668"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940000"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -58,29 +61,29 @@ long double acos( long double x );   // C++ only
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-值介於-1 和 1，要計算反餘弦 (inverse cosine)。
+介於-1 和1之間的值，用於計算反余弦函數（反余弦值）。
 
 ## <a name="return-value"></a>傳回值
 
-**Acos**函式會傳回的反餘弦*x*中範圍介於 0 到 π 弧度為單位。
+**Acos**函式會傳回0到π弧度之間*x*的反余弦函數。
 
-根據預設，如果*x*小於-1 或大於 1， **acos**傳回不定。
+根據預設，如果*x*小於-1 或大於1，則**acos**會傳回不定的。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**acos**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **acos**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**acos**的多載。 在 C 程式中， **acos**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**acos**， **acosf**， **acosl**|\<math.h>|\<errno.h>|
+|**acos**、 **acosf**、 **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>範例
 

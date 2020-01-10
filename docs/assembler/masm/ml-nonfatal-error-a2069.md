@@ -1,25 +1,25 @@
 ---
 title: ML 非嚴重錯誤 A2069
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2069
 helpviewer_keywords:
 - A2069
 ms.assetid: 57dbf072-da61-4306-8d41-a4d9c97fec1a
-ms.openlocfilehash: 42402af411852325c605f82744e345c33313bf3d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55057c9f69745c0e5791bd4e2c0743b1af52dd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201906"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316872"
 ---
 # <a name="ml-nonfatal-error-a2069"></a>ML 非嚴重錯誤 A2069
 
-**不允許此指令的運算元**
+**此指令不允許有任何運算元**
 
-一或多個運算元所指定的指令，不會使用任何運算元使用。
+指定了一或多個運算元與不接受任何運算元的指令。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

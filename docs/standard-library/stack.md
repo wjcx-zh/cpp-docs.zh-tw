@@ -7,27 +7,27 @@ helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-ms.openlocfilehash: 8a31ccd553638b9b548db89a191da40bc513a05f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e8c468da35ae23e5a37c2dfc5ac3fbdf47408c71
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453778"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72686089"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
-定義樣板類別堆疊和兩個支援的樣板。
+定義類別樣板堆疊和兩個支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<stack>
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> Stack > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0stack > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -40,19 +40,13 @@ ms.locfileid: "68453778"
 |[operator>](../standard-library/stack-operators.md#op_gt)|測試運算子左邊的堆疊物件是否大於右邊的堆疊物件。|
 |[operator>=](../standard-library/stack-operators.md#op_gt_eq)|測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。|
 
-### <a name="functions"></a>函式
-
-|||
-|-|-|
-|[swap]()||
-
 ### <a name="classes"></a>類別
 
 |||
 |-|-|
 |[stack 類別](../standard-library/stack-class.md)|範本容器配接器類別，其提供的功能限制將對項目的存取限制為最近加入一些基礎容器類型的項目。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

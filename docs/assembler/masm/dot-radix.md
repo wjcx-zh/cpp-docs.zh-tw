@@ -1,26 +1,27 @@
 ---
 title: .RADIX
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .RADIX
 helpviewer_keywords:
 - .RADIX directive
 ms.assetid: 3f7c2717-fd41-4aff-820d-3f40fd9280a0
-ms.openlocfilehash: cd00699da0f9a9e77ea00ab242831f4dbf690cb9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b36f08cf67cdeca9186a1f3382e9b10b56728bd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178601"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313427"
 ---
 # <a name="radix"></a>.RADIX
 
-設定 2 到 16 個值的範圍中的預設基底*運算式*。
+將預設基數（範圍介於2到16）設為*expression*的值。
 
 ## <a name="syntax"></a>語法
 
-> .基底運算式
+> **.基數***運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

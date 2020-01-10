@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4247
 ms.assetid: 085d7fdf-9eaf-4641-8473-6eaadd073c7b
-ms.openlocfilehash: cd4108f8bd06ec7a0b2d2eb9fab13917174b797b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 344c219fa1f3daa1e5f9c31431e608f5e7036400
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346956"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991149"
 ---
 # <a name="linker-tools-warning-lnk4247"></a>連結器工具警告 LNK4247
 
-進入點 'decorated_function_name' 已經有一個執行緒屬性;忽略 ' attribute'
+進入點 ' decorated_function_name ' 已經有 thread 屬性;已忽略 ' attribute '
 
-進入點，以指定[/ENTRY （進入點符號）](../../build/reference/entry-entry-point-symbol.md)，有一個執行緒的屬性，但[/CLRTHREADATTRIBUTE （設定 CLR 執行緒屬性）](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)也指定了，使用不同的執行緒模型。
+以[/ENTRY （進入點符號）](../../build/reference/entry-entry-point-symbol.md)指定的進入點具有線程屬性，但也指定了[/CLRTHREADATTRIBUTE （設定 CLR 執行緒屬性）](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md) ，並使用不同的執行緒模型。
 
-連結器會忽略 /CLRTHREADATTRIBUTE 與指定的值。
+連結器已忽略以/CLRTHREADATTRIBUTE. 指定的值
 
-若要解決這個警告：
+若要解決此警告：
 
-- /CLRTHREADATTRIBUTE 移除您的組建。
+- 從您的組建中移除/CLRTHREADATTRIBUTE。
 
-- 從您的原始程式碼檔中移除屬性。
+- 從原始程式碼檔中移除屬性。
 
-- 從來源和 /CLRTHREADATTRIBUTE 移除這兩個屬性，從您的組建，並接受預設 CLR 執行緒模型。
+- 從您的組建中移除來源和/CLRTHREADATTRIBUTE 的屬性，並接受預設的 CLR 執行緒模型。
 
-- 變更的值傳遞至 /CLRTHREADATTRIBUTE，使得它接納來源內的屬性。
+- 變更傳遞給/CLRTHREADATTRIBUTE 的值，如此一來，它就會同意來源中的屬性。
 
-- 變更來源中的屬性，使它同意 /CLRTHREADATTRIBUTE 來傳遞的值。
+- 變更來源中的屬性，如此一來，它會同意傳遞給/CLRTHREADATTRIBUTE. 的值。
 
 下列範例會產生 LNK4247
 
-```
+```cpp
 // LNK4247.cpp
 // compile with: /clr /c
 // post-build command: link /CLRTHREADATTRIBUTE:STA LNK4247.obj /entry:functionTitle /SUBSYSTEM:Console

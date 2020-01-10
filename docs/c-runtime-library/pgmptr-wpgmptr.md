@@ -12,14 +12,14 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: beff0401d0aa2aa21819e58618ef4c02795d4393
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749863"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300153"
 ---
-# <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
+# <a name="_pgmptr-_wpgmptr"></a>_pgmptr、_wpgmptr
 
 可執行檔的路徑。 已被取代，請使用 [_get_pgmptr](../c-runtime-library/reference/get-pgmptr.md) 和 [_get_wpgmptr](../c-runtime-library/reference/get-wpgmptr.md)。
 
@@ -58,7 +58,7 @@ C> hello
 
 下列程式示範 `_pgmptr` 的用法。
 
-```
+```c
 // crt_pgmptr.c
 // compile with: /W3
 // The following program demonstrates the use of _pgmptr.
@@ -75,6 +75,6 @@ int main( void )
 
 若要使用 `_wpgmptr`，您可以將 `%Fs` 改為 `%S`，並將 `main` 改為 `wmain`。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [全域變數](../c-runtime-library/global-variables.md)

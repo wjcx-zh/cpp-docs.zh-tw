@@ -1,30 +1,31 @@
 ---
 title: ECHO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ECHO
 helpviewer_keywords:
 - ECHO directive
 ms.assetid: 68b912cc-6bd3-4f22-88cb-00a1aa17ecaf
-ms.openlocfilehash: 46a7f77fae035b0fdc846c80f0415337d2bef07b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af21a083dcc947f685a698cb77583879d4993785
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203277"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317379"
 ---
 # <a name="echo"></a>ECHO
 
-顯示*訊息*到標準輸出裝置 （依預設，螢幕）。
+顯示*訊息*至標準輸出裝置（根據預設，畫面）。
 
 ## <a name="syntax"></a>語法
 
-> ECHO*訊息*
+> **回應***消息*
 
 ## <a name="remarks"></a>備註
 
-與相同[%out](../../assembler/masm/percent-out.md)。
+與[% OUT](percent-out.md)相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

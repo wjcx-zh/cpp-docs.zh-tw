@@ -1,11 +1,11 @@
 ---
 title: round、roundf、roundl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - round
 - roundl
 - roundf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - roundf
 - roundl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92f4a94fff06fe6948701240b61040a610981f3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357443"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949111"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -65,21 +68,21 @@ long double roundl(
 
 ## <a name="return-value"></a>傳回值
 
-**四捨五入**函式會傳回浮點數的值，表示最接近的整數*x*。 不論浮點四捨五入模式的設定為何，進行四捨五入時，中間值都會背離零。 不會傳回錯誤。
+**Round**函數會傳回浮點值，表示最接近*x*的整數。 不論浮點四捨五入模式的設定為何，進行四捨五入時，中間值都會背離零。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|常见**QNAN**， **IND**|none|**_DOMAIN**|
+|± **QNAN**， **IND**|none|**_DOMAIN**|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**捨入**採用並傳回**float**並**長** **double**值。 在 C 程式中，**四捨五入**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**round**的多載。 在 C 程式中， **round**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**四捨五入**， **roundf**， **roundl**|\<math.h>|
+|**round**、 **roundf**、 **roundl**|\<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

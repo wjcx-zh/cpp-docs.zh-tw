@@ -1,10 +1,10 @@
 ---
 title: c16rtomb，c32rtomb
-ms.date: 01/22/2018
-apiname:
+ms.date: 10/22/2019
+api_name:
 - c16rtomb
 - c32rtomb
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - c16rtomb
 - c32rtomb
@@ -26,16 +29,16 @@ helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-ms.openlocfilehash: ad58184c7bab6f95a842bda5f9eb545f09434a3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f480d9b450b528275fea78ae878269fa6a4fa54
+ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341752"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72811073"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb，c32rtomb
 
-將 UTF-16 或 UTF-32 寬字元轉換成目前地區設定的多位元組字元。
+將 UTF-16 或 UTF-32 寬字元轉換成 UTF-8 多位元組字元。
 
 ## <a name="syntax"></a>語法
 
@@ -54,40 +57,44 @@ size_t c32rtomb(
 
 ### <a name="parameters"></a>參數
 
-*mbchar*<br/>
-儲存多位元組轉換字元陣列的指標。
+*mbchar*\
+陣列的指標，用來儲存已轉換的 UTF-8 多位元組字元。
 
-*wchar*<br/>
+*wchar*\
 要轉換的寬字元。
 
-*state*<br/>
-指標**mbstate_t**物件。
+*狀態*\
+**Mbstate_t**物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
-陣列物件中儲存的位元組數目*mbchar*，包括任何移位序列。 如果*wchar*不是有效的寬字元，值 (**size_t**傳回)(-1) **errno**設定為**EILSEQ**，的值*狀態*未指定。
+儲存在陣列物件*mbchar*中的位元組數目，包括任何移位序列。 如果*wchar*不是有效的寬字元，則會傳回值（**size_t**）（-1）， **errno**會設定為**EILSEQ**，而*state*的值則為未指定。
 
 ## <a name="remarks"></a>備註
 
-**C16rtomb**函式會將轉換的 utf-16 字元*wchar*目前的地區設定中的對等的多位元組窄字元序列。 如果*mbchar*不是 null 指標所指向的陣列物件中已轉換的序列的函式存放區*mbchar*。 最多**MB_CUR_MAX**位元組會儲存在*mbchar*，並*狀態*設為產生的多位元組移位狀態。    如果*wchar*是 null 寬字元序列，才能的還原初始移位狀態會儲存，如有需要後面接著 null 字元，並*狀態*設為初始轉換狀態。 **C32rtomb**函式相同，但轉換 UTF-32 字元。
+**C16rtomb**函數會將 utf-16 LE 字元*wchar*轉換成相等的 utf-8 多位元組窄字元序列。 如果*mbchar*不是 null 指標，函式會將轉換的序列儲存在*mbchar*所指向的陣列物件中。 最多**MB_CUR_MAX**個位元組會儲存在*mbchar*中，而*狀態*會設定為產生的多位元組移位狀態。
 
-如果*mbchar*為 null 指標，行為相當於呼叫替代的內部緩衝區的函式*mbchar*和 寬 null 字元*wchar*。
+如果*wchar*是 null 寬字元，則會視需要儲存還原初始移位狀態所需的序列，後面接著 null 字元。 *狀態*設定為初始轉換狀態。 **C32rtomb**函式完全相同，但會轉換 UTF-32 字元。
 
-*狀態*轉換狀態物件可讓您進行後續呼叫此函式和其他可重新啟動的函式所維護的多位元組輸出字元移位狀態。 當您混合使用可重新啟動和非可重新啟動的函式，或如果呼叫，結果便未定義**setlocale**之間可重新啟動的函式呼叫。
+如果*mbchar*是 null 指標，此行為相當於呼叫函式，以替代*mbchar*的內部緩衝區和用於*wchar*的寬 null 字元。
+
+*狀態*轉換狀態物件可讓您對此函式，以及維護多位元組輸出字元之移位狀態的其他可重新開機函數進行後續呼叫。 當您混合使用可重新開機和無法重新開機的函式時，會產生未定義的結果。
+
+若要將 UTF-16 字元轉換成非 UTF-8 多位元組字元，請使用[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)、 [wcstombs_s 或 _wcstombs_s_l](wcstombs-s-wcstombs-s-l.md)函數。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**c16rtomb**， **c32rtomb**|C、C++：\<uchar.h>|
+|**c16rtomb**、 **c32rtomb**|C、C++：\<uchar.h>|
 
-如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性資訊，請參閱 [相容性](../compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[資料轉換](../../c-runtime-library/data-conversion.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
-[多位元組字元序列的解譯](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
-[mbrtoc16、mbrtoc32](mbrtoc16-mbrtoc323.md)<br/>
-[wcrtomb](wcrtomb.md)<br/>
-[wcrtomb_s](wcrtomb-s.md)<br/>
+[資料轉換](../data-conversion.md)\
+[Locale](../locale.md)\
+[多位元組字元序列的解讀](../interpretation-of-multibyte-character-sequences.md)\
+[mbrtoc16、mbrtoc32](mbrtoc16-mbrtoc323.md)\
+[wcrtomb](wcrtomb.md)\
+[wcrtomb_s](wcrtomb-s.md)

@@ -1,28 +1,29 @@
 ---
 title: .ENDIF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ENDIF
 helpviewer_keywords:
 - .ENDIF directive
 ms.assetid: b9f25ed5-6634-40f7-bcbc-d3135f09cce6
-ms.openlocfilehash: c80fca47b1168c63b40bbc47d410868820262645
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcd8b5b2423abf982f999548a50208dfe8e83f6e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204344"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313817"
 ---
-# <a name="endif"></a>.ENDIF
+# <a name="endif-32-bit-masm"></a>.ENDIF （32-bit MASM）
 
 ## <a name="syntax"></a>語法
 
-> .ENDIF
+> **.ENDIF**
 
 ## <a name="remarks"></a>備註
 
-請參閱[。如果](../../assembler/masm/dot-if.md)。
+（僅限 32-bit MASM）。請參閱[。如果](dot-if.md)為。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

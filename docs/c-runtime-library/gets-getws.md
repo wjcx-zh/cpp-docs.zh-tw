@@ -1,10 +1,10 @@
 ---
 title: gets、_getws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getws
 - gets
-apilocation:
+api_location:
 - msvcr80.dll
 - msvcr90.dll
 - msvcr120.dll
@@ -13,7 +13,10 @@ apilocation:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getts
 - gets
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738536"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300270"
 ---
-# <a name="gets-getws"></a>gets、_getws
+# <a name="gets-_getws"></a>gets、_getws
 
 從 `stdin` 資料流取得行。 這些函式已有更安全的版本，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
@@ -43,7 +46,7 @@ ms.locfileid: "57738536"
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。 這些函式的安全版本，但 gets_s 及 _getws_s 仍可繼續使用。 如需這些替代函式的資訊，請參閱 [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md)。
 
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -75,12 +78,12 @@ wchar_t *_getws(
 
 ## <a name="remarks"></a>備註
 
-`gets` 函式會從標準輸入資料流 `stdin` 讀取一行，並將其儲存在 `buffer`中。 此行包括到第一個新行字元 ('\n') (含) 的所有字元。 `gets` 接著會取代以 null 字元 ('\0') 取代新行字元，然後再傳回該行。 相反地， `fgets` 函式則會保留新行字元。 `_getws` 是寬字元版的 `gets`，其引數與傳回值均為寬字元字串。
+`gets` 函式會從標準輸入資料流 `stdin` 讀取一行，並將其儲存在 `buffer`中。 此行包括到第一個新行字元 ('\n') (含) 的所有字元。 `gets` 接著會取代以 null 字元 ('\0') 取代新行字元，然後再傳回該行。 相反地，`fgets` 函式則會保留新行字元。 `_getws` 是寬字元版的 `gets`，其引數與傳回值均為寬字元字串。
 
 > [!IMPORTANT]
 >  因為無法限制 get 所能讀取的字元數，所以未經信任的輸入可能很容易就會造成緩衝區溢位。 請改用 `fgets` 。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -95,11 +98,11 @@ wchar_t *_getws(
 |`gets`|\<stdio.h>|
 |`_getws`|\<stdio.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_gets.c
 // compile with: /WX /W3
 
@@ -122,7 +125,7 @@ int main( void )
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料流 I/O](../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

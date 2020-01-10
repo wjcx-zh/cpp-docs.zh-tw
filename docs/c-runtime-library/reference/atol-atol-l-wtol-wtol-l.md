@@ -1,12 +1,12 @@
 ---
 title: atol、_atol_l、_wtol、_wtol_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - atol
 - _wtol_l
 - _wtol
 - _atol_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atol_l
 - _ttol_l
@@ -43,14 +46,14 @@ helpviewer_keywords:
 - wtol function
 - _wtol function
 ms.assetid: cedfc21c-2d64-4e9c-bd04-bdf60b12db46
-ms.openlocfilehash: 486b6dc3bdfbbaf4b7becadde76768a0bb1c7c00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04a2951a48e6dd2c3820551e0fc603ad4ed81086
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347804"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943585"
 ---
-# <a name="atol-atoll-wtol-wtoll"></a>atol、_atol_l、_wtol、_wtol_l
+# <a name="atol-_atol_l-_wtol-_wtol_l"></a>atol、_atol_l、_wtol、_wtol_l
 
 將字串轉換成長整數。
 
@@ -83,25 +86,25 @@ long _wtol_l(
 
 ## <a name="return-value"></a>傳回值
 
-每個函式會傳回**長**值所產生的輸入的字元解譯為數字。 傳回值為 0l **atol**如果輸入無法轉換成該類型的值。
+每個函式都會傳回將輸入字元解讀為數字所產生的**完整**值。 如果輸入無法轉換成該類型的值，則會針對**Atol** 0L 傳回值。
 
-如果溢位具有大型正整數值， **atol**會傳回**LONG_MAX**; 如果溢位具有大型負整數值， **LONG_MIN**是傳回此項目。 在所有超出範圍的情況下， **errno**設為**ERANGE**。 如果傳入的參數是**NULL**，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回 0。
+如果溢位具有大型正整數值， **atol**會傳回**LONG_MAX**;如果溢位具有大型負整數值，則會傳回**LONG_MIN** 。 在所有超出範圍的情況下， **errno**會設定為**ERANGE**。 如果傳入的參數為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL** ，並傳回0。
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字元字串轉換為長整數值 (**atol**)。
+這些函式會將字元字串轉換成長整數值（**atol**）。
 
 輸入字串是一串字元，可解譯為所指定類型的數值。 此函式會從無法辨識為數字一部分的第一個字元處停止讀取輸入字串。 此字元可能是終止字串的 Null 字元 ('\0' 或 L'\0')。
 
-*Str*引數**atol**具有下列格式：
+**Atol**的*str*引數具有下列格式：
 
-> [*whitespace*] [*sign*] [*digits*]]
+> [*空格*][*sign*][*數位*]]
 
-A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+） 或減號 （–）; 並*數字*是一個以上的數字。
+空白字元*包含空格*或定位字元，這些字元會被忽略;*sign*為加號（+）或減號（-）;和*數位*是一或多個數位。
 
-**_wtol**等同於**atol** ，差別在於它採用寬字元字串。
+**_wtol**與**atol**相同，不同之處在于它會接受寬字元字串。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前的地區設定傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -115,11 +118,11 @@ A*空白字元*包含空格或定位鍵字元，則會忽略;*登*是加號 （+
 |常式|必要的標頭|
 |--------------|---------------------|
 |**atol**|\<stdlib.h>|
-|**_atol_l**， **_wtol**， **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
+|**_atol_l**、 **_wtol**、 **_wtol_l**|\<stdlib.h> 和 \<wchar.h>|
 
 ## <a name="example"></a>範例
 
-此程式示範如何儲存為字串的數字可以轉換成數值資料，請使用**atol**函式。
+此程式會顯示如何使用**atol**函數，將儲存為字串的數位轉換成數值。
 
 ```C
 // crt_atol.c

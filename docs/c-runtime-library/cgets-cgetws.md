@@ -1,10 +1,10 @@
 ---
 title: _cgets、_cgetws
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _cgetws
 - _cgets
-apilocation:
+api_location:
 - msvcr100.dll
 - msvcr110.dll
 - msvcr80.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cgetws
 - _cgetws
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 97a8de0a7fd0f278e6b0e3730a52ca3d0be6e07a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750333"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298996"
 ---
-# <a name="cgets-cgetws"></a>_cgets、_cgetws
+# <a name="_cgets-_cgetws"></a>_cgets、_cgetws
 
 從主控台取得字元字串。 您現在已有這些函式更安全的版本可以使用，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
@@ -42,7 +45,7 @@ ms.locfileid: "57750333"
 >  這些函式已被取代。 自 Visual Studio 2015 起，這些函式即無法在 CRT 中使用。 這些函式 (_cgets_s 及 _cgetws_s) 的安全版本仍可使用。 如需這些替代函式的資訊，請參閱 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)。
 
 > [!IMPORTANT]
->  這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+>  這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -70,7 +73,7 @@ wchar_t *_cgetws(
 
 ## <a name="return-value"></a>傳回值
 
-`_cgets` 及 `_cgetws` 會在 `buffer[2]`傳回字串開頭的指標。 如果 `buffer` 為 **NULL**，則這些函式會叫用無效的參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，這些函式將會傳回 **NULL**，並將 `errno` 設為 `EINVAL`。
+`_cgets` 和 `_cgetws` 會傳回位在 `buffer[2]` 的字串開頭指標。 如果 `buffer` 為 **NULL**，則這些函式會叫用無效的參數處理常式，如[參數驗證](../c-runtime-library/parameter-validation.md)中所述。 若允許繼續執行，這些函式將會傳回 **NULL**，並將 `errno` 設為 `EINVAL`。
 
 ## <a name="remarks"></a>備註
 
@@ -78,7 +81,7 @@ wchar_t *_cgetws(
 
 因為在主控台視窗中呼叫 `_cgets` 或 `_cgetws` 時，所有編輯索引鍵都會在使用中，所以按 F3 鍵會重複上一個輸入的項目。
 
-在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md)。
+在 C++ 中，這些函式具有樣板多載，可以叫用這些函式的更新且安全的對應版本。 如需詳細資訊，請參閱[安全範本多載](../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -93,11 +96,11 @@ wchar_t *_cgetws(
 |`_cgets`|\<conio.h>|
 |`_cgetws`|\<conio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_cgets.c
 // compile with: /c /W3
 // This program creates a buffer and initializes
@@ -139,7 +142,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [主控台和連接埠 I/O ](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

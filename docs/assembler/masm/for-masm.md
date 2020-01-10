@@ -1,32 +1,33 @@
 ---
 title: FOR (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - for
 helpviewer_keywords:
 - FOR directive
 ms.assetid: 99872e61-f503-4d34-b305-59f8556ba6b7
-ms.openlocfilehash: 5e365ee45396d581f0580e078496aeb2ecab165a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c92e909b62331a630a9a09be6193f400ad32dc30
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184918"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318071"
 ---
-# <a name="for-masm"></a>FOR (MASM)
+# <a name="for"></a>FOR
 
-標記會為每一次重複的區塊*引數*，與目前*引數*取代*參數*上每個重複作業。
+標示每個*引數*會重複一次的區塊，並以目前的*引數*取代每個重複的*參數*。
 
 ## <a name="syntax"></a>語法
 
-> 針對*參數*[[: REQ |: =*預設*]]， \<*引數*[[，*引數*]] ><br/>
-> *statements*<br/>
-> ENDM
+> **對於***參數*⟦ **：** 要求 |  __： =__ *預設*⟧ **，\<** _引數_⟦ __，__ *引數*.。。⟧ **>** \
+> *語句*\
+> **ENDM**
 
 ## <a name="remarks"></a>備註
 
-與相同[IRP](../../assembler/masm/irp.md)。
+與[IRP](irp.md)相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

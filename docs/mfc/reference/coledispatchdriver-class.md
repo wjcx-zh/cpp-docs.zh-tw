@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341606"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69504186"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver 類別
 
@@ -55,37 +55,37 @@ class COleDispatchDriver
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDispatchDriver::AttachDispatch](#attachdispatch)|附加`IDispatch`連線`COleDispatchDriver`物件。|
-|[COleDispatchDriver::CreateDispatch](#createdispatch)|會建立`IDispatch`連線並將它附加至`COleDispatchDriver`物件。|
-|[COleDispatchDriver::DetachDispatch](#detachdispatch)|卸離`IDispatch`連線，但未釋放它。|
-|[COleDispatchDriver::GetProperty](#getproperty)|取得自動化屬性。|
-|[COleDispatchDriver::InvokeHelper](#invokehelper)|呼叫 automation 方法的協助程式。|
-|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|版本`IDispatch`連接。|
-|[COleDispatchDriver::SetProperty](#setproperty)|設定自動化屬性。|
+|[COleDispatchDriver::AttachDispatch](#attachdispatch)|將連接附加至`COleDispatchDriver`物件。 `IDispatch`|
+|[COleDispatchDriver::CreateDispatch](#createdispatch)|建立連接，並將其附加`COleDispatchDriver`至物件。 `IDispatch`|
+|[COleDispatchDriver::DetachDispatch](#detachdispatch)|卸離`IDispatch`連接，而不釋放它。|
+|[COleDispatchDriver::GetProperty](#getproperty)|取得 automation 屬性。|
+|[COleDispatchDriver::InvokeHelper](#invokehelper)|Helper，用於呼叫 automation 方法。|
+|[COleDispatchDriver::ReleaseDispatch](#releasedispatch)|`IDispatch`釋放連接。|
+|[COleDispatchDriver::SetProperty](#setproperty)|設定 automation 屬性。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDispatchDriver::operator =](#operator_eq)|將複製到來源值`COleDispatchDriver`物件。|
-|[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|存取基礎`IDispatch`指標。|
+|[COleDispatchDriver：： operator =](#operator_eq)|將來源值複製到`COleDispatchDriver`物件中。|
+|[COleDispatchDriver：： operator LPDISPATCH](#operator_lpdispatch)|存取基礎`IDispatch`指標。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|指定是否要釋放`IDispatch`期間`ReleaseDispatch`或對物件解構。|
-|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|指出指標`IDispatch`介面附加至此`COleDispatchDriver`。|
+|[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|指定是否要`IDispatch`在執行期間`ReleaseDispatch`或物件損毀時釋放。|
+|[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|表示附加至這個`IDispatch` `COleDispatchDriver`之介面的指標。|
 
 ## <a name="remarks"></a>備註
 
-`COleDispatchDriver` 沒有基底類別。
+`COleDispatchDriver`沒有基類。
 
-OLE 分派介面提供存取物件的方法和屬性。 成員函式`COleDispatchDriver`附加、 卸離、 建立及發行的分派連接類型`IDispatch`。 其他成員函式會使用變數引數清單來簡化呼叫`IDispatch::Invoke`。
+OLE 分派介面可讓您存取物件的方法和屬性。 附加、卸離、建立和發行類型`IDispatch`之分派連接的成員函式。 `COleDispatchDriver` 其他成員函式會使用可變引數清單`IDispatch::Invoke`來簡化呼叫。
 
-這個類別則可以直接使用，但它通常由只加入類別精靈所建立的類別。 當您建立新的C++匯入類型程式庫的類別，新的類別衍生自`COleDispatchDriver`。
+這個類別可以直接使用，但通常僅供 [加入類別] wizard 所建立的類別使用。 當您藉由C++匯入類型程式庫來建立新類別時，新的`COleDispatchDriver`類別會衍生自。
 
-如需有關使用`COleDispatchDriver`，請參閱下列文章：
+如需有關使用`COleDispatchDriver`的詳細資訊，請參閱下列文章：
 
 - [Automation 用戶端](../../mfc/automation-clients.md)
 
@@ -99,7 +99,7 @@ OLE 分派介面提供存取物件的方法和屬性。 成員函式`COleDispatc
 
 **標頭：** afxdisp.h
 
-##  <a name="attachdispatch"></a>  COleDispatchDriver::AttachDispatch
+##  <a name="attachdispatch"></a>COleDispatchDriver：： AttachDispatch
 
 呼叫 `AttachDispatch` 成員函式可將 `IDispatch` 指標附加至 `COleDispatchDriver` 物件。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
@@ -125,7 +125,7 @@ void AttachDispatch(
 
 [!code-cpp[NVC_MFCOleContainer#3](../../mfc/codesnippet/cpp/coledispatchdriver-class_1.cpp)]
 
-##  <a name="coledispatchdriver"></a>  COleDispatchDriver::COleDispatchDriver
+##  <a name="coledispatchdriver"></a>COleDispatchDriver：： COleDispatchDriver
 
 建構 `COleDispatchDriver` 物件。
 
@@ -144,21 +144,21 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 指定當這個物件移出範圍時，是否要釋放此分派。
 
 *dispatchSrc*<br/>
-參考到現有`COleDispatchDriver`物件。
+參考現有`COleDispatchDriver`的物件。
 
 ### <a name="remarks"></a>備註
 
-表單`COleDispatchDriver`( `LPDISPATCH lpDispatch`， **BOOL**`bAutoRelease` = **TRUE**) 連線[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)介面。
+表單`COleDispatchDriver`（ `LPDISPATCH lpDispatch`，**BOOL** `bAutoRelease`TRUE）會連接 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 介面。 = 
 
-表單`COleDispatchDriver`( **const**`COleDispatchDriver`& `dispatchSrc`) 會複製現有`COleDispatchDriver`物件，並遞增參考計數。
+表單`COleDispatchDriver`（ **const** `COleDispatchDriver` &  ）會`COleDispatchDriver`複製現有的物件，並遞增參考計數。`dispatchSrc`
 
-表單`COleDispatchDriver`（） 會建立`COleDispatchDriver`物件，但不會連線`IDispatch`介面。 使用之前`COleDispatchDriver`（不含引數），您應該連接`IDispatch`使用其中一個[coledispatchdriver:: Createdispatch](#createdispatch)或是[COleDispatchDriver::AttachDispatch](#attachdispatch)。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
+Form `COleDispatchDriver`（）會`COleDispatchDriver`建立物件， `IDispatch`但不會連接介面。 在沒有`COleDispatchDriver`引數的情況下使用（）之前`IDispatch` ，您應該使用[COleDispatchDriver：： createdispatch 範例](#createdispatch)或[COleDispatchDriver：： AttachDispatch](#attachdispatch)將連接到它。 如需詳細資訊，請參閱 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="example"></a>範例
 
   請參閱 [COleDispatchDriver::CreateDispatch](#createdispatch)的範例。
 
-##  <a name="createdispatch"></a>  COleDispatchDriver::CreateDispatch
+##  <a name="createdispatch"></a>COleDispatchDriver：： Createdispatch 範例
 
 建立 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 介面物件並將它附加至 `COleDispatchDriver` 物件。
 
@@ -191,9 +191,9 @@ Automation 物件之程式設計識別項的指標，例如 "Excel.Document.5"�
 
 [!code-cpp[NVC_MFCOleContainer#4](../../mfc/codesnippet/cpp/coledispatchdriver-class_2.cpp)]
 
-##  <a name="detachdispatch"></a>  COleDispatchDriver::DetachDispatch
+##  <a name="detachdispatch"></a>COleDispatchDriver：:D etachDispatch
 
-卸離目前`IDispatch`從這個物件的連接。
+卸離這個`IDispatch`物件的目前連接。
 
 ```
 LPDISPATCH DetachDispatch();
@@ -201,21 +201,21 @@ LPDISPATCH DetachDispatch();
 
 ### <a name="return-value"></a>傳回值
 
-指向先前附加 OLE`IDispatch`物件。
+先前附加之 OLE `IDispatch`物件的指標。
 
 ### <a name="remarks"></a>備註
 
-`IDispatch`不釋放。
+`IDispatch`未釋放。
 
-如需 LPDISPATCH 類型的詳細資訊，請參閱[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)Windows SDK 中。
+如需 LPDISPATCH 類型的詳細資訊，請參閱在 Windows SDK 中[執行 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#5](../../mfc/codesnippet/cpp/coledispatchdriver-class_3.cpp)]
 
-##  <a name="getproperty"></a>  COleDispatchDriver::GetProperty
+##  <a name="getproperty"></a>COleDispatchDriver：： GetProperty
 
-取得所指定的物件屬性*dwDispID*。
+取得*dwDispID*所指定的物件屬性。
 
 ```
 void GetProperty(
@@ -227,21 +227,21 @@ void GetProperty(
 ### <a name="parameters"></a>參數
 
 *dwDispID*<br/>
-識別要擷取的屬性。
+識別要抓取的屬性。
 
 *vtProp*<br/>
-指定要擷取的屬性。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](#invokehelper)的＜備註＞一節。
+指定要抓取的屬性。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](#invokehelper)的＜備註＞一節。
 
 *pvProp*<br/>
-將會收到屬性值的變數位址。 它必須符合所指定的型別*vtProp*。
+將接收屬性值的變數位址。 它必須符合*vtProp*所指定的類型。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#6](../../mfc/codesnippet/cpp/coledispatchdriver-class_4.cpp)]
 
-##  <a name="invokehelper"></a>  COleDispatchDriver::InvokeHelper
+##  <a name="invokehelper"></a>COleDispatchDriver：： InvokeHelper
 
-呼叫物件方法或屬性所指定*dwDispID*，在所指定的內容中*wFlags*。
+在*wFlags*所指定的內容中，呼叫*dwDispID*所指定的物件方法或屬性。
 
 ```
 void AFX_CDECL InvokeHelper(
@@ -258,25 +258,25 @@ void AFX_CDECL InvokeHelper(
 指定所要叫用的屬性或方法。
 
 *wFlags*<br/>
-描述要呼叫的內容旗標`IDispatch::Invoke`。 。 如需可能值的清單，請參閱 < *wFlags*中的參數[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK 中。
+描述呼叫`IDispatch::Invoke`之內容的旗標。 . 如需可能值的清單，請參閱 Windows SDK 中[IDispatch：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)中的*wFlags*參數。
 
 *vtRet*<br/>
 指定傳回值的類型。 如需了解可能的值，請參閱＜備註＞一節。
 
 *pvRet*<br/>
-要接收屬性值或傳回值之變數的位址。 它必須符合所指定的型別*vtRet*。
+要接收屬性值或傳回值之變數的位址。 它必須符合*vtRet*所指定的類型。
 
 *pbParamInfo*<br/>
-以 null 終止的字串的指定類型的下列參數的位元組指標*pbParamInfo*。
+以 null 結束的位元組字串指標，指定*pbParamInfo*之後的參數類型。
 
 *...*<br/>
-變數清單的參數，在指定的型別*pbParamInfo*。
+參數的變數清單，屬於*pbParamInfo*中指定的類型。
 
 ### <a name="remarks"></a>備註
 
 *PbParamInfo*參數會指定傳遞至方法或屬性的參數類型。 引數的變數清單會以 **...** 語法宣告代表。
 
-可能值為*vtRet*引數取自 VARENUM 列舉型別。 可能的值如下：
+*VtRet*引數的可能值取自 VARENUM 列舉。 可能的值如下：
 
 |符號|傳回型別|
 |------------|-----------------|
@@ -294,19 +294,19 @@ void AFX_CDECL InvokeHelper(
 |VT_VARIANT|**VARIANT**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*PbParamInfo*引數是以空格分隔的清單**VTS_** 常數。 其中的一或多個值 (以空格分隔，而非逗號) 會指定函式的參數清單。 可能的值會列在 [EVENT_CUSTOM](event-maps.md#event_custom) 巨集中。
+*PbParamInfo*引數是以空格分隔的**VTS_** 常數清單。 其中的一或多個值 (以空格分隔，而非逗號) 會指定函式的參數清單。 可能的值會列在 [EVENT_CUSTOM](event-maps.md#event_custom) 巨集中。
 
-此函式會將參數轉換為 VARIANTARG 值，然後再叫用[idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)方法。 若呼叫 `Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回的 SCODE （狀態碼）`IDispatch::Invoke`是 DISP_E_EXCEPTION，此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件; 否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+此函式會將參數轉換為 VARIANTARG 值，然後叫用[IDispatch：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)方法。 若呼叫 `Invoke` 失敗，此函式會擲回例外狀況。 如果所傳回`IDispatch::Invoke`的 SCODE （狀態碼）是 DISP_E_EXCEPTION，則此函式會擲回[COleException](../../mfc/reference/coleexception-class.md)物件; 否則會擲回[COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
-如需詳細資訊，請參閱 < [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)，[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)， [idispatch:: Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)，和[結構 COM 錯誤碼的](/windows/desktop/com/structure-of-com-error-codes) Windows SDK 中。
+如需詳細資訊，請參閱[VARIANTARG](/windows/win32/api/oaidl/ns-oaidl-variant)、在 Windows SDK 中[執行 idispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [IDISPATCH：： Invoke](/windows/win32/api/oaidl/nf-oaidl-idispatch-invoke)和[COM 錯誤碼的結構](/windows/win32/com/structure-of-com-error-codes)。
 
 ### <a name="example"></a>範例
 
   請參閱 [COleDispatchDriver::CreateDispatch](#createdispatch)的範例。
 
-##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
+##  <a name="m_bautorelease"></a>COleDispatchDriver：： m_bAutoRelease
 
-如果為 TRUE，COM 存取的物件[m_lpDispatch](#m_lpdispatch)會由系統自動釋放當[ReleaseDispatch](#releasedispatch)稱為或當這`COleDispatchDriver`物件被終結。
+若為 TRUE，當呼叫[ReleaseDispatch](#releasedispatch)或終結此`COleDispatchDriver`物件時， [m_lpDispatch](#m_lpdispatch)所存取的 COM 物件將會自動釋放。
 
 ```
 BOOL m_bAutoRelease;
@@ -314,17 +314,17 @@ BOOL m_bAutoRelease;
 
 ### <a name="remarks"></a>備註
 
-根據預設，`m_bAutoRelease`建構函式中設定為 TRUE。
+根據預設， `m_bAutoRelease`在此函式中會設定為 TRUE。
 
-如需有關釋放 COM 物件的詳細資訊，請參閱[實作參考計數](/windows/desktop/com/implementing-reference-counting)並[iunknown:: Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release) Windows SDK 中。
+如需有關釋放 COM 物件的詳細資訊，請參閱在 Windows SDK 中[執行參考計數](/windows/win32/com/implementing-reference-counting)和[IUnknown：： Release](/windows/win32/api/unknwn/nf-unknwn-iunknown-release) 。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFCOleContainer#9](../../mfc/codesnippet/cpp/coledispatchdriver-class_5.cpp)]
 
-##  <a name="m_lpdispatch"></a>  COleDispatchDriver::m_lpDispatch
+##  <a name="m_lpdispatch"></a>COleDispatchDriver：： m_lpDispatch
 
-將指標`IDispatch`介面附加至此`COleDispatchDriver`。
+附加至這個`COleDispatchDriver`之`IDispatch`介面的指標。
 
 ```
 LPDISPATCH m_lpDispatch;
@@ -332,17 +332,17 @@ LPDISPATCH m_lpDispatch;
 
 ### <a name="remarks"></a>備註
 
-`m_lpDispatch`資料成員是型別 LPDISPATCH 的公用變數。
+`m_lpDispatch`資料成員是 LPDISPATCH 類型的公用變數。
 
-如需詳細資訊，請參閱 < [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) Windows SDK 中。
+如需詳細資訊，請參閱 Windows SDK 中的[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) 。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[COleDispatchDriver::AttachDispatch](#attachdispatch)。
+  請參閱[COleDispatchDriver：： AttachDispatch](#attachdispatch)的範例。
 
-##  <a name="operator_eq"></a>  COleDispatchDriver::operator =
+##  <a name="operator_eq"></a>COleDispatchDriver：： operator =
 
-將複製到來源值`COleDispatchDriver`物件。
+將來源值複製到`COleDispatchDriver`物件中。
 
 ```
 const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
@@ -351,11 +351,11 @@ const COleDispatchDriver& operator=(const COleDispatchDriver& dispatchSrc);
 ### <a name="parameters"></a>參數
 
 *dispatchSrc*<br/>
-指向現有的`COleDispatchDriver`物件。
+現有`COleDispatchDriver`物件的指標。
 
-##  <a name="operator_lpdispatch"></a>  COleDispatchDriver::operator LPDISPATCH
+##  <a name="operator_lpdispatch"></a>COleDispatchDriver：： operator LPDISPATCH
 
-存取基礎`IDispatch`指標`COleDispatchDriver`物件。
+存取`COleDispatchDriver`物件的`IDispatch`基礎指標。
 
 ```
 operator LPDISPATCH();
@@ -365,9 +365,9 @@ operator LPDISPATCH();
 
 [!code-cpp[NVC_MFCOleContainer#8](../../mfc/codesnippet/cpp/coledispatchdriver-class_6.cpp)]
 
-##  <a name="releasedispatch"></a>  COleDispatchDriver::ReleaseDispatch
+##  <a name="releasedispatch"></a>COleDispatchDriver：： ReleaseDispatch
 
-版本`IDispatch`連接。 如需詳細資訊，請參閱[實作 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
+`IDispatch`釋放連接。 如需詳細資訊，請參閱[執行 IDispatch 介面](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)
 
 ```
 void ReleaseDispatch();
@@ -375,15 +375,15 @@ void ReleaseDispatch();
 
 ### <a name="remarks"></a>備註
 
-如果此連線已設定自動發行，此函數會呼叫`IDispatch::Release`之前釋放介面。
+如果已針對此連接設定自動發行，則此函式`IDispatch::Release`會在釋放介面之前呼叫。
 
 ### <a name="example"></a>範例
 
-  範例，請參閱[COleDispatchDriver::AttachDispatch](#attachdispatch)。
+  請參閱[COleDispatchDriver：： AttachDispatch](#attachdispatch)的範例。
 
-##  <a name="setproperty"></a>  COleDispatchDriver::SetProperty
+##  <a name="setproperty"></a>COleDispatchDriver：： SetProperty
 
-設定所指定之 OLE 物件屬性*dwDispID*。
+設定*dwDispID*所指定的 OLE 物件屬性。
 
 ```
 void AFX_CDECL SetProperty(
@@ -400,7 +400,7 @@ void AFX_CDECL SetProperty(
 指定要設定的屬性類型。 如需可能的值，請參閱 [COleDispatchDriver::InvokeHelper](#invokehelper)的＜備註＞一節。
 
 *...*<br/>
-所指定之類型的單一參數*vtProp*。
+*VtProp*所指定之類型的單一參數。
 
 ### <a name="example"></a>範例
 
@@ -408,7 +408,7 @@ void AFX_CDECL SetProperty(
 
 ## <a name="see-also"></a>另請參閱
 
-[MFC 範例 CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
-[MFC 範例 ACDUAL](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 CALCDRIV:](../../overview/visual-cpp-samples.md)<br/>
+[MFC 範例 ACDUAL:](../../overview/visual-cpp-samples.md)<br/>
 [階層架構圖表](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget 類別](../../mfc/reference/ccmdtarget-class.md)

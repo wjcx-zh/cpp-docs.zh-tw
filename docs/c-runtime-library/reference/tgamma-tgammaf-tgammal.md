@@ -1,11 +1,11 @@
 ---
 title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
-apiname:
+api_name:
 - tgamma
 - tgammaf
 - tgammal
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tgamma
 - tgammaf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02926fa49bbabeb9cf532f53cfa6e30a77805e70
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155611"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946203"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -72,35 +75,35 @@ long double tgammal(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的 gamma *x*。
+如果成功，會傳回*x*的 gamma。
 
-如果，可能會發生範圍錯誤的變動*x*太大或太小的資料類型。 如果，則可能會發生網域錯誤或範圍錯誤*x* < = 0。
+如果*x*的大小對資料類型而言太大或太小，則可能會發生範圍錯誤。 如果*x* < = 0，可能會發生網域錯誤或範圍錯誤。
 
 |問題|Return|
 |-----------|------------|
-|x = ±0|±INFINITY|
+|x = ±0|±無限大|
 |x = 負整數|NaN|
 |x = -INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |網域錯誤|NaN|
-|極錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
-|溢位範圍錯誤|±HUGE_VAL、 ±HUGE_VALF 或 ±HUGE_VALL|
+|極錯誤|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
+|溢位範圍錯誤|± HUGE_VAL、± HUGE_VALF 或± HUGE_VALL|
 |反向溢位範圍錯誤|正確的值 (四捨五入後)。|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**tgamma**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **tgamma**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**tgamma**的多載。 在 C 程式中， **tgamma**一律會採用並傳回**雙精度浮點數**。
 
 如果 x 為自然數，此函式會傳回 (x-1) 階乘。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**tgamma**， **tgammaf**， **tgammal**|\<math.h>|\<cmath>|
+|**tgamma**、 **tgammaf**、 **tgammal**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

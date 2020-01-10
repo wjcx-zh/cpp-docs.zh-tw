@@ -1,9 +1,9 @@
 ---
 title: execve
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - execve
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,27 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - execve
 helpviewer_keywords:
 - execve function
 ms.assetid: f28aabe4-fd76-422e-a0e4-80864736d245
-ms.openlocfilehash: 6ed2bc258dfb0b627b23391b90e94222e9803a6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a65bbeca9fd2e7b1a9c198e811e3e72fd9ee93
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288331"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75299607"
 ---
 # <a name="execve"></a>execve
 
-此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_execve](execve-wexecve.md)。
+Microsoft 所實行的 POSIX 函數名稱 `execve` 是[_execve](execve-wexecve.md)函式的已被取代別名。 根據預設，它會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它不會遵循執行特定名稱的標準 C 規則。 不過，仍支援函數。
+
+我們建議您改用[_execve](execve-wexecve.md) 。 或者，您可以繼續使用此函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。

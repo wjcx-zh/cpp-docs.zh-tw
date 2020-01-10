@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - allocator<void> class
 ms.assetid: abfb40f5-c600-46a6-b130-f42c6535b2bd
-ms.openlocfilehash: 7ac7fbaa8c50eb13457271cf96ddc3412733c833
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: c8d787fe03dfe6f67fb8e228308ec74b6e7f620a
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245873"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688522"
 ---
 # <a name="allocatorltvoidgt-class"></a>allocator&lt;void&gt; 類別
 
-範本類別配置器類型的特製化**void**，定義在此內容中有意義的型別。
+類別樣板配置器對類型**void**的特製化，定義在此內容中有意義的類型。
 
 ## <a name="syntax"></a>語法
 
@@ -41,7 +41,7 @@ class allocator<void> {
 
 ## <a name="remarks"></a>備註
 
-此類別明確特製化樣板類別[allocator](../standard-library/allocator-class.md)型別的**void**。 其建構函式和指派運算子的行為與範本類別相同，但只會定義下列類型︰
+類別明確特製化型別[為](../standard-library/allocator-class.md) **void**的類別樣板配置器。 其「函式」和「指派運算子」的行為與類別樣板相同，但它只會定義下列類型：
 
 - [const_pointer](../standard-library/allocator-class.md#const_pointer)。
 
@@ -49,4 +49,4 @@ class allocator<void> {
 
 - [value_type](../standard-library/allocator-class.md#value_type)。
 
-- [rebind](../standard-library/allocator-class.md#rebind)，一種巢狀範本類別。
+- 重新系[結，這](../standard-library/allocator-class.md#rebind)是一個嵌套類別範本。

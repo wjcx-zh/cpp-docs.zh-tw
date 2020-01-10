@@ -1,10 +1,10 @@
 ---
 title: _popen、_wpopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _popen
 - _wpopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tpopen
 - popen
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 03eb36573abe8e26c47e6dd38c009e5819e60f8f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499591"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950989"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
@@ -70,13 +73,13 @@ FILE *_wpopen(
 
 ## <a name="return-value"></a>傳回值
 
-傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是不正確參數 (例如, 如果*命令*或*模式*是 null 指標, 或*模式*不是有效的模式), **errno**會設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
+傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是不正確參數（例如，如果*命令*或*模式*是 null 指標，或*模式*不是有效的模式）， **errno**會設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Popen**函式會建立管道, 並以指定的字串*命令*以非同步方式執行命令處理器的產生複本。 字元字串 *mode* 會指定要求的存取類型，如下所示。
+**_Popen**函式會建立管道，並以指定的字串*命令*以非同步方式執行命令處理器的產生複本。 字元字串 *mode* 會指定要求的存取類型，如下所示。
 
 |存取模式|描述|
 |-|-|
@@ -86,9 +89,9 @@ FILE *_wpopen(
 |**"t"**|在文字模式中開啟。|
 
 > [!NOTE]
-> 如果在 Windows 程式中使用, **_popen**函式會傳回不正確檔案指標, 使程式無限期地停止回應。 **_popen**可在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式, 請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
+> 如果在 Windows 程式中使用， **_popen**函式會傳回不正確檔案指標，使程式無限期地停止回應。 **_popen**可在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式，請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
 
-**_wpopen**是寬字元版本的 **_popen**; **_wpopen**的*path*引數是寬字元字串。 相反地, **_wpopen**和 **_popen**的行為相同。
+**_wpopen**是寬字元版本的 **_popen**; **_wpopen**的*path*引數是寬字元字串。 相反地， **_wpopen**和 **_popen**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

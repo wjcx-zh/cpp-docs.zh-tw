@@ -1,11 +1,11 @@
 ---
-title: ilogb、 ilogbf、 ilogbl2
+title: ilogb、ilogbf、ilogbl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - ilogb
 - ilogbf
 - ilogbl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ilogb
 - ilogbf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-ms.openlocfilehash: 272544124dd8a8a666fc434516d3c45c73b1d011
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fdafba039537358c9b6a1de21dc176ceea38b4fa
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331671"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954757"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -72,28 +75,28 @@ int ilogbl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的基底 2 指數*x*當作已簽署**int**值。
+如果成功，會傳回*x*的基底2指數做為帶正負號的**int**值。
 
 否則會傳回如 \<math.h> 中定義的下列值：
 
-|輸入|結果|
+|Input|結果|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±inf，±nan，無限制|FP_ILOGBNAN|
+|± inf，± nan，不定|FP_ILOGBNAN|
 
 依 [_matherr](matherr.md) 中的指定回報錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**ilogb**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **ilogb**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**ilogb**的多載。 在 C 程式中， **ilogb**一律會採用並傳回**雙精度浮點數**。
 
-呼叫此函式是類似於呼叫的對等項目**logb**函式，然後傳回值轉換成**int**。
+呼叫這個函式類似于呼叫相等的**logb**函式，然後將傳回值轉換為**int**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ilogb**， **ilogbf**， **ilogbl**|\<math.h>|\<cmath>|
+|**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

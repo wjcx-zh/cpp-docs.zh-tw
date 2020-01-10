@@ -1,44 +1,47 @@
 ---
 title: COMM
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - COMM
 helpviewer_keywords:
 - COMM directive
 ms.assetid: a23548c4-ad04-41fa-91da-945f228de742
-ms.openlocfilehash: 342c8acd95fd45de1a21dc298325de9a7b40b717
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ea02806cae3295af0846baa6c4e9049d54c271b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179103"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315169"
 ---
 # <a name="comm"></a>COMM
 
-使用中指定的屬性建立微乎其微變數*定義*。
+使用*定義*中指定的屬性建立微乎其微變數。
 
 ## <a name="syntax"></a>語法
 
-> **COMM** *定義*[，*定義*]...
+> **通訊***定義*⟦ __，__ *定義*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-微乎其微變數所配置之連結器，因此無法初始化。 這表示您不能依賴這類變數的順序的位置。
+微乎其微變數是由連結器所配置，而且無法初始化。 這表示您不能依賴這類變數的位置或順序。
 
-每個*定義*具有下列格式：
+每個*定義*的格式如下：
 
-[*langtype*] [**NEAR** &#124; **FAR**] _label_**:**_type_[**:**_count_]
+⟦*語言類型*⟧⟦**近** | **遠**⟧_標籤_ **：** _輸入_⟦ **：** _count_⟧
 
-選擇性*langtype*設定後面的名稱的命名慣例。 它會覆寫所指定的任何語言 **。模型**指示詞。 選擇性**NEAR**或是**FAR**覆寫目前的記憶體模型。 *標籤*是變數的名稱。 *型別*可以是任何類型規範 ([位元組](../../assembler/masm/byte-masm.md)， [WORD](../../assembler/masm/word.md)等等) 或指定的位元組數目的整數。 選擇性*計數*宣告的資料物件中指定的元素數目的預設值是 1。
+*語言類型*、 **NEAR**和**FAR**引數只在32位 MASM 中有效。
+
+選擇性的*語言類型*會為後面的名稱設定命名慣例。 它會覆寫所指定的任何語言 **。MODEL**指示詞。 選擇性的**接近**或**遠**會覆寫目前的記憶體模型。 *標籤*是變數的名稱。 *類型*可以是任何類型規範（[BYTE](byte-masm.md)、 [WORD](word.md)等等）或指定位元組數目的整數。 選擇性*計數*會指定宣告之資料物件中的元素數目。 預設*計數*為一。
 
 ## <a name="example"></a>範例
 
-這個範例會建立陣列的 512 位元組的項目：
+這個範例會建立512位元組元素的陣列：
 
 ```asm
 COMM FAR ByteArray:BYTE:512
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

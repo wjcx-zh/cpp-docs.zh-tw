@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: ccb438cf7c80edb1403683ac4817617ffccc690d
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: bcd51c66359d0553b7657d85f5b45ee22d4648ff
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447738"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991655"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>編譯器警告 (層級 4) C4100
 
-'identifier': 未參考的型式參數
+'identifier'：未參考的型式參數
 
-函式主體中未參考的型式參數。 會忽略未參考的參數。
+未在函式主體中參考此型式參數。 已忽略未參考的參數。
 
-程式碼上呼叫解構函式時，也可能發出 C4100 未參考的基本類型的參數。  這是 Microsoft 的限制C++編譯器。
+當程式碼在屬於基本類型之未參考的參數上呼叫解構函式時，也可能發出 C4100。  這是 Microsoft C++編譯器的限制。
 
-下列範例會產生 C4100:
+下列範例會產生 C4100：
 
-```
+```cpp
 // C4100.cpp
 // compile with: /W4
 void func(int i) {   // C4100, delete the unreferenced parameter to

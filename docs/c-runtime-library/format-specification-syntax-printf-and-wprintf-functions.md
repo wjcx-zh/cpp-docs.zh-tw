@@ -1,6 +1,6 @@
 ---
 title: 格式規格語法：printf 和 wprintf 函式
-ms.date: 07/30/2019
+ms.date: 10/21/2019
 helpviewer_keywords:
 - format specification fields for printf function
 - printf function format specification fields
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - width fields, printf function
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
-ms.openlocfilehash: db144703a89fe1a6a76ed15f1cf77395c4565fab
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500096"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857862"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>格式規格語法：printf 和 wprintf 函式
 
-各種 `printf` 與 `wprintf` 函式皆會採用格式字串和選擇性引數，然後產生格式化的輸出字元序列。 格式字串包含零或多個「指示詞」  ，這是輸出的常值字元或是編碼的「轉換規格」  ，其會說明如何將輸出的引數格式化。 本文說明格式字串中用來為轉換規格進行編碼的語法。 如需這些函式的清單，請參閱[資料流 I/O](../c-runtime-library/stream-i-o.md)。
+各種 `printf` 與 `wprintf` 函式皆會採用格式字串和選擇性引數，然後產生格式化的輸出字元序列。 格式字串包含零或多個「指示詞」，這是輸出的常值字元或是編碼的「轉換規格」，其會說明如何將輸出的引數格式化。 本文說明格式字串中用來為轉換規格進行編碼的語法。 如需這些函式的清單，請參閱[資料流 I/O](../c-runtime-library/stream-i-o.md)。 
 
 轉換規格包含選擇性及必要欄位，形式如下︰
 
@@ -39,16 +39,19 @@ ms.locfileid: "69500096"
 
 <a name="type"></a>
 
+> [!NOTE] 
+> 在 Visual Studio 2015 中，`printf` 和 `scanf` 系列的函式已宣告為**內嵌**，並已移至 `<stdio.h>` 和 `<conio.h>` 標頭。 如果您要遷移較舊的程式碼，您可能會看到與這些函式的連接有*LNK2019* 。 如需詳細資訊，請參閱[視覺效果C++變更歷程記錄 2003-2015](../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio)。
+
 ## <a name="type-conversion-specifier"></a>類型轉換規範
 
 *type* 轉換規範字元指定要將對應的引數解譯成字元、字串、指標、整數還是浮點數。 *type* 字元是唯一必要的轉換規格欄位，且會在任何選擇性的欄位之後出現。
 
-遵循格式字串的引數會根據對應的 *type* 字元和選擇性的 [size](#size) 前置詞解譯。 字元類型 `char` 和 `wchar_t` 的轉換可使用 **c** 或 **C** 來指定，而單一位元組、多位元組或寬字元字串可使用 **s** 或 **S** 來指定，視使用何種格式化函式而定。 使用 **c** 和 **s** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `char` 和 `char*`，或是由 `wprintf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`。 使用 **C** 和 **S** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`，或是由 `wprintf` 系列函式解譯為 `char` 和 `char*`。 這是 Microsoft 專有的行為。
+遵循格式字串的引數會根據對應的 *type* 字元和選擇性的 [size](#size) 前置詞解譯。 字元類型 `char` 和 `wchar_t` 的轉換可使用 **c** 或 **C** 來指定，而單一位元組、多位元組或寬字元字串可使用 **s** 或 **S** 來指定，視使用何種格式化函式而定。 使用 **c** 和 **s** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `char` 和 `char*`，或是由 `wprintf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`。 使用 **C** 和 **S** 所指定的字元和字串引數會由 `printf` 系列函式解譯為 `wchar_t` 和 `wchar_t*`，或是由 `wprintf` 系列函式解譯為 `char` 和 `char*`。 這是 Microsoft 特有的行為。
 
-像是 `short`、`int`、`long`、`long long` 的整數類型和其 `unsigned` 的變化可藉由使用 **d**、**i**、**o**、**u**、**x** 和 **X** 指定。像是 `float`、`double` 和 `long double` 的浮點類型可藉由使用 **a**、**A**、**e**、**E**、**f**、**F**、**g** 和 **G** 指定。根據預設，除非 *size* 前置詞修改它們，否則會將整數引數強制轉成 `int` 類型，且會將浮點引數強制轉成 `double`。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
+`short`、`int`、`long`、`long long`和其 `unsigned` 變體等整數類型，都是使用**d**、 **i**、 **o**、 **u**、 **x**和**x**所指定。浮點類型（例如 `float`、`double`和 `long double`）**是使用、** **a**、 **e**、 **e**、 **f**、 **f**、 **g**和**g**來指定。根據預設，除非由*大小*前置詞修改，否則會將整數引數強制轉型為 `int` 型別，並將浮點引數強制轉成 `double`。 在 64 位元系統上，`int` 是 32 位元值；因此，除非使用 **ll** 或 **I64** 的 *size* 前置詞，否則 64 位元整數在為了輸出而格式化時會遭到截斷。 由 **p** 指定的指標類型會使用此平台的預設指標。
 
 > [!NOTE]
-> **Microsoft 特定**：**Z** 類型字元以及與 `printf` 和 `wprintf` 函式搭配使用時的 **c**、**C**、**s** 及 **S** 類型字元的行為，是 Microsoft 延伸模組。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
+> **Microsoft 特定：** **Z**類型字元和**c**、 **c**、 **s**及**s**類型字元在與 `printf` 和 `wprintf` 函式搭配使用時的行為，都是 Microsoft 擴充功能。 ISO C 標準在所有格式設定函式中，一致地對窄字元和字串使用 **c** 和 **s**，並對寬字元和字串使用 **C** 和 **S**。
 
 ### <a name="type-field-characters"></a>類型欄位字元
 
@@ -72,13 +75,13 @@ ms.locfileid: "69500096"
 |**A**|浮點|帶正負號的十六進位雙精確度浮點值，形式為 [-]0X*h.hhhh*__P±__*dd*，其中 *h.hhhh* 是尾數的十六進位數 (使用大寫字母)，而 *dd* 是指數的一或多個位數。 指定小數點之後位數的精確度。|
 |**n**|整數的指標|目前已成功寫入此資料流或緩衝區的字元數。 會將這個值儲存在整數中，該整數的位址會做為引數而受指定。 引數大小規格前置詞可以控制指向整數的大小。 **n** 規範預設會停用；如需資訊，請參閱重要安全性注意事項。|
 |**p**|指標類型|顯示引數為十六進位數字的位址。|
-|**s**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
+|**秒**|String|當搭配 `printf` 函式使用時，會指定單一位元組或多位元組字元字串；當搭配 `wprintf` 函式使用時，會指定寬字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**S**|String|當搭配 `printf` 函式使用時，會指定寬字元字串；當搭配 `wprintf` 函式使用時，會指定單一位元組或多位元組字元字串。 字元會顯示，直到第一個 null 字元或達到 *precision* 值為止。|
 |**Z**|`ANSI_STRING` 或 `UNICODE_STRING` 結構|當 [ANSI_STRING](/windows/win32/api/ntdef/ns-ntdef-string) 或 [UNICODE_STRING](/windows/win32/api/ntdef/ns-ntdef-_unicode_string) 結構的位址作為引數傳遞時，顯示結構的 `Buffer` 欄位所指向之緩衝區中所包含的字串。 使用 **w** 的 *size* 修飾詞前置來指定 `UNICODE_STRING` 引數，例如 `%wZ`。 該結構的 `Length` 欄位必須設定為此字串的長度，以位元組為單位。 該結構的 `MaximumLength` 欄位必須設定為此緩衝區的長度，以位元組為單位。<br /><br /> 通常，**Z** 類型字元只在驅動程式偵錯函式中使用，該函式使用像是 `dbgPrint` 和 `kdPrint` 的轉換規格。|
 
 自 Visual Studio 2015 起，如果對應於浮點轉換規範 (**a**、**A**、**e**、**E**、**f**、**F**、**g**、**G**) 的引數是無限大、不確定或 NAN，則格式化輸出符合 C99 標準。 下表列出格式化輸出︰
 
-|值|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |infinity|`inf`|
 |無訊息 NaN|`nan`|
@@ -89,7 +92,7 @@ ms.locfileid: "69500096"
 
 在 Visual Studio 2015 之前，CRT 對無限大、不確定及 NAN 值的輸出使用不同的非標準格式︰
 
-|值|Output|
+|{2&gt;值&lt;2}|Output|
 |-----------|------------|
 |+ 無限大|`1.#INF`*隨機數字*|
 |- infinity|`-1.#INF`*隨機數字*|
@@ -115,7 +118,7 @@ ms.locfileid: "69500096"
 
 ### <a name="flag-characters"></a>旗標字元
 
-|旗標|意義|預設|
+|旗標|意義|Default|
 |----------|-------------|-------------|
 |**-**|靠左對齊給定欄位寬度內的結果。|靠右對齊。|
 |**+**|如果輸出值是帶正負號的類型，則使用正負號 (+ 或 -) 作為其前置詞。|僅為帶負號 (-) 的值顯示符號。|
@@ -157,7 +160,7 @@ ms.locfileid: "69500096"
 
 ### <a name="how-precision-values-affect-type"></a>精確度值如何影響類型
 
-|類型|意義|預設|
+|類型|意義|Default|
 |----------|-------------|-------------|
 |**a**、**A**|指定小數點之後位數的精確度。|預設精確度為 13。 如果精確度為 0，除非使用 **#** 旗標，否則不會列印小數點。|
 |**c**、**C**|精確度無效果。|列印字元。|
@@ -201,9 +204,9 @@ ms.locfileid: "69500096"
 **hc** 或 **hC** 類型規範，與 `printf` 函式中的 **c** 和 `wprintf` 函式中的 **C** 同義)。 **lc**、**lC**、**wc** 或 **wC** 類型規範，與 `printf` 函式中的 **C** 和 `wprintf` 函式中的 **c** 同義。 **hs** 或 **hS** 類型規範，與 `printf` 函式中的 **s** 和 `wprintf` 函式中的 **S** 同義)。 **ls**、**lS**、**ws** 或 **wS** 類型規範，與 `printf` 函式中的 **S** 和 `wprintf` 函式中的 **s** 同義)。
 
 > [!NOTE]
-> **Microsoft 特定**：**I** (大寫 i)、**I32**、**I64** 及 **w** 引數大小修飾詞前置詞為 Microsoft 延伸模組，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
+> **Microsoft 特定：** **I** （大寫 I）、 **I32**、 **I64**和**w**引數大小的修飾詞前置詞是 Microsoft 擴充功能，且與 ISO C 不相容。 **h** 前置詞與類型 `char` 的資料搭配使用時，以及 **l** (小寫 L) 前置詞與類型 `double` 的資料搭配使用時，這些前置詞都是 Microsoft 副檔名。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>

@@ -1,26 +1,27 @@
 ---
 title: .SFCOND
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - .SFCOND
 helpviewer_keywords:
 - .SFCOND directive
 ms.assetid: 3a1ce2d0-cf18-4f08-b4cf-b72cded4d164
-ms.openlocfilehash: a18210c1ea45d57b7a2ee642533532ff737cae4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7906b0bc260ed47553bdba76057f303f70c04448
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178198"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317522"
 ---
 # <a name="sfcond"></a>.SFCOND
 
-請參閱[。NOLISTIF](../../assembler/masm/dot-nolistif.md)。
+請參閱[.NOLISTIF](dot-nolistif.md)。
 
 ## <a name="syntax"></a>語法
 
-> .SFCOND
+> **.SFCOND**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

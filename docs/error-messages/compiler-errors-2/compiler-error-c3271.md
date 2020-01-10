@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3271
 ms.assetid: 16d8bd1d-2e30-4c6a-a07f-0c4f3342fab5
-ms.openlocfilehash: f94ef54408584e40dc406935e36053352ecf38e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 646f42f1bc9724d8f0a2a47b17836cda4092ad12
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365646"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753987"
 ---
 # <a name="compiler-error-c3271"></a>編譯器錯誤 C3271
 
@@ -21,7 +21,7 @@ ms.locfileid: "62365646"
 
 下列範例會產生 C3271：
 
-```
+```cpp
 // C3271.cpp
 // compile with: /clr /c
 using namespace System;

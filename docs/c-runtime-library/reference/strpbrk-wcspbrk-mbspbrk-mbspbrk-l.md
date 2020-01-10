@@ -1,12 +1,12 @@
 ---
 title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbspbrk
 - wcspbrk
 - _mbspbrk_l
 - strpbrk
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _fstrpbrk
 - _mbspbrk
@@ -44,14 +47,14 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d6b18ab6dabfb1181f3e65507d27f6afe98a5b9f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209563"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947154"
 ---
-# <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
+# <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
 掃描字串是否有指定字元集的字元。
 
@@ -127,21 +130,21 @@ const unsigned char *_mbspbrk_l(
 
 ## <a name="return-value"></a>傳回值
 
-讓指標回到第一個出現的任何字元*strCharSet*中*str*，或為 NULL 指標，如果兩個字串引數的任何字元的共通。
+傳回*字串*中*strCharSet*的第一次出現之任何字元的指標，如果兩個字串引數沒有共通的字元，則傳回 Null 指標。
 
 ## <a name="remarks"></a>備註
 
-`strpbrk`函式會傳回第一個出現的字元指標*str*屬於中的字元組*strCharSet*。 搜尋不包含終止的 Null 字元。
+函式*會傳回字串中*第一次出現之字元的指標，而此字串屬於 strCharSet 中的一組字元。 `strpbrk` 搜尋不包含終止的 Null 字元。
 
 `wcspbrk` 和 `_mbspbrk` 是寬字元和多位元組字元版本的 `strpbrk`。 `wcspbrk` 的引數和傳回值是寬字元字串；`_mbspbrk` 的引數則是多位元組字元字串。
 
-`_mbspbrk` 會驗證其參數。 如果*str*或是*strCharSet*是 NULL 時，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續，請執行`_mbspbrk`會傳回 NULL，而且設定`errno`EINVAL 到。 `strpbrk` 和 `wcspbrk` 不會驗證其參數。 除此之外，這三個函式的行為相同。
+`_mbspbrk` 會驗證其參數。 如果*str*或*strCharSet*為 Null，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， `_mbspbrk`則會傳回 Null，並將設定`errno`為 EINVAL。 `strpbrk` 和 `wcspbrk` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
 `_mbspbrk` 類似於 `_mbscspn`，不同之處在於 `_mbspbrk` 會傳回指標，而不是 [size_t](../../c-runtime-library/standard-types.md) 類型的值。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩者的行為C++多載，定義符號 _CONST_RETURN。
+在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 採用**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些函式的**CONST**和非**const**版本都可以使用，則會定義宏 _CRT_CONST_CORRECT_OVERLOADS。 如果您需要這兩個 C++多載的非 const 行為，請定義符號 _CONST_RETURN。
 
-輸出值會受到地區設定; LC_CTYPE 分類設定的設定如需詳細資訊，請參閱 < [setlocale](setlocale-wsetlocale.md)。 這些功能，但不包含新版 **_l**後置字元在針對此與地區設定相關行為使用目前的地區設定; 具有版本 **_l**尾碼是完全相同，不同之處在於它會使用地區設定參數改為傳入。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 LC_CTYPE 分類設定影響;如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l**尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本相同，不同之處在于它會改為使用傳入的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

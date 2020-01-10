@@ -1,6 +1,6 @@
 ---
 title: 運算子 ;;
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '%3B%3B'
 - operator %3B%3B
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - ;; operator
 - operator ;;
 ms.assetid: 94320c71-70df-4e71-8c22-e36797294e2b
-ms.openlocfilehash: 10c7395a29b3e9d7792939c3c54e9108a255f1ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d411a76ea32d30090a32fbdead6f8779b6dd4d69
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199063"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318952"
 ---
 # <a name="operator-"></a>運算子 ;;
 
-會將*文字*巨集，只會出現在巨集定義中的註解。 清單不會顯示*文字*巨集展開的位置。
+將*文字*視為僅出現在巨集定義中的宏批註。 此清單不會顯示擴充宏的*文字*。
 
 ## <a name="syntax"></a>語法
 
-> ;; *text*
+> **;;** *文字*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

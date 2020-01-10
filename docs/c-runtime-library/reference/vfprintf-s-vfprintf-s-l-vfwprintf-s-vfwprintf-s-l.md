@@ -1,12 +1,12 @@
 ---
 title: vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - vfwprintf_s
 - _vfprintf_s_l
 - vfprintf_s
 - _vfwprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _vftprintf_s
 - vfwprintf_s
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vftprintf_s function
 ms.assetid: eab6f563-46e2-4806-963f-2b23f339ecdc
-ms.openlocfilehash: f512d58ecd6460cdc5df2a07016b36d626ca76dd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d7c3d268689fe8d60b4b3804223d7bba206bbed1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499227"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957439"
 ---
 # <a name="vfprintf_s-_vfprintf_s_l-vfwprintf_s-_vfwprintf_s_l"></a>vfprintf_s、_vfprintf_s_l、vfwprintf_s、_vfwprintf_s_l
 
@@ -90,19 +93,19 @@ int _vfwprintf_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-**vfprintf_s**和**vfwprintf_s**會傳回寫入的字元數, 不包括結束的 null 字元, 或如果發生輸出錯誤, 則傳回負數值。 如果*資料流程*或*格式*為 null 指標, 或如果格式字串包含不正確格式化字元, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 函式會傳回-1, 並將**errno**設為**EINVAL**。
+**vfprintf_s**和**vfwprintf_s**會傳回寫入的字元數，不包括結束的 null 字元，或如果發生輸出錯誤，則傳回負數值。 如果*資料流程*或*格式*為 null 指標，或如果格式字串包含不正確格式化字元，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標, 然後格式化指定的資料, 並將其寫入*資料流程*。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入*資料流程*。
 
-這些函式與不安全版本的差異, 僅在於安全版本會檢查*格式*字串是否包含有效的格式化字元。
+這些函式與不安全版本的差異，僅在於安全版本會檢查*格式*字串是否包含有效的格式化字元。
 
-**vfwprintf_s**是**vfprintf_s**的寬字元版本;如果資料流程是以 ANSI 模式開啟, 則這兩個函式的行為相同。 **vfprintf_s**目前不支援輸出至 UNICODE 資料流程。
+**vfwprintf_s**是**vfprintf_s**的寬字元版本;如果資料流程是以 ANSI 模式開啟，則這兩個函式的行為相同。 **vfprintf_s**目前不支援輸出至 UNICODE 資料流程。
 
-這些具有 **_l**尾碼的函式版本都相同, 不同之處在于它們會使用傳入的地區設定參數, 而不是目前的執行緒地區設定。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 > [!IMPORTANT]
 > 確認 *format* 不是使用者定義的字串。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。

@@ -1,6 +1,6 @@
 ---
 title: _enable
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _enable
 - _enable_cpp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-ms.openlocfilehash: e1ece6d6f4040b81b55d8400407d46f165b56b53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7adcd4eac807b8d0937efbbe6d89f8ad6dcb157c
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349026"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217879"
 ---
-# <a name="enable"></a>_enable
+# <a name="_enable"></a>_enable
 
 **Microsoft 專屬**
 
@@ -24,7 +24,7 @@ ms.locfileid: "62349026"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void _enable(void);
 ```
 
@@ -32,9 +32,9 @@ void _enable(void);
 
 |內建|架構|
 |---------------|------------------|
-|`_enable`|x86、 x64、 ARM|
+|`_enable`|x86、ARM、x64、ARM64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -46,4 +46,4 @@ void _enable(void);
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

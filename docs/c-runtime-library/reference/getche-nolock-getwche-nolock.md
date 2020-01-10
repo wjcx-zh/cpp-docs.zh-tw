@@ -1,10 +1,10 @@
 ---
 title: _getche_nolock、_getwche_nolock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getche_nolock
 - _getwche_nolock
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getche_nolock
 - _gettche_nolock
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - _getwche_nolock function
 - gettche_nolock function
 ms.assetid: 9e853ad4-4d8a-4442-9ae5-da4b434f0b8c
-ms.openlocfilehash: b5745d85ec1a7338a4625d0c3eaf54da498e2af4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23f16199314ef1c9834e559631b7299dd1c55c2e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287250"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955302"
 ---
-# <a name="getchenolock-getwchenolock"></a>_getche_nolock、_getwche_nolock
+# <a name="_getche_nolock-_getwche_nolock"></a>_getche_nolock、_getwche_nolock
 
 在有回應但不鎖定執行緒的情形下，從主控台取得字元。
 
@@ -61,7 +64,7 @@ wint_t _getwche_nolock( void );
 
 ## <a name="remarks"></a>備註
 
-**_getche_nolock**並 **_getwche_nolock**等於 **_getche**並 **_getwche**不同之處在於它們不受干擾其他執行緒。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
+**_getche_nolock**和 **_getwche_nolock**與 **_getche**和 **_getwche**相同，不同之處在于它們不受保護，不會受到其他執行緒的干擾。 因為它們不會造成鎖定其他執行緒的額外負荷，所以可能會比較快。 這些函式只能用在安全執行緒內容 (例如單一執行緒應用程式) 或呼叫範圍已經處理執行緒隔離的地方。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

@@ -1,14 +1,14 @@
 ---
 title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _atoldbl
 - _atoldbl_l
 - _atodbl
 - _atoflt
 - _atoflt_l
 - _atodbl_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _atoflt
 - _atoflt_l
@@ -49,16 +52,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3b164042006cab22d0dfd9a7968e2d2e494f5c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349273"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943616"
 ---
-# <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
+# <a name="_atodbl-_atodbl_l-_atoldbl-_atoldbl_l-_atoflt-_atoflt_l"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
-將字串轉換成雙精度浮點數 (**_atodbl**)、 長雙精度 (**_atoldbl**)，或浮點數 (**_atoflt**)。
+將字串轉換為雙精度浮點數（ **_atodbl**）、long double （ **_atoldbl**）或 float （ **_atoflt**）。
 
 ## <a name="syntax"></a>語法
 
@@ -73,7 +76,7 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ### <a name="parameters"></a>參數
 
-*value*<br/>
+*值*<br/>
 將字串轉換成浮點值所產生的雙精度浮點數、長雙精度浮點數或浮點值。 這些值包裝在結構中。
 
 *str*<br/>
@@ -84,21 +87,21 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回 0。 可能的錯誤碼是 **_UNDERFLOW**或是 **_OVERFLOW**，標頭檔中定義\<math.h> >。
+如果成功，會傳回 0。 可能的錯誤碼為 **_UNDERFLOW**或 **_OVERFLOW**，其定義于標頭檔\<math. h >。
 
 ## <a name="remarks"></a>備註
 
-這些函式會將字串轉換成浮點值。 這些函式之間的差異並**atof**函式系列即這些函式不會產生浮點碼，並不會導致硬體例外狀況。 相反地，錯誤狀況會回報為錯誤碼。
+這些函式會將字串轉換成浮點值。 這些函式與**atof**系列函式之間的差異在於，這些函式不會產生浮點程式碼，也不會造成硬體例外狀況。 相反地，錯誤狀況會回報為錯誤碼。
 
-如果字串無法有效解譯為浮點值時，*值*設為零，而傳回值為零。
+如果字串沒有有效的轉譯作為浮點值，則*值*會設定為零，且傳回值為零。
 
-有這些函式的版本 **_l**是相同的後置詞沒有後置詞，，不同之處在於它們使用的版本*地區設定*會傳入，而不是目前執行緒的參數地區設定。
+這些具有 **_l**尾碼的函式版本與沒有尾碼的版本相同，不同之處在于它們會使用傳入的*地區*設定參數，而不是目前的執行緒地區設定。
 
 ## <a name="requirements"></a>需求
 
 |常式|必要的標頭|
 |--------------|---------------------|
-|**_atodbl**， **_atoldbl**， **_atoflt**<br /><br /> **_atodbl_l**， **_atoldbl_l**， **_atoflt_l**|\<stdlib.h>|
+|**_atodbl**、 **_atoldbl**、 **_atoflt**<br /><br /> **_atodbl_l**、 **_atoldbl_l**、 **_atoflt_l**|\<stdlib.h>|
 
 ## <a name="example"></a>範例
 

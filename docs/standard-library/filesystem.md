@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 0f2c90bd7c1d88a94d1dab05b98442111faa71a2
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457028"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898807"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,21 +29,21 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> 從 Visual Studio 2017 發行以來, \<filesystem > 標頭尚未是C++標準。 C++在 Visual Studio 2017 (MSVC v141) 中, 會執行最終的草稿標準, 其可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到。
+> 從 Visual Studio 2017 的版本中，\<filesystem > 標頭尚未是C++標準。 C++在 Visual Studio 2017 （MSVC v141）中，會執行最終的草稿標準，其可在[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)中找到。
 
-此標頭支援兩種廣泛的主機作業系統類別之一的檔案系統:Microsoft Windows 和 Posix。
+此標頭支援兩種廣泛的主機作業系統類別之一的檔案系統： Microsoft Windows 和 POSIX。
 
 雖然大部分功能對這兩個作業系統而言是共通的，不過本文還是指出其中的差異。 例如：
 
 - Windows 支援多個根名稱，例如 c: 或 \\\network_name。 檔案系統是由樹狀樹系所組成，每個樹狀目錄有自己的根目錄 (例如 c:\ 或 \\\network_name\\) 與目前的目錄，以完成相對路徑名稱 (而非絕對路徑名稱)。
 
-- Posix 支援不含根目錄名稱的單一樹狀目錄、單一根目錄 / 和單一目前目錄。
+- POSIX 支援單一樹狀結構，其中沒有根名稱、單一根目錄/和單一目前的目錄。
 
 另一項重大差異是路徑名稱的原生表示法：
 
 - Windows 使用以 Null 終止的 wchar_t 序列，並編碼為 UTF-16 (每個字元有一或兩個元素)。
 
-- Posix 使用以 Null 終止的 char 序列，並編碼為 UTF-8 (每個字元有一或多個元素)。
+- POSIX 會使用以 null 終止的 char 序列，並編碼為 UTF-8 （每個字元有一或多個元素）。
 
 - 類別路徑物件以原生格式來儲存路徑名稱，但可輕鬆地在這個預存格式和幾個外部格式之間進行轉換：
 
@@ -63,7 +63,7 @@ using namespace std::experimental::filesystem::v1;
 
 1. Windows 會記錄檔案是唯讀或可寫入，以及對目錄而言沒有意義的屬性。
 
-1. Posix 會記錄檔案可讀取、寫入或執行 (如果是目錄則記錄可否掃描)；執行這些權限的人員為擁有者、擁有者群組或所有人；以及其他一些權限。
+1. POSIX 會記錄檔案是否可以讀取、寫入或執行（如果是目錄）、擁有者、擁有者群組或每個人，再加上一些其他許可權。
 
 這兩個系統在根目錄名稱之後有通用的路徑名稱結構。 路徑名稱若為 c:/abc/xyz/def.ext：
 
@@ -89,7 +89,7 @@ using namespace std::experimental::filesystem::v1;
 
 如需詳細資訊與程式碼範例，請參閱[檔案系統巡覽 (C++)](../standard-library/file-system-navigation.md)。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="classes"></a>類別
 
@@ -108,7 +108,7 @@ using namespace std::experimental::filesystem::v1;
 |-|-|
 |[space_info 結構](../standard-library/space-info-structure.md)|保留磁碟區的相關資訊。|
 
-## <a name="functions"></a>函式
+## <a name="functions"></a>功能
 
 [\<filesystem> 函式](../standard-library/filesystem-functions.md)
 
@@ -116,17 +116,17 @@ using namespace std::experimental::filesystem::v1;
 
 [\<filesystem> 運算子](../standard-library/filesystem-operators.md)
 
-## <a name="enumerations"></a>列舉
+## <a name="enumerations"></a>列舉型別
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|列舉搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file) ，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file)，並在已存在目的地檔案時決定行為。|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|此列舉會搭配使用 [copy_file](../standard-library/filesystem-functions.md#copy_file)，並在已存在目的地檔案時決定行為。|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|指定目錄迭代器之選項的列舉。|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|檔案類型的列舉。|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|用來傳達權限和權限選項的位元遮罩類型|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)

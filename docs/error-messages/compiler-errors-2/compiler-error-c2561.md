@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C2561
 ms.assetid: 0abe955b-53a6-4a3c-8362-b1a8eb40e8d1
-ms.openlocfilehash: 8350c5baf129b88c178be280d2da7fe856c6cf57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4a14be9cd32c752e2ab889417494e80b935e31b
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368418"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755560"
 ---
 # <a name="compiler-error-c2561"></a>編譯器錯誤 C2561
 
-'identifier': 函式必須傳回值
+' identifier '：函式必須傳回值
 
-此函式宣告為傳回值，但函式定義不包含`return`陳述式。
+函式已宣告為傳回值，但函式定義未包含 `return` 語句。
 
-此錯誤可能被因不正確的函式原型：
+此錯誤可能是由不正確的函數原型所造成：
 
-1. 如果函式不會傳回值，以傳回型別來宣告函式[void](../../cpp/void-cpp.md)。
+1. 如果函式未傳回值，請宣告具有[void](../../cpp/void-cpp.md)傳回類型的函數。
 
-1. 請檢查所有可能的分支，函式的傳回類型在原型中宣告的值。
+1. 檢查函式的所有可能分支是否都會傳回原型中宣告之類型的值。
 
-1. C++包含存放區中的傳回值的內嵌組件常式的函式`AX`註冊可能需要的 return 陳述式。 中的值複製`AX`給暫存變數，並從函式會傳回該變數。
+1. C++包含將傳回值儲存在 `AX` 暫存器中之內嵌組解碼常式的函數，可能需要 return 語句。 將 `AX` 中的值複製到暫存變數，並從函式傳回該變數。
 
-下列範例會產生 C2561:
+下列範例會產生 C2561：
 
-```
+```cpp
 // C2561.cpp
 int Test(int x) {
    if (x) {

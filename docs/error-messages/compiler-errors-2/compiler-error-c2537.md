@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2537
 ms.assetid: aee81d8e-300e-4a8b-b6c4-b3828398b34e
-ms.openlocfilehash: 437727b334087aef496dbb0a1f3f1c8cf2b45458
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0dfe9f88fcdfda1325150d480670777a4d42d896
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345591"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758628"
 ---
 # <a name="compiler-error-c2537"></a>編譯器錯誤 C2537
 
-'specifier': 不合法的連結規格
+' 規範 '：不合法的連結規格
 
-可能的原因：
+可能的原因:
 
-1. 不支援連結指定名稱。 支援只"C"連結規範。
+1. 不支援連結規範。 僅支援 "C" 連結規範。
 
-1. 指定一組多載函式中的多個函式的"C"連結。 這是不允許的。
+1. "C" 連結是針對一組多載函式中的一個以上函式所指定。 但這種作法並不合法。
 
-下列範例會產生 C2537:
+下列範例會產生 C2537：
 
-```
+```cpp
 // C2537.cpp
 // compile with: /c
 extern "c" void func();   // C2537

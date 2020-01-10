@@ -2,20 +2,20 @@
 title: 事件 (C++/CX)
 ms.date: 07/15/2019
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: d0a3ab01628487dcca081eb300470cbd1bf3bb83
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894459"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740531"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
-Windows 執行階段類型可以宣告 （也就，發行） 事件，以及用戶端程式碼中的相同元件或其他元件可以訂閱這些事件建立關聯之後呼叫的方法*事件處理常式*與事件。 多個事件處理常式可以與單一事件相關聯。 當發行物件引發事件時，會導致所有事件處理常式被叫用。 如此一來，訂閱類別可以在發行者引發事件時，執行任何適當的自訂動作。 事件有委派類型，可指定所有事件處理常式必須具有的簽章，才能訂閱事件。
+Windows 執行階段類型可以宣告（也就是發行）事件，而相同元件或其他元件中的用戶端程式代碼可以透過將稱為「*事件處理常式*」的方法與事件產生關聯來訂閱這些事件。 多個事件處理常式可以與單一事件相關聯。 當發行物件引發事件時，會導致所有事件處理常式被叫用。 如此一來，訂閱類別可以在發行者引發事件時，執行任何適當的自訂動作。 事件有委派類型，可指定所有事件處理常式必須具有的簽章，才能訂閱事件。
 
 ## <a name="consuming-events-in-windows-components"></a>在 Windows 元件中使用事件
 
-Windows 執行階段中的許多元件會公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行您要它唯一的需求是其簽章必須符合被叫用委派簽章。 如需如何建立委派事件處理常式及訂閱事件的詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。
+Windows 執行階段中的許多元件會公開事件。 例如，當感應器報告有新的光源值，LightSensor 物件就會引發 ReadingChanged 事件。 當您在程式中使用 LightSensor 物件時，可以定義要在 ReadingChanged 事件引發時呼叫的方法。 方法可以執行任何您想要的動作;唯一的要求是它的簽章必須符合所叫用的委派簽章。 如需如何建立委派事件處理常式及訂閱事件的詳細資訊，請參閱[委派](../cppcx/delegates-c-cx.md)。
 
 ## <a name="creating-custom-events"></a>建立自訂事件
 
@@ -62,5 +62,5 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
 [委派](../cppcx/delegates-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - '@Line symbol'
 ms.assetid: f879fda0-c046-478a-acbd-2e7ff7f7ddad
-ms.openlocfilehash: 2a4226dd5befb917ec1a8af0fa2bd9ca9ae0ee6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b02c7f3ac0722ca9ad90d42acf08e93766e7922
+ms.sourcegitcommit: 9ee5df398bfd30a42739632de3e165874cb675c3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179720"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74398973"
 ---
-# <a name="line"></a>@Line
+# <a name="line"></a>\@行
 
-目前的檔案中的來源行號 （等同於數字）。
+目前檔案中的原始程式列號（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> @Line
+> **\@行**
 
 ## <a name="see-also"></a>另請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](symbols-reference.md)

@@ -13,16 +13,16 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db4939d39c06a764ca73186e0be08ab4f8ecbcc1
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262758"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298593"
 ---
-# <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap 類別
+# <a name="concurrent_unordered_multimap-class"></a>concurrent_unordered_multimap 類別
 
-`concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。
+`concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。 在這裡，並行安全表示指標或反覆運算器一律有效。 不保證專案初始化或特定的遍歷順序。
 
 ## <a name="syntax"></a>語法
 
@@ -60,13 +60,13 @@ true>>;
 相等比較函式物件類型。 這個引數是選擇性的，而且預設值是 `std::equal_to<K>`。
 
 *_Allocator_type*<br/>
-代表預存配置器物件，封裝有關配置和解除配置之記憶體的並行向量的詳細資訊的型別。 這個引數是選擇性的預設值是`std::allocator<std::pair<K`， `_Element_type>>`。
+代表預存配置器物件的類型，該物件會封裝並行向量之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `std::allocator<std::pair<K`，`_Element_type>>`。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |`allocator_type`|管理儲存體的配置器類型。|
 |`const_iterator`|用於受控制序列的常數迭代器類型。|
@@ -87,31 +87,31 @@ true>>;
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[concurrent_unordered_multimap](#ctor)|多載。 建構並行未排序多重對應。|
+|[concurrent_unordered_multimap](#ctor)|多載。 構造並行未排序的 multimap。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[hash_function](#hash_function)|傳回預存雜湊函式物件。|
-|[insert](#insert)|多載。 將項目來加入`concurrent_unordered_multimap`物件。|
-|[key_eq](#key_eq)|傳回儲存的相等比較函式物件。|
-|[swap](#swap)|交換兩個內容`concurrent_unordered_multimap`物件。 這個方法不是並行安全。|
-|[unsafe_erase](#unsafe_erase)|多載。 移除項目從`concurrent_unordered_multimap`位於指定位置。 這個方法不是並行安全。|
+|[insert](#insert)|多載。 將元素加入至 `concurrent_unordered_multimap` 物件。|
+|[key_eq](#key_eq)|傳回預存的相等比較函式物件。|
+|[swap](#swap)|交換兩個 `concurrent_unordered_multimap` 物件的內容。 這個方法不是並行安全的。|
+|[unsafe_erase](#unsafe_erase)|多載。 從 `concurrent_unordered_multimap` 中的指定位置移除元素。 這個方法不是並行安全的。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[operator=](#operator_eq)|多載。 將另一個內容指派`concurrent_unordered_multimap`如下的物件。 這個方法不是並行安全。|
+|[operator=](#operator_eq)|多載。 將另一個 `concurrent_unordered_multimap` 物件的內容指派給這一個。 這個方法不是並行安全的。|
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊`concurrent_unordered_multimap`類別，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如需 `concurrent_unordered_multimap` 類別的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `_Traits`
 
@@ -121,13 +121,13 @@ true>>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concurrent_unordered_map.h
+**標頭：** concurrent_unordered_map。h
 
 **命名空間：** concurrency
 
-##  <a name="begin"></a> begin
+##  <a name="begin"></a>起點
 
-傳回迭代器，指向 並行容器中的第一個項目。 這個方法是並行安全。
+傳回指向並行容器中第一個元素的反覆運算器。 這個方法是並行安全的。
 
 ```
 iterator begin();
@@ -137,11 +137,11 @@ const_iterator begin() const;
 
 ### <a name="return-value"></a>傳回值
 
-並行容器中第一個項目的迭代器。
+並行容器中第一個元素的反覆運算器。
 
-##  <a name="cbegin"></a> cbegin
+##  <a name="cbegin"></a>cbegin
 
-傳回指向並行容器中的第一個元素的 const 迭代器。 這個方法是並行安全。
+傳回指向並行容器中第一個元素的 const 反覆運算器。 這個方法是並行安全的。
 
 ```
 const_iterator cbegin() const;
@@ -149,11 +149,11 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-並行容器中第一個項目的常數迭代器。
+並行容器中第一個元素的 const 反覆運算器。
 
-##  <a name="cend"></a> cend
+##  <a name="cend"></a>cend
 
-傳回指向下一個位置定址，並行容器中的最後一個元素的 const 迭代器。 這個方法是並行安全。
+傳回常數反覆運算器，指向並行容器中最後一個元素後面的位置。 這個方法是並行安全的。
 
 ```
 const_iterator cend() const;
@@ -161,19 +161,19 @@ const_iterator cend() const;
 
 ### <a name="return-value"></a>傳回值
 
-Const 迭代器之後，並行容器中的最後一個元素的位置。
+在並行容器中最後一個元素後面的位置的常數反覆運算器。
 
-##  <a name="clear"></a> 清除
+##  <a name="clear"></a>明確
 
-清除並行容器中的所有項目。 此函式不是並行安全。
+清除並行容器中的所有元素。 此函式不是並行保護。
 
 ```
 void clear();
 ```
 
-##  <a name="ctor"></a> concurrent_unordered_multimap
+##  <a name="ctor"></a>concurrent_unordered_multimap
 
-建構並行未排序多重對應。
+構造並行未排序的 multimap。
 
 ```
 explicit concurrent_unordered_multimap(
@@ -228,7 +228,7 @@ concurrent_unordered_multimap(
 超出要複製之元素範圍的第一個元素的位置。
 
 *_Umap*<br/>
-來源`concurrent_unordered_multimap`来複製元素的物件。
+要從中複製元素的來源 `concurrent_unordered_multimap` 物件。
 
 ### <a name="remarks"></a>備註
 
@@ -238,15 +238,15 @@ concurrent_unordered_multimap(
 
 第二個建構函式會為未排序多重對應指定配置器。
 
-第三個建構函式指定的值提供的迭代器範圍 [ `_Begin`， `_End`)。
+第三個函式會指定反覆運算器範圍 [`_Begin`，`_End`）所提供的值。
 
 第四個和第五個建構函式會指定並行未排序之多重對應 `_Umap` 的複製作業。
 
 最後一個建構函式會指定並行未排序之多重對應 `_Umap` 的移動作業。
 
-##  <a name="count"></a> count
+##  <a name="count"></a>計數
 
-計算符合指定索引鍵的項目數目。 此函式是安全的並行存取。
+計算符合指定索引鍵的元素數目。 此函式為並行安全。
 
 ```
 size_type count(const key_type& KVal) const;
@@ -259,11 +259,11 @@ size_type count(const key_type& KVal) const;
 
 ### <a name="return-value"></a>傳回值
 
-出現在容器中的機碼次數時次數。
+金鑰出現在容器中的次數。
 
-##  <a name="empty"></a> empty
+##  <a name="empty"></a>空
 
-測試項目是否不存在。 這個方法是並行安全。
+測試項目是否不存在。 這個方法是並行安全的。
 
 ```
 bool empty() const;
@@ -271,15 +271,15 @@ bool empty() const;
 
 ### <a name="return-value"></a>傳回值
 
-**真**並行容器是空的如果**false**否則。
+如果並行容器是空的，**則為 true** ，否則為**false** 。
 
 ### <a name="remarks"></a>備註
 
-有並行插入存在時，並行容器是空的 zda bude 可能甚至讀取傳回值之前呼叫這個函式之後立即, 變更。
+如果並行插入存在，則在呼叫此函式之前，並行容器是否為空白可能會立即變更，甚至是在讀取傳回值之前。
 
-##  <a name="end"></a> 結束
+##  <a name="end"></a>成品
 
-傳回迭代器指向下一個位置定址，並行容器中的最後一個元素。 這個方法是並行安全。
+傳回反覆運算器，指向並行容器中最後一個元素後面的位置。 這個方法是並行安全的。
 
 ```
 iterator end();
@@ -289,11 +289,11 @@ const_iterator end() const;
 
 ### <a name="return-value"></a>傳回值
 
-迭代器之後，並行容器中的最後一個元素的位置。
+在並行容器中最後一個元素後面的位置的反覆運算器。
 
-##  <a name="equal_range"></a> equal_range
+##  <a name="equal_range"></a>equal_range
 
-尋找符合指定的索引鍵範圍。 此函式是安全的並行存取。
+尋找符合指定之索引鍵的範圍。 此函式為並行安全。
 
 ```
 std::pair<iterator,
@@ -308,19 +308,19 @@ std::pair<const_iterator,
 ### <a name="parameters"></a>參數
 
 *KVal*<br/>
-要搜尋的索引鍵的值。
+要搜尋的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-A[配對](../../../standard-library/pair-structure.md)其中的第一個元素是開頭的迭代器，而第二個元素是迭代器範圍的結尾。
+一[組，其中第](../../../standard-library/pair-structure.md)一個專案是開始的反覆運算器，而第二個元素是範圍結尾的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
-就可能會造成額外的金鑰之後開始迭代器，以及結尾迭代器之前，要插入的並行插入。
+並行插入可能會導致在開始反覆運算器之後和結束反覆運算器之前插入額外的索引鍵。
 
-##  <a name="find"></a> find
+##  <a name="find"></a>尋找
 
-尋找符合指定之索引鍵的元素。 此函式是安全的並行存取。
+尋找符合指定之索引鍵的元素。 此函式為並行安全。
 
 ```
 iterator find(const key_type& KVal);
@@ -331,15 +331,15 @@ const_iterator find(const key_type& KVal) const;
 ### <a name="parameters"></a>參數
 
 *KVal*<br/>
-要搜尋的索引鍵的值。
+要搜尋的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，指向 比對提供的索引鍵的第一個元素的位置或迭代器`end()`如果沒有這類項目。
+反覆運算器，指向符合所提供之索引鍵之第一個元素的位置，如果沒有這類元素，則為反覆運算器 `end()`。
 
-##  <a name="get_allocator"></a> get_allocator
+##  <a name="get_allocator"></a>get_allocator
 
-傳回這個並行容器的預存配置器物件。 這個方法是並行安全。
+傳回此並行容器的預存配置器物件。 這個方法是並行安全的。
 
 ```
 allocator_type get_allocator() const;
@@ -347,9 +347,9 @@ allocator_type get_allocator() const;
 
 ### <a name="return-value"></a>傳回值
 
-這個並行容器預存配置器物件。
+此並行容器的預存配置器物件。
 
-##  <a name="hash_function"></a> hash_function
+##  <a name="hash_function"></a>hash_function
 
 傳回預存雜湊函式物件。
 
@@ -361,9 +361,9 @@ hasher hash_function() const;
 
 儲存的雜湊函式物件。
 
-##  <a name="insert"></a> insert
+##  <a name="insert"></a>插入
 
-將項目來加入`concurrent_unordered_multimap`物件。
+將元素加入至 `concurrent_unordered_multimap` 物件。
 
 ```
 iterator insert(
@@ -395,9 +395,9 @@ typename std::enable_if<!std::is_same<const_iterator,
 用來插入的迭代器類型。
 
 *V*<br/>
-值插入到對應的型別。
+插入對應中的數值型別。
 
-*value*<br/>
+*值*<br/>
 要插入的值。
 
 *_Where*<br/>
@@ -417,15 +417,15 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 第一個成員函式會將 `value` 項目插入受控制的序列中，然後傳回指定所插入項目的迭代器。
 
-第二個成員函式會傳回 insert ( `value`)，並使用`_Where`做為起始的位置，在受控制序列中要搜尋插入點。
+第二個成員函式會傳回 insert （`value`），並使用 `_Where` 作為受控制序列中的開始位置，以搜尋插入點。
 
-第三個成員函式會將元素值序列插入從範圍 [ `first`， `last`)。
+第三個成員函式會從範圍 [`first`，`last`）插入元素值的序列。
 
 最後兩個成員函式的行為與前兩個相同，不過 `value` 是用來建構插入的值。
 
-##  <a name="key_eq"></a> key_eq
+##  <a name="key_eq"></a>key_eq
 
-傳回儲存的相等比較函式物件。
+傳回預存的相等比較函式物件。
 
 ```
 key_equal key_eq() const;
@@ -433,11 +433,11 @@ key_equal key_eq() const;
 
 ### <a name="return-value"></a>傳回值
 
-儲存的相等比較函式物件。
+預存的相等比較函式物件。
 
-##  <a name="load_factor"></a> load_factor
+##  <a name="load_factor"></a>load_factor
 
-計算並傳回目前的載入因數，容器。 載入因數是除以貯體數目的容器中的項目數。
+計算並傳回容器目前的載入因數。 負載因數是容器中的元素數目除以值區數目。
 
 ```
 float load_factor() const;
@@ -447,9 +447,9 @@ float load_factor() const;
 
 容器的載入因數。
 
-##  <a name="max_load_factor"></a> max_load_factor
+##  <a name="max_load_factor"></a>max_load_factor
 
-取得或設定容器的最大載入因數。 最大載入因數是最大項目數，比可以先貯體中容器會增加其內部的資料表。
+取得或設定容器的最大載入因數。 最大載入因數是容器成長其內部資料表之前，可以在任何值區中的最大專案數。
 
 ```
 float max_load_factor() const;
@@ -463,11 +463,11 @@ void max_load_factor(float _Newmax);
 
 ### <a name="return-value"></a>傳回值
 
-第一個成員函式會傳回儲存的最大載入因數。 第二個成員函式不會傳回值，但會擲回[out_of_range](../../../standard-library/out-of-range-class.md)例外狀況，如果提供的載入因數無效...
+第一個成員函式會傳回儲存的最大載入因數。 第二個成員函式不會傳回值，但如果提供的載入因數無效，則會擲回[out_of_range](../../../standard-library/out-of-range-class.md)例外狀況。
 
-##  <a name="max_size"></a> max_size
+##  <a name="max_size"></a>max_size
 
-傳回並行容器，取決於配置器的大小上限。 這個方法是並行安全。
+傳回配置器所決定的並行容器大小上限。 這個方法是並行安全的。
 
 ```
 size_type max_size() const;
@@ -475,15 +475,15 @@ size_type max_size() const;
 
 ### <a name="return-value"></a>傳回值
 
-可以插入到這個並行容器的項目數目上限。
+可以插入此並行容器中的元素數目上限。
 
 ### <a name="remarks"></a>備註
 
-此上限值實際上可能會高於什麼容器可以實際保留的。
+此上限值實際上可能高於容器可以保存的內容。
 
-##  <a name="operator_eq"></a> 運算子 =
+##  <a name="operator_eq"></a>operator =
 
-將另一個內容指派`concurrent_unordered_multimap`如下的物件。 這個方法不是並行安全。
+將另一個 `concurrent_unordered_multimap` 物件的內容指派給這一個。 這個方法不是並行安全的。
 
 ```
 concurrent_unordered_multimap& operator= (const concurrent_unordered_multimap& _Umap);
@@ -498,13 +498,13 @@ concurrent_unordered_multimap& operator= (concurrent_unordered_multimap&& _Umap)
 
 ### <a name="return-value"></a>傳回值
 
-此參考`concurrent_unordered_multimap`物件。
+這個 `concurrent_unordered_multimap` 物件的參考。
 
 ### <a name="remarks"></a>備註
 
 在清除並行未排序的多重對應中的任何現有項目之後，`operator=` 會將 `_Umap` 的內容複製或移動至並行的未排序多重對應內。
 
-##  <a name="rehash"></a> rehash
+##  <a name="rehash"></a>rehash
 
 重建雜湊資料表。
 
@@ -515,17 +515,17 @@ void rehash(size_type _Buckets);
 ### <a name="parameters"></a>參數
 
 *_Buckets*<br/>
-所需的貯體數目。
+所需的值區數目。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將值區數目改變為至少 `_Buckets` ，並視需要重建雜湊資料表。 貯體數目必須是 2 的乘冪。 如果不 2 的乘冪，它會無條件進位到下一個最大 2 的乘冪。
+此成員函式會將值區數目改變為至少 `_Buckets` ，並視需要重建雜湊資料表。 Bucket 的數目必須是2的乘冪。 如果不是2的乘冪，則會無條件進位到下一個最大的2乘冪。
 
-它會擲回[out_of_range](../../../standard-library/out-of-range-class.md)如果貯體數目不正確的例外狀況 （0 或大於最大貯體數目）。
+如果 bucket 數目無效（0或大於最大值區數目），則會擲回[out_of_range](../../../standard-library/out-of-range-class.md)例外狀況。
 
-##  <a name="size"></a> 大小
+##  <a name="size"></a>容量
 
-傳回這個並行容器中的項目數目。 這個方法是並行安全。
+傳回這個並行容器中的項目數目。 這個方法是並行安全的。
 
 ```
 size_type size() const;
@@ -539,9 +539,9 @@ size_type size() const;
 
 有並行插入存在時，並行容器中的項目數可能會在呼叫這個函式之後立即變更，甚至會是在尚未讀取傳回值的情況下。
 
-##  <a name="swap"></a> swap
+##  <a name="swap"></a>調換
 
-交換兩個內容`concurrent_unordered_multimap`物件。 這個方法不是並行安全。
+交換兩個 `concurrent_unordered_multimap` 物件的內容。 這個方法不是並行安全的。
 
 ```
 void swap(concurrent_unordered_multimap& _Umap);
@@ -552,9 +552,9 @@ void swap(concurrent_unordered_multimap& _Umap);
 *_Umap*<br/>
 要交換的 `concurrent_unordered_multimap` 物件。
 
-##  <a name="unsafe_begin"></a> unsafe_begin
+##  <a name="unsafe_begin"></a>unsafe_begin
 
-傳回特定值區此容器中的第一個元素的迭代器。
+針對特定的值區，將反覆運算器傳回此容器中的第一個元素。
 
 ```
 local_iterator unsafe_begin(size_type _Bucket);
@@ -565,15 +565,15 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 ### <a name="parameters"></a>參數
 
 *_Bucket*<br/>
-貯體的索引。
+Bucket 索引。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，指向值區的開頭。
+指向值區開頭的反覆運算器。
 
-##  <a name="unsafe_bucket"></a> unsafe_bucket
+##  <a name="unsafe_bucket"></a>unsafe_bucket
 
-傳回特定索引鍵會對應至這個容器中的值區索引。
+傳回特定索引鍵在此容器中對應的值區索引。
 
 ```
 size_type unsafe_bucket(const key_type& KVal) const;
@@ -582,15 +582,15 @@ size_type unsafe_bucket(const key_type& KVal) const;
 ### <a name="parameters"></a>參數
 
 *KVal*<br/>
-要搜尋的項目索引鍵。
+要搜尋的元素索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
-此容器中的索引鍵的貯體索引。
+此容器中索引鍵的值區索引。
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
+##  <a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
-在此容器中會傳回目前的值區數目。
+傳回此容器中目前的 bucket 數目。
 
 ```
 size_type unsafe_bucket_count() const;
@@ -598,11 +598,11 @@ size_type unsafe_bucket_count() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前在此容器中的貯體數目。
+此容器中目前的 bucket 數目。
 
-##  <a name="unsafe_bucket_size"></a> unsafe_bucket_size
+##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
-傳回在特定的貯體中，此容器的項目數目。
+傳回此容器的特定 bucket 中的專案數。
 
 ```
 size_type unsafe_bucket_size(size_type _Bucket);
@@ -611,15 +611,15 @@ size_type unsafe_bucket_size(size_type _Bucket);
 ### <a name="parameters"></a>參數
 
 *_Bucket*<br/>
-若要搜尋的貯體。
+要搜尋的值區。
 
 ### <a name="return-value"></a>傳回值
 
-目前在此容器中的貯體數目。
+此容器中目前的 bucket 數目。
 
-##  <a name="unsafe_cbegin"></a> unsafe_cbegin
+##  <a name="unsafe_cbegin"></a>unsafe_cbegin
 
-傳回特定值區此容器中的第一個元素的迭代器。
+針對特定的值區，將反覆運算器傳回此容器中的第一個元素。
 
 ```
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
@@ -628,15 +628,15 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ### <a name="parameters"></a>參數
 
 *_Bucket*<br/>
-貯體的索引。
+Bucket 索引。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，指向值區的開頭。
+指向值區開頭的反覆運算器。
 
-##  <a name="unsafe_cend"></a> unsafe_cend
+##  <a name="unsafe_cend"></a>unsafe_cend
 
-傳回迭代器，之後在特定的貯體中的最後一個元素的位置。
+將反覆運算器傳回至特定值區中最後一個元素後面的位置。
 
 ```
 const_local_iterator unsafe_cend(size_type _Bucket) const;
@@ -645,15 +645,15 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 ### <a name="parameters"></a>參數
 
 *_Bucket*<br/>
-貯體的索引。
+Bucket 索引。
 
 ### <a name="return-value"></a>傳回值
 
-迭代器，指向值區的開頭。
+指向值區開頭的反覆運算器。
 
-##  <a name="unsafe_end"></a> unsafe_end
+##  <a name="unsafe_end"></a>unsafe_end
 
-在這個特定值區的容器中的最後一個元素會傳回迭代器。
+針對特定的值區，將反覆運算器傳回這個容器中的最後一個元素。
 
 ```
 local_iterator unsafe_end(size_type _Bucket);
@@ -664,15 +664,15 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 ### <a name="parameters"></a>參數
 
 *_Bucket*<br/>
-貯體的索引。
+Bucket 索引。
 
 ### <a name="return-value"></a>傳回值
 
-指向值區結尾迭代器。
+指向值區結尾的反覆運算器。
 
-##  <a name="unsafe_erase"></a> unsafe_erase
+##  <a name="unsafe_erase"></a>unsafe_erase
 
-移除項目從`concurrent_unordered_multimap`位於指定位置。 這個方法不是並行安全。
+從 `concurrent_unordered_multimap` 中的指定位置移除元素。 這個方法不是並行安全的。
 
 ```
 iterator unsafe_erase(
@@ -689,28 +689,28 @@ iterator unsafe_erase(
 ### <a name="parameters"></a>參數
 
 *_Where*<br/>
-若要清除從迭代器位置。
+要清除的反覆運算器位置。
 
 *KVal*<br/>
-要清除的索引鍵的值。
+要清除的索引鍵值。
 
 *first*<br/>
 *last*<br/>
-迭代器。
+反覆運算.
 
 ### <a name="return-value"></a>傳回值
 
-前兩個成員函式會傳回迭代器，指定移除任何項目之外剩餘的第一個元素或`concurrent_unordered_multimap::end`（)，如果沒有這類項目。 第三個成員函式會傳回它所移除的項目數目。
+前兩個成員函式會傳回反覆運算器，指定移除任何元素之後剩餘的第一個元素，如果沒有這類元素，則為 `concurrent_unordered_multimap::end`（）。 第三個成員函式會傳回它所移除的元素數目。
 
 ### <a name="remarks"></a>備註
 
-第一個成員函式會移除 `_Where` 所指向之受控制序列中的項目。 第二個成員函式範圍中移除的項目 [ `_Begin`， `_End`)。
+第一個成員函式會移除 `_Where` 所指向之受控制序列中的項目。 第二個成員函式會移除範圍 [`_Begin`，`_End`）中的元素。
 
-第三個成員函式所分隔之範圍中移除的項目`concurrent_unordered_multimap::equal_range`(KVal)。
+第三個成員函式會移除範圍中以 `concurrent_unordered_multimap::equal_range`（KVal）分隔的元素。
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
+##  <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
-在此容器中傳回值區的數目上限。
+傳回此容器中的最大值區數目。
 
 ```
 size_type unsafe_max_bucket_count() const;
@@ -718,9 +718,9 @@ size_type unsafe_max_bucket_count() const;
 
 ### <a name="return-value"></a>傳回值
 
-此容器中的值區數目上限。
+此容器中的 bucket 數目上限。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)<br/>
 [平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)

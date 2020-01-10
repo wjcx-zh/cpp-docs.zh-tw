@@ -1,6 +1,6 @@
 ---
 title: __readpmc
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readpmc
 helpviewer_keywords:
@@ -8,35 +8,35 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af0f1874d991771423ddebfedd4624cd0b71760f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396440"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221030"
 ---
-# <a name="readpmc"></a>__readpmc
+# <a name="__readpmc"></a>__readpmc
 
 **Microsoft 專屬**
 
-會產生`rdpmc`指令，讀取效能監視所指定的計數器`counter`。
+產生指令, 它會讀取 counter 所指定的效能監視計數器。 `rdpmc`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned __int64 __readpmc(
    unsigned long counter
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*counter*<br/>
-[in]要讀取的效能計數器。
+*抵禦*\
+在要讀取的效能計數器。
 
 ## <a name="return-value"></a>傳回值
 
-指定的效能計數器的值。
+指定效能計數器的值。
 
 ## <a name="requirements"></a>需求
 
@@ -44,14 +44,14 @@ unsigned __int64 __readpmc(
 |---------------|------------------|
 |`__readpmc`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建只適用於核心模式，且此常式僅可作為內建。
+內建函式僅適用于核心模式, 而常式僅以內建函式的形式提供。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

@@ -1,6 +1,6 @@
 ---
-title: 運算子方括號
-ms.date: 08/30/2018
+title: 運算子括弧
+ms.date: 12/17/2019
 f1_keywords:
 - operator []
 - '[]'
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - operator []
 - '[] operator'
 ms.assetid: dbe192eb-fd47-4ea4-af94-c87a047cd8ca
-ms.openlocfilehash: 864be7e6415cc03597ba49b44574e109a363288e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e821deb22d40e397b7f88d8e7877608f68178728
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62201395"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316703"
 ---
 # <a name="operator-"></a>運算子 \[\]
 
-傳回*expression1*加上\[ *expression2*\]。
+傳回*運算式*2，加 \[*運算式*2\]。
 
 ## <a name="syntax"></a>語法
 
-> expression1 [expression2]
+> *運算式*2 **[** 運算式 2 **]**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

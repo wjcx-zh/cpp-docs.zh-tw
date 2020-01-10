@@ -1,6 +1,6 @@
 ---
 title: 運算子 PARITY?
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - PARITY?
 - operator PARITY?
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - PARITY? operator
 - operator PARITY?
 ms.assetid: f8c52def-c4b7-4b81-af96-2b0c2d943f6c
-ms.openlocfilehash: 12c9a8a4e2127274f915a60c83232c0266a17061
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf52b83c116d5bf71cf556bd042a6057e890ec55
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199537"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319017"
 ---
 # <a name="operator-parity"></a>運算子 PARITY?
 
-同位檢查的旗標的狀態。 只有在使用[。如果](../../assembler/masm/dot-if.md)， [。雖然](../../assembler/masm/dot-while.md)，或[。重複](../../assembler/masm/dot-repeat.md)封鎖，並在執行階段，不是在組件階段評估。
+同位旗標的狀態。 只能在中使用[。如果](dot-if.md)為，則為[。WHILE](dot-while.md)、或[。重複](dot-repeat.md)區塊，並在執行時間進行評估，而不是在元件時間。
 
 ## <a name="syntax"></a>語法
 
-> 同位嗎？
+> **校驗?**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

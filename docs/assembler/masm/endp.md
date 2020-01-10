@@ -1,30 +1,31 @@
 ---
 title: ENDP
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ENDP
 helpviewer_keywords:
 - ENDP directive
 ms.assetid: 31fc8040-8c49-43e2-8885-a20ba3b69551
-ms.openlocfilehash: 5ec4c112340036e54dbd54df910b79855295b706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3c5ef6f8853569272706f76f61104dba477c9a3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203290"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317353"
 ---
 # <a name="endp"></a>ENDP
 
-程序的結束標記*名稱*先前開始**PROC**。
+標示先前以**PROC**開始的程式*名稱*結尾。
 
 ## <a name="syntax"></a>語法
 
-> *名稱*ENDP
+> *名稱* **ENDP**
 
 ## <a name="remarks"></a>備註
 
-請參閱[PROC](../../assembler/masm/proc.md)。
+請參閱[PROC](proc.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

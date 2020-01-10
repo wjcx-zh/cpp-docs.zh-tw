@@ -1,20 +1,20 @@
 ---
 title: __svm_stgi
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_stgi
 helpviewer_keywords:
 - __svm_stgi intrinsic
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-ms.openlocfilehash: ea138f17a24af21afa937991f77bd1e2a689c3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6bd731951b440d3d2597d54c9a52d9f8640a5c5f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390213"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219841"
 ---
-# <a name="svmstgi"></a>__svm_stgi
+# <a name="__svm_stgi"></a>__svm_stgi
 
 **Microsoft 專屬**
 
@@ -22,15 +22,15 @@ ms.locfileid: "62390213"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __svm_stgi(void);
 ```
 
 ## <a name="remarks"></a>備註
 
-`__svm_stgi` 函式相當於 `STGI` 機器指令。 全域中斷旗標會判斷微處理器忽略、 延後，或處理等 I/O 完成、 硬體溫度警示或偵錯例外狀況事件，而中斷。
+`__svm_stgi` 函式相當於 `STGI` 機器指令。 全域中斷旗標會根據事件 (例如 i/o 完成、硬體溫度警示或偵錯工具例外狀況), 判斷微處理器是否忽略、延後或處理中斷。
 
-這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2:系統程式設計，> 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊, 請搜尋「AMD64 架構程式設計人員手冊第2卷:系統程式設計, 位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)網站。
 
 ## <a name="requirements"></a>需求
 
@@ -38,11 +38,11 @@ void __svm_stgi(void);
 |---------------|------------------|
 |`__svm_stgi`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [__svm_clgi](../intrinsics/svm-clgi.md)

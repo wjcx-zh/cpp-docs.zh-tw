@@ -1,9 +1,9 @@
 ---
 title: fread
 ms.date: 11/28/2018
-apiname:
+api_name:
 - fread
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fread
 helpviewer_keywords:
@@ -24,12 +27,12 @@ helpviewer_keywords:
 - data [C++], reading from input stream
 - streams [C++], reading data from
 ms.assetid: 9a3c1538-93dd-455e-ae48-77c1e23c53f0
-ms.openlocfilehash: da3828142a06ed89a6447ccaef4a0d8ff0063cca
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 7cf4542a656798f7e2431b2f939df1b5d6396144
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376175"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956822"
 ---
 # <a name="fread"></a>fread
 
@@ -68,15 +71,15 @@ size_t fread(
 
 ## <a name="remarks"></a>備註
 
-**Fread**函式會從輸入  *資料流程*讀取*大小*為位元組的專案, 並將它們儲存在*buffer*中。 與*資料流程*相關聯的檔案指標 (如果有的話) 會隨著實際讀取的位元組數而增加。 如果在[文字模式](../../c-runtime-library/text-and-binary-mode-file-i-o.md)中開啟給定的資料流程, Windows 樣式的分行符號會轉換成 Unix 樣式的分行符號。 也就是, 換行字元換行 (CRLF) 會由單行換行字元 (LF) 取代。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
+**Fread**函式會從輸入 *資料流程*讀取*大小*為位元組的專案, 並將它們儲存在*buffer*中。 與*資料流程*相關聯的檔案指標 (如果有的話) 會隨著實際讀取的位元組數而增加。 如果在[文字模式](../../c-runtime-library/text-and-binary-mode-file-i-o.md)中開啟給定的資料流程, Windows 樣式的分行符號會轉換成 Unix 樣式的分行符號。 也就是, 換行字元換行 (CRLF) 會由單行換行字元 (LF) 取代。 這種取代不會影響檔案指標或傳回值。 發生錯誤時，無法確定檔案指標位置。 無法判斷部分讀取項目的值。
 
-在文字模式資料流程上使用時, 如果所要求的資料量 (也就是*大小* \*  \* *計數*) 大於或等於內部檔案緩衝區大小 (根據預設, 這是4096個位元組, 可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 資料流程資料會直接複製到使用者提供的緩衝區中, 而在該緩衝區中進行了新行轉換。 由於轉換後的資料可能會比複製到緩衝區的資料流程資料短, 因此資料過去的*緩衝區*\[ *return_value* \* *大小*] (其中*return_value*是來自**fread**的傳回值) 可能包含檔案中未轉換的資料。 基於這個理由, 如果緩衝區的目的是做為 C 樣式字串, 建議您在*buffer* \[ *return_value* \* *size*時以 null 終止字元資料。 如需文字模式和二進位模式效果的詳細資訊, 請參閱[fopen](fopen-wfopen.md) 。
+在文字模式資料流程上使用時, 如果所要求的資料量 (也就是*大小* \* \* *計數*) 大於或等於內部檔案緩衝區大小 (根據預設, 這是4096個位元組, 可使用[setvbuf](../../c-runtime-library/reference/setvbuf.md)), 資料流程資料會直接複製到使用者提供的緩衝區中, 而在該緩衝區中進行了新行轉換。 由於轉換後的資料可能會比複製到緩衝區的資料流程資料短，因此資料過去的*緩衝區*\[ *return_value* \* *大小*] （其中*return_value*是來自**fread**的傳回值）可能包含檔案中未轉換的資料。 基於這個理由，如果緩衝區的目的是做為 C 樣式字串，建議您在*buffer* \[ *return_value* \* *size*時以 null 終止字元資料。 如需文字模式和二進位模式效果的詳細資訊, 請參閱[fopen](fopen-wfopen.md) 。
 
-此函式會鎖定其他執行緒。 如果您需要非鎖定版本, 請使用 **_fread_nolock**。
+此函式會鎖定其他執行緒。 如果您需要非鎖定版本，請使用 **_fread_nolock**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**fread**|\<stdio.h>|
 

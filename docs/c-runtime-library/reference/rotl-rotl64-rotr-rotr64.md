@@ -1,12 +1,12 @@
 ---
 title: _rotl、_rotl64、_rotr、_rotr64
 ms.date: 04/05/2018
-apiname:
+api_name:
 - _rotr64
 - _rotl
 - _rotr
 - _rotl64
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _rotr64
 - rotl64
@@ -40,16 +43,16 @@ helpviewer_keywords:
 - _rotr64 function
 - bits, rotating
 ms.assetid: cfce439b-366f-4584-8ab1-d527b13fcfc6
-ms.openlocfilehash: c8cf61ecd8ffab9433f5c6ad077ddba39401c0e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ae2df7d80778cd4c573192a13b1fd91fb358eef
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357404"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949141"
 ---
-# <a name="rotl-rotl64-rotr-rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
+# <a name="_rotl-_rotl64-_rotr-_rotr64"></a>_rotl、_rotl64、_rotr、_rotr64
 
-旋轉位元向左 (**_rotl**) 或向右 (**_rotr**)。
+將位向左（ **_rotl**）或右方（ **_rotr**）旋轉。
 
 ## <a name="syntax"></a>語法
 
@@ -75,7 +78,7 @@ unsigned __int64 _rotr64(
 
 ### <a name="parameters"></a>參數
 
-*value*<br/>
+*值*<br/>
 要旋轉的值。
 
 *shift*<br/>
@@ -87,14 +90,14 @@ unsigned __int64 _rotr64(
 
 ## <a name="remarks"></a>備註
 
-**_Rotl**並 **_rotr**旋轉不帶正負號的函式*值*由*shift*位元。 **_rotl**會將值向左旋轉。 **_rotr**會將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
+**_Rotl**和 **_rotr**函式會以*shift*位旋轉不帶正負號的*值*。 **_rotl**會將值向左旋轉。 **_rotr**會將值向右旋轉。 這兩個函式會將旋轉超出 *value* 一端的位元換行到另一端。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_rotl**， **_rotl64**|\<stdlib.h>|
-|**_rotr**， **_rotr64**|\<stdlib.h>|
+|**_rotl**、 **_rotl64**|\<stdlib.h>|
+|**_rotr**、 **_rotr64**|\<stdlib.h>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

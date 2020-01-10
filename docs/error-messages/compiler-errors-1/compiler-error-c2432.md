@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2432
 ms.assetid: 0e3326e8-cab1-45a5-b48d-61edd33793e8
-ms.openlocfilehash: e2983d966a6290ce19713c63feb502c8ffc74bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4234626bc246d6da87be68b03d44562dd5990ff
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166837"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74744507"
 ---
 # <a name="compiler-error-c2432"></a>編譯器錯誤 C2432
 
-'identifier' 中的 16 位元資料的參考不合法
+' identifier ' 中的16位資料參考不合法
 
-16 位元暫存器做為索引或基底暫存器。 編譯器不支援參考 16 位元資料。 16 位元暫存器不能用作基底或索引暫存器的 32 位元程式碼進行編譯時。
+16位暫存器會用來做為索引或基底暫存器。 編譯器不支援參考16位資料。 編譯32位程式碼時，不能使用16位暫存器做為索引或基底暫存器。
 
-下列範例會產生 C2432:
+下列範例會產生 C2432：
 
-```
+```cpp
 // C2432.cpp
 // processor: x86
 int main() {

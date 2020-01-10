@@ -1,9 +1,9 @@
 ---
 title: __uncaught_exception
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __uncaught_exception
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,22 +14,25 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __uncaught_exception
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0130776ec2511aefd42d1700f950d97738e9fb14
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268893"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945954"
 ---
-# <a name="uncaughtexception"></a>__uncaught_exception
+# <a name="__uncaught_exception"></a>__uncaught_exception
 
-表示一或多個例外狀況是否有已擲回，但尚未處理由相對應**攔截**區塊[try / catch](../../cpp/try-throw-and-catch-statements-cpp.md)陳述式。
+指出是否已擲回一或多個例外狀況，但尚未由[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)語句的對應**catch**區塊處理。
 
 ## <a name="syntax"></a>語法
 
@@ -40,7 +43,7 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>傳回值
 
-**true**發生例外狀況的時間**試**區塊，直到比對**攔截**區塊已初始化，否則**false**。
+**從在 try 區塊中擲**回例外狀況的時間開始，直到符合的**catch**區塊初始化為止。否則**為 false**。
 
 ## <a name="remarks"></a>備註
 

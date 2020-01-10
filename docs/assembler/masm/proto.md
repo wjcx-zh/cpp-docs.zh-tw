@@ -1,58 +1,59 @@
 ---
 title: PROTO
-ms.date: 10/22/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROTO
 helpviewer_keywords:
 - PROTO directive
 ms.assetid: 0487ee16-9dc7-43d1-9445-cd1601f5a080
-ms.openlocfilehash: 616b6be2a5c191ebc67d61288cb5fa6c183091fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3963fa29050653d1706222d33734c4b5f2a17919
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210517"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318640"
 ---
 # <a name="proto"></a>PROTO
 
-原型的函式或程序。 您可以呼叫此函式原型 PROTO 指示詞所使用[INVOKE](invoke.md)指示詞。
+原型函數或程式。 您可以使用[INVOKE](invoke.md)指示詞，透過 PROTO 指示詞呼叫函數原型。
 
 ## <a name="syntax"></a>語法
 
-> *label* **PROTO** \[*distance*] \[*langtype*] \[__,__ \[*parameter*]__:__*tag*] ...
+> *標籤* **PROTO** ⟦*距離*⟧ *⟦ language-類型*⟧⟦ __，__ ⟦*參數*⟧ __：__ *標記*.。。⟧
 
 ### <a name="parameters"></a>參數
 
-*label*<br/>
-原型的函式的名稱。
+*標籤*\
+原型函式的名稱。
 
-*distance*<br/>
-（選擇性）16 位元記憶體中模型中使用覆寫預設值，並指出**NEAR**或是**FAR**呼叫。
+*距離*（僅限32位 MASM）。\
+選擇性在16位記憶體模型中用來覆寫預設值，並指出**接近**或**遠**的呼叫。
 
-*langtype*<br/>
-（選擇性）設定程序和公用符號的呼叫和命名慣例。 支援的慣例如下：
+*語言類型*（僅限32位 MASM）。\
+選擇性設定程式和公用符號的呼叫和命名慣例。 支援的慣例如下：
 
-- 32 位元**一般**模型：**C**， **STDCALL**
+- 32位**平面**模型： **C**、 **STDCALL**
 
-- 16 位元的模型：**C**， **BASIC**， **FORTRAN**， **PASCAL 命名法**， **SYSCALL**， **STDCALL**
+- 16位模型： **C**、**基本**、 **FORTRAN**、 **PASCAL**、 **SYSCALL**、 **STDCALL**
 
-*parameter*<br/>
-函式參數的選擇性名稱。
+*參數*\
+函數參數的選擇性名稱。
 
-*tag*<br/>
-函式參數的型別。
+*標記*\
+函數參數的類型。
 
-*參數*並*標記*參數可能會出現許多次，一次的每個傳遞的引數。
+*參數*和*標記*參數可能會多次出現，每個傳遞的引數一次。
 
 ## <a name="example"></a>範例
 
-這個範例會示範**PROTO**名為函式宣告`addup3`使用**NEAR**呼叫程序呼叫，並使用的 16 位元模型預設值會覆寫**C**呼叫慣例的 stack 參數和傳回值。 它會採用兩個引數， **WORD**並**VARARG**。
+這個範例會顯示名為 `addup3` 之函式的**PROTO**宣告，此函式會使用**接近**呼叫來覆寫程序呼叫的16位模型預設值，並使用堆疊參數和傳回值的**C**呼叫慣例。 它接受兩個引數：一個**單字**和一個**VARARG**。
 
 ```MASM
 addup3 PROTO NEAR C, argcount:WORD, arg1:VARARG
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](directives-reference.md)<br/>
-[.模型參考](dot-model.md)<br/>
+指示詞[參考](directives-reference.md)\
+[.模型參考](dot-model.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -2,12 +2,12 @@
 title: Boxing (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: 3c281229b509ef72d37400b2088a6663be1afe42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90c5af31efc6523683227dbf54c85390bc98510a
+ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257956"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70740671"
 ---
 # <a name="boxing-ccx"></a>Boxing (C++/CX)
 
@@ -19,9 +19,9 @@ ms.locfileid: "62257956"
 
 [!code-cpp[cx_boxing#01](../cppcx/codesnippet/CPP/cx_boxing/class1.cpp#01)]
 
-### <a name="using-platformiboxt-to-support-nullable-value-types"></a>使用 platform:: ibox\<T > 以支援可為 null 的實值型別
+### <a name="using-platformiboxt-to-support-nullable-value-types"></a>使用 Platform：： IBox\<T > 支援可為 null 的實數值型別
 
-C# 和 Visual Basic 支援可為 null 的實值類型概念。 在C++//CX 中，您可以使用`Platform::IBox<T>`公開支援可為 null 的實值型別參數的公用方法的型別。 下列範例顯示C++/CX 公用方法會傳回 null 時，C#呼叫端傳遞 null 給其中一個引數。
+C# 和 Visual Basic 支援可為 null 的實值類型概念。 在C++/cx 中，您可以使用`Platform::IBox<T>`類型來公開支援可為 null 的實數值型別參數的公用方法。 下列範例顯示的C++/cx 公用方法會在C#呼叫端傳遞 null 給其中一個引數時傳回 null。
 
 [!code-cpp[cx_boxing#02](../cppcx/codesnippet/CPP/cx_boxing/class1.h#02)]
 
@@ -40,5 +40,5 @@ C# 和 Visual Basic 支援可為 null 的實值類型概念。 在C++//CX 中，
 
 [類型系統 (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
 [轉型 (C++/CX)](../cppcx/casting-c-cx.md)<br/>
-[視覺化C++語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[C++/CX 語言參考](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [命名空間參考](../cppcx/namespaces-reference-c-cx.md)

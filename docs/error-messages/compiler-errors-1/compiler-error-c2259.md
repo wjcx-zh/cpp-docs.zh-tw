@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 403d674eae696eb42a837aef9d6e97c4b5b8f6c2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447390"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74758784"
 ---
 # <a name="compiler-error-c2259"></a>編譯器錯誤 C2259
 
-'class': 無法具現化抽象類別
+' class '：無法具現化抽象類別
 
-程式碼會宣告一個抽象類別或結構的執行個體。
+程式碼會宣告抽象類別或結構的實例。
 
-您無法執行個體化的類別或結構，具有一或多個純虛擬函式。 若要具現化衍生類別的物件，衍生的類別必須覆寫每個純虛擬函式。
+您無法具現化具有一或多個純虛擬函式的類別或結構。 若要具現化衍生類別的物件，衍生的類別必須覆寫每個純虛擬函式。
 
-如需詳細資訊，請參閱 <<c0> [ 隱含抽象類別](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。
+如需詳細資訊，請參閱[隱含抽象類別](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)。
 
-下列範例會產生 C2259:
+下列範例會產生 C2259：
 
-```
+```cpp
 // C2259.cpp
 // compile with: /c
 class V {
@@ -42,19 +42,19 @@ A a;  // C2259, A inherits func() as pure virtual
 B b;  // OK, B defines func()
 ```
 
-當您衍生自介面，並實作介面方法衍生類別中具有非公用的存取權限時，您可能會收到 C2259。  這是因為編譯器會預期要具有公用存取的衍生類別中實作的介面方法。 當您實作更嚴格的存取權限的介面成員函式時，編譯器不會考慮要在介面中，依序讓抽象類別衍生的類別定義的介面方法的實作。
+每當您從介面衍生，並在衍生類別中使用 public 以外的存取權限來執行介面方法時，您可能會收到 C2259。  之所以會發生這種情況，是因為編譯器預期衍生類別中所實的介面方法具有公用存取權。 當您針對具有更嚴格存取權限的介面來執行成員函式時，編譯器不會將它們視為介面中定義的介面方法的實作為，而使衍生類別成為抽象類別。
 
-有兩個可能的因應措施的問題：
+此問題有兩種可能的因應措施：
 
-- 將存取權限設為公用之實作的方法。
+- 將存取權限公開給已執行的方法。
 
-- 使用衍生類別中實作的介面方法的範圍解析運算子，來實作的方法使用限定名稱的介面名稱。
+- 將範圍解析運算子用於衍生類別中所實的介面方法，以使用介面的名稱來限定已執行的方法名稱。
 
-C2259 也會導致一致性所進行工作，在 Visual Studio 2005 裡 **/zc: wchar_t**現在預設為開啟。 在此情況下，C2599 可以解析由以進行編譯 **/zc: wchar_t-**，以取得此行為，從先前的版本，或最好是藉由更新您的型別，因此它們彼此相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
+C2259 也可能會因為 Visual Studio 2005 中所執行的一致性工作而發生， **/zc： wchar_t**現在預設為開啟。 在此情況下，您可以藉由使用 **/zc： wchar_t-** 來進行編譯，以從舊版取得行為，或最好是藉由更新您的類型，使其相容。 如需詳細資訊，請參閱 [/Zc:wchar_t (wchar_t 是原生類型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)。
 
-下列範例會產生 C2259:
+下列範例會產生 C2259：
 
-```
+```cpp
 // C2259b.cpp
 // compile with: /c
 #include <windows.h>
@@ -90,9 +90,9 @@ public:
 MyClass4 y;
 ```
 
-下列範例會產生 C2259:
+下列範例會產生 C2259：
 
-```
+```cpp
 // C2259c.cpp
 // compile with: /clr
 interface class MyInterface {

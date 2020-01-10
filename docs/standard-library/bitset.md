@@ -7,24 +7,24 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: 5de13e66523ee5a5dbcb4c2c54d38037909a4c95
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e017cad251f57cb477b0bf711cdd6243d7fd9893
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449698"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689921"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
-定義樣板類別位元集，以及兩個代表和操作固定大小位元序列的支援樣板函式。
+定義類別樣板 bitset 和兩個支援的範本函式，以表示和操作固定大小的位序列。
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<bitset>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -40,9 +40,9 @@ ms.locfileid: "68449698"
 
 |||
 |-|-|
-|[bitset](../standard-library/bitset-class.md)|這個樣板類別所描述的物件類型，可儲存由固定位元數所組成的序列，以提供精簡的方式，來保留一組項目或條件的旗標。|
+|[bitset](../standard-library/bitset-class.md)|類別樣板描述的物件類型，會儲存由固定位數所組成的序列，以提供精簡的方式來保留一組專案或條件的旗標。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

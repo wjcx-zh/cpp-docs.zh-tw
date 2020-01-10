@@ -1,12 +1,12 @@
 ---
 title: _ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbckata
 - _ismbchira_l
 - _ismbchira
 - _ismbckata_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ismbckata_l
 - _ismbckata_l
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13f66c7450e05240f8bad6034bd56f5da6de20c0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286729"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953876"
 ---
-# <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
+# <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l
 
 **字碼頁 932 特定函式**
 
@@ -83,18 +86,18 @@ int _ismbckata_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應 **_ismbb**常式的傳回值。
 
 ## <a name="remarks"></a>備註
 
 這些函式每一個都會測試指定的多位元組字元是否符合指定的條件。
 
-使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 |常式傳回的值|測試條件 (限字碼頁 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|雙位元組平假名：0x829F<=*c*<=0x82F1.|
-|**_ismbchira_l**|雙位元組平假名：0x829F<=*c*<=0x82F1.|
+|**_ismbchira**|雙位元組平假名：0X829f< < =*c*< = 0x82F1。|
+|**_ismbchira_l**|雙位元組平假名：0X829f< < =*c*< = 0x82F1。|
 |**_ismbckata**|雙位元組片假名：0x8340<=*c*<=0x8396.|
 |**_ismbckata_l**|雙位元組片假名：0x8340<=*c*<=0x8396.|
 

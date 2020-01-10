@@ -4,14 +4,14 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7bd6b2d3d716ba25999388d44e7bd5a8d0750eb5
+ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240735"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127205"
 ---
-# <a name="filesystemerror-class"></a>filesystem_error 類別
+# <a name="filesystem_error-class"></a>filesystem_error 類別
 
 擲回所有例外狀況的基底類別，以報告低階系統溢位。
 
@@ -23,7 +23,7 @@ class filesystem_error    : public system_error;
 
 ## <a name="remarks"></a>備註
 
-此類別可作為擲回之所有例外狀況的基底類別，以在 \<filesystem> 中回報錯誤。 它會儲存類型的物件`string`，稱為`mymesg`這裡有展銷的目的。 它也會儲存兩個物件的型別`path`，稱為`mypval1`和`mypval2`。
+此類別可作為擲回之所有例外狀況的基底類別，以在 \<filesystem> 中回報錯誤。 它會針對展示的目的`string`，儲存`mymesg`類型為的物件，在這裡稱為。 它也會儲存兩個類型`path`的物件`mypval1` ， `mypval2`稱為和。
 
 ## <a name="members"></a>成員
 
@@ -31,7 +31,7 @@ class filesystem_error    : public system_error;
 
 |||
 |-|-|
-|[filesystem_error](#filesystem_error)|建構`filesystem_error`訊息。|
+|[filesystem_error](#filesystem_error)|建立`filesystem_error`訊息。|
 
 ### <a name="functions"></a>函式
 
@@ -47,9 +47,9 @@ class filesystem_error    : public system_error;
 
 **命名空間：** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error
+## <a name="filesystem_error"></a>filesystem_error
 
-第一個建構函式會建構其訊息從*what_arg*並*ec*。 第二個建構函式也會建構其訊息從*pval1*，其儲存在`mypval1`。 第三個建構函式也會建構其訊息從*pval1*，其儲存在`mypval1`，以及從*pval2*，其儲存在`mypval2`。
+第一個函式會從*what_arg*和*ec*來構造其訊息。 第二個函式也會從它儲存在中`mypval1`的 pval1，來建立它的訊息。 第三個函式也會從*pval1*（它儲存在`mypval1`中，以及從*pval2*儲存在中`mypval2`），來構造其訊息。
 
 ```cpp
 filesystem_error(const string& what_arg,
@@ -70,7 +70,7 @@ filesystem_error(const string& what_arg,
 *what_arg*\
 指定的訊息。
 
-*ec*\
+*歐洲*\
 指定的錯誤碼。
 
 *mypval1*\
@@ -79,7 +79,7 @@ filesystem_error(const string& what_arg,
 *mypval2*\
 進一步指定的訊息參數。
 
-## <a name="path1"></a> 路徑 1
+## <a name="path1"></a>path1
 
 此成員函式會傳回 `mypval1`
 
@@ -87,7 +87,7 @@ filesystem_error(const string& what_arg,
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> 路徑 2
+## <a name="path2"></a>path2
 
 此成員函式會傳回 `mypval2`
 
@@ -95,9 +95,9 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> 項目
+## <a name="what"></a>我
 
-此成員函式傳回的指標`NTBS`中，最好是從組成`runtime_error::what()`， `system_error::what()`， `mymesg`， `mypval1.native_string()`，和`mypval2.native_string()`。
+此成員函式會傳回的指標`NTBS`，最好是`runtime_error::what()`由、 `system_error::what()`、 `mymesg`、 `mypval1.native_string()`和`mypval2.native_string()`所組成。
 
 ```cpp
 const char *what() const noexcept;

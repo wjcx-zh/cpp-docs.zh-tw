@@ -1,6 +1,6 @@
 ---
-title: 伺服器：實作就地編輯框架 Windows
-ms.date: 11/04/2016
+title: 伺服器：執行就地框架視窗
+ms.date: 09/09/2019
 helpviewer_keywords:
 - frame windows [MFC], implementing
 - OLE server applications [MFC], frame windows
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc5439003b7c891ac3f4000c9b7820746aec4c8d
+ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62307948"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70907533"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>伺服器：實作就地編輯框架 Windows
+# <a name="servers-implementing-in-place-frame-windows"></a>伺服器：執行就地框架視窗
 
-本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 除了遵循本文中所述的程序，您可以使用現有的就地框架視窗類別，從應用程式精靈產生應用程式或提供具有視覺效果的範例C++。
+本文說明如果不使用應用程式精靈來建立您的伺服器應用程式，則必須實作自己的視覺化編輯伺服器應用程式的就地框架視窗。 若不遵循本文中所述的程式，您可以從應用程式精靈產生的應用程式或 Visual C++提供的範例，使用現有的就地框架視窗類別。
 
 #### <a name="to-declare-an-in-place-frame-window-class"></a>宣告就地框架視窗類別
 
 1. 從 `COleIPFrameWnd` 衍生就地框架視窗類別。
 
-   - 在類別標頭檔中使用 DECLARE_DYNCREATE 巨集。
+   - 在您的類別標頭檔中使用 DECLARE_DYNCREATE 宏。
 
-   - 在您的類別實作 (.cpp) 檔案中使用 IMPLEMENT_DYNCREATE 巨集。 如此可讓架構建立此類別物件。
+   - 在您的類別執行（.cpp）檔案中使用 IMPLEMENT_DYNCREATE 宏。 如此可讓架構建立此類別物件。
 
 1. 宣告框架視窗類別中的 `COleResizeBar` 成員。 如果您要支援在伺服器應用程式中就地調整大小，就必須如此。
 
-   宣告`OnCreate`訊息處理常式 (使用**屬性**視窗)，然後呼叫`Create`針對您`COleResizeBar`成員，如果您已定義它。
+   宣告訊息處理常式（使用[類別 Wizard](reference/mfc-class-wizard.md)），並針對您`Create` `COleResizeBar`的成員呼叫（如果已定義）。 `OnCreate`
 
 1. 如果您有工具列，請在框架視窗類別中宣告 `CToolBar` 成員。
 
@@ -43,11 +43,11 @@ ms.locfileid: "62307948"
 
 1. 在您的應用程式類別的 `InitInstance` 中，呼叫文件樣板物件的 `SetServerInfo` 函式以指定用來開啟和就地編輯的資源與就地框架視窗。
 
-中的一系列的函式呼叫**如果**陳述式會建立工具列資源從提供的伺服器。 此時，工具列是容器的視窗階層架構的一部分。 由於這個工具列是衍生自 `CToolBar`，除非您變更擁有者，否則會將其訊息傳遞給至擁有者、容器應用程式的框架視窗。 因此對 `SetOwner` 的呼叫是必要的。 此呼叫會將傳送命令的視窗變更為伺服器的就地框架視窗，使訊息傳遞至伺服器。 如此可讓伺服器回應所提供之工具列的作業。
+**If**語句中的函式呼叫系列會從伺服器提供的資源建立工具列。 此時，工具列是容器的視窗階層架構的一部分。 由於這個工具列是衍生自 `CToolBar`，除非您變更擁有者，否則會將其訊息傳遞給至擁有者、容器應用程式的框架視窗。 因此對 `SetOwner` 的呼叫是必要的。 此呼叫會將傳送命令的視窗變更為伺服器的就地框架視窗，使訊息傳遞至伺服器。 如此可讓伺服器回應所提供之工具列的作業。
 
-工具列點陣圖的 ID 應該與在您的伺服器應用程式中所定義的其他就地資源相同。 請參閱[功能表和資源：伺服器加入](../mfc/menus-and-resources-server-additions.md)如需詳細資訊。
+工具列點陣圖的 ID 應該與在您的伺服器應用程式中所定義的其他就地資源相同。 請[參閱功能表和資源：新增](../mfc/menus-and-resources-server-additions.md)伺服器以取得詳細資料。
 
-如需詳細資訊，請參閱 < [COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)， [COleResizeBar](../mfc/reference/coleresizebar-class.md)，並[Coleresizebar](../mfc/reference/cdoctemplate-class.md#setserverinfo)中*類別庫參考*.
+如需詳細資訊，請參閱*類別庫參考*中的[coleipframewnd 來衍生](../mfc/reference/coleipframewnd-class.md)、 [COleResizeBar](../mfc/reference/coleresizebar-class.md)和[CDocTemplate：： SetServerInfo](../mfc/reference/cdoctemplate-class.md#setserverinfo) 。
 
 ## <a name="see-also"></a>另請參閱
 

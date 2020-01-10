@@ -1,36 +1,37 @@
 ---
 title: .IF
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .IF
 helpviewer_keywords:
 - .IF directive
 ms.assetid: dccc7615-8fc7-4829-9f39-0ee405f6c1e3
-ms.openlocfilehash: cf9c594d843c937dd2191bee2a7cebadbc615c82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6992ec8b151a83b3f9fa920997845c20caf0476d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185263"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317743"
 ---
-# <a name="if"></a>.IF
+# <a name="if-32-bit-masm"></a>.IF （32-bit MASM）
 
-產生測試的程式碼`condition1`(例如，AX > 7)，並執行*陳述式*如果條件為 true。
+產生測試*condition1*的程式碼（例如，AX > 7），並在該條件為 true 時執行*語句*。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .如果 condition1<br/>
-> 陳述式<br/>
-> [[.ELSEIF condition2<br/>
-> 陳述式]]<br/>
-> [[.ELSE<br/>
-> 陳述式]]<br/>
-> .ENDIF
+> **.如果** *condition1*\
+> *語句*\
+> ⟦ **。ELSEIF** *condition2*\
+> *語句*⟧ \
+> ⟦ **。否則**\
+> *語句*⟧ \
+> **.ENDIF**
 
 ## <a name="remarks"></a>備註
 
-如果[。其他](../../assembler/masm/dot-else.md)如下所示，它的陳述式會執行，如果原始的條件為 false。 請注意，在執行階段評估條件。
+如果為，則為[。否則](dot-else.md)，如果原始條件為 false，則會執行它的語句。 請注意，在執行時間會評估條件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

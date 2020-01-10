@@ -1,36 +1,35 @@
 ---
-title: raw_dispinterfaces
-ms.date: 11/04/2016
+title: raw_dispinterfaces 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - raw_dispinterfaces
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73c58b72b27de8dcf96e8ab9464d0fb6bce12b66
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179837"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216220"
 ---
-# <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C++特定**
+# <a name="raw_dispinterfaces-import-attribute"></a>raw_dispinterfaces 匯入屬性
 
-告知編譯器来產生低階包裝函式的呼叫 dispinterface 方法和屬性`IDispatch::Invoke`並傳回的 HRESULT 錯誤碼。
+**C++特殊**
+
+告訴編譯器針對分配介面方法, 以及呼叫`IDispatch::Invoke`和傳回 HRESULT 錯誤碼的屬性, 產生低層級的包裝函式。
 
 ## <a name="syntax"></a>語法
 
-```
-raw_dispinterfaces
-```
+> **#import***類型-程式庫***raw_dispinterfaces**
 
 ## <a name="remarks"></a>備註
 
-如果沒有指定此屬性，只會產生高階包裝函式，一旦失敗就會擲回 C++ 例外狀況。
+如果未指定此屬性, 則只會產生高階包裝函式, 這C++會在失敗時擲回例外狀況。
 
 **結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

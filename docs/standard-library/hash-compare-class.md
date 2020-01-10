@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - hash_compare class
 ms.assetid: d502bb59-de57-4585-beb9-00e3a998c0af
-ms.openlocfilehash: 399b412c41128f513cf01d1e034bad2bbc5ef79f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 4fb44a371630a66275f6ef59a0bf66b4cb73a71f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448800"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689553"
 ---
-# <a name="hashcompare-class"></a>hash_compare 類別
+# <a name="hash_compare-class"></a>hash_compare 類別
 
-此範本類別描述的物件可供任一雜湊關聯容器 (hash_map、hash_multimap、hash_set 或 hash_multiset) 作為預設 **Traits** 參數物件，用來排序及雜湊處理它們所包含的元素。
+類別樣板描述可供任何雜湊關聯容器（hash_map、hash_multimap、hash_set 或 hash_multiset）使用的物件，做為預設的**特性**參數物件，以排序及雜湊其包含的元素。
 
 ## <a name="syntax"></a>語法
 
@@ -23,15 +23,15 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 ## <a name="remarks"></a>備註
 
-每個雜湊關聯容器都會儲存類型`Traits`的雜湊特性物件 (範本參數)。 您可以選擇性地覆寫特定函式與物件，從特製的 hash_compare 衍生類別，或如果您符合特定的基本需求，則可以提供您自己這個類別的版本。 具體而言, 針對類型`hash_compare<Key, Traits>`的物件 hash_comp, 上述的容器需要下列行為:
+每個雜湊關聯容器都會儲存類型 `Traits` （範本參數）的雜湊特性物件。 您可以選擇性地覆寫特定函式與物件，從特製的 hash_compare 衍生類別，或如果您符合特定的基本需求，則可以提供您自己這個類別的版本。 具體而言，針對 `hash_compare<Key, Traits>` 類型的物件 hash_comp，上述的容器需要下列行為：
 
-- 對於類型`key` `size_t`  `key`的所有值, 呼叫 hash_comp () 會當做雜湊函式, 此函式會產生類型值的分佈。 `Key` hash_compare 所提供的函式會傳回 `key`。
+- 對於 `Key` 類型 `key` 的所有值，呼叫**hash_comp**（`key`）會當做雜湊函式，此函式會產生 `size_t` 類型值的分佈。 hash_compare 所提供的函式會傳回 `key`。
 
-- 針對序列`key2`中`key1`的任何`Key`類型值, 而且具有相同的雜湊值 (雜湊函式所傳回的值) , hash_comp`key2`( `key1`,) 為 false。 函數必須對類型`Key`的值加總排序。 Hash_compare 所提供的函式會傳回`key2`comp `key1`( `,` ,), 其中*comp*是類型`Traits`的預存物件, 您可以在建立物件 hash_comp 時加以指定。 若為預設`Traits`參數類型`less<Key>`, 排序索引鍵永遠不會減少值。
+- 針對在序列中 `key2` 之前 `Key` 的任何值 `key1`，並具有相同的雜湊值（雜湊函式所傳回的值）， **hash_comp**（`key2`，`key1`）為 false。 函數必須對 `Key` 類型的值加總排序。 Hash_compare 所提供的函式會傳回*comp*（`key2`，`key1`） `,` 其中， *comp*是類型 `Traits` 的預存物件，您可以在建立 hash_comp 物件時加以指定。 針對預設 `Traits` 參數類型 `less<Key>`，排序索引鍵永遠不會減少值。
 
-- 整數常數`bucket_size`會針對每個「值區」 (雜湊表專案) 指定容器應嘗試不要超過的平均元素數目。 此數目必須大於零。 hash_compare 所提供的值為 4。
+- 整數常數 `bucket_size` 指定每個「值區」（雜湊表專案）的平均元素數，容器應該不會嘗試超過此數目。 此數目必須大於零。 hash_compare 所提供的值為 4。
 
-- 整數常數`min_buckets`會指定要在雜湊表中維持的最小值區數目。 此數目必須是二次方且大於零。 hash_compare 所提供的值為 8。
+- 整數常數 `min_buckets` 指定要在雜湊表中維持的最小值區數目。 此數目必須是二次方且大於零。 hash_compare 所提供的值為 8。
 
 ## <a name="example"></a>範例
 
@@ -43,7 +43,7 @@ class hash_compare { Traits comp; public: const size_t bucket_size = 4; const si
 
 **命名空間：** stdext
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

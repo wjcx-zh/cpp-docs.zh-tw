@@ -21,14 +21,14 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458995"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72685860"
 ---
-# <a name="studenttdistribution-class"></a>student_t_distribution 類別
+# <a name="student_t_distribution-class"></a>student_t_distribution 類別
 
 產生學生的 *t* 分佈。
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述產生使用者指定之整數類型值的散發, 或如果沒有提供, 則為**double**類型 (根據學生的*t*分佈散發)。 下表提供各個成員的文章連結。
+類別樣板描述產生使用者指定之整數類型值的分佈，或如果沒有提供，則為**double**類型，根據學生的*t*分佈散發。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -78,7 +78,7 @@ public:
 
 屬性函式 `n()` 會傳回儲存的分佈參數 `n` 的值。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 如需學生的 *t* 分佈的詳細資訊，請參閱 Wolfram MathWorld 文章：[學生的 t 分佈 (英文)](http://mathworld.wolfram.com/Studentst-Distribution.html)。
 
@@ -161,7 +161,7 @@ Distribution for 10 samples:
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 `n` 分佈參數。
 
-*parm*\
+*parm* \
 用於建構分佈的參數封裝。
 
 ### <a name="remarks"></a>備註
@@ -208,7 +208,7 @@ struct param_type {
 *n*\
 `n` 分佈參數。
 
-*再*\
+*right* \
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -217,6 +217,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

@@ -1,11 +1,11 @@
 ---
-title: tanh、 tanhf、 tanhl
+title: tanh、tanhf、tanhl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tanh
 - tanhf
 - tanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tanh
 - tanhf
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d249768ed26a55e639cced55bae6b923dbf521b
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258313"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957538"
 ---
-# <a name="tanh-tanhf-tanhl"></a>tanh、 tanhf、 tanhl
+# <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
 計算雙曲正切值。
 
@@ -61,21 +64,21 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Tanh**函式會傳回的雙曲正切*x*。 不會傳回錯誤。
+**Tanh**函式會傳回*x*的雙曲正切函數。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|**Matherr**例外狀況|
+|Input|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**tanh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **tanh**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**tanh**的多載。 在 C 程式中， **tanh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C)|
 |-------------|---------------------|-|
-|**tanh**， **tanhf**， **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

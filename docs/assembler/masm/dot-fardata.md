@@ -1,26 +1,27 @@
 ---
 title: .FARDATA
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .FARDATA
 helpviewer_keywords:
 - .FARDATA directive
 ms.assetid: 4458ef66-5626-4607-bf83-71637b459f77
-ms.openlocfilehash: 2be434171c34f089f78bb662a6ffadf51cba73ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7f6328ea21c70fca8d15477b1e7ccb365132b22
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204080"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317756"
 ---
-# <a name="fardata"></a>.FARDATA
+# <a name="fardata-32-bit-masm"></a>.FARDATA （32-位 MASM）
 
-當搭配[。模型](../../assembler/masm/dot-model.md)，開始為初始化的資料遠的資料區段 (區段名稱 FAR_DATA 或*名稱*)。
+與搭配使用時[。模型](dot-model.md)，針對已初始化的資料（區段名稱 FAR_DATA 或*名稱*）啟動最多的資料區段。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .FARDATA [[name]]
+> **.FARDATA** ⟦*name*⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

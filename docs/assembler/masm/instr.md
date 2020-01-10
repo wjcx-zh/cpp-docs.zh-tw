@@ -1,30 +1,31 @@
 ---
 title: INSTR
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - InStr
 helpviewer_keywords:
 - INSTR directive
 ms.assetid: fc37f6a2-3c95-47b2-b6bb-1066edd25994
-ms.openlocfilehash: be3dda768d153e764242f16cd6500e39bdda7923
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4af7af52a80b06b341d883d01c7fb8e03eccb8a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184550"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313024"
 ---
 # <a name="instr"></a>INSTR
 
-尋找第一個出現*textitem2*中*textitem1*。
+在*textitem1*中尋找第一個出現的*textitem2* 。
 
 ## <a name="syntax"></a>語法
 
-> *名稱*INSTR [[*位置*、]] *textitem1*， *textitem2*
+> *name* **INSTR** ⟦*position* __，__ ⟧ *textitem1* __，__ *textitem2*
 
 ## <a name="remarks"></a>備註
 
-起始*位置*是選擇性的。 每個文字項目可以是常值的字串常數前面加上`%`，或巨集函式所傳回的字串。
+開始*位置*是選擇性的。 每個文字專案可以是常值字串、前面加上 **%** 的常數，或宏函數所傳回的字串。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

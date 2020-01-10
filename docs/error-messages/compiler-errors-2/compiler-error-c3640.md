@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3640
 ms.assetid: fcc56894-0f98-48af-8561-3bf7c7b2b93f
-ms.openlocfilehash: 5d9becbdfad2afc8940a9e1ded08a15842607e4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f353aff42afdee649104d9f578c9061d236d1f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385923"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742479"
 ---
 # <a name="compiler-error-c3640"></a>編譯器錯誤 C3640
 
-'member': 必須定義區域類別的參考或虛擬成員函式
+' member '：必須定義區域類別的參考或虛擬成員函式
 
-編譯器需要特定的函式定義。
+編譯器需要定義某些函數。
 
-下列範例會產生 C3640:
+下列範例會產生 C3640：
 
-```
+```cpp
 // C3640.cpp
 void f()
 {

@@ -1,26 +1,27 @@
 ---
 title: '@CatStr'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@CatStr'
 helpviewer_keywords:
 - '@CatStr symbol'
 ms.assetid: 01fcc590-1ec2-42f6-b868-ed0433297c26
-ms.openlocfilehash: 7c314ee362132da75a6024b76b011963fe6ce3db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d244cb678c082515713d83716f8752000f9ccdea
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166746"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316456"
 ---
-# <a name="catstr"></a>@CatStr
+# <a name="catstr"></a>\@CatStr
 
-串連一或多個字串的巨集函式。 傳回的字串。
+串連一或多個字串的宏函式。 傳回字串。
 
 ## <a name="syntax"></a>語法
 
-> @CatStr( string1 [[, string2...]] )
+> **\@CatStr （** *string1* ⟦ __，__ *string2*.。。⟧ **）**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

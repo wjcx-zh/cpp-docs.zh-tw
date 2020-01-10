@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 26bfc3bb9892486353f55a71cfd86a17f2de98b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516583"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311831"
 ---
 # <a name="event--ccli-and-ccx"></a>event  (C++/CLI 與 C++/CX)
 
@@ -75,7 +75,7 @@ modifiereventdelegate^ event_name
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[事件 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755799.aspx) \(部分機器翻譯\)。
+如需詳細資訊，請參閱[事件 (C++/CX)](../cppcx/events-c-cx.md) \(部分機器翻譯\)。
 
 如果您想要加入然後移除事件處理常式，您必須儲存加入作業所傳回的 EventRegistrationToken 結構。 然後在移除作業中，您必須使用儲存的 EventRegistrationToken 結構來識別要移除的事件處理常式。
 
@@ -131,7 +131,7 @@ modifiereventdelegate^ event_name
 以委派類型成員形式的事件儲存體，是由資料成員事件的編譯器建立。  事件資料成員必須在類別內宣告。 這也稱為 trivial 事件 (請參閱以下程式碼範例)。
 
 *事件區塊*<br/>
-事件區塊可讓您透過實作 add、remove 和 raise 方法來自訂 add、remove 和 raise 方法的行為。 add、remove 和 raise 方法的簽章必須符合委派的簽章。  事件區塊事件不是資料成員，且用做資料成員的任何使用方式將產生編譯器錯誤。
+事件區塊可讓您藉由實作 add、remove 和 raise 方法來自訂 add、remove 和 raise 方法的行為。 add、remove 和 raise 方法的簽章必須符合委派的簽章。  事件區塊事件不是資料成員，且用做資料成員的任何使用方式將產生編譯器錯誤。
 
 事件處理常式的傳回類型必須符合委派的傳回類型。
 

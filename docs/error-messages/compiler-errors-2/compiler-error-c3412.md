@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3412
 ms.assetid: aa4dd43b-54ce-4cda-85c1-1a77dd6e34fa
-ms.openlocfilehash: 7c16ffa37f4d7192956afae26c825b63add1bfdd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ad241b656464746333760cfcbc134c91e49bf44e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173453"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761412"
 ---
 # <a name="compiler-error-c3412"></a>編譯器錯誤 C3412
 
-'template': 無法特製化目前的領域中的範本
+' template '：無法在目前的範圍中特殊化範本
 
-在類別範圍內，只能在全域或命名空間範圍內，不能特製化樣板。
+範本不能在類別範圍中特製化，只會在全域或命名空間範圍中。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3412。
 
-```
+```cpp
 // C3412.cpp
 template <class T>
 struct S {
@@ -36,7 +36,7 @@ struct S {
 
 下列範例顯示可能的解決方式。
 
-```
+```cpp
 // C3412b.cpp
 // compile with: /c
 template <class T>

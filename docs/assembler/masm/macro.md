@@ -1,32 +1,38 @@
 ---
 title: MACRO
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - MACRO
 helpviewer_keywords:
 - MACRO directive
 ms.assetid: 89434f7c-bc2c-4e91-8940-fe2db8785233
-ms.openlocfilehash: 321f8472cd1622716af1114deefbee70e1982724
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c6b0aefae856da449da574669e8475122c7556
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202865"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312946"
 ---
 # <a name="macro"></a>MACRO
 
-呼叫的巨集區塊會將標示*名稱*，並建立*參數*巨集呼叫時，傳遞引數的預留位置。
+標記名為*name*的宏區塊，並為呼叫宏時所傳遞的引數建立*參數*預留位置。
 
 ## <a name="syntax"></a>語法
 
-> *name* MACRO [[*parameter* [[:REQ | :=*default* | :VARARG]] ]] ...<br/>
-> *statements*<br/>
-> ENDM [[*值*]]
+> *name***宏**⟦*parameter* ⟦ **：需求**|： =*default* | *args* **： VARARG**⟧ .。。⟧\
+> *語句*\
+⟦**GOTO** ：*macrolabelId*⟧ \
+> ⟦**EXITM**⟧ \
+> **ENDM** ⟦*value*⟧
 
 ## <a name="remarks"></a>備註
 
-巨集函式會傳回*值*呼叫的陳述式。
+宏函式會將*值*傳回給呼叫語句。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[GOTO （MASM）](goto-masm.md)\
+[ENDM](endm.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)
+

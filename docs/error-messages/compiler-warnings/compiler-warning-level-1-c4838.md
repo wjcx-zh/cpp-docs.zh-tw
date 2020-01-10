@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 （層級 1） C4838
+title: 編譯器警告（層級1） C4838
 ms.date: 11/04/2016
 f1_keywords:
 - C4838
 helpviewer_keywords:
 - C4838
 ms.assetid: fea07924-5feb-4ed4-99b5-1a8c41d28db6
-ms.openlocfilehash: dcb7062c751320a9f9c612b42caf6d018047d8d2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 552c7d9e868ae531b1ff2ef20db7adfa813a4fbe
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380834"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051226"
 ---
-# <a name="compiler-warning-level-1-c4838"></a>編譯器警告 （層級 1） C4838
+# <a name="compiler-warning-level-1-c4838"></a>編譯器警告（層級1） C4838
 
-從 'type_1' 轉換成 'type_2' 必須是縮小轉換
+從 ' type_1 ' 轉換為 ' type_2 ' 需要縮小轉換
 
-使用彙總或清單初始化時，找不到隱含的縮小轉換。
+使用匯總或清單初始化時，發現隱含的縮小轉換。
 
-C 語言允許隱含的縮小轉換在指派和初始化，並C++符合如下所示，即使未預期的縮小是許多程式碼錯誤的原因。 若要讓程式碼更安全，C++標準要求的診斷訊息，初始化清單中的縮小轉換發生時。 在視覺效果C++，是診斷[編譯器錯誤 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md)使用統一初始化語法支援從 Visual Studio 2015 開始時。 編譯器會產生警告 C4838 時使用 清單 或 Visual Studio 2013 所支援的彙總初始化語法。
+C 語言允許在指派和初始化中進行隱含縮小轉換， C++並遵循，即使非預期的縮小是造成許多程式碼錯誤的原因也一樣。 為了讓程式碼更安全C++ ，當初始化清單中發生縮小轉換時，標準需要診斷訊息。 在 Visual C++中，使用從 Visual Studio 2015 開始支援的統一初始化語法時，診斷是[編譯器錯誤 C2397](../../error-messages/compiler-errors-1/compiler-error-c2397.md) 。 使用 Visual Studio 2013 所支援的清單或匯總初始化語法時，編譯器會產生警告 C4838。
 
-當您知道已轉換值的可能範圍可放入目標時，縮小轉換可以是沒問題。 在此情況下，您知道多個與編譯器。 若要刻意縮小轉換，讓您自己的意願明確使用靜態轉型。 否則，這則警告訊息幾乎都表示您的程式碼發生錯誤。 您可以藉由確定您初始化的物件具有夠大，無法處理輸入的類型來修正此問題。
+當您知道可能的轉換值範圍可以放在目標中時，縮小轉換可能會很好。 在這種情況下，您所知的不僅僅是編譯器。 如果您刻意進行縮小轉換，請使用靜態轉換，讓您的意圖明確。 否則，此警告訊息幾乎一律會指出您的程式碼中有錯誤。 您可以藉由確定您初始化的物件具有夠大的類型來處理輸入，藉以修正此問題。
 
-下列範例會產生 C4838，並示範修正此問題的一種方法：
+下列範例會產生 C4838，並顯示解決此問題的一種方法：
 
-```
+```cpp
 // C4838.cpp -- C++ narrowing conversion diagnostics
 // Compile by using: cl /EHsc C4838.cpp
 

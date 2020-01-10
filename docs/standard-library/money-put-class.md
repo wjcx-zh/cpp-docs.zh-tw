@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::money_put [C++], do_put
 - std::money_put [C++], put
 ms.assetid: f439fd56-c9b1-414c-95e1-66c918c6eee6
-ms.openlocfilehash: b9dff8a871895eee6774b75ca1c83dca6fd42ff3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: aafa6f9498ee315c25e73833baf3c13d99d36743
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460238"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689308"
 ---
-# <a name="moneyput-class"></a>money_put 類別
+# <a name="money_put-class"></a>money_put 類別
 
-此樣板類別描述可以做為地區設定 facet 的物件，以控制貨幣值轉換為類型 `CharType` 的序列。
+類別樣板描述可以做為地區設定 facet 的物件，以控制貨幣值轉換為 `CharType` 類型的序列。
 
 ## <a name="syntax"></a>語法
 
@@ -37,10 +37,10 @@ class money_put : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
+*CharType* \
 程式內用於編碼地區設定字元的類型。
 
-*OutputIterator*\
+*OutputIterator* \
 貨幣 put 函式將其輸出寫入其中的迭代器類型。
 
 ## <a name="remarks"></a>備註
@@ -53,9 +53,9 @@ class money_put : public locale::facet;
 |-|-|
 |[money_put](#money_put)|`money_put` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[iter_type](#iter_type)|描述輸出迭代器的類型。|
@@ -72,7 +72,7 @@ class money_put : public locale::facet;
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  money_put::char_type
 
@@ -84,7 +84,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型與樣板參數 **CharType** 同義。
+此類型與範本參數 **CharType** 同義。
 
 ## <a name="do_put"></a>  money_put::do_put
 
@@ -108,19 +108,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>參數
 
-*下一個*\
+*下一步*\
 迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*\
+*_Intl* \
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*\
+*_Fill* \
 間距所使用的字元。
 
-*初始值*\
+*val* \
 要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
@@ -129,11 +129,11 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>備註
 
-第一個虛擬的受保護成員函式會產生從*下一個*開始的順序元素, 以從[string_type](#string_type)物件*val*產生貨幣輸出欄位。 由*val*控制的序列必須以一或多個十進位數開頭, 並選擇性地在前面加上負號 (-), 代表數量。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
+第一個虛擬的受保護成員函式會產生從*下一個*開始的順序元素，以從[string_type](#string_type)物件*val*產生貨幣輸出欄位。 由*val*控制的序列必須以一或多個十進位數開頭，並選擇性地在前面加上負號（-），代表數量。 此函式會傳回迭代器，此迭代器指定所產生之貨幣輸出欄位後的第一個元素。
 
-第二個虛擬受保護成員函式的行為與第一個相同, 不同之處在于它會先將*val*轉換成十進位數的序列, 並選擇性地在前面加上負號, 然後再依照上述方式轉換該序列。
+第二個虛擬受保護成員函式的行為與第一個相同，不同之處在于它會先將*val*轉換成十進位數的序列，並選擇性地在前面加上負號，然後再依照上述方式轉換該序列。
 
-貨幣輸出欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class) fac (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 有效呼叫所傳回) 決定。
+貨幣輸出欄位的格式會由 [locale facet](../standard-library/locale-class.md#facet_class) fac (由 [use_facet](../standard-library/locale-functions.md#use_facet) < [moneypunct](../standard-library/moneypunct-class.md)\< **CharType**, **intl**> >( **iosbase**. [getloc](../standard-library/ios-base-class.md#getloc)) 呼叫所傳回) 決定。
 
 尤其是：
 
@@ -191,20 +191,20 @@ explicit money_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs*\
+*_Refs* \
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下:
+*_Refs*參數的可能值和其重要性如下：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
 - 1：物件的存留期必須以手動方式管理。
 
-- \>1: 未定義這些值。
+- \> 1：未定義這些值。
 
-無法提供任何直接範例，因為解構函式受到保護。
+由於解構函式會受到保護，因此沒有直接的範例。
 
 建構函式會以 **locale::** [facet](../standard-library/locale-class.md#facet_class)( `_Refs`) 將其基底物件初始化。
 
@@ -230,19 +230,19 @@ iter_type put(
 
 ### <a name="parameters"></a>參數
 
-*下一個*\
+*下一步*\
 迭代器，定址對象是所插入字串的第一個元素。
 
-*_Intl*\
+*_Intl* \
 布林值，指出序列中預期的貨幣符號類型：如果是國際，即為 **true**，如果是國內，則為 **false**。
 
-*_Iosbase*\
+*_Iosbase* \
 格式旗標，已設定時，表示貨幣符號為選用；否則，必須指定貨幣符號。
 
-*_Fill*\
+*_Fill* \
 間距所使用的字元。
 
-*初始值*\
+*val* \
 要轉換的字串物件。
 
 ### <a name="return-value"></a>傳回值
@@ -291,9 +291,9 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述 [basic_string](../standard-library/basic-string-class.md) 範本類別的特製化，其中此類別的物件可儲存來自來源序列的元素序列。
+此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可從來源序列儲存元素的序列。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [facet 類別](../standard-library/locale-class.md#facet_class)\

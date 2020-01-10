@@ -1,30 +1,31 @@
 ---
 title: IFE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFE
 helpviewer_keywords:
 - IFE directive
 ms.assetid: bac5659d-9d2e-406d-89b7-e05b335ab0fd
-ms.openlocfilehash: b623bc18634b040d928cade7a7529d08b49063a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fc9f55ae65579ba6f600bad48c2439c93556d96
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184619"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313037"
 ---
 # <a name="ife"></a>IFE
 
-授與組件，如果*運算式*為 false (0)。
+如果*expression*為 false （0），則授與元件。
 
 ## <a name="syntax"></a>語法
 
-> IFE 運算式
+> **IFE** *運算式*
 
 ## <a name="remarks"></a>備註
 
-請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
+如需完整語法[，請參閱](if-masm.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

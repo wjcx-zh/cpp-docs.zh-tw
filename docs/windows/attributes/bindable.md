@@ -1,17 +1,17 @@
 ---
-title: 可繫結 (C++ COM 屬性)
+title: 可系C++結（COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.bindable
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a74531a40bcacdae4ef98c292884e7a43fa82fe
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148389"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501830"
 ---
 # <a name="bindable"></a>bindable
 
@@ -25,19 +25,19 @@ ms.locfileid: "62148389"
 
 ## <a name="remarks"></a>備註
 
-**可繫結**C++屬性具有相同的功能[可繫結](/windows/desktop/Midl/bindable)MIDL 屬性。 您可以利用定義的屬性上使用它[propget](propget.md)， [propput](propput.md)，或[propputref](propputref.md)屬性，或者您可以手動定義的可繫結的方法。
+可系結C++屬性的功能與可系[結的](/windows/win32/Midl/bindable) **MIDL 屬性相同**。 您可以在使用[propget](propget.md)、 [propput](propput.md)或[propputref](propputref.md)屬性定義的屬性上使用它，或者您可以手動定義可系結的方法。
 
-下列的 MFC 範例示範如何使用**可繫結**:
+下列 MFC 範例示範如何使用可系**結：**
 
-- [控制項的範例：以 MFC 為基礎的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [控制範例：以 MFC 為基礎的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 - [CIRC 範例：ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [TESTHELP 範例：工具提示與說明的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP 範例：包含工具提示和說明的 ActiveX 控制項](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>範例
 
-下列程式碼會示範如何使用**可繫結**屬性：
+下列程式碼說明如何在**屬性上使用**可系結：
 
 ```cpp
 // cpp_attr_ref_bindable.cpp
@@ -66,8 +66,8 @@ __interface IPropDemo : IDispatch {
 |-|-|
 |**適用於**|介面方法|
 |**可重複**|否|
-|**必要屬性**|None|
-|**無效屬性**|None|
+|**必要屬性**|無|
+|**無效屬性**|無|
 
 如需有關屬性內容的詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。
 

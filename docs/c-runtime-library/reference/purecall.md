@@ -1,9 +1,9 @@
 ---
 title: _purecall
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _purecall
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ntoskrnl.exe
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - purecall
 - _purecall
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _purecall function
 - purecall function
 ms.assetid: 56135d9b-3403-4e22-822d-e714523801cc
-ms.openlocfilehash: df6dde91ccb952e66eb77c841b2b1ace12756b8c
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 5d62ec30731ce26c4683afc88474d4bddb63a697
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446636"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70950160"
 ---
-# <a name="purecall"></a>_purecall
+# <a name="_purecall"></a>_purecall
 
 預設的純虛擬函式呼叫錯誤處理常式。 呼叫純虛擬成員函式時，編譯器會產生程式碼以呼叫此函式。
 
@@ -42,13 +45,13 @@ extern "C" int __cdecl _purecall();
 
 ## <a name="remarks"></a>備註
 
-**_Purecall**函式是 Microsoft 的 Microsoft 特定實作詳細資料C++編譯器。 此函式不是由您的程式碼直接呼叫，而且沒有公用標頭宣告。 因為它是 C 執行階段程式庫的公用匯出，所以會在此進行說明。
+**_Purecall**函式是 microsoft 特有的 microsoft C++編譯器的執行詳細資料。 此函式不是由您的程式碼直接呼叫，而且沒有公用標頭宣告。 因為它是 C 執行階段程式庫的公用匯出，所以會在此進行說明。
 
-呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 編譯器會產生程式碼叫用 **_purecall**錯誤處理常式函式呼叫純虛擬函式時。 根據預設， **_purecall**終止程式。 終止前， **_purecall**函式會叫用 **_purecall_handler**函式在已設定處理程序。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，建立具有的函式 **_purecall_handler**簽章，然後使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)使它成為目前的處理常式。
+呼叫純虛擬函式會產生錯誤，因為它有沒有實作。 呼叫純虛擬函式時，編譯器會產生程式碼來叫用 **_purecall**錯誤處理常式函式。 根據預設， **_purecall**會終止程式。 在終止之前， **_purecall**函式會叫用 **_purecall_handler**函式（如果已為進程設定一個函式）。 您可以為純虛擬函式呼叫安裝您自己的錯誤處理函式，以攔截它們，用於偵錯或報告目的。 若要使用您自己的錯誤處理常式，請建立具有 **_purecall_handler**簽章的函式，然後使用[_set_purecall_handler](get-purecall-handler-set-purecall-handler.md)將它設為目前的處理常式。
 
 ## <a name="requirements"></a>需求
 
-**_Purecall**函式沒有標頭宣告。 **_Purecall_handler** typedef 定義於\<stdlib.h >。
+**_Purecall**函數沒有標頭宣告。 **_Purecall_handler** typedef 定義于\<stdlib.h> >。
 
 ## <a name="see-also"></a>另請參閱
 

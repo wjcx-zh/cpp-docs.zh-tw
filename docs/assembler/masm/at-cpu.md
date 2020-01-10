@@ -1,26 +1,27 @@
 ---
 title: '@Cpu'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Cpu'
 helpviewer_keywords:
 - '@Cpu symbol'
 ms.assetid: 04f9fdf6-9772-407e-9c09-c12bed29087b
-ms.openlocfilehash: 022b8ae6a38026d360d0f553c6fa65a2430fe02d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 46bfcc8e8ba3e109ce998b779c4e80ec1bdb0de5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167059"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316430"
 ---
-# <a name="cpu"></a>@Cpu
+# <a name="cpu"></a>\@Cpu
 
-位元遮罩指定處理器模式 （等同於數字）。
+指定處理器模式的位元遮罩（數值等於）。
 
 ## <a name="syntax"></a>語法
 
-> @Cpu
+> **\@Cpu**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

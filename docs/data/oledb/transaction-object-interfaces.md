@@ -9,24 +9,24 @@ helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 - interfaces, list of
 ms.assetid: d2ce99ce-6f7a-4ff9-bc6e-acda3633d5c8
-ms.openlocfilehash: 0caecc797a3175d5769f98e181e1d99ef6b1ad16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86064c162dcacfbbc5877614c63d92d0f2bd347
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389095"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311669"
 ---
 # <a name="transaction-object-interfaces"></a>異動物件介面
 
-交易物件的資料來源上定義不可部分完成的工作單位，並判斷這些工作單位如何互相關聯性。 此物件不直接支援 OLE DB 提供者範本 （也就是您必須建立自己的物件）。
+交易對象定義資料來源的不可部分完成單位，並決定這些工作單位之間的關聯性。 OLE DB 提供者範本不直接支援這個物件（也就是您必須建立自己的物件）。
 
-下表顯示由 OLE DB 定義的交易物件的必要和選用的介面。
+下表顯示由 OLE DB 針對交易對象所定義的必要和選擇性介面。
 
-|介面|是否為必要項？|實作 OLE DB 範本嗎？|
+|介面|必要項？|由 OLE DB 範本來執行？|
 |---------------|---------------|--------------------------------------|
-|[IConnectionPointContainer](/windows/desktop/api/ocidl/nn-ocidl-iconnectionpointcontainer)|強制|否|
+|[IConnectionPointContainer](/windows/win32/api/ocidl/nn-ocidl-iconnectionpointcontainer)|強制|否|
 |[ITransaction](/previous-versions/windows/desktop/ms723053(v=vs.85))|強制|否|
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|否|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|選擇性|否|
 
 ## <a name="see-also"></a>另請參閱
 

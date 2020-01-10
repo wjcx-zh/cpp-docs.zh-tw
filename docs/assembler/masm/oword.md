@@ -1,26 +1,27 @@
 ---
 title: OWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - OWORD
 helpviewer_keywords:
 - OWORD directive
 ms.assetid: 83262c07-6c67-4296-a07d-65502ba5d09c
-ms.openlocfilehash: 6ed24ab7997f0386e4201d9c31d75326c539777a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 311842ef4b912d96c4dc82418392c50ee2b6729e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210719"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318718"
 ---
 # <a name="oword"></a>OWORD
 
-需要的 16 位元組資料類型時，請使用為類型規範。
+當需要16個位元組的資料類型時，會當做類型規範使用。
 
 ## <a name="syntax"></a>語法
 
-> OWORD
+> ⟦*名稱*⟧ **OWORD**  *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

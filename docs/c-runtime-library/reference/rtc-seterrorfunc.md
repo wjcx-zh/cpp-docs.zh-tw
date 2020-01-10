@@ -1,9 +1,9 @@
 ---
 title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _RTC_SetErrorFunc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
@@ -22,16 +25,16 @@ helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b173dd9af9fe11146341468c44a0abc10ce90bc
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357202"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949019"
 ---
-# <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
+# <a name="_rtc_seterrorfunc"></a>_RTC_SetErrorFunc
 
-指定函式做為報告執行階段錯誤檢查 (RTC) 的處理常式。 此函式已被取代;使用  **_RTC_SetErrorFuncW**改。
+指定函式做為報告執行階段錯誤檢查 (RTC) 的處理常式。 此函式已被取代;請改用 **_RTC_SetErrorFuncW** 。
 
 ## <a name="syntax"></a>語法
 
@@ -48,11 +51,11 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>傳回值
 
-先前所定義的錯誤函式。 如果沒有任何預先定義的函式，會傳回**NULL**。
+先前所定義的錯誤函式。 如果沒有先前定義的函數，則會傳回**Null**。
 
 ## <a name="remarks"></a>備註
 
-請勿使用此函式;請改用 **_RTC_SetErrorFuncW**。 保留此函式的目的只在提供回溯相容性。
+請勿使用此函數;請改用 **_RTC_SetErrorFuncW**。 保留此函式的目的只在提供回溯相容性。
 
 ## <a name="requirements"></a>需求
 

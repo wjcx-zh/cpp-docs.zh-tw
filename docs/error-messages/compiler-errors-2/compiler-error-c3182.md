@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3182
 ms.assetid: f3681266-308e-4990-a979-8eef8920e186
-ms.openlocfilehash: 6866c7bbcee0a4097e490b344c79a6eec7f94570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c6b183eb30dd0e617e69ab9aac58bea5cb721591
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382405"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761656"
 ---
 # <a name="compiler-error-c3182"></a>編譯器錯誤 C3182
 
-'class': using 宣告或存取宣告的成員是在 managed 或 WinRTtype 不合法
+' class '：在 managed 或 WinRTtype 中，成員 using 宣告或存取宣告不合法
 
-A[使用](../../cpp/using-declaration.md)內所有形式的 managed 類別的宣告無效。
+在所有形式的 managed 類別中， [using](../../cpp/using-declaration.md)宣告無效。
 
 下列範例會產生 C3182，並說明如何加以修正。
 
-```
+```cpp
 // C3182a.cpp
 // compile with: /clr /c
 ref struct B {

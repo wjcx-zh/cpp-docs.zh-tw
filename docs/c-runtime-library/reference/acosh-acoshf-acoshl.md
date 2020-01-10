@@ -1,11 +1,11 @@
 ---
 title: acosh、acoshf、acoshl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - acoshf
 - acosh
 - acoshl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - acosh
 - acoshf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: e61b9ed4222898e3f2340a5e54f6983fb0411c72
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341687"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944082"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh、acoshf、acoshl
 
@@ -61,22 +64,22 @@ long double acosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Acosh**函式會傳回的反雙曲餘弦函數 （arc 雙曲餘弦） *x*。 這些函式是有效的網域*x* ≥ 1。 如果*x*小於 1`errno`設定為`EDOM`且結果為無訊息 NaN。 如果*x*為無訊息 NaN、 不確定或無限大，會傳回相同的值。
+**Acosh**函數會傳回*x*的反雙曲余弦（arc 雙曲余弦）。 這些函式在網域*x* ≥1中是有效的。 如果*x*小於1， `errno`會設為`EDOM` ，且結果為無訊息 NaN。 如果*x*是無訊息的 NaN、不定或無限大，則會傳回相同的值。
 
-|輸入|SEH 例外狀況|`_matherr` 例外狀況|
+|Input|SEH 例外狀況|`_matherr` 例外狀況|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|none|none|
 |*x* < 1|none|none|
 
 ## <a name="remarks"></a>備註
 
-當您使用C++，您可以呼叫多載**acosh**採用並傳回**float**或**長** **double**值。 在 C 程式中， **acosh**一律採用並傳回**double**。
+當您使用C++時，您可以呼叫採用並傳回**float**或**long** **double**值之**acosh**的多載。 在 C 程式中， **acosh**一律採用並傳回**double**。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
+|**acosh**、 **acoshf**、 **acoshl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

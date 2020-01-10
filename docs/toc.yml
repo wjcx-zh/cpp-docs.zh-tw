@@ -58,6 +58,8 @@
               href: build/project-property-inheritance.md
             - name: 修改屬性和目標而不變更專案檔
               href: build/modify-project-properties-without-changing-project-file.md
+        - name: Visual Studio 專案中的 Clang/LLVM (MSBuild)
+          href: build/clang-support-msbuild.md
         - name: 在建置階段參考程式庫和元件
           href: build/adding-references-in-visual-cpp-projects.md
         - name: 組織專案輸出檔案
@@ -109,6 +111,17 @@
           href: build/cmake-predefined-configuration-reference.md
     - name: vcpkg：適用於 C++ 的套件管理員
       href: build/vcpkg.md
+    - name: C++ 組建見解
+      expanded: false
+      items:
+        - name: 開始使用 C++ 組建見解
+          href: build-insights/get-started-with-cpp-build-insights.md
+        - name: Windows Performance Analyzer 基本知識
+          href: build-insights/wpa-basics.md
+        - name: vcperf.exe 參考
+          href: build-insights/vcperf-reference.md
+        - name: Windows Performance Analyzer 檢視參考
+          href: build-insights/wpa-views-reference.md
     - name: 先行編譯標頭檔
       href: build/creating-precompiled-header-files.md
     - name: C++ 發行組建
@@ -213,13 +226,13 @@
           items:
             - name: DLL 的類型
               href: build/kinds-of-dlls.md
-            - name: 非 MFC DLL：概觀
+            - name: 非 MFC DLL：總覽
               href: build/non-mfc-dlls-overview.md
             - name: 靜態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-statically-linked-to-mfc.md
             - name: 動態連結至 MFC 的標準 MFC DLL
               href: build/regular-dlls-dynamically-linked-to-mfc.md
-            - name: MFC 延伸模組 DLL：概觀
+            - name: MFC 延伸模組 DLL：總覽
               href: build/extension-dlls-overview.md
         - name: MFC DLL 常見問題集
           href: build/dll-frequently-asked-questions.md
@@ -407,6 +420,8 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: 範例專案檔
                   href: build/reference/project-files.md
+                - name: .vcxproj.filters 檔案結構
+                  href: build/reference/vcxproj-filters-files.md
             - name: C++ 專案屬性頁
               expanded: false
               items:
@@ -534,6 +549,10 @@
                       href: build/reference/errorreport-report-internal-compiler-errors.md
                     - name: /execution/charset (設定執行字元集)
                       href: build/reference/execution-charset-set-execution-character-set.md
+                    - name: '/experimental:module'
+                      href: build/reference/experimental-module.md
+                    - name: '/experimental:preprocessor'
+                      href: build/reference/experimental-preprocessor.md
                     - name: /F (設定堆疊大小)
                       href: build/reference/f-set-stack-size.md
                     - name: 輸出檔案 (/F) 選項
@@ -788,6 +807,8 @@
                       href: build/reference/zf.md
                     - name: /Zg (產生函式原型)
                       href: build/reference/zg-generate-function-prototypes.md
+                    - name: /ZH (偵錯資訊中總和檢查碼的雜湊演算法)
+                      href: build/reference/zh.md
                     - name: /Zl (省略預設程式庫名稱)
                       href: build/reference/zl-omit-default-library-name.md
                     - name: /Zm (指定先行編譯標頭檔的記憶體配置限制)
@@ -946,6 +967,10 @@
                   href: build/reference/largeaddressaware-handle-large-addresses.md
                 - name: /LIBPATH (其他 Libpath)
                   href: build/reference/libpath-additional-libpath.md
+                - name: /LINKREPRO (連結存放庫目錄名稱)
+                  href: build/reference/linkrepro.md
+                - name: /LINKREPROTARGET (連結存放庫檔案名稱)
+                  href: build/reference/linkreprotarget.md
                 - name: /LTCG (連結時產生程式碼)
                   href: build/reference/ltcg-link-time-code-generation.md
                 - name: /MACHINE (指定目標平台)
@@ -1090,7 +1115,7 @@
                       href: build/reference/notification-hooks.md
                     - name: 失敗攔截
                       href: build/reference/failure-hooks.md
-                    - name: 例外狀況 (C/C++)
+                    - name: DLL 載入例外狀況代碼 (C/C++)
                       href: build/reference/exceptions-c-cpp.md
                 - name: 傾印延遲載入的匯入
                   href: build/reference/dumping-delay-loaded-imports.md
@@ -1143,34 +1168,7 @@
                     - name: 範例 Makefile
                       href: build/reference/sample-makefile.md
                 - name: 描述區塊
-                  expanded: false
-                  items:
-                    - name: 描述區塊
-                      href: build/reference/description-blocks.md
-                    - name: 目標
-                      expanded: false
-                      items:
-                        - name: 目標
-                          href: build/reference/targets.md
-                        - name: 虛擬目標
-                          href: build/reference/pseudotargets.md
-                        - name: 多個目標
-                          href: build/reference/multiple-targets.md
-                        - name: 累計相依性
-                          href: build/reference/cumulative-dependencies.md
-                        - name: 多個描述區塊中的目標
-                          href: build/reference/targets-in-multiple-description-blocks.md
-                        - name: 相依性的副作用
-                          href: build/reference/dependency-side-effects.md
-                    - name: 相依性
-                      expanded: false
-                      items:
-                        - name: 相依性
-                          href: build/reference/dependents.md
-                        - name: 推斷相依
-                          href: build/reference/inferred-dependents.md
-                        - name: 相依的搜尋路徑
-                          href: build/reference/search-paths-for-dependents.md
+                  href: build/reference/description-blocks.md
                 - name: Makefile 中的命令
                   expanded: false
                   items:
@@ -1396,6 +1394,8 @@
                       href: build/reference/linkermember.md
                     - name: /LOADCONFIG
                       href: build/reference/loadconfig.md
+                    - name: /NOPDB
+                      href: build/reference/nopdb.md
                     - name: /OUT (DUMPBIN)
                       href: build/reference/out-dumpbin.md
                     - name: /PDATA
@@ -1436,7 +1436,7 @@
               items:
                 - name: BSCMAKE 參考
                   href: build/reference/bscmake-reference.md
-                - name: 建置瀏覽資訊檔：概觀
+                - name: 建置瀏覽資訊檔：總覽
                   href: build/reference/building-browse-information-files-overview.md
                 - name: 建置 .Bsc 檔
                   expanded: false
@@ -1515,6 +1515,8 @@
           href: ide/writing-and-refactoring-code-cpp.md
         - name: 瀏覽 C++ 程式碼
           href: ide/navigate-code-cpp.md
+        - name: 設定 C++ 編碼喜好設定
+          href: ide/how-to-set-preferences.md
         - name: 使用適用於 C++ 的 Live Share 共同作業
           href: ide/live-share-cpp.md
         - name: 變更簽章
@@ -2820,20 +2822,40 @@
 - name: 移植及升級 C++ 程式碼
   expanded: false
   items:
-    - name: Visual C++ 移植和升級指南
+    - name: Microsoft C++ 移植和升級指南
       href: porting/visual-cpp-porting-and-upgrading-guide.md
+    - name: 從舊版升級專案
+      items:
+        - name: 從舊版升級專案
+          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+        - name: 潛在升級問題概觀
+          href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
+        - name: 將程式碼升級至通用 CRT
+          href: porting/upgrade-your-code-to-the-universal-crt.md
+        - name: 更新 WINVER 和 _WIN32_WINNT
+          href: porting/modifying-winver-and-win32-winnt.md
+        - name: 修正程式庫內部項目上的相依性
+          href: porting/fix-your-dependencies-on-library-internals.md
+        - name: 浮點數的移轉問題
+          href: porting/floating-point-migration-issues.md
+        - name: 在 Visual Studio 中使用原生多目標來建置舊專案
+          href: porting/use-native-multi-targeting.md
+        - name: Visual Studio 2019 中淘汰的 C++ 功能
+          href: porting/features-deprecated-in-visual-studio.md
+        - name: VCBuild 與MSBuild
+          href: porting/build-system-changes.md
+        - name: 移植協力廠商程式庫
+          href: porting/porting-third-party-libraries.md
+        - name: 移植資料應用程式
+          href: data/data-access-programming-mfc-atl.md
+    - name: 用來升級 C++ 程式碼的 IDE 工具
+      href: porting/ide-tools-for-upgrading-code.md
     - name: Visual C++ 變更歷程記錄 2003 - 2015
       href: porting/visual-cpp-change-history-2003-2015.md
     - name: 從 2003 到 2015 的 Visual C++ 新功能
       href: porting/visual-cpp-what-s-new-2003-through-2015.md
-    - name: 2015 和 2017 之間的 C++ 二進位相容性
+    - name: C++ 二進位相容性 2015-2019
       href: porting/binary-compat-2015-2017.md
-    - name: 潛在升級問題概觀 (Visual C++)
-      href: porting/overview-of-potential-upgrade-issues-visual-cpp.md
-    - name: 移植協力廠商程式庫
-      href: porting/porting-third-party-libraries.md
-    - name: 移植資料應用程式
-      href: data/data-access-programming-mfc-atl.md
     - name: 移植和升級：範例和案例研究
       items:
         - name: 範例和案例研究
@@ -2844,27 +2866,9 @@
           href: porting/porting-guide-com-spy.md
         - name: 移植指南：Spy++
           href: porting/porting-guide-spy-increment.md
-    - name: 從舊版升級專案
-      items:
-        - name: 從舊版升級專案
-          href: porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
-        - name: 將程式碼升級至通用 CRT
-          href: porting/upgrade-your-code-to-the-universal-crt.md
-        - name: 修改 WINVER 和 _WIN32_WINNT
-          href: porting/modifying-winver-and-win32-winnt.md
-        - name: 修正程式庫內部項目上的相依性
-          href: porting/fix-your-dependencies-on-library-internals.md
-        - name: 浮點數的移轉問題
-          href: porting/floating-point-migration-issues.md
-        - name: 在 Visual Studio 中使用原生多目標來建置舊專案
-          href: porting/use-native-multi-targeting.md
-        - name: Visual Studio 2019 中淘汰的 Visual C++ 功能
-          href: porting/features-deprecated-in-visual-studio.md
-        - name: 建置系統變更
-          href: porting/build-system-changes.md
-    - name: 針對 UNIX 使用者的 Visual C++ 簡介
+    - name: 適用於 UNIX 使用者的 Microsoft C++ 簡介
       href: porting/introduction-to-visual-cpp-for-unix-users.md
-    - name: 從 UNIX 移植到 Win32
+    - name: 在 Windows 上執行 Linux 程式
       href: porting/porting-from-unix-to-win32.md
     - name: 移植到通用 Windows 平台 (C++)
       items:
@@ -2953,7 +2957,7 @@
                           href: c-language/c-integer-constants.md
                         - name: 整數類型
                           href: c-language/integer-types.md
-                        - name: C++ 整數限制
+                        - name: C 及 C++ 整數限制
                           href: c-language/cpp-integer-limits.md
                     - name: C 字元常數
                       expanded: false
@@ -3644,79 +3648,20 @@
             - name: C++ 語言參考
               href: cpp/cpp-language-reference.md
             - name: 歡迎回到 C++ (新式 C++)
-              expanded: false
-              items:
-                - name: 歡迎回到 C++ (新式 C++)
-                  href: cpp/welcome-back-to-cpp-modern-cpp.md
-                - name: 型別系統 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 型別系統 (新式 C++)
-                      href: cpp/cpp-type-system-modern-cpp.md
-                    - name: 實值型別 (新式 C++)
-                      href: cpp/value-types-modern-cpp.md
-                    - name: 類型轉換和類型安全 (新式 C++)
-                      href: cpp/type-conversions-and-type-safety-modern-cpp.md
-                - name: 統一初始化和委派建構函式
-                  href: cpp/uniform-initialization-and-delegating-constructors.md
-                - name: 物件存留期和資源管理 (新式 C++)
-                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
-                - name: 物件擁有資源 (RAII)
-                  href: cpp/objects-own-resources-raii.md
-                - name: 智慧型指標 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 智慧型指標 (新式 C++)
-                      href: cpp/smart-pointers-modern-cpp.md
-                    - name: 作法：建立和使用 unique_ptr 執行個體
-                      href: cpp/how-to-create-and-use-unique-ptr-instances.md
-                    - name: 作法：建立和使用 shared_ptr 執行個體
-                      href: cpp/how-to-create-and-use-shared-ptr-instances.md
-                    - name: 作法：建立和使用 weak_ptr 執行個體
-                      href: cpp/how-to-create-and-use-weak-ptr-instances.md
-                    - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
-                      href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
-                - name: 編譯時間封裝的 Pimpl (新式 C++)
-                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
-                - name: 容器 (現代 C++)
-                  href: cpp/containers-modern-cpp.md
-                - name: 演算法 (現代 C++)
-                  href: cpp/algorithms-modern-cpp.md
-                - name: 字串和 I/O 格式化 (新式 C++)
-                  href: cpp/string-and-i-o-formatting-modern-cpp.md
-                - name: 錯誤和例外狀況處理 (新式 C++)
-                  expanded: false
-                  items:
-                    - name: 錯誤和例外狀況處理 (新式 C++)
-                      href: cpp/errors-and-exception-handling-modern-cpp.md
-                    - name: 作法：例外狀況安全的設計
-                      href: cpp/how-to-design-for-exception-safety.md
-                    - name: 作法：例外狀況和非例外狀況程式碼之間的介面
-                      href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
-                - name: ABI 界限上的可攜性 (新式 C++)
-                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
+              href: cpp/welcome-back-to-cpp-modern-cpp.md
             - name: 語彙慣例
               expanded: false
               items:
                 - name: 語彙慣例
                   href: cpp/lexical-conventions.md
-                - name: 檔案轉譯概觀
-                  href: cpp/overview-of-file-translation.md
-                - name: 字元集
+                - name: 語彙基元和字元集
                   href: cpp/character-sets.md
-                - name: 語彙基元
-                  href: cpp/tokens-cpp.md
                 - name: 註解
                   href: cpp/comments-cpp.md
                 - name: 識別項
                   href: cpp/identifiers-cpp.md
                 - name: 關鍵字
-                  expanded: false
-                  items:
-                    - name: 關鍵字
-                      href: cpp/keywords-cpp.md
-                    - name: auto 關鍵字
-                      href: cpp/auto-keyword.md
+                  href: cpp/keywords-cpp.md
                 - name: 標點符號
                   href: cpp/punctuators-cpp.md
                 - name: 數值、布林值和指標常值
@@ -3730,114 +3675,36 @@
               items:
                 - name: 基本概念
                   href: cpp/basic-concepts-cpp.md
-                - name: 宣告和定義
-                  expanded: false
-                  items:
-                    - name: 宣告和定義
-                      href: cpp/declarations-and-definitions-cpp.md
-                    - name: 宣告子概觀
-                      href: cpp/overview-of-declarators.md
-                    - name: 規範
-                      href: cpp/specifiers.md
-                    - name: extern
-                      href: cpp/extern-cpp.md
-                    - name: 標頭檔
-                      href: cpp/header-files-cpp.md
-                    - name: C++ 中的宣告點
-                      href: cpp/point-of-declaration-in-cpp.md
-                    - name: 初始設定式
-                      href: cpp/initializers.md
-                    - name: 別名和 typedef
-                      href: cpp/aliases-and-typedefs-cpp.md
-                    - name: using 宣告
-                      href: cpp/using-declaration.md
-                    - name: 解決不明確的宣告
-                      href: cpp/resolving-ambiguous-declarations-cpp.md
-                    - name: 儲存類別
-                      href: cpp/storage-classes-cpp.md
-                    - name: const
-                      href: cpp/const-cpp.md
-                    - name: constexpr
-                      href: cpp/constexpr-cpp.md
-                    - name: volatile
-                      href: cpp/volatile-cpp.md
-                    - name: auto
-                      href: cpp/auto-cpp.md
-                    - name: decltype
-                      href: cpp/decltype-cpp.md
-                    - name: 屬性
-                      href: cpp/attributes.md
+                - name: C++ 類型系統
+                  href: cpp/cpp-type-system-modern-cpp.md
                 - name: 範圍
                   href: cpp/scope-visual-cpp.md
                 - name: 標頭檔
                   href: cpp/header-files-cpp.md
-                - name: 程式和連結
-                  expanded: false
-                  items:
-                    - name: 程式和連結
-                      href: cpp/program-and-linkage-cpp.md
-                    - name: extern
-                      href: cpp/using-extern-to-specify-linkage.md
-                - name: 啟動和終止
-                  expanded: false
-                  items:
-                    - name: 啟動和終止
-                      href: cpp/startup-and-termination-cpp.md
-                    - name: main：程式啟動
-                      expanded: false
-                      items:
-                        - name: main：程式啟動
-                          href: cpp/main-program-startup.md
-                        - name: 使用 wmain 取代 main
-                          href: cpp/using-wmain-instead-of-main.md
-                        - name: 引數定義
-                          href: cpp/argument-definitions.md
-                        - name: 萬用字元展開
-                          href: cpp/wildcard-expansion.md
-                        - name: 剖析 C++ 命令列引數
-                          href: cpp/parsing-cpp-command-line-arguments.md
-                        - name: 自訂 C++ 命令列處理
-                          href: cpp/customizing-cpp-command-line-processing.md
-                        - name: main 函式限制
-                          href: cpp/main-function-restrictions.md
-                    - name: 程式終止
-                      expanded: false
-                      items:
-                        - name: 程式終止
-                          href: cpp/program-termination.md
-                        - name: exit 函式
-                          href: cpp/exit-function.md
-                        - name: abort 函式
-                          href: cpp/abort-function.md
-                        - name: 程式終止中的 return 陳述式
-                          href: cpp/return-statement-in-program-termination-cpp.md
-                    - name: 其他啟動考量
-                      href: cpp/additional-startup-considerations.md
-                    - name: 其他終止考量
-                      expanded: false
-                      items:
-                        - name: 其他終止考量
-                          href: cpp/additional-termination-considerations.md
-                        - name: 結束 exit 或 return
-                          href: cpp/using-exit-or-return.md
-                        - name: 使用 atexit
-                          href: cpp/using-atexit.md
-                        - name: 使用 abort
-                          href: cpp/using-abort.md
+                - name: 編譯單位和連結
+                  href: cpp/program-and-linkage-cpp.md
+                - name: main 函式和命令列引數
+                  href: cpp/main-function-command-line-args.md
+                - name: 程式終止
+                  href: cpp/program-termination.md
                 - name: Lvalues 和 Rvalues
                   href: cpp/lvalues-and-rvalues-visual-cpp.md
                 - name: 暫存物件
                   href: cpp/temporary-objects.md
-                - name: 對齊方式 (C++ 宣告)
+                - name: 對齊
                   href: cpp/alignment-cpp-declarations.md
-                - name: alignof 和 alignas
-                  href: cpp/alignof-and-alignas-cpp.md
                 - name: Trivial、標準配置和 POD 類型
                   href: cpp/trivial-standard-layout-and-pod-types.md
-            - name: 基本類型
+                - name: 值類型
+                  href: cpp/value-types-modern-cpp.md
+                - name: 類型轉換與類型安全
+                  href: cpp/type-conversions-and-type-safety-modern-cpp.md
+                - name: 標準轉換
+                  href: cpp/standard-conversions.md
+            - name: 內建類型
               expanded: false
               items:
-                - name: 基本類型
+                - name: 內建類型
                   href: cpp/fundamental-types-cpp.md
                 - name: 資料類型範圍
                   href: cpp/data-type-ranges.md
@@ -3874,8 +3741,33 @@
                       href: cpp/integer-limits.md
                     - name: 浮點數限制
                       href: cpp/floating-limits.md
-                - name: 標準轉換
-                  href: cpp/standard-conversions.md
+            - name: 宣告和定義
+              expanded: false
+              items:
+                - name: 宣告和定義
+                  href: cpp/declarations-and-definitions-cpp.md
+                - name: 儲存類別
+                  href: cpp/storage-classes-cpp.md
+                - name: auto
+                  href: cpp/auto-cpp.md
+                - name: const
+                  href: cpp/const-cpp.md
+                - name: constexpr
+                  href: cpp/constexpr-cpp.md
+                - name: extern
+                  href: cpp/extern-cpp.md
+                - name: 初始設定式
+                  href: cpp/initializers.md
+                - name: 別名和 typedef
+                  href: cpp/aliases-and-typedefs-cpp.md
+                - name: using 宣告
+                  href: cpp/using-declaration.md
+                - name: volatile
+                  href: cpp/volatile-cpp.md
+                - name: decltype
+                  href: cpp/decltype-cpp.md
+                - name: 屬性
+                  href: cpp/attributes.md
             - name: 內建運算子、優先順序和關聯性
               expanded: false
               items:
@@ -4130,8 +4022,14 @@
                       href: cpp/protected-cpp.md
                     - name: public
                       href: cpp/public-cpp.md
-                - name: 在沒有建構函式的情況下初始化類別和結構
+                - name: 大括弧初始化
                   href: cpp/initializing-classes-and-structs-without-constructors-cpp.md
+                - name: 物件存留期及資源管理 (RAII)
+                  href: cpp/object-lifetime-and-resource-management-modern-cpp.md
+                - name: 適用於編譯時間封裝的 Pimpl 慣用語
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
+                - name: 在 ABI 界限的可攜性
+                  href: cpp/portability-at-abi-boundaries-modern-cpp.md
                 - name: 建構函式
                   expanded: false
                   items:
@@ -4141,6 +4039,8 @@
                       href: cpp/copy-constructors-and-copy-assignment-operators-cpp.md
                     - name: 移動建構函式和移動指派運算子
                       href: cpp/move-constructors-and-move-assignment-operators-cpp.md
+                    - name: 委派建構函式
+                      href: cpp/delegating-constructors.md
                 - name: 解構函式
                   href: cpp/destructors-cpp.md
                 - name: 成員函式概觀
@@ -4185,6 +4085,8 @@
                   href: cpp/special-member-functions.md
                 - name: 靜態成員
                   href: cpp/static-members-cpp.md
+                - name: 用為實值型別的 C++ 類別
+                  href: cpp/value-types-modern-cpp.md
                 - name: 使用者定義類型轉換
                   href: cpp/user-defined-type-conversions-cpp.md
                 - name: 可變動的資料成員
@@ -4211,22 +4113,7 @@
                 - name: constexpr Lambda 運算式
                   href: cpp/lambda-expressions-constexpr.md
             - name: 陣列
-              expanded: false
-              items:
-                - name: 陣列
-                  href: cpp/arrays-cpp.md
-                - name: 使用陣列
-                  href: cpp/using-arrays-cpp.md
-                - name: 初始化陣列
-                  href: cpp/initializing-arrays.md
-                - name: 運算式中的陣列
-                  href: cpp/arrays-in-expressions.md
-                - name: 下標運算子的解譯
-                  href: cpp/interpretation-of-subscript-operator.md
-                - name: 陣列類型的間接取值
-                  href: cpp/indirection-on-array-types.md
-                - name: C++ 陣列的排序
-                  href: cpp/ordering-of-cpp-arrays.md
+              href: cpp/arrays-cpp.md
             - name: reference
               expanded: false
               items:
@@ -4247,41 +4134,56 @@
               items:
                 - name: 指標
                   href: cpp/pointers-cpp.md
+                - name: 原始指標
+                  href: cpp/raw-pointers.md
                 - name: const 和 volatile 指標
                   href: cpp/const-and-volatile-pointers.md
                 - name: new 和 delete 運算子
                   href: cpp/new-and-delete-operators.md
+                - name: 智慧指標
+                  href: cpp/smart-pointers-modern-cpp.md
+                - name: 作法：建立和使用 unique_ptr 執行個體
+                  href: cpp/how-to-create-and-use-unique-ptr-instances.md
+                - name: 作法：建立和使用 shared_ptr 執行個體
+                  href: cpp/how-to-create-and-use-shared-ptr-instances.md
+                - name: 作法：建立和使用 weak_ptr 執行個體
+                  href: cpp/how-to-create-and-use-weak-ptr-instances.md
+                - name: 作法：建立和使用 CComPtr 與 CComQIPtr 執行個體
+                  href: cpp/how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md
+                - name: 編譯時間封裝的 Pimpl
+                  href: cpp/pimpl-for-compile-time-encapsulation-modern-cpp.md
             - name: C++ 中的例外狀況處理
               expanded: false
               items:
                 - name: C++ 中的例外狀況處理
                   href: cpp/exception-handling-in-visual-cpp.md
-                - name: 例外狀況處理
+                - name: 新型 C++ 的最佳做法
+                  href: cpp/errors-and-exception-handling-modern-cpp.md
+                - name: 如何設計例外狀況的安全
+                  href: cpp/how-to-design-for-exception-safety.md
+                - name: 如何連結例外狀況與非例外狀況代碼
+                  href: cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md
+                - name: try、throw 和 catch 陳述式
+                  href: cpp/try-throw-and-catch-statements-cpp.md
+                - name: Catch 區塊的評估方式
+                  href: cpp/how-catch-blocks-are-evaluated-cpp.md
+                - name: 例外狀況與堆疊回溯
+                  href: cpp/exceptions-and-stack-unwinding-in-cpp.md
+                - name: 例外狀況規格 (throw)
+                  href: cpp/exception-specifications-throw-cpp.md
+                - name: noexcept
+                  href: cpp/noexcept-cpp.md
+                - name: 未處理的 C++ 例外狀況
+                  href: cpp/unhandled-cpp-exceptions.md
+                - name: 混合 C (結構化) 和 C++ 例外狀況
                   expanded: false
                   items:
-                    - name: 例外狀況處理
-                      href: cpp/cpp-exception-handling.md
-                    - name: try、throw 和 catch 陳述式
-                      href: cpp/try-throw-and-catch-statements-cpp.md
-                    - name: Catch 區塊的評估方式
-                      href: cpp/how-catch-blocks-are-evaluated-cpp.md
-                    - name: C++ 中的例外狀況和堆疊回溯
-                      href: cpp/exceptions-and-stack-unwinding-in-cpp.md
-                    - name: 例外狀況規格 (throw)
-                      href: cpp/exception-specifications-throw-cpp.md
-                    - name: noexcept
-                      href: cpp/noexcept-cpp.md
-                    - name: 未處理的 C++ 例外狀況
-                      href: cpp/unhandled-cpp-exceptions.md
                     - name: 混合 C (結構化) 和 C++ 例外狀況
-                      expanded: false
-                      items:
-                        - name: 混合 C (結構化) 和 C++ 例外狀況
-                          href: cpp/mixing-c-structured-and-cpp-exceptions.md
-                        - name: 使用 setjmp-longjmp
-                          href: cpp/using-setjmp-longjmp.md
-                        - name: 使用 C++ 處理結構化例外狀況
-                          href: cpp/exception-handling-differences.md
+                      href: cpp/mixing-c-structured-and-cpp-exceptions.md
+                    - name: 使用 setjmp-longjmp
+                      href: cpp/using-setjmp-longjmp.md
+                    - name: 使用 C++ 處理結構化例外狀況
+                      href: cpp/exception-handling-differences.md
                 - name: 結構化例外狀況處理 (SEH) (C/C++)
                   expanded: false
                   items:
@@ -4712,6 +4614,8 @@
               items:
                 - name: 前置處理器
                   href: preprocessor/preprocessor.md
+                - name: 實驗性前置處理器概觀
+                  href: preprocessor/preprocessor-experimental-overview.md
                 - name: 轉譯階段
                   href: preprocessor/phases-of-translation.md
                 - name: 前置處理器指示詞
@@ -4794,7 +4698,7 @@
                       href: preprocessor/null-directive.md
                     - name: '#undef 指示詞 (C/C++)'
                       href: preprocessor/hash-undef-directive-c-cpp.md
-                    - name: '#using 指示詞 (C++)'
+                    - name: '#using 指示詞 (C++/CLI)'
                       href: preprocessor/hash-using-directive-cpp.md
                 - name: 前置處理器運算子
                   expanded: false
@@ -4805,7 +4709,7 @@
                       href: preprocessor/stringizing-operator-hash.md
                     - name: '字元化運算子 (#@)'
                       href: preprocessor/charizing-operator-hash-at.md
-                    - name: '語彙基元帶入的運算子 (##)'
+                    - name: '語彙基元帶入運算子 (##)'
                       href: preprocessor/token-pasting-operator-hash-hash.md
                 - name: 前置處理器巨集 (C/C++)
                   expanded: false
@@ -4818,21 +4722,12 @@
                       href: preprocessor/variadic-macros.md
                     - name: 預先定義的前置處理器巨集
                       href: preprocessor/predefined-macros.md
-            - name: 文法摘要 (C/C++)
+            - name: 前置處理器文法摘要 (C/C++)
+              href: preprocessor/grammar-summary-c-cpp.md
+            - name: Pragma 指示詞與 __pragma 關鍵字
               expanded: false
               items:
-                - name: 文法摘要 (C/C++)
-                  href: preprocessor/grammar-summary-c-cpp.md
-                - name: 文法摘要的定義
-                  href: preprocessor/definitions-for-the-grammar-summary.md
-                - name: 文法慣例
-                  href: preprocessor/conventions.md
-                - name: 前置處理器文法
-                  href: preprocessor/preprocessor-grammar.md
-            - name: Pragma 指示詞和 __Pragma 關鍵字
-              expanded: false
-              items:
-                - name: Pragma 指示詞和 __Pragma 關鍵字
+                - name: Pragma 指示詞與 __pragma 關鍵字
                   href: preprocessor/pragma-directives-and-the-pragma-keyword.md
                 - name: alloc_text pragma
                   href: preprocessor/alloc-text.md
@@ -4925,6 +4820,8 @@
               href: intrinsics/compiler-intrinsics.md
             - name: ARM 內建函式
               href: intrinsics/arm-intrinsics.md
+            - name: ARM64 內建
+              href: intrinsics/arm64-intrinsics.md
             - name: x86 內建函式清單
               href: intrinsics/x86-intrinsics-list.md
             - name: x64 (amd64) 內建函式清單
@@ -5283,10 +5180,10 @@
               href: assembler/masm/masm-for-x64-ml64-exe.md
             - name: ML 和 ML64 命令列參考
               href: assembler/masm/ml-and-ml64-command-line-reference.md
-            - name: 指示詞參考
+            - name: 指示詞參考 (MASM)
               expanded: false
               items:
-                - name: 指示詞參考
+                - name: 指示詞參考 (MASM)
                   href: assembler/masm/directives-reference.md
                 - name: =
                   href: assembler/masm/equal.md
@@ -5308,9 +5205,9 @@
                   href: assembler/masm/dot-686.md
                 - name: .686P
                   href: assembler/masm/dot-686p.md
-                - name: ALIAS (MASM)
+                - name: ALIAS
                   href: assembler/masm/alias-masm.md
-                - name: ALIGN (MASM)
+                - name: ALIGN
                   href: assembler/masm/align-masm.md
                 - name: .ALLOCSTACK
                   href: assembler/masm/dot-allocstack.md
@@ -5320,7 +5217,7 @@
                   href: assembler/masm/assume.md
                 - name: .BREAK
                   href: assembler/masm/dot-break.md
-                - name: BYTE (MASM)
+                - name: BYTE
                   href: assembler/masm/byte-masm.md
                 - name: CATSTR
                   href: assembler/masm/catstr.md
@@ -5328,7 +5225,7 @@
                   href: assembler/masm/dot-code.md
                 - name: COMM
                   href: assembler/masm/comm.md
-                - name: COMMENT (MASM)
+                - name: COMMENT
                   href: assembler/masm/comment-masm.md
                 - name: .CONST
                   href: assembler/masm/dot-const.md
@@ -5362,13 +5259,13 @@
                   href: assembler/masm/echo.md
                 - name: .ELSE
                   href: assembler/masm/dot-else.md
-                - name: ELSE (MASM)
+                - name: ELSE
                   href: assembler/masm/else-masm.md
-                - name: ELSEIF (MASM)
+                - name: ELSEIF
                   href: assembler/masm/elseif-masm.md
                 - name: ELSEIF2
                   href: assembler/masm/elseif2.md
-                - name: END (MASM)
+                - name: END
                   href: assembler/masm/end-masm.md
                 - name: .ENDIF
                   href: assembler/masm/dot-endif.md
@@ -5378,7 +5275,7 @@
                   href: assembler/masm/endp.md
                 - name: .ENDPROLOG
                   href: assembler/masm/dot-endprolog.md
-                - name: ENDS (MASM)
+                - name: ENDS
                   href: assembler/masm/ends-masm.md
                 - name: .ENDW
                   href: assembler/masm/dot-endw.md
@@ -5410,7 +5307,7 @@
                   href: assembler/masm/dot-exit.md
                 - name: EXITM
                   href: assembler/masm/exitm.md
-                - name: EXTERN (MASM)
+                - name: EXTERN
                   href: assembler/masm/extern-masm.md
                 - name: EXTERNDEF
                   href: assembler/masm/externdef.md
@@ -5420,7 +5317,7 @@
                   href: assembler/masm/dot-fardata.md
                 - name: .FARDATA?
                   href: assembler/masm/dot-fardata-q.md
-                - name: FOR (MASM)
+                - name: FOR
                   href: assembler/masm/for-masm.md
                 - name: FORC
                   href: assembler/masm/forc.md
@@ -5428,13 +5325,13 @@
                   href: assembler/masm/dot-fpo.md
                 - name: FWORD
                   href: assembler/masm/fword.md
-                - name: GOTO (MASM)
+                - name: GOTO
                   href: assembler/masm/goto-masm.md
                 - name: GROUP
                   href: assembler/masm/group.md
                 - name: .IF
                   href: assembler/masm/dot-if.md
-                - name: IF (MASM)
+                - name: IF
                   href: assembler/masm/if-masm.md
                 - name: IF2
                   href: assembler/masm/if2.md
@@ -5452,9 +5349,9 @@
                   href: assembler/masm/ifnb.md
                 - name: IFNDEF
                   href: assembler/masm/ifndef.md
-                - name: INCLUDE (MASM)
+                - name: INCLUDE
                   href: assembler/masm/include-masm.md
-                - name: INCLUDELIB (MASM)
+                - name: INCLUDELIB
                   href: assembler/masm/includelib-masm.md
                 - name: INSTR
                   href: assembler/masm/instr.md
@@ -5466,7 +5363,7 @@
                   href: assembler/masm/irpc.md
                 - name: .K3D
                   href: assembler/masm/dot-k3d.md
-                - name: LABEL (MASM)
+                - name: LABEL
                   href: assembler/masm/label-masm.md
                 - name: .LALL
                   href: assembler/masm/dot-lall.md
@@ -5482,7 +5379,7 @@
                   href: assembler/masm/dot-listmacro.md
                 - name: .LISTMACROALL
                   href: assembler/masm/dot-listmacroall.md
-                - name: LOCAL (MASM)
+                - name: LOCAL
                   href: assembler/masm/local-masm.md
                 - name: MACRO
                   href: assembler/masm/macro.md
@@ -5492,7 +5389,7 @@
                   href: assembler/masm/dot-mmx.md
                 - name: .MODEL
                   href: assembler/masm/dot-model.md
-                - name: NAME (MASM)
+                - name: NAME
                   href: assembler/masm/name-masm.md
                 - name: .NOCREF
                   href: assembler/masm/dot-nocref.md
@@ -5502,7 +5399,7 @@
                   href: assembler/masm/dot-nolistif.md
                 - name: .NOLISTMACRO
                   href: assembler/masm/dot-nolistmacro.md
-                - name: OPTION (MASM)
+                - name: OPTION
                   href: assembler/masm/option-masm.md
                 - name: ORG
                   href: assembler/masm/org.md
@@ -5518,7 +5415,7 @@
                   href: assembler/masm/proc.md
                 - name: PROTO
                   href: assembler/masm/proto.md
-                - name: PUBLIC (MASM)
+                - name: PUBLIC
                   href: assembler/masm/public-masm.md
                 - name: PURGE
                   href: assembler/masm/purge.md
@@ -5538,7 +5435,7 @@
                   href: assembler/masm/real4.md
                 - name: REAL8
                   href: assembler/masm/real8.md
-                - name: RECORD (MASM)
+                - name: RECORD
                   href: assembler/masm/record-masm.md
                 - name: .REPEAT
                   href: assembler/masm/dot-repeat.md
@@ -5554,7 +5451,7 @@
                   href: assembler/masm/dot-savereg.md
                 - name: .SAVEXMM128
                   href: assembler/masm/dot-savexmm128.md
-                - name: SBYTE (MASM)
+                - name: SBYTE
                   href: assembler/masm/sbyte-masm.md
                 - name: SDWORD
                   href: assembler/masm/sdword.md
@@ -5576,7 +5473,7 @@
                   href: assembler/masm/dot-startup.md
                 - name: STRUC
                   href: assembler/masm/struc.md
-                - name: STRUCT (MASM)
+                - name: STRUCT
                   href: assembler/masm/struct-masm.md
                 - name: SUBSTR
                   href: assembler/masm/substr.md
@@ -5594,7 +5491,7 @@
                   href: assembler/masm/dot-tfcond.md
                 - name: TITLE
                   href: assembler/masm/title.md
-                - name: TYPEDEF (MASM)
+                - name: TYPEDEF
                   href: assembler/masm/typedef-masm.md
                 - name: UNION
                   href: assembler/masm/union.md
@@ -5604,7 +5501,7 @@
                   href: assembler/masm/dot-untilcxz.md
                 - name: .WHILE
                   href: assembler/masm/dot-while.md
-                - name: WHILE (MASM)
+                - name: WHILE
                   href: assembler/masm/while-masm.md
                 - name: WORD
                   href: assembler/masm/word.md
@@ -5963,6 +5860,8 @@
                       href: assembler/masm/ml-warning-a4012.md
                     - name: ML 警告 A4014
                       href: assembler/masm/ml-warning-a4014.md
+            - name: MASM BNF 文法
+              href: assembler/masm/masm-bnf-grammar.md
         - name: 適用於.NET 與 UWP 的元件延伸模組
           expanded: false
           items:
@@ -9809,6 +9708,8 @@
               items:
                 - name: iostream 程式設計
                   href: standard-library/iostream-programming.md
+                - name: 字串及 I/O 格式化
+                  href: text/string-and-i-o-formatting-modern-cpp.md
                 - name: 什麼是資料流
                   expanded: false
                   items:

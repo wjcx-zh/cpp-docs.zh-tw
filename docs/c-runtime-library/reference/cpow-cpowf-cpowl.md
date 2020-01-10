@@ -1,11 +1,11 @@
 ---
 title: cpow、cpowf、cpowl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cpow
 - cpowf
 - cpowl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cpow
 - cpowf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 005bafd4b19164f5c85be839a90fc7d5259d61bf
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339841"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942695"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -71,11 +74,11 @@ _Lcomplex cpowl(
 
 ## <a name="return-value"></a>傳回值
 
-值*x*的乘冪*y*使用的分支部分*x*沿著負實軸。
+*X*的值，會沿著負實數軸的*x*切割分支，使其成為*y*的乘冪。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**cpow**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **cpow**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**cpow**的多載。 在 C 程式中， **cpow**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 

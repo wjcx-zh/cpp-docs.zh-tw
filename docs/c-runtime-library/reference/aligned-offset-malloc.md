@@ -1,9 +1,9 @@
 ---
 title: _aligned_offset_malloc
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _aligned_offset_malloc
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e8d6f839f3c675b7543ff14f3f633b0c7d5151f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62341765"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943862"
 ---
-# <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
+# <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
 針對指定的對齊界限配置記憶體。
 
@@ -57,17 +60,17 @@ void * _aligned_offset_malloc(
 
 ## <a name="return-value"></a>傳回值
 
-已配置的記憶體區塊的指標或**NULL**如果作業失敗。
+已配置之記憶體區塊的指標，如果作業失敗，則為**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_aligned_offset_malloc**巢狀元素; 需要對齊的情況很有用，例如，如果巢狀類別需要對齊時。
+當嵌套元素需要對齊時， **_aligned_offset_malloc**會很有用;例如，如果在嵌套類別上需要對齊。
 
-**_aligned_offset_malloc**為基礎**malloc**; 如需詳細資訊，請參閱[malloc](malloc.md)。
+**_aligned_offset_malloc**是以**malloc**為基礎;如需詳細資訊，請參閱[malloc](malloc.md)。
 
-**_aligned_offset_malloc**標示`__declspec(noalias)`和`__declspec(restrict)`，表示保證函式時，會不能修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
+**_aligned_offset_malloc**標示`__declspec(noalias)`為和`__declspec(restrict)`，表示保證函式不會修改全域變數，而且傳回的指標沒有別名。 如需詳細資訊，請參閱 [noalias](../../cpp/noalias.md) 和 [restrict](../../cpp/restrict.md)。
 
-此函式會將**errno**要**ENOMEM**如果記憶體配置失敗，或者要求的大小大於 **_HEAP_MAXREQ**。 如需詳細資訊**errno**，請參閱[errno、 _doserrno、 _sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**會驗證其參數。 如果*對齊*不是 2 的冪，或如果*位移*大於或等於*大小*和非零值，這個函式會叫用無效參數處理常式中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則此函數會傳回**NULL**並設定**errno**來**EINVAL**。
+如果記憶體配置失敗，或是要求的大小大於 **_HEAP_MAXREQ**，則此函式會將**Errno**設定為**ENOMEM** 。 如需**errno**的詳細資訊，請參閱[errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。 此外， **_aligned_offset_malloc**會驗證其參數。 如果*對齊*不是2的乘冪，或*offset*大於或等於 size 和非零*值*，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 

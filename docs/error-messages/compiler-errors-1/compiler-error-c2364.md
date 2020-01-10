@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2364
 ms.assetid: 4f550571-94b5-42ca-84cb-663fecbead44
-ms.openlocfilehash: 051468ea861190dd3f6a28dc272f1bab155145af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb019d729bc100296742b15ba95460fe0e404673
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230395"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759876"
 ---
 # <a name="compiler-error-c2364"></a>編譯器錯誤 C2364
 
-'type': 對自訂屬性的類型不合法
+' type '：自訂屬性的類型不合法
 
-為自訂屬性的具名引數會限制為編譯時間常數。 例如，整數類資料類型 （int、 char 等），system:: type ^，以及 system:: object ^。
+自訂屬性的具名引數僅限於編譯時間常數。 例如，整數類資料類型（int、char 等等）、System：： Type ^ 和 System：： Object ^。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C2364。
 
-```
+```cpp
 // c2364.cpp
 // compile with: /clr /c
 using namespace System;

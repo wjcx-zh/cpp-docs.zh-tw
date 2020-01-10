@@ -1,6 +1,6 @@
 ---
 title: 運算子 MASK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator MASK
 - MASK
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - MASK operator
 - operator MASK
 ms.assetid: bf997f99-17c8-4230-ab69-7a9774a75d93
-ms.openlocfilehash: 6acd6596613e32186385568cc68b3eb498176b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 064022b3fb49a498a8ab7f8513b89d4c9964e346
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199961"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317847"
 ---
 # <a name="operator-mask"></a>運算子 MASK
 
-傳回位元遮罩中的位元*recordfieldname*或是*記錄*設定且已清除其他所有的位元。
+傳回位元遮罩，其中會設定*recordfieldname*或*record*中的位，並清除所有其他位。
 
 ## <a name="syntax"></a>語法
 
-> 遮罩 {recordfieldname | 記錄}
+> **MASK** {*recordfieldname* | *record*}
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

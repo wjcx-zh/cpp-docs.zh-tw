@@ -1,6 +1,6 @@
 ---
 title: bad_typeid 例外狀況
-ms.date: 11/04/2016
+ms.date: 10/04/2019
 f1_keywords:
 - bad_typeid
 - bad_typeid_cpp
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - bad_typeid exception
 - exceptions [C++], bad_typeid
 ms.assetid: 5963ed58-4ede-4597-957d-f7bbd06299c2
-ms.openlocfilehash: 2ff7339b02cfe8c21cebfa7d9bb0cc98b3e08799
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: bb56de77ba001b5a511ef3a2695d18109b1ed3ca
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68242268"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74245922"
 ---
-# <a name="badtypeid-exception"></a>bad_typeid 例外狀況
+# <a name="bad_typeid-exception"></a>bad_typeid 例外狀況
 
-**Bad_typeid**所擲回例外狀況[typeid 運算子](../cpp/typeid-operator.md)時的運算元**typeid**為 NULL 指標。
+當**typeid**的運算元為 Null 指標時， [typeid 運算子](../cpp/typeid-operator.md)會擲回**bad_typeid**例外狀況。
 
 ## <a name="syntax"></a>語法
 
@@ -28,7 +28,7 @@ catch (bad_typeid)
 
 ## <a name="remarks"></a>備註
 
-介面**bad_typeid**是：
+**Bad_typeid**的介面為：
 
 ```cpp
 class bad_typeid : public exception
@@ -44,12 +44,12 @@ public:
 };
 ```
 
-下列範例所示**typeid**擲回運算子**bad_typeid**例外狀況。
+下列範例顯示擲回**bad_typeid**例外狀況的**typeid**運算子。
 
 ```cpp
 // expre_bad_typeid.cpp
 // compile with: /EHsc /GR
-#include <typeinfo.h>
+#include <typeinfo>
 #include <iostream>
 
 class A{
@@ -72,7 +72,7 @@ catch (bad_typeid){
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>輸出
 
 ```Output
 Object is NULL
@@ -80,5 +80,5 @@ Object is NULL
 
 ## <a name="see-also"></a>另請參閱
 
-[執行階段類型資訊](../cpp/run-time-type-information.md)<br/>
+[執行階段類型資訊](../cpp/run-time-type-information.md)\
 [關鍵字](../cpp/keywords-cpp.md)

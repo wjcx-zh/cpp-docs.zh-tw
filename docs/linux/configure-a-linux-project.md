@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: a4e20222cc0b04f496989bf2d51fc12c85f5d162
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
+ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042629"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71960691"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -33,11 +33,11 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ## <a name="general-settings"></a>一般設定
 
-若要檢視組態選項，請選取 [專案] > [屬性]  功能表，或在 [方案總管]  中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]  。 [一般]  設定隨即出現。
+若要檢視組態選項，請選取 [專案] > [屬性] 功能表，或在 [方案總管] 中以滑鼠右鍵按一下專案，然後從操作功能表中選取 [屬性]。 [一般] 設定隨即出現。
 
 ![一般組態](media/settings_general.png)
 
-預設會建置可執行檔 (.out)。 若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型]  設定。
+預設會建置可執行檔 (.out)。 若要建置靜態或動態程式庫，或使用現有 Makefile，請使用 [組態類型] 設定。
 
 如需屬性頁中設定的詳細資訊，請參閱 [Linux 專案屬性頁參考](prop-pages-linux.md)。
 
@@ -45,28 +45,28 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 若要變更與遠端 Linux 電腦有關的設定，請設定出現在 [[一般](prop-pages/general-linux.md)] 下的遠端設定。
 
-- 若要指定遠端目標 Linux 電腦，請使用 [遠端組建電腦]  項目。 這可讓您選取其中一個先前建立的連線。 若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)一節。
+- 若要指定遠端目標 Linux 電腦，請使用 [遠端組建電腦] 項目。 這可讓您選取其中一個先前建立的連線。 若要建立新的項目，請參閱[連線到遠端 Linux 電腦](connect-to-your-remote-linux-computer.md)一節。
 
    ![組建電腦](media/remote-build-machine-vs2019.png)
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 16.1 版**：若要以適用於 Linux 的 Windows 子系統為目標，請按一下 [平台工具組]  的向下箭號，然後選擇 [WSL_1_0]  。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
+   **Visual Studio 2019 16.1 版**：若要以適用於 Linux 的 Windows 子系統為目標，請按一下 [平台工具組] 的向下箭號，然後選擇 [WSL_1_0]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
 
    ![WSL 組建電腦](media/wsl-remote-vs2019.png)
 
    如果您有並存的 WSL 安裝，則可以在此處指定不同的路徑。 如需管理多個發行版本的詳細資訊，請參閱[管理和設定適用於 Linux 的 Windows 子系統](/windows/wsl/wsl-config#set-a-default-distribution)。
 
-   您可以在 [組態屬性]  > [偵錯]  頁面上指定不同的目標來進行偵錯。
+   您可以在 [組態屬性] > [偵錯] 頁面上指定不同的目標來進行偵錯。
 
    ::: moniker-end
 
-- [遠端組建根目錄]  決定在遠端 Linux 電腦上建置專案的根目錄位置。 除非進行變更，否則這會預設為 **~/projects**。
+- [遠端組建根目錄] 決定在遠端 Linux 電腦上建置專案的根目錄位置。 除非進行變更，否則這會預設為 **~/projects**。
 
-- [遠端組建專案目錄]  是在遠端 Linux 電腦上建置這個特定專案的位置。 這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)** ，其會擴充到目前專案後命名的目錄。
+- [遠端組建專案目錄] 是在遠端 Linux 電腦上建置這個特定專案的位置。 這會預設為上面所設定之根目錄下的 **$(RemoteRootDir)/$(ProjectName)** ，其會擴充到目前專案後命名的目錄。
 
 > [!NOTE]
-> 若要變更預設 C 和 C++ 編譯器，或是用來建置專案的連結器和封存工具，請使用 [C/C++] > [一般]  區段和 [連結器] > [一般]  區段中的適當項目。 例如，您可以指定特定版本的 GCC 或 Clang。 如需詳細資訊，請參閱 [C/C++ 屬性 (Linux C++) ](prop-pages/c-cpp-linux.md)和[連結器屬性 (Linux C++)](prop-pages/linker-linux.md)。
+> 若要變更預設 C 和 C++ 編譯器，或是用來建置專案的連結器和封存工具，請使用 [C/C++] > [一般] 區段和 [連結器] > [一般] 區段中的適當項目。 例如，您可以指定特定版本的 GCC 或 Clang。 如需詳細資訊，請參閱 [C/C++ 屬性 (Linux C++) ](prop-pages/c-cpp-linux.md)和[連結器屬性 (Linux C++)](prop-pages/linker-linux.md)。
 
 ## <a name="copy-sources-remote-systems-only"></a>複製來源 (僅限遠端系統)
 
@@ -78,29 +78,23 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 在遠端系統上建置時，會將開發電腦上的來源檔案複製到 Linux 電腦，並在該處進行編譯。 根據預設，Visual Studio 專案中的所有來源都會複製到上方設定中所設定的位置。 不過，也可以在清單中新增其他來源，或者完全關閉複製來源，後者是 Makefile 專案的預設值。
 
-- [要複製的來源]  決定將哪些來源複製到遠端電腦。 根據預設， **\@(SourcesToCopyRemotely)** 預設為專案中所有的原始程式碼檔案，但不包括任何資產/資源檔案，例如影像。
+- [要複製的來源] 決定將哪些來源複製到遠端電腦。 根據預設， **\@(SourcesToCopyRemotely)** 預設為專案中所有的原始程式碼檔案，但不包括任何資產/資源檔案，例如影像。
 
-- [複製來源]  可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
+- [複製來源] 可以開啟和關閉，以啟用和停用將原始程式檔複製到遠端電腦。
 
-- [要複製的其他來源]  可讓您新增將複製到遠端系統的其他原始程式檔。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
+- [要複製的其他來源] 可讓您新增將複製到遠端系統的其他原始程式檔。 您可以指定分號分隔清單，也可以使用 **:=** 語法來指定要使用的本機和遠端名稱︰
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
 ## <a name="build-events"></a>建置事件
 
-因為所有編譯都是在遠端電腦 (或 WSL) 上進行，所以已在 [專案屬性] 的 [建置事件] 區段中新增數個額外建置事件。 這些是 [遠端建置前事件]  、[遠端連結前事件]  和 [遠端建置後事件]  ，並且在程序中的個別步驟之前或之後發生於遠端電腦上。
+因為所有編譯都是在遠端電腦 (或 WSL) 上進行，所以已在 [專案屬性] 的 [建置事件] 區段中新增數個額外建置事件。 這些是 [遠端建置前事件]、[遠端連結前事件] 和 [遠端建置後事件]，並且在程序中的個別步驟之前或之後發生於遠端電腦上。
 
 ![建置事件](media/settings_buildevents.png)
 
 ## <a name="remote_intellisense"></a> 適用於遠端系統標頭的 IntelliSense
 
-::: moniker range="vs-2019"
-
-本節不適用於以 WSL 為目標時。
-
-::: moniker-end
-
-當您在 [連線管理員]  中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
+當您在 [連線管理員] 中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
 
 這項功能取決於已安裝 ZIP 的 Linux 電腦。 您可以使用這個 apt-get 命令來安裝 ZIP：
 
@@ -108,7 +102,7 @@ Visual Studio 2017 及更新版本支援 Linux。
 sudo apt install zip
 ```
 
-若要管理標頭快取，請巡覽至 [工具] > [選項]、[跨平台] > [連線管理員] > [遠端標頭 IntelliSense 管理員]  。 若要在 Linux 電腦上進行變更後更新標頭快取，請選取遠端連線，然後選取 [更新]  。 選取 [刪除]  來移除標頭，但不刪除連線本身。 選取 [探索]  ，在**檔案總管**中開啟本機目錄。 將此資料夾視為唯讀。 若要針對 Visual Studio 2017 15.3 版之前建立的現有連線下載標頭，請選取連線，然後選取 [下載]  。
+若要管理標頭快取，請巡覽至 [工具] > [選項]、[跨平台] > [連線管理員] > [遠端標頭 IntelliSense 管理員]。 若要在 Linux 電腦上進行變更後更新標頭快取，請選取遠端連線，然後選取 [更新]。 選取 [刪除] 來移除標頭，但不刪除連線本身。 選取 [探索]，在**檔案總管**中開啟本機目錄。 將此資料夾視為唯讀。 若要針對 Visual Studio 2017 15.3 版之前建立的現有連線下載標頭，請選取連線，然後選取 [下載]。
 
 ::: moniker range="vs-2017"
 

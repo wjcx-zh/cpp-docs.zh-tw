@@ -1,10 +1,10 @@
 ---
 title: _spawnv、_wspawnv
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wspawnv
 - _spawnv
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wspawnv
 - _spawnv
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: 5939b3665bef4d07a4eaca262c38d4a20b83aed5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44cba91ade3916b524d6b35d954014cbcef6cd91
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355181"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947566"
 ---
-# <a name="spawnv-wspawnv"></a>_spawnv、_wspawnv
+# <a name="_spawnv-_wspawnv"></a>_spawnv、_wspawnv
 
 建立和執行新處理序。
 
@@ -68,11 +71,11 @@ intptr_t _wspawnv(
 待執行檔案的路徑。
 
 *argv*<br/>
-引數指標的陣列。 引數*argv*[0] 通常是路徑的指標以真實模式或程式名稱在受保護模式中，並*argv*[1] 透過*argv*[**n**] 是形成新引數清單之字元字串的指標。 引數*argv*[**n** + 1] 必須是**NULL**指標，以標記引數清單的結尾。
+引數指標的陣列。 引數*argv*[0] 通常是真實模式中的路徑或受保護模式中程式名稱的指標，而*argv*[1] 透過*argv*[**n**] 則是形成新引數清單之字元字串的指標。 引數*argv*[**n** + 1] 必須是**Null**指標，以標記引數清單的結尾。
 
 ## <a name="return-value"></a>傳回值
 
-同步的傳回值 **_spawnv**或是 **_wspawnv** (**_P_WAIT**指定為*模式*) 是新處理序的結束狀態。 非同步的傳回值 **_spawnv**或是 **_wspawnv** (**_P_NOWAIT**或是 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序明確呼叫**結束**例行以非零的引數。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值為-1 表示的錯誤 （未啟動新的處理序）。 在此情況下， **errno**設為下列值之一。
+同步 **_spawnv**或 **_wspawnv** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnv**或 **_wspawnv** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別呼叫具有非零引數的**exit**常式，您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，所謂確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
@@ -88,7 +91,7 @@ intptr_t _wspawnv(
 
 這些函式會建立並執行新的處理序，並將指標的陣列傳遞至命令列引數。
 
-這些函式會驗證它們的參數。 如果有任一*cmdname*或*argv*為 null 指標，或如果*argv*指向 null 指標，或*argv*[0] 為空字串，不正確參數叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**，並傳回-1。 未繁衍任何新處理序。
+這些函式會驗證它們的參數。 如果*cmdname*或*argv*是 null 指標，或是*argv*指向 null 指標，或*argv*[0] 是空字串，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
 ## <a name="requirements"></a>需求
 

@@ -1,6 +1,6 @@
 ---
 title: __popcnt16、__popcnt、__popcnt64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __popcnt64
 - __popcnt
@@ -11,22 +11,22 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e5ae7f897500775671f8bd2563028874579a627
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263213"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221352"
 ---
-# <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
+# <a name="__popcnt16-__popcnt-__popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
 **Microsoft 專屬**
 
-計算的其中一個 16、 32 或 64 位元不帶正負號的整數中的位元 （母體擴展計數）。
+計算16、32 `1`或64位不帶正負號整數中的位數 (人口數)。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned short __popcnt16(
    unsigned short value
 );
@@ -38,34 +38,34 @@ unsigned __int64 __popcnt64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*value*<br/>
-[in]16、 32 或 64 位元不帶正負號的整數，我們想要的母體擴展的計數。
+*value*\
+在我們想要其人口計數的16、32或64位不帶正負號的整數。
 
 ## <a name="return-value"></a>傳回值
 
-中的一個位元數目`value`參數。
+Value 參數中`1`的位數 。
 
 ## <a name="requirements"></a>需求
 
 |內建|架構|
 |---------------|------------------|
-|`__popcnt16`|進階的位元操作|
-|`__popcnt`|進階的位元操作|
-|`__popcnt64`|在 64 位元模式中的進階位元操作。|
+|`__popcnt16`|先進的位操作|
+|`__popcnt`|先進的位操作|
+|`__popcnt64`|64位模式中的先進位操作。|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-每個這些內建函式會產生`popcnt`指令。 在 32 位元模式中有無 64 位元一般用途的暫存器，因此沒有 64 位元`popcnt`。
+每個內建函式都會產生`popcnt`指令。 在32位模式中, 沒有64位的一般用途暫存器, 因此不支援64位`popcnt` 。
 
-若要判斷硬體支援`popcnt`指示，請呼叫`__cpuid`與內建`InfoType=0x00000001`並檢查位元 23 的`CPUInfo[2] (ECX)`。 此位元可說是支援的指示，則為 1 和 0。 如果您執行程式碼使用此內建在不支援的硬體上`popcnt`指令，結果會無法預測。
+若要判斷`popcnt`指令的硬體支援, 請`__cpuid`呼叫內建函式`InfoType=0x00000001`並核取的`CPUInfo[2] (ECX)`位23。 如果支援指令, 則此位為 1, 否則為0。 如果您在不支援`popcnt`指令的硬體上執行使用這些內建函式的程式碼, 結果會是無法預測的。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 #include <iostream>
 #include <intrin.h>
 using namespace std;
@@ -101,8 +101,8 @@ __popcnt(0xffffffff) = 32
 
 **結束 Microsoft 專屬**
 
-進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
+由 Advanced 微裝置, Inc. 的部分著作權2007著作權所有，並保留一切權利。 已從 Advanced 微裝置, Inc. 的許可權重現
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

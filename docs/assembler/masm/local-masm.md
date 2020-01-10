@@ -1,32 +1,33 @@
 ---
 title: LOCAL (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - Local
 helpviewer_keywords:
 - LOCAL directive
 ms.assetid: 76147e2d-23ca-4f1e-8817-81428becd113
-ms.openlocfilehash: 94af498865151ff5c49fac9dbc03de65c4ecb934
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2bef6b26f1b922be6512bd6ebe8e0b2627e86f45
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178003"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317145"
 ---
-# <a name="local-masm"></a>LOCAL (MASM)
+# <a name="local"></a>LOCAL
 
-在巨集內的第一個指示詞**本機**定義巨集的每個執行個體是唯一的標籤。
+在宏內的第一個指示詞中， **LOCAL**會定義每個宏實例特有的標籤。
 
 ## <a name="syntax"></a>語法
 
-> 本機*localname* \[， *localname*]...
+> **LOCAL** *LocalId* ⟦， *localId* .。。⟧
 >
-> 本機*標籤* \[ __\[__*計數*__]__ ] \[ __:__ *型別*] \[ __，__ *標籤* \[ __\[__*計數*__]__ ] \[*型別*]]...
+> **LOCAL** *labelId* ⟦ __\[__ *count* __]__ ⟧⟦ __：__ *qualifiedType*⟧⟦ __，__ *labelId* ⟦ __\[__ *count* __]__ *⟧⟦ qualifiedType ⟧ ...* ⟧
 
 ## <a name="remarks"></a>備註
 
-在程序定義中的第二個指示詞 (**PROC**)，**本機**建立存在的程序期間的堆疊式變數。 *標籤*可能是簡單的變數或陣列，其中包含*計數*項目。
+在第二個指示詞中，在程序定義（**PROC**）內， **LOCAL**會建立在程式期間存在的堆疊型變數。 *LabelId*可以是簡單變數或包含*count*元素的陣列，其中*count*是常數運算式。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

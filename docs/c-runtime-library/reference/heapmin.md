@@ -1,9 +1,9 @@
 ---
 title: _heapmin
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _heapmin
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _heapmin
 - heapmin
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c36a1028e42d59217586cc50adcb612e78072b03
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157220"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954797"
 ---
-# <a name="heapmin"></a>_heapmin
+# <a name="_heapmin"></a>_heapmin
 
 釋放未使用的堆積記憶體給作業系統。
 
@@ -46,13 +49,13 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_heapmin**會傳回 0; 否則函數會傳回-1，並設定**errno**來**ENOSYS**。
+如果成功， **_heapmin**會傳回 0;否則，函數會傳回-1，並將**errno**設定為**ENOSYS**。
 
 如需此函式與其他傳回碼的詳細資訊，請參閱 [_doserrno, errno、_sys_errlist 及 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Heapmin**函式將堆積最小化釋放未使用的堆積記憶體給作業系統。 如果作業系統不支援 **_heapmin**（例如 Windows 98），則函數會傳回-1，並設定**errno**來**ENOSYS**。
+**_Heapmin**函數會將未使用的堆積記憶體釋放給作業系統，以將堆積降至最低。 如果作業系統不支援 **_heapmin**（例如，Windows 98），此函式會傳回-1，並將**Errno**設定為**ENOSYS**。
 
 ## <a name="requirements"></a>需求
 

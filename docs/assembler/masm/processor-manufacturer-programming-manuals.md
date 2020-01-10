@@ -1,30 +1,31 @@
 ---
 title: 處理器製造商程式設計手冊
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 ms.assetid: 61844163-de2f-419a-808e-04de39dfdddf
-ms.openlocfilehash: be650b0d19577b0a2191a6bf7d16063e720f3b0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e1f1d32c50d86ac1df271add10936f572a59c20
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210573"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318653"
 ---
 # <a name="processor-manufacturer-programming-manuals"></a>處理器製造商程式設計手冊
 
-本文章提供網站可能包含未製造、 銷售或 Microsoft 支援的處理器相關的程式設計資訊的連結。 Microsoft 不會擁有或控制的網站或在其上的內容。
+本文提供的網站連結，可能包含不是由 Microsoft 製造、銷售或支援之處理器的程式設計資訊。 Microsoft 不會擁有或控制網站或其上的內容。
 
 ## <a name="processor-manufacturer-websites"></a>處理器製造商網站
 
-- [AMD 開發人員指南、 手冊和 ISA 的文件](https://developer.amd.com/resources/developer-guides-manuals/)
+- [AMD 開發人員指南，手冊 & ISA 檔](https://developer.amd.com/resources/developer-guides-manuals/)
 
 - [Intel 64 和 IA-32 架構軟體開發人員手冊](https://software.intel.com/articles/intel-sdm)
 
-- [Intel 進階向量擴充功能的簡介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
+- [Intel Advanced Vector Extensions 簡介](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
 ## <a name="remarks"></a>備註
 
-Visual Studio 和 Microsoft Macro Assembler 都不支援所有的處理器。
+Visual Studio 或 Microsoft 巨集群組合器都不支援所有處理器。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-- [Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)
+[Microsoft 巨集組譯參考](microsoft-macro-assembler-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

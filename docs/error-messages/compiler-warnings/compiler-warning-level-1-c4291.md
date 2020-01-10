@@ -1,31 +1,31 @@
 ---
-title: 編譯器警告 (層級 1) C4291
+title: 編譯器警告（層級1） C4291
 ms.date: 11/04/2016
 f1_keywords:
 - C4291
 helpviewer_keywords:
 - C4291
 ms.assetid: c2b95dea-38f2-4609-9104-707c30798da4
-ms.openlocfilehash: e1b787e7149afe93fb50cc1e6ceaecba2e787876
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8dc35a58d40d2619f6e035e07b4ad0b3351c45d
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384243"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626646"
 ---
-# <a name="compiler-warning-level-1-c4291"></a>編譯器警告 (層級 1) C4291
+# <a name="compiler-warning-level-1-c4291"></a>編譯器警告（層級1） C4291
 
-'declaration': 沒有相符的 delete 運算子，如果初始設定擲回例外狀況，將不會釋放記憶體
+' 宣告 '：找不到相符的運算子 delete;如果初始化擲回例外狀況，則不會釋放記憶體
 
-在放置[新](../../cpp/new-operator-cpp.md)會使用包括不沒有放置[刪除](../../cpp/delete-operator-cpp.md)。
+[放置[新](../../cpp/new-operator-cpp.md)的] 是用於沒有放置[刪除](../../cpp/delete-operator-cpp.md)的位置。
 
-當配置給具有運算子的物件的記憶體**新**，呼叫物件的建構函式。 如果建構函式會擲回例外狀況，就應該取消配置任何物件所配置的記憶體。 這不需要的地方，除非操作員**刪除**函式存在，並符合運算子**新**。
+針對具有 operator **new**的物件配置記憶體時，會呼叫該物件的函式。 如果此函式擲回例外狀況，則配置給物件的任何記憶體都應該解除配置。 除非符合運算子**new**的運算子**delete**函式存在，否則無法進行此操作。
 
-如果您使用的運算子**新**而不需要任何額外的引數和與編譯[/GX](../../build/reference/gx-enable-exception-handling.md)， [/EHs](../../build/reference/eh-exception-handling-model.md)，或 /EHa 選項，以啟用例外狀況處理，編譯器會產生程式碼呼叫運算子**刪除**如果建構函式會擲回的例外狀況。
+如果您使用不含任何額外引數的運算子**new** ，並使用[/gx](../../build/reference/gx-enable-exception-handling.md)、 [/ehs](../../build/reference/eh-exception-handling-model.md)或/eha 選項進行編譯以啟用例外狀況處理，則編譯器會產生程式碼，以便在此函式擲回例外狀況時呼叫 operator **delete** 。
 
-如果您使用的位置形式**新**運算子 （除了大小引數的形式配置） 和物件的建構函式會擲回例外狀況，編譯器仍會產生程式碼以呼叫運算子**刪除**; 但它只會這麼如果運算子的放置形式**刪除**存在比對運算子的位置形式**新**所配置的記憶體。 例如: 
+如果您使用**new**運算子的放置形式（除了配置大小之外還有引數的表單），而且物件的函式會擲回例外狀況，則編譯器仍然會產生呼叫 operator **delete**的程式碼;但是，如果運算子**delete**的放置形式與配置記憶體的運算子**new**的放置形式相符，它就只會這麼做。 例如:
 
-```
+```cpp
 // C4291.cpp
 // compile with: /EHsc /W1
 #include <malloc.h>
@@ -74,7 +74,7 @@ int main(void)
 }
 ```
 
-上述範例會產生警告 C4291，因為運算子的任何位置形式**刪除**已定義的比對運算子的位置形式**新**。 若要解決此問題，下列程式碼插入至上述**主要**。 請注意，所有多載運算子**刪除**函式參數符合多載的運算子**新**，除了第一個參數。
+上述範例會產生警告 C4291，因為未定義任何位置形式的運算子**delete** ，以符合 operator **new**的放置形式。 若要解決此問題，請將下列程式碼插入到**main**上面。 請注意，除了第一個參數以外，所有多載運算子**delete**函數參數都符合多載運算子**new**的。
 
 ```
 void operator delete(void* pMem, char* pszFilename, int nLine)

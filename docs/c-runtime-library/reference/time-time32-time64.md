@@ -1,11 +1,11 @@
 ---
 title: time、_time32、_time64
 ms.date: 11/06/2018
-apiname:
+api_name:
 - time
 - _time64
 - _time32
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - time
 - _time64
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-ms.openlocfilehash: 693b70b3682876d7e6c3721f5d06aa13d31abb96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02dc7f250fe26d9ed7abfd89ca9a4c2163312e6d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155585"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946094"
 ---
-# <a name="time-time32-time64"></a>time、_time32、_time64
+# <a name="time-_time32-_time64"></a>time、_time32、_time64
 
 取得系統時間。
 
@@ -59,19 +62,19 @@ __time64_t _time64( __time64_t *destTime );
 
 ## <a name="return-value"></a>傳回值
 
-從 1970 年 1 月 1 日午夜或-1，如果發生錯誤後所經過的秒，則傳回的時間。
+傳回從1970年1月1日午夜起算的秒數，如果發生錯誤，則傳回-1。
 
 ## <a name="remarks"></a>備註
 
-**時間**函式會傳回午夜所經過的秒數 (00: 00:00) 1970 年 1 月 1 日 Coordinated Universal Time (UTC)，根據系統時鐘。 傳回值會儲存在所指定的位置*destTime*。 這個參數可以是**NULL**，在此情況下不會儲存到傳回的值。
+**Time**函式會根據系統時鐘，傳回自1970年1月1日午夜（00:00:00）起算的秒數（以國際標準時間（UTC）為依據）。 傳回值會儲存在*destTime*所指定的位置。 這個參數可以是**Null**，在此情況下不會儲存傳回值。
 
-**時間**是包裝函式 **_time64**並**time_t**是，根據預設，相當於 **__time64_t**。 如果您要強制編譯器將解譯**time_t**為舊的 32 位元**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。
+**time**是 **_time64**和**time_t**的包裝函式，預設相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗；不允許在 64 位元平台上使用此巨集。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------|------|---------------------|
-|**時間**，  **\_time32**，  **\_time64**|\<time.h>|\<ctime > 或\<time.h >|
+|**time**  **、\_time32**、 **time64 \_**|\<time.h>|\<ctime > 或\<time. h >|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

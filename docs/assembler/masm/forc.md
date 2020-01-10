@@ -1,32 +1,33 @@
 ---
 title: FORC
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - FORC
 helpviewer_keywords:
 - FORC directive
 ms.assetid: 57c05099-0c46-44bc-9ae5-27ce850ccdff
-ms.openlocfilehash: 0dcac81bcf7bcbc5fbb956195cf9645d8b59200b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d81c56c3322763030427d68d5b8075c9164f4ae3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203093"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313310"
 ---
 # <a name="forc"></a>FORC
 
-將重複的每個字元的一次一個區塊會將標示*字串*，使用目前的字元取代*參數*上每個重複作業。
+針對*字串*中的每個字元，將重複一次的區塊標記為，並在每次重複時取代*參數*。
 
 ## <a name="syntax"></a>語法
 
-> FORC*參數*， \<*字串*><br/>
-> *statements*<br/>
-> ENDM
+> **FORC** *參數*， __\<__ *字串* __>__ \
+> *語句*\
+> **ENDM**
 
 ## <a name="remarks"></a>備註
 
-與相同[IRPC](../../assembler/masm/irpc.md)。
+與[IRPC](irpc.md)相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

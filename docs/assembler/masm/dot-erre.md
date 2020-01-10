@@ -1,26 +1,27 @@
 ---
 title: .ERRE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ERRE
 helpviewer_keywords:
 - .ERRE directive
 ms.assetid: cfb5a4bb-4488-4101-bd06-63ba43b1473e
-ms.openlocfilehash: 6e031b64aff2421b8908ed537b9c37e42b8ebc4c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ab432c5d1dc0a87e5de71688196332a56367b3ec
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185222"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313479"
 ---
 # <a name="erre"></a>.ERRE
 
-會產生錯誤，如果*運算式*為 false (0)。
+如果*expression*為 false （0），則會產生錯誤。
 
 ## <a name="syntax"></a>語法
 
-> .ERRE expression [[, message]]
+> **..Erre** *expression* ⟦__，__ *message*⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

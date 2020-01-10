@@ -20,46 +20,46 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d26fbefd87b3ba6d6ca7e183be78608777f383b5
+ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384513"
+ms.lasthandoff: 01/06/2020
+ms.locfileid: "75676926"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>使用 C++ Interop (隱含 PInvoke)
 
-不同於其他.NET 語言，視覺效果C++具有相同的應用程式和甚至是在相同的檔案，可讓存在於 managed 和 unmanaged 程式碼的互通性支援 (與[managed、 unmanaged](../preprocessor/managed-unmanaged.md) pragma)。 這可讓視覺效果C++開發人員將.NET 功能整合到現有的視覺效果C++應用程式，而不會影響應用程式的其餘部分。
+不同于其他 .NET 語言， C++視覺效果具有互通性支援，可讓受控和非受控程式碼存在於相同的應用程式中，甚至是在同一個檔案中（使用[受控、未受管理](../preprocessor/managed-unmanaged.md)的 pragma）。 這可讓C++視覺效果開發人員將 .net 功能整合C++到現有的視覺效果應用程式，而不會干擾應用程式的其餘部分。
 
-您也可以從受管理的編譯模組，使用呼叫 unmanaged 函式[dllexport、 dllimport](../cpp/dllexport-dllimport.md)。
+您也可以使用[dllexport dllimport，](../cpp/dllexport-dllimport.md)從 managed 編譯模組呼叫非受控函式。
 
-隱含 PInvoke 時，您不需要指定如何函式參數會封送處理，或任何其他明確呼叫 DllImportAttribute 時，可以指定的詳細資料。
+當您不需要指定如何封送處理函式參數，或在明確呼叫 DllImportAttribute 時指定的任何其他詳細資料時，隱含的 PInvoke 就很有用。
 
-視覺化C++提供交互操作的 managed 和 unmanaged 函式的兩種方式：
+[ C++視覺效果] 提供兩種方式，讓 managed 和非受控函式相交互操作：
 
 - [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
-明確的 PInvoke 支援的.NET Framework，並且可在大部分的.NET 語言。 但正如其名， C++ Interop 是特定視覺效果C++。
+明確的 PInvoke 受到 .NET Framework 的支援，而且在大部分的 .NET 語言中都有提供。 但正如其名， C++ Interop 是視覺效果C++特有的。
 
 ## <a name="c-interop"></a>C++ Interop
 
-C++因為它提供更好的型別安全實作通常比較不瑣碎，如果未受管理的 API 已經過修改，而使效能增強功能可能即無法在明確是更寬容明確的 PInvoke 建議 interopPInvoke。 不過， C++ Interop 不可行，如果無法使用未受管理的原始程式碼。
+C++Interop 提供較佳的型別安全，而執行起來通常較不繁瑣。 不過， C++如果無法使用非受控原始程式碼或跨平臺專案，Interop 就不是選項。
 
 ## <a name="c-com-interop"></a>C++ COM Interop
 
-支援的視覺效果的互通性功能C++提供優於其他.NET 語言的特定優點，說到 COM 元件與交互操作。 而不受限於.NET Framework 的限制[Tlbimp.exe （型別程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)，例如資料類型的有限的支援和必要的曝光度的每個 COM 的介面，每個成員的C++Interop可讓 COM 元件存取隨意且不需要個別的 interop 組件。 不同於 Visual Basic 和C#、 VisualC++可以使用直接使用一般的 COM 機制的 COM 物件 (例如**CoCreateInstance**並**QueryInterface**)。 這是由於C++會導致編譯器自動插入移從 managed 至 unmanaged 函式，然後再次轉換程式碼的 Interop 功能。
+視覺效果C++所支援的互通性功能，在與 COM 元件互通時，會提供與其他 .net 語言的特殊優勢。 Interop 不受限於 .NET Framework [tlbimp.exe （類型程式庫匯入工具）](/dotnet/framework/tools/tlbimp-exe-type-library-importer)的限制，例如有限的資料類型支援，以及每個 COM 介面之每個成員的強制性公開， C++ interop 可讓 COM 元件進行存取，而不需要個別的 Interop 元件。 不同于 Visual Basic C#和， C++ Visual 可以直接使用使用一般 Com 機制（例如**COCREATEINSTANCE**和**QueryInterface**）的 com 物件。 這是可能的， C++因為 Interop 功能會導致編譯器自動插入轉換程式碼，以便從 managed 移至非受控函式，然後再次返回。
 
-使用C++互通性之外，可以使用 COM 元件，因為它們通常會使用或可以包裝在內C++類別。 這些包裝函式的類別稱為自訂執行階段可呼叫包裝函式，或 CRCWs，而且它們有透過直接在應用程式程式碼中使用 COM 的兩個優點：
+使用C++ Interop 時，可以使用 COM 元件，因為它們通常會使用，也可以包裝在C++類別內。 這些包裝函式類別稱為「自訂執行時間可呼叫包裝函式」（CRCWs），而且在應用程式代碼中與直接使用 COM 相比有兩個優點：
 
-- 產生的類別可以從 視覺效果以外的語言使用C++。
+- 產生的類別可以從視覺效果C++以外的語言使用。
 
-- 從受管理的用戶端程式碼，可以隱藏 COM 介面的詳細資料。 .NET 資料型別可以用來取代原生類型，並可以無障礙地執行資料封送處理的詳細資料，CRCW 內。
+- 您可以從 managed 用戶端程式代碼隱藏 COM 介面的詳細資料。 .NET 資料類型可以用來取代原生類型，而資料封送處理的細節則可以在 CRCW 內以透明的方式執行。
 
-不論是否直接或透過 CRCW，使用 COM，簡單的 blittable 類型以外的引數類型必須是封送處理。
+無論是直接使用 COM 或透過 CRCW，都必須封送處理簡單、可直接執行的引數類型。
 
-## <a name="blittable-types"></a>Blittable 類型
+## <a name="blittable-types"></a>可直接輸入的類型
 
-使用簡單、 內建類型的 unmanaged api (請參閱[Blittable 和非 Blittable 類型](/dotnet/framework/interop/blittable-and-non-blittable-types))，因為這些資料類型都有相同表示法在記憶體中，但更複雜的資料類型需要任何特殊的程式碼是必要明確封送處理的資料。 如需範例，請參閱[如何：從使用 PInvoke 的 Managed 程式碼呼叫原生 Dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
+針對使用簡單、內建類型的非受控 Api （請參閱可轉型[和非](/dotnet/framework/interop/blittable-and-non-blittable-types)類型的類型），不需要特殊程式碼，因為這些資料類型在記憶體中有相同的標記法，但更複雜的資料類型需要明確的資料封送處理。 如需範例，請參閱[如何：使用 PInvoke 從 Managed 程式碼呼叫原生 dll](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)。
 
 ## <a name="example"></a>範例
 
@@ -91,7 +91,7 @@ Begin beep
 Done
 ```
 
-## <a name="in-this-section"></a>本節內容
+## <a name="in-this-section"></a>本章節內容
 
 - [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
@@ -111,7 +111,7 @@ Done
 
 - [如何：將 char * 字串轉換為 System::Byte 陣列](../dotnet/how-to-convert-char-star-string-to-system-byte-array.md)
 
-- [如何：將 system:: string 轉換為 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
+- [如何：將 System：： String 轉換成 wchar_t * 或 char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)
 
 - [如何：將 System::String 轉換為標準字串](../dotnet/how-to-convert-system-string-to-standard-string.md)
 
@@ -119,32 +119,32 @@ Done
 
 - [如何：取得位元組陣列的指標](../dotnet/how-to-obtain-a-pointer-to-byte-array.md)
 
-- [如何：將非受控資源載入至位元組陣列](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
+- [如何：將 Unmanaged 資源載入至位元組陣列](../dotnet/how-to-load-unmanaged-resources-into-a-byte-array.md)
 
 - [如何：修改原生函式中的參考類別](../dotnet/how-to-modify-reference-class-in-a-native-function.md)
 
-- [如何：判斷影像為原生或 CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
+- [如何：判斷影像是否為原生或 CLR](../dotnet/how-to-determine-if-an-image-is-native-or-clr.md)
 
 - [如何：將原生 DLL 新增至全域組件快取](../dotnet/how-to-add-native-dll-to-global-assembly-cache.md)
 
 - [如何：以原生類型存放實值型別的參考](../dotnet/how-to-hold-reference-to-value-type-in-native-type.md)
 
-- [如何：在非受控記憶體中存放物件參考](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
+- [如何：在 Unmanaged 記憶體中存放物件參考](../dotnet/how-to-hold-object-reference-in-unmanaged-memory.md)
 
-- [如何：偵測 /clr 編譯](../dotnet/how-to-detect-clr-compilation.md)
+- [如何：偵測/clr 編譯](../dotnet/how-to-detect-clr-compilation.md)
 
 - [如何：在 System::Guid 和 _GUID 之間轉換](../dotnet/how-to-convert-between-system-guid-and-guid.md)
 
 - [如何：指定 out 參數](../dotnet/how-to-specify-an-out-parameter.md)
 
-- [如何：在 /clr 編譯中使用原生類型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
+- [如何：在/clr 編譯中使用原生類型](../dotnet/how-to-use-a-native-type-in-a-clr-compilation.md)
 
 - [如何：以原生類型宣告控制代碼](../dotnet/how-to-declare-handles-in-native-types.md)
 
 - [如何：包裝原生類別以便讓 C# 使用](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-如需在 interop 的案例中使用委派的資訊，請參閱[委派 (C++元件擴充功能)](../extensions/delegate-cpp-component-extensions.md)。
+如需在 interop 案例中使用委派的詳細資訊，請參閱[委派（C++元件擴充功能）](../extensions/delegate-cpp-component-extensions.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 - [從 Managed 程式碼呼叫原生函式](../dotnet/calling-native-functions-from-managed-code.md)

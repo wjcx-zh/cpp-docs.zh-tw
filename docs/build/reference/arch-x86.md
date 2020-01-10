@@ -1,62 +1,75 @@
 ---
 title: /arch (x86)
-ms.date: 11/04/2016
+ms.date: 10/01/2019
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b1e5501f6edd3eb016395380ff476250c0c388b9
+ms.sourcegitcommit: 4517932a67bbf2db16cfb122d3bef57a43696242
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341052"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816322"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-在 x86 上，為程式碼產生指定架構。 另請參閱[/arch (x64)](arch-x64.md)並[/arch (ARM)](arch-arm.md)。
+在 x86 上，為程式碼產生指定架構。 另請參閱[/arch （x64）](arch-x64.md)和[/arch （ARM）](arch-arm.md)。
 
 ## <a name="syntax"></a>語法
 
 ```
-/arch:[IA32|SSE|SSE2|AVX|AVX2]
+/arch:[IA32|SSE|SSE2|AVX|AVX2|AVX512]
 ```
 
 ## <a name="arguments"></a>引數
 
-**/arch:IA32**<br/>
+**/arch： IA32**<br/>
 指定沒有增強的指令，同時指定用於浮點數計算的 x87。
 
-**/arch:SSE**<br/>
+**/arch： SSE**<br/>
 啟用 SSE 指令的使用。
 
-**/arch:SSE2**<br/>
-啟用 SSE2 指令的使用。 這是預設指示，在 x86 平台，如果沒有 **/arch**指定選項。
+**/arch： SSE2**<br/>
+啟用 SSE2 指令的使用。 這是在 x86 平臺上的預設指示（如果未指定 **/arch**選項）。
 
 **/arch:AVX**<br/>
 啟用 Intel Advanced Vector Extensions 指令的使用。
 
-**/arch:AVX2**<br/>
+**/arch： AVX2**<br/>
 啟用 Intel Advanced Vector Extensions 2 指令的使用。
+
+**/arch： AVX512**<br/>
+啟用 Intel Advanced Vector Extensions 512 指示的使用。
 
 ## <a name="remarks"></a>備註
 
-SSE 及 SSE2 指令在各種 Intel 及 AMD 處理器上存在。 AVX 指令在 Intel Sandy Bridge 處理器及 AMD Bulldozer 處理器上存在。 AVX2 指令由 Intel Haswell 和 Broadwell 處理器及 AMD Excavator 處理器支援。
+**/Arch**選項會啟用或停用特定指令集延伸模組的使用，特別是針對向量計算，適用于 INTEL 和 AMD 的處理器。 一般來說，最新引進的處理器可能支援較舊處理器支援的額外延伸模組，但您應該參閱特定處理器的檔，或使用 __ 測試指令集延伸模組支援使用指令集延伸模組執行程式碼之前的 [cpuid](../../intrinsics/cpuid-cpuidex.md)。
 
-`_M_IX86_FP`，`__AVX__`並`__AVX2__`巨集指出，如果有的話 **/arch**編譯器選項使用。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch:avx2**選項和`__AVX2__`巨集已引入 Visual Studio 2013 Update 2 12.0.34567.1 版。
+**/arch**只會影響原生函式的程式碼產生。 當您使用[/clr](clr-common-language-runtime-compilation.md)進行編譯時， **/arch**不會影響 managed 函式的程式碼產生。
 
-最佳化工具選擇何時及如何使用 SSE 及 SSE2 指令時 **/arch**指定。 當最佳化工具判定在計算某些純量浮點數時，使用 SSE/SSE2 指令及暫存器要比使用 x87 浮點數暫存器堆疊更快時，它會使用 SSE 及 SSE2 指令。 因此，在計算浮點數時，您的程式碼可能實際上是使用 x87 與 SSE/SSE2 的混合。 此外，使用 **/arch:sse2**，SSE2 指令可用於部分 64 位元整數的作業。
+**/Arch**選項會參考具有下列特性的指令集延伸模組：
 
-除了使用 SSE 及 SSE2 指令之外，編譯器還會使用支援 SSE 及 SSE2 之處理器修訂上存在的其他指令。 例如，最先出現在 Intel 處理器 Pentium Pro 修訂上的 CMOV 指令。
+- **IA32**是舊版32位 x86 指令集，不含任何向量運算，而且會針對浮點計算使用 x87。
 
-因為的 x86 編譯器會產生程式碼該使用 SSE2 指令，根據預設，您必須指定 **/arch:ia32**停用 SSE 及 SSE2 指令產生適用於 x86 處理器。
+- **SSE**允許以最多四個單精確度浮點值的向量來計算。 也加入對應的純量浮點指示。
 
-**/arch**只會影響程式碼產生原生函式。 當您使用[/clr](clr-common-language-runtime-compilation.md)進行編譯， **/arch**不有 managed 函式的程式碼產生任何影響。
+- **SSE2**允許以單精確度、雙精確度和1、2、4或8位元組整數值的128位向量進行計算。 也加入了雙精確度純量指示。
 
-**/arch**並[/QIfist](qifist-suppress-ftol.md)不能在相同的編譯模組。 具體來說，如果您未使用 `_controlfp` 來修改 FP 控制字組，則執行階段啟始程式碼會將 x87 FPU 控制字組精確度控制欄位，設定為 53 個位元。 因此，運算式中的每一個浮點數及雙精度浮點數運算都會使用 53 個位元的有效位數及 15 個位元的指數。 不過，每一個 SSE 單精確度運算會使用 24 個位元的有效位數及 8 個位元的指數，而 SSE2 雙精確度運算會使用 53 個位元的有效位數及 11 個位元的指數。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 在一個運算式樹狀架構可能存在這些差異，但在每一個子運算式之後涉及使用者指派的情況下除外。 請考慮下列事項：
+- **AVX**引進了向量和浮點純量指示的替代指令編碼，可允許128位或256位的向量，而零則會將所有向量結果擴充為完整的向量大小。 （如需舊版相容性，SSE 樣式向量指令會保留超過位127的所有位）。大部分的浮點運算會擴充至256位。
+
+- **AVX2**會將大部分的整數作業延伸至256位向量，並可使用已融合的乘法-ADD （FMA）指示。
+
+- **AVX512**引進了另一個允許512位向量的指令編碼形式，加上一些其他選擇性功能。 此外，也會新增其他作業的指示。
+
+優化工具會根據指定的 **/arch** ，選擇使用向量指示的時機和方式。 純量浮點計算會使用 SSE 或 AVX 指令來執行（如果有的話）。 某些呼叫慣例會指定在 x87 堆疊上傳遞浮點引數，因此，您的程式碼可以混合使用 x87 和 SSE/AVX 指令來進行浮點計算。 整數向量指令也可以用於某些64位整數作業（如果有的話）。
+
+除了向量和浮點純量指令以外，每個 **/arch**選項也可能會啟用與該選項相關聯之其他非向量指令的使用。 例如，CMOVcc 指令系列第一次出現在 Intel Pentium Pro 處理器上。 由於 SSE 指示是在後續的 Intel Pentium III 處理器中引進，因此可能會產生 CMOVcc 指示，除非指定了 **/arch： IA32** 。
+
+在 x87 程式碼中，浮點運算通常會四捨五入為雙精確度（64位），但您可以使用 `_controlfp` 來修改 FP 控制字組，包括將有效位數控制項設定為擴充精確度（80位）或單精確度（32位）。 如需詳細資訊，請參閱 [_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)。 SSE 和 AVX 對於每個作業都有個別的單精確度和雙精確度的指示，因此 SSE/AVX 程式碼沒有對等的對應。 這可能會變更當浮點運算的結果直接用於進一步的計算，而不是將它指派給使用者變數時，結果的舍入方式。 請考慮下列事項：
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
 ```
 
-比較：
+使用明確指派：
 
 ```cpp
 t = f1 * f2;   // Do f1 * f2, round to the type of t.
@@ -64,19 +77,33 @@ r = t + d;     // This should produce the same overall result
                // whether x87 stack is used or SSE/SSE2 is used.
 ```
 
-### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>在 Visual Studio 中設定 AVX、AVX2、IA32、SSE 或 SSE2 的這個編譯器選項
+**/arch**和[/QIfist](qifist-suppress-ftol.md)不能用在相同的編譯模組上。 **/QIfist**選項會將浮點的舍入行為變更為整數轉換。 預設行為是截斷（向零舍入），而 **/QIfist**選項指定使用浮點環境舍入模式。 因為這會變更所有浮點到整數轉換的行為，所以此旗標已被取代。 針對 SSE 或 AVX 進行編譯時，您可以使用內建函式順序，將浮點值舍入為整數，方法是使用浮點環境進位模式：
 
-1. 開啟**屬性頁**專案 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+```cpp
+int convert_float_to_int(float x) {
+    return _mm_cvtss_si32(_mm_set_ss(x));
+}
 
-1. 選取 **組態屬性**， **C /C++** 資料夾。
+int convert_double_to_int(double x) {
+    return _mm_cvtsd_si32(_mm_set_sd(x));
+}
+```
 
-1. 選取 **程式碼產生**屬性頁。
+`_M_IX86_FP`、`__AVX__`、`__AVX2__`、`__AVX512F__`、`__AVX512CD__`、`__AVX512BW__`、`__AVX512DQ__` 和 `__AVX512VL__` 宏會指出使用了哪個 **/arch**編譯器選項（如果有的話）。 如需詳細資訊，請參閱 [Predefined Macros](../../preprocessor/predefined-macros.md)。 **/Arch： AVX2**選項和 `__AVX2__` 宏是在 Visual Studio 2013 Update 2，版本12.0.34567.1 中引進。 有限的 **/arch 支援： AVX512**已在 Visual Studio 2017 中新增，並在 Visual Studio 2019 中展開。
 
-1. 修改**啟用進階指令集**屬性。
+### <a name="to-set-this-compiler-option-for-avx-avx2-avx512-ia32-sse-or-sse2-in-visual-studio"></a>若要在 Visual Studio 中為 AVX、AVX2、AVX512、IA32、SSE 或 SSE2 設定此編譯器選項
+
+1. 開啟專案的 [**屬性頁**] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+
+1. 選取 [設定]**屬性**[ **CC++ /** 資料夾]。
+
+1. 選取 [程式**代碼產生**] 屬性頁。
+
+1. 修改 [**啟用增強的指令集**] 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>。
+- 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnableEnhancedInstructionSet%2A>.
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,38 +1,37 @@
 ---
 title: __vmx_vmclear
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __vmx_vmclear
 helpviewer_keywords:
 - VMCLEAR instruction
 - __vmx_vmclear intrinsic
 ms.assetid: e3eb98e4-50fc-4c93-9bac-340fd1f0a466
-ms.openlocfilehash: 17e3e5c91a58894b25fc6b2a72f7d0056fa88119
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b5807402cf0a9d8a9ef1ded1d112d22a801633e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390057"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219535"
 ---
-# <a name="vmxvmclear"></a>__vmx_vmclear
+# <a name="__vmx_vmclear"></a>__vmx_vmclear
 
 **Microsoft 專屬**
 
-初始化指定的虛擬機器控制結構 (VMCS)，並將其啟動狀態設為`Clear`。
+初始化指定的虛擬機器控制結構 (VMCS), 並將其啟動狀態`Clear`設定為。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned char __vmx_vmclear(
    unsigned __int64 *VmcsPhysicalAddress
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|*VmcsPhysicalAddress*|[in]包含要清除 VMCS 的實體位址的 64 位元記憶體位置指標。|
+*VmcsPhysicalAddress*\
+在64位記憶體位置的指標, 其中包含要清除之 VMCS 的實體位址。
 
 ## <a name="return-value"></a>傳回值
 
@@ -44,9 +43,9 @@ unsigned char __vmx_vmclear(
 
 ## <a name="remarks"></a>備註
 
-應用程式可以執行 VM 輸入作業使用其中一種[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或是[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函式。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函式只能搭配的 VMCS 的啟動狀態`Clear`，而[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函式只能搭配的 VMCS 的啟動狀態是`Launched`。 因此，使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函式設定至 VMCS 的啟動狀態`Clear`。 使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)第一個 VM 輸入作業的函式並[__vmx_vmresume](../intrinsics/vmx-vmresume.md)後續的 VM 輸入作業的函式。
+應用程式可以使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)或[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函數來執行 VM 輸入作業。 [__Vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函數只能用於啟動狀態為`Clear`的 VMCS, 而[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函式只能搭配啟動狀態為`Launched`的 VMCS 使用。 因此, 請使用[__vmx_vmclear](../intrinsics/vmx-vmclear.md)函數將 VMCS 的啟動狀態設定為`Clear`。 針對您的第一個 VM 輸入作業使用[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)函式, 並針對後續的 vm 輸入操作使用[__vmx_vmresume](../intrinsics/vmx-vmresume.md)函數。
 
-`__vmx_vmclear` 函式相當於 `VMCLEAR` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件 < Intel 虛擬化技術規格的 IA-32 Intel 架構 >、 文件編號 C97063-002，位於[Intel Corporation](https://software.intel.com/articles/intel-sdm)站台。
+`__vmx_vmclear` 函式相當於 `VMCLEAR` 機器指令。 這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊, 請在[Intel Corporation](https://software.intel.com/articles/intel-sdm)網站搜尋「適用于 IA-32 intel 架構的 Intel 虛擬化技術規格」檔 (檔編號 C97063-002)。
 
 ## <a name="requirements"></a>需求
 
@@ -54,12 +53,12 @@ unsigned char __vmx_vmclear(
 |---------------|------------------|
 |`__vmx_vmclear`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
-[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
+[__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)\
 [__vmx_vmresume](../intrinsics/vmx-vmresume.md)

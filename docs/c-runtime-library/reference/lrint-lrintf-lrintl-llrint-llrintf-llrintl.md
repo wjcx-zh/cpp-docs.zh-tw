@@ -1,14 +1,14 @@
 ---
 title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - lrint
 - lrintl
 - lrintf
 - llrint
 - llrintf
 - llrintl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lrint
 - lrintf
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7831842eb4d3c1eef9c4c9e83bbddb557cec0e3
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285768"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857745"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -104,28 +107,28 @@ long long int llrintl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的圓角的整數值*x*。
+如果成功，會傳回*x*的圓角整數值。
 
 |問題|Return|
 |-----------|------------|
-|*x*超出傳回型別的範圍<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|會引發**FE_INVALID** ，並傳回零 (0)。|
+|*x*超出傳回類型的範圍<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|引發**FE_INVALID**並傳回零（0）。|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**lrint**並**llrint**採用**float**和**長** **雙**型別。 在 C 程式中， **lrint**並**llrint**蝯篔**double**。
+因為C++允許多載，所以您可以呼叫採用**float**和**long** **double**類型的**lrint**和**llrint**多載。 在 C 程式中， **lrint**和**llrint**一律採用**雙精度浮點數**。
 
-如果*x*不代表整數值，這些函式會引發的浮點對應項**FE_INEXACT**。
+如果*x*不代表整數值的對等浮點，這些函數會引發**FE_INEXACT**。
 
-**Microsoft 專有**:當結果超出傳回型別，範圍或參數為 NaN 或無限大，則傳回的值會是實作所定義。 Microsoft 編譯器會傳回零 (0) 值。
+**Microsoft 特有**：當結果超出傳回型別的範圍，或是當參數是 NaN 或無限大時，傳回值就是已定義的執行。 Microsoft 編譯器會傳回零 (0) 值。
 
 ## <a name="requirements"></a>需求
 
 |功能|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**lrint**， **lrintf**， **lrintl**， **llrint**， **llrintf**， **llrintl**|\<math.h>|\<cmath>|
+|**lrint**、 **lrintf**、 **lrintl**、 **llrint**、 **llrintf**、 **llrintl**|\<math.h>|\<cmath>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>

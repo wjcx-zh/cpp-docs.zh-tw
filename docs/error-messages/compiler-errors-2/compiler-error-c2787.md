@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2787
 ms.assetid: 34cb57e6-cafe-4ce7-bcc6-53d194629bd0
-ms.openlocfilehash: 656fcd8a1a0429546189de8c3f01ab928c6333ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00f2097dc556055f0becf1d81d784c9126c66f63
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256857"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74739593"
 ---
 # <a name="compiler-error-c2787"></a>編譯器錯誤 C2787
 
-'identifier': 沒有 GUID 已經與此物件相關聯
+' identifier '：沒有與此物件相關聯的 GUID
 
-[__Uuidof](../../cpp/uuidof-operator.md)運算子採用的使用者定義型別附加的 GUID 或這類使用者定義類型的物件。 當引數是使用者定義型別不具有 GUID 時，就會發生此錯誤。
+[__Uuidof](../../cpp/uuidof-operator.md)運算子會使用已附加 GUID 的使用者自訂類型，或此類使用者定義類型的物件。 當引數是沒有 GUID 的使用者定義型別時，就會發生這個錯誤。
 
-下列範例會產生 C2787:
+下列範例會產生 C2787：
 
-```
+```cpp
 // C2787.cpp
 #include <windows.h>
 struct F {};

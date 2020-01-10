@@ -1,10 +1,10 @@
 ---
 title: freopen、_wfreopen
 ms.date: 11/04/2016
-apiname:
+api_name:
 - freopen
 - _wfreopen
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wfreopen
 - _tfreopen
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - tfreopen function
 - wfreopen function
 ms.assetid: de4b73f8-1043-4d62-98ee-30d2022da885
-ms.openlocfilehash: f31f0eeacaf573fe0f6489f4dc8b5da03bf9b64f
-ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
+ms.openlocfilehash: 9f6d4343db3cb507e43e409361059e83fad63148
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/22/2019
-ms.locfileid: "68376103"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956852"
 ---
-# <a name="freopen-wfreopen"></a>freopen、_wfreopen
+# <a name="freopen-_wfreopen"></a>freopen、_wfreopen
 
 重新指派檔案指標。 這些函式已有更安全的版本可用；請參閱 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
 
@@ -76,7 +79,7 @@ FILE *_wfreopen(
 
 這些函式已有更安全的版本，請參閱 [freopen_s、_wfreopen_s](freopen-s-wfreopen-s.md)。
 
-**Freopen**函式會關閉目前與*stream*相關聯的檔案, 並將*資料流程*重新指派至*path*所指定的檔案。 **_wfreopen**是寬字元版本的 **_freopen**; **_wfreopen**的*路徑*和*模式*引數是寬字元字串。 相反地, **_wfreopen**和 **_freopen**的行為相同。
+**Freopen**函式會關閉目前與*stream*相關聯的檔案, 並將*資料流程*重新指派至*path*所指定的檔案。 **_wfreopen**是寬字元版本的 **_freopen**; **_wfreopen**的*路徑*和*模式*引數是寬字元字串。 相反地， **_wfreopen**和 **_freopen**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -97,7 +100,7 @@ FILE *_wfreopen(
 
 請小心使用 **"w"** 和 **"w +"** 類型, 因為它們可以摧毀現有的檔案。
 
-以 **"a"** 或 **"a +"** 存取類型開啟檔案時, 所有寫入作業都會在檔案結尾進行。 雖然可以使用[fseek](fseek-fseeki64.md)或倒轉來重新置放檔案[](rewind.md)指標, 但是在執行任何寫入作業之前, 檔案指標一律會移回至檔案結尾。因此，無法覆寫現有資料。
+以 **"a"** 或 **"a +"** 存取類型開啟檔案時, 所有寫入作業都會在檔案結尾進行。 雖然可以使用[fseek](fseek-fseeki64.md)或[rewind](rewind.md)倒轉來重新置放檔案指標, 但是在執行任何寫入作業之前, 檔案指標一律會移回至檔案結尾。因此，無法覆寫現有資料。
 
 在附加到檔案之前, **"a"** 模式不會移除 EOF 標記。 進行附加之後，MS-DOS TYPE 命令只顯示到原始 EOF 標記為止的資料，任何附加至檔案的資料都不會出現。 **"A +"** 模式會先移除 EOF 標記, 再將附加至檔案。 附加之後，MS-DOS TYPE 命令會顯示檔案中的所有資料。 附加至以 CTRL + Z EOF 標記終止的資料流程檔案時, 需要 **"a +"** 模式。
 
@@ -110,13 +113,13 @@ FILE *_wfreopen(
 
 在文字 (已轉譯) 模式中, 在輸入時, 會將換行字元 (CR-LF) 組合轉譯成單行換行字元 (LF)在輸出時, LF 字元會轉譯成 CR-LF 組合。 此外，Ctrl+Z 會在輸入中解譯成檔案結尾字元。 在開啟以供讀取的檔案, 或使用 **"a +"** 進行寫入和讀取的檔案中, 執行時間程式庫會在檔案結尾檢查是否有 CTRL + Z, 並盡可能加以移除。 這是因為使用[fseek](fseek-fseeki64.md)和[ftell](ftell-ftelli64.md)在檔案內移動可能會使[fseek](fseek-fseeki64.md)在檔案結尾附近的行為不正確。 **T**選項是 Microsoft 擴充功能, 不應在需要 ANSI 可攜性的情況下使用。
 
-如果未在*模式*中指定**t**或**b** , 則預設轉譯模式是由全域變數[_fmode](../../c-runtime-library/fmode.md)所定義。 如果**t**或**b**前面加上引數, 則函式會失敗並傳回**Null**。
+如果未在*模式*中指定**t**或**b** ，則預設轉譯模式是由全域變數[_fmode](../../c-runtime-library/fmode.md)所定義。 如果**t**或**b**前面加上引數, 則函式會失敗並傳回**Null**。
 
 如需文字和二進位模式的討論，請參閱[文字和二進位模式檔案 I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**freopen**|\<stdio.h>|
 |**_wfreopen**|\<stdio.h> 或 \<wchar.h>|

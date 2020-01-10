@@ -1,25 +1,25 @@
 ---
 title: OPTION (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - option
 helpviewer_keywords:
 - OPTION directive
 ms.assetid: 8e10dabd-e36f-4586-ab01-ada96736b0bd
-ms.openlocfilehash: a8215bf1f816baa490a768fb2cab0b3c2e53e20b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd50ac2e051db7f02ac077054e5856524745df54
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217253"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318744"
 ---
-# <a name="option-masm"></a>OPTION (MASM)
+# <a name="option"></a>OPTION
 
-啟用和停用 「 組合器 」 的功能。
+啟用和停用組合器的功能。
 
 ## <a name="syntax"></a>語法
 
-> 選項*optionlist*
+> **選項** *optionlist*
 
 ## <a name="remarks"></a>備註
 
@@ -29,14 +29,15 @@ ms.locfileid: "62217253"
 |-|-|-|-|
 |**CASEMAP**|**DOTNAME**|**NODOTNAME**|**模擬器**|
 |**NOEMULATOR**|**結尾**|**EXPR16**|**EXPR32**|
-|**語言**|**LJMP**|**NOLJMP**|**M510**|
-|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**OFFSET**|
+|**LANGUAGE**|**LJMP**|**NOLJMP**|**M510**|
+|**NOM510**|**NOKEYWORD**|**NOSIGNEXTEND**|**投影**|
 |**OLDMACROS**|**NOOLDMACROS**|**OLDSTRUCTS**|**NOOLDSTRUCTS**|
-|**PROC**|**序言**|**READONLY**|**NOREADONLY**|
+|**PROC**|**說明**|**唯讀**|**NOREADONLY**|
 |**範圍**|**NOSCOPED**|**SEGMENT**|**SETIF2**。|
 
-語言的語法是**選項的語言：**<em>x</em>，其中*x*是 C，SYSCALL、 STDCALL、 PASCAL、 FORTRAN、 或 BASIC 的其中一個。  SYSCALL、 PASCAL、 FORTRAN、 BASIC 不支援與搭配[。模型](../../assembler/masm/dot-model.md)一般。
+LANGUAGE 的語法是**OPTION language：** <em>x</em>，其中*x*是 C、SYSCALL、STDCALL、PASCAL、FORTRAN 或 BASIC 其中之一。  不支援 SYSCALL、PASCAL、FORTRAN 和 BASIC [。模型](dot-model.md)平面。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

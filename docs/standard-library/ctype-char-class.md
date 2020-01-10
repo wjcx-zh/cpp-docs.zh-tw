@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 08bf2c5c814eaed7b409295fcf50c66577f6a5d9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455459"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688155"
 ---
 # <a name="ctypeltchargt-class"></a>ctype&lt;char&gt; 類別
 
-類別是將樣板類別`ctype\<CharType>`明確特製化到**char**類型, 描述可以做為地區設定 facet 的物件, 以表示**char**類型字元的各種屬性。
+類別是類別樣板的明確特製化，`ctype\<CharType>` 到**char**類型，描述可以做為地區設定 facet 的物件，以表示**char**類型字元的各種屬性。
 
 ## <a name="syntax"></a>語法
 
@@ -106,17 +106,17 @@ protected:
 
 ## <a name="remarks"></a>備註
 
-明確特製化和範本類別有下列幾項差異：
+明確特製化與類別樣板的差異有好幾種：
 
-- 類別 ctype < `char`的物件 > 會儲存 ctype 遮罩資料表第一個專案的指標, 這是類型`ctype_base::mask`的 UCHAR_MAX + 1 個元素的陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。
+- 類別 ctype 的物件 < `char` > 會儲存 ctype 遮罩資料表第一個專案的指標，這是類型 `ctype_base::mask` 的 UCHAR_MAX + 1 個元素的陣列。 它也會儲存 Boolean 物件，指出當 ctype\< **Elem**> 物件已終結時，是否應該刪除陣列 (使用 `operator delete[]`)。
 
-- 其唯一的公用函式可`tab`讓您指定、ctype 遮罩資料表`del`和布林物件, 這是 true, 如果當 ctype < `char`> 物件已終結時應刪除陣列, 以及參考計數參數 refs。
+- 其唯一的公用函式可讓您指定 `tab`、ctype 遮罩資料表和 `del`，也就是當 ctype < `char` > 物件已終結，以及參考計數參數 refs 時，應該刪除陣列的布林物件。
 
-- Protected 成員`table`函式會傳回儲存的 ctype 遮罩資料表。
+- Protected 成員函式 `table` 會傳回儲存的 ctype 遮罩資料表。
 
-- 靜態成員物件`table_size`會指定 ctype 遮罩資料表中元素的最小數目。
+- 靜態成員物件 `table_size` 會指定 ctype 遮罩資料表中元素的最小數目。
 
-- 受保護的靜態成員`classic_table`函式 (傳回適用于 "C" 地區設定的 ctype 遮罩資料表。
+- 受保護的靜態成員函式 `classic_table` （傳回適用于 "C" 地區設定的 ctype 遮罩資料表。
 
 - 系統並沒有提供 [do_is](../standard-library/ctype-class.md#do_is)、[do_scan_is](../standard-library/ctype-class.md#do_scan_is) 或 [do_scan_not](../standard-library/ctype-class.md#do_scan_not) 這幾個受保護的虛擬成員函式。 對應的公用成員函式會自行執行對等作業。
 
@@ -126,9 +126,9 @@ protected:
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [facet 類別](locale-class.md#facet_class)\
 [ctype_base 類別](../standard-library/ctype-base-class.md)\

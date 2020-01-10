@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2380
 ms.assetid: 717b1e6e-ddfe-4bac-a5f3-7f9a4dcb1572
-ms.openlocfilehash: c0494d4ba405a084e7b455139016c98af7d95191
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ca249bc592bd66c2e461a37fdc18204077f51db2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344847"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745430"
 ---
 # <a name="compiler-error-c2380"></a>編譯器錯誤 C2380
 
-類型的前面 'identifier' （具有建構函式傳回的型別或目前的類別名稱的重新定義不合法？）
+' identifier ' 之前的類型（具有傳回類型的函式，或目前類別名稱的不合法重新定義）
 
-建構函式傳回值，或重新定義的類別名稱。
+函式會傳回值或重新定義類別名稱。
 
 下列範例會產生 C2326：
 
-```
+```cpp
 // C2380.cpp
 // compile with: /c
 class C {

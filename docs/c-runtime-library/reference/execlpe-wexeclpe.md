@@ -1,10 +1,10 @@
 ---
 title: _execlpe、_wexeclpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execlpe
 - _wexeclpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wexeclpe
 - execlpe
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 960d148963aa9c6410fec03b5a6f265a6e4ab9d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339360"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941902"
 ---
-# <a name="execlpe-wexeclpe"></a>_execlpe、_wexeclpe
+# <a name="_execlpe-_wexeclpe"></a>_execlpe、_wexeclpe
 
 載入並執行新的子處理序。
 
@@ -74,7 +77,7 @@ intptr_t _wexeclpe(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功的話，這些函式不會傳回呼叫處理序。 傳回值為-1 表示發生錯誤時，在此情況下**errno**設定全域變數。
+如果成功的話，這些函式不會傳回呼叫處理序。 傳回值-1 表示發生錯誤，在此情況下會設定**errno**全域變數。
 
 |**errno**值|描述|
 |-------------------|-----------------|
@@ -90,13 +93,13 @@ intptr_t _wexeclpe(
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會載入和執行新處理序，並將每個命令列引數作為個別參數傳遞，也會將指標的陣列傳遞至環境設定。 這些函式使用**路徑**環境變數尋找要執行的檔案。
+所有這些函式都會載入和執行新處理序，並將每個命令列引數作為個別參數傳遞，也會將指標的陣列傳遞至環境設定。 這些函式會使用**PATH**環境變數來尋找要執行的檔案。
 
-**_Execlpe**函式會驗證其參數。 如果有任一*cmdname*或是*arg0*為 null 指標或空字串，這些函式叫用無效參數處理常式中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**並傳回-1。 未啟動任何新的處理序。
+**_Execlpe**函數會驗證它們的參數。 如果*cmdname*或*arg0*是 null 指標或空字串，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 這些函式會將**errno**設定為**EINVAL** , 並傳回-1。 未啟動任何新的處理序。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|選擇性標頭|
+|函數|必要的標頭|選擇性標頭|
 |--------------|---------------------|---------------------|
 |**_execlpe**|\<process.h>|\<errno.h>|
 |**_wexeclpe**|\<process.h> 或 \<wchar.h>|\<errno.h>|

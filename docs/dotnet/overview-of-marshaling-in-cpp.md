@@ -1,6 +1,6 @@
 ---
 title: C++ 中封送處理的概觀
-ms.date: 06/28/2018
+ms.date: 07/12/2019
 ms.topic: reference
 f1_keywords:
 - marshaling
@@ -10,50 +10,50 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 937fbdf4b3ed09344e69a8f1eb731565c36794ae
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384734"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "70311863"
 ---
-# <a name="overview-of-marshaling-in-c"></a>C++ 中封送處理的概觀
+# <a name="overview-of-marshaling-in-ccli"></a>/Cli 中C++的封送處理總覽
 
-在混合模式中，您有時必須封送處理原生和 managed 型別之間資料。 Visual Studio 2008 中引進*封送處理程式庫*為了封送處理，並將資料轉換的簡單方式。  封送處理程式庫包含一組函式和`marshal_context`執行封送處理的常見類型的類別。 在這些標頭中所定義的程式庫**msclr 包含**目錄，您的 Visual Studio 版本：
+在混合模式中，您有時必須在原生和 managed 類型之間封送處理您的資料。 *封送處理程式庫*可協助您以簡單的方式封送處理和轉換資料。  封送處理程式庫包含一組函式， `marshal_context`以及針對一般類型執行封送處理的類別。 程式庫定義于您 Visual Studio 版本的**include/msclr**目錄中的這些標頭中：
 
-|標頭|描述|
+|標頭|說明|
 |---------------|-----------------|
-|marshal.h|`marshal_context` 類別和內容免費封送處理函式|
-|marshal_atl.h| ATL 類型封送處理函式|
-|marshal_cppstd.h|封送處理標準函式C++類型|
-|marshal_windows.h|Windows 類型封送處理函式|
+|封送處理。h|`marshal_context`類別和無內容封送處理函式|
+|marshal_atl.h| 封送處理 ATL 類型的函式|
+|marshal_cppstd.h|封送處理標準C++類型的函數|
+|marshal_windows.h|封送處理 Windows 類型的函式|
 
-預設路徑**msclr**資料夾是類似下面的版本視您擁有和組建編號：
+**Msclr**資料夾的預設路徑與下列內容類別似，視您擁有的版本和組建編號而定：
 
 ```cmd
 C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools\\MSVC\\14.15.26528\\include\\msclr
 ```
 
-您可以使用封送處理程式庫，包含或不含[marshal_context 類別](../dotnet/marshal-context-class.md)。 某些轉換需要內容。 其他轉換可以使用來實作[marshal_as](../dotnet/marshal-as.md)函式。 下表列出目前支援的轉換、 是否需要的內容，以及哪些封送處理檔案，您必須包含：
+您可以使用包含或不含[Marshal_coNtext 類別](../dotnet/marshal-context-class.md)的封送處理程式庫。 某些轉換需要內容。 您可以使用[marshal_as](../dotnet/marshal-as.md)函數來執行其他轉換。 下表列出目前支援的轉換、是否需要內容，以及您必須包含的封送處理檔案：
 
-|從型別|若要輸入|封送處理方法|包含檔案|
+|從類型|若要輸入|封送處理方法|Include 檔案|
 |---------------|-------------|--------------------|------------------|
-|System::String^|const char \*|marshal_context|marshal.h|
-|const char \*|System::String^|marshal_as|marshal.h|
-|Char \*|System::String^|marshal_as|marshal.h|
-|System::String^|const wchar_t\*|marshal_context|marshal.h|
-|const wchar_t \*|System::String^|marshal_as|marshal.h|
-|wchar_t \*|System::String^|marshal_as|marshal.h|
+|System::String^|const char\*|marshal_context|封送處理。h|
+|const char\*|System::String^|marshal_as|封送處理。h|
+|char\*|System::String^|marshal_as|封送處理。h|
+|System::String^|const wchar_t\*|marshal_context|封送處理。h|
+|const wchar_t\*|System::String^|marshal_as|封送處理。h|
+|wchar_t\*|System::String^|marshal_as|封送處理。h|
 |System::IntPtr|HANDLE|marshal_as|marshal_windows.h|
 |HANDLE|System::IntPtr|marshal_as|marshal_windows.h|
 |System::String^|BSTR|marshal_context|marshal_windows.h|
-|BSTR|System::String^|marshal_as|marshal.h|
+|BSTR|System::String^|marshal_as|封送處理。h|
 |System::String^|bstr_t|marshal_as|marshal_windows.h|
 |bstr_t|System::String^|marshal_as|marshal_windows.h|
-|System::String^|std:: string|marshal_as|marshal_cppstd.h|
-|std:: string|System::String^|marshal_as|marshal_cppstd.h|
-|System::String^|std:: wstring|marshal_as|marshal_cppstd.h|
-|std:: wstring|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|std：： string|marshal_as|marshal_cppstd.h|
+|std：： string|System::String^|marshal_as|marshal_cppstd.h|
+|System::String^|std：： wstring|marshal_as|marshal_cppstd.h|
+|std：： wstring|System::String^|marshal_as|marshal_cppstd.h|
 |System::String^|CStringT\<char>|marshal_as|marshal_atl.h|
 |CStringT\<char>|System::String^|marshal_as|marshal_atl.h|
 |System::String^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
@@ -61,18 +61,16 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |System::String^|CComBSTR|marshal_as|marshal_atl.h|
 |CComBSTR|System::String^|marshal_as|marshal_atl.h|
 
-只有在您封送處理為原生受管理的資料類型，並清除您要將它轉換成原生型別沒有自動的解構函式時，封送處理需要內容。 封送處理的內容會終結其解構函式中的已配置的原生資料類型。 因此，需要內容的轉換是有效的內容會被刪除時，才。 若要儲存任何封送處理的值，您必須將值複製到自己的變數。
+只有當您從 managed 封送處理至原生資料類型，而且轉換成的原生類型沒有自動清除的析構函式時，封送處理才需要內容。 封送處理內容會在其析構函式中終結已配置的原生資料類型。 因此，需要內容的轉換只會在內容刪除後才有效。 若要儲存任何封送處理的值，您必須將值複製到您自己的變數。
 
 > [!NOTE]
->  如果您已嵌入`NULL`在字串中的 s，不保證封送處理字串的結果。 內嵌`NULL`s 可能會導致要截斷的字串，或可能會保留。
+>  如果您在字串`NULL`中內嵌了，則不保證字串的封送處理結果。 內嵌`NULL`的可能會導致字串截斷或保留。
 
-此範例示範如何在包含標頭宣告包含 msclr 目錄：
+這個範例示範如何在 include 標頭宣告中包含 msclr 目錄：
 
 `#include "msclr\marshal_cppstd.h"`
 
-封送處理程式庫是可延伸，以便您可以新增您自己的封送處理類型。 如需有關擴充封送處理程式庫的詳細資訊，請參閱[How to:擴充封送處理程式庫](../dotnet/how-to-extend-the-marshaling-library.md)。
-
-在舊版中，您無法封送處理資料使用[平台叫用](/dotnet/framework/interop/consuming-unmanaged-dll-functions)。 如需詳細資訊`PInvoke`，請參閱 <<c2> [ 從 Managed 程式碼呼叫原生函數](../dotnet/calling-native-functions-from-managed-code.md)。
+封送處理程式庫是可擴充的，因此您可以加入自己的封送處理類型。 如需擴充封送處理程式庫的詳細[資訊，請參閱如何：擴充封送處理](../dotnet/how-to-extend-the-marshaling-library.md)程式庫。
 
 ## <a name="see-also"></a>另請參閱
 

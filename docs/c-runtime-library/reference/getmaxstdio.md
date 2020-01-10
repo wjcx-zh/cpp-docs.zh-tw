@@ -1,9 +1,9 @@
 ---
 title: _getmaxstdio
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _getmaxstdio
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getmaxstdio
 - getmaxstdio
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - getmaxstdio function
 - open files, getting number
 ms.assetid: 700ca8ce-4a8c-4e00-9467-dfa9d6b831a0
-ms.openlocfilehash: ea8e516b4c0806230376ea52e399c9fa1f9a858a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf3f55262e54ec4d5205d08dfcb499f2802ded23
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331723"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955030"
 ---
-# <a name="getmaxstdio"></a>_getmaxstdio
+# <a name="_getmaxstdio"></a>_getmaxstdio
 
 傳回允許在資料流 I/O 層級同時開啟的檔案數目。
 
@@ -44,11 +47,11 @@ int _getmaxstdio( void );
 
 ## <a name="return-value"></a>傳回值
 
-傳回表示目前在允許的同時開啟檔案數目的數字**stdio**層級。
+傳回數位，代表目前在**stdio.h**層級允許同時開啟的檔案數目。
 
 ## <a name="remarks"></a>備註
 
-使用[_setmaxstdio](setmaxstdio.md)來設定在允許同時開啟的檔案數目**stdio**層級。
+使用[_setmaxstdio](setmaxstdio.md)設定在**stdio.h**層級允許同時開啟的檔案數目。
 
 ## <a name="requirements"></a>需求
 

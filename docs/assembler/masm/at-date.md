@@ -1,26 +1,27 @@
 ---
 title: '@Date'
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - '@Date'
 helpviewer_keywords:
 - '@Date symbol'
 ms.assetid: e5af496b-c5c8-4724-a54a-6880fcd67ee3
-ms.openlocfilehash: 3fe1b50243609a11b996ddb1569920967399f98a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 985b73b32d0990f060a14e18c9d0efdce4eae7dd
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166395"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75315975"
 ---
-# <a name="date"></a>@Date
+# <a name="date"></a>\@日期
 
-系統中的日期格式 mm/dd/yy （文字巨集）。
+以 mm/dd/yy （text 宏）格式的系統日期。
 
 ## <a name="syntax"></a>語法
 
-> @Date
+> **\@日期**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[符號參考](../../assembler/masm/symbols-reference.md)<br/>
+[符號參考](symbols-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

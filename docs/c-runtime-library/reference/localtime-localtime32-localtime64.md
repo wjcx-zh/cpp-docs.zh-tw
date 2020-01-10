@@ -1,11 +1,11 @@
 ---
 title: localtime，_localtime32，_localtime64
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _localtime64
 - _localtime32
 - localtime
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - localtime64
 - _localtime64
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - localtime function
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
-ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e2f39b3a1b6376e24d8a812d1074840862f398a
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157509"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953351"
 ---
-# <a name="localtime-localtime32-localtime64"></a>localtime，_localtime32，_localtime64
+# <a name="localtime-_localtime32-_localtime64"></a>localtime，_localtime32，_localtime64
 
 轉換時間值，並依本地時區進行校正。 這些函式有更安全的版本可供使用；請參閱 [localtime_s、_localtime32_s、_localtime64_s](localtime-s-localtime32-s-localtime64-s.md)。
 
@@ -58,52 +61,52 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回結構結果，或**NULL**如果日期傳遞至函式是：
+傳回結構結果的指標，如果傳遞至函數的日期為，則為**Null** ：
 
 - 1970 年 1 月 1 日午夜之前。
 
-- 03:14:07，2038 年 1 月 19 日 UTC 之後 (使用 **_time32**並**time32_t**)。
+- 03:14:07 年1月 2038 19 日之後，UTC （使用 **_time32**和**time32_t**）。
 
-- 23:59:59，3000 年 12 月 31 日 UTC 之後 (使用 **_time64**並 **__time64_t**)。
+- 23:59:59 年12月 3000 31 日，UTC （使用 **_time64**和 **__time64_t**）。
 
-**_localtime64**，它會使用 **__time64_t**結構，可讓透過 23:59:59，3000 年 12 月 31 日國際標準時間 (UTC) 表示的日期，而 **_localtime32**表示透過 23:59:59 2038 年 1 月 18 日 UTC 的日期。
+使用 **__time64_t**結構的 **_localtime64**可讓日期以23:59:59 年12月31日3000，國際標準時間（UTC）表示，而 **_localtime32**則代表日期到23:59:59 年1月18日，2038，UTC.
 
-**localtime**是內嵌函式，而它評估成 **_localtime64**，以及**time_t**相當於 **__time64_t**。 如果您要強制編譯器將解譯**time_t**為舊的 32 位元**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 如此一來，這會導致**localtime**評估為 **_localtime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
+**localtime**是評估為 **_localtime64**的內嵌函式，而**time_t**相當於 **__time64_t**。 如果您需要強制編譯器將**time_t**解讀為舊版32位**time_t**，您可以定義 **_USE_32BIT_TIME_T**。 這麼做會導致**localtime**評估為 **_localtime32**。 建議您不要這樣做，原因是您的應用程式可能會在 2038 年 1 月 18 日後失敗，且在 64 位元平台上不允許這種定義。
 
-結構類型的欄位[tm](../../c-runtime-library/standard-types.md)儲存下列值，每個都是**int**:
+結構類型[tm](../../c-runtime-library/standard-types.md)的欄位會儲存下列值，其中每一個都是**int**：
 
-|欄位|描述|
+|欄位|說明|
 |-|-|
-|**tm_sec**|分鐘之後的秒數 (0-59)。|
-|**tm_min**|小時之後的分鐘 (0-59)。|
-|**tm_hour**|午夜後的小時 (0-23)。|
-|**tm_mday**|月份的日期 (1-31)。|
-|**tm_mon**|月份 (0-11;年 1 月 = 0）。|
+|**tm_sec**|分鐘後的秒數（0-59）。|
+|**tm_min**|小時之後的分鐘（0-59）。|
+|**tm_hour**|午夜後的小時（0-23）。|
+|**tm_mday**|月中的日（1-31）。|
+|**tm_mon**|月份（0-11;1月 = 0）。|
 |**tm_year**|年份 (目前年份減去 1900)。|
-|**tm_wday**|星期幾 (0-6;星期日 = 0）。|
-|**tm_yday**|年中的日 (0-365;1 年 1 月 = 0)。|
+|**tm_wday**|周中的日（0-6;星期日 = 0）。|
+|**tm_yday**|年中的日（0-365;1月1日 = 0）。|
 |**tm_isdst**|若日光節約時間已生效則為正值；如果日光節約時間沒有作用則為 0。如果日光節約時間的狀態是未知，則為負值。|
 
-如果**TZ**設定環境變數，C 執行階段程式庫將假設適用於美國之規則實作日光節約時間 (DST) 的計算。
+如果已設定**TZ**環境變數，則 C 執行時間程式庫會假設適用于美國的規則，以執行日光節約時間（DST）的計算。
 
 ## <a name="remarks"></a>備註
 
-**Localtime**函式將儲存為時間轉換成[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在結構中的型別[tm](../../c-runtime-library/standard-types.md)。 **長**值*sourceTime*代表從午夜開始經過的秒數 (00: 00:00) 1970 年 1 月 1 日 UTC。 這個值通常取自[時間](time-time32-time64.md)函式。
+**Localtime**函式會將儲存的時間轉換為[time_t](../../c-runtime-library/standard-types.md)值，並將結果儲存在類型為[tm](../../c-runtime-library/standard-types.md)的結構中。 **Long**值*sourceTime*代表自1970年1月1日午夜（00:00:00）起算的秒數（UTC）。 這個值通常是從[time](time-time32-time64.md)函數取得。
 
-這兩個 32 位元和 64 位元版本[gmtime](gmtime-gmtime32-gmtime64.md)， [mktime](mktime-mktime32-mktime64.md)， [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)，以及**localtime**都使用單一**tm**每個執行緒來進行轉換的結構。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
+32位和64位版本的[gmtime](gmtime-gmtime32-gmtime64.md)、 [mktime](mktime-mktime32-mktime64.md)、 [mkgmtime](mkgmtime-mkgmtime32-mkgmtime64.md)和**localtime**都使用每個執行緒的單一**tm**結構來進行轉換。 每呼叫其中一個此等常式會導致先前呼叫結果的終結。
 
-**localtime**更正的當地時區，如果使用者第一次設定全域環境變數**TZ**。 當**TZ**設定，其他三個環境變數 (**_timezone**， **_daylight**，以及 **_tzname**) 也會自動設定。 如果**TZ**未設定變數，則**localtime**嘗試使用 [控制台] 中的日期/時間應用程式中指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能並不屬於 ANSI 標準定義的**localtime**。
+如果使用者第一次設定全域環境變數**TZ**，則**localtime**會更正當地時區。 若設定了**TZ** ，則也會自動設定其他三個環境變數（ **_timezone**、 **_daylight**和 **_tzname**）。 如果未設定**TZ**變數， **localtime**會嘗試使用 [控制台] 中的 [日期/時間] 應用程式所指定的時區資訊。 如果無法取得這些資訊，則預設使用代表太平洋時區的 PST8PDT。 請參閱 [_tzset](tzset.md) 中有關於些變數的描述。 **TZ**是 Microsoft 擴充功能，不屬於**localtime**的 ANSI 標準定義。
 
 > [!NOTE]
 > 目標環境應該嘗試判斷日光節約時間是否生效。
 
-這些函式會驗證它們的參數。 如果*sourceTime*為 null 指標，或如果*sourceTime*值是負數，這些函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，則函式會傳回**NULL**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*sourceTime*為 null 指標，或如果*sourceTime*值為負數，則這些函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回**Null** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的 C 標頭|必要的 C++ 標頭|
 |-------------|---------------------|-|
-|**localtime**, **_localtime32**, **_localtime64**|\<time.h>|\<ctime > 或\<time.h >|
+|**localtime**、 **_localtime32**、 **_localtime64**|\<time.h>|\<ctime > 或\<time. h >|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

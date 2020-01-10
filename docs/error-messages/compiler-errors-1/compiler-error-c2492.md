@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2492
 ms.assetid: 8c44c9bb-c366-4fe5-a0ab-882e38608aaa
-ms.openlocfilehash: e2b08ef3e46681147c4efd77cbffadb096bbfc16
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fd52b434f86bdc93124c6005bbf7fadad3cb56b2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62360706"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757055"
 ---
 # <a name="compiler-error-c2492"></a>編譯器錯誤 C2492
 
-'*變數*': 具有執行緒儲存期的資料可能不會有 dll 介面
+'*variable*'：具有線程儲存期的資料可能沒有 dll 介面
 
-在變數宣告與[執行緒](../../cpp/thread.md)屬性，並使用的 DLL 介面。 位址`thread`變數之前無法得知執行階段，因此它無法連結到 DLL 匯入或匯出。
+變數是以[thread](../../cpp/thread.md)屬性和 DLL 介面來宣告。 在執行時間之前，不會知道 `thread` 變數的位址，因此無法將它連結至 DLL 匯入或匯出。
 
-下列範例會產生 C2492:
+下列範例會產生 C2492：
 
-```
+```cpp
 // C2492.cpp
 // compile with: /c
 class C {

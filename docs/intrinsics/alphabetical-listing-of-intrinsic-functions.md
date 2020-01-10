@@ -6,20 +6,20 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56aad4c0b39a7a4bd2d425907023cbc8c9b335c4
+ms.sourcegitcommit: e805200eaef4fe7a65a00051bbd305273af94fe7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264307"
+ms.lasthandoff: 11/18/2019
+ms.locfileid: "74163462"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>依字母順序列出的內建函式
 
-下列章節將說明在部分或所有架構上可用的 Microsoft 特定內建函式。 其他支援的內建函式會由處理器製造商記錄在標頭檔或他們的網站中。 請參閱[ARM 內建函式](../intrinsics/arm-intrinsics.md)， [x86 內建函式](../intrinsics/x86-intrinsics-list.md)，並[x64 內建函式](../intrinsics/x64-amd64-intrinsics-list.md)各節來取得製造商說明文件的連結。 這裡; 不記錄針對它們實作的內建函式的 C 執行階段程式庫 (CRT) 函式這些函式所述[C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)。
+下列章節將說明在部分或所有架構上可用的 Microsoft 特定內建函式。 其他支援的內建函式會由處理器製造商記錄在標頭檔或他們的網站中。 如需製造商檔的連結，請參閱[ARM 內部](../intrinsics/arm-intrinsics.md)函數、 [ARM64](../intrinsics/arm64-intrinsics.md)內建、 [x86 內建函式](../intrinsics/x86-intrinsics-list.md)和[x64](../intrinsics/x64-amd64-intrinsics-list.md)內建章節。 已對其實作為內建函式的 C 執行時間程式庫（CRT）函式未記載于此處：這些函數記載于[C 執行時間程式庫參考](../c-runtime-library/c-run-time-library-reference.md)中。
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte、\__addfsword、\__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte、\__addgsword、\__addgsdword、\__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -37,13 +37,13 @@ ms.locfileid: "62264307"
 
 [_bittestandset、_bittestandset64](../intrinsics/bittestandset-bittestandset64.md)
 
-[__cpuid, \__cpuidex](../intrinsics/cpuid-cpuidex.md)
+[__cpuid，\__cpuidex](../intrinsics/cpuid-cpuidex.md)
 
 [__debugbreak](../intrinsics/debugbreak.md)
 
 [_disable](../intrinsics/disable.md)
 
-[__emul、 \__emulu](../intrinsics/emul-emulu.md)
+[__emul，\__emulu](../intrinsics/emul-emulu.md)
 
 [_enable](../intrinsics/enable.md)
 
@@ -59,9 +59,9 @@ ms.locfileid: "62264307"
 
 [__inbytestring](../intrinsics/inbytestring.md)
 
-[__incfsbyte、 \__incfsword， \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
+[__incfsbyte、\__incfsword、\__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[__incgsbyte、 \__incgsword， \__incgsdword， \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte、\__incgsword、\__incgsdword、\__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -69,7 +69,7 @@ ms.locfileid: "62264307"
 
 [__int2c](../intrinsics/int2c.md)
 
-[_InterlockedAnd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
+[_InterlockedAdd 內建函式](../intrinsics/interlockedadd-intrinsic-functions.md)
 
 [_InterlockedAddLargeStatistic](../intrinsics/interlockedaddlargestatistic.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "62264307"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16、\__lzcnt、\__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -157,7 +157,7 @@ ms.locfileid: "62264307"
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
-[__popcnt16， \__popcnt， \__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
+[__popcnt16、\__popcnt、\__popcnt64](../intrinsics/popcnt16-popcnt-popcnt64.md)
 
 [__rdtsc](../intrinsics/rdtsc.md)
 
@@ -179,9 +179,9 @@ ms.locfileid: "62264307"
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[__readfsbyte、 \__readfsdword， \__readfsqword， \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte、\__readfsdword、\__readfsqword、\__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[__readgsbyte、 \__readgsdword， \__readgsqword， \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte、\__readgsdword、\__readgsqword、\__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -267,12 +267,12 @@ ms.locfileid: "62264307"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[__writefsbyte、 \__writefsdword， \__writefsqword， \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte、\__writefsdword、\__writefsqword、\__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[__writegsbyte、 \__writegsdword， \__writegsqword， \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte、\__writegsdword、\__writegsqword、\__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

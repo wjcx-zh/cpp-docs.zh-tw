@@ -1,34 +1,31 @@
 ---
-title: no_search_namespace
-ms.date: 11/04/2016
+title: no_search_namespace 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - no_search_namespace
 helpviewer_keywords:
 - no_search_namespace attribute
 ms.assetid: 482dc4a7-5acf-456a-a995-ef4ddd5f6018
-ms.openlocfilehash: 8e19600e35c87990c455c6793a4e0ea521213bb7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5710e790ca94b49b9577b3107a4fb6e5070fcac
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411301"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220713"
 ---
-# <a name="nosearchnamespace"></a>no_search_namespace
-**C++特定**
+# <a name="no_search_namespace-import-attribute"></a>no_search_namespace 匯入屬性
 
-具有相同的功能[no_namespace](../preprocessor/no-namespace.md)屬性，但會使用您所使用的型別程式庫`#import`指示詞搭配[auto_search](../preprocessor/auto-search.md)屬性。
+**C++特殊**
+
+具有與[no_namespace](../preprocessor/no-namespace.md)屬性相同的功能, 但會在使用`#import`指示詞搭配[auto_search](../preprocessor/auto-search.md)屬性的類型程式庫上使用。
 
 ## <a name="syntax"></a>語法
 
-```
-no_search_namespace
-```
-
-## <a name="remarks"></a>備註
+> **#import***類型-程式庫***no_search_namespace**
 
 **結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

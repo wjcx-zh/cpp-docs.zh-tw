@@ -1,28 +1,29 @@
 ---
 title: .ENDW
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .ENDW
 helpviewer_keywords:
 - .ENDW directive
 ms.assetid: c288fa8a-2f1b-4a13-aba2-04157e84110e
-ms.openlocfilehash: 28c93dce3a713cd98d6c45bbd2b95a13b76bf700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dd17005a28741d62a0cc381b9155042f02d08f4
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204267"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313804"
 ---
-# <a name="endw"></a>.ENDW
+# <a name="endw-32-bit-masm"></a>..ENDW （32-位 MASM）
 
 ## <a name="syntax"></a>語法
 
-> .ENDW
+> **.ENDW**
 
 ## <a name="remarks"></a>備註
 
-請參閱[。雖然](../../assembler/masm/dot-while.md)。
+（僅限 32-bit MASM）。請參閱[。WHILE](dot-while.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -1,47 +1,45 @@
 ---
-title: 迴圈
-ms.date: 10/18/2018
+title: loop pragma
+ms.date: 08/29/2019
 f1_keywords:
 - loop_CPP
 - vc-pragma.loop
 ms.assetid: 6d5bb428-cead-47e7-941d-7513bbb162c7
-ms.openlocfilehash: a1640881d98073381a941478f4b78177a95698d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013540ffe120f42c15538ce86661753b9cf9416f
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411327"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220856"
 ---
-# <a name="loop"></a>迴圈
+# <a name="loop-pragma"></a>loop pragma
 
-控制 auto-parallelizer 考量迴圈程式碼的方式，及/或從 auto-vectorizer 排除迴圈的考量。
+控制自動平行化工具如何考慮迴圈程式碼, 或排除自動向量化工具所考慮的迴圈。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma loop( hint_parallel(n) )
-#pragma loop( no_vector )
-#pragma loop( ivdep )
-```
+> **#pragma 迴圈 (hint_parallel (** *n* **))** \
+> **#pragma 迴圈 (no_vector)** \
+> **#pragma 迴圈 (ivdep)**
 
 ### <a name="parameters"></a>參數
 
-*hint_parallel(n)*<br/>
-此迴圈應平行處理跨編譯器的提示*n*執行緒，其中*n*正整數常值或零。 如果*n*為零，在執行階段使用的執行緒數目上限。 這是提供給編譯器的提示，而不是一個命令，因此，並不保證迴圈會進行平行處理。 如果迴圈具有資料相依性或結構問題 (例如，在迴圈主體之外使用純量的迴圈存放區)，則不會對迴圈進行平行處理。
+**hint_parallel (** *n* **)** \
+對編譯器的提示, 此迴圈應該跨*n*個執行緒平行處理, 其中*n*是正整數常值或零。 如果*n*為零, 則會在執行時間使用執行緒的最大數目。 這是編譯器的提示, 而不是命令。 並不保證會平行處理迴圈。 如果迴圈具有資料相依性或結構性問題, 則不會平行處理。 例如, 如果儲存到用於迴圈主體之外的純量, 則不會平行處理。
 
-編譯器會忽略此選項，除非[/Qpar](../build/reference/qpar-auto-parallelizer.md)編譯器參數指定。
+除非指定了[/Qpar](../build/reference/qpar-auto-parallelizer.md)編譯器參數, 否則編譯器會忽略此選項。
 
-*no_vector*<br/>
-預設會開啟 auto-vectorizer 並嘗試向量化其評估為可從中受益的所有迴圈。 指定這個 pragma 可針對後方的迴圈停用 auto-vectorizer。
+**no_vector**\
+根據預設, 自動向量化工具會嘗試向量化其評估的所有迴圈, 以從中獲益。 指定此 pragma 可停用下列迴圈的自動向量化工具。
 
-*ivdep*<br/>
-編譯器的提示，忽略此迴圈的向量相依性。 搭配使用這*hint_parallel*。
+**ivdep**\
+提示, 讓編譯器忽略此迴圈的向量相依性。 將此選項與**hint_parallel**搭配使用。
 
 ## <a name="remarks"></a>備註
 
-若要使用**迴圈**pragma，將它放到前立即 — 不在 — 迴圈定義。 pragma 生效範圍為其後方迴圈的範圍。 您可以任何順序對迴圈套用多個 pragma，不過，您必須在個別的 pragma 陳述式中加以說明。
+若要使用**迴圈**pragma, 請將它放在迴圈定義的正後方, 而不是。 pragma 生效範圍為其後方迴圈的範圍。 您可以任何順序對迴圈套用多個 pragma，不過，您必須在個別的 pragma 陳述式中加以說明。
 
 ## <a name="see-also"></a>另請參閱
 
-[自動平行處理和自訂向量化](../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[自動平行處理和自動向量化](../parallel/auto-parallelization-and-auto-vectorization.md)\
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

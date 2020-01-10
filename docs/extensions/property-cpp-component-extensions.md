@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - property keyword [C++]
 ms.assetid: cc79d2b2-f013-4d81-8252-eece97a18704
-ms.openlocfilehash: 8ec76db37cffb1b3d15447165300bedf1a8771c9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 4a05f9cf8cbec9644254d14873a3259f12b33aed
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311640"
 ---
 # <a name="property--ccli-and-ccx"></a>屬性  (C++/CLI 和 C++/CX)
 
@@ -86,7 +86,7 @@ set 或 get 存取子的屬性方法主體。 *property_body* 可以使用 *inde
 
 ## <a name="windows-runtime"></a>Windows 執行階段
 
-如需詳細資訊，請參閱[屬性 (C++/CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx)。
+如需詳細資訊，請參閱[屬性 (C++/CX)](../cppcx/properties-c-cx.md)。
 
 ### <a name="requirements"></a>需求
 

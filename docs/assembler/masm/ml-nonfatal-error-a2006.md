@@ -1,39 +1,39 @@
 ---
 title: ML 非嚴重錯誤 A2006
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2006
 helpviewer_keywords:
 - A2006
 ms.assetid: b8a8f096-95df-42b5-85ed-d2530560a84c
-ms.openlocfilehash: 80283bde4dff36e32d276c998f6797b6eeed8160
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 058100984acbd42ac2993732ab619c0a27c0edd2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202319"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317080"
 ---
 # <a name="ml-nonfatal-error-a2006"></a>ML 非嚴重錯誤 A2006
 
-**未定義的符號： 識別項**
+**未定義的符號：識別碼**
 
-您嘗試使用未定義的符號。
+嘗試使用未定義的符號。
 
-可能發生下列其中一項：
+可能發生下列其中一種情況：
 
 - 未定義符號。
 
-- 欄位不是指定之結構的成員。
+- 欄位不是所指定結構的成員。
 
-- 符號已定義未包含的 include 檔案中。
+- 符號已定義于未包含的 include 檔案中。
 
-- 若不使用的外部符號[EXTERN](../../assembler/masm/extern-masm.md)或是[EXTERNDEF](../../assembler/masm/externdef.md)指示詞。
+- 在沒有[EXTERN](extern-masm.md)或[EXTERNDEF](externdef.md)指示詞的情況下使用了外部符號。
 
-- 拼錯的符號名稱。
+- 符號名稱拼錯。
 
-- 其範圍外參考本機程式碼的標籤。
+- 本機程式碼標籤是在其範圍外參考。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

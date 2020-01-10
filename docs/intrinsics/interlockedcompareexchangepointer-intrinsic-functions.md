@@ -1,6 +1,6 @@
 ---
 title: _InterlockedCompareExchangePointer 內建函式
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _InterlockedCompareExchangePointer_HLERelease
 - _InterlockedCompareExchangePointer_rel
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: 7b8ba4fe6224292d0160f859aeb630fc17c2d992
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c0a0083c19df51d2d2eccb7a7bbf6521303c1f85
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509435"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70222031"
 ---
 # <a name="_interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer 內建函式
 
@@ -39,7 +39,7 @@ ms.locfileid: "69509435"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void * _InterlockedCompareExchangePointer (
    void * volatile * Destination,
    void * Exchange,
@@ -77,15 +77,15 @@ long _InterlockedCompareExchangePointer_rel (
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*目的地*<br/>
+*位置*\
 [in、out]指向目的地值之指標的指標。 會忽略正負號。
 
-*Exchange*<br/>
+*固定匯率*\
 在交換指標。 會忽略正負號。
 
-*比較元*<br/>
+*比較元*\
 在要與目的地比較的指標。 會忽略正負號。
 
 ## <a name="return-value"></a>傳回值
@@ -96,8 +96,8 @@ long _InterlockedCompareExchangePointer_rel (
 
 |內建|架構|標頭|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`、`_InterlockedCompareExchangePointer_nf`、`_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer`|x86、ARM、x64、ARM64|\<intrin.h>|
+|`_InterlockedCompareExchangePointer_acq`、`_InterlockedCompareExchangePointer_nf`、`_InterlockedCompareExchangePointer_rel`|ARM、ARM64|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`、 `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>備註
@@ -108,11 +108,11 @@ long _InterlockedCompareExchangePointer_rel (
 
 如需如何使用`_InterlockedCompareExchangePointer`的範例, 請參閱[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)。
 
-在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有 `_nf` (「沒有圍牆」) 後置字元的 ARM 內建函式不做為記憶體屏障。
+在 ARM 平台上，如果您需要取得並發行語意 (例如在關鍵區段的開頭和結尾)，請使用具有 `_acq` 和 `_rel` 後置字元的內建函式。 具有`_nf` (「無範圍」) 尾碼的 ARM 內建函式不會做為記憶體屏障。
 
 搭配 `_np` (「不預先擷取」) 字尾使用內建函式，可避免編譯器插入可能的預先提取作業。
 
-在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平台上呼叫這些內建函式，會忽略該提示。
+在支援 Hardware Lock Elision (HLE) 指令的 Intel 平台上，搭配 `_HLEAcquire` 和 `_HLERelease` 字尾的內建函式會包含對處理器的提示，提示其可以藉由消除硬體中鎖定寫入 (lock write) 的階段以加速效能。 如果在不支援 HLE 的平臺上呼叫這些內建函式, 則會忽略提示。
 
 這些常式僅以內建函式的形式供您使用。
 
@@ -120,5 +120,5 @@ long _InterlockedCompareExchangePointer_rel (
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

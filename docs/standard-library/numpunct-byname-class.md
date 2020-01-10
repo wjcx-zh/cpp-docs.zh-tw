@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - numpunct_byname class
 ms.assetid: 18412924-e085-4771-b5e9-7a200cbdd7c0
-ms.openlocfilehash: 0c9eb565c2dbf54da449411aa11a4c5661debf1d
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: da9259df8c527e44a4adea3a53be31b3c3ffc10b
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452311"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687613"
 ---
-# <a name="numpunctbyname-class"></a>numpunct_byname 類別
+# <a name="numpunct_byname-class"></a>numpunct_byname 類別
 
-衍生的樣板類別，描述可以做為特定地區設定的 `numpunct` facet 的物件，啟用數值和布林運算式格式和標點符號。
+衍生類別範本描述的物件可以做為給定地區設定的 `numpunct` facet，啟用數值和布林運算式的格式和標點符號。
 
 ## <a name="syntax"></a>語法
 
@@ -45,8 +45,8 @@ protected:
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

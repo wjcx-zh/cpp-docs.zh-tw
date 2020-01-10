@@ -7,14 +7,14 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 924ca5ae1d32753bbe315252d942425712962639
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455573"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689456"
 ---
-# <a name="iteratortraits-struct"></a>iterator_traits 結構
+# <a name="iterator_traits-struct"></a>iterator_traits 結構
 
 範本協助程式結構，用來指定迭代器應有的所有重要類型定義。
 
@@ -35,19 +35,19 @@ struct iterator_traits {
 
 範本結構會定義成員類型
 
-- `iterator_category`: 的同義字`Iterator::iterator_category`。
+- `iterator_category`： `Iterator::iterator_category` 的同義字。
 
-- `value_type`: 的同義字`Iterator::value_type`。
+- `value_type`： `Iterator::value_type` 的同義字。
 
-- `difference_type`: 的同義字`Iterator::difference_type`。
+- `difference_type`： `Iterator::difference_type` 的同義字。
 
-- `distance_type`: 的同義字`Iterator::difference_type.`
+- `distance_type`： `Iterator::difference_type.` 的同義字
 
-- `pointer`: 的同義字`Iterator::pointer`。
+- `pointer`： `Iterator::pointer` 的同義字。
 
-- `reference`: 的同義字`Iterator::reference`。
+- `reference`： `Iterator::reference` 的同義字。
 
-部分特製化會決定與類型**類型** <strong>\*</strong>或**const 類型** <strong>\*</strong>的物件指標相關聯的關鍵類型。
+部分特製化會判斷與類型**類型**的物件指標相關聯的關鍵類型<strong>\*</strong>或**const 類型** <strong>\*</strong>。
 
 在這項實作中，您也可以使用數個不利用部分特製化的範本函式：
 
@@ -71,7 +71,7 @@ template <class Ty>
 ptrdiff_t *_Dist_type(const Ty *);
 ```
 
-這會更間接地決定數個相同類型。 您可以在函式呼叫上使用這些函式作為引數。 它們的唯一目的是要提供實用的範本類別參數給所呼叫的函式。
+這會更間接地決定數個相同類型。 您可以在函式呼叫上使用這些函式作為引數。 其唯一目的是要提供有用的類別樣板參數給所呼叫的函式。
 
 ## <a name="example"></a>範例
 
@@ -120,9 +120,9 @@ struct std::bidirectional_iterator_tag
 
 **標頭：** \<iterator>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<iterator>](../standard-library/iterator.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

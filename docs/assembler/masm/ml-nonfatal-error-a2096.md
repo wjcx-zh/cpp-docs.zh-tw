@@ -1,31 +1,31 @@
 ---
 title: ML 非嚴重錯誤 A2096
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A2096
 helpviewer_keywords:
 - A2096
 ms.assetid: bab0b5ee-b39f-4e44-a41a-3f949fab4297
-ms.openlocfilehash: e6b31afeff801e7128b5a76576e9eaa3398f68e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 425e99c1dc6675e8b970433948e0cc09b8d54485
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202486"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75312660"
 ---
 # <a name="ml-nonfatal-error-a2096"></a>ML 非嚴重錯誤 A2096
 
-**區段、 群組或預期的區段註冊**
+**需要區段、群組或區段註冊**
 
-區段或群組必須，但是找不到。
+需要區段或群組，但找不到。
 
-發生下列其中一項：
+發生下列其中一種情況：
 
-- 指定與區段的左的運算元會覆寫運算子 (**:**) 不是區段註冊 （CS、 DS、 SS、 ES、 FS 或 GS），群組名稱、 的區段名稱或區段的運算式。
+- 以區段覆寫運算子（ **：** ）指定的左運算元不是區段暫存器（CS、DS、SS、ES、FS 或 GS）、組名、區段名稱或區段運算式。
 
-- [假設](../../assembler/masm/assume.md)指示詞指定的區段暫存器，而不是有效的區段位址、 區段註冊、 群組或特殊**一般**群組。
+- [假設](assume.md)指示詞在沒有有效區段位址、區段暫存器、群組**或特殊一般**群組的情況下，已獲得區段暫存器。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

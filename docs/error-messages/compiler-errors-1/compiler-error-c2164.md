@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2164
 ms.assetid: 55df5024-68a8-45a8-ae6c-e6dba35318a2
-ms.openlocfilehash: 3b1c7a94dfca1c2767e14f96204ecda670c8a586
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74c4f0e24f21f21d7a7015a20cb0e27ac635c467
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174818"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301908"
 ---
 # <a name="compiler-error-c2164"></a>編譯器錯誤 C2164
 
-'function': 未宣告的內建函式
+' function '：內建函式未宣告
 
-`intrinsic` Pragma 會使用未宣告的函式 (只會發生 **/Oi**)。 或者，但不包括其標頭檔所使用的其中一個編譯器內建函式。
+`intrinsic` pragma 使用未宣告的函式（僅發生在 **/Oi**）。 或者，使用其中一個編譯器內建函式，而不包含其標頭檔。
 
-下列範例會產生 C2164:
+下列範例會產生 C2164：
 
-```
+```c
 // C2164.c
 // compile with: /c
 // processor: x86

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69fc6fa9303b2256172dd079028050823f053246
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62227509"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756327"
 ---
 # <a name="compiler-error-c3653"></a>編譯器錯誤 C3653
 
-'function': 不能當做具名覆寫： 覆寫未找到; 函式您是否忘記指明此函式明確地使用:: 運算子？
+' function '：不能當做已命名的覆寫使用：找不到正在覆寫的函式;您忘了使用：： operator 明確命名函式嗎？
 
-明確覆寫指定找不到任何介面中的函式。 如需詳細資訊，請參閱 <<c0> [ 明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
+明確覆寫指定了在任何介面中找不到的函式。 如需詳細資訊，請參閱[明確覆寫](../../extensions/explicit-overrides-cpp-component-extensions.md)。
 
-下列範例會產生 C3653:
+下列範例會產生 C3653：
 
-```
+```cpp
 // C3653.cpp
 // compile with: /clr
 public interface struct I {

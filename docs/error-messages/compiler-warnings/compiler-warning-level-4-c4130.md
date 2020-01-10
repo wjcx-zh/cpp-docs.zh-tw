@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4130
 ms.assetid: 45e4c7b2-6b51-41c7-ba5e-941aa5c7d3dc
-ms.openlocfilehash: 1b1fb72d68309a4bef56ccd844ad30d967bbadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bc632bf641fa3944cfd21dc405590c803498d80
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401304"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991574"
 ---
 # <a name="compiler-warning-level-4-c4130"></a>編譯器警告 (層級 4) C4130
 
@@ -21,7 +21,7 @@ ms.locfileid: "62401304"
 
 下列範例會產生 C4130：
 
-```
+```cpp
 // C4130.cpp
 // compile with: /W4
 int main()

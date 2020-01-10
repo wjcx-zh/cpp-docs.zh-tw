@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 86c393796b1ce3efdb92d8aefd1f653390619ea4
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a24349980e9395257f20fcfcc0987883060a7c1d
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837521"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303142"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>.vcxproj 和.props 檔案結構
 
@@ -33,7 +33,7 @@ ms.locfileid: "65837521"
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
-   「不支援」表示不保證巨集適用於 IDE 中的所有作業。 不會在不同的組態中變更其值的巨集應可運作，但若有某個項目移至不同的篩選條件或專案，則可能不會保留。 會在不同的組態中變更其值的巨集將會造成問題，因為 IDE 不預期專案項目路徑會隨著專案組態的不同而改變。
+   「不支援」表示不保證巨集適用於 IDE 中的所有作業。 不會在不同的設定中變更其值的宏應該可以使用，但如果專案移至不同的篩選或專案，則可能不會保留。 會在不同的組態中變更其值的巨集將會造成問題，因為 IDE 不預期專案項目路徑會隨著專案組態的不同而改變。
 
 1. 為了在 [專案屬性] 對話方塊中編輯時，能夠正確地新增、移除或修改專案屬性，檔案必須針對每個專案組態包含不同的群組，而且條件的格式必須如下：
 
@@ -55,7 +55,7 @@ ms.locfileid: "65837521"
 
 - 有多個屬性群組，各有唯一的標籤，而且會依特定順序出現。
 
-專案檔中的項目順序很重要，因為 MSBuild 是以循序評估模型為基礎。  如果您的專案檔 (包括所有匯入的 .props 和 .targets 檔案) 是由屬性的多個定義所組成，最後一個定義會覆寫之前的定義。 在下列範例中，由於 MSBuild 引擎在其評估期間最後遇到值 "xyz"，因此會在編譯期間設定此值。
+專案檔中的項目順序很重要，因為 MSBuild 是以循序評估模型為基礎。  如果您的專案檔 (包括所有匯入的 .props 和 .targets 檔案) 是由屬性的多個定義所組成，最後一個定義會覆寫之前的定義。 在下列範例中，會在編譯期間設定值 "xyz"，因為 MSBUild 引擎會在其評估期間最後遇到它。
 
 ```xml
   <MyProperty>abc</MyProperty>
@@ -104,7 +104,7 @@ ms.locfileid: "65837521"
 
 ### <a name="projectconfiguration-elements"></a>ProjectConfiguration 項目
 
-下列程式碼片段顯示專案組態。 在此範例中，'Debug|x64' 是組態名稱。 專案組態名稱的格式必須是 $(Configuration)|$(Platform)。 一個專案組態節點可以有兩個屬性：組態和平台。 當組態為使用中時，即會自動使用此處指定的值設定這些屬性。
+下列程式碼片段顯示專案組態。 在此範例中，'Debug|x64' 是組態名稱。 專案組態名稱的格式必須是 $(Configuration)|$(Platform)。 一個 ProjectConfiguration 節點可以有兩個屬性：Configuration 和 Platform。 當組態為使用中時，即會自動使用此處指定的值設定這些屬性。
 
 ```xml
 <ProjectConfiguration Include="Debug|x64">
@@ -153,7 +153,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 <PropertyGroup Label="Configuration" />
 ```
 
-`Configuration` 屬性群組具有附加的組態條件 (例如 `Condition=”'$(Configuration)|$(Platform)'=='Debug|Win32'”`) 和多個複本，每個組態各一個。 此屬性群組會裝載專為特定組態設定的屬性。 組態屬性包含 PlatformToolset，同時也會控制 **Microsoft.Cpp.props** 中是否包含系統屬性工作表。 例如，如果您定義屬性 `<CharacterSet>Unicode</CharacterSet>`，則會包含系統屬性工作表 **microsoft.Cpp.unicodesupport.props**。 如果您檢查 **Microsoft.Cpp.props**，您會看到此行：`<Import Condition=”'$(CharacterSet)' == 'Unicode'”   Project=”$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props”/>`。
+`Configuration` 屬性群組具有附加的組態條件 (例如 `Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"`) 和多個複本，每個組態各一個。 此屬性群組會裝載專為特定組態設定的屬性。 組態屬性包含 PlatformToolset，同時也會控制 **Microsoft.Cpp.props** 中是否包含系統屬性工作表。 例如，如果您定義屬性 `<CharacterSet>Unicode</CharacterSet>`，則會包含系統屬性工作表 **microsoft.Cpp.unicodesupport.props**。 如果您檢查 **Microsoft.Cpp.props**，您會看到此行：`<Import Condition="'$(CharacterSet)' == 'Unicode'" Project="$(VCTargetsPath)\microsoft.Cpp.unicodesupport.props" />`。
 
 ### <a name="microsoftcppprops-import-element"></a>Microsoft.Cpp.props Import 項目
 
@@ -195,7 +195,7 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 
 此屬性群組有多個執行個體，所有專案組態的每個組態各有一個。 每個屬性群組都必須附加一個組態條件。 如有任何組態遺失，[專案屬性] 對話方塊將無法正常運作。 不同於上述屬性群組，此屬性群組沒有標籤。 此群組包含專案組態層級設定。 這些設定會套用至屬於指定項目群組一部分的所有檔案。 組建自訂項目定義中繼資料會在此初始化。
 
-此 PropertyGroup 必須接在 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` 後面，而且前面不得有任何其他不含 Label 的 PropertyGroup (否則 [專案屬性] 編輯將無法正常運作)。
+此 PropertyGroup 必須在 `<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />` 之後，而且沒有任何其他 PropertyGroup （否則，專案屬性編輯將無法正常運作）。
 
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>各個組態的 ItemDefinitionGroup 項目
 
@@ -218,8 +218,8 @@ IDE 預期會針對用於所有 ProjectConfiguration 項目的任何 Configurati
 ```xml
 <ItemGroup>
   <ClCompile Include="stdafx.cpp">
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</TreatWarningAsError>
   </ClCompile>
 </ItemGroup>
 ```

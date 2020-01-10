@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FLT_EPSILON constant
 - floating-point numbers, precision
 ms.assetid: 1acb1add-ac06-4134-a2fd-aff13d8c4c15
-ms.openlocfilehash: 387b2f4a7156e42e59bd70c5a6f747943fb54ca7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 373ce9fa2c2c96fac349940076873a4a637a9dbe
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313580"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75298710"
 ---
 # <a name="why-floating-point-numbers-may-lose-precision"></a>浮點數會失去精確度的原因
 
-浮點數十進位值通常不需要精確的二進位表示法。 這是 CPU 的浮點數資料的表示方式的副作用。 基於這個理由，您可能會遇到一些遺失有效位數的情況下，，而且某些浮點運算可能會產生非預期的結果。
+浮點十進位值通常不會有完全相同的二進位標記法。 這是 CPU 代表浮點數據之方式的副作用。 基於這個理由，您可能會遇到一些精確度遺失的情況，而某些浮點運算可能會產生非預期的結果。
 
 此行為是下列其中一項的結果：
 
-- 可能不精確的十進位數字的二進位表示法。
+- 十進位數的二進位標記法可能不精確。
 
-- 所使用的號碼 （例如，混用 float 和 double） 之間沒有不相符的類型。
+- 使用的數位之間的類型不符（例如，混用 float 和 double）。
 
-若要解決這個問題，請確定值大於或小於功能所需的大多數程式設計師，或它們取得，並使用會維持有效位數的二進碼十進位 (BCD) 程式庫中。
+為了解決此行為，大部分的程式設計人員都可以確保該值大於或小於所需的值，或取得並使用將會維持精確度的二進位編碼十進位（BCD）程式庫。
 
-有效位數和精確度的浮點數計算，會影響浮點值的二進位表示法。 Microsoft VisualC++會使用[IEEE 浮點數格式](ieee-floating-point-representation.md)。
+浮點值的二進位標記法會影響浮點計算的精確度和精確度。 Microsoft Visual C++使用[IEEE 浮點格式](ieee-floating-point-representation.md)。
 
 ## <a name="example"></a>範例
 
-```
+```c
 // Floating-point_number_precision.c
 // Compile options needed: none. Value of c is printed with a decimal
 // point precision of 10 and 6 (printf rounded value by default) to
@@ -60,8 +60,8 @@ They are not equal! The value of c is  2.4679999352 or 2.468000
 
 ## <a name="comments"></a>註解
 
-EPSILON、 您可以使用常數 FLT_EPSILON，定義為 1.192092896e 浮點數的-07F，或 DBL_EPSILON，定義為雙精度浮點數為 2.2204460492503131e-016。 您需要包含這些常數的 float.h。 這些常數會定義為最小正數 x 數字，例如 x + 1.0 不等於 1.0。 因為這是很小的數目時，您應該採用使用者定義的功能，包含非常大量的計算。
+針對 EPSILON，您可以使用常數 FLT_EPSILON （定義為 float 的 1.192092896 e-07F）或 DBL_EPSILON （定義為 double 做為 2.2204460492503131 e 016）。 您必須針對這些常數包含 float. h。 這些常數會定義為最小的正數位 x，因此 x + 1.0 不等於1.0。 因為這是非常小的數位，所以您應該針對涉及非常大數位的計算採用使用者定義的容錯。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [最佳化程式碼](optimizing-your-code.md)

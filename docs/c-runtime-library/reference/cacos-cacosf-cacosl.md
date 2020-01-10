@@ -1,11 +1,11 @@
 ---
 title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - cacos
 - cacosf
 - cacosl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - cacos
 - cacosf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b0751703b9b9cdcdb50e265a6b5d3c929d89ae1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348571"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939391"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-擷取複數，而且在實數軸的間隔 [-1，+ 1] 外部分支反餘弦值。
+抓取複數的反余弦值，並在實際軸的間隔 [-1，+ 1] 以外的地方剪下分支。
 
 ## <a name="syntax"></a>語法
 
@@ -61,17 +64,17 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-反餘弦*z*，以弧度為單位。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果會發生網域錯誤*z*超出的間隔 [-1，+ 1]。
+*Z*的反余弦，以弧度為單位。 結果是在虛數軸中為未繫結，並且在實數軸的間隔 [0, π] 中。 如果*z*超出間隔 [-1，+ 1]，就會發生網域錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**cacos**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **cacos**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**cacos**的多載。 在 C 程式中， **cacos**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**cacos**,               **cacosf**, **cacosl**|\<complex.h>|\<ccomplex>|
+|**cacos**、 **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

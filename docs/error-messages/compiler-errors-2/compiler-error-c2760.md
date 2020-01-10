@@ -6,22 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2760
 ms.assetid: 585757fd-d519-43f3-94e5-50316ac8b90b
-ms.openlocfilehash: 24c33d90c0f91aa3c4b01142902afc4333c1c732
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5680de2fe0364d7cdc5e7ef017bd298423ea4c21
+ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257786"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70273660"
 ---
 # <a name="compiler-error-c2760"></a>編譯器錯誤 C2760
 
-語法錯誤： 必須是 'name1' 不是 'name2'
+> 語法錯誤: 必須是 '*name1*' 而不是 '*name2*'
 
-轉型運算子搭配無效的運算子。
+## <a name="remarks"></a>備註
 
-下列範例會產生 C2760:
+有數種方式可造成此錯誤。 通常, 這是由編譯器無法理解的 token 順序所造成。
 
-```
+## <a name="example"></a>範例
+
+在此範例中, 轉型運算子與不正確運算子搭配使用。
+
+```cpp
 // C2760.cpp
 class B {};
 class D : public B {};

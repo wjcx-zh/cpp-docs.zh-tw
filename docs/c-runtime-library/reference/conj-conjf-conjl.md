@@ -1,11 +1,11 @@
 ---
 title: conj、conjf、conjl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - conj
 - conjf
 - conjl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - conj
 - conjf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cb87e502d3fa927f10675796bae0b1d37115b2a2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335384"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939034"
 ---
 # <a name="conj-conjf-conjl"></a>conj、conjf、conjl
 
@@ -68,17 +71,17 @@ _Lcomplex conjl(
 
 ## <a name="return-value"></a>傳回值
 
-複數的共軛*z*。  結果將會有相同的實數和虛數部分作為*z*，但正負號相反。
+*Z*的共軛複數。  結果與*z*具有相同的實數和虛數部分，但正負號相反。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**conj**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **conj**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**conj**的多載。 在 C 程式中， **conj**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**conj**,               **conjf**, **conjl**|\<complex.h>|\<ccomplex>|
+|**conj**、 **conjf**、 **conjl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

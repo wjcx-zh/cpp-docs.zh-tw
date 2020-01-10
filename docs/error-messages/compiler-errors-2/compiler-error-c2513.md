@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
-ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 093a5856fdcfa6311fcef93214672b035c91b4fc
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165212"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746522"
 ---
 # <a name="compiler-error-c2513"></a>編譯器錯誤 C2513
 
-'type': '=' 之前沒有宣告變數
+' type '：未在 ' = ' 之前宣告任何變數
 
-類型指定名稱會出現在任何變數的識別項的宣告。
+類型指定名稱會出現在宣告中，而且沒有任何變數識別碼。
 
-下列範例會產生 C2513:
+下列範例會產生 C2513：
 
-```
+```cpp
 // C2513.cpp
 int main() {
    int = 9;   // C2513
@@ -29,9 +29,9 @@ int main() {
 }
 ```
 
-這項錯誤也可能導致 Visual Studio.NET 2003年所進行的編譯器一致性工作： 初始化 typedef，不再允許。 初始化 typedef 標準不允許的而且現在會產生編譯器錯誤。
+針對 Visual Studio .NET 2003 執行的編譯器一致性工作，也可能會產生此錯誤：不再允許初始化 typedef。 標準不允許初始化 typedef，而且現在會產生編譯器錯誤。
 
-```
+```cpp
 // C2513b.cpp
 // compile with: /c
 typedef struct S {
@@ -41,4 +41,4 @@ typedef struct S {
 // } S;
 ```
 
-另外，也可以刪除`typedef`來定義變數，以彙總初始設定式清單中，但這不建議，因為它會建立具有相同名稱做為類型的變數，並隱藏的類型名稱。
+另一個方法是刪除 `typedef` 以定義具有匯總初始化運算式清單的變數，但不建議這樣做，因為它會建立與類型同名的變數，並隱藏類型名稱。

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1312
 ms.assetid: 48284abb-d849-43fc-ab53-45aded14fd8a
-ms.openlocfilehash: 49fa7e7963d6bb561e1602b58fe1f26c5f3d54bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e462d24f2eb54718ba73617146aab96bb14a66df
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160467"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990914"
 ---
 # <a name="linker-tools-error-lnk1312"></a>連結器工具錯誤 LNK1312
 
-檔案無效或損毀： 無法匯入組件
+檔案無效或損毀：無法匯入元件
 
-建置組件、 模組或編譯的組件以外的檔案時 **/clr**已傳遞給 **/ASSEMBLYMODULE**連結器選項。  如果您傳遞的物件檔 **/ASSEMBLYMODULE**，只是物件直接傳遞給連結器，而不是以 **/ASSEMBLYMODULE**。
+建立元件時，會將使用 **/clr**編譯之模組或元件以外的檔案傳遞給 **/ASSEMBLYMODULE**連結器選項。  如果您將物件檔傳遞至 **/ASSEMBLYMODULE**，只要直接將物件傳遞給連結器，而不是 **/ASSEMBLYMODULE**。
 
 ## <a name="example"></a>範例
 
-下列範例所建立的.obj 檔案。
+下列範例會建立 .obj 檔案。
 
-```
+```cpp
 // LNK1312.cpp
 // compile with: /clr /LD
 public ref class A {
@@ -36,7 +36,7 @@ public:
 
 下列範例會產生 LNK1312。
 
-```
+```cpp
 // LNK1312_b.cpp
 // compile with: /clr /LD /link /assemblymodule:LNK1312.obj
 // LNK1312 error expected

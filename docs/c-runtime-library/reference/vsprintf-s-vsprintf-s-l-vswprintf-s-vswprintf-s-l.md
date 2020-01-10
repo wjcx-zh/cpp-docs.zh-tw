@@ -1,12 +1,12 @@
 ---
 title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
-ms.date: 03/26/2019
-apiname:
+ms.date: 09/12/2019
+api_name:
 - _vswprintf_s_l
 - vsprintf_s
 - vswprintf_s
 - _vsprintf_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vswprintf_s
 - vsprintf_s
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 84e85885acf671b49e1e3226234a1d3337577768
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383447"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945267"
 ---
-# <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
+# <a name="vsprintf_s-_vsprintf_s_l-vswprintf_s-_vswprintf_s_l"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
-使用引數清單的指標，寫入格式化輸出。 這些是具有 [CRT 的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述之安全性增強功能的 [vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、\__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md) 版本。
+使用引數清單的指標，寫入格式化輸出。 這些函式是[vsprintf、_vsprintf_l、vswprintf、_vswprintf_l、 \__vswprintf_l](vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)的版本，其中包含[CRT 中的安全性功能中](../../c-runtime-library/security-features-in-the-crt.md)所述的安全性增強功能。
 
 ## <a name="syntax"></a>語法
 
@@ -96,7 +99,7 @@ int vswprintf_s(
 輸出的儲存位置。
 
 *numberOfElements*<br/>
-大小*緩衝區*以字元為單位。
+*緩衝區*的大小（以字元為單位）。
 
 *格式*<br/>
 格式規格。
@@ -109,21 +112,21 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>傳回值
 
-**vsprintf_s**並**vswprintf_s**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。 如果*緩衝區*或是*格式*是 null 指標，如果*numberOfElements*為零，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+**vsprintf_s**和**vswprintf_s**會傳回寫入的字元數，不包括結束的 null 字元，或如果發生輸出錯誤，則傳回負數值。 如果*buffer*或*format*是 Null 指標，如果*numberOfElements*為零，或如果格式字串包含不正確格式化字元，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設為**EINVAL**。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化並將寫入指定的資料所指向的記憶體*緩衝區*。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入*緩衝區*所指向的記憶體。
 
-**vswprintf_s**符合 ISO C 標準**vswprintf**，這需要第二個參數， *count*，型別的**size_t**。
+**vswprintf_s**符合適用于**Vswprintf**的 ISO C 標準，其需要類型**size_t**的第二個參數*count*。
 
 這些函式與不安全版本的差異，僅在於安全版本支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+在C++中，範本多載簡化了使用這些函式的功能。 多載可以自動推斷緩衝區長度，而不需要指定大小引數。 而且，它們可以自動取代不安全的函式及其安全的對應專案。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -136,8 +139,8 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**vsprintf_s**， **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**vswprintf_s**， **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
+|**vsprintf_s**、 **_vsprintf_s_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**vswprintf_s**、 **_vswprintf_s_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 
@@ -147,13 +150,15 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 
 ```C
 // crt_vsprintf_s.c
+// Compile with: cl /W4 crt_vsprintf_s.c
 // This program uses vsprintf_s to write to a buffer.
 // The size of the buffer is determined by _vscprintf.
 
 #include <stdlib.h>
+#include <stdio.h>
 #include <stdarg.h>
 
-void test( char * format, ... )
+void test( char const * const format, ... )
 {
    va_list args;
    int len;
@@ -162,10 +167,13 @@ void test( char * format, ... )
    va_start( args, format );
    len = _vscprintf( format, args ) // _vscprintf doesn't count
                                + 1; // terminating '\0'
-   buffer = malloc( len * sizeof(char) );
-   vsprintf_s( buffer, len, format, args );
-   puts( buffer );
-   free( buffer );
+   buffer = (char *) malloc( len * sizeof(char) );
+   if ( NULL != buffer )
+   {
+      vsprintf_s( buffer, len, format, args );
+      puts( buffer );
+      free( buffer );
+   }
    va_end( args );
 }
 
@@ -189,4 +197,4 @@ This is a string
 [fprintf、_fprintf_l、fwprintf、_fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)<br/>
 [printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
 [sprintf、_sprintf_l、swprintf、_swprintf_l、\__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
-[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)<br/>
+[va_arg、va_copy、va_end、va_start](va-arg-va-copy-va-end-va-start.md)

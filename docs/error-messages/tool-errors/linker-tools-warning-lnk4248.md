@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4248
 ms.assetid: e40523ff-e3cb-4ba6-ab79-23f0f339f6cf
-ms.openlocfilehash: db9432c505b7348c9bef5ed34aac1cb4edecb17b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ba05ef067c539dc9c0aca6dc2a395748fd217a2
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352513"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988108"
 ---
 # <a name="linker-tools-warning-lnk4248"></a>連結器工具警告 LNK4248
 
-無法解析的 typeref 語彙基元 (token) 的 'type';映像可能無法執行
+' type ' 的無法解析的 typeref 標記（token）;映射可能無法執行
 
-類型沒有定義 MSIL 中繼資料。
+類型在 MSIL 中繼資料中沒有定義。
 
-僅向前宣告中的 MSIL 模組的型別時，可能會發生 LNK4248 (編譯 **/clr**)，其中型別參考在 MSIL 模組中，而且 MSIL 模組與已定義的原生模組連結型別。
+當 MSIL 模組中只有一個類型的向前宣告（以 **/clr**編譯），其中類型在 msil 模組中被參考，而且 msil 模組與具有該類型定義的原生模組連結時，就會發生 LNK4248。
 
-在此情況下，連結器會提供原生型別定義在 MSIL 中繼資料，，，這可能會提供正確的行為。
+在此情況下，連結器將會在 MSIL 中繼資料中提供原生類型定義，而這可能會提供正確的行為。
 
-不過，如果 CLR 型別轉送類型宣告，然後連結器的原生型別定義可能不正確
+不過，如果轉送類型宣告是 CLR 類型，則連結器的原生類型定義可能不正確
 
 如需詳細資訊，請參閱 [/clr (Common Language Runtime 編譯)](../../build/reference/clr-common-language-runtime-compilation.md)。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
-1. 提供的類型定義中的 MSIL 模組。
+1. 在 MSIL 模組中提供類型定義。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 LNK4248。 定義結構的解析。
+下列範例會產生 LNK4248。 定義要解析的結構 A。
 
-```
+```cpp
 // LNK4248.cpp
 // compile with: /clr /W1
 // LNK4248 expected
@@ -49,9 +49,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例已轉送的類型定義。
+下列範例具有類型的向前定義。
 
-```
+```cpp
 // LNK4248_2.cpp
 // compile with: /clr /c
 class A;   // provide a definition for A here to resolve
@@ -68,7 +68,7 @@ int main() {
 
 下列範例會產生 LNK4248。
 
-```
+```cpp
 // LNK4248_3.cpp
 // compile with: /c
 // post-build command: link LNK4248_2.obj LNK4248_3.obj

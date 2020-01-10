@@ -1,10 +1,10 @@
 ---
 title: _spawnlpe、_wspawnlpe
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _spawnlpe
 - _wspawnlpe
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - spawnlpe
 - _wspawnlpe
@@ -31,14 +34,14 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe82d52418683d414ffbdd0f4fb0efd9bfd709cb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62355155"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70947654"
 ---
-# <a name="spawnlpe-wspawnlpe"></a>_spawnlpe、_wspawnlpe
+# <a name="_spawnlpe-_wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
 建立和執行新處理序。
 
@@ -77,14 +80,14 @@ intptr_t _wspawnlpe(
 待執行檔案的路徑。
 
 *arg0*， *arg1*，...*argn*<br/>
-引數指標的清單。 *Arg0*引數通常是一個指向*cmdname*。 引數*arg1*透過*argn*是形成新引數清單之字元字串的指標。 遵循*argn*，必須要有**NULL**指標，以標記引數清單的結尾。
+引數指標的清單。 *Arg0*引數通常是指向*cmdname*的指標。 引數*arg1*到 *...argn*是形成新引數清單之字元字串的指標。 在 *...argn*之後，必須有**Null**指標來標記引數清單的結尾。
 
 *envp*<br/>
 環境設定的指標陣列。
 
 ## <a name="return-value"></a>傳回值
 
-同步的傳回值 **_spawnlpe**或是 **_wspawnlpe** (**_P_WAIT**指定為*模式*) 是新的結束狀態程序。 非同步的傳回值 **_spawnlpe**或是 **_wspawnlpe** (**_P_NOWAIT**或是 **_P_NOWAITO**指定*模式*) 是處理序控制代碼。 如果處理序正常終止，結束狀態為 0。 您可以將結束狀態為非零值，如果繁衍的處理序特別是使用非零引數來呼叫**結束**常式。 如果新處理序未明確設定確定的結束狀態，則確定的結束狀態表示因中止或中斷而異常結束。 傳回值為-1 表示的錯誤 （未啟動新的處理序）。 在此情況下， **errno**設為下列值之一。
+同步 **_spawnlpe**或 **_wspawnlpe** （針對*模式*指定的 **_P_WAIT** ）的傳回值是新進程的結束狀態。 非同步 **_spawnlpe**或 **_wspawnlpe** （針對*模式*指定的 **_P_NOWAIT**或 **_P_NOWAITO** ）的傳回值是進程控制碼。 如果處理序正常終止，結束狀態為 0。 如果產生的進程特別使用非零的引數來呼叫**結束常式，** 您可以將結束狀態設定為非零值。 如果新處理序未明確設定確定的結束狀態，則確定的結束狀態表示因中止或中斷而異常結束。 傳回值-1 表示發生錯誤（新的進程未啟動）。 在此情況下， **errno**會設定為下列其中一個值。
 
 |||
 |-|-|
@@ -98,9 +101,9 @@ intptr_t _wspawnlpe(
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會建立和執行新處理序，並將每個命令列引數做為個別參數傳遞，也會將指標的陣列傳遞至環境設定。 這些函式使用**路徑**環境變數尋找要執行的檔案。
+所有這些函式都會建立和執行新處理序，並將每個命令列引數做為個別參數傳遞，也會將指標的陣列傳遞至環境設定。 這些函式會使用**PATH**環境變數來尋找要執行的檔案。
 
-這些函式會驗證它們的參數。 如果有任一*cmdname*或是*arg0*為空字串或 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，這些函式會將**errno**要**EINVAL**，並傳回-1。 未繁衍任何新處理序。
+這些函式會驗證它們的參數。 如果*cmdname*或*arg0*是空字串或 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會將**errno**設定為**EINVAL**，並傳回-1。 未繁衍任何新處理序。
 
 ## <a name="requirements"></a>需求
 

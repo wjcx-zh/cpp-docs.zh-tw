@@ -9,30 +9,30 @@ helpviewer_keywords:
 - .NET Framework [C++], serialization
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
-ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2dfdcaf1a1f33e89d106d4529ffc9af2d08376b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384669"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988403"
 ---
 # <a name="serialization-ccli"></a>序列化 (C++/CLI)
 
-序列化 （儲存狀態的物件或成員，才能永久媒體的程序） 的 managed 類別 （包括個別的欄位或屬性） 受到<xref:System.SerializableAttribute>和<xref:System.NonSerializedAttribute>類別。
+<xref:System.SerializableAttribute> 和 <xref:System.NonSerializedAttribute> 類別支援序列化（將物件或成員的狀態儲存到永久性媒體的處理常式）（包括個別欄位或屬性）。
 
 ## <a name="remarks"></a>備註
 
-適用於**SerializableAttribute**至受管理的類別，以序列化整個類別，或套用到特定的欄位或屬性序列化的 managed 類別的組件的自訂屬性。 使用**NonSerializedAttribute**豁免的欄位或 managed 類別的屬性從序列化的自訂屬性。
+將**SerializableAttribute**自訂屬性套用至 managed 類別，以序列化整個類別，或只套用至特定欄位或屬性，以序列化 managed 類別的各個部分。 使用**NonSerializedAttribute**自訂屬性來豁免 managed 類別的欄位或屬性，使其無法序列化。
 
 ## <a name="example"></a>範例
 
 ### <a name="description"></a>描述
 
-在下列範例中，類別`MyClass`(和屬性`m_nCount`) 標示為可序列化。 不過，`m_nData`屬性則不會序列化所示**NonSerialized**自訂屬性：
+在下列範例中，類別 `MyClass` （和屬性 `m_nCount`）標示為可序列化。 不過，`m_nData` 屬性不會如非**序列化自訂**屬性所指示進行序列化：
 
 ### <a name="code"></a>程式碼
 
-```
+```cpp
 // serialization_and_mcpp.cpp
 // compile with: /LD /clr
 using namespace System;
@@ -49,8 +49,8 @@ private:
 
 ### <a name="comments"></a>註解
 
-請注意，可以使用其 「 簡短名稱 」 參考這兩個屬性 (**Serializable**並**NonSerialized**)。 這會進一步說明[套用屬性](/dotnet/standard/attributes/applying-attributes)。
+請注意，這兩個屬性都可以使用其「簡短名稱」（**可**序列化和非**序列化）來**參考。 這會在套用[屬性](/dotnet/standard/attributes/applying-attributes)中進一步說明。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [以 C++/CLI 進行 .NET 程式設計 (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)

@@ -1,27 +1,27 @@
 ---
 title: __readcr8
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __readcr8
 helpviewer_keywords:
 - __readcr8 intrinsic
 ms.assetid: fce16953-87ff-4fbe-8081-7962b97ae46c
-ms.openlocfilehash: d4c0b22d38d725566062d2da98839579c22d571c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 525775fde4cb96cecfcabef878780d5a2aa6743a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396453"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221240"
 ---
-# <a name="readcr8"></a>__readcr8
+# <a name="__readcr8"></a>__readcr8
 
 **Microsoft 專屬**
 
-讀取 CR8 暫存器，並傳回其值。
+讀取 CR8 暫存器, 並傳回其值。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 unsigned __int64 __readcr8(void);
 ```
 
@@ -35,14 +35,14 @@ CR8 暫存器中的值。
 |---------------|------------------|
 |`__readcr8`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建只適用於核心模式，且此常式僅可作為內建常式使用。
+內建函式僅適用于核心模式, 而常式僅以內建函式的形式提供。
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

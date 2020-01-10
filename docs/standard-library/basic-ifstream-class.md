@@ -23,7 +23,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68455509"
 ---
-# <a name="basicifstream-class"></a>basic_ifstream 類別
+# <a name="basic_ifstream-class"></a>basic_ifstream 類別
 
 描述一個物件，該物件可控制如何從具有 `Elem` 類型元素之 [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> 類別的資料流緩衝區擷取元素和編碼物件；其中該類型的字元特性是由 `Tr` 類別所決定。
 
@@ -71,7 +71,7 @@ int main(int argc, char **argv)
 }
 ```
 
-## <a name="input-basicifstreamclasstxt"></a>輸入：basic_ifstream_class.txt
+## <a name="input-basic_ifstream_classtxt"></a>輸入：basic_ifstream_class.txt
 
 ```cpp
 This is the contents of basic_ifstream_class.txt.
@@ -85,13 +85,13 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|描述|
+|建構函式|說明|
 |-|-|
 |[basic_ifstream](#basic_ifstream)|初始化 `basic_ifstream` 物件的新執行個體。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[close](#close)|關閉檔案。|
 |[is_open](#is_open)|判斷檔案是否為開啟。|
@@ -101,7 +101,7 @@ This is the contents of basic_ifstream_class.txt.
 
 ### <a name="operators"></a>運算子
 
-|運算子|描述|
+|運算子|說明|
 |-|-|
 |[operator=](#op_eq)|指派此資料流物件的內容。 這是一個移動指派，涉及不會留下複本的 `rvalue`。|
 
@@ -248,11 +248,11 @@ void open(
 
 ### <a name="remarks"></a>備註
 
-此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果 open 失敗, 此函式[](../standard-library/basic-ios-class.md#setstate)會呼叫`failbit`setstate (), 這可能會擲回 ios_base:: 失敗例外狀況。
+此成員函式會呼叫 [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *檔名*, `_Mode` &#124; **ios_base::in**)。 如果 open 失敗，此函式會呼叫`failbit`[setstate](../standard-library/basic-ios-class.md#setstate)（），這可能會擲回 ios_base：：失敗例外狀況。
 
 ### <a name="example"></a>範例
 
-如需使用`open`的範例, 請參閱[basic_filebuf:: open](../standard-library/basic-filebuf-class.md#open) 。
+如需使用`open`的範例，請參閱[basic_filebuf：： open](../standard-library/basic-filebuf-class.md#open) 。
 
 ## <a name="op_eq"></a>  basic_ifstream::operator=
 
@@ -273,7 +273,7 @@ basic_ifstream& operator=(basic_ifstream&& right);
 
 ### <a name="remarks"></a>備註
 
-成員運算子會使用*right*的內容來取代物件的內容, 並將其視為右值參考。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
+成員運算子會使用*right*的內容來取代物件的內容，並將其視為右值參考。 如需詳細資訊，請參閱[左值和右值](../cpp/lvalues-and-rvalues-visual-cpp.md)。
 
 ## <a name="rdbuf"></a>  basic_ifstream::rdbuf
 

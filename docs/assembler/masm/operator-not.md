@@ -1,27 +1,28 @@
 ---
 title: 運算子 NOT
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator NOT
 helpviewer_keywords:
 - operator NOT
 - NOT operator
 ms.assetid: d68d44fd-f92f-4b65-8d36-96de03e1b4e5
-ms.openlocfilehash: b864294fa5d01f5cb231e0d26ac8e49cd9340ae5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b66ae5d067d946cc6a79e011ddf016385acd7c4b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176547"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318341"
 ---
 # <a name="operator-not"></a>運算子 NOT
 
-傳回*運算式*反轉的所有位元。
+傳回所有位反轉的*運算式*。
 
 ## <a name="syntax"></a>語法
 
-> NOT 運算式
+> **NOT** *運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

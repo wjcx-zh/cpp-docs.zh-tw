@@ -16,14 +16,14 @@ helpviewer_keywords:
 - stdext::max_none [C++], released
 - stdext::max_none [C++], saved
 ms.assetid: 12ab5376-412e-479c-86dc-2c3d6a3559b6
-ms.openlocfilehash: 0d409928de4bf66bcc6d6dda3008131f87e790c3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: b296c641be68efac7410328a448a4ad2bd0fa88e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460162"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626822"
 ---
-# <a name="maxnone-class"></a>max_none 類別
+# <a name="max_none-class"></a>max_none 類別
 
 描述 [max 類別](../standard-library/allocators-header.md)物件，此物件可將 [freelist](../standard-library/freelist-class.md) 物件的長度上限限制為零。
 
@@ -72,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 這會在每次成功呼叫`cache_freelist::allocate`至 operator **new**之後被呼叫。 引數 *_Nx*是由 operator **new**所配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 每次成功呼叫之後都會呼叫它，方法是 `cache_freelist::allocate` to operator **new**。 引數 *_Nx*是 operator **new**所配置之區塊中的記憶體區塊數目。
 
 ## <a name="deallocated"></a>  max_none::deallocated
 
@@ -84,13 +84,13 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |---------------|-----------------|
 |*_Nx*|遞增值。|
 
 ### <a name="remarks"></a>備註
 
-此成員函式不會執行任何動作。 每次呼叫`cache_freelist::deallocate`運算子**delete**之後, 會呼叫這個成員函式。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
+此成員函式不會執行任何動作。 此成員函式會在每次呼叫之後，透過 `cache_freelist::deallocate` to operator **delete**來呼叫。 引數 *_Nx*是由 operator **delete**解除配置之區塊中的記憶體區塊數目。
 
 ## <a name="full"></a>  max_none::full
 
@@ -106,7 +106,7 @@ bool full();
 
 ### <a name="remarks"></a>備註
 
-此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true** `deallocate` , 則會將記憶體區塊放在可用的清單上; 如果傳回 false `deallocate` , 則呼叫 operator **delete**來解除配置區塊。
+此成員函式會由 `cache_freelist::deallocate` 呼叫。 如果呼叫傳回**true**，`deallocate` 會將記憶體區塊放在可用的清單上;如果傳回**false**，`deallocate` 會呼叫 operator **delete**來解除配置區塊。
 
 ## <a name="released"></a>  max_none::released
 
@@ -132,6 +132,6 @@ void saved();
 
 此成員函式不會執行任何動作。 每當 `cache_freelist::deallocate` 將記憶體區塊放到可用清單上時，都會呼叫它。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<allocators>](../standard-library/allocators-header.md)

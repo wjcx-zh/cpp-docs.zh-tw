@@ -1,29 +1,29 @@
 ---
 title: ML 嚴重錯誤 A1017
-ms.date: 08/30/2018
-ms.topic: error-reference
+ms.date: 12/17/2019
+ms.custom: error-reference
 f1_keywords:
 - A1017
 helpviewer_keywords:
 - A1017
 ms.assetid: bef0b312-5431-4e5a-b637-c19919acf01b
-ms.openlocfilehash: 22a16569364760d0cb1d01011405f7a11dd21cac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 523fed26afae5a88c5f154283487d3453a2e48c7
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62177769"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318055"
 ---
 # <a name="ml-fatal-error-a1017"></a>ML 嚴重錯誤 A1017
 
-**遺漏的來源檔案名稱**
+**遺漏來原始檔案名**
 
-ML 找不到組合，或將傳遞至連結器檔案。
+ML 找不到要組合或傳遞至連結器的檔案。
 
-當您讓 ML 命令列選項，而不指定要採取的檔案名稱時，會產生這個錯誤。 若要組合不.asm 副檔名的檔案、 使用 **/Ta**命令列選項。
+當您提供 ML 命令列選項，但未指定要採取動作的檔案名時，就會產生此錯誤。 若要組合沒有 .asm 副檔名的檔案，請使用 **/Ta**命令列選項。
 
-這項錯誤也可能產生不含任何參數叫用 ML，如果 ML 環境變數包含命令列選項。
+如果 ML 環境變數包含命令列選項，則叫用沒有參數的 ML 也可以產生此錯誤。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)

@@ -1,7 +1,7 @@
 ---
 title: _ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbcpunct_l
 - _ismbcblank
 - _ismbcprint
@@ -12,7 +12,7 @@ apiname:
 - _ismbcspace_l
 - _ismbcspace
 - _ismbcgraph
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -24,7 +24,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbcspace
 - _ismbcgraph
@@ -56,14 +59,14 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25136896555128339aaa4c79cec2ca9bf3ded43c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62286871"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953911"
 ---
-# <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
+# <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l
 
 判斷字元是否為圖形字元、顯示字元、標點符號字元或空白字元。
 
@@ -120,9 +123,9 @@ int _ismbcspace_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255 且有對應 **_ismbb**常式 (例如 **_ismbcalnum**對應至 **_ismbbalnum**)，結果是對應的傳回值 **_ismbb**常式。
+如果字元符合測試條件，這些常式都會傳回非零值，如果不符合，則傳回 0。 如果*c* < = 255，而且有對應的 **_ismbb**常式（例如， **_ismbcalnum**對應至 **_ismbbalnum**），則結果會是對應 **_ismbb**常式的傳回值。
 
-這些函式的版本完全相同，不同之處在於具有 **_l**後置詞使用的傳入的地區設定相關行為，而不是目前的地區設定的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些函式的版本完全相同，不同之處在于具有 **_l**後置字元的會使用傳入的地區設定來做為與地區設定相關的行為，而不是目前的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="remarks"></a>備註
 
@@ -130,11 +133,11 @@ int _ismbcspace_l(
 
 |常式傳回的值|測試條件|字碼頁 932 範例|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|圖形|傳回非零值，才*c*以外的任何 ASCII 或片假名可列印字元的空白字元 （） 的單一位元組表示法。|
-|**_ismbcprint**|可列印|傳回非零值，才*c*是代表包括空白字元 （） 任何 ASCII 或片假名可列印字元的單一位元組。|
-|**_ismbcpunct**|標點符號|傳回非零值，才*c*是任何 ASCII 或片假名標點符號字元的單一位元組表示法。|
-|**_ismbcblank**|空格或水平索引標籤|傳回非零值，才*c*是空格或水平定位字元： *c*= 0x20 或*c*= 0x09。|
-|**_ismbcspace**|空白字元|傳回非零值，才*c*是一個泛空白字元： *c*= 0x20 或 0x09< < =*c*< lt;=0x0d。|
+|**_ismbcgraph**|圖形|只有在*c*是任何 ASCII 或片假名可列印字元（空白字元除外）的單一位元組表示時，才傳回非零值（）。|
+|**_ismbcprint**|可列印|只有在*c*是任何 ASCII 或片假名可列印字元（包括空白字元（））的單一位元組表示時，才傳回非零。|
+|**_ismbcpunct**|標點符號|只有在*c*是任何 ASCII 或片假名標點符號字元的單一位元組表示時，才傳回非零。|
+|**_ismbcblank**|空格或水平索引標籤|只有在*c*是空格或水準索引標籤字元時，才傳回非零： *c*= 0x20 或*c*= 0x09。|
+|**_ismbcspace**|空白字元|只有在*c*是空白字元時，才傳回非零： *c*= 0x20 或 0x09 < =*c*< = 0x0D。|
 
 ## <a name="requirements"></a>需求
 

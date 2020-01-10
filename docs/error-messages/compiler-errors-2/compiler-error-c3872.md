@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3872
 ms.assetid: 519e95be-5641-40cc-894c-da4819506604
-ms.openlocfilehash: bd056a63ab60cd5a2504c6a0bc19e388f71b068b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: f4b116729ad3b84014d202deb31ab490435fcef3
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450062"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761438"
 ---
 # <a name="compiler-error-c3872"></a>編譯器錯誤 C3872
 
@@ -19,11 +19,11 @@ ms.locfileid: "66450062"
 
 C++ 編譯器會遵循 C++11 標準處理識別項中允許的字元。 識別項中只允許特定範圍的字元和通用字元名稱。 其他限制也適用於識別項的起始字元。 如需詳細資訊及允許的字元和通用字元名稱範圍清單，請參閱 [Identifiers](../../cpp/identifiers-cpp.md)。
 
-編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 在使用 /clr 所編譯的程式碼中的識別項應遵循[ECMA-335 標準：通用語言基礎結構 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。
+編譯 C++/CLI 程式碼時，識別項中允許之字元範圍的限制較少。 使用 /clr 編譯之程式碼中的識別項應該遵循  [標準 ECMA-335：通用語言基礎結構 (CLI)](https://www.ecma-international.org/publications/standards/Ecma-335.htm)。
 
 下列範例會產生 C3872：
 
-```
+```cpp
 // C3872.cpp
 int main() {
    int abc_\u0040;   // C3872, U+0040 is in base char set

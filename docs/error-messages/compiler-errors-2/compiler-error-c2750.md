@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f4e6e1d6c392fc377fe5fdf11643ae8a2e503a
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228534"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759603"
 ---
 # <a name="compiler-error-c2750"></a>編譯器錯誤 C2750
 
-'type': 無法使用 'new' 的參考類型使用 'gcnew' 代替
+' type '：不能在參考型別上使用 ' new ';請改用 ' gcnew '
 
-若要建立執行個體的 CLR 型別，這會導致要放在記憶體回收堆積上的執行個體，您必須使用[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)。
+若要建立 CLR 型別的實例，使實例放在垃圾收集堆積上，您必須使用[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)。
 
-下列範例會產生 C2750:
+下列範例會產生 C2750：
 
-```
+```cpp
 // C2750.cpp
 // compile with: /clr
 ref struct Y1 {};

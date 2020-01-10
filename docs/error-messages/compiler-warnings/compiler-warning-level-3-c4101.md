@@ -1,25 +1,25 @@
 ---
-title: 編譯器警告 （層級 3） C4101
+title: 編譯器警告（層級3） C4101
 ms.date: 11/04/2016
 f1_keywords:
 - C4101
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: d1109a32e754a6055e5e1d90632ad85332d832f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5effdbb4c7e83999655641a248c389c7c4d260d0
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402316"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74051909"
 ---
-# <a name="compiler-warning-level-3-c4101"></a>編譯器警告 （層級 3） C4101
+# <a name="compiler-warning-level-3-c4101"></a>編譯器警告（層級3） C4101
 
-'identifier': 未參考的區域變數
+' identifier '：未參考的區域變數
 
-絕不會使用本機變數。 在明顯的情況下，會發生這個警告：
+永遠不會使用本機變數。 此警告會在明顯的情況下發生：
 
-```
+```cpp
 // C4101a.cpp
 // compile with: /W3
 int main() {
@@ -27,9 +27,9 @@ int i;   // C4101
 }
 ```
 
-不過，這項警告也會發生時呼叫**靜態**透過類別的執行個體的成員函式：
+不過，透過類別的實例呼叫**靜態**成員函式時，也會發生這個警告：
 
-```
+```cpp
 // C4101b.cpp
 // compile with:  /W3
 struct S {
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-在此情況下，編譯器會使用資訊的相關`si`若要存取**靜態**函式，但類別的執行個體不需要呼叫**靜態**函式，因此這項警告。 若要解決這個警告，您可以：
+在此情況下，編譯器會使用 `si` 的相關資訊來存取**靜態**函式，但不需要類別的實例來呼叫**靜態**函式;因此會出現警告。 若要解決這個警告，您可以：
 
-- 加入建構函式，編譯器會在其中使用的執行個體`si`的呼叫中`func`。
+- 加入一個處理函式，編譯器會在呼叫中使用 `si` 的實例 `func`。
 
-- 移除**靜態**定義中的關鍵字`func`。
+- 從 `func`的定義中移除**static**關鍵字。
 
-- 呼叫**靜態**函式明確地： `int y = S::func();`。
+- 明確呼叫**靜態**函式： `int y = S::func();`。

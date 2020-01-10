@@ -1,11 +1,11 @@
 ---
 title: ctanh、ctanhf、ctanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ctanh
 - ctanhf
 - ctanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ctanh
 - ctanhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - ctanhl function
 - ctanhf function
 ms.assetid: 807f2cd1-8740-4988-afff-5911c346385b
-ms.openlocfilehash: f63329e45fdcd3a26d613f73cd911fdf6fb10401
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dae59dcd4a71045b27c6ba9501580bf981b9828f
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288936"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941958"
 ---
 # <a name="ctanh-ctanhf-ctanhl"></a>ctanh、ctanhf、ctanhl
 
@@ -68,22 +71,22 @@ _Lcomplex ctanhl(
 
 ## <a name="return-value"></a>傳回值
 
-複雜雙曲正切*z*。
+*Z*的複雜雙曲正切函數。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|常见 ∞，QNAN IND|none|_DOMAIN|
-|常见 ∞ （tan、 tanf）|無效|_DOMAIN|
+|±∞、QNAN、IND|none|_DOMAIN|
+|±∞（tan，tanf）|無效|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**ctanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **ctanh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**ctanh**的多載。 在 C 程式中， **ctanh**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**ctanh**,               **ctanhf**, **ctanhl**|\<complex.h>|\<ccomplex>|
+|**ctanh**、 **ctanhf**、 **ctanhl**|\<complex.h>|\<ccomplex>|
 
 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

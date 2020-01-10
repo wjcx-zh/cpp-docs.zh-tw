@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2825
 ms.assetid: c832f1c1-5184-4fc2-9356-12b21daa7af3
-ms.openlocfilehash: 1e2f8e8cd38b90a698994743609892896ef0d1a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a51901477958056356a96d71adde4241d60a2ac
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750581"
 ---
 # <a name="compiler-error-c2825"></a>編譯器錯誤 C2825
 
-var： 必須是類別或命名空間時，後面接著 ':: '
+var：必須是類別或命名空間，後面接著 '：： '
 
-失敗的嘗試已對形成限定的名稱。
+嘗試形成限定名稱是不成功的。
 
-例如，請確定您的程式碼不包含函式宣告，其中函式名稱開頭為::。
+例如，請確定您的程式碼不包含函式宣告，其中函數名稱的開頭為：：。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C2825:
+下列範例會產生 C2825：
 
-```
+```cpp
 // C2825.cpp
 typedef int i;
 int main() {

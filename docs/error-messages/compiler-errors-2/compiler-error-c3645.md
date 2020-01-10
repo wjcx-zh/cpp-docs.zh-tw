@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3645
 ms.assetid: 346da528-ae86-4cd0-9654-f41bee26ac0d
-ms.openlocfilehash: f733de6920e00f1f53c87884a7a334e575bceb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504b13aeb37fae0c350ef88798fefaec6f26c8e8
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385780"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757822"
 ---
 # <a name="compiler-error-c3645"></a>編譯器錯誤 C3645
 
-'function': __clrcall 不可使用於編譯為原生程式碼的函式
+' function '： __clrcall 不能用在編譯為機器碼的函式上
 
-函式中的某些關鍵字將導致編譯成原生函式。
+函式中有一些關鍵字會導致函式編譯為原生。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3645。
 
-```
+```cpp
 // C3645.cpp
 // compile with: /clr /c
 #pragma unmanaged

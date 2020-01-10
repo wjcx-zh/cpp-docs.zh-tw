@@ -2,14 +2,13 @@
 layout: HubPage
 title: Visual C++ 文件
 description: 了解如何使用 C++ 來開發平台和裝置的應用程式、服務和工具。
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
-ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
+ms.topic: hub-page
+ms.openlocfilehash: 2a54776149bef58656380f6f03351083189ea6c1
+ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65789020"
+ms.lasthandoff: 01/09/2020
+ms.locfileid: "75793792"
 ---
 <div id="main" class="v2">
     <div class="container">

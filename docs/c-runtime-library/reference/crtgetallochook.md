@@ -1,9 +1,9 @@
 ---
 title: _CrtGetAllocHook
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtGetAllocHook
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtGetAllocHook
 - _CrtGetAllocHook
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtGetAllocHook function
 - CrtGetAllocHook function
 ms.assetid: 036acf7c-547a-4b3f-a636-80451070d7ed
-ms.openlocfilehash: b49c4cfc820a925187d0ea4d1562965295bea817
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 769621e92bf5f99f76f71b368a3b9a5cd0f79fd0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62339906"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70942413"
 ---
-# <a name="crtgetallochook"></a>_CrtGetAllocHook
+# <a name="_crtgetallochook"></a>_CrtGetAllocHook
 
 擷取目前的用戶端定義配置函式，以連結到 C 執行階段偵錯記憶體配置處理序 (僅限偵錯版本)。
 
@@ -45,7 +48,7 @@ _CRT_ALLOC_HOOK _CrtGetAllocHook( void );
 
 ## <a name="remarks"></a>備註
 
-**_CrtGetAllocHook**擷取目前的用戶端定義的應用程式攔截函式的 C 執行階段偵錯程式庫記憶體配置處理序。
+**_CrtGetAllocHook**會針對 C 執行時間的 debug 程式庫記憶體配置進程，抓取目前用戶端定義的應用程式攔截函數。
 
 如需使用支援攔截程序之其他執行階段函式，以及撰寫您自己的用戶端定義攔截函式的詳細資訊，請參閱[撰寫偵錯攔截函式](/visualstudio/debugger/debug-hook-function-writing)。
 

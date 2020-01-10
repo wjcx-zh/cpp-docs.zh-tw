@@ -1,26 +1,26 @@
 ---
 title: 加入 MFC 訊息處理常式
-ms.date: 11/04/2016
+ms.date: 09/06/2019
 f1_keywords:
 - vc.codewiz.adding.mfc.msghandler
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 1287c8166e02c3aa7696a3a0d79ecc1a240e3032
+ms.sourcegitcommit: 2f96e2fda591d7b1b28842b2ea24e6297bcc3622
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741738"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71095868"
 ---
 # <a name="adding-an-mfc-message-handler"></a>加入 MFC 訊息處理常式
 
-您可以[使用 [屬性] 視窗中加入訊息處理常式](../../mfc/reference/mapping-messages-to-functions.md)（的成員函式會處理 Windows 訊息） 類別和對應的 Windows 訊息，訊息處理常式。 您也可以加入[任何對話方塊控制項的事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
+您可以使用 [[類別] [Wizard]](mfc-class-wizard.md)或 [**屬性**] 視窗的 [**類別視圖**]，將訊息處理常式（處理 Windows 訊息的成員函式）加入至類別，並將視窗訊息對應至訊息處理常式。 您也可以[為任何對話方塊控制項加入事件處理常式](../../windows/adding-event-handlers-for-dialog-box-controls.md)。
 
-您可以使用 [屬性] 視窗，定義訊息和事件處理函式，您可以自動更新的訊息分派資料表 （或訊息對應） 和類別標頭檔。
+藉由使用 [**類別] [Wizard]** 或 [**屬性**] 視窗（在**類別檢視**中）來定義訊息和事件處理函式，您可以自動更新訊息分派資料表（或訊息對應）和類別標頭檔。
 
 > [!NOTE]
->  您可以將訊息處理常式加入 ATL 類別，使用 [屬性] 視窗中;不過，某些結果可能會有所不同。 如需詳細資訊，請參閱 [ATL] 主題[新增 ATL 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。
+>  您可以使用類別 Wizard 將訊息處理常式新增至 ATL 類別;不過，某些結果可能會有所不同。 如需詳細資訊，請參閱 ATL 主題[新增 Atl 訊息處理常式](../../atl/adding-an-atl-message-handler.md)。
 
 ## <a name="see-also"></a>另請參閱
 

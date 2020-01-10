@@ -1,11 +1,11 @@
 ---
 title: csqrt、csqrtf、csqrtl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csqrt
 - csqrtf
 - csqrtl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csqrt
 - csqrtf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1afc79f0fba9663ec5fbb0a556da52c3a1c55ca6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62288832"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941993"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -68,22 +71,22 @@ _Lcomplex csqrtl(
 
 ## <a name="return-value"></a>傳回值
 
-平方根*z*。 結果會在右半平面中。
+*Z*的平方根。 結果會在右半平面中。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|常见 QNAN IND|none|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**csqrt**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **csqrt**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**csqrt**的多載。 在 C 程式中， **csqrt**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**csqrt**,               **csqrtf**, **csqrtl**|\<complex.h>|\<ccomplex>|
+|**csqrt**、 **csqrtf**、 **csqrtl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 0f0df136952e09d26fbf43104bbf13b001c87255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f972452f9c823d2082e1c29758b39f088021d0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386755"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760526"
 ---
 # <a name="compiler-error-c2715"></a>編譯器錯誤 C2715
 
-'type': 無法擲回或攔截這種類型
+' type '：無法擲回或攔截此類型
 
-實值型別不是有效的引數使用的例外狀況處理 managed 程式碼時 (請參閱[例外狀況處理](../../extensions/exception-handling-cpp-component-extensions.md)如需詳細資訊)。
+在 managed 程式碼中使用例外狀況處理時，數值型別不是有效的引數（如需詳細資訊，請參閱[例外狀況處理](../../extensions/exception-handling-cpp-component-extensions.md)）。
 
-```
+```cpp
 // C2715a.cpp
 // compile with: /clr
 using namespace System;

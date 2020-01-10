@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2923
 ms.assetid: 6b92933b-13ef-4124-99d9-b89f9fdae030
-ms.openlocfilehash: 885a3a09d43d8c3c479d11e22342487d1a1958d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3046d7009d2a54bab6d4d9acf0706335ae9d1974
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385728"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761002"
 ---
 # <a name="compiler-error-c2923"></a>編譯器錯誤 C2923
 
@@ -21,7 +21,7 @@ ms.locfileid: "62385728"
 
 下列範例會產生 C2923：
 
-```
+```cpp
 // C2923.cpp
 template <class T> struct TC {};
 int x;
@@ -33,7 +33,7 @@ int main() {
 
 使用泛型時，也會發生 C2923：
 
-```
+```cpp
 // C2923b.cpp
 // compile with: /clr /c
 generic <class T> ref struct GC {};

@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 1） C4091
+title: 編譯器警告（層級1） C4091
 ms.date: 11/04/2016
 f1_keywords:
 - C4091
 helpviewer_keywords:
 - C4091
 ms.assetid: 3a404967-ab42-49b0-b324-fd7ba1859d78
-ms.openlocfilehash: 87432a74dfe7c09a52f436d4e91b3f70eb66856b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce6dd980ef70f129a0dbae474b8f717f7573f861
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410443"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73626744"
 ---
-# <a name="compiler-warning-level-1-c4091"></a>編譯器警告 （層級 1） C4091
+# <a name="compiler-warning-level-1-c4091"></a>編譯器警告（層級1） C4091
 
-'keyword': 當沒有宣告變數時，忽略 'type' 的左邊
+' 關鍵字 '：未宣告任何變數時，在 ' type ' 左側忽略
 
-編譯器偵測到的情況下，使用者可能想要的變數宣告，但編譯器找不到宣告變數。
+編譯器偵測到使用者可能想要宣告變數，但編譯器無法宣告變數的情況。
 
 ## <a name="example"></a>範例
 
-A`__declspec`使用者定義型別宣告的開頭的屬性會套用至該類型的變數。 C4091 表示沒有宣告變數時。 下列範例會產生 C4091。
+使用者自訂類型宣告開頭的 `__declspec` 屬性會套用至該類型的變數。 C4091 表示未宣告任何變數。 下列範例會產生 C4091。
 
-```
+```cpp
 // C4091.cpp
 // compile with: /W1 /c
 __declspec(dllimport) class X {}; // C4091
@@ -38,9 +38,9 @@ class __declspec(dllimport) X3 {};
 
 ## <a name="example"></a>範例
 
-如果識別項的 typedef，它不能也是變數的名稱。 下列範例會產生 C4091。
+如果識別碼是 typedef，它也不能是變數名稱。 下列範例會產生 C4091。
 
-```
+```cpp
 // C4091_b.cpp
 // compile with: /c /W1 /WX
 #define LIST 4

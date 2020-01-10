@@ -1,9 +1,9 @@
 ---
 title: _get_terminate
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_terminate
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_terminate
 - _get_terminate
@@ -25,16 +28,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: 438bd287738f121efb436857c54c5a68427d9fb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a9bfb6f8be1c990b349f14055eb2fe5c409e0d5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331905"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70955686"
 ---
-# <a name="getterminate"></a>_get_terminate
+# <a name="_get_terminate"></a>_get_terminate
 
-傳回由呼叫的終止常式**終止**。
+傳回**終止**所呼叫的終止常式。
 
 ## <a name="syntax"></a>語法
 
@@ -44,7 +47,7 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回由 [set_terminate](set-terminate-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能用於還原預設行為。此值可能**NULL**。
+將指標傳回由 [set_terminate](set-terminate-crt.md) 註冊的函式。 如果未設定任何函式，則會使用傳回值來還原預設行為。這個值可以是**Null**。
 
 ## <a name="requirements"></a>需求
 

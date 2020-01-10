@@ -1,9 +1,9 @@
 ---
 title: wcsrtombs
 ms.date: 11/04/2016
-apiname:
+api_name:
 - wcsrtombs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcsrtombs
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
-ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6640a027b03b7aa0dceaf8e61af6cb43a44d6e0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155325"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945057"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -60,11 +63,11 @@ size_t wcsrtombs(
 *wcstr*<br/>
 間接指向要轉換的寬字元字串位置。
 
-*count*<br/>
+*計數*<br/>
 要轉換的字元數。
 
 *mbstate*<br/>
-指標**mbstate_t**轉換狀態物件。
+**Mbstate_t**轉換狀態物件的指標。
 
 ## <a name="return-value"></a>傳回值
 
@@ -72,19 +75,19 @@ size_t wcsrtombs(
 
 ## <a name="remarks"></a>備註
 
-**Wcsrtombs**函式會轉換寬字元字串，包含指定的轉換狀態開始*mbstate*，在中指向的值間接*wcstr*，插入的地址*mbstr*。 轉換會繼續為每個字元，直到︰ 遇到以 null 終止的寬字元時，遇到非對應的字元時之後，或下一個字元會超過包含的限制*計數*。 如果**wcsrtombs**之前或期間遇到寬字元的 null 字元 (L '\0')*計數*發生時，會將其轉換成 8 位元 0 並停止。
+**Wcsrtombs**函式會將寬字元字串（從*mbstate*中所包含的指定轉換狀態開始，從*wcstr*中間接指向的值）轉換成*mbstr*的位址。 每個字元的轉換會繼續，直到：遇到 null 終止的寬字元、遇到非對應的字元，或下一個字元會超過*計數*中包含的限制為止。 如果**wcsrtombs**在之前或發生*計數*時遇到寬字元的 null 字元（L ' \ 0 '），則會將它轉換成8位0並停止。
 
-因此，在多位元組字元字串*mbstr*是以 null 終止才**wcsrtombs**轉換期間遇到寬字元 null 字元。 如果指向的序列所*wcstr*並*mbstr*重疊，就會有的行為**wcsrtombs**是未定義。 **wcsrtombs**會受到目前地區設定之 LC_TYPE 分類。
+因此，只有在**wcsrtombs**在轉換期間遇到寬字元的 null 字元時， *mbstr*中的多位元組字元字串才會以 null 結束。 如果*wcstr*和*mbstr*所指向的序列重迭，則**wcsrtombs**的行為會是未定義的。 **wcsrtombs**會受到目前地區設定的 LC_TYPE 類別目錄所影響。
 
-**Wcsrtombs**函式與不同[wcstombs、 _wcstombs_l](wcstombs-wcstombs-l.md)重新。 轉換狀態會儲存在*mbstate*的後續呼叫相同或其他可重新啟動的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，應用程式會使用**wcsrlen**而非**wcsnlen**，如果後續呼叫**wcsrtombs**而不是使用**wcstombs**.
+**Wcsrtombs**函式與[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)的重新開機功能不同。 轉換狀態會儲存在*mbstate*中，以供後續呼叫相同或其他可重新開機的函式。 混合使用可重新啟動和不可重新啟動之函式的結果不明。  例如，如果使用了**wcsrtombs**的後續呼叫（而不是**wcstombs**），應用程式會使用**wcsrlen**而非**wcsnlen**。
 
-如果*mbstr*引數是**NULL**， **wcsrtombs**傳回所需的大小，以位元組為單位的目的字串。 如果*mbstate*為 null，內部**mbstate_t**會使用轉換狀態。 如果字元序列*wchar*沒有對應的多位元組字元表示法，則傳回-1 並**errno**設定為**EILSEQ**。
+如果*mbstr*引數為**Null**， **wcsrtombs**會傳回目的字串所需的大小（以位元組為單位）。 如果*mbstate*為 null，則會使用內部**mbstate_t**轉換狀態。 如果字元順序*wchar*沒有對應的多位元組字元標記法，則會傳回-1，並將**Errno**設定為**EILSEQ**。
 
 在 C++ 中，這個函式具有樣板多載，可以叫用比這個函式更新且更安全的相對版本。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 
 ## <a name="exceptions"></a>例外狀況
 
-**Wcsrtombs**函式是多執行緒的安全，只要在目前的執行緒中的任何函式會呼叫**setlocale**執行此函式時， *mbstate*不是 null。
+**Wcsrtombs**函數是多執行緒安全，只要目前線程中的函式在執行此函式，而且*mbstate*不是 null 時，就會呼叫**setlocale** 。
 
 ## <a name="example"></a>範例
 

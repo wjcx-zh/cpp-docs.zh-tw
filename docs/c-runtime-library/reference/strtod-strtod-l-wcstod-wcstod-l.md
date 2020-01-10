@@ -1,12 +1,12 @@
 ---
 title: strtod、_strtod_l、wcstod、_wcstod_l
 ms.date: 10/20/2017
-apiname:
+api_name:
 - wcstod
 - _wcstod_l
 - _strtod_l
 - strtod
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tcstod
 - strtod
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - _strtod_l function
 - string conversion, to floating point values
 ms.assetid: 0444f74a-ba2a-4973-b7f0-1d77ba88c6ed
-ms.openlocfilehash: c8c2b3b491e2e7265829fa88580529dc757ace8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5372525eb99dc9d39e31b10def0377c9aad5296c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376467"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946497"
 ---
-# <a name="strtod-strtodl-wcstod-wcstodl"></a>strtod、_strtod_l、wcstod、_wcstod_l
+# <a name="strtod-_strtod_l-wcstod-_wcstod_l"></a>strtod、_strtod_l、wcstod、_wcstod_l
 
 將字串轉換成雙精確度值。
 
@@ -89,13 +92,13 @@ double wcstod_l(
 
 ## <a name="return-value"></a>傳回值
 
-**strtod**會傳回浮點數，但表示法可能造成溢位，這情況下，函數會傳回 + /-時的值**HUGE_VAL**。 正負號**HUGE_VAL**符合無法表示的值的正負號。 **strtod**會傳回 0，如果在執行任何轉換，或反向溢位，就會發生。
+**strtod**會傳回浮點數的值，但標記法會造成溢位，在這種情況下，函數會傳回 +/-**HUGE_VAL**。 **HUGE_VAL**的正負號符合無法表示之值的正負號。 如果無法執行轉換或下溢，則**strtod**會傳回0。
 
-**wcstod**傳回值類似**strtod**。 這兩個函式中， **errno**設為**ERANGE**如果發生溢位或反向溢位，而且無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如需這個傳回碼及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+**wcstod**會傳回類似至**strtod**的值。 對於這兩個函式，如果發生溢位或下溢，且叫用不正確參數處理常式（如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述），則**errno**會設定為**ERANGE** 。 如需這個傳回碼及其他傳回碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-每個函式會將輸入的字串*strSource*要**double**。 **Strtod**函式會將*strSource*為雙精度值。 **strtod**停止讀取字串*strSource*它無法辨識為數字一部分的第一個字元。 這可能是終止的 Null 字元。 **wcstod**是寬字元版本的**strtod**; 其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
+每個函式都會將輸入字串*strSource*轉換為**double**。 **Strtod**函數會將*strSource*轉換為雙精確度值。 **strtod**會在無法辨識為數字一部分的第一個字元處停止讀取字串*strSource* 。 這可能是終止的 Null 字元。 **wcstod**是寬字元版本的**strtod**;其*strSource*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -104,24 +107,24 @@ double wcstod_l(
 |**_tcstod**|**strtod**|**strtod**|**wcstod**|
 |**_tcstod_l**|**_strtod_l**|**_strtod_l**|**_wcstod_l**|
 
-**LC_NUMERIC**目前的地區設定類別設定會決定在基底點字元辨識*strSource*。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有函式 **_l**後置詞使用目前的地區設定， **_strtod_l**等同於 **_strtod_l** ，只不過它們*地區設定*中傳遞。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+目前地區設定的 [ **LC_NUMERIC** ] 分類設定會決定*strSource*中的基數點字元辨識。 如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 沒有 **_l**尾碼的函式會使用目前的地區設定; **_strtod_l**與 **_strtod_l**相同，不同之處在于它們會改用傳入的*地區*設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-如果*endptr*不是**NULL**，則停止掃描的字元指標會儲存在所指向位置*endptr*。 如果可以不執行任何轉換 （找不到任何有效的數字或指定無效的基底） 的值*strSource*所指向的位置會儲存*endptr*。
+如果*endptr*不是**Null**，則停止掃描的字元指標會儲存在*endptr*所指向的位置。 如果無法執行任何轉換（找不到任何有效的數位或指定了不正確基底），則*strSource*的值會儲存在*endptr*所指向的位置。
 
-**strtod**預期*strSource*指向其中一個下列形式的字串：
+**strtod**預期*strSource*會指向下列其中一種格式的字串：
 
-[*空白字元*] [*號*] {*位數*[*基數* *位數*] &#124; *基數* *數字*} [{**e** &#124; **E**} [*登*]*位數*] [*空白字元*] [*號*] {**0x** &#124; **0 X**} {*hexdigits* [*基數* *hexdigits*] &#124; *基數* *hexdigits*} [{**p** &#124;**P**} [*號*] *hexdigits*] [*空白字元*] [*登*] {**INF** &#124; **無限大**} [*空白字元*] [*登*] **NAN** [*順序*]
+[*空格*][*sign*]{*數位*[*基數* *數位*] &#124; *基數* *數位*}[{**e** &#124; **e**} [*sign*] *digits* *] [空白字元]* [*sign*] {**0x** &#124; **0x**} {*hexdigits* [*基數* *hexdigits*] &#124; *基數* *hexdigits*} [{**p** &#124; **p**} [*sign*] *hexdigits*] [*空白字元]* [*sign*] {**INF** &#124; **無限大**} [*空白字元]* [*sign*] **NAN** [*sequence*]
 
-選擇性的前置*空白字元*可能包含空格和定位字元字元，則會忽略;*號*是加號 （+） 或減號 （–）;*數字*是一或多個十進位數字;*hexdigits*是一或多個十六進位數字;*基數*的基底點字元，可能是句號 （.） 中的預設值"C"地區設定中，或特定地區設定值，如果目前的地區設定不同，或當*地區設定*指定; *順序*是一連串的英數字元或底線字元。 在十進位和十六進位數字表單中，如果沒有任何數字的基底點字元之前, 至少一個必須出現在之後的基底點字元。 十進位格式的十進位數字後面可以接著指數，其中包含簡介字母 (**電子**或是**E**) 和一個選擇性帶正負號的整數。 十六進位格式，十六進位數字後面可以接著指數，其中包含簡介字母 (**p**或是**P**) 和選擇性帶正負號的十六進位整數，表示為 2 的乘冪指數。 在任一形式中，如果指數部分和基底點字元都不會出現，基底點字元假設會跟在字串中的最後一位數。 在忽略大小寫**INF**並**NAN**表單。 不符合其中一種形式的第一個字元會停止掃描。
+選擇性的前置空白字元可能是由空格和定位字元所組成，*它們會被*忽略;*sign*為加號（+）或減號（-）;*數位*是一或多個十進位數;*hexdigits*是一或多個十六進位數位;*基數*是基數點字元、預設 "C" 地區設定中的句號（.），或者，如果目前的地區設定不同或指定了*地區*設定，則為地區設定特定的值;*序列*是英數位元或底線字元的序列。 在 [十進位] 和 [十六進位數位] 表單中，如果在基數點字元前面沒有出現任何數位，則在基數點字元之後至少必須出現一個。 在十進位格式中，十進位數後面可以加上開頭字母（**e**或**e**）和選擇性帶正負號整數的指數。 在十六進位格式中，十六進位數位後面可以加上開頭字母（**p**或**p**）的指數，以及選擇性帶正負號的十六進位整數，表示指數為2的乘冪。 不論是哪一種形式，如果指數部分或基數點字元都未出現，則會假設使用基數的點字元來遵循字串中的最後一個數位。 **INF**和**NAN**形式都會忽略大小寫。 不符合其中一種形式的第一個字元會停止掃描。
 
-這些函式的 UCRT 版本不支援轉換 Fortran 樣式 (**d**或是**D**) 指數字母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。 UCRT 版本支援十六進位字串和反覆存取 INF，NAN 值，不支援在舊版本。 這也可能導致您的程式碼中的重大變更。 比方說，「 0x1a"的字串會由解譯**strtod** 0.0 在舊版中，而會視為 26.0 UCRT 版本中。
+這些函式的 UCRT 版本不支援轉換 Fortran 樣式（**d**或**d**）指數位母。 舊版 CRT 支援此非標準延伸模組，而且它可能是您程式碼的重大變更。 UCRT 版本支援十六進位字串和 INF 和 NAN 值的往返，這在舊版中不受支援。 這也會導致程式碼中的重大變更。 例如，在舊版中， **strtod**會將字串 "0x1a" 轉譯為0.0，但在 UCRT 版本中則是26.0。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**strtod**， **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> 或 &lt;stdlib.h> |
-|**wcstod**， **_wcstod_l**|C:&lt;stdlib.h> 或 &lt;wchar.h> C++: &lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
+|**strtod**、 **_strtod_l**|C: &lt;stdlib.h> C++: &lt;cstdlib> 或 &lt;stdlib.h> |
+|**wcstod**、 **_wcstod_l**|C:&lt;stdlib.h> 或 &lt;wchar.h> C++: &lt;cstdlib>、&lt;stdlib.h> 或 &lt;wchar.h> |
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

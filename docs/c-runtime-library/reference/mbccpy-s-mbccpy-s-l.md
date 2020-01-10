@@ -1,10 +1,10 @@
 ---
 title: _mbccpy_s、_mbccpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy_s
 - _mbccpy_s_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy_s_l
 - mbccpy_s_l
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26fad83c5b7847e0050fe490cad30e0643aefd74
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156846"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952626"
 ---
-# <a name="mbccpys-mbccpysl"></a>_mbccpy_s、_mbccpy_s_l
+# <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s、_mbccpy_s_l
 
 將一個多位元組字元從某個字串複製到另一個字串。 這些是 [_mbccpy、_mbccpy_l](mbccpy-mbccpy-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
@@ -86,7 +89,7 @@ errno_t _mbccpy_s_l(
 目的緩衝區大小。
 
 *pCopied*<br/>
-填入所複製的位元組數目 (若成功，即為 1 或 2)。 傳遞**NULL**如果您不在意的數字。
+填入所複製的位元組數目 (若成功，即為 1 或 2)。 如果您不在意數位，請傳遞**Null** 。
 
 *src*<br/>
 要複製的多位元組字元。
@@ -96,26 +99,26 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，就是零，如果失敗，則為錯誤碼。 如果*src*或是*dest*是**NULL**，或如果多個**buffSizeinBytes**位元組將會複製到*dest*，則無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函式會傳回**EINVAL**並**errno**設定為**EINVAL**。
+如果成功，就是零，如果失敗，則為錯誤碼。 如果*src*或*dest*是**Null**，或如果超過**buffSizeinBytes**個位元組會複製到*目的地*，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會傳回**EINVAL** ，而**errno**會設定為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**_Mbccpy_s**函式會複製一個多位元組字元從*src*來*dest*。 如果*src*未指向隱含呼叫所決定之多位元組字元的前導位元組[_ismbblead](ismbblead-ismbblead-l.md)，然後的單一位元組， *src*指向會複製。 如果*src*指向前導位元組，但下一個位元組 0 而無效，則 0 複製到*dest*， **errno**設定為**EILSEQ**，和函式會傳回**EILSEQ**。
+**_Mbccpy_s**函數會將一個多位元組字元從*src*複製到*dest*。 如果*src*未指向[_ismbblead](ismbblead-ismbblead-l.md)的隱含呼叫所決定之多位元組字元的前導位元組，則會複製*src*指向的單一位元組。 如果*src*指向前導位元組，但下列位元組為0，因此無效，則0會複製到*dest*， **errno**會設為**EILSEQ**，而函數會傳回**EILSEQ**。
 
-**_mbccpy_s**不會附加 null 結束字元; 不過，如果*src*指向 null 字元，則該 null 值複製到*dest* （這是只是一般的單一位元組複本）。
+**_mbccpy_s**不會附加 null 結束字元;不過，如果*src*指向 null 字元，則會將該 null 複製到*目的地*（這只是一般的單一位元組複本）。
 
-中的值*pCopied*填滿複製的位元組數。 如果作業成功，可能的值為 1 和 2。 如果**NULL**傳遞中，會忽略這個參數。
+*PCopied*中的值會填入已複製的位元組數目。 如果作業成功，可能的值為 1 和 2。 如果傳入**Null** ，則會忽略這個參數。
 
-|*src*|複製到*dest*|*pCopied*|傳回值|
+|*src*|已複製到*目的地*|*pCopied*|傳回值|
 |-----------|----------------------|---------------|------------------|
 |非前導位元組|非前導位元組|1|0|
 |0|0|1|0|
 |後面接著非 0 的前導位元組|後面接著非 0 的前導位元組|2|0|
 |後面接著 0 的前導位元組|0|1|**EILSEQ**|
 
-請注意，第二個資料列只不過是第一個資料列的特殊案例。 另外請注意，此表格假設*buffSizeInBytes* >= *pCopied*。
+請注意，第二個資料列只不過是第一個資料列的特殊案例。 另請注意，資料表會假設*buffSizeInBytes*  >=  *pCopied*。
 
-**_mbccpy_s**針對任何地區設定相關行為使用目前的地區設定。 **_mbccpy_s_l**等同於 **_mbccpy_s**不同之處在於 **_mbccpy_s_l**會針對任何地區設定相關行為傳入的地區設定。
+**_mbccpy_s**會針對任何與地區設定相關的行為使用目前的地區設定。 **_mbccpy_s_l**與 **_mbccpy_s**相同，不同之處在于 **_mbccpy_s_l**會使用傳入的地區設定來進行任何與地區設定相關的行為。
 
 在 C++ 中，使用這些函式已透過範本多載簡化；多載可自動推斷緩衝區長度，因而不需要指定大小引數。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
 

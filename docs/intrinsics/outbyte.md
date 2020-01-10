@@ -1,41 +1,41 @@
 ---
 title: __outbyte
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __outbyte
 helpviewer_keywords:
 - out instruction
 - __outbyte intrinsic
 ms.assetid: c4cd1a34-8a02-4e37-993d-3201bc17901a
-ms.openlocfilehash: 234892369572a2ee315687f5d70533a0c8cf4b59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18792010c45ffb648e9555ccb73f8614c3e3e6ea
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262966"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217203"
 ---
-# <a name="outbyte"></a>__outbyte
+# <a name="__outbyte"></a>__outbyte
 
 **Microsoft 專屬**
 
-會產生`out`會傳送 1 個位元組所指定的指令`Data`出所指定的 I/O 連接埠`Port`。
+產生指令, 這會傳送由`Data`所指定`Port`的 i/o 埠所指定的1個位元組。 `out`
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __outbyte(
    unsigned short Port,
    unsigned char Data
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]若要將資料傳送至連接埠。
+*移植*\
+在要將資料傳送至其中的通訊埠。
 
-*Data*<br/>
-[in]送出指定的連接埠位元組。
+*Data*\
+在要從指定的埠送出的位元組。
 
 ## <a name="requirements"></a>需求
 
@@ -43,7 +43,7 @@ void __outbyte(
 |---------------|------------------|
 |`__outbyte`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -53,4 +53,4 @@ void __outbyte(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

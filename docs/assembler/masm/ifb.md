@@ -1,30 +1,31 @@
 ---
 title: IFB
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - IFB
 helpviewer_keywords:
 - IFB directive
 ms.assetid: 6395e313-e590-41b3-824c-577f200faf80
-ms.openlocfilehash: 815cb75e0d00cc660c8dfad896fbe0064881edd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e8494918408e51c2bc7e8fa77f72c48115418c4c
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62202925"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317262"
 ---
 # <a name="ifb"></a>IFB
 
-授與組件，如果*textitem*是空白。
+如果*textitem*為空白，則授與元件。
 
 ## <a name="syntax"></a>語法
 
-> IFB *textitem*
+> **IFB** *textitem*
 
 ## <a name="remarks"></a>備註
 
-請參閱[如果](../../assembler/masm/if-masm.md)如需完整語法。
+如需完整語法[，請參閱](if-masm.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

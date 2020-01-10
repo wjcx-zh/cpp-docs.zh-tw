@@ -38,14 +38,14 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2a04e0f1c202717bb6d40a10f07475d78453ffd7
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451513"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689038"
 ---
-# <a name="regextraits-class"></a>regex_traits 類別
+# <a name="regex_traits-class"></a>regex_traits 類別
 
 描述進行比對的元素特性。
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>參數
 
-*Elem*\
+*Elem* \
 要描述的字元項目類型。
 
 ## <a name="remarks"></a>備註
 
-此範本類別會描述類型*Elem*的各種正則運算式特性。 樣板類別[Basic_RegEx 類別](../standard-library/basic-regex-class.md)會使用這項資訊來操作*Elem*類型的元素。
+類別範本會描述類型*Elem*的各種正則運算式特性。 類別樣板[Basic_RegEx 類別](../standard-library/basic-regex-class.md)會使用這項資訊來操作*Elem*類型的元素。
 
 每個 `regex_traits` 物件都擁有一個類型 `regex_traits::locale` 的物件，這種類型可為其部分成員函式使用。 預設的地區設定是 `regex_traits::locale()`的複本。 成員函式 `imbue` 取代了地區設定物件，而成員函式 `getloc` 會傳回地區設定物件的複本。
 
@@ -73,19 +73,19 @@ class regex_traits
 |-|-|
 |[regex_traits](#regex_traits)|建構物件。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
 |[char_class_type](#char_class_type)|字元類別指示項的類型。|
-|[char_type](#char_type)|元素的類型。|
+|[char_type](#char_type)|元素類型。|
 |[locale_type](#locale_type)|儲存的地區設定物件類型。|
 |[size_type](#size_type)|序列長度的類型。|
 |[string_type](#string_type)|元素字串的類型。|
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[getloc](#getloc)|傳回儲存的地區設定物件。|
 |[imbue](#imbue)|修改儲存的地區設定物件。|
@@ -95,15 +95,15 @@ class regex_traits
 |[lookup_collatename](#lookup_collatename)|將序列對應至定序項目。|
 |[transform](#transform)|轉換成相等的已排序序列。|
 |[transform_primary](#transform_primary)|轉換成相等且不區分大小寫的已排序序列。|
-|[translate](#translate)|轉換成相等的相符元素。|
+|[翻譯](#translate)|轉換成相等的相符元素。|
 |[translate_nocase](#translate_nocase)|轉換成相等且不區分大小寫的相符項目。|
-|[value](#value)|將項目轉換成數值。|
+|[值](#value)|將項目轉換成數值。|
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<regex>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="example"></a>範例
 
@@ -189,7 +189,7 @@ typedef T8 char_class_type;
 
 ## <a name="char_type"></a>  regex_traits::char_type
 
-元素的類型。
+元素類型。
 
 ```cpp
 typedef Elem char_type;
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>參數
 
-*loc*\
+*loc* \
 要儲存的地區設定物件。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會將*loc*複製`locale`到儲存的物件, 並傳回預存`locale`物件先前值的複本。
+此成員函式會將*loc*複製到儲存的 `locale` 物件，並傳回已儲存 `locale` 物件先前值的複本。
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -238,15 +238,15 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
+*ch* \
 待測試的項目。
 
-*本身*\
+*cls* \
 做為測試對象的類別。
 
 ### <a name="remarks"></a>備註
 
-只有當字元*ch*位於*cls*所指定的字元類別時, 成員函式才會傳回 true。
+只有當字元*ch*位於*cls*所指定的字元類別時，成員函式才會傳回 true。
 
 ## <a name="length"></a>  regex_traits::length
 
@@ -258,7 +258,7 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>參數
 
-*str*\
+*str* \
 以 null 終止的序列。
 
 ### <a name="remarks"></a>備註
@@ -275,7 +275,7 @@ typedef T7 locale_type;
 
 ### <a name="remarks"></a>備註
 
-Typedef 是封裝地區設定之類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::locale` 的同義字。
+Typedef 是封裝地區設定之類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::locale`的同義字。
 
 ## <a name="lookup_classname"></a>  regex_traits::lookup_classname
 
@@ -288,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要查閱之序列的開頭。
 
-*次*\
+*上次*\
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -313,10 +313,10 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要查閱之序列的開頭。
 
-*次*\
+*上次*\
 要查閱之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -345,9 +345,9 @@ typedef T6 size_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是不帶正負號之整數類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::size_t` 的同義字。
+此 typedef 是不帶正負號之整數類型的同義字。 在特製化 `regex_traits<char>` 和 `regex_traits<wchar_t>` 時，此為 `std::size_t`的同義字。
 
-此 typedef 是 `std::size_t`的同義字。
+此 typedef 是 `std::size_t` 的同義字。
 
 ## <a name="string_type"></a>  regex_traits::string_type
 
@@ -359,7 +359,7 @@ typedef basic_string<Elem> string_type;
 
 ### <a name="remarks"></a>備註
 
-此 typedef 是 `basic_string<Elem>`的同義字。
+此 typedef 是 `basic_string<Elem>` 的同義字。
 
 ## <a name="transform"></a>  regex_traits::transform
 
@@ -372,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要轉換之序列的開頭。
 
-*次*\
+*上次*\
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -393,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 要轉換之序列的開頭。
 
-*次*\
+*上次*\
 要轉換之序列的結尾。
 
 ### <a name="remarks"></a>備註
@@ -413,12 +413,12 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
-要轉換的項目。
+*ch* \
+要轉換的元素。
 
 ### <a name="remarks"></a>備註
 
-使用取決於預存 `locale` 物件的轉換規則，成員函式會傳回它產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate(ch1) == translate(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分地區設定相符項目之目標序列的對應位置時，才會是 `ch2` 。
+此成員函式會傳回根據儲存的 `locale` 物件，使用轉換規則所產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate(ch1) == translate(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分地區設定相符項目之目標序列的對應位置時，才會是 `ch2` 。
 
 ## <a name="translate_nocase"></a>  regex_traits::translate_nocase
 
@@ -430,12 +430,12 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
-要轉換的項目。
+*ch* \
+要轉換的元素。
 
 ### <a name="remarks"></a>備註
 
-使用取決於預存 `locale` 物件的轉換規則，成員函式會傳回它產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate_nocase(ch1) == translate_nocase(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分大小寫相符項目之目標序列的對應位置時，才會是 `ch2` 。
+此成員函式會傳回根據儲存的 `locale` 物件，使用轉換規則所產生的字元。 至於兩個 `char_type` 物件 `ch1` 和 `ch2`，唯有 `translate_nocase(ch1) == translate_nocase(ch2)` 和 `ch1` 符合這個情況：一個發生在規則運算式定義，另一個發生在區分大小寫相符項目之目標序列的對應位置時，才會是 `ch2` 。
 
 ## <a name="value"></a>  regex_traits::value
 
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>參數
 
-*頻道*\
-要轉換的項目。
+*ch* \
+要轉換的元素。
 
-*基*\
+*基數*\
 要使用的算術基底。
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回基底中字元*ch*所表示的值, 如果*ch*不是基底*基數*中的有效數字, 則傳回-1。 函數只會以8、10或16的*基數*引數呼叫。
+此成員函式會傳回基底中字元*ch*所表示的*值，如果* *ch*不是基底*基數*中的有效數字，則傳回-1。 函數只會以8、10或16的*基數*引數呼叫。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<regex>](../standard-library/regex.md)\
-[RegEx_constants 類別](../standard-library/regex-constants-class.md)\
-[RegEx_error 類別](../standard-library/regex-error-class.md)\
-[\<RegEx > 函式](../standard-library/regex-functions.md)\
-[RegEx_iterator 類別](../standard-library/regex-iterator-class.md)\
+[Regex_constants 類別](../standard-library/regex-constants-class.md)\
+[Regex_error 類別](../standard-library/regex-error-class.md)\
+[\<RegEx > 函數](../standard-library/regex-functions.md)\
+[Regex_iterator 類別](../standard-library/regex-iterator-class.md)\
 [\<RegEx > 運算子](../standard-library/regex-operators.md)\
-[RegEx_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
-[\<RegEx > typedef](../standard-library/regex-typedefs.md)\
+[Regex_token_iterator 類別](../standard-library/regex-token-iterator-class.md)\
+[\<RegEx > typedef](../standard-library/regex-typedefs.md) \
 [regex_traits\<char> 類別](../standard-library/regex-traits-char-class.md)\
 [regex_traits\<wchar_t> 類別](../standard-library/regex-traits-wchar-t-class.md)

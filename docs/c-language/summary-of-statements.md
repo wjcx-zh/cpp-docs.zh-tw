@@ -2,12 +2,12 @@
 title: 陳述式摘要
 ms.date: 11/04/2016
 ms.assetid: ce45d2fe-ec0e-459f-afb1-80ab6a7f0239
-ms.openlocfilehash: 76a549de7791f8af36fbf150c19cf6ed0de2cbe6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 1a230ca7d998316d2ec96e76b54ac60575acd2ee
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152751"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856991"
 ---
 # <a name="summary-of-statements"></a>陳述式摘要
 
@@ -18,17 +18,17 @@ ms.locfileid: "56152751"
 &nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* Microsoft 專有 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* Microsoft 專有 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-語句* /\* Microsoft 專有 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-語句* /\* Microsoft 特定 \*/
 
 *jump-statement*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**goto**  *識別碼*  **;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**繼續 ;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**中斷 ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;**return** *運算式*<sub>opt</sub> **;**
 
 *compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
 
 *declaration-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*宣告*<br/>
@@ -39,7 +39,7 @@ ms.locfileid: "56152751"
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *陳述式*
 
 *expression-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
+&nbsp;&nbsp;&nbsp;&nbsp;*運算式*<sub>opt</sub> **;**
 
 *iteration-statement*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *運算式*  **)**  *陳述式*<br/>
@@ -56,12 +56,12 @@ ms.locfileid: "56152751"
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *陳述式*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**預設 :**  *陳述式*
 
-*try-except-statement*:   /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__except (**  *陳述式*  **)**  *compound-statement*
+*try-except-語句*：/\* Microsoft 特定 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *陳述式*  **)**  *compound-statement*
 
-*try-finally-statement*:   /\* Microsoft 特定 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
+*try-finally-語句*：/\* Microsoft 特定的 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [階段結構文法](../c-language/phrase-structure-grammar.md)

@@ -12,7 +12,7 @@ ms.contentlocale: zh-TW
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68448600"
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt; 函式
+# <a name="lthash_setgt-functions"></a>&lt;hash_set&gt; 函式
 
 |||
 |-|-|
@@ -34,14 +34,14 @@ void swap(
 ### <a name="parameters"></a>參數
 
 *再*\
-提供要交換之元素的 hash_set, 或要與 hash_set*左邊*的專案交換其元素的 hash_set。
+提供要交換之元素的 hash_set，或要與 hash_set*左邊*的專案交換其元素的 hash_set。
 
 *左面*\
 要與 hash_set*許可權*的元素交換其專案的 hash_set。
 
 ### <a name="remarks"></a>備註
 
-範本函式是在容器類別 hash_set 上特製化的演算法, 用來執行`left.`成員函`right`式 swap ()。 [](../standard-library/hash-set-class.md#swap) `swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
+範本函式是在容器類別 hash_set 上特製化的演算法，用來執行`left.`成員函`right`式 [swap](../standard-library/hash-set-class.md#swap)（）。`swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
 
 **template \<class T> void swap(T&, T&)**
 
@@ -65,14 +65,14 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 ### <a name="parameters"></a>參數
 
 *再*\
-提供要交換之元素的 hash_multiset, 或要與 hash_multiset*左邊*的專案交換其元素的 hash_multiset。
+提供要交換之元素的 hash_multiset，或要與 hash_multiset*左邊*的專案交換其元素的 hash_multiset。
 
 *左面*\
 要與 hash_multiset*許可權*的元素交換其專案的 hash_multiset。
 
 ### <a name="remarks"></a>備註
 
-範本函式是在容器類別 hash_multiset 上特製化的演算法, 用來執行`left.`成員函`right`式 swap ()。 [](../standard-library/hash-multiset-class.md#swap) `swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
+範本函式是在容器類別 hash_multiset 上特製化的演算法，用來執行`left.`成員函`right`式 [swap](../standard-library/hash-multiset-class.md#swap)（）。`swap` 這是編譯器所執行之函式樣板的部分排序執行個體。 若因樣板函式多載而導致樣板與函式呼叫的比對不是唯一，則編譯器就會選取特製化程度最高的樣板函式版本。 演算法類別中範本函式的一般版本
 
 **template \<class T> void swap(T&, T&)**
 

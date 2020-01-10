@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4353
+title: 編譯器警告（層級1） C4353
 ms.date: 11/04/2016
 f1_keywords:
 - C4353
 helpviewer_keywords:
 - C4353
 ms.assetid: 6e79f186-ed82-4c95-9923-0ad5bb9c4db1
-ms.openlocfilehash: 305c1156ae8dc664edba17287786db50bfabbd18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f04bc78e1ff6183208f888d9072bfe90b3aca083
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384188"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966552"
 ---
-# <a name="compiler-warning-level-1-c4353"></a>編譯器警告 (層級 1) C4353
+# <a name="compiler-warning-level-1-c4353"></a>編譯器警告（層級1） C4353
 
-使用非標準擴充： 常數 0 當做函式運算式。 改為使用內建函式的 '__noop' 函式
+使用非標準的擴充：常數0當做函數運算式。 請改用 ' __noop ' 函式內建函式
 
-您無法使用常數零 (0) 做為函式運算式。 如需詳細資訊，請參閱 < [__noop](../../intrinsics/noop.md)。
+您不能使用常數零（0）做為函數運算式。 如需詳細資訊，請參閱[__noop](../../intrinsics/noop.md)。
 
-下列範例會產生 C4353:
+下列範例會產生 C4353：
 
-```
+```cpp
 // C4353.cpp
 // compile with: /W1
 void MyPrintf(void){};

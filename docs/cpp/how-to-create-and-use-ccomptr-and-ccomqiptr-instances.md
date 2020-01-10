@@ -1,17 +1,17 @@
 ---
-title: 作法：建立和使用 CComPtr 和 CComQIPtr 實例
+title: 如何：建立及使用 CComPtr 和 CComQIPtr 實例
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8dd7aa903eefd533b1dd2688f3cee46ab3787e60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e376eab75b9b1fb4a7a271d05fe037142f22e139
+ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498599"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74246545"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>作法：建立和使用 CComPtr 和 CComQIPtr 實例
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>如何：建立及使用 CComPtr 和 CComQIPtr 實例
 
 在傳統的 Windows 程式設計，程式庫通常是實作為 COM 物件 (或更精確地說是 COM 伺服器)。 許多 Windows 作業系統元件都會實作為 COM 伺服器，而且許多參與者提供這種形式的程式庫。 如需 COM 基本概念的資訊，請參閱 [Component Object Model (COM)](/windows/win32/com/component-object-model--com--portal)。
 
@@ -23,7 +23,7 @@ ms.locfileid: "69498599"
 
 [!code-cpp[COM_smart_pointers#01](../cpp/codesnippet/CPP/how-to-create-and-use-ccomptr-and-ccomqiptr-instances_1.cpp)]
 
-`CComPtr`和其親屬是 ATL 的一部分, 並定義于 atlcomcli.h \<> 中。 `_com_ptr_t`會在 comip.h \<中宣告 >。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。
+`CComPtr` 和其親屬是 ATL 的一部分，並定義于 \<atlcomcli.h > 中。 `_com_ptr_t` 是在 \<comip.h 中宣告 >。 當編譯器產生類型程式庫的包裝函式類別時，編譯器會建立 `_com_ptr_t` 的特製化。
 
 ## <a name="example"></a>範例
 

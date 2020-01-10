@@ -1,12 +1,12 @@
 ---
 title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _vsprintf_p
 - _vswprintf_p
 - _vsprintf_p_l
 - _vswprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - vsprintf_p
 - _vswprintf_p
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e684bebc0a997e25963366b64fbab6d4f958e8eb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383434"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70945247"
 ---
-# <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
+# <a name="_vsprintf_p-_vsprintf_p_l-_vswprintf_p-_vswprintf_p_l"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
 使用引數清單的指標撰寫格式化的輸出，還能夠引數使用的順序。
 
@@ -88,9 +91,9 @@ int _vswprintf_p_l(
 輸出的儲存位置。
 
 *sizeInBytes*<br/>
-大小*緩衝區*以字元為單位。
+*緩衝區*的大小（以字元為單位）。
 
-*count*<br/>
+*計數*<br/>
 要儲存在此函式的 UNICODE 版本中的字元數上限。
 
 *格式*<br/>
@@ -104,17 +107,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_vsprintf_p**並 **_vswprintf_p**傳回寫入的字元數，如果發生輸出錯誤，不包括結束的 null 字元或為負值。
+**_vsprintf_p**和 **_vswprintf_p**會傳回寫入的字元數，不包括結束的 null 字元，或如果發生輸出錯誤，則傳回負數值。
 
 ## <a name="remarks"></a>備註
 
-所有這些函式都會接受引數清單的指標，然後格式化並將寫入指定的資料所指向的記憶體*緩衝區*。
+所有這些函式都會接受引數清單的指標，然後格式化指定的資料，並將其寫入*緩衝區*所指向的記憶體。
 
-這些函式與差異**vsprintf_s**並**vswprintf_s**僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+這些函式與**vsprintf_s**和**vswprintf_s**的差異僅在於它們支援位置參數。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-如果*緩衝區*或是*格式*參數**NULL**指標、 如果計數為零，或如果格式字串包含無效格式化字元，無效的參數會叫用處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，函式會傳回-1，並設定**errno**要**EINVAL**。
+如果*緩衝區*或*格式*參數為**Null**指標、如果 count 為零，或如果格式字串包含不正確格式化字元，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -127,8 +130,8 @@ int _vswprintf_p_l(
 
 |常式傳回的值|必要的標頭|選擇性標頭|
 |-------------|---------------------|----------------------|
-|**_vsprintf_p**， **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
-|**_vswprintf_p**， **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
+|**_vsprintf_p**、 **_vsprintf_p_l**|\<stdio.h> 和 \<stdarg.h>|\<varargs.h>*|
+|**_vswprintf_p**、 **_vswprintf_p_l**|\<stdio.h> 或 \<wchar.h>，以及 \<stdarg.h>|\<varargs.h>*|
 
 \* UNIX V 相容性的必要項目。
 

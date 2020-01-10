@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C2061
 ms.assetid: b0e61c0c-a205-4820-b9aa-301d6c6fe6eb
-ms.openlocfilehash: 85357d94c7bc2d709e852daa60caf269949ad1b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dc64852523b6b56bc506260576e3c79164628340
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408689"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74735927"
 ---
 # <a name="compiler-error-c2061"></a>編譯器錯誤 C2061
 
-語法錯誤： 識別項 'identifier'
+語法錯誤：識別碼 ' identifier '
 
-編譯器發現之識別項，它不預期的位置。 請確定`identifier`宣告才能使用它。
+編譯器找到的識別碼不在預期的位置。 在使用之前，請確定已宣告 `identifier`。
 
-初始設定式可能會以括號括住。 若要避免這個問題，括號括住宣告子，或使它`typedef`。
+初始化運算式可以用括弧括住。 若要避免這個問題，請將宣告子括在括弧中，或將它設為 `typedef`。
 
-當編譯器偵測到的運算式做為類別範本引數; 也會發生此錯誤使用  [typename](../../cpp/typename.md)告訴編譯器為型別。
+當編譯器偵測到運算式做為類別樣板引數時，也可能會造成此錯誤;使用[typename](../../cpp/typename.md)來告訴編譯器它是一種類型。
 
-下列範例會產生 C2061:
+下列範例會產生 C2061：
 
-```
+```cpp
 // C2061.cpp
 // compile with: /c
 template < A a >   // C2061
@@ -34,9 +34,9 @@ template < A a >   // C2061
 class c{};
 ```
 
-如果您傳遞至執行個體名稱，就會發生 C2061 [typeid](../../extensions/typeid-cpp-component-extensions.md):
+如果您將實例名稱傳遞至[typeid](../../extensions/typeid-cpp-component-extensions.md)，可能會發生 C2061：
 
-```
+```cpp
 // C2061b.cpp
 // compile with: /clr
 ref struct G {

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3717
 ms.assetid: ae4fceb1-2583-4577-b2f1-40971a017055
-ms.openlocfilehash: f7e60b4f1b6a1337ef93088e4f36ce2a1b34dc47
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd9a97f1b0d9c9eecfa6a42f735f21a42fd846e9
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328268"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753233"
 ---
 # <a name="compiler-error-c3717"></a>編譯器錯誤 C3717
 
-'method': 無法定義會引發事件的方法
+' method '：無法定義引發事件的方法
 
-您宣告事件的方法，其中包含實作。 [__Event](../../cpp/event.md)方法宣告不能有定義。 若要修正這個錯誤，請確定沒有事件的方法宣告有定義。 例如，下列程式碼，移除函式主體從`event1`宣告的註解所示。
+您已宣告包含執行的事件方法。 [__Event](../../cpp/event.md)的方法宣告不能有定義。 若要修正這個錯誤，請確定沒有任何事件方法宣告具有定義。 例如，在下列程式碼中，從 `event1` 宣告中移除函式主體，如批註所指示。
 
-下列範例會產生 C3717:
+下列範例會產生 C3717：
 
-```
+```cpp
 // C3717.cpp
 [event_source(native)]
 class CEventSrc {

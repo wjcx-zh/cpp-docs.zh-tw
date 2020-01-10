@@ -3,12 +3,13 @@ title: 在 Visual Studio 中編輯及重構 C++ 程式碼
 description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化、巡覽、了解及重構程式碼。
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
-ms.openlocfilehash: d4a74608a95df0fdd461f55d26fee97332a66aa8
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
-ms.translationtype: HT
+ms.topic: overview
+ms.openlocfilehash: 2da1b38d2f5bb61edb473e5909b76225f214a116
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741622"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274781"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>在 Visual Studio 中編輯及重構 C++ 程式碼
 
@@ -182,7 +183,7 @@ Visual Studio 2017 和更新版本也支援以類似方式運作的 [EditorConfi
 
 您可以在[文字編輯器 C++ 實驗](/visualstudio/ide/reference/options-text-editor-c-cpp-experimental)對話方塊中找到不一定包含在 Visual Studio 未來版本中的實驗性功能。 在 Visual Studio 2017 和更新版本中，您可以啟用這個對話方塊中的 [預測性 IntelliSense]  。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [閱讀及了解 C++ 程式碼](read-and-understand-code-cpp.md)</br>
 [在 Visual Studio 中巡覽 C++ 程式碼基底](navigate-code-cpp.md)</br>

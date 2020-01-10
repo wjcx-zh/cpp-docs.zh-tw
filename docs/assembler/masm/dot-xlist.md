@@ -1,26 +1,27 @@
 ---
 title: .XLIST
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .XLIST
 helpviewer_keywords:
 - .XLIST directive
 ms.assetid: e90f04f4-82d0-4f6c-9568-7b3bca5060fb
-ms.openlocfilehash: efa2b9aaecf2df67709f82fa05622ed600d15e00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2a3da1b9435fcc5c03b6cfc4c68b3438352d4d5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203490"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317444"
 ---
 # <a name="xlist"></a>.XLIST
 
-請參閱[。NOLIST](../../assembler/masm/dot-nolist.md)。
+請參閱[.NOLIST](dot-nolist.md)。
 
 ## <a name="syntax"></a>語法
 
-> .XLIST
+> **.XLIST**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

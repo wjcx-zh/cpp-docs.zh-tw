@@ -1,6 +1,6 @@
 ---
 title: _mm_extract_si64，_mm_extracti_si64
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-ms.openlocfilehash: e77ca5589ed50a4199921603afec1d9888c6cca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfd7029966c29f876f0e4f671830e20e2eacc940
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263694"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217410"
 ---
-# <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64，_mm_extracti_si64
+# <a name="_mm_extract_si64-_mm_extracti_si64"></a>_mm_extract_si64，_mm_extracti_si64
 
 **Microsoft 專屬**
 
-會產生`extrq`指示來擷取指定的 bits，從第一個引數的 64 低位元。
+`extrq`產生指令, 以從其第一個引數的低64位解壓縮指定的位。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __m128i _mm_extract_si64(
    __m128i Source,
    __m128i Descriptor
@@ -36,23 +36,23 @@ __m128i _mm_extracti_si64(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*來源*<br/>
-[in]128 位元欄位，以在其較低的 64 位元的輸入資料。
+*Source*\
+在128位欄位, 其中的輸入資料位於其較低的64位。
 
-*描述元*<br/>
-[in]128 位元欄位，描述元欄位，來擷取。
+*描述項*\
+在128位欄位, 描述要解壓縮的位欄位。
 
-*長度*<br/>
-[in]整數，指定要擷取之欄位的長度。
+*長*\
+在整數, 指定要解壓縮的欄位長度。
 
-*Tuple*<br/>
-[in]整數，指定要擷取之欄位的索引
+*指數*\
+在整數, 指定要解壓縮之欄位的索引
 
 ## <a name="return-value"></a>傳回值
 
-使用擷取的欄位，以其最小顯著性的位元的 128 位元欄位。
+128位欄位, 其中的已解壓縮欄位的最小有效位。
 
 ## <a name="requirements"></a>需求
 
@@ -61,21 +61,21 @@ __m128i _mm_extracti_si64(
 |`_mm_extract_si64`|SSE4a|
 |`_mm_extracti_si64`|SSE4a|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建函式會產生`extrq`擷取的位元指令`Source`。有內建的這兩個版本：`_mm_extracti_si64`是即時版本，和`_mm_extract_si64`是非直接。  每個版本會從擷取`Source`由它的長度和其最小顯著性的位元的索引所定義的位元欄位。 長度和索引的值取自 mod 64，因此解譯為 63 的-1 到 127 之間。 （降低） 的索引與 （降低） 的欄位長度的總和是否大於 64，則結果為未定義。 欄位長度為零的值會解譯為 64。 如果欄位長度和位元索引的這兩個零個、 位元 63:0`Source`解壓縮。 如果欄位長度為零，但位元索引為非零，則結果為未定義。
+這些內建函式會`extrq`產生從*來源*解壓縮 bits 的指示。 有兩個版本: `_mm_extracti_si64`是「立即」版本, `_mm_extract_si64`而不是「即時」 (immediate)。 每個版本都會從*來源*中依其長度所定義的位欄位, 以及其最低有效位的索引來解壓縮。 長度和索引的值會採用 mod 64, 因此-1 和127都會被視為63。 如果 (縮減) 索引和 (縮減) 欄位長度的總和大於 64, 則結果會是未定義的。 欄位長度為零的值會解讀為64。 如果欄位長度和位索引皆為零, 則會解壓縮*來源*的 bits 63:0。 如果欄位長度為零, 但位索引不是零, 則結果會是未定義的。
 
-_Mm_extract_si64，呼叫`Descriptor`包含 13:8 位元和欄位的長度會擷取位元 5:0 中的資料中的索引...
+在對的呼叫`_mm_extract_si64`中,*描述*元包含位13:8 的索引, 以及要在 bits 5:0 中解壓縮之資料的欄位長度。
 
-如果您呼叫`_mm_extracti_si64`具有編譯器無法判斷要當做整數常數的引數，編譯器會產生程式碼封裝到 XMM 暫存器的這些值 (`Descriptor`) 並呼叫`_mm_extract_si64`。
+如果您使用`_mm_extracti_si64`編譯器無法判斷為整數常數的引數呼叫, 編譯器會產生程式碼, 將這些值封裝成 XMM 暫存器 (*描述*元) 並`_mm_extract_si64`呼叫。
 
-若要判斷硬體支援`extrq`指示，請呼叫`__cpuid`與內建`InfoType=0x80000001`，並檢查位元 6 的`CPUInfo[2] (ECX)`。 此位元會經過支援指令，則為 1 和 0。 如果您執行程式碼使用不支援此內建硬體`extrq`指令，結果會無法預測。
+若要判斷`extrq`指令的硬體支援, 請使用`__cpuid` `InfoType=0x80000001`呼叫內建函式並檢查的`CPUInfo[2] (ECX)`位6。 如果支援指令, 此位會是 1, 否則為0。 如果您執行的程式碼使用的內部硬體不支援該`extrq`指令, 則結果會是無法預測的。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // Compile this sample with: /EHsc
 #include <iostream>
 #include <intrin.h>
@@ -110,9 +110,9 @@ result3 = 0x30eca86
 
 **結束 Microsoft 專屬**
 
-進階 Micro 裝置，inc.copyright 2007著作權所有，並保留一切權利。 進階 Micro 裝置，inc.的權限重製
+由 Advanced 微裝置, Inc. 的部分著作權2007著作權所有，並保留一切權利。 已從 Advanced 微裝置, Inc. 的許可權重現
 
 ## <a name="see-also"></a>另請參閱
 
-[_mm_insert_si64、_mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[_mm_insert_si64, _mm_inserti_si64](../intrinsics/mm-insert-si64-mm-inserti-si64.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

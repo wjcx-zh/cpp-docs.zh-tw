@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4339
 ms.assetid: 5b83353d-7777-4afb-8476-3c368349028c
-ms.openlocfilehash: bc9d335b3a09f7953a12b388d5bb40cc4d433969
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7c3f6f3a2cb9da9857d8336d24d57caf8114850
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400821"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991212"
 ---
 # <a name="compiler-warning-level-4-c4339"></a>編譯器警告 (層級 4) C4339
 
@@ -23,7 +23,7 @@ ms.locfileid: "62400821"
 
 下列範例會產生 C4339，並示範如何修正此問題：
 
-```
+```cpp
 // C4339.cpp
 // compile with: /W4 /clr /c
 // C4339 expected

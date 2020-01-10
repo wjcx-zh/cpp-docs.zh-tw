@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2228
 ms.assetid: 901cadb1-ce90-4ae0-a360-547a9ba2ca18
-ms.openlocfilehash: 20e295d09e39a12ed8163ec980fa304cd4167218
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56eed6aeff5a955253a440d5931d66118f4604e0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404334"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759278"
 ---
 # <a name="compiler-error-c2228"></a>編譯器錯誤 C2228
 
 '.identifier' 的左邊必須有類別/結構/等位
 
-句號 （.） 左邊的運算元不是類別、 結構或等位。
+句點（.）左邊的運算元不是類別、結構或等位。
 
 下列範例會產生 C2228：
 
-```
+```cpp
 // C2228.cpp
 int i;
 struct S {

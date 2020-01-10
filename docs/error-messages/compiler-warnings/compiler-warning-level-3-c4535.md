@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4535
 ms.assetid: 2c5ad1aa-2558-41d1-8f06-47fef74c8d9b
-ms.openlocfilehash: 2483e5803c5de7d63bd2fa9fed97730b7c894137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 572aa5dc38ae1fff6116b3c3df588fc8478877d6
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401861"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992088"
 ---
 # <a name="compiler-warning-level-3-c4535"></a>編譯器警告 (層級 3) C4535
 
-呼叫 _set_se_translator （） 需要 /EHa
+呼叫 _set_se_translator （）需要/EHa
 
-善用[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)需要[/EHa](../../build/reference/eh-exception-handling-model.md)編譯器選項而非 **/EHs**。
+使用[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)需要[/eha](../../build/reference/eh-exception-handling-model.md)編譯器選項，而不是 **/ehs**。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4535。
 
-```
+```cpp
 // C4535.cpp
 // compile with: /W3 /EHsc /c
 // C4535 expected

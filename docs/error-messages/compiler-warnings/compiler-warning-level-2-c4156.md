@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 （層級 2） C4156
+title: 編譯器警告（層級2） C4156
 ms.date: 11/04/2016
 f1_keywords:
 - C4156
 helpviewer_keywords:
 - C4156
 ms.assetid: 9adf3acb-c0fe-42a8-a4db-5822b1493f77
-ms.openlocfilehash: 7d9a4ed09f026267e2c0f37fbbe4550ecd668dfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95605aa29e1faba449e19dcf20e6895d31cc5874
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350461"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74052137"
 ---
-# <a name="compiler-warning-level-2-c4156"></a>編譯器警告 （層級 2） C4156
+# <a name="compiler-warning-level-2-c4156"></a>編譯器警告（層級2） C4156
 
-刪除陣列運算式沒有使用陣列形式的 'delete';改用陣列形式
+刪除陣列運算式而不使用陣列形式的 ' delete ';替代的陣列表單
 
-非陣列形式的**刪除**無法刪除陣列。 編譯器轉譯**刪除**以陣列形式。
+**Delete**的非陣列形式無法刪除陣列。 編譯器已將**delete**轉譯為數組表單。
 
-只有在 Microsoft 擴充功能 (/Ze) 下，才會發生這個警告。
+只有在 Microsoft extensions （/Ze）底下才會發生此警告。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // C4156.cpp
 // compile with: /W2
 int main()

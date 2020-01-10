@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 145ce22091ea1a42619ad7b1fd25507c6315a9ec
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a5fea8f4a1bc1612a35db71cc515ba4799e95da6
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454490"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689719"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
-定義容器範本類別 deque，以及數個支援的範本。
+定義容器類別範本 deque 和數個支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭**：\<deque>
 
 > [!NOTE]
-> Deque > 程式庫也會`#include <initializer_list>`使用語句。 \<
+> @No__t_0deque > 程式庫也會使用 `#include <initializer_list>` 語句。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="operators"></a>運算子
 
@@ -47,9 +47,9 @@ ms.locfileid: "68454490"
 
 |||
 |-|-|
-|[deque 類別](../standard-library/deque-class.md)|序列容器的範本類別，以線性排列方式排列指定類型的項目，並且像向量一樣允許快速隨機存取任何項目，可有效率地在容器背面插入和刪除。|
+|[deque 類別](../standard-library/deque-class.md)|序列容器的類別樣板，以線性相片順序排列指定類型的專案，如向量，則允許快速隨機存取任何專案，並在容器的背面有效率地插入和刪除。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

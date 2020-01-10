@@ -1,21 +1,21 @@
 ---
-title: 隱藏 (C++ COM 屬性)
+title: hidden （C++ COM 屬性）
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.hidden
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: d1d87ea057b22984a0e0f8f5518899e36f7d0221
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409508"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69501453"
 ---
 # <a name="hidden"></a>隱藏
 
-表示項目存在，但不是會顯示在使用者導向的瀏覽器中。
+表示專案存在，但不應該顯示在使用者導向的瀏覽器中。
 
 ## <a name="syntax"></a>語法
 
@@ -25,11 +25,11 @@ ms.locfileid: "62409508"
 
 ## <a name="remarks"></a>備註
 
-**隱藏**C++屬性具有相同的功能[隱藏](/windows/desktop/Midl/hidden)MIDL 屬性。
+**Hidden** C++屬性的功能與[隱藏](/windows/win32/Midl/hidden)的 MIDL 屬性相同。
 
 ## <a name="example"></a>範例
 
-範例，請參閱[可繫結](bindable.md)如需如何使用的範例**隱藏**。
+如需如何使用**hidden**的範例，請參閱可系[結的範例](bindable.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -37,9 +37,9 @@ ms.locfileid: "62409508"
 
 |||
 |-|-|
-|**適用於**|**介面**，**類別**，**結構**、 方法、 屬性|
+|**適用於**|**介面**、**類別**、**結構**、方法、屬性|
 |**可重複**|否|
-|**必要屬性**|**coclass** (當套用至**類別**或是**結構**)|
+|**必要屬性**|**coclass**（套用至**類別**或**結構**時）|
 |**無效屬性**|None|
 
 如需詳細資訊，請參閱 [屬性內容](cpp-attributes-com-net.md#contexts)。

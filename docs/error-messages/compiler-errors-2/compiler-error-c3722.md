@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08087b9cec0a48f0e439d6a2ff9fbe5f4e58d709
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328253"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753090"
 ---
 # <a name="compiler-error-c3722"></a>編譯器錯誤 C3722
 
 不允許泛型事件
 
-編譯器只允許泛型類別、 結構和函式。  如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
+編譯器只允許泛型類別、結構和函數。  如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
-下列範例會產生 C3722:
+下列範例會產生 C3722：
 
-```
+```cpp
 // C3722.cpp
 // compile with: /clr
 generic <typename T>

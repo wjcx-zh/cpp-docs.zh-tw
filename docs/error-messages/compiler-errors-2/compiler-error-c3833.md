@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: 99c18e899a46c5e1d7a643ba32546f827c320373
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c762ca80dc52398d9f246ada86ab29cb6e902129
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390499"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74741543"
 ---
 # <a name="compiler-error-c3833"></a>編譯器錯誤 C3833
 
-'type': pointer_type 的目標類型無效
+' type '： pointer_type 的目標型別無效
 
-[Interior_ptr](../../extensions/interior-ptr-cpp-cli.md)或是[pin_ptr](../../extensions/pin-ptr-cpp-cli.md)宣告不正確。
+[Interior_ptr](../../extensions/interior-ptr-cpp-cli.md)或[pin_ptr](../../extensions/pin-ptr-cpp-cli.md)宣告不正確。
 
-下列範例會產生 C3833:
+下列範例會產生 C3833：
 
-```
+```cpp
 // C3833.cpp
 // compile with: /clr
 
@@ -41,9 +41,9 @@ int main() {
 }
 ```
 
-下列範例會產生 C3833:
+下列範例會產生 C3833：
 
-```
+```cpp
 // C3833b.cpp
 // compile with: /clr /c
 ref class G {

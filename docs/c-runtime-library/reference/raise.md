@@ -1,9 +1,9 @@
 ---
 title: raise
-ms.date: 1/02/2018
-apiname:
+ms.date: 01/02/2018
+api_name:
 - raise
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - Raise
 helpviewer_keywords:
@@ -23,19 +26,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: 68d1cc653b955e607648e4d30562d2b77e3520e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bed377bb46abac252381344f0b1cf4339815a16e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358049"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949661"
 ---
 # <a name="raise"></a>raise
 
 將訊號傳送到執行中的程式。
 
 > [!NOTE]
-> 請勿使用這個方法關閉 Microsoft Store 應用程式中，除了測試或偵錯案例。 以程式設計或 UI 方式關閉對市集應用程式不允許根據[Microsoft Store 原則](/legal/windows/agreements/store-policies)。 如需詳細資訊，請參閱 < [UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
+> 請勿使用此方法來關閉 Microsoft Store 應用程式，但在測試或偵測案例中除外。 根據[Microsoft Store 的原則](/legal/windows/agreements/store-policies)，不允許以程式設計或 UI 方式關閉存放區應用程式。 如需詳細資訊，請參閱[UWP 應用程式生命週期](/windows/uwp/launch-resume/app-lifecycle)。
 
 ## <a name="syntax"></a>語法
 
@@ -67,7 +70,7 @@ int raise(
 |**SIGSEGV**|不合法的儲存體存取|結束呼叫程式|
 |**SIGTERM**|終止傳送給程式的要求|忽略訊號|
 
-如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，則函式會設定**errno**要**EINVAL** ，並傳回非零值。
+如果引數不是有效的訊號，如上述所指定，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果未處理，函式會將**errno**設定為**EINVAL** ，並傳回非零值。
 
 ## <a name="requirements"></a>需求
 

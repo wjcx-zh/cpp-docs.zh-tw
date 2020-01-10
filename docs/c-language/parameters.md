@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: f2fd4b49e08149f8ea5ce8fa6af46da39907dcf9
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147226"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857043"
 ---
 # <a name="parameters"></a>參數
 
@@ -28,14 +28,14 @@ ms.locfileid: "56147226"
 *function-definition*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *宣告子* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-seq* 是 Microsoft 專有 \*/
+/\**屬性-seq*是 Microsoft 特定 \*/
 
 *declarator*：<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*指標*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* 函式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* 新樣式宣告子 \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* 過時樣式宣告子 \*/
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* 新樣式宣告子 \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* 過時樣式宣告子 \*/
 
 *parameter-type-list*: /\* 參數清單 \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
@@ -66,14 +66,14 @@ void new( double x, double y, double z )
 }
 ```
 
-如果參數清單中至少會有一個參數，則清單可用逗號且後面接著三個英文句號的形式結束 (**, ...**)。這種建構稱為「省略符號標記法」，表示函式的可變引數數目。 (如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md))。不過，函式的呼叫中擁有的引數數目，必須至少為最後一個逗號前面的參數數目。
+如果參數清單中至少有一個參數出現，則清單的結尾可以是逗號，後面接著三個句號（ **，...** ）。這個結構稱為「省略號標記法」，表示函式的引數數目不定。 （如需詳細資訊，請參閱[使用可變數目的引數呼叫](../c-language/calls-with-a-variable-number-of-arguments.md)）。不過，呼叫函式的引數必須至少與最後一個逗號前面的參數數目相同。
 
 如果沒有要傳遞至函式的引數，則參數清單會以關鍵字 `void` 取代。 這種 `void` 用法與其做為類型指定名稱的用法不同。
 
-參數的順序和類型 (包括使用的省略符號標記法) 在所有函式宣告 (如果有的話) 和函式定義中必須相同。 一般算術轉換之後的引數類型必須與對應參數類型的指派相容。 (如需有關算術轉換的詳細資訊，請參閱[一般算術轉換](../c-language/usual-arithmetic-conversions.md))。省略符號後面的引數不會加以檢查。 參數可以具有任何基本、結構、等位、指標或陣列類型。
+參數的順序和類型 (包括使用的省略符號標記法) 在所有函式宣告 (如果有的話) 和函式定義中必須相同。 一般算術轉換之後的引數類型必須與對應參數類型的指派相容。 （如需算術轉換的詳細資訊，請參閱[一般算術轉換](../c-language/usual-arithmetic-conversions.md)）。不會檢查省略號後面的引數。 參數可以具有任何基本、結構、等位、指標或陣列類型。
 
 編譯器會在每個參數和每個引數上分別執行一般算術轉換 (如有需要)。 在轉換之後，參數的長度不會比 `int` 短，而且除非參數類型在原型中明確指定為 **float**，否則參數不會具有 **float** 類型。 這表示，例如將一個參數宣告為 `char` 的效果與將它宣告為 `int` 的效果相同。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C 函式定義](../c-language/c-function-definitions.md)

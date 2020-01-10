@@ -1,41 +1,41 @@
 ---
 title: _mm_cvttss_si64x
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - _mm_cvttss_si64x
 helpviewer_keywords:
 - _mm_cvttss_si64x intrinsic
 - cvttss2si instruction
 ms.assetid: f9a3fd07-5bd8-4758-8744-6315c082cf87
-ms.openlocfilehash: cfdea6ded622cbcbe42bd555edb3029fabad7823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69016a4e23b020b2c4c79c6b97a5a76f2b2dc028
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396648"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70217425"
 ---
-# <a name="mmcvttsssi64x"></a>_mm_cvttss_si64x
+# <a name="_mm_cvttss_si64x"></a>_mm_cvttss_si64x
 
 **Microsoft 專屬**
 
-發出擴充的 x64 版本的 64 位元整數的截斷單精確度浮點數數目與 Convert (`cvttss2si`) 指令。
+以截斷單精確度浮點數到64位整數 (`cvttss2si`) 指令的形式, 發出轉換的 x64 擴充版本。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 __int64 _mm_cvttss_si64x(
    __m128 value
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*value*<br/>
-[in]`__m128`結構，其中包含單精確度浮點值。
+*value*\
+在包含`__m128`單精確度浮點值的結構。
 
 ## <a name="return-value"></a>傳回值
 
-第一個的浮點值轉換為 64 位元整數的結果。
+第一個浮點值轉換成64位整數的結果。
 
 ## <a name="requirements"></a>需求
 
@@ -43,17 +43,17 @@ __int64 _mm_cvttss_si64x(
 |---------------|------------------|
 |`_mm_cvttss_si64x`|X64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
-此內建的不同`_mm_cvtss_si64x`僅在於精確的轉換會截斷趨近於零。 因為`__m128`結構代表 XMM 暫存器，產生的指示將資料從 XMM 暫存器移至系統記憶體。
+內建函式與不同`_mm_cvtss_si64x`之處在于, 不精確的轉換會向零截斷。 `__m128`因為結構代表 xmm 暫存器, 所以產生的指令會將資料從 XMM 登錄移至系統記憶體。
 
 此常式僅可作為內建常式使用。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // _mm_cvttss_si64x.cpp
 // processor: x64
 #include <intrin.h>
@@ -89,5 +89,5 @@ int main()
 
 ## <a name="see-also"></a>另請參閱
 
-[__m128](../cpp/m128.md)<br/>
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[__m128](../cpp/m128.md)\
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

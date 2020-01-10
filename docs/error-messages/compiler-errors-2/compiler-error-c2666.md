@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2666
 ms.assetid: 78364d15-c6eb-439a-9088-e04a0176692b
-ms.openlocfilehash: 4a1d46f3b000b5054564b05ca2c3c94a9e7b6398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca779269d573e3e5d270fccad6afe6220083fa42
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386872"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755989"
 ---
 # <a name="compiler-error-c2666"></a>編譯器錯誤 C2666
 
-'identifier': 數字的多載具有類似的轉換
+' identifier '：數位多載具有類似的轉換
 
-多載函式或運算子模稜兩可。   型式參數清單可能會太類似編譯器無法解析模稜兩可。  若要解決這個錯誤，明確轉換一或多個實際的參數。
+多載函數或運算子不明確。   型式參數清單可能太類似，編譯器無法解決不明確的問題。  若要解決這個錯誤，請明確地轉換一或多個實際參數。
 
-下列範例會產生 C2666:
+下列範例會產生 C2666：
 
-```
+```cpp
 // C2666.cpp
 struct complex {
    complex(double);
@@ -35,19 +35,19 @@ int main() {
 }
 ```
 
-這項錯誤也會導致針對 Visual Studio.NET 2003年所進行的編譯器一致性工作：
+針對 Visual Studio .NET 2003 進行的編譯器一致性工作，也可能產生此錯誤：
 
-- 二元運算子，以及使用者定義的指標類型轉換
+- 二元運算子和使用者定義的指標類型轉換
 
-- 限定性條件轉換不是身分識別轉換相同
+- 限定性轉換與身分識別轉換不同
 
-以二元運算子\<，>， \<= 和 > =、 傳遞參數現在會隱含地轉換成運算元的類型如果參數的型別定義使用者定義轉換運算子，將轉換成運算元的類型。 目前沒有模稜兩可的可能性。
+針對二元運算子 \<、>、\<= 和 > =，如果參數的型別定義使用者定義的轉換運算子來轉換成運算元的型別，則傳遞的參數現在會隱含地轉換成運算元的型別。 現在有可能發生不明確的情況。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效的程式碼的C++，呼叫類別運算子，明確地使用函式語法。
+對於在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++中都有效的程式碼，請使用函式語法明確呼叫類別運算子。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // C2666b.cpp
 #include <string.h>
 #include <stdio.h>
@@ -106,7 +106,7 @@ int main()
 
 下列範例會產生 C2666
 
-```
+```cpp
 // C2666c.cpp
 // compile with: /c
 

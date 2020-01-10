@@ -6,110 +6,110 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c89d22cc66937ef9e10636bec79e2cf8b7de43c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283812"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311670"
 ---
 # <a name="ole-db-provider-templates-reference"></a>OLE DB 提供者樣板參考
 
-可以分成下列類別分組的類別和介面的 OLE DB 提供者樣板。 參考資料也包含下列資訊[OLE DB 提供者樣板的巨集](../../data/oledb/macros-for-ole-db-provider-templates.md)。
+OLE DB 提供者範本的類別和介面可以分組為下列分類。 參考資料也包含[OLE DB 提供者範本之宏](../../data/oledb/macros-for-ole-db-provider-templates.md)的相關資訊。
 
-類別會使用下列命名慣例： 名為使用模式的類別`IWidgetImpl`會提供介面的實作`IWidget`。
+類別會使用下列命名慣例：以模式`IWidgetImpl`命名的類別會提供介面`IWidget`的執行。
 
-## <a name="session-classes"></a>工作階段類別
+## <a name="session-classes"></a>會話類別
 
 [IDBCreateSessionImpl](../../data/oledb/idbcreatesessionimpl-class.md)<br/>
-從資料來源物件建立新的工作階段，並傳回新建立的工作階段上的要求的介面。 在 資料來源物件上的強制介面。
+從資料來源物件建立新的會話，並在新建立的會話上傳回要求的介面。 資料來源物件上的強制介面。
 
 [ISessionPropertiesImpl](../../data/oledb/isessionpropertiesimpl-class.md)<br/>
-藉由呼叫靜態屬性集對應所定義的函式，會實作工作階段屬性。 在您的工作階段類別，應該指定屬性集對應。 在 工作階段上的強制介面。
+藉由呼叫屬性集對應所定義的靜態函式，來實作用會話屬性。 您應該在會話類別中指定屬性集對應。 會話上的強制介面。
 
 ## <a name="rowset-classes"></a>資料列集類別
 
 [CRowsetImpl](../../data/oledb/crowsetimpl-class.md)
 
-提供標準的 OLE DB 資料列集實作，而不需要的許多實作介面的多重繼承。 唯一的方法，您必須提供實作`Execute`。
+提供標準的 OLE DB 資料列集執行，而不需要多個實作為介面的繼承。 唯一必須提供實作為的方法是`Execute`。
 
 [CSimpleRow](../../data/oledb/csimplerow-class.md)<br/>
-提供的預設實作，用於資料列控制代碼，用於`IRowsetImpl`類別。 資料列控制代碼在邏輯上的結果資料列的唯一標籤。 `IRowsetImpl` 建立新`CSimpleRow`中的每個資料列要求`IRowsetImpl::GetNextRows`。
+針對在`IRowsetImpl`類別中使用的資料列控制碼，提供預設的執行方式。 資料列控制碼在邏輯上是結果資料列的唯一標記。 `IRowsetImpl`針對中`CSimpleRow` `IRowsetImpl::GetNextRows`要求的每個資料列，建立新的。
 
 [IAccessorImpl](../../data/oledb/iaccessorimpl-class.md)<br/>
-OLE DB 會要求實作的提供者`HACCESSOR`，這是標記的陣列`DBBINDING`結構。 提供`HACCESSOR`位址的`BindType`結構。 在 資料列集和命令的必要項。
+OLE DB 需要提供者才能執行`HACCESSOR`，這是`DBBINDING`結構陣列的標記。 提供`HACCESSOR`，其`BindType`為結構的位址。 在資料列集和命令上是必要的。
 
 [IColumnsInfoImpl](../../data/oledb/icolumnsinfoimpl-class.md)<br/>
-提供者的資料行對應所定義的靜態函式的委派。 資料列集和指令的強制介面。
+委派給提供者資料行對應所定義的靜態函式。 資料列集和命令的強制介面。
 
 [IConvertTypeImpl](../../data/oledb/iconverttypeimpl-class.md)<br/>
-命令或上一個資料列集，請提供可用性資訊的類型轉換。 命令、 資料列集，以及索引資料列集的必要項。 實作`IConvertType`是委派給 OLE DB 所提供的轉換物件的介面。
+提供命令或資料列集上類型轉換可用性的資訊。 在命令、資料列集和索引資料列集上是必要的。 藉由委派給 OLE DB 所提供的轉換物件來執行介面。`IConvertType`
 
 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)<br/>
-Implements`IDBSchemaRowset`介面和範本化的建立者函式`CreateSchemaRowset`。
+實作用`IDBSchemaRowset` `CreateSchemaRowset`介面和範本化 creator 函式。
 
 [IOpenRowsetImpl](../../data/oledb/iopenrowsetimpl-class.md)<br/>
-隨即開啟，並傳回包含單一基底資料表或索引中的所有資料列的資料列集。 工作階段物件的強制介面。
+開啟並傳回資料列集，其中包含單一基表或索引的所有資料列。 會話物件的強制介面。
 
 [IRowsetChangeImpl](../../data/oledb/irowsetchangeimpl-class.md)<br/>
-實作 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))介面，讓更新的現有資料列，刪除資料列，並插入新資料列中的資料行的值。
+會執行 OLE DB [IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))介面，這可讓您更新現有資料列中的資料行值、刪除資料列，以及插入新的資料列。
 
 [IRowsetCreatorImpl](../../data/oledb/irowsetcreatorimpl-class.md)<br/>
-這個類別繼承自[IObjectWithSite](/windows/desktop/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 `IRowsetCreatorImpl` 執行相同的功能`IObjectWithSite`但也可讓 OLE DB 屬性`DBPROPCANSCROLLBACKWARDS`和`DBPROPCANFETCHBACKWARDS`。
+這個類別繼承自[IObjectWithSite](/windows/win32/api/ocidl/nn-ocidl-iobjectwithsite) ，並覆寫[IObjectWithSite：： SetSite](/windows/win32/api/ocidl/nf-ocidl-iobjectwithsite-setsite)。 `IRowsetCreatorImpl`會執行與相同的`IObjectWithSite`功能，但也會啟用`DBPROPCANSCROLLBACKWARDS` OLE DB `DBPROPCANFETCHBACKWARDS`的屬性和。
 
 [IRowsetIdentityImpl](../../data/oledb/irowsetidentityimpl-class.md)<br/>
-實作`IRowsetIdentity`介面，可讓您比較是否兩個資料列的資料或不完全相同。
+會執行`IRowsetIdentity`介面，這可讓您比較兩個數據列是否相同。
 
 [IRowsetImpl](../../data/oledb/irowsetimpl-class.md)<br/>
-提供實作`IRowset`介面，這是基底的資料列集介面。
+提供`IRowset`介面的執行，也就是基底資料列集介面。
 
 [IRowsetInfoImpl](../../data/oledb/irowsetinfoimpl-class.md)<br/>
-實作資料列集屬性，方法是使用內容設定您的命令類別中定義的對應。 在 資料列集上的強制介面。
+使用在命令類別中定義的屬性集對應，來執行資料列集屬性。 資料列集上的強制介面。
 
 [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md)<br/>
-實作 OLE DB [IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))介面，它會從資料列集提取任意的資料列。 若要支援 OLE DB 的書籤中的資料列集，請繼承自這個類別的資料列集。
+會執行 OLE DB 的[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))介面，它會從資料列集中提取任意資料列。 若要支援資料列集中 OLE DB 書簽，請將資料列集繼承自這個類別。
 
 [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)<br/>
-實作廣播通知接聽程式連接點上的函式`IID_IRowsetNotify`的資料列集的內容變更。 處理通知的取用者實作[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85))並註冊該連接點上。
+會執行廣播函式，以通知資料列`IID_IRowsetNotify`集內容變更連接點上的接聽程式。 處理通知的取用者會執行[IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)) ，並在該連接點上註冊。
 
 [IRowsetUpdateImpl](../../data/oledb/irowsetupdateimpl-class.md)<br/>
-實作 OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))介面，讓消費者可以延遲的具有所做的變更傳輸[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))到資料來源，並復原變更，才能加以傳送。
+會執行 OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))介面，讓取用者延遲將[IRowsetChange](/previous-versions/windows/desktop/ms715790(v=vs.85))所做的變更傳輸至資料來源，並在傳輸前復原變更。
 
 ## <a name="command-classes"></a>命令類別
 
 [ICommandImpl](../../data/oledb/icommandimpl-class.md)<br/>
-提供 `ICommand` 介面的實作。 此介面不可見，但是由`ICommandTextImpl`。 Command 物件上的強制介面。
+提供 `ICommand` 介面的實作。 此介面不可見，但由`ICommandTextImpl`處理。 命令物件上的強制介面。
 
 [ICommandPropertiesImpl](../../data/oledb/icommandpropertiesimpl-class.md)<br/>
-這個實作`ICommandProperties`所定義的靜態函式提供介面`BEGIN_PROPSET_MAP`巨集。 在命令中的必要項。
+此`ICommandProperties`介面的執行是由宏所`BEGIN_PROPSET_MAP`定義的靜態函式所提供。 命令上的必要。
 
 [ICommandTextImpl](../../data/oledb/icommandtextimpl-class.md)<br/>
-設定、 儲存及傳回命令文字。 在命令中的必要項。
+設定、儲存和傳回命令文字。 命令上的必要。
 
 [IDBCreateCommandImpl](../../data/oledb/idbcreatecommandimpl-class.md)<br/>
-從工作階段物件建立新的命令，並傳回要求的介面上新建立的命令。 在 工作階段物件上的選擇性介面。
+從會話物件建立新的命令，並在新建立的命令上傳回要求的介面。 會話物件上的選擇性介面。
 
-其他命令類別會`IColumnsInfoImpl`和`IAccessorImpl`，前面的資料列集類別 」 一節中所述。
+其他命令類別是`IColumnsInfoImpl`和`IAccessorImpl`，在上方的資料列集類別一節中說明。
 
 ## <a name="data-source-classes"></a>資料來源類別
 
 [IDBInitializeImpl](../../data/oledb/idbinitializeimpl-class.md)<br/>
-建立和刪除取用者的連線。 在 資料來源物件和選擇性的介面，列舉值的強制介面。
+建立和刪除取用者的連接。 資料來源物件上的強制介面和枚舉器上的選擇性介面。
 
 [IDBPropertiesImpl](../../data/oledb/idbpropertiesimpl-class.md)<br/>
-`IDBProperties` 資料來源物件的強制介面和列舉值的選用介面。 不過，如果列舉程式會公開`IDBInitialize`，它必須公開`IDBProperties`（資料來源上的屬性）。
+`IDBProperties`這是資料來源物件的強制介面，以及枚舉器的選擇性介面。 不過，如果列舉值公開`IDBInitialize`，它必須公開`IDBProperties` （資料來源上的屬性）。
 
 [IGetDataSourceImpl](../../data/oledb/igetdatasourceimpl-class.md)<br/>
-取得資料來源物件介面指標。 在工作階段上的強制介面。
+取得資料來源物件的介面指標。 會話上的強制介面。
 
 ## <a name="other-classes"></a>其他類別
 
 [CUtlProps](../../data/oledb/cutlprops-class.md)<br/>
-會實作各種不同的 OLE DB 屬性的介面屬性 (例如`IDBProperties`， `ISessionProperties`，和`IRowsetInfo`)。
+針對各種 OLE DB 屬性介面（ `IDBProperties` `ISessionProperties`例如、和`IRowsetInfo`），執行屬性。
 
 [IErrorRecordsImpl](../../data/oledb/ierrorrecordsimpl-class.md)
 
-實作 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))介面、 加入記錄和記錄擷取的資料成員。
+會執行 OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85))介面、在資料成員中加入記錄，以及從中抓取記錄。
 
 ## <a name="see-also"></a>另請參閱
 

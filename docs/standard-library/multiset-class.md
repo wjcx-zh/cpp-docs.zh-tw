@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 2adfd79a62a89bcfb786e9a1a09b959c45c7af80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448463"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689274"
 ---
 # <a name="multiset-class"></a>multiset 類別
 
@@ -106,16 +106,16 @@ class multiset
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要存放在多重集中的項目資料類型。
 
-*何*\
+*比較*\
 類型，提供可以將兩個項目值做為排序鍵進行比較的函式物件，以判斷項目在多重集中的相對順序。 二元述詞 **less**\<Key> 是預設值。
 
-在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
+在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)
 
-*配置器*\
-代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值為 `allocator<Key>`。
+配置*器 \*
+代表預存配置器物件的類型，封裝有關多重集之記憶體配置和解除配置的詳細資訊。 預設值是 `allocator<Key>`。
 
 ## <a name="remarks"></a>備註
 
@@ -131,7 +131,7 @@ class multiset
 
 - 簡單關聯的容器，因為其項目值是其索引鍵值的。
 
-- 樣板類別，因為它提供的功能是泛型，因此與做為項目包含的特定資料類型是獨立的。 使用的資料類型是在類別樣板中指定為參數 (和比較函式與配置器一起指定)。
+- 類別樣板，因為它提供的功能是泛型，因此獨立于包含做為元素的特定資料類型。 使用的資料類型是在類別樣板中指定為參數 (和比較函式與配置器一起指定)。
 
 multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [insert](#insert) 和 [multiset](#multiset) 擁有以較弱的輸入迭代器作為範本參數的版本，其功能需求比雙向迭代器的類別所保證的還要少。 不同的迭代器概念因其功能的修改而形成關聯的系列。 每個迭代器概念有自己的一組需求，因此，使用它們的演算法必須將其假設限制為該迭代器類型的需求。 可假設輸入迭代器可能已取值來參考某個物件，而且可能會遞增為序列中的下一個迭代器。 這是最基本的一組功能，但已足以在類別成員函式的內容中，有意義地溝通迭代器 [ `First`, `Last`) 的範圍。
 
@@ -139,9 +139,9 @@ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 
 當關聯值與其索引鍵的條件由應用程式滿足時，多重集應該是首選的關聯容器。 多重集的項目可以是多重，並當做自己的排序鍵，因此索引鍵不是唯一的。 例如，這種結構的模型是文字的已排序清單，其中文字可以出現多次。 如果不允許文字的多個項目，則集合是適當的容器結構。 如果唯一定義做為值附加至唯一關鍵字清單，則對應是包含這個資料的適當結構。 如果定義不是唯一的，則多重對應是首選容器。
 
-多重集會藉由呼叫類型為*Compare*的預存函式物件, 排序它所控制的序列。 這個預存物件是可藉由呼叫成員函式 [key_comp](#key_comp) 來存取的比較函式。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 *x* 和 *y* 以及傳回值 **true** 或 **false** 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x,y*) 和 *f*( *y,x*) 皆為 false 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
+多重集會藉由呼叫類型為*Compare*的預存函式物件，排序它所控制的序列。 這個預存物件是可藉由呼叫成員函式 [key_comp](#key_comp) 來存取的比較函式。 通常，項目必須是小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 一個技術提示，比較函式是在標準數學概念上產生嚴格弱式順序的二元述詞。 二元述詞 *f*( *x*, *y*) 是有兩個引數物件 *x* 和 *y* 以及傳回值 **true** 或 **false** 的函式物件。 如果二元述詞是非自反、反對稱性且可轉移的，而且如果等價是可轉移的，其中兩個物件 x 和 y 是定義為當 *f*( *x,y*) 和 *f*( *y,x*) 皆為 false 時即相等，則施加於集合的排序是嚴格弱式排序。 如果更強的索引鍵相等條件取代等價條件，順序會變成總計 (也就是所有項目彼此相關的排序)，因此相符的索引鍵之間將難以辨別。
 
-在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)。
+在 C++14 中，指定沒有類型參數的 `std::less<>` 或 `std::greater<>` 述詞，即可啟用異質查閱。 如需詳細資訊，請參閱[關聯容器中的異質查閱](../standard-library/stl-containers.md#sequence_containers)
 
 ### <a name="constructors"></a>建構函式
 
@@ -149,15 +149,15 @@ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 |-|-|
 |[multiset](#multiset)|建構一個空的 `multiset`，或是指定之 `multiset` 的全部或部分複本。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
 |[allocator_type](#allocator_type)|`allocator` 物件之 `multiset` 類別的 typedef。|
-|[const_iterator](#const_iterator)|雙向反覆運算器的 typedef, 可以讀取中`multiset`的**const**元素。|
-|[const_pointer](#const_pointer)|中`multiset` **const**元素指標的 typedef。|
-|[const_reference](#const_reference)|`multiset`對於儲存在中之**const**元素的參考的 typedef, 用於讀取和執行**const**運算。|
-|[const_reverse_iterator](#const_reverse_iterator)|雙向反覆運算器的 typedef, 可以讀取中的 `multiset`任何 const 元素。|
+|[const_iterator](#const_iterator)|雙向反覆運算器的 typedef，可以讀取 `multiset` 中的**const**元素。|
+|[const_pointer](#const_pointer)|@No__t_1 中**const**元素的指標的 typedef。|
+|[const_reference](#const_reference)|對儲存在 `multiset` 中以讀取和執行**const**運算之**const**元素的參考的 typedef。|
+|[const_reverse_iterator](#const_reverse_iterator)|雙向反覆運算器的 typedef，可以讀取 `multiset` 中的任何**const**元素。|
 |[difference_type](#difference_type)|範圍 (介於迭代器所指的項目) 中 `multiset` 的項目數量的帶正負號整數 typedef。|
 |[iterator](#iterator)|雙向迭代器的 typedef，可以讀取或修改 `multiset` 中的任何項目。|
 |[key_compare](#key_compare)|函式物件之 typedef，可比較兩個索引鍵以判斷兩個項目在 `multiset` 中的相對順序。|
@@ -171,13 +171,13 @@ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 
 ### <a name="member-functions"></a>成員函式
 
-|成員函式|說明|
+|成員函式|描述|
 |-|-|
 |[begin](#begin)|傳回指向 `multiset` 中的第一個項目的迭代器。|
 |[cbegin](#cbegin)|傳回常數迭代器，為 `multiset` 中的第一個項目定址。|
 |[cend](#cend)|傳回常數迭代器，為 `multiset` 中最後一個項目的下一個位置定址。|
 |[clear](#clear)|清除 `multiset` 的所有項目。|
-|[計數](#count)|傳回 `multiset` 中索引鍵符合指定為參數之索引鍵的項目數目。|
+|[count](#count)|傳回 `multiset` 中索引鍵符合指定為參數之索引鍵的項目數目。|
 |[crbegin](#crbegin)|傳回常數迭代器，為反轉集合中的第一個項目定址。|
 |[crend](#crend)|傳回常數迭代器，為反轉集合中最後一個項目的下一個位置定址。|
 |[emplace](#emplace)|將就地建構的項目插入 `multiset` 中。|
@@ -209,7 +209,7 @@ multiset 類別提供的迭代器是雙向迭代器，但類別成員函式 [ins
 
 **標頭：** \<set>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="allocator_type"></a>  multiset::allocator_type
 
@@ -221,7 +221,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-`allocator_type` 與樣板參數 `Allocator` 同義。
+`allocator_type` 與範本參數 `Allocator` 同義。
 
 如需有關 `Allocator` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。
 
@@ -284,7 +284,7 @@ The first element of ms1 is now 2
 
 ## <a name="cbegin"></a>  multiset::cbegin
 
-傳回**常數**反覆運算器, 定址範圍中的第一個元素。
+傳回**常數**反覆運算器，定址範圍中的第一個元素。
 
 ```cpp
 const_iterator cbegin() const;
@@ -292,13 +292,13 @@ const_iterator cbegin() const;
 
 ### <a name="return-value"></a>傳回值
 
-**Const**雙向存取反覆運算器, 指向範圍的第一個元素, 或指向空白範圍結尾 (空白範圍`cbegin() == cend()`) 之外的位置。
+**Const**雙向存取反覆運算器，指向範圍的第一個專案，或指向空白範圍結尾之外的位置（針對空白範圍，`cbegin() == cend()`）。
 
 ### <a name="remarks"></a>備註
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`begin()`和`cbegin()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -310,7 +310,7 @@ auto i2 = Container.cbegin();
 
 ## <a name="cend"></a>  multiset::cend
 
-傳回**常數**反覆運算器, 定址範圍中最後一個元素之後的位置。
+傳回**常數**反覆運算器，定址範圍中最後一個元素之後的位置。
 
 ```cpp
 const_iterator cend() const;
@@ -324,7 +324,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中, `Container`請將視為支援`end()`和`cend()`的任何種類的可修改 (非**const**) 容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -471,7 +471,7 @@ size_type count(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要從 multiset 中比對之項目的索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -482,7 +482,7 @@ multiset 中排序索引鍵符合參數索引鍵的項目數。
 
 成員函式會傳回下列範圍中的元素數目 *x*
 
-\[ lower_bound(*key*), upper_bound(*key*) )
+\[ lower_bound （*key*）、upper_bound （*key*））
 
 ### <a name="example"></a>範例
 
@@ -542,7 +542,7 @@ const 反向雙向迭代器，用於定址反轉 Multiset 中的第一個元素�
 
 `crbegin` 是與反轉 multiset 搭配使用，就如同 begin 是與 multiset 搭配使用一樣。
 
-有 `crbegin` 的傳回值時，無法修改 Multiset 物件。
+有 `crbegin` 的傳回值時，無法修改 multiset 物件。
 
 `crbegin` 可用來向後逐一查看 multiset。
 
@@ -703,7 +703,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>參數
 
-|參數|說明|
+|參數|描述|
 |-|-|
 |*引數*|轉送以建構要插入到 multiset 中之元素的引數。|
 
@@ -760,7 +760,7 @@ int main()
 
 ## <a name="emplace_hint"></a>  multiset::emplace_hint
 
-將就地建構 (未執行任何複製或移動作業) 的項目連同位置提示一起插入。
+將就地建構 (未執行任何複製或移動作業) 的元素連同位置提示一起插入。
 
 ```cpp
 template <class... Args>
@@ -774,7 +774,7 @@ iterator emplace_hint(
 |參數|描述|
 |-|-|
 |*引數*|轉送以建構要插入到 multiset 中之元素的引數。|
-|*where*|要開始搜尋正確的插入點的地方。 (如果該點緊接在*位置*之前, 則會在分攤常數時間中進行插入, 而不是對數時間)。|
+|*where*|要開始搜尋正確的插入點的地方。 （如果該點緊接在*位置*之前，則會在分攤常數時間中進行插入，而不是對數時間）。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -784,7 +784,7 @@ iterator emplace_hint(
 
 此函式不會使任何對容器元素的參考無效，但可能會使指向容器的所有迭代器無效。
 
-在定位期間，如果擲回例外狀況，就不會修改容器的狀態。
+在定位期間，如果擲回例外狀況，則不會修改容器的狀態。
 
 如需程式碼範例，請參閱 [set::emplace_hint](../standard-library/set-class.md#emplace_hint)。
 
@@ -849,7 +849,7 @@ iterator end();
 
 **end** 是用來測試迭代器是否已超過其 multiset 的結尾。
 
-不應該對 **end** 所傳回的值進行取值。
+**end** 所傳回的值不應該被取值。
 
 如需程式碼範例，請參閱 [multiset::find](#find)。
 
@@ -865,14 +865,14 @@ pair <iterator, iterator> equal_range (const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
 一組迭代器，其中第一個是索引鍵的 [lower_bound](#lower_bound)，第二個是索引鍵的 [upper_bound](#upper_bound)。
 
-若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之 `pr` 配對的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。
+若要存取成員函式所傳回之配對 `pr` 的第一個迭代器，請使用 `pr`. **first**，若要取下限迭代器的值，請使用 \*( `pr`. **first**)。 若要存取成員函式所傳回之配對 `pr` 的第二個迭代器，請使用 `pr`. **second**，若要取上限迭代器的值，請使用 \*( `pr`. **second**)。
 
 ### <a name="example"></a>範例
 
@@ -950,16 +950,16 @@ size_type erase(
 
 ### <a name="parameters"></a>參數
 
-*希望*\
+*Where* \
 要移除之項目的位置。
 
-*頭*\
+*第一個*\
 要移除之第一個項目的位置。
 
-*次*\
+*上次*\
 緊接在要移除之最後一個項目後面的位置。
 
-*擊鍵*\
+*金鑰*\
 要移除之項目的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -984,7 +984,7 @@ const_iterator find(const Key& key) const;
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要以所搜尋之 multiset 中元素的排序鍵比對的索引鍵值。
 
 ### <a name="return-value"></a>傳回值
@@ -993,9 +993,9 @@ const_iterator find(const Key& key) const;
 
 ### <a name="remarks"></a>備註
 
-此成員函式會傳回反覆運算器, 它會參考多重集中的專案, 其索引鍵等同于二元述詞下的引數索引*鍵*, 而此二元述詞會根據小於可比較性的關聯來引發排序。
+此成員函式會傳回反覆運算器，它會參考多重集中的專案，其索引鍵等同于二元述詞下的引數索引*鍵*，而此二元述詞會根據小於可比較性的關聯來引發排序。
 
-如果將的傳回值`find`指派`const_iterator`給, 則無法修改多重集物件。 如果將的傳回值`find`指派`iterator`給, 則可以修改多重集物件
+如果 `find` 的傳回值指派給 `const_iterator`，則無法修改多重集物件。 如果 `find` 的傳回值指派給 `iterator`，則可修改多重集物件
 
 ### <a name="example"></a>範例
 
@@ -1072,7 +1072,7 @@ multiset 所使用的配置器。
 
 ### <a name="remarks"></a>備註
 
-multiset 類別的配置器會指定此類別管理儲存體的方式。 C++ 標準程式庫容器類別隨附的預設配置器，足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
+multiset 類別的配置器會指定此類別管理儲存體的方式。 「C++ 標準程式庫」容器類別隨附的預設配置器即足以滿足大多數程式設計需求。 撰寫和使用您自己的配置器類別是進階 C++ 主題。
 
 ### <a name="example"></a>範例
 
@@ -1169,8 +1169,8 @@ IList);
 |參數|描述|
 |-|-|
 |*初始值*|要插入至 multiset 的元素值。|
-|*Where*|要開始搜尋正確的插入點的地方。 (如果該點緊接在*位置*之前, 則會在分攤常數時間中進行插入, 而不是對數時間)。|
-|*ValTy*|範本參數, 指定多重集可用來建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型, 並將*Val*當做引數完美轉送。|
+|*Where*|要開始搜尋正確的插入點的地方。 （如果該點緊接在*位置*之前，則會在分攤常數時間中進行插入，而不是對數時間）。|
+|*ValTy*|範本參數，指定多重集可用來建立[value_type](../standard-library/map-class.md#value_type)的元素的引數類型，並將*Val*當做引數完美轉送。|
 |*頭*|要複製之第一個元素的位置。|
 |*次*|要複製之最一個元素後方的位置。|
 |*InputIterator*|符合[輸入迭代器](../standard-library/input-iterator-tag-struct.md)需求的樣板函式引數，該迭代器所指的項目屬於可用來建構 [value_type](../standard-library/map-class.md#value_type) 物件的類型。|
@@ -1296,7 +1296,7 @@ typedef implementation-defined iterator;
 
 ### <a name="example"></a>範例
 
-如需如何宣告[](#begin)和使用`iterator`的範例, 請參閱 begin 的範例。
+如需如何宣告和使用 `iterator` 的範例，請參閱[begin](#begin)的範例。
 
 ## <a name="key_comp"></a>  multiset::key_comp
 
@@ -1383,7 +1383,7 @@ typedef Compare key_compare;
 
 ### <a name="remarks"></a>備註
 
-`key_compare` 與樣板參數 `Compare` 同義。
+`key_compare` 與範本參數 `Compare` 同義。
 
 如需有關 `Compare` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。
 
@@ -1401,7 +1401,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>備註
 
-`key_type` 與樣板參數 `Key` 同義。
+`key_type` 與範本參數 `Key` 同義。
 
 如需有關 `Key` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。
 
@@ -1421,12 +1421,12 @@ iterator lower_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
-`iterator` 或`const_iterator` , 定址在多重集中, 索引鍵等於或大於引數索引鍵的元素位置, 或者, 如果找不到與索引鍵相符的專案, 則定址多重集最後一個元素後面的位置。
+@No__t_0 或 `const_iterator`，用來定址多重集中索引鍵等於或大於引數索引鍵的元素位置，或者，如果找不到與索引鍵相符的專案，則定址多重集最後一個元素後面的位置。
 
 ### <a name="example"></a>範例
 
@@ -1579,7 +1579,7 @@ multiset (
 
 所有建構函式都會儲存一個 Compare 類型的函式物件，此物件可用來在 multiset 的索引鍵之間建立順序，且之後藉由呼叫 [key_comp](#key_comp) 即可傳回此物件。
 
-前三個函式會指定空的初始多重集, 第二個是指定要用來建立元素順序的比較函數 (*Comp*) 類型, 而第三個是明確指定配置器類型 (*Al*)作為. 關鍵字 **explicit** 會隱藏某些類型的自動類型轉換。
+前三個函式會指定空的初始多重集，第二個是指定要用來建立元素順序的比較函數（*Comp*）類型，而第三個是明確指定配置器類型（*Al*）作為. 關鍵字 **explicit** 會隱藏某些種類的自動類型轉換。
 
 第四個函式會指定多重集*許可權*的複本。
 
@@ -1708,7 +1708,7 @@ multiset& operator=(multiset&& right);
 
 ### <a name="remarks"></a>備註
 
-`operator=`視所使用的參考型別 (左值`multiset`或右值) 而定, 將專案複製或移動到這個中。 在這個位於 `operator=` 之前 `multiset` 中的所有元素都會被捨棄。
+視所使用的參考型別（左值或右值）而定，`operator=` 會將元素複製或*移動到這個*`multiset`。 在這個位於 `operator=` 之前 `multiset` 中的所有元素都會被捨棄。
 
 ### <a name="example"></a>範例
 
@@ -1779,7 +1779,7 @@ reverse_iterator rbegin();
 
 `rbegin` 是與反轉 multiset 搭配使用，就如同 begin 是與 multiset 搭配使用一樣。
 
-如果 `rbegin` 的傳回值已指派給 `const_reverse_iterator`，則無法修改 Multiset 物件。 如果 `rbegin` 的傳回值已指派給 `reverse_iterator`，則可以修改 Multiset 物件。
+如果將 `rbegin` 的傳回值指派給 `const_reverse_iterator`，便無法修改 multiset 物件。 如果將 `rbegin` 的傳回值指派給 `reverse_iterator`，則可以修改 multiset 物件。
 
 `rbegin` 可用來向後逐一查看 multiset。
 
@@ -2014,7 +2014,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>範例
 
-如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例。
+如需如何宣告及使用 `size_type` 的範例，請參閱 [size](#size) 的範例
 
 ## <a name="swap"></a>  multiset::swap
 
@@ -2027,7 +2027,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 提供要與目標 multiset 交換之元素的引數 multiset。
 
 ### <a name="remarks"></a>備註
@@ -2096,7 +2096,7 @@ iterator upper_bound(const Key& key);
 
 ### <a name="parameters"></a>參數
 
-*擊鍵*\
+*金鑰*\
 要與所搜尋之 multiset 中元素的排序鍵比較的引數索引鍵。
 
 ### <a name="return-value"></a>傳回值
@@ -2237,9 +2237,9 @@ typedef key_compare value_compare;
 
 ### <a name="remarks"></a>備註
 
-`value_compare` 與樣板參數 `Compare` 同義。
+`value_compare` 與範本參數 `Compare` 同義。
 
-請注意, [key_compare](#key_compare)和`value_compare`都是樣板參數`Compare`的同義字。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意， [key_compare](#key_compare)和 `value_compare` 都是樣板參數 `Compare` 的同義字。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 如需有關 `Compare` 的詳細資訊，請參閱 [multiset 類別](../standard-library/multiset-class.md)主題的＜備註＞一節。
 
@@ -2257,9 +2257,9 @@ typedef Key value_type;
 
 ### <a name="remarks"></a>備註
 
-`value_type` 與樣板參數 `Key` 同義。
+`value_type` 與範本參數 `Key` 同義。
 
-請注意, [key_type](#key_type)和`value_type`都是樣板參數`Key`的同義字。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
+請注意， [key_type](#key_type)和 `value_type` 都是樣板參數 `Key` 的同義字。 針對 set 和 multiset 類別，會同時提供這兩種類型，其中兩者相同，而為了與 map 和 multimap 類別相容，其中兩者就會不同。
 
 如需有關 `Key` 的詳細資訊，請參閱該主題的＜備註＞一節。
 
@@ -2298,7 +2298,7 @@ int main( )
 The multiset has elements: 10 20.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [容器](../cpp/containers-modern-cpp.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

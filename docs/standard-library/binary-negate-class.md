@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: d93ead4f301b6c5df918a6f402cea6963a9535e1
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 01396384cbd551cca5682c7ffd1b31d89e6d1dc2
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243373"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688406"
 ---
-# <a name="binarynegate-class"></a>binary_negate 類別
+# <a name="binary_negate-class"></a>binary_negate 類別
 
-提供一個成員函式的樣板類別，這個成員函式可將指定二元函式的傳回值變成負值。 支持的 C + + 17 中已被取代[not_fn](functional-functions.md#not_fn)。
+提供成員函式的類別樣板，可將指定之二元函式的傳回值否定。 已在 c + + 17 中取代為[not_fn](functional-functions.md#not_fn)。
 
 ## <a name="syntax"></a>語法
 
@@ -33,13 +33,13 @@ class binary_negate
 
 ### <a name="parameters"></a>參數
 
-*函式*\
+*Func* \
 要變為負值的二元函式。
 
-*左邊*\
+*左方*\
 要變為負值之二元函式的左運算元。
 
-*權限*\
+*right* \
 要變為負值之二元函式的右運算元。
 
 ## <a name="return-value"></a>傳回值
@@ -48,7 +48,7 @@ class binary_negate
 
 ## <a name="remarks"></a>備註
 
-此範本類別會儲存二元函式物件的複本*Func*。 它會定義其成員函式`operator()`做為傳回`!Func(left, right)`。
+類別樣板會儲存二進位函數物件*Func*的複本。 它會將其成員函式 `operator()` 定義為傳回 `!Func(left, right)`。
 
 `binary_negate` 的建構函式很少會直接使用。 通常會優先以 Helper 函式 [not2](../standard-library/functional-functions.md#not2) 來宣告和使用 **binary_negator** 配接器述詞。
 

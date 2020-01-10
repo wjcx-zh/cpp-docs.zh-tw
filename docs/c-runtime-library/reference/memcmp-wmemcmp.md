@@ -1,10 +1,10 @@
 ---
 title: memcmp、wmemcmp
 ms.date: 11/04/2016
-apiname:
+api_name:
 - memcmp
 - wmemcmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,8 +17,10 @@ apilocation:
 - ntdll.dll
 - ucrtbase.dll
 - ntoskrnl.exe
-apitype: DLLExport
-topictype: APIRef
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - memcmp
 - wmemcmp
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-ms.openlocfilehash: 228a74ac8cc83bca169779f1afd6936f5be59bee
-ms.sourcegitcommit: 010ecc2bb9a15deea192a34975176ec0426aa3d8
+ms.openlocfilehash: 2fa902c0fa5a4a78f6fd3e46edeb3799aaf92569
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66265633"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951927"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -60,22 +62,22 @@ int wmemcmp(
 *buffer2*<br/>
 第二個緩衝區。
 
-*count*<br/>
-要比較的字元數。 (比較的位元組數**memcmp**，寬字元**wmemcmp**)。
+*計數*<br/>
+要比較的字元數。 （比較**memcmp**的位元組， **wmemcmp**的寬字元）。
 
 ## <a name="return-value"></a>傳回值
 
 傳回值表示緩衝區之間的關聯性。
 
-|傳回值|第一個關聯性*計數*buf1 和 buf2 的字元|
+|傳回值|Buf1 關聯和 buf2 的第一個*計數*字元的關聯性|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1*小於*buffer2*|
-|0|*buffer1*等於*buffer2*|
+|0|*buffer1*等同于*buffer2*|
 |> 0|*buffer1*大於*buffer2*|
 
 ## <a name="remarks"></a>備註
 
-比較第一個*計數*個字元*buffer1*並*buffer2*和傳回值，這個值指出其關聯性。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 值會解譯為**不帶正負號** **char** for **memcmp**，並做為**wchar_t**針對**wmemcmp**。
+比較*buffer1*和*buffer2*的第一個*計數*字元，並傳回指出其關聯性的值。 非零傳回值的正負號是緩衝區中第一組不同值之間差異的正負號。 這些值會被視為**memcmp**的不**帶正負** **號字元**，而**wmemcmp**則會視為**wchar_t** 。
 
 ## <a name="requirements"></a>需求
 

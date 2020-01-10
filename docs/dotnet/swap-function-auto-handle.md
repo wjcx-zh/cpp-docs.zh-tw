@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: 7dd91b5c-f0de-4634-a2e2-642626706e27
-ms.openlocfilehash: eb410d420e91f9b64742d74d9f9262a4db42f562
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c28082712bb1426c22ba563b7945861f90e819dc
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384552"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988395"
 ---
-# <a name="swap-function-autohandle"></a>swap 函式 (auto_handle)
+# <a name="swap-function-auto_handle"></a>swap 函式 (auto_handle)
 
-交換物件之間一個`auto_handle`是另一個。
+在一個 `auto_handle` 和另一個之間交換物件。
 
 ## <a name="syntax"></a>語法
 
@@ -35,11 +35,11 @@ void swap(
 `auto_handle`。
 
 *_right*<br/>
-另一個`auto_handle`。
+另一個 `auto_handle`。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // msl_swap_auto_handle.cpp
 // compile with: /clr
 #include <msclr\auto_handle.h>
@@ -66,11 +66,11 @@ s1 = 'string two', s2 = 'string one'
 
 ## <a name="requirements"></a>需求
 
-**標頭檔** \<msclr\auto_handle.h >
+**標頭檔**\<msclr \ auto_handle. h >
 
 **命名空間**msclr
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto_handle](../dotnet/auto-handle.md)<br/>
 [auto_handle::swap](../dotnet/auto-handle-swap.md)

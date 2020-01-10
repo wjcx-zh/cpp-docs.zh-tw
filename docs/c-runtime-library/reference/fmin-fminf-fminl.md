@@ -1,11 +1,11 @@
 ---
 title: fmin、fminf、fminl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fmin
 - fminf
 - fminl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fmin
 - fminf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df01f2205291920b8c0519db622c93048278beb1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333374"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957085"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -80,25 +83,25 @@ long double fminl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，會傳回較小的一個*x*或是*y*。
+如果成功，會傳回*x*或*y*的較小者。
 
-|輸入|結果|
+|Input|結果|
 |-----------|------------|
 |*x*是 NaN|*y*|
 |*y*是 NaN|*x*|
-|*x*並*y*是 NaN|NaN|
+|*x*和*y*是 NaN|NaN|
 
-此函式不會造成[_matherr](matherr.md)若要叫用時，會導致任何浮點例外狀況，或變更的值**errno**。
+函式不會導致叫用[_matherr](matherr.md) 、造成任何浮點例外狀況，或變更**errno**的值。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**fmin**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **fmin**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**fmin**的多載。 在 C 程式中， **fmin**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**fmin**， **fminf**， **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
+|**fmin**、 **fminf**、 **fminl**|C：\<math.h><br />C++：\<math.h> 或 \<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

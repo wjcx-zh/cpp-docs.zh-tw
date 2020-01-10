@@ -2,12 +2,12 @@
 title: 將程式碼升級至通用 CRT
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 68edcd57ee03ac861a6d2105456f4dbf699c1210
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 0554ff713b499f99e7e7508faf687c1635e6d912
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448990"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73627179"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>將程式碼升級至通用 CRT
 
@@ -29,13 +29,13 @@ UCRT 靜態程式庫和動態連結虛設常式程式庫位於 Windows Kits\\10\
 
 C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援程式啟動所需的程式碼以及例外狀況處理和內建函式這類功能。 程式庫和其標頭檔仍然位於 Program Files 或 Program files (x86) 目錄的版本特定 Microsoft Visual Studio 資料夾中。 在 Visual Studio 2017 中，標頭位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_lib 版本_\\include 下，而且連結程式庫位於 Microsoft Visual Studio\\2017\\_版本_\\VC\\Tools\\MSVC\\_li b版本_\\lib\\_architecture_ 下，其中_版本_是已安裝的 Visual Studio 版本、_lib 版本_是程式庫的版本，而 _architecture_ 是處理器架構。 OneCore 和 Store 的連結程式庫也可以位於 libraries 資料夾中。 靜態程式庫的零售和偵錯版本是 libvcruntime.lib 和 libvcruntimed.lib。 動態連結零售和偵錯虛設常式程式庫分別是 vcruntime.lib 和 vcruntimed.lib。
 
-當您更新 Visual Studio C++ 專案時，如果您已將專案的 [連結器]  屬性 [忽略所有預設程式庫]  設定為 [是]  ，或在命令列上使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單，以包含已重構的新程式庫。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
+當您更新 Visual Studio C++ 專案時，如果您已將專案的 [連結器] 屬性 [忽略所有預設程式庫] 設定為 [是]，或在命令列上使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單，以包含已重構的新程式庫。 請將舊的 CRT 程式庫 (例如，libcmt.lib、libcmtd.lib、msvcrt.lib 或 msvcrtd.lib) 取代為對等的重構程式庫。 如需要使用之特定程式庫的相關資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。
 
 ## <a name="deployment-and-redistribution-of-the-universal-crt"></a>通用 CRT 的部署和轉散發
 
 因為 UCRT 現在是 Microsoft Windows 作業系統元件，所以是 Windows 10 中作業系統的一部分，並可透過 Windows Vista 到 Windows 8.1 的較舊作業系統的 Windows Update 取得。 Windows XP 具有可轉散發版本。 作為作業系統元件，不管 Visual Studio 和 Microsoft C++ 編譯器版本為何，Windows Update 都會管理 UCRT 更新和服務。 因為 UCRT 是 Windows 元件，所以基於更新的安全性和簡易性，以及較小的影像大小，強烈建議集中部署您應用程式的 UCRT。
 
-您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 套件進行轉散發。 vcredist 套件包括 UCRT 元件，並將它們自動安裝在預設未安裝它們的 Windows 作業系統上。 如需詳細資訊，請參閱[轉散發 Visual C++ 檔案](../windows/redistributing-visual-cpp-files.md)。
+您可以在 Visual Studio 2015 或 Visual Studio 2017 支援的任何 Windows 版本上使用 UCRT。 您可以針對 Windows 10 以外的 Windows 支援版本，使用 vcredist 套件進行轉散發。 vcredist 套件包括 UCRT 元件，並將它們自動安裝在預設未安裝它們的 Windows 作業系統上。 如需詳細資訊，請參閱 [Redistributing Visual C++ Files](../windows/redistributing-visual-cpp-files.md)。
 
 支援 UCRT 的應用程式本機部署，但基於效能和安全性原因不建議使用。 進行應用程式本機部署的 DLL 隨附為 Windows SDK 的一部分，且位於 **redist** 子目錄下。 所需的 DLL 包括 ucrtbase.dll 和一組名為 api-ms-win-_subset_.dll 的 **APISet forwarder** DLL。 每個作業系統上所需的這組 DLL 都會不同，因此建議您在使用應用程式本機部署時包括所有 DLL。 如需應用程式本機部署的其他詳細資料和注意事項，請參閱 [Visual C++ 中的部署](../windows/deployment-in-visual-cpp.md)。
 
@@ -43,10 +43,10 @@ C 和 C++ 編譯器特定執行階段支援程式庫 **vcruntime**包含支援�
 
 已在 UCRT 中新增或更新許多函式，可改善 ISO C99 一致性，以及解決程式碼品質和安全性問題。 在某些情況下，這需要程式庫的重大變更。 如果您的程式碼在使用舊版 CRT 時能夠正確編譯，但在使用 UCRT 編譯時中斷，則必須變更程式碼才能利用這些更新和功能。 如需通用 CRT 中找到之 CRT 的詳細重大變更和更新清單，請參閱 Visual C++ 變更歷程記錄的 [C 執行階段程式庫 (CRT)](visual-cpp-change-history-2003-2015.md#BK_CRT) 區段。 它包括受影響標頭和函式的清單，可用來識別您程式碼中所需的變更。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Visual C++ 移植和升級指南](visual-cpp-porting-and-upgrading-guide.md)<br/>
 [潛在升級問題概觀 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[從舊版的 Visual C++ 升級專案](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[從舊版的 Visual 升級專案C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ 變更歷程記錄 2003 - 2015](visual-cpp-change-history-2003-2015.md)<br/>
 [Visual Studio 中的 C++ 一致性改善](../overview/cpp-conformance-improvements.md)

@@ -1,9 +1,9 @@
 ---
 title: _msize_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _msize_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _msize_dbg
 - msize_dbg
@@ -23,14 +26,14 @@ helpviewer_keywords:
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fa12689a35beaad0727c14327d1b948a62c29d0
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156300"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951484"
 ---
-# <a name="msizedbg"></a>_msize_dbg
+# <a name="_msize_dbg"></a>_msize_dbg
 
 計算堆積中的記憶體區塊大小 (僅限偵錯版本)。
 
@@ -49,19 +52,19 @@ size_t _msize_dbg(
 要決定其大小之記憶體區塊的指標。
 
 *blockType*<br/>
-指定的記憶體區塊類型： **_CLIENT_BLOCK**或是 **_NORMAL_BLOCK**。
+指定的記憶體區塊類型： **_CLIENT_BLOCK**或 **_NORMAL_BLOCK**。
 
 ## <a name="return-value"></a>傳回值
 
-成功完成時， **_msize_dbg**傳回的大小 （以位元組為單位） 的指定的記憶體區塊; 否則會傳回**NULL**。
+成功完成時， **_msize_dbg**會傳回指定記憶體區塊的大小（以位元組為單位）;否則會傳回**Null**。
 
 ## <a name="remarks"></a>備註
 
-**_msize_dbg**是偵錯版本的 _[msize](msize.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_msize_dbg**的呼叫會降低 **_msize**。 兩者 **_msize**並 **_msize_dbg**計算的基底堆積中的記憶體區塊大小，但 **_msize_dbg**新增兩個偵錯功能：它包含在傳回大小的記憶體區塊使用者部分任一端使用緩衝區，並且允許對特定區塊類型的大小計算。
+**_msize_dbg**是 _[msize](msize.md)函數的 debug 版本。 未定義[_debug](../../c-runtime-library/debug.md)時，每個 **_msize_dbg**的呼叫都會縮減為 **_msize**的呼叫。 **_Msize**和 **_msize_dbg**都會計算基底堆積中的記憶體區塊大小，但 **_msize_dbg**會加入兩個調試功能：它會在傳回大小的記憶體區塊之使用者部分的任一端包含緩衝區，並允許特定區塊類型的大小計算。
 
 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式以及其偵錯版本之間差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
-這個函式會驗證其參數。 如果*memblock*為 null 指標， **_msize**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果已處理的錯誤，則函式會設定**errno**要**EINVAL**並傳回-1。
+這個函式會驗證其參數。 如果*memblock*是 null 指標， **_msize**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果處理錯誤，函式會將**errno**設定為**EINVAL** ，並傳回-1。
 
 ## <a name="requirements"></a>需求
 

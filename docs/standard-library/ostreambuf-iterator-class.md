@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::ostreambuf_iterator [C++], traits_type
 - std::ostreambuf_iterator [C++], failed
 ms.assetid: dad1e624-2f45-4e94-8887-a885e95f9071
-ms.openlocfilehash: 815647deb7c11f4d7be5650e0ec2e635338551ad
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: be4421a7646756da5687ebc9b98f18daf4845809
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448182"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687223"
 ---
-# <a name="ostreambufiterator-class"></a>ostreambuf_iterator 類別
+# <a name="ostreambuf_iterator-class"></a>ostreambuf_iterator 類別
 
-樣板類別 ostreambuf_iterator 描述輸出迭代器物件，這個物件使用擷取 **operator>>** 在輸出資料流中寫入後續字元項目。 `ostreambuf_iterator` 與 [ostream_iterator 類別](../standard-library/ostream-iterator-class.md)的不同處在於字元 (而非泛型類型) 做為要插入至輸出資料流的物件類型。
+類別樣板 ostreambuf_iterator 描述輸出反覆運算器物件，它會使用 **> >** 的抽取運算子，將後續的字元元素寫入至輸出資料流程。 `ostreambuf_iterator` 與 [ostream_iterator 類別](../standard-library/ostream-iterator-class.md)的不同處在於字元 (而非泛型類型) 做為要插入至輸出資料流的物件類型。
 
 ## <a name="syntax"></a>語法
 
@@ -35,10 +35,10 @@ template <class CharType = char class Traits = char_traits <CharType>>
 
 ### <a name="parameters"></a>參數
 
-*CharType*\
-類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選擇性的, 而且預設值為**char**。
+*CharType* \
+類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選擇性的，而且預設值為**char**。
 
-*共同*\
+*特性*\
 類型，表示 ostreambuf_iterator 的字元類型。 這個引數是選用引數，且預設值是 `char_traits`\< *CharType>* 。
 
 ## <a name="remarks"></a>備註
@@ -51,7 +51,7 @@ ostreambuf_iterator 類別必須符合輸出迭代器的需求。 使用 `ostrea
 |-|-|
 |[ostreambuf_iterator](#ostreambuf_iterator_ostreambuf_iterator)|建構 `ostreambuf_iterator`，初始化以將字元寫入輸出資料流中。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
@@ -70,7 +70,7 @@ ostreambuf_iterator 類別必須符合輸出迭代器的需求。 使用 `ostrea
 
 |運算子|描述|
 |-|-|
-|[operator*](#op_star)|取值運算子, 用來執行輸出反覆運算器\*運算式 =  `i`。 `x`|
+|[operator*](#op_star)|取值運算子，用來執行 \* `i`  =  `x` 的輸出反覆運算器運算式。|
 |[operator++](#op_add_add)|無作用的遞增運算子，傳回 `ostreambuf_iterator`，指向在呼叫作業之前它所定址的相同物件。|
 |[operator=](#op_eq)|此運算子會將字元插入至相關聯的資料流緩衝區。|
 
@@ -78,7 +78,7 @@ ostreambuf_iterator 類別必須符合輸出迭代器的需求。 使用 `ostrea
 
 **標頭：** \<iterator>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="char_type"></a>  ostreambuf_iterator::char_type
 
@@ -90,7 +90,7 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `CharType`的同義字。
+這個類型與樣板參數 `CharType`同義。
 
 ### <a name="example"></a>範例
 
@@ -181,7 +181,7 @@ No insertions failed.
 */
 ```
 
-## <a name="op_star"></a>ostreambuf_iterator:: operator\*
+## <a name="op_star"></a>ostreambuf_iterator：： operator \*
 
 無作用的取值運算子，用來實作輸出迭代器運算式 \* *i* = *x*。
 
@@ -286,7 +286,7 @@ ostreambuf_iterator<CharType, Traits>& operator=(CharType _Char);
 
 ### <a name="parameters"></a>參數
 
-*_Char*\
+*_Char* \
 要插入至資料流緩衝區的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -339,17 +339,17 @@ ostreambuf_iterator(ostream_type& Ostr) throw();
 
 ### <a name="parameters"></a>參數
 
-*strbuf*\
+*strbuf* \
 用於初始化輸出資料流緩衝區指標的輸出 streambuf 物件。
 
-*Ostr*\
+*Ostr* \
 用於初始化輸出資料流緩衝區指標的輸出資料流物件。
 
 ### <a name="remarks"></a>備註
 
 第一個函式會使用*strbuf*來初始化輸出資料流程緩衝區指標。
 
-第二個建構函式會使用 `Ostr` 初始化輸出資料流緩衝區指標。 `rdbuf`. 儲存的指標不能是 null 指標。
+第二個建構函式會使用 `Ostr` 初始化輸出資料流緩衝區指標。 `rdbuf` 儲存的指標不能是 null 指標。
 
 ### <a name="example"></a>範例
 
@@ -410,7 +410,7 @@ typedef basic_streambuf<CharType, Traits> streambuf_type;
 
 ### <a name="remarks"></a>備註
 
-`basic_streambuf`此類型是**CharType**、**特性**> 的同義字`streambuf` \< , 適用于在特殊字元類型為**char**時變成的 i/o 緩衝區資料流程類別。
+此類型是 `basic_streambuf` \< **CharType**，**特性**> 的同義字，其為 i/o 緩衝區的資料流程類別，會在特殊字元類型為**char**時變成 `streambuf`。
 
 ### <a name="example"></a>範例
 
@@ -426,7 +426,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `Traits`的同義字。
+這個類型與樣板參數 `Traits`同義。
 
 ### <a name="example"></a>範例
 
@@ -466,7 +466,7 @@ by charOutBuf are: OUT.
 */
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<iterator>](../standard-library/iterator.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

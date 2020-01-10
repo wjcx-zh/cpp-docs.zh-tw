@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: a322e517a4adb51879fc2a60f6c08f6561276de9
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449125"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689500"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,18 +20,18 @@ ms.locfileid: "68449125"
 
 ## <a name="requirements"></a>需求
 
-**標頭**: \<ios >
+**標頭**： \<ios >
 
-**命名空間：** std
+**命名空間:** std
 
 > [!NOTE]
-> Ios > 程式庫會`#include <iosfwd>`使用語句。 \<
+> @No__t_0ios > 程式庫使用 `#include <iosfwd>` 語句。
 
 ## <a name="remarks"></a>備註
 
-操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流執行動作，例如 [basic_istream](../standard-library/basic-istream-class.md) 或 [basic_ostream](../standard-library/basic-ostream-class.md) 其中一種範本類別的特製化。 例如, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) 會清除物件`ios_base::skipws` `str`中的格式旗標, 它可以是下列其中一種類型。
+操作工具由一個大型函式群組所組成。 在 \<ios> 中宣告的操作工具會改變儲存在其 [ios_base](../standard-library/ios-base-class.md) 類別之引數物件中的值。 其他操作工具會對由此類別衍生之類型的物件所控制的資料流程執行動作，例如其中一個類別樣板[basic_istream](../standard-library/basic-istream-class.md)或[basic_ostream](../standard-library/basic-ostream-class.md)的特製化。 例如， [noskipws](../standard-library/ios-functions.md#noskipws)（**str**）會清除物件 `str` 中 `ios_base::skipws` 的格式旗標，它可以是下列其中一種類型。
 
-基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如：
+基於針對衍生自 `ios_base` 的類別提供的特殊插入和擷取作業，您也可以將操作工具插入輸出資料流中，或從輸入資料流中加以擷取，以呼叫操作工具。 例如:
 
 ```cpp
 istr>> noskipws;
@@ -39,9 +39,9 @@ istr>> noskipws;
 
 會呼叫 [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**)。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -95,11 +95,11 @@ istr>> noskipws;
 
 |||
 |-|-|
-|[basic_ios](../standard-library/basic-ios-class.md)|此範本類別描述依存於範本參數的輸入資料流 (屬於範本類別 [basic_istream](../standard-library/basic-istream-class.md)) 和輸出資料流 (屬於範本類別 [basic_ostream](../standard-library/basic-ostream-class.md)) 通用的儲存體和成員函式。|
-|[fpos](../standard-library/fpos-class.md)|此範本類別說明可儲存對任何資料流內的任意檔案位置指標進行還原之所有必要資訊的物件。|
+|[basic_ios](../standard-library/basic-ios-class.md)|類別樣板描述相依于樣板參數的輸入資料流程（屬於類別範本[basic_istream](../standard-library/basic-istream-class.md)）和輸出資料流程（屬於類別範本[basic_ostream](../standard-library/basic-ostream-class.md)）通用的儲存體和成員函式。|
+|[fpos](../standard-library/fpos-class.md)|類別樣板描述的物件可以儲存在任何資料流程內還原任意檔案位置指標所需的所有資訊。|
 |[ios_base](../standard-library/ios-base-class.md)|此類別說明未依存於範本參數的輸入和輸出資料流通用的儲存體和成員函式。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3537
 ms.assetid: f537ebd1-4fb0-4e09-a453-4f38db2c6881
-ms.openlocfilehash: 50a06180dabfa192292fae7ba1962b6b7455bb89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef3e954987b84ea128342b38307769903df4b346
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375921"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74740477"
 ---
 # <a name="compiler-error-c3537"></a>編譯器錯誤 C3537
 
-'type': 您無法轉換成包含 'auto' 的類型
+' type '：您無法轉換成包含 ' auto ' 的類型
 
-您無法轉換為指定的類型的變數，因為類型包含`auto`關鍵字和預設[/zc: auto](../../build/reference/zc-auto-deduce-variable-type.md)編譯器選項處於作用中。
+您無法將變數轉換成指定的類型，因為該類型包含 `auto` 關鍵字，且預設的[/zc： auto](../../build/reference/zc-auto-deduce-variable-type.md)編譯器選項已生效。
 
 ## <a name="example"></a>範例
 
-因為變數會轉換成此型別包含下列程式碼會產生 C3537`auto`關鍵字。
+下列程式碼會產生 C3537，因為變數會轉換成包含 `auto` 關鍵字的類型。
 
-```
+```cpp
 // C3537.cpp
 // Compile with /Zc:auto
 int main()
@@ -38,6 +38,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [auto 關鍵字](../../cpp/auto-keyword.md)

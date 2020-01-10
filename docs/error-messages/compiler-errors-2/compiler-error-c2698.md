@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2698
 ms.assetid: 3ebfe395-c20b-4c56-9980-ca9ed8653382
-ms.openlocfilehash: f643b7d8c035b4d1d7d8806feb5b121cf76d7796
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6129ff691f804b31fdb8cb487ac4609e4bca6ef2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367573"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755183"
 ---
 # <a name="compiler-error-c2698"></a>編譯器錯誤 C2698
 
-using 宣告為 'declaration 1' 不能同時存在與 using 宣告為' declaration 2'
+' 宣告 1 ' 的 using 宣告不能與 ' 宣告 2 ' 的現有 using 宣告並存
 
-一旦[using 宣告](../../cpp/using-declaration.md)資料成員，任何使用不允許使用相同的名稱與相同範圍中的宣告，因為只有函式可以多載。
+當您有資料成員的[using](../../cpp/using-declaration.md)宣告時，不允許在相同範圍中使用相同名稱的任何 using 宣告，因為只有函式可以多載。
 
-下列範例會產生 C2698:
+下列範例會產生 C2698：
 
-```
+```cpp
 // C2698.cpp
 struct A {
    int x;

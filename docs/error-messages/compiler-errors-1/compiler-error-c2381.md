@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2381
 ms.assetid: cc765f67-64ac-406f-93ef-ae7d548d58d7
-ms.openlocfilehash: b29f7dac6c6d71e12eb0f003cdfc151dd2c349a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 834b9939a99c694c702bb268b928575b4beb8856
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62347895"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74745391"
 ---
 # <a name="compiler-error-c2381"></a>編譯器錯誤 C2381
 
-'function' : redefinition; __declspec(noreturn) differs
+' function '：重複定義;__declspec （noreturn）不同
 
-函式已宣告，並接著定義但所使用的定義[noreturn](../../cpp/noreturn.md) `__declspec`修飾詞。 善用`noreturn`構成函式的重複定義; 的宣告和定義要使用同意`noreturn`。
+已宣告函式並加以定義，但是定義使用[noreturn](../../cpp/noreturn.md) `__declspec` 修飾詞。 使用 `noreturn` 構成函數的重新定義;宣告和定義必須同意使用 `noreturn`。
 
-下列範例會產生 C2381:
+下列範例會產生 C2381：
 
-```
+```cpp
 // C2381.cpp
 // compile with: /c
 void f1();

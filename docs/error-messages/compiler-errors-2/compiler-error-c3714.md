@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3714
 ms.assetid: 17718f75-5a37-4e42-912b-487e91008a95
-ms.openlocfilehash: 9bfdf8b26ab599ef1a28483af7ebc28f0dbc1912
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1078bf8a97f6cb7afeaf7046489fe262c0bb0199
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328337"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74753324"
 ---
 # <a name="compiler-error-c3714"></a>編譯器錯誤 C3714
 
-'method': 事件處理常式方法必須有相同的呼叫慣例做為來源 'method'
+' method '：事件處理常式方法必須與來源 ' method ' 具有相同的呼叫慣例
 
-您定義未使用相同的呼叫慣例與來源事件方法的事件處理常式方法。 若要修正這個錯誤，讓事件處理常式方法的來源事件方法相同的呼叫慣例。 例如，下列程式碼，進行的呼叫慣例`handler1`並`event1`比對 ([__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他人)。 移除從兩個宣告呼叫慣例關鍵字也會解決此問題，並會造成`event1`並`handler1`表示預設為[thiscall](../../cpp/thiscall.md)呼叫慣例。 請參閱[呼叫慣例](../../cpp/calling-conventions.md)如需詳細資訊。
+您定義的事件處理常式方法，並未使用與來源事件方法相同的呼叫慣例。 若要修正此錯誤，請為事件處理常式方法提供與來源事件方法相同的呼叫慣例。 例如，在下列程式碼中，請 `handler1` 的呼叫慣例和 `event1` 相符（[__cdecl](../../cpp/cdecl.md)或[__stdcall](../../cpp/stdcall.md)或其他專案）。 從這兩個宣告中移除呼叫慣例關鍵字也會解決此問題，並導致 `event1` 和 `handler1` 預設為[thiscall](../../cpp/thiscall.md)呼叫慣例。 如需詳細資訊，請參閱[呼叫慣例](../../cpp/calling-conventions.md)。
 
-下列範例會產生 C3714:
+下列範例會產生 C3714：
 
-```
+```cpp
 // C3714.cpp
 // compile with: /c
 // processor: x86

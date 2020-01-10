@@ -5,29 +5,29 @@ helpviewer_keywords:
 - ODBC, ODBC classes
 - MFC, database applications
 ms.assetid: 88aabe65-84e3-4122-b636-5d334a5fe570
-ms.openlocfilehash: bf0aa11a020a5d15cd23463c31f2713aba38a037
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b57d71ae2dc4e81f10855dc4075713170af952e4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182869"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "70311858"
 ---
 # <a name="mfc-database-classes"></a>MFC 資料庫類別
 
 > [!NOTE]
->  Microsoft 建議使用透過 Microsoft ODBC Driver 13 （或更新版本） 的 ODBC SQL server 的新專案。 DAO 已不再支援。
+>  Microsoft 建議透過 Microsoft ODBC Driver 13 （或更新版本）使用 ODBC 來 SQL Server 新專案。 不再支援 DAO。
 
 如需詳細資訊，請參閱下列主題：
 
-- [Data Access Technologies Road Map](https://msdn.microsoft.com/library/ms810810.aspx) (資料存取技術藍圖)
+- [Microsoft SQL Server 的驅動程式歷程記錄](/sql/connect/connect-history)
 
-- [ODBC Driver 13.1 for SQL Server 發行](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)Microsoft ODBC Driver 13 for SQL Server 應該用來建立新的應用程式，或者加強需要利用新的 SQL Server 2016 功能的現有應用程式。
+- [ODBC Driver 13.1 for SQL Server 已發行](https://blogs.technet.microsoft.com/dataplatforminsider/2016/08/03/odbc-driver-13-1-for-sql-server-released/)Microsoft ODBC Driver 13 for SQL Server 應該用來建立新的應用程式，或增強需要利用新 SQL Server 2016 功能的現有應用程式。
 
 - [ODBC 和 MFC](../data/odbc/odbc-and-mfc.md)
 
-- [使用具有文件和檢視資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)
+- [搭配檔和視圖使用資料庫類別](../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [使用不具文件和檢視的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)
+- [使用不含檔和視圖的資料庫類別](../data/mfc-using-database-classes-without-documents-and-views.md)
 
 ## <a name="see-also"></a>另請參閱
 

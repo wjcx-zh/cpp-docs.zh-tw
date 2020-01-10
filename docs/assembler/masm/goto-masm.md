@@ -1,21 +1,21 @@
 ---
 title: GOTO (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - goto
 helpviewer_keywords:
 - GOTO directive
 ms.assetid: 6a5f73e7-6784-4eae-ac52-4fc77a7f369f
-ms.openlocfilehash: a03cbda5a8ff64f6c167766f416e7744a5382ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f198658f9a4b85e0b5ec9b7a0c122241e57286f6
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203076"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317275"
 ---
-# <a name="goto-masm"></a>GOTO (MASM)
+# <a name="goto"></a>GOTO
 
-將組件傳送至標記的一行 **:**_macrolabel_。
+將元件傳輸到標記為 **：** _macrolabel_的行。
 
 ## <a name="syntax"></a>語法
 
@@ -23,8 +23,9 @@ ms.locfileid: "62203076"
 
 ## <a name="remarks"></a>備註
 
-**GOTO**允許只在[巨集](macro.md)， [FOR](for-masm.md)， [FORC](forc.md)，[重複](repeat.md)，和[時](while-masm.md)區塊。 *Macrolabel*目標必須是該行的唯一指示詞，而且必須加上前置的冒號。
+只有在[宏](macro.md)、 [FOR](for-masm.md)、 [FORC](forc.md)、 [REPEAT](repeat.md)和[WHILE](while-masm.md)區塊中才允許**GOTO** 。 *Macrolabel*目標必須是行上的唯一指示詞，且前面必須加上前置冒號。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

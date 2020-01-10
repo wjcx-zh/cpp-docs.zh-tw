@@ -1,10 +1,10 @@
 ---
 title: system、_wsystem
 ms.date: 11/04/2016
-apiname:
+api_name:
 - system
 - _wsystem
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _tsystem
 - _wsystem
@@ -29,14 +32,14 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 82b39f012bebb41772cdc7350eb08dba48678fdd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259088"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70957670"
 ---
-# <a name="system-wsystem"></a>system、_wsystem
+# <a name="system-_wsystem"></a>system、_wsystem
 
 執行命令。
 
@@ -61,7 +64,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>傳回值
 
-如果*命令*是**NULL**並找到命令解譯器，則傳回非零值。 如果找不到命令解譯器，會傳回 0，並將**errno**要**ENOENT**。 如果*命令*不是**NULL**，**系統**傳回命令解譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值為-1 表示錯誤，並**errno**設為下列值之一：
+如果*命令*為**Null** ，且找到命令直譯器，則會傳回非零值。 如果找不到命令直譯器，則會傳回0，並將**errno**設為**ENOENT**。 如果*命令*不是**Null**，**系統**會傳回命令直譯器所傳回的值。 只有當命令解譯器傳回為 0 的值，它才會傳回為 0 的值。 傳回值-1 表示發生錯誤，而且**errno**會設定為下列其中一個值：
 
 |||
 |-|-|
@@ -74,11 +77,11 @@ int _wsystem(
 
 ## <a name="remarks"></a>備註
 
-**系統**函式傳遞*命令*給命令解譯器，它就會執行作業系統命令的字串。 **系統**會使用**COMSPEC**並**路徑**環境變數，以找出命令解譯器檔案 CMD.exe。 如果*命令*是**NULL**，函式只會檢查命令解譯器是否存在。
+**系統**函數會將*命令*傳遞給命令直譯器，它會將字串當做作業系統命令來執行。 **系統**會使用**COMSPEC**和**PATH**環境變數來尋找命令直譯器檔案 cmd.exe。 如果*command*是**Null**，此函式只會檢查命令直譯器是否存在。
 
-您必須明確地排清，請使用[fflush](fflush.md)或是[_flushall](flushall.md)，或關閉所有資料流，然後再呼叫**系統**。
+您必須先使用[fflush](fflush.md)或[_flushall](flushall.md)明確地排清，或在呼叫**system**之前關閉任何資料流程。
 
-**_wsystem**是寬字元版本的**系統**;*命令*引數 **_wsystem**是寬字元字串。 除此之外，這些函式的行為相同。
+**_wsystem**是**系統**的寬字元版本; **_wsystem**的*命令*引數是寬字元字串。 除此之外，這些函式的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -97,7 +100,7 @@ int _wsystem(
 
 ## <a name="example"></a>範例
 
-這個範例會使用**系統**輸入的文字檔案。
+這個範例會使用**system**來輸入文字檔。
 
 ```C
 // crt_system.c
@@ -110,7 +113,7 @@ int main( void )
 }
 ```
 
-### <a name="input-crtsystemtxt"></a>輸入：crt_system.txt
+### <a name="input-crt_systemtxt"></a>輸入：crt_system.txt
 
 ```Input
 Line one.

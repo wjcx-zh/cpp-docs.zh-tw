@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3265
 ms.assetid: 10ab3e17-4a9f-4120-bab5-21473869b70f
-ms.openlocfilehash: a675567e23764a0b361cab4bef4bc75019de3756
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 633089115fe7edd0bdf06cdbcda6909ae7ac656e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365841"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754156"
 ---
 # <a name="compiler-error-c3265"></a>編譯器錯誤 C3265
 
-不能宣告 managed 'managed 的 construct' unmanaged 'unmanaged 建構' 中
+無法在非受控的「非受控結構」中宣告受管理的「managed 結構」
 
-您無法在未受管理的內容中包含的受管理的物件。
+您不能在非受控內容中包含 managed 物件。
 
-下列範例會重現 C3265:
+下列範例會重現 C3265：
 
-```
+```cpp
 // C3265_2.cpp
 // compile with: /clr /LD
 #include <vcclr.h>

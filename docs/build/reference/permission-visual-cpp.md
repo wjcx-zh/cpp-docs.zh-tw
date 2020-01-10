@@ -1,5 +1,5 @@
 ---
-title: '&lt;權限 > (C++文件註解)'
+title: '&lt;許可權 > （C++檔批註）'
 ms.date: 11/04/2016
 f1_keywords:
 - permission
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 764048f7bc579afa6862bdff40968588955dc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f0a59c85e3fa28d24e44953e207151c3afa0f4
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319937"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988674"
 ---
 # <a name="ltpermissiongt"></a>&lt;permission&gt;
 
@@ -39,13 +39,13 @@ ms.locfileid: "62319937"
 
 ## <a name="remarks"></a>備註
 
-編譯搭配 [/doc](doc-process-documentation-comments-c-cpp.md) 可處理檔案的文件註解。
+使用 [/doc](doc-process-documentation-comments-c-cpp.md) 編譯，可處理檔案的文件註解。
 
-MSVC 編譯器會嘗試解決一個通過文件註解 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
+MSVC 編譯器會嘗試透過檔批註來解析一次中的 cref 參考。  因此，如果使用 C++ 查閱規則，當編譯器找不到符號時，參考就會被標記為無法解析。 如需詳細資訊，請參閱 [\<seealso>](seealso-visual-cpp.md)。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // xml_permission_tag.cpp
 // compile with: /clr /doc /LD
 // post-build command: xdcmake xml_permission_tag.dll
@@ -57,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [XML 文件](xml-documentation-visual-cpp.md)

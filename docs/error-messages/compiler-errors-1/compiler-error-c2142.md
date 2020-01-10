@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2142
 ms.assetid: d0dbe10e-0952-49a4-8b33-e82fb7558b19
-ms.openlocfilehash: eda60204e07fd025a8c62b19de70e8204f9f80f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1345fbb44558db01b19eec04b64cf7aa036931a
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353582"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301921"
 ---
 # <a name="compiler-error-c2142"></a>編譯器錯誤 C2142
 
-函式宣告不同，只能在其中一個指定的變數參數
+函式宣告不同，只指定其中一個變數參數
 
-函式的一個宣告包含可變個數參數清單。 另一個宣告則否。 ANSI C ([/Za](../../build/reference/za-ze-disable-language-extensions.md)) 只。
+函數的其中一個宣告包含變數參數清單。 另一個宣告則不會。 僅限 ANSI C （[/za](../../build/reference/za-ze-disable-language-extensions.md)）。
 
-下列範例會產生 C2142:
+下列範例會產生 C2142：
 
-```
+```c
 // C2142.c
 // compile with: /Za /c
 void func();

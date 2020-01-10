@@ -1,12 +1,12 @@
 ---
 title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -18,7 +18,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswctype
 - _isctype
@@ -38,16 +41,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157300"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954404"
 ---
-# <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
+# <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-測試*c* ctype 屬性所指定*desc*引數。 針對每個有效值*desc*，沒有對等的寬字元分類常式。
+針對*desc*引數所指定的 ctype 屬性測試*c* 。 對於*desc*的每個有效值，都有對等的寬字元分類常式。
 
 ## <a name="syntax"></a>語法
 
@@ -85,9 +88,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_isctype**並**iswctype**傳回非零值，如果*c*具有所指定的屬性*desc* 0，如果沒有目前的地區設定中。 使用這些函式的版本 **_l**尾碼都相同，不同之處在於使用傳入的地區設定而不是目前的地區設定其地區設定相關行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果*c*具有目前地區設定中的*desc*所指定的屬性，則 **_isctype**和**iswctype**會傳回非零值; 如果不是，則傳回0。 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定，而非目前的地區設定來處理其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為 **_isctype**並 **_isctype_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則 **_isctype**和 **_isctype_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

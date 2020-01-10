@@ -1,9 +1,9 @@
 ---
 title: quick_exit1
 ms.date: 11/04/2016
-apiname:
+api_name:
 - quick_exit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - quick_exit
 - process/quick_exit
@@ -23,14 +26,14 @@ f1_keywords:
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86246ed7a32dcd2f12b38aa4148570fc5fb3b7a6
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358030"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949677"
 ---
-# <a name="quickexit"></a>quick_exit
+# <a name="quick_exit"></a>quick_exit
 
 引發正常的程式終止。
 
@@ -49,15 +52,15 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>傳回值
 
-**Quick_exit**函式無法傳回至其呼叫端。
+**Quick_exit**函式無法返回其呼叫端。
 
 ## <a name="remarks"></a>備註
 
-**Quick_exit**函式會導致正常程式終止。 它會呼叫註冊的任何函式**atexit**， **_onexit**或訊號處理常式註冊**訊號**函式。 行為是未定義的如果**quick_exit**稱為超過一次，或如果**結束**也呼叫函式。
+**Quick_exit**函數會導致一般程式終止。 它不會呼叫由**信號**函數註冊的**atexit**、 **_onexit**或信號處理常式所註冊的任何函式。 如果呼叫**quick_exit**一次以上，或如果也呼叫**exit**函式，則會未定義行為。
 
-**Quick_exit**函式呼叫，在後進先出 (LIFO) 順序、 註冊的函式**at_quick_exit**，但函式註冊時就已呼叫這些函式。  若在呼叫先前已註冊，會終止函數呼叫的函式時呼叫 [longjmp](longjmp.md) ，其行為不確定。
+**Quick_exit**函數會以後進先出（LIFO）順序呼叫**at_quick_exit**所註冊的函式，但函式註冊時已呼叫的函式除外。  若在呼叫先前已註冊，會終止函數呼叫的函式時呼叫 [longjmp](longjmp.md) ，其行為不確定。
 
-已註冊的函式呼叫之後， **quick_exit**叫用 **_Exit**利用*狀態*將控制權交還給主機環境的值。
+呼叫已註冊的函式之後， **quick_exit**會使用*狀態值*叫用 **_Exit** ，以將控制權交還給主機環境。
 
 ## <a name="requirements"></a>需求
 

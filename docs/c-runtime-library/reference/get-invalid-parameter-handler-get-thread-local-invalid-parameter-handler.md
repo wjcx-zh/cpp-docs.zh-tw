@@ -1,10 +1,10 @@
 ---
 title: _get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _get_invalid_parameter_handler
 - stdlib/_get_invalid_parameter_handler
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 572d21696d38c47fe0f67d68af5eb249aeb94319
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287478"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857798"
 ---
-# <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
+# <a name="_get_invalid_parameter_handler-_get_thread_local_invalid_parameter_handler"></a>_get_invalid_parameter_handler、_get_thread_local_invalid_parameter_handler
 
 取得 CRT 偵測到無效的引數時，會呼叫的函式。
 
@@ -50,7 +53,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>備註
 
-**_Get_invalid_parameter_handler**函式會取得目前已設定全域無效的參數處理常式。 如果未設定任何全域無效的參數處理常式，它會傳回 Null 指標。 同樣地， **_get_thread_local_invalid_parameter_handler**取得目前的執行緒區域無效的參數處理常式的執行緒已呼叫方法或 null 指標，如果沒有處理常式設定。 如需有關如何設定全域和執行緒區域無效的參數處理常式的資訊，請參閱 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
+**_Get_invalid_parameter_handler**函數會取得目前設定的全域無效參數處理常式。 如果未設定任何全域無效的參數處理常式，它會傳回 Null 指標。 同樣地， **_get_thread_local_invalid_parameter_handler**會取得其所呼叫之執行緒的目前線程本機無效參數處理常式，如果未設定處理常式，則為 null 指標。 如需有關如何設定全域和執行緒區域無效的參數處理常式的資訊，請參閱 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)。
 
 傳回的無效的參數處理常式函式指標具有下列類型︰
 
@@ -70,11 +73,11 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
+|**_get_invalid_parameter_handler**， **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> 或 \<stdlib.h>|
 
-**_Get_invalid_parameter_handler**並 **_get_thread_local_invalid_parameter_handler**函式是 Microsoft 專有的。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**_Get_invalid_parameter_handler**和 **_get_thread_local_invalid_parameter_handler**函式為 Microsoft 特有的功能。 如需相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [_set_invalid_parameter_handler、_set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
 [CRT 函式的安全性增強版本](../../c-runtime-library/security-enhanced-versions-of-crt-functions.md)<br/>

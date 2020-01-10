@@ -1,26 +1,27 @@
 ---
 title: TYPEDEF (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - typedef
 helpviewer_keywords:
 - TYPEDEF directive
 ms.assetid: 0c659890-c9a5-485a-a680-e4fb3272032c
-ms.openlocfilehash: 9c7b0087166cfcf547dbd0b1dd5be2a0cbb2bc77
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf14b446629a4704491feff44031ecc01267b027
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210023"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319186"
 ---
-# <a name="typedef-masm"></a>TYPEDEF (MASM)
+# <a name="typedef"></a>TYPEDEF
 
-定義新類型，稱為*名稱*，這相當於*型別*。
+定義名為*name*的新類型或**PROTO** ，這相當於*type*或*protoDefinition*。
 
 ## <a name="syntax"></a>語法
 
-> *名稱*TYPEDEF*類型*
+> *名稱* **TYPEDEF** *類型* | **PROTO** *protoDefinition*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

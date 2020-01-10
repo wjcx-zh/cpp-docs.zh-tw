@@ -1,9 +1,9 @@
 ---
 title: ferror
 ms.date: 11/04/2016
-apiname:
+api_name:
 - ferror
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - ferror
 helpviewer_keywords:
@@ -23,12 +26,12 @@ helpviewer_keywords:
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4efb1b01ac94f1cb2d28bffb1f09b594a0e71479
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334329"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941095"
 ---
 # <a name="ferror"></a>ferror
 
@@ -49,17 +52,17 @@ int ferror(
 
 ## <a name="return-value"></a>傳回值
 
-如果不發生任何錯誤*資料流*， **ferror**會傳回 0。 否則，它會傳回非零值。 如果資料流**NULL**， **ferror**叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL**且會傳回 0。
+如果未在*資料流程*上發生錯誤， **ferror**會傳回0。 否則，它會傳回非零值。 如果 stream 為**Null**， **ferror**會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會將**errno**設定為**EINVAL** , 並傳回0。
 
 如需這些錯誤碼和其他錯誤碼的詳細資訊，請參閱 [_doserrno、errno、_sys_errlist，和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**Ferror**常式 （實作為函式和巨集） 測試的讀取或寫入錯誤相關聯的檔案*串流*。 如果發生錯誤，資料流的錯誤指標會保持設定直到資料流已關閉或倒轉，或直到**clearerr**針對它呼叫。
+**Ferror**常式（實作為函式和宏）會測試與*stream*相關聯之檔案的讀取或寫入錯誤。 如果發生錯誤，資料流程的錯誤指標會維持設定，直到資料流程關閉或倒轉為止，或直到針對它呼叫**clearerr**為止。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
 |**ferror**|\<stdio.h>|
 

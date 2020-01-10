@@ -1,30 +1,31 @@
 ---
 title: .LISTMACRO
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .LISTMACRO
 helpviewer_keywords:
 - .LISTMACRO directive
 ms.assetid: f8dadf8c-ca6f-4bb9-a4f8-86a0e769a845
-ms.openlocfilehash: 282651b848759fb2a207ab9de5dbcfbc02106d68
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eef137ece7069977b133c217d31e81a8ea9010e
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185128"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75313440"
 ---
 # <a name="listmacro"></a>.LISTMACRO
 
-啟動 產生程式碼或資料的巨集展開陳述式的清單。
+開始列出產生程式碼或資料的宏展開語句。
 
 ## <a name="syntax"></a>語法
 
-> .LISTMACRO
+> **.LISTMACRO**
 
 ## <a name="remarks"></a>備註
 
-這是預設值。 與相同[。XALL](../../assembler/masm/dot-xall.md)。
+這是預設設定。 與相同[.XALL](dot-xall.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

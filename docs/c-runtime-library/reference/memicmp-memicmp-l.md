@@ -1,10 +1,10 @@
 ---
 title: _memicmp、_memicmp_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _memicmp_l
 - _memicmp
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _memicmp
 - memicmp_l
@@ -27,14 +30,14 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285270"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951832"
 ---
-# <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
+# <a name="_memicmp-_memicmp_l"></a>_memicmp、_memicmp_l
 
 比較兩個緩衝區中的字元 (不區分大小寫)。
 
@@ -62,7 +65,7 @@ int _memicmp_l(
 *buffer2*<br/>
 第二個緩衝區。
 
-*count*<br/>
+*計數*<br/>
 字元數。
 
 *locale*<br/>
@@ -74,18 +77,18 @@ int _memicmp_l(
 
 |傳回值|buf1 和 buf2 的前幾個位元組的關聯性|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*少於*buffer2*。|
-|0|*buffer1*等同*buffer2*。|
+|< 0|*buffer1*小於*buffer2*。|
+|0|*buffer1*與*buffer2*相同。|
 |> 0|*buffer1*大於*buffer2*。|
 |**_NLSCMPERROR**|發生錯誤。|
 
 ## <a name="remarks"></a>備註
 
-**_Memicmp**函式會比較第一個*計數*兩個緩衝區的字元*buffer1*並*buffer2*逐位元組。 這項比較不會區分大小寫。
+**_Memicmp**函數會比較兩個緩衝區的第一個*計數*字元*buffer1*和*buffer2* byte by byte。 這項比較不會區分大小寫。
 
-如果有任一*buffer1*或*buffer2*為 null 指標，此函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則函數會傳回 **_NLSCMPERROR**並設定**errno**來**EINVAL**。
+如果*buffer1*或*buffer2*是 null 指標，則此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回 **_NLSCMPERROR** ，並將**Errno**設定為**EINVAL**。
 
-**_memicmp**地區設定相關行為; 針對使用目前的地區設定 **_memicmp_l**完全相同，只不過它會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_memicmp**會針對與地區設定相關的行為使用目前的地區設定; **_memicmp_l**相同，不同之處在于它會改為使用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

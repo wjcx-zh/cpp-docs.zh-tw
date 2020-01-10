@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4625
 ms.assetid: 4cc99e50-846c-4784-97da-48b977067851
-ms.openlocfilehash: edcb43bf11c073e6ce721ba999fd99d28a8df15d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d98e295a9a48da16b58202bc172e112b5c0287d9
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220490"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990719"
 ---
 # <a name="compiler-warning-level-4-c4625"></a>編譯器警告 (層級 4) C4625
 
@@ -25,7 +25,7 @@ ms.locfileid: "62220490"
 
 下列範例會產生 C4625，並示範如何修正此問題。
 
-```
+```cpp
 // C4625.cpp
 // compile with: /W4 /c
 #pragma warning(default : 4625)

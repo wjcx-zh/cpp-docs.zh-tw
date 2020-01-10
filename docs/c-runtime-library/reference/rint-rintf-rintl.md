@@ -1,11 +1,11 @@
 ---
 title: rint、rintf、rintl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - rintf
 - rintl
 - rint
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - rintf
 - rintl
@@ -27,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62357586"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70949258"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -58,22 +61,22 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Rint**函式會傳回浮點數的值，表示最接近的整數*x*。 中間值根據目前的浮點捨入模式，與相同的設定將會四捨五入**nearbyint**函式。 不同於**nearbyint**函式**rint**函式可能會引發**FE_INEXACT**若結果與引數中的值中的浮點例外狀況。 不會傳回錯誤。
+**Rint**函式會傳回浮點值，表示最接近*x*的整數。 中間值會根據浮點舍入模式的目前設定進行舍入，與**nearbyint**函數相同。 與**nearbyint**函式不同的是，如果結果與引數的值不同， **rint**函數可能會引發**FE_INEXACT**浮點例外狀況。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|**_matherr**例外狀況|
+|Input|SEH 例外狀況|**_matherr**異常|
 |-----------|-------------------|--------------------------|
-|常见 ∞，QNAN IND|none|none|
+|±∞、QNAN、IND|none|none|
 |非正規數|EXCEPTION_FLT_UNDERFLOW|none|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**rint**採用並傳回**float**並**長** **double**值。 在 C 程式中， **rint**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**浮點**和**長** **雙精度**值之**rint**的多載。 在 C 程式中， **rint**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**rint**， **rintf**， **rintl**|\<math.h>|\<cmath>|
+|**rint**、 **rintf**、 **rintl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

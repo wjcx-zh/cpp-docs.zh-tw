@@ -1,12 +1,12 @@
 ---
 title: isdigit、iswdigit、_isdigit_l、_iswdigit_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _isdigit_l
 - iswdigit
 - _iswdigit_l
 - isdigit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _iswdigit_l
 - _isdigit_l
@@ -39,14 +42,14 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-ms.openlocfilehash: 7e85028d43858543f8c9b9d4c5cf1b17664f8331
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30944db0653e26b6130fb7a37ad87e8e81a343f5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331619"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954380"
 ---
-# <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit、iswdigit、_isdigit_l、_iswdigit_l
+# <a name="isdigit-iswdigit-_isdigit_l-_iswdigit_l"></a>isdigit、iswdigit、_isdigit_l、_iswdigit_l
 
 判斷整數是否代表十進位數字字元。
 
@@ -79,11 +82,11 @@ int _iswdigit_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*是十進位數字字元的特定表示法。 **isdigit**傳回非零值，如果*c*是十進位數字 (0-9)。 **iswdigit**傳回非零值，如果*c*是與十進位數字字元對應的寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是十進位數位符的特定標記法，則每個常式都會傳回非零。 如果*c*是十進位數（0-9），則**isdigit**會傳回非零值。 如果*c*是對應到十進位數位符的寬字元，則**iswdigit**會傳回非零值。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-有這些函式的版本 **_l**後置詞使用傳入的地區設定而不是目前的地區設定其地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些具有 **_l**尾碼的函式版本，會使用傳入的地區設定，而不是與地區設定相關行為的目前地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isdigit**並 **_isdigit_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isdigit**和 **_isdigit_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

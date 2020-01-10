@@ -1,10 +1,10 @@
 ---
 title: strlwr、wcslwr
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - strlwr
 - wcslwr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - wcslwr
 - strlwr
@@ -23,13 +26,15 @@ helpviewer_keywords:
 - strlwr function
 - wcslwr function
 ms.assetid: b9274824-4365-4674-b656-823c89653656
-ms.openlocfilehash: 14e2e31c3c92b8c2baad5abcd4503a39601e4b8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff730d6bea6619c50fefb407a7a69c50e1a06af0
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209888"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301076"
 ---
 # <a name="strlwr-wcslwr"></a>strlwr、wcslwr
 
-這些 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md) 或增強安全性的 [_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)。
+Microsoft 特有的函式名稱 `strlwr` 和 `wcslwr` 已取代[_strlwr 和 _wcslwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)函數的別名。 根據預設，它們會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它們不會遵循執行特定名稱的標準 C 規則。 不過，仍然支援函數。
+
+我們建議您改用[_strlwr 或 _wcslwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)或增強安全性的[_strlwr_s 和 _wcslwr_s](strlwr-s-strlwr-s-l-mbslwr-s-mbslwr-s-l-wcslwr-s-wcslwr-s-l.md)功能。 或者，您可以繼續使用這些函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。

@@ -1,5 +1,5 @@
 ---
-title: 'HOW TO：將 system:: string 轉換為 wchar_t * 或 char *'
+title: 如何：將 System::String 轉換為 wchar_t* 或 char*
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9fcea7d54f5b3dcfe5fa75092463465711b1a505
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387496"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988254"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>HOW TO：將 system:: string 轉換為 wchar_t * 或 char *
+# <a name="how-to-convert-systemstring-to-wchar_t-or-char"></a>如何：將 System::String 轉換為 wchar_t* 或 char*
 
-您可以使用`PtrToStringChars`中要轉換的 Vcclr.h<xref:System.String>原生`wchar_t *`或`char *`。  因為內部 CLR 字串即為 Unicode，這一律會傳回寬 Unicode 字串指標。 下列範例所示，您接著可以轉換寬指標。
+您可以使用 Vcclr.h 中的 `PtrToStringChars`，將 <xref:System.String> 轉換為原生 (Native) `wchar_t *` 或 `char *`。  這一定會傳回寬 Unicode 字串指標，因為內部的 CLR 字串即為 Unicode。 接著，您可以轉換寬指標，如下列範例所示。
 
 ## <a name="example"></a>範例
 
-```
+```cpp
 // convert_string_to_wchar.cpp
 // compile with: /clr
 #include < stdio.h >
@@ -64,6 +64,6 @@ Hello
 Hello
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2602
 ms.assetid: 6c07a40e-537e-4954-b5c5-1e0e58fe1952
-ms.openlocfilehash: da38600ea099c9b0d73e929a100a8c338bd3388f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cac8bd8aca0a811e1e009a2fdf07cbc200634f2
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62215525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74737890"
 ---
 # <a name="compiler-error-c2602"></a>編譯器錯誤 C2602
 
-'class::Identifier' 不是 'class' 的基底類別的成員
+' class：： Identifier ' 不是 ' class ' 基類的成員
 
-`Identifier` 無法存取，因為它不是繼承自任何基底類別的成員。
+無法存取 `Identifier`，因為它不是繼承自任何基類的成員。
 
-下列範例會產生 C2602:
+下列範例會產生 C2602：
 
-```
+```cpp
 // C2602.cpp
 // compile with: /c
 struct X {

@@ -1,10 +1,10 @@
 ---
 title: _get_daylight
 ms.date: 11/04/2016
-apiname:
+api_name:
 - __daylight
 - _get_daylight
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_daylight
 - _get_daylight
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9f63d3baa1e9411039d1482b4cbfbf4bce4e9872
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62332310"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956054"
 ---
-# <a name="getdaylight"></a>_get_daylight
+# <a name="_get_daylight"></a>_get_daylight
 
 擷取日光節約時間位移 (小時)。
 
@@ -44,20 +47,20 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>參數
 
-*時數*<br/>
+*多少*<br/>
 日光節約時間的位移 (小時)。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，或在為零**errno**值發生錯誤。
+如果成功，則為零; 如果發生錯誤，則為**errno**值。
 
 ## <a name="remarks"></a>備註
 
-**_Get_daylight**函式會擷取為整數的日光節約時間的小時數。 若日光節約時間已生效，則預設位移為一小時 (但少數地區是遵循兩小時的位移)。
+**_Get_daylight**函式會將日光節約時間中的時數，視為整數。 若日光節約時間已生效，則預設位移為一小時 (但少數地區是遵循兩小時的位移)。
 
-如果*小時*是**NULL**，會叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回**EINVAL**。
+如果*hours*為**Null**，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回**EINVAL**。
 
-我們建議您利用這個函數，而不是巨集 **_daylight**或 已被取代的函式 **__daylight**。
+建議您使用此函式，而不是使用宏 **_daylight**或已被取代的函數 **__daylight**。
 
 ## <a name="requirements"></a>需求
 

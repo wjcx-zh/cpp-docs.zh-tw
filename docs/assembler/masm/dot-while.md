@@ -1,28 +1,29 @@
 ---
 title: .WHILE
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .WHILE
 helpviewer_keywords:
 - .WHILE directive
 ms.assetid: 7c5e78ae-1bfd-4dcf-aa4c-ba940bcf7793
-ms.openlocfilehash: f4f2aa01bc6bedb9b55477d59b037dc7cd0a88e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e7d3f92e5f1ffc27b7987ee7f06e9d1cdb12507
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203624"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318211"
 ---
-# <a name="while"></a>.WHILE
+# <a name="while-32-bit-masm"></a>.WHILE （32-bit MASM）
 
-產生程式碼執行的區塊`statements`雖然`condition`保持為 true。
+產生執行*語句*區塊的程式碼，而*條件*則維持為 true。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .WHILE 條件<br/>
-> 陳述式<br/>
-> .ENDW
+> **.WHILE** *條件*\
+> *語句*\
+> **.ENDW**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

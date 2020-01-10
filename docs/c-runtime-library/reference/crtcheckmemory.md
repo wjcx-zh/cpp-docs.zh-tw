@@ -1,9 +1,9 @@
 ---
 title: _CrtCheckMemory
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtCheckMemory
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - CrtCheckMemory
 - _CrtCheckMemory
@@ -22,14 +25,14 @@ helpviewer_keywords:
 - _CrtCheckMemory function
 - CrtCheckMemory function
 ms.assetid: 457cc72e-60fd-4177-ab5c-6ae26a420765
-ms.openlocfilehash: cb39a76c140934dabdd1269c02aba6018691f917
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e458825a81b7032310458ccda52d9299e126a35
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340387"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938866"
 ---
-# <a name="crtcheckmemory"></a>_CrtCheckMemory
+# <a name="_crtcheckmemory"></a>_CrtCheckMemory
 
 確認在偵錯堆積中配置之記憶體區塊的完整性 (僅限偵錯版本)。
 
@@ -42,13 +45,13 @@ int _CrtCheckMemory( void );
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_CrtCheckMemory**會傳回 TRUE; 否則此函數會傳回 FALSE。
+如果成功， **_CrtCheckMemory**會傳回 TRUE;否則，函數會傳回 FALSE。
 
 ## <a name="remarks"></a>備註
 
-**_CrtCheckMemory**函式會驗證透過確認基礎基底堆積，並檢查每個記憶體區塊來偵錯堆積管理員所配置的記憶體。 如果基礎基底堆積、 偵錯標頭資訊或覆寫緩衝區中, 發生錯誤或記憶體不一致 **_CrtCheckMemory**描述錯誤狀況的資訊產生偵錯報表。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtCheckMemory**會在前置處理期間移除。
+**_CrtCheckMemory**函式會驗證基礎基底堆積並檢查每個記憶體區塊，藉此驗證「偵錯工具」堆積管理員所配置的記憶體。 如果在基礎基底堆積中發生錯誤或記憶體不一致的情況，則 debug 標頭資訊或覆寫緩衝區 **_CrtCheckMemory**會產生一個具有描述錯誤狀況之資訊的「偵錯工具」報告。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtCheckMemory**的呼叫。
 
-行為 **_CrtCheckMemory**可以控制設定的位元欄位[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)使用的旗標[_CrtSetDbgFlag](crtsetdbgflag.md)函式。 開啟 **_CRTDBG_CHECK_ALWAYS_DF**位元欄位會導致 **_CrtCheckMemory**每次要求記憶體配置作業時呼叫。 雖然這個方法會降低執行速度，但會快速攔截錯誤。 開啟 **_CRTDBG_ALLOC_MEM_DF**位元欄位會導致 **_CrtCheckMemory**不確認堆積就立即傳回至**TRUE**。
+您可以使用[_CrtSetDbgFlag](crtsetdbgflag.md)函式來設定[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)旗標的位欄位，以控制 **_CrtCheckMemory**的行為。 在每次要求記憶體配置作業時，將 **_CRTDBG_CHECK_ALWAYS_DF**位欄位轉換成會呼叫 **_CrtCheckMemory**中的結果。 雖然這個方法會降低執行速度，但會快速攔截錯誤。 關閉 **_CRTDBG_ALLOC_MEM_DF**位欄位會導致 **_CrtCheckMemory**不驗證堆積，並立即傳回**TRUE**。
 
 因為此函式會傳回 **TRUE** 或 **FALSE**，所以可將該函式傳遞至其中一個 [_ASSERT](assert-asserte-assert-expr-macros.md) 巨集，以建立簡單的偵錯處理機制。 下列範例會在偵測到堆積中的損毀時造成判斷提示失敗：
 
@@ -56,7 +59,7 @@ int _CrtCheckMemory( void );
 _ASSERTE( _CrtCheckMemory( ) );
 ```
 
-如需有關如何 **_CrtCheckMemory**可以搭配其他偵錯函式，請參閱[Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)。 如需記憶體管理及偵錯堆積的概觀，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。
+如需如何搭配其他 debug 函數來使用 **_CrtCheckMemory**的詳細資訊，請參閱[堆積狀態報表](/visualstudio/debugger/crt-debug-heap-details)函式。 如需記憶體管理及偵錯堆積的概觀，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。
 
 ## <a name="requirements"></a>需求
 
@@ -72,7 +75,7 @@ _ASSERTE( _CrtCheckMemory( ) );
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例 **_CrtCheckMemory**，請參閱[crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)。
+如需如何使用 **_CrtCheckMemory**的範例，請參閱[crt_dbg1](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg1)。
 
 ## <a name="see-also"></a>另請參閱
 

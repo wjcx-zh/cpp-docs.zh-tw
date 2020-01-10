@@ -2,36 +2,37 @@
 title: 通用 Windows 應用程式 (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: fbd5366ee52dfe32baef9458a82c16914666699e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.topic: overview
+ms.openlocfilehash: 11a32504dfdd380f621c380994f4f53073547a57
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392059"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274696"
 ---
 # <a name="universal-windows-apps-c"></a>通用 Windows 應用程式 (C++)
 
-通用 Windows 平台 (UWP) 是 Windows 的現代程式設計介面。 使用 UWP 撰寫的應用程式或元件一次，並將它部署在任何 Windows 10 裝置。 您可以撰寫元件C++和任何其他的 UWP 相容語言撰寫的應用程式可以使用它。
+通用 Windows 平臺（UWP）是適用于 Windows 的現代化程式設計介面。 您可以使用 UWP 撰寫應用程式或元件一次，並將它部署在任何 Windows 10 裝置上。 您可以在中C++撰寫元件，並以任何其他 UWP 相容語言撰寫的應用程式可以使用它。
 
-大部分的 UWP 文件是在 Windows 內容在樹狀目錄[通用 Windows 平台的文件](/windows/uwp/)。 您會在這裡找到開始教學課程也做為參考文件。 
+大部分 UWP 檔位於 Windows 內容樹狀結構的[通用 Windows 平臺檔](/windows/uwp/)。 您可以在這裡找到開始教學課程及參考檔。 
 
-新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，新標準 C + + 17 語言推演，適用於 Windows 執行階段 Api。 C++/ 在 Windows 10 SDK 版本 1803年之後推出 WinRT。 C++/ WinRT 完全在標頭檔中實作，而且是為您提供第一級存取新式 Windows api。 不同於C++/CX 實作。 C++/ WinRT 不會使用非標準的語法或 Microsoft 語言擴充功能，以及它完整利用C++編譯器建立高度最佳化的輸出。 如需詳細資訊，請參閱 <<c0> [ 簡介C++/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)。</c0>
+針對新的 UWP 應用程式和元件，我們建議您使用[ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/)，這是一種新的 standard c + + 17 語言投影，適用于 Windows 執行階段 api。 C++從1803版開始，Windows 10 SDK 中提供了/WinRT。 C++/WinRT 完全實作為標頭檔，其設計目的是為您提供現代化 Windows API 的第一級存取權。 與C++/cx 執行不同。 C++/WinRT 不會使用非標準語法或 Microsoft 語言延伸模組，而且它會充分利用C++編譯器來建立高度優化的輸出。 如需詳細資訊，請參閱[ C++/WinRT 簡介](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)。
 
-您可以使用傳統型橋接器應用程式轉換器封裝您現有的桌面應用程式透過 Microsoft Store 部署。 如需詳細資訊，請參閱 <<c0> [ 視覺化使用C++在 Centennial 專案中的執行階段](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)並[傳統型橋接器](/windows/uwp/porting/desktop-to-uwp-root)。</c0>
+您可以使用傳統型橋接器應用程式轉換器來封裝現有的桌面應用程式，以透過 Microsoft Store 進行部署。 如需詳細資訊，請參閱在 Centennial 專案和[桌面橋接器](/windows/uwp/porting/desktop-to-uwp-root)[中C++使用 Visual Runtime](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project) 。
 
-## <a name="uwp-apps-that-use-ccx"></a>UWP 應用程式使用C++/CX
+## <a name="uwp-apps-that-use-ccx"></a>使用C++/CX 的 UWP 應用程式
 
 |||
 |-|-|
-|[Visual C++ 語言參考 (C++/CX)](visual-c-language-reference-c-cx.md)|描述一組簡化的延伸模組的C++的 Windows 執行階段 Api 和例外狀況為基礎的啟用錯誤處理的耗用量。|
+|[C++/CX 語言參考](visual-c-language-reference-c-cx.md)|描述一組擴充功能，可C++簡化 Windows 執行階段 api 的耗用量，並啟用以例外狀況為基礎的錯誤處理。|
 |[建置應用程式和程式庫 (C++/CX)](building-apps-and-libraries-c-cx.md)|說明如何建立可以從 C++/CX 應用程式或元件存取的 DLL 和靜態程式庫。|
-|[教學課程：建立的 UWP"Hello，World"應用程式，在C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|逐步解說中，將會介紹開發 UWP 應用程式的基本概念C++/CX。 |
-|[建立 Windows 執行階段元件中的C++/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|描述如何建立其他的 UWP 應用程式和元件可以使用的 Dll。|
-|[UWP 遊戲程式設計](/windows/uwp/gaming/)|描述如何使用 DirectX 和C++來建立遊戲的 /CX。|
+|[教學課程：在/Cx 中C++建立 UWP "Hello，World" 應用程式](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|介紹/Cx。中C++UWP 應用程式開發基本概念的逐步解說 |
+|[在/Cx 中C++建立 Windows 執行階段元件](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|描述如何建立其他 UWP 應用程式和元件可以使用的 Dll。|
+|[UWP 遊戲程式設計](/windows/uwp/gaming/)|說明如何使用 DirectX 和C++/cx 來建立遊戲。|
 
-## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 執行階段的 UWP 應用程式C++範本庫 (WRL)
+## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>使用 Windows 執行階段C++範本庫（WRL）的 UWP 應用程式
 
-Windows 執行階段C++範本程式庫會提供低階 COM 介面的 isoC++程式碼可以存取 Windows 執行階段例外狀況的環境中。 在大部分情況下，我們建議您使用C++/WinRT 或C++而不是 Windows 執行階段 /CXC++適用於 UWP 應用程式開發的範本程式庫。 如需 Windows 執行階段的詳細資訊C++樣板程式庫，請參閱[Windows 執行階段C++範本程式庫 (WRL)](wrl/windows-runtime-cpp-template-library-wrl.md)。
+Windows 執行階段C++樣板程式庫提供的低層級 COM 介面，ISO C++程式碼可以在無例外狀況的環境中存取 Windows 執行階段。 在大部分情況下，建議您使用/WinRT 或C++ C++/cx，而不要使用 Windows 執行階段C++的範本庫來進行 UWP 應用程式開發。 如需 Windows 執行階段C++範本庫的相關資訊，請參閱[Windows 執行階段C++範本庫（WRL）](wrl/windows-runtime-cpp-template-library-wrl.md)。
 
 ## <a name="see-also"></a>另請參閱
 

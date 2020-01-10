@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C3797
 ms.assetid: ab27ff34-8c1d-4297-b004-9e39bd3a4f25
-ms.openlocfilehash: 76206cdffce3f551ff472cbd83df486eb41ae80b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7236cb75aef4250440a1e992415df07fb5b7da3f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400132"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757172"
 ---
 # <a name="compiler-error-c3797"></a>編譯器錯誤 C3797
 
-'override': 事件宣告不能有覆寫規範 （應該置於事件新增/移除/引發方法改為）
+' override '：事件宣告不能有覆寫規範（應該放在事件新增/移除/引發方法上）
 
-您無法覆寫 trivial 事件 （不需要明確定義的存取子方法的事件） 與另一個 trivial 事件。 覆寫的事件必須定義其存取子函式的行為。
+您無法使用另一個一般事件來覆寫一般事件（沒有明確定義存取子方法的事件）。 覆寫事件必須定義其對存取子函式的行為。
 
-如需詳細資訊，請參閱 <<c0> [ 事件](../../extensions/event-cpp-component-extensions.md)。
+如需詳細資訊，請參閱[事件](../../extensions/event-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C3797。
 
-```
+```cpp
 // C3797.cpp
 // compile with: /clr /c
 delegate void MyDel();

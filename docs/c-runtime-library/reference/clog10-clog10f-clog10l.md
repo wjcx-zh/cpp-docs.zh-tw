@@ -1,11 +1,11 @@
 ---
 title: clog10、clog10f、clog10l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - clog10
 - clog10f
 - clog10l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - clog10
 - clog10f
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a840494caf3c34f09d8c90970988e847be712cb4
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62335445"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939105"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10、clog10f、clog10l
 
@@ -73,13 +76,13 @@ _Lcomplex clog10( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**clog10**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **clog10**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**clog10**的多載。 在 C 程式中， **clog10**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**clog10**,               **clog10f**, **clogl**|\<complex.h>|\<ccomplex>|
+|**clog10**、 **clog10f**、 **clogl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

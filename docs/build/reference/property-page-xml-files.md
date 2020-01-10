@@ -4,12 +4,12 @@ ms.date: 05/06/2019
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-ms.openlocfilehash: 76378dc5ef9d7443045c329579cfa3c410dc262f
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: da9fa72419dc6971e90124b061da48493d7ca017
+ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630747"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74303158"
 ---
 # <a name="property-page-xml-rule-files"></a>屬性頁 XML 規則檔
 
@@ -95,7 +95,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    e. **xmlns：** 這是標準 XAML 項目。 您可以看到列出三個命名空間。 這些會分別對應至 XAML 還原序列化類別、XAML 結構描述和系統命名空間的命名空間。
 
-   f. **DisplayName：** 這是屬性頁 UI 上針對 Rule 節點所顯示的名稱。 此值會當地語系化。 由於內部當地語系化工具需求，我們將 DisplayName 建立為 Rule 的子項目，而不是屬性 (例如 Name 或 SwitchPrefix)。 從 XAML 的觀點來看，兩者是相等的。 因此，您可以直接將它設為屬性來減少雜亂，或讓它保持原狀。
+   f. **DisplayName：** 這是屬性頁 UI 上針對 Rule 節點所顯示的名稱。 此值會當地語系化。 由於內部當地語系化工具需求，我們將 DisplayName 建立為 Rule 的子項目，而不是屬性 (例如 Name 或 SwitchPrefix)。 從 XAML 的觀點來看，兩者都是相等的。 因此，您可以直接將它設為屬性來減少雜亂，或讓它保持原狀。
 
    g. **DataSource：** 這是非常重要的屬性，它會告知專案系統屬性值應該從中讀取及寫入的位置，以及其群組方式 (以下將進行說明)。 針對 cl.xml，這些值包括：
 
@@ -112,32 +112,32 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
    - `HasConfigurationCondition="true"`，告知專案系統將組態條件附加至值，只有目前的專案組態才會生效 (條件可附加至父群組或值本身)。 例如，開啟專案節點的屬性頁，然後將 [組態屬性] > [C/C++] > [一般] 下的 [將警告視為錯誤] 屬性值設定為 [是]。 下列值會寫入專案檔。 注意附加至父 ItemDefinitionGroup 的組態條件。
 
       ```xml
-      <ItemDefinitionGroup Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">
+      <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
         <ClCompile>
           <TreatWarningAsError>true</TreatWarningAsError>
         </ClCompile>
       </ItemDefinitionGroup>
       ```
 
-      如果在特定檔案的屬性頁中設定此值 (例如 stdafx.h), 則屬性值會寫入至專案檔中的*stdafx.h*專案底下, 如下所示。 注意如何將組態條件直接附加至中繼資料本身。
+      如果在特定檔案的屬性頁中設定此值（例如 stdafx.h），則屬性值會寫入至專案檔中的*stdafx.h*專案底下，如下所示。 注意如何將組態條件直接附加至中繼資料本身。
 
       ```xml
       <ItemGroup>
         <ClCompile Include="stdafx.cpp">
-          <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+          <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</TreatWarningAsError>
         </ClCompile>
       </ItemGroup>
       ```
 
-   **DataSource** 還有以上未列出的另一個屬性，那就是 **PersistedName**。 您可以使用此屬性 (Attribute) 代表專案檔中使用不同名稱的屬性 (Property)。 根據預設，此屬性 (Attribute) 會設定為屬性 (Property) 的 **Name**。
+   **DataSource** 還有以上未列出的另一個屬性，那就是 **PersistedName**。 您可以使用此屬性 (Attribute) 代表專案檔中使用不同名稱的屬性 (Property)。 根據預設，這個屬性會設定為屬性的**名稱**。
 
-   個別屬性可以覆寫其父 Rule 的 DataSource。 在此情況下，該屬性值的位置會與 Rule 中的其他屬性不同。
+   個別屬性可以覆寫其父規則的資料來源。 在此情況下，該屬性值的位置將與規則中的其他屬性不同。
 
-   h. Rule 還有此處未顯示的其他屬性，包括 Description 和SupportsFileBatching。 藉由瀏覽這些類型的文件，即可取得適用於 Rule 或任何其他項目的完整屬性集。 或者，您可以在 `Microsoft.Build.Framework .dll` 組件的 `Microsoft.Build.Framework.XamlTypes` 命名空間中，查看這些類型的公用屬性。
+   h. Rule 還有此處未顯示的其他屬性，包括 Description 和SupportsFileBatching。 藉由瀏覽這些類型的文件，即可取得適用於 Rule 或任何其他項目的完整屬性集。 或者，您可以在 `Microsoft.Build.Framework.XamlTypes` 組件的 `Microsoft.Build.Framework .dll` 命名空間中，查看這些類型的公用屬性。
 
    i. **DisplayName**、**PageTemplate** 和 **Order** 是位於此 UI 獨立資料模型中的 UI 相關屬性。 這些屬性幾乎一定可供用來顯示屬性頁的 UI 使用。 **DisplayName** 和 **Description** 是 XML 檔案中幾乎所有項目上都有的兩個屬性。 而且只有這兩個屬性會當地語系化 (本文稍後將說明這些字串的當地語系化)。
 
-1. **分類：** 一個 Rule 可以有多個 Category。 XML 檔案中列出的分類順序是對 UI 的建議，以依照相同順序顯示分類。 例如，[C/C++] 節點下的分類順序在 UI 中顯示為：[一般]、[最佳化]、[前置處理器]...  – 與 cl.xml 中相同。 範例分類看起來如下：
+1. **Category：** 一個 Rule 可以有多個 Category。 XML 檔案中列出的分類順序是對 UI 的建議，以依照相同順序顯示分類。 例如，[C/C++] 節點下的分類順序在 UI 中顯示為：[一般]、[最佳化]、[前置處理器]...  – 與 cl.xml 中相同。 範例分類看起來如下：
 
     ```xml
     <Category Name="Optimization">
@@ -149,7 +149,7 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    上述程式碼片段顯示先前描述的 **Name** 和 **DisplayName** 屬性。 同樣地，**Category** 可能會有以上未使用的其他屬性。 您可以藉由閱讀文件或使用 ildasm.exe 查看組件，來了解這些屬性。
 
-1. **Property：** 這是 XML 檔案的主要部分，包含此 Rule 中的所有屬性清單。 每個屬性可以是上面 XAML 基本架構中所示的五種可能類型之一。 當然，您的檔案中可以只有其中一些類型。 一個屬性 (Property) 包含可讓其描述更豐富的數個屬性 (Attribute)。 此處只會說明 **StringProperty**。 其餘屬性則大同小異。
+1. **Property：** 這是 XML 檔案的主要部分，包含此 Rule 中的所有屬性清單。 每個屬性可以是上面 XAML 基本架構中所示的五種可能類型之一。 當然，您的檔案中可以只有其中一些類型。 一個屬性 (Property) 包含可讓其描述更豐富的數個屬性 (Attribute)。 我只會在這裡說明**StringProperty** 。 其餘屬性則大同小異。
 
     ```xml
     <StringProperty Subtype="file" Name="ObjectFileName" Category="Output Files" Switch="Fo">
@@ -164,16 +164,16 @@ IDE 中的專案屬性頁是由 VCTargets 資料夾中的 XML 檔案設定。 �
 
    程式碼片段中的大部分屬性先前都已描述。 Subtype、Category 和 Switch 是新的屬性。
 
-   a. **Subtype** 是僅適用於 **StringProperty** 和 **StringListProperty** 的屬性，其提供內容資訊。 例如，值 "file" 指出屬性代表檔案路徑。 這類內容資訊藉由提供 Windows 檔案總管作為屬性的編輯器，讓使用者以視覺化方式選擇檔案，因此可增強編輯體驗。
+   a. **Subtype** 是僅適用於 **StringProperty** 和 **StringListProperty** 的屬性，其提供內容資訊。 例如，值 "file" 指出屬性代表檔案路徑。 這類內容資訊可用來增強編輯體驗，方法是提供 Windows Explorer 做為屬性的編輯器，讓使用者能夠以視覺化方式選擇檔案。
 
-   b. **分類：** 這會宣告此屬性所屬分類。 請嘗試在 UI 中的 [輸出檔案] 分類下找到此屬性。
+   b. **Category：** 這會宣告此屬性所屬分類。 請嘗試在 UI 中的 [輸出檔案] 分類下找到此屬性。
 
    c. **Switch：** 當 Rule 代表一項工具時 (例如本例中的編譯器工具)，Rule 的大部分屬性會在建置時作為參數傳遞至工具可執行檔。 此屬性的值會指出要使用的參數常值。 上述屬性指定其參數應該是 **Fo**。 此屬性 (Property) 會與父 Rule 的 **SwitchPrefix** 屬性 (Attribute) 結合，然後傳遞至可執行檔作為 **/Fo"Debug\"** (顯示在屬性頁 UI 的 C/C++ 命令列中)。
 
    其他屬性 (Property) 的屬性 (Attribute) 包括：
 
-   d. **Visible：** 如果基於某些原因，您不想要在屬性 (Property) 頁中顯示您的屬性 (Property) (但仍可能在建置期間提供)，請將此屬性 (Attribute) 設定為 false。
+   d. **可見：** 如果基於某些原因，您不想讓屬性顯示在屬性頁中（但在組建期間可能仍然可以使用），請將此屬性設定為 false。
 
-   e. **ReadOnly：** 如果您想要在屬性 (Property) 頁中提供此屬性 (Property) 值的唯讀檢視，請將此屬性 (Attribute) 設定為 true。
+   e. **ReadOnly：** 如果您想要在屬性頁中提供這個屬性值的唯讀視圖，請將此屬性設定為 true。
 
    f. **IncludeInCommandLine：** 某些屬性可能不需要在建置期間傳遞至工具。 將此屬性設定為 false 可防止傳遞它。

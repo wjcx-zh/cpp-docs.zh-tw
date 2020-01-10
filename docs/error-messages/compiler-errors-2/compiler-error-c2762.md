@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2762
 ms.assetid: 8b81a801-fd48-40a1-8bee-0748795b12e4
-ms.openlocfilehash: 0cb05d0e111319ff135bdb48d51af6eb4a2f2353
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c2f325fc9266321f224429afd3c295141627ecd6
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257539"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759850"
 ---
 # <a name="compiler-error-c2762"></a>編譯器錯誤 C2762
 
-'class': 無效的運算式，作為 'argument' 的範本引數
+' class '：不正確運算式做為 ' 引數 ' 的樣板引數
 
-使用時[/Za](../../build/reference/za-ze-disable-language-extensions.md)，編譯器不會將整數轉換成指標。
+使用[/za](../../build/reference/za-ze-disable-language-extensions.md)時，編譯器不會將整數轉換成指標。
 
-下列範例會產生 C2762:
+下列範例會產生 C2762：
 
-```
+```cpp
 // C2762.cpp
 // compile with: /Za
 template<typename T, T *pT>

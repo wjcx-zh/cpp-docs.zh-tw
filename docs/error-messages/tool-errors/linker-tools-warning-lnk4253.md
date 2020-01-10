@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4253
 ms.assetid: ec7433a9-aa9c-495a-a9f2-075e7bc3e7bc
-ms.openlocfilehash: d2fd7238a3f57b11b91813bd40b66cb3e9f47202
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3f45880571e5c06f76d5f063ff993e2f6b2be9b
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352514"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988095"
 ---
 # <a name="linker-tools-warning-lnk4253"></a>連結器工具警告 LNK4253
 
-區段 'section1' 尚未合併到 'section2';已合併到 'section3'
+區段 ' section1 ' 未合併至 ' section2 ';已合併至 ' section3 '
 
-連結器偵測到多個衝突的合併要求。 連結器將會忽略其中一個要求。
+連結器偵測到多個衝突的合併要求。 連結器會略過其中一個要求。
 
-A **/合併**遇到選項或指示詞和`from`一節已合併到一個不同的區段，因為先前 **/合併**選項或指示詞 （或是因為隱含從合併連結器）。
+遇到了 **/merge**選項或指示詞，而且 `from` 區段已經合併到不同的區段，因為先前的 **/merge**選項或指示詞（或是因為連結器的隱含合併）。
 
-若要解決 LNK4253，移除其中的合併要求。
+若要解決 LNK4253，請移除其中一個合併要求。
 
-當以 x86 為目標機器和 Windows CE 目標 （ARM MIPS、 arm、mips、sh4 和捲動方塊），具有視覺效果C++，則。CRT 區段現在是唯讀屬性。 如果您的程式碼相依於先前的行為 (。CRT 區段是讀取/寫入），您可以看到非預期的行為。
+以 Visual C++的目標為 x86 電腦和 Windows CE 目標（ARM、MIPS、SH4 和 Thumb）時，。CRT 區段現在是唯讀的。 如果您的程式碼相依于先前的行為（。CRT 區段是讀取/寫入），您可能會看到非預期的行為。
 
 如需詳細資訊，請參閱：
 
@@ -33,9 +33,9 @@ A **/合併**遇到選項或指示詞和`from`一節已合併到一個不同的�
 
 ## <a name="example"></a>範例
 
-在下列範例中，連結器會指示要合併`.rdata`區段兩次，但為不同的區段。 下列範例會產生 LNK4253。
+在下列範例中，會指示連結器將 `.rdata` 區段合併兩次，但在不同的區段中。 下列範例會產生 LNK4253。
 
-```
+```cpp
 // LNK4253.cpp
 // compile with: /W1 /link /merge:.rdata=text2
 // LNK4253 expected

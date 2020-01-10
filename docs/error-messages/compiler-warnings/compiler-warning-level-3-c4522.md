@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4522
 ms.assetid: 7065dc27-0b6c-4e68-a345-c51cdb99a20b
-ms.openlocfilehash: de163f0a3925b711f2f3437b700f75bbe994b3e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e791e490929daa4742a4db985f5a4f99f4db9d37
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401900"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74992050"
 ---
 # <a name="compiler-warning-level-3-c4522"></a>編譯器警告 (層級 3) C4522
 
-'class': 多個指定的指派運算子
+' class '：指定了多個指派運算子
 
-此類別具有單一類型的多個指派運算子。 這個警告僅供參考;建構函式是可在程式中呼叫。
+類別具有單一類型的多個指派運算子。 此警告僅供參考。在您的程式中可以呼叫這些函式。
 
-使用[警告](../../preprocessor/warning.md)可隱藏這個警告的 pragma。
+請使用[warning](../../preprocessor/warning.md) pragma 來隱藏這個警告。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4522。
 
-```
+```cpp
 // C4522.cpp
 // compile with: /EHsc /W3
 #include <iostream>

@@ -1,10 +1,10 @@
 ---
 title: isascii、__isascii、iswascii
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswascii
 - __isascii
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswascii
 - istascii
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7677819a4b138b08ed4ff97de38c091ce0e94fd
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287465"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857784"
 ---
-# <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
+# <a name="isascii-__isascii-iswascii"></a>isascii、__isascii、iswascii
 
 判斷特定字元是否為 ASCII 字元。
 
@@ -60,18 +63,18 @@ int iswascii(
 
 ### <a name="parameters"></a>參數
 
-*C*<br/>
+*c*<br/>
 待測試整數。
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果**c**表示特定的 ASCII 字元。 **__isascii**傳回非零值，如果**c**是 ASCII 字元 （0x00-0x7F 範圍）。 **iswascii**傳回非零值，如果**c**是 ASCII 字元的寬字元表示法。 這些常式都會傳回 0，如果**c**不符合測試條件。
+如果**c**是 ASCII 字元的特定標記法，則每個常式都會傳回非零。 如果**c**是 ASCII 字元（在 0X00-0x7f 範圍內）， **__isascii**會傳回非零值。 如果**c**是 ASCII 字元的寬字元標記法，則**iswascii**會傳回非零值。 如果**c**不符合測試條件，這些常式都會傳回0。
 
 ## <a name="remarks"></a>備註
 
-兩者 **__isascii**並**iswascii**除非已定義前置處理器巨集 _CTYPE_DISABLE_MACROS，否則，會實作為巨集。
+除非已定義預處理器宏 _CTYPE_DISABLE_MACROS，否則 **__isascii**和**iswascii**都會實作為宏。
 
-回溯相容性， **isascii**實作為巨集才[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)未定義或定義為 0; 否則就是未定義。
+為了回溯相容性，只有在[ &#95; &#95;STDC&#95; ](../../preprocessor/predefined-macros.md)未定義或定義為0時， **isascii**才會實作為宏。否則，它會是未定義的。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -86,9 +89,9 @@ int iswascii(
 |**isascii**， **__isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> 或 \<ctype.h>|
 |**iswascii**|C：\<wctype.h>、\<ctype.h>，或 \<wchar.h><br /><br /> C++：\<cwctype>、\<cctype >、\<wctype.h>、\<ctype.h> 或 \<wchar.h>|
 
-**Isascii**， **__isascii**並**iswascii**函式是 Microsoft 專有的。 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+**Isascii**、 **__isascii**和**iswascii**函式是 Microsoft 特有的功能。 如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字元分類](../../c-runtime-library/character-classification.md)<br/>
 [地區設定](../../c-runtime-library/locale.md)<br/>

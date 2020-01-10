@@ -1,12 +1,12 @@
 ---
 title: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _sprintf_p
 - _swprintf_p_l
 - _swprintf_p
 - _sprintf_p_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _sprintf_p
 - _swprintf_p_l
@@ -42,14 +45,14 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb8993293236a20c87707db06715e9a012e643e
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354944"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958020"
 ---
-# <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
+# <a name="_sprintf_p-_sprintf_p_l-_swprintf_p-_swprintf_p_l"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
 將格式化資料寫入字串，而且可以指定在格式字串中使用參數的順序。
 
@@ -105,15 +108,15 @@ int _swprintf_p_l(
 
 ## <a name="return-value"></a>傳回值
 
-寫入字元數目，則為-1，發生錯誤。
+寫入的字元數，如果發生錯誤，則為-1。
 
 ## <a name="remarks"></a>備註
 
-**_Sprintf_p**函式加以格式化並且儲存一連串字元和值*緩衝區*。 在每個引數*argument_list* （如果有的話） 會轉換和輸出中的對應格式規格根據*格式*。 *格式*引數會使用[格式規格語法，printf 和 wprintf 函式](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。 之間的差異 **_sprintf_p**並**sprintf_s**在於 **_sprintf_p**支援位置參數，可讓您指定的引數的順序格式字串中使用。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
+**_Sprintf_p**函式會格式化並將一連串的字元和值儲存在*buffer*中。 *Argument_list*中的每個引數（如果有的話）都會根據*格式*的對應格式規格進行轉換和輸出。 *Format*引數會使用[printf 和 wprintf 函式的格式規格語法](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)。 null 字元會附加至最後一個寫入的字元之後。 如果在重疊的字串之間進行複製，則行為是未定義的。 **_Sprintf_p**和**sprintf_s**之間的差異在於 **_sprintf_p**支援位置參數，這可讓您指定在格式字串中使用引數的順序。 如需詳細資訊，請參閱 [printf_p 位置參數](../../c-runtime-library/printf-p-positional-parameters.md)。
 
-**_swprintf_p**是寬字元版本的 **_sprintf_p**; 指標引數 **_swprintf_p**是寬字元字串。 編碼錯誤偵測 **_swprintf_p**可能會不同於 **_sprintf_p**。 **_swprintf_p**並**fwprintf_p**運作方式完全相同，不同之處在於 **_swprintf_p**字串，而非類型的目的地會將輸出寫入**檔案**，及 **_swprintf_p**需要*計數*參數來指定要寫入的字元數目上限。 使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+**_swprintf_p**是寬字元版本的 **_sprintf_p**; **_swprintf_p**的指標引數是寬字元字串。 **_Swprintf_p**中的編碼錯誤偵測可能與 **_sprintf_p**中的不同。 **_swprintf_p**和**fwprintf_p**的行為相同，不同之處在于 **_swprintf_p**會將輸出寫入字串，而不是**FILE**類型的目的地，而 **_swprintf_p**需要*count*參數來指定要寫入的最大字元數。 這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
-**_sprintf_p**會傳回儲存在位元組數目*緩衝區*，不計入結束的 null 字元。 **_swprintf_p**會傳回儲存在寬字元數目*緩衝區*，不計入結束的 null 寬字元。 如果*緩衝區*或是*格式*為 null 指標，或如果格式字串包含無效格式化字元，無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md). 如果允許繼續執行，這些函式會傳回-1，並設定**errno**要**EINVAL**。
+**_sprintf_p**會傳回儲存在*緩衝區*中的位元組數目，而不會計算終止的 null 字元。 **_swprintf_p**會傳回儲存在*緩衝區*中的寬字元數，而不會計算終止的 null 寬字元。 如果*buffer*或*format*是 null 指標，或如果格式字串包含不正確格式化字元，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回-1，並將**errno**設為**EINVAL**。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -126,8 +129,8 @@ int _swprintf_p_l(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**_sprintf_p**， **_sprintf_p_l**|\<stdio.h>|
-|**_swprintf_p**， **_swprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
+|**_sprintf_p**、 **_sprintf_p_l**|\<stdio.h>|
+|**_swprintf_p**、 **_swprintf_p_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

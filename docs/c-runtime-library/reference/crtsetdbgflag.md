@@ -1,9 +1,9 @@
 ---
 title: _CrtSetDbgFlag
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _CrtSetDbgFlag
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _CRTDBG_REPORT_FLAG
 - _CRTDBG_CHECK_EVERY_16_DF
@@ -50,14 +53,14 @@ helpviewer_keywords:
 - CRTDBG_CHECK_CRT_DF macro
 - _CRTDBG_CHECK_CRT_DF macro
 ms.assetid: b5657ffb-6178-4cbf-9886-1af904ede94c
-ms.openlocfilehash: dcb8e37090e4c15ba849e76ca1cb1cc646a7bcc0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8506b593a579c8dd1791e56c320bd9d8e2ee9ba2
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348181"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938619"
 ---
-# <a name="crtsetdbgflag"></a>_CrtSetDbgFlag
+# <a name="_crtsetdbgflag"></a>_CrtSetDbgFlag
 
 擷取或修改 **_crtDbgFlag** 旗標的狀態，以控制偵錯堆積管理員的配置行為 (僅限偵錯版本)。
 
@@ -80,23 +83,23 @@ int _CrtSetDbgFlag(
 
 ## <a name="remarks"></a>備註
 
-**_CrtSetDbgFlag**函式可讓應用程式，以控制偵錯堆積管理員如何追蹤記憶體配置藉由修改的位元欄位 **_crtDbgFlag**旗標。 應用程式可透過設定位元 (開啟)，指示偵錯堆積管理員執行特定偵錯作業，包含在應用程式結束時檢查記憶體遺漏並在發現任何問題時進行回報，以及藉由指定已釋放的記憶體區塊應保留在堆積的連結清單中來模擬低記憶體的情況，還有在每次配置要求時透過檢查每個記憶體區塊來驗證堆積的完整性。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，呼叫 **_CrtSetDbgFlag**會在前置處理期間移除。
+**_CrtSetDbgFlag**函式可讓應用程式透過修改 **_crtDbgFlag**旗標的位欄位，來控制 debug 堆積管理員如何追蹤記憶體配置。 應用程式可透過設定位元 (開啟)，指示偵錯堆積管理員執行特定偵錯作業，包含在應用程式結束時檢查記憶體遺漏並在發現任何問題時進行回報，以及藉由指定已釋放的記憶體區塊應保留在堆積的連結清單中來模擬低記憶體的情況，還有在每次配置要求時透過檢查每個記憶體區塊來驗證堆積的完整性。 未定義[_debug](../../c-runtime-library/debug.md)時，會在前置處理期間移除對 **_CrtSetDbgFlag**的呼叫。
 
 下表列出 **_crtDbgFlag** 的位元欄位，並描述它們的行為。 因為設定位元會導致增加診斷輸出，並降低程式執行速度，所以預設不會設定這些位元 (關閉)。 如需這些位元欄位的詳細資訊，請參閱[堆積狀態報告函式](/visualstudio/debugger/crt-debug-heap-details)。
 
-|位元欄位|預設|描述|
+|位元欄位|預設|說明|
 |---------------|-------------|-----------------|
-|**_CRTDBG_ALLOC_MEM_DF**|ON|ON:啟用偵錯堆積配置，並使用的記憶體區塊類型識別項，例如 **_CLIENT_BLOCK**。 OFF:新增配置至堆積的連結清單，但將區塊類型 **_IGNORE_BLOCK**。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|ON:呼叫[_CrtCheckMemory](crtcheckmemory.md)在每次配置和解除配置要求。 OFF: **_CrtCheckMemory**必須明確呼叫。<br /><br /> 堆積頻率檢查巨集會在設定此旗標時沒有效果。|
-|**_CRTDBG_CHECK_CRT_DF**|OFF|ON:包含 **_CRT_BLOCK**類型在流失偵測和記憶體狀態差異作業。 OFF:執行階段程式庫內部使用的記憶體會忽略這些作業。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|ON:將釋放的記憶體區塊保留在堆積的連結清單，為它們指派 **_FREE_BLOCK**類型，而且它們填入位元組值 0xDD。 OFF:不要將釋放的區塊保留在堆積的連結清單。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
-|**_CRTDBG_LEAK_CHECK_DF**|OFF|ON:執行自動流失檢查在程式結束時，透過呼叫[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)並產生錯誤報表，如果應用程式無法釋放其配置的所有記憶體。 OFF:不要自動執行遺漏檢查在程式結束。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_ALLOC_MEM_DF**|ON|的啟用 debug 堆積配置，並使用記憶體區塊類型識別碼，例如 **_CLIENT_BLOCK**。 停止將新的配置加入至堆積的連結清單，但將區塊類型設定為 **_IGNORE_BLOCK**。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_CHECK_ALWAYS_DF**|OFF|的在每個配置和解除配置要求時呼叫[_CrtCheckMemory](crtcheckmemory.md) 。 OFF：必須明確呼叫 **_CrtCheckMemory** 。<br /><br /> 堆積頻率檢查巨集會在設定此旗標時沒有效果。|
+|**_CRTDBG_CHECK_CRT_DF**|OFF|的包含流失偵測和記憶體狀態差異作業中的 **_CRT_BLOCK**類型。 停止這些作業會忽略執行時間程式庫內部所使用的記憶體。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_DELAY_FREE_MEM_DF**|OFF|的將釋放的記憶體區塊保留在堆積的連結清單中，將 **_FREE_BLOCK**類型指派給它們，並以 Byte 值0xDD 填入。 停止請勿將釋放的區塊保留在堆積的連結清單中。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
+|**_CRTDBG_LEAK_CHECK_DF**|OFF|的在程式結束時，透過呼叫[_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md)執行自動流失檢查，並在應用程式無法釋放其配置的所有記憶體時產生錯誤報表。 停止請勿在程式結束時自動執行流失檢查。<br /><br /> 也可以與任何堆積頻率檢查巨集結合。|
 
 **堆積檢查頻率巨集**
 
-您可以指定 C 執行階段程式庫執行偵錯堆積驗證的頻率 (**_CrtCheckMemory**) 為基礎的呼叫次數**malloc**， **realloc**， **免費**，並 **_msize**。
+您可以根據**malloc**、 **realloc**、 **free**和 **_msize**的呼叫次數，指定 C 執行時間程式庫執行 debug 堆積（ **_CrtCheckMemory**）驗證的頻率。
 
-**_CrtSetDbgFlag**接著會檢查的上層 16 位元*newFlag*參數的值。 指定的值是數目**malloc**， **realloc**，**免費**，以及 **_msize**呼叫之間 **_CrtCheckMemory**呼叫。 針對此用途有四個預先定義的巨集。
+然後， **_CrtSetDbgFlag**會檢查*newFlag*參數的前16個位是否有一個值。 指定的值是 **_CrtCheckMemory**呼叫之間的**malloc**、 **realloc**、 **free**和 **_msize**呼叫數目。 針對此用途有四個預先定義的巨集。
 
 |巨集|_CrtCheckMemory 呼叫之間，呼叫 malloc、realloc、free 及 _msize 的次數|
 |-----------|------------------------------------------------------------------------------------------|
@@ -105,9 +108,9 @@ int _CrtSetDbgFlag(
 |_CRTDBG_CHECK_EVERY_1024_DF|1024|
 |_CRTDBG_CHECK_DEFAULT_DF|0 (根據預設沒有檢查任何堆積)|
 
-根據預設， **_CrtCheckMemory**每 1,024 次呼叫**malloc**， **realloc**，**免費**，和 **_msize**。
+根據預設， **_CrtCheckMemory**會每隔1024次呼叫**malloc**、 **realloc**、 **free**和 **_msize**一次。
 
-例如，您可以在其中指定堆積檢查每個 16 **malloc**， **realloc**，**免費**，以及 **_msize**為下列程式碼的作業：
+例如，您可以使用下列程式碼，指定堆積檢查每16個**malloc**、 **realloc**、 **free**和 **_msize**作業：
 
 ```C
 #include <crtdbg.h>
@@ -126,21 +129,21 @@ int main( )
 }
 ```
 
-上層 16 位元*newFlag*指定 _CRTDBG_CHECK_ALWAYS_DF 時，會忽略參數。 在此情況下， **_CrtCheckMemory**稱為每次呼叫**malloc**， **realloc**，**免費**，和 **_msize**.
+當指定 _CRTDBG_CHECK_ALWAYS_DF 時，會忽略*newFlag*參數的上16位。 在此情況下，每次您呼叫**malloc**、 **realloc**、 **free**和 **_msize**時，就會呼叫 **_CrtCheckMemory** 。
 
-*newFlag*就會套用至新的狀態 **_crtDbgFlag**而為位元欄位的每個值的組合。
+*newFlag*是要套用至 **_crtDbgFlag**的新狀態，而且是每個位欄位的值組合。
 
 ### <a name="to-change-one-or-more-of-these-bit-fields-and-create-a-new-state-for-the-flag"></a>變更一個或多個位元欄位並建立旗標的新狀態
 
-1. 呼叫 **_CrtSetDbgFlag**具有*newFlag*等於 **_CRTDBG_REPORT_FLAG**若要取得目前 **_crtDbgFlag**狀態，並儲存傳回在暫存變數的值。
+1. 使用*newFlag*等於 **_CRTDBG_REPORT_FLAG**的呼叫 **_CrtSetDbgFlag** ，以取得目前的 **_crtDbgFlag**狀態，並將傳回的值儲存在暫存變數中。
 
-1. 開啟任何位元的位元**或**的暫存變數和對應的位元遮罩 （由應用程式程式碼中的資訊清單常數）。
+1. 使用相對應的位元遮罩（在應用程式代碼中以資訊清單常數表示），透過的位**或**暫存變數來開啟任何位。
 
 1. 使用 **AND** 將變數與適當位元遮罩的位元 **NOT** 結合，以關閉其他位元。
 
-1. 呼叫 **_CrtSetDbgFlag**具有*newFlag*要設定的新狀態的暫存變數中儲存的值等於 **_crtDbgFlag**。
+1. 呼叫 **_CrtSetDbgFlag** ， *newFlag*等於儲存在暫存變數中的值，以設定 **_crtDbgFlag**的新狀態。
 
-下列程式碼示範如何模擬低記憶體釋放堆積的連結清單中的記憶體區塊保留的條件，並防止 **_CrtCheckMemory**呼叫在每次配置要求：
+下列程式碼示範如何藉由將釋出的記憶體區塊保留在堆積的連結清單中，避免在每個配置要求中呼叫 **_CrtCheckMemory** ，以模擬低記憶體的狀況：
 
 ```C
 // Get the current state of the flag
@@ -161,9 +164,9 @@ _CrtSetDbgFlag( tmpFlag );
 
 如需記憶體管理及偵錯堆積的概觀，請參閱 [CRT 偵錯堆積詳細資料](/visualstudio/debugger/crt-debug-heap-details)。
 
-若要停用旗標 **_CrtSetDbgFlag**函式，您應該**AND**使用位元變數**不**的位元遮罩。
+若要使用 **_CrtSetDbgFlag**函式停用旗標，您應該是 **，而**變數則是位元遮罩的位**NOT** 。
 
-如果*newFlag*不是有效的值，這個函式會叫用無效參數處理常式中，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函式會將**errno**要**EINVAL** ，並傳回先前的狀態 **_crtDbgFlag**。
+如果*newFlag*不是有效的值，此函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會將**errno**設定為**EINVAL** ，並傳回 **_crtDbgFlag**的先前狀態。
 
 ## <a name="requirements"></a>需求
 

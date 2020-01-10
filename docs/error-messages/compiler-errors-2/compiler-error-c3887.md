@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f64b72fe5d546550c32f60a27360d8a77c8255bd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344508"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74736577"
 ---
 # <a name="compiler-error-c3887"></a>編譯器錯誤 C3887
 
-'var': 常值資料成員初始設定式必須是常數運算式
+' var '：常值資料成員的初始化運算式必須是常數運算式
 
-A[常值](../../extensions/literal-cpp-component-extensions.md)資料成員只能使用常數運算式初始化。
+常[值資料成員](../../extensions/literal-cpp-component-extensions.md)只能使用常數運算式來初始化。
 
-下列範例會產生 C3887:
+下列範例會產生 C3887：
 
-```
+```cpp
 // C3887.cpp
 // compile with: /clr
 ref struct Y1 {
@@ -31,9 +31,9 @@ ref struct Y1 {
 };
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C3887b.cpp
 // compile with: /clr /c
 ref struct Y1 {

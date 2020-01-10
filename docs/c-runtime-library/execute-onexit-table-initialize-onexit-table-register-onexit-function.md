@@ -1,13 +1,16 @@
 ---
 title: _execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _execute_onexit_table
 - _initialize_onexit_table
 - _register_onexit_function
-apilocation:
+api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _execute_onexit_table
 - process/_execute_onexit_table
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 573be497bafbe5372186f31b3ea60d9a5ef7fac1
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741637"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74856978"
 ---
-# <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
+# <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
 管理要在結束時呼叫的常式。
 
@@ -58,7 +61,7 @@ int _execute_onexit_table(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，則傳回 0。 否則，傳回負值。
+如果成功，會傳回 0。 否則，傳回負值。
 
 ## <a name="remarks"></a>備註
 
@@ -74,11 +77,11 @@ int _execute_onexit_table(
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|\<process.h>|
+|`_initialize_onexit_table function`、`_register_onexit_function`、`_execute_onexit_table`|\<process.h>|
 
-`_initialize_onexit_table`、`_register_onexit_function` 與 `_execute_onexit_table` 函式為 Microsoft 特定的。 如需相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
+`_initialize_onexit_table`、`_register_onexit_function`和 `_execute_onexit_table` 函式為 Microsoft 特有的功能。 如需相容性資訊，請參閱 [相容性](../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3100
 ms.assetid: 7a9c9eaf-08ef-442d-94a0-e457beee8549
-ms.openlocfilehash: 98fa90d184db596458ec7b943e3c35ddc5b7bce9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a0e0995b1a4dcbc92f02de03920893f884c2c7c
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324801"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74750035"
 ---
 # <a name="compiler-error-c3100"></a>編譯器錯誤 C3100
 
-'target': 未知的屬性限定詞
+' target '：未知的屬性辨識符號
 
-指定屬性目標無效。
+指定了不正確屬性目標。
 
 如需詳細資訊，請參閱 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)。
 
@@ -25,7 +25,7 @@ ms.locfileid: "62324801"
 
 下列範例會產生 C3100。
 
-```
+```cpp
 // C3100.cpp
 // compile with: /clr /c
 using namespace System;

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2505
 ms.assetid: b19f5c53-399d-425e-90db-fe3ca9b40858
-ms.openlocfilehash: bf5ffb9b6bad3db1d264941a6aefa391be521c98
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94a6f180c93839646d771509145b2f65a00780fd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165032"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74746860"
 ---
 # <a name="compiler-error-c2505"></a>編譯器錯誤 C2505
 
-'symbol': '__declspec(modifer)' 只能套用至宣告或定義的全域物件或靜態資料成員
+' symbol '： ' __declspec （modifer） ' 只能套用至全域物件或靜態資料成員的宣告或定義
 
-A`__declspec`旨在只能使用於全域範圍的修飾詞用在函式。
+在函式中使用設計為僅用於全域範圍的 `__declspec` 修飾詞。
 
 如需詳細資訊，請參閱 [appdomain](../../cpp/appdomain.md) 和 [處理序](../../cpp/process.md)。
 
-下列範例會產生 C2505:
+下列範例會產生 C2505：
 
-```
+```cpp
 // C2505.cpp
 // compile with: /clr
 

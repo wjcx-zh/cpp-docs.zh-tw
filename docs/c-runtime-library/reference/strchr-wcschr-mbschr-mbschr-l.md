@@ -1,12 +1,12 @@
 ---
 title: strchr、wcschr、_mbschr、_mbschr_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - strchr
 - wcschr
 - _mbschr_l
 - _mbschr
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ftcschr
 - strchr
@@ -41,14 +44,14 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 8668c186a16dc3f3dc2c7223eb10c100fa6d72fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb0b170473ae48b8d339f5e3db8350087997bfeb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62354259"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70940822"
 ---
-# <a name="strchr-wcschr-mbschr-mbschrl"></a>strchr、wcschr、_mbschr、_mbschr_l
+# <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr、wcschr、_mbschr、_mbschr_l
 
 使用目前的地區設定或指定的 LC_CTYPE 轉換狀態分類，在字串中尋找字元。
 
@@ -124,17 +127,17 @@ const unsigned char *_mbschr_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式會傳回第一個出現的指標*c*中*str*，則為 NULL 如果*c*找不到。
+所有這些函式都會傳回*字串*中第一次出現*c*的指標，如果找不到*c* ，則傳回 Null。
 
 ## <a name="remarks"></a>備註
 
-`strchr`函式會尋找第一個出現*c*中*str*，或如果，則會傳回 NULL *c*找不到。 搜尋中會包含結束的 Null 字元。
+函式會在*str*中尋找第一個出現的*c* ，如果找不到 c，則會傳回 Null。 `strchr` 搜尋中會包含結束的 Null 字元。
 
-`wcschr`、`_mbschr` 和 `_mbschr_l` 是寬字元和多位元組字元版本的 `strchr`。 `wcschr` 的引數和傳回值是寬字元字串；`_mbschr` 的引數則是多位元組字元字串。 `_mbschr` 會辨識多位元組字元序列。 此外，如果字串為 null 指標，`_mbschr` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續，請執行`_mbschr`會傳回 NULL，而且設定`errno`EINVAL 到。 `strchr` 和 `wcschr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
+`wcschr`、`_mbschr` 和 `_mbschr_l` 是寬字元和多位元組字元版本的 `strchr`。 `wcschr` 的引數和傳回值是寬字元字串；`_mbschr` 的引數則是多位元組字元字串。 `_mbschr` 會辨識多位元組字元序列。 此外，如果字串為 null 指標，`_mbschr` 會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， `_mbschr`則會傳回 Null，並將設定`errno`為 EINVAL。 `strchr` 和 `wcschr` 不會驗證其參數。 除此之外，這三個函式的行為相同。
 
-輸出值會受到地區設定; LC_CTYPE 分類設定的設定如需詳細資訊，請參閱 < [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+輸出值會受到地區設定的 LC_CTYPE 分類設定影響;如需詳細資訊，請參閱[setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-在 C 中，這些函式接受**const**第一個引數的指標。 在 C++ 中，可使用兩個多載。 取得指標的多載**const**傳回的指標**const**; 版本，採用的指標，非**const**將指標傳回至非**const**. 如果兩個使用者定義巨集 _CRT_CONST_CORRECT_OVERLOADS **const**和非位**const**這些函式的版本可供使用。 如果您需要非**const**兩者的行為C++多載，定義符號 _CONST_RETURN。
+在 C 中，這些函式接受第一個引數的**const**指標。 在 C++ 中，可使用兩個多載。 採用**const**指標的多載會傳回**const**的指標。接受非**const**指標的版本會傳回非**const**的指標。 如果這些函式的**CONST**和非**const**版本都可以使用，則會定義宏 _CRT_CONST_CORRECT_OVERLOADS。 如果您需要這兩個 C++多載的非 const 行為，請定義符號 _CONST_RETURN。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

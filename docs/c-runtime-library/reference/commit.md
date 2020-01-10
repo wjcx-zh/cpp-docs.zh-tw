@@ -1,9 +1,9 @@
 ---
 title: _commit
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _commit
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _commit
 - commit
@@ -26,14 +29,14 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b5a417deef48c89751f56feec480e90444728687
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340350"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70939041"
 ---
-# <a name="commit"></a>_commit
+# <a name="_commit"></a>_commit
 
 將檔案直接清除至磁碟。
 
@@ -52,13 +55,13 @@ int _commit(
 
 ## <a name="return-value"></a>傳回值
 
-**（_c)** 會傳回 0，如果已成功將檔案清除至磁碟。 傳回值為-1 表示錯誤。
+如果檔案已成功排清到磁片， **_commit**會傳回0。 傳回值-1 表示發生錯誤。
 
 ## <a name="remarks"></a>備註
 
-**（_c)** 函式會強制作業系統在寫入相關聯的檔案*fd*到磁碟。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
+**_Commit**函數會強制作業系統將與*fd*相關聯的檔案寫入磁片。 這個呼叫確保立即清除指定的檔案，而不是由作業系統自行決定。
 
-如果*fd*是無效的檔案描述項無效參數處理常式會叫用，如中所述[參數驗證](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，此函數會傳回-1 及**errno**設為**EBADF**。
+如果*fd*是不正確檔案描述項，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，此函式會傳回-1，而**errno**會設定為**EBADF**。
 
 ## <a name="requirements"></a>需求
 

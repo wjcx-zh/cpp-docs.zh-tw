@@ -1,38 +1,37 @@
 ---
-title: no_namespace
-ms.date: 11/04/2016
+title: no_namespace 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - no_namespace
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ba52aed69cdbb46c135e6de5078d718e93f99c87
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326556"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220733"
 ---
-# <a name="nonamespace"></a>no_namespace
-**C++特定**
+# <a name="no_namespace-import-attribute"></a>no_namespace 匯入屬性
 
-指定命名空間名稱不是由編譯器產生。
+**C++特殊**
+
+指定編譯器不會產生命名空間名稱。
 
 ## <a name="syntax"></a>語法
 
-```
-no_namespace
-```
+> **#import***類型-程式庫***no_namespace**
 
 ## <a name="remarks"></a>備註
 
-`#import` 標頭檔中的類型程式庫內容通常是在命名空間中定義。 中指定的命名空間名稱`library`陳述式的原始 IDL 檔案。 如果**no_namespace**指定屬性，則此命名空間不由編譯器產生。
+`#import` 標頭檔中的類型程式庫內容通常是在命名空間中定義。 命名空間名稱是在原始 IDL `library`檔案的語句中指定。 如果已指定**no_namespace**屬性, 則此命名空間不會由編譯器產生。
 
-如果您想要使用不同的命名空間的名稱，然後使用[rename_namespace](../preprocessor/rename-namespace.md)改為屬性。
+如果您想要使用不同的命名空間名稱, 請改用[rename_namespace](../preprocessor/rename-namespace.md)屬性。
 
 **結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

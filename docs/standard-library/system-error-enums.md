@@ -5,18 +5,18 @@ f1_keywords:
 - system_error/std::errc
 - system_error/std::io_errc
 ms.assetid: b21321b7-404a-40de-8777-a85b77c6fa58
-ms.openlocfilehash: d870101c80c8a1f6164e7c89dfbb452fb0a3f9a2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7587261c81739bf19aa0dc4bb80459efa617ad6a
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246223"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898758"
 ---
-# <a name="ltsystemerrorgt-enums"></a>&lt;system_error&gt; 列舉
+# <a name="ltsystem_errorgt-enums"></a>&lt;system_error&gt; 列舉
 
-## <a name="errc"></a> errc
+## <a name="errc"></a>errc
 
-提供在 `<errno.h>` 中由 Posix 所定義的所有錯誤程式碼巨集的符號名稱。
+提供 `<errno.h>`中 POSIX 所定義之所有錯誤碼宏的符號名稱。
 
 ```
 class errc {
@@ -103,7 +103,7 @@ class errc {
 
 ### <a name="remarks"></a>備註
 
-## <a name="io_errc"></a> io_errc
+## <a name="io_errc"></a>io_errc
 
 針對 \<iostream> 中的錯誤條件提供符號名稱。 可用於建立 [error_condition](../standard-library/error-condition-class.md) 物件，以便與 [ios_base:: failure](../standard-library/ios-base-class.md#failure)`code()` 函式所傳回的值進行比較。
 

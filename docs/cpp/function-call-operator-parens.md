@@ -10,16 +10,16 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3194c34bacfe7b2ed758ab245c5858eadb18e64e
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154148"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301518"
 ---
 # <a name="function-call-operator-"></a>函式呼叫運算子：()
 
-函式呼叫運算子，後面是後置運算式 **（)**，指定函式呼叫。
+後面接著函式呼叫運算子（ **）** 的後置運算式會指定函式呼叫。
 
 ## <a name="syntax"></a>語法
 
@@ -32,9 +32,9 @@ postfix-expression
 
 函式呼叫運算子的引數是以逗號分隔的零或多個運算式，即函式的實際引數。
 
-*後置運算式*必須評估為函式位址 （例如，函式識別項或函式指標的值），以及*引數運算式清單*是一份 （分隔的運算式以逗點） 的值 （引數） 會傳遞至函式。 *argument-expression-list* 引數可以是空的。
+後置*運算式*必須評估為函式位址（例如，函式識別碼或函式指標的值），而*引數運算式清單*是運算式的清單（以逗號分隔），其值（引數）會傳遞至函數。 *argument-expression-list* 引數可以是空的。
 
-*後置運算式*必須是其中一種類型：
+後置*運算式*必須是下列其中一種類型：
 
 - 傳回類型 `T` 的函式。 如以下範例宣告所示
 
@@ -129,7 +129,7 @@ int main()
 }
 ```
 
-上述程式碼中定義的類別，稱為`Point`，其中包含私用資料物件來代表*x*並*y*座標。 這些資料物件必須經過修改，而且必須擷取其值。 這個程式只是這種類別的數項設計之一，使用 `GetX` 和 `SetX` 或 `GetY` 和 `SetY` 則是另一種可能的設計方式。
+上述程式碼會定義名為 `Point`的類別，其中包含代表*x*和*y*座標的私用資料物件。 這些資料物件必須經過修改，而且必須擷取其值。 這個程式只是這種類別的數項設計之一，使用 `GetX` 和 `SetX` 或 `GetY` 和 `SetY` 則是另一種可能的設計方式。
 
 傳回類別類型、類別類型的指標或類別類型的參考之函式可以做為成員選擇運算子的左運算元使用。 因此，下列程式碼是合法的：
 
@@ -174,9 +174,9 @@ int main() {
 }
 ```
 
-函式可以透過遞迴方式呼叫。 如需函式宣告的詳細資訊，請參閱[函式](functions-cpp.md)。 相關的資料位於[程式和連結](../cpp/program-and-linkage-cpp.md)。
+函式可以透過遞迴方式呼叫。 如需函式宣告的詳細資訊，請參閱[函數](functions-cpp.md)。 相關的資料位於[轉譯單位和連結](../cpp/program-and-linkage-cpp.md)中。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [後置運算式](../cpp/postfix-expressions.md)<br/>
 [C++ 內建運算子、優先順序和順序關聯性](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>

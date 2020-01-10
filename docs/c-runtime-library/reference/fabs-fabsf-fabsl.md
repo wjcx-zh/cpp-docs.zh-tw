@@ -1,11 +1,11 @@
 ---
 title: fabs、fabsf、fabsl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - fabsf
 - fabs
 - fabsl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fabs
 - fabsf
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 155b0e4ced7eb4ea0ade5445a62fc385f0c157e9
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62334940"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70941487"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -70,21 +73,21 @@ long double fabsl(
 
 ## <a name="return-value"></a>傳回值
 
-**Fabs**函式會傳回引數的絕對值*x*。 不會傳回錯誤。
+**Fabs**函數會傳回引數*x*的絕對值。 不會傳回錯誤。
 
-|輸入|SEH 例外狀況|Matherr 例外狀況|
+|Input|SEH 例外狀況|Matherr 例外狀況|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-C++允許多載，因此您可以呼叫多載**fabs**如果您包含\<cmath> > 標頭。 在 C 程式中， **fabs**一律採用並傳回**double**。
+C++允許多載，因此如果您包含\<h > 標頭，您可以呼叫**fabs**的多載。 在 C 程式中， **fabs**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的 C 標頭|必要的 C++ 標頭|
+|函數|必要的 C 標頭|必要的 C++ 標頭|
 |--------------|-----------------------|---------------------------|
-|**fabs**， **fabsf**， **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**fabs**、 **fabsf**、 **fabsl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

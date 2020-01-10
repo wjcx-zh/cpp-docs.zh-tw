@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3462
 ms.assetid: 56b75f35-9fad-42d9-a969-eeca5d709bec
-ms.openlocfilehash: 020556be73f0bad8bea6836c9ec0dd0b92dd7f39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56227f124d49630d8776f291ada302bd6cd6e983
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222367"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756600"
 ---
 # <a name="compiler-error-c3462"></a>編譯器錯誤 C3462
 
@@ -19,13 +19,13 @@ ms.locfileid: "62222367"
 
 TypeForwardedTo 屬性必須套用至參考的中繼資料中的類型。
 
-如需詳細資訊，請參閱 <<c0> [ 型別轉送 (C++/CLI)](../../extensions/type-forwarding-cpp-cli.md)。</c0>
+如需詳細資訊，請參閱[類型C++轉送（/cli）](../../extensions/type-forwarding-cpp-cli.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會建立元件。
 
-```
+```cpp
 // C3462.cpp
 // compile with: /clr /LD
 public ref class R {};
@@ -35,7 +35,7 @@ public ref class R {};
 
 下列範例會產生 C3462：
 
-```
+```cpp
 // C3462b.cpp
 // compile with: /clr /c
 #using "C3462.dll"

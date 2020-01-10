@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3748
 ms.assetid: 6fe71a0a-dd93-4ce6-9729-b9616360cf34
-ms.openlocfilehash: ef1c446f9feb3d40add62513a31fc81a382b98e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b7da734b72acfda4efd55c518b1cc356ff49cce
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226839"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761851"
 ---
 # <a name="compiler-error-c3748"></a>編譯器錯誤 C3748
 
-'interface': managed 的介面可能不會引發事件
+「介面」： managed 介面可能不會引發事件
 
-[__Event](../../cpp/event.md)關鍵字不能出現的介面。
+[__Event](../../cpp/event.md)關鍵字不能出現在介面內。
 
-下列範例會產生 C3748:
+下列範例會產生 C3748：
 
-```
+```cpp
 // C3748.cpp
 __interface I {
 // try the following line instead

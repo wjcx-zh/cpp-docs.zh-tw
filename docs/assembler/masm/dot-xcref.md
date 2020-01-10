@@ -1,26 +1,27 @@
 ---
 title: .XCREF
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .XCREF
 helpviewer_keywords:
 - .XCREF directive
 ms.assetid: f8443482-2a7e-4764-bef8-8bfdaf06d2fe
-ms.openlocfilehash: 72728ca8e656b617cf05dcf7f2e66a78fcf6aa6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdddb9918f3fb1d826b217581f9d8dba9c72019f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203516"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318161"
 ---
 # <a name="xcref"></a>.XCREF
 
-請參閱[。NOCREF](../../assembler/masm/dot-nocref.md)。
+請參閱[.NOCREF](dot-nocref.md)。
 
 ## <a name="syntax"></a>語法
 
-> .XCREF
+> **.XCREF**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

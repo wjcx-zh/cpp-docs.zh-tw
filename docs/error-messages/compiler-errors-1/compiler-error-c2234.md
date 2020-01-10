@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2234
 ms.assetid: cfa42458-c803-4717-a017-9eca1c0cbfb0
-ms.openlocfilehash: 16cc09f43f8705452c207e5218f4cc274557e825
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f13b33c9e6c56e4ec82e6542ff0869849f0f822
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611467"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74759239"
 ---
 # <a name="compiler-error-c2234"></a>編譯器錯誤 C2234
 
-'name': 參考的陣列不合法
+' name '：參考的陣列不合法
 
-因為不允許參考的指標，參考的陣列不可行。
+因為不允許參考的指標，所以不能參考陣列。
 
-下列範例會產生 C2234:
+下列範例會產生 C2234：
 
-```
+```cpp
 // C2234.cpp
 int main() {
    int i = 0, j = 0, k = 0, l = 0;

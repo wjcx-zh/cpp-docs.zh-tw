@@ -1,33 +1,36 @@
 ---
 title: .CODE
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .CODE
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 65d336d2829c97fdf21e6f4b0fcb3063cc7776ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204370"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314142"
 ---
 # <a name="code"></a>.CODE
 
-當搭配[。模型](../../assembler/masm/dot-model.md)，表示程式碼片段的開頭。
+（僅限 32-bit MASM）。與搭配使用時[。MODEL](dot-model.md)：表示程式碼區段的開頭。
 
 ## <a name="syntax"></a>語法
 
-> .CODE [[name]]
+> **.程式碼**⟦*名稱*⟧ \
+> ⟦ *segmentItem* ⟧ ... \
+> ⟦ *codesegmentnameId* **結束**;;⟧\
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-|參數|描述|
-|---------------|-----------------|
-|`name`|指定的程式碼片段名稱的選擇性參數。 預設名稱是很小，很小，壓縮和一般 _TEXT[模型](../../assembler/masm/dot-model.md)。 預設名稱是*modulename*_TEXT 其他模型。|
+*名稱*\
+指定程式碼片段名稱的選擇性參數。 針對小型、小型、精簡和平面[模型](dot-model.md)，預設名稱是 **_TEXT** 。 預設名稱是其他模型的*modulename*_TEXT。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
-[.DATA](../../assembler/masm/dot-data.md)<br/>
+指示詞[參考](directives-reference.md)\
+[.資料](dot-data.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)
+

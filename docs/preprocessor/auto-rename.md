@@ -1,29 +1,27 @@
 ---
-title: auto_rename
-ms.date: 11/04/2016
+title: auto_rename 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - auto_rename
 helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
-ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43773741701997b48c321cb01ebeba3fed1fb7b
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336682"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70215955"
 ---
-# <a name="autorename"></a>auto_rename
+# <a name="auto_rename-import-attribute"></a>auto_rename 匯入屬性
 
-**C++特定**
+**C++特殊**
 
 藉由對變數名稱附加兩個底線 (__) 來重新命名 C++ 保留字，以解決可能發生的名稱衝突。
 
 ## <a name="syntax"></a>語法
 
-```
-auto_rename
-```
+> **#import***類型-程式庫***auto_rename**
 
 ## <a name="remarks"></a>備註
 
@@ -33,5 +31,5 @@ auto_rename
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

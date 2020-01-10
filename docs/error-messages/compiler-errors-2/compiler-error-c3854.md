@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3854
 ms.assetid: 32a9ead0-c6c7-485a-8802-c7b1fe921d3a
-ms.openlocfilehash: 3b48e2c65003537102864fdafe7db70b06ade029
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c62117e9437233f614aa0e57a3848fcb8dd0c79
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62265525"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74754845"
 ---
 # <a name="compiler-error-c3854"></a>編譯器錯誤 C3854
 
-'=' 的左方運算式評估的函式。 無法指派給函式 （函式不是左值）
+' = ' 左邊的運算式會評估為函式。 無法指派給函式（函數不是左值）
 
-無法重新初始化參考。 取值函式的參考會產生函式，也就是右值，您無法指派。 因此，您無法指派透過函式的參考。
+無法重新初始化參考。 取值函式的參考會產生函數，也就是您無法指派的右值。 因此，您無法透過函式的參考來指派。
 
-下列範例會產生 C3854:
+下列範例會產生 C3854：
 
-```
+```cpp
 // C3854.cpp
 int afunc(int i)
 {

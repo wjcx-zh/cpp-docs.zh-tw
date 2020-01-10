@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2884
 ms.assetid: 8b4d43e3-3fb5-4360-86c8-de59d8736d4f
-ms.openlocfilehash: d920629dc0697d0f2fdd05ac5aca6118b89b88cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0e283c7cd6116655a56f8df67ab4eecf9923b68
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378852"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760937"
 ---
 # <a name="compiler-error-c2884"></a>編譯器錯誤 C2884
 
-'name': 由 using 宣告衝突與區域函式 'function'
+' name '：使用-宣告引入與區域函數 ' function ' 衝突
 
-您嘗試一次以上定義的函式。 第一個定義是本機的定義。 第二個是來自命名空間的`using`宣告。
+您嘗試多次定義函式。 第一個定義是區域定義。 第二個是來自具有 `using` 宣告的命名空間。
 
-下列範例會產生 C2884:
+下列範例會產生 C2884：
 
-```
+```cpp
 // C2884.cpp
 namespace A {
    void z(int);

@@ -1,40 +1,42 @@
 ---
 title: __writedr
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __writedr
 helpviewer_keywords:
 - __writedr intrinsic
 ms.assetid: ac55c1ee-df2f-41d4-a429-6f369d2a934d
-ms.openlocfilehash: c495e8c80029680512358198ca8fb0ce6e65414d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 473e7223e9974d0125e772c152ea85ae90b97342
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389862"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74858057"
 ---
-# <a name="writedr"></a>__writedr
+# <a name="__writedr"></a>__writedr
 
-將指定的值寫入至指定的偵錯器。
+**Microsoft 專屬**
+
+將指定的值寫入指定的 debug 暫存器。
 
 ## <a name="syntax"></a>語法
 
+```C
+void __writedr(unsigned DebugRegister, unsigned DebugValue); /* x86 */
+void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue); /* x64 */
 ```
-void __writedr(unsigned DebugRegister, unsigned DebugValue);
-void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
-```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*DebugRegister*<br/>
-[in]從 0 到 7 可識別偵錯的數字註冊。
+*DebugRegister*\
+在從0到7的數位，用來識別 debug 暫存器。
 
-*DebugValue*<br/>
-[in]要寫入至偵錯值暫存器。
+*DebugValue*\
+在要寫入 debug 暫存器的值。
 
 ## <a name="remarks"></a>備註
 
-這些內建函式是只適用於核心模式，而只提供內建函式常式。
+這些內建函式僅適用于核心模式，而常式僅供內建函式使用。
 
 ## <a name="requirements"></a>需求
 
@@ -42,11 +44,11 @@ void __writedr(unsigned DebugRegister, unsigned __int64 DebugValue);
 |---------------|------------------|
 |`__writedr`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h >
 
 **結束 Microsoft 專屬**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [__readdr](../intrinsics/readdr.md)

@@ -1,30 +1,31 @@
 ---
 title: DD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - dd
 helpviewer_keywords:
 - DD directive
 ms.assetid: 0c238628-2fe2-437e-979d-a90bdae7b478
-ms.openlocfilehash: 6022da53ad8cde2b90431bfaf5b1ea2ddc0cac34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fea3c052ba2c98b7dabe9649884391689209d202
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178804"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314974"
 ---
 # <a name="dd"></a>DD
 
-配置並選擇性地初始化雙字組 （4 個位元組） 儲存體的每個`initializer`。 `DD` 是的同義字[DWORD](../../assembler/masm/dword.md)。
+配置並選擇性地為每個初始化*運算式*初始化雙字（4個位元組）的儲存區。 **DD**是[DWORD](dword.md)的同義字。
 
 ## <a name="syntax"></a>語法
 
-> [[name]]DD 初始設定式 [[，初始設定式]]...
+> ⟦*名稱*⟧ **DD** *初始化運算式*⟦ __，__ *初始化運算式*.。。⟧
 
 ## <a name="remarks"></a>備註
 
-也可用來當做型別規範的類型是合法的任何位置。
+也可以當做類型為合法的任何位置的類型規範使用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

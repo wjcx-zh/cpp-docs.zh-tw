@@ -1,39 +1,39 @@
 ---
 title: .ALLOCSTACK
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - .ALLOCSTACK
 helpviewer_keywords:
 - .ALLOCSTACK directive
 ms.assetid: 9801594b-7ac2-4df2-a49d-07d9dd9af99e
-ms.openlocfilehash: b92db3d03bb5c45e67473cd4085f2369698f6b42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcc94619dfa24ab5c8b5d23a60825641290ef176
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185649"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75314181"
 ---
 # <a name="allocstack"></a>.ALLOCSTACK
 
-會產生**UWOP_ALLOC_SMALL**或是**UWOP_ALLOC_LARGE**與序言中的目前位移的指定大小。
+產生序言中目前位移之指定大小的**UWOP_ALLOC_SMALL**或**UWOP_ALLOC_LARGE** 。
 
 ## <a name="syntax"></a>語法
 
-> .ALLOCSTACK 大小
+> **.ALLOCSTACK** *大小*
 
 ## <a name="remarks"></a>備註
 
-MASM 會選擇最有效率的編碼方式，就指定大小。
+MASM 會針對指定的大小選擇最有效率的編碼方式。
 
-.ALLOCSTACK 允許 ml64.exe 使用者指定框架的函式的回溯時，而且只允許在序言，始[PROC](../../assembler/masm/proc.md)框架宣告[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼路徑。它們只會產生`.xdata`和`.pdata`。 .ALLOCSTACK 之前應該加實際實作要回溯動作的指示。 它是個不錯的做法，包裝的回溯程式指示詞和它們以確保協議要在巨集中的回溯程式碼。
+**.ALLOCSTACK**可讓 ml64 使用者指定框架函式回溯的方式，而且只允許在序言中使用，這會從[PROC](proc.md)框架宣告延伸至[。ENDPROLOG](dot-endprolog.md)指示詞。 這些指示詞不會產生程式碼;它們只會產生 `.xdata` 和 `.pdata`。 **.ALLOCSTACK**的前面應該會有實際執行要展開之動作的指示。 最好的做法是將回溯指示詞和它們要在宏中回溯的程式碼包裝起來，以確保合約。
 
-`size`運算元必須是 8 的倍數。
+*大小*運算元必須是8的倍數。
 
-如需詳細資訊，請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+如需詳細資訊，請參閱[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md)。
 
 ## <a name="sample"></a>範例
 
-下列範例示範如何指定回溯/例外狀況處理常式：
+下列範例顯示如何指定回溯/例外狀況處理常式：
 
 ```asm
 ; ml64 ex3.asm /link /entry:Example1  /SUBSYSTEM:Console
@@ -63,6 +63,7 @@ text ENDS
 END
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

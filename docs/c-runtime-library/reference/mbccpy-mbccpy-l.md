@@ -1,10 +1,10 @@
 ---
 title: _mbccpy、_mbccpy_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbccpy
 - _mbccpy_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mbccpy
 - tccpy
@@ -34,12 +37,12 @@ helpviewer_keywords:
 - _mbccpy function
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
-ms.openlocfilehash: 8d0711a98813565e945dad1d0e998847029668c2
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 98ae2eb75949077d02b98ba3aec75da534e93884
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69499901"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70952691"
 ---
 # <a name="_mbccpy-_mbccpy_l"></a>_mbccpy、_mbccpy_l
 
@@ -77,9 +80,9 @@ void _mbccpy_l(
 
 **_Mbccpy**函數會將一個多位元組字元從*src*複製到*dest*。
 
-這個函式會驗證它的參數。 如果為 **_mbccpy**傳遞了*dest*或*src*的 null 指標, 則會叫用不正確參數處理常式, 如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, **errno**會設定為**EINVAL**。
+這個函式會驗證它的參數。 如果為 **_mbccpy**傳遞了*dest*或*src*的 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行， **errno**會設定為**EINVAL**。
 
-**_mbccpy**會針對任何與地區設定相關的行為使用目前的地區設定。 **_mbccpy_l**與 **_mbccpy**相同, 不同之處在于 **_mbccpy_l**會使用傳入的地區設定來進行任何與地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+**_mbccpy**會針對任何與地區設定相關的行為使用目前的地區設定。 **_mbccpy_l**與 **_mbccpy**相同，不同之處在于 **_mbccpy_l**會使用傳入的地區設定來進行任何與地區設定相關的行為。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 **安全性提示**：使用以 Null 結束的字串。 以 Null 結束的字串不得超過目的緩衝區的大小。 如需詳細資訊，請參閱 [Avoiding Buffer Overruns (避免緩衝區滿溢)](/windows/win32/SecBP/avoiding-buffer-overruns)。 緩衝區滿溢問題是系統攻擊常見的方法，會造成權限無故提高。
 

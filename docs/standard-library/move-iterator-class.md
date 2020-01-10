@@ -20,14 +20,14 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 9e8334db52e05f4a61adb7256e87ed611f0d3ecb
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460214"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689275"
 ---
-# <a name="moveiterator-class"></a>move_iterator 類別
+# <a name="move_iterator-class"></a>move_iterator 類別
 
 類別樣板 `move_iterator` 是迭代器的包裝函式。 move_iterator 和它所包裝 (儲存) 的迭代器提供相同的行為，不過，它會將預存迭代器的取值運算子變更為右值參考，而將複製變成移動。 如需有關 rvalue 的詳細資訊，請參閱 [Rvalue 參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -39,24 +39,24 @@ class move_iterator;
 
 ## <a name="remarks"></a>備註
 
-此樣板類別描述行為類似迭代器的物件 (除非取值時)。 它會儲存 `Iterator` 類型的隨機存取迭代器，此迭代器可透過成員函式 `base()` 來存取。 `move_iterator` 的所有作業是直接在預存迭代器上執行，不過，`operator*` 的結果會隱含轉型為 `value_type&&` 以建立右值參考。
+類別樣板會描述行為類似反覆運算器的物件，但在取值時除外。 它會儲存 `Iterator` 類型的隨機存取迭代器，此迭代器可透過成員函式 `base()` 來存取。 `move_iterator` 的所有作業是直接在預存迭代器上執行，不過，`operator*` 的結果會隱含轉型為 `value_type&&` 以建立右值參考。
 
 `move_iterator` 可能會執行包裝的迭代器所未定義的作業。 不應該使用這些作業。
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[move_iterator](#move_iterator)|`move_iterator` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |類型名稱|描述|
 |-|-|
 |[iterator_type](#iterator_type)|`RandomIterator` 樣板參數的同義字。|
-|[iterator_category](#iterator_category)|具有相同名稱之較長**typename**運算式的同義字, `iterator_category`會識別反覆運算器的一般功能。|
-|[value_type](#value_type)|具有相同名稱之較長**typename**運算式的同義字, `value_type`描述反覆運算器元素的類型。|
-|[difference_type](#difference_type)|具有相同名稱之較長**typename**運算式的同義字, `difference_type`描述在元素之間表達差異值所需的整數類資料類型。|
+|[iterator_category](#iterator_category)|具有相同名稱之較長**typename**運算式的同義字，`iterator_category` 識別反覆運算器的一般功能。|
+|[value_type](#value_type)|具有相同名稱之較長**typename**運算式的同義字，`value_type` 描述反覆運算器元素的類型。|
+|[difference_type](#difference_type)|具有相同名稱之較長**typename**運算式的同義字，`difference_type` 描述在元素之間表達差異值所需的整數類資料類型。|
 |[pointer](#pointer)|`RandomIterator` 樣板參數的同義字。|
 |[reference](#reference)|`rvalue` 參考 `value_type&&` 的同義字。|
 
@@ -68,7 +68,7 @@ class move_iterator;
 
 ### <a name="operators"></a>運算子
 
-|運算子|說明|
+|運算子|描述|
 |-|-|
 |[move_iterator::operator*](#op_star)|傳回 `(reference)*base().`。|
 |[move_iterator::operator++](#op_add_add)|遞增預存迭代器。 確切行為取決於它是否前置遞增或後置遞增作業。|
@@ -84,7 +84,7 @@ class move_iterator;
 
 **標頭：** \<iterator>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="base"></a>  move_iterator::base
 
@@ -132,7 +132,7 @@ typedef RandomIterator iterator_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是範本參數 `RandomIterator`的同義字。
+這個類型與樣板參數 `RandomIterator`同義。
 
 ## <a name="move_iterator"></a>  move_iterator::move_iterator
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right* \
 要當做預存迭代器使用的迭代器。
 
 ### <a name="remarks"></a>備註
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>參數
 
-*_Off*\
+*_Off* \
 要加入至目前位置的位移，藉以判斷目前新位置。
 
 ### <a name="return-value"></a>傳回值
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-型`pointer`別是以的隨機反覆運算器`RandomIterator`為`move_iterator`基礎的 typedef, 可以交換使用。
+型別 `pointer` 是以 `move_iterator` 的隨機反覆運算器 `RandomIterator` 為基礎的**typedef** ，可以交換使用。
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -299,11 +299,11 @@ typedef RandomIterator  pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `RandomIterator` 的同義字。
+此類型是 `RandomIterator`的同義字。
 
 ## <a name="reference"></a>  move_iterator::reference
 
-`reference`型別是`value_type&&`以為`move_iterator`基礎的 typedef, 可與`value_type&&`互換使用。
+類型 `reference` 是以 `move_iterator` `value_type&&` 為基礎的**typedef** ，而且可以與 `value_type&&` 交換使用。
 
 ```cpp
 typedef value_type&& reference;
@@ -325,7 +325,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 這個類型與迭代器特性 `typename iterator_traits<RandomIterator>::value_type` 同義。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<iterator>](../standard-library/iterator.md)\
 [Lvalues 和 Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)\

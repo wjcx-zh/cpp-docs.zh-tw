@@ -1,9 +1,9 @@
 ---
 title: _get_output_format
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_output_format
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr100.dll
 - msvcr80.dll
@@ -11,7 +11,10 @@ apilocation:
 - msvcr90.dll
 - msvcr120.dll
 - msvcr110.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - get_output_format
 - _get_output_format
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - get_output_format function
 - _get_output_format function
 ms.assetid: 0ce42f3b-3479-41c4-bcbf-1d21f7ee37e7
-ms.openlocfilehash: 60e209f6f8b723bfae1a4b434750b6237dc6479d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 20afa988bc4fdf3bc3a6ff073a48a1cc00ff84c5
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751423"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944360"
 ---
-# <a name="getoutputformat"></a>_get_output_format
+# <a name="_get_output_format"></a>_get_output_format
 
 取得輸出格式旗標目前的值。
 

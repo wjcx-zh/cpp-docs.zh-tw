@@ -1,6 +1,6 @@
 ---
 title: Managed 資源屬性頁
-ms.date: 11/04/2016
+ms.date: 08/28/2019
 f1_keywords:
 - VC.Project.VCManagedResourceCompilerTool.ResourceFileName
 - VC.Project.VCManagedResourceCompilerTool.OutputFileName
@@ -8,18 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Managed Resources property page
 ms.assetid: 80b80384-ee55-494d-9f0e-907bb98cfc19
-ms.openlocfilehash: 97cf05f881949444879b0d48e3b3c2703a614985
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 14802996e63392bfb5fcc22096ef5f3d9db197c2
+ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498223"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70177521"
 ---
 # <a name="managed-resources-property-page"></a>Managed 資源屬性頁
 
-啟用資源編譯器的設定。
-
-[受控資源] 屬性頁包含下列屬性：
+在/Cli 程式中C++使用 .net 資源時, [**受控資源**] 屬性頁會公開 managed 資源編譯器[resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)的下列屬性:
 
 - **資源邏輯名稱**
 

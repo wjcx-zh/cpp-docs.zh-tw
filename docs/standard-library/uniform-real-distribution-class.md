@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::uniform_real_distribution [C++], param_type
 - std::uniform_real_distribution [C++], param_type
 ms.assetid: 5cf906fd-0319-4984-b21b-98425cd7532d
-ms.openlocfilehash: 752226c9cacfdd36b93890502d62187f7b44a8da
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1c63002db7de4ebce348505c4e757e6901861a93
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454944"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688814"
 ---
-# <a name="uniformrealdistribution-class"></a>uniform_real_distribution 類別
+# <a name="uniform_real_distribution-class"></a>uniform_real_distribution 類別
 
 在內含-專有的輸出範圍中產生統一 (每個值都有同等可能性) 浮點分佈。
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>參數
 
-*RealType*\
-浮點結果類型, 預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
+*RealType* \
+浮點結果類型，預設為**double**。 如需可能的類型，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="remarks"></a>備註
 
-此範本類別描述內含-專有分佈，其中透過分佈產生使用者指定的整數浮點類型的值，因此每個值都有同等可能性。 下表提供各個成員的文章連結。
+類別樣板描述一個內含-獨佔分佈，它會產生具有分佈的使用者指定整數浮點類型的值，讓每個值都能有同樣的可能性。 下表提供各個成員的文章連結。
 
 ||||
 |-|-|-|
@@ -85,7 +85,7 @@ public:
 
 屬性成員 `a()` 會傳回目前儲存的分佈下限，而 `b()` 會傳回目前儲存的上限。 對於此分佈類別，這些下限和上限值和一般屬性函式 `min()` 及 `max()` (敘述於 [\<random>](../standard-library/random.md) 主題中) 所傳回的一樣。
 
-屬性成員 `param()` 設定或傳回 `param_type` 已儲存分佈參數封裝。
+屬性成員 `param()` 會設定或傳回 `param_type` 預存分佈參數套件。
 
 `min()` 和 `max()` 成員函式會分別傳回最小可能結果和最大可能結果。
 
@@ -93,7 +93,7 @@ public:
 
 `operator()` 成員函式會根據 URNG 引擎傳回下一個產生的值，無論是從目前的參數封裝或是指定的參數封裝。
 
-如需有關分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
+如需分佈類別及其成員的詳細資訊，請參閱 [\<random>](../standard-library/random.md)。
 
 ## <a name="example"></a>範例
 
@@ -176,7 +176,7 @@ Distribution for 10 samples:
 
 **標頭：** \<random>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="uniform_real_distribution"></a>  uniform_real_distribution::uniform_real_distribution
 
@@ -189,20 +189,20 @@ explicit uniform_real_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>參數
 
-*為*\
+*\*
 隨機值的下限 (內含)。
 
-*位元組*\
+*b* \
 隨機值的上限 (專有)。
 
-*parm*\
+*parm* \
 用來建構分佈的 `param_type` 結構。
 
 ### <a name="remarks"></a>備註
 
 **前置條件：** `a < b`
 
-第一個函式會建立一個物件, 其儲存*的*值保留值*a* , 而其預存*b*值保留值*b*。
+第一個函式會建立一個物件，其儲存*的*值保留值*a* ，而其預存*b*值保留值*b*。
 
 第二個建構函式會建構預存參數是從 *parm* 初始化而來的物件。 您可以呼叫 `param()` 成員函式，取得及設定現有分佈的目前參數。
 
@@ -224,13 +224,13 @@ struct param_type {
 
 ### <a name="parameters"></a>參數
 
-*為*\
+*\*
 隨機值的下限 (內含)。
 
-*位元組*\
+*b* \
 隨機值的上限 (專有)。
 
-*再*\
+*right* \
 要與這個項目比較的 `param_type` 物件。
 
 ### <a name="remarks"></a>備註
@@ -239,6 +239,6 @@ struct param_type {
 
 此結構可在具現化時傳遞至分佈的類別建構函式，傳遞至 `param()` 成員函式可設定現有分佈之儲存的參數，傳遞至 `operator()` 可用於取代儲存的參數。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<random>](../standard-library/random.md)

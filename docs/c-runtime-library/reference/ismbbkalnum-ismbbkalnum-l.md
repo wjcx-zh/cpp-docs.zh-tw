@@ -1,10 +1,10 @@
 ---
 title: _ismbbkalnum、_ismbbkalnum_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _ismbbkalnum
 - ismbbkalnum
@@ -28,14 +31,14 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158003"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954184"
 ---
-# <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum、_ismbbkalnum_l
+# <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum、_ismbbkalnum_l
 
 判斷特定多位元組字元是否為非 ASCII 文字符號。
 
@@ -61,7 +64,7 @@ int _ismbbkalnum_l(
 
 ## <a name="return-value"></a>傳回值
 
-**_ismbbkalnum**傳回非零值，如果整數*c*如果不是標點符號，則為 0 以外的非 ASCII 文字符號。 **_ismbbkalnum**會使用目前的地區設定，如地區設定相關字元的詳細資訊。 **_ismbbkalnum_l**等同於 **_ismbbkalnum**不同之處在於它接受地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+如果整數*c*是標點符號以外的非 ASCII 文字元號， **_ismbbkalnum**會傳回非零值; 如果不是，則傳回0。 **_ismbbkalnum**會針對地區設定相關的字元資訊使用目前的地區設定。 **_ismbbkalnum_l**與 **_ismbbkalnum**相同，不同之處在于它會採用地區設定做為參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 ## <a name="requirements"></a>需求
 

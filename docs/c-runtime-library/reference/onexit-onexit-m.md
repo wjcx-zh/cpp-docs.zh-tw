@@ -1,10 +1,10 @@
 ---
 title: _onexit，_onexit_m
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _onexit
 - _onexit_m
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _onexit
 - onexit_m
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9afcd729f19f11b82e8f24c2b7fcf9ec40990deb
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156041"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951350"
 ---
-# <a name="onexit-onexitm"></a>_onexit，_onexit_m
+# <a name="_onexit-_onexit_m"></a>_onexit，_onexit_m
 
 在結束時註冊要呼叫的常式。
 
@@ -59,15 +62,15 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>傳回值
 
-**_onexit**函式傳回的指標，如果是成功或是**NULL**如果沒有空間可儲存函式指標。
+如果成功， **_onexit**會傳回函式的指標，如果沒有空間可儲存函式指標，則會傳回**Null** 。
 
 ## <a name="remarks"></a>備註
 
-**_Onexit**函式的位址傳遞給函式 (*函式*) 當程式正常終止時呼叫。 後續呼叫 **_onexit**建立依 LIFO （最後一個-後進先出） 順序執行的函式的暫存器。 函式傳遞至 **_onexit**不能接受參數。
+當程式正常終止時，會傳遞要呼叫之函式（函*式）的*位址給 **_onexit**函式。 後續對 **_onexit**的呼叫會建立以 LIFO （後進先出）循序執行的函式的註冊。 傳遞至 **_onexit**的函式不能接受參數。
 
-萬一時 **_onexit** DLL 時，註冊的常式中呼叫 **_onexit**執行於 DLL 卸載之後**DllMain**在使用 DLL_PROCESS_DETACH 呼叫。
+在從 DLL 內呼叫 **_onexit**的情況下，使用 **_onexit**註冊的常式會在使用 DLL_PROCESS_DETACH 呼叫**DllMain**之後，于 dll 的卸載上執行。
 
-**_onexit**是 Microsoft 擴充功能。 針對 ANSI 可攜性，請使用 [atexit](atexit.md)。 **_Onexit_m**函式版本是適用於混合的模式。
+**_onexit**是 Microsoft 擴充功能。 針對 ANSI 可攜性，請使用 [atexit](atexit.md)。 函式的 **_onexit_m**版本適用于混合模式使用。
 
 ## <a name="requirements"></a>需求
 

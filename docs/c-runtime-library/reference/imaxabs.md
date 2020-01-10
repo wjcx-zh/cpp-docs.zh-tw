@@ -1,9 +1,9 @@
 ---
 title: imaxabs
 ms.date: 04/05/2018
-apiname:
+api_name:
 - imaxabs
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,18 +15,21 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - imaxabs
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1f20c4de2ff9070bae3bfaeb8ba2d97d87d2d4d
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157489"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70954683"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -47,10 +50,10 @@ intmax_t imaxabs(
 
 ## <a name="return-value"></a>傳回值
 
-**Imaxabs**函式會傳回引數的絕對值。 不會傳回錯誤。
+**Imaxabs**函數會傳回引數的絕對值。 不會傳回錯誤。
 
 > [!NOTE]
-> 因為可以表示使用的負整數範圍**intmax_t**超過範圍的可表示的正整數，就可以提供的引數**imaxabs**無法轉換。 如果引數的絕對值無法由傳回類型，行為**imaxabs**是未定義。
+> 因為可以使用**intmax_t**表示的負整數範圍大於可以表示的正整數範圍，所以可以將引數提供給無法轉換的**imaxabs** 。 如果引數的絕對值無法以傳回型別表示，則**imaxabs**的行為是未定義的。
 
 ## <a name="requirements"></a>需求
 

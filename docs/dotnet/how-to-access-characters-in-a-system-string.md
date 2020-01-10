@@ -1,5 +1,5 @@
 ---
-title: 'HOW TO：System:: string 中存取字元'
+title: 如何：存取 System::String 中的字元
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,26 +7,26 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c44c5e7651bb1c5b4c28654b896cbe64bd5bec7
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222932"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988642"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>HOW TO：System:: string 中存取字元
+# <a name="how-to-access-characters-in-a-systemstring"></a>如何：存取 System::String 中的字元
 
-您可以存取的字元<xref:System.String>物件的未受管理的高效能呼叫函式會採用`wchar_t*`字串。 方法會產生的第一個字元的內部指標<xref:System.String>物件。 這個指標可以直接操作或釘選和傳遞至函式必須要有一般`wchar_t`字串。
+您可以存取 <xref:System.String> 物件的字元，以便對採用 `wchar_t*` 字串的非受控函式進行高效能的呼叫。 方法會產生 <xref:System.String> 物件第一個字元的內部指標。 這個指標可以直接操作或固定，並傳遞至預期會有一般 `wchar_t` 字串的函式。
 
 ## <a name="example"></a>範例
 
-`PtrToStringChars` 會傳回<xref:System.Char>，這是內部指標 (也稱為`byref`)。 因此，所以受限於記憶體回收。 您不需要釘選這個指標，除非您要將它傳遞至原生函式。
+`PtrToStringChars` 會傳回 <xref:System.Char>，也就是內部指標（也稱為 `byref`）。 因此，它可能會遭到垃圾收集。 您不需要釘選此指標，除非您要將它傳遞至原生函式。
 
-請考慮下列程式碼：  釘選不需要因為`ppchar`內部的指標，而且如果記憶體回收行程移動它所指向的字串，它也會更新`ppchar`。 不含[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)程式碼能夠運作，不可能的效能衝擊造成釘選。
+請考慮下列程式碼：  不需要釘選，因為 `ppchar` 是內部指標，而且如果垃圾收集行程將其指向的字串移動，它也會更新 `ppchar`。 如果沒有[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)，程式碼將可正常執行，而且不會因為釘選而造成潛在的效能衝擊。
 
-如果您傳遞`ppchar`原生函式，則必須經過 pin 指標，記憶體回收行程將無法更新任何 unmanaged 的堆疊框架上的指標。
+如果您將 `ppchar` 傳遞至原生函式，則它必須是釘選指標;垃圾收集行程將無法更新非受控堆疊框架上的任何指標。
 
-```
+```cpp
 // PtrToStringChars.cpp
 // compile with: /clr
 #include<vcclr.h>
@@ -48,9 +48,9 @@ abcdefg
 
 ## <a name="example"></a>範例
 
-此範例所示釘選需要的位置。
+這個範例會顯示需要釘選的位置。
 
-```
+```cpp
 // PtrToStringChars_2.cpp
 // compile with: /clr
 #include <string.h>
@@ -77,9 +77,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-內部指標具有原生的所有屬性C++指標。 例如，使用連結的資料結構 並執行插入和刪除使用只能有一個指標：
+內部指標具有原生C++指標的所有屬性。 例如，您可以使用它來逐步執行連結的資料結構，並且只使用一個指標進行插入和刪除：
 
-```
+```cpp
 // PtrToStringChars_3.cpp
 // compile with: /clr /LD
 using namespace System;
@@ -99,6 +99,6 @@ void deleteNode( ListNode ^ list, Int32 e ) {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

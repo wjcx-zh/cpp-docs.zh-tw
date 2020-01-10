@@ -1,6 +1,6 @@
 ---
 title: 運算子 LROFFSET
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - LROFFSET
 - operator LROFFSET
@@ -8,21 +8,22 @@ helpviewer_keywords:
 - operator LROFFSET
 - LROFFSET operator
 ms.assetid: 61ab45d4-7a30-440d-9c11-2a9dfa6ae565
-ms.openlocfilehash: 1ed1fc7c3a927dc7899804e697e948736afb1567
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea42371a96525072741b90fa5c488e4e9492cfe2
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62199987"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317860"
 ---
 # <a name="operator-lroffset"></a>運算子 LROFFSET
 
-傳回的位移*運算式*。 與相同**位移**，但它會產生載入器解析的位移，可讓 Windows 即可重新定位程式碼區段。
+傳回*運算式*的位移。 與**offset**相同，但它會產生載入器已解決的位移，讓 Windows 能夠重新放置程式碼區段。
 
 ## <a name="syntax"></a>語法
 
-> LROFFSET 運算式
+> **LROFFSET** *運算式*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

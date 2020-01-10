@@ -1,6 +1,6 @@
 ---
 title: __inwordstring
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __inwordstring
 - __inwordstring_cpp
@@ -8,22 +8,22 @@ helpviewer_keywords:
 - __inwordstring intrinsic
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
-ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f67e15bc5eef9fbe9cc8d12e95afcdf869e3b1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263447"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70221887"
 ---
-# <a name="inwordstring"></a>__inwordstring
+# <a name="__inwordstring"></a>__inwordstring
 
 **Microsoft 專屬**
 
-使用指定的連接埠時，讀取資料`rep insw`指令。
+使用`rep insw`指令, 從指定的埠讀取資料。
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __inwordstring(
    unsigned short Port,
    unsigned short* Buffer,
@@ -31,16 +31,16 @@ void __inwordstring(
 );
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
-*連接埠*<br/>
-[in]要讀取的連接埠。
+*移植*\
+在要從中讀取的埠。
 
-*Buffer*<br/>
-[out]從連接埠讀取的資料會寫入此處。
+*緩衝區*\
+脫銷從埠讀取的資料會在此寫入。
 
-*計數*<br/>
-[in]要讀取之資料的文字數目。
+*計數*\
+在要讀取的資料字組數目。
 
 ## <a name="requirements"></a>需求
 
@@ -48,7 +48,7 @@ void __inwordstring(
 |---------------|------------------|
 |`__inwordstring`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 ## <a name="remarks"></a>備註
 
@@ -58,4 +58,4 @@ void __inwordstring(
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)

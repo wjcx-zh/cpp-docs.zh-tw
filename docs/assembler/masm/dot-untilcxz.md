@@ -1,22 +1,23 @@
 ---
 title: .UNTILCXZ
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .UNTILCXZ
 helpviewer_keywords:
 - .UNTILCXZ directive
 ms.assetid: 07723c4c-789d-4dfa-9407-c60e72cb975f
-ms.openlocfilehash: 0e008f2712f497556273c56976f5235da014d520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e351c2a35f2b0dddc80af2f0cfdd7b62baf5200
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178393"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317470"
 ---
-# <a name="untilcxz"></a>.UNTILCXZ
+# <a name="untilcxz-32-bit-masm"></a>..UNTILCXZ （32-位 MASM）
 
-請參閱[。重複](../../assembler/masm/dot-repeat.md)。
+（僅限 32-bit MASM）。請參閱[。重複](dot-repeat.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

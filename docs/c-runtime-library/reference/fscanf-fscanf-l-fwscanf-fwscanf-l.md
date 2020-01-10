@@ -1,12 +1,12 @@
 ---
 title: fscanf、_fscanf_l、fwscanf、_fwscanf_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - fscanf
 - _fwscanf_l
 - _fscanf_l
 - fwscanf
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - fscanf
 - fwscanf
@@ -40,14 +43,14 @@ helpviewer_keywords:
 - _ftscanf function
 - fwscanf_l function
 ms.assetid: 9004e978-6c5f-4bb2-98fd-51e5948933f2
-ms.openlocfilehash: 5be3f4107d2f05c1863c9c8303ac89e184590baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c143cbc1bf642e7efc6f10b9615fdaca8a236d1
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287833"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956625"
 ---
-# <a name="fscanf-fscanfl-fwscanf-fwscanfl"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
+# <a name="fscanf-_fscanf_l-fwscanf-_fwscanf_l"></a>fscanf、_fscanf_l、fwscanf、_fwscanf_l
 
 從資料流讀取格式化資料。 這些函式已有更安全的版本可用；請參閱 [fscanf_s、_fscanf_s_l、fwscanf_s、_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)。
 
@@ -86,7 +89,7 @@ int _fwscanf_l(
 *格式*<br/>
 格式控制字串。
 
-*argument*<br/>
+*引數*<br/>
 選擇性引數。
 
 *locale*<br/>
@@ -94,17 +97,17 @@ int _fwscanf_l(
 
 ## <a name="return-value"></a>傳回值
 
-所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或第一次轉換之前，就到達檔案資料流末端，則傳回值是**EOF** for **fscanf**並**fwscanf**。
+所有這些函式都會傳回成功轉換和指派的欄位數；傳回值不包含已讀取但尚未指派的欄位。 傳回值 0 表示未指派任何欄位。 如果發生錯誤，或在第一次轉換之前到達檔案資料流程的結尾，則傳回值為**fscanf**和**fwscanf**的**EOF** 。
 
-這些函式會驗證它們的參數。 如果*資料流*或是*格式*為 null 指標，無效參數處理常式會叫用，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md)。 如果允許繼續執行，則這些函式會傳回**EOF**並設定**errno**來**EINVAL**。
+這些函式會驗證它們的參數。 如果*資料流程*或*格式*為 null 指標，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，這些函式會傳回**EOF** ，並將**Errno**設為**EINVAL**。
 
 ## <a name="remarks"></a>備註
 
-**Fscanf**函式會從目前位置讀取資料*串流*所指定的位置*引數*（如果有的話）。 每個*引數*必須是對應至中的類型指定名稱的型別變數指標*格式*。 *格式*欄位輸入的解譯，而且具有相同的控制項形式和運作方式*格式*引數**scanf**; 請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md)的popis*格式*。
+**Fscanf**函數會將資料從*資料流程*的目前位置讀取到*引數*所指定的位置（如果有的話）。 每個*自*變數都必須是類型變數的指標，其對應于*格式*的類型規範。 *format*會控制輸入欄位的轉譯，並具有與**scanf**的*格式*引數相同的形式和功能。如需*格式*的說明，請參閱[scanf](scanf-scanf-l-wscanf-wscanf-l.md) 。
 
-**fwscanf**是寬字元版本的**fscanf**; 的格式引數**fwscanf**是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf**目前不支援來自 UNICODE 資料流輸入。
+**fwscanf**是寬字元版本的**fscanf**;**fwscanf**的格式引數是寬字元字串。 如果資料流是以 ANSI 模式開啟，則這些函式的行為相同。 **fscanf**目前不支援來自 UNICODE 資料流程的輸入。
 
-使用這些函式的版本 **_l**尾碼都相同，只不過它們而不是目前執行緒的地區設定傳入的地區設定參數。
+這些具有 **_l**尾碼的函式版本都相同，不同之處在于它們會使用傳入的地區設定參數，而不是目前的執行緒地區設定。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -113,14 +116,14 @@ int _fwscanf_l(
 |**_ftscanf**|**fscanf**|**fscanf**|**fwscanf**|
 |**_ftscanf_l**|**_fscanf_l**|**_fscanf_l**|**_fwscanf_l**|
 
-如需詳細資訊，請參閱 <<c0> [ 格式規格欄位-scanf 函式和 wscanf 函式](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
+如需詳細資訊，請參閱[格式規格欄位-scanf 函數和 Wscanf 函數](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)。
 
 ## <a name="requirements"></a>需求
 
-|功能|必要的標頭|
+|函數|必要的標頭|
 |--------------|---------------------|
-|**fscanf**， **_fscanf_l**|\<stdio.h>|
-|**fwscanf**， **_fwscanf_l**|\<stdio.h> 或 \<wchar.h>|
+|**fscanf**、 **_fscanf_l**|\<stdio.h>|
+|**fwscanf**、 **_fwscanf_l**|\<stdio.h> 或 \<wchar.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

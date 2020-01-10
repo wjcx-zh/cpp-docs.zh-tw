@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3059
 ms.assetid: 57220324-8286-4cab-a1ab-45385eb1eae0
-ms.openlocfilehash: df1f65f231f72f2efa90458fe9b21339dda80080
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 897ed2beb7634cec787f0776616d9a60596a979f
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404243"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756457"
 ---
 # <a name="compiler-error-c3059"></a>編譯器錯誤 C3059
 
@@ -21,7 +21,7 @@ ms.locfileid: "62404243"
 
 下列範例會產生 C3059：
 
-```
+```cpp
 // C3059.cpp
 // compile with: /openmp
 #include "omp.h"
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-可能的解決方式：
+可能的解決方案：
 
-```
+```cpp
 // C3059b.cpp
 // compile with: /openmp
 #include "omp.h"

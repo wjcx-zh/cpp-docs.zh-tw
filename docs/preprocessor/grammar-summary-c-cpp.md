@@ -1,28 +1,29 @@
 ---
 title: 文法摘要 (C/C++)
-ms.date: 11/04/2016
+ms.date: 08/29/2019
 helpviewer_keywords:
 - grammar
 - preprocessor, grammar
 ms.assetid: 0acb6e9b-364c-4ef8-ace4-7be980521121
-ms.openlocfilehash: a3f1674d8d72639413f092ca3f67324d4688618a
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 41fe97ebdc2d839915f80c5f93b685bbe4f7ed8e
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59038430"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219059"
 ---
 # <a name="grammar-summary-cc"></a>文法摘要 (C/C++)
-本節描述前置處理器的正式文法。 涵蓋內容前置處理器指示詞的語法和運算子所述[前置處理器](../preprocessor/preprocessor.md)然後在[Pragma 指示詞](../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
-其中包含下列主題：
+本節描述前置處理器的正式文法。 其中涵蓋[預處理器](../preprocessor/preprocessor.md)和[Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)指示詞中所討論之前置處理指示詞和運算子的語法。
+
+其中包含下列文章:
 
 - [定義](../preprocessor/definitions-for-the-grammar-summary.md)
 
 - [慣例](../preprocessor/conventions.md)
 
-- [前置處理器文法](../preprocessor/preprocessor-grammar.md)
+- [預處理器文法](../preprocessor/preprocessor-grammar.md)
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 前置處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)
+[C/C++預處理器參考](../preprocessor/c-cpp-preprocessor-reference.md)

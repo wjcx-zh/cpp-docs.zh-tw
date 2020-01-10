@@ -1,7 +1,7 @@
 ---
 title: 適用於 .NET 與 UWP 的元件擴充功能
 ms.date: 10/12/2018
-ms.topic: reference
+ms.topic: overview
 helpviewer_keywords:
 - what's new [C++], keywords
 - what's new [C++], language features
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: cf123e54c633539c8e5bf8204344c842a21183ef
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
+ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516713"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274675"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>適用於 .NET 與 UWP 的元件擴充功能
 
@@ -106,7 +106,7 @@ C++/CX 擴充功能為 C++/CLI 的子集。 雖然在大部分情況下擴充功
 
 本節列出與 CLR 有關的其他程式設計建構和主題。
 
-|主題|說明|
+|主題|描述|
 |-----------|-----------------|
 |[__identifier (C++/CLI)](identifier-cpp-cli.md)|(Windows 執行階段和 CLR) 可將關鍵字當作識別碼使用。|
 |[變數引數清單 (...) (C++/CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows 執行階段和 CLR) 讓函式能夠接受可變數目的引數。|

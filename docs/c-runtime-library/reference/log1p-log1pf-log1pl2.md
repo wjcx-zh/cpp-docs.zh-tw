@@ -1,11 +1,11 @@
 ---
-title: log1p log1pf log1pl2
+title: log1p、log1pf、log1pl2
 ms.date: 04/05/2018
-apiname:
+api_name:
 - log1p
 - log1pf
 - log1pl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - log1p
 - log1pf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: 2ac864d7e28823c95b0202c0a8f2454d03c64aff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285982"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953210"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -72,11 +75,11 @@ long double log1pl(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功，傳回的自然 (底數為*電子*) 的記錄 (*x* + 1)。
+如果成功，會傳回（*x* + 1）的自然（base-*e*）記錄。
 
 否則，可能會傳回下列其中一個值：
 
-|輸入|結果|SEH 例外狀況|errno|
+|Input|結果|SEH 例外狀況|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
 |非正規數|與輸入相同|UNDERFLOW||
@@ -85,23 +88,23 @@ long double log1pl(
 |< -1|NAN|INVALID|EDOM|
 |-inf|NAN|INVALID|EDOM|
 |±SNaN|與輸入相同|INVALID||
-|±QNaN，無限制|與輸入相同|||
+|± QNaN，不定|與輸入相同|||
 
-**Errno**如果值設為 ERANGE *x* =-1。 **Errno**值設定為**EDOM**如果*x* <-1。
+如果*x* =-1， **errno**值會設定為 ERANGE。 如果*x* <-1， **errno**值會設定為**EDOM** 。
 
 ## <a name="remarks"></a>備註
 
-**Log1p**函式可能比使用更準確`log(x + 1)`當*x*趨近於 0。
+當*x*接近0時， **log1p**函數可能`log(x + 1)`會比使用更精確。
 
-因為C++允許多載，您可以呼叫多載**log1p**採用並傳回**float**並**長** **double**類型。 在 C 程式中， **log1p**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型之**log1p**的多載。 在 C 程式中， **log1p**一律會採用並傳回**雙精度浮點數**。
 
-如果*x*為自然數，此函數會傳回階乘的對數 (*x* -1)。
+如果*x*是自然數位，此函數會傳回（*x* -1）階乘的對數。
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
-|**log1p**， **log1pf**， **log1pl**|\<math.h>|\<cmath>|
+|**log1p**、 **log1pf**、 **log1pl**|\<math.h>|\<cmath>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

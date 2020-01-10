@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3480
 ms.assetid: 7b2e055a-9604-4d13-861b-b38bda1a6940
-ms.openlocfilehash: 2ebcce496fd06c30420558d80cc0a0c9318d4376
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 255fb12d587a94aac798814736f0b26770f608b0
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173412"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760474"
 ---
 # <a name="compiler-error-c3480"></a>編譯器錯誤 C3480
 
@@ -19,7 +19,7 @@ ms.locfileid: "62173412"
 
 Lambda 擷取變數不是來自封入函式範圍。
 
-### <a name="to-correct-this-error"></a>更正這個錯誤
+### <a name="to-correct-this-error"></a>若要改正這項錯誤
 
 - 請從 Lambda 運算式的擷取清單移除變數。
 
@@ -27,7 +27,7 @@ Lambda 擷取變數不是來自封入函式範圍。
 
 下列範例會產生 C3480，因為變數 `global` 不是來自封入函式範圍：
 
-```
+```cpp
 // C3480a.cpp
 
 int global = 0;
@@ -41,7 +41,7 @@ int main()
 
 下列範例會藉由從 Lambda 運算式的擷取清單移除變數 `global` 而解決 C3480：
 
-```
+```cpp
 // C3480b.cpp
 
 int global = 0;
@@ -51,6 +51,6 @@ int main()
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)

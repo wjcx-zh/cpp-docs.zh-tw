@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4145
 ms.assetid: 0440777a-cca2-4159-aff5-e67a254ad64a
-ms.openlocfilehash: 10c0211bfda354a00e05cba3131d047fce843df8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6ae6145749842c01e720f5af1fe2b3ee438a5ba
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553786"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624995"
 ---
 # <a name="compiler-warning-level-1-c4145"></a>編譯器警告 (層級 1) C4145
 
@@ -23,7 +23,7 @@ ms.locfileid: "50553786"
 
 下列範例會產生 C4145：
 
-```
+```cpp
 // C4145.cpp
 // compile with: /W1
 int main() {

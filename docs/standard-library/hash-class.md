@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-ms.openlocfilehash: 61446ab6b79496024d44a99fcf5f500bb871bb80
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e30810412db29473597da144d2dd42bdb8184f7e
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448824"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72687993"
 ---
 # <a name="hash-class"></a>hash 類別
 
@@ -45,7 +45,7 @@ struct hash {
 
 ## <a name="remarks"></a>備註
 
-函式物件會定義雜湊函式，適用於將 *Ty* 類型的值對應到索引值的分佈。 成員 `operator()` 會傳回 *val* 的雜湊碼，適合用來與範本類別 `unordered_map`、`unordered_multimap`、`unordered_set` 及 `unordered_multiset` 搭配使用。 標準程式庫提供基本類型的特製化:*Ty*可以是任何純量類型, 包括指標類型和列舉類型。 此外，還有適用於程式庫類型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant` 及 `vector<bool>` 的特製化。
+函式物件會定義雜湊函式，適用於將 *Ty* 類型的值對應到索引值的分佈。 成員 `operator()` 會傳回*val*的雜湊碼，適用于 `unordered_map`、`unordered_multimap`、`unordered_set` 和 `unordered_multiset` 等類別範本。 標準程式庫提供適用於基本類型的特製化：*Ty* 可以是任何純量類型，包括指標類型和列舉類型。 此外，還有適用於程式庫類型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant` 及 `vector<bool>` 的特製化。
 
 ## <a name="example"></a>範例
 
@@ -74,9 +74,9 @@ int main()
 
 **標頭：** \<functional>
 
-**命名空間：** std
+**命名空間:** std
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [<unordered_map>](../standard-library/unordered-map.md)\
 [unordered_multimap 類別](../standard-library/unordered-multimap-class.md)\

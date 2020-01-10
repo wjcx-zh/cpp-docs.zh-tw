@@ -1,34 +1,35 @@
 ---
 title: ALIAS (MASM)
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - Alias
 helpviewer_keywords:
 - ALIAS directive
 ms.assetid: d9725c49-58de-41da-ab01-b06a56cf5cf2
-ms.openlocfilehash: ab00092f410d34119e876db4562e6d0709743d79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5aef169c5632e74722438c63718ce5b783a8da09
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166486"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316599"
 ---
-# <a name="alias-masm"></a>ALIAS (MASM)
+# <a name="alias"></a>ALIAS
 
-**別名**指示詞會建立函式的替代名稱。  這可讓您建立函式的多個名稱，或建立可讓連結器 (LINK.exe) 將舊的函式對應至新的函式的程式庫。
+**ALIAS**指示詞會建立函式的替代名稱。  這可讓您為函式建立多個名稱，或建立可讓連結器（連結 .exe）將舊函數對應至新函式的程式庫。
 
 ## <a name="syntax"></a>語法
 
-> 別名\<*別名*> = \<*實際名稱*>
+> **別名 \<** _別名_ **> = \<** _實際名稱_ **>**
 
 #### <a name="parameters"></a>參數
 
-*actual-name*<br/>
-函式或程序的實際名稱。  角括號是必要的。
+*實際-名稱*\
+函數或程式的實際名稱。  角括弧是必要的。
 
-*alias*<br/>
-其他名稱或別名名稱。  角括號是必要的。
+*別名*\
+替代或別名名稱。  角括弧是必要的。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

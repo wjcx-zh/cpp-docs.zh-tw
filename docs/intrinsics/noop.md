@@ -1,32 +1,32 @@
 ---
 title: __noop
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __noop_cpp
 - __noop
 helpviewer_keywords:
 - __noop keyword [C++]
 ms.assetid: 81ac6e97-7bf8-496b-b3c4-fd02837573e5
-ms.openlocfilehash: 674b5170dd2bba7038dfe11af906e31540acd993
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aec4df98413bf34ac1e2966d012bb905edd4775e
+ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262979"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74857927"
 ---
-# <a name="noop"></a>__noop
+# <a name="__noop"></a>__noop
 
 **Microsoft 專屬**
 
-`__noop`內建函式會指定應該忽略函式和剖析引數清單，但沒有程式碼產生的引數。 它適用於接受可變數目的引數的全域偵錯函式中。
+`__noop` 內建會指定應該忽略函數。 會剖析引數清單，但不會針對引數產生任何程式碼。 其目的是要用於採用可變數目之引數的全域偵錯工具。
 
-編譯器會將轉換`__noop`0 在編譯時期內建函式。
+編譯器會在編譯時期將內建函式（`__noop` 內建）轉換為0。
 
 ## <a name="example"></a>範例
 
-下列程式碼示範如何使用`__noop`。
+下列程式碼顯示如何使用 `__noop`。
 
-```
+```cpp
 // compiler_intrinsics__noop.cpp
 // compile with or without /DDEBUG
 #include <stdio.h>
@@ -42,7 +42,9 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+**結束 Microsoft 專屬**
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+## <a name="see-also"></a>請參閱
+
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [關鍵字](../cpp/keywords-cpp.md)

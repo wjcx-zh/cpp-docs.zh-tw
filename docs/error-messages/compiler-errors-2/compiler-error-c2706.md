@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2706
 ms.assetid: e18da924-c42d-4b09-8e29-f4e0382d7dc6
-ms.openlocfilehash: 9767d36d44b99423d600d299d0803901d3dbfec5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bca86d3c0cf886c64a1d668468c793d0e77b2867
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161104"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74757458"
 ---
 # <a name="compiler-error-c2706"></a>編譯器錯誤 C2706
 
-不合法的 __except 沒有相符\__finally (遺漏 '}' 中\__finally 區塊？)
+不合法的 __except，但 \__try 區塊中遺漏了 '} ' \__try
 
-編譯器找不到的右大括號`__try`區塊。
+編譯器找不到 `__try` 區塊的右大括弧。
 
-下列範例會產生 C2706:
+下列範例會產生 C2706：
 
-```
+```cpp
 // C2706.cpp
 int main() {
    __try {

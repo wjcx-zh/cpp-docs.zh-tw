@@ -1,10 +1,10 @@
 ---
 title: _mkdir、_wmkdir
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wmkdir
 - _mkdir
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _mkdir
 - tmkdir
@@ -33,14 +36,14 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d2fd45b566909a61a04a5cabb34c74b9b253430
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62285193"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951723"
 ---
-# <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
+# <a name="_mkdir-_wmkdir"></a>_mkdir、_wmkdir
 
 建立新目錄。
 
@@ -63,9 +66,9 @@ int _wmkdir(
 
 ## <a name="return-value"></a>傳回值
 
-如果已建立新目錄，所有這些函式都會傳回值 0。 在錯誤的函式會傳回-1 和集會**errno** ，如下所示。
+如果已建立新目錄，所有這些函式都會傳回值 0。 發生錯誤時，函式會傳回-1 並設定**errno** ，如下所示。
 
-**EEXIST**無法建立目錄，因為*dirname*是現有的檔案、 目錄或裝置的名稱。
+**EEXIST**未建立目錄，因為*dirname*是現有檔案、目錄或裝置的名稱。
 
 **ENOENT**找不到路徑。
 
@@ -73,9 +76,9 @@ int _wmkdir(
 
 ## <a name="remarks"></a>備註
 
-**_Mkdir**函式會建立新的目錄具有指定*dirname。* **_mkdir**可以建立一個新的目錄，每次呼叫，因此，只有最後一個元件*dirname*可以命名新的目錄。 **_mkdir**不會轉譯路徑分隔符號。 在 Windows NT 中，反斜線 (\\) 和正斜線 (/) 都是執行階段常式中字元字串的有效路徑分隔符號。
+**_Mkdir**函數會使用指定的 dirname 建立新的目錄 *。* **_mkdir**只能為每個呼叫建立一個新目錄，因此只有*dirname*的最後一個元件可以命名新的目錄。 **_mkdir**不會轉譯路徑分隔符號。 在 Windows NT 中，反斜線 (\\) 和正斜線 (/) 都是執行階段常式中字元字串的有效路徑分隔符號。
 
-**_wmkdir**是寬字元版本的 **_mkdir**; *dirname*引數 **_wmkdir**是寬字元字串。 **_wmkdir**並 **_mkdir**行為相同。
+**_wmkdir**是寬字元版本的 **_mkdir**; **_wmkdir**的*dirname*引數是寬字元字串。 相反地， **_wmkdir**和 **_mkdir**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

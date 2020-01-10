@@ -1,6 +1,6 @@
 ---
 title: 運算子 SECTIONREL
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - operator SECTIONREL
 - SECTIONREL
@@ -8,25 +8,26 @@ helpviewer_keywords:
 - SECTIONREL operator
 - operator SECTIONREL
 ms.assetid: db033a9d-b029-48dd-a010-d19e3a9d1af2
-ms.openlocfilehash: 6908d8a0d21e601217b0dea34ae1f2f7f01dd1ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 761452e44d1e860a67601122a886ecdc68dcfe58
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176339"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318991"
 ---
 # <a name="operator-sectionrel"></a>運算子 SECTIONREL
 
-傳回運算式相對於包含最終的可執行檔中的目標區段的區段相對位移。
+傳回相對於最後一個可執行檔中包含目標之區段的運算式相對位移。
 
 ## <a name="syntax"></a>語法
 
-> SECTIONREL 運算式
+> **SECTIONREL** *運算式*
 
 ## <a name="remarks"></a>備註
 
-可以只使用 COFF 物件發出 SECTIONREL。
+**SECTIONREL**僅適用于發出的 COFF 物件。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[運算子參考](../../assembler/masm/operators-reference.md)<br/>
+[運算子參考](operators-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4702
 ms.assetid: d8198c1e-8762-42a6-9e6b-cb568b7a1686
-ms.openlocfilehash: 96ae3a0742db5e3a5006f031ce62beb281c38ccd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e46bfef925f999ed7f04b5bbe7c88800209ed14
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395244"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74990643"
 ---
 # <a name="compiler-warning-level-4-c4702"></a>編譯器警告 (層級 4) C4702
 
-無法連線到的程式碼
+無法連線的程式碼
 
-這項警告是針對 Visual Studio.NET 2003年所進行的編譯器一致性工作的結果： 無法連線到的程式碼。 當編譯器 （後端） 偵測到無法連線到的程式碼時，它會產生 C4702，層級 4 警告。
+這項警告是針對 Visual Studio .NET 2003：無法連線的程式碼所進行的編譯器一致性工作所產生的結果。 當編譯器（後端）偵測到無法連線的程式碼時，它會產生 C4702，這是層級4警告。
 
-在 Visual Studio.NET 2003年和 Visual Studio.NET 版本，視覺效果中有效的程式碼的C++，移除不可能執行到的程式碼，或確保所有的原始程式碼可到達的某些工作流程的執行。
+對於在 Visual Studio .NET 2003 和 Visual Studio .NET 版本的 Visual C++中都有效的程式碼，請移除無法連接的程式碼，或確定某個執行流程可以連線到所有原始程式碼。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4702。
 
-```
+```cpp
 // C4702.cpp
 // compile with: /W4
 #include <stdio.h>
@@ -38,13 +38,13 @@ int main() {
 
 ## <a name="example"></a>範例
 
-進行編譯時 **/GX**， **/EHc**， **/EHsc**，或 **/EHac**和使用 extern C 函式，程式碼可能會變得無法連線到因為 extern C函式會假設不會擲回，因此，catch 區塊無法連接。  如果您認為這個警告不正確，因為函式可能會擲回，以編譯 **/EHa**或是 **/EHs**，取決於擲回的例外狀況。
+使用 **/gx**、 **/EHc**、 **/ehsc**或 **/EHac**進行編譯並使用 extern c 函式時，程式碼可能會變成無法存取，因為 extern c 函式假設為不擲回，因此無法連線到 catch 區塊。  如果您覺得這個警告無效，是因為函式可以擲回、使用 **/eha**或 **/ehs**進行編譯（視擲回的例外狀況而定）。
 
-如需詳細資訊，請參閱 < [/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md)如需詳細資訊。
+如需詳細資訊，請參閱[/EH （例外狀況處理模型）](../../build/reference/eh-exception-handling-model.md) 。
 
 下列範例會產生 C4702。
 
-```
+```cpp
 // C4702b.cpp
 // compile with: /W4 /EHsc
 #include <iostream>

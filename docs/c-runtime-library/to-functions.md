@@ -1,14 +1,17 @@
 ---
 title: to 函式
 ms.date: 11/04/2016
-apilocation:
+api_location:
 - msvcr120.dll
 - msvcr90.dll
 - msvcr110.dll
 - msvcr110_clr0400.dll
 - msvcr80.dll
 - msvcr100.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - To
 helpviewer_keywords:
@@ -20,12 +23,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: df8f59088cd402503fe31f768557e3ed936b31ec
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742529"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75301687"
 ---
 # <a name="to-functions"></a>to 函式
 
@@ -40,15 +43,15 @@ ms.locfileid: "57742529"
 
 **to** 函式和巨集轉換如下。
 
-|常式傳回的值|巨集|說明|
+|常式傳回的值|巨集|描述|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|將 `c` 轉換為 ASCII 字元|
 |`tolower`|`tolower`|適用時，將 `c` 轉換為小寫|
 |`_tolower`|`_tolower`|將 `c` 轉換為小寫|
-|`towlower`|無|將 `c` 轉換為對應寬字元小寫字母|
+|`towlower`|None|將 `c` 轉換為對應寬字元小寫字母|
 |`toupper`|`toupper`|適用時，將 `c` 轉換為大寫|
 |`_toupper`|`_toupper`|將 `c` 轉換為大寫|
-|`towupper`|無|將 c 轉換為對應寬字元大寫字母|
+|`towupper`|None|將 c 轉換為對應寬字元大寫字母|
 
 若要使用同時定義為巨集之函式版本的 **to** 常式，請使用 `#undef` 指示詞來移除巨集定義，或不包括 CTYPE.H。 如果您使用 /Za 編譯器選項，編譯器會使用函式版本的 `toupper` 或 `tolower`。 `toupper` 和 `tolower` 函式的宣告是在 STDLIB.H 中。
 
@@ -64,7 +67,7 @@ ms.locfileid: "57742529"
 
 - 與地區設定無關且更快速的 `tolower` 和 **toupper** 版本。
 
-- 只有在 **isascii(**`c`**)** 且 **isupper(**`c`**)** 或 **islower(**`c`**)** 分別為非零時才能使用。
+- 只有在 **isascii(** `c` **)** 且 **isupper(** `c` **)** 或 **islower(** `c` **)** 分別為非零時才能使用。
 
 - 如果 `c` 不是可進行轉換之適當大小寫的 ASCII 字母，則會有未定義的結果。
 
@@ -76,7 +79,7 @@ ms.locfileid: "57742529"
 
 ## <a name="example"></a>範例
 
-```
+```c
 // crt_toupper.c
 /* This program uses toupper and tolower to
  * analyze all characters between 0x0 and 0x7F. It also
@@ -112,7 +115,7 @@ Some of THESE letters are Capitals.
 sOME OF these LETTERS ARE cAPITALS.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [資料轉換](../c-runtime-library/data-conversion.md)<br/>
 [地區設定](../c-runtime-library/locale.md)<br/>

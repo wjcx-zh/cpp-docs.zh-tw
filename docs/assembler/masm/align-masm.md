@@ -1,35 +1,36 @@
 ---
 title: ALIGN (MASM)
-ms.date: 01/02/2019
+ms.date: 12/17/2019
 f1_keywords:
 - align
 helpviewer_keywords:
 - ALIGN directive
 ms.assetid: 1c386b23-439f-4ec3-a6de-74427b25e47f
-ms.openlocfilehash: eb42b1952b3fd59438f0dd4c29d48c91c4d8864d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 700721768deaf92e88b32a97e68c6e017219d19d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166473"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75316586"
 ---
-# <a name="align-masm"></a>ALIGN (MASM)
+# <a name="align"></a>ALIGN
 
-**對齊**下一步 的資料元素或其參數的多個位址上的指示，指示詞對齊。 參數必須是 2 的乘冪 （例如 1、 2、 4 和等等） 也就是小於或等於區段的對齊方式。
+**ALIGN**指示詞會將下一個資料元素或指示對齊其參數的倍數的位址。 參數必須是小於或等於區段對齊的2（例如，1、2、4等等）的乘冪。
 
 ## <a name="syntax"></a>語法
 
-> 對齊 [[*數字*]]
+> **ALIGN** ⟦*constantExpression*⟧
 
 ## <a name="remarks"></a>備註
 
-**對齊**指示詞可讓您指定的資料元素或指令的開始位移。 對齊的資料可以改善效能，但代價是浪費掉的空間資料的項目之間。 資料存取時放入快取行內的界限上可以看到效能大幅提升。 原生類型的自然界限存取表示花費在記憶體內部硬體重新對齊微碼較少時間。
+**ALIGN**指示詞可讓您指定資料元素或指令的開始位移。 對齊的資料可以改善效能，代價是在資料元素之間浪費空間。 當資料存取位於符合快取行的界限時，可能會出現大量效能改進。 針對原生類型的自然界限存取，表示在內部硬體校準微碼中花費的時間較少。
 
-如需對齊的指示需要很少會在新型處理器使用一般的定址模型時，但在較舊程式碼中其他定址模型可能需要針對跳躍的目標上。
+在使用一般定址模型的新式處理器上，不太需要對齊的指示，但可能需要在較舊的程式碼中針對其他定址模型進行跳躍目標。
 
-當資料對齊時，略過的空間將填滿零。 當指示對齊時，略過的空間填滿適當地調整大小 NOP 指示。
+當資料對齊時，略過的空間會以零填補。 當指示對齊時，略過的空間會填入適當大小的 NOP 指示。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[EVEN](even.md)<br/>
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+[甚至](even.md)\
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

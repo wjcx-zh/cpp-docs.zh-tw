@@ -1,12 +1,12 @@
 ---
 title: isprint、iswprint、_isprint_l、_iswprint_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - iswprint
 - isprint
 - _isprint_l
 - _iswprint_l
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -19,7 +19,10 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - iswprint
 - _istprint
@@ -34,14 +37,14 @@ helpviewer_keywords:
 - iswprint_l function
 - _isprint_l function
 ms.assetid: a8bbcdb0-e8d0-4d8c-ae4e-56d3bdee6ca3
-ms.openlocfilehash: aab604076f8a2e2eee0eefe20f08f46ae5388a34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 282b72fcec84f8096ce0d54cd114e756aeafbc85
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157194"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70953751"
 ---
-# <a name="isprint-iswprint-isprintl-iswprintl"></a>isprint、iswprint、_isprint_l、_iswprint_l
+# <a name="isprint-iswprint-_isprint_l-_iswprint_l"></a>isprint、iswprint、_isprint_l、_iswprint_l
 
 判斷整數是否代表可列印字元。
 
@@ -74,11 +77,11 @@ int _iswprint_l(
 
 ## <a name="return-value"></a>傳回值
 
-這些常式傳回非零值如果*c*表示特定的可列印字元。 **isprint**傳回非零值，如果*c*是可列印的字元 — 這包括空白字元 (0x20-0x7E)。 **iswprint**傳回非零值，如果*c*是可列印寬字元 — 這包括空白寬字元。 這些常式都會傳回 0，如果*c*不符合測試條件。
+如果*c*是可列印字元的特定標記法，則每個常式都會傳回非零。 如果*c*是可列印的字元，則**isprint**會傳回非零值，這包括空白字元（0x20-0x7E）。 如果*c*是可列印的寬字元，則**iswprint**會傳回非零值，這包括空格寬字元。 如果*c*不符合測試條件，這些常式都會傳回0。
 
-這些函式的測試條件的結果會取決於**LC_CTYPE**地區設定分類設定; 請參閱[setlocale、 _wsetlocale](setlocale-wsetlocale.md)如需詳細資訊。 不需要這些函式的版本 **_l**後置詞使用目前的地區設定，針對任何地區設定相關行為; 沒有版本 **_l**尾碼都相同，不同之處在於它們使用會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
+這些函式之測試條件的結果取決於地區設定的**LC_CTYPE**類別設定;如需詳細資訊，請參閱[setlocale、_wsetlocale](setlocale-wsetlocale.md) 。 這些沒有 **_l**尾碼的函式版本，會針對任何與地區設定相關的行為使用目前的地區設定;具有 **_l**尾碼的版本是相同的，不同之處在于它們會改用傳入的地區設定。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
-行為**isprint**並 **_isprint_l**如果是未定義*c*不是 EOF 或介於 0 到 0xFF 的內含。 使用偵錯 CRT 程式庫時， *c*是不是其中一個值，函式會引發判斷提示。
+如果*c*不是 EOF 或範圍0到0xff （含），則**isprint**和 **_isprint_l**的行為是未定義的。 當使用 debug CRT 程式庫，而*c*不是其中一個值時，函數會引發判斷提示。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 

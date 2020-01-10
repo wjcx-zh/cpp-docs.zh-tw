@@ -1,11 +1,11 @@
 ---
 title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - catanh
 - catanhf
 - catanhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - catanh
 - catanhf
@@ -30,16 +33,16 @@ helpviewer_keywords:
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b21427eb4ab1a3ec8eab10d52e636bf253bc947
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62340959"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70943227"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
-擷取複數，而且在實數軸的間隔 [-1; + 1] 外部分支的反雙曲正切。
+抓取複數的反雙曲正切函數，並在實際軸的間隔 [-1; + 1] 之外進行分支切割。
 
 ## <a name="syntax"></a>語法
 
@@ -68,17 +71,17 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>傳回值
 
-反雙曲正切*z*，以弧度為單位。 結果是未繫結，而且實際軸中，並且在間隔 [-i π/2; + i π/2] 在虛數軸。 如果會發生網域錯誤*z*超出的間隔 [-1，+ 1]。 如果會發生極錯誤*z*為-1 或 + 1。
+*Z*的反雙曲正切值，以弧度為單位。 結果會沿著真正的軸，並在虛數軸的間隔 [-i π/2; + i π/2] 中。 如果*z*超出間隔 [-1，+ 1]，就會發生網域錯誤。 如果*z*為-1 或 + 1，則會發生極點錯誤。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**catanh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **catanh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**catanh**的多載。 在 C 程式中， **catanh**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**catanh**， **catanhf**， **catanhl**|\<complex.h>|\<ccomplex>|
+|**catanh**、 **catanhf**、 **catanhl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

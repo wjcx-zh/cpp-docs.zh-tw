@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 495e82d54a2d3b010e40403271713cd799b9b8ac
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
+ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453544"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74898833"
 ---
 # <a name="locale-class"></a>locale 類別
 
@@ -50,14 +50,14 @@ static locale::id id;
 
 這些 facet 的預先定義群組代表在「標準 C 程式庫」中傳統上由 `setlocale` 函式管理的[地區設定分類](#category)。
 
-分類 collate (LC_COLLATE) 包含下列 facet：
+Category `collate` （LC_COLLATE）包含 facet：
 
 ```cpp
 collate<char>
 collate<wchar_t>
 ```
 
-分類 ctype (LC_CTYPE) 包含下列 facet：
+Category `ctype` （LC_CTYPE）包含 facet：
 
 ```cpp
 ctype<char>
@@ -68,7 +68,7 @@ codecvt<char16_t, char, mbstate_t>
 codecvt<char32_t, char, mbstate_t>
 ```
 
-分類 monetary (LC_MONETARY) 包含下列 facet：
+Category `monetary` （LC_MONETARY）包含 facet：
 
 ```cpp
 moneypunct<char, false>
@@ -81,7 +81,7 @@ money_put<char, ostreambuf_iterator<char>>
 money_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-分類 numeric (LC_NUMERIC) 包含下列 facet：
+Category `numeric` （LC_NUMERIC）包含 facet：
 
 ```cpp
 num_get<char, istreambuf_iterator<char>>
@@ -92,7 +92,7 @@ numpunct<char>
 numpunct<wchar_t>
 ```
 
-分類 time (LC_TIME) 包含下列 facet：
+Category `time` （LC_TIME）包含 facet：
 
 ```cpp
 time_get<char, istreambuf_iterator<char>>
@@ -101,18 +101,18 @@ time_put<char, ostreambuf_iterator<char>>
 time_put<wchar_t, ostreambuf_iterator<wchar_t>>
 ```
 
-分類 messages (LC_MESSAGES) 包含下列 facet：
+Category `messages` （LC_MESSAGES）包含 facet：
 
 ```cpp
 messages<char>
 messages<wchar_t>
 ```
 
-(最後分類為 Posix 所需，但 C Standard 不需要。)
+（最後一個分類是 POSIX 所需，但不是 C 標準）。
 
-iostreams 類別使用某些預先定義的 facet，以控制數值轉換和文字序列之間來回轉換。
+其中一些預先定義的 facet 會由 `iostream` 類別使用，以控制與文字序列之間的數值轉換。
 
-locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-library/string-typedefs.md#string) 類別的物件。 使用無效的地區設定名稱來建構地區設定 facet 或地區設定物件時，會擲回 [runtime_error](../standard-library/runtime-error-class.md) 類別的物件。 如果地區設定物件無法確定 C-Style 地區設定正確對應於物件所表示的項目，儲存的地區設定名稱為 `"*"`。 否則，您可以在「標準 C 程式庫」內，針對地區設定物件 `Loc`，建立相符的地區設定，方法是呼叫 `setlocale`(LC_ALL `,` `Loc`. [name](#name)`().c_str()`)。
+locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-library/string-typedefs.md#string) 類別的物件。 使用無效的地區設定名稱來建構地區設定 facet 或地區設定物件時，會擲回 [runtime_error](../standard-library/runtime-error-class.md) 類別的物件。 如果地區設定物件無法確定 C 樣式的地區設定與物件所代表的完全相符，則儲存的地區設定名稱會 `"*"`。 否則，您可以藉由呼叫 `setlocale(LC_ALL , locale_object.`[名稱](#name)`().c_str())`，在標準 C 連結 `locale_object`庫中建立符合的地區設定。
 
 在這個實作，您也可以呼叫靜態成員函式：
 
@@ -120,13 +120,13 @@ locale 類別的物件也會將地區設定名稱儲存為 [string](../standard-
 static locale empty();
 ```
 
-建構沒有 facet 的地區設定物件。 它也是一個透明地區設定；如果範本函式 [has_facet](../standard-library/locale-functions.md#has_facet) 和 [use_facet](../standard-library/locale-functions.md#use_facet) 在透明地區設定中找不到所要求的 facet，就會先查閱全域地區設定，然後，如果該地區設定是透明的，就再查閱傳統地區設定。 因此，您可以撰寫：
+建構沒有 facet 的地區設定物件。 它也是透明的地區設定。 如果範本函式[has_facet](../standard-library/locale-functions.md#has_facet) ，且[use_facet](../standard-library/locale-functions.md#use_facet)在透明地區設定中找不到要求的 facet，則會先查閱全域地區設定，如果是透明的，則是傳統的地區設定。 因此，您可以撰寫：
 
 ```cpp
 cout.imbue(locale::empty());
 ```
 
-後續對 [cout](../standard-library/iostream.md#cout) 的插入是由全域地區設定的目前狀態所調解。 您甚至可以撰寫：
+[`cout`](../standard-library/iostream.md#cout)的後續插入是由全域地區設定的目前狀態所 mediated。 您甚至可以撰寫：
 
 ```cpp
 locale loc(locale::empty(),
@@ -140,19 +140,19 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>建構函式
 
-|建構函式|說明|
+|建構函式|描述|
 |-|-|
 |[locale](#locale)|建立地區設定、地區設定複本，或 facet 或分類已被其他地區設定的 facet 或分類取代的地區設定複本。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|類型名稱|說明|
+|類型名稱|描述|
 |-|-|
 |[category](#category)|整數類型，提供位元遮罩值以表示標準 facet 系列。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|說明|
+|成員函數|描述|
 |-|-|
 |[combine](#combine)|將指定之地區設定的 facet 插入至目標地區設定。|
 |[name](#name)|傳回儲存的地區設定名稱。|
@@ -178,13 +178,13 @@ cout.imbue(loc);
 |類別|描述|
 |-|-|
 |[facet](#facet_class)|做為所有地區設定 facet 之基底類別的類別。|
-|[id](#id_class)|此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。|
+|[`id`](#id_class)|此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。|
 
 ## <a name="requirements"></a>需求
 
 **標頭︰** \<locale>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="category"></a>  locale::category
 
@@ -204,27 +204,27 @@ static const int none = 0;
 
 ### <a name="remarks"></a>備註
 
-類型是**int**類型的同義字, 可以代表類別地區設定區域中位元遮罩類型的不同元素群組, 或可用來表示任何對應的 C 地區設定分類。 這些元素如下：
+類型是**int**類型的同義字，可以代表類別地區設定區域中位元遮罩類型的不同元素群組，或可用來表示任何對應的 C 地區設定分類。 這些元素如下：
 
-- `collate`, 對應至 C 類別 LC_COLLATE
+- `collate`，對應于 C 類別 LC_COLLATE
 
-- `ctype`, 對應至 C 類別 LC_CTYPE
+- `ctype`，對應于 C 類別 LC_CTYPE
 
-- `monetary`, 對應至 C 類別 LC_MONETARY
+- `monetary`，對應于 C 類別 LC_MONETARY
 
-- `numeric`, 對應至 C 類別 LC_NUMERIC
+- `numeric`，對應于 C 類別 LC_NUMERIC
 
-- `time`, 對應至 C 類別 LC_TIME
+- `time`，對應于 C 類別 LC_TIME
 
-- `messages`, 對應至 Posix 類別目錄 LC_MESSAGES
+- `messages`，對應至 POSIX 類別目錄 LC_MESSAGES
 
-此外，兩個有用的值如下：
+另外兩個有用的值如下：
 
-- `none`, 對應于 C 類別目錄以外的所有
+- `none`，對應于任何 C 類別
 
-- `all`, 對應至所有類別的 C 聯集 LC_ALL
+- `all`，對應至所有類別的 C 聯集 LC_ALL
 
-您可以使用`OR`與這些常數來表示任意類別群組, 如&#124; `time`中`monetary`所示。
+您可以使用 `OR` 與這些常數來表示任意類別群組，如同 `monetary` &#124; `time`。
 
 ## <a name="classic"></a>  locale::classic
 
@@ -240,7 +240,7 @@ static const locale& classic();
 
 ### <a name="remarks"></a>備註
 
-傳統 C 地區設定是「標準 C 程式庫」內的美式英文 ASCII 地區設定，這是未國際化的程式中以隱含方式使用的地區設定。
+傳統 C 地區設定是標準 C 程式庫中的美國英文 ASCII 地區設定。 這是在不會國際化的程式中隱含使用的地區設定。
 
 ### <a name="example"></a>範例
 
@@ -287,17 +287,17 @@ The current locale is not classic.
 
 ```cpp
 template <class Facet>
-locale combine(const locale& Loc) const;
+locale combine(const locale& source_locale) const;
 ```
 
 ### <a name="parameters"></a>參數
 
-*Loc*\
+*source_locale*\
 包含要插入到目標地區設定中之 facet 的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
-此成員函式傳回地區設定物件，在取代或新增 **\*這** facet`Facet`中所列 *Loc* 。
+此成員函式會傳回地區設定物件，以取代中的，或將其加入至 **\*此**facet `Facet` 列于*source_locale*中。
 
 ### <a name="example"></a>範例
 
@@ -336,32 +336,31 @@ int main() {
 ```cpp
 class facet {
 protected:
-    explicit facet(size_t _Refs = 0);
-   virtual ~facet();
+    explicit facet(size_t references = 0);
+    virtual ~facet();
 private:
-   facet(const facet&)
-   // not defined void operator=(const facet&)
-     // not defined
+    facet(const facet&) // not defined
+    void operator=(const facet&) // not defined
 };
 ```
 
 ### <a name="remarks"></a>備註
 
-請注意，您無法複製或指派 facet 類別的物件。 您可以建構和終結衍生自 `locale::facet` 類別的物件，但這不適用於基底類別的物件。 一般而言，您會在建構地區設定時，建構衍生自 facet 的物件 `_Myfac`，就像在 **localeloc**( `locale::classic`( ), **new**`_Myfac`); 中一樣
+您無法複製或指派類別 `facet`的物件。 您可以建構和終結衍生自 `locale::facet` 類別的物件，但這不適用於基底類別的物件。 通常，您會在建立 `locale`時，建立衍生自 `facet` 的物件 `_Myfac`，如同 `locale loc(locale::classic(), new _Myfac);`
 
-在這類情況下，基底類別 facet 的建構函式應該有一個為零的 `_Refs` 引數。 當不再需要該物件時，系統就會將它刪除。 因此，只有在您需要負責物件存留期的罕見情況下，您才需要提供一個不為零的 _ *Refs* 引數。
+在這種情況下，基底類別 `facet` 的函式應該有零個*參考*引數。 當不再需要物件時，會將它刪除，因此您只會在那些罕見的情況下，提供非零的*參考*引數給您負責物件的存留期。
 
 ## <a name="global"></a>  locale::global
 
-重設程式的預設地區設定。 這會同時影響 C 和 C++ 的全域地區設定。
+重設程式的預設地區設定。 此呼叫會影響 C 和C++的全域地區設定。
 
 ```cpp
-static locale global(const locale& Loc);
+static locale global(const locale& new_default_locale);
 ```
 
 ### <a name="parameters"></a>參數
 
-*Loc*\
+*new_default_locale*\
 程式要用來作為預設地區設定的地區設定。
 
 ### <a name="return-value"></a>傳回值
@@ -405,16 +404,17 @@ The previous locale was: C
 此成員類別提供唯一 facet 項目識別，做為用於地區設定中查詢 facet 的索引鍵。
 
 ```cpp
-class id 
+class id
 {
    protected:    id();
    private:      id(const id&)
-   void operator=(const id&)  // not defined    
+   void operator=(const id&)  // not defined
 };
 ```
+
 ### <a name="remarks"></a>備註
 
-此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 請注意, 您無法複製或指派類別`id`的物件。
+此成員類別描述每個唯一的地區設定 facet 所需的靜態成員物件。 您無法複製或指派類別 `id`的物件。
 
 ## <a name="locale"></a>  locale::locale
 
@@ -423,54 +423,54 @@ class id
 ```cpp
 locale();
 
-explicit locale(const char* Locname, category Cat = all);
-explicit locale(const string& Locname);
-locale( const locale& Loc);
-locale(const locale& Loc, const locale& Other, category Cat);
-locale(const locale& Loc, const char* Locname, category Cat);
+explicit locale(const char* locale_name, category new_category = all);
+explicit locale(const string& locale_name);
+locale(const locale& from_locale);
+locale(const locale& from_locale, const locale& Other, category new_category);
+locale(const locale& from_locale, const char* locale_name, category new_category);
 
 template <class Facet>
-locale(const locale& Loc, const Facet* Fac);
+locale(const locale& from_locale, const Facet* new_facet);
 
 ~locale();
 ```
 
 ### <a name="parameters"></a>參數
 
-*Locname*\
+*locale_name*\
 地區設定的名稱。
 
-*Loc*\
+*from_locale*\
 在建構新地區設定時所要複製的地區設定。
 
-*另一方面*\
+*其他*\
 要從中選取分類的地區設定。
 
-*Cat*\
+*new_category*\
 要代入到所建構之地區設定中的分類。
 
-*Fac*\
+*new_facet*\
 要代入到所建構之地區設定中的 facet。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會將物件初始化以符合全域地區設定。 第二個和第三個函式會初始化所有地區設定分類, 使其行為與地區設定名稱*Locname*一致。 其餘的函式會複製*Loc*, 並注明例外狀況:
+第一個建構函式會將物件初始化以符合全域地區設定。 第二個和第三個函式會初始化所有地區設定分類，使其行為與地區設定名稱*locale_name*一致。 其餘的函式會複製*from_locale*，並注明例外狀況：
 
-`locale(const locale& Loc, const locale& Other, category Cat);`
+`locale(const locale& from_locale, const locale& Other, category new_category);`
 
-取代*其他*與 C & *Cat*為非零的類別 c 對應的 facet。
+取代*其他*與 C & *new_category*為非零的類別 c 對應的 facet。
 
-`locale(const locale& Loc, const char* Locname, category Cat);`
+`locale(const locale& from_locale, const char* locale_name, category new_category);`
 
-`locale(const locale& Loc, const string& Locname, category Cat);`
+`locale(const locale& from_locale, const string& locale_name, category new_category);`
 
-取代對應于類別 c 的 facet, 其中 c & 的貓不是零。  `locale(Locname, _All)`
+取代為對應于分類*replace_category* （`replace_category & new_category` 為非零）的 `locale(locale_name, all)` facet。
 
-`template<class Facet> locale(const locale& Loc, Facet* Fac);`
+`template<class Facet> locale(const locale& from_locale, Facet* new_facet);`
 
-如果*Fac*不是 null 指標, 則取代 (或新增至) *Loc* facet *Fac*的。
+如果*new_facet*不是 null 指標，則會在 facet *new_facet*中取代（或將加入至） *from_locale* 。
 
-如果地區設定名稱*Locname*是 null 指標或無效, 則函數會擲回[runtime_error](../standard-library/runtime-error-class.md)。
+如果地區設定名稱*locale_name*是 null 指標或無效，則函數會擲回[runtime_error](../standard-library/runtime-error-class.md)。
 
 ### <a name="example"></a>範例
 
@@ -551,7 +551,7 @@ The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
 ```
 
-## <a name="op_eq"></a>locale:: operator =
+## <a name="op_eq"></a>locale：： operator =
 
 指派地區設定。
 
@@ -569,16 +569,16 @@ bool operator!=(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right*\
 其中一個要測試是否不相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
-如果地區設定不是相同地區設定的複本，便會傳回 **true** 布林值；如果地區設定是相同地區設定的複本，則會傳回 **false**。
+布林值，如果地區設定不是相同地區設定的複本，則為**true** 。 如果地區設定是相同地區設定的複本，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
-兩個地區設定如果是相同的地區設定、如果其中一個是另一個的複本，或如果具有相同的名稱，兩者便相等。
+如果兩個地區設定是相同的地區設定，則為，如果其中一個是另一個的複本，則為，如果它們有相同的名稱，則為。
 
 ### <a name="example"></a>範例
 
@@ -633,15 +633,15 @@ bool operator()(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 左字串。
 
-*再*\
+*right*\
 右字串。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回下列值：
+成員函式會傳回：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -659,7 +659,7 @@ const collate<CharType>& fac = use_fac<collate<CharType>>(*this);
 return (fac.compare(left.begin(), left.end(), right.begin(), right.end()) < 0);
 ```
 
-因此，您可以使用地區設定物件作為函式物件。
+這表示您可以使用地區設定物件做為函式物件。
 
 ### <a name="example"></a>範例
 
@@ -702,16 +702,16 @@ bool operator==(const locale& right) const;
 
 ### <a name="parameters"></a>參數
 
-*再*\
+*right*\
 其中一個要測試是否相等的地區設定。
 
 ### <a name="return-value"></a>傳回值
 
-如果地區設定是相同地區設定的複本，便會傳回 **true** 布林值；如果地區設定不是相同地區設定的複本，則會傳回 **false**。
+布林值，如果地區設定是相同地區設定的複本，則為**true** 。 如果地區設定不是相同地區設定的複本，則**為 false** 。
 
 ### <a name="remarks"></a>備註
 
-兩個地區設定如果是相同的地區設定、如果其中一個是另一個的複本，或如果具有相同的名稱，兩者便相等。
+如果兩個地區設定是相同的地區設定，則為，如果其中一個是另一個的複本，則為，如果它們有相同的名稱，則為。
 
 ### <a name="example"></a>範例
 
@@ -757,7 +757,7 @@ locales loc1 (German_Germany.1252)
 and loc3 (English_United States.1252) are not equal.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [字碼頁](../c-runtime-library/code-pages.md)\

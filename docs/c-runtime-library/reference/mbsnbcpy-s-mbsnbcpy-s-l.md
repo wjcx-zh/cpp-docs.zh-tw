@@ -1,10 +1,10 @@
 ---
 title: _mbsnbcpy_s、_mbsnbcpy_s_l
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -32,16 +35,16 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fbbdbeb671f501974ceee9565b8d668e8281f92e
+ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331489"
+ms.lasthandoff: 11/05/2019
+ms.locfileid: "73624299"
 ---
-# <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
+# <a name="_mbsnbcpy_s-_mbsnbcpy_s_l"></a>_mbsnbcpy_s、_mbsnbcpy_s_l
 
-複本**n**個位元組的字串到目的地字串。 這些是 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
+將字串的**n**個位元組複製到目的地字串。 這些是 [_mbsnbcpy、_mbsnbcpy_l](mbsnbcpy-mbsnbcpy-l.md) 的版本，具有 [CRT 中的安全性功能](../../c-runtime-library/security-features-in-the-crt.md)中所述的安全性增強功能。
 
 > [!IMPORTANT]
 > 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
@@ -96,20 +99,20 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="return-value"></a>傳回值
 
-如果成功則為零**EINVAL**如果傳入參數不正確。
+如果成功，則為零;**EINVAL**是否傳入了不正確的參數。
 
 ## <a name="remarks"></a>備註
 
-**_Mbsnbcpy_s**函式複製*計數*位元組*strSource*至*strDest*。 如果*計數*大小超過*strDest*，輸入字串是 null 指標，或*sizeInBytes*或是*計數*為 0，此函式叫用無效參數處理常式，如中所述[Parameter Validation](../../c-runtime-library/parameter-validation.md) 。 如果允許繼續執行，則函數會傳回**EINVAL**。 如果來源和目的字串重疊，行為 **_mbsnbcpy_s**是未定義。
+**_Mbsnbcpy_s**函式會將*count*個位元組從*strSource*複製到*strDest*。 如果*count*超過*strDest*的大小，則其中一個輸入字串為 Null 指標，或*sizeInBytes*或*count*為0，則函式會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函數會傳回**EINVAL**。 如果來源和目的字串重迭， **_mbsnbcpy_s**的行為會是未定義的。
 
 輸出值會受到地區設定的 **LC_CTYPE** 分類設定影響；如需詳細資訊，請參閱 [setlocale](setlocale-wsetlocale.md)。 這些沒有 **_l** 尾碼的函式版本，會針對此與地區設定相關的行為使用目前的地區設定；具有 **_l** 尾碼的版本也一樣，只不過它們會改用傳遞的地區設定參數。 如需詳細資訊，請參閱 [Locale](../../c-runtime-library/locale.md)。
 
 > [!NOTE]
-> 不同於此函式中，不安全版本 **_mbsnbcpy_s**不執行任何 null 填補，則一律是 null 結束字串。
+> 不同于此函式的不安全版本， **_mbsnbcpy_s**不會執行任何 null 填補，而且永遠 null 會終止字串。
 
-C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)。
+C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推斷緩衝區長度 (因而不須指定大小引數)，也可以將不安全的舊函式自動取代成較新且安全的對應函式。 如需詳細資訊，請參閱[安全範本多載](../../c-runtime-library/secure-template-overloads.md)。
 
-這些函式的偵錯版本會先用 0xFD 填入緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
+這些函式的 debug 程式庫版本會先以0xFE 填滿緩衝區。 若要停用此行為，請使用 [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md)。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -125,9 +128,9 @@ C++ 利用多載樣板簡化了這些函式的使用方式。多載可自動推�
 |**_mbsnbcpy_s**|\<mbstring.h>|
 |**_mbsnbcpy_s_l**|\<mbstring.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [字串操作](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>

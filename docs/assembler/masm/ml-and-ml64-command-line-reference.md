@@ -1,6 +1,6 @@
 ---
 title: ML 和 ML64 命令列參考
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,101 +54,101 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62178107"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317158"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令列參考
 
-會組譯及連結一或多個組件語言原始程式檔。 命令列選項會區分大小寫。
+組合並連結一或多個元件語言原始程式檔。 命令列選項會區分大小寫。
 
-如需有關 ml64.exe 的詳細資訊，請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)。
+如需 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md)。
 
 ## <a name="syntax"></a>語法
 
-> ML \[*options*] *filename* \[ \[*options*]  *filename*]
+> ML \[*選項*] *filename* \[ \[*選項*] *filename*]
 >
-> ML64 \[*選項*] *filename* \[ \[*選項*] *filename*]...\[/link> *linkoptions*]
+> ML64 \[*選項*] *filename* \[ \[*選項*] *filename*] ... \[/link *linkoptions*]
 
 ### <a name="parameters"></a>參數
 
-*options*<br/>
-下表所列的選項。
+*選項*\
+下表列出的選項。
 
 |選項|動作|
 |------------|------------|
-|**/AT**|可讓小型記憶體模型支援。 可讓程式碼建構違反.com 格式檔案的需求的錯誤訊息。 請注意，這相當於[。模型](../../assembler/masm/dot-model.md)**微小**指示詞。<br /><br /> Ml64.exe 中無法使用。|
-|**/Bi** *檔名*|選取替代的連結器。|
-|**/c**|只會組合。 不會連結。|
-|**/coff**|產生通用物件檔案格式 (COFF) 物件模組的類型。 通常開發所需的 Win32 組件語言。<br /><br /> Ml64.exe 中無法使用。|
-|**/Cp**|會保留所有的使用者識別碼的大小寫。|
-|**/Cu**|將所有識別碼都對應為大寫 （預設值）。<br /><br /> Ml64.exe 中無法使用。|
-|**/Cx**|會保留在公用和 extern 符號的大小寫。|
-|**/D** *符號*[[=*值*]]|定義具有指定名稱的文字巨集。 如果*值*會遺失，其為空白。 以空格分隔的多個權杖必須括在引號內。|
-|**/EP**|產生前置處理過的來源清單 （傳送至 STDOUT）。 請參閱 **/Sf**。|
-|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|如果 ml.exe 或 ml64.exe 會在執行階段失敗，您可以使用 **/ERRORREPORT**有關這些內部錯誤，傳送給 Microsoft 的資訊。<br /><br /> 如需詳細資訊 **/ERRORREPORT**，請參閱[/errorReport （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|
-|**/F** *hexnum*|設定堆疊大小*hexnum*位元組 (這是與相同 **/連結/堆疊**:*數目*)。 值必須是以十六進位標記法來表示。 必須有之間保留一個空格 **/F**並*hexnum*。|
-|**/Fe** *filename*|名稱的可執行檔。|
-|**/Fl**[[*filename*]]|會產生組合的程式碼清單。 請參閱 **/Sf**。|
-|**/Fm**[[*filename*]]|建立連結器對應檔案。|
-|**/Fo** *檔名*|命名物件檔案。 如需詳細資訊，請參閱 < 備註 > 一節。|
-|**/FPi**|會產生浮點算術 （只混合語言） 的模擬器修正-工作。<br /><br /> Ml64.exe 中無法使用。|
-|**/Fr**[[*filename*]]|產生來源瀏覽器.sbr 檔案。|
-|**/FR**[[*filename*]]|會產生原始程式瀏覽器.sbr 檔擴充的格式。|
-|**/Gc**|指定使用 FORTRAN 或依照 pascal 命名法樣式函式呼叫和命名慣例。 與相同**選項的語言： PASCAL**。<br /><br /> Ml64.exe 中無法使用。|
-|**/Gd**|指定使用 c-style 函式呼叫和命名慣例。 與相同**選項的語言： C**。<br /><br /> Ml64.exe 中無法使用。|
-|**/GZ**|指定使用 __stdcall 函式呼叫和命名慣例。  與相同**選項的語言： STCALL**。<br /><br /> Ml64.exe 中無法使用。|
-|**/H** *number*|將數字的有效字元數限制外部名稱。 預設為 31 個字元。<br /><br /> Ml64.exe 中無法使用。|
-|**/help**|呼叫 QuickHelp ML 的說明。|
-|**/I** *pathname*|設定包含檔案路徑。 最多 10 個 **/I**允許選項。|
-|**/nologo**|抑制成功的組件的訊息。|
-|**/omf**|產生物件模組檔案格式 (OMF) 類型的物件模組。  **/omf**意味著 **/c**;ML.exe 不支援連結 OMF 物件。<br /><br /> Ml64.exe 中無法使用。|
-|**/Sa**|開啟的所有可用的資訊清單。|
-|**/safeseh**|標示為包含任何例外狀況處理常式，或包含宣告使用的例外狀況處理常式物件[。SAFESEH](../../assembler/masm/dot-safeseh.md)。<br /><br /> Ml64.exe 中無法使用。|
-|**/Sf**|加入第一個階段清單至清單的檔案。|
-|**/Sl** *width*|設定來源，其中列出每一行的字元數的線條寬度。 範圍是 60 到 255 個或 0。 預設值為 0。 與相同[網頁](../../assembler/masm/page.md)寬度。|
-|**/Sn**|產生清單時，請關閉符號表。|
-|**/Sp** *長度*|設定頁面長度的來源，其中列出在每頁行數。 範圍是到 255 個 10 或 0。 預設值為 0。 與相同[網頁](../../assembler/masm/page.md)長度。|
-|**/Ss** *text*|指定原始檔清單的文字。 與相同[副標題](../../assembler/masm/subtitle.md)文字。|
-|**/St** *text*|指定原始檔清單的標題。 與相同[TITLE](../../assembler/masm/title.md)文字。|
-|**/Sx**|開啟清單中，則為 false 的條件。|
-|**/Ta** *filename*|組合名稱結尾不是.asm 延伸模組的原始程式檔。|
-|**/w**|與相同 **/W0/WX**。|
-|**/W** *level*|設定警告層級中，其中*層級*= 0、 1、 2 或 3。|
-|**/WX**|如果會產生警告，則傳回錯誤碼。|
-|**/X**|忽略 INCLUDE 環境路徑。|
-|**/Zd**|產生目的檔中的行號資訊。|
-|**/Zf**|可公開的所有符號。|
-|**/Zi**|產生目的檔中的 CodeView 資訊。|
-|**/Zm**|可讓**M510** MASM 5.1 的最大相容性選項。<br /><br /> Ml64.exe 中無法使用。|
-|**/Zp**[[*alignment*]]|指定的位元組界限上封裝結構。 *對齊*可以是 1、 2 或 4。|
-|**/Zs**|執行僅檢查語法。|
+|**/AT**|啟用小型記憶體模型支援。 針對違反 .com 格式檔案需求的程式碼結構啟用錯誤訊息。 請注意，這不等於[。模型](dot-model.md)**小型**指示詞。<br /><br /> 無法在 ml64 中使用。|
+|**/Bl** *filename*|選取替代連結器。|
+|**/c**|僅限組合。 未連結。|
+|**/coff**|產生物件模組的通用物件檔案格式（COFF）類型。 通常是 Win32 元件語言開發所需的。<br /><br /> 無法在 ml64 中使用。|
+|**/Cp**|保留所有使用者識別碼的大小寫。|
+|**/Cu**|將所有識別碼對應至大寫（預設值）。<br /><br /> 無法在 ml64 中使用。|
+|**/Cx**|會保留公用和外部符號中的大小寫。|
+|**/D** *符號*⟦ =*值*⟧|定義具有指定名稱的文字宏。 如果遺漏*值*，則為空白。 以空格分隔的多個標記必須括在引號中。|
+|**/EP**|產生前置處理過的來源清單（傳送至 STDOUT）。 請參閱 **/Sf**。|
+|**/ERRORREPORT** [**無** &#124; **提示** &#124;佇列&#124; **傳送**]|如果 ml 或 ml64 在執行時間失敗，您可以使用 **/ERRORREPORT**將有關這些內部錯誤的資訊傳送給 Microsoft。<br /><br /> 如需 **/ERRORREPORT**的詳細資訊，請參閱[/ERRORREPORT （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|
+|**/F** *hexnum*|將堆疊大小設定為*hexnum*位元組（這與 **/link/STACK**：*number*相同）。 值必須以十六進位標記法表示。 **/F**和*hexnum*之間必須有一個空格。|
+|**/Fe** *filename*|命名可執行檔。|
+|**/Fl**⟦*filename*⟧|產生組合的程式代碼清單。 請參閱 **/Sf**。|
+|**/Fm**⟦*filename*⟧|建立連結器對應檔。|
+|**/Fo** *filename*|命名物件檔案。 如需詳細資訊，請參閱備註一節。|
+|**/FPi**|產生浮點算術的模擬器修正（僅限混合語言）。<br /><br /> 無法在 ml64 中使用。|
+|**/Fr**⟦*filename*⟧|產生來源瀏覽器 .sbr 檔案。|
+|**/Fr**⟦*filename*⟧|產生來源瀏覽器 .sbr 檔案的延伸格式。|
+|**/Gc**|指定使用 FORTRAN 或 Pascal 樣式函數呼叫和命名慣例。 與**選項語言相同： PASCAL**。<br /><br /> 無法在 ml64 中使用。|
+|**/Gd**|指定 C 樣式函數呼叫和命名慣例的用法。 與**選項語言相同： C**。<br /><br /> 無法在 ml64 中使用。|
+|**/GZ**|指定使用 __stdcall 函式呼叫和命名慣例。  與**選項語言相同： STCALL**。<br /><br /> 無法在 ml64 中使用。|
+|**/H** *數位*|將外部名稱限制為數字的有效字元。 預設值為31個字元。<br /><br /> 無法在 ml64 中使用。|
+|**/help**|呼叫 QuickHelp 以取得 ML 的協助。|
+|**/I** *路徑名稱*|設定 include 檔案的路徑。 最多允許10個 **/i**選項。|
+|**/nologo**|隱藏成功元件的訊息。|
+|**/omf**|產生物件模組檔案格式（OMF）類型的物件模組。  **/omf**意指 **/c**;ML 不支援連結 OMF 物件。<br /><br /> 無法在 ml64 中使用。|
+|**/Sa**|開啟所有可用資訊的清單。|
+|**/safeseh**|將物件標記為不包含任何例外狀況處理常式，或包含所有以宣告的例外狀況處理常式[。SAFESEH](dot-safeseh.md)。<br /><br /> 無法在 ml64 中使用。|
+|**/Sf**|將第一個傳遞清單新增至列出檔案。|
+|**/Sl** *寬度*|設定以每行字元數為單位的來源清單行寬。 範圍是60到255或0。 預設值為 0。 與[頁面](page.md)寬度相同。|
+|**/Sn**|產生清單時關閉符號表。|
+|**/Sp** *長度*|以每頁的行數設定來源清單的分頁長度。 範圍為10到255或0。 預設值為 0。 與[頁面](page.md)長度相同。|
+|**/Ss** *文字*|指定來源清單的文字。 與子[標題](subtitle.md)文字相同。|
+|**/St** *文字*|指定來源清單的標題。 與[標題](title.md)文字相同。|
+|**/Sx**|開啟清單中的 false 條件。|
+|**/Ta** *filename*|組合的來源檔案，其名稱結尾不是 .asm 副檔名。|
+|**/w**|與 **/W0/WX**相同。|
+|**/W** *層級*|設定警告層級，其中*level* = 0、1、2或3。|
+|**/WX**|會在產生警告時傳回錯誤碼。|
+|**/X**|忽略包含環境路徑。|
+|**/Zd**|產生物件檔案中的行號資訊。|
+|**/Zf**|使所有符號變成公用。|
+|**/Zi**|產生物件檔案中的 CodeView 資訊。|
+|**/Zm**|啟用**M510**選項，以取得與 MASM 5.1 的最大相容性。<br /><br /> 無法在 ml64 中使用。|
+|**/Zp**⟦*對齊*⟧|在指定的位元組界限上封裝結構。 *對齊*可以是1、2或4。|
+|**/Zs**|僅執行語法檢查。|
 |**/?**|顯示 ML 命令列語法的摘要。|
 
-*filename*<br/>
+*檔案名*\
 檔案的檔名。
 
-*linkoptions*<br/>
-連結選項。  請參閱[連結器選項](../../build/reference/linker-options.md)如需詳細資訊。
+*linkoptions*\
+連結選項。  如需詳細資訊，請參閱[連結器選項](../../build/reference/linker-options.md)。
 
 ## <a name="remarks"></a>備註
 
-一些命令列選項，以 ML 和 ML64 會放置區分特性。 例如，因為 ML 和 ML64 可以接受數個 **/c**選項，任何對應 **/Fo**之前，必須指定選項 **/c**。 下列的命令列範例會說明每個組件檔案規格的物件檔案規格：
+ML 和 ML64 的某些命令列選項是位置相關性。 例如，因為 ML 和 ML64 可以接受數個 **/c**選項，所以必須在 **/c**之前指定任何對應的 **/fo**選項。 下列命令列範例說明每個元件檔案規格的物件檔案規格：
 
-**ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm**
+**ml/Fo a1 .obj/c a .asm/Fo b1 .obj/c b. asm**
 
 ## <a name="environment-variables"></a>環境變數
 
 |變數|描述|
 |--------------|-----------------|
-|INCLUDE|指定搜尋 include 檔的路徑。|
+|INCLUDE|指定 include 檔案的搜尋路徑。|
 |ML|指定預設的命令列選項。|
-|TMP|指定暫存檔的路徑。|
+|.TMP|指定暫存檔案的路徑。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[ML 錯誤訊息](../../assembler/masm/ml-error-messages.md)<br/>
-[Microsoft 巨集組譯工具參考](../../assembler/masm/microsoft-macro-assembler-reference.md)<br/>
+[ML 錯誤訊息](ml-error-messages.md)\
+[Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)

@@ -1,38 +1,35 @@
 ---
-title: embedded_idl
-ms.date: 10/18/2018
+title: embedded_idl 匯入屬性
+ms.date: 08/29/2019
 f1_keywords:
 - embedded_idl
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01948b171b20ad0a3bf3e7a41047f1fe3df185b0
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389342"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216322"
 ---
-# <a name="embeddedidl"></a>embedded_idl
+# <a name="embedded_idl-import-attribute"></a>embedded_idl 匯入屬性
 
-**C++特定**
+**C++特殊**
 
-指定類型程式庫將寫入 .tlh 檔，並保留屬性產生的程式碼。
+指定是否要`.tlh`將類型程式庫寫入檔案, 並保留屬性產生的程式碼。
 
 ## <a name="syntax"></a>語法
 
-```
-embedded_idl[("param")]
-```
+> **#import***類型-程式庫***embedded_idl**[ **(** { **"emitidl"**  |  **"no_emitidl"** } **)** ]
 
 ### <a name="parameters"></a>參數
 
-*param*<br/>
-可以是下列兩個值之一：
+**emitidl**\
+從*型別程式庫*匯入的類型資訊存在於針對屬性化專案產生的 IDL 中。 這個行為是預設值, 如果您未指定的參數`embedded_idl`, 則會生效。
 
-- **emitidl**:從 typelib 匯入的類型資訊會出現在屬性化專案產生的 IDL 中。  這是預設值，如果未指定 `embedded_idl` 的參數就會生效。
-
-- **no_emitidl**:從 typelib 匯入的類型資訊不會出現在屬性化專案產生的 IDL 中。
+**"no_emitidl"** \
+從*型別程式庫*匯入的類型資訊不會出現在針對屬性化專案產生的 IDL 中。
 
 ## <a name="example"></a>範例
 
@@ -44,11 +41,9 @@ embedded_idl[("param")]
 #import "\school\bin\importlib.tlb" embedded_idl("no_emitidl")
 ```
 
-## <a name="remarks"></a>備註
-
 **結束C++特定**
 
 ## <a name="see-also"></a>另請參閱
 
-[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[#import 屬性](../preprocessor/hash-import-attributes-cpp.md)\
 [#import 指示詞](../preprocessor/hash-import-directive-cpp.md)

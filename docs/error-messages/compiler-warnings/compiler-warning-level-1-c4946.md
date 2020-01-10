@@ -1,29 +1,29 @@
 ---
-title: 編譯器警告 (層級 1) C4946
+title: 編譯器警告（層級1） C4946
 ms.date: 11/04/2016
 f1_keywords:
 - C4946
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: f215c621486bf223d8f6c90b0a4f4ae119ad4b1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
+ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280566"
+ms.lasthandoff: 11/13/2019
+ms.locfileid: "74050191"
 ---
-# <a name="compiler-warning-level-1-c4946"></a>編譯器警告 (層級 1) C4946
+# <a name="compiler-warning-level-1-c4946"></a>編譯器警告（層級1） C4946
 
 在關聯的類別之間使用的 reinterpret_cast：'class1' 和 'class2'
 
-請勿使用[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)相關的類型之間轉換。 使用  [static_cast](../../cpp/static-cast-operator.md)相反的或針對多型類型，使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)。
+請勿使用[reinterpret_cast](../../cpp/reinterpret-cast-operator.md)在相關類型之間進行轉換。 請改用[static_cast](../../cpp/static-cast-operator.md) ，或針對多型類型使用[dynamic_cast](../../cpp/dynamic-cast-operator.md)。
 
 根據預設，此警告為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
 下列程式碼範例會產生 C4946：
 
-```
+```cpp
 // C4946.cpp
 // compile with: /W1
 #pragma warning (default : 4946)

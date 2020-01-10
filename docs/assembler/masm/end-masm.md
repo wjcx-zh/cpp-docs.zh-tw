@@ -1,26 +1,31 @@
 ---
 title: END (MASM)
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - end
 helpviewer_keywords:
 - END directive
 ms.assetid: 128d1c17-f4c4-4ac6-bdb7-d14b4a9a7f4c
-ms.openlocfilehash: b05376a6a9814c029696423be8f6ccba1a3237f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5386a38df6a561f23d0a10ca32c4d39ff8f4576f
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203174"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317392"
 ---
-# <a name="end-masm"></a>END (MASM)
+# <a name="end"></a>END
 
-模組結束標記，以及 （選擇性） 若要設定的程式進入點*地址*。
+標記模組的結尾，並選擇性地將程式進入點設定為*procId*。
 
 ## <a name="syntax"></a>語法
 
-> 結束 [[address]]
+> **結束**⟦*procId*⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="remarks"></a>備註
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+*ProcId*引數只在32位 MASM 中有效。
+
+## <a name="see-also"></a>請參閱
+
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

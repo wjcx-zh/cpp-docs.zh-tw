@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2970
 ms.assetid: 21d90348-20d3-438c-b278-efdbfb93a7d2
-ms.openlocfilehash: 425d1bf50d56c4455ccd9292b300e744625d34c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af30ccc4a71c51d042d6f7807a648a1eef066a70
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62256332"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74742661"
 ---
 # <a name="compiler-error-c2970"></a>編譯器錯誤 C2970
 
-'class': 樣板參數 'param': 'arg': 運算式包含具有內部連結的物件不能當做非類型引數
+' class '：樣板參數 ' param '： ' arg '：牽涉到具有內部連結之物件的運算式不能當做非類型引數使用
 
-您無法使用的名稱或位址的靜態變數，做為範本引數。 此範本類別必須要有一個可以在編譯時期評估的常數值。
+您不能使用靜態變數的名稱或位址做為樣板引數。 樣板類別預期可以在編譯時期評估的 const 值。
 
-下列範例會產生 C2970:
+下列範例會產生 C2970：
 
-```
+```cpp
 // C2970.cpp
 // compile with: /c
 static int si;

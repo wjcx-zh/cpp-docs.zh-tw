@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4633
 ms.assetid: 6d76f268-ba8c-448b-8e83-b903a18b583b
-ms.openlocfilehash: 039489a804bb5d2bd17186b22bcfb8bea644c377
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 91a1f2a646adca7cf121528779bf0ded4d37024e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401731"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991911"
 ---
 # <a name="compiler-warning-level-3-c4633"></a>編譯器警告 (層級 3) C4633
 
-XML 文件註解目標： 錯誤： 原因
+XML 檔批註目標：錯誤：原因
 
-將名稱傳遞給[ \<param >](../../build/reference/param-visual-cpp.md)編譯器找不到標記。
+編譯器找不到傳遞給[\<param >](../../build/reference/param-visual-cpp.md)標記的名稱。
 
-下列範例會產生 C4633:
+下列範例會產生 C4633：
 
-```
+```cpp
 // C4633.cpp
 // compile with: /clr /doc /LD /W3
 

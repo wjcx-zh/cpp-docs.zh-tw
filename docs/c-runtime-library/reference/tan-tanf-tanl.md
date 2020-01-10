@@ -1,11 +1,11 @@
 ---
-title: tan、 tanf、 tanl
+title: tan、tanf、tanl
 ms.date: 04/10/2018
-apiname:
+api_name:
 - tan
 - tanf
 - tanl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - tan
 - tanf
@@ -32,14 +35,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258620"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70946893"
 ---
-# <a name="tan-tanf-tanl"></a>tan、 tanf、 tanl
+# <a name="tan-tanf-tanl"></a>tan、tanf、tanl
 
 計算正切函數。
 
@@ -63,22 +66,22 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>傳回值
 
-**Tan**函式會傳回的正切函數*x*。 如果*x*大於或等於 263，或小於或等於-263，結果中的遺失，就會發生。
+**Tan**函式會傳回*x*的正切函數。 如果*x*大於或等於263，或小於或等於-263，則會在結果中失去重要性。
 
-|輸入|SEH 例外狀況|**Matherr**例外狀況|
+|Input|SEH 例外狀況|**Matherr**異常|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
-|± INF|**INVALID**|_DOMAIN|
+|± QNAN，IND|none|_DOMAIN|
+|± INF|**無效**|_DOMAIN|
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**tan**採用並傳回**float**或**長** **double**值。 在 C 程式中， **tan**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**或**long** **double**值之**tan**的多載。 在 C 程式中， **tan**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭 (C)|必要的標頭 (C++)|
 |-------------|---------------------|-|
-|**tan**， **tanf**， **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
+|**tan**、 **tanf**、 **tanl**|\<math.h>|\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

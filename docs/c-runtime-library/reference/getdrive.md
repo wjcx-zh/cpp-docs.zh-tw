@@ -1,9 +1,9 @@
 ---
 title: _getdrive
-ms.date: 11/04/2016
-apiname:
+ms.date: 09/19/2019
+api_name:
 - _getdrive
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _getdrive
 - getdrive
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: d71f72c00cc384d5f4f69d8a58dbcfb7aa39332f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 94d6c15270827cf61ec6086de8fa11251b435e2c
+ms.sourcegitcommit: f907b15f50a6b945d0b87c03af0050946157d701
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331749"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71158756"
 ---
-# <a name="getdrive"></a>_getdrive
+# <a name="_getdrive"></a>_getdrive
 
 取得目前的磁碟機。
 
@@ -47,7 +50,7 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>傳回值
 
-傳回目前的 (預設值) 磁碟機 (1 = A、2 = B，等等)。 不會傳回錯誤。
+傳回目前的 (預設值) 磁碟機 (1 = A、2 = B，等等)。 傳回值為零表示目前路徑的開頭不是字母磁片磁碟機名稱，例如 UNC 路徑。 或者，這表示內部緩衝區配置失敗。 如果內部配置失敗， `errno`會設定為 ENOMEM。
 
 ## <a name="requirements"></a>需求
 

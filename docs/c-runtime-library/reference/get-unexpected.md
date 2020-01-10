@@ -1,9 +1,9 @@
 ---
 title: _get_unexpected
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _get_unexpected
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - __get_unexpected
 - _get_unexpected
@@ -24,16 +27,16 @@ helpviewer_keywords:
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 896313aba62a42b54e8920eafa46d85714404b1c
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62331892"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956445"
 ---
-# <a name="getunexpected"></a>_get_unexpected
+# <a name="_get_unexpected"></a>_get_unexpected
 
-傳回由呼叫的終止常式**意外**。
+傳回未**預期**呼叫的終止常式。
 
 ## <a name="syntax"></a>語法
 
@@ -43,7 +46,7 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>傳回值
 
-將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果尚未設定任何函式，傳回的值可能用於還原預設行為。此值可能**NULL**。
+將指標傳回由 [set_unexpected](set-unexpected-crt.md) 註冊的函式。 如果未設定任何函式，則會使用傳回值來還原預設行為。這個值可以是**Null**。
 
 ## <a name="requirements"></a>需求
 

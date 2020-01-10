@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: 833546d20454e6104a2d5fcb272bf5bb9518ea44
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401575"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991701"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>編譯器警告 (層級 3) C4738
 
 在記憶體中儲存 32 位元浮點結果，可能會損失效能
 
-C4738 警告的指派，轉型，結果會傳遞引數，或其他作業可能要捨入，或作業已用盡暫存器，且需要使用 （溢出） 的記憶體。 這導致效能損失。
+C4738 會警告，指派、轉換、傳遞的引數或其他作業的結果可能需要四捨五入，或操作已用盡暫存器，而且需要使用記憶體（溢出）。 這可能會導致效能降低。
 
-若要解決這個警告，並避免將數值四捨五入，以編譯[/fp: fast](../../build/reference/fp-specify-floating-point-behavior.md) ，或使用`double`而不是`float`。
+若要解決此警告並避免四捨五入，請使用[/fp： fast](../../build/reference/fp-specify-floating-point-behavior.md)進行編譯，或使用 `double` 而不是 `float`。
 
-若要解決這個警告，並避免用盡暫存器，變更計算的順序並修改使用內嵌
+若要解決此警告並避免暫存器用盡，請變更計算的順序，並修改內嵌的使用
 
 此警告預設為關閉。 如需詳細資訊，請參閱 [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會產生 C4738:
+下列範例會產生 C4738：
 
-```
+```cpp
 // C4738.cpp
 // compile with: /c /fp:precise /O2 /W3
 // processor: x86

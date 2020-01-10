@@ -1,26 +1,26 @@
 ---
-title: Variadic 巨集
-ms.date: 11/04/2016
+title: Variadic 宏
+ms.date: 10/17/2019
 helpviewer_keywords:
 - variadic macros [C++]
 - __VA_ARGS__ variadic macro specifier
 ms.assetid: 51e757dc-0134-4bb2-bb74-64ea5ad75134
-ms.openlocfilehash: da159ef979ccc38845064debebae55356bc9e9bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de4d3a7f03f613cb058e564664f01837df23aefb
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179565"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72587887"
 ---
-# <a name="variadic-macros"></a>Variadic 巨集
+# <a name="variadic-macros"></a>Variadic 宏
 
 Variadic 巨集是包含引數數目可變、類似函式的巨集。
 
 ## <a name="remarks"></a>備註
 
-若要使用 variadic 巨集，省略符號可能會指定巨集定義，並取代識別項中的最後一個型式引數為`__VA_ARGS__`可能插入額外的引數定義中使用。  `__VA_ARGS__` 取代所有符合的省略符號，包括以逗點隔開的引數。
+若要使用 variadic 宏，可以將省略號指定為巨集定義中的最終型式引數，而取代識別碼 `__VA_ARGS__` 可以在定義中用來插入額外的引數。  `__VA_ARGS__` 會由所有符合省略號的引數所取代，包括它們之間的逗號。
 
-C 標準指定必須將至少一個引數傳遞給省略符號，確保巨集不會解析成具有尾端逗號的運算式。  如果沒有傳遞引數至省略符號，Visual C++ 實作會隱藏尾端逗號。
+C 標準指定至少必須將一個引數傳遞至省略號，以確保宏不會解析為尾端逗號的運算式。 如果沒有任何C++引數傳遞至省略號，傳統的 Microsoft 執行會隱藏尾端的逗號。 設定 `/experimental:preprocessor` 編譯器選項時，不會隱藏尾端的逗號。
 
 ## <a name="example"></a>範例
 
@@ -59,6 +59,6 @@ hello, world
 error
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [巨集 (C/C++)](../preprocessor/macros-c-cpp.md)

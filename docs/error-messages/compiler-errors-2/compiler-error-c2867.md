@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2867
 ms.assetid: 63be26b2-d9ab-4f3d-a8b7-981ce3e4d6b9
-ms.openlocfilehash: 3c79fec9f52ea9451cea456dcc062af9bcbe9b3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42b931d208000cc35e65c7bff9c20901cef24713
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164965"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74755053"
 ---
 # <a name="compiler-error-c2867"></a>編譯器錯誤 C2867
 
-'identifier': 不是命名空間
+' identifier '：不是命名空間
 
-A`using`指示詞會套用至命名空間以外的項目。
+`using` 指示詞會套用至命名空間以外的專案。
 
-下列範例會產生 C2867:
+下列範例會產生 C2867：
 
-```
+```cpp
 // C2867.cpp
 // compile with: /c
 namespace N {

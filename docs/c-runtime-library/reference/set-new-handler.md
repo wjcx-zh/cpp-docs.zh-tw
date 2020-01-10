@@ -1,9 +1,9 @@
 ---
 title: _set_new_handler
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _set_new_handler
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -15,7 +15,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _set_new_handler
 - set_new_handler
@@ -25,14 +28,14 @@ helpviewer_keywords:
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1f340887efd657dd9ff9bf219534d77fdd90aa3
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356494"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948477"
 ---
-# <a name="setnewhandler"></a>_set_new_handler
+# <a name="_set_new_handler"></a>_set_new_handler
 
 若 **new** 運算子無法配置記憶體，則將控制項傳送至您的錯誤處理機制。
 
@@ -49,17 +52,17 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>傳回值
 
-讓指標回到先前的例外狀況處理函式註冊 **_set_new_handler**，如此一來，稍後可以還原先前函式。 如果尚未設定先前函式，傳回的值可用來還原預設行為。這個值可以是**NULL**。
+傳回 **_set_new_handler**所註冊之先前例外狀況處理函式的指標，以便之後可以還原先前的函式。 如果未設定先前的函式，則會使用傳回值來還原預設行為。這個值可以是**Null**。
 
 ## <a name="remarks"></a>備註
 
-C++ **_Set_new_handler**函式會指定如果取得控制權的例外狀況處理函式**新**運算子無法配置記憶體。 如果**新**失敗，執行階段系統會自動呼叫傳遞做為引數的例外狀況處理函式 **_set_new_handler**。 **_PNH**New.h 中所定義，不會傳回類型的函式指標**int**並接受類型引數**size_t**。 使用**size_t**來指定要配置的空間量。
+C++如果**new**運算子無法配置記憶體， **_set_new_handler**函數會指定可取得控制權的例外狀況處理函式。 如果**new**失敗，則執行時間系統會自動呼叫以引數形式傳遞給 **_set_new_handler**的例外狀況處理函式。 **_PNH**（定義于 New .h）是函式的指標，該函式會傳回類型**int** ，並接受**size_t**類型的引數。 使用**size_t**來指定要配置的空間量。
 
 沒有預設處理常式。
 
-**_set_new_handler**基本上回收配置。 每次函式傳回非零值時，執行階段系統都會重試配置，如果函式傳回 0 則失敗。
+**_set_new_handler**基本上是垃圾收集配置。 每次函式傳回非零值時，執行階段系統都會重試配置，如果函式傳回 0 則失敗。
 
-一段 **_set_new_handler**函式在程式中的註冊執行階段系統使用的引數清單中指定的例外狀況處理函式：
+程式中出現的 **_set_new_handler**函式會向執行時間系統註冊引數清單中所指定的例外狀況處理函式：
 
 ```cpp
 // set_new_handler1.cpp
@@ -77,7 +80,7 @@ int main( void )
 }
 ```
 
-您可以儲存最後傳遞至函式位址 **_set_new_handler**函式，並稍後進行恢復：
+您可以儲存上次傳遞至 **_set_new_handler**函式的函式位址，並于稍後再復原：
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -88,7 +91,7 @@ int main( void )
    // . . .
 ```
 
-C++ [_set_new_mode](set-new-mode.md) 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式會指出是否在失敗時， **malloc**就是呼叫所設定的新處理常式 **_set_new_handler**。 根據預設， **malloc**不會呼叫新的處理常式無法配置記憶體。 您可以覆寫此預設行為，讓，當**malloc**無法配置記憶體， **malloc**呼叫新的處理常式在相同方式來**新**運算子因當它失敗，相同的原因。 若要覆寫預設值，請及早在程式中呼叫：
+C++ [_set_new_mode](set-new-mode.md) 函式會設定 [malloc](malloc.md) 的新處理常式模式。 新的處理常式模式指出，在失敗時， **malloc**是否會呼叫 **_set_new_handler**所設定的新處理常式常式。 根據預設， **malloc**不會在失敗時呼叫新的處理常式常式來配置記憶體。 您可以覆寫此預設行為，如此一來，當**malloc**無法配置記憶體時， **malloc**會呼叫新的處理常式，其方式會與**新**的運算子在因相同原因而失敗時所執行的相同。 若要覆寫預設值，請及早在程式中呼叫：
 
 ```cpp
 _set_new_mode(1);
@@ -96,11 +99,11 @@ _set_new_mode(1);
 
 ，或使用 Newmode.obj 連結。
 
-如果使用者定義`operator new`提供新的處理常式函式不會自動呼叫失敗。
+如果提供使用者定義`operator new` ，則不會在失敗時自動呼叫新的處理常式函數。
 
 如需詳細資訊，請參閱《C++ 語言參考》中的 [new](../../cpp/new-operator-cpp.md) 和 [delete](../../cpp/delete-operator-cpp.md)。
 
-沒有單一 **_set_new_handler**處理常式的所有動態連結的 Dll 或可執行檔; 即使您呼叫 **_set_new_handler**可能由另一個取代您的處理常式，或您要取代另一個 DLL 或可執行檔所設定的處理常式。
+所有動態連結的 Dll 或可執行檔都有單一的 **_set_new_handler**處理常式;即使您呼叫 **_set_new_handler** ，您的處理常式可能會被另一個取代，或者您要取代另一個 DLL 或可執行檔所設定的處理常式。
 
 ## <a name="requirements"></a>需求
 

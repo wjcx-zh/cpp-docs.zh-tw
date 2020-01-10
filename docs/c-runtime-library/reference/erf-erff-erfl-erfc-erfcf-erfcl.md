@@ -1,14 +1,14 @@
 ---
 title: erf、erff、erfl、erfc、erfcf、erfcl
 ms.date: 01/31/2019
-apiname:
+api_name:
 - erff
 - erfl
 - erf
 - erfc
 - erfcf
 - erfcl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -20,7 +20,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - erfl
 - erf
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - erfcf function
 - erfc function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-ms.openlocfilehash: 4270d8366686ea282a4dd37741d9f8e37991b88f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: df724ed056c02d79b5b51f97ae4aaf8ae267fde5
+ms.sourcegitcommit: 8178d22701047d24f69f10d01ba37490e3d67241
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289193"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "70937611"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -89,26 +92,26 @@ long double erfcl(
 
 ## <a name="return-value"></a>傳回值
 
-**Erf**函式會傳回高斯錯誤函式*x*。 **Erfc**函式會傳回的補充高斯錯誤函式*x*。
+**Erf**函數會傳回*x*的高斯錯誤函式。 **Erfc**函數會傳回*x*的互補高斯錯誤函式。
 
 ## <a name="remarks"></a>備註
 
-**Erf**函式會計算的高斯錯誤函式*x*，其定義為：
+**Erf**函數會計算*x*的高斯錯誤函式，其定義為：
 
-![X 的誤差函式](media/crt_erf_formula.PNG "x 的誤差函式")
+![X 的錯誤函式](media/crt_erf_formula.PNG "x 的誤差函式")
 
-補充高斯錯誤函式定義為 1-erf （x)。 **Erf**函式傳回值，範圍-1.0 為 1.0。 不會傳回錯誤。 **Erfc**函式會傳回範圍 0 到 2 中的值。 如果*x*太大**erfc**，則**errno**變數設定為**ERANGE**。
+互補高斯 error 函式定義為 erf （x）。 **Erf**函數會傳回範圍-1.0 到1.0 的值。 不會傳回錯誤。 **Erfc**函數會傳回0到2範圍內的值。 如果*x*對**erfc**而言太大， **Errno**變數會設定為**ERANGE**。
 
-因為C++允許多載，您可以呼叫多載**erf**並**erfc**採用並傳回**float**並**長** **double**型別。 在 C 程式中， **erf**並**erfc**一律採用並傳回**double**。
+因為C++允許多載，所以您可以呼叫採用並傳回**float**和**long** **double**類型的**erf**和**erfc**多載。 在 C 程式中， **erf**和**erfc**一律會採用並傳回**雙精度浮點數**。
 
 ## <a name="requirements"></a>需求
 
 |功能|必要的標頭|
 |--------------|---------------------|
-|**erf**， **erff**， **erfl**， **erfc**， **erfcf**， **erfcl**|\<math.h>|
+|**erf**、 **erff**、 **erfl**、 **erfc**、 **erfcf**、 **erfcl**|\<math.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [浮點支援](../../c-runtime-library/floating-point-support.md)<br/>

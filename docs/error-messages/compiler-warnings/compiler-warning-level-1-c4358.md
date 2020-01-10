@@ -1,27 +1,27 @@
 ---
-title: 編譯器警告 (層級 1) C4358
+title: 編譯器警告（層級1） C4358
 ms.date: 11/04/2016
 f1_keywords:
 - C4358
 helpviewer_keywords:
 - C4358
 ms.assetid: a9848f84-14b3-405e-81bf-ee3e91a51511
-ms.openlocfilehash: aebac17a343efedf678b55f8940004c85a2db708
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fd3109df3ecd32933b5fc217dfc02181f43d97c
+ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408377"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73966528"
 ---
-# <a name="compiler-warning-level-1-c4358"></a>編譯器警告 (層級 1) C4358
+# <a name="compiler-warning-level-1-c4358"></a>編譯器警告（層級1） C4358
 
-'operator': 傳回結合的委派類型不是 'void';傳回的值會是未定義
+' operator '：合併委派的傳回類型不是 ' void ';傳回的值未定義
 
-合併兩個委派，並傳回值不是 void。 如果具有非 void 傳回值的兩個委派組合時，編譯器會無法執行適當的設定，如果使用委派的傳回值。
+結合了兩個委派，而傳回值不是 void。 如果結合了具有非 void 傳回值的兩個委派，則如果使用委派的傳回值，編譯器將無法執行適當的指派。
 
-下列範例會產生 C4358:
+下列範例會產生 C4358：
 
-```
+```cpp
 // C4358.cpp
 // compile with: /clr /W1
 delegate int D();

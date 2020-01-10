@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理 COM 字串使用C++Interop
+title: 如何：使用 C++ Interop 封送處理 COM 字串
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,28 +9,28 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dfdad892261d5ae2d3494734458e1447f8ebd7c
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325477"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988461"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>HOW TO：封送處理 COM 字串使用C++Interop
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>如何：使用 C++ Interop 封送處理 COM 字串
 
-本主題示範如何 BSTR （偏好在 COM 程式設計中的基本字串格式） 傳遞從 managed 至 unmanaged 函式，反之亦然。 與其他字串類型的交互操作，請參閱下列主題：
+本主題示範如何將 BSTR （COM 程式設計中的基底字元串格式）從 managed 傳遞至非受控函式，反之亦然。 如需與其他字串類型互通，請參閱下列主題：
 
 - [如何：使用 C++ Interop 封送處理 Unicode 字串](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
 - [如何：使用 C++ Interop 封送處理 ANSI 字串](../dotnet/how-to-marshal-ansi-strings-using-cpp-interop.md)
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但如果在不同的檔案中定義這些函式交互操作方式相同。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但如果在個別的檔案中定義，則這些函式會以相同的方式進行交互作用。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將傳遞 BSTR （COM 程式設計中使用的字串格式） 從 managed 到 unmanaged 的函式。 呼叫 managed 函式會使用<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>取得內容的.NET System.String BSTR 表示法的位址。 此指標會使用釘選[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)確保，其實體的位址不會變更記憶體回收週期期間 unmanaged 函式執行時。 記憶體回收行程禁止移動記憶體中的，直到[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)超出範圍。
+下列範例示範如何將 BSTR （在 COM 程式設計中使用的字串格式）傳遞至非受控函式。 呼叫的 managed 函式會使用 <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> 來取得 .NET System.string 內容之 BSTR 表示的位址。 這個指標會使用[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)釘選，以確保在執行非受控函式時，不會在垃圾收集週期變更其實體位址。 在[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)超出範圍之前，垃圾收集行程禁止移動記憶體。
 
-```
+```cpp
 // MarshalBSTR1.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -65,9 +65,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例示範如何將傳遞 BSTR 從 unmanaged 到 unmanaged 的函式。 接收 managed 函式可以使用中的字串與 BSTR，或使用<xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A>將它轉換為<xref:System.String>用於與其他 managed 函式。 Unmanaged 堆積上配置記憶體表示 BSTR，因為未釘選是有必要，因為沒有任何 unmanaged 堆積記憶體回收。
+下列範例會示範如何從非受控函式將 BSTR 傳遞至非受控函式。 接收的 managed 函數可以使用中的字串做為 BSTR，或使用 <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> 將它轉換成 <xref:System.String> 以與其他 managed 函式搭配使用。 因為代表 BSTR 的記憶體是在非受控堆積上配置，所以不需要固定，因為非受控堆積上不會進行垃圾收集。
 
-```
+```cpp
 // MarshalBSTR2.cpp
 // compile with: /clr
 #define WINVER 0x0502
@@ -102,6 +102,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

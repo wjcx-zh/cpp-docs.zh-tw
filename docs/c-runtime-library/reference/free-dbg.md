@@ -1,9 +1,9 @@
 ---
 title: _free_dbg
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _free_dbg
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,7 +14,10 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _free_dbg
 - free_dbg
@@ -24,14 +27,14 @@ helpviewer_keywords:
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43591ce8710dd25ad33832a5f084ca6e84bba979
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62287859"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70956798"
 ---
-# <a name="freedbg"></a>_free_dbg
+# <a name="_free_dbg"></a>_free_dbg
 
 釋放堆積中的記憶體區塊 (僅限偵錯版本)。
 
@@ -50,15 +53,15 @@ void _free_dbg(
 要釋放之已配置記憶體區塊的指標。
 
 *blockType*<br/>
-要釋放配置的記憶體區塊類型： **_CLIENT_BLOCK**， **_NORMAL_BLOCK**，或 **_IGNORE_BLOCK**。
+要釋放的已配置記憶體區塊類型： **_CLIENT_BLOCK**、 **_NORMAL_BLOCK**或 **_IGNORE_BLOCK**。
 
 ## <a name="remarks"></a>備註
 
-**_Free_dbg**函式是偵錯版本[免費](free.md)函式。 當[_DEBUG](../../c-runtime-library/debug.md)未定義，每次呼叫 **_free_dbg**的呼叫會降低**免費**。 兩者**免費**和 **_free_dbg**釋放的記憶體區塊，在基底堆積中，但 **_free_dbg**容納兩個偵錯功能： 將釋放的能力會封鎖堆積中連結的清單中以模擬低記憶體的狀況以及釋放特定配置類型的區塊類型參數。
+**_Free_dbg**函數是[free](free.md)函式的 debug 版本。 未定義[_debug](../../c-runtime-library/debug.md)時，每個 **_free_dbg**的呼叫都會縮減為**免費**的呼叫。 **Free**和 **_free_dbg**都會釋放基底堆積中的記憶體區塊，但 **_free_dbg**會容納兩個偵錯工具：將釋放的區塊保留在堆積的連結清單中，以模擬記憶體不足的狀況，並將區塊類型參數設為免費的特定配置類型。
 
-**_free_dbg**執行有效性檢查所有指定的檔案和區塊位置執行可用的作業之前。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果 **_CRTDBG_DELAY_FREE_MEM_DF**位元欄位[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)旗標設定時，已釋放的區塊填入值 0xDD，並指派 **_FREE_BLOCK**區塊類型，以及保留在堆積的連結清單中的記憶體區塊。
+在執行免費作業之前， **_free_dbg**會對所有指定的檔案和區塊位置執行有效性檢查。 應用程式不需要提供此資訊。 釋放記憶體區塊時，偵錯堆積管理員會自動檢查使用者部分每一端的緩衝區完整性，並在發生覆寫時發出錯誤報表。 如果已設定[_crtDbgFlag](../../c-runtime-library/crtdbgflag.md)旗標的 **_CRTDBG_DELAY_FREE_MEM_DF**位欄位，釋放的區塊會填入值0xDD、指派 **_FREE_BLOCK**區塊類型，並保留在堆積的記憶體區塊連結清單中。
 
-如果發生錯誤時釋放記憶體**errno**資訊從作業系統在本質上失敗的設定。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
+如果釋放記憶體時發生錯誤，則會在失敗的本質中，使用作業系統的資訊來設定**errno** 。 如需詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 如需在偵錯版之基底堆積中如何配置、初始化及管理記憶體區塊的資訊，請參閱 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)。 如需配置區塊類型以及如何使用它們的資訊，請參閱[偵錯堆積上的區塊類型](/visualstudio/debugger/crt-debug-heap-details)。 如需在應用程式的偵錯組建中呼叫標準堆積函式以及其偵錯版本之間的差異的資訊，請參閱[堆積配置函式的偵錯版本](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)。
 
@@ -72,7 +75,7 @@ void _free_dbg(
 
 ## <a name="example"></a>範例
 
-如需如何使用的範例 **_free_dbg**，請參閱[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
+如需如何使用 **_free_dbg**的範例，請參閱[crt_dbg2](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/crt_dbg2)。
 
 ## <a name="see-also"></a>另請參閱
 

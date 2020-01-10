@@ -1,6 +1,6 @@
 ---
-title: '#如果 #elif、 #else 和 #endif 指示詞 (C /C++)'
-ms.date: 11/04/2016
+title: '#if、#elif、#else 和 #endif 指示詞 (C/C++)'
+ms.date: 08/29/2019
 f1_keywords:
 - '#else'
 - '#endif'
@@ -21,87 +21,90 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2b7ed4733dcafda793b9a945c3f40739b52e040a
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409885"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70220348"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else 和 #endif 指示詞 (C/C++)
 
-**#If**指示詞，搭配 **#elif**， **#else**，以及 **#endif**指示詞，控制項的原始程式檔部分編譯。 如果您撰寫的運算式 (之後 **#if**) 有非零值，緊接的折線圖組 **#if**指示詞會保留在轉譯單位中。
+具有 **#elif**、 **#else**和 **#endif**指示詞的 **#if**指示詞, 會控制原始檔部分的編譯。 如果您撰寫的運算式 (在 **#if**之後) 具有非零值, 則緊接在 **#if**指示詞之後的行群組會保留在轉譯單位中。
 
 ## <a name="grammar"></a>文法
 
-*條件式*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*if 部分 elif 部分*<sub>opt</sub> *else 部分*<sub>選擇</sub> *endif 列*
+*條件*式: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-部分*<sub>opt</sub>*其他-部分*<sub>opt</sub>*endif-行*
 
-*if-part* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*如果行文字*
+*if-part* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line text*
 
-*if 程式行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#if** *constant-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef**  *identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef**  *identifier*
+*如果-line* : \
+&nbsp;&nbsp;&nbsp;&nbsp; **#if** *常數運算式*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifdef** *識別碼*\
+&nbsp;&nbsp;&nbsp;&nbsp; **#ifndef** *識別碼*
 
-*elif 部分*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif 行文字*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*elif 部分 elif 單行文字*
+*elif-元件*: \
+&nbsp;&nbsp;&nbsp;&nbsp;*elif 行文字*\
+&nbsp;&nbsp;&nbsp;&nbsp;*elif-part elif-line text*
 
-*elif 列*:<br/>
+*elif-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#elif**  *constant-expression*
 
-*else 部分*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*else-line 文字*
+*else-part* : \
+&nbsp;&nbsp;&nbsp;&nbsp;*else-行文字*
 
-*其他列*:<br/>
+*else-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#else**
 
-*endif 列*:<br/>
+*endif-line* : \
 &nbsp;&nbsp;&nbsp;&nbsp; **#endif**
 
-每個 **#if**原始程式檔中的指示詞必須比對的結尾 **#endif**指示詞。 任意數目的 **#elif**指示詞之間可以出現 **#if**並 **#endif**指示詞，但最多一個 **#else**允許指示詞。 **#Else**指示詞，如果有的話，必須是之前的最後一個指示詞 **#endif**。
+## <a name="remarks"></a>備註
 
-**#If**， **#elif**， **#else**，以及 **#endif**指示詞可以巢狀在其他的文字部分 **#if**指示詞。 每個巢狀 **#else**， **#elif**，或 **#endif**指示詞都屬於前一個最接近 **#if**指示詞。
+原始程式檔中的每個 **#if**指示詞都必須以結尾的 **#endif**指示詞進行比對。 **#If**和 **#endif**指示詞之間可以出現任意數目的 **#elif**指示詞, 但最多隻允許一個 **#else**指示詞。 **#Else**指示詞 (如果有的話) 必須是 **#endif**前的最後一個指示詞。
 
-所有的條件式編譯指示詞，例如 **#if**並 **#ifdef**，結尾必須符合 **#endif**在檔案結尾; 之前的指示詞，否則為錯誤會產生訊息。 當條件式編譯指示詞內包含的檔案，它們必須滿足相同的條件：必須要有任何不相符的條件式編譯指示詞結尾的 include 檔。
+**#If**、 **#elif**、 **#else**和 **#endif**指示詞可以在其他 **#if**指示詞的*文字*部分中加以嵌套。 每個嵌套的 **#else**、 **#elif**或 **#endif**指示詞都屬於最接近的前面 **#if**指示詞。
 
-巨集取代會在命令列後面的部分 **#elif**命令，因此可以使用巨集呼叫*常數運算式*。
+所有條件式編譯指示詞 (例如 **#if**和 **#ifdef**) 都必須符合檔案結尾之前的結尾 **#endif**指示詞。 否則, 就會產生錯誤訊息。 當包含檔案中包含條件式編譯指示詞時, 它們必須滿足相同的條件:Include 檔案結尾處不能有不相符的條件式編譯指示詞。
 
-前置處理器會選取其中一個指定的出現次數*文字*供進一步處理。 中指定的區塊*文字*可以是任何文字序列。 可能會佔用一行以上。 通常*文字*是對編譯器或前置處理器有意義的程式文字。
+宏取代是在 **#elif**命令後面的那一行中完成, 因此, 可以在*常數運算式*中使用宏呼叫。
 
-前置處理器會處理所選*文字*並將它傳遞給編譯器。 如果*文字*包含前置處理器指示詞，前置處理器會執行，這些指示詞。 只會編譯前置處理器選取的文字區塊。
+預處理器會選取其中一個指定的*文字*, 以進行進一步的處理。 *文字*中指定的區塊可以是任何文字序列。 可能會佔用一行以上。 *文字*通常是對編譯器或預處理器具有意義的程式文字。
 
-前置處理器會選取單一*文字*藉由評估每個常數運算式的項目 **#if**或是 **#elif**指示詞，直到找到，則為 true （非零值） 常數運算式。 它會選取所有文字 (包括其他開頭的前置處理器指示詞 **#** ) 直到其相關聯 **#elif**， **#else**，或 **#endif**.
+預處理器會處理選取的*文字*, 並將它傳遞給編譯器。 如果*文字*包含預處理器指示詞, 則預處理器會執行這些指示詞。 只會編譯前置處理器選取的文字區塊。
 
-如果所有發生次數*常數運算式*都是 false，或者如果沒有任何 **#elif**指示詞，前置處理器會選取文字區塊之後 **#else**子句。 如果 **#else**省略子句的所有執行個體*常數運算式*中 **#if**區塊為 false，就會選取任何文字區塊。
+預處理器會藉由評估每個 **#if**或 **#elif**指示詞之後的常數運算式來選取單一*文字*專案, 直到找到 true (非零) 常數運算式為止。 它會選取所有文字 (包括其他開頭的前置處理器指示詞 **#** ) 直到其相關聯 **#elif**， **#else**，或 **#endif**.
 
-*常數運算式*是整數常數運算式具有以下額外限制：
+如果所有出現的*常數運算式*都是 false, 或如果沒有出現 **#elif**指示詞, 則預處理器會在 **#else**子句之後選取文字區塊。 當沒有 **#else**子句, 而且 **#if**區塊中的所有*常數運算式*實例都是 false 時, 就不會選取任何文字區塊。
 
-- 運算式必須有整數類資料類型，而且可以包含整數常數、 字元常數，而**定義**運算子。
+*常數運算式*是具有下列額外限制的整數常數運算式:
 
-- 運算式無法使用 `sizeof` 或類型轉換運算子。
+- 運算式必須有整數類資料類型, 而且只能包含整數常數、字元常數和**已定義**的運算子。
 
-- 目標環境可能無法表示所有範圍的整數。
+- 運算式不能使用`sizeof`或類型轉換運算子。
 
-- 轉譯表示型別**int**型別相同**長**，並**不帶正負號的 int**相同**不帶正負號長**。
+- 目標環境可能無法代表所有的整數範圍。
 
-- 轉譯器可以將字元常數轉譯為一組與目標環境的一組程式碼值不同的程式碼值。 若要判斷目標環境的屬性，請於針對目標環境建置之應用程式的 LIMITS.H 中檢查巨集的值。
+- 翻譯所代表的類型**int**與**long**類型的方式相同, 而不**帶正負**號的 int 與不**帶正負**號的 long 相同。
 
-- 運算式不得執行任何環境查詢，並且必須與目標電腦上的實作詳細資料保持隔離。
+- 轉譯器可以將字元常數轉譯為一組與目標環境的一組程式碼值不同的程式碼值。 若要判斷目標環境的屬性, 請使用針對該環境所建立的應用程式來檢查限制的值 *。H*宏。
 
-## <a name="defined"></a>已定義的
+- 運算式不能查詢環境, 而且必須與目的電腦上的執行詳細資料保持不變。
 
-前置處理器運算子**定義**用於特殊常數運算式，如下列語法所示：
+## <a name="preprocessor-operators"></a>前置處理器運算子
 
-defined( `identifier` )
+### <a name="defined"></a>已定義的
 
-defined `identifier`
+**定義**的預處理器運算子可以在特殊常數運算式中使用, 如下列語法所示:
 
-這個常數運算式視為 true （非零），是否*識別碼*目前定義; 否則條件為 false (0)。 定義成空白文字的識別項會被視為已定義。 **定義**指示詞可用於 **#if**並 **#elif**指示詞，但沒地方可繼續。
+> **已定義 (** *識別碼* **)** \
+> **已定義** *識別碼*
 
-在下列範例中， **#if**並 **#endif**指示詞會控制編譯的三個函式呼叫的其中一個：
+如果目前已定義*識別碼*, 這個常數運算式就會被視為 true (非零)。 否則，條件為 false (0)。 定義成空白文字的識別項會被視為已定義。 **定義**的運算子可以用在 **#if**和 **#elif**指示詞中, 但其他地方則不適用。
+
+在下列範例中, **#if**和 **#endif**指示詞會控制三個函式呼叫之一的編譯:
 
 ```C
 #if defined(CREDIT)
@@ -113,7 +116,7 @@ defined `identifier`
 #endif
 ```
 
-如果識別項 `credit` 已定義，就會編譯 `CREDIT` 的函式呼叫。 如果識別項 `DEBIT` 已定義，就會編譯 `debit` 的函式呼叫。 如果這些識別項都未定義，就會編譯 `printerror` 的呼叫。 請注意，`CREDIT` 與 `credit` 在 C 和 C++ 中是不同的識別項，因為它們的大小寫不同。
+如果識別項 `credit` 已定義，就會編譯 `CREDIT` 的函式呼叫。 如果識別項 `DEBIT` 已定義，就會編譯 `debit` 的函式呼叫。 如果這些識別項都未定義，就會編譯 `printerror` 的呼叫。 和都是 C 中的相異識別碼C++ , 因為它們的大小寫不同。 `credit` `CREDIT`
 
 在下列範例中的條件式編譯陳述式假設先前定義名為 `DLEVEL` 的符號常數。
 
@@ -144,18 +147,18 @@ defined `identifier`
 #endif
 ```
 
-第一個 **#if**區塊顯示兩組巢狀 **#if**， **#else**，以及 **#endif**指示詞。 只有在 `DLEVEL > 5` 為 true 時，才會處理第一組指示詞。 否則之後, 的陳述式 **#else**處理。
+第一個 **#if**區塊會顯示兩組嵌套的 **#if**、 **#else**和 **#endif**指示詞。 只有在 `DLEVEL > 5` 為 true 時，才會處理第一組指示詞。 否則, 會處理 **#else**之後的語句。
 
-**#Elif**並 **#else**第二個範例中的指示詞用來讓四個選項之一，根據值`DLEVEL`。 常數 `STACK` 會設為 0、100 或 200，視 `DLEVEL` 的定義而定。 如果 `DLEVEL` 大於 5，則陳述式
+第二個範例中的 **#elif**和 **#else**指示詞, 是用來根據`DLEVEL`的值進行四個選擇之一。 常數 `STACK` 會設為 0、100 或 200，視 `DLEVEL` 的定義而定。 如果 `DLEVEL` 大於 5，則陳述式
 
 ```C
 #elif DLEVEL > 5
 display(debugptr);
 ```
 
-會進行編譯且 `STACK` 未定義。
+已編譯, 且`STACK`未定義。
 
-條件式編譯的常見用途是防止多次包含相同的標頭檔。 在 C++ 中，類別通常是在標頭檔中定義，如下所列的建構可以用來防止多重定義：
+條件式編譯的常見用途是防止多次包含相同的標頭檔。 在C++中, 通常會在標頭檔中定義類別, 這類的結構可以用來防止多個定義:
 
 ```cpp
 /*  EXAMPLE.H - Example header file  */
@@ -164,17 +167,17 @@ display(debugptr);
 
 class Example
 {
-...
+    //...
 };
 
 #endif // !defined( EXAMPLE_H )
 ```
 
-上述程式碼會檢查符號常數 `EXAMPLE_H` 是否已定義。 如果是，檔案已包含且並不需要重新處理。 否則會定義常數 `EXAMPLE_H` 以便將 EXAMPLE.H 標記為已經處理。
+上述程式碼會檢查符號常數 `EXAMPLE_H` 是否已定義。 若是如此, 就已經包含檔案, 而且不需要重新處理。 否則會定義常數 `EXAMPLE_H` 以便將 EXAMPLE.H 標記為已經處理。
 
-## <a name="hasinclude"></a>__has_include
+### <a name="__has_include"></a>__has_include
 
-**Visual Studio 2017 15.3 版和更新版本**：判斷是否可以加入程式庫標頭：
+**Visual Studio 2017 15.3 版和更新版本**：判斷程式庫標頭是否可供包含:
 
 ```cpp
 #ifdef __has_include
@@ -193,4 +196,4 @@ class Example
 
 ## <a name="see-also"></a>另請參閱
 
-[前置處理器指示詞](../preprocessor/preprocessor-directives.md)
+[預處理器指示詞](../preprocessor/preprocessor-directives.md)

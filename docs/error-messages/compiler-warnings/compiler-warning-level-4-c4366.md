@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4366
 ms.assetid: 65d2942f-3741-42f4-adf2-4920d5a055ca
-ms.openlocfilehash: 11fcb0070359201de39ca5f33c83d000e02f0835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fb4cead9367c5ef69627f607c521f480ad94271f
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391552"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74991047"
 ---
 # <a name="compiler-warning-level-4-c4366"></a>編譯器警告 (層級 4) C4366
 
-一元 'operator' 運算子的結果可能未對齊
+一元 ' operator ' 運算子的結果可能不對齊
 
-如果因為封裝結構成員可能曾經是未對齊，編譯器會警告時，要將成員的位址指派給對齊的指標。 根據預設，會對齊所有指標。
+如果結構成員因封裝而無法對齊，編譯器會在將該成員的位址指派給對齊的指標時發出警告。 根據預設，所有指標都會對齊。
 
-若要解決 C4366，請變更結構的對齊方式或宣告指標[__unaligned](../../cpp/unaligned.md)關鍵字。
+若要解決 C4366，請變更結構的對齊方式，或使用[__unaligned](../../cpp/unaligned.md)關鍵字來宣告指標。
 
-如需詳細資訊，請參閱 __unaligned 並[組件](../../preprocessor/pack.md)。
+如需詳細資訊，請參閱 __unaligned 和[套件](../../preprocessor/pack.md)。
 
 ## <a name="example"></a>範例
 
 下列範例會產生 C4366。
 
-```
+```cpp
 // C4366.cpp
 // compile with: /W4 /c
 // processor: IPF x64

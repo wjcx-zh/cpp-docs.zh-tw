@@ -1,36 +1,38 @@
 ---
 title: PROC
-ms.date: 08/30/2018
+ms.date: 12/06/2019
 f1_keywords:
 - PROC
 helpviewer_keywords:
 - PROC directive
 ms.assetid: ee5bb6b6-fa15-4d73-b0cf-e650178539a9
-ms.openlocfilehash: e7931c97570c0fefcacb0123d75934867793fba4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85d9a1e82eebcd83cb0f12f5ca751ec9415af18d
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210530"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318666"
 ---
 # <a name="proc"></a>PROC
 
-標記開始和結束呼叫的程序區塊*標籤*。 區塊中的陳述式可以呼叫具有**呼叫**指示或[INVOKE](../../assembler/masm/invoke.md)指示詞。
+標記名為*label*的程式區塊的開始和結束。 您可以使用**CALL**指令或[INVOKE](invoke.md)指示詞來呼叫區塊中的語句。
 
 ## <a name="syntax"></a>語法
 
-> *標籤*程序 [[*距離*]] [[*langtype*]] [[*可視性*]] [[\<*prologuearg*>]] [[會使用*reglist*]] [[，*參數*[[:*標記*]]]...<br/>
-> [[畫面格 [[:*ehandler 位址*]]]]<br/>
-> *statements*<br/>
-> *標籤*ENDP
+> *標籤* **PROC** ⟦*距離*⟧ *⟦ language-類型*⟧⟦ **PUBLIC** | **私**用 | **EXPORT** ⟧⟦ __\<__ *prologuearg* __>__ ⟧⟦**使用** *reglist*⟧⟦ __，__ *parameter* ⟦ __：__ *tag*⟧ .。。⟧\
+> ⟦**框架**⟦ __：__ *ehandler-address*⟧⟧ \
+> *語句*\
+> *標籤* **ENDP**
 
 ## <a name="remarks"></a>備註
 
-[[畫面格 [[:*ehandler 位址*]]]] 時才有效 ml64.exe，並造成 MASM.pdata 中產生的函式的資料表項目，並回溯.xdata 中的資訊的函式的結構化例外狀況處理回溯行為。
+⟦*距離*⟧和⟦*語言類型*⟧引數只在32位 MASM 中有效。
 
-當**框架**屬性時，它必須接著[。ENDPROLOG](../../assembler/masm/dot-endprolog.md)指示詞。
+⟦**FRAME** ⟦ __：__ *ehandler-address*⟧⟧只適用于 ml64，並使 MASM 在中產生函數資料表專案。 pdata 中的 .xdata 和回溯資訊會處理回溯行為。
 
-請參閱[MASM (ml64.exe) x64 的](../../assembler/masm/masm-for-x64-ml64-exe.md)如需有關使用 ml64.exe。
+使用**FRAME**屬性時，其後面必須接著[。ENDPROLOG](dot-endprolog.md)指示詞。
+
+如需使用 ml64 的詳細資訊，請參閱[MASM for x64 （ml64 .exe）](masm-for-x64-ml64-exe.md) 。
 
 ## <a name="example"></a>範例
 
@@ -54,7 +56,7 @@ _text ENDS
 END
 ```
 
-上述的程式碼會發出下列函式表，並回溯資訊：
+上述程式碼會發出下列函數資料表和回溯資訊：
 
 ```Output
 FileHeader->Machine 34404
@@ -77,6 +79,7 @@ Dumping Unwind Information for file ex2.exe
       Code offset: 0x01, PUSH_NONVOL, register=rbp
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

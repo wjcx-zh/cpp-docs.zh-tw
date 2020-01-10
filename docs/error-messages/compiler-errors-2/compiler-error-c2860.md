@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2860
 ms.assetid: ccc83553-90ed-4e94-b5e9-38b58ae38e31
-ms.openlocfilehash: 7d468fb2a71ce23bcd527cb02663dd5f7b7eecad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a6bb4bc12e791e36a31ffc4cf417e21cb71dbdd
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62302861"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74760963"
 ---
 # <a name="compiler-error-c2860"></a>編譯器錯誤 C2860
 
-'void' 不可為引數類型，除了 '(void)'
+' void ' 不可以是引數類型，但 ' （void） ' 除外
 
-型別`void`不能做為引數類型，有其他引數。
+類型 `void` 不能當做具有其他引數的引數類型使用。
 
-下列範例會產生 C2860:
+下列範例會產生 C2860：
 
-```
+```cpp
 // C2860.cpp
 // compile with: /c
 void profunc1(void, int i);   // C2860

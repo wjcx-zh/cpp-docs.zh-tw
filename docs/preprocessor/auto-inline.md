@@ -1,6 +1,6 @@
 ---
-title: auto_inline
-ms.date: 11/04/2016
+title: auto_inline pragma
+ms.date: 08/29/2019
 f1_keywords:
 - auto_inline_CPP
 - vc-pragma.auto_inline
@@ -8,26 +8,25 @@ helpviewer_keywords:
 - pragmas, auto_inline
 - auto_inline pragma
 ms.assetid: f7624cd1-be76-429a-881c-65c9040acf43
-ms.openlocfilehash: c59dcc8ec7749a91565d5af043b1bd9e9eaa16ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59cda8cb73196215318c9570a5c067786284afaa
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403560"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70216310"
 ---
-# <a name="autoinline"></a>auto_inline
-排除的範圍中定義的任何函式所在**關閉**指定其視為自動內嵌展開的候選項目。
+# <a name="auto_inline-pragma"></a>auto_inline pragma
+
+排除範圍內所定義的任何函式, 其中的**off**是指定為自動內嵌展開的候選項目。
 
 ## <a name="syntax"></a>語法
 
-```
-#pragma auto_inline( [{on | off}] )
-```
+> **#pragma auto_inline (** [{ **on**  |  **off** }] **)**
 
 ## <a name="remarks"></a>備註
 
-若要使用**auto_inline** pragma，將它放之前和之後 （不在） 函式定義。 pragma 會在顯示該 pragma 後的第一個函式定義生效。
+若要使用**auto_inline** pragma, 請將它放在函式定義的前後, 而不是內部。 Pragma 會在 pragma 出現後的第一個函式定義時立即生效。
 
 ## <a name="see-also"></a>另請參閱
 
-[Pragma 指示詞和 __Pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

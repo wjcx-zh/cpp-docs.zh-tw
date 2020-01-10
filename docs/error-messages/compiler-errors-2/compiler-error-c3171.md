@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3171
 ms.assetid: 1ce26997-7ef1-4c9f-84da-003ea1a4251e
-ms.openlocfilehash: 602c9ca1051646fca2c5788c036354047fad2522
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a3af19fa6b4f4def9bb42325f648109cfafcdaef
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175423"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74761747"
 ---
 # <a name="compiler-error-c3171"></a>編譯器錯誤 C3171
 
-'module': 無法在專案中指定不同的模組屬性
+' module '：不能在專案中指定不同的模組屬性
 
-[模組](../../windows/module-cpp.md)在兩個在編譯檔案中找不到具有不同參數清單的屬性。 只有一個唯一`module`屬性可以指定每次編譯。
+在編譯中的兩個檔案中找到具有不同參數清單的[模組](../../windows/module-cpp.md)屬性。 每一次編譯只能指定一個唯一的 `module` 屬性。
 
-相同`module`屬性可以指定多個原始程式碼檔中。
+可以在一個以上的原始程式碼檔案中指定相同的 `module` 屬性。
 
-例如，如果下列`module`找不到屬性：
+例如，如果找到下列 `module` 屬性：
 
-```
+```cpp
 // C3171.cpp
 [ module(name="MyModule", uuid="373a1a4e-469b-11d3-a6b0-00c04f79ae8f", version="1.0") ];
 int main() {}
@@ -31,7 +31,7 @@ int main() {}
 
 然後，
 
-```
+```cpp
 // C3171b.cpp
 // compile with: C3171.cpp
 // C3171 expected

@@ -1,26 +1,31 @@
 ---
 title: PUBLIC (MASM)
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - public
 helpviewer_keywords:
 - PUBLIC directive
 ms.assetid: 56e15a68-8a35-4bdd-b1ec-a38cbbf1c582
-ms.openlocfilehash: 1ff18d3a4e3e5c6141b12c269a7faac1ff0cdefa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40dda0641d0f25b9776e072d80bc1d56ad00edf5
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210642"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75318627"
 ---
-# <a name="public-masm"></a>PUBLIC (MASM)
+# <a name="public"></a>PUBLIC
 
-可讓每個變數、 標籤或指定為絕對符號*名稱*可用來在程式中的所有其他模組。
+讓程式中的所有其他模組都可以使用指定為*名稱*的每個變數、標籤或絕對符號。
 
 ## <a name="syntax"></a>語法
 
-> 公用 [[langtype]] 名稱 [[，[[langtype]] name]]...
+> **PUBLIC** ⟦*language-type*⟧ *name* ⟦ __，__ ⟦*language-type*⟧ *name* .。。⟧
 
-## <a name="see-also"></a>另請參閱
+## <a name="remarks"></a>備註
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+*Language 類型*引數只在32位 MASM 中有效。
+
+## <a name="see-also"></a>請參閱
+
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

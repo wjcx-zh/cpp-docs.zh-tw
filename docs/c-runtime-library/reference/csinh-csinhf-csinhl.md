@@ -1,11 +1,11 @@
 ---
 title: csinh、csinhf、csinhl
 ms.date: 11/04/2016
-apiname:
+api_name:
 - csinh
 - csinhf
 - csinhl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - csinh
 - csinhf
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - csinhf function
 - csinhl function
 ms.assetid: cc616e55-d14d-4cd3-91f0-fbee03ce5edf
-ms.openlocfilehash: 2ea6eaedc7eae7256310bf55b06fde0ecb2c64de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b377b34ee1a9f60f502c59b8c4ea1eed19c7500
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62289399"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70938539"
 ---
 # <a name="csinh-csinhf-csinhl"></a>csinh、csinhf、csinhl
 
@@ -68,17 +71,17 @@ _Lcomplex csinhl(
 
 ## <a name="return-value"></a>傳回值
 
-雙曲正弦*z*，以弧度為單位。
+*Z*的雙曲正弦值，以弧度為單位。
 
 ## <a name="remarks"></a>備註
 
-因為C++允許多載，您可以呼叫多載**csinh**採用並傳回 **_Fcomplex**並 **_Lcomplex**的值。 在 C 程式中， **csinh**一律採用並傳回 **_Dcomplex**值。
+因為C++允許多載，所以您可以呼叫採用並傳回 **_Fcomplex**和 **_Lcomplex**值之**csinh**的多載。 在 C 程式中， **csinh**一律會接受並傳回 **_Dcomplex**值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|C 標頭|C++ 標頭|
 |-------------|--------------|------------------|
-|**csinh**,               **csinhf**, **csinhl**|\<complex.h>|\<ccomplex>|
+|**csinh**、 **csinhf**、 **csinhl**|\<complex.h>|\<ccomplex>|
 
 如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

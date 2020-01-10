@@ -1,26 +1,27 @@
 ---
 title: SUBTITLE
-ms.date: 08/30/2018
+ms.date: 12/16/2019
 f1_keywords:
 - SUBTITLE
 helpviewer_keywords:
 - SUBTITLE directive
 ms.assetid: b882ae31-9998-46ed-bd88-6656263143e7
-ms.openlocfilehash: 8029e66b8a8c9c3b274c925c756ebca5a5ef0bf5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cba9c43a7d070ee4a028f302a1c1517258ed1b9a
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210358"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319199"
 ---
 # <a name="subtitle"></a>SUBTITLE
 
-定義清單的副標題。 與相同[SUBTTL](../../assembler/masm/subttl.md)。
+定義清單子標題。 與[SUBTTL](subttl.md)相同。
 
 ## <a name="syntax"></a>語法
 
-> 子標題文字
+> 子**標題***文字*
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

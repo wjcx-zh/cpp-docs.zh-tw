@@ -1,11 +1,11 @@
 ---
 title: modf、modff、modfl
 ms.date: 04/05/2018
-apiname:
+api_name:
 - modff
 - modf
 - modfl
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -17,7 +17,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - modff
 - _modfl
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32caadb787031dca0b0726c546a11c5cd6722b82
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62156326"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70951545"
 ---
 # <a name="modf-modff-modfl"></a>modf、modff、modfl
 
@@ -69,17 +72,17 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>備註
 
-**Modf**函式會細分的浮點數值*x*成小數和整數部分，每個都有相同的簽章為*x*。 帶正負號小數部分*x*會傳回。 整數部分會儲存為浮點數的值，在*intptr*。
+**Modf**函數會將浮點值*x*細分成小數和整數部分，其中每一個都具有與*x*相同的正負號。 會傳回*x*的帶正負號小數部分。 整數部分會儲存為*intptr*的浮點值。
 
-**modf**有使用 Streaming SIMD Extensions 2 (SSE2) 的實作。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
+**modf**具有使用 Streaming SIMD Extensions 2 （SSE2）的執行。 如需使用 SSE2 實作的資訊和限制，請參閱 [_set_SSE2_enable](set-sse2-enable.md)。
 
-C++允許多載，因此您可以呼叫多載**modf**採用並傳回**float**或是**長** **double**參數。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數值，並傳回雙精度浮點數值。
+C++允許多載，因此您可以呼叫採用並傳回**float**或**long** **double**參數的**modf**多載。 在 C 程式中， **modf**一律會採用兩個雙精度浮點數，並傳回雙精度值。
 
 ## <a name="requirements"></a>需求
 
 |常式傳回的值|必要的標頭|
 |-------------|---------------------|
-|**modf**， **modff**， **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
+|**modf**、 **modff**、 **modfl**|C：\<math.h><br /><br /> C++：\<cmath> 或 \<math.h>|
 
 如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
 

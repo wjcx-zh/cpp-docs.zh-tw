@@ -1,5 +1,5 @@
 ---
-title: HOW TO：封送處理回呼和委派使用C++Interop
+title: 如何：使用 C++ Interop 封送處理回呼和委派
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,28 +10,28 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 592eae0ff59baddb79b810d46669b78ecc801155
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344949"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988186"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>HOW TO：封送處理回呼和委派使用C++Interop
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>如何：使用 C++ Interop 封送處理回呼和委派
 
-本主題示範如何封送處理回呼和 managed 和 unmanaged 程式碼使用視覺效果之間的委派 （回呼的受管理的版本） C++。
+本主題示範如何使用視覺效果C++，在 managed 和非受控碼之間進行回呼和委派的封送處理（managed 版本的回呼）。
 
-下列程式碼範例使用[managed、 unmanaged](../preprocessor/managed-unmanaged.md) #pragma 指示詞來實作 managed 和 unmanaged 函式在相同的檔案，但函式也可定義在個別的檔案。 包含 unmanaged 的函式的檔案不需要進行編譯[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)。
+下列程式碼範例會使用[managed、非](../preprocessor/managed-unmanaged.md)受控 #pragma 指示詞，在同一個檔案中執行 managed 和非受控函式，但也可以在不同的檔案中定義函式。 僅包含非受控函式的檔案不需要使用[/clr （Common Language Runtime 編譯）](../build/reference/clr-common-language-runtime-compilation.md)進行編譯。
 
 ## <a name="example"></a>範例
 
-下列範例示範如何設定 unmanaged 的 API，以觸發程序的受管理的委派。 建立受管理的委派和 interop 方法的其中一個<xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>，用來擷取基礎的進入點的委派。 此位址再傳遞至 unmanaged 函式，不需要知道的事實，它會實作為 managed 函式會呼叫它。
+下列範例示範如何設定非受控 API 以觸發 managed 委派。 建立 managed 委派，並使用其中一個 interop 方法（<xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>）來抓取委派的基礎進入點。 此位址接著會傳遞至非受控函式，它會呼叫它，而不知道它會實作為 managed 函式。
 
-請注意，是可行的但並非必要，釘選使用的委派[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)可防止它們被重新位於或由記憶體回收行程處置。 需要防止不當記憶體回收，但是 pin 會提供比所需的因為它可防止集合也會防止重新配置更多的保護。
+請注意，您可以使用[pin_ptr （C++/cli）](../extensions/pin-ptr-cpp-cli.md)來釘選委派，以防止垃圾收集行程重新找出或處置它，這是可行的，但不是必要的。 需要進行過早垃圾收集的保護，但釘選提供的保護比所需的還多，因為它會防止收集，同時也會防止重新配置。
 
-如果進行記憶體回收重新位於委派，則它不會影響受管理的 underlaying 回呼中，因此<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>用來將參考加入委派，讓重新配置的委派，但防止處置。 使用 GCHandle，而不 pin_ptr，可降低 managed 堆積的片段可能性。
+如果委派是由垃圾收集重新置放，則不會影響 underlaying managed 回呼，因此 <xref:System.Runtime.InteropServices.GCHandle.Alloc%2A> 是用來新增委派的參考，允許重新配置委派，但防止處置。 使用 GCHandle 而不是 pin_ptr 可減少受控堆積的分散可能性。
 
-```
+```cpp
 // MarshalDelegate1.cpp
 // compile with: /clr
 #include <iostream>
@@ -79,9 +79,9 @@ int main() {
 
 ## <a name="example"></a>範例
 
-下列範例類似上述範例中，但在此情況下提供的函式指標會儲存未受管理的 api，讓它可以叫用在任何時候需要記憶體回收會隱藏任意長度的時間。 如此一來，下列範例會使用全域執行個體<xref:System.Runtime.InteropServices.GCHandle>以防止委派重新定位，獨立於函式範圍。 第一個範例中所述，使用 pin_ptr 不需要為這些範例中，但在此情況下不會運作，因為 pin_ptr 的範圍僅限於單一函式。
+下列範例與前一個範例類似，但在此情況下，所提供的函式指標是由非受控 API 儲存，因此可以在任何時間叫用，以要求抑制垃圾收集一段任意時間長度。 因此，下列範例會使用 <xref:System.Runtime.InteropServices.GCHandle> 的全域實例，以避免將委派重新置放，與函式範圍無關。 如第一個範例所討論，使用 pin_ptr 在這些範例中是不必要的，但在此情況下，您仍然無法運作，因為 pin_ptr 的範圍僅限於單一函式。
 
-```
+```cpp
 // MarshalDelegate2.cpp
 // compile with: /clr
 #include <iostream>
@@ -139,6 +139,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [使用 C++ Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)

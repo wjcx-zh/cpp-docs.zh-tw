@@ -1,26 +1,27 @@
 ---
 title: .STARTUP
-ms.date: 08/30/2018
+ms.date: 11/05/2019
 f1_keywords:
 - .STARTUP
 helpviewer_keywords:
 - .STARTUP directive
 ms.assetid: 3ce9c878-18bf-49a0-828c-b29928ea3e54
-ms.openlocfilehash: 425335863b17e7fd58a56cdf4aebab1b52e1b3c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5fddb6f8f527b0c4d0f52b8ff993678e14e5758
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62203813"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75317509"
 ---
-# <a name="startup"></a>.STARTUP
+# <a name="startup-32-bit-masm"></a>.啟動（32位 MASM）
 
-產生的程式啟動程式碼。
+產生程式啟動程式碼。 （僅限 32-bit MASM）。
 
 ## <a name="syntax"></a>語法
 
-> .STARTUP
+> **.STARTUP**
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

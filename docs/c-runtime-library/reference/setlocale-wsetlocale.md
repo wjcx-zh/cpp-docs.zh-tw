@@ -1,10 +1,10 @@
 ---
 title: setlocale、_wsetlocale
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _wsetlocale
 - setlocale
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -16,7 +16,10 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - _wsetlocale
 - _tsetlocale
@@ -30,14 +33,14 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 618b3e58a52e89561439fe76bf1b30e3cbbce001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356351"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70948251"
 ---
-# <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
+# <a name="setlocale-_wsetlocale"></a>setlocale、_wsetlocale
 
 設定或擷取執行階段地區設定。
 
@@ -64,7 +67,7 @@ wchar_t *_wsetlocale(
 
 ## <a name="return-value"></a>傳回值
 
-如果有效*地區設定*並*類別目錄*所指定，讓指標回到指定相關聯的字串*地區設定*和*類別*。 如果*地區設定*或是*分類*無效，會傳回 null 指標，該程式的目前地區設定不會變更。
+如果指定有效的*地區*設定和*分類*，則會傳回與指定的*地區*設定和*分類*相關聯之字串的指標。 如果*地區*設定或*分類*無效，則會傳回 null 指標，且不會變更程式目前的地區設定。
 
 例如，呼叫
 
@@ -78,13 +81,13 @@ setlocale( LC_ALL, "en-US" );
 en-US
 ```
 
-您可以複製所傳回的字串**setlocale**還原該程式的地區設定資訊的部分。 全域或執行緒的本機儲存體使用於所傳回的字串**setlocale**。 稍後呼叫**setlocale**覆寫的字串，由先前呼叫所傳回的字串指標失效。
+您可以複製**setlocale**所傳回的字串，以還原程式地區設定資訊的該部分。 全域或執行緒區域儲存區會用於**setlocale**所傳回的字串。 稍後對**setlocale**的呼叫會覆寫字串，這會使先前呼叫所傳回的字串指標失效。
 
 ## <a name="remarks"></a>備註
 
-使用**setlocale**來設定、 變更或查詢部分或所有目前程式地區設定資訊所指定的函式*地區設定*並*分類*。 *地區設定*指的是，您可以自訂某些方面，您的程式位置 （國家/地區和語言）。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。 如果您設定*地區設定*有支援您的電腦上的多種形式語言的預設字串，您應該檢查**setlocale**傳回值以查看哪種語言是作用中。 例如，如果您設定*地區設定*"中文 」 傳回的值可能是 「 中文簡體 」 或 「 繁體中文 」。
+您可以使用**setlocale**函數來設定、變更或查詢*locale*和*category*所指定的部分或所有目前程式地區設定資訊。 *地區*設定是指您可以自訂程式某些層面的位置（國家/地區和語言）。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。 如果您將*地區*設定設為在電腦上支援多個表單之語言的預設字串，則應檢查**setlocale**傳回值，以查看哪些語言已生效。 例如，如果您將*地區*設定設為 "中文"，則傳回值可以是「簡體中文」或「繁體中文」。
 
-**_wsetlocale**是寬字元版本的**setlocale**;*地區設定*引數和傳回值 **_wsetlocale**是寬字元字串。 **_wsetlocale**並**setlocale**行為相同。
+**_wsetlocale**是寬字元版本的**setlocale**; **_wsetlocale**的*地區*設定引數和傳回值是寬字元字串。 相反地， **_wsetlocale**和**setlocale**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -92,28 +95,28 @@ en-US
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsetlocale**|**setlocale**|**setlocale**|**_wsetlocale**|
 
-*分類*引數會指定程式的地區設定資訊會受到影響的組件。 所使用的巨集*分類*和影響的程式部分如下所示：
+*Category*引數會指定程式的地區設定資訊中受影響的部分。 用於*分類*的宏和其影響的程式部分如下所示：
 
-|*類別目錄*旗標|Affects|
+|*類別*旗標|Affects|
 |-|-|
 | **LC_ALL** | 所有分類，如下所示。 |
-| **LC_COLLATE** | **Strcoll**， **_stricoll**， **wcscoll**， **_wcsicoll**， **strxfrm**， **_strncoll**， **_strnicoll**， **_wcsncoll**， **_wcsnicoll**，並**wcsxfrm**函式。 |
-| **LC_CTYPE** | 字元處理函式 (除了**isdigit**， **isxdigit**， **mbstowcs**，以及**mbtowc**，這不會受到影響)。 |
-| **LC_MONETARY** | 所傳回的貨幣格式資訊**localeconv**函式。 |
-| **LC_NUMERIC** | 小數點字元的格式化的輸出常式 (例如**printf**)、 資料轉換常式，以及所傳回的非貨幣格式化資訊**localeconv**。 除了小數點字元以外**LC_NUMERIC**集千分位分隔符號和群組控制傳回字串[localeconv](localeconv.md)。 |
-| **LC_TIME** | **Strftime**並**wcsftime**函式。 |
+| **LC_COLLATE** | **Strcoll**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**和**wcsxfrm**函數。 |
+| **LC_CTYPE** | 字元處理函式（不受影響的**isdigit**、 **isxdigit**、 **mbstowcs**和**mbtowc**除外）。 |
+| **LC_MONETARY** | **Localeconv**函數所傳回的貨幣格式資訊。 |
+| **LC_NUMERIC** | 格式化輸出常式（例如**printf**）的小數點字元、資料轉換常式，以及**localeconv**所傳回的非貨幣格式資訊。 除了小數點字元以外， **LC_NUMERIC**會設定[localeconv](localeconv.md)所傳回的千位分隔符號和群組控制字元串。 |
+| **LC_TIME** | **Strftime**和**wcsftime**函數。 |
 
-此函式會驗證分類參數。 如果分類參數不是前表中所指定的其中一個值，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，則函式會設定**errno**要**EINVAL** ，並傳回**NULL**。
+此函式會驗證分類參數。 如果分類參數不是前表中所指定的其中一個值，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
 
-*地區設定*引數是指定的地區設定字串的指標。 如需有關格式的資訊*地區設定*引數，請參閱[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。 值為**C**指定最小 ANSI 符合 C 轉譯環境。 **C**地區設定會假設所有**char**資料型別有 1 個位元組，且其值一律是小於 256。
+*Locale*引數是指定地區設定之字串的指標。 如需*地區*設定引數格式的詳細資訊，請參閱[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。 **C**的值指定 c 轉譯的最低 ANSI 符合標準環境。 **C**地區設定會假設所有**char**資料類型都是1位元組，而且其值一律小於256。
 
 在程式啟動時，將執行與下列陳述式相同的動作：
 
 `setlocale( LC_ALL, "C" );`
 
-*地區設定*引數可採用的地區設定名稱、 語言字串、 語言字串和國家/地區碼、 字碼頁，或語言字串、 國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合，包含所有 Windows NLS 應用程式開發介面 (API) 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 utf-7 或 utf-8 的字碼頁值**setlocale**將會失敗，傳回**NULL**。 一組支援的地區設定名稱**setlocale**所述[地區設定名稱、 語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 一組支援的語言和國家/地區字串**setlocale**所述[語言字串](../../c-runtime-library/language-strings.md)並[國家/地區字串](../../c-runtime-library/country-region-strings.md)。 我們建議使用內嵌於程式碼或針對儲存體序列化之地區設定字串的效能與維護所適用的地區設定名稱格式。 地區設定名稱字串比語言和國家/地區名稱格式更不容易被作業系統更新變更。
+*地區*設定引數可以採用地區設定名稱、語言字串、語言字串和國家/地區代碼、字碼頁，或語言字串、國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合，包含所有 Windows NLS 應用程式開發介面 (API) 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 UTF-7 或 UTF-8 的字碼頁值， **setlocale**將會失敗，並傳回**Null**。 地區設定[名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中會描述**setlocale**所支援的地區設定名稱集合。 **Setlocale**支援的一組語言和國家/地區字串會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)中。 我們建議使用內嵌於程式碼或針對儲存體序列化之地區設定字串的效能與維護所適用的地區設定名稱格式。 地區設定名稱字串比語言和國家/地區名稱格式更不容易被作業系統更新變更。
 
-傳遞做為 null 指標*地區設定*引數會指示**setlocale**查詢而非設定國際環境。 如果*地區設定*引數為 null 指標，該程式的目前地區設定不會變更。 相反地， **setlocale**相關聯的字串中傳回的指標*分類*執行緒的目前地區設定。 如果*分類*引數是**LC_ALL**，函式會傳回字串，表示每個類別，以分號隔開的目前設定。 例如，呼叫的順序
+當做*地區*設定引數傳遞的 null 指標會指示**setlocale**進行查詢，而不是設定國際環境。 如果*locale*引數為 null 指標，則不會變更程式目前的地區設定。 相反地， **setlocale**會傳回與執行緒目前地區設定的*類別*相關聯之字串的指標。 如果*分類*引數是**LC_ALL**，則函式會傳回字串，指出每個分類的目前設定（以分號分隔）。 例如，呼叫的順序
 
 ```C
 // Set all categories and return "en-US"
@@ -129,9 +132,9 @@ printf("%s\n", setlocale(LC_ALL, NULL));
 LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 ```
 
-這是相關聯的字串**LC_ALL**類別目錄。
+這是與**LC_ALL**分類相關聯的字串。
 
-下列範例與相關**LC_ALL**類別目錄。 字串「.OCP」或「.ACP」可以用來以分別指定使用者預設 OEM 字碼頁以及使用者預設 ANSI 字碼頁的用途，字碼頁編號則無法這麼做。
+下列範例與**LC_ALL**類別相關。 字串「.OCP」或「.ACP」可以用來以分別指定使用者預設 OEM 字碼頁以及使用者預設 ANSI 字碼頁的用途，字碼頁編號則無法這麼做。
 
 - `setlocale( LC_ALL, "" );`
 
@@ -155,7 +158,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   設定所指定的地區設定的語言、 國家/地區和字碼頁 *\<語言 >*， *\<國家/地區 >*，以及 *\<字碼頁>* 字串。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
+   設定所指定的地區設定的語言、 國家/地區和字碼頁 *\<語言 >* ， *\<國家/地區 >* ，以及 *\<字碼頁>* 字串。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -169,7 +172,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 - `setlocale( LC_ALL, "<language>" );`
 
-   將地區設定設定為\<語言>  所表示的語言，並使用指定語言的預設國家/地區，以及從主機作業系統取得之該國家/地區的使用者預設 ANSI 字碼頁。 例如，下列呼叫來**setlocale**相同的功能：
+   將地區設定設定為\<語言> 所表示的語言，並使用指定語言的預設國家/地區，以及從主機作業系統取得之該國家/地區的使用者預設 ANSI 字碼頁。 例如，下列對**setlocale**的呼叫在功能上是相同的：
 
    `setlocale( LC_ALL, "en-US" );`
 
@@ -183,7 +186,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
    將字碼頁設定為 <字碼頁> 所表示的值，以及指定字碼頁的預設國家/地區和語言 (由主機作業系統所定義)。
 
-類別必須是**LC_ALL**或是**LC_CTYPE**以促使字碼頁中的變更。 例如，如果預設國家/地區和語言的主機作業系統是 「 美國 」 和 「 英文 」 下, 面兩個呼叫**setlocale**相同的功能：
+此類別必須是**LC_ALL**或**LC_CTYPE** ，才能影響字碼頁的變更。 例如，如果主機作業系統的預設國家/地區和語言為「美國」和「英文」，則下列兩個對**setlocale**的呼叫在功能上是相同的：
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -191,7 +194,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 如需詳細資訊，請參閱 [C/C++ 前置處理器參考](../../preprocessor/c-cpp-preprocessor-reference.md)中的 [setlocale](../../preprocessor/setlocale.md) pragma 指示詞。
 
-此函式[_configthreadlocale](configthreadlocale.md)是用來控制**setlocale**會影響在程式中的所有執行緒的地區設定或只呼叫執行緒的地區設定。
+函式[_configthreadlocale](configthreadlocale.md)是用來控制**setlocale**是否會影響程式中所有線程的地區設定，或僅限於呼叫執行緒的地區設定。
 
 ## <a name="requirements"></a>需求
 

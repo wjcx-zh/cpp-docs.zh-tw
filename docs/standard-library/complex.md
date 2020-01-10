@@ -7,54 +7,54 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: 585f970f1a3482412ff225454b7acce9060e2d7c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 071e9369cdd0469d8ddc1c6649a3801732d8e23f
+ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449431"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72688224"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
-定義容器範本類別`complex`及其支援的範本。
+定義容器類別範本 `complex` 及其支援的範本。
 
 ## <a name="requirements"></a>需求
 
 **標頭**：\<complex>
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="remarks"></a>備註
 
 複數是一組有序對的實數。 以純綷幾何的術語來講，複數平面為實數的二維平面。 區別複數平面和實數平面最特別的特質在於，是因為它有額外的代數結構。 此代數結構有兩種基本運算：
 
-- 加法定義為 (*a*, *b*) + (*c*, *d*) = (*a*  +  *c*, *b*  +  *d*)
+- 加法定義為（*a*， *b*） + （*c*， *d*） = （*a*  + *c*， *b*  + *d*）
 
-- 乘法定義為 (*a*, *b*) \* (*c*, *d*) = (*ac*  -  *bd*, *ad*  +  *bc*)
+- 乘法定義為（*a*， *b*） \* （*c*， *d*） = （*ac*  - *bd*， *ad*  + *bc*）
 
 從標準代數的意義來說，一組複數集合搭配複數加法和複數乘法的運算是一個體。
 
 - 加法和乘法運算是可交換和可結合的，且乘法可分配到加法，和實數體上的實數加法與乘法如出一轍。
 
-- 複數 (0, 0) 是加總的身分識別, 而 (1, 0) 是乘法的身分識別。
+- 複數（0，0）是加總的身分識別，而（1，0）是乘法的身分識別。
 
-- 複數 (*a*, *b*) 的加法反轉是 (-*a*,-*b*), 而所有這類複數的乘法反函數除外 (0, 0) 是
+- 複數（*a*， *b*）的加法反轉是（-*a*，-*b*），而所有這類複數的乘法反函數除外（0，0）是
 
-   (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
+   （*a*/（*a*<sup>2</sup>  + *b*<sup>2</sup>），-*b*/（*a*<sup>2</sup>  + *b*<sup>2</sup>））
 
-藉由將複數*z* = (*a*, *b*) 表示為*z*  =  *a*  +  *bi*的形式, 其中*i*<sup>2</sup> =-1, 實數集合的代數規則可以套用至一組複數和其元件。 例如：
+藉由將複數*z* = （*a*， *b*）*表示為* *z*  =   + *bi*，其中*i*<sup>2</sup> =-1，實數集合的代數規則可以套用至複雜的集合數位和其元件。 例如:
 
-   (1 + 2*i*)\* \* <sup></sup>         (2 + 3 i) = 1 (2 + 3 i) + 2 i (2 + 3 i) = (2 + 3 i) + (4 i + 6 i) = (2-6) + (3 + 4) i =-4 + 7 i \*
+   （1 + 2*i*） \* （2 + 3*i*） = 1 \* （2 + 3*i*） + 2*i* \* （2 + 3*i*） = （2 + 3*i*） + （4*i* + 6*i*<sup>2</sup>） = （2-6） + （3 + 4）*i* =-4 + 7*i*
 
-複數系統為體，但不為有序體。 除了實數和其子集的欄位以外, 不會對複數進行排序, 因此到差異不能套用至實數的複數。
+複數系統為體，但不為有序體。 除了實數和其子集的欄位以外，不會對複數進行排序，因此到差異不能套用至實數的複數。
 
 有三種常用來表示複數 *z* 的形式：
 
-- 笛卡: *z*  =  *a*  +  *bi*
+- 笛卡兒： *z* * =   + * *bi*
 
-- 極座標圖: *z*  =  *r* (cos *p*  +  *i* sin *p*)
+- 極座標圖： *z*  = *r* （cos *p*  + *i* sin *p*）
 
-- 指數: *z*  =  *r* \* *e*<sup>*ip*</sup>
+- 指數： *z*  = *r* \* *e*<sup>*ip*</sup>
 
 這些複數標準表示法所使用的術語可參考如下：
 
@@ -66,9 +66,9 @@ ms.locfileid: "68449431"
 
 - 引數或相位角度*p*為弧度。
 
-除非另有指定, 否則可以傳回多個值的函式必須傳回大於-π且小於或等於 + π之引數的主體值, 以保持其為單一值。 所有角度都必須以弧度表示, 在圓圈中會有2π弧度 (360 度)。
+除非另有指定，否則可以傳回多個值的函式必須傳回大於-π且小於或等於 + π之引數的主體值，以保持其為單一值。 所有角度都必須以弧度表示，在圓圈中會有2π弧度（360度）。
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="functions"></a>函式
 
@@ -117,10 +117,10 @@ ms.locfileid: "68449431"
 
 |||
 |-|-|
-|[complex\<double>](../standard-library/complex-double.md)|明確特製化的範本類別描述一個物件, 它會儲存一組已排序的物件, 這兩個類型都是**double**, 其中第一個代表複數的實數部分, 而第二個代表虛數部分。|
-|[complex\<float>](../standard-library/complex-float.md)|明確特製化的樣板類別描述一個物件, 它會儲存一組已排序的物件, 這兩個類型都是**float**, 其中第一個代表複數的實數部分, 而第二個代表虛數部分。|
-|[complex\<long double>](../standard-library/complex-long-double.md)|明確特製化的樣板類別描述一個物件, 它會儲存一組已排序的物件, 這兩個型別都是**long double**, 其中第一個代表複數的實數部分, 而第二個代表虛數部分。|
-|[complex](../standard-library/complex-class.md)|此範本類別描述用來代表複數系統，並執行複數算術運算的物件。|
+|[complex\<double>](../standard-library/complex-double.md)|明確特製化的類別樣板描述一個物件，它會儲存一組已排序的物件，這兩個類型都是**double**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
+|[complex\<float>](../standard-library/complex-float.md)|明確特製化的類別樣板描述一個物件，它會儲存一組已排序的物件，這兩個類型都是**float**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
+|[complex\<long double>](../standard-library/complex-long-double.md)|明確特製化的類別樣板描述一個物件，它會儲存一組已排序的物件，這兩個型別都是**long double**，其中第一個代表複數的實數部分，而第二個代表虛數部分。|
+|[complex](../standard-library/complex-class.md)|類別樣板描述用來表示複數系統和執行複雜算數運算的物件。|
 
 ### <a name="literals"></a>常值
 
@@ -128,11 +128,11 @@ ms.locfileid: "68449431"
 
 |||
 |-|-|
-|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|傳回`complex<long double>{0.0L, static_cast<long double>(d)}`|
+|`constexpr complex<long double> operator""il(long double d)`<br />`constexpr complex<long double> operator""il(unsigned long long d)`|傳回： `complex<long double>{0.0L, static_cast<long double>(d)}`|
 |`constexpr complex<double> operator""i(long double d)`<br />`constexpr complex<double> operator""i(unsigned long long d)`|傳回 `complex<double>{0.0, static_cast<double>(d)}`。|
 |`constexpr complex<float> operator""if(long double d)`<br />`constexpr complex<float> operator""if(unsigned long long d)`|傳回 `complex<float>{0.0f, static_cast<float>(d)}`。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

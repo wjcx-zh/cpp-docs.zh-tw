@@ -1,9 +1,9 @@
 ---
 title: _lock
 ms.date: 11/04/2016
-apiname:
+api_name:
 - _lock
-apilocation:
+api_location:
 - msvcr110_clr0400.dll
 - msvcr120.dll
 - msvcr100.dll
@@ -12,7 +12,10 @@ apilocation:
 - msvcr110.dll
 - msvcrt.dll
 - msvcr120_clr0400.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - lock
 - _lock
@@ -20,14 +23,14 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: d29488c6dec15fb58eef24f50c1bfafefb8e85c6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 666fdb8febebe133ae09ef3632cb38b6527d1210
+ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741140"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70944490"
 ---
-# <a name="lock"></a>_lock
+# <a name="_lock"></a>_lock
 
 取得多執行緒的鎖定。
 

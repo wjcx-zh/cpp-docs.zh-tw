@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從使用 PInvoke 的 Managed 程式碼呼叫原生 Dll
+title: 如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-ms.openlocfilehash: e51e094cc013250fc254a09e279745f1f9c108ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1eb5d5669c49dd49a411c275f8845dbbab989df3
+ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62222807"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74988283"
 ---
-# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>HOW TO：從使用 PInvoke 的 Managed 程式碼呼叫原生 Dll
+# <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>如何：使用 PInvoke 從 Managed 程式碼呼叫原生 DLL
 
-從 managed 程式碼使用平台叫用 (P/Invoke) 的功能，可以呼叫 unmanaged Dll 中實作的函式。 如果無法使用 DLL 的原始程式碼，P/Invoke 是交互操作的唯一選項。 不過，不同於其他.NET 語言，視覺效果C++提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)。</c0>
+您可以使用平台叫用（P/Invoke）功能，從 managed 程式碼呼叫未受管理的 Dll 中所實作用的函式。 如果 DLL 的原始程式碼無法使用，P/Invoke 是唯一可進行交互操作的選項。 不過，不同于其他 .NET 語言， C++ Visual 提供 P/Invoke 的替代方案。 如需詳細資訊，請參閱[使用C++ Interop （隱含 PInvoke）](../dotnet/using-cpp-interop-implicit-pinvoke.md)。
 
 ## <a name="example"></a>範例
 
-下列程式碼範例會使用 Win32 [GetSystemMetrics](/windows/desktop/api/winuser/nf-winuser-getsystemmetrics)函式來擷取目前像素為單位的螢幕解析度。
+下列程式碼範例會使用 Win32 [GetSystemMetrics](/windows/win32/api/winuser/nf-winuser-getsystemmetrics)函式來抓取螢幕的目前解析度（以圖元為單位）。
 
-對於使用內建的型別做為引數和傳回值的函式，不則需要任何額外的工作。 其他資料類型，例如函式指標、 陣列和結構，需要額外的屬性，以確保適當的資料封送處理。
+針對只使用內建類型做為引數和傳回值的函式，不需要額外的工作。 其他資料類型（例如函式指標、陣列和結構）則需要額外的屬性，以確保正確的資料封送處理。
 
-雖然並非必要，它會是很好的做法是 P/Invoke 宣告靜態成員的實值類別，讓它們不存在於全域命名空間中，在此範例中所示。
+雖然並非必要，但最好是讓 P/Invoke 宣告成為實值類別的靜態成員，使其不存在於全域命名空間中，如下列範例所示。
 
-```
+```cpp
 // pinvoke_basic.cpp
 // compile with: /clr
 using namespace System;
@@ -52,6 +52,6 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [在 C++ 中使用明確的 PInvoke (DllImport 屬性)](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)

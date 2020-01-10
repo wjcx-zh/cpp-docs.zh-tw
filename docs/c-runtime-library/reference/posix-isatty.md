@@ -1,9 +1,9 @@
 ---
 title: isatty
-ms.date: 11/04/2016
-apiname:
+ms.date: 12/16/2019
+api_name:
 - isatty
-apilocation:
+api_location:
 - msvcrt.dll
 - msvcr80.dll
 - msvcr90.dll
@@ -14,19 +14,24 @@ apilocation:
 - msvcr120.dll
 - msvcr120_clr0400.dll
 - ucrtbase.dll
-apitype: DLLExport
+api_type:
+- DLLExport
+topic_type:
+- apiref
 f1_keywords:
 - isatty
 helpviewer_keywords:
 - isatty function
 ms.assetid: 610d0b09-a1db-41ef-9f45-a2c6076b4683
-ms.openlocfilehash: 658f214aa3c91d82be7f8032caea54ebe8787aa7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c42d68ae6471ae992783b7869e554448f0934289
+ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155663"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75300946"
 ---
 # <a name="isatty"></a>isatty
 
-此 POSIX 函式已遭取代。 請改用符合 ISO C++ 標準的 [_isatty](isatty.md)。
+Microsoft 所實行的 POSIX 函數名稱 `isatty` 是[_isatty](isatty.md)函式的已被取代別名。 根據預設，它會產生[編譯器警告（層級3） C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)。 名稱已被取代，因為它不會遵循執行特定名稱的標準 C 規則。 不過，仍支援函數。
+
+我們建議您改用[_isatty](isatty.md) 。 或者，您可以繼續使用此函數名稱，並停用警告。 如需詳細資訊，請參閱[關閉警告](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#turn-off-the-warning)和[POSIX 函數名稱](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names)。

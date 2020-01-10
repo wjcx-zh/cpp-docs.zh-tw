@@ -1,20 +1,20 @@
 ---
 title: __svm_clgi
-ms.date: 11/04/2016
+ms.date: 09/02/2019
 f1_keywords:
 - __svm_clgi
 helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 740c76e5dcc8f94b9257272624a6ad3c1f9726c1
+ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390304"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70219964"
 ---
-# <a name="svmclgi"></a>__svm_clgi
+# <a name="__svm_clgi"></a>__svm_clgi
 
 **Microsoft 專屬**
 
@@ -22,15 +22,15 @@ ms.locfileid: "62390304"
 
 ## <a name="syntax"></a>語法
 
-```
+```C
 void __svm_clgi( void );
 ```
 
 ## <a name="remarks"></a>備註
 
-`__svm_clgi` 函式相當於 `CLGI` 機器指令。 全域中斷旗標會判斷微處理器忽略、 延後，或處理等 I/O 完成、 硬體溫度警示或偵錯例外狀況事件，而中斷。
+`__svm_clgi` 函式相當於 `CLGI` 機器指令。 全域中斷旗標會根據事件 (例如 i/o 完成、硬體溫度警示或偵錯工具例外狀況), 判斷微處理器是否忽略、延後或處理中斷。
 
-這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊，搜尋文件中，"AMD64 架構程式設計人員手動磁碟區 2:系統程式設計，> 文件數目 24593，修訂 3.11，位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)站台。
+這個函式支援主機虛擬機器監視器與客體作業系統及其應用程式的互動。 如需詳細資訊, 請搜尋「AMD64 架構程式設計人員手冊第2卷:系統程式設計, 位於[AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)網站。
 
 ## <a name="requirements"></a>需求
 
@@ -38,11 +38,11 @@ void __svm_clgi( void );
 |---------------|------------------|
 |`__svm_clgi`|x86、x64|
 
-**標頭檔** \<intrin.h >
+**標頭檔**\<intrin.h. h >
 
 **結束 Microsoft 專屬**
 
 ## <a name="see-also"></a>另請參閱
 
-[編譯器內建](../intrinsics/compiler-intrinsics.md)<br/>
+[編譯器內建函式](../intrinsics/compiler-intrinsics.md)\
 [__svm_stgi](../intrinsics/svm-stgi.md)

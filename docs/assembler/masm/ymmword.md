@@ -1,30 +1,31 @@
 ---
 title: YMMWORD
-ms.date: 08/30/2018
+ms.date: 12/17/2019
 f1_keywords:
 - YMMWORD
 helpviewer_keywords:
 - YMMWORD directive
 ms.assetid: 955a7d23-6150-4056-befc-7f72e8258ecb
-ms.openlocfilehash: 26050c5d2498c321c0db9fc3e19d4d9e57e46255
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a251be75924121d45e3ff6501cbb006649897f3
+ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216898"
+ms.lasthandoff: 12/20/2019
+ms.locfileid: "75319082"
 ---
 # <a name="ymmword"></a>YMMWORD
 
-使用 256 位元多媒體運算元包含 Intel Advanced Vector Extensions (AVX) 指示。
+用於具有 Intel Advanced Vector Extensions （AVX）指示的256位多媒體運算元。
 
 ## <a name="syntax"></a>語法
 
-> YMMWORD
+> **YMMWORD**
 
 ## <a name="remarks"></a>備註
 
-`YMMWORD` 用來表示相同的型別`__m256`的 AVX 內建函式。
+**YMMWORD**的目的是要代表與 AVX 內建函式的 `__m256` 相同的類型。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[指示詞參考](../../assembler/masm/directives-reference.md)<br/>
+指示詞[參考](directives-reference.md)\
+[MASM BNF 文法](masm-bnf-grammar.md)

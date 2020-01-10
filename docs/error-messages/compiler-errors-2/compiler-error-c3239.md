@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3239
 ms.assetid: 22a518b7-020f-4f3c-9963-a094667fd1ac
-ms.openlocfilehash: ec5a1e3a968c9342ba6d386ef1e2be133e45b62c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3143714ff0080ff6890f4afb72521d212e31a4e
+ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174038"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74756392"
 ---
 # <a name="compiler-error-c3239"></a>編譯器錯誤 C3239
 
@@ -21,7 +21,7 @@ ms.locfileid: "62174038"
 
 下列範例會產生 C3229：
 
-```
+```cpp
 // C3239.cpp
 // compile with: /clr
 int main() {

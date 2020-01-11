@@ -1,31 +1,31 @@
 ---
-title: vcpkg-- 適用於 Windows、Linux 與 MacOS 的 C++ 套件管理員
-description: vcpkg 是命令列套件管理員，大幅簡化在 Windows 上取得和安裝開放原始碼 C++ 程式庫的流程。
-ms.date: 05/16/2019
+title: vcpkg：適用C++于 Windows、Linux 和 MacOS 的套件管理員
+description: vcpkg 是命令列套件管理員，可大幅簡化在 Windows、MacOS 和 Linux 上取得和C++安裝開放原始碼程式庫的程式。
+ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: a116c33d7bb0b1d1396e68681d34995168a0bdc5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
+ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791619"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869703"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用於 Windows、Linux 和 MacOS 的 C++ 套件管理員
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg：適用C++于 Windows、Linux 和 MacOS 的套件管理員
 
-vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的流程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 的相容性測試。 截至 2018 年 5 月為止，Windows 目錄中有超過 900 個程式庫，而 Linux/MacOS 目錄中有超過 350 個程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
+vcpkg 是的C++命令列封裝管理員。 它可大幅簡化在 Windows、Linux 和 MacOS 上取得和安裝協力廠商程式庫的過程。 如果您的專案使用協力廠商程式庫，我們建議您使用 vcpkg 加以安裝。 vcpkg 支援開放原始碼和專屬程式庫。 vcpkg Windows 目錄中的所有程式庫皆已通過 Visual Studio 2015、Visual Studio 2017 和 Visual Studio 2019 的相容性測試。 在 Windows 和 Linux/MacOS 目錄之間，vcpkg 現在支援超過1900的程式庫。 C++ 社群正持續不斷地在兩個目錄中新增更多程式庫。
 
 ## <a name="simple-yet-flexible"></a>簡單卻有彈性
 
-您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以隨意自訂私人複製品。 例如，您可指定與公用目錄中所找到之程式庫不同的程式庫或不同版程式庫。 您可以在單一電腦上有多個 vcpkg 的複本，每一個都產生一組自訂的程式庫和/或編譯參數等等。每個複製都是獨立的環境，其自有的 vcpkg 複本只會在自己的階層上運作。 vcpkg 未新增至任何環境變數，和 Windows 登錄或 Visual Studio 沒有相依性。
+您可使用單一命令下載來源並建置程式庫。 vcpkg 本身是開放原始碼專案，可於 GitHub 取得。 您可以用您喜歡的任何方式自訂您的私用 vcpkg 複製。 例如，指定不同的程式庫，或不同于公用目錄中找到的程式庫版本。 您可以在單一電腦上有多個 vcpkg 的複本。 您可以使用慣用的編譯參數，設定每一個程式庫的自訂集合。 每個複製品都是完全獨立的環境，並具有只會在其本身階層執行的專屬 vcpkg.exe 複本。 vcpkg 不會新增至任何環境變數，也不會相依于 Windows 登錄或 Visual Studio。
 
-## <a name="sources-not-binaries"></a>不是二進位檔的來源
+## <a name="sources-not-binaries"></a>來源，而不是二進位檔
 
-針對 Windows 目錄中的程式庫，vcpkg 會下載來源，而不會下載二進位檔 [1]。 它會使用所能找到的最新版 Visual Studio 來編譯這些來源。 在 C++ 中，使用相同的編譯器及編譯器版本來編譯所用的任何程式庫十分重要，因為應用程式程式碼會與其建立連結。 使用 vcpkg 可排除或至少大幅降低二進位不符的可能性，及其引發的問題。 在以特定編譯器版本為標準的小組中，某個小組成員可以使用 vcpkg 來下載來源並編譯一組二進位檔，然後使用匯出命令壓縮二進位檔和標頭，供其他小組成員使用。 如需詳細資訊，請參閱下面的[匯出編譯的二進位檔和標頭](#export_binaries_per_project)。
+對於 Windows 目錄中的程式庫，vcpkg 會下載來源，而不是二進位檔<sup>1</sup>。 它會使用所能找到的最新版 Visual Studio 來編譯這些來源。 在C++中，您必須使用相同的編譯器和編譯器版本來編譯您的應用程式程式碼和您所使用的任何程式庫。 使用 vcpkg 可排除或至少大幅降低二進位不符的可能性，及其引發的問題。 在以特定編譯器版本為標準的小組中，一個小組成員可以使用 vcpkg 來下載來源並編譯一組二進位檔。 然後他們可以使用 export 命令來壓縮其他小組成員的二進位檔和標頭。 如需詳細資訊，請參閱下面的[匯出編譯的二進位檔和標頭](#export_binaries_per_project)。
 
-如果您使用連接埠集合中的私人程式庫建立 vcpkg 複製品，您可以新增連接埠下載預先建置的二進位檔和標頭，並撰寫 portfile.cmake 檔案，只將這些檔案複製到想要的位置。
+您也可以在埠集合中建立具有私用程式庫的 vcpkg 複製品。 新增埠來下載預先建立的二進位檔和標頭。 然後，撰寫只將這些檔案複製到慣用位置的 portfile cmake 檔案。
 
-[1]*注意：對於某些專屬程式庫，無法使用來源。在這些情況下，Vcpkg 會下載相容的預建二進位檔。*
+<sup>1</sup> *注意：某些專屬程式庫無法使用來源。在這些情況下，vcpkg 會下載相容的預建二進位檔。*
 
 ## <a name="installation"></a>安裝
 
@@ -40,7 +40,7 @@ vcpkg 是命令列套件管理員，可大幅簡化在 Windows、Linux 和 MacOS
 
 若要查看有哪些套件可用，請在命令提示字元中鍵入：**vcpkg search**
 
-此命令會列舉 vcpkg/ports 子資料夾中的控制檔案。 您會看到類似下面的清單內容：
+此命令會列舉 vcpkg/ports 子資料夾中的控制檔案。 您會看到如下所示的清單：
 
 ```cmd
 ace       6.4.3   The ADAPTIVE Communication Environment
@@ -67,7 +67,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 如果是 Linux 程式庫，vcpkg 取決於本機電腦上安裝的 gcc。 在 MacOS 上，vcpkg 使用 Clang。
 
-如果連接埠檔案指定相依性，vcpkg 也會加以下載並安裝。 下載後，vcpkg 會使用程式庫使用的任何組建系統來建置程式庫。 建議使用 CMake 和 (在 Windows 上) MSBuild 專案，但也支援 MAKE 和任何其他組建系統。 如果 vcpkg 在本機電腦上找不到指定的組建系統，會將其下載並安裝。
+當 portfile 指定相依性時，vcpkg 也會下載並安裝它們。 下載之後，vcpkg 會使用程式庫所使用的相同組建系統來建立程式庫。 建議使用 CMake 和（在 Windows 上） MSBuild 專案，但也支援與任何其他組建系統一起進行。 如果 vcpkg 在本機電腦上找不到指定的組建系統，它會下載並安裝它。
 
 ```cmd
 > vcpkg install boost:x86-windows
@@ -88,7 +88,7 @@ cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg\scripts\buildsystems\vcpkg.cmake (Windows)
 
 ## <a name="list-the-libraries-already-installed"></a>列出已安裝的程式庫
 
-在您安裝了部分程式庫之後，就可以使用 **vcpkg list** 查看現有的內容：
+安裝一些程式庫之後，您可以使用**vcpkg list**來查看您擁有的內容：
 
 ```cmd
 > vcpkg list
@@ -105,15 +105,15 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="per-user"></a>每個使用者
 
-執行 **vcpkg integrate install** 以設定 Visual Studio 針對每個使用者逐一尋找所有 vcpkg 標頭檔和二進位檔，而不需要手動編輯 VC++ 目錄路徑。 如有多個複製品，此命令執行所在的複製品就會成為新的預設位置。
+執行**vcpkg 整合安裝**以設定 Visual Studio，以每個使用者為基礎來尋找所有 vcpkg 標頭檔和二進位檔。 不需要手動編輯 VC + + 目錄路徑。 如果您有多個複製，則執行此命令的複製會變成新的預設位置。
 
-現在您只要鍵入資料夾/標頭就可以 #include 標頭，自動完成會協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
+現在您只要輸入資料夾/標頭，就可以 #include 標頭，而自動完成可協助您。 不需要任何其他步驟即可連結至程式庫或新增專案參考。 下圖顯示 Visual Studio 如何找到 azure-storage-cpp 標頭。 vcpkg 會將其標頭放在 **/installed** 子資料夾中，依目標平台分割資料。 下圖顯示程式庫 **/was** 子資料夾中的 Include 檔清單：
 
-![vcpkg IntelliSense 整合](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
+![vcpkg 和 IntelliSense](media/vcpkg-intellisense.png "vcpkg 和 IntelliSense")
 
 ### <a name="per-project"></a>每個專案
 
-如果您要使用的特定程式庫版本與使用中 vcpkg 執行個體的程式庫版本不同，請遵循下列步驟：
+如果您需要使用的程式庫版本與 active vcpkg 實例中的版本不同，請遵循下列步驟：
 
 1. 建立新的 vcpkg 複製品
 1. 修改程式庫的連接埠檔案以取得您需要的版本
@@ -122,21 +122,21 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="integrate-with-visual-studio-code-linuxmacos"></a>與 Visual Studio Code 整合 (Linux/MacOS)
 
-執行 **vcpkg 整合安裝**，使用 vcpkg 登錄的位置在 Linux/MacOS 上設定 Visual Studio Code，並對原始程式檔啟用 IntelliSense。
+執行**vcpkg 整合安裝**以設定 Linux/MacOS 上的 Visual Studio Code。 此命令會設定 vcpkg 登記的位置，並在原始檔上啟用 IntelliSense。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>透過 WSL 從 Windows 將 Linux 設為目標
 
-您可以透過適用於 Linux 的 Windows 子系統 (WSL) 從 Windows 電腦產生 Linux 二進位檔。 請遵循指示[在 Windows 10 上安裝 WSL](/windows/wsl/install-win10)，並使用[適用於 Linux 的 Visual Studio 延伸模組](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)進行設定。 您可以將 Windows 及 Linux 這兩者的所有建置程式庫放入相同的資料夾，並同時從 Windows 和 WSL 進行存取。
+您可以使用適用于 Linux 的 Windows 子系統或 WSL，在 Windows 電腦上產生 Linux 二進位檔。 請遵循指示[在 Windows 10 上安裝 WSL](/windows/wsl/install-win10)，並使用[適用於 Linux 的 Visual Studio 延伸模組](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)進行設定。 您可以將適用于 Windows 和 Linux 的所有建立程式庫放入相同的資料夾中。 它們可以從 Windows 和 WSL 存取。
 
 ## <a name="export_binaries_per_project"></a> 匯出編譯的二進位檔和標頭
 
-要求小組所有人都下載及建置程式庫很沒效率。 一位小組成員即可完成該作業，然後使用 **vcpkg export** 建立二進位檔和標頭的 ZIP 檔案或建立 NuGet 套件 (提供各種格式)，輕輕鬆鬆和其他小組成員共用。
+讓小組中的每個人都能下載並建立通用程式庫是沒有效率的。 單一小組成員可以使用**vcpkg export**命令，建立二進位檔和標頭的一般 zip 檔案，或 NuGet 套件。 然後，很容易就能與其他小組成員共用。
 
 ## <a name="updateupgrade-installed-libraries"></a>更新/升級安裝的程式庫
 
-公用目錄會隨程式庫最新版本保持在最新狀態。 若要判斷哪些本機程式庫已過期，請使用 **vcpkg update**。 當您準備好將連接埠集合更新至最新版公用目錄時，請執行 **vcpkg upgrade** 命令，以自動下載及重建任何或所有已安裝的過期程式庫。
+公用目錄會與最新版本的程式庫保持在最新狀態。 若要判斷哪些本機程式庫已過期，請使用 **vcpkg update**。 當您準備好要將埠集合更新為最新版本的公用目錄時，請執行**vcpkg upgrade**命令。 它會自動下載並重建任何或所有已安裝的程式庫（已過期）。
 
-根據預設，**upgrade** 命令只列出過期的程式庫，而不將其升級。 若要執行升級，請使用 **--no-dry-run** 選項。
+根據預設，**upgrade** 命令只列出過期的程式庫，而不將其升級。 若要實際升級程式庫，請使用 **--無試執行**選項。
 
 ```cmd
   vcpkg upgrade --no-dry-run
@@ -151,7 +151,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ### <a name="upgrade-example"></a>升級範例
 
-下列範例示範如何只升級指定的程式庫。 請注意，vcpgk 會視需要根據相依性自動提取。
+下列範例示範如何只升級指定的程式庫。 vcpkg 會視需要自動提取相依性。
 
 ```cmd
 c:\users\satyan\vcpkg> vcpkg upgrade tiny-dnn:x86-windows zlib
@@ -172,11 +172,11 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="remove-a-library"></a>移除程式庫
 
-鍵入 **vcpkg remove** 可移除安裝的程式庫。 如有任何其他程式庫與其相依，系統會要求您以 **--recurse** 重新執行命令，這會移除所有下游程式庫。
+鍵入 **vcpkg remove** 可移除安裝的程式庫。 如果有任何其他程式庫相依于它，系統就會要求您使用 **--遞迴**來重新執行命令，這會導致移除所有下游程式庫。
 
 ## <a name="customize-vcpkg"></a>自訂 vcpkg
 
-您可以用任何喜歡的方式修改您的 vcpkg 複製品。 您可以建立多個 vcpkg 複製品，並修改各複製品的 portfile 以取得特定的程式庫版本，或指定命令列參數。 例如，在企業中，一組開發人員可能正在處理有相依性集合的軟體，而另一組人馬則可能有其他集合。 您可以設定兩個 vcpkg 複製品，然後修改每個複製品，根據您的需求下載程式庫版本和編譯參數等等。
+您可以用任何喜歡的方式修改您的 vcpkg 複製品。 您甚至可以建立多個 vcpkg 複製品，然後修改每個複本中的 portfile。 這是取得特定程式庫版本或指定特定命令列參數的簡單方式。 例如，在企業中，個別的開發人員群組可能會處理具有其群組特有之相依性的軟體。 解決的方法是為每個小組設定 vcpkg 的複本。 然後，修改複本以下載程式庫版本，並設定每個小組所需的編譯參數。
 
 ## <a name="uninstall-vcpkg"></a>將 vcpkg 解除安裝
 
@@ -188,14 +188,14 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="the-vcpkg-folder-hierarchy"></a>vcpkg 資料夾階層
 
-所有 vcpkg 功能與資料皆完全獨立於單一目錄階層中，稱為「執行個體」。 沒有登錄設定或環境變數。 您可以在電腦上建立無數個執行個體，其並不會互相干擾。
+所有 vcpkg 功能與資料皆完全獨立於單一目錄階層中，稱為「執行個體」。 沒有登錄設定或環境變數。 您可以在一部電腦上擁有任意數目的 vcpkg 實例，而且它們不會互相干擾。
 
 vcpkg 執行個體的內容如下：
 
 - 組建樹狀結構 -包含每個程式庫建置來源的子資料夾
 - 文件 - 文件和範例
-- 下載 - 任何已下載工具或來源的快取複本。 當您執行安裝命令時，vcpkg 會優先搜尋此位置。
-- 已安裝 - 包含每個已安裝程式庫的標頭和二進位檔。 當您與 VIsual Studio 整合時，即表示將此資料夾新增至其搜尋路徑。
+- 下載 - 任何已下載工具或來源的快取複本。 當您執行 install 命令時，vcpkg 會先在這裡進行搜尋。
+- 已安裝 - 包含每個已安裝程式庫的標頭和二進位檔。 當您與 Visual Studio 整合時，基本上就是告訴它將此資料夾新增至其搜尋路徑。
 - 套件 - 各安裝階段間的內部資料夾。
 - 連接埠 - 描述目錄中各程式庫、其版本及下載位置的檔案。 如有需要可新增自己的連接埠。
 - 指令碼 - vcpkg 使用的指令碼 (cmake、powershell)。
@@ -206,20 +206,20 @@ vcpkg 執行個體的內容如下：
 
 |命令|描述|
 |---------|---------|
-|**vcpkg search [pat]**|搜尋可安裝的套件|
+|**vcpkg 搜尋 \[pat]**|搜尋可安裝的套件|
 |**vcpkg install \<pkg>...**|安裝套件|
 |**vcpkg remove \<pkg>...**|解除安裝套件|
 |**vcpkg remove --outdated**|將過期的套件解除安裝|
 |**vcpkg list**|列出安裝的套件|
 |**vcpkg update**|顯示要更新的套件清單|
 |**vcpkg upgrade**|重建所有過期的套件|
-|**vcpkg hash \<file> [alg]**|依特定演算法雜湊檔案，預設為 SHA512|
+|**vcpkg 雜湊 \<檔案 > \[alg]**|依特定演算法雜湊檔案，預設為 SHA512|
 |**vcpkg integrate install**|讓所有使用者皆可使用安裝的套件。 第一次使用需要有管理員權限|
 |**vcpkg integrate remove**|移除全使用者整合|
 |**vcpkg integrate project**|產生參考 NuGet 套件供個別 VS 專案使用|
-|**vcpkg export \<pkg>... [opt]...**|匯出套件|
+|**vcpkg export \<.pkg > ... \[opt] .。。**|匯出套件|
 |**vcpkg edit \<pkg>**|開啟連接埠以進行編輯 (使用 %EDITOR%，預設為 'code')|
-|**vcpkg create \<pkg> \<url> [archivename]**|建立新套件|
+|**vcpkg create \<.pkg > \<url > \[archivename]**|建立新套件|
 |**vcpkg cache**|列出快取的已編譯套件|
 |**vcpkg version**|顯示版本資訊|
 |**vcpkg contact --survey**|顯示要傳送意見反應的連絡人資訊。|

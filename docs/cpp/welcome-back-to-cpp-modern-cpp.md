@@ -1,26 +1,29 @@
 ---
-title: 歡迎回到 C++ (新式 C++)
-ms.date: 11/19/2019
+title: 歡迎回到C++ -現代化C++
+description: 說明現代化C++的新程式設計慣用語，以及其原理。
+ms.date: 01/10/2020
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 4dee4779e941c66af1c23f62a88cecec4916a475
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 9630322024e639f9e5db1888dac5a1530befc716
+ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301739"
+ms.lasthandoff: 01/10/2020
+ms.locfileid: "75869717"
 ---
-# <a name="welcome-back-to-c-modern-c"></a>歡迎回到 C++ (新式 C++)
+# <a name="welcome-back-to-c---modern-c"></a>歡迎回到C++ -現代化C++
 
-過去25年來， C++是世界上最廣泛使用的程式設計語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 語言比其他語言更有彈性，因為它可讓您存取低層級的硬體功能，以最大化速度並將記憶體需求降到最低。 您可以用它來建立各種應用程式（從遊戲到高效能的科學軟體、設備磁碟機、內嵌程式、程式庫和編譯器，適用于其他程式設計語言、Windows 用戶端應用程式，以及其他更多功能）。
+建立後， C++已成為世界上最廣泛使用的程式設計語言之一。 編寫完善的 C++ 程式不但執行快速，而且有效率。 此語言比其他語言更有彈性：它可以在最高層級的抽象層中工作，並在晶片的層級向下。 C++提供高度優化的標準程式庫。 它可讓您存取低層級的硬體功能，以最大化速度並將記憶體需求降至最低。 使用C++，您可以建立各種不同的應用程式。 遊戲、設備磁碟機和高效能科學軟體。 內嵌程式。 Windows 用戶端應用程式。 即使是其他程式設計語言的程式庫和編譯器C++也是以撰寫的。
 
-C++ 的其中一個原始需求是與 C 語言的回溯相容性。 因此C++ ，一律允許 C 樣式的程式設計使用原始指標、陣列、以 null 結束的字元字串、自訂資料結構，以及其他可能會使效能變得更好的功能，但也可能會產生錯誤和複雜度。 的演進C++具有強調的功能，可大幅減少使用 C 樣式慣用語的需求。 當您需要時，會有舊版的 C 程式設計工具，但使用C++現代化程式碼時，您應該會需要較少且較少的功能。 現代化C++的程式碼更簡單、更安全、更簡潔，而且速度也跟以往一樣快。
+C++ 的其中一個原始需求是與 C 語言的回溯相容性。 因此， C++一律允許 C 樣式程式設計，包括原始指標、陣列、以 null 結束的字元字串，以及其他功能。 它們可能會啟用絕佳的效能，但也會產生錯誤和複雜度。 的演進C++具有強調的功能，可大幅減少使用 C 樣式慣用語的需求。 當您需要時，會有舊版的 C 程式設計工具，但使用C++現代化程式碼時，您應該會需要較少且較少的功能。 現代化C++的程式碼更簡單、更安全、更簡潔，而且速度也跟以往一樣快。
 
 下列各節提供現代化C++主要功能的總覽。 除非另有說明，否則此處所列的功能會在 c + + 11 和更新版本中提供。 在 Microsoft C++編譯器中，您可以設定[/std](../build/reference/std-specify-language-standard-version.md)編譯器選項，以指定要用於專案的標準版本。
 
-## <a name="raii-and-smart-pointers"></a>RAII 和智慧型指標
+## <a name="resources-and-smart-pointers"></a>資源和智慧型指標
 
-C 樣式程式設計中的其中一個主要錯誤類別是*記憶體*流失，因為無法針對以**new**所配置的記憶體呼叫**delete** 。 現代化C++強調資源取得的原則*是初始化*，這表示任何資源（堆積記憶體、檔案控制代碼、通訊端等等）都應該由物件所*擁有*，該物件會在其方法中建立或接收新配置的資源，並在其析構函式中予以刪除。 藉由遵循 RAII 的準則，您可以保證當擁有物件超出範圍時，所有資源都會正確地傳回作業系統。 為了支援輕鬆採用 RAII 原則C++ ，標準程式庫提供三種智慧型指標類型： [std：： unique_ptr](../standard-library/unique-ptr-class.md)、 [std：： shared_ptr](../standard-library/shared-ptr-class.md)和[std：： weak_ptr](../standard-library/weak-ptr-class.md)。 智慧型指標會處理所擁有之記憶體的配置和刪除。 下列範例顯示具有陣列成員的類別，該成員會在 `make_unique()`的呼叫中，于堆積上配置。 **New**和**delete**的呼叫是由 `unique_ptr` 類別所封裝。 當 `widget` 物件超出範圍時，將會叫用 unique_ptr 的析構函式，而且它會釋放為數組配置的記憶體。  
+C 樣式程式設計中的其中一個主要錯誤類別就是*記憶體*流失。 遺漏的原因通常是因為無法針對使用**new**所配置的記憶體呼叫**delete** 。 現代化C++強調資源取得的原則*是初始化*（RAII）。 概念很簡單。 資源（堆積記憶體、檔案控制代碼、通訊端等等）應由物件*所擁有*。 該物件會在其程式中建立或接收新配置的資源，並在其析構函式中將它刪除。 RAII 的原則可保證當擁有物件超出範圍時，所有資源都會正確地傳回給作業系統。
+
+為了支援輕鬆採用 RAII 原則C++ ，標準程式庫提供三種智慧型指標類型： [std：： unique_ptr](../standard-library/unique-ptr-class.md)、 [std：： shared_ptr](../standard-library/shared-ptr-class.md)和[std：： weak_ptr](../standard-library/weak-ptr-class.md)。 智慧型指標會處理所擁有之記憶體的配置和刪除。 下列範例顯示具有陣列成員的類別，該成員會在 `make_unique()`的呼叫中，于堆積上配置。 **New**和**delete**的呼叫是由 `unique_ptr` 類別所封裝。 當 `widget` 物件超出範圍時，將會叫用 unique_ptr 的析構函式，而且它會釋放為數組配置的記憶體。  
 
 ```cpp
 #include <memory>
@@ -47,11 +50,11 @@ void functionUsingWidget() {
 
 ## <a name="stdstring-and-stdstring_view"></a>std：： string 和 std：： string_view
 
-C 樣式字串是 bug 的另一個主要來源。 藉由使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md) ，您可以消除與 C 樣式字串相關聯的幾乎所有錯誤，並取得成員函式的優點來進行搜尋、附加、前置處理等等。 這兩者都是高度優化的速度。 將字串傳遞至只需要唯讀存取的函式時，在 c + + 17 中，您可以使用[std：： string_view](../standard-library/basic-string-view-class.md)以獲得更高的效能優勢。
+C 樣式字串是 bug 的另一個主要來源。 藉由使用[std：： string 和 std：： wstring](../standard-library/basic-string-class.md)，您可以消除與 C 樣式字串相關聯的幾乎所有錯誤。 您也可以取得成員函式的優點，以便搜尋、附加、預先加上等等。 這兩者都是高度優化的速度。 將字串傳遞至只需要唯讀存取的函式時，在 c + + 17 中，您可以使用[std：： string_view](../standard-library/basic-string-view-class.md)以獲得更高的效能優勢。
 
 ## <a name="stdvector-and-other-standard-library-containers"></a>std：： vector 和其他標準程式庫容器
 
-標準程式庫容器全都遵循 RAII 的原則，提供反覆運算器以進行專案的安全遍歷，針對效能進行高度優化，並已徹底測試正確性。 盡可能使用這些容器，即可消除自訂資料結構中可能引進的 bug 或效率不佳的可能性。 根據預設，會在中 C++ 使用[向量](../standard-library/vector-class.md)做為慣用的順序容器。 這相當於 .NET 語言中的 `List<T>`。
+標準程式庫容器全都遵循 RAII 的原則。 它們提供反覆運算器以進行專案的安全遍歷。 而且，它們已針對效能進行高度優化，並已徹底測試正確性。 藉由使用這些容器，您可以消除自訂資料結構中可能引進的 bug 或效率不佳的可能性。 使用[向量](../standard-library/vector-class.md)做為中C++的連續容器，而不是原始陣列。
 
 ```cpp
 vector<string> apples;
@@ -82,7 +85,7 @@ apple_color["Granny Smith"] = "Green";
 
 以下是一些重要的範例：
 
-- **for_each**，預設的遍歷演算法（以及以範圍為基礎的 for 迴圈）。 
+- **for_each**，預設的遍歷演算法（以及以範圍為基礎的 for 迴圈）。
 
 - **轉換**，適用于不就地修改的容器元素
 
@@ -138,7 +141,7 @@ int main()
 
 ## <a name="constexpr-expressions-instead-of-macros"></a>constexpr 運算式，而非宏
 
-C 和C++中的宏是在編譯之前由預處理器處理的標記。 在編譯檔案之前，宏標記的每個實例都會被其定義的值或運算式取代。 宏通常用於 C 樣式的程式設計中，以定義編譯時間常數值。 不過，宏很容易出錯，而且很容易進行調試。 在現代化C++的情況下，您應該偏好使用適用于編譯時間常數的[constexpr](constexpr-cpp.md)變數：
+C 和C++中的宏是由預處理器在編譯之前處理的標記。 在編譯檔案之前，宏標記的每個實例都會被其定義的值或運算式取代。 宏通常用於 C 樣式的程式設計中，以定義編譯時間常數值。 不過，宏很容易出錯，而且很容易進行調試。 在現代化C++的情況下，您應該偏好使用適用于編譯時間常數的[constexpr](constexpr-cpp.md)變數：
 
 ```cpp
 #define SIZE 10 / C-style
@@ -147,7 +150,7 @@ constexpr int size = 10; // modern C++
 
 ### <a name="uniform-initialization"></a>統一初始化
 
-在新式C++中，您可以針對任何類型使用括弧初始化。 初始化陣列、向量或其他容器時，這種形式的初始化特別方便。 在下列範例中，`v2` 會以 `S`的3個實例進行初始化。 `v3` 會使用3個 `S` 實例進行初始化，其本身會使用大括弧進行初始化。 編譯器會根據宣告的 `v3`類型，來推斷每個元素的類型。
+在新式C++中，您可以針對任何類型使用括弧初始化。 初始化陣列、向量或其他容器時，這種形式的初始化特別方便。 在下列範例中，`v2` 會以 `S`的三個實例進行初始化。 `v3` 會使用使用大括弧初始化的三個 `S` 實例進行初始化。 編譯器會根據宣告的 `v3`類型，來推斷每個元素的類型。
 
 ```cpp
 #include <vector>
@@ -184,11 +187,11 @@ int main()
 
 ## <a name="move-semantics"></a>移動語義
 
-新式C++提供了*移動語義*，讓您可以排除不必要的記憶體複本，而在某些情況下，舊版語言無法避免。 *移動*作業會將資源的擁有權從一個物件轉移到下一個，而不需要建立複本。 當實作為擁有資源（例如堆積記憶體、檔案控制代碼等等）的類別時，您可以為它定義*移動*程式和*移動的指派運算子*。 在不需要複製的情況下，編譯器會在多載解析期間選擇這些特殊成員。 標準程式庫容器類型會在物件上叫用移動的函式（如果有定義的話）。 如需詳細資訊，請參閱[移動函數和移動指派C++運算子（）](move-constructors-and-move-assignment-operators-cpp.md)。
+新式C++提供*移動的語義*，讓您可以排除不必要的記憶體複本。 在舊版的語言中，在某些情況下無法避免複製。 *移動*作業會將資源的擁有權從一個物件轉移到下一個，而不需要建立複本。 在執行擁有資源的類別（例如堆積記憶體、檔案控制代碼等等）時，您可以為它定義*移動*函式和*移動指派運算子*。 在不需要複製的情況下，編譯器會在多載解析期間選擇這些特殊成員。 標準程式庫容器類型會在物件上叫用移動的函式（如果有定義的話）。 如需詳細資訊，請參閱[移動函數和移動指派C++運算子（）](move-constructors-and-move-assignment-operators-cpp.md)。
 
 ## <a name="lambda-expressions"></a>Lambda 運算式
 
-在 C 樣式程式設計中，函式可以透過函式*指標*傳遞至另一個函數。 函式指標不容易維護和瞭解，因為它們所參考的函式可能會在原始程式碼中的其他位置定義，而遠離其叫用的時間點。 此外，它們不是型別安全。 新式C++提供函式物件、覆寫[（）](function-call-operator-parens.md)運算子的類別，讓它們可以像函式一樣呼叫。 建立函式物件最方便的方式是使用內嵌[lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 下列範例示範如何使用 lambda 運算式來傳遞函式物件，`for_each` 函式會在向量的每個元素上叫用：
+在 C 樣式程式設計中，函數可以使用函式*指標*傳遞至另一個函式。 函式指標不方便維護和瞭解。 它們所參考的函式可在原始程式碼中的其他位置定義，而遠離其叫用的時間點。 此外，它們不是型別安全。 新式C++提供函式*物件*、覆寫[（）](function-call-operator-parens.md)運算子的類別，讓它們可以像函式一樣呼叫。 建立函式物件最方便的方式是使用內嵌[lambda 運算式](../cpp/lambda-expressions-in-cpp.md)。 下列範例示範如何使用 lambda 運算式來傳遞函式物件，`for_each` 函式會在向量的每個元素上叫用：
 
 ```cpp
     std::vector<int> v {1,2,3,4,5};
@@ -197,11 +200,11 @@ int main()
     auto result = find_if(begin(v), end(v), [=](int i) { return i > x && i < y; });
 ```
 
-Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「函式，該函式會接受 `int` 類型的單一引數，並傳回布林值，指出運算式是否為 true。 請注意，來自周圍內容的 `x` 和 `y` 變數可以在 lambda 中使用。 `[=]` 指定以傳值方式來*捕獲*這些變數;換句話說，lambda 運算式有自己的這些值複本。
+Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「函式，該函式會接受 `int` 類型的單一引數，並傳回布林值，指出引數是否大於 `x` 且小於 `y`。」 請注意，來自周圍內容的 `x` 和 `y` 變數可以在 lambda 中使用。 `[=]` 指定以傳值方式來*捕獲*這些變數;換句話說，lambda 運算式有自己的這些值複本。
 
 ## <a name="exceptions"></a>例外狀況
 
-一般的規則是，現代化C++的例外狀況，而不是錯誤碼，做為報告和處理錯誤情況的最佳方式。 如需詳細資訊，請參閱[例外狀況和錯誤處理的新式C++最佳作法](errors-and-exception-handling-modern-cpp.md)。
+新式C++強調例外狀況，而不是錯誤碼，做為報告和處理錯誤情況的最佳方式。 如需詳細資訊，請參閱[例外狀況和錯誤處理的新式C++最佳作法](errors-and-exception-handling-modern-cpp.md)。
 
 ## <a name="stdatomic"></a>std：：不可部分完成
 
@@ -213,7 +216,7 @@ Lambda 運算式 `[=](int i) { return i > x && i < y; }` 可以讀取為「函�
 
 ## <a name="see-also"></a>請參閱
 
-[C++ 語言參考](../cpp/cpp-language-reference.md)<br/>
-[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)<br/>
-[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 語言參考](../cpp/cpp-language-reference.md)\
+[Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)\
+[C++ 標準程式庫](../standard-library/cpp-standard-library-reference.md)\
 [Microsoft C++語言一致性資料表](../overview/visual-cpp-language-conformance.md)

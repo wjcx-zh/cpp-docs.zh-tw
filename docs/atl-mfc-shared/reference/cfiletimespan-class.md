@@ -1,6 +1,7 @@
 ---
 title: CFileTimeSpan 類別
-ms.date: 01/06/2020
+description: Active Template Library （ATL）和 Microsoft Foundation class （MFC） CFileTimeSpan 類別會以 FILETIME 單位來管理時間間隔。
+ms.date: 01/10/2020
 f1_keywords:
 - CFileTimeSpan
 - ATLTIME/ATL::CFileTimeSpan
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 9220ed8373e78db727b43ecb59880dcfbcc98f96
-ms.sourcegitcommit: 7bd3567fc6a0e7124aab51cad63bbdb44a99a848
+ms.openlocfilehash: 89d95759b11ff7e52c2a8fa75cf94f7b7b81fa36
+ms.sourcegitcommit: c3283062ce4e382aec7f11626d358a37caf8cdbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75755060"
+ms.lasthandoff: 01/13/2020
+ms.locfileid: "75914385"
 ---
 # <a name="cfiletimespan-class"></a>CFileTimeSpan 類別
 
@@ -61,7 +62,7 @@ class CFileTimeSpan
 
 ## <a name="remarks"></a>備註
 
-這個類別會提供方法來處理檔案系統使用之單位的相對時間週期。 這些單位通常用於關於建立、上次存取或上次修改檔案時的作業。 這個類別的方法經常與[CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)物件搭配使用。
+`CFileTimeSpan` 類別提供方法來處理檔案系統使用之單位的相對時間週期。 這些單位通常用於檔案作業，例如建立檔案、上次存取或上次修改檔案的時間。 這個類別的方法經常與[CFileTime 類別](../../atl-mfc-shared/reference/cfiletime-class.md)物件搭配使用。
 
 ## <a name="example"></a>範例
 
@@ -87,11 +88,11 @@ CFileTimeSpan(LONGLONG nSpan) throw();
 現有的 `CFileTimeSpan` 物件。
 
 *nSpan*\
-一段時間（以毫秒為單位）。
+以 FILETIME 單位表示的一段時間。
 
 ### <a name="remarks"></a>備註
 
-`CFileTimeSpan` 物件可以使用現有的 `CFileTimeSpan` 物件來建立，或以64位值表示。 預設的函式會將時間範圍設定為0。
+`CFileTimeSpan` 物件可以使用現有的 `CFileTimeSpan` 物件來建立，或以 100-毫微秒 FILETIME 單位中的64位值表示。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。 預設的函式會將時間範圍設定為0。
 
 ## <a name="gettimespan"></a>CFileTimeSpan::GetTimeSpan
 
@@ -103,7 +104,7 @@ LONGLONG GetTimeSpan() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-傳回時間範圍（以毫秒為單位）。
+以 100-毫微秒的 FILETIME 單位傳回時間範圍。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。
 
 ## <a name="operator_-"></a>CFileTimeSpan：： operator-
 
@@ -303,7 +304,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 ### <a name="parameters"></a>參數
 
 *nSpan*\
-時間範圍的新值（以 100-毫微秒為單位）。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。
+時間範圍的新值，以 100-毫微秒的 FILETIME 單位表示。 如需詳細資訊，請參閱[CFileTime](cfiletime-class.md)。
 
 ## <a name="see-also"></a>請參閱
 

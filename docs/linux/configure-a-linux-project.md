@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中設定 C++ Linux 專案
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 1cfaeb6611a27af498325739271d4dba38581dd6
-ms.sourcegitcommit: c53a3efcc5d51fc55fa57ac83cca796b33ae888f
+ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
+ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71960691"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "76031364"
 ---
 # <a name="configure-a-linux-project"></a>設定 Linux 專案
 
@@ -51,13 +51,13 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 16.1 版**：若要以適用於 Linux 的 Windows 子系統為目標，請按一下 [平台工具組] 的向下箭號，然後選擇 [WSL_1_0]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
+   **Visual Studio 2019 16.1 版**：目標為適用于 Linux 的 Windows 子系統，按一下**平臺工具**組的向下箭號，然後選擇 [ **WSL_1_0**]。 其他遠端選項會消失，預設 WSL 殼層的路徑便會出現在其位置：
 
    ![WSL 組建電腦](media/wsl-remote-vs2019.png)
 
    如果您有並存的 WSL 安裝，則可以在此處指定不同的路徑。 如需管理多個發行版本的詳細資訊，請參閱[管理和設定適用於 Linux 的 Windows 子系統](/windows/wsl/wsl-config#set-a-default-distribution)。
 
-   您可以在 [組態屬性] > [偵錯] 頁面上指定不同的目標來進行偵錯。
+   您可以在 [設定**屬性**] > [**調試**程式] 頁面上，指定不同的偵錯工具目標。
 
    ::: moniker-end
 
@@ -96,6 +96,9 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 當您在 [連線管理員] 中新增連線時，Visual Studio 會自動偵測遠端系統上編譯器的 Include 目錄。 Visual Studio 接著會壓縮這些檔案，並將其複製到本機 Windows 電腦上的目錄中。 之後，每當您在 Visual Studio 或 CMake 專案中使用該連線時，這些目錄中的標頭就會用來提供 IntelliSense。
 
+> [!NOTE]
+> 在 Visual Studio 2019 16.5 版和更新版本中，遠端標頭複本已經過優化。 在開啟 Linux 專案或為 Linux 目標設定 CMake 時，現在會視需要複製標頭。 複製會根據專案的指定編譯器，以每個專案為基礎發生在背景中。 如需詳細資訊，請參閱[Linux IntelliSense 的正確性和效能改進](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/)。
+
 這項功能取決於已安裝 ZIP 的 Linux 電腦。 您可以使用這個 apt-get 命令來安裝 ZIP：
 
 ```cmd
@@ -120,7 +123,7 @@ sudo apt install zip
 
 ::: moniker-end
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Set compiler and build properties](../build/working-with-project-properties.md) (設定編譯器及組建屬性)<br/>
 [C++ 一般屬性 (Linux C++)](../linux/prop-pages/general-linux.md)<br/>

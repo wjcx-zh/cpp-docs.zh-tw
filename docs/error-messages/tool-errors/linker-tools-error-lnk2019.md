@@ -1,18 +1,39 @@
 ---
 title: 連結器工具錯誤 LNK2019
-ms.date: 10/22/2019
+description: 關於 Microsoft Visual Studio 連結器錯誤 LNK2019，以及如何在 C 和C++程式碼中進行診斷和更正。
+ms.date: 01/15/2020
 f1_keywords:
 - LNK2019
 helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 948a27e2d80c81afcf41efadd83e56709c98a304
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+no-loc:
+- main
+- WinMain
+- wmain
+- wWinMain
+- __cdecl
+- __stdcall
+- __fastcall
+- __vectorcall
+- extern
+- static
+- const
+- ARCH
+- AVX2
+- wchar_t
+- VERBOSE
+- EXPORTS
+- SYMBOLS
+- DUMPBIN
+- UNDNAME
+ms.openlocfilehash: 0e741c1442f9762c4cf5f9b891c4cd7c38103dfe
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811105"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123912"
 ---
 # <a name="linker-tools-error-lnk2019"></a>連結器工具錯誤 LNK2019
 
@@ -46,23 +67,23 @@ ms.locfileid: "72811105"
 
 ### <a name="a-function-or-variable-is-declared-but-not-defined"></a>已宣告函式或變數，但未定義
 
-當標頭檔中存在宣告，但未實作為相符的定義時，就會發生 LNK2019。 若為成員函式或靜態資料成員，實作必須包含類別範圍選取器。 如需範例，請參閱 [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md)。
+當標頭檔中存在宣告，但未實作為相符的定義時，就會發生 LNK2019。 若為成員函式或 static 資料成員，則執行必須包含類別範圍選取器。 如需範例，請參閱 [Missing Function Body or Variable](../../error-messages/tool-errors/missing-function-body-or-variable.md)。
 
 ### <a name="the-calling-convention-is-different-between-the-function-declaration-and-the-function-definition"></a>呼叫慣例在函式宣告和函式定義之間不同
 
-呼叫慣例 ([__cdecl](../../cpp/cdecl.md)、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)或 [__vectorcall](../../cpp/vectorcall.md)) 會編碼為裝飾名稱的一部分。 請確定呼叫慣例相同。
+呼叫慣例（[__cdecl](../../cpp/cdecl.md)、 [__stdcall](../../cpp/stdcall.md)、 [__fastcall](../../cpp/fastcall.md)或[__vectorcall](../../cpp/vectorcall.md)）會編碼為裝飾名稱的一部分。 請確定呼叫慣例相同。
 
-### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-extern-c-in-a-c-file"></a>符號是在 C 檔案中定義，但不會在檔案中C++使用 Extern "C" 宣告
+### <a name="a-symbol-is-defined-in-a-c-file-but-declared-without-using-opno-locextern-c-in-a-c-file"></a>符號是在 C 檔案中定義，但不會在檔案中C++使用 extern "C" 而宣告
 
-編譯為 C 的檔案中所定義的符號之裝飾名稱，不同於 C++ 檔案中所宣告的符號，除非您使用 [extern"C"](../../cpp/using-extern-to-specify-linkage.md) 修飾詞。 請確定宣告符合每個符號的編譯連結。 同樣地，如果您在 C++ 檔案中定義將由 C 程式使用的符號，請在定義中使用 `extern "C"` 。
+編譯為 C 的檔案中所定義的符號，其裝飾名稱與檔案中C++所宣告的符號不同，除非您使用[extern "C"](../../cpp/using-extern-to-specify-linkage.md)修飾詞。 請確定宣告符合每個符號的編譯連結。 同樣地，如果您在 C++ 檔案中定義將由 C 程式使用的符號，請在定義中使用 `extern "C"` 。
 
-### <a name="a-symbol-is-defined-as-static-and-then-later-referenced-outside-the-file"></a>符號會定義為靜態，稍後在檔案外部參考
+### <a name="a-symbol-is-defined-as-opno-locstatic-and-then-later-referenced-outside-the-file"></a>符號會定義為 static，稍後在檔案外部參考
 
 不同於 C，C++ 中 [全域常數](../../error-messages/tool-errors/global-constants-in-cpp.md) 有 `static` 連結。 若要解決這項限制，您可以在標頭檔中包含 `const` 初始設定，並將該標頭包含在 .cpp 檔案中，或者您可以將變數設為非常數，並使用常數參考來存取。
 
-### <a name="a-static-member-of-a-class-isnt-defined"></a>未定義類別的靜態成員
+### <a name="a-opno-locstatic-member-of-a-class-isnt-defined"></a>未定義類別的 static 成員
 
-靜態類別成員必須具有唯一的定義，否則將違反單一定義規則。 無法以內嵌方式定義的靜態類別成員，必須使用其完整名稱在一個原始程式檔中定義。 如果完全沒有定義，連結器就會產生 LNK2019。
+static 類別成員必須有唯一的定義，否則會違反單一定義規則。 無法以內嵌方式定義的 static 類別成員，必須使用其完整名稱在一個原始程式檔中定義。 如果完全沒有定義，連結器就會產生 LNK2019。
 
 ### <a name="a-build-dependency-is-only-defined-as-a-project-dependency-in-the-solution"></a>組建相依性只會定義為方案中的專案相依性
 
@@ -70,11 +91,11 @@ ms.locfileid: "72811105"
 
 ### <a name="an-entry-point-isnt-defined"></a>未定義進入點
 
-應用程式代碼必須定義適當的進入點：主控台應用程式的 `main` 或 `wmain`，以及 Windows 應用程式的 `WinMain` 或 `wWinMain`。 如需詳細資訊，請參閱[main：程式啟動](../../cpp/main-program-startup.md)或[WinMain](/windows/win32/api/winbase/nf-winbase-winmain)函式。 若要使用自訂進入點，請指定[/ENTRY （進入點符號）](../../build/reference/entry-entry-point-symbol.md)連結器選項。
+應用程式代碼必須定義適當的進入點：主控台應用程式的 `main` 或 `wmain`，以及 Windows 應用程式的 `WinMain` 或 `wWinMain`。 如需詳細資訊，請參閱[main 函數和命令列引數](../../cpp/main-function-command-line-args.md)或[WinMain 函數](/windows/win32/api/winbase/nf-winbase-winmain)。 若要使用自訂進入點，請指定[/ENTRY （進入點符號）](../../build/reference/entry-entry-point-symbol.md)連結器選項。
 
 ### <a name="you-build-a-console-application-by-using-settings-for-a-windows-application"></a>您可以使用 Windows 應用程式的設定來建立主控台應用程式
 
-如果錯誤訊息類似于函式*function_name***中所參考的無法解析的外部符號 WinMain** ，請使用 **/SUBSYSTEM： CONSOLE** （而不是 **/SUBSYSTEM： WINDOWS**）進行連結。 如需此設定的詳細資訊，以及如何在 Visual Studio 中設定此屬性的指示，請參閱 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
+如果錯誤訊息類似于函式*function_name***中所參考的未解析外部符號 WinMain** ，請使用 **/SUBSYSTEM： CONSOLE** （而不是 **/SUBSYSTEM： WINDOWS**）進行連結。 如需此設定的詳細資訊，以及如何在 Visual Studio 中設定此屬性的指示，請參閱 [/SUBSYSTEM (Specify Subsystem)](../../build/reference/subsystem-specify-subsystem.md)。
 
 ### <a name="you-attempt-to-link-64-bit-libraries-to-32-bit-code-or-32-bit-libraries-to-64-bit-code"></a>您嘗試將64位程式庫連結至32位的程式碼，或將32位程式庫連結至64位程式碼
 
@@ -90,11 +111,11 @@ ms.locfileid: "72811105"
 
 ### <a name="you-call-intrinsic-functions-or-pass-argument-types-to-intrinsic-functions-that-arent-supported-on-your-target-architecture"></a>您可以呼叫內建函式，或將引數類型傳遞至目標架構上不支援的內建函式
 
-例如，如果您使用 AVX2 內建，但未指定[/ARCH： AVX2](../../build/reference/arch-x86.md)編譯器選項，則編譯器會假設內建函式是外部函式。 編譯器會產生具有相同名稱的外部符號呼叫做為內建，而非產生內嵌指令。 當連結器嘗試找出此遺漏函式的定義時，就會產生 LNK2019。 請確定您只使用目標架構所支援的內建函式和類型。
+例如，如果您使用 AVX2 內建，但未指定[/ARCH：AVX2](../../build/reference/arch-x86.md)編譯器選項，則編譯器會假設內建函式是外部函式。 編譯器會產生具有相同名稱的外部符號呼叫做為內建，而非產生內嵌指令。 當連結器嘗試找出此遺漏函式的定義時，就會產生 LNK2019。 請確定您只使用目標架構所支援的內建函式和類型。
 
-### <a name="you-mix-code-that-uses-native-wchar_t-with-code-that-doesnt"></a>您將使用原生 wchar_t 的程式碼混合成不會使用的程式碼
+### <a name="you-mix-code-that-uses-native-opno-locwchar_t-with-code-that-doesnt"></a>您將使用原生 wchar_t 的程式碼混合成不是
 
-C++在 Visual Studio 2005 中完成的語言一致性工作預設會使**wchar_t**成為原生類型。 如果有些檔未使用相同的 **/Zc:wchar_t** 設定編譯，則類型參考可能不會解析成相容的類型。 請確定所有程式庫和物件檔案中的**wchar_t**類型都相容。 當您編譯時，請從**wchar_t** typedef 進行更新，或使用一致的 **/zc： wchar_t**設定。
+C++根據預設，在 Visual Studio 2005 中進行的語言一致性工作 **wchar_t** 原生類型。 如果未使用相同的 **/zc：wchar_t** 設定來編譯所有檔案，則類型參考可能不會解析成相容的類型。 請確定所有程式庫和物件檔案中的 **wchar_t** 類型都相容。 當您編譯時，請從 **wchar_t** typedef 更新，或使用一致的 **/zc：wchar_t** 設定。
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>協力廠商程式庫問題和 Vcpkg
 
@@ -104,11 +125,11 @@ C++在 Visual Studio 2005 中完成的語言一致性工作預設會使**wchar_t
 
 有時候，很難分辨為什麼連結器找不到特定的符號定義。 問題的原因通常是您尚未包含組建中包含定義的程式碼。 或者，組建選項已為外部符號建立了不同的裝飾名稱。 有數個工具和選項可協助您診斷 LNK2019 錯誤。
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md) 連結器選項可協助您判斷連結器會參考哪些檔案。 此選項可協助您確認包含符號定義的檔案是否包含在組建中。
+- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)連結器選項可協助您判斷連結器所參考的檔案。 此選項可協助您確認包含符號定義的檔案是否包含在組建中。
 
-- **DUMPBIN**公用程式的[/EXPORTS](../../build/reference/dash-exports.md)和[/SYMBOLS](../../build/reference/symbols.md)選項可協助您探索哪些符號定義在 .dll 和物件或程式庫檔案中。 請確定匯出的裝飾名稱符合連結器所搜尋的裝飾名稱。
+- **DUMPBIN** 公用程式的[/EXPORTS](../../build/reference/dash-exports.md)和[/SYMBOLS](../../build/reference/symbols.md)選項可協助您探索哪些符號定義在 .dll 和物件或程式庫檔案中。 請確定匯出的裝飾名稱符合連結器所搜尋的裝飾名稱。
 
-- **Undname.exe**公用程式可以向您顯示裝飾名稱的對等未修飾外部符號。
+- **UNDNAME** 公用程式可以向您顯示裝飾名稱的對等未修飾外部符號。
 
 ## <a name="examples"></a>範例
 
@@ -145,9 +166,9 @@ int main() {}
 
 除非 `i` 和 `g` 定義于組建內含的其中一個檔案中，否則連結器會產生 LNK2019。 您可以包含原始碼檔案來修正此問題，其中包含此定義做為編譯的一部分。 或者，您可以將包含定義的 .obj 檔案或 .lib 檔案傳遞至連結器。
 
-### <a name="a-static-data-member-is-declared-but-not-defined"></a>靜態資料成員已宣告但未定義
+### <a name="a-opno-locstatic-data-member-is-declared-but-not-defined"></a>static 的資料成員已宣告但未定義
 
-LNK2019 也可能在靜態資料成員已宣告但未定義時發生。 下列範例會產生 LNK2019，並示範如何修正此問題。
+當 static 的資料成員已宣告但未定義時，也可能會發生 LNK2019。 下列範例會產生 LNK2019，並示範如何修正此問題。
 
 ```cpp
 // LNK2019b.cpp
@@ -196,7 +217,7 @@ int main() {
 }
 ```
 
-### <a name="inconsistent-wchar_t-type-definitions"></a>不一致的 wchar_t 類型定義
+### <a name="inconsistent-opno-locwchar_t-type-definitions"></a>不一致的 wchar_t 類型定義
 
 這個範例會建立一個 DLL，其中具有使用 `WCHAR`的匯出，其會解析成 `wchar_t`。
 
@@ -208,7 +229,7 @@ int main() {
 __declspec(dllexport) void func(WCHAR*) {}
 ```
 
-下一個範例會使用上一個範例中的 DLL，並產生 LNK2019，因為類型不帶正負號的 short * 和 WCHAR\* 不相同。
+下一個範例會使用上一個範例中的 DLL，並產生 LNK2019，因為 `unsigned short*` 和 `WCHAR*` 的類型不同。
 
 ```cpp
 // LNK2019h.cpp
@@ -221,7 +242,7 @@ int main() {
 }
 ```
 
-若要修正此錯誤，請將 `unsigned short` 變更為 `wchar_t` 或 `WCHAR`，或使用 **/zc： wchar_t-** 來編譯 lnk2019g.cpp。
+若要修正此錯誤，請將 `unsigned short` 變更為 `wchar_t` 或 `WCHAR`，或使用 **/zc：wchar_t-** 來編譯 lnk2019g.cpp。
 
 ## <a name="additional-resources"></a>其他資源
 

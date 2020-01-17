@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C++], array-element initializers
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: fd926177dd7540d8dc1e8512e9f17e20a0b8238c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
+ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661607"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76123964"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -81,11 +81,11 @@ ms.locfileid: "68661607"
 
 - 數值變數初始化為 0 (或 0.0、0.0000000000 等)。
 
-- Char 變數會初始化為`'\0'`。
+- Char 變數會初始化為 `'\0'`。
 
 - 指標會初始化為**nullptr**。
 
-- 陣列、 [POD](../standard-library/is-pod-class.md)類別、結構和等位, 其成員會初始化為零值。
+- 陣列、 [POD](../standard-library/is-pod-class.md)類別、結構和等位，其成員會初始化為零值。
 
 零初始化在不同時期執行：
 
@@ -116,7 +116,7 @@ int main() {
 
 ### <a name="default_initialization"></a>預設初始化
 
-類別、結構和等位的預設初始化是使用預設建構函式的初始化。 預設的函式可以使用沒有初始化運算式或使用**new**關鍵字來呼叫:
+類別、結構和等位的預設初始化是使用預設建構函式的初始化。 預設的函式可以使用沒有初始化運算式或使用**new**關鍵字來呼叫：
 
 ```cpp
 MyClass mc1;
@@ -173,7 +173,7 @@ int main() {
 }
 ```
 
-如需全域靜態物件初始化的詳細資訊, 請參閱[其他啟動考慮](../cpp/additional-startup-considerations.md)。
+如需全域靜態物件初始化的詳細資訊，請參閱[main 函數和命令列引數](main-function-command-line-args.md)。
 
 ### <a name="value-initialization"></a>值初始化
 
@@ -224,7 +224,7 @@ int main() {
 
 - 使用等號初始化非靜態資料成員
 
-- 複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 如需範例, 請參閱[匯總初始化](#agginit)。
+- 複製初始化會在彙總初始化期間初始化類別、結構和等位成員。 如需範例，請參閱[匯總初始化](#agginit)。
 
 下列程式碼示範數個複製初始化範例：
 
@@ -375,7 +375,7 @@ int main() {
 - 沒有虛擬成員函式
 
 > [!NOTE]
-> <!--conformance note-->在 Visual Studio 2015 和更早版本中, 匯總不允許非靜態成員有大括弧或相等的初始化運算式。 這項限制已在 c + + 14 標準中移除, 並在 Visual Studio 2017 中執行。
+> <!--conformance note-->在 Visual Studio 2015 和更早版本中，匯總不允許非靜態成員有大括弧或相等的初始化運算式。 這項限制已在 c + + 14 標準中移除，並在 Visual Studio 2017 中執行。
 
 彙總初始設定式包含以大括號括住的初始化清單 (包含或不含等號) (如下列範例所示)：
 
@@ -427,7 +427,7 @@ myArr3: 8 9 10 0 0
 ```
 
 > [!IMPORTANT]
-> 在`myArr3`匯總初始化期間宣告但未明確初始化的陣列成員, 會以零初始化, 如上所示。
+> 在匯總初始化期間宣告但未明確初始化的陣列成員，會以零初始化，如同上述 `myArr3`。
 
 #### <a name="initializing-unions-and-structs"></a>初始化等位和結構
 
@@ -534,10 +534,10 @@ int main()
 ![初始化參考型別的決策圖表](../cpp/media/vc38s71.gif "初始化參考型別的決策圖表") <br/>
 初始化參考型別的決策圖表
 
-**Volatile**類型的參考 (宣告為**volatile** *typename* <strong>&</strong> *identifier*) 可以使用相同類型的**volatile**物件或尚未宣告為**volatile**的物件來初始化. 不過, 它們無法使用該類型的**const**物件進行初始化。 同樣地,**常數**類型的參考 (宣告為**const** *typename* <strong>&</strong> *identifier*) 可以使用相同類型的**const**物件進行初始化 (或轉換成該類型或使用物件的任何專案)尚未宣告為**const**)。 不過, 它們無法使用該類型的**volatile**物件進行初始化。
+**Volatile**類型的參考（宣告為**volatile** *typename* <strong>&</strong> *identifier*）可以使用相同類型的**volatile**物件或尚未宣告為**volatile**的物件來初始化。 不過，它們無法使用該類型的**const**物件進行初始化。 同樣地， **const**類型的參考（宣告為**const** *typename* <strong>&</strong> *identifier*）可以使用相同類型的**const**物件進行初始化（或轉換成該類型的任何專案，或是未宣告為**const**的物件）。 不過，它們無法使用該類型的**volatile**物件進行初始化。
 
 不是以**const**或**volatile**關鍵字限定的參考只能使用宣告為**const**或**volatile**的物件進行初始化。
 
 ### <a name="initialization-of-external-variables"></a>外部變數的初始化
 
-自動、靜態和外部變數的宣告可以包含初始化運算式。 不過, 只有在變數未宣告為**extern**時, 外部變數的宣告才可包含初始化運算式。
+自動、靜態和外部變數的宣告可以包含初始化運算式。 不過，只有在變數未宣告為**extern**時，外部變數的宣告才可包含初始化運算式。

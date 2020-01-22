@@ -1,6 +1,7 @@
 ---
 title: this 指標
-ms.date: 11/04/2016
+description: this 指標是在非靜態成員函式中，以編譯器產生的目前物件指標。
+ms.date: 01/22/2020
 f1_keywords:
 - this_cpp
 helpviewer_keywords:
@@ -8,16 +9,24 @@ helpviewer_keywords:
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-ms.openlocfilehash: c90a843ba978a98c1c61d9e096d62b85256ab0c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+no-loc:
+- this
+- class
+- struct
+- union
+- sizeof
+- const
+- volatile
+ms.openlocfilehash: 58bba2edd7a457c624b747b5a65d209995852848
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330475"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518331"
 ---
-# <a name="this-pointer"></a>this 指標
+# <a name="opno-locthis-pointer"></a>this 指標
 
-**這**指標是只能在非靜態成員函式中存取指標**類別**，**結構**，或**union**型別。 它會指向針對其呼叫成員函式的物件。 靜態成員函式沒有**這**指標。
+**this** 指標是只能在 **class** 、 **struct** 或 **union** 類型的非靜態成員函式中存取的指標。 它會指向針對其呼叫成員函式的物件。 靜態成員函式沒有 **this** 指標。
 
 ## <a name="syntax"></a>語法
 
@@ -28,19 +37,19 @@ this->member-identifier
 
 ## <a name="remarks"></a>備註
 
-物件的**這**指標不屬於物件本身，它將不會反映結果**sizeof**物件上的陳述式。 不過，呼叫物件的非靜態成員函式時，編譯器會將物件的位址當做隱藏的引數傳遞至函式。 例如，下列函式呼叫：
+物件的 **this** 指標不是物件本身的一部分。 它不會反映在物件上 **sizeof** 語句的結果中。 針對物件呼叫非靜態成員函式時，編譯器會將物件的位址以隱藏引數的形式傳遞至函數。 例如，下列函式呼叫：
 
 ```cpp
 myDate.setMonth( 3 );
 ```
 
-可以用這種方式解譯：
+可以解讀為：
 
 ```cpp
 setMonth( &myDate, 3 );
 ```
 
-物件的位址可從成員函式內**這**指標。 用法大多**這**是隱含的。 它是合法的但不必要的若要明確地使用**這**參考類別的成員時。 例如: 
+物件的位址可從成員函式內當做 **this** 指標來取得。 大部分的 **this** 指標使用都是隱含的。 雖然不必要，但是在參考 class的成員時，也不需要使用明確的 **this** 。 例如：
 
 ```cpp
 void Date::setMonth( int mn )
@@ -57,7 +66,7 @@ void Date::setMonth( int mn )
 return *this;
 ```
 
-**這**指標也會用於防範自我參考：
+**this** 指標也用來防護自我參考：
 
 ```cpp
 if (&Object != this) {
@@ -65,9 +74,9 @@ if (&Object != this) {
 ```
 
 > [!NOTE]
->  因為**這**指標是不可修改，指派給**這**不允許。 較早實作的C++允許指派給**這**。
+> 因為 **this** 指標是不可修改的，所以不允許對 **this** 指標的指派。 允許指派給C++ **this** 的舊版。
 
-偶爾**這**指標會直接使用 — 比方說，來操作自我參考的資料結構，需要目前物件的位址的情況。
+有時候， **this** 指標會直接使用，例如，若要操控自我參考資料結構，其中需要目前物件的位址。
 
 ## <a name="example"></a>範例
 
@@ -139,11 +148,11 @@ my buffer
 your buffer
 ```
 
-## <a name="type-of-the-this-pointer"></a>this 指標的類型
+## <a name="type-of-the-opno-locthis-pointer"></a>this 指標的類型
 
-**這**指標的類型可以在函式宣告中，藉由修改**const**並**volatile**關鍵字。 若要將函式宣告為擁有一個或多個這些關鍵字的屬性，請在函式引數清單後面加入關鍵字。
+**const** 和 **volatile** 關鍵字可以在函式宣告中修改 **this** 指標的類型。 若要宣告具有其中一個屬性的函式，請在函式引數清單之後新增關鍵字。
 
-請考量以下範例：
+假設有一個範例：
 
 ```cpp
 // type_of_this_pointer1.cpp
@@ -156,7 +165,7 @@ int main()
 }
 ```
 
-上述程式碼會宣告成員函式`X`，在其中**這**指標會視為**const**指標**const**物件。 組合*cv mod 清單*可用選項，但它們隨時修改所指向的物件**這**，而非**這**指標本身。 因此，下列宣告會宣告函式`X`;**這**指標**const**指標**const**物件：
+上述程式碼會宣告成員函式 `X`，其中 **this** 指標會被視為 **const** 物件的 **const** 指標。 您可以使用*cv-mod-list*選項的組合，但它們一律會修改 **this** 指標所指向的物件，而不是指標本身。 下列宣告會宣告函數 `X`，其中 **this** 指標是 **const** 物件的 **const** 指標：
 
 ```cpp
 // type_of_this_pointer2.cpp
@@ -169,28 +178,30 @@ int main()
 }
 ```
 
-型別**這**成員中函式以下列語法描述，其中*cv 限定詞清單*決定從成員函式宣告子，而且可以是**const**或是**volatile** （或兩者），並*類別型別*是類別的名稱：
+成員函式中的 **this** 類型是由下列語法所描述。 *Cv 限定詞清單*是由成員函式的宣告子所決定。 可以是 **const** 或 **volatile** （或兩者）。 *class類型*是 class的名稱：
 
-*[cv 限定詞-清單] 類別型別* **&#42; const 這**
+[*cv-辨識符號-清單*] *class類型* **\* const this**
 
-亦即**這**永遠是 const 的指標; 它不能重新指派。  **Const**或是**volatile**成員函式宣告中所使用的限定詞適用於所指的類別執行個體**這**該函式的範圍內。
+換句話說， **this** 指標一律是 const 指標。 無法重新指派。  成員函式宣告中所使用的 **const** 或 **volatile** 限定詞，適用于 **this** 指標指向的 class 實例（位於該函式的範圍內）。
 
 下表將進一步說明這些修飾詞的運作方式。
 
-### <a name="semantics-of-this-modifiers"></a>修飾詞的語意
+### <a name="semantics-of-opno-locthis-modifiers"></a>this 修飾詞的語義
 
-|修飾詞|意義|
+|Modifier|意義|
 |--------------|-------------|
-|**const**|無法變更成員資料;無法叫用成員函式不是**const**。|
-|**volatile**|每次存取成員時，就會從記憶體載入成員資料，而且會停用某些最佳化。|
+|**const**|無法變更成員資料;無法叫用不 **const** 的成員函式。|
+|**volatile**|成員資料會在每次存取時從記憶體載入;停用特定的優化。|
 
-它會將錯誤**const**不是成員函式的物件**const**。 同樣地，它是要傳遞錯誤**volatile**不是成員函式的物件**volatile**。
+將 **const** 物件傳遞至不 **const** 的成員函式是錯誤的。
 
-成員函式宣告為**const**無法變更成員資料 — 這類函式，在**這**指標是一個指向**const**物件。
+同樣地，將 **volatile** 物件傳遞至不 **volatile** 的成員函式也是錯誤。
+
+宣告為 **const** 的成員函式無法變更成員資料-在這類函式中， **this** 指標是指向 **const** 物件的指標。
 
 > [!NOTE]
->  建構函式和解構函式不可以宣告為**const**或是**volatile**。 可以不過，其上叫用**const**或**volatile**物件。
+> 無法將構造函式和析構函式宣告為 **const** 或 **volatile** 。 不過，它們可以在 **const** 或 **volatile** 物件上叫用。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [關鍵字](../cpp/keywords-cpp.md)

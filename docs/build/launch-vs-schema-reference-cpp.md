@@ -3,16 +3,16 @@ title: 啟動。與 json 架構參考（C++）的比較
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 49b4f4e6c4359837e820684c29b0e102a08c3fd5
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: 5d8f657dda58d581ccc3441a777fdf31470ef25f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556639"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518227"
 ---
 # <a name="launchvsjson-schema-reference-c"></a>啟動。與 json 架構參考（C++）的比較
 
-使用啟動檔案與*json*檔案來設定調試參數。 以建立檔案。 在**方案總管**中，以滑鼠右鍵按一下可執行檔，然後選擇 [**偵錯工具和啟動設定**]。 選擇最符合您專案的選項，然後使用下列屬性來視需要修改設定：
+使用啟動檔案與*json*檔案來設定調試參數。 以建立檔案。 在**方案總管**中，以滑鼠右鍵按一下可執行檔，然後選擇 [**偵錯工具和啟動設定**]。 選擇最符合您專案的選項，然後使用下列屬性來視需要修改設定。 如需有關偵錯工具 CMake 專案的詳細資訊，請參閱[設定 CMake 的調試](/cpp/build/configure-cmake-debugging-sessions)程式。
 
 ## <a name="default-properties"></a>預設屬性
 

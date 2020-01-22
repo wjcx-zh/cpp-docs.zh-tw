@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4701
 ms.assetid: d7c76c66-1f3f-4d3c-abe4-5d94c84a5a1f
-ms.openlocfilehash: cbe70de39d2306edd50bb936ac5bbb4ad14af0e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b83ad810da06de1f9d640477f73d4393c932054a
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395283"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518383"
 ---
 # <a name="compiler-warning-level-4-c4701"></a>編譯器警告 (層級 4) C4701
 
-可能未初始化的區域變數 'name' 使用
+使用了可能未初始化的本機變數 ' name '
 
-區域變數*名稱*可能會指派值的情況下使用。 這可能會導致無法預期的結果。
+可能已使用本機變數*名稱*，但未指派值。 這可能會導致無法預期的結果。
 
 ## <a name="example"></a>範例
 
@@ -37,7 +37,7 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
@@ -64,13 +64,13 @@ void func(int size)
         free(p);
 }
 
-void main()
+int main()
 {
     func(9);
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [編譯器警告 (層級 4) C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)<br/>
-[警告、 /sdl 和改善未初始化的變數偵測](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)
+[警告、/sdl 和改善未初始化的變數偵測](https://www.microsoft.com/security/blog/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)

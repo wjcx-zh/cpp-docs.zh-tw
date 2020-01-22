@@ -2,18 +2,18 @@
 title: 檔案系統巡覽
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: cfdc789daab5b476566f2072109d23fb9310094f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405192"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518500"
 ---
 # <a name="file-system-navigation"></a>檔案系統巡覽
 
-\<Filesystem > 標頭會實作C++檔案系統技術規格 ISO/IEC TS 18822:2015 (草稿最終版：[ISO/IEC JTC 1/22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)) 且具有類型和函數可讓您撰寫平台獨立程式碼瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 比方說，這表示`is_fifo(const path&)`一律會傳回**false**在 Windows 上。
+\<filesystem> 標頭會實作 C++ 檔案系統技術規格 ISO/IEC TS 18822:2015 (草案最終版：[ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf))，並提供相關類型與函式，讓您撰寫任何平台均適用的程式碼，以瀏覽檔案系統。 由於是跨平台標頭，其包含與 Windows 系統不相關的 API。 例如，這表示 `is_fifo(const path&)` 一律會在 Windows 上傳回**false** 。
 
-## <a name="overview"></a>總覽
+## <a name="overview"></a>概觀
 
 使用 \<filesystem> API 進行下列工作：
 
@@ -88,7 +88,7 @@ wstring DisplayPathInfo()
     return wos.str();
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wcout << DisplayPathInfo() << endl;
     // wcout << ComparePaths() << endl; // see following example
@@ -167,7 +167,7 @@ C:\Documents\2014\ < D:\Documents\2013\Reports\: true
 using namespace std;
 using namespace std::experimental::filesystem;
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     wchar_t* p = L"C:/Users/Public/Documents";
     path filePath(p);

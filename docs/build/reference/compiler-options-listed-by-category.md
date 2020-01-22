@@ -1,15 +1,15 @@
 ---
 title: 依分類排列的編譯器選項
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 8c99b2dd60e6c2266d5095a477ee4a5b2e0c8bd0
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685191"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518409"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
@@ -64,6 +64,7 @@ ms.locfileid: "71685191"
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制對 Helper 函式 `_ftol` 的呼叫。 (僅限 x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 區塊內的 `try` 命令。|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|降低 Intel JCC 錯誤微碼更新的效能影響。|
 |[/Qpar](qpar-auto-parallelizer.md)|啟用迴圈自動平行處理。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
@@ -85,7 +86,7 @@ ms.locfileid: "71685191"
 |[/Fm](fm-name-mapfile.md)|建立對應檔 (Mapfile)。|
 |[/Fo](fo-object-file-name.md)|建立目的檔。|
 |[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
-|[/FR, /Fr](fr-fr-create-dot-sbr-file.md)|名稱產生的 .sbr 瀏覽器檔案。|
+|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|名稱產生的 .sbr 瀏覽器檔案。|
 
 ## <a name="preprocessor"></a>前置處理器
 
@@ -225,7 +226,7 @@ ms.locfileid: "71685191"
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual Studio 2015 中移除。 產生函式原型。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C/C++ 建置參考](c-cpp-building-reference.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>

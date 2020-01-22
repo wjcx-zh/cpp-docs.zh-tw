@@ -114,16 +114,16 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d01132927ca0a5f452703b14d0eb5fae2f58ba
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372143"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518442"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget 類別
 
-ID2D1RenderTarget 包裝函式。
+ID2D1RenderTarget 的包裝函式。
 
 ## <a name="syntax"></a>語法
 
@@ -131,88 +131,88 @@ ID2D1RenderTarget 包裝函式。
 class CRenderTarget : public CObject;
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRenderTarget::CRenderTarget](#crendertarget)|建構 CRenderTarget 物件。|
-|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|解構函式。 呈現目標物件正在被終結時呼叫。|
+|[CRenderTarget：： CRenderTarget](#crendertarget)|結構 CRenderTarget 物件。|
+|[CRenderTarget：： ~ CRenderTarget](#_dtorcrendertarget)|解構函式。 當轉譯目標物件遭到終結時呼叫。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRenderTarget::Attach](#attach)|將現有的轉譯目標物件的介面|
-|[CRenderTarget::BeginDraw](#begindraw)|在此呈現目標上繪製的初始化。|
-|[CRenderTarget::Clear](#clear)|清除指定的色彩來繪製的區域。|
-|[CRenderTarget::COLORREF_TO_D2DCOLOR](#colorref_to_d2dcolor)|將 D2D1_COLOR_F 物件中的 GDI 色彩和 alpha 值。|
-|[CRenderTarget::CreateCompatibleRenderTarget](#createcompatiblerendertarget)|目前的轉譯目標與相容的中繼幕後繪製期間建立新的點陣圖轉譯目標使用。|
-|[CRenderTarget::Destroy](#destroy)|刪除一個或多個資源|
-|[CRenderTarget::Detach](#detach)|中斷連結物件的轉譯目標介面|
-|[CRenderTarget::DrawBitmap](#drawbitmap)|繪製所指定的 IDWriteTextLayout 物件所描述的格式化的文字。|
-|[CRenderTarget::DrawEllipse](#drawellipse)|繪製指定的橢圓形使用指定的筆畫樣式的外框。|
-|[CRenderTarget::DrawGeometry](#drawgeometry)|繪製外框的使用指定的筆畫樣式所指定幾何。|
-|[CRenderTarget::DrawGlyphRun](#drawglyphrun)|繪製指定的字符。|
-|[CRenderTarget::DrawLine](#drawline)|使用指定的筆畫樣式指定的點之間繪製一條線。|
-|[CRenderTarget::DrawRectangle](#drawrectangle)|繪製外框的矩形具有指定的維度和筆劃樣式。|
-|[CRenderTarget::DrawRoundedRectangle](#drawroundedrectangle)|繪製指定的圓角矩形，使用指定的筆畫樣式的外框。|
-|[CRenderTarget::DrawText](#drawtext)|繪製指定的文字使用 IDWriteTextFormat 物件所提供的格式資訊。|
-|[CRenderTarget::DrawTextLayout](#drawtextlayout)|繪製所指定的 IDWriteTextLayout 物件所描述的格式化的文字。|
-|[CRenderTarget::EndDraw](#enddraw)|結束對轉譯目標的繪製作業，並指出目前的錯誤狀態和相關聯的標記。|
-|[CRenderTarget::FillEllipse](#fillellipse)|繪製指定的橢圓形內部。|
-|[CRenderTarget::FillGeometry](#fillgeometry)|繪製所指定幾何的內部。|
-|[CRenderTarget::FillMesh](#fillmesh)|繪製指定的網狀結構的內部。|
-|[CRenderTarget::FillOpacityMask](#fillopacitymask)|套用至筆刷指定的點陣圖所描述的不透明度遮罩，並使用筆刷繪製區域的呈現目標。|
-|[CRenderTarget::FillRectangle](#fillrectangle)|繪製指定的矩形內部。|
-|[CRenderTarget::FillRoundedRectangle](#fillroundedrectangle)|繪製指定的圓角矩形內部。|
-|[CRenderTarget::Flush](#flush)|執行所有暫止的繪製命令。|
-|[CRenderTarget::GetAntialiasMode](#getantialiasmode)|擷取非文字繪圖作業的目前反鋸齒功能模式。|
-|[CRenderTarget::GetDpi](#getdpi)|傳回轉譯目標的每英吋點數 (DPI)|
-|[CRenderTarget::GetMaximumBitmapSize](#getmaximumbitmapsize)|取得大小上限，單位為裝置而異 （像素） 的支援轉譯目標的任何一個點陣圖維度|
-|[CRenderTarget::GetPixelFormat](#getpixelformat)|擷取轉譯目標像素格式和 alpha 模式|
-|[CRenderTarget::GetPixelSize](#getpixelsize)|傳回裝置的像素的呈現目標大小|
-|[CRenderTarget::GetRenderTarget](#getrendertarget)|傳回 ID2D1RenderTarget 介面|
-|[CRenderTarget::GetSize](#getsize)|傳回與裝置無關的像素的呈現目標大小|
-|[CRenderTarget::GetTags](#gettags)|取得後續的繪圖作業的標籤。|
-|[CRenderTarget::GetTextAntialiasMode](#gettextantialiasmode)|取得目前的消除鋸齒模式文字和圖像 （glyph） 繪製作業。|
-|[CRenderTarget::GetTextRenderingParams](#gettextrenderingparams)|擷取轉譯目標的目前文字呈現選項。|
-|[CRenderTarget::GetTransform](#gettransform)|指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業會在轉換後的空間發生。|
-|[CRenderTarget::IsSupported](#issupported)|指出轉譯目標是否支援指定的屬性|
-|[CRenderTarget::IsValid](#isvalid)|檢查資源的有效性|
-|[CRenderTarget::PopAxisAlignedClip](#popaxisalignedclip)|移除轉譯目標中的軸對齊的最後一個剪輯。 會呼叫這個方法之後，剪輯不再套用至後續繪圖的作業。|
-|[CRenderTarget::PopLayer](#poplayer)|停止重新導向至最後一個 PushLayer 所指定的圖層的繪圖作業呼叫。|
-|[CRenderTarget::PushAxisAlignedClip](#pushaxisalignedclip)|移除轉譯目標中的軸對齊的最後一個剪輯。 會呼叫這個方法之後，剪輯不再套用至後續繪圖的作業。|
-|[CRenderTarget::PushLayer](#pushlayer)|將指定的圖層加入至呈現目標，讓它收到所有後續的繪圖作業稱為 PopLayer。|
-|[CRenderTarget::RestoreDrawingState](#restoredrawingstate)|呈現目標的繪圖狀態設定為指定的 ID2D1DrawingStateBlock 的。|
-|[CRenderTarget::SaveDrawingState](#savedrawingstate)|將目前的繪圖狀態儲存至指定 ID2D1DrawingStateBlock 中。|
-|[CRenderTarget::SetAntialiasMode](#setantialiasmode)|設定轉譯目標的消除鋸齒功能模式。 消除鋸齒模式適用於所有後續繪製作業，但不包括文字和圖像 （glyph） 繪製作業。|
-|[CRenderTarget::SetDpi](#setdpi)|設定的 dots per inch (DPI) 呈現目標。|
-|[CRenderTarget::SetTags](#settags)|指定後續的繪圖作業的標籤。|
-|[CRenderTarget::SetTextAntialiasMode](#settextantialiasmode)|指定要用於後續的文字和圖像 （glyph） 繪圖作業的消除鋸齒功能模式。|
-|[CRenderTarget::SetTextRenderingParams](#settextrenderingparams)|指定要套用至所有後續的文字和繪圖作業的字符的文字呈現選項。|
-|[CRenderTarget::SetTransform](#settransform)|多載。 指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業會在轉換後的空間發生。|
+|[CRenderTarget：： Attach](#attach)|將現有的呈現目標介面附加至物件|
+|[CRenderTarget：： BeginDraw](#begindraw)|在此轉譯目標上起始繪圖。|
+|[CRenderTarget：： Clear](#clear)|將繪圖區域清除為指定的色彩。|
+|[CRenderTarget：： COLORREF_TO_D2DCOLOR](#colorref_to_d2dcolor)|將 GDI 色彩和 Alpha 值轉換為 D2D1_COLOR_F 物件。|
+|[CRenderTarget：： CreateCompatibleRenderTarget](#createcompatiblerendertarget)|建立新的點陣圖呈現目標，以便在與目前轉譯目標相容的中繼螢幕外繪製期間使用。|
+|[CRenderTarget：:D estroy](#destroy)|刪除一或多個資源|
+|[CRenderTarget：:D etach](#detach)|從物件卸離呈現目標介面|
+|[CRenderTarget：:D rawBitmap](#drawbitmap)|繪製指定 IDWriteTextLayout 物件所描述的格式化文字。|
+|[CRenderTarget：:D rawEllipse](#drawellipse)|使用指定的筆觸樣式，繪製指定橢圓形的外框。|
+|[CRenderTarget：:D rawGeometry](#drawgeometry)|使用指定的筆觸樣式，繪製指定之幾何的外框。|
+|[CRenderTarget：:D rawGlyphRun](#drawglyphrun)|繪製指定的字元。|
+|[CRenderTarget：:D rawLine](#drawline)|使用指定的筆觸樣式，在指定的點之間繪製線條。|
+|[CRenderTarget：:D rawRectangle](#drawrectangle)|繪製具有指定之維度和筆觸樣式的矩形外框。|
+|[CRenderTarget：:D rawRoundedRectangle](#drawroundedrectangle)|使用指定的筆觸樣式，繪製指定圓角矩形的外框。|
+|[CRenderTarget：:D rawText](#drawtext)|使用 IDWriteTextFormat 物件所提供的格式資訊，繪製指定的文字。|
+|[CRenderTarget：:D rawTextLayout](#drawtextlayout)|繪製指定 IDWriteTextLayout 物件所描述的格式化文字。|
+|[CRenderTarget：： EndDraw](#enddraw)|結束轉譯目標的繪製作業，並指出目前的錯誤狀態和相關聯的標記。|
+|[CRenderTarget：： FillEllipse](#fillellipse)|繪製指定橢圓形的內部。|
+|[CRenderTarget：： FillGeometry](#fillgeometry)|繪製指定幾何的內部。|
+|[CRenderTarget：： FillMesh](#fillmesh)|繪製指定網格的內部。|
+|[CRenderTarget：： FillOpacityMask](#fillopacitymask)|將指定點陣圖所描述的不透明度遮罩套用至筆刷，並使用該筆刷繪製呈現目標的區域。|
+|[CRenderTarget：： Graphicswindow.fillrectangle](#fillrectangle)|繪製指定矩形的內部。|
+|[CRenderTarget：： FillRoundedRectangle](#fillroundedrectangle)|繪製指定圓角矩形的內部。|
+|[CRenderTarget：： Flush](#flush)|執行所有暫止的繪製命令。|
+|[CRenderTarget：： GetAntialiasMode](#getantialiasmode)|抓取非文本繪圖作業的目前消除鋸齒模式。|
+|[CRenderTarget：： GetDpi](#getdpi)|傳回轉譯目標的每英寸點（DPI）|
+|[CRenderTarget：： GetMaximumBitmapSize](#getmaximumbitmapsize)|取得轉譯目標所支援之任何一個點陣圖維度的大小上限（以裝置相依單位（圖元）表示）|
+|[CRenderTarget：： GetPixelFormat](#getpixelformat)|抓取呈現目標的像素格式和 Alpha 模式|
+|[CRenderTarget：： GetPixelSize](#getpixelsize)|傳回呈現目標的大小（以裝置圖元為單位）|
+|[CRenderTarget：： GetRenderTarget](#getrendertarget)|傳回 ID2D1RenderTarget 介面|
+|[CRenderTarget：： GetSize](#getsize)|傳回呈現目標的大小（以與裝置無關的圖元為單位）|
+|[CRenderTarget：： GetTags](#gettags)|取得後續繪製作業的標籤。|
+|[CRenderTarget：： GetTextAntialiasMode](#gettextantialiasmode)|取得文字和圖像繪製作業的目前消除鋸齒模式。|
+|[CRenderTarget：： GetTextRenderingParams](#gettextrenderingparams)|抓取轉譯目標的目前文字呈現選項。|
+|[CRenderTarget：： GetTransform](#gettransform)|將指定的轉換套用至轉譯目標，以取代現有的轉換。 所有後續的繪製作業會在轉換後的空間中發生。|
+|[CRenderTarget：： IsSupported](#issupported)|指出呈現目標是否支援指定的屬性|
+|[CRenderTarget：： IsValid](#isvalid)|檢查資源有效性|
+|[CRenderTarget：:P opAxisAlignedClip](#popaxisalignedclip)|從呈現目標中移除最後一個軸對齊的剪輯。 呼叫這個方法之後，剪輯就不會再套用至後續的繪圖作業。|
+|[CRenderTarget：:P opLayer](#poplayer)|停止將繪製作業重新導向至最後一個 PushLayer 呼叫所指定的圖層。|
+|[CRenderTarget：:P ushAxisAlignedClip](#pushaxisalignedclip)|從呈現目標中移除最後一個軸對齊的剪輯。 呼叫這個方法之後，剪輯就不會再套用至後續的繪圖作業。|
+|[CRenderTarget：:P ushLayer](#pushlayer)|將指定的圖層新增至轉譯目標，使其接收所有後續的繪製作業，直到呼叫 PopLayer 為止。|
+|[CRenderTarget：： RestoreDrawingState](#restoredrawingstate)|將轉譯目標的繪製狀態設定為所指定 ID2D1DrawingStateBlock 的呈現。|
+|[CRenderTarget：： SaveDrawingState](#savedrawingstate)|將目前的繪圖狀態儲存至指定的 ID2D1DrawingStateBlock。|
+|[CRenderTarget：： SetAntialiasMode](#setantialiasmode)|設定呈現目標的消除鋸齒模式。 「消除鋸齒模式」適用于所有後續的繪圖作業，包括文字和字元繪製作業。|
+|[CRenderTarget：： SetDpi](#setdpi)|設定轉譯目標的每英寸點（DPI）。|
+|[CRenderTarget：： SetTags](#settags)|指定後續繪製作業的標籤。|
+|[CRenderTarget：： SetTextAntialiasMode](#settextantialiasmode)|指定用於後續文字和字元繪製作業的消除鋸齒模式。|
+|[CRenderTarget：： SetTextRenderingParams](#settextrenderingparams)|指定要套用至所有後續文字和字元繪製作業的文字呈現選項。|
+|[CRenderTarget：： SetTransform](#settransform)|多載。 將指定的轉換套用至轉譯目標，以取代現有的轉換。 所有後續的繪製作業會在轉換後的空間中發生。|
 
 ### <a name="protected-methods"></a>保護方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRenderTarget::VerifyResource](#verifyresource)|確認 CD2DResource 物件有效，如果它已不存在，請建立的物件。|
+|[CRenderTarget：： VerifyResource](#verifyresource)|驗證 CD2DResource 物件有效性;建立物件（如果尚未存在）。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|傳回 ID2D1RenderTarget 介面|
+|[CRenderTarget：： operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|傳回 ID2D1RenderTarget 介面|
 
 ### <a name="protected-data-members"></a>受保護的資料成員
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRenderTarget::m_lstResources](#m_lstresources)|CD2DResource 物件指標的清單。|
-|[CRenderTarget::m_pRenderTarget](#m_prendertarget)|ID2D1RenderTarget 物件的指標。|
-|[CRenderTarget::m_pTextFormatDefault](#m_ptextformatdefault)|CD2DTextFormat 物件，其中包含預設的文字格式的指標。|
+|[CRenderTarget：： m_lstResources](#m_lstresources)|CD2DResource 物件的指標清單。|
+|[CRenderTarget：： m_pRenderTarget](#m_prendertarget)|ID2D1RenderTarget 物件的指標。|
+|[CRenderTarget：： m_pTextFormatDefault](#m_ptextformatdefault)|包含預設文字格式之 CD2DTextFormat 物件的指標。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -222,19 +222,19 @@ class CRenderTarget : public CObject;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** afxrendertarget.h
+**標頭：** afxrendertarget。h
 
-##  <a name="_dtorcrendertarget"></a>  CRenderTarget::~CRenderTarget
+##  <a name="_dtorcrendertarget"></a>CRenderTarget：： ~ CRenderTarget
 
-解構函式。 呈現目標物件正在被終結時呼叫。
+解構函式。 當轉譯目標物件遭到終結時呼叫。
 
 ```
 virtual ~CRenderTarget();
 ```
 
-##  <a name="attach"></a>  CRenderTarget::Attach
+##  <a name="attach"></a>CRenderTarget：： Attach
 
-將現有的轉譯目標物件的介面
+將現有的呈現目標介面附加至物件
 
 ```
 void Attach(ID2D1RenderTarget* pRenderTarget);
@@ -243,19 +243,19 @@ void Attach(ID2D1RenderTarget* pRenderTarget);
 ### <a name="parameters"></a>參數
 
 *pRenderTarget*<br/>
-現有的轉譯目標介面。 不能是 NULL
+現有的呈現目標介面。 不可以是 Null
 
-##  <a name="begindraw"></a>  CRenderTarget::BeginDraw
+##  <a name="begindraw"></a>CRenderTarget：： BeginDraw
 
-在此呈現目標上繪製的初始化。
+在此轉譯目標上起始繪圖。
 
 ```
 void BeginDraw();
 ```
 
-##  <a name="clear"></a>  CRenderTarget::Clear
+##  <a name="clear"></a>CRenderTarget：： Clear
 
-清除指定的色彩來繪製的區域。
+將繪圖區域清除為指定的色彩。
 
 ```
 void Clear(D2D1_COLOR_F color);
@@ -264,11 +264,11 @@ void Clear(D2D1_COLOR_F color);
 ### <a name="parameters"></a>參數
 
 *color*<br/>
-要清除的繪圖區域的色彩。
+要清除繪圖區的色彩。
 
-##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
+##  <a name="colorref_to_d2dcolor"></a>CRenderTarget：： COLORREF_TO_D2DCOLOR
 
-將 D2D1_COLOR_F 物件中的 GDI 色彩和 alpha 值。
+將 GDI 色彩和 Alpha 值轉換為 D2D1_COLOR_F 物件。
 
 ```
 static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
@@ -285,11 +285,11 @@ RGB 值。
 
 ### <a name="return-value"></a>傳回值
 
-D2D1_COLOR_F 值。
+D2D1_COLOR_光圈值。
 
-##  <a name="createcompatiblerendertarget"></a>  CRenderTarget::CreateCompatibleRenderTarget
+##  <a name="createcompatiblerendertarget"></a>CRenderTarget：： CreateCompatibleRenderTarget
 
-目前的轉譯目標與相容的中繼幕後繪製期間建立新的點陣圖轉譯目標使用。
+建立新的點陣圖呈現目標，以便在與目前轉譯目標相容的中繼螢幕外繪製期間使用。
 
 ```
 BOOL CreateCompatibleRenderTarget(
@@ -303,35 +303,35 @@ BOOL CreateCompatibleRenderTarget(
 ### <a name="parameters"></a>參數
 
 *bitmapTarget*<br/>
-當這個方法傳回時，包含新的點陣圖轉譯目標的指標位址。 這個參數會以未初始化的狀態傳遞。
+當這個方法傳回時，會包含新點陣圖呈現目標的指標位址。 這個參數會以未初始化的狀態傳遞。
 
 *sizeDesired*<br/>
-如果應該將它與原始版本不同的裝置獨立像素中新的轉譯目標所需的大小呈現目標，或為 NULL。 如需詳細資訊，請參閱＜備註＞一節。
+新轉譯目標的所需大小（如果應該與原始轉譯目標不同），則為以裝置無關的圖元為單位，否則為 Null。 如需詳細資訊，請參閱＜備註＞一節。
 
 *sizePixelDesired*<br/>
-所需的大小，新的轉譯目標像素為單位，如果應該將它與原始版本不同的呈現目標，或為 NULL。 如需詳細資訊，請參閱＜備註＞一節。
+新轉譯目標的所需大小（如果它應該與原始呈現目標不同），或 Null。 如需詳細資訊，請參閱＜備註＞一節。
 
 *desiredFormat*<br/>
-所需的像素格式和新的 alpha 模式呈現目標，或為 NULL。 如果像素格式設定為 DXGI_FORMAT_UNKNOWN 或這個參數是 null，新的呈現目標做為原始呈現目標，就會使用相同的像素格式。 如果 alpha 模式 D2D1_ALPHA_MODE_UNKNOWN 或這個參數是 NULL，新的轉譯目標的 alpha 模式會預設為 D2D1_ALPHA_MODE_PREMULTIPLIED。 如需支援的像素格式的資訊，請參閱支援的像素格式和 Alpha 模式。
+新轉譯目標的所需像素格式和 Alpha 模式，或 Null。 如果像素格式設定為 DXGI_FORMAT_UNKNOWN 或此參數為 null，則新的轉譯目標會使用與原始呈現目標相同的像素格式。 如果 D2D1_ALPHA_MODE_UNKNOWN Alpha 模式，或此參數為 Null，新轉譯目標的 Alpha 模式預設為 D2D1_ALPHA_MODE_PREMULTIPLIED。 如需支援的像素格式的詳細資訊，請參閱支援的像素格式和 Alpha 模式。
 
 *options*<br/>
-值，指定新的轉譯目標必須與 GDI 相容。
+值，指定新的呈現目標是否必須與 GDI 相容。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE。
+如果方法成功，則會傳回 TRUE。 否則，它會傳回 FALSE。
 
-##  <a name="crendertarget"></a>  CRenderTarget::CRenderTarget
+##  <a name="crendertarget"></a>CRenderTarget：： CRenderTarget
 
-建構 CRenderTarget 物件。
+結構 CRenderTarget 物件。
 
 ```
 CRenderTarget();
 ```
 
-##  <a name="destroy"></a>  CRenderTarget::Destroy
+##  <a name="destroy"></a>CRenderTarget：:D estroy
 
-刪除一個或多個資源
+刪除一或多個資源
 
 ```
 BOOL Destroy(BOOL bDeleteResources = TRUE);
@@ -340,15 +340,15 @@ BOOL Destroy(BOOL bDeleteResources = TRUE);
 ### <a name="parameters"></a>參數
 
 *bDeleteResources*<br/>
-如果 bDeleteResources 為 TRUE，將會自動終結位於 m_lstResources 中的所有資源。
+如果 bDeleteResources 為 TRUE，則會自動終結位於 m_lstResources 中的所有資源。
 
 ### <a name="return-value"></a>傳回值
 
-如果方法成功，它會傳回 TRUE。 否則，它會傳回 FALSE
+如果方法成功，則會傳回 TRUE。 否則，它會傳回 FALSE
 
-##  <a name="detach"></a>  CRenderTarget::Detach
+##  <a name="detach"></a>CRenderTarget：:D etach
 
-中斷連結物件的轉譯目標介面
+從物件卸離呈現目標介面
 
 ```
 ID2D1RenderTarget* Detach ();
@@ -356,11 +356,11 @@ ID2D1RenderTarget* Detach ();
 
 ### <a name="return-value"></a>傳回值
 
-卸離的指標轉譯目標的介面。
+已卸離之轉譯目標介面的指標。
 
-##  <a name="drawbitmap"></a>  CRenderTarget::DrawBitmap
+##  <a name="drawbitmap"></a>CRenderTarget：:D rawBitmap
 
-繪製所指定的 IDWriteTextLayout 物件所描述的格式化的文字。
+繪製指定 IDWriteTextLayout 物件所描述的格式化文字。
 
 ```
 void DrawBitmap(
@@ -377,20 +377,20 @@ void DrawBitmap(
 要呈現的點陣圖。
 
 *rectDest*<br/>
-大小和位置，以與裝置無關像素轉譯目標的座標空間中，繪製了點陣圖即的區域中。 如果矩形是不正確排序，不繪製任何內容，但是轉譯目標不會進入錯誤狀態。
+圖像繪製所在區域的大小和位置（以與裝置無關的圖元為單位）。 如果矩形的順序不正確，則不會繪製任何內容，但是轉譯目標不會進入錯誤狀態。
 
 *fOpacity*<br/>
-介於 0.0 和 1.0 f，內含，之間的值，指定要套用至點陣圖; 的不透明度值此值已乘以點陣圖內容的 alpha 值。
+介於 0.0 f 和 1.0 f （含）之間的值，指定要套用至點陣圖的不透明度值。這個值會乘以點陣圖內容的 Alpha 值。
 
 *interpolationMode*<br/>
-如果點陣圖是縮放或旋轉繪製作業，請使用插補法模式。
+當繪製作業縮放或旋轉點陣圖時，所要使用的插補模式。
 
 *pRectSrc*<br/>
-大小和位置，以與裝置無關的像素點陣圖的座標空間中，點陣圖內要繪製的區域中。
+在點陣圖的座標空間中，以與裝置無關的圖元為單位的大小和位置，也就是點陣圖內要繪製的區域。
 
-##  <a name="drawellipse"></a>  CRenderTarget::DrawEllipse
+##  <a name="drawellipse"></a>CRenderTarget：:D rawEllipse
 
-繪製指定的橢圓形使用指定的筆畫樣式的外框。
+使用指定的筆觸樣式，繪製指定橢圓形的外框。
 
 ```
 void DrawEllipse(
@@ -402,21 +402,21 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>參數
 
-*ellipse*<br/>
-位置與裝置無關的像素繪製橢圓形的半徑。
+*限定*<br/>
+要繪製之橢圓形的位置和半徑（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
 用來繪製橢圓形外框的筆刷。
 
 *fStrokeWidth*<br/>
-橢圓形的筆劃粗細。 筆觸被置於橢圓形外框。
+橢圓形筆劃的粗細。 筆劃會以橢圓形的外框為中心。
 
 *strokeStyle*<br/>
-要套用至橢圓形外框或為 NULL 來繪製實心筆劃的筆劃的樣式。
+要套用至橢圓形外框的筆劃樣式，或為 Null 以繪製實心的筆劃。
 
-##  <a name="drawgeometry"></a>  CRenderTarget::DrawGeometry
+##  <a name="drawgeometry"></a>CRenderTarget：:D rawGeometry
 
-繪製外框的使用指定的筆畫樣式所指定幾何。
+使用指定的筆觸樣式，繪製指定之幾何的外框。
 
 ```
 void DrawGeometry(
@@ -435,14 +435,14 @@ void DrawGeometry(
 用來繪製幾何筆劃的筆刷。
 
 *fStrokeWidth*<br/>
-幾何筆劃粗細。 筆觸被置於幾何外框。
+幾何筆劃的粗細。 筆劃會以幾何的外框為中心。
 
 *strokeStyle*<br/>
-要套用至幾何外框或為 NULL 來繪製實心筆劃的筆劃的樣式。
+要套用至幾何外框的筆劃樣式，或為 Null 以繪製實心的筆劃。
 
-##  <a name="drawglyphrun"></a>  CRenderTarget::DrawGlyphRun
+##  <a name="drawglyphrun"></a>CRenderTarget：:D rawGlyphRun
 
-繪製指定的字符。
+繪製指定的字元。
 
 ```
 void DrawGlyphRun(
@@ -455,20 +455,20 @@ void DrawGlyphRun(
 ### <a name="parameters"></a>參數
 
 *ptBaseLineOrigin*<br/>
-在與裝置無關的像素的圖像 （glyph） 的基準原點。
+圖像基準的原點（以與裝置無關的圖元為單位）。
 
 *glyphRun*<br/>
-若要轉譯圖像 （glyph)。
+要呈現的圖像。
 
 *pForegroundBrush*<br/>
-用來繪製指定的字符的筆刷。
+用來繪製指定圖像的筆刷。
 
 *measuringMode*<br/>
-值，指出如何使用字符度量來進行格式化時，量值的文字。 預設值是 DWRITE_MEASURING_MODE_NATURAL。
+值，指出格式化時如何使用圖像度量來測量文字。 預設值為 DWRITE_MEASURING_MODE_NATURAL。
 
-##  <a name="drawline"></a>  CRenderTarget::DrawLine
+##  <a name="drawline"></a>CRenderTarget：:D rawLine
 
-使用指定的筆畫樣式指定的點之間繪製一條線。
+使用指定的筆觸樣式，在指定的點之間繪製線條。
 
 ```
 void DrawLine(
@@ -482,23 +482,23 @@ void DrawLine(
 ### <a name="parameters"></a>參數
 
 *ptFrom*<br/>
-與裝置無關的像素中，線的起始點。
+線條的起點，以與裝置無關的圖元為單位。
 
 *ptTo*<br/>
-與裝置無關的像素中，線的結束點。
+行的結束點，以與裝置無關的圖元為單位。
 
 *pBrush*<br/>
-用來繪製線條的筆劃的筆刷。
+用來繪製線條筆劃的筆刷。
 
 *fStrokeWidth*<br/>
-值大於或等於 0.0f 指定筆劃的寬度。 如果未指定此參數，則會預設為 1.0 f。 筆觸是列上置中對齊。
+大於或等於 0.0 f 的值，指定筆劃的寬度。 如果未指定此參數，則會預設為 1.0 f。 筆劃會以線條為中心。
 
 *strokeStyle*<br/>
-小畫家，或 NULL 來繪製一條實線筆劃的樣式。
+要繪製的筆劃樣式，或為 Null 以繪製實線。
 
-##  <a name="drawrectangle"></a>  CRenderTarget::DrawRectangle
+##  <a name="drawrectangle"></a>CRenderTarget：:D rawRectangle
 
-繪製外框的矩形具有指定的維度和筆劃樣式。
+繪製具有指定之維度和筆觸樣式的矩形外框。
 
 ```
 void DrawRectangle(
@@ -510,21 +510,21 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>參數
 
-*rectangle*<br/>
-若要繪製，在與裝置無關的像素矩形的維度
+*矩形*<br/>
+要繪製之矩形的維度（以與裝置無關的圖元為單位）
 
 *pBrush*<br/>
-用來繪製矩形的筆劃的筆刷
+用來繪製矩形筆劃的筆刷
 
 *fStrokeWidth*<br/>
-值大於或等於 0.0f，指定矩形的筆劃的寬度。 筆觸被置於矩形外框。
+大於或等於 0.0 f 的值，指定矩形筆劃的寬度。 筆劃會以矩形的外框為中心。
 
 *strokeStyle*<br/>
-小畫家，或 NULL 來繪製實心筆劃的筆劃的樣式。
+要繪製的筆劃樣式，或為 Null 繪製實心的筆劃。
 
-##  <a name="drawroundedrectangle"></a>  CRenderTarget::DrawRoundedRectangle
+##  <a name="drawroundedrectangle"></a>CRenderTarget：:D rawRoundedRectangle
 
-繪製指定的圓角矩形，使用指定的筆畫樣式的外框。
+使用指定的筆觸樣式，繪製指定圓角矩形的外框。
 
 ```
 void DrawRoundedRectangle(
@@ -537,20 +537,20 @@ void DrawRoundedRectangle(
 ### <a name="parameters"></a>參數
 
 *rectRounded*<br/>
-要繪製，請在 裝置獨立像素為單位的圓角矩形的維度。
+要繪製的圓角矩形維度（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
-用來繪製圓角的矩形外框的筆刷。
+用來繪製圓角矩形外框的筆刷。
 
 *fStrokeWidth*<br/>
-圓角的矩形的筆劃的寬度。 筆觸被中心圓角的矩形外框。 預設值為 1.0 f。
+圓角矩形筆劃的寬度。 筆劃會以圓角矩形的外框為中心。 預設值為 1.0 f。
 
 *strokeStyle*<br/>
-圓角的矩形的筆劃，則為 NULL 來繪製實心筆劃樣式。 預設值是 NULL。
+圓角矩形筆劃的樣式，或為 Null 繪製實心筆劃。 預設值為 NULL。
 
-##  <a name="drawtext"></a>  CRenderTarget::DrawText
+##  <a name="drawtext"></a>CRenderTarget：:D rawText
 
-繪製指定的文字使用 IDWriteTextFormat 物件所提供的格式資訊。
+使用 IDWriteTextFormat 物件所提供的格式資訊，繪製指定的文字。
 
 ```
 void DrawText(
@@ -565,26 +565,26 @@ void DrawText(
 ### <a name="parameters"></a>參數
 
 *strText*<br/>
-要繪製的 Unicode 字元陣列指標。
+要繪製的 Unicode 字元陣列的指標。
 
-*rectangle*<br/>
-在其中繪製文字的區域位置及大小。
+*矩形*<br/>
+繪製文字所在區域的大小和位置。
 
 *pForegroundBrush*<br/>
 用來繪製文字的筆刷。
 
 *textFormat*<br/>
-物件，描述要繪製的文字，例如字型、 字型大小及文字方向的詳細資料的格式。
+物件，描述要繪製之文字的格式設定詳細資料，例如字型、字型大小和流程方向。
 
 *options*<br/>
-值，指出是否將文字應該貼齊像素界限和是否應該裁剪文字版面配置矩形。 預設值是 D2D1_DRAW_TEXT_OPTIONS_NONE，表示文字應該貼齊像素界限，而且它應該不依附配置矩形。
+值，指出是否應該將文字貼齊圖元界限，以及是否應該將文字裁剪成配置矩形。 預設值為 D2D1_DRAW_TEXT_OPTIONS_NONE，表示應該將文字貼齊至圖元邊界，而且不應該裁剪成版面配置矩形。
 
 *measuringMode*<br/>
-值，指出如何使用字符度量來進行格式化時，量值的文字。 預設值是 DWRITE_MEASURING_MODE_NATURAL。
+值，指出格式化時如何使用圖像度量來測量文字。 預設值為 DWRITE_MEASURING_MODE_NATURAL。
 
-##  <a name="drawtextlayout"></a>  CRenderTarget::DrawTextLayout
+##  <a name="drawtextlayout"></a>CRenderTarget：:D rawTextLayout
 
-繪製所指定的 IDWriteTextLayout 物件所描述的格式化的文字。
+繪製指定 IDWriteTextLayout 物件所描述的格式化文字。
 
 ```
 void DrawTextLayout(
@@ -597,20 +597,20 @@ void DrawTextLayout(
 ### <a name="parameters"></a>參數
 
 *ptOrigin*<br/>
-點，以與裝置無關像素，在其中繪製 textLayout 所描述的文字的左上角中所述。
+繪製 textLayout 所描述之文字左上角的點，以與裝置無關的圖元來說明。
 
 *textLayout*<br/>
-繪製格式化的文字。 不是繼承自 ID2D1Resource 任何繪製效果都會被忽略。 如果有繪製效果繼承自 ID2D1Resource 不是筆刷，這個方法會失敗，並呈現目標處於錯誤狀態。
+要繪製的格式化文字。 不是繼承自 ID2D1Resource 的任何繪製效果都會被忽略。 如果繪製效果繼承自不是筆刷的 ID2D1Resource，這個方法就會失敗，而且轉譯目標會進入錯誤狀態。
 
 *pBrushForeground*<br/>
-用來繪製中還沒有為繪製效果 （IDWriteTextLayout::SetDrawingEffect 方法所指定） 與它相關聯的筆刷的 textLayout 的任何文字的筆刷。
+用來在 textLayout 中繪製任何文字的筆刷，其與繪圖效果（由 IDWriteTextLayout：： SetDrawingEffect 方法所指定）中尚未有相關聯的筆刷。
 
 *options*<br/>
-值，指出是否將文字應該貼齊像素界限和是否應該裁剪文字版面配置矩形。 預設值是 D2D1_DRAW_TEXT_OPTIONS_NONE，表示文字應該貼齊像素界限，而且它應該不依附配置矩形。
+值，指出是否應該將文字貼齊圖元界限，以及是否應該將文字裁剪成配置矩形。 預設值為 D2D1_DRAW_TEXT_OPTIONS_NONE，表示應該將文字貼齊至圖元邊界，而且不應該裁剪成版面配置矩形。
 
-##  <a name="enddraw"></a>  CRenderTarget::EndDraw
+##  <a name="enddraw"></a>CRenderTarget：： EndDraw
 
-結束對轉譯目標的繪製作業，並指出目前的錯誤狀態和相關聯的標記。
+結束轉譯目標的繪製作業，並指出目前的錯誤狀態和相關聯的標記。
 
 ```
 HRESULT EndDraw();
@@ -620,9 +620,9 @@ HRESULT EndDraw();
 
 如果方法成功，它會傳回 S_OK。 否則，它會傳回 HRESULT 錯誤碼。
 
-##  <a name="fillellipse"></a>  CRenderTarget::FillEllipse
+##  <a name="fillellipse"></a>CRenderTarget：： FillEllipse
 
-繪製指定的橢圓形內部。
+繪製指定橢圓形的內部。
 
 ```
 void FillEllipse(
@@ -632,15 +632,15 @@ void FillEllipse(
 
 ### <a name="parameters"></a>參數
 
-*ellipse*<br/>
-位置和半徑，以與裝置無關的像素，來繪製橢圓形。
+*限定*<br/>
+要繪製之橢圓形的位置和半徑（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
-筆刷，用來繪製橢圓形內部。
+用來繪製橢圓形內部的筆刷。
 
-##  <a name="fillgeometry"></a>  CRenderTarget::FillGeometry
+##  <a name="fillgeometry"></a>CRenderTarget：： FillGeometry
 
-繪製所指定幾何的內部。
+繪製指定幾何的內部。
 
 ```
 void FillGeometry(
@@ -655,14 +655,14 @@ void FillGeometry(
 要繪製的幾何。
 
 *pBrush*<br/>
-內部的筆刷，用來繪製幾何。
+用來繪製幾何內部的筆刷。
 
 *pOpacityBrush*<br/>
-若要套用至幾何; 不透明度遮罩沒有不透明度遮罩是 NULL。 如果指定不透明度遮罩 （opacityBrush 參數），則筆刷就必須要有其 x 和 y 擴充的模式設定為 D2D1_EXTEND_MODE_CLAMP ID2D1BitmapBrush。 如需詳細資訊，請參閱＜備註＞一節。
+要套用至幾何的不透明度遮罩;Null 代表不透明度遮罩。 如果指定了不透明度遮罩（opacityBrush 參數），筆刷必須是將其 x 和 y 延伸模式設定為 D2D1_EXTEND_MODE_CLAMP 的 ID2D1BitmapBrush。 如需詳細資訊，請參閱＜備註＞一節。
 
-##  <a name="fillmesh"></a>  CRenderTarget::FillMesh
+##  <a name="fillmesh"></a>CRenderTarget：： FillMesh
 
-繪製指定的網狀結構的內部。
+繪製指定網格的內部。
 
 ```
 void FillMesh(
@@ -673,14 +673,14 @@ void FillMesh(
 ### <a name="parameters"></a>參數
 
 *pMesh*<br/>
-若要繪製網格。
+要繪製的網格。
 
 *pBrush*<br/>
 用來繪製網格的筆刷。
 
-##  <a name="fillopacitymask"></a>  CRenderTarget::FillOpacityMask
+##  <a name="fillopacitymask"></a>CRenderTarget：： FillOpacityMask
 
-套用至筆刷指定的點陣圖所描述的不透明度遮罩，並使用筆刷繪製區域的呈現目標。
+將指定點陣圖所描述的不透明度遮罩套用至筆刷，並使用該筆刷繪製呈現目標的區域。
 
 ```
 void FillOpacityMask(
@@ -694,23 +694,23 @@ void FillOpacityMask(
 ### <a name="parameters"></a>參數
 
 *pOpacityMask*<br/>
-位置和半徑，以與裝置無關的像素，來繪製橢圓形。
+要繪製之橢圓形的位置和半徑（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
-筆刷，用來繪製 destinationRectangle 所指定的轉譯目標的區域。
+用來繪製 destinationRectangle 所指定之呈現目的地區域的筆刷。
 
 *內容*<br/>
-不是透明度遮罩所包含的內容類型。 值用來判斷在其混合的不透明遮罩的色彩空間。
+不透明度遮罩所包含的內容類型。 此值用來決定混合不透明度遮罩的色彩空間。
 
 *rectDest*<br/>
-若要繪製，在與裝置無關的像素的呈現目標的區域。
+要繪製之轉譯目標的區域（以與裝置無關的圖元為單位）。
 
 *rectSrc*<br/>
-將作為不透明度遮罩，以與裝置無關的像素點陣圖的區域。
+用來做為不透明度遮罩的點陣圖區域，以與裝置無關的圖元為單位。
 
-##  <a name="fillrectangle"></a>  CRenderTarget::FillRectangle
+##  <a name="fillrectangle"></a>CRenderTarget：： Graphicswindow.fillrectangle
 
-繪製指定的矩形內部。
+繪製指定矩形的內部。
 
 ```
 void FillRectangle(
@@ -720,15 +720,15 @@ void FillRectangle(
 
 ### <a name="parameters"></a>參數
 
-*rectangle*<br/>
-若要繪製，在與裝置無關的像素矩形的維度。
+*矩形*<br/>
+要繪製之矩形的維度（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
-用來繪製矩形的筆刷的內部。
+用來繪製矩形內部的筆刷。
 
-##  <a name="fillroundedrectangle"></a>  CRenderTarget::FillRoundedRectangle
+##  <a name="fillroundedrectangle"></a>CRenderTarget：： FillRoundedRectangle
 
-繪製指定的圓角矩形內部。
+繪製指定圓角矩形的內部。
 
 ```
 void FillRoundedRectangle(
@@ -739,12 +739,12 @@ void FillRoundedRectangle(
 ### <a name="parameters"></a>參數
 
 *rectRounded*<br/>
-若要繪製，與裝置無關的像素的圓角矩形的維度。
+要繪製的圓角矩形維度（以與裝置無關的圖元為單位）。
 
 *pBrush*<br/>
 用來繪製圓角矩形內部的筆刷。
 
-##  <a name="flush"></a>  CRenderTarget::Flush
+##  <a name="flush"></a>CRenderTarget：： Flush
 
 執行所有暫止的繪製命令。
 
@@ -757,14 +757,14 @@ void Flush(
 ### <a name="parameters"></a>參數
 
 *tag1*<br/>
-包含繪製作業造成錯誤或 0，如果沒有任何錯誤的標記。 這個參數會以未初始化的狀態傳遞。
+包含導致錯誤之繪製作業的標記，如果沒有任何錯誤則為0。 這個參數會以未初始化的狀態傳遞。
 
 *tag2*<br/>
-包含繪製作業造成錯誤或 0，如果沒有任何錯誤的標記。 這個參數會以未初始化的狀態傳遞。
+包含導致錯誤之繪製作業的標記，如果沒有任何錯誤則為0。 這個參數會以未初始化的狀態傳遞。
 
-##  <a name="getantialiasmode"></a>  CRenderTarget::GetAntialiasMode
+##  <a name="getantialiasmode"></a>CRenderTarget：： GetAntialiasMode
 
-擷取非文字繪圖作業的目前反鋸齒功能模式。
+抓取非文本繪圖作業的目前消除鋸齒模式。
 
 ```
 D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
@@ -772,11 +772,11 @@ D2D1_ANTIALIAS_MODE GetAntialiasMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-非文字繪圖作業的目前反鋸齒功能模式。
+非文本繪圖作業的目前消除鋸齒模式。
 
-##  <a name="getdpi"></a>  CRenderTarget::GetDpi
+##  <a name="getdpi"></a>CRenderTarget：： GetDpi
 
-傳回轉譯目標的每英吋點數 (DPI)
+傳回轉譯目標的每英寸點（DPI）
 
 ```
 CD2DSizeF GetDpi() const;
@@ -784,11 +784,11 @@ CD2DSizeF GetDpi() const;
 
 ### <a name="return-value"></a>傳回值
 
-呈現目標的每英吋點數 (DPI)。
+轉譯目標的每英寸點數（DPI）。
 
-##  <a name="getmaximumbitmapsize"></a>  CRenderTarget::GetMaximumBitmapSize
+##  <a name="getmaximumbitmapsize"></a>CRenderTarget：： GetMaximumBitmapSize
 
-取得大小上限，單位為裝置而異 （像素） 的支援轉譯目標的任何一個點陣圖維度
+取得轉譯目標所支援之任何一個點陣圖維度的大小上限（以裝置相依單位（圖元）表示）
 
 ```
 UINT32 GetMaximumBitmapSize() const;
@@ -796,11 +796,11 @@ UINT32 GetMaximumBitmapSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-大小上限，單位為像素轉譯目標所支援的任何一個點陣圖維度
+轉譯目標所支援任何一個點陣圖維度的大小上限（以圖元為單位）
 
-##  <a name="getpixelformat"></a>  CRenderTarget::GetPixelFormat
+##  <a name="getpixelformat"></a>CRenderTarget：： GetPixelFormat
 
-擷取轉譯目標像素格式和 alpha 模式
+抓取呈現目標的像素格式和 Alpha 模式
 
 ```
 D2D1_PIXEL_FORMAT GetPixelFormat() const;
@@ -808,11 +808,11 @@ D2D1_PIXEL_FORMAT GetPixelFormat() const;
 
 ### <a name="return-value"></a>傳回值
 
-轉譯目標像素格式和 alpha 模式
+呈現目標的像素格式和 Alpha 模式
 
-##  <a name="getpixelsize"></a>  CRenderTarget::GetPixelSize
+##  <a name="getpixelsize"></a>CRenderTarget：： GetPixelSize
 
-傳回裝置的像素的呈現目標大小
+傳回呈現目標的大小（以裝置圖元為單位）
 
 ```
 CD2DSizeU GetPixelSize() const;
@@ -820,9 +820,9 @@ CD2DSizeU GetPixelSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-裝置的像素轉譯目標的大小
+呈現目標的大小（以裝置圖元為單位）
 
-##  <a name="getrendertarget"></a>  CRenderTarget::GetRenderTarget
+##  <a name="getrendertarget"></a>CRenderTarget：： GetRenderTarget
 
 傳回 ID2D1RenderTarget 介面
 
@@ -832,11 +832,11 @@ ID2D1RenderTarget* GetRenderTarget();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1RenderTarget 介面的指標。
+ID2D1RenderTarget 介面的指標，如果物件尚未初始化，則為 Null。
 
-##  <a name="getsize"></a>  CRenderTarget::GetSize
+##  <a name="getsize"></a>CRenderTarget：： GetSize
 
-傳回與裝置無關的像素的呈現目標大小
+傳回呈現目標的大小（以與裝置無關的圖元為單位）
 
 ```
 CD2DSizeF GetSize() const;
@@ -844,11 +844,11 @@ CD2DSizeF GetSize() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前的轉譯目標中與裝置無關的像素為單位的大小
+呈現目標的目前大小（以與裝置無關的圖元為單位）
 
-##  <a name="gettags"></a>  CRenderTarget::GetTags
+##  <a name="gettags"></a>CRenderTarget：： GetTags
 
-取得後續的繪圖作業的標籤。
+取得後續繪製作業的標籤。
 
 ```
 void GetTags(
@@ -859,14 +859,14 @@ void GetTags(
 ### <a name="parameters"></a>參數
 
 *tag1*<br/>
-包含後續繪圖作業的第一個標籤。 這個參數會以未初始化的狀態傳遞。 如果指定了 NULL，這個參數會不擷取任何值。
+包含後續繪製作業的第一個標籤。 這個參數會以未初始化的狀態傳遞。 如果指定了 Null，則不會針對此參數抓取任何值。
 
 *tag2*<br/>
-包含後續繪圖作業的第二個標籤。 這個參數會以未初始化的狀態傳遞。 如果指定了 NULL，這個參數會不擷取任何值。
+包含後續繪製作業的第二個標籤。 這個參數會以未初始化的狀態傳遞。 如果指定了 Null，則不會針對此參數抓取任何值。
 
-##  <a name="gettextantialiasmode"></a>  CRenderTarget::GetTextAntialiasMode
+##  <a name="gettextantialiasmode"></a>CRenderTarget：： GetTextAntialiasMode
 
-取得目前的消除鋸齒模式文字和圖像 （glyph） 繪製作業。
+取得文字和圖像繪製作業的目前消除鋸齒模式。
 
 ```
 D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
@@ -874,11 +874,11 @@ D2D1_TEXT_ANTIALIAS_MODE GetTextAntialiasMode() const;
 
 ### <a name="return-value"></a>傳回值
 
-目前反鋸齒功能之文字和繪圖作業的圖像 （glyph） 的模式。
+文字和圖像繪製作業的目前消除鋸齒模式。
 
-##  <a name="gettextrenderingparams"></a>  CRenderTarget::GetTextRenderingParams
+##  <a name="gettextrenderingparams"></a>CRenderTarget：： GetTextRenderingParams
 
-擷取轉譯目標的目前文字呈現選項。
+抓取轉譯目標的目前文字呈現選項。
 
 ```
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
@@ -887,11 +887,11 @@ void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ### <a name="parameters"></a>參數
 
 *textRenderingParams*<br/>
-當這個方法傳回時，目前 textRenderingParamscontains 到轉譯目標的指標位址的文字呈現選項。
+當這個方法傳回時，textRenderingParamscontains 呈現目標目前文字轉譯選項的指標位址。
 
-##  <a name="gettransform"></a>  CRenderTarget::GetTransform
+##  <a name="gettransform"></a>CRenderTarget：： GetTransform
 
-指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業會在轉換後的空間發生。
+取得呈現目標的目前轉換。
 
 ```
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
@@ -900,11 +900,11 @@ void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ### <a name="parameters"></a>參數
 
 *transform*<br/>
-要套用到轉譯目標的轉換。
+當這個傳回時，會包含呈現目標的目前轉換。 這個參數會以未初始化的狀態傳遞。
 
-##  <a name="issupported"></a>  CRenderTarget::IsSupported
+##  <a name="issupported"></a>CRenderTarget：： IsSupported
 
-指出轉譯目標是否支援指定的屬性
+指出呈現目標是否支援指定的屬性
 
 ```
 BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) const;
@@ -913,15 +913,15 @@ BOOL IsSupported(const D2D1_RENDER_TARGET_PROPERTIES& renderTargetProperties) co
 ### <a name="parameters"></a>參數
 
 *renderTargetProperties*<br/>
-若要測試的轉譯目標屬性
+要測試的呈現目標屬性
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的呈現目標屬性會受到此轉譯目標;，則為 TRUE。否則為 FALSE
+如果此轉譯目標支援指定的呈現目標屬性，則為 TRUE;否則為 FALSE
 
-##  <a name="isvalid"></a>  CRenderTarget::IsValid
+##  <a name="isvalid"></a>CRenderTarget：： IsValid
 
-檢查資源的有效性
+檢查資源有效性
 
 ```
 BOOL IsValid() const;
@@ -929,17 +929,17 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>傳回值
 
-如果資源無效，則為 TRUE否則為 FALSE。
+如果資源有效，則為 TRUE;否則為 FALSE。
 
-##  <a name="m_lstresources"></a>  CRenderTarget::m_lstResources
+##  <a name="m_lstresources"></a>CRenderTarget：： m_lstResources
 
-CD2DResource 物件指標的清單。
+CD2DResource 物件的指標清單。
 
 ```
 CObList m_lstResources;
 ```
 
-##  <a name="m_prendertarget"></a>  CRenderTarget::m_pRenderTarget
+##  <a name="m_prendertarget"></a>CRenderTarget：： m_pRenderTarget
 
 ID2D1RenderTarget 物件的指標。
 
@@ -947,15 +947,15 @@ ID2D1RenderTarget 物件的指標。
 ID2D1RenderTarget* m_pRenderTarget;
 ```
 
-##  <a name="m_ptextformatdefault"></a>  CRenderTarget::m_pTextFormatDefault
+##  <a name="m_ptextformatdefault"></a>CRenderTarget：： m_pTextFormatDefault
 
-CD2DTextFormat 物件，其中包含預設的文字格式的指標。
+包含預設文字格式之 CD2DTextFormat 物件的指標。
 
 ```
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
+##  <a name="operator_id2d1rendertarget_star"></a>CRenderTarget：： operator ID2D1RenderTarget *
 
 傳回 ID2D1RenderTarget 介面
 
@@ -965,27 +965,27 @@ operator ID2D1RenderTarget*();
 
 ### <a name="return-value"></a>傳回值
 
-如果物件尚未初始化為 NULL 的 ID2D1RenderTarget 介面的指標。
+ID2D1RenderTarget 介面的指標，如果物件尚未初始化，則為 Null。
 
-##  <a name="popaxisalignedclip"></a>  CRenderTarget::PopAxisAlignedClip
+##  <a name="popaxisalignedclip"></a>CRenderTarget：:P opAxisAlignedClip
 
-移除轉譯目標中的軸對齊的最後一個剪輯。 會呼叫這個方法之後，剪輯不再套用至後續繪圖的作業。
+從呈現目標中移除最後一個軸對齊的剪輯。 呼叫這個方法之後，剪輯就不會再套用至後續的繪圖作業。
 
 ```
 void PopAxisAlignedClip();
 ```
 
-##  <a name="poplayer"></a>  CRenderTarget::PopLayer
+##  <a name="poplayer"></a>CRenderTarget：:P opLayer
 
-停止重新導向至最後一個 PushLayer 所指定的圖層的繪圖作業呼叫。
+停止將繪製作業重新導向至最後一個 PushLayer 呼叫所指定的圖層。
 
 ```
 void PopLayer();
 ```
 
-##  <a name="pushaxisalignedclip"></a>  CRenderTarget::PushAxisAlignedClip
+##  <a name="pushaxisalignedclip"></a>CRenderTarget：:P ushAxisAlignedClip
 
-移除轉譯目標中的軸對齊的最後一個剪輯。 會呼叫這個方法之後，剪輯不再套用至後續繪圖的作業。
+從呈現目標中移除最後一個軸對齊的剪輯。 呼叫這個方法之後，剪輯就不會再套用至後續的繪圖作業。
 
 ```
 void PushAxisAlignedClip(
@@ -996,14 +996,14 @@ void PushAxisAlignedClip(
 ### <a name="parameters"></a>參數
 
 *rectClip*<br/>
-大小和位置的裁剪區域中，以與裝置無關的像素為單位。
+裁剪區域的大小和位置（以與裝置無關的圖元為單位）。
 
 *mode*<br/>
-用來繪製有子像素界限的裁剪矩形的邊緣，以及 blend 的場景內容裁剪反鋸齒功能模式。 之後當 PopAxisAlignedClip 方法呼叫，並不會套用至圖層內的每個基本型別，則會執行混合。
+用來繪製具有子圖元邊界之剪輯矩形邊緣的消除鋸齒模式，以及使用場景內容來混合剪輯。 在呼叫 PopAxisAlignedClip 方法時，會執行一次混合，而且不會套用至圖層內的每一個基本類型。
 
-##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
+##  <a name="pushlayer"></a>CRenderTarget：:P ushLayer
 
-將指定的圖層加入至呈現目標，讓它收到所有後續的繪圖作業稱為 PopLayer。
+將指定的圖層新增至轉譯目標，使其接收所有後續的繪製作業，直到呼叫 PopLayer 為止。
 
 ```
 void PushLayer(
@@ -1014,14 +1014,14 @@ void PushLayer(
 ### <a name="parameters"></a>參數
 
 *layerParameters*<br/>
-內容繫結、 幾何的遮罩、 不透明度、 不透明度遮罩和圖層的消除鋸齒選項。
+圖層的內容界限、幾何遮罩、不透明度、不透明度遮罩和消除鋸齒選項。
 
-*layer*<br/>
-接收後續的繪圖作業的圖層。
+*層*<br/>
+接收後續繪製作業的圖層。
 
-##  <a name="restoredrawingstate"></a>  CRenderTarget::RestoreDrawingState
+##  <a name="restoredrawingstate"></a>CRenderTarget：： RestoreDrawingState
 
-呈現目標的繪圖狀態設定為指定的 ID2D1DrawingStateBlock 的。
+將轉譯目標的繪製狀態設定為所指定 ID2D1DrawingStateBlock 的呈現。
 
 ```
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
@@ -1030,11 +1030,11 @@ void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ### <a name="parameters"></a>參數
 
 *drawingStateBlock*<br/>
-呈現目標的新繪圖的狀態。
+呈現目標的新繪製狀態。
 
-##  <a name="savedrawingstate"></a>  CRenderTarget::SaveDrawingState
+##  <a name="savedrawingstate"></a>CRenderTarget：： SaveDrawingState
 
-將目前的繪圖狀態儲存至指定 ID2D1DrawingStateBlock 中。
+將目前的繪圖狀態儲存至指定的 ID2D1DrawingStateBlock。
 
 ```
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
@@ -1043,11 +1043,11 @@ void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ### <a name="parameters"></a>參數
 
 *drawingStateBlock*<br/>
-當這個方法傳回時，包含呈現目標繪圖的目前狀態。 這個參數必須先初始化，再將其傳遞至方法。
+當這個方法傳回時，會包含呈現目標的目前繪製狀態。 必須先初始化這個參數，才能將它傳遞給方法。
 
-##  <a name="setantialiasmode"></a>  CRenderTarget::SetAntialiasMode
+##  <a name="setantialiasmode"></a>CRenderTarget：： SetAntialiasMode
 
-設定轉譯目標的消除鋸齒功能模式。 消除鋸齒模式適用於所有後續繪製作業，但不包括文字和圖像 （glyph） 繪製作業。
+設定呈現目標的消除鋸齒模式。 「消除鋸齒模式」適用于所有後續的繪圖作業，包括文字和字元繪製作業。
 
 ```
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
@@ -1056,11 +1056,11 @@ void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ### <a name="parameters"></a>參數
 
 *antialiasMode*<br/>
-未來的繪圖作業的消除鋸齒功能模式。
+未來繪製作業的消除鋸齒模式。
 
-##  <a name="setdpi"></a>  CRenderTarget::SetDpi
+##  <a name="setdpi"></a>CRenderTarget：： SetDpi
 
-設定的 dots per inch (DPI) 呈現目標。
+設定轉譯目標的每英寸點（DPI）。
 
 ```
 void SetDpi(const CD2DSizeF& sizeDPI);
@@ -1069,11 +1069,11 @@ void SetDpi(const CD2DSizeF& sizeDPI);
 ### <a name="parameters"></a>參數
 
 *sizeDPI*<br/>
-大於或等於零的值會指定轉譯目標水平/verticalDPI。
+大於或等於零的值，指定呈現目標的水準/verticalDPI。
 
-##  <a name="settags"></a>  CRenderTarget::SetTags
+##  <a name="settags"></a>CRenderTarget：： SetTags
 
-指定後續的繪圖作業的標籤。
+指定後續繪製作業的標籤。
 
 ```
 void SetTags(
@@ -1084,14 +1084,14 @@ void SetTags(
 ### <a name="parameters"></a>參數
 
 *tag1*<br/>
-標籤以套用至後續繪圖的作業。
+要套用至後續繪製作業的標籤。
 
 *tag2*<br/>
-標籤以套用至後續繪圖的作業。
+要套用至後續繪製作業的標籤。
 
-##  <a name="settextantialiasmode"></a>  CRenderTarget::SetTextAntialiasMode
+##  <a name="settextantialiasmode"></a>CRenderTarget：： SetTextAntialiasMode
 
-指定要用於後續的文字和圖像 （glyph） 繪圖作業的消除鋸齒功能模式。
+指定用於後續文字和字元繪製作業的消除鋸齒模式。
 
 ```
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
@@ -1100,11 +1100,11 @@ void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ### <a name="parameters"></a>參數
 
 *textAntialiasMode*<br/>
-要用於後續的文字和繪圖作業的圖像 （glyph） 的反鋸齒功能模式。
+用於後續文字和圖像繪製作業的消除鋸齒模式。
 
-##  <a name="settextrenderingparams"></a>  CRenderTarget::SetTextRenderingParams
+##  <a name="settextrenderingparams"></a>CRenderTarget：： SetTextRenderingParams
 
-指定要套用至所有後續的文字和繪圖作業的字符的文字呈現選項。
+指定要套用至所有後續文字和字元繪製作業的文字呈現選項。
 
 ```
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
@@ -1113,11 +1113,11 @@ void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ### <a name="parameters"></a>參數
 
 *textRenderingParams*<br/>
-文字轉譯選項套用至所有後續的文字和圖像 （glyph） 繪製作業;NULL 以清除目前的文字呈現選項。
+要套用至所有後續文字和字元繪製作業的文字呈現選項;Null 以清除目前的文字轉譯選項。
 
-##  <a name="settransform"></a>  CRenderTarget::SetTransform
+##  <a name="settransform"></a>CRenderTarget：： SetTransform
 
-指定的轉換套用到轉譯目標中，取代現有的轉換。 所有後續的繪圖作業會在轉換後的空間發生。
+將指定的轉換套用至轉譯目標，以取代現有的轉換。 所有後續的繪製作業會在轉換後的空間中發生。
 
 ```
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
@@ -1127,11 +1127,11 @@ void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ### <a name="parameters"></a>參數
 
 *transform*<br/>
-要套用到轉譯目標的轉換。
+要套用至呈現目標的轉換。
 
-##  <a name="verifyresource"></a>  CRenderTarget::VerifyResource
+##  <a name="verifyresource"></a>CRenderTarget：： VerifyResource
 
-確認 CD2DResource 物件有效，如果它已不存在，請建立的物件。
+驗證 CD2DResource 物件有效性;建立物件（如果尚未存在）。
 
 ```
 BOOL VerifyResource(CD2DResource* pResource);
@@ -1140,12 +1140,12 @@ BOOL VerifyResource(CD2DResource* pResource);
 ### <a name="parameters"></a>參數
 
 *pResource*<br/>
-CD2DResource 物件指標。
+CD2DResource 物件的指標。
 
 ### <a name="return-value"></a>傳回值
 
-是物件，如果有效，則為 TRUE否則為 FALSE。
+TRUE 是有效的物件;否則為 FALSE。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類別](../../mfc/reference/mfc-classes.md)

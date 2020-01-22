@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 995ad9ae21d7f00a74a912436d599dfead2c9ebb
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890152"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518461"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 函式
 
@@ -61,7 +61,7 @@ T7 get_money(Money& amount, bool use_intl);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，從資料流程 `str`進行解壓縮時，其行為就像是 `formatted input function` 呼叫成員函式 `get` 用於與 `str`相關聯的地區設定 facet `money_get`，使用*use_intl*表示國際格式. 如果成功，呼叫就會將已解壓縮的貨幣值儲存在*數量*中。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，從資料流程 `str`進行解壓縮時，其行為就像是 `formatted input function` 呼叫成員函式 `get` 用於與 `str`相關聯的地區設定 facet `money_get`，並使用*use_intl*來表示國際格式。 如果成功，呼叫就會將已解壓縮的貨幣值儲存在*數量*中。 接著，操作工具會傳回 `str`。
 
 `Money` 必須屬於 `long double` 類型，或是元素及特性參數與 `str` 相同之 `basic_string` 的具現化。
 
@@ -132,7 +132,7 @@ T10 put_time(struct tm* time_ptr, const Elem* time_format);
 
 ### <a name="remarks"></a>備註
 
-操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用*time_ptr*來指示時間結構和*time_format* ，以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
+操作工具會傳回一個物件，將此物件插入到資料流 `str` 中時，其行為會像`formatted output function`一樣。 輸出函式會呼叫與 `str` 關聯之地區設定 facet `time_put` 的成員函式 `put`。 輸出函式會使用*time_ptr*來指出時間結構，並*time_format*以指示以 null 結束之格式字串的開頭。 如果成功，該呼叫就會插入來自格式字串的常值字串，並轉換來自時間結構的值。 接著，操作工具會傳回 `str`。
 
 ## <a name="quoted"></a>  quoted
 
@@ -147,7 +147,7 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>參數
 
-*str* \
+*str*\
 Std：： string、char\*、字串常值或原始字串常值，或其中任何一項的寬版本（例如 std：： wstring、wchar_t\*）。
 
 *分隔符號*\
@@ -195,7 +195,7 @@ void show_quoted_v_nonquoted()
     cout << "Quoted          : " << extracted_quoted << endl;
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     show_quoted_v_nonquoted();
 
@@ -271,7 +271,7 @@ void show_custom_escape()
     // after round-tripping.
 }
 
-void main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     cout << "Custom delimiter:" << endl;
     show_custom_delimiter();
@@ -337,7 +337,7 @@ T3 setbase(int base);
 
 ### <a name="return-value"></a>傳回值
 
-操作工具會傳回物件，當從 `str`解壓縮或插入資料流程時，會呼叫 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回 `str`。 在這裡，`mask` 的判斷方式如下：
+操作工具會傳回一個物件，從解壓縮或插入資料流程 `str`時，會呼叫 `str.setf(mask, `[ios_base：： basefield](../standard-library/ios-base-class.md#fmtflags)`)`，然後傳回 `str`。 在這裡，`mask` 的判斷方式如下：
 
 - 如果*base*為8，則 `mask` 為[10 月](../standard-library/ios-functions.md#oct)`ios_base::`。
 
@@ -362,7 +362,7 @@ T4 setfill(Elem Ch);
 
 ### <a name="parameters"></a>參數
 
-*Ch* \
+*Ch*\
 將用來填滿靠右對齊顯示中空格的字元。
 
 ### <a name="return-value"></a>傳回值

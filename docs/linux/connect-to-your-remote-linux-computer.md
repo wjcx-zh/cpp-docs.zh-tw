@@ -1,14 +1,13 @@
 ---
 title: 連線至 Visual Studio 中的目標 Linux 系統
 description: 如何從 Visual Studio C++專案內部，連接至 linux 的遠端 linux 電腦或 Windows 子系統。
-ms.date: 11/09/2019
-ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 4069979100c3b71a32e90ad72fb334d21a226e64
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.date: 01/17/2020
+ms.openlocfilehash: d0065b63d7a81d3ae3d68b26184c88aca77f601c
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755274"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518214"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>連線至 Visual Studio 中的目標 Linux 系統
 
@@ -18,17 +17,58 @@ Visual Studio 2017 及更新版本支援 Linux。
 
 ::: moniker-end
 
+::: moniker range="vs-2017"
+
+您可以設定 Linux 專案，以遠端電腦或適用於 Linux 的 Windows 子系統 (WSL) 為目標。 對於遠端電腦和 WSL，您都需要在 Visual Studio 2017 中設定遠端連線。
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+您可以設定 Linux 專案，以遠端電腦或適用於 Linux 的 Windows 子系統 (WSL) 為目標。 若為遠端電腦，您必須在 Visual Studio 中設定遠端連線。 若要連線到 WSL，請直接跳至 [連線[至 WSL]](#connect-to-wsl)區段。
+
+::: moniker-end
+
 ::: moniker range=">=vs-2017"
 
-您可以設定 Linux 專案，以遠端電腦或適用於 Linux 的 Windows 子系統 (WSL) 為目標。 針對遠端電腦以及 Visual Studio 2017 上的 WSL，您需要設定遠端連線。
+使用遠端連線時，Visual Studio 會在C++遠端電腦上建立 Linux 專案。 如果它是實體機器、雲端中的 VM 或 WSL，則不重要。
+若要建立專案，Visual Studio 將原始程式碼複製到遠端 Linux 電腦。 然後，程式碼會根據 Visual Studio 設定進行編譯。
 
-## <a name="connect-to-a-remote-linux-computer"></a>連線至遠端 Linux 電腦
+::: moniker-end
 
-建立遠端 Linux C++系統（VM 或實體機器）的 linux 專案時，會將 linux 原始程式碼複製到您的遠端 linux 電腦。 然後，它會根據 Visual Studio 設定進行編譯。
+::: moniker range="vs-2019"
 
-設定此遠端連線：
+> [!NOTE]
+> Visual Studio 2019 16.5 和更新版本也支援安全、聯邦資訊處理標準（FIPS）140-2 與 Linux 系統的相容密碼編譯連線，以進行遠端開發。 若要使用符合 FIPS 規範的連線，請改為遵循[設定 fips 相容的安全遠端 Linux 開發](set-up-fips-compliant-secure-remote-linux-development.md)中的步驟。
 
-1. 第一次建立專案。 或者，您可以手動建立新的專案。 選取 **工具 > 選項**，開啟 **跨平臺 > 連線管理員** 節點，然後選擇 **新增** 按鈕。
+::: moniker-end
+
+::: moniker range=">=vs-2017"
+
+## <a name="set-up-the-ssh-server-on-the-remote-system"></a>在遠端系統上設定 SSH 伺服器
+
+如果 ssh 尚未在您的 Linux 系統上設定並執行，請依照下列步驟進行安裝。 本文中的範例使用 Ubuntu 18.04 LTS 與 OpenSSH 伺服器版本7.6。 不過，所有使用最新的 OpenSSH 版本的散發版本的指示應該都相同。
+
+1. 在 Linux 系統上，安裝並啟動 OpenSSH 伺服器：
+
+   ```bash
+   sudo apt install openssh-server
+   sudo service ssh start
+   ```
+
+1. 如果您想要在系統開機時自動啟動 ssh 伺服器，請使用 systemctl 啟用它：
+
+   ```bash
+   sudo systemctl enable ssh
+   ```
+
+## <a name="set-up-the-remote-connection"></a>設定遠端連線
+
+1. 在 Visual Studio 中，選擇功能表列上的 [**工具 > 選項**] 以開啟 [**選項**] 對話方塊。 然後選取 [**跨平臺 > 連線管理員**] 以開啟 [連線管理員] 對話方塊。
+
+   如果您之前未在 Visual Studio 中設定連接，則當您第一次建立專案時，Visual Studio 會為您開啟 [連接管理員] 對話方塊。
+
+1. 在 [連線管理員] 對話方塊中，選擇 **[新增] 按鈕以**加入新的連接。
 
    ![連線管理員](media/settings_connectionmanager.png)
 
@@ -48,19 +88,11 @@ Visual Studio 2017 及更新版本支援 Linux。
    | **私密金鑰檔**    | 為 SSH 連線所建立的私密金鑰檔案
    | **複雜密碼**          | 與上面選取的私密金鑰搭配使用的複雜密碼
 
-   您可以使用密碼或金鑰檔，以及用於驗證的複雜密碼。 在許多的開發案例中，密碼驗證已經足夠。 如果您想要使用公開/私密金鑰檔案，可以建立一個新的公開/私密金鑰檔案，或[重複使用現有的公開/私密金鑰檔案](https://security.stackexchange.com/questions/10203/reusing-private-public-keys)。 目前僅支援 RSA 和 DSA 金鑰。
-
-   您可以依照下列步驟，建立私密 RSA 金鑰檔案：
-
-   1. 在 Windows 電腦上，使用 `ssh-keygen -t rsa` 建立 ssh 金鑰組。 命令會建立公開金鑰和私密金鑰。 根據預設，它會使用 `id_rsa.pub` 和 `id_rsa`的名稱，將索引鍵放在 `C:\Users\%USERNAME%\.ssh`之下。
-
-   1. 將公開金鑰從 Windows 複製到 Linux 電腦：`scp -p C:\Users\%USERNAME%\.ssh\id_rsa.pub user@hostname`。
-
-   1. 在 Linux 系統上，將金鑰新增至授權金鑰的清單中 (並確認檔案有正確的權限)：`cat ~/id_rsa.pub >> ~/.ssh/authorized_keys; chmod 600 ~/.ssh/authorized_keys`
+   您可以使用密碼或金鑰檔，以及用於驗證的複雜密碼。 在許多開發案例中，密碼驗證就已足夠，但金鑰檔案會更安全。 如果您已經有金鑰組，就可以重複使用它。 目前 Visual Studio 僅支援用於遠端連線的 RSA 和 DSA 金鑰。
 
 1. 選擇 [連線 **]** 按鈕以嘗試連接到遠端電腦。
 
-   如果連線成功，Visual Studio 會開始將 IntelliSense 設定為使用遠端標頭。 如需詳細資訊，請參閱[適用於遠端系統標頭的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
+   如果連接成功，Visual Studio 會將 IntelliSense 設定為使用遠端標頭。 如需詳細資訊，請參閱[適用於遠端系統標頭的 IntelliSense](configure-a-linux-project.md#remote_intellisense)。
 
    如果連線失敗，將會以紅色標出需要變更的輸入方塊。
 
@@ -72,13 +104,23 @@ Visual Studio 2017 及更新版本支援 Linux。
 
    ::: moniker range="vs-2019"
 
-   移至 [工具] > [選項] > [跨平台] > [記錄] 來啟用記錄，以協助疑難排解連線問題：
+## <a name="logging-for-remote-connections"></a>遠端連線的記錄
+
+   您可以啟用記錄功能，以協助疑難排解連接問題。 在功能表列上，選取 [工具] [ **> 選項**]。 在 [**選項**] 對話方塊中，選取 [**跨平臺 > 記錄**]：
 
    ![遠端記錄](media/remote-logging-vs2019.png)
 
    記錄檔包含連線、傳送到遠端電腦 (其文字、結束代碼和執行時間) 的所有命令，以及從 Visual Studio 到殼層的所有輸出。 記錄適用於任何跨平台的 CMake 專案或 Visual Studio 中的 MSBuild 型 Linux 專案。
 
-   您可以設定輸出到檔案或 [輸出] 視窗中的 [跨平台記錄] 窗格。 對於以 MSBuild 為基礎的 Linux 專案，傳送至遠端電腦的 MSBuild 命令不會路由傳送至**輸出視窗**，因為它們是以跨進程的形式發出。 相反地，它們會記錄到前置詞為 "msbuild_" 的檔案。
+   您可以將輸出設定為移至檔案或 [輸出] 視窗中的 [**跨平臺記錄**] 窗格。 對於以 MSBuild 為基礎的 Linux 專案，傳送至遠端電腦的 MSBuild 命令不會路由傳送至**輸出視窗**，因為它們是以跨進程的形式發出。 相反地，它們會記錄到前置詞為 "msbuild_" 的檔案。
+
+## <a name="command-line-utility-for-the-connection-manager"></a>連接管理員的命令列公用程式  
+
+**Visual Studio 2019 16.5 版或更新**版本： ConnectionManager 是一個命令列公用程式，可管理 Visual Studio 以外的遠端開發連接。 這適用于布建新開發電腦的工作。 或者，您可以使用它來設定持續整合的 Visual Studio。 如需範例和 ConnectionManager 命令的完整參考，請參閱[connectionmanager 參考](connectionmanager-reference.md)。  
+
+::: moniker-end
+
+::: moniker range=">=vs-2017"
 
 ## <a name="tcp-port-forwarding"></a>TCP 埠轉送
 
@@ -88,15 +130,15 @@ Visual Studio 的 Linux 支援相依于 TCP 埠轉送。 如果遠端系統上�
 
 ![標頭錯誤](media/port-forwarding-headers-error.png)
 
-Visual Studio 的 CMake 支援也會使用 Rsync，將來源檔案複製到遠端系統。 如果您無法啟用 TCP 埠轉送，您可以使用 sftp 做為遠端複製來源方法。 sftp 通常會比 rsync 慢，但不會相依于 TCP 埠轉送。 您可以使用 [ [CMake 設定編輯器](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)] 中的 [ **remoteCopySourcesMethod** ] 屬性來管理遠端複製來源方法。 如果遠端系統上的 TCP 埠轉送已停用，當第一次叫用 rsync 時，您會在 [CMake 輸出] 視窗中看到錯誤。
+Visual Studio 的 CMake 支援也會使用 rsync，將來源檔案複製到遠端系統。 如果您無法啟用 TCP 埠轉送，您可以使用 sftp 做為遠端複製來源方法。 sftp 通常會比 rsync 慢，但不會相依于 TCP 埠轉送。 您可以使用 [ [CMake 設定編輯器](../build/cmakesettings-reference.md#additional-settings-for-cmake-linux-projects)] 中的 [ **remoteCopySourcesMethod** ] 屬性來管理遠端複製來源方法。 如果遠端系統上的 TCP 埠轉送已停用，當第一次叫用 rsync 時，您會在 [CMake 輸出] 視窗中看到錯誤。
 
 ![Rsync 錯誤](media/port-forwarding-copy-error.png)
 
-Gdbserver 可用於在內嵌裝置上進行偵錯工具。 如果您無法啟用 TCP 埠轉送，則必須在所有遠端偵錯程式案例中使用 gdb。 在遠端系統上的專案進行調試時，預設會使用 Gdb。
-
-::: moniker-end
+gdbserver 可用於在內嵌裝置上進行偵錯工具。 如果您無法啟用 TCP 埠轉送，則必須在所有遠端偵錯程式案例中使用 gdb。 在遠端系統上的專案進行調試時，預設會使用 gdb。
 
 ## <a name="connect-to-wsl"></a>連線到 WSL
+
+::: moniker-end
 
 ::: moniker range="vs-2017"
 

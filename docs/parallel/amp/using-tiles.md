@@ -2,34 +2,34 @@
 title: 使用磚
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405363"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518253"
 ---
 # <a name="using-tiles"></a>使用磚
 
-若要最大化您的應用程式加速，您可以使用並排顯示。 並排顯示會將執行緒分成相等的矩形子集或*圖格*。 如果您使用適當的並排顯示大小和並排顯示的演算法，您可以取得更多的加速功能，從您C++AMP 程式碼。 並排顯示的基本元件如下：
+您可以使用並排來最大化應用程式的加速。 並排顯示會將執行緒分割成相等的矩形子集或*磚*。 如果您使用適當的磚大小和並排顯示演算法，您可以從 AMP 程式C++代碼取得更多的加速。 並排平的基本元件如下：
 
-- `tile_static` 變數。 並排顯示的主要優點是獲得的效能`tile_static`存取。 中的資料的存取權`tile_static`記憶體可以大幅快於存取全域空間中的資料 (`array`或`array_view`物件)。 執行個體`tile_static`變數是每個 tile 建立，且 tile 中的所有執行緒存取的變數。 在典型的並排顯示演算法中，資料會複製到`tile_static`一次從全域記憶體的記憶體，然後從存取多次`tile_static`記憶體。
+- `tile_static` 變數。 並排的主要優點是 `tile_static` 存取的效能提升。 存取 `tile_static` 記憶體中的資料，可能會比存取全域空間（`array` 或 `array_view` 物件）中的資料快很多。 系統會為每個磚建立 `tile_static` 變數的實例，而磚中的所有線程都可以存取該變數。 在一般的磚化演算法中，資料會從全域記憶體複製到 `tile_static` 記憶體，然後從 `tile_static` 記憶體中存取多次。
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait)。 呼叫`tile_barrier::wait`會暫停執行目前的執行緒，直到所有的同一個 tile 中的執行緒到達呼叫`tile_barrier::wait`。 您不能保證執行緒將執行，只有該 tile 中的任何執行緒會執行過的呼叫順序`tile_barrier::wait`之前的所有執行緒到達呼叫。 這表示，使用`tile_barrier::wait`方法中，您可以執行工作圖格的圖格為基礎，而不是由執行緒為基礎。 典型的 tile 劃分演算法具有程式碼來初始化`tile_static`呼叫後面接著將整個圖格的記憶體`tile_barrer::wait`。 程式碼所示`tile_barrier::wait`包含需要存取所有的計算`tile_static`值。
+- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 呼叫 `tile_barrier::wait` 會暫停執行目前的執行緒，直到相同磚中的所有線程都到達 `tile_barrier::wait`的呼叫為止。 您無法保證執行緒在中執行的順序，只有磚中的任何執行緒都不會在 `tile_barrier::wait` 的呼叫之後執行，直到所有線程都已達到呼叫為止。 這表示，藉由使用 `tile_barrier::wait` 方法，您可以依磚逐一執行工作，而不是逐執行緒。 一般的並排顯示演算法具有程式碼，可初始化整個磚的 `tile_static` 記憶體，然後再呼叫 `tile_barrer::wait`。 後面的程式碼 `tile_barrier::wait` 包含需要存取所有 `tile_static` 值的計算。
 
-- 本機和全域編製索引。 您具有存取權的執行緒，相對於整個索引`array_view`或`array`物件和相對於 tile 的索引。 使用本機索引可以讓您的程式碼容易閱讀及偵錯。 一般而言，您可以使用區域索引存取`tile_static`變數和全域索引存取`array`和`array_view`變數。
+- 本機和全域索引。 您可以存取相對於整個 `array_view` 或 `array` 物件的執行緒索引，以及相對於磚的索引。 使用本機索引可以讓您的程式碼更容易讀取和 debug。 一般而言，您會使用本機索引來存取 `tile_static` 變數，以及用來存取 `array` 和 `array_view` 變數的全域索引。
 
-- [tiled_extent 類別](../../parallel/amp/reference/tiled-extent-class.md)並[tiled_index 類別](../../parallel/amp/reference/tiled-index-class.md)。 您使用`tiled_extent`物件而非`extent`物件中`parallel_for_each`呼叫。 您使用`tiled_index`物件而非`index`物件中`parallel_for_each`呼叫。
+- [Tiled_extent 類別](../../parallel/amp/reference/tiled-extent-class.md)和[tiled_index 類別](../../parallel/amp/reference/tiled-index-class.md)。 您可以使用 `tiled_extent` 物件，而不是 `parallel_for_each` 呼叫中的 `extent` 物件。 您可以使用 `tiled_index` 物件，而不是 `parallel_for_each` 呼叫中的 `index` 物件。
 
-若要充分利用的並排顯示，演算法必須將計算網域分割為圖格，然後複製 tile 資料到`tile_static`以利快速存取的變數。
+若要利用並排顯示，您的演算法必須將計算網域分割成磚，然後將磚資料複製到 `tile_static` 變數中，以加快存取的速度。
 
-## <a name="example-of-global-tile-and-local-indices"></a>範例中的全域、 並排以及區域索引
+## <a name="example-of-global-tile-and-local-indices"></a>全域、磚和本機索引的範例
 
-下圖顯示資料以 2x3 並排排列的 8x9 的矩陣。
+下圖代表在2x3 磚中排列之資料的8x9 矩陣。
 
-![8&#45;所&#45;9 矩陣分成 2&#45;所&#45;3 的圖格](../../parallel/amp/media/usingtilesmatrix.png "8&#45;的&#45;9 矩陣分成 2&#45;的&#45;3 的圖格")
+![8&#45;x&#45;9 矩陣分為 2&#45;x&#45;3 個磚](../../parallel/amp/media/usingtilesmatrix.png "8&#45;x&#45;9 矩陣分為 2&#45;x&#45;3 個磚")
 
-下列範例會顯示 [全域] 圖格和區域的索引，此並排矩陣。 `array_view`物件使用類型的項目來建立`Description`。 `Description`保存的全域、 並排以及區域索引的矩陣中的項目。 呼叫中的程式碼`parallel_for_each`設定的全域值、 圖格，以及區域索引的每個項目。 輸出會顯示在值`Description`結構。
+下列範例會顯示此磚矩陣的全域、磚和本機索引。 `array_view` 物件是使用 `Description`類型的元素所建立。 `Description` 會保存矩陣中元素的全域、磚和本機索引。 呼叫中的程式碼 `parallel_for_each` 會設定每個元素的全域、磚和本機索引的值。 輸出會顯示 `Description` 結構中的值。
 
 ```cpp
 #include <iostream>
@@ -134,42 +134,42 @@ void TilingDescription() {
     }
 }
 
-void main() {
+int main() {
     TilingDescription();
     char wait;
     std::cin >> wait;
 }
 ```
 
-此範例的主要工作是定義中的`array_view`物件和呼叫`parallel_for_each`。
+範例的主要工作是在 `array_view` 物件的定義中，以及呼叫 `parallel_for_each`。
 
-1. 向量`Description`結構會複製到 8x9`array_view`物件。
+1. `Description` 結構的向量會複製到 8x9 `array_view` 物件中。
 
-2. `parallel_for_each`方法呼叫`tiled_extent`為 compute domain 的物件。 `tiled_extent`物件由呼叫`extent::tile()`方法`descriptions`變數。 若要呼叫的型別參數`extent::tile()`， `<2,3>`，指定了建立 2x3 並排。 因此，8x9 矩陣會拼貼成 12 個 tile、 四個資料列和三個資料行。
+2. 使用 `tiled_extent` 物件當做計算網域來呼叫 `parallel_for_each` 方法。 `tiled_extent` 物件是藉由呼叫 `descriptions` 變數的 `extent::tile()` 方法來建立。 `extent::tile()`的呼叫型別參數，`<2,3>`指定建立2x3 磚。 因此，8x9 矩陣會分割成12個磚、四個數據列和三個數據行。
 
-3. `parallel_for_each`方法透過呼叫`tiled_index<2,3>`物件 (`t_idx`) 做為索引。 索引的類型參數 (`t_idx`) 必須符合 compute domain 的類型參數 (`descriptions.extent.tile< 2, 3>()`)。
+3. 使用 `tiled_index<2,3>` 物件（`t_idx`）做為索引來呼叫 `parallel_for_each` 方法。 索引的類型參數（`t_idx`）必須符合計算網域（`descriptions.extent.tile< 2, 3>()`）的類型參數。
 
-4. 每個執行緒執行時，索引`t_idx`傳回執行緒是處於哪一個 tile 的資訊 (`tiled_index::tile`屬性)，以及執行緒於 tile 的位置 (`tiled_index::local`屬性)。
+4. 當執行每個執行緒時，索引 `t_idx` 會傳回執行緒所在的磚（`tiled_index::tile` 屬性）和磚（`tiled_index::local` 屬性）中線程位置的相關資訊。
 
-## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>Tile 同步處理，tile_static 和 tile_barrier:: wait
+## <a name="tile-synchronizationtile_static-and-tile_barrierwait"></a>磚同步處理-tile_static 和 tile_barrier：： wait
 
-前一個範例說明的磚配置和索引，但不是本身很有幫助。  並排顯示演算法中並不可或缺的圖格，都很實用`tile_static`變數。 因為 tile 中的所有執行緒都有存取權`tile_static`變數，呼叫`tile_barrier::wait`用來同步存取`tile_static`變數。 雖然所有的磚中的執行緒可以存取`tile_static`變數沒有執行緒 tile 中的執行，不保證的順序。 下列範例示範如何使用`tile_static`變數和`tile_barrier::wait`方法來計算每個磚的平均值。 以下是要了解範例的索引鍵：
+上一個範例說明磚配置和索引，但它本身並不太實用。  當磚是演算法的整數，並利用 `tile_static` 變數時，並排顯示會變得很有用。 因為磚中的所有線程都具有 `tile_static` 變數的存取權，所以會使用 `tile_barrier::wait` 的呼叫來同步處理對 `tile_static` 變數的存取。 雖然磚中的所有線程都具有 `tile_static` 變數的存取權，但在磚中不一定要執行執行緒。 下列範例顯示如何使用 `tile_static` 變數和 `tile_barrier::wait` 方法來計算每個磚的平均值。 以下是瞭解範例的關鍵：
 
-1. RawData 會儲存在 8x8 矩陣。
+1. RawData 會儲存在8x8 矩陣中。
 
-2. 並排顯示大小為 2x2。 這會建立 4x4 方格的 tile 和平均值可以儲存在 4 x 4 矩陣，使用`array`物件。 有只在有限的類型，您可以擷取在 AMP 限定函式的參考。 `array`類別是其中一個。
+2. 磚大小為2x2。 這會建立磚的4x4 方格，而且平均值可以使用 `array` 物件儲存在4x4 矩陣中。 只有有限數量的類型，您可以在 AMP 限制函式中以傳址方式來捕捉。 `array` 類別是其中一種。
 
-3. 您可以使用定義的矩陣大小和取樣大小`#define`陳述式，因為類型參數，以`array`， `array_view`， `extent`，和`tiled_index`必須是常數值。 您也可以使用`const int static`宣告。 另一個好處，很輕易地變更取樣大小來計算平均超過 4x4 tile。
+3. 矩陣大小和樣本大小是使用 `#define` 語句來定義，因為 `array`、`array_view`、`extent`和 `tiled_index` 的型別參數必須是常數值。 您也可以使用 `const int static` 宣告。 另一個好處是，變更樣本大小以計算4x4 磚的平均值是很簡單的。
 
-4. A`tile_static`浮點值 2x2 陣列宣告每個圖格。 雖然宣告位於每個執行緒的程式碼路徑，在矩陣中的每個圖格會建立只有一個陣列。
+4. 會針對每個磚宣告浮點值的 `tile_static` 2x2 陣列。 雖然宣告是在每個執行緒的程式碼路徑中，但只會針對矩陣中的每個磚建立一個陣列。
 
-5. 沒有將值複製到每個圖格中的程式碼行`tile_static`陣列。 對於每個執行緒中，值會複製到陣列之後, 在執行緒上停止執行因為呼叫`tile_barrier::wait`。
+5. 有一行程式碼可將每個磚中的值複製到 `tile_static` 陣列。 針對每個執行緒，將值複製到陣列之後，執行緒上的執行會因為呼叫 `tile_barrier::wait`而停止。
 
-6. 當所有的 tile 中執行緒都到達 barrier 後時，就可以計算平均。 每個執行緒執行的程式碼，因為沒有`if`陳述式只計算一個執行緒的平均值。 此平均值會儲存在平均值變數中。 屏障是必要結構控制計算的圖格，就像您可能會使用`for`迴圈。
+6. 當磚中的所有線程都已達到屏障時，就可以計算出平均值。 因為程式碼會針對每個執行緒執行，所以只會有一個 `if` 語句來計算一個執行緒上的平均值。 平均值會儲存在平均值變數中。 屏障基本上是依磚控制計算的結構，就像您使用 `for` 迴圈一樣。
 
-7. 中的資料`averages`變數，因為它是`array`物件，必須重新複製到主機。 此範例會使用向量轉換運算子。
+7. `averages` 變數中的資料，因為它是 `array` 物件，所以必須複製回主機。 這個範例會使用向量轉換運算子。
 
-8. 在完整的範例中，您可以將 SAMPLESIZE 變更為 4，而不需要任何其他變更正確執行的程式碼。
+8. 在完整的範例中，您可以將 SAMPLESIZE 變更為4，而程式碼會正確執行，而不需要任何其他變更。
 
 ```cpp
 #include <iostream>
@@ -252,7 +252,7 @@ int main() {
 
 ## <a name="race-conditions"></a>追蹤條件
 
-它可能會想要建立`tile_static`名為變數`total`且遞增量為該變數的每個執行緒，就像這樣：
+建立名為 `total` 的 `tile_static` 變數，並為每個執行緒遞增該變數，可能會很吸引人，如下所示：
 
 ```cpp
 // Do not do this.
@@ -263,7 +263,7 @@ t_idx.barrier.wait();
 averages(t_idx.tile[0],t_idx.tile[1]) /= (float) (SAMPLESIZE* SAMPLESIZE);
 ```
 
-此方法的第一個問題在於`tile_static`變數不能有初始設定式。 第二個問題是在指派給是競爭狀況`total`，因為 tile 中執行緒的所有不依特定順序取得變數的存取。 您可以撰寫演算法，只允許一個執行緒存取每個障礙物，總計，如下所示。 不過，此方案不是可延伸的。
+這種方法的第一個問題是 `tile_static` 變數不能有初始化運算式。 第二個問題是，`total`指派的競爭條件，因為磚中的所有線程都有權存取變數，而不是特定的順序。 您可以將演算法的程式設計成隻允許一個執行緒存取每個屏障的總計，如下所示。 不過，此解決方案不是可擴充的。
 
 ```cpp
 // Do not do this.
@@ -281,27 +281,27 @@ t_idx.barrier.wait();
 // etc.
 ```
 
-## <a name="memory-fences"></a>記憶體柵欄
+## <a name="memory-fences"></a>記憶體時限
 
-有兩種類型的記憶體存取必須同步處理，全域記憶體存取和`tile_static`記憶體存取。 A`concurrency::array`物件配置只在全域記憶體。 A`concurrency::array_view`可以參考全域記憶體、`tile_static`記憶體，或兩者，根據其建構方式。  有兩種類型的記憶體必須同步處理：
+有兩種必須同步處理的記憶體存取：全域記憶體存取和 `tile_static` 記憶體存取。 `concurrency::array` 物件只會配置全域記憶體。 `concurrency::array_view` 可以參考全域記憶體、`tile_static` 記憶體或兩者，視其結構而定。  有兩種類型的記憶體必須進行同步處理：
 
 - 全域記憶體
 
 - `tile_static`
 
-A*記憶體柵欄*可確保存取可供其他執行緒 tile 中執行緒，該記憶體和記憶體存取根據依照程式順序執行。 若要確保這種情況，編譯器和處理器不得重新排列讀取和寫入之間的範圍。 在C++AMP 記憶體柵欄由呼叫其中一個方法：
+*記憶體隔離*可確保執行緒磚中的其他執行緒可以使用記憶體存取，而且會根據程式循序執行記憶體存取。 為了確保這一點，編譯器和處理器不會重新排列整個範圍中的讀取和寫入。 在C++ AMP 中，記憶體隔離是透過呼叫下列其中一個方法來建立：
 
-- [tile_barrier:: wait 方法](reference/tile-barrier-class.md#wait):建立周圍的圍欄的全域和`tile_static`記憶體。
+- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)：建立全域和 `tile_static` 記憶體周圍的範圍。
 
-- [tile_barrier:: wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence):建立周圍的圍欄的全域和`tile_static`記憶體。
+- [tile_barrier：： Wait_with_all_memory_fence 方法](reference/tile-barrier-class.md#wait_with_all_memory_fence)：建立全域和 `tile_static` 記憶體周圍的範圍。
 
-- [tile_barrier:: wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence):建立只在全域記憶體周圍的圍欄。
+- [tile_barrier：： Wait_with_global_memory_fence 方法](reference/tile-barrier-class.md#wait_with_global_memory_fence)：只會在全域記憶體周圍建立一個範圍。
 
-- [tile_barrier:: wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence):建立唯一周圍的圍欄`tile_static`記憶體。
+- [tile_barrier：： Wait_with_tile_static_memory_fence 方法](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence)：只會針對 `tile_static` 記憶體建立一個範圍。
 
-呼叫特定範圍，您需要可以改善您的應用程式的效能。 屏障類型會影響如何在編譯器和硬體重新排列陳述式。 例如，如果您使用的全域記憶體圍欄，它適用於全域記憶體存取，因此，編譯器和硬體可能重新排列讀取並寫入`tile_static`圍欄兩側的變數。
+呼叫您所需的特定範圍，可以改善應用程式的效能。 屏障類型會影響編譯器和硬體重新排序語句的方式。 例如，如果您使用全域記憶體的範圍，它只會套用到全域記憶體存取，因此編譯器和硬體可能會將讀取和寫入重新排列至範圍兩邊的 `tile_static` 變數。
 
-在下一個範例中，屏障會同步寫入`tileValues`、`tile_static`變數。 在此範例中，`tile_barrier::wait_with_tile_static_memory_fence`而不是呼叫`tile_barrier::wait`。
+在下一個範例中，屏障會同步處理寫入至 `tileValues`（`tile_static` 變數）。 在此範例中，會呼叫 `tile_barrier::wait_with_tile_static_memory_fence`，而不是 `tile_barrier::wait`。
 
 ```cpp
 // Using a tile_static memory fence.
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static 關鍵字](../../cpp/tile-static-keyword.md)

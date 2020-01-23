@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 08ecb5bc55ead207d6e4a0029a21e737d447143b
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556730"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518201"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
@@ -146,6 +146,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 ```
 
 請注意，如果您未定義 `"type"`，預設會假設 `"STRING"` 類型。
+- `remoteCopyOptimizations`： **Visual Studio 2019 16.5 版或更新版本**的屬性，用來控制遠端目標的來源複本。 預設會啟用優化。 包含 `remoteCopyUseOptimizations`、`rsyncSingleDirectoryCommandArgs` 與 `remoteCopySourcesMaxSmallChange`。
 
 ## <a name="environments"></a>環境
 

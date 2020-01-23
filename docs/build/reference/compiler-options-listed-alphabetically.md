@@ -1,14 +1,14 @@
 ---
 title: 依字母順序排列的編譯器選項
-ms.date: 08/08/2019
+ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 39dd11245ef88d1d59d3eda8cbeaa5fc4494b9a8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685327"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518370"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
@@ -99,7 +99,7 @@ ms.locfileid: "71685327"
 |[/Od](od-disable-debug.md)|停用最佳化。|
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
 |[/Oi](oi-generate-intrinsic-functions.md)|產生內建函式。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|在原始程式碼中啟用[`#pragma omp`](../../preprocessor/omp.md)指示詞。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|啟用原始程式碼中的[`#pragma omp`](../../preprocessor/omp.md)指示詞。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|偏好小的程式碼。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|偏好快的程式碼。|
 |[/Ox](ox-full-optimization.md)|不包含/GF 或/Gy. 的/O2 子集|
@@ -109,6 +109,7 @@ ms.locfileid: "71685327"
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|產生快速超越函式。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 在必須從浮點類型轉換為整數類型時，抑制 `_ftol` (僅適用於 x86)。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|移除 `fwait` 區塊內的 `try` 命令。|
+|[/QIntel-jcc-erratum](qintel-jcc-erratum.md)|降低 Intel JCC 錯誤微碼更新的效能影響。|
 |[/Qpar (自動平行化工具)](qpar-auto-parallelizer.md)|啟用標記為 [#pragma loop()](../../preprocessor/loop.md) 指示詞之迴圈的自動平行處理。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
 |[/Qspectre](qspectre.md)|指定產生指示的編譯器，以減少特定 Spectre 變體 1 的安全性弱點。|
@@ -167,7 +168,7 @@ ms.locfileid: "71685327"
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生要在 Windows 執行階段上執行的輸出檔。|
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

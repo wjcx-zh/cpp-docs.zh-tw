@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: daab00768f8140869a8db39c73f4fec3ab6304c7
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: d002fd4c4edc99775e62023dda7998fba2c6a44f
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051517"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518165"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>逐步解說：在命令列上編譯原生 C++ 程式
 
@@ -24,7 +24,7 @@ Visual Studio 包含命令列C++編譯器，可讓您用來建立從基本主控
 
 在此逐步解說中，您可以使用自己的 Visual C++ 程式，而不是輸入所顯示的程式，或者您可以使用其他說明文章中的 Visual C++ 程式碼範例。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必要條件：
 
 若要完成此逐步解說，您必須安裝 Visual Studio 和選用的**桌面開發C++** 工作負載，或是 Visual Studio 的命令列組建工具。
 
@@ -78,7 +78,7 @@ Visual Studio 的組建工具只會安裝您建立 C 和C++程式所需的命令
    ```cpp
    #include <iostream>
    using namespace std;
-   void main()
+   int main()
    {
        cout << "Hello, world, from Visual C++!" << endl;
    }

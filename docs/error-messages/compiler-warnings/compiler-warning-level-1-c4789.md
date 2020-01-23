@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
-ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36278615631d017db1d1c2fc4eecf8c1612892de
+ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187227"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76518396"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>編譯器警告 (層級 1) C4789
 
-> 緩衝區 '*識別碼*' 的大小*N*位元組會溢位;*M*將位移處開始寫入位元組*L*
+> 大小*N*個位元組的緩衝區 '*identifier*' 將會溢出;會從 offset *L*開始寫入*M*個位元組
 
 ## <a name="remarks"></a>備註
 
-**C4789**時使用特定的 C 執行階段 (CRT) 函式會警告緩衝區溢位。 傳遞的參數，或進行指派時，它也會報告大小不符。 如果在編譯時期已知的資料大小可以警告。 這項警告是針對可能逃避一般的資料大小不符偵測的情況。
+使用特定的 C 執行時間（CRT）函式時， **C4789**會警告緩衝區溢位。 當傳遞參數或進行指派時，它也可以報告大小不符的情況。 如果在編譯時期已知資料大小，可能會出現警告。 這項警告是針對可能逃避一般的資料大小不符偵測的情況。
 
-**C4789**警告時資料複製到得太小，在編譯時期已知的資料區塊。
+將資料複製到已知在編譯時期太小的資料區塊時， **C4789**會發出警告。
 
-如果該複本會使用其中一個 CRT 函式的內建形式，就會發生警告：
+如果複製使用下列其中一個 CRT 函式的內建形式，就會發生警告：
 
 - [strcpy](../../c-runtime-library/reference/strcpy-wcscpy-mbscpy.md)
 
 - [memset](../../c-runtime-library/reference/memset-wmemset.md)
 
-- [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)， [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
+- [memcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)、 [wmemcpy](../../c-runtime-library/reference/memcpy-wmemcpy.md)
 
-當您轉換為較大的資料類型的參數，然後再進行從 lvalue 參考複製指派時，也會出現警告。
+當您將參數轉換成較大的資料類型，然後從左值參考進行複製指派時，也會出現警告。
 
-視覺化C++可能會產生這個警告，永遠不會執行的程式碼路徑。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
+視覺C++效果可能會針對永遠不會執行的程式碼路徑產生此警告。 您可以使用 `#pragma` (如這個範例所示) 以暫時停用警告：
 
 ```cpp
 #pragma warning( push )
@@ -42,7 +42,7 @@ ms.locfileid: "62187227"
 #pragma warning( pop )
 ```
 
-這個慣用語會保留 VisualC++產生該特定程式碼區段的警告。 `#pragma warning(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma warning(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需詳細資訊C++前置處理器指示詞`#pragma`，請參閱[警告](../../preprocessor/warning.md)並[Pragma 指示詞和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
+這個用法會防止C++視覺效果產生該特定程式碼區塊的警告。 `#pragma warning(push)` 會先保留現有的狀態，直到 `#pragma warning(disable: 4789)` 變更它。 `#pragma warning(pop)` 還原推入的狀態，並移除 `#pragma warning(disable:4789)` 的效果。 如需預處理器指示C++詞 `#pragma`的詳細資訊，請參閱[warning](../../preprocessor/warning.md)和 Pragma 指示詞[和 __Pragma 關鍵字](../../preprocessor/pragma-directives-and-the-pragma-keyword.md)。
 
 ## <a name="example"></a>範例
 
@@ -78,7 +78,7 @@ int main()
 // processor: x86
 short G;
 
-void main()
+int main()
 {
    int * p = (int *)&G;
    *p = 3;   // C4789 - writes an int through a pointer to short

@@ -3,7 +3,14 @@
 - name: 下載、安裝及設定 Linux 開發工作負載
   href: download-install-and-setup-the-linux-development-workload.md
 - name: 連線到遠端 Linux 電腦
-  href: connect-to-your-remote-linux-computer.md
+  expanded: true
+  items:
+    - name: 連線到遠端 Linux 電腦
+      href: connect-to-your-remote-linux-computer.md
+    - name: 設定符合 FIPS 規範的安全遠端 Linux 開發
+      href: set-up-fips-compliant-secure-remote-linux-development.md
+    - name: ConnectionManager 參考
+      href: connectionmanager-reference.md
 - name: 建立新的 Linux 專案
   href: create-a-new-linux-project.md
 - name: 設定 Linux 專案

@@ -1,6 +1,7 @@
 ---
-title: _popen、_wpopen
-ms.date: 11/04/2016
+title: _popen、 _wpopen
+description: Microsoft C runtime （CRT）程式庫函數的參考 _popen 和 _wpopen。
+ms.date: 01/28/2020
 api_name:
 - _popen
 - _wpopen
@@ -36,19 +37,28 @@ helpviewer_keywords:
 - wpopen function
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
-ms.openlocfilehash: 0e58ffd523c6919d70c68454f3547736afdef565
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- _popen
+- _wpopen
+- _tpopen
+- _doserrno
+- errno
+- _sys_errlist
+- _sys_nerr
+- EINVAL
+ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950989"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894316"
 ---
 # <a name="_popen-_wpopen"></a>_popen、_wpopen
 
 建立管道並執行命令。
 
 > [!IMPORTANT]
-> 這個應用程式開發介面不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
+> 這個 API 不能用於在 Windows 執行階段中執行的應用程式。 如需詳細資訊，請參閱 [CRT functions not supported in Universal Windows Platform apps](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md) (通用 Windows 平台應用程式中不支援的 CRT 函式)。
 
 ## <a name="syntax"></a>語法
 
@@ -65,21 +75,21 @@ FILE *_wpopen(
 
 ### <a name="parameters"></a>參數
 
-*command*<br/>
+*命令*\
 要執行的命令。
 
-*mode*<br/>
+*模式*\
 所傳回資料流的模式。
 
 ## <a name="return-value"></a>傳回值
 
-傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是不正確參數（例如，如果*命令*或*模式*是 null 指標，或*模式*不是有效的模式）， **errno**會設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
+傳回與所建立管道的一端相關聯的資料流。 管道的另一端會與所繁衍命令的標準輸入或標準輸出相關聯。 發生錯誤時，函式會傳回 **NULL**。 如果錯誤是由不正確參數所造成，則**errno**會設定為**EINVAL**。 請參閱＜備註＞一節查看有效的模式。
 
 如需這些錯誤碼和其他錯誤碼的資訊，請參閱 [_doserrno、errno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
 ## <a name="remarks"></a>備註
 
-**_Popen**函式會建立管道，並以指定的字串*命令*以非同步方式執行命令處理器的產生複本。 字元字串 *mode* 會指定要求的存取類型，如下所示。
+**_Popen**函數會建立一個管道。 然後，它會以非同步方式執行命令處理器的產生複本，並使用*命令*做為命令列。 字元字串 *mode* 會指定要求的存取類型，如下所示。
 
 |存取模式|描述|
 |-|-|
@@ -89,7 +99,7 @@ FILE *_wpopen(
 |**"t"**|在文字模式中開啟。|
 
 > [!NOTE]
-> 如果在 Windows 程式中使用， **_popen**函式會傳回不正確檔案指標，使程式無限期地停止回應。 **_popen**可在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式，請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
+> 如果在 Windows 程式中使用， **_popen**函式會傳回不正確檔案指標，使程式無限期地停止回應。 **_popen**在主控台應用程式中正常運作。 若要建立重新導向輸入和輸出的 Windows 應用程式，請參閱在 Windows SDK 中[使用重新導向的輸入和輸出建立子進程](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output)。
 
 **_wpopen**是寬字元版本的 **_popen**; **_wpopen**的*path*引數是寬字元字串。 相反地， **_wpopen**和 **_popen**的行為相同。
 
@@ -106,7 +116,7 @@ FILE *_wpopen(
 |**_popen**|\<stdio.h>|
 |**_wpopen**|\<stdio.h> 或 \<wchar.h>|
 
-如需相容性的詳細資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需詳細的相容性資訊，請參閱 [Compatibility](../../c-runtime-library/compatibility.md)。
 
 ## <a name="libraries"></a>程式庫
 
@@ -141,7 +151,7 @@ int main( void )
 
    while(fgets(psBuffer, 128, pPipe))
    {
-      printf(psBuffer);
+      puts(psBuffer);
    }
 
    /* Close pipe and print return value of pPipe. */
@@ -156,9 +166,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>範例輸出
-
-此輸出假設目前的目錄中只有一個檔案的副檔名為 .c。
+此輸出假設目前目錄中只有一個檔案具有 `.c` 的副檔名。
 
 ```Output
 Volume in drive C is CDRIVE
@@ -173,8 +181,8 @@ Directory of D:\proj\console\test1
 Process returned 0
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[流程控制和環境控制](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_pclose](pclose.md)<br/>
-[_pipe](pipe.md)<br/>
+[進程和環境控制](../../c-runtime-library/process-and-environment-control.md)\
+[_pclose](pclose.md)\
+[_pipe](pipe.md)

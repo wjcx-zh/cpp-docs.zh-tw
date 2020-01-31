@@ -1,6 +1,7 @@
 ---
-title: setlocale、_wsetlocale
-ms.date: 11/04/2016
+title: setlocale、 _wsetlocale
+description: 描述 Microsoft C runtime （CRT）程式庫函數 setlocale 和 _wsetlocale。
+ms.date: 01/28/2020
 api_name:
 - _wsetlocale
 - setlocale
@@ -33,12 +34,15 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 375b1de82f72447d7e41b051c2aa1307716fb0dd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+no-loc:
+- setlocale
+- _wsetlocale
+ms.openlocfilehash: 08684e17a801e660ae2771c9e717dfa28621d600
+ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948251"
+ms.lasthandoff: 01/31/2020
+ms.locfileid: "76894342"
 ---
 # <a name="setlocale-_wsetlocale"></a>setlocale、_wsetlocale
 
@@ -59,15 +63,15 @@ wchar_t *_wsetlocale(
 
 ### <a name="parameters"></a>參數
 
-*category*<br/>
+*類別*\
 地區設定所影響的分類。
 
-*locale*<br/>
+*地區*設定\
 地區設定指定名稱。
 
 ## <a name="return-value"></a>傳回值
 
-如果指定有效的*地區*設定和*分類*，則會傳回與指定的*地區*設定和*分類*相關聯之字串的指標。 如果*地區*設定或*分類*無效，則會傳回 null 指標，且不會變更程式目前的地區設定。
+如果指定有效的*地區*設定和*分類*，則會傳回與指定的*地區*設定和*分類*相關聯之字串的指標。 如果*地區*設定或*類別*無效，則會傳回 null 指標，而程式目前的地區設定則不會變更。
 
 例如，呼叫
 
@@ -87,7 +91,7 @@ en-US
 
 您可以使用**setlocale**函數來設定、變更或查詢*locale*和*category*所指定的部分或所有目前程式地區設定資訊。 *地區*設定是指您可以自訂程式某些層面的位置（國家/地區和語言）。 有些與地區設定相關的類別含有日期格式和貨幣值的顯示格式。 如果您將*地區*設定設為在電腦上支援多個表單之語言的預設字串，則應檢查**setlocale**傳回值，以查看哪些語言已生效。 例如，如果您將*地區*設定設為 "中文"，則傳回值可以是「簡體中文」或「繁體中文」。
 
-**_wsetlocale**是寬字元版本的**setlocale**; **_wsetlocale**的*地區*設定引數和傳回值是寬字元字串。 相反地， **_wsetlocale**和**setlocale**的行為相同。
+**_wsetlocale**是寬字元版本的**setlocale**; **_wsetlocale**的*地區*設定引數和傳回值是寬字元字串。 **_wsetlocale**和**setlocale**的行為相同。
 
 ### <a name="generic-text-routine-mappings"></a>一般文字常式對應
 
@@ -106,7 +110,7 @@ en-US
 | **LC_NUMERIC** | 格式化輸出常式（例如**printf**）的小數點字元、資料轉換常式，以及**localeconv**所傳回的非貨幣格式資訊。 除了小數點字元以外， **LC_NUMERIC**會設定[localeconv](localeconv.md)所傳回的千位分隔符號和群組控制字元串。 |
 | **LC_TIME** | **Strftime**和**wcsftime**函數。 |
 
-此函式會驗證分類參數。 如果分類參數不是前表中所指定的其中一個值，則會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
+此函式會驗證分類參數。 如果 category 參數不是上表中指定的其中一個值，則會叫用不正確參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會將**errno**設定為**EINVAL** ，並傳回**Null**。
 
 *Locale*引數是指定地區設定之字串的指標。 如需*地區*設定引數格式的詳細資訊，請參閱[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)。 如果 *locale* 指向空字串，地區設定即為由實作所定義的原生環境。 **C**的值指定 c 轉譯的最低 ANSI 符合標準環境。 **C**地區設定會假設所有**char**資料類型都是1位元組，而且其值一律小於256。
 
@@ -116,7 +120,7 @@ en-US
 
 *地區*設定引數可以採用地區設定名稱、語言字串、語言字串和國家/地區代碼、字碼頁，或語言字串、國家/地區碼和字碼頁。 可用的地區設定名稱、語言、國家/地區碼和字碼頁的集合，包含所有 Windows NLS 應用程式開發介面 (API) 支援的所有項目，但不包含每個字元需要超過兩個位元組 (例如 UTF-7 及 UTF-8) 的字碼頁。 如果您提供 UTF-7 或 UTF-8 的字碼頁值， **setlocale**將會失敗，並傳回**Null**。 地區設定[名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)中會描述**setlocale**所支援的地區設定名稱集合。 **Setlocale**支援的一組語言和國家/地區字串會列在[語言字串](../../c-runtime-library/language-strings.md)和[國家/地區字串](../../c-runtime-library/country-region-strings.md)中。 我們建議使用內嵌於程式碼或針對儲存體序列化之地區設定字串的效能與維護所適用的地區設定名稱格式。 地區設定名稱字串比語言和國家/地區名稱格式更不容易被作業系統更新變更。
 
-當做*地區*設定引數傳遞的 null 指標會指示**setlocale**進行查詢，而不是設定國際環境。 如果*locale*引數為 null 指標，則不會變更程式目前的地區設定。 相反地， **setlocale**會傳回與執行緒目前地區設定的*類別*相關聯之字串的指標。 如果*分類*引數是**LC_ALL**，則函式會傳回字串，指出每個分類的目前設定（以分號分隔）。 例如，呼叫的順序
+當做*地區*設定引數傳遞的 null 指標會指示**setlocale**進行查詢，而不是設定國際環境。 如果*locale*引數為 null 指標，則不會變更程式目前的地區設定。 相反地， **setlocale**會傳回與執行緒目前地區設定的*類別*相關聯之字串的指標。 如果*分類*引數是**LC_ALL**，此函式會傳回字串，指出每個分類的目前設定（以分號分隔）。 例如，呼叫的順序
 
 ```C
 // Set all categories and return "en-US"
@@ -134,31 +138,31 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
 這是與**LC_ALL**分類相關聯的字串。
 
-下列範例與**LC_ALL**類別相關。 字串「.OCP」或「.ACP」可以用來以分別指定使用者預設 OEM 字碼頁以及使用者預設 ANSI 字碼頁的用途，字碼頁編號則無法這麼做。
+下列範例與**LC_ALL**分類有關。 任一字串」。OCP "and"。您可以使用 ACP，而不是字碼頁編號，分別指定使用者預設的 OEM 字碼頁，以及該地區設定名稱的使用者預設 ANSI 字碼頁。
 
 - `setlocale( LC_ALL, "" );`
 
-   將地區設定設定為從作業系統取得的使用者預設 ANSI 字碼頁的預設值。
+   將地區設定設定為從作業系統取得的使用者預設 ANSI 字碼頁的預設值。 地區設定名稱會設為[GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)所傳回的值。 字碼頁會設定為[GetACP](/windows/win32/api/winnls/nf-winnls-getacp)所傳回的值。
 
 - `setlocale( LC_ALL, ".OCP" );`
 
-   將地區設定明確設定為從作業系統取得的目前 OEM 字碼頁。
+   將地區設定設為從作業系統取得的目前 OEM 字碼頁。 地區設定名稱會設為[GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)所傳回的值。 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)會將字碼頁設定為使用者預設地區設定名稱的[LOCALE_IDEFAULTCODEPAGE](/windows/win32/intl/locale-idefault-constants)值。
 
 - `setlocale( LC_ALL, ".ACP" );`
 
-   將地區設定設定為從作業系統取得的 ANSI 字碼頁。
+   將地區設定設定為從作業系統取得的 ANSI 字碼頁。 地區設定名稱會設為[GetUserDefaultLocaleName](/windows/win32/api/winnls/nf-winnls-getuserdefaultlocalename)所傳回的值。 [GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)會將字碼頁設定為使用者預設地區設定名稱的[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)值。
 
 - `setlocale( LC_ALL, "<localename>" );`
 
-   將地區設定設為 \<地區設定名稱> 所表示的地區設定名稱。
+   將地區設定設為 \<地區設定名稱> 所表示的地區設定名稱。 針對指定的地區設定名稱，使用[GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)，將字碼頁設為[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)值。
 
 - `setlocale( LC_ALL, "<language>_<country>" );`
 
-   將地區設定設定為 \<語言> 和 \<國家/地區> 所表示的語言和國家/地區，以及從主機作業系統取得的預設字碼頁。
+   將地區設定設定為 \<語言> 和 \<國家/地區> 所表示的語言和國家/地區，以及從主機作業系統取得的預設字碼頁。 針對指定的地區設定名稱，使用[GetLocaleInfoEx](/windows/win32/api/winnls/nf-winnls-getlocaleinfoex)，將字碼頁設為[LOCALE_IDEFAULTANSICODEPAGE](/windows/win32/intl/locale-idefault-constants)值。
 
 - `setlocale( LC_ALL, "<language>_<country>.<code_page>" );`
 
-   設定所指定的地區設定的語言、 國家/地區和字碼頁 *\<語言 >* ， *\<國家/地區 >* ，以及 *\<字碼頁>* 字串。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
+   將地區設定設為 [語言]、[國家/地區] 和 [字碼頁]，這是由 *\<語言 >* 、 *\<國家/地區 >* 和 *\<* code_page 字串所指示。 您可以使用各種語言、國家/地區和字碼頁的組合。 例如，此呼叫會以字碼頁 1252 將地區設定設為加拿大法文：
 
    `setlocale( LC_ALL, "French_Canada.1252" );`
 
@@ -186,7 +190,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 
    將字碼頁設定為 <字碼頁> 所表示的值，以及指定字碼頁的預設國家/地區和語言 (由主機作業系統所定義)。
 
-此類別必須是**LC_ALL**或**LC_CTYPE** ，才能影響字碼頁的變更。 例如，如果主機作業系統的預設國家/地區和語言為「美國」和「英文」，則下列兩個對**setlocale**的呼叫在功能上是相同的：
+分類必須是**LC_ALL**或**LC_CTYPE** ，才會影響字碼頁的變更。 例如，如果主機作業系統的預設國家/地區和語言為「美國」和「英文」，則下列兩個對**setlocale**的呼叫在功能上是相同的：
 
 `setlocale( LC_ALL, ".1252" );`
 
@@ -203,7 +207,7 @@ LC_COLLATE=en-US;LC_CTYPE=en-US;LC_MONETARY=fr-FR;LC_NUMERIC=en-US;LC_TIME=en-US
 |**setlocale**|\<locale.h>|
 |**_wsetlocale**|\<locale.h> 或 \<wchar.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -309,20 +313,20 @@ The thread locale is now set to de-DE.
 The time in de-DE locale is: 'Mittwoch, 12. Mai 2004'
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
-[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[_configthreadlocale](configthreadlocale.md)<br/>
-[_create_locale、_wcreate_locale](create-locale-wcreate-locale.md)<br/>
-[地區設定](../../c-runtime-library/locale.md)<br/>
-[localeconv](localeconv.md)<br/>
-[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)<br/>
-[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)<br/>
-[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
-[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)<br/>
-[_setmbcp](setmbcp.md)<br/>
-[strcoll 函式](../../c-runtime-library/strcoll-functions.md)<br/>
-[strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
-[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>
-[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)<br/>
-[wctomb、_wctomb_l](wctomb-wctomb-l.md)<br/>
+[地區設定名稱、語言和國家/地區字串](../../c-runtime-library/locale-names-languages-and-country-region-strings.md)\
+[_configthreadlocale](configthreadlocale.md)\
+[_create_locale、_wcreate_locale](create-locale-wcreate-locale.md)\
+[Locale](../../c-runtime-library/locale.md)\
+[localeconv](localeconv.md)\
+[_mbclen、mblen、_mblen_l](mbclen-mblen-mblen-l.md)\
+[strlen、wcslen、_mbslen、_mbslen_l、_mbstrlen、_mbstrlen_l](strlen-wcslen-mbslen-mbslen-l-mbstrlen-mbstrlen-l.md)\
+[mbstowcs、_mbstowcs_l](mbstowcs-mbstowcs-l.md)\
+[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)\
+[_setmbcp](setmbcp.md)\
+[strcoll Functions](../../c-runtime-library/strcoll-functions.md)\
+[strftime、wcsftime、_strftime_l、_wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)\
+[strxfrm、wcsxfrm、_strxfrm_l、_wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)\
+[wcstombs、_wcstombs_l](wcstombs-wcstombs-l.md)\
+[wctomb、_wctomb_l](wctomb-wctomb-l.md)

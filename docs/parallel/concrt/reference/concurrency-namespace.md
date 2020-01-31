@@ -20,16 +20,16 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5449362454c5899e544ed370f13d28471a59bd13
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160066"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821840"
 ---
 # <a name="concurrency-namespace"></a>concurrency 命名空間
 
-`Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱[並行執行階段](../../../parallel/concrt/concurrency-runtime.md)。
+`Concurrency` 命名空間提供可讓您存取並行執行階段 (C++ 的並行程式設計架構) 的類別和函式。 如需詳細資訊，請參閱 [Concurrency Runtime](../../../parallel/concrt/concurrency-runtime.md)。
 
 ## <a name="syntax"></a>語法
 
@@ -37,11 +37,11 @@ ms.locfileid: "62160066"
 namespace concurrency;
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |`runtime_object_identity`|每個訊息執行個體在傳訊元件之間受到複製和傳遞時，後面都會接一個識別。 該識別不可為訊息物件的位址。|
 |`task_status`|代表工作終止狀態的類型。 有效值為 `completed` 和 `canceled`。|
@@ -50,7 +50,7 @@ namespace concurrency;
 
 ### <a name="classes"></a>類別
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[affinity_partitioner 類別](affinity-partitioner-class.md)|`affinity_partitioner` 類別與 `static_partitioner` 類別類似，不過，它可依據對應背景工作執行緒子範圍的選擇來改善快取依存性。 當迴圈重複執行相同的資料集，且快取容納得下該資料時，它可以大幅改善效能。 請注意，若要取得資料位置的優勢，必須使用相同的 `affinity_partitioner` 物件來搭配平行迴圈的後續反覆項目，且該平行迴圈應執行於特定資料集上。|
 |[agent 類別](agent-class.md)|適合做為所有獨立代理程式之基底類別的類別。 它用來對其他代理程式隱藏狀態，並使用訊息傳遞互動。|
@@ -66,12 +66,12 @@ namespace concurrency;
 |[concurrent_queue 類別](concurrent-queue-class.md)|`concurrent_queue` 類別是一種序列容器類別，允許以先進先出的方式存取其項目。 它會啟用一組有限的並行安全作業，例如 `push` 和 `try_pop` 等。|
 |[concurrent_unordered_map 類別](concurrent-unordered-map-class.md)|`concurrent_unordered_map` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。|
 |[concurrent_unordered_multimap 類別](concurrent-unordered-multimap-class.md)|`concurrent_unordered_multimap` 類別是一種並行安全容器，可控制 `std::pair<const K, _Element_type>` 類型項目的不同長度序列。 序列的表示方式導致啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。|
-|[concurrent_unordered_multiset 類別](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset`類別是並行安全容器，可控制不同長度序列的項目型別 k。序列的表示方式啟用並行安全附加、 項目存取、 迭代器存取及迭代器周遊作業。|
-|[concurrent_unordered_set 類別](concurrent-unordered-set-class.md)|`concurrent_unordered_set`類別是並行安全容器，可控制不同長度序列的項目型別 k。序列的表示方式啟用並行安全附加、 項目存取、 迭代器存取及迭代器周遊作業。|
+|[concurrent_unordered_multiset 類別](concurrent-unordered-multiset-class.md)|`concurrent_unordered_multiset` 類別是一種並行安全容器，可控制類型為 K 之元素的變動長度序列。序列的表示方式為啟用並行安全附加、專案存取、反覆運算器存取和反覆運算器的作業。|
+|[concurrent_unordered_set 類別](concurrent-unordered-set-class.md)|`concurrent_unordered_set` 類別是一種並行安全容器，可控制類型為 K 之元素的變動長度序列。序列的表示方式為啟用並行安全附加、專案存取、反覆運算器存取和反覆運算器的作業。|
 |[concurrent_vector 類別](concurrent-vector-class.md)|`concurrent_vector` 類別是一種序列容器類別，允許以隨機方式存取任何項目。 它會啟用並行安全附加、項目存取、迭代器存取及迭代器周遊作業。|
 |[Context 類別](context-class.md)|代表執行內容的抽象概念。|
 |[context_self_unblock 類別](context-self-unblock-class.md)|這個類別描述從同樣的內容呼叫 `Context` 物件的 `Unblock` 方法所擲回的例外狀況。 這會指出指定內容自行解除封鎖的嘗試。|
-|[context_unblock_unbalanced 類別](context-unblock-unbalanced-class.md)|這個類別描述時所擲回的例外狀況呼叫`Block`並`Unblock`方法`Context`物件未正確配對。|
+|[context_unblock_unbalanced 類別](context-unblock-unbalanced-class.md)|這個類別描述未正確配對 `Context` 物件的 `Block` 和 `Unblock` 方法的呼叫時，所擲回的例外狀況。|
 |[critical_section 類別](critical-section-class.md)|其為並行執行階段明確察覺且不可重新進入的 Mutex。|
 |[CurrentScheduler 類別](currentscheduler-class.md)|代表與呼叫內容相關之目前排程器的抽象概念。|
 |[default_scheduler_exists 類別](default-scheduler-exists-class.md)|這個類別描述預設排程器已經存在於處理序中時呼叫 `Scheduler::SetDefaultSchedulerPolicy` 方法所擲回的例外狀況。|
@@ -120,9 +120,9 @@ namespace concurrency;
 |[structured_task_group 類別](structured-task-group-class.md)|`structured_task_group` 類別代表平行工作的高度結構化集合。 您可以使用 `task_handle` 物件，將個別平行工作佇列到 `structured_task_group` 中並等候這些工作完成，也可以在工作完成執行前取消工作群組，這樣會中止所有尚未開始執行的工作。|
 |[target_block 類別](target-block-class.md)|`target_block` 類別是一種抽象基底類別，可提供基本的連結管理功能和僅限目標區塊的錯誤檢查。|
 |[task 類別 (並行執行階段)](task-class.md)|平行模式程式庫 (PPL) `task` 類別。 `task` 物件代表可以非同步執行，並可與其他工作以及並行執行階段中平行演算法所產生的平行工作同時執行的工作。 成功完成時，會產生 `_ResultType` 類型的結果。 `task<void>` 類型的工作不會產生任何結果。 工作可以獨立於其他工作，個別等候及取消。 您也可以使用 continuations(`then`)、join(`when_all`) 和 choice(`when_any`) 等模式，將工作與其他工作組合在一起。|
-|[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也會藉由擲回`get()`方法[工作](task-class.md)，已取消的工作。|
+|[task_canceled 類別](task-canceled-class.md)|這個類別描述 PPL 工作分層為了強制目前工作取消，而擲回的例外狀況。 它也是由[工作上的](task-class.md)`get()` 方法所擲回，用於已取消的工作。|
 |[task_completion_event 類別](task-completion-event-class.md)|`task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。|
-|[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 最好只從 UWP 應用程式使用此類別。 對於非 Windows 執行階段應用程式，工作接續的執行內容是由執行階段，而且不進行設定。|
+|[task_continuation_context 類別](task-continuation-context-class.md)|`task_continuation_context` 類別可讓您指定您想要執行接續的位置。 這只適用于從 UWP 應用程式使用此類別。 針對非 Windows 執行階段的應用程式，工作接續的執行內容是由執行時間所決定，而且無法設定。|
 |[task_group 類別](task-group-class.md)|`task_group` 類別表示可以等候或取消的平行工作集合。|
 |[task_handle 類別](task-handle-class.md)|`task_handle` 類別代表個別的平行工作項目。 它會封裝執行工作所需的指示和資料。|
 |[task_options 類別 (並行執行階段)](task-options-class-concurrency-runtime.md)|代表可用來建立工作的選項。|
@@ -133,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>結構
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[DispatchState 結構](dispatchstate-structure.md)|`DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。|
 |[IExecutionContext 結構](iexecutioncontext-structure.md)|執行內容的介面，可於指定的虛擬處理器上執行，也可以合作方式切換內容。|
@@ -150,42 +150,42 @@ namespace concurrency;
 |[IUMSUnblockNotification 結構](iumsunblocknotification-structure.md)|代表資源管理員發出的通知，其中說明遭封鎖並觸發傳回給排程器所指派之排程內容的執行緒 Proxy 已解除鎖定，而且已準備好進行排程。 若重新排程從 `GetContext` 方法傳回之執行緒 Proxy 的相關執行內容，則此介面不正確。|
 |[IVirtualProcessorRoot 結構](ivirtualprocessorroot-structure.md)|執行緒 Proxy 可以在其上執行的硬體執行緒的抽象概念。|
 |[scheduler_interface 結構](scheduler-interface-structure.md)|排程器介面|
-|[scheduler_ptr 結構 (並行執行階段)](scheduler-ptr-structure-concurrency-runtime.md)|代表排程器的指標。 這個類別存在，以允許使用 shared_ptr 或只是簡單參考使用原始指標的共用的存留期的規格。|
+|[scheduler_ptr 結構 (並行執行階段)](scheduler-ptr-structure-concurrency-runtime.md)|代表排程器的指標。 這個類別是用來允許使用 shared_ptr 或只使用原始指標的一般參考，來指定共用存留期間的規格。|
 
-### <a name="enumerations"></a>列舉
+### <a name="enumerations"></a>列舉型別
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|`agent` 的有效狀態。|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|可以使用代理程式程式庫所提供之追蹤功能追蹤的事件類型|
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|可以使用並行執行階段所提供的追蹤功能追蹤的事件類型。|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|事件類型的追蹤旗標。|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|內含內容之關鍵區域的類型。|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 原則用來描述要根據從排程器收集到的統計資訊重新平衡排程器的資源，或者只要根據透過 `IVirtualProcessorRoot` 介面上的 `Activate` 和 `Deactivate` 方法呼叫進出閒置狀態的虛擬處理器。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` 原則用來描述要根據從排程器收集到的統計資訊重新平衡排程器的資源，或者只要根據透過 `IVirtualProcessorRoot` 介面上的 `Activate` 和 `Deactivate` 方法呼叫進出閒置狀態的虛擬處理器。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` 傳訊區塊的類型。|
 |[message_status](concurrency-namespace-enums.md#message_status)|`message` 物件對區塊供應項目的有效回應。|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述排程器行為方面的原則機碼。 每個原則項目由一個機碼值組描述。 如需排程器排程器原則和其影響的相關詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|描述排程器行為方面的原則機碼。 每個原則項目由一個機碼值組描述。 如需排程器原則及其對排程器之影響的詳細資訊，請參閱[工作排程器](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)。|
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|`SchedulerKind` 原則用來描述排程器應用於基礎執行內容的執行緒類型。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|`SchedulingProtocol` 原則用於描述排程器將使用的排程演算法。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|用來表示執行緒 Proxy 所處的狀態 (當它正在執行將合作內容切換到不同的執行緒 Proxy 時)。|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|描述 `task_group` 或 `structured_task_group` 物件的執行狀態。 等待預定工作群組完成工作的許多方法，會傳回這個類型的值。|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 原則用來描述 Windows 執行階段是否會在執行 Windows 8 (含) 以後版本作業系統之應用程式的排程器執行緒上初始化，以及如何進行初始化。 如需有關可用排程器原則的詳細資訊，請參閱 < [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|由 `WinRTInitialization` 原則用來描述 Windows 執行階段是否會在執行 Windows 8 (含) 以後版本作業系統之應用程式的排程器執行緒上初始化，以及如何進行初始化。 如需可用排程器原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)。|
 
-### <a name="functions"></a>函式
+### <a name="functions"></a>功能
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[Alloc 函式](concurrency-namespace-functions.md#alloc)|會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。|
+|[配置函式](concurrency-namespace-functions.md#alloc)|會透過並行執行階段的快取子配置器指定的大小，來配置記憶體區塊。|
 |[asend 函式](concurrency-namespace-functions.md#asend)|多載。 非同步傳送作業，會排程工作將資料傳播到目標區塊。|
 |[cancel_current_task 函式](concurrency-namespace-functions.md#cancel_current_task)|取消目前執行的工作。 這個函式可以從工作主體內呼叫，以中止工作執行並導致它進入 `canceled` 狀態。<br /><br /> 如果不是在 `task` 的主體中，這就不是支援呼叫這個函式的情況。 這樣做會在應用程式中導致未定義的行為，例如當機或停止回應。|
 |[create_async 函式](concurrency-namespace-functions.md#create_async)|以使用者提供的 Lambda 或函式物件為基礎，建立 Windows 執行階段非同步建構。 根據傳遞至方法的 Lambda 簽章，`create_async` 的傳回型別是下列其中一個：`IAsyncAction^`、`IAsyncActionWithProgress<TProgress>^`、`IAsyncOperation<TResult>^` 或 `IAsyncOperationWithProgress<TResult, TProgress>^`。|
-|[create_task 函式](concurrency-namespace-functions.md#create_task)|多載。 建立 PPL[任務](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。|
+|[create_task 函式](concurrency-namespace-functions.md#create_task)|多載。 建立 PPL [task](task-class.md)物件。 您可以在任何會使用工作建構函式的地方使用 `create_task`。 這主要是為了方便起見而提供，因為它允許在建立工作時使用 `auto` 關鍵字。|
 |[CreateResourceManager 函式](concurrency-namespace-functions.md#createresourcemanager)|傳回代表並行執行階段資源管理員單一執行個體的介面。 資源管理員會負責將資源指派給想要與彼此相互合作的排程器。|
 |[DisableTracing 函式](concurrency-namespace-functions.md#disabletracing)|停用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已移除註冊而被取代。|
 |[EnableTracing 函式](concurrency-namespace-functions.md#enabletracing)|啟用並行執行階段中的追蹤。 根據預設，這個函式因為 ETW 追蹤已開啟而被取代。|
 |[Free 函式](concurrency-namespace-functions.md#free)|釋放先前由 `Alloc` 方法配置的記憶體區塊至並行執行階段的快取子配置器。|
-|[get_ambient_scheduler 函式 （並行執行階段）](concurrency-namespace-functions.md#get_ambient_scheduler)||
-|[GetExecutionContextId 函式](concurrency-namespace-functions.md#getexecutioncontextid)|傳回可指派給實作 `IExecutionContext` 介面之執行內容的唯一識別碼。|
+|[get_ambient_scheduler 函式（並行執行階段）](concurrency-namespace-functions.md#get_ambient_scheduler)||
+|[GetExecutionCoNtextId 函式](concurrency-namespace-functions.md#getexecutioncontextid)|傳回可指派給實作 `IExecutionContext` 介面之執行內容的唯一識別碼。|
 |[GetOSVersion 函式](concurrency-namespace-functions.md#getosversion)|傳回作業系統版本。|
 |[GetProcessorCount 函式](concurrency-namespace-functions.md#getprocessorcount)|傳回基礎系統上的硬體執行緒數目。|
 |[GetProcessorNodeCount 函式](concurrency-namespace-functions.md#getprocessornodecount)|傳回基礎系統上的 NUMA 節點或處理器套件數目。|
@@ -204,14 +204,14 @@ namespace concurrency;
 |[parallel_reduce 函式](concurrency-namespace-functions.md#parallel_reduce)|多載。 以平行方式，透過計算後繼元素的部分總和來計算在一定範圍內所有項目的總和，或是計算部分後繼結果 (取得方式是使用指定的二進位運算而非總和運算得出) 的結果。 `parallel_reduce` 語意與 `std::accumulate` 類似；不同的是，它需要關聯的二進位運算，而且需要識別值而不是初始值。|
 |[parallel_sort 函式](concurrency-namespace-functions.md#parallel_sort)|多載。 將在指定範圍中的項目排列成非遞減順序，或是依據二元述詞指定的順序準則以平行方式排列。 這個函式語意與 `std::sort` 類似，皆是以比較為基礎、不穩定、就地排序的。|
 |[parallel_transform 函式](concurrency-namespace-functions.md#parallel_transform)|多載。 以平行方式，將指定的函式物件套用至來源範圍中的每個項目，或是一組來自兩個來源範圍的項目，並複製函式物件的傳回值到目的範圍。 此函式在語意上等於 `std::transform`。|
-|[接收函式](concurrency-namespace-functions.md#receive)|多載。 一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。|
+|[receive 函式](concurrency-namespace-functions.md#receive)|多載。 一般接收實作，可讓內容等候來自一個來源的資料，並且篩選所接受的值。|
 |[run_with_cancellation_token 函式](concurrency-namespace-functions.md#run_with_cancellation_token)|在指定的取消語彙基元內容中立即和同步地執行函式物件。|
 |[send 函式](concurrency-namespace-functions.md#send)|多載。 同步傳送作業，其會等候直到目標接受或拒絕訊息。|
-|[set_ambient_scheduler 函式 （並行執行階段）](concurrency-namespace-functions.md#set_ambient_scheduler)||
+|[set_ambient_scheduler 函式（並行執行階段）](concurrency-namespace-functions.md#set_ambient_scheduler)||
 |[set_task_execution_resources 函式](concurrency-namespace-functions.md#set_task_execution_resources)|多載。 依據指定的同質性集，限制並行執行階段之內部背景工作執行緒使用的執行資源。<br /><br /> 只有在資源管理員建立之前，或在兩個資源管理員存留期之間，才能有效地呼叫這個方法。 只要資源管理員不在引動過程期間，即可多次叫用此函式。 在同質性限制設定之後，直到下次有效呼叫 `set_task_execution_resources` 方法之前，該限制會持續有效。<br /><br /> 提供的同質性遮罩不需為處理序同質性遮罩的子集。 您可視需要更新處理序的同質性遮罩。|
 |[swap 函式](concurrency-namespace-functions.md#swap)|交換兩個 `concurrent_vector` 物件的項目。|
-|[task_from_exception 函式 （並行執行階段）](concurrency-namespace-functions.md#task_from_exception)||
-|[task_from_result 函式 （並行執行階段）](concurrency-namespace-functions.md#task_from_result)||
+|[task_from_exception 函式（並行執行階段）](concurrency-namespace-functions.md#task_from_exception)||
+|[task_from_result 函式（並行執行階段）](concurrency-namespace-functions.md#task_from_result)||
 |[Trace_agents_register_name 函式](concurrency-namespace-functions.md#trace_agents_register_name)|將指定的名稱與 ETW 追蹤的訊息區塊或代理程式產生關聯。|
 |[try_receive 函式](concurrency-namespace-functions.md#try_receive)|多載。 一般嘗試-接收實作，可讓內容尋找來自特定一個來源的資料，並且篩選所接受的值。 如果資料還沒準備好，方法會傳回 false。|
 |[wait 函式](concurrency-namespace-functions.md#wait)|暫停目前的內容達指定的時間長度。|
@@ -220,10 +220,10 @@ namespace concurrency;
 
 ### <a name="operators"></a>運算子
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|測試運算子左邊的 `concurrent_vector` 物件是否不等於右邊的 `concurrent_vector` 物件。|
-|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|多載。 建立工作，這個工作將會在兩個當做引數提供的工作都已順利完成時成功完成。|
+|[operator&&](concurrency-namespace-operators.md#operator_amp_amp)|多載。 建立當兩個當做引數提供的工作都順利完成時，將會順利完成的工作。|
 |[operator&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|多載。 建立工作，這個工作將會在兩個當做引數提供的任一工作已順利完成時成功完成。|
 |[operator<](concurrency-namespace-operators.md#operator_lt)|測試運算子左邊的 `concurrent_vector` 物件是否小於右邊的 `concurrent_vector` 物件。|
 |[operator<=](concurrency-namespace-operators.md#operator_lt_eq)|測試運算子左邊的 `concurrent_vector` 物件是否小於或等於右邊的 `concurrent_vector` 物件。|
@@ -233,14 +233,14 @@ namespace concurrency;
 
 ### <a name="constants"></a>常數
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|分類 GUID ({B9B5B78C-0713-4898-A21A-C67949DCED07})，描述在並行執行階段由代理程式程式庫引發的 ETW 事件。|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|分類 GUID，描述直接與工作相關之並行執行階段引發的 ETW 事件。|
 |[ConcRT_ProviderGuid](concurrency-namespace-constants1.md#concrt_providerguid)|目前執行階段的 ETW 提供者 GUID。|
 |[CONCRT_RM_VERSION_1](concurrency-namespace-constants1.md#concrt_rm_version_1)|指出支援 Visual Studio 2010 中定義的資源管理員介面。|
 |[ConcRTEventGuid](concurrency-namespace-constants1.md#concrteventguid)|分類 GUID，描述其他分類未特定描述之並行執行階段引發的 ETW 事件。|
-|[ContextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|分類 GUID，描述直接與內容相關之並行執行階段引發的 ETW 事件。|
+|[CoNtextEventGuid](concurrency-namespace-constants1.md#contexteventguid)|分類 GUID，描述直接與內容相關之並行執行階段引發的 ETW 事件。|
 |[COOPERATIVE_TIMEOUT_INFINITE](concurrency-namespace-constants1.md#cooperative_timeout_infinite)|值，表示等候應該永遠不會逾時。|
 |[COOPERATIVE_WAIT_TIMEOUT](concurrency-namespace-constants1.md#cooperative_wait_timeout)|值，表示等候已逾時。|
 |[INHERIT_THREAD_PRIORITY](concurrency-namespace-constants1.md#inherit_thread_priority)|原則機碼 `ContextPriority` 的特殊值，代表排程器中所有內容的執行緒優先順序應該與建立排程器之執行緒的優先順序相同。|
@@ -256,8 +256,8 @@ namespace concurrency;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** agents.h、 concrt.h、 concrtrm.h、 concurrent_priority_queue.h、 concurrent_queue.h、 concurrent_unordered_map.h、 concurrent_unordered_set.h、 concurrent_vector.h、 internal_concurrent_hash.h、 internal_split_ordered_list.h、 ppl.h、 pplcancellation_token.h、 pplconcrt.h、 pplinterface.h、 ppltasks.h
+**標頭：** 代理程式 .h、concrt、concrtrm.h、concurrent_priority_queue .h、concurrent_queue concurrent_unordered_set concurrent_unordered_map .h、concurrent_vector .h、internal_concurrent_hash .h、pplconcrt、pplinterface、internal_split_ordered_list .h、.h、、ppltasks.h. h、、. h）。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [參考資料](reference-concurrency-runtime.md)

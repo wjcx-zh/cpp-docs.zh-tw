@@ -116,12 +116,12 @@ helpviewer_keywords:
 - std::basic_string [C++], substr
 - std::basic_string [C++], swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 6919f2ece4ed846cd80f791af91797373dea33b2
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 08620e0ae6b54b106daba8e0b0a392ceb1a6577d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051497"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821905"
 ---
 # <a name="basic_string-class"></a>basic_string 類別
 
@@ -136,13 +136,13 @@ class basic_string;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
-若要儲存在字串中之單一字元的資料類型。 C++標準程式庫提供此類別樣板的特製化，其中的類型定義[字串](../standard-library/string-typedefs.md#string)適用于**char**、 [wstring](../standard-library/string-typedefs.md#wstring)、for **wchar_t**、 [u16string](../standard-library/string-typedefs.md#u16string) for `char16_t`和[u32string](../standard-library/string-typedefs.md#u32string) for `char32_t`。
+*CharType*\
+若要儲存在字串中之單一字元的資料類型。 C++標準程式庫提供此類別樣板的特製化，其中包含類型為 **char**、[wstring](../standard-library/string-typedefs.md#wstring)、**wchar_t**、[u16string](../standard-library/string-typedefs.md#u16string) for`char16_t`和 [u32string](../standard-library/string-typedefs.md#u32string) 之元素的類型定義[字串](../standard-library/string-typedefs.md#string) `char32_t`。
 
 *特性*\
 Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類別 `Traits`所描述。 預設值是 `char_traits`< `CharType`>。
 
-配置*器 \*
+配置*器\*
 代表預存配置器物件的類型，封裝有關字串之記憶體配置和解除配置的詳細資訊。 預設值是 **allocator**< `CharType`>。
 
 ### <a name="constructors"></a>建構函式
@@ -234,7 +234,7 @@ Basic_string 特製化中 `CharType` 元素的各種重要屬性，都是由類�
 
 **標頭：** \<string>
 
-**命名空間:** std
+**命名空間：** std
 
 ## <a name="allocator_type"></a>  basic_string::allocator_type
 
@@ -246,7 +246,7 @@ typedef Allocator allocator_type;
 
 ### <a name="remarks"></a>備註
 
-這個類型與樣板參數 `Allocator`同義。
+此類型是樣板參數 `Allocator` 的同義字。
 
 ### <a name="example"></a>範例
 
@@ -307,10 +307,10 @@ basic_string<CharType, Traits, Allocator>& append(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 要附加的 C 字串。
 
-*str* \
+*str*\
 要附加其字元的字串。
 
 *位移*\
@@ -468,13 +468,13 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 要指派給目標字串之 C 字串的字元指標。
 
 *計數*\
 要從來源字串中指派的字元數。
 
-*str* \
+*str*\
 其字元要指派給目標字串的來源字串。
 
 *char_value*\
@@ -495,7 +495,7 @@ basic_string<CharType, Traits, Allocator>& assign(
 
 ### <a name="remarks"></a>備註
 
-字串可以指派新的字元值。 新的值可以是字串和 C 字串，或是單一字元。 如果單一參數可以描述新的值，則可以使用[operator =](#op_eq) 。否則，具有多個參數的成員函式 `assign` 可以用來指定要將字串的哪個部分指派給目標字串。
+字串可以指派新的字元值。 新的值可以是字串和 C 字串，或是單一字元。 如果單一參數可以描述新的值，則可以使用[operator =](#op_eq) 。否則，具有多個參數的成員函式 `assign`可以用來指定要將字串的哪個部分指派給目標字串。
 
 ### <a name="example"></a>範例
 
@@ -747,7 +747,7 @@ basic_string(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 所含字元用來初始化所建構之 `string` 的 C 字串。 此值不可以是 Null 指標。
 
 *alloc_type*\
@@ -756,7 +756,7 @@ basic_string(
 *計數*\
 要初始化的字元數。
 
-*right* \
+*right*\
 要初始化所建構之字串的字串。
 
 *right_offset*\
@@ -1030,7 +1030,7 @@ const_iterator cbegin() const;
 
 傳回值為 `cbegin` 時，無法修改範圍中的項目。
 
-您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `begin()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `begin()` 和 `cbegin()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.begin();
@@ -1056,7 +1056,7 @@ const_iterator cend() const;
 
 `cend` 用來測試迭代器是否已超過其範圍結尾。
 
-您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()` 之任何種類的可修改（非**const**）容器。
+您可以使用此成員函式取代 `end()` 成員函式，以確保傳回值是 `const_iterator`。 通常，它是與 [auto](../cpp/auto-cpp.md) 類型推算關鍵字一起使用，如下列範例所示。 在此範例中，請將 `Container` 視為支援 `end()` 和 `cend()`之任何種類的可修改（非**const**）容器。
 
 ```cpp
 auto i1 = Container.end();
@@ -1156,7 +1156,7 @@ int compare(
 
 ### <a name="parameters"></a>參數
 
-*str* \
+*str*\
 要與運算元字串比較的字串。
 
 *position_1*\
@@ -1174,7 +1174,7 @@ int compare(
 *計數*\
 要比較之參數字串的字元數上限。
 
-*ptr* \
+*ptr*\
 要與運算元字串比較的 C 字串。
 
 ### <a name="return-value"></a>傳回值
@@ -1406,7 +1406,7 @@ typedef typename allocator_type::const_pointer const_pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `allocator_type::const_pointer`的同義字。
+此類型是 `allocator_type::const_pointer` 的同義字。
 
 針對類型 `string`，它相當於 `char*`。
 
@@ -1448,7 +1448,7 @@ typedef typename allocator_type::const_reference const_reference;
 
 類型 `const_reference` 無法用來修改元素的值。
 
-此類型是 `allocator_type::const_reference`的同義字。 對於字串 `type`，它相當於 const `char&`。
+此類型是 `allocator_type::const_reference` 的同義字。 對於字串 `type`，它相當於 const `char&`。
 
 ### <a name="example"></a>範例
 
@@ -1485,7 +1485,7 @@ size_type copy(
 
 ### <a name="parameters"></a>參數
 
-*ptr* \
+*ptr*\
 要複製元素的目標字元陣列。
 
 *計數*要從來源字串最多複製的字元數。
@@ -1860,7 +1860,7 @@ int main( )
    str1_Iter--;
    str1_Iter--;
    cout << "The last character-letter of the string str1 is: " << *str1_Iter << endl;
-   cout << "The full orginal string str1 is: " << str1 << endl;
+   cout << "The full original string str1 is: " << str1 << endl;
 
    // end used to test when an iterator has reached the end of its string
    cout << "The string is now: ";
@@ -1887,7 +1887,7 @@ int main( )
 
 ```Output
 The last character-letter of the string str1 is: t
-The full orginal string str1 is: No way out.
+The full original string str1 is: No way out.
 The string is now: No way out.
 The last character-letter of the modified str1 is now: T
 The modified string str1 is now: No way ouT.
@@ -2028,13 +2028,13 @@ size_type find(
 *位移*\
 開始搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2203,13 +2203,13 @@ size_type find_first_not_of(
 *位移*\
 開始搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2391,13 +2391,13 @@ size_type find_first_of(
 *位移*\
 開始搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2578,13 +2578,13 @@ size_type find_last_not_of(
 *位移*\
 完成搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -2767,13 +2767,13 @@ size_type find_last_of(
 *位移*\
 完成搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -3031,13 +3031,13 @@ void insert(
 *position*\
 新字元插入點後面位置的索引。
 
-*ptr* \
+*ptr*\
 要全部或部分插入字串的 C 字串。
 
 *計數*\
 要插入的字元數。
 
-*str* \
+*str*\
 要全部或部分插入目標字串的字串。
 
 *位移*\
@@ -3127,7 +3127,7 @@ int main( )
    cout << "The string with a character inserted from a range is: "
         << str7a << endl;
 
-   // The eigth member function inserts a number of
+   // The eighth member function inserts a number of
    // characters at a specified position in the string
    string str8 ( "ABCDHIJ" );
    basic_string <char>::iterator str8_Iter = ( str8.begin ( ) + 4 );
@@ -3336,10 +3336,10 @@ basic_string<CharType, Traits, Allocator>& operator+=(
 *char_value*\
 要附加的字元。
 
-*ptr* \
+*ptr*\
 要附加之 C 字串的字元。
 
-*right* \
+*right*\
 要附加之字串的字元。
 
 ### <a name="return-value"></a>傳回值
@@ -3428,10 +3428,10 @@ basic_string<CharType, Traits, Allocator>& operator=(
 *char_value*\
 要指派的字元值。
 
-*ptr* \
+*ptr*\
 要指派給目標字串之 C 字串的字元指標。
 
-*right* \
+*right*\
 其字元要指派給目標字串的來源字串。
 
 ### <a name="return-value"></a>傳回值
@@ -3527,7 +3527,7 @@ reference operator[](size_type offset);
 
 非 **const** 字串的字串重新配置或修改可能會使傳回的參考失效。
 
-當使用設為 1 或 2 的 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 編譯時，如果您嘗試存取的元素超出字串界限，則會發生執行階段錯誤。 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
+當使用設為 1 或 2 的 [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md) 編譯時，如果您嘗試存取的元素超出字串界限，則會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
 ### <a name="example"></a>範例
 
@@ -3578,7 +3578,7 @@ typedef typename allocator_type::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-此類型是 `allocator_type::pointer`的同義字。
+此類型是 `allocator_type::pointer` 的同義字。
 
 針對類型 `string`，它相當於**char** <strong>\*</strong>。
 
@@ -3760,7 +3760,7 @@ typedef typename allocator_type::reference reference;
 
 類型 `reference` 可用來修改元素的值。
 
-此類型是 `allocator_type::reference`的同義字。
+此類型是 `allocator_type::reference` 的同義字。
 
 針對類型 `string`，它相當於 `chr&`。
 
@@ -3924,7 +3924,7 @@ basic_string<CharType, Traits, Allocator>& replace(
 
 ### <a name="parameters"></a>參數
 
-*str* \
+*str*\
 作為運算元字串之字元來源的字串。
 
 *position_1*\
@@ -3939,16 +3939,16 @@ basic_string<CharType, Traits, Allocator>& replace(
 *number_2*\
 要從參數 C 字串使用的字元數上限。
 
-*ptr* \
+*ptr*\
 作為運算元字串之字元來源的 C 字串。
 
 *char_value*\
 要複製到運算元字串的字元。
 
-*first0* \
+*first0*\
 迭代器，為運算元字串中要移除的第一個字元定址。
 
-*last0* \
+*last0*\
 迭代器，為運算元字串中要移除的最後一個字元定址。
 
 *第一個*\
@@ -4390,13 +4390,13 @@ size_type rfind(
 *位移*\
 開始搜尋位置的索引。
 
-*ptr* \
+*ptr*\
 要搜尋之成員函式的 C 字串。
 
 *計數*\
 要搜尋之成員函式的 C 字串中，從第一個字元開始往前計數的字元數目。
 
-*str* \
+*str*\
 要搜尋之成員函式的字串。
 
 ### <a name="return-value"></a>傳回值
@@ -4481,7 +4481,7 @@ int main( )
    const char *cstr3b = "am";
    indexCh3b = str3.rfind ( cstr3b , indexCh3a + 25 , 2 );
    if ( indexCh3b != npos )
-      cout << "The index of the next occurrance of 'am' in "
+      cout << "The index of the next occurrence of 'am' in "
            << "str3 begins at: " << indexCh3b << endl << endl;
    else
       cout << "There is no next occurrence of 'am' in str3 ."
@@ -4527,7 +4527,7 @@ The substring 'imperfect' was not found in str2 .
 
 The original string str3 is: It is a nice day. I am happy.
 The index of the 1st element of 'nice' in str3 is: 8
-The index of the next occurrance of 'am' in str3 begins at: 20
+The index of the next occurrence of 'am' in str3 begins at: 20
 
 The original string str4 is: This perfectly unclear.
 The substring 'clear' was not found in str4 before the 15th position.
@@ -4725,7 +4725,7 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*str* \
+*str*\
 要與目的字串交換其元素的來源字串。
 
 ### <a name="remarks"></a>備註
@@ -4785,7 +4785,7 @@ typedef Traits traits_type;
 
 ### <a name="remarks"></a>備註
 
-此類型是第二個樣板參數 `Traits` 的同義字。
+此類型是第二個樣板參數 `Traits`的同義字。
 
 針對類型 `string`，它相當於**char_traits\<char >** 。
 

@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b08d45ac065fe63f6f51e3b63a49e8714a486988
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68956964"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821879"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 函式
 
@@ -244,10 +244,10 @@ ForwardIterator adjacent_find(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -255,7 +255,7 @@ ForwardIterator adjacent_find(
 
 ### <a name="return-value"></a>傳回值
 
-第一個相鄰專案的正向反覆運算器, 彼此相等 (在第一個版本中), 或符合二元述詞所指定的條件 (在第二個版本中), 前提是找到這種類型的元素。 否則, 會傳回指向*last*的反覆運算器。
+第一個相鄰專案的正向反覆運算器，彼此相等（在第一個版本中），或符合二元述詞所指定的條件（在第二個版本中），前提是找到這種類型的元素。 否則，會傳回指向*last*的反覆運算器。
 
 ### <a name="remarks"></a>備註
 
@@ -329,7 +329,7 @@ They have values of 10 & 20.
 
 ## <a name="all_of"></a>all_of
 
-當指定範圍內的每個專案都有條件時, 傳回**true** 。
+當指定範圍內的每個專案都有條件時，傳回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -351,22 +351,22 @@ bool all_of(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示開始檢查條件的位置。 某範圍元素的開始迭代器標記。
 
-*次*\
+*上次*\
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
 *pred*\
-要測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是使用者定義的述詞函式物件，可定義所檢查的元素所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果在指定範圍內的每個專案上偵測到條件, 或如果範圍是空的, 則傳回**true** , 否則傳回**false** 。
+如果在指定範圍內的每個專案上偵測到條件，或如果範圍是空的，則傳回**true** ，否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的每個都是 true 時, 範本函數才會傳回 true。 `pred(*(first + N))`
+只有當針對範圍 `[0, last - first)`中的每個 `N`，述詞 `pred(*(first + N))` 為**true**時，範本函數才會傳回**true** 。
 
 ### <a name="example"></a>範例
 
@@ -405,7 +405,7 @@ All the elements are even numbers.
 
 ## <a name="any_of"></a>any_of
 
-當條件出現在指定的專案範圍中至少一次時, 傳回**true** 。
+當條件出現在指定的專案範圍中至少一次時，傳回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -427,24 +427,24 @@ bool any_of(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示檢查條件的某範圍元素開始。
 
-*次*\
+*上次*\
 輸入迭代器，表示檢查條件的某範圍元素結尾。
 
 *pred*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是由使用者定義的述詞函式物件所提供。 這個述詞定義所測試的元素所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果在指定的範圍內偵測到至少一次的條件, 則傳回**true** , 如果從未偵測到條件, 則傳回**false** 。
+如果在指定的範圍內偵測到至少一次的條件，則傳回**true** ，如果從未偵測到條件，則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-只有在範圍內的某些`N`中, 範本函式才會傳回 true
+只有在範圍內的某些 `N`，此範本函數才會傳回**true**
 
-`[0, last - first)`, 述詞為 true。 `pred(*(first + N))`
+`[0, last - first)`，述詞 `pred(*(first + N))` 為 true。
 
 ### <a name="example"></a>範例
 
@@ -501,10 +501,10 @@ bool binary_search(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *value*\
@@ -515,7 +515,7 @@ bool binary_search(
 
 ### <a name="return-value"></a>傳回值
 
-如果在等於或等同于指定值的範圍中找到元素, 則為**true** ;否則**為 false**。
+如果在等於或等同于指定值的範圍中找到元素，則為**true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
@@ -527,7 +527,7 @@ bool binary_search(
 
 正向迭代器的實值類型必須是小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last`  -  `first`) 成正比的步驟數目。
+隨機存取反覆運算器的演算法複雜度是對數，否則為線性，另一種則是與（`last` - `first`）比例的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -621,7 +621,7 @@ There is an element with a value equivalent to -3 under mod_lesser.
 
 ## <a name="clamp"></a>夾具
 
-比較值與上限和下限, 並傳回值的參考 (如果它介於界限之間), 或如果值高於或低於其上方或下限, 則傳回上限或下限的參考。
+比較值與上限和下限，並傳回值的參考（如果它介於界限之間），或如果值高於或低於其上方或下限，則傳回上限或下限的參考。
 
 ```cpp
 template<class Type>
@@ -643,22 +643,22 @@ constexpr const Type& clamp(
 *value*\
 要與*upper*和*lower*比較的值。
 
-*零下*\
+*降低*\
 要將*值*夾具的值下限。
 
-*臨界*\
+\*上限*
 要將*值*夾具的值上限。
 
 *pred*\
-用來比較*值*與*lower*或*上限*的述詞。 比較述詞會採用兩個引數, 如果第一個的意義小於第二個, 則傳回**true** , 否則傳回**false**。
+用來比較*值*與*lower*或*上限*的述詞。 比較述詞會採用兩個引數，如果第一個的意義小於第二個，則傳回**true** ，否則傳回**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回*較低*if `value < lower`的參考, 或傳回*大寫*if `upper < value`的參考。 否則, 它會傳回*值*的參考。
+如果 `value < lower`，則傳回*較低*的參考，如果 `upper < value`，則傳回*大寫*的參考。 否則，它會傳回*值*的參考。
 
 ### <a name="remarks"></a>備註
 
-如果*上限*小於*下限*, 則行為是未定義的。
+如果*上限*小於*下限*，則行為是未定義的。
 
 ## <a name="copy"></a>複製
 
@@ -684,10 +684,10 @@ ForwardIterator2 copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，在來源範圍的第一個項目位置定址。
 
-*次*\
+*上次*\
 輸入迭代器，用於定址來源範圍中最後一個項目的後面一個位置。
 
 *destBeg*\
@@ -695,13 +695,13 @@ ForwardIterator2 copy(
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器, 用於定址目的範圍中最後一個元素之後的位置, 也就`result`是反覆運算器定址 + (*最後* - *一個*)。
+輸出反覆運算器，用於定址目的範圍中最後一個元素之後的位置，也就是說，反覆運算器會處理 `result` + （*最後一個* * - ）* 。
 
 ### <a name="remarks"></a>備註
 
 來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。
 
-因為演算法從第一個元素開始依序複製來源元素, 所以如果來源範圍的*最後一個*位置不包含在目的範圍中, 則目的範圍可以與來源範圍重迭。 `copy`除非來源和目的範圍之間沒有重迭, 否則可以用來將專案向左移, 而不是向右移位。 若要向右移動任何數目的位置，請使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 演算法。
+因為演算法從第一個元素開始依序複製來源元素，所以如果來源範圍的*最後一個*位置不包含在目的範圍中，則目的範圍可以與來源範圍重迭。 除非來源和目的範圍之間沒有重迭，否則可以使用 `copy` 將專案向左移，而不是向右移位。 若要向右移動任何數目的位置，請使用 [copy_backward](../standard-library/algorithm-functions.md#copy_backward) 演算法。
 
 `copy` 演算法只修改迭代器指向的值，並指派新值給目的範圍的項目。 它不是用來建立新的項目，也不能直接將項目插入空的容器。
 
@@ -777,10 +777,10 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 雙向迭代器，在來源範圍的第一個項目位置定址。
 
-*次*\
+*上次*\
 雙向迭代器，在來源範圍中越過最後一個項目的位置定址。
 
 *destEnd*\
@@ -788,17 +788,17 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器, 用於定址目的範圍中最後一個元素之後的位置, 也就是說, 反覆運算器會處理*destEnd* -(*最後* - *一個*)。
+輸出反覆運算器，用於定址目的範圍中最後一個元素之後的位置，也就是反覆運算器位址*destEnd* -（*最後* *一個* - ）。
 
 ### <a name="remarks"></a>備註
 
 來源範圍必須是有效的，而且必須在目的端有足夠的空間保留所有項目的複本。
 
-演算法會強加比演算法更嚴格的需求。 `copy` `copy_backward` 其輸入和輸出迭代器必須是雙向的。
+`copy_backward` 演算法具有比 `copy` 演算法更嚴格的需求。 其輸入和輸出迭代器必須是雙向的。
 
 `copy_backward` 和 [move_backward](../standard-library/algorithm-functions.md#move_backward) 演算法是指定輸出範圍並以迭代器指向目的範圍結尾的唯一 C++ 標準程式庫演算法。
 
-因為演算法從最後一個元素開始依序複製來源元素, 所以如果來源範圍的*第一個*位置不包含在目的範圍中, 則目的範圍可以與來源範圍重迭。 除非來源和目的範圍之間沒有重疊，`copy_backward` 可以用來將項目向右位移，而不是向左移。 若要向左移動任何數目的位置，請使用 [copy](../standard-library/algorithm-functions.md#copy) 演算法。
+因為演算法從最後一個元素開始依序複製來源元素，所以如果來源範圍的*第一個*位置不包含在目的範圍中，則目的範圍可以與來源範圍重迭。 除非來源和目的範圍之間沒有重疊，`copy_backward` 可以用來將項目向右位移，而不是向左移。 若要向左移動任何數目的位置，請使用 [copy](../standard-library/algorithm-functions.md#copy) 演算法。
 
 `copy_backward` 演算法只修改迭代器指向的值，並指派新值給目的範圍的項目。 它不是用來建立新的項目，也不能直接將項目插入空的容器。
 
@@ -862,7 +862,7 @@ v2 with shifted insert = ( 0 3 6 9 0 10 0 10 20 27 30 )
 
 ## <a name="copy_if"></a>copy_if
 
-在某個範圍的專案中, 針對指定的條件複製**true**的元素。
+在某個範圍的專案中，針對指定的條件複製**true**的元素。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -886,21 +886,21 @@ ForwardIterator2 copy_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示檢查條件的範圍開始。
 
-*次*\
+*上次*\
 輸入迭代器，表示範圍的結尾。
 
-*dest*\
+*目的地*\
 輸出迭代器，表示所複製元素的目的地。
 
 *pred*\
-測試範圍中每個元素的條件。 這種條件是由使用者定義的述詞函式物件所提供。 一元述詞會接受一個引數, 並傳回**true**或**false**。
+測試範圍中每個元素的條件。 這種條件是由使用者定義的述詞函式物件所提供。 一元述詞會接受一個引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-針對每個符合條件的專案, 等於*dest*的輸出反覆運算器會遞增一次。 換句話說, 傳回值減去*dest*等於複製的元素數目。
+針對每個符合條件的專案，等於*dest*的輸出反覆運算器會遞增一次。 換句話說，傳回值減去*dest*等於複製的元素數目。
 
 ### <a name="remarks"></a>備註
 
@@ -908,7 +908,7 @@ ForwardIterator2 copy_if(
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果*dest*和*第一次*指定儲存區, 則*dest*不得在範圍`[ first, last )`內。
+範圍 `[0, last - first)` 中的每個 `N`，才能嚴格地從最低值開始增加 `N` 值。 如果*dest*和*第一次*指定儲存區，則*dest*不得在 `[ first, last )`範圍內。
 
 ### <a name="example"></a>範例
 
@@ -989,13 +989,13 @@ ForwardIterator2 copy_n(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示要複製元素的位置。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要複製的元素數目。
 
-*dest*\
+*目的地*\
 輸出迭代器，表示要將元素複製過去的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -1004,7 +1004,7 @@ ForwardIterator2 copy_n(
 
 ### <a name="remarks"></a>備註
 
-此範本函式`*(dest + N) = *(first + N))`會針對範圍`N` `[0, count)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `dest + N`。 如果*dest*和*第一次*指定儲存區, 則*dest*不得在範圍`[first, last)`內。
+此範本函式會針對範圍 `[0, count)`中的每個 `N` 評估 `*(dest + N) = *(first + N))` 一次，以嚴格地增加從最低值開始的 `N` 值。 然後它會傳回 `dest + N`。 如果*dest*和*第一次*指定儲存區，則*dest*不得在 `[first, last)`範圍內。
 
 ### <a name="example"></a>範例
 
@@ -1060,10 +1060,10 @@ count(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，定址要周遊範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，定址要周遊範圍中最後一個元素之後的位置。
 
 *value*\
@@ -1071,7 +1071,7 @@ count(
 
 ### <a name="return-value"></a>傳回值
 
-的差異類型`InputIterator` , 計算具有值的範圍 [*first*, *last*) 中的元素數目。
+`InputIterator` 的差異類型，計算範圍 [*first*， *last*）中具有值*值*的元素數目。
 
 ### <a name="remarks"></a>備註
 
@@ -1141,14 +1141,14 @@ count_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義計算元素時所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+使用者定義的述詞函式物件，定義計算元素時所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1299,7 +1299,7 @@ bool equal(
 
 要搜尋的範圍必須有效；所有迭代器都必須可以取值，而且可透過遞增從第一個位置到達最後一個位置。
 
-如果兩個範圍有相等的長度，則演算法的時間複雜性，在範圍包含的項目數目中是線性。 否則, 函數會立即傳回**false**。
+如果兩個範圍有相等的長度，則演算法的時間複雜性，在範圍包含的項目數目中是線性。 否則，函數會立即傳回**false**。
 
 `operator==` 和使用者定義的述詞不需要在運算元之間強加對稱、自反和遞移的等價關係。
 
@@ -1357,23 +1357,23 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *value*\
 排序範圍中要搜尋的值。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
-一對正向反覆運算器, 指定包含在搜尋範圍內的子範圍, 其中所有專案都等同于所使用之二元述詞所定義的意義 ( *pred*或預設*值*, 小於)。
+一對正向反覆運算器，指定包含在搜尋範圍內的子範圍，其中所有專案都等同于所使用之二元述詞所定義的意義（ *pred*或預設*值*，小於）。
 
-如果範圍中沒有任何專案與*值*相等, 則傳回的配對中的正向反覆運算器會相等, 並指定可以插入*值*而不影響範圍順序的點。
+如果範圍中沒有任何專案與*值*相等，則傳回的配對中的正向反覆運算器會相等，並指定可以插入*值*而不影響範圍順序的點。
 
 ### <a name="remarks"></a>備註
 
@@ -1381,9 +1381,9 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 範圍必須根據提供給 `equal_range` 的述詞來進行排序。 例如，如果您要使用大於述詞，則必須以遞減順序排序範圍。
 
-由傳回`equal_range`的反覆運算器配對所定義之可能空白子範圍中的元素, 將會相當於所使用之述詞所定義的意義中的*值*。
+由 `equal_range` 傳回之反覆運算器配對所定義之可能空白子範圍中的專案，會相當於所使用之述詞所定義之意義中的*值*。
 
-隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種則是與 (*最後* - *一個*) 比例的步驟數目。
+隨機存取反覆運算器的演算法複雜度是對數，否則為線性，另一種則是與（*最後一個* - *第*一個）相對應的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -1526,14 +1526,14 @@ void fill(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，定址要周遊之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，定址要周遊之範圍中最後一個元素之後的位置。
 
 *value*\
-要指派給範圍 [*first*, *last*) 中之元素的值。
+要指派給範圍 [*first*， *last*）中之元素的值。
 
 ### <a name="remarks"></a>備註
 
@@ -1604,18 +1604,18 @@ ForwardIterator fill_n(
 *exec*\
 要使用的執行原則。
 
-*頭*\
-輸出反覆運算器, 用於定址要指派值*值*之範圍中第一個元素的位置。
+*第一個*\
+輸出反覆運算器，用於定址要指派值*值*之範圍中第一個元素的位置。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要獲指派值的元素數目。
 
 *value*\
-要指派給範圍 [*first*, *first + count*) 中之元素的值。
+要指派給範圍 [*first*， *first + count*）中之元素的值。
 
 ### <a name="return-value"></a>傳回值
 
-專案的反覆運算器, 如果*count* > 零, 則緊接在最後一個元素之後, 否則為第一個元素。
+專案的反覆運算器，如果*count* > 零，則緊接在最後一個元素之後，否則為第一個元素。
 
 ### <a name="remarks"></a>備註
 
@@ -1693,10 +1693,10 @@ ForwardIterator find(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，其定址要搜尋指定值的範圍中，第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，其定址要搜尋指定值的範圍中，最後一個元素後方的位置。
 
 *value*\
@@ -1704,7 +1704,7 @@ ForwardIterator find(
 
 ### <a name="return-value"></a>傳回值
 
-輸入迭代器，其定址所搜尋的範圍中第一次出現的指定值。 如果找不到具有對等值的元素, 則會傳回*last*。
+輸入迭代器，其定址所搜尋的範圍中第一次出現的指定值。 如果找不到具有對等值的元素，則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -1772,7 +1772,7 @@ find_end(
 
 ### <a name="return-value"></a>傳回值
 
-正向反覆運算器, 用於定址 [first1, last1) 內最後一個子序列的第一個元素的位置, 此專案符合指定的序列 [first2, last2)。
+正向反覆運算器，用於定址 [first1，last1）內最後一個子序列的第一個元素的位置，此專案符合指定的序列 [first2，last2）。
 
 ### <a name="remarks"></a>備註
 
@@ -2063,18 +2063,18 @@ ForwardIterator find_if(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。 *Pred*的簽章必須有效地`bool pred(const T& arg);`是, `T`其中是可在取值`InputIterator`時以隱含方式轉換的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數，並在滿足時傳回**true** ，如果不符合，則傳回**false** 。 *Pred*的簽章必須有效地 `bool pred(const T& arg);`，其中 `T` 是在取值時可隱含轉換 `InputIterator` 的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
-輸入反覆運算器, 參考範圍中符合述詞所指定之條件的第一個元素 (述詞會產生**true**)。 如果找不到符合述詞的元素, 則會傳回*last*。
+輸入反覆運算器，參考範圍中符合述詞所指定之條件的第一個元素（述詞會產生**true**）。 如果找不到符合述詞的元素，則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -2185,18 +2185,18 @@ ForwardIterator find_if_not(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 輸入迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。 *Pred*的簽章必須有效地`bool pred(const T& arg);`是, `T`其中是可在取值`InputIterator`時以隱含方式轉換的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
+使用者定義的述詞函式物件或 [Lambda 運算式](../cpp/lambda-expressions-in-cpp.md)，定義所搜尋的元素不符合的條件。 一元述詞會接受單一引數，並在滿足時傳回**true** ，如果不符合，則傳回**false** 。 *Pred*的簽章必須有效地 `bool pred(const T& arg);`，其中 `T` 是在取值時可隱含轉換 `InputIterator` 的類型。 **Const**關鍵字的顯示只是為了說明函式物件或 lambda 不應修改引數。
 
 ### <a name="return-value"></a>傳回值
 
-輸入反覆運算器, 參考範圍中不符合述詞所指定之條件的第一個元素 (述詞會產生**false**)。 如果所有元素都符合述詞 (述詞會針對每個元素產生**true** ), 則會傳回*last*。
+輸入反覆運算器，參考範圍中不符合述詞所指定之條件的第一個元素（述詞會產生**false**）。 如果所有元素都符合述詞（述詞會針對每個元素產生**true** ），則會傳回*last*。
 
 ### <a name="remarks"></a>備註
 
@@ -2225,10 +2225,10 @@ void for_each(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 輸入迭代器，定址要對其作業之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，定址要對其作業之範圍中最後一個元素之後的位置。
 
 *func*\
@@ -2244,7 +2244,7 @@ void for_each(
 
 參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。
 
-複雜度為線性, 最多有 (*最後* - *一次*) 的比較。
+複雜度為線性，最多有（*最後* - *次*）比較。
 
 ### <a name="example"></a>範例
 
@@ -2396,13 +2396,13 @@ void generate(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 正向迭代器，定址要指派值之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，定址要指派值之範圍中最後一個元素之後的位置。
 
-*代*\
+*gen*\
 不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
@@ -2411,7 +2411,7 @@ void generate(
 
 參考的範圍必須有效；所有指標必須是可取值且在序列中，還必須要可以從第一個位置開始透過增量而取得最後一個位置。
 
-複雜度為線性, 需要有產生器`last`的確切 (  -  `first`) 呼叫。
+複雜度為線性，而且需要對產生器進行完全（`last` - `first`）呼叫。
 
 ### <a name="example"></a>範例
 
@@ -2480,13 +2480,13 @@ ForwardIterator generate_n(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸出迭代器，指向範圍中第一個項目的位置 (要指派值至其中)。
 
 *計數*\
 帶正負號或不帶正負號的整數類型，指定要由產生器函式指派值的項目數。
 
-*代*\
+*gen*\
 不搭配引數呼叫的函式物件，用於產生要指派到範圍中每個項目的值。
 
 ### <a name="remarks"></a>備註
@@ -2598,7 +2598,7 @@ bool includes(
 輸入迭代器，定址要進行下列作業之兩個連續排序來源範圍的第二個範圍中最後一個元素之後的位置：測試第二個範圍的所有元素是否都包含在第一個範圍中。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -2612,11 +2612,11 @@ bool includes(
 
 每個排序來源範圍都必須根據 includes 演算法用來排序結合範圍的相同順序，排列成套用此演算法包含的前置條件。
 
-演算法`merge`不會修改來源範圍。
+`merge`的演算法不會修改來源範圍。
 
 輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 更精確地說，演算法會測試所指定二元述詞下第一個排序範圍中的所有元素是否都有第二個排序範圍中元素的對等順序。
 
-此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
+此演算法的複雜度為線性，最多可為非空白來源範圍進行 `2 * ((last1 - first1) - (last2 - first2)) - 1` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -2806,17 +2806,17 @@ void inplace_merge(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第一個範圍中第一個元素的位置。
 
-*干預*\
+*中間*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，定址要結合並排序成單一範圍之兩個連續排序範圍的第二個範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，而當第一個專案小於第二個元素時，應該傳回**true** ，否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -2824,7 +2824,7 @@ void inplace_merge(
 
 每個排序連續範圍都必須根據 `inplace_merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。 因為會保留每個範圍內元素的相對順序，所以這項作業十分穩定。 兩個來源範圍中有對等元素時，結合範圍之第一個範圍中的元素會優先於第二個範圍中的元素。
 
-因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果有足夠的記憶體可用, 最好的情況是具有`(last - first) - 1`比較的線性; 如果沒有輔助記憶體可用, 則最壞`N log(N)`的情況是, 其中*N*  = 是*最後* - *一個*。
+因為演算法會將記憶體配置給暫存緩衝區，所以複雜度取決於可用記憶體。 如果有足夠的記憶體可用，最好的情況是線性，並 `(last - first) - 1` 的比較;如果沒有可用的輔助記憶體，則會 `N log(N)`最差的情況，其中*N* = *最後* - 的*第一個*。
 
 ### <a name="example"></a>範例
 
@@ -2939,7 +2939,7 @@ vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 
 ## <a name="is_heap"></a>is_heap
 
-如果指定範圍內的元素形成堆積, 則傳回**true** 。
+如果指定範圍內的元素形成堆積，則傳回**true** 。
 
 ```cpp
 template<class RandomAccessIterator>
@@ -2972,30 +2972,30 @@ bool is_heap(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 隨機存取迭代器，表示檢查堆積的範圍開始。
 
-*次*\
+*上次*\
 隨機存取迭代器，表示範圍結尾。
 
 *pred*\
-要測試以排序元素的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。
+要測試以排序元素的條件。 比較述詞會採用兩個引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定範圍中的元素形成堆積, 則傳回**true** , 否則傳回**false** 。
+如果指定範圍中的元素形成堆積，則傳回**true** ，否則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until) `(first , last) == last`。
+第一個範本函式會傳回[is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`。
 
 第二個範本函式會傳回
 
-`is_heap_until(first, last, pred) == last`.
+`is_heap_until(first, last, pred) == last`。
 
 ## <a name="is_heap_until"></a>is_heap_until
 
-傳回位於範圍 [ `first`, `last`) 中不符合堆積排序條件之第一個元素的反覆運算器; 如果範圍形成堆積, 則為*結尾*。
+傳回位於範圍 [`first`，`last`）中不符合堆積排序條件之第一個元素的反覆運算器; 如果範圍形成堆積，則為*結尾*。
 
 ```cpp
 template<class RandomAccessIterator>
@@ -3028,28 +3028,28 @@ RandomAccessIterator is_heap_until(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 隨機存取迭代器，指定要檢查有無堆積之範圍的第一個項目。
 
-*次*\
+*上次*\
 隨機存取迭代器，指定要檢查有無堆積的範圍結尾。
 
 *pred*\
-二元述詞，指定定義堆積的嚴格弱式排序條件。 當未指定`std::less<>` *pred*時, 預設的述詞為。
+二元述詞，指定定義堆積的嚴格弱式排序條件。 未指定*pred*時，預設的述詞會 `std::less<>`。
 
 ### <a name="return-value"></a>傳回值
 
-如果指定的範圍形成堆積或包含一或多個元素, 則傳回*last* 。 否則會傳回所找到第一個不符合堆積條件之項目的迭代器。
+如果指定的範圍形成堆積或包含一或多個元素，則傳回*last* 。 否則會傳回所找到第一個不符合堆積條件之項目的迭代器。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回中`next` `[first, last)`的最後`[first, next)`一個反覆運算器, 其中是由函`std::less<>`式物件排序的堆積。 如果距離`last - first`小於 2, 函數會傳回*last*。
+第一個範本函式會傳回 `[first, last)` 中的最後一個反覆運算器 `next`，其中 `[first, next)` 是由函式物件 `std::less<>`排序的堆積。 如果 `last - first` 距離小於2，函數會傳回*last*。
 
-第二個範本函式的行為與第一個相同, 不同之處在于它會使用`std::less<>`述詞 pred, 而不是堆積排序條件。
+第二個範本函式的行為與第一個相同，不同之處在于它會使用述詞*pred* ，而不是 `std::less<>` 做為堆積排序條件。
 
 ## <a name="is_partitioned"></a>is_partitioned
 
-如果指定範圍中的條件測試**true**的所有專案都在測試**false**的任何專案之前, 則傳回**true** 。
+如果指定範圍中的條件測試**true**的所有專案都在測試**false**的任何專案之前，則傳回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -3071,22 +3071,22 @@ bool is_partitioned(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示範圍開始檢查條件的位置。
 
-*次*\
+*上次*\
 輸入迭代器，表示範圍結尾。
 
 *pred*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-當指定範圍中的所有專案在條件中測試**為 true**時, 傳回**true** , 否則傳回**false**。
+當指定範圍中的所有專案在條件中測試**為 true**時，傳回**true** **，否則**傳回**false**。
 
 ### <a name="remarks"></a>備註
 
-只有當中`[first, last)`的所有專案都是由*pred*分割時, 此範本函式才會傳回`X` **true** ; 也就是說`pred (X)` , 中`[first, last)`的所有專案都`Y`是 true, 而所有元素都在為**false**。 `pred (Y)`
+只有當 `[first, last)` 中的所有元素都是由*pred*分割時，範本函式才會傳回**true** ;也就是說，在 `pred (Y)` 為**false**的所有元素 `Y` 之前，所有專案 `X` 在 `[first, last)` 中，`pred (X)` 為 true。
 
 ## <a name="is_permutation"></a>is_permutation
 
@@ -3138,17 +3138,17 @@ bool is_permutation(
 指向第二個範圍的最後一個項目之某個項目的正向迭代器，用於比較。
 
 *pred*\
-述詞, 用於測試是否相等並傳回**bool**。
+述詞，用於測試是否相等並傳回**bool**。
 
 ### <a name="return-value"></a>傳回值
 
-當範圍可以重新排列, 使其根據比較子述詞而完全相同時, 則為**true** ;否則**為 false**。
+當範圍可以重新排列，使其根據比較子述詞而完全相同時，則為**true** ;否則**為 false**。
 
 ### <a name="remarks"></a>備註
 
 `is_permutation` 在最壞的情況有二次方的複雜性。
 
-第一個樣板函式假設範圍中的元素數目從*first2*開始, 與指定`[first1, last1)`的範圍相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。 只有在指定`[first1, last1)`範圍內的每個專案 x, 其 x = = y 的相同範圍內有多個元素 Y 時, 才會傳回 true, 其範圍從*first2*或`[first2, last2)`開始。 在這裡`operator==` , 必須在其運算元之間執行成對比較。
+第一個樣板函式會假設範圍中的元素數目從*first2*開始，與 `[first1, last1)`所指定的範圍相同。 如果第二個範圍中有多個項目，就會忽略它們；如果更少，就會發生未定義的行為。 第三個樣板函式 (C++ 14 和更新版本) 不會進行這項假設。 只有在 `[first1, last1)` 指定的範圍內的每個專案 X 都有相同範圍中的元素 Y，且 X = = Y 與*first2*或 `[first2, last2)`開頭的範圍相同時，這兩者都會傳回**true** 。 在這裡，`operator==` 必須在其運算元之間執行成對比較。
 
 第二個和第四個樣板函式的行為相同，不同之處是它們會以 `Pred(X, Y)` 取代 `operator==(X, Y)`。 若要正常運作，述詞必須對稱、自反和轉移。
 
@@ -3210,7 +3210,7 @@ int main()
 
 ## <a name="is_sorted"></a>is_sorted
 
-如果指定範圍內的專案為排序次序, 則傳回**true** 。
+如果指定範圍內的專案為排序次序，則傳回**true** 。
 
 ```cpp
 template<class ForwardIterator>
@@ -3243,26 +3243,26 @@ bool is_sorted(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*次*\
+*上次*\
 正向迭代器，表示範圍結尾。
 
 *pred*\
-要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。 這會執行與 `operator<` 相同的工作。
+要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數，並傳回**true**或**false**。 這會執行與 `operator<` 相同的工作。
 
 ### <a name="remarks"></a>備註
 
-第一個範本函式會傳回[is_sorted_until](#is_sorted_until) `( first, last ) == last`。 `operator<`函式會執行順序比較。
+第一個範本函式會傳回[is_sorted_until](#is_sorted_until)`( first, last ) == last`。 `operator<` 函數會執行順序比較。
 
-第二個範本`is_sorted_until( first, last , pred ) == last`函式會傳回。 *Pred*述詞函式會執行順序比較。
+第二個範本函式會傳回 `is_sorted_until( first, last , pred ) == last`。 *Pred*述詞函式會執行順序比較。
 
 ## <a name="is_sorted_until"></a>is_sorted_until
 
 傳回 `ForwardIterator`，以設定為指定範圍中依排序順序的最後一個元素。
 
-第二個版本可讓您提供比較函式物件, 以在兩個指定的專案為排序次序時傳回**true** , 否則為**false** 。
+第二個版本可讓您提供比較函式物件，以在兩個指定的專案為排序次序時傳回**true** ，否則為**false** 。
 
 ```cpp
 template<class ForwardIterator>
@@ -3295,14 +3295,14 @@ ForwardIterator is_sorted_until(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，表示要檢查之範圍的開始位置。
 
-*次*\
+*上次*\
 正向迭代器，表示範圍結尾。
 
 *pred*\
-要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數, 並傳回**true**或**false**。
+要測試以判斷兩個元素間之順序的條件。 比較述詞會採用兩個引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3310,7 +3310,7 @@ ForwardIterator is_sorted_until(
 
 ### <a name="remarks"></a>備註
 
-第一個樣板`next`函式`[first, next)`會傳回中`[first, last]`的最後一個反覆運算器, 因此是由`operator<`排序的排序序列。 如果`distance()`小於 2, 函數會傳回*last*。
+第一個樣板函式會傳回 `[first, last]` 中的最後一個反覆運算器 `next`，讓 `[first, next)` 是依 `operator<`排序的排序序列。 如果 `distance()` 小於2，此函數會傳回*last*。
 
 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `pred(X, Y)`。
 
@@ -3325,15 +3325,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 要交換其值的其中一個正向迭代器。
 
-*再*\
+*right*\
 要交換其值的第二個正向迭代器。
 
 ### <a name="remarks"></a>備註
 
-`swap`應使用於**iter_swap**的喜好設定中, 這是為了回溯C++相容性而包含在標準中的。 如果`Fit1` `iter_swap( Fit1, Fit2 )` `swap( *Fit1, *Fit2 )`和`Fit2`是正向反覆運算器, 則就相當於。
+`swap` 應該在喜好設定中用來**iter_swap**，這是為了後C++向相容而包含在標準中的。 如果 `Fit1` 和 `Fit2` 是正向反覆運算器，則 `iter_swap( Fit1, Fit2 )`，相當於 `swap( *Fit1, *Fit2 )`。
 
 輸入正向迭代器的實值類型值必須相同。
 
@@ -3526,7 +3526,7 @@ bool lexicographical_compare(
 輸入迭代器，定址要比較之第二個範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -3540,7 +3540,7 @@ bool lexicographical_compare(
 
 - 找不到任何差異，但有一個序列的元素數比另一個序列還要多，因而將較短的序列視為小於較長的序列。
 
-- 找不到任何到差異, 而且序列具有相同數目的元素, 因此序列相等, 且比較結果為**false**。
+- 找不到任何到差異，而且序列具有相同數目的元素，因此序列相等，且比較結果為**false**。
 
 ### <a name="example"></a>範例
 
@@ -3658,10 +3658,10 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 正向迭代器，其定址要搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，其定址要搜尋範圍中最後一個元素之後的位置。
 
 *value*\
@@ -3684,7 +3684,7 @@ ForwardIterator lower_bound(
 
 正向迭代器的實值類型必須小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last - first`) 成正比的步驟數目。
+隨機存取反覆運算器的演算法複雜度是對數，否則為線性，另一種則是與（`last - first`）成正比的步驟數目。
 
 ### <a name="example"></a>範例
 
@@ -3795,10 +3795,10 @@ void make_heap(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 隨機存取迭代器，定址要轉換為堆積之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -3814,7 +3814,7 @@ void make_heap(
 
 堆積是實作優先順序佇列的理想方式，並且用於實作 C++ 標準程式庫容器配接器 [priority_queue 類別](../standard-library/priority-queue-class.md)。
 
-複雜度為線性, 需要`3 * (last - first)`進行比較。
+複雜度為線性，需要 `3 * (last - first)` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -3883,10 +3883,10 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 正在比較的兩個物件之第一個。
 
-*再*\
+*right*\
 正在比較的兩個物件之第二個。
 
 *pred*\
@@ -4059,7 +4059,7 @@ int main()
 Using integers 6 and -7...
 The integer with the greater absolute value is: -7
 The integer with the greater value is: 6.
-Comparing the members of an initializer_list...The member with the greater value is: 6The integer wiht the greater absolute value is: -7
+Comparing the members of an initializer_list...The member with the greater value is: 6The integer with the greater absolute value is: -7
 s1 = ( CInt( 1 ), CInt( 2 ) ).
 s2 = ( CInt( 2 ), CInt( 3 ) ).
 s3 = max ( s1, s2 ) = ( CInt( 2 ), CInt( 3 ) ).
@@ -4106,14 +4106,14 @@ ForwardIterator max_element(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，定址要搜尋最大元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，定址要搜尋最大元素之範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，而當第一個專案小於第二個元素時，應該傳回**true** ，否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4123,7 +4123,7 @@ ForwardIterator max_element(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性: `(last - first) - 1`非空白範圍需要進行比較。
+複雜度為線性：非空範圍需要 `(last - first) - 1` 比較。
 
 ### <a name="example"></a>範例
 
@@ -4284,11 +4284,11 @@ ForwardIterator merge(
 *last2*\
 輸入迭代器，用於定址要結合並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會結合成單一排序範圍。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，而當第一個專案小於第二個元素時，應該傳回**true** ，否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4302,11 +4302,11 @@ ForwardIterator merge(
 
 每個排序來源範圍必須根據 `merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法`merge`不會修改來源範圍。
+這項作業很穩定，因為每個範圍內的項目相對順序會保留在目的範圍中。 `merge`的演算法不會修改來源範圍。
 
-輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。
 
-演算法的複雜度為線性, 最多`(last1 - first1) - (last2 - first2) - 1`有個比較。
+演算法的複雜度為線性，最多有 `(last1 - first1) - (last2 - first2) - 1` 的比較。
 
 [list 類別](../standard-library/list-class.md)提供成員函式 "merge" 來合併兩個清單的元素。
 
@@ -4448,21 +4448,21 @@ constexpr Type min(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 正在比較的兩個物件之第一個。
 
-*再*\
+*right*\
 正在比較的兩個物件之第二個。
 
 *pred*\
 用來比較兩個物件的二元述詞。
 
 *inlist*\
-`initializer_list` , 包含要比較的成員。
+包含要比較之成員的 `initializer_list`。
 
 ### <a name="return-value"></a>傳回值
 
-除非兩者一樣大，否則會傳回兩個物件中較小的一個；在此情況下，它會傳回兩個物件的第一個。 如果是`initializer_list`, 它會傳回清單中的最小物件。
+除非兩者一樣大，否則會傳回兩個物件中較小的一個；在此情況下，它會傳回兩個物件的第一個。 在 `initializer_list`的情況下，它會傳回清單中最少的物件。
 
 ### <a name="remarks"></a>備註
 
@@ -4670,14 +4670,14 @@ ForwardIterator min_element(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，定址要搜尋最小元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，定址要搜尋最小元素之範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 而當第一個專案小於第二個元素時, 應該傳回**true** , 否則傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，而當第一個專案小於第二個元素時，應該傳回**true** ，否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -4687,7 +4687,7 @@ ForwardIterator min_element(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性: `(last - first) - 1`非空白範圍需要進行比較。
+複雜度為線性：非空範圍需要 `(last - first) - 1` 比較。
 
 ### <a name="example"></a>範例
 
@@ -4834,30 +4834,30 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，表示範圍開頭。
 
-*次*\
+*上次*\
 正向迭代器，表示範圍結尾。
 
 *pred*\
-使用者定義的述詞函式物件, 定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數, 而且當第一個小於第二個時, 應該傳回**true** , 否則傳回**false** 。
+使用者定義的述詞函式物件，定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數，而且當第一個小於第二個時，應該傳回**true** ，否則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
-傳回值
+傳回
 
-`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
+`pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`。
 
 ### <a name="remarks"></a>備註
 
 第一個範本函式會傳回
 
-`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`.
+`pair<ForwardIterator,ForwardIterator>(min_element(first,last), max_element(first,last))`。
 
 第二個範本函式的行為相同，差異在於它會將 `operator<(X, Y)` 取代為 `pred(X, Y)`。
 
-如果序列不是空的, 函數會執行最多`3 * (last - first - 1) / 2`的比較。
+如果序列不是空的，此函式最多會執行 `3 * (last - first - 1) / 2` 的比較。
 
 ## <a name="minmax"></a>minmax
 
@@ -4887,25 +4887,25 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 正在比較的兩個物件之第一個。
 
-*再*\
+*right*\
 正在比較的兩個物件之第二個。
 
 *pred*\
 用來比較兩個物件的二元述詞。
 
 *inlist*\
-`initializer_list` , 包含要比較的成員。
+包含要比較之成員的 `initializer_list`。
 
 ### <a name="remarks"></a>備註
 
-`pair<const Type&, const Type&>( right, left )`如果*right*小於 left, 第一個範本函*式*會傳回。 否則，它會傳回 `pair<const Type&, const Type&>( left, right )`。
+如果*right*小於 left，第一個範本函*式*會傳回 `pair<const Type&, const Type&>( right, left )`。 否則，它會傳回 `pair<const Type&, const Type&>( left, right )`。
 
-第二個成員函式會傳回一個配對, 其中第一個專案是較小的, 而第二個則是比述詞*pred*更大的時間。
+第二個成員函式會傳回一個配對，其中第一個專案是較小的，而第二個則是比述詞*pred*更大的時間。
 
-其餘範本函式的行為相同, 不同之處在于它們會以*inlist*取代*left*和*right*參數。
+其餘範本函式的行為相同，不同之處在于它們會以*inlist*取代*left*和*right*參數。
 
 此函式只會執行一個比較。
 
@@ -5011,7 +5011,7 @@ mismatch(
 
 ### <a name="remarks"></a>備註
 
-第一個樣板函式會假設範圍中從 first2 開始的項目數，與 [first1, last1) 指定的範圍中的項目數相同。 如果第二個範圍中有更多, 則會忽略它們;如果較少, 則會產生未定義的行為。
+第一個樣板函式會假設範圍中從 first2 開始的項目數，與 [first1, last1) 指定的範圍中的項目數相同。 如果第二個範圍中有更多，則會忽略它們;如果較少，則會產生未定義的行為。
 
 要搜尋的範圍必須有效；所有迭代器都必須可以取值，而且可透過遞增從第一個位置到達最後一個位置。
 
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="alg_move"></a>&lt;alg移動&gt;
+## <a name="alg_move"></a>&lt;alg&gt; 移動
 
 移動與所指定範圍相關聯的項目。
 
@@ -5138,18 +5138,18 @@ ForwardIterator2 move(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示項目移動範圍的開始位置。
 
-*次*\
+*上次*\
 輸入迭代器，表示項目移動範圍的結束位置。
 
-*dest*\
+*目的地*\
 要包含已移動項目的輸出迭代器。
 
 ### <a name="remarks"></a>備註
 
-此範本函式`*(dest + N) = move(*(first + N))`會針對範圍`N` `[0, last - first)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `dest + N`。 如果`dest`和*第一次*指定儲存區, 則*目的地*不得在範圍`[first, last)`內。
+此範本函式會針對範圍 `[0, last - first)`中的每個 `N` 評估 `*(dest + N) = move(*(first + N))` 一次，以嚴格地增加從最低值開始的 `N` 值。 然後它會傳回 `dest + N`。 如果 `dest`，而且*第一次*指定儲存區，則*目的地*不得在 `[first, last)`範圍內。
 
 ## <a name="move_backward"></a>move_backward
 
@@ -5165,10 +5165,10 @@ BidirectionalIterator2 move_backward(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 迭代器，表示要從中移動元素的範圍開始。
 
-*次*\
+*上次*\
 迭代器，表示要從中移動元素的範圍結尾。 這個元素不會進行移動。
 
 *destEnd*\
@@ -5176,7 +5176,7 @@ BidirectionalIterator2 move_backward(
 
 ### <a name="remarks"></a>備註
 
-此範本函式`*(destEnd - N - 1) = move(*(last - N - 1))`會針對範圍`N` `[0, last - first)`中的每個評估一次, 以`N`嚴格地從最低值開始增加值。 然後它會傳回 `destEnd - (last - first)`。 如果*destEnd*和*第一次*指定儲存區, *destEnd*不得在範圍`[first, last)`內。
+此範本函式會針對範圍 `[0, last - first)`中的每個 `N` 評估 `*(destEnd - N - 1) = move(*(last - N - 1))` 一次，以嚴格地增加從最低值開始的 `N` 值。 然後它會傳回 `destEnd - (last - first)`。 如果*destEnd*並*先*指定儲存體區域， *destEnd*不得在 `[first, last)`範圍內。
 
 `move` 和 `move_backward` 的功能等同於搭配使用 `copy` 和 `copy_backward` 與移動迭代器。
 
@@ -5199,10 +5199,10 @@ bool next_permutation(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -5216,9 +5216,9 @@ bool next_permutation(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-預設的二元述詞小於, 而且範圍中的元素必須小於可比較的, 以確保下一個排列已妥善定義。
+預設的二元述詞小於，而且範圍中的元素必須小於可比較的，以確保下一個排列已妥善定義。
 
-複雜度為線性, 最多`(last - first) / 2`可進行交換。
+複雜度為線性，最多有 `(last - first) / 2` 的交換。
 
 ### <a name="example"></a>範例
 
@@ -5398,23 +5398,23 @@ void nth_element(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 隨機存取迭代器，定址要分割之範圍中第一個元素的位置。
 
-*個*\
+第*n*個\
 隨機存取迭代器，定址要在磁碟分割界限上正確排序之元素的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-此`nth_element`演算法不保證會排序第*n*個元素的子範圍中的專案。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。
+`nth_element` 演算法不保證會排序第*n*個元素的子範圍中的元素。 因此，它的保證低於 `partial_sort`，其可排序範圍中低於某個所選擇元素的元素，而且可以在不需要排序較低範圍時用作 `partial_sort` 的較快替代方式。
 
 如果任一個都不小於另一個，則元素對等，但不一定相等。
 
@@ -5488,7 +5488,7 @@ int main() {
 
 ## <a name="none_of"></a>none_of
 
-當條件永遠不會出現在給定範圍中的專案之間時, 傳回**true** 。
+當條件永遠不會出現在給定範圍中的專案之間時，傳回**true** 。
 
 ```cpp
 template<class InputIterator, class UnaryPredicate>
@@ -5510,22 +5510,22 @@ bool none_of(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示開始檢查條件之某範圍元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，表示某範圍元素的結尾。
 
 *pred*\
-要測試的條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是由定義該條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-如果在指定的範圍內至少偵測不到一次條件, 則傳回**true** , 如果偵測到條件, 則傳回**false** 。
+如果在指定的範圍內至少偵測不到一次條件，則傳回**true** ，如果偵測到條件，則傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-`N`只有在範圍`[0, last - first)`中的某些情況下, 此範本函式才會傳回true,述詞`pred(*(first + N))`一律為 false。
+只有在 `[0, last - first)`範圍中的某些 `N`，述詞 `pred(*(first + N))` 一律為**false**時，範本函數才會傳回**true** 。
 
 ## <a name="partial_sort"></a>partial_sort
 
@@ -5566,13 +5566,13 @@ void partial_sort(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
 *sortEnd*\
 隨機存取迭代器，定址要排序之子範圍中最後一個元素之後的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址要局部排序之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -5582,9 +5582,9 @@ void partial_sort(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
+如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法不穩定，而且不保證會保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
 
-平均部分排序複雜度為*O* `last`((`first` - ) log (`sortEnd` -  `first`))。
+平均部分排序複雜度為*O*（（`last`- `first`） log （`sortEnd`- `first`））。
 
 ### <a name="example"></a>範例
 
@@ -5826,14 +5826,14 @@ ForwardIterator partition(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
@@ -5843,9 +5843,9 @@ ForwardIterator partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`pred( b, a )`如果兩者 `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `partition`演算法不穩定, 而且不保證會保留對等元素的相對順序。 `stable_partition` 演算法確實會保留這個原始順序。
+如果 `pred( a, b )` 為 false 且 `pred( b, a )` 為 false （其中*pred*是參數指定的述詞），元素*a*和*b*就是相等的，但不一定相等。 `partition` 演算法不穩定，而且不保證會保留對等元素的相對順序。 `stable_partition` 演算法確實會保留這個原始順序。
 
-複雜度為線性: 有`(last - first)` *pred*的應用程式和最多`(last - first)/2`的交換。
+複雜度為線性：有 `(last - first)` 應用程式*pred* ，且最多 `(last - first)/2` 的交換。
 
 ### <a name="example"></a>範例
 
@@ -5890,7 +5890,7 @@ int main()
 
 ## <a name="partition_copy"></a>partition_copy
 
-將條件為**true**的元素複製到一個目的地, 並將其條件為**false** 。 項目必須來自指定的範圍。
+將條件為**true**的元素複製到一個目的地，並將其條件為**false** 。 項目必須來自指定的範圍。
 
 ```cpp
 template<class InputIterator, class OutputIterator1, class OutputIterator2, class UnaryPredicate>
@@ -5916,24 +5916,24 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，表示檢查條件的範圍開始。
 
-*次*\
+*上次*\
 輸入迭代器，表示範圍結尾。
 
 *dest1*\
-輸出反覆運算器, 用來針對使用*pred*測試的條件, 複製傳回 true 的元素。
+輸出反覆運算器，用來針對使用*pred*測試的條件，複製傳回 true 的元素。
 
 *dest2*\
-輸出反覆運算器, 用來針對使用*pred*測試的條件, 複製傳回 false 的元素。
+輸出反覆運算器，用來針對使用*pred*測試的條件，複製傳回 false 的元素。
 
 *pred*\
-要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是由定義要測試之條件的使用者定義述詞函式物件所提供。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="remarks"></a>備註
 
-如果`X` `[first,last)` `*dest1++` `*dest2++`為 true, 則範本函式會將中的每個專案複製到, 如果不是, 則為。 `pred(X)` 它會傳回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
+如果 `pred(X)` 為 true，此範本函式會將 `X` `[first,last)` 中的每個元素複製到 `*dest1++`，否則會 `*dest2++`。 它會傳回 `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`。
 
 ## <a name="partition_point"></a>partition_point
 
@@ -5949,22 +5949,22 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 `ForwardIterator`，表示檢查條件的範圍開始。
 
-*次*\
+*上次*\
 `ForwardIterator`，表示範圍結尾。
 
 *pred*\
-要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數, 並傳回**true**或**false**。
+要測試的條件。 這是由使用者定義的述詞函式物件所提供，這個物件定義所搜尋的元素所要符合的條件。 一元述詞會接受單一引數，並傳回**true**或**false**。
 
 ### <a name="return-value"></a>傳回值
 
-傳回, 其參考不符合*pred*所測試之條件的第一個元素, 或如果找不到, 則傳回最後一個專案。 `ForwardIterator`
+傳回參考不符合*pred*所測試之條件的第一個專案的 `ForwardIterator`，如果找不到，則傳回*最後*一個元素。
 
 ### <a name="remarks"></a>備註
 
-此範本函式`it` `pred(*it)`會尋找中`[first, last)`的第一個反覆運算器為**false**。 順序必須依*pred*排序。
+範本函式會在 `[first, last)` 中尋找 `pred(*it)` 為**false**的第一個反覆運算器 `it`。 順序必須依*pred*排序。
 
 ## <a name="pop_heap"></a>pop_heap
 
@@ -5985,10 +5985,10 @@ void pop_heap(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址堆積中最後一個元素之後的位置。
 
 *pred*\
@@ -6010,7 +6010,7 @@ void pop_heap(
 
 結尾不包括新增元素的範圍必須是堆積。
 
-複雜度為對數, 最多`log (last - first)`需要比較。
+複雜度為對數，最多需要 `log (last - first)` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -6094,10 +6094,10 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 雙向迭代器，指向要排列之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，指向要排列之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -6105,15 +6105,15 @@ bool prev_permutation(
 
 ### <a name="return-value"></a>傳回值
 
-如果詞典編纂上一個排列存在, 並且已取代範圍的原始順序,**則為 true** ;否則**為 false**, 在此情況下, 會將順序轉換成詞典編纂最大的排列。
+如果詞典編纂上一個排列存在，並且已取代範圍的原始順序，**則為 true** ;否則**為 false**，在此情況下，會將順序轉換成詞典編纂最大的排列。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-預設的二元述詞小於, 而且範圍中的元素必須小於比較, 以確保先前的排列已妥善定義。
+預設的二元述詞小於，而且範圍中的元素必須小於比較，以確保先前的排列已妥善定義。
 
-複雜度為線性, 最多有 (`last`  -  `first`)/2 次交換。
+複雜度為線性，最多有（`last` - `first`）/2 次交換。
 
 ### <a name="example"></a>範例
 
@@ -6269,10 +6269,10 @@ void push_heap(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 隨機存取迭代器，定址堆積中第一個元素的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址要轉換為堆積之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -6294,7 +6294,7 @@ void push_heap(
 
 結尾不包括新增元素的範圍必須是堆積。
 
-複雜度為對數, 最多`log(last - first)`需要比較。
+複雜度為對數，最多需要 `log(last - first)` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -6365,7 +6365,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>random_shuffle
 
-Std:: random_shuffle () 函式已被取代, 由[std:: 隨機](../standard-library/algorithm-functions.md#shuffle)使用。 如需程式碼範例和詳細資訊, 請參閱[ \<random >](../standard-library/random.md)和 Stack Overflow 文章,[原因是 std:: random_shuffle 方法在 c + + 14 中被取代？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
+Std：： random_shuffle （）函式已被取代，由[std：：隨機](../standard-library/algorithm-functions.md#shuffle)使用。 如需程式碼範例和詳細資訊，請參閱[\<隨機 >](../standard-library/random.md)和 Stack Overflow 文章，[原因是 std：： Random_shuffle 方法在 c + + 14 中被取代？](https://go.microsoft.com/fwlink/p/?linkid=397954)。
 
 ## <a name="remove"></a>取消
 
@@ -6391,10 +6391,10 @@ ForwardIterator remove(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 轉送迭代器，定址要從中移除元素之範圍中，第一個元素的位置。
 
-*次*\
+*上次*\
 轉送迭代器，定址要從中移除元素之範圍中，最後一個元素的位置後方。
 
 *value*\
@@ -6412,9 +6412,9 @@ ForwardIterator remove(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有相等的`last`( -  `first`) 比較。
+複雜度為線性;有相等的（`last` - `first`）比較。
 
-[List 類別](../standard-library/list-class.md)具有更有效率的`remove`成員函式版本, 這也會重新連結指標。
+[List 類別](../standard-library/list-class.md)具有更有效率的成員函式版本 `remove`，這也會重新連結指標。
 
 ### <a name="example"></a>範例
 
@@ -6489,13 +6489,13 @@ ForwardIterator2 remove_copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
 *value*\
@@ -6509,13 +6509,13 @@ ForwardIterator2 remove_copy(
 
 參考的來源和目的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-目的範圍中的空間必須足以包含要在移除指定值的項目之後複製的剩餘項目。
+目的範圍中的空間必須足以包含要在移除指定值的元素之後複製的剩餘元素。
 
 未移除之元素的順序會保持穩定。
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個指派。`first`
+複雜度為線性;有相等的（`last` - `first`）比較，而且最多有（`last` - `first`）指派。
 
 ### <a name="example"></a>範例
 
@@ -6563,7 +6563,7 @@ int main()
 
 ## <a name="remove_copy_if"></a>remove_copy_if
 
-將專案從來源範圍複製到目的範圍, 但符合述詞的元素除外。 專案會複製, 而不會干擾其餘元素的順序。 傳回新目的範圍的結尾。
+將專案從來源範圍複製到目的範圍，但符合述詞的元素除外。 專案會複製，而不會干擾其餘元素的順序。 傳回新目的範圍的結尾。
 
 ```cpp
 template<class InputIterator, class OutputIterator, class UnaryPredicate>
@@ -6587,17 +6587,17 @@ ForwardIterator2 remove_copy_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，用於定址要從中移除元素的範圍中，第一個元素的位置。
 
-*次*\
+*上次*\
 輸入迭代器，用於定址要從中移除元素的範圍中，最後一個元素的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址要移除元素的目的範圍中，第一個元素的位置。
 
 *pred*\
-必須符合的一元述詞，也就是要被取代的項目值。
+必須符合的一元述詞，也就是要被取代的元素值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6613,7 +6613,7 @@ ForwardIterator2 remove_copy_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個指派。
+複雜度為線性：有（`last` - `first`）比較是否相等，以及最多（`last` - `first`）指派。
 
 如需這些函式運作方式的相關資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -6692,14 +6692,14 @@ ForwardIterator remove_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，指向要從中移除元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，指向要從中移除元素之範圍中最後一個元素之後的位置。
 
 *pred*\
-必須符合的一元述詞，也就是要被取代的項目值。
+必須符合的一元述詞，也就是要被取代的元素值。
 
 ### <a name="return-value"></a>傳回值
 
@@ -6713,7 +6713,7 @@ ForwardIterator remove_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性: 有 (`last`  -  `first`) 比較是否相等。
+複雜度為線性：有（`last` - `first`）比較是否相等。
 
 list 具有更具效率之成員函式版本的 remove，而這會重新連結指標。
 
@@ -6795,10 +6795,10 @@ void replace(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
 *oldVal*\
@@ -6815,7 +6815,7 @@ void replace(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個新值指派。`first`
+複雜度為線性;有相等的（`last` - `first`）比較，而且最多（`last` - `first`）指派新值。
 
 ### <a name="example"></a>範例
 
@@ -6884,13 +6884,13 @@ ForwardIterator2 replace_copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*次*\
+*上次*\
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於指向要複製已更改順序的項目之目的範圍中，第一個項目的位置。
 
 *oldVal*\
@@ -6901,7 +6901,7 @@ ForwardIterator2 replace_copy(
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
+輸出反覆運算器，指向目的範圍中最後一個元素的後面一個位置，這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -6911,7 +6911,7 @@ ForwardIterator2 replace_copy(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個新值指派。
+複雜度為線性：有（`last` - `first`）比較是否相等，以及最多（`last` - `first`）指派新值。
 
 ### <a name="example"></a>範例
 
@@ -6999,24 +6999,24 @@ ForwardIterator2 replace_copy_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 輸入迭代器，用於指向要從中取代項目的範圍中，第一個項目的位置。
 
-*次*\
+*上次*\
 輸入迭代器，用於指向要從中取代項目的範圍中，最後一個項目的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 *pred*\
-必須符合的一元述詞，也就是要被取代的項目值。
+必須符合的一元述詞，也就是要被取代的元素值。
 
 *value*\
 要指派給其舊值符合此述詞之項目的新值。
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
+輸出反覆運算器，指向目的範圍中最後一個元素的後面一個位置，這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -7026,7 +7026,7 @@ ForwardIterator2 replace_copy_if(
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性;有相等的`last`( -  `last`  - ) 比較, 而且最多有 (`first`) 個新值指派。`first`
+複雜度為線性;有相等的（`last` - `first`）比較，而且最多（`last` - `first`）指派新值。
 
 ### <a name="example"></a>範例
 
@@ -7120,14 +7120,14 @@ void replace_if(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，指向要從中取代元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 迭代器，指向要從中取代元素之範圍中最後一個元素之後的位置。
 
 *pred*\
-必須符合的一元述詞，也就是要被取代的項目值。
+必須符合的一元述詞，也就是要被取代的元素值。
 
 *value*\
 要指派給其舊值符合此述詞之項目的新值。
@@ -7138,11 +7138,11 @@ void replace_if(
 
 未取代之項目的順序會保持穩定。
 
-演算法`replace_if`是演算法`replace`的一般化, 允許指定任何述詞, 而不是等於指定的常數值。
+演算法 `replace_if` 是演算法 `replace`的一般化，允許指定任何述詞，而不是與指定的常數值相等。
 
 用來判斷元素是否相等的 `operator==` 必須在其運算元之間具有對等關聯。
 
-複雜度為線性: 有相等的 (`last`  -  `last`  -  `first`) 比較, 而且最多有 (`first`) 個新值指派。
+複雜度為線性：有（`last` - `first`）比較是否相等，以及最多（`last` - `first`）指派新值。
 
 ### <a name="example"></a>範例
 
@@ -7212,10 +7212,10 @@ void reverse(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，指向要排列元素之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，指向要排列元素之範圍中最後一個元素之後的位置。
 
 ### <a name="remarks"></a>備註
@@ -7289,18 +7289,18 @@ ForwardIterator reverse_copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，用於指向要排列的來源範圍中，第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，用於指向要排列元素的來源範圍中，最後一個元素的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於指向要複製元素之目的範圍中，第一個元素的位置。
 
 ### <a name="return-value"></a>傳回值
 
-輸出反覆運算器, 指向目的範圍中最後一個元素的後面一個位置, 這是複製的元素順序。
+輸出反覆運算器，指向目的範圍中最後一個元素的後面一個位置，這是複製的元素順序。
 
 ### <a name="remarks"></a>備註
 
@@ -7371,20 +7371,20 @@ ForwardIterator rotate(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*干預*\
+*中間*\
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
-*次*\
+*上次*\
 正向迭代器，用於定址要旋轉之範圍中最後一個項目的後面一個位置。
 
 ### <a name="remarks"></a>備註
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性, 最多有 (`last`  -  `first`) 次交換。
+複雜度為線性，最多有（`last` - `first`）交換。
 
 ### <a name="example"></a>範例
 
@@ -7487,16 +7487,16 @@ ForwardIterator2 rotate_copy(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，用於定址要旋轉之範圍中第一個項目的位置。
 
-*干預*\
+*中間*\
 定義範圍內界限的正向迭代器，用於定址第二個範圍部分中第一個項目的位置，該部分的項目會與第一個範圍部分的項目交換。
 
-*次*\
+*上次*\
 正向迭代器，用於定址要旋轉之範圍中最後一個項目的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 ### <a name="return-value"></a>傳回值
@@ -7507,7 +7507,7 @@ ForwardIterator2 rotate_copy(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性, 最多有 (`last`  -  `first`) 次交換。
+複雜度為線性，最多有（`last` - `first`）交換。
 
 ### <a name="example"></a>範例
 
@@ -7645,8 +7645,8 @@ ForwardIterator search(
 *pred*\
 使用者定義的述詞函式物件，定義要接受兩個元素為對等時所要符合的條件。 二元述詞會採用兩個引數，並且在符合時傳回 **true** ，不符合時則傳回 **false** 。
 
-*搜索*\
-封裝要尋找之模式的搜尋, 以及要使用的搜尋演算法。 如需 searchers 的詳細資訊, 請參閱[default_searcher 類別](default-searcher-class.md)、 [boyer_moore_horspool_searcher 類別](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 類別](boyer-moore-searcher-class.md)。
+搜尋*者\*
+封裝要尋找之模式的搜尋，以及要使用的搜尋演算法。 如需 searchers 的詳細資訊，請參閱[default_searcher 類別](default-searcher-class.md)、 [boyer_moore_horspool_searcher 類別](boyer-moore-horspool-searcher-class.md)和[boyer_moore_searcher 類別](boyer-moore-searcher-class.md)。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7971,11 +7971,11 @@ ForwardIterator set_difference(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的差異。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的差異。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個元素小於第二個元素，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -7989,11 +7989,11 @@ ForwardIterator set_difference(
 
 每個排序來源範圍必須根據 `set_difference` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法 merge 不會修改來源範圍。
+這項作業很穩定，因為每個範圍內的項目相對順序會保留在目的範圍中。 演算法 merge 不會修改來源範圍。
 
 輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，使得第一個來源範圍中的元素比第二個來源範圍多，則目的範圍會包含第一個來源範圍中這些元素的發生次數超過第二個來源範圍中這些元素的發生次數的數目。
 
-此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
+此演算法的複雜度為線性，最多可為非空白來源範圍進行 `2 * ((last1 - first1) - (last2 - first2)) - 1` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -8173,11 +8173,11 @@ ForwardIterator set_intersection(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的交集。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的交集。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個元素小於第二個元素，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8191,11 +8191,11 @@ ForwardIterator set_intersection(
 
 每個排序來源範圍必須根據 merge 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法不會修改來源範圍。
+這項作業很穩定，因為每個範圍內的項目相對順序會保留在目的範圍中。 演算法不會修改來源範圍。
 
-輸入迭代器的實值類型必須是小於比較才能建立此順序：因此若提供了兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
-此演算法的複雜度為線性, 最多`2 * ((last1 - first1) + (last2 - first2)) - 1`可為非空白來源範圍進行比較。
+此演算法的複雜度為線性，最多可為非空白來源範圍進行 `2 * ((last1 - first1) + (last2 - first2)) - 1` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -8371,11 +8371,11 @@ ForwardIterator set_symmetric_difference(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個項目的後面一個位置，此聯集範圍代表兩個來源範圍的對稱差。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的對稱差。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個元素小於第二個元素，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8389,11 +8389,11 @@ ForwardIterator set_symmetric_difference(
 
 每個排序來源範圍必須根據 `merge*` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法 merge 不會修改來源範圍。
+這項作業很穩定，因為每個範圍內的項目相對順序會保留在目的範圍中。 演算法 merge 不會修改來源範圍。
 
-輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的項目，且這些項目在其中一個來源範圍中出現的數目，超過在第二個來源範圍中出現的數目，則目的範圍會包含同時出現之數目的絕對值。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的項目，且這些項目在其中一個來源範圍中出現的數目，超過在第二個來源範圍中出現的數目，則目的範圍會包含同時出現之數目的絕對值。
 
-此演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`可為非空白來源範圍進行比較。
+此演算法的複雜度為線性，最多可為非空白來源範圍進行 `2 * ((last1 - first1) - (last2 - first2)) - 1` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -8573,11 +8573,11 @@ ForwardIterator set_union(
 *last2*\
 輸入迭代器，用於定址要聯集並排序成單一範圍之兩個連續排序來源範圍的第二個範圍中，最後一個元素的後面一個位置，此聯集範圍代表兩個來源範圍的聯集。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個元素的位置，在此目的範圍中，兩個來源範圍會聯集成單一排序範圍，以代表兩個來源範圍的聯集。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個項目小於第二個項目，即傳回 **true** ；否則傳回 **false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 此二元述詞接受兩個引數，若第一個元素小於第二個元素，即傳回 **true** ；否則傳回 **false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -8591,11 +8591,11 @@ ForwardIterator set_union(
 
 每個排序來源範圍必須根據 `merge` 演算法用來排序結合範圍的相同順序，排列成套用此演算法的前置條件。
 
-這項作業很穩定，因為每個範圍內的元素相對順序會保留在目的範圍中。 演算法`merge`不會修改來源範圍。
+這項作業很穩定，因為每個範圍內的項目相對順序會保留在目的範圍中。 `merge`的演算法不會修改來源範圍。
 
-輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等項目時，目的範圍之第一個來源範圍中的項目會優先於第二個範圍中的項目。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
+輸入迭代器的實值類型必須小於比較才能建立此順序：因此若提供了兩個項目，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元件之間的排序。 當兩個來源範圍中有對等元素時，目的範圍之第一個來源範圍中的元素會優先於第二個範圍中的元素。 如果來源範圍包含重複的元素，則目的範圍會包含這些元素同時出現在兩個來源範圍中的最大數量元素。
 
-演算法的複雜度為線性, 最多`2 * ((last1 - first1) - (last2 - first2)) - 1`有個比較。
+演算法的複雜度為線性，最多有 `2 * ((last1 - first1) - (last2 - first2)) - 1` 的比較。
 
 ### <a name="example"></a>範例
 
@@ -8730,13 +8730,13 @@ void shuffle(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 範圍中要隨機播放之第一個元素的迭代器，內含。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*次*\
+*上次*\
 範圍中要隨機播放之最後一個元素的迭代器，專用。 必須符合 `RandomAccessIterator` 和 `ValueSwappable` 的需求。
 
-*代*\
+*gen*\
 `shuffle()` 函式將用於作業的亂數產生器。 必須符合 `UniformRandomNumberGenerator` 的需求。
 
 ### <a name="remarks"></a>備註
@@ -8778,14 +8778,14 @@ void sort(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 隨機存取迭代器，用於定址要排序之範圍中第一個項目的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，用於定址要排序之範圍中越過最後一個項目的第一個位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 此二元述詞接受兩個引數, 並在兩個引數為順序時傳回**true** , 否則傳回**false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
+使用者定義的述詞函式物件，定義順序中後續元素所要符合的比較準則。 此二元述詞接受兩個引數，並在兩個引數為順序時傳回**true** ，否則傳回**false** 。 這個比較子函式必須對序列中項目的配對強制執行嚴格的弱式順序。 如需詳細資訊，請參閱[演算法](../standard-library/algorithms.md)。
 
 ### <a name="remarks"></a>備註
 
@@ -8793,7 +8793,7 @@ void sort(
 
 如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法不穩定，因此不保證保留對等元素的相對順序。 `stable_sort` 演算法確實會保留這個原始順序。
 
-排序複雜度的平均值是, 其中`O( N log N )` *N*  = 是*最後* - *一個*。
+排序複雜度的平均值為 `O( N log N )`，其中*N* = *上* *一次 - 。*
 
 ### <a name="example"></a>範例
 
@@ -8882,14 +8882,14 @@ void sort_heap(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 隨機存取迭代器，定址目標堆積中第一個元素的位置。
 
-*次*\
+*上次*\
 隨機存取迭代器，定址目標堆積中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的述詞函式物件，定義一個元素小於另一個元素的意義。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
@@ -8907,7 +8907,7 @@ void sort_heap(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`N log N`複雜程度最高, 其中*N*  = 是*最後* - 一次。
+複雜度最多為 `N log N`，其中*N* = *最後* - 的*第一個*。
 
 ### <a name="example"></a>範例
 
@@ -8987,14 +8987,14 @@ BidirectionalIterator stable_partition(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，定址要分割之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，定址要分割之範圍中最後一個元素之後的位置。
 
 *pred*\
-使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數, 並在滿足時傳回**true** , 如果不符合, 則傳回**false** 。
+使用者定義的述詞函式物件，定義分類元素時所要符合的條件。 一元述詞會接受單一引數，並在滿足時傳回**true** ，如果不符合，則傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -9004,7 +9004,7 @@ BidirectionalIterator stable_partition(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-`pred( b, a )`如果兩者 `pred( a, b )`都是 false 且為 false (其中*pred*是參數指定的述詞), 元素*a*和 b 就相等, 但不一定相等。 `stable_partition`演算法是穩定的, 可保證會保留對等元素的相對順序。 演算法`partition`不一定會保留這種原始順序。
+如果 `pred( a, b )` 為 false 且 `pred( b, a )` 為 false （其中*pred*是參數指定的述詞），元素*a*和*b*就是相等的，但不一定相等。 `stable_partition` 演算法是穩定的，並保證會保留對等元素的相對順序。 `partition` 的演算法不一定會保留這種原始順序。
 
 ### <a name="example"></a>範例
 
@@ -9088,10 +9088,10 @@ void stable_sort(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 雙向迭代器，定址要排序之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 雙向迭代器，定址要排序之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -9101,9 +9101,9 @@ void stable_sort(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。
 
-如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort`演算法是穩定的, 可保證會保留對等元素的相對順序。
+如果任一個都不小於另一個，則元素對等，但不一定相等。 `sort` 演算法是穩定的，並保證會保留對等元素的相對順序。
 
-`stable_sort`的執行時間複雜性取決於可用的記憶體數量, 但最大的情況 (有足夠的記憶體) 是`O(N (log N)^2)` `O(N log N)` , 最壞的情況是, 其中*N*  = *最後* -  *首先*。 通常, 此`sort`演算法的速度會明顯`stable_sort`比更快。
+`stable_sort` 的執行時間複雜性取決於可用的記憶體數量，但最大的情況（提供足夠的記憶體）是 `O(N log N)` 而且最差的情況是 `O(N (log N)^2)`，其中*N* = *最後*一個 * - 。* 通常，`sort` 演算法的速度會比 `stable_sort`快很多。
 
 ### <a name="example"></a>範例
 
@@ -9189,10 +9189,10 @@ void swap(
 
 ### <a name="parameters"></a>參數
 
-*左面*\
+*左方*\
 針對第一個覆寫，第一個物件會交換其內容。 針對第二個覆寫，第一個物件陣列會交換其內容。
 
-*再*\
+*right*\
 針對第一個覆寫，第二個物件會交換其內容。 針對第二個覆寫，第二個物件陣列會交換其內容。
 
 ### <a name="remarks"></a>備註
@@ -9296,7 +9296,7 @@ ForwardIterator2 swap_ranges(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，可透過遞增從第一個位置到達最後一個位置。 第二個範圍都必須與第一個範圍一樣大。
 
-複雜度為線性, 並已執行*last1*  -  *first1*交換。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。
+複雜度為線性，並已執行*last1* - *first1*交換。 如果正在交換相同類型之容器中的元素，則應該使用來自該容器的 `swap` 成員函式，原因是成員函式通常具有常數複雜度。
 
 ### <a name="example"></a>範例
 
@@ -9411,7 +9411,7 @@ ForwardIterator transform(
 *first2*\
 輸入迭代器，用於定址第二個來源範圍中要執行之第一個項目的位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址目的範圍中第一個項目的位置。
 
 *func*\
@@ -9425,9 +9425,9 @@ ForwardIterator transform(
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在每個序列中，必須可透過遞增從第一個位置到達最後一個位置。 目的範圍必須夠大，才能包含已轉換的來源範圍。
 
-如果在演算法的第一個版本中, 將*result*設定為等於*first1* , 則來源和目的範圍會相同, 而且順序會就地修改。 但*結果*可能無法處理範圍 [`first1` + 1, `last1`) 內的位置。
+如果在演算法的第一個版本中，將*result*設定為等於*first1* ，則來源和目的範圍會相同，而且順序會就地修改。 但*結果*可能無法解決 [`first1` + 1，`last1`）範圍內的位置。
 
-複雜度為線性, 最多有 (`last1`  -  `first1`) 次比較。
+複雜度為線性，最多有（`last1` - `first1`）比較。
 
 ### <a name="example"></a>範例
 
@@ -9550,10 +9550,10 @@ ForwardIterator unique(
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，定址要掃描重複移除之範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 正向迭代器，定址要掃描重複項目移除之範圍中最後一個元素之後的位置。
 
 *pred*\
@@ -9569,9 +9569,9 @@ ForwardIterator unique(
 
 此演算法作業很穩定，因此不會變更未刪除項目的相對順序。
 
-參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。 此演算法`unique`不會變更序列中的元素數目, 而且已取值但未指定超出已修改序列結尾的元素。
+參考的範圍必須有效；所有指標都必須可以取值，而且在序列中，可透過遞增從第一個位置到達最後一個位置。 此演算法不會變更序列中的元素數目，`unique`，且未指定超出已修改序列結尾的元素。
 
-複雜度為線性, 需要`(last - first) - 1`進行比較。
+複雜度為線性，需要 `(last - first) - 1` 的比較。
 
 list 提供更具效率的成員函式 "unique"，後者的效能可能較佳。
 
@@ -9703,13 +9703,13 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 *exec*\
 要使用的執行原則。
 
-*頭*\
+*第一個*\
 正向迭代器，用於定址要複製之來源範圍中第一個項目的位置。
 
-*次*\
+*上次*\
 正向迭代器，用於定址要複製之來源範圍中最後一個項目的後面一個位置。
 
-*result*\
+*結果*\
 輸出迭代器，用於定址正在接收所移除的連續重複項目複本之目的範圍中，第一個項目的位置。
 
 *pred*\
@@ -9727,7 +9727,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 參考的範圍必須有效；所有指標都必須可以取值，而且在一個序列中，可透過遞增從第一個位置到達最後一個位置。
 
-複雜度為線性, 需要 (`last`  -  `first`) 比較。
+複雜度為線性，需要（`last` - `first`）比較。
 
 ### <a name="example"></a>範例
 
@@ -9822,17 +9822,17 @@ ForwardIterator upper_bound(
 
 ### <a name="parameters"></a>參數
 
-*頭*\
+*第一個*\
 所搜尋範圍中第一個元素的位置。
 
-*次*\
+*上次*\
 所搜尋範圍中最後一個元素之後的位置。
 
 *value*\
 需要超出所傳回迭代器定址之元素值的排序範圍中的值。
 
 *pred*\
-使用者定義的比較述詞函式物件, 定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數, 並在滿意時傳回 true, 而不符合時**則**傳回**false** 。
+使用者定義的比較述詞函式物件，定義其中一個專案小於另一個元素的意義。 比較述詞會採用兩個引數，並在滿意時傳回 true，而不符合時**則**傳回**false** 。
 
 ### <a name="return-value"></a>傳回值
 
@@ -9842,13 +9842,13 @@ ForwardIterator upper_bound(
 
 參考的排序來源範圍必須有效；所有迭代器都必須可以取值，而且在序列中，必須可透過遞增從第一個位置到達最後一個位置。
 
-已排序範圍是使用`upper_bound`的前置條件, 而且順序準則與比較述詞所指定的相同。
+已排序範圍是使用 `upper_bound` 的前置條件，而且順序準則與比較述詞所指定的相同。
 
 `upper_bound` 不會修改範圍。
 
 正向迭代器的實值類型必須小於比較才能建立此順序：因此若提供兩個元素，可以判斷它們相等 (任一個都不小於另一個的意義)，或者一個小於另一個。 這會導致非對等元素之間的排序。
 
-隨機存取反覆運算器的演算法複雜度是對數, 否則為線性, 另一種是以與 (`last - first`) 成正比的步驟數目。
+隨機存取反覆運算器的演算法複雜度是對數，否則為線性，另一種則是與（`last - first`）成正比的步驟數目。
 
 ### <a name="example"></a>範例
 

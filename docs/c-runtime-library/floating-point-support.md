@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
-ms.translationtype: HT
+ms.openlocfilehash: a0ee21378a6feb7ada39dc00f0e181672470e231
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703125"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821508"
 ---
 # <a name="math-and-floating-point-support"></a>數學與浮點支援
 
@@ -72,7 +72,7 @@ ms.locfileid: "55703125"
 [floor、floorf、floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|計算 floor
 [fma、fmaf、fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|計算積和熔加
 [fmax、fmaxf、fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|計算引數的上限
-[fmin、fminf、fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|計算引數的下限
+[fmin、fminf、fminl](../c-runtime-library/reference/fmin-fminf-fminl.md)|計算引數的最小值
 [fmod、fmodf、fmodl](../c-runtime-library/reference/fmod-fmodf.md)|計算浮點餘數
 [_fpclass、_fpclassf](../c-runtime-library/reference/fpclass-fpclassf.md)|傳回浮點值的分類
 [fpclassify](../c-runtime-library/reference/fpclassify.md)|傳回浮點值的分類
@@ -127,7 +127,7 @@ ms.locfileid: "55703125"
 [sqrt、sqrtf、sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|計算平方根
 [_status87、_statusfp、_statusfp2](../c-runtime-library/reference/status87-statusfp-statusfp2.md)|取得浮點狀態字組
 [strtof、_strtof_l](../c-runtime-library/reference/strtof-strtof-l-wcstof-wcstof-l.md)|將字串轉換成 **float**
-[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換成 **long** **double**
+[strtold、_strtold_l](../c-runtime-library/reference/strtold-strtold-l-wcstold-wcstold-l.md)|將字串轉換為**長** **雙精度浮點數**
 [tan、tanf、tanl](../c-runtime-library/reference/tan-tanf-tanl.md)|計算正切值
 [tanh、tanhf、tanhl](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|計算雙曲正切值
 [tgamma、tgammaf、tgammal](../c-runtime-library/reference/tgamma-tgammaf-tgammal.md)|計算 gamma 函式
@@ -135,7 +135,7 @@ ms.locfileid: "55703125"
 [_wtof、_wtof_l](../c-runtime-library/reference/atof-atof-l-wtof-wtof-l.md)|將寬字串轉換為 **double**
 [_y0、_y1、_yn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|計算 Bessel 函式
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依類別排序的通用 C 執行階段常式](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [浮點數基本](../c-runtime-library/reference/floating-point-primitives.md)<br/>

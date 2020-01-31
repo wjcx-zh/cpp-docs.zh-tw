@@ -7,16 +7,16 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223029"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821736"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource 類別
 
-代表敏捷式軟體開發的元件，也就是可以從任何執行緒存取的元件引發的事件。 繼承自[EventSource](eventsource-class.md) ，並覆寫`Add`成員函式，使用其他的型別參數來指定如何叫用事件，敏捷式軟體開發的選項。
+表示 agile 元件所引發的事件，這是可從任何執行緒存取的元件。 繼承自[EventSource](eventsource-class.md) ，並以額外的類型參數覆寫 `Add` 成員函式，以指定如何叫用 agile 事件的選項。
 
 ## <a name="syntax"></a>語法
 
@@ -33,16 +33,16 @@ class AgileEventSource :
 ## <a name="parameters"></a>參數
 
 *TDelegateInterface*<br/>
-要委派，表示事件處理常式的介面。
+委派的介面，表示事件處理常式。
 
 *TEventSourceOptions*<br/>
-[InvokeModeOptions](invokemodeoptions-structure.md)結構，其 invokeMode 欄位設為`InvokeMode::StopOnFirstError`或`InvokeMode::FireAll`。
+其 invokeMode 欄位設定為 `InvokeMode::StopOnFirstError` 或 `InvokeMode::FireAll`的[InvokeModeOptions](invokemodeoptions-structure.md)結構。
 
 ## <a name="remarks"></a>備註
 
-大部分的 Windows 執行階段中的元件是敏捷式軟體開發的元件。 如需詳細資訊，請參閱 <<c0> [ 執行緒和封送處理 (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md)。</c0>
+Windows 執行階段中的大部分元件都是 agile 元件。 如需詳細資訊，請參閱[執行緒和C++封送處理（/cx）](../../cppcx/threading-and-marshaling-c-cx.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `EventSource`
 
@@ -50,21 +50,21 @@ class AgileEventSource :
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**Header：** 事件。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[AgileEventSource::Add 方法](#add)|將附加的敏捷式軟體開發的事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合**AgileEventSource**物件。|
+|[AgileEventSource：： Add 方法](#add)|將指定的委派介面所表示的 agile 事件處理常式附加至目前**AgileEventSource**物件的事件處理常式集合。|
 
-## <a name="add"></a> AgileEventSource::Add 方法
+## <a name="add"></a>AgileEventSource：： Add 方法
 
-將附加事件處理常式，以指定的委派介面來表示目前的事件處理常式的集合[EventSource](eventsource-class.md)物件。
+將指定的委派介面所表示的事件處理常式附加至目前[EventSource](eventsource-class.md)物件的事件處理常式集合。
 
 ### <a name="syntax"></a>語法
 
@@ -78,15 +78,15 @@ HRESULT Add(
 ### <a name="parameters"></a>參數
 
 *delegateInterface*<br/>
-要委派物件，代表事件處理常式的介面。
+委派物件的介面，表示事件處理常式。
 
-*token*<br/>
-這項作業完成時，代表事件的控制代碼。 使用此權杖做為參數`Remove()`捨棄的事件處理常式的方法。
+*權杖*<br/>
+當此作業完成時，表示事件的控制碼。 使用此 token 做為 `Remove()` 方法的參數，以捨棄事件處理常式。
 
 ### <a name="return-value"></a>傳回值
 
 如果作業成功，會傳送 S_OK；反之則傳送表示錯誤的 HRESULT 值。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)

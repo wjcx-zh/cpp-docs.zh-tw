@@ -26,12 +26,12 @@ helpviewer_keywords:
 - alloca function
 - _alloca function
 ms.assetid: 74488eb1-b71f-4515-88e1-cdd03b6f8225
-ms.openlocfilehash: 2212f9e40c78932b63eebfc221ad2f07fa3d3f9d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 77ce6e0cdb5e1ad3f5317989c7804abc5aed4e69
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943702"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821430"
 ---
 # <a name="_alloca"></a>_alloca
 
@@ -52,28 +52,28 @@ void *_alloca(
 
 ## <a name="return-value"></a>傳回值
 
-**_Alloca**常式會將**void**指標傳回至配置的空間，保證會適當地對齊任何物件類型的儲存。 如果*size*為0， **_alloca**會配置零長度專案，並傳回該專案的有效指標。
+**_Alloca**常式會傳回已配置空間的**void**指標，保證會適當地對齊任何物件類型的儲存。 如果*size*為0， **_alloca**會配置零長度專案，並傳回該專案的有效指標。
 
 如果無法配置空間，則會產生堆疊溢位例外狀況。 堆疊溢位例外狀況不是 C++ 例外狀況，而是結構化例外狀況。 您必須使用[結構化例外狀況處理](../../cpp/structured-exception-handling-c-cpp.md) (SEH)，而不是使用 C++ 例外狀況處理。
 
 ## <a name="remarks"></a>備註
 
-**_alloca**會從程式堆疊配置*大小*的位元組。 已配置的空間會在呼叫函式結束時自動釋出（而不是在配置只傳遞超出範圍時）。 因此，請不要將 **_alloca**所傳回的指標值當做引數傳遞給[free](free.md)。
+**_alloca**從程式堆疊配置*大小*位元組。 已配置的空間會在呼叫函式結束時自動釋出（而不是在配置只傳遞超出範圍時）。 因此，請勿將 **_alloca**傳回的指標值當做引數傳遞至[free](free.md)。
 
-在例外狀況處理常式（EH）中明確呼叫 **_alloca**有一些限制。 在 x86 類別處理器上執行的 EH 常式會在自己的記憶體框架中運作：它們會在記憶體空間中執行其工作，而這些工作不是以封入函式堆疊指標的目前位置為基礎。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任一情況下明確呼叫 **_alloca** ，會導致在傳回呼叫 EH 常式期間發生程式失敗：
+在例外狀況處理常式（EH）中明確呼叫 **_alloca**有一些限制。 在 x86 等級處理器上執行的 EH 常式會在自己的記憶體框架中運作︰這些常式會在不是根據封入函式之堆疊指標目前位置的記憶體空間中執行其工作。 最常見的實作包括 Windows NT 結構化例外狀況處理 (SEH) 和 C++ catch 子句運算式。 因此，在下列任一情況下明確呼叫 **_alloca** ，會導致在傳回呼叫 EH 常式期間發生程式失敗：
 
-- Windows NT SEH 例外狀況篩選條件運算式：`__except ( _alloca() )`
+- Windows NT SEH 例外狀況篩選運算式： `__except ( _alloca() )`
 
-- Windows NT SEH 最終例外狀況處理常式：`__finally { _alloca() }`
+- Windows NT SEH 最終例外狀況處理常式： `__finally { _alloca() }`
 
 - C++ EH catch 子句運算式
 
-不過，您可以從 EH 常式內或從應用程式提供的回呼（由先前列出的其中一個 EH 案例叫用）來直接呼叫 **_alloca** 。
+不過，您可以從 EH 常式內或從應用程式提供的回呼（由先前列出的其中一個 EH 案例叫用），直接呼叫 **_alloca** 。
 
 > [!IMPORTANT]
-> 在 Windows XP 中，如果在 try/catch 區塊內呼叫 **_alloca** ，您就必須在 catch 區塊中呼叫[_resetstkoflw](resetstkoflw.md) 。
+> 在 Windows XP 中，如果在 try/catch 區塊內呼叫 **_alloca** ，您必須在 catch 區塊中呼叫[_resetstkoflw](resetstkoflw.md) 。
 
-除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時，無法在 **__except**區塊中使用 **_alloca** 。 如需詳細資訊，請參閱 [/clr Restrictions](../../build/reference/clr-restrictions.md)。
+除了上述限制以外，使用[/clr （Common Language Runtime 編譯）](../../build/reference/clr-common-language-runtime-compilation.md)選項時， **_alloca**不能用在 **__except**區塊中。 如需詳細資訊，請參閱 [/clr 限制](../../build/reference/clr-restrictions.md)。
 
 ## <a name="requirements"></a>需求
 
@@ -119,7 +119,7 @@ int main()
         }
     }
 
-    // If an exception occured with the _alloca function
+    // If an exception occurred with the _alloca function
     __except( GetExceptionCode() == STATUS_STACK_OVERFLOW )
     {
         printf_s("_alloca failed!\n");
@@ -139,7 +139,7 @@ int main()
 Allocated 1000 bytes of stack at 0x0012FB50
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [記憶體配置](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: 7d36793e4467f9454aca1eb207f3c3dfbd483bff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516673"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821634"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明確覆寫 (C++/CLI 和 C++/CX)
 
@@ -33,7 +33,7 @@ overriding-function-declarator = function { overriding-function-definition }
 *type*<br/>
 包含要覆寫之函式的基底型別。
 
-*function*<br/>
+*函式*<br/>
 要覆寫之一或多個函式名稱的逗號分隔清單。
 
 *overriding-function-definition*<br/>
@@ -41,7 +41,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="remarks"></a>備註
 
-使用明確覆寫來建立方法簽章的別名，或使用相同簽章來為方法提供不同的實作。
+使用明確覆寫來建立方法簽章的別名，或為具有相同簽章的方法提供不同的執行方式。
 
 如需修改繼承型別和繼承型別成員之行為的相關資訊，請參閱[覆寫指定名稱](override-specifiers-cpp-component-extensions.md)。
 
@@ -172,6 +172,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

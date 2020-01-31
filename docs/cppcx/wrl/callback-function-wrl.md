@@ -1,18 +1,18 @@
 ---
-title: 回呼函式 (WRL)
+title: Callback 函式（WRL）
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10fb053ed97aaca0f4a31e3843d96aa194d8949d
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398897"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821684"
 ---
-# <a name="callback-function-wrl"></a>回呼函式 (WRL)
+# <a name="callback-function-wrl"></a>Callback 函式（WRL）
 
 建立成員函式是回呼方法的物件。
 
@@ -222,12 +222,12 @@ ComPtr<TDelegateInterface> Callback(
 樣板參數，指定第七個回呼方法引數的型別。
 
 *TArg8*<br/>
-樣板參數，指定第八個回呼方法引數的型別。
+範本參數，指定第八個回呼方法引數的類型。
 
 *TArg9*<br/>
 樣板參數，指定第九個回呼方法引數的型別。
 
-*callback*<br/>
+*回電*<br/>
 表示回呼物件及其成員函式的物件。
 
 *object*<br/>
@@ -242,14 +242,14 @@ ComPtr<TDelegateInterface> Callback(
 
 ## <a name="remarks"></a>備註
 
-必須是委派物件的基底`IUnknown`，而非`IInspectable`。
+委派物件的基底必須是 `IUnknown`，而不是 `IInspectable`。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** event.h
+**Header：** 事件。h
 
-**命名空間：** Microsoft:: wrl
+**命名空間：** Microsoft::WRL
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [Microsoft::WRL 命名空間](microsoft-wrl-namespace.md)

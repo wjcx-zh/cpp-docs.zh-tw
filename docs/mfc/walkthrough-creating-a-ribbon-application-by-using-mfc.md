@@ -3,26 +3,26 @@ title: 逐步解說：使用 MFC 建立功能區應用程式
 ms.date: 09/09/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
-- creating a ribbon aplication (MFC)
+- creating a ribbon application (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 41084a78287521610ba400deab32d1052c9217c1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 0f81b27d479b15864302b21a467bff9489ba465a
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907398"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821918"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>逐步解說：使用 MFC 建立功能區應用程式
 
 本逐步解說會示範如何使用**MFC 應用程式精靈**來建立預設具有功能區的應用程式。 接著，您可以新增具有 [我的最愛 **]** 功能區面板的**自訂**功能區類別，然後將一些常用的命令新增至面板，以展開功能區。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>必要條件：
 
 本逐步解說假設您已將 Visual Studio 設定為使用 **[一般開發設定**]。 如果您使用不同的設定，則可能不會顯示下列指示中所參考的某些使用者介面（UI）元素。
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>若要建立具有功能區的 MFC 應用程式
 
-1. 使用**Mfc 應用程式精靈**來建立具有功能區的 mfc 應用程式。 請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md) , 以取得如何針對您的 Visual Studio 版本開啟嚮導的指示。
+1. 使用**Mfc 應用程式精靈**來建立具有功能區的 mfc 應用程式。 如需如何為您的 Visual Studio 版本開啟嚮導的指示，請參閱[逐步解說：使用新的 MFC Shell 控制項](walkthrough-using-the-new-mfc-shell-controls.md)。
 
 1. 在 [ **MFC 應用程式精靈]** 中設定下列選項：
 
@@ -54,7 +54,7 @@ ms.locfileid: "70907398"
 
     以滑鼠右鍵按一下 [ **Category1** ]，然後按一下 [**屬性**]。 在 [**屬性**] 視窗中，將**標題**變更為 [*自訂*]。
 
-    [**大型影像**] 和 [**小型影像**] 屬性會指定用來做為此類別中功能區元素圖示的點陣圖。 由於建立自訂點陣圖並不在本逐步解說的討論範圍內，因此請重複使用精靈所建立的點陣圖。 小型點陣圖是 16 像素 x 16 像素。 針對小型影像，請使用由`IDB_FILESMALL`資源識別碼存取的點陣圖。 大型點陣圖是 32 像素 x 32 像素。 若為大型影像，請使用由`IDB_FILELARGE`資源識別碼存取的點陣圖。
+    [**大型影像**] 和 [**小型影像**] 屬性會指定用來做為此類別中功能區元素圖示的點陣圖。 由於建立自訂點陣圖並不在本逐步解說的討論範圍內，因此請重複使用精靈所建立的點陣圖。 小型點陣圖是 16 像素 x 16 像素。 針對小型影像，請使用 `IDB_FILESMALL` 資源識別碼所存取的點陣圖。 大型點陣圖是 32 像素 x 32 像素。 若為大型影像，請使用 `IDB_FILELARGE` 資源識別碼所存取的點陣圖。
 
     > [!NOTE]
     > 在 HDPI (高像素密度) 顯示器上，就會自動使用影像的 HDPI 版本。
@@ -75,7 +75,7 @@ ms.locfileid: "70907398"
 
     在 [**屬性**] 視窗中，將 [**識別碼**] 屬性變更為**ID_FILE_PRINT**，這應該已經定義。 將**標題**變更為 [*列印*]。 將 [**影像索引**] 變更為*4*。
 
-    若要建立 [**快速列印**] 按鈕，請按一下 [**功能表項目**] 旁的 [屬性值] 資料行，然後按一下省略號（ **...** ）。在 [**專案編輯器**] 中，按一下未標記的 [**新增**] 按鈕，以建立功能表項目。 在 [**屬性**] 視窗中，將 [**標題**] 變更為 [*快速列印*]、[**識別碼**]*設為 [* *ID_FILE_PRINT_DIRECT*]，然後**影像** Image 屬性會指定`IDB_FILESMALL`點陣圖資源中的**快速列印**圖示。
+    若要建立 [**快速列印**] 按鈕，請按一下 [**功能表項目**] 旁的 [屬性值] 資料行，然後按一下省略號（ **...** ）。在 [**專案編輯器**] 中，按一下未標記的 [**新增**] 按鈕，以建立功能表項目。 在 **屬性** 視窗中，將 **標題** 變更為 *快速列印*、**識別碼** 設為  *ID_FILE_PRINT_DIRECT*，*並將***影像** Image 屬性會指定 `IDB_FILESMALL` bitmap 資源中的**快速列印**圖示。
 
 1. 若要確認按鈕已加入至功能區面板，請建置並執行應用程式。 若要建立應用程式，請在 [**建立**] 功能表上，按一下 [**建立方案**]。 如果成功建立應用程式，請按一下 [**調試**程式] 功能表上的 [**啟動調試**程式] 來執行應用程式。 應該會顯示功能區上 [**自訂**] 索引標籤上 [**我的最愛] 面板上**的 [**列印**] 按鈕和下拉式方塊。
 
@@ -87,7 +87,7 @@ ms.locfileid: "70907398"
 
 如需端對端範例，請參閱[範例（MFC 功能套件）](../overview/visual-cpp-samples.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [逐步解說](../mfc/walkthroughs-mfc.md)<br/>
 [範例（MFC 功能套件）](../overview/visual-cpp-samples.md)

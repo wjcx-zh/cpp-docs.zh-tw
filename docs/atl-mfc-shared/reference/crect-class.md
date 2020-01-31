@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 2c84ce888e37b2a8985ca63cf3544205bc61f69f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491537"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821365"
 ---
 # <a name="crect-class"></a>CRect 類別
 
@@ -51,78 +51,78 @@ ms.locfileid: "69491537"
 class CRect : public tagRECT
 ```
 
-## <a name="members"></a>成員
+## <a name="members"></a>Members
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRect::CRect](#crect)|建構 `CRect` 物件。|
+|[CRect：： CRect](#crect)|建構 `CRect` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|名稱|說明|
+|Name|描述|
 |----------|-----------------|
-|[CRect::BottomRight](#bottomright)|傳回的右下`CRect`角。|
-|[CRect::CenterPoint](#centerpoint)|傳回的 centerpoint `CRect`。|
-|[CRect::CopyRect](#copyrect)|將來源矩形的維度複製到`CRect`。|
-|[CRect::DeflateRect](#deflaterect)|減少的寬度和高度`CRect`。|
-|[CRect::EqualRect](#equalrect)|`CRect`判斷是否等於指定的矩形。|
-|[CRect::Height](#height)|計算的高度`CRect`。|
-|[CRect::InflateRect](#inflaterect)|增加的寬度和高度`CRect`。|
-|[CRect::IntersectRect](#intersectrect)|設定`CRect`為等於兩個矩形的交集。|
-|[CRect::IsRectEmpty](#isrectempty)|判斷是否`CRect`為空的。 `CRect`如果寬度和/或高度為0，則為空白。|
-|[CRect::IsRectNull](#isrectnull)|判斷`top`、 `bottom`、 `left`和成員變數是否全部都等於0。`right`|
-|[CRect::MoveToX](#movetox)|移`CRect`至指定的 x 座標。|
-|[CRect::MoveToXY](#movetoxy)|移`CRect`至指定的 x 和 y 座標。|
-|[CRect::MoveToY](#movetoy)|移`CRect`至指定的 y 座標。|
-|[CRect::NormalizeRect](#normalizerect)|標準化的高度和寬度`CRect`。|
-|[CRect::OffsetRect](#offsetrect)|依`CRect`指定的位移移動。|
-|[CRect::PtInRect](#ptinrect)|判斷指定的點是否位於`CRect`。|
-|[CRect::SetRect](#setrect)|設定的維度`CRect`。|
-|[CRect::SetRectEmpty](#setrectempty)|將`CRect`設定為空的矩形（所有座標都等於0）。|
-|[CRect::Size](#size)|計算的大小`CRect`。|
-|[CRect::SubtractRect](#subtractrect)|減去另一個矩形。|
-|[CRect::TopLeft](#topleft)|傳回的左上角`CRect`。|
-|[CRect::UnionRect](#unionrect)|設定`CRect`為等於兩個矩形的聯集。|
-|[CRect::Width](#width)|計算的寬度`CRect`。|
+|[CRect：： BottomRight](#bottomright)|傳回 `CRect`的右下方點。|
+|[CRect：： CenterPoint](#centerpoint)|傳回 `CRect`的 centerpoint。|
+|[CRect：： CopyRect](#copyrect)|將來源矩形的維度複製到 `CRect`。|
+|[CRect：:D eflateRect](#deflaterect)|減少 `CRect`的寬度和高度。|
+|[CRect：： EqualRect](#equalrect)|判斷 `CRect` 是否等於指定的矩形。|
+|[CRect：： Height](#height)|計算 `CRect`的高度。|
+|[CRect：： InflateRect](#inflaterect)|增加 `CRect`的寬度和高度。|
+|[CRect：： IntersectRect](#intersectrect)|將 `CRect` 設定為等於兩個矩形的交集。|
+|[CRect：： IsRectEmpty](#isrectempty)|判斷 `CRect` 是否為空白。 如果寬度和/或高度為0，`CRect` 會是空的。|
+|[CRect：： IsRectNull](#isrectnull)|判斷 `top`、`bottom`、`left`和 `right` 成員變數是否全都等於0。|
+|[CRect：： MoveToX](#movetox)|將 `CRect` 移到指定的 x 座標。|
+|[CRect：： MoveToXY](#movetoxy)|將 `CRect` 移到指定的 x 和 y 座標。|
+|[CRect：： MoveToY](#movetoy)|將 `CRect` 移至指定的 y 座標。|
+|[CRect：： NormalizeRect](#normalizerect)|標準化 `CRect`的高度和寬度。|
+|[CRect：： OffsetRect](#offsetrect)|依據指定的位移移動 `CRect`。|
+|[CRect：:P tInRect](#ptinrect)|判斷指定的點是否位於 `CRect`內。|
+|[CRect：： SetRect](#setrect)|設定 `CRect`的維度。|
+|[CRect：： SetRectEmpty](#setrectempty)|將 `CRect` 設定為空的矩形（所有座標都等於0）。|
+|[CRect：： Size](#size)|計算 `CRect`的大小。|
+|[CRect：： SubtractRect](#subtractrect)|減去另一個矩形。|
+|[CRect：： TopLeft](#topleft)|傳回 `CRect`的左上角點。|
+|[CRect：： UnionRect](#unionrect)|將 `CRect` 設定為等於兩個矩形的聯集。|
+|[CRect：： Width](#width)|計算 `CRect`的寬度。|
 
 ### <a name="public-operators"></a>公用運算子
 
-|名稱|描述|
+|Name|描述|
 |----------|-----------------|
-|[CRect：： operator-](#operator_-)|從`CRect`或「洩氣」 `CRect`減去指定的位移，並傳回產生`CRect`的。|
+|[CRect：： operator-](#operator_-)|將指定的位移減去 `CRect` 或「洩氣」 `CRect`，並傳回產生的 `CRect`。|
 |[CRect：： operator LPCRECT](#operator_lpcrect)|將 `CRect` 轉換成 `LPCRECT`。|
 |[CRect：： operator LPRECT](#operator_lprect)|將 `CRect` 轉換成 `LPRECT`。|
-|[CRect::operator !=](#operator_neq)|`CRect`判斷是否不等於矩形。|
-|[CRect：： operator&amp;](#operator_amp)|建立`CRect`和矩形的交集，並傳回所產生`CRect`的。|
-|[CRect：： operator&amp;=](#operator_amp_eq)|設定`CRect`為等於`CRect`和矩形的交集。|
-|[CRect：： operator&#124;](#operator_or)|建立`CRect`和矩形的聯集，並傳回所產生`CRect`的。|
-|[CRect::operator &#124;=](#operator_or_eq)|設定`CRect`為等於的聯`CRect`集和矩形。|
-|[CRect：： operator +](#operator_add)|將指定的位移`CRect`加入或擴大`CRect` ，並傳回產生`CRect`的。|
-|[CRect：： operator + =](#operator_add_eq)|將指定的位移`CRect`加入或擴大。 `CRect`|
-|[CRect：： operator =](#operator_eq)|將矩形的維度複製到`CRect`。|
-|[CRect::operator -=](#operator_-_eq)|從`CRect`或「洩氣」 `CRect`減去指定的位移。|
-|[CRect：： operator = =](#operator_eq_eq)|`CRect`判斷是否等於矩形。|
+|[CRect：： operator！ =](#operator_neq)|判斷 `CRect` 是否不等於矩形。|
+|[CRect：： operator &amp;](#operator_amp)|建立 `CRect` 和矩形的交集，並傳回產生的 `CRect`。|
+|[CRect：： operator &amp;=](#operator_amp_eq)|將 `CRect` 設定為等於 `CRect` 和矩形的交集。|
+|[CRect：： operator&#124;](#operator_or)|建立 `CRect` 和矩形的聯集，並傳回產生的 `CRect`。|
+|[CRect：： operator &#124;=](#operator_or_eq)|將 `CRect` 設定為等於 `CRect` 和矩形的聯集。|
+|[CRect：： operator +](#operator_add)|將指定的位移新增至 `CRect` 或擴大 `CRect`，並傳回產生的 `CRect`。|
+|[CRect：： operator + =](#operator_add_eq)|將指定的位移新增至 `CRect` 或擴大 `CRect`。|
+|[CRect：： operator =](#operator_eq)|將矩形的維度複製到 `CRect`。|
+|[CRect：： operator-=](#operator_-_eq)|從 `CRect` 或「洩氣」 `CRect`減去指定的位移。|
+|[CRect：： operator = =](#operator_eq_eq)|判斷 `CRect` 是否等於矩形。|
 
 ## <a name="remarks"></a>備註
 
-`CRect`也包含用來操作`CRect`物件和 Windows `RECT`結構的成員函式。
+`CRect` 也包含用來操作 `CRect` 物件和 Windows `RECT` 結構的成員函式。
 
-只要可以傳遞`LPCRECT` `CRect` `LPRECT`結構、或，就可以將物件當做函數參數傳遞。 `RECT`
+在可以傳遞 `RECT` 結構、`LPCRECT`或 `LPRECT` 的任何地方，都可以將 `CRect` 物件當做函數參數傳遞。
 
 > [!NOTE]
-> 這個類別衍生自`tagRECT`結構。 （名稱`tagRECT`是`RECT`結構較不常使用的名稱）。這`left`表示`RECT`結構的資料成員（、 `top`、 `right`和`bottom`）是的可存取資料成員`CRect`。
+> 這個類別衍生自 `tagRECT` 結構。 （名稱 `tagRECT` 是 `RECT` 結構中較不常用的名稱）。這表示 `RECT` 結構的資料成員（`left`、`top`、`right`和 `bottom`）是 `CRect`的可存取資料成員。
 
-`CRect`包含成員變數，可定義矩形的左上角和右下角點。
+`CRect` 包含可定義矩形左上角和右下角的成員變數。
 
-當指定`CRect`時，您必須謹慎地加以建立，使其正規化，換句話說，左邊座標的值小於右邊，而頂端小於底部的值。 例如，（10，10）和右下方（20，20）的左上角會定義正規化矩形，但（20，20）和右下方（10，10）的左上方則定義非正規化的矩形。 如果矩形未正規化，許多`CRect`成員函式可能會傳回不正確的結果。 （如需這些函式的清單，請參閱[CRect：： NormalizeRect](#normalizerect) ）。在呼叫需要正規化矩形的函式之前，您可以藉由呼叫`NormalizeRect`函式來將非正規化矩形標準化。
+指定 `CRect`時，您必須謹慎地加以建立，使其正規化，換句話說，左邊座標的值小於右邊，而頂端小於底部的值。 例如，（10，10）和右下方（20，20）的左上角會定義正規化矩形，但（20，20）和右下方（10，10）的左上方則定義非正規化的矩形。 如果矩形未正規化，許多 `CRect` 成員函式可能會傳回不正確的結果。 （如需這些函式的清單，請參閱[CRect：： NormalizeRect](#normalizerect) ）。在呼叫需要正規化矩形的函式之前，您可以藉由呼叫 `NormalizeRect` 函式，將非正規化矩形標準化。
 
-使用`CRect` [cdc：:D ptolp](../../mfc/reference/cdc-class.md#dptolp)和[cdc：： LPtoDP](../../mfc/reference/cdc-class.md#lptodp)成員函式來操作時，請務必小心。 如果顯示內容的對應模式是 y 範圍為負數（例如`MM_LOENGLISH`），則`CDC::DPtoLP`會轉換`CRect` ，使其頂端大於底端。 函式（ `Height`例如`Size`和）接著會針對已轉換`CRect`的高度傳回負值，而矩形則不會正規化。
+使用[cdc：:D ptolp](../../mfc/reference/cdc-class.md#dptolp)和[Cdc：： LPtoDP](../../mfc/reference/cdc-class.md#lptodp)成員函式來操作 `CRect` 時，請務必小心。 如果顯示內容的對應模式是 y 範圍為負數（如 `MM_LOENGLISH`所示），則 `CDC::DPtoLP` 會將 `CRect` 轉換，使其頂端大於底端。 然後，`Height` 和 `Size` 之類的函式會針對已轉換之 `CRect`的高度傳回負值，而矩形則不會正規化。
 
-使用`CRect`多載運算子時，第一個運算元必須`CRect`是，而第二個運算元可以是[RECT](/windows/win32/api/windef/ns-windef-rect)結構或`CRect`物件。
+使用多載 `CRect` 運算子時，第一個運算元必須是 `CRect`;第二個可以是[RECT](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件。
 
-## <a name="inheritance-hierarchy"></a>繼承階層
+## <a name="inheritance-hierarchy"></a>繼承階層架構
 
 `tagRECT`
 
@@ -134,7 +134,7 @@ class CRect : public tagRECT
 
 ##  <a name="bottomright"></a>CRect：： BottomRight
 
-座標會當做包含在中`CRect`之[CPoint](cpoint-class.md)物件的參考傳回。
+座標會當做[CPoint](cpoint-class.md)物件（包含在 `CRect`中）的參考傳回。
 
 ```
 CPoint& BottomRight() throw();
@@ -177,7 +177,7 @@ ASSERT(rect2 == CRect(10, 10, 180, 180));
 
 ##  <a name="centerpoint"></a>CRect：： CenterPoint
 
-藉`CRect`由新增左和右值並除以二來計算的 centerpoint，並加入頂端和底端的值並除以二。
+藉由新增左和右值並除以二來計算 `CRect` 的 centerpoint，並加入頂端和底部的值並除以二。
 
 ```
 CPoint CenterPoint() const throw();
@@ -185,7 +185,7 @@ CPoint CenterPoint() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-Centerpoint `CPoint` 的`CRect`物件。
+`CPoint` 物件，其為 `CRect`的 centerpoint。
 
 ### <a name="example"></a>範例
 
@@ -240,7 +240,7 @@ void CMyDlg::OnPaint()
 
 ##  <a name="copyrect"></a>CRect：： CopyRect
 
-將矩形複製到`CRect`。 `lpSrcRect`
+將 `lpSrcRect` 矩形複製到 `CRect`。
 
 ```
 void CopyRect(LPCRECT lpSrcRect) throw();
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>參數
 
 *lpSrcRect*<br/>
-指向要複製的[RECT](/windows/win32/api/windef/ns-windef-rect)結構`CRect`或物件。
+指向要複製的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件。
 
 ### <a name="example"></a>範例
 
@@ -289,22 +289,22 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 ### <a name="parameters"></a>參數
 
 *l*<br/>
-指定的`CRect`左邊位置。
+指定 `CRect`的左邊位置。
 
 *t*<br/>
-指定的頂端`CRect`。
+指定 `CRect`的頂端。
 
 *r*<br/>
-指定的`CRect`正確位置。
+指定 `CRect`的正確位置。
 
 *b*<br/>
-指定的底部`CRect`。
+指定 `CRect`的底部。
 
 *srcRect*<br/>
 參考具有座標 `CRect`的[矩形](/windows/win32/api/windef/ns-windef-rect)結構。
 
 *lpSrcRect*<br/>
-指向具有`CRect`座標的結構。`RECT`
+指向具有 `CRect`座標的 `RECT` 結構。
 
 *point*<br/>
 指定要建立之矩形的原點。 對應至左上角。
@@ -313,16 +313,16 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 指定要建立之矩形右下角的位移。（從左上角）
 
 *topLeft*<br/>
-指定的左上角位置`CRect`。
+指定 `CRect`的左上角位置。
 
 *bottomRight*<br/>
-指定的`CRect`右下角位置。
+指定 `CRect`的右下角位置。
 
 ### <a name="remarks"></a>備註
 
-如果未指定任何引數`left`， `top` `right`、、和`bottom`成員就不會初始化。
+如果未指定任何引數，`left`、`top`、`right`和 `bottom` 成員就不會初始化。
 
-（ `CRect` ）`const RECT&`和（）`LPCRECT`的構造函式會執行[CopyRect。](#copyrect) `CRect` 其他的函式會直接初始化物件的成員變數。
+`CRect`（`const RECT&`）和 `CRect`（`LPCRECT`）的構造函式會執行[CopyRect](#copyrect)。 其他的函式會直接初始化物件的成員變數。
 
 ### <a name="example"></a>範例
 
@@ -335,7 +335,7 @@ CRect rect(0, 0, 100, 50);
 ASSERT(rect.Width() == 100);
 ASSERT(rect.Height() == 50);
 
-// Initialize from RECT stucture
+// Initialize from RECT structure
 RECT sdkRect;
 sdkRect.left = 0;
 sdkRect.top = 0;
@@ -362,9 +362,9 @@ CRect rect5(pt, ptBottomRight);
 ASSERT(rect5 == rect4);
 ```
 
-##  <a name="deflaterect"></a>  CRect::DeflateRect
+##  <a name="deflaterect"></a>CRect：:D eflateRect
 
-`DeflateRect`將`CRect`其邊移至其中心，以「洩氣」。
+`DeflateRect` 「洩氣」 `CRect`，將其邊移至其中心。
 
 ```
 void DeflateRect(int x, int y) throw();
@@ -376,34 +376,34 @@ void DeflateRect(int l, int t, int r, int b) throw();
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-指定要 deflate 左邊和右邊`CRect`的單位數。
+指定要 deflate `CRect`左右兩側的單位數。
 
 *y*<br/>
-指定要 deflate 頂端和底部`CRect`的單位數。
+指定要 deflate `CRect`頂端和底部的單位數。
 
 *size*<br/>
-[大小](/windows/win32/api/windef/ns-windef-size)或[CSize](csize-class.md) ，指定要 deflate `CRect`的單位數。 值會指定要向左和右側 deflate 的單位數，而值`cy`則指定要 deflate 頂端和底端的單位數。 `cx`
+[大小](/windows/win32/api/windef/ns-windef-size)或[CSize](csize-class.md) ，指定要 deflate `CRect`的單位數。 `cx` 值會指定要向左和右側 deflate 的單位數，而 `cy` 值則指定要 deflate 頂端和底部的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構，或`CRect`指定要 deflate 每一側的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect`，指定每個邊 deflate 的單位數。
 
 *l*<br/>
-指定要 deflate 左側的`CRect`單位數。
+指定要 deflate `CRect`左邊的單位數。
 
 *t*<br/>
-指定要 deflate 頂端`CRect`的單位數。
+指定要 deflate `CRect`頂端的單位數。
 
 *r*<br/>
-指定要 deflate 右側`CRect`的單位數。
+指定要 deflate `CRect`右邊的單位數。
 
 *b*<br/>
-指定要 deflate 底部`CRect`的單位數。
+指定要 deflate `CRect`底部的單位數。
 
 ### <a name="remarks"></a>備註
 
-若要這麼做`DeflateRect` ，請將單位新增至左邊和上方，並將單位從右和下減去。 的參數`DeflateRect`是帶正負號的值，正值`CRect` deflate 和負值會擴大。
+若要這麼做，`DeflateRect` 將單位新增至左邊和上方，並將單位從右和下減去。 `DeflateRect` 的參數為帶正負號的值。正值 deflate `CRect` 和負值的值。
 
-前兩個多載會 deflate 兩個相反的`CRect`邊，使其總寬度減少兩倍*x* （或`cx`），而其總高度會減少兩倍*y* （或`cy`）。 其他兩個多載會 deflate 彼此`CRect`獨立的每一邊。
+前兩個多載會 deflate `CRect` 的相反邊，使其總寬度減少兩倍*x* （或 `cx`），而其總高度會減少兩倍*y* （或 `cy`）。 其他兩個多載會 deflate 彼此獨立 `CRect` 的每一方。
 
 ### <a name="example"></a>範例
 
@@ -422,7 +422,7 @@ ASSERT(rect2.top == 12 && rect2.bottom == 46);
 
 ##  <a name="equalrect"></a>CRect：： EqualRect
 
-`CRect`判斷是否等於指定的矩形。
+判斷 `CRect` 是否等於指定的矩形。
 
 ```
 BOOL EqualRect(LPCRECT lpRect) const throw();
@@ -461,7 +461,7 @@ ASSERT(rect1.EqualRect(&test));
 
 ##  <a name="height"></a>CRect：： Height
 
-藉由從底部`CRect`值減去前一個值來計算的高度。
+藉由從底部值減去前一個值來計算 `CRect` 的高度。
 
 ```
 int Height() const throw();
@@ -469,7 +469,7 @@ int Height() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-的高度`CRect`。
+`CRect`的高度。
 
 ### <a name="remarks"></a>備註
 
@@ -488,9 +488,9 @@ int nHt = rect.Height();
 ASSERT(nHt == 40);
 ```
 
-##  <a name="inflaterect"></a>  CRect::InflateRect
+##  <a name="inflaterect"></a>CRect：： InflateRect
 
-`InflateRect`將`CRect`其邊移離其中心，以擴大。
+`InflateRect` 擴大 `CRect`，請將其側邊移離其中心。
 
 ```
 void InflateRect(int x, int y) throw();
@@ -502,34 +502,34 @@ void InflateRect(int l, int t, int r,  int b) throw();
 ### <a name="parameters"></a>參數
 
 *x*<br/>
-指定要擴大左邊和右邊的`CRect`單位數。
+指定要擴大 `CRect`左右兩側的單位數。
 
 *y*<br/>
-指定要擴大頂端和底端`CRect`的單位數。
+指定要擴大 `CRect`頂端和底部的單位數。
 
 *size*<br/>
-[大小](/windows/win32/api/windef/ns-windef-size)或[CSize](csize-class.md) ，指定要擴充的`CRect`單位數。 值會指定要向左和右邊擴大的單位數，而值`cy`則指定要擴大頂端和底端的單位數。 `cx`
+[大小](/windows/win32/api/windef/ns-windef-size)或[CSize](csize-class.md) ，指定要擴大 `CRect`的單位數。 `cx` 值會指定要擴大左邊和右邊的單位數目，而 `cy` 值則指定要擴大頂端和底端的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構，或`CRect`指定要在每一端擴大的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect`，指定每一端要擴大的單位數。
 
 *l*<br/>
-指定要擴大左邊的`CRect`單位數。
+指定要擴大 `CRect`左邊的單位數。
 
 *t*<br/>
-指定要擴大頂端`CRect`的單位數。
+指定要擴大 `CRect`頂端的單位數。
 
 *r*<br/>
-指定要擴大右側的`CRect`單位數。
+指定要擴大 `CRect`右邊的單位數。
 
 *b*<br/>
-指定要擴大底部`CRect`的單位數。
+指定要擴大 `CRect`底部的單位數。
 
 ### <a name="remarks"></a>備註
 
-若要這麼做`InflateRect` ，請從左邊和上方減去單位，並將單位新增至右側和底部。 的參數`InflateRect`是帶正負號的值; 正值`CRect`和負值會 deflate 它。
+若要這樣做，`InflateRect` 從左邊和頂端減去單位，並將單位新增至右方和底部。 `InflateRect` 的參數為帶正負號的值。正值會擴大 `CRect`，負值則會 deflate 其值。
 
-前兩個多載會將這兩個相反`CRect`的邊同時擴大，使其總寬度增加了兩倍`cx` *x* （或），而其總高度會增加兩倍`cy` *y* （或）。 其他兩個多載會擴充彼此`CRect`獨立的每一邊。
+前兩個多載會同時擴大 `CRect` 的兩側，使其總寬度增加兩倍*x* （或 `cx`），而其總高度會增加兩倍*y* （或 `cy`）。 其他兩個多載會將彼此獨立 `CRect` 的每一端擴充。
 
 ### <a name="example"></a>範例
 
@@ -541,9 +541,9 @@ rect.InflateRect(50, 200);
 ASSERT(rect == CRect(-50, -200, 350, 500));
 ```
 
-##  <a name="intersectrect"></a>  CRect::IntersectRect
+##  <a name="intersectrect"></a>CRect：： IntersectRect
 
-`CRect`使等於兩個現有矩形的交集。
+使 `CRect` 等於兩個現有矩形的交集。
 
 ```
 BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -555,7 +555,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 指向包含來源[矩形的矩形](/windows/win32/api/windef/ns-windef-rect)`CRect`結構或物件。
 
 *lpRect2*<br/>
-指向包含來源矩形的`CRect` 結構或物件。`RECT`
+指向包含來源矩形的 `RECT` 結構或 `CRect` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -586,7 +586,7 @@ ASSERT(rectInter2 == CRect(125, 75, 150, 95));
 
 ##  <a name="isrectempty"></a>CRect：： IsRectEmpty
 
-判斷是否`CRect`為空的。
+判斷 `CRect` 是否為空白。
 
 ```
 BOOL IsRectEmpty() const throw();
@@ -594,11 +594,11 @@ BOOL IsRectEmpty() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果`CRect`是空的則為非`CRect`零; 如果不是空的，則為0。
+如果 `CRect` 是空的，則為非零值;如果 `CRect` 不是空的，則為0。
 
 ### <a name="remarks"></a>備註
 
-如果寬度和/或高度為0或負數，矩形就會是空的。 不同于`IsRectNull`，它會判斷矩形的所有座標是否為零。
+如果寬度和/或高度為0或負數，矩形就會是空的。 與 `IsRectNull`不同，這會決定矩形的所有座標是否為零。
 
 > [!NOTE]
 >  矩形必須正規化，否則此函數可能會失敗。 您可以呼叫[NormalizeRect](#normalizerect)來將矩形正規化，再呼叫此函式。
@@ -614,9 +614,9 @@ CRect rectEmpty(35, 35, 35, 35);
 ASSERT(rectEmpty.IsRectEmpty());
 ```
 
-##  <a name="isrectnull"></a>  CRect::IsRectNull
+##  <a name="isrectnull"></a>CRect：： IsRectNull
 
-判斷的上、左、下和右值`CRect`是否全都等於0。
+決定 `CRect` 的上、左、下和右值是否全都等於0。
 
 ```
 BOOL IsRectNull() const throw();
@@ -624,11 +624,11 @@ BOOL IsRectNull() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果`CRect`top、left、底端和 right 值全都等於0，則為非零，否則為0。
+如果 `CRect`的上、左、下和右值全都等於0，則為非零。否則為0。
 
 ### <a name="remarks"></a>備註
 
-不同于`IsRectEmpty`，它會判斷矩形是否為空的。
+不同于 `IsRectEmpty`，它會判斷矩形是否為空的。
 
 ### <a name="example"></a>範例
 
@@ -643,7 +643,7 @@ CRect rectNotNull(0, 0, 35, 50);
 ASSERT(!rectNotNull.IsRectNull());
 ```
 
-##  <a name="movetox"></a>  CRect::MoveToX
+##  <a name="movetox"></a>CRect：： MoveToX
 
 呼叫此函式可將矩形移至*x*所指定的絕對 x 座標。
 
@@ -666,7 +666,7 @@ rect.MoveToX(10);
 ASSERT(rect == CRect(10, 0, 110, 100));
 ```
 
-##  <a name="movetoxy"></a>  CRect::MoveToXY
+##  <a name="movetoxy"></a>CRect：： MoveToXY
 
 呼叫此函式可將矩形移至指定的絕對 x 和 y 座標。
 
@@ -684,7 +684,7 @@ void MoveToXY(POINT point) throw();
 矩形左上角的絕對 y 座標。
 
 *point*<br/>
-`POINT`結構，指定矩形的絕對左上角。
+`POINT` 結構，指定矩形的絕對左上角。
 
 ### <a name="example"></a>範例
 
@@ -695,7 +695,7 @@ rect.MoveToXY(10, 10);
 ASSERT(rect == CRect(10, 10, 110, 110));
 ```
 
-##  <a name="movetoy"></a>  CRect::MoveToY
+##  <a name="movetoy"></a>CRect：： MoveToY
 
 呼叫此函式可將矩形移至*y*所指定的絕對 y 座標。
 
@@ -717,9 +717,9 @@ rect.MoveToY(10);
 ASSERT(rect == CRect(0, 10, 100, 110));
 ```
 
-##  <a name="normalizerect"></a>  CRect::NormalizeRect
+##  <a name="normalizerect"></a>CRect：： NormalizeRect
 
-正規化`CRect` ，使高度和寬度都是正數。
+正規化 `CRect`，讓高度和寬度都是正數。
 
 ```
 void NormalizeRect() throw();
@@ -727,10 +727,10 @@ void NormalizeRect() throw();
 
 ### <a name="remarks"></a>備註
 
-矩形會針對第四象限位置正規化，而 Windows 通常會使用來進行座標。 `NormalizeRect`比較頂端和底端的值，並在頂端大於底部時加以交換。 同樣地，如果左邊大於右方，它就會交換左邊和右邊的值。 當處理不同的對應模式和反轉矩形時，此函式很有用。
+矩形會針對第四象限位置正規化，而 Windows 通常會使用來進行座標。 `NormalizeRect` 會比較頂端和底端的值，並在頂端大於底部時加以交換。 同樣地，如果左邊大於右方，它就會交換左邊和右邊的值。 當處理不同的對應模式和反轉矩形時，此函式很有用。
 
 > [!NOTE]
-> 下列`CRect`成員函式需要正規化的矩形，才能正常運作：[Height](#height)、 [Width](#width)、 [Size](#size)、 [IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、 [IntersectRect](#intersectrect)、 [SubtractRect](#subtractrect)、 [operator = =](#operator_eq_eq)、 [operator！ =](#operator_neq)、[運算子&#124; ](#operator_or)、 [operator &#124;=](#operator_or_eq)、[運算子 &](#operator_amp)和[運算子 & =](#operator_amp_eq)。
+> 下列 `CRect` 成員函式需要正規化矩形才能正常運作： [Height](#height)、 [Width](#width)、 [Size](#size)、 [IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、 [IntersectRect](#intersectrect)、 [SubtractRect](#subtractrect)、 [operator = =](#operator_eq_eq)、 [operator！ =](#operator_neq)、 [operator &#124; ](#operator_or)、 [operator &#124;=](#operator_or_eq)、 [operator &](#operator_amp)和[operator & =](#operator_amp_eq)。
 
 ### <a name="example"></a>範例
 
@@ -742,9 +742,9 @@ rect2.NormalizeRect();
 ASSERT(rect1 == rect2);
 ```
 
-##  <a name="offsetrect"></a>  CRect::OffsetRect
+##  <a name="offsetrect"></a>CRect：： OffsetRect
 
-依`CRect`指定的位移移動。
+依據指定的位移移動 `CRect`。
 
 ```
 void OffsetRect(int x, int y) throw();
@@ -768,7 +768,7 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="remarks"></a>備註
 
-沿著`CRect`X 軸和*y*軸移動*x*個單位。 *X*和*y*參數是帶正負號的值`CRect` ，因此可以向左或向右和向上或向下移動。
+沿著 X 軸和*y*軸移動 `CRect`*x*單位。 *X*和*y*參數是帶正負號的值，因此 `CRect` 可以向左或向右及向上或向下移動。
 
 ### <a name="example"></a>範例
 
@@ -780,7 +780,7 @@ rect.OffsetRect(230, 230);
 ASSERT(rect == CRect(230, 230, 265, 265));
 ```
 
-##  <a name="operator_lpcrect"></a>CRect：： operator LPCRECT 會將`CRect`轉換為[LPCRECT](../../mfc/reference/data-types-mfc.md)。
+##  <a name="operator_lpcrect"></a>CRect：： operator LPCRECT 會將 `CRect` 轉換為[LPCRECT](../../mfc/reference/data-types-mfc.md)。
 
 ```
 operator LPCRECT() const throw();
@@ -788,7 +788,7 @@ operator LPCRECT() const throw();
 
 ### <a name="remarks"></a>備註
 
-當您使用此函式時，不需要 address （ **&** ）運算子。 當您將`CRect`物件傳遞至預期的函式`LPCRECT`時，將會自動使用此運算子。
+當您使用此函式時，您不需要位址-（ **&** ）運算子。 當您將 `CRect` 物件傳遞至預期 `LPCRECT`的函式時，將會自動使用此運算子。
 
 ##  <a name="operator_lprect"></a>CRect：： operator LPRECT
 
@@ -800,7 +800,7 @@ operator LPRECT() throw();
 
 ### <a name="remarks"></a>備註
 
-當您使用此函式時，不需要 address （ **&** ）運算子。 當您將`CRect`物件傳遞至預期的函式`LPRECT`時，將會自動使用此運算子。
+當您使用此函式時，您不需要位址-（ **&** ）運算子。 當您將 `CRect` 物件傳遞至預期 `LPRECT`的函式時，將會自動使用此運算子。
 
 ### <a name="example"></a>範例
 
@@ -808,7 +808,7 @@ operator LPRECT() throw();
 
 ##  <a name="operator_eq"></a>CRect：： operator =
 
-將*srcRect*指派`CRect`給。
+將*srcRect*指派給 `CRect`。
 
 ```
 void operator=(const RECT& srcRect) throw();
@@ -817,7 +817,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>參數
 
 *srcRect*<br/>
-參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="example"></a>範例
 
@@ -831,7 +831,7 @@ ASSERT(rect2 == CRect(0, 0, 127, 168));
 
 ##  <a name="operator_eq_eq"></a>CRect：： operator = =
 
-藉`CRect`由`rect`比較其左上角和右下角的座標，判斷是否等於。
+藉由比較其左上角和右下角的座標，判斷 `rect` 是否等於 `CRect`。
 
 ```
 BOOL operator==(const RECT& rect) const throw();
@@ -840,7 +840,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -871,7 +871,7 @@ ASSERT(rect1 == test);
 
 ##  <a name="operator_neq"></a>CRect：： operator！ =
 
-藉`CRect`由比較其左上角和右下角的座標，判斷*矩形*是否不等於。
+藉由比較其左上角和右下角的座標，判斷*矩形*是否不等於 `CRect`。
 
 ```
 BOOL operator!=(const RECT& rect) const throw();
@@ -880,7 +880,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -911,7 +911,7 @@ ASSERT(rect3 != test);
 
 ##  <a name="operator_add_eq"></a>CRect：： operator + =
 
-前兩個多載`CRect`會依指定的位移移動。
+前兩個多載會依照指定的位移 `CRect` 移動。
 
 ```
 void operator+=(POINT point) throw();
@@ -928,13 +928,13 @@ void operator+=(LPCRECT lpRect) throw();
 [大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或`CRect`物件，其中包含要擴充每一側`CRect`的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件，其中包含要擴大 `CRect`各端的單位數。
 
 ### <a name="remarks"></a>備註
 
-參數的*x*和*y* （或`cx`和`cy`）值會加入至`CRect`。
+參數的*x*和*y* （或 `cx` 和 `cy`）值會加入至 `CRect`。
 
-第三個多`CRect`載會以參數的每個成員中指定的單位數擴大。
+第三個多載擴大會依參數之每個成員中指定的單位數來 `CRect`。
 
 ### <a name="example"></a>範例
 
@@ -949,7 +949,7 @@ ASSERT(rect1 == rect2);
 
 ##  <a name="operator_-_eq"></a>CRect：： operator-=
 
-前兩個多載`CRect`會依指定的位移移動。
+前兩個多載會依照指定的位移 `CRect` 移動。
 
 ```
 void operator-=(POINT point) throw();
@@ -966,13 +966,13 @@ void operator-=(LPCRECT lpRect) throw();
 [大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件，指定要移動矩形的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或`CRect`物件，其中包含要`CRect`deflate 之每一方的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件，其中包含要 deflate `CRect`每一方的單位數。
 
 ### <a name="remarks"></a>備註
 
-參數的*x*和*y* （或`cx`和`cy`）值會從`CRect`減去。
+參數的*x*和*y* （或 `cx` 和 `cy`）值會從 `CRect`中減去。
 
-第三個多`CRect`載會以參數的每個成員中指定的單位數「洩氣」。 請注意，這種多載的功能就像[DeflateRect](#deflaterect)。
+第三個多載「洩氣」會依參數之每個成員中指定的單位數來 `CRect`。 請注意，這種多載的功能就像[DeflateRect](#deflaterect)。
 
 ### <a name="example"></a>範例
 
@@ -985,9 +985,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect1 == rectResult);
 ```
 
-##  <a name="operator_amp_eq"></a>CRect：： operator&amp;=
+##  <a name="operator_amp_eq"></a>CRect：： operator &amp;=
 
-設定`CRect`為等於`CRect`和`rect`的交集。
+將 `CRect` 設定為等於 `CRect` 和 `rect`的交集。
 
 ```
 void operator&=(const RECT& rect) throw();
@@ -996,7 +996,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-包含[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="remarks"></a>備註
 
@@ -1011,7 +1011,7 @@ void operator&=(const RECT& rect) throw();
 
 ##  <a name="operator_or_eq"></a>CRect：： operator &#124;=
 
-設定`CRect`為等於`CRect`和`rect`的聯集。
+將 `CRect` 設定為等於 `CRect` 和 `rect`的聯集。
 
 ```
 void operator|=(const RECT& rect) throw();
@@ -1020,7 +1020,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>參數
 
 *rect*<br/>
-包含或[矩形。](/windows/win32/api/windef/ns-windef-rect) `CRect`
+包含 `CRect` 或[矩形](/windows/win32/api/windef/ns-windef-rect)。
 
 ### <a name="remarks"></a>備註
 
@@ -1042,7 +1042,7 @@ ASSERT(rectResult == rect1);
 
 ##  <a name="operator_add"></a>CRect：： operator +
 
-前兩個`CRect`多載會傳回等於以`CRect`指定位移來取代的物件。
+前兩個多載會傳回一個 `CRect` 物件，其等於指定的位移所取代 `CRect`。
 
 ```
 CRect operator+(POINT point) const throw();
@@ -1059,17 +1059,17 @@ CRect operator+(SIZE size) const throw();
 [大小](/windows/win32/api/windef/ns-windef-size)結構或[CSize](csize-class.md)物件，指定要移動傳回值的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或`CRect`物件，其中包含要擴充傳回值各端的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件，其中包含要在傳回值的每一端擴大的單位數。
 
 ### <a name="return-value"></a>傳回值
 
-由`CRect`參數中指定的單位`CRect`數移動或因而誇大所產生的。
+根據參數中指定的單位數，移動或因而誇大 `CRect` 所產生的 `CRect`。
 
 ### <a name="remarks"></a>備註
 
-參數的*x*和*y* （或`cx`和`cy`）參數會加入至`CRect`的位置。
+參數的*x*和*y* （或 `cx` 和 `cy`）參數會加入 `CRect`的位置。
 
-第三個多載會`CRect`傳回新的， `CRect`其等於以參數的每個成員中指定的單位數來放大。
+第三個多載會傳回新的 `CRect`，等於以參數的每個成員中指定的單位數來擴大 `CRect`。
 
 ### <a name="example"></a>範例
 
@@ -1085,7 +1085,7 @@ ASSERT(rectResult == rect2);
 
 ##  <a name="operator_-"></a>CRect：： operator-
 
-前兩個`CRect`多載會傳回等於以`CRect`指定位移來取代的物件。
+前兩個多載會傳回一個 `CRect` 物件，其等於指定的位移所取代 `CRect`。
 
 ```
 CRect operator-(POINT point) const throw();
@@ -1096,23 +1096,23 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>參數
 
 *point*<br/>
-[點](/windows/win32/api/windef/ns-windef-point)結構或`CPoint`物件，指定要移動傳回值的單位數。
+[點](/windows/win32/api/windef/ns-windef-point)結構或 `CPoint` 物件，指定要移動傳回值的單位數。
 
 *size*<br/>
-[大小](/windows/win32/api/windef/ns-windef-size)結構或`CSize`物件，指定要移動傳回值的單位數。
+[大小](/windows/win32/api/windef/ns-windef-size)結構或 `CSize` 物件，指定要移動傳回值的單位數。
 
 *lpRect*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或`CRect`物件，其中包含要 deflate 傳回值各端的單位數。
+指向[矩形](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件，其中包含要 deflate 傳回值每一方的單位數。
 
 ### <a name="return-value"></a>傳回值
 
-由`CRect`參數中指定的單位`CRect`數移動或 deflating 所產生的。
+根據參數中指定的單位數，移動或 deflating `CRect` 所產生的 `CRect`。
 
 ### <a name="remarks"></a>備註
 
-參數的*x*和*y* （或`cx`和`cy`）參數會從`CRect`的位置減去。
+參數的*x*和*y* （或 `cx` 和 `cy`）參數會從 `CRect`的位置減去。
 
-第三個多載會`CRect`傳回新的， `CRect`其等於縮小是參數的每個成員中指定的單位數。 請注意，這種多載功能如[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
+第三個多載會傳回新的 `CRect`，等於以參數的每個成員中指定的單位數來 `CRect` 縮小。 請注意，這種多載功能如[DeflateRect](#deflaterect)，而非[SubtractRect](#subtractrect)。
 
 ### <a name="example"></a>範例
 
@@ -1126,9 +1126,9 @@ CRect   rectResult(65, 170, 165, 270);
 ASSERT(rect2 == rectResult);
 ```
 
-##  <a name="operator_amp"></a>CRect：： operator&amp;
+##  <a name="operator_amp"></a>CRect：： operator &amp;
 
-傳回與 rect2 交集的。 `CRect` `CRect`
+傳回 `CRect` 和*rect2*交集的 `CRect`。
 
 ```
 CRect operator&(const RECT& rect2) const throw();
@@ -1137,11 +1137,11 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>參數
 
 *rect2*<br/>
-包含[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
 
-，它是`CRect`和 rect2 的交集。 `CRect`
+`CRect`，這是 `CRect` 和*rect2*的交集。
 
 ### <a name="remarks"></a>備註
 
@@ -1162,9 +1162,9 @@ CRect   rectResult(100, 100, 200, 200);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator &#124;
+##  <a name="operator_or"></a>CRect：： operator&#124;
 
-傳回， `CRect`它是和 rect2 的聯集。 `CRect`
+傳回 `CRect` 和*rect2*聯集的 `CRect`。
 
 ```
 CRect operator|(const RECT&
@@ -1174,11 +1174,11 @@ rect2) const throw();
 ### <a name="parameters"></a>參數
 
 *rect2*<br/>
-包含[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`。
+包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
 
-，它是`CRect`和 rect2 的聯集。 `CRect`
+`CRect` 和*rect2*聯集的 `CRect`。
 
 ### <a name="remarks"></a>備註
 
@@ -1199,9 +1199,9 @@ CRect   rectResult(0, 0, 300, 300);
 ASSERT(rectResult == rect3);
 ```
 
-##  <a name="ptinrect"></a>  CRect::PtInRect
+##  <a name="ptinrect"></a>CRect：:P tInRect
 
-判斷指定的點是否位於`CRect`。
+判斷指定的點是否位於 `CRect`內。
 
 ```
 BOOL PtInRect(POINT point) const throw();
@@ -1214,11 +1214,11 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="return-value"></a>傳回值
 
-如果點位於內`CRect`，則為非零，否則為0。
+如果點位於 `CRect`中，則為非零值;否則為0。
 
 ### <a name="remarks"></a>備註
 
-如果點位於左邊`CRect`或頂端，或是在四側的兩側，就會在內。 右側或底部的點在外`CRect`。
+如果點位於左邊或頂端，或是在四側的兩側，就會在 `CRect` 內。 右邊或底部的點超出 `CRect`。
 
 > [!NOTE]
 >  矩形必須正規化，否則此函數可能會失敗。 您可以呼叫[NormalizeRect](#normalizerect)來將矩形正規化，再呼叫此函式。
@@ -1251,9 +1251,9 @@ pt.y = 50;
 ASSERT(rect.PtInRect(pt));
 ```
 
-##  <a name="setrect"></a>  CRect::SetRect
+##  <a name="setrect"></a>CRect：： SetRect
 
-將的維度`CRect`設定為指定的座標。
+將 `CRect` 的維度設定為指定的座標。
 
 ```
 void SetRect(int x1, int y1, int x2, int y2) throw();
@@ -1283,7 +1283,7 @@ ASSERT(rect == CRect(256, 256, 512, 512));
 
 ##  <a name="setrectempty"></a>CRect：： SetRectEmpty
 
-將`CRect`所有座標設定為零，以建立 null 矩形。
+將所有座標設定為零，使 `CRect` null 矩形。
 
 ```
 void SetRectEmpty() throw();
@@ -1301,7 +1301,7 @@ ASSERT(rect.IsRectEmpty());
 
 ##  <a name="size"></a>CRect：： SIZE
 
-傳回`cx`值`cy`的和成員包含`CRect`的高度和寬度。
+傳回值的 `cx` 和 `cy` 成員包含 `CRect`的高度和寬度。
 
 ```
 CSize Size() const throw();
@@ -1326,9 +1326,9 @@ CSize sz = rect.Size();
 ASSERT(sz.cx == 40 && sz.cy == 40);
 ```
 
-##  <a name="subtractrect"></a>  CRect::SubtractRect
+##  <a name="subtractrect"></a>CRect：： SubtractRect
 
-使的維度`CRect`等於的`lpRectSrc2`減去`lpRectSrc1`。
+使 `CRect` 的維度等於從 `lpRectSrc1`減去 `lpRectSrc2`。
 
 ```
 BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
@@ -1337,10 +1337,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRectSrc1*<br/>
-指向`CRect` [矩形結構或物件，以](/windows/win32/api/windef/ns-windef-rect)從中減去矩形。
+指向[矩形結構或 `CRect` 物件，以](/windows/win32/api/windef/ns-windef-rect)從中減去矩形。
 
 *lpRectSrc2*<br/>
-指向要從*lpRectSrc1*參數`CRect`所指向的矩形中減去的結構或物件。`RECT`
+指向要從*lpRectSrc1*參數所指向的矩形中減去的 `RECT` 結構或 `CRect` 物件。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1354,7 +1354,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 例如，如果*lpRectSrc1*是（10，10，100100），而*lpRectSrc2*是（50，50，150150），則當函式傳回時， *lpRectSrc1*所指向的矩形會保持不變。 不過，如果*lpRectSrc1*為（10，10，100100）且*lpRectSrc2*為（50，10，150150），則當函式傳回時， *lpRectSrc1*所指向的矩形會包含座標（10，10，50100）。
 
-`SubtractRect`與[operator](#operator_-)和 operator [-=](#operator_-_eq)不相同。 這兩個運算子都不`SubtractRect`會呼叫。
+`SubtractRect` 與[operator](#operator_-)和[operator-=](#operator_-_eq)不同。 這些運算子都不會呼叫 `SubtractRect`。
 
 > [!NOTE]
 >  這兩個矩形必須正規化，否則此函式可能會失敗。 呼叫[NormalizeRect](#normalizerect)可在呼叫此函式之前，先將矩形標準化。
@@ -1393,9 +1393,9 @@ rectOut.SubtractRect(rect1, rect2);
 ASSERT(rectResult == rectOut);
 ```
 
-##  <a name="topleft"></a>  CRect::TopLeft
+##  <a name="topleft"></a>CRect：： TopLeft
 
-座標會當做包含在中`CRect`之[CPoint](cpoint-class.md)物件的參考傳回。
+座標會當做[CPoint](cpoint-class.md)物件（包含在 `CRect`中）的參考傳回。
 
 ```
 CPoint& TopLeft() throw();
@@ -1414,9 +1414,9 @@ const CPoint& TopLeft() const throw();
 
 請參閱[CRect：： CenterPoint](#centerpoint)的範例。
 
-##  <a name="unionrect"></a>  CRect::UnionRect
+##  <a name="unionrect"></a>CRect：： UnionRect
 
-使的維度`CRect`等於兩個來源矩形的聯集。
+使 `CRect` 的維度等於兩個來源矩形的聯集。
 
 ```
 BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
@@ -1425,10 +1425,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRect1*<br/>
-指向[矩形](/windows/win32/api/windef/ns-windef-rect)或`CRect`包含來源矩形的。
+指向包含來源矩形的[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 *lpRect2*<br/>
-指向包含來源矩形`CRect`的或。`RECT`
+指向包含來源矩形的 `RECT` 或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
 
@@ -1457,7 +1457,7 @@ ASSERT(rectResult == rect3);
 
 ##  <a name="width"></a>CRect：： Width
 
-藉`CRect`由從右邊的值減去左邊的值，來計算的寬度。
+藉由從右邊的值減去左邊的值，來計算 `CRect` 的寬度。
 
 ```
 int Width() const throw();
@@ -1465,7 +1465,7 @@ int Width() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-的寬度`CRect`。
+`CRect`的寬度。
 
 ### <a name="remarks"></a>備註
 
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [CPoint 類別](cpoint-class.md)<br/>
 [CSize 類別](csize-class.md)<br/>

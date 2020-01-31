@@ -26,12 +26,12 @@ helpviewer_keywords:
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-ms.openlocfilehash: 2c483df8e07b9496a0a22c1a1ebccf2b40d129cb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5eaee64c1bf6ad4b4d59c3a7b1a1434741e74454
+ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944862"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76821788"
 ---
 # <a name="_write"></a>_write
 
@@ -55,22 +55,22 @@ int _write(
 *buffer*<br/>
 要寫入的資料。
 
-*計數*<br/>
+*count*<br/>
 位元組數。
 
 ## <a name="return-value"></a>傳回值
 
-如果成功， **_write**會傳回寫入的位元組數目。 如果磁片上剩餘的實際空間小於函數嘗試寫入磁片的緩衝區大小，則 **_write**會失敗，且不會將任何緩衝區的內容排清到磁片。 傳回值-1 表示發生錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行, 此函式會傳回-1, 而**errno**會設定為下列三個值的其中一個:**EBADF**, 這表示檔案描述項無效, 或檔案未開啟以供寫入;**ENOSPC**, 這表示裝置上沒有足夠的空間可進行操作;或**EINVAL**, 這表示*緩衝區*是 null 指標, 或者傳遞了奇數的位元組*計數*, 以 Unicode 模式寫入檔案。
+如果成功， **_write**會傳回寫入的位元組數目。 如果磁片上剩餘的實際空間小於函數嘗試寫入磁片的緩衝區大小， **_write**會失敗，且不會將任何緩衝區的內容排清到磁片。 傳回值-1 表示發生錯誤。 若傳遞了無效的參數，此函式會叫用無效的參數處理常式，如[參數驗證](../../c-runtime-library/parameter-validation.md)中所述。 如果允許繼續執行，函式會傳回-1，並將**errno**設定為下列三個值的其中一個： **EBADF**，這表示檔案描述元無效或檔案未開啟以供寫入;**ENOSPC**，這表示裝置上沒有足夠的空間可進行操作;或**EINVAL**，這表示*緩衝區*是 null 指標，或者傳遞了奇數的位元組*計數*，以 Unicode 模式寫入檔案。
 
 如需這些傳回碼和其他傳回碼的詳細資訊，請參閱 [errno、_doserrno、_sys_errlist 和 _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)。
 
-如果檔案是在文字模式中開啟, 則每個換行字元都會以輸出中的換行傳回分行符號來取代。 取代並不會影響傳回值。
+如果檔案是在文字模式中開啟，則每個換行字元都會以輸出中的換行傳回分行符號來取代。 取代並不會影響傳回值。
 
-當以 Unicode 轉譯模式開啟檔案時（例如，如果*fd*是使用 **_open**或 **_sopen**來開啟），以及包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的 mode 參數，或使用來開啟，則為。**fopen**和包含**ccs = UNICODE**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數，或如果模式已使用 **_setmode**變更為 UNICODE 轉譯模式，則會將*buffer*視為指標包含**utf-16**資料的**wchar_t**陣列。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
+以 Unicode 轉譯模式開啟檔案時，例如如果*fd*是使用 **_open**或 **_sopen**以及包含 **_O_WTEXT**、 **_O_U16TEXT**或 **_O_U8TEXT**的模式參數來開啟，或者它是使用**fopen**和包含**ccs = Unicode**、 **ccs = utf-utf-16le**或**ccs = utf-8**的模式參數開啟，或如果使用 **_setmode**將模式變更為 Unicode 轉譯模式，則會將*buffer*視為指向包含**utf-16**資料之**wchar_t**的陣列。 嘗試以此模式寫入奇數位元組會導致參數驗證錯誤。
 
 ## <a name="remarks"></a>備註
 
-**_Write**函式會將*計數*位元組從*緩衝區*寫入與*fd*相關聯的檔案中。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 在寫入作業之後, 檔案指標會以寫入的位元組數來增加。
+**_Write**函式會將*計數*位元組從*緩衝區*寫入與*fd*相關聯的檔案中。 寫入作業會從與指定檔案相關之檔案指標 (若有的話) 的目前位置開始。 若檔案是開啟為以供附加，則作業會在檔案的目前結尾開始。 在寫入作業之後，檔案指標會以寫入的位元組數來增加。
 
 寫入以文字模式開啟的檔案時， **_write**會將 CTRL + Z 字元視為檔的邏輯尾。 寫入裝置時， **_write**會將緩衝區中的 CTRL + Z 字元視為輸出結束字元。
 
@@ -80,7 +80,7 @@ int _write(
 |-------------|---------------------|
 |**_write**|\<io.h>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
 ## <a name="example"></a>範例
 
@@ -124,7 +124,7 @@ int main( void )
             perror("Invalid parameter: buffer was NULL!");
             break;
          default:
-            // An unrelated error occured
+            // An unrelated error occurred
             perror("Unexpected error!");
       }
    }
@@ -140,7 +140,7 @@ int main( void )
 Wrote 36 bytes to file.
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [低層級 I/O](../../c-runtime-library/low-level-i-o.md)<br/>
 [fwrite](fwrite.md)<br/>

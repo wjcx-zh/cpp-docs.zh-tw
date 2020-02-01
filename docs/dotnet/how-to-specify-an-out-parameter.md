@@ -1,31 +1,31 @@
 ---
-title: 如何：指定 out 參數
+title: 'How to: Specify an out parameter'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - function parameters
 - out parameters
 ms.assetid: 02862448-603c-4e9d-a5c5-b45fe38446e3
-ms.openlocfilehash: 5f0b462e672de4408d50bf95d65c749bf1881078
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 4bd6ad1d3009adcc124bdeb90d9d67de07112de2
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988433"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912789"
 ---
-# <a name="how-to-specify-an-out-parameter"></a>如何：指定 out 參數
+# <a name="how-to-specify-an-out-parameter"></a>How to: Specify an out parameter
 
-這個範例會示範如何指定函式參數為 out 參數，以及如何從C#程式呼叫該函數。
+This sample shows how to specify that a function parameter is an `out` parameter, and how to call that function from a C# program.
 
-在具有 <xref:System.Runtime.InteropServices.OutAttribute> 的視覺效果C++中指定 out 參數。
+An `out` parameter is specified in C++ by using <xref:System.Runtime.InteropServices.OutAttribute> .
 
 ## <a name="example"></a>範例
 
-這個範例的第一個部分是一個 Visual C++ DLL，其型別包含含有 out 參數的函式。
+The first part of this sample creates a C++ DLL. It defines a type that contains a function with an `out` parameter.
 
 ```cpp
 // cpp_out_param.cpp
-// compile with: /LD /clr:safe
+// compile with: /LD /clr
 using namespace System;
 public value struct TestStruct {
    static void Test([Runtime::InteropServices::Out] String^ %s) {
@@ -34,11 +34,9 @@ public value struct TestStruct {
 };
 ```
 
-## <a name="example"></a>範例
+This source file is a C# client that consumes the C++ component created in the previous example.
 
-這是使用C#上一個範例中所C++建立之視覺元件的用戶端。
-
-```
+```csharp
 // cpp_out_param_2.cs
 // compile with: /reference:cpp_out_param.dll
 using System;

@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 80aade53bf1d1c9aa30c4b8c8fe59c2247fe3cfb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515783"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912842"
 ---
-# <a name="identifier-ccli"></a>__identifier (C++/CLI)
+# <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
 能夠使用 C++ 關鍵字作為識別碼。
 
@@ -41,9 +41,9 @@ __identifier(C++_keyword)
 
 **範例**
 
-在下列範例中，會在 C# 中建立名為 **template** 的類別，並以 DLL 形式散發。 在使用 **template** 類別的 C++/CLI 程式中，**__identifier** 關鍵字會隱藏 **template** 是標準 C++ 關鍵字的事實。
+在下列範例中，會在 C# 中建立名為 **template** 的類別，並以 DLL 形式散發。 在使用 **template** 類別的 C++/CLI 程式中， **__identifier** 關鍵字會隱藏 **template** 是標準 C++ 關鍵字的事實。
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -73,9 +73,9 @@ int main() {
 
 ### <a name="examples"></a>範例
 
-在下列範例中，會在 C# 中建立名為 **template** 的類別，並以 DLL 形式散發。 在使用 **template** 類別的 C++/CLI 程式中，**__identifier** 關鍵字會隱藏 **template** 是標準 C++ 關鍵字的事實。
+在下列範例中，會在 C# 中建立名為 **template** 的類別，並以 DLL 形式散發。 在使用 **template** 類別的 C++/CLI 程式中， **__identifier** 關鍵字會隱藏 **template** 是標準 C++ 關鍵字的事實。
 
-```cs
+```csharp
 // identifier_template.cs
 // compile with: /target:library
 public class template {
@@ -94,7 +94,7 @@ int main() {
 }
 ```
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)<br/>
 [適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

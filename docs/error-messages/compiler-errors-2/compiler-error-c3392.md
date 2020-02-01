@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4109a59f093740c9e0865cef6a31f3b09127c747
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62243020"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912811"
 ---
 # <a name="compiler-error-c3392"></a>編譯器錯誤 C3392
 
 'type_arg'：對泛型參數 'param' (屬於泛型 'generic_type') 無效的類型引數，必須有公用的無參數建構函式
 
-泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱 <<c0> [ 泛型](../../extensions/generics-cpp-component-extensions.md)。
+泛型類型未正確地具現化。 請檢查類型定義。 如需詳細資訊，請參閱[泛型](../../extensions/generics-cpp-component-extensions.md)。
 
 ## <a name="example"></a>範例
 
-下列範例會使用 C#，建立包含具有 C + 中撰寫泛型類型時，不支援某些條件約束的泛型類型的元件 + CLI。 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
+下列範例會使用C#來建立元件，其中包含的泛型型別具有在/cli 中C++撰寫泛型型別時不支援的特定條件約束 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
 
-```cs
+```csharp
 // C3392.cs
 // Compile by using: csc /target:library C3392.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3392.dll 元件可用時，下列範例會產生 c3392:。
+當 C3392 有可用的 .dll 元件時，下列範例會產生 C3392。
 
 ```cpp
 // C3392_b.cpp

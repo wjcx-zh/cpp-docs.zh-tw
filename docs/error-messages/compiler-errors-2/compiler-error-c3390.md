@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: 3f1149d4584a0ea3d0061a3ec4e2b77830603ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400314"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912866"
 ---
 # <a name="compiler-error-c3390"></a>編譯器錯誤 C3390
 
@@ -21,9 +21,9 @@ ms.locfileid: "62400314"
 
 ## <a name="example"></a>範例
 
-第一個範例會使用 C# 來建立包含具有 C + 中撰寫泛型類型時，不支援某些條件約束的泛型類型的元件 + CLR。 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
+第一個範例會C#使用來建立元件，其中包含的泛型型別具有在/clr 中C++撰寫泛型型別時不支援的特定條件約束 如需詳細資訊，請參閱[型別參數的條件約束](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)。
 
-```cs
+```csharp
 // C3390.cs
 // Compile by using: csc /target:library C3390.cs
 // a C# program
@@ -33,7 +33,7 @@ where V : struct
 where N : new() {}
 ```
 
-C3390.dll 元件可用時，下列範例會產生 C3390。
+當 C3390 有可用的 .dll 元件時，下列範例會產生 C3390。
 
 ```cpp
 // C3390_b.cpp

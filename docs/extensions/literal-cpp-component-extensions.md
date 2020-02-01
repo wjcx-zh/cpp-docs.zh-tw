@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: c0de82d0d1d102f02ea79a4245f2e393439f2e0b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
+ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515673"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76912832"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI 和 C++/CX)
 
@@ -92,7 +92,7 @@ public ref struct A {
 
 下列範例是以 C# 撰寫，會參考先前範例中建立的中繼資料，並顯示 **literal** 和 **static const** 變數的影響：
 
-```cs
+```csharp
 // mcppv2_literal3.cs
 // compile with: /reference:mcppv2_literal2.dll
 // A C# program
@@ -125,6 +125,6 @@ class B {
 
 編譯器選項：`/clr`
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [適用於.NET 和 UWP 的元件延伸模組](component-extensions-for-runtime-platforms.md)

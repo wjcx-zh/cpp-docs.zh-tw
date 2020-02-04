@@ -1,13 +1,14 @@
 ---
 title: 事件 (C++/CX)
-ms.date: 07/15/2019
+description: 如何使用C++/cx 在 Windows 執行階段中建立及使用事件處理常式。
+ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: aab37353b1ea8d9f81a8e9a9ae489a4dd3542cc0
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740531"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972191"
 ---
 # <a name="events-ccx"></a>事件 (C++/CX)
 
@@ -27,7 +28,7 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>使用量
+### <a name="usage"></a>使用
 
 下列範例示範訂閱類別如何使用 `+=` 運算子訂閱事件，以及如何提供事件處理常式，以便在事件引發時叫用。 請注意，提供的函式符合在 `EventTest` 命名空間中發行者端定義之委派的簽章。
 
@@ -48,7 +49,7 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>從訂閱者端移除事件處理常式
 
-在某些較罕見的情況下，您可能要移除先前訂閱之事件的事件處理常式。 例如，您可能想以另一個事件處理常式取代舊的，或者您要刪除由它所持有的某些資源。 若要移除處理常式，您必須儲存由 `+=` 運算傳回的 EventRegistrationToken。 接著對這個語彙基元使用 `-=` 運算子，移除事件處理常式。  不過，就算移除之後，原始處理常式仍然可以被叫用。 因此，如果您想要移除事件處理常式，請先建立成員旗標，並在移除事件時設定它，然後在事件處理常式中檢查旗標，如果有設定就立即返回。 下一個範例顯示基本模式。
+在某些較罕見的情況下，您可能要移除先前訂閱之事件的事件處理常式。 例如，您可能想以另一個事件處理常式取代舊的，或者您要刪除由它所持有的某些資源。 若要移除處理常式，您必須儲存由 `+=` 運算傳回的 EventRegistrationToken。 接著對這個語彙基元使用 `-=` 運算子，移除事件處理常式。  不過，就算移除之後，原始處理常式仍然可以被叫用。 例如，當事件來源取得處理常式清單並開始叫用時，可能會發生競爭情況。 如果事件處理常式在這種情況下被移除，則清單會變成過期狀態。 因此，如果您想要移除事件處理常式，請建立成員旗標。 如果已移除事件，請將它設定為，然後在事件處理常式中檢查旗標，如果已設定，則會立即傳回。 下一個範例顯示基本模式。
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
@@ -58,7 +59,7 @@ Windows 執行階段中的許多元件會公開事件。 例如，當感應器�
 
 事件來源叫用事件接收器上之事件處理常式的順序並不一定，每個呼叫可能都不一樣。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [類型系統](../cppcx/type-system-c-cx.md)<br/>
 [委派](../cppcx/delegates-c-cx.md)<br/>

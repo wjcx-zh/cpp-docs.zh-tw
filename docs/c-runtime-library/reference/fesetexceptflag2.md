@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - fesetexceptflag function
 ms.assetid: 2f7dad77-9e54-4097-a3e3-35176ace4de5
-ms.openlocfilehash: 29a6b36b0744bec30463fe55df05fe26180b93fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b16de7ea54b5f1df21b6626febe773c8cef556f5
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941082"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972150"
 ---
 # <a name="fesetexceptflag"></a>fesetexceptflag
 
@@ -50,7 +50,7 @@ int fesetexceptflag(
 *pstatus*<br/>
 **Fexcept_t**物件的指標，其中包含要設定例外狀況狀態旗標的值。 物件可能是由先前呼叫 [fegetexceptflag](fegetexceptflag2.md) 所設定。
 
-*excepts*<br/>
+*以外*<br/>
 要設定的浮點例外狀況狀態旗標。
 
 ## <a name="return-value"></a>傳回值
@@ -59,7 +59,7 @@ int fesetexceptflag(
 
 ## <a name="remarks"></a>備註
 
-**Fesetexceptflag**函數會將*以外*所指定之浮點例外狀況狀態旗標的狀態設定為*pstatus*所指向之**fexcept_t**物件中所設定的對應值。  它不會引發例外狀況。 *Pstatus*指標必須指向有效的**fexcept_t**物件，否則不會定義後續的行為。 **Fesetexceptflag**函式支援*以外*中的這些例外狀況宏值（ \<定義于 fenv.h 中） >：
+**Fesetexceptflag**函數會將*以外*所指定之浮點例外狀況狀態旗標的狀態，設定為*pstatus*所指向之**fexcept_t**物件中所設定的對應值。  它不會引發例外狀況。 *Pstatus*指標必須指向有效的**fexcept_t**物件，否則不會定義後續的行為。 **Fesetexceptflag**函數支援*以外*中的這些例外狀況宏值，定義于 \<fenv.h 中 >：
 
 |例外狀況巨集|描述|
 |---------------------|-----------------|
@@ -68,7 +68,7 @@ int fesetexceptflag(
 |FE_INVALID|在稍早的浮點運算中發生的網域錯誤。|
 |FE_OVERFLOW|發生範圍錯誤，稍早的浮點運算結果太大，無法表示。|
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
-|FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
+|FE_ALL_EXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
 *以外*引數可以是零、其中一個支援的浮點例外狀況宏，或是兩個或多個宏的位 or。 未定義任何其他引數值的效果。
 
@@ -80,9 +80,9 @@ int fesetexceptflag(
 |--------------|--------------|------------------|
 |**fesetexceptflag**|\<fenv.h>|\<cfenv>|
 
-如需其他相容性資訊，請參閱 [相容性](../../c-runtime-library/compatibility.md)。
+如需相容性的詳細資訊，請參閱[相容性](../../c-runtime-library/compatibility.md)。
 
-## <a name="see-also"></a>另請參閱
+## <a name="see-also"></a>請參閱
 
 [依字母順序排列的函式參考](crt-alphabetical-function-reference.md)<br/>
 [fegetexceptflag](fegetexceptflag2.md)<br/>

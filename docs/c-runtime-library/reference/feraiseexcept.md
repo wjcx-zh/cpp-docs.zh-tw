@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-ms.openlocfilehash: 07c8a79e0a9569db80607e1ec1e16cd4b502783c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: e98c402169ed0f35ab1bdf0b8221a2248f252f21
+ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857823"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76972216"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -61,7 +61,7 @@ int feraiseexcept(
 |FE_INVALID|在稍早的浮點運算中發生的網域錯誤。|
 |FE_OVERFLOW|發生範圍錯誤，稍早的浮點運算結果太大，無法表示。|
 |FE_UNDERFLOW|稍早的浮點運算結果太小，無法以完整精確度表示；已建立 denormal 值。|
-|FE_ALLEXCEPT|所有受支援浮點例外狀況的位元 OR。|
+|FE_ALL_EXCEPT|所有受支援浮點例外狀況的位元 OR。|
 
 *以外*引數可以是零、其中一個例外狀況宏值，或是兩個或多個受支援例外狀況宏的位 or。 如果其中一個指定的例外狀況巨集是 FE_OVERFLOW 或 FE_UNDERFLOW，則可能會發生副作用 FE_INEXACT 例外狀況。
 
@@ -71,7 +71,7 @@ int feraiseexcept(
 
 ## <a name="requirements"></a>需求
 
-|功能|C 標頭|C++ 標頭|
+|函數|C 標頭|C++ 標頭|
 |--------------|--------------|------------------|
 |*feraiseexcept*|\<fenv.h>|\<cfenv>|
 

@@ -3,15 +3,16 @@ title: 命令列屬性頁
 ms.date: 11/04/2016
 f1_keywords:
 - vc.project.AdditionalOptionsPage
+- vc.project.CommandLinePage
 helpviewer_keywords:
 - Command Line property pages
 ms.assetid: e1721b6c-8b39-4b44-a41e-69b5bb470cc9
-ms.openlocfilehash: 67f305f344030528bd99d624b1f7172fbae1d100
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454317fca468a056380f69c1384a3d1e9842e63e
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272402"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034567"
 ---
 # <a name="command-line-property-pages"></a>命令列屬性頁
 
@@ -19,7 +20,7 @@ ms.locfileid: "62272402"
 
 您在編輯方塊中輸入的任何命令將會傳遞至資料夾的工具。 不會對輸入進行任何驗證或檢查，也不會有任何相依性檢查。
 
-如需如何存取**命令列**屬性頁中，請參閱[設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。
+如需如何存取**命令列**屬性頁的詳細資訊，請[參閱C++ Visual Studio 中的設定編譯器和組建屬性](../working-with-project-properties.md)。
 
 ## <a name="see-also"></a>另請參閱
 

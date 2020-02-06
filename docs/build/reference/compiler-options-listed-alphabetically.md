@@ -3,18 +3,18 @@ title: 依字母順序排列的編譯器選項
 ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 72441692869dbed806474a7054fedff53b923d42
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518370"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034593"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
 以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱 [依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
@@ -113,6 +113,8 @@ ms.locfileid: "76518370"
 |[/Qpar (自動平行化工具)](qpar-auto-parallelizer.md)|啟用標記為 [#pragma loop()](../../preprocessor/loop.md) 指示詞之迴圈的自動平行處理。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
 |[/Qspectre](qspectre.md)|指定產生指示的編譯器，以減少特定 Spectre 變體 1 的安全性弱點。|
+|[/Qspectre-load](qspectre-load.md)|指定編譯器產生序列化指令，以根據負載指示來減輕 Spectre 的安全性弱點。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|指定編譯器產生序列化指令，以根據載入記憶體的控制流程指令來減輕 Spectre 的安全性弱點。|
 |[/Qvec-report (自動向量化工具報告層級)](qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|
 |[/RTC](rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|
 |[/sdl](sdl-enable-additional-security-checks.md)|啟用其他安全性功能及警告。|
@@ -143,7 +145,7 @@ ms.locfileid: "76518370"
 |[/we](compiler-option-warning-level.md)|將指定的警告視為錯誤。|
 |[/WL](wl-enable-one-line-diagnostics.md)|從命令列編譯 C++ 原始程式碼時啟用一行錯誤和警告訊息診斷。|
 |[/wo](compiler-option-warning-level.md)|只顯示指定的警告一次。|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|已過時。 偵測 64 位元可移植性問題。|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|已經過時： 偵測 64 位元可移植性問題。|
 |[/Wv](compiler-option-warning-level.md)|在指定的編譯器版本之後顯示未引入任何警告。|
 |[/WX](compiler-option-warning-level.md)|將所有警告視為錯誤。|
 |[/X](x-ignore-standard-include-paths.md)|忽略標準 Include 目錄。|
@@ -168,7 +170,7 @@ ms.locfileid: "76518370"
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生要在 Windows 執行階段上執行的輸出檔。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [MSVC 編譯器選項](compiler-options.md)<br/>
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

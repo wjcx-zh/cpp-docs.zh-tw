@@ -4,20 +4,20 @@ ms.date: 01/08/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 0734cdc6fb7d8b543c6415bfd6b4f98469703586
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
+ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518409"
+ms.lasthandoff: 02/05/2020
+ms.locfileid: "77034580"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
 本文包含編譯器選項的分類清單。 如需依字母順序排列的清單，請參閱 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
 
-## <a name="optimization"></a>最佳化
+## <a name="optimization"></a>Optimization
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|建立小型程式碼。|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|建立快速程式碼。|
@@ -31,9 +31,9 @@ ms.locfileid: "76518409"
 |[/Oy](oy-frame-pointer-omission.md)|省略框架指標。 (僅限 x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|產生針對指定之結構或結構範圍進行最佳化的程式碼。|
 
-## <a name="code-generation"></a>程式碼產生
+## <a name="code-generation"></a>產生程式碼
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/arch](arch-x86.md)|在程式碼產生時使用 SSE 或 SSE2 指令。 (僅限 x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|產生輸出檔案，以便在 Common Language Runtime 上執行。|
@@ -69,13 +69,15 @@ ms.locfileid: "76518409"
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|啟用自動平行處理的報告層級。|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|使用浮點值的整數移動指令，並停用特定浮點數負載最佳化。|
 |[/Qspectre](qspectre.md)|針對 Spectre 攻擊類別，啟用 CVE 2017-5753 的緩和措施。|
+|[/Qspectre-load](qspectre-load.md)|針對每個載入指令產生序列化指令。|
+|[/Qspectre-load-cf](qspectre-load-cf.md)|針對載入記憶體的每個控制流程指令產生序列化指令。|
 |[/Qvec-report](qvec-report-auto-vectorizer-reporting-level.md)|啟用自動向量化的報告層級。|
 |[/RTC](rtc-run-time-error-checks.md)|啟用執行階段錯誤檢查。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|選取 volatile 關鍵字的解譯方式。|
 
 ## <a name="output-files"></a>輸出檔案
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|將文件註解處理成 XML 檔案。|
 |[/FA](fa-fa-listing-file.md)|設定組件清單檔。|
@@ -90,7 +92,7 @@ ms.locfileid: "76518409"
 
 ## <a name="preprocessor"></a>前置處理器
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|指定一個要搜尋的目錄，以解析傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞的檔案參考。|
 |[/C](c-preserve-comments-during-preprocessing.md)|在前置處理過程中保留註解。|
@@ -108,7 +110,7 @@ ms.locfileid: "76518409"
 
 ## <a name="language"></a>語言
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制 constexpr 評估。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在原始程式碼中啟用 [#pragma omp](../../preprocessor/omp.md) 。|
@@ -133,7 +135,7 @@ ms.locfileid: "76518409"
 
 ## <a name="linking"></a>連結
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
 |[/LD](md-mt-ld-use-run-time-library.md)|建立動態連結程式庫。|
@@ -147,7 +149,7 @@ ms.locfileid: "76518409"
 
 ## <a name="miscellaneous"></a>其他
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[@](at-specify-a-compiler-response-file.md)|指定回應檔。|
@@ -201,18 +203,18 @@ ms.locfileid: "76518409"
 
 實驗性選項可能僅受到特定版本編譯器的支援，而且在不同的編譯器版本中可能會有不同的行為。 通常，實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/experimental：模組](experimental-module.md)|啟用實驗性模組支援。|
 |[/experimental：預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
 
 ## <a name="deprecated-and-removed-compiler-options"></a>已取代和已移除的編譯器選項
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已取代。 請改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已取代。 建立不包含本機變數的瀏覽資訊檔。|
-|[/Ge](ge-enable-stack-probes.md)|已取代。 啟動堆疊探查。 預設為開啟。|
+|[/Ge](ge-enable-stack-probes.md)|已取代。 啟動堆疊探查。 預設為 [開啟]。|
 |[/Gm](gm-enable-minimal-rebuild.md)|已取代。 啟用最少重建。|
 |[/GX](gx-enable-exception-handling.md)|已取代。 啟用同步例外狀況處理。 改用 [/EH](eh-exception-handling-model.md) 。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|已取代。 啟用快速檢查。 改用 [/RTC1](rtc-run-time-error-checks.md) 。|
@@ -220,13 +222,13 @@ ms.locfileid: "76518409"
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
 |[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
-|[/Wp64](wp64-detect-64-bit-portability-issues.md)|已過時。 偵測 64 位元可移植性問題。|
+|[/Wp64](wp64-detect-64-bit-portability-issues.md)|已經過時： 偵測 64 位元可移植性問題。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已取代。 停用 For 迴圈範圍中的一致性。|
 |[/Ze](za-ze-disable-language-extensions.md)|已取代。 啟用語言擴充功能。|
 |[/Zg](zg-generate-function-prototypes.md)|已在 Visual Studio 2015 中移除。 產生函式原型。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C/C++ 建置參考](c-cpp-building-reference.md)<br/>
 [MSVC 編譯器選項](compiler-options.md)<br/>

@@ -702,6 +702,10 @@
                           href: build/reference/qsafe-fp-loads.md
                         - name: /Qspectre
                           href: build/reference/qspectre.md
+                        - name: /Qspectre-load
+                          href: build/reference/qspectre-load.md
+                        - name: /Qspectre-load-cf
+                          href: build/reference/qspectre-load-cf.md
                         - name: /Qvec-report (自動向量化工具報告層級)
                           href: build/reference/qvec-report-auto-vectorizer-reporting-level.md
                     - name: /RTC (執行階段錯誤檢查)
@@ -4077,7 +4081,7 @@
                       href: cpp/summary-of-scope-rules.md
                     - name: 繼承關鍵字
                       href: cpp/inheritance-keywords.md
-                    - name: 虛擬
+                    - name: virtual
                       href: cpp/virtual-cpp.md
                     - name: __super
                       href: cpp/super.md
@@ -6080,7 +6084,7 @@
                   href: windows/attributes/db-source.md
                 - name: db_table
                   href: windows/attributes/db-table.md
-                - name: 預設
+                - name: default
                   href: windows/attributes/default-cpp.md
                 - name: defaultbind
                   href: windows/attributes/defaultbind.md
@@ -6140,7 +6144,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: 中的
+                - name: in
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md

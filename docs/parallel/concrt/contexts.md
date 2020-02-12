@@ -1,76 +1,76 @@
 ---
-title: 內容
+title: Contexts
 ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9eaf21a3d65ae891a48657de9d3e7aff78ce12b9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148337"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142194"
 ---
-# <a name="contexts"></a>內容
+# <a name="contexts"></a>Contexts
 
-本文件說明並行執行階段內容的角色。 附加至排程器的執行緒就所謂*執行內容*，或簡稱*內容*。 [Concurrency:: wait](reference/concurrency-namespace-functions.md#wait)函式和並行存取::[內容類別](../../parallel/concrt/reference/context-class.md)讓您控制內容的行為。 使用`wait`函式來暫停目前的內容指定的時間。 使用`Context`類別，在您需要更充分掌控內容時封鎖、 解除封鎖，，和產生，或當您想要過度訂閱目前的內容。
+本檔說明並行執行階段內容的角色。 附加至排程器的執行緒稱為*執行內容*，或只是*內容*。 [Concurrency：： wait](reference/concurrency-namespace-functions.md#wait)函數和 concurrency：：[CoNtext 類別](../../parallel/concrt/reference/context-class.md)可讓您控制內容的行為。 使用 `wait` 函式，在指定的時間暫止目前的內容。 當您需要進一步控制內容封鎖、解除封鎖及產生的時機，或當您想要過度訂閱目前的內容時，請使用 `Context` 類別。
 
 > [!TIP]
->  並行執行階段會提供預設排程器，因此您不需要在應用程式中建立排程器。 由於工作排程器可協助您微調應用程式的效能，建議您先使用[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)或[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)如果您是新並行執行階段。
+> 並行執行階段會提供預設排程器，因此您不需要在應用程式中建立排程器。 由於工作排程器可協助您微調應用程式的效能，因此如果您不熟悉並行執行階段，建議您從[平行模式程式庫（PPL）](../../parallel/concrt/parallel-patterns-library-ppl.md)或[非同步代理](../../parallel/concrt/asynchronous-agents-library.md)程式程式庫開始。
 
 ## <a name="the-wait-function"></a>Wait 函式
 
-[Concurrency:: wait](reference/concurrency-namespace-functions.md#wait)函式以合作方式會產生在指定的毫秒數的目前內容的執行。 執行階段使用的暫止時間執行其他工作。 指定的時間經過之後，執行階段重新排程執行的內容。 因此，`wait`函式可能會暫停目前的內容超過提供的值`milliseconds`參數。
+[Concurrency：： wait](reference/concurrency-namespace-functions.md#wait)函式會以合作方式，在指定的毫秒數內產生目前內容的執行。 執行時間會使用「產量」來執行其他工作。 經過指定的時間之後，執行時間會重新排定執行內容。 因此，`wait` 函數可能會暫停目前的內容，而不是提供給 `milliseconds` 參數的值。
 
-傳遞 0 （零）`milliseconds`參數會導致執行階段將暫停目前的內容，直到所有其他使用中的內容有機會執行工作。 這可讓您產生所有其他作用中工作的工作。
+針對 `milliseconds` 參數傳遞0（零），會導致執行時間暫停目前的內容，直到所有其他使用中的內容都有機會執行工作。 這可讓您對所有其他作用中的工作產生一個工作。
 
 ### <a name="example"></a>範例
 
-如需使用的範例`wait`函式以產生目前的內容，並因此可提供其他內容中執行，請參閱[How to:使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
+如需使用 `wait` 函式來產生目前內容的範例，因而允許其他內容執行，請參閱[如何：使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)。
 
-## <a name="the-context-class"></a>Context 類別
+## <a name="the-context-class"></a>CoNtext 類別
 
-並行::[內容類別](../../parallel/concrt/reference/context-class.md)提供執行內容的程式設計抽象概念，並提供兩個重要功能： 能夠以合作方式封鎖、 解除封鎖，並產生目前的內容，以及能夠過度訂閱目前的內容。
+Concurrency：：[CoNtext 類別](../../parallel/concrt/reference/context-class.md)提供執行內容的程式設計抽象概念，並提供兩項重要功能：能夠以合作方式封鎖、解除封鎖及產生目前內容，以及過度訂閱目前內容的能力。
 
 ### <a name="cooperative-blocking"></a>合作式封鎖
 
-`Context`類別可讓您封鎖或產生目前的執行內容。 無法繼續目前的內容，因為資源無法使用時，封鎖或產生非常有用。
+`Context` 類別可讓您封鎖或產生目前的執行內容。 當目前的內容無法繼續，因為資源無法使用時，封鎖或產生會很有用。
 
-[Concurrency::Context::Block](reference/context-class.md#block)方法會封鎖目前的內容。 已封鎖的內容會產生其處理資源，如此執行階段可以執行其他工作。 [Concurrency::Context::Unblock](reference/context-class.md#unblock)方法會解除封鎖已封鎖的內容。 `Context::Unblock`方法必須呼叫其中一個不同的內容從呼叫`Context::Block`。 執行階段會擲回[concurrency:: context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md)如果內容嘗試將自行解除封鎖。
+[Concurrency：： CoNtext：： Block](reference/context-class.md#block)方法會封鎖目前的內容。 封鎖的內容會產生其處理資源，讓執行時間可以執行其他工作。 [Concurrency：： CoNtext：：解除](reference/context-class.md#unblock)封鎖方法會取消封鎖已封鎖的內容。 `Context::Unblock` 方法必須從與呼叫 `Context::Block`不同的內容呼叫。 如果內容嘗試解除封鎖本身，則執行時間會擲回[concurrency：： coNtext_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md) 。
 
-若要以合作方式封鎖及解除封鎖的內容，一般都會呼叫[concurrency::Context::CurrentContext](reference/context-class.md#currentcontext)擷取的指標`Context`與目前執行緒，並將結果儲存相關聯的物件。 然後呼叫`Context::Block`方法來封鎖目前的內容。 更新版本中，呼叫`Context::Unblock`從個別的內容，若要解除封鎖已封鎖的內容。
+若要以合作方式封鎖和解除封鎖內容，您通常會呼叫[concurrency：： coNtext：： CurrentCoNtext](reference/context-class.md#currentcontext)來取出與目前線程相關聯之 `Context` 物件的指標，並儲存結果。 接著，您可以呼叫 `Context::Block` 方法來封鎖目前的內容。 稍後，從個別的內容呼叫 `Context::Unblock`，以解除封鎖已封鎖的內容。
 
-您必須符合呼叫的每一對`Context::Block`和`Context::Unblock`。 執行階段會擲回[concurrency:: context_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md)當`Context::Block`或`Context::Unblock`而不需要呼叫另一個方法連續呼叫方法。 不過，您就不必呼叫`Context::Block`呼叫之前`Context::Unblock`。 例如，如果一個內容呼叫`Context::Unblock`另一個內容呼叫之前`Context::Block`提供相同的內容，該內容會維持已解除封鎖。
+您必須將每一對呼叫對應到 `Context::Block` 和 `Context::Unblock`。 當 `Context::Block` 或 `Context::Unblock` 方法連續呼叫時，如果沒有對其他方法的相符呼叫，執行時間就會擲回[concurrency：： coNtext_unblock_unbalanced](../../parallel/concrt/reference/context-unblock-unbalanced-class.md) 。 不過，在呼叫 `Context::Unblock`之前，您不需要呼叫 `Context::Block`。 例如，如果一個內容呼叫 `Context::Unblock` 在另一個內容呼叫 `Context::Block` 相同的內容之前，該內容會保持解除封鎖。
 
-[Concurrency](reference/context-class.md#yield)方法會產生執行，以便執行階段可以執行其他工作，然後重新排程執行的內容。 當您呼叫`Context::Block`方法中，執行階段不會重新排程的內容。
+[Concurrency：： CoNtext：： Yield](reference/context-class.md#yield)方法會產生執行，讓執行時間可以執行其他工作，然後重新排程要執行的內容。 當您呼叫 `Context::Block` 方法時，執行時間不會重新排定內容。
 
 #### <a name="example"></a>範例
 
-如需使用的範例`Context::Block`， `Context::Unblock`，和`Context::Yield`方法來實作合作式信號類別，請參閱[How to:使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
+如需使用 `Context::Block`、`Context::Unblock`和 `Context::Yield` 方法來執行合作式信號類別的範例，請參閱[如何：使用內容類別來執行合作的信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)。
 
 ##### <a name="oversubscription"></a>過度訂閱
 
-預設排程器會建立相同的執行緒數目，如有可用的硬體執行緒。 您可以使用*過度訂閱*來建立指定的硬體執行緒的其他執行緒。
+預設排程器會建立與可用硬體執行緒相同的執行緒數目。 您可以使用*超額訂閱*，為指定的硬體執行緒建立額外的執行緒。
 
-針對密集運算作業，過度訂閱通常不會延展，因為它帶來額外的負荷。 不過，對於具有大量延遲的工作，比方說，讀取資料，從磁碟或網路連線、 過度訂閱可以改進某些應用程式的整體效率。
-
-> [!NOTE]
->  只從並行執行階段所建立的執行緒啟用過度訂閱。 過度訂閱從不執行階段 （包括主執行緒） 所建立的執行緒呼叫時，沒有任何作用。
-
-若要啟用過度訂閱目前內容中的，呼叫[concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)方法`_BeginOversubscription`參數設定為**true**。 當您啟用並行執行階段所建立的執行緒上的過度訂閱時，它會導致執行階段建立一個額外的執行緒。 需要過度訂閱完成所有工作之後呼叫`Context::Oversubscribe`具有`_BeginOversubscription`參數設為**false**。
-
-您可以啟用過度訂閱多次從目前的內容，但您就必須停用其相同次數，您將它啟用。 過度訂閱也可以是巢狀;也就是使用過度訂閱的另一個工作所建立的工作可以也過度訂閱其內容。 不過，如果巢狀的工作和其父代都屬於相同的內容中，只有最外層的呼叫來`Context::Oversubscribe`會導致其他執行緒的建立。
+對於需要大量運算的作業，過度訂閱通常不會進行調整，因為這會造成額外的負擔。 不過，對於具有大量延遲的工作，例如從磁片或網路連線讀取資料，超額訂閱可以改善某些應用程式的整體效率。
 
 > [!NOTE]
->  執行階段會擲回[concurrency:: invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md)如果過度訂閱已停用，才能加以啟用。
+> 只從並行執行階段所建立的執行緒啟用過度訂閱。 當過度訂閱是從執行時間（包括主執行緒）所建立的執行緒呼叫時，不會有任何作用。
+
+若要在目前的內容中啟用過度訂閱，請呼叫[concurrency：： coNtext：：超額](reference/context-class.md#oversubscribe)方法，並將 `_BeginOversubscription` 參數設為**true**。 當您在並行執行階段所建立的執行緒上啟用過度訂閱時，會導致執行時間建立一個額外的執行緒。 在所有需要過度訂閱的工作完成之後，請呼叫 `Context::Oversubscribe`，並將 `_BeginOversubscription` 參數設定為**false**。
+
+您可以從目前的內容多次啟用超額訂閱，但您必須停用它的相同次數。 超額訂閱也可以嵌套;也就是說，另一項使用過度訂閱的工作所建立的工作，也可以過度訂閱其內容。 不過，如果嵌套的工作及其父系都屬於相同的內容，則只有 `Context::Oversubscribe` 的最外層呼叫會導致建立額外的執行緒。
+
+> [!NOTE]
+> 如果已停用過度訂閱，則執行時間會擲回[concurrency：： invalid_oversubscribe_operation](../../parallel/concrt/reference/invalid-oversubscribe-operation-class.md) 。
 
 ###### <a name="example"></a>範例
 
-如需使用過度訂閱位移的延遲所造成的網路連線讀取資料的範例，請參閱[How to:若要位移延遲使用過度訂閱](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
+如需使用超額訂閱來抵銷從網路連線讀取資料所造成延遲的範例，請參閱[如何：使用超額訂閱來抵銷延遲](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[如何：使用排程群組影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[如何：使用排程群組來影響執行順序](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [如何：使用內容類別實作合作式信號](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[如何：使用過度訂閱以讓延遲位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
+[如何：使用過度訂閱使延遲產生位移](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)

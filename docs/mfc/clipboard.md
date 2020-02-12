@@ -8,24 +8,24 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: d405a7bbe15d2658380e19c1c908e57f2e40a574
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1db089110904ab88eb9c0c111d9da4e4e6869c82
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508925"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127903"
 ---
 # <a name="clipboard"></a>剪貼簿
 
-這系列文章說明如何在 MFC 應用程式中執行 Windows 剪貼簿的支援。 Windows 剪貼簿的使用方式有兩種:
+這系列文章說明如何在 MFC 應用程式中執行 Windows 剪貼簿的支援。 Windows 剪貼簿的使用方式有兩種：
 
-- 執行標準 [編輯] 功能表命令, 例如剪下、複製和貼上。
+- 執行標準 [編輯] 功能表命令，例如剪下、複製和貼上。
 
-- 使用拖放 (OLE) 來執行統一的資料傳輸。
+- 使用 OLE 拖放來執行統一的資料傳輸。
 
-剪貼簿是在來源與目的地之間傳送資料的標準 Windows 方法。 它在 OLE 作業中也非常有用。 隨著 OLE 的出現, Windows 中有兩個剪貼簿機制。 標準 Windows 剪貼簿 API 仍然可用, 但已使用 OLE 資料傳輸機制進行補充。 OLE 制式資料傳輸 (UDT) 支援剪下、複製和貼上剪貼簿並拖放。
+剪貼簿是在來源與目的地之間傳送資料的標準 Windows 方法。 它在 OLE 作業中也非常有用。 隨著 OLE 的出現，Windows 中有兩個剪貼簿機制。 標準 Windows 剪貼簿 API 仍然可用，但已使用 OLE 資料傳輸機制進行補充。 OLE 制式資料傳輸（UDT）支援剪下、複製和貼上剪貼簿並拖放。
 
-剪貼簿是整個 Windows 會話共用的系統服務, 因此沒有自己的控制碼或類別。 您可以透過[CWnd](../mfc/reference/cwnd-class.md)類別的成員函式來管理剪貼簿。
+剪貼簿是整個 Windows 會話共用的系統服務，因此沒有自己的控制碼或類別。 您可以透過[CWnd](../mfc/reference/cwnd-class.md)類別的成員函式來管理剪貼簿。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>您想要深入瞭解的內容
 
@@ -41,7 +41,7 @@ ms.locfileid: "69508925"
 
 - [Windows 剪貼簿](/windows/win32/dataxchg/clipboard)
 
-- [執行拖放 (OLE)](../mfc/drag-and-drop-ole.md)
+- [OLE 拖放](../mfc/drag-and-drop-ole.md)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,38 +8,38 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413927"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141780"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>並行執行階段的例外狀況處理
 
-並行執行階段會使用C++進行通訊的錯誤許多種類的例外狀況處理。 這些錯誤會包括在您提供給工作和工作群組的工作函式中使用無效的執行階段失敗，無法取得資源，例如執行階段錯誤，所發生的錯誤。 當工作或工作群組擲回例外狀況時，執行階段會保留該例外狀況，並將它封送處理至等候工作或工作群組完成的內容。 輕量型工作等代理程式的元件，執行階段不會管理您的例外狀況。 在這些情況下，您必須實作您自己的例外狀況處理機制。 本主題說明執行階段如何處理工作、 工作群組、 輕量型工作和非同步代理程式，所擲回的例外狀況，以及如何回應您的應用程式中的例外狀況。
+並行執行階段會使用C++例外狀況處理來傳達多種類型的錯誤。 這些錯誤包括不正確的執行時間使用、執行階段錯誤（例如無法取得資源），以及您提供給工作和工作組的工作函式中發生的錯誤。 當工作或工作組擲回例外狀況時，執行時間會保存該例外狀況，並將其封送處理至等候工作或工作組完成的內容。 針對輕量工作和代理程式之類的元件，執行時間不會為您管理例外狀況。 在這些情況下，您必須執行自己的例外狀況處理機制。 本主題描述執行時間如何處理工作、工作組、羽量級工作和非同步代理程式所擲回的例外狀況，以及如何回應應用程式中的例外狀況。
 
 ## <a name="key-points"></a>重點
 
-- 當工作或工作群組擲回例外狀況時，執行階段會保留該例外狀況，並將它封送處理至等候工作或工作群組完成的內容。
+- 當工作或工作組擲回例外狀況時，執行時間會保存該例外狀況，並將其封送處理至等候工作或工作組完成的內容。
 
-- 如果可能的話，括住每次呼叫[concurrency](reference/task-class.md#get)並[concurrency::task::wait](reference/task-class.md#wait)具有`try` / `catch`區塊來處理您可以復原的錯誤從。 如果工作擲回例外狀況和工作中，其接續或主要的應用程式的其中一個未攔截的例外狀況，執行階段就會終止應用程式。
+- 可能的話，請在每次呼叫[concurrency：： task：： get](reference/task-class.md#get)和[concurrency：： task：： wait](reference/task-class.md#wait)時，使用 `try`/`catch` 區塊來處理您可以復原的錯誤。 如果工作擲回例外狀況，而且工作、其中一個接續或主要應用程式未攔截到例外狀況，則執行時間會終止應用程式。
 
-- 以工作為基礎的接續一律會執行;不論是否已順利完成，前項工作擲回例外狀況，或已取消。 值為基礎的接續不會執行，如果前項工作擲回，或取消。
+- 以工作為基礎的接續一律會執行;不論 antecedent 工作成功完成、擲回例外狀況，還是已取消。 如果 antecedent 工作擲回或取消，就不會執行以值為基礎的接續。
 
-- 因為工作為基礎的接續一律執行，請考慮是否要接續鏈結的結尾加入以工作為基礎的接續。 這可協助確保您的程式碼觀察到所有例外狀況。
+- 因為以工作為基礎的接續一律會執行，請考慮是否要在接續鏈結尾處新增以工作為基礎的接續。 這有助於確保您的程式碼會觀察到所有例外狀況。
 
-- 執行階段會擲回[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)當您呼叫[concurrency](reference/task-class.md#get)並取消該工作。
+- 當您呼叫[concurrency：： task：： get](reference/task-class.md#get)並取消工作時，執行時間會擲回[concurrency：： task_canceled](../../parallel/concrt/reference/task-canceled-class.md) 。
 
-- 執行階段不會管理輕量型工作和代理程式的例外狀況。
+- 執行時間不會管理輕量工作和代理程式的例外狀況。
 
-##  <a name="top"></a> 在這份文件
+## <a name="top"></a>本檔中的
 
-- [工作和接續工作](#tasks)
+- [工作和接續](#tasks)
 
-- [工作群組和平行演算法](#task_groups)
+- [工作組和平行演算法](#task_groups)
 
-- [執行階段擲回例外狀況](#runtime)
+- [執行時間擲回的例外狀況](#runtime)
 
 - [多個例外狀況](#multiple)
 
@@ -49,50 +49,50 @@ ms.locfileid: "62413927"
 
 - [非同步代理程式](#agents)
 
-##  <a name="tasks"></a> 工作和接續工作
+## <a name="tasks"></a>工作和接續
 
-本章節描述執行階段如何處理所擲回的例外狀況[concurrency:: task](../../parallel/concrt/reference/task-class.md)物件和其接續。 如需有關工作和接續模型的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。
+本節說明執行時間如何處理[concurrency：： task](../../parallel/concrt/reference/task-class.md)物件及其接續所擲回的例外狀況。 如需工作和接續模型的詳細資訊，請參閱工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則。
 
-當您擲回例外狀況的工作函式傳遞至內`task`物件，執行階段會儲存該例外狀況，並將它封送處理至呼叫內容[concurrency](reference/task-class.md#get)或[並行::task:: wait](reference/task-class.md#wait)。 文件[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)描述工作為基礎，與值為基礎的接續，但若要總結來說，值為基礎的接續會採用類型參數的`T`和以工作為基礎的接續會採用參數的型別`task<T>`. 如果工作擲回有一或多個值為基礎的接續，未排定接續執行。 下列範例可說明此行為：
+當您在傳遞給 `task` 物件的工作函式主體中擲回例外狀況時，執行時間會儲存該例外狀況，並將其封送處理至呼叫[concurrency：： task：： get](reference/task-class.md#get)或[concurrency：： task：： wait](reference/task-class.md#wait)的內容。 檔工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則會描述以工作為基礎與以值為基礎的接續，但總結而言，以值為基礎的接續會採用類型 `T` 的參數，而以工作為基礎的接續會接受 `task<T>`類型的參數。 如果擲回的工作具有一或多個以值為基礎的接續，則這些接續不會排程執行。 下列範例可說明此行為：
 
 [!code-cpp[concrt-eh-task#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_1.cpp)]
 
-以工作為基礎的接續可讓您處理由前項工作擲回任何例外狀況。 以工作為基礎的接續一律會執行;不論是否已順利完成，工作擲回例外狀況，或已取消。 當工作擲回例外狀況時，其以工作為基礎的接續會排定執行。 下列範例顯示一律會擲回的工作。 工作有兩個接續;一個值為基礎，另一個則是以工作為基礎。 以工作為基礎的例外狀況一定會執行，並因此可以攔截前項工作所擲回的例外狀況。 當此範例會等到完成這兩個接續時，例外狀況時再次因為工作一律擲回例外狀況時`task::get`或`task::wait`呼叫。
+以工作為基礎的接續可讓您處理 antecedent 工作所擲回的任何例外狀況。 以工作為基礎的接續一律會執行;工作是否已順利完成、擲回例外狀況，或已取消。 當工作擲回例外狀況時，其以工作為基礎的接續會排程執行。 下列範例顯示的工作一律會擲回。 此工作有兩個接續;一個是以值為基礎，另一個則是以工作為基礎。 以工作為基礎的例外狀況一律會執行，因此可以攔截 antecedent 工作擲回的例外狀況。 當範例等候兩個接續完成時，就會再次擲回例外狀況，因為當呼叫 `task::get` 或 `task::wait` 時，一律會擲回工作例外狀況。
 
 [!code-cpp[concrt-eh-continuations#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_2.cpp)]
 
-我們建議使用以工作為基礎的接續攔截，就可以處理的例外狀況。 因為工作為基礎的接續一律執行，請考慮是否要接續鏈結的結尾加入以工作為基礎的接續。 這可協助確保您的程式碼觀察到所有例外狀況。 下列範例示範基本的值為基礎的接續鏈結。 鏈結中的第三個工作擲回，並因此不會執行任何值為基礎的接續在它後面。 不過，最後的接續是以工作為基礎，並因此一律會執行。 這個最後的接續會處理第三項工作所擲回的例外狀況。
+建議您使用以工作為基礎的接續來攔截您能夠處理的例外狀況。 因為以工作為基礎的接續一律會執行，請考慮是否要在接續鏈結尾處新增以工作為基礎的接續。 這有助於確保您的程式碼會觀察到所有例外狀況。 下列範例顯示以值為基礎的基本接續鏈。 鏈中的第三個工作會擲回，因此不會執行接在其後面的任何以值為基礎的接續。 不過，最後一個接續是以工作為基礎，因此一定會執行。 這最後一個接續會處理第三個工作擲回的例外狀況。
 
-我們建議您攔截您可以最特定例外狀況。 如果您沒有來攔截特定例外狀況，您可以省略此最終工作為基礎的接續。 任何例外狀況仍未處理，且可以終止應用程式。
+我們建議您攔截所能採取的最特定例外狀況。 如果您沒有要攔截的特定例外狀況，您可以省略這個最終以工作為基礎的接續。 任何例外狀況都將保持未處理狀態，並可終止應用程式。
 
 [!code-cpp[concrt-eh-task-chain#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_3.cpp)]
 
 > [!TIP]
->  您可以使用[concurrency::task_completion_event::set_exception](../../parallel/concrt/reference/task-completion-event-class.md)例外狀況相關聯的工作完成事件的方法。 文件[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)描述[concurrency:: task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)更詳細的類別。
+> 您可以使用[concurrency：： task_completion_event：： set_exception](../../parallel/concrt/reference/task-completion-event-class.md)方法，將例外狀況與工作完成事件產生關聯。 檔工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則會更詳細地描述[concurrency：： task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)類別。
 
-[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)是與相關的重要的執行階段例外狀況類型`task`。 執行階段會擲回`task_canceled`當您呼叫`task::get`並取消該工作。 (相反地，`task::wait`會傳回[task_status:: canceled](reference/concurrency-namespace-enums.md#task_group_status)並不會擲回。)您可以攔截並處理這個例外狀況，從以工作為基礎的接續，或當您呼叫`task::get`。 如需有關工作取消的詳細資訊，請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。
+[concurrency：： task_canceled](../../parallel/concrt/reference/task-canceled-class.md)是與 `task`相關的重要執行時間例外狀況類型。 當您呼叫 `task::get` 並取消工作時，執行時間會擲回 `task_canceled`。 （相反地，`task::wait` 會傳回[task_status：：已取消](reference/concurrency-namespace-enums.md#task_group_status)，且不會擲回。）您可以從以工作為基礎的接續或呼叫 `task::get`來攔截和處理這個例外狀況。 如需工作取消的詳細資訊，請參閱[PPL 中的取消](cancellation-in-the-ppl.md)。
 
 > [!CAUTION]
->  永遠不會從您的程式碼擲回 `task_canceled`。 呼叫[concurrency:: cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)改。
+> 永遠不會從您的程式碼擲回 `task_canceled`。 請改為呼叫[concurrency：： cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) 。
 
-如果工作擲回例外狀況和工作中，其接續或主要的應用程式的其中一個未攔截的例外狀況，執行階段就會終止應用程式。 如果您的應用程式損毀，您可以設定 Visual Studio 時要中斷C++會擲回例外狀況。 診斷處理的例外狀況的位置之後，使用以工作為基礎的接續來處理它。
+如果工作擲回例外狀況，而且工作、其中一個接續或主要應用程式未攔截到例外狀況，則執行時間會終止應用程式。 如果您的應用程式損毀，您可以設定 Visual Studio C++在擲回例外狀況時中斷。 在您診斷未處理之例外狀況的位置之後，請使用以工作為基礎的接續來處理它。
 
-一節[由執行階段擲回的例外狀況](#runtime)本文件說明如何使用更詳細的執行階段例外狀況。
+本檔中[的運行](#runtime)時間所擲回的例外狀況一節將說明如何更詳細地使用執行時間例外狀況。
 
 [[靠上](#top)]
 
-##  <a name="task_groups"></a> 工作群組和平行演算法
+## <a name="task_groups"></a>工作組和平行演算法
 
-本章節描述執行階段如何處理工作群組所擲回的例外狀況。 本節也適用於平行演算法這類[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，因為這些演算法會建置在工作群組上。
+本節說明執行時間如何處理工作組所擲回的例外狀況。 本節也適用于並行處理演算法（例如[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)），因為這些演算法會建置於工作組上。
 
 > [!CAUTION]
->  請確定您已了解例外狀況都有相依的工作的效果。 如需有關如何使用例外狀況處理的工作或平行演算法的建議作法，請參閱[了解如何取消和例外狀況處理會影響的物件解構](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)一節中以平行方式的最佳作法模式程式庫的主題。
+> 請確定您瞭解例外狀況對相依工作的影響。 如需有關如何搭配工作或平行演算法使用例外狀況處理的建議做法，請參閱平行模式程式庫主題中的最佳作法中的[瞭解取消和例外狀況處理如何影響物件銷毀](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)一節。
 
-如需工作群組的詳細資訊，請參閱[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)。 如需平行演算法的詳細資訊，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。
+如需工作組的詳細資訊，請參閱工作[平行](../../parallel/concrt/task-parallelism-concurrency-runtime.md)處理原則。 如需平行演算法的詳細資訊，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。
 
-當您擲回例外狀況的工作函式傳遞至內[concurrency:: task_group](reference/task-group-class.md)或是[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件，執行階段會儲存該例外狀況，並將它封送處理若要呼叫的內容[2&gt;concurrency::task_group::wait&lt;2](reference/task-group-class.md#wait)， [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)， [run_and_wait](reference/task-group-class.md#run_and_wait)，或[run_and_wait](reference/structured-task-group-class.md#run_and_wait)。 執行階段也會停止所有作用中工作 （包括子工作群組） 的工作群組中，並會捨棄任何尚未開始的工作。
+當您在傳遞給[concurrency：： task_group](reference/task-group-class.md)或[concurrency：： structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件的工作函式主體中擲回例外狀況時，執行時間會儲存該例外狀況，並將其封送處理至呼叫 concurrency：： [task_group：： wait](reference/task-group-class.md#wait)、 [concurrency：： structured_task_group：： wait](reference/structured-task-group-class.md#wait)、 [concurrency：： task_group：： run_and_wait](reference/task-group-class.md#run_and_wait)或[concurrency：](reference/structured-task-group-class.md#run_and_wait)： structured_task_group：： run_and_wait 的內容。 執行時間也會停止工作組中的所有作用中工作（包括子工作組中的工作），並捨棄尚未啟動的任何工作。
 
-下列範例顯示工作函式會擲回例外狀況的基本的結構。 此範例會使用`task_group`列印兩個值的物件`point`以平行方式的物件。 `print_point`工作函式會列印值`point`至主控台的物件。 如果輸入的值為工作函式擲回例外狀況`NULL`。 執行階段會儲存此例外狀況，並將它封送處理至呼叫內容`task_group::wait`。
+下列範例顯示擲回例外狀況的工作函式的基本結構。 此範例會使用 `task_group` 物件，以平行方式列印兩個 `point` 物件的值。 `print_point` work 函式會將 `point` 物件的值列印到主控台。 如果輸入值為 `NULL`，工作函式會擲回例外狀況。 執行時間會儲存此例外狀況，並將其封送處理至呼叫 `task_group::wait`的內容。
 
 [!code-cpp[concrt-eh-task-group#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_4.cpp)]
 
@@ -102,17 +102,17 @@ ms.locfileid: "62413927"
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-如需使用工作群組中處理的例外狀況的完整範例，請參閱[How to:使用例外狀況處理來中斷平行迴圈](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
+如需在工作組中使用例外狀況處理的完整範例，請參閱[如何：使用例外狀況處理來中斷平行迴圈](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)。
 
 [[靠上](#top)]
 
-##  <a name="runtime"></a> 執行階段擲回例外狀況
+## <a name="runtime"></a>執行時間擲回的例外狀況
 
-例外狀況可能起因於執行階段呼叫。 大部分的例外狀況類型，除了[concurrency:: task_canceled](../../parallel/concrt/reference/task-canceled-class.md)並[concurrency::operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)，指出程式設計錯誤。 這些錯誤通常是無法復原，並因此不應該攔截或處理應用程式程式碼。 我們建議您只攔截或無法復原的錯誤處理應用程式程式碼中，當您要診斷的程式設計錯誤。 不過，了解例外狀況類型所定義的執行階段可協助您診斷的程式設計錯誤。
+呼叫執行時間可能會導致例外狀況。 大部分的例外狀況類型（ [concurrency：： task_canceled](../../parallel/concrt/reference/task-canceled-class.md)和[concurrency：： operation_timed_out](../../parallel/concrt/reference/operation-timed-out-class.md)除外）表示程式設計錯誤。 這些錯誤通常是無法復原的，因此不應該由應用程式代碼攔截或處理。 我們建議您只在需要診斷程式設計錯誤時，才攔截或處理應用程式程式碼中無法復原的錯誤。 不過，若要瞭解執行時間所定義的例外狀況類型，可以協助您診斷程式設計錯誤。
 
-例外狀況處理機制是相同的執行階段為工作函式所擲回的例外狀況擲回的例外狀況。 例如， [concurrency:: receive](reference/concurrency-namespace-functions.md#receive)函式會擲回`operation_timed_out`時未收到一則訊息中指定的時段。 如果`receive`在工作函式擲回例外狀況，您傳遞至工作群組，執行階段會儲存該例外狀況，並將它封送處理至呼叫內容`task_group::wait`， `structured_task_group::wait`， `task_group::run_and_wait`，或`structured_task_group::run_and_wait`。
+例外狀況處理機制與執行時間擲回的例外狀況相同，是由工作函式所擲回的例外狀況。 例如， [concurrency：： receive](reference/concurrency-namespace-functions.md#receive)函式不會在指定的時間週期內收到訊息時，就會擲回 `operation_timed_out`。 如果 `receive` 在您傳遞至工作組的工作函式中擲回例外狀況，則執行時間會儲存該例外狀況，並將其封送處理至呼叫 `task_group::wait`、`structured_task_group::wait`、`task_group::run_and_wait`或 `structured_task_group::run_and_wait`的內容。
 
-下列範例會使用[concurrency:: parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法以平行方式執行兩項工作。 第一項工作會等待 5 秒鐘，然後將訊息傳送至訊息緩衝區。 第二項工作會使用`receive`等待三秒鐘，即可從相同的訊息緩衝區接收訊息的函式。 `receive`函式會擲回`operation_timed_out`如果它未接收到訊息中的時間週期。
+下列範例會使用[concurrency：:p arallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)演算法，以平行方式執行兩個工作。 第一個工作會等候五秒，然後將訊息傳送至訊息緩衝區。 第二個工作會使用 `receive` 函式來等候三秒，以從相同的訊息緩衝區接收訊息。 如果 `receive` 函式在時間週期內未收到訊息，則會擲回 `operation_timed_out`。
 
 [!code-cpp[concrt-eh-time-out#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_5.cpp)]
 
@@ -122,19 +122,19 @@ X = 15, Y = 30Caught exception: point is NULL.
 The operation timed out.
 ```
 
-若要避免您的應用程式異常終止，請確定您的程式碼在執行階段會呼叫時，會處理例外狀況。 當您呼叫外部程式碼會使用並行執行階段，比方說，協力廠商程式庫時，也可以處理的例外狀況。
+若要避免應用程式異常終止，請確定您的程式碼會在呼叫執行時間時處理例外狀況。 當您呼叫使用並行執行階段（例如協力廠商程式庫）的外部程式碼時，也會處理例外狀況。
 
 [[靠上](#top)]
 
-##  <a name="multiple"></a> 多個例外狀況
+## <a name="multiple"></a>多個例外狀況
 
-如果工作或平行演算法收到多個例外狀況，執行階段封送處理這些例外狀況至呼叫內容的其中之一。 執行階段不保證它封送處理的例外狀況。
+如果工作或平行演算法收到多個例外狀況，執行時間就只會將其中一個例外狀況封送處理至呼叫內容。 執行時間不保證它要封送處理的例外狀況。
 
-下列範例會使用`parallel_for`列印至主控台的數字的演算法。 它會擲回例外狀況，如果輸入的值小於某些最小值或大於某些最大值。 在此範例中，多個工作函式可以擲回例外狀況。
+下列範例會使用 `parallel_for` 演算法，將數位列印到主控台。 如果輸入值小於某個最小值或大於某個最大值，它就會擲回例外狀況。 在此範例中，多個工作函式可能會擲回例外狀況。
 
 [!code-cpp[concrt-eh-multiple#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_6.cpp)]
 
-下圖顯示此範例的範例輸出。
+以下顯示此範例的範例輸出。
 
 ```Output
 8293104567Caught exception: -5: the value is less than the minimum.
@@ -142,25 +142,25 @@ The operation timed out.
 
 [[靠上](#top)]
 
-##  <a name="cancellation"></a> 取消作業
+## <a name="cancellation"></a>撤銷
 
-並非所有例外狀況表示發生錯誤。 比方說，搜尋演算法可能會停止其相關聯的工作，當它找到結果時使用例外狀況處理。 如需如何使用程式碼中的取消機制的詳細資訊，請參閱[PPL 中的取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
-
-[[靠上](#top)]
-
-##  <a name="lwts"></a> 輕量型工作
-
-輕量型工作是直接從排程的工作[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)物件。 輕量型工作會執行較少的額外負荷比一般的工作。 不過，執行階段不會攔截輕量型工作所擲回的例外狀況。 相反地，未處理的例外狀況處理常式，它預設會終止處理序會攔截例外狀況。 因此，在您的應用程式中使用適當的錯誤處理機制。 如需輕量型工作的詳細資訊，請參閱[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
+並非所有例外狀況都表示發生錯誤。 例如，搜尋演算法可能會在找到結果時，使用例外狀況處理來停止其相關聯的工作。 如需如何在程式碼中使用取消機制的詳細資訊，請參閱[PPL 中的取消](../../parallel/concrt/cancellation-in-the-ppl.md)。
 
 [[靠上](#top)]
 
-##  <a name="agents"></a> 非同步代理程式
+## <a name="lwts"></a>輕量工作
 
-輕量型工作，例如執行階段不會管理非同步代理程式所擲回的例外狀況。
+輕量工作是您直接從[concurrency：：](../../parallel/concrt/reference/scheduler-class.md) schedule 物件排程的工作。 輕量工作的負擔比一般工作少。 不過，執行時間不會攔截輕量工作所擲回的例外狀況。 相反地，未處理的例外狀況處理常式會攔截例外狀況，其預設會終止進程。 因此，請在您的應用程式中使用適當的錯誤處理機制。 如需有關輕量工作的詳細資訊，請參閱[工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)。
 
-下列範例示範衍生自的類別中處理例外狀況的方法之一[concurrency:: agent](../../parallel/concrt/reference/agent-class.md)。 這個範例會定義`points_agent`類別。 `points_agent::run`方法會讀取`point`訊息緩衝區的物件，並列印到主控台。 `run`方法擲回例外狀況，如果收到`NULL`指標。
+[[靠上](#top)]
 
-`run`方法周圍中的所有工作`try` - `catch`區塊。 `catch`區塊訊息緩衝區中儲存例外狀況。 應用程式會檢查是否的代理程式遇到錯誤藉由這個緩衝區讀取代理程式完成之後。
+## <a name="agents"></a>非同步代理程式
+
+如同輕量工作，執行時間不會管理非同步代理程式所擲回的例外狀況。
+
+下列範例示範在衍生自[concurrency：： agent](../../parallel/concrt/reference/agent-class.md)的類別中處理例外狀況的一種方式。 這個範例會定義 `points_agent` 類別。 `points_agent::run` 方法會從訊息緩衝區讀取 `point` 物件，並將其列印至主控台。 如果 `run` 方法收到 `NULL` 指標，則會擲回例外狀況。
+
+`run` 方法會將 `try`-`catch` 區塊中的所有工作括起來。 `catch` 區塊會將例外狀況儲存在訊息緩衝區中。 應用程式會在代理程式完成之後，從這個緩衝區讀取，檢查代理程式是否發生錯誤。
 
 [!code-cpp[concrt-eh-agents#1](../../parallel/concrt/codesnippet/cpp/exception-handling-in-the-concurrency-runtime_7.cpp)]
 
@@ -173,22 +173,22 @@ error occurred in agent: point must not be NULL
 the status of the agent is: done
 ```
 
-因為`try` - `catch`區塊存在於外部`while`迴圈，代理程式就會結束處理時遇到的第一個錯誤。 如果`try` - `catch`區塊內是`while`迴圈中，代理程式會繼續之後發生錯誤。
+由於 `try`-`catch` 區塊存在於 `while` 迴圈以外，因此代理程式會在遇到第一個錯誤時結束處理。 如果 `try`-`catch` 區塊在 `while` 迴圈內，則代理程式會在錯誤發生後繼續。
 
-這個範例會在訊息緩衝區中儲存例外狀況，好讓它執行時，另一個元件可以監視錯誤的代理程式。 這個範例會使用[3&gt;concurrency::single_assignment&lt;3}](../../parallel/concrt/reference/single-assignment-class.md)儲存錯誤的物件。 在案例中，代理程式會處理多個例外狀況，`single_assignment`類別會儲存在只有第一個訊息傳遞給它。 若要儲存的最後一個例外狀況，使用[concurrency:: overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)類別。 若要儲存的所有例外狀況，使用[concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)類別。 如需有關這些訊息區塊的詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)。
+這個範例會將例外狀況儲存在訊息緩衝區中，讓另一個元件可以在代理程式執行時監視其是否有錯誤。 這個範例使用[concurrency：： single_assignment](../../parallel/concrt/reference/single-assignment-class.md)物件來儲存錯誤。 在代理程式處理多個例外狀況的情況下，`single_assignment` 類別只會儲存傳遞給它的第一個訊息。 若只要儲存最後一個例外狀況，請使用[concurrency：： overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)類別。 若要儲存所有例外狀況，請使用[concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)類別。 如需這些訊息區塊的詳細資訊，請參閱[非同步訊息區塊](../../parallel/concrt/asynchronous-message-blocks.md)。
 
-如需有關非同步代理程式的詳細資訊，請參閱 <<c0> [ 非同步代理程式](../../parallel/concrt/asynchronous-agents.md)。
+如需非同步代理程式的詳細資訊，請參閱[非同步代理](../../parallel/concrt/asynchronous-agents.md)程式。
 
 [[靠上](#top)]
 
-##  <a name="summary"></a> 總結
+## <a name="summary"></a> 總結
 
 [[靠上](#top)]
 
 ## <a name="see-also"></a>另請參閱
 
 [並行執行階段](../../parallel/concrt/concurrency-runtime.md)<br/>
-[工作平行處理原則](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
+[工作平行處理](../../parallel/concrt/task-parallelism-concurrency-runtime.md)<br/>
 [平行演算法](../../parallel/concrt/parallel-algorithms.md)<br/>
 [PPL 中的取消](cancellation-in-the-ppl.md)<br/>
 [工作排程器](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>

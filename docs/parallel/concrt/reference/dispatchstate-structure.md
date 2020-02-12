@@ -11,20 +11,20 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69e00893373ccca6e2ed676fbb7f5a109c49efdf
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295912"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143050"
 ---
 # <a name="dispatchstate-structure"></a>DispatchState 結構
 
-`DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `IExecutionContext` 介面上叫用 `Dispatch` 方法的情況。
+`DispatchState` 結構用來將狀態傳輸至 `IExecutionContext::Dispatch` 方法。 它描述在 `Dispatch` 介面上叫用 `IExecutionContext` 方法的情況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct DispatchState;
 ```
 
@@ -34,15 +34,15 @@ struct DispatchState;
 
 |名稱|描述|
 |----------|-----------------|
-|[DispatchState::DispatchState](#ctor)|建構新`DispatchState`物件。|
+|[DispatchState：:D ispatchState](#ctor)|建構新的 `DispatchState` 物件。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|此結構中，用來進行版本設定的大小。|
-|[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|會指示此內容中是否已進入`Dispatch`方法因為先前的內容以非同步方式封鎖。 這只適用於 UMS 排程內容，並設定為值`0`之所有其他執行內容。|
-|[DispatchState::m_reserved](#m_reserved)|保留供日後傳遞的資訊位元。|
+|[DispatchState：： m_dispatchStateSize](#m_dispatchstatesize)|此結構的大小，用於版本控制。|
+|[DispatchState：： m_fIsPreviousCoNtextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|指出此內容是否已進入 `Dispatch` 方法，因為先前的內容會以非同步方式封鎖。 這僅適用于 UMS 排程內容，而且會設定為所有其他執行內容的 `0` 值。|
+|[DispatchState：： m_reserved](#m_reserved)|保留給未來資訊的 Bits。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -50,39 +50,39 @@ struct DispatchState;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a>  Dispatchstate:: Dispatchstate 建構函式
+## <a name="ctor"></a>DispatchState：:D ispatchState 的構造函式
 
-建構新`DispatchState`物件。
+建構新的 `DispatchState` 物件。
 
-```
+```cpp
 DispatchState();
 ```
 
-##  <a name="m_dispatchstatesize"></a>  Dispatchstate:: M_dispatchstatesize 資料成員
+## <a name="m_dispatchstatesize"></a>DispatchState：： m_dispatchStateSize 資料成員
 
-此結構中，用來進行版本設定的大小。
+此結構的大小，用於版本控制。
 
-```
+```cpp
 unsigned long m_dispatchStateSize;
 ```
 
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Dispatchstate:: M_fispreviouscontextasynchronouslyblocked 資料成員
+## <a name="m_fispreviouscontextasynchronouslyblocked"></a>DispatchState：： m_fIsPreviousCoNtextAsynchronouslyBlocked 資料成員
 
-會指示此內容中是否已進入`Dispatch`方法因為先前的內容以非同步方式封鎖。 這只適用於 UMS 排程內容，並設定為值`0`之所有其他執行內容。
+指出此內容是否已進入 `Dispatch` 方法，因為先前的內容會以非同步方式封鎖。 這僅適用于 UMS 排程內容，而且會設定為所有其他執行內容的 `0` 值。
 
-```
+```cpp
 unsigned int m_fIsPreviousContextAsynchronouslyBlocked : 1;
 ```
 
-##  <a name="m_reserved"></a>  Dispatchstate:: M_reserved 資料成員
+## <a name="m_reserved"></a>DispatchState：： m_reserved 資料成員
 
-保留供日後傳遞的資訊位元。
+保留給未來資訊的 Bits。
 
-```
+```cpp
 unsigned int m_reserved : 31;
 ```
 

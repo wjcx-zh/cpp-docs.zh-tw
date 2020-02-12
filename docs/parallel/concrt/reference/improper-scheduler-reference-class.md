@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_reference class
 ms.assetid: 434a7512-7796-4255-92a7-f3bf71c6a7a7
-ms.openlocfilehash: 121e61447775cdcb5d7f5f1187c5d4cc6b7d68b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 18536043b0d46a6f27f1e5c60778a22af82ad2d3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262901"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141104"
 ---
-# <a name="improperschedulerreference-class"></a>improper_scheduler_reference 類別
+# <a name="improper_scheduler_reference-class"></a>improper_scheduler_reference 類別
 
-這個類別描述在被關閉的 `Scheduler` 物件 (來自不屬於排程器的內容) 上呼叫 `Reference` 方法所擲回的例外狀況。
+這個類別描述在被關閉的 `Reference` 物件 (來自不屬於排程器的內容) 上呼叫 `Scheduler` 方法所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class improper_scheduler_reference : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class improper_scheduler_reference : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[improper_scheduler_reference](#ctor)|多載。 建構 `improper_scheduler_reference` 物件。|
+|[improper_scheduler_reference](#ctor)|已多載。 建構 `improper_scheduler_reference` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class improper_scheduler_reference : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_reference
+## <a name="ctor"></a>improper_scheduler_reference
 
 建構 `improper_scheduler_reference` 物件。
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();
 
 improper_scheduler_reference() throw();

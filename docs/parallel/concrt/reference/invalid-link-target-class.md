@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_link_target class
 ms.assetid: 33b64885-34d8-4d4e-a893-02e9f19c958e
-ms.openlocfilehash: 3ef34ab7607c444044b6dde17f3db3f73d0d7086
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd3d82c06c174c69c60dec33592110f4de72ac99
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62205651"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141042"
 ---
-# <a name="invalidlinktarget-class"></a>invalid_link_target 類別
+# <a name="invalid_link_target-class"></a>invalid_link_target 類別
 
 這個類別描述呼叫傳訊區塊的 `link_target` 方法，但傳訊區塊無法連結至目標時所擲回的例外狀況。 這是由於超過傳訊區塊允許連結數目或嘗試將特定目標連結至相同的來源兩次所導致。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class invalid_link_target : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class invalid_link_target : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[invalid_link_target](#ctor)|多載。 建構 `invalid_link_target` 物件。|
+|[invalid_link_target](#ctor)|已多載。 建構 `invalid_link_target` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class invalid_link_target : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> invalid_link_target
+## <a name="ctor"></a>invalid_link_target
 
 建構 `invalid_link_target` 物件。
 
-```
+```cpp
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();

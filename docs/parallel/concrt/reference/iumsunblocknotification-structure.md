@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSUnblockNotification structure
 ms.assetid: eaca9529-c1cc-472b-8ec6-722a1ff0fa2a
-ms.openlocfilehash: bdf083e2ad418269e49e53dc164f2a60f693d5d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4fd95b1f11ed6edac26cb03e41e8b650acfafa3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180208"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139975"
 ---
 # <a name="iumsunblocknotification-structure"></a>IUMSUnblockNotification 結構
 
@@ -22,7 +22,7 @@ ms.locfileid: "62180208"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct IUMSUnblockNotification;
 ```
 
@@ -32,8 +32,8 @@ struct IUMSUnblockNotification;
 
 |名稱|描述|
 |----------|-----------------|
-|[IUMSUnblockNotification::GetContext](#getcontext)|傳回`IExecutionContext`已解除封鎖執行緒 proxy 相關聯的執行內容的介面。 當這個方法會傳回，而且已重新排定的基礎執行內容，透過對呼叫`IThreadProxy::SwitchTo`方法，此介面已不再有效。|
-|[IUMSUnblockNotification::GetNextUnblockNotification](#getnextunblocknotification)|傳回下一步`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。|
+|[IUMSUnblockNotification：： GetCoNtext](#getcontext)|傳回與已解除封鎖的執行緒 proxy 相關聯之執行內容的 `IExecutionContext` 介面。 一旦這個方法傳回，而且基礎執行內容已透過呼叫 `IThreadProxy::SwitchTo` 方法重新排程，這個介面就不再有效。|
+|[IUMSUnblockNotification：： GetNextUnblockNotification](#getnextunblocknotification)|傳回從方法 `IUMSCompletionList::GetUnblockNotifications`傳回之鏈中的下一個 `IUMSUnblockNotification` 介面。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,33 +41,33 @@ struct IUMSUnblockNotification;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="getcontext"></a>  Iumsunblocknotification:: Getcontext 方法
+## <a name="getcontext"></a>IUMSUnblockNotification：： GetCoNtext 方法
 
-傳回`IExecutionContext`已解除封鎖執行緒 proxy 相關聯的執行內容的介面。 當這個方法會傳回，而且已重新排定的基礎執行內容，透過對呼叫`IThreadProxy::SwitchTo`方法，此介面已不再有效。
+傳回與已解除封鎖的執行緒 proxy 相關聯之執行內容的 `IExecutionContext` 介面。 一旦這個方法傳回，而且基礎執行內容已透過呼叫 `IThreadProxy::SwitchTo` 方法重新排程，這個介面就不再有效。
 
-```
+```cpp
 virtual IExecutionContext* GetContext() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-`IExecutionContext`已解除封鎖執行緒 proxy 的執行內容的介面。
+對已解除封鎖的執行緒 proxy 執行內容的 `IExecutionContext` 介面。
 
-##  <a name="getnextunblocknotification"></a>  Iumsunblocknotification:: Getnextunblocknotification 方法
+## <a name="getnextunblocknotification"></a>IUMSUnblockNotification：： GetNextUnblockNotification 方法
 
-傳回下一步`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。
+傳回從方法 `IUMSCompletionList::GetUnblockNotifications`傳回之鏈中的下一個 `IUMSUnblockNotification` 介面。
 
-```
+```cpp
 virtual IUMSUnblockNotification* GetNextUnblockNotification() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-下一步`IUMSUnblockNotification`從方法傳回鏈結中的介面`IUMSCompletionList::GetUnblockNotifications`。
+從方法所傳回之鏈中的下一個 `IUMSUnblockNotification` 介面 `IUMSCompletionList::GetUnblockNotifications`。
 
 ## <a name="see-also"></a>另請參閱
 

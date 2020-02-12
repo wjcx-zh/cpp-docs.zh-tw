@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_worker_creation_error class
 ms.assetid: 4aec1c3e-c32a-41b2-899d-2d898f23b3c7
-ms.openlocfilehash: 66e7485787606c22aba2970dbe481a7d29e66621
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7f2763d7244be9e5e5b006b31b97c08e213a4f2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337358"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142758"
 ---
-# <a name="schedulerworkercreationerror-class"></a>scheduler_worker_creation_error 類別
+# <a name="scheduler_worker_creation_error-class"></a>scheduler_worker_creation_error 類別
 
 這個類別描述因為無法建立並行執行階段中的背景工作執行內容而擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class scheduler_worker_creation_error : public scheduler_resource_allocation_error;
 ```
 
@@ -31,7 +31,7 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_worker_creation_error](#ctor)|多載。 建構 `scheduler_worker_creation_error` 物件。|
+|[scheduler_worker_creation_error](#ctor)|已多載。 建構 `scheduler_worker_creation_error` 物件。|
 
 ## <a name="remarks"></a>備註
 
@@ -47,15 +47,15 @@ class scheduler_worker_creation_error : public scheduler_resource_allocation_err
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> scheduler_worker_creation_error
+## <a name="ctor"></a>scheduler_worker_creation_error
 
 建構 `scheduler_worker_creation_error` 物件。
 
-```
+```cpp
 scheduler_worker_creation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -70,7 +70,7 @@ explicit _CRTIMP scheduler_worker_creation_error(
 錯誤的描述性訊息。
 
 *_Hresult*<br/>
-`HRESULT`錯誤造成例外狀況的值。
+造成例外狀況之錯誤的 `HRESULT` 值。
 
 ## <a name="see-also"></a>另請參閱
 

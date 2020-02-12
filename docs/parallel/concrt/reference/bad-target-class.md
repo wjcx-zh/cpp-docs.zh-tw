@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337761"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142849"
 ---
-# <a name="badtarget-class"></a>bad_target 類別
+# <a name="bad_target-class"></a>bad_target 類別
 
 這個類別描述在傳訊區塊獲得目標的指標，但該目標對所執行的作業來說並不正確時，所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class bad_target : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[bad_target](#ctor)|多載。 建構 `bad_target` 物件。|
+|[bad_target](#ctor)|已多載。 建構 `bad_target` 物件。|
 
 ## <a name="remarks"></a>備註
 
-這個例外狀況通常會擲回的原因，例如做為目標，嘗試使用不同的目標保留的訊息，或釋出其並未持有的保留項目。
+通常會擲回這個例外狀況，原因如下：目標嘗試使用保留給不同目標的訊息，或釋出未保存的保留。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -45,15 +45,15 @@ class bad_target : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a>bad_target
 
 建構 `bad_target` 物件。
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();

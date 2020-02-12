@@ -15,20 +15,20 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d8651d1391ded2970a00a7429c36f341a438659
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160031"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143222"
 ---
-# <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue 類別
+# <a name="concurrent_priority_queue-class"></a>concurrent_priority_queue 類別
 
 `concurrent_priority_queue` 類別允許多個執行緒同時推入和彈出項目。 項目會以優先權順序做為彈出依據，而優先權由函式提供的樣板引數決定。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <typename T,
     typename _Compare= std::less<T>,
     typename _Ax = std::allocator<T>
@@ -36,7 +36,7 @@ template <typename T,
     typename _Ax = std::allocator<T>> class concurrent_priority_queue;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
 要儲存在優先權佇列中之項目的資料類型。
@@ -63,29 +63,29 @@ template <typename T,
 
 |名稱|描述|
 |----------|-----------------|
-|[concurrent_priority_queue](#ctor)|多載。 建構並行優先權佇列。|
+|[concurrent_priority_queue](#ctor)|已多載。 建構並行優先權佇列。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[clear](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全。|
+|[清除](#clear)|清除並行優先權中的所有項目。 這個方法不是並行安全的。|
 |[empty](#empty)|測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。|
 |[get_allocator](#get_allocator)|傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。|
-|[push](#push)|多載。 將項目加入至並行優先權佇列。 這個方法是並行安全的。|
+|[push](#push)|已多載。 將項目加入至並行優先權佇列。 這個方法是並行安全的。|
 |[size](#size)|傳回並行優先權佇列中的項目數。 這個方法是並行安全的。|
-|[swap](#swap)|將兩個並行優先權佇列的內容交換。 這個方法不是並行安全。|
+|[swap](#swap)|將兩個並行優先權佇列的內容交換。 這個方法不是並行安全的。|
 |[try_pop](#try_pop)|如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[operator=](#operator_eq)|多載。 將另一個內容指派`concurrent_priority_queue`如下的物件。 這個方法不是並行安全。|
+|[operator=](#operator_eq)|已多載。 將另一個 `concurrent_priority_queue` 物件的內容指派給這一個。 這個方法不是並行安全的。|
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊`concurrent_priority_queue`類別，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
+如需 `concurrent_priority_queue` 類別的詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -93,27 +93,27 @@ template <typename T,
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concurrent_priority_queue.h
+**標頭：** concurrent_priority_queue。h
 
 **命名空間：** concurrency
 
-##  <a name="clear"></a> 清除
+## <a name="clear"></a>明確
 
-清除並行優先權中的所有項目。 這個方法不是並行安全。
+清除並行優先權中的所有項目。 這個方法不是並行安全的。
 
-```
+```cpp
 void clear();
 ```
 
 ### <a name="remarks"></a>備註
 
-`clear` 不是並行安全。 您必須確定，沒有其他執行緒所叫用並行優先權佇列上的方法時呼叫這個方法。 `clear` 不會釋放記憶體。
+`clear` 不是並行保護。 當您呼叫這個方法時，您必須確定沒有任何其他執行緒在並行優先權佇列上叫用方法。 `clear` 不會釋放記憶體。
 
-##  <a name="ctor"></a> concurrent_priority_queue
+## <a name="ctor"></a>concurrent_priority_queue
 
 建構並行優先權佇列。
 
-```
+```cpp
 explicit concurrent_priority_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -163,47 +163,47 @@ concurrent_priority_queue(
 
 ### <a name="remarks"></a>備註
 
-所有建構函式會儲存配置器物件`_Al`和初始化優先權佇列。
+所有的函式都會儲存配置器物件 `_Al` 並初始化優先順序佇列。
 
-第一個建構函式會指定空的初始優先權佇列，並選擇性地指定的配置器。
+第一個函式會指定空的初始優先順序佇列，並選擇性地指定配置器。
 
-第二個建構函式會指定優先順序佇列的初始容量，`_Init_capacity`並選擇性地指定配置器。
+第二個函式會指定具有初始容量 `_Init_capacity` 的優先順序佇列，並選擇性地指定配置器。
 
-第三個建構函式指定的值提供的迭代器範圍 [ `_Begin`， `_End`)，並選擇性地指定配置器。
+第三個函式會指定反覆運算器範圍 [`_Begin`，`_End`）所提供的值，並選擇性地指定配置器。
 
-第四個和第五個建構函式會指定一份優先順序佇列`_Src`。
+第四個和第五個函式會指定優先順序佇列 `_Src`的複本。
 
-第六個和第七個建構函式指定的優先順序佇列移動`_Src`。
+第六和第七個函式會指定優先順序佇列 `_Src`的移動。
 
-##  <a name="empty"></a> empty
+## <a name="empty"></a>空
 
 測試呼叫這個方法時並行優先權佇列是否是空的。 這個方法是並行安全的。
 
-```
+```cpp
 bool empty() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-**真**優先順序佇列是空的目前呼叫的函式，如果**false**否則。
+如果在呼叫函數時，優先順序佇列是空的，**則為 true** ，否則為**false** 。
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 傳回用來建構並行優先權佇列之配置器的複本。 這個方法是並行安全的。
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-一份用來建構的配置器`concurrent_priority_queue`物件。
+用來建立 `concurrent_priority_queue` 物件的配置器複本。
 
-##  <a name="operator_eq"></a> 運算子 =
+## <a name="operator_eq"></a>operator =
 
-將另一個內容指派`concurrent_priority_queue`如下的物件。 這個方法不是並行安全。
+將另一個 `concurrent_priority_queue` 物件的內容指派給這一個。 這個方法不是並行安全的。
 
-```
+```cpp
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
 
 concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
@@ -216,13 +216,13 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 ### <a name="return-value"></a>傳回值
 
-此參考`concurrent_priority_queue`物件。
+這個 `concurrent_priority_queue` 物件的參考。
 
-##  <a name="push"></a> push
+## <a name="push"></a>式
 
 將項目加入至並行優先權佇列。 這個方法是並行安全的。
 
-```
+```cpp
 void push(const value_type& _Elem);
 
 void push(value_type&& _Elem);
@@ -231,53 +231,53 @@ void push(value_type&& _Elem);
 ### <a name="parameters"></a>參數
 
 *_Elem*<br/>
-要加入至並行優先權佇列項目。
+要加入至並行優先權佇列的元素。
 
-##  <a name="size"></a> 大小
+## <a name="size"></a>容量
 
 傳回並行優先權佇列中的項目數。 這個方法是並行安全的。
 
-```
+```cpp
 size_type size() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-在此的項目數`concurrent_priority_queue`物件。
+這個 `concurrent_priority_queue` 物件中的元素數目。
 
 ### <a name="remarks"></a>備註
 
-在傳回的大小一定會包含新增的函式呼叫的所有項目`push`。 不過，它可能無法反映的暫止的並行作業的結果。
+傳回的大小保證會包含透過呼叫函式 `push`新增的所有元素。 不過，它可能不會反映暫止並行作業的結果。
 
-##  <a name="swap"></a> swap
+## <a name="swap"></a>調換
 
-將兩個並行優先權佇列的內容交換。 這個方法不是並行安全。
+將兩個並行優先權佇列的內容交換。 這個方法不是並行安全的。
 
-```
+```cpp
 void swap(concurrent_priority_queue& _Queue);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Queue*<br/>
-`concurrent_priority_queue`来交換內容的物件。
+要交換內容的 `concurrent_priority_queue` 物件。
 
-##  <a name="try_pop"></a> try_pop
+## <a name="try_pop"></a>try_pop
 
 如果佇列不是空的，則移除並傳回佇列中最高優先權的項目。 這個方法是並行安全的。
 
-```
+```cpp
 bool try_pop(reference _Elem);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Elem*<br/>
-將會填入最高的優先順序項目，如果佇列是空的變數參考。
+如果佇列不是空的，就會以最高優先順序的元素填入變數的參考。
 
 ### <a name="return-value"></a>傳回值
 
-**真**值已推出 (pop)，如果**false**否則。
+如果已彈出值，**則為 true** ，否則**為 false** 。
 
 ## <a name="see-also"></a>另請參閱
 

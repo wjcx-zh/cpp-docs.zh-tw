@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4fb43a4223cad8cc63049d2a0f8345e48b90f17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345509"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139966"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 結構
 
@@ -25,7 +25,7 @@ ms.locfileid: "62345509"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct IUMSThreadProxy : public IThreadProxy;
 ```
 
@@ -35,11 +35,11 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 |名稱|描述|
 |----------|-----------------|
-|[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|呼叫以輸入關鍵區域。 在關鍵區域內的排程器不會發現非同步區域可能發生的封鎖作業。 這表示，排程器將不會重新輸入為分頁錯誤、 執行緒暫止、 核心非同步程序呼叫 (Apc) 等，UMS 執行緒。|
-|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|呼叫以輸入超關鍵區域。 在超關鍵區域內的排程器不會發現任何區域可能發生的封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。|
-|[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|呼叫以結束關鍵區域。|
-|[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|呼叫以結束超關鍵區域。|
-|[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|傳回何種執行緒 proxy 會在關鍵區域。 因為超關鍵區域是關鍵區域的超集，如果程式碼已進入關鍵區域，然後超關鍵區域，`InsideHyperCriticalRegion`會傳回。|
+|[IUMSThreadProxy：： EnterCriticalRegion](#entercriticalregion)|呼叫以輸入重要區域。 在重要區域內時，排程器將不會觀察在區域期間發生的非同步封鎖作業。 這表示不會針對 UMS 執行緒，重新輸入排程器的分頁錯誤、執行緒暫停、核心非同步程序呼叫（Apc）等等。|
+|[IUMSThreadProxy：： EnterHyperCriticalRegion](#enterhypercriticalregion)|呼叫以輸入超關鍵區域。 在超關鍵區域內時，排程器不會觀察在區域期間發生的任何封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。|
+|[IUMSThreadProxy：： ExitCriticalRegion](#exitcriticalregion)|呼叫以結束重要區域。|
+|[IUMSThreadProxy：： ExitHyperCriticalRegion](#exithypercriticalregion)|呼叫以結束超關鍵區域。|
+|[IUMSThreadProxy：： GetCriticalRegionType](#getcriticalregiontype)|傳回執行緒 proxy 在哪種重要區域。 因為超關鍵區域是重要區域的超集合，所以如果程式碼輸入了重要區域，然後是超關鍵區域，則會傳回 `InsideHyperCriticalRegion`。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -49,73 +49,73 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="entercriticalregion"></a>  Iumsthreadproxy:: Entercriticalregion 方法
+## <a name="entercriticalregion"></a>IUMSThreadProxy：： EnterCriticalRegion 方法
 
-呼叫以輸入關鍵區域。 在關鍵區域內的排程器不會發現非同步區域可能發生的封鎖作業。 這表示，排程器將不會重新輸入為分頁錯誤、 執行緒暫止、 核心非同步程序呼叫 (Apc) 等，UMS 執行緒。
+呼叫以輸入重要區域。 在重要區域內時，排程器將不會觀察在區域期間發生的非同步封鎖作業。 這表示不會針對 UMS 執行緒，重新輸入排程器的分頁錯誤、執行緒暫停、核心非同步程序呼叫（Apc）等等。
 
-```
+```cpp
 virtual int EnterCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-關鍵區域的新的深度。 關鍵區域是可重新進入。
+重要區域的新深度。 關鍵區域是可重新進入的。
 
-##  <a name="enterhypercriticalregion"></a>  Iumsthreadproxy:: Enterhypercriticalregion 方法
+## <a name="enterhypercriticalregion"></a>IUMSThreadProxy：： EnterHyperCriticalRegion 方法
 
-呼叫以輸入超關鍵區域。 在超關鍵區域內的排程器不會發現任何區域可能發生的封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。
+呼叫以輸入超關鍵區域。 在超關鍵區域內時，排程器不會觀察在區域期間發生的任何封鎖作業。 這表示不會因為 UMS 執行緒的封鎖函式呼叫、鎖定封鎖的擷取嘗試、分頁錯誤、執行緒暫止、核心非同步程序呼叫 (APC) 等，而重新進入排程器。
 
-```
+```cpp
 virtual int EnterHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-超關鍵區域的新的深度。 Hyper-v 關鍵區域是可重新進入。
+超關鍵區域的新深度。 超關鍵區域是可重新進入的。
 
 ### <a name="remarks"></a>備註
 
-排程器必須小心富含有關其所呼叫的方法和其鎖定取得這類區域中，項目。 如果這類區域中的程式碼區塊由排程器會負責排程保留的鎖定，可能會發生死結。
+排程器必須特別小心它所呼叫的方法，以及它在這類區域中所取得的鎖定。 如果這類區域中的程式碼封鎖了排程器負責排程的某個專案所持有的鎖定，則可能會控制發生鎖死。
 
-##  <a name="exitcriticalregion"></a>  Iumsthreadproxy:: Exitcriticalregion 方法
+## <a name="exitcriticalregion"></a>IUMSThreadProxy：： ExitCriticalRegion 方法
 
-呼叫以結束關鍵區域。
+呼叫以結束重要區域。
 
-```
+```cpp
 virtual int ExitCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-關鍵區域的新的深度。 關鍵區域是可重新進入。
+重要區域的新深度。 關鍵區域是可重新進入的。
 
-##  <a name="exithypercriticalregion"></a>  Iumsthreadproxy:: Exithypercriticalregion 方法
+## <a name="exithypercriticalregion"></a>IUMSThreadProxy：： ExitHyperCriticalRegion 方法
 
 呼叫以結束超關鍵區域。
 
-```
+```cpp
 virtual int ExitHyperCriticalRegion() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-超關鍵區域的新的深度。 Hyper-v 關鍵區域是可重新進入。
+超關鍵區域的新深度。 超關鍵區域是可重新進入的。
 
-##  <a name="getcriticalregiontype"></a>  Iumsthreadproxy:: Getcriticalregiontype 方法
+## <a name="getcriticalregiontype"></a>IUMSThreadProxy：： GetCriticalRegionType 方法
 
-傳回何種執行緒 proxy 會在關鍵區域。 因為超關鍵區域是關鍵區域的超集，如果程式碼已進入關鍵區域，然後超關鍵區域，`InsideHyperCriticalRegion`會傳回。
+傳回執行緒 proxy 在哪種重要區域。 因為超關鍵區域是重要區域的超集合，所以如果程式碼輸入了重要區域，然後是超關鍵區域，則會傳回 `InsideHyperCriticalRegion`。
 
-```
+```cpp
 virtual CriticalRegionType GetCriticalRegionType() const = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-關鍵區域內的執行緒 proxy 是型別。
+執行緒 proxy 所在的重要區欄位型別。
 
 ## <a name="see-also"></a>另請參閱
 

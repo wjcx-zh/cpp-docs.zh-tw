@@ -13,28 +13,28 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c29caf6d31df316e80b15fe6827c81e34ece8a18
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160063"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142727"
 ---
-# <a name="singlelinkregistry-class"></a>single_link_registry 類別
+# <a name="single_link_registry-class"></a>single_link_registry 類別
 
 `single_link_registry` 物件是只管理單一來源或目標區塊的 `network_link_registry`。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<class _Block>
 class single_link_registry : public network_link_registry<_Block>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_Block*<br/>
-區塊資料類型儲存在`single_link_registry`物件。
+要儲存在 `single_link_registry` 物件中的區塊資料類型。
 
 ## <a name="members"></a>成員
 
@@ -43,17 +43,17 @@ class single_link_registry : public network_link_registry<_Block>;
 |名稱|描述|
 |----------|-----------------|
 |[single_link_registry](#ctor)|建構 `single_link_registry` 物件。|
-|[~ single_link_registry 解構函式](#dtor)|終結`single_link_registry`物件。|
+|[~ single_link_registry 的析構函式](#dtor)|終結 `single_link_registry` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[add](#add)|新增連結`single_link_registry`物件。 (覆寫[network_link_registry:: add](network-link-registry-class.md#add)。)|
-|[begin](#begin)|傳回迭代器中的第一個項目`single_link_registry`物件。 (覆寫[network_link_registry:: begin](network-link-registry-class.md#begin)。)|
-|[contains](#contains)|搜尋`single_link_registry`物件指定的區塊。 (覆寫[network_link_registry:: contains](network-link-registry-class.md#contains)。)|
-|[count](#count)|計算中的項目數`single_link_registry`物件。 (覆寫[network_link_registry:: count](network-link-registry-class.md#count)。)|
-|[remove](#remove)|移除連結，以從`single_link_registry`物件。 (覆寫[network_link_registry:: remove](network-link-registry-class.md#remove)。)|
+|[add](#add)|加入 `single_link_registry` 物件的連結。 （覆寫[network_link_registry：： add](network-link-registry-class.md#add)。）|
+|[begin](#begin)|將反覆運算器傳回至 `single_link_registry` 物件中的第一個元素。 （覆寫[network_link_registry：： begin](network-link-registry-class.md#begin)。）|
+|[contains](#contains)|在 `single_link_registry` 物件中搜尋指定的區塊。 （覆寫[network_link_registry：： contains](network-link-registry-class.md#contains)。）|
+|[計數](#count)|計算 `single_link_registry` 物件中的專案數。 （覆寫[network_link_registry：： count](network-link-registry-class.md#count)。）|
+|[remove](#remove) \(英文\)|從 `single_link_registry` 物件移除連結。 （覆寫[network_link_registry：： remove](network-link-registry-class.md#remove)。）|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -67,104 +67,104 @@ class single_link_registry : public network_link_registry<_Block>;
 
 **命名空間：** concurrency
 
-##  <a name="add"></a> add
+## <a name="add"></a>載入
 
-新增連結`single_link_registry`物件。
+加入 `single_link_registry` 物件的連結。
 
-```
+```cpp
 virtual void add(_EType _Link);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Link*<br/>
-要加入的區塊的指標。
+要加入之區塊的指標。
 
 ### <a name="remarks"></a>備註
 
-方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況，如果此登錄中已經有一個連結。
+如果此登錄中已經有連結，方法會擲回[invalid_link_target](invalid-link-target-class.md)例外狀況。
 
-##  <a name="begin"></a> begin
+## <a name="begin"></a>起點
 
-傳回迭代器中的第一個項目`single_link_registry`物件。
+將反覆運算器傳回至 `single_link_registry` 物件中的第一個元素。
 
-```
+```cpp
 virtual iterator begin();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-迭代器中的第一個項目定址`single_link_registry`物件。
+反覆運算器，定址物件是 `single_link_registry` 物件中的第一個元素。
 
 ### <a name="remarks"></a>備註
 
-結束狀態會表示`NULL`連結。
+結束狀態會以 `NULL` 連結來表示。
 
-##  <a name="contains"></a> 包含
+## <a name="contains"></a>包含
 
-搜尋`single_link_registry`物件指定的區塊。
+在 `single_link_registry` 物件中搜尋指定的區塊。
 
-```
+```cpp
 virtual bool contains(_EType _Link);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Link*<br/>
-要搜尋中的區塊的指標`single_link_registry`物件。
+要在 `single_link_registry` 物件中搜尋之區塊的指標。
 
 ### <a name="return-value"></a>傳回值
 
-**真**找不到連結，如果**false**否則。
+如果找到連結，**則為 true** ，否則為**false** 。
 
-##  <a name="count"></a> count
+## <a name="count"></a>計數
 
-計算中的項目數`single_link_registry`物件。
+計算 `single_link_registry` 物件中的專案數。
 
-```
+```cpp
 virtual size_t count();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-中的項目數`single_link_registry`物件。
+`single_link_registry` 物件中的項目數。
 
-##  <a name="remove"></a> 移除
+## <a name="remove"></a>取消
 
-移除連結，以從`single_link_registry`物件。
+從 `single_link_registry` 物件移除連結。
 
-```
+```cpp
 virtual bool remove(_EType _Link);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Link*<br/>
-要移除，如果區塊的指標找到。
+要移除之區塊的指標（如有找到）。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果連結已找到並移除**false**否則。
+如果找到並移除連結，**則為 true** ，否則為**false** 。
 
-##  <a name="ctor"></a> single_link_registry
+## <a name="ctor"></a>single_link_registry
 
 建構 `single_link_registry` 物件。
 
-```
+```cpp
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~single_link_registry
+## <a name="dtor"></a>~ single_link_registry
 
-終結`single_link_registry`物件。
+終結 `single_link_registry` 物件。
 
-```
+```cpp
 virtual ~single_link_registry();
 ```
 
 ### <a name="remarks"></a>備註
 
-方法會擲回[invalid_operation](invalid-operation-class.md)連結移除之前，它會呼叫例外狀況。
+如果在移除連結之前呼叫此方法，則會擲回[invalid_operation](invalid-operation-class.md)例外狀況。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_unblock_unbalanced class
 ms.assetid: a76066c8-19dd-44fa-959a-6941ec1b0d2d
-ms.openlocfilehash: f4f385cde2a27665afa5eb9869eb52bc42c70111
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261ec96c1a83fbec423e6dbbfe403c4db53a2962
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296212"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143101"
 ---
-# <a name="contextunblockunbalanced-class"></a>context_unblock_unbalanced 類別
+# <a name="context_unblock_unbalanced-class"></a>context_unblock_unbalanced 類別
 
-這個類別描述時所擲回的例外狀況呼叫`Block`並`Unblock`方法`Context`物件未正確配對。
+這個類別描述未正確配對 `Context` 物件的 `Block` 和 `Unblock` 方法的呼叫時，所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class context_unblock_unbalanced : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class context_unblock_unbalanced : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[context_unblock_unbalanced](#ctor)|多載。 建構 `context_unblock_unbalanced` 物件。|
+|[coNtext_unblock_unbalanced](#ctor)|已多載。 建構 `context_unblock_unbalanced` 物件。|
 
 ## <a name="remarks"></a>備註
 
-若要呼叫`Block`並`Unblock`方法`Context`物件必須永遠正確配對。 並行執行階段可讓任何一種順序進行的作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 如果執行個體，兩個呼叫會擲回這個例外狀況`Unblock`方法進行了在資料列，`Context`物件已不會被封鎖。
+對 `Context` 物件的 `Block` 和 `Unblock` 方法的呼叫必須一律正確配對。 並行執行階段允許以任一順序發生作業。 例如，呼叫 `Block` 之後可以呼叫 `Unblock`，反之亦然。 例如，如果在一個資料列中，對未封鎖的 `Context` 物件呼叫了兩個 `Unblock` 方法，就會擲回這個例外狀況。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -45,15 +45,15 @@ class context_unblock_unbalanced : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> context_unblock_unbalanced
+## <a name="ctor"></a>coNtext_unblock_unbalanced
 
 建構 `context_unblock_unbalanced` 物件。
 
-```
+```cpp
 explicit _CRTIMP context_unblock_unbalanced(_In_z_ const char* _Message) throw();
 
 context_unblock_unbalanced() throw();

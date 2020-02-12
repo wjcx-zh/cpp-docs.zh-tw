@@ -5,84 +5,84 @@ helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: bd0aa1c2ca2263e469cd45a4af650fa9b3e8c508
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: fa19d965a35909dfefc5f586c772bc9b4565e814
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857423"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142963"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>逐步解說：建立資料流程代理程式
 
-本文件將示範如何建立資料流程，而不是控制流程為基礎的代理程式型應用程式。
+本檔示範如何建立以資料流程為基礎的以代理程式為基礎的應用程式，而不是控制流程。
 
-*控制流程*指的是在程式中的作業的執行順序。 控制流程是藉由使用控制結構，例如條件陳述式、 迴圈等等來調節。 或者，*資料流程*指的是程式設計模型，在其中計算會進行所有必要的資料時才可用。 資料流程程式設計模型被相關概念的訊息傳遞，在其中程式的獨立元件彼此所傳送訊息。
+*控制流程*指的是程式中作業的執行順序。 控制流程是使用控制結構（例如條件陳述式、迴圈等等）來進行管制。 或者，*資料流程*是指只有在所有必要的資料都可供使用時，才會進行計算的程式設計模型。 資料流程程式設計模型與「訊息傳遞」的概念有關，其中程式的獨立元件會藉由傳送訊息彼此通訊。
 
-非同步代理程式同時支援控制流程與資料流程程式設計模型。 控制流程模型適合在許多情況下，雖然資料流程模型時，適用於其他類型，例如，代理程式接收資料，並執行的動作為基礎的資料承載。
+非同步代理程式同時支援控制流程和資料流程程式設計模型。 雖然控制流程模型適用于許多情況，但資料流程模型在其他情況下是適當的，例如，當代理程式接收資料，並根據該資料的承載執行動作時。
 
 ## <a name="prerequisites"></a>必要條件
 
-在開始本逐步解說之前，請閱讀下列文件：
+開始進行本逐步解說之前，請先閱讀下列檔：
 
 - [非同步代理程式](../../parallel/concrt/asynchronous-agents.md)
 
 - [非同步訊息區](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [如何：使用訊息區篩選](../../parallel/concrt/how-to-use-a-message-block-filter.md)
+- [如何：使用訊息區篩選條件](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-##  <a name="top"></a> 章節
+## <a name="top"></a> 章節
 
 本逐步解說包含下列各節：
 
-- [建立基本的控制流程的代理程式](#control-flow)
+- [建立基本控制流程代理程式](#control-flow)
 
 - [建立基本資料流程代理程式](#dataflow)
 
-- [建立訊息記錄的代理程式](#logging)
+- [建立訊息記錄代理程式](#logging)
 
-##  <a name="control-flow"></a> 建立基本的控制流程的代理程式
+## <a name="control-flow"></a>建立基本控制流程代理程式
 
-請考慮下列範例定義`control_flow_agent`類別。 `control_flow_agent`類別會在三個訊息的緩衝區上： 其中一個輸入緩衝區和兩個輸出緩衝區。 `run`方法讀取來源的訊息緩衝區，在迴圈中，並會使用條件陳述式將導向控制程式執行流程。 代理程式會遞增一個計數器，非零的負數的值，並為非零的正整數值的另一個計數器遞增。 代理程式會收到零 sentinel 值之後，它會傳送至輸出訊息緩衝區的計數器值。 `negatives`和`positives`方法可讓應用程式從代理程式讀取負數和正數的值的計數。
+請考慮下列定義 `control_flow_agent` 類別的範例。 `control_flow_agent` 類別會在三個訊息緩衝區上運作：一個輸入緩衝區和兩個輸出緩衝區。 `run` 方法會從迴圈中的來源訊息緩衝區讀取，並使用條件陳述式來指示程式執行的流程。 代理程式會為非零的負值增加一個計數器，並為非零的正值增加另一個計數器。 在代理程式收到值為零的 sentinel 後，它會將計數器的值傳送至輸出訊息緩衝區。 `negatives` 和 `positives` 方法可讓應用程式讀取代理程式中的負值和正值的計數。
 
 [!code-cpp[concrt-dataflow-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_1.cpp)]
 
-雖然這個範例會在代理程式的控制流程的基本用法，它會示範序列性質的控制流程為基礎的程式設計。 必須循序處理每則訊息，即使多個訊息可能出現在輸入的訊息的緩衝區。 資料流程模型可讓這兩個分支同時評估的條件陳述式。 資料流程模型也可讓您建立更複雜的傳訊網路，可供使用，對資料採取動作。
+雖然此範例會在代理程式中進行控制流程的基本使用，但它會示範以控制流程為基礎之程式設計的序列本質。 每個訊息都必須連續處理，即使輸入訊息緩衝區中可能有多個訊息可用也一樣。 資料流程模型可讓條件陳述式的兩個分支同時進行評估。 資料流程模型也可讓您建立更複雜的訊息網路，以在資料可供使用時對其採取動作。
 
 [[靠上](#top)]
 
-##  <a name="dataflow"></a> 建立基本資料流程代理程式
+## <a name="dataflow"></a>建立基本資料流程代理程式
 
-本節說明如何將轉換`control_flow_agent`類別來使用資料流程模型來執行相同的工作。
+本節說明如何轉換 `control_flow_agent` 類別，以使用資料流程模型來執行相同的工作。
 
-資料流程代理程式的運作方式是建立的訊息緩衝區，其中每個特定用途的網路。 特定訊息區塊使用篩選函數來接受或拒絕訊息，以根據其內容。 篩選函數可確保該訊息區塊只接收特定值。
+資料流程代理程式的運作方式是建立訊息緩衝區的網路，每一個都有特定的用途。 某些訊息區塊會使用篩選函式來依據其承載來接受或拒絕訊息。 篩選函數可確保訊息區塊只會接收特定的值。
 
-#### <a name="to-convert-the-control-flow-agent-to-a-dataflow-agent"></a>若要轉換的資料流程代理程式的流程控制代理程式
+#### <a name="to-convert-the-control-flow-agent-to-a-dataflow-agent"></a>將控制流程代理程式轉換成資料流程代理程式
 
-1. 複製主體`control_flow_agent`類別，以另一個類別，例如`dataflow_agent`。 或者，您可以重新命名`control_flow_agent`類別。
+1. 將 `control_flow_agent` 類別的主體複製到另一個類別，例如 `dataflow_agent`。 或者，您也可以將 `control_flow_agent` 類別重新命名。
 
-1. 移除呼叫迴圈的主體`receive`從`run`方法。
+1. 移除從 `run` 方法呼叫 `receive` 之迴圈的主體。
 
 [!code-cpp[concrt-dataflow-agent#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_2.cpp)]
 
-1. 在`run`方法中，變數的初始化之後`negative_count`並`positive_count`，新增`countdown_event`追蹤作用中的作業數目的物件。
+1. 在 `run` 方法中，`negative_count` 和 `positive_count`的變數初始化之後，加入 `countdown_event` 物件來追蹤使用中作業的計數。
 
 [!code-cpp[concrt-dataflow-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_3.cpp)]
 
-   `countdown_event`類別會在本主題稍後所示。
+   本主題稍後會顯示 `countdown_event` 類別。
 
-1. 在資料流程網路中建立訊息將會參與的緩衝區物件。
+1. 建立將參與資料流程網路的訊息緩衝區物件。
 
 [!code-cpp[concrt-dataflow-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_4.cpp)]
 
-1. 連線的訊息緩衝區，以形成網路。
+1. 連接訊息緩衝區以形成網路。
 
 [!code-cpp[concrt-dataflow-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_5.cpp)]
 
-1. 等候`event`和`countdown event`設定的物件。 這些事件發出訊號的代理程式已收到的 sentinel 值與所有作業都已都完成。
+1. 等候 `event` 並設定 `countdown event` 物件。 這些事件會通知代理程式已收到 sentinel 值，且所有作業都已完成。
 
 [!code-cpp[concrt-dataflow-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_6.cpp)]
 
-下圖顯示完成的資料流程網路的`dataflow_agent`類別：
+下圖顯示 `dataflow_agent` 類別的完整資料流程網路：
 
 ![資料流程網路](../../parallel/concrt/media/concrt_dataflow.png "資料流程網路")
 
@@ -90,20 +90,20 @@ ms.locfileid: "64857423"
 
 |成員|描述|
 |------------|-----------------|
-|`increment_active`|A [concurrency:: transformer](../../parallel/concrt/reference/transformer-class.md)作用中事件計數器遞增，並將輸入的值傳遞給網路其餘部分的物件。|
-|`negatives`、 `positives`|[concurrency:: call](../../parallel/concrt/reference/call-class.md)作用中事件計數器遞增的數字和遞減計數的物件。 每個物件會使用篩選來接受負數或正數。|
-|`sentinel`|A [concurrency:: call](../../parallel/concrt/reference/call-class.md)作用中事件計數器接受只有零和遞減的 sentinel 值的物件。|
-|`connector`|A [concurrency:: unbounded_buffer](reference/unbounded-buffer-class.md)連接到內部網路的來源訊息緩衝區的物件。|
+|`increment_active`|[Concurrency：：轉換器](../../parallel/concrt/reference/transformer-class.md)物件，會遞增作用中的事件計數器，並將輸入值傳遞到網路的其餘部分。|
+|`negatives`, `positives`|[concurrency：：呼叫](../../parallel/concrt/reference/call-class.md)遞增數位計數的物件，並遞減使用中的事件計數器。 每個物件都會使用篩選來接受負數或正數。|
+|`sentinel`|[Concurrency：： call](../../parallel/concrt/reference/call-class.md)物件，只接受 sentinel 值零，並遞減作用中的事件計數器。|
+|`connector`|將來源訊息緩衝區連接至內部網路的[concurrency：： unbounded_buffer](reference/unbounded-buffer-class.md)物件。|
 
-因為`run`另一個執行緒上呼叫方法，其他執行緒可以將訊息傳送到網路之前完全連接的網路。 `_source`資料成員是`unbounded_buffer`緩衝處理會從代理程式的應用程式傳送的所有輸入的物件。 若要確定網路處理所有輸入的訊息，代理程式第一次連結網路的內部節點，然後連結該網路時，開頭`connector`至`_source`資料成員。 這樣可保證的訊息不可以處理，正在建立網路。
+由於會在個別的執行緒上呼叫 `run` 方法，因此在網路完全連接之前，其他執行緒可以將訊息傳送至網路。 `_source` 資料成員是 `unbounded_buffer` 物件，可將從應用程式傳送的所有輸入緩衝至代理程式。 為確保網路處理所有輸入訊息，代理程式會先連結網路的內部節點，然後將該網路的啟動 `connector`連結到 `_source` 的資料成員。 這可確保在網路形成時，不會處理訊息。
 
-因為在此範例中的網路以資料流程為基礎，而非在控制流程，網路必須傳達給代理程式它已完成處理每個輸入的值和 sentinel 節點已收到其值。 這個範例會使用`countdown_event`來表示已處理所有輸入的值的物件和[concurrency:: event](../../parallel/concrt/reference/event-class.md)表示 sentinel 節點已收到其值的物件。 `countdown_event`類別會使用`event`計數器值達到零時發出訊號的物件。 資料流程網路的標頭會遞增的計數器，每當它收到的值。 每個終端節點的網路遞減計數器之後，它會處理輸入的值。 代理形成資料流程網路之後，它會等候 sentinel 節點，以設定`event`物件以及`countdown_event`物件來表示其計數器達到零。
+因為此範例中的網路是以資料流程為基礎，而不是在控制流程上，所以網路必須與代理程式通訊，讓它完成每個輸入值的處理，而且 sentinel 節點已接收其值。 這個範例會使用 `countdown_event` 物件來表示已處理所有輸入值，而[concurrency：： event](../../parallel/concrt/reference/event-class.md)物件會指出 sentinel 節點已接收其值。 `countdown_event` 類別會使用 `event` 物件，以在計數器值達到零時發出信號。 資料流程網路的標頭會在每次收到值時遞增計數器。 網路的每個終端機節點會在處理輸入值之後，將計數器減一。 在代理程式形成資料流程網路之後，它會等候 sentinel 節點設定 `event` 物件，並針對 `countdown_event` 物件，通知其計數器已達到零。
 
-下列範例所示`control_flow_agent`， `dataflow_agent`，和`countdown_event`類別。 `wmain`函式會建立`control_flow_agent`並`dataflow_agent`物件，並使用`send_values`函式以傳送至代理程式的一系列的隨機值。
+下列範例會顯示 `control_flow_agent`、`dataflow_agent`和 `countdown_event` 類別。 `wmain` 函式會建立一個 `control_flow_agent` 和一個 `dataflow_agent` 物件，並使用 `send_values` 函數將一系列的隨機值傳送至代理程式。
 
 [!code-cpp[concrt-dataflow-agent#7](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_7.cpp)]
 
-此範例會產生下列的範例輸出：
+這個範例會產生下列範例輸出：
 
 ```Output
 Control-flow agent:
@@ -116,25 +116,25 @@ There are 499477 positive numbers.
 
 ### <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`dataflow-agent.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼，並將它貼入 Visual Studio 專案中，或貼入名為 `dataflow-agent.cpp` 的檔案中，然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc 資料流程 agent.cpp**
+**cl/EHsc dataflow-agent .cpp**
 
 [[靠上](#top)]
 
-##  <a name="logging"></a> 建立訊息記錄的代理程式
+## <a name="logging"></a>建立訊息記錄代理程式
 
-下列範例所示`log_agent`類別，類似於`dataflow_agent`類別。 `log_agent`類別會實作非同步記錄代理程式，將記錄寫入訊息至檔案，與主控台。 `log_agent`類別可讓您的應用程式，將分類成參考用訊息的訊息、 警告或錯誤。 它也可讓應用程式指定是否要將每個記錄類別寫入至檔案、 主控台中，或兩者。 此範例會將所有檔案的記錄訊息和僅錯誤訊息寫入主控台。
+下列範例會顯示類似 `dataflow_agent` 類別的 `log_agent` 類別。 `log_agent` 類別會執行非同步記錄代理程式，以將記錄檔訊息寫入至檔案和主控台。 `log_agent` 類別可讓應用程式將訊息分類為資訊、警告或錯誤。 它也可讓應用程式指定每個記錄類別是否會寫入檔案、主控台或兩者。 這個範例會將所有記錄訊息寫入檔案，而且只會將錯誤訊息寫入主控台。
 
 [!code-cpp[concrt-log-filter#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-dataflow-agent_8.cpp)]
 
-此範例會將下列的輸出寫入主控台。
+這個範例會將下列輸出寫入主控台。
 
 ```Output
 error: This is a sample error message.
 ```
 
-此範例也會產生 log.txt 檔案，其中包含下列文字。
+這個範例也會產生包含下列文字的 log .txt 檔案。
 
 ```Output
 info: ===Logging started.===
@@ -145,9 +145,9 @@ info: ===Logging finished.===
 
 ### <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`log-filter.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼，並將它貼入 Visual Studio 專案中，或貼入名為 `log-filter.cpp` 的檔案中，然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc 記錄 filter.cpp**
+**cl/EHsc log-filter .cpp**
 
 [[靠上](#top)]
 

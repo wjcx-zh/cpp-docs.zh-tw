@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 60d5a57ff9cb33a3d522c14514f5107844216852
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341103"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143017"
 ---
-# <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key 類別
+# <a name="invalid_scheduler_policy_key-class"></a>invalid_scheduler_policy_key 類別
 
-這個類別描述將無效或未知的機碼傳遞給 `SchedulerPolicy` 物件建構函式，或將必須使用其他方式 (如 `SetConcurrencyLimits` 方法) 變更的機碼傳遞給 `SchedulerPolicy` 物件的 `SetPolicyValue` 方法時所擲回的例外狀況。
+這個類別描述將無效或未知的機碼傳遞給 `SchedulerPolicy` 物件建構函式，或將必須使用其他方式 (如 `SetPolicyValue` 方法) 變更的機碼傳遞給 `SchedulerPolicy` 物件的 `SetConcurrencyLimits` 方法時所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class invalid_scheduler_policy_key : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[invalid_scheduler_policy_key](#ctor)|多載。 建構 `invalid_scheduler_policy_key` 物件。|
+|[invalid_scheduler_policy_key](#ctor)|已多載。 建構 `invalid_scheduler_policy_key` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_key
+## <a name="ctor"></a>invalid_scheduler_policy_key
 
 建構 `invalid_scheduler_policy_key` 物件。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_key() throw();

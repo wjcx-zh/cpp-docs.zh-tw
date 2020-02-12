@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351650"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142158"
 ---
-# <a name="norm3-class"></a>norm_3 類別
+# <a name="norm_3-class"></a>norm_3 類別
 
-表示短向量的三個一般數字。
+代表三個一般數位的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class norm_3;
 ```
 
@@ -101,102 +101,102 @@ class norm_3;
 
 |名稱|描述|
 |----------|-----------------|
-|[norm_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[norm_3 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|norm_3::get_x||
-|norm_3::get_xy||
-|norm_3::get_xyz||
-|norm_3::get_xz||
-|norm_3::get_xzy||
-|norm_3::get_y||
-|norm_3::get_yx||
-|norm_3::get_yxz||
-|norm_3::get_yz||
-|norm_3::get_yzx||
-|norm_3::get_z||
-|norm_3::get_zx||
-|norm_3::get_zxy||
-|norm_3::get_zy||
-|norm_3::get_zyx||
-|norm_3::ref_b||
-|norm_3::ref_g||
-|norm_3::ref_r||
-|norm_3::ref_x||
-|norm_3::ref_y||
-|norm_3::ref_z||
-|norm_3::set_x||
-|norm_3::set_xy||
-|norm_3::set_xyz||
-|norm_3::set_xz||
-|norm_3::set_xzy||
-|norm_3::set_y||
-|norm_3::set_yx||
-|norm_3::set_yxz||
-|norm_3::set_yz||
-|norm_3::set_yzx||
-|norm_3::set_z||
-|norm_3::set_zx||
-|norm_3::set_zxy||
-|norm_3::set_zy||
-|norm_3::set_zyx||
+|norm_3：： get_x||
+|norm_3：： get_xy||
+|norm_3：： get_xyz||
+|norm_3：： get_xz||
+|norm_3：： get_xzy||
+|norm_3：： get_y||
+|norm_3：： get_yx||
+|norm_3：： get_yxz||
+|norm_3：： get_yz||
+|norm_3：： get_yzx||
+|norm_3：： get_z||
+|norm_3：： get_zx||
+|norm_3：： get_zxy||
+|norm_3：： get_zy||
+|norm_3：： get_zyx||
+|norm_3：： ref_b||
+|norm_3：： ref_g||
+|norm_3：： ref_r||
+|norm_3：： ref_x||
+|norm_3：： ref_y||
+|norm_3：： ref_z||
+|norm_3：： set_x||
+|norm_3：： set_xy||
+|norm_3：： set_xyz||
+|norm_3：： set_xz||
+|norm_3：： set_xzy||
+|norm_3：： set_y||
+|norm_3：： set_yx||
+|norm_3：： set_yxz||
+|norm_3：： set_yz||
+|norm_3：： set_yzx||
+|norm_3：： set_z||
+|norm_3：： set_zx||
+|norm_3：： set_zxy||
+|norm_3：： set_zy||
+|norm_3：： set_zyx||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|norm_3::operator-||
-|norm_3::operator--||
-|norm_3::operator*=||
-|norm_3::operator/=||
-|norm_3::operator++||
-|norm_3::operator+=||
-|norm_3::operator=||
-|norm_3::operator-=||
+|norm_3：： operator-||
+|norm_3：： operator--||
+|norm_3：： operator * =||
+|norm_3：： operator/=||
+|norm_3：： operator + +||
+|norm_3：： operator + =||
+|norm_3：： operator =||
+|norm_3：： operator-=||
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[常數的大小](#size)||
+|[大小常數](#size)||
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|norm_3::b||
-|norm_3::bg||
-|norm_3::bgr||
-|norm_3::br||
-|norm_3::brg||
-|norm_3::g||
-|norm_3::gb||
-|norm_3::gbr||
-|norm_3::gr||
-|norm_3::grb||
-|norm_3::r||
-|norm_3::rb||
-|norm_3::rbg||
-|norm_3::rg||
-|norm_3::rgb||
-|norm_3::x||
-|norm_3::xy||
-|norm_3::xyz||
-|norm_3::xz||
-|norm_3::xzy||
-|norm_3::y||
-|norm_3::yx||
-|norm_3::yxz||
-|norm_3::yz||
-|norm_3::yzx||
-|norm_3::z||
-|norm_3::zx||
-|norm_3::zxy||
-|norm_3::zy||
-|norm_3::zyx||
+|norm_3：： b||
+|norm_3：： bg||
+|norm_3：： bgr||
+|norm_3：： br||
+|norm_3：： brg||
+|norm_3：： g||
+|norm_3：： gb||
+|norm_3：： gbr||
+|norm_3：： gr||
+|norm_3：： grb||
+|norm_3：： r||
+|norm_3：： rb||
+|norm_3：： rbg||
+|norm_3：： rg||
+|norm_3：： rgb||
+|norm_3：： x||
+|norm_3：： xy||
+|norm_3：： xyz||
+|norm_3：： xz||
+|norm_3：： xzy||
+|norm_3：： y||
+|norm_3：： yx||
+|norm_3：： yxz||
+|norm_3：： yz||
+|norm_3：： yzx||
+|norm_3：： z||
+|norm_3：： zx||
+|norm_3：： zxy||
+|norm_3：： zy||
+|norm_3：： zyx||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -204,17 +204,17 @@ class norm_3;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-## <a name="ctor"></a> norm_3 建構函式
+## <a name="ctor"></a>norm_3 的構造函式
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,28 +257,28 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化項目 2 的值。
+要初始化元素2的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-## <a name="a-namesize-size-constant"></a><a name="size"> 常數的大小
+## <a name="a-namesize-size-constant"></a><a name="size"> 大小常數
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 static const int size = 3;
 ```
 

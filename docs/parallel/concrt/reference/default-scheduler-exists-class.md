@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - default_scheduler_exists class
 ms.assetid: f6e575e2-4e0f-455a-9e06-54f462ce0c1c
-ms.openlocfilehash: 326a2dfc6837665adb4d46a6aaa8780052ad2b22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eed5dd242beb4c4cd481f22635e0d5f71c28d7e6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296094"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139181"
 ---
-# <a name="defaultschedulerexists-class"></a>default_scheduler_exists 類別
+# <a name="default_scheduler_exists-class"></a>default_scheduler_exists 類別
 
 這個類別描述預設排程器已經存在於處理序中時呼叫 `Scheduler::SetDefaultSchedulerPolicy` 方法所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class default_scheduler_exists : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class default_scheduler_exists : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[default_scheduler_exists](#ctor)|多載。 建構 `default_scheduler_exists` 物件。|
+|[default_scheduler_exists](#ctor)|已多載。 建構 `default_scheduler_exists` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class default_scheduler_exists : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> default_scheduler_exists
+## <a name="ctor"></a>default_scheduler_exists
 
 建構 `default_scheduler_exists` 物件。
 
-```
+```cpp
 explicit _CRTIMP default_scheduler_exists(_In_z_ const char* _Message) throw();
 
 default_scheduler_exists() throw();

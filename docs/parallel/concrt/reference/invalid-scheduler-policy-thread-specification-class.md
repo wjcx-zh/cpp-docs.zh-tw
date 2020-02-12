@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-ms.openlocfilehash: 26d09610c6bb9e0c87852c9804e094617b021273
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: b6c2fd853ae19c48ae04d6601eb47e5afcb71944
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341092"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143028"
 ---
-# <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification 類別
+# <a name="invalid_scheduler_policy_thread_specification-class"></a>invalid_scheduler_policy_thread_specification 類別
 
 這個類別描述嘗試設定 `SchedulerPolicy` 物件的並行存取限制，以致 `MinConcurrency` 機碼的值小於 `MaxConcurrency` 機碼的值時擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class invalid_scheduler_policy_thread_specification : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-value-class.md#ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|
+|[invalid_scheduler_policy_thread_specification]（無效-排程器-原則-值-class. md # ctor|已多載。 建構 `invalid_scheduler_policy_value` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -39,14 +39,15 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
-##  <a name="ctor"></a> invalid_scheduler_policy_thread_specification
+
+## <a name="ctor"></a>invalid_scheduler_policy_thread_specification
 
 建構 `invalid_scheduler_policy_value` 物件。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_thread_specification(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_thread_specification() throw();

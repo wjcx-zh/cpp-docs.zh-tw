@@ -4,23 +4,23 @@ ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/std::make_exception_ptr
 ms.assetid: 8d81cf7a-818e-4b27-8d49-440ec3088609
-ms.openlocfilehash: 3889973ccd9a91e9512ddee73c77b289a9591467
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e29942498187970d7a157a8fbb86efe2aac635
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409976"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139673"
 ---
-# <a name="makeexceptionptr-function"></a>make_exception_ptr 函式
+# <a name="make_exception_ptr-function"></a>make_exception_ptr 函式
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<class _E>
 exception_ptr make_exception_ptr(_E _Except);
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_E*<br/>
 例外狀況類型。
@@ -32,7 +32,7 @@ exception_ptr make_exception_ptr(_E _Except);
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppltasks.h
+**標頭：** ppltasks.h。h
 
 **命名空間：** std
 

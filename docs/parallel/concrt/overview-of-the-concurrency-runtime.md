@@ -7,46 +7,46 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b50c943bb83c587ab4001556b1143f9d5f868a0b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412681"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142926"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>並行執行階段概觀
 
 本文件提供並行執行階段的總覽。 內容描述並行執行階段的優點、使用時機，以及其元件如何與彼此、與作業系統及應用程式互動。
 
-##  <a name="top"></a> 章節
+## <a name="top"></a> 章節
 
 本文件包含下列章節：
 
-- [並行執行階段實作歷程記錄](#dlls)
+- [並行執行階段的執行歷程記錄](#dlls)
 
-- [並行執行階段很重要的原因](#runtime)
+- [為什麼並行執行時間很重要](#runtime)
 
-- [架構](#architecture)
+- [Architecture (架構)](#architecture)
 
 - [C++Lambda 運算式](#lambda)
 
 - [需求](#requirements)
 
-## <a name="dlls"></a> 並行執行階段實作歷程記錄
+## <a name="dlls"></a>並行執行階段的執行歷程記錄
 
-在 2013 年的 Visual Studio 2010，並行執行階段內透過 msvcr120.dll msvcr100.dll 合併。  發生 UCRT 重構 Visual Studio 2015 中，該 DLL 重構為三個部分：
+在 Visual Studio 2010 到2013中，並行執行階段透過 msvcr120.dll 併入 msvcr100.dll 中。  當 UCRT 重整發生在 Visual Studio 2015 時，該 DLL 會重構成三個部分：
 
-- ucrtbase.dll – C API 隨附於 Windows 10，而且服務下層透過 Windows Update-
+- ucrtbase.dll 隨附于 Windows 10 並透過 Windows Update 提供服務
 
-- vcruntime140.dll、 – 編譯器可支援函式和 EH 執行階段，隨附於 Visual Studio
+- vcruntime140-編譯器支援函式和 EH 執行時間，透過 Visual Studio 出貨
 
-- concrt140.dll – 並行執行階段，隨附於 Visual Studio。 如需平行容器和演算法`concurrency::parallel_for`。 此外，STL 需要這個 DLL 在 Windows XP 上的以 power 同步處理原始物件，因為 Windows XP 並沒有條件變數。
+- 了 concrt140.dll 是透過 Visual Studio 隨附的並行執行階段。 平行容器和演算法（例如 `concurrency::parallel_for`）的必要參數。 此外，STL 需要 Windows XP 上的這個 DLL 來啟動同步處理原始物件，因為 Windows XP 沒有條件變數。
 
 在 Visual Studio 2015 和更新版本中，並行執行階段工作排程器不再是 task 類別及 ppltasks.h 中相關類型適用的排程器。 那些類型現在使用 Windows 執行緒集區以獲得更佳的效能，以及與 Windows 同步處理原始物件的互通性。
 
-##  <a name="runtime"></a> 並行執行階段很重要的原因
+## <a name="runtime"></a>為什麼並行執行時間很重要
 
-並行執行階段為同時執行的應用程式與應用程式元件提供一致性和可預測性。 有兩個例子，並行執行階段的優點*合作式工作排程*並*合作式封鎖*。
+並行執行階段為同時執行的應用程式與應用程式元件提供一致性和可預測性。 並行執行階段的優點有兩個範例，包括*合作*的工作排程和*合作的封鎖*。
 
 並行執行階段會使用實作工作竊取演算法的合作式工作排程器，有效率地在運算資源之間分散工作。 例如，假設有個應用程式具有兩個執行緒，且都是由相同的執行階段管理。 如果一個執行緒完成其排定工作，它便可以從另一個執行緒卸載工作。 這項機制可在應用程式的整體工作負載之間取得平衡。
 
@@ -54,7 +54,7 @@ ms.locfileid: "62412681"
 
 [[靠上](#top)]
 
-##  <a name="architecture"></a> 架構
+## <a name="architecture"></a> 架構
 
 並行執行階段分成四個元件：平行模式程式庫 (PPL)、非同步代理程式程式庫、工作排程器和資源管理員。 這些元件位於作業系統和應用程式之間。 下圖顯示並行執行階段元件在作業系統和應用程式之間互動的方式：
 
@@ -63,29 +63,29 @@ ms.locfileid: "62412681"
 ![並行執行階段架構](../../parallel/concrt/media/concurrencyrun.png "並行執行階段架構")
 
 > [!IMPORTANT]
-> 無法使用從通用 Windows 平台 (UWP) 應用程式，或當您使用 ppltasks.h 中的工作類別或其他類型的工作排程器和資源管理員元件。
+> 工作排程器和 Resource Manager 元件無法從通用 Windows 平臺（UWP）應用程式取得，或者當您使用 Task 類別或 ppltasks.h 中的其他類型時，無法使用。
 
-並行執行階段很*簡式*，也就是您可以結合現有的功能，以執行更多作業。 並行執行階段會組合來自較低層級元件的許多功能，例如平行演算法。
+並行執行階段是可高度*組合*的，也就是說，您可以結合現有的功能來執行更多動作。 並行執行階段會組合來自較低層級元件的許多功能，例如平行演算法。
 
-並行執行階段也會提供同步處理原始物件，使用合作式封鎖來同步處理對資源的存取。 如需有關這些同步處理原始物件的詳細資訊，請參閱 <<c0> [ 同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)。
+並行執行階段也會提供同步處理原始物件，使用合作式封鎖來同步處理對資源的存取。 如需這些同步處理原始物件的詳細資訊，請參閱[同步處理資料結構](../../parallel/concrt/synchronization-data-structures.md)。
 
 下列各節提供每個元件所提供功能及其使用時機的簡短總覽。
 
 ### <a name="parallel-patterns-library"></a>平行模式程式庫
 
-平行模式程式庫 (PPL) 提供一般用途的容器和演算法來執行細部平行處理原則。 可讓 PPL*命令式資料平行處理原則*藉由提供將計算的資料集或集合上分散到運算資源之間的平行演算法。 它也可讓*工作平行處理原則*藉由提供將多個獨立作業分散到運算資源的工作物件。
+平行模式程式庫 (PPL) 提供一般用途的容器和演算法來執行細部平行處理原則。 PPL 藉由提供平行演算法來散發集合上的計算，或跨計算資源的資料集，以啟用*命令式資料平行*處理原則。 它也會提供工作物件，將多個獨立作業分散到計算資源，藉此啟用工作*平行*處理原則。
 
-如果您擁有可受益於平行執行的本機計算，請使用平行模式程式庫。 例如，您可以使用[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法來轉換的現有`for`迴圈以平行方式。
+如果您擁有可受益於平行執行的本機計算，請使用平行模式程式庫。 例如，您可以使用[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)演算法，將現有的 `for` 迴圈轉換成平行處理。
 
-如需有關平行模式程式庫的詳細資訊，請參閱[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)。
+如需平行模式程式庫的詳細資訊，請參閱[平行模式程式庫（PPL）](../../parallel/concrt/parallel-patterns-library-ppl.md)。
 
 ### <a name="asynchronous-agents-library"></a>非同步代理程式程式庫
 
-非同步代理程式程式庫 (或簡稱*代理程式程式庫*) 提供的動作項目為基礎的程式設計模型 」 和 「 訊息傳遞介面，以進行粗略的資料流程和管線工作。 非同步代理程式可讓您在其他元件等候資料時執行工作，以便對延遲進行具生產力的利用。
+「非同步代理程式」程式庫（或簡稱「代理程式連結*庫*」）提供以動作專案為基礎的程式設計模型和訊息傳遞介面，以進行粗略的資料流程和管線工作。 非同步代理程式可讓您在其他元件等候資料時執行工作，以便對延遲進行具生產力的利用。
 
 當您有多個實體以非同步方式彼此通訊時，請使用代理程式庫。 例如，您可以建立代理程式，從檔案或網路連線讀取資料，然後使用訊息傳遞介面將該資料傳送至另一個代理程式。
 
-如需有關代理程式庫的詳細資訊，請參閱 < [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)。
+如需代理程式程式庫的詳細資訊，請參閱[非同步代理](../../parallel/concrt/asynchronous-agents-library.md)程式程式庫。
 
 ### <a name="task-scheduler"></a>工作排程器
 
@@ -103,13 +103,13 @@ ms.locfileid: "62412681"
 
 [[靠上](#top)]
 
-##  <a name="lambda"></a> C++Lambda 運算式
+## <a name="lambda"></a>C++ Lambda 運算式
 
-並行執行階段所定義的許多類型和演算法會實作為 C++ 範本。 其中有些類型和演算法需要執行工作的常式做為參數。 這個參數可以是 Lambda 函式、函式物件或函式指標。 這些實體也稱為*工作函式*或是*處理常式*。
+並行執行階段所定義的許多類型和演算法會實作為 C++ 範本。 其中有些類型和演算法需要執行工作的常式做為參數。 這個參數可以是 Lambda 函式、函式物件或函式指標。 這些實體也稱為「*工作*函式」或「*工作常式*」。
 
 Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算式提供簡潔的方式來定義平行處理用的工作函式。 函式物件和函式指標可讓您使用並行執行階段搭配現有的程式碼。 不過，我們建議您在撰寫新程式碼時使用 Lambda 運算式，因為它們提供安全性和產能優勢。
 
-下列範例會比較 lambda 函式、 函式物件和在多個呼叫的函式指標的語法[concurrency:: parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法。 每次呼叫`parallel_for_each`會使用不同的技巧來計算每個項目中的平方[std:: array](../../standard-library/array-class-stl.md)物件。
+下列範例會比較多個對[concurrency：:p arallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)演算法的呼叫中 lambda 函式、函式物件和函式指標的語法。 `parallel_for_each` 的每個呼叫會使用不同的技術來計算[std：： array](../../standard-library/array-class-stl.md)物件中每個元素的平方。
 
 [!code-cpp[concrt-comparing-work-functions#1](../../parallel/concrt/codesnippet/cpp/overview-of-the-concurrency-runtime_1.cpp)]
 
@@ -123,11 +123,11 @@ Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算�
 390625
 ```
 
-如需中的 lambda 函式的詳細資訊C++，請參閱[Lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
+如需中C++lambda 函數的詳細資訊，請參閱[lambda 運算式](../../cpp/lambda-expressions-in-cpp.md)。
 
 [[靠上](#top)]
 
-##  <a name="requirements"></a> 需求
+## <a name="requirements"></a> 需求
 
 下表顯示與每個並行執行階段元件關聯的標頭檔：
 
@@ -138,8 +138,8 @@ Lambda 運算式是一項重要的新 Visual C++ 語言功能，因為此運算�
 |工作排程器|concrt.h|
 |資源管理員|concrtrm.h|
 
-並行執行階段中宣告[並行](../../parallel/concrt/reference/concurrency-namespace.md)命名空間。 (您也可以使用[並行](../../parallel/concrt/reference/concurrency-namespace.md)，這是此命名空間的別名。)`concurrency::details` 命名空間支援並行執行階段架構，而非直接從您的程式碼使用。
+並行執行階段是在[Concurrency](../../parallel/concrt/reference/concurrency-namespace.md)命名空間中宣告的。 （您也可以使用[並行](../../parallel/concrt/reference/concurrency-namespace.md)，這是此命名空間的別名）。`concurrency::details` 命名空間支援並行執行階段架構，而且並非設計直接從程式碼使用。
 
-並行執行階段被提供為 C 執行階段程式庫 (CRT) 的一部分。 如需如何建置使用 CRT 的應用程式的詳細資訊，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
+並行執行階段被提供為 C 執行階段程式庫 (CRT) 的一部分。 如需如何建立使用 CRT 之應用程式的詳細資訊，請參閱[CRT 程式庫功能](../../c-runtime-library/crt-library-features.md)。
 
 [[靠上](#top)]

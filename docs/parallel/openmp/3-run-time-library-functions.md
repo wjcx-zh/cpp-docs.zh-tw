@@ -2,12 +2,12 @@
 title: 3. 執行階段程式庫函式
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857953"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142962"
 ---
 # <a name="3-run-time-library-functions"></a>3. 執行時間程式庫函式
 
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 以下表示 `omp_get_max_threads`值的下限：
 
-```
+> *執行緒-用於下一個-team* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-請注意，如果另一個平列區域使用 `num_threads` 子句來要求特定數目的執行緒，則在 `omp_get_max_threads` 的結果下限上保證不會保留任何長度。
+請注意，如果另一個平列區域使用 `num_threads` 子句來要求特定數目的執行緒，則在 `omp_get_max_threads` 的結果下限上的保證不會再保留。
 
 `omp_get_max_threads` 函式的傳回值可用來為小組中的所有線程，以動態方式配置足夠的儲存空間，並在下一個平列區域形成。
 
@@ -171,7 +167,7 @@ void omp_set_dynamic(int dynamic_threads);
 
 #### <a name="microsoft-specific"></a>Microsoft 專有
 
-`omp_get_dynamic` 和 `omp_set_dynamic` 目前的支援如下所示： 
+`omp_get_dynamic` 和 `omp_set_dynamic` 目前的支援如下所示：
 
 `omp_set_dynamic` 的輸入參數不會影響執行緒原則，而且不會變更執行緒的數目。 `omp_get_num_threads` 一律會傳回使用者定義的數位（如果已設定）或預設的執行緒數目。 在目前的 Microsoft 執行中，`omp_set_dynamic(0)` 關閉動態執行緒，讓現有的執行緒集可以重複用於下列平列區域。 `omp_set_dynamic(1)` 會藉由捨棄現有的執行緒集，並為即將推出的平列區域建立新的集合，來開啟動態執行緒。 新集合中的執行緒數目與舊的集合相同，而且是以 `omp_get_num_threads`的傳回值為基礎。 因此，為了達到最佳效能，請使用 `omp_set_dynamic(0)` 來重複使用現有的執行緒。
 

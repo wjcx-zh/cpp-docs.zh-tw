@@ -9,25 +9,25 @@ f1_keywords:
 helpviewer_keywords:
 - progress_reporter class
 ms.assetid: b836efab-2d05-4649-b6fa-d15236f1f813
-ms.openlocfilehash: dac74085278418153ddec502f6257ce13885704d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd8f50a8c9829ff9de3e2412b89aa4de88d90db6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394373"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138765"
 ---
-# <a name="progressreporter-class"></a>progress_reporter 類別
+# <a name="progress_reporter-class"></a>progress_reporter 類別
 
 進度報告程式類別可供報告特定類型的進度通知。 每個 progress_reporter 物件都會繫結至特定非同步動作或作業。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<typename _ProgressType>
 class progress_reporter;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_ProgressType*<br/>
 透過進度報告程式報告之每個進度通知的承載類型。
@@ -44,11 +44,11 @@ class progress_reporter;
 
 |名稱|描述|
 |----------|-----------------|
-|[report](#report)|將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。|
+|[彙報](#report)|將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。|
 
 ## <a name="remarks"></a>備註
 
-此類型只適用於 Windows 執行階段應用程式的。
+此類型僅適用于 Windows 執行階段應用程式。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -56,28 +56,28 @@ class progress_reporter;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppltasks.h
+**標頭：** ppltasks.h。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> progress_reporter
+## <a name="ctor"></a>progress_reporter
 
-```
+```cpp
 progress_reporter();
 ```
 
-##  <a name="report"></a> 報表
+## <a name="report"></a>彙報
 
 將進度報告傳送至這個進度報告程式所繫結的非同步動作或作業。
 
-```
+```cpp
 void report(const _ProgressType& val) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *val*<br/>
-透過進度通知報告的承載。
+要報告進度通知的承載。
 
 ## <a name="see-also"></a>另請參閱
 

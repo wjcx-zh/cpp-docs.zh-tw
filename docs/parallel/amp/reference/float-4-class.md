@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180280"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142173"
 ---
-# <a name="float4-class"></a>float_4 類別
+# <a name="float_4-class"></a>float_4 類別
 
-表示短向量的四個浮點數。
+表示四個浮點數的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class float_4;
 ```
 
@@ -297,300 +297,300 @@ class float_4;
 
 |名稱|描述|
 |----------|-----------------|
-|[float_4 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[float_4 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|float_4::get_w||
-|float_4::get_wx||
-|float_4::get_wxy||
-|float_4::get_wxyz||
-|float_4::get_wxz||
-|float_4::get_wxzy||
-|float_4::get_wy||
-|float_4::get_wyx||
-|float_4::get_wyxz||
-|float_4::get_wyz||
-|float_4::get_wyzx||
-|float_4::get_wz||
-|float_4::get_wzx||
-|float_4::get_wzxy||
-|float_4::get_wzy||
-|float_4::get_wzyx||
-|float_4::get_x||
-|float_4::get_xw||
-|float_4::get_xwy||
-|float_4::get_xwyz||
-|float_4::get_xwz||
-|float_4::get_xwzy||
-|float_4::get_xy||
-|float_4::get_xyw||
-|float_4::get_xywz||
-|float_4::get_xyz||
-|float_4::get_xyzw||
-|float_4::get_xz||
-|float_4::get_xzw||
-|float_4::get_xzwy||
-|float_4::get_xzy||
-|float_4::get_xzyw||
-|float_4::get_y||
-|float_4::get_yw||
-|float_4::get_ywx||
-|float_4::get_ywxz||
-|float_4::get_ywz||
-|float_4::get_ywzx||
-|float_4::get_yx||
-|float_4::get_yxw||
-|float_4::get_yxwz||
-|float_4::get_yxz||
-|float_4::get_yxzw||
-|float_4::get_yz||
-|float_4::get_yzw||
-|float_4::get_yzwx||
-|float_4::get_yzx||
-|float_4::get_yzxw||
-|float_4::get_z||
-|float_4::get_zw||
-|float_4::get_zwx||
-|float_4::get_zwxy||
-|float_4::get_zwy||
-|float_4::get_zwyx||
-|float_4::get_zx||
-|float_4::get_zxw||
-|float_4::get_zxwy||
-|float_4::get_zxy||
-|float_4::get_zxyw||
-|float_4::get_zy||
-|float_4::get_zyw||
-|float_4::get_zywx||
-|float_4::get_zyx||
-|float_4::get_zyxw||
-|float_4::ref_a||
-|float_4::ref_b||
-|float_4::ref_g||
-|float_4::ref_r||
-|float_4::ref_w||
-|float_4::ref_x||
-|float_4::ref_y||
-|float_4::ref_z||
-|float_4::set_w||
-|float_4::set_wx||
-|float_4::set_wxy||
-|float_4::set_wxyz||
-|float_4::set_wxz||
-|float_4::set_wxzy||
-|float_4::set_wy||
-|float_4::set_wyx||
-|float_4::set_wyxz||
-|float_4::set_wyz||
-|float_4::set_wyzx||
-|float_4::set_wz||
-|float_4::set_wzx||
-|float_4::set_wzxy||
-|float_4::set_wzy||
-|float_4::set_wzyx||
-|float_4::set_x||
-|float_4::set_xw||
-|float_4::set_xwy||
-|float_4::set_xwyz||
-|float_4::set_xwz||
-|float_4::set_xwzy||
-|float_4::set_xy||
-|float_4::set_xyw||
-|float_4::set_xywz||
-|float_4::set_xyz||
-|float_4::set_xyzw||
-|float_4::set_xz||
-|float_4::set_xzw||
-|float_4::set_xzwy||
-|float_4::set_xzy||
-|float_4::set_xzyw||
-|float_4::set_y||
-|float_4::set_yw||
-|float_4::set_ywx||
-|float_4::set_ywxz||
-|float_4::set_ywz||
-|float_4::set_ywzx||
-|float_4::set_yx||
-|float_4::set_yxw||
-|float_4::set_yxwz||
-|float_4::set_yxz||
-|float_4::set_yxzw||
-|float_4::set_yz||
-|float_4::set_yzw||
-|float_4::set_yzwx||
-|float_4::set_yzx||
-|float_4::set_yzxw||
-|float_4::set_z||
-|float_4::set_zw||
-|float_4::set_zwx||
-|float_4::set_zwxy||
-|float_4::set_zwy||
+|float_4：： get_w||
+|float_4：： get_wx||
+|float_4：： get_wxy||
+|float_4：： get_wxyz||
+|float_4：： get_wxz||
+|float_4：： get_wxzy||
+|float_4：： get_wy||
+|float_4：： get_wyx||
+|float_4：： get_wyxz||
+|float_4：： get_wyz||
+|float_4：： get_wyzx||
+|float_4：： get_wz||
+|float_4：： get_wzx||
+|float_4：： get_wzxy||
+|float_4：： get_wzy||
+|float_4：： get_wzyx||
+|float_4：： get_x||
+|float_4：： get_xw||
+|float_4：： get_xwy||
+|float_4：： get_xwyz||
+|float_4：： get_xwz||
+|float_4：： get_xwzy||
+|float_4：： get_xy||
+|float_4：： get_xyw||
+|float_4：： get_xywz||
+|float_4：： get_xyz||
+|float_4：： get_xyzw||
+|float_4：： get_xz||
+|float_4：： get_xzw||
+|float_4：： get_xzwy||
+|float_4：： get_xzy||
+|float_4：： get_xzyw||
+|float_4：： get_y||
+|float_4：： get_yw||
+|float_4：： get_ywx||
+|float_4：： get_ywxz||
+|float_4：： get_ywz||
+|float_4：： get_ywzx||
+|float_4：： get_yx||
+|float_4：： get_yxw||
+|float_4：： get_yxwz||
+|float_4：： get_yxz||
+|float_4：： get_yxzw||
+|float_4：： get_yz||
+|float_4：： get_yzw||
+|float_4：： get_yzwx||
+|float_4：： get_yzx||
+|float_4：： get_yzxw||
+|float_4：： get_z||
+|float_4：： get_zw||
+|float_4：： get_zwx||
+|float_4：： get_zwxy||
+|float_4：： get_zwy||
+|float_4：： get_zwyx||
+|float_4：： get_zx||
+|float_4：： get_zxw||
+|float_4：： get_zxwy||
+|float_4：： get_zxy||
+|float_4：： get_zxyw||
+|float_4：： get_zy||
+|float_4：： get_zyw||
+|float_4：： get_zywx||
+|float_4：： get_zyx||
+|float_4：： get_zyxw||
+|float_4：： ref_a||
+|float_4：： ref_b||
+|float_4：： ref_g||
+|float_4：： ref_r||
+|float_4：： ref_w||
+|float_4：： ref_x||
+|float_4：： ref_y||
+|float_4：： ref_z||
+|float_4：： set_w||
+|float_4：： set_wx||
+|float_4：： set_wxy||
+|float_4：： set_wxyz||
+|float_4：： set_wxz||
+|float_4：： set_wxzy||
+|float_4：： set_wy||
+|float_4：： set_wyx||
+|float_4：： set_wyxz||
+|float_4：： set_wyz||
+|float_4：： set_wyzx||
+|float_4：： set_wz||
+|float_4：： set_wzx||
+|float_4：： set_wzxy||
+|float_4：： set_wzy||
+|float_4：： set_wzyx||
+|float_4：： set_x||
+|float_4：： set_xw||
+|float_4：： set_xwy||
+|float_4：： set_xwyz||
+|float_4：： set_xwz||
+|float_4：： set_xwzy||
+|float_4：： set_xy||
+|float_4：： set_xyw||
+|float_4：： set_xywz||
+|float_4：： set_xyz||
+|float_4：： set_xyzw||
+|float_4：： set_xz||
+|float_4：： set_xzw||
+|float_4：： set_xzwy||
+|float_4：： set_xzy||
+|float_4：： set_xzyw||
+|float_4：： set_y||
+|float_4：： set_yw||
+|float_4：： set_ywx||
+|float_4：： set_ywxz||
+|float_4：： set_ywz||
+|float_4：： set_ywzx||
+|float_4：： set_yx||
+|float_4：： set_yxw||
+|float_4：： set_yxwz||
+|float_4：： set_yxz||
+|float_4：： set_yxzw||
+|float_4：： set_yz||
+|float_4：： set_yzw||
+|float_4：： set_yzwx||
+|float_4：： set_yzx||
+|float_4：： set_yzxw||
+|float_4：： set_z||
+|float_4：： set_zw||
+|float_4：： set_zwx||
+|float_4：： set_zwxy||
+|float_4：： set_zwy||
 |float_4::set_zwyx||
-|float_4::set_zx||
-|float_4::set_zxw||
-|float_4::set_zxwy||
-|float_4::set_zxy||
-|float_4::set_zxyw||
-|float_4::set_zy||
-|float_4::set_zyw||
-|float_4::set_zywx||
-|float_4::set_zyx||
-|float_4::set_zyxw||
+|float_4：： set_zx||
+|float_4：： set_zxw||
+|float_4：： set_zxwy||
+|float_4：： set_zxy||
+|float_4：： set_zxyw||
+|float_4：： set_zy||
+|float_4：： set_zyw||
+|float_4：： set_zywx||
+|float_4：： set_zyx||
+|float_4：： set_zyxw||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|float_4::operator-||
-|float_4::operator--||
-|float_4::operator*=||
-|float_4::operator/=||
-|float_4::operator++||
-|float_4::operator+=||
-|float_4::operator=||
-|float_4::operator-=||
+|float_4：： operator-||
+|float_4：： operator--||
+|float_4：： operator * =||
+|float_4：： operator/=||
+|float_4：： operator + +||
+|float_4：： operator + =||
+|float_4：： operator =||
+|float_4：： operator-=||
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[常數的大小](#float_4__size)||
+|[大小常數](#float_4__size)||
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|float_4::a||
-|float_4::ab||
-|float_4::abg||
-|float_4::abgr||
-|float_4::abr||
-|float_4::abrg||
-|float_4::ag||
-|float_4::agb||
-|float_4::agbr||
-|float_4::agr||
-|float_4::agrb||
-|float_4::ar||
-|float_4::arb||
-|float_4::arbg||
-|float_4::arg||
-|float_4::argb||
-|float_4::b||
-|float_4::ba||
-|float_4::bag||
-|float_4::bagr||
-|float_4::bar||
-|float_4::barg||
-|float_4::bg||
-|float_4::bga||
-|float_4::bgar||
-|float_4::bgr||
-|float_4::bgra||
-|float_4::br||
-|float_4::bra||
-|float_4::brag||
-|float_4::brg||
-|float_4::brga||
-|float_4::g||
-|float_4::ga||
-|float_4::gab||
-|float_4::gabr||
-|float_4::gar||
-|float_4::garb||
-|float_4::gb||
-|float_4::gba||
-|float_4::gbar||
-|float_4::gbr||
-|float_4::gbra||
-|float_4::gr||
-|float_4::gra||
-|float_4::grab||
-|float_4::grb||
-|float_4::grba||
-|float_4::r||
-|float_4::ra||
-|float_4::rab||
-|float_4::rabg||
-|float_4::rag||
-|float_4::ragb||
-|float_4::rb||
-|float_4::rba||
-|float_4::rbag||
-|float_4::rbg||
-|float_4::rbga||
-|float_4::rg||
-|float_4::rga||
-|float_4::rgab||
-|float_4::rgb||
-|float_4::rgba||
-|float_4::w||
-|float_4::wx||
-|float_4::wxy||
-|float_4::wxyz||
-|float_4::wxz||
-|float_4::wxzy||
-|float_4::wy||
-|float_4::wyx||
-|float_4::wyxz||
-|float_4::wyz||
-|float_4::wyzx||
-|float_4::wz||
-|float_4::wzx||
-|float_4::wzxy||
-|float_4::wzy||
-|float_4::wzyx||
-|float_4::x||
-|float_4::xw||
-|float_4::xwy||
-|float_4::xwyz||
-|float_4::xwz||
-|float_4::xwzy||
-|float_4::xy||
-|float_4::xyw||
-|float_4::xywz||
-|float_4::xyz||
-|float_4::xyzw||
-|float_4::xz||
-|float_4::xzw||
-|float_4::xzwy||
-|float_4::xzy||
-|float_4::xzyw||
-|float_4::y||
-|float_4::yw||
-|float_4::ywx||
-|float_4::ywxz||
-|float_4::ywz||
-|float_4::ywzx||
-|float_4::yx||
-|float_4::yxw||
-|float_4::yxwz||
-|float_4::yxz||
-|float_4::yxzw||
-|float_4::yz||
-|float_4::yzw||
-|float_4::yzwx||
-|float_4::yzx||
-|float_4::yzxw||
-|float_4::z||
-|float_4::zw||
-|float_4::zwx||
-|float_4::zwxy||
-|float_4::zwy||
-|float_4::zwyx||
-|float_4::zx||
-|float_4::zxw||
-|float_4::zxwy||
-|float_4::zxy||
-|float_4::zxyw||
-|float_4::zy||
-|float_4::zyw||
-|float_4::zywx||
-|float_4::zyx||
-|float_4::zyxw||
+|float_4：： a||
+|float_4：： ab||
+|float_4：： abg||
+|float_4：： abgr||
+|float_4：： abr||
+|float_4：： abrg||
+|float_4：： ag||
+|float_4：： agb||
+|float_4：： agbr||
+|float_4：： agr||
+|float_4：： agrb||
+|float_4：： ar||
+|float_4：： arb||
+|float_4：： arbg||
+|float_4：： arg||
+|float_4：： argb||
+|float_4：： b||
+|float_4：： ba||
+|float_4：：包||
+|float_4：： bagr||
+|float_4：： bar||
+|float_4：： barg||
+|float_4：： bg||
+|float_4：： bga||
+|float_4：： bgar||
+|float_4：： bgr||
+|float_4：： bgra||
+|float_4：： br||
+|float_4：： bra||
+|float_4：： brag||
+|float_4：： brg||
+|float_4：： brga||
+|float_4：： g||
+|float_4：： ga||
+|float_4：： gab||
+|float_4：： gabr||
+|float_4：： gar||
+|float_4：： garb||
+|float_4：： gb||
+|float_4：： gba||
+|float_4：： gbar||
+|float_4：： gbr||
+|float_4：： gbra||
+|float_4：： gr||
+|float_4：： gra-pe 運作||
+|float_4：：抓取||
+|float_4：： grb||
+|float_4：： grba||
+|float_4：： r||
+|float_4：： ra||
+|float_4：： rab||
+|float_4：： rabg||
+|float_4：： rag||
+|float_4：： ragb||
+|float_4：： rb||
+|float_4：： rba||
+|float_4：： rbag||
+|float_4：： rbg||
+|float_4：： rbga||
+|float_4：： rg||
+|float_4：： rga||
+|float_4：： rgab||
+|float_4：： rgb||
+|float_4：： rgba||
+|float_4：： w||
+|float_4：： wx||
+|float_4：： wxy||
+|float_4：： wxyz||
+|float_4：： wxz||
+|float_4：： wxzy||
+|float_4：： wy||
+|float_4：： wyx||
+|float_4：： wyxz||
+|float_4：： wyz||
+|float_4：： wyzx||
+|float_4：： wz||
+|float_4：： wzx||
+|float_4：： wzxy||
+|float_4：： wzy||
+|float_4：： wzyx||
+|float_4：： x||
+|float_4：： xw||
+|float_4：： xwy||
+|float_4：： xwyz||
+|float_4：： xwz||
+|float_4：： xwzy||
+|float_4：： xy||
+|float_4：： xyw||
+|float_4：： xywz||
+|float_4：： xyz||
+|float_4：： xyzw||
+|float_4：： xz||
+|float_4：： xzw||
+|float_4：： xzwy||
+|float_4：： xzy||
+|float_4：： xzyw||
+|float_4：： y||
+|float_4：： yw||
+|float_4：： ywx||
+|float_4：： ywxz||
+|float_4：： ywz||
+|float_4：： ywzx||
+|float_4：： yx||
+|float_4：： yxw||
+|float_4：： yxwz||
+|float_4：： yxz||
+|float_4：： yxzw||
+|float_4：： yz||
+|float_4：： yzw||
+|float_4：： yzwx||
+|float_4：： yzx||
+|float_4：： yzxw||
+|float_4：： z||
+|float_4：： zw||
+|float_4：： zwx||
+|float_4：： zwxy||
+|float_4：： zwy||
+|float_4：： zwyx||
+|float_4：： zx||
+|float_4：： zxw||
+|float_4：： zxwy||
+|float_4：： zxy||
+|float_4：： zxyw||
+|float_4：： zy||
+|float_4：： zyw||
+|float_4：： zywx||
+|float_4：： zyx||
+|float_4：： zyxw||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -598,15 +598,15 @@ class float_4;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,26 +649,26 @@ explicit inline float_4(
 ### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化項目 2 的值。
+要初始化元素2的值。
 
 *_V3*<br/>
-要初始化項目 3 的值。
+要初始化元素3的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-##  <a name="float_4__size"></a> 大小
+## <a name="float_4__size"></a>容量
 
-```
+```cpp
 static const int size = 4;
 ```
 

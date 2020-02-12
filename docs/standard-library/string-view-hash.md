@@ -1,20 +1,20 @@
 ---
-title: 雜湊&lt;string_view&gt;特製化
+title: 雜湊&lt;string_view&gt; 特製化
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346956"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126171"
 ---
-# <a name="hashltstringviewgt-specialization"></a>雜湊&lt;string_view&gt;特製化
+# <a name="hashltstring_viewgt-specialization"></a>雜湊&lt;string_view&gt; 特製化
 
-樣板特製化會產生給定 string_view 的雜湊值。
+範本特製化，會在指定的 string_view 時產生雜湊值。
 
 ```cpp
 template <class CharType, class Traits>
@@ -29,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 ```
 ### <a name="remarks"></a>備註
 
-String_view 的雜湊值等於基礎字串物件的雜湊。
+String_view 的雜湊等於基礎字串物件的雜湊。
 
 ### <a name="example"></a>範例
 

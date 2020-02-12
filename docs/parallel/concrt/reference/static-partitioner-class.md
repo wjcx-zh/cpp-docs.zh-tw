@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - static_partitioner class
 ms.assetid: 2b3dbdf0-6eb9-49f6-8639-03df1d974143
-ms.openlocfilehash: 5120e3c53dc00ba9d5c3a4218efe1dcfb8f92e28
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a58daa27bc7a2f51f78a3068a2f152979ffdd72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337384"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142685"
 ---
-# <a name="staticpartitioner-class"></a>static_partitioner 類別
+# <a name="static_partitioner-class"></a>static_partitioner 類別
 
-`static_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 Partitioner 會將範圍分成許多區塊，其數量與基礎排程器可用的背景工作數量相等。
+`static_partitioner` 類別表示由 `parallel_for` 逐一查看之範圍的靜態分割。 此分割區會將範圍分成多個區塊，因為有背景工作角色可供基礎排程器使用。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class static_partitioner;
 ```
 
@@ -32,7 +32,7 @@ class static_partitioner;
 |名稱|描述|
 |----------|-----------------|
 |[static_partitioner](#ctor)|建構 `static_partitioner` 物件。|
-|[~ static_partitioner 解構函式](#dtor)|終結 `static_partitioner` 物件。|
+|[~ static_partitioner 的析構函式](#dtor)|終結 `static_partitioner` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -40,23 +40,23 @@ class static_partitioner;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppl.h
+**標頭：** ppl。h
 
 **命名空間：** concurrency
 
-##  <a name="dtor"></a> ~static_partitioner
+## <a name="dtor"></a>~ static_partitioner
 
 終結 `static_partitioner` 物件。
 
-```
+```cpp
 ~static_partitioner();
 ```
 
-##  <a name="ctor"></a> static_partitioner
+## <a name="ctor"></a>static_partitioner
 
 建構 `static_partitioner` 物件。
 
-```
+```cpp
 static_partitioner();
 ```
 

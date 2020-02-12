@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
-ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85adf3f919d94a82f5a68a5cd9e5f44cdca10006
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262472"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141233"
 ---
-# <a name="improperschedulerattach-class"></a>improper_scheduler_attach 類別
+# <a name="improper_scheduler_attach-class"></a>improper_scheduler_attach 類別
 
-這個類別描述當 `Scheduler` 物件已經附加到目前的內容上時呼叫 `Attach` 方法擲回的例外狀況。
+這個類別描述當 `Attach` 物件已經附加到目前的內容上時呼叫 `Scheduler` 方法擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class improper_scheduler_attach : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class improper_scheduler_attach : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[improper_scheduler_attach](#ctor)|多載。 建構 `improper_scheduler_attach` 物件。|
+|[improper_scheduler_attach](#ctor)|已多載。 建構 `improper_scheduler_attach` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class improper_scheduler_attach : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_attach
+## <a name="ctor"></a>improper_scheduler_attach
 
 建構 `improper_scheduler_attach` 物件。
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_attach() throw();

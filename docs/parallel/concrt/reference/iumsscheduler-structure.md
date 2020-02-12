@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSScheduler structure
 ms.assetid: 3a500225-4e02-4849-bb56-d744865f5870
-ms.openlocfilehash: f377d6079017266630434ce71602a7e70e58ae21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45df744a9850510006e4bf887c8ed61b000a8e5c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301860"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139986"
 ---
 # <a name="iumsscheduler-structure"></a>IUMSScheduler 結構
 
@@ -21,7 +21,7 @@ ms.locfileid: "62301860"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct IUMSScheduler : public IScheduler;
 ```
 
@@ -31,15 +31,15 @@ struct IUMSScheduler : public IScheduler;
 
 |名稱|描述|
 |----------|-----------------|
-|[IUMSScheduler::SetCompletionList](#setcompletionlist)|指派`IUMSCompletionList`UMS 執行緒排程器的介面。|
+|[IUMSScheduler：： SetCompletionList](#setcompletionlist)|將 `IUMSCompletionList` 介面指派給 UMS 執行緒排程器。|
 
 ## <a name="remarks"></a>備註
 
-如果您要實作自訂的排程器進行通訊與資源管理員 中，而且您想要交付給您的排程器，而不是一般 Win32 執行緒 UMS 執行緒，您應該提供實作`IUMSScheduler`介面。 此外，您應該設定的排程器原則索引鍵的原則值`SchedulerKind`要`UmsThreadDefault`。 如果原則指定 UMS 執行緒`IScheduler`介面做為參數傳遞[iresourcemanager:: Registerscheduler](iresourcemanager-structure.md#registerscheduler)方法必須為`IUMSScheduler`介面。
+如果您要執行與 Resource Manager 通訊的自訂排程器，而且想要將 UMS 執行緒交給您的排程器，而不是一般的 Win32 執行緒，您應該提供 `IUMSScheduler` 介面的執行。 此外，您應該將排程器原則金鑰 `SchedulerKind` 的原則值設定為 `UmsThreadDefault`。 如果原則指定 UMS 執行緒，做為參數傳遞至[IResourceManager：： RegisterScheduler](iresourcemanager-structure.md#registerscheduler)方法的 `IScheduler` 介面必須是 `IUMSScheduler` 介面。
 
-Resource Manager 就能夠交給您只能在 UMS 功能的作業系統上的 UMS 執行緒。 Windows 7 及更新版本的 64 位元作業系統支援 UMS 執行緒。 如果您建立的排程器原則`SchedulerKind`機碼設定為值`UmsThreadDefault`和基礎平台不支援 UMS，值`SchedulerKind`機碼，該原則將會變更為值`ThreadScheduler`。 您應一律傳回這個原則值之前讀取收件者 UMS 執行緒。
+Resource Manager 只能將 UMS 執行緒交給具有 UMS 功能的作業系統。 Windows 7 和更新版本的64位作業系統支援 UMS 執行緒。 如果您建立排程器原則，並將 `SchedulerKind` 金鑰設定為值 `UmsThreadDefault` 且基礎平臺不支援 UMS，則該原則上 `SchedulerKind` 索引鍵的值將會變更為 `ThreadScheduler`的值。 在預期接收 UMS 執行緒之前，您應該一律讀回此原則值。
 
-`IUMSScheduler`介面是雙向的排程器與 Resource Manager 之間的通訊通道的一端。 所代表之另一端`IResourceManager`和`ISchedulerProxy`實作資源管理員的介面。
+`IUMSScheduler` 介面是排程器與 Resource Manager 之間雙向通訊通道的一端。 另一端則是由 Resource Manager 所執行的 `IResourceManager` 和 `ISchedulerProxy` 介面所表示。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -49,26 +49,26 @@ Resource Manager 就能夠交給您只能在 UMS 功能的作業系統上的 UMS
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="setcompletionlist"></a>  Iumsscheduler:: Setcompletionlist 方法
+## <a name="setcompletionlist"></a>IUMSScheduler：： SetCompletionList 方法
 
-指派`IUMSCompletionList`UMS 執行緒排程器的介面。
+將 `IUMSCompletionList` 介面指派給 UMS 執行緒排程器。
 
-```
+```cpp
 virtual void SetCompletionList(_Inout_ IUMSCompletionList* pCompletionList) = 0;
 ```
 
 ### <a name="parameters"></a>參數
 
 *pCompletionList*<br/>
-排程器完成清單介面。 沒有單一的清單，每個排程器。
+排程器的完成清單介面。 每個排程器都有一個清單。
 
 ### <a name="remarks"></a>備註
 
-資源管理員會叫用指定的排程器已要求資源的初始配置之後，它會想 UMS 執行緒排程器上的這個方法。 排程器可以使用`IUMSCompletionList`介面，以判斷當 UMS 執行緒 proxy 已解除封鎖。 它只適用於從指派給 UMS 排程器的虛擬處理器根上執行的執行緒 proxy 存取這個介面。
+在排程器要求初始資源配置之後，Resource Manager 會在排程器上叫用此方法，以指定要使用 UMS 執行緒。 排程器可以使用 `IUMSCompletionList` 介面來判斷 UMS 執行緒 proxy 何時解除封鎖。 只有在指派給 UMS 排程器的虛擬處理器根上執行的執行緒 proxy 存取此介面時，才有效。
 
 ## <a name="see-also"></a>另請參閱
 

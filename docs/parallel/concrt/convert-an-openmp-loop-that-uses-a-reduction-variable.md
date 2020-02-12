@@ -1,28 +1,28 @@
 ---
-title: HOW TO：轉換使用削減變數來使用並行執行階段的 OpenMP 迴圈
+title: 如何：轉換使用削減變數的 OpenMP 迴圈來使用並行執行階段
 ms.date: 11/04/2016
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee0a600f4234c3ebf4681ad92b5e3623be5665c3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413953"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141268"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>HOW TO：轉換使用削減變數來使用並行執行階段的 OpenMP 迴圈
+# <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>如何：轉換使用削減變數的 OpenMP 迴圈來使用並行執行階段
 
-此範例示範如何將轉換 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)使用迴圈[減少](../../parallel/openmp/reference/reduction.md)子句來使用並行執行階段。
+這個範例示範如何轉換使用[縮減](../../parallel/openmp/reference/reduction.md)子句的 OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md)迴圈，以使用並行執行階段。
 
-OpenMP`reduction`子句可讓您指定一或多個執行緒私用變數進行減少作業在平行區域結尾處。 OpenMP 會預先定義一組縮減的運算子。 每個削減變數必須是純量 (例如`int`， `long`，和`float`)。 OpenMP 也會定義削減變數在平行區域中的使用方式的幾項限制。
+OpenMP `reduction` 子句可讓您指定一個或多個執行緒私用變數，而這些變數受限於平列區域結尾的縮減作業。 OpenMP 預先定義一組縮減運算子。 每個縮減變數都必須是純量（例如，`int`、`long`和 `float`）。 OpenMP 也會針對在平列區域中使用縮減變數的方式，定義數個限制。
 
-平行模式程式庫 (PPL) 提供[concurrency:: combinable](../../parallel/concrt/reference/combinable-class.md)類別，可提供可讓您執行細部運算，然後將這些運算合併成最終的可重複使用的執行緒本機儲存體結果。 `combinable`類別是純量和複雜類型所做的範本。 若要使用`combinable`類別，執行子計算的平行建構內，然後呼叫[concurrency::combinable::combine](reference/combinable-class.md#combine)或是[concurrency::combinable::combine_each](reference/combinable-class.md#combine_each)方法，以產生最終的結果。 `combine`並`combine_each`每個方法會採用*結合函式*，指定如何結合每對元素。 因此，`combinable`類別不會套用至一組固定的削減運算子。
+平行模式程式庫（PPL）提供[concurrency：：組合](../../parallel/concrt/reference/combinable-class.md)類別，它提供可重複使用的執行緒區域儲存區，可讓您執行更細緻的計算，然後將這些計算合併成最終結果。 `combinable` 類別是一種同時在純量和複雜類型上作用的範本。 若要使用 `combinable` 類別，請在平行結構的主體中執行子計算，然後呼叫[concurrency：：組合：：結合](reference/combinable-class.md#combine)或[concurrency：：組合：： combine_each](reference/combinable-class.md#combine_each)方法來產生最終結果。 `combine` 和 `combine_each` 方法都會採用*結合*函式，以指定如何結合每一對元素。 因此，`combinable` 類別不限於一組固定的縮減運算子。
 
 ## <a name="example"></a>範例
 
-此範例會使用 OpenMP 與並行執行階段計算前 35 費式數列數字的總和。
+這個範例會使用 OpenMP 和並行執行階段來計算前35個斐的數列數位的總和。
 
 [!code-cpp[concrt-openmp#7](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that-uses-a-reduction-variable_1.cpp)]
 
@@ -35,13 +35,13 @@ Using the Concurrency Runtime...
 The sum of the first 35 Fibonacci numbers is 14930351.
 ```
 
-如需詳細資訊`combinable`類別，請參閱[平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)。
+如需 `combinable` 類別的詳細資訊，請參閱[平行容器和物件](../../parallel/concrt/parallel-containers-and-objects.md)。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`concrt-omp-fibonacci-reduction.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼，並將它貼入 Visual Studio 專案中，或貼入名為 `concrt-omp-fibonacci-reduction.cpp` 的檔案中，然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc /openmp concrt-omp-fibonacci-reduction.cpp**
+> **cl/EHsc/openmp concrt-omp-fibonacci-reduction .cpp**
 
 ## <a name="see-also"></a>另請參閱
 

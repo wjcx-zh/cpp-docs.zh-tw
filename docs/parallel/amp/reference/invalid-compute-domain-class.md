@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_compute_domain class
 ms.assetid: ac7a7166-8bdb-4db1-8caf-ea129ab5117e
-ms.openlocfilehash: 51fcd9e42bc4497131da5adb3dff72efb46537b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b8179e8e92665fa6482bd092504af71aa0106f0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351715"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126457"
 ---
-# <a name="invalidcomputedomain-class"></a>invalid_compute_domain 類別
+# <a name="invalid_compute_domain-class"></a>invalid_compute_domain 類別
 
-執行階段無法使用在指定的計算網域啟動核心時，會擲回的例外狀況[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫站台。
+當執行時間無法使用在[parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)呼叫位置指定的計算網域來啟動核心時，所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class invalid_compute_domain : public runtime_exception;
 ```
 
@@ -31,7 +31,7 @@ class invalid_compute_domain : public runtime_exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[invalid_compute_domain 建構函式](#ctor)|初始化 `invalid_compute_domain` 類別的新執行個體。|
+|[invalid_compute_domain 的構造函式](#ctor)|初始化 `invalid_compute_domain` 類別的新執行個體。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -43,17 +43,17 @@ class invalid_compute_domain : public runtime_exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amprt.h
+**標頭：** amprt。h
 
 **命名空間：** 並行
 
-## <a name="ctor"></a> invalid_compute_domain
+## <a name="ctor"></a>invalid_compute_domain
 
-初始化類別的新執行個體。
+初始化  類別的新執行個體。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 explicit invalid_compute_domain(
     const char * _Message ) throw();
 
@@ -67,7 +67,7 @@ invalid_compute_domain() throw();
 
 ### <a name="return-value"></a>傳回值
 
-執行個體`invalid_compute_domain`類別
+`invalid_compute_domain` 類別的實例
 
 ## <a name="see-also"></a>另請參閱
 

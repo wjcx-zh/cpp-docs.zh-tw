@@ -33,87 +33,87 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 590cb7d619895a04dfc511b6b77dad4074dc3f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92bd73fda5891b0bbf7393d1a7fda573d0f00263
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362656"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142509"
 ---
 # <a name="openmp-clauses"></a>OpenMP 子句
 
-提供給子句在 OpenMP API 中使用的連結。
+提供 OpenMP API 中使用之子句的連結。
 
-視覺化C++支援下列 OpenMP 子句。
+Visual C++支援下列 OpenMP 子句。
 
 一般屬性：
 
 |子句|描述|
 |------|-----------|
-|[if](#if-openmp)|指定以平行方式或以序列時，是否執行迴圈。|
-|[num_threads](#num-threads)|在執行緒小組設定執行緒的數目。|
-|[ordered](#ordered-openmp-clauses)|需要平行[for](openmp-directives.md#for-openmp)陳述式如果[排序](openmp-directives.md#ordered-openmp-directives)指示詞是在迴圈中使用。|
-|[schedule](#schedule)|適用於[針對](openmp-directives.md#for-openmp)指示詞。|
-|[nowait](#nowait)|覆寫隱含指示詞中的屏障。|
+|[if](#if-openmp)|指定是否應以平行或序列方式執行迴圈。|
+|[num_threads](#num-threads)|設定執行緒小組中的執行緒數目。|
+|[序](#ordered-openmp-clauses)|如果要在迴圈中使用已[排序](openmp-directives.md#ordered-openmp-directives)的指示詞，則[在平行處理語句上為必要](openmp-directives.md#for-openmp)項。|
+|[schedule](#schedule)|適用于[for](openmp-directives.md#for-openmp)指示詞。|
+|[nowait](#nowait)|覆寫指示詞中隱含的屏障。|
 
-資料共用屬性：
+對於資料共用屬性：
 
 |子句|描述|
 |------|-----------|
-|[private](#private-openmp)|指定每個執行緒都應該有自己的執行個體的變數。|
-|[firstprivate](#firstprivate)|指定每個執行緒都應該有自己的執行個體的變數，並以變數的值，應該先初始化變數，因為它存在於之前平行建構。|
-|[lastprivate](#lastprivate)|指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。|
-|[shared](#shared-openmp)|指定一或多個變數，應該在所有執行緒之間共用。|
-|[default](#default-openmp)|指定在平行區域不限範圍變數的行為。|
-|[reduction](#reduction)|指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。|
-|[copyin](#copyin)|可讓執行緒存取主執行緒的值，如[threadprivate](openmp-directives.md#threadprivate)變數。|
-|[copyprivate](#copyprivate)|指定一或多個變數，應該在所有執行緒之間共用。|
+|[private](#private-openmp)|指定每個執行緒都應該有自己的變數實例。|
+|[firstprivate](#firstprivate)|指定每個執行緒都應該有自己的變數實例，而且應該使用變數的值來初始化該變數，因為它存在於平行結構前面。|
+|[lastprivate](#lastprivate)|指定將封閉內容的變數版本設定為等於任何執行緒執行最後反復專案（for 迴圈結構）或最後一節（#pragma 區段）的私用版本。|
+|[共用](#shared-openmp)|指定應該在所有線程之間共用一個或多個變數。|
+|[default](#default-openmp)|指定平列區域中不限範圍變數的行為。|
+|[reduction](#reduction)|指定每個執行緒私用的一個或多個變數，是在平列區域結尾的縮減作業主體。|
+|[copyin](#copyin)|允許執行緒存取主要執行緒的值，以取得[threadprivate](openmp-directives.md#threadprivate)變數。|
+|[copyprivate](#copyprivate)|指定應該在所有線程之間共用一個或多個變數。|
 
 ## <a name="copyin"></a>copyin
 
-可讓執行緒存取主執行緒的值，如[threadprivate](openmp-directives.md#threadprivate)變數。
+允許執行緒存取主要執行緒的值，以取得[threadprivate](openmp-directives.md#threadprivate)變數。
 
-```
+```cpp
 copyin(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-`threadprivate`存在於平行建構之前將在主執行緒中，變數的值初始化的變數。
+將使用主要執行緒中的變數值來初始化的 `threadprivate` 變數，如同在平行結構之前存在。
 
 ### <a name="remarks"></a>備註
 
-`copyin` 適用於下列指示詞：
+`copyin` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。
+如需詳細資訊，請參閱[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[threadprivate](openmp-directives.md#threadprivate)如需使用的範例`copyin`。
+如需使用 `copyin`的範例，請參閱[threadprivate](openmp-directives.md#threadprivate) 。
 
 ## <a name="copyprivate"></a>copyprivate
 
-指定一或多個變數，應該在所有執行緒之間共用。
+指定應該在所有線程之間共用一個或多個變數。
 
-```
+```cpp
 copyprivate(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。
+要共用的一或多個變數。 如果指定了一個以上的變數，請以逗號分隔變數名稱。
 
 ### <a name="remarks"></a>備註
 
-`copyprivate` 適用於[單一](openmp-directives.md#single)指示詞。
+`copyprivate` 適用于[單一](openmp-directives.md#single)指示詞。
 
-如需詳細資訊，請參閱 < [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。
+如需詳細資訊，請參閱[2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)。
 
 ### <a name="example"></a>範例
 
@@ -181,80 +181,80 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default-openmp"></a>default
+## <a name="default-openmp"></a>預設
 
-指定在平行區域不限範圍變數的行為。
+指定平列區域中不限範圍變數的行為。
 
-```
+```cpp
 default(shared | none)
 ```
 
 ### <a name="remarks"></a>備註
 
-`shared`這實際上是如果`default`子句中未指定，表示它與所指定，會視為在平行區域中的任何變數[共用](#shared-openmp)子句。 `none` 表示不使用範圍的平行區域中使用的任何變數[私人](#private-openmp)，[共用](#shared-openmp)，[減少](#reduction)， [firstprivate](#firstprivate)，或是[lastprivate](#lastprivate)子句會造成編譯器錯誤。
+`shared`，如果未指定 `default` 子句，這就表示平列區域中的任何變數都會被視為使用[shared](#shared-openmp)子句來指定。 `none` 表示在平列區域中使用的任何變數若不是[私](#private-openmp)用、[共用](#shared-openmp)、[減少](#reduction)、 [firstprivate](#firstprivate)或[lastprivate](#lastprivate)子句的範圍，都會導致編譯器錯誤。
 
-`default` 適用於下列指示詞：
+`default` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.7.2.5 預設](../../../parallel/openmp/2-7-2-5-default.md)。
+如需詳細資訊，請參閱[2.7.2.5 default](../../../parallel/openmp/2-7-2-5-default.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[私人](#private-openmp)如需使用的範例`default`。
+如需使用 `default`的範例，請參閱[私](#private-openmp)用。
 
 ## <a name="firstprivate"></a>firstprivate
 
-指定每個執行緒都應該有自己的執行個體的變數，並以變數的值，應該先初始化變數，因為它存在於之前平行建構。
+指定每個執行緒都應該有自己的變數實例，而且應該使用變數的值來初始化該變數，因為它存在於平行結構前面。
 
-```
+```cpp
 firstprivate(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-將變數的值，初始化該變數具有每個執行緒中的執行個體，因為它存在於平行建構之前。 如果指定多個變數，請以逗號分隔變數名稱。
+變數具有每個執行緒中的實例，而且會以變數的值初始化，因為它存在於平行結構前面。 如果指定了一個以上的變數，請以逗號分隔變數名稱。
 
 ### <a name="remarks"></a>備註
 
-`firstprivate` 適用於下列指示詞：
+`firstprivate` 適用于下列指示詞：
 
 - [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-如需詳細資訊，請參閱 < [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)。
+如需詳細資訊，請參閱[2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)。
 
 ### <a name="example"></a>範例
 
-如需使用的範例`firstprivate`，請參閱中的範例[私人](#private-openmp)。
+如需使用 `firstprivate`的範例，請參閱[私](#private-openmp)用中的範例。
 
-## <a name="if-openmp"></a>if (OpenMP)
+## <a name="if-openmp"></a>if （OpenMP）
 
-指定以平行方式或以序列時，是否執行迴圈。
+指定是否應以平行或序列方式執行迴圈。
 
-```
+```cpp
 if(expression)
 ```
 
 ### <a name="parameters"></a>參數
 
 *expression*<br/>
-整數運算式，如果評估為 true （非零），造成程式碼在平行區域，以平行方式執行。 如果運算式評估為 false （零），就會在序列中平行區域執行 （由單一執行緒）。
+整數運算式，如果評估為 true （非零），則會導致平列區域中的程式碼以平行方式執行。 如果運算式評估為 false （零），則平列區域會在序列中執行（由單一執行緒）。
 
 ### <a name="remarks"></a>備註
 
-`if` 適用於下列指示詞：
+`if` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.3 parallel 建構](../../../parallel/openmp/2-3-parallel-construct.md)。
+如需詳細資訊，請參閱[2.3 平行結構](../../../parallel/openmp/2-3-parallel-construct.md)。
 
 ### <a name="example"></a>範例
 
@@ -294,47 +294,47 @@ val = 2, parallelized with 2 threads
 
 ## <a name="lastprivate"></a>lastprivate
 
-指定封入內容變數的版本，設定等於私用版本的任何執行緒執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。
+指定將封閉內容的變數版本設定為等於任何執行緒執行最後反復專案（for 迴圈結構）或最後一節（#pragma 區段）的私用版本。
 
-```
+```cpp
 lastprivate(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-此變數會設為等於執行緒私用版本執行的最後一個反覆項目 （for 迴圈建構） 或最後一節 （#pragma 區段）。
+設定為等於任何執行緒之私用版本的變數，會執行最後的反復專案（for 迴圈結構）或最後一節（#pragma 區段）。
 
 ### <a name="remarks"></a>備註
 
-`lastprivate` 適用於下列指示詞：
+`lastprivate` 適用于下列指示詞：
 
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。
+如需詳細資訊，請參閱[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[排程](#schedule)如需使用的範例`lastprivate`子句。
+如需使用 `lastprivate` 子句的範例，請參閱[排程](#schedule)。
 
 ## <a name="nowait"></a>nowait
 
-覆寫隱含指示詞中的屏障。
+覆寫指示詞中隱含的屏障。
 
-```
+```cpp
 nowait
 ```
 
 ### <a name="remarks"></a>備註
 
-`nowait` 適用於下列指示詞：
+`nowait` 適用于下列指示詞：
 
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)， [2.4.2 sections 建構](../../../parallel/openmp/2-4-2-sections-construct.md)，並[2.4.3 單一建構](../../../parallel/openmp/2-4-3-single-construct.md)。
+如需詳細資訊，請參閱[2.4.1 for 結構](../../../parallel/openmp/2-4-1-for-construct.md)、 [2.4.2 區段結構](../../../parallel/openmp/2-4-2-sections-construct.md)和[2.4.3 單一結構](../../../parallel/openmp/2-4-3-single-construct.md)。
 
 ### <a name="example"></a>範例
 
@@ -385,74 +385,74 @@ int main( )
 
 ## <a name="num-threads"></a>num_threads
 
-在執行緒小組設定執行緒的數目。
+設定執行緒小組中的執行緒數目。
 
-```
+```cpp
 num_threads(num)
 ```
 
 ### <a name="parameters"></a>參數
 
 *num*<br/>
-執行緒數目
+執行緒的數目
 
 ### <a name="remarks"></a>備註
 
-`num_threads`子句具有與相同的功能[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函式。
+`num_threads` 子句具有與[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)函數相同的功能。
 
-`num_threads` 適用於下列指示詞：
+`num_threads` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.3 parallel 建構](../../../parallel/openmp/2-3-parallel-construct.md)。
+如需詳細資訊，請參閱[2.3 平行結構](../../../parallel/openmp/2-3-parallel-construct.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[平行](openmp-directives.md#parallel)如需使用的範例`num_threads`子句。
+如需使用 `num_threads` 子句的範例，請參閱[parallel](openmp-directives.md#parallel) 。
 
-## <a name="ordered-openmp-clauses"></a>ordered
+## <a name="ordered-openmp-clauses"></a>序
 
-需要平行[for](openmp-directives.md#for-openmp)陳述式如果[排序](openmp-directives.md#ordered-openmp-directives)指示詞是在迴圈中使用。
+如果要在迴圈中使用已[排序](openmp-directives.md#ordered-openmp-directives)的指示詞，則[在平行處理語句上為必要](openmp-directives.md#for-openmp)項。
 
-```
+```cpp
 ordered
 ```
 
 ### <a name="remarks"></a>備註
 
-`ordered` 適用於[針對](openmp-directives.md#for-openmp)指示詞。
+`ordered` 適用于[for](openmp-directives.md#for-openmp)指示詞。
 
-如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。
+如需詳細資訊，請參閱[2.4.1 for 結構](../../../parallel/openmp/2-4-1-for-construct.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[排序](openmp-directives.md#ordered-openmp-directives)如需使用的範例`ordered`子句。
+如需使用 `ordered` 子句的範例，請參閱已[排序](openmp-directives.md#ordered-openmp-directives)。
 
-## <a name="private-openmp"></a>private
+## <a name="private-openmp"></a>私人
 
-指定每個執行緒都應該有自己的執行個體的變數。
+指定每個執行緒都應該有自己的變數實例。
 
-```
+```cpp
 private(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-要在每個執行緒的執行個體的變數。
+要在每個執行緒中有實例的變數。
 
 ### <a name="remarks"></a>備註
 
-`private` 適用於下列指示詞：
+`private` 適用于下列指示詞：
 
 - [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-如需詳細資訊，請參閱 < [2.7.2.1 私人](../../../parallel/openmp/2-7-2-1-private.md)。
+如需詳細資訊，請參閱[2.7.2.1 private](../../../parallel/openmp/2-7-2-1-private.md)。
 
 ### <a name="example"></a>範例
 
@@ -632,31 +632,31 @@ nFirstPrivate = 4 (The value prior to entering parallel region)
        nShared = 1 (The value assigned, from the delayed thread, 1)
 ```
 
-## <a name="reduction"></a>減少
+## <a name="reduction"></a>減小
 
-指定一或多個變數為私用的每個執行緒減少作業在平行區域結尾處的主旨。
+指定每個執行緒私用的一個或多個變數，是在平列區域結尾的縮減作業主體。
 
-```
+```cpp
 reduction(operation:var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *operation*<br/>
-在變數上執行作業的運算子*var*平行區域的結尾。
+作業的運算子，可在平列區域結尾的變數*var*上執行。
 
 *var*<br/>
-要執行純量減少一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。
+要在其上執行純量縮減的一或多個變數。 如果指定了一個以上的變數，請以逗號分隔變數名稱。
 
 ### <a name="remarks"></a>備註
 
-`reduction` 適用於下列指示詞：
+`reduction` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.7.2.6 減少](../../../parallel/openmp/2-7-2-6-reduction.md)。
+如需詳細資訊，請參閱[2.7.2.6 縮減](../../../parallel/openmp/2-7-2-6-reduction.md)。
 
 ### <a name="example"></a>範例
 
@@ -771,25 +771,25 @@ The sum of the consecutive integers from 1 to 10, is 55
 All of the functions, func1 through func5 succeeded!
 ```
 
-## <a name="schedule"></a>排程
+## <a name="schedule"></a>任務
 
-適用於[針對](openmp-directives.md#for-openmp)指示詞。
+適用于[for](openmp-directives.md#for-openmp)指示詞。
 
-```
+```cpp
 schedule(type[,size])
 ```
 
 ### <a name="parameters"></a>參數
 
 *type*<br/>
-此種類的排程，請`dynamic`， `guided`， `runtime`，或`static`。
+排程的類型，`dynamic`、`guided`、`runtime`或 `static`。
 
 *size*<br/>
-（選擇性）指定反覆項目的大小。 *大小*必須是整數。 不是有效的 when*型別*是`runtime`。
+選擇性指定反覆運算的大小。 *大小*必須是整數。 當*類型*為 `runtime`時無效。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 < [2.4.1 for 建構](../../../parallel/openmp/2-4-1-for-construct.md)。
+如需詳細資訊，請參閱[2.4.1 for 結構](../../../parallel/openmp/2-4-1-for-construct.md)。
 
 ### <a name="example"></a>範例
 
@@ -907,29 +907,29 @@ int main( )
 
 ## <a name="shared-openmp"></a>共用
 
-指定一或多個變數，應該在所有執行緒之間共用。
+指定應該在所有線程之間共用一個或多個變數。
 
-```
+```cpp
 shared(var)
 ```
 
 ### <a name="parameters"></a>參數
 
 *var*<br/>
-若要共用的一或多個變數。 如果指定多個變數，請以逗號分隔變數名稱。
+要共用的一或多個變數。 如果指定了一個以上的變數，請以逗號分隔變數名稱。
 
 ### <a name="remarks"></a>備註
 
-共用變數，在執行緒之間的另一個方法是使用[copyprivate](#copyprivate)子句。
+線上程之間共用變數的另一種方式是使用[copyprivate](#copyprivate)子句。
 
-`shared` 適用於下列指示詞：
+`shared` 適用于下列指示詞：
 
 - [parallel](openmp-directives.md#parallel)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-如需詳細資訊，請參閱 < [2.7.2.4 共用](../../../parallel/openmp/2-7-2-4-shared.md)。
+如需詳細資訊，請參閱[2.7.2.4 shared](../../../parallel/openmp/2-7-2-4-shared.md)。
 
 ### <a name="example"></a>範例
 
-請參閱[私人](#private-openmp)如需使用的範例`shared`。
+如需使用 `shared`的範例，請參閱[私](#private-openmp)用。

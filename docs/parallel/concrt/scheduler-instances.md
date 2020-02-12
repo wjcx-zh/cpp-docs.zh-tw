@@ -4,123 +4,123 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e9b8124254084ac30191d37d49f2ef72bd677e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180163"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142299"
 ---
 # <a name="scheduler-instances"></a>排程器執行個體
 
-本文件說明並行執行階段，以及如何使用排程器執行個體的角色[concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)並[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立和管理排程器執行個體。 當您想要建立明確排程原則的關聯與特定類型的工作負載，排程器執行個體很有用。 例如，您可以建立一個排程器執行個體，在高權限的執行緒優先順序上執行一些工作，並使用預設排程器在正常的執行緒優先順序上執行其他工作。
+本檔描述並行執行階段中排程器實例的角色，以及如何使用[concurrency：：](../../parallel/concrt/reference/scheduler-class.md)排程器和[Concurrency：： CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來建立和管理排程器實例。 當您想要將明確排程原則與特定類型的工作負載產生關聯時，排程器實例會很有用。 例如，您可以建立一個排程器執行個體，在高權限的執行緒優先順序上執行一些工作，並使用預設排程器在正常的執行緒優先順序上執行其他工作。
 
 > [!TIP]
->  並行執行階段會提供預設排程器，因此您不需要在應用程式中建立排程器。 由於工作排程器可協助您微調應用程式的效能，建議您先使用[平行模式程式庫 (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)或[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)如果您是新並行執行階段。
+> 並行執行階段會提供預設排程器，因此您不需要在應用程式中建立排程器。 由於工作排程器可協助您微調應用程式的效能，因此如果您不熟悉並行執行階段，建議您從[平行模式程式庫（PPL）](../../parallel/concrt/parallel-patterns-library-ppl.md)或[非同步代理](../../parallel/concrt/asynchronous-agents-library.md)程式程式庫開始。
 
-##  <a name="top"></a> 章節
+## <a name="top"></a> 章節
 
 - [排程器和 CurrentScheduler 類別](#classes)
 
-- [建立排程器執行個體](#creating)
+- [建立排程器實例](#creating)
 
-- [管理排程器執行個體的存留期](#managing)
+- [管理排程器實例的存留期](#managing)
 
 - [方法和功能](#features)
 
 - [範例](#example)
 
-##  <a name="classes"></a> 排程器和 CurrentScheduler 類別
+## <a name="classes"></a>排程器和 CurrentScheduler 類別
 
-工作排程器可讓應用程式使用一或多個*排程器執行個體*排程工作。 [Concurrency:: scheduler](../../parallel/concrt/reference/scheduler-class.md)類別代表排程器執行個體，並包含與排程工作的功能。
+工作排程器可讓應用程式使用一或多個排程器*實例*來排定工作。 [Concurrency：：](../../parallel/concrt/reference/scheduler-class.md)排程器類別代表排程器實例，並且會封裝與排程工作相關的功能。
 
-附加至排程器的執行緒就所謂*執行內容*，或簡稱*內容*。 一個排程器可以在目前內容上作用，在任何時間。 作用中的排程器就是所謂*目前的排程器*。 並行執行階段會使用[concurrency:: currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別提供存取目前排程器。 一個內容的目前排程器可能不同於另一個內容的目前排程器。 執行階段不提供目前排程器的處理序層級表示法。
+附加至排程器的執行緒稱為*執行內容*，或只是*內容*。 一個排程器可以隨時在目前的內容上作用。 作用中排程器也稱為*目前*的排程器。 並行執行階段使用[Concurrency：： CurrentScheduler](../../parallel/concrt/reference/currentscheduler-class.md)類別來提供目前排程器的存取權。 一個內容的目前排程器可能與另一個內容的目前排程器不同。 執行時間不會提供目前排程器的進程層級表示。
 
-一般而言，`CurrentScheduler`類別用來存取目前的排程器。 `Scheduler`類別就很有用，當您需要管理不是目前的排程器。
+一般來說，`CurrentScheduler` 類別是用來存取目前的排程器。 當您需要管理的排程器不是目前的排程器時，`Scheduler` 類別會很有用。
 
-下列各節說明如何建立和管理排程器執行個體。 如需說明這些工作的完整範例，請參閱[How to:管理排程器執行個體](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
-
-[[靠上](#top)]
-
-##  <a name="creating"></a> 建立排程器執行個體
-
-若要建立下列三種方式`Scheduler`物件：
-
-- 有沒有排程器時，執行階段會建立預設排程器，當您使用執行階段功能，例如平行演算法，來執行工作。 預設排程器會變成目前的排程器起始的平行工作的內容。
-
-- [Concurrency::CurrentScheduler::Create](reference/currentscheduler-class.md#create)方法會建立`Scheduler`使用特定原則，並將該排程器與目前內容相關聯的物件。
-
-- [Scheduler](reference/scheduler-class.md#create)方法會建立`Scheduler`使用特定原則，但不會將它與目前內容中關聯的物件。
-
-讓執行階段建立預設排程器可讓所有的並行工作共用相同的排程器。 一般而言，所提供的功能[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL) 或[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)用來執行平行工作。 因此，您不必直接使用排程器，控制其原則或有存留期。 當您使用 PPL] 或 [代理程式庫時，如果它不存在，並且能夠針對每個內容的目前排程器執行階段會建立預設排程器。 當您建立排程器，並將它設為目前的排程器時，執行階段會使用該排程器來排定的工作。 只有當您需要特定的排程原則，請建立額外的排程器執行個體。 如需有關排程器相關聯的原則的詳細資訊，請參閱[排程器原則](../../parallel/concrt/scheduler-policies.md)。
+下列各節說明如何建立和管理排程器實例。 如需說明這些工作的完整範例，請參閱[如何：管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)排程器實例。
 
 [[靠上](#top)]
 
-##  <a name="managing"></a> 管理排程器執行個體的存留期
+## <a name="creating"></a>建立排程器實例
 
-執行階段會使用參考計數機制來控制的存留期`Scheduler`物件。
+建立 `Scheduler` 物件的方法有三種：
 
-當您使用`CurrentScheduler::Create`方法或`Scheduler::Create`方法，以建立`Scheduler`物件，執行階段會將該排程器的初始參考計數設定為其中一個。 當您呼叫時，執行階段會遞增參考計數[concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)方法。 `Scheduler::Attach`方法將`Scheduler`物件與目前的內容。 這使得目前排程器。 當您呼叫`CurrentScheduler::Create`方法中，執行階段同時建立`Scheduler`物件，並將它附加至目前的內容 （和參考計數設定為其中一個）。 您也可以使用[concurrency::Scheduler::Reference](reference/scheduler-class.md#reference)方法，以遞增參考次數的`Scheduler`物件。
+- 如果沒有排程器存在，當您使用執行時間功能（例如平行演算法）來執行工作時，執行時間會為您建立預設排程器。 預設排程器會成為起始平行工作之內容的目前排程器。
 
-執行階段會遞減參考計數當您呼叫[concurrency::CurrentScheduler::Detach](reference/currentscheduler-class.md#detach)方法來卸離目前的排程器，或呼叫[concurrency::Scheduler::Release](reference/scheduler-class.md#release)方法。 當參考計數到達零時，執行階段會終結`Scheduler`物件在所有排定的工作完成。 要遞增參考次數的目前排程器允許正在執行的工作。 因此，如果參考計數到達零且工作遞增參考計數，執行階段不會終結`Scheduler`物件的參考計數再次達到零，並在所有工作都完成之前。
+- [Concurrency：： CurrentScheduler：： Create](reference/currentscheduler-class.md#create)方法會建立一個使用特定原則的 `Scheduler` 物件，並將該排程器與目前的內容產生關聯。
 
-執行階段會維護的內部堆疊`Scheduler`針對每個內容的物件。 當您呼叫`Scheduler::Attach`或是`CurrentScheduler::Create`方法，執行階段推送`Scheduler`物件至目前的內容堆疊。 這使得目前排程器。 當您呼叫`CurrentScheduler::Detach`，執行階段會取出目前的排程器，從目前的內容堆疊，並設定做為目前的排程器上的一個。
+- [Concurrency：：排程器：： Create](reference/scheduler-class.md#create)方法會建立一個使用特定原則的 `Scheduler` 物件，但不會將它與目前的內容產生關聯。
 
-執行階段會提供數種方式可以管理排程器執行個體的存留期。 下表顯示適當的方法，會釋放，或卸離的排程器，從目前的內容，每個方法建立，或將排程器附加至目前的內容。
+允許執行時間建立預設排程器，可讓所有並行工作共用相同的排程器。 通常，[平行模式程式庫](../../parallel/concrt/parallel-patterns-library-ppl.md)（PPL）或[非同步代理](../../parallel/concrt/asynchronous-agents-library.md)程式程式庫所提供的功能會用來執行平行工作。 因此，您不需要直接使用排程器來控制其原則或存留期。 當您使用 PPL 或代理程式程式庫時，執行時間會建立預設排程器（如果它不存在），並使它成為每個內容的目前排程器。 當您建立排程器並將它設定為目前的排程器時，執行時間會使用該排程器來排定工作。 只有當您需要特定的排程原則時，才建立額外的排程器實例。 如需與排程器相關聯之原則的詳細資訊，請參閱排程器[原則](../../parallel/concrt/scheduler-policies.md)。
 
-|建立或附加方法|釋出或 detach 方法|
+[[靠上](#top)]
+
+## <a name="managing"></a>管理排程器實例的存留期
+
+執行時間會使用參考計數機制來控制 `Scheduler` 物件的存留期。
+
+當您使用 `CurrentScheduler::Create` 方法或 `Scheduler::Create` 方法來建立 `Scheduler` 物件時，執行時間會將該排程器的初始參考計數設定為一個。 當您呼叫[concurrency：：排程器：： Attach](reference/scheduler-class.md#attach)方法時，執行時間會遞增參考計數。 `Scheduler::Attach` 方法會將 `Scheduler` 物件與目前的內容產生關聯。 這會使其成為目前的排程器。 當您呼叫 `CurrentScheduler::Create` 方法時，執行時間會建立 `Scheduler` 物件，並將它附加至目前的內容（並將參考計數設定為一）。 您也可以使用[concurrency：：排程器：： Reference](reference/scheduler-class.md#reference)方法來遞增 `Scheduler` 物件的參考計數。
+
+當您呼叫[concurrency：： CurrentScheduler：:D etach](reference/currentscheduler-class.md#detach)方法來卸離目前的排程器，或呼叫[concurrency：：排程器：： Release](reference/scheduler-class.md#release)方法時，執行時間會遞減參考計數。 當參考計數到達零時，執行時間會在所有排定的工作完成之後，終結 `Scheduler` 物件。 允許執行中的工作遞增目前排程器的參考計數。 因此，如果參考計數到達零，而工作遞增了參考計數，執行時間就不會損毀 `Scheduler` 物件，直到參考計數再次到達零，而且所有工作都完成為止。
+
+執行時間會為每個內容維護 `Scheduler` 物件的內部堆疊。 當您呼叫 `Scheduler::Attach` 或 `CurrentScheduler::Create` 方法時，執行時間會將該 `Scheduler` 物件推送至目前內容的堆疊上。 這會使其成為目前的排程器。 當您呼叫 `CurrentScheduler::Detach`時，執行時間會從目前的內容堆疊中快顯目前的排程器，並將上一個排程器設為目前的排程器。
+
+執行時間會提供數種方式來管理排程器實例的存留期。 下表顯示適當的方法，它會針對建立或附加排程器至目前內容的每個方法，從目前內容釋放或卸離排程器。
+
+|Create 或 attach 方法|Release 或 detach 方法|
 |-----------------------------|------------------------------|
 |`CurrentScheduler::Create`|`CurrentScheduler::Detach`|
 |`Scheduler::Create`|`Scheduler::Release`|
 |`Scheduler::Attach`|`CurrentScheduler::Detach`|
 |`Scheduler::Reference`|`Scheduler::Release`|
 
-呼叫不適當版本，或中斷連結方法在執行階段會產生未指定的行為。
+呼叫不適當的釋放或卸離方法會在執行時間中產生未指定的行為。
 
-當您使用的功能，比方說，PPL，造成執行階段建立您的預設排程器，請勿釋放或中斷連結這個排程器。 執行階段管理，它會建立任何排程器的存留期。
+當您使用可讓執行時間為您建立預設排程器的功能（例如 PPL）時，請勿釋放或卸離此排程器。 執行時間會管理它所建立之任何排程器的存留期。
 
-因為執行階段不會終結`Scheduler`物件的所有工作都完成之前，您可以使用[concurrency::Scheduler::RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)方法或[concurrency:: currentscheduler::RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)方法收到通知時`Scheduler`物件被終結。 您必須等待所排程的每項工作時，這是很有用`Scheduler`完成的物件。
-
-[[靠上](#top)]
-
-##  <a name="features"></a> 方法和功能
-
-本節將摘要說明的重要方法`CurrentScheduler`和`Scheduler`類別。
-
-把`CurrentScheduler`與目前內容上建立的排程器使用的 helper 類別。 `Scheduler`類別可讓您控制的排程器屬於另一個內容。
-
-下表顯示所定義的重要方法`CurrentScheduler`類別。
-
-|方法|描述|
-|------------|-----------------|
-|[建立](reference/currentscheduler-class.md#create)|建立`Scheduler`會使用指定的原則，並將它與目前內容相關聯的物件。|
-|[Get](reference/currentscheduler-class.md#get)|擷取的指標`Scheduler`與目前內容相關聯的物件。 這個方法不會遞增參考計數的`Scheduler`物件。|
-|[Detach](reference/currentscheduler-class.md#detach)|卸離目前的排程器，從目前的內容，並設定為目前的排程器上的一個。|
-|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|註冊執行階段設定時終結目前排程器的事件。|
-|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|會建立[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)目前排程器中的物件。|
-|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|將目前的排程器排程佇列中的輕量型工作。|
-|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|擷取一份目前的排程器相關聯的原則。|
-
-下表顯示所定義的重要方法`Scheduler`類別。
-
-|方法|描述|
-|------------|-----------------|
-|[建立](reference/scheduler-class.md#create)|建立`Scheduler`物件，使用指定的原則。|
-|[Attach](reference/scheduler-class.md#attach)|將`Scheduler`物件與目前的內容。|
-|[參考資料](reference/scheduler-class.md#reference)|遞增參考計數器的`Scheduler`物件。|
-|[發行](reference/scheduler-class.md#release)|遞減的參考計數器`Scheduler`物件。|
-|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|註冊執行階段設定時的事件`Scheduler`物件被終結。|
-|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|會建立[concurrency:: schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)物件中`Scheduler`物件。|
-|[ScheduleTask](reference/scheduler-class.md#scheduletask)|排程輕量型工作`Scheduler`物件。|
-|[GetPolicy](reference/scheduler-class.md#getpolicy)|擷取一份相關聯的原則`Scheduler`物件。|
-|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|設定執行階段，它會建立預設排程器時所要使用的原則。|
-|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|還原預設原則的作用中 」 的呼叫之前`SetDefaultSchedulerPolicy`。 如果預設排程器建立在這個呼叫之後，執行階段會使用預設原則設定來建立排程器。|
+因為執行時間不會在所有工作完成之前損毀 `Scheduler` 物件，所以您可以使用[concurrency：：排程器：： RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)方法或[Concurrency：： CurrentScheduler：： RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)方法，在終結 `Scheduler` 物件時接收通知。 當您必須等候 `Scheduler` 物件所排程的每項工作完成時，這會很有用。
 
 [[靠上](#top)]
 
-##  <a name="example"></a> 範例
+## <a name="features"></a>方法和功能
 
-如需如何建立及管理排程器執行個體的基本範例，請參閱[How to:管理排程器執行個體](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)。
+本節將摘要說明 `CurrentScheduler` 和 `Scheduler` 類別的重要方法。
+
+請將 `CurrentScheduler` 類別視為協助程式，用來建立要在目前內容上使用的排程器。 `Scheduler` 類別可讓您控制屬於另一個內容的排程器。
+
+下表顯示由 `CurrentScheduler` 類別所定義的重要方法。
+
+|方法|描述|
+|------------|-----------------|
+|[建立](reference/currentscheduler-class.md#create)|建立使用指定之原則的 `Scheduler` 物件，並將它與目前的內容產生關聯。|
+|[Get](reference/currentscheduler-class.md#get)|抓取與目前內容相關聯之 `Scheduler` 物件的指標。 這個方法不會遞增 `Scheduler` 物件的參考計數。|
+|[Detach](reference/currentscheduler-class.md#detach)|從目前的內容卸離目前的排程器，並將上一個排程器設定為目前的排程器。|
+|[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|註冊當目前的排程器終結時，執行時間所設定的事件。|
+|[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|在目前的排程器中建立[concurrency：： ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)物件。|
+|[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|將輕量工作加入目前排程器的排程佇列中。|
+|[GetPolicy](reference/currentscheduler-class.md#getpolicy)|抓取與目前排程器相關聯的原則複本。|
+
+下表顯示由 `Scheduler` 類別所定義的重要方法。
+
+|方法|描述|
+|------------|-----------------|
+|[建立](reference/scheduler-class.md#create)|建立使用指定之原則的 `Scheduler` 物件。|
+|[附加](reference/scheduler-class.md#attach)|將 `Scheduler` 物件與目前的內容產生關聯。|
+|[參考](reference/scheduler-class.md#reference)|遞增 `Scheduler` 物件的參考計數器。|
+|[發行](reference/scheduler-class.md#release)|遞減 `Scheduler` 物件的參考計數器。|
+|[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|註冊當 `Scheduler` 物件終結時，執行時間所設定的事件。|
+|[CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)|在 `Scheduler` 物件中建立[concurrency：： ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md)物件。|
+|[ScheduleTask](reference/scheduler-class.md#scheduletask)|從 `Scheduler` 物件排定輕量工作。|
+|[GetPolicy](reference/scheduler-class.md#getpolicy)|抓取與 `Scheduler` 物件相關聯的原則複本。|
+|[SetDefaultSchedulerPolicy](reference/scheduler-class.md#setdefaultschedulerpolicy)|設定執行時間在建立預設排程器時要使用的原則。|
+|[ResetDefaultSchedulerPolicy](reference/scheduler-class.md#resetdefaultschedulerpolicy)|將預設原則還原為 `SetDefaultSchedulerPolicy`的呼叫之前的作用中。 如果在此呼叫之後建立預設排程器，則執行時間會使用預設原則設定來建立排程器。|
+
+[[靠上](#top)]
+
+## <a name="example"></a> 範例
+
+如需如何建立和管理排程器實例的基本範例，請參閱[如何：管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)排程器實例。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-ms.openlocfilehash: 3c5aefbfd1a4b06274fac0f56c1e1e45ef9dc5bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 000bda3a6ecc5b1ebf9be4e07ce8d703b6cd9194
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180254"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126639"
 ---
-# <a name="int2-class"></a>int_2 類別
+# <a name="int_2-class"></a>int_2 類別
 
 表示兩個整數的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class int_2;
 ```
 
@@ -57,63 +57,63 @@ class int_2;
 
 |名稱|描述|
 |----------|-----------------|
-|[int_2 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[int_2 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|int_2::get_x||
-|int_2::get_xy||
-|int_2::get_y||
-|int_2::get_yx||
-|int_2::ref_g||
-|int_2::ref_r||
-|int_2::ref_x||
-|int_2::ref_y||
-|int_2::set_x||
-|int_2::set_xy||
-|int_2::set_y||
-|int_2::set_yx||
+|int_2：： get_x||
+|int_2：： get_xy||
+|int_2：： get_y||
+|int_2：： get_yx||
+|int_2：： ref_g||
+|int_2：： ref_r||
+|int_2：： ref_x||
+|int_2：： ref_y||
+|int_2：： set_x||
+|int_2：： set_xy||
+|int_2：： set_y||
+|int_2：： set_yx||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|int_2::operator-||
-|int_2::operator--||
-|int_2::operator%=||
-|int_2::operator&=||
-|int_2::operator*=||
-|int_2::operator/=||
-|int_2::operator^=||
-|int_2::operator&#124;=||
-|int_2::operator~||
-|int_2::operator++||
-|int_2::operator+=||
-|int_2::operator<\<=||
-|int_2::operator=||
-|int_2::operator-=||
-|int_2::operator>>=||
+|int_2：： operator-||
+|int_2：： operator--||
+|int_2：： operator% =||
+|int_2：： operator & =||
+|int_2：： operator * =||
+|int_2：： operator/=||
+|int_2：： operator ^ =||
+|int_2：： operator&#124;=||
+|int_2：： operator ~||
+|int_2：： operator + +||
+|int_2：： operator + =||
+|int_2：： operator <\<=||
+|int_2：： operator =||
+|int_2：： operator-=||
+|int_2：： operator > > =||
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[常數的大小](#int_2__size)||
+|[大小常數](#int_2__size)||
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|int_2::g||
-|int_2::gr||
-|int_2::r||
-|int_2::rg||
-|int_2::x||
-|int_2::xy||
-|int_2::y||
-|int_2::yx||
+|int_2：： g||
+|int_2：： gr||
+|int_2：： r||
+|int_2：： rg||
+|int_2：： x||
+|int_2：： xy||
+|int_2：： y||
+|int_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -121,15 +121,15 @@ class int_2;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> int_2
+## <a name="ctor"></a>int_2
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-```
+```cpp
 int_2() restrict(amp,
     cpu);
 
@@ -170,20 +170,20 @@ explicit inline int_2(
 ### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-##  <a name="int_2__size"></a> 大小
+## <a name="int_2__size"></a>容量
 
-```
+```cpp
 static const int size = 2;
 ```
 

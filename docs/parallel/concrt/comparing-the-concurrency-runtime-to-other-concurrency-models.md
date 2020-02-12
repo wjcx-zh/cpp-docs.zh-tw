@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 9cc48687eb083ea4fab53380f62856b747c9d86a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5bc6691f6d0b166bb3084091ee6af70474937568
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512821"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141336"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>比較並行執行階段和其他並行模型
 
@@ -19,7 +19,7 @@ ms.locfileid: "69512821"
 
 您可以利用並行執行階段的功能和生產力優勢，彌補使用其他並行模型之現有應用程式的不足之處。 當多個工作排程器爭用相同運算資源時，並行執行階段無法保證負載平衡。 不過，當工作負載不重疊時，此影響幾乎不存在。
 
-##  <a name="top"></a> 章節
+## <a name="top"></a> 章節
 
 - [比較先佔式排程與合作式排程](#models)
 
@@ -27,13 +27,13 @@ ms.locfileid: "69512821"
 
 - [比較並行執行階段與 OpenMP](#openmp)
 
-##  <a name="models"></a> 比較先佔式排程與合作式排程
+## <a name="models"></a> 比較先佔式排程與合作式排程
 
 先佔式模型與合作式排程模型是兩種可讓多項工作共用運算資源 (例如處理器或硬體執行緒) 的常用方式。
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>先佔式與合作式排程
 
-*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先占式排程在多工作業系統 (例如 Windows) 中很常見。 「*合作排程*」是一種機制, 可讓每個工作獨佔存取運算資源, 直到工作完成或工作產生其資源存取權為止。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
+*「先佔式排程」* (preemptive scheduling) 是具有優先順序的循環配置資源機制，可在指定的期間內將運算資源的獨佔存取權指定給每項工作，然後再切換到另一項工作。 先佔式排程是多工作業系統 (例如 Windows) 中的常用方式。 「*合作排程*」是一種機制，可讓每個工作獨佔存取運算資源，直到工作完成或工作產生其資源存取權為止。 並行執行階段可使用合作式排程搭配作業系統的先佔式排程器，來達成處理資源的最大使用量。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>先佔式排程器與合作式排程器之間的差異
 
@@ -51,13 +51,13 @@ ms.locfileid: "69512821"
 
 [[靠上](#top)]
 
-##  <a name="winapi"></a> 比較並行執行階段與 Windows API
+## <a name="winapi"></a> 比較並行執行階段與 Windows API
 
 Microsoft Windows 應用程式開發介面 (通常稱為 Windows API，其前身為 Win32) 提供可讓應用程式並行處理的程式設計模型。 並行執行階段建置於 Windows API 上，可另行提供無法從基礎作業系統使用的其他程式設計模型。
 
 並行執行階段建置於 Windows API 執行緒模型上，用以執行平行工作。 它也會使用 Windows API 記憶體管理和執行緒區域儲存區機制。 在 Windows 7 和 Windows Server 2008 R2 上，它會以 Windows API 支援使用者可排程的執行緒，以及硬體執行緒超過 64 個的電腦。 並行執行階段可提供合作式工作排程器和工作竊取演算法，讓運算資源發揮最大的效用，並且可讓多個排程器執行個體同時運作，以擴充 Windows API 模型。
 
-### <a name="programming-languages"></a>程式語言：
+### <a name="programming-languages"></a>程式語言
 
 Windows API 可使用 C 程式設計語言公開程式設計模型。 並行執行階段提供可利用 C++ 語言之最新功能的 C++ 程式設計介面。 例如，Lambda 函式可提供型別安全的簡潔機制，用以定義平行工作函式。 如需並行執行階段所使用之最新 C++ 功能的詳細資訊，請參閱[概觀](../../parallel/concrt/asynchronous-message-blocks.md)。
 
@@ -81,7 +81,7 @@ Windows API 的中央並行機制是執行緒。 您通常會使用 [CreateThrea
 
 [[靠上](#top)]
 
-##  <a name="openmp"></a> 比較並行執行階段與 OpenMP
+## <a name="openmp"></a> 比較並行執行階段與 OpenMP
 
 並行執行階段支援多種不同的程式設計模型。 這些模型有可能相互重疊，但或許也可彌補其他程式庫之模型的不足之處。 本節將比較並行執行階段與 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)。
 

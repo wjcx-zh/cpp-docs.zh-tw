@@ -14,28 +14,28 @@ f1_keywords:
 helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
-ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ea9ca799f36cac0d843a578eb7cef9c1e9c5cda6
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394425"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138789"
 ---
-# <a name="orderedmessageprocessor-class"></a>ordered_message_processor 類別
+# <a name="ordered_message_processor-class"></a>ordered_message_processor 類別
 
 `ordered_message_processor` 是 `message_processor`，可讓訊息區塊按照接收順序處理訊息。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<class T>
 class ordered_message_processor : public message_processor<T>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
-處理器處理訊息的裝載類型。
+處理器所處理之訊息的裝載類型。
 
 ## <a name="members"></a>成員
 
@@ -43,30 +43,30 @@ class ordered_message_processor : public message_processor<T>;
 
 |名稱|描述|
 |----------|-----------------|
-|`type`|類型別名`T`。|
+|`type`|`T`的類型別名。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
 |[ordered_message_processor](#ctor)|建構 `ordered_message_processor` 物件。|
-|[~ ordered_message_processor 解構函式](#dtor)|終結`ordered_message_processor`物件。|
+|[~ ordered_message_processor 的析構函式](#dtor)|終結 `ordered_message_processor` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[async_send](#async_send)|非同步訊息排入佇列並啟動的處理工作，如果這已經不做。 (覆寫[message_processor:: async_send](message-processor-class.md#async_send)。)|
-|[initialize](#initialize)|初始化`ordered_message_processor`與適當的回呼函式、 排程器和排程群組的物件。|
+|[async_send](#async_send)|以非同步方式將訊息排入佇列並啟動處理工作（如果尚未這麼做）。 （覆寫[message_processor：： async_send](message-processor-class.md#async_send)。）|
+|[格式化](#initialize)|使用適當的回呼函式、排程器和排程群組，初始化 `ordered_message_processor` 物件。|
 |[initialize_batched_processing](#initialize_batched_processing)|初始化批次訊息處理|
-|[sync_send](#sync_send)|同步訊息排入佇列並啟動的處理工作，如果這已經不做。 (覆寫[message_processor:: sync_send](message-processor-class.md#sync_send)。)|
-|[wait](#wait)|特定處理器的旋轉等待，用於訊息區塊的解構函式，以確定所有的非同步處理工作已完成，然後再終結該區塊的時間。 (覆寫[message_processor:: wait](message-processor-class.md#wait)。)|
+|[sync_send](#sync_send)|同步將訊息排入佇列並啟動處理工作（如果尚未這麼做）。 （覆寫[message_processor：： sync_send](message-processor-class.md#sync_send)。）|
+|[等候](#wait)|在訊息區塊的析構函數中使用的處理器特定微調等候，以確保所有非同步處理工作在終結區塊之前都有時間完成。 （覆寫[message_processor：： wait](message-processor-class.md#wait)。）|
 
-### <a name="protected-methods"></a>保護方法
+### <a name="protected-methods"></a>受保護的方法
 
 |名稱|描述|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|以非同步方式呼叫處理函式。 它會清除佇列訊息，並開始處理它們。 (覆寫[message_processor:: process_incoming_message](message-processor-class.md#process_incoming_message)。)|
+|[process_incoming_message](#process_incoming_message)|以非同步方式呼叫的處理函式。 它會清除訊息並開始處理。 （覆寫[message_processor：:p rocess_incoming_message](message-processor-class.md#process_incoming_message)）。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -80,24 +80,24 @@ class ordered_message_processor : public message_processor<T>;
 
 **命名空間：** concurrency
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-非同步訊息排入佇列並啟動的處理工作，如果這已經不做。
+以非同步方式將訊息排入佇列並啟動處理工作（如果尚未這麼做）。
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Msg*<br/>
-訊息指標。
+訊息的指標。
 
-##  <a name="initialize"></a> 初始化
+## <a name="initialize"></a>格式化
 
-初始化`ordered_message_processor`與適當的回呼函式、 排程器和排程群組的物件。
+使用適當的回呼函式、排程器和排程群組，初始化 `ordered_message_processor` 物件。
 
-```
+```cpp
 void initialize(
     _Inout_opt_ Scheduler* _PScheduler,
     _Inout_opt_ ScheduleGroup* _PScheduleGroup,
@@ -107,19 +107,19 @@ void initialize(
 ### <a name="parameters"></a>參數
 
 *_PScheduler*<br/>
-要用於排程輕量型工作排程器指標。
+要用於排程輕量工作的排程器指標。
 
 *_PScheduleGroup*<br/>
-排程群組來排程輕量型工作的指標。
+要用於排程輕量工作的排程群組指標。
 
 *_Handler*<br/>
-在回呼期間叫用處理常式的函式。
+回呼期間叫用的處理常式仿函數。
 
-##  <a name="initialize_batched_processing"></a> initialize_batched_processing
+## <a name="initialize_batched_processing"></a>initialize_batched_processing
 
 初始化批次訊息處理
 
-```
+```cpp
 virtual void initialize_batched_processing(
     _Handler_method const& _Processor,
     _Propagator_method const& _Propagator);
@@ -128,61 +128,61 @@ virtual void initialize_batched_processing(
 ### <a name="parameters"></a>參數
 
 *_Processor*<br/>
-處理器仿函式叫用回呼時。
+回呼期間叫用的處理器仿函數。
 
 *_Propagator*<br/>
-傳播程式仿函式叫用回呼時。
+在回呼期間叫用的傳播仿函數。
 
-##  <a name="ctor"></a> ordered_message_processor
+## <a name="ctor"></a>ordered_message_processor
 
 建構 `ordered_message_processor` 物件。
 
-```
+```cpp
 ordered_message_processor();
 ```
 
 ### <a name="remarks"></a>備註
 
-這`ordered_message_processor`不會排定同步或非同步處理常式，直到`initialize`呼叫函式。
+這個 `ordered_message_processor` 在呼叫 `initialize` 函數之前，不會排程非同步或同步處理常式。
 
-##  <a name="dtor"></a> ~ordered_message_processor
+## <a name="dtor"></a>~ ordered_message_processor
 
-終結`ordered_message_processor`物件。
+終結 `ordered_message_processor` 物件。
 
-```
+```cpp
 virtual ~ordered_message_processor();
 ```
 
 ### <a name="remarks"></a>備註
 
-等候所有未完成的非同步作業，然後再終結處理器。
+在終結處理器之前，等候所有未完成的非同步作業。
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-以非同步方式呼叫處理函式。 它會清除佇列訊息，並開始處理它們。
+以非同步方式呼叫的處理函式。 它會清除訊息並開始處理。
 
-```
+```cpp
 virtual void process_incoming_message();
 ```
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-同步訊息排入佇列並啟動的處理工作，如果這已經不做。
+同步將訊息排入佇列並啟動處理工作（如果尚未這麼做）。
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Msg*<br/>
-訊息指標。
+訊息的指標。
 
-##  <a name="wait"></a> 等候
+## <a name="wait"></a>等候
 
-特定處理器的旋轉等待，用於訊息區塊的解構函式，以確定所有的非同步處理工作已完成，然後再終結該區塊的時間。
+在訊息區塊的析構函數中使用的處理器特定微調等候，以確保所有非同步處理工作在終結區塊之前都有時間完成。
 
-```
+```cpp
 virtual void wait();
 ```
 

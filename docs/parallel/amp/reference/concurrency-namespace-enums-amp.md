@@ -5,12 +5,12 @@ f1_keywords:
 - amp/Concurrency::access_type
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
-ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a4feb2f98fc288fa79c0f9d81e4ed882027eddf8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180449"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126944"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Concurrency 命名空間列舉 (AMP)
 
@@ -18,11 +18,11 @@ ms.locfileid: "62180449"
 |-|-|
 |[access_type 列舉](#access_type)|[queuing_mode 列舉](#queuing_mode)|
 
-##  <a name="access_type"></a>  access_type 列舉
+## <a name="access_type"></a>access_type 列舉
 
-用來表示資料的存取權的各種類型的列舉型別。
+列舉類型，用來表示資料的各種存取類型。
 
-```
+```cpp
 enum access_type;
 ```
 
@@ -30,17 +30,17 @@ enum access_type;
 
 |名稱|描述|
 |----------|-----------------|
-|`access_type_auto`|自動選擇最適合`access_type`加速器。|
-|`access_type_none`|專用。 只有可存取在加速器上，而不是在 CPU 配置。|
-|`access_type_read`|共用。 配置在加速器上存取，並在 CPU 上讀取。|
-|`access_type_read_write`|共用。 配置在加速器上存取，並在 CPU 上為可寫入。|
-|`access_type_write`|共用。 配置在加速器上存取，並可讀取且可寫入，而在 CPU 上。|
+|`access_type_auto`|自動選擇快速鍵的最佳 `access_type`。|
+|`access_type_none`|專用. 只有在加速器上才可存取配置，而不是在 CPU 上。|
+|`access_type_read`|共用. 配置可在加速器上存取，並可在 CPU 上讀取。|
+|`access_type_read_write`|共用. 配置可在加速器上存取，而且可以在 CPU 上寫入。|
+|`access_type_write`|共用. 配置可在加速器上存取，而且可以在 CPU 上讀取和寫入。|
 
-##  <a name="queuing_mode"></a>  queuing_mode 列舉
+## <a name="queuing_mode"></a>queuing_mode 列舉
 
-指定在加速器支援的佇列模式。
+指定加速器支援的佇列模式。
 
-```
+```cpp
 enum queuing_mode;
 ```
 
@@ -48,8 +48,8 @@ enum queuing_mode;
 
 |名稱|描述|
 |----------|-----------------|
-|`queuing_mode_immediate`|佇列模式會指定任何命令，例如[parallel_for_each 函式 (C++ P)](concurrency-namespace-functions-amp.md#parallel_for_each)，因為它們會傳回給呼叫者傳送至對應的加速器裝置。|
-|`queuing_mode_automatic`|指定命令會排入對應至命令佇列的佇列模式[accelerator_view](accelerator-view-class.md)物件。 命令傳送至裝置時[accelerator_view:: flush](accelerator-view-class.md#flush)呼叫。|
+|`queuing_mode_immediate`|佇列模式，指定任何命令（例如 parallel_for_each 函式[（C++ AMP））](concurrency-namespace-functions-amp.md#parallel_for_each)一旦傳回給呼叫端，就會傳送至對應的加速器裝置。|
+|`queuing_mode_automatic`|佇列模式，指定命令會在對應至[accelerator_view](accelerator-view-class.md)物件的命令佇列上排入佇列。 呼叫[accelerator_view：： flush](accelerator-view-class.md#flush)時，會將命令傳送至裝置。|
 
 ## <a name="see-also"></a>另請參閱
 

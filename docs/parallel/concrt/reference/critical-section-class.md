@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296150"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143092"
 ---
-# <a name="criticalsection-class"></a>critical_section 類別
+# <a name="critical_section-class"></a>critical_section 類別
 
 其為並行執行階段明確察覺且不可重新進入的 Mutex。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class critical_section;
 ```
 
@@ -37,34 +37,34 @@ class critical_section;
 
 |名稱|描述|
 |----------|-----------------|
-|`native_handle_type`|對 `critical_section` 物件的參考。|
+|`native_handle_type`|`critical_section` 物件的參考。|
 
 ### <a name="public-classes"></a>公用類別
 
 |名稱|描述|
 |----------|-----------------|
-|[critical_section:: scoped_lock 類別](#critical_section__scoped_lock_class)|例外狀況安全 RAII 包裝函式`critical_section`物件。|
+|[critical_section：： scoped_lock 類別](#critical_section__scoped_lock_class)|`critical_section` 物件的例外狀況安全 RAII 包裝函式。|
 
 ### <a name="public-constructors"></a>公用建構函式
 
 |名稱|描述|
 |----------|-----------------|
-|[critical_section](#ctor)|建構新的重要區段。|
-|[~ critical_section 解構函式](#dtor)|終結重要區段。|
+|[critical_section](#ctor)|構造新的重要區段。|
+|[~ critical_section 的析構函式](#dtor)|終結重要區段。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[lock](#lock)|取得這個重要的區段。|
-|[native_handle](#native_handle)|如果有的話，會傳回平台特定原生控制代碼。|
-|[try_lock](#try_lock)|嘗試取得鎖定，而不會封鎖。|
+|[lock](#lock)|取得這個重要區段。|
+|[native_handle](#native_handle)|傳回平臺特定的原生控制碼（如果有的話）。|
+|[try_lock](#try_lock)|嘗試取得鎖定而不封鎖。|
 |[try_lock_for](#try_lock_for)|嘗試取得鎖定，而不進行特定毫秒數的封鎖。|
 |[unlock](#unlock)|解除鎖定重要區段。|
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。
+如需詳細資訊，請參閱[同步處理資料結構](../../../parallel/concrt/synchronization-data-structures.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -72,49 +72,49 @@ class critical_section;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> critical_section
+## <a name="ctor"></a>critical_section
 
-建構新的重要區段。
+構造新的重要區段。
 
-```
+```cpp
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~critical_section
+## <a name="dtor"></a>~ critical_section
 
 終結重要區段。
 
-```
+```cpp
 ~critical_section();
 ```
 
 ### <a name="remarks"></a>備註
 
-預期的是解構函式執行時，不會再保留鎖定。 允許重要區段，來解構的鎖定仍保留在未定義的行為結果。
+在執行函式時，預期不會再保留鎖定。 允許「關鍵」區段的鎖定仍然保留，會導致未定義的行為。
 
-##  <a name="lock"></a> 鎖定
+## <a name="lock"></a>狀
 
-取得這個重要的區段。
+取得這個重要區段。
 
-```
+```cpp
 void lock();
 ```
 
 ### <a name="remarks"></a>備註
 
-通常是安全的作法是利用[scoped_lock](#critical_section__scoped_lock_class)建構函式來取得和釋放`critical_section`物件中發生例外狀況安全的方式。
+以例外狀況安全的方式使用[scoped_lock](#critical_section__scoped_lock_class)結構來取得和釋放 `critical_section` 物件，通常會更安全。
 
-如果所呼叫的內容中，已進行鎖定[improper_lock](improper-lock-class.md)會擲回例外狀況。
+如果呼叫內容已持有鎖定，就會擲回[improper_lock](improper-lock-class.md)例外狀況。
 
-##  <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
-如果有的話，會傳回平台特定原生控制代碼。
+傳回平臺特定的原生控制碼（如果有的話）。
 
-```
+```cpp
 native_handle_type native_handle();
 ```
 
@@ -124,54 +124,54 @@ native_handle_type native_handle();
 
 ### <a name="remarks"></a>備註
 
-A`critical_section`物件不是 Windows 作業系統的平台特定原生控制代碼相關聯。 此方法只會傳回物件本身的參考。
+`critical_section` 物件未與 Windows 作業系統的平臺特定原生控制碼建立關聯。 方法只會傳回物件本身的參考。
 
-##  <a name="critical_section__scoped_lock_class"></a>  critical_section:: scoped_lock 類別
+## <a name="critical_section__scoped_lock_class"></a>critical_section：： scoped_lock 類別
 
-例外狀況安全 RAII 包裝函式`critical_section`物件。
+`critical_section` 物件的例外狀況安全 RAII 包裝函式。
 
-```
+```cpp
 class scoped_lock;
 ```
 
-##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock
+## <a name="critical_section__scoped_lock_ctor"></a>scoped_lock：： scoped_lock
 
-建構`scoped_lock`物件，並取得`critical_section`傳入物件`_Critical_section`參數。 如果由另一個執行緒持有重要區段，將會封鎖這個呼叫。
+建立 `scoped_lock` 物件，並取得在 `_Critical_section` 參數中傳遞的 `critical_section` 物件。 如果關鍵區段由另一個執行緒持有，此呼叫將會封鎖。
 
-```
+```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_Critical_section*<br/>
-若要鎖定重要區段。
+要鎖定的重要區段。
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock:: ~ scoped_lock
+## <a name="critical_section__scoped_lock_dtor"></a>scoped_lock：： ~ scoped_lock
 
-終結`scoped_lock`物件，並釋放其建構函式中所提供的重要區段。
+終結 `scoped_lock` 物件，並釋放其函式中所提供的重要區段。
 
-```
+```cpp
 ~scoped_lock();
 ```
 
-##  <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a>try_lock
 
-嘗試取得鎖定，而不會封鎖。
+嘗試取得鎖定而不封鎖。
 
-```
+```cpp
 bool try_lock();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-如果已取得鎖定，值 **，則為 true**; 否則值**false**。
+如果已取得鎖定，則值為**true**;否則，值**為 false**。
 
-##  <a name="try_lock_for"></a> try_lock_for
+## <a name="try_lock_for"></a>try_lock_for
 
 嘗試取得鎖定，而不進行特定毫秒數的封鎖。
 
-```
+```cpp
 bool try_lock_for(unsigned int _Timeout);
 ```
 
@@ -182,13 +182,13 @@ bool try_lock_for(unsigned int _Timeout);
 
 ### <a name="return-value"></a>傳回值
 
-如果已取得鎖定，值 **，則為 true**; 否則值**false**。
+如果已取得鎖定，則值為**true**;否則，值**為 false**。
 
-##  <a name="unlock"></a> 解除鎖定
+## <a name="unlock"></a>解除鎖定
 
 解除鎖定重要區段。
 
-```
+```cpp
 void unlock();
 ```
 

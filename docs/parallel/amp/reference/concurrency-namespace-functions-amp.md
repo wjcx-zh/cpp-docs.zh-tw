@@ -13,30 +13,30 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90a23ce111f7307610de3f0ad4bcec05d8de27df
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180384"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126891"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 命名空間函式 (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange 函式 (C++ P)](#atomic_exchange)|[atomic_fetch_add 函式 (C++ P)](#atomic_fetch_add)|[atomic_fetch_and 函式 (C++ P)](#atomic_fetch_and)|
+|[atomic_exchange 函式C++ （AMP）](#atomic_exchange)|[atomic_fetch_add 函式C++ （AMP）](#atomic_fetch_add)|[atomic_fetch_and 函式C++ （AMP）](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函式 (C++ P)](#atomic_fetch_or)|[atomic_fetch_sub 函式 (C++ P)](#atomic_fetch_sub)|
-|[atomic_fetch_xor 函式 (C++ P)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or 函式C++ （AMP）](#atomic_fetch_or)|[atomic_fetch_sub 函式C++ （AMP）](#atomic_fetch_sub)|
+|[atomic_fetch_xor 函式C++ （AMP）](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函式 (C++ P)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[parallel_for_each 函式C++ （AMP）](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
-##  <a name="all_memory_fence"></a>  all_memory_fence
+## <a name="all_memory_fence"></a>all_memory_fence
 
-所有的執行緒，直到所有記憶體存取都已經都完成的區塊執行。 這可確保所有記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。
+封鎖磚中所有線程的執行，直到所有記憶體存取都完成為止。 這可確保 [執行緒] 磚中的其他執行緒可以看見所有的記憶體存取，並以程式循序執行。
 
-```
+```cpp
 inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
@@ -45,19 +45,19 @@ inline void all_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 `tile_barrier` 物件。
 
-##  <a name="amp_uninitialize"></a>  amp_uninitialize
+## <a name="amp_uninitialize"></a>amp_uninitialize
 
-取消初始化C++AMP 執行階段。 它是合法的應用程式存留期間多次呼叫此函式。 呼叫任何C++AMP API 之後呼叫此函式將會重新初始化C++AMP 執行階段。 請注意，您不能使用C++AMP 物件在呼叫此函式和這麼做會導致未定義的行為。 此外，同時呼叫此函式和任何其他 AMP Api 就是不合法的而且會導致未定義的行為。
+取消初始化C++ AMP 執行時間。 在應用程式存留期間，多次呼叫此函式是合法的。 呼叫此C++函式後呼叫任何 AMP API 將會C++重新初始化 amp 執行時間。 請注意，在呼叫此函C++式時使用 AMP 物件是不合法的，這樣做會導致未定義的行為。 此外，同時呼叫此函式和任何其他 AMP Api 並不合法，而且會導致未定義的行為。
 
-```
+```cpp
 void __cdecl amp_uninitialize();
 ```
 
-##  <a name="atomic_compare_exchange"></a>  atomic_compare_exchange
+## <a name="atomic_compare_exchange"></a>atomic_compare_exchange
 
-以不可分割方式比較儲存在記憶體位置中指定的值相等的值為第二個指定的引數，第一個引數，如果值相同，記憶體位置的值變更為第三個指定引數。
+會以自動方式比較第一個引數中指定的記憶體位置所儲存的值是否等於第二個指定引數的值; 如果值相同，則記憶體位置的值會變更為第三個指定引數的值。
 
-```
+```cpp
 inline bool atomic_compare_exchange(
     _Inout_ int* _Dest,
     _Inout_ int* _Expected_value,
@@ -74,23 +74,23 @@ inline bool atomic_compare_exchange(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-其中一個要比較的值的位置所讀取，以及要新增的值，如果有的話，是儲存。
+要進行比較的其中一個值的位置，以及要儲存的新值（如果有的話）。
 
 *_Expected_value*<br/>
-要從中讀取要比較的第二個值的位置。
+要進行比較之第二個值的讀取位置。
 
 *value*<br/>
-要儲存至指定的記憶體位置的值`_Dest`如果`_Dest`等於`_Expected_value`。
+如果 `_Dest` 等於 `_Expected_value`，要儲存在中指定之記憶體位置的值 `_Dest`。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果作業成功，否則**false**。
+如果作業成功，則為**true** ;否則**為 false**。
 
-##  <a name="atomic_exchange"></a>  atomic_exchange 函式 (C++ P)
+## <a name="atomic_exchange"></a>atomic_exchange 函式C++ （AMP）
 
-設定目的地位置的值做為不可部分完成的作業。
+將目的地位置的值設定為不可部分完成的作業。
 
-```
+```cpp
 inline int atomic_exchange(
     _Inout_ int* _Dest,
     int value
@@ -113,17 +113,17 @@ inline float atomic_exchange(
 目的地位置的指標。
 
 *value*<br/>
-新值。
+新的值。
 
 ### <a name="return-value"></a>傳回值
 
 目的地位置的原始值。
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add 函式 (C++ P)
+## <a name="atomic_fetch_add"></a>atomic_fetch_add 函式C++ （AMP）
 
-以不可分割方式加入值的記憶體位置的值。
+以原子方式將值新增至記憶體位置的值。
 
-```
+```cpp
 inline int atomic_fetch_add(
     _Inout_ int* _Dest,
     int value
@@ -138,20 +138,20 @@ inline unsigned int atomic_fetch_add(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-記憶體位置指標。
+記憶體位置的指標。
 
 *value*<br/>
-要加入的值。
+要新增的值。
 
 ### <a name="return-value"></a>傳回值
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and 函式 (C++ P)
+## <a name="atomic_fetch_and"></a>atomic_fetch_and 函式C++ （AMP）
 
-以不可分割方式執行位元 AND 運算的值以及記憶體位置的值。
+以原子方式執行值的位 AND 運算，以及記憶體位置的值。
 
-```
+```cpp
 inline int atomic_fetch_and(
     _Inout_ int* _Dest,
     int value
@@ -166,20 +166,20 @@ inline unsigned int atomic_fetch_and(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-記憶體位置指標。
+記憶體位置的指標。
 
 *value*<br/>
-要使用位元的 AND 計算中的值。
+要在位 AND 計算中使用的值。
 
 ### <a name="return-value"></a>傳回值
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_dec"></a>  atomic_fetch_dec
+## <a name="atomic_fetch_dec"></a>atomic_fetch_dec
 
-以不可分割方式遞減值儲存在指定的記憶體位置。
+以原子方式遞減儲存在指定記憶體位置的值。
 
-```
+```cpp
 inline int atomic_fetch_dec(_Inout_ int* _Dest
     ) restrict(amp)
 
@@ -189,17 +189,17 @@ inline unsigned int atomic_fetch_dec(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-要遞減之值的記憶體中的位置。
+要遞減的值在記憶體中的位置。
 
 ### <a name="return-value"></a>傳回值
 
 儲存在記憶體位置的原始值。
 
-##  <a name="atomic_fetch_inc"></a>  atomic_fetch_inc
+## <a name="atomic_fetch_inc"></a>atomic_fetch_inc
 
-以不可分割方式遞增儲存於指定的記憶體位置的值。
+以原子方式遞增儲存在指定記憶體位置的值。
 
-```
+```cpp
 inline int atomic_fetch_inc(_Inout_ int* _Dest) restrict(amp);
 
 inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
@@ -208,17 +208,17 @@ inline unsigned int atomic_fetch_inc(_Inout_ unsigned int* _Dest) restrict(amp);
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-要遞增之值的記憶體中的位置。
+要遞增的值在記憶體中的位置。
 
 ### <a name="return-value"></a>傳回值
 
 儲存在記憶體位置的原始值。
 
-##  <a name="atomic_fetch_max"></a>  atomic_fetch_max
+## <a name="atomic_fetch_max"></a>atomic_fetch_max
 
-以不可分割方式計算儲存在第一個引數和第二個引數中指定的值中指定的記憶體位置的值之間的最大值，並將其儲存在相同的記憶體位置。
+以自動方式計算儲存在第一個引數中指定的記憶體位置和第二個引數中指定的值之間的最大值，並將它儲存在相同的記憶體位置。
 
-```
+```cpp
 inline int atomic_fetch_max(
     _Inout_ int* _Dest,
     int value
@@ -233,20 +233,20 @@ inline unsigned int atomic_fetch_max(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-其中一個要比較的值讀取自，以及位置這兩個值的最大值是儲存。
+要進行比較的其中一個值的位置，以及要儲存兩個值的最大值。
 
 *value*<br/>
-要在指定位置的值相比較的值。
+要與指定位置的值比較的值。
 
 ### <a name="return-value"></a>傳回值
 
-儲存在指定之的位置的原始值。
+儲存在指定位置位置的原始值。
 
-##  <a name="atomic_fetch_min"></a>  atomic_fetch_min
+## <a name="atomic_fetch_min"></a>atomic_fetch_min
 
-以不可分割方式計算儲存在第一個引數和第二個引數中指定的值中指定的記憶體位置的值之間的最小值，並將其儲存在相同的記憶體位置。
+以原子方式計算儲存在第一個引數中指定之記憶體位置的值和第二個引數中指定的值之間的最小值，並將它儲存在相同的記憶體位置。
 
-```
+```cpp
 inline int atomic_fetch_min(
     _Inout_ int* _Dest,
     int value
@@ -261,20 +261,20 @@ inline unsigned int atomic_fetch_min(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-其中一個要比較的值讀取自，以及位置這兩個值的最小值是儲存。
+要進行比較的其中一個值的位置，以及要儲存兩個值的最小值。
 
 *value*<br/>
-要在指定位置的值相比較的值。
+要與指定位置的值比較的值。
 
 ### <a name="return-value"></a>傳回值
 
-儲存在指定之的位置的原始值。
+儲存在指定位置位置的原始值。
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or 函式 (C++ P)
+## <a name="atomic_fetch_or"></a>atomic_fetch_or 函式C++ （AMP）
 
-以不可分割方式執行位元的 OR 運算的值以及記憶體位置的值。
+使用值和記憶體位置的值，以原子方式執行位 OR 運算。
 
-```
+```cpp
 inline int atomic_fetch_or(
     _Inout_ int* _Dest,
     int value
@@ -289,20 +289,20 @@ inline unsigned int atomic_fetch_or(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-記憶體位置指標。
+記憶體位置的指標。
 
 *value*<br/>
-要使用位元的 OR 計算中的值。
+要在位 OR 運算中使用的值。
 
 ### <a name="return-value"></a>傳回值
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub 函式 (C++ P)
+## <a name="atomic_fetch_sub"></a>atomic_fetch_sub 函式C++ （AMP）
 
-以不可分割方式減去的記憶體位置的值。
+以不可部分完成的方式，從記憶體位置減去值。
 
-```
+```cpp
 inline int atomic_fetch_sub(
     _Inout_ int* _Dest,
     int value
@@ -326,11 +326,11 @@ inline unsigned int atomic_fetch_sub(
 
 記憶體位置的原始值。
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor 函式 (C++ P)
+## <a name="atomic_fetch_xor"></a>atomic_fetch_xor 函式C++ （AMP）
 
-以不可分割方式 peforms 值與的記憶體位置的位元 XOR 運算。
+以原子方式執行值和記憶體位置的位 XOR 運算。
 
-```
+```cpp
 inline int atomic_fetch_xor(
     _Inout_ int* _Dest,
     int value
@@ -345,20 +345,20 @@ inline unsigned int atomic_fetch_xor(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-記憶體位置指標。
+記憶體位置的指標。
 
 *value*<br/>
-要在 XOR 計算中使用的值。
+XOR 計算中要使用的值。
 
 ### <a name="return-value"></a>傳回值
 
 記憶體位置的原始值。
 
-##  <a name="copy"></a>  copy
+## <a name="copy"></a>  copy
 
-複製C++AMP 物件。 已符合所有的同步資料傳輸需求。 在加速器上執行的程式碼時，您無法複製資料。 此函式的一般形式是`copy(src, dest)`。
+複製C++ AMP 物件。 符合所有同步資料傳輸需求。 在加速器上執行程式碼時，您無法複製資料。 此函式的一般形式為 `copy(src, dest)`。
 
-```
+```cpp
 template <typename value_type, int _Rank>
 void copy(
     const array<value_type, _Rank>& _Src,
@@ -425,37 +425,37 @@ void copy(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-要複製到的物件。
+要複製的物件。
 
 *_DestIter*<br/>
-目的地端的起始位置的輸出迭代器。
+目的地上開始位置的輸出反覆運算器。
 
 *InputIterator*<br/>
-輸入迭代器類型。
+輸入迭代器的類型。
 
 *OutputIterator*<br/>
-輸出迭代器類型。
+輸出反覆運算器的類型。
 
 *_Rank*<br/>
-要複製的物件或複製到物件的順位。
+要複製之物件的次序或要複製的物件。
 
 *_Src*<br/>
-若要複製的物件。
+To 要複製的物件。
 
 *_SrcFirst*<br/>
-來源容器中的開頭迭代器。
+來源容器中的開始反覆運算器。
 
 *_SrcLast*<br/>
-來源容器中結束迭代器。
+來源容器中的結束反覆運算器。
 
 *value_type*<br/>
-複製的項目資料型別。
+複製之元素的資料類型。
 
-##  <a name="copy_async"></a>  copy_async
+## <a name="copy_async"></a>copy_async
 
-複製C++AMP 物件並傳回[completion_future](completion-future-class.md)可以等候的物件。 在加速器上執行的程式碼時，您無法複製資料。  此函式的一般形式是`copy(src, dest)`。
+複製C++ AMP 物件，並傳回可在其上等候的[completion_future](completion-future-class.md)物件。 在加速器上執行程式碼時，您無法複製資料。  此函式的一般形式為 `copy(src, dest)`。
 
-```
+```cpp
 template <typename value_type, int _Rank>
 concurrency::completion_future copy_async(
     const array<value_type, _Rank>& _Src,
@@ -514,69 +514,69 @@ concurrency::completion_future copy_async(
 ### <a name="parameters"></a>參數
 
 *_Dest*<br/>
-要複製到的物件。
+要複製的物件。
 
 *_DestIter*<br/>
-目的地端的起始位置的輸出迭代器。
+目的地上開始位置的輸出反覆運算器。
 
 *InputIterator*<br/>
-輸入迭代器類型。
+輸入迭代器的類型。
 
 *OutputIterator*<br/>
-輸出迭代器類型。
+輸出反覆運算器的類型。
 
 *_Rank*<br/>
-要複製的物件或複製到物件的順位。
+要複製之物件的次序或要複製的物件。
 
 *_Src*<br/>
-若要複製的物件。
+To 要複製的物件。
 
 *_SrcFirst*<br/>
-來源容器中的開頭迭代器。
+來源容器中的開始反覆運算器。
 
 *_SrcLast*<br/>
-來源容器中結束迭代器。
+來源容器中的結束反覆運算器。
 
 *value_type*<br/>
-複製的項目資料型別。
+複製之元素的資料類型。
 
 ### <a name="return-value"></a>傳回值
 
-A`future<void>`可以等候。
+可以等候的 `future<void>`。
 
-##  <a name="direct3d_abort"></a>  direct3d_abort
+## <a name="direct3d_abort"></a>direct3d_abort
 
-使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發[runtime_exception](runtime-exception-class.md)例外狀況，並出現錯誤訊息"Reference Rasterizer:Shader abort instruction hit"。
+使用 `restrict(amp)` 限制子句中止函式執行。 當 AMP 執行階段偵測到呼叫時，會引發 [runtime_exception](runtime-exception-class.md) 例外狀況，並顯示錯誤訊息 "Reference Rasterizer: Shader abort instruction hit"。
 
-```
+```cpp
 void direct3d_abort() restrict(amp);
 ```
 
-##  <a name="direct3d_errorf"></a>  direct3d_errorf
+## <a name="direct3d_errorf"></a>direct3d_errorf
 
-列印格式化的字串，Visual Studio 的 [輸出] 視窗。 呼叫的函式從`restrict(amp)`限制子句。 當 AMP 執行階段偵測到呼叫時，會引發[runtime_exception](runtime-exception-class.md)例外狀況，相同的格式字串。
+將格式化的字串列印到 Visual Studio 的 [輸出] 視窗。 它是從具有 `restrict(amp)` 限制子句的函式中呼叫。 當 AMP 執行時間偵測到呼叫時，它會使用相同的格式字串來引發[runtime_exception](runtime-exception-class.md)例外狀況。
 
-```
+```cpp
 void direct3d_errorf(
     const char *,
 ...) restrict(amp);
 ```
 
-##  <a name="direct3d_printf"></a>  direct3d_printf
+## <a name="direct3d_printf"></a>direct3d_printf
 
-列印格式化的字串，Visual Studio 的 [輸出] 視窗。 呼叫的函式從`restrict(amp)`限制子句。
+將格式化的字串列印到 Visual Studio 的 [輸出] 視窗。 它是從具有 `restrict(amp)` 限制子句的函式中呼叫。
 
-```
+```cpp
 void direct3d_printf(
     const char *,
 ...) restrict(amp);
 ```
 
-##  <a name="global_memory_fence"></a>  global_memory_fence
+## <a name="global_memory_fence"></a>global_memory_fence
 
-封鎖直到所有全域記憶體存取的所有執行緒的執行已完成。 這可確保全域記憶體存取對執行緒 tile 中，在其他執行緒可見，而且依照程式順序執行。
+封鎖磚中所有線程的執行，直到所有全域記憶體存取都完成為止。 這可確保 [執行緒] 磚中的其他執行緒可以看見全域記憶體存取，而且會依程式循序執行。
 
-```
+```cpp
 inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 
@@ -585,11 +585,11 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Tile_barrier 物件
 
-##  <a name="parallel_for_each"></a>  parallel_for_each 函式 (C++ P)
+## <a name="parallel_for_each"></a>parallel_for_each 函式C++ （AMP）
 
-整個計算網域中執行的函式。 如需詳細資訊，請參閱 < [ C++ AMP 概觀](../../../parallel/amp/cpp-amp-overview.md)。
+跨計算網域執行函數。 如需詳細資訊，請參閱[ C++ AMP 總覽](../../../parallel/amp/cpp-amp-overview.md)。
 
-```
+```cpp
 template <int _Rank, typename _Kernel_type>
 void parallel_for_each(
     const extent<_Rank>& _Compute_domain,
@@ -638,34 +638,34 @@ void parallel_for_each(
 ### <a name="parameters"></a>參數
 
 *_Accl_view*<br/>
-`accelerator_view`物件執行平行計算。
+要在其上執行平行計算的 `accelerator_view` 物件。
 
 *_Compute_domain*<br/>
-`extent`物件，其中包含計算的資料。
+`extent` 物件，其中包含用於計算的資料。
 
 *_Dim0*<br/>
-維度的`tiled_extent`物件。
+`tiled_extent` 物件的維度。
 
 *_Dim1*<br/>
-維度的`tiled_extent`物件。
+`tiled_extent` 物件的維度。
 
 *_Dim2*<br/>
-維度的`tiled_extent`物件。
+`tiled_extent` 物件的維度。
 
 *_Kernel*<br/>
-接受類型引數的 lambda 或函式物件 」 索引\<_Rank >"，並執行平行計算。
+Lambda 或函式物件，接受 "index\<類型的引數 _Rank >"，並執行平行計算。
 
 *_Kernel_type*<br/>
-Lambda 或仿函式中。
+Lambda 或仿函數。
 
 *_Rank*<br/>
 範圍的順位。
 
-##  <a name="tile_static_memory_fence"></a>  tile_static_memory_fence
+## <a name="tile_static_memory_fence"></a>tile_static_memory_fence
 
-封鎖 tile 中的所有執行緒的執行，直到所有未完成`tile_static`記憶體存取都已經完成。 這可確保`tile_static`記憶體存取對執行緒 tile 中，在其他執行緒可見，而且存取依照程式順序執行。
+封鎖磚中所有線程的執行，直到完成所有未完成的 `tile_static` 記憶體存取為止。 這可確保 [執行緒] 磚中的其他執行緒可以看見 `tile_static` 的記憶體存取，而且該存取會依照程式循序執行。
 
-```
+```cpp
 inline void tile_static_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 ```
 

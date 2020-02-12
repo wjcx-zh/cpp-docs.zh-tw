@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_value class
 ms.assetid: 8c533e3f-2774-4192-8616-b2313b859bf7
-ms.openlocfilehash: 8b8e233769d859aac102d0554a6987e9b7201473
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 6a66b2b303a4b3b0cb8c2c7a3c515ac8cd1b33a0
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341060"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142997"
 ---
-# <a name="invalidschedulerpolicyvalue-class"></a>invalid_scheduler_policy_value 類別
+# <a name="invalid_scheduler_policy_value-class"></a>invalid_scheduler_policy_value 類別
 
 這個類別描述在將 `SchedulerPolicy` 物件的原則機碼設為不正確的機碼值時擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class invalid_scheduler_policy_value : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class invalid_scheduler_policy_value : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|多載。 建構 `invalid_scheduler_policy_value` 物件。|
+|[invalid_scheduler_policy_value]（無效-排程器-原則-執行緒規格---------------|已多載。 建構 `invalid_scheduler_policy_value` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -39,15 +39,15 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> invalid_scheduler_policy_value
+## <a name="ctor"></a>invalid_scheduler_policy_value
 
 建構 `invalid_scheduler_policy_value` 物件。
 
-```
+```cpp
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
 
 invalid_scheduler_policy_value() throw();

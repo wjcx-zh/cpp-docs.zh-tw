@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITopologyNode structure
 ms.assetid: 92e7e032-04f6-4c7c-be36-8f9a35fc4734
-ms.openlocfilehash: 867e0543d1b9f2810a3fe761f038947c4d88da4d
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1b4cb6a856d6da7b8eee7f9cba1ad51e375c024d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346227"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140052"
 ---
 # <a name="itopologynode-structure"></a>ITopologyNode 結構
 
@@ -25,7 +25,7 @@ ms.locfileid: "64346227"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct ITopologyNode;
 ```
 
@@ -35,15 +35,15 @@ struct ITopologyNode;
 
 |名稱|描述|
 |----------|-----------------|
-|[ITopologyNode::GetExecutionResourceCount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|
-|[ITopologyNode::GetFirstExecutionResource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|
-|[ITopologyNode::GetId](#getid)|傳回這個節點的 Resource Manager 的唯一識別碼。|
-|[ITopologyNode::GetNext](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|
-|[ITopologyNode::GetNumaNode](#getnumanode)|傳回 Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。|
+|[ITopologyNode：： GetExecutionResourceCount](#getexecutionresourcecount)|傳回結合在這個節點下的執行資源數目。|
+|[ITopologyNode：： GetFirstExecutionResource](#getfirstexecutionresource)|傳回依列舉順序在這個節點下設為群組的第一個執行資源。|
+|[ITopologyNode：： GetId](#getid)|傳回此節點 Resource Manager 的唯一識別碼。|
+|[ITopologyNode：： GetNext](#getnext)|讓介面返回列舉順序中的下一個拓撲節點。|
+|[ITopologyNode：： GetNumaNode](#getnumanode)|傳回此資源 Maanger 節點所屬的 Windows 指派的 NUMA 節點編號。|
 
 ## <a name="remarks"></a>備註
 
-此介面通常用於為觀察資源管理員逐步系統的拓撲。
+此介面通常用來逐步引導系統的拓撲，如 Resource Manager 所觀察到的。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -51,15 +51,15 @@ struct ITopologyNode;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="getexecutionresourcecount"></a>  Itopologynode:: Getexecutionresourcecount 方法
+## <a name="getexecutionresourcecount"></a>ITopologyNode：： GetExecutionResourceCount 方法
 
 傳回結合在這個節點下的執行資源數目。
 
-```
+```cpp
 virtual unsigned int GetExecutionResourceCount() const = 0;
 ```
 
@@ -67,11 +67,11 @@ virtual unsigned int GetExecutionResourceCount() const = 0;
 
 結合在這個節點下的執行資源數目。
 
-##  <a name="getfirstexecutionresource"></a>  Itopologynode:: Getfirstexecutionresource 方法
+## <a name="getfirstexecutionresource"></a>ITopologyNode：： GetFirstExecutionResource 方法
 
 傳回依列舉順序在這個節點下設為群組的第一個執行資源。
 
-```
+```cpp
 virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 ```
 
@@ -79,29 +79,29 @@ virtual ITopologyExecutionResource *GetFirstExecutionResource() const = 0;
 
 依列舉順序在這個節點下設為群組的第一個執行資源。
 
-##  <a name="getid"></a>  Itopologynode:: Getid 方法
+## <a name="getid"></a>ITopologyNode：： GetId 方法
 
-傳回這個節點的 Resource Manager 的唯一識別碼。
+傳回此節點 Resource Manager 的唯一識別碼。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-Resource Manager 的此節點的唯一識別碼。
+此節點 Resource Manager 的唯一識別碼。
 
 ### <a name="remarks"></a>備註
 
-並行執行階段代表處理器節點群組中的系統上的硬體執行緒數目。 節點通常衍生自系統的硬體拓撲。 例如，在特定的通訊端或特定的 NUMA 節點上的所有處理器可能都屬於相同處理器節點。 Resource Manager 會將唯一識別碼指派給這些節點從開始`0`最多且含`nodeCount - 1`，其中`nodeCount`表示系統上的處理器節點總數。
+並行執行階段代表處理器節點群組中系統上的硬體執行緒。 節點通常是從系統的硬體拓朴衍生而來。 例如，特定通訊端或特定 NUMA 節點上的所有處理器都可能屬於相同的處理器節點。 Resource Manager 會將唯一識別碼指派給這些節點，從 `0` 到，包括 `nodeCount - 1`，其中 `nodeCount` 代表系統上的處理器節點總數。
 
-可以從函數中取得的節點計數[GetProcessorNodeCount](concurrency-namespace-functions.md)。
+您可以從函數[GetProcessorNodeCount](concurrency-namespace-functions.md)取得節點計數。
 
-##  <a name="getnext"></a>  Itopologynode:: Getnext 方法
+## <a name="getnext"></a>ITopologyNode：： GetNext 方法
 
 讓介面返回列舉順序中的下一個拓撲節點。
 
-```
+```cpp
 virtual ITopologyNode *GetNext() const = 0;
 ```
 
@@ -109,21 +109,21 @@ virtual ITopologyNode *GetNext() const = 0;
 
 介面返回列舉順序中的下一個節點。 如果系統拓撲的列舉順序中沒有其他節點，這個方法將傳回值 `NULL`。
 
-##  <a name="getnumanode"></a>  Itopologynode:: Getnumanode 方法
+## <a name="getnumanode"></a>ITopologyNode：： GetNumaNode 方法
 
-傳回 Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。
+傳回此資源 Maanger 節點所屬的 Windows 指派的 NUMA 節點編號。
 
-```
+```cpp
 virtual unsigned long GetNumaNode() const = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-Windows 指派給這個資源管理員節點所屬的 NUMA 節點數目。
+此 Resource Manager 節點所屬的 Windows 指派 NUMA 節點編號。
 
 ### <a name="remarks"></a>備註
 
-屬於這個節點的虛擬處理器根上執行的執行緒 proxy 會有同質性至少 NUMA 節點，這個方法所傳回的 NUMA 節點層級。
+在屬於此節點的虛擬處理器根上執行的執行緒 proxy，對於此方法所傳回之 NUMA 節點的 NUMA 節點層級，至少會有相似性。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
-ms.openlocfilehash: 2511be4669bc4abf75d5188e3aeabd7863f42dd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a2513d30aa68798707f3bb16318db9b594b9e16
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394399"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138870"
 ---
-# <a name="operationtimedout-class"></a>operation_timed_out 類別
+# <a name="operation_timed_out-class"></a>operation_timed_out 類別
 
 這個類別描述作業逾時擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class operation_timed_out : public std::exception;
 ```
 
@@ -31,7 +31,7 @@ class operation_timed_out : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[operation_timed_out](#ctor)|多載。 建構 `operation_timed_out` 物件。|
+|[operation_timed_out](#ctor)|已多載。 建構 `operation_timed_out` 物件。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,15 +41,15 @@ class operation_timed_out : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> operation_timed_out
+## <a name="ctor"></a>operation_timed_out
 
 建構 `operation_timed_out` 物件。
 
-```
+```cpp
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();
 
 operation_timed_out() throw();

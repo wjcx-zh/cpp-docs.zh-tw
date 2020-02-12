@@ -2,12 +2,12 @@
 title: Concurrency 命名空間運算子 (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: e2957aa84ffbf420dcf2672359a442b754866649
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180410"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126913"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency 命名空間運算子 (AMP)
 
@@ -17,11 +17,11 @@ ms.locfileid: "62180410"
 |[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
 |[operator==](#operator_eq_eq)|
 
-##  <a name="operator_eq_eq"></a> operator==
+## <a name="operator_eq_eq"></a>  operator==
 
 判斷指定的引數是否相等。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -34,23 +34,23 @@ bool operator== (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-其中一個要比較的 tuple。
+其中一個要比較的元組。
 
 *_Rhs*<br/>
-其中一個要比較的 tuple。
+其中一個要比較的元組。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果 tuple 相等，否則**false**。
+如果元組相等，則為**true** ;否則**為 false**。
 
-##  <a name="operator_neq"></a> operator!=
+## <a name="operator_neq"></a> operator!=
 
 判斷指定的引數是否不相等。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -63,23 +63,23 @@ bool operator!= (
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-其中一個要比較的 tuple。
+其中一個要比較的元組。
 
 *_Rhs*<br/>
-其中一個要比較的 tuple。
+其中一個要比較的元組。
 
 ### <a name="return-value"></a>傳回值
 
-**真**如果 tuple 不相等，否則**false**。
+如果元組不相等，則為**true** ;否則**為 false**。
 
-##  <a name="operator_add"></a>  operator+
+## <a name="operator_add"></a>  operator+
 
-計算指定的引數的整體元件總和。
+計算指定引數的元件成對總和。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -108,23 +108,23 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-其中一個加入的引數。
+要加入的其中一個引數。
 
 *_Rhs*<br/>
-其中一個加入的引數。
+要加入的其中一個引數。
 
 ### <a name="return-value"></a>傳回值
 
-指定的引數的整體元件總和。
+指定引數的元件成對總和。
 
-##  <a name="operator-"></a>  operator-
+## <a name="operator-"></a>  operator-
 
-計算指定的引數之間的整體元件差值。
+計算指定引數之間的元件取向差異。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -153,23 +153,23 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-要從中減去的引數。
+要減去的引數。
 
 *_Rhs*<br/>
 要減去的引數。
 
 ### <a name="return-value"></a>傳回值
 
-指定的引數之間的整體元件差值。
+指定引數之間的元件取向差異。
 
-##  <a name="operator_star"></a>  operator*
+## <a name="operator_star"></a>  operator*
 
-計算指定的引數的整體元件乘積。
+計算指定引數的元件產品。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -190,23 +190,23 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-其中一個要相乘的 tuple。
+要相乘的其中一個元組。
 
 *_Rhs*<br/>
-其中一個要相乘的 tuple。
+要相乘的其中一個元組。
 
 ### <a name="return-value"></a>傳回值
 
-指定的引數分量方向上的產品。
+指定引數的元件產品。
 
-##  <a name="operator_div"></a>  operator/
+## <a name="operator_div"></a>  operator/
 
-計算指定的引數的整體元件商數。
+計算指定引數的元件的商。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -227,23 +227,23 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-要當做被除數的 tuple。
+要分割的元組。
 
 *_Rhs*<br/>
 要除以的元組。
 
 ### <a name="return-value"></a>傳回值
 
-指定的引數在分量方向上的商。
+指定引數的元件的商。
 
-##  <a name="operator_mod"></a>  operator%
+## <a name="operator_mod"></a>  operator%
 
-計算的第一個指定的引數，第二個指定的引數的模數。
+以第二個指定的引數來計算第一個指定引數的模數。
 
-```
+```cpp
 template <
     int _Rank,
     template <int> class _Tuple_type
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>參數
 
 *_Rank*<br/>
-Tuple 引數的順位。
+元組引數的次序。
 
 *_Lhs*<br/>
-Tuple 從中計算模數。
+用來計算模數的元組。
 
 *_Rhs*<br/>
-要的元組模數的。
+要做為模數依據的元組。
 
 ### <a name="return-value"></a>傳回值
 
-第一個指定的引數模數第二個指定的引數的結果。
+第一個指定引數的結果會模數第二個指定的引數。
 
 ## <a name="see-also"></a>另請參閱
 
-[concurrency 命名空間 ](concurrency-namespace-cpp-amp.md)
+[Concurrency 命名空間](concurrency-namespace-cpp-amp.md)

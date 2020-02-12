@@ -7,20 +7,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: c407c42e5c6a7035e911218ecb41c2da62967787
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351140"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126368"
 ---
-# <a name="shortvectortraits-structure"></a>short_vector_traits 結構
+# <a name="short_vector_traits-structure"></a>short_vector_traits 結構
 
-short_vector_traits 允許擷取時，基礎的向量長度和短向量類型的純量類型或純量類型
+short_vector_traits 允許抓取短向量類型或純量類型的基礎向量長度和純量類型
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<
     typename T
 >
@@ -75,7 +75,7 @@ template<>
 struct short_vector_traits<double_4>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 `T`
 
@@ -91,13 +91,13 @@ struct short_vector_traits<double_4>;
 
 |名稱|描述|
 |----------|-----------------|
-|[short_vector_traits:: short_vector_traits 建構函式](#ctor)||
+|[short_vector_traits：： short_vector_traits 的構造函式](#ctor)||
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[short_vector_traits:: size 常數](#size)||
+|[short_vector_traits：： size 常數](#size)||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -105,19 +105,19 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a>  short_vector_traits:: short_vector_traits 建構函式
+## <a name="ctor"></a>short_vector_traits：： short_vector_traits 的構造函式
 
-```
+```cpp
 short_vector_traits();
 ```
 
-##  <a name="size"></a>  short_vector_traits:: size 常數
+## <a name="size"></a>short_vector_traits：： size 常數
 
-```
+```cpp
 static int const size = 1;
 ```
 

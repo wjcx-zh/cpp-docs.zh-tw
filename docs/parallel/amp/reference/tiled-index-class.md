@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda01667a6b239284c682ba6ae3f9b857c713447
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352186"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142428"
 ---
-# <a name="tiledindex-class"></a>tiled_index 類別
+# <a name="tiled_index-class"></a>tiled_index 類別
 
-提供的索引[tiled_extent](tiled-extent-class.md)物件。 這個類別具有存取相對於本機磚原點和相對於全域原點的項目屬性。 如需劃分 tile 空間的詳細資訊，請參閱[使用的圖格](../../../parallel/amp/using-tiles.md)。
+提供[tiled_extent](tiled-extent-class.md)物件的索引。 這個類別具有屬性，可存取相對於本機磚來源的專案，以及相對於全域來源的元素。 如需磚空間的詳細資訊，請參閱[使用磚](../../../parallel/amp/using-tiles.md)。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template <
     int _Dim0,
     int _Dim1 = 0,
@@ -52,16 +52,16 @@ template <
 class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_Dim0*<br/>
-最高有效維度的長度。
+最重要維度的長度。
 
 *_Dim1*<br/>
-下一步 以最高有效維度的長度。
+下一個最重要維度的長度。
 
 *_Dim2*<br/>
-最小顯著性維度的長度。
+最不重要維度的長度。
 
 ## <a name="members"></a>成員
 
@@ -69,34 +69,34 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 |名稱|描述|
 |----------|-----------------|
-|[tiled_index 建構函式](#ctor)|初始化 `tile_index` 類別的新執行個體。|
+|[tiled_index 的構造函式](#ctor)|初始化 `tile_index` 類別的新執行個體。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[get_tile_extent](#tiled_index__get_tile_extent)|傳回[程度](extent-class.md)的值的物件`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|
+|[get_tile_extent](#tiled_index__get_tile_extent)|傳回具有 `tiled_index` 樣板引數值 `_Dim0`、`_Dim1`和 `_Dim2`的[範圍](extent-class.md)物件。|
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[barrier 常數](#tiled_index__barrier)|存放區[tile_barrier](tile-barrier-class.md)物件，表示執行緒之目前磚中的屏障。|
+|[屏障常數](#tiled_index__barrier)|儲存代表目前線程磚中之屏障的[tile_barrier](tile-barrier-class.md)物件。|
 |||
-|[全域常數](#tiled_index__global)|存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示格線物件中的全域索引。|
-|[區域常數](#tiled_index__local)|存放區`index`物件的陣序規範 1、 2 或 3，表示相對於索引中之目前磚[tiled_extent](tiled-extent-class.md)物件。|
-|[rank 常數](#tiled_index__rank)|儲存的陣序`tiled_index`物件。|
-|[tile 常數](#tiled_index__tile)|存放區`index`物件的陣序規範 1、 2 或 3，表示目前的圖格的座標`tiled_extent`物件。|
-|[tile_dim0 常數](#tiled_index__tile_dim0)|儲存的最高有效維度的長度。|
-|[tile_dim1 常數](#tiled_index__tile_dim1)|儲存下一步 以最高有效維度的長度。|
-|[tile_dim2 常數](#tiled_index__tile_dim2)|儲存最低有效維度的長度。|
-|[tile_origin 常數](#tiled_index__tile_origin)|存放區`index`物件中目前磚原點的陣序規範 1、 2 或 3，表示全域座標`tiled_extent`物件。|
+|[全域常數](#tiled_index__global)|儲存次序1、2或3的[索引](index-class.md)物件，代表方格物件中的全域索引。|
+|[本機常數](#tiled_index__local)|儲存次序1、2或3的 `index` 物件，代表[tiled_extent](tiled-extent-class.md)物件目前磚中的相對索引。|
+|[次序常數](#tiled_index__rank)|儲存 `tiled_index` 物件的順位。|
+|[磚常數](#tiled_index__tile)|儲存次序1、2或3的 `index` 物件，代表 `tiled_extent` 物件之目前磚的座標。|
+|[tile_dim0 常數](#tiled_index__tile_dim0)|儲存最重要維度的長度。|
+|[tile_dim1 常數](#tiled_index__tile_dim1)|儲存下一個最重要維度的長度。|
+|[tile_dim2 常數](#tiled_index__tile_dim2)|儲存最不重要維度的長度。|
+|[tile_origin 常數](#tiled_index__tile_origin)|儲存次序1、2或3的 `index` 物件，代表 `tiled_extent` 物件中目前磚原點的全域座標。|
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|取得[程度](extent-class.md)的值的物件`tiled_index`樣板引數`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。|
+|[tile_extent](#tile_extent)|取得具有 `tiled_index` 樣板引數值的[範圍](extent-class.md)物件，`tiled_index` 樣板引數 `_Dim0`、`_Dim1`和 `_Dim2`。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -110,13 +110,13 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **命名空間：** 並行
 
-## <a name="ctor"></a>  tiled_index 建構函式
+## <a name="ctor"></a>tiled_index 的構造函式
 
 初始化 `tiled_index` 類別的新執行個體。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 tiled_index(
     const index<rank>& _Global,
     const index<rank>& _Local,
@@ -128,144 +128,145 @@ tiled_index(
     const tiled_index& _Other ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_Global*<br/>
-全域[index](index-class.md)建構`tiled_index`。
+結構化 `tiled_index`的全域[索引](index-class.md)。
 
 *_Local*<br/>
-本機[index](index-class.md)建構 `tiled_index`
+結構化 `tiled_index` 的本機[索引](index-class.md)
 
 *_Tile*<br/>
-[] 圖格[index](index-class.md)建構 `tiled_index`
+結構化 `tiled_index` 的磚[索引](index-class.md)
 
 *_Tile_origin*<br/>
-並排原點[index](index-class.md)建構 `tiled_index`
+結構化 `tiled_index` 的磚來源[索引](index-class.md)
 
 *_Barrier*<br/>
-[Tile_barrier](tile-barrier-class.md)物件的建構`tiled_index`。
+已結構化 `tiled_index`的[tile_barrier](tile-barrier-class.md)物件。
 
 *_Other*<br/>
-`tile_index`要複製的物件以建構`tiled_index`。
+要複製到所結構 `tiled_index`的 `tile_index` 物件。
 
-## <a name="overloads"></a>Overloads
+### <a name="overloads"></a>Overloads
 
 |||
 |-|-|
 |名稱|描述|
-|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|初始化的新執行個體`tile_index`並排在全域座標和並排在區域座標的相對位置從索引類別。 `_Global`和`_Tile_origin`參數會經過計算。|
-|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|初始化的新執行個體`tile_index`藉由複製指定的類別`tiled_index`物件。|
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|從全域座標的磚索引和磚中的相對位置（區域座標），初始化 `tile_index` 類別的新實例。 系統會計算 `_Global` 和 `_Tile_origin` 參數。|
+|`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|藉由複製指定的 `tiled_index` 物件，初始化 `tile_index` 類別的新實例。|
 
-## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
+## <a name="tiled_index__get_tile_extent"></a>get_tile_extent
 
-傳回[程度](extent-class.md)的值的物件`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。
+傳回具有 `tiled_index` 樣板引數值 `_Dim0`、`_Dim1`和 `_Dim2`的[範圍](extent-class.md)物件。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 extent<rank> get_tile_extent()restrict(amp,cpu);
 ```
 
-## <a name="return-value"></a>傳回值
+### <a name="return-value"></a>傳回值
 
-`extent`的值的物件`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。
+`extent` 物件，其中包含 `tiled_index` 樣板引數的值 `_Dim0`、`_Dim1`和 `_Dim2`。
 
-## <a name="tiled_index__barrier"></a>  barrier
+## <a name="tiled_index__barrier"></a>屏障
 
-存放區[tile_barrier](tile-barrier-class.md)物件，表示執行緒之目前磚中的屏障。
+儲存代表目前線程磚中之屏障的[tile_barrier](tile-barrier-class.md)物件。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 const tile_barrier barrier;
 ```
 
-## <a name="tiled_index__global"></a>  global
+## <a name="tiled_index__global"></a>全域性
 
-存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示物件的全域索引。
+儲存次序1、2或3的[索引](index-class.md)物件，代表物件的全域索引。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  local
+## <a name="tiled_index__local"></a>本機
 
-存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示相對於索引中之目前磚[tiled_extent](tiled-extent-class.md)物件。
+儲存次序1、2或3的[索引](index-class.md)物件，代表[tiled_extent](tiled-extent-class.md)物件的目前磚中的相對索引。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 const index<rank> local;
 ```
 
-## <a name="tiled_index__rank"></a>  陣序規範
+## <a name="tiled_index__rank"></a>等級
 
-儲存的陣序`tiled_index`物件。
+儲存 `tiled_index` 物件的順位。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  tile
+## <a name="tiled_index__tile"></a>圖示
 
-存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示目前的圖格的座標[tiled_extent](tiled-extent-class.md)物件。
+儲存次序1、2或3的[索引](index-class.md)物件，表示[tiled_extent](tiled-extent-class.md)物件之目前磚的座標。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 const index<rank> tile;
 ```
 
-## <a name="tiled_index__tile_dim0"></a>  tile_dim0
+## <a name="tiled_index__tile_dim0"></a>tile_dim0
 
-儲存的最高有效維度的長度。
+儲存最重要維度的長度。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 static const int tile_dim0 = _Dim0;
 ```
 
-## <a name="tiled_index__tile_dim1"></a>  tile_dim1
+## <a name="tiled_index__tile_dim1"></a>tile_dim1
 
-儲存下一步 以最高有效維度的長度。
+儲存下一個最重要維度的長度。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 static const int tile_dim1 = _Dim1;
 ```
 
-## <a name="tiled_index__tile_dim2"></a>  tile_dim2
+## <a name="tiled_index__tile_dim2"></a>tile_dim2
 
-儲存最低有效維度的長度。
+儲存最不重要維度的長度。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 static const int tile_dim2 = _Dim2;
 ```
 
-## <a name="tiled_index__tile_origin"></a>  tile_origin
+## <a name="tiled_index__tile_origin"></a>tile_origin
 
-存放區[index](index-class.md)物件的陣序規範 1、 2 或 3，表示全域座標之原點的內目前的圖格[tiled_extent](tiled-extent-class.md)物件。
+儲存次序1、2或3的[索引](index-class.md)物件，代表[tiled_extent](tiled-extent-class.md)物件內目前磚的原點的全域座標。
 
-## <a name="syntax"></a>語法
+### <a name="syntax"></a>語法
 
-```
+```cpp
 const index<rank> tile_origin
 ```
 
-## <a name="tile_extent"></a>  tile_extent
-  取得[程度](extent-class.md)的值的物件`tiled_index`樣板引數`tiled_index`樣板引數`_Dim0`， `_Dim1`，和`_Dim2`。
+## <a name="tile_extent"></a>tile_extent
 
-## <a name="syntax"></a>語法
+取得具有 `tiled_index` 樣板引數值的[範圍](extent-class.md)物件，`tiled_index` 樣板引數 `_Dim0`、`_Dim1`和 `_Dim2`。
 
-```
+### <a name="syntax"></a>語法
+
+```cpp
 __declspec(property(get= get_tile_extent)) extent<rank> tile_extent;
 ```
 

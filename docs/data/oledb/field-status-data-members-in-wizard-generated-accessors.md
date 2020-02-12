@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: a6623cb02f14650d92e4adabed749b0b37725d45
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 41be62627d79c7207816818f09956a60e8b3facc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707552"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127648"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>在精靈產生的存取子中的欄位狀態資料成員
 
@@ -44,18 +44,18 @@ public:
    DBLENGTH m_dwAuthorLength;
    DBLENGTH m_dwYearBornLength;
 
-    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
-    SELECT \
-        AuID, \
-        Author, \
-        YearBorn \
-        FROM dbo.Authors")
+   DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+   SELECT \
+      AuID, \
+      Author, \
+      YearBorn \
+      FROM dbo.Authors")
 
-    BEGIN_COLUMN_MAP(CAuthorsAccessor)
-       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
-       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
-    END_COLUMN_MAP()
+   BEGIN_COLUMN_MAP(CAuthorsAccessor)
+      COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+      COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+   END_COLUMN_MAP()
 ...
 ```
 
@@ -66,7 +66,7 @@ public:
 
 您也可以使用狀態值來設定特定欄位的 NULL 值。 如果您想要將欄位值區分為 NULL 而非零，這樣做可為您提供協助。 您必須自行決定 NULL 是否為有效值或特殊值，並決定應用程式應該如何處理它。 OLE DB 會定義 DBSTATUS_S_ISNULL 作為指定泛型 NULL 值的正確方法。 如果消費者讀取資料且值為 Null，就會將狀態欄位設定為 DBSTATUS_S_ISNULL。 如果消費者想要設定 NULL 值，則消費者會先將狀態值設定為 DBSTATUS_S_ISNULL，然後再呼叫提供者。
 
-接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 您接著可以針對 DBSTATUSENUM 列舉值來比對非零狀態的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 [OLE DB 程式設計人員指南](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)中**繫結資料值**一節的**狀態**主題。 本主題包含在取得或設定資料時所使用的狀態值表格。 如需長度值的相關資訊，請參閱同一節中的**長度**主題。
+接下來，開啟 Oledb.h 並搜尋 DBSTATUSENUM。 您接著可以針對 DBSTATUSENUM 列舉值來比對非零狀態的數值。 如果列舉名稱不足以告訴您哪裡有錯誤，請參閱 **OLE DB 程式設計人員指南**中**繫結資料值**一節的[狀態](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)主題。 本主題包含在取得或設定資料時所使用的狀態值表格。 如需長度值的相關資訊，請參閱同一節中的**長度**主題。
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>擷取資料行的長度或狀態
 

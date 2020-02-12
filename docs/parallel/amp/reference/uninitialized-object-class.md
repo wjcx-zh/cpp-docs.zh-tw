@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: a977957fcb28a7f4c6c849c954026e2bda4e728c
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: ef7ded0bf925d3430b70064c4979b75e08f9cf45
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975149"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127695"
 ---
-# <a name="uninitializedobject-class"></a>uninitialized_object 類別
+# <a name="uninitialized_object-class"></a>uninitialized_object 類別
 
-使用未初始化的物件時擲回的例外狀況。
+當使用未初始化的物件時，所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class uninitialized_object : public runtime_exception;
 ```
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[uninitialized_object 建構函式](#uninitialized_object)|初始化 `uninitialized_object` 類別的新執行個體。|
+|[uninitialized_object 的構造函式](#uninitialized_object)|初始化 `uninitialized_object` 類別的新執行個體。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -43,17 +43,17 @@ class uninitialized_object : public runtime_exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amprt.h
+**標頭：** amprt。h
 
 **命名空間：** 並行
 
-## <a name="uninitialized_object"></a> uninitialized_object
+## <a name="uninitialized_object"></a>uninitialized_object
 
-建構的新執行個體`uninitialized_object`例外狀況。
+`uninitialized_object` 例外狀況的新實例。
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 explicit uninitialized_object(
     const char * _Message ) throw();
 
@@ -67,7 +67,7 @@ uninitialized_object() throw();
 
 ### <a name="return-value"></a>傳回值
 
-`uninitialized_object`例外狀況物件。
+`uninitialized_object` 的 exception 物件。
 
 ## <a name="see-also"></a>另請參閱
 

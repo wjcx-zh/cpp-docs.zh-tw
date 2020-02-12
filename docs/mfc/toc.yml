@@ -141,7 +141,7 @@
           href: recommendations-for-choosing-a-collection-class.md
         - name: 樣板型類別
           href: template-based-classes.md
-        - name: HOW TO：建立型別安全集合
+        - name: 作法：建立型別安全集合
           href: how-to-make-a-type-safe-collection.md
         - name: 存取集合的所有成員
           expanded: false
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 資料物件和資料來源：操作
               href: data-objects-and-data-sources-manipulation.md
-        - name: 拖放 (OLE)
-          expanded: false
-          items:
-            - name: 拖放 (OLE)
-              href: drag-and-drop-ole.md
-            - name: 拖放：實作置放來源
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 拖放：實作置放目標
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 拖放：自訂
-              href: drag-and-drop-customizing.md
+        - name: OLE 拖放
+          href: drag-and-drop-ole.md
         - name: 功能表和資源 (OLE)
           expanded: false
           items:
@@ -477,7 +468,7 @@
               items:
                 - name: 追蹤器：在您的 OLE 應用程式中實作追蹤器
                   href: trackers-implementing-trackers-in-your-ole-application.md
-                - name: HOW TO：在您的程式碼中實作追蹤
+                - name: 作法：在您的程式碼中實作追蹤
                   href: how-to-implement-tracking-in-your-code.md
                 - name: 拖放矩形和追蹤器
                   href: rubber-banding-and-trackers.md
@@ -1153,7 +1144,7 @@
               href: menu-sample-list.md
             - name: 在程式執行期間處理功能表
               href: manipulating-menus-during-program-execution.md
-            - name: HOW TO：更新使用者介面物件
+            - name: 作法：更新使用者介面物件
               expanded: false
               items:
                 - name: 作法：更新使用者介面物件
@@ -1216,9 +1207,9 @@
               href: how-to-customize-the-application-button.md
             - name: 作法：自訂快速存取工具列
               href: how-to-customize-the-quick-access-toolbar.md
-            - name: HOW TO：新增功能區控制項和事件處理常式
+            - name: 作法：新增功能區控制項和事件處理常式
               href: how-to-add-ribbon-controls-and-event-handlers.md
-            - name: HOW TO：從 MFC 應用程式載入功能區資源
+            - name: 作法：從 MFC 應用程式載入功能區資源
               href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
             - name: 逐步解說：使用 MFC 建立功能區應用程式
               href: walkthrough-creating-a-ribbon-application-by-using-mfc.md

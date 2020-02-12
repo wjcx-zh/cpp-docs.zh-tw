@@ -1,28 +1,28 @@
 ---
-title: HOW TO：轉換的 OpenMP 迴圈來使用並行執行階段使用例外狀況處理
+title: 如何：轉換使用例外狀況處理的 OpenMP 迴圈來使用並行執行階段
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 380a96eedb8a70965197c4a5ce0c5199bc268db5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296380"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141807"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>HOW TO：轉換的 OpenMP 迴圈來使用並行執行階段使用例外狀況處理
+# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>如何：轉換使用例外狀況處理的 OpenMP 迴圈來使用並行執行階段
 
-此範例示範如何將轉換 OpenMP[平行](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[如](../../parallel/openmp/reference/for-openmp.md)執行例外狀況處理，以使用並行執行階段例外狀況處理機制的迴圈。
+這個範例示範如何將執行例外狀況處理的 OpenMP [parallel](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[for](../../parallel/openmp/reference/for-openmp.md)迴圈轉換成使用並行執行階段的例外狀況處理機制。
 
-在 OpenMP 平行區域中會擲回的例外狀況必須攔截並處理相同的區域中的同一個執行緒。 根據預設，終止處理序的未處理的例外狀況處理常式會攔截到例外逸出平行區域。
+在 OpenMP 中，在平列區域中擲回的例外狀況必須在相同的區域中被攔截並處理，而且同一個執行緒也一樣。 未處理的例外狀況處理常式攔截到平列區域的例外狀況，這會在預設情況下終止進程。
 
-並行執行階段，當您擲回的例外狀況，例如將工作群組的工作函式主體中時[concurrency:: task_group](reference/task-group-class.md)或是[concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件，或這類的平行演算法[concurrency:: parallel_for](reference/concurrency-namespace-functions.md#parallel_for)，執行階段會儲存該例外狀況，並將它封送處理至等候工作群組或演算法來完成的內容。 針對工作群組，等候內容為呼叫的內容[2&gt;concurrency::task_group::wait&lt;2](reference/task-group-class.md#wait)， [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)， [concurrency::task_group::run_and_wait](reference/task-group-class.md#run_and_wait)，或[run_and_wait](reference/structured-task-group-class.md#run_and_wait)。 平行演算法，等候內容會為呼叫該演算法的內容。 執行階段也會停止在工作群組中，包括子工作群組中的所有作用中工作，並會捨棄任何尚未開始的工作。
+在並行執行階段中，當您在傳遞至工作組的工作函式主體中擲回例外狀況，例如[concurrency：： task_group](reference/task-group-class.md)或[concurrency：： structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)物件，或平行演算法（例如[concurrency：:p arallel_for](reference/concurrency-namespace-functions.md#parallel_for)）時，執行時間會儲存該例外狀況，並將其封送處理至等待工作組或演算法完成的內容。 針對工作組，等待內容是呼叫[concurrency：： task_group：： wait](reference/task-group-class.md#wait)， [concurrency：： structured_task_group：： wait](reference/structured-task-group-class.md#wait)， [concurrency：： task_group：： run_and_wait](reference/task-group-class.md#run_and_wait)，或[concurrency：](reference/structured-task-group-class.md#run_and_wait)： structured_task_group：： run_and_wait 的內容。 針對平行演算法，等待內容是呼叫該演算法的內容。 執行時間也會停止工作組中的所有作用中工作（包括子工作組中的工作），並捨棄尚未啟動的任何工作。
 
 ## <a name="example"></a>範例
 
-此範例示範如何處理例外狀況中的 OpenMP`parallel`區域並在呼叫`parallel_for`。 `do_work`函式會執行的記憶體配置要求不成功，因此會擲回例外狀況型別的[std:: bad_alloc](../../standard-library/bad-alloc-class.md)。 在使用 OpenMP 的版本，則會擲回例外狀況的執行緒必須也攔截它。 換句話說，OpenMP 平行迴圈的每個反覆項目必須處理的例外狀況。 在使用並行執行階段版本中，主執行緒會攔截另一個執行緒所擲回例外狀況。
+這個範例示範如何處理 OpenMP `parallel` 區域中的例外狀況，以及呼叫 `parallel_for`。 `do_work` 函式會執行不成功的記憶體配置要求，因此會擲回[std：： bad_alloc](../../standard-library/bad-alloc-class.md)類型的例外狀況。 在使用 OpenMP 的版本中，擲回例外狀況的執行緒也必須加以攔截。 換句話說，OpenMP 平行迴圈的每個反復專案都必須處理例外狀況。 在使用並行執行階段的版本中，主執行緒會攔截由另一個執行緒擲回的例外狀況。
 
 [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that-uses-exception-handling_1.cpp)]
 
@@ -44,19 +44,19 @@ Using the Concurrency Runtime...
 An error of type 'class std::bad_alloc' occurred.
 ```
 
-在此範例是使用 OpenMP 版本中，例外狀況會發生，且由每個迴圈反覆項目。 在使用並行執行階段版本中，執行階段儲存例外狀況、 停止所有作用中工作，會捨棄任何尚未啟動的工作和封送處理的例外狀況至呼叫的內容`parallel_for`。
+在使用 OpenMP 的這個範例版本中，會在中發生例外狀況，而且會由每個迴圈反復專案處理。 在使用並行執行階段的版本中，執行時間會儲存例外狀況、停止所有作用中的工作、捨棄尚未啟動的任何工作，並將例外狀況封送處理至呼叫 `parallel_for`的內容。
 
-如果您需要使用 OpenMP 的版本終止會發生例外狀況之後，您可以使用布林值旗標來通知其他迴圈反覆項目發生錯誤。 主題中範例所示[How to:轉換的 OpenMP 迴圈來使用並行執行階段，會使用取消](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)，如果設定此旗標，後續的迴圈反覆項目會執行任何動作。 相反地，如果您需要使用並行執行階段迴圈會繼續之後發生的例外狀況，處理平行迴圈主體本身中的例外狀況。
+如果您要求使用 OpenMP 的版本在例外狀況發生之後終止，您可以使用布林值旗標來指示發生錯誤的其他迴圈反覆運算。 如[如何：將使用取消的 OpenMP 迴圈轉換成使用並行執行階段](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)主題中的範例所示，如果設定了旗標，後續的迴圈反覆運算將不會執行任何動作。 相反地，如果您要求使用並行執行階段的迴圈會在例外狀況發生之後繼續，請在平行迴圈主體本身中處理例外狀況。
 
-並行執行階段，例如非同步代理程式和輕量型工作，其他元件不會傳輸例外狀況。 相反地，根據預設，終止處理序的未處理的例外狀況處理常式會攔截到未處理例外狀況。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
+並行執行階段的其他元件（例如非同步代理程式和輕量工作）不會傳輸例外狀況。 相反地，未處理的例外狀況處理常式會攔截未處理的例外狀況，這會在預設情況下終止進程。 如需例外狀況處理的詳細資訊，請參閱[例外狀況處理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)。
 
-如需詳細資訊`parallel_for`和其他平行演算法，請參閱 <<c2> [ 平行演算法](../../parallel/concrt/parallel-algorithms.md)。
+如需 `parallel_for` 和其他平行演算法的詳細資訊，請參閱[平行演算法](../../parallel/concrt/parallel-algorithms.md)。
 
 ## <a name="compiling-the-code"></a>編譯程式碼
 
-複製範例程式碼，並將它貼在 Visual Studio 專案中，或貼入名為的檔案中`concrt-omp-exceptions.cpp`，然後在 Visual Studio 命令提示字元 視窗中執行下列命令。
+複製範例程式碼，並將它貼入 Visual Studio 專案中，或貼入名為 `concrt-omp-exceptions.cpp` 的檔案中，然後在 [Visual Studio 命令提示字元] 視窗中執行下列命令。
 
-**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
+> **cl/EHsc/openmp concrt-omp-exceptions .cpp**
 
 ## <a name="see-also"></a>另請參閱
 

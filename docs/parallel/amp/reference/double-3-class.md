@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180356"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126691"
 ---
-# <a name="double3-class"></a>double_3 類別
+# <a name="double_3-class"></a>double_3 類別
 
-表示短向量的三個雙精度浮點數。
+代表三個雙精度浮點數的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class double_3;
 ```
 
@@ -101,102 +101,102 @@ class double_3;
 
 |名稱|描述|
 |----------|-----------------|
-|[double_3 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[double_3 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|double_3::get_x||
-|double_3::get_xy||
-|double_3::get_xyz||
-|double_3::get_xz||
-|double_3::get_xzy||
-|double_3::get_y||
-|double_3::get_yx||
-|double_3::get_yxz||
-|double_3::get_yz||
-|double_3::get_yzx||
-|double_3::get_z||
-|double_3::get_zx||
-|double_3::get_zxy||
-|double_3::get_zy||
-|double_3::get_zyx||
-|double_3::ref_b||
-|double_3::ref_g||
-|double_3::ref_r||
-|double_3::ref_x||
-|double_3::ref_y||
-|double_3::ref_z||
-|double_3::set_x||
-|double_3::set_xy||
-|double_3::set_xyz||
-|double_3::set_xz||
-|double_3::set_xzy||
-|double_3::set_y||
-|double_3::set_yx||
-|double_3::set_yxz||
-|double_3::set_yz||
-|double_3::set_yzx||
-|double_3::set_z||
-|double_3::set_zx||
-|double_3::set_zxy||
-|double_3::set_zy||
-|double_3::set_zyx||
+|double_3：： get_x||
+|double_3：： get_xy||
+|double_3：： get_xyz||
+|double_3：： get_xz||
+|double_3：： get_xzy||
+|double_3：： get_y||
+|double_3：： get_yx||
+|double_3：： get_yxz||
+|double_3：： get_yz||
+|double_3：： get_yzx||
+|double_3：： get_z||
+|double_3：： get_zx||
+|double_3：： get_zxy||
+|double_3：： get_zy||
+|double_3：： get_zyx||
+|double_3：： ref_b||
+|double_3：： ref_g||
+|double_3：： ref_r||
+|double_3：： ref_x||
+|double_3：： ref_y||
+|double_3：： ref_z||
+|double_3：： set_x||
+|double_3：： set_xy||
+|double_3：： set_xyz||
+|double_3：： set_xz||
+|double_3：： set_xzy||
+|double_3：： set_y||
+|double_3：： set_yx||
+|double_3：： set_yxz||
+|double_3：： set_yz||
+|double_3：： set_yzx||
+|double_3：： set_z||
+|double_3：： set_zx||
+|double_3：： set_zxy||
+|double_3：： set_zy||
+|double_3：： set_zyx||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|double_3::operator-||
-|double_3::operator--||
-|double_3::operator*=||
-|double_3::operator/=||
-|double_3::operator++||
-|double_3::operator+=||
-|double_3::operator=||
-|double_3::operator-=||
+|double_3：： operator-||
+|double_3：： operator--||
+|double_3：： operator * =||
+|double_3：： operator/=||
+|double_3：： operator + +||
+|double_3：： operator + =||
+|double_3：： operator =||
+|double_3：： operator-=||
 
 ### <a name="public-constants"></a>公用常數
 
 |名稱|描述|
 |----------|-----------------|
-|[常數的大小](#double_3__size)||
+|[大小常數](#double_3__size)||
 
 ### <a name="public-data-members"></a>公用資料成員
 
 |名稱|描述|
 |----------|-----------------|
-|double_3::b||
-|double_3::bg||
-|double_3::bgr||
-|double_3::br||
-|double_3::brg||
-|double_3::g||
-|double_3::gb||
-|double_3::gbr||
-|double_3::gr||
-|double_3::grb||
-|double_3::r||
-|double_3::rb||
-|double_3::rbg||
-|double_3::rg||
-|double_3::rgb||
-|double_3::x||
-|double_3::xy||
-|double_3::xyz||
-|double_3::xz||
-|double_3::xzy||
-|double_3::y||
-|double_3::yx||
-|double_3::yxz||
-|double_3::yz||
-|double_3::yzx||
-|double_3::z||
-|double_3::zx||
-|double_3::zxy||
-|double_3::zy||
-|double_3::zyx||
+|double_3：： b||
+|double_3：： bg||
+|double_3：： bgr||
+|double_3：： br||
+|double_3：： brg||
+|double_3：： g||
+|double_3：： gb||
+|double_3：： gbr||
+|double_3：： gr||
+|double_3：： grb||
+|double_3：： r||
+|double_3：： rb||
+|double_3：： rbg||
+|double_3：： rg||
+|double_3：： rgb||
+|double_3：： x||
+|double_3：： xy||
+|double_3：： xyz||
+|double_3：： xz||
+|double_3：： xzy||
+|double_3：： y||
+|double_3：： yx||
+|double_3：： yxz||
+|double_3：： yz||
+|double_3：： yzx||
+|double_3：： z||
+|double_3：： zx||
+|double_3：： zxy||
+|double_3：： zy||
+|double_3：： zyx||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -204,15 +204,15 @@ class double_3;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,23 +254,23 @@ explicit inline double_3(
 ### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V2*<br/>
-要初始化項目 2 的值。
+要初始化元素2的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-##  <a name="double_3__size"></a> 大小
+## <a name="double_3__size"></a>容量
 
-```
+```cpp
 static const int size = 3;
 ```
 

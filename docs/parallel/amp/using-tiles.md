@@ -2,12 +2,12 @@
 title: 使用磚
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518253"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126262"
 ---
 # <a name="using-tiles"></a>使用磚
 
@@ -15,7 +15,7 @@ ms.locfileid: "76518253"
 
 - `tile_static` 變數。 並排的主要優點是 `tile_static` 存取的效能提升。 存取 `tile_static` 記憶體中的資料，可能會比存取全域空間（`array` 或 `array_view` 物件）中的資料快很多。 系統會為每個磚建立 `tile_static` 變數的實例，而磚中的所有線程都可以存取該變數。 在一般的磚化演算法中，資料會從全域記憶體複製到 `tile_static` 記憶體，然後從 `tile_static` 記憶體中存取多次。
 
-- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 呼叫 `tile_barrier::wait` 會暫停執行目前的執行緒，直到相同磚中的所有線程都到達 `tile_barrier::wait`的呼叫為止。 您無法保證執行緒在中執行的順序，只有磚中的任何執行緒都不會在 `tile_barrier::wait` 的呼叫之後執行，直到所有線程都已達到呼叫為止。 這表示，藉由使用 `tile_barrier::wait` 方法，您可以依磚逐一執行工作，而不是逐執行緒。 一般的並排顯示演算法具有程式碼，可初始化整個磚的 `tile_static` 記憶體，然後再呼叫 `tile_barrer::wait`。 後面的程式碼 `tile_barrier::wait` 包含需要存取所有 `tile_static` 值的計算。
+- [tile_barrier：： Wait 方法](reference/tile-barrier-class.md#wait)。 呼叫 `tile_barrier::wait` 會暫停執行目前的執行緒，直到相同磚中的所有線程都到達 `tile_barrier::wait`的呼叫為止。 您無法保證執行緒在中執行的順序，只有磚中的任何執行緒都不會在 `tile_barrier::wait` 的呼叫之後執行，直到所有線程都已達到呼叫為止。 這表示，藉由使用 `tile_barrier::wait` 方法，您可以依磚逐一執行工作，而不是逐執行緒。 一般的並排顯示演算法具有程式碼，可初始化整個磚的 `tile_static` 記憶體，然後再呼叫 `tile_barrier::wait`。 後面的程式碼 `tile_barrier::wait` 包含需要存取所有 `tile_static` 值的計算。
 
 - 本機和全域索引。 您可以存取相對於整個 `array_view` 或 `array` 物件的執行緒索引，以及相對於磚的索引。 使用本機索引可以讓您的程式碼更容易讀取和 debug。 一般而言，您會使用本機索引來存取 `tile_static` 變數，以及用來存取 `array` 和 `array_view` 變數的全域索引。
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5
@@ -329,7 +329,7 @@ parallel_for_each(matrix.extent.tile<SAMPLESIZE, SAMPLESIZE>(),
 });
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [tile_static 關鍵字](../../cpp/tile-static-keyword.md)

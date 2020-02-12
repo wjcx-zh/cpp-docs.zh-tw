@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c9ec967be8be618e5f8ab3bad1bfd940bfeaef4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405426"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126301"
 ---
 # <a name="unorm-class"></a>unorm 類別
 
-代表 unorm 數字。 每個項目是浮點數中的範圍 [0.0，1.0 f]。
+代表 unorm 數位。 每個元素都是 [0.0 f，1.0 f] 範圍內的浮點數。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class unorm;
 ```
 
@@ -29,20 +29,20 @@ class unorm;
 
 |名稱|描述|
 |----------|-----------------|
-|[unorm 建構函式](#ctor)|多載。 預設建構函式。 將初始化為 0.0。|
+|[unorm 的構造函式](#ctor)|已多載。 預設建構函式。 初始化為 0.0 f。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|unorm::operator--||
-|unorm::operator float|轉換運算子。 將 unorm 號碼轉換為浮點值。|
-|unorm::operator*=||
-|unorm::operator/=||
-|unorm::operator++||
-|unorm::operator+=||
-|unorm::operator=||
-|unorm::operator-=||
+|unorm：： operator--||
+|unorm：： operator float|轉換運算子。 將 unorm 數位轉換成浮點值。|
+|unorm：： operator * =||
+|unorm：： operator/=||
+|unorm：： operator + +||
+|unorm：： operator + =||
+|unorm：： operator =||
+|unorm：： operator-=||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -50,15 +50,15 @@ class unorm;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> unorm
+## <a name="ctor"></a>unorm
 
-預設建構函式。 將初始化為 0.0。
+預設建構函式。 初始化為 0.0 f。
 
-```
+```cpp
 unorm(
     void) restrict(amp,
     cpu);
@@ -94,7 +94,7 @@ inline explicit unorm(
 用來初始化的值。
 
 *_Other*<br/>
-Norm 物件，用來初始化。
+用來初始化的標準物件。
 
 ## <a name="see-also"></a>另請參閱
 

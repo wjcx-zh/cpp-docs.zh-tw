@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337501"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142324"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 結構
 
@@ -27,7 +27,7 @@ ms.locfileid: "62337501"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 struct IScheduler;
 ```
 
@@ -37,17 +37,17 @@ struct IScheduler;
 
 |名稱|描述|
 |----------|-----------------|
-|[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|提供一組的虛擬處理器根排程器，供其使用。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行排程器代表工作的權限。|
-|[IScheduler::GetId](#getid)|排程器傳回的唯一識別碼。|
-|[IScheduler::GetPolicy](#getpolicy)|傳回排程器原則的複本。 如需有關排程器原則的詳細資訊，請參閱 < [SchedulerPolicy](schedulerpolicy-class.md)。|
-|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。|
-|[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。|
-|[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|起始移除的先前配置給這個排程器的虛擬處理器根。|
-|[IScheduler::Statistics](#statistics)|提供工作從抵達到完成率，以及變更佇列長度的排程器的相關資訊。|
+|[IScheduler：： AddVirtualProcessors](#addvirtualprocessors)|提供具有一組虛擬處理器根的排程器，供其使用。 每個 `IVirtualProcessorRoot` 介面都代表執行可代表排程器執行工作之單一執行緒的許可權。|
+|[IScheduler：： GetId](#getid)|傳回排程器的唯一識別碼。|
+|[IScheduler：： GetPolicy](#getpolicy)|傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。|
+|[IScheduler：： NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|通知此排程器，由 `ppVirtualProcessorRoots` 陣列中的虛擬處理器根集合所代表的硬體執行緒目前正由其他排程器使用中。|
+|[IScheduler：： NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|通知此排程器，由 `ppVirtualProcessorRoots` 陣列中的虛擬處理器根集合所代表的硬體執行緒，不是由其他排程器所使用。|
+|[IScheduler：： RemoveVirtualProcessors](#removevirtualprocessors)|起始移除先前配置給此排程器的虛擬處理器根。|
+|[IScheduler：： Statistics](#statistics)|提供工作抵達和完成率的相關資訊，以及排程器的佇列長度變更。|
 
 ## <a name="remarks"></a>備註
 
-如果您要實作自訂的排程器進行通訊與 Resource Manager 中，您應該提供實作`IScheduler`介面。 這個介面是通訊的雙向的排程器與 Resource Manager 之間通道的一端。 所代表之另一端`IResourceManager`和`ISchedulerProxy`實作資源管理員的介面。
+如果您要執行與 Resource Manager 通訊的自訂排程器，您應該提供 `IScheduler` 介面的執行。 這個介面是排程器與 Resource Manager 之間通訊雙向通道的一端。 另一端則是由 Resource Manager 所執行的 `IResourceManager` 和 `ISchedulerProxy` 介面所表示。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -55,15 +55,15 @@ struct IScheduler;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrtrm.h
+**標頭：** concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="addvirtualprocessors"></a>  Ischeduler:: Addvirtualprocessors 方法
+## <a name="addvirtualprocessors"></a>IScheduler：： AddVirtualProcessors 方法
 
-提供一組的虛擬處理器根排程器，供其使用。 每個`IVirtualProcessorRoot`介面代表執行單一執行緒可以執行排程器代表工作的權限。
+提供具有一組虛擬處理器根的排程器，供其使用。 每個 `IVirtualProcessorRoot` 介面都代表執行可代表排程器執行工作之單一執行緒的許可權。
 
-```
+```cpp
 virtual void AddVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -72,38 +72,38 @@ virtual void AddVirtualProcessors(
 ### <a name="parameters"></a>參數
 
 *ppVirtualProcessorRoots*<br/>
-陣列`IVirtualProcessorRoot`介面代表虛擬處理器根新增至排程器。
+`IVirtualProcessorRoot` 介面的陣列，代表要加入至排程器的虛擬處理器根。
 
-*count*<br/>
-數目`IVirtualProcessorRoot`陣列中的介面。
+*計數*<br/>
+陣列中的 `IVirtualProcessorRoot` 介面數目。
 
 ### <a name="remarks"></a>備註
 
-資源管理員會叫用`AddVirtualProcessor`授與一組初始的虛擬處理器根排程器的方法。 它也能叫用的方法來新增至排程器的虛擬處理器根，當重新平衡排程器之間的資源。
+Resource Manager 會叫用 `AddVirtualProcessor` 方法，將初始的虛擬處理器根集合授與排程器。 它也可以叫用方法，以便在排程器之間重新平衡資源時，將虛擬處理器根新增至排程器。
 
-##  <a name="getid"></a>  Ischeduler:: Getid 方法
+## <a name="getid"></a>IScheduler：： GetId 方法
 
-排程器傳回的唯一識別碼。
+傳回排程器的唯一識別碼。
 
-```
+```cpp
 virtual unsigned int GetId() const = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-的唯一整數識別碼。
+唯一的整數識別碼。
 
 ### <a name="remarks"></a>備註
 
-您應該使用[GetSchedulerId](concurrency-namespace-functions.md)函式來取得實作之物件的唯一識別碼`IScheduler`介面，才能使用此介面做為方法的參數提供資源管理員。 您應該會傳回相同的識別項時`GetId`函式會叫用。
+在使用介面做為 Resource Manager 所提供之方法的參數之前，您應該使用[GetSchedulerId](concurrency-namespace-functions.md)函式來取得用來執行 `IScheduler` 介面之物件的唯一識別碼。 叫用 `GetId` 函式時，您應該會傳回相同的識別碼。
 
 從不同來源取得的識別碼可能會導致未定義的行為。
 
-##  <a name="getpolicy"></a>  Ischeduler:: Getpolicy 方法
+## <a name="getpolicy"></a>IScheduler：： GetPolicy 方法
 
-傳回排程器原則的複本。 如需有關排程器原則的詳細資訊，請參閱 < [SchedulerPolicy](schedulerpolicy-class.md)。
+傳回排程器原則的複本。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
@@ -111,11 +111,11 @@ virtual SchedulerPolicy GetPolicy() const = 0;
 
 排程器原則的複本。
 
-##  <a name="notifyresourcesexternallybusy"></a>  Ischeduler:: Notifyresourcesexternallybusy 方法
+## <a name="notifyresourcesexternallybusy"></a>IScheduler：： NotifyResourcesExternallyBusy 方法
 
-這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`現在正由其他排程器。
+通知此排程器，由 `ppVirtualProcessorRoots` 陣列中的虛擬處理器根集合所代表的硬體執行緒目前正由其他排程器使用中。
 
-```
+```cpp
 virtual void NotifyResourcesExternallyBusy(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -124,26 +124,26 @@ virtual void NotifyResourcesExternallyBusy(
 ### <a name="parameters"></a>參數
 
 *ppVirtualProcessorRoots*<br/>
-陣列`IVirtualProcessorRoot`的其他排程器已變得忙碌的硬體執行緒相關聯的介面。
+與其他排程器已忙碌之硬體執行緒相關聯 `IVirtualProcessorRoot` 介面的陣列。
 
-*count*<br/>
-數目`IVirtualProcessorRoot`陣列中的介面。
+*計數*<br/>
+陣列中的 `IVirtualProcessorRoot` 介面數目。
 
 ### <a name="remarks"></a>備註
 
-可以同時指派給多個排程器的特定的硬體執行緒。 這個的其中一個原因可能是沒有足夠的硬體執行緒系統的所有排程器，滿足最小的並行存取，而不會共用資源上。 另一個可能性是，資源會暫時指派給其他排程器擁有的排程器未使用時，透過在已停用該硬體執行緒在其所有的虛擬處理器根。
+可以同時將特定硬體執行緒指派給多個排程器。 其中一個原因可能是系統上沒有足夠的硬體執行緒可滿足所有排程器的最小並行處理，而不需要共用資源。 另一個可能的原因是，當擁有的排程器未使用這些資源時，就會暫時將其指派給其他排程器，方法是將該硬體執行緒上的所有虛擬處理器根都停用。
 
-硬體執行緒的訂用帳戶層級以訂閱的執行緒數目，並啟動該硬體執行緒相關聯的虛擬處理器根。 從特定的排程器的觀點來看，硬體執行緒的外部的訂用帳戶層級會是其他排程器所參與的訂用帳戶的一部分。 資源是外部忙碌的通知會傳送至排程器中，當從零到正數的國家/地區的硬體執行緒的外部的訂用帳戶層級移動時。
+硬體執行緒的訂用帳戶層級是以訂閱的執行緒數目表示，並已啟動與該硬體執行緒相關聯的虛擬處理器根。 從特定排程器的觀點來看，硬體執行緒的外部訂用帳戶層級是其他排程器所貢獻之訂用帳戶的一部分。 當硬體執行緒的外部訂用帳戶層級從零移到正面的區域時，系統會將資源在外部忙碌的通知傳送至排程器。
 
-透過這種方式的通知只傳送給原則之排程器位置的值`MinConcurrency`原則機碼的值等於`MaxConcurrency`原則金鑰。 如需有關排程器原則的詳細資訊，請參閱 < [SchedulerPolicy](schedulerpolicy-class.md)。
+透過此方法的通知只會傳送至具有原則的排程器，其中 `MinConcurrency` 原則索引鍵的值等於 `MaxConcurrency` 原則索引鍵的值。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。
 
-符合資格的訂閱通知的排程器取得一組初始的通知建立時，通知它只被指派的資源是否為外部忙碌或閒置。
+合格通知的排程器會在建立時取得一組初始通知，通知它剛指派的資源是否為外部忙碌或閒置。
 
-##  <a name="notifyresourcesexternallyidle"></a>  Ischeduler:: Notifyresourcesexternallyidle 方法
+## <a name="notifyresourcesexternallyidle"></a>IScheduler：： NotifyResourcesExternallyIdle 方法
 
-這個陣列中的虛擬處理器根物件的集合所代表的硬體執行緒的排程器會通知`ppVirtualProcessorRoots`不正由其他排程器。
+通知此排程器，由 `ppVirtualProcessorRoots` 陣列中的虛擬處理器根集合所代表的硬體執行緒，不是由其他排程器所使用。
 
-```
+```cpp
 virtual void NotifyResourcesExternallyIdle(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -152,26 +152,26 @@ virtual void NotifyResourcesExternallyIdle(
 ### <a name="parameters"></a>參數
 
 *ppVirtualProcessorRoots*<br/>
-陣列`IVirtualProcessorRoot`的其他排程器已成為閒置的硬體執行緒相關聯的介面。
+與其他排程器已閒置之硬體執行緒相關聯 `IVirtualProcessorRoot` 介面的陣列。
 
-*count*<br/>
-數目`IVirtualProcessorRoot`陣列中的介面。
+*計數*<br/>
+陣列中的 `IVirtualProcessorRoot` 介面數目。
 
 ### <a name="remarks"></a>備註
 
-可以同時指派給多個排程器的特定的硬體執行緒。 這個的其中一個原因可能是沒有足夠的硬體執行緒系統的所有排程器，滿足最小的並行存取，而不會共用資源上。 另一個可能性是，資源會暫時指派給其他排程器擁有的排程器未使用時，透過在已停用該硬體執行緒在其所有的虛擬處理器根。
+可以同時將特定硬體執行緒指派給多個排程器。 其中一個原因可能是系統上沒有足夠的硬體執行緒可滿足所有排程器的最小並行處理，而不需要共用資源。 另一個可能的原因是，當擁有的排程器未使用這些資源時，就會暫時將其指派給其他排程器，方法是將該硬體執行緒上的所有虛擬處理器根都停用。
 
-硬體執行緒的訂用帳戶層級以訂閱的執行緒數目，並啟動該硬體執行緒相關聯的虛擬處理器根。 從特定的排程器的觀點來看，硬體執行緒的外部的訂用帳戶層級會是其他排程器所參與的訂用帳戶的一部分。 資源是外部忙碌的通知會傳送至排程器中，當硬體執行緒的外部的訂用帳戶層級降為從上一個正值的零。
+硬體執行緒的訂用帳戶層級是以訂閱的執行緒數目表示，並已啟動與該硬體執行緒相關聯的虛擬處理器根。 從特定排程器的觀點來看，硬體執行緒的外部訂用帳戶層級是其他排程器所貢獻之訂用帳戶的一部分。 當硬體執行緒的外部訂用帳戶層級從先前的正值降到零時，系統會將資源從外部忙碌的通知傳送至排程器。
 
-透過這種方式的通知只傳送給原則之排程器位置的值`MinConcurrency`原則機碼的值等於`MaxConcurrency`原則金鑰。 如需有關排程器原則的詳細資訊，請參閱 < [SchedulerPolicy](schedulerpolicy-class.md)。
+透過此方法的通知只會傳送至具有原則的排程器，其中 `MinConcurrency` 原則索引鍵的值等於 `MaxConcurrency` 原則索引鍵的值。 如需排程器原則的詳細資訊，請參閱[SchedulerPolicy](schedulerpolicy-class.md)。
 
-符合資格的訂閱通知的排程器取得一組初始的通知建立時，通知它只被指派的資源是否為外部忙碌或閒置。
+合格通知的排程器會在建立時取得一組初始通知，通知它剛指派的資源是否為外部忙碌或閒置。
 
-##  <a name="removevirtualprocessors"></a>  Ischeduler:: Removevirtualprocessors 方法
+## <a name="removevirtualprocessors"></a>IScheduler：： RemoveVirtualProcessors 方法
 
-起始移除的先前配置給這個排程器的虛擬處理器根。
+起始移除先前配置給此排程器的虛擬處理器根。
 
-```
+```cpp
 virtual void RemoveVirtualProcessors(
     _In_reads_(count) IVirtualProcessorRoot** ppVirtualProcessorRoots,
     unsigned int count) = 0;
@@ -180,22 +180,22 @@ virtual void RemoveVirtualProcessors(
 ### <a name="parameters"></a>參數
 
 *ppVirtualProcessorRoots*<br/>
-陣列`IVirtualProcessorRoot`介面代表要移除的虛擬處理器根。
+`IVirtualProcessorRoot` 介面的陣列，代表要移除的虛擬處理器根。
 
-*count*<br/>
-數目`IVirtualProcessorRoot`陣列中的介面。
+*計數*<br/>
+陣列中的 `IVirtualProcessorRoot` 介面數目。
 
 ### <a name="remarks"></a>備註
 
-資源管理員會叫用`RemoveVirtualProcessors`才會傳回一組的虛擬處理器根排程器的方法。 排程器所要叫用[移除](iexecutionresource-structure.md#remove)與虛擬處理器根完成時，每個介面上的方法。 請勿使用`IVirtualProcessorRoot`一旦您有叫用的介面`Remove`在其上的方法。
+Resource Manager 會叫用 `RemoveVirtualProcessors` 方法，從排程器中取回一組虛擬處理器根。 排程器應該在每個介面上使用虛擬處理器根完成時，叫用[Remove](iexecutionresource-structure.md#remove)方法。 一旦您在其上叫用了 `Remove` 方法，請不要使用 `IVirtualProcessorRoot` 介面。
 
-參數`ppVirtualProcessorRoots`指向之介面的陣列。 要移除的虛擬處理器根組，根憑證永遠不會啟用可立即使用傳回`Remove`方法。 在根目錄中，已啟動和執行工作，或已遭停用且正在等候工作抵達，應該以非同步方式傳回。 排程器必須將每個嘗試盡快移除虛擬處理器根。 延遲移除的虛擬處理器根，可能會導致非預期的過度訂閱，排程器內。
+參數 `ppVirtualProcessorRoots` 指向介面的陣列。 在要移除的虛擬處理器根集合中，永遠都不會使用 `Remove` 方法來立即傳回根。 應該以非同步方式傳回已啟用且正在執行工作，或已停用並等候工作抵達的根。 排程器必須每次嘗試移除虛擬處理器根，才能儘快進行。 延遲移除虛擬處理器根可能會導致排程器內有意外的過度訂閱。
 
-##  <a name="statistics"></a>  Ischeduler:: Statistics 方法
+## <a name="statistics"></a>IScheduler：： Statistics 方法
 
-提供工作從抵達到完成率，以及變更佇列長度的排程器的相關資訊。
+提供工作抵達和完成率的相關資訊，以及排程器的佇列長度變更。
 
-```
+```cpp
 virtual void Statistics(
     _Out_ unsigned int* pTaskCompletionRate,
     _Out_ unsigned int* pTaskArrivalRate,
@@ -205,21 +205,21 @@ virtual void Statistics(
 ### <a name="parameters"></a>參數
 
 *pTaskCompletionRate*<br/>
-完成時排程器自上次呼叫這個方法的工作數目。
+排程器自上次呼叫這個方法之後已經完成的工作數目。
 
 *pTaskArrivalRate*<br/>
-自上次呼叫這個方法會進入排程器中的工作數目。
+自上次呼叫這個方法之後，已抵達排程器的工作數目。
 
 *pNumberOfTasksEnqueued*<br/>
-所有的排程器佇列中的工作總數。
+所有排程器佇列中的工作總數。
 
 ### <a name="remarks"></a>備註
 
-若要收集統計資料的排程器是叫用這個方法由資源管理員。 這裡所收集的統計資料將用來動態回應的演算法，來判斷將指派給排程器的 更多資源的適當，以及何時會佔用資源的磁碟機中。 排程器所提供的值可以是開放式，並不一定需要精確反映目前的計數。
+這個方法是由 Resource Manager 叫用，以便收集排程器的統計資料。 此處收集的統計資料將用來驅動動態的意見演算法，以判斷何時適當地將更多資源指派給排程器，以及何時要讓資源消失。 排程器所提供的值可以是開放式的，不一定需要正確反映目前的計數。
 
-如果您希望資源管理員使用像是工作抵達這類事件的意見反應，決定如何在您的排程器與資源管理員中註冊的其他排程器之間平衡資源，則應該實作這個方法。 如果您選擇不要收集統計資料，您可以設定原則金鑰`DynamicProgressFeedback`的值`DynamicProgressFeedbackDisabled`在您的排程器原則和資源管理員不會叫用您的排程器上的這個方法。
+如果您希望資源管理員使用像是工作抵達這類事件的意見反應，決定如何在您的排程器與資源管理員中註冊的其他排程器之間平衡資源，則應該實作這個方法。 如果您選擇不收集統計資料，您可以將原則索引鍵 `DynamicProgressFeedback` 設定為排程器原則中 `DynamicProgressFeedbackDisabled` 值，而 Resource Manager 不會在您的排程器上叫用此方法。
 
-如果沒有使用的統計資訊，Resource Manager 會使用硬體執行緒的訂用帳戶層級來決定資源配置和移轉。 如需有關訂用帳戶層級的詳細資訊，請參閱[iexecutionresource:: Currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)。
+如果沒有統計資訊，Resource Manager 將會使用硬體執行緒訂用帳戶層級來進行資源配置和遷移決策。 如需訂用帳戶層級的詳細資訊，請參閱[IExecutionResource：： CurrentSubscriptionLevel](iexecutionresource-structure.md#currentsubscriptionlevel)。
 
 ## <a name="see-also"></a>另請參閱
 

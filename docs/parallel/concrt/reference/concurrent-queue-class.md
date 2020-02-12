@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 7f87ead486d635c933ad356f9868c22344601eda
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 4e913af40b2218da5699da2659ec2e9189e32994
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298614"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143208"
 ---
 # <a name="concurrent_queue-class"></a>concurrent_queue 類別
 
@@ -29,12 +29,12 @@ ms.locfileid: "75298614"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<typename T, class _Ax>
 class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
 要儲存在佇列中之元素的資料類型。
@@ -42,11 +42,11 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 *_Ax*<br/>
 代表預存配置器物件的類型，其會封裝此並行佇列之記憶體配置和解除配置的詳細資料。 這個引數是選擇性的，而且預設值是 `allocator<T>`。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-typedefs"></a>公用 Typedefs
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |`allocator_type`|代表並行佇列之配置器類別的類型。|
 |`const_iterator`|一種類型，代表並行佇列中專案上的非安全線程 `const` 反覆運算器。|
@@ -59,29 +59,29 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
-|[concurrent_queue](#ctor)|多載。 構造並行佇列。|
+|[concurrent_queue](#ctor)|已多載。 構造並行佇列。|
 |[~ concurrent_queue 的析構函式](#dtor)|損毀並行佇列。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
-|[clear](#clear)|清除並行佇列，終結任何目前已排入佇列的元素。 這個方法不是並行安全的。|
+|[清除](#clear)|清除並行佇列，終結任何目前已排入佇列的元素。 這個方法不是並行安全的。|
 |[empty](#empty)|測試呼叫這個方法時，並行佇列是否為空白。 這個方法是並行安全的。|
 |[get_allocator](#get_allocator)|傳回用來建立並行佇列之配置器的複本。 這個方法是並行安全的。|
-|[push](#push)|多載。 將並行佇列結尾處的專案。 這個方法是並行安全的。|
+|[push](#push)|已多載。 將並行佇列結尾處的專案。 這個方法是並行安全的。|
 |[try_pop](#try_pop)|從佇列中清除專案（如果有的話）。 這個方法是並行安全的。|
-|[unsafe_begin](#unsafe_begin)|多載。 傳回 `iterator` 類型或 `const_iterator` 到並行佇列開頭的反覆運算器。 這個方法不是並行安全的。|
-|[unsafe_end](#unsafe_end)|多載。 傳回 `iterator` 類型或 `const_iterator` 到並行佇列結尾的反覆運算器。 這個方法不是並行安全的。|
+|[unsafe_begin](#unsafe_begin)|已多載。 傳回 `iterator` 類型或 `const_iterator` 到並行佇列開頭的反覆運算器。 這個方法不是並行安全的。|
+|[unsafe_end](#unsafe_end)|已多載。 傳回 `iterator` 類型或 `const_iterator` 到並行佇列結尾的反覆運算器。 這個方法不是並行安全的。|
 |[unsafe_size](#unsafe_size)|傳回佇列中的專案數。 這個方法不是並行安全的。|
 
 ## <a name="remarks"></a>備註
 
 如需詳細資訊，請參閱[平行容器和物件](../../../parallel/concrt/parallel-containers-and-objects.md)。
 
-## <a name="inheritance-hierarchy"></a>繼承階層架構
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `concurrent_queue`
 
@@ -91,19 +91,19 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 **命名空間：** concurrency
 
-##  <a name="clear"></a>明確
+## <a name="clear"></a>明確
 
 清除並行佇列，終結任何目前已排入佇列的元素。 這個方法不是並行安全的。
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a>concurrent_queue
+## <a name="ctor"></a>concurrent_queue
 
 構造並行佇列。
 
-```
+```cpp
 explicit concurrent_queue(
     const allocator_type& _Al = allocator_type());
 
@@ -149,19 +149,19 @@ concurrent_queue(_InputIterator _Begin,
 
 第四個函式會指定反覆運算器範圍 [`_Begin`，`_End`）所提供的值。
 
-##  <a name="dtor"></a>~ concurrent_queue
+## <a name="dtor"></a>~ concurrent_queue
 
 損毀並行佇列。
 
-```
+```cpp
 ~concurrent_queue();
 ```
 
-##  <a name="empty"></a>空
+## <a name="empty"></a>空
 
 測試呼叫這個方法時，並行佇列是否為空白。 這個方法是並行安全的。
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -173,11 +173,11 @@ bool empty() const;
 
 雖然這個方法在並行處理方面是安全的，但對於 `push`、`try_pop`和 `empty`的方法呼叫而言，傳回的值可能會因呼叫執行緒檢查的時間而不正確。
 
-##  <a name="get_allocator"></a>get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 傳回用來建立並行佇列之配置器的複本。 這個方法是並行安全的。
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -185,11 +185,11 @@ allocator_type get_allocator() const;
 
 用來建立並行佇列的配置器複本。
 
-##  <a name="push"></a>式
+## <a name="push"></a>式
 
 將並行佇列結尾處的專案。 這個方法是並行安全的。
 
-```
+```cpp
 void push(const T& _Src);
 
 void push(T&& _Src);
@@ -204,11 +204,11 @@ void push(T&& _Src);
 
 `push` 對於 `push`、`try_pop`和 `empty`方法的呼叫而言，是並行安全的。
 
-##  <a name="try_pop"></a>try_pop
+## <a name="try_pop"></a>try_pop
 
 從佇列中清除專案（如果有的話）。 這個方法是並行安全的。
 
-```
+```cpp
 bool try_pop(T& _Dest);
 ```
 
@@ -227,11 +227,11 @@ bool try_pop(T& _Dest);
 
 `try_pop` 對於 `push`、`try_pop`和 `empty`方法的呼叫而言，是並行安全的。
 
-##  <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 傳回 `iterator` 類型或 `const_iterator` 到並行佇列開頭的反覆運算器。 這個方法不是並行安全的。
 
-```
+```cpp
 iterator unsafe_begin();
 
 const_iterator unsafe_begin() const;
@@ -245,11 +245,11 @@ const_iterator unsafe_begin() const;
 
 `concurrent_queue` 類別的反覆運算器主要是用來進行偵錯工具，因為它們的速度很慢，而且反覆運算與其他佇列作業無關，而不是並行安全。
 
-##  <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 傳回 `iterator` 類型或 `const_iterator` 到並行佇列結尾的反覆運算器。 這個方法不是並行安全的。
 
-```
+```cpp
 iterator unsafe_end();
 
 const_iterator unsafe_end() const;
@@ -263,11 +263,11 @@ const_iterator unsafe_end() const;
 
 `concurrent_queue` 類別的反覆運算器主要是用來進行偵錯工具，因為它們的速度很慢，而且反覆運算與其他佇列作業無關，而不是並行安全。
 
-##  <a name="unsafe_size"></a>unsafe_size
+## <a name="unsafe_size"></a>unsafe_size
 
 傳回佇列中的專案數。 這個方法不是並行安全的。
 
-```
+```cpp
 size_type unsafe_size() const;
 ```
 
@@ -279,6 +279,6 @@ size_type unsafe_size() const;
 
 `unsafe_size` 不是並行安全的，而且如果同時呼叫 `push`、`try_pop`和 `empty`方法時，就會產生不正確的結果。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fed33c198502b75e824bcaf698227d283f4b85f9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337321"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142743"
 ---
 # <a name="schedulerpolicy-class"></a>SchedulerPolicy 類別
 
@@ -24,7 +24,7 @@ ms.locfileid: "62337321"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class SchedulerPolicy;
 ```
 
@@ -34,26 +34,26 @@ class SchedulerPolicy;
 
 |名稱|描述|
 |----------|-----------------|
-|[SchedulerPolicy](#ctor)|多載。 建構新的排程器原則，並填入值[原則金鑰](concurrency-namespace-enums.md)並行執行階段排程器和 Resource Manager 所支援。|
-|[~ SchedulerPolicy 解構函式](#dtor)|終結排程器原則。|
+|[SchedulerPolicy](#ctor)|已多載。 會建立新的排程器原則，並將並行執行階段排程器和 Resource Manager 所支援的[原則金鑰](concurrency-namespace-enums.md)值填入其中。|
+|[~ SchedulerPolicy 的析構函式](#dtor)|終結排程器原則。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[GetPolicyValue](#getpolicyvalue)|原則索引鍵的值當做提供的擷取`key`參數。|
-|[SetConcurrencyLimits](#setconcurrencylimits)|同時設定`MinConcurrency`並`MaxConcurrency`上的原則`SchedulerPolicy`物件。|
-|[SetPolicyValue](#setpolicyvalue)|為提供的原則機碼值組`key`參數並傳回最舊的值。|
+|[GetPolicyValue](#getpolicyvalue)|抓取提供做為 `key` 參數之原則金鑰的值。|
+|[SetConcurrencyLimits](#setconcurrencylimits)|同時設定 `SchedulerPolicy` 物件的 `MinConcurrency` 和 `MaxConcurrency` 原則。|
+|[SetPolicyValue](#setpolicyvalue)|將提供的原則金鑰值設定為 `key` 參數，並傳回舊值。|
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|[operator=](#operator_eq)|指派給另一個排程器原則的排程器原則。|
+|[operator=](#operator_eq)|從另一個排程器原則指派排程器原則。|
 
 ## <a name="remarks"></a>備註
 
-如需有關可以使用來控制原則`SchedulerPolicy`類別，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。
+如需可使用 `SchedulerPolicy` 類別來控制之原則的詳細資訊，請參閱[PolicyElementKey](concurrency-namespace-enums.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -61,36 +61,36 @@ class SchedulerPolicy;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h，concrtrm.h
+**標頭：** concrt .h，concrtrm.h。h
 
 **命名空間：** concurrency
 
-##  <a name="getpolicyvalue"></a> GetPolicyValue
+## <a name="getpolicyvalue"></a>GetPolicyValue
 
-原則索引鍵的值當做提供的擷取`key`參數。
+抓取提供做為 `key` 參數之原則金鑰的值。
 
-```
+```cpp
 unsigned int GetPolicyValue(PolicyElementKey key) const;
 ```
 
 ### <a name="parameters"></a>參數
 
 *key*<br/>
-要擷取的值的原則金鑰。
+要為其取得值的原則索引鍵。
 
 ### <a name="return-value"></a>傳回值
 
-如果所指定的索引鍵`key`支援參數、 索引鍵的原則值轉換成`unsigned int`。
+如果支援 `key` 參數所指定的索引鍵，則會將索引鍵的原則值轉換成 `unsigned int`。
 
 ### <a name="remarks"></a>備註
 
-方法會擲回[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)無效的原則機碼。
+方法將會擲回無效原則金鑰的[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) 。
 
-##  <a name="operator_eq"></a> 運算子 =
+## <a name="operator_eq"></a>operator =
 
-指派給另一個排程器原則的排程器原則。
+從另一個排程器原則指派排程器原則。
 
-```
+```cpp
 SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 ```
 
@@ -107,11 +107,11 @@ SchedulerPolicy& operator= (const SchedulerPolicy& _RhsPolicy);
 
 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。
 
-##  <a name="ctor"></a> SchedulerPolicy
+## <a name="ctor"></a>SchedulerPolicy
 
-建構新的排程器原則，並填入值[原則金鑰](concurrency-namespace-enums.md)並行執行階段排程器和 Resource Manager 所支援。
+會建立新的排程器原則，並將並行執行階段排程器和 Resource Manager 所支援的[原則金鑰](concurrency-namespace-enums.md)值填入其中。
 
-```
+```cpp
 SchedulerPolicy();
 
 SchedulerPolicy(
@@ -125,32 +125,32 @@ SchedulerPolicy(
 ### <a name="parameters"></a>參數
 
 *_PolicyKeyCount*<br/>
-這些索引鍵/值組的`_PolicyKeyCount`參數。
+遵循 `_PolicyKeyCount` 參數的索引鍵/值組數目。
 
 *_SrcPolicy*<br/>
 要複製的來源原則。
 
 ### <a name="remarks"></a>備註
 
-第一個建構函式會建立新的排程器原則，其中所有的原則將會初始化為其預設值。
+第一個函式會建立新的排程器原則，其中所有的原則都會初始化為其預設值。
 
-第二個建構函式會建立新的排程器原則，會使用名為參數樣式的初始化。 值之後`_PolicyKeyCount`參數會提供做為索引鍵/值組。 這個建構函式中未指定任何原則金鑰會有其預設值。 這個建構函式可能會擲回例外狀況[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)， [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)或[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md).
+第二個函式會建立新的排程器原則，使用初始化的具名引數樣式。 `_PolicyKeyCount` 參數之後的值會以索引鍵/值組的形式提供。 未在此函式中指定的任何原則金鑰都會有其預設值。 此函式可能會擲回例外狀況[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)、 [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)或[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)。
 
-第三個建構函式是複製建構函式。 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。
+第三個函式是複製的函式。 通常，定義新的排程器原則最方便的方法是複製現有的原則，並使用 `SetPolicyValue` 或 `SetConcurrencyLimits` 方法修改。
 
-##  <a name="dtor"></a> ~SchedulerPolicy
+## <a name="dtor"></a>~ SchedulerPolicy
 
 終結排程器原則。
 
-```
+```cpp
 ~SchedulerPolicy();
 ```
 
-##  <a name="setconcurrencylimits"></a> SetConcurrencyLimits
+## <a name="setconcurrencylimits"></a>SetConcurrencyLimits
 
-同時設定`MinConcurrency`並`MaxConcurrency`上的原則`SchedulerPolicy`物件。
+同時設定 `SchedulerPolicy` 物件的 `MinConcurrency` 和 `MaxConcurrency` 原則。
 
-```
+```cpp
 void SetConcurrencyLimits(
     unsigned int _MinConcurrency,
     unsigned int _MaxConcurrency = MaxExecutionResources);
@@ -159,22 +159,22 @@ void SetConcurrencyLimits(
 ### <a name="parameters"></a>參數
 
 *_MinConcurrency*<br/>
-值`MinConcurrency`原則金鑰。
+`MinConcurrency` 原則索引鍵的值。
 
 *_MaxConcurrency*<br/>
-值`MaxConcurrency`原則金鑰。
+`MaxConcurrency` 原則索引鍵的值。
 
 ### <a name="remarks"></a>備註
 
-方法會擲回[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md)指定的值，如果`MinConcurrency`原則是否大於指定給`MaxConcurrency`原則。
+如果為 `MinConcurrency` 原則指定的值大於為 `MaxConcurrency` 原則指定的值，方法將會擲回[invalid_scheduler_policy_thread_specification](invalid-scheduler-policy-thread-specification-class.md) 。
 
-此方法也可能會擲回[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)針對其他無效值。
+方法也可以擲回其他無效值的[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 。
 
-##  <a name="setpolicyvalue"></a> SetPolicyValue
+## <a name="setpolicyvalue"></a>SetPolicyValue
 
-為提供的原則機碼值組`key`參數並傳回最舊的值。
+將提供的原則金鑰值設定為 `key` 參數，並傳回舊值。
 
-```
+```cpp
 unsigned int SetPolicyValue(
     PolicyElementKey key,
     unsigned int value);
@@ -183,22 +183,22 @@ unsigned int SetPolicyValue(
 ### <a name="parameters"></a>參數
 
 *key*<br/>
-原則機碼設定的值。
+要為其設定值的原則索引鍵。
 
 *value*<br/>
-若要設定原則機碼值。
+要設定原則索引鍵的值。
 
 ### <a name="return-value"></a>傳回值
 
-如果所指定的索引鍵`key`支援參數、 索引鍵的舊原則值轉換成`unsigned int`。
+如果支援 `key` 參數所指定的索引鍵，則會將索引鍵的舊原則值轉換成 `unsigned int`。
 
 ### <a name="remarks"></a>備註
 
-方法會擲回[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md)無效的原則機碼或其值無法設定任何原則機碼`SetPolicyValue`方法。
+方法將會擲回無效原則金鑰的[invalid_scheduler_policy_key](invalid-scheduler-policy-key-class.md) ，或 `SetPolicyValue` 方法無法設定其值的任何原則索引鍵。
 
-方法會擲回[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md)不支援所指定的索引鍵的值`key`參數。
+方法將會針對 `key` 參數所指定的索引鍵不支援的值擲回[invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md) 。
 
-請注意，這個方法不可以設定`MinConcurrency`或`MaxConcurrency`原則。 若要設定這些值，請使用[SetConcurrencyLimits](#setconcurrencylimits)方法。
+請注意，此方法不允許設定 `MinConcurrency` 或 `MaxConcurrency` 原則。 若要設定這些值，請使用[SetConcurrencyLimits](#setconcurrencylimits)方法。
 
 ## <a name="see-also"></a>另請參閱
 

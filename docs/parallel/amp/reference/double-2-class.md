@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73656415d1b8774fe8304d674872524e76ee301d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182328"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126704"
 ---
-# <a name="double2-class"></a>double_2 類別
+# <a name="double_2-class"></a>double_2 類別
 
-代表 2 個雙精度浮點數的短向量。
+代表 2 double 的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class double_2;
 ```
 
@@ -57,37 +57,37 @@ class double_2;
 
 |名稱|描述|
 |----------|-----------------|
-|[double_2 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[double_2 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|double_2::get_x||
-|double_2::get_xy||
-|double_2::get_y||
-|double_2::get_yx||
-|double_2::ref_g||
-|double_2::ref_r||
-|double_2::ref_x||
-|double_2::ref_y||
-|double_2::set_x||
-|double_2::set_xy||
-|double_2::set_y||
-|double_2::set_yx||
+|double_2：： get_x||
+|double_2：： get_xy||
+|double_2：： get_y||
+|double_2：： get_yx||
+|double_2：： ref_g||
+|double_2：： ref_r||
+|double_2：： ref_x||
+|double_2：： ref_y||
+|double_2：： set_x||
+|double_2：： set_xy||
+|double_2：： set_y||
+|double_2：： set_yx||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|double_2::operator-||
-|double_2::operator--||
-|double_2::operator*=||
-|double_2::operator/=||
-|double_2::operator++||
-|double_2::operator+=||
-|double_2::operator=||
-|double_2::operator-=||
+|double_2：： operator-||
+|double_2：： operator--||
+|double_2：： operator * =||
+|double_2：： operator/=||
+|double_2：： operator + +||
+|double_2：： operator + =||
+|double_2：： operator =||
+|double_2：： operator-=||
 
 ### <a name="public-constants"></a>公用常數
 
@@ -99,14 +99,14 @@ class double_2;
 
 |名稱|描述|
 |----------|-----------------|
-|double_2::g||
-|double_2::gr||
-|double_2::r||
-|double_2::rg||
-|double_2::x||
-|double_2::xy||
-|double_2::y||
-|double_2::yx||
+|double_2：： g||
+|double_2：： gr||
+|double_2：： r||
+|double_2：： rg||
+|double_2：： x||
+|double_2：： xy||
+|double_2：： y||
+|double_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -114,15 +114,15 @@ class double_2;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> double_2
+## <a name="ctor"></a>double_2
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-```
+```cpp
 double_2() restrict(amp,
     cpu);
 
@@ -163,20 +163,20 @@ explicit inline double_2(
 ### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-##  <a name="double_2__size"></a> 大小
+## <a name="double_2__size"></a>容量
 
-```
+```cpp
 static const int size = 2;
 ```
 

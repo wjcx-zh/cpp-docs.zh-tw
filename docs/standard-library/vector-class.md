@@ -1,6 +1,7 @@
 ---
 title: vector 類別
-ms.date: 01/04/2020
+description: 類別向量的C++ Microsoft 標準程式庫實作為參考。
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,12 +87,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676960"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126223"
 ---
 # <a name="vector-class"></a>vector 類別
 
@@ -122,7 +123,7 @@ class vector
 
 [Vector\<bool > 參考類別](../standard-library/vector-bool-class.md#reference_class)是一個嵌套類別，其物件可以提供向量中的專案（單一位）參考，\<bool > 物件。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
@@ -130,7 +131,7 @@ class vector
 |-|-|
 |[vector](#vector)|建構特定大小、具有特定值項目或具有特定 `allocator` 的向量，或將向量建構為其他一些向量的複本。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -147,7 +148,7 @@ class vector
 |[size_type](#size_type)|計算向量中項目數的類型。|
 |[value_type](#value_type)|代表儲存在向量中之資料類型的類型。|
 
-### <a name="functions"></a>功能
+### <a name="functions"></a>函式
 
 |||
 |-|-|
@@ -155,12 +156,12 @@ class vector
 |[at](#at)|傳回向量中指定位置的項目參考。|
 |[back](#back)|傳回向量的最後一個項目參考。|
 |[begin](#begin)|傳回向量中第一個項目的隨機存取迭代器。|
-|[capacity](#capacity)|傳回向量可包含而不需要配置更多儲存空間的項目數。|
+|[容量](#capacity)|傳回向量可包含而不需要配置更多儲存空間的項目數。|
 |[cbegin](#cbegin)|傳回向量中第一個項目的隨機存取常數迭代器。|
 |[cend](#cend)|傳回隨機存取常數迭代器，指向向量結尾的後一個項目。|
 |[crbegin](#crbegin)|將常數迭代器傳回至反向向量中的第一個項目。|
 |[crend](#crend)|將常數迭代器傳回至反向向量的結尾。|
-|[clear](#clear)|清除向量的項目。|
+|[清除](#clear)|清除向量的項目。|
 |[data](#data)|傳回向量中第一個項目的指標。|
 |[emplace](#emplace)|將就地建構的項目插入向量的指定位置。|
 |[emplace_back](#emplace_back)|將就地建構的項目加入向量的結尾。|
@@ -202,7 +203,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>範例
 
-如需使用 `allocator_type` 的範例，請參閱 [get_allocator](#get_allocator) 的範例。
+如需使用 [ 的範例，請參閱 ](#get_allocator)get_allocator`allocator_type` 的範例。
 
 ## <a name="assign"></a>值賦
 
@@ -590,7 +591,7 @@ typedef implementation-defined const_iterator;
 
 ### <a name="example"></a>範例
 
-如需使用 `const_iterator` 的範例，請參閱 [back](#back) 的範例。
+如需使用 [ 的範例，請參閱 ](#back)back`const_iterator` 的範例。
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -1436,7 +1437,7 @@ vector& operator=(vector&& right);
 ### <a name="parameters"></a>參數
 
 *right*\
-複製到 `vector` 的[向量](../standard-library/vector-class.md)。
+複製到 [ 的](../standard-library/vector-class.md)向量`vector`。
 
 ### <a name="remarks"></a>備註
 
@@ -1493,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>備註
 
-類型 **pointer** 可用來修改元素的值。
+**pointer** 類型可用來修改項目的值。
 
 ### <a name="example"></a>範例
 
@@ -1652,7 +1653,7 @@ typedef typename Allocator::reference reference;
 
 ### <a name="example"></a>範例
 
-如需如何在向量類別中使用 **reference** 的範例，請參閱 [at](#at)。
+如需如何在向量類別中使用 [reference](#at) 的範例，請參閱 **at**。
 
 ## <a name="rend"></a>rend
 
@@ -2233,7 +2234,7 @@ int main()
 v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2 2 21 2 3 4
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[C++ 標準程式庫參考資料](../standard-library/cpp-standard-library-reference.md)
+[C++ 標準程式庫參考](../standard-library/cpp-standard-library-reference.md)

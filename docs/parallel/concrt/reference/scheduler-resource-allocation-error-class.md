@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160048"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143329"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error 類別
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error 類別
 
 這個類別描述因無法在並行執行階段中取得關鍵來源而擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
@@ -32,7 +32,7 @@ class scheduler_resource_allocation_error : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[scheduler_resource_allocation_error](#ctor)|多載。 建構 `scheduler_resource_allocation_error` 物件。|
+|[scheduler_resource_allocation_error](#ctor)|已多載。 建構 `scheduler_resource_allocation_error` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
@@ -42,7 +42,7 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ## <a name="remarks"></a>備註
 
-從並行執行階段內的作業系統呼叫失敗時，通常會擲回這個例外狀況。 通常會從呼叫 Win32 方法 `GetLastError` 傳回的錯誤碼會轉換成 `HRESULT` 類型的值，並且可以使用 `get_error_code` 方法擷取。
+當從並行執行階段中的作業系統呼叫失敗時，通常會擲回這個例外狀況。 通常會從呼叫 Win32 方法 `GetLastError` 傳回的錯誤碼會轉換成 `HRESULT` 類型的值，並且可以使用 `get_error_code` 方法擷取。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -52,27 +52,27 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 傳回造成例外狀況的錯誤碼。
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-`HRESULT`錯誤造成例外狀況的值。
+造成例外狀況之錯誤的 `HRESULT` 值。
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
 建構 `scheduler_resource_allocation_error` 物件。
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -87,7 +87,7 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 錯誤的描述性訊息。
 
 *_Hresult*<br/>
-`HRESULT`錯誤造成例外狀況的值。
+造成例外狀況之錯誤的 `HRESULT` 值。
 
 ## <a name="see-also"></a>另請參閱
 

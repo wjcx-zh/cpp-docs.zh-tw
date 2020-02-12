@@ -19,28 +19,28 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d302f4f7f85737d9c3b2368e3ae04d88bc1a370
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159908"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142730"
 ---
-# <a name="singleassignment-class"></a>single_assignment 類別
+# <a name="single_assignment-class"></a>single_assignment 類別
 
 `single_assignment` 傳訊區塊是多目標、多來源的排序 `propagator_block`，能夠儲存寫入一次的單一 `message`。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<class T>
 class single_assignment : public propagator_block<multi_link_registry<ITarget<T>>, multi_link_registry<ISource<T>>>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *T*<br/>
-儲存並由緩衝區傳播訊息的裝載類型。
+緩衝區所儲存和傳播之訊息的裝載類型。
 
 ## <a name="members"></a>成員
 
@@ -48,35 +48,35 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 |名稱|描述|
 |----------|-----------------|
-|[single_assignment](#ctor)|多載。 建構 `single_assignment` 傳訊區塊。|
-|[~ single_assignment 解構函式](#dtor)|終結`single_assignment`傳訊區塊。|
+|[single_assignment](#ctor)|已多載。 建構 `single_assignment` 傳訊區塊。|
+|[~ single_assignment 的析構函式](#dtor)|損毀 `single_assignment` 訊息區塊。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[has_value](#has_value)|檢查是否這`single_assignment`傳訊區塊已使用值尚未初始化。|
-|[value](#value)|取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。|
+|[has_value](#has_value)|檢查此 `single_assignment` 訊息區塊是否已使用值進行初始化。|
+|[value](#value)|取得目前儲存在 `single_assignment` 訊息區塊中之訊息承載的參考。|
 
-### <a name="protected-methods"></a>保護方法
+### <a name="protected-methods"></a>受保護的方法
 
 |名稱|描述|
 |----------|-----------------|
-|[accept_message](#accept_message)|接受的訊息，由此`single_assignment`傳訊區塊，傳回給呼叫端的訊息。|
-|[consume_message](#consume_message)|會使用先前所提供訊息`single_assignment`和目標，傳回的訊息複本給呼叫者所保留。|
-|[link_target_notification](#link_target_notification)|通知新目標，已連結至這個回呼`single_assignment`傳訊區塊。|
-|[propagate_message](#propagate_message)|以非同步方式傳遞的訊息`ISource`至此區塊`single_assignment`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。|
-|[propagate_to_any_targets](#propagate_to_any_targets)|上的芳鄰`message _PMessage`以此`single_assignment`傳訊區塊，並提供其所有連結的目標。|
-|[release_message](#release_message)|釋放先前的訊息保留。 (覆寫[source_block:: release_message](source-block-class.md#release_message)。)|
-|[reserve_message](#reserve_message)|保留先前由此訊息`single_assignment`傳訊區塊。 (覆寫[source_block:: reserve_message](source-block-class.md#reserve_message)。)|
-|[resume_propagation](#resume_propagation)|保留區釋出之後，請繼續傳播。 (覆寫[source_block:: resume_propagation](source-block-class.md#resume_propagation)。)|
-|[send_message](#send_message)|以同步方式傳遞的訊息`ISource`至此區塊`single_assignment`傳訊區塊。 它由`send`方法中，當呼叫來源區塊。|
+|[accept_message](#accept_message)|接受這個 `single_assignment` 訊息塊所提供的訊息，並將訊息的複本傳回給呼叫者。|
+|[consume_message](#consume_message)|使用先前由 `single_assignment` 提供並由目標所保留的訊息，並將訊息複本傳回給呼叫者。|
+|[link_target_notification](#link_target_notification)|回呼，會通知新的目標已連結至此 `single_assignment` 訊息區塊。|
+|[propagate_message](#propagate_message)|以非同步方式將訊息從 `ISource` 區塊傳遞到這個 `single_assignment` 的訊息區塊。 它是由來源區塊呼叫時，由 `propagate` 方法叫用。|
+|[propagate_to_any_targets](#propagate_to_any_targets)|將 `message _PMessage` 放在此 `single_assignment` 訊息區塊中，並將其提供給所有連結的目標。|
+|[release_message](#release_message)|釋放先前的訊息保留。 （覆寫[source_block：： release_message](source-block-class.md#release_message)。）|
+|[reserve_message](#reserve_message)|保留此 `single_assignment` 訊息區塊先前提供的訊息。 （覆寫[source_block：： reserve_message](source-block-class.md#reserve_message)。）|
+|[resume_propagation](#resume_propagation)|在發行保留專案之後繼續傳播。 （覆寫[source_block：： resume_propagation](source-block-class.md#resume_propagation)。）|
+|[send_message](#send_message)|以同步方式將訊息從 `ISource` 區塊傳遞到這個 `single_assignment` 的訊息區塊。 它是由來源區塊呼叫時，由 `send` 方法叫用。|
 
 ## <a name="remarks"></a>備註
 
-A`single_assignment`傳訊區塊會散佈到每個目標其訊息的複本。
+`single_assignment` 訊息塊會將其訊息的複本傳播到每個目標。
 
-如需詳細資訊，請參閱 <<c0> [ 非同步訊息區](../../../parallel/concrt/asynchronous-message-blocks.md)。
+如需詳細資訊，請參閱[非同步訊息區塊](../../../parallel/concrt/asynchronous-message-blocks.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -96,78 +96,78 @@ A`single_assignment`傳訊區塊會散佈到每個目標其訊息的複本。
 
 **命名空間：** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-接受的訊息，由此`single_assignment`傳訊區塊，傳回給呼叫端的訊息。
+接受這個 `single_assignment` 訊息塊所提供的訊息，並將訊息的複本傳回給呼叫者。
 
-```
+```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_MsgId*<br/>
-`runtime_object_identity`提供的`message`物件。
+所提供 `message` 物件的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>傳回值
 
-指標`message`物件，呼叫者現在會有的擁有權。
+呼叫端目前擁有其擁有權之 `message` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
-`single_assignment`傳訊區塊傳回副本的訊息，其目標，而不是傳送擁有權的目前保留的訊息。
+`single_assignment` 訊息塊會將訊息的複本傳回至其目標，而不是轉移目前保留訊息的擁有權。
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-會使用先前所提供訊息`single_assignment`和目標，傳回的訊息複本給呼叫者所保留。
+使用先前由 `single_assignment` 提供並由目標所保留的訊息，並將訊息複本傳回給呼叫者。
 
-```
+```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`物件被取用。
+所使用之 `message` 物件的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>傳回值
 
-指標`message`物件，呼叫者現在會有的擁有權。
+呼叫端目前擁有其擁有權之 `message` 物件的指標。
 
 ### <a name="remarks"></a>備註
 
-類似於`accept`，但一律置於呼叫`reserve`。
+類似于 `accept`，但一律會在 `reserve`的呼叫前面加上。
 
-##  <a name="has_value"></a> has_value
+## <a name="has_value"></a>has_value
 
-檢查是否這`single_assignment`傳訊區塊已使用值尚未初始化。
+檢查此 `single_assignment` 訊息區塊是否已使用值進行初始化。
 
-```
+```cpp
 bool has_value() const;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-**真**區塊已收到的值，如果**false**否則。
+如果區塊已收到值，**則為 true** ，否則為**false** 。
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-通知新目標，已連結至這個回呼`single_assignment`傳訊區塊。
+回呼，會通知新的目標已連結至此 `single_assignment` 訊息區塊。
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_PTarget*<br/>
-新連結的目標指標。
+新連結目標的指標。
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-以非同步方式傳遞的訊息`ISource`至此區塊`single_assignment`傳訊區塊。 它由`propagate`方法中，當呼叫來源區塊。
+以非同步方式將訊息從 `ISource` 區塊傳遞到這個 `single_assignment` 的訊息區塊。 它是由來源區塊呼叫時，由 `propagate` 方法叫用。
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -179,72 +179,72 @@ virtual message_status propagate_message(
 `message` 物件的指標。
 
 *_PSource*<br/>
-提供訊息來源區塊的指標。
+提供訊息之來源區塊的指標。
 
 ### <a name="return-value"></a>傳回值
 
-A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。
+[Message_status](concurrency-namespace-enums.md)指出目標決定要如何處理訊息。
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-上的芳鄰`message``_PMessage`以此`single_assignment`傳訊區塊，並提供其所有連結的目標。
+將 `message` `_PMessage` 放在此 `single_assignment` 訊息塊中，並將其提供給所有連結的目標。
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<T>* _PMessage);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_PMessage*<br/>
-指標`message`這個`single_assignment`傳訊區塊已取得的擁有權。
+這個 `single_assignment` 訊息區塊已取得其擁有權之 `message` 的指標。
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
 釋放先前的訊息保留。
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`物件被釋放。
+要釋放之 `message` 物件的 `runtime_object_identity`。
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-保留先前由此訊息`single_assignment`傳訊區塊。
+保留此 `single_assignment` 訊息區塊先前提供的訊息。
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>參數
 
 *_MsgId*<br/>
-`runtime_object_identity`的`message`物件所保留。
+要保留之 `message` 物件的 `runtime_object_identity`。
 
 ### <a name="return-value"></a>傳回值
 
-**真**已成功保留訊息，如果**false**否則。
+如果成功保留訊息，**則為 true** ，否則為**false** 。
 
 ### <a name="remarks"></a>備註
 
-之後`reserve`呼叫時，如果它傳回 **，則為 true**可以`consume`或`release`必須呼叫採取，或釋放訊息的擁有權。
+呼叫 `reserve` 之後，如果傳回**true**，`consume` 或 `release` 必須呼叫以取得或釋放訊息的擁有權。
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-保留區釋出之後，請繼續傳播。
+在發行保留專案之後繼續傳播。
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-以同步方式傳遞的訊息`ISource`至此區塊`single_assignment`傳訊區塊。 它由`send`方法中，當呼叫來源區塊。
+以同步方式將訊息從 `ISource` 區塊傳遞到這個 `single_assignment` 的訊息區塊。 它是由來源區塊呼叫時，由 `send` 方法叫用。
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<T>* _PMessage,
     _Inout_ ISource<T>* _PSource);
@@ -256,17 +256,17 @@ virtual message_status send_message(
 `message` 物件的指標。
 
 *_PSource*<br/>
-提供訊息來源區塊的指標。
+提供訊息之來源區塊的指標。
 
 ### <a name="return-value"></a>傳回值
 
-A [message_status](concurrency-namespace-enums.md)表示決定之訊息的目標。
+[Message_status](concurrency-namespace-enums.md)指出目標決定要如何處理訊息。
 
-##  <a name="ctor"></a> single_assignment
+## <a name="ctor"></a>single_assignment
 
 建構 `single_assignment` 傳訊區塊。
 
-```
+```cpp
 single_assignment();
 
 single_assignment(
@@ -290,7 +290,7 @@ single_assignment(
 ### <a name="parameters"></a>參數
 
 *_Filter*<br/>
-判斷是否應該接受所提供的訊息篩選器函式。
+篩選函數，決定是否應接受所提供的訊息。
 
 *_PScheduler*<br/>
 `Scheduler` 物件，在其內會排定 `single_assignment` 傳訊區塊的傳播工作。
@@ -302,31 +302,31 @@ single_assignment(
 
 如果您未指定 `_PScheduler` 或 `_PScheduleGroup` 參數，執行階段會使用預設排程器。
 
-型別`filter_method`是仿函式簽章`bool (T const &)`由此叫用的所在`single_assignment`傳訊區塊，以判斷是否應該接受接受所提供的訊息。
+類型 `filter_method` 是具有簽章 `bool (T const &)` 的仿函數，此 `single_assignment` 訊息區塊會叫用此方法，以判斷是否應該接受提供的訊息。
 
-##  <a name="dtor"></a> ~single_assignment
+## <a name="dtor"></a>~ single_assignment
 
-終結`single_assignment`傳訊區塊。
+損毀 `single_assignment` 訊息區塊。
 
-```
+```cpp
 ~single_assignment();
 ```
 
-##  <a name="value"></a> 值
+## <a name="value"></a>value
 
-取得儲存在訊息的目前內容的參考`single_assignment`傳訊區塊。
+取得目前儲存在 `single_assignment` 訊息區塊中之訊息承載的參考。
 
-```
+```cpp
 T const& value();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-儲存訊息的承載。
+預存訊息的裝載。
 
 ### <a name="remarks"></a>備註
 
-這個方法會等候，直到訊息抵達時，如果目前沒有任何訊息儲存在`single_assignment`傳訊區塊。
+如果目前沒有訊息儲存在 `single_assignment` 訊息區塊中，這個方法會等待訊息抵達。
 
 ## <a name="see-also"></a>另請參閱
 

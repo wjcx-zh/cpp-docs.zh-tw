@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525422"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127708"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature 類別
+# <a name="unsupported_feature-class"></a>unsupported_feature 類別
 
-使用不支援的功能時，會擲回例外狀況。
+使用不支援的功能時，所擲回的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
@@ -31,7 +31,7 @@ class unsupported_feature : public runtime_exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[unsupported_feature 建構函式](#unsupported_feature)|建構的新執行個體`unsupported_feature`例外狀況。|
+|[unsupported_feature 的構造函式](#unsupported_feature)|`unsupported_feature` 例外狀況的新實例。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  建構的新執行個體`unsupported_feature`例外狀況。
+  `unsupported_feature` 例外狀況的新實例。
 
 ### <a name="syntax"></a>語法
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -65,7 +65,7 @@ unsupported_feature() throw();
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amprt.h
+**標頭：** amprt。h
 
 **命名空間：** 並行
 

@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405491"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126197"
 ---
-# <a name="unorm2-class"></a>unorm_2 類別
+# <a name="unorm_2-class"></a>unorm_2 類別
 
-表示短向量的兩個不帶正負號的一般數字。
+代表兩個不帶正負號的一般數位的短向量。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class unorm_2;
 ```
 
@@ -57,36 +57,36 @@ class unorm_2;
 
 |名稱|描述|
 |----------|-----------------|
-|[unorm_2 建構函式](#ctor)|多載。 預設建構函式，初始化具有 0 的所有項目。|
+|[unorm_2 的構造函式](#ctor)|已多載。 預設的處理函式，會使用0初始化所有元素。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|unorm_2::get_x||
-|unorm_2::get_xy||
-|unorm_2::get_y||
-|unorm_2::get_yx||
-|unorm_2::ref_g||
-|unorm_2::ref_r||
-|unorm_2::ref_x||
-|unorm_2::ref_y||
-|unorm_2::set_x||
-|unorm_2::set_xy||
-|unorm_2::set_y||
-|unorm_2::set_yx||
+|unorm_2：： get_x||
+|unorm_2：： get_xy||
+|unorm_2：： get_y||
+|unorm_2：： get_yx||
+|unorm_2：： ref_g||
+|unorm_2：： ref_r||
+|unorm_2：： ref_x||
+|unorm_2：： ref_y||
+|unorm_2：： set_x||
+|unorm_2：： set_xy||
+|unorm_2：： set_y||
+|unorm_2：： set_yx||
 
 ### <a name="public-operators"></a>公用運算子
 
 |名稱|描述|
 |----------|-----------------|
-|unorm_2::operator--||
-|unorm_2::operator*=||
-|unorm_2::operator/=||
-|unorm_2::operator++||
-|unorm_2::operator+=||
-|unorm_2::operator=||
-|unorm_2::operator-=||
+|unorm_2：： operator--||
+|unorm_2：： operator * =||
+|unorm_2：： operator/=||
+|unorm_2：： operator + +||
+|unorm_2：： operator + =||
+|unorm_2：： operator =||
+|unorm_2：： operator-=||
 
 ### <a name="public-constants"></a>公用常數
 
@@ -98,14 +98,14 @@ class unorm_2;
 
 |名稱|描述|
 |----------|-----------------|
-|unorm_2::g||
-|unorm_2::gr||
-|unorm_2::r||
-|unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
-|unorm_2::yx||
+|unorm_2：： g||
+|unorm_2：： gr||
+|unorm_2：： r||
+|unorm_2：： rg||
+|unorm_2：： x||
+|unorm_2：： xy||
+|unorm_2：： y||
+|unorm_2：： yx||
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -113,15 +113,15 @@ class unorm_2;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** amp_short_vectors.h
+**標頭：** amp_short_vectors。h
 
-**命名空間：** Concurrency:: graphics
+**命名空間：** Concurrency：： graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-預設建構函式，初始化具有 0 的所有項目。
+預設的處理函式，會使用0初始化所有元素。
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,20 +171,20 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>參數
 
 *_V0*<br/>
-要初始化項目 0 的值。
+要初始化元素0的值。
 
 *_V1*<br/>
-要初始化項目 1 的值。
+要初始化元素1的值。
 
 *_V*<br/>
-初始設定的值。
+初始化的值。
 
 *_Other*<br/>
 用來初始化的物件。
 
-##  <a name="unorm_2__size"></a> 大小
+## <a name="unorm_2__size"></a>容量
 
-```
+```cpp
 static const int size = 2;
 ```
 

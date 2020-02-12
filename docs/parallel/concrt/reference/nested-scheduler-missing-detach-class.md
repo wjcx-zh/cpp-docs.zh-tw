@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - nested_scheduler_missing_detach class
 ms.assetid: 65d3f277-6d43-4160-97ef-caf8b26c1641
-ms.openlocfilehash: db51f7b083cc0cbd9337fbbe5c672d190208f328
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c9553b036890c4ce28f1060bfe2f58ee1904935
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394386"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77138860"
 ---
-# <a name="nestedschedulermissingdetach-class"></a>nested_scheduler_missing_detach 類別
+# <a name="nested_scheduler_missing_detach-class"></a>nested_scheduler_missing_detach 類別
 
-這個類別描述當並行執行階段偵測到您忘了使用 `Scheduler` 物件的 `Attach` 方法在附加到第二個排程器上呼叫 `CurrentScheduler::Detach` 方法時擲出的例外狀況。
+這個類別描述當並行執行階段偵測到您忘了使用 `CurrentScheduler::Detach` 物件的 `Attach` 方法在附加到第二個排程器上呼叫 `Scheduler` 方法時擲出的例外狀況。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class nested_scheduler_missing_detach : public std::exception;
 ```
 
@@ -31,11 +31,11 @@ class nested_scheduler_missing_detach : public std::exception;
 
 |名稱|描述|
 |----------|-----------------|
-|[nested_scheduler_missing_detach](#ctor)|多載。 建構 `nested_scheduler_missing_detach` 物件。|
+|[nested_scheduler_missing_detach](#ctor)|已多載。 建構 `nested_scheduler_missing_detach` 物件。|
 
 ## <a name="remarks"></a>備註
 
-當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 並行執行階段會擲回這個例外狀況都伺機它可以偵測案例來協助找出問題。 並非每個執行個體來呼叫疏`CurrentScheduler::Detach`方法一定會擲回這個例外狀況。
+當您在已由其他排程器擁有或附加的內容上呼叫 `Attach` 物件的`Scheduler` 方法，將排程器巢狀排列在另一個排程器內時，才會擲回這個例外狀況。 當並行執行階段會在偵測到案例以協助找出問題時，擲回此例外狀況都伺機。 並非每個無法呼叫 `CurrentScheduler::Detach` 方法的實例都一定會擲回這個例外狀況。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -45,15 +45,15 @@ class nested_scheduler_missing_detach : public std::exception;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="ctor"></a> nested_scheduler_missing_detach
+## <a name="ctor"></a>nested_scheduler_missing_detach
 
 建構 `nested_scheduler_missing_detach` 物件。
 
-```
+```cpp
 explicit _CRTIMP nested_scheduler_missing_detach(_In_z_ const char* _Message) throw();
 
 nested_scheduler_missing_detach() throw();

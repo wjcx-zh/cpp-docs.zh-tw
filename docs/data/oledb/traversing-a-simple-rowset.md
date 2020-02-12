@@ -8,16 +8,16 @@ helpviewer_keywords:
 - OLE DB consumers [C++], database attributes
 - accessors [C++], rowsets
 ms.assetid: b45acf16-4029-429d-ab8d-b7fba98b9740
-ms.openlocfilehash: 88a027a24f8ab817f793f101f9f128e1fc0c61c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 874c8372074838cd614d1fe17727871ca6e5f21a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389147"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127641"
 ---
 # <a name="traversing-a-simple-rowset"></a>往返簡單資料列集
 
-下列範例示範不需要用到命令的快速簡便的資料庫存取權。 下列的取用者程式碼，在 ATL 專案中，從呼叫資料表擷取資料錄*演出者*在 Microsoft Access 資料庫中使用 Microsoft OLE DB Provider for ODBC。 程式碼會建立[CTable](../../data/oledb/ctable-class.md)存取子使用的資料表物件會根據使用者記錄類別`CArtists`。 它會開啟連接、 開啟連線時，工作階段並開啟工作階段上的資料表。
+下列範例顯示不包含命令的快速且簡單的資料庫存取。 在 ATL 專案中的下列取用者程式碼，會使用 Microsoft OLE DB Provider for ODBC，從 Microsoft Access 資料庫中名為*演出者*的資料表中抓取記錄。 程式碼會根據 `CArtists`的使用者記錄類別，建立具有存取子的[CTable](../../data/oledb/ctable-class.md)資料表物件。 它會開啟連接、在連接上開啟會話，並在會話上開啟資料表。
 
 ```cpp
 #include <atldbcli.h>
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-使用者資料錄`CArtists`，如這個範例所示：
+使用者記錄（`CArtists`）如下列範例所示：
 
 ```cpp
 class CArtists

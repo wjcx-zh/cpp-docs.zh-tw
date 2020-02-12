@@ -7,20 +7,20 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60c147f38ddc3936f47aea0cfd1ab1548b382441
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180176"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142572"
 ---
-# <a name="taskgroup-class"></a>task_group 類別
+# <a name="task_group-class"></a>task_group 類別
 
 `task_group` 類別表示可以等候或取消的平行工作集合。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class task_group;
 ```
 
@@ -30,24 +30,24 @@ class task_group;
 
 |名稱|描述|
 |----------|-----------------|
-|[task_group](#ctor)|多載。 建構新`task_group`物件。|
-|[~ task_group 解構函式](#dtor)|終結 `task_group` 物件。 您應該呼叫`wait`或`run_and_wait`解構函式執行之前，除非解構函式執行時的堆疊回溯，因為發生例外狀況結果的物件上的方法。|
+|[task_group](#ctor)|已多載。 建構新的 `task_group` 物件。|
+|[~ task_group 的析構函式](#dtor)|終結 `task_group` 物件。 在執行析構函式之前，您應該先在物件上呼叫 `wait` 或 `run_and_wait` 方法，除非因例外狀況而將析構函數當做堆疊回溯的結果執行。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[cancel](#cancel)|會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。|
-|[is_canceling](#is_canceling)|通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`task_group`物件 (雖然這類當然限定此方法以傳回`true`)。 它可能會發生情況的`task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`task_group`物件，`true`會一併傳回。|
-|[run](#run)|多載。 排程工作上`task_group`物件。 如果`task_handle`物件會傳遞做為參數`run`，呼叫端會負責管理的存留期`task_handle`物件。 函式物件的參考當成參數包含堆積配置，這可能是在執行階段內方法之版本的執行效能比使用會參考的版本不佳`task_handle`物件。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|
-|[run_and_wait](#run_and_wait)|多載。 排程工作將內嵌在環境中執行呼叫的協助`task_group`完整的取消支援的物件。 函式，然後等待直到所有處理`task_group`物件已完成或已取消。 如果`task_handle`物件會傳遞做為參數`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。|
-|[wait](#wait)|等待所有工作`task_group`物件已完成或已取消。|
+|[cancel](#cancel)|盡全力嘗試取消根節點的子樹，而此工作群組為 root。 可能的話，在工作組上排程的每個工作都將被取消傳遞。|
+|[is_canceling](#is_canceling)|通知呼叫者，工作群組目前是否在取消作業的過程中。 這不一定表示已在 `task_group` 物件上呼叫 `cancel` 方法（雖然這當然會限定此方法以傳回 `true`）。 在此情況下，`task_group` 物件是以內嵌方式執行，而且已取消工作樹狀結構中的工作組。 在這類情況下，執行時間可以提早判斷取消作業會流經此 `task_group` 物件的情況，也會傳回 `true`。|
+|[run](#run)|已多載。 在 `task_group` 物件上排定工作。 如果 `task_handle` 物件當做參數傳遞至 `run`，呼叫端就會負責管理 `task_handle` 物件的存留期。 接受函式物件參考做為參數的方法版本牽涉到執行時間內的堆積配置，而此版本可能比使用取得 `task_handle` 物件參考的版本還少。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。|
+|[run_and_wait](#run_and_wait)|已多載。 將工作排程在呼叫內容上以內嵌方式執行，並具有 `task_group` 物件的協助，以提供完整的取消支援。 然後，函式會等到 `task_group` 物件上的所有工作都已完成或已取消為止。 如果 `task_handle` 物件當做參數傳遞至 `run_and_wait`，呼叫端就會負責管理 `task_handle` 物件的存留期。|
+|[等候](#wait)|等到 `task_group` 物件上的所有工作都已完成或已取消為止。|
 
 ## <a name="remarks"></a>備註
 
-不同於大量受限`structured_task_group`類別，`task_group`類別是範圍更為廣泛的建構。 它未包含任何所描述的限制[structured_task_group](structured-task-group-class.md)。 `task_group` 物件可能安全地使用多個執行緒和自由格式的方式使用。 缺點`task_group`建構是它可能無法執行，以及`structured_task_group`建構之工作的執行少量的工作。
+不同于嚴格限制的 `structured_task_group` 類別，`task_group` 類別是較為一般的結構。 它沒有[structured_task_group](structured-task-group-class.md)所描述的任何限制。 `task_group` 物件可以安全地跨執行緒使用，並以自由形式的方式運用。 `task_group` 結構的缺點是，它可能不會執行，也不會針對執行少量工作的工作進行 `structured_task_group` 結構。
 
-如需詳細資訊，請參閱 <<c0> [ 工作平行處理原則](../task-parallelism-concurrency-runtime.md)。
+如需詳細資訊，請參閱工作[平行](../task-parallelism-concurrency-runtime.md)處理原則。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -55,43 +55,43 @@ class task_group;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppl.h
+**標頭：** ppl。h
 
 **命名空間：** concurrency
 
-##  <a name="cancel"></a> [取消]
+## <a name="cancel"></a>取消
 
-會盡力嘗試取消子樹狀結構的根目錄位於此工作群組的工作。 排定的工作群組上的每項工作將會取消間接的話。
+盡全力嘗試取消根節點的子樹，而此工作群組為 root。 可能的話，在工作組上排程的每個工作都將被取消傳遞。
 
-```
+```cpp
 void cancel();
 ```
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 取消](../cancellation-in-the-ppl.md)。
+如需詳細資訊，請參閱[取消](../cancellation-in-the-ppl.md)。
 
-##  <a name="is_canceling"></a> is_canceling
+## <a name="is_canceling"></a>is_canceling
 
-通知呼叫端工作群組是目前在取消作業。 這不一定表示所`cancel`上呼叫方法`task_group`物件 (雖然這類當然限定此方法以傳回`true`)。 它可能會發生情況的`task_group`物件以內嵌方式執行及工作群組的進一步設定工作樹狀目錄中已取消。 在這些位置等的情況下，執行階段可以判斷事先取消將會流經這`task_group`物件，`true`會一併傳回。
+通知呼叫者，工作群組目前是否在取消作業的過程中。 這不一定表示已在 `task_group` 物件上呼叫 `cancel` 方法（雖然這當然會限定此方法以傳回 `true`）。 在此情況下，`task_group` 物件是以內嵌方式執行，而且已取消工作樹狀結構中的工作組。 在這類情況下，執行時間可以提早判斷取消作業會流經此 `task_group` 物件的情況，也會傳回 `true`。
 
-```
+```cpp
 bool is_canceling();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-指出是否`task_group`物件正取消 （或一定會短時間內）。
+指出 `task_group` 物件是否在取消作業的過程中（或在不久後保證會）。
 
 ### <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱 <<c0> [ 取消](../cancellation-in-the-ppl.md)。
+如需詳細資訊，請參閱[取消](../cancellation-in-the-ppl.md)。
 
-##  <a name="run"></a> 執行
+## <a name="run"></a>進行
 
-排程工作上`task_group`物件。 如果`task_handle`物件會傳遞做為參數`run`，呼叫端會負責管理的存留期`task_handle`物件。 函式物件的參考當成參數包含堆積配置，這可能是在執行階段內方法之版本的執行效能比使用會參考的版本不佳`task_handle`物件。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。
+在 `task_group` 物件上排定工作。 如果 `task_handle` 物件當做參數傳遞至 `run`，呼叫端就會負責管理 `task_handle` 物件的存留期。 接受函式物件參考做為參數的方法版本牽涉到執行時間內的堆積配置，而此版本可能比使用取得 `task_handle` 物件參考的版本還少。 採用 `_Placement` 參數的版本會造成工作在該參數指定的位置變成優先執行。
 
-```
+```cpp
 template<
    typename _Function
 >
@@ -126,30 +126,30 @@ void run(
 ### <a name="parameters"></a>參數
 
 *_Function*<br/>
-若要執行的工作控制代碼的主體就會叫用的函式物件類型。
+函式物件的型別，將叫用此類型來執行工作控制碼的主體。
 
 *_Func*<br/>
-要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。
+將呼叫以叫用工作主體的函式。 這可能是 lambda 運算式或其他物件，它支援具有簽章 `void operator()()`之函式呼叫運算子的版本。
 
 *_Placement*<br/>
 位置的參考，這是 `_Func` 參數代表的工作應該執行的位置。
 
 *_Task_handle*<br/>
-這排程的工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續直到存留預期`wait`或是`run_and_wait`呼叫此方法`task_group`物件。
+要排程之工作的控制碼。 請注意，呼叫端具有此物件存留期的責任。 執行時間會繼續預期其存留，直到在這個 `task_group` 物件上呼叫 `wait` 或 `run_and_wait` 方法為止。
 
 ### <a name="remarks"></a>備註
 
-執行階段排程在稍後的時間，可以呼叫的函式傳回之後，執行所提供的工作函式。 這個方法會使用[task_handle](task-handle-class.md)物件來保存一份所提供的工作函式。 因此，您將傳遞給這個方法的函式物件中發生的任何狀態變更不會出現該函式物件的複本中。 此外，請確定您傳遞指標或參考的工作函式的任何物件的存留期保持有效，直到工作函式傳回。
+執行時間會將提供的工作函式排程在稍後執行，這可能會在呼叫函式傳回之後。 這個方法會使用[task_handle](task-handle-class.md)物件來保存所提供工作函式的複本。 因此，您傳遞給這個方法的函式物件中發生的任何狀態變更，都不會出現在該函式物件的複本中。 此外，請確定您在工作函式傳回之前，由指標傳遞或參考工作函式的任何物件存留期都維持有效。
 
-如果`task_group`destructs 堆疊回溯例外狀況的結果，您不需要保證，呼叫至任一`wait`或`run_and_wait`方法。 在此情況下，解構函式會適當地取消，並等候工作由`_Task_handle`參數來完成。
+如果 `task_group` destructs 為從例外狀況回溯堆疊的結果，您就不需要保證已對 `wait` 或 `run_and_wait` 方法進行呼叫。 在此情況下，析構函式會適當地取消，並等候 `_Task_handle` 參數所表示的工作完成。
 
-方法會擲回[invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)如果工作處理的例外狀況提供`_Task_handle`透過將工作群組物件上的參數已排定`run`方法而且沒有任何中間呼叫至任一`wait`或`run_and_wait`該工作群組上的方法。
+如果已透過 `run` 方法將 `_Task_handle` 參數所指定的工作控制碼排程到工作組物件，而且該工作組上沒有任何對 `wait` 或 `run_and_wait` 方法的呼叫，此方法就會擲回[invalid_multiple_scheduling](invalid-multiple-scheduling-class.md)例外狀況。
 
-##  <a name="run_and_wait"></a> run_and_wait
+## <a name="run_and_wait"></a>run_and_wait
 
-排程工作將內嵌在環境中執行呼叫的協助`task_group`完整的取消支援的物件。 函式，然後等待直到所有處理`task_group`物件已完成或已取消。 如果`task_handle`物件會傳遞做為參數`run_and_wait`，呼叫端會負責管理的存留期`task_handle`物件。
+將工作排程在呼叫內容上以內嵌方式執行，並具有 `task_group` 物件的協助，以提供完整的取消支援。 然後，函式會等到 `task_group` 物件上的所有工作都已完成或已取消為止。 如果 `task_handle` 物件當做參數傳遞至 `run_and_wait`，呼叫端就會負責管理 `task_handle` 物件的存留期。
 
-```
+```cpp
 template<
    class _Function
 >
@@ -171,30 +171,30 @@ task_group_status run_and_wait(
 函式物件的類型，將會叫用它來執行工作主體。
 
 *_Task_handle*<br/>
-這會在呼叫的內容上執行內嵌工作控制代碼。 請注意，呼叫端負責此物件的存留期。 執行階段會繼續存留的預期`run_and_wait`方法完成執行。
+將在呼叫內容上以內嵌方式執行之工作的控制碼。 請注意，呼叫端具有此物件存留期的責任。 執行時間會繼續預期其存留，直到 `run_and_wait` 方法完成執行為止。
 
 *_Func*<br/>
-要叫用工作的主體所呼叫函式。 這可能是 lambda 運算式或其他物件支援的版本與簽章的函式呼叫運算子`void operator()()`。
+將呼叫以叫用工作主體的函式。 這可能是 lambda 運算式或其他物件，它支援具有簽章 `void operator()()`之函式呼叫運算子的版本。
 
 ### <a name="return-value"></a>傳回值
 
-指出是否滿意等待結果或工作群組已取消，因為明確的取消作業或其中一個工作擲回例外狀況。 如需詳細資訊，請參閱 < [task_group_status](concurrency-namespace-enums.md#task_group_status)。
+指出是否已滿足等候或取消工作群組，原因是明確取消作業或從其其中一個工作擲回例外狀況。 如需詳細資訊，請參閱[task_group_status](concurrency-namespace-enums.md#task_group_status)。
 
 ### <a name="remarks"></a>備註
 
-請注意的一或多個工作排定這`task_group`物件可能會在呼叫的內容中執行內嵌。
+請注意，排程至此 `task_group` 物件的一或多項工作，可能會在呼叫內容上以內嵌方式執行。
 
-如果一或多個排定的工作至此`task_group`物件會擲回的例外狀況、 執行階段會選取其選擇的一個這類例外狀況，並傳播到呼叫`run_and_wait`方法。
+如果一或多個排程至此 `task_group` 物件的工作擲回例外狀況，則執行時間會從其選擇中選取其中一個例外狀況，並將其傳播到 `run_and_wait` 方法的呼叫之外。
 
-傳回從時`run_and_wait`方法`task_group`物件，執行階段的物件重設成可重複使用的初始狀態。 這包括大小寫，`task_group`物件已取消。
+從 `task_group` 物件上的 `run_and_wait` 方法傳回時，執行時間會將物件重設為可重複使用的清除狀態。 這包括取消 `task_group` 物件的情況。
 
-在非例外狀況的執行路徑中，您有必要呼叫這個方法或`wait`方法之前的解構函式`task_group`執行。
+在非例外的執行路徑中，您必須在執行 `task_group` 的析構函式之前，先呼叫這個方法或 `wait` 方法。
 
-##  <a name="ctor"></a> task_group
+## <a name="ctor"></a>task_group
 
-建構新`task_group`物件。
+建構新的 `task_group` 物件。
 
-```
+```cpp
 task_group();
 
 task_group(
@@ -211,39 +211,39 @@ task_group(
 
 使用取消語彙基元的建構函式會建立 `task_group`，當與語彙基元相關聯的來源取消時，它也會一併取消。 提供明確的取消語彙基元也會將這個工作群組隔離，使其無法參與具有不同語彙基元或沒有語彙基元之父群組的隱含取消。
 
-##  <a name="dtor"></a> ~task_group
+## <a name="dtor"></a>~ task_group
 
-終結 `task_group` 物件。 您應該呼叫`wait`或`run_and_wait`解構函式執行之前，除非解構函式執行時的堆疊回溯，因為發生例外狀況結果的物件上的方法。
+終結 `task_group` 物件。 在執行析構函式之前，您應該先在物件上呼叫 `wait` 或 `run_and_wait` 方法，除非因例外狀況而將析構函數當做堆疊回溯的結果執行。
 
-```
+```cpp
 ~task_group();
 ```
 
 ### <a name="remarks"></a>備註
 
-如果解構函式而執行的一般執行 （例如，沒有堆疊回溯因為發生例外狀況） 和都`wait`也`run_and_wait`已呼叫方法、 解構函式可能會擲回[missing_wait](missing-wait-class.md)例外狀況。
+如果此析構函式是以正常執行的結果來執行（例如，因為例外狀況而不是堆疊回溯），而且尚未呼叫 `wait` 或 `run_and_wait` 方法，則此析構函式可能會擲回[missing_wait](missing-wait-class.md)例外狀況。
 
-##  <a name="wait"></a> 等候
+## <a name="wait"></a>等候
 
-等待所有工作`task_group`物件已完成或已取消。
+等到 `task_group` 物件上的所有工作都已完成或已取消為止。
 
-```
+```cpp
 task_group_status wait();
 ```
 
 ### <a name="return-value"></a>傳回值
 
-指出是否滿意等待結果或工作群組已取消，因為明確的取消作業或其中一個工作擲回例外狀況。 如需詳細資訊，請參閱 < [task_group_status](concurrency-namespace-enums.md#task_group_status)。
+指出是否已滿足等候或取消工作群組，原因是明確取消作業或從其其中一個工作擲回例外狀況。 如需詳細資訊，請參閱[task_group_status](concurrency-namespace-enums.md#task_group_status)。
 
 ### <a name="remarks"></a>備註
 
-請注意的一或多個工作排定這`task_group`物件可能會在呼叫的內容中執行內嵌。
+請注意，排程至此 `task_group` 物件的一或多項工作，可能會在呼叫內容上以內嵌方式執行。
 
-如果一或多個排定的工作至此`task_group`物件會擲回的例外狀況、 執行階段會選取其選擇的一個這類例外狀況，並傳播到呼叫`wait`方法。
+如果一或多個排程至此 `task_group` 物件的工作擲回例外狀況，則執行時間會從其選擇中選取其中一個例外狀況，並將其傳播到 `wait` 方法的呼叫之外。
 
-呼叫`wait`上`task_group`物件將它重設成可重複使用的初始狀態。 這包括大小寫，`task_group`物件已取消。
+在 `task_group` 物件上呼叫 `wait`，會將它重設為可重複使用的狀態。 這包括取消 `task_group` 物件的情況。
 
-在非例外狀況的執行路徑中，您有必要呼叫這個方法或`run_and_wait`方法之前的解構函式`task_group`執行。
+在非例外的執行路徑中，您必須在執行 `task_group` 的析構函式之前，先呼叫這個方法或 `run_and_wait` 方法。
 
 ## <a name="see-also"></a>另請參閱
 

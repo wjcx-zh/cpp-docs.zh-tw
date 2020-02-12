@@ -10,20 +10,20 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b3e3093cb76df507f8c707e497c9aec75a065057
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212881"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142586"
 ---
-# <a name="taskcompletionevent-class"></a>task_completion_event 類別
+# <a name="task_completion_event-class"></a>task_completion_event 類別
 
 `task_completion_event` 類別可讓您延遲執行工作，直到滿足某條件，或是為了回應外部事件而開始工作。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 template<typename _ResultType>
 class task_completion_event;
 
@@ -31,7 +31,7 @@ template<>
 class task_completion_event<void>;
 ```
 
-#### <a name="parameters"></a>參數
+### <a name="parameters"></a>參數
 
 *_ResultType*<br/>
 這個 `task_completion_event` 類別的結果類型。
@@ -48,8 +48,8 @@ class task_completion_event<void>;
 
 |名稱|描述|
 |----------|-----------------|
-|[set](#set)|多載。 設定工作完成事件。|
-|[set_exception](#set_exception)|多載。 將例外狀況傳播至與這個事件相關聯的所有工作。|
+|[set](#set)|已多載。 設定工作完成事件。|
+|[set_exception](#set_exception)|已多載。 將例外狀況傳播至與這個事件相關聯的所有工作。|
 
 ## <a name="remarks"></a>備註
 
@@ -65,15 +65,15 @@ class task_completion_event<void>;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** ppltasks.h
+**標頭：** ppltasks.h。h
 
 **命名空間：** concurrency
 
-##  <a name="set"></a> 設定
+## <a name="set"></a>設定
 
 設定工作完成事件。
 
-```
+```cpp
 bool set(_ResultType _Result) const ;
 
 bool set() const ;
@@ -82,21 +82,21 @@ bool set() const ;
 ### <a name="parameters"></a>參數
 
 *_Result*<br/>
-要設定與這個事件的結果。
+要用來設定此事件的結果。
 
 ### <a name="return-value"></a>傳回值
 
-此方法會傳回 **，則為 true**如果它已成功地設定該事件。 它會傳回**false**如果已設定的事件。
+如果成功設定事件，方法會傳回**true** 。 如果已經設定事件，它會傳回**false** 。
 
 ### <a name="remarks"></a>備註
 
-如果多個存在或並行呼叫`set`，只有第一次呼叫會成功，且其結果 （如果有的話） 會儲存在工作完成事件。 剩餘集合會被忽略，則方法會傳回 false。 當您設定工作完成事件時，所有工作都建立，事件將會立即完成，而且其，如果有的話，都會排定接續。 工作完成物件具有`_ResultType`以外**void**會將值傳遞至其接續。
+如果 `set`有多個或並行呼叫，只有第一個呼叫會成功，而且其結果（如果有的話）會儲存在工作完成事件中。 系統會忽略其餘的集合，且方法會傳回 false。 當您設定工作完成事件時，從該事件建立的所有工作都會立即完成，而且會排程其接續（如果有的話）。 具有**void**以外之 `_ResultType` 的工作完成物件會將值傳遞至其接續。
 
-##  <a name="set_exception"></a> set_exception
+## <a name="set_exception"></a>set_exception
 
 將例外狀況傳播至與這個事件相關聯的所有工作。
 
-```
+```cpp
 template<typename _E>
 __declspec(noinline) bool set_exception(_E _Except) const;
 
@@ -109,18 +109,18 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 例外狀況型別。
 
 *_Except*<br/>
-若要設定例外狀況。
+要設定的例外狀況。
 
 *_ExceptionPtr*<br/>
 要設定的例外狀況指標。
 
 ### <a name="return-value"></a>傳回值
 
-##  <a name="ctor"></a> task_completion_event
+## <a name="ctor"></a>task_completion_event
 
 建構 `task_completion_event` 物件。
 
-```
+```cpp
 task_completion_event();
 ```
 

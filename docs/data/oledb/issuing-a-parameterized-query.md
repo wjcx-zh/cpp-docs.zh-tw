@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390655"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127634"
 ---
 # <a name="issuing-a-parameterized-query"></a>發出參數型查詢
 
-下列範例會發出簡單參數化的查詢來擷取從 Microsoft Access 資料庫中的資料表的時間欄位 （也就是大於 30） 的記錄。 若要支援此參數，使用者資料錄必須額外的對應。 下列程式碼，在 ATL 專案中，使用`CCommand`類別而非`CTable`在前一個範例中，使用類別[往返簡單資料列集](../../data/oledb/traversing-a-simple-rowset.md)。
+下列範例會發出簡單的參數化查詢，其會從 Microsoft Access 資料庫中的資料表，抓取 age 欄位（也就是大於30）的記錄。 若要支援參數，使用者記錄必須有額外的對應。 在 ATL 專案中的下列程式碼會使用 `CCommand` 類別，而不是上一個範例中所使用的 `CTable` 類別，它會[遍歷簡單](../../data/oledb/traversing-a-simple-rowset.md)的資料列集。
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-使用者資料錄`CArtists`，如這個範例所示：
+使用者記錄（`CArtists`）如下列範例所示：
 
 ```cpp
 class CArtists

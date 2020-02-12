@@ -5,12 +5,12 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 00accee4f28167b94b9193aec6d90f32ed242dbe
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821124"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143239"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 命名空間運算子
 
@@ -20,11 +20,11 @@ ms.locfileid: "76821124"
 |[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
 |[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
 
-##  <a name="operator_lor"></a>運算子&#124; &#124;運算子
+## <a name="operator_lor"></a>運算子&#124; &#124;運算子
 
 建立工作，這個工作將會在兩個當做引數提供的任一工作已順利完成時成功完成。
 
-```
+```cpp
 template<typename ReturnType>
 task<ReturnType> operator||(
     const task<ReturnType>& lhs,
@@ -64,11 +64,11 @@ inline task<void> operator||(
 
 如果兩個工作都取消或擲回例外狀況，則傳回的工作會以已取消狀態完成，而且其中一個例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。
 
-##  <a name="operator_amp_amp"></a>運算子&amp;&amp; 運算子
+## <a name="operator_amp_amp"></a>運算子&amp;&amp; 運算子
 
 建立當兩個當做引數提供的工作都順利完成時，將會順利完成的工作。
 
-```
+```cpp
 template<typename ReturnType>
 task<std::vector<ReturnType>>  operator&&(
     const task<ReturnType>& lhs,
@@ -111,13 +111,13 @@ inline task<void>  operator&&(
 
 ### <a name="remarks"></a>備註
 
-如果其中一個工作取消或擲回例外狀況，則傳回的工作會在已取消狀態中提早完成，而且例外狀況 (如果有發生) 會在您呼叫該工作上的 `get()` 或 `wait()` 時擲回。
+如果其中一個工作已取消或擲回例外狀況，則傳回的工作將會提早完成（處於已取消狀態），而且如果您在該工作上呼叫 `get()` 或 `wait()`，則會擲回例外狀況（如果發生的話）。
 
-##  <a name="operator_eq_eq"></a>operator = = 運算子
+## <a name="operator_eq_eq"></a>operator = = 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否等於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator== (
     const concurrent_vector<T, A1>& _A,
@@ -129,7 +129,7 @@ inline bool operator== (
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -151,11 +151,11 @@ inline bool operator== (
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-##  <a name="operator_neq"></a>operator！ = 運算子
+## <a name="operator_neq"></a>operator！ = 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否不等於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator!= (
     const concurrent_vector<T, A1>& _A,
@@ -167,7 +167,7 @@ inline bool operator!= (
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -189,11 +189,11 @@ inline bool operator!= (
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-##  <a name="operator_lt"></a>運算子&lt; 運算子
+## <a name="operator_lt"></a>運算子&lt; 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否小於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<(
     const concurrent_vector<T, A1>& _A,
@@ -205,7 +205,7 @@ inline bool operator<(
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -227,11 +227,11 @@ inline bool operator<(
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-##  <a name="operator_lt_eq"></a>運算子&lt;= 運算子
+## <a name="operator_lt_eq"></a>運算子&lt;= 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否小於或等於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator<= (
     const concurrent_vector<T, A1>& _A,
@@ -243,7 +243,7 @@ inline bool operator<= (
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -265,11 +265,11 @@ inline bool operator<= (
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-##  <a name="operator_gt"></a>運算子&gt; 運算子
+## <a name="operator_gt"></a>運算子&gt; 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否大於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>(
     const concurrent_vector<T, A1>& _A,
@@ -281,7 +281,7 @@ inline bool operator>(
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -303,11 +303,11 @@ inline bool operator>(
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-##  <a name="operator_gt_eq"></a>運算子&gt;= 運算子
+## <a name="operator_gt_eq"></a>運算子&gt;= 運算子
 
 測試運算子左邊的 `concurrent_vector` 物件是否大於或等於右邊的 `concurrent_vector` 物件。
 
-```
+```cpp
 template<typename T, class A1, class A2>
 inline bool operator>= (
     const concurrent_vector<T, A1>& _A,
@@ -319,7 +319,7 @@ inline bool operator>= (
 *T*<br/>
 儲存在並行向量中之元素的資料類型。
 
-*賦值*<br/>
+*A1*<br/>
 第一個 `concurrent_vector` 物件的配置器類型。
 
 *A2*<br/>
@@ -341,6 +341,6 @@ inline bool operator>= (
 
 這個方法與其他可修改並行向量 `_A` 或 `_B`的方法而言，並不是並行安全。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [concurrency 命名空間](concurrency-namespace.md)

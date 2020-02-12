@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337540"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143273"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup 類別
 
@@ -24,7 +24,7 @@ ms.locfileid: "62337540"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
@@ -34,16 +34,16 @@ class ScheduleGroup;
 
 |名稱|描述|
 |----------|-----------------|
-|[~ ScheduleGroup 解構函式](#dtor)||
+|[~ ScheduleGroup 的析構函式](#dtor)||
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[ID](#id)|傳回群組所屬的排程器中是唯一的排程群組的識別碼。|
-|[參考資料](#reference)|遞增排程器群組的參考計數。|
+|[ID](#id)|傳回排程群組的識別碼，這在群組所屬的排程器內是唯一的。|
+|[參考](#reference)|遞增排程器群組的參考計數。|
 |[發行](#release)|遞減排程器群組的參考計數。|
-|[ScheduleTask](#scheduletask)|排程群組內的輕量級的排程工作。|
+|[ScheduleTask](#scheduletask)|排定排程群組內的輕量工作。|
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -51,27 +51,27 @@ class ScheduleGroup;
 
 ## <a name="requirements"></a>需求
 
-**標頭：** concrt.h
+**標頭：** concrt。h
 
 **命名空間：** concurrency
 
-##  <a name="id"></a> Id
+## <a name="id"></a>號
 
-傳回群組所屬的排程器中是唯一的排程群組的識別碼。
+傳回排程群組的識別碼，這在群組所屬的排程器內是唯一的。
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-排程群組中的群組所屬的排程器的唯一識別碼。
+排程群組的識別碼，在該群組所屬的排程器內是唯一的。
 
-##  <a name="operator_delete"></a> 運算子 delete
+## <a name="operator_delete"></a>運算子 delete
 
-A`ScheduleGroup`終結物件內部執行階段時，所有外部參考會釋出。 它不可明確刪除。
+執行時間會在釋放所有外部參考時，于內部終結 `ScheduleGroup` 物件。 它不可明確刪除。
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -85,13 +85,13 @@ const char *,
 ### <a name="parameters"></a>參數
 
 *_PObject*<br/>
-要刪除的物件指標。
+要刪除之物件的指標。
 
-##  <a name="reference"></a> 參考
+## <a name="reference"></a>證明
 
 遞增排程器群組的參考計數。
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
@@ -101,37 +101,37 @@ virtual unsigned int Reference() = 0;
 
 ### <a name="remarks"></a>備註
 
-這通常用來管理排程群組組合的存留期。 排程群組的參考計數降為零，當執行階段會刪除排程群組。 建立使用排程群組[currentscheduler:: Createschedulegroup](currentscheduler-class.md#createschedulegroup)方法，或有[scheduler:: createschedulegroup](scheduler-class.md#createschedulegroup)方法開始的其中一個的參考計數。
+這通常用來管理組合之排程群組的存留期。 當排程群組的參考計數降至零時，執行時間就會刪除排程群組。 使用[CurrentScheduler：： CreateScheduleGroup](currentscheduler-class.md#createschedulegroup)方法建立的排程群組，或排程器[：： CreateScheduleGroup](scheduler-class.md#createschedulegroup)方法會從一個參考計數開始。
 
-##  <a name="release"></a> 版本
+## <a name="release"></a>版本
 
 遞減排程器群組的參考計數。
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>傳回值
 
-新遞減參考計數。
+新遞減的參考計數。
 
 ### <a name="remarks"></a>備註
 
-這通常用來管理排程群組組合的存留期。 排程群組的參考計數降為零，當執行階段會刪除排程群組。 在您呼叫 `Release` 方法特定次數以移除建立參考計數和任何使用 `Reference` 方法所進行的參考後，就不能進一步利用排程群組。 如此一來，會導致未定義的行為。
+這通常用來管理組合之排程群組的存留期。 當排程群組的參考計數降至零時，執行時間就會刪除排程群組。 在您呼叫 `Release` 方法特定次數以移除建立參考計數和任何使用 `Reference` 方法所進行的參考後，就不能進一步利用排程群組。 這麼做會導致未定義的行為。
 
-排程群組是特定的排程器執行個體相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 在進行其他方式導致未定義的行為。
+排程群組會與特定的排程器實例相關聯。 您必須先確定已釋放排程群組的所有參考，才能釋放排程器的所有參考，因為後者可能會使排程器遭到終結。 否則，會導致未定義的行為。
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a>~ ScheduleGroup
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask
 
-排程群組內的輕量級的排程工作。
+排定排程群組內的輕量工作。
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -140,14 +140,14 @@ virtual void ScheduleTask(
 ### <a name="parameters"></a>參數
 
 *_Proc*<br/>
-若要執行的輕量工作主體執行該函式指標。
+執行輕量工作主體的函式指標。
 
 *_Data*<br/>
-將做為參數傳遞至工作的主體資料的 void 指標。
+將當做參數傳遞至工作主體之資料的 void 指標。
 
 ### <a name="remarks"></a>備註
 
-呼叫`ScheduleTask`方法會隱含地將參考計數放上不再由執行階段在適當的時間之後會執行該工作的排程群組。
+呼叫 `ScheduleTask` 方法會以隱含方式將參考計數放在排程群組上，而執行時間會在工作執行後，于適當的時間將其移除。
 
 ## <a name="see-also"></a>另請參閱
 

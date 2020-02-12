@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立並使用您自己的動態連結程式庫 (C++)
+title: 逐步解說：建立和使用您自己的動態連結C++庫（）
 description: 在 Visual Studio 中使用 C++ 建立 Windows 動態連結程式庫 (DLL)。
 ms.custom: conceptual
 ms.date: 08/22/2019
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: 7bc0cb58cbbe995aa9d74e3ccb627ddc442bd4fb
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 37dc59dfb77af9fff240c0d44b21de84b17d073b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70026056"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127838"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立並使用您自己的動態連結程式庫 (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>逐步解說：建立和使用您自己的動態連結C++庫（）
 
 此逐步解說會示範如何使用 Visual Studio IDE 來建立您自己以 Microsoft C++ （MSVC）撰寫的動態連結程式庫（DLL）。 然後，它會顯示如何從另一個C++應用程式使用 DLL。 Dll （在 UNIX 作業系統中也稱為*共用程式庫*）是其中一種最有用的 Windows 元件。 您可以使用它們做為共用程式碼和資源的方法，以及縮小應用程式的大小。 Dll 甚至可以讓您更輕鬆地服務及擴充您的應用程式。
 
@@ -77,7 +77,7 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2019"></a>在 Visual Studio 2019 中建立 DLL 專案
 
-1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [建立新專案] 對話方塊。
+1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
    ![建立新的 DLL 專案](media/create-new-dll-project-2019.png "建立 MathLibrary 專案")
 
@@ -91,7 +91,7 @@ ms.locfileid: "70026056"
 
 建立解決方案時，您可以在 Visual Studio 的 [**方案總管**] 視窗中看到產生的專案和原始檔。
 
-![在 Visual Studio 中產生的方案](media/mathlibrary-solution-explorer-162.png "在 Visual Studio 中產生的方案")
+![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-162.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -99,17 +99,17 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017"></a>在 Visual Studio 2017 中建立 DLL 專案
 
-1. 在功能表列上，選擇 [檔案] > [新增] > [專案]，以開啟 [新增專案] 對話方塊。
+1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**新增專案**] 對話方塊。
 
-1. 在 [**新增專案**] 對話方塊的左窗格中，選取 **[已安裝** > 的 >  **Visual C++**  **Windows 桌面**]。 在中央窗格中，選取 [**動態連結程式庫（DLL）** ]。 在 [**名稱**] 方塊中輸入*MathLibrary* ，以指定專案的名稱。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
+1. 在 [**新增專案**] 對話方塊的左窗格中，選取 [**已安裝**] > [  **C++ Visual** > **Windows 桌面**]。 在中央窗格中，選取 [**動態連結程式庫（DLL）** ]。 在 [**名稱**] 方塊中輸入*MathLibrary* ，以指定專案的名稱。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
 
-   ![為 MathLibrary 專案命名](media/mathlibrary-new-project-name-159.png "為 MathLibrary 專案命名")
+   ![將 MathLibrary 專案命名為](media/mathlibrary-new-project-name-159.png "將 MathLibrary 專案命名為")
 
 1. 選擇 [確定] 按鈕以建立專案。
 
 建立解決方案時，您可以在 Visual Studio 的 [**方案總管**] 視窗中看到產生的專案和原始檔。
 
-![在 Visual Studio 中產生的方案](media/mathlibrary-solution-explorer-159.png "在 Visual Studio 中產生的方案")
+![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-159.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -117,25 +117,25 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2015-and-older-versions"></a>若要在 Visual Studio 2015 和較舊版本中建立 DLL 專案
 
-1. 在功能表列上，選擇 [檔案] > [新增] > [專案]。
+1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]。
 
 1. 在 [新增專案] 對話方塊的左窗格中，展開 [已安裝] > [範本] 並選取 [Visual C++]，然後在中央窗格中選取 [Win32 主控台應用程式]。 在 [**名稱**] 編輯方塊中輸入*MathLibrary* ，以指定專案的名稱。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
 
-   ![為 MathLibrary 專案命名](media/mathlibrary-project-name.png "為 MathLibrary 專案命名")
+   ![將 MathLibrary 專案命名為](media/mathlibrary-project-name.png "將 MathLibrary 專案命名為")
 
 1. 選擇 [確定] 按鈕以關閉 [新增專案] 對話方塊，並啟動 [Win32 應用程式精靈]。
 
-   ![[Win32 應用程式精靈] 概觀](media/mathlibrary-project-wizard-1.png "[Win32 應用程式精靈] 概觀")
+   ![Win32 應用程式精靈總覽](media/mathlibrary-project-wizard-1.png "Win32 應用程式精靈總覽")
 
 1. 選擇 [下一步] 按鈕。 在 [應用程式設定] 頁面的 [應用程式類型] 下，選取 [DLL]。
 
-   ![在 [Win32 應用程式精靈] 中建立 DLL](media/mathlibrary-project-wizard-2.png "在 [Win32 應用程式精靈] 中建立 DLL")
+   ![在 Win32 應用程式精靈中建立 DLL](media/mathlibrary-project-wizard-2.png "在 Win32 應用程式精靈中建立 DLL")
 
 1. 選擇 [完成] 按鈕以建立專案。
 
 精靈完成方案後，您可以在 Visual Studio 的 [方案總管] 視窗中，看到產生的專案和來源檔案。
 
-![在 Visual Studio 中產生的方案](media/mathlibrary-solution-explorer-153.png "在 Visual Studio 中產生的方案")
+![Visual Studio 中產生的解決方案](media/mathlibrary-solution-explorer-153.png "Visual Studio 中產生的解決方案")
 
 ::: moniker-end
 
@@ -147,11 +147,11 @@ ms.locfileid: "70026056"
 
 1. 在 [新增項目] 對話方塊的左窗格中，選取 [Visual C++]。 在中間窗格中，選取 [標頭檔 (.h)]。 指定*MathLibrary*做為標頭檔的名稱。
 
-   ![在 [新增項目] 對話方塊中新增標頭](media/mathlibrary-add-new-item-header-file.png "在 [新增項目] 對話方塊中新增標頭")
+   ![[加入新專案] 對話方塊中的 [新增標頭]](media/mathlibrary-add-new-item-header-file.png "[加入新專案] 對話方塊中的 [加入標頭檔]")
 
 1. 選擇 [新增] 按鈕以產生空白標頭檔，這會顯示在新的編輯器視窗中。
 
-   ![編輯器中的空白 MathLibrary.h 檔案](media/edit-empty-mathlibrary-header.png "編輯器中的空白 MathLibrary.h 檔案")
+   ![編輯器中的空白 MathLibrary .h 檔案](media/edit-empty-mathlibrary-header.png "編輯器中的空白 MathLibrary .h 檔案")
 
 1. 使用此程式碼來取代標頭檔的內容：
 
@@ -194,7 +194,7 @@ ms.locfileid: "70026056"
 
 在具有兩個初始值的情況下，此標頭檔會宣告一些函式來產生一般化的 Fibonacci 序列。 對 `fibonacci_init(1, 1)` 的呼叫會產生熟悉的 Fibonacci 數字序列。
 
-請注意檔案頂端的前置處理器陳述式。 DLL 專案的新專案範本會將**專案名稱**&#95;匯出新增至定義的預處理器宏。 在此範例中，當您的 MathLibrary DLL 專案完成建置時，Visual Studio 會定義 **MATHLIBRARY&#95;EXPORTS**。
+請注意檔案頂端的前置處理器陳述式。 DLL 專案的新專案範本會將 **_專案名稱_&#95;匯出**新增至定義的預處理器宏。 在此範例中，當您的 MathLibrary DLL 專案完成建置時，Visual Studio 會定義 **MATHLIBRARY&#95;EXPORTS**。
 
 定義 **MATHLIBRARY&#95;EXPORTS** 巨集後，**MATHLIBRARY&#95;API** 巨集會在函式宣告中設定 `__declspec(dllexport)` 修飾詞。 這個修飾詞會告訴編譯器和連結器從 DLL 匯出函式或變數，供其他應用程式使用。 如果 **MATHLIBRARY&#95;EXPORTS** 並未定義 (例如當用戶端應用程式包含標頭檔時)，則 **MATHLIBRARY&#95;API** 會將 `__declspec(dllimport)` 修飾詞套用至宣告。 此修飾詞會將應用程式中函式或變數的匯入最佳化。 如需詳細資訊，請參閱 [dllexport、dllimport](../cpp/dllexport-dllimport.md)。
 
@@ -383,7 +383,7 @@ ms.locfileid: "70026056"
 
 ::: moniker-end
 
-恭喜, 您已使用 Visual Studio 建立 DLL! 接下來，您將建立一個用戶端應用程式，該應用程式使用由 DLL 匯出的函式。
+恭喜，您已使用 Visual Studio 建立 DLL！ 接下來，您將建立一個用戶端應用程式，該應用程式使用由 DLL 匯出的函式。
 
 ## <a name="create-a-client-app-that-uses-the-dll"></a>建立使用 DLL 的用戶端應用程式
 
@@ -397,7 +397,7 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-client-app-in-visual-studio"></a>在 Visual Studio 中建立用戶端應用程式
 
-1. 在功能表列上 **，選擇** > [檔案] [**新增** > **專案**] 以開啟 [**建立新專案**] 對話方塊。
+1. 在功能表列上 **，選擇 [** 檔案] > [**新增**>**專案**]，開啟 [**建立新的專案**] 對話方塊。
 
 1. 在對話方塊頂端，將 [語言] 設定為 **C++** ，將 [平台] 設定為 **Windows**，並將 [專案類型] 設定為**主控台**。
 
@@ -405,7 +405,7 @@ ms.locfileid: "70026056"
 
 1. 在 [**設定您的新專案**] 頁面的 [**專案名稱**] 方塊中，輸入*MathClient* ，以指定專案的名稱。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 取消核取 **[將方案和專案放在相同的目錄中**] （如果已勾選）。
 
-   ![命名用戶端專案](media/mathclient-project-name-2019.png "命名用戶端專案")
+   ![將用戶端專案命名為](media/mathclient-project-name-2019.png "將用戶端專案命名為")
 
 1. 選擇 [建立] 按鈕以建立用戶端專案。
 
@@ -417,11 +417,11 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2017"></a>在 Visual Studio 2017 中建立用戶端應用程式
 
-1. 若要建立將使用您建立之 DLL 的 C++ 應用程式，請在功能表列上選擇 [檔案] > [新增] > [專案]。
+1. 若要建立C++使用您所建立之 DLL 的應用程式，請在功能表列上**選擇 [** 檔案] > [**新增**>**專案**]。
 
-1. 在 [新增專案] 對話方塊左窗格中的 [已安裝] > [Visual C++] 下方，選取 [Windows 傳統型]。 在中央窗格中，選取 [ **Windows 主控台應用程式**]。 在 [**名稱**] 編輯方塊中，指定專案的名稱*MathClient*。  保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
+1. 在 [新增專案] 對話方塊左窗格中的 [已安裝] **[Visual C++]**  >  下方，選取 [Windows 傳統型]。 在中央窗格中，選取 [ **Windows 主控台應用程式**]。 在 [**名稱**] 編輯方塊中，指定專案的名稱*MathClient*。  保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
 
-   ![命名用戶端專案](media/mathclient-new-project-name-159.png "命名用戶端專案")
+   ![將用戶端專案命名為](media/mathclient-new-project-name-159.png "將用戶端專案命名為")
 
 1. 選擇 **[確定]** 以建立用戶端應用程式專案。
 
@@ -433,11 +433,11 @@ ms.locfileid: "70026056"
 
 ### <a name="to-create-a-client-app-in-visual-studio-2015"></a>在 Visual Studio 2015 中建立用戶端應用程式
 
-1. 若要建立將使用您建立之 DLL 的 C++ 應用程式，請在功能表列上選擇 [檔案] > [新增] > [專案]。
+1. 若要建立C++使用您所建立之 DLL 的應用程式，請在功能表列上**選擇 [** 檔案] > [**新增**>**專案**]。
 
-1. 在 [新增專案] 對話方塊左窗格中的 [已安裝] > [範本] > [Visual C++] 下方，選取 **Win32**。 在中央窗格中，選取 [Win32 主控台應用程式]。 在 [**名稱**] 編輯方塊中，指定專案的名稱*MathClient*。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
+1. 在 [新增專案] 對話方塊左窗格中的 [已安裝] **[範本]**  >  **[Visual C++]**  >  下方，選取 **Win32**。 在中央窗格中，選取 [Win32 主控台應用程式]。 在 [**名稱**] 編輯方塊中，指定專案的名稱*MathClient*。 保留 [預設**位置**] 和 [**方案名稱**] 值。 設定 [**方案**] 以**建立新的方案**。 核取 [**為方案建立目錄] （** 如果未核取）。
 
-   ![命名用戶端專案](media/mathclient-project-name.png "命名用戶端專案")
+   ![將用戶端專案命名為](media/mathclient-project-name.png "將用戶端專案命名為")
 
 1. 選擇 [確定] 按鈕以關閉 [新增專案] 對話方塊，並啟動 [Win32 應用程式精靈]。 在 [Win32 應用程式精靈] 對話方塊的 [概觀] 頁面上，選擇 [下一步] 按鈕。
 
@@ -457,7 +457,7 @@ ms.locfileid: "70026056"
 
 1. **在 [設定**] 下拉式方塊中，選取 [**所有**設定] （如果尚未選取）。
 
-1. 在左窗格中，選取 [設定] [**屬性** > ] [ >  **C/C++** **一般**]。
+1. 在左窗格中，選取 [設定] [**屬性**] > [ **C/C++**  > **一般**]。
 
 1. 在屬性窗格中，選取 [其他 Include 目錄] 編輯方塊旁的下拉式清單控制項，然後選擇 [編輯]。
 
@@ -477,7 +477,7 @@ ms.locfileid: "70026056"
 
    當 DLL 和用戶端專案位於其他資料夾時，請調整相對路徑以符合。 或者，使用省略號控制項流覽資料夾。
 
-   ![將標頭位置新增至其他 Include 目錄屬性](media/mathclient-additional-include-directories.png "將標頭位置新增至其他 Include 目錄屬性")
+   ![將標頭位置新增至 [其他 Include 目錄] 屬性](media/mathclient-additional-include-directories.png "將標頭位置新增至 [其他 Include 目錄] 屬性")
 
 1. 在 [**其他 Include 目錄**] 對話方塊中輸入標頭檔的路徑之後，請選擇 [**確定]** 按鈕。 在 [**屬性頁**] 對話方塊中，選擇 [**確定]** 按鈕以儲存變更。
 
@@ -505,7 +505,7 @@ int main()
 }
 ```
 
-這段程式碼可以進行編譯，但無法進行連結。 如果您現在建立用戶端應用程式，[錯誤清單] 會顯示數個 LNK2019 錯誤。 這是因為您的專案遺漏了某些資訊：您尚未指定您的專案與*MathLibrary*程式庫的相依性。 而且，您尚未告訴連結器如何尋找*MathLibrary* 。
+這段程式碼可以進行編譯，但無法進行連結。 如果您現在建立用戶端應用程式，[錯誤清單] 會顯示數個 LNK2019 錯誤。 這是因為您的專案缺少一些資訊：您尚未指定您的專案與*MathLibrary*程式庫的相依性。 而且，您尚未告訴連結器如何尋找*MathLibrary* 。
 
 若要修正此問題，您可以將程式庫檔案直接複製到用戶端應用程式專案中。 連結器會尋找並自動使用它。 不過，如果程式庫和用戶端應用程式都在開發中，可能會導致某個複本中的變更未顯示在另一個副本中。 若要避免這個問題，您可以設定 [其他相依性 **]** 屬性，告訴組建系統您的專案相依于*MathLibrary*。 此外，您可以在專案中設定額外的連結**庫目錄**路徑，以在連結時包含原始媒體櫃的路徑。
 
@@ -515,7 +515,7 @@ int main()
 
 1. **在 [設定**] 下拉式方塊中，選取 [**所有**設定] （如果尚未選取）。 它可確保所有屬性變更都適用于 Debug 和 Release 組建。
 
-1. 在左窗格中，選取 [設定] [**屬性** > ] [**連結器** > **輸入**]。 在屬性窗格中，選取 [其他相依性] 編輯方塊旁的下拉式清單控制項，然後選擇 [編輯]。
+1. 在左窗格中，選取 [設定] [**屬性**] [ > **連結器** > **輸入**]。 在屬性窗格中，選取 [其他相依性] 編輯方塊旁的下拉式清單控制項，然後選擇 [編輯]。
 
    ![編輯 [其他相依性] 屬性](media/mathclient-additional-dependencies-property.png "編輯 [其他相依性] 屬性")
 
@@ -525,17 +525,15 @@ int main()
 
 1. 選擇 [確定] 返回 [屬性頁] 對話方塊。
 
-1. 在左窗格中，選取 [設定] [**屬性** > ] [**連結器** > **一般**]。 在屬性窗格中，選取 [其他程式庫目錄] 編輯方塊旁的下拉式清單控制項，然後選擇 [編輯]。
+1. 在左窗格中，選取 [設定] [**屬性**] [ > **連結器** > **一般**]。 在屬性窗格中，選取 [其他程式庫目錄] 編輯方塊旁的下拉式清單控制項，然後選擇 [編輯]。
 
-   ![編輯 [其他程式庫目錄] 屬性](media/mathclient-additional-library-directories-property.png "編輯 [其他程式庫目錄] 屬性")
+   ![編輯其他程式庫目錄屬性](media/mathclient-additional-library-directories-property.png "編輯其他程式庫目錄屬性")
 
-1. 在 [其他程式庫目錄] 對話方塊的上方窗格中按兩下以啟用編輯控制項。 在編輯控制項中，指定 **MathLibrary.lib** 檔案的位置路徑。 根據預設，它位於 DLL 方案資料夾下名為*Debug*的資料夾中。 如果您建立發行組建，該檔案會放在名為*release*的資料夾中。 您可以使用`$(IntDir)`宏，讓連結器可以找到您的 DLL，而不論您所建立的組建種類為何。 如果您已遵循指示將您的用戶端專案放在 DLL 專案的不同方案中，則相對路徑應如下所示：
+1. 在 [其他程式庫目錄] 對話方塊的上方窗格中按兩下以啟用編輯控制項。 在編輯控制項中，指定 **MathLibrary.lib** 檔案的位置路徑。 根據預設，它位於 DLL 方案資料夾下名為*Debug*的資料夾中。 如果您建立發行組建，該檔案會放在名為*release*的資料夾中。 您可以使用 `$(IntDir)` 宏，讓連結器可以找到您的 DLL，不論您所建立的組建種類為何。 如果您已遵循指示將您的用戶端專案放在 DLL 專案的不同方案中，則相對路徑應如下所示：
 
    `..\..\MathLibrary\$(IntDir)`
 
-   如果您的 DLL 和用戶端專案位於相同的方案中，則相對路徑看起來應該像這樣：
-
-   `..\MathLibrary\$(IntDir)`
+   如果您的 DLL 和用戶端專案位於其他位置，請調整相對路徑以符合。
 
    ![新增程式庫目錄](media/mathclient-additional-library-directories.png "新增程式庫目錄")
 
@@ -543,7 +541,7 @@ int main()
 
 您的用戶端應用程式現在可以編譯並成功連結，但仍不具備執行所需的所有項目。 當作業系統載入您的應用程式時，會尋找 MathLibrary DLL。 如果作業系統無法在特定系統目錄、環境路徑或本機應用程式目錄中找到該 DLL，則載入將會失敗。 視作業系統而定，您會看到類似下面的錯誤訊息：
 
-![找不到 MATHLIBRARY DLL 錯誤](media/mathclient-system-error-mathlibrary-dll-not-found.png "找不到 MATHLIBRARY DLL 錯誤")
+![找不到 MathLibrary DLL 錯誤](media/mathclient-system-error-mathlibrary-dll-not-found.png "找不到 MathLibrary DLL 錯誤")
 
 避免此問題之其中一個方法是將 DLL 複製到包含用戶端可執行檔的目錄，作為建置程序的一部分。 您可以將**建立後事件**新增至您的專案，以加入將 DLL 複製到組建輸出目錄的命令。 此處指定的命令只有在遺失或已變更時，才會複製 DLL。 它會根據您的組建設定，使用宏從 Debug 或 Release 位置複製到和。
 
@@ -553,21 +551,19 @@ int main()
 
 1. 在 [組態] 下拉式清單方塊中，選取 [所有組態] (若尚未選取)。
 
-1. 在左窗格中，選取 [設定] [**屬性** > ] [**組建事件** > ] [建立**後事件**]。
+1. 在左窗格中，選取 [設定] [**屬性**] [ > **組建事件**] [ > **後置建立事件**]。
 
 1. 在 [屬性] 窗格中，選取 [**命令列**] 欄位中的編輯控制項。 如果您已遵循指示將您的用戶端專案放在 DLL 專案的不同方案中，請輸入此命令：
 
    `xcopy /y /d "..\..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
 
-   如果您的 DLL 和用戶端專案位於相同的方案目錄中，請輸入此命令：
+   如果您的 DLL 和用戶端專案位於其他目錄中，請將相對路徑變更為符合的 DLL。
 
-   `xcopy /y /d "..\MathLibrary\$(IntDir)MathLibrary.dll" "$(OutDir)"`
-
-   ![新增建置後命令](media/mathclient-post-build-command-line.png "新增建置後命令")
+   ![新增建立後命令](media/mathclient-post-build-command-line.png "新增建立後命令")
 
 1. 選擇 [確定] 按鈕，儲存您對專案屬性進行的變更。
 
-現在您的用戶端應用程式已具備建置與執行所需所有項目。 選擇功能表列上的 [建置] > [建置方案] 以建置應用程式。 Visual Studio 中的 [**輸出**] 視窗應該會有類似下列範例的內容, 視您的 Visual Studio 版本而定:
+現在您的用戶端應用程式已具備建置與執行所需所有項目。 選擇功能表列上的 [建置] > [建置方案] 以建置應用程式。 Visual Studio 中的 [**輸出**] 視窗應該會有類似下列範例的內容，視您的 Visual Studio 版本而定：
 
 ```Output
 1>------ Build started: Project: MathClient, Configuration: Debug Win32 ------
@@ -579,7 +575,7 @@ int main()
 
 恭喜，您已建立可在 DLL 中呼叫函式的應用程式。 現在，執行您的應用程式以查看其功能。 在功能表列上，依序選擇 [偵錯] > [啟動但不偵錯]。 Visual Studio 會開啟命令視窗，供程式執行。 輸出的最後一部分看起來應該如下所示：
 
-![啟動用戶端應用程式但不偵錯](media/mathclient-run-without-debugging.png "啟動用戶端應用程式但不偵錯")
+![啟動用戶端應用程式但不進行調試](media/mathclient-run-without-debugging.png "啟動用戶端應用程式但不進行調試")
 
 按任意鍵以關閉命令視窗。
 

@@ -1,90 +1,88 @@
 ---
-title: ARM 組合程式命令列參考
-ms.date: 08/30/2018
+title: ARM 組譯工具命令列參考
+description: Microsoft ARM 組合器命令列選項的參考指南。
+ms.date: 02/09/2020
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
-ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a63273e8d21e7a28574ec79d62c15f29ee59cd50
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62162131"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257375"
 ---
-# <a name="arm-assembler-command-line-reference"></a>ARM 組合程式命令列參考
+# <a name="arm-assembler-command-line-reference"></a>ARM 組譯工具命令列參考
 
-本文章提供有關 Microsoft ARM 組譯工具的命令列資訊*armasm*，這將 ARMv7 Thumb 組件語言編譯成 Microsoft 實作的通用物件檔案格式 (COFF)。 連結器可以連結 （coff） 的程式碼與產生 ARM 組譯工具或 C 編譯器，以及管理員所建立的物件程式庫物件。
+本文提供有關 Microsoft ARM 組合器**armasm**的命令列資訊。 **armasm**將 ARMv7 Thumb 元件語言組合成 Microsoft 的通用物件檔案格式（COFF）執行。 連結器可以連結 ARM 組合語言和 C 編譯器所產生的 COFF 程式碼物件。 它可以與管理員所建立的物件程式庫連結在一起。
 
 ## <a name="syntax"></a>語法
 
-> **armasm** [*options*] *sourcefile* *objectfile*
-> **armasm** [*options*] **-o** *objectfile* *sourcefile*
+> **`armasm`** [*options*] *source_file* *object_file*\
+> **`armasm`** [*options*] **`-o`** *object_file* *source_file*
 
 ### <a name="parameters"></a>參數
 
-*options*<br/>
-零個或多個項目組合：
+*選項*\
+下列零或多個選項的組合：
 
-- **-errors** *filename*<br/>
-   將錯誤和警告訊息，以重新導向*filename*。
+- **`-errors`** *filename*\
+   將錯誤和警告訊息重新導向至*filename*。
 
-- **-i** *dir*[**;**<em>dir</em>]<br/>
-   加入包含搜尋路徑中指定的目錄。
+- **`-i`** *dir*[ **`;`** <em>dir</em>] \
+   將指定的目錄新增至 include 搜尋路徑。
 
-- **-predefine** *directive*<br/>
-   指定預先定義符號的 SETA、 SETL 或設定指示詞。<br/>
-   範例： **armasm.exe-預先定義"COUNT SETA 150"source.asm**<br/>
-   如需詳細資訊，請參閱 < [ARM 編譯器 armasm 參考指南](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)。
+- **`-predefine`** 指示*詞\*
+   指定 SETA、SETL 或 SET 指示詞以預先定義符號。
+   範例： `armasm.exe -predefine "COUNT SETA 150" source.asm`\
+   如需詳細資訊，請參閱[ARM 編譯器 Armasm 參考指南](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)。
 
-- **-nowarn**<br/>
+- **`-nowarn`**\
    停用所有警告訊息。
 
-- **-ignore** *warning*<br/>
-   停用指定的警告。 如需可能的值，請參閱有關警告的章節。
+- **`-ignore`** *警告*\
+   停用指定的警告。 如需可能的值，請參閱關於警告的一節。
 
-- **-help**<br/>
+- **`-help`**\
    列印命令列說明訊息。
 
-- **-machine** *machine*<br/>
-   指定設定的 PE 標頭中的機器類型。  可能值為*機器*是：<br/>
-   **ARM**— IMAGE_FILE_MACHINE_ARMNT 設定機器類型。 這是預設值。<br/>
-   **THUMB**— IMAGE_FILE_MACHINE_THUMB 設定機器類型。
+- **`-machine`** *機*\
+   指定要在 PE 標頭中設定的電腦類型。  *機器*的可能值為： \
+   **ARM**—將電腦類型設定為 IMAGE_FILE_MACHINE_ARMNT。 此選項是預設值。
+   **THUMB**—將電腦類型設定為 IMAGE_FILE_MACHINE_THUMB。
 
-- **-oldit**<br/>
-   產生 ARMv7 樣式 IT 區塊。  根據預設，ARMv8 相容 IT 區塊所產生。
+- **`-oldit`**\
+   產生 ARMv7 樣式的 IT 區塊。  根據預設，會產生與 ARMv8 相容的 IT 區塊。
 
-- **-via** *filename*<br/>
-   讀取其他的命令列引數，從*filename*。
+- **`-via`** *filename*\
+   從*檔案名*讀取其他命令列引數。
 
-- **-16**<br/>
-   組合為 16 位元的 Thumb 指令的來源。  這是預設值。
+- **`-16`**\
+   將來源組合為16位捲動方塊指示。  這個選項是預設值。
 
-- **-32**<br/>
-   組合為 32 位元 ARM 指令的來源。
+- **`-32`**\
+   將來源組合為32位 ARM 指示。
 
-- **-g**<br/>
-   產生偵錯資訊。
+- **`-g`**\
+   產生調試資訊。
 
-- **-errorReport:** *選項*<br/>
-   指定向 Microsoft 報告錯誤的方式內部組譯工具。  可能值為*選項*是：<br/>
-   **無**-不傳送報告。<br/>
-   **提示字元**，提示使用者立即傳送報告。<br/>
-   **佇列**，提示使用者在下一步 的管理員登入傳送報告。 這是預設值。<br/>
-   **傳送**— 傳送自動報告。
+- **`-errorReport:`** *選項*\
+   這個選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。
 
-*sourcefile*<br/>
+*source_file*\
 原始程式檔的名稱。
 
-*objectfile*<br/>
-物件 （輸出） 檔案的名稱。
+*object_file*\
+物件（輸出）檔案的名稱。
 
 ## <a name="remarks"></a>備註
 
-下列範例示範如何使用 armasm 在典型的案例。 首先，使用 armasm 來建置組件語言來源 (.asm) 檔 (.obj) 檔案。 然後，使用 CL 命令列 C 編譯器來編譯來源 (.cpp) 檔案，並也指定連結器選項連結 ARM 物件檔案。
+下列範例示範如何在一般案例中使用 armasm。 首先，使用 armasm 來建立元件語言來源（.asm）檔案至物件（.obj）檔案。 然後，使用 CL 命令列 C 編譯器來編譯來源（.c）檔案，並同時指定連結器選項來連結 ARM 物件檔案。
 
-**armasm myasmcode.asm -o myasmcode.obj**
-
-**cl myccode.c /link myasmcode.obj**
+```cmd
+armasm myasmcode.asm -o myasmcode.obj
+cl myccode.c /link myasmcode.obj
+```
 
 ## <a name="see-also"></a>另請參閱
 
-[ARM 組譯工具診斷訊息](../../assembler/arm/arm-assembler-diagnostic-messages.md)<br/>
-[ARM 組譯工具指示詞](../../assembler/arm/arm-assembler-directives.md)<br/>
+[ARM 組譯工具診斷訊息](../../assembler/arm/arm-assembler-diagnostic-messages.md)\
+[ARM 組合器指示詞](../../assembler/arm/arm-assembler-directives.md)

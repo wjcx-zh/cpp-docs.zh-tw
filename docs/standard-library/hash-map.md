@@ -6,23 +6,23 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6bb2ca0cc14bcc4a9b9df9877902de9181e0a768
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689565"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258142"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
 > [!NOTE]
-> 這個標頭已淘汰。 替代方式是[\<unordered_map >](unordered-map.md)。
+> 此標頭已淘汰。 替代方式是[\<unordered_map >](unordered-map.md)。
 
-定義容器類別範本 hash_map 和 hash_multimap 及其支援的範本。
+定義 hash_map 和 hash_multimap 的容器類別範本，以及其支援的範本。
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 #include <hash_map>
 ```
 
@@ -41,21 +41,21 @@ ms.locfileid: "72689565"
 
 ### <a name="classes"></a>類別
 
-|執行個體|描述|
+|類別|描述|
 |-|-|
-|[hash_compare 類別](hash-compare-class.md)|描述可由任何雜湊關聯容器（hash_map、hash_multimap、hash_set 或 hash_multiset）用來做為預設 `Traits` 參數物件的物件，以排序及雜湊其包含的元素。|
+|[hash_compare 類別](hash-compare-class.md)|描述可由任何雜湊關聯容器（hash_map、hash_multimap、hash_set 或 hash_multiset）使用的物件，做為預設的 `Traits` 參數物件，以排序及雜湊其包含的元素。|
 |[value_compare 類別](value-compare-class.md)|提供函式物件，該物件可透過比較 hash_map 項目的索引鍵值來比較項目，以判斷項目在 hash_map 中的相對順序。|
 |[hash_map 類別](hash-map-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值唯一) 和相關聯資料值的配對。|
 |[hash_multimap 類別](hash-multimap-class.md)|用以儲存及快速擷取集合中的資料，其中每個項目為具有排序鍵 (其值可重複) 和相關聯資料值的配對。|
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<hash_map>
+**標頭：** \<hash_map >
 
 **命名空間：** stdext
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](cpp-standard-library-header-files.md)\
+[標頭檔參考資料](cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](thread-safety-in-the-cpp-standard-library.md)\
 [C++ 標準程式庫參考](cpp-standard-library-reference.md)

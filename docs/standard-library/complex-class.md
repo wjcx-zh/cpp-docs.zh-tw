@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688255"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257971"
 ---
 # <a name="complex-class"></a>complex 類別
 
-類別樣板描述一個物件，它會儲存 `Type` 類型的兩個物件，一個代表複數的實數部分，另一個代表虛數部分。
+類別樣板描述一個物件，它會儲存 `Type`類型的兩個物件，一個代表複數的實數部分，另一個代表虛數部分。
 
 ## <a name="syntax"></a>語法
 
@@ -40,9 +40,9 @@ class complex
 
 特別是在指派之後，細微的差異可能不存在於複製建構和預設建構之間。 對類別的物件 `Type` 的作業都不會擲回例外狀況。
 
-這三個浮點類型的類別樣板的明確特製化存在。 在此實作為中，任何其他類型 `Type` 的值都會轉換為**double**進行實際計算，並將**double**結果指派回 `Type` 類型的預存物件。
+這三個浮點類型的類別樣板的明確特製化存在。 在此實作為中，任何其他類型 `Type` 的值都會轉換為**double**進行實際計算，並將**double**結果指派回 `Type`類型的預存物件。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="constructors"></a>建構函式
 
@@ -50,7 +50,7 @@ class complex
 |-|-|
 |[complex](#complex)|建構具有指定實數與虛數部分或作為其他一些複數複本的複數。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -73,8 +73,6 @@ class complex
 |[operator/=](#op_div_eq)|將目標複數除以某個除數，該除數可能是複雜類型，或者是與複數的實數和虛數部分相同的類型。|
 |[operator=](#op_eq)|將目標複數指派某個數字，這個指派的數字可能是複雜類型，或者是與目標複數的實數和虛數部分相同的類型。|
 
-
-
 ## <a name="complex"></a>複雜化
 
 建構具有指定實數與虛數部分或作為其他一些複數複本的複數。
@@ -91,18 +89,18 @@ constexpr complex(
 
 ### <a name="parameters"></a>參數
 
-*_RealVal* \
+*_RealVal*\
 用於初始化建構中複數之實數部分的值。
 
-*_ImagVal* \
+*_ImagVal*\
 用於初始化建構中複數之虛數部分的值。
 
-*complexNum* \
+*complexNum*\
 其實數及虛數用於初始化建構中之複數的複數。
 
 ### <a name="remarks"></a>備註
 
-第一個函式會將儲存的實數部分初始化為 *\_RealVal* ，並將儲存的虛數部分初始化為 *\_Imagval*。 第二個函式會將儲存的實數部分初始化為 `complexNum.real()`，並將儲存的虛數部分初始化為 `complexNum.imag()`。
+第一個函式會將儲存的實數部分初始化為 *\_RealVal* ，並將儲存的虛數部分初始化為 *\_初始化 imagval*。 第二個函式會將儲存的實數部分初始化為 `complexNum.real()`，並將儲存的虛數部分初始化為 `complexNum.imag()`。
 
 在此實作中，若轉譯器不支援成員樣板函式，此樣板：
 
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 取代為：
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -171,7 +169,7 @@ T imag(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要擷取其虛數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -228,7 +226,7 @@ complex<Type>& operator*=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -313,7 +311,7 @@ complex<Type>& operator+=(const complex<Type>& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -416,10 +414,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum* \
+*complexNum*\
 複數，其為目標複數的減數。
 
-*_RealPart* \
+*_RealPart*\
 實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
@@ -524,10 +522,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>參數
 
-*complexNum* \
+*complexNum*\
 複數，其為目標複數的減數。
 
-*_RealPart* \
+*_RealPart*\
 實數，其為目標複數的減數。
 
 ### <a name="return-value"></a>傳回值
@@ -626,7 +624,7 @@ complex<Type>& operator=(const Type& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 複數或與目標複數之參數相同類型的數字。
 
 ### <a name="return-value"></a>傳回值
@@ -703,7 +701,7 @@ T real(const T& right);
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要擷取其實數部分的複數。
 
 ### <a name="return-value"></a>傳回值
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 類型，表示用來代表複數之實數和虛數部分的資料類型。
 
-```
+```cpp
 typedef Type value_type;
 ```
 
@@ -782,6 +780,6 @@ Specifying initial real & imaginary parts
 of type value_type: c1 = (3,4).
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

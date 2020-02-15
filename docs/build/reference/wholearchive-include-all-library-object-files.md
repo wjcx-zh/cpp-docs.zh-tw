@@ -1,37 +1,43 @@
 ---
-title: /WHOLEARCHIVE （包括所有的程式庫目的檔）
-ms.date: 11/04/2016
+title: /WHOLEARCHIVE （包含所有程式庫物件檔案）
+ms.date: 02/12/2020
 ms.assetid: ee92d12f-18af-4602-9683-d6223be62ac9
-ms.openlocfilehash: db99816b18110b424647603196040997044e7fbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 95685c9c0dfde45c42449bbcad67228a0e21b36a
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316427"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257529"
 ---
-# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包括所有的程式庫目的檔）
+# <a name="wholearchive-include-all-library-object-files"></a>/WHOLEARCHIVE （包含所有程式庫物件檔案）
 
-Force 連結器在連結的可執行檔中的靜態程式庫中包含物件的所有檔案。
+強制連結器在連結的可執行檔中包含靜態程式庫中的所有物件檔案。
 
 ## <a name="syntax"></a>語法
 
-> /WHOLEARCHIVE[:*library*]
+> **/WHOLEARCHIVE**\
+> **/WHOLEARCHIVE：** 連結_庫_
+
+### <a name="arguments"></a>引數
+
+*程式庫*\
+靜態程式庫的選擇性路徑名稱。 連結器包含這個文件庫中的每個物件檔案。
 
 ## <a name="remarks"></a>備註
 
-已將 /WHOLEARCHIVE 選項會強制連結器，以包含每個物件檔案，從指定的靜態程式庫，或如果未不指定任何程式庫，從指定至連結的所有靜態程式庫的命令。 若要指定多個程式庫的已將 /WHOLEARCHIVE 選項，您可以在連結器命令列上使用一個以上已將 /WHOLEARCHIVE 切換。 根據預設，連結器包含物件中檔案連結的輸出這些匯出參考其他物件中的檔案可執行檔的符號時，才。 已將 /WHOLEARCHIVE 選項可讓連結器將封存的靜態程式庫，如同個別指定連結器命令列上的所有目的檔。
+/WHOLEARCHIVE 選項會強制連結器包含指定靜態程式庫中的每個物件檔案，或者，如果未指定任何程式庫，則會從指定給 LINK 命令的所有靜態程式庫。 若要指定多個程式庫的/WHOLEARCHIVE 選項，您可以在連結器命令列上使用一個以上的/WHOLEARCHIVE 參數。 根據預設，連結器只會在連結的輸出中包含物件檔案，而這些檔案會在可執行檔中匯出其他物件檔案所參考的符號。 /WHOLEARCHIVE 選項會讓連結器將封存在靜態程式庫中的所有物件檔案視為在連結器命令列上個別指定。
 
-已將 /WHOLEARCHIVE 選項可用來重新匯出從靜態程式庫的所有符號。 這可讓您確保所有您的程式庫程式碼、 資源和中繼資料都包含一個以上的靜態程式庫從建立元件時。 如果您看到警告 LNK4264，當您建立靜態程式庫，包含匯出的 Windows 執行階段元件，請將該程式庫連結到另一個元件或應用程式時使用已將 /WHOLEARCHIVE 選項。
+/WHOLEARCHIVE 選項可用來重新匯出靜態程式庫中的所有符號。 這可讓您在從多個靜態程式庫建立元件時，確保包含所有的程式庫程式碼、資源和中繼資料。 如果您在建立包含匯出 Windows 執行階段元件的靜態程式庫時看到警告 LNK4264，請在將該程式庫連結至另一個元件或應用程式時，使用/WHOLEARCHIVE 選項。
 
-已將 /WHOLEARCHIVE 選項已引入 Visual Studio 2015 Update 2。
+/WHOLEARCHIVE 選項是在 Visual Studio 2015 Update 2 中引進。
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>在 Visual Studio 中設定這個連結器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **命令列**下方的 屬性頁**組態屬性**，**連結器**。
+1. 在 [設定**屬性**]、[**連結器**] 底下，選取 [**命令列**] 屬性頁。
 
-1. 新增已將 /WHOLEARCHIVE 選項，以**其他選項**文字方塊。
+1. 將 [/WHOLEARCHIVE] 選項新增至 [**其他選項**] 文字方塊。
 
 ## <a name="see-also"></a>另請參閱
 

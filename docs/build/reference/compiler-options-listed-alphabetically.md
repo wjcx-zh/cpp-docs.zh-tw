@@ -1,18 +1,21 @@
 ---
 title: 依字母順序排列的編譯器選項
-ms.date: 01/08/2020
+description: 以 Microsoft C/C++編譯器命令列選項的字母順序排列的參考清單。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034593"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257737"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 
-以下是編譯器選項的完整字母順序清單。 如需分類清單，請參閱 [依分類排列的編譯器選項](compiler-options-listed-by-category.md)。
+此資料表包含以字母順序排列的編譯器選項清單。 如需依分類列出編譯器選項的清單，請參閱[依類別目錄發行的編譯器選項](compiler-options-listed-by-category.md)。
+
+## <a name="compiler-options"></a>編譯器選項
 
 |選項|目的|
 |------------|-------------|
@@ -27,19 +30,19 @@ ms.locfileid: "77034593"
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
 |[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
 |[/clr](clr-common-language-runtime-compilation.md)|產生輸出檔案，以便在 Common Language Runtime 上執行。|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制 constexpr 評估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制**constexpr**評估。|
 |[/D](d-preprocessor-definitions.md)|定義常數和巨集。|
 |[/diagnostics](diagnostics-compiler-diagnostic-options.md)|控制診斷訊息的格式。|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|將文件註解處理成 XML 檔案。|
 |[/E](e-preprocess-to-stdout.md)|複製前置處理器輸出至標準輸出。|
 |[/EH](eh-exception-handling-model.md)|指定例外狀況處理模型。|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|複製前置處理器輸出至標準輸出。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤（ICE）資訊給 Microsoft C++小組。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
 |[/execution-charset](execution-charset-set-execution-character-set.md)|設定執行字元集。|
 |[/experimental：模組](experimental-module.md)|啟用實驗性模組支援。|
 |[/experimental：預處理器](experimental-preprocessor.md)|啟用符合實驗性的預處理器支援。|
 |[/F](f-set-stack-size.md)|設定堆疊大小。|
-|[/favor](favor-optimize-for-architecture-specifics.md)|產生針對特定 x64 架構優化的程式碼，或適用于 AMD64 和延伸記憶體64技術（EM64T）架構中的微架構細節。|
+|[/favor](favor-optimize-for-architecture-specifics.md)|產生針對特定 x64 架構優化的程式碼。 或者，針對 AMD64 和 EM64T 架構中的特定微架構。|
 |[/FA](fa-fa-listing-file.md)|建立清單檔。|
 |[/Fa](fa-fa-listing-file.md)|設定清單檔名稱。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|顯示在診斷測試中傳遞給 cl.exe 的原始程式檔完整路徑。|
@@ -52,7 +55,7 @@ ms.locfileid: "77034593"
 |[/fp](fp-specify-floating-point-behavior.md)|指定浮點行為。|
 |[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|產生瀏覽器檔案。 **/Fr** 已取代。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 MSPDBSRV.EXE 序列化的程式資料庫 (PDB) 檔案。|
+|[/FS](fs-force-synchronous-pdb-writes.md)|強制序列化所有寫入至程式資料庫（PDB）檔案的 MSPDBSRV.EXE。CONVERT.EXE.|
 |[/FU](fu-name-forced-hash-using-file.md)|強制使用某一檔名，就如同它已傳遞給 [#using](../../preprocessor/hash-using-directive-cpp.md) 指示詞一樣。|
 |[/Fx](fx-merge-injected-code.md)|將插入的程式碼與原始程式檔合併。|
 |[/GA](ga-optimize-for-windows-application.md)|對 Windows 應用程式進行程式碼最佳化。|
@@ -172,5 +175,5 @@ ms.locfileid: "77034593"
 
 ## <a name="see-also"></a>另請參閱
 
-[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)\
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

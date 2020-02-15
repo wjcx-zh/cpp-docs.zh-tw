@@ -1,19 +1,20 @@
 ---
 title: 依分類排列的編譯器選項
-ms.date: 01/08/2020
+description: 依 Microsoft C/C++編譯器命令列選項分類的參考清單。
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 191ea3d5d6f4647f7130757a4657820483d212b5
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: d29076e6eae4bcbd15a4bc50bb48477e3f93152d
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034580"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257711"
 ---
 # <a name="compiler-options-listed-by-category"></a>依分類排列的編譯器選項
 
-本文包含編譯器選項的分類清單。 如需依字母順序排列的清單，請參閱 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)。
+本文包含編譯器選項的分類清單。 如需按字母順序排列的清單，請參閱依[字母順序列出的編譯器選項](compiler-options-listed-alphabetically.md)。
 
 ## <a name="optimization"></a>Optimization
 
@@ -88,7 +89,7 @@ ms.locfileid: "77034580"
 |[/Fm](fm-name-mapfile.md)|建立對應檔 (Mapfile)。|
 |[/Fo](fo-object-file-name.md)|建立目的檔。|
 |[/Fp](fp-name-dot-pch-file.md)|指定先行編譯標頭檔的名稱。|
-|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|名稱產生的 .sbr 瀏覽器檔案。|
+|[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|*`.sbr`* 瀏覽器檔案產生的名稱。|
 
 ## <a name="preprocessor"></a>前置處理器
 
@@ -112,7 +113,7 @@ ms.locfileid: "77034580"
 
 |選項|目的|
 |------------|-------------|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制 constexpr 評估。|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|在編譯時期控制**constexpr**評估。|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|在原始程式碼中啟用 [#pragma omp](../../preprocessor/omp.md) 。|
 |[/vd](vd-disable-construction-displacements.md)|抑制或啟用隱藏的 `vtordisp` 類別成員。|
 |[/vmb](vmb-vmg-representation-method.md)|對指向成員的指標使用最佳基底。|
@@ -128,7 +129,7 @@ ms.locfileid: "77034580"
 |[/ZH](zh.md)|針對 debug 資訊中的總和檢查碼指定 MD5、SHA-1 或 SHA-256。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|將偵錯資訊包括在與「編輯後繼續」相容的程式資料庫中。 (僅限 x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|產生完整偵錯資訊。|
-|[/Zl](zl-omit-default-library-name.md)|從 .obj 檔案移除預設程式庫名稱。|
+|[/Zl](zl-omit-default-library-name.md)|從 *`.obj`* 檔案移除預設程式庫名稱。|
 |[/Zp](zp-struct-member-alignment.md) *n*|封裝結構成員。|
 |[/Zs](zs-syntax-check-only.md)|僅檢查語法。|
 |[/ZW](zw-windows-runtime-compilation.md)|產生要在 Windows 執行階段上執行的輸出檔。|
@@ -142,10 +143,10 @@ ms.locfileid: "77034580"
 |[/LDd](md-mt-ld-use-run-time-library.md)|建立偵錯動態連結程式庫。|
 |[/link](link-pass-options-to-linker.md)|傳遞指定的選項給 LINK。|
 |[/LN](ln-create-msil-module.md)|建立 MSIL 模組。|
-|[/MD](md-mt-ld-use-run-time-library.md)|使用 MSVCRT.lib 編譯以建立多執行緒 DLL。|
-|[/MDd](md-mt-ld-use-run-time-library.md)|使用 MSVCRTD.lib 編譯以建立偵錯多執行緒 DLL。|
-|[/MT](md-mt-ld-use-run-time-library.md)|使用 LIBCMT.lib 編譯以建立多執行緒可執行檔。|
-|[/MTd](md-mt-ld-use-run-time-library.md)|使用 LIBCMTD.lib 編譯以建立偵錯多執行緒可執行檔。|
+|[/MD](md-mt-ld-use-run-time-library.md)|使用*msvcrt.lib*編譯以建立多執行緒 DLL。|
+|[/MDd](md-mt-ld-use-run-time-library.md)|使用*msvcrtd.lib*編譯以建立 debug 多執行緒 DLL。|
+|[/MT](md-mt-ld-use-run-time-library.md)|使用*libcmt.lib*編譯以建立多執行緒可執行檔。|
+|[/MTd](md-mt-ld-use-run-time-library.md)|使用*libcmtd.lib*編譯以建立 debug 多執行緒可執行檔。|
 
 ## <a name="miscellaneous"></a>其他
 
@@ -156,10 +157,10 @@ ms.locfileid: "77034580"
 |[/analyze](analyze-code-analysis.md)|啟用程式碼分析。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|增加 .obj 檔案中可定址區段的數目。|
 |[/c](c-compile-without-linking.md)|編譯而不連結。|
-|[/cgthreads](cgthreads-code-generation-threads.md)|指定 cl.exe 執行緒的數目，以用於最佳化及程式碼產生。|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|可讓您直接提供內部編譯器錯誤（ICE）資訊給 Microsoft C++小組。|
-|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|在診斷文字中顯示傳遞給 cl.exe 的原始程式檔完整路徑。|
-|[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 MSPDBSRV.EXE 序列化的程式資料庫 (PDB) 檔案。|
+|[/cgthreads](cgthreads-code-generation-threads.md)|指定要用於優化和程式碼產生的*cl*執行緒數目。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
+|[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|顯示在診斷文字中傳遞給*cl*之原始程式碼檔案的完整路徑。|
+|[/FS](fs-force-synchronous-pdb-writes.md)|強制寫入要透過 Mspdbsrv.exe 序列化的 PDB 檔案 *。EXE*。|
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/HELP](help-compiler-command-line-help.md)|列出編譯器選項。|
 |[/J](j-default-char-type-is-unsigned.md)|變更預設 `char` 類型。|
@@ -184,7 +185,7 @@ ms.locfileid: "77034580"
 |[/wo](compiler-option-warning-level.md)|只顯示指定的警告一次。|
 |[/Wv](compiler-option-warning-level.md)|停用較新版編譯器所引入的警告。|
 |[/WX](compiler-option-warning-level.md)|將警告視為錯誤。|
-|[/Yc](yc-create-precompiled-header-file.md)|建立.PCH 檔案。|
+|[/Yc](yc-create-precompiled-header-file.md)|建立 *`.PCH`* 檔案。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|在建立偵錯程式庫時插入 PCH 參考。|
 |[/Yu](yu-use-precompiled-header-file.md)|在建置時使用先行編譯標頭檔。|
@@ -201,7 +202,7 @@ ms.locfileid: "77034580"
 
 ## <a name="experimental-options"></a>實驗性選項
 
-實驗性選項可能僅受到特定版本編譯器的支援，而且在不同的編譯器版本中可能會有不同的行為。 通常，實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
+實驗性選項可能只有特定版本的編譯器才支援。 它們在不同的編譯器版本中也可能會有不同的行為。 通常，實驗性選項的最佳或唯一檔位於[ C++ Microsoft 小組的 Blog](https://devblogs.microsoft.com/cppblog/)。
 
 |選項|目的|
 |------------|-------------|
@@ -213,6 +214,7 @@ ms.locfileid: "77034580"
 |選項|目的|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|已取代。 請改用 [/LN (Create MSIL Module)](ln-create-msil-module.md) 。|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
 |[/Fr](fr-fr-create-dot-sbr-file.md)|已取代。 建立不包含本機變數的瀏覽資訊檔。|
 |[/Ge](ge-enable-stack-probes.md)|已取代。 啟動堆疊探查。 預設為 [開啟]。|
 |[/Gm](gm-enable-minimal-rebuild.md)|已取代。 啟用最少重建。|
@@ -221,7 +223,7 @@ ms.locfileid: "77034580"
 |[/H](h-restrict-length-of-external-names.md)|已取代。 限制外部 (公用) 名稱的長度。|
 |[/Og](og-global-optimizations.md)|已取代。 使用全域最佳化。|
 |[/QIfist](qifist-suppress-ftol.md)|已取代。 曾用以指定如何從浮點型別轉換為整數型別。|
-|[/V](v-version-number.md)|已取代。 設定 obj 檔案版本字串。|
+|[/V](v-version-number.md)|已取代。 設定 *`.obj`* 檔案版本字串。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|已經過時： 偵測 64 位元可移植性問題。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|已取代。 將完整的偵錯資訊置於所有目的檔中。 改用 [/Zi](z7-zi-zi-debug-information-format.md) 。|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|已取代。 停用 For 迴圈範圍中的一致性。|
@@ -230,6 +232,6 @@ ms.locfileid: "77034580"
 
 ## <a name="see-also"></a>另請參閱
 
-[C/C++ 建置參考](c-cpp-building-reference.md)<br/>
-[MSVC 編譯器選項](compiler-options.md)<br/>
-[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)<br/>
+[C/C++建築物參考](c-cpp-building-reference.md)\
+[MSVC 編譯器選項](compiler-options.md)\
+[MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

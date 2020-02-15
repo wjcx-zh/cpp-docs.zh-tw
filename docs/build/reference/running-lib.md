@@ -1,7 +1,7 @@
 ---
 title: 執行 LIB
 description: 描述您可以搭配 lib 使用的命令列選項。
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685544"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257555"
 ---
 # <a name="running-lib"></a>執行 LIB
 
@@ -40,7 +40,7 @@ ms.locfileid: "71685544"
 
 ## <a name="lib-command-line"></a>LIB 命令列
 
-若要執行 LIB，請輸入命令 `lib`，後面接著您要使用 LIB 執行之工作的選項和檔案名。 LIB 也接受命令檔中的命令列輸入，如下一節所述。 LIB 不會使用環境變數。
+若要執行 LIB，請輸入命令 `lib`，後面接著您要使用 LIB 之工作的選項和檔案名。 LIB 也接受命令檔中的命令列輸入，如下一節所述。 LIB 不會使用環境變數。
 
 ## <a name="lib-command-files"></a>LIB 命令檔
 
@@ -48,34 +48,32 @@ ms.locfileid: "71685544"
 
 > **LIB \@** <em>命令</em>檔
 
-File*命令*檔是文字檔。 @ 符號（ **\@** ）與檔案名之間不允許有空格或定位字元。 *命令檔案名*沒有預設副檔名;您必須指定完整的檔案名，包括任何副檔名。 無法使用萬用字元。 您可以使用檔案名來指定絕對或相對路徑。
+File*命令*檔是文字檔。 @ 符號（ **\@** ）和檔案名之間不允許有空格或定位字元。 *命令檔案名*沒有預設副檔名。 指定完整的檔案名，包括任何延伸模組。 無法使用萬用字元。 您可以使用檔案名來指定絕對或相對路徑。
 
 在命令檔中，引數可以用空格或索引標籤分隔，如同它們可以在命令列上。 引數也可以用分行符號分隔。 使用分號（ **;** ）來標示批註。 LIB 會忽略從分號到行尾的所有文字。
 
-您可以在命令檔中指定全部或部分的命令列，也可以在 LIB 命令中使用一個以上的命令檔。 LIB 會接受命令檔輸入，如同在命令列上指定的位置一樣。 命令檔無法加以嵌套。 除非使用 **/nologo**選項，否則 LIB 會回顯命令檔的內容。
+您可以在命令檔中指定全部或部分的命令列，而且可以在 LIB 命令中使用一個以上的命令檔。 LIB 會接受命令檔輸入，如同在命令列上指定的位置一樣。 命令檔無法加以嵌套。 除非使用 **/nologo**選項，否則 LIB 會回顯命令檔的內容。
 
 ## <a name="using-lib-options"></a>使用 LIB 選項
 
-選項包含選項規範，也就是破折號（ **-** ）或斜線（ **/** ），後面接著選項的名稱。 選項名稱不可以是縮寫。 有些選項會接受引數，並在冒號（ **：** ）之後指定。 選項規格中不允許有空格或索引標籤。 在命令列上使用一或多個空格或索引標籤來分隔選項規格。 選項名稱及其關鍵字或檔案名引數不區分大小寫，但是當做引數使用的識別碼會區分大小寫。 LIB 會依照命令列和命令檔中指定的順序來處理選項。 如果使用不同的引數重複選項，則最後一個要處理的會優先。
+選項包含選項規範，也就是破折號（ **-** ）或正斜線（ **/** ），後面接著選項的名稱。 選項名稱不可以是縮寫。 有些選項會接受引數，並在冒號（ **：** ）之後指定。 選項規格中不允許有空格或索引標籤。 在命令列上使用一或多個空格或索引標籤來分隔選項規格。 選項名稱及其關鍵字或檔案名引數不區分大小寫，但是當做引數使用的識別碼會區分大小寫。 LIB 會依照命令列和命令檔中指定的順序來處理選項。 如果使用不同的引數重複選項，則最後一個要處理的會優先。
 
 下列選項適用于所有的 LIB 模式：
 
-> **/ERRORREPORT** \[**無** &#124; **提示** &#124; **佇列** &#124; **傳送**]
+> **/ERRORREPORT** \[**無** &#124; **提示** &#124;佇列&#124; **傳送**]
 
-如果 lib 在執行時間失敗，您可以使用 **/ERRORREPORT** ，將有關這些內部錯誤的資訊傳送給 Microsoft。
-
-如需 **/ERRORREPORT**的詳細資訊，請參閱[/ERRORREPORT （回報編譯器內部錯誤）](errorreport-report-internal-compiler-errors.md)。
+/ERRORREPORT 選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。
 
 > **/LINKREPRO：** _目錄-路徑_ \
 > **/LINKREPROTARGET：** _filename_
 
-若要協助 Microsoft 診斷 lib 的當機和內部錯誤，您可以使用[/LINKREPRO](linkrepro.md)選項。 它會產生*連結重現*，這是一組組建成品，可讓 Microsoft 重現在媒體櫃操作期間發生的問題。 [/LINKREPROTARGET](linkreprotarget.md)選項可以搭配 **/LINKREPRO**選項使用。 當 lib 產生指定的檔案時，它只會產生連結重現構件。 如需詳細資訊，請參閱[如何回報 Microsoft C++工具組的問題](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
+若要協助 Microsoft 診斷 lib 的當機和內部錯誤，您可以使用[/LINKREPRO](linkrepro.md)選項。 此選項會產生*連結重現*，這是一組組建成品，可讓 Microsoft 重現媒體櫃操作期間發生的問題。 [/LINKREPROTARGET](linkreprotarget.md)選項可以搭配 **/LINKREPRO**選項使用。 當 lib 產生指定的檔案時，它只會產生連結重現構件。 如需詳細資訊，請參閱[如何回報 Microsoft C++工具組的問題](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)。
 
 > **/LTCG**
 
-「LTCG」代表*連結時間程式碼產生*。 這項功能需要在編譯器（[cl](compiler-options.md)）、LIB 和連結器（[連結](linker-options.md)）之間進行合作，以將程式碼優化，使其無法由任何元件本身自行執行。
+「LTCG」代表*連結時間程式碼產生*。 這項功能需要編譯器（[cl](compiler-options.md)）、LIB 和連結器（[連結](linker-options.md)）之間的合作。 它們一起可以將程式碼優化，而不是任何元件本身所能執行的動作。
 
-若是 LIB， **/ltcg**選項會指定來自 cl 的輸入包含使用[/gl](gl-whole-program-optimization.md)編譯器選項所產生的物件檔案。 如果 LIB 遇到這類輸入，而且未指定 **/ltcg** ，則會在顯示參考訊息之後，以/ltcg 啟用來重新開機。 換句話說，不需要明確設定此選項，但它會加速組建效能來執行這項操作，因為 LIB 不必自行重新開機。
+LIB 的 **/ltcg**選項指定來自 cl 的輸入包含使用[/gl](gl-whole-program-optimization.md)編譯器選項所產生的物件檔案。 如果 LIB 遇到這類輸入，而且未指定 **/ltcg** ，則會在顯示參考訊息之後，以已啟用/ltcg 的方式重新開機。 換句話說，不需要明確設定此選項，但它會加速組建效能。 這是因為 LIB 不需要自行重新開機。
 
 在組建程式中，LIB 的輸出會傳送至連結。 連結有自己各自的 **/ltcg**選項。 它可用來執行各種優化，包括整個程式優化和特性指引優化（PGO）檢測。 如需連結選項的詳細資訊，請參閱[/ltcg](ltcg-link-time-code-generation.md)。
 
@@ -91,7 +89,7 @@ File*命令*檔是文字檔。 @ 符號（ **\@** ）與檔案名之間不允許
 
 顯示會話進度的詳細資料，包括正在新增的 .obj 檔案的名稱。 資訊會傳送至標準輸出，並且可重新導向至檔案。
 
-> **/WX**[ **:NO**]
+> **/WX**[ **： NO**]
 
 將警告視為錯誤。 如需詳細資訊，請參閱 [/WX (將連結器警告視為錯誤)](wx-treat-linker-warnings-as-errors.md)。
 

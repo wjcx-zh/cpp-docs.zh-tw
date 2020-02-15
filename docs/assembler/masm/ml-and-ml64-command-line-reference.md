@@ -1,6 +1,7 @@
 ---
 title: ML 和 ML64 命令列參考
-ms.date: 12/17/2019
+description: Microsoft MASM ML 和 ML64 組合器命令列選項的參考指南。
+ms.date: 02/09/2020
 f1_keywords:
 - ML
 helpviewer_keywords:
@@ -54,12 +55,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 77385317ab7f90a646b7f552e471d0f434e72bfb
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: b5c5a79417cb141da3d5cfe1c08aa39e02a9c7c2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317158"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257360"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML 和 ML64 命令列參考
 
@@ -71,7 +72,7 @@ ms.locfileid: "75317158"
 
 > ML \[*選項*] *filename* \[ \[*選項*] *filename*]
 >
-> ML64 \[*選項*] *filename* \[ \[*選項*] *filename*] ... \[/link *linkoptions*]
+> ML64 \[*選項*] *filename* \[ \[*選項*] *filename*] ... \[/link *link_options*]
 
 ### <a name="parameters"></a>參數
 
@@ -80,21 +81,21 @@ ms.locfileid: "75317158"
 
 |選項|動作|
 |------------|------------|
-|**/AT**|啟用小型記憶體模型支援。 針對違反 .com 格式檔案需求的程式碼結構啟用錯誤訊息。 請注意，這不等於[。模型](dot-model.md)**小型**指示詞。<br /><br /> 無法在 ml64 中使用。|
+|**/AT**|啟用小型記憶體模型支援。 針對違反 .com 格式檔案需求的程式碼結構啟用錯誤訊息。 此選項不等於[。模型](dot-model.md)**小型**指示詞。<br /><br /> 無法在 ml64 中使用。|
 |**/Bl** *filename*|選取替代連結器。|
-|**/c**|僅限組合。 未連結。|
-|**/coff**|產生物件模組的通用物件檔案格式（COFF）類型。 通常是 Win32 元件語言開發所需的。<br /><br /> 無法在 ml64 中使用。|
+|**/c**|僅限組合。 沒有連結。|
+|**/coff**|產生物件模組的通用物件檔案格式（COFF）類型。 Win32 元件語言開發所需。<br /><br /> 無法在 ml64 中使用。|
 |**/Cp**|保留所有使用者識別碼的大小寫。|
 |**/Cu**|將所有識別碼對應至大寫（預設值）。<br /><br /> 無法在 ml64 中使用。|
 |**/Cx**|會保留公用和外部符號中的大小寫。|
 |**/D** *符號*⟦ =*值*⟧|定義具有指定名稱的文字宏。 如果遺漏*值*，則為空白。 以空格分隔的多個標記必須括在引號中。|
 |**/EP**|產生前置處理過的來源清單（傳送至 STDOUT）。 請參閱 **/Sf**。|
-|**/ERRORREPORT** [**無** &#124; **提示** &#124;佇列&#124; **傳送**]|如果 ml 或 ml64 在執行時間失敗，您可以使用 **/ERRORREPORT**將有關這些內部錯誤的資訊傳送給 Microsoft。<br /><br /> 如需 **/ERRORREPORT**的詳細資訊，請參閱[/ERRORREPORT （回報編譯器內部錯誤）](../../build/reference/errorreport-report-internal-compiler-errors.md)。|
-|**/F** *hexnum*|將堆疊大小設定為*hexnum*位元組（這與 **/link/STACK**：*number*相同）。 值必須以十六進位標記法表示。 **/F**和*hexnum*之間必須有一個空格。|
+|**/ERRORREPORT** [**無** &#124; **提示** &#124;佇列&#124; **傳送**]| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
+|**/F** *hexnum*|將堆疊大小設定為*hexnum*位元組（與 **/link/STACK**：*number*相同）。 值必須以十六進位標記法表示。 **/F**和*hexnum*之間必須有一個空格。|
 |**/Fe** *filename*|命名可執行檔。|
 |**/Fl**⟦*filename*⟧|產生組合的程式代碼清單。 請參閱 **/Sf**。|
 |**/Fm**⟦*filename*⟧|建立連結器對應檔。|
-|**/Fo** *filename*|命名物件檔案。 如需詳細資訊，請參閱備註一節。|
+|**/Fo** *filename*|命名物件檔案。 如需詳細資訊，請參閱[備註](#remarks)。|
 |**/FPi**|產生浮點算術的模擬器修正（僅限混合語言）。<br /><br /> 無法在 ml64 中使用。|
 |**/Fr**⟦*filename*⟧|產生來源瀏覽器 .sbr 檔案。|
 |**/Fr**⟦*filename*⟧|產生來源瀏覽器 .sbr 檔案的延伸格式。|
@@ -129,16 +130,18 @@ ms.locfileid: "75317158"
 |**/?**|顯示 ML 命令列語法的摘要。|
 
 *檔案名*\
-檔案的檔名。
+檔案的名稱。
 
-*linkoptions*\
-連結選項。  如需詳細資訊，請參閱[連結器選項](../../build/reference/linker-options.md)。
+*link_options*\
+連結選項。 如需詳細資訊，請參閱[連結器選項](../../build/reference/linker-options.md)。
 
 ## <a name="remarks"></a>備註
 
 ML 和 ML64 的某些命令列選項是位置相關性。 例如，因為 ML 和 ML64 可以接受數個 **/c**選項，所以必須在 **/c**之前指定任何對應的 **/fo**選項。 下列命令列範例說明每個元件檔案規格的物件檔案規格：
 
-**ml/Fo a1 .obj/c a .asm/Fo b1 .obj/c b. asm**
+```cmd
+ml.exe /Fo a1.obj /c a.asm /Fo b1.obj /c b.asm
+```
 
 ## <a name="environment-variables"></a>環境變數
 
@@ -148,7 +151,7 @@ ML 和 ML64 的某些命令列選項是位置相關性。 例如，因為 ML 和
 |ML|指定預設的命令列選項。|
 |.TMP|指定暫存檔案的路徑。|
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [ML 錯誤訊息](ml-error-messages.md)\
 [Microsoft 巨集組譯工具參考](microsoft-macro-assembler-reference.md)

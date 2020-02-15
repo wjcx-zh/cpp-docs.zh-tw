@@ -1,6 +1,7 @@
 ---
 title: /errorReport (回報編譯器內部錯誤)
-ms.date: 11/04/2016
+description: Microsoft C/C++編譯器/errorReport 命令列選項的參考。
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ErrorReporting
 - /errorreport
@@ -8,60 +9,42 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d4a3c4d5fd918973bbf8057e0c073c680e6995e
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271784"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257646"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (回報編譯器內部錯誤)
 
-讓您可將內部編譯器錯誤 (ICE) 資訊直接提供給 Microsoft。
+> [!NOTE]
+> **/ErrorReport**選項已被取代。 從 Windows Vista 開始，錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。
 
 ## <a name="syntax"></a>語法
 
-```
-/errorReport:[ none | prompt | queue | send ]
-```
-
-## <a name="arguments"></a>引數
-
-**none**<br/>
-將不會收集有關內部編譯器錯誤的報告，也不會將報告傳送給 Microsoft。
-
-**提示**<br/>
-提示您在收到內部編譯器錯誤時傳送報告。 **提示字元**是在開發環境中編譯應用程式的預設值。
-
-**queue**<br/>
-佇列錯誤報告。 當您登入系統管理員權限時，以便您可以報告自上次登入的任何失敗，會顯示的視窗 （您將不會提示您傳送錯誤報告的頻率超過每隔三天一次）。 **佇列**是應用程式會在命令提示字元進行編譯時的預設值。
-
-**傳送**<br/>
-如果將 Windows 錯誤報告的系統設定已啟用報告，會自動傳送給 Microsoft 報告內部編譯器錯誤。
+> **/errorReport：** \[**none** \|**提示**字元 \|**佇列**\|**傳送**]
 
 ## <a name="remarks"></a>備註
 
-編譯器無法處理原始程式碼檔案時，就會出現編譯器內部錯誤 (ICE)。 發生 ICE 時，編譯器不會產生輸出檔或任何有用的診斷，無法讓您修正程式碼。
+編譯器無法處理原始程式碼檔案時，會產生內部編譯器錯誤（ICE）。 當 ICE 發生時，編譯器不會產生輸出檔，或任何可用來修正程式碼的實用診斷。
 
-在舊版中，當您收到 ICE 時，我們鼓勵您連絡 Microsoft 產品支援服務回報問題。 具有 **/errorReport**，您可以直接向 Microsoft 提供 ICE 資訊。 您的錯誤報告有助於改善未來的編譯器版本。
+Windows 錯誤報告的服務設定會覆寫 **/errorReport**引數。 如果 Windows 錯誤報告啟用報告功能，編譯器會自動將內部錯誤的報告傳送給 Microsoft。 如果 Windows 錯誤報告停用，則不會傳送任何報表。
 
-使用者能否傳送報告，取決於電腦和使用者原則權限。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [ **屬性頁** ] 對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 按一下 [C/C++]  資料夾。
+1. 開啟 [設定**屬性**] > [ **C/C++**  > **Advanced** ] 屬性頁。
 
-1. 按一下 **進階**屬性頁。
-
-1. 修改**錯誤報告**屬性。
+1. 修改 [**錯誤報表**] 屬性。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-- 請參閱 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>。
+- 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.ErrorReporting%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 
-[MSVC 編譯器選項](compiler-options.md)<br/>
+[MSVC 編譯器選項](compiler-options.md)\
 [MSVC 編譯器命令列語法](compiler-command-line-syntax.md)

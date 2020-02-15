@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890136"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257984"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt; 運算子
 
@@ -38,7 +38,7 @@ operator&(
 *左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `AND` 結合。
 
-*right* \
+*right*\
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `AND` 結合。
 
 ### <a name="return-value"></a>傳回值
@@ -77,7 +77,7 @@ bitset 3: 0001
 
 將位元序列的文字表示插入輸出資料流。
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -86,7 +86,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>參數
 
-*right* \
+*right*\
 要當做字串插入輸出資料流之 **bitset\<N>** 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -134,7 +134,7 @@ int main( )
 
 將位元字元的字串讀入 bitset。
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -146,18 +146,18 @@ basic_istream<CharType, Traits>& operator>> (
 *i_str*\
 在輸入資料流中輸入以插入 bitset 的字串。
 
-*right* \
+*right*\
 要從輸入資料流接收位元的 bitset。
 
 ### <a name="return-value"></a>傳回值
 
-此範本函式會傳回字串*i_str*。
+此範本函式會傳回*i_str*的字串。
 
 ### <a name="remarks"></a>備註
 
-樣板函式會多載 `operator>>` 以將值 `bitset(str)`儲存在 bitset*右側*，其中 `str` 是[basic_string](basic-string-class.md)類型的物件`< CharType, Traits, allocator< CharType > >&` 從*i_str*中解壓縮。
+樣板函式會多載 `operator>>` 以將值 `bitset(str)`儲存在 bitset*右側*，其中 `str` 是[basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` 從*i_str*中解壓縮的類型的物件。
 
-此範本函式會從*i_str*中解壓縮專案，並將它們插入至 bitset，直到：
+此範本函式會從*i_str*解壓縮專案，並將其插入至 bitset 中，直到：
 
 - 已從輸入資料流中擷取所有位元元素並將其儲存在 bitset 中。
 
@@ -231,7 +231,7 @@ operator^(
 *左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
-*right* \
+*right*\
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `EXCLUSIVE-OR` 結合。
 
 ### <a name="return-value"></a>傳回值
@@ -283,7 +283,7 @@ operator|(
 *左方*\
 兩個 bitset 的第一個 bitset，其相關元素會使用位元 `OR` 結合。
 
-*right* \
+*right*\
 兩個 valarray 的第二個 valarray，其相關元素會使用位元 `OR` 結合。
 
 ### <a name="return-value"></a>傳回值

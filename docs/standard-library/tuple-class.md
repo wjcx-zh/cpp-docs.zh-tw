@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - tuple class
 ms.assetid: c38749be-ae4d-41f3-98ea-6aa3250de9a3
-ms.openlocfilehash: 1727d3a12b7186d3cc868ef6bb78711774057407
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 9890a6a9dea1671f14b66897a80f4b49861dff2b
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688869"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257100"
 ---
 # <a name="tuple-class"></a>元組類別
 
@@ -20,7 +20,7 @@ ms.locfileid: "72688869"
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 class tuple {
    tuple();
    explicit tuple(P1, P2, ..., PN); // 0 < N
@@ -41,12 +41,12 @@ class tuple {
 
 ### <a name="parameters"></a>參數
 
-*TN* \
+*TN*\
 第 N 個 tuple 項目類型。
 
 ## <a name="remarks"></a>備註
 
-類別範本會描述一個物件，其會分別儲存類型為 `T1`、`T2`、...、`TN` 的 N 個物件，其中 `0 <= N <= Nmax`。 元組實例 `tuple<T1, T2, ..., TN>` 的範圍是其範本引數的 `N` 數目。 範本引數的索引 `Ti` 和該類型的對應預存值 `i - 1`。 因此，雖然我們在此檔中將類型從1到 N，但對應的索引值的範圍是從0到 N-1。
+類別範本會描述一個物件，其會分別儲存類型為 `T1`、`T2`、...、`TN`的 N 個物件，其中 `0 <= N <= Nmax`。 元組實例 `tuple<T1, T2, ..., TN>` 的範圍是其範本引數的 `N` 數目。 範本引數的索引 `Ti` 和該類型的對應預存值 `i - 1`。 因此，雖然我們在此檔中將類型從1到 N，但對應的索引值的範圍是從0到 N-1。
 
 ## <a name="example"></a>範例
 
@@ -140,12 +140,12 @@ template <class U1, class U2>
 *取消*\
 第 N 個複製的元組項目類型。
 
-*right* \
+*right*\
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註
 
-前兩個成員運算子會將*右邊*的元素指派給 `*this` 的對應元素。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
+前兩個成員運算子會將*右邊*的元素指派給 `*this`的對應元素。 第三個成員運算子會將 `right.first` 指派給位於索引 0 的元素 `*this`，並將 `right.second` 指派給位於索引 1 的元素。 這三個成員運算子都會傳回 `*this`。
 
 其餘的成員運算子都類似上述的運算子，但具有[右值參考宣告子：&&](../cpp/rvalue-reference-declarator-amp-amp.md)。
 
@@ -212,7 +212,7 @@ template <class... Types>
 *左方*\
 其專案要與元組*許可權*交換的元組。
 
-*right* \
+*right*\
 元組，其專案要與*剩餘*的元組交換。
 
 ### <a name="remarks"></a>備註
@@ -249,7 +249,7 @@ template <class U1, class U2>
 *取消*\
 第 N 個複製的元組項目類型。
 
-*right* \
+*right*\
 要複製的來源元組。
 
 ### <a name="remarks"></a>備註

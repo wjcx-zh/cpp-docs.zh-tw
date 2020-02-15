@@ -1,18 +1,18 @@
 ---
 title: LIB 概觀
 description: 程式庫工具（lib）的使用方式和選項。
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685494"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257608"
 ---
 # <a name="overview-of-lib"></a>LIB 概觀
 
@@ -35,7 +35,7 @@ ms.locfileid: "71685494"
 |選項|描述|
 |-|-|
 |**/DEF**|建立匯入程式庫和匯出檔案。<br/><br/>如需詳細資訊，請參閱[建立匯入程式庫和匯出](building-an-import-library-and-export-file.md)檔案。|
-|**/ERRORREPORT**|   使用 lib 將內部錯誤的相關資訊傳送給 Microsoft。<br/><br/>如需詳細資訊，請參閱[執行 LIB](running-lib.md)。|
+|**/ERRORREPORT**| 已取代。 如需詳細資訊，請參閱[執行 LIB](running-lib.md)。|
 |**/EXPORT**|   從您的程式匯出函式。<br/><br/>如需詳細資訊，請參閱[建立匯入程式庫和匯出](building-an-import-library-and-export-file.md)檔案。|
 |**/EXTRACT**|   建立包含現有文件庫成員複本的物件（.obj）檔案。<br/><br/>如需詳細資訊，請參閱[解壓縮程式庫成員](extracting-a-library-member.md)。|
 |**/INCLUDE**|   將符號加入至符號表。<br/><br/>如需詳細資訊，請參閱[建立匯入程式庫和匯出](building-an-import-library-and-export-file.md)檔案。|
@@ -56,8 +56,8 @@ ms.locfileid: "71685494"
 
 ## <a name="see-also"></a>另請參閱
 
-[LIB 參考](lib-reference.md)<br/>
-[LIB 輸入檔](lib-input-files.md)<br/>
-[LIB 輸出檔](lib-output-files.md)<br/>
-[其他 LIB 輸出](other-lib-output.md)<br/>
+[LIB 參考](lib-reference.md)\
+[LIB 輸入](lib-input-files.md)檔\
+[LIB 輸出](lib-output-files.md)檔案\
+[其他 LIB 輸出](other-lib-output.md)\
 [程式庫結構](structure-of-a-library.md)

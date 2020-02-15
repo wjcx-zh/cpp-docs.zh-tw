@@ -1,34 +1,35 @@
 ---
 title: EDITBIN 選項
-ms.date: 11/04/2016
+description: Microsoft EDITBIN 公用程式命令列選項的參考指南。
+ms.date: 02/09/2020
 f1_keywords:
 - editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271849"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257698"
 ---
 # <a name="editbin-options"></a>EDITBIN 選項
 
-您可以使用 EDITBIN 來修改物件的檔案、 可執行檔，以及動態連結程式庫 (Dll)。 選項會指定 EDITBIN 所做的變更。
+您可以使用 EDITBIN 來修改物件檔案、可執行檔和動態連結程式庫（Dll）。 選項會指定 EDITBIN 所做的變更。
 
-選項選項規範組成，這是一個破折號 （-） 或斜線 （/），後面加上選項的名稱。 選項名稱不能被縮寫。 某些選項可接受於冒號 ( : ) 之後指定的引數。 內的選項規格允許沒有空格或定位字元。 使用一個或多個空間索引標籤來分隔命令列上的選項規格。 選項名稱及其關鍵字引數或檔名引數不區分大小寫。 例如，-bind 和 /BIND 意義相同。
+選項包含選項規範，也就是破折號（`-`）或正斜線（`/`），後面接著選項的名稱。 選項名稱不可以是縮寫。 有些選項會採用冒號（`:`）後面指定的引數。 選項規格中不允許有空格或索引標籤。 在命令列上使用一或多個空格或索引標籤來分隔選項規格。 選項名稱及其關鍵字引數或檔案名引數不區分大小寫。 例如，`-bind` 和 `/BIND` 表示相同的東西。
 
-EDITBIN 具有下列選項：
+EDITBIN 有下列選項：
 
-|選項|用途|
+|選項|目的|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|指定 DLL 是否可以繫結。|
 |[/ALLOWISOLATION](allowisolation.md)|指定 DLL 或可執行檔資訊清單查閱行為。|
-|[/APPCONTAINER](appcontainer.md)|指定是否必須在 AppContainer 中執行應用程式 — 例如，UWP 應用程式。|
+|[/APPCONTAINER](appcontainer.md)|指定應用程式是否必須在 AppContainer 中執行（例如 UWP 應用程式）。|
 |[/BIND](bind.md)|在指定的物件中設定進入點位址，以加速載入時間。|
 |[/DYNAMICBASE](dynamicbase.md)|指定 DLL 或可執行檔映像是否可以使用位址空間配置隨機載入 (ASLR) 功能，於載入時隨機重定基底。|
-|[/ERRORREPORT](errorreport-editbin-exe.md)|向 Microsoft 報告內部錯誤。|
+|[/ERRORREPORT](errorreport-editbin-exe.md)| 已取代。 錯誤報表是由[Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定所控制。 |
 |[/HEAP](heap.md)|設定可執行檔映像的堆積大小 (位元組)。|
 |[/HIGHENTROPYVA](highentropyva.md)|指定 DLL 或可執行映像是否支援高熵 (64 位元) 位址空間配置隨機載入 (ASLR)。|
 |[/INTEGRITYCHECK](integritycheck.md)|指定是否在載入時間檢查數位簽章。|
@@ -40,11 +41,11 @@ EDITBIN 具有下列選項：
 |[/SECTION](section-editbin.md)|覆寫區段的屬性。|
 |[/STACK](stack.md)|設定可執行檔映像的堆疊大小 (位元組)。|
 |[/SUBSYSTEM](subsystem.md)|指定執行環境。|
-|[/SWAPRUN](swaprun.md)|指定可執行檔映像必須複製到分頁檔，再從分頁檔執行映像。|
+|[/SWAPRUN](swaprun.md)|指定可執行映射複製到分頁檔，然後從該處執行。|
 |[/TSAWARE](tsaware.md)|指定應用程式是設計成在多使用者環境中執行。|
 |[/VERSION](version.md)|在標頭中設定版本號碼。|
 
 ## <a name="see-also"></a>另請參閱
 
-[其他 MSVC 建置工具](c-cpp-build-tools.md)<br/>
+[其他 MSVC build 工具](c-cpp-build-tools.md)\
 [EDITBIN 參考](editbin-reference.md)

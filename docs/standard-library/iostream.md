@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449035"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257802"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,21 +32,21 @@ ms.locfileid: "68449035"
 ```
 
 > [!NOTE]
-> `#include <streambuf>` `#include <istream>` `#include <ostream>` Iostream > 程式庫會`#include <ios>`使用、、和語句。 \<
+> \<iostream > 程式庫會使用 `#include <ios>`、`#include <streambuf>`、`#include <istream>`和 `#include <ostream>` 語句。
 
 ## <a name="remarks"></a>備註
 
 這些物件可分為兩個群組：
 
-- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)和[堵塞](#clog)是位元組導向的, 會執行傳統的位元組時傳輸。
+- [cin](#cin)、 [cout](#cout)、 [cerr](#cerr)和[堵塞](#clog)是位元組導向的，會執行傳統的位元組時傳輸。
 
 - [wcin](#wcin)、[wcout](#wcout)、[wcerr](#wcerr) 及 [wclog](#wclog) 是寬字元導向物件，會對程式在內部操作的寬字元進行雙向轉譯。
 
-當您對資料流程執行某些作業 (例如標準輸入) 時, 您無法在相同的資料流程上執行不同方向的作業。 因此, 程式無法在[cin](#cin)和[wcin](#wcin)上交替運作, 例如。
+當您對資料流程執行某些作業（例如標準輸入）時，您無法在相同的資料流程上執行不同方向的作業。 因此，程式無法在[cin](#cin)和[wcin](#wcin)上交替運作，例如。
 
-在此標頭中宣告的所有物件都共用什麼嗎屬性, 您可以假設它們是在您定義的任何靜態物件之前, 在包含\<iostream > 的轉譯單位中所建立。 同樣地, 您可以假設在您定義的任何這類靜態物件的析構函數之前, 這些物件不會被終結。 (但輸出資料流會在程式終止期間排清。)因此，在程式啟動之前和程式終止之後，您可以安全地讀取或寫入標準資料流。
+在此標頭中宣告的所有物件都共用什麼嗎屬性，您可以假設它們是在您定義的任何靜態物件之前，在包含 \<iostream > 的轉譯單位中所建立。 同樣地，您可以假設在您定義的任何這類靜態物件的析構函數之前，這些物件不會被終結。 （不過，輸出資料流程會在程式終止期間排清）。因此，您可以在程式啟動之前和程式終止之後，安全地讀取或寫入標準資料流程。
 
-不過, 這種保證並不是通用的。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 所呼叫的函式不會假設轉譯單位參與靜態結構的順序不確定, 已建立在此標頭中宣告的物件。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
+不過，這種保證並不是通用的。 靜態建構函式可能會在另一個轉譯單位中呼叫函式。 所呼叫的函式不會假設轉譯單位參與靜態結構的順序不確定，已建立在此標頭中宣告的物件。 若要在這類內容中使用這些物件，您必須先建構 [ios_base::Init](../standard-library/ios-base-class.md#init) 類別的物件。
 
 ### <a name="global-stream-objects"></a>全域資料流物件
 
@@ -75,7 +75,7 @@ extern ostream cerr;
 
 #### <a name="remarks"></a>備註
 
-此物件可控制以位元組資料流形式對標準錯誤輸出進行的未緩衝插入。 建構完物件之後，`cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 運算式就不為零，且 `cerr.tie() == &cout`。
+此物件可控制以位元組資料流形式對標準錯誤輸出進行的未緩衝插入。 一旦建立物件之後，運算式 `cerr.`[旗標](../standard-library/ios-base-class.md#flags)`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)為非零值，並 `cerr.tie() == &cout`。
 
 #### <a name="example"></a>範例
 
@@ -125,7 +125,7 @@ extern istream cin;
 
 #### <a name="example"></a>範例
 
-在此範例中`cin` , 會在資料流程遇到非數位字元時設定失敗位。 程式會清除失敗位, 並從資料流程中去除不正確字元以繼續。
+在此範例中，`cin` 會在資料流程遇到非數位字元時，設定其失敗位。 程式會清除失敗位，並從資料流程中去除不正確字元以繼續。
 
 ```cpp
 // iostream_cin.cpp
@@ -176,7 +176,7 @@ extern ostream clog;
 
 #### <a name="example"></a>範例
 
-如需使用 `clog` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`clog`。
 
 ###  <a name="cout"></a>cout
 
@@ -196,7 +196,7 @@ extern ostream cout;
 
 #### <a name="example"></a>範例
 
-如需使用 `cout` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`cout`。
 
 ### <a name="wcerr"></a>wcerr
 
@@ -212,11 +212,11 @@ extern wostream wcerr;
 
 #### <a name="remarks"></a>備註
 
-此物件可控制以寬資料流形式對標準錯誤輸出進行的未緩衝插入。 建構完物件之後，`wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) 運算式就不為零。
+此物件可控制以寬資料流形式對標準錯誤輸出進行的未緩衝插入。 一旦建立物件之後，運算式 `wcerr.`[旗標](../standard-library/ios-base-class.md#flags)`&` [unitbuf](../standard-library/ios-functions.md#unitbuf)為非零值。
 
 #### <a name="example"></a>範例
 
-如需使用 `wcerr` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`wcerr`。
 
 ### <a name="wcin"></a>wcin
 
@@ -236,7 +236,7 @@ extern wistream wcin;
 
 #### <a name="example"></a>範例
 
-如需使用 `wcin` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`wcin`。
 
 ### <a name="wclog"></a>wclog
 
@@ -256,7 +256,7 @@ extern wostream wclog;
 
 #### <a name="example"></a>範例
 
-如需使用 `wclog` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`wclog`。
 
 ### <a name="wcout"></a>wcout
 
@@ -276,11 +276,11 @@ extern wostream wcout;
 
 #### <a name="example"></a>範例
 
-如需使用 `wcout` 的範例，請參閱 [cerr](#cerr)。
+如需使用 [ 的範例，請參閱 ](#cerr)cerr`wcout`。
 
-`wcout` 陳述式中的 `CString` 執行個體必須轉換成 `const wchar_t*`，如下列範例所示。
+`CString` 陳述式中的 `wcout` 執行個體必須轉換成 `const wchar_t*`，如下列範例所示。
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -290,7 +290,7 @@ wcout <<(const wchar_t*) cs <<endl;
 
 ## <a name="see-also"></a>另請參閱
 
-[標頭檔參考](../standard-library/cpp-standard-library-header-files.md)\
+[標頭檔參考資料](../standard-library/cpp-standard-library-header-files.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream 程式設計](../standard-library/iostream-programming.md)\
-[iostream 慣例](../standard-library/iostreams-conventions.md)
+[iostreams 慣例](../standard-library/iostreams-conventions.md)

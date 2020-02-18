@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 914498a79d3d3ddae08ae672aac35c6e913ef238
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: eaaa581ff622438c2e395c34b4b026aca693a845
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988081"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416159"
 ---
 # <a name="security-best-practices-for-c"></a>C++ 的安全性最佳做法
 
@@ -35,7 +35,7 @@ ms.locfileid: "74988081"
 [/NXCOMPAT](../build/reference/nxcompat.md)、 [/NXCOMPAT （與資料執行防止相容）](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)這些編譯器和連結器選項可啟用資料執行防止（DEP）相容性。 DEP 會保護 CPU 使其不執行非程式碼頁面。
 
 [/analyze (程式碼分析)](../build/reference/analyze-code-analysis.md)<br/>
-此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱[C/C++總覽的程式碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+此編譯器選項會啟動報告潛在安全性問題 (例如緩衝區滿溢、未初始化的記憶體、Null 指標取值以及記憶體流失) 的程式碼分析。 根據預設，這個選項為關閉狀態。 如需詳細資訊，請參閱[C/C++總覽的程式碼分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 [/DYNAMICBASE (使用位址空間配置隨機載入)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 此連結器選項會建置可執行檔映像，以在開始執行時於記憶體不同位置載入。 此選項也會讓記憶體中的堆疊位置更難預測。
@@ -64,7 +64,7 @@ C 執行階段程式庫 (CRT) 已增強，以包括造成安全性風險之函�
 
 - 當地語系化
 
-- 命名規範
+- 命名慣例
 
 - 效能
 
@@ -92,8 +92,8 @@ AppVerifier 會監視應用程式使用作業系統的方式。 它會在應用�
 
 如需如何識別和緩和軟體中C++的理論式執行端通道硬體弱點的詳細資訊，請參閱[ C++理論式執行端通道的開發人員指引](developer-guidance-speculative-execution.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 <xref:System.Security> <br/>
-[Security](/dotnet/standard/security/index)<br/>
+[安全性](/dotnet/standard/security/index)<br/>
 [使用者帳戶控制 (UAC) 如何影響應用程式](how-user-account-control-uac-affects-your-application.md)

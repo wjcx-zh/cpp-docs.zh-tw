@@ -4,16 +4,16 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b7a18354257333bb71fff6aedb3cf623c47c2d5c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821801"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415692"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 變更歷程記錄 2003 - 2015
 
-這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」與「過去」表示 Visual Studio 2013 及更舊版本。
+這篇文章說明自 Visual Studio 2015 回溯到 Visual Studio 2003 的所有的重大變更，並會在文章中使用「新行為」或 「目前」表示 Visual Studio 2015 及更新版本。 「舊行為」和「之前」等詞彙指的是 Visual Studio 2013 和較早的版本。
 
 如需最新 Visual Studio 版本的資訊，請參閱 [Visual Studio 中 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)及 [Visual Studio 中 Visual C++ 的一致性改善](../overview/cpp-conformance-improvements.md)。
 
@@ -22,7 +22,7 @@ ms.locfileid: "76821801"
 
 當您升級到新版 Visual Studio 時，先前正常編譯及執行的程式碼可能會發生編譯和 (或) 執行階段錯誤。 新版本中會造成這類問題的變更稱為 *「重大變更」* (Breaking Change)，在進行 C++ 語言標準、函式簽章或記憶體內部物件配置的修改時通常都會有重大變更。
 
-為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間，傳遞 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型。 如需詳細資訊，請參閱[跨 DLL 界限傳遞 CRT 物件時可能發生的錯誤](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
+為了避免發生難以偵測及診斷的執行階段錯誤，我們建議您絕不要以靜態方式連結至使用不同版本編譯器所編譯的二進位檔。 此外，當您升級 EXE 或 DLL 專案時，請務必也要升級它所連結的程式庫。 請勿在使用不同版本編譯器所編譯的二進位檔 (包括 DLL) 之間，傳遞 CRT (C 執行階段) 或 C++ 標準程式庫 (C++ 標準程式庫) 類型。 如需詳細資訊，請參閱 [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)。
 
 您絶對不要為不是 COM 介面或 POD 物件之物件撰寫依賴特定配置的程式碼。 如果您撰寫了這種程式碼，則必須確定它在升級之後可以正確運作。 如需詳細資訊，請參閱 [ABI 界限上的可攜性](../cpp/portability-at-abi-boundaries-modern-cpp.md)。
 
@@ -32,7 +32,7 @@ ms.locfileid: "76821801"
 
 - [標準 C++ 與 C++ 標準程式庫的重大變更](#BK_STL)
 
-- [MFC 和 ATL 的重大變更](#BK_MFC)
+- [MFC 與 ATL 的重大變更](#BK_MFC)
 
 - [並行執行階段的重大變更](#BK_ConcRT)
 
@@ -44,13 +44,13 @@ ms.locfileid: "76821801"
 
 - **重構的二進位檔**
 
-   CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)。 vcruntime 程式庫包含編譯器相關功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案 [連結器] 屬性的 [忽略所有預設程式庫] 設定為 [是]，或您在命令列使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單 (在 [其他相依性] 屬性中)，藉此包含重構的新程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT Library Features](../c-runtime-library/crt-library-features.md)。
+   CRT 程式庫已重構成兩個不同的二進位檔：通用 CRT (ucrtbase)，其中包含大部分的標準功能，以及 VC 執行階段程式庫 (vcruntime)。 vcruntime 程式庫包含編譯器相關功能，例如例外狀況處理和內建。 如果您正使用預設的專案設定，則這項變更不會對您造成影響，因為此連結器會自動使用新的預設程式庫。 如果您已將此專案 [連結器] 屬性的 [忽略所有預設程式庫] 設定為 [是]，或您在命令列使用 `/NODEFAULTLIB` 連結器選項，則必須更新程式庫清單 (在 [其他相依性] 屬性中)，藉此包含重構的新程式庫。 請將舊的 CRT 程式庫 (libcmt.lib、libcmtd.lib、msvcrt.lib、msvcrtd.lib) 取代為對等的重構程式庫。 這兩個重構程式庫中的任何一個皆有靜態 (.lib) 和動態 (.dll) 版本，也都有發行 (沒有後置詞) 和偵錯版本 (具有 "d" 後置詞)。 此動態版本具有您可與其連結的匯入程式庫。 這兩個重構程式庫為：通用的 CRT (具體而言，即 ucrtbase.dll 或 ucrtbase.lib、ucrtbased.dll 或 ucrtbased.lib) 及 VC 執行階段程式庫 (即 libvcruntime.lib、vcruntime*version*.dll、libvcruntimed.lib，以及 vcruntimed*version*.dll)。 Visual Studio 2015 和 Visual Studio 2017 中的 *version* 皆為 140。 請參閱 [CRT 程式庫的功能](../c-runtime-library/crt-library-features.md)。
 
 #### <a name="localeh"></a>\<locale.h>
 
 - **localeconv**
 
-   已啟用[個別執行緒的地區設定](../parallel/multithreading-and-locales.md)時，在 locale.h 中宣告的 [localeconv](../c-runtime-library/reference/localeconv.md) 函式即可正確運作。 在此程式庫的舊版中，這個函式會傳回全域地區設定的 `lconv` 資料，而非此執行緒的地區設定。
+   已啟用[個別執行緒的地區設定](../c-runtime-library/reference/localeconv.md)時，在 locale.h 中宣告的 [localeconv](../parallel/multithreading-and-locales.md) 函式即可正確運作。 在此程式庫的舊版中，這個函式會傳回全域地區設定的 `lconv` 資料，而非此執行緒的地區設定。
 
    如果您使用個別執行緒的地區設定，您應該檢查您的 `localeconv` 使用方式。 如果您的程式碼假設所傳回 `lconv` 資料是全域地區設定，您應該加以更正。
 
@@ -64,7 +64,7 @@ ms.locfileid: "76821801"
 
   - `double abs(double)` 和 `float abs(float)`
 
-  - `double pow(double, int)`、 `float pow(float, float)`、 `float pow(float, int)`、 `long double pow(long double, long double)`、 `long double pow(long double, int)`
+  - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
   - `float` 和 `long double` 版本的浮動點函式 `acos`、`acosh`、`asin`、`asinh`、`atan`、`atanh`、`atan2`、`cbrt`、`ceil`、`copysign`、`cos`、`cosh`、`erf`、`erfc`、`exp`、`exp2`、`expm1`、`fabs`、`fdim`、`floor`、`fma`、`fmax`、`fmin`、`fmod`、`frexp`、`hypot`、`ilogb`、`ldexp`、`lgamma`、`llrint`、`llround`、`log`、`log10`、`log1p`、`log2`、`lrint`、`lround`、`modf`、`nearbyint`、`nextafter`、`nexttoward`、`remainder`、`remquo`、`rint`、`round`、`scalbln`、`scalbn`、`sin`、`sinh`、`sqrt`、`tan`、`tanh`、`tgamma` 及 `trunc`
 
@@ -108,13 +108,13 @@ ms.locfileid: "76821801"
 
 #### <a name="stdio_and_conio"></a>\<stdio.h > 和 \<conio.h>. h >
 
-- **printf 和 scanf 系列的函式現在已定義為內嵌。**
+- **printf 與 scanf 系列的函式現在會在函式中定義。**
 
    所有 `printf` 與 `scanf` 函式的定義均已移至 \<stdio.h>、\<conio.h> 及其他 CRT 標頭內。 針對區域宣告這些函式但不包含適當 CRT 標頭的任何程式而言，這個中斷性變更會導致連結器錯誤 (LNK2019，無法解析的外部符號)。 如有可能，您應更新程式碼，將 CRT標頭 (亦即新增 `#include <stdio.h>`) 及內嵌函式包含在其中；若您不想修改程式碼來包含這些標頭檔案，也可以採用替代解決方法，在您的連結器輸入 legacy_stdio_definitions.lib 中新增額外的程式庫。
 
    若要在 IDE 中將此程式庫新增至您的連結器輸入，請開啟專案節點的操作功能表，選擇 [屬性]，然後在 [專案屬性] 對話方塊中選擇 [連結器]，並編輯 [連結器輸入]，將 `legacy_stdio_definitions.lib` 新增至分號分隔的清單。
 
-   如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 `_iob`、`_iob_func` 的內部定義，或某些以 _imp_\* 格式之 \<stdio.h> 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是其來源無法取得的協力廠商程式庫，則您應該向協力廠商要求更新的二進位檔，或將該程式庫使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
+   如果您的專案與靜態程式庫連結，且此程式庫使用 2015 之前的 Visual Studio 版本進行編譯，則此連結器可能會回報無法解析的外部符號。 這些錯誤可能會參考 `_iob`、`_iob_func` 的內部定義，或某些以 \<imp 格式之 \*stdio.h> 函式的相關匯入。 Microsoft 建議您在升級專案時，應以最新版本的 C++ 編譯器和程式庫重新編譯所有的靜態程式庫。 如果該程式庫是其來源無法取得的協力廠商程式庫，則您應該向協力廠商要求更新的二進位檔，或將該程式庫使用方式封裝成以舊版編譯器和舊版程式庫編譯的獨立 DLL。
 
     > [!WARNING]
     > 如果您要以 Windows SDK 8.1 或更早版本連結，您可能會遇到這些無法解析的外部符號錯誤。 在該情況下，您應該如先前所述地將 legacy_stdio_definitions.lib 加入連結器輸入來解決此錯誤。
@@ -225,7 +225,7 @@ ms.locfileid: "76821801"
 
 - **snprintf 和 vsnprintf**
 
-   現在已實作 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 和 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)。 舊版程式碼通常會為巨集版本的這些函式提供定義，因為 CRT 程式庫並沒有實作它們，但是在較新版本中已不再需要這些函式。 現在若在加入 <\<tdio.h> 之前先將 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 或 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 定義為巨集，編譯將會失敗，並傳回錯誤指出巨集的定義位置。
+   現在已實作 [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 和 [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)。 舊版程式碼通常會為巨集版本的這些函式提供定義，因為 CRT 程式庫並沒有實作它們，但是在較新版本中已不再需要這些函式。 現在若在加入 <[tdio.h> 之前先將 ](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)snprintf[ 或 ](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)vsnprintf\< 定義為巨集，編譯將會失敗，並傳回錯誤指出巨集的定義位置。
 
    一般來說，修正這個問題之方式為刪除使用者程式碼中 `snprintf` 或 `vsnprintf` 的任何宣告。
 
@@ -257,7 +257,7 @@ ms.locfileid: "76821801"
 
 - **小型堆積**
 
-   已移除 `smallheap` 連結選項。 請參閱[連結選項](../c-runtime-library/link-options.md)。
+   已移除 `smallheap` 連結選項。 請參閱 [Link Options](../c-runtime-library/link-options.md)。
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -275,9 +275,9 @@ ms.locfileid: "76821801"
 
 #### <a name="timeh"></a>\<time.h>
 
-- **clock**
+- **時鐘**
 
-   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 實作 [clock](../c-runtime-library/reference/clock.md) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新實作 clock 函式，因此該函式現在是單調函式。
+   在舊版中，會使用 Windows API [GetSystemTimeAsFileTime](../c-runtime-library/reference/clock.md) 實作 [clock](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) 函式。 連同這項實作，clock 函式會受系統時間影響，因此並不一定是單調函式。 已根據 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 重新實作 clock 函式，因此該函式現在是單調函式。
 
 - **fstat 和 _utime**
 
@@ -309,11 +309,11 @@ ms.locfileid: "76821801"
 
 - **C++ 標準程式庫 Include 檔案**
 
-   C++ 標準程式庫標頭中的 Include 結構已有一些變更。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地包含程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互包含的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 Visual Studio 2015 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 `std::array`，而不會包含所有的 \<array>。此函式可能會經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 `std::array`) 的 C++ 標準程式庫標頭 (例如 \<functional>)。
+   C++ 標準程式庫標頭中的 Include 結構已有一些變更。 C++ 標準程式庫標頭可以一些未經指定的方式加入彼此之中。 一般來說，您在撰寫程式碼時，應依據 C++ 標準小心地包含程式碼所需的所有標頭，而不要使用 C++ 標準程式庫標頭相互包含的這項特性。 這使其成為可攜式跨版本和跨平台的程式碼。 在 Visual Studio 2015 中，至少有兩種標頭的變更會影響使用者程式碼。 首先，\<string> 不再包含 \<iterator>。 其次，\<tuple> 現在只會宣告 `std::array`，而不會包含所有的 \<array>。此函式可能會經由下列程式碼建構組合中斷程式碼：您的程式碼具有名為 "array" 的變數及 using 指示詞 "using namespace std;"，而且包含內有 \<tuple> (現在會宣告 \<) 的 C++ 標準程式庫標頭 (例如 `std::array`functional>)。
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md) 的 \<chrono> 實作已變更為符合 C++ 標準的穩定性和單一性需求。 `steady_clock` 目前是以 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他實作的情況不一定也如此。
+   \<steady_clock[ 的 ](../standard-library/steady-clock-struct.md)chrono> 實作已變更為符合 C++ 標準的穩定性和單一性需求。 `steady_clock` 目前是以 [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) 為基礎，而 `high_resolution_clock` 現在是 `steady_clock` 的 typedef。 因此，在 Visual Studio 中，`steady_clock::time_point` 現在是 `chrono::time_point<steady_clock>` 的 typedef；但是，其他實作的情況不一定也如此。
 
 - **配置器和常數**
 
@@ -383,7 +383,7 @@ ms.locfileid: "76821801"
 
 - **launch::any 和 launch::sync 原則**
 
-   已移除非標準的 `launch::any` 和 `launch::sync` 原則。 針對 `launch::any`，請改為使用 `launch:async | launch:deferred`。 對於 `launch::sync`，請使用 `launch::deferred`。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch)。
+   已移除非標準的 `launch::any` 和 `launch::sync` 原則。 針對 `launch::any`，請改為使用 `launch:async | launch:deferred`。 如需 `launch::sync`，請使用 `launch::deferred`。 請參閱 [launch Enumeration](../standard-library/future-enums.md#launch)。
 
 ####  <a name="BK_MFC"></a> MFC 與 ATL
 
@@ -431,7 +431,7 @@ ms.locfileid: "76821801"
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
     ```
 
-   通常，這個選項是在非標準程式碼的迴圈變數應該已經超出範圍 (根據該標準) 之後，用來允許此非標準程式碼。 只有當您使用 `/Za` 選項編譯時才需要這樣做，因為在沒有指定 `/Za` 的情況下，會一律允許在迴圈結束之後使用 for 迴圈變數。 如果您不在意標準一致性 (例如，如果您並不打算將程式碼設計成可移植到其他編譯器)，則可以關閉 `/Za` 選項 (或將**停用語言延伸模組**屬性設為**否**)。 如果您在意撰寫可攜式且符合標準規範的程式碼，就應該要重寫程式碼，將這類變數的宣告移至該迴圈外，使其符合此標準。
+   通常，這個選項是在非標準程式碼的迴圈變數應該已經超出範圍 (根據該標準) 之後，用來允許此非標準程式碼。 只有當您使用 `/Za` 選項編譯時才需要這樣做，因為在沒有指定 `/Za` 的情況下，會一律允許在迴圈結束之後使用 for 迴圈變數。 如果您不在意標準一致性 (例如，如果您並不打算將程式碼設計成可移植到其他編譯器)，則可以關閉 `/Za` 選項 (或將**停用語言延伸模組**屬性設為**否**)。 如果您在意撰寫可攜式且符合標準的程式碼，就應該要重寫程式碼，將這類變數的宣告移至該迴圈外，使其符合此標準。
 
     ```cpp
     // C2065 expected
@@ -445,13 +445,13 @@ ms.locfileid: "76821801"
 
 - `/Zg` 編譯器選項
 
-   `/Zg` 編譯器選項 (產生函式原型) 已無法使用。 這個編譯器選項之前已遭取代。
+   `/Zg` 編譯器選項 (產生函式原型) 不再提供使用。 這個編譯器選項之前已遭取代。
 
 - 您再也無法從命令列藉由 mstest.exe 使用 C++ /CLI 來執行單元測試。 請改用 vstest.console.exe。 請參閱 [VSTest.Console.exe 命令列選項](/visualstudio/test/vstest-console-options)。
 
 - **可變動的關鍵字**
 
-   在 **mutable** 儲存體類型指定名稱原先可編譯而不會發生錯誤的位置，已無法再加以使用。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，**mutable** 指定名稱只能套用至類別資料成員名稱，而不能套用至宣告為 const 或 static 的名稱，也不能套用至參考成員。
+   在 **mutable** 儲存類別指定名稱原先可編譯而不會發生錯誤的位置，已無法再加以使用。 現在，此編譯器會發生錯誤 C2071 (不合法的儲存類別)。 根據該標準，**mutable** 指定名稱只能套用至類別資料成員名稱，而不能套用至宣告為 const 或 static 的名稱，也不能套用至參考成員。
 
    例如，請參考下列程式碼：
 
@@ -489,7 +489,7 @@ ms.locfileid: "76821801"
     }
     ```
 
-   若要更新您的程式碼，請移除此 **typedef** 宣告，並重新命名任何其他與這些名稱衝突的識別項。
+   若要更新您的程式碼，請移除此 **typedef** 宣告，並為與這些名稱衝突的任何其他識別碼重新命名。
 
 - **非類型範本參數**
 
@@ -551,7 +551,7 @@ ms.locfileid: "76821801"
     }
     ```
 
-   問題是出在於此複製建構函式為私用，無法如同處理例外狀況的正常過程中所發生物件一樣複製，因此並不能複製該物件。 相同情況也適用於將複製建構函式宣告為 **explicit** 的時候。
+   問題是出在於此複製建構函式為私用，無法如同處理例外狀況的正常過程中所發生物件一樣複製，因此並不能複製該物件。 相同情況也發生在複製建構函式宣告為 **explicit** 的時候。
 
     ```cpp
     struct S
@@ -643,7 +643,7 @@ ms.locfileid: "76821801"
 
    為了讓 **delete** 運算子與 C++ 14 標準一致，已對它進行變更。 如需此標準之變更的詳細資訊，請參閱 [C++ 調整大小的解除配置](https://isocpp.org/files/papers/n3778.html)。 變更當中新增了一種全域 **delete** 運算子，該運算子會採用大小參數。 中斷性變更是如果您先前使用具有相同簽章 (藉此對應至 **placement new** 運算子) 的運算子 **delete**，就會發生編譯器錯誤 (C2956，於使用 placement new 處發生，因為在程式碼的該位置上，編譯器會嘗試識別合適且相符的 **delete** 運算子)。
 
-   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，對應至 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為「一般解除配置函式」 (全域 **delete** 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
+   函式 `void operator delete(void *, size_t)` 曾是 **placement delete** 運算子，相當於 C++ 11 中的 **placement new** 函式 `void * operator new(size_t, size_t)`。 搭配 C++14 調整大小的解除配置，這個 delete 函式現在為「一般解除配置函式」 (全域 **delete** 運算子)。 此標準的要求為如果 placement new 的使用會查詢對應的 delete 函式，並找到一般解除配置函式，則此程式語式錯誤。
 
    例如，假設您的程式碼同時定義 **placement new** 和 **placement delete**：
 
@@ -652,7 +652,7 @@ ms.locfileid: "76821801"
     void operator delete(void*, std::size_t) noexcept;
     ```
 
-   您已定義的 **placement delete** 運算子與調整大小的全域新 **delete** 運算子之間，因為函式簽章相符，而導致此問題發生。 對於任何 **placement new** 和 **delete** 運算子，請考慮是否可以使用 `size_t` 以外的其他類型。 `size_t` **typedef**的類型與編譯器相依;它在 MSVC 中是不**帶正負號 int**的**typedef** 。 較佳的解決方案是使用這類列舉類型：
+   您已定義的 **placement delete** 運算子與調整大小的全域新 **delete** 運算子之間，因為函式簽章相符，而導致此問題發生。 對於任何 `size_t`placement new**和**delete**運算子，請考慮是否可以使用** 以外的其他類型。 `size_t` **typedef**的類型與編譯器相依;它在 MSVC 中是不**帶正負號 int**的**typedef** 。 較佳的解決方案是使用這類列舉類型：
 
     ```cpp
     enum class my_type : size_t {};
@@ -666,7 +666,7 @@ ms.locfileid: "76821801"
 
 - **等位資料成員**
 
-   等位資料成員不再具有參考類型。 下列程式碼會在 Visual Studio 2013 中成功編譯，但在 Visual Studio 2015 中會產生錯誤。
+   等位資料成員不再具有參考類型。 下列程式碼會在 Visual Studio 2013 中成功編譯，但在 Visual Studio 2015 中產生錯誤。
 
     ```cpp
     union U1
@@ -1371,7 +1371,7 @@ ms.locfileid: "76821801"
     };
     ```
 
-   若要修正錯誤，請在 `S` 中新增 `S2` 的 friend 宣告：
+   若要修正錯誤，請在 `S2` 中新增 `S` 的 friend 宣告：
 
     ```cpp
     class S {
@@ -1586,7 +1586,7 @@ ms.locfileid: "76821801"
 
 - **編譯器產生的建構函式和 __declspec(novtable)**
 
-   在 Visual Studio 2015 中，與 `__declspec(dllimport)` 結合使用時，在具有虛擬基底類別的抽象類別中，由編譯器所產生內嵌建構函式來公開 `__declspec(novtable)` 不當使用方式的可能性會提高。
+   在 Visual Studio 2015 中，與 `__declspec(novtable)` 結合使用時，在具有虛擬基底類別的抽象類別中，由編譯器所產生內嵌建構函式來公開 `__declspec(dllimport)` 不當使用方式的可能性會提高。
 
 - **auto 必須要在 direct-list-initialization 中使用單一運算式**
 
@@ -1739,7 +1739,7 @@ ms.locfileid: "76821801"
     }
     ```
 
-   \-或-
+   \- 或 -
 
     ```cpp
     class base;  // as above
@@ -2066,7 +2066,7 @@ ms.locfileid: "76821801"
 
 - 不相符的 **#pragma 警告（push）** 和 **#pragma 警告（pop）** （只會影響 `/Wall` `/WX`）
 
-   舊版編譯器偵測不到要與不同原始程式碼檔案中，`#pragma warning(pop)` 狀態變更配對的 `#pragma warning(push)` 狀態變更，這種規劃極為罕見。 這種舊行為造成的風險是，編譯程式所啟用的警告集合不是程式設計人員想要的集合，可能導致無訊息的錯誤執行階段行為。 現在編譯器會偵測以此方式撰寫的程式碼，通知其程式設計人員，同時在符合 `#pragma warning(pop)` 的位置發出選擇性的編譯器警告 C5031 (如有啟用)。 此警告包含參考對應 #pragma warning(push) 位置的附註。
+   舊版編譯器偵測不到要與不同原始程式碼檔案中，`#pragma warning(push)` 狀態變更配對的 `#pragma warning(pop)` 狀態變更，這種規劃極為罕見。 這種舊行為造成的風險是，編譯程式所啟用的警告集合不是程式設計人員想要的集合，可能導致無訊息的錯誤執行階段行為。 現在編譯器會偵測以此方式撰寫的程式碼，通知其程式設計人員，同時在符合 `#pragma warning(pop)` 的位置發出選擇性的編譯器警告 C5031 (如有啟用)。 此警告包含參考對應 #pragma warning(push) 位置的附註。
 
     ```Output
     warning C5031: #pragma warning(pop): likely mismatch, popping warning state pushed in different file
@@ -2122,7 +2122,7 @@ ms.locfileid: "76821801"
 
 - 不**相符的 #pragma 警告（push）** （只會影響 `/Wall` `/WX`）
 
-   舊版編譯器轉在轉譯單位的結尾未偵測到不相符的 `#pragma warning(push)` 狀態變更。 編譯器現在會偵測以此方式撰寫的程式碼並通知其程式設計人員，同時在不相符的 `#pragma warning(push)` 位置發出選擇性的編譯器警告 C5032 (如有啟用)。 只有轉譯單位沒有任何編譯錯誤時，才會發出這個警告。
+   舊版編譯器轉在轉譯單位的結尾未偵測到不相符的 `#pragma warning(push)` 狀態變更。 現在編譯器會偵測以此方式撰寫的程式碼並通知其程式設計人員，同時在不相符的 `#pragma warning(push)` 位置發出選擇性的編譯器警告 C5032 (如有啟用)。 只有轉譯單位沒有任何編譯錯誤時，才會發出這個警告。
 
     ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -2173,7 +2173,7 @@ ms.locfileid: "76821801"
     warning C4720: unreachable code
     ```
 
-   在許多情況下，只有啟用最佳化編譯時，才可能發出這個警告；因為最佳化可能內嵌更多的函式呼叫、消除多餘的程式碼，或者可能判斷某不可能執行到些程式碼。 我們觀察到，警告 C4720 的新執行個體經常發生在 **try/catch** 區塊，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True) 時。
+   在許多情況下，只有啟用最佳化編譯時，才可能發出這個警告；因為最佳化可能內嵌更多的函式呼叫、消除多餘的程式碼，或者可能判斷某不可能執行到些程式碼。 我們觀察到，新的警告 C4720 執行個體經常發生在 **try/catch** 區塊，尤其是在使用 [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True) 時。
 
    範例 (之前)
 
@@ -2467,7 +2467,7 @@ ms.locfileid: "76821801"
 
 - **std::is_convertable 現在已可偵測自我指派** (標準程式庫)
 
-   當舊版 `std::is_convertable` 類型特性的複製建構函式被刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在在套用到複製建構函式已刪除或為私用的類別類型時，`std::is_convertable<>::value` 會正確設定為 **false**。
+   當舊版 `std::is_convertable` 類型特性的複製建構函式被刪除或為私用時，其無法正確地偵測類別類型的自我指派。 現在在套用到複製建構函式已刪除或為 private 的類別類型時，`std::is_convertable<>::value` 會正確設定為 **false**。
 
    此變更沒有相關聯的編譯器診斷。
 
@@ -2638,7 +2638,7 @@ ms.locfileid: "76821801"
 
 - 先行**編譯標頭檔（PCH）和不相符的 #include**指示詞（只會影響 `/Wall` `/WX`）
 
-   使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `-Yc` 與 `-Yu` 編譯之間原始程式碼中的 `#include` 指示詞不相符。 編譯器現在已不再接受以此方式撰寫的程式碼。   現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4598 協助識別不相符的 `#include` 指示詞。
+   使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `#include` 與 `-Yc` 編譯之間原始程式碼中的 `-Yu` 指示詞不相符。 編譯器現在已不再接受以此方式撰寫的程式碼。   現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4598 協助識別不相符的 `#include` 指示詞。
 
     ```Output
     warning C4598: 'b.h': included header file specified for Ycc.h at position 2 does not match Yuc.h at that position
@@ -2682,7 +2682,7 @@ ms.locfileid: "76821801"
 
 - 先行**編譯標頭檔（PCH）和不相符的 include 目錄**（只會影響 `/Wall` `/WX`）
 
-   使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `-Yc` 與 `-Yu` 編譯之間與編譯器不相符的 include 目錄 (`-I`) 命令列引數。 編譯器現在已不再接受以此方式撰寫的程式碼。 現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4599 協助識別不相符的 include 目錄 (`-I`) 命令列引數。
+   使用先行編譯的標頭檔 (PCH) 時，舊版編譯器接受 `-I` 與 `-Yc` 編譯之間與編譯器不相符的 include 目錄 (`-Yu`) 命令列引數。 編譯器現在已不再接受以此方式撰寫的程式碼。 現在在使用 PCH 檔案時，編譯器會發出編譯器警告 CC4599 協助識別不相符的 include 目錄 (`-I`) 命令列引數。
 
     ```Output
     warning C4599: '-I..' : specified for Ycc.h at position 1 does not match Yuc.h at that position
@@ -2825,7 +2825,7 @@ ms.locfileid: "76821801"
     char c = {static_cast<char>(i)};
     ```
 
-- 不再允許下列初始化：
+- 下列初始化已無法再執行：
 
     ```cpp
     void *p = {{0}};
@@ -2852,9 +2852,9 @@ ms.locfileid: "76821801"
     }
     ```
 
-   Visual Studio 2012 中 `E1::b` 運算式的 `E1`，會解析為全域範圍中的 `::E1`。 Visual Studio 2013 中 `E1::b` 運算式的 `E1`，會解析為 `main()` 中的 `typedef E2` 定義，且具有 `::E2` 類型。
+   Visual Studio 2012 中 `E1` 運算式的 `E1::b`，會解析為全域範圍中的 `::E1`。 Visual Studio 2013 中 `E1` 運算式的 `E1::b`，會解析為 `typedef E2` 中的 `main()` 定義，且具有 `::E2` 類型。
 
-- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有 **virtual** 函式，但沒有具有 **virtual** 函式的基底類別，則編譯器物件模型會在資料成員配置之後插入指向 **virtual** 函式表的指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請參考這個程式碼：
+- 物件配置已變更。 在 x64 上，類別的物件配置可能會和先前的版本不同。 如果它具有 **virtual** 函式，但沒有具有 **virtual** 函式的基底類別，則編譯器物件模型會在資料成員配置之後插入指向 **virtual** 函式表的指標。 這表示該配置可能無法在所有情況下都是最佳。 在舊版中，一項針對 x64 的最佳化項目會嘗試為您改善配置，但因為該項目在複雜的程式碼中無法正確運作，所以在 Visual Studio 2013 中已將其移除。 例如，請思考下列程式碼：
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ ms.locfileid: "76821801"
     };
     ```
 
-   若要在程式碼中尋找舊版本嘗試進行最佳化的地方，請搭配 `/W3` 編譯器選項來使用該版本的編譯器並開啟警告 4370。 例如：
+   若要在您的程式碼中尋找先前版本嘗試優化的位置，請使用該版本的編譯器搭配 `/W3` 編譯器選項，並開啟警告 C4370。 例如：
 
     ```cpp
     #pragma warning(default:4370)
@@ -2928,7 +2928,7 @@ ms.locfileid: "76821801"
 
 Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符的情況 (實作於 Visual Studio 2010 中) 以及 RuntimeLibrary 不符的情況。 當編譯器選項 `/MT` (靜態發行)、`/MTd` (靜態偵錯)、`/MD` (動態發行) 和 `/MDd` (動態偵錯) 混和時，就會發生這些不相符的情況。
 
-- 如果您的程式碼認可先前版本的模擬別名範本，則需要加以變更。 例如，現在您必須改成 `allocator_traits<A>::rebind_alloc<U>::other`，而不是 `allocator_traits<A>::rebind_alloc<U>`。 雖然已不再需要 `ratio_add<R1, R2>::type`，而且現在建議您使用 `ratio_add<R1, R2>`，但前者還是會進行編譯，因為 `ratio<N, D>` 必須有縮減一定比例的「類型」typedef (如果已經縮減，則會是相同類型)。
+- 若您的程式碼認可舊版的模擬別名範本，必須加以變更。 例如，現在您必須改成 `allocator_traits<A>::rebind_alloc<U>::other`，而不是 `allocator_traits<A>::rebind_alloc<U>`。 雖然已不再需要 `ratio_add<R1, R2>::type`，而且現在建議您使用 `ratio_add<R1, R2>`，但前者還是會進行編譯，因為 `ratio<N, D>` 必須有縮減一定比例的「類型」typedef (如果已經縮減，則會是相同類型)。
 
 - 在呼叫 `#include <algorithm>` 或 `std::min()` 時，您必須使用 `std::max()`。
 
@@ -2952,7 +2952,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
    這項變更的副作用就是無法再使用識別案例 (common_type\<T> 不一定會產生類型 T)。 此行為符合建議的解決方法，不過它會破壞依賴之前行為的任何程式碼。
 
-   如需識別類型特徵，請勿使用 \<type_traits> 中定義的非標準 `std::identity`，因為其不適用於 \<void>。 請改為依照您的需求，實作自己的識別類型特性。 以下為範例：
+   如需識別類型特徵，請勿使用 `std::identity`type_traits> 中定義的非標準 \<，因為其不適用於 \<void>。 請改為依照您的需求，實作自己的識別類型特性。 以下是範例：
 
     ```cpp
     template < typename T> struct Identity {
@@ -2988,7 +2988,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - MFC 標頭中的 `#ifdef` 指示詞已移除。 已移除 MFC 標頭檔中許多與不支援之 Windows 版本相關的 `#ifdef` (WINVER &lt; 0x0501)。
 
-- ATL DLL (atl120.dll) 已移除。 現在提供 ATL 做為標頭和靜態程式庫 (atls.lib)。
+- ATL DLL (atl120.dll) 已移除。 現在提供的 ATL 為標頭和靜態程式庫 (atls.lib)。
 
 - Atlsd.lib、atlsn.lib 和 atlsnd.lib 已移除。 Atls.lib 不再具有字元集相依性或偵錯/發行專屬的程式碼。 由於對於 Unicode/ANSI 和偵錯/發行，它的運作方式相同，因此只需要一個版本的程式庫。
 
@@ -3036,13 +3036,13 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 ### <a name="parallel-patterns-library-and-concurrency-runtime-library"></a>平行模式程式庫與並行執行階段程式庫
 
-`UmsThreadDefault` 的 `SchedulerType` 列舉已淘汰。 指定 `UmsThreadDefault` 會產生淘汰的警告，並會在內部對應回 `ThreadScheduler`。
+`SchedulerType` 的 `UmsThreadDefault` 列舉已淘汰。 指定 `UmsThreadDefault` 會產生淘汰的警告，並會在內部對應回 `ThreadScheduler`。
 
 ### <a name="standard-library"></a>標準程式庫
 
 - 下列為 C++98/03 與 C++11 標準之間的中斷性變更︰在 Visual Studio 2012 中的 Visual C++ 內使用明確範本引數來呼叫 `make_pair()` (即 `make_pair<int, int>(x, y)`) 通常無法編譯。 解決方案是只呼叫 `make_pair() `，而不要指定明確範本引數 (例如 `make_pair(x, y)`)。 提供明確的範本引數會導致函式失效。 若您需要精確控制產生的類型，請改為使用 `pair` 而非 `make_pair`，如同 `pair<short, short>(int1, int2)`。
 
-- C + + 98/03 和 c + + 11 標準之間的另一種中斷性變更：當可以隱含轉換成 B，B 會隱含轉換成 C，但 A 無法隱含轉換成 C，c + + 98/03 和 Visual Studio 2010 允許 `pair<A, X>` 轉換（隱含或明確）為 `pair<C, X>`。 （另一種類型 X，在這裡不感興趣，而且不是對配對中第一種類型特有的）。Visual Studio C++ 2012 中的編譯器會偵測到 A 無法隱含轉換成 C，並從多載解析中移除配對轉換。 這項變更對許多狀況而言有益。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `pair<const char *, const char *>` 呼叫 `func()` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
+- C + + 98/03 和 c + + 11 標準之間的另一種中斷性變更：當可以隱含轉換成 B，B 會隱含轉換成 C，但 A 無法隱含轉換成 C，c + + 98/03 和 Visual Studio 2010 允許 `pair<A, X>` 轉換（隱含或明確）為 `pair<C, X>`。 （另一種類型 X，在這裡不感興趣，而且不是對配對中第一種類型特有的）。Visual Studio C++ 2012 中的編譯器會偵測到 A 無法隱含轉換成 C，並從多載解析中移除配對轉換。 這項變更對許多狀況而言有益。 例如，多載 `func(const pair<int, int>&)` 和 `func(const pair<string, string>&)`，以及使用 `func()` 呼叫 `pair<const char *, const char *>` 時，便會使用這項變更進行編譯。 但此變更會破壞需要積極執行 pair 轉換的程式碼。 一般可以藉由明確執行轉換的其中一部分來修正這類程式碼，例如將 `make_pair(static_cast<B>(a), x)` 傳遞給需要 `pair<C, X>` 的函式。
 
 - Visual Studio 2010 可模擬 variadic 範本 (例如 `make_shared<T>(arg1, arg2, argN)`) 高達 10 個引數之多，方法是停止前置處理器機器的多載與特製化。 在 Visual Studio 2012 中，此限制縮減為五個引數，以改善大多數使用者的編譯時間及編譯器記憶體耗用量。 但您可以藉由將 _VARIADIC_MAX 明確定義為 10 來將整個專案設定成先前的限制。
 
@@ -3052,7 +3052,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 除了偵測 _ITERATOR_DEBUG_LEVEL 不符的情況 (實作於 Visual Studio 2010) 之外，Visual Studio 2012 的 C++ 編譯器還會偵測執行階段程式庫不符的錯誤。 當編譯器選項 `/MT` (靜態發行)、`/MTd` (靜態偵錯)、`/MD` (動態發行) 和 `/MDd` (動態偵錯) 混合時，就會發生這些不相符的情況。
 
-- 針對 `std::unordered_map` 和 `stdext::hash_map` 容器系列，先前可以使用 `operator<()`、`operator>()`、`operator<=()` 和 `operator>=()`，雖然其實作並不是很有用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，`std::unordered_map` 系列的 `operator==()` 和 `operator!=()` 實作已延伸至涵蓋 `stdext::hash_map` 系列。 (建議您避免在新的程式碼中使用 `stdext::hash_map` 系列。)
+- 針對 `operator<()` 和 `operator>()` 容器系列，先前可以使用 `operator<=()`、`operator>=()`、`std::unordered_map` 和 `stdext::hash_map`，雖然其實作並不是很有用。 因此 Visual Studio 2012 的 Visual C++ 移除了這些非標準運算子。 此外，`operator==()` 系列的 `operator!=()` 和 `std::unordered_map` 實作已延伸至涵蓋 `stdext::hash_map` 系列。 (建議您避免在新的程式碼中使用 `stdext::hash_map` 系列。)
 
 - C++11 22.4.1.4 [locale.codecvt] 指定 `codecvt::length()` 和 `codecvt::do_length()` 應接受可修改的 `stateT&` 參數，但 Visual Studio 2010 接受的參數為 `const stateT&`。 而 Visual Studio 2012 的 C++ 編譯器則因為遵循標準而接受 `stateT&`。 對於想要覆寫虛擬函式 `do_length()` 的使用者而言，此差異相當重大。
 
@@ -3080,7 +3080,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 已變更 `CMFCEditBrowseCtrl::EnableBrowseButton` 的簽章。
 
-- 已從 `CMFCBaseTabCtrl` 移除 `m_fntTabs` 和 `m_fntTabsBold`。
+- 已從 `m_fntTabs` 移除 `m_fntTabsBold` 和 `CMFCBaseTabCtrl`。
 
 - 已將參數新增至 `CMFCRibbonStatusBarPane` 建構函式。 (這是預設參數，所以不是來源中斷的問題)。
 
@@ -3246,7 +3246,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - Visual Studio 2010 預設會停用對三併詞的支援。 若要啟用三併詞的支援，可使用 `/Zc:trigraphs` 編譯器選項。 三併詞包含兩個連續的問號 ("？") 後接唯一的第三個字元。 編譯器會以對應的標點符號字元取代三併詞。 例如，編譯器會將 `??=` 三併詞取代為 '#' 字元。 若在 C 原始程式檔中使用的字元集不含某些標點符號字元的慣用圖形表示，您可改用三併詞。
 
-- 連結器已不再支援 Windows 98 的最佳化。 若指定 `/OPT:WIN98` 或 `/OPT:NOWIN98`，`/OPT` (最佳化) 選項會產生編譯時期錯誤。
+- 連結器已不再支援 Windows 98 的最佳化。 若指定 `/OPT` 或 `/OPT:WIN98`，`/OPT:NOWIN98` (最佳化) 選項會產生編譯時期錯誤。
 
 - 由 RuntimeLibrary 與 DebugInformationFormat 建置系統屬性指定的預設編譯器選項已有變更。 這些屬性預設會在 Visual C++ 第 7.0 版到 10.0 版所建立的專案中指定。 若您移轉了 Visual C++ 6.0 所建立的專案，請考慮是否要指定這些屬性的值。
 
@@ -3440,7 +3440,7 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - `swprintf` 已變更為符合標準，所以現在會需要大小參數。 已淘汱沒有大小參數的 `swprintf` 形式。
 
-- 已移除 `_set_security_error_handler`。 移除任何對該函式的呼叫。預設處理常式在處安全性錯誤上安全性更高。
+- `_set_security_error_handler` 已移除。 移除任何對該函式的呼叫。預設處理常式在處安全性錯誤上安全性更高。
 
 - `time_t` 現在是 64 位元值 (除非定義 _USE_32BIT_TIME_T)。
 
@@ -3522,6 +3522,6 @@ Visual Studio 2013 中的 C++ 編譯器可偵測 _ITERATOR_DEBUG_LEVEL 中不符
 
 - 編譯器現在會回報無法存取的程式碼 (C4702)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 之 Visual C++ 的新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

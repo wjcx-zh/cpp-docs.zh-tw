@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683349"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416197"
 ---
 # <a name="warning-pragma"></a>warning pragma
 
@@ -36,9 +36,9 @@ ms.locfileid: "74683349"
 |警告指定名稱|意義|
 |------------------------|-------------|
 |*1、2、3、4*|將指定的層級套用至指定的警告。 也會開啟預設為關閉的指定警告。|
-|*default*|將警告行為重設為預設值。 也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱[預設為關閉的編譯器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
-|*啟用*|不要發出指定的警告訊息。|
-|*糾錯*|將指定的警告回報為錯誤。|
+|*預設值*|將警告行為重設為預設值。 也會開啟預設為關閉的指定警告。 警告會以其記載的預設層級產生。<br /><br /> 如需詳細資訊，請參閱[預設為關閉的編譯器警告](../preprocessor/compiler-warnings-that-are-off-by-default.md)。|
+|*disable*|不要發出指定的警告訊息。|
+|*error*|將指定的警告回報為錯誤。|
 |*once*|只顯示指定的訊息一次。|
 |*顯示*|將 pragma 的目前狀態推送到堆疊上，停用為下一行指定的警告，然後推出警告堆疊以重設 pragma 狀態。|
 
@@ -54,10 +54,10 @@ ms.locfileid: "74683349"
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -93,7 +93,7 @@ int main() {
 
 Pragma `warning( push )` 會儲存每個警告的目前警告狀態。 Pragma `warning( push, n )` 會儲存每個警告的目前狀態，並將全域警告層級設為*n*。
 
-Pragma `warning( pop )` 會彈出推送到堆疊上的最後一個警告狀態。 您對*推送*和*pop*之間的警告狀態所做的任何變更都會復原。 請考量以下範例：
+Pragma `warning( pop )` 會彈出推送到堆疊上的最後一個警告狀態。 您對*推送*和*pop*之間的警告狀態所做的任何變更都會復原。 請思考此範例：
 
 ```cpp
 #pragma warning( push )
@@ -116,6 +116,6 @@ Pragma `warning( pop )` 會彈出推送到堆疊上的最後一個警告狀態�
 
 如需可協助您隱藏警告之編譯器選項的詳細資訊，請參閱[/fi](../build/reference/fi-name-forced-include-file.md)和[/w](../build/reference/compiler-option-warning-level.md)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Pragma 指示詞和 __pragma 關鍵字](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

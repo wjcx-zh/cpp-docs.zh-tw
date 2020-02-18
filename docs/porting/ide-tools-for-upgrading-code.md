@@ -3,12 +3,12 @@ title: Visual Studio 用於升級C++程式碼的 IDE 工具
 description: Visual Studio C++中的程式碼編輯器和程式碼分析工具，可協助C++您將程式碼基底現代化。
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119530"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416158"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Visual Studio 用於升級C++程式碼的 IDE 工具
 
@@ -24,7 +24,7 @@ Visual Studio 可協助您使用C++編譯器選項、程式碼分析警告和編
 
 - 符合所有標準版本的程式碼，但不再被視為現代化C++的最佳作法。
 
-   若要識別建議變更的程式碼，請執行程式[代碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+   若要識別建議變更的程式碼，請執行程式[代碼分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="open-and-convert-a-legacy-project"></a>開啟和轉換舊版專案
 
@@ -74,7 +74,7 @@ Visual Studio 可協助您使用C++編譯器選項、程式碼分析警告和編
 
 ![錯誤清單中的程式碼分析警告](media/code-analysis-error-list.png "錯誤清單中的程式碼分析警告")
 
-您可以變更要使用的規則，並建立自訂規則集。 如需使用程式碼分析的詳細資訊，請參閱[C/C++總覽的程式碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+您可以變更要使用的規則，並建立自訂規則集。 如需使用程式碼分析的詳細資訊，請參閱[C/C++總覽的程式碼分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="use-quick-actions-to-modernize-code"></a>使用快速動作將程式碼現代化
 
@@ -101,7 +101,7 @@ Visual Studio 可協助您使用C++編譯器選項、程式碼分析警告和編
 
 ![constexpr 函式呼叫](media/constexpr-function-call.png "constexpr 函式呼叫")
 
-### <a name="initialize-variables"></a>初始化變數
+### <a name="initialize-variables"></a>將變數初始化
 
 未初始化的變數可以保存導致嚴重錯誤的隨機值。 程式碼分析會旗標這些實例，而編輯器會提供快速動作：
 

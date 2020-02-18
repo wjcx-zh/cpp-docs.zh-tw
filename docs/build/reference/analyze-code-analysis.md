@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: f537fdea2703805c7ab1c57ba0d4429f6b683ae4
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: c0cebe1cbd160bdec257a960f90039c1af3bfee2
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444895"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416042"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (程式碼分析)
 
@@ -41,7 +41,7 @@ ms.locfileid: "72444895"
 關閉分析器輸出至 [**輸出**] 視窗。
 
 **/analyze： stacksize** *number*\
-與此選項搭配使用的*number*參數會指定產生警告[C6262](/visualstudio/code-quality/c6262)之堆疊框架的大小（以位元組為單位）。 *數位*前面的空格是選擇性的。 如果未指定此參數，預設會16KB 堆疊框架大小。
+與此選項搭配使用的*number*參數會指定產生警告[C6262](/cpp/code-quality/c6262)之堆疊框架的大小（以位元組為單位）。 *數位*前面的空格是選擇性的。 如果未指定此參數，預設會16KB 堆疊框架大小。
 
 **/analyze： max_paths** *號碼*\
 與此選項搭配使用的*number*參數會指定要分析的程式碼路徑數目上限。 如果未指定此參數，則預設值為256。 較大的值會導致更完整的檢查，但是分析可能需要較長的時間。
@@ -71,14 +71,14 @@ Visual Studio 隨附的規則集可在 *%VSINSTALLDIR%\Team Tools\Static Analysi
 
 ::: moniker range="<=vs-2017"
 
-LocalEspC 是在 C261XX 警告範圍內，用來執行並行相關程式碼分析檢查的外掛程式。 例如， [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101)、...、 [C26167](/visualstudio/code-quality/c26167)。
+LocalEspC 是在 C261XX 警告範圍內，用來執行並行相關程式碼分析檢查的外掛程式。 例如， [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、...、 [C26167](/cpp/code-quality/c26167)。
 
 若要執行 LocalEspC，請使用此編譯器選項： **/analyze：外掛程式 LocalEspC**
 
 ::: moniker-end
 ::: moniker range=">=vs-2019"
 
-ConcurrencyCheck 會在 C261XX 警告範圍內，執行與並行相關的程式碼分析檢查。 例如， [C26100](/visualstudio/code-quality/c26100)、 [C26101](/visualstudio/code-quality/c26101)、...、 [C26167](/visualstudio/code-quality/c26167)。
+ConcurrencyCheck 會在 C261XX 警告範圍內，執行與並行相關的程式碼分析檢查。 例如， [C26100](/cpp/code-quality/c26100)、 [C26101](/cpp/code-quality/c26101)、...、 [C26167](/cpp/code-quality/c26167)。
 
 若要執行 ConcurrencyCheck，請先從開發人員命令提示字元執行此命令：
 
@@ -100,11 +100,11 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="remarks"></a>備註
 
-如需詳細資訊，請參閱[c/C++總覽的程式碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)和[c/C++警告的程式碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)。
+如需詳細資訊，請參閱[c/C++總覽的程式碼分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)和[c/C++警告的程式碼分析](/cpp/code-quality/code-analysis-for-c-cpp-warnings)。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資料，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
 1. 選取 [設定**屬性**] > [程式**代碼分析** > **一般**] 屬性頁。
 
@@ -112,7 +112,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>若要以程式方式設定這個編譯器選項
 
-1. 請參閱<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>.
+1. 請參閱＜<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.EnablePREfast%2A>＞。
 
 ## <a name="see-also"></a>另請參閱
 

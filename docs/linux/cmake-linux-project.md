@@ -3,12 +3,12 @@ title: 在 Visual Studio 中建立及設定 Linux CMake 專案
 description: 如何在 Visual Studio 中建立、設定、編輯和編譯 Linux CMake 專案
 ms.date: 10/04/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 128b8dac297398ffbfadfaade5b36c843d55e163
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 9c6a60162c2dbbab8e348b27d1987d7f1001bee0
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625955"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416093"
 ---
 # <a name="create-and-configure-a-linux-cmake-project"></a>建立及設定 Linux CMake 專案
 
@@ -58,7 +58,7 @@ Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式
 
 Visual Studio 中的 CMake 支援需要 CMake 3.8 中所引進的伺服器模式支援。 如需 Microsoft 提供的 CMake 種類，請在 [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) 下載最新的預先建置二進位檔案。
 
-二進位檔案將安裝到 `~/.vs/cmake`。 部署二進位檔案之後，您的專案將自動重新產生。 請注意，若 `CMakeSettings.json` 中之 `cmakeExecutable` 指定的 CMake 無效 (不存在或它是不支援的版本) 且預先建置的二進位檔案存在，Visual Studio 將會忽略 `cmakeExecutable` 並使用預先建置的二進位檔案。
+二進位檔案將安裝到 `~/.vs/cmake`。 部署二進位檔案之後，您的專案將自動重新產生。 請注意，若 `cmakeExecutable` 中之 `CMakeSettings.json` 指定的 CMake 無效 (不存在或它是不支援的版本) 且預先建置的二進位檔案存在，Visual Studio 將會忽略 `cmakeExecutable` 並使用預先建置的二進位檔案。
 
 :::moniker-end
 
@@ -175,7 +175,7 @@ CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMak
 
 ::: moniker range="vs-2019"
 
- Visual Studio 2019 16.1 版和更新版本中的預設 Linux 偵錯組態如下所示：
+Visual Studio 2019 16.1 版和更新版本中的預設 Linux 偵錯組態如下所示：
 
 ```json
 {
@@ -223,7 +223,7 @@ CMake Linux 專案中的 CMakeSettings.json 檔案可指定所有在[自訂 CMak
 
 
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [使用專案屬性](../build/working-with-project-properties.md)<br/>
 [CMake Projects in Visual Studio](../build/cmake-projects-in-visual-studio.md) (Visual Studio 中的 CMake 專案)<br/>

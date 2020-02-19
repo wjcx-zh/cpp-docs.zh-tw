@@ -2,12 +2,12 @@
 title: 在 Visual Studio 中閱讀及了解 C++ 程式碼
 description: 使用 Visual Studio 中的 C++ 程式碼編輯器來格式化及了解程式碼。
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302994"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416121"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>在 Visual Studio 中閱讀及了解 C++ 程式碼
 
@@ -19,9 +19,9 @@ Visual Studio 會以顏色標示語法元素來區別符號類型，例如語言
 
 ![程式碼顏色標示](../ide/media/code-outline-colorization.png "C++著色")
 
- 未使用程式碼 (例如 #if 0 底下的程式碼) 的顏色較淡。
+未使用程式碼 (例如 #if 0 底下的程式碼) 的顏色較淡。
 
- ![非使用中程式碼](../ide/media/inactive-code-cpp.png "C++非使用中程式碼")
+![非使用中程式碼](../ide/media/inactive-code-cpp.png "C++非使用中程式碼")
 
 您可以在 [快速啟動] 中鍵入「字型」，然後選擇 [字型和色彩] 來自訂色彩。 請在 [字型和色彩] 對話方塊中向下捲動至 C/C++ 選項，然後選擇自訂字型及/或色彩。
 

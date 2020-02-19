@@ -375,6 +375,8 @@
           href: build/arm64-exception-handling.md
     - name: 為 Windows XP 設定程式
       href: build/configuring-programs-for-windows-xp.md
+    - name: C/C++ 的程式碼分析
+      href: code-quality/
     - name: 編譯器與建置工具參考
       expanded: false
       items:

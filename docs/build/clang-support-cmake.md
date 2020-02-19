@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556717"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416028"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Visual Studio CMake 專案中的 Clang/LLVM 支援
 
@@ -27,7 +27,7 @@ Visual Studio 2019 提供 Clang 支援。
 
 **Linux**：針對 linux CMake 專案，不需要任何特殊的 Visual Studio 支援。 您可以使用散發版本的套件管理員安裝 Clang，並在 Remote monitoring.h cmakelists.txt 檔案中新增適當的命令。
 
-## <a name="install"></a>安裝
+## <a name="install"></a>Install
 
 如需 Visual Studio 中的最佳 IDE 支援，我們建議使用適用于 Windows 的最新 Clang 編譯器工具。 如果您還沒有這些專案，您可以開啟 Visual Studio 安裝程式，然後在 [**桌面開發C++**  ] 下選擇 [ **C++** 使用選用元件的 Clang 編譯器] 來安裝它們。 使用自訂 Clang 安裝時，請核取 [  **C++ Clang-cl for 適用于 v142 build tools** ] 元件。
 
@@ -74,7 +74,7 @@ Visual Studio 2019 提供 Clang 支援。
 
 對於 Windows 設定，CMake 預設會在[Clang-cl](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf)模式中叫用 Clang，並使用標準程式庫的 Microsoft 實作為連結。 根據預設， **clang-cl**位於 `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`。
 
- 您可以在 [ **CMake 變數和**快取] 底下的 [ **CMake 設定**] 中修改這些值。 按一下 [**顯示先進的變數**]。 向下滾動以尋找**CMAKE_CXX_COMPILER**，然後按一下 [**流覽]** 按鈕來指定不同的編譯器路徑。
+您可以在 [ **CMake 變數和**快取] 底下的 [ **CMake 設定**] 中修改這些值。 按一下 [**顯示先進的變數**]。 向下滾動以尋找**CMAKE_CXX_COMPILER**，然後按一下 [**流覽]** 按鈕來指定不同的編譯器路徑。
 
 ## <a name="edit-build-and-debug"></a>編輯、組建和 debug
 

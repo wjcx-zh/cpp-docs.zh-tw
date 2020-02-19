@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810632"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415716"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>在 Visual Studio 中進行 C++ 開發的概觀
 
@@ -45,9 +45,9 @@ Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具
 
 - 任何其他 C++ 建置系統 (包括鬆散的檔案集合) 則會透過**開啟資料夾**功能提供支援。 您可以建立簡單的 JSON 檔案，來叫用您的建置程式並設定偵錯工作階段。 如需詳細資訊，請參閱 [Open Folder projects for C++](../build/open-folder-projects-cpp.md) (適用於 C++ 的開啟資料夾專案)。
 
-## <a name="add-to-source-control"></a>新增至原始檔控制
+## <a name="add-to-source-control"></a>加入原始檔控制
 
-原始檔控制可讓您協調多位開發人員的工作、從生產環境程式碼中找出進行中的工作，以及備份您的原始程式碼。 Visual Studio 可透過其 **Team Explorer** 視窗支援 Git 和 [Team Foundation 版本控制 \(TFVC\)](/azure/devops/repos/tfvc/)。 
+原始檔控制可讓您協調多位開發人員的工作、從生產環境程式碼中找出進行中的工作，以及備份您的原始程式碼。 Visual Studio 可透過其 **Team Explorer** 視窗支援 Git 和 [Team Foundation 版本控制 \(TFVC\)](/azure/devops/repos/tfvc/)。
 
 ::: moniker range="vs-2019"
 
@@ -79,7 +79,7 @@ Visual Studio 支援任何專案系統或是您想要使用的自訂建置工具
 
 ## <a name="write-code"></a>撰寫程式碼
 
-建立專案之後，所有專案檔會都會顯示在 [方案總管] 視窗中。 （*解決方案*是一或多個相關專案的邏輯容器）。當您按一下**方案總管**中的 .h 或 .cpp 檔案時，就會在程式碼編輯器中開啟該檔案。
+建立專案之後，所有專案檔會都會顯示在 [方案總管] 視窗中。 (「方案」是指一或多個相關專案的邏輯容器。)當您按一下 [方案總管] 中的 .h 或 .cpp 檔案時，會在程式碼編輯器中開啟檔案。
 
 ![方案總管和程式碼編輯器](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 方案總管和程式碼編輯器")
 
@@ -105,7 +105,7 @@ Windows 程式或 DLL 通常會包含一些*資源*，例如對話方塊、圖�
 
 ![調試進程](media/vs2017-debug-watch.png "Visual Studio 2017 的調試階段")
 
-如需詳細資訊，請參閱 [Debugging in Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)。
+如需詳細資訊，請參閱 [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)。
 
 ## <a name="test"></a>測試
 
@@ -117,7 +117,7 @@ Visual Studio 包含適用於 C++ 的 Microsoft 單元測試架構，以及 Boos
 
 ## <a name="analyze"></a>分析
 
-Visual Studio 包含的靜態程式碼分析工具，可在原始程式碼中偵測到潛在問題。 這些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 規則檢查工具的實作。 如需詳細資訊，請參閱 [C/C++ 程式碼分析概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)。
+Visual Studio 包含的靜態程式碼分析工具，可在原始程式碼中偵測到潛在問題。 這些工具包括 [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md) 規則檢查工具的實作。 如需詳細資訊，請參閱 [C/C++ 程式碼分析概觀](/cpp/code-quality/code-analysis-for-c-cpp-overview)。
 
 ## <a name="deploy-completed-applications"></a>部署完成的應用程式
 

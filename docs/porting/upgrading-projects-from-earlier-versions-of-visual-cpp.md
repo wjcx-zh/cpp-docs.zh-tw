@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725717"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416115"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>升級C++舊版 Visual Studio 的專案
 
@@ -47,7 +47,7 @@ ms.locfileid: "76725717"
 
 1. 將 [平臺工具組C++ ]、[語言標準] 和 [Windows SDK 版本（如果適用的話）] 設定為慣用的版本。 （**專案** > **屬性** > 設定**屬性** > **一般**）
 
-1. 如果您有許多錯誤，可以在修正時暫時關閉一些選項。 若要關閉 [ [/permissive-](../build/reference/permissive-standards-conformance.md) ] 選項，請使用 [**專案** > **屬性**] > [設定**屬性**] > [ **C/C++**  > **語言**]。 若要關閉 [程式[代碼分析](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)] 選項，請使用 [**專案** > **屬性**] > 設定**屬性** > [程式**代碼分析**]。
+1. 如果您有許多錯誤，可以在修正時暫時關閉一些選項。 若要關閉 [ [/permissive-](../build/reference/permissive-standards-conformance.md) ] 選項，請使用 [**專案** > **屬性**] > [設定**屬性**] > [ **C/C++**  > **語言**]。 若要關閉 [程式[代碼分析](/cpp/code-quality/code-analysis-for-c-cpp-overview)] 選項，請使用 [**專案** > **屬性**] > 設定**屬性** > [程式**代碼分析**]。
 
 1. 請確定所有相依性都存在，而且包含路徑或程式庫位置是正確的。 （**專案** > **屬性** > 設定**屬性** > **VC + + 目錄**）
 
@@ -74,7 +74,7 @@ ms.locfileid: "76725717"
 [VCBuild 與 MSBuild](build-system-changes.md)\
 [埠協力廠商程式庫](porting-third-party-libraries.md)
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [Visual Studio 中的視覺效果C++新功能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)\
 [視覺C++效果變更歷程記錄 2003-2015](../porting/visual-cpp-change-history-2003-2015.md)\

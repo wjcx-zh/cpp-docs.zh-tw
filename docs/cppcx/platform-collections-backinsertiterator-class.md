@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161598"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416063"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator 類別
 
@@ -41,7 +41,7 @@ BackInsertIterator 類別實作 [back_insert_iterator Class](../standard-library
 
 |名稱|描述|
 |----------|-----------------|
-|[BackInsertIterator::BackInsertIterator](#ctor)|初始化 BackInsertIterator 類別的新執行個體。|
+|[BackInsertIterator：： BackInsertIterator](#ctor)|初始化 BackInsertIterator 類別的新執行個體。|
 
 ### <a name="public-operators"></a>公用運算子
 
@@ -59,10 +59,9 @@ BackInsertIterator 類別實作 [back_insert_iterator Class](../standard-library
 
 **標頭：** collection.h
 
-**命名空間：** Platform::Collections
-
+<a name="namespace-platformcollections"></a>**命名空間：** Platform::Collections
 ---
-## <a name="ctor"></a>  Backinsertiterator:: Backinsertiterator 建構函式
+## <a name="ctor"></a>BackInsertIterator：： BackInsertIterator 函式
 
 初始化 `BackInsertIterator` 類別的新執行個體。
 
@@ -83,7 +82,7 @@ IVector\<T > 物件。
 
 `BackInsertIterator` 在參數 `v` 所指定的物件的最後一個元素之後插入元素。
 
-## <a name="operator-assign"></a>  Backinsertiterator:: Operator = 運算子
+## <a name="operator-assign"></a>BackInsertIterator：： operator = 運算子
 
 將指定的物件附加至目前循序集合的結尾。
 
@@ -102,7 +101,7 @@ BackInsertIterator& operator=( const T& t);
 
 目前 BackInsertIterator 的參考。
 
-## <a name="operator-dereference"></a>  Backinsertiterator:: Operator * 運算子
+## <a name="operator-dereference"></a>BackInsertIterator：： operator * 運算子
 
 擷取目前 BackInsertIterator 的參考。
 
@@ -120,7 +119,7 @@ BackInsertIterator& operator*();
 
 這個運算子會傳回目前 BackInsertIterator 的參考，不是目前集合中任何項目的參考。
 
-## <a name="operator-increment"></a>  Backinsertiterator:: Operator + + 運算子
+## <a name="operator-increment"></a>BackInsertIterator：： operator + + 運算子
 
 傳回目前 BackInsertIterator 的參考。 迭代器是未修改的。
 
@@ -141,7 +140,7 @@ BackInsertIterator operator++(int);
 
 根據設計，第一個語法範例會對目前 BackInsertIterator 前置遞增，而第二個語法則是對目前 BackInsertIterator 後置遞增。 第二個語法中的 `int` 類型代表後置遞增作業，而不是實際的整數運算元。
 
-不過，這個運算子不會實際修改 BackInsertIterator。 而是傳回未修改之目前迭代器的參考。 這是相同的行為[運算子 *](#operator-dereference)。
+不過，這個運算子不會實際修改 BackInsertIterator。 而是傳回未修改之目前迭代器的參考。 這個行為與[operator *](#operator-dereference)相同。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -1,5 +1,5 @@
 ---
-title: Debug Iterator Support
+title: 偵錯迭代器支援
 ms.date: 09/13/2018
 helpviewer_keywords:
 - Safe Libraries
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450581"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416210"
 ---
-# <a name="debug-iterator-support"></a>Debug Iterator Support
+# <a name="debug-iterator-support"></a>偵錯迭代器支援
 
 Visual C++ 執行階段程式庫可在執行階段偵測不正確的迭代器用法、進行判斷提示並顯示對話方塊。 若要啟用偵錯迭代器支援，您必須使用 C++ 標準程式庫和 C 執行階段程式庫的偵錯版本來編譯您的程式。 如需詳細資訊，請參閱 [CRT 程式庫功能](../c-runtime-library/crt-library-features.md)。 如需如何使用已檢查的迭代器的資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>使用 _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>使用 _ITERATOR_DEBUG_LEVEL
 
 您可以使用前置處理器巨集 [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)，來關閉偵錯組建中的迭代器偵錯功能。 這個程式不會進行判斷提示，但仍會觸發未定義的行為。
 
@@ -130,7 +130,7 @@ int main()
 
 ## <a name="iterators-going-out-of-scope"></a>反覆運算器超出範圍
 
-當**for**迴圈範圍結束時, Debug iterator 檢查也會導致**for**迴圈中宣告的反覆運算器變數超出範圍。
+當**for**迴圈範圍結束時，Debug iterator 檢查也會導致**for**迴圈中宣告的反覆運算器變數超出範圍。
 
 ```cpp
 // iterator_debugging_4.cpp
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>偵錯工具反覆運算器的析構函數
 
-偵錯迭代器具有非一般的解構函式。 如果未執行某個析構函式, 但物件的記憶體已釋放, 可能會發生存取違規和資料損毀。 請考量以下範例：
+偵錯迭代器具有非一般的解構函式。 如果未執行某個析構函式，但物件的記憶體已釋放，可能會發生存取違規和資料損毀。 請思考此範例：
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()

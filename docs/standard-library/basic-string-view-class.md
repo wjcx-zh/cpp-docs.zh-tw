@@ -119,12 +119,12 @@ helpviewer_keywords:
 - std::basic_string_view, substr
 - std::basic_string_view, swap
 ms.assetid: a9c3e0a2-39bf-4c8a-b093-9abe30839591
-ms.openlocfilehash: 7bd6d02304e86b50d33bdaa3e07c95b08da31f7a
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a53a27e11088ab02f873613794d6799851ca373
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821892"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416175"
 ---
 # <a name="basic_string_view-class"></a>basic_string_view 類別
 
@@ -193,7 +193,7 @@ class basic_string_view;
 |-|-|
 |[basic_string_view](#basic_string_view)|會建立空的 string_view，或是指向部分其他字串物件資料或 C 樣式字元陣列的全部或部分。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
@@ -218,9 +218,9 @@ class basic_string_view;
 |[operator=](#op_eq)|將 string_view 或可轉換的字串物件指派給另一個 string_view。|
 |[operator\[\]](#op_at)|傳回位於指定之索引處的元素。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[at](#at)|傳回指定位置的元素 const_reference。|
 |[back](#back)|傳回最後一個元素的 const_reference。|
@@ -262,7 +262,7 @@ class basic_string_view;
 
 **標頭：** \<string_view >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="at"></a>basic_string_view：： at
 
@@ -615,7 +615,7 @@ _*計算*從來源字串複製的字元數上限。
 
 不會將 Null 字元附加至複本結尾。
 
- 如需詳細資訊，請參閱[c-執行時間程式庫/安全性-crt 中的功能](../c-runtime-library/security-features-in-the-crt.md)。
+如需詳細資訊，請參閱[c-執行時間程式庫/安全性-crt 中的功能](../c-runtime-library/security-features-in-the-crt.md)。
 
 ## <a name="crbegin"></a>basic_string_view：： crbegin
 
@@ -893,7 +893,7 @@ String_view 可以包含的最大字元數。
 
 ### <a name="remarks"></a>備註
 
-當作業產生的 string_view 長度大於`max_size()`時，就會擲回類型 [length_error](../standard-library/length-error-class.md) 的例外狀況。
+當作業產生的 string_view 長度大於 `max_size()`時，就會擲回類型[length_error](../standard-library/length-error-class.md)的例外狀況。
 
 ## <a name="op_eq"></a>basic_string_view：： operator =
 
@@ -935,7 +935,7 @@ constexpr const_reference operator[](size_type offset) const;
 
 如果由擁有物件修改或刪除基礎字串資料，傳回的參考可能會無效。
 
-使用\_ITERATOR 進行編譯時[\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)設為1或2時，如果您嘗試存取 string_view 界限以外的專案，就會發生執行階段錯誤。 如需詳細資訊，請參閱[已檢查的迭代器](../standard-library/checked-iterators.md)。
+使用\_ITERATOR 進行編譯時[\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md)設為1或2時，如果您嘗試存取 string_view 界限以外的專案，就會發生執行階段錯誤。 如需詳細資訊，請參閱 [Checked Iterators](../standard-library/checked-iterators.md)。
 
 ## <a name="rbegin"></a>basic_string_view：： rbegin
 
@@ -1074,7 +1074,7 @@ constexpr void swap(basic_string_view& sv) noexcept;
 *sv*\
 要與目的地 string_view 交換其指標和大小值的來源 string_view。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<string_view >](../standard-library/string-view.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793783"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416095"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio 中的 C++
 
@@ -82,7 +82,7 @@ MSVC C++ 編譯器中依功能分類的一致性狀態清單。
 [偵錯機器碼](/visualstudio/debugger/debugging-native-code)<br/>
 了解如何針對 C++ 專案使用 Visual Studio 偵錯工具。
 
-[C/C++ 程式碼分析概觀](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[C/C++ 程式碼分析概觀](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 使用 SAL 註釋或 C++ Core Guidelines Checker 執行靜態分析。
 
 [在 Visual Studio 中撰寫 C/C++ 的單元測試](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -173,7 +173,7 @@ Microsoft [C++ 小組部落格](https://devblogs.microsoft.com/cppblog/)<br/>
 [Visual Studio 開發人員社群](https://developercommunity.visualstudio.com/)<br/>
 了解如何取得協助、提報 Bug，以及提供有關 Visual Studio 的建議。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 - [C 語言參考](../c-language/c-language-reference.md)
 - [C 執行階段程式庫參考](../c-runtime-library/c-run-time-library-reference.md)

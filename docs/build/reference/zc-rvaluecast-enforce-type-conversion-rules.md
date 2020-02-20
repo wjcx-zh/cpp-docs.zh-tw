@@ -1,6 +1,6 @@
 ---
 title: /Zc:rvalueCast (強制型別轉換規則)
-ms.date: 03/06/2018
+ms.date: 02/18/2020
 f1_keywords:
 - rvaluecast
 - /Zc:rvalueCast
@@ -12,28 +12,29 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 7825277d-e565-4c48-b0fb-76ac0b0c6e38
-ms.openlocfilehash: e5a6abd3b85136b05ae58ebc8750aa9120cabc33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac74192cad8a62e4c82b480038e727b114362cdd
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315777"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504568"
 ---
 # <a name="zcrvaluecast-enforce-type-conversion-rules"></a>/Zc:rvalueCast (強制型別轉換規則)
 
-當 **/zc: rvaluecast**指定選項時，編譯器正確地識別右值參考類型為根據 C + + 11 標準轉換運算的結果。 當未指定該選項時，編譯器的行為會與 Visual Studio 2012 中的行為相同。
+指定 **`/Zc:rvalueCast`** 選項時，編譯器會正確地將右值參考型別識別為轉換運算的結果。 其行為符合 c + + 11 標準。 未指定選項時，編譯器行為會與 Visual Studio 2012 中的相同。
 
 ## <a name="syntax"></a>語法
 
-> **/Zc:rvalueCast**[**-**]
+> **`/Zc:rvalueCast`**\
+> **`/Zc:rvalueCast-`**
 
 ## <a name="remarks"></a>備註
 
-如果 **/zc: rvaluecast**指定，則編譯器會遵循 C + + 11 標準的 5.4 節，並視為只轉型運算式導致非參考類型，並轉換導致非函式類型右值參考的運算式右值類型。 根據預設，或如果 **/Zc:rvalueCast-** 指定，則編譯器會不一致，並將導致右值的右值參考的所有轉型運算式。 為了一致性，並消除使用轉型的錯誤，我們建議您使用 **/zc: rvaluecast**。
+如果指定了 **`/Zc:rvalueCast`** ，編譯器會遵循 c + + 11 標準的第5.4 節，並且只會將產生非參考型別和轉型運算式的轉型運算式，視為將非函式類型的右值參考當做右數值型別。 根據預設，或如果指定了 **`/Zc:rvalueCast-`** ，則編譯器會不符合規範，並會將導致右值參考的所有 cast 運算式視為右值。 為了符合規範，並在使用轉換時排除錯誤，建議您使用 **`/Zc:rvalueCast`** 。
 
-根據預設， **/zc: rvaluecast**已關閉 (**/Zc:rvalueCast-**)。 [/Permissive--](permissive-standards-conformance.md)編譯器選項會隱含地設定此選項，但可以使用覆寫 **/Zc:rvalueCast-**。
+根據預設， **`/Zc:rvalueCast`** 為關閉（ **`/Zc:rvalueCast-`** ）。 [/Permissive-](permissive-standards-conformance.md)編譯器選項會隱含設定此選項，但可以使用 **`/Zc:rvalueCast-`** 來加以覆寫。
 
-使用 **/zc: rvaluecast**如果您將轉型運算式作為引數傳遞至接受右值參考類型的函式。 預設行為會造成編譯器錯誤[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)編譯器錯誤地判定轉型運算式的類型。 此範例顯示在正確的編譯器錯誤程式碼的時機 **/zc: rvaluecast**未指定：
+如果您將 cast 運算式當做引數傳遞至採用右值參考型別的函式，請使用 **`/Zc:rvalueCast`** 。 當編譯器不正確地判斷 cast 運算式的類型時，預設行為會導致編譯器錯誤[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) 。 這個範例會在未指定 **`/Zc:rvalueCast`** 時，顯示正確程式碼中的編譯器錯誤：
 
 ```cpp
 // Test of /Zc:rvalueCast
@@ -71,7 +72,7 @@ struct Test1 {
 };
 ```
 
-適當時，預設編譯器行為可能不會報告錯誤 C2102。 在此範例中，編譯器不會報告錯誤採用身分轉型所建立之右值的位址時，如果 **/zc: rvaluecast**未指定：
+適當時，預設編譯器行為可能不會報告錯誤 C2102。 在此範例中，如果未指定 **`/Zc:rvalueCast`** 時，則編譯器不會報告錯誤：
 
 ```cpp
 int main() {
@@ -86,12 +87,12 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項
 
-1. 開啟專案的 [屬性頁]  對話方塊。 如需詳細資訊，請參閱 <<c0> [ 設定C++Visual Studio 中的編譯器和組建屬性](../working-with-project-properties.md)。</c0>
+1. 開啟專案的 [屬性頁] 對話方塊。 如需詳細資訊，請參閱[在 Visual Studio 中設定 C ++ 編譯器和組建屬性](../working-with-project-properties.md)。
 
-1. 選取 **組態屬性** > **C /C++** > **命令列**屬性頁。
+1.  > [ **C/C++**  > **語言**] 屬性頁中選取 [設定**屬性**]。
 
-1. 修改**其他選項**屬性，以包括 **/zc: rvaluecast** ，然後選擇**確定**。
+1. 將 [**強制型別轉換規則**] 屬性設定為 **`/Zc:rvalueCast`** 或 **`/Zc:rvalueCast-`** 。 選擇 **[確定]** **或 [** 套用] 以儲存變更。
 
 ## <a name="see-also"></a>另請參閱
 
-[/Zc (一致性)](zc-conformance.md)<br/>
+[/Zc (一致性)](zc-conformance.md)

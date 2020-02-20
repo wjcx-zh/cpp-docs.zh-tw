@@ -226,12 +226,12 @@ no-loc:
 - _WIN64
 - _WINRT_DLL
 - __func__
-ms.openlocfilehash: 7d019b527abea89ab8337270fbd22abc9dbecc4e
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: ff3945fa9476e090f26ce029c63b1813401082e0
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305470"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473853"
 ---
 # <a name="predefined-macros"></a>預先定義巨集
 
@@ -477,6 +477,9 @@ MSVC 支援這些額外預先定義的宏。
    |Visual Studio 2019 16.1 版|1921|
    |Visual Studio 2019 16.2 版|1922|
    |Visual Studio 2019 16.3 版|1923|
+   |Visual Studio 2019 16.4 版|1924|
+   |Visual Studio 2019 16.5 版|1925|
+   |Visual Studio 2019 16.6 版|1926|
 
    若要在指定的 Visual Studio 版本或之後測試編譯器版本或更新，請使用 `>=` 運算子。 您可以在條件指示詞中使用它來比較 `_MSC_VER` 與該已知版本。 如果您有多個相互獨立的版本要進行比較，請依照版本號碼的遞減順序來排序您的比較。 例如，此程式碼會檢查 Visual Studio 2017 和更新版本中所發行的編譯器。 接下來，它會檢查 Visual Studio 2015 之後或之後發行的編譯器。 然後，它會檢查 Visual Studio 2015 之前發行的所有編譯器：
 

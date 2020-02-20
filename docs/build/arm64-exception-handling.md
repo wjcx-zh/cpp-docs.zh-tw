@@ -2,12 +2,12 @@
 title: ARM64 例外狀況處理
 description: 描述 ARM64 上 windows 所使用的例外狀況處理慣例和資料。
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276841"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504489"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外狀況處理
 
@@ -23,7 +23,7 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
 
    - 分析程式碼很複雜;編譯器必須謹慎地產生回溯器可以解碼的指令。
 
-   - 如果回溯無法透過使用回溯代碼來完整描述，在某些情況下，它必須切換回指令解碼。 這會增加整體複雜度，而且最好是避免的。
+   - 如果回溯無法透過使用回溯代碼來完整描述，在某些情況下，它必須切換回指令解碼。 這會增加整體複雜度，而且最好避免。
 
 1. 支援在初初初和 mid 中回溯。
 
@@ -39,7 +39,7 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
 
 這些假設是在例外狀況處理描述中進行：
 
-1. 初構和 epilogs 通常會彼此鏡像。 藉由利用此共同特性，描述回溯所需的中繼資料大小可以大幅降低。 在函式的主體中，不論初構的作業是否復原，或終的作業都是以正向的方式執行，都不會有任何影響。 這兩個作業會產生相同的結果。
+1. 初構和 epilogs 傾向于彼此鏡像。 藉由利用此共同特性，描述回溯所需的中繼資料大小可以大幅降低。 在函式的主體中，不論初構的作業是否復原，或終的作業都是以正向的方式執行，都不會有任何影響。 這兩個作業會產生相同的結果。
 
 1. 函式通常會整體相對較小。 空間的數個優化會依賴此事實來達到最有效率的資料封裝。
 
@@ -53,7 +53,7 @@ Windows on ARM64 會針對非同步硬體產生的例外狀況和同步軟體產
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 堆疊框架版面配置
 
-![堆疊框架版面]配置(media/arm64-exception-handling-stack-frame.png "堆疊框架版面")配置
+![堆疊框架版面配置](media/arm64-exception-handling-stack-frame.png "堆疊框架配置")
 
 針對框架連結的函式，可以在本機變數區域中的任何位置儲存 fp 和 lr 配對，視優化考慮而定。 目標是要最大化可透過框架指標（x29）或堆疊指標（sp）的單一指令來達到的區域變數數目。 不過，針對 `alloca` 函式，它必須是連鎖的，而且 x29 必須指向堆疊的底部。 為了允許更好的暫存器成對定址模式涵蓋範圍，非靜態暫存器儲存區域會放在本機區域堆疊的頂端。 以下範例說明數個最有效率的初構序列。 為了清楚且更佳的快取區域，在所有標準初構中儲存被呼叫端儲存的暫存器的順序，都是「成長中」的順序。 以下 `#framesz` 代表整個堆疊的大小（不包括 alloca 區域）。 `#localsz` 和 `#outsz` 分別代表區域大小（包括 \<x29、lr > 配對的儲存區，以及輸出參數大小）。
 
@@ -188,7 +188,7 @@ Pdata 記錄是固定長度專案的已排序陣列，描述 PE 二進位檔中�
 
 ARM64 的每個 pdata 記錄長度為8個位元組。 每筆記錄的一般格式會將函式的32位 RVA 放在第一個單字中，後面接著第二個單字，其中包含 .xdata 區塊的指標，或描述標準函式回溯順序的封裝字組。
 
-![。 pdata 記錄版面]配置(media/arm64-exception-handling-pdata-record.png ". pdata 記錄")配置
+![。 pdata 記錄版面配置](media/arm64-exception-handling-pdata-record.png "。 pdata 記錄版面配置")
 
 欄位如下所示：
 
@@ -204,7 +204,7 @@ ARM64 的每個 pdata 記錄長度為8個位元組。 每筆記錄的一般格�
 
 當封裝回溯格式不足以描述函式的回溯時，必須建立可變長度的 .xdata 記錄。 此記錄的位址儲存在 .pdata 記錄的第二個字組。 .Xdata 的格式是一組已壓縮的可變長度文字：
 
-![。 .xdata 記錄版面]配置(media/arm64-exception-handling-xdata-record.png ". .xdata 記錄")配置
+![。 .xdata 記錄版面配置](media/arm64-exception-handling-xdata-record.png "。 .xdata 記錄版面配置")
 
 此資料分為四個區段：
 
@@ -336,7 +336,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 具有封裝之回溯資料的 pdata 記錄格式看起來像這樣：
 
-。具有已封裝之回溯資料的![pdata 記錄](media/arm64-exception-handling-packed-unwind-data.png "。 pdata 記錄具有已封裝的回溯資料")
+![. 具有已封裝回溯資料的 pdata 記錄](media/arm64-exception-handling-packed-unwind-data.png ". 具有已封裝回溯資料的 pdata 記錄")
 
 欄位如下所示：
 
@@ -371,7 +371,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 步驟5：配置剩餘的堆疊，包括區域、\<x29、lr > 配對和傳出參數區域。 5a 對應至標準類型1。 5b 和5c 適用于標準類型2。 5d 和5e 適用于類型3和類型4。
 
-步驟#|旗標值|指示數目|Opcode|回溯程式碼
+步驟#|旗標值|指示數目|OpCode|回溯程式碼
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **RegI** < = 10|RegI/2 + **RegI** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`

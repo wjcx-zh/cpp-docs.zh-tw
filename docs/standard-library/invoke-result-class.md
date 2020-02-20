@@ -9,12 +9,12 @@ helpviewer_keywords:
 - std::invoke_result
 - std::invoke_result_t
 - std::invoke_result::type
-ms.openlocfilehash: 8cd72e62fcb65209482fd9677afcc2ec83356feb
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: a5f67935bde103cf10c1bd9948ac1388f5221322
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689524"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473890"
 ---
 # <a name="invoke_result-class"></a>invoke_result 類別
 
@@ -27,16 +27,16 @@ template <class Callable, class... Args>
    struct invoke_result<Callable(Args...)>;
 
 // Helper type
-template<lass Callable, class... Args>
+template<class Callable, class... Args>
    using invoke_result_t = typename invoke_result<Callable, Args...>::type;
 ```
 
 ### <a name="parameters"></a>參數
 
-可呼叫*的 \*
+可呼叫*的\*
 要查詢的可呼叫類型。
 
-*Args* \
+*Args*\
 要查詢之可呼叫類型的引數清單類型。
 
 ## <a name="remarks"></a>備註
@@ -45,11 +45,11 @@ template<lass Callable, class... Args>
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<type_traits>
+**標頭：** \<type_traits >
 
 **命名空間:** std
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [<type_traits>](../standard-library/type-traits.md)\
-[啟動](functional-functions.md#invoke)
+[invoke](functional-functions.md#invoke)

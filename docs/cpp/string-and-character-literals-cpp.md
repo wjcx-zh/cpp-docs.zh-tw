@@ -1,7 +1,7 @@
 ---
-title: 字串和字元常值C++()
+title: 字串和字元常值C++（）
 description: 如何在中C++宣告和定義字串和字元常值。
-ms.date: 08/06/2019
+ms.date: 02/18/2020
 f1_keywords:
 - R
 - L
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - literal strings [C++]
 - string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: e7f0d4291aeb2e3d8dc1eac4dd08ef3e961468ff
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1b4cfb8059b116b0d91886f5b78b3911e8dc316c
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498523"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504476"
 ---
-# <a name="string-and-character-literals-c"></a>字串和字元常值C++()
+# <a name="string-and-character-literals-c"></a>字串和字元常值C++（）
 
-C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立`std::string`常值, 而不需要執行額外的結構或轉換步驟。
+C++ 支援各種字串和字元類型，並提供方法來表示所有這些類型的常值。 在原始程式碼中，您可以使用字元集表示字元和字串常值的內容。 通用字元名稱和逸出字元允許您只使用基本來源字元集表示任何字串。 原始字串常值可讓您避免使用逸出字元，而且可用來表示所有類型的字串常值。 您也可以建立 `std::string` 常值，而不需要執行額外的結構或轉換步驟。
 
 ```cpp
 #include <string>
@@ -71,47 +71,47 @@ int main()
 }
 ```
 
-字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有`R`、 `u8R`、 `LR`、 `uR`和`UR`前置詞, 適用于這些編碼的原始版本。  若要建立暫存或`std::string`靜態值, 您可以使用字串常值或`s`具有尾碼的原始字串常值。 如需詳細資訊, 請參閱下面的「[字串常](#string-literals)值」一節。 如需基本來源字元集、通用字元名稱, 以及使用原始程式碼中的擴充字碼頁字元的詳細資訊, 請參閱[character sets](../cpp/character-sets.md)。
+字串常值可以沒有前置詞，或者以 `u8`、 `L`、 `u`和  `U` 前置詞分別表示半形字元 (單一位元組或多位元組)、UTF-8、全形字元 (UCS-2 或 UTF-16)、UTF-16 和 UTF-32 編碼。 原始字串常值可以有 `R`、`u8R`、`LR`、`uR`和 `UR` 前置詞，用於這些編碼的原始版本。  若要建立暫存或靜態 `std::string` 值，您可以使用字串常值或具有 `s` 尾碼的原始字串常值。 如需詳細資訊，請參閱下面的「[字串常](#string-literals)值」一節。 如需基本來源字元集、通用字元名稱，以及使用原始程式碼中的擴充字碼頁字元的詳細資訊，請參閱[character sets](../cpp/character-sets.md)。
 
 ## <a name="character-literals"></a>字元常值
 
-*「字元常值」* (character literal) 是由常數字元所組成。 其表示方式是以單引號括住字元。 字元常值有五種類型:
+*「字元常值」* (character literal) 是由常數字元所組成。 它是以單引號括住的字元來表示。 字元常值有五種類型：
 
-- **Char**類型的一般字元常值, 例如`'a'`
+- **Char**類型的一般字元常值，例如 `'a'`
 
-- **Char**類型的 utf-8 字元常值 (c + + 20 中的**char8_t** ), 例如`u8'a'`
+- **Char**類型的 utf-8 字元常值（c + + 20 中的**char8_t** ），例如 `u8'a'`
 
 - `wchar_t`類型的全形字元常值，例如 `L'a'`
 
-- 類型`char16_t`的 utf-16 字元常值, 例如`u'a'`
+- `char16_t`類型的 UTF-16 字元常值，例如 `u'a'`
 
-- 類型`char32_t`的 UTF-32 字元常值, 例如`U'a'`
+- `char32_t`類型的 UTF-32 字元常值，例如 `U'a'`
 
-用於字元常值的字元可以是任何字元, 但保留字元反斜線 ('\\')、單引號 (') 或分行符號除外。 使用逸出序列可指定保留字元。 只要類型大到足以容納字元，就可以使用通用字元名稱指定字元。
+用於字元常值的字元可以是任何字元，但保留字元反斜線（'\\'）、單引號（'）或分行符號除外。 使用逸出序列可指定保留字元。 只要類型大到足以容納字元，就可以使用通用字元名稱指定字元。
 
 ### <a name="encoding"></a>編碼
 
 字元常值會根據其前置詞以不同的方式進行編碼。
 
-- 不含前置詞的字元常值是一般的字元常值。 包含可以在執行字元集中表示之單一字元、轉義順序或通用字元名稱的一般字元常值, 其值會等於其在執行字元集中的編碼數值。 包含一個以上字元、escape 序列或通用字元名稱的一般字元常值是一個*多重字元常*值。 無法在執行字元集中表示的多重字元常值或一般字元常值具有類型**int**, 且其值為執行定義。 如需 MSVC, 請參閱下面的**Microsoft 特定**章節。
+- 不含前置詞的字元常值是一般的字元常值。 包含可以在執行字元集中表示之單一字元、轉義順序或通用字元名稱的一般字元常值，其值會等於其在執行字元集中的編碼數值。 包含一個以上字元、escape 序列或通用字元名稱的一般字元常值是一個*多重字元常*值。 無法在執行字元集中表示的多重字元常值或一般字元常值具有類型**int**，且其值為執行定義。 如需 MSVC，請參閱下面的**Microsoft 專有**章節。
 
-- 開頭`L`為前置詞的字元常值是寬字元常值。 包含單一字元、escape 序列或通用字元名稱的寬字元常值, 其值會等於其在執行寬字元集中的編碼數值, 除非字元常值在執行全形字元集, 在此情況下, 值會是實作為定義的。 包含多個字元、escape 序列或通用字元名稱的寬字元常值, 是由實作為定義的。 如需 MSVC, 請參閱下面的**Microsoft 特定**章節。
+- 以 `L` 前置詞開頭的字元常值是寬字元常值。 包含單一字元、escape 序列或通用字元名稱的寬字元常值，其值會等於其在執行寬字元集中的編碼數值，除非字元常值在執行全形字元集，在此情況下，值會是實作為定義的。 包含多個字元、escape 序列或通用字元名稱的寬字元常值，是由實作為定義的。 如需 MSVC，請參閱下面的**Microsoft 專有**章節。
 
-- 開頭`u8`為前置詞的字元常值是 utf-8 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-8 字元常值, 其值若可由單一 UTF-8 程式碼單位 (對應于 C0 控制項和基本拉丁) 來表示, 其值會等於其 ISO 10646 碼點值Unicode 區塊)。 如果這個值不能以單一 UTF-8 程式碼單位表示, 則程式格式不正確。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-8 字元常值格式不正確。
+- 以 `u8` 前置詞開頭的字元常值是 UTF-8 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-8 字元常值，其值若可由單一 UTF-8 程式碼單位（對應于 C0 控制項和基本拉丁）來表示，其值會等於其 ISO 10646 碼點值Unicode 區塊）。 如果這個值不能以單一 UTF-8 程式碼單位表示，則程式格式不正確。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-8 字元常值格式不正確。
 
-- 開頭`u`為前置詞的字元常值是 utf-16 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-16 字元常值, 其值若可由單一 UTF-16 程式碼單位 (對應至基本多語言平面) 表示, 其值會等於其 ISO 10646 程式碼點值). 如果這個值不能以單一 UTF-16 程式碼單位表示, 則程式格式不正確。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-16 字元常值格式不正確。
+- 以 `u` 前置詞開頭的字元常值是 UTF-16 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-16 字元常值，其值若可由單一 UTF-16 程式碼單位（對應至基本多語言平面）表示，其值會等於其 ISO 10646 程式碼點值). 如果這個值不能以單一 UTF-16 程式碼單位表示，則程式格式不正確。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-16 字元常值格式不正確。
 
-- 開頭`U`為前置詞的字元常值是 UTF-32 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-32 字元常值, 其值會等於其 ISO 10646 程式碼點值。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-32 字元常值格式不正確。
+- 開頭為 `U` 前置詞的字元常值是 UTF-32 字元常值。 包含單一字元、escape 序列或通用字元名稱的 UTF-32 字元常值，其值會等於其 ISO 10646 程式碼點值。 包含一個以上字元、escape 序列或通用字元名稱的 UTF-32 字元常值格式不正確。
 
-###  <a name="bkmk_Escape"></a>Escape 序列
+### <a name="bkmk_Escape"></a>Escape 序列
 
-逸出序列有三種：簡單的、八進位和十六進位。 逸出序列可以是下列任何一項：
+逸出序列有三種：簡單的、八進位和十六進位。 Escape 序列可以是下列其中一個值：
 
 |值|逸出序列|
 |-----------|---------------------|
-| 新行字元 | \\位 |
+| 新行字元 | \\n |
 | 反斜線 | \\\\ |
-| 水平定位字元 | \\而已 |
+| 水平定位字元 | \\t |
 | 問號 | ? 或 \\? |
 | 垂直定位字元 | \\v |
 | 單引號 | \\' |
@@ -121,12 +121,12 @@ int main()
 | null 字元 | \\0 |
 | 換頁字元 | \\f |
 | 八進位 | \\ooo 序列 |
-| 警示 (鈴聲) | \\為 |
+| 警示 (鈴聲) | \\a |
 | 十六進位 | \\xhhh |
 
-八進位的逸出序列是反斜線, 後面接著一連串的一到三個八進位數位。 如果比第三個數字更早發生, 八進位逸出序列會在不是八進位數位的第一個字元終止。 可能的最大八進位值`\377`為。
+八進位的逸出序列是反斜線，後面接著一連串的一到三個八進位數位。 如果比第三個數字更早發生，八進位逸出序列會在不是八進位數位的第一個字元終止。 最可能的八進位值 `\377`。
 
-十六進位的逸出序列是反斜線, 後面接著字元`x`, 後面接著一或多個十六進位數位的序列。 系統會忽略前置零。 在一般或 u8 首碼的字元常值中, 最高的十六進位值是0xFF。 在 L 前置詞或 u 前置詞的全形字元常值中，最高的十六進位值是 0xFFFF。 在 U 前置詞的全形字元常值中，最高的十六進位值是 0xFFFFFFFF。
+十六進位的逸出序列是反斜線，後面接著字元 `x`，後面接著一或多個十六進位數位的序列。 系統會忽略前置零。 在一般或 u8 首碼的字元常值中，最高的十六進位值是0xFF。 在 L 前置詞或 u 前置詞的全形字元常值中，最高的十六進位值是 0xFFFF。 在 U 前置詞的全形字元常值中，最高的十六進位值是 0xFFFFFFFF。
 
 這個範例程式碼會顯示一些使用一般字元常值的逸出字元範例。 相同的轉義順序語法對其他字元常數值型別而言是有效的。
 
@@ -141,20 +141,27 @@ int main() {
     char backslash = '\\';
     char nullChar = '\0';
 
-    cout << "Newline character: " << newline << "ending" << endl; // Newline character:
-                                                                  //  ending
-    cout << "Tab character: " << tab << "ending" << endl; // Tab character : ending
-    cout << "Backspace character: " << backspace << "ending" << endl; // Backspace character : ending
-    cout << "Backslash character: " << backslash << "ending" << endl; // Backslash character : \ending
-    cout << "Null character: " << nullChar << "ending" << endl; //Null character:  ending
+    cout << "Newline character: " << newline << "ending" << endl;
+    cout << "Tab character: " << tab << "ending" << endl;
+    cout << "Backspace character: " << backspace << "ending" << endl;
+    cout << "Backslash character: " << backslash << "ending" << endl;
+    cout << "Null character: " << nullChar << "ending" << endl;
 }
+/* Output:
+Newline character:
+ending
+Tab character:  ending
+Backspace character:ending
+Backslash character: \ending
+Null character:  ending
+*/
 ```
 
-反斜線字元 (\\) 是放在行尾時的行接續字元。 如果您想要讓反斜線字元顯示為字元常值，您必須輸入連續的兩個反斜線 (`\\`)。 如需行接續字元的詳細資訊，請參閱 [Phases of Translation](../preprocessor/phases-of-translation.md)。
+反斜線字元（\\）是放在行尾時的行接續字元。 如果您想要讓反斜線字元顯示為字元常值，您必須輸入連續的兩個反斜線 (`\\`)。 如需行接續字元的詳細資訊，請參閱 [Phases of Translation](../preprocessor/phases-of-translation.md)。
 
-**Microsoft 特定**
+#### <a name="microsoft-specific"></a>Microsoft 專有
 
-若要從窄多重字元常值建立值, 編譯器會將單引號之間的字元或字元序列轉換成32位整數內的8位值。 常值中的多個字元，會視需要從高序位到低序位填入對應的位元組。 然後編譯器會依照一般規則, 將整數轉換成目的地類型。 例如, 若要建立**char**值, 編譯器會採用低序位位元組。 若要建立**wchar_t**或`char16_t`值, 編譯器會採用低序位字組。 如果任何位元設定高出指定的位元組或字組，編譯器會警告結果遭截斷。
+若要從窄多重字元常值建立值，編譯器會將單引號之間的字元或字元序列轉換成32位整數內的8位值。 常值中的多個字元，會視需要從高序位到低序位填入對應的位元組。 然後編譯器會依照一般規則，將整數轉換成目的地類型。 例如，若要建立**char**值，編譯器會採用低序位位元組。 若要建立**wchar_t**或 `char16_t` 值，編譯器會採用低序位字組。 如果任何位元設定高出指定的位元組或字組，編譯器會警告結果遭截斷。
 
 ```cpp
 char c0    = 'abcd';    // C4305, C4309, truncates to 'd'
@@ -162,14 +169,14 @@ wchar_t w0 = 'abcd';    // C4305, C4309, truncates to '\x6364'
 int i0     = 'abcd';    // 0x61626364
 ```
 
-會將超過三位數的八進位 escape 序列視為3位數的八進位序列, 後面接著後續的數位做為多重字元常值中的字元, 這可能會產生令人驚訝的結果。 例如：
+會將超過三位數的八進位 escape 序列視為3位數的八進位序列，後面接著後續的數位做為多重字元常值中的字元，這可能會產生令人驚訝的結果。 例如：
 
 ```cpp
 char c1 = '\100';   // '@'
 char c2 = '\1000';  // C4305, C4309, truncates to '0'
 ```
 
-似乎包含非八進位字元的 Escape 序列會評估為最後一個八進位字元的八進位序列, 後面接著其餘字元做為多重字元常值中的後續字元。 如果第一個非八進位字元是十進位數, 則會產生警告 C4125。 例如：
+似乎包含非八進位字元的 Escape 序列會評估為最後一個八進位字元的八進位序列，後面接著其餘字元做為多重字元常值中的後續字元。 如果第一個非八進位字元是十進位數，則會產生警告 C4125。 例如：
 
 ```cpp
 char c3 = '\009';   // '9'
@@ -177,16 +184,16 @@ char c4 = '\089';   // C4305, C4309, truncates to '9'
 char c5 = '\qrs';   // C4129, C4305, C4309, truncates to 's'
 ```
 
-值大於`\377`的八進位逸出序列會導致錯誤 C2022: '*值-十進位*': 字元太大。
+值大於 `\377` 的八進位逸出序列會導致錯誤 C2022： '*值-十進位*'：字元太大。
 
-具有十六進位和非十六進位字元的 escape 序列會評估為多重字元常值, 其中包含最多到最後一個十六進位字元的十六進位逸出序列, 後面接著非十六進位字元。 不包含十六進位數位的十六進位逸出序列會導致編譯器錯誤 C2153: 「十六進位常值至少必須有一個十六進位數位」。
+具有十六進位和非十六進位字元的 escape 序列會評估為多重字元常值，其中包含最多到最後一個十六進位字元的十六進位逸出序列，後面接著非十六進位字元。 不包含十六進位數位的十六進位逸出序列會導致編譯器錯誤 C2153：「十六進位常值至少必須有一個十六進位數位」。
 
 ```cpp
 char c6 = '\x0050'; // 'P'
 char c7 = '\x0pqr'; // C4305, C4309, truncates to 'r'
 ```
 
-如果在前面`L`加上的寬字元常值包含多重字元序列, 則會從第一個字元取得該值, 而編譯器會引發警告 C4066。 系統會忽略後續的字元, 不同于對等的一般多重字元常值的行為。
+如果在前面加上 `L` 的寬字元常值包含多重字元序列，則會從第一個字元取得該值，而編譯器會引發警告 C4066。 系統會忽略後續的字元，不同于對等的一般多重字元常值的行為。
 
 ```cpp
 wchar_t w1 = L'\100';   // L'@'
@@ -198,11 +205,11 @@ wchar_t w6 = L'\x0050'; // L'P'
 wchar_t w7 = L'\x0pqr'; // C4066 L'\0', pqr ignored
 ```
 
-**結束 Microsoft 專有**
+Microsoft 專屬章節將**于**此結束。
 
-###  <a name="bkmk_UCN"></a> 通用字元名稱
+### <a name="bkmk_UCN"></a> 通用字元名稱
 
-在字元常值和原生 (非原始) 的字串常值中，任何字元都可能使用通用字元名稱表示。  通用字元名稱是由前置`\U`片語成, 後面接著八位數的 unicode 程式碼片段, 或前置`\u`詞後面接著四位數的 unicode 程式碼點。 所有的八位數或四位數，都一定要出現才是格式正確的通用字元名稱。
+在字元常值和原生 (非原始) 的字串常值中，任何字元都可能使用通用字元名稱表示。  通用字元名稱是由前置片語成 `\U` 後面接著八位數的 Unicode 程式碼點，或是前置詞 `\u` 後面接著四位數的 Unicode 程式碼點。 所有的八位數或四位數，都一定要出現才是格式正確的通用字元名稱。
 
 ```cpp
 char u1 = 'A';          // 'A'
@@ -214,7 +221,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 #### <a name="surrogate-pairs"></a>Surrogate 字組
 
-通用字元名稱無法編碼代理程式碼點範圍 D800-DFFF 中的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 必要時, 編譯器會產生代理配對。
+通用字元名稱無法編碼代理程式碼點範圍 D800-DFFF 中的值。 至於 Unicode surrogate 字組，請使用 `\UNNNNNNNN`指定通用字元名稱，這裡的 NNNNNNNN 為字元的八位數字碼指標。 必要時，編譯器會產生代理配對。
 
 過去在 C++03 中，語言只允許由其通用字元名稱所代表的字元子集，以及未實際代表任何有效 Unicode 字元的一些通用字元名稱。 此錯誤已在 c + + 11 標準中修正。 在 C++11 中，字元和字串常值及識別項可以使用通用字元名稱。  如需通用字元名稱的詳細資訊，請參閱 [Character Sets](../cpp/character-sets.md)。 如需 Unicode 的詳細資訊，請參閱 [Unicode](/windows/win32/intl/unicode)。 如需 Surrogate 字組的詳細資訊，請參閱 [Surrogate 字組和補充字元](/windows/win32/Intl/surrogates-and-supplementary-characters)。
 
@@ -224,7 +231,7 @@ char u5 = '\U00000041'; // \U UCN 'A'
 
 ### <a name="narrow-string-literals"></a>窄字串常值
 
-窄字串常值是類型`const char[n]`的非前置詞、雙引號分隔、null 結束陣列, 其中 n 是陣列的長度 (以位元組為單位)。 半形字串常值可能包含任何圖形字元，但雙引號 (`"`)、反斜線 (`\`) 或新行字元除外。 半形字串常值也可能包含上文列出的逸出序列，以及符合一個位元組大小的通用字元名稱。
+窄字串常值是非前置詞、以雙引號分隔、以 null 結束的類型 `const char[n]`的陣列，其中 n 是陣列的長度（以位元組為單位）。 半形字串常值可能包含任何圖形字元，但雙引號 (`"`)、反斜線 (`\`) 或新行字元除外。 半形字串常值也可能包含上文列出的逸出序列，以及符合一個位元組大小的通用字元名稱。
 
 ```cpp
 const char *narrow = "abcd";
@@ -235,7 +242,7 @@ const char *escaped = "yes\\no";
 
 #### <a name="utf-8-encoded-strings"></a>UTF-8 編碼的字串
 
-Utf-8 編碼的字串是 u8 前置詞、以雙引號分隔、以 null 結束的類型`const char[n]`陣列, 其中*n*是已編碼陣列的長度 (以位元組為單位)。 u8 前置字串常值可以包含任何圖形字元，但雙引號 (`"`)、反斜線 (`\`) 或新行字元除外。 u8 前置字串常值也可以包含上列逸出序列，以及任何通用字元名稱。
+UTF-8 編碼的字串是 u8 的前置詞（以雙引號分隔），以 null 結束的類型 `const char[n]`的陣列，其中*n*是編碼陣列的長度（以位元組為單位）。 u8 前置字串常值可以包含任何圖形字元，但雙引號 (`"`)、反斜線 (`\`) 或新行字元除外。 u8 前置字串常值也可以包含上列逸出序列，以及任何通用字元名稱。
 
 ```cpp
 const char* str1 = u8"Hello World";
@@ -244,7 +251,7 @@ const char* str2 = u8"\U0001F607 is O:-)";
 
 ### <a name="wide-string-literals"></a>寬字元串常值
 
-寬字元串常值是以 null 結束的常數**wchar_t**陣列, 其前面會加上`L`' ', 且包含任何圖形字元, 但雙引號 (")、反斜線\\() 或分行符號除外。 全形字串常值可以包含上列逸出序列，以及任何通用字元名稱。
+寬字元串常值是以 null 結束的常數**wchar_t**的陣列，前面會加上 '`L`'，並包含雙引號（"）、反斜線（\\）或分行符號以外的任何圖形字元。 全形字串常值可以包含上列逸出序列，以及任何通用字元名稱。
 
 ```cpp
 const wchar_t* wide = L"zyxw";
@@ -260,9 +267,9 @@ auto s3 = u"hello"; // const char16_t*
 auto s4 = U"hello"; // const char32_t*
 ```
 
-### <a name="raw-string-literals-c11"></a>原始字串常值 (c + + 11)
+### <a name="raw-string-literals-c11"></a>原始字串常值（c + + 11）
 
-原始字串常值是以 null 結束的陣列 (任何字元類型), 其中包含任何圖形字元, 包括雙引號 (")、反斜線 (\\) 或換行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例, 請參閱下列文章:[C + + 11 上的 Bjarne STROUSTRUP 常見問題](http://www.stroustrup.com/C++11FAQ.html)。
+原始字串常值是以 null 結束的陣列（任何字元類型），其中包含任何圖形字元，包括雙引號（"）、反斜線（\\）或換行字元。 原始字串常值通常用於使用字元類別的規則運算式，以及 HTML 字串和 XML 字串。 如需範例，請參閱下列文章： [Bjarne Stroustrup 的 C++11 常見問題集](http://www.stroustrup.com/C++11FAQ.html)。
 
 ```cpp
 // represents the string: An unescaped \ character
@@ -273,7 +280,7 @@ const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```
 
-「分隔符號」是一種使用者定義的序列, 最多16個字元, 緊接在原始字串常值的左括弧前面, 然後緊接在其右括弧後面。  例如， `R"abc(Hello"\()abc"` 中的分隔符號順序是 `abc` ，字串內容是 `Hello"\(`。 您可以使用分隔符號，釐清包含雙引號和括號的原始字串。 這個字串常值會造成編譯器錯誤:
+「分隔符號」是一種使用者定義的序列，最多16個字元，緊接在原始字串常值的左括弧前面，然後緊接在其右括弧後面。  例如， `R"abc(Hello"\()abc"` 中的分隔符號順序是 `abc` ，字串內容是 `Hello"\(`。 您可以使用分隔符號，釐清包含雙引號和括號的原始字串。 這個字串常值會造成編譯器錯誤：
 
 ```cpp
 // meant to represent the string: )"
@@ -286,7 +293,7 @@ const char* bad_parens = R"()")";  // error C2059
 const char* good_parens = R"xyz()")xyz";
 ```
 
-您可以在來源中, 建立包含分行符號 (而不是逸出字元) 的原始字串常值:
+您可以在來源中，建立包含分行符號（而不是逸出字元）的原始字串常值：
 
 ```cpp
 // represents the string: hello
@@ -295,9 +302,9 @@ const wchar_t* newline = LR"(hello
 goodbye)";
 ```
 
-### <a name="stdstring-literals-c14"></a>std:: string 常值 (c + + 14)
+### <a name="stdstring-literals-c14"></a>std：： string 常值（c + + 14）
 
-`std::string`常值是使用者定義常值的標準程式庫執行 (如下所示), `"xyz"s`以表示為`s` (尾碼)。 這種字串常值會根據指定的前置詞`std::string`, `std::wstring`產生`std::u32string`類型為`std::u16string`、、或的暫存物件。 如果未使用前置詞, `std::string`則會產生。 `L"xyz"s``std::wstring`產生。 `u"xyz"s`會產生[std:: u16string](../standard-library/string-typedefs.md#u16string), 並`U"xyz"s`產生[std:: u32string](../standard-library/string-typedefs.md#u32string)。
+`std::string` 常值是使用者定義常值的標準程式庫執行（如下所示），以 `"xyz"s` 表示（含 `s` 尾碼）。 這種字串常值會根據指定的前置詞，產生類型 `std::string`、`std::wstring`、`std::u32string`或 `std::u16string`的暫存物件。 如果未使用前置詞，則會產生 `std::string`。 `L"xyz"s` 會產生 `std::wstring`。 `u"xyz"s` 會產生[std：： u16string](../standard-library/string-typedefs.md#u16string)，而 `U"xyz"s` 會產生[std：： u32string](../standard-library/string-typedefs.md#u32string)。
 
 ```cpp
 //#include <string>
@@ -309,41 +316,41 @@ u16string str4{ u"hello"s };
 u32string str5{ U"hello"s };
 ```
 
-`s`尾碼也可以用於原始字串常值:
+`s` 尾碼也可以用於原始字串常值：
 
 ```cpp
 u32string str6{ UR"(She said "hello.")"s };
 ```
 
-`std::string`常值是在`std::literals::string_literals` \<字串 > 標頭檔的命名空間中定義。 因為 `std::literals::string_literals`，而且 `std::literals` 都宣告為 [內嵌命名空間](../cpp/namespaces-cpp.md)，所以會自動將 `std::literals::string_literals` 視為直接屬於命名空間 `std`。
+`std::string` 常值定義于命名空間 `std::literals::string_literals` 的 \<字串 > 標頭檔中。 因為 `std::literals::string_literals`，而且 `std::literals` 都宣告為 [內嵌命名空間](../cpp/namespaces-cpp.md)，所以會自動將 `std::literals::string_literals` 視為直接屬於命名空間 `std`。
 
 ### <a name="size-of-string-literals"></a>字串常值的大小
 
-針對 ANSI `char*`字串和其他單一位元組編碼 (但不是 utf-8), 字串常值的大小 (以位元組為單位) 是結束的 null 字元的字元數加1。 對於所有其他字串類型，嚴格上，大小未與字元數相關。 Utf-8 使用最多四個**char**元素來編碼某些程式*代碼單位*, `char16_t`或`wchar_t`編碼為 utf-16 可能會使用兩個元素 (總共四個位元組) 來編碼單一程式*代碼單位*。 本例顯示全形字串常值以位元組為單位的大小：
+對於 ANSI `char*` 字串和其他單一位元組編碼（但不是 UTF-8），字串常值的大小（以位元組為單位）是結束的 null 字元加1的字元數。 對於所有其他字串類型，大小不會與字元數完全相關。 UTF-8 使用最多四個**char**元素來編碼某些程式*代碼單位*，而 `char16_t` 或 `wchar_t` 編碼為 utf-16 可能會使用兩個元素（總共四個位元組）來編碼單一程式*代碼單位*。 本例顯示全形字串常值以位元組為單位的大小：
 
 ```cpp
 const wchar_t* str = L"Hello!";
 const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 ```
 
-`char*` `char16_t*` `wchar_t*`請注意, `wcslen()` 和不包括結束null字元的大小,其大小等於字串類型的專案大小:字串上的一個位元組、或字串上的兩個位元組,以及四個`strlen()`字串上`char32_t*`的位元組。
+請注意，`strlen()` 和 `wcslen()` 不包含結束 null 字元的大小，其大小等於字串類型的專案大小：一個位元組的 `char*` 或 `char8_t*` 字串、`wchar_t*` 或 `char16_t*` 字串上的兩個位元組，以及 `char32_t*` 字串上的四個位元組。
 
 字串常值的最大長度是65535個位元組。 這個限制適用於半形字串常值和全形字串常值。
 
 ### <a name="modifying-string-literals"></a>修改字串常值
 
-因為字串常值 (不`std::string`包括常值) 是常數, 所以嘗試修改它們`str[2] = 'A'`(例如) 會造成編譯器錯誤。
+因為字串常值（不包括 `std::string` 常值）是常數，所以嘗試加以修改（例如 `str[2] = 'A'`）會造成編譯器錯誤。
 
-**Microsoft 特定**
+#### <a name="microsoft-specific"></a>Microsoft 專有
 
-在 Microsoft C++中, 您可以使用字串常值來初始化非 const **char**或**wchar_t**的指標。 C99 程式碼允許此非 const 初始化, 但在 c + + 98 中已被取代, 並已在 c + + 11 中移除。 嘗試修改字串造成存取違規，如此範例所示：
+在 Microsoft C++中，您可以使用字串常值來初始化非 const **char**或**wchar_t**的指標。 C99 程式碼允許此非 const 初始化，但在 c + + 98 中已被取代，並已在 c + + 11 中移除。 嘗試修改字串造成存取違規，如此範例所示：
 
 ```cpp
 wchar_t* str = L"hello";
 str[2] = L'a'; // run-time error: access violation
 ```
 
-當您設定[/zc: strictStrings (停用字串常數值型別轉換)](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)編譯器選項時, 您可以讓編譯器在字串常值轉換成非 const 字元指標時發出錯誤。 我們建議使用標準相容的可攜式程式碼。 使用**auto**關鍵字來宣告字串常值初始化的指標也是很好的作法, 因為它會解析成正確的 (const) 型別。 例如，這個程式碼範例會攔截在編譯時期嘗試寫入字串常值的動作：
+當您設定[/zc： strictStrings （停用字串常數值型別轉換）](../build/reference/zc-strictstrings-disable-string-literal-type-conversion.md)編譯器選項時，您可以讓編譯器在字串常值轉換成非 const 字元指標時發出錯誤。 我們建議使用標準相容的可攜式程式碼。 使用**auto**關鍵字來宣告字串常值初始化的指標也是很好的作法，因為它會解析成正確的（const）型別。 例如，這個程式碼範例會攔截在編譯時期嘗試寫入字串常值的動作：
 
 ```cpp
 auto str = L"hello";
@@ -352,7 +359,7 @@ str[2] = L'a'; // C3892: you cannot assign to a variable that is const.
 
 在某些情況下，可以結合相同字串常值來節省可執行檔中的空間。 在字串常值共用中，編譯器會讓特定字串常值的所有參考指向記憶體內部相同位置，而不是讓每個參考都指向字串常值的個別執行個體。 若要啟用字串共用，請使用 [/GF](../build/reference/gf-eliminate-duplicate-strings.md) 編譯器選項。
 
-**結束 Microsoft 專有**
+Microsoft 專屬章節將**于**此結束。
 
 ### <a name="concatenating-adjacent-string-literals"></a>串連相鄰的字串常值
 
@@ -381,14 +388,14 @@ char atr[] =  "12\
 "\x05five"
 ```
 
-實際結果是十六進位 5F (即底線字元的 ASCII 碼)，後面接 i、v、e 字元。 若要取得正確結果，您可以使用其中一個：
+實際結果是十六進位 5F (即底線字元的 ASCII 碼)，後面接 i、v、e 字元。 若要取得正確的結果，您可以使用下列其中一個 escape 序列：
 
 ```cpp
 "\005five"     // Use octal literal.
 "\x05" "five"  // Use string splicing.
 ```
 
-`std::string`常值 (因為它們`std::string`是類型) 可以與針對 [basic_string](../standard-library/basic-string-class.md) `+`類型所定義的運算子串連。 它們的串連方式也與相鄰字串常值相同。 在這兩種情況下，字串編碼和後置詞必須相符：
+`std::string` 常值（因為它們是 `std::string` 類型），可以與針對[basic_string](../standard-library/basic-string-class.md)類型定義的 `+` 運算子串連。 它們的串連方式也與相鄰字串常值相同。 在這兩種情況下，字串編碼和後置詞必須相符：
 
 ```cpp
 auto x1 = "hello" " " " world"; // OK
@@ -399,7 +406,7 @@ auto x4 = u8"hello" " "s u8"world"z; // C3688, disagree on suffixes
 
 ### <a name="string-literals-with-universal-character-names"></a>含通用字元名稱的字串常值
 
-原生 (非原始) 的字串常值可以使用通用字元名稱來代表任何字元，只要通用字元名稱可以編碼為字串類型中的一或多個字元。  例如，通用字元名稱表示的擴充字元無法編碼在使用 ANSI 字碼頁的半形字串中，但可以編碼在某些多位元組字碼頁的半形字串中，或編碼在 UTF-8 字串或全形字串中。 在 c + + 11 中, Unicode 支援是`char16_t*`由`char32_t*`和字串類型擴充:
+原生 (非原始) 的字串常值可以使用通用字元名稱來代表任何字元，只要通用字元名稱可以編碼為字串類型中的一或多個字元。  例如，代表擴充字元的通用字元名稱無法使用 ANSI 字碼頁以窄字串編碼，但是可以在某些多位元組字碼頁或 UTF-8 字串或寬字元串中，以窄字串編碼。 在 c + + 11 中，Unicode 支援是由 `char16_t*` 和 `char32_t*` 字串類型所擴充：
 
 ```cpp
 // ASCII smiling face
@@ -420,6 +427,6 @@ const char32_t* s5 = U"😎 = \U0001F60E is B-)";
 
 ## <a name="see-also"></a>另請參閱
 
-[Character Sets](../cpp/character-sets.md)\
-[數值、布林值和指標常值](../cpp/numeric-boolean-and-pointer-literals-cpp.md)\
+[字元集](../cpp/character-sets.md)\
+[數值、布林值和指標常](../cpp/numeric-boolean-and-pointer-literals-cpp.md)值\
 [使用者定義常值](../cpp/user-defined-literals-cpp.md)

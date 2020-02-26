@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518201"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600043"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>CMakeSettings.json 結構描述參考
 
@@ -25,13 +25,13 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 
 您可以在 IDE 中新增或移除設定，然後直接在 JSON 檔案中編輯它們，或使用 [ **CMake 設定編輯器**] （Visual Studio 2019 和更新版本）。 您可以在 IDE 中輕鬆地切換設定，以產生各種專案檔案。 如需詳細資訊，請參閱[在 Visual Studio 中自訂 CMake 組建設定](customize-cmake-settings.md)。
 
-## <a name="configurations"></a>設定
+## <a name="configurations"></a>組態
 
 `configurations` 陣列包含 CMake 專案的所有設定。 如需預先定義設定的詳細資訊，請參閱[CMake 預先](cmake-predefined-configuration-reference.md)定義的設定參考。 您可以將任何數目的預先定義或自訂設定新增至檔案。 
 
 `configuration` 有這些屬性：
 
-- `addressSDanitizerEnabled`：如果 `true` 使用 Address Sanitizer （實驗性在 Windows 上）來編譯器。 在 Linux 上，請使用-fno-rtti-省略框架指標和編譯器優化層級-Os 或-Oo 進行編譯，以獲得最佳結果。
+- `addressSanitizerEnabled`：如果 `true` 使用 Address Sanitizer （實驗性在 Windows 上）來編譯器。 在 Linux 上，請使用-fno-rtti-省略框架指標和編譯器優化層級-Os 或-Oo 進行編譯，以獲得最佳結果。
 - `addressSanitizerRuntimeFlags`：透過 ASAN_OPTIONS 環境變數傳遞至 AddressSanitizer 的執行時間旗標。 格式：-1 = 值：標誌 2 = value2。
 - `buildCommandArgs`：指定在 --build -- 之後傳遞到 CMake 的原生組建參數。 例如，在使用 Ninja 產生器時傳遞 -v 會強制 Ninja 輸出命令列。 如需有關 Ninja 命令的詳細資訊，請參閱 [Ninja 命令列引數](#ninja)。
 - `buildRoot`：指定目錄，CMake 會在此產生所選產生器的組建指令碼。  對應至 **-DCMAKE_BINARY_DIR**參數，並指定*cmakecache.txt*的建立位置。 如果資料夾不存在，則會建立資料夾。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
@@ -44,7 +44,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `configurationType`：針對所選產生器指定組建類型組態。 可能是下列其中之一：
 
   - 偵錯
-  - Release
+  - 版本
   - MinSizeRel
   - RelWithDebInfo
   
@@ -117,7 +117,7 @@ Visual Studio 2017 和更新版本支援 CMake 專案。
 - `remoteCMakeListsRoot`：指定遠端電腦上包含 CMake 專案的目錄。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteBuildRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的組建指令碼。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}`、`${env.VARIABLE}`。
 - `remoteInstallRoot`：指定遠端電腦上的目錄，CMake 會在此產生所選產生器的安裝目標。 支援的巨集包括 `${workspaceRoot}`、`${workspaceHash}`、`${projectFile}`、`${projectDir}`、`${thisFile}`、`${thisFileDir}`、`${name}`、`${generator}` 和 `${env.VARIABLE}`，其中 `VARIABLE` 是已在系統、使用者或工作階段層級定義的環境變數。
-- `remoteCopySources`：指定 Visual Studio 是否應該將來源檔案複製到遠端電腦的 `boolean`。 預設值為 true。 如果自行管理檔案同步處理，請設定為 false。
+- `remoteCopySources`：指定 Visual Studio 是否應該將來源檔案複製到遠端電腦的 `boolean`。 預設值是 true。 如果自行管理檔案同步處理，請設定為 false。
 - `remoteCopyBuildOutput`：指定是否要從遠端系統複製組建輸出的 `boolean`。
 - `remoteCopyAdditionalIncludeDirectories`：要從遠端電腦複製以支援 IntelliSense 的其他 include 目錄。 格式為 "/path1;/path2..."。
 - `remoteCopyExcludeDirectories`：包含不會從遠端電腦複製的目錄。 格式為 "/path1;/path2..."。

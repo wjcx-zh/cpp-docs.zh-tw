@@ -2455,7 +2455,7 @@
 - name: Linux 開發
   href: linux/
 - name: 跨平台行動裝置程式開發
-  href: /visualstudio/cross-platform/visual-cpp-for-cross-platform-mobile-development
+  href: cross-platform/
 - name: 使用 C++/CLI 進行 .NET 開發
   expanded: false
   items:

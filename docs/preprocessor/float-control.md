@@ -9,12 +9,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 0c9caea5ba35a55a53f7b9340cf9bfd2cce80561
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 5f907bfeb3f92f788fe951854ddc32accc83ae03
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74305497"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166780"
 ---
 # <a name="float_control-pragma"></a>float_control pragma
 
@@ -30,10 +30,10 @@ ms.locfileid: "74305497"
 ## <a name="options"></a>選項
 
 **精確**、**在** | **off**、 **push**\
-指定是否啟用（**開啟**）或停用（**關閉**）精確的浮點語義。 如需此選項與類似名稱的 **/fp：精確**編譯器選項有何差異的詳細資訊，請參閱備註一節。 選擇性的**推送**權杖會指示編譯器在內部編譯器堆疊上推送**float_control**的目前設定。
+指定是否啟用（**開啟**）或停用（**關閉**）精確的浮點語義。 如需與 **/fp：精確**編譯器選項差異的詳細資訊，請參閱備註一節。 選擇性的**推送**權杖會將目前的設定推送至內部編譯器堆疊上的**float_control** 。
 
 **除了**，**在** | **關閉** 上，**推送**\
-指定是否啟用（**開啟**）或停用（**關閉**）浮點例外狀況的語義。 如需此選項與類似名稱為 **/fp： except**編譯器選項之差異的詳細資訊，請參閱備註一節。 選擇性的**推送**權杖會指示編譯器在內部編譯器堆疊上推送**float_control**的目前設定。
+指定是否啟用（**開啟**）或停用（**關閉**）浮點例外狀況的語義。 選擇性的**推送**權杖會將目前的設定推送至內部編譯器堆疊上的**float_control** 。
 
 **除了**[**精確**] 也設定為 [**開啟**] 時，[只能] 設定為 [**開啟**]。
 
@@ -45,17 +45,15 @@ ms.locfileid: "74305497"
 
 ## <a name="remarks"></a>備註
 
-[**精確**] 和 [**除外**] 選項的行為與相同名稱的[/fp](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項並沒有完全相同。 **Float_control** pragma 只會控制浮點行為的一部分。 它必須與[fp_contract](../preprocessor/fp-contract.md)和[fenv_access](../preprocessor/fenv-access.md) pragma 結合，才能重新建立 **/fp**編譯器選項。 下表顯示每個編譯器選項的對等 pragma 設定：
+**Float_control** pragma 與[/fp](../build/reference/fp-specify-floating-point-behavior.md)編譯器選項的行為不同。 **Float_control** pragma 只會控制浮點行為的一部分。 它必須與[fp_contract](../preprocessor/fp-contract.md)和[fenv_access](../preprocessor/fenv-access.md) pragma 結合，才能重新建立 **/fp**編譯器選項。 下表顯示每個編譯器選項的對等 pragma 設定：
 
 | | float_control （精確，\*） | float_control （除外，\*） | fp_contract （\*） | fenv_access （\*） |
 |-|-|-|-|-|
-| /fp： strict             | 於  | 於  | 停止 | 於  |
-| /fp： strict/fp： except- | 於  | 停止 | 停止 | 於  |
-| /fp：精確            | 於  | 停止 | 於  | 停止 |
-| /fp：精確/fp： except | 於  | 於  | 於  | 停止 |
-| /fp： fast               | 停止 | 停止 | 於  | 停止 |
+| /fp： strict             | 於  | 於  | 關 | 於  |
+| /fp：精確            | 於  | 關 | 於  | 關 |
+| /fp： fast               | 關 | 關 | 於  | 關 |
 
-換句話說，您必須使用數個 pragma 來模擬 **/fp： fast**、 **/fp：精確**、 **/fp： strict**和 **/fp： except**命令列選項。
+換句話說，您可能需要使用數個 pragma 組合來模擬 **/fp： fast**、 **/fp：精確**和 **/fp： strict**命令列選項。
 
 您可以使用**float_control**和**fenv_access**浮點 pragma 的方式有一些限制：
 
@@ -67,7 +65,7 @@ ms.locfileid: "74305497"
 
 - 啟用**fenv_access**時，您無法使用**float_control**來關閉**精確**的功能。
 
-這些限制表示某些浮點 pragma 的順序很重要。 若要使用**float_control**和相關的 pragma 從快速模型移至 strict 模型，請使用下列程式碼：
+這些限制表示某些浮點 pragma 的順序很重要。 若要使用 pragma 從快速模型移至 strict 模型，請使用下列程式碼：
 
 ```cpp
 #pragma float_control(precise, on)  // enable precise semantics
@@ -82,7 +80,7 @@ ms.locfileid: "74305497"
 #pragma float_control(except, off)  // disable exception semantics
 #pragma fenv_access(off)            // disable environment sensitivity
 #pragma float_control(precise, off) // disable precise semantics
-#pragma fp_contract(on)             // ensable contractions
+#pragma fp_contract(on)             // enable contractions
 ```
 
 如果未指定任何選項， **float_control**不會有任何作用。

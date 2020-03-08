@@ -12,11 +12,11 @@ helpviewer_keywords:
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
 ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257584"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856923"
 ---
 # <a name="running-nmake"></a>執行 NMAKE
 
@@ -41,7 +41,7 @@ NMAKE 只會建立指定的*目標*，如果未指定，則為 makefile 中的�
 | **/C** | 抑制預設輸出，包括非嚴重的 NMAKE 錯誤或警告、時間戳記和 NMAKE 著作權訊息。 隱藏 **/k**所發出的警告。 |
 | **/D** | 顯示每個評估目標和相依的時間戳記，以及當目標不存在時的訊息。 適用于用來對 makefile 進行偵錯工具的 **/p** 。 使用 `!CMDSWITCHES` 來設定或清除 makefile 部分的 **/d** 。 |
 | **/E** | 導致環境變數覆寫 makefile 巨集定義。 |
-| **/ERRORREPORT** [**無** &#124; **提示** &#124;佇列&#124; **傳送**] | 已取代。 [Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定控制報表。 |
+| **/ERRORREPORT** [**無** &#124; **提示** &#124;佇列&#124; **傳送**] | 已被取代。 [Windows 錯誤報告（WER）](/windows/win32/wer/windows-error-reporting)設定控制報表。 |
 | **/F** *檔案名* | 指定*filename*做為 makefile。 空格或索引標籤可以在*filename*前面。 針對每個 makefile 指定一次 **/f** 。 若要從標準輸入提供 makefile，請指定*檔案名*的虛線（`-`），並使用**F6**或**CTRL + Z**來結束鍵盤輸入。 |
 | **/G** | 顯示 `!INCLUDE` 指示詞隨附的 makefile。 如需詳細資訊，請參閱[Makefile](makefile-preprocessing-directives.md)前置處理指示詞。 |
 | **/Help**、 **/？** | 顯示 NMAKE 命令列語法的簡短摘要。 |

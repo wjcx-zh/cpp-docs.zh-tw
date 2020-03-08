@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689815"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866147"
 ---
 # <a name="collate-class"></a>collate 類別
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 用於程式內部字元編碼的類型。
 
 ## <a name="remarks"></a>備註
@@ -55,16 +55,16 @@ class collate : public locale::facet;
 |-|-|
 |[collate](#collate)|做為地區設定 facet 處理字串排序慣例之 `collate` 類別物件的建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，描述 `CharType` 類型之字元。|
 |[string_type](#string_type)|類型，描述包含 `basic_string` 類型字元的 `CharType` 類型字串。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[compare](#compare)|根據其 facet 特定規則，比較兩個字元序列相等或不等。|
 |[do_compare](#do_compare)|虛擬函式，呼叫以根據其 facet 特定規則，比較兩個字元序列相等或不等。|
@@ -75,7 +75,7 @@ class collate : public locale::facet;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -108,15 +108,15 @@ const char* _Locname,
 
 ### <a name="parameters"></a>參數
 
-*_Refs* \
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
-*_Locname* \
+*_Locname*\
 地區設定的名稱。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下：
+*_Refs*參數和其重要性的可能值為：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -139,21 +139,21 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1* \
+*first1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1* \
+*last1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2* \
+*first2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2* \
+*last2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回：
+成員函式會傳回下列值：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -205,21 +205,21 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>參數
 
-*first1* \
+*first1*\
 要比較之第一個序列中第一個元素的指標。
 
-*last1* \
+*last1*\
 要比較之第一個序列中最後一個元素的指標。
 
-*first2* \
+*first2*\
 要比較之第二個序列中第一個元素的指標。
 
-*last2* \
+*last2*\
 要比較之第二個序列中最後一個元素的指標。
 
 ### <a name="return-value"></a>傳回值
 
-成員函式會傳回：
+成員函式會傳回下列值：
 
 - –1，表示第一個序列比第二個序列小。
 
@@ -229,7 +229,7 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會在 `CharType` 類型的對應元素配對之間套用 `operator<`，藉此比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
+受保護的虛擬成員函式會將位於 [* first1，Last1） * 的順序與序列（位於 *[first2，last2*））進行比較。 它會在 `CharType`類型的對應元素配對之間套用 `operator<`，藉此比較值。 第一個序列比較小，表示第一個序列具有序列中最早出現之不相等配對中較小的元素，或表示不相等配對存在，但第一個序列較短。
 
 ### <a name="example"></a>範例
 
@@ -285,7 +285,7 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="remarks"></a>備註
 
-受保護的虛擬成員函式會傳回 [string_type](#string_type) 類別的物件，其受控制的序列是 [ `first`, `last`) 序列的複本。 如果衍生自 collate\< **CharType**> 的類別會覆寫 [do_compare](#do_compare)，該類別也會覆寫 `do_transform` 以彼此相符。 相較於傳遞要在衍生類別中比較的未轉換字串，若將兩個已轉換的字串傳遞至 `collate::compare`，應該可以產生相同結果。
+受保護的虛擬成員函式會傳回 [string_type](#string_type) 類別的物件，其受控制的序列是 [ `first`, `last`) 序列的複本。 如果從 collate\< **CharType**衍生的類別 > 覆寫[do_compare](#do_compare)，它也應該覆寫 `do_transform` 以符合。 相較於傳遞要在衍生類別中比較的未轉換字串，若將兩個已轉換的字串傳遞至 `collate::compare`，應該可以產生相同結果。
 
 ### <a name="example"></a>範例
 
@@ -355,7 +355,7 @@ typedef basic_string<CharType> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存來源序列的複本。
+此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存來源序列的複本。
 
 ### <a name="example"></a>範例
 
@@ -427,7 +427,7 @@ int main( )
 -1-11
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [C++ 標準程式庫中的執行緒安全](../standard-library/thread-safety-in-the-cpp-standard-library.md)

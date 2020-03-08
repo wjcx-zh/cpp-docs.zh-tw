@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907890"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866577"
 ---
 # <a name="icommandui-interface"></a>ICommandUI 介面
 
@@ -39,19 +39,19 @@ interface class ICommandUI
 |----------|-----------------|
 |[icommandui__Check](#check)|將此命令的使用者介面專案設定為適當的檢查狀態。|
 |[ICommandUI::ContinueRouting](#continuerouting)|告訴命令路由機制，繼續將目前的訊息路由傳送至處理常式鏈。|
-|[ICommandUI::Enabled](#enabled)|啟用或停用此命令的使用者介面專案。|
-|[ICommandUI::ID](#id)|取得`ICommandUI`物件所表示之使用者介面物件的識別碼。|
-|[ICommandUI::Index](#index)|取得`ICommandUI`物件所表示之使用者介面物件的索引。|
-|[ICommandUI::Radio](#radio)|將此命令的使用者介面專案設定為適當的檢查狀態。|
-|[ICommandUI::Text](#text)|設定此命令之使用者介面專案的文字。|
+|[ICommandUI：： Enabled](#enabled)|啟用或停用此命令的使用者介面專案。|
+|[ICommandUI：： ID](#id)|取得 `ICommandUI` 物件所表示之使用者介面物件的識別碼。|
+|[ICommandUI：： Index](#index)|取得由 `ICommandUI` 物件所表示之使用者介面物件的索引。|
+|[ICommandUI：：收音機](#radio)|將此命令的使用者介面專案設定為適當的檢查狀態。|
+|[ICommandUI：： Text](#text)|設定此命令之使用者介面專案的文字。|
 
 ## <a name="remarks"></a>備註
 
-這個介面提供管理使用者介面命令的方法和屬性。 `ICommandUI`類似于[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)，不同之處`ICommandUI`在於用於與 .net 元件相交互操作的 MFC 應用程式。
+這個介面提供管理使用者介面命令的方法和屬性。 `ICommandUI` 類似于[CCmdUI 類別](../../mfc/reference/ccmdui-class.md)，不同之處在于 `ICommandUI` 會用於與 .net 元件互通的 MFC 應用程式。
 
-`ICommandUI`在[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)衍生類別的 ON_UPDATE_COMMAND_UI 處理常式中使用。 當應用程式的使用者啟動（選取或按一下）功能表時，每個功能表項目都會顯示為 [已啟用] 或 [已停用]。 每個功能表命令的目標會藉由執行 ON_UPDATE_COMMAND_UI 處理常式來提供這項資訊。 針對應用程式中的每個命令使用者介面物件，使用[類別 Wizard](mfc-class-wizard.md)來為每個處理常式建立訊息對應專案和函式原型。
+`ICommandUI` 用於[ICommandTarget](../../mfc/reference/icommandtarget-interface.md)衍生類別的 ON_UPDATE_COMMAND_UI 處理常式中。 當應用程式的使用者啟動（選取或按一下）功能表時，每個功能表項目都會顯示為 [已啟用] 或 [已停用]。 每個功能表命令的目標會藉由執行 ON_UPDATE_COMMAND_UI 處理常式來提供這項資訊。 針對應用程式中的每個命令使用者介面物件，使用[類別 Wizard](mfc-class-wizard.md)來為每個處理常式建立訊息對應專案和函式原型。
 
-如需如何`ICommandUI`在命令路由中使用介面的詳細資訊，請[參閱如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
+如需如何在命令路由中使用 `ICommandUI` 介面的詳細資訊，請參閱[如何：將命令路由新增至 Windows Forms 控制項](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)。
 
 如需使用 Windows Forms 的詳細資訊，請參閱[在 MFC 中使用 Windows Form 使用者控制項](../../dotnet/using-a-windows-form-user-control-in-mfc.md)。
 

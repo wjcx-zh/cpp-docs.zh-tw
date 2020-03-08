@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 9d63a1113e521eb73c99c47b335eb7ab00ccd753
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502858"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866320"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl 類別
 
@@ -63,31 +63,31 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|名稱|說明|
+|名稱|描述|
 |----------|-----------------|
-|[CProgressCtrl::CProgressCtrl](#cprogressctrl)|建構 `CProgressCtrl` 物件。|
+|[CProgressCtrl：： CProgressCtrl](#cprogressctrl)|建構 `CProgressCtrl` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
 |名稱|描述|
 |----------|-----------------|
-|[CProgressCtrl::Create](#create)|建立進度列控制項，並將其附加至`CProgressCtrl`物件。|
-|[CProgressCtrl::CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的進度控制項，並將其附加`CProgressCtrl`至物件。|
-|[CProgressCtrl::GetBarColor](#getbarcolor)|取得目前進度列控制項的進度指標列色彩。|
-|[CProgressCtrl::GetBkColor](#getbkcolor)|取得目前進度列的背景色彩。|
-|[CProgressCtrl::GetPos](#getpos)|取得進度列的目前位置。|
-|[CProgressCtrl::GetRange](#getrange)|取得進度列控制項範圍的下限和上限。|
-|[CProgressCtrl::GetState](#getstate)|取得目前進度列控制項的狀態。|
-|[CProgressCtrl::GetStep](#getstep)|抓取目前進度列控制項的進度列的步驟增量。|
-|[CProgressCtrl::OffsetPos](#offsetpos)|將進度列控制項的目前位置前移一個指定的增量，然後重新繪製該橫條以反映新的位置。|
-|[CProgressCtrl::SetBarColor](#setbarcolor)|設定目前進度列控制項中的進度指示器列色彩。|
-|[CProgressCtrl::SetBkColor](#setbkcolor)|設定進度列的背景色彩。|
-|[CProgressCtrl::SetMarquee](#setmarquee)|開啟或關閉目前進度列控制項的捲軸模式。|
-|[CProgressCtrl::SetPos](#setpos)|設定進度列控制項的目前位置，並重新繪製橫條以反映新的位置。|
-|[CProgressCtrl::SetRange](#setrange)|設定進度列控制項的最小和最大範圍，並重新繪製橫條以反映新的範圍。|
-|[CProgressCtrl::SetState](#setstate)|設定目前進度列控制項的狀態。|
-|[CProgressCtrl::SetStep](#setstep)|指定進度列控制項的步驟增量。|
-|[CProgressCtrl::StepIt](#stepit)|將進度列控制項的目前位置往前移（請參閱[SetStep](#setstep)），並重新繪製橫條以反映新的位置。|
+|[CProgressCtrl：： Create](#create)|建立進度列控制項，並將它附加至 `CProgressCtrl` 物件。|
+|[CProgressCtrl：： CreateEx](#createex)|建立具有指定之 Windows 擴充樣式的進度控制項，並將它附加至 `CProgressCtrl` 物件。|
+|[CProgressCtrl：： GetBarColor](#getbarcolor)|取得目前進度列控制項的進度指標列色彩。|
+|[CProgressCtrl：： GetBkColor](#getbkcolor)|取得目前進度列的背景色彩。|
+|[CProgressCtrl：： GetPos](#getpos)|取得進度列的目前位置。|
+|[CProgressCtrl：： GetRange](#getrange)|取得進度列控制項範圍的下限和上限。|
+|[CProgressCtrl：： GetState](#getstate)|取得目前進度列控制項的狀態。|
+|[CProgressCtrl：： GetStep](#getstep)|抓取目前進度列控制項的進度列的步驟增量。|
+|[CProgressCtrl：： OffsetPos](#offsetpos)|將進度列控制項的目前位置前移一個指定的增量，然後重新繪製該橫條以反映新的位置。|
+|[CProgressCtrl：： SetBarColor](#setbarcolor)|設定目前進度列控制項中的進度指示器列色彩。|
+|[CProgressCtrl：： SetBkColor](#setbkcolor)|設定進度列的背景色彩。|
+|[CProgressCtrl：： SetMarquee](#setmarquee)|開啟或關閉目前進度列控制項的捲軸模式。|
+|[CProgressCtrl：： SetPos](#setpos)|設定進度列控制項的目前位置，並重新繪製橫條以反映新的位置。|
+|[CProgressCtrl：： SetRange](#setrange)|設定進度列控制項的最小和最大範圍，並重新繪製橫條以反映新的範圍。|
+|[CProgressCtrl：： SetState](#setstate)|設定目前進度列控制項的狀態。|
+|[CProgressCtrl：： SetStep](#setstep)|指定進度列控制項的步驟增量。|
+|[CProgressCtrl：： StepIt](#stepit)|將進度列控制項的目前位置往前移（請參閱[SetStep](#setstep)），並重新繪製橫條以反映新的位置。|
 
 ## <a name="remarks"></a>備註
 
@@ -95,7 +95,7 @@ class CProgressCtrl : public CWnd
 
 進度列控制項有範圍和目前的位置。 範圍代表作業的總持續時間，而目前的位置代表應用程式完成作業所進行的進度。 視窗程式會使用範圍和目前的位置來判斷要填滿之進度列的百分比（以反白顯示的色彩表示）。 因為範圍和目前的位置值是以帶正負號的整數表示，所以目前位置值的可能範圍是從-2147483648 到2147483647（含）。
 
-如需使用`CProgressCtrl`的詳細資訊，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CProgressCtrl](../../mfc/using-cprogressctrl.md)。
+如需使用 `CProgressCtrl`的詳細資訊，請參閱[控制項](../../mfc/controls-mfc.md)和[使用 CProgressCtrl](../../mfc/using-cprogressctrl.md)。
 
 ## <a name="inheritance-hierarchy"></a>繼承階層
 
@@ -121,7 +121,7 @@ CProgressCtrl();
 
 ### <a name="remarks"></a>備註
 
-在建立`CProgressCtrl`物件之後，呼叫`CProgressCtrl::Create`以建立進度列控制項。
+在建立 `CProgressCtrl` 物件之後，請呼叫 `CProgressCtrl::Create` 以建立進度列控制項。
 
 ### <a name="example"></a>範例
 
@@ -129,7 +129,7 @@ CProgressCtrl();
 
 ##  <a name="create"></a>CProgressCtrl：： Create
 
-建立進度列控制項，並將其附加至`CProgressCtrl`物件。
+建立進度列控制項，並將它附加至 `CProgressCtrl` 物件。
 
 ```
 virtual BOOL Create(
@@ -144,26 +144,26 @@ virtual BOOL Create(
 *dwStyle*<br/>
 指定進度列控制項的樣式。 在[Windows SDK 中，](/windows/win32/api/winuser/nf-winuser-createwindoww)除了下列進度列控制項樣式以外，將任何視窗 stylesdescribed 的組合套用至控制項：
 
-- PBS_VERTICAL 會以垂直方式顯示進度資訊，由上到下。 如果沒有此旗標，進度列控制項會以水準方式顯示，由左至右。
+- PBS_VERTICAL 以垂直方式顯示進度資訊，由上到下。 如果沒有此旗標，進度列控制項會以水準方式顯示，由左至右。
 
 - PBS_SMOOTH 會以漸進的方式顯示進度列控制項中的平滑填滿。 如果沒有此旗標，控制項將會填入區塊。
 
-*rect*<br/>
+*各種*<br/>
 指定進度列控制項的大小和位置。 它可以是[CRect](../../atl-mfc-shared/reference/crect-class.md)物件或[RECT](/previous-versions/dd162897\(v=vs.85\))結構。 因為控制項必須是子視窗，所以指定的座標會相對於*pParentWnd*的工作區。
 
 *pParentWnd*<br/>
-指定進度列控制項的父視窗，通常是`CDialog`。 不得為 Null。
+指定進度列控制項的父視窗，通常是 `CDialog`。 它不得為 NULL。
 
 *nID*<br/>
 指定進度列控制項的識別碼。
 
 ### <a name="return-value"></a>傳回值
 
-如果成功建立`CProgressCtrl`物件，則為 TRUE，否則為 FALSE。
+如果成功建立 `CProgressCtrl` 物件，則為 TRUE;否則為 FALSE。
 
 ### <a name="remarks"></a>備註
 
-您可以使用`CProgressCtrl`兩個步驟來建立物件。 首先，呼叫會建立`CProgressCtrl`物件的函式，然後呼叫`Create`，它會建立進度列控制項。
+您可以使用兩個步驟來建立 `CProgressCtrl` 物件。 首先，呼叫會建立 `CProgressCtrl` 物件的構造函式，然後呼叫 `Create`，這會建立進度列控制項。
 
 ### <a name="example"></a>範例
 
@@ -171,7 +171,7 @@ virtual BOOL Create(
 
 ##  <a name="createex"></a>CProgressCtrl：： CreateEx
 
-建立控制項（子視窗），並將它與`CProgressCtrl`物件產生關聯。
+建立控制項（子視窗），並將它與 `CProgressCtrl` 物件產生關聯。
 
 ```
 virtual BOOL CreateEx(
@@ -190,7 +190,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 指定進度列控制項的樣式。 套用 Windows SDK 中的[CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww)中所述的任何視窗樣式組合。
 
-*rect*<br/>
+*各種*<br/>
 [矩形](/previous-versions/dd162897\(v=vs.85\))結構的參考，描述要建立之視窗的大小和位置，以*pParentWnd*的用戶端座標表示。
 
 *pParentWnd*<br/>
@@ -205,7 +205,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>備註
 
-使用`CreateEx` ，而不是[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
+使用 `CreateEx` 而非[Create](#create)來套用擴充的 windows 樣式（由 Windows 擴充樣式指定于**WS_EX_** 的前面）。
 
 ##  <a name="getbarcolor"></a>CProgressCtrl：： GetBarColor
 
@@ -221,7 +221,7 @@ COLORREF GetBarColor() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_GETBARCOLOR](/windows/win32/Controls/pbm-getbarcolor)訊息，如 Windows SDK 所述。
 
 ##  <a name="getbkcolor"></a>CProgressCtrl：： GetBkColor
 
@@ -237,7 +237,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_GETBKCOLOR](/windows/win32/Controls/pbm-getbkcolor)訊息，如 Windows SDK 所述。
 
 ##  <a name="getpos"></a>CProgressCtrl：： GetPos
 
@@ -300,12 +300,12 @@ int GetState() const;
 |值|State|
 |-----------|-----------|
 |PBST_NORMAL|進行中|
-|PBST_ERROR|Error|
+|PBST_ERROR|錯誤|
 |PBST_PAUSED|已暫停|
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[PBM_GETSTATE](/windows/win32/Controls/pbm-getstate)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_GETSTATE](/windows/win32/Controls/pbm-getstate)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
@@ -335,7 +335,7 @@ int GetStep() const;
 
 步驟增量是呼叫[CProgressCtrl：： StepIt](#stepit)的次數，會增加進度列的目前位置。
 
-這個方法會傳送[PBM_GETSTEP](/windows/win32/Controls/pbm-getstep)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_GETSTEP](/windows/win32/Controls/pbm-getstep)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
@@ -349,7 +349,7 @@ int GetStep() const;
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#3](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_7.cpp)]
 
-##  <a name="offsetpos"></a>  CProgressCtrl::OffsetPos
+##  <a name="offsetpos"></a>CProgressCtrl：： OffsetPos
 
 依據*nPos*指定的增量，將進度列控制項的目前位置往前移，然後重新繪製橫條以反映新的位置。
 
@@ -390,9 +390,9 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="remarks"></a>備註
 
-只有`SetBarColor`在 Windows Vista[主題](/windows/win32/Controls/visual-styles-overview)沒有作用時，方法才會設定進度列色彩。
+只有在 Windows Vista[主題](/windows/win32/Controls/visual-styles-overview)沒有作用時，`SetBarColor` 方法才會設定進度列色彩。
 
-這個方法會傳送[PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_SETBARCOLOR](/windows/win32/Controls/pbm-setbarcolor)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
@@ -442,7 +442,7 @@ BOOL SetMarquee(
 |參數|描述|
 |---------------|-----------------|
 |*fMarqueeMode*|在TRUE 表示開啟 [天棚] 模式，或 [FALSE] 表示關閉 [天棚] 模式。|
-|*nInterval*|在字幕動畫更新之間的時間（以毫秒為單位）。|
+|*N 間隔*|在字幕動畫更新之間的時間（以毫秒為單位）。|
 
 ### <a name="return-value"></a>傳回值
 
@@ -452,7 +452,7 @@ BOOL SetMarquee(
 
 開啟 [天棚] 模式時，進度列會以動畫顯示，並以劇院天棚的正負號來進行滾動。
 
-這個方法會傳送[PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_SETMARQUEE](/windows/win32/Controls/pbm-setmarquee)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
@@ -515,13 +515,13 @@ void SetRange32(
 
 ### <a name="remarks"></a>備註
 
-成員函式`SetRange32`會設定進度控制項的32位範圍。
+成員函式 `SetRange32` 設定進度控制項的32位範圍。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_MFC_CProgressCtrl#8](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_13.cpp)]
 
-##  <a name="setstate"></a>  CProgressCtrl::SetState
+##  <a name="setstate"></a>CProgressCtrl：： SetState
 
 設定目前進度列控制項的狀態。
 
@@ -533,7 +533,7 @@ int SetState(int iState);
 
 |參數|描述|
 |---------------|-----------------|
-|*iState*|在要設定進度列的狀態。 使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />-PBST_ERROR-Error<br />-PBST_PAUSED-已暫停|
+|*iState*|在要設定進度列的狀態。 請使用下列其中一個值：<br /><br /> -PBST_NORMAL-進行中<br />-PBST_ERROR-錯誤<br />-PBST_PAUSED-已暫停|
 
 ### <a name="return-value"></a>傳回值
 
@@ -541,7 +541,7 @@ int SetState(int iState);
 
 ### <a name="remarks"></a>備註
 
-這個方法會傳送[PBM_SETSTATE](/windows/win32/Controls/pbm-setstate)訊息，如 Windows SDK 中所述。
+這個方法會傳送[PBM_SETSTATE](/windows/win32/Controls/pbm-setstate)訊息，如 Windows SDK 所述。
 
 ### <a name="example"></a>範例
 
@@ -555,7 +555,7 @@ int SetState(int iState);
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]
 
-##  <a name="setstep"></a>  CProgressCtrl::SetStep
+##  <a name="setstep"></a>CProgressCtrl：： SetStep
 
 指定進度列控制項的步驟增量。
 
@@ -574,7 +574,7 @@ int SetStep(int nStep);
 
 ### <a name="remarks"></a>備註
 
-步驟增量是呼叫`CProgressCtrl::StepIt`增加進度列目前位置的數量。
+步驟增量是 `CProgressCtrl::StepIt` 的呼叫會增加進度列目前位置的數量。
 
 預設步驟增量為10。
 
@@ -582,7 +582,7 @@ int SetStep(int nStep);
 
 [!code-cpp[NVC_MFC_CProgressCtrl#9](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_15.cpp)]
 
-##  <a name="stepit"></a>  CProgressCtrl::StepIt
+##  <a name="stepit"></a>CProgressCtrl：： StepIt
 
 將進度列控制項的目前位置往前移，並重新繪製橫條以反映新的位置。
 
@@ -596,7 +596,7 @@ int StepIt();
 
 ### <a name="remarks"></a>備註
 
-步驟遞增是由`CProgressCtrl::SetStep`成員函式所設定。
+步驟遞增是由 `CProgressCtrl::SetStep` 成員函式所設定。
 
 ### <a name="example"></a>範例
 

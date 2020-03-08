@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303470"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883862"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace 類別
 
@@ -79,7 +79,7 @@ ms.locfileid: "74303470"
 class CDaoWorkspace : public CObject
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
@@ -319,7 +319,7 @@ static void PASCAL CompactDatabase(
 當您想要壓縮受密碼保護的資料庫時，所使用的密碼。 請注意，如果您使用的是採用密碼的 `CompactDatabase` 版本，就必須提供所有參數。 此外，因為這是連接參數，所以它需要特殊格式，如下所示：;PWD = *lpszPassword*。 例如：;PWD = "高興"。 （需要前置分號）。
 
 *lpszLocale*<br/>
-字串運算式，用來指定建立*lpszDestName*的排序次序。 如果您藉由接受 `dbLangGeneral` 的預設值來省略此引數（如下所示），則新資料庫的地區設定會與舊資料庫相同。 可能的值為：
+字串運算式，用來指定建立*lpszDestName*的排序次序。 如果您藉由接受 `dbLangGeneral` 的預設值來省略此引數（如下所示），則新資料庫的地區設定會與舊資料庫相同。 可能的值包括：
 
 - `dbLangGeneral` 英文、德文、法文、葡萄牙文、義大利文和新式西班牙文
 
@@ -723,7 +723,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 ||||
 |-|-|-|
 |[建立](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[忙](#idle)|[SetIniPath](#setinipath)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>CDaoWorkspace::RepairDatabase

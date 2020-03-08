@@ -1,5 +1,5 @@
 ---
-title: 等位
+title: 聯集
 ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
 ms.openlocfilehash: 8a4ea3ae325eb5882c2f8b2524bbc156d12ffcc6
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062049"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875730"
 ---
-# <a name="unions"></a>等位
+# <a name="unions"></a>聯集
 
 > [!NOTE]
 > 在 c + + 17 和更新版本中， **std：： variant**類別是等位的型別安全替代項。
@@ -34,7 +34,7 @@ union [name]  { member-list };
 *name*<br/>
 提供給等位的類型名稱。
 
-*member-list*<br/>
+*成員清單*<br/>
 等位可以包含的成員。 請參閱＜備註＞。
 
 ## <a name="remarks"></a>備註

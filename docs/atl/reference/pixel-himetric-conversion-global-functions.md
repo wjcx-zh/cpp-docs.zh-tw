@@ -1,30 +1,30 @@
 ---
-title: 像素-HIMETRIC 轉換全域函式
+title: 圖元 HIMETRIC 轉換全域函式
 ms.date: 11/04/2016
 f1_keywords:
 - atlwin/ATL::AtlHiMetricToPixel
 - atlwin/ATL::AtlPixelToHiMetric
 ms.assetid: ecb1b1b2-7e9d-4fbc-a855-16252d2d794c
 ms.openlocfilehash: 43a12985f259603a9b67f22f7a7891bf847c0b0f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276831"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78862906"
 ---
-# <a name="pixelhimetric-conversion-global-functions"></a>像素/HIMETRIC 轉換全域函式
+# <a name="pixelhimetric-conversion-global-functions"></a>圖元/HIMETRIC 轉換全域函式
 
-這些函式提供支援像素和 HIMETRIC 單位來回轉換。
+這些函式可讓您在圖元和 HIMETRIC 單位之間來回轉換。
 
 > [!IMPORTANT]
->  下表所列出的函數不能在 Windows 執行階段中執行的應用程式。
+>  下表所列的函數不能用於在 Windows 執行階段中執行的應用程式。
 
 |||
 |-|-|
-|[AtlHiMetricToPixel](#atlhimetrictopixel)|將像素 himetric 為單位 （每個單位為 0.01 公釐）。|
-|[AtlPixelToHiMetric](#atlpixeltohimetric)|將像素轉換成 himetric 為單位 （每個單位為 0.01 公釐）。|
+|[AtlHiMetricToPixel](#atlhimetrictopixel)|將 HIMETRIC 單位（每個單位為0.01 毫米）轉換成圖元。|
+|[AtlPixelToHiMetric](#atlpixeltohimetric)|將圖元轉換成 HIMETRIC 單位（每個單位為0.01 毫米）。|
 
-##  <a name="atlhimetrictopixel"></a>  AtlHiMetricToPixel
+##  <a name="atlhimetrictopixel"></a>AtlHiMetricToPixel
 
 將以 HIMETRIC 為單位 (每一單位為 0.01 公釐) 的物件大小轉換成以像素為單位的螢幕裝置大小。
 
@@ -37,10 +37,10 @@ extern void AtlHiMetricToPixel(
 ### <a name="parameters"></a>參數
 
 *lpSizeInHiMetric*<br/>
-[in]物件，以 himetric 為單位的大小指標。
+在HIMETRIC 單位中物件大小的指標。
 
 *lpSizeInPix*<br/>
-[out]物件的大小，單位為像素所要傳回的指標。
+脫銷要傳回物件大小（以圖元為單位）的指標。
 
 ### <a name="example"></a>範例
 
@@ -48,9 +48,9 @@ extern void AtlHiMetricToPixel(
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭：** atlwin.h。h
 
-##  <a name="atlpixeltohimetric"></a>  AtlPixelToHiMetric
+##  <a name="atlpixeltohimetric"></a>AtlPixelToHiMetric
 
 將物件在螢幕裝置上以像素為單位的大小，轉換成以 HIMETRIC 為單位 (每一單位為 0.01 公釐) 的大小。
 
@@ -63,10 +63,10 @@ extern void AtlPixelToHiMetric(
 ### <a name="parameters"></a>參數
 
 *lpSizeInPix*<br/>
-[in]物件的像素為單位的大小指標。
+在物件大小的指標，以圖元為單位。
 
 *lpSizeInHiMetric*<br/>
-[out]物件的大小，以 himetric 為單位所要傳回的指標。
+脫銷要傳回其物件大小（以 HIMETRIC 為單位）的指標。
 
 ### <a name="example"></a>範例
 
@@ -74,8 +74,8 @@ extern void AtlPixelToHiMetric(
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlwin.h
+**標頭：** atlwin.h。h
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)
+[函數](../../atl/reference/atl-functions.md)

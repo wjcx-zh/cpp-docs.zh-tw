@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (stack)
 - std::operator== (stack)
 ms.openlocfilehash: 169698d30edd4a7995cb05e1909c1ffc38b0b6ef
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243657"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865895"
 ---
 # <a name="ltstackgt-operators"></a>&lt;stack&gt; 運算子
 
-## <a name="op_neq"></a> 運算子 ！ =
+## <a name="op_neq"></a>operator！ =
 
 測試運算子左邊的 stack 物件是否不等於右邊的 stack 物件。
 
@@ -35,10 +35,10 @@ bool operator!=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -100,10 +100,10 @@ bool operator<(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -174,7 +174,7 @@ The stack s1 is greater than or equal to the stack s3.
 The stack s1 from the top down is: ( 8 6 4 2 ).
 ```
 
-## <a name="op_lt_eq"></a> 運算子&lt;=
+## <a name="op_lt_eq"></a>運算子&lt;=
 
 測試運算子左邊的堆疊物件是否小於或等於右邊的堆疊物件。
 
@@ -184,10 +184,10 @@ bool operator<=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -241,7 +241,7 @@ The stack s1 is greater than the stack s2.
 The stack s1 is less than or equal to the stack s3.
 ```
 
-## <a name="op_eq_eq"></a> 運算子 = =
+## <a name="op_eq_eq"></a>operator = =
 
 測試運算子左邊的 stack 物件是否等於右邊的 stack 物件。
 
@@ -251,10 +251,10 @@ bool operator==(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -316,10 +316,10 @@ bool operator>(const stack <Type, Container>& left, const stack <Type, Container
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值
@@ -375,7 +375,7 @@ The stack s1 is not greater than the stack s2.
 The stack s1 is greater than the stack s3.
 ```
 
-## <a name="op_gt_eq"></a> 運算子&gt;=
+## <a name="op_gt_eq"></a>運算子&gt;=
 
 測試運算子左邊的堆疊物件是否大於或等於右邊的堆疊物件。
 
@@ -385,10 +385,10 @@ bool operator>=(const stack <Type, Container>& left, const stack <Type, Containe
 
 ### <a name="parameters"></a>參數
 
-*左邊*\
+*左方*\
 `stack` 類型的物件。
 
-*權限*\
+*right*\
 `stack` 類型的物件。
 
 ### <a name="return-value"></a>傳回值

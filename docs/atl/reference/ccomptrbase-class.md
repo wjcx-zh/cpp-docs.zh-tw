@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 740920225fc513a869b4a92344f87004831e4768
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75298607"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864946"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase 類別
 
@@ -40,17 +40,17 @@ class CComPtrBase
 *T*<br/>
 智慧型指標所要參考的物件類型。
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CComPtrBase：： ~ CComPtrBase](#dtor)|解構函式。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CComPtrBase：： Advise](#advise)|呼叫這個方法，以建立 `CComPtrBase`的連接點與用戶端接收之間的連接。|
 |[CComPtrBase：： Attach](#attach)|呼叫此方法以取得現有指標的擁有權。|
@@ -64,7 +64,7 @@ class CComPtrBase
 
 ### <a name="public-operators"></a>公用運算子
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CComPtrBase：： operator T *](#operator_t_star)|Cast 運算子。|
 |[CComPtrBase：： operator！](#operator_not)|NOT 運算子。|
@@ -76,7 +76,7 @@ class CComPtrBase
 
 ### <a name="public-data-members"></a>公用資料成員
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CComPtrBase：:p](#p)|指標資料成員變數。|
 
@@ -415,6 +415,6 @@ HRESULT SetSite(IUnknown* punkParent) throw();
 
 這個方法會呼叫[AtlSetChildSite](composite-control-global-functions.md#atlsetchildsite)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [類別總覽](../../atl/atl-class-overview.md)

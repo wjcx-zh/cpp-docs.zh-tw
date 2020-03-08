@@ -1,5 +1,5 @@
 ---
-title: 偵錯和錯誤報告全域函式
+title: 調試和錯誤報表全域函式
 ms.date: 11/04/2016
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276655"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864877"
 ---
-# <a name="debugging-and-error-reporting-global-functions"></a>偵錯和錯誤報告全域函式
+# <a name="debugging-and-error-reporting-global-functions"></a>調試和錯誤報表全域函式
 
-這些函式會提供有用的偵錯和追蹤工具。
+這些函式提供有用的調試和追蹤功能。
 
 |||
 |-|-|
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|傳回`GetLastError`HRESULT 的形式中的錯誤程式碼。|
+|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|以 HRESULT 的形式傳回 `GetLastError` 錯誤碼。|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|將 Win32 錯誤碼轉換成 HRESULT。|
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|設定`IErrorInfo`提供給用戶端的錯誤詳細資料。|
+|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|設定 `IErrorInfo` 將錯誤詳細資料提供給用戶端。|
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|擲回 `CAtlException`。|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|呼叫此函式可依據 Windows 函式 `GetLastError` 的結果通知發生錯誤。|
 
-##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
+##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError
 
 以 HRESULT 的形式，傳回呼叫執行緒的最後一個錯誤碼值。
 
@@ -37,13 +37,13 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>備註
 
-`AtlHresultFromLastError` 呼叫`GetLastError`取得最後一個錯誤，並將它轉換成 HRESULT 使用 HRESULT_FROM_WIN32 巨集之後傳回錯誤。
+`AtlHresultFromLastError` 會 `GetLastError` 取得最後一個錯誤，並在使用 HRESULT_FROM_WIN32 宏將它轉換成 HRESULT 之後傳回錯誤。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h
+**標頭：** atlcomcli.h。h
 
-##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
+##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32
 
 將 Win32 錯誤碼轉換成 HRESULT。
 
@@ -58,18 +58,18 @@ AtlHresultFromWin32(DWORD error);
 
 ### <a name="remarks"></a>備註
 
-將 Win32 錯誤碼轉換成 HRESULT，使用巨集 HRESULT_FROM_WIN32。
+使用宏 HRESULT_FROM_WIN32，將 Win32 錯誤代碼轉換成 HRESULT。
 
 > [!NOTE]
->  而不是使用`HRESULT_FROM_WIN32(GetLastError())`，使用函式[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。
+>  不使用 `HRESULT_FROM_WIN32(GetLastError())`，而是使用函式[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlcomcli.h
+**標頭：** atlcomcli.h。h
 
-##  <a name="atlreporterror"></a>  AtlReportError
+##  <a name="atlreporterror"></a>AtlReportError
 
-設定`IErrorInfo`錯誤資訊提供給用戶端物件的介面。
+設定 `IErrorInfo` 介面，以提供錯誤資訊給物件的用戶端。
 
 ```
 HRESULT WINAPI AtlReportError(
@@ -120,51 +120,51 @@ HRESULT WINAPI AtlReportError(
 ### <a name="parameters"></a>參數
 
 *clsid*<br/>
-[in]報告錯誤之物件的 CLSID。
+在報告錯誤之物件的 CLSID。
 
 *lpszDesc*<br/>
-[in]描述錯誤的字串。 指定的 Unicode 版本*lpszDesc*屬於類型 LPCOLESTR; ANSI 版本指定 LPCSTR 類型。
+在描述錯誤的字串。 Unicode 版本指定*lpszDesc*的類型為 LPCOLESTR;ANSI 版本會指定 LPCSTR 的類型。
 
 *iid*<br/>
-[in]如果錯誤定義作業系統所定義的錯誤或 GUID_NULL 之介面的 IID。
+在定義錯誤之介面的 IID，如果錯誤是由作業系統所定義，則為 GUID_Null。
 
 *hRes*<br/>
-[in]您想要的 HRESULT 傳回給呼叫者。
+在您想要傳回給呼叫者的 HRESULT。
 
 *nID*<br/>
-[in]資源識別項的錯誤描述字串的儲存位置。 此值應介於 0x0200 和 0xFFFF 之間 （含）。 在偵錯組建**ASSERT**如果將會產生*nID*並不編製索引的有效字串。 在發行組建中的錯誤描述字串將會設定為 「 未知的錯誤 」。
+在儲存錯誤描述字串的資源識別碼。 這個值應介於0x0200 與0xFFFF （含）之間。 在 debug 組建中，如果*nID*未編制有效字串的索引 **，就會產生判斷**提示。 在發行組建中，錯誤描述字串會設定為「未知的錯誤」。
 
 *dwHelpID*<br/>
-[in]錯誤的說明內容識別碼。
+在錯誤的說明內容識別碼。
 
 *lpszHelpFile*<br/>
-[in]路徑名稱與描述錯誤的說明檔。
+在描述錯誤之說明檔的路徑和名稱。
 
 *hInst*<br/>
-[in]資源控制代碼。 根據預設，這個參數是`__AtlBaseModuleModule::GetResourceInstance`，其中`__AtlBaseModuleModule`全域執行個體[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)或從它衍生的類別。
+在資源的控制碼。 根據預設，此參數為 `__AtlBaseModuleModule::GetResourceInstance`，其中 `__AtlBaseModuleModule` 是[CAtlBaseModule](../../atl/reference/catlbasemodule-class.md)的全域實例或從中衍生的類別。
 
 ### <a name="return-value"></a>傳回值
 
-如果*hRes*參數為非零值，則傳回的值*hRes*。 如果*hRes*為零，則前四個新版`AtlReportError`傳回 DISP_E_EXCEPTION。 最後兩個版本都會傳回巨集的結果**MAKE_HRESULT (1，FACILITY_ITF，** `nID` **)**。
+如果*hRes*參數不是零，則會傳回*hRes*的值。 如果*hRes*為零，則 `AtlReportError` 的前四個版本會傳回 DISP_E_EXCEPTION。 最後兩個版本會傳回宏的結果**MAKE_HRESULT （1，FACILITY_ITF，** `nID` **）** 。
 
 ### <a name="remarks"></a>備註
 
-字串*lpszDesc*做為錯誤的文字描述。 當用戶端收到*hRes*您從傳回`AtlReportError`，用戶端可以存取`IErrorInfo`有關錯誤的詳細資料的結構。
+字串*lpszDesc*會當做錯誤的文字描述使用。 當用戶端收到您從 `AtlReportError`傳回的*hRes*時，用戶端可以存取 `IErrorInfo` 結構，以取得錯誤的詳細資料。
 
 ### <a name="example"></a>範例
 
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  請勿使用`AtlReportError`在C++catch 處理常式。 這些函式的某些覆寫使用 ATL 字串轉換巨集就內部而言，這會依次使用`_alloca`內部函式。 使用`AtlReportError`在C++catch 處理常式可能會造成例外狀況中的C++catch 處理常式。
+>  請勿在 catch 處理常式C++中使用 `AtlReportError`。 這些函式的某些覆寫會在內部使用「ATL 字串轉換宏」，而這會在內部使用 `_alloca` 函數。 在C++ catch 處理常式中使用 `AtlReportError` 可能會在C++ catch 處理常式中造成例外狀況。
 
 ### <a name="requirements"></a>需求
 
-**標頭：** atlcom.h
+**標頭：** atlcom.h。h
 
-##  <a name="atlthrow"></a>  AtlThrow
+##  <a name="atlthrow"></a>AtlThrow
 
-呼叫此函式可通知發生錯誤，HRESULT 狀態碼為基礎。
+呼叫此函式可根據 HRESULT 狀態碼來發出錯誤信號。
 
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
@@ -172,24 +172,24 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>參數
 
-*hr*<br/>
-標準的 HRESULT 值。
+*工時*<br/>
+標準 HRESULT 值。
 
 ### <a name="remarks"></a>備註
 
-此函式會使用 ATL 和 MFC 程式碼發生錯誤狀況時。 它也可以從自己的程式碼呼叫。 此函式的預設實作取決於定義的符號 _ATL_NO_EXCEPTIONS 和 MFC 或 ATL 的專案類型
+當發生錯誤狀況時，ATL 和 MFC 程式碼會使用這個函式。 也可以從您自己的程式碼呼叫它。 此函式的預設執行取決於符號的定義 _ATL_NO_EXCEPTIONS 以及專案、MFC 或 ATL 的類型。
 
-在所有情況下，此函式會追蹤偵錯工具的 HRESULT。
+在所有情況下，此函式都會將 HRESULT 追蹤至偵錯工具。
 
-在 Visual Studio 2015 Update 3 和更新版本，此函式是為了避免假性的 SAL 警告屬性化 __declspec （noreturn）。
+在 Visual Studio 2015 Update 3 和更新版本中，此函式已屬性化 __declspec （noreturn），以避免發生虛假的 SAL 警告。
 
-如果未定義 _ATL_NO_EXCEPTIONS MFC 專案中，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) HRESULT 的值。
+如果未在 MFC 專案中定義 _ATL_NO_EXCEPTIONS，此函式會根據 HRESULT 的值擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) 。
 
-如果未定義 _ATL_NO_EXCEPTIONS ATL 專案中，函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。
+如果 _ATL_NO_EXCEPTIONS 未在 ATL 專案中定義，則函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定義 _ATL_NO_EXCEPTIONS，函式會造成判斷提示失敗而非擲回例外狀況。
+如果已定義 _ATL_NO_EXCEPTIONS，此函式會導致判斷提示失敗，而不會擲回例外狀況。
 
-ATL 專案，就可以提供您自己的實作，可供在失敗時的 ATL 此函式。 若要這樣做，請定義您自己的函式具有相同的簽章`AtlThrow`和 #define`AtlThrow`設為您的函式的名稱。 這必須包括 atlexcept.h （亦即，必須完成之前因為 atlbase.h 包含 atlexcept.h，包括任何 ATL 標頭） 之前完成。 屬性函式`__declspec(noreturn)`以避免假性的 SAL 警告。
+針對 ATL 專案，可以提供您自己的函式，以便在發生失敗時由 ATL 使用。 若要這麼做，請使用與 `AtlThrow` 相同的簽章來定義您自己的函式，並 #define `AtlThrow` 為函式的名稱。 這必須在包含 atlexcept 之前完成（這表示必須在包含任何 ATL 標頭之前完成此動作，因為 atlbase.h 包含 atlexcept。 h）。 屬性您的函式 `__declspec(noreturn)` 以避免發生虛假的 SAL 警告。
 
 ### <a name="example"></a>範例
 
@@ -197,9 +197,9 @@ ATL 專案，就可以提供您自己的實作，可供在失敗時的 ATL 此�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atldef.h
+**標頭：** atldef。h
 
-##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
+##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32
 
 呼叫此函式可依據 Windows 函式 `GetLastError` 的結果通知發生錯誤。
 
@@ -209,19 +209,19 @@ inline void AtlThrowLastWin32();
 
 ### <a name="remarks"></a>備註
 
-此函式追蹤的結果`GetLastError`偵錯工具。
+此函式會將 `GetLastError` 的結果追蹤至偵錯工具。
 
-如果未定義 _ATL_NO_EXCEPTIONS MFC 專案中，此函式會擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或是[COleException](../../mfc/reference/coleexception-class.md)所傳回的值為基礎`GetLastError`。
+如果未在 MFC 專案中定義 _ATL_NO_EXCEPTIONS，此函式會根據 `GetLastError`所傳回的值來擲回[CMemoryException](../../mfc/reference/cmemoryexception-class.md)或[COleException](../../mfc/reference/coleexception-class.md) 。
 
-如果未定義 _ATL_NO_EXCEPTIONS ATL 專案中，函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。
+如果 _ATL_NO_EXCEPTIONS 未在 ATL 專案中定義，則函式會擲回[CAtlException](../../atl/reference/catlexception-class.md)。
 
-如果定義 _ATL_NO_EXCEPTIONS，函式會造成判斷提示失敗而非擲回例外狀況。
+如果已定義 _ATL_NO_EXCEPTIONS，此函式會導致判斷提示失敗，而不會擲回例外狀況。
 
 ## <a name="requirements"></a>需求
 
-**標頭：** atldef.h
+**標頭：** atldef。h
 
 ## <a name="see-also"></a>另請參閱
 
-[函式](../../atl/reference/atl-functions.md)<br/>
+[函數](../../atl/reference/atl-functions.md)<br/>
 [偵錯和錯誤報告巨集](../../atl/reference/debugging-and-error-reporting-macros.md)

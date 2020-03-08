@@ -9,11 +9,11 @@ helpviewer_keywords:
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
 ms.openlocfilehash: 4c7fee363da023b9252471a35aaecd262a55f17c
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141780"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854125"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>並行執行階段的例外狀況處理
 
@@ -181,7 +181,7 @@ the status of the agent is: done
 
 [[靠上](#top)]
 
-## <a name="summary"></a> 總結
+## <a name="summary"></a> 摘要
 
 [[靠上](#top)]
 

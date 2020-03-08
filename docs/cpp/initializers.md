@@ -7,11 +7,11 @@ helpviewer_keywords:
 - aggregate initializers [C++]
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 2cc68f2384402ce1eb3ac06b414f597a6b3951f0
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123964"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865770"
 ---
 # <a name="initializers"></a>初始設定式
 
@@ -480,7 +480,7 @@ int main() {
 
 ### <a name="reference-initialization"></a>參考初始化
 
-若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如：
+若要初始化參考類型的變數，必須使用衍生該參考類型之類型的物件，或者其類型可轉換成衍生該參考類型之類型的物件。 例如，
 
 ```cpp
 // initializing_references.cpp
@@ -505,25 +505,25 @@ int main()
 
 只有在下列情況下，可以不使用初始設定式宣告參考類型變數：
 
-- 函式宣告 (原型)。 例如：
+- 函式宣告 (原型)。 例如，
 
     ```cpp
     int func( int& );
     ```
 
-- 函式傳回類型宣告。 例如：
+- 函式傳回類型宣告。 例如，
 
     ```cpp
     int& func( int& );
     ```
 
-- 宣告函式類型類別成員。 例如：
+- 宣告函式類型類別成員。 例如，
 
     ```cpp
     class c {public:   int& i;};
     ```
 
-- 明確指定為**extern**的變數宣告。 例如：
+- 明確指定為**extern**的變數宣告。 例如，
 
     ```cpp
     extern int& iVal;

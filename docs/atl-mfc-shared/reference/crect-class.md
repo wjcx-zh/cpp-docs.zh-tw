@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821365"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866528"
 ---
 # <a name="crect-class"></a>CRect 類別
 
@@ -51,17 +51,17 @@ ms.locfileid: "76821365"
 class CRect : public tagRECT
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>成員
 
 ### <a name="public-constructors"></a>公用建構函式
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRect：： CRect](#crect)|建構 `CRect` 物件。|
 
 ### <a name="public-methods"></a>公用方法
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRect：： BottomRight](#bottomright)|傳回 `CRect`的右下方點。|
 |[CRect：： CenterPoint](#centerpoint)|傳回 `CRect`的 centerpoint。|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>公用運算子
 
-|Name|描述|
+|名稱|描述|
 |----------|-----------------|
 |[CRect：： operator-](#operator_-)|將指定的位移減去 `CRect` 或「洩氣」 `CRect`，並傳回產生的 `CRect`。|
 |[CRect：： operator LPCRECT](#operator_lpcrect)|將 `CRect` 轉換成 `LPCRECT`。|
@@ -122,7 +122,7 @@ class CRect : public tagRECT
 
 使用多載 `CRect` 運算子時，第一個運算元必須是 `CRect`;第二個可以是[RECT](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件。
 
-## <a name="inheritance-hierarchy"></a>繼承階層架構
+## <a name="inheritance-hierarchy"></a>繼承階層
 
 `tagRECT`
 
@@ -301,12 +301,12 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 指定 `CRect`的底部。
 
 *srcRect*<br/>
-參考具有座標 `CRect`的[矩形](/windows/win32/api/windef/ns-windef-rect)結構。
+參考[矩形](/windows/win32/api/windef/ns-windef-rect)結構，其中包含 `CRect`的座標。
 
 *lpSrcRect*<br/>
 指向具有 `CRect`座標的 `RECT` 結構。
 
-*point*<br/>
+*此處*<br/>
 指定要建立之矩形的原點。 對應至左上角。
 
 *size*<br/>
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>參數
 
 *lpRect*<br/>
-指向包含[矩形](/windows/win32/api/windef/ns-windef-rect)左上角和`CRect`右下角座標的矩形結構或物件。
+指向[RECT](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件，其中包含矩形的左上角和右下角座標。
 
 ### <a name="return-value"></a>傳回值
 
@@ -552,7 +552,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>參數
 
 *lpRect1*<br/>
-指向包含來源[矩形的矩形](/windows/win32/api/windef/ns-windef-rect)`CRect`結構或物件。
+指向包含來源矩形的[RECT](/windows/win32/api/windef/ns-windef-rect)結構或 `CRect` 物件。
 
 *lpRect2*<br/>
 指向包含來源矩形的 `RECT` 結構或 `CRect` 物件。
@@ -683,7 +683,7 @@ void MoveToXY(POINT point) throw();
 *y*<br/>
 矩形左上角的絕對 y 座標。
 
-*point*<br/>
+*此處*<br/>
 `POINT` 結構，指定矩形的絕對左上角。
 
 ### <a name="example"></a>範例
@@ -760,7 +760,7 @@ void OffsetRect(SIZE size) throw();
 *y*<br/>
 指定要向上或向下移動的數量。 必須是負數才能上移。
 
-*point*<br/>
+*此處*<br/>
 包含[點](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件，指定要移動的兩個維度。
 
 *size*<br/>
@@ -792,7 +792,7 @@ operator LPCRECT() const throw();
 
 ##  <a name="operator_lprect"></a>CRect：： operator LPRECT
 
-將轉換成 [LPRECT](../../mfc/reference/data-types-mfc.md) `CRect`。
+將 `CRect` 轉換成[LPRECT](../../mfc/reference/data-types-mfc.md)。
 
 ```
 operator LPRECT() throw();
@@ -839,7 +839,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*各種*<br/>
 參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
@@ -879,7 +879,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*各種*<br/>
 參考來源矩形。 可以是[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="return-value"></a>傳回值
@@ -921,7 +921,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 [點](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
 
 *size*<br/>
@@ -959,7 +959,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 [點](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件，指定要移動矩形的單位數。
 
 *size*<br/>
@@ -995,7 +995,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*各種*<br/>
 包含[矩形](/windows/win32/api/windef/ns-windef-rect)或 `CRect`。
 
 ### <a name="remarks"></a>備註
@@ -1019,7 +1019,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>參數
 
-*rect*<br/>
+*各種*<br/>
 包含 `CRect` 或[矩形](/windows/win32/api/windef/ns-windef-rect)。
 
 ### <a name="remarks"></a>備註
@@ -1052,7 +1052,7 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 [點](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件，指定要移動傳回值的單位數。
 
 *size*<br/>
@@ -1095,7 +1095,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 [點](/windows/win32/api/windef/ns-windef-point)結構或 `CPoint` 物件，指定要移動傳回值的單位數。
 
 *size*<br/>
@@ -1209,7 +1209,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>參數
 
-*point*<br/>
+*此處*<br/>
 包含[POINT](/windows/win32/api/windef/ns-windef-point)結構或[CPoint](cpoint-class.md)物件。
 
 ### <a name="return-value"></a>傳回值
@@ -1309,7 +1309,7 @@ CSize Size() const throw();
 
 ### <a name="return-value"></a>傳回值
 
-包含大小的`CRect`[CSize](csize-class.md) 物件。
+包含 `CRect`大小的[CSize](csize-class.md)物件。
 
 ### <a name="remarks"></a>備註
 
@@ -1483,7 +1483,7 @@ int nWid = rect.Width();
 ASSERT(nWid == 60);
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [CPoint 類別](cpoint-class.md)<br/>
 [CSize 類別](csize-class.md)<br/>

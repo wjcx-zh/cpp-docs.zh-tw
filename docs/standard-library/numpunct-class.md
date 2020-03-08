@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689213"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856492"
 ---
 # <a name="numpunct-class"></a>numpunct 類別
 
@@ -50,12 +50,12 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>參數
 
-*CharType* \
+*CharType*\
 程式內用於編碼地區設定字元的類型。
 
 ## <a name="remarks"></a>備註
 
-如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存一個唯一的正值。
+如同所有地區設定 facet，靜態物件識別碼有初始儲存值零。 第一次嘗試存取它的儲存值時，會在 **id** 中儲存唯一的正值。
 
 ### <a name="constructors"></a>建構函式
 
@@ -63,16 +63,16 @@ class numpunct : public locale::facet;
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 類型物件的建構函式。|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |類型名稱|描述|
 |-|-|
 |[char_type](#char_type)|類型，用來描述由地區設定使用的字元。|
 |[string_type](#string_type)|類型，描述包含 `CharType` 類型字元的字串。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[decimal_point](#decimal_point)|傳回地區設定特定項目以做為小數點。|
 |[do_decimal_point](#do_decimal_point)|受保護的虛擬成員函式，呼叫以傳回要做為小數點的地區設定特定項目。|
@@ -87,7 +87,7 @@ class numpunct : public locale::facet;
 
 ## <a name="requirements"></a>需求
 
-**標頭︰** \<locale>
+**標頭：** \<地區設定 >
 
 **命名空間:** std
 
@@ -200,7 +200,7 @@ virtual string do_grouping() const;
 
 ### <a name="example"></a>範例
 
-請參閱[群組](#grouping)的範例，其中 `grouping` 會呼叫虛擬成員函式。
+請參閱[群組](#grouping)的範例，其中 `grouping`會呼叫虛擬成員函式。
 
 ## <a name="do_thousands_sep"></a>  numpunct::do_thousands_sep
 
@@ -250,7 +250,7 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>傳回值
 
-字串，其中包含用來做為值**false**之文字表示的 `CharType`s 序列。
+字串，包含要用來做為值**false**之文字表示的 `CharType`序列。
 
 ### <a name="remarks"></a>備註
 
@@ -345,12 +345,12 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>參數
 
-*_Refs* \
+*_Refs*\
 整數值，用來指定物件的記憶體管理類型。
 
 ### <a name="remarks"></a>備註
 
-*_Refs*參數的可能值和其重要性如下：
+*_Refs*參數和其重要性的可能值為：
 
 - 0：物件的存留期由包含該物件的地區設定來管理。
 
@@ -358,7 +358,7 @@ explicit numpunct(size_t _Refs = 0);
 
 - \> 1：未定義這些值。
 
-由於解構函式會受到保護，因此沒有直接的範例。
+無法提供任何直接範例，因為解構函式受到保護。
 
 此函式會使用**locale：：** [facet](../standard-library/locale-class.md#facet_class)（`_Refs`）初始化其基底物件。
 
@@ -372,7 +372,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 ### <a name="remarks"></a>備註
 
-此類型描述類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化，其物件可以儲存標點符號序列的複本。
+此類型描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)其物件可以儲存標點符號序列的複本。
 
 ## <a name="thousands_sep"></a>  numpunct::thousands_sep
 
@@ -466,7 +466,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<locale>](../standard-library/locale.md)\
 [facet 類別](../standard-library/locale-class.md#facet_class)\

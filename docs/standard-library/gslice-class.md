@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448903"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866243"
 ---
 # <a name="gslice-class"></a>gslice 類別
 
@@ -29,9 +29,9 @@ valarray 的一個公用程式類別，用來定義 valarray 的多維度子集�
 
 - 起始索引。
 
-- 類別`valarray<size_t>`的長度向量。
+- 類別 `valarray<size_t>`的長度向量。
 
-- 類別`valarray<size_t>`的 stride 向量。
+- 類別 `valarray<size_t>`的 stride 向量。
 
 兩個向量的長度必須相同。
 
@@ -45,9 +45,9 @@ valarray 的一個公用程式類別，用來定義 valarray 的多維度子集�
 |-|-|
 |[gslice](#gslice)|定義 `valarray` 的子集，其中包含 `valarray` 的多個配量 (全都起始於指定的元素)。|
 
-### <a name="member-functions"></a>成員函式
+### <a name="member-functions"></a>成員函數
 
-|成員函式|描述|
+|成員函數|描述|
 |-|-|
 |[size](#size)|尋找指定 `valarray` 之一般配量中的元素數的陣列值。|
 |[start](#start)|尋找 `valarray` 之一般配量的起始索引。|
@@ -55,9 +55,9 @@ valarray 的一個公用程式類別，用來定義 valarray 的多維度子集�
 
 ## <a name="requirements"></a>需求
 
-**標頭：** \<valarray>
+**標頭：** \<valarray >
 
-**命名空間：** std
+**命名空間:** std
 
 ## <a name="gslice"></a>  gslice::gslice
 
@@ -75,7 +75,7 @@ gslice(
 ### <a name="parameters"></a>參數
 
 *_StartIndex*\
-子集中第一個項目的 valarray 索引。
+子集中第一個元素的 valarray 索引。
 
 *_LenArray*\
 指定每個配量中元素數目的陣列。
@@ -85,11 +85,11 @@ gslice(
 
 ### <a name="return-value"></a>傳回值
 
-預設建構函式會針對起始索引儲存零，以及針對長度和跨度向量儲存零長度向量。 第二個函式會儲存起始索引的 *_StartIndex* 、 *_LenArray*作為長度陣列, 以及 *_IncArray*用於 stride 陣列。
+預設建構函式會針對起始索引儲存零，以及針對長度和跨度向量儲存零長度向量。 第二個函式會儲存起始索引的 *_StartIndex* 、長度陣列 *_LenArray* ，以及 stride 陣列的 *_IncArray* 。
 
 ### <a name="remarks"></a>備註
 
-**gslice** 會定義 valarray 的子集，此子集由該 valarray 的多個配量所構成，其中每個配量都起始於相同的指定元素。 使用陣列來定義多個配量的能力是 `gslice` 與 [slice::slice](../standard-library/slice-class.md#slice) 之間唯一的差異。 第一個配量的第一個元素具有 *_StartIndex*的索引、 *_LenArray*的第一個元素所指定的專案數, 以及 *_IncArray*的第一個元素所提供的 stride。 下一組正交配量的第一個元素會由第一個配量指定。 *_LenArray*的第二個元素會指定元素的數目。 Stride 是由 *_IncArray*的第二個元素所指定。 配量的第三維度會以二維陣列的元素作為起始元素，然後以類似的方式繼續進行
+**gslice** 會定義 valarray 的子集，此子集由該 valarray 的多個配量所構成，其中每個配量都起始於相同的指定元素。 使用陣列來定義多個配量的能力是 `gslice` 與 [slice::slice](../standard-library/slice-class.md#slice) 之間唯一的差異。 第一個配量的第一個元素具有 *_StartIndex*的索引、 *_LenArray*的第一個元素所指定的一些專案，以及 *_IncArray*的第一個元素所提供的 stride。 下一組正交配量的第一個元素會由第一個配量指定。 *_LenArray*的第二個元素會指定元素的數目。 Stride 是由 *_IncArray*的第二個元素所指定。 配量的第三維度會以二維陣列的元素作為起始元素，然後以類似的方式繼續進行
 
 ### <a name="example"></a>範例
 

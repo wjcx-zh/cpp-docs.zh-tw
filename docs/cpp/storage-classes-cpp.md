@@ -11,17 +11,17 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301310"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856894"
 ---
-# <a name="storage-classes"></a>儲存類別
+# <a name="storage-classes"></a>儲存體類別
 
 變數宣告內容中的*儲存類別*是一種類型規範，可控制物件的存留期、連結和記憶體位置。 C++ 指定的物件只能有一個儲存類別。 除非使用**extern**、 **static**或**thread_local**規範來指定，否則區塊內定義的變數會具有自動儲存區。 自動物件和變數沒有連結；區塊外部的程式碼看不到它們。 當執行進入區塊時，系統會自動為它們配置記憶體，並在結束區塊時解除配置。
 
-**備註**
+**注意**
 
 1. 可以將[可變](../cpp/mutable-data-members-cpp.md)關鍵字視為儲存類別規範。 不過，它只能在類別定義的成員清單中使用。
 
@@ -286,6 +286,6 @@ Destroying: Static I3
 
 - 最後，靜態區域變數 (例如 `I3`) 會在程式執行期間保留其值，不過會在程式終止時終結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [宣告和定義](../cpp/declarations-and-definitions-cpp.md)

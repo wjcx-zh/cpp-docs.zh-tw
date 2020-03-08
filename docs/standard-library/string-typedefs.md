@@ -8,11 +8,11 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688922"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856488"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt; typedef
 
@@ -23,7 +23,7 @@ ms.locfileid: "72688922"
 
 ## <a name="string"></a>  string
 
-一種類型，描述以**char**類型的元素[basic_string](../standard-library/basic-string-class.md)之類別樣板的特製化。
+一種類型，描述類別樣板的特製化[basic_string](../standard-library/basic-string-class.md)與**char**類型的元素。
 
 其他特製化 `basic_string` 的 typedef 包含 [wstring](../standard-library/string-typedefs.md#wstring)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -45,7 +45,7 @@ basic_string<char> str("");
 
 ## <a name="u16string"></a>  u16string
 
-一種類型，描述具有 `char16_t` 類型專案之類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化。
+一種類型，描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)具有 `char16_t`類型的元素。
 
 其他特製化 `basic_string` 的 typedef 包含 [wstring](../standard-library/string-typedefs.md#wstring)、[string](../standard-library/string-typedefs.md#string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -59,7 +59,7 @@ typedef basic_string<char16_t, char_traits<char16_t>, allocator<char16_t>> u16st
 
 ## <a name="u32string"></a>  u32string
 
-一種類型，描述具有 `char32_t` 類型專案之類別樣板[basic_string](../standard-library/basic-string-class.md)的特製化。
+一種類型，描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)具有 `char32_t`類型的元素。
 
 其他特製化 `basic_string` 的 typedef 包含 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [wstring](../standard-library/string-typedefs.md#wstring)。
 
@@ -73,7 +73,7 @@ typedef basic_string<char32_t, char_traits<char32_t>, allocator<char32_t>> u32st
 
 ## <a name="wstring"></a>  wstring
 
-一種類型，描述以**wchar_t**類型的元素[basic_string](../standard-library/basic-string-class.md)的類別樣板特製化。
+一種類型，描述類別樣板的特製化， [basic_string](../standard-library/basic-string-class.md)具有**wchar_t**類型的元素。
 
 其他特製化 `basic_string` 的 typedef 包含 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 及 [u32string](../standard-library/string-typedefs.md#u32string)。
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 如需 string 建構函式的清單，請參閱 [basic_string:: basic_string](../standard-library/basic-string-class.md#basic_string)。
 
 > [!NOTE]
-> **Wchar_t**的大小是實作為定義的。 如果您的程式碼相依于**wchar_t**以作為特定大小，請檢查平臺的執行（例如，使用 `sizeof(wchar_t)`）。 如果您需要的字串字元類型保證會在所有平台上具有相同寬度，請使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
+> **Wchar_t**的大小為「執行定義」。 如果您的程式碼相依于**wchar_t**為特定大小，請檢查平臺的執行（例如，使用 `sizeof(wchar_t)`）。 如果您需要的字串字元類型保證會在所有平台上具有相同寬度，請使用 [string](../standard-library/string-typedefs.md#string)、[u16string](../standard-library/string-typedefs.md#u16string) 或 [u32string](../standard-library/string-typedefs.md#u32string)。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [\<string>](../standard-library/string.md)

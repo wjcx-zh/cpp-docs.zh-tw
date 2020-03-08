@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051485"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856783"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>從命令列C++使用 Microsoft 工具組
 
@@ -135,13 +135,13 @@ ms.locfileid: "74051485"
 |*architecture*|編譯器|主機電腦架構|組建輸出 (目標) 架構|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|x86 32 位元原生|x86、x64|x86|
-|**x86\_amd64** 或 **x86\_x64**|x64 on x86 (跨平台)|x86、x64|X64|
+|**x86\_amd64** 或 **x86\_x64**|x64 on x86 (跨平台)|x86、x64|x64|
 |**x86_arm**|ARM on x86 (跨平台)|x86、x64|ARM|
 |**x86_arm64**|ARM64 on x86 (跨平台)|x86、x64|ARM64|
-|**amd64** 或 **x64**|x64 64 位元原生|X64|X64|
-|**amd64\_x86** 或 **x64\_x86**|x86 on x64 (跨平台)|X64|x86|
-|**amd64\_arm** 或 **x64\_arm**|ARM on x64 (跨平台)|X64|ARM|
-|**amd64\_arm64** 或 **x64\_arm64**|ARM64 on x64 (跨平台)|X64|ARM64|
+|**amd64** 或 **x64**|x64 64 位元原生|x64|x64|
+|**amd64\_x86** 或 **x64\_x86**|x86 on x64 (跨平台)|x64|x86|
+|**amd64\_arm** 或 **x64\_arm**|ARM on x64 (跨平台)|x64|ARM|
+|**amd64\_arm64** 或 **x64\_arm64**|ARM64 on x64 (跨平台)|x64|ARM64|
 
 *platform_type*<br/>
 這個選擇性引數可讓您將 **store** 或 **uwp** 指定為平台類型。 根據預設，環境會設定為建置桌面或主控台應用程式。
@@ -231,7 +231,7 @@ ms.locfileid: "74051485"
 [連結](reference/linking.md)<br/>
 使用連結器 (link.exe)，將已編譯的物件檔及程式庫，連結至應用程式及 DLL。
 
-[ MSBuild](msbuild-visual-cpp.md)<br/>
+[MSBuild](msbuild-visual-cpp.md)<br/>
 使用 MSBuild (msbuild.exe) 和專案檔 (.vcxproj) 來設定組建並間接叫用工具組。 這相當於在 Visual Studio IDE 中執行 [**組建**專案] 或 [**建立方案**] 命令。 從命令列執行 MSBuild 是一個先進的案例，並不是一般建議的做法。
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
@@ -281,6 +281,6 @@ ms.locfileid: "74051485"
 [其他 MSVC 建置工具](reference/c-cpp-build-tools.md)<br/>
 提供 Visual Studio 中包含的 C/C++ 建置工具的連結。
 
-## <a name="see-also"></a>請參閱
+## <a name="see-also"></a>另請參閱
 
 [專案和建置系統](projects-and-build-systems-cpp.md)
